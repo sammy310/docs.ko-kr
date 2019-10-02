@@ -1,18 +1,18 @@
 ---
 title: 인덱스 및 범위를 사용하여 데이터 범위 탐색
 description: 이 고급 자습서에서는 인덱스 및 범위를 사용하여 순차적 데이터 세트를 검사하는 데이터 탐색을 살펴봅니다.
-ms.date: 04/19/2019
+ms.date: 09/20/2019
 ms.custom: mvc
-ms.openlocfilehash: d0eeadfff9732ced22e045536a88ed49cd98bbaa
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: a879601e1358f72e80983992a3cd96ba1fb06a38
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117833"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71391961"
 ---
 # <a name="indices-and-ranges"></a>인덱스 및 범위
 
-범위와 인덱스는 <xref:System.Array>, <xref:System.String>, <xref:System.Span%601> 또는 <xref:System.ReadOnlySpan%601>에서 단일 요소 또는 범위에 액세스하기 위한 간결한 구문을 제공합니다. 이러한 기능을 통해 더 간결하고 분명한 구문으로 시퀀스의 단일 요소 또는 요소 범위에 액세스할 수 있습니다.
+범위와 인덱스는 시퀀스의 단일 요소 또는 범위에 액세스하기 위한 간결한 구문을 제공합니다.
 
 이 자습서에서는 다음과 같은 작업을 수행하는 방법을 알아봅니다.
 
@@ -74,6 +74,14 @@ string[] words = new string[]
 다음 샘플에서는 이러한 선택에 대한 여러 이유를 보여 줍니다. `x`, `y` 및 `z`를 수정하여 다양한 조합을 시도해 봅니다. 실험할 때는 올바른 조합을 위해 `x`가 `y`보다 작고 `y`가 `z`보다 작은 값을 사용합니다. 새 메서드에 다음 코드를 추가합니다. 다양한 조합을 시도해 봅니다.
 
 [!code-csharp[SemanticsExamples](~/samples/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_Semantics)]
+
+## <a name="type-support-for-indices-and-ranges"></a>인덱스 및 범위에 대한 형식 지원
+
+형식이 <xref:System.Index> 또는 <xref:System.Range> 매개 변수를 사용하여 [인덱서](../programming-guide/indexers/index.md)를 제공하는 경우 각각 인덱스 또는 범위를 명시적으로 지원합니다.
+
+이름이 `Length` 또는 `Count`이고 액세스 가능한 getter 및 반환 형식 `int`를 갖는 속성이 있는 경우 형식은 **countable**입니다. 인덱스 또는 범위를 명시적으로 지원하지 않는 countable 형식은 해당 형식에 대한 암시적 지원을 제공할 수 있습니다. 자세한 내용은 [기능 제한 참고](~/_csharplang/proposals/csharp-8.0/ranges.md)의 [암시적 인덱스 지원](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-index-support) 및 [암시적 범위 지원](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-range-support) 섹션을 참조하세요.
+
+예를 들어, .NET 형식 <xref:System.Array>, <xref:System.String>, <xref:System.Span%601> 및 <xref:System.ReadOnlySpan%601>은 인덱스와 범위를 모두 지원합니다. <xref:System.Collections.Generic.List%601>는 인덱스는 지원하고 범위는 지원하지 않습니다.
 
 ## <a name="scenarios-for-indices-and-ranges"></a>인덱스 및 범위에 대한 시나리오
 

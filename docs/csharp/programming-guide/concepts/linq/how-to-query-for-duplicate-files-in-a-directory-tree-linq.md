@@ -2,17 +2,17 @@
 title: '방법: 디렉터리 트리의 중복 파일 쿼리(LINQ)(C#)'
 ms.date: 07/20/2015
 ms.assetid: 1ff5562b-0d30-46d1-b426-a04e8f78c840
-ms.openlocfilehash: f9d045aa2e9cc11fdb4de202d03f76f85bac6500
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 3e7d1ee779f6e584bfc636963e038e31332bfca8
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592870"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216612"
 ---
 # <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-c"></a>방법: 디렉터리 트리의 중복 파일 쿼리(LINQ)(C#)
-동일한 이름을 가진 파일이 둘 이상의 폴더에 있는 경우도 있습니다. 예를 들어 Visual Studio 설치 폴더 아래의 여러 폴더에 readme.htm 파일이 있습니다. 이 예제에서는 지정된 루트 폴더 아래에서 이러한 중복 파일 이름을 쿼리하는 방법을 보여 줍니다. 두 번째 예제에서는 크기 및 생성 시간도 일치하는 파일을 쿼리하는 방법을 보여 줍니다.  
+동일한 이름을 가진 파일이 둘 이상의 폴더에 있는 경우도 있습니다. 예를 들어 Visual Studio 설치 폴더 아래의 여러 폴더에 readme.htm 파일이 있습니다. 이 예제에서는 지정된 루트 폴더 아래에서 이러한 중복 파일 이름을 쿼리하는 방법을 보여 줍니다. 두 번째 예제에서는 크기 및 LastWrite 시간도 일치하는 파일을 쿼리하는 방법을 보여 줍니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```csharp  
 class QueryDuplicateFileNames  
@@ -61,25 +61,25 @@ class QueryDuplicateFileNames
     class PortableKey  
     {  
         public string Name { get; set; }  
-        public DateTime CreationTime { get; set; }  
+        public DateTime LastWriteTime { get; set; }  
         public long Length { get; set; }  
   
         public override bool Equals(object obj)  
         {  
             PortableKey other = (PortableKey)obj;  
-            return other.CreationTime == this.CreationTime &&  
+            return other.LastWriteTime == this.LastWriteTime &&  
                    other.Length == this.Length &&  
                    other.Name == this.Name;  
         }  
   
         public override int GetHashCode()  
         {  
-            string str = $"{this.CreationTime}{this.Length}{this.Name}";
+            string str = $"{this.LastWriteTime}{this.Length}{this.Name}";
             return str.GetHashCode();  
         }  
         public override string ToString()  
         {  
-            return $"{this.Name} {this.Length} {this.CreationTime}";
+            return $"{this.Name} {this.Length} {this.LastWriteTime}";
         }  
     }  
     static void QueryDuplicates2()  
@@ -103,7 +103,7 @@ class QueryDuplicateFileNames
         var queryDupFiles =  
             from file in fileList  
             group file.FullName.Substring(charsToSkip) by  
-                new PortableKey { Name = file.Name, CreationTime = file.CreationTime, Length = file.Length } into fileGroup  
+                new PortableKey { Name = file.Name, LastWriteTime = file.LastWriteTime, Length = file.Length } into fileGroup  
             where fileGroup.Count() > 1  
             select fileGroup;  
   

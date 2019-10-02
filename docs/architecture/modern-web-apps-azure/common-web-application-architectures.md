@@ -4,12 +4,12 @@ description: ASP.NET Core 및 Azure를 사용하여 현대식 웹 애플리케�
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: a521be147c462146775caa81b6a31fb37b4103af
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 8985434467346acc360e9a89c052803f495e87d1
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926678"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332002"
 ---
 # <a name="common-web-application-architectures"></a>일반 웹 애플리케이션 아키텍처
 
@@ -186,7 +186,7 @@ ASP.NET Core MVC 애플리케이션의 사용자 인터페이스 레이어는 �
 
 이 모델을 관리하려면 애플리케이션을 나타내는 단일 컨테이너를 배포합니다. 크기를 조정하려면 부하 분산 장치 앞에 여러 복사본을 추가하면 됩니다. 단일 컨테이너 또는 VM에서 단일 배포를 관리하면 단순성을 제공합니다.
 
-![](./media/image5-13.png)
+![그림 5-13](./media/image5-13.png)
 
 그림 5-13에서 보여준 대로 각 컨테이너 내에 여러 구성 요소/라이브러리 또는 내부 레이어를 포함할 수 있습니다. 하지만 이 모놀리식 패턴은 _“컨테이너는 한 가지 작업을 하나의 프로세스에서 수행합니다”_ 라는 컨테이너 원칙과 충돌할 수 있습니다.
 
@@ -198,7 +198,7 @@ ASP.NET Core MVC 애플리케이션의 사용자 인터페이스 레이어는 �
 
 모놀리식 접근 방식이 주로 사용되며, 많은 조직에서 이 아키텍처 접근 방법을 개발 중입니다. 좋은 결과를 얻은 곳도 많지만, 한계에 부딪힌 곳도 많습니다. SOA(서비스 지향 아키텍처)를 빌드하기에는 도구 및 인프라 사용 방법이 너무 어려웠고 앱이 커지기 전에는 필요성을 느끼지도 않았기 때문에 많은 조직에서 이 모델을 사용하여 애플리케이션을 디자인했습니다. 모놀리식 방식의 한계에 도달한 것 같으면 앱을 분할하여 컨테이너를 보다 효율적으로 활용할 수 있으며, 그 다음 논리적 단계는 마이크로 서비스가 될 수도 있습니다.
 
-![](./media/image5-14.png)
+![그림 5-14](./media/image5-14.png)
 
 각 인스턴스의 전용 VM을 사용하여 Microsoft Azure에 모놀리식 애플리케이션을 배포할 수 있습니다. [Azure Virtual Machine Scale Sets](https://docs.microsoft.com/azure/virtual-machine-scale-sets/)를 사용하여 VM 크기를 쉽게 조정할 수 있습니다. [Azure App Services](https://azure.microsoft.com/services/app-service/)는 VM을 관리하지 않고 모놀리식 애플리케이션을 실행하고 인스턴스 크기를 쉽게 조정할 수 있습니다. Azure App Services는 배포를 단순화할 뿐만 아니라 Docker 컨테이너의 단일 인스턴스를 실행할 수 있습니다. Docker를 사용하면 단일 VM을 Docker 호스트로 배포하고 여러 인스턴스를 실행할 수 있습니다. 그림 5-14처럼 Azure 분산 장치를 사용하여 크기 조정을 관리할 수 있습니다.
 

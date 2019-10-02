@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5b646751-6ab7-465c-916c-b1a76aefa9f5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b0de14fd5d576774ed1605784f5f0c6b0fae2c8c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 51938dade8ebd1b84010533e04b26cf989ed5f24
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948919"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353949"
 ---
 # <a name="generic-collections-in-net"></a>.NET의 제네릭 컬렉션
 
@@ -40,7 +40,7 @@ ms.locfileid: "69948919"
  <xref:System.Nullable%601> 제네릭 구조체를 통해 `null`이 할당될 수 있는 것처럼 값 형식을 사용할 수 있습니다. 이 기능은 값 형식을 포함하는 필드가 누락될 수 있는 데이터베이스 쿼리를 사용할 때 유용할 수 있습니다. 제네릭 형식 매개 변수는 임의의 값 형식일 수 있습니다.  
   
 > [!NOTE]
-> C# 및 Visual Basic에서는 언어에 nullable 형식에 대한 구문이 있기 때문에 명시적으로 <xref:System.Nullable%601>을 사용할 필요가 없습니다. [Nullable 형식(C# 프로그래밍 가이드)](../../csharp/programming-guide/nullable-types/index.md) 및 [Nullable 값 형식(Visual Basic)](../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)을 참조하세요. 
+> C# 및 Visual Basic에서는 언어에 nullable 형식에 대한 구문이 있기 때문에 명시적으로 <xref:System.Nullable%601>을 사용할 필요가 없습니다. [Nullable 값 형식(C# 프로그래밍 가이드)](../../csharp/programming-guide/nullable-types/index.md) 및 [Nullable 값 형식(Visual Basic)](../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)을 참조하세요.
   
  <xref:System.ArraySegment%601> 제네릭 구조체는 0부터 시작하는 임의 형식의 1차원 배열 내에서 요소 범위를 구분하는 방법을 제공합니다. 제네릭 형식 매개 변수는 배열 요소의 형식입니다.  
   

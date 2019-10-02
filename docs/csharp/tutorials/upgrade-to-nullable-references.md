@@ -3,12 +3,12 @@ title: nullable 참조 형식을 사용하여 디자인
 description: 이 고급 자습서에서는 nullable 참조 형식을 소개합니다. 참조 값이 null일 수 있는 경우에 대한 디자인 의도를 표현하고 컴파일러가 null일 수 없는 경우를 적용하게 하는 방법을 알아봅니다.
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 0c95065e6c380fab6ba33432a32b3297e78027a3
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 842b1bb6e0d3032c6181cccf77934541754ff8ec
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926624"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332327"
 ---
 # <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>자습서: nullable 참조 형식이 있는 기존 코드 마이그레이션
 
@@ -25,7 +25,7 @@ C# 8에서는 nullable 값 형식이 값 형식을 보완하는 것과 동일한
 
 ## <a name="prerequisites"></a>전제 조건
 
-C# 8.0 베타 컴파일러를 포함하여 .NET Core를 실행하도록 머신을 설정해야 합니다. C# 8 베타 컴파일러는 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 또는 최신 [.NET Core 3.0 미리 보기](https://dotnet.microsoft.com/download/dotnet-core/3.0)에서 사용할 수 있습니다.
+C# 8.0 컴파일러를 포함하여 .NET Core를 실행하도록 머신을 설정해야 합니다. C# 8 컴파일러는 [Visual Studio 2019 버전 16.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 또는 [.NET CORE 3.0 SDK](https://dotnet.microsoft.com/download)부터 사용할 수 있습니다.
 
 이 자습서에서는 Visual Studio 또는 .NET Core CLI를 포함하여 C# 및 .NET에 익숙하다고 가정합니다.
 
@@ -52,9 +52,6 @@ C# 8.0 베타 컴파일러를 포함하여 .NET Core를 실행하도록 머신�
 ```xml
 <Nullable>enable</Nullable>
 ```
-
-> [!IMPORTANT]
-> `Nullable` 요소의 이전 이름은 `NullableContextOptions`였습니다. Visual Studio 2019, 16.2-p1에서는 바뀐 이름이 제공됩니다. .NET Core SDK 3.0.100-preview5-011568에는 이 변경이 적용되지 않습니다. .NET Core CLI를 사용하는 경우 다음 미리 보기를 사용할 수 있을 때까지 `NullableContextOptions`를 사용해야 합니다.
 
 테스트 빌드를 수행하고 경고 목록을 살펴봅니다. 이 작은 애플리케이션에서 컴파일러가 경고를 5개 생성하는 것을 볼 수 있습니다. 여기서는 nullable 주석 컨텍스트를 활성화 상태로 두고 프로젝트 전체의 경고를 수정할 수 있습니다.
 

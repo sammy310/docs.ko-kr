@@ -2,12 +2,12 @@
 title: nullable 참조 형식
 description: 이 문서에서는 C# 8에 추가된 nullable 참조 형식에 대해 간략하게 설명합니다. 이 기능이 신규 및 기존의 프로젝트의 null 참조 예외에 대해 어떻게 안전성을 제공하는지 알아봅니다.
 ms.date: 02/19/2019
-ms.openlocfilehash: e66d74cdde3b3de9ec3f1b435cdbd3e3b24c2663
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 05a8e14a7c51df685b3ffdf16aab997da0a8036f
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851073"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332370"
 ---
 # <a name="nullable-reference-types"></a>nullable 참조 형식
 
@@ -35,7 +35,7 @@ string? name;
 
 형식 이름에 `?`가 추가되지 않은 모든 변수는 **nullable이 아닌 참조 형식**입니다. 여기에는 이 기능을 설정한 기존 코드에 있는 모든 참조 형식 변수가 포함됩니다.
 
-컴파일러는 정적 분석을 사용하여 nullable 참조가 null이 아닌 것으로 알려져 있는지 확인합니다. 컴파일러는 null일 수 있는 nullable 참조를 역참조하는 경우 경고를 표시합니다. 변수 이름 뒤에 **null 허용 연산자**(`!`)를 사용하여 이 동작을 재정의할 수 있습니다. 예를 들어 `name` 변수가 null이 아닌 것으로 알고 있는데 컴파일러 경고가 발생하는 경우 다음 코드를 작성하여 컴파일러 분석을 재정의할 수 있습니다.
+컴파일러는 정적 분석을 사용하여 nullable 참조가 null이 아닌 것으로 알려져 있는지 확인합니다. 컴파일러는 null일 수 있는 nullable 참조를 역참조하는 경우 경고를 표시합니다. 변수 이름 뒤에 **null 허용 연산자** `!`를 사용하여 이 동작을 재정의할 수 있습니다. 예를 들어 `name` 변수가 null이 아닌 것으로 알고 있는데 컴파일러 경고가 발생하는 경우 다음 코드를 작성하여 컴파일러 분석을 재정의할 수 있습니다.
 
 ```csharp
 name!.Length;
@@ -58,7 +58,7 @@ name!.Length;
 
 Nullable 컨텍스트를 통해 컴파일러가 참조 형식 변수를 해석하는 방식을 미세하게 제어할 수 있습니다. 지정된 소스 줄의 **nullable 주석 컨텍스트**는 `enabled` 또는 `disabled`입니다. C# 8 이전 컴파일러는 `disabled` nullable 컨텍스트에서 모든 코드를 컴파일하는 것으로 생각할 수 있습니다. 모든 참조 형식은 null일 수 있습니다. **nullable 경고 컨텍스트**는 `enabled` 또는 `disabled`로 설정할 수 있습니다. nullable 경고 컨텍스트는 컴파일러가 해당 흐름 분석을 사용하여 생성한 경고를 지정합니다.
 
-`csproj` 파일에 `Nullable` 요소를 사용하여 프로젝트에 대한 nullable 주석 컨텍스트 및 nullable 경고 컨텍스트를 설정할 수 있습니다. 이 요소는 컴파일러가 형식의 null 허용 여부를 해석하는 방법 및 생성되는 경고를 구성합니다. 유효한 설정은 다음과 같습니다.
+*.csproj* 파일에 `Nullable` 요소를 사용하여 프로젝트에 대한 nullable 주석 컨텍스트 및 nullable 경고 컨텍스트를 설정할 수 있습니다. 이 요소는 컴파일러가 형식의 null 허용 여부를 해석하는 방법 및 생성되는 경고를 구성합니다. 유효한 설정은 다음과 같습니다.
 
 - `enable`: nullable 주석 컨텍스트가 **enabled**입니다. nullable 경고 컨텍스트가 **enabled**입니다.
   - 예를 들어 참조 형식 변수 `string`은 null이 아닙니다.  모든 null 허용 여부 경고가 enabled입니다.
@@ -69,21 +69,21 @@ Nullable 컨텍스트를 통해 컴파일러가 참조 형식 변수를 해석�
 - `disable`: nullable 주석 컨텍스트가 **disabled**입니다. nullable 경고 컨텍스트가 **disabled**입니다.
   - 참조 형식의 변수는 이전 버전의 C#과 마찬가지로 모호할 수 있습니다. 모든 null 허용 여부 경고가 disabled입니다.
 
-> [!IMPORTANT]
-> `Nullable` 요소의 이전 이름은 `NullableContextOptions`였습니다. Visual Studio 2019, 16.2-p1에서는 바뀐 이름이 제공됩니다. .NET Core SDK 3.0.100-preview5-011568에는 이 변경이 적용되지 않습니다. .NET Core CLI를 사용하는 경우 다음 미리 보기를 사용할 수 있을 때까지 `NullableContextOptions`를 사용해야 합니다.
-
 또한 지시문을 사용하여 프로젝트의 아무 곳에나 이러한 동일한 컨텍스트를 설정할 수도 있습니다.
 
 - `#nullable enable`: nullable 주석 컨텍스트와 nullable 경고 컨텍스트를 **enabled**로 설정합니다.
 - `#nullable disable`: nullable 주석 컨텍스트와 nullable 경고 컨텍스트를 **disabled**로 설정합니다.
 - `#nullable restore`: nullable 주석 컨텍스트와 nullable 경고 컨텍스트를 프로젝트 설정으로 복원합니다.
-- `#pragma warning disable nullable`: nullable 경고 컨텍스트를 **disabled**로 설정합니다.
-- `#pragma warning enable nullable`: nullable 경고 컨텍스트를 **enabled**로 설정합니다.
-- `#pragma warning restore nullable`: nullable 경고 컨텍스트를 프로젝트 설정으로 복원합니다.
+- `#nullable disable warnings`: nullable 경고 컨텍스트를 **disabled**로 설정합니다.
+- `#nullable enable warnings`: nullable 경고 컨텍스트를 **enabled**로 설정합니다.
+- `#nullable restore warnings`: nullable 경고 컨텍스트를 프로젝트 설정으로 복원합니다.
+- `#nullable disable annotations`: nullable 주석 컨텍스트를 **disabled**로 설정합니다.
+- `#nullable enable annotations`: nullable 주석 컨텍스트를 **enabled**로 설정합니다.
+- `#nullable restore annotations`: 주석 경고 컨텍스트를 프로젝트 설정으로 복원합니다.
 
 기본 nullable 주석 및 경고 컨텍스트는 `disabled`입니다. 이 결정은 기존 코드가 변경 없이 새로운 경고를 생성하지 않고 컴파일됨을 의미합니다.
 
-### <a name="nullable-annotation-context"></a>nullable 주석 컨텍스트
+## <a name="nullable-annotation-context"></a>nullable 주석 컨텍스트
 
 컴파일러는 disabled nullable 주석 컨텍스트에 다음 규칙을 사용합니다.
 
@@ -101,7 +101,7 @@ Nullable 컨텍스트를 통해 컴파일러가 참조 형식 변수를 해석�
 - 모든 nullable 참조 형식(변수 선언에서 형식 뒤에 `?` 표시)은 null일 수 있습니다. 정적 분석으로 값이 역참조될 때 null이 아닌 것으로 알려져 있는지 확인합니다. 아닌 경우 컴파일러가 경고를 생성합니다.
 - null 허용 연산자를 사용하여 nullable 참조가 null이 아님을 선언할 수 있습니다.
 
-enabled nullable 주석 컨텍스트에서 참조 형식에 추가된 `?` 문자는 **nullable 참조 형식**을 선언합니다. **null 비허용 연산자**(`!`)가 식 뒤에 추가되어 식이 null이 아님을 선언할 수 있습니다.
+enabled nullable 주석 컨텍스트에서 참조 형식에 추가된 `?` 문자는 **nullable 참조 형식**을 선언합니다. **null 비허용 연산자** `!`를 식 뒤에 추가하여 식이 null이 아님을 선언할 수 있습니다.
 
 ## <a name="nullable-warning-context"></a>Nullable 경고 컨텍스트
 

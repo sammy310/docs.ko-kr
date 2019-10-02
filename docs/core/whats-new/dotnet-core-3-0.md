@@ -6,40 +6,25 @@ dev_langs:
 - vb
 author: thraka
 ms.author: adegeo
-ms.date: 09/17/2019
-ms.openlocfilehash: 08ad77fbad7ad468e45fe629041ded82544792f2
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.date: 09/22/2019
+ms.openlocfilehash: ddb758b942099657708e79b590c7817c309396d7
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71116117"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216269"
 ---
-# <a name="whats-new-in-net-core-30-release-candidate-1"></a>.NET Core 3.0(릴리스 후보 1)의 새로운 기능
+# <a name="whats-new-in-net-core-30"></a>.NET Core 3.0의 새로운 기능
 
-이 문서는 .NET Core 3.0 릴리스 후보 1(RC1)의 새로운 기능에 대해 설명합니다. 가장 중요한 개선 사항 중 하나는 Windows 데스크톱 애플리케이션에 대한 지원(Windows만 해당)입니다. .NET Core 3.0 SDK 구성 요소 Windows 데스크톱을 사용하여 Windows Forms 및 Windows Presentation Foundation(WPF) 애플리케이션을 포트할 수 있습니다. 분명히 말하지만, Windows 데스크톱 구성 요소는 Windows에서만 지원되고 포함됩니다. 자세한 내용은 이 문서 후반부의 [Windows 데스크톱](#windows-desktop) 섹션을 참조하세요.
+이 문서에서는 .NET Core 3.0의 새로운 기능을 설명합니다. 가장 중요한 개선 사항 중 하나는 Windows 데스크톱 애플리케이션에 대한 지원(Windows만 해당)입니다. .NET Core 3.0 SDK 구성 요소 Windows 데스크톱을 사용하여 Windows Forms 및 Windows Presentation Foundation(WPF) 애플리케이션을 포트할 수 있습니다. 분명히 말하지만, Windows 데스크톱 구성 요소는 Windows에서만 지원되고 포함됩니다. 자세한 내용은 이 문서 후반부의 [Windows 데스크톱](#windows-desktop) 섹션을 참조하세요.
 
-.NET Core 3.0에서는 C# 8.0에 대한 지원이 추가되었습니다. [Visual Studio 2019 16.3 미리 보기 4](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+preview), [Mac용 Visual Studio 8.3](https://docs.microsoft.com/visualstudio/mac/install-preview?view=vsmac-2019) 또는 [Visual Studio Code](https://code.visualstudio.com/)를 **C# 확장명**과 함께 사용하는 것이 좋습니다.
+.NET Core 3.0에서는 C# 8.0에 대한 지원이 추가되었습니다. [Visual Studio 2019 16.3](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019), [Mac용 Visual Studio 8.3](/visualstudio/mac/install-preview) 또는 [Visual Studio Code](https://code.visualstudio.com/)를 **C# 확장명**과 함께 사용하는 것이 좋습니다.
 
-Windows, macOS 또는 Linux에서 지금 바로 [.NET Core 3.0 RC1을 다운로드하여 시작](https://aka.ms/netcore3download)하세요.
+Windows, macOS 또는 Linux에서 지금 바로 [.NET Core 3.0을 다운로드하여 시작](https://aka.ms/netcore3download)하세요.
 
-각 미리 보기 릴리스에 대한 자세한 내용은 다음 공지를 참조하세요.
+릴리스에 대한 자세한 내용은 [.NET Core 3.0 알림](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0/)을 참조하세요.
 
-- [.NET Core 3.0 RC1 공지](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-release-candidate-1/)
-- [.NET Core 3.0 Preview 9 공지 사항](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-9/)
-- [.NET Core 3.0 Preview 8 공지 사항](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-8/)
-- [.NET Core 3.0 Preview 7 공지 사항](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-7/)
-- [.NET Core 3.0 Preview 6 공지 사항](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-6/)
-- [.NET Core 3.0 Preview 5 공지 사항](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-5/)
-- [.NET Core 3.0 Preview 4 공지 사항](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-4/)
-- [.NET Core 3.0 Preview 3 공지 사항](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-3/)
-- [.NET Core 3.0 Preview 2 공지 사항](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-2/)
-- [.NET Core 3.0 Preview 1 공지 사항](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-1-and-open-sourcing-windows-desktop-frameworks/)
-
-## <a name="production-supported-preview"></a>프로덕션 지원 미리 보기
-
-.NET Core RC1은 Microsoft에서 프로덕션 준비로 간주되며 완벽하게 지원됩니다. Preview 7부터 릴리스는 새 기능을 추가하는 대신 .NET Core 3.0을 개선하는 데 집중합니다. RC1에서 변경된 사항에 대한 자세한 내용은 [RC1 공지](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-release-candidate-1/)를 참조하세요.
-
-이전 미리 보기 릴리스를 사용하는 경우 “실시간 전송” 지원을 계속하려면 RC1으로 이동해야 합니다.
+.NET Core RC1은 Microsoft에서 프로덕션용으로 간주되었으며 완전히 지원되었습니다. 미리 보기 릴리스를 사용하는 경우, 계속 지원을 받으려면 RTM 버전으로 이동해야 합니다.
 
 ## <a name="net-core-sdk-windows-installer"></a>.NET Core SDK Windows Installer
 
@@ -47,13 +32,13 @@ Windows용 MSI 설치 관리자는 .NET Core 3.0부터 변경되었습니다. �
 
 버전 관리에 대한 자세한 내용은 [.NET Core의 버전 관리 방법](../versions/index.md)을 참조하세요.
 
-## <a name="c-80-preview"></a>C# 8.0 미리 보기
+## <a name="c-80"></a>C# 8.0
 
-.NET Core 3.0은 C# 8 미리 보기를 지원합니다. C# 8.0 기능에 대한 자세한 내용은 [C# 8.0의 새로운 기능](../../csharp/whats-new/csharp-8.md)을 참조하세요.
+Null 허용 참조 형식 기능, 비동기 스트림, 추가 패턴 등을 포함하는 C# 8.0도 이 릴리스의 일부입니다. C# 8.0 기능에 대한 자세한 내용은 [C# 8.0의 새로운 기능](../../csharp/whats-new/csharp-8.md)을 참조하세요.
 
 ## <a name="net-standard-21"></a>.NET Standard 2.1
 
-.NET Core 3.0이 **.NET 표준 2.1**을 지원하는 경우에도 기본 `dotnet new classlib` 템플릿은 **.NET 표준 2.0**을 대상으로 지정하는 프로젝트를 생성합니다. **.NET 표준 2.1**을 대상으로 지정하려면 프로젝트 파일을 편집하고 `TargetFramework` 속성을 `netstandard2.1`로 변경하세요.
+.NET Core 3.0이 **.NET 표준 2.1**을 지원하는 경우에도 기본 `dotnet new classlib` 템플릿은 여전히 **.NET Standard 2.0**을 대상으로 하는 프로젝트를 생성합니다. **.NET 표준 2.1**을 대상으로 지정하려면 프로젝트 파일을 편집하고 `TargetFramework` 속성을 `netstandard2.1`로 변경하세요.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -515,7 +500,7 @@ Linux의 제한적 직렬 포트 지원에 대한 자세한 내용은 [GitHub �
 
 ## <a name="docker-and-cgroup-memory-limits"></a>Docker 및 cgroup 메모리 한도
 
-Preview 3부터, Docker를 사용하여 Linux에서 .NET Core 3.0을 실행하면 cgroup 메모리 한도에 훨씬 더 효과적입니다. 메모리 한도가 있는 Docker 컨테이너를 실행하면(`docker run -m` 사용) .NET Core 동작 방식이 바뀝니다.
+Docker를 사용하여 Linux에서 .NET Core 3.0을 실행하면 cgroup 메모리 한도에 훨씬 더 효과적입니다. 메모리 한도가 있는 Docker 컨테이너를 실행하면(`docker run -m` 사용) .NET Core 동작 방식이 바뀝니다.
 
 - 기본 가비지 수집기(GC) 힙 크기: 최대 20mb 또는 컨테이너에서 75%의 메모리 한도
 - 명시적 크기는 절대수 또는 cgroup 한도의 비율로 설정할 수 있습니다.

@@ -4,12 +4,12 @@ description: ASP.NET Core 및 Azure를 사용하여 최신 웹 애플리케이�
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/06/2019
-ms.openlocfilehash: 7cfb9ada4f963aa392a41cfb9f1b2df22f542d41
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: ed8771a4d79b45d8fad0e5309c886c2e00402ec7
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675470"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71331995"
 ---
 # <a name="azure-hosting-recommendations-for-aspnet-core-web-apps"></a>ASP.NET Core 웹앱에 대한 Azure 호스팅 권장 사항
 
@@ -78,7 +78,7 @@ Web Apps for Containers가 가장 적합한 몇 가지 시나리오가 있습니
 
 ### <a name="azure-kubernetes-service"></a>Azure Kubernetes Service
 
-AKS(Azure Kubernetes Service)는 컨테이너 오케스트레이션 전문 지식 없이도 컨테이너화된 애플리케이션을 빠르고 쉽게 배포 및 관리할 수 있도록 해주는 호스트된 Kubernetes 환경을 관리합니다. 또한 애플리케이션을 오프라인으로 변경하지 않고 주문형 리소스를 프로비전하고, 업그레이드하고, 크기 조정하여 진행 중인 작업 및 유지 관리 부담을 제거합니다.
+AKS(Azure Kubernetes Service)는 컨테이너 오케스트레이션 전문 지식 없이도 컨테이너화된 애플리케이션을 빠르고 쉽게 배포 및 관리할 수 있도록 해주는 호스트된 Kubernetes 환경을 관리합니다. 또한 애플리케이션을 오프라인으로 전환하지 않고 요청 시 리소스를 프로비전, 업그레이드 및 크기 조정하여 진행 중인 작업 및 유지 관리 부담을 덜어줍니다.
 
 AKS는 대부분의 책임을 Azure로 오프로드함으로써 Kubernetes 클러스터 관리에 대한 복잡성 및 운영 오버헤드를 줄입니다. 호스트된 Kubernetes 서비스처럼, Azure는 상태 모니터링 및 유지 관리와 같은 중요 작업을 처리합니다. 또한 사용자는 마스터가 아닌 사용자 클러스터 내 에이전트 노드에 대해서만 비용을 지불합니다. 관리되는 Kubernetes 서비스로서 AKS는 다음을 제공합니다.
 
@@ -124,9 +124,9 @@ Azure는 다양한 데이터 스토리지 옵션을 제공하므로, 애플리�
 
 애플리케이션의 요구 사항에 따라 아키텍처가 결정됩니다. 여러 다양한 Azure 서비스를 사용할 수 있습니다. 적합한 서비스를 선택하는 것은 중요한 의사 결정입니다. Microsoft는 일반적인 시나리오에 최적화된 일반적인 아키텍처를 식별하는 데 도움이 되는 참조 아키텍처의 갤러리를 제공합니다. 애플리케이션의 요구 사항과 밀접한 관련이 있거나 적어도 시작점을 제공하는 참조 아키텍처를 찾을 수 있습니다.
 
-그림 11-2는 참조 아키텍처의 예를 보여줍니다. 이 다이어그램에서는 마케팅에 최적화된 Sitecore 콘텐츠 관리 시스템 웹 사이트에 권장되는 아키텍처 접근 방식을 설명합니다.
+그림 11-1은 참조 아키텍처의 예를 보여 줍니다. 이 다이어그램에서는 마케팅에 최적화된 Sitecore 콘텐츠 관리 시스템 웹 사이트에 권장되는 아키텍처 접근 방식을 설명합니다.
 
-![](./media/image11-2.png)
+![그림 11-1](./media/image11-2.png)
 
 **그림 11-1.** Sitecore 마케팅 웹 사이트 참조 아키텍처
 

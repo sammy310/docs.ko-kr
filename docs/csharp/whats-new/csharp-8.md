@@ -1,17 +1,17 @@
 ---
 title: C# 8.0의 새로운 기능 - C# 가이드
-description: C# 8.0의 새로운 기능을 살펴봅니다. 이 문서는 미리 보기 5가 반영된 최신 내용을 담고 있습니다.
+description: C# 8.0의 새로운 기능을 살펴봅니다.
 ms.date: 09/20/2019
-ms.openlocfilehash: a434d1f7598bc3f6787f7466e48fb161db192761
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: ee0f6c9d7cfbe829508e3e0900e249c204266ca3
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182404"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71396029"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0의 새로운 기능
 
-C# 언어에는 직접 사용해 볼 수 있는 여러 개선된 기능이 포함되어 있습니다.
+C#8.0은 다음 기능 및 향상된 기능을 C# 언어에 추가합니다.
 
 - [읽기 전용 멤버](#readonly-members)
 - [기본 인터페이스 멤버](#default-interface-members)
@@ -30,9 +30,6 @@ C# 언어에는 직접 사용해 볼 수 있는 여러 개선된 기능이 포�
 - [관리되지 않는 생성 형식](#unmanaged-constructed-types)
 - [중첩 식의 stackalloc](#stackalloc-in-nested-expressions)
 - [보간된 약어 문자열의 향상된 기능](#enhancement-of-interpolated-verbatim-strings)
-
-> [!NOTE]
-> 이 문서는 C# 8.0 미리 보기 5를 반영하여 업데이트되었습니다.
 
 이 문서의 나머지 부분에서는 이러한 기능에 대해 간략하게 설명합니다. 심화 문서가 공개되면 해당 자습서에 대한 링크 및 개요가 제공됩니다. `dotnet try` 글로벌 도구를 사용하여 환경에서 다음과 같은 기능을 탐색할 수 있습니다.
 
@@ -378,18 +375,18 @@ await foreach (var number in GenerateSequence())
 
 ## <a name="indices-and-ranges"></a>인덱스 및 범위
 
-범위와 인덱스는 배열, [문자열](../language-reference/builtin-types/reference-types.md#the-string-type). <xref:System.Span%601> 또는 <xref:System.ReadOnlySpan%601>에서 하위 범위를 지정하는 간결한 구문을 제공합니다.
+인덱스와 범위는 시퀀스에서 단일 요소 또는 범위에 액세스하기 위한 간결한 구문을 제공합니다.
 
 이 언어 지원은 다음과 같은 두 가지 새 형식 및 두 가지 새 연산자를 사용합니다.
 
 - <xref:System.Index?displayProperty=nameWithType>는 인덱스를 시퀀스로 표현합니다.
-- 인덱스가 시퀀스의 끝을 기준으로 하도록 지정하는 `^` 연산자입니다.
+- 인덱스가 시퀀스의 끝을 기준으로 하도록 지정하는 끝부터 인덱스 연산자 `^`입니다.
 - <xref:System.Range?displayProperty=nameWithType>는 시퀀스의 하위 범위를 나타냅니다.
-- 범위의 시작과 끝을 피연산자로 지정하는 범위 연산자(`..`)입니다.
+- 범위의 시작과 끝을 피연산자로 지정하는 범위 연산자 `..`입니다.
 
 인덱스에 대한 규칙을 사용하여 시작하겠습니다. `sequence`배열을 고려합니다. `0` 인덱스는 `sequence[0]`과 동일합니다. `^0` 인덱스는 `sequence[sequence.Length]`와 동일합니다. `sequence[^0]`은 `sequence[sequence.Length]`처럼 예외를 throw합니다. `n`이 어떤 숫자이든, 인덱스 `^n`은 `sequence.Length - n`과 동일합니다.
 
-한 범위는 어떤 범위의 *시작* 및 *끝*을 지정합니다. 범위의 시작은 포함되지만 범위의 끝은 포함되지 않으므로, ‘시작’은 범위에 포함되고 ‘끝’은 범위에 포함되지 않습니다.   `[0..sequence.Length]`가 전체 범위를 나타내는 것처럼 `[0..^0]` 범위는 전체 범위를 나타냅니다. 
+한 범위는 어떤 범위의 *시작* 및 *끝*을 지정합니다. 범위의 시작은 포함되지만 범위의 끝은 포함되지 않으므로, ‘시작’은 범위에 포함되고 ‘끝’은 범위에 포함되지 않습니다.   `[0..sequence.Length]`가 전체 범위를 나타내는 것처럼 `[0..^0]` 범위는 전체 범위를 나타냅니다.
 
 몇 가지 예를 살펴보겠습니다. 다음과 같은 배열이 있습니다. 앞에서부터의 인덱스와 뒤에서부터의 인덱스가 주석으로 처리되어 있습니다.
 
@@ -447,6 +444,8 @@ Range phrase = 1..4;
 ```csharp
 var text = words[phrase];
 ```
+
+배열만 인덱스와 범위를 지원합니다. [문자열](../language-reference/builtin-types/reference-types.md#the-string-type), <xref:System.Span%601> 또는 <xref:System.ReadOnlySpan%601>에도 인덱스 및 범위를 사용할 수 있습니다. 자세한 내용은 [인덱스 및 범위에 대한 형식 지원](../tutorials/ranges-indexes.md#type-support-for-indices-and-ranges)을 참조하세요.
 
 인덱스와 범위에 대한 자세한 내용은 [인덱스 및 범위](../tutorials/ranges-indexes.md)에 대한 자습서에서 확인할 수 있습니다.
 

@@ -5,12 +5,12 @@ author: luisquintanilla
 ms.author: luquinta
 ms.date: 06/21/2019
 ms.custom: mvc, how-to
-ms.openlocfilehash: 54ab595c56f816517180aab48022c7df207fe84d
-ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
+ms.openlocfilehash: b0d45ab7807bf84b98c58e85580d5aa04d0c5f7d
+ms.sourcegitcommit: 1e72e2990220b3635cebc39586828af9deb72d8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67410571"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71306321"
 ---
 # <a name="how-to-install-mlnet-model-builder"></a>ML.NET 모델 작성기 설치 방법
 
@@ -43,15 +43,27 @@ Visual Studio Marketplace를 통해 또는 Visual Studio 내에서 ML.NET 모델
 ### <a name="visual-studio-2017"></a>Visual Studio 2017
 
 1. 메뉴 모음에서 **도구** > **확장 및 업데이트**를 선택합니다.
+
+    ![VS2017 확장 관리자 대화 상자 열기](./media/install-model-builder/vs2017-open-extensions-manager.png)
+
 1. *확장 및 업데이트* 프롬프트 내에서 *Online* 노드를 선택합니다.
 1. 검색 창에서 *ML.NET 모델 작성기*를 검색하고 결과에서 ML.NET 모델 작성기(미리 보기)를 선택합니다.
+
+    ![VS2017 확장 관리자 대화 상자에서 모델 작성기 확장 검색 및 설치](./media/install-model-builder/vs2017-install-model-builder.png)
+
 1. 프롬프트에 따라 설치를 완료합니다.
 
 ### <a name="visual-studio-2019"></a>Visual Studio 2019
 
 1. 메뉴 모음에서 **확장** > **확장 관리**를 선택합니다.
+
+    ![VS2019 확장 관리자 대화 상자 열기](./media/install-model-builder/vs2019-open-extensions-manager.png)
+
 1. *확장 및 업데이트* 프롬프트 내에서 *Online* 노드를 선택합니다.
 1. 검색 창에 *ML.NET 모델 작성기*를 입력하고 ML.NET 모델 작성기(미리 보기)를 선택합니다.
+
+    ![VS2019 확장 관리자 대화 상자에서 모델 작성기 확장 검색 및 설치](./media/install-model-builder/vs2019-install-model-builder.png)
+
 1. 프롬프트에 따라 설치를 완료합니다.
 
 ## <a name="uninstall"></a>제거
@@ -59,15 +71,27 @@ Visual Studio Marketplace를 통해 또는 Visual Studio 내에서 ML.NET 모델
 ### <a name="visual-studio-2017"></a>Visual Studio 2017
 
 1. 메뉴 모음에서 **도구** > **확장 및 업데이트**를 선택합니다.
+
+    ![VS2017 확장 관리자 대화 상자 열기](./media/install-model-builder/vs2017-open-extensions-manager.png)
+
 1. *확장 및 업데이트* 프롬프트 내에서 *설치됨* 노드를 확장하고 *도구*를 선택합니다.
 1. 도구 목록에서 ML.NET 모델 작성기(미리 보기)를 선택한 다음, *제거*를 선택합니다.
+
+    ![VS2017 확장 관리자 대화 상자에서 모델 작성기 확장 검색 및 제거](./media/install-model-builder/vs2017-uninstall-model-builder.png)
+
 1. 프롬프트에 따라 제거를 완료합니다.
 
 ### <a name="visual-studio-2019"></a>Visual Studio 2019
 
 1. 메뉴 모음에서 **확장** > **확장 관리**를 선택합니다.
+
+    ![VS2019 확장 관리자 대화 상자 열기](./media/install-model-builder/vs2019-open-extensions-manager.png)
+
 1. *확장 및 업데이트* 프롬프트 내에서 *설치됨* 노드를 확장하고 *도구*를 선택합니다.
 1. 도구 목록에서 ML.NET 모델 작성기(미리 보기)를 선택한 다음, *제거*를 선택합니다.
+
+    ![VS2019 확장 관리자 대화 상자에서 모델 작성기 확장 검색 및 제거](./media/install-model-builder/vs2019-uninstall-model-builder.png)
+
 1. 프롬프트에 따라 제거를 완료합니다.
 
 ## <a name="upgrade"></a>Upgrade

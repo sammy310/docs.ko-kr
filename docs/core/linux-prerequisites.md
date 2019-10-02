@@ -1,15 +1,15 @@
 ---
 title: Linux에서 .NET Core의 필수 구성 요소
 description: Linux 컴퓨터에서 .NET Core 애플리케이션을 개발, 배포 및 실행하기 위해 지원되는 Linux 버전 및 .NET Core 종속성입니다.
-author: thraka
-ms.author: adegeo
-ms.date: 12/14/2018
-ms.openlocfilehash: 31c53b2cc0fe576e56685f4a5561258136fd2541
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+author: leecow
+ms.author: leecow
+ms.date: 09/25/2019
+ms.openlocfilehash: 4c5d79459c9d69111ca6452d9305f0deb37212b8
+ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71116581"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71591694"
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>Linux에서 .NET Core의 필수 구성 요소
 
@@ -25,69 +25,82 @@ ms.locfileid: "71116581"
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+# <a name="net-core-30tabnetcore30"></a>[.NET Core 3.0](#tab/netcore30)
 
-.NET Core 2.x는 단일 운영 체제로 Linux를 처리합니다. 지원되는 Linux 배포에 대한 단일 Linux 빌드(칩 아키텍처마다)가 있습니다. 
-
-다운로드 링크 및 자세한 내용은 [.NET Core 2.2 다운로드](https://dotnet.microsoft.com/download/dotnet-core/2.2) 또는 [.NET Core 2.1 다운로드](https://dotnet.microsoft.com/download/dotnet-core/2.1)를 참조하세요.
-
-.NET Core 2.x는 다음 Linux 배포/버전에서 지원됩니다.
-
-* Red Hat Enterprise Linux 7, 6 - 64비트(`x86_64` 또는 `amd64`)
-* CentOS 7 - 64비트(`x86_64` 또는 `amd64`) 
-* Oracle Linux 7 - 64비트(`x86_64` 또는 `amd64`) 
-* Fedora 28, 27 - 64비트(`x86_64` 또는 `amd64`) 
-* Debian 9(64비트, `arm32`), 8.7 이상 버전 - 64비트(`x86_64` 또는 `amd64`)
-* Ubuntu 18.04(64비트, `arm32`), 16.04, 14.04, 64비트(`x86_64` 또는 `amd64`)
-* Linux Mint 18, 17 - 64비트(`x86_64` 또는 `amd64`)
-* openSUSE 42.3 이상 버전 - 64비트(`x86_64` 또는 `amd64`)
-* SUSE Enterprise Linux(SLES) 12 서비스 팩 2 이상 - 64비트(`x86_64` 또는 `amd64`)
-* Alpine Linux 3.7 이상 버전 - 64비트(`x86_64` 또는 `amd64`)
-
-.NET Core 2.1 및 .NET Core 2.2가 지원되는 운영 체제, 배포 및 버전, 지원되지 않는 OS 버전, 수명 주기 정책 링크의 전체 목록은 [.NET Core 2.1이 지원되는 OS 버전](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md) 및 [.NET Core 2.2가 지원되는 OS 버전](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md)을 참조하세요.
-
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-다운로드 링크 및 자세한 내용은 [.NET Core 1.1 다운로드](https://dotnet.microsoft.com/download/dotnet-core/1.1) 또는 [.NET Core 1.0 다운로드](https://dotnet.microsoft.com/download/dotnet-core/1.0)를 참조하세요.
-
-.NET Core 1.x는 다음 Linux 64비트(`x86_64` 또는 `amd64`) 배포/버전에서 지원됩니다.
-
-* Red Hat Enterprise Linux 7
-* CentOS 7
-* Oracle Linux 7
-* Fedora 28(.NET Core 1.1), 27
-* Debian 8.2 이상 버전
-* Ubuntu 18.04(.NET Core 1.1), 16.04, 14.04
-* Linux Mint 17
-* openSUSE 42.3 이상 버전(.NET Core 1.1)
-
-지원 OS 버전 중 .NET Core 1.x를 지원하는 운영 체제 및 수명 주기 정책 링크는 [.NET Core 1.x Supported OS Versions](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md)(.NET Core 1.x가 지원되는 OS 버전)를 참조하세요.
-
-# <a name="net-core-30-preview-1tabnetcore30"></a>[.NET Core 3.0 Preview 1](#tab/netcore30)
-
-.NET Core 3.0 Preview 1은 단일 운영 체제로 Linux를 처리합니다. 지원되는 Linux 배포에 대한 단일 Linux 빌드(칩 아키텍처마다)가 있습니다. 
+.NET Core 3.0에서는 Linux를 단일 운영 체제로 처리합니다. 지원되는 Linux 배포에 대한 단일 Linux 빌드(칩 아키텍처마다)가 있습니다. 
 
 다운로드 링크 및 자세한 내용은 [.NET Core 3.0 다운로드](https://dotnet.microsoft.com/download/dotnet-core/3.0)를 참조하세요.
 
-.NET Core 3.0 Preview 1은 다음 Linux 배포/버전에서 지원됩니다. 
+.NET Core 3.0은 다음 Linux 배포/버전에서 지원됩니다.
 
-OS                            | 버전               | 아키텍처  
-------------------------------|-----------------------|----------------
-Red Hat Enterprise Linux      | 6                     | X64
-Red Hat Enterprise Linux<br>CentOS<br>Oracle Linux  | 7                     | X64
-Fedora                        | 28                    | X64
-Debian                        | 9                     | x64, ARM32\*, ARM64\*
-Ubuntu                        | 16.04+, 18.04+        | x64, ARM32\*, ARM64\*
-Linux Mint                    | 18                    | X64
-openSUSE                      | 42.3+                 | X64
-SLES(SUSE Enterprise Linux)  | 12 SP2+               | X64
-Alpine Linux                  | 3.8+                  | x64, ARM64
+> [!NOTE]
+> `+` 기호는 최소 버전을 나타냅니다.
 
-\* ARM32 및 ARM64 지원은 Debian 9 및 Ubuntu 16.04에서 시작합니다. 해당 배포판의 이전 버전은 ARM 칩에서 지원되지 않습니다.
+| OS                             | 버전               | 아키텍처    |
+| ------------------------------ | --------------------- | ---------------- |
+| Red Hat Enterprise Linux       | 6+, 7                 | X64 |
+| Oracle Linux                   | 7                     | X64 |
+| CentOS                         | 7                     | X64 |
+| Fedora                         | 29+                   | X64 |
+| Debian                         | 9+                    | x64, ARM32, ARM64 |
+| Ubuntu                         | 16.04+                | x64, ARM32, ARM64 |
+| Linux Mint                     | 18+                   | X64 |
+| openSUSE                       | 15+                   | X64 |
+| SLES(SUSE Enterprise Linux)   | 12 SP2+               | X64 |
+| Alpine Linux                   | 3.8+                  | x64, ARM64 |
 
 지원 OS 버전 중 .NET Core 3.0이 지원되는 운영 체제, 배포 및 버전, 수명 주기 정책 링크의 전체 목록은 [.NET Core 3.0이 지원되는 OS 버전](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md)을 참조하세요.
 
 ARM64에 .NET Core 3.0을 설치하는 방법에 대한 자세한 내용은 [Linux ARM64에 .NET Core 3.0 설치](https://gist.github.com/richlander/467813274cea8abc624553ee72b28213)를 참조하세요.
+
+# <a name="net-core-22tabnetcore22"></a>[.NET Core 2.2](#tab/netcore22)
+
+.NET Core 2.2에서는 Linux를 단일 운영 체제로 처리합니다. 지원되는 Linux 배포에 대한 단일 Linux 빌드(칩 아키텍처마다)가 있습니다.
+
+다운로드 링크 및 자세한 내용은 [.NET Core 2.2 다운로드](https://dotnet.microsoft.com/download/dotnet-core/2.2)를 참조하세요.
+
+.NET Core 2.2는 다음 Linux 배포/버전에서 지원됩니다.
+
+> [!NOTE]
+> `+` 기호는 최소 버전을 나타냅니다.
+
+| OS                             |  버전                |  아키텍처   |
+| ------------------------------ | ----------------------- | ---------------- |
+| Red Hat Enterprise Linux       |  6, 7                   | X64 |
+| Oracle Linux                   |  7                      | X64 |
+| CentOS                         |  7                      | X64 |
+| Fedora                         |  29, 30                 | X64 |
+| Debian                         |  9                      | x64, ARM32 |
+| Ubuntu                         |  16.04, 18.04, 18.10    | x64, ARM32 |
+| Linux Mint                     |  17, 18                 | X64 |
+| openSUSE                       |  15+                    | X64 |
+| SLES(SUSE Enterprise Linux)   |  12 SP2+                | X64 |
+| Alpine Linux                   |  3.7+                   | X64 |
+
+.NET Core 2.2 지원 운영 체제, 배포 및 버전, 지원되지 않는 OS 버전, 수명 주기 정책 링크의 전체 목록은 [.NET Core 2.2 지원 OS 버전](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md)을 참조하세요.
+
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+
+.NET Core 2.1에서는 Linux를 단일 운영 체제로 처리합니다. 지원되는 Linux 배포에 대한 단일 Linux 빌드(칩 아키텍처마다)가 있습니다.
+
+다운로드 링크 및 자세한 내용은 [.NET Core 2.1 다운로드](https://dotnet.microsoft.com/download/dotnet-core/2.1)를 참조하세요.
+
+.NET Core 2.1은 다음 Linux 배포/버전에서 지원됩니다.
+
+| OS                             |  버전                |  아키텍처   |
+| ------------------------------ | ----------------------- | ---------------- |
+| Red Hat Enterprise Linux       |  6, 7, 8                | X64 |
+| Oracle Linux                   |  7                      | X64 |
+| CentOS                         |  7                      | X64 |
+| Fedora                         |  29, 30                 | X64 |
+| Debian                         |  9                      | x64, ARM32 |
+| Ubuntu                         |  16.04, 18.04, 19.04    | x64, ARM32 |
+| Linux Mint                     |  17, 18                 | X64 |
+| openSUSE                       |  42.3+                  | X64 |
+| SLES(SUSE Enterprise Linux)   |  12 SP2+                | X64 |
+| Alpine Linux                   |  3.7+                   | X64 |
+
+지원 OS 버전 중 .NET Core 2.1이 지원되는 운영 체제, 배포 및 버전, 수명 주기 정책 링크의 전체 목록은 [.NET Core 2.1이 지원되는 OS 버전](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md)을 참조하세요.
 
 ---
 

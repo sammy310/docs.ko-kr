@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8820fb898e0944704b7c81363962d523770a541c
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: ce2f127858305a96b358c1661b98a359ae565f57
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442479"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71393124"
 ---
 # <a name="globalization"></a>전역화
 
@@ -114,7 +114,7 @@ Windows 운영 체제를 비롯한 많은 애플리케이션과 운영 체제는
 |.NET Framework 4|모든 운영 체제|Unicode 5.0|
 |Windows 7의 .NET Framework 4.5 이상|Unicode 5.0|
 |Windows 8 이상 운영 체제의 .NET Framework 4.5 이상|유니코드 6.3.0|
-|.NET Core(모든 버전)|기본 운영 체제에서 지원 되는 유니코드 표준의 버전에 따라 달라 집니다.|
+|.NET Core(모든 버전)|기본 운영 체제에서 지원되는 유니코드 표준의 버전에 따라 달라집니다.|
 
 .NET Framework 4.5 이상 및 모든 버전의 .NET Core에서 문자열 비교 및 정렬은 운영 체제에 따라 달라집니다. Windows 7에서 실행되는 .NET Framework 4.5 이상은 Unicode 5.0을 구현하는 자체 테이블의 데이터를 검색합니다. Windows 8 이상에서 실행되는 .NET Framework 4.5 이상은 Unicode 6.3을 구현하는 운영 체제 테이블의 데이터를 검색합니다. .NET Core에서 지원되는 유니코드의 버전은 기본 운영 체제에 따라 달라집니다. 문화권 구분 정렬 데이터를 직렬화하면 <xref:System.Globalization.SortVersion> 클래스를 사용하여 직렬화된 데이터가 .NET 및 운영 체제의 정렬 순서와 일치하도록 정렬되어야 하는 시기를 결정할 수 있습니다. 예제는 <xref:System.Globalization.SortVersion> 클래스 항목을 참조하세요.
 
@@ -183,7 +183,7 @@ Windows 운영 체제를 비롯한 많은 애플리케이션과 운영 체제는
 
 데이터가 serialize된 시스템과 표준 시간대가 같은 시스템에서 데이터가 복원되면, deserialize된 날짜 및 시간 값이 원래 값을 정확하게 반영하고 다음과 같이 출력됩니다.
 
-```
+```console
 '3/30/2013 6:00:00 PM' --> 3/30/2013 6:00:00 PM Unspecified
 '2013-03-30T18:00:00' --> 3/30/2013 6:00:00 PM Unspecified
 '2013-03-30T18:00:00.0000000-07:00' --> 3/30/2013 6:00:00 PM Local
@@ -193,7 +193,7 @@ Windows 운영 체제를 비롯한 많은 애플리케이션과 운영 체제는
 
 하지만, 표준 시간대가 다른 시스템에서 데이터를 복원하면, "o"(라운드트립) 표준 서식 문자열로 서식이 지정된 날짜 및 시간 값만 표준 시간대 정보를 유지하기 때문에 동일한 시점을 나타냅니다. 날짜 및 시간 데이터를 로망스 표준 시간대 시스템에서 복원하면 다음과 같이 출력됩니다.
 
-```
+```console
 '3/30/2013 6:00:00 PM' --> 3/30/2013 6:00:00 PM Unspecified
 '2013-03-30T18:00:00' --> 3/30/2013 6:00:00 PM Unspecified
 '2013-03-30T18:00:00.0000000-07:00' --> 3/31/2013 3:00:00 AM Local
@@ -218,7 +218,7 @@ Windows 운영 체제를 비롯한 많은 애플리케이션과 운영 체제는
 
 데이터가 태평양 표준 시간대 시스템에서 serialize되고 로망스 표준 시간대 시스템에서 deserialize되는 경우에, 예제는 다음과 같이 출력됩니다.
 
-```
+```console
 '2013-03-30T18:00:00.0000000-07:00' --> 3/31/2013 3:00:00 AM Local
 'Sun, 31 Mar 2013 01:00:00 GMT' --> 3/31/2013 3:00:00 AM Local
 '2013-03-31 01:00:00Z' --> 3/31/2013 3:00:00 AM Local

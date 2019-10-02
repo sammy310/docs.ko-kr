@@ -4,12 +4,12 @@ description: 이 항목에서는 Mac 및 .NET Core용 Visual Studio를 사용하
 author: mairaw
 ms.date: 07/11/2019
 ms.custom: seodec18
-ms.openlocfilehash: ff508bbe8d72a88ea32adfbed984d4e9e8b8e7ca
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 77e676c327b62369e7ddb9444bf8f246d3c5c2e8
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70925819"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182503"
 ---
 # <a name="get-started-with-net-core-on-macos-using-visual-studio-for-mac"></a>Mac용 Visual Studio를 사용하여 macOS에서 .NET Core 시작
 
@@ -25,7 +25,7 @@ Visual Studio for Mac은 .NET Core 애플리케이션 개발을 위해 필요한
 
 [Mac에서 .NET Core의 필수 구성 요소](../macos-prerequisites.md) 항목을 참조하세요.
 
-[.NET Core 지원](https://docs.microsoft.com/visualstudio/mac/net-core-support?view=vsmac-2019) 가이드를 참조하여 지원되는 버전의 .NET Core를 사용 중인지 확인하세요.
+[.NET Core 지원](/visualstudio/mac/net-core-support) 문서를 참조하여 지원되는 버전의 .NET Core를 사용하고 있는지 확인합니다.
 
 ## <a name="get-started"></a>시작
 

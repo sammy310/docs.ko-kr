@@ -1,16 +1,16 @@
 ---
 title: Azure Functions에 모델 배포
 description: Azure Functions를 사용하여 인터넷을 통해 예측하기 위한 ML.NET 감정 분석 기계 학습 모델 제공
-ms.date: 08/20/2019
+ms.date: 09/12/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: 96b62017994da5b7b209c441b3e7fb760cad5201
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: ef028fee6cafcf4a775e061d9a5f91f0cf9a7e36
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666676"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332702"
 ---
 # <a name="deploy-a-model-to-azure-functions"></a>Azure Functions에 모델 배포
 
@@ -68,19 +68,7 @@ Azure Functions 서버리스 환경을 통해 HTTP에서의 예측을 위해 미
 
     *AnalyzeSentiment.cs* 파일이 코드 편집기에서 열립니다. 다음 `using` 문을 *AnalyzeSentiment.cs*의 맨 위에 추가합니다.
 
-    ```csharp
-    using System;
-    using System.IO;
-    using System.Threading.Tasks;
-    using Microsoft.AspNetCore.Mvc;
-    using Microsoft.Azure.WebJobs;
-    using Microsoft.Azure.WebJobs.Extensions.Http;
-    using Microsoft.AspNetCore.Http;
-    using Microsoft.Extensions.Logging;
-    using Newtonsoft.Json;
-    using Microsoft.Extensions.ML;
-    using SentimentAnalysisFunctionsApp.DataModels;
-    ```
+    [!code-csharp [AnalyzeUsings](~/machinelearning-samples/samples/csharp/end-to-end-apps/ScalableMLModelOnAzureFunction/SentimentAnalysisFunctionsApp/AnalyzeSentiment.cs#L1-L11)]
 
     기본적으로 `AnalyzeSentiment` 클래스는 `static`입니다. 클래스 정의에서 `static` 키워드를 제거합니다.
 
@@ -101,51 +89,26 @@ Azure Functions 서버리스 환경을 통해 HTTP에서의 예측을 위해 미
 
     *SentimentData.cs* 파일이 코드 편집기에서 열립니다. 다음 using 문을 *SentimentData.cs*의 맨 위에 추가합니다.
 
-    ```csharp
-    using Microsoft.ML.Data;
-    ```
+    [!code-csharp [SentimentDataUsings](~/machinelearning-samples/samples/csharp/end-to-end-apps/ScalableMLModelOnAzureFunction/SentimentAnalysisFunctionsApp/DataModels/SentimentData.cs#L1)]
 
     기존 클래스 정의를 제거하고 다음 코드를 *SentimentData.cs* 파일에 추가합니다.
-    
-    ```csharp
-    public class SentimentData
-    {
-        [LoadColumn(0)]
-        public string SentimentText;
 
-        [LoadColumn(1)]
-        [ColumnName("Label")]
-        public bool Sentiment;
-    }
-    ```
+    [!code-csharp [SentimentData](~/machinelearning-samples/samples/csharp/end-to-end-apps/ScalableMLModelOnAzureFunction/SentimentAnalysisFunctionsApp/DataModels/SentimentData.cs#L5-L13)]
 
 4. 솔루션 탐색기에서 *DataModels* 디렉터리를 마우스 오른쪽 단추로 클릭하고 **추가 > 새 항목**을 선택합니다.
 5. **새 항목 추가** 대화 상자에서 **클래스**를 선택하고 **이름** 필드를 *SentimentPrediction.cs*로 변경합니다. 그런 다음, **추가** 단추를 선택합니다. *SentimentPrediction.cs* 파일이 코드 편집기에서 열립니다. 다음 using 문을 *SentimentPrediction.cs*의 맨 위에 추가합니다.
 
-    ```csharp
-    using Microsoft.ML.Data;
-    ```
+    [!code-csharp [SentimentPredictionUsings](~/machinelearning-samples/samples/csharp/end-to-end-apps/ScalableMLModelOnAzureFunction/SentimentAnalysisFunctionsApp/DataModels/SentimentPrediction.cs#L1)]
 
     기존 클래스 정의를 제거하고 다음 코드를 *SentimentPrediction.cs* 파일에 추가합니다.
 
-    ```csharp
-    public class SentimentPrediction : SentimentData
-    {
-
-        [ColumnName("PredictedLabel")]
-        public bool Prediction { get; set; }
-
-        public float Probability { get; set; }
-
-        public float Score { get; set; }
-    }
-    ```
+    [!code-csharp [SentimentPrediction](~/machinelearning-samples/samples/csharp/end-to-end-apps/ScalableMLModelOnAzureFunction/SentimentAnalysisFunctionsApp/DataModels/SentimentPrediction.cs#L5-L14)]
 
     `SentimentPrediction`은 `SentimentText` 속성의 원래 데이터와 모델에서 생성된 출력에 대한 액세스를 제공하는 `SentimentData`에서 상속됩니다.
 
 ## <a name="register-predictionenginepool-service"></a>PredictionEnginePool 서비스 등록
 
-단일 예측에 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)을 사용합니다. 애플리케이션에 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)을 사용하려면 필요할 때 만들어야 합니다. 이 경우 가장 좋은 방법은 종속성 주입을 고려하는 것입니다.
+단일 예측을 수행하려면 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)을 만들어야 합니다. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)은 스레드로부터 안전하지 않습니다. 또한 애플리케이션 내에서 필요한 모든 위치에서 인스턴스를 만들어야 합니다. 애플리케이션이 커지면 이 프로세스를 관리할 수 없게 됩니다. 성능 및 스레드 보안을 개선하려면 종속성 주입과 `PredictionEnginePool` 서비스를 함께 사용합니다. 이 서비스는 애플리케이션 전체에서 사용할 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) 개체의 [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601)을 만듭니다.
 
 [종속성 주입](https://en.wikipedia.org/wiki/Dependency_injection)에 대한 자세한 내용은 다음 링크를 참조하세요.
 
@@ -172,30 +135,27 @@ Azure Functions 서버리스 환경을 통해 HTTP에서의 예측을 위해 미
             public override void Configure(IFunctionsHostBuilder builder)
             {
                 builder.Services.AddPredictionEnginePool<SentimentData, SentimentPrediction>()
-                    .FromFile("MLModels/sentiment_model.zip");
+                    .FromFile(modelName: "SentimentAnalysisModel", filePath:"MLModels/sentiment_model.zip", watchForChanges: true);
             }
         }
     }
     ```
 
-개략적으로 이 코드는 애플리케이션을 수동으로 초기화하지 않고도 애플리케이션에서 요청할 때 자동으로 개체 및 서비스를 초기화합니다.
+개략적으로 이 코드는 애플리케이션을 수동으로 초기화하지 않고도 애플리케이션에서 요청할 때 나중에 사용할 수 있도록 자동으로 개체 및 서비스를 초기화합니다. 
 
-> [!WARNING]
-> [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)은 스레드로부터 안전하지 않습니다. 성능과 스레드 안전 향상을 위해 애플리케이션용으로 `PredictionEngine` 개체의 [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601)을 만드는 `PredictionEnginePool` 서비스를 사용합니다. 
+기계 학습 모델은 정적이지 않습니다. 새 학습 데이터를 사용할 수 있게 되면 모델을 다시 학습하고 다시 배포합니다. 최신 버전의 모델을 애플리케이션으로 가져오는 한 가지 방법은 전체 애플리케이션을 다시 배포하는 것입니다. 그러나 이 경우 애플리케이션 가동 중지 시간이 발생합니다. `PredictionEnginePool` 서비스는 애플리케이션을 가동 중지하지 않으면서 업데이트된 모델을 다시 로드하는 메커니즘을 제공합니다. 
+
+`watchForChanges` 매개 변수를 `true`로 설정하면 `PredictionEnginePool`은 파일 시스템 변경 알림을 수신 대기하고 파일이 변경될 때 이벤트를 발생시키는 [`FileSystemWatcher`](xref:System.IO.FileSystemWatcher)를 시작합니다. 그러면 `PredictionEnginePool`에서 모델을 자동으로 다시 로드하도록 지정할 수 있는 메시지가 표시됩니다.
+
+모델은 `modelName` 매개 변수로 식별되므로 변경 시, 애플리케이션당 두 개 이상의 모델이 다시 로드될 수 있습니다. 
+
+또는 원격으로 저장된 모델을 사용하는 경우 `FromUri` 메서드를 사용할 수 있습니다. `FromUri`는 파일 변경 이벤트를 감시하지 않고, 원격 위치에서 변경 내용을 폴링합니다. 폴링 간격의 기본값은 5분입니다. 애플리케이션의 요구 사항에 따라 폴링 간격을 늘리거나 줄일 수 있습니다.
 
 ## <a name="load-the-model-into-the-function"></a>함수에 모델 로드
 
 *AnalyzeSentiment* 클래스 안에 다음 코드를 삽입합니다.
 
-```csharp
-private readonly PredictionEnginePool<SentimentData, SentimentPrediction> _predictionEnginePool;
-
-// AnalyzeSentiment class constructor
-public AnalyzeSentiment(PredictionEnginePool<SentimentData, SentimentPrediction> predictionEnginePool)
-{
-    _predictionEnginePool = predictionEnginePool;
-}
-```
+[!code-csharp [AnalyzeCtor](~/machinelearning-samples/samples/csharp/end-to-end-apps/ScalableMLModelOnAzureFunction/SentimentAnalysisFunctionsApp/AnalyzeSentiment.cs#L18-L24)]
 
 이 코드는 종속성 주입을 통해 가져오는 함수의 생성자에 `PredictionEnginePool`을 전달하여 할당합니다.
 
@@ -214,9 +174,9 @@ ILogger log)
     //Parse HTTP Request Body
     string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
     SentimentData data = JsonConvert.DeserializeObject<SentimentData>(requestBody);
-    
+
     //Make Prediction
-    SentimentPrediction prediction = _predictionEnginePool.Predict(data);
+    SentimentPrediction prediction = _predictionEnginePool.Predict(modelName: "SentimentAnalysisModel", example: data);
 
     //Convert prediction to string
     string sentiment = Convert.ToBoolean(prediction.Prediction) ? "Positive" : "Negative";
@@ -226,7 +186,7 @@ ILogger log)
 }
 ```
 
-`Run` 메서드가 실행되면 HTTP 요청에서 수신되는 데이터가 직렬 해제되어 `PredictionEnginePool`에 대한 입력으로 사용됩니다. 그런 다음, `Predict` 메서드를 호출하여 예측을 생성하고 결과를 사용자에게 반환합니다. 
+`Run` 메서드가 실행되면 HTTP 요청에서 수신되는 데이터가 직렬 해제되어 `PredictionEnginePool`에 대한 입력으로 사용됩니다. 그런 다음, `Predict` 메서드가 `Startup` 클래스에 등록된 `SentimentAnalysisModel`을 사용하여 예측을 수행하고 성공하면 결과를 사용자에게 다시 반환합니다.
 
 ## <a name="test-locally"></a>로컬로 테스트
 

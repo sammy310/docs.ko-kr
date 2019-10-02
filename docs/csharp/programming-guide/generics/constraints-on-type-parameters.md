@@ -7,12 +7,12 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: bb545d9da73154c237f55809a3a72ff0f121ce1a
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 5c36639d76a6fbd4e36f39486369a55a56a6e3ea
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253016"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71396285"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>형식 매개 변수에 대한 제약 조건(C# 프로그래밍 가이드)
 
@@ -20,7 +20,7 @@ ms.locfileid: "70253016"
 
 |제약 조건|설명|
 |----------------|-----------------|
-|`where T : struct`|형식 인수는 값 형식이어야 합니다. <xref:System.Nullable%601>를 제외한 임의의 값 형식을 지정할 수 있습니다. nullable 형식에 대한 자세한 내용은 [Nullable 형식](../nullable-types/index.md)을 참조하세요.|
+|`where T : struct`|형식 인수는 값 형식이어야 합니다. <xref:System.Nullable%601>를 제외한 임의의 값 형식을 지정할 수 있습니다. nullable 값 형식에 대한 자세한 내용은 [Nullable 값 형식](../nullable-types/index.md)을 참조하세요.|
 |`where T : class`|형식 인수는 참조 형식이어야 합니다. 이 제약 조건은 모든 클래스, 인터페이스, 대리자 또는 배열 형식에도 적용됩니다.|
 |`where T : notnull`|형식 인수는 nullable이 아닌 형식이어야 합니다. 인수는 C# 8.0 이상의 nullable이 아닌 참조 형식이거나 nullable이 아닌 값 형식일 수 있습니다. 이 제약 조건은 모든 클래스, 인터페이스, 대리자 또는 배열 형식에도 적용됩니다.|
 |`where T : unmanaged`|형식 인수는 [비관리형 형식](../../language-reference/builtin-types/unmanaged-types.md)이어야 합니다.|

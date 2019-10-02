@@ -1,17 +1,17 @@
 ---
 title: 대상 프레임워크
 description: .NET Core 앱 및 라이브러리의 대상 프레임워크에 대해 알아봅니다.
-author: richlander
+author: mairaw
 ms.author: mairaw
-ms.date: 04/02/2019
+ms.date: 09/23/2019
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
-ms.openlocfilehash: 20b13bb590a63a807c1894bf08051053f90c0fc4
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: b05923b293b1a5bb94a69ddd0154f8701b9326b0
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666514"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216663"
 ---
 # <a name="target-frameworks"></a>대상 프레임워크
 
@@ -31,8 +31,8 @@ ms.locfileid: "69666514"
 
 | 대상 프레임워크      | 최신 <br/> 안정적인 버전 | TFM(대상 프레임워크 모니커) | 구현된 <br/> .NET 표준 버전 |
 | :-------------------: | :-------------------------: | :----------------------------: | :-------------------------------------: |
-| .NET Standard         | 2.0                         | netstandard2.0                 | 해당 없음                                     |
-| .NET Core             | 2.2                         | netcoreapp2.2                  | 2.0                                     |
+| .NET Standard         | 2.1                         | netstandard2.1                 | 해당 사항 없음                                     |
+| .NET Core             | 3.0                         | netcoreapp3.0                  | 2.1                                     |
 | .NET Framework        | 4.8                         | net48                          | 2.0                                     |
 
 ## <a name="supported-target-framework-versions"></a>지원되는 대상 프레임워크 버전
@@ -41,8 +41,8 @@ ms.locfileid: "69666514"
 
 | 대상 프레임워크           | TFM |
 | -------------------------- | --- |
-| .NET Standard              | netstandard1.0<br>netstandard1.1<br>netstandard1.2<br>netstandard1.3<br>netstandard1.4<br>netstandard1.5<br>netstandard1.6<br>netstandard2.0 |
-| .NET Core                  | netcoreapp1.0<br>netcoreapp1.1<br>netcoreapp2.0<br>netcoreapp2.1<br>netcoreapp2.2 |
+| .NET Standard              | netstandard1.0<br>netstandard1.1<br>netstandard1.2<br>netstandard1.3<br>netstandard1.4<br>netstandard1.5<br>netstandard1.6<br>netstandard2.0<br>netstandard2.1 |
+| .NET Core                  | netcoreapp1.0<br>netcoreapp1.1<br>netcoreapp2.0<br>netcoreapp2.1<br>netcoreapp2.2<br>netcoreapp3.0 |
 | .NET Framework             | net11<br>net20<br>net35<br>net40<br>net403<br>net45<br>net451<br>net452<br>net46<br>net461<br>net462<br>net47<br>net471<br>net472<br>net48 |
 | Windows 스토어              | netcore [netcore45]<br>netcore45 [win] [win8]<br>netcore451 [win81] |
 | .NET Micro Framework       | netmf |
@@ -52,14 +52,14 @@ ms.locfileid: "69666514"
 
 ## <a name="how-to-specify-target-frameworks"></a>대상 프레임워크를 지정하는 방법
 
-대상 프레임워크는 프로젝트 파일에서 지정합니다. 단일 대상 프레임워크를 지정하는 경우 **TargetFramework** 요소를 사용합니다. 다음 콘솔 앱 프로젝트 파일에서는 .NET Core 2.2를 대상 프레임워크로 지정하는 방법을 보여줍니다.
+대상 프레임워크는 프로젝트 파일에서 지정합니다. 단일 대상 프레임워크를 지정하는 경우 **TargetFramework** 요소를 사용합니다. 다음 콘솔 앱 프로젝트 파일에서는 .NET Core 3.0을 대상 프레임워크로 지정하는 방법을 보여 줍니다.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
   </PropertyGroup>
 
 </Project>
@@ -112,7 +112,7 @@ public class MyClass
 
 다음은 .NET Core 대상 프레임워크에 대한 전체 전처리기 기호 목록입니다.
 
-[!INCLUDE [Preprocessor symbols](~/includes/preprocessor-symbols.md)]
+[!INCLUDE [Preprocessor symbols](../../includes/preprocessor-symbols.md)]
 
 ## <a name="deprecated-target-frameworks"></a>사용되지 않는 대상 프레임워크
 

@@ -3,12 +3,12 @@ title: C#에서 기본 인터페이스 멤버를 사용하여 안전하게 인�
 description: 이 고급 자습서에서는 해당 인터페이스를 구현하는 모든 클래스 및 구성 요소를 훼손하지 않고 기존 인터페이스 정의에 새 기능을 안전하게 추가할 수 있는 방법을 살펴봅니다.
 ms.date: 05/06/2019
 ms.custom: mvc
-ms.openlocfilehash: 6a723a116d420dd43d2adeef98b824445dd4f0d7
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 271c737e17cc2b93424108e7e1d434fd1c7198be
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926712"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216570"
 ---
 # <a name="tutorial-update-interfaces-with-default-interface-members-in-c-80"></a>자습서: C# 8.0에서 기본 인터페이스 멤버로 인터페이스 업데이트
 
@@ -24,7 +24,7 @@ ms.locfileid: "70926712"
 
 ## <a name="prerequisites"></a>전제 조건
 
-C# 8.0 미리 보기 컴파일러를 포함해 .NET Core를 실행하도록 머신을 설정해야 합니다. C# 8.0 미리 보기 컴파일러는 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 또는 최신 [.NET Core 3.0 미리 보기 SDK](https://dotnet.microsoft.com/download/dotnet-core/3.0)부터 사용 가능합니다. 기본 인터페이스 멤버는 .NET Core 3.0 미리 보기 4부터 사용 가능합니다.
+C# 8.0 컴파일러를 포함하여 .NET Core를 실행하도록 머신을 설정해야 합니다. C# 8.0 컴파일러는 [Visual Studio 2019 버전 16.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 또는 [.NET CORE 3.0 SDK](https://dotnet.microsoft.com/download)부터 사용할 수 있습니다.
 
 ## <a name="scenario-overview"></a>시나리오 개요
 

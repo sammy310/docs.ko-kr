@@ -1,5 +1,5 @@
 ---
-title: .NET Core 구성 요소를 COM에 노출
+title: COM에 .NET Core 구성 요소 공개
 ms.date: 07/12/2019
 helpviewer_keywords:
 - exposing .NET Core components to COM
@@ -8,14 +8,14 @@ helpviewer_keywords:
 ms.assetid: 21271167-fe7f-46ba-a81f-a6812ea649d4
 author: jkoritzinsky
 ms.author: jekoritz
-ms.openlocfilehash: 686d1b31478121a8b2c907d99672a5fcc3438a71
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 8f9624414a2b423bd43e8790d11b70ae1ca6286d
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849039"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216234"
 ---
-# <a name="exposing-net-core-components-to-com"></a>.NET Core 구성 요소를 COM에 노출
+# <a name="exposing-net-core-components-to-com"></a>COM에 .NET Core 구성 요소 공개
 
 .NET Core에서는 COM에 .NET 개체를 공개하는 절차가 .NET Framework에 비해 크게 간소화되었습니다. 다음 절차에서는 클래스를 COM에 공개하는 방법을 안내합니다. 이 자습서에서는 다음을 수행하는 방법을 보여 줍니다.
 
@@ -25,16 +25,24 @@ ms.locfileid: "70849039"
 
 ## <a name="prerequisites"></a>전제 조건
 
-- [.NET Core 3.0 Preview 7 SDK](https://dotnet.microsoft.com/download) 이상 버전을 설치합니다.
+- [.NET Core 3.0 SDK](https://dotnet.microsoft.com/download) 또는 최신 버전을 설치합니다.
 
 ## <a name="create-the-library"></a>라이브러리 만들기
 
 첫 번째 단계는 라이브러리를 만드는 것입니다.
 
-1. 새 폴더를 만들고 해당 폴더에서 `dotnet new classlib`을 실행합니다.
+1. 새 폴더를 만든 다음, 해당 폴더에서 다음 명령을 실행합니다.
+    
+    ```dotnetcli
+    dotnet new classlib
+    ```
+
 2. `Class1.cs`를 엽니다.
 3. `using System.Runtime.InteropServices;`를 파일의 맨 위에 추가합니다.
-4. `IServer` 인터페이스를 만듭니다. 예: [!code-csharp[The IServer interface](~/samples/core/extensions/COMServerDemo/COMContract/IServer.cs)]
+4. `IServer` 인터페이스를 만듭니다. 예:
+
+   [!code-csharp[The IServer interface](~/samples/core/extensions/COMServerDemo/COMContract/IServer.cs)]
+
 5. 구현 중인 COM 인터페이스의 인터페이스 GUID를 사용하여 `[Guid("<IID>")]` 특성을 인터페이스에 추가합니다. 예: `[Guid("fe103d6e-e71b-414c-80bf-982f18f6c1c7")]`. 이 GUID는 이 COM용 인터페이스의 유일한 식별자이므로 고유해야 합니다. Visual Studio에서 [도구] > [GUID 만들기]로 이동하여 GUID 만들기 도구를 열고 GUID를 생성할 수 있습니다.
 6. `[InterfaceType]` 특성을 인터페이스에 추가하고 이 인터페이스에서 구현해야 하는 기본 COM 인터페이스를 지정합니다.
 7. `IServer`를 구현하는 `Server`라는 클래스를 만듭니다.
@@ -62,7 +70,7 @@ ms.locfileid: "70849039"
 
 이제 결과 출력에는 `ProjectName.X.manifest` 파일도 포함됩니다. 이 파일은 레지스트리 없는 COM과 함께 사용할 병렬 매니페스트입니다.
 
-## <a name="sample"></a>샘플
+## <a name="sample"></a>예제
 
 GitHub의 dotnet/samples 리포지토리에는 완벽하게 작동하는 [COM 서버 샘플](https://github.com/dotnet/samples/tree/master/core/extensions/COMServerDemo)이 있습니다.
 

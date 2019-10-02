@@ -3,12 +3,12 @@ title: 패턴 일치 기능을 사용하여 데이터 형식 확장
 description: 이 고급 자습서에서는 패턴 일치 기술을 사용하여 개별적으로 생성된 데이터 및 알고리즘을 사용하여 기능을 만드는 방법을 보여 줍니다.
 ms.date: 03/13/2019
 ms.custom: mvc
-ms.openlocfilehash: 366791b113d3b1f9ccef303553a3656f7e803a32
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 036a6bcda04771eb8cf3699af8756e83bb144389
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926649"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332358"
 ---
 # <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>자습서: 패턴 일치 기능을 사용하여 데이터 형식 확장
 
@@ -24,7 +24,7 @@ C# 7에서는 기본 패턴 일치 기능을 도입했습니다. 이 기능은 �
 
 ## <a name="prerequisites"></a>전제 조건
 
-C# 8.0 미리 보기 컴파일러를 포함하여 .NET Core를 실행하도록 머신을 설정해야 합니다. C# 8 미리 보기 컴파일러는 최신 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 또는 최신 [.NET Core 3.0 미리 보기](https://dotnet.microsoft.com/download/dotnet-core/3.0)에서 사용할 수 있습니다.
+C# 8.0 컴파일러를 포함하여 .NET Core를 실행하도록 머신을 설정해야 합니다. C# 8 컴파일러는 [Visual Studio 2019 버전 16.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 또는 [.NET CORE 3.0 SDK](https://dotnet.microsoft.com/download)부터 사용할 수 있습니다.
 
 이 자습서에서는 Visual Studio 또는 .NET Core CLI를 포함하여 C# 및 .NET에 익숙하다고 가정합니다.
 
@@ -240,6 +240,9 @@ vehicle switch
     DeliveryTruck t when (t.GrossWeightClass > 5000) => 10.00m + 5.00m,
     DeliveryTruck t when (t.GrossWeightClass < 3000) => 10.00m - 2.00m,
     DeliveryTruck t => 10.00m,
+    
+    { }     => throw new ArgumentException(message: "Not a known vehicle type", paramName: nameof(vehicle)),
+    null    => throw new ArgumentNullException(nameof(vehicle))
 };
 ```
 
@@ -294,7 +297,7 @@ public decimal CalculateToll(object vehicle) =>
 
 다음 표는 입력 값과 최대 가격 승수의 조합을 보여 줍니다.
 
-| Day        | 시간         | 방향 | 할증 |
+| Day        | Time         | 방향 | 할증 |
 | ---------- | ------------ | --------- |--------:|
 | 주중    | 아침 교통 체증 | 인바운드   | x 2.00  |
 | 주중    | 아침 교통 체증 | 아웃바운드  | x 1.00  |

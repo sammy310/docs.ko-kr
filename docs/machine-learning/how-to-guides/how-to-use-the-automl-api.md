@@ -3,12 +3,12 @@ title: ML.NET 자동화 ML API 사용 방법
 description: ML.NET 자동화 ML API는 모델 빌드 프로세스를 자동화하고 배포 준비된 모델을 생성합니다. 자동화된 기계 학습 작업을 구성하기 위해 사용할 수 있는 옵션에 대해 알아보세요.
 ms.date: 04/24/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 02e4203b0d9f388c7bd7133f3cd4e97cc60cff14
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: a7057337fb6ff19a1e402d7bf74a766b246ea3c1
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929387"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332714"
 ---
 # <a name="how-to-use-the-mlnet-automated-machine-learning-api"></a>ML.NET 자동화 기계 학습 API 사용 방법
 
@@ -21,7 +21,7 @@ ms.locfileid: "70929387"
 
 자동화된 기계 학습은 [IDataView](xref:Microsoft.ML.IDataView)로 데이터 세트 불러오기를 지원합니다. 데이터의 형식은 탭으로 구분된 값(TSV) 파일과 쉼표로 구분된 값(CSV) 파일이 될 수 있습니다.
 
-예제:
+예:
 
 ```csharp
 using Microsoft.ML;
@@ -126,6 +126,9 @@ ML 작업당 지원되는 트레이너 목록은 아래의 해당 링크에서 �
 |PositiveRecall
 
 ## <a name="data-pre-processing-and-featurization"></a>데이터 사전 처리 및 기능화
+
+> [!NOTE]
+> 기능 열은 [`Boolean`](https://docs.microsoft.com/en-us/dotnet/api/system.boolean), [`Single`](https://docs.microsoft.com/en-us/dotnet/api/system.single) 및 [`String`](https://docs.microsoft.com/en-us/dotnet/api/system.string) 유형만 지원합니다.
 
 데이터 사전 처리는 기본적으로 발생하며 사용자를 위해 다음 단계가 자동으로 수행됩니다.
 

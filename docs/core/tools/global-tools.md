@@ -4,12 +4,12 @@ description: .NET Core Global Tool의 개요와 사용 가능한 .NET Core CLI �
 author: KathleenDollard
 ms.date: 05/29/2018
 ms.custom: seodec18
-ms.openlocfilehash: 01c1463ceddcd64e5bab05b95a5ae4a91b6da838
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 40a0aabcf523e8dac9a3ad226064bbb3c1b3ce5b
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117453"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332015"
 ---
 # <a name="net-core-global-tools-overview"></a>.NET Core Global Tool 개요
 
@@ -107,31 +107,6 @@ dotnet doc
 dotnet <command> --help
 ```
 
-### <a name="what-could-go-wrong"></a>발생 가능한 문제
-
-Global Tool은 [프레임워크 종속 애플리케이션](../deploying/index.md#framework-dependent-deployments-fdd)입니다. 즉, 컴퓨터에 설치된 .NET Core 런타임에 의존합니다. 예상된 런타임을 찾을 수 없으면 다음과 같은 일반적인 .NET Core 런타임 롤포워드 규칙을 따릅니다.
-
-* 애플리케이션은 지정된 주 및 부 버전의 가장 높은 패치 릴리스로 롤포워드합니다.
-* 일치하는 주 및 부 버전 번호와 일치하는 런타임이 없으면 다음으로 높은 부 버전이 사용됩니다.
-* 런타임의 미리 보기 버전 간 또는 미리 보기 버전과 릴리스 버전 간에는 롤포워드가 발생하지 않습니다. 따라서 미리 보기 버전을 사용하여 만든 Global Tool은 작성자가 다시 빌드하여 다시 게시하고 다시 설치해야 합니다.
-* .NET Core 2.1 미리 보기 1에서 만든 Global Tool에서 추가 문제가 발생할 수 있습니다. 자세한 내용은 [.NET Core 2.1 미리 보기 2 알려진 문제](https://github.com/dotnet/core/blob/master/release-notes/2.1/Preview/2.1.0-preview2-known-issues.md)를 참조하세요.
-
-애플리케이션이 적절한 런타임을 찾을 수 없으면 실행에 실패하고 오류를 보고합니다.
-
-발생할 수 있는 또 다른 문제는 이전 미리 보기에서 만들어진 Global Tool이 현재 설치된 .NET Core 런타임으로 실행되지 않는 경우입니다. 다음 명령을 사용하여 컴퓨터에 설치된 런타임을 확인할 수 있습니다.
-
-```dotnetcli
-dotnet --list-runtimes
-```
-
-Global Tool 작성자에게 문의하여 업데이트된 버전 번호로 NuGet에 해당 도구 패키지를 다시 컴파일하고 다시 게시할 수 있는지 확인합니다. NuGet에서 패키지를 업데이트하면 복사본을 업데이트할 수 있습니다.
-
-.NET Core CLI는 처음 사용 시 PATH 환경 변수에 기본 위치를 추가하려고 시도합니다. 그러나 다음과 같이 위치가 PATH에 자동으로 추가되지 않는 몇 가지 시나리오가 있습니다.
-
-* `DOTNET_SKIP_FIRST_TIME_EXPERIENCE` 환경 변수를 설정한 경우
-* macOS에서 *.tar.gz* 파일을 사용하여 NET Core SDK를 설치하고 *.pkg* 파일을 설치하지 않은 경우
-* Linux에서는 셸 환경 파일을 편집하여 PATH를 구성해야 합니다.
-
 ## <a name="other-cli-commands"></a>기타 CLI 명령
 
 .NET Core SDK에는 .NET Core Global Tool을 지원하는 다른 명령이 포함되어 있습니다. 다음 옵션 중 하나와 함께 `dotnet tool` 명령을 사용합니다.
@@ -162,3 +137,7 @@ dotnet tool uninstall -g <packagename>
 ```dotnetcli
 dotnet tool list -g
 ```
+
+## <a name="see-also"></a>참고 항목
+
+* [.NET Core 도구 사용 문제 해결](troubleshoot-usage-issues.md)

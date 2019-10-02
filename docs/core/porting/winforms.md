@@ -5,12 +5,12 @@ author: Thraka
 ms.author: adegeo
 ms.date: 03/01/2019
 ms.custom: ''
-ms.openlocfilehash: b2a660d2fc42f0dfe932afce167058f7c1efc92b
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 7480c86af1acd482adff5e3e24dc229f24af0e5b
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71116502"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216323"
 ---
 # <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>방법: .NET Core에 Windows Forms 데스크톱 앱 포팅
 
@@ -50,7 +50,7 @@ ms.locfileid: "71116502"
 
 01. 다른 버전의 Windows Forms를 사용 중입니다.
 
-    .NET Core 3.0 미리 보기 1이 릴리스된 경우 Windows Forms는 GitHub에서 오픈 소스가 됩니다. .NET Core Windows Forms의 코드는 .NET Framework Windows Forms 코드베이스의 포크입니다. 몇 가지 차이가 있을 수 있고 앱은 포팅되지 않습니다.
+    .NET Core 3.0 미리 보기 1이 릴리스될 때 Windows Forms가 GitHub에서 오픈 소스로 전환되었습니다. .NET Core Windows Forms의 코드는 .NET Framework Windows Forms 코드베이스의 포크입니다. 몇 가지 차이가 있을 수 있고 앱은 포팅되지 않습니다.
 
 01. [Windows 호환성 팩][compat-pack]이 마이그레이션하는 데 도움이 될 수 있습니다.
 

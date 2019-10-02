@@ -3,15 +3,15 @@ title: '자습서: 모델 작성기와 함께 회귀를 사용하여 가격 예�
 description: 이 자습서에서는 ML.NET 모델 작성기를 사용하여 가격(특히, 뉴욕 시 택시 요금)을 예측하기 위한 회귀 모델을 빌드하는 방법에 대해 설명합니다.
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 09/18/2019
+ms.date: 09/26/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: bb344a7f01e8ffe0e40578c6fb2f28bebd2eb807
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: c7075e64738279cd712f5db837074a44e96db954
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117967"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332589"
 ---
 # <a name="tutorial-predict-prices-using-regression-with-model-builder"></a>자습서: 모델 작성기와 함께 회귀를 사용하여 가격 예측
 
@@ -46,11 +46,11 @@ ML.NET 모델 작성기 빌드를 사용하여 가격을 예측하기 위한 회
 
 1. 기계 학습 모델을 교육하고 평가하는 데 사용되는 데이터 세트는 원래 NYC TLC 택시 여행 데이터 세트에서 가져온 것입니다.
 
-    데이터 세트를 다운로드하려면 [taxi-fare-train.csv 다운로드 링크](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/taxi-fare-train.csv)로 이동합니다.
+    1. 데이터 세트를 다운로드하려면 [taxi-fare-train.csv 다운로드 링크](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/taxi-fare-train.csv)로 이동합니다.
 
-    페이지가 로드되면 페이지의 아무 곳이나 마우스 오른쪽 단추로 클릭하고 **다른 이름으로 저장**을 선택합니다.
+    1. 페이지가 로드되면 페이지의 아무 곳이나 마우스 오른쪽 단추로 클릭하고 **다른 이름으로 저장**을 선택합니다.
 
-    **다른 이름으로 저장 대화 상자**를 사용하여 이전 단계에서 만든 *Data* 폴더에 파일을 저장합니다.
+    1. **다른 이름으로 저장 대화 상자**를 사용하여 이전 단계에서 만든 *Data* 폴더에 파일을 저장합니다.
 
 1. **솔루션 탐색기**에서 *taxi-fare-train.csv* 파일을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다. **고급** 아래에서 **출력 디렉터리에 복사** 값을 **변경된 내용만 복사**로 변경합니다.
 
@@ -63,12 +63,12 @@ ML.NET 모델 작성기 빌드를 사용하여 가격을 예측하기 위한 회
     - **vendor_id:** 택시 공급업체의 ID가 기능입니다.
     - **rate_code:** 택시 이동의 요금 유형이 기능입니다.
     - **passenger_count:** 이동하는 승객 수가 기능입니다.
-    - **trip_time_in_secs:** 이동에 걸린 시간입니다.
+    - **trip_time_in_secs:** 이동에 걸린 시간입니다. 이동을 완료하기 전에 이동 요금을 예측하려고 합니다. 해당 시간에는 이동이 얼마나 길지 알지 못합니다. 따라서 이동 시간은 기능이 아니며 모델에서 이 열을 제외합니다.
     - **trip_distance:** 이동 거리가 기능입니다.
     - **payment_type:** 결제 방법(현금 또는 신용 카드)이 기능입니다.
     - **fare_amount:** 지급한 총 택시 요금이 레이블입니다.
 
-`label`은 예측할 열입니다. 회귀 작업을 수행할 때 목표는 숫자 값을 예측하는 것입니다. 이 가격 예측 시나리오에서는 택시 승차 비용이 예측됩니다. 따라서 **fare_amount**는 레이블입니다. 식별된 `features`는 `label` 예측을 위해 모델에 제공하는 입력입니다. 이 경우에 나머지 열은 요금 금액을 예측하는 기능 또는 입력으로 사용됩니다.
+`label`은 예측할 열입니다. 회귀 작업을 수행할 때 목표는 숫자 값을 예측하는 것입니다. 이 가격 예측 시나리오에서는 택시 승차 비용이 예측됩니다. 따라서 **fare_amount**는 레이블입니다. 식별된 `features`는 `label` 예측을 위해 모델에 제공하는 입력입니다. 이 경우에 **trip_time_in_secs**를 제외한 나머지 열은 요금을 예측하는 기능 또는 입력으로 사용됩니다.
 
 ## <a name="choose-a-scenario"></a>시나리오 선택
 
@@ -83,7 +83,8 @@ ML.NET 모델 작성기 빌드를 사용하여 가격을 예측하기 위한 회
 
 1. 모델 작성기 도구의 데이터 단계의 데이터 원본 드롭다운에서 *파일*을 선택합니다.
 1. *파일 선택* 텍스트 상자 옆의 있는 단추를 선택하고 파일 탐색기를 사용하여 *Data* 디렉터리에서 *taxi-fare-test.csv*를 찾아서 선택합니다.
-1. *예측할 레이블 또는 열* 드롭다운에서 *fare_amount*를 선택하고 모델 작성기 도구의 학습 단계로 이동합니다.
+1. *예측할 열(레이블)* 드롭다운에서 *fare_amount*를 선택하고 모델 작성기 도구의 학습 단계로 이동합니다.
+1. *입력 열(기능)*  드롭다운을 확장하고 *trip_time_in_secs* 열을 선택 취소하여 학습 동안 기능으로서 제외합니다.
 
 ## <a name="train-the-model"></a>모델 학습
 
@@ -113,43 +114,19 @@ ML.NET 모델 작성기 빌드를 사용하여 가격을 예측하기 위한 회
 
 학습 프로세스의 결과로 두 개의 프로젝트가 만들어질 수 있습니다.
 
-- TaxiFarePredictionML.ConsoleApp: 모델 학습 및 소비 코드가 포함된 .NET Core 콘솔 애플리케이션입니다.
-- TaxiFarePredictionML.Model: 입력 및 출력 모델 데이터의 스키마를 정의하는 데이터 모델뿐만 아니라 학습 중 가장 성능이 뛰어난 모델의 지속 버전을 포함하는 .NET Standard 클래스 라이브러리입니다.
+- TaxiFarePredictionML.ConsoleApp: 모델 학습 및 샘플 소비 코드가 포함된 .NET Core 콘솔 애플리케이션입니다.
+- TaxiFarePredictionML.Model: 입력 및 출력 모델 데이터의 스키마를 정의하는 데이터 모델, 학습 중 가장 성능이 뛰어난 모델의 저장된 버전, 예측을 위한 `ConsumeModel`이라는 도우미 클래스를 포함하는 .NET Standard 클래스 라이브러리입니다.
 
 1. 모델 작성기 도구의 코드 단계에서 **프로젝트 추가**를 선택하여 자동 생성된 프로젝트를 솔루션에 추가합니다.
-1. *TaxiFarePrediction* 프로젝트를 마우스 오른쪽 단추로 클릭합니다. 그런 다음, **추가 > 참조**를 선택합니다. **프로젝트 > 솔루션** 노드를 선택하고 목록에서 *TaxiFarePredictionML.Model* 프로젝트를 확인하고 OK를 선택합니다.
 1. *TaxiFarePrediction* 프로젝트에서 *Program.cs* 파일을 엽니다.
-1. *Microsoft.ML* NuGet 패키지 및 *TaxiFarePredictionML.Model* 프로젝트를 참조하도록 다음 using 문을 추가합니다.
+1. *TaxiFarePredictionML.Model* 프로젝트를 참조하도록 다음 using 문을 추가합니다.
 
     ```csharp
     using System;
-    using Microsoft.ML;
-    using TaxiFarePredictionML.Model.DataModels;
+    using TaxiFarePredictionML.Model;
     ```
 
-1. `ConsumeModel` 클래스에 `Program` 메서드를 추가합니다.
-
-    ```csharp
-    static ModelOutput ConsumeModel(ModelInput input)
-    {
-        // 1. Load the model
-        MLContext mlContext = new MLContext();
-        ITransformer mlModel = mlContext.Model.Load("MLModel.zip", out var modelInputSchema);
-
-        // 2. Create PredictionEngine
-        var predictionEngine = mlContext.Model.CreatePredictionEngine<ModelInput, ModelOutput>(mlModel);
-
-        // 3. Use PredictionEngine to use model on input data
-        ModelOutput result = predictionEngine.Predict(input);
-
-        // 4. Return prediction result
-        return result;
-    }
-    ```
-
-    `ConsumeModel`은 학습된 모델을 로드하고 모델에 대한 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)을 만든 후 새 데이터에 대해 예측하는 데 사용합니다.
-
-1. 모델을 사용하여 새 데이터에 대해 예측하려면 `ModelInput` 클래스의 새 인스턴스를 만들고 `ConsumeModel` 메서드를 사용합니다. 요금 금액은 입력에 포함되지 않습니다. 모델에서 해당 금액을 예측하기 때문입니다. 다음 코드를 `Main` 메서드에 추가하고 애플리케이션을 실행합니다.
+1. 모델을 사용하여 새 데이터에 대해 예측을 수행하려면 `Main` 메서드 내부에 `ModelInput` 클래스의 새 인스턴스를 만듭니다. 요금 금액은 입력에 포함되지 않습니다. 모델에서 해당 금액을 예측하기 때문입니다. 
 
     ```csharp
     // Create sample data
@@ -158,23 +135,28 @@ ML.NET 모델 작성기 빌드를 사용하여 가격을 예측하기 위한 회
         Vendor_id = "CMT",
         Rate_code = 1,
         Passenger_count = 1,
-        Trip_time_in_secs = 1271,
         Trip_distance = 3.8f,
         Payment_type = "CRD"
     };
+    ```
 
+1. `ConsumeModel` 클래스의 `Predict` 메서드를 사용합니다. `Predict` 메서드는 학습된 모델을 로드하고 모델에 대한 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)을 만든 후 새 데이터에 대해 예측하는 데 사용합니다. 
+
+    ```csharp
     // Make prediction
-    ModelOutput prediction = ConsumeModel(input);
+    ModelOutput prediction = ConsumeModel.Predict(input);
 
     // Print Prediction
     Console.WriteLine($"Predicted Fare: {prediction.Score}");
     Console.ReadKey();
     ```
 
+1. 애플리케이션을 실행합니다.
+
     프로그램에서 생성된 출력은 아래 코드 조각과 유사해야 합니다.
 
     ```bash
-    Predicted Fare: 16.82245
+    Predicted Fare: 14.96086
     ```
 
 생성된 프로젝트를 나중에 다른 솔루션 내에서 참조해야 하는 경우 `C:\Users\%USERNAME%\AppData\Local\Temp\MLVSTools` 디렉터리 내에서 찾을 수 있습니다.

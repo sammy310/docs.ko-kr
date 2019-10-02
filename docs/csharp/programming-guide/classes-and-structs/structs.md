@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, structs
 - structs [C#]
 ms.assetid: b7cf4ff2-0eb7-4e5c-93d5-b2196b4f5d89
-ms.openlocfilehash: 063d7e3b68fbe6c01ff0df4ae935fec5af6f6891
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: df2a235651a2242ffe18df377dce9995af31e99f
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67743841"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71392456"
 ---
 # <a name="structs-c-programming-guide"></a>구조체(C# 프로그래밍 가이드)
 
@@ -29,14 +29,14 @@ ms.locfileid: "67743841"
 - 구조체는 매개 변수가 있는 생성자를 선언할 수 있습니다.
 - 구조체는 다른 구조체 또는 클래스에서 상속될 수 없으며, 클래스의 기본 클래스가 될 수도 없습니다. 모든 구조체는 <xref:System.Object>에서 상속하는 <xref:System.ValueType>에서 직접 상속합니다.  
 - 구조체는 인터페이스를 구현할 수 있습니다.
-- 변수가 널 nullable 형식으로 선언되지 않으면 구조체는 `null`일 수 없으며 구조체 변수에 `null`을 지정할 수 없습니다.
+- 변수가 nullable 값 형식으로 선언되지 않으면 구조체는 `null`일 수 없으며 구조체 변수에 `null`을 지정할 수 없습니다.
   
 ## <a name="see-also"></a>참고 항목
 
 - [C# 프로그래밍 가이드](../index.md)
 - [클래스 및 구조체](index.md)
 - [클래스](classes.md)
-- [Nullable 형식](../nullable-types/index.md)
+- [Nullable 값 형식](../nullable-types/index.md)
 - [식별자 이름](../inside-a-program/identifier-names.md)
 - [구조체 사용](using-structs.md)
 - [방법: 메서드에 구조체를 전달하는 것과 클래스 참조를 전달하는 것의 차이점 이해](how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md)

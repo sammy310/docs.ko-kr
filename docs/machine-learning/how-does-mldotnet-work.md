@@ -1,21 +1,23 @@
 ---
 title: ML.NET은 무엇이며 어떻게 작동하나요?
 description: ML.NET은 온라인 또는 오프라인 시나리오에서 .NET 애플리케이션에 기계 학습을 추가할 수 있는 기능을 제공합니다. 이 기능을 사용하면 ML.NET을 사용하기 위해 네트워크에 연결할 필요 없이 애플리케이션에 사용 가능한 데이터를 사용하여 자동 예측할 수 있습니다. 이 문서에서는 ML.NET에서 기계 학습의 기본 사항을 설명합니다.
-ms.date: 08/26/2019
+ms.date: 09/27/2019
 ms.topic: overview
 ms.custom: mvc
 ms.author: nakersha
 author: natke
-ms.openlocfilehash: d49a4bdfec133fe805bc9d534e04edf2f9ca5726
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 1ae6b82ada841ad172cbe6a59b667aaaf619e714
+ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929407"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71592042"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>ML.NET은 무엇이며 어떻게 작동하나요?
 
-ML.NET은 온라인 또는 오프라인 시나리오에서 .NET 애플리케이션에 기계 학습을 추가할 수 있는 기능을 제공합니다. 이 기능을 사용하면 네트워크에 연결할 필요 없이 애플리케이션에 사용 가능한 데이터를 사용하여 자동 예측할 수 있습니다. 이 문서에서는 ML.NET에서 기계 학습의 기본 사항을 설명합니다. 
+ML.NET은 온라인 또는 오프라인 시나리오에서 .NET 애플리케이션에 기계 학습을 추가할 수 있는 기능을 제공합니다. 이 기능을 사용하면 네트워크에 연결할 필요 없이 애플리케이션에 사용 가능한 데이터를 사용하여 자동 예측할 수 있습니다. 이 문서에서는 ML.NET에서 기계 학습의 기본 사항을 설명합니다.
+
+ML.NET은 .NET Core를 사용하여 Windows, Linux 및 macOS에서 실행되거나 .NET Framework를 사용하여 Windows를 실행됩니다. 64비트는 모든 플랫폼에서 지원됩니다. 32비트는 TensorFlow, LightGBM 및 ONNX 관련 기능을 제외하고 Windows에서 지원됩니다.
 
 ML.NET을 사용하여 수행할 수 있는 예측 유형은 다음과 같습니다.
 
@@ -171,7 +173,7 @@ ML.NET 애플리케이션은 <xref:Microsoft.ML.MLContext> 개체로 시작합�
 |학습 알고리즘|이진 분류|<xref:Microsoft.ML.BinaryClassificationCatalog>||
 ||다중 클래스 분류|<xref:Microsoft.ML.MulticlassClassificationCatalog>||
 ||변칙 검색|<xref:Microsoft.ML.AnomalyDetectionCatalog>||
-||클러스터링|<xref:Microsoft.ML.ClusteringCatalog>||
+||Clustering|<xref:Microsoft.ML.ClusteringCatalog>||
 ||예측|<xref:Microsoft.ML.ForecastingCatalog>||
 ||순위 지정|<xref:Microsoft.ML.RankingCatalog>||
 ||재발|<xref:Microsoft.ML.RegressionCatalog>||

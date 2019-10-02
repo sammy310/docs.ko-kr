@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: seodec18
-ms.openlocfilehash: a72e5e557cd3aa098b674bffd277e3cc6da99d33
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 00064b774145e7267fe26b31ef3bba4d5271a5c3
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59306068"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71181514"
 ---
 # <a name="publish-net-core-apps-with-the-cli"></a>CLI를 사용하여 .NET Core 앱 게시
 
@@ -59,7 +59,7 @@ CLI 사용에 대한 빠른 도움말을 찾나요? 다음 표는 앱을 게시�
 
 ## <a name="sample-app"></a>샘플 앱
 
-다음 앱 중 하나를 사용하여 게시 명령을 탐색할 수 있습니다. 이 앱은 터미널에서 다음 명령을 실행하여 만듭니다.
+다음 앱을 사용하여 게시 명령을 살펴볼 수 있습니다. 이 앱은 터미널에서 다음 명령을 실행하여 만듭니다.
 
 ```dotnetcli
 mkdir apptest1
@@ -128,28 +128,26 @@ FDE를 게시하면 앱을 실행하는 시스템에서 사용할 수 있는 최
 
 현재 플랫폼을 대상으로 할 때는 .NET Core 3.x를 제외하고 `dotnet publish` 명령과 함께 다음 스위치를 사용하여 FDE를 게시해야 합니다.
 
-- `-r <RID>`
-  이 스위치는 식별자(RID)를 사용하여 대상 플랫폼을 지정합니다. 런타임 식별자 목록은 [런타임 식별자(RID) 카탈로그](../rid-catalog.md)를 참조하세요.
+- `-r <RID>` 이 스위치는 식별자(RID)를 사용하여 대상 플랫폼을 지정합니다. 런타임 식별자 목록은 [런타임 식별자(RID) 카탈로그](../rid-catalog.md)를 참조하세요.
 
 - `--self-contained false` 이 스위치는 .NET Core SDK에 실행 파일을 FDE로 생성하도록 지시합니다.
 
-`-r` 스위치를 사용할 때마다 출력 폴더 경로가 다음으로 변경됩니다. `./bin/<BUILD-CONFIGURATION>/<TFM>/<RID>/publish/`
+`-r` 스위치를 사용할 때마다 출력 폴더 경로가 `./bin/<BUILD-CONFIGURATION>/<TFM>/<RID>/publish/`로 변경됩니다.
 
-[예제 앱](#sample-app)을 사용하는 경우 `dotnet publish -f netcoreapp2.2 -r win10-x64 --self-contained false`를 실행합니다. 이 명령은 다음 실행 파일을 만듭니다. `./bin/Debug/netcoreapp2.2/win10-x64/publish/apptest1.exe`
+[예제 앱](#sample-app)을 사용하는 경우 `dotnet publish -f netcoreapp2.2 -r win10-x64 --self-contained false`를 실행합니다. 이 명령은 `./bin/Debug/netcoreapp2.2/win10-x64/publish/apptest1.exe` 실행 파일을 만듭니다.
 
 > [!NOTE]
 > **세계화 고정 모드**를 사용하여 배포의 전체 크기를 줄일 수 있습니다. 이 모드는 전역적으로 인식되지 않는 서식 지정 규칙, 대/소문자 규칙 및 문자열 비교와 [고정 문화권](xref:System.Globalization.CultureInfo.InvariantCulture)의 정렬 순서를 사용할 수 있는 애플리케이션에 유용합니다. **세계화 고정 모드**와 이 모드를 사용하는 방법에 대한 자세한 내용은 [.NET Core 세계화 고정 모드](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md)를 참조하세요.
 
 ## <a name="self-contained-deployment"></a>자체 포함 배포
 
-SCD(자체 포함 배포)를 게시하면 .NET Core SDK는 플랫폼별 실행 파일을 만듭니다. SCD 게시에는 앱을 실행하는 데 필요한 모든 .NET Core 파일이 포함되어 있지만 [.NET Core의 네이티브 종속성](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md)은 포함되어 있지 않습니다. 이러한 종속성은 앱을 실행하기 전에 시스템에 있어야 합니다.
+SCD(자체 포함 배포)를 게시하면 .NET Core SDK는 플랫폼별 실행 파일을 만듭니다. SCD 게시에는 앱을 실행하는 데 필요한 모든 .NET Core 파일이 포함되지만, [.NET Core의 네이티브 종속성](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md)은 포함되지 않습니다. 이러한 종속성은 앱을 실행하기 전에 시스템에 있어야 합니다.
 
 SCD를 게시하면 사용 가능한 최신 .NET Core 보안 패치로 롤포워드되지 않는 앱이 만들어집니다. 컴파일 시 버전 바인딩에 대한 자세한 내용은 [사용할 .NET Core 버전 선택](../versions/selection.md#self-contained-deployments-include-the-selected-runtime)을 참조하세요.
 
 SCD를 게시하려면 `dotnet publish` 명령과 함께 다음 스위치를 사용해야 합니다.
 
-- `-r <RID>`
-  이 스위치는 식별자(RID)를 사용하여 대상 플랫폼을 지정합니다. 런타임 식별자 목록은 [런타임 식별자(RID) 카탈로그](../rid-catalog.md)를 참조하세요.
+- `-r <RID>` 이 스위치는 식별자(RID)를 사용하여 대상 플랫폼을 지정합니다. 런타임 식별자 목록은 [런타임 식별자(RID) 카탈로그](../rid-catalog.md)를 참조하세요.
 
 - `--self-contained true` 이 스위치는 .NET Core SDK에 실행 파일을 SCD로 생성하도록 지시합니다.
 
