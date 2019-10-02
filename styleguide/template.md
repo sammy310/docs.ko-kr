@@ -14,12 +14,12 @@ ms.prod:
 - PRODUCT VALUE
 helpviewer_keywords:
 - OFFLINE BOOK INDEX ENTRIES
-ms.openlocfilehash: 3cd1096a07b1de39d1961fdc8c5add56604804ea
-ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
+ms.openlocfilehash: 3674508c25e9a4b166f994e7ca16df04e484956b
+ms.sourcegitcommit: 1e72e2990220b3635cebc39586828af9deb72d8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71151832"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71306357"
 ---
 # <a name="metadata-and-markdown-template"></a>메타데이터 및 Markdown 템플릿
 
@@ -288,7 +288,7 @@ UID에 특수 문자 \`, \# 또는 \*가 포함된 경우 UID 값은 각각 `%60
 |C++/WinRT|cppwinrt|
 |C#|c샵|
 |브라우저의 C#|csharp-interactive|
-|콘솔|콘솔|
+|Console|콘솔|
 |CSHTML|cshtml|
 |DAX|dax|
 |Dockerfile|dockerfile|
@@ -315,7 +315,8 @@ UID에 특수 문자 \`, \# 또는 \*가 포함된 경우 UID 값은 각각 `%60
 |SQL|sql|
 |Swift|swift|
 |TypeScript|typescript|
-|VB|vb|
+|Visual Basic|vb|
+|VBScript|vbscript|
 |XAML|xaml|
 |XML|Xml|
 
