@@ -4,12 +4,12 @@ description: 이미지 처리에서 모바일 백 엔드 및 ETL 파이프라인
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: cb761524976125c816aae925f0c369eb8c76e7de
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 7024a33f8a7fccd6afa51c126454afedd87cceee
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926477"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834291"
 ---
 # <a name="serverless-business-scenarios-and-use-cases"></a>서버리스 비즈니스 시나리오 및 사용 사례
 
@@ -33,7 +33,7 @@ ms.locfileid: "70926477"
 
 Azure 웹 포털 또는 Visual Studio에서 간단한 서버를 사용 하지 않는 Azure 함수를 구현 하는 방법을 참조 하세요. Android, iOS 및 Windows에서 실행 되는 Xamarin 양식이 있는 클라이언트를 빌드합니다. 그런 다음 응용 프로그램은 서버와 모바일 클라이언트 사이에서 서버를 사용 하지 않는 백 엔드를 사용 하는 통신 매체로 JavaScript Object Notation (JSON)를 사용 하도록 구체화 됩니다.
 
-자세한 내용은 [Xamarin Forms 클라이언트를 사용 하 여 간단한 Azure 함수 구현](https://azure.microsoft.com/resources/samples/functions-xamarin-getting-started/) 을 참조 하세요.
+자세한 내용은 [Xamarin Forms 클라이언트를 사용 하 여 간단한 Azure 함수 구현](https://azure.microsoft.com/resources/samples/functions-xamarin-getting-started/)을 참조 하세요.
 
 ## <a name="generate-a-photo-mosaic-with-serverless-image-recognition"></a>서버 리스 이미지 인식을 사용 하 여 사진 모자이크 생성
 

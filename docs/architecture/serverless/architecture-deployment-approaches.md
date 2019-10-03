@@ -4,12 +4,12 @@ description: IaaS, PaaS, 컨테이너 및 서버를 사용 하지 않는 비교�
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 8a1203ea2fc7089223c03b3a3e02fd3303610272
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 4cc8442509fc8a0e2cc0eb797365423458e77684
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69577636"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834333"
 ---
 # <a name="architecture-deployment-approaches"></a>아키텍처 배포 접근 방식
 
@@ -97,7 +97,7 @@ SaaS (Software as a Service) 또는 SaaS는 중앙에서 호스트 되 고 로�
 
 컨테이너는 컨테이너 호스트에서 실행 되며,이는 다시 운영 체제 미 설치 컴퓨터 또는 가상 머신에서 실행 될 수 있습니다. 동일한 컨테이너의 여러 컨테이너 또는 인스턴스는 단일 호스트에서 실행 될 수 있습니다. 진정한 장애 조치 (failover) 및 복원 력을 위해 컨테이너를 호스트 간에 확장 해야 합니다.
 
-Docker 컨테이너에 대 한 자세한 내용은 [docker](../microservices/container-docker-introduction/docker-defined.md)란?을 참조 하세요.
+Docker 컨테이너에 대 한 자세한 내용은 [docker 란?](../microservices/container-docker-introduction/docker-defined.md)을 참조 하세요.
 
 일반적으로 호스트 간에 컨테이너를 관리 하려면 Kubernetes와 같은 오케스트레이션 도구가 필요 합니다. 오케스트레이션 솔루션을 구성 하 고 관리 하면 프로젝트에 오버 헤드와 복잡성이 추가 될 수 있습니다. 다행히 많은 클라우드 공급자는 PaaS 솔루션을 통해 오케스트레이션 서비스를 제공 하 여 컨테이너 관리를 간소화 합니다.
 
@@ -138,17 +138,17 @@ FaaS (함수 서비스)는 서버를 사용 하지 않는 것과 비슷한 특�
 
 |         |IaaS     |PaaS     |컨테이너|서버|
 |---------|---------|---------|---------|----------|
-|**소수 자릿수**|VM       |인스턴스 |앱      |함수  |
+|**소수 자릿수**|VM       |인스턴스 |앱      |기능  |
 |**추상화**|하드웨어|플랫폼|OS 호스트|런타임   |
-|**Unit** |VM       |Project  |이미지    |코드      |
+|**Unit** |VM       |프로젝트  |이미지    |코드      |
 |**수명(lifetime)**|개월|일 단위|시간 (분)|시간 (분)|
-|**책임**|응용 프로그램, 종속성, 런타임 및 운영 체제|응용 프로그램 및 종속성|응용 프로그램, 종속성 및 런타임|함수
+|**책임**|응용 프로그램, 종속성, 런타임 및 운영 체제|응용 프로그램 및 종속성|응용 프로그램, 종속성 및 런타임|기능
 
 * **크기 조정** 은 응용 프로그램의 크기를 조정 하는 데 사용 되는 단위를 나타냅니다.
 * **추상화** 는 구현에 의해 추상화 된 계층을 참조 합니다.
 * **단위** 는 배포 되는 항목의 범위를 나타냅니다.
 * **수명은** 특정 인스턴스의 일반적인 런타임을 나타냅니다.
-* 응용 프로그램을 빌드, 배포 및 유지 관리 하기 위한 오버 헤드를 의미 합니다.
+* 응용 프로그램을 빌드, 배포 및 유지 관리 하기 위한 오버 헤드 **를 의미 합니다** .
 
 다음 장은 서버를 사용 하지 않는 아키텍처, 사용 사례 및 디자인 패턴에 중점을 둡니다.
 
