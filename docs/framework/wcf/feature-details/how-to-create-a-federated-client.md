@@ -18,7 +18,7 @@ ms.locfileid: "69950624"
 # <a name="how-to-create-a-federated-client"></a>방법: 페더레이션 클라이언트 만들기
 WCF (Windows Communication Foundation)에서 *페더레이션된 서비스* 에 대 한 클라이언트 만들기는 세 가지 주요 단계로 구성 됩니다.  
   
-1. WsFederationHttpBinding > 또는 유사한 사용자 지정 바인딩을 구성 합니다. [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) 적절 한 바인딩을 [만드는 방법에 대 한 자세한 내용은 방법: WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)를 만듭니다. 또는 페더레이션된 서비스의 메타 데이터 끝점에 대해 [ServiceModel Metadata 유틸리티 도구 (svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 를 실행 하 여 페더레이션된 서비스 및 하나 이상의 보안 토큰 서비스와 통신 하기 위한 구성 파일을 생성 합니다.  
+1. [\<WsFederationHttpBinding](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) > 또는 유사한 사용자 지정 바인딩을 구성 합니다. 적절 한 바인딩을 [만드는 방법에 대 한 자세한 내용은 방법: WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)를 만듭니다. 또는 페더레이션된 서비스의 메타 데이터 끝점에 대해 [ServiceModel Metadata 유틸리티 도구 (svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 를 실행 하 여 페더레이션된 서비스 및 하나 이상의 보안 토큰 서비스와 통신 하기 위한 구성 파일을 생성 합니다.  
   
 2. 보안 토큰 서비스와 클라이언트의 상호 작용에 대한 다양한 측면을 제어하는 <xref:System.ServiceModel.Security.IssuedTokenClientCredential>의 속성을 설정합니다.  
   
@@ -80,7 +80,7 @@ WCF (Windows Communication Foundation)에서 *페더레이션된 서비스* 에 
   
 ### <a name="to-configure-the-issuedtokenclientcredential-in-configuration"></a>구성에서 IssuedTokenClientCredential을 구성하려면  
   
-1. IssuedToken > 요소를 끝점 동작에서 [ \<issuedToken >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md) 요소의 자식으로 만듭니다. [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md)  
+1. 요소를 끝점 동작에서 [\<issuedToken >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md) 요소의 자식으로 만듭니다. [\<IssuedToken](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md)  
   
 2. 토큰 캐싱이 필요 하지 않은 경우 < `cacheIssuedTokens` `issuedToken`> 요소의 특성을로 `false`설정 합니다.  
   
