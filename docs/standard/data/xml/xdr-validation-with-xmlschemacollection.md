@@ -8,27 +8,31 @@ dev_langs:
 ms.assetid: 00833027-1428-4586-83c1-42f5de3323d1
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 83eabbccfa2116142e9ee5889e3368ad4273b541
-ms.sourcegitcommit: 1e72e2990220b3635cebc39586828af9deb72d8c
+ms.openlocfilehash: ce0777ba71e5433b42b51ef1530e7a1a46905b25
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71306399"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71957011"
 ---
-# <a name="xdr-validation-with-xmlschemacollection"></a><span data-ttu-id="c9841-102">XmlSchemaCollection을 사용하여 XDR 유효성 검사</span><span class="sxs-lookup"><span data-stu-id="c9841-102">XDR Validation with XmlSchemaCollection</span></span>
+# <a name="xdr-validation-with-xmlschemacollection"></a><span data-ttu-id="8bdf2-102">XmlSchemaCollection을 사용하여 XDR 유효성 검사</span><span class="sxs-lookup"><span data-stu-id="8bdf2-102">XDR Validation with XmlSchemaCollection</span></span>
 
-<span data-ttu-id="c9841-103">유효성을 검사하려는 XDR(XML 데이터 축소) 스키마가 **XmlSchemaCollection**에 저장된 경우 스키마를 컬렉션에 추가할 때 지정한 네임스페이스 URI와 연관됩니다.</span><span class="sxs-lookup"><span data-stu-id="c9841-103">If the XML-Data Reduced (XDR) schema you are validating against is stored in the **XmlSchemaCollection**, it is associated with the namespace URI specified when the schema was added to the collection.</span></span> <span data-ttu-id="c9841-104">**XmlValidatingReader**에서는 XML 문서의 네임스페이스 URI를 컬렉션의 해당 URI에 상응하는 스키마로 매핑합니다.</span><span class="sxs-lookup"><span data-stu-id="c9841-104">**XmlValidatingReader** maps the namespace URI in the XML document to the schema that corresponds to that URI in the collection.</span></span>
+<span data-ttu-id="8bdf2-103">유효성을 검사하려는 XDR(XML 데이터 축소) 스키마가 **XmlSchemaCollection**에 저장된 경우 스키마를 컬렉션에 추가할 때 지정한 네임스페이스 URI와 연관됩니다.</span><span class="sxs-lookup"><span data-stu-id="8bdf2-103">If the XML-Data Reduced (XDR) schema you are validating against is stored in the **XmlSchemaCollection**, it is associated with the namespace URI specified when the schema was added to the collection.</span></span> <span data-ttu-id="8bdf2-104">**XmlValidatingReader**에서는 XML 문서의 네임스페이스 URI를 컬렉션의 해당 URI에 상응하는 스키마로 매핑합니다.</span><span class="sxs-lookup"><span data-stu-id="8bdf2-104">**XmlValidatingReader** maps the namespace URI in the XML document to the schema that corresponds to that URI in the collection.</span></span>
 
 > [!IMPORTANT]
-> <span data-ttu-id="c9841-105">이제 <xref:System.Xml.Schema.XmlSchemaCollection> 클래스는 사용되지 않으며 <xref:System.Xml.Schema.XmlSchemaSet> 클래스로 대체되었습니다.</span><span class="sxs-lookup"><span data-stu-id="c9841-105">The <xref:System.Xml.Schema.XmlSchemaCollection> class is now obsolete and has been replaced with the <xref:System.Xml.Schema.XmlSchemaSet> class.</span></span> <span data-ttu-id="c9841-106"><xref:System.Xml.Schema.XmlSchemaSet> 클래스에 대한 자세한 내용은 [스키마 컴파일을 위한 XmlSchemaSet](xmlschemaset-for-schema-compilation.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="c9841-106">For more information about the <xref:System.Xml.Schema.XmlSchemaSet> class see, [XmlSchemaSet for Schema Compilation](xmlschemaset-for-schema-compilation.md).</span></span>
+> <span data-ttu-id="8bdf2-105">이제 <xref:System.Xml.Schema.XmlSchemaCollection> 클래스는 사용되지 않으며 <xref:System.Xml.Schema.XmlSchemaSet> 클래스로 대체되었습니다.</span><span class="sxs-lookup"><span data-stu-id="8bdf2-105">The <xref:System.Xml.Schema.XmlSchemaCollection> class is now obsolete and has been replaced with the <xref:System.Xml.Schema.XmlSchemaSet> class.</span></span> <span data-ttu-id="8bdf2-106"><xref:System.Xml.Schema.XmlSchemaSet> 클래스에 대한 자세한 내용은 [스키마 컴파일을 위한 XmlSchemaSet](xmlschemaset-for-schema-compilation.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="8bdf2-106">For more information about the <xref:System.Xml.Schema.XmlSchemaSet> class see, [XmlSchemaSet for Schema Compilation](xmlschemaset-for-schema-compilation.md).</span></span>
 
-<span data-ttu-id="c9841-107">예를 들어, XML 문서의 루트 요소가 `<bookstore xmlns="urn:newbooks-schema">`일 경우 스키마를 **XmlSchemaCollection**에 추가하면 다음과 같이 동일한 네임스페이스를 참조합니다.</span><span class="sxs-lookup"><span data-stu-id="c9841-107">For example, if the root element of the XML document is `<bookstore xmlns="urn:newbooks-schema">`, when the schema is added to the **XmlSchemaCollection** it references the same namespace, as follows:</span></span>
+<span data-ttu-id="8bdf2-107">예를 들어, XML 문서의 루트 요소가 `<bookstore xmlns="urn:newbooks-schema">`일 경우 스키마를 **XmlSchemaCollection**에 추가하면 다음과 같이 동일한 네임스페이스를 참조합니다.</span><span class="sxs-lookup"><span data-stu-id="8bdf2-107">For example, if the root element of the XML document is `<bookstore xmlns="urn:newbooks-schema">`, when the schema is added to the **XmlSchemaCollection** it references the same namespace, as follows:</span></span>
 
-```
+```vb
 xsc.Add("urn:newbooks-schema", "newbooks.xdr")
 ```
 
-<span data-ttu-id="c9841-108">다음 코드 예제에서는 **XmlTextReader** 를 사용 하는 **XMLVALIDATINGREADER** 를 만들고 xdr 스키마를 **XmlSchemaCollection**에 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="c9841-108">The following code example creates an **XmlValidatingReader** that takes an **XmlTextReader** and adds an XDR schema, HeadCount.xdr, to the **XmlSchemaCollection**:</span></span>
+```csharp
+xsc.Add("urn:newbooks-schema", "newbooks.xdr");
+```
+
+<span data-ttu-id="8bdf2-108">다음 코드 예제에서는 **XmlTextReader** 를 사용 하는 **XMLVALIDATINGREADER** 를 만들고 xdr 스키마를 **XmlSchemaCollection**에 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="8bdf2-108">The following code example creates an **XmlValidatingReader** that takes an **XmlTextReader** and adds an XDR schema, HeadCount.xdr, to the **XmlSchemaCollection**:</span></span>
 
 ```vb
 Imports System.IO
@@ -129,7 +133,7 @@ namespace ValidationSample
 }
 ```
 
-<span data-ttu-id="c9841-109">다음에서는 유효성을 검사할 입력 파일 *HeadCount.xml*의 내용을 요약합니다.</span><span class="sxs-lookup"><span data-stu-id="c9841-109">The following outlines the contents of the input file, *HeadCount.xml*, to be validated:</span></span>
+<span data-ttu-id="8bdf2-109">다음에서는 유효성을 검사할 입력 파일 *HeadCount.xml*의 내용을 요약합니다.</span><span class="sxs-lookup"><span data-stu-id="8bdf2-109">The following outlines the contents of the input file, *HeadCount.xml*, to be validated:</span></span>
 
 ```xml
 <!--Load HeadCount.xdr in SchemaCollection for Validation-->
@@ -139,7 +143,7 @@ namespace ValidationSample
 </HeadCount>
 ```
 
-<span data-ttu-id="c9841-110">다음에서는 유효성을 검사할 XDR 스키마 파일 *HeadCount.xdr*의 내용을 요약합니다.</span><span class="sxs-lookup"><span data-stu-id="c9841-110">The following outlines the contents of the XDR schema file, *HeadCount.xdr*, to be validated against:</span></span>
+<span data-ttu-id="8bdf2-110">다음에서는 유효성을 검사할 XDR 스키마 파일 *HeadCount.xdr*의 내용을 요약합니다.</span><span class="sxs-lookup"><span data-stu-id="8bdf2-110">The following outlines the contents of the XDR schema file, *HeadCount.xdr*, to be validated against:</span></span>
 
 ```xml
 <Schema xmlns="urn:schemas-microsoft-com:xml-data" xmlns:dt="urn:schemas-microsoft-com:datatypes">
@@ -152,7 +156,7 @@ namespace ValidationSample
 </Schema>
 ```
 
-## <a name="see-also"></a><span data-ttu-id="c9841-111">참조</span><span class="sxs-lookup"><span data-stu-id="c9841-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8bdf2-111">참조</span><span class="sxs-lookup"><span data-stu-id="8bdf2-111">See also</span></span>
 
 - <xref:System.Xml.XmlValidatingReader.ValidationType%2A>
-- [<span data-ttu-id="c9841-112">XmlSchemaCollection 스키마 컴파일</span><span class="sxs-lookup"><span data-stu-id="c9841-112">XmlSchemaCollection Schema Compilation</span></span>](xmlschemacollection-schema-compilation.md)
+- [<span data-ttu-id="8bdf2-112">XmlSchemaCollection 스키마 컴파일</span><span class="sxs-lookup"><span data-stu-id="8bdf2-112">XmlSchemaCollection Schema Compilation</span></span>](xmlschemacollection-schema-compilation.md)
