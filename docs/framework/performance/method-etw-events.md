@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 167a4459-bb6e-476c-9046-7920880f2bb5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 58249a0e080e045223bdaf170f2eaedb67fc0dea
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 48e1c2271d6d011296d347e7d74fb363cc4d8527
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046383"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834546"
 ---
 # <a name="method-etw-events"></a>메서드 ETW 이벤트
 
@@ -36,12 +36,12 @@ CLR 메서드 이벤트는 추가로 다음과 같이 구분됩니다.
 
 ## <a name="clr-method-events"></a>CLR 메서드 이벤트
 
-다음 표에서는 키워드와 수준을 보여 줍니다. 자세한 내용은 [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md)을 참조하세요.
+다음 표에서는 키워드와 수준을 보여 줍니다. 자세한 내용은 [CLR ETW 키워드 및 수준](clr-etw-keywords-and-levels.md)을 참조 하세요.
 
-|이벤트를 발생시키기 위한 키워드|수준|
+|이벤트를 발생시키기 위한 키워드|Level|
 |-----------------------------------|-----------|
 |`JITKeyword` (0x10) 런타임 공급자|정보(4)|
-|`NGenKeyword`(0x20) 런타임 공급자|정보(4)|
+|`NGenKeyword` (0x20) 런타임 공급자|정보(4)|
 |`JitRundownKeyword` (0x10) 런다운 공급자|정보(4)|
 |`NGENRundownKeyword` (0x20) 런다운 공급자|정보(4)|
 
@@ -76,7 +76,7 @@ CLR 메서드 이벤트는 추가로 다음과 같이 구분됩니다.
 
 다음 표에서는 키워드와 수준을 보여 줍니다.
 
-|이벤트를 발생시키기 위한 키워드|수준|
+|이벤트를 발생시키기 위한 키워드|Level|
 |-----------------------------------|-----------|
 |`AppDomainResourceManagementRundownKeyword` (0x800) 런다운 공급자|정보(4)|
 |`JitRundownKeyword` (0x10) 런다운 공급자|정보(4)|
@@ -105,12 +105,12 @@ CLR 메서드 이벤트는 추가로 다음과 같이 구분됩니다.
 
 다음 표에서는 키워드와 수준을 보여 줍니다.
 
-|이벤트를 발생시키기 위한 키워드|수준|
+|이벤트를 발생시키기 위한 키워드|Level|
 |-----------------------------------|-----------|
-|`JITKeyword`(0x10) 런타임 공급자|자세한 정보 표시(5)|
+|`JITKeyword` (0x10) 런타임 공급자|자세한 정보 표시(5)|
 |`NGenKeyword` (0x20) 런타임 공급자|자세한 정보 표시(5)|
-|`JitRundownKeyword`(0x10) 런다운 공급자|자세한 정보 표시(5)|
-|`NGENRundownKeyword`(0x20) 런다운 공급자|자세한 정보 표시(5)|
+|`JitRundownKeyword` (0x10) 런다운 공급자|자세한 정보 표시(5)|
+|`NGENRundownKeyword` (0x20) 런다운 공급자|자세한 정보 표시(5)|
 
 다음 표에서는 이벤트 정보를 보여 줍니다.
 
@@ -144,12 +144,12 @@ CLR 메서드 이벤트는 추가로 다음과 같이 구분됩니다.
 
 다음 표에서는 키워드와 수준을 보여 줍니다.
 
-|이벤트를 발생시키기 위한 키워드|수준|
+|이벤트를 발생시키기 위한 키워드|Level|
 |-----------------------------------|-----------|
-|`JITKeyword`(0x10) 런타임 공급자|자세한 정보 표시(5)|
+|`JITKeyword` (0x10) 런타임 공급자|자세한 정보 표시(5)|
 |`NGenKeyword` (0x20) 런타임 공급자|자세한 정보 표시(5)|
-|`JitRundownKeyword`(0x10) 런다운 공급자|자세한 정보 표시(5)|
-|`NGENRundownKeyword`(0x20) 런다운 공급자|자세한 정보 표시(5)|
+|`JitRundownKeyword` (0x10) 런다운 공급자|자세한 정보 표시(5)|
+|`NGENRundownKeyword` (0x20) 런다운 공급자|자세한 정보 표시(5)|
 
 다음 표에서는 이벤트 정보를 보여 줍니다.
 
@@ -170,6 +170,6 @@ CLR 메서드 이벤트는 추가로 다음과 같이 구분됩니다.
 |MethodSignature|win:UnicodeString|메서드의 서명입니다(쉼표로 구분된 형식 이름 목록).|
 |ClrInstanceID|win:UInt16|CLR 또는 CoreCLR 인스턴스에 대한 고유 ID입니다.|
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [CLR ETW 이벤트](clr-etw-events.md)

@@ -2,12 +2,12 @@
 title: '방법: 컨텍스트에 따라 요소를 찾는 쿼리 작성 (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 0b085290-ddc1-4126-aaa0-e4c95a3d9a09
-ms.openlocfilehash: 1743a0793a8b572cb212d45a31924fe8eb93bf45
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: a7661ea35ff829875ee4c625c45da533865fea9f
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710413"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835035"
 ---
 # <a name="how-to-write-a-query-that-finds-elements-based-on-context-visual-basic"></a>방법: 컨텍스트에 따라 요소를 찾는 쿼리 작성 (Visual Basic)
 컨텍스트에 따라 요소를 선택하는 쿼리를 작성해야 하는 경우가 있습니다. 이전 또는 다음 형제 요소를 기준으로 필터링하거나, 자식 또는 상위 요소를 기준으로 필터링하려고 할 수 있습니다.  
@@ -51,7 +51,7 @@ Next
   
  이 코드의 결과는 다음과 같습니다.  
   
-```  
+```console  
 id = 1  
 id = 3  
 id = 6  
@@ -100,13 +100,13 @@ End Module
   
  이 코드의 결과는 다음과 같습니다.  
   
-```  
+```console  
 id = 1  
 id = 3  
 id = 6  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Xml.Linq.XElement.Parse%2A>
 - <xref:System.Xml.Linq.XContainer.Descendants%2A>

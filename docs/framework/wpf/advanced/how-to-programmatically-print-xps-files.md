@@ -8,12 +8,12 @@ helpviewer_keywords:
 - printing XPS files programmatically [WPF]
 - XPS files [WPF], printing programmatically
 ms.assetid: 0b1c0a3f-b19e-43d6-bcc9-eb3ec4e555ad
-ms.openlocfilehash: 28197b22b379b84c34e7fdf8991472e082c8cb42
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: d44f372fe5ef9633e91d8e46cca9e9a0967b9615
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855747"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834581"
 ---
 # <a name="how-to-programmatically-print-xps-files"></a>방법: 프로그래밍 방식으로 XPS 파일 인쇄
 
@@ -27,7 +27,7 @@ XPS를 인쇄 하는 또 다른 방법은 <xref:System.Windows.Controls.PrintDia
 
 세 매개 변수 <xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29> 메서드를 사용 하는 주요 단계는 다음과 같습니다. 아래 예제에서 자세히 설명합니다.
 
-1. 프린터가 XPSDrv 프린터인지 확인합니다. XPSDrv에 대한 자세한 내용은 [인쇄 개요](printing-overview.md)를 참조하세요.
+1. 프린터가 XPSDrv 프린터인지 확인합니다. XPSDrv에 대 한 자세한 내용은 [인쇄 개요](printing-overview.md) 를 참조 하세요.
 
 2. 프린터가 XPSDrv 프린터가 아닌 경우 스레드 아파트를 단일 스레드로 설정합니다.
 
@@ -61,7 +61,7 @@ HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Print\Environments\Windows N
 > [!NOTE]
 > 간단히 하기 위해 위의 예제에서는 파일이 xps 임을 테스트 하 \*는 데 사용 되는 .xps 확장명의 존재를 사용 합니다. 그러나 XPS 파일에는이 확장이 필요 하지 않습니다. [Isxps (Isxps 규칙 도구)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa348104(v=vs.100)) 는 파일에서 XPS 유효성을 검사 하는 한 가지 방법입니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Printing.PrintQueue>
 - <xref:System.Printing.PrintQueue.AddJob%2A>

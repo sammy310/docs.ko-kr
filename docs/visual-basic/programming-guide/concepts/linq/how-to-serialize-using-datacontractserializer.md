@@ -1,15 +1,15 @@
 ---
-title: '방법: 직렬화를 사용 하 여 DataContractSerializer (Visual Basic)'
+title: '방법: DataContractSerializer를 사용 하 여 Serialize (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: ecaea518-8a0f-4249-b4e5-9b3fb0cdd8ad
-ms.openlocfilehash: 9593dede3eb29aadc7ffb494e1d728cb8e679f0c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5b747f505b0314c082929fbce25a67f79dd4af35
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62054434"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835159"
 ---
-# <a name="how-to-serialize-using-datacontractserializer-visual-basic"></a>방법: 직렬화를 사용 하 여 DataContractSerializer (Visual Basic)
+# <a name="how-to-serialize-using-datacontractserializer-visual-basic"></a>방법: DataContractSerializer를 사용 하 여 Serialize (Visual Basic)
 이 항목에서는 <xref:System.Runtime.Serialization.DataContractSerializer>를 사용하여 serialize하고 deserialize하는 예제를 보여 줍니다.  
   
 ## <a name="example"></a>예제  
@@ -74,7 +74,7 @@ End Class
   
  이 예제는 다음과 같은 출력을 생성합니다.  
   
-```  
+```console  
 Testing for type: System.Xml.Linq.XElement  
   Deserialized type: System.Xml.Linq.XElement  
 Testing for type: XElementContainer  
@@ -83,6 +83,6 @@ Testing for type: XElementNullContainer
   Deserialized type: XElementNullContainer  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
-- [XElement 개체 (Visual Basic)를 포함 하는 개체 그래프를 직렬화 하는 작업](../../../../visual-basic/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)
+- [XElement 개체를 포함 하는 개체 그래프 serialize (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)

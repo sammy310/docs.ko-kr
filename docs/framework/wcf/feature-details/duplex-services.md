@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 396b875a-d203-4ebe-a3a1-6a330d962e95
-ms.openlocfilehash: f9e563cb87ee376e33442cdf718f70202d300f40
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 4fd8b679dcd4ac9efce5fa915118736b15206068
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895173"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834775"
 ---
 # <a name="duplex-services"></a>이중 서비스
 
@@ -87,9 +87,9 @@ binding.ClientBaseAddress = New Uri("http://localhost:8000/DuplexTestUsingCode/C
 ```
 
 > [!WARNING]
-> 이중 모델에서는 서비스 또는 클라이언트가 해당 채널을 닫을 때 자동으로 감지 되지 않습니다. 따라서 클라이언트가 예기치 않게 종료 되는 경우 기본적으로 서비스에 알림이 표시 되지 않거나 서비스가 예기치 않게 종료 되는 경우 클라이언트에 게 알림이 표시 되지 않습니다. 연결이 끊어진 <xref:System.ServiceModel.CommunicationException> 서비스를 사용 하는 경우 예외가 발생 합니다. 클라이언트와 서비스는 선택하는 경우 서로에게 알리도록 자체 프로토콜을 구현할 수 있습니다. 오류 처리에 대 한 자세한 내용은 [WCF 오류 처리](../wcf-error-handling.md) 를 참조 하세요.
+> 이중 모델에서는 서비스 또는 클라이언트가 해당 채널을 닫을 때 자동으로 감지 되지 않습니다. 따라서 클라이언트가 예기치 않게 종료 되는 경우 기본적으로 서비스에 알림이 표시 되지 않거나 서비스가 예기치 않게 종료 되는 경우 클라이언트에 게 알림이 표시 되지 않습니다. 연결이 끊어진 <xref:System.ServiceModel.CommunicationException> 서비스를 사용 하는 경우 예외가 발생 합니다. 클라이언트와 서비스는 선택하는 경우 서로에게 알리도록 자체 프로토콜을 구현할 수 있습니다. 오류 처리에 대 한 자세한 내용은 [WCF 오류 처리](../wcf-error-handling.md)를 참조 하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [이중](../samples/duplex.md)
 - [클라이언트 런타임 동작 지정](../specifying-client-run-time-behavior.md)

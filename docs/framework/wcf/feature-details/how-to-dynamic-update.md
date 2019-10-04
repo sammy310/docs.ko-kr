@@ -2,12 +2,12 @@
 title: '방법: 동적 업데이트'
 ms.date: 03/30/2017
 ms.assetid: 9b8f6e0d-edab-4a7e-86e3-8c66bebc64bb
-ms.openlocfilehash: 0a103e980d0d1be08f3ae6850c6af64405582c7b
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 95d99afd09daf4d9bf3937a71d7773332ff1bc14
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972083"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834714"
 ---
 # <a name="how-to-dynamic-update"></a>방법: 동적 업데이트
 이 항목에서는 라우팅 구성을 만들고 동적으로 업데이트하는 데 필요한 기본 단계에 대해 간략하게 설명합니다. 이 예제에서는 구성 파일에서 초기 라우팅 구성을 가져오고 이 구성을 사용하여 모든 메시지를 regularCalc 계산기 서비스에 라우트합니다. 그러나 이 구성은 대상 엔드포인트를 roundingCalc 서비스로 변경하기 위해 이후에 프로그래밍 방식으로 업데이트됩니다.  
@@ -163,7 +163,8 @@ ms.locfileid: "70972083"
     > 새 RoutingConfiguration을 제공하는 메서드가 RoutingExtension 서비스 확장에 포함되어 있으므로 새 RoutingConfiguration 개체는 ServiceHost 또는 ServiceExtensions에 대한 참조를 가지고 있거나 가져올 수 있는 WCF 확장성 모델의 아무 위치에나 제공될 수 있습니다. 예를 들면 다른 ServiceExtension에 제공될 수 있습니다.
   
 ## <a name="example"></a>예제  
- 다음은 이 예제에 사용되는 콘솔 애플리케이션의 전체 목록입니다.  
+
+다음은이 예제에서 사용 되는 콘솔 응용 프로그램의 전체 목록입니다.
   
 ```csharp
 //-----------------------------------------------------------------  
@@ -241,7 +242,8 @@ namespace Microsoft.Samples.AdvancedFilters
 ```  
   
 ## <a name="example"></a>예제  
- 다음은 이 예제에 사용되는 구성 파일의 전체 목록입니다.  
+ 
+다음은이 예제에 사용 되는 구성 파일의 전체 목록입니다.
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -296,6 +298,6 @@ namespace Microsoft.Samples.AdvancedFilters
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
-- [라우팅 서비스](../../../../docs/framework/wcf/samples/routing-services.md)
+- [라우팅 서비스](../samples/routing-services.md)

@@ -21,24 +21,24 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-ms.openlocfilehash: 13d5ea2735a799332edd8e552198de0f2b970dad
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f8686a189883bed782cdde80e56c87ab6dbe404a
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69914097"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835020"
 ---
 # <a name="imaging-overview"></a>이미징 개요
 이 항목에서는 [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)]를 소개합니다. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]를 사용하여 개발자는 이미지를 표시 및 변환하고 서식을 지정할 수 있습니다.  
 
 ## <a name="wpf-imaging-component"></a>WPF Imaging Component  
- [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]에서는 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] 내에서 향상된 이미징 기능을 제공합니다. 비트맵을 표시 하거나 공용 컨트롤에서 이미지를 사용 하는 등의 이미징 기능은 이전에 Microsoft Windows 그래픽 장치 인터페이스 (GDI) 또는 Microsoft Windows GDI + 라이브러리에 의존 했습니다. 이러한 API는 기본 이미징 기능을 제공 하지만 코덱 확장성 및 고화질 이미지 지원과 같은 기능을 제공 하지 않습니다. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]는 GDI 및 GDI +의 단점을 극복 하 고 응용 프로그램 내에서 이미지를 표시 하 고 사용할 수 있는 새로운 API 집합을 제공 하도록 설계 되었습니다.  
+ [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]에서는 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] 내에서 향상된 이미징 기능을 제공합니다. 비트맵을 표시 하거나 공용 컨트롤에서 이미지를 사용 하는 등의 이미징 기능은 이전에 Microsoft Windows 그래픽 장치 인터페이스 (GDI) 또는 Microsoft Windows GDI + 라이브러리에 의존 했습니다. 이러한 API는 기본 이미징 기능을 제공 하지만 코덱 확장성 및 고화질 이미지 지원과 같은 기능을 제공 하지 않습니다. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]은 GDI 및 GDI +의 단점을 극복 하 고 응용 프로그램 내에서 이미지를 표시 하 고 사용할 수 있는 새로운 API 집합을 제공 하도록 설계 되었습니다.  
   
  [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] API, 관리 되는 구성 요소 및 관리 되지 않는 구성 요소에 액세스 하는 방법에는 두 가지가 있습니다. 관리되지 않는 구성 요소는 다음과 같은 기능을 제공합니다.  
   
 - 새롭거나 또는 독자적인 이미지 형식에 대한 확장성 모델  
   
-- 비트맵 (BMP), 접합 된 이미지, JPEG (이동식 네트워크 그래픽 [!INCLUDE[TLA#tla_tiff](../../../../includes/tlasharptla-tiff-md.md)]),, [!INCLUDE[TLA#tla_wdp](../../../../includes/tlasharptla-wdp-md.md)],,,,,,,,,,,,,,,,,, 및 아이콘 (.ico)을 비롯 한 네이티브 이미지 형식에 대 한 성능 및 보안이 향상 되었습니다.  
+- 비트맵 (BMP), 이미지 JPEG (이동식 네트워크 그래픽), PNG (PNG), 태그가 지정 된 이미지 파일 형식 (TIFF), [!INCLUDE[TLA#tla_wdp](../../../../includes/tlasharptla-wdp-md.md)], GIF (그래픽 교환 형식) 및 아이콘 (.ico)을 포함 하 여 네이티브 이미지 형식에 대 한 성능 및 보안이 향상 되었습니다.  
   
 - 채널당 8비트(픽셀당 32비트)까지 높은 비트 수준의 이미지 데이터 보존  
   
@@ -56,13 +56,13 @@ ms.locfileid: "69914097"
   
 <a name="_imageformats"></a>   
 ## <a name="wpf-image-formats"></a>WPF 이미지 형식  
- 코덱은 특정 미디어 형식을 인코딩하거나 디코딩하는 데 사용됩니다. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]BMP, JPEG, PNG, [!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)], [!INCLUDE[TLA2#tla_wdp](../../../../includes/tla2sharptla-wdp-md.md)], GIF 및 아이콘 이미지 형식에 대 한 코덱을 포함 합니다. 이러한 각 코덱을 사용하여 애플리케이션은 ICON을 제외한 해당 이미지 형식을 디코딩 및 인코딩할 수 있습니다.  
+ 코덱은 특정 미디어 형식을 인코딩하거나 디코딩하는 데 사용됩니다. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]에는 BMP, JPEG, PNG, TIFF, [!INCLUDE[TLA2#tla_wdp](../../../../includes/tla2sharptla-wdp-md.md)], GIF 및 아이콘 이미지 형식에 대 한 코덱이 포함 되어 있습니다. 이러한 각 코덱을 사용하여 애플리케이션은 ICON을 제외한 해당 이미지 형식을 디코딩 및 인코딩할 수 있습니다.  
   
  <xref:System.Windows.Media.Imaging.BitmapSource>는 이미지의 디코딩 및 인코딩에 사용 되는 중요 한 클래스입니다. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] 파이프라인의 기본 구성 요소이며 픽셀의 단일 상수 집합을 특정 크기 및 해상도로 나타냅니다. 는 <xref:System.Windows.Media.Imaging.BitmapSource> 다중 프레임 이미지의 개별 프레임이 될 수도 있고 <xref:System.Windows.Media.Imaging.BitmapSource>에서 수행 되는 변환의 결과일 수도 있습니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 과<xref:System.Windows.Media.Imaging.BitmapFrame>같이 이미징에서 사용 되는 여러 기본 클래스의 부모입니다.  
   
- 는 <xref:System.Windows.Media.Imaging.BitmapFrame> 이미지 형식의 실제 비트맵 데이터를 저장 하는 데 사용 됩니다. 많은 이미지 형식은 [!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)] GIF와 같은 형식을 <xref:System.Windows.Media.Imaging.BitmapFrame>지원 하지만 이미지 당 여러 프레임을 지원 합니다. 프레임은 디코더에서 입력 데이터로 사용되고 이미지 파일을 만들기 위해 인코더에 전달됩니다.  
+ 는 <xref:System.Windows.Media.Imaging.BitmapFrame> 이미지 형식의 실제 비트맵 데이터를 저장 하는 데 사용 됩니다. GIF 및 TIFF와 같은 형식은 이미지 당 여러 프레임을 지원 하지만 많은 이미지 형식은 단일 <xref:System.Windows.Media.Imaging.BitmapFrame>만 지원 합니다. 프레임은 디코더에서 입력 데이터로 사용되고 이미지 파일을 만들기 위해 인코더에 전달됩니다.  
   
- 다음 예제에서는를 <xref:System.Windows.Media.Imaging.BitmapFrame> <xref:System.Windows.Media.Imaging.BitmapSource> 에서 만든 다음 [!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)] 이미지에 추가 하는 방법을 보여 줍니다.  
+ 다음 예에서는 <xref:System.Windows.Media.Imaging.BitmapSource>에서 <xref:System.Windows.Media.Imaging.BitmapFrame>을 만든 다음 TIFF 이미지에 추가 하는 방법을 보여 줍니다.  
   
  [!code-csharp[BitmapFrameExample#10](~/samples/snippets/csharp/VS_Snippets_Wpf/BitmapFrameExample/CSharp/BitmapFrame.cs#10)]
  [!code-vb[BitmapFrameExample#10](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapFrameExample/VB/BitmapFrame.vb#10)]  
@@ -164,7 +164,7 @@ ms.locfileid: "69914097"
 ## <a name="image-metadata"></a>이미지 메타데이터  
  일부 이미지 파일에는 파일의 콘텐츠나 특성을 설명하는 메타데이터가 포함되어 있습니다. 예를 들어 대부분의 디지털 카메라는 이미지를 캡처하는 데 사용되는 카메라의 제조업체와 모델에 대한 메타데이터를 포함하는 이미지를 만듭니다. 각 이미지 형식은 메타데이터를 다르게 처리하지만 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]에서는 지원되는 각 이미지 형식에 대한 메타데이터를 저장하고 검색하는 일관된 방법을 제공합니다.  
   
- 메타 데이터에 대 한 액세스는 <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> <xref:System.Windows.Media.Imaging.BitmapSource> 개체의 속성을 통해 제공 됩니다. <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A>이미지에 <xref:System.Windows.Media.Imaging.BitmapMetadata> 포함 된 모든 메타 데이터를 포함 하는 개체를 반환 합니다. 이 데이터는 하나의 메타데이터 스키마이거나 여러 다른 스키마의 조합일 수 있습니다. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]는 다음과 같은 이미지 메타 데이터 스키마를 지원 합니다. Exxerimage 파일 (Exif), 텍스트 (PNG 텍스트 데이터), IFD (이미지 파일 디렉터리), IPTC (국제 누름 통신 Council) 및 [!INCLUDE[TLA#tla_xmp](../../../../includes/tlasharptla-xmp-md.md)]를 지원 합니다.  
+ 메타 데이터에 대 한 액세스는 <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> <xref:System.Windows.Media.Imaging.BitmapSource> 개체의 속성을 통해 제공 됩니다. <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A>이미지에 <xref:System.Windows.Media.Imaging.BitmapMetadata> 포함 된 모든 메타 데이터를 포함 하는 개체를 반환 합니다. 이 데이터는 하나의 메타데이터 스키마이거나 여러 다른 스키마의 조합일 수 있습니다. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]은 다음 이미지 메타 데이터 스키마를 지원 합니다. Exchangeable 가능한 이미지 파일 (Exif), 텍스트 (PNG 텍스트 데이터), IFD (이미지 파일 디렉터리), IPTC (국제 누름 Council) 및 [!INCLUDE[TLA#tla_xmp](../../../../includes/tlasharptla-xmp-md.md)]입니다.  
   
  메타 데이터 읽기 프로세스를 간소화 하기 <xref:System.Windows.Media.Imaging.BitmapMetadata> 위해에서는, 및 <xref:System.Windows.Media.Imaging.BitmapMetadata.CameraModel%2A>와 <xref:System.Windows.Media.Imaging.BitmapMetadata.Author%2A>같이 <xref:System.Windows.Media.Imaging.BitmapMetadata.Title%2A>쉽게 액세스할 수 있는 여러 명명 된 속성을 제공 합니다. 이러한 명명된 속성 중 대부분은 메타데이터를 작성하는 데도 사용할 수 있습니다. 메타데이터 읽기에 대한 추가 지원이 메타데이터 쿼리 판독기를 통해 제공됩니다. 메서드 <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A> 는 *"/app1/exif/"* 와 같은 문자열 쿼리를 제공 하 여 메타 데이터 쿼리 판독기를 검색 하는 데 사용 됩니다. 다음 예에서는를 <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A> 사용 하 여 *"/dext/Description"* 위치에 저장 된 텍스트를 가져옵니다.  
   
@@ -187,7 +187,7 @@ ms.locfileid: "69914097"
 > [!NOTE]
 > 시스템이 코덱을 인식하려면 디지털로 서명되어야 합니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Windows.Media.Imaging.BitmapSource>
 - <xref:System.Windows.Media.Imaging.BitmapImage>

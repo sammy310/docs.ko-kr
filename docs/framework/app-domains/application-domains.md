@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4a0a6a00fc76a646b4295db726bd8ae67733e321
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 0ce9d5f706a473d64e97fb02e0426060878d9c75
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053214"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834025"
 ---
 # <a name="application-domains"></a>애플리케이션 도메인
 
@@ -112,7 +112,7 @@ ms.locfileid: "71053214"
   
 |AppDomain 메서드|설명|  
 |----------------------|-----------------|  
-|<xref:System.AppDomain.CreateDomain%2A>|새 애플리케이션 도메인을 만듭니다. <xref:System.AppDomainSetup> 개체를 지정하는 이 메서드의 오버로드를 사용하는 것이 좋습니다. 이 메서드는 애플리케이션 기본 디렉터리 또는 애플리케이션의 루트 디렉터리, 도메인의 구성 파일 위치 및 어셈블리를 도메인에 로드하기 위해 공용 언어 런타임에서 사용할 검색 경로 등 새 도메인의 속성을 설정하는 기본적인 방법입니다.|  
+|<xref:System.AppDomain.CreateDomain%2A>|새 응용 프로그램 도메인을 만듭니다. <xref:System.AppDomainSetup> 개체를 지정하는 이 메서드의 오버로드를 사용하는 것이 좋습니다. 이 메서드는 애플리케이션 기본 디렉터리 또는 애플리케이션의 루트 디렉터리, 도메인의 구성 파일 위치 및 어셈블리를 도메인에 로드하기 위해 공용 언어 런타임에서 사용할 검색 경로 등 새 도메인의 속성을 설정하는 기본적인 방법입니다.|  
 |<xref:System.AppDomain.ExecuteAssembly%2A> 및 <xref:System.AppDomain.ExecuteAssemblyByName%2A>|애플리케이션 도메인에서 어셈블리를 실행합니다. 이 메서드는 인스턴스 메서드이므로 참조할 다른 애플리케이션 도메인에서 코드를 실행하는 데 사용할 수 있습니다.|  
 |<xref:System.AppDomain.CreateInstanceAndUnwrap%2A>|애플리케이션 도메인에서 지정한 형식의 인스턴스를 만들고 프록시를 반환합니다. 만들어진 형식을 포함하는 어셈블리가 호출 어셈블리에 로드되지 않도록 하려면 이 메서드를 사용합니다.|  
 |<xref:System.AppDomain.Unload%2A>|도메인을 완전 종료합니다. 애플리케이션 도메인은 도메인에서 실행 중인 모든 스레드가 중지되거나 더 이상 도메인에 없을 때까지 언로드되지 않습니다.|  
@@ -128,7 +128,7 @@ ms.locfileid: "71053214"
   
 ### <a name="syntax"></a>구문  
   
-```  
+```env  
 COMPLUS_LoaderOptimization = 1  
 ```  
   
@@ -151,14 +151,14 @@ COMPLUS_LoaderOptimization = 1
 
  모든 어셈블리를 IISADMIN 서비스에 대해 도메인 중립적으로 로드되지 않게 하려면 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\IISADMIN 키에서 Environment의 다중 문자열 값에 `COMPLUS_LoaderOptimization=1`을 추가합니다.  
   
-```  
+```env  
 Key = HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\IISADMIN  
 Name = Environment  
 Type = REG_MULTI_SZ  
 Value (to append) = COMPLUS_LoaderOptimization=1  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.AppDomain?displayProperty=nameWithType>
 - <xref:System.MarshalByRefObject?displayProperty=nameWithType>

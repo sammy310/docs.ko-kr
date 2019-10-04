@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Span elements [WPF]
 - bidirectional features [WPF]
 ms.assetid: fd850e25-7dba-408c-b521-8873e51dc968
-ms.openlocfilehash: 4c3a39c1d1252951b0847638809c9e1e6be2a21e
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 2a599322ef955b9f702f8960f294f5d093ede74a
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70856184"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834743"
 ---
 # <a name="bidirectional-features-in-wpf-overview"></a>WPF의 양방향 기능 개요
 
@@ -134,7 +134,7 @@ XAML 요소에는 각 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xm
 
 <xref:System.Windows.FlowDirection> 가 예상 대로 작동 하지 않는 경우가 있습니다. 이 섹션에서는 이러한 예외 중 두 가지를 설명합니다.
 
-**Image**
+**이미지**
 
 는 <xref:System.Windows.Controls.Image> 이미지를 표시 하는 컨트롤을 나타냅니다. 에서는 [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] 표시할의를 <xref:System.Windows.Controls.Image.Source%2A> [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] 정의 하는속성과함께사용할수있습니다<xref:System.Windows.Controls.Image> .
 
@@ -178,7 +178,7 @@ XAML 요소에는 각 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xm
 
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]는 동일한 기능을 계속 유지하며 대체가 사용되는 시기와 방법을 사용자가 더 많이 제어할 수 있도록 이 기능에 대한 지원을 추가합니다. 이 기능은 모든 언어를 대상으로 하지만, 애플리케이션을 실행하는 다양한 문화권 때문에 특정 언어에 대한 숫자 모양을 애플리케이션 개발자가 지정하기 어려운 양방향 콘텐츠에서 더욱 유용합니다.
 
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 에서<xref:System.Windows.Media.NumberSubstitution.Substitution%2A> 숫자 대체가 작동 하는 방식을 제어 하는 핵심 속성은 종속성 속성입니다. <xref:System.Windows.Media.NumberSubstitution> 클래스 텍스트의 숫자가 표시 하는 하는 방법을 지정 합니다. 동작을 정의하는 세 가지 공용 속성이 있습니다. 다음은 각 속성에 대한 요약입니다.
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 에서<xref:System.Windows.Media.NumberSubstitution.Substitution%2A> 숫자 대체가 작동 하는 방식을 제어 하는 핵심 속성은 종속성 속성입니다. <xref:System.Windows.Media.NumberSubstitution> 클래스 텍스트의 숫자가 표시 하는 하는 방법을 지정 합니다. 동작을 정의하는 세 가지 공용 속성이 있습니다. 다음은 각 속성에 대 한 요약입니다.
 
 **CultureSource:**
 
@@ -198,7 +198,7 @@ XAML 요소에는 각 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xm
 
 이 속성에는 수행할 숫자 대체의 형식을 지정합니다. 다음 <xref:System.Windows.Media.NumberSubstitutionMethod> 열거형 값 중 하나를 사용 합니다.
 
-- <xref:System.Windows.Media.NumberSubstitutionMethod.AsCulture>: 대체 메서드는 숫자 문화권의 <xref:System.Globalization.NumberFormatInfo.DigitSubstitution%2A?displayProperty=nameWithType> 속성에 따라 결정 됩니다. 기본값입니다.
+- <xref:System.Windows.Media.NumberSubstitutionMethod.AsCulture>: 대체 메서드는 숫자 문화권의 <xref:System.Globalization.NumberFormatInfo.DigitSubstitution%2A?displayProperty=nameWithType> 속성에 따라 결정 됩니다. 이 값이 기본값입니다.
 
 - <xref:System.Windows.Media.NumberSubstitutionMethod.Context>: 숫자 문화권이 아랍어 또는 이란어 문화권이 면 해당 숫자는 컨텍스트에 따라 달라 집니다.
 
@@ -226,7 +226,7 @@ XAML 요소에는 각 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xm
 
 먼저 응용 프로그램 구성 요소의 `NumberSubstitution.CultureSource="Text"`를 설정 합니다. 이 설정을 사용 하면와 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] <xref:System.Windows.Controls.TextBlock>같이 "User"를 기본값으로 사용 하는 텍스트 요소에 대 한 설정이에서 제공 되지 않습니다.
 
-예를 들어:
+예를 들어 다음과 같은 가치를 제공해야 합니다.
 
 ```xaml
 <TextBlock

@@ -2,19 +2,19 @@
 title: 함수(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 0bb88992-37ed-4991-ace5-55be612a2c4d
-ms.openlocfilehash: ae8da3985f11a2e9f52852876a21f50a412e3b27
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: bacc773351812a5db60f493f3025c8e4b07dbaa2
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250933"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833795"
 ---
 # <a name="function-entity-sql"></a>함수(Entity SQL)
 Entity SQL 쿼리 명령의 범위에서 함수를 정의합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```sql  
 FUNCTION function-name  
 ( [ { parameter_name <type_definition>   
         [ ,...n ]  
@@ -41,7 +41,7 @@ FUNCTION function-name
  `data_type`  
  지원되는 형식의 이름입니다.  
   
- 컬렉션 (< type_definition`>` )  
+ COLLECTION (< type_definition @ no__t-0)  
  지원되는 형식, 행 또는 참조 컬렉션을 반환하는 식입니다.  
   
  REF **(** `data_type` **)**  
@@ -61,21 +61,21 @@ FUNCTION function-name
   
  `A()`  
   
- 자세한 내용은 [방법: 사용자 정의 함수](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd490951(v=vs.100))를 호출 합니다.  
+ 자세한 내용은 [방법: 사용자 정의 함수 @ no__t-0을 호출 합니다.  
   
  함수는 모델 자체에서도 선언할 수 있습니다. 모델에서 선언된 함수는 명령에서 인라인으로 선언된 함수와 동일한 방식으로 실행됩니다. 자세한 내용은 [사용자 정의 함수](user-defined-functions-entity-sql.md)를 참조 하세요.  
   
 ## <a name="example"></a>예제  
  다음 Entity SQL 명령에서는 정수 값을 사용하여 반환된 제품을 필터링하는 `Products` 함수를 정의합니다.  
   
- [!code-csharp[DP EntityServices Concepts 2#FUNCTION1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#function1)]  
+ [!code-sql[DP EntityServices Concepts#FUNCTION1](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#function1)]  
   
 ## <a name="example"></a>예제  
  다음 Entity SQL 명령에서는 문자열 컬렉션을 사용하여 반환된 연락처를 필터링하는 `StringReturnsCollection` 함수를 정의합니다.  
   
- [!code-csharp[DP EntityServices Concepts 2#FUNCTION2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#function2)]  
+ [!code-sql[DP EntityServices Concepts#FUNCTION2](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#function2)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [엔터티 SQL 참조](entity-sql-reference.md)
 - [Entity SQL 언어](entity-sql-language.md)

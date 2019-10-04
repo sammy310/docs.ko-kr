@@ -2,12 +2,12 @@
 title: '방법: 오류 처리'
 ms.date: 03/30/2017
 ms.assetid: de566e39-9358-44ff-8244-780f6b799966
-ms.openlocfilehash: 4958e7914d9feb32dc00d11a215cf8247e9baffc
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 3b8e48a74ff7671b942b5499fb3a0b5d0f389d61
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424599"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834706"
 ---
 # <a name="how-to-error-handling"></a>방법: 오류 처리
 
@@ -79,7 +79,7 @@ ms.locfileid: "67424599"
     </backupLists>
     ```
 
-4. 필터를 deadDestination 엔드포인트 및 백업 엔드포인트 목록과 연결하는 필터 테이블을 정의합니다.  라우팅 서비스는 먼저 필터와 연결된 대상 엔드포인트에 메시지를 보내려고 시도합니다. 이 경우 deadDestination에 실행 중인 서비스를 참조하지 않는 주소가 포함되어 있기 때문에 네트워크 오류가 발생합니다. 라우팅 서비스는 backupEndpointList에 지정 된 끝점에 메시지를 보내려고 시도 합니다.
+4. 필터를 deadDestination 엔드포인트 및 백업 엔드포인트 목록과 연결하는 필터 테이블을 정의합니다.  라우팅 서비스는 먼저 필터와 연결된 대상 엔드포인트에 메시지를 보내려고 시도합니다. 이 경우 deadDestination에 실행 중인 서비스를 참조하지 않는 주소가 포함되어 있기 때문에 네트워크 오류가 발생합니다. 그런 다음 라우팅 서비스는 backupEndpointList에 지정 된 끝점으로 메시지를 보내려고 시도 합니다.
 
     ```xml
     <filterTables>
@@ -93,7 +93,7 @@ ms.locfileid: "67424599"
           </filterTables>
     ```
 
-5. 필터 테이블에 포함된 필터에 대해 들어오는 메시지를 평가하려면 라우팅 동작을 사용하여 필터 테이블을 서비스 엔드포인트와 연결해야 합니다.  다음 예제에서는 서비스 끝점을 사용 하 여 연결 "filterTable1" 하는 방법을 보여 줍니다.
+5. 필터 테이블에 포함된 필터에 대해 들어오는 메시지를 평가하려면 라우팅 동작을 사용하여 필터 테이블을 서비스 엔드포인트와 연결해야 합니다.  다음 예제에서는 "filterTable1"을 서비스 끝점과 연결 하는 방법을 보여 줍니다.
 
     ```xml
     <behaviors>

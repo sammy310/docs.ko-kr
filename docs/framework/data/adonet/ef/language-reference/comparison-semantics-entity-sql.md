@@ -2,12 +2,12 @@
 title: 비교 의미 체계(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: b36ce28a-2fe4-4236-b782-e5f7c054deae
-ms.openlocfilehash: da7b8f662d10376abd649e674701b43b7b740a6f
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 8d7868b0166f0a18824ec25e6cdf639deec665ac
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251189"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833937"
 ---
 # <a name="comparison-semantics-entity-sql"></a>비교 의미 체계(Entity SQL)
 다음 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 연산자를 수행하면 형식 인스턴스 비교가 수반됩니다.  
@@ -78,7 +78,7 @@ ms.locfileid: "70251189"
   
  <sup>1</sup> 지정 된 엔터티 형식 인스턴스의 참조는 다음 예제와 같이 암시적으로 비교 됩니다.  
   
-```  
+```sql  
 SELECT p1, p2   
 FROM AdventureWorksEntities.Product AS p1   
      JOIN AdventureWorksEntities.Product AS p2   
@@ -87,7 +87,7 @@ WHERE p1 != p2 OR p1 IS NULL
   
  엔터티 인스턴스는 명시적 참조와 비교할 수 없습니다. 비교를 시도하면 예외가 throw됩니다. 예를 들어, 다음 쿼리는 예외를 throw합니다.  
   
-```  
+```sql  
 SELECT p1, p2   
 FROM AdventureWorksEntities.Product AS p1   
      JOIN AdventureWorksEntities.Product AS p2   
@@ -102,6 +102,6 @@ WHERE p1 != REF(p2)
   
  <sup>5</sup> 참조의 모든 개별 요소를 비교 합니다. 여기에는 엔터티 형식의 엔터티 집합 이름 및 모든 키 속성이 포함 됩니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [Entity SQL 개요](entity-sql-overview.md)

@@ -11,12 +11,12 @@ ms.assetid: 01ef6eba-d044-40f0-951d-78eff7ebd9a9
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.openlocfilehash: f52c1d127df8f0e831db0749e3453bb1c54d5886
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 86ec8f9ae76f010ebbc3be393d8d257ba5cfc6b6
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972065"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834621"
 ---
 # <a name="how-to-display-a-control-in-the-choose-toolbox-items-dialog-box"></a>방법: 도구 상자 항목 선택 대화 상자에 컨트롤 표시
 
@@ -24,13 +24,13 @@ ms.locfileid: "70972065"
 
 도구 상자 항목 선택 대화 상자에 컨트롤을 표시 하려면 다음을 수행 합니다.
 
-- 컨트롤 어셈블리를 전역 어셈블리 캐시에 설치 합니다. 자세한 내용은 [방법: 글로벌 어셈블리 캐시에 어셈블리 설치](../../app-domains/install-assembly-into-gac.md)
+- 컨트롤 어셈블리를 전역 어셈블리 캐시에 설치 합니다. 자세한 내용은 [방법: 글로벌 어셈블리 캐시에 어셈블리 설치](../../app-domains/install-assembly-into-gac.md)를 참조하세요.
 
   또는
 
 - AssemblyFoldersEx 등록 프로시저를 사용 하 여 컨트롤 및 연결 된 디자인 타임 어셈블리를 등록 합니다. AssemblyFoldersEx은 타사 공급 업체가 지 원하는 각 프레임 워크 버전에 대 한 경로를 저장 하는 레지스트리 위치입니다. 디자인 타임 확인은이 레지스트리 위치를 확인 하 여 참조 어셈블리를 찾을 수 있습니다. 레지스트리 스크립트는 도구 상자에 표시할 컨트롤을 지정할 수 있습니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [디자인 타임에 Windows Forms 컨트롤 개발](developing-windows-forms-controls-at-design-time.md)
 - [방법: 글로벌 어셈블리 캐시에 어셈블리 설치](../../app-domains/install-assembly-into-gac.md)

@@ -8,17 +8,18 @@ helpviewer_keywords:
 ms.assetid: d1247f08-0965-416a-b978-e0b50652dfe3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 410c8bdb63b56a78dbfa64c21344fdcd6a6656c3
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 2a5449b4fa77ba99a18595077081089e80bd32df
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051606"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833612"
 ---
 # <a name="specifying-an-entry-point"></a>진입점 지정
+
 진입점은 DLL에서 함수의 위치를 식별합니다. 관리되는 프로젝트 내에서 대상 함수의 원래 이름이나 서수 진입점은 상호 운용 경계 간에 해당 함수를 식별합니다. 또한 진입점을 다른 이름에 매핑하여 효과적으로 함수 이름을 바꿀 수 있습니다.  
   
- 다음은 DLL 함수 이름을 바꿀 수 있는 이유 목록입니다.  
+ 다음은 DLL 함수의 이름을 바꾸는 가능한 원인 목록입니다.  
   
 - 대/소문자를 구분하는 API 함수 이름을 사용하지 않도록 하기 위해  
   
@@ -31,7 +32,8 @@ ms.locfileid: "71051606"
  이 항목에는 관리 코드에서 DLL 함수 이름을 바꾸는 방법을 보여 줍니다.  
   
 ## <a name="renaming-a-function-in-visual-basic"></a>Visual Basic에서 함수 이름 바꾸기  
- Visual Basic에서는 **Declare** 문에 **Function** 키워드를 사용하여 <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=nameWithType> 필드를 설정합니다. 다음 예제에서는 기본 선언을 보여 줍니다.  
+ 
+Visual Basic에서는 **Declare** 문에 **Function** 키워드를 사용하여 <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=nameWithType> 필드를 설정합니다. 다음 예제에서는 기본 선언을 보여 줍니다.  
   
 ```vb
 Friend Class NativeMethods
@@ -43,7 +45,7 @@ Friend Class NativeMethods
 End Class
 ```
   
- 다음 예제와 같이 정의에 **Alias** 키워드를 포함하여 **MessageBox** 진입점을 **MsgBox**로 바꿀 수 있습니다. 두 예제에서 모두 **Auto** 키워드를 사용하면 진입점의 문자 집합 버전을 지정할 필요가 없습니다. 문자 집합을 선택하는 방법에 대한 자세한 내용은 [문자 집합 지정](specifying-a-character-set.md)을 참조하세요.  
+다음 예제와 같이 정의에 **Alias** 키워드를 포함하여 **MessageBox** 진입점을 **MsgBox**로 바꿀 수 있습니다. 두 예제에서 모두 **Auto** 키워드를 사용하면 진입점의 문자 집합 버전을 지정할 필요가 없습니다. 문자 집합을 선택하는 방법에 대한 자세한 내용은 [문자 집합 지정](specifying-a-character-set.md)을 참조하세요.  
   
 ```vb
 Friend Class NativeMethods
@@ -90,7 +92,7 @@ extern "C" int MsgBox(
     HWND hWnd, String* lpText, String* lpCaption, unsigned int uType);
 ```
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Runtime.InteropServices.DllImportAttribute>
 - [관리 코드에서 프로토타입 만들기](creating-prototypes-in-managed-code.md)

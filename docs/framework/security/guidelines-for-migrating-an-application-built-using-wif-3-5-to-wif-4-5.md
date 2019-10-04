@@ -3,12 +3,12 @@ title: WIF 3.5를 사용하여 빌드된 애플리케이션을 WIF 4.5로 마이
 ms.date: 03/30/2017
 ms.assetid: 7a32fe6e-5f68-4693-9371-19411fa8063c
 author: BrucePerlerMS
-ms.openlocfilehash: 3ba99a061d060ebe7740fe61846c3684b5c3085d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 645fd09de91d8190384faea9df2ef18511162c2f
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71045480"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834528"
 ---
 # <a name="guidelines-for-migrating-an-application-built-using-wif-35-to-wif-45"></a>WIF 3.5를 사용하여 빌드된 애플리케이션을 WIF 4.5로 마이그레이션하는 지침
 
@@ -110,7 +110,7 @@ Visual Studio의 확장 및 업데이트 관리자에서 Id 및 액세스 도구
 
 - 독립 실행형 페더레이션 유틸리티(FedUtil)를 WIF 4.5에서 사용할 수 없습니다. ID 및 액세스 도구를 통해 구성 파일을 수정하여 ID 관리를 STS로 아웃소싱할 수 있습니다.
 
-ID 및 액세스 도구에 대한 자세한 내용은 [Visual Studio 2012용 ID 및 액세스 도구](identity-and-access-tool-for-vs.md)를 참조하세요.
+Id 및 액세스 도구에 대 한 자세한 내용은 [Visual Studio 2012에 대 한 id 및 액세스 도구](identity-and-access-tool-for-vs.md)를 참조 하세요.
 
 <a name="BKMK_ToolingChanges"></a>
 
@@ -180,7 +180,7 @@ Add-WindowsFeature windows-identity-foundation
 > [!NOTE]
 > WIF 3.5 및 WIF 4.5의 대부분 클래스는 동일한 이름을 공유하므로 WIF 3.5 및 WIF 4.5를 함께 사용할 경우 정규화된 클래스 이름을 사용하거나 네임스페이스 별칭을 사용하여 WIF 3.5 및 WIF 4.5의 클래스를 구별해야 합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [WIF 구성 스키마](../configure-apps/file-schema/windows-identity-foundation/index.md)
 - [WIF 3.5와 WIF 4.5 간의 네임스페이스 매핑](namespace-mapping-between-wif-3-5-and-wif-4-5.md)

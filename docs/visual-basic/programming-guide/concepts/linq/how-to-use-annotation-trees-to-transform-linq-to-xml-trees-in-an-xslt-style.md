@@ -1,15 +1,15 @@
 ---
-title: '방법: LINQ to XML 트리 (Visual Basic) XSLT 스타일에서 변환할 주석 사용'
+title: '방법: XSLT 스타일에서 주석을 사용 하 여 LINQ to XML 트리 변환 (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 08e91fa2-dac2-4463-9ef1-87b1ac3fa890
-ms.openlocfilehash: 9ebff2276fc9f574989530fdb07a0d0875ff74a3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: aa0561ecc26139d191107521a8bb5fc2889332cd
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648807"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835066"
 ---
-# <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-visual-basic"></a>방법: LINQ to XML 트리 (Visual Basic) XSLT 스타일에서 변환할 주석 사용
+# <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-visual-basic"></a>방법: XSLT 스타일에서 주석을 사용 하 여 LINQ to XML 트리 변환 (Visual Basic)
 주석을 사용하여 XML 트리를 쉽게 변환할 수 있습니다.  
   
  일부 XML 문서는 "혼합 내용이 포함된 문서 중심적"입니다. 이러한 문서를 사용하는 경우 요소의 자식 노드 모양을 반드시 알아야 할 필요가 없습니다. 예를 들어, 텍스트가 포함된 노드는 다음과 같을 수 있습니다.  
@@ -18,7 +18,7 @@ ms.locfileid: "64648807"
 <text>A phrase with <b>bold</b> and <i>italic</i> text.</text>  
 ```  
   
- 지정된 텍스트 노드에는 자식 `<b>` 및 `<i>` 요소가 임의의 개수만큼 있을 수 있습니다. 이 방법은 많은 다른 상황으로 확장:와 같은 다양 한 일반 단락, 글머리 기호 단락 및 비트맵과 같은 자식 요소를 포함할 수 있는 페이지. 표의 셀에는 텍스트, 드롭다운 목록 또는 비트맵이 포함될 수 있습니다. 문서 중심 XML의 기본 특징 중 하나는 특정 요소에 포함될 자식 요소에 대해 알 수 없다는 것입니다.  
+ 지정된 텍스트 노드에는 자식 `<b>` 및 `<i>` 요소가 임의의 개수만큼 있을 수 있습니다. 이 방법은 다양 한 상황 (예: 일반 단락, 글머리 기호 단락 및 비트맵과 같은 다양 한 자식 요소를 포함할 수 있는 페이지)으로 확장 됩니다. 표의 셀에는 텍스트, 드롭다운 목록 또는 비트맵이 포함될 수 있습니다. 문서 중심 XML의 기본 특징 중 하나는 특정 요소에 포함될 자식 요소에 대해 알 수 없다는 것입니다.  
   
  변환할 요소의 자식에 대해 반드시 자세히 알아야 할 필요가 없는 트리에서 요소를 변환하려면 주석을 사용하는 이 방법이 효과적인 방법입니다.  
   
@@ -135,7 +135,7 @@ End Module
   
  이 예제는 다음과 같은 출력을 생성합니다.  
   
-```  
+```console
 Before Transform  
 ----------------  
 <Root>  
@@ -158,33 +158,23 @@ After Transform
 ## <a name="effecting-the-transform"></a>변환에 영향 미치기  
  작은 함수인 `XForm`은 주석이 달린 원래 트리에서 변환된 새 트리를 만듭니다.  
   
-- 이 함수의 의사(pseudo) 코드는 매우 간단합니다.  
+이 함수의 의사(pseudo) 코드는 매우 간단합니다.  
   
-```  
-The function takes an XElement as an argument and returns an XElement.   
-If an element has an XElement annotation, then  
-    Return a new XElement  
-        The name of the new XElement is the annotation element's name.  
-        All attributes are copied from the annotation to the new node.  
-        All child nodes are copied from the annotation, with the  
-            exception that the special node xf:ApplyTransforms is  
-            recognized, and the source element's child nodes are  
-            iterated. If the source child node is not an XElement, it  
-            is copied to the new tree. If the source child is an  
-            XElement, then it is transformed by calling this function  
-            recursively.  
-If an element is not annotated  
-    Return a new XElement  
-        The name of the new XElement is the source element's name  
-        All attributes are copied from the source element to the  
-            destination's element.  
-        All child nodes are copied from the source element.  
-        If the source child node is not an XElement, it is copied to  
-            the new tree. If the source child is an XElement, then it  
-            is transformed by calling this function recursively.  
-```  
-  
- 이 함수의 구현은 다음과 같습니다.  
+> 함수는 XElement를 인수로 사용 하 여 XElement를 반환 합니다.
+>   
+> 요소에 XElement 주석이 있으면 새 XElement을 반환 합니다.  
+>    - 새 XElement의 이름은 주석 요소의 이름입니다.  
+>    - 모든 특성이 주석에서 새 노드로 복사 됩니다.  
+>    - 특수 노드 xf: ApplyTransforms이 인식 되 고 원본 요소의 자식 노드가 반복 되는 예외를 제외 하 고 모든 자식 노드가 주석에 복사 됩니다. 원본 자식 노드가 XElement이 아닌 경우 새 트리로 복사 됩니다. 소스 자식이 XElement 인 경우이 함수를 재귀적으로 호출 하 여 변환 됩니다.
+>  
+> 요소에 주석이 추가 되지 않은 경우:  
+>    - 새 XElement 반환  
+>        - 새 XElement의 이름은 원본 요소의 이름입니다.  
+>        - 모든 특성이 소스 요소에서 대상의 요소로 복사 됩니다.  
+>        - 모든 자식 노드가 원본 요소에서 복사 됩니다.  
+>        - 원본 자식 노드가 XElement이 아닌 경우 새 트리로 복사 됩니다. 소스 자식이 XElement 인 경우이 함수를 재귀적으로 호출 하 여 변환 됩니다.  
+
+이 함수의 구현은 다음과 같습니다.  
   
 ```vb  
 ' Build a transformed XML tree per the annotations.  
@@ -346,7 +336,7 @@ End Module
   
  이 예제는 다음과 같은 출력을 생성합니다.  
   
-```  
+```console
 Before Transform  
 ----------------  
 <Root Att1="123">  
@@ -378,6 +368,6 @@ After Transform
 </Root>  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
-- [고급 LINQ to XML 프로그래밍 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [Visual Basic (Advanced LINQ to XML 프로그래밍)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

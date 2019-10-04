@@ -15,12 +15,12 @@ helpviewer_keywords:
 - mouse [Windows Forms], events
 - MouseUp event
 ms.assetid: 8cf0070d-793b-4876-b09e-d20d28280fab
-ms.openlocfilehash: 181d01f6e688b94876f77155bf598aba129e9fbf
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a61f4eedde611cfb7598d55465103924516e06c6
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949906"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834605"
 ---
 # <a name="mouse-events-in-windows-forms"></a>Windows Forms의 마우스 이벤트
 
@@ -48,7 +48,7 @@ ms.locfileid: "69949906"
 
 4. <xref:System.Windows.Forms.Control.MouseUp> 이벤트
 
-다음은 마우스 단추 두 번 클릭에 대해 발생하는 이벤트 순서입니다.
+다음은 마우스 단추를 두 번 클릭할 때 발생 하는 이벤트의 순서입니다.
 
 1. <xref:System.Windows.Forms.Control.MouseDown> 이벤트
 
@@ -66,13 +66,16 @@ ms.locfileid: "69949906"
 
 8. <xref:System.Windows.Forms.Control.MouseUp> 이벤트
 
-마우스 클릭 이벤트의 순서를 보여 주는 코드 예제를 보려면 [방법: Windows Forms 컨트롤](how-to-handle-user-input-events-in-windows-forms-controls.md)에서 사용자 입력 이벤트를 처리 합니다.
+마우스 클릭 이벤트의 순서를 보여 주는 코드 예제를 보려면 [How to: Windows Forms 컨트롤 @ no__t에서 사용자 입력 이벤트를 처리 합니다.
 
 ### <a name="individual-controls"></a>개별 컨트롤
 
 다음 컨트롤은 표준 마우스 클릭 이벤트 동작을 준수하지 않습니다.
 
-- <xref:System.Windows.Forms.Button>, <xref:System.Windows.Forms.CheckBox>, <xref:System.Windows.Forms.ComboBox> 및 <xref:System.Windows.Forms.RadioButton> 컨트롤
+- <xref:System.Windows.Forms.Button>
+- <xref:System.Windows.Forms.CheckBox>
+- <xref:System.Windows.Forms.ComboBox>
+- <xref:System.Windows.Forms.RadioButton>
 
   > [!NOTE]
   > <xref:System.Windows.Forms.ComboBox> 컨트롤의 경우 사용자가 편집 필드, 단추 또는 목록 내의 항목을 클릭하면 나중에 자세히 설명하는 이벤트 동작이 발생합니다.
@@ -147,6 +150,6 @@ ms.locfileid: "69949906"
     > [!NOTE]
     > 사용자가 마우스 단추를 누른 동안 토글 컨트롤에서 포인터를 이동하는 경우(예: 누른 동안 <xref:System.Windows.Forms.Button> 컨트롤에서 마우스 이동) 토글 컨트롤이 올려진 상태로 그려지고 <xref:System.Windows.Forms.Control.MouseUp> 이벤트만 발생합니다. 이런 상황에서는 <xref:System.Windows.Forms.Control.Click> 또는 <xref:System.Windows.Forms.Control.MouseClick> 이벤트가 발생하지 않습니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [Windows Forms 애플리케이션의 마우스 입력](mouse-input-in-a-windows-forms-application.md)

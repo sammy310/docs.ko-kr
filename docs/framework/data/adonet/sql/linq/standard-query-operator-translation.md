@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a60c30fa-1e68-45fe-b984-f6abb9ede40e
-ms.openlocfilehash: 4df1653b7bd6865ad9f5d7d3fb9be6815dcfe018
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: af22b6a895fef8037eb5c069ffb7cb23d1333531
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70781020"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833675"
 ---
 # <a name="standard-query-operator-translation"></a>표준 쿼리 연산자 변환
 
@@ -38,7 +38,7 @@ SQL은 정렬 되지 않은 *값 집합*을 주로 처리 합니다. 순서 지�
 
 ### <a name="take-skip"></a>Take, Skip
 
-<xref:System.Linq.Enumerable.Take%2A>및 <xref:System.Linq.Enumerable.Skip%2A> 메서드는 *순서가 지정 된 집합*에 대해서만 잘 정의 됩니다. 순서 없는 집합이나 다중 집합에 대한 의미 체계는 정의되어 있지 않습니다.
+<xref:System.Linq.Enumerable.Take%2A> 및 <xref:System.Linq.Enumerable.Skip%2A> 메서드는 *정렬 된 집합*에 대해서만 잘 정의 됩니다. 순서 없는 집합이나 다중 집합에 대한 의미 체계는 정의되어 있지 않습니다.
 
 > [!NOTE]
 > <xref:System.Linq.Enumerable.Take%2A> 및 <xref:System.Linq.Enumerable.Skip%2A>에는 SQL Server 2000에 대한 쿼리에서 사용할 경우 몇 가지 제한이 따릅니다. 자세한 내용은 [문제 해결](troubleshooting.md)에서 "SQL Server 2000의 Skip 및 Take 예외" 항목을 참조 하세요.
@@ -121,17 +121,17 @@ ORDER BY [t0].[CustomerID]
 
 - <xref:System.Linq.Enumerable.Except%2A>
 
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]는 *플랫* 인수에 대해 같음 및 비교를 지원 하지만 시퀀스를 포함 하거나 포함 하는 인수에 대해서는 지원 하지 않습니다. 단순 인수는 SQL 행에 매핑될 수 있는 형식입니다. 시퀀스를 포함하지 않는 것으로 정적으로 확인할 수 있는 하나 이상의 엔터티 형식에 대한 프로젝션은 단순 인수인 것으로 간주됩니다.
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]은 *플랫* 인수에 대 한 같음 및 비교를 지원 하지만 시퀀스를 포함 하거나 포함 하는 인수에 대해서는 지원 하지 않습니다. 단순 인수는 SQL 행에 매핑될 수 있는 형식입니다. 시퀀스를 포함하지 않는 것으로 정적으로 확인할 수 있는 하나 이상의 엔터티 형식에 대한 프로젝션은 단순 인수인 것으로 간주됩니다.
 
-다음은 단순 인수의 예제입니다.
+다음은 플랫 인수의 예입니다.
 
-[!code-csharp[DLinqSQOTranslation#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSQOTranslation/cs/Program.cs#3)]
-[!code-vb[DLinqSQOTranslation#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSQOTranslation/vb/Module1.vb#3)]
+[!code-csharp[DLinqSQOTranslation#3](~/samples/snippets/csharp/VS_Snippets_Data/DLinqSQOTranslation/cs/Program.cs#3)]
+[!code-vb[DLinqSQOTranslation#3](~/samples/snippets/visualbasic/VS_Snippets_Data/DLinqSQOTranslation/vb/Module1.vb#3)]
 
-다음은 단순이 아닌(계층적) 인수의 예제입니다.
+다음은 플랫 (계층)이 아닌 인수의 예입니다.
 
-[!code-csharp[DLinqSQOTranslation#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSQOTranslation/cs/Program.cs#4)]
-[!code-vb[DLinqSQOTranslation#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSQOTranslation/vb/Module1.vb#4)]
+[!code-csharp[DLinqSQOTranslation#4](~/samples/snippets/csharp/VS_Snippets_Data/DLinqSQOTranslation/cs/Program.cs#4)]
+[!code-vb[DLinqSQOTranslation#4](~/samples/snippets/visualbasic/VS_Snippets_Data/DLinqSQOTranslation/vb/Module1.vb#4)]
 
 ### <a name="visual-basic-function-translation"></a>Visual Basic 함수 변환
 
@@ -158,7 +158,7 @@ Visual Basic 컴파일러에서 사용하는 다음과 같은 도우미 함수�
 
 ### <a name="inheritance-mapping-restrictions"></a>상속 매핑 제한
 
-자세한 내용은 [방법: 상속 계층 구조](how-to-map-inheritance-hierarchies.md)를 매핑합니다.
+자세한 내용은 [방법: 매핑 상속 계층 @ no__t-0.
 
 ### <a name="inheritance-in-queries"></a>쿼리의 상속
 
@@ -198,7 +198,7 @@ C# 캐스트는 프로젝션에서만 지원됩니다. 다른 위치에 사용�
 
 ## <a name="sql-server-2000-support"></a>SQL Server 2000 지원
 
-다음 SQL Server 2000 제한 (Microsoft SQL Server 2005과 비교)은 지원 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 에 영향을 줍니다.
+다음 SQL Server 2000 제한 (Microsoft SQL Server 2005에 비해)은 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 지원에 영향을 줍니다.
 
 ### <a name="cross-apply-and-outer-apply-operators"></a>Cross Apply 및 Outer Apply 연산자
 
@@ -208,7 +208,7 @@ C# 캐스트는 프로젝션에서만 지원됩니다. 다른 위치에 사용�
 
 ### <a name="text--ntext"></a>text/ntext
 
-데이터 형식은 `text` `nvarchar(max)`  /  `varchar(max)`Microsoft SQL Server 2005에서 지원 되는에 대 한 특정 쿼리 작업에서 사용할 수 없습니다.  /  `ntext`
+Microsoft SQL Server 2005에서 지원 되는 `varchar(max)` @ no__t-4 @ no__t-5에 대 한 특정 쿼리 작업에서 데이터 형식 `text` @ no__t-1 @ no__t을 사용할 수 없습니다.
 
 이 제한에 대한 해결 방법은 없습니다. 특히 `Distinct()` 또는 `text` 열에 매핑된 멤버가 들어 있는 결과에서는 `ntext`를 사용할 수 없습니다.
 
@@ -232,7 +232,7 @@ SQL Server 2000 (SP4) 바인더에는 중첩 된 쿼리에 의해 트리거되�
 
   - 프로젝션의 형식 캐스트
 
-- <xref:System.Linq.Enumerable.AsEnumerable%2A> 메서드 뒤에 오는 메서드는 *로컬로 실행*됩니다. 이 메서드는 즉시 실행되지 않습니다.
+- @No__t-0 메서드 다음에 오는 메서드는 *로컬로 실행*됩니다. 이 메서드는 즉시 실행되지 않습니다.
 
 - `struct`를 쿼리 결과의 반환 형식이나 결과 형식의 멤버로 사용할 수 있습니다. 엔터티는 클래스여야 합니다. 익명 형식은 클래스 인스턴스로 구체화되지만 명명된 구조체(비엔터티)는 프로젝션에서 사용할 수 있습니다.
 
@@ -246,7 +246,7 @@ SQL Server 2000 (SP4) 바인더에는 중첩 된 쿼리에 의해 트리거되�
 
   - <xref:System.Linq.Enumerable.ToArray%2A>
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [참조](reference.md)
 - [시퀀스에서 요소 반환 또는 건너뛰기](return-or-skip-elements-in-a-sequence.md)

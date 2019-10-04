@@ -2,12 +2,12 @@
 title: Entity SQL과 Transact-SQL의 차이점
 ms.date: 03/30/2017
 ms.assetid: 9c9ee36d-f294-4c8b-a196-f0114c94f559
-ms.openlocfilehash: e809cea2f853eed51d28e55f81a411f7af2e5a33
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: e0af0a415d812337d6abf449e9ee170526c3df0c
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854479"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833717"
 ---
 # <a name="how-entity-sql-differs-from-transact-sql"></a>Entity SQL과 Transact-SQL의 차이점
 이 항목에서는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 와 transact-sql의 차이점에 대해 설명 합니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "70854479"
   
  다음은 모두 유효한 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 쿼리입니다.  
   
-```  
+```sql  
 1+2 *3  
 "abc"  
 row(1 as a, 2 as b)  
@@ -72,33 +72,33 @@ set(e1)
   
  또한 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]에서는 `group by` 절을 사용하는 쿼리에 추가적인 제한을 적용합니다. 이러한 쿼리에서 `select` 절 및 `having` 절의 식은 오직 별칭을 통해서만 `group by` 키를 참조할 수 있습니다. 다음 구문은 Transact-sql에서는 유효 하지만에서는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]유효 하지 않습니다.  
   
-```  
-select t.x + t.y from T as t group by t.x + t.y  
+```sql  
+SELECT t.x + t.y FROM T AS t group BY t.x + t.y
 ```  
   
  위와 동일한 결과를 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]에서 얻으려면 다음 구문을 사용합니다.  
   
-```  
-select k from T as t group by (t.x + t.y) as k  
+```sql  
+SELET k FROM T AS t GROUP BY (t.x + t.y) AS k
 ```  
   
 ## <a name="referencing-columns-properties-of-tables-collections"></a>테이블(컬렉션)의 열(속성) 참조  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)]의 모든 열 참조는 테이블 별칭으로 정규화해야 합니다. 다음 구문 (테이블 `a` `T`의 유효한 열 이라고 가정)은 transact-sql에서는 유효 하지만에서는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]유효 하지 않습니다.  
   
-```  
-select a from T  
+```sql  
+SELECT a FROM T
 ```  
   
  위 구문의 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 형식은 다음과 같습니다.  
   
-```  
-select t.a as A from T as t  
+```sql  
+SELECT t.a AS A FROM T AS t
 ```  
   
  `from` 절에서 테이블 별칭은 선택적 요소입니다. 테이블의 이름이 암시적 별칭으로 사용됩니다. [!INCLUDE[esql](../../../../../../includes/esql-md.md)]에서는 다음 형식도 허용됩니다.  
   
-```  
-select Tab.a from Tab  
+```sql  
+SELET Tab.a FROM Tab
 ```  
   
 ## <a name="navigation-through-objects"></a>개체 탐색  
@@ -106,7 +106,7 @@ select Tab.a from Tab
   
  예를 들어, `p`가 Person 형식의 식이라면 다음은 이 사람의 주소 중 도시를 참조하는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 구문입니다.  
   
-```  
+```sql  
 p.Address.City   
 ```  
   
@@ -120,18 +120,18 @@ p.Address.City
 ## <a name="changes-to-group-by"></a>Group By 변경  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)]에서는 `group by` 키 별칭 지정을 지원합니다. `select` 절 및 `having` 절의식은이러한별칭`group by` 을 통해 키를 참조 해야 합니다. 예를 들어, 다음 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 구문을 봅니다.  
   
-```  
-select k1, count(t.a), sum(t.a)  
-from T as t  
-group by t.b + t.c as k1  
+```sql  
+SELECT k1, count(t.a), sum(t.a)
+FROM T AS t
+GROUP BY t.b + t.c AS k1
 ```  
   
  ... 는 다음 Transact-sql과 동일 합니다.  
   
-```  
-select b + c, count(*), sum(a)   
-from T  
-group by b + c  
+```sql  
+SELECT b + c, count(*), sum(a)
+FROM T
+GROUP BY b + c
 ```  
   
 ## <a name="collection-based-aggregates"></a>컬렉션 기반 집계  
@@ -139,27 +139,27 @@ group by b + c
   
  컬렉션 기반 집계는 컬렉션에 대해 작동하며 집계된 결과를 생성합니다. 이는 쿼리 내의 임의의 위치에 나타날 수 있으며 `group by` 절이 필요 없습니다. 예:  
   
-```  
-select t.a as a, count({1,2,3}) as b from T as t     
+```sql  
+SELECT t.a AS a, count({1,2,3}) AS b FROM T AS t
 ```  
   
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)]에서는 SQL 스타일의 집계도 지원됩니다. 예를 들어:  
   
-```  
-select a, sum(t.b) from T as t group by t.a as a  
+```sql  
+SELECT a, sum(t.b) FROM T AS t GROUP BY t.a AS a
 ```  
   
 ## <a name="order-by-clause-usage"></a>ORDER BY 절 사용법  
- Transact-sql을 사용 하면 ORDER BY 절을 맨 위의 SELECT .에만 지정할 수 있습니다. FROM . WHERE 블록에서만 지정할 수 있습니다. [!INCLUDE[esql](../../../../../../includes/esql-md.md)]에서는 중첩된 ORDER BY 식을 사용할 수 있으며, 이는 쿼리 내 임의의 위치에 올 수 있습니다. 그러나 중첩 쿼리 내의 순서는 유지되지 않습니다.  
+Transact-sql을 사용 하면 `ORDER BY` 절을 최상위 `SELECT .. FROM .. WHERE` 블록 에서만 지정할 수 있습니다. @No__t-0에서는 중첩 된 `ORDER BY` 식을 사용할 수 있으며, 쿼리의 아무 곳에 나 배치할 수 있지만 중첩 된 쿼리의 순서 지정은 유지 되지 않습니다.  
   
-```  
+```sql  
 -- The following query will order the results by the last name  
 SELECT C1.FirstName, C1.LastName  
-        FROM AdventureWorks.Contact as C1  
+        FROM AdventureWorks.Contact AS C1
         ORDER BY C1.LastName  
 ```  
   
-```  
+```sql  
 -- In the following query ordering of the nested query is ignored.  
 SELECT C2.FirstName, C2.LastName  
     FROM (SELECT C1.FirstName, C1.LastName  
@@ -197,16 +197,16 @@ SELECT C2.FirstName, C2.LastName
  쿼리 결과 일괄 처리  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)]에서는 쿼리 결과 일괄 처리를 지원하지 않습니다. 예를 들어 다음은 유효한 Transact-sql (일괄 처리로 보내기)입니다.  
   
-```  
-select * from products;  
-select * from catagories;  
+```sql  
+SELECT * FROM products;
+SELECT * FROM catagories;
 ```  
   
  그러나 해당하는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]은 지원되지 않습니다.  
   
-```  
-Select value p from Products as p;  
-Select value c from Categories as c;  
+```sql  
+SELECT value p FROM Products AS p;
+SELECT value c FROM Categories AS c;
 ```  
   
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)]에서는 결과 생성 쿼리 문을 명령당 하나만 지원합니다.  

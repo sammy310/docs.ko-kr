@@ -2,12 +2,12 @@
 title: Visual Studio에서 AJAX 사용 WCF 서비스 및 ASP.NET 클라이언트 만들기
 ms.date: 08/17/2018
 ms.assetid: 95012df8-2a66-420d-944a-8afab261013e
-ms.openlocfilehash: 1f5c9eb1750b0df28836f147d5b4be1b223bb52e
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: a6d6e87de6200a5cb9bba566d595066673cdf9cf
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053687"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834783"
 ---
 # <a name="how-to-create-an-ajax-enabled-wcf-service-and-an-aspnet-client-that-accesses-the-service"></a>방법: 서비스에 액세스 하는 AJAX 사용 WCF 서비스 및 ASP.NET 클라이언트 만들기
 
@@ -104,9 +104,9 @@ ms.locfileid: "71053687"
 
 ## <a name="run-the-program"></a>프로그램 실행
 
-*WebForm1* 에 포커스가 있는지 확인 한 다음 **시작** 단추를 눌러 웹 클라이언트를 시작 합니다. 단추에는 녹색 삼각형이 표시 되 고 **IIS Express (Microsoft Edge)** 와 같은 내용이 표시 됩니다. 또는 **f5**키를 누를 수 있습니다. **Price of 3 sandwiches** 단추를 클릭 하 여 "3.75"의 예상 출력을 생성 합니다.
+*WebForm1* 에 포커스가 있는지 확인 한 다음 **시작** 단추를 눌러 웹 클라이언트를 시작 합니다. 단추에는 녹색 삼각형이 표시 되 고 **IIS Express (Microsoft Edge)** 와 같은 내용이 표시 됩니다. 또는 <kbd>f5</kbd>키를 누를 수 있습니다. **Price of 3 sandwiches** 단추를 클릭 하 여 "3.75"의 예상 출력을 생성 합니다.
 
-## <a name="example-code"></a>예제 코드
+## <a name="example"></a>예제
 
 *CostService.svc.cs* 파일의 전체 코드는 다음과 같습니다.
 

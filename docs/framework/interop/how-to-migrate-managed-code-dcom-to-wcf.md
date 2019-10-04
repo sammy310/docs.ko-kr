@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 52961ffc-d1c7-4f83-832c-786444b951ba
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e2e37de4d3032db6d9578eae7ba0be5c1e39f39d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 42edce63856b629511faeb165362da18ea3cecad
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051749"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833624"
 ---
 # <a name="how-to-migrate-managed-code-dcom-to-wcf"></a>방법: 관리 코드 DCOM을 WCF로 마이그레이션
 WCF(Windows Communication Foundation)는 분산 환경에서 서버와 클라이언트 간에 관리 코드 호출에 대해 DCOM(Distributed Component Object Model)보다 권장되는 안전한 선택 항목입니다. 이 문서에서는 다음과 같은 시나리오에 대해 코드를 DCOM에서 WCF로 마이그레이션하는 방법을 보여 줍니다.  
@@ -302,7 +302,7 @@ public interface ISessionBoundObject
     }  
 ```  
   
- 이 서비스의 구현은 다음과 같습니다. 이 구현에서는 세션 개체를 만들기 위해 단일 채널 팩터리를 유지 관리합니다.  `GetInstanceAddress`를 호출하면 채널을 만들고 이 채널과 연결된 원격 주소를 가리키는 <xref:System.ServiceModel.EndpointAddress10> 개체를 만듭니다.   <xref:System.ServiceModel.EndpointAddress10>은 값 방식으로 클라이언트에 반환될 수 있는 데이터 형식입니다.  
+ 다음은이 서비스의 구현입니다. 이 구현에서는 세션 개체를 만들기 위해 단일 채널 팩터리를 유지 관리합니다.  `GetInstanceAddress`를 호출하면 채널을 만들고 이 채널과 연결된 원격 주소를 가리키는 <xref:System.ServiceModel.EndpointAddress10> 개체를 만듭니다.   <xref:System.ServiceModel.EndpointAddress10>은 값 방식으로 클라이언트에 반환될 수 있는 데이터 형식입니다.
   
 ```csharp  
 public class SessionBoundFactory : ISessionBoundFactory  
@@ -329,7 +329,7 @@ public class SessionBoundFactory : ISessionBoundFactory
   
 2. `<services>` 섹션에서 팩터리와 세션 개체의 서비스 엔드포인트를 선언합니다.  그러면 클라이언트가 서비스 엔드포인트와 통신하고 <xref:System.ServiceModel.EndpointAddress10>을 확보한 다음 세션 채널을 만들 수 있습니다.  
   
- 다음은 이러한 설정을 포함하는 예제 구성 파일입니다.  
+ 다음은 이러한 설정을 사용 하는 구성 파일의 예입니다.  
   
 ```xml  
 <configuration>  
@@ -421,7 +421,7 @@ if (sessionBoundObject.GetCurrentValue() == "Hello")
 }  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [기본 WCF 프로그래밍](../wcf/basic-wcf-programming.md)
 - [서비스 디자인 및 구현](../wcf/designing-and-implementing-services.md)
