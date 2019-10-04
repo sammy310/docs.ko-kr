@@ -5,17 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 09f2e4ee-1d08-4ba8-8936-83394fee319d
-ms.openlocfilehash: d9767844400d67e81c7065148b22c62352af0428
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 2641637d176b411108aeb2fa00ef4268584e9cb3
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784794"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834266"
 ---
-# <a name="applying-an-xslt-transform-to-a-dataset"></a><span data-ttu-id="3daac-102">XSLT 변형을 DataSet에 적용</span><span class="sxs-lookup"><span data-stu-id="3daac-102">Applying an XSLT Transform to a DataSet</span></span>
-<span data-ttu-id="3daac-103">의<xref:System.Data.DataSet> **WriteXml** 메서드를 사용 하면 **데이터 집합** 의 내용을 XML 데이터로 쓸 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3daac-103">The **WriteXml** method of the <xref:System.Data.DataSet> enables you to write the contents of a **DataSet** as XML data.</span></span> <span data-ttu-id="3daac-104">그런 다음에는 XSLT(XSL transformations)를 사용하여 해당 XML을 다른 형식으로 변환하는 공통적인 작업이 수행됩니다.</span><span class="sxs-lookup"><span data-stu-id="3daac-104">A common task is to then transform that XML to another format using XSL transformations (XSLT).</span></span> <span data-ttu-id="3daac-105">그러나 **데이터 집합** 을와 <xref:System.Xml.XmlDataDocument> 동기화 하면 먼저 **WriteXml**을 사용 하 여 **데이터 집합의** 내용을 XML 데이터로 작성 하지 않고도 **데이터 집합** 의 내용에 XSLT 스타일 시트를 적용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3daac-105">However, synchronizing a **DataSet** with an <xref:System.Xml.XmlDataDocument> enables you to apply an XSLT stylesheet to the contents of a **DataSet** without having to first write the contents of the **DataSet** as XML data using **WriteXml**.</span></span>  
+# <a name="applying-an-xslt-transform-to-a-dataset"></a><span data-ttu-id="6ac2e-102">XSLT 변형을 DataSet에 적용</span><span class="sxs-lookup"><span data-stu-id="6ac2e-102">Applying an XSLT Transform to a DataSet</span></span>
+
+<span data-ttu-id="6ac2e-103">@No__t-1의 **WriteXml** 메서드를 사용 하면 **데이터 집합** 의 내용을 XML 데이터로 쓸 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6ac2e-103">The **WriteXml** method of the <xref:System.Data.DataSet> enables you to write the contents of a **DataSet** as XML data.</span></span> <span data-ttu-id="6ac2e-104">그런 다음에는 XSLT(XSL transformations)를 사용하여 해당 XML을 다른 형식으로 변환하는 공통적인 작업이 수행됩니다.</span><span class="sxs-lookup"><span data-stu-id="6ac2e-104">A common task is to then transform that XML to another format using XSL transformations (XSLT).</span></span> <span data-ttu-id="6ac2e-105">그러나 **데이터 집합** 을 <xref:System.Xml.XmlDataDocument>과 동기화 하면 먼저 **WriteXml**을 사용 하 여 **데이터 집합의** 내용을 XML 데이터로 작성 하지 않고도 **데이터 집합** 의 내용에 XSLT 스타일 시트를 적용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6ac2e-105">However, synchronizing a **DataSet** with an <xref:System.Xml.XmlDataDocument> enables you to apply an XSLT stylesheet to the contents of a **DataSet** without having to first write the contents of the **DataSet** as XML data using **WriteXml**.</span></span>  
   
- <span data-ttu-id="3daac-106">다음 예제에서는 테이블 및 관계가 있는 **데이터 집합** 을 채우고, **데이터 집합** 을 **XmlDataDocument**와 동기화 하 고, XSLT 스타일 시트를 사용 하 여 **데이터 집합** 의 일부를 HTML 파일로 작성 합니다.</span><span class="sxs-lookup"><span data-stu-id="3daac-106">The following example populates a **DataSet** with tables and relationships, synchronizes the **DataSet** with an **XmlDataDocument**, and writes a portion of the **DataSet** as an HTML file using an XSLT stylesheet.</span></span> <span data-ttu-id="3daac-107">다음은 XSLT 스타일시트의 내용입니다.</span><span class="sxs-lookup"><span data-stu-id="3daac-107">Following are the contents of the XSLT stylesheet.</span></span>  
+ <span data-ttu-id="6ac2e-106">다음 예제에서는 테이블 및 관계가 있는 **데이터 집합** 을 채우고, **데이터 집합** 을 **XmlDataDocument**와 동기화 하 고, XSLT 스타일 시트를 사용 하 여 **데이터 집합** 의 일부를 HTML 파일로 작성 합니다.</span><span class="sxs-lookup"><span data-stu-id="6ac2e-106">The following example populates a **DataSet** with tables and relationships, synchronizes the **DataSet** with an **XmlDataDocument**, and writes a portion of the **DataSet** as an HTML file using an XSLT stylesheet.</span></span> <span data-ttu-id="6ac2e-107">다음은 XSLT 스타일 시트의 내용입니다.</span><span class="sxs-lookup"><span data-stu-id="6ac2e-107">The following are the contents of the XSLT stylesheet:</span></span>
   
 ```xml  
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">  
@@ -56,10 +57,10 @@ ms.locfileid: "70784794"
 </xsl:stylesheet>  
 ```  
   
- <span data-ttu-id="3daac-108">다음 코드는 **데이터 집합** 을 채우고 XSLT 스타일 시트를 적용 합니다.</span><span class="sxs-lookup"><span data-stu-id="3daac-108">The following code fills the **DataSet** and applies the XSLT style sheet.</span></span>  
+ <span data-ttu-id="6ac2e-108">다음 코드는 **데이터 집합** 을 채우고 XSLT 스타일 시트를 적용 합니다.</span><span class="sxs-lookup"><span data-stu-id="6ac2e-108">The following code fills the **DataSet** and applies the XSLT style sheet.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="3daac-109">관계를 포함 하는 **데이터 집합** 에 XSLT 스타일 시트를 적용 하는 경우의 중첩 된 각 관계에 대해의 **nested** <xref:System.Data.DataRelation> 속성을 **true** 로 설정 하면 최상의 성능을 달성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3daac-109">If you are applying an XSLT style sheet to a **DataSet** that contains relations, you achieve best performance if you set the **Nested** property of the <xref:System.Data.DataRelation> to **true** for each nested relation.</span></span> <span data-ttu-id="3daac-110">그러면 스타일시트 노드 테스트 식에서 쓰는 이전 형제 및 다음 형제와 같이 높은 성능이 필요한 XPath 위치 축을 사용하여 데이터 계층을 탐색하는 대신, 자연스러운 상-하 처리를 구현하는 XSLT 스타일시트를 사용하여 계층을 탐색하고 데이터를 전송할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3daac-110">This allows you to use XSLT style sheets that implement natural top-down processing to navigate the hierarchy and transform the data, as opposed to using performance-intensive XPath location axes (for example, preceding-sibling and following-sibling in style sheet node test expressions) to navigate it.</span></span> <span data-ttu-id="3daac-111">중첩 관계에 대 한 자세한 내용은 [DataRelations 중첩](nesting-datarelations.md)을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="3daac-111">For more information on nested relations, see [Nesting DataRelations](nesting-datarelations.md).</span></span>  
+> <span data-ttu-id="6ac2e-109">관계를 포함 하는 **데이터 집합** 에 XSLT 스타일 시트를 적용 하는 경우 중첩 된 각 관계에 대해 <xref:System.Data.DataRelation>의 **nested** 속성을 **true** 로 설정 하면 최상의 성능을 달성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6ac2e-109">If you are applying an XSLT style sheet to a **DataSet** that contains relations, you achieve best performance if you set the **Nested** property of the <xref:System.Data.DataRelation> to **true** for each nested relation.</span></span> <span data-ttu-id="6ac2e-110">그러면 스타일시트 노드 테스트 식에서 쓰는 이전 형제 및 다음 형제와 같이 높은 성능이 필요한 XPath 위치 축을 사용하여 데이터 계층을 탐색하는 대신, 자연스러운 상-하 처리를 구현하는 XSLT 스타일시트를 사용하여 계층을 탐색하고 데이터를 전송할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6ac2e-110">This allows you to use XSLT style sheets that implement natural top-down processing to navigate the hierarchy and transform the data, as opposed to using performance-intensive XPath location axes (for example, preceding-sibling and following-sibling in style sheet node test expressions) to navigate it.</span></span> <span data-ttu-id="6ac2e-111">중첩 관계에 대 한 자세한 내용은 [DataRelations 중첩](nesting-datarelations.md)을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="6ac2e-111">For more information on nested relations, see [Nesting DataRelations](nesting-datarelations.md).</span></span>  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -123,7 +124,7 @@ xslTran.Transform(xmlDoc, null, writer);
 writer.Close();  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="3daac-112">참고자료</span><span class="sxs-lookup"><span data-stu-id="3daac-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6ac2e-112">참조</span><span class="sxs-lookup"><span data-stu-id="6ac2e-112">See also</span></span>
 
-- [<span data-ttu-id="3daac-113">데이터 세트 및 XmlDataDocument 동기화</span><span class="sxs-lookup"><span data-stu-id="3daac-113">DataSet and XmlDataDocument Synchronization</span></span>](dataset-and-xmldatadocument-synchronization.md)
-- [<span data-ttu-id="3daac-114">ADO.NET 개요</span><span class="sxs-lookup"><span data-stu-id="3daac-114">ADO.NET Overview</span></span>](../ado-net-overview.md)
+- [<span data-ttu-id="6ac2e-113">데이터 세트 및 XmlDataDocument 동기화</span><span class="sxs-lookup"><span data-stu-id="6ac2e-113">DataSet and XmlDataDocument Synchronization</span></span>](dataset-and-xmldatadocument-synchronization.md)
+- [<span data-ttu-id="6ac2e-114">ADO.NET 개요</span><span class="sxs-lookup"><span data-stu-id="6ac2e-114">ADO.NET Overview</span></span>](../ado-net-overview.md)

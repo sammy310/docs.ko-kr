@@ -2,20 +2,20 @@
 title: '방법: 컨텍스트에 따라 요소를 찾는 쿼리 작성 (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 0b085290-ddc1-4126-aaa0-e4c95a3d9a09
-ms.openlocfilehash: 1743a0793a8b572cb212d45a31924fe8eb93bf45
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: a7661ea35ff829875ee4c625c45da533865fea9f
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710413"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835035"
 ---
-# <a name="how-to-write-a-query-that-finds-elements-based-on-context-visual-basic"></a><span data-ttu-id="b193c-102">방법: 컨텍스트에 따라 요소를 찾는 쿼리 작성 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b193c-102">How to: Write a Query that Finds Elements Based on Context (Visual Basic)</span></span>
-<span data-ttu-id="b193c-103">컨텍스트에 따라 요소를 선택하는 쿼리를 작성해야 하는 경우가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b193c-103">Sometimes you might have to write a query that selects elements based on their context.</span></span> <span data-ttu-id="b193c-104">이전 또는 다음 형제 요소를 기준으로 필터링하거나,</span><span class="sxs-lookup"><span data-stu-id="b193c-104">You might want to filter based on preceding or following sibling elements.</span></span> <span data-ttu-id="b193c-105">자식 또는 상위 요소를 기준으로 필터링하려고 할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b193c-105">You might want to filter based on child or ancestor elements.</span></span>  
+# <a name="how-to-write-a-query-that-finds-elements-based-on-context-visual-basic"></a><span data-ttu-id="08bf4-102">방법: 컨텍스트에 따라 요소를 찾는 쿼리 작성 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="08bf4-102">How to: Write a Query that Finds Elements Based on Context (Visual Basic)</span></span>
+<span data-ttu-id="08bf4-103">컨텍스트에 따라 요소를 선택하는 쿼리를 작성해야 하는 경우가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="08bf4-103">Sometimes you might have to write a query that selects elements based on their context.</span></span> <span data-ttu-id="08bf4-104">이전 또는 다음 형제 요소를 기준으로 필터링하거나,</span><span class="sxs-lookup"><span data-stu-id="08bf4-104">You might want to filter based on preceding or following sibling elements.</span></span> <span data-ttu-id="08bf4-105">자식 또는 상위 요소를 기준으로 필터링하려고 할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="08bf4-105">You might want to filter based on child or ancestor elements.</span></span>  
   
- <span data-ttu-id="b193c-106">쿼리를 작성하고 `where` 절에서 쿼리의 결과를 사용하여 이를 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b193c-106">You can do this by writing a query and using the results of the query in the `where` clause.</span></span> <span data-ttu-id="b193c-107">먼저 null에 대해 테스트하고 값을 테스트해야 하는 경우에는 `let` 절에서 쿼리를 수행한 다음 `where` 절에서 결과를 사용하는 것이 더 편리합니다.</span><span class="sxs-lookup"><span data-stu-id="b193c-107">If you have to first test against null, and then test the value, it is more convenient to do the query in a `let` clause, and then use the results in the `where` clause.</span></span>  
+ <span data-ttu-id="08bf4-106">쿼리를 작성하고 `where` 절에서 쿼리의 결과를 사용하여 이를 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="08bf4-106">You can do this by writing a query and using the results of the query in the `where` clause.</span></span> <span data-ttu-id="08bf4-107">먼저 null에 대해 테스트하고 값을 테스트해야 하는 경우에는 `let` 절에서 쿼리를 수행한 다음 `where` 절에서 결과를 사용하는 것이 더 편리합니다.</span><span class="sxs-lookup"><span data-stu-id="08bf4-107">If you have to first test against null, and then test the value, it is more convenient to do the query in a `let` clause, and then use the results in the `where` clause.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="b193c-108">예제</span><span class="sxs-lookup"><span data-stu-id="b193c-108">Example</span></span>  
- <span data-ttu-id="b193c-109">다음 예제에서는 `p` 요소 바로 이전에 있는 모든 `ul` 요소를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="b193c-109">The following example selects all `p` elements that are immediately followed by a `ul` element.</span></span>  
+## <a name="example"></a><span data-ttu-id="08bf4-108">예제</span><span class="sxs-lookup"><span data-stu-id="08bf4-108">Example</span></span>  
+ <span data-ttu-id="08bf4-109">다음 예제에서는 `p` 요소 바로 이전에 있는 모든 `ul` 요소를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="08bf4-109">The following example selects all `p` elements that are immediately followed by a `ul` element.</span></span>  
   
 ```vb  
 Dim doc As XElement = _  
@@ -49,16 +49,16 @@ For Each e As XElement In items
 Next  
 ```  
   
- <span data-ttu-id="b193c-110">이 코드의 결과는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="b193c-110">This code produces the following output:</span></span>  
+ <span data-ttu-id="08bf4-110">이 코드의 결과는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="08bf4-110">This code produces the following output:</span></span>  
   
-```  
+```console  
 id = 1  
 id = 3  
 id = 6  
 ```  
   
-## <a name="example"></a><span data-ttu-id="b193c-111">예제</span><span class="sxs-lookup"><span data-stu-id="b193c-111">Example</span></span>  
- <span data-ttu-id="b193c-112">다음 예제에서는 네임스페이스에 있는 XML에 대한 동일한 쿼리를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="b193c-112">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="b193c-113">자세한 내용은 [네임 스페이스 개요 (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)를 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="b193c-113">For more information, see [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).</span></span>  
+## <a name="example"></a><span data-ttu-id="08bf4-111">예제</span><span class="sxs-lookup"><span data-stu-id="08bf4-111">Example</span></span>  
+ <span data-ttu-id="08bf4-112">다음 예제에서는 네임스페이스에 있는 XML에 대한 동일한 쿼리를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="08bf4-112">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="08bf4-113">자세한 내용은 [네임 스페이스 개요 (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)를 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="08bf4-113">For more information, see [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).</span></span>  
   
 ```vb  
 Imports <xmlns='http://www.adatum.com'>  
@@ -98,18 +98,18 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="b193c-114">이 코드의 결과는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="b193c-114">This code produces the following output:</span></span>  
+ <span data-ttu-id="08bf4-114">이 코드의 결과는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="08bf4-114">This code produces the following output:</span></span>  
   
-```  
+```console  
 id = 1  
 id = 3  
 id = 6  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="b193c-115">참고자료</span><span class="sxs-lookup"><span data-stu-id="b193c-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="08bf4-115">참조</span><span class="sxs-lookup"><span data-stu-id="08bf4-115">See also</span></span>
 
 - <xref:System.Xml.Linq.XElement.Parse%2A>
 - <xref:System.Xml.Linq.XContainer.Descendants%2A>
 - <xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A>
 - <xref:System.Linq.Enumerable.FirstOrDefault%2A>
-- [<span data-ttu-id="b193c-116">기본 쿼리 (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b193c-116">Basic Queries (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [<span data-ttu-id="08bf4-116">기본 쿼리 (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="08bf4-116">Basic Queries (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

@@ -1,19 +1,19 @@
 ---
-title: '방법: 직렬화를 사용 하 여 DataContractSerializer (Visual Basic)'
+title: '방법: DataContractSerializer를 사용 하 여 Serialize (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: ecaea518-8a0f-4249-b4e5-9b3fb0cdd8ad
-ms.openlocfilehash: 9593dede3eb29aadc7ffb494e1d728cb8e679f0c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5b747f505b0314c082929fbce25a67f79dd4af35
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62054434"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835159"
 ---
-# <a name="how-to-serialize-using-datacontractserializer-visual-basic"></a><span data-ttu-id="f6d88-102">방법: 직렬화를 사용 하 여 DataContractSerializer (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f6d88-102">How to: Serialize Using DataContractSerializer (Visual Basic)</span></span>
-<span data-ttu-id="f6d88-103">이 항목에서는 <xref:System.Runtime.Serialization.DataContractSerializer>를 사용하여 serialize하고 deserialize하는 예제를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="f6d88-103">This topic shows an example that serializes and deserializes using <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span>  
+# <a name="how-to-serialize-using-datacontractserializer-visual-basic"></a><span data-ttu-id="5d135-102">방법: DataContractSerializer를 사용 하 여 Serialize (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5d135-102">How to: Serialize Using DataContractSerializer (Visual Basic)</span></span>
+<span data-ttu-id="5d135-103">이 항목에서는 <xref:System.Runtime.Serialization.DataContractSerializer>를 사용하여 serialize하고 deserialize하는 예제를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="5d135-103">This topic shows an example that serializes and deserializes using <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="f6d88-104">예제</span><span class="sxs-lookup"><span data-stu-id="f6d88-104">Example</span></span>  
- <span data-ttu-id="f6d88-105">다음 예제에서는 <xref:System.Xml.Linq.XElement> 개체가 포함된 많은 개체를 만든 다음</span><span class="sxs-lookup"><span data-stu-id="f6d88-105">The following example creates a number of objects that contain <xref:System.Xml.Linq.XElement> objects.</span></span> <span data-ttu-id="f6d88-106">텍스트 파일로 개체를 serialize하고 텍스트 파일에서 개체를 deserialize합니다.</span><span class="sxs-lookup"><span data-stu-id="f6d88-106">It then serializes them to text files, and then deserializes them from the text files.</span></span>  
+## <a name="example"></a><span data-ttu-id="5d135-104">예제</span><span class="sxs-lookup"><span data-stu-id="5d135-104">Example</span></span>  
+ <span data-ttu-id="5d135-105">다음 예제에서는 <xref:System.Xml.Linq.XElement> 개체가 포함된 많은 개체를 만든 다음</span><span class="sxs-lookup"><span data-stu-id="5d135-105">The following example creates a number of objects that contain <xref:System.Xml.Linq.XElement> objects.</span></span> <span data-ttu-id="5d135-106">텍스트 파일로 개체를 serialize하고 텍스트 파일에서 개체를 deserialize합니다.</span><span class="sxs-lookup"><span data-stu-id="5d135-106">It then serializes them to text files, and then deserializes them from the text files.</span></span>  
   
 ```vb  
 Imports System  
@@ -72,9 +72,9 @@ Public Class XElementNullContainer
 End Class  
 ```  
   
- <span data-ttu-id="f6d88-107">이 예제는 다음과 같은 출력을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="f6d88-107">This example produces the following output:</span></span>  
+ <span data-ttu-id="5d135-107">이 예제는 다음과 같은 출력을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="5d135-107">This example produces the following output:</span></span>  
   
-```  
+```console  
 Testing for type: System.Xml.Linq.XElement  
   Deserialized type: System.Xml.Linq.XElement  
 Testing for type: XElementContainer  
@@ -83,6 +83,6 @@ Testing for type: XElementNullContainer
   Deserialized type: XElementNullContainer  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="f6d88-108">참고자료</span><span class="sxs-lookup"><span data-stu-id="f6d88-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5d135-108">참조</span><span class="sxs-lookup"><span data-stu-id="5d135-108">See also</span></span>
 
-- [<span data-ttu-id="f6d88-109">XElement 개체 (Visual Basic)를 포함 하는 개체 그래프를 직렬화 하는 작업</span><span class="sxs-lookup"><span data-stu-id="f6d88-109">Serializing Object Graphs that Contain XElement Objects (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)
+- [<span data-ttu-id="5d135-109">XElement 개체를 포함 하는 개체 그래프 serialize (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5d135-109">Serializing Object Graphs that Contain XElement Objects (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)

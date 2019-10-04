@@ -2,20 +2,20 @@
 title: '방법: 여러 키로 요소 정렬 (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 0c4c1462-3047-4766-b9e2-7e0e9cc7f421
-ms.openlocfilehash: dfb70a0ea4430d6771c319ab8ed351e8507bd89d
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 9e70a54dcf7ff8cd2e0f767773ad7a56b1da2330
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710287"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835134"
 ---
-# <a name="how-to-sort-elements-on-multiple-keys-visual-basic"></a><span data-ttu-id="a9c7e-102">방법: 여러 키로 요소 정렬 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a9c7e-102">How to: Sort Elements on Multiple Keys (Visual Basic)</span></span>
-<span data-ttu-id="a9c7e-103">이 항목에서는 여러 키에 대해 정렬하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="a9c7e-103">This topic shows how to sort on multiple keys.</span></span>  
+# <a name="how-to-sort-elements-on-multiple-keys-visual-basic"></a><span data-ttu-id="c1993-102">방법: 여러 키로 요소 정렬 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c1993-102">How to: Sort Elements on Multiple Keys (Visual Basic)</span></span>
+<span data-ttu-id="c1993-103">이 항목에서는 여러 키에 대해 정렬하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="c1993-103">This topic shows how to sort on multiple keys.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="a9c7e-104">예제</span><span class="sxs-lookup"><span data-stu-id="a9c7e-104">Example</span></span>  
- <span data-ttu-id="a9c7e-105">이 예제에서 결과는 먼저 배송 우편 번호로 정렬된 다음 주문 날짜로 정렬됩니다.</span><span class="sxs-lookup"><span data-stu-id="a9c7e-105">In this example, the results are ordered first by the shipping postal code, then by the order date.</span></span>  
+## <a name="example"></a><span data-ttu-id="c1993-104">예제</span><span class="sxs-lookup"><span data-stu-id="c1993-104">Example</span></span>  
+ <span data-ttu-id="c1993-105">이 예제에서 결과는 먼저 배송 우편 번호로 정렬된 다음 주문 날짜로 정렬됩니다.</span><span class="sxs-lookup"><span data-stu-id="c1993-105">In this example, the results are ordered first by the shipping postal code, then by the order date.</span></span>  
   
- <span data-ttu-id="a9c7e-106">이 예제에서는 XML 문서로을 사용합니다. [샘플 XML 파일: Customers 및 Orders(LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="a9c7e-106">This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="c1993-106">이 예제에서는 XML 문서로을 사용합니다. [샘플 XML 파일: Customers 및 Orders(LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="c1993-106">This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).</span></span>  
   
 ```vb  
 Dim co As XElement = XElement.Load("CustomersOrders.xml")  
@@ -34,9 +34,9 @@ For Each r In result
 Next  
 ```  
   
- <span data-ttu-id="a9c7e-107">이 코드의 결과는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="a9c7e-107">This code produces the following output:</span></span>  
+ <span data-ttu-id="c1993-107">이 코드의 결과는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="c1993-107">This code produces the following output:</span></span>  
   
-```  
+```console  
 CustomerID:LETSS EmployeeID:1 ShipPostalCode:94117 OrderDate:6/25/1997  
 CustomerID:LETSS EmployeeID:8 ShipPostalCode:94117 OrderDate:10/27/1997  
 CustomerID:LETSS EmployeeID:6 ShipPostalCode:94117 OrderDate:11/10/1997  
@@ -61,10 +61,10 @@ CustomerID:LAZYK EmployeeID:1 ShipPostalCode:99362 OrderDate:3/21/1997
 CustomerID:LAZYK EmployeeID:8 ShipPostalCode:99362 OrderDate:5/22/1997  
 ```  
   
-## <a name="example"></a><span data-ttu-id="a9c7e-108">예제</span><span class="sxs-lookup"><span data-stu-id="a9c7e-108">Example</span></span>  
- <span data-ttu-id="a9c7e-109">다음 예제에서는 네임스페이스에 있는 XML에 대한 동일한 쿼리를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="a9c7e-109">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="a9c7e-110">자세한 내용은 [네임 스페이스 개요 (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)를 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="a9c7e-110">For more information, see [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).</span></span>  
+## <a name="example"></a><span data-ttu-id="c1993-108">예제</span><span class="sxs-lookup"><span data-stu-id="c1993-108">Example</span></span>  
+ <span data-ttu-id="c1993-109">다음 예제에서는 네임스페이스에 있는 XML에 대한 동일한 쿼리를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="c1993-109">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="c1993-110">자세한 내용은 [네임 스페이스 개요 (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)를 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="c1993-110">For more information, see [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).</span></span>  
   
- <span data-ttu-id="a9c7e-111">이 예제에서는 XML 문서로을 사용합니다. [샘플 XML 파일: 네임스페이스의 Customers 및 Orders](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md).</span><span class="sxs-lookup"><span data-stu-id="a9c7e-111">This example uses the following XML document: [Sample XML File: Customers and Orders in a Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md).</span></span>  
+ <span data-ttu-id="c1993-111">이 예제에서는 XML 문서로 을 사용합니다. [샘플 XML 파일: 네임스페이스의 Customers 및 Orders](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md).</span><span class="sxs-lookup"><span data-stu-id="c1993-111">This example uses the following XML document: [Sample XML File: Customers and Orders in a Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md).</span></span>  
   
 ```vb  
 Imports <xmlns='http://www.adventure-works.com'>  
@@ -89,9 +89,9 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="a9c7e-112">이 코드의 결과는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="a9c7e-112">This code produces the following output:</span></span>  
+ <span data-ttu-id="c1993-112">이 코드의 결과는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="c1993-112">This code produces the following output:</span></span>  
   
-```  
+```console  
 CustomerID:LETSS EmployeeID:1 ShipPostalCode:94117 OrderDate:6/25/1997  
 CustomerID:LETSS EmployeeID:8 ShipPostalCode:94117 OrderDate:10/27/1997  
 CustomerID:LETSS EmployeeID:6 ShipPostalCode:94117 OrderDate:11/10/1997  
@@ -116,6 +116,6 @@ CustomerID:LAZYK EmployeeID:1 ShipPostalCode:99362 OrderDate:3/21/1997
 CustomerID:LAZYK EmployeeID:8 ShipPostalCode:99362 OrderDate:5/22/1997  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="a9c7e-113">참고자료</span><span class="sxs-lookup"><span data-stu-id="a9c7e-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c1993-113">참조</span><span class="sxs-lookup"><span data-stu-id="c1993-113">See also</span></span>
 
-- [<span data-ttu-id="a9c7e-114">기본 쿼리 (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a9c7e-114">Basic Queries (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [<span data-ttu-id="c1993-114">기본 쿼리 (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c1993-114">Basic Queries (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
