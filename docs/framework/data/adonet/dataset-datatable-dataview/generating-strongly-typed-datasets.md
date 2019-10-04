@@ -1,21 +1,21 @@
 ---
-title: 강력한 형식의 데이터 세트 생성
+title: 강력한 형식의 데이터 집합 생성
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 54333cbf-bb43-4314-a7d4-6dc1dd1c44b3
-ms.openlocfilehash: f1c1fd77bed700fae8e5a658da8b267120518ca9
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: ce7e5ad53f7aa5dad457ca1aa6ab76716086c0c3
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70786298"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833996"
 ---
-# <a name="generating-strongly-typed-datasets"></a>강력한 형식의 데이터 세트 생성
-Xsd (xml 스키마 정의 언어) 표준을 준수 하는 xml 스키마를 제공 하는 경우 Windows SDK (소프트웨어 개발 <xref:System.Data.DataSet> 키트)와 함께 제공 되는 xsd.exe 도구를 사용 하 여 강력한 형식의를 생성할 수 있습니다.  
+# <a name="generating-strongly-typed-datasets"></a>강력한 형식의 데이터 집합 생성
+XSD (XML 스키마 정의 언어) 표준을 준수 하는 XML 스키마가 지정 된 경우 Windows SDK (소프트웨어 개발 키트)와 함께 제공 되는 XSD.EXE 도구를 사용 하 여 강력한 형식의 <xref:System.Data.DataSet>을 생성할 수 있습니다.  
   
- 데이터베이스 테이블에서 xsd를 만들려면 또는 <xref:System.Data.DataSet.WriteXmlSchema%2A> [Visual Studio에서 데이터 집합 작업](/visualstudio/data-tools/dataset-tools-in-visual-studio)을 참조 하세요.  
+ 데이터베이스 테이블에서 xsd를 만들려면 <xref:System.Data.DataSet.WriteXmlSchema%2A> 또는 [Visual Studio에서 데이터 집합 작업](/visualstudio/data-tools/dataset-tools-in-visual-studio))을 참조 하세요.  
   
  다음 코드에서는이 도구를 사용 하 여 **데이터 집합** 을 생성 하는 구문을 보여 줍니다.  
   
@@ -23,7 +23,7 @@ Xsd (xml 스키마 정의 언어) 표준을 준수 하는 xml 스키마를 제�
 xsd.exe /d /l:CS XSDSchemaFileName.xsd /eld /n:XSDSchema.Namespace  
 ```  
   
- 이 구문에서 지시문은 `/d` 도구에 **데이터 집합**을 생성 하도록 지시 하 고는 `/l:` 도구에 사용할 언어 (예: C# 또는 Visual Basic .net)를 알려 줍니다. 선택적 `/eld` 지시문은 LINQ to DataSet를 사용 하 여 생성 된 **데이터 집합** 에 대해 쿼리할 수 있도록 지정 합니다. 이 옵션은 `/d` 옵션도 함께 지정한 경우에 사용합니다. 자세한 내용은 [형식화 된 데이터 집합 쿼리](../querying-typed-datasets.md)를 참조 하세요. 선택적 `/n:` 지시문은 도구에서 **xsdschema. namespace**라는 **데이터 집합** 에 대 한 네임 스페이스를 생성 하도록 지시 합니다. 이 명령을 실행하면 XSDSchemaFileName.cs가 생성되며, 이 파일을 컴파일하여 ADO.NET 응용 프로그램에서 사용할 수 있습니다. 생성된 코드는 라이브러리나 모듈로 컴파일할 수 있습니다.  
+ 이 구문에서 `/d` 지시문은 도구에 **데이터 집합**을 생성 하도록 지시 하 고 `/l:`는 사용할 언어 (예: C# 또는 Visual Basic .net)를 도구에 알려 줍니다. 선택적 `/eld` 지시어는 LINQ to DataSet를 사용 하 여 생성 된 **데이터 집합** 에 대해 쿼리할 수 있도록 지정 합니다. 이 옵션은 `/d` 옵션도 함께 지정한 경우에 사용합니다. 자세한 내용은 [형식화 된 데이터 집합 쿼리](../querying-typed-datasets.md)를 참조 하세요. 선택적 `/n:` 지시문은 도구에서 **Xsdschema. namespace**라는 **데이터 집합** 에 대 한 네임 스페이스를 생성 하도록 지시 합니다. 이 명령을 실행하면 XSDSchemaFileName.cs가 생성되며, 이 파일을 컴파일하여 ADO.NET 애플리케이션에서 사용할 수 있습니다. 생성된 코드는 라이브러리나 모듈로 컴파일할 수 있습니다.  
   
  다음 코드는 생성된 코드를 C# 컴파일러(csc.exe)를 사용하여 라이브러리로 컴파일하는 구문을 보여 줍니다.  
   
@@ -31,9 +31,9 @@ xsd.exe /d /l:CS XSDSchemaFileName.xsd /eld /n:XSDSchema.Namespace
 csc.exe /t:library XSDSchemaFileName.cs /r:System.dll /r:System.Data.dll  
 ```  
   
- `/t:` 지시문은 도구에 라이브러리로 컴파일하라는 것을, `/r:` 지시문은 컴파일에 필요한 종속 라이브러리를 지정합니다. 이 명령을 실행하면 XSDSchemaFileName.dll이 생성되며, 이 dll은 `/r:` 지시문으로 ADO.NET 응용 프로그램을 컴파일할 때 컴파일러로 전달할 수 있습니다.  
+ `/t:` 지시문은 도구에 라이브러리로 컴파일하라는 것을, `/r:` 지시문은 컴파일에 필요한 종속 라이브러리를 지정합니다. 이 명령을 실행하면 XSDSchemaFileName.dll이 생성되며, 이 dll은 `/r:` 지시문으로 ADO.NET 애플리케이션을 컴파일할 때 컴파일러로 전달할 수 있습니다.  
   
- 다음 코드는 ADO.NET 응용 프로그램에서 XSD.exe로 전달된 네임스페이스에 액세스하는 구문을 보여 줍니다.  
+ 다음 코드는 ADO.NET 애플리케이션에서 XSD.exe로 전달된 네임스페이스에 액세스하는 구문을 보여 줍니다.  
   
 ```vb  
 Imports XSDSchema.Namespace  
@@ -73,7 +73,7 @@ foreach(CustomerDataSet.CustomersRow customerRow in customers.Customers)
   Console.WriteLine(customerRow.CustomerID);  
 ```  
   
- 다음은 예제에서 사용한 XML 스키마입니다.  
+ 예제에 사용 되는 XML 스키마는 다음과 같습니다.
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -94,10 +94,10 @@ foreach(CustomerDataSet.CustomersRow customerRow in customers.Customers)
 </xs:schema>  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Data.DataColumnCollection>
 - <xref:System.Data.DataSet>
-- [형식화된 데이터 집합](typed-datasets.md)
-- [DataSet, DataTable 및 DataView](index.md)
+- [형식화된 데이터 세트](typed-datasets.md)
+- [DataSets, DataTables 및 DataViews](index.md)
 - [ADO.NET 개요](../ado-net-overview.md)
