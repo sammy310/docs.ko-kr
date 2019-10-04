@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 672a5ac8-8305-4d28-ba10-11089c2c0924
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8a0c34eebda789f6561195c89e2660ae77603dc0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 729e6caa36ed8c2f6e77153f8d8ae356513b0603
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69923291"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71956988"
 ---
 # <a name="xslt-compiler-xsltcexe"></a>XSLT 컴파일러(xsltc.exe)
 XSLT 컴파일러(xsltc.exe)에서는 XSLT 스타일시트를 컴파일하여 어셈블리를 생성합니다. 컴파일된 스타일시트는 <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> 메서드로 직접 전달될 수 있습니다. 서명된 어셈블리는 xsltc.exe를 사용하여 생성할 수 없습니다.  
@@ -19,7 +19,7 @@ XSLT 컴파일러(xsltc.exe)에서는 XSLT 스타일시트를 컴파일하여 �
   
 ## <a name="syntax"></a>구문  
   
-```  
+```console  
 xsltc [options] [/class:<name>] <sourceFile> [[/class:<name>] <sourceFile>...]  
 ```  
   
@@ -29,7 +29,7 @@ xsltc [options] [/class:<name>] <sourceFile> [[/class:<name>] <sourceFile>...]
 |--------------|-----------------|  
 |`sourceFile`|스타일시트 이름을 지정합니다. 스타일시트는 로컬 파일이거나 인트라넷에 있어야 합니다.|  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
   
 |옵션|설명|  
 |------------|-----------------|  
@@ -51,38 +51,38 @@ xsltc [options] [/class:<name>] <sourceFile> [[/class:<name>] <sourceFile>...]
   
  xsltc.exe 도구에서는 클래스(`/class:`*이름*) 또는 어셈블리(`/out:`*assemblyName*) 이름의 유효성을 검사하지 않습니다. 이름의 유효성을 확인할 수 없으면 공용 언어 런타임에서 오류가 throw됩니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 명령에서는 스타일시트를 컴파일하여 이름이 booksort.dll인 어셈블리를 만듭니다.  
   
-```  
+```console  
 xsltc booksort.xsl  
 ```  
   
  다음 명령에서는 스타일시트를 컴파일하여 이름이 각각 booksort.dll 및 booksort.pdb인 어셈블리와 PDB 파일을 만듭니다.  
   
-```  
+```console  
 xsltc booksort.xsl /debug  
 ```  
   
  다음 명령에서는 msxsl:script 요소가 포함된 스타일시트를 컴파일하여 이름이 calc.dll 및 calc_Script1.dll인 두 개의 어셈블리를 만듭니다.  
   
-```  
+```console  
 xsltc /settings:script+ calc.xsl  
 ```  
   
  다음 명령에서는 DTD 처리 및 스크립트 지원을 활성화하여 이름이 myTest.dll 및 myTest_Script1.dll인 두 개의 어셈블리를 만듭니다.  
   
-```  
+```console  
 xsltc /settings:DTD+,script+ /out:myTest calc.xsl  
 ```  
   
  다음 명령에서는 두 개의 스타일시트 모듈을 컴파일하여 이름이 booksort.dll인 단일 어셈블리를 만듭니다.  
   
-```  
+```console  
 xsltc booksort.xsl output.xsl  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Xml.Xsl.XslCompiledTransform>
 - [방법: 어셈블리를 사용하여 XSLT 변형 수행](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md)

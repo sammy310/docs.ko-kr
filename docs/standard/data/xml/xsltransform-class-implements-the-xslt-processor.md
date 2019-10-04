@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 88373fe2-4a6b-44f9-8a62-8a3e348e3a46
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7c36ff35622ae5c9cddf4ffd1ebd0a60feb348a8
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
-ms.translationtype: HT
+ms.openlocfilehash: 8cc3eb3e3f147d8ed15587946af743c96739a9b1
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170886"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71956860"
 ---
 # <a name="xsltransform-class-implements-the-xslt-processor"></a>XslTransform 클래스의 XSLT 프로세서 구현
 
@@ -180,9 +180,9 @@ Console.WriteLine("Passing " + tmpDoc.OuterXml + " to print_root.xsl");
 xslt.Transform(tmpDoc, null, Console.Out, null);
 ```
 
-이 예제에서는 library.xml 및 print_root.xsl 파일을 입력으로 사용하고 콘솔에 다음을 출력합니다.
+이 예제에서는 라이브러리 .xml 및 print_root 파일을 입력으로 사용 하 고 다음을 콘솔에 출력 합니다.
 
-```
+```console
 Passing <book genre="novel" ISBN="1-861001-57-5"><title>Pride And Prejudice</title></book> to print_root.xsl
 Root node is book.
 ```
@@ -237,7 +237,7 @@ print_root.xsl
 
 <xref:System.Xml.Xsl.XslTransform.XmlResolver%2A?displayProperty=nameWithType> 속성은 .NET Framework 버전 1.1에서 사용되지 않습니다. 대신 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 개체를 사용하는 새로운 <xref:System.Xml.XmlResolver> 오버로드를 사용합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Xml.Xsl.XslTransform>
 - [XslTransform 클래스를 사용하여 XSLT 변형](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)
