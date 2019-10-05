@@ -334,9 +334,7 @@
     - name: Windows Forms 전역화
       href: globalizing-windows-forms.md
       items:
-        - name: 인코딩 및 Windows Forms 전역화
-          href: encoding-and-windows-forms-globalization.md
-        - name: Windows Forms과 컨트롤의 국가별 글꼴
+        - name: Windows Forms과 컨트롤에서 국가별 글꼴
           href: international-fonts-in-windows-forms-and-controls.md
         - name: Windows Forms 애플리케이션에 대한 양방향 지원
           href: bi-directional-support-for-windows-forms-applications.md
