@@ -3,12 +3,12 @@ title: C# 프로그램 구조 - C# 언어 둘러보기
 description: C# 프로그램의 기본 구성 요소에 대해 알아보기
 ms.date: 08/10/2016
 ms.assetid: 984f0314-507f-47a0-af56-9011243f5e65
-ms.openlocfilehash: e6b3e0d3b91d3dee8cbc8ac530323e23e0ce8b2a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 5102c72d68108f698a0456b9c14e6713778f4325
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634572"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834163"
 ---
 # <a name="program-structure"></a>프로그램 구조
 
@@ -20,7 +20,7 @@ C#의 핵심적인 조직 개념은 ***프로그램***, ***네임스페이스***
 
 이 클래스의 정규화된 이름은 `Acme.Collections.Stack`입니다. 클래스에는 필드 `top`, 2개의 메서드 `Push` 및 `Pop`, 중첩된 클래스 `Entry` 등의 여러 멤버가 포함됩니다. `Entry` 클래스는 필드 `next` 및 필드 `data`, 생성자의 세 멤버가 포함됩니다. 예제의 소스 코드가 파일 `acme.cs`에 포함된다고 가정할 경우 다음 명령줄은
 
-```
+```console
 csc /t:library acme.cs
 ```
 
@@ -37,13 +37,13 @@ csc /t:library acme.cs
 
 프로그램이 파일 `example.cs`에 저장되는 경우 `example.cs`가 컴파일될 때 acme.dll 어셈블리가 컴파일러의 /r 옵션을 사용하여 참조될 수 있습니다.
 
-```
+```console
 csc /r:acme.dll example.cs
 ```
 
 이를 통해 실행 시 출력을 생성하는 `example.exe`라는 실행 가능한 어셈블리가 만들어집니다.
 
-```
+```console
 100
 10
 1

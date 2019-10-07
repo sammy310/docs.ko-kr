@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: df478548-8c05-4de2-8ba7-adcdbe1c2a60
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c9cd2b0d426e8f31f6312a4951f94ed1c52929d9
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: cae4ce2e1d5cdef097f4095a7748f09b80d1acdb
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70789661"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699074"
 ---
 # <a name="net-framework-4-migration-issues"></a>.NET Framework 4 마이그레이션 문제
 
@@ -316,17 +316,9 @@ ms.locfileid: "70789661"
 
 ## <a name="see-also"></a>참고 항목
 
-### <a name="reference"></a>참조
-
 - [.NET Framework 4의 새 형식 및 멤버](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ff641764%28v=vs.100%29)
-
-### <a name="concepts"></a>개념
-
 - [.NET Framework 4 마이그레이션 가이드](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ff657133%28v=vs.100%29)
 - [.NET Framework 4의 새로운 기능](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms171868%28v=vs.100%29)
 - [.NET Framework의 버전 호환성](version-compatibility.md)
 - [.NET Framework 4로 Office 솔루션 마이그레이션](/visualstudio/vsto/migrating-office-solutions-to-the-dotnet-framework-4-or-later)
-
-### <a name="other-resources"></a>기타 리소스
-
 - [.NET Framework 클래스 라이브러리의 사용되지 않는 기능](../whats-new/whats-obsolete.md)
