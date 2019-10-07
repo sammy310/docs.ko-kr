@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0fc18634-f590-4062-8d5c-f0b71abe405b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 57198cb9fb0042a3a74589e2781b3db1a2b829f1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ee06454575afc16c904b60a2301feeb05debdcdf
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963374"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71957172"
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>정규식의 그룹화 구문
 그룹화 구문은 정규식의 하위 식을 나타내며 입력 문자열의 부분 문자열을 캡처합니다. 그룹화 구문은 다음과 같은 경우에 사용할 수 있습니다.  
@@ -78,9 +78,7 @@ ms.locfileid: "69963374"
   
  정규식 패턴은 다음과 같습니다.  
   
-```  
-(\w+)\s(\1)\W  
-```  
+`(\w+)\s(\1)\W`  
   
  다음 테이블은 정규식 패턴이 해석되는 방법을 보여 줍니다.  
   
@@ -95,15 +93,11 @@ ms.locfileid: "69963374"
 ## <a name="named-matched-subexpressions"></a>명명된 일치하는 하위 식  
  다음 그룹화 구문은 일치하는 하위 식을 캡처하고 사용자가 이름 또는 번호로 해당 하위 식에 액세스할 수 있게 해줍니다.  
   
-```  
-(?<name>subexpression)  
-```  
+`(?<name>subexpression)`  
   
  또는  
   
-```  
-(?'name'subexpression)  
-```  
+`(?'name'subexpression)`  
   
  여기서 *name* 은 유효한 그룹 이름이고, *subexpression* 은 임의의 유효한 정규식 패턴입니다. *name* 은 문장 부호 문자를 포함해서는 안 되며 숫자로 시작할 수 없습니다.  
   
@@ -141,9 +135,7 @@ ms.locfileid: "69963374"
   
  정규식 패턴은 다음과 같습니다.  
   
-```  
-(?<duplicateWord>\w+)\s\k<duplicateWord>\W(?<nextWord>\w+)  
-```  
+`(?<duplicateWord>\w+)\s\k<duplicateWord>\W(?<nextWord>\w+)`  
   
  다음 테이블은 정규식이 해석되는 방법을 보여 줍니다.  
   
@@ -175,15 +167,11 @@ ms.locfileid: "69963374"
 ## <a name="balancing-group-definitions"></a>균형 조정 그룹 정의  
  균형 조정 그룹 정의는 이전에 정의된 그룹의 정의를 삭제하고 현재 그룹에 이전에 정의된 그룹과 현재 그룹 간의 간격을 저장합니다. 이 그룹화 구문의 형식은 다음과 같습니다.  
   
-```  
-(?<name1-name2>subexpression)  
-```  
+`(?<name1-name2>subexpression)`  
   
  또는  
   
-```  
-(?'name1-name2' subexpression)  
-```  
+`(?'name1-name2' subexpression)`
   
  여기서 *name1* 은 현재 그룹이고(선택 사항), *name2* 는 이전에 정의된 그룹이며, *subexpression* 은 임의의 유효한 정규식 패턴입니다. 균형 조정 그룹 정의는 *name2* 의 정의를 삭제하고 *name1* 에 *name2* 와 *name1*간의 간격을 저장합니다. *name2* 그룹이 정의되어 있지 않으면 일치에서 역추적합니다. *name2* 의 마지막 정의를 삭제하면 *name2*의 이전 정의가 표시되므로 이 구문을 통해 그룹 *name2* 에 대한 캡처 스택을 괄호 또는 여는 대괄호 및 닫는 대괄호와 같은 중첩된 구문을 추적하기 위한 카운터로 사용할 수 있습니다.  
   
@@ -199,9 +187,7 @@ ms.locfileid: "69963374"
   
  정규식 패턴은 다음과 같습니다.  
   
-```  
-^[^<>]*(((?'Open'<)[^<>]*)+((?'Close-Open'>)[^<>]*)+)*(?(Open)(?!))$  
-```  
+`^[^<>]*(((?'Open'<)[^<>]*)+((?'Close-Open'>)[^<>]*)+)*(?(Open)(?!))$`  
   
  정규식은 다음과 같이 해석됩니다.  
   
@@ -254,9 +240,7 @@ ms.locfileid: "69963374"
 ## <a name="noncapturing-groups"></a>비 캡처링 그룹  
  다음 그룹화 구문은 하위 식과 일치하는 부분 문자열을 캡처하지 않습니다.  
   
-```  
-(?:subexpression)  
-```  
+`(?:subexpression)`
   
  여기서 *subexpression* 은 임의의 유효한 정규식 패턴입니다. 비 캡처링 그룹 구문은 일반적으로 수량자가 그룹에 적용될 때 사용되지만 그룹에 의해 캡처된 부분 문자열에는 관심을 두지 않습니다.  
   

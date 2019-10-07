@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a3ce6dfd-1f64-471b-8ad8-8cfaf406275d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5183a854ee2b7462ecc27786a5fc0697565194c0
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: eaa389f461e70aae41f2e09437fd725a3bcefa5e
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092750"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71696728"
 ---
 # <a name="how-to-use-the-trycatch-block-to-catch-exceptions"></a>try/catch 블록을 사용하여 예외를 catch하는 방법
 
@@ -27,7 +27,7 @@ ms.locfileid: "56092750"
 다음 예제에서 <xref:System.IO.StreamReader>는 *data.txt*라는 파일을 열고 해당 파일에서 줄을 검색합니다. 코드는 세 가지 예외 중 하나를 throw할 수 있으므로 `try` 블록에 위치합니다. 세 개 `catch` 블록이 예외를 catch하고 콘솔에 결과를 표시하여 예외를 처리합니다.
 
 [!code-csharp[CatchException#3](~/samples/snippets/csharp/VS_Snippets_CLR/CatchException/CS/catchexception2.cs#3)]
-[!code-vb[CatchException#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/CatchException/VB/catchexception2.vb#3)]  
+[!code-vb[CatchException#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/CatchException/VB/catchexception2.vb#3)]
 
 CLR(공용 언어 런타임)은 `catch` 블록에서 처리되지 않은 예외를 catch합니다. CLR에서 예외를 catch하는 경우 CLR 구성에 따라 다음 결과 중 하나가 발생할 수 있습니다.
 
@@ -40,5 +40,5 @@ CLR(공용 언어 런타임)은 `catch` 블록에서 처리되지 않은 예외�
 
 ## <a name="see-also"></a>참고 항목
 
-[예외](index.md)  
-[.NET에서 I/O 오류 처리](../io/handling-io-errors.md)
+- [예외](index.md)
+- [.NET에서 I/O 오류 처리](../io/handling-io-errors.md)
