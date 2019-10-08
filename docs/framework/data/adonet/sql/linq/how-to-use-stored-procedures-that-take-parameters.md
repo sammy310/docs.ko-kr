@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b935fd84-cb9c-4205-8c48-658d5db2ec93
-ms.openlocfilehash: c2b657f704d072b987578be5520a58d007ecac37
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: e9d77cd1dc82e1b103c5f0d9f3f447ed105acaec
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353011"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72003251"
 ---
 # <a name="how-to-use-stored-procedures-that-take-parameters"></a>방법: 매개 변수를 사용하는 저장 프로시저 사용
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 출력 매개 변수를 참조 매개 변수에 매핑하고 값 형식에 대해 매개 변수를 nullable로 선언합니다.  
@@ -20,7 +20,7 @@ ms.locfileid: "71353011"
 ## <a name="example"></a>예제  
  다음 예제에서는 단일 입력 매개 변수(고객 ID)를 사용하여 출력 매개 변수(해당 고객의 총 판매액)를 반환합니다.  
   
-```  
+```sql
 CREATE PROCEDURE [dbo].[CustOrderTotal]   
 @CustomerID nchar(5),  
 @TotalSales money OUTPUT  

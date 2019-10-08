@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 297878d0-685b-4c01-b2e0-9d731b7322bc
-ms.openlocfilehash: be0aea66f0923b8b353f42cecc9360731efc7bb9
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1675e4c6a610373e1c981b383ae0229739d96dd0
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70792852"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72003320"
 ---
 # <a name="querying-across-relationships"></a>관계 간 쿼리
 클래스 정의에서 다른 개체 또는 다른 개체의 컬렉션에 대한 참조는 데이터베이스의 외래 키 관계에 직접적으로 해당합니다. 점 표기법을 사용하여 쿼리할 때 이러한 관계를 사용하여 관계 속성에 액세스하고 한 개체에서 다른 개체로 이동할 수 있습니다. 이러한 액세스 작업은 해당 SQL에서 더 복잡한 조인이나 연관된 하위 쿼리로 변환됩니다.  
@@ -31,27 +31,27 @@ ms.locfileid: "70792852"
   
  이제 관계가 존재하므로 클래스에 정의된 관계 속성을 참조하여 쿼리를 작성할 수 있습니다. 이러한 관계 참조는 데이터베이스의 외래 키 관계에 해당합니다. 이러한 관계를 사용하는 작업은 해당 SQL에서 더 복잡한 조인으로 변환됩니다. <xref:System.Data.Linq.Mapping.AssociationAttribute> 특성을 사용하여 관계를 정의한 경우 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 명시적 조인을 코딩할 필요가 없습니다.  
   
- 이 환상 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 을 유지 하기 위해는 *지연 된 로드*라는 기법을 구현 합니다. 자세한 내용은 [지연 된 로드 및 즉시 로드](deferred-versus-immediate-loading.md)를 참조 하세요.  
+ 이 환상을 유지 하기 위해 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]은 *지연 된 로드*라는 기법을 구현 합니다. 자세한 내용은 [지연 된 로드 및 즉시 로드](deferred-versus-immediate-loading.md)를 참조 하세요.  
   
- 다음 SQL 쿼리를 고려 하 여 `CustomerID` `OrderID` 쌍 목록을 - 프로젝션 합니다.  
+ 다음 SQL 쿼리를 고려 하 여 `CustomerID` @ no__t-1 @ no__t 쌍 목록을 프로젝션 합니다.  
   
-```  
+```sql
 SELECT t0.CustomerID, t1.OrderID  
 FROM   Customers AS t0 INNER JOIN  
           Orders AS t1 ON t0.CustomerID = t1.CustomerID  
 WHERE  (t0.City = @p0)  
 ```  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]을 사용하여 동일한 결과를 얻으려면 이미 `Orders` 클래스에 있는 `Customer` 속성 참조를 사용합니다. 이 `Orders` 참조는 다음 코드에서와 같이 쿼리를 실행 하 고 `CustomerID` `OrderID` 쌍을 - 프로젝션 하는 데 필요한 정보를 제공 합니다.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]을 사용하여 동일한 결과를 얻으려면 이미 `Orders` 클래스에 있는 `Customer` 속성 참조를 사용합니다. @No__t-0 참조는 쿼리를 실행 하는 데 필요한 정보를 제공 하 고 다음 코드와 같이 `CustomerID` @ no__t @ no__t 쌍을 프로젝션 합니다.  
   
  [!code-csharp[DLinqQueryConcepts#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryConcepts/cs/Program.cs#5)]
  [!code-vb[DLinqQueryConcepts#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryConcepts/vb/Module1.vb#5)]  
   
- 반대로 할 수도 있습니다. 즉, `Orders`를 쿼리하고 해당 `Customer` 관계 참조를 사용하여 연관된 `Customer` 개체에 대한 정보에 액세스할 수 있습니다. 다음 코드는 `CustomerID` 이전과 동일한 - `OrderID` 쌍을 프로젝션 하지만 이번에 `Customers`는 대신 쿼리 `Orders` 합니다.  
+ 반대로 할 수도 있습니다. 즉, `Orders`를 쿼리하고 해당 `Customer` 관계 참조를 사용하여 연관된 `Customer` 개체에 대한 정보에 액세스할 수 있습니다. 다음 코드는 이전 처럼 동일한 `CustomerID` @ no__t @ no__t 쌍을 프로젝션 하지만 이번에는-4 @no__t 아닌 `Orders`을 쿼리 합니다.  
   
  [!code-csharp[DLinqQueryConcepts#6](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryConcepts/cs/Program.cs#6)]
  [!code-vb[DLinqQueryConcepts#6](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryConcepts/vb/Module1.vb#6)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [쿼리 개념](query-concepts.md)

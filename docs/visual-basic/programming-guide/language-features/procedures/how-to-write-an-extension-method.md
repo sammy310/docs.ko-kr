@@ -6,12 +6,12 @@ helpviewer_keywords:
 - writing extension methods [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: fb2739cc-958d-4ef4-a38b-214a74c93413
-ms.openlocfilehash: 31ccb18e0e6d1569764ec2a67201d7f758129425
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: d01596d50db8ba1078e8ac82caa951418645c977
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332754"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004606"
 ---
 # <a name="how-to-write-an-extension-method-visual-basic"></a>방법: 확장 메서드 (Visual Basic)를 작성 합니다.
 
@@ -27,11 +27,13 @@ ms.locfileid: "71332754"
     Imports System.Runtime.CompilerServices
     ```
 
-3. 새 응용 프로그램 또는 기존 응용 프로그램의 모듈 내에서 확장 특성을 사용 하 여 메서드 정의를 시작 합니다.
+3. 새 응용 프로그램 또는 기존 응용 프로그램의 모듈 내에서 [`<Extension>`](xref:System.Runtime.CompilerServices.ExtensionAttribute) 특성을 사용 하 여 메서드 정의를 시작 합니다.
 
     ```vb
     <Extension()>
     ```
+ 
+   @No__t-0 특성은 Visual Basic [모듈](../../../language-reference/statements/module-statement.md)의 메서드 (`Sub` 또는 `Function` 프로시저)에만 적용할 수 있습니다. @No__t-0 또는 `Structure`의 메서드에 적용 하는 경우 Visual Basic 컴파일러는 "모듈 에서만 확장 메서드를 정의할 수 있습니다." 라는 오류 [BC36551](../../../misc/bc36551.md)를 생성 합니다.
 
 4. 첫 번째 매개 변수의 형식이 확장 하려는 데이터 형식 이어야 한다는 점만 제외 하 고 메서드를 일반적인 방식으로 선언 합니다.
 

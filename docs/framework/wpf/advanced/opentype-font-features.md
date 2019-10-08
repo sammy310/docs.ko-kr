@@ -9,20 +9,20 @@ helpviewer_keywords:
 - typography [WPF], OpenType font technology
 - OpenType font technology [WPF]
 ms.assetid: 4061a9d1-fe8b-4921-9e17-18ec7d2e3ea2
-ms.openlocfilehash: 3f1f0698afce6e64711e37ac60d0662d65bbee6b
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: da8f3e592e47c9482d4395b81627c1582e2354f7
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "70016134"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005242"
 ---
 # <a name="opentype-font-features"></a>OpenType 글꼴 기능
 
-이 항목에서는에서 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]OpenType 글꼴 기술의 주요 기능 중 일부에 대해 간략하게 설명 합니다.  
+이 항목에서는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서 OpenType 글꼴 기술의 주요 기능 중 일부에 대해 간략하게 설명 합니다.  
   
 <a name="overview"></a>   
 ## <a name="opentype-font-format"></a>OpenType 글꼴 서식  
- OpenType 글꼴 형식은 [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] 글꼴 형식의 확장으로, 포스트 스크립트 글꼴 데이터에 대 한 지원을 추가 합니다. OpenType 글꼴 형식은 Microsoft 및 Adobe Corporation에서 공동으로 개발 되었습니다. Opentype 글꼴 및 opentype 글꼴을 지 원하는 운영 체제 서비스는 글꼴에 윤곽선 또는 CFF (PostScript) 개요가 포함 되어 [!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)] 있든 관계 없이 사용자에 게 글꼴을 설치 하 고 사용 하는 간단한 방법을 제공 합니다.  
+ OpenType 글꼴 형식은 트루타입® 글꼴 형식의 확장으로, 포스트 스크립트 글꼴 데이터에 대 한 지원을 추가 합니다. OpenType 글꼴 형식은 Microsoft 및 Adobe Corporation에서 공동으로 개발 되었습니다. Opentype 글꼴 및 OpenType 글꼴을 지 원하는 운영 체제 서비스는 글꼴에 TrueType 윤곽선 또는 CFF (PostScript) 개요가 포함 되어 있든 관계 없이 사용자에 게 글꼴을 설치 하 고 사용 하는 간단한 방법을 제공 합니다.  
   
  OpenType 글꼴 형식은 다음과 같은 개발자 문제를 해결 합니다.  
   
@@ -37,12 +37,12 @@ ms.locfileid: "70016134"
 - 고급 입력 체계 컨트롤을 위한 폭넓은 지원  
   
 > [!NOTE]
-> Windows SDK에는 응용 프로그램과 함께 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 사용할 수 있는 샘플 OpenType 글꼴 집합이 포함 되어 있습니다. 이 글꼴에서는 이 항목의 나머지 부분에서 보여 주는 대부분의 기능이 제공됩니다. 자세한 내용은 [샘플 OpenType 글꼴 팩](sample-opentype-font-pack.md)을 참조하세요.  
+> Windows SDK에는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 응용 프로그램에서 사용할 수 있는 샘플 OpenType 글꼴 집합이 포함 되어 있습니다. 이 글꼴에서는 이 항목의 나머지 부분에서 보여 주는 대부분의 기능이 제공됩니다. 자세한 내용은 [샘플 OpenType 글꼴 팩](sample-opentype-font-pack.md)을 참조하세요.  
   
  OpenType 글꼴 형식에 대 한 자세한 내용은 [Opentype 사양](https://go.microsoft.com/fwlink/?LinkId=96731) 을 참조 하십시오.  
   
 ### <a name="advanced-typographic-extensions"></a>고급 입력 체계 확장  
- 고급 입력 체계 표 (OpenType 레이아웃 테이블)는 [!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)] 또는 CFF 윤곽선으로 글꼴의 기능을 확장 합니다. OpenType 레이아웃 글꼴에는 고품질의 국제 입력 체계를 지원 하기 위해 글꼴의 기능을 확장 하는 추가 정보가 포함 되어 있습니다. 대부분의 OpenType 글꼴에 사용할 수 있는 총 OpenType 기능의 하위 집합만 노출합니다. OpenType 글꼴은 다음과 같은 기능을 제공 합니다.  
+ 고급 입력 체계 표 (OpenType 레이아웃 테이블)는 트루타입 또는 CFF 윤곽선을 사용 하 여 글꼴의 기능을 확장 합니다. OpenType 레이아웃 글꼴에는 고품질의 국제 입력 체계를 지원 하기 위해 글꼴의 기능을 확장 하는 추가 정보가 포함 되어 있습니다. 대부분의 OpenType 글꼴에 사용할 수 있는 총 OpenType 기능의 하위 집합만 노출합니다. OpenType 글꼴은 다음과 같은 기능을 제공 합니다.  
   
 - 합자, 위치 형식, 대체 문자 및 기타 글꼴 대체를 지원하는 문자와 문자 모양 간의 다양한 매핑  
   
@@ -52,7 +52,7 @@ ms.locfileid: "70016134"
   
  Opentype 레이아웃 테이블은 OpenType 사양의 ["글꼴 파일 테이블"](https://www.microsoft.com/typography/otspec/otff.htm) 섹션에 자세히 설명 되어 있습니다.  
   
- 이 개요의 나머지 부분에서는 <xref:System.Windows.Documents.Typography> 개체의 속성에 의해 노출 되는 시각적으로 흥미로운 오픈타입 기능 중 일부의 폭과 유연성을 소개 합니다. 이 개체에 대한 자세한 내용은 [입력 체계 클래스](#typography_class)를 참조하세요.  
+ 이 개요의 나머지 부분에서는 <xref:System.Windows.Documents.Typography> 개체의 속성에 의해 노출 되는 시각적으로 흥미로운 OpenType 기능의 일부를 광범위 하 고 유연 하 게 소개 합니다. 이 개체에 대한 자세한 내용은 [입력 체계 클래스](#typography_class)를 참조하세요.  
   
 <a name="variants"></a>   
 ## <a name="variants"></a>변형  
@@ -80,7 +80,7 @@ ms.locfileid: "70016134"
 ### <a name="decorative-uses-of-superscripts-and-subscripts"></a>위 첨자 및 아래 첨자의 장식 사용  
  위 첨자와 아래 첨자를 사용하여 대/소문자 혼용 텍스트의 장식 효과를 만들 수도 있습니다. 다음 텍스트는 Palatino Linotype 글꼴의 위 첨자 및 아래 첨자 텍스트를 표시합니다. 대문자는 영향을 받지 않습니다.  
   
- ![OpenType 위 첨자 및 아래 첨자를 사용 하는 텍스트](./media/opentype-font-features/opentype-superscripts-subscripts.gif "OpenType 위 첨자 및 아래 첨자를 사용 하는 텍스트")  
+ OpenType 위 첨자(./media/opentype-font-features/opentype-superscripts-subscripts.gif "및 첨자를 사용 하 여") ![opentype 위 첨자 및 아래 첨자 텍스트를 사용 하는 텍스트]  
 
  다음 태그 예제에서는 <xref:System.Windows.Documents.Typography> 개체의 속성을 사용 하 여 글꼴의 위 첨자 및 아래 첨자를 정의 하는 방법을 보여 줍니다.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "70016134"
 ### <a name="capital-spacing"></a>대문자 간격  
  대문자 간격은 텍스트에서 모두 대문자를 사용할 때 더 넓은 간격을 제공할 수 있도록 하는 기능입니다. 대문자는 대개 소문자와 함께 사용하도록 디자인되었습니다. 대문자와 소문자 사이에서는 적절해 보이는 간격이 모두 대문자를 사용할 때는 너무 좁게 보일 수 있습니다. 다음 텍스트는 Pescadero 글꼴의 일반 간격 및 대문자 간격을 표시합니다.  
   
- ![OpenType 대문자 간격을 사용 하는 텍스트](./media/opentype-font-features/opentype-capital-spacing.gif "OpenType 대문자 간격을 사용 하는 텍스트")  
+ (./media/opentype-font-features/opentype-capital-spacing.gif "Opentype 대문자 간격을 사용 하") 는 ![opentype 대문자 간격 텍스트를 사용 하는 텍스트]  
  
  다음 태그 예제에서는 <xref:System.Windows.Documents.Typography> 개체의 속성을 사용 하 여 Pescadero 글꼴의 대문자 간격을 정의 하는 방법을 보여 줍니다.  
   
@@ -146,7 +146,7 @@ ms.locfileid: "70016134"
   
  OpenType 글꼴에 기본적으로 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 표준 합자를 사용 하도록 설정 합니다. 예를 들어 Palatino Linotype 글꼴을 사용하면 표준 합자 “fi”, “ff”및 “fl”이 결합된 문자 모양으로 나타납니다. 각 표준 합자의 문자 쌍이 서로 붙어 있음을 확인할 수 있습니다.  
   
- ![Palatino Linotype와 함께 OpenType 표준 합자를 사용 하는 텍스트](./media/opentype-font-features/opentype-standard-ligatures-palatino.gif "Palatino Linotype와 함께 OpenType 표준 합자를 사용 하는 텍스트")    
+ (./media/opentype-font-features/opentype-standard-ligatures-palatino.gif "Palatino Linotype에서 opentype 표준 합자를 사용 하") ![는 Palatino Linotype Text와 함께 opentype 표준 합자를 사용 하는 텍스트]    
    
  그러나 표준 합자 기능을 사용하지 않도록 설정하여 “ff”와 같이 표준 합자가 결합된 문자 모양이 아닌 두 개의 별도 문자 모양으로 표시되도록 할 수 있습니다.  
   
@@ -175,7 +175,7 @@ ms.locfileid: "70016134"
   
  ![OpenType 컨텍스트 선단 장식을 사용 하 여 텍스트](./media/opentype-font-features/opentype-contextual-swashes.gif "OpenType 컨텍스트 선단 장식을 사용 하는 텍스트")  
   
- 다음 태그 예제에서는 <xref:System.Windows.Documents.Typography> 개체의 속성을 사용 하 여 Pescadero 글꼴에 대 한 컨텍스트 선단 장식을 정의 하는 방법을 보여 줍니다.  
+ 다음 태그 예제에서는 <xref:System.Windows.Documents.Typography> 개체의 속성을 사용 하 여 Pescadero 글꼴의 상황별 선단 장식을 정의 하는 방법을 보여 줍니다.  
   
  [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet16](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#opentypefontsnippet16)]  
   
@@ -195,7 +195,7 @@ ms.locfileid: "70016134"
   
  다음 텍스트는 Pericles 글꼴에 대한 여러 가지 다른 스타일 대체 문자 모양을 표시합니다.  
   
- ![Pericles 글꼴에 대해 OpenType 스타일 대체 문자 모양을 사용 하는 텍스트](./media/opentype-font-features/opentype-stylistic-alternate-glyphs-pericles.gif "Pericles 글꼴에 대해 OpenType 스타일 대체 문자 모양을 사용 하는 텍스트")
+ ![Opentype 스타일 대체 문자 모양을 사용]하 여 pericles 글꼴에 대해(./media/opentype-font-features/opentype-stylistic-alternate-glyphs-pericles.gif "opentype 스타일 대체 문자 모양을 사용 하") 는 텍스트
 
  다음 태그 예제에서는 이러한 다른 스타일 대체 문자 모양을 정의하는 방법을 보여 줍니다.  
   
@@ -252,9 +252,9 @@ ms.locfileid: "70016134"
   
  다음 텍스트는 Miramonte 글꼴을 사용하여 첫 번째 열에 두 개의 가변 폭 숫자를 표시합니다. 숫자 “5”와 “1” 사이의 너비 차이를 확인할 수 있습니다. 두 번째 열은 테이블 형식 숫자 기능을 사용하여 너비가 조정된 동일한 두 개의 숫자 값을 보여 줍니다.  
   
- ![OpenType 비례 & 테이블 형식 그림을 사용 하는 텍스트](./media/opentype-font-features/opentype-proportional-tabular-figures.gif "OpenType 비례 및 테이블 형식 수치를 사용 하는 텍스트")  
+ Opentype 비례를 사용 하는 텍스트 opentype(./media/opentype-font-features/opentype-proportional-tabular-figures.gif "비례 및 테이블 형식 그림을 사용 하 여") ![테이블 형식 그림 텍스트 &]  
     
- 다음 태그 예제에서는 <xref:System.Windows.Documents.Typography> 개체의 속성을 사용 하 여 Miramonte 글꼴에 대해 비례 및 테이블 형식 숫자를 정의 하는 방법을 보여 줍니다.  
+ 다음 태그 예제에서는 <xref:System.Windows.Documents.Typography> 개체의 속성을 사용 하 여 Miramonte 글꼴에 대해 비례 및 표 형식 숫자를 정의 하는 방법을 보여 줍니다.  
   
  [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet19](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/Window1.xaml#opentypefontsnippet19)]  
   
@@ -271,7 +271,7 @@ ms.locfileid: "70016134"
   
 <a name="typography_class"></a>   
 ## <a name="typography-class"></a>입력 체계 클래스  
- 개체 <xref:System.Windows.Documents.Typography> 는 OpenType 글꼴이 지 원하는 기능 집합을 노출 합니다. 태그에서의 <xref:System.Windows.Documents.Typography> 속성을 설정 하 여 OpenType 기능을 활용 하는 문서를 쉽게 작성할 수 있습니다.  
+ @No__t-0 개체는 OpenType 글꼴이 지 원하는 기능 집합을 제공 합니다. 태그에서 <xref:System.Windows.Documents.Typography>의 속성을 설정 하 여 OpenType 기능을 활용 하는 문서를 쉽게 작성할 수 있습니다.  
   
  다음 텍스트는 “SmallCaps” 및 “AllSmallCaps”로 스타일이 지정된 문자 앞에 Pescadero 글꼴의 표준 대문자를 표시합니다. 이 경우 세 단어 모두 동일한 글꼴 크기가 사용됩니다.  
   
@@ -289,7 +289,7 @@ ms.locfileid: "70016134"
 ### <a name="typography-class-properties"></a>입력 체계 클래스 속성  
  다음 표에서는 <xref:System.Windows.Documents.Typography> 개체의 속성, 값 및 기본 설정을 보여 줍니다.  
   
-|속성|값|기본값|  
+|속성|값|Default Value|  
 |--------------|----------------|-------------------|  
 |<xref:System.Windows.Documents.Typography.AnnotationAlternates%2A>|숫자 값-바이트|0|  
 |<xref:System.Windows.Documents.Typography.Capitals%2A>|<xref:System.Windows.FontCapitals.AllPetiteCaps> &#124; <xref:System.Windows.FontCapitals.AllSmallCaps> &#124; <xref:System.Windows.FontCapitals.Normal> &#124; <xref:System.Windows.FontCapitals.PetiteCaps> &#124; <xref:System.Windows.FontCapitals.SmallCaps> &#124; <xref:System.Windows.FontCapitals.Titling> &#124; <xref:System.Windows.FontCapitals.Unicase>|<xref:System.Windows.FontCapitals.Normal?displayProperty=nameWithType>|  
@@ -335,7 +335,7 @@ ms.locfileid: "70016134"
 |<xref:System.Windows.Documents.Typography.StylisticSet20%2A>|<xref:System.Boolean>|`false`|  
 |<xref:System.Windows.Documents.Typography.Variants%2A>|<xref:System.Windows.FontVariants.Inferior> &#124; <xref:System.Windows.FontVariants.Normal> &#124; <xref:System.Windows.FontVariants.Ordinal> &#124; <xref:System.Windows.FontVariants.Ruby> &#124; <xref:System.Windows.FontVariants.Subscript> &#124; <xref:System.Windows.FontVariants.Superscript>|<xref:System.Windows.FontVariants.Normal?displayProperty=nameWithType>|  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Windows.Documents.Typography>
 - [OpenType 사양](https://go.microsoft.com/fwlink/?LinkId=96731)

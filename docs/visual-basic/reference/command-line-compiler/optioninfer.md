@@ -8,19 +8,19 @@ helpviewer_keywords:
 - /optioninfer compiler option [Visual Basic]
 - optioninfer compiler option [Visual Basic]
 ms.assetid: f6c09db1-0553-464a-abe3-d4510c61d6ed
-ms.openlocfilehash: 4848dec148bc528e7a30940643e3364f1bb5f805
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c6fc7e9dcfbce938ad75b0f357c2bfa9cd10703a
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69939194"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005317"
 ---
 # <a name="-optioninfer"></a>-optioninfer
 변수 선언에서 지역 형식 유추를 사용하도록 설정합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```console  
 -optioninfer[+ | -]  
 ```  
   
@@ -28,13 +28,13 @@ ms.locfileid: "69939194"
   
 |용어|정의|  
 |---|---|  
-|`+` &#124; `-`|선택 사항입니다. 지역 형식 유추를 사용하도록 설정하려면 `-optioninfer+`를 지정하고, 차단하려면 `-optioninfer-`를 지정합니다. 값을 지정하지 않은 `-optioninfer` 옵션은 `-optioninfer+`와 같습니다. `-optioninfer` 스위치가 없을 때의 기본값도 `-optioninfer+`입니다. 기본값은 vbc.rsp 지시 파일에서 설정됩니다.|  
+|`+` &#124; `-`|(선택 사항) 지역 형식 유추를 사용하도록 설정하려면 `-optioninfer+`를 지정하고, 차단하려면 `-optioninfer-`를 지정합니다. 값을 지정하지 않은 `-optioninfer` 옵션은 `-optioninfer+`와 같습니다. `-optioninfer` 스위치가 없을 때의 기본값도 `-optioninfer+`입니다. 기본값은 vbc.rsp 지시 파일에서 설정됩니다.|  
   
 > [!NOTE]
 > `-noconfig` 옵션을 사용하여 vbc.rsp에 지정된 값 대신 컴파일러의 내부 기본값을 유지할 수 있습니다. 이 옵션에 대한 컴파일러 기본값은 `-optioninfer-`입니다.  
   
 ## <a name="remarks"></a>설명  
- 소스 코드 파일에 [옵션 유추 문이](../../../visual-basic/language-reference/statements/option-infer-statement.md)포함 되어 있으면 문이 `-optioninfer` 명령줄 컴파일러 설정을 재정의 합니다.  
+ 소스 코드 파일에 [유추할 문이](../../../visual-basic/language-reference/statements/option-infer-statement.md)포함 된 경우 문은 `-optioninfer` 명령줄 컴파일러 설정을 재정의 합니다.  
   
 ### <a name="to-set--optioninfer-in-the-visual-studio-ide"></a>Visual Studio IDE에서을 설정 하려면  
   
@@ -49,7 +49,7 @@ ms.locfileid: "69939194"
 vbc -optioninfer+ test.vb  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [Visual Basic 명령줄 컴파일러](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)

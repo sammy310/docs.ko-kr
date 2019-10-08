@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 81a31acd-e0f1-4bca-9a12-fa1ad5752374
-ms.openlocfilehash: a5c32afc913443787ad8371f31f1fe330b126398
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 7c98681493738b4e94ed14417fa1437efb6c12ac
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70792758"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72003315"
 ---
 # <a name="return-or-skip-elements-in-a-sequence"></a>시퀀스에서 요소 반환 또는 건너뛰기
 <xref:System.Linq.Queryable.Take%2A> 연산자를 사용하여 지정된 수의 시퀀스 요소를 반환한 다음 나머지는 건너뜁니다.  
@@ -49,16 +49,16 @@ ms.locfileid: "70792758"
  SQL의 정렬에 대한 제한 사항 때문에 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 <xref:System.Linq.Queryable.Take%2A> 또는 <xref:System.Linq.Queryable.Skip%2A> 연산자의 정렬 인수가 연산자의 결과로 이동합니다.  
   
 > [!NOTE]
-> SQL Server 2000 및 SQL Server 2005에서는 번역이 다릅니다. 복잡 한 쿼리와 함께를 <xref:System.Linq.Queryable.Skip%2A> 사용 하려는 경우 SQL Server 2005를 사용 합니다.  
+> SQL Server 2000 및 SQL Server 2005에서는 번역이 다릅니다. 복잡성 쿼리를 사용 하 여 <xref:System.Linq.Queryable.Skip%2A>을 사용 하려면 SQL Server 2005를 사용 합니다.  
   
- SQL Server 2000에 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 대 한 다음 쿼리를 살펴보십시오.  
+ SQL Server 2000에 대 한 다음 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 쿼리를 참조 하세요.  
   
  [!code-csharp[DLinqQueryExamples#19](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#19)]
  [!code-vb[DLinqQueryExamples#19](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#19)]  
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 다음과 같이 정렬을 SQL 코드의 끝 부분으로 이동합니다.  
   
-```  
+```sql
 SELECT TOP 1 [t0].[CustomerID], [t0].[CompanyName],  
 FROM [Customers] AS [t0]  
 WHERE (NOT (EXISTS(  
@@ -78,7 +78,7 @@ ORDER BY [t0].[CustomerID]
   
  SQL 사양을 기반으로 하는 정수 계열 상수 인수로 음수가 아닌 경우 <xref:System.Linq.Queryable.Take%2A>과 <xref:System.Linq.Queryable.Skip%2A>은 제대로 정의됩니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [쿼리 예제](query-examples.md)
 - [표준 쿼리 연산자 변환](standard-query-operator-translation.md)

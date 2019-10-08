@@ -6,12 +6,12 @@ helpviewer_keywords:
 - examples [Visual Basic], coding conventions
 - Visual Basic code, conventions
 ms.assetid: c1df130b-fec6-49a5-becf-0a7e494a1d0f
-ms.openlocfilehash: 580a6e1caa78ea981b6d2be68a6e7c61e2ad55d7
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: 18c309e22cccfa5d835394996fc6974d95825b65
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68433819"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72003113"
 ---
 # <a name="visual-basic-coding-conventions"></a>Visual Basic 코딩 규칙
 Microsoft는 이 항목의 지침에 따라 예제와 설명서를 개발합니다. 사용자가 동일한 코딩 규칙을 따른다면, 다음과 같은 이점을 얻을 수 있습니다.  
@@ -22,7 +22,7 @@ Microsoft는 이 항목의 지침에 따라 예제와 설명서를 개발합니�
   
 - 코드를 더 쉽게 복사, 변경 및  유지 관리할 수 있습니다.  
   
-- 코드가 Visual Basic을 위한 "모범 사례"가 될 것입니다.  
+- 코드가 Visual basic을 위한 "모범 사례"가 될 것입니다.  
   
 ## <a name="naming-conventions"></a>명명 규칙  
   
@@ -46,7 +46,7 @@ Microsoft는 이 항목의 지침에 따라 예제와 설명서를 개발합니�
   
 - 만약 **Pretty listing(reformatting)of code**가 연속 줄 형식을 자동으로 지정하지 않는다면, 수동으로 연속된 줄을 들여쓰기하십시오. 그러나 목록의 항목을 항상 왼쪽 맞춤으로 하십시오.  
   
-    ```  
+    ```vb  
     a As Integer,  
     b As Integer  
     ```  
@@ -67,13 +67,13 @@ Microsoft는 이 항목의 지침에 따라 예제와 설명서를 개발합니�
   
 ## <a name="program-structure"></a>프로그램 구조  
   
-- 메서드를 사용 하 `Main` 는 경우 새 콘솔 응용 프로그램에 대 한 기본 구문을 사용 하 `My` 고 명령줄 인수에를 사용 합니다.  
+- @No__t-0 메서드를 사용 하는 경우 새 콘솔 응용 프로그램에 대 한 기본 구문을 사용 하 고 명령줄 인수에 대해 `My`을 사용 합니다.  
   
      [!code-vb[VbVbalrGuidelines#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#3)]  
   
 ## <a name="language-guidelines"></a>언어 지침  
   
-### <a name="string-data-type"></a>String 데이터 형식  
+### <a name="string-data-type"></a>문자열 데이터 형식  
   
 - 다음 코드에 나와 있는 것처럼 [문자열 보간](https://docs.microsoft.com/dotnet/visual-basic/programming-guide/language-features/strings/interpolated-strings)을 사용하여 짧은 문자열을 연결합니다.
   
@@ -92,7 +92,7 @@ Microsoft는 이 항목의 지침에 따라 예제와 설명서를 개발합니�
   
 ### <a name="unsigned-data-type"></a>부호 없는 데이터 형식  
   
-- 필요한 `Integer` 경우를 제외 하 고는 부호 없는 형식 대신을 사용 합니다.  
+- 필요한 경우를 제외 하 고는 부호 없는 형식 대신 `Integer`을 사용 합니다.  
   
 ### <a name="arrays"></a>배열  
   
@@ -126,10 +126,10 @@ Microsoft는 이 항목의 지침에 따라 예제와 설명서를 개발합니�
  [!code-vb[VbVbalrGuidelines#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#15)]  
   
 ### <a name="use-the-trycatch-and-using-statements-when-you-use-exception-handling"></a>Try ...를 사용 합니다. 예외 처리를 사용 하는 경우 문 Catch 및 사용  
- `On Error Goto`는 사용하지 마세요.  
+ `On Error Goto`를 사용하지 마세요.  
   
 ### <a name="use-the-isnot-keyword"></a>IsNot 키워드 사용  
- 대신 키워드 `IsNot` 를 사용 합니다.`Not...Is Nothing`  
+ -1 @no__t 대신 `IsNot` 키워드를 사용 합니다.  
   
 ### <a name="new-keyword"></a>New 키워드  
   
@@ -147,11 +147,11 @@ Microsoft는 이 항목의 지침에 따라 예제와 설명서를 개발합니�
   
 ### <a name="event-handling"></a>이벤트 처리  
   
-- 대신를 사용 `Handles`합니다 `AddHandler`.  
+- @No__t-1이 아닌 `Handles`을 사용 합니다.  
   
      [!code-vb[VbVbalrGuidelines#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#24)]  
   
-- 를 `AddressOf`사용 하 고 대리자를 명시적으로 인스턴스화하지 않습니다.  
+- @No__t-0을 사용 하 고 대리자를 명시적으로 인스턴스화하지 않습니다.  
   
      [!code-vb[VbVbalrGuidelines#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#25)]  
   
@@ -159,10 +159,10 @@ Microsoft는 이 항목의 지침에 따라 예제와 설명서를 개발합니�
   
      [!code-vb[VbVbalrGuidelines#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#26)]  
   
-- 메서드`RaiseEvent` 를 호출 하기 전에 이벤트가 `Nothing` (null) 인지 여부를 확인 하지 않습니다. `RaiseEvent`이벤트를 `Nothing` 발생 시키기 전에를 확인 합니다.  
+- @No__t-1 메서드를 호출 하기 전에 이벤트가 @no__t 있는지 여부를 확인 하지 않습니다 (null). `RaiseEvent`은 이벤트를 발생 시키기 전에 `Nothing` 인지 확인 합니다.  
   
 ### <a name="using-shared-members"></a>공유 멤버 사용  
- 인스턴스 `Shared` 변수가 아니라 클래스 이름을 사용 하 여 멤버를 호출 합니다.  
+ 인스턴스 변수가 아닌 클래스 이름을 사용 하 여 `Shared` 멤버를 호출 합니다.  
   
 ### <a name="use-xml-literals"></a>XML 리터럴 사용  
  XML 리터럴은 XML로 작업할 때 가장 자주 발생 하는 작업 (예: 로드, 쿼리 및 변환)을 단순화 합니다. XML을 사용 하 여 개발 하는 경우 다음 지침을 따르세요.  
@@ -173,7 +173,7 @@ Microsoft는 이 항목의 지침에 따라 예제와 설명서를 개발합니�
   
 - Xml 축 속성을 사용 하 여 XML 문서의 요소 및 특성에 액세스 합니다.  
   
-- `Add` 메서드와 같은 API 호출을 사용 하는 대신 포함 식을 사용 하 여 값을 포함 하 고 기존 값에서 XML을 만듭니다.  
+- @No__t-0 메서드와 같은 API 호출을 사용 하는 대신 포함 식을 사용 하 여 값을 포함 하 고 기존 값에서 XML을 만듭니다.  
   
      [!code-vb[VbVbalrGuidelines#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#27)]  
   
@@ -187,7 +187,7 @@ Microsoft는 이 항목의 지침에 따라 예제와 설명서를 개발합니�
   
      [!code-vb[VbVbalrGuidelines#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#29)]  
   
-- 결과의 속성 이름이 모호하면 속성 이름을 바꿉니다. 예를 들어 쿼리에서 고객 이름과 주문 ID를 반환 하는 경우 결과에서 및 `Name` `ID` 로 유지 하는 대신 이름을 바꿉니다.  
+- 결과의 속성 이름이 모호하면 속성 이름을 바꿉니다. 예를 들어 쿼리에서 고객 이름과 주문 ID를 반환 하는 경우 결과에서-0 @no__t으로 유지 하 고-1을 @no__t 하지 않고 이름을 바꿉니다.  
   
      [!code-vb[VbVbalrGuidelines#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#30)]  
   
@@ -195,18 +195,18 @@ Microsoft는 이 항목의 지침에 따라 예제와 설명서를 개발합니�
   
      [!code-vb[VbVbalrGuidelines#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#31)]  
   
-- 문 아래의 쿼리 절을 `From` 정렬 합니다.  
+- @No__t-0 문 아래의 쿼리 절을 정렬 합니다.  
   
      [!code-vb[VbVbalrGuidelines#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#32)]  
   
-- 이후 `Where` 쿼리 절이 필터링 된 데이터 집합에 대해 작동 하도록 다른 쿼리 절 앞에 절을 사용 합니다.  
+- 이후 쿼리 절이 필터링 된 데이터 집합에 대해 작동 하도록 다른 쿼리 절 앞에 `Where` 절을 사용 합니다.  
   
      [!code-vb[VbVbalrGuidelines#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#33)]  
   
-- 절을 사용 하 여 조인 작업을 암시적으로 정의 하는 `Where` 대신 절을 사용 하 여 조인 작업을 명시적으로 정의 합니다. `Join`  
+- @No__t-1 절을 사용 하 여 조인 작업을 암시적으로 정의 하는 대신 `Join` 절을 사용 하 여 조인 작업을 명시적으로 정의 합니다.  
   
      [!code-vb[VbVbalrGuidelines#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#34)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [보안 코딩 지침](../../../standard/security/secure-coding-guidelines.md)

@@ -5,21 +5,21 @@ helpviewer_keywords:
 - localization [WPF], attributes
 - localization [WPF], comments
 ms.assetid: ead2d9ac-b709-4ec1-a924-39927a29d02f
-ms.openlocfilehash: 1ef18802ab3568df00e29eb4ccaf717f4bdf4863
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 4f9c2700d8163988b7ea1e75bec1427778cf571c
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68330989"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004899"
 ---
 # <a name="localization-attributes-and-comments"></a>지역화 특성 및 주석
-[!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] 소스 코드 내의 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 지역화 주석은 속성이며 개발자에 의해 제공되어 지역화에 대한 규칙과 힌트를 제공합니다. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 지역화 주석에는 두 가지 정보 집합(지역화 가능성 특성 및 자유 형식 지역화 주석)이 포함됩니다. 지역화 가능성 특성은 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 지역화 API가 사용하여 지역화할 리소스를 나타냅니다. 자유 형식 주석은 애플리케이션 작성자가 포함하려고 하는 정보입니다.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 지역화 주석은 개발자가 지역화를 위한 규칙과 힌트를 제공 하기 위해 제공 하는 XAML 소스 코드 내 속성입니다. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 지역화 주석에는 두 가지 정보 집합(지역화 가능성 특성 및 자유 형식 지역화 주석)이 포함됩니다. 지역화 가능성 특성은 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 지역화 API가 사용하여 지역화할 리소스를 나타냅니다. 자유 형식 주석은 애플리케이션 작성자가 포함하려고 하는 정보입니다.  
 
 <a name="Localizer_Comments_"></a>   
 ## <a name="localization-comments"></a>지역화 주석  
- 태그 애플리케이션 작성자에게 텍스트 길이, 글꼴 패밀리 또는 글꼴 크기에 대한 제약 조건과 같은 [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)]의 특정 요소에 대한 요구 사항이 있는 경우 [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] 코드에 주석을 사용하여 이 정보를 지역화 담당자에게 전달할 수 있습니다. 주석을 소스 코드에 추가하는 절차는 다음과 같습니다.  
+ 태그 응용 프로그램 작성자가 텍스트 길이, 글꼴 패밀리 또는 글꼴 크기에 대 한 제약 조건과 같이 XAML의 특정 요소에 대 한 요구 사항이 있는 경우 XAML 코드의 주석을 사용 하 여이 정보를 지역화 담당자에 게 전달할 수 있습니다. 주석을 소스 코드에 추가하는 절차는 다음과 같습니다.  
   
-1. 애플리케이션 개발자는 지역화 주석을 [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] 소스 코드에 추가합니다.  
+1. 응용 프로그램 개발자는 지역화 주석을 XAML 소스 코드에 추가 합니다.  
   
 2. 빌드 프로세스 중에 자유 형식 지역화 주석을 어셈블리에 남길지, 주석의 일부를 제거할지, 모든 주석을 제거할지 여부를 .proj 파일에서 지정할 수 있습니다. 제거된 주석은 별도의 파일에 기록됩니다. `LocalizationDirectivesToLocFile` 태그를 사용하여 옵션을 지정합니다. 예를 들면 다음과 같습니다.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "68330989"
   
 5. 자유 형식 주석만 포함하는 지역화 주석 파일은 나중에 지역화 프로세스에 통합됩니다.  
   
- 다음 예제에서는 [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] 파일에 지역화 주석을 추가하는 방법을 보여 줍니다.  
+ 다음 예제에서는 XAML 파일에 지역화 주석을 추가 하는 방법을 보여 줍니다.  
   
  `<TextBlock x:Id = "text01"`  
   
@@ -86,7 +86,7 @@ ms.locfileid: "68330989"
   
  다음 표에서는 특수한 범주의 의미를 보여 줍니다.  
   
-|범주|의미|  
+|Category|의미|  
 |--------------|-------------|  
 |없음|대상 값에 정의된 범주가 없습니다.|  
 |상속|대상 값은 부모로부터 해당 범주를 상속합니다.|  
@@ -97,9 +97,9 @@ ms.locfileid: "68330989"
 ## <a name="localization-comments"></a>지역화 주석  
  Localization.Comments에는 대상 값에 대한 자유 형식 문자열이 포함됩니다. 애플리케이션 개발자는 애플리케이션 텍스트를 번역하는 방법에 대한 힌트를 지역화 담당자에게 제공하는 정보를 추가할 수 있습니다. 주석 형식은 “()”로 묶인 문자열일 수 있습니다. 문자를 이스케이프하려면 ‘\\’를 사용합니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [WPF의 전역화](globalization-for-wpf.md)
 - [자동 레이아웃을 사용하여 단추 만들기](how-to-use-automatic-layout-to-create-a-button.md)
 - [자동 레이아웃에 그리드 사용](how-to-use-a-grid-for-automatic-layout.md)
-- [응용 프로그램 지역화](how-to-localize-an-application.md)
+- [애플리케이션 지역화](how-to-localize-an-application.md)

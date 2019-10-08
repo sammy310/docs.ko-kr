@@ -13,19 +13,19 @@ helpviewer_keywords:
 - commanding [WPF]
 - CommandManager [WPF]
 ms.assetid: bc208dfe-367d-426a-99de-52b7e7511e81
-ms.openlocfilehash: 835b06c6107cd44d49c83cfe34102b0c2d2a4bb9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 192fe629493947ffe4e0aa8ade417b7701ff95b4
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64627395"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004602"
 ---
 # <a name="commanding-overview"></a>명령 개요
-<a name="introduction"></a> 명령은 장치 입력보다 더 의미 있는 수준의 입력 처리를 제공하는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]의 입력 메커니즘입니다. 이러한 명령의 예로는 많은 애플리케이션의 **복사**, **잘라내기** 및 **붙여넣기** 작업을 들 수 있습니다.  
+<a name="introduction"></a> 명령은 디바이스 입력보다 더 의미 있는 수준의 입력 처리를 제공하는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]의 입력 메커니즘입니다. 이러한 명령의 예로는 많은 애플리케이션의 **복사**, **잘라내기** 및 **붙여넣기** 작업을 들 수 있습니다.  
   
  이 개요에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]의 명령, 명령 모델의 일부인 클래스 및 애플리케이션에서 명령을 사용하고 만드는 방법을 정의합니다.  
   
- 이 항목에는 다음과 같은 단원이 포함되어 있습니다.  
+ 이 항목에는 다음과 같은 섹션이 포함되어 있습니다.  
   
 - [명령이란?](#commands_at_10000_feet)  
   
@@ -74,7 +74,7 @@ ms.locfileid: "64627395"
 ### <a name="commands"></a>명령  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 명령은 <xref:System.Windows.Input.ICommand> 인터페이스를 구현하여 만듭니다.  <xref:System.Windows.Input.ICommand>는 두 개의 메서드 <xref:System.Windows.Input.ICommand.Execute%2A>, <xref:System.Windows.Input.ICommand.CanExecute%2A> 및 하나의 이벤트 <xref:System.Windows.Input.ICommand.CanExecuteChanged>를 노출합니다. <xref:System.Windows.Input.ICommand.Execute%2A>는 명령과 연결되는 작업을 수행합니다. <xref:System.Windows.Input.ICommand.CanExecute%2A>는 현재 명령 대상에서 명령을 실행할 수 있는지 여부를 결정합니다. 명령 작업을 중앙 집중식으로 관리하는 명령 관리자가, 발생했지만 명령 바인딩에서 아직 실행하지 않은 명령을 무효화할 수 있는 변경 사항을 명령 소스에서 감지한 경우 <xref:System.Windows.Input.ICommand.CanExecuteChanged>가 발생합니다.  <xref:System.Windows.Input.ICommand>의 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 구현은 <xref:System.Windows.Input.RoutedCommand> 클래스이며 이 개요의 포커스입니다.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]의 주 입력 소스는 마우스, 키보드, 잉크 및 라우트된 명령입니다.  더 많은 디바이스 지향 입력이 <xref:System.Windows.RoutedEvent>를 사용하여 애플리케이션 페이지의 개체에 입력 이벤트가 발생했음을 알립니다.  <xref:System.Windows.Input.RoutedCommand>도 마찬가지입니다.  <xref:System.Windows.Input.RoutedCommand>의 <xref:System.Windows.Input.RoutedCommand.Execute%2A> 및 <xref:System.Windows.Input.RoutedCommand.CanExecute%2A> 메서드는 명령에 대한 응용 프로그램 논리를 포함하지 않지만 <xref:System.Windows.Input.CommandBinding>이 있는 개체를 찾을 때까지 요소 트리를 통해 터널링 및 버블링하는 라우팅된 이벤트를 발생시킵니다.  <xref:System.Windows.Input.CommandBinding>에는 이러한 이벤트에 대한 처리기가 포함되어 있으며 이는 명령을 수행하는 처리기입니다.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]의 이벤트 라우팅에 대한 자세한 내용은 [라우트된 이벤트 개요](routed-events-overview.md)를 참조하세요.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]의 주 입력 소스는 마우스, 키보드, 잉크 및 라우트된 명령입니다.  더 많은 디바이스 지향 입력이 <xref:System.Windows.RoutedEvent>를 사용하여 애플리케이션 페이지의 개체에 입력 이벤트가 발생했음을 알립니다.  <xref:System.Windows.Input.RoutedCommand>도 마찬가지입니다.  <xref:System.Windows.Input.RoutedCommand>의 <xref:System.Windows.Input.RoutedCommand.Execute%2A> 및 <xref:System.Windows.Input.RoutedCommand.CanExecute%2A> 메서드는 명령에 대한 애플리케이션 논리를 포함하지 않지만 <xref:System.Windows.Input.CommandBinding>이 있는 개체를 찾을 때까지 요소 트리를 통해 터널링 및 버블링하는 라우팅된 이벤트를 발생시킵니다.  <xref:System.Windows.Input.CommandBinding>에는 이러한 이벤트에 대한 처리기가 포함되어 있으며 이는 명령을 수행하는 처리기입니다.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]의 이벤트 라우팅에 대한 자세한 내용은 [라우트된 이벤트 개요](routed-events-overview.md)를 참조하세요.  
   
  <xref:System.Windows.Input.RoutedCommand>의 <xref:System.Windows.Input.RoutedCommand.Execute%2A> 메서드는 명령 대상에서 <xref:System.Windows.Input.CommandManager.PreviewExecuted> 및 <xref:System.Windows.Input.CommandManager.Executed> 이벤트를 발생시킵니다.  <xref:System.Windows.Input.RoutedCommand>의 <xref:System.Windows.Input.RoutedCommand.CanExecute%2A> 메서드는 명령 대상에서 <xref:System.Windows.Input.CommandManager.CanExecute> 및 <xref:System.Windows.Input.CommandManager.PreviewCanExecute> 이벤트를 발생시킵니다.  이러한 이벤트는 특정 명령에 대한 <xref:System.Windows.Input.CommandBinding>이 있는 개체를 찾을 때까지 요소 트리를 통해 터널링 및 버블링합니다.  
   
@@ -146,7 +146,7 @@ ms.locfileid: "64627395"
  [!code-csharp[commandwithhandler#CommandHandlerCanExecuteHandler](~/samples/snippets/csharp/VS_Snippets_Wpf/commandWithHandler/CSharp/Window1.xaml.cs#commandhandlercanexecutehandler)]
  [!code-vb[commandwithhandler#CommandHandlerCanExecuteHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/commandWithHandler/VisualBasic/Window1.xaml.vb#commandhandlercanexecutehandler)]  
   
- <xref:System.Windows.Input.CommandBinding>은 응용 프로그램 또는 컨트롤의 루트 <xref:System.Windows.Window> 같은 특정 개체에 연결됩니다.  <xref:System.Windows.Input.CommandBinding>이 연결된 개체는 바인딩의 범위를 정의합니다.  예를 들어 명령 대상의 상위 항목에 연결된 <xref:System.Windows.Input.CommandBinding>은 <xref:System.Windows.Input.CommandBinding.Executed> 이벤트로 연결할 수 있지만 명령 대상의 하위 항목에 연결된 <xref:System.Windows.Input.CommandBinding>은 연결할 수 없습니다.  이는 이벤트를 발생시키는 개체에서 <xref:System.Windows.RoutedEvent>를 터널링 및 버블링할 때 발생하는 직접적인 결과입니다.  
+ <xref:System.Windows.Input.CommandBinding>은 애플리케이션 또는 컨트롤의 루트 <xref:System.Windows.Window> 같은 특정 개체에 연결됩니다.  <xref:System.Windows.Input.CommandBinding>이 연결된 개체는 바인딩의 범위를 정의합니다.  예를 들어 명령 대상의 상위 항목에 연결된 <xref:System.Windows.Input.CommandBinding>은 <xref:System.Windows.Input.CommandBinding.Executed> 이벤트로 연결할 수 있지만 명령 대상의 하위 항목에 연결된 <xref:System.Windows.Input.CommandBinding>은 연결할 수 없습니다.  이는 이벤트를 발생시키는 개체에서 <xref:System.Windows.RoutedEvent>를 터널링 및 버블링할 때 발생하는 직접적인 결과입니다.  
   
  일부 경우에 <xref:System.Windows.Input.CommandBinding>은 <xref:System.Windows.Controls.TextBox> 클래스와 <xref:System.Windows.Input.ApplicationCommands.Cut%2A>, <xref:System.Windows.Input.ApplicationCommands.Copy%2A> 및 <xref:System.Windows.Input.ApplicationCommands.Paste%2A> 명령 같은 명령 대상 자체에 연결됩니다. 그러나 <xref:System.Windows.Input.CommandBinding>을 주 <xref:System.Windows.Window> 또는 애플리케이션 개체와 같은 명령 대상의 상위 항목에 연결하는 것이 더 편리할 때가 종종 있습니다. 특히 동일한 <xref:System.Windows.Input.CommandBinding>을 여러 명령 대상에 대해 사용할 수 있는 경우 그렇습니다.  명령 인프라를 만들 때 이러한 디자인 사항을 결정해야 합니다.  
   
@@ -173,7 +173,7 @@ ms.locfileid: "64627395"
 ## <a name="command-library"></a>명령 라이브러리  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]는 미리 정의된 명령 집합을 제공합니다.  명령 라이브러리는 다음과 같은 <xref:System.Windows.Input.ApplicationCommands>, <xref:System.Windows.Input.NavigationCommands>, <xref:System.Windows.Input.MediaCommands>, <xref:System.Windows.Documents.EditingCommands> 및 <xref:System.Windows.Input.ComponentCommands> 클래스로 구성됩니다.  이러한 클래스는 <xref:System.Windows.Input.ApplicationCommands.Cut%2A>, <xref:System.Windows.Input.NavigationCommands.BrowseBack%2A> 및 <xref:System.Windows.Input.NavigationCommands.BrowseForward%2A>, <xref:System.Windows.Input.MediaCommands.Play%2A>, <xref:System.Windows.Input.MediaCommands.Stop%2A> 및 <xref:System.Windows.Input.MediaCommands.Pause%2A> 같은 명령을 제공합니다.  
   
- 이 중 많은 명령이 기본 입력 바인딩 집합을 포함합니다.  예를 들어 응용 프로그램에서 복사 명령을 처리하도록 지정하면 키보드 바인딩 "Ctrl+C"가 자동으로 지정됩니다. [!INCLUDE[TLA2#tla_tpc](../../../../includes/tla2sharptla-tpc-md.md)] 펜 제스처 및 음성 정보 등 다른 입력 디바이스에 대한 바인딩도 사용할 수 있습니다.  
+ 이 중 많은 명령이 기본 입력 바인딩 집합을 포함합니다.  예를 들어 응용 프로그램에서 복사 명령을 처리 하도록 지정 하는 경우 자동으로 키보드 바인딩 "CTRL + C"가 표시 되 고, Tablet PC 펜 제스처 및 음성 정보와 같은 다른 입력 장치에 대 한 바인딩도 표시 됩니다.  
   
  [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]을 사용하여 다양한 명령 라이브러리에서 명령을 참조할 때 일반적으로 정적 명령 특성을 노출하는 라이브러리 클래스의 클래스 이름을 생략할 수 있습니다. 일반적으로 명령 이름은 문자열처럼 명확하지 않으며 명령의 논리적 그룹화를 제공하기 위한 소유 유형이 존재하지만 명확성을 위해 반드시 필요하지는 않습니다. 예를 들어 더 자세한 `Command="ApplicationCommands.Cut"` 대신 `Command="Cut"`을 지정할 수 있습니다. 이는 명령의 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 프로세서에 기본 제공된 편리한 메커니즘입니다. 더 자세히 말해, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 프로세서가 로드 시 참조하는 <xref:System.Windows.Input.ICommand>의 형식 변환기 동작입니다.  
   
@@ -183,7 +183,7 @@ ms.locfileid: "64627395"
   
  사용자 지정 <xref:System.Windows.Input.RoutedCommand>를 만드는 예제는 [사용자 지정 RoutedCommand 샘플 만들기](https://github.com/Microsoft/WPF-Samples/tree/master/Input%20and%20Commands/CustomRoutedCommand)를 참조하세요.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Windows.Input.RoutedCommand>
 - <xref:System.Windows.Input.CommandBinding>
@@ -192,5 +192,5 @@ ms.locfileid: "64627395"
 - [입력 개요](input-overview.md)
 - [라우트된 이벤트 개요](routed-events-overview.md)
 - [ICommandSource 구현](how-to-implement-icommandsource.md)
-- [방법: MenuItem에 명령 추가](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms741839(v=vs.90))
+- [방법: MenuItem @ no__t에 명령 추가
 - [Create a Custom RoutedCommand Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Input%20and%20Commands/CustomRoutedCommand)(사용자 지정 RoutedCommand 샘플 만들기)

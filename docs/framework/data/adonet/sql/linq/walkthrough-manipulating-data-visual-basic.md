@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 1f6a54f6-ec33-452a-a37d-48122207bf14
-ms.openlocfilehash: a74216c53c45790b974938c7155e0b5e1043ac13
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 7acce3f8483fab3c2978de7cbd1b9d875900f1d3
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70792294"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72003390"
 ---
 # <a name="walkthrough-manipulating-data-visual-basic"></a>연습: 데이터 조작(Visual Basic)
 이 연습에서는 데이터베이스의 데이터를 추가, 수정 및 삭제하기 위한 기본 엔드투엔드 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 시나리오를 제공합니다. Northwind 샘플 데이터베이스의 복사본을 사용하여 고객을 추가하고, 고객의 이름을 변경하고, 주문을 삭제합니다.  
@@ -18,7 +18,7 @@ ms.locfileid: "70792294"
   
  이 연습은 Visual Basic 개발 설정을 사용하여 작성했습니다.  
   
-## <a name="prerequisites"></a>전제 조건  
+## <a name="prerequisites"></a>사전 요구 사항  
  이 연습에서는 다음 사항이 필요합니다.  
   
 - 이 연습에서는 전용 폴더("c:\linqtest2")를 사용하여 파일을 저장합니다. 연습을 시작하기 전에 먼저 이 폴더를 만듭니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "70792294"
 ## <a name="overview"></a>개요  
  이 연습은 다음과 같은 여섯 가지 주요 작업으로 구성됩니다.  
   
-- Visual Studio [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 에서 솔루션을 만듭니다.  
+- Visual Studio에서 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 솔루션을 만듭니다.  
   
 - 데이터베이스 코드 파일을 프로젝트에 추가  
   
@@ -66,7 +66,7 @@ ms.locfileid: "70792294"
 5. **확인**을 클릭합니다.  
   
 ## <a name="adding-linq-references-and-directives"></a>LINQ 참조 및 지시문 추가  
- 이 연습에서는 프로젝트에 기본적으로 설치되어 있지 않을 수 있는 어셈블리를 사용합니다. 이 `System.Data.Linq` 프로젝트에 참조로 나열 되지 않은 경우 ( **솔루션 탐색기** 의 **모든 파일 표시** 를 클릭 하 고 **참조** 노드를 확장) 다음 단계에 설명 된 대로 추가 합니다.  
+ 이 연습에서는 프로젝트에 기본적으로 설치되어 있지 않을 수 있는 어셈블리를 사용합니다. @No__t-0이 프로젝트에 참조로 나열 되어 있지 않으면 ( **솔루션 탐색기** 의 **모든 파일 표시** 를 클릭 하 고 **참조** 노드를 확장) 다음 단계에 설명 된 대로 추가 합니다.  
   
 #### <a name="to-add-systemdatalinq"></a>System.Data.Linq를 추가하려면  
   
@@ -168,7 +168,7 @@ ms.locfileid: "70792294"
   
      콘솔 창이 다음과 같이 나타납니다.  
   
-    ```  
+    ```console
     Customers matching CA before update:  
     Customer ID: CACTU  
     Customer ID: RICAR  
@@ -186,6 +186,6 @@ ms.locfileid: "70792294"
 > [!NOTE]
 > 변경 내용을 전송하여 새 고객을 추가한 후에는 동일한 고객을 있는 그대로 다시 추가할 수 없으므로 이 솔루션을 있는 그대로 다시 실행할 수 없습니다. 솔루션을 다시 실행하려면 추가할 고객 ID의 값을 변경합니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [연습으로 학습](learning-by-walkthroughs.md)

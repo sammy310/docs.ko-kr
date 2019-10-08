@@ -2,12 +2,12 @@
 title: '방법: 외부 파일로 개체 모델 생성'
 ms.date: 03/30/2017
 ms.assetid: 2496fa06-3df4-4ecb-86c4-70a49ea08565
-ms.openlocfilehash: 3fd84d878ab07411bba41a13ff3eef91b2425e8a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 915c02de55211efa24a4aa9f21ddc2c7e60fa41a
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70793593"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72002744"
 ---
 # <a name="how-to-generate-the-object-model-as-an-external-file"></a>방법: 외부 파일로 개체 모델 생성
 특성 기반 매핑을 사용하는 대신 SQLMetal 명령줄 도구를 사용하여 개체 모델을 외부 XML 파일로 생성할 수 있습니다. 자세한 내용은 [SqlMetal.exe(코드 생성 도구)](../../../../tools/sqlmetal-exe-code-generation-tool.md)를 참조하세요. 외부 XML 매핑 파일을 사용하면 코드를 간단하게 표시할 수 있습니다. 또한 애플리케이션의 이진 파일을 다시 컴파일할 필요 없이 외부 파일을 수정하여 동작을 변경할 수 있습니다. 자세한 내용은 [외부 매핑](external-mapping.md)을 참조 하세요.  
@@ -18,7 +18,7 @@ ms.locfileid: "70793593"
 ## <a name="example"></a>예제  
  다음 명령에서는 Northwind 샘플 데이터베이스에서 외부 매핑 파일을 생성합니다.  
   
-```  
+```console  
 sqlmetal /server:myserver /database:northwind /map:externalfile.xml  
 ```  
   
@@ -48,7 +48,7 @@ sqlmetal /server:myserver /database:northwind /map:externalfile.xml
 </Database>  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [개체 모델 만들기](creating-the-object-model.md)
 - [외부 매핑](external-mapping.md)

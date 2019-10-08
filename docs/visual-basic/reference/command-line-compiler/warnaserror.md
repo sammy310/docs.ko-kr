@@ -6,19 +6,19 @@ helpviewer_keywords:
 - /warnaserror compiler option [Visual Basic]
 - -warnaserror compiler option [Visual Basic]
 ms.assetid: 49819f1d-a1bd-4201-affe-5afe6d9712e1
-ms.openlocfilehash: 4382ec8feda2df1e83fd2fdc509abb66984e501f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8af6d3ef4efecd53dcf38c33d0aa2cf182f07d30
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937248"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004655"
 ---
 # <a name="-warnaserror-visual-basic"></a>-warnaserror(Visual Basic)
 컴파일러가 첫 번째 발생하는 경고를 오류로 처리하도록 만듭니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```console  
 -warnaserror[+ | -][:numberList]  
 ```  
   
@@ -26,8 +26,8 @@ ms.locfileid: "69937248"
   
 |용어|정의|  
 |---|---|  
-|+ &#124; -|선택 사항입니다. 기본적으로 `-warnaserror-`가 적용됩니다. 경고가 발생해도 컴파일러가 출력 파일을 생성하지 못하도록 하지 않습니다. `-warnaserror+`와 동일한 `-warnaserror` 옵션은 경고가 오류로 처리되도록 합니다.|  
-|`numberList`|선택 사항입니다. `-warnaserror` 옵션이 적용되는 경고 ID 번호의 쉼표로 구분된 목록입니다. 경고 ID를 지정하지 않으면 `-warnaserror` 옵션이 모든 경고에 적용됩니다.|  
+|+ &#124; -|(선택 사항) 기본적으로 `-warnaserror-`가 적용됩니다. 경고가 발생해도 컴파일러가 출력 파일을 생성하지 못하도록 하지 않습니다. `-warnaserror+`와 동일한 `-warnaserror` 옵션은 경고가 오류로 처리되도록 합니다.|  
+|`numberList`|(선택 사항) `-warnaserror` 옵션이 적용되는 경고 ID 번호의 쉼표로 구분된 목록입니다. 경고 ID를 지정하지 않으면 `-warnaserror` 옵션이 모든 경고에 적용됩니다.|  
   
 ## <a name="remarks"></a>설명  
  `-warnaserror` 옵션은 모든 경고를 오류로 처리합니다. 일반적으로 경고로 보고되는 모든 메시지가 대신 오류로 보고됩니다. 컴파일러는 이후 발생하는 같은 경고를 경고로 보고합니다.  
@@ -61,7 +61,7 @@ vbc -warnaserror in.vb
 vbc -warnaserror:42024 t2.vb  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [Visual Basic 명령줄 컴파일러](../../../visual-basic/reference/command-line-compiler/index.md)
 - [샘플 컴파일 명령줄](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

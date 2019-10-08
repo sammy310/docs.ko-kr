@@ -8,15 +8,15 @@ helpviewer_keywords:
 - text [WPF], typography
 - typography [WPF]
 ms.assetid: e4ef38db-b7d1-4bda-87ab-8bb738440ddc
-ms.openlocfilehash: bbefaba4491fca1b21b6a214048d9db1394c4bc7
-ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
+ms.openlocfilehash: 38f9a9c79bfda9abb46181f433d28268b8a37762
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69545338"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004573"
 ---
 # <a name="typography"></a>입력 체계
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에는 풍부한 텍스트 내용 표시를 위한 지원이 포함 되어 있습니다. 의 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 텍스트는 텍스트의 명확성 및 가독성을 향상 시키는 Microsoft ClearType을 사용 하 여 렌더링 됩니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서는 [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] 형식으로 정의 된 기능 외에 추가 기능을 제공 하는 OpenType 글꼴도 지원 합니다.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에는 텍스트 콘텐츠를 다양 하 게 표시할 수 있는 기능이 포함 되어 있습니다. @No__t-0의 텍스트는 텍스트의 명확성 및 가독성을 향상 시키는 Microsoft ClearType을 사용 하 여 렌더링 됩니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]은 TrueType® 형식으로 정의 된 것 보다 많은 기능을 제공 하는 OpenType 글꼴도 지원 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [WPF의 입력 체계](typography-in-wpf.md)  
@@ -28,9 +28,9 @@ ms.locfileid: "69545338"
  [문자 모양](glyphs.md)  
  [방법 항목](typography-how-to-topics.md)  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Windows.Documents.Typography>
 - [WPF의 문서](documents-in-wpf.md)
 - [OpenType 글꼴 기능](opentype-font-features.md)
-- [WPF 응용 프로그램 성능 최적화](optimizing-wpf-application-performance.md)
+- [WPF 애플리케이션 성능 최적화](optimizing-wpf-application-performance.md)

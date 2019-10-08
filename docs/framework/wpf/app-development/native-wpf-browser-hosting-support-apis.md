@@ -7,17 +7,17 @@ helpviewer_keywords:
 - browser hosting support [WPF]
 - WPF browser hosting support APIs [WPF]
 ms.assetid: 82c133a8-d760-45fb-a2b9-3a997537f1d4
-ms.openlocfilehash: 29ff388685c67d06d7c5866a46954d5ade72acb1
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 0e11f0e5751f6d5cc51c32994dc932fd7d3e9f61
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053359"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72003982"
 ---
 # <a name="native-wpf-browser-hosting-support-apis"></a>네이티브 WPF 브라우저 호스팅 지원 API
-웹 브라우저 [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] 에서 응용 프로그램을 호스트 하는 것은 WPF 호스트에서 등록 된 활성 문서 서버 (docobject 라고도 함)가 쉽게 활용할 수 있습니다. Internet Explorer는 직접 활성화 하 고 활성 문서와 통합할 수 있습니다. Mozilla 브라우저에서 xbap 및 느슨한 XAML 문서를 호스트 하는 [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] 경우는 Internet Explorer와 마찬가지로 [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] 활성 문서 서버에 유사한 호스팅 환경을 제공 하는 NPAPI 플러그 인을 제공 합니다. 그러나 다른 브라우저 및 독립 실행형 응용 프로그램에서 Xbap 및 XAML 문서를 호스트 하는 가장 쉬운 방법은 Internet Explorer 웹 브라우저 컨트롤을 통하는 것입니다. 웹 브라우저 컨트롤은 복잡 한 액티브 문서 서버 호스팅 환경을 제공 하지만 자체 호스트가 해당 환경을 사용자 지정 및 확장 하 고 현재 활성 문서 개체와 직접 통신할 수 있도록 합니다.  
+웹 브라우저에서 WPF 응용 프로그램을 호스트 하는 것은 WPF 호스트에서 등록 된 활성 문서 서버 (DocObject 라고도 함)가 쉽게 활용할 수 있습니다. Internet Explorer는 직접 활성화 하 고 활성 문서와 통합할 수 있습니다. Mozilla 브라우저에서 Xbap 및 느슨한 XAML 문서를 호스트 하기 위해 WPF는 Internet Explorer와 마찬가지로 WPF 활성 문서 서버에 유사한 호스팅 환경을 제공 하는 NPAPI 플러그 인을 제공 합니다. 그러나 다른 브라우저 및 독립 실행형 응용 프로그램에서 Xbap 및 XAML 문서를 호스트 하는 가장 쉬운 방법은 Internet Explorer 웹 브라우저 컨트롤을 통하는 것입니다. 웹 브라우저 컨트롤은 복잡 한 액티브 문서 서버 호스팅 환경을 제공 하지만 자체 호스트가 해당 환경을 사용자 지정 및 확장 하 고 현재 활성 문서 개체와 직접 통신할 수 있도록 합니다.  
   
- 액티브 [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] 문서 서버는 [IOleObject](https://go.microsoft.com/fwlink/?LinkId=162049), [IOleDocument](https://go.microsoft.com/fwlink/?LinkId=162050), [IOleInPlaceActiveObject](https://go.microsoft.com/fwlink/?LinkId=162051), [IPersistMoniker](https://go.microsoft.com/fwlink/?LinkId=162045), [IOleCommandTarget](https://go.microsoft.com/fwlink/?LinkId=162047)를 포함 하 여 몇 가지 일반적인 호스팅 인터페이스를 구현 합니다. 이러한 인터페이스는 웹 브라우저 컨트롤에서 호스팅될 때 [IWebBrowser2::D ocument](https://go.microsoft.com/fwlink/?LinkId=162048) 속성에 의해 반환 되는 개체에서 쿼리할 수 있습니다.  
+ WPF 활성 문서 서버는 [IOleObject](https://go.microsoft.com/fwlink/?LinkId=162049), [IOleDocument](https://go.microsoft.com/fwlink/?LinkId=162050), [IOleInPlaceActiveObject](https://go.microsoft.com/fwlink/?LinkId=162051), [IPersistMoniker](https://go.microsoft.com/fwlink/?LinkId=162045), [IOleCommandTarget](https://go.microsoft.com/fwlink/?LinkId=162047)를 포함 하 여 몇 가지 일반적인 호스팅 인터페이스를 구현 합니다. 이러한 인터페이스는 웹 브라우저 컨트롤에서 호스팅될 때 [IWebBrowser2::D ocument](https://go.microsoft.com/fwlink/?LinkId=162048) 속성에 의해 반환 되는 개체에서 쿼리할 수 있습니다.  
   
 ## <a name="iolecommandtarget"></a>IOleCommandTarget  
  WPF 활성 문서 서버의 [IOleCommandTarget](https://go.microsoft.com/fwlink/?LinkId=162047) 구현은 표준 OLE 명령 그룹 (null 명령 그룹 GUID)의 다양 한 탐색 관련 및 브라우저 관련 명령을 지원 합니다. 또한 CGID_PresentationHost 이라는 사용자 지정 명령 그룹을 인식 합니다. 현재이 그룹 내에는 하나의 명령만 정의 되어 있습니다.  

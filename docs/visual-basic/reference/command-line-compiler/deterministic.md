@@ -5,12 +5,12 @@ helpviewer_keywords:
 - deterministic compiler option [Visual Basic]
 - -deterministic compiler option [Visual Basic]
 - -deterministic compiler option [Visual Basic]
-ms.openlocfilehash: 95c9add0521208ef04ff47c071a2e04abc968f27
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6a83b636dd83534788f3a38971e0fef2919314f5
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61648739"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005638"
 ---
 # <a name="-deterministic"></a>-deterministic
 
@@ -18,7 +18,7 @@ ms.locfileid: "61648739"
 
 ## <a name="syntax"></a>구문
 
-```
+```console
 -deterministic
 ```
 
@@ -36,7 +36,7 @@ ms.locfileid: "61648739"
   - 소스 파일
   - 참조된 어셈블리
   - 참조된 모듈
-  - 자료
+  - 리소스
   - 강력한 이름 키 파일
   - @ 지시 파일
   - 분석기
@@ -50,7 +50,7 @@ ms.locfileid: "61648739"
 
 원본을 공개적으로 사용할 수 있는 경우 결정적 컴파일을 사용하여 이진 파일이 신뢰할 수 있는 원본에서 컴파일되는지 여부를 설정할 수 있습니다. 또한 연속 빌드 시스템에서 이진 파일 변경에 종속된 빌드 단계를 실행해야 하는지 여부를 확인하는 데 유용할 수도 있습니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [Visual Basic 명령줄 컴파일러](../../../visual-basic/reference/command-line-compiler/index.md)
 - [샘플 컴파일 명령줄](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

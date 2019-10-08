@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: b4ae0d03c0207413d826e62de1d157f938b4d775
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: 11087ed4da23d73fc8edc36680dd1b3587c011ce
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70016124"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004920"
 ---
 # <a name="typography-in-wpf"></a>WPF의 입력 체계
 이 항목에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]의 주요 입력 체계 기능을 소개합니다. 이러한 기능에는 텍스트 렌더링의 향상 된 품질 및 성능, OpenType 입력 체계 지원, 향상 된 국가별 텍스트, 향상 된 글꼴 지원 및 새로운 텍스트 Api (응용 프로그래밍 인터페이스)가 포함 됩니다.  
   
 <a name="Improved_Quality_and_Performance_of_Text"></a>   
 ## <a name="improved-quality-and-performance-of-text"></a>텍스트의 향상된 품질 및 성능  
- 의 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 텍스트는 텍스트의 명확성 및 가독성을 향상 시키는 Microsoft ClearType을 사용 하 여 렌더링 됩니다. ClearType은 랩톱 화면, Pocket PC 화면, 평면 패널 모니터 등 기존 Lcd (액체 크리스탈 디스플레이)의 텍스트 가독성을 향상 시키는 Microsoft에서 개발한 소프트웨어 기술입니다. ClearType은 픽셀의 소수 부분에 문자를 정렬 하 여 텍스트를 진정한 모양으로 더 크게 표시할 수 있는 하위 픽셀 렌더링을 사용 합니다. 해상도를 더 세밀하게 지원할수록 텍스트의 미세한 부분까지 더 선명하게 표시되므로 오랫동안 더 쉽게 읽을 수 있습니다. 에서 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ClearType의 또 다른 향상 된 기능은 y 방향 앤티앨리어싱을 가지 며 텍스트 문자에서 단순 곡선의 위쪽 및 아래쪽을 곡선으로 만들고 있습니다. ClearType 기능에 대 한 자세한 내용은 [Cleartype 개요](cleartype-overview.md)를 참조 하세요.  
+ @No__t-0의 텍스트는 텍스트의 명확성 및 가독성을 향상 시키는 Microsoft ClearType을 사용 하 여 렌더링 됩니다. ClearType은 랩톱 화면, Pocket PC 화면, 평면 패널 모니터 등 기존 Lcd (액체 크리스탈 디스플레이)의 텍스트 가독성을 향상 시키는 Microsoft에서 개발한 소프트웨어 기술입니다. ClearType은 픽셀의 소수 부분에 문자를 정렬 하 여 텍스트를 진정한 모양으로 더 크게 표시할 수 있는 하위 픽셀 렌더링을 사용 합니다. 해상도를 더 세밀하게 지원할수록 텍스트의 미세한 부분까지 더 선명하게 표시되므로 오랫동안 더 쉽게 읽을 수 있습니다. @No__t-0에서 ClearType의 또 다른 향상 된 기능은 y 방향 앤티앨리어싱으로, 텍스트 문자에서 단순 곡선의 위쪽 및 아래쪽을 곡선으로 만들고 있습니다. ClearType 기능에 대 한 자세한 내용은 [Cleartype 개요](cleartype-overview.md)를 참조 하세요.  
   
  ![ClearType y 방향 앤티 앨리어싱을 사용한 텍스트](./media/typography-in-wpf/text-y-direction-antialiasing.gif)  
 ClearType y 방향 앤티앨리어싱으로 표시된 텍스트  
@@ -29,7 +29,7 @@ ClearType y 방향 앤티앨리어싱으로 표시된 텍스트
   
 <a name="Rich_Typography"></a>   
 ## <a name="rich-typography"></a>풍부한 입력 체계  
- OpenType 글꼴 형식은 [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] 글꼴 형식의 확장명입니다. OpenType 글꼴 형식은 Microsoft 및 Adobe에서 공동으로 개발 되었으며 다양 한 고급 인쇄 기능 기능을 제공 합니다. 개체 <xref:System.Windows.Documents.Typography> 는 스타일 대체 및 선단 장식 같은 OpenType 글꼴의 여러 고급 기능을 제공 합니다. Windows SDK는 Pericles 및 Pescadero 글꼴과 같은 다양 한 기능을 사용 하 여 디자인 된 샘플 OpenType 글꼴 집합을 제공 합니다. 자세한 내용은 [샘플 OpenType 글꼴 팩](sample-opentype-font-pack.md)을 참조하세요.  
+ OpenType 글꼴 형식은 TrueType® 글꼴 형식의 확장명입니다. OpenType 글꼴 형식은 Microsoft 및 Adobe에서 공동으로 개발 되었으며 다양 한 고급 인쇄 기능 기능을 제공 합니다. @No__t-0 개체는 스타일 대체 및 선단 장식 등 OpenType 글꼴의 여러 고급 기능을 제공 합니다. Windows SDK는 Pericles 및 Pescadero 글꼴과 같은 다양 한 기능을 사용 하 여 디자인 된 샘플 OpenType 글꼴 집합을 제공 합니다. 자세한 내용은 [샘플 OpenType 글꼴 팩](sample-opentype-font-pack.md)을 참조하세요.  
   
  Pericles OpenType 글꼴 스타일 대체 문자 모양의 표준 집합을 제공 하는 추가 문자 모양이 포함 되어 있습니다. 다음 텍스트는 스타일 대체 문자 모양을 표시합니다.  
   
@@ -59,7 +59,7 @@ ClearType y 방향 앤티앨리어싱으로 표시된 텍스트
   
 - 시스템 로캘과 같이 전역 설정에 독립적인 글꼴 동작.  
   
-- 를 <xref:System.Windows.FontWeight>정의 <xref:System.Windows.FontStretch>하기 위해 <xref:System.Windows.FontStyle> ,<xref:System.Windows.Media.FontFamily>및 형식을 구분 합니다. [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 프로그래밍에서보다 더 많은 유연성을 제공하며, 기울임꼴과 굵게의 부울 조합을 사용하여 글꼴 패밀리를 정의합니다.  
+- @No__t-3을 정의 하는 <xref:System.Windows.FontWeight>, @no__t 및 @no__t 2 형식을 구분 합니다. [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 프로그래밍에서보다 더 많은 유연성을 제공하며, 기울임꼴과 굵게의 부울 조합을 사용하여 글꼴 패밀리를 정의합니다.  
   
 - 글꼴 이름과 독립적으로 처리되는 쓰기 방향(가로 및 세로).  
   
@@ -71,7 +71,7 @@ ClearType y 방향 앤티앨리어싱으로 표시된 텍스트
   
 <a name="New_Text_APIs"></a>   
 ## <a name="new-text-application-programming-interfaces-apis"></a>새 텍스트 API(응용 프로그래밍 인터페이스)  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]는 개발자가 응용 프로그램에 텍스트를 포함 하는 경우 사용할 수 있는 몇 가지 텍스트 Api를 제공 합니다. 이러한 Api는 다음과 같은 세 가지 범주로 그룹화 됩니다.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]은 개발자가 응용 프로그램에 텍스트를 포함 하는 경우 사용할 수 있는 몇 가지 텍스트 Api를 제공 합니다. 이러한 Api는 다음과 같은 세 가지 범주로 그룹화 됩니다.  
   
 - **레이아웃 및 사용자 인터페이스**. GUI (그래픽 사용자 인터페이스)에 대 한 일반 텍스트 컨트롤입니다.  
   
@@ -80,7 +80,7 @@ ClearType y 방향 앤티앨리어싱으로 표시된 텍스트
 - **고급 텍스트 서식 지정**. 사용자 지정 텍스트 엔진을 구현할 수 있습니다.  
   
 ### <a name="layout-and-user-interface"></a>레이아웃 및 사용자 인터페이스  
- 가장 높은 수준의 기능 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 에서 텍스트 api는 <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.TextBlock>, <xref:System.Windows.Controls.TextBox>등의 공용 컨트롤을 제공 합니다. 이러한 컨트롤은 애플리케이션 내에서 기본 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 요소를 제공하며, 텍스트를 제공하고 텍스트와 상호 작용하는 쉬운 방법을 제공합니다. <xref:System.Windows.Controls.RichTextBox> 및와 같은 컨트롤 <xref:System.Windows.Controls.PasswordBox> 을 사용 하면 보다 고급 또는 특수 한 텍스트 처리를 사용할 수 있습니다. , <xref:System.Windows.Documents.TextRange> <xref:System.Windows.Documents.TextSelection>및 와같은클래스는유용한텍스트조작을가능하게합니다.<xref:System.Windows.Documents.TextPointer> 이러한 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 컨트롤은, <xref:System.Windows.Controls.Control.FontFamily%2A> <xref:System.Windows.Controls.Control.FontSize%2A>및 와같은속성을제공하여텍스트를렌더링하는데사용되는글꼴을제어할수있게합니다.<xref:System.Windows.Controls.Control.FontStyle%2A>  
+ 가장 높은 수준의 기능에서 텍스트 Api는 <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.TextBlock> 및 <xref:System.Windows.Controls.TextBox>과 같은 일반적인 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 컨트롤을 제공 합니다. 이러한 컨트롤은 애플리케이션 내에서 기본 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 요소를 제공하며, 텍스트를 제공하고 텍스트와 상호 작용하는 쉬운 방법을 제공합니다. @No__t-0 및 <xref:System.Windows.Controls.PasswordBox>과 같은 컨트롤은 보다 고급 또는 특수 한 텍스트 처리를 가능 하 게 합니다. @No__t-0, <xref:System.Windows.Documents.TextSelection>, <xref:System.Windows.Documents.TextPointer> 등의 클래스는 유용한 텍스트 조작을 가능 하 게 합니다. 이러한 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 컨트롤은 <xref:System.Windows.Controls.Control.FontFamily%2A>, <xref:System.Windows.Controls.Control.FontSize%2A> 및 <xref:System.Windows.Controls.Control.FontStyle%2A>과 같은 속성을 제공 하 여 텍스트를 렌더링 하는 데 사용 되는 글꼴을 제어할 수 있게 합니다.  
   
 #### <a name="using-bitmap-effects-transforms-and-text-effects"></a>비트맵 효과, 변환 및 텍스트 효과 사용  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서는 비트맵 효과, 변환 및 텍스트 효과 같은 기능을 사용하여 시각적으로 흥미로운 텍스트를 만들 수 있습니다. 다음 예제에서는 일반적인 형식의 그림자 효과가 적용된 텍스트를 보여 줍니다.  
@@ -107,25 +107,25 @@ ClearType y 방향 앤티앨리어싱으로 표시된 텍스트
   
  ![SkewTransform을 사용하여 기울인 텍스트](./media/typography-in-wpf/skewed-transformed-text.jpg)
   
- <xref:System.Windows.Media.TextEffect> 개체는 텍스트 문자열에서 하나 이상의 문자 그룹으로 텍스트를 처리할 수 있도록 하는 도우미 개체입니다. 다음 예제에서는 개별 문자가 회전되는 것을 보여 줍니다. 각 문자는 1초 간격으로 개별적으로 회전합니다.  
+ @No__t-0 개체는 텍스트 문자열에서 하나 이상의 문자 그룹으로 텍스트를 처리할 수 있도록 하는 도우미 개체입니다. 다음 예제에서는 개별 문자가 회전되는 것을 보여 줍니다. 각 문자는 1초 간격으로 개별적으로 회전합니다.  
   
  ![텍스트 효과 회전 텍스트의 스크린 샷](./media/typography-in-wpf/rotating-text-effect.jpg) 
   
 #### <a name="using-flow-documents"></a>유동 문서 사용  
- 는 공용 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] <xref:System.Windows.Documents.FlowDocument> 컨트롤 외에도 텍스트 표시를 위한 레이아웃 컨트롤인 요소를 제공합니다.[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 요소 <xref:System.Windows.Documents.FlowDocument> 는 <xref:System.Windows.Controls.DocumentViewer> 요소와 함께 다양 한 레이아웃 요구 사항이 있는 많은 양의 텍스트에 대 한 컨트롤을 제공 합니다. 레이아웃 컨트롤은 <xref:System.Windows.Documents.Typography> 개체 및 다른 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 컨트롤의 글꼴 관련 속성을 통해 고급 입력 체계에 대 한 액세스를 제공 합니다.  
+ 일반적인 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 컨트롤 외에도 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]은 <xref:System.Windows.Documents.FlowDocument> 요소인 텍스트 표시에 대 한 레이아웃 컨트롤을 제공 합니다. @No__t-0 요소는 <xref:System.Windows.Controls.DocumentViewer> 요소와 함께 다양 한 레이아웃 요구 사항이 있는 많은 양의 텍스트에 대 한 컨트롤을 제공 합니다. 레이아웃 컨트롤은 <xref:System.Windows.Documents.Typography> 개체 및 다른 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 컨트롤의 글꼴 관련 속성을 통해 고급 입력 체계에 대 한 액세스를 제공 합니다.  
   
- 다음 예제에서는 검색, 탐색, 페이지 매김 <xref:System.Windows.Controls.FlowDocumentReader>및 콘텐츠 크기 조정 지원을 제공 하는에서 호스팅되는 텍스트 콘텐츠를 보여 줍니다.  
+ 다음 예제에서는 검색, 탐색, 페이지 매김 및 콘텐츠 크기 조정 지원을 제공 하는 <xref:System.Windows.Controls.FlowDocumentReader>에서 호스팅되는 텍스트 콘텐츠를 보여 줍니다.  
   
  ![OpenType 글꼴을 보여 주는 스크린샷](./media/typography-in-wpf/typography-text-flowdocumentreader.png)
   
  자세한 내용은 [WPF의 문서](documents-in-wpf.md)를 참조하세요.  
   
 ### <a name="lightweight-text-drawing"></a>간단한 텍스트 그리기  
- 개체의 <xref:System.Windows.Media.DrawingContext.DrawText%2A> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 메서드를사용하여개체에직접텍스트를그릴수있습니다<xref:System.Windows.Media.DrawingContext> . 이 메서드를 사용 하려면 <xref:System.Windows.Media.FormattedText> 개체를 만듭니다. 이 개체를 사용하면 여러 줄 텍스트를 그릴 수 있으며 이 텍스트에 있는 각 문자의 서식은 개별적으로 지정할 수 있습니다. <xref:System.Windows.Media.FormattedText> 개체의 기능에는 Windows API에 있는 DrawText 플래그의 많은 기능이 포함 되어 있습니다. 또한 개체에는 <xref:System.Windows.Media.FormattedText> 줄임표 지원과 같은 기능이 포함 되어 텍스트가 해당 범위를 초과할 때 줄임표가 표시 됩니다. 다음 예제에서는 두 번째와 세 번째 단어에 적용된 선형 그라데이션을 포함하여 여러 서식이 적용된 텍스트를 보여 줍니다.  
+ @No__t-2 개체의 <xref:System.Windows.Media.DrawingContext.DrawText%2A> 메서드를 사용 하 여 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 개체에 직접 텍스트를 그릴 수 있습니다. 이 메서드를 사용 하려면 <xref:System.Windows.Media.FormattedText> 개체를 만듭니다. 이 개체를 사용하면 여러 줄 텍스트를 그릴 수 있으며 이 텍스트에 있는 각 문자의 서식은 개별적으로 지정할 수 있습니다. @No__t-0 개체의 기능에는 Windows API에 있는 DrawText 플래그의 많은 기능이 포함 되어 있습니다. 또한 <xref:System.Windows.Media.FormattedText> 개체에는 텍스트의 범위를 초과할 때 줄임표가 표시 되는 줄임표 지원과 같은 기능이 포함 되어 있습니다. 다음 예제에서는 두 번째와 세 번째 단어에 적용된 선형 그라데이션을 포함하여 여러 서식이 적용된 텍스트를 보여 줍니다.  
   
  ![FormattedText 개체를 사용하여 표시한 텍스트](./media/typography-in-wpf/text-formatted-linear-gradient.jpg) 
   
- 서식이 지정 된 텍스트 <xref:System.Windows.Media.Geometry> 를 개체로 변환 하 여 다른 형식의 시각적으로 흥미로운 텍스트를 만들 수 있습니다. 예를 들어 텍스트 문자열의 개요 <xref:System.Windows.Media.Geometry> 를 기준으로 개체를 만들 수 있습니다.  
+ 서식 있는 텍스트를 <xref:System.Windows.Media.Geometry> 개체로 변환 하 여 다른 형식의 시각적으로 흥미로운 텍스트를 만들 수 있습니다. 예를 들어 텍스트 문자열의 개요를 기준으로 <xref:System.Windows.Media.Geometry> 개체를 만들 수 있습니다.  
   
  ![선형 그라데이션 브러시를 사용하여 표시한 텍스트 윤곽선](./media/typography-in-wpf/text-outline-linear-gradient.jpg)  
   
@@ -137,18 +137,18 @@ ClearType y 방향 앤티앨리어싱으로 표시된 텍스트
   
  ![스트로크 및 강조 표시에 이미지 브러시가 적용 된 텍스트](./media/typography-in-wpf/image-brush-text-application.jpg)
   
- <xref:System.Windows.Media.FormattedText> 개체에 대 한 자세한 내용은 서식 있는 [텍스트 그리기](drawing-formatted-text.md)를 참조 하세요.  
+ @No__t-0 개체에 대 한 자세한 내용은 서식 있는 [텍스트 그리기](drawing-formatted-text.md)를 참조 하세요.  
   
 ### <a name="advanced-text-formatting"></a>고급 텍스트 서식 지정  
- 텍스트 api [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 의 고급 수준에서는 <xref:System.Windows.Media.TextFormatting.TextFormatter> 개체 <xref:System.Windows.Media.TextFormatting> 와 네임 스페이스의 기타 형식을 사용 하 여 사용자 지정 텍스트 레이아웃을 만드는 기능을 제공 합니다. 및 <xref:System.Windows.Media.TextFormatting.TextFormatter> 관련 클래스를 사용 하 여 문자 형식, 단락 스타일, 줄 바꿈 규칙 및 국가별 텍스트에 대 한 기타 레이아웃 기능 정의를 지 원하는 사용자 지정 텍스트 레이아웃을 구현할 수 있습니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 텍스트 레이아웃 지원의 기본 구현을 재정의하려는 경우는 거의 없습니다. 그러나 텍스트 편집 컨트롤이나 애플리케이션을 만들려는 경우 기본 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 구현이 아닌 다른 구현이 필요할 수 있습니다.  
+ 텍스트 Api의 고급 수준에서 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]은 <xref:System.Windows.Media.TextFormatting.TextFormatter> 개체와 <xref:System.Windows.Media.TextFormatting> 네임 스페이스의 기타 형식을 사용 하 여 사용자 지정 텍스트 레이아웃을 만드는 기능을 제공 합니다. @No__t-0 및 관련 클래스를 사용 하 여 문자 형식, 단락 스타일, 줄 바꿈 규칙 및 국제 텍스트에 대 한 기타 레이아웃 기능 정의를 지 원하는 사용자 지정 텍스트 레이아웃을 구현할 수 있습니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 텍스트 레이아웃 지원의 기본 구현을 재정의하려는 경우는 거의 없습니다. 그러나 텍스트 편집 컨트롤이나 애플리케이션을 만들려는 경우 기본 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 구현이 아닌 다른 구현이 필요할 수 있습니다.  
   
- 기존 텍스트 API와 달리는 <xref:System.Windows.Media.TextFormatting.TextFormatter> 콜백 메서드 집합을 통해 텍스트 레이아웃 클라이언트와 상호 작용 합니다. 구현에서 이러한 메서드를 제공 하기 위해 클라이언트 필요는 <xref:System.Windows.Media.TextFormatting.TextSource> 클래스입니다. 다음 다이어그램에서는 클라이언트 응용 프로그램과 <xref:System.Windows.Media.TextFormatting.TextFormatter>간의 텍스트 레이아웃 상호 작용을 보여 줍니다.  
+ 기존 텍스트 API와 달리 <xref:System.Windows.Media.TextFormatting.TextFormatter>은 콜백 메서드 집합을 통해 텍스트 레이아웃 클라이언트와 상호 작용 합니다. 구현에서 이러한 메서드를 제공 하기 위해 클라이언트 필요는 <xref:System.Windows.Media.TextFormatting.TextSource> 클래스입니다. 다음 다이어그램에서는 클라이언트 응용 프로그램과 <xref:System.Windows.Media.TextFormatting.TextFormatter> 간의 텍스트 레이아웃 상호 작용을 보여 줍니다.  
   
  ![텍스트 레이아웃 클라이언트 및 TextFormatter의 다이어그램](./media/typography-in-wpf/text-layout-text-formatter-interaction.png)  
   
  사용자 지정 텍스트 레이아웃을 만드는 방법에 대한 자세한 내용은 [고급 텍스트 서식 지정](advanced-text-formatting.md)을 참조하세요.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Windows.Media.FormattedText>
 - <xref:System.Windows.Media.TextFormatting.TextFormatter>
@@ -156,5 +156,5 @@ ClearType y 방향 앤티앨리어싱으로 표시된 텍스트
 - [OpenType 글꼴 기능](opentype-font-features.md)
 - [서식 있는 텍스트 그리기](drawing-formatted-text.md)
 - [고급 텍스트 서식 지정](advanced-text-formatting.md)
-- [텍스트](optimizing-performance-text.md)
+- [텍스트 모드](optimizing-performance-text.md)
 - [Microsoft 입력 체계](https://docs.microsoft.com/typography/)

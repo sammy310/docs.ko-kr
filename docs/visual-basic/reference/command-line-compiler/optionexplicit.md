@@ -9,43 +9,43 @@ helpviewer_keywords:
 - optionexplicit compiler option [Visual Basic]
 - -optionexplicit compiler option [Visual Basic]
 ms.assetid: 5d296ab3-bafe-4c4d-9887-78f162ed86c7
-ms.openlocfilehash: 54d438541e8840e4394b24b20b4f394ff8cdb820
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5c0946b94bfe02d797d1a484088869375703eb6a
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788949"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005314"
 ---
 # <a name="-optionexplicit"></a>-optionexplicit
-컴파일러에서 오류를 보고 사용 하기 전에 선언 되지 않은 경우.  
+변수가 사용 되기 전에 선언 되지 않은 경우 컴파일러가 오류를 보고 하도록 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```console  
 -optionexplicit[+ | -]  
 ```  
   
 ## <a name="arguments"></a>인수  
  `+` &#124; `-`  
- 선택 사항입니다. 지정 `-optionexplicit+` 변수의 명시적 선언이 필요 합니다. 합니다 `-optionexplicit+` 옵션은 기본값 이므로 같습니다 `-optionexplicit`합니다. `-optionexplicit-` 암시적 변수 선언을 수 있도록 해줍니다.  
+ (선택 사항) 명시적 변수 선언이 필요 하면 `-optionexplicit+`을 지정 합니다. @No__t-0 옵션이 기본값이 며 `-optionexplicit`과 동일 합니다. @No__t-0 옵션은 변수의 암시적 선언을 가능 하 게 합니다.  
   
 ## <a name="remarks"></a>설명  
- 소스 코드 파일을 포함 하는 경우는 [Option Explicit 문](../../../visual-basic/language-reference/statements/option-explicit-statement.md), 문이 재정의 `-optionexplicit` 명령줄 컴파일러 설정을 사용 합니다.  
+ 소스 코드 파일에 [Option Explicit 문이](../../../visual-basic/language-reference/statements/option-explicit-statement.md)포함 되어 있으면 문이 `-optionexplicit` 명령줄 컴파일러 설정을 재정의 합니다.  
   
-### <a name="to-set--optionexplicit-in-the-visual-studio-ide"></a>-Optionexplicit Visual Studio IDE에서 설정 하려면  
+### <a name="to-set--optionexplicit-in-the-visual-studio-ide"></a>Visual Studio IDE에서-기능을 명시적으로 설정 하려면  
   
 1. **솔루션 탐색기**에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성**을 클릭합니다.   
   
 2. **컴파일** 탭을 클릭합니다.  
   
-3. 값을 수정 합니다 **Option Explicit** 상자입니다.  
+3. **옵션 Explicit** 상자에서 값을 수정 합니다.  
   
 ## <a name="example"></a>예제  
- 다음 코드는 경우 `-optionexplicit-` 사용 됩니다.  
+ 다음 코드는 `-optionexplicit-`이 사용 될 때 컴파일됩니다.  
   
  [!code-vb[VbVbalrCompiler#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/OptionExplicitOff.vb#5)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [Visual Basic 명령줄 컴파일러](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)

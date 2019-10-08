@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [WPF], listed by category
 ms.assetid: f8a1f78e-d9fa-4367-9ec6-f084577e83bb
-ms.openlocfilehash: b86684bab6c552102af7486b2c9ab49ea703a175
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 41cbe57f1e3711bb4e18b2b4da28c26ebbd2bc60
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64627294"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005700"
 ---
 # <a name="controls-by-category"></a>컨트롤 범주
-Windows Presentation Foundation (WPF) 컨트롤은 논리적으로 여러 범주로 그룹화 할 수 있습니다. 이러한 범주를 사용하면 유사한 사용 패턴 또는 기능이 있는 컨트롤을 볼 수 있으므로 시나리오에 적절한 컨트롤을 선택할 수 있습니다.  
+WPF (Windows Presentation Foundation) 컨트롤은 논리적으로 여러 범주로 그룹화 할 수 있습니다. 이러한 범주를 사용하면 유사한 사용 패턴 또는 기능이 있는 컨트롤을 볼 수 있으므로 시나리오에 적절한 컨트롤을 선택할 수 있습니다.  
   
 ## <a name="layout"></a>레이아웃  
  레이아웃 컨트롤은 자식 요소의 크기, 차원, 위치 및 정렬을 관리하는 데 사용됩니다.  
@@ -56,7 +56,7 @@ Windows Presentation Foundation (WPF) 컨트롤은 논리적으로 여러 범주
 - <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="buttons"></a>단추  
- 단추는 가장 기본적인 사용자 인터페이스 컨트롤 중 하나입니다. 일반적으로 응용 프로그램에서 일부 작업을 수행 합니다 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 에서도 사용자가 클릭할 때 이벤트입니다.  
+ 단추는 가장 기본적인 사용자 인터페이스 컨트롤 중 하나입니다. 응용 프로그램은 일반적으로 사용자가 클릭 하는 경우 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 이벤트에서 일부 작업을 수행 합니다.  
   
 - <xref:System.Windows.Controls.Button>  
   
@@ -171,12 +171,12 @@ Windows Presentation Foundation (WPF) 컨트롤은 논리적으로 여러 범주
 - <xref:System.Windows.Controls.SoundPlayerAction>  
   
 ## <a name="digital-ink"></a>디지털 잉크  
- 디지털 잉크 컨트롤은 잉크 보기 및 잉크 입력과 같은 [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)] 기능을 통합적으로 지원합니다.  
+ 디지털 잉크 컨트롤은 잉크 보기 및 잉크 입력과 같은 Tablet PC 기능에 대 한 통합 지원을 제공 합니다.  
   
 - <xref:System.Windows.Controls.InkCanvas>  
   
 - <xref:System.Windows.Controls.InkPresenter>  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [컨트롤 라이브러리](control-library.md)

@@ -7,37 +7,37 @@ helpviewer_keywords:
 - data types [Visual Basic], object variable
 - variables [Visual Basic], object
 ms.assetid: 31555704-58a3-49f1-9a0a-6421f605664f
-ms.openlocfilehash: c17c5f85952596f0a080ca473e8f792740e66b8f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 728f097b3c084e5292cb2d2bf5a0c1d20bdad922
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62054187"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004589"
 ---
 # <a name="object-variable-values-visual-basic"></a>개체 변수 값(Visual Basic)
-변수를 [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md) 모든 형식의 데이터를 참조할 수 있습니다. 에 저장 되는 값을 `Object` 변수는 특정 위치에 보관 메모리 변수 자체는 데이터에 대 한 포인터를 유지 합니다.  
+[Object 데이터 형식의](../../../../visual-basic/language-reference/data-types/object-data-type.md) 변수는 모든 형식의 데이터를 참조할 수 있습니다. @No__t-0 변수에 저장 하는 값은 메모리의 다른 위치에 유지 되는 반면 변수 자체는 데이터에 대 한 포인터를 보유 합니다.  
   
-## <a name="object-classifier-functions"></a>분류자 함수 개체  
- 항목에 대 한 정보를 반환 하는 함수를 제공 하는 Visual Basic을 `Object` 변수가 참조 하는 다음 표에 나와 있는 것 처럼 합니다.  
+## <a name="object-classifier-functions"></a>개체 분류자 함수  
+ Visual Basic는 다음 표에 나와 있는 것 처럼 @no__t 0 변수가 참조 하는 항목에 대 한 정보를 반환 하는 함수를 제공 합니다.  
   
-|함수|개체 변수가 참조 하는 경우 True를 반환 합니다.|  
+|기능|개체 변수가 참조 하는 경우 True를 반환 합니다.|  
 |--------------|---------------------------------------------------|  
-|<xref:Microsoft.VisualBasic.Information.IsArray%2A>|단일 값이 아닌 값의 배열|  
-|<xref:Microsoft.VisualBasic.Information.IsDate%2A>|A [날짜 데이터 형식](../../../../visual-basic/language-reference/data-types/date-data-type.md) 값 또는 날짜 및 시간 값으로 해석 될 수 있는 문자열|  
-|<xref:Microsoft.VisualBasic.Information.IsDBNull%2A>|형식의 개체 <xref:System.DBNull>, 누락 되었거나 존재 하지 않는 데이터를 나타내는|  
-|<xref:Microsoft.VisualBasic.Information.IsError%2A>|파생 되는 예외 개체 <xref:System.Exception>|  
-|<xref:Microsoft.VisualBasic.Information.IsNothing%2A>|[Nothing](../../../../visual-basic/language-reference/nothing.md)에 개체가 없는 변수에 현재 할당 되어, 즉|  
-|<xref:Microsoft.VisualBasic.Information.IsNumeric%2A>|숫자 또는 숫자로 해석 될 수 있는 문자열|  
+|<xref:Microsoft.VisualBasic.Information.IsArray%2A>|단일 값이 아닌 값의 배열입니다.|  
+|<xref:Microsoft.VisualBasic.Information.IsDate%2A>|날짜 [데이터 형식](../../../../visual-basic/language-reference/data-types/date-data-type.md) 값 또는 날짜 및 시간 값으로 해석 될 수 있는 문자열입니다.|  
+|<xref:Microsoft.VisualBasic.Information.IsDBNull%2A>|누락 되거나 존재 하지 않는 데이터를 나타내는 <xref:System.DBNull> 형식의 개체입니다.|  
+|<xref:Microsoft.VisualBasic.Information.IsError%2A>|@No__t에서 파생 되는 예외 개체입니다.|  
+|<xref:Microsoft.VisualBasic.Information.IsNothing%2A>|[Nothing](../../../../visual-basic/language-reference/nothing.md), 즉 변수에 현재 할당 된 개체가 없습니다.|  
+|<xref:Microsoft.VisualBasic.Information.IsNumeric%2A>|숫자 또는 숫자로 해석할 수 있는 문자열입니다.|  
 |<xref:Microsoft.VisualBasic.Information.IsReference%2A>|참조 형식 (예: 문자열, 배열, 대리자 또는 클래스 형식)|  
   
- 작업 또는 프로시저에 잘못 된 값을 제출 하지 않으려면 이러한 함수를 사용할 수 있습니다.  
+ 이러한 함수를 사용 하 여 작업 또는 프로시저에 잘못 된 값을 제출 하지 않도록 방지할 수 있습니다.  
   
 ## <a name="typeof-operator"></a>TypeOf 연산자  
- 사용할 수도 있습니다는 [TypeOf 연산자](../../../../visual-basic/language-reference/operators/typeof-operator.md) 개체 변수를 특정 데이터 형식이 현재 참조 하는지 여부를 확인 하려면. `TypeOf`... `Is` 식이 `True` 피연산자의 런타임 형식에서 파생 되거나 지정 된 형식을 구현 하는 경우.  
+ [TypeOf 연산자](../../../../visual-basic/language-reference/operators/typeof-operator.md) 를 사용 하 여 현재 개체 변수가 특정 데이터 형식을 참조 하는지 여부를 확인할 수도 있습니다. @No__t-0 ... `Is` 식은 피연산자의 런타임 형식이에서 파생 되거나 지정 된 형식을 구현 하는 경우에 `True`로 계산 됩니다.  
   
- 다음 예제에서는 `TypeOf` 개체 변수 값 및 참조 형식을 참조 하도록 합니다.  
+ 다음 예에서는 값과 참조 형식을 참조 하는 개체 변수에 대해 `TypeOf`을 사용 합니다.  
   
-```  
+```vb  
 ' The following statement puts a value type (Integer) in an Object variable.  
 Dim num As Object = 10  
 ' The following statement puts a reference type (Form) in an Object variable.  
@@ -51,7 +51,7 @@ If TypeOf frm Is Label Then Debug.WriteLine("frm is Label")
 If TypeOf frm Is Object Then Debug.WriteLine("frm is Object")  
 ```  
   
- 앞의 예제는 다음 줄을 작성 합니다 **디버그** 창:  
+ 앞의 예제에서는 **디버그** 창에 다음 줄을 씁니다.  
   
  `num is Integer`  
   
@@ -61,18 +61,18 @@ If TypeOf frm Is Object Then Debug.WriteLine("frm is Object")
   
  `frm is Object`  
   
- 개체 변수 `num` 데이터 형식 가리킵니다 `Integer`, 및 `frm` 클래스의 개체를 참조 <xref:System.Windows.Forms.Form>합니다.  
+ 개체 변수 `num`은 `Integer` 형식의 데이터를 참조 하 고, `frm`는 <xref:System.Windows.Forms.Form> 클래스의 개체를 참조 합니다.  
   
 ## <a name="object-arrays"></a>개체 배열  
- 선언 하 고 배열을 사용 하 여 `Object` 변수입니다. 다양 한 데이터 형식 및 개체 클래스를 처리 해야 하는 경우에 유용 합니다. 배열의 모든 요소에는 동일한 선언 된 데이터 형식이 있어야 합니다. 이 데이터 형식으로 선언 `Object` 개체를 저장 하 고 클래스 인스턴스의 배열에 다른 데이터 형식과 함께 수 있습니다.  
+ @No__t-0 변수의 배열을 선언 하 고 사용할 수 있습니다. 이는 다양 한 데이터 형식 및 개체 클래스를 처리 해야 하는 경우에 유용 합니다. 배열의 모든 요소에는 동일한 선언 된 데이터 형식이 있어야 합니다. 이 데이터 형식을 `Object`으로 선언 하면 개체와 클래스 인스턴스를 배열에 있는 다른 데이터 형식과 함께 저장할 수 있습니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [개체 변수](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [개체 변수 선언](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
 - [개체 변수 할당](../../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md)
-- [방법: 개체의 현재 인스턴스 참조](../../../../visual-basic/programming-guide/language-features/variables/how-to-refer-to-the-current-instance-of-an-object.md)
-- [방법: 개체 변수가 참조 하는 형식 확인](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-what-type-an-object-variable-refers-to.md)
-- [방법: 두 개체가 관련이 있는지 여부를 결정 합니다.](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-related.md)
-- [방법: 두 개체가 동일한 지 여부를 결정 합니다.](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-identical.md)
+- [방법: 개체의 현재 인스턴스 @ no__t-0을 참조 하십시오.
+- [방법: 개체 변수가 참조 하는 형식 확인 @ no__t-0
+- [방법: 두 개체가 관련 되어 있는지 확인 @ no__t-0
+- [방법: 두 개체가 동일한 지 여부를 확인 합니다. @ no__t-0
 - [데이터 형식](../../../../visual-basic/programming-guide/language-features/data-types/index.md)

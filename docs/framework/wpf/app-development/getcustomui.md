@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - custom error messages [WPF]
 ms.assetid: e55180fc-35bb-4f80-a136-772b5eb3e4e5
-ms.openlocfilehash: a9c4c9d597f5cc1b172213d49a3dd5b8f1c1f671
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: e9ef32912c2afb3c99e46e1e14bb3daa5a2e99af
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991371"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005714"
 ---
 # <a name="getcustomui"></a>GetCustomUI
 구현 된 경우 호스트에서 사용자 지정 진행률 및 오류 메시지를 가져오기 위해 Presentationhost.exe에 의해 호출 됩니다.  
@@ -27,7 +27,7 @@ HRESULT GetCustomUI( [out] BSTR* pwzProgressAssemblyName, [out] BSTR* pwzProgres
   
  `pwzProgressClassName`  
   
- 제한이 호스트에서 제공 하는 진행률 사용자 인터페이스인 [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] 클래스의 이름입니다 .를 사용 <xref:System.Windows.Controls.Page> 하는 파일이 최상위 요소입니다. 이 클래스는에 지정 `pwzProgressAssemblyName`된 어셈블리에 상주 합니다.  
+ 제한이 호스트에서 제공 하는 진행률 사용자 인터페이스인 클래스의 이름입니다. <xref:System.Windows.Controls.Page> 인 XAML 파일은 최상위 요소입니다. 이 클래스는 `pwzProgressAssemblyName`으로 지정 된 어셈블리에 상주 합니다.  
   
  `pwzErrorAssemblyName`  
   
@@ -35,7 +35,7 @@ HRESULT GetCustomUI( [out] BSTR* pwzProgressAssemblyName, [out] BSTR* pwzProgres
   
  `pwzErrorClassName`  
   
- 제한이 호스트에서 제공 하는 오류 사용자 인터페이스인 클래스의 이름입니다 .를 사용 <xref:System.Windows.Controls.Page> 하는 XAML 파일은 최상위 요소입니다. 이 클래스는에 지정 `pwzErrorAssemblyName`된 어셈블리에 상주 합니다.  
+ 제한이 호스트에서 제공한 오류 사용자 인터페이스인 클래스의 이름입니다. <xref:System.Windows.Controls.Page> 인 XAML 파일은 최상위 요소입니다. 이 클래스는 `pwzErrorAssemblyName`으로 지정 된 어셈블리에 상주 합니다.  
   
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
  HRESULT: 무시됩니다.  
@@ -45,6 +45,6 @@ HRESULT GetCustomUI( [out] BSTR* pwzProgressAssemblyName, [out] BSTR* pwzProgres
   
  이 함수는 Presentationhost.exe의 초기화 중에 한 번 호출 됩니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [IWpfHostSupport](iwpfhostsupport.md)

@@ -6,21 +6,25 @@ helpviewer_keywords:
 - -doc compiler option [Visual Basic]
 - /doc compiler option [Visual Basic]
 ms.assetid: 5fc32ec9-a149-4648-994c-a8d0cccd0a65
-ms.openlocfilehash: c3bff4e44ddee1c4dfb6ab366464ad54e991b595
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3da049b912d791f26814bb4b6cbb70998803726a
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624274"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005640"
 ---
 # <a name="-doc"></a>-doc
 XML 파일에 대해 문서 주석을 처리합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```console  
 -doc[+ | -]  
-' -or-  
+```
+
+로 구분하거나 여러  
+
+```console
 -doc:file  
 ```  
   
@@ -28,7 +32,7 @@ XML 파일에 대해 문서 주석을 처리합니다.
   
 |용어|정의|  
 |---|---|  
-|`+` &#124; `-`|선택 사항입니다. + 또는 `-doc`만 지정하면 컴파일러가 문서 정보를 생성하여 XML 파일에 넣습니다. `-`를 지정하면 `-doc`를 지정하지 않는 것과 같으며, 문서 정보를 생성하지 않게 합니다.|  
+|`+` &#124; `-`|(선택 사항) \+ 또는 `-doc`만 지정하면 컴파일러가 문서 정보를 생성하여 XML 파일에 넣습니다. `-`를 지정하면 `-doc`를 지정하지 않는 것과 같으며, 문서 정보를 생성하지 않게 합니다.|  
 |`file`|`-doc:`를 사용하는 경우 필수입니다. 출력 XML 파일을 지정하며, 이 파일은 컴파일의 소스 코드 파일에 있는 주석으로 채워집니다. 파일 이름에 공백이 있으면 이름을 따옴표(“ ”)로 묶습니다.|  
   
 ## <a name="remarks"></a>설명  
@@ -53,7 +57,7 @@ XML 파일에 대해 문서 주석을 처리합니다.
 ## <a name="example"></a>예제  
  샘플은 [Documenting Your Code with XML](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)(XML과 함께 코드 문서화)을 참조하세요.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [Visual Basic 명령줄 컴파일러](../../../visual-basic/reference/command-line-compiler/index.md)
 - [코드를 XML로 문서화](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)

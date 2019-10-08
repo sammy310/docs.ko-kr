@@ -6,19 +6,19 @@ helpviewer_keywords:
 - nowin32manifest compiler option [Visual Basic]
 - -nowin32manifest compiler option [Visual Basic]
 ms.assetid: c0528aae-83b3-4425-99f0-19448e9843e3
-ms.openlocfilehash: 2d14da2d0c24f3bd833503c73374d26ee73c5629
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: df05ff6caeae2fb2db6a8d7c8fec1b81774a9fa4
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789013"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005382"
 ---
 # <a name="-nowin32manifest-visual-basic"></a>-nowin32manifest(Visual Basic)
 실행 파일에 애플리케이션 매니페스트를 포함하지 않도록 컴파일러에 지시합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```console  
 -nowin32manifest  
 ```  
   
@@ -27,7 +27,7 @@ ms.locfileid: "61789013"
   
  매니페스트 생성에 대한 자세한 내용은 [-win32manifest(Visual Basic)](../../../visual-basic/reference/command-line-compiler/win32manifest.md)를 참조하세요.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [Visual Basic 명령줄 컴파일러](../../../visual-basic/reference/command-line-compiler/index.md)
-- [프로젝트 디자이너, 응용 프로그램 페이지(Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)
+- [프로젝트 디자이너, 애플리케이션 페이지(Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)
