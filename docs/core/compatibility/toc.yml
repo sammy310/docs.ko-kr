@@ -18,6 +18,8 @@
           href: 3.0.7-3.0.8.md
         - name: 3.0 미리보기 8 - 3.0 미리 보기 9
           href: 3.0.8-3.0.9.md
+        - name: 3.0 미리보기 9 - 3.0 RC1
+          href: 3.0.9-3.0rc1.md
     - name: 범주별
       items:
         - name: CoreFx
@@ -26,6 +28,8 @@
           href: cryptography.md
         - name: 전역화
           href: globalization.md
+        - name: 네트워킹
+          href: networking.md
         - name: Visual Basic
           href: visualbasic.md
         - name: GitHub의 ASP.NET Core

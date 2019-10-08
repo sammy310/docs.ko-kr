@@ -15,12 +15,12 @@ ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 53dcbcfdcc9a8d04840bc91a563b6514153b9577
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f6d96d14a4d05178a8f90c15edecb1318e8c5a36
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963425"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71957195"
 ---
 # <a name="character-classes-in-regular-expressions"></a>정규식의 문자 클래스
 
@@ -59,17 +59,13 @@ ms.locfileid: "69963425"
   
  개별 문자 목록을 지정하는 구문은 다음과 같습니다.  
 
-```  
-[*character_group*]  
-```
+`[*character_group*]`
 
  여기서 *character_group*은 일치가 성공하기 위해 입력 문자열에 나타날 수 있는 개별 문자 목록입니다. *character_group*은 하나 이상의 리터럴 문자, [이스케이프 문자](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md) 또는 문자 클래스로 이루어진 조합으로 구성될 수 있습니다.  
   
  문자의 범위를 지정하는 구문은 다음과 같습니다.  
   
-```  
-[firstCharacter-lastCharacter]  
-```  
+`[firstCharacter-lastCharacter]`  
   
  여기서 *firstCharacter*는 범위를 시작하는 문자이고 *lastCharacter*는 범위를 끝내는 문자입니다. 문자 범위는 일련의 문자로서, 문자 범위를 정의하려면 연속된 문자 중 첫 번째 문자와 마지막 문자를 하이픈(-)으로 연결하여 지정합니다. 두 문자의 유니코드 코드 포인트가 연속되면 이 두 문자는 연속된 문자입니다. *firstCharacter*는 낮은 코드 포인트를 가진 문자여야 하며 *lastCharacter*는 높은 코드 포인트를 가진 문자여야 합니다.
 
@@ -119,17 +115,13 @@ ms.locfileid: "69963425"
   
 개별 문자 목록을 지정하는 구문은 다음과 같습니다.  
 
-```
-[*^character_group*]  
-```
+`[*^character_group*]`
 
  여기서 *character_group*은 일치가 성공하기 위해 입력 문자열에 나타날 수 없는 개별 문자 목록입니다. *character_group*은 하나 이상의 리터럴 문자, [이스케이프 문자](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md) 또는 문자 클래스로 이루어진 조합으로 구성될 수 있습니다.  
   
  문자의 범위를 지정하는 구문은 다음과 같습니다.  
 
-```
-[^*firstCharacter*-*lastCharacter*]  
-```
+`[^*firstCharacter*-*lastCharacter*]`
 
 여기서 *firstCharacter*는 범위를 시작하는 문자이고 *lastCharacter*는 범위를 끝내는 문자입니다. 문자 범위는 일련의 문자로서, 문자 범위를 정의하려면 연속된 문자 중 첫 번째 문자와 마지막 문자를 하이픈(-)으로 연결하여 지정합니다. 두 문자의 유니코드 코드 포인트가 연속되면 이 두 문자는 연속된 문자입니다. *firstCharacter*는 낮은 코드 포인트를 가진 문자여야 하며 *lastCharacter*는 높은 코드 포인트를 가진 문자여야 합니다.
 
@@ -267,9 +259,7 @@ ms.locfileid: "69963425"
 ## <a name="non-word-character-w"></a>단어가 아닌 문자: \W  
  `\W`는 비단어 문자를 찾습니다. \W 언어 요소는 다음 문자 클래스에 해당합니다.  
   
-```  
-[^\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Nd}\p{Pc}\p{Lm}]  
-```  
+`[^\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Nd}\p{Pc}\p{Lm}]`  
   
  즉, 다음 표에 나열된 유니코드 범주의 문자를 제외한 모든 문자를 찾습니다.  
   
