@@ -2,43 +2,43 @@
 title: 외부 매핑
 ms.date: 03/30/2017
 ms.assetid: 076606b8-d889-4ba0-b5da-ae577b146f23
-ms.openlocfilehash: 39cdd7b23bd90ff8938dda9eee630149ce6ddbea
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: ba5af75ae34b233354fec6e9074f3cc96d924c7f
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70793994"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72003050"
 ---
-# <a name="external-mapping"></a><span data-ttu-id="29d7f-102">외부 매핑</span><span class="sxs-lookup"><span data-stu-id="29d7f-102">External Mapping</span></span>
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="29d7f-103">는 별도의 XML 파일을 사용 하 여 데이터베이스의 데이터 모델과 개체 모델 간의 매핑을 지정 하는 프로세스에 대 한 *외부 매핑을*지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="29d7f-103">supports *external mapping*, a process by which you use a separate XML file to specify mapping between the data model of the database and your object model.</span></span> <span data-ttu-id="29d7f-104">외부 매핑 파일을 사용하면 다음과 같은 장점이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="29d7f-104">Advantages of using an external mapping file include the following:</span></span>  
+# <a name="external-mapping"></a><span data-ttu-id="e310c-102">외부 매핑</span><span class="sxs-lookup"><span data-stu-id="e310c-102">External Mapping</span></span>
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="e310c-103">은 별도의 XML 파일을 사용 하 여 데이터베이스의 데이터 모델과 개체 모델 간의 매핑을 지정 하는 프로세스에 대 한 *외부 매핑을*지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="e310c-103">supports *external mapping*, a process by which you use a separate XML file to specify mapping between the data model of the database and your object model.</span></span> <span data-ttu-id="e310c-104">외부 매핑 파일을 사용하면 다음과 같은 장점이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e310c-104">Advantages of using an external mapping file include the following:</span></span>  
   
-- <span data-ttu-id="29d7f-105">매핑 코드를 애플리케이션 코드와 따로 유지할 수 있어</span><span class="sxs-lookup"><span data-stu-id="29d7f-105">You can keep your mapping code out of your application code.</span></span> <span data-ttu-id="29d7f-106">애플리케이션 코드를 간단하게 표시할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="29d7f-106">This approach reduces clutter in your application code.</span></span>  
+- <span data-ttu-id="e310c-105">매핑 코드를 애플리케이션 코드와 따로 유지할 수 있어</span><span class="sxs-lookup"><span data-stu-id="e310c-105">You can keep your mapping code out of your application code.</span></span> <span data-ttu-id="e310c-106">애플리케이션 코드를 간단하게 표시할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e310c-106">This approach reduces clutter in your application code.</span></span>  
   
-- <span data-ttu-id="29d7f-107">외부 매핑 파일을 구성 파일처럼 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="29d7f-107">You can treat an external mapping file something like a configuration file.</span></span> <span data-ttu-id="29d7f-108">예를 들어 외부 매핑 파일을 바꾸는 방법으로 이진 파일을 배포한 후 애플리케이션의 동작을 업데이트할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="29d7f-108">For example, you can update how your application behaves after shipping the binaries by just swapping out the external mapping file.</span></span>  
+- <span data-ttu-id="e310c-107">외부 매핑 파일을 구성 파일처럼 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e310c-107">You can treat an external mapping file something like a configuration file.</span></span> <span data-ttu-id="e310c-108">예를 들어 외부 매핑 파일을 바꾸는 방법으로 이진 파일을 배포한 후 애플리케이션의 동작을 업데이트할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e310c-108">For example, you can update how your application behaves after shipping the binaries by just swapping out the external mapping file.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="29d7f-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="29d7f-109">Requirements</span></span>  
- <span data-ttu-id="29d7f-110">매핑 파일은 XML 파일이어야 하며 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 스키마 정의 파일(.xsd)에 대해 유효성이 검사되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="29d7f-110">The mapping file must be an XML file, and the file must validate against a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] schema definition (.xsd) file.</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e310c-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="e310c-109">Requirements</span></span>  
+ <span data-ttu-id="e310c-110">매핑 파일은 XML 파일이어야 하며 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 스키마 정의 파일(.xsd)에 대해 유효성이 검사되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="e310c-110">The mapping file must be an XML file, and the file must validate against a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] schema definition (.xsd) file.</span></span>  
   
- <span data-ttu-id="29d7f-111">다음 규칙이 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="29d7f-111">The following rules apply:</span></span>  
+ <span data-ttu-id="e310c-111">다음 규칙이 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="e310c-111">The following rules apply:</span></span>  
   
-- <span data-ttu-id="29d7f-112">매핑 파일은 XML 파일이어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="29d7f-112">The mapping file must be an XML file.</span></span>  
+- <span data-ttu-id="e310c-112">매핑 파일은 XML 파일이어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="e310c-112">The mapping file must be an XML file.</span></span>  
   
-- <span data-ttu-id="29d7f-113">XML 매핑 파일은 XML 스키마 정의 파일에 대해 유효해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="29d7f-113">The XML mapping file must be valid against the XML schema definition file.</span></span> <span data-ttu-id="29d7f-114">자세한 내용은 [방법: DBML 및 외부 매핑 파일](how-to-validate-dbml-and-external-mapping-files.md)의 유효성을 검사 합니다.</span><span class="sxs-lookup"><span data-stu-id="29d7f-114">For more information, see [How to: Validate DBML and External Mapping Files](how-to-validate-dbml-and-external-mapping-files.md).</span></span>  
+- <span data-ttu-id="e310c-113">XML 매핑 파일은 XML 스키마 정의 파일에 대해 유효해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="e310c-113">The XML mapping file must be valid against the XML schema definition file.</span></span> <span data-ttu-id="e310c-114">자세한 내용은 [방법: DBML 및 외부 매핑 파일의 유효성을 검사 합니다 @ no__t-0.</span><span class="sxs-lookup"><span data-stu-id="e310c-114">For more information, see [How to: Validate DBML and External Mapping Files](how-to-validate-dbml-and-external-mapping-files.md).</span></span>  
   
-- <span data-ttu-id="29d7f-115">외부 매핑은 특성 기반 매핑을 재정의합니다.</span><span class="sxs-lookup"><span data-stu-id="29d7f-115">External mapping overrides attribute-based mapping.</span></span> <span data-ttu-id="29d7f-116">즉, 외부 매핑 소스를 사용하여 <xref:System.Data.Linq.DataContext>를 만들면 <xref:System.Data.Linq.DataContext>에서는 사용자가 클래스에 만든 모든 매핑 특성을 무시합니다.</span><span class="sxs-lookup"><span data-stu-id="29d7f-116">In other words, when you use an external mapping source to create a <xref:System.Data.Linq.DataContext>, the <xref:System.Data.Linq.DataContext> ignores all mapping attributes you have created on classes.</span></span> <span data-ttu-id="29d7f-117">이 동작은 외부 매핑 파일에 클래스가 포함되었는지 여부에 관계없이 항상 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="29d7f-117">This behavior is true whether the class is included in the external mapping file.</span></span>  
+- <span data-ttu-id="e310c-115">외부 매핑은 특성 기반 매핑을 재정의합니다.</span><span class="sxs-lookup"><span data-stu-id="e310c-115">External mapping overrides attribute-based mapping.</span></span> <span data-ttu-id="e310c-116">즉, 외부 매핑 소스를 사용하여 <xref:System.Data.Linq.DataContext>를 만들면 <xref:System.Data.Linq.DataContext>에서는 사용자가 클래스에 만든 모든 매핑 특성을 무시합니다.</span><span class="sxs-lookup"><span data-stu-id="e310c-116">In other words, when you use an external mapping source to create a <xref:System.Data.Linq.DataContext>, the <xref:System.Data.Linq.DataContext> ignores all mapping attributes you have created on classes.</span></span> <span data-ttu-id="e310c-117">이 동작은 외부 매핑 파일에 클래스가 포함되었는지 여부에 관계없이 항상 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="e310c-117">This behavior is true whether the class is included in the external mapping file.</span></span>  
   
-- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="29d7f-118">에서는 특성 기반 매핑과 외부 매핑의 혼합 사용을 지원하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="29d7f-118">does not support the hybrid use of the two mapping approaches (attribute-based and external).</span></span>  
+- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="e310c-118">에서는 특성 기반 매핑과 외부 매핑의 혼합 사용을 지원하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="e310c-118">does not support the hybrid use of the two mapping approaches (attribute-based and external).</span></span>  
   
-## <a name="xml-schema-definition-file"></a><span data-ttu-id="29d7f-119">XML 스키마 정의 파일</span><span class="sxs-lookup"><span data-stu-id="29d7f-119">XML Schema Definition File</span></span>  
- <span data-ttu-id="29d7f-120">[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 외부 매핑은 다음 XML 스키마 정의에 대해 유효해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="29d7f-120">External mapping in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] must be valid against the following XML schema definition.</span></span>  
+## <a name="xml-schema-definition-file"></a><span data-ttu-id="e310c-119">XML 스키마 정의 파일</span><span class="sxs-lookup"><span data-stu-id="e310c-119">XML Schema Definition File</span></span>  
+ <span data-ttu-id="e310c-120">[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 외부 매핑은 다음 XML 스키마 정의에 대해 유효해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="e310c-120">External mapping in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] must be valid against the following XML schema definition.</span></span>  
   
- <span data-ttu-id="29d7f-121">이 스키마 정의 파일은 DBML 파일의 유효성을 검사하는 데 사용하는 스키마 정의 파일과 다릅니다.</span><span class="sxs-lookup"><span data-stu-id="29d7f-121">Distinguish this schema definition file from the schema definition file that is used to validate a DBML file.</span></span> <span data-ttu-id="29d7f-122">자세한 내용은 [LINQ to SQL의 코드 생성](code-generation-in-linq-to-sql.md))을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="29d7f-122">For more information, see [Code Generation in LINQ to SQL](code-generation-in-linq-to-sql.md)).</span></span>  
+ <span data-ttu-id="e310c-121">이 스키마 정의 파일은 DBML 파일의 유효성을 검사하는 데 사용하는 스키마 정의 파일과 다릅니다.</span><span class="sxs-lookup"><span data-stu-id="e310c-121">Distinguish this schema definition file from the schema definition file that is used to validate a DBML file.</span></span> <span data-ttu-id="e310c-122">자세한 내용은 [LINQ to SQL의 코드 생성](code-generation-in-linq-to-sql.md))을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="e310c-122">For more information, see [Code Generation in LINQ to SQL](code-generation-in-linq-to-sql.md)).</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="29d7f-123">또한 Visual Studio 사용자는 XML 스키마 대화 상자에서이 XSD 파일을 "Linqtosqlmapping.xsd"으로 찾을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="29d7f-123">Visual Studio users will also find this XSD file in the XML Schemas dialog box as "LinqToSqlMapping.xsd".</span></span> <span data-ttu-id="29d7f-124">외부 매핑 파일 [의 유효성을 검사 하는 데이 파일을 제대로 사용 하려면 방법: DBML 및 외부 매핑 파일](how-to-validate-dbml-and-external-mapping-files.md)의 유효성을 검사 합니다.</span><span class="sxs-lookup"><span data-stu-id="29d7f-124">To use this file correctly for validating an external mapping file, see [How to: Validate DBML and External Mapping Files](how-to-validate-dbml-and-external-mapping-files.md).</span></span>  
+> <span data-ttu-id="e310c-123">또한 Visual Studio 사용자는 XML 스키마 대화 상자에서이 XSD 파일을 "Linqtosqlmapping.xsd"으로 찾을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e310c-123">Visual Studio users will also find this XSD file in the XML Schemas dialog box as "LinqToSqlMapping.xsd".</span></span> <span data-ttu-id="e310c-124">외부 매핑 파일의 유효성을 검사 하는 데이 파일을 제대로 사용 하려면 [How to: DBML 및 외부 매핑 파일의 유효성을 검사 합니다 @ no__t-0.</span><span class="sxs-lookup"><span data-stu-id="e310c-124">To use this file correctly for validating an external mapping file, see [How to: Validate DBML and External Mapping Files](how-to-validate-dbml-and-external-mapping-files.md).</span></span>  
   
-```  
-?<?xml version="1.0" encoding="utf-16"?>  
+```xml  
+<?xml version="1.0" encoding="utf-16"?>  
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://schemas.microsoft.com/linqtosql/mapping/2007" xmlns="http://schemas.microsoft.com/linqtosql/mapping/2007"  
 elementFormDefault="qualified" >  
   <xs:element name="Database" type="Database" />  
@@ -141,8 +141,8 @@ elementFormDefault="qualified" >
 </xs:schema>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="29d7f-125">참고자료</span><span class="sxs-lookup"><span data-stu-id="29d7f-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e310c-125">참조</span><span class="sxs-lookup"><span data-stu-id="e310c-125">See also</span></span>
 
-- [<span data-ttu-id="29d7f-126">LINQ to SQL에서 코드 생성</span><span class="sxs-lookup"><span data-stu-id="29d7f-126">Code Generation in LINQ to SQL</span></span>](code-generation-in-linq-to-sql.md)
-- [<span data-ttu-id="29d7f-127">참조</span><span class="sxs-lookup"><span data-stu-id="29d7f-127">Reference</span></span>](reference.md)
-- [<span data-ttu-id="29d7f-128">방법: 개체 모델을 외부 파일로 생성</span><span class="sxs-lookup"><span data-stu-id="29d7f-128">How to: Generate the Object Model as an External File</span></span>](how-to-generate-the-object-model-as-an-external-file.md)
+- [<span data-ttu-id="e310c-126">LINQ to SQL에서 코드 생성</span><span class="sxs-lookup"><span data-stu-id="e310c-126">Code Generation in LINQ to SQL</span></span>](code-generation-in-linq-to-sql.md)
+- [<span data-ttu-id="e310c-127">참조</span><span class="sxs-lookup"><span data-stu-id="e310c-127">Reference</span></span>](reference.md)
+- <span data-ttu-id="e310c-128">[방법: 개체 모델을 외부 파일로 생성 @ no__t-0</span><span class="sxs-lookup"><span data-stu-id="e310c-128">[How to: Generate the Object Model as an External File](how-to-generate-the-object-model-as-an-external-file.md)</span></span>
