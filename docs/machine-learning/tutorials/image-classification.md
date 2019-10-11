@@ -1,17 +1,17 @@
 ---
 title: '자습서: 미리 학습된 TensorFlow 모델에서 ML.NET 이미지 분류 모델 생성'
 description: 기존 TensorFlow 모델에서 새로운 ML.NET 이미지 분류 모델로 정보를 전이하는 방법을 알아봅니다. TensorFlow 모델은 이미지를 천 개 범주로 분류하도록 학습되었습니다. ML.NET 모델은 전이 학습을 사용하여 이미지를 좀 더 광범위한 범주로 분류합니다.
-ms.date: 09/26/2019
+ms.date: 09/30/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
 author: natke
 ms.author: nakersha
-ms.openlocfilehash: 28d8c18721bd353e961284935758a87679c8c8e0
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 8ae966330ca85722c72c92e26363d99c7d9de3e7
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353690"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698645"
 ---
 # <a name="tutorial-generate-an-mlnet-image-classification-model-from-a-pre-trained-tensorflow-model"></a>자습서: 미리 학습된 TensorFlow 모델에서 ML.NET 이미지 분류 모델 생성
 
@@ -246,7 +246,10 @@ toaster2.png    appliance
 
     [!code-csharp[PredictSingle](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#PredictSingle)]
 
-    [PredictionEngine 클래스](xref:Microsoft.ML.PredictionEngine%602)는 단일 데이터 인스턴스에 대한 예측을 수행하는 편리한 API입니다. 예측을 가져오려면 [Predict()](xref:Microsoft.ML.PredictionEngine%602.Predict%2A) 메서드를 사용합니다.
+    예측을 가져오려면 [Predict()](xref:Microsoft.ML.PredictionEngine%602.Predict%2A) 메서드를 사용합니다. [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602)은 데이터의 단일 인스턴스에 대한 예측을 수행할 수 있는 편리한 API입니다. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)은 스레드로부터 안전하지 않습니다. 단일 스레드 또는 프로토타입 환경에서 사용할 수 있습니다. 프로덕션 환경에서 성능 및 스레드 보안을 개선하려면 `PredictionEnginePool` 서비스를 사용합니다. 이 서비스는 애플리케이션 전체에서 사용할 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) 개체의 [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601)을 만듭니다. [ASP.NET Core 웹 API에서 `PredictionEnginePool`을 사용하는 방법](https://docs.microsoft.com/en-us/dotnet/machine-learning/how-to-guides/serve-model-web-api-ml-net#register-predictionenginepool-for-use-in-the-application)에 대한 자세한 내용은 이 가이드를 참조하세요.
+
+    > [!NOTE]
+    > `PredictionEnginePool` 서비스 확장은 현재 미리 보기 상태입니다.
 
 1. 예측 결과를 `ClassifySingleImage()` 메서드의 다음 코드 줄로 표시합니다.
 

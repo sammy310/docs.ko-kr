@@ -2,15 +2,15 @@
 title: '자습서: 영화 추천기 빌드 - 행렬 인수분해'
 description: 이 자습서에서는 .NET Core 콘솔 애플리케이션에서 ML.NET으로 영화 추천기를 빌드하는 방법을 보여 줍니다. 이 단계에서는 C#과 Visual Studio 2019를 사용합니다.
 author: briacht
-ms.date: 08/26/2019
+ms.date: 09/30/2019
 ms.custom: mvc, title-hack-0516
 ms.topic: tutorial
-ms.openlocfilehash: 4f80ebad0a280040e9f3329dc7b647bd53a48fa0
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 1db2ad6c078cb6201b2a6a4e2f8572f589cee684
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929489"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700959"
 ---
 # <a name="tutorial-build-a-movie-recommender-using-matrix-factorizaton-with-mlnet"></a>자습서: ML.NET에서 행렬 인수분해를 사용하여 영화 추천기 빌드
 
@@ -320,7 +320,10 @@ public static void UseModelForSinglePrediction(MLContext mlContext, ITransformer
 
 [!code-csharp[PredictionEngine](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#PredictionEngine "Create Prediction Engine")]
 
-[PredictionEngine 클래스](xref:Microsoft.ML.PredictionEngine%602)는 데이터의 단일 인스턴스를 전달한 다음, 이 단일 데이터 인스턴스에 대한 예측을 수행할 수 있는 편리한 API입니다.
+[PredictionEngine](xref:Microsoft.ML.PredictionEngine%602)은 데이터의 단일 인스턴스에 대한 예측을 수행할 수 있는 편리한 API입니다. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)은 스레드로부터 안전하지 않습니다. 단일 스레드 또는 프로토타입 환경에서 사용할 수 있습니다. 프로덕션 환경에서 성능 및 스레드 보안을 개선하려면 `PredictionEnginePool` 서비스를 사용합니다. 이 서비스는 애플리케이션 전체에서 사용할 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) 개체의 [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601)을 만듭니다. [ASP.NET Core 웹 API에서 `PredictionEnginePool`을 사용하는 방법](https://docs.microsoft.com/en-us/dotnet/machine-learning/how-to-guides/serve-model-web-api-ml-net#register-predictionenginepool-for-use-in-the-application)에 대한 자세한 내용은 이 가이드를 참조하세요.
+
+> [!NOTE]
+> `PredictionEnginePool` 서비스 확장은 현재 미리 보기 상태입니다.
 
 `testInput`이라는 `MovieRating`의 인스턴스를 만들고 `UseModelForSinglePrediction()` 메서드에서 다음 코드 줄로 다음 항목을 추가하여 예측 엔진에 전달합니다.
 
@@ -450,7 +453,7 @@ var options = new MatrixFactorizationTrainer.Options
 
 공동 작업 필터링을 사용하는 행렬 인수 분해 알고리즘은 영화 추천을 수행하는 유일한 방법입니다. 대부분의 경우 등급 데이터를 사용할 수 없고 사용자로부터 영화 기록만 사용할 수 있습니다. 다른 경우에는 사용자의 등급 데이터 이상만 가질 수 있습니다.
 
-| 알고리즘       | 시나리오           | 샘플  |
+| 알고리즘       | 시나리오           | 예제  |
 | ------------- |:-------------:| -----:|
 | 하나의 클래스 행렬 인수 분해 | userId 및 movieId만 있을 때 이 옵션을 사용합니다. 이 스타일 권장 사항은 공동 구매 시나리오 또는 함께 자주 구매되는 제품을 기반으로 합니다. 즉, 구매 주문 내역에 따라 고객에게 제품 세트를 추천합니다. | [>사용해 보기](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/MatrixFactorization_ProductRecommendation) |
 | 필드 인식 인수 분해 머신 | userId, productId 및 등급(예: 제품 설명 또는 제품 가격) 이외에 더 많은 기능이 있는 경우 이 옵션을 사용하여 권장 사항을 지정합니다. 이 메서드는 또한 공동 작업 필터링 접근 방식을 사용합니다. | [>사용해 보기](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/end-to-end-apps/Recommendation-MovieRecommender) |
@@ -459,7 +462,7 @@ var options = new MatrixFactorizationTrainer.Options
 
 공동 작업 필터링의 일반적인 문제 중 하나는 추론을 도출할 이전 데이터가 없는 새로운 사용자가 있을 때 발생하는 콜드 시작 문제입니다. 이 문제는 종종 새로운 사용자에게 프로필을 만들고 이전에 시청한 영화를 평가하도록 요청함으로써 해결됩니다. 이 메서드는 사용자에 다소 부담을 주지만 등급 기록이 없는 새로운 사용자에 대한 일부 시작 데이터를 제공합니다.
 
-## <a name="resources"></a>자료
+## <a name="resources"></a>리소스
 
 이 자습서에 사용된 데이터는 [MovieLens 데이터 세트](http://files.grouplens.org/datasets/movielens/)에서 파생되었습니다.
 

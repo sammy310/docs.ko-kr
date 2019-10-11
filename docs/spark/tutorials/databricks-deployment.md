@@ -4,12 +4,12 @@ description: Databricks에 .NET for Apache Spark 애플리케이션을 배포하
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: f90d0fa4bdefe94dcf8390698e6445fad77a1bc2
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 035a3c36337413153ee0370aec154d48b84a4711
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117932"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71957244"
 ---
 # <a name="deploy-a-net-for-apache-spark-application-to-databricks"></a>Databricks에 .NET for Apache Spark 애플리케이션 배포
 
@@ -119,11 +119,11 @@ Databricks를 사용하면 .NET for Apache Spark 앱을 기존 활성 클러스�
 
 3. 매개 변수를 적절하게 설정합니다.
 
-   ```
-   Main Class: org.apache.spark.deploy.dotnet.DotnetRunner
-   Arguments /dbfs/apps/<your-app-name>.zip <your-app-main-class>
-   ```
- 
+   | 매개 변수   | 값                                                |
+   |-------------|------------------------------------------------------|
+   | 기본 클래스  | org.apache.spark.deploy.dotnet.DotnetRunner          |
+   | 인수   | /dbfs/apps/<your-app-name>.zip <your-app-main-class> |
+
 4. 이전 섹션에서 **Init 스크립트**를 만든 기존 클러스터를 가리키도록 **클러스터**를 구성합니다.
 
 #### <a name="publish-and-run-your-app"></a>앱 게시 및 실행

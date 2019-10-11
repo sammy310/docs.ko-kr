@@ -2,12 +2,12 @@
 title: Docker 애플리케이션에 대한 외부 루프 DevOps 워크플로의 단계
 description: DevOps 워크플로의 "외부 루프"에 대한 단계 알아보기
 ms.date: 02/15/2019
-ms.openlocfilehash: e7a82d2e5a5d503e5efbe9ac8242b163baab1286
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 5687caff0c635e7add135654a8f564b2c509cbf8
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673710"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834567"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Docker 애플리케이션에 대한 외부 루프 DevOps 워크플로의 단계
 
@@ -104,7 +104,7 @@ Visual Studio Azure DevOps Services는 CI/CD 파이프라인에 사용하여 Doc
 
 단일 호스트를 사용하는 경우 Docker-Compose와 같은 Docker 명령을 사용하여 테스트할 관련 컨테이너를 빌드 및 배포하고 단일 VM에서 Docker 환경의 유효성을 검사할 수 있습니다. 그러나 DC/OS, Kubernetes 또는 Docker Swarm 등의 다른 오케스트레이터 클러스터로 작업하는 경우 선택한 클러스터/스케줄러에 따라 다른 메커니즘 또는 오케스트레이터를 통해 컨테이너를 배포해야 합니다.
 
-다음은 Docker 컨테이너에 대해 실행할 수 있는 몇몇 테스트 유형입니다.
+다음은 Docker 컨테이너에 대해 실행할 수 있는 몇 가지 테스트 유형입니다.
 
 - Docker 컨테이너에 대한 단위 테스트
 

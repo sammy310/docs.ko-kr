@@ -2,15 +2,15 @@
 title: '자습서: 아이리스 꽃 분류 - k-means 클러스터링'
 description: 클러스터링 시나리오에서 ML.NET을 사용하는 방법 알아보기
 author: pkulikov
-ms.date: 05/16/2019
+ms.date: 09/30/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18, title-hack-0516
-ms.openlocfilehash: e2aaeb8abc6981b420329f194aa7b82c90cae00a
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: e360cf2418e2003f9f40628c714e9e8ebd7c3e40
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929107"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698554"
 ---
 # <a name="tutorial-categorize-iris-flowers-using-k-means-clustering-with-mlnet"></a>자습서: ML.NET와 함께 k-means 클러스터링을 사용하여 아이리스 꽃 분류
 
@@ -156,6 +156,11 @@ ms.locfileid: "70929107"
 예측을 수행하려면 변환기 파이프라인을 통해 입력 형식의 인스턴스를 사용하고 출력 형식의 인스턴스를 생성하는 <xref:Microsoft.ML.PredictionEngine%602> 클래스를 사용합니다. 다음 줄을 `Main` 메서드에 추가하여 해당 클래스의 인스턴스를 만듭니다.
 
 [!code-csharp[Create predictor](~/samples/machine-learning/tutorials/IrisFlowerClustering/Program.cs#Predictor)]
+
+[PredictionEngine](xref:Microsoft.ML.PredictionEngine%602)은 데이터의 단일 인스턴스에 대한 예측을 수행할 수 있는 편리한 API입니다. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)은 스레드로부터 안전하지 않습니다. 단일 스레드 또는 프로토타입 환경에서 사용할 수 있습니다. 프로덕션 환경에서 성능 및 스레드 보안을 개선하려면 `PredictionEnginePool` 서비스를 사용합니다. 이 서비스는 애플리케이션 전체에서 사용할 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) 개체의 [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601)을 만듭니다. [ASP.NET Core 웹 API에서 `PredictionEnginePool`을 사용하는 방법](https://docs.microsoft.com/en-us/dotnet/machine-learning/how-to-guides/serve-model-web-api-ml-net#register-predictionenginepool-for-use-in-the-application)에 대한 자세한 내용은 이 가이드를 참조하세요.
+
+> [!NOTE]
+> `PredictionEnginePool` 서비스 확장은 현재 미리 보기 상태입니다.
 
 테스트 데이터 인스턴스를 수용할 수 있도록 `TestIrisData` 클래스를 만듭니다.
 

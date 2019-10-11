@@ -2,12 +2,12 @@
 title: '방법: 하위 항목 메서드 (Visual Basic)를 사용 하 여 단일 하위 항목 찾기'
 ms.date: 07/20/2015
 ms.assetid: 0c03468c-efc8-4140-98f3-fb67acd9e8e1
-ms.openlocfilehash: 7e90e7e8c4a6cd4c91b15037be0fa422dd2108e3
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: dbde5686d1b7670290d434c0a04515cbc10622fd
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68709085"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72249956"
 ---
 # <a name="how-to-find-a-single-descendant-using-the-descendants-method-visual-basic"></a>방법: 하위 항목 메서드 (Visual Basic)를 사용 하 여 단일 하위 항목 찾기
 <xref:System.Xml.Linq.XContainer.Descendants%2A> 축 메서드를 사용하여 고유하게 명명된 단일 요소를 찾는 코드를 신속하게 작성할 수 있습니다. 이 기법은 지정된 이름을 가진 특정 하위 요소를 찾으려는 경우 특히 유용합니다. 원하는 요소를 탐색하는 코드를 작성할 수도 있지만 <xref:System.Xml.Linq.XContainer.Descendants%2A> 축을 사용하여 코드를 작성하는 것이 더 빠르고 쉬운 경우가 많습니다.  
@@ -39,7 +39,7 @@ Console.WriteLine(grandChild3)
   
  이 코드의 결과는 다음과 같습니다.  
   
-```  
+```console  
 GC3 Value  
 ```  
   
@@ -76,10 +76,10 @@ End Module
   
  이 코드의 결과는 다음과 같습니다.  
   
-```  
+```console  
 GC3 Value  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [기본 쿼리 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

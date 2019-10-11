@@ -2,12 +2,12 @@
 title: Web API를 사용하여 마이크로 서비스 애플리케이션 계층 구현
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | Web API 애플리케이션 계층에서 종속성 주입 및 중재자 패턴과 해당 구현 정보를 이해합니다.
 ms.date: 10/08/2018
-ms.openlocfilehash: c8447cfcd3155a873d61ee9287f58774392c279d
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 0f6f47dd5f67fb18695715e5cfc9179206ef6bcf
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68676580"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834359"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Web API를 사용하여 마이크로 서비스 에플리케이션 계층 구현
 
@@ -203,7 +203,7 @@ Autofac에는 [이름 규칙에 따라 어셈블리 및 등록 형식 검사](ht
 
 명령은 명령을 실행하는 데 필요한 모든 정보가 있는 데이터 필드나 컬렉션이 포함된 클래스로 구현됩니다. 명령은 변경이나 트랜잭션을 요청하는 데 명확히 사용되는 특별한 종류의 DTO(데이터 전송 개체)입니다. 명령 자체는 명령 처리에 필요한 정확한 정보만을 기반으로 합니다.
 
-다음 예제는 간소화된 CreateOrderCommand 클래스입니다. eShopOnContainers의 Ordering(주문) 마이크로 서비스에 사용되는 변경할 수 없는 명령입니다.
+다음 예제는 간소화된 `CreateOrderCommand` 클래스를 보여줍니다. eShopOnContainers의 Ordering(주문) 마이크로 서비스에 사용되는 변경할 수 없는 명령입니다.
 
 ```csharp
 // DDD and CQRS patterns comment
@@ -215,7 +215,7 @@ Autofac에는 [이름 규칙에 따라 어셈블리 및 등록 형식 검사](ht
 // http://cqrs.nu/Faq
 // https://docs.spine3.org/motivation/immutability.html
 // http://blog.gauffin.org/2012/06/griffin-container-introducing-command-support/
-// https://msdn.microsoft.com/library/bb383979.aspx
+// https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties
 [DataContract]
 public class CreateOrderCommand
     :IAsyncRequest<bool>
@@ -287,7 +287,7 @@ public class CreateOrderCommand
 
 명령이 직렬화/역 직렬화 프로세스를 수행하는 것을 의도하거나 기대한다면 속성에는 전용 setter와 `[DataMember]`(또는 `[JsonProperty]`) 특성이 있어야 하며, 그렇지 않으면 deserializer는 필요한 값을 사용하여 대상에 개체를 다시 구성할 수 없습니다.
 
-예를 들어 주문 생성을 위한 명령 클래스가 데이터 측면에서는 생성하려는 주문과 유사할 수 있지만 동일한 특성이 필요하지 않을 수도 있습니다. 예를 들어 CreateOrderCommand에는 주문 ID가 없는데, 이것은 주문이 아직 생성되지 않았기 때문입니다.
+예를 들어 주문 생성을 위한 명령 클래스가 데이터 측면에서는 생성하려는 주문과 유사할 수 있지만 동일한 특성이 필요하지 않을 수도 있습니다. 예를 들어 `CreateOrderCommand`에는 주문 ID가 없는데, 이것은 주문이 아직 생성되지 않았기 때문입니다.
 
 많은 명령 클래스는 간단하며, 변경이 필요한 상태에 대해 몇 개의 필드만 필요할 수 있습니다. 이런 경우는 다음과 유사한 명령을 사용하여 주문의 상태를 "처리 중"에서 "지불됨" 또는 "배송됨"으로 변경하는 경우가 될 수 있습니다.
 
@@ -335,7 +335,7 @@ public class UpdateOrderStatusCommand
 
 논리가 너무 많아져서 명령 처리기가 너무 복잡해지면 코드 냄새가 될 수 있습니다. 검토 후 도메인 논리를 찾으면 코드를 리팩터링하여 해당 도메인 동작을 도메인 개체의 메서드(집계 루트 및 자식 엔터티)로 이동합니다.
 
-명령 처리기 클래스의 예로, 다음 코드는 이 장의 시작 부분에 표시된 것과 동일한 CreateOrderCommandHandler 클래스입니다. 이 경우 도메인 모델 개체/집합체를 사용하는 작업과 Handle 메서드에 중점을 두겠습니다.
+명령 처리기 클래스의 예인 다음 코드는 이 장의 시작 부분에 표시된 것과 동일한 `CreateOrderCommandHandler` 클래스입니다. 이 경우 도메인 모델 개체/집합체를 사용하는 작업과 Handle 메서드에 중점을 두겠습니다.
 
 ```csharp
 public class CreateOrderCommandHandler
@@ -480,7 +480,10 @@ public class MyMicroserviceController : Controller
 {
     public MyMicroserviceController(IMediator mediator,
                                     IMyMicroserviceQueries microserviceQueries)
-    // ...
+    {
+        // ...
+    }
+}
 ```
 
 중재자가 명확하고 간단한 Web API 컨트롤러 생성자를 제공하는 것을 볼 수 있습니다. 또한, 컨트롤러 메서드 내에서 중재자(mediator) 개체에 명령을 보내는 코드는 거의 한 줄입니다.

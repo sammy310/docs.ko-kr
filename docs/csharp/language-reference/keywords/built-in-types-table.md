@@ -7,17 +7,17 @@ helpviewer_keywords:
 - types [C#], built-in
 - built-in C# types
 ms.assetid: 54f901f2-bf2f-472c-ae8d-73e8ecfc57fe
-ms.openlocfilehash: 1f7248a23d53fb90202595defbf70e231bd1d5d3
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 687990cc86b3303bdef96af26be63af47410f8c0
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69605979"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698789"
 ---
 # <a name="built-in-types-table-c-reference"></a>기본 제공 형식 표(C# 참조)
 
-다음 표에서는 <xref:System> 네임스페이스에 미리 정의된 형식의 별칭인 기본 제공 C# 형식의 키워드를 보여 줍니다.  
-  
+다음 표에서는 <xref:System> 네임스페이스에 미리 정의된 형식의 별칭인 기본 제공 C# 형식의 키워드를 보여줍니다.
+
 |C# 형식|.NET 형식|  
 |--------------|-------------------------|  
 |[bool](bool.md)|<xref:System.Boolean?displayProperty=nameWithType>|  
@@ -38,9 +38,9 @@ ms.locfileid: "69605979"
   
 ## <a name="remarks"></a>설명
 
-`object` 및 `string`을 제외하고 표에 있는 모든 형식을 단순 형식이라고 합니다.  
-  
-.NET 형식 및 C# 형식 키워드 별칭은 서로 바꿔서 사용할 수 있습니다. 예를 들어 다음 선언 중 하나를 사용하여 정수 변수를 선언할 수 있습니다.  
+`object` 및 `string`을 제외하고 표에 있는 모든 형식을 단순 형식이라고 합니다.
+
+.NET 형식 및 C# 형식 키워드 별칭은 서로 바꿔서 사용할 수 있습니다. 예를 들어 다음 선언 중 하나를 사용하여 정수 변수를 선언할 수 있습니다.
 
 ```csharp
 int x = 123;

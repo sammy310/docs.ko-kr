@@ -2,12 +2,12 @@
 title: 마이크로 서비스 기반 복합 UI 만들기
 description: 마이크로 서비스 아키텍처 백 엔드에 대해서만은 아닙니다. 프런트 엔드에서 사용하는 Peek 뷰를 가져옵니다.
 ms.date: 09/20/2018
-ms.openlocfilehash: 0d1825d6183b79a0e10f70fc6cfee6ca79a837d8
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 60e0e6d59738f3f1fec31226cb842ceb1af303e4
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68817835"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834369"
 ---
 # <a name="creating-composite-ui-based-on-microservices"></a>마이크로 서비스 기반 복합 UI 만들기
 
@@ -15,7 +15,7 @@ ms.locfileid: "68817835"
 
 그림 4-20에서는 모놀리식 클라이언트 애플리케이션에서 마이크로 서비스를 사용하는 간단한 방법을 보여줍니다. 물론 HTML 및 JavaScript를 생성하면 ASP.NET MVC 서비스가 생성될 수 있습니다. 그림은 마이크로 서비스를 사용하는 단일(모놀리식) 클라이언트 UI가 있음을 간단히 강조 표시합니다. 여기서는 UI 셰이프(HTML 및 JavaScript)가 아니라 논리 및 데이터에만 집중합니다.
 
-![개별 마이크로 서비스에 연결하는 모놀리식 UI 애플리케이션.](./media/image20.png)
+![마이크로 서비스에 연결하는 모놀리식 UI 앱의 다이어그램입니다.](./media/microservice-based-composite-ui-shape-layout/monolith-ui-consume-microservices.png)
 
 **그림 4-20**. 백 엔드 마이크로 서비스를 소비하는 모놀리식 UI 애플리케이션
 
@@ -25,7 +25,7 @@ ms.locfileid: "68817835"
 
 그림 4-21은 복합 UI 방법의 버전을 보여줍니다. 다양한 기법을 기반으로 세분화된 부분을 집계하는 다른 마이크로 서비스가 있기 때문에 이러한 작업이 간소화됩니다. 기존 웹 접근 방식(ASP.NET MVC) 또는 SPA(단일 페이지 애플리케이션)를 빌드하는 여부에 따라 다릅니다.
 
-![복합 UI 애플리케이션에서 각 UI 섹션은 미니 게이트웨이처럼 작동하는 UI 컴퍼지션 마이크로 서비스에 의해 생성됩니다.](./media/image21.png)
+![많은 뷰 모델로 구성된 복합 UI의 다이어그램입니다.](./media/microservice-based-composite-ui-shape-layout/microservice-generate-composite-ui.png)
 
 **그림 4-21**. 백 엔드 마이크로 서비스에서 셰이프된 복합 UI 애플리케이션 예제
 

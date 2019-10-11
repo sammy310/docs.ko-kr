@@ -3,20 +3,20 @@ title: 클래스 및 개체 - C# 소개 자습서
 description: 첫 번째 C# 프로그램을 만들고 개체 지향 개념을 살펴봅니다.
 ms.date: 10/11/2017
 ms.custom: mvc
-ms.openlocfilehash: 092639e86b3e8e683a7d5f6ecf5b732991581b71
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: f4199f709ee0011af9f00f6909193f08345bc49e
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70850729"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834113"
 ---
 # <a name="explore-object-oriented-programming-with-classes-and-objects"></a>클래스 및 개체를 사용한 개체 지향 프로그래밍 살펴보기
 
-이 자습서에서는 개발에 사용할 수 있는 머신이 있다고 예상합니다. .NET 자습서 [Hello World 10분 완성](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)에는 Mac, PC 또는 Linux의 로컬 개발 환경 설정에 대한 지침이 포함되어 있습니다. 사용할 명령에 대한 간단한 개요는 [개발 도구 익히기](local-environment.md)에 자세한 정보의 링크와 함께 나와 있습니다.
+이 자습서에서는 개발에 사용할 수 있는 머신이 있다고 예상합니다. .NET 자습서 [Hello World 10분 완성](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)에는 Windows, Linux 또는 macOS의 로컬 개발 환경 설정에 대한 지침이 포함되어 있습니다. 사용할 명령에 대한 간단한 개요는 [개발 도구 익히기](local-environment.md)에 자세한 정보의 링크와 함께 나와 있습니다.
 
 ## <a name="create-your-application"></a>애플리케이션 만들기
 
-터미널 창을 사용하여 **클래스**라는 디렉터리를 만듭니다. 거기에 애플리케이션을 빌드할 것입니다. 해당 디렉터리로 변경하고 콘솔 창에 `dotnet new console`을 입력합니다. 이 명령은 애플리케이션을 만듭니다. **Program.cs**를 엽니다. 다음과 같이 표시됩니다.
+터미널 창을 사용하여 *클래스*라는 디렉터리를 만듭니다. 거기에 애플리케이션을 빌드할 것입니다. 해당 디렉터리로 변경하고 콘솔 창에 `dotnet new console`을 입력합니다. 이 명령은 애플리케이션을 만듭니다. *Program.cs*를 엽니다. 다음과 같이 표시됩니다.
 
 ```csharp
 using System;
@@ -33,7 +33,7 @@ namespace classes
 }
 ```
 
-이 자습서에서는 은행 계좌를 나타내는 새로운 형식을 만듭니다. 일반적으로 개발자는 여러 텍스트 파일에 각 클래스를 정의합니다. 그러면 프로그램의 크기가 커질 때 쉽게 관리할 수 있습니다.  **클래스** 디렉터리에 **BankAccount.cs**라는 새 파일을 만듭니다. 
+이 자습서에서는 은행 계좌를 나타내는 새로운 형식을 만듭니다. 일반적으로 개발자는 여러 텍스트 파일에 각 클래스를 정의합니다. 그러면 프로그램의 크기가 커질 때 쉽게 관리할 수 있습니다. *클래스* 디렉터리에 *BankAccount.cs*라는 새 파일을 만듭니다. 
 
 이 파일에는 ***은행 계좌***의 정의가 포함됩니다. 개체 지향 프로그래밍은 ***클래스*** 형태로 형식을 생성하여 코드를 구성합니다. 이러한 클래스에는 특정 엔티티를 나타내는 코드가 포함됩니다. `BankAccount` 클래스는 은행 계좌를 나타냅니다. 코드는 메서드 및 속성을 통해 특정 작업을 구현합니다. 이 자습서에서 은행 계좌는 다음 동작을 지원합니다.
 
@@ -89,7 +89,7 @@ public BankAccount(string name, decimal initialBalance)
 }
 ```
 
-생성자는 [`new`](../../language-reference/operators/new-operator.md)를 사용하여 개체를 만들 때 호출됩니다. ***program.cs***의 `Console.WriteLine("Hello World!");` 줄을 다음 줄로 바꿉니다(`<name>`을 사용자의 이름으로 바꿈).
+생성자는 [`new`](../../language-reference/operators/new-operator.md)를 사용하여 개체를 만들 때 호출됩니다. *Program.cs*의 `Console.WriteLine("Hello World!");` 줄을 다음 줄로 바꿉니다(`<name>`을 사용자의 이름으로 바꿈).
 
 ```csharp
 var account = new BankAccount("<name>", 1000);
@@ -119,15 +119,15 @@ accountNumberSeed++;
 
 은행 계좌 클래스는 제대로 작동하려면 예금과 인출을 허용해야 합니다. 계좌의 모든 트랜잭션에 대한 저널을 만들어 예금과 인출을 구현하겠습니다. 단순히 각 트랜잭션의 잔액을 업데이트하는 것보다 많은 장점이 있습니다. 기록을 사용하여 모든 트랜잭션을 감사하고 일별 잔액을 관리할 수 있습니다. 필요한 경우 모든 트랜잭션의 기록에서 잔액을 계산함으로써, 수정된 단일 트랜잭션의 오류가 다음 계산의 잔액에 올바르게 반영됩니다.
 
-트랜잭션을 나타내는 새 형식을 생성해 보겠습니다. 이는 책임이 없는 단순 형식입니다. 몇 가지 속성이 필요합니다. ***Transaction.cs***라는 새 파일을 만듭니다. 파일에 다음 코드를 추가합니다.
+트랜잭션을 나타내는 새 형식을 생성해 보겠습니다. 이는 책임이 없는 단순 형식입니다. 몇 가지 속성이 필요합니다. *Transaction.cs*라는 새 파일을 만듭니다. 파일에 다음 코드를 추가합니다.
 
-[!code-csharp[Transaction](../../../../samples/csharp/classes-quickstart/Transaction.cs "Transaction declaration")]
+[!code-csharp[Transaction](~/samples/csharp/classes-quickstart/Transaction.cs)]
 
 이제 `Transaction` 개체의 <xref:System.Collections.Generic.List%601>를 `BankAccount` 클래스에 추가하겠습니다. 다음 선언을 추가합니다.
 
-[!code-csharp[TransactionDecl](../../../../samples/csharp/classes-quickstart/BankAccount.cs#TransactionDeclaration "Transaction declaration")]
+[!code-csharp[TransactionDecl](~/samples/csharp/classes-quickstart/BankAccount.cs#TransactionDeclaration)]
 
-<xref:System.Collections.Generic.List%601> 클래스를 사용하려면 다른 네임스페이스를 가져와야 합니다. **BankAccount.cs**의 시작 부분에 다음을 추가합니다.
+<xref:System.Collections.Generic.List%601> 클래스를 사용하려면 다른 네임스페이스를 가져와야 합니다. *BankAccount.cs*의 시작 부분에 다음을 추가합니다.
 
 ```csharp
 using System.Collections.Generic;
@@ -135,7 +135,7 @@ using System.Collections.Generic;
 
 이제 `Balance`를 보고하는 방법을 변경해 보겠습니다.  모든 트랜잭션의 값을 합하여 찾을 수 있습니다. `BankAccount` 클래스에서 `Balance`의 선언을 다음과 같이 수정합니다.
 
-[!code-csharp[BalanceComputation](../../../../samples/csharp/classes-quickstart/BankAccount.cs#BalanceComputation "Computing the balance")]
+[!code-csharp[BalanceComputation](~/samples/csharp/classes-quickstart/BankAccount.cs#BalanceComputation)]
 
 이 예제에서는 ***속성***의 중요한 측면을 보여 줍니다. 이제 다른 프로그래머가 값을 요청할 때 잔액을 계산합니다. 계산은 모든 트랜잭션을 열거하고 합계를 현재 잔액으로 제공합니다.
 
@@ -143,13 +143,13 @@ using System.Collections.Generic;
 
 이는 ***예외***의 개념을 소개합니다. 메서드가 작업을 성공적으로 완료할 수 없음을 나타내는 일반적인 방법은 예외를 throw하는 것입니다. 예외 형식 및 관련 메시지는 오류를 설명합니다. 여기에서 `MakeDeposit` 메서드는 인출 금액이 음수인 경우 예외를 throw합니다. 인출 금액이 음수이거나 인출 적용 결과로 음수의 잔액이 발생하는 경우 `MakeWithdrawal` 메서드는 예외를 throw합니다.
 
-[!code-csharp[DepositAndWithdrawal](../../../../samples/csharp/classes-quickstart/BankAccount.cs#DepositAndWithdrawal "Make deposits and withdrawals")]
+[!code-csharp[DepositAndWithdrawal](~/samples/csharp/classes-quickstart/BankAccount.cs#DepositAndWithdrawal)]
 
 [`throw`](../../language-reference/keywords/throw.md) 문은 예외를 **throw**합니다. 현재 블록의 실행이 종료되고 제어가 호출 스택에 있는 처음 일치하는 `catch` 블록으로 전달됩니다. `catch` 블록을 추가하여 나중에 이 코드를 테스트합니다.
 
 생성자는 잔액을 직접 업데이트하지 않고 초기 트랜잭션을 추가하도록 변경해야 합니다. `MakeDeposit` 메서드를 이미 작성했으므로 생성자에서 호출합니다. 완성된 생성자는 다음과 같아야 합니다.
 
-[!code-csharp[Constructor](../../../../samples/csharp/classes-quickstart/BankAccount.cs#Constructor "The final version of the constructor")]
+[!code-csharp[Constructor](~/samples/csharp/classes-quickstart/BankAccount.cs#Constructor)]
 
 <xref:System.DateTime.Now?displayProperty=nameWithType>은 현재 날짜 및 시간을 반환하는 속성입니다. `Main` 메서드에 예금 및 인출을 몇 개 추가하여 다음을 테스트합니다.
 
@@ -196,11 +196,11 @@ catch (InvalidOperationException e)
 
 이 자습서를 완료하기 위해 트랜잭션 기록에 대해 `string`을 생성하는 `GetAccountHistory` 메서드를 작성할 수 있습니다. `BankAccount` 형식에 이 메서드를 추가합니다.
 
-[!code-csharp[History](../../../../samples/csharp/classes-quickstart/BankAccount.cs#History "Display transaction history")]
+[!code-csharp[History](~/samples/csharp/classes-quickstart/BankAccount.cs#History)]
 
 <xref:System.Text.StringBuilder> 클래스를 사용하여 각 트랜잭션에 대해 한 줄을 포함하는 문자열의 형식을 지정합니다. 이러한 자습서의 앞부분에서 문자열 형식 지정 코드를 살펴보았습니다. 새 문자는 `\t`입니다. 이 새 문자는 탭을 삽입하여 출력 형식을 지정합니다.
 
-**Program.cs**에서 테스트하려면 이 줄을 추가합니다.
+*Program.cs*에서 테스트하려면 이 줄을 추가합니다.
 
 ```csharp
 Console.WriteLine(account.GetAccountHistory());

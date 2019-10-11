@@ -2,12 +2,12 @@
 title: 논리적 아키텍처 대 물리적 아키텍처
 description: 논리적 및 물리적 아키텍처 사이의 차이점 이해하기.
 ms.date: 09/20/2018
-ms.openlocfilehash: c269369e9b5391e8d25ece46e6b08e34a82fbbba
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 8d1bfca190eb9b18d46625fa4afdec963eb07054
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673060"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834395"
 ---
 # <a name="logical-architecture-versus-physical-architecture"></a>논리적 아키텍처 대 물리적 아키텍처
 
@@ -25,7 +25,7 @@ ms.locfileid: "68673060"
 
 그림 4-8에서 볼 수 있듯이, 카탈로그 비즈니스 마이크로 서비스는 여러 서비스 또는 프로세스로 구성될 수 있습니다. 이들은 여러 ASP.NET Web API 서비스 또는 HTTP 또는 다른 프로토콜을 사용하는 다른 종류의 서비스일 수 있습니다. 더 중요한 것은, 이들 서비스가 동일한 비즈니스 도메인과 관련하여 응집력을 갖는 한 동일한 데이터를 공유할 수 있습니다.
 
-![API 서비스, 검색 서비스와 SQL Server 데이터베이스가 포함된 카탈로그 비즈니스 마이크로 서비스의 다이어그램.](./media/image8.png)
+![물리적 서버를 사용하는 카탈로그 비즈니스 마이크로 서비스를 보여 주는 다이어그램입니다.](./media/logical-versus-physical-architecture/multiple-physical-services.png)
 
 **그림 4-8**. 여러 물리적 서비스가 있는 비즈니스 마이크로 서비스
 

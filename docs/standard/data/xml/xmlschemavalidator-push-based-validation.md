@@ -1,5 +1,5 @@
 ---
-title: XmlSchemaValidator 푸시 기반 유효성 검사
+title: XmlSchemaValidator 밀어넣기 기반 유효성 검사
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,14 +8,14 @@ dev_langs:
 ms.assetid: 911d4460-dd91-4958-85b2-2ca3299f9ec6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b78430c03b0d62dcf0e84577cd337240d3729d0e
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
-ms.translationtype: HT
+ms.openlocfilehash: a420a134eda6c62758b0d218e3c0a4a4922b048c
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046539"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72250052"
 ---
-# <a name="xmlschemavalidator-push-based-validation"></a>XmlSchemaValidator 푸시 기반 유효성 검사
+# <a name="xmlschemavalidator-push-based-validation"></a>XmlSchemaValidator 밀어넣기 기반 유효성 검사
 
 <xref:System.Xml.Schema.XmlSchemaValidator> 클래스는 밀어넣기 기반 방식으로 XML 스키마에 대해 XML 데이터의 유효성을 검사할 수 있는 효과적인 고성능 메커니즘을 제공합니다. 예를 들어, <xref:System.Xml.Schema.XmlSchemaValidator> 클래스를 사용하면 XML 문서로 serialize한 다음 유효성 검사 XML 판독기를 사용하여 문서를 다시 구문 분석할 필요 없이 내부에서 직접 XML Infoset의 유효성을 검사할 수 있습니다.
 
@@ -189,25 +189,25 @@ XML Infoset에서 요소, 특성 및 내용의 유효성을 검사하는 데 사
 ```vb
 Shared dateTimeGetterContent As Object
 
-Shared Function dateTimeGetterHandle() As Object
+Shared Function DateTimeGetterHandle() As Object
     Return dateTimeGetterContent
 End Function
 
-Shared Function dateTimeGetter(ByVal dateTime As DateTime) As XmlValueGetter
+Shared Function DateTimeGetter(dateTime As DateTime) As XmlValueGetter
     dateTimeGetterContent = dateTime
-    Return New XmlValueGetter(AddressOf dateTimeGetterHandle)
+    Return New XmlValueGetter(AddressOf DateTimeGetterHandle)
 End Function
 ```
 
 ```csharp
 static object dateTimeGetterContent;
 
-static object dateTimeGetterHandle()
+static object DateTimeGetterHandle()
 {
     return dateTimeGetterContent;
 }
 
-static XmlValueGetter dateTimeGetter(DateTime dateTime)
+static XmlValueGetter DateTimeGetter(DateTime dateTime)
 {
     dateTimeGetterContent = dateTime;
     return new XmlValueGetter(dateTimeGetterHandle);
@@ -260,11 +260,11 @@ static XmlValueGetter dateTimeGetter(DateTime dateTime)
 ```vb
 Dim reader As XmlReader =  XmlReader.Create("input.xml")
 
-Dim schemaSet As XmlSchemaSet =  New XmlSchemaSet()
+Dim schemaSet As New XmlSchemaSet()
 schemaSet.Add(Nothing, "schema.xsd")
-Dim manager As XmlNamespaceManager =  New XmlNamespaceManager(reader.NameTable)
+Dim manager As New XmlNamespaceManager(reader.NameTable)
 
-Dim validator As XmlSchemaValidator =  New XmlSchemaValidator(reader.NameTable,schemaSet,manager,XmlSchemaValidationFlags.None)
+Dim validator As New XmlSchemaValidator(reader.NameTable,schemaSet,manager,XmlSchemaValidationFlags.None)
 validator.Initialize()
 
 validator.ValidateElement("book", "", Nothing)
@@ -303,11 +303,11 @@ validator.ValidateEndElement(Nothing)
 ```csharp
 XmlReader reader = XmlReader.Create("input.xml");
 
-XmlSchemaSet schemaSet = new XmlSchemaSet();
+var schemaSet = new XmlSchemaSet();
 schemaSet.Add(null, "schema.xsd");
-XmlNamespaceManager manager = new XmlNamespaceManager(reader.NameTable);
+var manager = new XmlNamespaceManager(reader.NameTable);
 
-XmlSchemaValidator validator = new XmlSchemaValidator(reader.NameTable, schemaSet, manager, XmlSchemaValidationFlags.None);
+var validator = new XmlSchemaValidator(reader.NameTable, schemaSet, manager, XmlSchemaValidationFlags.None);
 validator.Initialize();
 
 validator.ValidateElement("book", "", null);
@@ -347,7 +347,7 @@ validator.ValidateEndElement(null);
 validator.ValidateEndElement(null);
 ```
 
- 이 예제에서는 다음 XML을 입력으로 사용합니다.
+ 이 예제에서는 다음 XML을 입력으로 사용 합니다.
 
 ```xml
 <xs:schema xmlns:xs="http://www.w3c.org/2001/XMLSchema">
@@ -361,7 +361,7 @@ validator.ValidateEndElement(null);
 </xs:schema>
 ```
 
-이 예제에서는 다음 XSD 스키마를 입력으로 사용합니다.
+이 예제에서는 다음 XSD 스키마를 입력으로 사용 합니다.
 
 ```xml
 <book>
@@ -404,7 +404,7 @@ validator.ValidateEndElement(null);
 다음은 소개 단원의 예제에서 가져온 것으로, 스키마 유효성 검사 중에 발생한 스키마 유효성 검사 경고 및 오류를 받는 <xref:System.Xml.Schema.ValidationEventHandler>의 예제입니다.
 
 ```vb
-Shared Sub SchemaValidationEventHandler(ByVal sender As Object, ByVal e As ValidationEventArgs)
+Shared Sub SchemaValidationEventHandler(sender As Object, e As ValidationEventArgs)
 
     Select Case e.Severity
         Case XmlSeverityType.Error
@@ -440,9 +440,9 @@ static void SchemaValidationEventHandler(object sender, ValidationEventArgs e)
 
 다음 표에서는 <xref:System.Xml.Schema.XmlSchemaValidator> 클래스의 상태 전환 및 각 상태에서 수행할 수 있는 메서드 호출의 시퀀스와 발생에 대해 설명합니다.
 
-|시스템 상태|전환|
+|State|전환|
 |-----------|----------------|
-|Validate|<xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A> (<xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A> &#124; TopLevel*) <xref:System.Xml.Schema.XmlSchemaValidator.EndValidation%2A>|
+|유효성 검사|<xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A> (<xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A> &#124; TopLevel*) <xref:System.Xml.Schema.XmlSchemaValidator.EndValidation%2A>|
 |TopLevel|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateWhitespace%2A> &#124; <xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A> &#124; 요소|
 |요소|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>* (<xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndOfAttributes%2A> Content\*)? <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A> &#124;<br /><br /> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>\* <xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A> &#124;<br /><br /> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>\* <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndOfAttributes%2A> Content\* <xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A> &#124;|
 |콘텐츠|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateWhitespace%2A> &#124; <xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A> &#124; 요소|
@@ -454,7 +454,7 @@ static void SchemaValidationEventHandler(object sender, ValidationEventArgs e)
 
 다음 표에서는 위의 상태 전환 표에 나타난 문장 부호가 <xref:System.Xml.Schema.XmlSchemaValidator> 클래스 상태 전환의 각 상태에 대해 호출할 수 있는 메서드와 기타 상태에 미치는 영향을 설명합니다.
 
-|기호|설명|
+|Symbol|설명|
 |------------|-----------------|
 |&#124;|세로 막대 앞이나 뒤의 메서드 또는 상태를 호출할 수 있습니다.|
 |?|물음표 앞의 메서드나 상태는 선택 항목이지만 이 메서드나 상태를 호출할 경우에는 한 번만 호출할 수 있습니다.|
@@ -478,12 +478,12 @@ XML Infoset에서 요소, 특성 및 내용의 유효성을 검사하는 데 사
 |<xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A>|컨텍스트 요소의 contentType이 Mixed인 경우 <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A>는 다음 위치에 필요한 요소의 시퀀스를 반환합니다.<br /><br /> 컨텍스트 요소의 contentType이 TextOnly 또는 Empty인 경우 <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A>는 빈 배열을 반환합니다.<br /><br /> 컨텍스트 요소의 contentType이 ElementOnly인 경우 <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A>는 다음 위치에 필요한 요소의 시퀀스를 반환하지만 유효성 검사 오류가 발생합니다.|<xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A>는 특성의 유효성이 검사되지 않은 컨텍스트 요소의 목록을 반환합니다.|위와 동일합니다.|
 |<xref:System.Xml.Schema.XmlSchemaValidator.ValidateWhitespace%2A>|컨텍스트 공백이 최상위 공백이면 <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A>가 빈 배열을 반환합니다.<br /><br /> 그렇지 않으면 <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> 메서드의 동작이 <xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A>와 동일하게 됩니다.|컨텍스트 공백이 최상위 공백이면 <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A>가 빈 배열을 반환합니다.<br /><br /> 그렇지 않으면 <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> 메서드의 동작이 <xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A>와 동일하게 됩니다.|위와 동일합니다.|
 |<xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A>|<xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A>는 컨텍스트 요소(가능한 형제) 뒤에 필요한 요소의 시퀀스를 반환합니다.|<xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A>는 특성의 유효성이 검사되지 않은 컨텍스트 요소의 목록을 반환합니다.<br /><br /> 컨텍스트 요소에 부모가 없을 경우 <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A>는 빈 목록을 반환합니다. 컨텍스트 요소는 <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A>가 호출된 현재 요소의 부모입니다.|위와 동일합니다.|
-|<xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A>|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A>와 동일합니다.|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A>와 동일합니다.|위와 동일합니다.|
+|<xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A>|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A>와 같습니다.|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A>와 같습니다.|위와 동일합니다.|
 |<xref:System.Xml.Schema.XmlSchemaValidator.EndValidation%2A>|빈 배열을 반환합니다.|빈 배열을 반환합니다.|위와 동일합니다.|
 
 > [!NOTE]
 > <xref:System.Xml.Schema.XmlSchemaValidator> 클래스의 다양한 속성이 반환하는 값은 위 표의 메서드를 호출해도 변경되지 않습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Xml.Schema.XmlSchemaValidator>

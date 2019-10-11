@@ -1,15 +1,15 @@
 ---
-title: '방법: (XPath 및 LINQ to XML) 관련된 요소 찾기 (Visual Basic)'
+title: '방법: 관련 요소 찾기 (XPath-LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 6b0ef058-d704-48a5-98cd-33f00d088af9
-ms.openlocfilehash: 58137a1bca93c0281424ba457569631a4b513a55
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a430291925037f16883a27ca9deea5a4ec7a8175
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780434"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72250072"
 ---
-# <a name="how-to-find-related-elements-xpath-linq-to-xml-visual-basic"></a>방법: (XPath 및 LINQ to XML) 관련된 요소 찾기 (Visual Basic)
+# <a name="how-to-find-related-elements-xpath-linq-to-xml-visual-basic"></a>방법: 관련 요소 찾기 (XPath-LINQ to XML) (Visual Basic)
 이 항목에서는 다른 요소의 값에 의해 참조되는 특성을 기준으로 선택하여 요소를 가져오는 방법을 비교합니다.  
   
  XPath 식은 다음과 같습니다.  
@@ -55,7 +55,7 @@ Console.WriteLine(customer1)
   
  이 예제는 다음과 같은 출력을 생성합니다.  
   
-```  
+```console
 Results are identical  
 <Customer CustomerID="HUNGC">  
   <CompanyName>Hungry Coyote Import Store</CompanyName>  
@@ -73,6 +73,6 @@ Results are identical
 </Customer>  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
-- [XPath 사용자 (Visual Basic)를 위한 LINQ to XML](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [XPath 사용자에 대 한 LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

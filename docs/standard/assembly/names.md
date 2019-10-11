@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 8f8c2c90-f15d-400e-87e7-a757e4f04d0e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 207460bc66c7d19558a69828797408df4ad92d64
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 22e35450460436e164db922fce76a53c437f6bdf
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972632"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835316"
 ---
 # <a name="assembly-names"></a>어셈블리 이름
 어셈블리 이름은 메타데이터에 저장되고 어셈블리 범위 및 애플리케이션에 의한 사용에 상당한 영향을 미칩니다. 강력한 이름의 어셈블리에는 어셈블리의 이름, 문화권, 공개 키 및 버전 번호가 포함된 정규화된 이름이 있습니다. 이 이름을 보통 표시 이름이라고 하고 로드된 어셈블리의 경우 <xref:System.Reflection.Assembly.FullName%2A> 속성을 사용하여 가져올 수 있습니다.  
@@ -30,7 +30,7 @@ myTypes, Version=1.0.1234.0, Culture=en-US, PublicKeyToken=b77a5c561934e089c, Pr
   
  어셈블리의 형식을 요청하는 코드에는 정규화된 어셈블리 이름을 사용해야 합니다. 이것을 정규화된 바인딩이라고 합니다. .NET Framework에서 어셈블리를 참조할 경우 어셈블리 이름만 지정하는 부분 바인딩은 허용되지 않습니다.  
   
- .NET Framework를 구성하는 어셈블리에 대한 모든 어셈블리 참조에는 어셈블리의 정규화된 이름이 포함되어야 합니다. 예를 들어 System.Data를 참조하려면 버전 1.0의 .NET Framework 어셈블리에 다음이 포함됩니다.  
+ .NET Framework를 구성하는 어셈블리에 대한 모든 어셈블리 참조에는 어셈블리의 정규화된 이름도 포함되어야 합니다. 예를 들어 버전 1.0의 System.Data .NET Framework 어셈블리에 대한 참조에는 다음이 포함됩니다.  
   
 ```  
 System.data, version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089  

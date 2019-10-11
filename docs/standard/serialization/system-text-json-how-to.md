@@ -1,5 +1,5 @@
 ---
-title: JSON을 serialize 하는 방법-.NET
+title: -.Net을 사용 하 여 C# JSON을 serialize 및 deserialize 하는 방법
 author: tdykstra
 ms.author: tdykstra
 ms.date: 09/16/2019
@@ -8,30 +8,30 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 8ccd7afe4abb928e7723aa740507774012fc85d1
-ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
+ms.openlocfilehash: 3c988a0151f57b67db19f41aeb88c6fb9b808cb3
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71083105"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72179195"
 ---
-# <a name="how-to-serialize-json-in-net"></a>.NET에서 JSON을 serialize 하는 방법
+# <a name="how-to-serialize-and-deserialize-json-in-net"></a>.NET에서 JSON을 serialize 및 deserialize 하는 방법
 
 > [!IMPORTANT]
 > JSON serialization 설명서는 생성 중입니다. 이 문서에서는 모든 시나리오를 다루지 않습니다. 자세한 내용은 GitHub의 dotnet/corefx 리포지토리, 특히 [json 기능-doc](https://github.com/dotnet/corefx/labels/json-functionality-doc)에서 발생 하는 system.servicemodel [문제](https://github.com/dotnet/corefx/issues?q=is%3Aopen+is%3Aissue+label%3Aarea-System.Text.Json) 를 검사 합니다.
 
-이 문서에서는 <xref:System.Text.Json> 네임 스페이스를 사용 하 여 JavaScript Object Notation (JSON)에서 serialize 및 deserialize 하는 방법을 보여 줍니다. 지침 및 샘플 코드는 [ASP.NET Core](/aspnet/core/)와 같은 프레임 워크가 아닌 라이브러리를 직접 사용 합니다.
+이 문서에서는 <xref:System.Text.Json> 네임 스페이스를 사용 하 여 JSON (JavaScript Object Notation)으로 serialize 및 deserialize 하는 방법을 보여 줍니다. 지침 및 샘플 코드는 [ASP.NET Core](/aspnet/core/)와 같은 프레임 워크가 아닌 라이브러리를 직접 사용 합니다.
 
 ## <a name="namespaces"></a>네임스페이스
 
-<xref:System.Text.Json> 네임 스페이스에는 모든 진입점과 기본 형식이 포함 되어 있습니다. 네임 <xref:System.Text.Json.Serialization> 스페이스에는 serialization 및 deserialization과 관련 된 고급 시나리오 및 사용자 지정을 위한 특성 및 api가 포함 되어 있습니다. 따라서이 문서에 표시 된 코드 예제에는 다음 `using` 지시문 중 하나 또는 둘 다가 필요 합니다.
+@No__t-0 네임 스페이스는 모든 진입점과 기본 유형을 포함 합니다. @No__t-0 네임 스페이스에는 serialization 및 deserialization과 관련 된 고급 시나리오 및 사용자 지정을 위한 특성 및 Api가 포함 되어 있습니다. 따라서이 문서에 표시 된 코드 예제에는 다음 `using` 지시문 중 하나 또는 둘 다가 필요 합니다.
 
 ```csharp
 using System.Text.Json;
 using System.Text.Json.Serialization;
 ```
 
-네임 스페이스의 <xref:System.Runtime.Serialization> 특성은 현재에서 `System.Text.Json`지원 되지 않습니다.
+@No__t-0 네임 스페이스의 특성은 현재 `System.Text.Json`에서 지원 되지 않습니다.
 
 ## <a name="how-to-write-net-objects-to-json-serialize"></a>JSON에 .NET 개체를 작성 하는 방법 (직렬화)
 
@@ -119,17 +119,17 @@ JSON 출력은 기본적으로 축소 되어 있습니다.
 }
 ```
 
-의 <xref:System.Text.Json.JsonSerializer.Serialize%2A> 오버 로드를 사용 하면 <xref:System.IO.Stream>로 serialize 할 수 있습니다. 비동기 버전의 `Stream` 오버 로드를 사용할 수 있습니다.
+@No__t-0의 오버 로드를 사용 하면 <xref:System.IO.Stream>로 serialize 할 수 있습니다. 비동기 버전의 `Stream` 오버 로드를 사용할 수 있습니다.
 
 ### <a name="serialize-to-utf-8"></a>U t f-8로 직렬화
 
-U t f-8로 serialize 하려면 메서드 <xref:System.Text.Json.JsonSerializer.SerializeToUtf8Bytes%2A?displayProperty=nameWithType> 를 호출 합니다.
+U t f-8로 serialize 하려면 <xref:System.Text.Json.JsonSerializer.SerializeToUtf8Bytes%2A?displayProperty=nameWithType> 메서드를 호출 합니다.
 
 ```csharp
 byte[] utf8Json = JsonSerializer.SerializeToUtf8Bytes<WeatherForecast>(weatherForecast);
 ```
 
-대신 <xref:System.Text.Json.JsonSerializer.Serialize%2A> 를<xref:System.Text.Json.Utf8JsonWriter> 사용 하는 오버 로드를 사용할 수 있습니다.
+또는 <xref:System.Text.Json.Utf8JsonWriter>을 사용 하는 @no__t 0 오버 로드를 사용할 수 있습니다.
 
 U t f-8로 serialize 하는 것은 문자열 기반 메서드를 사용 하는 것 보다 약 5-10% 더 빠릅니다. 차이점은 바이트 (u t f-8)를 문자열 (UTF-16)로 변환할 필요가 없기 때문입니다.
 
@@ -147,7 +147,7 @@ U t f-8로 serialize 하는 것은 문자열 기반 메서드를 사용 하는 �
 * 숫자 형식, 문자열, 부울 등 JavaScript 기본 형식에 매핑되는 .NET 기본 형식입니다.
 * 사용자 정의 [일반 이전 CLR 개체 (POCOs)](https://stackoverflow.com/questions/250001/poco-definition).
 * 1 차원 및 가변 배열 (`ArrayName[][]`)
-* `Dictionary<string,TValue>`여기서 `TValue` 는 `object` ,`JsonElement`또는 POCO입니다.
+* `TValue` @no__t `object`, `JsonElement` 또는 POCO입니다.
 * 다음 네임 스페이스의 컬렉션입니다. 자세한 내용은 GitHub의 dotnet/corefx 리포지토리에서 [컬렉션 지원에 대 한 문제](https://github.com/dotnet/corefx/issues/36643) 를 참조 하세요.
   * <xref:System.Collections>
   * <xref:System.Collections.Generic>
@@ -165,11 +165,11 @@ var weatherForecast = JsonSerializer.Deserialize<WeatherForecast>(json);
 
 예제는 [직렬화](#how-to-write-net-objects-to-json-serialize) 섹션을 참조 하세요. JSON 및 .NET 개체는 동일 하지만 방향이 반대입니다.
 
-의 <xref:System.Text.Json.JsonSerializer.Deserialize*> 오버 로드를 사용 하면 `Stream`에서 deserialize 할 수 있습니다.  비동기 버전의 `Stream` 오버 로드를 사용할 수 있습니다.
+@No__t-0의 오버 로드를 사용 하면 `Stream`에서 deserialize 할 수 있습니다.  비동기 버전의 `Stream` 오버 로드를 사용할 수 있습니다.
 
 ### <a name="deserialize-from-utf-8"></a>U t f-8에서 Deserialize
 
-U t f-8에서 deserialize 하려면 다음 <xref:System.Text.Json.JsonSerializer.Deserialize%2A?displayProperty=nameWithType> 예제와 같이 `Utf8JsonReader` 또는 `ReadOnlySpan<byte>`를 사용 하는 오버 로드를 호출 합니다.
+U t f-8에서 deserialize 하려면 다음 예제와 같이 `Utf8JsonReader` 또는 `ReadOnlySpan<byte>`를 사용 하는 <xref:System.Text.Json.JsonSerializer.Deserialize%2A?displayProperty=nameWithType> 오버 로드를 호출 합니다.
 
 ```csharp
 byte[] utf8Json;
@@ -198,7 +198,7 @@ weatherForecast = JsonSerializer.Deserialize<WeatherForecastMin>(ref utf8Reader)
 
 ## <a name="serialize-to-formatted-json"></a>형식이 지정 된 JSON으로 직렬화
 
-JSON 출력을 잘 인쇄 하려면를로 <xref:System.Text.Json.JsonSerializerOptions.WriteIndented?displayProperty=nameWithType> `true`설정 합니다.
+JSON 출력을 잘 인쇄 하려면 <xref:System.Text.Json.JsonSerializerOptions.WriteIndented?displayProperty=nameWithType>을 `true`로 설정 합니다.
 
 ```csharp
 var options = new JsonSerializerOptions
@@ -229,7 +229,7 @@ class WeatherForecast
 
 ## <a name="allow-comments-and-trailing-commas"></a>주석과 후행 쉼표 허용
 
-JSON에서는 기본적으로 주석과 후행 쉼표를 사용할 수 없습니다. JSON에서 주석을 허용 하려면 <xref:System.Text.Json.JsonSerializerOptions.ReadCommentHandling?displayProperty=nameWithType> 속성을로 `JsonCommentHandling.Skip`설정 합니다. 그리고 후행 쉼표를 허용 하려면 <xref:System.Text.Json.JsonSerializerOptions.AllowTrailingCommas?displayProperty=nameWithType> 속성을로 `true`설정 합니다. 다음 예제에서는 두 가지를 모두 허용 하는 방법을 보여 줍니다.
+JSON에서는 기본적으로 주석과 후행 쉼표를 사용할 수 없습니다. JSON에서 주석을 허용 하려면 <xref:System.Text.Json.JsonSerializerOptions.ReadCommentHandling?displayProperty=nameWithType> 속성을 `JsonCommentHandling.Skip`로 설정 합니다. 후행 쉼표를 허용 하려면 <xref:System.Text.Json.JsonSerializerOptions.AllowTrailingCommas?displayProperty=nameWithType> 속성을 `true`로 설정 합니다. 다음 예제에서는 두 가지를 모두 허용 하는 방법을 보여 줍니다.
 
 ```csharp
 var options = new JsonSerializerOptions
@@ -294,7 +294,7 @@ class WeatherForecast
 
 ### <a name="use-camel-case-for-all-json-property-names"></a>모든 JSON 속성 이름에 카멜식 대/소문자 사용
 
-모든 JSON 속성 이름에 카멜식 대/소문자를 사용 <xref:System.Text.Json.JsonSerializerOptions.PropertyNamingPolicy?displayProperty=nameWithType> 하려면 `JsonNamingPolicy.CamelCase`다음 예제와 같이를로 설정 합니다.
+모든 JSON 속성 이름에 카멜식 대/소문자를 사용 하려면 다음 예제와 같이 <xref:System.Text.Json.JsonSerializerOptions.PropertyNamingPolicy?displayProperty=nameWithType>을 `JsonNamingPolicy.CamelCase`로 설정 합니다.
 
 ```csharp
 var options = new JsonSerializerOptions
@@ -329,11 +329,11 @@ class WeatherForecast
 카멜식 대/소문자 속성 명명 정책:
 
 * Serialization 및 deserialization에 적용 됩니다.
-* 특성에 의해 `[JsonPropertyName]` 재정의 됩니다.
+* @No__t-0 특성에 의해 재정의 됩니다.
 
 ### <a name="use-a-custom-json-property-naming-policy"></a>사용자 지정 JSON 속성 명명 정책 사용
 
-사용자 지정 JSON 속성 명명 정책을 사용 하려면 다음 예제와 같이에서 <xref:System.Text.Json.JsonNamingPolicy> 파생 되는 클래스를 만들고 <xref:System.Text.Json.JsonNamingPolicy.ConvertName%2A> 메서드를 재정의 합니다.
+사용자 지정 JSON 속성 명명 정책을 사용 하려면 다음 예제와 같이 <xref:System.Text.Json.JsonNamingPolicy>에서 파생 되는 클래스를 만들고 <xref:System.Text.Json.JsonNamingPolicy.ConvertName%2A> 메서드를 재정의 합니다.
 
 ```csharp
 class UpperCaseNamingPolicy : JsonNamingPolicy
@@ -345,7 +345,7 @@ class UpperCaseNamingPolicy : JsonNamingPolicy
 }
 ```
 
-그런 다음 속성 <xref:System.Text.Json.JsonSerializerOptions.PropertyNamingPolicy?displayProperty=nameWithType> 을 명명 정책 클래스의 인스턴스로 설정 합니다.
+그런 다음 <xref:System.Text.Json.JsonSerializerOptions.PropertyNamingPolicy?displayProperty=nameWithType> 속성을 명명 정책 클래스의 인스턴스로 설정 합니다.
 
 ```csharp
 var options = new JsonSerializerOptions
@@ -380,11 +380,11 @@ class WeatherForecast
 JSON 속성 명명 정책:
 
 * Serialization 및 deserialization에 적용 됩니다.
-* 특성에 의해 `[JsonPropertyName]` 재정의 됩니다.
+* @No__t-0 특성에 의해 재정의 됩니다.
 
 ### <a name="camel-case-dictionary-keys"></a>카멜식 대/소문자 사전 키
 
-Serialize 할 개체의 속성이 형식이 `Dictionary<string,TValue>` `string` 면 키를 카멜식 대/소문자로 변환할 수 있습니다. 이렇게 하려면 다음 예제와 <xref:System.Text.Json.JsonSerializerOptions.DictionaryKeyPolicy> 같이 `JsonNamingPolicy.CamelCase`를로 설정 합니다.
+Serialize 할 개체의 속성 형식이 `Dictionary<string,TValue>` 인 경우 `string` 키를 카멜식 대/소문자로 변환할 수 있습니다. 이렇게 하려면 다음 예제와 같이 <xref:System.Text.Json.JsonSerializerOptions.DictionaryKeyPolicy>을 `JsonNamingPolicy.CamelCase`로 설정 합니다.
 
 ```csharp
 var options = new JsonSerializerOptions
@@ -398,7 +398,7 @@ json = JsonSerializer.Serialize(weatherForecast, options);
 
 |속성 |값  |
 |---------|---------|
-| 날짜    | 오전 8/1/2019 12:00:00-07:00|
+| Date    | 오전 8/1/2019 12:00:00-07:00|
 | TemperatureC| 25 |
 | 요약| 핫스폿을|
 | TemperatureRanges | 콜드, 20<br>핫, 40|
@@ -452,7 +452,7 @@ class WeatherForecast
 
 ### <a name="exclude-all-read-only-properties"></a>모든 읽기 전용 속성을 제외 합니다.
 
-모든 읽기 전용 속성을 제외 하려면 다음 예제와 <xref:System.Text.Json.JsonSerializerOptions.IgnoreReadOnlyProperties?displayProperty=nameWithType> 같이 `true`를로 설정 합니다.
+모든 읽기 전용 속성을 제외 하려면 다음 예제와 같이 <xref:System.Text.Json.JsonSerializerOptions.IgnoreReadOnlyProperties?displayProperty=nameWithType>을 `true`로 설정 합니다.
 
 ```csharp
 var options = new JsonSerializerOptions
@@ -486,7 +486,7 @@ class WeatherForecast
 
 ### <a name="exclude-all-null-value-properties"></a>모든 null 값 속성 제외
 
-모든 null 값 속성을 제외 하려면 다음 예제 <xref:System.Text.Json.JsonSerializerOptions.IgnoreNullValues> 와 같이 `true`속성을로 설정 합니다.
+모든 null 값 속성을 제외 하려면 다음 예제와 같이 <xref:System.Text.Json.JsonSerializerOptions.IgnoreNullValues> 속성을 `true`로 설정 합니다.
 
 ```csharp
 var options = new JsonSerializerOptions
@@ -500,7 +500,7 @@ json = JsonSerializer.Serialize(weatherForecast, options);
 
 |속성 |값  |
 |---------|---------|
-| 날짜    | 오전 8/1/2019 12:00:00-07:00|
+| Date    | 오전 8/1/2019 12:00:00-07:00|
 | TemperatureC| 25 |
 | 요약| null|
 
@@ -515,7 +515,7 @@ json = JsonSerializer.Serialize(weatherForecast, options);
 
 ## <a name="case-insensitive-property-matching"></a>대/소문자를 구분 하지 않는 속성 일치
 
-기본적으로 deserialization은 JSON과 대상 개체 속성 간에 일치 하는 대/소문자를 구분 하는 속성 이름을 찾습니다. 이 동작을 변경 하려면를로 <xref:System.Text.Json.JsonSerializerOptions.PropertyNameCaseInsensitive?displayProperty=nameWithType> `true`설정 합니다.
+기본적으로 deserialization은 JSON과 대상 개체 속성 간에 일치 하는 대/소문자를 구분 하는 속성 이름을 찾습니다. 이 동작을 변경 하려면 <xref:System.Text.Json.JsonSerializerOptions.PropertyNameCaseInsensitive?displayProperty=nameWithType>을 `true`로 설정 합니다.
 
 ```csharp
 var options = new JsonSerializerOptions
@@ -546,7 +546,7 @@ class WeatherForecast
 
 ## <a name="include-properties-of-derived-classes"></a>파생 클래스의 속성 포함
 
-컴파일 시간에 serialize 할 형식을 지정 하는 경우 다형성 serialization이 지원 되지 않습니다. 예를 들어 `WeatherForecast` 클래스와 파생 클래스가 `WeatherForecastWithWind`있다고 가정 합니다.
+컴파일 시간에 serialize 할 형식을 지정 하는 경우 다형성 serialization이 지원 되지 않습니다. 예를 들어 `WeatherForecast` 클래스와 파생 클래스 `WeatherForecastWithWind` 인 경우를 가정 합니다.
 
 ```csharp
 class WeatherForecast
@@ -561,7 +561,7 @@ class WeatherForecastWithWind : WeatherForecast
 }
 ```
 
-`Serialize` 컴파일`WeatherForecast`시간에 메서드에 전달 되거나에 의해 유추 된 형식이 있다고 가정 합니다.
+컴파일 시간에 `Serialize` 메서드를 통해 전달 되거나 유추 된 형식이 `WeatherForecast` 인 경우
 
 ```csharp
 string json = JsonSerializer.Serialize<WeatherForecast>(weatherForecast);
@@ -573,7 +573,7 @@ WeatherForecast weatherForecast;
 json = JsonSerializer.Serialize(weatherForecast);
 ```
 
-이 시나리오 `WindSpeed` 에서는 `weatherForecast` 개체가 실제로 `WeatherForecastWithWind` 개체 인 경우에도 속성이 serialize 되지 않습니다. 기본 클래스 속성만 직렬화 됩니다.
+이 시나리오에서는 `weatherForecast` 개체가 실제로 `WeatherForecastWithWind` 개체인 경우에도 `WindSpeed` 속성이 serialize 되지 않습니다. 기본 클래스 속성만 직렬화 됩니다.
 
 ```json
 {
@@ -587,19 +587,19 @@ json = JsonSerializer.Serialize(weatherForecast);
 
 파생 형식의 속성을 serialize 하려면 다음 방법 중 하나를 사용 합니다.
 
-* 런타임에 형식을 지정할 수 <xref:System.Text.Json.JsonSerializer.Serialize%2A> 있는의 오버 로드를 호출 합니다.
+* 런타임에 형식을 지정할 수 있는 <xref:System.Text.Json.JsonSerializer.Serialize%2A>의 오버 로드를 호출 합니다.
 
   ```csharp
   json = JsonSerializer.Serialize(weatherForecast, weatherForecast.GetType());
   ```
 
-* Serialize 할 개체를로 `object`선언 합니다.
+* @No__t-0으로 serialize 될 개체를 선언 합니다.
 
   ```csharp
   json = JsonSerializer.Serialize<object>(weatherForecast);
   ```
 
-위의 예제 시나리오에서 두 가지 방법 `WindSpeed` 모두 속성이 JSON 출력에 포함 됩니다.
+위의 예제 시나리오에서 두 가지 방법 모두 `WindSpeed` 속성이 JSON 출력에 포함 됩니다.
 
 ```json
 {
@@ -642,7 +642,7 @@ Deserialize 할 JSON은 다음과 같습니다.
 }
 ```
 
-표시 된 형식에 표시 된 JSON을 deserialize 하는 경우 `DatesAvailable` 및 `SummaryWords` 속성은 이동 하지 않으며 손실 됩니다. 이러한 속성과 같은 추가 데이터를 캡처하려면 또는 `Dictionary<string,JsonElement>`형식의 `Dictionary<string,object>` 속성에 [JsonExtensionData](xref:System.Text.Json.Serialization.JsonExtensionDataAttribute) 특성을 적용 합니다.
+표시 된 형식에 표시 된 JSON을 deserialize 하는 경우 `DatesAvailable` 및 `SummaryWords` 속성은 이동 하지 않으며 손실 됩니다. 이러한 속성과 같은 추가 데이터를 캡처하려면 [JsonExtensionData](xref:System.Text.Json.Serialization.JsonExtensionDataAttribute) 특성을 `Dictionary<string,object>` 또는 `Dictionary<string,JsonElement>` 형식의 속성에 적용 합니다.
 
 ```csharp
 class WeatherForecast
@@ -659,8 +659,8 @@ class WeatherForecast
 
 |속성 |값  |참고  |
 |---------|---------|---------|
-| 날짜    | 오전 8/1/2019 12:00:00-07:00||
-| TemperatureC| 0 | JSON`temperatureC` 에서 대/소문자를 구분 하지 않으므로 속성이 설정 되지 않습니다. |
+| Date    | 오전 8/1/2019 12:00:00-07:00||
+| TemperatureC| 0 | 대/소문자를 구분 하는 불일치 (JSON의 `temperatureC`). 따라서 속성은 설정 되지 않습니다. |
 | 요약 | 핫스폿을 ||
 | ExtensionData | temperatureC: 25 |Case가 일치 하지 않기 때문에이 JSON 속성은 추가 이며 사전에서 키-값 쌍이 됩니다.|
 || DatesAvailable:<br>  오전 8/1/2019 12:00:00-07:00<br>오전 8/2/2019 12:00:00-07:00 |JSON의 추가 속성은 키-값 쌍이 되며 배열은 값 개체로 사용 됩니다.|
@@ -686,7 +686,7 @@ class WeatherForecast
 }
 ```
 
-`ExtensionData` 속성 이름이 JSON에 표시 되지 않습니다. 이 동작을 통해 JSON은 deserialize 되지 않는 추가 데이터를 잃지 않고도 라운드트립을 수행할 수 있습니다.
+@No__t-0 속성 이름은 JSON에 표시 되지 않습니다. 이 동작을 통해 JSON은 deserialize 되지 않는 추가 데이터를 잃지 않고도 라운드트립을 수행할 수 있습니다.
 
 ## <a name="use-utf8jsonwriter-directly"></a>Utf8JsonWriter 직접 사용
 

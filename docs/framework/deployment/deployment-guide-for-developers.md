@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2229dca07a3a723babe5bf202ce5ddc0c77a7374
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: dbb196b5beb2fc04ff85f2924356699fd83f3ea6
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052199"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833667"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>개발자를 위한 .NET Framework 배포 가이드
 이 항목에서는 앱과 함께 .NET Framework 4.5에서 [!INCLUDE[net_current](../../../includes/net-current-version.md)] 사이의 .NET Framework 버전을 설치하려는 개발자를 위한 정보를 제공합니다.
@@ -57,7 +57,7 @@ ms.locfileid: "71052199"
 
 - .NET Framework 4.5부터, 사용자는 설치하는 동안 실행 중인 .NET Framework 앱 목록을 보고 쉽게 닫을 수 있습니다. 이렇게 하면 .NET Framework 설치로 인해 시스템이 다시 시작되는 것을 방지할 수 있습니다. [시스템 다시 시작 사례 감소](reducing-system-restarts.md)를 참조하세요.
 
-- .NET Framework 4.5 또는 해당 포인트 릴리스 중 하나를 제거하면 기존의 .NET Framework 4 파일도 제거됩니다. .NET Framework 4로 돌아가려면 해당 프로그램과 모든 업데이트를 다시 설치해야 합니다. ( [.NET Framework 4 설치](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5a4x27ek(v=vs.100))참조)
+- .NET Framework 4.5 또는 해당 포인트 릴리스 중 하나를 제거하면 기존의 .NET Framework 4 파일도 제거됩니다. .NET Framework 4로 돌아가려면 해당 프로그램과 모든 업데이트를 다시 설치해야 합니다. [.NET Framework 4 설치](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5a4x27ek(v=vs.100))를 참조하세요.
 
 - .NET Framework 4.5 재배포 가능 패키지는 Microsoft에서 생성 및 서명된 파일의 디지털 서명이 중간에 만료되도록 한 디지털 서명의 부적절한 타임스탬프 관련 문제를 해결하기 위해 2012년 10월 9일 업데이트되었습니다. 이전에 2012년 8월 16일자 .NET Framework 4.5 재배포 가능 패키지를 설치한 경우 [Microsoft 다운로드 센터](https://go.microsoft.com/fwlink/p/?LinkId=245484)에서 최신 재배포 가능 패키지로 업데이트하는 것이 좋습니다. 이 문제에 대한 자세한 내용은 [Microsoft 보안 공지 2749655](https://docs.microsoft.com/security-updates/SecurityAdvisories/2012/2749655)를 참조하세요.
 

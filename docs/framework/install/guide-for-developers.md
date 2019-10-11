@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8902f9a6f37ab45929e147af5f899ef49c4a42b0
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 0c1a14f0ee36341c9579683f711ae78fc4df3f97
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051949"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833650"
 ---
 # <a name="install-the-net-framework-for-developers"></a>개발자용 .NET Framework 설치
 
@@ -155,7 +155,7 @@ Visual Studio에서 애플리케이션을 빌드하거나 명령줄에서 MSBuil
 
 - .NET Framework 4.5와 해당 포인트 릴리스, .NET Framework 4.6과 해당 포인트 릴리스, .NET Framework 4.7과 해당 포인트 릴리스 및 .NET Framework 4.8은 .NET Framework 4를 대체합니다. .NET Framework 4가 설치되어 있는 시스템에 이 버전을 설치하면 어셈블리가 교체됩니다.
 
-- .NET Framework 4.5와 해당 포인트 릴리스, .NET Framework 4.6과 해당 포인트 릴리스, .NET Framework 4.7과 해당 포인트 릴리스 또는 .NET Framework 4.8을 제거하면 기존 .NET Framework 4 파일도 제거됩니다. .NET Framework 4로 돌아가려면 해당 프로그램과 모든 업데이트를 다시 설치해야 합니다. ( [.NET Framework 4 설치](https://go.microsoft.com/fwlink/p/?LinkId=230665)참조)
+- .NET Framework 4.5와 해당 포인트 릴리스, .NET Framework 4.6과 해당 포인트 릴리스, .NET Framework 4.7과 해당 포인트 릴리스 또는 .NET Framework 4.8을 제거하면 기존 .NET Framework 4 파일도 제거됩니다. .NET Framework 4로 돌아가려면 해당 프로그램과 모든 업데이트를 다시 설치해야 합니다. [.NET Framework 4 설치](https://go.microsoft.com/fwlink/p/?LinkId=230665)를 참조하세요.
 
 - .NET Framework 4.5와 해당 포인트 릴리스, .NET Framework 4.6과 해당 포인트 릴리스, .NET Framework 4.7과 해당 포인트 릴리스 및 .NET Framework 4.8을 설치하려면 관리자 자격 증명이 있어야 합니다.
 

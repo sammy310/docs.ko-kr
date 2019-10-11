@@ -2,17 +2,17 @@
 title: C# 소개 - 개발 도구 익히기
 description: 이 문서에서는 머신에서 C# 및 .NET 애플리케이션을 개발하는 데 사용할 도구의 기본 사항을 소개합니다.
 ms.date: 10/23/2018
-ms.openlocfilehash: fe39bd5e89bb168316b19c62d6e022e36c58fc2f
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: b18c71c54e4450902f576a1074058abcd5e8aa91
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70850759"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834088"
 ---
 # <a name="become-familiar-with-the-net-development-tools"></a>.NET 개발 도구 익히기
 
 머신에서 자습서를 실행하는 첫 번째 단계는 개발 환경을 설정하는 것입니다.
-.NET 자습서 [Hello World 10분 완성](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)에는 Mac, PC 또는 Linux의 로컬 개발 환경 설정에 대한 지침이 포함되어 있습니다.
+.NET 자습서 [Hello World 10분 완성](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)에는 Windows, Linux 또는 macOS의 로컬 개발 환경 설정에 대한 지침이 포함되어 있습니다.
 
 또는 [.NET Core SDK](https://dotnet.microsoft.com/download) 및 [Visual Studio Code](https://code.visualstudio.com/)를 설치할 수 있습니다.
 

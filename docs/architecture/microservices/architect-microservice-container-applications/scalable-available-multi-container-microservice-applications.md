@@ -2,12 +2,12 @@
 title: 높은 확장성 및 가용성을 위한 마이크로 서비스 및 다중 컨테이너 애플리케이션 오케스트레이션
 description: Kubernetes 애플리케이션 수명 주기를 개발하는 동안 높은 확장성과 가용성 및 Azure Dev Spaces의 가능성을 위해 마이크로 서비스 및 다중 컨테이너 애플리케이션을 오케스트레이션하는 옵션을 검색합니다.
 ms.date: 09/20/2018
-ms.openlocfilehash: aef9dc2206c24d685610616a2a4d7850837b832d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: f0efad0134ec95028ecd49ad8d294ae4813940e9
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71040118"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834319"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>높은 확장성 및 가용성을 위한 마이크로 서비스 및 다중 컨테이너 애플리케이션 오케스트레이션
 
@@ -15,11 +15,11 @@ ms.locfileid: "71040118"
 
 그림 4-23에서는 여러 마이크로 서비스(컨테이너)로 구성된 애플리케이션의 클러스터에 배포하는 방법을 보여 줍니다.
 
-![클러스터로 구성된 Docker 애플리케이션: 각 서비스 인스턴스에 대해 하나의 컨테이너를 사용합니다. Docker 컨테이너는 "배포 단위"이고 컨테이너는 Docker의 인스턴스입니다. 호스트는 여러 컨테이너를 처리합니다.](./media/image23.png)
+![클러스터에서 구성된 Docker 애플리케이션을 보여 주는 다이어그램입니다.](./media/scalable-available-multi-container-microservice-applications/composed-docker-applications-cluster.png)
 
 **그림 4-23** 컨테이너의 클러스터
 
-이는 논리적인 방법처럼 보입니다. 그러나 이처럼 구성된 애플리케이션을 부하 분산, 라우팅 및 오케스트레이션하려면 어떻게 할까요?
+각 서비스 인스턴스에 대해 하나의 컨테이너를 사용합니다. Docker 컨테이너는 "배포 단위"이고 컨테이너는 Docker의 인스턴스입니다. 하나의 호스트가 많은 컨테이너를 처리합니다. 이는 논리적인 방법처럼 보입니다. 그러나 이처럼 구성된 애플리케이션을 부하 분산, 라우팅 및 오케스트레이션하려면 어떻게 할까요?
 
 단일 Docker 호스트의 일반 Docker 엔진은 하나의 호스트에서 단일 이미지 인스턴스를 관리해야 하는 필요성을 충족하지만, 더 복잡한 분산 애플리케이션을 위해 여러 호스트에 배포된 여러 컨테이너를 관리하는 경우에는 부족합니다. 대부분의 경우 컨테이너를 자동으로 시작하고 이미지당 여러 인스턴스로 컨테이너를 확장하고 일시 중지하거나 필요한 경우 종료하는 관리 플랫폼이 필요하며, 네트워크 및 데이터 스토리지와 같은 리소스에 액세스하는 방법을 제어하는 것도 좋습니다.
 
@@ -37,8 +37,8 @@ ms.locfileid: "71040118"
 
 |     |   |
 |-----|---|
-| **Kubernetes** <br> ![Kubernetes 로고](./media/image24.png) | [*Kubernetes*](https://kubernetes.io/)는 클러스터 인프라와 컨테이너 예약에서 기능 오케스트레이션에 이르기까지 다양한 기능을 제공하는 오픈 소스 제품입니다. 이를 통해 호스트 클러스터 전체에서 애플리케이션 컨테이너의 배포, 확장 및 작업을 자동화할 수 있습니다. <br><br> *Kubernetes*는 쉽게 관리하고 검색할 수 있도록 애플리케이션 컨테이너를 논리 단위로 그룹화하는 컨테이너 중심 인프라를 제공합니다. <br><br> *Kubernetes*의 완성도는 Linux에서 높았지만, Windows에서는 그렇지 못했습니다. |
-| **AKS(Azure Kubernetes Service)** <br> ![Azure Kubernetes Service 로고](./media/image41.png) | [AKS](https://azure.microsoft.com/services/kubernetes-service/)는 관리되는 Kubernetes 컨테이너 오케스트레이션 서비스로 Kubernetes 클러스터의 관리, 배포 및 운영을 간소화합니다. |
+| **Kubernetes** <br> ![Kubernetes로고 이미지입니다.](./media/scalable-available-multi-container-microservice-applications/kubernetes-container-orchestration-system-logo.png) | [*Kubernetes*](https://kubernetes.io/)는 클러스터 인프라와 컨테이너 예약에서 기능 오케스트레이션에 이르기까지 다양한 기능을 제공하는 오픈 소스 제품입니다. 이를 통해 호스트 클러스터 전체에서 애플리케이션 컨테이너의 배포, 확장 및 작업을 자동화할 수 있습니다. <br><br> *Kubernetes*는 쉽게 관리하고 검색할 수 있도록 애플리케이션 컨테이너를 논리 단위로 그룹화하는 컨테이너 중심 인프라를 제공합니다. <br><br> *Kubernetes*의 완성도는 Linux에서 높았지만, Windows에서는 그렇지 못했습니다. |
+| **AKS(Azure Kubernetes Service)** <br> ![Azure Kubernetes Service 로고의 이미지입니다.](./media/scalable-available-multi-container-microservice-applications/azure-kubernetes-service-logo.png) | [AKS](https://azure.microsoft.com/services/kubernetes-service/)는 관리되는 Kubernetes 컨테이너 오케스트레이션 서비스로 Kubernetes 클러스터의 관리, 배포 및 운영을 간소화합니다. |
 
 ## <a name="using-container-based-orchestrators-in-microsoft-azure"></a>Microsoft Azure에서 컨테이너 기반 오케스트레이션 사용
 
@@ -52,7 +52,7 @@ AKS는 컨테이너화된 애플리케이션을 실행하도록 미리 구성된
 
 Azure Kubernetes Service는 Azure용으로 특별히 인기 있는 Docker 클러스터링 오픈 소스 도구 및 기술의 구성을 최적화합니다. 컨테이너와 애플리케이션 구성 모두에 이식성을 제공하는 개방형 솔루션을 얻을 수 있습니다. 사용자가 크기, 호스트 수, 오케스트레이터 도구를 선택하고, AKS에서 다른 모든 작업을 처리합니다.
 
-![Kubernetes 클러스터 구조: DNS, 스케줄러, 프록시 등을 처리하는 하나의 마스터 노드와 컨테이너를 호스트하는 여러 작업자 노드가 있습니다.](media/image36.png)
+![Kubernetes 클러스터 구조를 보여 주는 다이어그램입니다.](./media/scalable-available-multi-container-microservice-applications/kubernetes-cluster-simplified-structure.png)
 
 **그림 4-24** Kubernetes 클러스터의 단순화된 구조 및 토폴로지
 
@@ -62,7 +62,7 @@ Azure Kubernetes Service는 Azure용으로 특별히 인기 있는 Docker 클러
 
 개발 환경에서 Kubernetes가 [Docker Desktop](https://docs.docker.com/install/)을 설치하기만 하면 단일 개발 머신(Windows 10 또는 macOS)에서도 실행할 수 있는 [Docker를 2018년 7월에 발표](https://blog.docker.com/2018/07/kubernetes-is-now-available-in-docker-desktop-stable-channel/)했습니다. 그림 4-25와 같이 나중에 통합 테스트를 위해 클라우드(AKS)에 배포할 수 있습니다.
 
-![Docker는 Docker Desktop으로 Kubernetes 클러스터에 대한 개발 머신 지원을 2018년 7월에 발표했습니다.](media/image37.png) 
+![AKS에 배포되는 개발 머신의 Kubernetes를 보여 주는 다이어그램입니다.](./media/scalable-available-multi-container-microservice-applications/kubernetes-development-environment.png) 
 
 **그림 4-25** 개발 머신 및 클라우드에서 Kubernetes 실행
 
@@ -96,7 +96,7 @@ Azure Dev Spaces는 Visual Studio 2017 또는 Visual Studio Code를 사용하기
 
 그림 4-26과 같이 Azure Dev Spaces의 가장 다른 기능은 클러스터에 글로벌 배포의 나머지 부분과 통합하여 실행할 수 있는 ' 공간'을 만드는 기능입니다.
 
-![Azure Dev Spaces는 새 버전의 테스트를 쉽게 하기 위해 개발 컨테이너 인스턴스와 프로덕션 마이크로 서비스를 투명하게 혼합하여 일치시킬 수 있습니다.](media/image38.png)
+![Azure Dev Spaces에서 여러 공백을 사용하는 방법을 보여 주는 다이어그램입니다.](./media/scalable-available-multi-container-microservice-applications/use-multiple-spaces-azure-dev.png)
 
 **그림 4-26**. Azure Dev Spaces에서 여러 공간 사용
 

@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30686
 ms.assetid: 784fefec-ef57-48cf-b960-957df419b439
-ms.openlocfilehash: a36cfe8e5496bbfd1941afa8a46086491ae96a2a
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: f76163d58f3f11d3ca946525a1604abc3ebba68d
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68512747"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72250377"
 ---
-# <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-defaultpropertyname-of-interface-interfacename1-and-defaultpropertyname-of-interface-interfacename2"></a>'\<\<I>\< ' 인터페이스와 'defaultpropertyname>'인터페이스의상속된인터페이스멤버'defaultpropertyname>'간에기본속성액세스가모호합니다.\< interfacename2 > '
+# <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-defaultpropertyname-of-interface-interfacename1-and-defaultpropertyname-of-interface-interfacename2"></a>' @No__t-1interfacename1 > ' 인터페이스의 상속 된 인터페이스 멤버 ' \<defaultpropertyname > ' 및 ' \<interfacename2 > ' 인터페이스의 ' \<defaultpropertyname > ' 간에 기본 속성 액세스가 모호 합니다.
 
 인터페이스는 두 인터페이스에서 상속 되며, 각 인터페이스는 이름이 같은 기본 속성을 선언 합니다. 컴파일러가 한정자를 사용 하지 않고이 기본 속성에 대 한 액세스를 확인할 수 없습니다. 다음은 이에 대한 예입니다.
 
@@ -36,13 +36,13 @@ Public Class testClass
 End Class
 ```
 
-를 지정 `testObj(1)`하면 컴파일러에서이를 기본 속성으로 확인 하려고 시도 합니다. 그러나 상속 된 인터페이스 때문에 두 가지 기본 속성을 사용할 수 있으므로 컴파일러에서이 오류를 신호로 보냅니다.
+@No__t-0을 지정 하면 컴파일러는이를 기본 속성으로 확인 하려고 시도 합니다. 그러나 상속 된 인터페이스 때문에 두 가지 기본 속성을 사용할 수 있으므로 컴파일러에서이 오류를 신호로 보냅니다.
 
 **오류 ID:** BC30686
 
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면
 
-- 이름이 같은 멤버는 상속 하지 마십시오. 앞의 예제에서에는 `testObj` 의 `Iface2`멤버가 필요 하지 않은 경우 다음과 같이 선언 합니다.
+- 이름이 같은 멤버는 상속 하지 마십시오. 앞의 예제에서 `testObj`에는의 멤버가 필요 하지 않은 경우 (예: `Iface2`) 다음과 같이 선언 합니다.
 
   ```vb
   Dim testObj As Iface1
@@ -64,6 +64,6 @@ End Class
   End Class
   ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
-- [인터페이스](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+- [인터페이스](../../programming-guide/language-features/interfaces/index.md)

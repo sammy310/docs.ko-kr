@@ -2,12 +2,12 @@
 title: 마이크로 서비스의 복원력 및 고가용성
 description: 마이크로 서비스는 고가용성을 달성하기 위해 복원력이 있어야 하므로 일시적인 네트워크 및 종속성 오류를 견디도록 설계되어야 합니다.
 ms.date: 09/20/2018
-ms.openlocfilehash: bb1bef0c9cc08e43aed80a29effe89587fb296f6
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 6c110b0fe7a80842f12779494e5b0bdd29c5fb64
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675060"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834345"
 ---
 # <a name="resiliency-and-high-availability-in-microservices"></a>마이크로 서비스의 복원력 및 고가용성
 
@@ -46,7 +46,7 @@ ms.locfileid: "68675060"
 
 마이크로 서비스 기반 애플리케이션을 만들 때는 복잡성을 처리해야 합니다. 물론 단일 마이크로 서비스는 다루기가 쉽지만 유형이나 수십 수백 가지 유형의 마이크로 서비스 인스턴스는 복잡한 문제입니다. 안정적이고 응집성 있는 시스템을 갖추기 위해서는 마이크로 서비스 아키텍처를 빌드하는 것뿐만 아니라 고가용성, 주소 지정 기능, 복원력, 상태 및 진단도 필요합니다.
 
-![오케스트레이터는 마이크로 서비스를 실행하기 위한 지원 플랫폼을 제공합니다.](./media/image22.png)
+![마이크로 서비스에 대한 지원 플랫폼을 제공하는 클러스터의 다이어그램입니다.](./media/resilient-high-availability-microservices/microservice-platform.png)
 
 **그림 4-22**. 마이크로 서비스 플랫폼은 애플리케이션의 상태 관리를 위한 기본 요소입니다.
 

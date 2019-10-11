@@ -4,12 +4,12 @@ description: .NET Framework 및 .NET Core에 대해 솔루션을 나란히 컴�
 author: conniey
 ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: ab484ccc2c5b51b2ee1dca57df51669d288f3e6b
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.openlocfilehash: 1e120e1aee60e88ea33a8290f3bf36eb93bfc91c
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58186067"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698928"
 ---
 # <a name="organize-your-project-to-support-both-net-framework-and-net-core"></a>.NET Framework 및 .NET Core를 둘 다 지원하도록 프로젝트 구성
 
@@ -32,7 +32,7 @@ ms.locfileid: "58186067"
   * Visual Studio 2017이 없는 개발자/참가자의 경우 업그레이드하지 않고 기존 프로젝트에 대한 개발을 계속 지원할 수 있습니다.
   * 기존 프로젝트에서 코드 변동이 필요하지 않으므로 새 버그가 발생할 가능성이 줄어듭니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 아래 리포지토리를 고려하세요.
 
@@ -69,4 +69,4 @@ ms.locfileid: "58186067"
 
 ## <a name="see-also"></a>참고 항목
 
-.NET Core로의 마이그레이션에 대한 자세한 지침은 [.NET Core 이식 설명서](index.md)를 참조하세요.
+- [.NET Core 이식 설명서](index.md)

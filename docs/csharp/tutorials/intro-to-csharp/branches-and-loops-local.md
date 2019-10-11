@@ -3,24 +3,24 @@ title: 분기 및 루프 - C# 소개 자습서
 description: 분기 및 루프에 관한 이 자습서에서는 C# 코드를 작성하여 문을 반복적으로 실행하기 위한 조건부 분기 및 루프를 지원하는 언어 구문을 살펴봅니다.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: d329a871265ae42918fbf81c42be6667710e4c75
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: a0701a63d6c3aece6bac4263cbcf8a682a623cf7
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70850814"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834119"
 ---
 # <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>분기 및 루프 문이 포함된 조건부 논리 알아보기
 
 이 자습서에서는 변수를 검사하고 해당 변수에 따라 실행 경로를 변경하는 코드를 작성하는 방법에 대해 설명합니다. C# 코드를 작성하고 컴파일 및 실행 결과를 확인합니다. 이 자습서에는 C#에서 분기 및 루프 구문을 살펴보는 일련의 단원이 포함되어 있습니다. 이러한 단원에서는 C# 언어의 기본 사항을 설명합니다.
 
-이 자습서에서는 개발에 사용할 수 있는 머신이 있다고 예상합니다. .NET 자습서 [Hello World 10분 완성](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)에는 Mac, PC 또는 Linux의 로컬 개발 환경 설정에 대한 지침이 포함되어 있습니다. 사용할 명령에 대한 간단한 개요는 [개발 도구 익히기](local-environment.md)에 자세한 정보의 링크와 함께 나와 있습니다.
+이 자습서에서는 개발에 사용할 수 있는 머신이 있다고 예상합니다. .NET 자습서 [Hello World 10분 완성](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)에는 Windows, Linux 또는 macOS의 로컬 개발 환경 설정에 대한 지침이 포함되어 있습니다. 사용할 명령에 대한 간단한 개요는 [개발 도구 익히기](local-environment.md)에 자세한 정보의 링크와 함께 나와 있습니다.
 
 ## <a name="make-decisions-using-the-if-statement"></a>`if` 문을 사용하여 결정하기
 
-**branches-tutorial**이라는 디렉터리를 만듭니다. 현재 디렉터리로 지정하고 `dotnet new console -n BranchesAndLoops -o .`을 실행합니다. 이 명령은 현재 디렉터리에 새 .NET Core 콘솔 애플리케이션을 만듭니다.
+*branches-tutorial*이라는 디렉터리를 만듭니다. 현재 디렉터리로 지정하고 `dotnet new console -n BranchesAndLoops -o .`을 실행합니다. 이 명령은 현재 디렉터리에 새 .NET Core 콘솔 애플리케이션을 만듭니다.
 
-원하는 편집기에서 **Program.cs**를 열고 `Console.WriteLine("Hello World!");` 줄을 다음 코드로 바꿉니다.
+원하는 편집기에서 *Program.cs*를 열고 `Console.WriteLine("Hello World!");` 줄을 다음 코드로 바꿉니다.
 
 ```csharp
 int a = 5;

@@ -3,24 +3,24 @@ title: C#의 숫자 - C# 소개 자습서
 description: 숫자 형식, 해당 속성 및 메서드를 살펴보면서 C#을 학습합니다.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: 436e8db10f973b468458987150e1312a16103b91
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 731824fefcf4966a885c53be8f71e77140541383
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70850687"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834094"
 ---
 # <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>C\#에서 정수 및 부동 소수점 수 조작
 
 이 자습서에서는 C#의 숫자 형식을 대화형으로 설명합니다. 작은 양의 코드를 작성한 다음 해당 코드를 컴파일하고 실행합니다. 이 자습서에는 C#의 숫자 및 수학 연산을 살펴보는 일련의 단원이 포함되어 있습니다. 이러한 단원에서는 C# 언어의 기본 사항을 설명합니다.
 
-이 자습서에서는 개발에 사용할 수 있는 머신이 있다고 예상합니다. .NET 자습서 [Hello World 10분 완성](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)에는 Mac, PC 또는 Linux의 로컬 개발 환경 설정에 대한 지침이 포함되어 있습니다. 사용할 명령에 대한 간단한 개요는 [개발 도구 익히기](local-environment.md)에 자세한 정보의 링크와 함께 나와 있습니다.
+이 자습서에서는 개발에 사용할 수 있는 머신이 있다고 예상합니다. .NET 자습서 [Hello World 10분 완성](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)에는 Windows, Linux 또는 macOS의 로컬 개발 환경 설정에 대한 지침이 포함되어 있습니다. 사용할 명령에 대한 간단한 개요는 [개발 도구 익히기](local-environment.md)에 자세한 정보의 링크와 함께 나와 있습니다.
 
 ## <a name="explore-integer-math"></a>정수 계산 살펴보기
 
-**numbers-quickstart**라는 디렉터리를 만듭니다. 현재 디렉터리로 지정하고 `dotnet new console -n NumbersInCSharp -o .`을 실행합니다.
+*numbers-quickstart*라는 디렉터리를 만듭니다. 현재 디렉터리로 지정하고 `dotnet new console -n NumbersInCSharp -o .`을 실행합니다.
 
-원하는 편집기에서 **Program.cs**를 열고 `Console.WriteLine("Hello World!");` 줄을 다음으로 바꿉니다.
+원하는 편집기에서 *Program.cs*를 열고 `Console.WriteLine("Hello World!");` 줄을 다음으로 바꿉니다.
 
 ```csharp
 int a = 18;
@@ -31,7 +31,7 @@ Console.WriteLine(c);
 
 명령 창에 `dotnet run`을 입력하여 이 코드를 실행합니다.
 
-정수를 사용하는 기본 수학 연산 중 하나를 방금 살펴봤습니다. `int` 형식은 **정수**(양의 정수 또는 음의 정수)를 나타냅니다. 더하기의 경우 `+` 기호를 사용합니다. 정수에 대해 다른 일반적인 수학 연산은 다음과 같습니다.
+정수를 사용하는 기본 수학 연산 중 하나를 방금 살펴봤습니다. `int` 형식은 **정수**(0, 양의 정수 또는 음의 정수)를 나타냅니다. 더하기의 경우 `+` 기호를 사용합니다. 정수에 대해 다른 일반적인 수학 연산은 다음과 같습니다.
 
 - 빼기의 경우 `-`
 - 곱하기의 경우 `*`
@@ -114,7 +114,7 @@ Console.WriteLine(d);
 먼저 수행하려는 연산 주위에 괄호를 추가하여 다른 연산 순서를 적용할 수 있습니다. 다음 줄을 추가하고 다시 실행합니다.
 
 ```csharp
-d = (a  + b) * c;
+d = (a + b) * c;
 Console.WriteLine(d);
 ```
 
@@ -133,7 +133,7 @@ Console.WriteLine(d);
 int e = 7;
 int f = 4;
 int g = 3;
-int h = (e  + f) / g;
+int h = (e + f) / g;
 Console.WriteLine(h);
 ```
 
@@ -171,7 +171,7 @@ namespace NumbersInCSharp
             int d = a + b * c;
             Console.WriteLine(d);
 
-            d = (a  + b) * c;
+            d = (a + b) * c;
             Console.WriteLine(d);
 
             d = (a + b) - 6 * c + (12 * 4) / 3 + 12;
@@ -204,7 +204,7 @@ namespace NumbersInCSharp
 int a = 7;
 int b = 4;
 int c = 3;
-int d = (a  + b) / c;
+int d = (a + b) / c;
 int e = (a + b) % c;
 Console.WriteLine($"quotient: {d}");
 Console.WriteLine($"remainder: {e}");
@@ -242,7 +242,7 @@ Console.WriteLine($"An example of overflow: {what}");
 double a = 5;
 double b = 4;
 double c = 2;
-double d = (a  + b) / c;
+double d = (a + b) / c;
 Console.WriteLine(d);
 ```
 
@@ -252,7 +252,7 @@ Console.WriteLine(d);
 double e = 19;
 double f = 23;
 double g = 8;
-double h = (e  + f) / g;
+double h = (e + f) / g;
 Console.WriteLine(h);
 ```
 
@@ -277,7 +277,7 @@ Console.WriteLine(third);
 
 ***과제***
 
-`double` 형식을 사용하여 큰 숫자, 작은 숫자, 곱하기 및 나누기로 다른 계산을 수행해 보세요.  더 복잡한 계산을 수행해 보세요.
+`double` 형식을 사용하여 큰 숫자, 작은 숫자, 곱하기 및 나누기로 다른 계산을 수행해 보세요. 더 복잡한 계산을 수행해 보세요.
 
 과제를 하느라 약간의 시간을 보낸 후 작성한 코드를 새 메서드에 배치합니다. 이러한 새 메서드의 이름을 `WorkWithDoubles`로 지정합니다.
 

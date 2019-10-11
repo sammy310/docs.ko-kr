@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: cb5fab92-1c19-499e-ae91-8b7525dd875f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 599432af178031a85dea4155a8fd2923f879a600
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 9d54f06c1fc774a2e73b3b99a7d5bb24dd8baf3f
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59427359"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835270"
 ---
 # <a name="how-to-write-a-simple-parallelforeach-loop"></a>방법: 간단한 Parallel.ForEach 루프 작성
 
@@ -25,14 +25,14 @@ ms.locfileid: "59427359"
 > [!NOTE]
 > 이 문서에서는 람다 식을 사용하여 PLINQ에 대리자를 정의합니다. C# 또는 Visual Basic의 람다 식을 잘 모르는 경우 [PLINQ 및 TPL의 람다 식](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)을 참조하세요.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 이 예제에서는 *C:\Users\Public\Pictures\Sample Pictures* 폴더에 여러 .jpg 파일이 있다고 가정하고 *Modified*라는 새 하위 폴더를 만듭니다. 예제를 실행할 때 *Sample Pictures*의 각 .jpg 이미지를 회전시키고 *Modified*에 저장합니다. 필요에 따라 두 경로를 수정할 수 있습니다.
 
 [!code-csharp[TPL_Parallel#03](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_parallel/cs/simpleforeach.cs#03)]
 [!code-vb[TPL_Parallel#03](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_parallel/vb/simpleforeach.vb#03)]
 
-<xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> 루프는 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 루프처럼 작동합니다. 해당 루프는 원본 컬렉션을 분할하고 시스템 환경에 따라 여러 스레드에서 작업을 예약합니다. 시스템에 프로세서가 많을수록 병렬 메서드가 더 빠르게 실행됩니다. 일부 원본 컬렉션의 경우 원본의 크기 및 수행되는 루프 작업의 종류에 따라 순차 루프가 더 빠를 수 있습니다. 성능에 대한 자세한 내용은 [데이터 및 작업 병렬 처리에서 발생할 수 있는 문제](../../../docs/standard/parallel-programming/potential-pitfalls-in-data-and-task-parallelism.md)를 참조하세요.
+<xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> 루프는 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 루프처럼 작동합니다. 해당 루프는 원본 컬렉션을 분할하고 시스템 환경에 따라 여러 스레드에서 작업을 예약합니다. 시스템에 프로세서가 많을수록 병렬 메서드가 더 빠르게 실행됩니다. 일부 원본 컬렉션의 경우 원본의 크기 및 수행되는 루프 작업의 종류에 따라 순차 루프가 더 빠를 수 있습니다. 성능에 대한 자세한 내용은 [데이터 및 작업 병렬 처리에서 발생할 수 있는 문제](potential-pitfalls-in-data-and-task-parallelism.md)를 참조하세요.
 
 병렬 루프에 대한 자세한 내용은 [방법: 간단한 Parallel.For 루프 작성](../../../docs/standard/parallel-programming/how-to-write-a-simple-parallel-for-loop.md)을 참조하세요.
 

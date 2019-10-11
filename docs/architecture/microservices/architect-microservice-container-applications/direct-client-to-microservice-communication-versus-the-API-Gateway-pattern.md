@@ -2,12 +2,12 @@
 title: API 게이트웨이 패턴과 클라이언트-마이크로 서비스 간 직접 통신
 description: API 게이트웨이 패턴과 클라이언트-마이크로 서비스 간 직접 통신의 차이점 및 사용법을 이해합니다.
 ms.date: 01/07/2019
-ms.openlocfilehash: c54287ea3e99ff7fe9faf02898b8c322b756e26f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d895ae50e50ade2f8285117491733d5c9814b732
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69914668"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834445"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>API 게이트웨이 패턴과 클라이언트-마이크로 서비스 간 직접 통신
 
@@ -17,7 +17,7 @@ ms.locfileid: "69914668"
 
 가능한 방법은 클라이언트-마이크로 서비스 간 직접 통신 아키텍처를 사용하는 것입니다. 이 방법에서 클라이언트 앱은 그림 4-12에 나와 있는 것처럼 일부 마이크로 서비스에 직접 요청을 만듭니다.
 
-![각 앱이 개별 마이크로 서비스와 직접 통신하는 클라이언트-마이크로 서비스 간 직접 통신 아키텍처를 보여주는 다이어그램](./media/image12.png)
+![클라이언트-마이크로 서비스 간 통신 아키텍처를 보여 주는 다이어그램입니다.](./media/direct-client-to-microservice-communication-versus-the-API-Gateway-pattern/direct-client-to-microservice-communication.png)
 
 **그림 4-12**. 클라이언트-마이크로 서비스 간 직접 통신 아키텍처 사용
 
@@ -69,11 +69,11 @@ ms.locfileid: "69914668"
 
 그림 4-13에 사용자 지정 API 게이트웨이가 어떻게 몇몇 마이크로 서비스만 사용하여 간소화된 마이크로 서비스 기반 아키텍처에 적합한지가 나와 있습니다.
 
-![사용자 지정 서비스로 구현된 API 게이트웨이를 보여주는 다이어그램이므로 앱은 개별 마이크로 서비스에 요청을 전달하도록 구성된 단일 엔드포인트인 API 게이트웨이에 연결합니다.](./media/image13.png)
+![사용자 지정 서비스로 구현된 API 게이트웨이를 보여 주는 다이어그램입니다.](./media/direct-client-to-microservice-communication-versus-the-API-Gateway-pattern/custom-service-api-gateway.png)
 
 **그림 4-13**. 사용자 지정 서비스로 구현된 API 게이트웨이 사용
 
-이 예제에서는 API 게이트웨이가 컨테이너로 실행 중인 사용자 지정 ASP.NET Core WebHost 서비스로 구현됩니다.
+앱은 개별 마이크로 서비스에 요청을 전달하도록 구성된 단일 엔드포인트인 API 게이트웨이에 연결합니다. 이 예제에서는 API 게이트웨이가 컨테이너로 실행 중인 사용자 지정 ASP.NET Core WebHost 서비스로 구현됩니다.
 
 해당 다이어그램에서 여러 다른 클라이언트 앱에 연결한 단일 사용자 지정 API 게이트웨이 서비스를 사용한다는 점을 강조해야 합니다. 사용자의 API 게이트웨이 서비스는 클라이언트 앱의 다양하고 많은 요구 사항을 기반으로 늘어나고 진화하므로 그러한 사실은 중요한 위험입니다. 결국 이러한 다른 요구 사항으로 인해 너무 커지면 사실상 모놀리식 애플리케이션 또는 모놀리식 서비스와 상당히 비슷할 수 있습니다. 예를 들어 API 게이트웨이를 여러 서비스 또는 더 작은 여러 API 게이트웨이로 클라이언트 앱 양식 팩터 형식당 하나씩 분할하는 것이 좋습니다.
 
@@ -83,11 +83,11 @@ API 게이트웨이 패턴을 구현할 때는 주의해야 합니다. 일반적
 
 API 게이트웨이 계층을 여러 API 게이트웨이로 분할하면 애플리케이션에 여러 개의 클라이언트 앱이 있는 경우 해당 애플리케이션은 여러 API 게이트웨이 형식을 식별할 때 기본 피벗일 수 있으므로 각 클라이언트 앱의 요구 사항에 대해 다른 외관이 포함될 수 있습니다. 이 경우의 패턴을 [BFF](https://samnewman.io/patterns/architectural/bff/)("프런트 엔드의 백 엔드")라고 합니다. 다음 이미지에 표시된 대로 이 패턴에서 각 API 게이트웨이는 여러 내부 마이크로 서비스의 호출 아래에 있는 특정 어댑터 코드를 구현하여 클라이언트 양식 팩터를 기반으로 각 클라이언트 앱에 맞춰진 다른 API를 제공할 수 있습니다.
 
-![모바일 클라이언트 및 웹 클라이언트에 하나씩 클라이언트 형식별로 API 게이트웨이를 분리하는 여러 사용자 지정 API 게이트웨이 보여주는 다이어그램 기존 웹앱은 웹 API 게이트웨이를 사용하는 MVC 마이크로 서비스에 연결합니다.](./media/image13.1.png)
+![여러 사용자 지정 API 게이트웨이를 보여 주는 다이어그램입니다.](./media/direct-client-to-microservice-communication-versus-the-API-Gateway-pattern/multiple-custom-api-gateways.png)
 
 **그림 4-13.1**. 여러 사용자 지정 API 게이트웨이 사용
 
-이전 이미지는 여러 세분화된 API 게이트웨이가 있는 간소화된 아키텍처를 보여 줍니다. 이 경우에 각 API 게이트웨이에 대해 식별된 경계는 순수하게 [BFF](https://samnewman.io/patterns/architectural/bff/)("프런트 엔드의 백 엔드") 패턴을 기반으로 하므로 클라이언트 앱당 필요한 API에만 기반합니다. 그러나 더 큰 애플리케이션에서는 더 나아가 비즈니스 경계를 기반으로 추가 API 게이트웨이를 두 번째 피벗으로 만들어야 합니다.
+그림 4-13.1은 클라이언트 유형에 따라 분리되는 API 게이트웨이를 보여줍니다. 하나는 모바일 클라이언트 용이고, 다른 하나는 웹 클라이언트용입니다. 기존 웹앱은 웹 API 게이트웨이를 사용하는 MVC 마이크로 서비스에 연결합니다. 이 예제는 여러 세분화된 API 게이트웨이가 있는 간소화된 아키텍처를 나타냅니다. 이 경우에 각 API 게이트웨이에 대해 식별된 경계는 순수하게 [BFF](https://samnewman.io/patterns/architectural/bff/)("프런트 엔드의 백 엔드") 패턴을 기반으로 하므로 클라이언트 앱당 필요한 API에만 기반합니다. 그러나 더 큰 애플리케이션에서는 더 나아가 비즈니스 경계를 기반으로 추가 API 게이트웨이를 두 번째 피벗으로 만들어야 합니다.
 
 ## <a name="main-features-in-the-api-gateway-pattern"></a>API 게이트웨이 패턴의 주요 기능
 
@@ -128,11 +128,11 @@ API 게이트웨이는 여러 기능을 제공할 수 있습니다. 제품에 �
 
 그림 4-14에 표시된 대로 [Azure API Management](https://azure.microsoft.com/services/api-management/)는 API 게이트웨이 요구 사항을 해결할 뿐만 아니라 API에서 인사이트를 수집하는 등의 기능을 제공합니다. API 관리 솔루션을 사용하는 경우 API 게이트웨이는 해당 전체 API 관리 솔루션 내의 구성 요소입니다.
 
-![Azure API Management에서는 로깅, 보안, 계량 등 API 게이트웨이 및 관리 요구를 모두 해결합니다.](./media/api-gateway-azure-api-management.png)
+![Azure API Management를 API 게이트웨이로 사용하는 방법을 보여 주는 다이어그램입니다.](./media/direct-client-to-microservice-communication-versus-the-API-Gateway-pattern/api-gateway-azure-api-management.png)
 
 **그림 4-14**. API 게이트웨이에 Azure API Management 사용
 
-이 경우 Azure API Management와 같은 제품을 사용할 때, 단일 API 게이트웨이가 있을 수도 있다는 사실은 그리 위험하지 않습니다. 이러한 API 게이트웨이 유형은 “더 가볍기” 때문에, 즉 모놀리식 구성 요소로 진화할 수도 있는 사용자 지정 C# 코드를 구현하지 않기 때문입니다. 
+Azure API Management에서는 로깅, 보안, 계량 등 API 게이트웨이 및 관리 요구를 모두 해결합니다. 이 경우 Azure API Management와 같은 제품을 사용할 때, 단일 API 게이트웨이가 있을 수도 있다는 사실은 그리 위험하지 않습니다. 이러한 API 게이트웨이 유형은 “더 가볍기” 때문에, 즉 모놀리식 구성 요소로 진화할 수도 있는 사용자 지정 C# 코드를 구현하지 않기 때문입니다. 
 
 API 게이트웨이 제품은 일반적으로 통신 진입을 위한 역방향 프록시와 더 비슷하게 작동합니다. 또한 여기서는 내부 마이크로 서비스에서 API를 필터링하고, 이 단일 계층에 게시된 API에 권한을 적용할 수 있습니다.
 

@@ -2,12 +2,12 @@
 title: 마이크로 서비스에서 간소화된 CQRS 및 DDD 패턴 적용
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | CQRS 및 DDD 간의 전반적인 관계를 이해합니다.
 ms.date: 10/08/2018
-ms.openlocfilehash: 36bffce37176aed6c7d9daea7f2995952b58e895
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: f42b553fd30fdffdc6e325b11740fe9162aab7c8
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674380"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834309"
 ---
 # <a name="apply-simplified-cqrs-and-ddd-patterns-in-a-microservice"></a>마이크로 서비스에서 간소화된 CQRS 및 DDD 패턴 적용
 
@@ -27,9 +27,11 @@ CQRS에는 읽기/쓰기 작업에 대해 두 개의 개체가 있습니다. 여
 
 이러한 종류의 서비스 예로 eShopOnContainers 참조 애플리케이션에서 마이크로 서비스 정렬이 있습니다. 이 서비스는 간소화된 CQRS 접근 방식에 따라 마이크로 서비스를 구현합니다. 그림 7-2와 같이 단일 데이터 원본 또는 데이터베이스를 사용하지만 패턴 트랜잭션 도메인에 대한 두 가지 논리 모델과 DDD를 사용하지 않습니다.
 
-![논리 주문 마이크로 서비스에는 주문 데이터베이스가 포함되어 있으며 동일한 Docker 호스트에 위치하거나 위치하지 않을 수 있습니다. 프로덕션이 아닌 개발의 경우에 동일한 Docker 호스트에 데이터베이스를 포함하는 것이 좋습니다.](./media/image2.png)
+![높은 수준의 간소화된 CQRS 및 DDD 마이크로 서비스를 보여 주는 다이어그램입니다.](./media/apply-simplified-microservice-cqrs-ddd-patterns/simplified-cqrs-ddd-microservice.png)
 
 **그림 7-2**. 간소화된 CQRS 및 DDD 기반 마이크로 서비스
+
+논리 ‘주문’ 마이크로 서비스에는 주문 데이터베이스가 포함되어 있으며 동일한 Docker 호스트에 위치할 수 있지만 반드시 그런 것은 아닙니다. 프로덕션이 아닌 개발의 경우에 동일한 Docker 호스트에 데이터베이스를 포함하는 것이 좋습니다.
 
 애플리케이션 계층은 Web API 자체일 수 있습니다. 여기서 중요한 디자인 측면은 마이크로 서비스가 CQRS 패턴을 따라 명령, 도메인 모델 및 트랜잭션에서 쿼리 및 ViewModels(특히 클라이언트 애플리케이션에 생성된 데이터 모델)을 분할한다는 점입니다. 이 방법은 뒤의 섹션에 설명된 대로 트랜잭션 및 업데이트에 대해서만 의미가 있는 DDD 패턴에서 들어오는 제한 사항 및 제약 조건과 독립된 쿼리를 유지합니다.
 

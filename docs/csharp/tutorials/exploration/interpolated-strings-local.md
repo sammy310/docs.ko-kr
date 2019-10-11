@@ -4,22 +4,22 @@ description: 이 자습서에서는 C# 문자열 보간 기능을 사용하여 �
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/23/2018
-ms.openlocfilehash: b2bbab5705d78525ccae6a90b4f4f2a91064a06b
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: e142c48cd944fd6119c697a299308dc9ce1203ca
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117830"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834130"
 ---
 # <a name="use-string-interpolation-to-construct-formatted-strings"></a>문자열 보간을 사용하여 형식이 지정된 문자열 생성
 
 이 자습서에서는 C# [문자열 보간](../../language-reference/tokens/interpolated.md)을 사용하여 단일 결과 문자열에 값을 삽입하는 방법을 설명합니다. C# 코드를 작성하고 컴파일 및 실행 결과를 확인합니다. 이 자습서는 문자열에 값을 삽입하고, 이러한 값을 다양한 방식으로 형식화하는 방법을 보여 주는 일련의 단원으로 구성됩니다.
 
-이 자습서에서는 개발에 사용할 수 있는 머신이 있다고 예상합니다. .NET 자습서 [Hello World 10분 완성](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)에는 Mac, PC 또는 Linux의 로컬 개발 환경 설정에 대한 지침이 포함되어 있습니다. 브라우저에서 자습서의 [대화형 버전](interpolated-strings.yml)을 완료할 수도 있습니다.
+이 자습서에서는 개발에 사용할 수 있는 머신이 있다고 예상합니다. .NET 자습서 [Hello World 10분 완성](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)에는 Windows, Linux 또는 macOS의 로컬 개발 환경 설정에 대한 지침이 포함되어 있습니다. 브라우저에서 자습서의 [대화형 버전](interpolated-strings.yml)을 완료할 수도 있습니다.
 
 ## <a name="create-an-interpolated-string"></a>보간된 문자열 만들기
 
-**interpolated**라는 디렉터리를 만듭니다. 현재 디렉터리로 만들고 콘솔 창에서 다음 명령을 실행합니다.
+*interpolated*라는 디렉터리를 만듭니다. 현재 디렉터리로 만들고 콘솔 창에서 다음 명령을 실행합니다.
 
 ```dotnetcli
 dotnet new console
@@ -27,7 +27,7 @@ dotnet new console
 
 이 명령은 현재 디렉터리에 새 .NET Core 콘솔 애플리케이션을 만듭니다.
 
-원하는 편집기에서 **Program.cs**를 열고 `Console.WriteLine("Hello World!");` 줄을 다음 코드로 바꿉니다. 여기서 `<name>`을 사용자 이름으로 바꿉니다.
+원하는 편집기에서 *Program.cs*를 열고 `Console.WriteLine("Hello World!");` 줄을 다음 코드로 바꿉니다. 여기서 `<name>`을 사용자 이름으로 바꿉니다.
 
 ```csharp
 var name = "<name>";

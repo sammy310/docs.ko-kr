@@ -1,4 +1,4 @@
-- name: Serialization
+- name: 직렬화
   href: index.md
   items:
     - name: JSON serialization
@@ -16,7 +16,7 @@
           href: basic-serialization.md
         - name: 선택적 Serialization
           href: selective-serialization.md
-        - name: 사용자 지정 Serialization
+        - name: 사용자 지정 serialization
           href: custom-serialization.md
         - name: Serialization 프로세스의 단계
           href: steps-in-the-serialization-process.md
@@ -28,6 +28,8 @@
           href: how-to-chunk-serialized-data.md
         - name: '방법: .NET 표준 개체가 직렬화 가능한지 확인'
           href: how-to-determine-if-netstandard-object-is-serializable.md
+        - name: 샘플
+          href: serialization-samples-binary.md
     - name: XML 및 SOAP Serialization
       href: xml-and-soap-serialization.md
       items:
@@ -73,23 +75,12 @@
           href: add-element-for-schemaimporterextensions.md
         - name: <xmlSerializer> 요소
           href: xmlserializer-element.md
-        - name: Serialization 도구
+        - name: 도구
           href: serialization-tools.md
           items:
             - name: XML Serializer 생성기 도구(Sgen.exe)
               href: xml-serializer-generator-tool-sgen-exe.md
             - name: XML Schema Definition Tool (Xsd.exe)
               href: xml-schema-definition-tool-xsd-exe.md
-        - name: Serialization 샘플
-          href: serialization-samples.md
-          items:
-            - name: Basic Serialization 기술 샘플
-              href: basic-serialization-technology-sample.md
-            - name: XmlSerializer를 통한 사용자 지정 Serialization 순서
-              href: custom-serialization-order-with-xmlserializer.md
-            - name: SchemaImporterExtension 기술 샘플
-              href: schemaimporterextension-technology-sample.md
-            - name: Version Tolerant Serialization 기술 샘플
-              href: version-tolerant-serialization-technology-sample.md
-            - name: Web Services Generics Serialization 기술 샘플
-              href: web-services-generics-serialization-technology-sample.md
+        - name: 샘플
+          href: serialization-samples-xml.md

@@ -1,5 +1,5 @@
 ---
-title: .NET의 JSON serialization
+title: -.Net을 사용 하 C# 여 JSON Serialize 및 deserialize
 author: tdykstra
 ms.author: tdykstra
 ms.date: 09/16/2019
@@ -9,16 +9,16 @@ helpviewer_keywords:
 - serialization
 - objects, serializing
 ms.assetid: 4d1111c0-9447-4231-a997-96a2b74b3453
-ms.openlocfilehash: 6cb45fded220b6123dbf4461f5f1cf1c3556ff69
-ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
+ms.openlocfilehash: 5ce98a7908470a402779436db43333d46f5101fc
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71083091"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72180150"
 ---
-# <a name="json-serialization-in-net"></a>.NET의 JSON serialization
+# <a name="json-serialization-in-net---overview"></a>.NET의 JSON serialization-개요
 
-네임 `System.Text.Json` 스페이스는 JavaScript Object Notation (JSON)로 serialize 하는 기능을 제공 합니다.
+@No__t-0 네임 스페이스는 JavaScript Object Notation (JSON)로 serialize 및 deserialize 하는 기능을 제공 합니다.
 
 라이브러리 디자인은 광범위 한 기능 집합에 대 한 높은 성능 및 낮은 메모리 할당을 강조 합니다. UTF-8 지원은 UTF-8로 인코딩된 JSON 텍스트를 읽고 쓰는 프로세스를 최적화 합니다 .이는 웹의 데이터와 디스크의 파일에 대해 가장 널리 알려진 인코딩입니다.
 
@@ -29,8 +29,8 @@ ms.locfileid: "71083091"
 * 라이브러리는 [.Net Core 3.0](https://aka.ms/netcore3download) 공유 프레임 워크의 일부로 기본 제공 됩니다.
 * 다른 대상 프레임 워크의 경우에는 [System.object](https://www.nuget.org/packages/System.Text.Json) NuGet 패키지를 설치 합니다. 패키지는 다음을 지원 합니다.
   * .NET Standard 2.0 이상 버전
-  * .NET Framework 4.61 이상 버전
-  * .NET Core 2.0 이상 버전
+  * .NET Framework 4.6.1 이상 버전
+  * .NET Core 2.0, 2.1 및 2.2
 
 ## <a name="additional-resources"></a>추가 자료
 

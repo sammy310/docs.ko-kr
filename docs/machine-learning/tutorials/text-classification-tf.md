@@ -1,17 +1,17 @@
 ---
 title: '자습서: 미리 학습된 TensorFlow 모델을 사용하여 영화 리뷰의 감정 분석'
 description: 이 자습서에서는 미리 학습된 TensorFlow 모델을 사용하여 웹 사이트 댓글의 감정을 분류하는 방법을 보여 줍니다. 이진 감정 분류자는 Visual Studio를 사용하여 개발된 C# 콘솔 애플리케이션입니다.
-ms.date: 09/11/2019
+ms.date: 09/30/2019
 ms.topic: tutorial
 ms.custom: mvc
 ms.author: nakersha
 author: natke
-ms.openlocfilehash: 38b935814d713284dae1ca931b90c63bbcac332b
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: e25e884769ad62d3d888986b1475000b543b24b1
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216887"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700934"
 ---
 # <a name="tutorial-analyze-sentiment-of-movie-reviews-using-a-pre-trained-tensorflow-model-in-mlnet"></a>자습서: ML.NET에서 미리 학습된 TensorFlow 모델을 사용하여 영화 리뷰의 감정 분석
 
@@ -211,7 +211,10 @@ ms.locfileid: "71216887"
 
     [!code-csharp[CreatePredictionEngine](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#CreatePredictionEngine)]
 
-    [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602)은 데이터의 단일 인스턴스에 대한 예측을 수행할 수 있는 편리한 API입니다.
+    [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602)은 데이터의 단일 인스턴스에 대한 예측을 수행할 수 있는 편리한 API입니다. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)은 스레드로부터 안전하지 않습니다. 단일 스레드 또는 프로토타입 환경에서 사용할 수 있습니다. 프로덕션 환경에서 성능 및 스레드 보안을 개선하려면 `PredictionEnginePool` 서비스를 사용합니다. 이 서비스는 애플리케이션 전체에서 사용할 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) 개체의 [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601)을 만듭니다. [ASP.NET Core 웹 API에서 `PredictionEnginePool`을 사용하는 방법](https://docs.microsoft.com/en-us/dotnet/machine-learning/how-to-guides/serve-model-web-api-ml-net#register-predictionenginepool-for-use-in-the-application)에 대한 자세한 내용은 이 가이드를 참조하세요.
+
+    > [!NOTE]
+    > `PredictionEnginePool` 서비스 확장은 현재 미리 보기 상태입니다.
 
 1. `MovieReview` 인스턴스를 만들어 댓글을 추가하여 `Predict()` 메서드에서 학습된 모델의 예측을 테스트합니다.
 

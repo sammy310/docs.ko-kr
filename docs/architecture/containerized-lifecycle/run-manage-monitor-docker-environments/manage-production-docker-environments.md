@@ -2,12 +2,12 @@
 title: 프로덕션 Docker 환경 관리
 description: 컨테이너 기반 프로덕션 환경 관리의 핵심 내용을 알아봅니다.
 ms.date: 02/15/2019
-ms.openlocfilehash: 7d10f670745f8bac1084b8c33c5acde67bac6229
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 26e7a3319afe593d75e2384d023c901a389245dc
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673470"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834501"
 ---
 # <a name="manage-production-docker-environments"></a>프로덕션 Docker 환경 관리
 

@@ -2,12 +2,12 @@
 title: '방법: 특정 요소 이름으로 하위 항목 찾기 (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 78915518-0d25-4051-ab55-929779989510
-ms.openlocfilehash: 0084f04db5af7b012748b66187e029c77d0cfce5
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 5c4556ae7bf4c7560618781be51e066f659b0b4c
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710269"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72249678"
 ---
 # <a name="how-to-find-descendants-with-a-specific-element-name-visual-basic"></a>방법: 특정 요소 이름으로 하위 항목 찾기 (Visual Basic)
 특정 이름을 가진 모든 하위 요소를 찾으려는 경우가 있습니다. 모든 하위 요소를 반복하는 코드를 작성할 수 있지만 <xref:System.Xml.Linq.XContainer.Descendants%2A> 축을 사용하는 것이 더 쉽습니다.  
@@ -49,7 +49,7 @@ Console.WriteLine(str)
   
  이 코드의 결과는 다음과 같습니다.  
   
-```  
+```console  
 Some text that is broken up into multiple segments.  
 ```  
   
@@ -96,11 +96,11 @@ End Module
   
  이 코드의 결과는 다음과 같습니다.  
   
-```  
+```console  
 Some text that is broken up into multiple segments.  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Xml.Linq.XContainer.Descendants%2A>
 - [기본 쿼리 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

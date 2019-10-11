@@ -1,15 +1,15 @@
 ---
-title: '방법: Namespace (Visual Basic)에서 모든 노드 찾기'
+title: '방법: 네임 스페이스에서 모든 노드 찾기 (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: b735d7da-5727-48a3-ab57-a16378adc32e
-ms.openlocfilehash: c04447df1d4a3e29558a3bad172715d2bdee340b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5ccc996aa986c97fdffb3deeea36346da726a588
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855675"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72249942"
 ---
-# <a name="how-to-find-all-nodes-in-a-namespace-visual-basic"></a>방법: Namespace (Visual Basic)에서 모든 노드 찾기
+# <a name="how-to-find-all-nodes-in-a-namespace-visual-basic"></a>방법: 네임 스페이스에서 모든 노드 찾기 (Visual Basic)
 해당 특정 네임스페이스에서 모든 노드를 찾기 위해 각 요소나 특성의 네임스페이스를 기준으로 필터링할 수 있습니다.  
   
 ## <a name="example"></a>예제  
@@ -45,7 +45,7 @@ End Module
   
  이 코드의 결과는 다음과 같습니다.  
   
-```  
+```console  
 Nodes in the http://www.adventure-works.com namespace  
 {http://www.adventure-works.com}Child3  
 {http://www.adventure-works.com}GrandChild2  
@@ -109,6 +109,6 @@ End Module
 </Root>  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [기본 쿼리 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

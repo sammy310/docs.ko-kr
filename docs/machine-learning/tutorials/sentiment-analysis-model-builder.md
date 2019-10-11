@@ -1,17 +1,17 @@
 ---
 title: '자습서: 감정 분석 - 이진 분류'
 description: 이 자습서에서는 웹 사이트 주석에서 감정을 분류하고 적절한 조치를 취하는 Razor Pages 애플리케이션을 만드는 방법을 보여 줍니다. 감정 이진 분류자는 Visual Studio에서 모델 작성기를 사용합니다.
-ms.date: 09/26/2019
+ms.date: 09/30/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 0878a9318e7c60be29eeac9fb4efd47e408ab660
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: ce64f0d11b1da65e460235fdabc2b07e05ffcbe4
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332574"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700905"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-in-a-web-application-using-mlnet-model-builder"></a>자습서: ML.NET 모델 작성기를 사용하여 웹 애플리케이션에서 웹 사이트 댓글 감정 분석
 
@@ -103,7 +103,7 @@ ms.locfileid: "71332574"
 
 ## <a name="evaluate-the-model"></a>모델 평가
 
-학습 단계의 결과는 최상의 성능을 가진 하나의 모델이 됩니다. 모델 작성기 도구의 평가 단계인 출력 섹션에는 **최상의 모델** 항목에서 가장 성능이 좋은 모델에서 사용되는 알고리즘과 **최상의 모델 품질(RSquared)** 의 메트릭이 포함됩니다. 또한 상위 5개 모델 및 해당 메트릭을 포함하는 요약 테이블입니다.
+학습 단계의 결과는 최상의 성능을 가진 하나의 모델이 됩니다. 모델 작성기 도구의 평가 단계에서 출력 섹션에는 **최상의 모델** 항목의 가장 성능이 좋은 모델에서 사용되는 알고리즘과 더불어 **최상의 모델 정확도**의 메트릭이 포함됩니다. 또한 상위 5개 모델 및 해당 메트릭을 포함하는 요약 테이블입니다.
 
 정확도 메트릭에 만족하지 않는 경우 모델 정확도를 개선하기 위한 몇 가지 쉬운 방법은 모델을 학습하거나 더 많은 데이터를 사용하기 위한 시간을 늘리는 것입니다. 그렇지 않으면 **코드** 링크를 선택하여 모델 작성기 도구의 최종 단계로 이동합니다.
 
@@ -138,23 +138,43 @@ ms.locfileid: "71332574"
 1. *SentimentRazor* 프로젝트에서 *Startup.cs* 파일을 엽니다.
 1. *Microsoft.Extensions.ML* NuGet 패키지 및 *SentimentRazorML.Model* 프로젝트를 참조하도록 다음 using 문을 추가합니다.
 
-    [!code-csharp [StartupUsings](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Startup.cs#L12-L14)]
+    ```csharp
+    using System.IO;
+    using Microsoft.Extensions.ML;
+    using SentimentRazorML.Model;
+    ```
 
 1. 학습된 모델 파일의 위치를 저장하는 전역 변수를 만듭니다.
 
-    [!code-csharp [ModelPath](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Startup.cs#L20)]
+    ```csharp
+    private readonly string _modelPath;
+    ```
 
 1. 모델 파일은 애플리케이션의 어셈블리 파일과 함께 build 디렉터리에 저장됩니다. 보다 쉽게 액세스할 수 있도록 `Configure` 메서드를 따라 `GetAbsolutePath`라는 도우미 메서드를 만듭니다.
 
-    [!code-csharp [GetAbsolutePathMethod](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Startup.cs#L66-L73)]
+    ```csharp
+    public static string GetAbsolutePath(string relativePath)
+    {
+        FileInfo _dataRoot = new FileInfo(typeof(Program).Assembly.Location);
+        string assemblyFolderPath = _dataRoot.Directory.FullName;
+
+        string fullPath = Path.Combine(assemblyFolderPath, relativePath);
+        return fullPath;
+    }    
+    ```
 
 1. `Startup` 클래스 생성자에서 `GetAbsolutePath` 메서드를 사용하여 `_modelPath`를 설정합니다.
 
-    [!code-csharp [InitModelPath](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Startup.cs#L25)]
+    ```csharp
+    _modelPath = GetAbsolutePath("MLModel.zip");
+    ```
 
 1. `ConfigureServices` 메서드에서 애플리케이션에 대해 `PredictionEnginePool`을 구성합니다.
 
-    [!code-csharp [InitPredEnginePool](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Startup.cs#L42)]
+    ```csharp
+    services.AddPredictionEnginePool<ModelInput, ModelOutput>()
+            .FromFile(_modelPath);
+    ```
 
 ### <a name="create-sentiment-analysis-handler"></a>감정 분석 처리기 만들기
 
@@ -162,17 +182,27 @@ ms.locfileid: "71332574"
 
 1. *Pages* 디렉터리에 있는 *Index.cshtml.cs* 파일을 열고 다음 using 문을 추가합니다.
 
-    [!code-csharp [IndexUsings](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L7-L8)]
+    ```csharp
+    using Microsoft.Extensions.ML;
+    using SentimentRazorML.Model;
+    ```
 
     `Startup` 클래스에서 구성된 `PredictionEnginePool`을 사용하려면 해당 클래스를 사용하려는 모델의 생성자에 삽입해야 합니다.
 
 1. `IndexModel` 클래스 내부에서 `PredictionEnginePool`을 참조하는 변수를 추가합니다.
 
-    [!code-csharp [PredEnginePool](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L14)]
+    ```csharp
+    private readonly PredictionEnginePool<ModelInput, ModelOutput> _predictionEnginePool;
+    ```
 
 1. `IndexModel` 클래스에서 생성자를 만들고 `PredictionEnginePool` 서비스를 여기에 삽입합니다.
 
-    [!code-csharp [IndexConstructor](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L16-L19)]
+    ```csharp
+    public IndexModel(PredictionEnginePool<ModelInput, ModelOutput> predictionEnginePool)
+    {
+        _predictionEnginePool = predictionEnginePool;
+    }    
+    ```
 
 1. `PredictionEnginePool`을 사용하여 웹 페이지에서 받은 사용자 입력으로부터 예측을 수행하는 메서드 처리기를 만듭니다.
 
@@ -187,23 +217,33 @@ ms.locfileid: "71332574"
 
     1. 사용자의 입력이 비어 있거나 null인 경우 `OnGetAnalyzeSentiment` 메서드 내에서 *중립* 감정을 반환합니다.
 
-        [!code-csharp [InitInput](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L28)]
+        ```csharp
+        if (String.IsNullOrEmpty(text)) return Content("Neutral");
+        ```
 
     1. 입력이 유효할 경우 `ModelInput`의 새 인스턴스를 만듭니다.
 
-        [!code-csharp [InitInput](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L29)]
+        ```csharp
+        var input = new ModelInput { SentimentText = text };
+        ```
 
     1. `PredictionEnginePool`을 사용하여 감정을 예측합니다.
 
-        [!code-csharp [MakePrediction](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L30)]
+        ```csharp
+        var prediction = _predictionEnginePool.Predict(input);
+        ```
 
     1. 다음 코드를 사용하여 예측된 `bool` 값을 유해 또는 무해로 변환합니다.
 
-        [!code-csharp [ConvertPrediction](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L31)]
+        ```csharp
+        var sentiment = Convert.ToBoolean(prediction.Prediction) ? "Toxic" : "Not Toxic";
+        ```
 
     1. 마지막으로 감정을 웹 페이지로 반환합니다.
 
-        [!code-csharp [ReturnSentiment](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L32)]
+        ```csharp
+        return Content(sentiment);
+        ```
 
 ### <a name="configure-the-web-page"></a>웹 페이지 구성
 

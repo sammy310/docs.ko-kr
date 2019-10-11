@@ -3,12 +3,12 @@ title: C#의 역사 - C# 가이드
 description: 이 언어의 초창기 버전은 어떤 모습이었으며 이후 어떻게 변했는가?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: e8bf39716482eb94e5686c1a150667be9f8ef620
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 8c3939e9bd5d79e91ce44146a8c36b28d4470406
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71391957"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71956634"
 ---
 # <a name="the-history-of-c"></a>C\#의 역사
 
@@ -28,7 +28,7 @@ C# 빌드 도구는 최신 주요 언어 릴리스가 기본 언어 버전으로
 
 ## <a name="c-version-10"></a>C# 버전 1.0
 
-돌이켜보면 Visual Studio.net 2002와 함께 릴리스된 C# 버전 1.0은 Java와 매우 비슷했습니다. [ECMA에 대해 명시된 설계 목표의 일부](https://feeldotneteasy.blogspot.com/2011/01/c-design-goals.html)로 "단순하고 현대적인 범용 개체 지향 언어"를 추구했습니다.  당시에 Java와 같은 형태는 이러한 초기 설계 목표를 달성한 것을 의미했습니다.
+돌이켜보면 Visual Studio.Net 2002와 함께 릴리스된 C# 버전 1.0은 Java와 매우 비슷했습니다. [ECMA에 대해 명시된 설계 목표의 일부](https://feeldotneteasy.blogspot.com/2011/01/c-design-goals.html)로 "단순하고 현대적인 범용 개체 지향 언어"를 추구했습니다.  당시에 Java와 같은 형태는 이러한 초기 설계 목표를 달성한 것을 의미했습니다.
 
 그러나 지금 다시 C# 1.0을 돌이켜보면 조금 어지러워질 것입니다. 기본 제공 비동기 기능과 당연한 것으로 여겨지는 제네릭과 관련된 멋진 기능 중 일부가 부족했습니다. 사실, 제네릭이 아예 없었습니다.  그리고 [LINQ](../linq/index.md)는 아직 사용할 수 없습니다. 그러한 추가 사항은 나올 때까지 몇 년이 걸릴 것입니다.
 
@@ -48,7 +48,7 @@ C# 1.0의 주요 기능에는 다음이 포함되어 있습니다.
 
 ## <a name="c-version-12"></a>C# 버전 1.2
 
-C# 버전 1.2는 Visual Studio 2003과 함께 제공됩니다. 여기에는 언어에 대한 몇 가지 작은 개선이 포함되어 있습니다. 가장 주목할 만한 점은 이 버전부터 <xref:System.Collections.IEnumerator>가 <xref:System.IDisposable>를 구현할 때 <xref:System.Collections.IEnumerator>의 <xref:System.IDisposable.Dispose%2A>라는 `foreach` 루트에서 생성된 코드입니다.
+C# 버전 1.2는 Visual Studio .NET 2003과 함께 제공됩니다. 여기에는 언어에 대한 몇 가지 작은 개선이 포함되어 있습니다. 가장 주목할 만한 점은 이 버전부터 <xref:System.Collections.IEnumerator>가 <xref:System.IDisposable>를 구현할 때 <xref:System.Collections.IEnumerator>의 <xref:System.IDisposable.Dispose%2A>라는 `foreach` 루트에서 생성된 코드입니다.
 
 ## <a name="c-version-20"></a>C# 버전 2.0
 

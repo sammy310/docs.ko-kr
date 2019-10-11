@@ -1,7 +1,7 @@
 ---
 title: 부울 논리 연산자 - C# 참조
 description: 부울 피연산자를 사용하여 논리 부정, 결합(AND) 및 포괄적/배타적 분리(OR) 작업을 수행하는 C# 연산자에 대해 알아봅니다.
-ms.date: 04/08/2019
+ms.date: 09/27/2019
 author: pkulikov
 f1_keywords:
 - '!_CSharpKeyword'
@@ -32,12 +32,12 @@ helpviewer_keywords:
 - conditional OR operator [C#]
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
-ms.openlocfilehash: 39f5be7a667b4e37e84246ef0bfeb03c0099d4b7
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: cc25d4bfd444dc0acb30fc1c6e6c3c9918af537c
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353369"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698675"
 ---
 # <a name="boolean-logical-operators-c-reference"></a>부울 논리 연산자(C# 참조)
 
@@ -54,6 +54,8 @@ ms.locfileid: "71353369"
 `!` 연산자는 해당 피연산자의 논리 부정을 컴퓨팅합니다. 즉, 피연산자가 `false`로 평가되는 경우 `true`를 생성하고, 피연산자가 `true`로 평가되는 경우 `false`를 생성합니다.
 
 [!code-csharp-interactive[logical negation](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#Negation)]
+
+C# 8.0부터 단항 후위 `!` 연산자는 null 허용 연산자입니다. null 허용 주석 컨텍스트가 활성화된 경우에는 null 허용 참조 형식의 식 `x`이 null이 아님을 선언하는 데 `x!`를 사용할 수 있습니다. 자세한 내용은 [nullable 참조 형식](../../nullable-references.md)을 참조하세요.
 
 ## <a name="logical-and-operator-"></a> 논리 AND 연산자 &amp;
 

@@ -3,24 +3,24 @@ title: 컬렉션 작업 - C# 소개 자습서
 description: 이 자습서에서는 목록 컬렉션을 살펴보면서 C#에 대해 학습합니다.
 ms.date: 10/13/2017
 ms.custom: mvc
-ms.openlocfilehash: 8db9f0acc69efdb89c276f9bee5e095c7920ffc6
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: b80225cf1614a7c25ac9011acd39e74032465ca3
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70850872"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834144"
 ---
 # <a name="learn-to-manage-data-collections-using-the-generic-list-type"></a>일반 목록 형식을 사용하여 데이터 컬렉션을 관리하는 방법 알아보기
 
 이 소개 자습서에서는 C# 언어 및 <xref:System.Collections.Generic.List%601> 클래스의 기본 사항을 소개합니다.
 
-이 자습서에서는 개발에 사용할 수 있는 머신이 있다고 예상합니다. .NET 자습서 [Hello World 10분 완성](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)에는 Mac, PC 또는 Linux의 로컬 개발 환경 설정에 대한 지침이 포함되어 있습니다. 사용할 명령에 대한 간단한 개요는 [개발 도구 익히기](local-environment.md)에 자세한 정보의 링크와 함께 나와 있습니다.
+이 자습서에서는 개발에 사용할 수 있는 머신이 있다고 예상합니다. .NET 자습서 [Hello World 10분 완성](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)에는 Windows, Linux 또는 macOS의 로컬 개발 환경 설정에 대한 지침이 포함되어 있습니다. 사용할 명령에 대한 간단한 개요는 [개발 도구 익히기](local-environment.md)에 자세한 정보의 링크와 함께 나와 있습니다.
 
 ## <a name="a-basic-list-example"></a>기본 목록 예제
 
-**list-tutorial**이라는 디렉터리를 만듭니다. 현재 디렉터리로 지정하고 `dotnet new console`을 실행합니다.
+*list-tutorial*이라는 디렉터리를 만듭니다. 현재 디렉터리로 지정하고 `dotnet new console`을 실행합니다.
 
-편집기에서 **Program.cs**를 열고 기존 코드를 다음으로 바꿉니다.
+편집기에서 *Program.cs*를 열고 기존 코드를 다음으로 바꿉니다.
 
 ```csharp
 using System;
@@ -42,7 +42,7 @@ namespace list_tutorial
 }
 ```
 
-`<name>`을 사용자의 이름으로 바꿉니다. **Program.cs**를 저장합니다. 콘솔 창에 `dotnet run`을 입력하여 시도해 보세요.
+`<name>`을 사용자의 이름으로 바꿉니다. *Program.cs*를 저장합니다. 콘솔 창에 `dotnet run`을 입력하여 시도해 보세요.
 
 문자열 목록을 만들고, 해당 목록에 3개의 이름을 추가하고, 이름을 모두 대문자로 출력했습니다. 이전 자습서에서 학습한 개념을 사용하여 목록을 반복합니다.
 

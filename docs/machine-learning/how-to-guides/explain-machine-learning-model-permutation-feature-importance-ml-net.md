@@ -5,12 +5,12 @@ ms.date: 08/29/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: 9617582c79b2278e3a68e7acf84568247b81eca1
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: 8090e4565a7e55aaa9cc9939e61eb728a169de8d
+ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70167652"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71736868"
 ---
 # <a name="explain-model-predictions-using-permutation-feature-importance"></a>순열 기능 중요도를 사용하여 예측 모델 설명
 
@@ -26,7 +26,7 @@ PFI(순열 기능 중요도)를 사용한 예측에서 기능이 갖는 기여�
 
 이 샘플에 사용되는 데이터 세트의 기능은 1-12열에 있습니다. 목표는 `Price` 예측입니다. 
 
-| 열 | 기능 | 설명 
+| Column | 기능 | 설명 
 | --- | --- | --- |
 | 1 | CrimeRate | 인당 범죄율
 | 2 | ResidentialZones | 도시 내 주거지

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: 3638deeafc052a2da3b438de2c504a9955a15ad3
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: d286cc811c87f2d45d5a9e6d4e8acd9c430ff346
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895265"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835256"
 ---
 # <a name="whats-new-for-visual-basic"></a>Visual Basic의 새로운 기능
 
@@ -22,19 +22,19 @@ ms.locfileid: "70895265"
 ## <a name="current-version"></a>현재 버전
 
 Visual Basic 16.0 / Visual Studio 2019 버전 16.0  
-새로운 기능은 [Visual Basic 16.0](#visual-basic-160)을 참조하세요.
+새 기능은 [Visual Basic 16.0](#visual-basic-160)을 참조하세요.
 
 ## <a name="previous-versions"></a>이전 버전
 
-Visual Basic 15.8 / Visual Studio 2017 버전 15.8 새 기능에 대해서는 [Visual Basic 15.8](#visual-basic-158) 참조
+Visual Basic 15.8 / Visual Studio 2017 버전 15.8 새 기능에 대해서는 [Visual Basic 15.8](#visual-basic-158)을 참조하세요.
 
-Visual Basic 15.5 / Visual Studio 2017 버전 15.5 새 기능에 대해서는 [Visual Basic 15.5](#visual-basic-155) 참조
+Visual Basic 15.5 / Visual Studio 2017 Version 15.5 새 기능에 대해서는 [Visual Basic 15.5](#visual-basic-155)를 참조하세요.
 
-Visual Basic 15.3 / Visual Studio 2017 버전 15.3 새 기능에 대해서는 [Visual Basic 15.3](#visual-basic-153) 참조
+Visual Basic 15.3 / Visual Studio 2017 Version 15.3 새 기능에 대해서는 [Visual Basic 15.3](#visual-basic-153)을 참조하세요.
 
-Visual Basic 2017 / Visual Studio 2017 새 기능에 대해서는 [Visual Basic 2017](#visual-basic-2017) 참조
+Visual Basic 2017 / Visual Studio 2017 새 기능에 대해서는 [Visual Basic 2017](#visual-basic-2017)을 참조하세요.
 
-Visual Basic / Visual Studio 2015 새 기능에 대해서는 [Visual Basic 14](#visual-basic-14) 참조
+Visual Basic / Visual Studio 2015 새 기능에 대해서는 [Visual Basic 14](#visual-basic-14)를 참조하세요.
 
 Visual Basic / Visual Studio 2013 .NET 컴파일러 플랫폼(“Roslyn”)의 기술 미리 보기
 

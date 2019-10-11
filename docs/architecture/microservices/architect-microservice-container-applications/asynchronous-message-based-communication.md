@@ -2,12 +2,12 @@
 title: 비동기 메시지 기반 통신
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | 비동기 메시지 기반 통신은 마이크로 서비스 아키텍처에서 필수 개념입니다. 마이크로 서비스를 서로 독립적인 상태로 유지하는 동시에, 결국은 동기화된 상태로 유지하는 가장 좋은 방법이기 때문입니다.
 ms.date: 09/20/2018
-ms.openlocfilehash: 65bd0cd2b316fe7011ad8e878852547ee5949f09
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 109737a04eac8cfc30c746d283ca71c697f5b29d
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673320"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834478"
 ---
 # <a name="asynchronous-message-based-communication"></a>비동기 메시지 기반 통신
 
@@ -31,7 +31,7 @@ ms.locfileid: "68673320"
 
 메시지 전송 기반 통신(명령 또는 이벤트를 통해)을 시작 하면 메시지 기반 통신을 동기 HTTP 통신과 혼합하지 마십시오.
 
-![비동기 메시지를 수신하는 단일 마이크로 서비스](./media/image18.png)
+![비동기 메시지를 수신하는 단일 마이크로 서비스](./media/asynchronous-message-based-communication/single-receiver-message-based-communication.png)
 
 **그림 4-18**. 비동기 메시지를 수신하는 단일 마이크로 서비스
 
@@ -53,11 +53,11 @@ ms.locfileid: "68673320"
 
 중요한 점은 동일한 이벤트를 구독하는 다양한 마이크로 서비스와 통신하고자 하는 것입니다. 이렇게 하기 위해 그림 4-19에 보이는 것처럼 이벤트 기반 통신에 기초해 메시지를 게시/구독할 수 있습니다. 이 게시/구독 메커니즘은 마이크로 서비스 아키텍처에만 적용되지 않습니다. 이는 DDD에서 [바운딩된 컨텍스트](https://martinfowler.com/bliki/BoundedContext.html)가 통신하는 방식이나 [명령 및 쿼리 역할 구분(CQRS)](https://martinfowler.com/bliki/CQRS.html) 아키텍처 패턴에서 쓰기 데이터베이스에서 읽기 데이터베이스로 업데이트하는 방식과 유사합니다. 목표는 분산된 시스템에 걸쳐 여러 데이터 원본 간의 최종 일관성을 유지하는 것입니다.
 
-![비동기 이벤트 기반 통신에서 하나의 마이크로 서비스는 이벤트 버스에 이벤트를 게시하고 여러 마이크로 서비스가 이를 구독하여 알림을 받고 이에 대한 조치를 취할 수 있습니다.](./media/image19.png)
+![비동기 이벤트 기반 통신을 보여 주는 다이어그램입니다.](./media/asynchronous-message-based-communication/asynchronous-event-driven-communication.png)
 
 **그림 4-19**. 비동기 이벤트 기반 메시지 통신
 
-해당 구현은 이벤트 기반 및 메시지 기반 통신을 위해 어떤 프로토콜을 사용할지 결정하게 됩니다. [AMQP](https://en.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol)는 신뢰할 수 있는 대기 중인 통신을 완수할 수 있게 합니다.
+비동기 이벤트 기반 통신에서 하나의 마이크로 서비스는 이벤트 버스에 이벤트를 게시하고 여러 마이크로 서비스가 이를 구독하여 알림을 받고 이에 대한 조치를 취할 수 있습니다. 해당 구현은 이벤트 기반 및 메시지 기반 통신을 위해 어떤 프로토콜을 사용할지 결정하게 됩니다. [AMQP](https://en.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol)는 신뢰할 수 있는 대기 중인 통신을 완수할 수 있게 합니다.
 
 이벤트 버스를 사용할 경우 [RabbitMQ](https://www.rabbitmq.com/) 같은 메시지 브로커 또는 [Azure Service Bus with Topics](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions) 같은 서비스 버스로부터 API를 사용하는 코드를 통해 클래스에서 관련 구현에 기반한 추상적 개념 수준(이벤트 버스 인터페이스 같은)을 사용할 수 있습니다. 또는 이벤트 버스와 게시/구독 시스템을 활용하기 위해 NServiceBus, MassTransit, Brighter 같은 더 높은 수준의 서비스 버스를 사용할 수도 있습니다.
 

@@ -2,12 +2,12 @@
 title: 분산 데이터 관리를 위한 과제 및 해결 방법
 description: 마이크로 서비스 환경에서 분산 데이터 관리를 위한 과제 및 솔루션은 무엇인지 알아봅니다.
 ms.date: 09/20/2018
-ms.openlocfilehash: 7733a4523e147591151cd0dda26c43992dbe9a41
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: c30de24591d5a73fd34087f34a69e9c7ed54cd35
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673140"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834452"
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>분산 데이터 관리를 위한 과제 및 해결 방법
 
@@ -47,7 +47,7 @@ ms.locfileid: "68673140"
 
 그러나 마이크로 서비스 기반 애플리케이션에서는 제품 및 장바구니 테이블은 각각의 마이크로 서비스가 소유합니다. 그림 4-9와 같이 마이크로 서비스에는 직접 쿼리가 아닌 다른 마이크로 서비스가 소유한 테이블/스토리지를 자체 트랜잭션에 포함해서는 안됩니다.
 
-![마이크로 서비스는 다른 마이크로 서비스의 테이블에 직접 액세스할 수 없으므로, 최종 일관성을 사용하여 데이터를 동기화해야 합니다.](./media/image9.png)
+![마이크로 서비스 데이터베이스 데이터를 공유할 수 없음을 보여 주는 다이어그램입니다.](./media/distributed-data-management/indepentent-microservice-databases.png)
 
 **그림 4-9** 마이크로 서비스는 다른 마이크로 서비스의 테이블에 직접 액세스할 수 없습니다.
 
