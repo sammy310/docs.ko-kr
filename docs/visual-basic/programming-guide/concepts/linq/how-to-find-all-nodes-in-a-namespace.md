@@ -1,19 +1,19 @@
 ---
-title: '방법: Namespace (Visual Basic)에서 모든 노드 찾기'
+title: '방법: 네임 스페이스에서 모든 노드 찾기 (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: b735d7da-5727-48a3-ab57-a16378adc32e
-ms.openlocfilehash: c04447df1d4a3e29558a3bad172715d2bdee340b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5ccc996aa986c97fdffb3deeea36346da726a588
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855675"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72249942"
 ---
-# <a name="how-to-find-all-nodes-in-a-namespace-visual-basic"></a><span data-ttu-id="b0c05-102">방법: Namespace (Visual Basic)에서 모든 노드 찾기</span><span class="sxs-lookup"><span data-stu-id="b0c05-102">How to: Find All Nodes in a Namespace (Visual Basic)</span></span>
-<span data-ttu-id="b0c05-103">해당 특정 네임스페이스에서 모든 노드를 찾기 위해 각 요소나 특성의 네임스페이스를 기준으로 필터링할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b0c05-103">You can filter on the namespace of each element or attribute to find all nodes in that particular namespace.</span></span>  
+# <a name="how-to-find-all-nodes-in-a-namespace-visual-basic"></a><span data-ttu-id="ff113-102">방법: 네임 스페이스에서 모든 노드 찾기 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ff113-102">How to: Find All Nodes in a Namespace (Visual Basic)</span></span>
+<span data-ttu-id="ff113-103">해당 특정 네임스페이스에서 모든 노드를 찾기 위해 각 요소나 특성의 네임스페이스를 기준으로 필터링할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ff113-103">You can filter on the namespace of each element or attribute to find all nodes in that particular namespace.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="b0c05-104">예제</span><span class="sxs-lookup"><span data-stu-id="b0c05-104">Example</span></span>  
- <span data-ttu-id="b0c05-105">다음 예제에서는 두 네임스페이스가 포함된 XML 트리를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="b0c05-105">The following example creates an XML tree with two namespaces.</span></span> <span data-ttu-id="b0c05-106">그런 다음 트리를 반복하고 이러한 네임스페이스 중 하나에 있는 모든 요소 및 특성의 이름을 출력합니다.</span><span class="sxs-lookup"><span data-stu-id="b0c05-106">It then iterates through the tree and prints the names of all the elements and attributes in one of those namespaces.</span></span>  
+## <a name="example"></a><span data-ttu-id="ff113-104">예제</span><span class="sxs-lookup"><span data-stu-id="ff113-104">Example</span></span>  
+ <span data-ttu-id="ff113-105">다음 예제에서는 두 네임스페이스가 포함된 XML 트리를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="ff113-105">The following example creates an XML tree with two namespaces.</span></span> <span data-ttu-id="ff113-106">그런 다음 트리를 반복하고 이러한 네임스페이스 중 하나에 있는 모든 요소 및 특성의 이름을 출력합니다.</span><span class="sxs-lookup"><span data-stu-id="ff113-106">It then iterates through the tree and prints the names of all the elements and attributes in one of those namespaces.</span></span>  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -43,18 +43,18 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="b0c05-107">이 코드의 결과는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="b0c05-107">This code produces the following output:</span></span>  
+ <span data-ttu-id="ff113-107">이 코드의 결과는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="ff113-107">This code produces the following output:</span></span>  
   
-```  
+```console  
 Nodes in the http://www.adventure-works.com namespace  
 {http://www.adventure-works.com}Child3  
 {http://www.adventure-works.com}GrandChild2  
 ```  
   
-## <a name="example"></a><span data-ttu-id="b0c05-108">예제</span><span class="sxs-lookup"><span data-stu-id="b0c05-108">Example</span></span>  
- <span data-ttu-id="b0c05-109">다음 쿼리에서 액세스하는 XML 파일에는 두 가지 네임스페이스의 구매 주문이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b0c05-109">The XML file accessed by the following query contains purchase orders in two different namespaces.</span></span> <span data-ttu-id="b0c05-110">쿼리에서는 네임스페이스 중 하나에 있는 요소만 포함된 트리를 새로 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="b0c05-110">The query creates a new tree with just the elements in one of the namespaces.</span></span>  
+## <a name="example"></a><span data-ttu-id="ff113-108">예제</span><span class="sxs-lookup"><span data-stu-id="ff113-108">Example</span></span>  
+ <span data-ttu-id="ff113-109">다음 쿼리에서 액세스하는 XML 파일에는 두 가지 네임스페이스의 구매 주문이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ff113-109">The XML file accessed by the following query contains purchase orders in two different namespaces.</span></span> <span data-ttu-id="ff113-110">쿼리에서는 네임스페이스 중 하나에 있는 요소만 포함된 트리를 새로 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="ff113-110">The query creates a new tree with just the elements in one of the namespaces.</span></span>  
   
- <span data-ttu-id="b0c05-111">이 예제에서는 XML 문서로을 사용합니다. [샘플 XML 파일: 통합된 구매 주문](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md).</span><span class="sxs-lookup"><span data-stu-id="b0c05-111">This example uses the following XML document: [Sample XML File: Consolidated Purchase Orders](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md).</span></span>  
+ <span data-ttu-id="ff113-111">이 예제에서는 XML 문서로을 사용합니다. [샘플 XML 파일: 통합된 구매 주문](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md).</span><span class="sxs-lookup"><span data-stu-id="ff113-111">This example uses the following XML document: [Sample XML File: Consolidated Purchase Orders](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md).</span></span>  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -73,7 +73,7 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="b0c05-112">이 코드의 결과는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="b0c05-112">This code produces the following output:</span></span>  
+ <span data-ttu-id="ff113-112">이 코드의 결과는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="ff113-112">This code produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -109,6 +109,6 @@ End Module
 </Root>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="b0c05-113">참고자료</span><span class="sxs-lookup"><span data-stu-id="b0c05-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ff113-113">참조</span><span class="sxs-lookup"><span data-stu-id="ff113-113">See also</span></span>
 
-- [<span data-ttu-id="b0c05-114">기본 쿼리 (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b0c05-114">Basic Queries (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [<span data-ttu-id="ff113-114">기본 쿼리 (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ff113-114">Basic Queries (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

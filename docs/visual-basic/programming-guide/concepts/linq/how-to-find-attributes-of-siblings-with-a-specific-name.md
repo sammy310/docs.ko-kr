@@ -1,25 +1,25 @@
 ---
-title: '방법: (XPath 및 LINQ to XML) 특정 이름으로 형제의 특성 찾기 (Visual Basic)'
+title: '방법: 특정 이름으로 형제의 특성 찾기 (XPath-LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 83b3ddca-830a-4b71-9756-9e4bdf907302
-ms.openlocfilehash: 07fb5647950c450d08ab3235ac8cb396eff15305
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 709c21cee37c42f7633b2b108b8846ddd8e3b4e7
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780577"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72249893"
 ---
-# <a name="how-to-find-attributes-of-siblings-with-a-specific-name-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="7109c-102">방법: (XPath 및 LINQ to XML) 특정 이름으로 형제의 특성 찾기 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7109c-102">How to: Find Attributes of Siblings with a Specific Name (XPath-LINQ to XML) (Visual Basic)</span></span>
-<span data-ttu-id="7109c-103">이 항목에서는 컨텍스트 노드에 대한 형제의 특성을 모두 찾는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="7109c-103">This topic shows how to find all attributes of the siblings of the context node.</span></span> <span data-ttu-id="7109c-104">특정 이름을 가진 특성만 컬렉션에 반환됩니다.</span><span class="sxs-lookup"><span data-stu-id="7109c-104">Only attributes with a specific name are returned in the collection.</span></span>  
+# <a name="how-to-find-attributes-of-siblings-with-a-specific-name-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="e8e59-102">방법: 특정 이름으로 형제의 특성 찾기 (XPath-LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e8e59-102">How to: Find Attributes of Siblings with a Specific Name (XPath-LINQ to XML) (Visual Basic)</span></span>
+<span data-ttu-id="e8e59-103">이 항목에서는 컨텍스트 노드에 대한 형제의 특성을 모두 찾는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="e8e59-103">This topic shows how to find all attributes of the siblings of the context node.</span></span> <span data-ttu-id="e8e59-104">특정 이름을 가진 특성만 컬렉션에 반환됩니다.</span><span class="sxs-lookup"><span data-stu-id="e8e59-104">Only attributes with a specific name are returned in the collection.</span></span>  
   
- <span data-ttu-id="7109c-105">XPath 식은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="7109c-105">The XPath expression is:</span></span>  
+ <span data-ttu-id="e8e59-105">XPath 식은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="e8e59-105">The XPath expression is:</span></span>  
   
  `../Book/@id`  
   
-## <a name="example"></a><span data-ttu-id="7109c-106">예제</span><span class="sxs-lookup"><span data-stu-id="7109c-106">Example</span></span>  
- <span data-ttu-id="7109c-107">이 예제에서는 먼저 `Book` 요소를 찾은 다음 `Book`이라는 모든 형제 요소를 찾고 `id`라는 모든 특성을 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="7109c-107">This example first finds a `Book` element, and then finds all sibling elements named `Book`, and then finds all attributes named `id`.</span></span> <span data-ttu-id="7109c-108">결과는 특성의 컬렉션입니다.</span><span class="sxs-lookup"><span data-stu-id="7109c-108">The result is a collection of attributes.</span></span>  
+## <a name="example"></a><span data-ttu-id="e8e59-106">예제</span><span class="sxs-lookup"><span data-stu-id="e8e59-106">Example</span></span>  
+ <span data-ttu-id="e8e59-107">이 예제에서는 먼저 `Book` 요소를 찾은 다음 `Book`이라는 모든 형제 요소를 찾고 `id`라는 모든 특성을 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="e8e59-107">This example first finds a `Book` element, and then finds all sibling elements named `Book`, and then finds all attributes named `id`.</span></span> <span data-ttu-id="e8e59-108">결과는 특성의 컬렉션입니다.</span><span class="sxs-lookup"><span data-stu-id="e8e59-108">The result is a collection of attributes.</span></span>  
   
- <span data-ttu-id="7109c-109">이 예제에서는 XML 문서로을 사용합니다. [샘플 XML 파일: Books(LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="7109c-109">This example uses the following XML document: [Sample XML File: Books (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="e8e59-109">이 예제에서는 XML 문서로을 사용합니다. [샘플 XML 파일: Books(LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="e8e59-109">This example uses the following XML document: [Sample XML File: Books (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).</span></span>  
   
 ```vb  
 Dim books as XDocument = XDocument.Load("Books.xml")  
@@ -46,14 +46,14 @@ For Each el As XAttribute In list1
 Next  
 ```  
   
- <span data-ttu-id="7109c-110">이 예제는 다음과 같은 출력을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="7109c-110">This example produces the following output:</span></span>  
+ <span data-ttu-id="e8e59-110">이 예제는 다음과 같은 출력을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="e8e59-110">This example produces the following output:</span></span>  
   
-```  
+```console  
 Results are identical  
 id="bk101"  
 id="bk102"  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="7109c-111">참고자료</span><span class="sxs-lookup"><span data-stu-id="7109c-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e8e59-111">참조</span><span class="sxs-lookup"><span data-stu-id="e8e59-111">See also</span></span>
 
-- [<span data-ttu-id="7109c-112">XPath 사용자 (Visual Basic)를 위한 LINQ to XML</span><span class="sxs-lookup"><span data-stu-id="7109c-112">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [<span data-ttu-id="e8e59-112">XPath 사용자에 대 한 LINQ to XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e8e59-112">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
