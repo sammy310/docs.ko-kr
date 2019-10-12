@@ -62,5 +62,7 @@
           href: how-to-use-anonymous-pipes-for-local-interprocess-communication.md
         - name: '방법: 네트워크 프로세스 간 통신에 명명된 파이프 사용'
           href: how-to-use-named-pipes-for-network-interprocess-communication.md
+    - name: 파이프라인
+      href: pipelines.md
     - name: 메모리 매핑된 파일
       href: memory-mapped-files.md
