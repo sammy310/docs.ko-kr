@@ -1,4 +1,4 @@
-- name: 직렬화
+- name: Serialization
   href: index.md
   items:
     - name: JSON serialization
@@ -16,7 +16,7 @@
           href: basic-serialization.md
         - name: 선택적 Serialization
           href: selective-serialization.md
-        - name: 사용자 지정 serialization
+        - name: 사용자 지정 Serialization
           href: custom-serialization.md
         - name: Serialization 프로세스의 단계
           href: steps-in-the-serialization-process.md
@@ -29,7 +29,7 @@
         - name: '방법: .NET 표준 개체가 직렬화 가능한지 확인'
           href: how-to-determine-if-netstandard-object-is-serializable.md
         - name: 샘플
-          href: serialization-samples-binary.md
+          href: samples-binary.md
     - name: XML 및 SOAP Serialization
       href: xml-and-soap-serialization.md
       items:
@@ -83,4 +83,4 @@
             - name: XML Schema Definition Tool (Xsd.exe)
               href: xml-schema-definition-tool-xsd-exe.md
         - name: 샘플
-          href: serialization-samples-xml.md
+          href: samples-xml.md
