@@ -7,12 +7,12 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: 1ab372f69792a00160edb2542762298114d3f8b4
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 32caf87435e23008f9f300d231c2705e7894280f
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72003445"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291468"
 ---
 # <a name="globalization-for-wpf"></a>WPF의 전역화
 이 항목에서는 글로벌 시장을 위한 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 응용 프로그램을 작성할 때 알아야 하는 문제를 소개 합니다. 세계화 프로그래밍 요소는 <xref:System.Globalization> 네임 스페이스의 .NET에서 정의 됩니다.
@@ -143,7 +143,7 @@ ms.locfileid: "72003445"
 
 <a name="mui"></a>
 ### <a name="multilingual-user-interface"></a>다국어 사용자 인터페이스
- MUI (다국어 사용자 인터페이스)는 한 언어에서 다른 언어로 @no__t 0으로 전환 하기 위한 Microsoft 지원입니다. @No__t-0 응용 프로그램은 어셈블리 모델을 사용 하 여 MUI를 지원 합니다. 한 애플리케이션에는 언어 중립 어셈블리 외에도 언어별 위성 리소스 어셈블리도 포함됩니다. 진입점은 기본 어셈블리에서 관리되는 .EXE입니다.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 리소스 로더는 [!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)]의 resource manager를 활용 하 여 리소스 조회 및 대체를 지원 합니다. 여러 언어 위성 어셈블리는 동일한 기본 어셈블리와 작동합니다. 로드 되는 리소스 어셈블리는 현재 스레드의 <xref:System.Globalization.CultureInfo.CurrentUICulture%2A>에 따라 다릅니다.
+ MUI (다국어 사용자 인터페이스)는 한 언어에서 다른 언어로 Ui를 전환 하기 위한 Microsoft 지원입니다. @No__t-0 응용 프로그램은 어셈블리 모델을 사용 하 여 MUI를 지원 합니다. 한 애플리케이션에는 언어 중립 어셈블리 외에도 언어별 위성 리소스 어셈블리도 포함됩니다. 진입점은 기본 어셈블리에서 관리되는 .EXE입니다.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 리소스 로더는 [!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)]의 resource manager를 활용 하 여 리소스 조회 및 대체를 지원 합니다. 여러 언어 위성 어셈블리는 동일한 기본 어셈블리와 작동합니다. 로드 되는 리소스 어셈블리는 현재 스레드의 <xref:System.Globalization.CultureInfo.CurrentUICulture%2A>에 따라 다릅니다.
 
 <a name="localizable_ui"></a>
 ### <a name="localizable-user-interface"></a>지역화할 수 있는 사용자 인터페이스

@@ -2,22 +2,22 @@
 title: WS-AtomicTransaction 구성 MMC 스냅인
 ms.date: 03/30/2017
 ms.assetid: 23592973-1d51-44cc-b887-bf8b0d801e9e
-ms.openlocfilehash: 1fa0548e2d63562ddcb85fc6392bf5c99d67d6c7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 926332ac1873db89ce9332075380effdfdc1fc37
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916814"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291497"
 ---
 # <a name="ws-atomictransaction-configuration-mmc-snap-in"></a>WS-AtomicTransaction 구성 MMC 스냅인
 WS-AtomicTransaction 구성 MMC 스냅인은 로컬 및 원격 시스템에서 WS-AtomicTransaction 설정의 일부분을 구성하는 데 사용됩니다.  
   
 ## <a name="remarks"></a>설명  
- [!INCLUDE[wxp](../../../includes/wxp-md.md)] 또는를 실행 하는 경우 제어판/관리 도구/구성 요소 서비스/로 이동 하 고 내 컴퓨터를 마우스 오른쪽 단추로 클릭 한 다음 속성을 선택 하 여 MMC 스냅인을 찾을 수 있습니다. [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] 이 위치는 MSDTC를 구성할 수 있는 위치와 동일합니다. 구성에 사용할 수 있는 옵션은 **ws-at** 탭에서 그룹화 됩니다.  
+ @No__t-0 또는 [!INCLUDE[ws2003](../../../includes/ws2003-md.md)]을 실행 하는 경우 **제어판/관리 도구/구성 요소 서비스/** 로 이동 하 여 **내 컴퓨터**을 마우스 오른쪽 단추로 클릭 하 고 **속성**을 선택 하 여 MMC 스냅인을 찾을 수 있습니다. 이 위치는 MSDTC를 구성할 수 있는 위치와 동일합니다. 구성에 사용할 수 있는 옵션은 **ws-at** 탭에서 그룹화 됩니다.  
   
- Windows Vista 또는 [!INCLUDE[lserver](../../../includes/lserver-md.md)]를 실행 하는 경우 **시작** 단추를 클릭 하 고 `dcomcnfg.exe` **검색** 상자에를 입력 하 여 MMC 스냅인을 찾을 수 있습니다. MMC를 열면 **My Computer\Distributed Transaction COORDINATOR\LOCAL DTC** 노드로 이동 하 고 마우스 오른쪽 단추를 클릭 한 다음 **속성**을 선택 합니다. 구성에 사용할 수 있는 옵션은 **ws-at** 탭에서 그룹화 됩니다.  
+ Windows Vista 또는 [!INCLUDE[lserver](../../../includes/lserver-md.md)]을 실행 하는 경우 **시작** 단추를 클릭 하 고 **검색** 상자에 `dcomcnfg.exe`를 입력 하 여 MMC 스냅인을 찾을 수 있습니다. MMC를 열면 **My Computer\Distributed Transaction COORDINATOR\LOCAL DTC** 노드로 이동 하 고 마우스 오른쪽 단추를 클릭 한 다음 **속성**을 선택 합니다. 구성에 사용할 수 있는 옵션은 **ws-at** 탭에서 그룹화 됩니다.  
   
- 앞의 단계는 로컬 컴퓨터를 구성하기 위한 스냅인을 시작하는 데 사용됩니다. 원격 컴퓨터를 구성 하려면 **제어판/관리 도구/구성 요소 서비스/** 에서 원격 컴퓨터의 이름을 찾고 또는 [!INCLUDE[wxp](../../../includes/wxp-md.md)] [!INCLUDE[ws2003](../../../includes/ws2003-md.md)]를 실행 하는 경우 비슷한 단계를 수행 해야 합니다. Windows vista 또는 [!INCLUDE[lserver](../../../includes/lserver-md.md)]을 실행 하는 경우 vista 및 [!INCLUDE[lserver](../../../includes/lserver-md.md)]의 이전 단계를 따르고 원격 컴퓨터의 노드 아래에 **Distributed Transaction Coordinator\Local DTC** 노드를 사용 합니다.  
+ 앞의 단계는 로컬 컴퓨터를 구성하기 위한 스냅인을 시작하는 데 사용됩니다. 원격 컴퓨터를 구성 하려면 **제어판/관리 도구/구성 요소 서비스/** 에서 원격 컴퓨터의 이름을 찾고 [!INCLUDE[wxp](../../../includes/wxp-md.md)] 또는 [!INCLUDE[ws2003](../../../includes/ws2003-md.md)]를 실행 하는 경우 비슷한 단계를 수행 해야 합니다. Windows Vista 또는 [!INCLUDE[lserver](../../../includes/lserver-md.md)]을 실행 하는 경우 Vista의 이전 단계를 수행 하 고-1을 @no__t 하지만 원격 컴퓨터의 노드 아래에서 **Distributed Transaction COORDINATOR\LOCAL DTC** 노드를 사용 합니다.  
   
  도구의 사용자 인터페이스를 사용하려면 다음 경로에 있는 WsatUI.dll 파일을 등록해야 합니다.  
   
@@ -25,7 +25,7 @@ WS-AtomicTransaction 구성 MMC 스냅인은 로컬 및 원격 시스템에서 W
   
  다음 명령을 사용하여 등록을 수행할 수 있습니다.  
   
-```Output  
+```console
 regasm.exe /codebase WsatUI.dll  
 ```  
   
@@ -77,7 +77,7 @@ regasm.exe /codebase WsatUI.dll
   
  **옵션** 단추를 클릭 하면 추가 설정을 지정할 수 있는 페이지가 호출 됩니다.  
   
- **추적 수준** 조합 상자를 사용 하 여 <xref:System.Diagnostics.TraceLevel> 열거형의 유효한 값 중에서 선택할 수 있습니다. 또한 동작 추적 및 동작 전파를 수행할지 또는 개인적으로 식별할 수 있는 정보를 수집할지를 지정하는 확인란을 사용할 수 있습니다.  
+ **추적 수준** 조합 상자를 사용 하 여 <xref:System.Diagnostics.TraceLevel> 열거의 유효한 값 중에서 선택할 수 있습니다. 또한 동작 추적 및 동작 전파를 수행할지 또는 개인적으로 식별할 수 있는 정보를 수집할지를 지정하는 확인란을 사용할 수 있습니다.  
   
  로깅 **세션** 그룹 상자에서 로깅 세션을 지정할 수도 있습니다.  
   
@@ -86,7 +86,7 @@ regasm.exe /codebase WsatUI.dll
   
  추적 및 로깅에 대 한 자세한 내용은 [관리 및 진단](../../../docs/framework/wcf/diagnostics/index.md)을 참조 하세요.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [WS-Atomic Transaction 지원 구성](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)
 - [WS-AtomicTransaction 구성 유틸리티(wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)

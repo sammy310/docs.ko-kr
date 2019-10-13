@@ -5,16 +5,16 @@ helpviewer_keywords:
 - layout [WPF], automatic
 - automatic layout [WPF]
 ms.assetid: 6fed9264-18bb-4d05-8867-1fe356c6f687
-ms.openlocfilehash: 0253c57f080705b648d9f416368d0fe974ac83ab
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 2fe473da3eeabef3852e3003e61b3b9604332855
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834663"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291263"
 ---
 # <a name="use-automatic-layout-overview"></a>자동 레이아웃 사용 개요
 
-이 항목에서는 [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)] 인 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 응용 프로그램을 작성 하는 방법에 대 한 개발자를 위한 지침을 소개 합니다. 과거에는 UI를 지역화할 때 시간이 오래 걸립니다. UI에 맞게 조정 된 각 언어 마다 픽셀 조정을 통해 픽셀을 조정 해야 합니다. 오늘날 올바른 디자인 및 올바른 코딩 표준을 사용 하 여 지역화 담당자가 크기를 조정 하 고 위치를 조정할 수 있도록 [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]을 생성할 수 있습니다. 보다 쉽게 크기를 조정 하 고 위치를 변경할 수 있는 응용 프로그램을 작성 하는 방법은 자동 레이아웃 이라고 하며, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램 디자인을 사용 하 여 달성할 수 있습니다.
+이 항목에서는 지역화할 수 있는 Ui (사용자 인터페이스)로 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 응용 프로그램을 작성 하는 방법에 대 한 개발자를 위한 지침을 제공 합니다 과거에는 UI를 지역화할 때 시간이 오래 걸립니다. UI에 맞게 조정 된 각 언어 마다 픽셀 조정을 통해 픽셀을 조정 해야 합니다. 오늘날 올바른 디자인 및 올바른 코딩 표준을 사용 하 여 지역화 담당자가 크기 조정 하 고 위치를 조정할 수 있도록 Ui를 생성할 수 있습니다. 보다 쉽게 크기를 조정 하 고 위치를 변경할 수 있는 응용 프로그램을 작성 하는 방법은 자동 레이아웃 이라고 하며, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램 디자인을 사용 하 여 달성할 수 있습니다.
 
 <a name="advantages_of_autolayout"></a>
 
