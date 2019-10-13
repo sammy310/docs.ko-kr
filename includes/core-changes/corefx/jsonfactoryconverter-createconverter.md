@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: e16f0c8ede5e1a24d4fc4606c3c25225ea72e750
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: f5b0064f9f01923c6353fd8e2b274bd7407ccbd8
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117149"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72237415"
 ---
 ### <a name="jsonfactoryconvertercreateconverter-signature-changed"></a>JsonFactoryConverter.CreateConverter 서명이 변경되었습니다
 
 <xref:System.Text.Json.Serialization.JsonConverterFactory> 클래스의 구성을 용이하게 하기 위해 <xref:System.Text.Json.Serialization.JsonConverterFactory.CreateConverter%2A> 메서드가 공개되었고 형식이 <xref:System.Text.Json.JsonSerializerOptions>인 두 번째 인수가 지정되었습니다.
 
-#### <a name="details"></a>세부 정보
+#### <a name="change-description"></a>변경 내용 설명
 
 버전 3.0 미리 보기 8 이전에 .NET Core에서 `CreateConverter` 메서드의 서명은 다음과 같았습니다. 
 

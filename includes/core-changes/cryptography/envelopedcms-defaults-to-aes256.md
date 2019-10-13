@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: b965c3a975b0f2cadd906799fef1665261d96d6e
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: f9000b19997201c2d3de0643669f9029ff1ca31c
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182051"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72237411"
 ---
 ### <a name="envelopedcms-defaults-to-aes-256-encryption"></a>EnvelopedCms를 기본적으로 AES-256 암호화로 설정
 
 `EnvelopedCms`에서 사용하는 기본 대칭 암호화 알고리즘이 TripleDES에서 AES-256으로 변경되었습니다.
 
-#### <a name="details"></a>세부 정보
+#### <a name="change-description"></a>변경 내용 설명
 
 .Net Core 미리 보기 7 버전 이하에서 생성자 오버로드를 통해 대칭 암호화 알고리즘을 지정하지 않고 <xref:System.Security.Cryptography.Pkcs.EnvelopedCms>가 데이터를 암호화하는 데 사용되는 경우 데이터가 TripleDES/3des/3DEA/DES3 알고리즘을 사용하여 암호화되었습니다.
 

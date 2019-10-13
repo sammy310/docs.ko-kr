@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: bb163d5a6eb3d926a44a83ea79572c3a497bbe8d
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: dae4afa92b8833f326b4eacd00b36bb3e1199cc1
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71181736"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72237409"
 ---
 ### <a name="types-in-microsoftvisualbasicdevices-namespace-not-available"></a>Microsoft.VisualBasic.Devices 네임스페이스의 형식을 사용할 수 없음
 
@@ -14,7 +14,7 @@ ms.locfileid: "71181736"
 
 .NET Core 3.0 미리 보기 8
 
-#### <a name="details"></a>세부 정보
+#### <a name="change-description"></a>변경 내용 설명
 
 일부 .NET Core 3.0 미리 보기 릴리스에서는 <xref:Microsoft.VisualBasic.Devices?displayProperty=fullName> 네임스페이스의 형식을 사용할 수 있었습니다. .NET Core 3.0 미리 보기 9부터는 해당 형식을 더 이상 사용할 수 없습니다.
 

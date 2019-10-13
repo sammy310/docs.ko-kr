@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 98893470b64de4abf7f04817871e3053bf25b86d
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 8a92a426ac2c5eee6fba40bfc46281420466d648
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71119103"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72237417"
 ---
 ### <a name="jsonelement-api-changes"></a>JsonElement API 변경 내용
 
@@ -33,14 +33,13 @@ ms.locfileid: "71119103"
 
 1. `WriteValue`의 이름이 <xref:System.Text.Json.JsonElement.WriteTo%2A>로 바뀌었습니다. 이는 다음과 같은 코드에 영향을 줍니다.
 
-```csharp
-using (JsonDocument doc = JsonDocument.Parse(jsonString))
-{
-    JsonElement root = doc.RootElement;
-    root.WriteValue(writer);
-}
-
-```
+   ```csharp
+    using (JsonDocument doc = JsonDocument.Parse(jsonString))
+    {
+        JsonElement root = doc.RootElement;
+        root.WriteValue(writer);
+    }
+    ```
 
 1. 이제 <xref:System.Text.Json.JsonElement.WriteTo%2A>는 메서드 매개 변수가 `null`인 경우 <xref:System.ArgumentNullException>을 throw합니다.
 

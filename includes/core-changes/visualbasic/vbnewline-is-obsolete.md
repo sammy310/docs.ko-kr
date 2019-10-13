@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 5ef785f476b795a9c53e511d51b2683b99e6da05
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: e476039ff9c8d33f54a2f7e4371dc09a3be557c7
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182058"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72237408"
 ---
 ### <a name="microsoftvisualbasicconstantsvbnewline-is-obsolete"></a>Microsoft.VisualBasic.Constants.vbNewLine은 사용되지 않습니다
 
@@ -12,9 +12,9 @@ ms.locfileid: "71182058"
 
 #### <a name="version-introduced"></a>도입된 버전
 
-.NET Core 3.0 미리 보기 8
+3.0 미리 보기 8
 
-#### <a name="details"></a>세부 정보
+#### <a name="change-description"></a>변경 내용 설명
 
 .NET Core 3.0 미리 보기 8부터 <xref:Microsoft.VisualBasic.Constants.vbNewLine?displayProperty=fullName> 상수에 [Obsolete](xref:System.ObsoleteAttribute) 특성이 적용되었습니다. 이 상수를 사용하면 컴파일러 경고가 생성됩니다. .NET Core 및 .NET Framework의 이전 릴리스에서는 사용되지 않음으로 표시되지 않았습니다.
 
@@ -40,5 +40,4 @@ Visual Basic
 
 - `F:Microsoft.VisualBasic.Constants.vbNewLine`
 
--- >
-
+-->

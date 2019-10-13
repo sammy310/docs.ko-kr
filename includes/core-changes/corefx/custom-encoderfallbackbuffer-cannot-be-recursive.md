@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: 4075eadf7cfb39c913b7657d43335bae5497deff
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 58d1c8cd3aff52703522391c14348bd81c108587
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216932"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72237414"
 ---
 ### <a name="custom-encoderfallbackbuffer-instances-cannot-fall-back-recursively"></a>사용자 지정 EncoderFallbackBuffer 인스턴스는 재귀적으로 대체될 수 없음
 
 사용자 지정 <xref:System.Text.EncoderFallbackBuffer> 인스턴스는 재귀적으로 대체될 수 없습니다. <xref:System.Text.EncoderFallbackBuffer.GetNextChar?displayProperty=nameWithType>를 구현하면 대상 인코딩으로 변환할 수 있는 문자 시퀀스가 생겨야 합니다. 그렇지 않으면 예외가 발생합니다.
 
-#### <a name="details"></a>세부 정보
+#### <a name="change-description"></a>변경 내용 설명
 
 런타임은 문자-바이트 트랜스코딩 작업 도중 형식이 잘못되었거나 변환할 수 없는 UTF-16 시퀀스를 검색하여 해당 문자를 <xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> 메서드에 제공합니다. `Fallback` 메서드는 변환할 수 없는 원래 데이터를 대체할 문자를 결정하며, 이러한 문자는 루프에서 <xref:System.Text.EncoderFallbackBuffer.GetNextChar%2A?displayProperty=nameWithType>를 호출하여 드레이닝됩니다.
 

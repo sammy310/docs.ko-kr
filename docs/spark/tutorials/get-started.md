@@ -4,12 +4,12 @@ description: Windows에서 .NET Core를 사용하여 .NET for Apache Spark 앱�
 ms.date: 06/27/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 004256a2fe369b026b15151dfc72ae379da0be8e
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: c4dbce74d0d8c0a682250a8021d983ef2990971f
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928491"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72250318"
 ---
 # <a name="tutorial-get-started-with-net-for-apache-spark"></a>자습서: .NET for Apache Spark 시작
 
@@ -67,7 +67,7 @@ ms.locfileid: "70928491"
 
 1. .NET for Apache Spark GitHub 릴리스 페이지에서 로컬 머신으로 [Microsoft.Spark.Worker](https://github.com/dotnet/spark/releases) 릴리스를 다운로드합니다. 예를 들어 `c:\bin\Microsoft.Spark.Worker\` 경로에 다운로드할 수 있습니다.
 
-2. `DotnetWorkerPath`라는 [새 환경 변수](https://www.java.com/en/download/help/path.xml)를 만들고 **Microsoft.Spark.Worker**를 다운로드하여 추출한 디렉터리로 설정합니다. 예: `c:\bin\Microsoft.Spark.Worker`.
+2. `DOTNET_WORKER_DIR`라는 [새 환경 변수](https://www.java.com/en/download/help/path.xml)를 만들고 **Microsoft.Spark.Worker**를 다운로드하여 추출한 디렉터리로 설정합니다. 예: `c:\bin\Microsoft.Spark.Worker`.
 
 ## <a name="clone-the-net-for-apache-spark-github-repo"></a>.NET for Apache Spark GitHub 리포지토리 복제
 
