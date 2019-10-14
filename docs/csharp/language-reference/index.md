@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C# language, reference
 - reference, C# language
 ms.assetid: 06de3167-c16c-4e1a-b3c5-c27841d4569a
-ms.openlocfilehash: fd5c39bfcb05296a36d94ea64946f8c29ed7e4d6
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: df56287d161f7760e136eb80aa1a9171966df794
+ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70925347"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72275807"
 ---
 # <a name="c-reference"></a>C# 참조
 이 섹션에서는 C# 키워드, 연산자, 특수 문자, 전처리기 지시문, 컴파일러 옵션 및 컴파일러 오류와 경고에 대한 참조 자료를 제공합니다.  
@@ -55,7 +55,7 @@ ms.locfileid: "70925347"
  C# 7.3은 몇 가지 작은 업데이트를 포함하는 또 다른 포인트 릴리스입니다. 제네릭 형식 매개 변수에 대해 새 제약 조건을 사용할 수 있습니다. 다른 변경 내용은 [`stackalloc`](./operators/stackalloc.md) 할당 사용을 포함하여 `fixed` 필드로 작업하는 것을 더 쉽게 만듭니다. `ref` 키워드로 선언된 로컬 변수는 새 스토리지를 참조하도록 다시 할당할 수 있습니다. 컴파일러에서 생성된 지원 필드를 대상으로 하는 자동 구현 속성에 특성을 배치할 수 있습니다. 식 변수는 이니셜라이저에서 사용할 수 있습니다. 튜플은 같음(또는 같지 않음)을 비교할 수 있습니다. 오버로드 확인에도 일부 개선이 있습니다.
   
  [C# 8.0 사양 제안](../../../_csharplang/proposals/csharp-8.0/nullable-reference-types.md)  
- C# 8.0은 .NET Core 3.0에서 사용할 수 있습니다. 이 기능에는 nullable 참조 형식, 재귀 패턴 일치, 기본 인터페이스 멤버, 비동기 스트림, 범위 및 인덱스, 선언을 사용한 패턴, null 병합 할당 및 읽기 전용 인스턴스 멤버가 포함됩니다.
+ C# 8.0은 .NET Core 3.0에서 사용할 수 있습니다. 이 기능에는 nullable 참조 형식, 재귀 패턴 일치, 기본 인터페이스 메서드, 비동기 스트림, 범위 및 인덱스, 선언을 사용한 패턴, null 병합 할당 및 읽기 전용 인스턴스 멤버가 포함됩니다.
   
 ## <a name="related-sections"></a>관련 단원  
 

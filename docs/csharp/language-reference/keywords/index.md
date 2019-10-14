@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Visual C#, keywords
 - '@ keyword'
 ms.assetid: e929b0f2-4b92-4d37-8060-23d323b098ad
-ms.openlocfilehash: f325d8ba09e3c3d1c1b3436f758e8fc1696c7f49
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: 2bdaa2f4cdb19d01948effd599177f68859cb82c
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70167846"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291063"
 ---
 # <a name="c-keywords"></a>C# 키워드
 
@@ -59,8 +59,9 @@ ms.locfileid: "70167846"
 |[let](let-clause.md)|[nameof](../operators/nameof.md)|[on](on.md)|
 |[orderby](orderby-clause.md)|[partial(형식)](partial-type.md)|[partial(메서드)](partial-method.md)|
 |[remove](remove.md)|[select](select-clause.md)|[set](set.md)|
-|[value](value.md)|[var](var.md)|[when(필터 조건)](when.md)|
-|[where(제네릭 형식 제약 조건)](where-generic-type-constraint.md)|[where(쿼리 절)](where-clause.md)|[yield](yield.md)|
+|[비관리형 제네릭 형식 제약 조건](where-generic-type-constraint.md)|[value](value.md)|[var](var.md)|
+|[when(필터 조건)](when.md)|[where(제네릭 형식 제약 조건)](where-generic-type-constraint.md)|[where(쿼리 절)](where-clause.md)|
+|[yield](yield.md)| | |
   
 ## <a name="see-also"></a>참고 항목
 

@@ -98,7 +98,7 @@
           href: keywords/new-modifier.md
         - name: out(제네릭 한정자)
           href: keywords/out-generic-modifier.md
-        - name: override
+        - name: 재정의
           href: keywords/override.md
         - name: readonly
           href: keywords/readonly.md
@@ -200,7 +200,7 @@
       items:
         - name: new 제약 조건
           href: keywords/new-constraint.md
-        - name: where
+        - name: 형식에 대한 설명
           href: keywords/where-generic-type-constraint.md
     - name: 액세스 키워드
       items:
@@ -214,7 +214,7 @@
           href: keywords/null.md
         - name: 'true'
           href: keywords/true-literal.md
-        - name: 'False'
+        - name: 'false'
           href: keywords/false-literal.md
         - name: default
           href: keywords/default.md
@@ -315,6 +315,9 @@
     - name: '?: 연산자'
       href: operators/conditional-operator.md
       displayName: 'conditional, ternary, ref'
+    - name: '! (null-forgiving) 연산자'
+      href: operators/null-forgiving.md
+      displayName: 'nullable reference, null-forgiveness'
     - name: '?? 및 ??= 연산자'
       href: operators/null-coalescing-operator.md
       displayName: 'null-coalescing, assignment'
@@ -529,7 +532,7 @@
       href: ../../../_csharplang/spec/variables.md
     - name: 변환
       href: ../../../_csharplang/spec/conversions.md
-    - name: 식
+    - name: 표현식
       href: ../../../_csharplang/spec/expressions.md
     - name: 문
       href: ../../../_csharplang/spec/statements.md
@@ -621,7 +624,7 @@
       href: ../../../_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md
     - name: 재귀 패턴 일치
       href: ../../../_csharplang/proposals/csharp-8.0/patterns.md
-    - name: 기본 인터페이스 멤버
+    - name: 기본 인터페이스 메서드
       href: ../../../_csharplang/proposals/csharp-8.0/default-interface-methods.md
     - name: 비동기 스트림
       href: ../../../_csharplang/proposals/csharp-8.0/async-streams.md

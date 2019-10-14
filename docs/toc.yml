@@ -580,8 +580,8 @@
           href: csharp/tutorials/exploration/interpolated-strings-local.md
         - name: 문자열 보간용 고급 시나리오
           href: csharp/tutorials/string-interpolation.md
-        - name: 기본 인터페이스 멤버로 인터페이스를 안전하게 업데이트
-          href: csharp/tutorials/default-interface-members-versions.md
+        - name: 기본 인터페이스 메서드로 인터페이스를 안전하게 업데이트
+          href: csharp/tutorials/default-interface-methods-versions.md
         - name: 인덱스 및 범위 탐색
           href: csharp/tutorials/ranges-indexes.md
         - name: nullable 참조 형식 작업
@@ -1399,7 +1399,7 @@
               href: visual-basic/language-reference/modifiers/in-generic-modifier.md
             - name: 반복기
               href: visual-basic/language-reference/modifiers/iterator.md
-            - name: 키
+            - name: Key
               href: visual-basic/language-reference/modifiers/key.md
             - name: Module
               href: visual-basic/language-reference/modifiers/module-keyword.md
