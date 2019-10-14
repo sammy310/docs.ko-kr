@@ -2,12 +2,12 @@
 title: 컨테이너로 실행되는 데이터베이스 서버 사용
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | 컨테이너로 실행되는 데이터베이스 서버를 개발을 위해서만 사용하나요? 이유를 이해합니다.
 ms.date: 10/02/2018
-ms.openlocfilehash: 3e655e26be2d6132577b0494db39d9c2e8b9aacd
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: a508ba734525b24e2f3f00408e2c59c8c00f1898
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039849"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291310"
 ---
 # <a name="using-a-database-server-running-as-a-container"></a>컨테이너로 실행되는 데이터베이스 서버 사용
 
@@ -32,7 +32,7 @@ eShopOnContainers에서 마이크로 서비스에 필요한 모든 SQL Server �
 비슷한 방식으로 `docker-compose`을 사용하는 대신 다음 `docker run` 명령은 해당 컨테이너를 실행할 수 있습니다.
 
 ```console
-  docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=Pass@word' -p 5433:1433 -d microsoft/mssql-server-linux:2017-latest
+docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=Pass@word' -p 5433:1433 -d microsoft/mssql-server-linux:2017-latest
 ```
 
 그러나 eShopOnContainers와 같은 다중 컨테이너 애플리케이션을 배포하는 경우 애플리케이션에 필요한 모든 컨테이너를 배포할 수 있도록 `docker-compose up` 명령을 사용하는 것이 더 편리합니다.
@@ -167,7 +167,7 @@ Redis는 Redis에서 Docker 이미지를 제공합니다. 해당 이미지는 �
 명령 프롬프트에서 다음 Docker CLI 명령을 실행하여 Docker Redis 컨테이너를 직접 실행할 수 있습니다.
 
 ```console
-  docker run --name some-redis -d redis
+docker run --name some-redis -d redis
 ```
 
 연결된 표준 컨테이너가 연결된 컨테이너에 자동으로 제공되도록 Redis 이미지에는 expose:6379(Redis에서 사용하는 포트)가 포함됩니다.

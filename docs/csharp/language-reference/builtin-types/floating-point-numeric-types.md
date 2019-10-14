@@ -12,17 +12,18 @@ f1_keywords:
 helpviewer_keywords:
 - floating-point numbers [C#]
 - ranges of floating-point types [C#]
+- size of floating-point types [C#]
 - types [C#], floating-point types
 - float keyword [C#]
 - floating-point numbers [C#], float keyword
 - double data type [C#]
 - decimal keyword [C#]
-ms.openlocfilehash: 0d97b3ffd587e8398e5572706a47937716a6e709
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.openlocfilehash: 17ae154780679dd1f42f43f1ec345cdc722815d3
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68236053"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72002198"
 ---
 # <a name="floating-point-numeric-types-c-reference"></a>부동 소수점 숫자 형식(C# 참조)
 
@@ -32,11 +33,11 @@ ms.locfileid: "68236053"
 
 C#은 다음과 같은 미리 정의된 부동 소수점 형식을 지원합니다.
   
-|C# 형식/키워드|근사 범위|전체 자릿수|.NET 형식|
-|----------|-----------------------|---------------|--------------|
-|`float`|±1.5 x 10<sup>−45</sup> ~ ±3.4 x 10<sup>38</sup>|~6-9개 자릿수|<xref:System.Single?displayProperty=nameWithType>|
-|`double`|±5.0 × 10<sup>−324</sup> ~ ±1.7 × 10<sup>308</sup>|~15-17개 자릿수|<xref:System.Double?displayProperty=nameWithType>|
-|`decimal`|±1.0 x 10<sup>-28</sup> ~ ±7.9228 x 10<sup>28</sup>|28-29개의 자릿수|<xref:System.Decimal?displayProperty=nameWithType>|
+|C# 형식/키워드|근사 범위|전체 자릿수|Size|.NET 형식|
+|----------|-----------------------|---------------|--------------|--------------|
+|`float`|±1.5 x 10<sup>−45</sup> ~ ±3.4 x 10<sup>38</sup>|~6-9개 자릿수|4바이트|<xref:System.Single?displayProperty=nameWithType>|
+|`double`|±5.0 × 10<sup>−324</sup> ~ ±1.7 × 10<sup>308</sup>|~15-17개 자릿수|8바이트|<xref:System.Double?displayProperty=nameWithType>|
+|`decimal`|±1.0 x 10<sup>-28</sup> ~ ±7.9228 x 10<sup>28</sup>|28-29개의 자릿수|16바이트|<xref:System.Decimal?displayProperty=nameWithType>|
 
 이전 표에서 맨 왼쪽 열의 각 C# 형식 키워드는 해당하는 .NET 형식의 별칭입니다. 서로 교환하여 사용할 수 있습니다. 예를 들어 다음 선언은 동일한 형식의 변수를 선언합니다.
 

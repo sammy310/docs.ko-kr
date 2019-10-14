@@ -2,12 +2,12 @@
 title: ASP.NET Core 서비스 및 웹앱 테스트
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | 컨테이너에서 ASP.NET Core 서비스 및 웹앱을 테스트하기 위한 아키텍처를 탐색합니다.
 ms.date: 10/02/2018
-ms.openlocfilehash: 0a741fca84f456d635e1790d6be1c72e70345a24
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 042f7a6171a88025d3d4a8e37c4deceb416e5711
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675840"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291277"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>ASP.NET Core 서비스 및 웹앱 테스트
 
@@ -192,7 +192,7 @@ services:
 
 따라서 기능/통합 테스트를 실행하려면 먼저 솔루션 테스트 폴더에서 이 명령을 실행해야 합니다.
 
-``` console
+```console
 docker-compose -f docker-compose-test.yml -f docker-compose-test.override.yml up
 ```
 
