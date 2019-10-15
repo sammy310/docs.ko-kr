@@ -2,12 +2,12 @@
 title: 기존 .NET 앱을 클라우드 최적화된 응용 프로그램으로 최신화하는 이유
 description: Azure 클라우드와 Windows 컨테이너를 사용하여 기존 .NET 응용 프로그램 최신화 | 기존 .NET 앱을 클라우드 최적화된 응용 프로그램으로 최신화하는 이유
 ms.date: 04/28/2018
-ms.openlocfilehash: aabce73efaae520a3b59c70d53519b847f2c6a94
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: c86b9ec4d4a92b8daa0fceef0531ed955b9bb2bf
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373926"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318550"
 ---
 # <a name="reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications"></a>기존 .NET 앱을 클라우드 최적화된 응용 프로그램으로 최신화하는 이유
 
@@ -41,7 +41,7 @@ ms.locfileid: "70373926"
 
 그림 4-2은 클라우드 최적화 응용 프로그램의 주요 선택적 핵심 요소를 보여 줍니다. 구현 하는 핵심 요소이 많을 수록 응용 프로그램은 고객의 기대를 충족 하는 데 성공 하 게 됩니다.
 
-![클라우드 최적화 응용 프로그램의 기본 핵심 요소](./media/image2.png)
+![클라우드 최적화 응용 프로그램의 기본 핵심 요소를 명명 하는 다이어그램입니다.](./media/reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications/main-pillars-cloud-optimized-application.png)
 
 **그림 4-2.** 클라우드 최적화 응용 프로그램의 기본 핵심 요소
 

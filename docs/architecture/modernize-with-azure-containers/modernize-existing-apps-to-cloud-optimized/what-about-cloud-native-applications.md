@@ -2,12 +2,12 @@
 title: 클라우드 네이티브 애플리케이션은 어떻습니까?
 description: Azure 클라우드와 Windows 컨테이너를 사용하여 기존 .NET 응용 프로그램 최신화 | 클라우드 네이티브 응용 프로그램의 경우는 어떨까요?
 ms.date: 04/28/2018
-ms.openlocfilehash: 86153b04790eb21276e58b3fe33c0a680d9ea1c4
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: cf4c3b24a4eeb62ed84a5fccb294b675d38fcc36
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373913"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318425"
 ---
 # <a name="what-about-cloud-native-applications"></a>클라우드 네이티브 애플리케이션은 어떻습니까?
 
@@ -15,7 +15,7 @@ ms.locfileid: "70373913"
 
 다음 그림 4-3에서는 응용 프로그램 최신화 성숙도 수준에서 클라우드 네이티브 앱의 위치를 나타냅니다.
 
-![클라우드 네이티브 응용 프로그램의 위치](./media/image3.png)
+![클라우드 네이티브 응용 프로그램을 배치 하는 방법을 보여 주는 다이어그램](./media/what-about-cloud-native-applications/positioning-cloud-native-applications.png)
 
 **그림 4-3.** 클라우드 네이티브 응용 프로그램의 위치
 
@@ -25,7 +25,7 @@ ms.locfileid: "70373913"
 
 그림 4-4에서는 클라우드 네이티브 모델의 주요 특징을 보여줍니다.
 
-![클라우드 네이티브의 특성: 마이크로 서비스와 컨테이너, 클라우드 복원 오케스트레이터, 서버리스](./media/image4.png)
+![기본 클라우드 기본 특성을 나열 하는 다이어그램입니다.](./media/what-about-cloud-native-applications/cloud-native-characteristics.png)
 
 **그림 4-4.** 클라우드 네이티브의 특성
 
@@ -41,7 +41,7 @@ ms.locfileid: "70373913"
 
 [CNCF (Cloud Native 컴퓨팅 Foundation)](https://www.cncf.io/) 는 클라우드 기본 원칙의 기본 프로모터입니다. Microsoft는 [CNCF의 멤버](https://azure.microsoft.com/blog/announcing-cncf/)입니다.
 
-예제 정의 및 클라우드 네이티브 응용 프로그램의 특징에 대 한 자세한 내용은 Gartner 문서를 활용 [하 여 클라우드 네이티브 응용 프로그램을 설계 하 고 설계 하는 방법](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications)을 참조 하세요. 클라우드 네이티브 응용 프로그램을 구현 하는 방법에 대 한 Microsoft의 특정 지침은 [.net 마이크로 서비스를 참조 하세요. 컨테이너화된 .NET 응용 프로그램용 아키텍처](https://aka.ms/microservicesebook) 전자 문서를 참조합니다.
+예제 정의 및 클라우드 네이티브 응용 프로그램의 특징에 대 한 자세한 내용은 Gartner 문서를 활용 [하 여 클라우드 네이티브 응용 프로그램을 설계 하 고 설계 하는 방법](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications)을 참조 하세요. 클라우드 네이티브 응용 프로그램을 구현 하는 방법에 대 한 Microsoft의 특정 지침은 [.NET 마이크로 서비스를 참조 하세요. 컨테이너화된 .NET 응용 프로그램용 아키텍처](https://aka.ms/microservicesebook) 전자 문서를 참조합니다.
 
 전체 응용 프로그램을 클라우드 기본 모델로 마이그레이션하는 경우 고려해 야 하는 가장 중요 한 요소는 마이크로 서비스 기반 아키텍처를 다시 설계 해야 한다는 것입니다. 이는 관련 된 큰 리팩터링 프로세스로 인해 개발에 상당한 투자가 필요 합니다. 이 옵션은 일반적으로 새로운 수준의 확장성과 장기적인 민첩성이 필요한 중요 업무용 응용 프로그램에 대해 선택 됩니다. 하지만 몇 가지 새로운 시나리오에 대해서만 마이크로 서비스를 추가 하 여 클라우드 네이티브로의 전환을 시작 하 고 궁극적으로 응용 프로그램을 마이크로 서비스로 완전히 리팩터링할 수 있습니다. 이는 일부 시나리오에서 최상의 옵션인 증분 방법입니다.
 
@@ -55,7 +55,7 @@ ms.locfileid: "70373913"
 
 마이크로 서비스 아키텍처는 자치 서비스의 형태로 여러 독립 된 하위 시스템을 기반으로 하는 분산 된 크고 크고 복잡 한 중요 업무용 응용 프로그램에 대 한 선호 되는 방법입니다. 마이크로 서비스 기반 아키텍처에서 응용 프로그램은 독립적으로 개발, 테스트, 버전 관리, 배포 및 확장할 수 있는 서비스 컬렉션으로 빌드됩니다. 여기에는 마이크로 서비스 당 모든 관련 된 자치 데이터베이스가 포함 될 수 있습니다.
 
-.Net Core를 사용 하 여 구현할 수 있는 마이크로 서비스 아키텍처에 대 한 자세한 내용은 다운로드 가능한 PDF 전자 서적 [.net 마이크로 서비스를 참조 하세요. 컨테이너화된 .NET 응용 프로그램용 아키텍처](https://aka.ms/microservicesebook) 전자 문서를 참조합니다. 이 가이드는 [온라인](../../microservices/index.md)에서도 사용할 수 있습니다.
+.NET Core를 사용 하 여 구현할 수 있는 마이크로 서비스 아키텍처에 대 한 자세한 내용은 다운로드 가능한 @no__t PDF 0.NET 마이크로 서비스를 참조 하세요. 컨테이너화된 .NET 응용 프로그램용 아키텍처](https://aka.ms/microservicesebook) 전자 문서를 참조합니다. 이 가이드는 [온라인](../../microservices/index.md)에서도 사용할 수 있습니다.
 
 하지만 마이크로 서비스에서 강력한 기능, 강력한 하위 시스템 경계 및 기술 다양성을 제공 하는 시나리오 에서도 많은 새로운 과제가 발생 합니다. 이러한 문제는 분산 응용 프로그램 개발 (예: 조각화 된 데이터 모델 및 독립적인 데이터 모델)과 관련이 있습니다. 마이크로 서비스 간 복원 력 있는 통신 실현 최종 일관성에 대 한 필요성 작업 복잡성. 마이크로 서비스는 기존 모놀리식 응용 프로그램에 비해 높은 수준의 복잡성을 도입 합니다.
 

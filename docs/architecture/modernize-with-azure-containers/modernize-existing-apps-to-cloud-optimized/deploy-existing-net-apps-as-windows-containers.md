@@ -2,12 +2,12 @@
 title: 기존 .NET 앱을 Windows 컨테이너로 배포
 description: Azure 클라우드와 Windows 컨테이너를 사용하여 기존 .NET 응용 프로그램 최신화 | 기존 .NET 앱을 Windows 컨테이너로 배포
 ms.date: 04/29/2018
-ms.openlocfilehash: d48acbb2e1c4858bf3146318f70dd7b8a7b62918
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 997b32e51272be2126bd824de1f8f026d77ca203
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926483"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318623"
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>기존 .NET 앱을 Windows 컨테이너로 배포
 
@@ -51,7 +51,7 @@ Windows 컨테이너에서 응용 프로그램 패키징 프로세스는 완전�
 
 [Docker](https://www.docker.com/) 는 응용 프로그램의 배포를 클라우드 또는 온-프레미스에서 실행할 수 있는, 자신에 게 적합 한 휴대용 컨테이너로 자동화 하는 [오픈 소스 프로젝트](https://github.com/docker/docker) 입니다. Docker는 이 기술을 장려하고 발전시키는 [회사](https://www.docker.com/)이기도 합니다. 이 회사는 Microsoft를 비롯 한 클라우드, Linux 및 Windows 공급 업체와 협력 하 여 작업 합니다.
 
-![Docker는 하이브리드 클라우드의 모든 계층에서 컨테이너를 배포](./media/image6.png)
+![Docker가 하이브리드 클라우드에서 컨테이너를 배포 하는 방법을 보여 주는 다이어그램입니다.](./media/deploy-existing-net-apps-as-windows-containers/docker-deploys-containers-all-layers.png)
 
 **그림 4-6.** Docker는 하이브리드 클라우드의 모든 계층에서 컨테이너를 배포
 
@@ -83,7 +83,7 @@ Linux의 경우 공식 .NET Docker 이미지(예: Debian)에서 여러 배포판
 
 그림 4-7은 앱의 .NET Framework 버전에 따라 대상으로 지정할 수 있는 OS 버전을 보여 줍니다.
 
-![.NET Framework 버전에 따라 대상으로 하는 운영 체제](./media/image7.png)
+![.NET Framework 버전에 따라 대상으로 할 OS를 보여 주는 다이어그램입니다.](./media/deploy-existing-net-apps-as-windows-containers/dotnet-framework-operating-systems.png)
 
 **그림 4-7.** .NET Framework 버전에 따라 대상으로 하는 운영 체제
 
@@ -129,7 +129,7 @@ Hyper-v 격리를 사용 하거나 사용 하지 않고 Windows에서 컨테이�
 
     <https://docs.microsoft.com/virtualization/windowscontainers/about/>
 
-- **인포 그래픽 Microsoft 및 컨테이너**
+- **Infographic: Microsoft 및 컨테이너 @ no__t-0
 
     <https://info.microsoft.com/rs/157-GQE-382/images/Container%20infographic%201.4.17.pdf>
 
@@ -138,7 +138,7 @@ Hyper-v 격리를 사용 하거나 사용 하지 않고 Windows에서 컨테이�
 이전 섹션에서는 Docker 컨테이너의 이점 및 .NET 응용 프로그램의 특정 컨테이너 이미지에 대 한 세부 정보를 설명 했습니다. 응용 프로그램을 개발 하거나 컨테이너 화 하기 위해 모든 일반 정보는 기본입니다.
 그러나 프로덕션 배포 환경이 나 QA 및 개발/테스트 Microsoft Azure 환경에 대해 생각 하는 경우에는 클라우드에서 전체 컨테이너 에코 시스템 (아래 다이어그램에 표시)을 다양 하 게 제공 하는 다양 한 옵션을 제공 합니다. 특정 응용 프로그램의 요구 사항에 따라 하나 또는 다른 Azure 제품을 선택 해야 합니다.
 
-![Azure의 컨테이너 에코 시스템](./media/image7.5.png)
+![Azure의 컨테이너 에코 시스템 다이어그램](./media/deploy-existing-net-apps-as-windows-containers/azure-container-ecosystem.png)
 
 **그림 4-7.5** Azure의 컨테이너 에코 시스템
 

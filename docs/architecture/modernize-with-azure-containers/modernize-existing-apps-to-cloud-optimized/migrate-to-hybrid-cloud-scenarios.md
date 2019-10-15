@@ -2,12 +2,12 @@
 title: 하이브리드 클라우드로 마이그레이션 시나리오
 description: Azure 클라우드와 Windows 컨테이너를 사용하여 기존 .NET 응용 프로그램 최신화 | 하이브리드 클라우드 시나리오로 마이그레이션
 ms.date: 04/30/2018
-ms.openlocfilehash: 313608c41427b3833bbc873398595ceb37bd7c7d
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 5f0819495080bc29ed1239b4a7ab8af31141881b
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373943"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318461"
 ---
 # <a name="migrate-to-hybrid-cloud-scenarios"></a>하이브리드 클라우드로 마이그레이션 시나리오
 
@@ -25,7 +25,7 @@ Azure Stack는 조직의 데이터 센터에서 Azure 서비스를 제공할 수
 
 그림 4-13은 Microsoft에서 제공 하는 진정한 하이브리드 클라우드 플랫폼에 대 한 개요를 보여 줍니다.
 
-![Azure Stack 및 Azure를 사용 하는 Microsoft 하이브리드 클라우드 플랫폼](./media/image13.jpg)
+![Azure Stack 및 Azure를 사용 하는 Microsoft 하이브리드 클라우드 플랫폼의 다이어그램입니다.](./media/migrate-to-hybrid-cloud-scenarios/microsoft-hybrid-cloud-platform.png)
 
 **그림 4-13.** Azure Stack 및 Azure를 사용 하는 Microsoft 하이브리드 클라우드 플랫폼
 
