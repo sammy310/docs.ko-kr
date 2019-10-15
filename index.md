@@ -6,12 +6,12 @@ title: .NET 설명서
 description: C#, Visual Basic 및 F#을 사용하는 모든 플랫폼에서 .NET을 사용하여 다양한 애플리케이션을 만드는 방법을 알아보세요. API 참조, 샘플 코드, 자습서 등을 찾아보세요.
 ms.custom: updateeachrelease
 ms.date: 09/30/2019
-ms.openlocfilehash: a30744ca8831375f9a54f054b226274e273a67a5
-ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
+ms.openlocfilehash: 1446d870a4cae2c5bf385a0089bbc830f932ea08
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71736767"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72321467"
 ---
 <!-- markdownlint-disable MD033 -->
 <div id="main" class="v2">
@@ -88,7 +88,7 @@ ms.locfileid: "71736767"
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="/dotnet/images/hub/dotnet.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/dotnet-logo-image.svg" alt="Screenshot of the purple .NET logo." />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -248,7 +248,7 @@ ms.locfileid: "71736767"
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="/dotnet/images/hub/netspark.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/netspark-logo-image.svg" alt="Screenshot of the purple .NET for Apache Spark Guide logo." />
                                                 </div>
                                             </div>
                                             <div class="cardText">
