@@ -2,15 +2,15 @@
 title: 인스턴싱 초기화
 ms.date: 03/30/2017
 ms.assetid: 154d049f-2140-4696-b494-c7e53f6775ef
-ms.openlocfilehash: 4d6fdfedad9d522230a35014c0ee164e8b24fcfb
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
-ms.translationtype: HT
+ms.openlocfilehash: ca135aca8f84ddf79ec7447e7fa7814f61984419
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039607"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989838"
 ---
 # <a name="instancing-initialization"></a>인스턴싱 초기화
-이 샘플은 개체 [풀링](../../../../docs/framework/wcf/samples/pooling.md) 의 초기화를 활성화 및 비활성화 하 `IObjectControl`여 사용자 지정 하는 인터페이스를 정의 하 여 풀링 샘플을 확장 합니다. 클라이언트에서는 개체를 풀로 반환하는 메서드와 개체를 풀로 반환하지 않는 메서드를 호출합니다.  
+이 샘플은 개체의 초기화를 활성화 및 비활성화하여 사용자 지정하는 인터페이스`IObjectControl`를 정의하여 [풀링](../../../../docs/framework/wcf/samples/pooling.md) 샘플을 확장합니다. 클라이언트에서는 개체를 풀로 반환하는 메서드와 개체를 풀로 반환하지 않는 메서드를 호출합니다.  
   
 > [!NOTE]
 > 이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "70039607"
 ## <a name="the-object-pool"></a>개체 풀  
  `ObjectPoolInstanceProvider` 클래스에는 개체 풀이 구현되어 있습니다. 이 클래스는 <xref:System.ServiceModel.Dispatcher.IInstanceProvider> 인터페이스를 구현하여 서비스 모델 계층과 상호 작용합니다. EndpointDispatcher가 새 인스턴스를 만드는 대신 <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A> 메서드를 호출하면 사용자 지정 구현에서 메모리 내의 풀에 있는 기존 개체를 찾습니다. 사용할 수 있는 개체가 있으면 반환되고, 그렇지 않으면 `ObjectPoolInstanceProvider`는 `ActiveObjectsCount` 속성(풀에서 반환된 개체의 개수)이 최대 풀 크기에 도달했는지 확인합니다. 이 크기에 도달하지 않았으면 새 인스턴스가 만들어지고 호출자에게 반환하며 이어서 `ActiveObjectsCount`가 증가합니다. 도달했으면 구성된 시간 동안 개체 만들기 요청이 큐에 대기합니다. `GetObjectFromThePool`의 구현은 다음 샘플 코드에 표시되어 있습니다.  
   
-```  
+```csharp  
 private object GetObjectFromThePool()  
 {  
     bool didNotTimeout =   
@@ -74,7 +74,7 @@ ResourceHelper.GetString("ExObjectCreationTimeout"));
   
  사용자 지정 `ReleaseInstance` 구현에서는 해제된 인스턴스를 다시 풀에 추가하고 `ActiveObjectsCount` 값을 감소시킵니다. EndpointDispatcher는 서로 다른 스레드에서 이러한 메서드를 호출할 수 있기 때문에 `ObjectPoolInstanceProvider` 클래스의 클래스 수준 멤버에 대한 액세스를 동기화해야 합니다.  
   
-```  
+```csharp  
 public void ReleaseInstance(InstanceContext instanceContext, object instance)  
 {  
     lock (poolLock)  
@@ -127,7 +127,7 @@ public void ReleaseInstance(InstanceContext instanceContext, object instance)
   
  메서드 `ReleaseInstance` 는 *정리 초기화* 기능을 제공 합니다. 일반적으로 풀은 풀의 수명 동안 최소한의 개체 수를 유지합니다. 하지만 사용량이 지나치게 많은 경우에는 구성에 지정된 최대 한도를 사용하기 위해 풀에 추가 개체를 만들어야 할 수도 있습니다. 결국 풀의 사용이 줄어들면 여분의 해당 개체는 추가 오버헤드가 될 수 있습니다. 따라서 `activeObjectsCount`가 0에 도달하면 정리 주기를 트리거하고 수행하는 유휴 타이머가 시작됩니다.  
   
-```  
+```csharp  
 if (activeObjectsCount == 0)  
 {  
     idleTimer.Start();   
@@ -162,7 +162,7 @@ if (activeObjectsCount == 0)
   
  사용자 지정 <xref:System.ServiceModel.Description.IServiceBehavior> 구현에서는 `ObjectPoolInstanceProvider`의 새 인스턴스가 인스턴스화되어 <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A>에 첨부된 각 <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>의 <xref:System.ServiceModel.ServiceHostBase> 속성에 할당됩니다.  
   
-```  
+```csharp  
 public void ApplyDispatchBehavior(ServiceDescription description, ServiceHostBase serviceHostBase)  
 {  
     if (enabled)  
@@ -192,7 +192,7 @@ public void ApplyDispatchBehavior(ServiceDescription description, ServiceHostBas
   
  이제 새로 만든 사용자 지정 `ObjectPooling` 특성을 사용 하 여 서비스 구현에 주석을 추가 하 여 개체 풀링 동작을 WCF 서비스에 추가할 수 있습니다.  
   
-```  
+```csharp  
 [ObjectPooling(MaxSize=1024, MinSize=10, CreationTimeout=30000]      
 public class PoolService : IPoolService  
 {  
@@ -207,7 +207,7 @@ public class PoolService : IPoolService
   
  이 기능을 모방하기 위해 이 샘플에서는 이전에 언급된 멤버가 있는 공용 인터페이스(`IObjectControl`)를 선언합니다. 그런 다음 이 인터페이스는 컨텍스트별 초기화를 제공하는 데 사용되는 서비스 클래스에 의해 구현됩니다. 이러한 요구 사항에 맞게 <xref:System.ServiceModel.Dispatcher.IInstanceProvider> 구현을 수정해야 합니다. 이제 `GetInstance` 메서드를 호출 하 여 개체를 가져올 때마다 개체가 구현 `IObjectControl.` 되는지 여부를 확인 해야 합니다 .이 경우에는 메서드를 `Activate` 적절 하 게 호출 해야 합니다.  
   
-```  
+```csharp  
 if (obj is IObjectControl)  
 {  
     ((IObjectControl)obj).Activate();  
@@ -216,7 +216,7 @@ if (obj is IObjectControl)
   
  개체를 풀에 반환할 때는 개체를 다시 풀에 추가하기 전에 `CanBePooled` 속성을 확인해야 합니다.  
   
-```  
+```csharp  
 if (instance is IObjectControl)  
 {  
     IObjectControl objectControl = (IObjectControl)instance;  
@@ -230,7 +230,7 @@ if (instance is IObjectControl)
   
  서비스 개발자는 개체를 풀링할 수 있는지 여부를 결정할 수 있으므로 지정된 시간에 풀에 있는 개체 수가 최소 크기 아래로 내려갈 수 있습니다. 따라서 개체 수가 최소 수준 아래로 내려갔는지 확인하고 정리 절차에서 필요한 시작 작업을 수행해야 합니다.  
   
-```  
+```csharp  
 // Remove the surplus objects.  
 if (pool.Count > minPoolSize)  
 {  
