@@ -1,0 +1,66 @@
+- name: .NET Framework 가이드
+  href: index.md
+- name: 새로운 기능
+  href: whats-new/
+- name: 시작
+  href: get-started/
+- name: 설치 가이드
+  href: install/
+- name: 마이그레이션 가이드
+  href: migration-guide/
+- name: 개발 가이드
+  href: development-guide.md
+  items:
+    - name: 애플리케이션 도메인 및 어셈블리
+      href: app-domains/
+    - name: 데스크톱 응용 프로그램의 리소스
+      href: resources/
+    - name: 액세스 가능성
+      href: ui-automation/
+    - name: 데이터 및 모델링
+      href: data/
+    - name: 클라이언트 애플리케이션
+      href: develop-client-apps.md
+      items:
+        - name: Windows Presentation Foundation
+          href: wpf/
+        - name: Windows Forms
+          href: winforms/
+    - name: WCF를 사용하여 개발한 서비스 기반 응용 프로그램
+      href: wcf/
+    - name: Windows Workflow Foundation
+      href: windows-workflow-foundation/
+    - name: Windows 서비스 응용 프로그램
+      href: windows-services/
+    - name: 64비트 애플리케이션
+      href: 64-bit-apps.md
+    - name: ASP.NET을 사용하는 웹 애플리케이션
+      href: develop-web-apps-with-aspnet.md
+    - name: .NET Framework의 네트워크 프로그래밍
+      href: network-programming/
+    - name: 응용 프로그램 구성
+      href: configure-apps/
+    - name: .NET 네이티브로 앱 컴파일
+      href: net-native/
+    - name: Windows Identity Foundation
+      href: security/
+    - name: '디버깅, 추적 및 프로파일링'
+      href: debug-trace-profile/
+    - name: 배포
+      href: deployment/
+    - name: 성능
+      href: performance/
+    - name: 동적 프로그래밍
+      href: reflection-and-codedom/
+    - name: MEF(Managed Extensibility Framework)
+      href: mef/
+    - name: 비관리 코드와의 상호 운용
+      href: interop/
+    - name: 관리되지 않는 API 참조
+      href: unmanaged-api/
+    - name: XAML 서비스
+      href: xaml-services/
+- name: 도구
+  href: tools/
+- name: 추가 클래스 라이브러리 및 API
+  href: additional-apis/

@@ -1,0 +1,198 @@
+- name: 'C# 가이드'
+  href: index.md
+- name: 시작
+  href: getting-started/
+- name: 자습서
+  items:
+    - name: 개요
+      href: tutorials/index.md
+    - name: 'C#을 사용한 프로그래밍 소개'
+      items:
+        - name: 첫 번째 단원 선택
+          href: tutorials/intro-to-csharp/index.md
+        - name: Hello World
+          href: tutorials/intro-to-csharp/hello-world.yml
+        - name: 'C#의 숫자'
+          href: tutorials/intro-to-csharp/numbers-in-csharp.yml
+        - name: 분기 및 루프
+          href: tutorials/intro-to-csharp/branches-and-loops.yml
+        - name: 목록 컬렉션
+          href: tutorials/intro-to-csharp/list-collection.yml
+        - name: 로컬 환경에서 작업
+          items:
+            - name: 환경 설정
+              href: tutorials/intro-to-csharp/local-environment.md
+            - name: 'C#의 숫자'
+              href: tutorials/intro-to-csharp/numbers-in-csharp-local.md
+            - name: 분기 및 루프
+              href: tutorials/intro-to-csharp/branches-and-loops-local.md
+            - name: 목록 컬렉션
+              href: tutorials/intro-to-csharp/arrays-and-collections.md
+            - name: 클래스 소개
+              href: tutorials/intro-to-csharp/introduction-to-classes.md
+    - name: 'C# 6 탐색'
+      href: tutorials/exploration/csharp-6.yml
+    - name: 문자열 보간 탐색 - 대화형 자습서
+      href: tutorials/exploration/interpolated-strings.yml
+    - name: 사용자 환경에서 문자열 보간 탐색
+      href: tutorials/exploration/interpolated-strings-local.md
+    - name: 문자열 보간용 고급 시나리오
+      href: tutorials/string-interpolation.md
+    - name: 기본 인터페이스 메서드로 인터페이스를 안전하게 업데이트
+      href: tutorials/default-interface-methods-versions.md
+    - name: 기본 인터페이스 메서드로 믹스인 기능 만들기
+      href: tutorials/mixins-with-default-interface-methods.md
+    - name: 인덱스 및 범위 탐색
+      href: tutorials/ranges-indexes.md
+    - name: nullable 참조 형식 작업
+      href: tutorials/nullable-reference-types.md
+    - name: 앱을 nullable 참조 형식으로 업그레이드
+      href: tutorials/upgrade-to-nullable-references.md
+    - name: 비동기 스트림 생성 및 사용
+      href: tutorials/generate-consume-asynchronous-stream.md
+    - name: 패턴 일치를 사용하여 데이터 기능 확장
+      href: tutorials/pattern-matching.md
+    - name: 콘솔 애플리케이션
+      href: tutorials/console-teleprompter.md
+    - name: REST 클라이언트
+      href: tutorials/console-webapiclient.md
+    - name: 'C# 및 .NET의 상속'
+      href: tutorials/inheritance.md
+    - name: LINQ 작업
+      href: tutorials/working-with-linq.md
+    - name: 특성 사용
+      href: tutorials/attributes.md
+- name: 'C# 둘러보기'
+  href: tour-of-csharp/
+- name: 'C#의 새로운 기능'
+  items:
+    - name: 'C# 8.0'
+      href: whats-new/csharp-8.md
+    - name: 'C# 7.3'
+      href: whats-new/csharp-7-3.md
+    - name: 'C# 7.2'
+      href: whats-new/csharp-7-2.md
+    - name: 'C# 7.1'
+      href: whats-new/csharp-7-1.md
+    - name: 'C# 7.0'
+      href: whats-new/csharp-7.md
+    - name: 'C# 6'
+      href: whats-new/csharp-6.md
+    - name: 'C# 버전 기록'
+      href: whats-new/csharp-version-history.md
+    - name: 언어와 프레임워크 간 관계
+      href: whats-new/relationships-between-language-and-library.md
+    - name: 버전 및 업데이트 고려 사항
+      href: whats-new/version-update-considerations.md
+- name: 'C# 개념'
+  items:
+    - name: 'C# 형식 시스템'
+      href: programming-guide/types/index.md
+    - name: nullable 참조 형식
+      href: nullable-references.md
+    - name: 특성과 제약 조건을 사용하여 Null을 허용하는 API를 설명하세요.
+      href: nullable-attributes.md
+    - name: 네임스페이스
+      href: programming-guide/namespaces/index.md
+    - name: 기본 형식
+      href: basic-types.md
+    - name: 클래스
+      href: programming-guide/classes-and-structs/classes.md
+    - name: 구조체
+      href: structs.md
+    - name: 튜플
+      href: tuples.md
+    - name: 튜플 및 기타 형식 분해
+      href: deconstruct.md
+    - name: 인터페이스
+      href: programming-guide/interfaces/index.md
+    - name: 메서드
+      href: methods.md
+    - name: 람다 식
+      href: programming-guide/statements-expressions-operators/lambda-expressions.md
+    - name: 속성
+      href: properties.md
+    - name: 인덱서
+      href: indexers.md
+    - name: 버림
+      href: discards.md
+    - name: 제네릭
+      href: programming-guide/generics/index.md
+    - name: 반복기
+      href: iterators.md
+    - name: 대리자 및 이벤트
+      items:
+        - name: 대리자 소개
+          href: delegates-overview.md
+        - name: System.Delegate 및 대리자 키워드
+          href: delegate-class.md
+        - name: 강력한 형식의 대리자
+          href: delegates-strongly-typed.md
+        - name: 대리자에 대한 일반적인 패턴
+          href: delegates-patterns.md
+        - name: 이벤트 소개
+          href: events-overview.md
+        - name: 표준 .NET 이벤트 패턴
+          href: event-pattern.md
+        - name: 업데이트된 .NET 이벤트 패턴
+          href: modern-events.md
+        - name: 대리자 및 이벤트를 구별
+          href: distinguish-delegates-events.md
+    - name: LINQ(Language-Integrated Query)
+      href: linq/
+    - name: 비동기 프로그래밍
+      href: async.md
+    - name: 패턴 일치
+      href: pattern-matching.md
+    - name: 안전하고 효율적인 코드 작성
+      href: write-safe-efficient-code.md
+    - name: 식 트리
+      items:
+        - name: 식 트리 소개
+          href: expression-trees.md
+        - name: 식 트리 설명
+          href: expression-trees-explained.md
+        - name: 식 트리를 지원하는 프레임워크 형식
+          href: expression-classes.md
+        - name: 식 실행
+          href: expression-trees-execution.md
+        - name: 식 해석
+          href: expression-trees-interpreting.md
+        - name: 식 빌드
+          href: expression-trees-building.md
+        - name: 식 변환
+          href: expression-trees-translating.md
+        - name: 요약
+          href: expression-trees-summary.md
+    - name: 기본 상호 운용성
+      href: programming-guide/interop/index.md
+    - name: 코드 문서화
+      href: codedoc.md
+    - name: 버전 관리
+      href: versioning.md
+- name: 'C# 항목 사용 방법'
+  items:
+    - name: 항목 인덱스
+      href: how-to/index.md
+    - name: '`String.Split`을 사용하여 문자열 구문 분석'
+      href: how-to/parse-strings-using-split.md
+    - name: 문자열 연결
+      href: how-to/concatenate-multiple-strings.md
+    - name: 문자열을 DateTime으로 변환
+      href: ../standard/base-types/parsing-datetime.md
+    - name: 검색 문자열
+      href: how-to/search-strings.md
+    - name: 문자열 내용 수정
+      href: how-to/modify-string-contents.md
+    - name: 문자열 비교
+      href: how-to/compare-strings.md
+    - name: 패턴 일치(is 및 as 연산자)를 사용하여 안전하게 캐스트
+      href: how-to/safely-cast-using-pattern-matching-is-and-as-operators.md
+- name: .NET Compiler Platform SDK(Roslyn API)
+  href: roslyn-sdk/
+- name: 'C# 프로그래밍 가이드'
+  href: programming-guide/
+- name: 언어 참조
+  href: language-reference/
+- name: 연습
+  href: walkthroughs.md
