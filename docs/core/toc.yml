@@ -1,0 +1,331 @@
+- name: .NET Core 가이드
+  href: index.md
+- name: .NET Core 정보
+  href: about.md
+- name: 시작
+  href: get-started.md
+  items:
+    - name: 'C# 및 Visual Studio Code 시작'
+      href: tutorials/with-visual-studio-code.md
+    - name: 'Visual Studio 2017에서 .NET Core를 사용하여 C# Hello World 앱 빌드'
+      href: tutorials/with-visual-studio.md
+    - name: Visual Studio 2017에서 .NET Core를 사용하여 Visual Basic Hello World 앱 빌드
+      href: tutorials/vb-with-visual-studio.md
+    - name: 'Visual Studio 2017을 사용하여 C# 또는 Visual Basic .NET Core Hello World 애플리케이션 디버그'
+      href: tutorials/debugging-with-visual-studio.md
+    - name: Visual Studio 2017을 사용하여 Hello World 애플리케이션 게시
+      href: tutorials/publishing-with-visual-studio.md
+    - name: 'Visual Studio 2017에서 C# 및 .NET Core를 사용하여 .NET Standard 라이브러리 빌드'
+      href: tutorials/library-with-visual-studio.md
+    - name: Visual Studio 2017에서 Visual Basic 및 .NET Core를 사용하여 .NET Standard 라이브러리 빌드
+      href: tutorials/vb-library-with-visual-studio.md
+    - name: Visual Studio 2017에서 .NET Core를 사용하여 .NET Standard 라이브러리 테스트
+      href: tutorials/testing-library-with-visual-studio.md
+    - name: Visual Studio 2017에서 .NET Standard 라이브러리 사용
+      href: tutorials/consuming-library-with-visual-studio.md
+- name: Windows 필수 구성 요소
+  href: windows-prerequisites.md
+- name: macOS 필수 구성 요소
+  href: macos-prerequisites.md
+- name: Linux 필수 구성 요소
+  href: linux-prerequisites.md
+- name: .NET Core의 새로운 기능
+  items:
+    - name: .NET Core 3.0의 새로운 기능
+      href: whats-new/dotnet-core-3-0.md
+    - name: .NET Core 2.2의 새로운 기능
+      href: whats-new/dotnet-core-2-2.md
+    - name: .NET Core 2.1의 새로운 기능
+      href: whats-new/dotnet-core-2-1.md
+    - name: .NET Core 2.0의 새로운 기능
+      href: whats-new/dotnet-core-2-0.md
+- name: 응용 프로그램 호환성
+  href: compatibility/
+- name: 자습서
+  href: tutorials/index.md
+  items:
+    - name: CLI용 템플릿
+      items:
+        - name: 1 - 항목 템플릿 만들기
+          href: tutorials/cli-templates-create-item-template.md
+        - name: 2 - 프로젝트 템플릿 만들기
+          href: tutorials/cli-templates-create-project-template.md
+        - name: 3 - 템플릿 팩 만들기
+          href: tutorials/cli-templates-create-template-pack.md
+    - name: macOS에서 .NET Core 시작
+      href: tutorials/using-on-macos.md
+    - name: Mac용 Visual Studio를 사용하여 macOS에서 .NET Core 시작
+      href: tutorials/using-on-mac-vs.md
+    - name: Visual Studio for Mac을 사용하여 macOS에서 완전한 .NET Core 솔루션 빌드
+      href: tutorials/using-on-mac-vs-full-solution.md
+    - name: CLI 도구를 사용하여 .NET Core 시작
+      href: tutorials/using-with-xplat-cli.md
+    - name: .NET Core 명령줄을 사용하여 프로젝트 구성 및 테스트
+      href: tutorials/testing-with-cli.md
+    - name: 플랫폼 간 도구로 라이브러리 개발
+      href: tutorials/libraries.md
+    - name: 플러그 인을 사용하여 .NET Core 애플리케이션 만들기
+      href: tutorials/creating-app-with-plugin-support.md
+    - name: ASP.NET Core 응용 프로그램 개발
+      href: tutorials/aspnet-core.md
+    - name: 네이티브 코드에서 .NET Core 호스팅
+      href: tutorials/netcore-hosting.md
+- name: 기본 상호 운용성
+  items:
+    - name: .NET Core 구성 요소를 COM에 노출
+      href: native-interop/expose-components-to-com.md
+- name: '패키지, 메타패키지 및 프레임워크'
+  href: packages.md
+- name: CLI의 변경 내용 개요
+  href: tools/cli-msbuild-architecture.md
+  items:
+    - name: 종속성 관리
+      href: tools/dependencies.md
+    - name: csproj 형식에 대한 추가 사항
+      href: tools/csproj.md
+- name: 마이그레이션
+  items:
+    - name: .NET Core 2.0 ~ 2.1
+      href: migration/20-21.md
+    - name: project.json에서 마이그레이션
+      href: migration/index.md
+    - name: project.json 및 csproj 간 매핑
+      href: tools/project-json-to-csproj.md
+    - name: DNX에서 마이그레이션
+      href: migration/from-dnx.md
+- name: 애플리케이션 배포
+  href: deploying/index.md
+  items:
+    - name: CLI 도구를 사용한 앱 배포
+      href: deploying/deploy-with-cli.md
+    - name: Visual Studio를 사용한 앱 배포
+      href: deploying/deploy-with-vs.md
+    - name: 플랫폼 간 도구로 NuGet 패키지 만들기
+      href: deploying/creating-nuget-packages.md
+    - name: 자체 포함된 배포 런타임 롤포워드
+      href: deploying/runtime-patch-selection.md
+    - name: 런타임 패키지 저장소
+      href: deploying/runtime-store.md
+- name: Docker
+  items:
+    - name: .NET 및 Docker 소개
+      href: docker/introduction.md
+    - name: .NET Core 앱 컨테이너화
+      href: docker/build-container.md
+    - name: Visual Studio의 컨테이너 도구
+      href: /visualstudio/containers/overview
+- name: 진단 도구
+  items:
+    - name: 개요
+      href: diagnostics/index.md
+    - name: 관리형 디버거
+      href: diagnostics/managed-debuggers.md
+    - name: 로깅 및 추적
+      href: diagnostics/logging-tracing.md
+    - name: .NET Core CLI 전역 도구
+      items:
+        - name: dotnet-counters
+          href: diagnostics/dotnet-counters.md
+        - name: dotnet-dump
+          href: diagnostics/dotnet-dump.md
+        - name: dotnet-trace
+          href: diagnostics/dotnet-trace.md
+- name: 단위 테스트
+  href: testing/index.md
+  items:
+    - name: 단위 테스트 모범 사례
+      href: testing/unit-testing-best-practices.md
+    - name: 'xUnit을 사용한 C# 단위 테스트'
+      href: testing/unit-testing-with-dotnet-test.md
+    - name: 'NUnit을 사용한 C# 단위 테스트'
+      href: testing/unit-testing-with-nunit.md
+    - name: 'MSTest를 사용한 C# 단위 테스트'
+      href: testing/unit-testing-with-mstest.md
+    - name: 'xUnit을 사용한 F# 단위 테스트'
+      href: testing/unit-testing-fsharp-with-dotnet-test.md
+    - name: 'NUnit을 사용한 F# 단위 테스트'
+      href: testing/unit-testing-fsharp-with-nunit.md
+    - name: 'MSTest를 사용한 F# 단위 테스트'
+      href: testing/unit-testing-fsharp-with-mstest.md
+    - name: xUnit을 사용한 VB 단위 테스트
+      href: testing/unit-testing-visual-basic-with-dotnet-test.md
+    - name: NUnit을 사용한 VB 단위 테스트
+      href: testing/unit-testing-visual-basic-with-nunit.md
+    - name: MSTest를 사용한 VB 단위 테스트
+      href: testing/unit-testing-visual-basic-with-mstest.md
+    - name: 선택적 단위 테스트 실행
+      href: testing/selective-unit-tests.md
+    - name: 게시된 출력 단위 테스트
+      href: testing/unit-testing-published-output.md
+    - name: Visual Studio를 사용한 Live Unit Testing .NET Core 프로젝트
+      href: /visualstudio/test/live-unit-testing-start
+- name: 연속 통합
+  href: tools/using-ci-with-cli.md
+- name: 버전 관리
+  href: versions/index.md
+  items:
+    - name: .NET Core 버전 선택
+      href: versions/selection.md
+    - name: 오래된 런타임 및 SDK 제거
+      href: versions/remove-runtime-sdk-versions.md
+- name: RID(런타임 식별자) 카탈로그
+  href: rid-catalog.md
+- name: .NET Core SDK 개요
+  href: sdk.md
+- name: .NET Core CLI
+  items:
+    - name: 개요
+      href: tools/index.md
+    - name: 도구
+      expanded: true
+      items:
+        - name: 전역 도구
+          expanded: true
+          items:
+            - name: 개요
+              href: tools/global-tools.md
+            - name: Global Tool 만들기
+              href: tools/global-tools-how-to-create.md
+        - name: 도구 사용 문제 해결
+          href: tools/troubleshoot-usage-issues.md
+    - name: 상승된 액세스 권한
+      href: tools/elevated-access.md
+    - name: 확장성 모델
+      href: tools/extensibility.md
+    - name: 사용자 지정 템플릿
+      href: tools/custom-templates.md
+    - name: TAB 완성 기능 사용
+      href: tools/enable-tab-autocomplete.md
+    - name: 원격 분석
+      href: tools/telemetry.md
+    - name: global.json 개요
+      href: tools/global-json.md
+    - name: 참조
+      items:
+        - name: dotnet
+          href: tools/dotnet.md
+        - name: dotnet build
+          href: tools/dotnet-build.md
+        - name: dotnet build-server
+          href: tools/dotnet-build-server.md
+        - name: dotnet clean
+          href: tools/dotnet-clean.md
+        - name: dotnet help
+          href: tools/dotnet-help.md
+        - name: dotnet 마이그레이션
+          href: tools/dotnet-migrate.md
+        - name: dotnet msbuild
+          href: tools/dotnet-msbuild.md
+        - name: dotnet new
+          href: tools/dotnet-new.md
+        - name: dotnet nuget
+          items:
+            - name: dotnet nuget delete
+              href: tools/dotnet-nuget-delete.md
+            - name: dotnet nuget locals
+              href: tools/dotnet-nuget-locals.md
+            - name: dotnet nuget push
+              href: tools/dotnet-nuget-push.md
+        - name: dotnet pack
+          href: tools/dotnet-pack.md
+        - name: dotnet publish
+          href: tools/dotnet-publish.md
+        - name: dotnet restore
+          href: tools/dotnet-restore.md
+        - name: dotnet run
+          href: tools/dotnet-run.md
+        - name: dotnet sln
+          href: tools/dotnet-sln.md
+        - name: dotnet store
+          href: tools/dotnet-store.md
+        - name: dotnet test
+          href: tools/dotnet-test.md
+        - name: dotnet tool
+          items:
+            - name: dotnet tool install
+              href: tools/dotnet-tool-install.md
+            - name: dotnet tool list
+              href: tools/dotnet-tool-list.md
+            - name: dotnet tool uninstall
+              href: tools/dotnet-tool-uninstall.md
+            - name: dotnet tool update
+              href: tools/dotnet-tool-update.md
+        - name: dotnet vstest
+          href: tools/dotnet-vstest.md
+        - name: dotnet 설치 스크립트
+          href: tools/dotnet-install-script.md
+        - name: 프로젝트 참조 명령
+          items:
+            - name: dotnet add reference
+              href: tools/dotnet-add-reference.md
+            - name: dotnet list reference
+              href: tools/dotnet-list-reference.md
+            - name: dotnet remove reference
+              href: tools/dotnet-remove-reference.md
+        - name: 프로젝트 패키지 명령
+          items:
+            - name: dotnet add package
+              href: tools/dotnet-add-package.md
+            - name: dotnet list package
+              href: tools/dotnet-list-package.md
+            - name: dotnet remove package
+              href: tools/dotnet-remove-package.md
+- name: .NET Core 추가 도구
+  href: additional-tools/index.md
+  items:
+    - name: WCF Web Service Reference 공급자
+      href: additional-tools/wcf-web-service-reference-guide.md
+    - name: dotnet-svcutil
+      href: additional-tools/dotnet-svcutil-guide.md
+    - name: dotnet-svcutil.xmlserializer
+      href: additional-tools/dotnet-svcutil.xmlserializer-guide.md
+    - name: XML Serializer Generator
+      href: additional-tools/xml-serializer-generator.md
+- name: .NET Framework에서 이식
+  href: porting/index.md
+  items:
+    - name: .NET Core에서 사용할 수 없는 .NET Framework 기술
+      href: porting/net-framework-tech-unavailable.md
+    - name: 타사 종속성 분석
+      href: porting/third-party-deps.md
+    - name: 라이브러리 이식
+      href: porting/libraries.md
+    - name: NET Core용 프로젝트 구성
+      href: porting/project-structure.md
+    - name: .NET Core로 이식하는 작업에 도움이 되는 도구
+      href: porting/tools.md
+    - name: Windows 호환 기능 팩 사용
+      href: porting/windows-compat-pack.md
+    - name: Windows Forms 프로젝트 포팅
+      href: porting/winforms.md
+    - name: WPF 프로젝트 포팅
+      href: porting/wpf.md
+- name: 종속성 로딩
+  items:
+    - name: 개요
+      href: dependency-loading/overview.md
+    - name: AssemblyLoadContext 이해
+      href: dependency-loading/understanding-assemblyloadcontext.md
+    - name: 세부 정보를 로드하는 중
+      items:
+        - name: 기본 종속성 프로브
+          href: dependency-loading/default-probing.md
+        - name: 관리형 어셈블리를 로드하는 중
+          href: dependency-loading/loading-managed.md
+        - name: 위성 어셈블리를 로드하는 중
+          href: dependency-loading/loading-resources.md
+        - name: 비관리형 라이브러리를 로드하는 중
+          href: dependency-loading/loading-unmanaged.md
+    - name: 자습서
+      items:
+        - name: 플러그 인을 사용하여 .NET Core 애플리케이션 만들기
+          href: tutorials/creating-app-with-plugin-support.md
+        - name: .NET Core에서 어셈블리 언로드 기능을 사용하고 디버그하는 방법
+          href: ../standard/assembly/unloadability-howto.md
+- name: 소스에서 .NET Core 빌드
+  href: build/index.md
+  items:
+    - name: .NET Core 배포 패키징
+      href: build/distribution-packaging.md
+- name: VS 2015/project.json 문서
+  href: ../project-json.md

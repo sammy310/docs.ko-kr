@@ -3,6 +3,8 @@
 - name: 개요
   expanded: true
   items:
+    - name: Apache Spark란?
+      href: what-is-spark.md
     - name: Apache Spark용 .NET이란?
       href: what-is-apache-spark-dotnet.md
 - name: 자습서
@@ -23,7 +25,7 @@
   items:
     - name: API 참조
       href: 'https://docs.microsoft.com/dotnet/api/?view=spark-dotnet'
-- name: 자료
+- name: 리소스
   items:
     - name: 리소스 개요
       href: resources/index.md
