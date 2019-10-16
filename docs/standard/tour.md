@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: acd8e14e1d000f55f03017a4fee43347f50df3a7
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: a83253e37d3afde9ed8266ec1195c9726f6462cc
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415925"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291599"
 ---
 # <a name="tour-of-net"></a>.NET 둘러보기
 
@@ -55,7 +55,7 @@ Microsoft에서는 C#과 F#, VB(Visual Basic) 이 세 가지 .NET 언어를 적�
 
 일부 개체는 *관리되지 않는 리소스*를 참조합니다. 관리되지 않는 리소스는 .NET 런타임에서 자동 유지 관리되지 않는 리소스입니다. 예를 들어, 파일 핸들은 관리되지 않는 리소스입니다. <xref:System.IO.FileStream> 개체는 관리되는 개체이지만, 관리되지 않는 파일 핸들을 참조합니다. <xref:System.IO.FileStream> 사용을 마치면 파일 핸들을 릴리스해야 합니다.
 
-.NET에서는 관리되지 않는 리소스를 참조하는 개체가 <xref:System.IDisposable> 인터페이스를 구현합니다. 개체 사용을 마치면 관리되지 않는 모든 리소스 릴리스를 담당하는 개체의 <xref:System.IDisposable.Dispose> 메서드를 호출합니다. 다음 예제와 같이 .NET 언어는 이러한 개체에 대해 편리한 `using` 구문을 제공합니다.
+.NET에서는 관리되지 않는 리소스를 참조하는 개체가 <xref:System.IDisposable> 인터페이스를 구현합니다. 개체 사용을 마치면 관리되지 않는 모든 리소스 릴리스를 담당하는 개체의 <xref:System.IDisposable.Dispose> 메서드를 호출합니다. 다음 예제와 같이 .NET 언어는 이러한 개체에 대해 편리한 [`using` 문](../csharp/language-reference/keywords/using.md)을 제공합니다.
 
 [!code-csharp[UnmanagedResources](../../samples/csharp/snippets/tour/UnmanagedResources.csx#L1-L6)]
 

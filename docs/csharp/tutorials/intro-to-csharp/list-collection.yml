@@ -9,12 +9,12 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 6dfbbbb6ef64b3dbb83d15ba66860acb7c5b3585
-  ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+  ms.openlocfilehash: fb08cef284a016dd65c99a1efb0a661624a731f1
+  ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 09/10/2019
-  ms.locfileid: "70850746"
+  ms.lasthandoff: 10/09/2019
+  ms.locfileid: "72179003"
 items:
 - durationInMinutes: 1
   content: >
@@ -36,6 +36,9 @@ items:
     }
 
     ```
+
+
+    사용자 환경에서 이를 실행하는 경우 [로컬 버전](arrays-and-collections.md)에 대한 지침을 따라야 합니다.
 
 
     문자열 목록을 만들고, 해당 목록에 세 개의 이름을 추가하고, 모든 CAPS에 이름을 인쇄했습니다. 이전 자습서에서 학습한 개념을 사용하여 목록을 반복합니다.

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - break keyword [C#]
 ms.assetid: be2571ed-efb0-4965-b122-81e5b09db0b9
-ms.openlocfilehash: 77d18d12cd0fabb26906a5b58dc3939da6214a29
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 2628da73364cf94a52e2862d349243c100d4afaf
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69602253"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72179930"
 ---
 # <a name="break-c-reference"></a>break(C# 참조)
 
@@ -27,12 +27,6 @@ ms.locfileid: "69602253"
 
 ## <a name="example"></a>예
 
-이 예제에서 `break` 문은 내부 중첩 루프를 중단하고 제어를 외부 루프에 반환하는 데 사용됩니다.
-
-[!code-csharp[csrefKeywordsJump#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsJump/CS/csrefKeywordsJump.cs#7)]
-
-## <a name="example"></a>예
-
 이 예제에서는 [switch](./switch.md) 문에서 `break`의 사용을 보여 줍니다.
 
 [!code-csharp[csrefKeywordsJump#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsJump/CS/csrefKeywordsJump.cs#2)]
@@ -43,6 +37,18 @@ ms.locfileid: "69602253"
 Enter your selection (1, 2, or 3): 4
 Sorry, invalid selection.
 ```
+
+## <a name="example"></a>예
+
+이 예제에서 `break` 문은 내부 중첩 루프를 중단하고 제어를 외부 루프에 반환하는 데 사용됩니다. 컨트롤은 중첩된 루프에서 _오직_ 반환된 한 레벨 업입니다.
+
+[!code-csharp[csrefKeywordsJump#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsJump/CS/csrefKeywordsJump.cs#7)]
+
+## <a name="example"></a>예
+
+이 예제에서 `break` 문은 루프의 각 반복 중에 현재 분기를 중단하는 데만 사용됩니다. 루프 자체는 중첩된 [switch](./switch.md) 문에 속하는 `break`의 인스턴스에 영향을 받지 않습니다.
+
+[!code-csharp[csrefKeywordsJump#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsJump/CS/csrefKeywordsJump.cs#8)]
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 

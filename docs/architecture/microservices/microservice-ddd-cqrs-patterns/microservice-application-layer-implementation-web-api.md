@@ -2,12 +2,12 @@
 title: Web API를 사용하여 마이크로 서비스 애플리케이션 계층 구현
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | Web API 애플리케이션 계층에서 종속성 주입 및 중재자 패턴과 해당 구현 정보를 이해합니다.
 ms.date: 10/08/2018
-ms.openlocfilehash: 0f6f47dd5f67fb18695715e5cfc9179206ef6bcf
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: df304ffbe2406323e3dcf42b9eb989b02a62b28b
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834359"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72249741"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Web API를 사용하여 마이크로 서비스 에플리케이션 계층 구현
 
@@ -502,7 +502,7 @@ public async Task<IActionResult> ExecuteBusinessOperation([FromBody]RunOpCommand
 
 ### <a name="implement-idempotent-commands"></a>idempotent 명령 구현
 
-**eShopOnContainers**에서는 위의 경우보다 고급 예제가 Ordering(주문) 마이크로 서비스에서 CreateOrderCommand 개체를 제출합니다. 하지만 Ordering 비즈니스 프로세스가 좀 더 복잡하고, 이 경우, 실제로는 Basket 마이크로 서비스에서 시작되기 때문에 CreateOrderCommand 개체를 제출하는 동작은 이전의 간단한 예제에서처럼 클라이언트 앱에서 호출되는 간단한 WebAPI 컨트롤로 대신 >UserCheckoutAcceptedIntegrationEvent.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/IntegrationEvents/EventHandling/UserCheckoutAcceptedIntegrationEventHandler.cs) 라는 통합 이벤트 처리기에서 수행됩니다.
+**eShopOnContainers**에서는 위의 경우보다 고급 예제가 Ordering(주문) 마이크로 서비스에서 CreateOrderCommand 개체를 제출합니다. 하지만 Ordering 비즈니스 프로세스가 좀 더 복잡하고, 이 경우, 실제로는 Basket 마이크로 서비스에서 시작되기 때문에 CreateOrderCommand 개체를 제출하는 동작은 이전의 간단한 예제에서처럼 클라이언트 앱에서 호출되는 간단한 WebAPI 컨트롤러 대신 [UserCheckoutAcceptedIntegrationEventHandler](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/IntegrationEvents/EventHandling/UserCheckoutAcceptedIntegrationEventHandler.cs)라는 통합 이벤트 처리기에서 수행됩니다.
 
 그럼에도 불구하고 MediatR에 명령을 제출하는 동작은 다음 코드와 매우 유사합니다.
 

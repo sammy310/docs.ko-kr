@@ -3,16 +3,16 @@ title: nullable 참조 형식을 사용하여 디자인
 description: 이 고급 자습서에서는 nullable 참조 형식을 소개합니다. 참조 값이 null일 수 있는 경우에 대한 디자인 의도를 표현하고 컴파일러가 null일 수 없는 경우를 적용하게 하는 방법을 알아봅니다.
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 914a1eeee2d3d1843bf597f94761e39d16331b5c
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: e58f2bac23fabf734df93aa2a643106f1c1bd5f3
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71956657"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291381"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>자습서: nullable 참조 형식 및 nullable이 아닌 참조 형식을 사용하여 디자인 의도를 보다 명확하게 표현
 
-C# 8에서는 nullable 값 형식이 값 형식을 보완하는 것과 동일한 방식으로 참조 형식을 보완하는 **nullable 참조 형식**이 도입되었습니다. 형식에 `?`를 추가하여 변수를 **nullable 참조 형식**으로 선언합니다. 예를 들어 `string?`는 nullable `string`을 나타냅니다. 이러한 새 형식을 사용하여 디자인 의도를 보다 명확하게 표현할 수 있습니다. ‘항상 값이 있어야 하는’ 변수도 있고, ‘값이 누락될 수 있는’ 변수도 있습니다.  
+C# 8.0에서는 nullable 값 형식이 값 형식을 보완하는 것과 동일한 방식으로 참조 형식을 보완하는 [nullable 참조 형식](../nullable-references.md)이 도입되었습니다. 형식에 `?`를 추가하여 변수를 **nullable 참조 형식**으로 선언합니다. 예를 들어 `string?`는 nullable `string`을 나타냅니다. 이러한 새 형식을 사용하여 디자인 의도를 보다 명확하게 표현할 수 있습니다. ‘항상 값이 있어야 하는’ 변수도 있고, ‘값이 누락될 수 있는’ 변수도 있습니다.  
 
 이 자습서에서는 다음과 같은 작업을 수행하는 방법을 알아봅니다.
 
@@ -25,7 +25,7 @@ C# 8에서는 nullable 값 형식이 값 형식을 보완하는 것과 동일한
 
 ## <a name="prerequisites"></a>전제 조건
 
-C# 8.0 컴파일러를 포함하여 .NET Core를 실행하도록 컴퓨터를 설정해야 합니다. C# 8 컴파일러는 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 또는 [.NET Core 3.0](https://dotnet.microsoft.com/download/dotnet-core/3.0)에서 사용할 수 있습니다.
+C# 8.0 컴파일러를 포함하여 .NET Core를 실행하도록 컴퓨터를 설정해야 합니다. C# 8.0 컴파일러는 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 또는 [.NET Core 3.0](https://dotnet.microsoft.com/download/dotnet-core/3.0)에서 사용할 수 있습니다.
 
 이 자습서에서는 Visual Studio 또는 .NET Core CLI를 포함하여 C# 및 .NET에 익숙하다고 가정합니다.
 
@@ -37,7 +37,7 @@ C# 8.0 컴파일러를 포함하여 .NET Core를 실행하도록 컴퓨터를 �
 
 ## <a name="create-the-application-and-enable-nullable-reference-types"></a>애플리케이션을 만들고 nullable 참조 형식을 사용하도록 설정
 
-Visual Studio 또는 `dotnet new console`을 사용하여 명령줄에서 새로운 콘솔 애플리케이션을 만듭니다. 애플리케이션 이름을 `NullableIntroduction`으로 지정합니다. 애플리케이션을 만든 후에는 전체 프로젝트가 `enabled` **null이 허용 주석 컨텍스트**에서 컴파일하도록 지정해야 합니다. `csproj` 파일을 열고 `PropertyGroup` 요소에 `Nullable` 요소를 추가합니다. 해당 값을 `enabled`로 설정합니다. C# 8 프로젝트에서도 **nullable 참조 형식** 기능을 옵트인해야 합니다. 기능이 켜지고 나면 기존 참조 변수 선언이 **nullable이 아닌 참조 형식**으로 바뀌기 때문입니다. 이러한 의사 결정은 기존 코드에 적절한 null 확인이 없다는 문제를 찾는 데는 도움이 되지만, 원래 설계 의도를 정확하게 반영하지 않을 수 있습니다.
+Visual Studio 또는 `dotnet new console`을 사용하여 명령줄에서 새로운 콘솔 애플리케이션을 만듭니다. 애플리케이션 이름을 `NullableIntroduction`으로 지정합니다. 애플리케이션을 만든 후에는 전체 프로젝트가 **활성화된 nullable 주석 컨텍스트**에서 컴파일하도록 지정해야 합니다. *.csproj* 파일을 열고 `Nullable` 요소에 `PropertyGroup` 요소를 추가합니다. 해당 값을 `enable`로 설정합니다. C# 8.0 프로젝트에서도 **nullable 참조 형식** 기능을 옵트인해야 합니다. 기능이 켜지고 나면 기존 참조 변수 선언이 **nullable이 아닌 참조 형식**으로 바뀌기 때문입니다. 이러한 의사 결정은 기존 코드에 적절한 null 확인이 없다는 문제를 찾는 데는 도움이 되지만, 원래 설계 의도를 정확하게 반영하지 않을 수 있습니다.
 
 ```xml
 <Nullable>enable</Nullable>
@@ -84,7 +84,7 @@ namespace NullableIntroduction
 }
 ```
 
-컴파일러가 모든 참조 형식 변수 선언을 nullable이 활성화된 컨텍스트에 있는 코드의 **nullable이 아닌** 참조 형식으로 해석합니다. 다음 코드에 표시된 대로 질문 텍스트 및 질문 유형의 속성을 추가하여 첫 번째 경고를 표시할 수 있습니다.
+컴파일러가 모든 참조 형식 변수 선언을 활성화된 nullable 주석 컨텍스트에 있는 코드의 **nullable이 아닌** 참조 형식으로 해석합니다. 다음 코드에 표시된 대로 질문 텍스트 및 질문 유형의 속성을 추가하여 첫 번째 경고를 표시할 수 있습니다.
 
 ```csharp
 namespace NullableIntroduction
@@ -134,7 +134,7 @@ namespace NullableIntroduction
 
 [!code-csharp[AddQuestions](~/samples/csharp/NullableIntroduction/NullableIntroduction/Program.cs#AddQuestions)]
 
-프로젝트 전체가 nullable이 활성화된 컨텍스트이므로 nullable이 아닌 참조 형식을 기대하고 메서드로 `null`을 전달하면 경고가 발생됩니다. 다음 줄을 `Main`에 추가하여 시도해 보세요.
+프로젝트 전체가 활성화된 nullable 주석 컨텍스트이므로 nullable이 아닌 참조 형식을 기대하고 메서드로 `null`을 전달하면 경고가 발생합니다. 다음 줄을 `Main`에 추가하여 시도해 보세요.
 
 ```csharp
 surveyRun.AddQuestion(QuestionType.Text, default);

@@ -2,14 +2,14 @@
 title: .NET Core 배포 패키징
 description: 배포를 위해 .NET Core를 패키지하고 이름과 버전을 지정하는 방법에 관해 알아봅니다.
 author: tmds
-ms.date: 03/02/2018
+ms.date: 10/09/2019
 ms.custom: seodec18
-ms.openlocfilehash: d72677cba1e7685f8e05cf479ec508683dd77b55
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 3c41ce8a4a9ac1a914de2535a9b2423a7ddfa2cf
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70394156"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72250135"
 ---
 # <a name="net-core-distribution-packaging"></a>.NET Core 배포 패키징
 
@@ -23,37 +23,37 @@ ms.locfileid: "70394156"
 설치하면 .NET Core는 파일 시스템에서 다음과 같이 배치된 여러 구성 요소로 구성됩니다.
 
 ```
-.
+{dotnet_root}                                     (*)
 ├── dotnet                       (1)
 ├── LICENSE.txt                  (8)
 ├── ThirdPartyNotices.txt        (8)
-├── host
-│   └── fxr
+├── host                                          (*)
+│   └── fxr                                       (*)
 │       └── <fxr version>        (2)
-├── sdk
+├── sdk                                           (*)
 │   ├── <sdk version>            (3)
-│   └── NuGetFallbackFolder      (4)
-├── packs
-│   ├── Microsoft.AspNetCore.App.Ref
+│   └── NuGetFallbackFolder      (4)              (*)
+├── packs                                         (*)
+│   ├── Microsoft.AspNetCore.App.Ref              (*)
 │   │   └── <aspnetcore ref version>     (11)
-│   ├── Microsoft.NETCore.App.Ref
+│   ├── Microsoft.NETCore.App.Ref                 (*)
 │   │   └── <netcore ref version>        (12)
-│   ├── Microsoft.NETCore.App.Host.<rid>
+│   ├── Microsoft.NETCore.App.Host.<rid>          (*)
 │   │   └── <apphost version>            (13)
-│   ├── Microsoft.WindowsDesktop.App.Ref
+│   ├── Microsoft.WindowsDesktop.App.Ref          (*)
 │   │   └── <desktop ref version>        (14)
-│   └── NETStandard.Library.Ref
+│   └── NETStandard.Library.Ref                   (*)
 │       └── <netstandard version>        (15)
-├── shared
-│   ├── Microsoft.NETCore.App
+├── shared                                        (*)
+│   ├── Microsoft.NETCore.App                     (*)
 │   │   └── <runtime version>     (5)
-│   ├── Microsoft.AspNetCore.App
+│   ├── Microsoft.AspNetCore.App                  (*)
 │   │   └── <aspnetcore version>  (6)
-│   ├── Microsoft.AspNetCore.All
+│   ├── Microsoft.AspNetCore.All                  (*)
 │   │   └── <aspnetcore version>  (6)
-│   └── Microsoft.WindowsDesktop.App
+│   └── Microsoft.WindowsDesktop.App              (*)
 │       └── <desktop app version> (7)
-└── templates
+└── templates                                     (*)
 │   └── <templates version>      (17)
 /
 ├── etc/dotnet
@@ -94,9 +94,11 @@ ms.locfileid: "70394156"
 
 - (15) **NETStandard.Library.Ref**는 netstandard `x.y` API를 설명합니다. 이러한 파일은 해당 대상에 대해 컴파일할 때 사용됩니다.
 
-- (16) **/etc/dotnet/install_location**는 `dotnet` 호스트 이진을 포함하는 폴더의 전체 경로를 포함하는 파일입니다. 이 경로는 줄 바꿈으로 종료될 수 있습니다. 루트가 `/usr/share/dotnet`인 경우에는 이 파일을 추가할 필요가 없습니다.
+- (16) **/etc/dotnet/install_location**은 `{dotnet_root}`의 전체 경로를 포함하는 파일입니다. 경로는 줄 바꿈으로 끝날 수 있습니다. 루트가 `/usr/share/dotnet`인 경우에는 이 파일을 추가할 필요가 없습니다.
 
 - (17) **템플릿**은 SDK에서 사용하는 템플릿을 포함합니다. 예를 들어 `dotnet new`는 여기에서 프로젝트 템플릿을 찾습니다.
+
+`(*)`로 표시된 폴더는 여러 패키지에서 사용됩니다. 일부 패키지 형식(예: `rpm`)에는 이러한 폴더에 대한 특별한 처리가 필요합니다. 패키지 유지 관리자는 이를 처리해야 합니다.
 
 ## <a name="recommended-packages"></a>권장된 패키지
 
@@ -113,7 +115,7 @@ SDK 버전은 동일한 `[major].[minor]`를 사용하고, SDK의 기능 및 패
   - **버전:** \<런타임 버전>
   - **예:** dotnet-sdk-2.1
   - **포함:** (3),(4)
-  - **종속성:** `aspnetcore-runtime-[major].[minor]`, `dotnet-targeting-pack-[major].[minor]`, `aspnetcore-targeting-pack-[major].[minor]`, `netstandard-targeting-pack-[netstandard_major].[netstandard_minor]`, `dotnet-apphost-pack-[major].[minor]`, `dotnet-templates-[major].[minor]`
+  - **종속성:** `dotnet-runtime-[major].[minor]`, `aspnetcore-runtime-[major].[minor]`, `dotnet-targeting-pack-[major].[minor]`, `aspnetcore-targeting-pack-[major].[minor]`, `netstandard-targeting-pack-[netstandard_major].[netstandard_minor]`, `dotnet-apphost-pack-[major].[minor]`, `dotnet-templates-[major].[minor]`
 
 - `aspnetcore-runtime-[major].[minor]` - 특정 ASP.NET Core 런타임을 설치합니다.
   - **버전:** \<aspnetcore 런타임 버전>
@@ -130,13 +132,13 @@ SDK 버전은 동일한 `[major].[minor]`를 사용하고, SDK의 기능 및 패
   - **버전:** \<런타임 버전>
   - **예:** dotnet-runtime-2.1
   - **포함:** (5)
-  - **종속성:** `dotnet-hostfxr:<runtime version>+`, `dotnet-runtime-deps-[major].[minor]`
+  - **종속성:** `dotnet-hostfxr-[major].[minor]`, `dotnet-runtime-deps-[major].[minor]`
 
-- `dotnet-hostfxr` - 종속성
+- `dotnet-hostfxr-[major].[minor]` - 종속성
   - **버전:** \<런타임 버전>
-  - **예:** dotnet-hostfxr
+  - **예:** dotnet-hostfxr-3.0
   - **포함:** (2)
-  - **종속성:** `host:<runtime version>+`
+  - **종속성:** `dotnet-host`
 
 - `dotnet-host` - 종속성
   - **버전:** \<런타임 버전>
@@ -155,7 +157,7 @@ SDK 버전은 동일한 `[major].[minor]`를 사용하고, SDK의 기능 및 패
   - **버전:** \<aspnetcore 런타임 버전>
   - **포함:** (11)
 
-- `netstandard-targeting-pack-[major].[minor]` - netstandard 버전 대상 지정 허용
+- `netstandard-targeting-pack-[netstandard_major].[netstandard_minor]` - netstandard 버전 대상 지정 허용
   - **버전:** \<sdk 버전>
   - **포함:** (15)
 
@@ -165,7 +167,7 @@ SDK 버전은 동일한 `[major].[minor]`를 사용하고, SDK의 기능 및 패
 
 `dotnet-runtime-deps-[major].[minor]`에서는 _배포판 특정 종속성_에 대해 이해해야 합니다. 배포판 빌드 시스템은 이를 자동으로 파생시킬 수도 있으므로 패키지는 선택 사항입니다. 이 경우 이러한 종속성은 `dotnet-runtime-[major].[minor]` 패키지에 직접 추가됩니다.
 
-패키지 콘텐츠가 버전이 있는 폴더에 있는 경우 패키지 이름 `[major].[minor]`는 버전이 있는 폴더 이름과 일치합니다. `netstandard-targeting-pack-[major].[minor]`를 제외한 모든 패키지에서 이는 .NET Core 버전과도 일치합니다.
+패키지 콘텐츠가 버전이 있는 폴더에 있는 경우 패키지 이름 `[major].[minor]`는 버전이 있는 폴더 이름과 일치합니다. `netstandard-targeting-pack-[netstandard_major].[netstandard_minor]`를 제외한 모든 패키지에서 이는 .NET Core 버전과도 일치합니다.
 
 패키지 간 종속성은 _동일하거나 더 큰_ 버전 요구 사항을 사용해야 합니다. 예를 들어 `dotnet-sdk-2.2:2.2.401`에는 `aspnetcore-runtime-2.2 >= 2.2.6`이 필요합니다. 그러면 사용자는 루트 패키지(예: `dnf update dotnet-sdk-2.2`)를 통해 설치를 업그레이드할 수 있습니다.
 

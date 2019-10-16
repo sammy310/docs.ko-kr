@@ -2,12 +2,12 @@
 title: CQRS 마이크로 서비스에서 읽기/쿼리 구현
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | Dapper를 사용하여 eShopOnContainers의 주문 마이크로 서비스에서 CQRS 쿼리 측면의 구현을 이해합니다.
 ms.date: 10/08/2018
-ms.openlocfilehash: f791546e2fc00e276ab55302802a5534465ace58
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: c39a42b7f5200208a0f812665a2d1c87b4433ba9
+ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674340"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72275790"
 ---
 # <a name="implement-readsqueries-in-a-cqrs-microservice"></a>CQRS 마이크로 서비스에서 읽기/쿼리 구현
 
@@ -118,7 +118,7 @@ public class OrderQueries : IOrderQueries
         using (var connection = new SqlConnection(_connectionString))
         {
             connection.Open();
-            var result = await connection.QueryAsync<OrderSummary>(
+            return await connection.QueryAsync<OrderSummary>(
                   @"SELECT o.[Id] as ordernumber, 
                   o.[OrderDate] as [date],os.[Name] as [status], 
                   SUM(oi.units*oi.unitprice) as total
@@ -185,13 +185,13 @@ public class OrderSummary
 
 ## <a name="additional-resources"></a>추가 자료
 
-- **Dapper** \
+- **Dapper**  
  <https://github.com/StackExchange/dapper-dot-net>
 
-- **Julie Lerman. 데이터 요소 - Dapper, Entity Framework 및 하이브리드 앱(MSDN Mag. 문서)**  \
-  <https://msdn.microsoft.com/magazine/mt703432.aspx>
+- **Julie Lerman. 데이터 요소 - Dapper, Entity Framework 및 하이브리드 앱(MSDN 매거진 문서)**  
+  <https://msdn.microsoft.com/magazine/mt703432>
 
-- **Swagger를 사용한 ASP.NET Core Web API 도움말 페이지** \
+- **Swagger를 사용한 ASP.NET Core Web API 도움말 페이지**  
   <https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger?tabs=visual-studio>
 
 >[!div class="step-by-step"]

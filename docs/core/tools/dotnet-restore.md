@@ -2,12 +2,12 @@
 title: dotnet restore 명령
 description: dotnet restore 명령을 사용하여 종속성 및 프로젝트 관련 도구를 복원하는 방법을 알아봅니다.
 ms.date: 05/29/2018
-ms.openlocfilehash: 0d138e31f8cd5b447c75bffda5164d92ce8eb5a2
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 055a4250755af02ad392877663985f86a647f892
+ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117599"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72275756"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -137,7 +137,7 @@ dotnet restore [-h|--help]
 
 `--verbosity <LEVEL>`
 
-명령의 세부 정보 표시 수준을 설정합니다. 허용되는 값은 `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, `diag[nostic]`입니다.
+명령의 세부 정보 표시 수준을 설정합니다. 허용되는 값은 `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, `diag[nostic]`입니다. 기본값은 `minimal`여야 합니다.
 
 `--interactive`
 
@@ -183,11 +183,11 @@ dotnet restore [-h|--help]
 
 `--verbosity <LEVEL>`
 
-명령의 세부 정보 표시 수준을 설정합니다. 허용되는 값은 `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, `diag[nostic]`입니다.
+명령의 세부 정보 표시 수준을 설정합니다. 허용되는 값은 `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, `diag[nostic]`입니다. 기본값은 `minimal`입니다.
 
 ---
 
-## <a name="examples"></a>예제
+## <a name="examples"></a>예
 
 현재 디렉터리에 있는 프로젝트에 대한 종속성 및 도구를 복원합니다.
 
@@ -205,6 +205,6 @@ dotnet restore [-h|--help]
 
 `dotnet restore -s c:\packages\mypackages -s c:\packages\myotherpackages`
 
-현재 디렉터리에 있는 프로젝트에 대한 종속성 및 도구를 복원하고 최소 출력만 표시합니다.
+자세한 출력을 표시하는 현재 디렉터리에 있는 프로젝트에 대한 종속성 및 도구를 복원합니다.
 
-`dotnet restore --verbosity minimal`
+`dotnet restore --verbosity detailed`

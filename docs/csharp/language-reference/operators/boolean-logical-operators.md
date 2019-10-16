@@ -32,12 +32,12 @@ helpviewer_keywords:
 - conditional OR operator [C#]
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
-ms.openlocfilehash: cc25d4bfd444dc0acb30fc1c6e6c3c9918af537c
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: f711bd04aeadb584eac1ecb0b644a36e2e496d08
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698675"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72290934"
 ---
 # <a name="boolean-logical-operators-c-reference"></a>부울 논리 연산자(C# 참조)
 
@@ -51,11 +51,11 @@ ms.locfileid: "71698675"
 
 ## <a name="logical-negation-operator-"></a>논리 부정 연산자 !
 
-`!` 연산자는 해당 피연산자의 논리 부정을 컴퓨팅합니다. 즉, 피연산자가 `false`로 평가되는 경우 `true`를 생성하고, 피연산자가 `true`로 평가되는 경우 `false`를 생성합니다.
+단항 접두사 `!` 연산자는 해당 피연산자의 논리 부정을 계산합니다. 즉, 피연산자가 `false`로 평가되는 경우 `true`를 생성하고, 피연산자가 `true`로 평가되는 경우 `false`를 생성합니다.
 
 [!code-csharp-interactive[logical negation](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#Negation)]
 
-C# 8.0부터 단항 후위 `!` 연산자는 null 허용 연산자입니다. null 허용 주석 컨텍스트가 활성화된 경우에는 null 허용 참조 형식의 식 `x`이 null이 아님을 선언하는 데 `x!`를 사용할 수 있습니다. 자세한 내용은 [nullable 참조 형식](../../nullable-references.md)을 참조하세요.
+C# 8.0부터 단항 후위 `!` 연산자는 [null 허용 연산자](null-forgiving.md)입니다.
 
 ## <a name="logical-and-operator-"></a> 논리 AND 연산자 &amp;
 

@@ -4,12 +4,12 @@ description: Visual Studio Code를 사용하여 C#에서 첫 번째 .NET Core �
 author: kendrahavens
 ms.date: 12/05/2018
 ms.custom: seodec18
-ms.openlocfilehash: 03a2edcbb3414cfd63006603424a3ca1eade528f
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 4e283f631f463953185a37bf196a1a9b706eee2b
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849459"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72002329"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>C# 및 Visual Studio Code 시작
 
@@ -34,9 +34,10 @@ ms.locfileid: "70849459"
       ![Visual Studio Code 폴더 열기](media/with-visual-studio-code/vs-code-open-folder.png)
 
 2. C# 프로젝트 초기화
+
     - 주 메뉴에서 **보기** > **통합 터미널**을 선택하여 Visual Studio Code에서 통합 터미널을 엽니다.
     - 터미널 창에서 `dotnet new console`을 입력합니다.
-    - 이 명령은 폴더에 이미 작성된 간단한 "Hello World" 프로그램이 있는 `Program.cs` 파일을 만들고 `HelloWorld.csproj`라는 C# 프로젝트 파일을 만듭니다.
+    - 이 명령은 폴더에 이미 작성된 간단한 “헬로 월드” 프로그램이 있는 *Program.cs* 파일을 만들고 *HelloWorld.csproj*라는 C# 프로젝트 파일을 만듭니다.
 
       ![dotnet new 명령](media/with-visual-studio-code/dotnet-new-command.png)
 
@@ -70,7 +71,7 @@ ms.locfileid: "70849459"
 
     ![Visual Studio Code에서 [디버그] 탭 열기](media/with-visual-studio-code/open-debug-tab.png)
 
-4. 창 위쪽에서 녹색 화살표를 찾습니다. 옆에 있는 드롭다운 목록에서 `.NET Core Launch (console)`가 선택되어 있는지 확인합니다.
+4. 창 위쪽에서 녹색 화살표를 찾습니다. 옆에 있는 드롭다운 목록에서 **.NET Core Launch(콘솔)** 가 선택되어 있는지 확인합니다.
 
     ![Visual Studio Code에서.NET Core 선택](media/with-visual-studio-code/select-net-core.png)
 
@@ -78,7 +79,7 @@ ms.locfileid: "70849459"
 
     ![중단점 설정](media/with-visual-studio-code/set-breakpoint-vs-code.png)
 
-6. 디버깅을 시작하려면 <kbd>F5</kbd> 또는 녹색 화살표를 선택합니다. 이전 단계에서 설정한 중단점에 도달하면 디버거에서 프로그램 실행을 중지합니다.
+6. 디버깅을 시작하려면 <kbd>F5</kbd>를 누르거나 또는 녹색 화살표를 선택합니다. 이전 단계에서 설정한 중단점에 도달하면 디버거에서 프로그램 실행을 중지합니다.
     - 디버깅 동안 왼쪽 위에 있는 창에서 지역 변수를 보거나 디버그 콘솔을 사용할 수 있습니다.
 
 7. 디버깅을 계속하려면 맨 위에 있는 파란색 화살표를 선택하고, 중지하려면 맨 위에 있는 빨간색 사각형을 선택합니다.
@@ -91,8 +92,8 @@ ms.locfileid: "70849459"
 ## <a name="add-a-class"></a>클래스 추가
 
 1. 새 클래스를 추가하려면 VSCode 탐색기에서 마우스 오른쪽 단추를 클릭하고 **새 파일**을 선택합니다. VSCode에서 열어 놓은 폴더에 새 파일이 추가됩니다.
-2. 파일 이름을 `MyClass.cs`로 지정합니다. csharp 파일로 인식되도록 끝에 `.cs` 확장명을 추가해서 저장해야 합니다.
-3. 아래 코드를 추가하여 첫 번째 클래스를 만듭니다. `Program.cs` 파일에서 참조할 수 있도록 올바른 네임스페이스를 포함해야 합니다.
+2. 파일 이름을 *MyClass.cs*로 지정합니다. csharp 파일로 인식되도록 끝에 `.cs` 확장명을 추가해서 저장해야 합니다.
+3. 아래 코드를 추가하여 첫 번째 클래스를 만듭니다. *Program.cs* 파일에서 참조할 수 있도록 올바른 네임스페이스를 포함해야 합니다.
 
     ``` csharp
     using System;
@@ -109,7 +110,7 @@ ms.locfileid: "70849459"
     }
     ```
 
-4. 아래 코드를 추가하여 `Program.cs`의 main 메서드에서 새 클래스를 호출합니다.
+4. 아래 코드를 추가하여 *Program.cs*의 main 메서드에서 새 클래스를 호출합니다.
 
     ```csharp
     using System;
@@ -120,7 +121,7 @@ ms.locfileid: "70849459"
         {
             static void Main(string[] args)
             {
-                MyClass c1 = new MyClass();
+                var c1 = new MyClass();
                 Console.WriteLine($"Hello World! {c1.ReturnMessage()}");
             }
         }
@@ -138,7 +139,7 @@ ms.locfileid: "70849459"
 
 ### <a name="im-missing-required-assets-to-build-and-debug-c-in-visual-studio-code-my-debugger-says-no-configuration"></a>Visual Studio Code에서 C#을 빌드하고 디버그하는 데 필요한 자산이 누락되었습니다. 내 디버거에서 "구성 없음"이라고 표시됩니다.
 
-Visual Studio Code C# 확장에서 빌드 및 디버그할 자산을 생성할 수 있습니다. C# 프로젝트를 처음 열면 Visual Studio Code에 이러한 자산을 생성하라는 메시지가 표시됩니다. 자산을 생성하지 않은 경우 명령 팔레트(**보기 > 명령 팔레트**)를 열고 ">.NET: Generate Assets Build and Debug"를 입력하여 이 명령을 실행할 수 있습니다. 이를 선택하면 필요한 .vscode, launch.json 및 tasks.json 구성 파일이 생성됩니다.
+Visual Studio Code C# 확장에서 빌드 및 디버그할 자산을 생성할 수 있습니다. C# 프로젝트를 처음 열면 Visual Studio Code에 이러한 자산을 생성하라는 메시지가 표시됩니다. 자산을 생성하지 않은 경우 명령 팔레트(**보기 > 명령 팔레트**)를 열고 ">.NET: Generate Assets Build and Debug"를 입력하여 이 명령을 실행할 수 있습니다. 이를 선택하면 필요한 . *.vscode*, *launch.json* 및 *tasks.json* 구성 파일이 생성됩니다.
 
 ## <a name="see-also"></a>참고 항목
 

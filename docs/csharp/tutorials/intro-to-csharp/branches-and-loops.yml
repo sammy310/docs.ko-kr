@@ -11,12 +11,12 @@ metadata:
   interactive: csharp
   nextTutorialHref: list-collection.yml
   nextTutorialTitle: 목록 컬렉션
-  ms.openlocfilehash: 0456582fb0aefa9e144b71517b9d8ed619929805
-  ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+  ms.openlocfilehash: 445017337663aea428af2f8dcd4027d716d05751
+  ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 09/10/2019
-  ms.locfileid: "70850785"
+  ms.lasthandoff: 10/09/2019
+  ms.locfileid: "72179879"
 items:
 - durationInMinutes: 1
   content: >
@@ -36,6 +36,9 @@ items:
     if (a + b > 10)
         Console.WriteLine("The answer is greater than 10.");
     ```
+
+
+    사용자 환경에서 이를 실행하는 경우 [로컬 버전](branches-and-loops-local.md)에 대한 지침을 따라야 합니다.
 
 
     합계가 10보다 작도록 `b`의 선언을 수정합니다.

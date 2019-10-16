@@ -4,12 +4,12 @@ description: 플러그 인을 지원하는 .NET Core 애플리케이션을 만�
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/28/2019
-ms.openlocfilehash: e8b02d9b2175b4663e665db1a5a40a9bf3c44d10
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 54f616a7b2b20b7682963e9f5d503878bb512c90
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216250"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72250170"
 ---
 # <a name="create-a-net-core-application-with-plugins"></a>플러그 인을 사용하여 .NET Core 애플리케이션 만들기
 
@@ -34,7 +34,7 @@ ms.locfileid: "71216250"
     dotnet new console -o AppWithPlugin
     ```
 
-2. 프로젝트를 빌드하기 쉽도록, 다음을 사용하여 Visual Studio 솔루션 파일을 만듭니다. 동일한 폴더에서 다음 명령을 실행합니다.
+2. 프로젝트를 빌드하기 쉽도록, 같은 폴더에 Visual Studio 솔루션 파일을 만듭니다. 다음 명령을 실행합니다.
 
     ```dotnetcli
     dotnet new sln

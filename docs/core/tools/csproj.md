@@ -2,12 +2,12 @@
 title: .NET Core용 csproj 형식에 대한 추가 사항
 description: 기존 및 .NET Core csproj 파일 간의 차이점에 대해 알아보기
 ms.date: 04/08/2019
-ms.openlocfilehash: 89ab22f0c5e69f29ff31e13d46dce8ba278d08da
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 2ec1aaff88754848d844a56b1744beb2efa4cd89
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216208"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291240"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core용 csproj 형식에 대한 추가 사항
 
@@ -43,7 +43,7 @@ ms.locfileid: "71216208"
 
 대부분 [`<PackageReference>`](#packagereference)를 사용하려면 `Version` 특성을 설정하여 사용할 NuGet 패키지 버전을 지정해야 합니다. 그러나 .NET Core 2.1 또는 2.2를 사용하고 [Microsoft.AspNetCore.App](/aspnet/core/fundamentals/metapackage-app) 또는 [Microsoft.AspNetCore.All](/aspnet/core/fundamentals/metapackage)을 참조하는 경우에는 해당 특성이 필요하지 않습니다. .NET Core SDK는 사용해야 하는 패키지의 버전을 자동으로 선택할 수 있습니다.
 
-### <a name="recommendation"></a>권장 사항
+### <a name="recommendation"></a>권장
 
 `Microsoft.AspNetCore.App` 또는 `Microsoft.AspNetCore.All` 패키지를 참조하는 경우에는 해당 버전을 지정하지 마세요. 버전을 지정하면 SDK에서 경고 NETSDK1071이 생성될 수 있습니다. 이 경고를 해결하려면 다음 예제와 같이 패키지 버전을 제거합니다.
 
@@ -270,7 +270,7 @@ UI 표시를 위한 패키지에 대한 자세한 설명입니다.
 
 아래의 [ABNF](https://tools.ietf.org/html/rfc5234)에서 라이선스 식의 정확한 구문을 설명하고 있습니다.
 
-```cli
+```abnf
 license-id            = <short form license identifier from https://spdx.org/spdx-specification-21-web-version#h.luq9dgcle9mo>
 
 license-exception-id  = <short form license exception identifier from https://spdx.org/spdx-specification-21-web-version#h.ruv3yl8g6czd>
@@ -347,6 +347,12 @@ UI 표시에서 패키지에 대한 아이콘으로 사용하는 투명한 배�
 ### <a name="repositorytype"></a>RepositoryType
 
 리포지토리의 유형을 지정합니다. 기본값은 "git"입니다.
+
+### <a name="repositorybranch"></a>RepositoryBranch
+리포지토리의 소스 분기 이름을 지정합니다. 프로젝트가 NuGet 패키지에 패키지되면 패키지 메타데이터에 추가됩니다.
+
+### <a name="repositorycommit"></a>RepositoryCommit
+패키지가 빌드된 소스를 나타내는 선택적 리포지토리 커밋 또는 변경 집합입니다. `RepositoryUrl`도 이 속성을 포함하도록 지정해야 합니다. 프로젝트가 NuGet 패키지에 패키지되면 이 커밋 또는 변경 집합이 패키지 메타데이터에 추가됩니다.
 
 ### <a name="nopackageanalysis"></a>NoPackageAnalysis
 

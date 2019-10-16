@@ -2,12 +2,12 @@
 title: 도메인 이벤트. 디자인 및 구현
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | 집계 간에 통신을 설정하는 주요 개념인 도메인 이벤트의 세부적인 보기를 가져옵니다.
 ms.date: 10/08/2018
-ms.openlocfilehash: 46341bbc3ee3e5713707cc6a18b678d51102b64d
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 4fe0c1fa04bbecb64783e070838ab796de4f90d6
+ms.sourcegitcommit: 10db6551ea3c971470cf5d2cc21ba1cbcefe5c55
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926555"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72031846"
 ---
 # <a name="domain-events-design-and-implementation"></a>도메인 이벤트: 디자인 및 구현
 

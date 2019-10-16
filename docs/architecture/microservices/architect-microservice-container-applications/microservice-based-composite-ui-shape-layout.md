@@ -2,16 +2,16 @@
 title: 마이크로 서비스 기반 복합 UI 만들기
 description: 마이크로 서비스 아키텍처 백 엔드에 대해서만은 아닙니다. 프런트 엔드에서 사용하는 Peek 뷰를 가져옵니다.
 ms.date: 09/20/2018
-ms.openlocfilehash: 60e0e6d59738f3f1fec31226cb842ceb1af303e4
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 1861d3bb6e5d4a0226aa8f3f72a2e0d3e83be56f
+ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834369"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72275732"
 ---
 # <a name="creating-composite-ui-based-on-microservices"></a>마이크로 서비스 기반 복합 UI 만들기
 
-마이크로 서비스 아키텍처는 서버 쪽에서 데이터 및 논리를 처리하기 시작합니다. 그러나 고급 방법은 마이크로 서비스에 따라 애플리케이션 UI를 디자인하는 것입니다. 즉, 서버에 마이크로 서비스를 배치하고 모놀리식 클라이언트 앱이 마이크로 서비스를 사용하는 대신 마이크로 서비스에서 생성되는 복합 UI가 있습니다. 이 방법으로 마이크로 서비스는 논리 및 시각적 표현 모두를 사용하여 완료될 수 있습니다.
+마이크로 서비스 아키텍처는 서버 쪽에서 데이터 및 논리를 처리하기 시작하지만, 많은 경우 UI는 여전히 모놀리식으로 처리됩니다. 그러나 [마이크로 프런트 엔드](https://martinfowler.com/articles/micro-frontends.html)라는 고급 방법은 마이크로 서비스에 따라 애플리케이션 UI를 디자인하는 것입니다. 즉, 서버에 마이크로 서비스를 배치하고 모놀리식 클라이언트 앱이 마이크로 서비스를 사용하는 대신 마이크로 서비스에서 생성되는 복합 UI가 있습니다. 이 방법으로 마이크로 서비스는 논리 및 시각적 표현 모두를 사용하여 완료될 수 있습니다.
 
 그림 4-20에서는 모놀리식 클라이언트 애플리케이션에서 마이크로 서비스를 사용하는 간단한 방법을 보여줍니다. 물론 HTML 및 JavaScript를 생성하면 ASP.NET MVC 서비스가 생성될 수 있습니다. 그림은 마이크로 서비스를 사용하는 단일(모놀리식) 클라이언트 UI가 있음을 간단히 강조 표시합니다. 여기서는 UI 셰이프(HTML 및 JavaScript)가 아니라 논리 및 데이터에만 집중합니다.
 
@@ -39,19 +39,25 @@ ms.locfileid: "71834369"
 
 ## <a name="additional-resources"></a>추가 자료
 
-- **ASP.NET을 사용한 복합 UI(특정 워크샵)**  \
+- **마이크로 프런트 엔드(Martin Fowler의 블로그)**  
+  <https://martinfowler.com/articles/micro-frontends.html>
+  
+- **마이크로 프런트 엔드(Michael Geers 사이트)**  
+  <https://micro-frontends.org/>
+  
+- **ASP.NET을 사용한 복합 UI(특정 워크샵)**  
   <https://github.com/Particular/Workshop/tree/master/demos/asp-net-core>
 
-- **Ruben Oostinga 마이크로 서비스 아키텍처의 모놀리식 프런트 엔드** \
+- **Ruben Oostinga 마이크로 서비스 아키텍처의 모놀리식 프런트 엔드**  
   <https://xebia.com/blog/the-monolithic-frontend-in-the-microservices-architecture/>
 
-- **Mauro Servienti 뛰어난 UI 구성의 비밀** \
+- **Mauro Servienti 뛰어난 UI 구성의 비밀**  
   <https://particular.net/blog/secret-of-better-ui-composition>
 
-- **Viktor Farcic 마이크로 서비스에 프런트 엔드 웹 구성 요소 포함하기** \
+- **Viktor Farcic 마이크로 서비스에 프런트 엔드 웹 구성 요소 포함하기**  
   <https://technologyconversations.com/2015/08/09/including-front-end-web-components-into-microservices/>
 
-- **마이크로 서비스 아키텍처에서 프런트 엔드 관리** \
+- **마이크로 서비스 아키텍처에서 프런트 엔드 관리**  
   <https://allegro.tech/2016/03/Managing-Frontend-in-the-microservices-architecture.html>
 
 >[!div class="step-by-step"]

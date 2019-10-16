@@ -2,19 +2,19 @@
 title: C# 8.0의 새로운 기능 - C# 가이드
 description: C# 8.0의 새로운 기능을 살펴봅니다.
 ms.date: 09/20/2019
-ms.openlocfilehash: d948db0523684c998425bc22ab6fd245d65a8045
-ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
+ms.openlocfilehash: 6b5602db6ee61b1d9db4c906d6a14ea2f918ad0a
+ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71736707"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72275775"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0의 새로운 기능
 
 C#8.0은 다음 기능 및 향상된 기능을 C# 언어에 추가합니다.
 
 - [읽기 전용 멤버](#readonly-members)
-- [기본 인터페이스 멤버](#default-interface-members)
+- [기본 인터페이스 메서드](#default-interface-methods)
 - [패턴 일치 개선 사항](#more-patterns-in-more-places):
   - [Switch 식](#switch-expressions)
   - [속성 패턴](#property-patterns)
@@ -85,11 +85,11 @@ public readonly void Translate(int xOffset, int yOffset)
 
 이 기능을 사용하여 디자인 의도를 지정할 수 있으므로 컴파일러는 이를 적용하고 디자인 의도에 따라 최적화를 수행할 수 있습니다.
 
-## <a name="default-interface-members"></a>기본 인터페이스 멤버
+## <a name="default-interface-methods"></a>기본 인터페이스 메서드
 
-이제 인터페이스에 멤버를 추가하고 해당 멤버에 대 한 구현을 제공할 수 있습니다. 이 언어 기능을 사용하여 API 작성자는 소스 또는 이진과 해당 인터페이스의 기존 구현과의 호환성에 영향을 미치지 않고 후속 버전에서 인터페이스에 메서드를 추가할 수 있습니다. 기존 구현은 기본 구현을 *상속*합니다. 또한 이 기능을 사용하여 C#은 유사한 기능을 지원하는 Android 또는 Swift를 대상으로 하는 API와 상호 운용됩니다. 또한 기본 인터페이스 멤버는 "특성" 언어 기능과 유사한 시나리오를 사용하도록 설정합니다.
+이제 인터페이스에 멤버를 추가하고 해당 멤버에 대 한 구현을 제공할 수 있습니다. 이 언어 기능을 사용하여 API 작성자는 소스 또는 이진과 해당 인터페이스의 기존 구현과의 호환성에 영향을 미치지 않고 후속 버전에서 인터페이스에 메서드를 추가할 수 있습니다. 기존 구현은 기본 구현을 *상속*합니다. 또한 이 기능을 사용하여 C#은 유사한 기능을 지원하는 Android 또는 Swift를 대상으로 하는 API와 상호 운용됩니다. 또한 기본 인터페이스 메서드는 “특성” 언어 기능과 유사한 시나리오를 사용하도록 설정합니다.
 
-기본 인터페이스 멤버는 많은 시나리오와 언어 요소에 영향을 줍니다. 첫 번째 자습서에서는 [기본 구현으로 인터페이스 업데이트](../tutorials/default-interface-members-versions.md)에 대해 다룹니다. 다른 자습서 및 참조 업데이트는 일반 릴리스 시점에 제공됩니다.
+기본 인터페이스 메서드는 많은 시나리오와 언어 요소에 영향을 줍니다. 첫 번째 자습서에서는 [기본 구현으로 인터페이스 업데이트](../tutorials/default-interface-methods-versions.md)에 대해 다룹니다. 다른 자습서 및 참조 업데이트는 일반 릴리스 시점에 제공됩니다.
 
 ## <a name="more-patterns-in-more-places"></a>더 많은 곳에서 더 많은 패턴 사용
 

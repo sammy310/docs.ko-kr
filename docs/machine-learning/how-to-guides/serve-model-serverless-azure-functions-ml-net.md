@@ -5,12 +5,12 @@ ms.date: 09/12/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: ef028fee6cafcf4a775e061d9a5f91f0cf9a7e36
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: 2abd8588aa314b630c995e0c78b5869ec00a89df
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332702"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72179368"
 ---
 # <a name="deploy-a-model-to-azure-functions"></a>Azure Functions에 모델 배포
 
@@ -149,7 +149,16 @@ Azure Functions 서버리스 환경을 통해 HTTP에서의 예측을 위해 미
 
 모델은 `modelName` 매개 변수로 식별되므로 변경 시, 애플리케이션당 두 개 이상의 모델이 다시 로드될 수 있습니다. 
 
-또는 원격으로 저장된 모델을 사용하는 경우 `FromUri` 메서드를 사용할 수 있습니다. `FromUri`는 파일 변경 이벤트를 감시하지 않고, 원격 위치에서 변경 내용을 폴링합니다. 폴링 간격의 기본값은 5분입니다. 애플리케이션의 요구 사항에 따라 폴링 간격을 늘리거나 줄일 수 있습니다.
+> [!TIP]
+> 또는 원격으로 저장된 모델을 사용하는 경우 `FromUri` 메서드를 사용할 수 있습니다. `FromUri`는 파일 변경 이벤트를 감시하지 않고, 원격 위치에서 변경 내용을 폴링합니다. 폴링 간격의 기본값은 5분입니다. 애플리케이션의 요구 사항에 따라 폴링 간격을 늘리거나 줄일 수 있습니다. 아래 코드 샘플에서 `PredictionEnginePool`은 1분마다 지정된 URI에 저장된 모델을 폴링합니다.
+>    
+>```csharp
+>builder.Services.AddPredictionEnginePool<SentimentData, SentimentPrediction>()
+>   .FromUri(
+>       modelName: "SentimentAnalysisModel", 
+>       uri:"https://github.com/dotnet/samples/raw/master/machine-learning/models/sentimentanalysis/sentiment_model.zip", 
+>       period: TimeSpan.FromMinutes(1));
+>```
 
 ## <a name="load-the-model-into-the-function"></a>함수에 모델 로드
 

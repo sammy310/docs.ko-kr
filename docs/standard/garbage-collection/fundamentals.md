@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9ba6c46116d809e2881eee37b080e1952e2eb6a0
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 0c0fa0e2c59856beda65ec5804b8896352db98b3
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895278"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72180188"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>가비지 수집 기본 사항
 
@@ -52,7 +52,7 @@ ms.locfileid: "70895278"
 
   - 비어 있음. 메모리 블록에 가상 메모리에 대한 참조가 없으며, 메모리 블록을 할당에 사용할 수 있습니다.
 
-  - 예약됨. 메모리 블록을 사용자의 작업에 사용할 수 있으며, 다른 할당 요청에는 메모리 블록을 사용할 수 없습니다. 하지만 커밋되기 전까지는 메모리 블록에 데이터를 저장할 수 없습니다.
+  - 예약되어 있습니다. 메모리 블록을 사용자의 작업에 사용할 수 있으며, 다른 할당 요청에는 메모리 블록을 사용할 수 없습니다. 하지만 커밋되기 전까지는 메모리 블록에 데이터를 저장할 수 없습니다.
 
   - 커밋됨. 메모리 블록이 실제 스토리지에 할당되어 있습니다.
 
@@ -176,7 +176,7 @@ CLR에 의해 가비지 수집기가 초기화되고 나면 가비지 수집기�
 
 다음 그림에서는 가비지 수집을 트리거하여 다른 스레드가 일시 중단되도록 하는 스레드를 보여 줍니다.
 
-![스레드에서 가비지 수집을 트리거하는 시기](../../../docs/standard/garbage-collection/media/gc-triggered.png "GC_Triggered") 가비지 수집을 트리거하는 스레드
+![스레드에서 가비지 수집을 트리거하는 시기](../../../docs/standard/garbage-collection/media/gc-triggered.png "스레드에서 가비지 수집을 트리거하는 시기")
 
 [맨 위로 이동](#top)
 
@@ -208,7 +208,7 @@ CLR에 의해 가비지 수집기가 초기화되고 나면 가비지 수집기�
 
 다음 그림에서는 서버에서 가비지 수집을 수행하는 전용 스레드를 보여 줍니다.
 
-![서버 가비지 수집 스레드](../../../docs/standard/garbage-collection/media/gc-server.png "GC_Server") 서버 가비지 수집
+![서버 가비지 수집 스레드](../../../docs/standard/garbage-collection/media/gc-server.png "서버 가비지 수집 스레드")
 
 ### <a name="configuring-garbage-collection"></a>가비지 수집 구성
 
@@ -262,7 +262,7 @@ CLR에 의해 가비지 수집기가 초기화되고 나면 가비지 수집기�
 
 다음 그림에서는 개별 전용 스레드에서 수행되는 동시 가비지 수집을 보여 줍니다.
 
-![동시 가비지 수집 스레드](../../../docs/standard/garbage-collection/media/gc-concurrent.png "GC_Concurrent") 동시 가비지 수집
+![동시 가비지 수집 스레드](../../../docs/standard/garbage-collection/media/gc-concurrent.png "동시 가비지 수집 스레드")
 
 [맨 위로 이동](#top)
 
@@ -283,7 +283,7 @@ CLR에 의해 가비지 수집기가 초기화되고 나면 가비지 수집기�
 
 다음 그림에서는 워크스테이션의 개별 전용 스레드에서 수행되는 백그라운드 가비지 수집을 보여 줍니다.
 
-![백그라운드 워크스테이션 가비지 수집을 보여주는 다이어그램.](./media/fundamentals/background-workstation-garbage-collection.png)
+![백그라운드 워크스테이션 가비지 수집을 보여주는 다이어그램입니다.](./media/fundamentals/background-workstation-garbage-collection.png "백그라운드 워크스테이션 가비지 수집을 보여주는 다이어그램입니다.")
 
 [맨 위로 이동](#top)
 
@@ -295,7 +295,7 @@ CLR에 의해 가비지 수집기가 초기화되고 나면 가비지 수집기�
 
 다음 그림에서는 서버의 개별 전용 스레드에서 수행되는 백그라운드 가비지 수집을 보여 줍니다.
 
-![백그라운드 서버 가비지 수집을 보여주는 다이어그램.](./media/fundamentals/background-server-garbage-collection.png)
+![백그라운드 서버 가비지 수집을 보여주는 다이어그램입니다.](./media/fundamentals/background-server-garbage-collection.png "백그라운드 서버 가비지 수집을 보여주는 다이어그램입니다.")
 
 ## <a name="see-also"></a>참고 항목
 

@@ -2,12 +2,12 @@
 title: Docker 앱에 대한 개발 워크플로
 description: Docker 기반 애플리케이션 개발 워크플로의 세부 정보를 확인하세요. 먼저 단계별로 살펴보고 Dockerfile 최적화에 대한 세부 정보를 알아본 후 Visual Studio 사용 시 사용 가능한 간소화된 워크플로를 마지막으로 확인하세요.
 ms.date: 01/07/2019
-ms.openlocfilehash: 36caff247d031b8808ab953ec884b7ce292858eb
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: f7c7252edc82400e2af4b96a75ed040e11df392f
+ms.sourcegitcommit: 10db6551ea3c971470cf5d2cc21ba1cbcefe5c55
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71040301"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72031874"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Docker 앱에 대한 개발 워크플로
 
@@ -151,7 +151,7 @@ ENTRYPOINT ["dotnet", " MySingleContainerWebApp.dll "]
 
 Dockerfile은 배치 스크립트와 비슷합니다. 명령줄에서 머신을 설정해야 하는 경우에 수행하는 작업과 유사합니다.
 
-초기 컨텍스트를 설정하는 기본 이미지로 시작되고, 호스트 OS를 기반으로 하는 시작 파일 시스템과 같습니다. OS는 아니지만 컨테이너 내 "OS"처럼 생각할 수 있습니다.
+초기 컨텍스트를 설정하는 기본 이미지로 시작되고, 호스트 OS를 기반으로 하는 시작 파일 시스템과 같습니다. OS는 아니지만 컨테이너 내 “OS”처럼 생각할 수 있습니다.
 
 각 명령줄을 실행하면 파일 시스템에 이전 레이어에서 변경된 새 레이어가 생성되므로 이를 결합하면 결과 파일 시스템이 생성됩니다.
 

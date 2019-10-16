@@ -1,17 +1,17 @@
 ---
 title: '자습서: 감정 분석 - 이진 분류'
 description: 이 자습서에서는 웹 사이트 주석에서 감정을 분류하고 적절한 조치를 취하는 Razor Pages 애플리케이션을 만드는 방법을 보여 줍니다. 감정 이진 분류자는 Visual Studio에서 모델 작성기를 사용합니다.
-ms.date: 09/30/2019
+ms.date: 10/08/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: ce64f0d11b1da65e460235fdabc2b07e05ffcbe4
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 4a97fb70caafd7b0003830259ddbb0ec72a2ca8a
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71700905"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72180265"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-in-a-web-application-using-mlnet-model-builder"></a>자습서: ML.NET 모델 작성기를 사용하여 웹 애플리케이션에서 웹 사이트 댓글 감정 분석
 
@@ -85,7 +85,7 @@ ms.locfileid: "71700905"
 
 ## <a name="train-the-model"></a>모델 학습
 
-이 자습서에서 가격 예측 모델을 학습하는 데 사용되는 기계 학습 작업은 이진 분류입니다. 모델 학습 프로세스 중에 모델 작성기는 다른 이진 분류 알고리즘 및 설정을 통해 개별 모델을 학습하여 데이터 세트에 가장 적합한 모델을 찾습니다.
+이 자습서에서 감정 분석 모델을 학습하는 데 사용되는 기계 학습 작업은 이진 분류입니다. 모델 학습 프로세스 중에 모델 작성기는 다른 이진 분류 알고리즘 및 설정을 통해 개별 모델을 학습하여 데이터 세트에 가장 적합한 모델을 찾습니다.
 
 모델을 학습하는 데 필요한 시간은 데이터 양에 비례합니다. 모델 작성기는 데이터 소스의 크기에 따라 **학습 시간(초)** 의 기본값을 자동으로 선택합니다.
 

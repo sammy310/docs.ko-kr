@@ -4,12 +4,12 @@ description: ML.NET에서 사용자 지정 모델을 빌드할 때 유용한 중
 ms.custom: seodec18
 ms.topic: reference
 ms.date: 07/31/2019
-ms.openlocfilehash: 4d4bb80c6582facbcb11664309fde230bcfa4e7b
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: cb5681f1f72776ec9a8cbcfe45519befe02b8caf
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929263"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72180180"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>중요한 용어가 포함된 기계 학습 용어집
 
@@ -136,7 +136,7 @@ ML.NET에서 카탈로그는 공통 목적에 따라 그룹화된 확장 함수�
  정규화는 너무 복잡한 선형 모델에 벌점을 부과합니다. 정규화는 두 가지 종류로 나뉩니다.
 
 - $L_1$ 정규화는 불충분한 기능에 대해 0 가중치를 적용합니다. 이런 정규화 후에는 저장된 모델의 크기가 더 적을 수 있습니다.
-- $L_2$ 정규화는 불충분한 기능에 대한 가중치 범위를 최소화합니다. 더 일반적인 프로세스로, 이상값에 덜 민감합니다.
+- $L _2 $ 정규화는 의미 없는 기능에 대한 가중치 범위를 최소화합니다. 이는 보다 일반적인 프로세스이며 이상값에 덜 민감합니다.
 
 ## <a name="regression"></a>재발
 

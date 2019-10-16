@@ -7,12 +7,12 @@ dev_langs:
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/10/2018
-ms.openlocfilehash: ace8c644fd5aa13e29961b7eb44e923556571c75
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 18c8d566c3b79c131a3d031e5bdf3b37996d9115
+ms.sourcegitcommit: 10db6551ea3c971470cf5d2cc21ba1cbcefe5c55
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834254"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72031855"
 ---
 # <a name="whats-new-in-net-core-21"></a>.NET Core 2.1의 새로운 기능
 
@@ -213,7 +213,7 @@ JIT 컴파일러가 수행하는 중요한 작업 중 하나는 코드 실행을
 
 - <xref:System.Security.Cryptography.RandomNumberGenerator.Fill%2A?displayProperty=nameWithType> 정적 메서드는 <xref:System.Span%601>를 임의 값으로 채웁니다.
 
-- <xref:System.Security.Cryptography.Pkcs.EnvelopedCms?displayProperty=nameWithType>는 이제 Linux 및 maxOS에서 지원됩니다.
+- <xref:System.Security.Cryptography.Pkcs.EnvelopedCms?displayProperty=nameWithType>는 이제 Linux 및 macOS에서 지원됩니다.
 
 - ECDH(타원 곡선 Diffie-Hellman)는 이제 <xref:System.Security.Cryptography.ECDiffieHellman?displayProperty=nameWithType> 클래스 제품군에서 사용할 수 있습니다. 노출 영역은 .NET Framework의 것과 같습니다.
 

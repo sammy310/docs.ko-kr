@@ -1,13 +1,13 @@
 ---
 title: dotnet build 명령
 description: dotnet build 명령은 프로젝트와 모든 종속성을 빌드합니다.
-ms.date: 08/08/2019
-ms.openlocfilehash: 0b353d60691fb4bb85536c68dc4ab248f45c3a76
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.date: 10/07/2019
+ms.openlocfilehash: db353feebab920dc8f63b9854d14f050adeb0b79
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117756"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72250186"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
@@ -66,9 +66,9 @@ dotnet build [-h|--help]
 
 ## <a name="options"></a>옵션
 
-* **`-c|--configuration {Debug|Release}`**
+* **`-c|--configuration {CONFIGURATION}`**
 
-  빌드 구성을 정의합니다. 기본값은 `Debug`입니다.
+  빌드 구성을 정의합니다. 대부분의 프로젝트에 대한 기본값은 `Debug`이지만 프로젝트의 빌드 구성 설정을 재정의할 수 있습니다.
 
 * **`-f|--framework <FRAMEWORK>`**
 
@@ -118,7 +118,7 @@ dotnet build [-h|--help]
 
   프로젝트를 빌드할 때 사용할 `$(VersionSuffix)` 속성의 값을 설정합니다. `$(Version)` 속성이 설정되지 않은 경우에만 작동합니다. 그런 다음, `$(Version)`이 대시로 구분하여 `$(VersionSuffix)`와 결합된 `$(VersionPrefix)`로 설정됩니다.
 
-## <a name="examples"></a>예제
+## <a name="examples"></a>예
 
 * 프로젝트 및 해당 종속성을 빌드합니다.
 
