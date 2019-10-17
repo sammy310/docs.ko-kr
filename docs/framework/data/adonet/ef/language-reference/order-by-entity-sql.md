@@ -2,19 +2,19 @@
 title: ORDER BY(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: c0b61572-ecee-41eb-9d7f-74132ec8a26c
-ms.openlocfilehash: f3310274766ff3619604e30bfb5f5ca437cb1acd
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 2010ef9d6fe37e65824cac877074453db1b789db
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249759"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319441"
 ---
-# <a name="order-by-entity-sql"></a><span data-ttu-id="37eaa-102">ORDER BY(Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="37eaa-102">ORDER BY (Entity SQL)</span></span>
-<span data-ttu-id="37eaa-103">SELECT 문에서 반환되는 개체에 적용하는 정렬 순서를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="37eaa-103">Specifies the sort order used on objects returned in a SELECT statement.</span></span>  
+# <a name="order-by-entity-sql"></a><span data-ttu-id="fac58-102">ORDER BY(Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="fac58-102">ORDER BY (Entity SQL)</span></span>
+<span data-ttu-id="fac58-103">SELECT 문에서 반환되는 개체에 적용하는 정렬 순서를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="fac58-103">Specifies the sort order used on objects returned in a SELECT statement.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="37eaa-104">구문</span><span class="sxs-lookup"><span data-stu-id="37eaa-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fac58-104">구문</span><span class="sxs-lookup"><span data-stu-id="fac58-104">Syntax</span></span>  
   
-```  
+```sql  
 [ ORDER BY   
    {  
       order_by_expression [SKIP n] [LIMIT n]  
@@ -25,109 +25,113 @@ ms.locfileid: "70249759"
 ]  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="37eaa-105">인수</span><span class="sxs-lookup"><span data-stu-id="37eaa-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="fac58-105">인수</span><span class="sxs-lookup"><span data-stu-id="fac58-105">Arguments</span></span>  
  `order_by_expression`  
- <span data-ttu-id="37eaa-106">정렬 기준이 될 속성을 지정하는 유효한 쿼리 식입니다.</span><span class="sxs-lookup"><span data-stu-id="37eaa-106">Any valid query expression specifying a property on which to sort.</span></span> <span data-ttu-id="37eaa-107">여러 정렬 식을 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="37eaa-107">Multiple sort expressions can be specified.</span></span> <span data-ttu-id="37eaa-108">ORDER BY 절에서 정렬 식의 시퀀스에 따라 정렬된 결과 집합의 구조가 정의됩니다.</span><span class="sxs-lookup"><span data-stu-id="37eaa-108">The sequence of the sort expressions in the ORDER BY clause defines the organization of the sorted result set.</span></span>  
+ <span data-ttu-id="fac58-106">정렬 기준이 될 속성을 지정하는 유효한 쿼리 식입니다.</span><span class="sxs-lookup"><span data-stu-id="fac58-106">Any valid query expression specifying a property on which to sort.</span></span> <span data-ttu-id="fac58-107">여러 정렬 식을 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fac58-107">Multiple sort expressions can be specified.</span></span> <span data-ttu-id="fac58-108">ORDER BY 절에서 정렬 식의 시퀀스에 따라 정렬된 결과 집합의 구조가 정의됩니다.</span><span class="sxs-lookup"><span data-stu-id="fac58-108">The sequence of the sort expressions in the ORDER BY clause defines the organization of the sorted result set.</span></span>  
   
- <span data-ttu-id="37eaa-109">COLLATE {collation_name}</span><span class="sxs-lookup"><span data-stu-id="37eaa-109">COLLATE {collation_name}</span></span>  
- <span data-ttu-id="37eaa-110">`collation_name`에 지정된 데이터 정렬에 따라 ORDER BY 연산을 수행해야 함을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="37eaa-110">Specifies that the ORDER BY operation should be performed according to the collation specified in `collation_name`.</span></span> <span data-ttu-id="37eaa-111">COLLATE는 문자열 식에만 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="37eaa-111">COLLATE is applicable only for string expressions.</span></span>  
+ <span data-ttu-id="fac58-109">COLLATE {collation_name}</span><span class="sxs-lookup"><span data-stu-id="fac58-109">COLLATE {collation_name}</span></span>  
+ <span data-ttu-id="fac58-110">`collation_name`에 지정된 데이터 정렬에 따라 ORDER BY 연산을 수행해야 함을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="fac58-110">Specifies that the ORDER BY operation should be performed according to the collation specified in `collation_name`.</span></span> <span data-ttu-id="fac58-111">COLLATE는 문자열 식에만 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="fac58-111">COLLATE is applicable only for string expressions.</span></span>  
   
- <span data-ttu-id="37eaa-112">ASC</span><span class="sxs-lookup"><span data-stu-id="37eaa-112">ASC</span></span>  
- <span data-ttu-id="37eaa-113">지정된 속성에서 값이 오름차순으로, 즉 가장 작은 값에서 가장 큰 값으로 정렬되도록 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="37eaa-113">Specifies that the values in the specified property should be sorted in ascending order, from lowest value to highest value.</span></span> <span data-ttu-id="37eaa-114">기본값입니다.</span><span class="sxs-lookup"><span data-stu-id="37eaa-114">This is the default.</span></span>  
+ <span data-ttu-id="fac58-112">ASC</span><span class="sxs-lookup"><span data-stu-id="fac58-112">ASC</span></span>  
+ <span data-ttu-id="fac58-113">지정된 속성에서 값이 오름차순으로, 즉 가장 작은 값에서 가장 큰 값으로 정렬되도록 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="fac58-113">Specifies that the values in the specified property should be sorted in ascending order, from lowest value to highest value.</span></span> <span data-ttu-id="fac58-114">기본값입니다.</span><span class="sxs-lookup"><span data-stu-id="fac58-114">This is the default.</span></span>  
   
- <span data-ttu-id="37eaa-115">DESC</span><span class="sxs-lookup"><span data-stu-id="37eaa-115">DESC</span></span>  
- <span data-ttu-id="37eaa-116">지정된 속성에서 값이 내림차순으로, 즉 가장 큰 값에서 가장 작은 값으로 정렬되도록 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="37eaa-116">Specifies that the values in the specified property should be sorted in descending order, from highest value to lowest value.</span></span>  
+ <span data-ttu-id="fac58-115">DESC</span><span class="sxs-lookup"><span data-stu-id="fac58-115">DESC</span></span>  
+ <span data-ttu-id="fac58-116">지정된 속성에서 값이 내림차순으로, 즉 가장 큰 값에서 가장 작은 값으로 정렬되도록 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="fac58-116">Specifies that the values in the specified property should be sorted in descending order, from highest value to lowest value.</span></span>  
   
- <span data-ttu-id="37eaa-117">LIMIT `n`</span><span class="sxs-lookup"><span data-stu-id="37eaa-117">LIMIT `n`</span></span>  
- <span data-ttu-id="37eaa-118">처음 `n` 개 항목만 선택됩니다.</span><span class="sxs-lookup"><span data-stu-id="37eaa-118">Only the first `n` items will be selected.</span></span>  
+ <span data-ttu-id="fac58-117">LIMIT `n`</span><span class="sxs-lookup"><span data-stu-id="fac58-117">LIMIT `n`</span></span>  
+ <span data-ttu-id="fac58-118">처음 `n` 개 항목만 선택됩니다.</span><span class="sxs-lookup"><span data-stu-id="fac58-118">Only the first `n` items will be selected.</span></span>  
   
- <span data-ttu-id="37eaa-119">SKIP `n`</span><span class="sxs-lookup"><span data-stu-id="37eaa-119">SKIP `n`</span></span>  
- <span data-ttu-id="37eaa-120">처음 `n` 개 항목을 건너뜁니다.</span><span class="sxs-lookup"><span data-stu-id="37eaa-120">Skips the first `n` items.</span></span>  
+ <span data-ttu-id="fac58-119">SKIP `n`</span><span class="sxs-lookup"><span data-stu-id="fac58-119">SKIP `n`</span></span>  
+ <span data-ttu-id="fac58-120">처음 `n` 개 항목을 건너뜁니다.</span><span class="sxs-lookup"><span data-stu-id="fac58-120">Skips the first `n` items.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="37eaa-121">설명</span><span class="sxs-lookup"><span data-stu-id="37eaa-121">Remarks</span></span>  
- <span data-ttu-id="37eaa-122">ORDER BY 절은 SELECT 절의 결과에 논리적으로 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="37eaa-122">The ORDER BY clause is logically applied to the result of the SELECT clause.</span></span> <span data-ttu-id="37eaa-123">ORDER BY 절은 별칭을 사용하여 선택 목록 내 항목을 참조할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="37eaa-123">The ORDER BY clause can reference items in the select list by using their aliases.</span></span> <span data-ttu-id="37eaa-124">ORDER BY 절은 현재 범위 내에 있는 다른 변수도 참조할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="37eaa-124">The ORDER BY clause can also reference other variables that are currently in-scope.</span></span> <span data-ttu-id="37eaa-125">하지만, DISTINCT 한정자를 사용하여 SELECT 절이 지정된 경우 ORDER BY 절은 SELECT 절의 별칭만 참조할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="37eaa-125">However, if the SELECT clause has been specified with a DISTINCT modifier, the ORDER BY clause can only reference aliases from the SELECT clause.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="fac58-121">주의</span><span class="sxs-lookup"><span data-stu-id="fac58-121">Remarks</span></span>  
+ <span data-ttu-id="fac58-122">ORDER BY 절은 SELECT 절의 결과에 논리적으로 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="fac58-122">The ORDER BY clause is logically applied to the result of the SELECT clause.</span></span> <span data-ttu-id="fac58-123">ORDER BY 절은 별칭을 사용하여 선택 목록 내 항목을 참조할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fac58-123">The ORDER BY clause can reference items in the select list by using their aliases.</span></span> <span data-ttu-id="fac58-124">ORDER BY 절은 현재 범위 내에 있는 다른 변수도 참조할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fac58-124">The ORDER BY clause can also reference other variables that are currently in-scope.</span></span> <span data-ttu-id="fac58-125">하지만, DISTINCT 한정자를 사용하여 SELECT 절이 지정된 경우 ORDER BY 절은 SELECT 절의 별칭만 참조할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fac58-125">However, if the SELECT clause has been specified with a DISTINCT modifier, the ORDER BY clause can only reference aliases from the SELECT clause.</span></span>  
   
  `SELECT c AS c1 FROM cs AS c ORDER BY c1.e1, c.e2`  
   
- <span data-ttu-id="37eaa-126">ORDER BY 절의 모든 식은 같지 않음 정렬(예: 보다 작음, 보다 큼)을 비교할 수 있는 형식으로 계산되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="37eaa-126">Each expression in the ORDER BY clause must evaluate to some type that can be compared for ordered inequality (less than or greater than, and so on).</span></span> <span data-ttu-id="37eaa-127">이런 형식은 일반적으로 숫자, 문자열, 날짜와 같은 스칼라 기본 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="37eaa-127">These types are generally scalar primitives such as numbers, strings, and dates.</span></span> <span data-ttu-id="37eaa-128">비교 가능한 형식의 RowType도 순서를 비교할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="37eaa-128">RowTypes of comparable types are also order comparable.</span></span>  
+ <span data-ttu-id="fac58-126">ORDER BY 절의 모든 식은 같지 않음 정렬(예: 보다 작음, 보다 큼)을 비교할 수 있는 형식으로 계산되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="fac58-126">Each expression in the ORDER BY clause must evaluate to some type that can be compared for ordered inequality (less than or greater than, and so on).</span></span> <span data-ttu-id="fac58-127">이런 형식은 일반적으로 숫자, 문자열, 날짜와 같은 스칼라 기본 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="fac58-127">These types are generally scalar primitives such as numbers, strings, and dates.</span></span> <span data-ttu-id="fac58-128">비교 가능한 형식의 RowType도 순서를 비교할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fac58-128">RowTypes of comparable types are also order comparable.</span></span>  
   
- <span data-ttu-id="37eaa-129">최상위 프로젝션에 대해서가 아니라 정렬된 집합에 대해 코드가 반복되는 경우 출력에 순서가 유지되지 않을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="37eaa-129">If your code iterates over an ordered set, other than for a top-level projection, the output is not guaranteed to have its order preserved.</span></span>  
-  
-```  
--- In the following sample, order is guaranteed to be preserved:  
+ <span data-ttu-id="fac58-129">최상위 프로젝션에 대해서가 아니라 정렬된 집합에 대해 코드가 반복되는 경우 출력에 순서가 유지되지 않을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fac58-129">If your code iterates over an ordered set, other than for a top-level projection, the output is not guaranteed to have its order preserved.</span></span>  
+
+<span data-ttu-id="fac58-130">다음 샘플에서는 순서가 유지 되도록 보장 됩니다.</span><span class="sxs-lookup"><span data-stu-id="fac58-130">In the following sample, order is guaranteed to be preserved:</span></span>
+
+```sql  
 SELECT C1.FirstName, C1.LastName  
         FROM AdventureWorks.Contact as C1  
         ORDER BY C1.LastName  
 ```  
-  
-```  
--- In the following query ordering of the nested query is ignored.  
+
+<span data-ttu-id="fac58-131">다음 쿼리에서 중첩 쿼리의 순서는 무시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="fac58-131">In the following query, ordering of the nested query is ignored:</span></span>  
+
+```sql  
 SELECT C2.FirstName, C2.LastName  
     FROM (SELECT C1.FirstName, C1.LastName  
         FROM AdventureWorks.Contact as C1  
         ORDER BY C1.LastName) as C2  
 ```  
   
- <span data-ttu-id="37eaa-130">정렬된 UNION, UNION ALL, EXCEPT 또는 INTERSECT 연산을 얻으려면 다음 패턴을 사용하세요.</span><span class="sxs-lookup"><span data-stu-id="37eaa-130">To have an ordered UNION, UNION ALL, EXCEPT, or INTERSECT operation, use the following pattern:</span></span>  
+ <span data-ttu-id="fac58-132">정렬된 UNION, UNION ALL, EXCEPT 또는 INTERSECT 연산을 얻으려면 다음 패턴을 사용하세요.</span><span class="sxs-lookup"><span data-stu-id="fac58-132">To have an ordered UNION, UNION ALL, EXCEPT, or INTERSECT operation, use the following pattern:</span></span>  
   
-```  
+```sql  
 SELECT ...  
 FROM ( UNION/EXCEPT/INTERSECT operation )  
 ORDER BY ...  
 ```  
   
-## <a name="restricted-keywords"></a><span data-ttu-id="37eaa-131">제한된 키워드</span><span class="sxs-lookup"><span data-stu-id="37eaa-131">Restricted keywords</span></span>  
- <span data-ttu-id="37eaa-132">다음 키워드를 `ORDER BY` 절에서 사용할 때는 따옴표로 묶어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="37eaa-132">The following keywords must be enclosed in quotation marks when used in an `ORDER BY` clause:</span></span>  
+## <a name="restricted-keywords"></a><span data-ttu-id="fac58-133">제한된 키워드</span><span class="sxs-lookup"><span data-stu-id="fac58-133">Restricted keywords</span></span>  
+ <span data-ttu-id="fac58-134">다음 키워드를 `ORDER BY` 절에서 사용할 때는 따옴표로 묶어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="fac58-134">The following keywords must be enclosed in quotation marks when used in an `ORDER BY` clause:</span></span>  
   
-- <span data-ttu-id="37eaa-133">CROSS</span><span class="sxs-lookup"><span data-stu-id="37eaa-133">CROSS</span></span>  
+- <span data-ttu-id="fac58-135">CROSS</span><span class="sxs-lookup"><span data-stu-id="fac58-135">CROSS</span></span>  
   
-- <span data-ttu-id="37eaa-134">FULL</span><span class="sxs-lookup"><span data-stu-id="37eaa-134">FULL</span></span>  
+- <span data-ttu-id="fac58-136">FULL</span><span class="sxs-lookup"><span data-stu-id="fac58-136">FULL</span></span>  
   
-- <span data-ttu-id="37eaa-135">KEY</span><span class="sxs-lookup"><span data-stu-id="37eaa-135">KEY</span></span>  
+- <span data-ttu-id="fac58-137">KEY</span><span class="sxs-lookup"><span data-stu-id="fac58-137">KEY</span></span>  
   
-- <span data-ttu-id="37eaa-136">LEFT</span><span class="sxs-lookup"><span data-stu-id="37eaa-136">LEFT</span></span>  
+- <span data-ttu-id="fac58-138">LEFT</span><span class="sxs-lookup"><span data-stu-id="fac58-138">LEFT</span></span>  
   
-- <span data-ttu-id="37eaa-137">ORDER</span><span class="sxs-lookup"><span data-stu-id="37eaa-137">ORDER</span></span>  
+- <span data-ttu-id="fac58-139">ORDER</span><span class="sxs-lookup"><span data-stu-id="fac58-139">ORDER</span></span>  
   
-- <span data-ttu-id="37eaa-138">OUTER</span><span class="sxs-lookup"><span data-stu-id="37eaa-138">OUTER</span></span>  
+- <span data-ttu-id="fac58-140">OUTER</span><span class="sxs-lookup"><span data-stu-id="fac58-140">OUTER</span></span>  
   
-- <span data-ttu-id="37eaa-139">RIGHT</span><span class="sxs-lookup"><span data-stu-id="37eaa-139">RIGHT</span></span>  
+- <span data-ttu-id="fac58-141">RIGHT</span><span class="sxs-lookup"><span data-stu-id="fac58-141">RIGHT</span></span>  
   
-- <span data-ttu-id="37eaa-140">ROW</span><span class="sxs-lookup"><span data-stu-id="37eaa-140">ROW</span></span>  
+- <span data-ttu-id="fac58-142">ROW</span><span class="sxs-lookup"><span data-stu-id="fac58-142">ROW</span></span>  
   
-- <span data-ttu-id="37eaa-141">값</span><span class="sxs-lookup"><span data-stu-id="37eaa-141">VALUE</span></span>  
+- <span data-ttu-id="fac58-143">VALUE</span><span class="sxs-lookup"><span data-stu-id="fac58-143">VALUE</span></span>  
   
-## <a name="ordering-nested-queries"></a><span data-ttu-id="37eaa-142">중첩 쿼리 순서</span><span class="sxs-lookup"><span data-stu-id="37eaa-142">Ordering Nested Queries</span></span>  
- <span data-ttu-id="37eaa-143">Entity Framework에서 중첩된 식은 쿼리 내 임의의 위치에 올 수 있습니다. 중첩 쿼리의 순서는 유지되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="37eaa-143">In the Entity Framework, a nested expression can be placed anywhere in the query; the order of a nested query is not preserved.</span></span>  
-  
-```  
--- The following query will order the results by the last name.  
+## <a name="ordering-nested-queries"></a><span data-ttu-id="fac58-144">중첩 쿼리 순서</span><span class="sxs-lookup"><span data-stu-id="fac58-144">Ordering Nested Queries</span></span>  
+ <span data-ttu-id="fac58-145">Entity Framework에서 중첩된 식은 쿼리 내 임의의 위치에 올 수 있습니다. 중첩 쿼리의 순서는 유지되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="fac58-145">In the Entity Framework, a nested expression can be placed anywhere in the query; the order of a nested query is not preserved.</span></span>  
+
+<span data-ttu-id="fac58-146">다음 쿼리는 성을 기준으로 결과를 정렬 합니다.</span><span class="sxs-lookup"><span data-stu-id="fac58-146">The following query will order the results by the last name:</span></span>  
+
+```sql  
 SELECT C1.FirstName, C1.LastName  
         FROM AdventureWorks.Contact as C1  
         ORDER BY C1.LastName  
 ```  
-  
-```  
--- In the following query, ordering of the nested query is ignored.  
+
+<span data-ttu-id="fac58-147">다음 쿼리에서 중첩 쿼리의 순서는 무시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="fac58-147">In the following query, ordering of the nested query is ignored:</span></span>  
+
+```sql  
 SELECT C2.FirstName, C2.LastName  
     FROM (SELECT C1.FirstName, C1.LastName  
         FROM AdventureWorks.Contact as C1  
         ORDER BY C1.LastName) as C2  
 ```  
   
-## <a name="example"></a><span data-ttu-id="37eaa-144">예제</span><span class="sxs-lookup"><span data-stu-id="37eaa-144">Example</span></span>  
- <span data-ttu-id="37eaa-145">다음 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 쿼리는 ORDER BY 연산자를 사용하여 SELECT 문에서 반환되는 개체에 적용하는 정렬 순서를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="37eaa-145">The following [!INCLUDE[esql](../../../../../../includes/esql-md.md)] query uses the ORDER BY operator to specify the sort order used on objects returned in a SELECT statement.</span></span> <span data-ttu-id="37eaa-146">쿼리는 AdventureWorks Sales 모델을 기반으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="37eaa-146">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="37eaa-147">이 쿼리를 컴파일하고 실행하려면 다음 단계를 수행하세요.</span><span class="sxs-lookup"><span data-stu-id="37eaa-147">To compile and run this query, follow these steps:</span></span>  
+## <a name="example"></a><span data-ttu-id="fac58-148">예제</span><span class="sxs-lookup"><span data-stu-id="fac58-148">Example</span></span>  
+ <span data-ttu-id="fac58-149">다음 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 쿼리는 ORDER BY 연산자를 사용하여 SELECT 문에서 반환되는 개체에 적용하는 정렬 순서를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="fac58-149">The following [!INCLUDE[esql](../../../../../../includes/esql-md.md)] query uses the ORDER BY operator to specify the sort order used on objects returned in a SELECT statement.</span></span> <span data-ttu-id="fac58-150">쿼리는 AdventureWorks Sales 모델을 기반으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="fac58-150">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="fac58-151">이 쿼리를 컴파일하고 실행하려면 다음 단계를 수행하세요.</span><span class="sxs-lookup"><span data-stu-id="fac58-151">To compile and run this query, follow these steps:</span></span>  
   
-1. <span data-ttu-id="37eaa-148">[방법: StructuralType 결과](../how-to-execute-a-query-that-returns-structuraltype-results.md)를 반환 하는 쿼리를 실행 합니다.</span><span class="sxs-lookup"><span data-stu-id="37eaa-148">Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../how-to-execute-a-query-that-returns-structuraltype-results.md).</span></span>  
+1. <span data-ttu-id="fac58-152">[How to: Execute a Query that Returns StructuralType Results](../how-to-execute-a-query-that-returns-structuraltype-results.md)의 절차를 따릅니다.</span><span class="sxs-lookup"><span data-stu-id="fac58-152">Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../how-to-execute-a-query-that-returns-structuraltype-results.md).</span></span>  
   
-2. <span data-ttu-id="37eaa-149">다음 쿼리를 `ExecuteStructuralTypeQuery` 메서드에 인수로 전달합니다.</span><span class="sxs-lookup"><span data-stu-id="37eaa-149">Pass the following query as an argument to the `ExecuteStructuralTypeQuery` method:</span></span>  
+2. <span data-ttu-id="fac58-153">다음 쿼리를 `ExecuteStructuralTypeQuery` 메서드에 인수로 전달합니다.</span><span class="sxs-lookup"><span data-stu-id="fac58-153">Pass the following query as an argument to the `ExecuteStructuralTypeQuery` method:</span></span>  
   
- [!code-csharp[DP EntityServices Concepts 2#ORDERBY](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#orderby)]  
+ [!code-sql[DP EntityServices Concepts#ORDERBY](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#orderby)]  
   
-## <a name="see-also"></a><span data-ttu-id="37eaa-150">참고자료</span><span class="sxs-lookup"><span data-stu-id="37eaa-150">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fac58-154">참조</span><span class="sxs-lookup"><span data-stu-id="fac58-154">See also</span></span>
 
-- [<span data-ttu-id="37eaa-151">쿼리 식</span><span class="sxs-lookup"><span data-stu-id="37eaa-151">Query Expressions</span></span>](query-expressions-entity-sql.md)
-- [<span data-ttu-id="37eaa-152">엔터티 SQL 참조</span><span class="sxs-lookup"><span data-stu-id="37eaa-152">Entity SQL Reference</span></span>](entity-sql-reference.md)
-- [<span data-ttu-id="37eaa-153">SKIP</span><span class="sxs-lookup"><span data-stu-id="37eaa-153">SKIP</span></span>](skip-entity-sql.md)
-- [<span data-ttu-id="37eaa-154">LIMIT</span><span class="sxs-lookup"><span data-stu-id="37eaa-154">LIMIT</span></span>](limit-entity-sql.md)
-- [<span data-ttu-id="37eaa-155">TOP</span><span class="sxs-lookup"><span data-stu-id="37eaa-155">TOP</span></span>](top-entity-sql.md)
+- [<span data-ttu-id="fac58-155">쿼리 식</span><span class="sxs-lookup"><span data-stu-id="fac58-155">Query Expressions</span></span>](query-expressions-entity-sql.md)
+- [<span data-ttu-id="fac58-156">엔터티 SQL 참조</span><span class="sxs-lookup"><span data-stu-id="fac58-156">Entity SQL Reference</span></span>](entity-sql-reference.md)
+- [<span data-ttu-id="fac58-157">SKIP</span><span class="sxs-lookup"><span data-stu-id="fac58-157">SKIP</span></span>](skip-entity-sql.md)
+- [<span data-ttu-id="fac58-158">LIMIT</span><span class="sxs-lookup"><span data-stu-id="fac58-158">LIMIT</span></span>](limit-entity-sql.md)
+- [<span data-ttu-id="fac58-159">TOP</span><span class="sxs-lookup"><span data-stu-id="fac58-159">TOP</span></span>](top-entity-sql.md)
