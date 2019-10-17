@@ -7,12 +7,12 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: 32caf87435e23008f9f300d231c2705e7894280f
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 7826bbfca09cce7508d7352c647bafae93504e58
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291468"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395835"
 ---
 # <a name="globalization-for-wpf"></a>WPF의 전역화
 이 항목에서는 글로벌 시장을 위한 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 응용 프로그램을 작성할 때 알아야 하는 문제를 소개 합니다. 세계화 프로그래밍 요소는 <xref:System.Globalization> 네임 스페이스의 .NET에서 정의 됩니다.
@@ -23,7 +23,7 @@ ms.locfileid: "72291468"
 
 <a name="char_reference"></a>
 ### <a name="character-references"></a>문자 참조
-문자 참조는 10 진수 또는 16 진수에서 나타내는 특정 [!INCLUDE[TLA#tla_unicode](../../../../includes/tlasharptla-unicode-md.md)] 문자의 UTF16 코드 단위를 제공 합니다. 다음 예제에서는 콥트어 대문자 가로 또는 ' Ϩ '에 대 한 10 진수 문자 참조를 보여 줍니다.
+문자 참조는 10 진수 또는 16 진수로 나타내는 특정 유니코드 문자의 UTF16 코드 단위를 제공 합니다. 다음 예제에서는 콥트어 대문자 가로 또는 ' Ϩ '에 대 한 10 진수 문자 참조를 보여 줍니다.
 
 ```
 &#1000;
@@ -37,7 +37,7 @@ ms.locfileid: "72291468"
 
 <a name="encoding"></a>
 ### <a name="encoding"></a>인코딩
- @No__t-0에서 지원 되는 인코딩은 ASCII, [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)] UTF-16 및 u t f-8입니다. Encoding 문은 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 문서의 시작 부분에 있습니다. 인코딩 특성이 없으며 바이트 순서가 없으면 기본적으로 구문 분석기가 UTF-8로 설정됩니다. UTF-8과 UTF-16이 기본 인코딩입니다. UTF-7은 지원되지 않습니다. 다음 예에서는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 파일에서 UTF-8 인코딩을 지정 하는 방법을 보여 줍니다.
+ @No__t-0에서 지원 되는 인코딩은 ASCII, 유니코드 UTF-16 및 u t f-8입니다. Encoding 문은 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 문서의 시작 부분에 있습니다. 인코딩 특성이 없으며 바이트 순서가 없으면 기본적으로 구문 분석기가 UTF-8로 설정됩니다. UTF-8과 UTF-16이 기본 인코딩입니다. UTF-7은 지원되지 않습니다. 다음 예에서는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 파일에서 UTF-8 인코딩을 지정 하는 방법을 보여 줍니다.
 
 ```xaml
 ?xml encoding="UTF-8"?
@@ -47,7 +47,7 @@ ms.locfileid: "72291468"
 ### <a name="language-attribute"></a>언어 특성
  [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]은 [xml: lang](../../xaml-services/xml-lang-handling-in-xaml.md) 을 사용 하 여 요소의 language 특성을 나타냅니다.  @No__t-0 클래스를 활용 하려면 언어 특성 값이 <xref:System.Globalization.CultureInfo>로 미리 정의 된 문화권 이름 중 하나 여야 합니다. [xml:lang](../../xaml-services/xml-lang-handling-in-xaml.md)은 요소 트리에서 상속 가능하며(반드시 종속성 속성 상속성때문이 아니라 XML 규칙에 따름), 명시적으로 할당되지 않은 경우 기본값은 비어 있습니다.
 
- 언어를 지정할 때 언어 특성이 매우 유용합니다. 예를 들어, 프랑스, 퀘벡, 벨기에 및 스위스의 프랑스어에는 다른 철자, 어휘 및 발음이 있습니다. 또한 중국어, 일본어 및 한국어는 [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)]의 코드 요소를 공유 하지만 표의 문자 모양은 서로 다르며 완전히 다른 글꼴을 사용 합니다.
+ 언어를 지정할 때 언어 특성이 매우 유용합니다. 예를 들어, 프랑스, 퀘벡, 벨기에 및 스위스의 프랑스어에는 다른 철자, 어휘 및 발음이 있습니다. 또한 중국어, 일본어 및 한국어는 유니코드에서 코드 점수를 공유 하지만 표의 문자 모양은 서로 다르며 완전히 다른 글꼴을 사용 합니다.
 
  다음 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 예제에서는 `fr-CA` 언어 특성을 사용 하 여 캐나다 프랑스어를 지정 합니다.
 
@@ -56,8 +56,8 @@ ms.locfileid: "72291468"
 ```
 
 <a name="unicode"></a>
-### <a name="unicode"></a>유니코드
- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]은 서로게이트를 비롯 한 모든 [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)] 기능을 지원 합니다. 문자 집합을 [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)]에 매핑할 수 있으면 지원 됩니다. 예를 들어, GB18030에서는 중국어, 일본어 및 한국어(CFK) 확장 A와 B에 매핑되는 일부 문자와 서로게이트 쌍을 소개하므로 완전히 지원됩니다. @No__t-0 응용 프로그램은 <xref:System.Globalization.StringInfo>을 사용 하 여 서로게이트 쌍 또는 조합 문자가 있는지 여부를 알 필요 없이 문자열을 조작할 수 있습니다.
+### <a name="unicode"></a>유니코드(Unicode)
+ [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]은 서로게이트를 비롯 한 모든 유니코드 기능을 지원 합니다. 문자 집합을 유니코드에 매핑할 수 있으면 지원 됩니다. 예를 들어, GB18030에서는 중국어, 일본어 및 한국어(CFK) 확장 A와 B에 매핑되는 일부 문자와 서로게이트 쌍을 소개하므로 완전히 지원됩니다. @No__t-0 응용 프로그램은 <xref:System.Globalization.StringInfo>을 사용 하 여 서로게이트 쌍 또는 조합 문자가 있는지 여부를 알 필요 없이 문자열을 조작할 수 있습니다.
 
 <a name="design_intl_ui_with_xaml"></a>
 ## <a name="designing-an-international-user-interface-with-xaml"></a>XAML로 국가별 사용자 인터페이스 설계
@@ -125,7 +125,7 @@ ms.locfileid: "72291468"
 
  모든 쓰기 시스템 엔진은 OpenType 글꼴을 지원 합니다. OpenType 글꼴에는 글꼴 작성자가 향상 된 국제 글꼴 및 고급 인쇄 글꼴을 디자인할 수 있도록 하는 OpenType 레이아웃 테이블이 포함 될 수 있습니다. OpenType 글꼴 레이아웃 표에는 문자 모양 대체, 문자 모양 위치 지정, 양쪽 맞춤 및 기준선 위치에 대 한 정보가 포함 되어 텍스트 처리 응용 프로그램이 텍스트 레이아웃을 향상 시킬 수 있도록 합니다.
 
- OpenType 글꼴을 사용 하면 [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)] 인코딩을 사용 하 여 긴 문자 모양 집합을 처리할 수 있습니다. 이러한 인코딩을 사용하면 글꼴 문자 모양 변형 외에도 광범위한 국가별 지원이 가능합니다.
+ OpenType 글꼴을 사용 하면 유니코드 인코딩을 사용 하 여 긴 문자 모양 집합을 처리할 수 있습니다. 이러한 인코딩을 사용하면 글꼴 문자 모양 변형 외에도 광범위한 국가별 지원이 가능합니다.
 
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 텍스트 렌더링은 해상도 독립성을 지 원하는 Microsoft ClearType 하위 픽셀 기술을 기반으로 합니다. 이 기능을 통해 가독성이 크게 향상되며, 모든 스크립트에 대해 고품질 잡지 스타일 문서를 지원하는 기능을 제공합니다.
 

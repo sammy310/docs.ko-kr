@@ -7,18 +7,18 @@ helpviewer_keywords:
 - extending data types [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: b8020aae-374d-46a9-bcb7-8cc2390b93b6
-ms.openlocfilehash: b5ad066fe9ec40d715702ed99537f45b21c558cf
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: d988ab36703bc20e6960d4b8ecc7a476d95ee9bc
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71701048"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72396007"
 ---
 # <a name="extension-methods-visual-basic"></a>확장 메서드(Visual Basic)
 
 개발자는 확장 메서드를 사용 하 여 새 파생 형식을 만들지 않고 이미 정의 된 데이터 형식에 사용자 지정 기능을 추가할 수 있습니다. 확장 메서드를 사용 하면 기존 형식의 인스턴스 메서드인 것 처럼 호출할 수 있는 메서드를 작성할 수 있습니다.
-  
-## <a name="remarks"></a>설명
+
+## <a name="remarks"></a>주의
 
 확장 메서드는 `Sub` 프로시저 또는 `Function` 프로시저만 될 수 있습니다. 확장 속성, 필드 또는 이벤트를 정의할 수 없습니다. 모든 확장 메서드는 <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> 네임 스페이스의 `<Extension>` 확장 특성으로 표시 되어야 하며 [모듈](../../../language-reference/statements/module-statement.md)에서 정의 되어야 합니다. 확장 메서드가 모듈 외부에서 정의 된 경우 Visual Basic 컴파일러는 "모듈 에서만 확장 메서드를 정의할 수 있습니다" 라는 오류 [BC36551](../../../misc/bc36551.md)를 생성 합니다.
 
@@ -29,7 +29,7 @@ ms.locfileid: "71701048"
 ## <a name="example"></a>예제
 
 다음 예에서는 <xref:System.String> 데이터 형식에 대 한 `Print` 확장을 정의 합니다. 메서드는 `Console.WriteLine`을 사용 하 여 문자열을 표시 합니다. @No__t-0 메서드의 매개 변수 `aString`은 메서드가 @no__t 2 클래스를 확장 하도록 설정 합니다.
-  
+
 [!code-vb[VbVbalrExtensionMethods#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/StringExtensions.vb#1)]
 
 확장 메서드 정의는-0 @no__t 확장 특성으로 표시 되어 있습니다. 메서드가 정의 되는 모듈을 표시 하는 것은 선택 사항 이지만 각 확장 메서드는로 표시 되어야 합니다. 확장 특성에 액세스 하려면 <xref:System.Runtime.CompilerServices>을 가져와야 합니다.
@@ -45,7 +45,6 @@ ms.locfileid: "71701048"
 @No__t-0에 대 한 문자열 인수를 전송 하 여 메서드를 호출 합니다 (`example.PrintAndPunctuate(".")`).
 
 다음 예에서는 `Print` 및 `PrintAndPunctuate`을 정의 하 고 호출 하는 방법을 보여 줍니다. 확장 특성에 대 한 액세스를 사용 하기 위해 정의 모듈에 <xref:System.Runtime.CompilerServices>을 가져옵니다.
-
 
 ```vb
 Imports System.Runtime.CompilerServices
@@ -106,7 +105,7 @@ End Module
 
 [!code-vb[VbVbalrExtensionMethods#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class6.vb#9)]
 
-## <a name="best-practices"></a>모범 사례
+## <a name="best-practices"></a>최선의 구현 방법
 
 확장 메서드는 기존 형식을 확장 하는 편리 하 고 강력한 방법을 제공 합니다. 그러나이를 성공적으로 사용 하려면 몇 가지 사항을 고려해 야 합니다. 이러한 고려 사항은 주로 클래스 라이브러리의 작성자에 게 적용 되지만 확장 메서드를 사용 하는 모든 응용 프로그램에 영향을 줄 수 있습니다.
 

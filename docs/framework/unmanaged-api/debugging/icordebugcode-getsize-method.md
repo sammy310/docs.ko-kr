@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 89df0e9be0600b51dcc8a68c5aba3f06e86e1b53
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 25349f7c8274b818df2cd1bc5d67856e31efecc4
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71700807"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395541"
 ---
 # <a name="icordebugcodegetsize-method"></a>ICorDebugCode::GetSize 메서드
 
@@ -38,16 +38,15 @@ HRESULT GetSize (
 
 ## <a name="parameters"></a>매개 변수
 
- `pcBytes`  
- 제한이 이 `ICorDebugCode` 개체가 나타내는 이진 코드의 크기 (바이트)에 대 한 포인터입니다.
+`pcBytes`  
+제한이 이 `ICorDebugCode` 개체가 나타내는 이진 코드의 크기 (바이트)에 대 한 포인터입니다.
 
 ## <a name="requirements"></a>요구 사항
 
- **플랫폼** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하십시오.
+**플랫폼:** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.
 
- **헤더:** CorDebug.idl, CorDebug.h
+**헤더:** CorDebug.idl, CorDebug.h
 
- **라이브러리** CorGuids.lib
+**라이브러리:** CorGuids.lib
 
- **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
- 
+**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

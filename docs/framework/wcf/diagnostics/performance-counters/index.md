@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - performance counters [WCF]
 ms.assetid: f559b2bd-ed83-4988-97a1-e88f06646609
-ms.openlocfilehash: a9bddcbd907e37d9bdf757b1999946c99e10440c
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 73bb02379308fbfe507137e61ac8d84e6b9760b4
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855636"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395907"
 ---
 # <a name="wcf-performance-counters"></a>WCF 성능 카운터
 WCF (Windows Communication Foundation)는 응용 프로그램의 성능을 측정 하는 데 도움이 되는 다양 한 성능 카운터 집합을 포함 합니다.  
@@ -27,11 +27,11 @@ WCF (Windows Communication Foundation)는 응용 프로그램의 성능을 측�
   
  특정 유형의 성능 카운터를 활성화하도록 `performanceCounters` 특성을 설정할 수 있습니다. 유효한 값은 다음과 같습니다.  
   
-- 모두가 모든 범주 카운터 (ServiceModelService, ServiceModelEndpoint 및 ServiceModelOperation)를 사용할 수 있습니다.  
+- All: 모든 범주 카운터(ServiceModelService, ServiceModelEndpoint, ServiceModelOperation)가 활성화됩니다.  
   
-- ServiceOnly: ServiceModelService category 카운터만 사용 됩니다. 기본값입니다.  
+- ServiceOnly: ServiceModelService 범주 카운터만 활성화됩니다. 이 설정은 기본값입니다.  
   
-- 해제 ServiceModel * 성능 카운터를 사용할 수 없습니다.  
+- Off: ServiceModel* 성능 카운터가 비활성화됩니다.  
   
  모든 WCF 응용 프로그램에 대해 성능 카운터를 사용 하도록 설정 하려면 machine.config 파일에 구성 설정을 저장 합니다.  컴퓨터에서 성능 카운터에 충분 한 메모리를 구성 하는 방법에 대 한 자세한 내용은 아래의 **성능 카운터에 대 한 메모리 크기를 늘립니다** . 섹션을 참조 하세요.  
   
@@ -51,7 +51,7 @@ config.Save();
 ```  
   
 ## <a name="viewing-performance-data"></a>성능 데이터 보기  
- 성능 카운터에서 캡처한 데이터를 보려면 Windows와 함께 제공된 성능 모니터(Perfmon.exe)를 사용할 수 있습니다. **시작**으로 이동 하 고 **실행** 을 클릭 한 다음 대화 상자에를 입력 `perfmon.exe` 하 여이 도구를 시작할 수 있습니다.  
+ 성능 카운터에서 캡처한 데이터를 보려면 Windows와 함께 제공된 성능 모니터(Perfmon.exe)를 사용할 수 있습니다. **시작**으로 이동 하 고 **실행** 을 클릭 한 다음 대화 상자에 `perfmon.exe`를 입력 하 여이 도구를 시작할 수 있습니다.  
   
 > [!NOTE]
 > 엔드포인트 디스패처가 마지막 메시지를 처리하기 이전에 성능 카운터 인스턴스가 해제될 수 있습니다. 그러면 일부 메시지에 대한 성능 데이터가 캡처되지 않습니다.  
@@ -59,7 +59,7 @@ config.Save();
 ## <a name="increasing-memory-size-for-performance-counters"></a>성능 카운터에 대한 메모리 크기 늘리기  
  WCF는 성능 카운터 범주에 대해 별도의 공유 메모리를 사용 합니다.  
   
- 기본적으로 별도의 공유 메모리는 전역 성능 카운터 메모리 크기의 1/4로 설정됩니다. 기본 전역 성능 카운터 메모리는 524,288바이트입니다. 따라서 세 가지 WCF 성능 카운터 범주의 기본 크기는 각각 약 128KB입니다. 컴퓨터에 있는 WCF 응용 프로그램의 런타임 특성에 따라 성능 카운터 메모리가 고갈 될 수 있습니다. 이 경우 WCF는 응용 프로그램 이벤트 로그에 오류를 기록 합니다. 이 오류의 내용에는 성능 카운터가 로드 되지 않고 항목에 "InvalidOperationException: 사용자 지정 카운터 파일 보기에 메모리가 부족 합니다. " 오류 수준에서 추적 기능을 사용하도록 설정하면 이 오류도 추적됩니다. 성능 카운터 메모리가 모두 사용 되 면 성능 카운터를 사용 하는 WCF 응용 프로그램을 계속 실행 하면 성능이 저하 될 수 있습니다. 컴퓨터 관리자는 언제든지 최대 성능 카운터 수를 지원하는 데 충분한 메모리를 할당하도록 컴퓨터를 구성해야 합니다.  
+ 기본적으로 별도의 공유 메모리는 전역 성능 카운터 메모리 크기의 1/4로 설정됩니다. 기본 전역 성능 카운터 메모리는 524,288바이트입니다. 따라서 세 가지 WCF 성능 카운터 범주의 기본 크기는 각각 약 128KB입니다. 컴퓨터에 있는 WCF 응용 프로그램의 런타임 특성에 따라 성능 카운터 메모리가 고갈 될 수 있습니다. 이 경우 WCF는 응용 프로그램 이벤트 로그에 오류를 기록 합니다. 오류 내용에는 성능 카운터가 로드되지 않았다는 설명이 표시되며, "System.InvalidOperationException: 사용자 지정 카운터 파일 뷰 메모리가 부족합니다."라는 예외가 항목에 포함됩니다. 오류 수준에서 추적 기능을 사용하도록 설정하면 이 오류도 추적됩니다. 성능 카운터 메모리가 모두 사용 되 면 성능 카운터를 사용 하는 WCF 응용 프로그램을 계속 실행 하면 성능이 저하 될 수 있습니다. 컴퓨터 관리자는 언제든지 최대 성능 카운터 수를 지원하는 데 충분한 메모리를 할당하도록 컴퓨터를 구성해야 합니다.  
   
  레지스트리의 WCF 범주에 대 한 성능 카운터 메모리의 양을 변경할 수 있습니다. 그렇게 하려면 다음 세 위치에 `FileMappingSize`라는 새로운 DWORD 값을 추가하여 원하는 값(바이트)으로 설정해야 합니다. 컴퓨터를 다시 부팅하여 변경 내용을 적용합니다.  
   
@@ -72,17 +72,17 @@ config.Save();
  많은 수의 개체(예: ServiceHost)를 삭제할 때 가비지가 수집되기를 대기 중인 경우 `PrivateBytes` 성능 카운터는 매우 높은 수를 등록합니다. 이 문제를 해결하려면 애플리케이션 관련 카운터를 추가하거나 `performanceCounters` 특성을 사용하여 서비스 수준 카운터만 활성화할 수 있습니다.  
   
 ## <a name="types-of-performance-counters"></a>성능 카운터 형식  
- 성능 카운터의 범위는 세 가지입니다. 서비스, 끝점 및 작업입니다.  
+ 성능 카운터의 범위는 서비스, 엔드포인트 및 작업의 세 가지 수준입니다.  
   
- WMI를 사용하여 성능 카운터 인스턴스의 이름을 검색할 수 있습니다. 예를 들면 다음과 같습니다.  
+ WMI를 사용하여 성능 카운터 인스턴스의 이름을 검색할 수 있습니다. 예를 들어 개체에 적용된  
   
-- 서비스 카운터 인스턴스 이름은 WMI [서비스](../../../../../docs/framework/wcf/diagnostics/wmi/service.md) 인스턴스의 "counterinstancename" 속성을 통해 가져올 수 있습니다.  
+- 서비스 카운터 인스턴스 이름은 WMI [서비스](../wmi/service.md) 인스턴스의 "counterinstancename" 속성을 통해 가져올 수 있습니다.  
   
-- 끝점 카운터 인스턴스 이름은 WMI [끝점](../../../../../docs/framework/wcf/diagnostics/wmi/endpoint.md) 인스턴스의 "counterinstancename" 속성을 통해 가져올 수 있습니다.  
+- 끝점 카운터 인스턴스 이름은 WMI [끝점](../wmi/endpoint.md) 인스턴스의 "counterinstancename" 속성을 통해 가져올 수 있습니다.  
   
-- 작업 카운터 인스턴스 이름은 WMI [끝점](../../../../../docs/framework/wcf/diagnostics/wmi/endpoint.md) 인스턴스의 "GetOperationCounterInstanceName" 메서드를 통해 가져올 수 있습니다.  
+- 작업 카운터 인스턴스 이름은 WMI [끝점](../wmi/endpoint.md) 인스턴스의 "GetOperationCounterInstanceName" 메서드를 통해 가져올 수 있습니다.  
   
- WMI에 대 한 자세한 내용은 [진단에 WMI(Windows Management Instrumentation) 사용](../../../../../docs/framework/wcf/diagnostics/wmi/index.md)을 참조 하세요.  
+ WMI에 대 한 자세한 내용은 [진단에 WMI(Windows Management Instrumentation) 사용](../wmi/index.md)을 참조 하세요.  
   
 ### <a name="service-performance-counters"></a>서비스 성능 카운터  
  서비스 성능 카운터는 서비스 동작을 전반적으로 측정하며 전체 서비스 성능을 진단하는 데 사용할 수 있습니다. 이러한 카운터는 성능 모니터에서 볼 때 `ServiceModelService 4.0.0.0` 성능 개체 아래에 있습니다. 인스턴스 이름은 다음 패턴으로 지정됩니다.  
@@ -118,20 +118,17 @@ config.Save();
 > 계약에 중복 작업 이름이 있는 경우 두 작업에 대해 카운터 인스턴스를 하나만 가져옵니다.  
   
 ## <a name="programming-the-wcf-performance-counters"></a>WCF 성능 카운터 프로그래밍  
- WCF 성능 카운터에 프로그래밍 방식으로 액세스할 수 있도록 여러 파일이 SDK 설치 폴더에 설치 됩니다. 설치되는 파일은 다음과 같습니다.  
-  
-- _ServiceModelEndpointPerfCounters.vrg  
-  
-- _ServiceModelOperationPerfCounters.vrg  
-  
-- _ServiceModelServicePerfCounters.vrg  
-  
-- _SMSvcHostPerfCounters.vrg  
-  
-- _TransactionBridgePerfCounters.vrg  
-  
- 프로그래밍 방식으로 카운터에 액세스 하는 방법에 대 한 자세한 내용은 [성능 카운터 프로그래밍 아키텍처](https://go.microsoft.com/fwlink/?LinkId=95179)를 참조 하세요.  
-  
-## <a name="see-also"></a>참고자료
 
-- [관리 및 진단](../../../../../docs/framework/wcf/diagnostics/index.md)
+WCF 성능 카운터에 프로그래밍 방식으로 액세스할 수 있도록 여러 파일이 SDK 설치 폴더에 설치 됩니다. 이러한 파일은 다음과 같이 나열 됩니다.
+  
+- *@no__t -1ServiceModelEndpointPerfCounters vrg*
+- *@no__t -1ServiceModelOperationPerfCounters vrg*
+- *@no__t -1ServiceModelServicePerfCounters vrg*  
+- *@no__t -1SMSvcHostPerfCounters vrg*
+- *@no__t -1TransactionBridgePerfCounters vrg*
+  
+프로그래밍 방식으로 카운터에 액세스 하는 방법에 대 한 자세한 내용은 [성능 카운터 프로그래밍 아키텍처](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/5f9bkxzf(v=vs.90))를 참조 하세요.
+  
+## <a name="see-also"></a>참조
+
+- [관리 및 진단](../index.md)

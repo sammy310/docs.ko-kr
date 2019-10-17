@@ -2,15 +2,15 @@
 title: 메시지 보안을 사용하여 메시지에 보안 설정
 ms.date: 03/30/2017
 ms.assetid: a17ebe67-836b-4c52-9a81-2c3d58e225ee
-ms.openlocfilehash: 9ba8923d23140bb951a4993739ec267ad6f6a4c4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1098057042c0842161258fd081d3ee63e82b4c5f
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911781"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395710"
 ---
 # <a name="securing-messages-using-message-security"></a>메시지 보안을 사용하여 메시지에 보안 설정
-이 섹션에서는를 사용할 <xref:System.ServiceModel.NetMsmqBinding>때 WCF 메시지 보안에 대해 설명 합니다.  
+이 섹션에서는 <xref:System.ServiceModel.NetMsmqBinding>을 사용할 때 WCF 메시지 보안에 대해 설명 합니다.  
   
 > [!NOTE]
 > 이 항목을 읽기 전에 [보안 개념](../../../../docs/framework/wcf/feature-details/security-concepts.md)을 확인 하는 것이 좋습니다.  
@@ -19,7 +19,7 @@ ms.locfileid: "69911781"
   
  설명하는 데 사용됩니다.  
   
- ![대기 중인 응용 프로그램 다이어그램](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "분산 큐-그림")  
+ ![대기 중인 응용 프로그램 다이어그램](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "분산 큐 그림")  
   
  WCF를 사용 하 여 대기 중인 메시지를 보내는 경우 WCF 메시지는 MSMQ (메시지 큐) 메시지의 본문으로 연결 됩니다. 전송 보안은 MSMQ 메시지 전체를 보호하지만, 메시지(또는 SOAP) 보안은 MSMQ 메시지의 본문만 보호합니다.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "69911781"
   
  이 절에서는 서로 다른 자격 증명 형식과 큐에서 그러한 형식을 사용하는 방법에 대해 설명합니다.  
   
-### <a name="certificate"></a>Certificate  
+### <a name="certificate"></a>인증서  
  Certificate 자격 증명 형식에서는 X.509 인증서를 사용하여 서비스와 클라이언트를 식별합니다.  
   
  일반적인 시나리오에서 클라이언트와 서비스에는 신뢰할 수 있는 인증 기관의 유효한 인증서가 발급됩니다. 그런 다음 연결이 설정되고, 클라이언트에서 서비스의 인증서를 통해 서비스의 유효성을 인증하여 서비스 신뢰 여부를 결정합니다. 마찬가지로 서비스에서는 클라이언트의 인증서를 사용하여 클라이언트 신뢰를 확인합니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "69911781"
   
  Windows를 실행하는 컴퓨터에서 인증서는 다양한 종류의 저장소에 저장됩니다. 여러 저장소에 대 한 자세한 내용은 [인증서 저장소](https://go.microsoft.com/fwlink/?LinkId=87787)를 참조 하세요.  
   
-### <a name="windows"></a>Windows  
+### <a name="windows"></a>창  
  Windows 메시지 자격 증명 형식에는 Kerberos 프로토콜이 사용됩니다.  
   
  Kerberos 프로토콜은 도메인에서 사용자를 인증하고 인증된 사용자가 도메인에 있는 다른 엔터티와 보안 컨텍스트를 구성할 수 있게 해 주는 보안 메커니즘입니다.  
@@ -52,7 +52,7 @@ ms.locfileid: "69911781"
   
  이 자격 증명 형식을 사용하는 경우 서비스는 SERVICE 계정에서 실행해야 합니다.  
   
- 메시지 자격 증명을 선택할 때, 기본적으로 Kerberos 프로토콜이 사용됩니다. 자세한 내용은 [Windows 2000에서 분산 보안을 위한 프로토콜인 Kerberos 탐색](https://go.microsoft.com/fwlink/?LinkId=87790)을 참조 하세요.  
+ 메시지 자격 증명을 선택할 때, 기본적으로 Kerberos 프로토콜이 사용됩니다.
   
 ### <a name="username-password"></a>Username Password  
  이 속성을 이용하면 메시지의 보안 헤더에 사용자 이름 암호를 사용하여 클라이언트를 서버에 인증할 수 있습니다.  
@@ -63,7 +63,7 @@ ms.locfileid: "69911781"
 ## <a name="using-transport-and-message-security"></a>전송 및 메시지 보안 사용  
  전송 보안과 메시지 보안을 모두 사용하는 경우에는 전송과 SOAP 메시지 수준 모두에서 메시지 보호에 사용되는 인증서가 같아야 합니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [전송 보안을 사용하여 메시지에 보안 설정](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)
 - [메시지 큐에 대한 메시지 보안](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)

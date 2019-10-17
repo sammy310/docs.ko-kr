@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bdf59ee3c7bf41a2bb0ff68db5e70dd5a519a0e9
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 62e2be44165472e2fbf368f61b865d39a5e9fc28
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71700774"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395460"
 ---
 # <a name="icordebugcontrollercontinue-method"></a>ICorDebugController::Continue 메서드
 
@@ -38,26 +38,25 @@ HRESULT Continue (
 
 ## <a name="parameters"></a>매개 변수
 
- `fIsOutOfBand`  
- 진행 대역외 이벤트에서 계속 하는 경우 `true`으로 설정 합니다. 그렇지 않으면 `false`로 설정 합니다.
+`fIsOutOfBand`  
+진행 대역외 이벤트에서 계속 하는 경우 `true`으로 설정 합니다. 그렇지 않으면 `false`로 설정 합니다.
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 `Continue`은 `ICorDebugController::Stop` 메서드를 호출한 후에 프로세스를 계속 합니다.
 
 혼합 모드 디버깅을 수행 하는 경우 대역 외 이벤트에서 계속 하지 않으면 Win32 이벤트 스레드에서 `Continue`을 호출 하지 마십시오.
 
 *대역내 이벤트* 는 관리 되는 이벤트 이거나 디버거가 프로세스의 관리 되는 상태와의 상호 작용을 지 원하는 동안 관리 되는 이벤트 또는 일반적인 관리 되지 않는 이벤트입니다. 이 경우 디버거는 `fOutOfBand` 매개 변수를 `false`로 설정 하 여 [ICorDebugUnmanagedCallback::D ebugEvent](icordebugunmanagedcallback-debugevent-method.md) 콜백을 받습니다.
-  
+
 *Out-of-band 이벤트* 는 관리 되지 않는 이벤트로, 프로세스의 관리 되는 상태와의 상호 작용은 이벤트로 인해 중지 되는 동안에는 불가능 합니다. 이 경우 디버거는 `fOutOfBand` 매개 변수를 `true`로 설정 하 여 `ICorDebugUnmanagedCallback::DebugEvent` 콜백을 받습니다.
 
 ## <a name="requirements"></a>요구 사항
 
- **플랫폼** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.
+**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.
 
- **헤더:** CorDebug.idl, CorDebug.h
+**헤더:** CorDebug.idl, CorDebug.h
 
- **라이브러리** CorGuids.lib
+**라이브러리:** CorGuids.lib
 
- **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
- 
+**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
