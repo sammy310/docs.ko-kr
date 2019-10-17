@@ -4,18 +4,18 @@ description: 서버를 사용 하지 않는 아키텍처에서 지 원하는 다
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 096dce6ef23bde5ef9c6ca65769f4dcc7e08a904
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: f7d3ec50608848b725d813ae2a9ee59ae9532ef3
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69577196"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522342"
 ---
 # <a name="serverless-design-examples"></a>서버리스 디자인 예제
 
 서버 리스에 대해 존재 하는 다양 한 디자인 패턴이 있습니다. 이 섹션에서는 서버 리스를 사용 하는 몇 가지 일반적인 시나리오를 캡처합니다. 모든 예제가 공통적으로 포함 하는 것은 이벤트 트리거와 비즈니스 논리의 기본적인 조합입니다.
 
-## <a name="scheduling"></a>일정 예약
+## <a name="scheduling"></a>예약
 
 작업 예약은 일반적인 기능입니다. 다음 다이어그램에서는 적절 한 무결성 검사가 없는 레거시 데이터베이스를 보여 줍니다. 데이터베이스는 주기적으로 삭제 되어야 합니다. 서버를 사용 하지 않는 함수는 잘못 된 데이터를 찾아서 정리 합니다. 트리거는 일정에 따라 코드를 실행 하는 타이머입니다.
 
@@ -77,16 +77,16 @@ API 게이트웨이는 클라이언트에 대 한 단일 진입점을 제공 하
 
 ## <a name="recommended-resources"></a>권장 리소스
 
-* [Azure Event Grid](https://docs.microsoft.com/azure/event-grid/overview)
-* [Azure IoT Hub](https://docs.microsoft.com/azure/iot-hub)
-* [분산 데이터 관리의 문제 및 솔루션](../microservices/architect-microservice-container-applications/distributed-data-management.md)
-* [마이크로 서비스 디자인: 마이크로 서비스 경계 식별](https://docs.microsoft.com/azure/architecture/microservices/microservice-boundaries)
-* [Event Hubs](https://docs.microsoft.com/azure/event-hubs/event-hubs-what-is-event-hubs)
-* [이벤트 소싱 패턴](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing)
-* [회로 차단기 패턴 구현](../microservices/implement-resilient-applications/implement-circuit-breaker-pattern.md)
-* [IoT Hub](https://docs.microsoft.com/azure/iot-hub)
-* [Service Bus](https://docs.microsoft.com/azure/service-bus)
-* [Azure Cosmos DB에서 변경 피드 지원 사용](https://docs.microsoft.com/azure/cosmos-db/change-feed)
+- [Azure Event Grid](https://docs.microsoft.com/azure/event-grid/overview)
+- [Azure IoT Hub](https://docs.microsoft.com/azure/iot-hub)
+- [분산 데이터 관리의 문제 및 솔루션](../microservices/architect-microservice-container-applications/distributed-data-management.md)
+- [마이크로 서비스 디자인: 마이크로 서비스 경계 식별](https://docs.microsoft.com/azure/architecture/microservices/microservice-boundaries)
+- [Event Hubs](https://docs.microsoft.com/azure/event-hubs/event-hubs-what-is-event-hubs)
+- [이벤트 소싱 패턴](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing)
+- [회로 차단기 패턴 구현](../microservices/implement-resilient-applications/implement-circuit-breaker-pattern.md)
+- [IoT Hub](https://docs.microsoft.com/azure/iot-hub)
+- [Service Bus](https://docs.microsoft.com/azure/service-bus)
+- [Azure Cosmos DB에서 변경 피드 지원 사용](https://docs.microsoft.com/azure/cosmos-db/change-feed)
 
 >[!div class="step-by-step"]
 >[이전](serverless-architecture-considerations.md)

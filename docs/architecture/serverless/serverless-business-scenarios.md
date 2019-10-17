@@ -4,12 +4,12 @@ description: 이미지 처리에서 모바일 백 엔드 및 ETL 파이프라인
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 7024a33f8a7fccd6afa51c126454afedd87cceee
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 8a2301b3c7a5f4a1f465677f31371d5b94783692
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834291"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522397"
 ---
 # <a name="serverless-business-scenarios-and-use-cases"></a>서버리스 비즈니스 시나리오 및 사용 사례
 
@@ -27,7 +27,7 @@ ms.locfileid: "71834291"
 
 ![자동화 된 이미지 갤러리](./media/automated-image-gallery.png)
 
-논리 앱을 빌드하는 전체 리포지토리와 지침은 여기에서 사용할 수 있습니다. [Event grid 붙이기](https://github.com/JeremyLikness/Event-Grid-Glue).
+논리 앱을 빌드하는 전체 리포지토리와 지침은 [Event grid glue](https://github.com/JeremyLikness/Event-Grid-Glue)에서 사용할 수 있습니다.
 
 ## <a name="cross-platform-mobile-client-using-xamarinforms-and-functions"></a>Xamarin.ios 및 함수를 사용 하는 플랫폼 간 모바일 클라이언트
 
@@ -55,7 +55,7 @@ Azure 웹 포털 또는 Visual Studio에서 간단한 서버를 사용 하지 �
 
 프록시는 서버를 사용 하지 않는 함수로 이동할 때 개별 요청을 다시 라우팅하도록 업데이트 되는 단일 API 끝점을 제공 합니다.
 
-전체 마이그레이션 과정을 안내 하는 비디오를 볼 수 있습니다. [서버를 사용 하지 않는 Azure 함수를 리프트 앤 시프트](https://channel9.msdn.com/Events/Connect/2017/E102)합니다. 샘플 코드에 액세스 합니다. 사용자 [고유의 앱을 가져옵니다](https://github.com/JeremyLikness/bring-own-app-connect-17).
+전체 마이그레이션 과정을 안내 하는 비디오를 볼 수 있습니다. 서버를 사용 하지 않는 [Azure 함수로 리프트 앤 시프트](https://channel9.msdn.com/Events/Connect/2017/E102)합니다. 샘플 코드에 액세스 합니다. [사용자 고유의 앱을 가져옵니다](https://github.com/JeremyLikness/bring-own-app-connect-17).
 
 ## <a name="parse-a-csv-file-and-insert-into-a-database"></a>CSV 파일의 구문을 분석 하 고 데이터베이스에 삽입
 
@@ -77,7 +77,7 @@ Azure Functions는 긴 URL을 붙여 넣고 짧은 Url을 생성할 수 있도�
 
 ![Power BI 예제](./media/power-bi-example.png)
 
-지침이 있는 전체 링크 단축 리포지토리는 여기에서 사용할 수 있습니다. [서버 리스 URL 단축](https://github.com/jeremylikness/serverless-url-shortener). 다음에서 간소화 된 버전을 읽을 수 있습니다. [몇 분 내에 서버 리스 .net 앱에 대 한 Azure Storage](https://devblogs.microsoft.com/aspnet/azure-storage-for-serverless-net-apps-in-minutes/)입니다.
+지침이 있는 전체 링크 단축 리포지토리는 [서버 리스 URL 단축](https://github.com/jeremylikness/serverless-url-shortener)에서 사용할 수 있습니다. [몇 분 내에 서버 리스 .net 앱에 대 한 Azure Storage에서](https://devblogs.microsoft.com/aspnet/azure-storage-for-serverless-net-apps-in-minutes/)간소화 된 버전을 읽을 수 있습니다.
 
 ## <a name="verify-device-connectivity-using-a-ping"></a>Ping을 사용 하 여 장치 연결 확인
 
@@ -87,15 +87,15 @@ Azure Functions는 긴 URL을 붙여 넣고 짧은 Url을 생성할 수 있도�
 
 ## <a name="recommended-resources"></a>권장 리소스
 
-* [Azure Functions photo 모자이크 생성기](https://azure.microsoft.com/resources/samples/functions-dotnet-photo-mosaic/)
-* [Azure IoT Hub ping](https://azure.microsoft.com/resources/samples/iot-hub-node-ping/)
-* [몇 분 내에 서버 리스 .NET 앱에 대 한 Azure Storage](https://devblogs.microsoft.com/aspnet/azure-storage-for-serverless-net-apps-in-minutes/)
-* [사용자 고유의 앱 가져오기](https://github.com/JeremyLikness/bring-own-app-connect-17)
-* [CSV 가져오기 랩](https://github.com/JeremyLikness/azure-fn-file-process-hol)
-* [Event grid 붙이기](https://github.com/JeremyLikness/Event-Grid-Glue)
-* [Xamarin Forms 클라이언트를 사용 하 여 간단한 Azure 함수 구현](https://azure.microsoft.com/resources/samples/functions-xamarin-getting-started/)
-* [서버를 사용 하지 않는 Azure 함수로 리프트 앤 시프트](https://channel9.msdn.com/Events/Connect/2017/E102)
-* [서버 리스 URL 단축](https://github.com/jeremylikness/serverless-url-shortener)
+- [Azure Functions photo 모자이크 생성기](https://azure.microsoft.com/resources/samples/functions-dotnet-photo-mosaic/)
+- [Azure IoT Hub ping](https://azure.microsoft.com/resources/samples/iot-hub-node-ping/)
+- [몇 분 내에 서버 리스 .NET 앱에 대 한 Azure Storage](https://devblogs.microsoft.com/aspnet/azure-storage-for-serverless-net-apps-in-minutes/)
+- [사용자 고유의 앱 가져오기](https://github.com/JeremyLikness/bring-own-app-connect-17)
+- [CSV 가져오기 랩](https://github.com/JeremyLikness/azure-fn-file-process-hol)
+- [Event grid 붙이기](https://github.com/JeremyLikness/Event-Grid-Glue)
+- [Xamarin Forms 클라이언트를 사용 하 여 간단한 Azure 함수 구현](https://azure.microsoft.com/resources/samples/functions-xamarin-getting-started/)
+- [서버를 사용 하지 않는 Azure 함수로 리프트 앤 시프트](https://channel9.msdn.com/Events/Connect/2017/E102)
+- [서버 리스 URL 단축](https://github.com/jeremylikness/serverless-url-shortener)
 
 >[!div class="step-by-step"]
 >[이전](orchestration-patterns.md)

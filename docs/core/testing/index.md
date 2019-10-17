@@ -5,12 +5,12 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 08/30/2017
 ms.custom: seodec18
-ms.openlocfilehash: 835e7c0cffbcd5857c33694586b4d63511ecadb8
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 006ccf0370f8014e5021275c4d38cc50bf1c076f
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926293"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522916"
 ---
 # <a name="unit-testing-in-net-core-and-net-standard"></a>.NET Core 및 .NET Standard의 단위 테스트
 
@@ -39,30 +39,30 @@ C#, F# 및 Visual Basic에서 개인 프로젝트에 대한 시작점으로 기�
 
 .NET Core 단위 테스트 프로젝트는 다음에 지원됩니다.
 
-* [C#](../../csharp/index.md)
-* [F#](../../fsharp/index.md)
-* [Visual Basic](../../visual-basic/index.md) 
+- [C#](../../csharp/index.md)
+- [F#](../../fsharp/index.md)
+- [Visual Basic](../../visual-basic/index.md) 
 
 다음 중에서 선택할 수도 있습니다.
 
-* [xUnit](https://xunit.github.io) 
-* [NUnit](https://nunit.org)
-* [MSTest](https://github.com/Microsoft/testfx-docs)
+- [xUnit](https://xunit.github.io) 
+- [NUnit](https://nunit.org)
+- [MSTest](https://github.com/Microsoft/testfx-docs)
 
 다음 연습에서 자세히 알아볼 수 있습니다.
 
-* .NET Core CLI와 함께 [*xUnit* 및 *C#* 을 사용하여 단위 테스트 만들기](unit-testing-with-dotnet-test.md)
-* .NET Core CLI와 함께 [*NUnit* 및 *C#* 을 사용하여 단위 테스트 만들기](unit-testing-with-nunit.md)
-* .NET Core CLI와 함께 [*MSTest* 및 *C#* 을 사용하여 단위 테스트 만들기](unit-testing-with-mstest.md)
-* .NET Core CLI와 함께 [*xUnit* 및 *F#* 을 사용하여 단위 테스트 만들기](unit-testing-fsharp-with-dotnet-test.md)
-* .NET Core CLI와 함께 [*NUnit* 및 *F#* 을 사용하여 단위 테스트 만들기](unit-testing-fsharp-with-nunit.md)
-* .NET Core CLI와 함께 [*MSTest* 및 *F#* 을 사용하여 단위 테스트 만들기](unit-testing-fsharp-with-mstest.md)
-* .NET Core CLI와 함께 [*xUnit* 및 *Visual Basic*을 사용하여 단위 테스트 만들기](unit-testing-visual-basic-with-dotnet-test.md)
-* .NET Core CLI와 함께 [*NUnit* 및 *Visual Basic*을 사용하여 단위 테스트 만들기](unit-testing-visual-basic-with-nunit.md)
-* .NET Core CLI와 함께 [*MSTest* 및 *Visual Basic*을 사용하여 단위 테스트 만들기](unit-testing-visual-basic-with-mstest.md)
+- .NET Core CLI와 함께 [*xUnit* 및 *C#* 을 사용하여 단위 테스트 만들기](unit-testing-with-dotnet-test.md)
+- .NET Core CLI와 함께 [*NUnit* 및 *C#* 을 사용하여 단위 테스트 만들기](unit-testing-with-nunit.md)
+- .NET Core CLI와 함께 [*MSTest* 및 *C#* 을 사용하여 단위 테스트 만들기](unit-testing-with-mstest.md)
+- .NET Core CLI와 함께 [*xUnit* 및 *F#* 을 사용하여 단위 테스트 만들기](unit-testing-fsharp-with-dotnet-test.md)
+- .NET Core CLI와 함께 [*NUnit* 및 *F#* 을 사용하여 단위 테스트 만들기](unit-testing-fsharp-with-nunit.md)
+- .NET Core CLI와 함께 [*MSTest* 및 *F#* 을 사용하여 단위 테스트 만들기](unit-testing-fsharp-with-mstest.md)
+- .NET Core CLI와 함께 [*xUnit* 및 *Visual Basic*을 사용하여 단위 테스트 만들기](unit-testing-visual-basic-with-dotnet-test.md)
+- .NET Core CLI와 함께 [*NUnit* 및 *Visual Basic*을 사용하여 단위 테스트 만들기](unit-testing-visual-basic-with-nunit.md)
+- .NET Core CLI와 함께 [*MSTest* 및 *Visual Basic*을 사용하여 단위 테스트 만들기](unit-testing-visual-basic-with-mstest.md)
 
 다음 문서에서 자세히 알아볼 수 있습니다.
 
-* Visual Studio Enterprise는 .NET Core를 위한 훌륭한 테스트 도구를 제공합니다. [Live Unit Testing](/visualstudio/test/live-unit-testing) 또는 [ 코드 검사](https://github.com/Microsoft/vstest-docs/blob/master/docs/analyze.md#working-with-code-coverage)를 통해 자세히 알아보세요.
-* 선택적 단위 테스트를 실행하는 방법에 대한 추가 정보는 [선택적 단위 테스트 실행](selective-unit-tests.md) 또는 [Visual Studio를 사용하여 테스트 포함 및 제외](/visualstudio/test/live-unit-testing#include-and-exclude-test-projects-and-test-methods)를 참조하세요.
-* [.NET Core 및 Visual Studio와 xUnit을 사용하는 방법](https://xunit.github.io/docs/getting-started-dotnet-core.html)
+- Visual Studio Enterprise는 .NET Core를 위한 훌륭한 테스트 도구를 제공합니다. [Live Unit Testing](/visualstudio/test/live-unit-testing) 또는 [ 코드 검사](https://github.com/Microsoft/vstest-docs/blob/master/docs/analyze.md#working-with-code-coverage)를 통해 자세히 알아보세요.
+- 선택적 단위 테스트를 실행하는 방법에 대한 추가 정보는 [선택적 단위 테스트 실행](selective-unit-tests.md) 또는 [Visual Studio를 사용하여 테스트 포함 및 제외](/visualstudio/test/live-unit-testing#include-and-exclude-test-projects-and-test-methods)를 참조하세요.
+- [.NET Core 및 Visual Studio와 xUnit을 사용하는 방법](https://xunit.github.io/docs/getting-started-dotnet-core.html)

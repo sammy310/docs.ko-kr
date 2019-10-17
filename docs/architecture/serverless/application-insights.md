@@ -4,12 +4,12 @@ description: Application Insights는 개발자가 웹 앱, 모바일 앱, 데스
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 1f5b99fba448c2c1c12139524ffdcd3708b3c956
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 7c1013ac029645a2da44aaf1c3b6ba74ca3f3dde
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69577726"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522740"
 ---
 # <a name="telemetry-with-application-insights"></a>Application Insights 원격 분석
 
@@ -19,12 +19,12 @@ ms.locfileid: "69577726"
 
 기존 앱에 Application Insights을 추가 하는 것은 응용 프로그램의 설정에 계측 키를 추가 하는 것 만큼 쉽습니다. Application Insights를 사용 하 여 다음을 수행할 수 있습니다.
 
-* 함수 호출 수, 함수를 실행 하는 데 걸리는 시간, 예외 등의 메트릭에 따라 사용자 지정 차트 및 경고 만들기
-* 오류 및 서버 예외 분석
-* 작업 별로 성능을 자세히 살펴보고 타사 종속성을 호출 하는 데 걸리는 시간을 측정 합니다.
-* 함수 앱을 호스트 하는 모든 서버에서 CPU 사용량, 메모리 및 비율 모니터링
-* 함수 앱에 대 한 요청 수 및 대기 시간을 포함 하 여 메트릭의 라이브 스트림 보기
-* [분석](https://docs.microsoft.com/azure/application-insights/app-insights-analytics) 을 사용 하 여 함수 데이터에서 사용자 지정 차트 검색, 쿼리 및 만들기
+- 함수 호출 수, 함수를 실행 하는 데 걸리는 시간, 예외 등의 메트릭에 따라 사용자 지정 차트 및 경고 만들기
+- 오류 및 서버 예외 분석
+- 작업 별로 성능을 자세히 살펴보고 타사 종속성을 호출 하는 데 걸리는 시간을 측정 합니다.
+- 함수 앱을 호스트 하는 모든 서버에서 CPU 사용량, 메모리 및 비율 모니터링
+- 함수 앱에 대 한 요청 수 및 대기 시간을 포함 하 여 메트릭의 라이브 스트림 보기
+- [분석](https://docs.microsoft.com/azure/application-insights/app-insights-analytics) 을 사용 하 여 함수 데이터에서 사용자 지정 차트 검색, 쿼리 및 만들기
 
 ![메트릭 탐색기](./media/metrics-explorer.png)
 
