@@ -1,0 +1,145 @@
+- name: .NET Standard 가이드
+  href: index.md
+- name: .NET 시작
+  href: get-started.md
+- name: .NET 둘러보기
+  href: tour.md
+- name: .NET 아키텍처 구성 요소
+  href: components.md
+- name: .NET Standard
+  href: net-standard.md
+  items:
+    - name: .NET Standard의 새로운 기능
+      href: whats-new/whats-new-in-dotnet-standard.md
+- name: 대상 프레임워크
+  href: frameworks.md
+- name: .NET 용어
+  href: glossary.md
+- name: 오픈 소스 라이브러리 지침
+  href: library-guidance/
+- name: 서버 앱에 대해 .NET Core와 .NET Framework 중에 선택
+  href: choosing-core-framework-server.md
+- name: '"관리 코드"란?'
+  href: managed-code.md
+  items:
+    - name: Automatic Memory Management
+      href: automatic-memory-management.md
+- name: CLR(공용 언어 런타임)
+  href: clr.md
+- name: 언어 독립성
+  href: language-independence.md
+  items:
+    - name: 언어 독립성 및 언어 독립적 구성 요소
+      href: language-independence-and-language-independent-components.md
+- name: 프레임워크 라이브러리
+  href: framework-libraries.md
+  items:
+    - name: 클래스 라이브러리 개요
+      href: class-library-overview.md
+    - name: 기본 형식
+      href: base-types/
+- name: .NET 클래스 라이브러리
+  href: class-libraries.md
+- name: 분석기
+  href: analyzers/index.md
+  items:
+    - name: API 분석기
+      href: analyzers/api-analyzer.md
+    - name: 이식성 분석기
+      href: analyzers/portability-analyzer.md
+    - name: 프레임워크 분석기
+      href: analyzers/framework-analyzer.md
+- name: 예외 처리 및 Throw
+  href: exceptions/
+- name: .NET 어셈블리
+  href: assembly/
+- name: 가비지 컬렉션
+  href: garbage-collection/
+- name: 제네릭 형식
+  href: generics.md
+- name: 대리자 및 람다 식
+  href: delegates-lambdas.md
+- name: LINQ
+  href: using-linq.md
+- name: 공용 형식 시스템 및 공용 언어 사양
+  href: common-type-system.md
+- name: '병렬 처리, 동시성 및 비동기'
+  href: parallel-processing-and-concurrency.md
+  items:
+    - name: 비동기 프로그래밍
+      href: async.md
+      items:
+        - name: 심층 비동기 프로그래밍
+          href: async-in-depth.md
+        - name: 비동기 프로그래밍 패턴
+          href: asynchronous-programming-patterns/
+    - name: 병렬 프로그래밍
+      href: parallel-programming/
+    - name: 스레딩
+      href: threading/
+- name: 메모리 및 범위 관련 형식
+  href: memory-and-spans/index.md
+  items:
+    - name: Memory<T> 및 Span<T> 사용 지침
+      href: memory-and-spans/memory-t-usage-guidelines.md
+- name: 기본 상호 운용성
+  href: native-interop/index.md
+  items:
+    - name: P/Invoke
+      href: native-interop/pinvoke.md
+    - name: 형식 마샬링
+      href: native-interop/type-marshaling.md
+    - name: 구조체 마샬링 사용자 지정
+      href: native-interop/customize-struct-marshaling.md
+    - name: 매개 변수 마샬링 사용자 지정
+      href: native-interop/customize-parameter-marshaling.md
+    - name: Interop 지침
+      href: native-interop/best-practices.md
+    - name: 문자 집합 및 마샬링
+      href: native-interop/charset.md
+    - name: COM Interop
+      href: native-interop/cominterop.md
+      items:
+        - name: COM 래퍼
+          href: native-interop/com-wrappers.md
+          items:
+            - name: RCW
+              href: native-interop/runtime-callable-wrapper.md
+            - name: CCW
+              href: native-interop/com-callable-wrapper.md
+        - name: COM 상호 운용성을 위한 Net 형식 정규화
+          href: native-interop/qualify-net-types-for-interoperation.md
+    - name: Interop 특성 적용
+      href: native-interop/apply-interop-attributes.md
+- name: 컬렉션 및 데이터 구조
+  href: collections/
+- name: .NET의 숫자
+  href: numerics.md
+- name: '날짜, 시간 및 표준 시간대'
+  href: datetime/
+- name: 이벤트
+  href: events/
+- name: 관리되는 실행 프로세스
+  href: managed-execution-process.md
+- name: 메타데이터 및 자동 기술 구성 요소
+  href: metadata-and-self-describing-components.md
+- name: 콘솔 애플리케이션 빌드
+  href: building-console-apps.md
+- name: 응용 프로그램 주요 사항
+  href: application-essentials.md
+- name: 파일 및 스트림 I/O
+  href: io/index.md
+- name: 전역화 및 지역화
+  href: globalization-localization/
+- name: 특성
+  href: attributes/
+- name: 프레임워크 디자인 지침
+  href: design-guidelines/
+- name: XML 문서 및 데이터
+  href: data/xml/
+- name: 보안
+  href: security/
+- name: Serialization
+  href: serialization/
+- name: 여러 플랫폼 개발
+  href: cross-platform/

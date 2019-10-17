@@ -1,4 +1,4 @@
-- name: 추가 클래스 라이브러리 및 API
+- name: 추가 API
   href: index.md
   items:
     - name: Microsoft.SqlServer.Server
@@ -7,6 +7,12 @@
           items:
             - name: SmiOrderProperty.Item
               href: microsoft.sqlserver.server.smiorderproperty.item.md
+    - name: 시스템
+      items:
+        - name: 예외 클래스
+          items:
+            - name: Exception.PrepForRemoting 메서드
+              href: system.exception.prepforremoting.md
     - name: System.Data.SqlTypes
       items:
         - name: SqlChars 클래스
