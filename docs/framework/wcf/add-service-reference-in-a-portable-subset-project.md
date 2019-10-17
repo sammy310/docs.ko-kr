@@ -2,15 +2,15 @@
 title: 이식 가능한 하위 집합 프로젝트에 서비스 참조 추가
 ms.date: 03/30/2017
 ms.assetid: 61ccfe0f-a34b-40ca-8f5e-725fa1b8095e
-ms.openlocfilehash: 92ee180da531259b005b5782c180a139fd66847b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 764ce487d8f2673eb2c75f8cd05da4ccbae3c935
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61782423"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320846"
 ---
 # <a name="add-service-reference-in-a-portable-subset-project"></a>이식 가능한 하위 집합 프로젝트에 서비스 참조 추가
-이식 가능한 하위 집합 프로젝트는.NET 어셈블리 프로그래머가 하나의 소스 트리를 유지 관리 하 고 여러.NET 구현 (예: 데스크톱, Silverlight, Windows Phone 및 XBOX)를 계속 지원 하면서 빌드 시스템을 사용 하도록 설정 합니다. 이식 가능한 하위 집합 프로젝트는 모든.NET 구현에서 사용할 수 있는.NET framework 어셈블리는.NET 이식 가능한 라이브러리만 참조 합니다.  
+이식 가능한 하위 집합 프로젝트를 사용 하면 .NET 어셈블리 프로그래머는 여러 .NET 구현 (데스크톱, Silverlight, Windows Phone 및 XBOX)을 계속 지원 하면서 단일 소스 트리 및 빌드 시스템을 유지 관리할 수 있습니다. 이식 가능한 하위 집합 프로젝트는 .net 구현에서 사용할 수 있는 .net framework 어셈블리인 .NET 이식 가능한 라이브러리만 참조 합니다.  
   
 ## <a name="add-service-reference-details"></a>서비스 참조 추가 정보  
  이식 가능한 하위 집합 프로젝트에 서비스 참조를 추가할 경우 다음 제한이 적용됩니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "61782423"
   
 14. 이식 가능한 하위 집합 프로젝트에는 <xref:System.ServiceModel.MessageContractAttribute.IsWrapped%2A>가 지원되지 않습니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
-- [WCF 클라이언트를 사용하여 서비스 액세스](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)
+- [WCF 클라이언트를 사용하여 서비스 액세스](accessing-services-using-a-wcf-client.md)
 - [이식 가능한 클래스 라이브러리](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)

@@ -8,15 +8,15 @@ helpviewer_keywords:
 - handling faults [WCF], specifying
 - handling faults [WCF], defining
 ms.assetid: c00c84f1-962d-46a7-b07f-ebc4f80fbfc1
-ms.openlocfilehash: 37ded0aad547df616d2b8b73e7cb145514da080d
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 840d26e4543d2c90c99ebba05b5bca7a48cbdeda
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972361"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320039"
 ---
 # <a name="defining-and-specifying-faults"></a>오류 정의 및 지정
-SOAP 오류는 오류 조건 정보를 서비스에서 클라이언트로 전달하고 양방향인 경우 상호 운용 가능한 방식으로 클라이언트에서 서비스로 전달합니다. 이 항목에서는 사용자 지정 오류 내용을 정의하는 시간과 방법에 대해 설명하고 이들을 반환할 수 있는 작업을 지정합니다. 서비스 또는 이중 클라이언트에서 이러한 오류를 보낼 수 있는 방법과 클라이언트 또는 서비스 응용 프로그램이 이러한 오류를 처리 하는 방법에 대 한 자세한 내용은 [오류 전송 및 수신](../../../docs/framework/wcf/sending-and-receiving-faults.md)을 참조 하세요. WCF (Windows Communication Foundation) 응용 프로그램의 오류 처리에 대 한 개요는 [계약 및 서비스에서 오류 지정 및 처리](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)를 참조 하세요.  
+SOAP 오류는 오류 조건 정보를 서비스에서 클라이언트로 전달하고 양방향인 경우 상호 운용 가능한 방식으로 클라이언트에서 서비스로 전달합니다. 이 항목에서는 사용자 지정 오류 내용을 정의하는 시간과 방법에 대해 설명하고 이들을 반환할 수 있는 작업을 지정합니다. 서비스 또는 이중 클라이언트에서 이러한 오류를 보낼 수 있는 방법과 클라이언트 또는 서비스 응용 프로그램이 이러한 오류를 처리 하는 방법에 대 한 자세한 내용은 [오류 전송 및 수신](sending-and-receiving-faults.md)을 참조 하세요. WCF (Windows Communication Foundation) 응용 프로그램의 오류 처리에 대 한 개요는 [계약 및 서비스에서 오류 지정 및 처리](specifying-and-handling-faults-in-contracts-and-services.md)를 참조 하세요.  
   
 ## <a name="overview"></a>개요  
  선언된 SOAP 오류는 작업에 사용자 지정 SOAP 오류 유형을 지정하는 <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType>가 있는 오류입니다. 선언되지 않은 SOAP 오류는 작업 계약에 지정되지 않은 오류입니다. 이 항목에서는 이러한 오류 조건을 식별하고, 클라이언트가 사용자 지정 SOAP 오류의 알림을 받을 때 이러한 오류 조건을 제대로 처리하는 데 사용할 수 있는 서비스에 대한 오류 계약을 만드는 과정을 도와 줍니다. 기본 작업은 순서대로 다음과 같습니다.  
@@ -64,7 +64,7 @@ End Class
  [!code-csharp[Faults#2](../../../samples/snippets/csharp/VS_Snippets_CFX/faults/cs/service.cs#2)]
  [!code-vb[Faults#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/faults/vb/service.vb#2)]  
   
- 데이터를 serialize 할 수 있는지 확인 하는 방법에 대 한 자세한 내용은 [서비스 계약의 데이터 전송 지정](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)을 참조 하세요. 에서 제공 하는 <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> serialization 지원 목록은 [데이터 계약 Serializer에서 지 원하는 형식](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)을 참조 하세요.  
+ 데이터를 serialize 할 수 있는지 확인 하는 방법에 대 한 자세한 내용은 [서비스 계약의 데이터 전송 지정](./feature-details/specifying-data-transfer-in-service-contracts.md)을 참조 하세요. @No__t_0에서 제공 하는 serialization 지원 목록은 [데이터 계약 Serializer에서 지 원하는 형식](./feature-details/types-supported-by-the-data-contract-serializer.md)을 참조 하세요.  
   
 ### <a name="mark-operations-to-establish-the-fault-contract"></a>오류 계약을 설정하도록 작업 표시  
  사용자 지정 SOAP 오류의 일부로 반환되는 serialize될 수 있는 데이터 구조를 정의하고 나면 마지막 단계로 해당 형식의 SOAP 오류를 throw하는 것으로 작업 계약을 표시합니다. 이렇게 하려면 <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType> 특성을 사용하고 생성한 사용자 지정 데이터 형식을 전달합니다. 다음 코드 예제에서는 <xref:System.ServiceModel.FaultContractAttribute> 특성을 사용하여 `Divide` 작업에서 `MathFault` 형식의 SOAP 오류를 반환할 수 있도록 지정하는 방법을 보여 줍니다. 이제 다른 수학 기반 연산에서도 `MathFault`를 반환할 수 있도록 지정할 수 있습니다.  
@@ -74,7 +74,7 @@ End Class
   
  둘 이상의 <xref:System.ServiceModel.FaultContractAttribute> 특성으로 작업을 표시하여 해당 작업에서 둘 이상의 사용자 지정 오류를 반환하도록 지정할 수 있습니다.  
   
- 작업 구현에서 오류 계약을 구현 하는 다음 단계는 [오류 송수신](../../../docs/framework/wcf/sending-and-receiving-faults.md)항목에 설명 되어 있습니다.  
+ 작업 구현에서 오류 계약을 구현 하는 다음 단계는 [오류 송수신](sending-and-receiving-faults.md)항목에 설명 되어 있습니다.  
   
 #### <a name="soap-wsdl-and-interoperability-considerations"></a>SOAP, WSDL 및 상호 운용성 고려 사항  
  경우에 따라, 특히 다른 플랫폼과 상호 운용하는 경우 오류가 SOAP 메시지에 나타나는 방식이나 WSDL 메타데이터에 설명되는 방식의 제어가 중요할 수 있습니다.  
@@ -85,14 +85,14 @@ End Class
   
  오류를 생성하는 비서비스에 액세스하는 경우 특정 제한 사항이 있습니다. WCF는 스키마가 설명 하 고 데이터 계약과 호환 되는 세부 유형의 오류만 지원 합니다. 예를 들어 위에서 언급 한 것 처럼 WCF는 세부 정보 형식에서 XML 특성을 사용 하는 오류를 지원 하지 않습니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.ServiceModel.FaultContractAttribute>
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.DataMemberAttribute>
-- [계약 및 서비스에서 오류 지정 및 처리](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
-- [오류 보내기 및 받기](../../../docs/framework/wcf/sending-and-receiving-faults.md)
-- [방법: 서비스 계약에서 오류 선언](../../../docs/framework/wcf/how-to-declare-faults-in-service-contracts.md)
-- [보호 수준 이해](../../../docs/framework/wcf/understanding-protection-level.md)
-- [방법: ProtectionLevel 속성 설정](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)
-- [서비스 계약에서 데이터 전송 지정](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)
+- [계약 및 서비스에서 오류 지정 및 처리](specifying-and-handling-faults-in-contracts-and-services.md)
+- [오류 보내기 및 받기](sending-and-receiving-faults.md)
+- [방법: 서비스 계약에 오류 선언](how-to-declare-faults-in-service-contracts.md)
+- [보호 수준 이해](understanding-protection-level.md)
+- [방법: ProtectionLevel 속성 설정](how-to-set-the-protectionlevel-property.md)
+- [서비스 계약에서 데이터 전송 지정](./feature-details/specifying-data-transfer-in-service-contracts.md)

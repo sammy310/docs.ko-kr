@@ -2,19 +2,19 @@
 title: ROW(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 06da96e8-55d7-486c-991a-4e514d837ff9
-ms.openlocfilehash: dfd0031f49cbdf41797cecf21c149fafde4d7a8c
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 4fb16fe0072066580bff36ac0879ff38217f1e34
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249243"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319382"
 ---
 # <a name="row-entity-sql"></a>ROW(Entity SQL)
 값 하나 이상을 기반으로 하여 구조적으로 형식화된 익명 레코드를 생성합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```sql  
 ROW ( expression [ AS alias ] [,...] )  
 ```  
   
@@ -28,10 +28,10 @@ ROW ( expression [ AS alias ] [,...] )
 ## <a name="return-value"></a>반환 값  
  행 형식입니다.  
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 의 행 생성자를 사용하여 값 하나 이상을 기반으로 구조적으로 형식화된 익명 레코드를 생성합니다. 행 생성자의 결과 형식은 필드 형식이 행 생성에 사용된 값의 형식과 동일한 행 형식입니다. 예를 들어, 다음 식은 형식 `Record(a int, b string, c int)`의 값을 생성합니다.  
   
-```  
+```sql  
 ROW(1 AS a, "abc" AS b, a+34 AS c)  
 ```  
   
@@ -48,13 +48,13 @@ ROW(1 AS a, "abc" AS b, a+34 AS c)
 ## <a name="example"></a>예제  
  다음 Entity SQL 쿼리에서는 ROW 연산자를 사용하여 구조적으로 형식화된 익명 레코드를 생성합니다. 쿼리는 AdventureWorks Sales 모델을 기반으로 합니다. 이 쿼리를 컴파일하고 실행하려면 다음 단계를 수행하세요.  
   
-1. [방법: StructuralType 결과](../how-to-execute-a-query-that-returns-structuraltype-results.md)를 반환 하는 쿼리를 실행 합니다.  
+1. [How to: Execute a Query that Returns StructuralType Results](../how-to-execute-a-query-that-returns-structuraltype-results.md)의 절차를 따릅니다.  
   
 2. 다음 쿼리를 `ExecuteStructuralTypeQuery` 메서드에 인수로 전달합니다.  
   
- [!code-csharp[DP EntityServices Concepts 2#ROW](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#row)]  
+ [!code-sql[DP EntityServices Concepts#ROW](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#row)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [형식 생성](constructing-types-entity-sql.md)
 - [엔터티 SQL 참조](entity-sql-reference.md)

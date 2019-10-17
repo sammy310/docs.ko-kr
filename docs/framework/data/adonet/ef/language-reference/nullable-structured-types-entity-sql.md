@@ -2,12 +2,12 @@
 title: null 허용 구조적 형식(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: ae006fa9-997e-45bb-8a04-a7f62026171e
-ms.openlocfilehash: 6b078ae458aba73e82957f84408b1000b216aef9
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: b155c672d8c0bef8b01fb26fb49908f094add25a
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249810"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319481"
 ---
 # <a name="nullable-structured-types-entity-sql"></a>null 허용 구조적 형식(Entity SQL)
 구조적 형식의 `null` 인스턴스는 존재하지 않는 인스턴스입니다. 이는 모든 속성에 `null` 값이 있는 기존 인스턴스와 다릅니다.  
@@ -28,46 +28,46 @@ ms.locfileid: "70249810"
   
 - `null`을 구조적 형식으로 모양 결정:  
   
-    ```  
+    ```sql  
     TREAT (NULL AS StructuredType)  
     ```  
   
 - 기본 형식을 파생 형식으로 업캐스트:  
   
-    ```  
+    ```sql  
     TREAT (BaseType AS DerivedType)  
     ```  
   
 - False 조건에 대한 외부 조인:  
   
-    ```  
+    ```sql  
     Collection1 LEFT OUTER JOIN Collection2  
     ON FalseCondition  
     ```  
   
      --또는  
   
-    ```  
+    ```sql  
     Collection1 RIGHT OUTER JOIN Collection2  
     ON FalseCondition  
     ```  
   
      --또는  
   
-    ```  
+    ```sql  
     Collection1 FULL OUTER JOIN Collection2  
     ON FalseCondition  
     ```  
   
 - `null` 참조 역참조:  
   
-    ```  
+    ```sql  
     DEREF(NullRef)  
     ```  
   
 - 빈 컬렉션에서 ANYELEMENT 가져오기:  
   
-    ```  
+    ```sql  
     ANYELEMENT(EmptyCollection)  
     ```  
   
@@ -88,6 +88,6 @@ ms.locfileid: "70249810"
     }  
     ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [Entity SQL 개요](entity-sql-overview.md)

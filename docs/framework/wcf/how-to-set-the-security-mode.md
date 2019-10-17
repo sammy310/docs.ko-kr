@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: 6e01dd9f-b5dd-4474-b24c-06e124de4ff7
-ms.openlocfilehash: 6bd81bd24d28f0a9e318d60a3b7fb4aa059f9a49
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 9b9e25cbafb6387b4584a21fd642d80bc41cd8dc
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971986"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320904"
 ---
 # <a name="how-to-set-the-security-mode"></a>방법: 보안 모드 설정
 
@@ -22,11 +22,11 @@ WCF (Windows Communication Foundation) 보안에는 대부분의 미리 정의 �
 
 모든 미리 정의된 바인딩이 이러한 모드를 모두 지원하는 것은 아닙니다. 이 항목에서는 <xref:System.ServiceModel.WSHttpBinding> 및 <xref:System.ServiceModel.NetTcpBinding> 클래스를 사용하여 모드를 설정하고 프로그래밍 방식과 구성을 통한 모드 설정 방법에 대해 설명합니다.
 
-자세한 내용은 WCF 보안, [보안 개요](../../../docs/framework/wcf/feature-details/security-overview.md), [서비스](../../../docs/framework/wcf/securing-services.md)보안 및 [서비스 및 클라이언트 보안](../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)설정을 참조 하세요. 전송 모드 및 메시지에 대 한 자세한 내용은 [전송 보안](../../../docs/framework/wcf/feature-details/transport-security.md) 및 [메시지 보안](../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)을 참조 하세요.
+자세한 내용은 WCF 보안, [보안 개요](./feature-details/security-overview.md), [서비스](securing-services.md)보안 및 [서비스 및 클라이언트 보안](./feature-details/securing-services-and-clients.md)설정을 참조 하세요. 전송 모드 및 메시지에 대 한 자세한 내용은 [전송 보안](./feature-details/transport-security.md) 및 [메시지 보안](./feature-details/message-security-in-wcf.md)을 참조 하세요.
 
 ## <a name="to-set-the-security-mode-in-code"></a>코드에서 보안 모드를 설정하려면
 
-1. 사용 중인 바인딩 클래스의 인스턴스를 만듭니다. 미리 정의 된 바인딩 목록은 [시스템 제공 바인딩](../../../docs/framework/wcf/system-provided-bindings.md)을 참조 하세요. 이 예제에서는 <xref:System.ServiceModel.WSHttpBinding> 클래스의 인스턴스를 만듭니다.
+1. 사용 중인 바인딩 클래스의 인스턴스를 만듭니다. 미리 정의 된 바인딩 목록은 [시스템 제공 바인딩](system-provided-bindings.md)을 참조 하세요. 이 예제에서는 <xref:System.ServiceModel.WSHttpBinding> 클래스의 인스턴스를 만듭니다.
 
 2. `Mode` 속성에서 반환하는 개체의 `Security` 속성을 설정합니다.
 
@@ -76,9 +76,9 @@ WCF (Windows Communication Foundation) 보안에는 대부분의 미리 정의 �
 
 ### <a name="to-set-the-mode-and-clientcredentialtype-property-in-configuration"></a>구성에서 모드 및 ClientCredentialType 속성을 설정하려면
 
-1. 구성 파일의 [ \<바인딩 >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) 요소에 적절 한 바인딩 요소를 추가 합니다. 다음 예에서는 [ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) 요소를 추가 합니다.
+1. 구성 파일의 [\<bindings >](../configure-apps/file-schema/wcf/bindings.md) 요소에 적절 한 바인딩 요소를 추가 합니다. 다음 예에서는 [\<wsHttpBinding >](../configure-apps/file-schema/wcf/wshttpbinding.md) 요소를 추가 합니다.
 
-2. 요소를 `<binding>` 추가 하 고 해당 `name` 특성을 적절 한 값으로 설정 합니다.
+2. @No__t_0 요소를 추가 하 고 해당 `name` 특성을 적절 한 값으로 설정 합니다.
 
 3. `<security>` 요소를 추가하고 `mode` 특성을 `Message`, `Transport` 또는 `TransportWithMessageCredential`로 설정합니다.
 
@@ -114,16 +114,16 @@ WCF (Windows Communication Foundation) 보안에는 대부분의 미리 정의 �
 
 보안 모드를 `TransportWithMessageCredential`로 설정하면 전송에서 전송 수준 보안을 제공하는 실제 메커니즘을 결정합니다. 예를 들어, HTTP 프로토콜에서는 HTTP를 통한 SSL(Secure Sockets Layer)(HTTPS)을 사용합니다. 따라서 전송 보안 개체(예: `ClientCredentialType`)의 <xref:System.ServiceModel.HttpTransportSecurity> 속성 설정은 무시됩니다.  즉, 메시지 보안 개체(`ClientCredentialType` 바인딩의 경우 `WSHttpBinding` 개체)의 <xref:System.ServiceModel.NonDualMessageSecurityOverHttp>만 설정할 수 있습니다.
 
-자세한 내용은 [방법: 전송 보안 및 메시지 자격 증명](../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)을 사용 합니다.
+자세한 내용은 [방법: 전송 보안 및 메시지 자격 증명 사용](./feature-details/how-to-use-transport-security-and-message-credentials.md)을 참조 하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
-- [방법: SSL 인증서를 사용 하 여 포트 구성](../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
-- [방법: 전송 보안 및 메시지 자격 증명 사용](../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)
-- [전송 보안](../../../docs/framework/wcf/feature-details/transport-security.md)
-- [메시지 보안](../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)
-- [보안 개요](../../../docs/framework/wcf/feature-details/security-overview.md)
-- [시스템 제공 바인딩](../../../docs/framework/wcf/system-provided-bindings.md)
-- [\<security>](../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)
-- [\<security>](../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)
-- [\<security>](../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)
+- [방법: SSL 인증서로 포트 구성](./feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
+- [방법: 전송 보안 및 메시지 자격 증명 사용](./feature-details/how-to-use-transport-security-and-message-credentials.md)
+- [전송 보안](./feature-details/transport-security.md)
+- [메시지 보안](./feature-details/message-security-in-wcf.md)
+- [보안 개요](./feature-details/security-overview.md)
+- [시스템 제공 바인딩](system-provided-bindings.md)
+- [\<security >](../configure-apps/file-schema/wcf/security-of-wshttpbinding.md)
+- [\<security >](../configure-apps/file-schema/wcf/security-of-basichttpbinding.md)
+- [\<security >](../configure-apps/file-schema/wcf/security-of-nettcpbinding.md)

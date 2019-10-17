@@ -2,12 +2,12 @@
 title: 리터럴(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 092ef693-6e5f-41b4-b868-5b9e82928abf
-ms.openlocfilehash: 9aba737b522f75f1f81cc054fb87b414b06f9611
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: e07dd3217e133fff98beb11ecad47e1474e4974a
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250340"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319659"
 ---
 # <a name="literals-entity-sql"></a>리터럴(Entity SQL)
 이 항목에서는 리터럴에 대한 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 지원을 설명합니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "70250340"
 ## <a name="string"></a>String  
  문자열은 따옴표로 묶인 일련의 문자입니다. 따옴표는 양쪽 모두 작은따옴표(`'`)이거나 큰따옴표(")일 수 있습니다. 문자열 리터럴은 유니코드이거나 비유니코드일 수 있습니다. 문자열 리터럴을 유니코드로 선언하려면 리터럴 앞에 대문자 "N"을 접두사로 사용합니다. 기본값은 비유니코드 문자열 리터럴입니다. N과 문자열 리터럴 페이로드 사이에는 공백을 사용할 수 없으며 N은 대문자여야 합니다.  
   
-```  
+```sql  
 'hello' -- non-Unicode character string literal  
 N'hello' -- Unicode character string literal  
 "x"  
@@ -45,13 +45,13 @@ N"This is a string!"
 ## <a name="datetime"></a>DateTime  
  datetime 리터럴은 로캘과 무관하며 날짜 부분과 시간 부분으로 구성됩니다. 날짜 및 시간 부분은 모두 필수 요소이며 기본값은 없습니다.  
   
- 날짜 부분의 형식은 다음과 같아야 합니다. 여기서 `YYYY` - `DD` `MM` `DD` `MM` - 은0001과9999사이의4자리연도값이고,은1에서12`YYYY` 사이의 월입니다. 지정 된 월 `MM`에 유효한 일 값입니다.  
+ 날짜 부분의 형식은 `YYYY` - `MM` - `DD`입니다. 여기서 `YYYY`는 0001에서 9999 사이의 4 자리 연도 값이 고, `MM`은 1에서 12 사이의 4 자리 연도 값이 고, `DD`은 일 값입니다. 는 지정 된 달 `MM` 유효 합니다.  
   
  시간 부분의 형식은 `HH`:`MM`[:`SS`[.fffffff]]이어야 하며, 여기서 `HH`는 0에서 23 사이의 시간 값이고, `MM`은 0에서 59 사이의 분 값이며, `SS`는 0에서 59 사이의 초 값이며, fffffff는 0에서 9999999 사이의 소수로 나타낸 초 값입니다. 모든 값 범위에서 해당 시작 값과 끝 값이 포함됩니다. 소수로 나타낸 초는 선택적 요소입니다. 소수로 나타낸 초가 지정되지 않은 경우 초를 선택하며, 이 경우 초는 필수 요소입니다. 초 또는 소수로 나타낸 초가 지정되지 않은 경우에는 기본값 0이 대신 사용됩니다.  
   
  DATETIME 기호와 리터럴 페이로드 사이에 들어갈 수 있는 공백의 수는 제한이 없지만 줄 바꿈은 허용되지 않습니다.  
   
-```  
+```sql  
 DATETIME'2006-10-1 23:11'  
 DATETIME'2006-12-25 01:01:00.0000000' -- same as DATETIME'2006-12-25 01:01'  
 ```  
@@ -61,7 +61,7 @@ DATETIME'2006-12-25 01:01:00.0000000' -- same as DATETIME'2006-12-25 01:01'
   
  TIME 기호와 리터럴 페이로드 사이에 들어갈 수 있는 공백의 수는 제한이 없지만 줄 바꿈은 허용되지 않습니다.  
   
-```  
+```sql  
 TIME‘23:11’  
 TIME‘01:01:00.1234567’  
 ```  
@@ -71,7 +71,7 @@ TIME‘01:01:00.1234567’
   
  DATETIMEOFFSET 기호와 리터럴 페이로드 사이에 들어갈 수 있는 공백의 수는 제한이 없지만 줄 바꿈은 허용되지 않습니다.  
   
-```  
+```sql  
 DATETIMEOFFSET‘2006-10-1 23:11 +02:00’  
 DATETIMEOFFSET‘2006-12-25 01:01:00.0000000 -08:30’  
 ```  
@@ -84,23 +84,23 @@ DATETIMEOFFSET‘2006-12-25 01:01:00.0000000 -08:30’
   
  16진수 문자도 대/소문자를 구분하지 않습니다. 리터럴을 구성하는 16진수의 자릿수가 홀수인 경우 해당 리터럴의 맨 앞에 16진수 0이 추가되어 다음 짝수의 16진수에 맞춰 정렬됩니다. 이진 문자열 크기에 대한 공식적인 제한은 없습니다.  
   
-```  
+```sql  
 Binary'00ffaabb'  
 X'ABCabc'  
 BINARY    '0f0f0f0F0F0F0F0F0F0F'  
 X'' –- empty binary string  
 ```  
   
-## <a name="guid"></a>Guid  
- `GUID` 리터럴은 GUID(Globally Unique Identifier)를 나타냅니다. 키워드 `GUID` 에 의해 구성 된 시퀀스로, 다음 형식의 16 진수가 *레지스트리* 형식으로 알려져 있습니다. 작은따옴표로 묶인 8-4-4-4-12)의 16진수로 구성된 시퀀스입니다. 16진수는 대/소문자를 구분하지 않습니다.  
+## <a name="guid"></a>GUID  
+ `GUID` 리터럴은 GUID(Globally Unique Identifier)를 나타냅니다. 이 시퀀스는 키워드 `GUID`으로 구성 된 시퀀스 이며, 그 뒤에 *레지스트리* 형식으로 알려진 16 진수 (8-4-4-4-12)가 작은따옴표로 묶여 있습니다. 16진수는 대/소문자를 구분하지 않습니다.  
   
  GUID 기호와 리터럴 페이로드 사이에 들어갈 수 있는 공백의 수는 제한이 없지만 줄 바꿈은 허용되지 않습니다.  
   
-```  
+```sql  
 Guid'1afc7f5c-ffa0-4741-81cf-f12eAAb822bf'  
 GUID  '1AFC7F5C-FFA0-4741-81CF-F12EAAB822BF'  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [Entity SQL 개요](entity-sql-overview.md)

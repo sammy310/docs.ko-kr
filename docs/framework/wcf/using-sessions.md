@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - sessions [WCF]
 ms.assetid: 864ba12f-3331-4359-a359-6d6d387f1035
-ms.openlocfilehash: 671e650a494d314ec1da1957eaae91e2d1811213
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: aea26c3a814a34c9d2985bb1bf02dbb80d32ef12
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952833"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320282"
 ---
 # <a name="using-sessions"></a>세션 사용
 WCF (Windows Communication Foundation) 응용 프로그램에서 *세션* 은 메시지 그룹을 대화에 연결 합니다. WCF 세션은 ASP.NET 응용 프로그램에서 사용할 수 있는 세션 개체와 다르며, 다른 동작을 지원 하 고 다양 한 방법으로 제어 됩니다. 이 항목에서는 WCF 응용 프로그램에서 세션을 사용 하는 기능과 사용 방법에 대해 설명 합니다.  
@@ -30,7 +30,7 @@ WCF (Windows Communication Foundation) 응용 프로그램에서 *세션* 은 �
   
 - WCF 세션과 연결 된 일반 데이터 저장소는 없습니다.  
   
- ASP.NET 응용 프로그램의 <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> 클래스와이 클래스에서 제공 하는 기능에 대해 잘 알고 있는 경우 해당 종류의 세션과 WCF 세션 간에 다음과 같은 차이점을 알 수 있습니다.  
+ ASP.NET 응용 프로그램의 <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> 클래스와이 클래스에서 제공 하는 기능에 대해 잘 알고 있는 경우 해당 종류의 세션 및 WCF 세션 간에 다음과 같은 차이점을 알 수 있습니다.  
   
 - ASP.NET 세션은 항상 서버에서 시작 됩니다.  
   
@@ -49,7 +49,7 @@ WCF (Windows Communication Foundation) 응용 프로그램에서 *세션* 은 �
 - 세션의 생성과 종료 및 세션과 서비스 인스턴스와의 관계를 이해하고 제어하는 방법  
   
 ## <a name="default-execution-behavior-using-sessions"></a>세션을 사용한 기본 실행 동작  
- 세션을 초기화하려는 바인딩은 *세션 기반* 바인딩에서 호출됩니다. 서비스 계약에서는 서비스 계약 인터페이스(또는 클래스)의 <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType> 속성을 <xref:System.ServiceModel.SessionMode?displayProperty=nameWithType> 열거형 값 중 하나로 설정하여 세션 기반 바인딩을 필요로 하거나 허용하거나 거부하도록 지정합니다. 기본적으로이 속성의 값은입니다 <xref:System.ServiceModel.SessionMode.Allowed>. 즉, 클라이언트가 WCF 서비스 구현과 함께 세션 기반 바인딩을 사용 하는 경우 서비스는 제공 된 세션을 설정 하 고 사용 합니다.  
+ 세션을 초기화하려는 바인딩은 *세션 기반* 바인딩에서 호출됩니다. 서비스 계약에서는 서비스 계약 인터페이스(또는 클래스)의 <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType> 속성을 <xref:System.ServiceModel.SessionMode?displayProperty=nameWithType> 열거형 값 중 하나로 설정하여 세션 기반 바인딩을 필요로 하거나 허용하거나 거부하도록 지정합니다. 기본적으로이 속성의 값은 <xref:System.ServiceModel.SessionMode.Allowed>입니다. 즉, 클라이언트가 WCF 서비스 구현과 함께 세션 기반 바인딩을 사용 하는 경우 서비스는 제공 된 세션을 설정 하 고 사용 합니다.  
   
  WCF 서비스가 클라이언트 세션을 허용 하는 경우 기본적으로 다음 기능이 사용 됩니다.  
   
@@ -62,13 +62,13 @@ WCF (Windows Communication Foundation) 응용 프로그램에서 *세션* 은 �
   
  WCF는 다음과 같은 유형의 세션 기반 응용 프로그램 동작을 제공 합니다.  
   
-- <xref:System.ServiceModel.Channels.SecurityBindingElement?displayProperty=nameWithType>는 통신의 양쪽 끝에서 특정 보안 대화에 동의한 보안 기반 세션을 지원합니다. 자세한 내용은 [Securing Services](../../../docs/framework/wcf/securing-services.md)합니다. 예를 들어, 보안 세션과 신뢰할 수 있는 세션 모두에 대한 지원이 포함된 <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType> 바인딩은 기본적으로 메시지에 대해 암호화 및 디지털 서명을 수행하는 보안 세션만 사용합니다.  
+- <xref:System.ServiceModel.Channels.SecurityBindingElement?displayProperty=nameWithType> 는 통신의 양쪽 끝에서 특정 보안 대화에 동의한 보안 기반 세션을 지원합니다. 자세한 내용은 [서비스 보안](securing-services.md)설정을 참조 하세요. 예를 들어, 보안 세션과 신뢰할 수 있는 세션 모두에 대한 지원이 포함된 <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType> 바인딩은 기본적으로 메시지에 대해 암호화 및 디지털 서명을 수행하는 보안 세션만 사용합니다.  
   
 - <xref:System.ServiceModel.NetTcpBinding?displayProperty=nameWithType> 바인딩은 모든 메시지가 소켓 수준에서 연결을 통해 상호 연결되도록 TCP/IP 기반 세션을 지원합니다.  
   
-- WS-ReliableMessaging 사양을 구현하는 <xref:System.ServiceModel.Channels.ReliableSessionBindingElement?displayProperty=nameWithType> 요소는 신뢰할 수 있는 세션에 대한 지원을 제공합니다. 신뢰할 수 있는 세션에서는 메시지를 순서대로 정확히 한 번 배달하도록 구성하여 대화 중에 여러 노드에서 메시지가 전달되는 경우에도 메시지가 수신되도록 할 수 있습니다. 자세한 내용은 [신뢰할 수 있는 세션](../../../docs/framework/wcf/feature-details/reliable-sessions.md)합니다.  
+- WS-ReliableMessaging 사양을 구현하는 <xref:System.ServiceModel.Channels.ReliableSessionBindingElement?displayProperty=nameWithType> 요소는 신뢰할 수 있는 세션에 대한 지원을 제공합니다. 신뢰할 수 있는 세션에서는 메시지를 순서대로 정확히 한 번 배달하도록 구성하여 대화 중에 여러 노드에서 메시지가 전달되는 경우에도 메시지가 수신되도록 할 수 있습니다. 자세한 내용은 [신뢰할 수 있는 세션](./feature-details/reliable-sessions.md)을 참조 하세요.  
   
-- <xref:System.ServiceModel.NetMsmqBinding?displayProperty=nameWithType> 바인딩은 MSMQ 데이터그램 세션을 제공합니다. 자세한 내용은 [WCF의 큐](../../../docs/framework/wcf/feature-details/queues-in-wcf.md)합니다.  
+- <xref:System.ServiceModel.NetMsmqBinding?displayProperty=nameWithType> 바인딩은 MSMQ 데이터그램 세션을 제공합니다. 자세한 내용은 [WCF의 큐](./feature-details/queues-in-wcf.md)를 참조 하십시오.  
   
  <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A> 속성을 설정하면 계약에 필요한 세션 유형을 지정하지 않고 요구만 합니다.  
   
@@ -108,44 +108,44 @@ WCF (Windows Communication Foundation) 응용 프로그램에서 *세션* 은 �
 > [!NOTE]
 > 기본 동작은 로컬 생성자 및 소멸자와 비슷하지만 일치하지는 않습니다. 모든 WCF 서비스 작업은 시작 또는 종료 작업 이거나 동시에 두 작업을 모두 수행할 수 있습니다. 또한 기본적으로 횟수와 순서에 관계없이 시작 작업을 호출할 수 있습니다. <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> 개체를 조작하여 서비스 인스턴스의 수명을 명시적으로 지정하지 않는 한 세션이 설정되고 인스턴스와 연결되면 추가 세션이 생성되지 않습니다. 마지막으로 상태는 세션과 연결되고 서비스 개체와는 연결되지 않습니다.  
   
- 예를 들어 앞 `ICalculatorSession` 의 예제에서 사용 된 계약을 사용 하려면 wcf 클라이언트 개체가 먼저 다른 작업 `Clear` 을 수행 하기 전에 작업을 호출 해야 하며,이 wcf 클라이언트 개체를 사용 하는 세션은를 호출할때종료되어야합니다.`Equals` 작업. 다음 코드 예제에서는 이러한 요구 사항을 적용하는 계약을 보여 줍니다. 먼저`Clear` 를 호출하여 세션을 시작해야 하며, `Equals` 을 호출하면 세션이 끝납니다.  
+ 예를 들어 앞의 예제에서 사용 된 `ICalculatorSession` 계약은 WCF 클라이언트 개체가 먼저 다른 작업을 수행 하기 전에 `Clear` 작업을 호출 하 고이 WCF 클라이언트 개체의 세션이 `Equals` 작업을 호출할 때 종료 되어야 합니다. 다음 코드 예제에서는 이러한 요구 사항을 적용하는 계약을 보여 줍니다. 먼저`Clear` 를 호출하여 세션을 시작해야 하며, `Equals` 을 호출하면 세션이 끝납니다.  
   
  [!code-csharp[SCA.IsInitiatingIsTerminating#1](../../../samples/snippets/csharp/VS_Snippets_CFX/sca.isinitiatingisterminating/cs/service.cs#1)]
  [!code-vb[SCA.IsInitiatingIsTerminating#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/sca.isinitiatingisterminating/vb/service.vb#1)]  
   
  서비스는 클라이언트와 함께 세션을 시작하지 않습니다. WCF 클라이언트 응용 프로그램에서 세션 기반 채널의 수명과 세션 자체의 수명 사이에 직접적인 관계가 있습니다. 예를 들어, 클라이언트는 새 세션 기반 채널을 만들어 새 세션을 만들고 세션 기반 채널을 정상적으로 닫아서 기존 세션을 종료합니다. 클라이언트는 다음 중 하나를 호출하여 서비스 엔드포인트와 함께 세션을 시작합니다.  
   
-- <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType>에 대한 호출을 통해 반환된 채널의 <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> 에 대한 호출을 통해 반환된 채널의 <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>  
   
-- <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType>[ServiceModel Metadata 유틸리티 도구 (svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)에서 생성 한 WCF 클라이언트 개체입니다.  
+- [ServiceModel Metadata 유틸리티 도구 (svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md)에서 생성 한 WCF 클라이언트 개체에 대 한 <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType> 합니다.  
   
 - WCF 클라이언트 개체의 각 형식에 대 한 시작 작업 (기본적으로 모든 작업이 시작 됨) 첫 번째 작업을 호출 하면 WCF 클라이언트 개체가 자동으로 채널을 열고 세션을 시작 합니다.  
   
  일반적으로 클라이언트는 다음 중 하나를 호출하여 서비스 엔드포인트와 함께 세션을 종료합니다.  
   
-- <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType>에 대한 호출을 통해 반환된 채널의 <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType> 에 대한 호출을 통해 반환된 채널의 <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>  
   
-- <xref:System.ServiceModel.ClientBase%601.Close%2A?displayProperty=nameWithType>Svcutil.exe에 의해 생성 된 WCF 클라이언트 개체입니다.  
+- Svcutil.exe에 의해 생성 된 WCF 클라이언트 개체에 대 한 <xref:System.ServiceModel.ClientBase%601.Close%2A?displayProperty=nameWithType> 합니다.  
   
 - WCF 클라이언트 개체의 두 형식에 대 한 종료 작업입니다. 기본적으로 작업은 종료 되지 않으며 계약은 종료 작업을 명시적으로 지정 해야 합니다. 첫 번째 작업을 호출 하면 WCF 클라이언트 개체가 자동으로 채널을 열고 세션을 시작 합니다.  
   
- 예제는 [방법: [기본 서비스 동작](../../../docs/framework/wcf/samples/default-service-behavior.md) 및 [인스턴스](../../../docs/framework/wcf/samples/instancing.md) 샘플](../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md) 뿐만 아니라 세션이 필요한 서비스를 만듭니다.  
+ 예를 들어, [How to: Create a Service That Requires Sessions](./feature-details/how-to-create-a-service-that-requires-sessions.md) , [Default Service Behavior](./samples/default-service-behavior.md) 및 [Instancing](./samples/instancing.md) 샘플을 참조하십시오.  
   
- 클라이언트 및 세션에 대 한 자세한 내용은 [WCF 클라이언트를 사용 하 여 서비스 액세스](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md)를 참조 하세요.  
+ 클라이언트 및 세션에 대 한 자세한 내용은 [WCF 클라이언트를 사용 하 여 서비스 액세스](./feature-details/accessing-services-using-a-client.md)를 참조 하세요.  
   
 ## <a name="sessions-interact-with-instancecontext-settings"></a>세션이 InstanceContext 설정과 상호 작용  
- 계약의 <xref:System.ServiceModel.SessionMode> 열거형과 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> 속성 간에 상호 작용이 있으며, 이를 통해 채널과 특정 서비스 개체 간의 연결을 제어합니다. 자세한 내용은 [세션, 인스턴스 및 동시성](../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md)을 참조 하세요.  
+ 계약의 <xref:System.ServiceModel.SessionMode> 열거형과 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> 속성 간에 상호 작용이 있으며, 이를 통해 채널과 특정 서비스 개체 간의 연결을 제어합니다. 자세한 내용은 [세션, 인스턴스 및 동시성](./feature-details/sessions-instancing-and-concurrency.md)을 참조 하세요.  
   
 ### <a name="sharing-instancecontext-objects"></a>InstanceContext 개체 공유  
  또한 해당 연결을 직접 수행하여 <xref:System.ServiceModel.InstanceContext> 개체와 연결된 세션 기반 채널 또는 호출을 제어할 수도 있습니다. 
   
 ## <a name="sessions-and-streaming"></a>세션 및 스트리밍  
- 전송할 데이터가 많은 경우 WCF의 스트리밍 전송 모드는 메모리에서 메시지를 전체적으로 버퍼링 하 고 처리 하는 기본 동작에 대 한 적절 한 대안입니다. 세션 기반 바인딩을 통해 스트리밍 호출이 수행될 경우 예기치 못한 동작이 발생할 수 있습니다. 모든 스트리밍 호출은 사용 중인 바인딩이 세션을 사용하도록 구성된 경우에도 세션을 지원하지 않는 하나의 채널(데이터그램 채널)을 통해 수행됩니다. 여러 클라이언트에서 세션 기반 바인딩을 통해 동일한 서비스 개체에 대한 스트리밍 호출을 수행하고, 서비스 개체의 동시성 모드가 단일 모드로 설정되고, 서비스 개체의 인스턴스 컨텍스트 모드가 `PerSession`으로 설정된 경우, 모든 호출은 데이터그램 채널을 통해 수행되므로 한 번에 하나의 호출만 처리됩니다. 하나 이상의 클라이언트의 제한 시간이 초과될 수 있습니다. 이 문제는 서비스 개체의 `InstanceContextMode` 를 `PerCall` 로 설정하거나 동시성 모드를 다중 모드로 설정하여 해결할 수 있습니다.  
+ 전송할 데이터가 많은 경우 WCF의 스트리밍 전송 모드는 메모리에서 메시지를 전체적으로 버퍼링 하 고 처리 하는 기본 동작에 대 한 적절 한 대안입니다. 세션 기반 바인딩을 통해 스트리밍 호출이 수행될 경우 예기치 못한 동작이 발생할 수 있습니다. 모든 스트리밍 호출은 사용 중인 바인딩이 세션을 사용하도록 구성된 경우에도 세션을 지원하지 않는 하나의 채널(데이터그램 채널)을 통해 수행됩니다. 여러 클라이언트에서 세션 기반 바인딩을 통해 동일한 서비스 개체에 대한 스트리밍 호출을 수행하고, 서비스 개체의 동시성 모드가 단일 모드로 설정되고, 서비스 개체의 인스턴스 컨텍스트 모드가 `PerSession`으로 설정된 경우, 모든 호출은 데이터그램 채널을 통해 수행되므로 한 번에 하나의 호출만 처리됩니다. 하나 이상의 클라이언트에서 시간 초과가 발생할 수 있습니다. 이 문제는 서비스 개체의 `InstanceContextMode` `PerCall`로 설정 하거나 동시성을 여러 개로 설정 하 여 해결할 수 있습니다.  
   
 > [!NOTE]
 > 이 경우 사용할 수 있는 "세션"이 하나이기 때문에 MaxConcurrentSessions에는 영향을 주지 않습니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.ServiceModel.OperationContractAttribute.IsInitiating%2A>
 - <xref:System.ServiceModel.OperationContractAttribute.IsTerminating%2A>

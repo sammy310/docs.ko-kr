@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application configuration [.NET Framework]
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 88fb1a17-6ac9-4b57-8028-193aec1f727c
-ms.openlocfilehash: c43ba119b92d4dc1a50b03d6359555ad25f37d08
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: e6d680097a63f3a7acc919c8503b9d18a09fcff0
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971564"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319744"
 ---
 # <a name="redirecting-assembly-versions"></a>어셈블리 버전 리디렉션
 
@@ -65,11 +65,11 @@ ms.locfileid: "70971564"
 
 `<bindingRedirect oldVersion="1.0.0.0" newVersion="2.0.0.0" />`
 
-앱이 이전 버전의 .NET Framework를 대상으로 하는 경우 자동 바인딩 리디렉션을 사용 하도록 설정할 수 있습니다. 어셈블리에 대 한 app.config 파일에 바인딩 리디렉션 정보를 제공 하거나 바인딩 리디렉션 기능을 해제 하 여이 기본 동작을 재정의할 수 있습니다. 이 기능을 설정 하거나 해제 [하는 방법에 대 한 자세한 내용은 방법: 자동 바인딩 리디렉션 사용 설정 및 해제](how-to-enable-and-disable-automatic-binding-redirection.md)를 참조하세요.
+앱이 이전 버전의 .NET Framework를 대상으로 하는 경우 자동 바인딩 리디렉션을 사용 하도록 설정할 수 있습니다. 어셈블리에 대 한 app.config 파일에 바인딩 리디렉션 정보를 제공 하거나 바인딩 리디렉션 기능을 해제 하 여이 기본 동작을 재정의할 수 있습니다. 이 기능을 설정 하거나 해제 하는 방법에 대 한 자세한 내용은 [방법: 자동 바인딩 리디렉션 사용 및 사용 안 함](how-to-enable-and-disable-automatic-binding-redirection.md)을 참조 하세요.
 
 <a name="bypass_PP"></a>
 ### <a name="bypassing-publisher-policy"></a>게시자 정책 무시
- 필요에 따라 앱 구성 파일에서 게시자 정책을 무시할 수 있습니다. 예를 들어, 역호환성이 있다고 하는 최신 버전의 어셈블리가 앱을 중단시킬 수 있습니다. 게시자 정책을 무시 하려면 앱 구성 파일의 [ \<dependentAssembly >](./file-schema/runtime/dependentassembly-element.md) 요소에 [ \<y apply >](./file-schema/runtime/publisherpolicy-element.md) 요소를 추가 하 고 **적용** 특성을 **아니요**로 설정 합니다. 모든 이전 **예** 설정을 재정의 합니다.
+ 필요에 따라 앱 구성 파일에서 게시자 정책을 무시할 수 있습니다. 예를 들어, 역호환성이 있다고 하는 최신 버전의 어셈블리가 앱을 중단시킬 수 있습니다. 게시자 정책을 무시 하려면 [\<publisherPolicy >](./file-schema/runtime/publisherpolicy-element.md) 요소를 앱 구성 파일의 [\<dependentAssembly >](./file-schema/runtime/dependentassembly-element.md) 요소에 추가 하 고 **적용** 특성을 **아니요**로 설정 합니다 .이 경우에는이를 재정의 합니다. 이전 **예** 설정입니다.
 
  `<publisherPolicy apply="no" />`
 
@@ -81,11 +81,11 @@ ms.locfileid: "70971564"
 
 <a name="BKMK_Specifyingassemblybindinginconfigurationfiles"></a>
 ## <a name="specifying-assembly-binding-in-configuration-files"></a>구성 파일에 어셈블리 바인딩 지정
- 동일한 XML 형식을 사용하여 앱 구성 파일, 컴퓨터 구성 파일 또는 게시자 정책 파일에 있는 바인딩 리디렉션을 지정할 수 있습니다. 한 어셈블리 버전을 다른 버전으로 리디렉션하려면 [ \<bindingRedirect >](./file-schema/runtime/bindingredirect-element.md) 요소를 사용 합니다. **oldVersion** 특성은 단일 어셈블리 버전 또는 다양한 버전을 지정할 수 있습니다. `newVersion` 특성은 단일 버전을 지정해야 합니다.  예를 들어, `<bindingRedirect oldVersion="1.1.0.0-1.2.0.0" newVersion="2.0.0.0"/>` 은 런타임에서 1.1.0.0 - 1.2.0.0 버전의 어셈블리 대신 2.0.0.0 버전을 사용하도록 지정합니다.
+ 동일한 XML 형식을 사용하여 앱 구성 파일, 컴퓨터 구성 파일 또는 게시자 정책 파일에 있는 바인딩 리디렉션을 지정할 수 있습니다. 한 어셈블리 버전을 다른 버전으로 리디렉션하려면 [\<bindingRedirect >](./file-schema/runtime/bindingredirect-element.md) 요소를 사용 합니다. **oldVersion** 특성은 단일 어셈블리 버전 또는 다양한 버전을 지정할 수 있습니다. `newVersion` 특성은 단일 버전을 지정해야 합니다.  예를 들어, `<bindingRedirect oldVersion="1.1.0.0-1.2.0.0" newVersion="2.0.0.0"/>` 은 런타임에서 1.1.0.0 - 1.2.0.0 버전의 어셈블리 대신 2.0.0.0 버전을 사용하도록 지정합니다.
 
  다음 코드 예제는 다양한 바인딩 리디렉션 시나리오를 보여줍니다. 이 예제에서는 `myAssembly`에 대해 다양한 버전의 리디렉션을 지정하고, `mySecondAssembly`에 대해 단일 바인딩 리디렉션을 지정합니다. 또한 이 예제에서는 게시자 정책 파일이 `myThirdAssembly`에 대한 바인딩 리디렉션을 재정의하지 않도록 지정합니다.
 
- 어셈블리를 바인딩하려면 [ \<assemblybinding >](./file-schema/runtime/assemblybinding-element-for-runtime.md) 태그에서 xmlns 특성을 사용 하 여 "urn: 스키마-microsoft-com: **x x x** " 문자열을 지정 해야 합니다.
+ 어셈블리를 바인딩하려면 [\<assemblyBinding >](./file-schema/runtime/assemblybinding-element-for-runtime.md) 태그에 xmlns 특성을 사용 하 여 문자열 "urn: 스키마-microsoft-com: **x** 1"을 지정 해야 합니다.
 
 ```xml
 <configuration>
@@ -99,7 +99,7 @@ ms.locfileid: "70971564"
           publisher policy, or machine configuration files. -->
         <bindingRedirect oldVersion="1.0.0.0-2.0.0.0" newVersion="3.0.0.0" />
       </dependentAssembly>
-  <dependentAssembly>
+      <dependentAssembly>
         <assemblyIdentity name="mySecondAssembly"
           publicKeyToken="32ab4ba45e0a69a1"
           culture="en-us" />
@@ -119,7 +119,7 @@ ms.locfileid: "70971564"
 ```
 
 ### <a name="limiting-assembly--bindings-to-a-specific-version"></a>특정 버전에 대한 어셈블리 바인딩 제한
- 응용 프로그램 구성 파일에서 [ \<assemblybinding >](./file-schema/runtime/assemblybinding-element-for-runtime.md) 요소에 대 한 **appliesTo** 특성을 사용 하 여 특정 버전의 .NET Framework에 대 한 어셈블리 바인딩 참조를 리디렉션할 수 있습니다. 이 선택적 특성은 .NET Framework 버전 번호를 사용하여 특성이 적용되는 버전을 지정합니다. **appliesTo** 특성이 지정되지 않으면 [\<assemblyBinding>](./file-schema/runtime/assemblybinding-element-for-runtime.md) 요소는 .NET Framework의 모든 버전에 적용됩니다.
+ 앱 구성 파일의 [\<assemblyBinding >](./file-schema/runtime/assemblybinding-element-for-runtime.md) 요소에서 **appliesTo** 특성을 사용 하 여 어셈블리 바인딩 참조를 .NET Framework의 특정 버전으로 리디렉션할 수 있습니다. 이 선택적 특성은 .NET Framework 버전 번호를 사용하여 특성이 적용되는 버전을 지정합니다. **appliesTo** 특성이 지정되지 않으면 [\<assemblyBinding>](./file-schema/runtime/assemblybinding-element-for-runtime.md) 요소는 .NET Framework의 모든 버전에 적용됩니다.
 
  예를 들어 .NET Framework 버전 3.5 어셈블리에 대한 어셈블리 바인딩을 리디렉션하려면 앱 구성 파일에 다음 XML 코드를 포함합니다.
 
@@ -152,7 +152,7 @@ ms.locfileid: "70971564"
 </assemblyBinding>
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [방법: 자동 바인딩 리디렉션 사용 설정 및 해제](how-to-enable-and-disable-automatic-binding-redirection.md)
 - [\<bindingRedirect > 요소](./file-schema/runtime/bindingredirect-element.md)

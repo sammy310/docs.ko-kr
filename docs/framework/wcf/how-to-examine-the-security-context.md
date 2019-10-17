@@ -9,15 +9,15 @@ helpviewer_keywords:
 - WCF, security
 - Claimset class
 ms.assetid: 389b5a57-4175-4bc0-ada0-fc750d51149f
-ms.openlocfilehash: e67ac9c452337b6f490d99ea4430ec2a02b952a1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 328d47a583a4f047fd54589a82d339de2cb1a16f
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625799"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320985"
 ---
 # <a name="how-to-examine-the-security-context"></a>방법: 보안 컨텍스트 검사
-Windows Communication Foundation (WCF) 서비스를 프로그래밍 하는 경우 서비스 보안 컨텍스트를 사용 하면 클라이언트 자격 증명 및 서비스를 사용 하 여 인증 하는 데 사용 되는 클레임에 대 한 세부 정보를 확인할 수 있습니다. <xref:System.ServiceModel.ServiceSecurityContext> 클래스의 속성을 사용하여 이를 수행할 수 있습니다.  
+WCF (Windows Communication Foundation) 서비스를 프로그래밍 하는 경우 서비스 보안 컨텍스트를 사용 하 여 서비스를 인증 하는 데 사용 되는 클라이언트 자격 증명과 클레임에 대 한 세부 정보를 확인할 수 있습니다. <xref:System.ServiceModel.ServiceSecurityContext> 클래스의 속성을 사용하여 이를 수행할 수 있습니다.  
   
  예를 들어 <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> 또는 <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> 속성을 사용하여 현재 클라이언트의 ID를 검색할 수 있습니다. 클라이언트가 익명인지 여부를 확인하기 위해 <xref:System.ServiceModel.ServiceSecurityContext.IsAnonymous%2A> 속성을 사용합니다.  
   
@@ -54,7 +54,7 @@ Windows Communication Foundation (WCF) 서비스를 프로그래밍 하는 경�
   
 - <xref:System.IdentityModel.Claims>  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
-- [서비스에 보안 설정](../../../docs/framework/wcf/securing-services.md)
-- [서비스 ID 및 인증](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+- [서비스에 보안 설정](securing-services.md)
+- [서비스 ID 및 인증](./feature-details/service-identity-and-authentication.md)

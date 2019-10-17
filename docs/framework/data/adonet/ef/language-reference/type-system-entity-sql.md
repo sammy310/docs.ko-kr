@@ -2,12 +2,12 @@
 title: 형식 시스템(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 818a505b-a196-41dd-aaac-2ccd5f7a2f1a
-ms.openlocfilehash: 7f9b41181d9a7a7f23123f2e1b71893000b34d4a
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 0f7dae9e57132929737d752c67694cd369b79d9e
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248932"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319232"
 ---
 # <a name="type-system-entity-sql"></a>형식 시스템(Entity SQL)
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]는 다음과 같은 다양 한 형식을 지원 합니다.  
@@ -41,14 +41,14 @@ ms.locfileid: "70248932"
   
  멤버 액세스(dot) 연산자(`.`)를 사용하여 참조를 탐색할 수 있습니다. 다음 조각에서는 r(참조) 속성을 탐색하여 Id 속성(Order)을 추출합니다.  
   
-```  
+```sql  
 select o2.r.Id   
 from (select ref(o) as r from LOB.Orders as o) as o2   
 ```  
   
  참조 값이 null이거나 참조 대상이 존재하지 않는 경우 결과는 null입니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [Entity SQL 개요](entity-sql-overview.md)
 - [엔터티 SQL 참조](entity-sql-reference.md)

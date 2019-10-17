@@ -2,12 +2,12 @@
 title: 서비스 버전 관리
 ms.date: 03/30/2017
 ms.assetid: 37575ead-d820-4a67-8059-da11a2ab48e2
-ms.openlocfilehash: f3cb01531c594df5262963567438b47cbbed58a2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 68c41f2c349dbceb318976ee26db58fd00dae872
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69923012"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72321480"
 ---
 # <a name="service-versioning"></a>서비스 버전 관리
 서비스 및 서비스가 노출하는 엔드포인트는 비즈니스 요구의 변경, 정보 기술의 요구 사항 또는 다른 문제 해결 등의 다양한 이유 때문에 최초로 배포된 후, 수명 동안 여러 차례에 걸쳐 변경되어야 할 수 있습니다. 각 변경 작업에는 새 버전의 서비스가 도입됩니다. 이 항목에서는 WCF (Windows Communication Foundation)에서 버전 관리를 고려 하는 방법에 대해 설명 합니다.  
@@ -15,13 +15,13 @@ ms.locfileid: "69923012"
 ## <a name="four-categories-of-service-changes"></a>서비스 변경의 네 가지 범주  
  변경될 수 있는 서비스는 다음과 같이 네 가지 범주로 분류할 수 있습니다.  
   
-- 계약 변경 내용: 예를 들어 작업이 추가 되거나 메시지의 데이터 요소가 추가 되거나 변경 될 수 있습니다.  
+- 계약 변경: 예를 들어 작업이 추가되거나, 메시지의 데이터 요소가 추가되거나 변경될 수 있습니다.  
   
-- 주소 변경: 예를 들어 서비스는 끝점에 새 주소가 있는 다른 위치로 이동 합니다.  
+- 주소 변경: 예를 들어 엔드포인트가 새 주소를 가진 다른 위치로 서비스가 이동합니다.  
   
-- 바인딩 변경 내용: 예를 들어 보안 메커니즘이 변경 되거나 설정이 변경 됩니다.  
+- 바인딩 변경: 예를 들어 보안 메커니즘이 변경되거나 해당 설정이 변경됩니다.  
   
-- 구현 변경 내용: 예를 들어 내부 메서드 구현이 변경 되는 경우입니다.  
+- 구현 변경: 예를 들어 내부 메서드 구현이 변경됩니다.  
   
  이러한 변경 중 일부는 "주요" 변경 내용이고, 나머지는 "주요하지 않은" 변경 내용입니다. 이전 버전에서 성공적으로 처리 된 모든 메시지가 새 버전에서 성공적으로 처리 되 면 변경 내용이 *줄 바꿈하지* 않습니다. 이 조건을 충족 하지 않는 변경 내용은 *주요* 변경 내용입니다.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "69923012"
   
  새 멤버를 추가해도 기존 클라이언트가 중지되지 않을 것이라고 잘못 생각할 수도 있습니다. 모든 클라이언트가 lax 버전 관리를 처리할 수 있는지 확신할 수 없는 경우에는 엄격한 버전 관리 지침을 사용하고, 데이터 계약을 변경할 수 없는 것으로 간주하는 것이 좋습니다.  
   
- 데이터 계약의 느슨한 버전과 엄격한 버전 관리에 대 한 자세한 지침은 모범 [사례를 참조 하세요. 데이터 계약 버전](../../../docs/framework/wcf/best-practices-data-contract-versioning.md)관리  
+ 데이터 계약의 느슨한 버전과 엄격한 버전 관리에 대 한 자세한 지침은 [모범 사례: 데이터 계약 버전 관리](best-practices-data-contract-versioning.md)를 참조 하세요.  
   
 ### <a name="distinguishing-between-data-contract-and-net-types"></a>데이터 계약과 .NET 형식 구별  
  <xref:System.Runtime.Serialization.DataContractAttribute> 특성을 클래스에 적용해서 .NET 클래스 또는 구조를 데이터 계약으로 나타낼 수 있습니다. .NET 형식 및 해당 데이터 계약 프로젝션은 서로 다른 별개의 문제입니다. 여러 .NET 형식에서 동일한 데이터 계약 프로젝션을 사용할 수 있습니다. 이러한 구분은 특히 표시된 데이터 계약을 유지 관리하여 엄밀한 의미에서 기존 클라이언트와의 호환성을 유지하기 위하여 .NET 형식을 변경할 때 유용합니다. .NET 형식과 데이터 계약의 이러한 구분을 유지하기 위해서는 다음 두 가지 사항을 항상 수행해야 합니다.  
@@ -99,7 +99,7 @@ ms.locfileid: "69923012"
  데이터 계약 버전 관리와 마찬가지로 서비스 계약 버전 관리에는 작업 추가, 변경 및 제거가 포함됩니다.  
   
 ### <a name="specifying-name-namespace-and-action"></a>이름, 네임스페이스 및 동작 지정  
- 기본적으로 서비스 계약의 이름은 인터페이스의 이름입니다. 기본 네임 스페이스는 "http://tempuri.org"이 고 각 작업의 작업은 "http://tempuri.org/contractname/methodname"입니다. 서비스 계약에 대 한 이름 및 네임 스페이스를 명시적으로 지정 하는 것이 좋으며, "http://tempuri.org"를 사용 하지 않고 인터페이스 및 메서드 이름이 서비스의 계약에서 노출 되지 않도록 방지 하기 위한 작업입니다.  
+ 기본적으로 서비스 계약의 이름은 인터페이스의 이름입니다. 기본 네임 스페이스는 "http://tempuri.org"이 고 각 작업의 작업은 "http://tempuri.org/contractname/methodname"입니다. 서비스 계약에 대 한 이름 및 네임 스페이스를 명시적으로 지정 하 고, "http://tempuri.org"을 사용 하지 않도록 하 고, 인터페이스 및 메서드 이름이 서비스의 계약에서 노출 되지 않도록 하는 작업을 수행 하는 것이 좋습니다.  
   
 ### <a name="adding-parameters-and-operations"></a>매개 변수 및 작업 추가  
  서비스에 의해 노출된 서비스 작업을 추가하는 것은 주요하지 않은 변경 내용입니다. 이러한 새 작업에서는 기존 클라이언트의 요구를 고려하지 않아도 되기 때문입니다.  
@@ -125,7 +125,7 @@ ms.locfileid: "69923012"
  클라이언트에서 새 엔드포인트 주소 또는 바인딩을 동적으로 검색할 수 없는 경우, 엔드포인트 주소 및 바인딩에 대한 변경 내용은 주요 변경 내용입니다. 이 기능을 구현하는 메커니즘 중 하나는 UDDI(Universal Description, Discovery, and Integration) 레지스트리 및 UDDI 호출 패턴을 사용하는 것입니다. 여기서 클라이언트는 엔드포인트와 통신하려고 시도하며, 실패 시 현재 엔드포인트 메타데이터에 대해 잘 알려진 UDDI 레지스트리를 쿼리합니다. 그런 다음 클라이언트는 이 메타데이터의 주소 및 바인딩을 사용하여 엔드포인트와 통신합니다. 이 통신이 성공하면 클라이언트는 나중에 사용할 수 있도록 주소 및 바인딩 정보를 캐시합니다.  
   
 ## <a name="routing-service-and-versioning"></a>라우팅 서비스 및 버전 관리  
- 서비스 변경이 주요한 변경이고 서로 다른 버전의 서비스를 두 개 이상 동시에 실행해야 하면 WCF 라우팅 서비스를 사용하여 적절한 서비스 인스턴스에 메시지를 라우팅할 수 있습니다. WCF 라우팅 서비스는 콘텐츠 기반 라우팅을 사용합니다. 즉, 메시지 내의 정보를 사용하여 메시지를 라우팅할 위치를 확인합니다. WCF 라우팅 서비스에 대 한 자세한 내용은 [라우팅 서비스](../../../docs/framework/wcf/feature-details/routing-service.md)를 참조 하세요. 서비스 버전 관리 [를 위해 WCF 라우팅 서비스를 사용 하는 방법에 대 한 예제는 방법: 서비스 버전](../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)관리.  
+ 서비스 변경이 주요한 변경이고 서로 다른 버전의 서비스를 두 개 이상 동시에 실행해야 하면 WCF 라우팅 서비스를 사용하여 적절한 서비스 인스턴스에 메시지를 라우팅할 수 있습니다. WCF 라우팅 서비스는 콘텐츠 기반 라우팅을 사용합니다. 즉, 메시지 내의 정보를 사용하여 메시지를 라우팅할 위치를 확인합니다. WCF 라우팅 서비스에 대 한 자세한 내용은 [라우팅 서비스](./feature-details/routing-service.md)를 참조 하세요. 서비스 버전 관리를 위해 WCF 라우팅 서비스를 사용 하는 방법에 대 한 예제는 [방법: 서비스 버전 관리](./feature-details/how-to-service-versioning.md)를 참조 하세요.  
   
 ## <a name="appendix"></a>부록  
  엄격한 버전 관리가 필요한 경우 일반 데이터 계약 버전 관리 지침을 변경 불가능한 데이터 계약으로 간주하고, 변경이 필요한 경우 새 항목을 만듭니다. 새로운 각 데이터 계약에 대해 새 클래스를 만들어야 하므로 이전 데이터 계약 클래스의 측면에서 작성된 기존 코드를 사용하지 않고, 새 데이터 계약 클래스의 측면에서 코드를 새로 작성하기 위한 메커니즘이 필요합니다.  
@@ -175,7 +175,7 @@ public class PurchaseOrderV2 : IPurchaseOrderV1, IPurchaseOrderV2
   
  서비스 계약이 업데이트되어 `PurchaseOrderV2`의 측면에서 작성되는 새 작업을 포함할 수 있습니다. `IPurchaseOrderV1`의 측면에서 작성된 기존 비즈니스 논리라도 `PurchaseOrderV2`에 대한 작업을 계속할 수 있으며, `OrderDate` 속성을 필요로 하는 새 비즈니스 논리도 `IPurchaseOrderV2`의 측면에서 작성될 수 있습니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Runtime.Serialization.DataContractAttribute>
@@ -187,5 +187,5 @@ public class PurchaseOrderV2 : IPurchaseOrderV1, IPurchaseOrderV2
 - <xref:System.Runtime.Serialization.ExtensionDataObject>
 - <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A>
 - <xref:System.Xml.Serialization.XmlSerializer>
-- [데이터 계약 동등성](../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)
-- [버전 독립적 Serialization 콜백](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)
+- [데이터 계약 동등성](./feature-details/data-contract-equivalence.md)
+- [버전 독립적 Serialization 콜백](./feature-details/version-tolerant-serialization-callbacks.md)

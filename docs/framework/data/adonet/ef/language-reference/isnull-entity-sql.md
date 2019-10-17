@@ -2,19 +2,19 @@
 title: ISNULL(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: dc7a0173-3664-4c90-a57b-5cbb0a8ed7ee
-ms.openlocfilehash: d54c350196ad1ef7cfafa6d931d9d1ad8f267177
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 9066f9fb68ce2c50e9523881cfa0dd930cd0b52e
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250566"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319727"
 ---
 # <a name="isnull-entity-sql"></a>ISNULL(Entity SQL)
 쿼리 식이 null인지 여부를 결정합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```sql  
 expression IS [ NOT ] NULL  
 ```  
   
@@ -28,10 +28,10 @@ expression IS [ NOT ] NULL
 ## <a name="return-value"></a>반환 값  
  `true`이 null을 반환하면 `expression`이고, 그렇지 않으면 `false`입니다.  
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
  외부 조인의 요소가 null인지 여부를 확인하려면 `IS NULL`을 사용합니다.  
   
-```  
+```sql  
 select c   
       from LOB.Customers as c left outer join LOB.Orders as o   
                               on c.ID = o.CustomerID    
@@ -40,7 +40,7 @@ select c
   
  멤버에 실제 값이 있는지 여부를 확인하려면 `IS NULL`을 사용합니다.  
   
-```  
+```sql  
 select c from LOB.Customer as c where c.DOB is not null  
 ```  
   
@@ -48,23 +48,23 @@ select c from LOB.Customer as c where c.DOB is not null
   
 |무늬|동작|  
 |-------------|--------------|  
-|null IS NULL|`true`를 반환합니다.|  
-|TREAT (null AS EntityType) IS NULL|`true`를 반환합니다.|  
+|null IS NULL|`true`을 반환합니다.|  
+|TREAT (null AS EntityType) IS NULL|`true`을 반환합니다.|  
 |TREAT (null AS ComplexType) IS NULL|오류를 throw합니다.|  
 |TREAT (null AS RowType) IS NULL|오류를 throw합니다.|  
-|EntityType IS NULL|`true` 또는 `false`를 반환합니다.|  
+|EntityType IS NULL|`true` 또는 `false`을 반환합니다.|  
 |ComplexType IS NULL|오류를 throw합니다.|  
 |RowType IS NULL|오류를 throw합니다.|  
   
 ## <a name="example"></a>예제  
  다음 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 쿼리에서는 IS NOT NULL 연산자를 사용하여 쿼리 식이 null이 아닌지 여부를 확인합니다. 쿼리는 AdventureWorks Sales 모델을 기반으로 합니다. 이 쿼리를 컴파일하고 실행하려면 다음 단계를 수행하세요.  
   
-1. [방법: StructuralType 결과](../how-to-execute-a-query-that-returns-structuraltype-results.md)를 반환 하는 쿼리를 실행 합니다.  
+1. [How to: Execute a Query that Returns StructuralType Results](../how-to-execute-a-query-that-returns-structuraltype-results.md)의 절차를 따릅니다.  
   
 2. 다음 쿼리를 `ExecuteStructuralTypeQuery` 메서드에 인수로 전달합니다.  
   
- [!code-csharp[DP EntityServices Concepts 2#ISNULL](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#isnull)]  
+ [!code-sql[DP EntityServices Concepts#ISNULL](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#isnull)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [엔터티 SQL 참조](entity-sql-reference.md)

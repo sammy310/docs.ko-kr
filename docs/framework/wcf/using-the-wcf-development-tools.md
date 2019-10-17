@@ -2,12 +2,12 @@
 title: WCF 개발 도구 사용
 ms.date: 03/30/2017
 ms.assetid: 054adb87-c244-4d5a-83d1-0b2b44bd454b
-ms.openlocfilehash: ef20d13ade41992e6babc0ebb3a985aabb686ed3
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 27cefb1ca1f4748f0d074ffdcd47cd6faa29da00
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040416"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320281"
 ---
 # <a name="using-the-wcf-development-tools"></a>WCF 개발 도구 사용
 이 섹션에서는 WCFservice 개발에 도움이 될 수 있는 Visual Studio 개발 도구에 대해 설명 합니다.  
@@ -18,19 +18,19 @@ ms.locfileid: "69040416"
  > Visual Studio 2017부터 WCF 개발 도구는 기본적으로 설치 되지 않습니다. 이러한 기능을 사용 하려면 Visual Studio 설치 관리자에서 Windows Communication Foundation 구성 요소가 선택 되어 있는지 확인 해야 합니다.
   
 ## <a name="the-wcf-developer-tools"></a>WCF 개발자 도구  
- [WCF Visual Studio 템플릿](../../../docs/framework/wcf/wcf-vs-templates.md)  
+ [WCF Visual Studio 템플릿](wcf-vs-templates.md)  
   
  Visual Studio에서 미리 정의 된 Visual Studio 프로젝트 및 항목 템플릿을 사용 하 여 WCF 서비스와 주변 응용 프로그램을 빠르게 빌드할 수 있습니다.  
   
- [WCF 서비스 호스트(WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)  
+ [WCF 서비스 호스트(WcfSvcHost.exe)](wcf-service-host-wcfsvchost-exe.md)  
   
  WCF 서비스 자동 호스트 (Wcfsvchost.exe)를 사용 하면 Visual Studio 디버거 (F5)를 시작 하 여 구현 된 서비스를 자동으로 호스트 하 고 테스트할 수 있습니다. 그런 다음 WCF 테스트 클라이언트 (Wcftestclient.exe) 또는 자체 클라이언트를 사용 하 여 서비스를 테스트 하 여 잠재적인 오류를 찾아 수정할 수 있습니다.  
   
- [WCF 테스트 클라이언트(WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)  
+ [WCF 테스트 클라이언트(WcfTestClient.exe)](wcf-test-client-wcftestclient-exe.md)  
   
  WCF 테스트 클라이언트 (Wcftestclient.exe)는 임의 형식의 매개 변수를 입력 하 고, 해당 입력을 서비스에 제출 하 고, 서비스가 다시 보내는 응답을 볼 수 있는 GUI 도구입니다. WCF 서비스 자동 호스트와 결합 될 때 원활한 서비스 테스트 환경을 제공 합니다.  
   
- [XML에서 데이터 형식 클래스 생성](../../../docs/framework/wcf/generating-data-type-classes-from-xml.md)  
+ [XML에서 데이터 형식 클래스 생성](generating-data-type-classes-from-xml.md)  
   
  클립보드에 저장된 XML 데이터는 코드 페이지로 붙여 넣을 수 있습니다. 데이터에 정의된 클래스는 코드 형식으로 변환됩니다.  
   
@@ -45,8 +45,8 @@ netsh http add urlacl url=http://+:8001/MyService user=<domain>\<user>
   
  Netsh.exe에 대 한 자세한 내용은 [Netsh.exe 도구 및 명령줄 스위치를 사용 하는 방법](https://go.microsoft.com/fwlink/?LinkId=97877)을 참조 하십시오.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
-- [WCF Visual Studio 템플릿](../../../docs/framework/wcf/wcf-vs-templates.md)
-- [WCF 서비스 호스트(WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)
-- [WCF 테스트 클라이언트(WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)
+- [WCF Visual Studio 템플릿](wcf-vs-templates.md)
+- [WCF 서비스 호스트(WcfSvcHost.exe)](wcf-service-host-wcfsvchost-exe.md)
+- [WCF 테스트 클라이언트(WcfTestClient.exe)](wcf-test-client-wcftestclient-exe.md)

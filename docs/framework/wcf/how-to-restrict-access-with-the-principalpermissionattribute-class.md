@@ -9,15 +9,15 @@ helpviewer_keywords:
 - WCF, authorization
 - WCF, security
 ms.assetid: 5162f5c4-8781-4cc4-9425-bb7620eaeaf4
-ms.openlocfilehash: 3b109e3e6817c300af1e79258d555562dcba067a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 93268be4b04ec6824ed7ecab070f28ddf40f8831
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69951017"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320935"
 ---
 # <a name="how-to-restrict-access-with-the-principalpermissionattribute-class"></a>방법: PrincipalPermissionAttribute 클래스를 사용하여 액세스 제한
-Windows 도메인 컴퓨터의 리소스에 대한 액세스 제어는 기본적인 보안 작업입니다. 예를 들어, 특정 사용자만 급여 정보와 같은 민감한 데이터를 볼 수 있어야 합니다. 이 항목에서는 사용자가 미리 정의된 그룹에 속하도록 요청하여 메서드에 대한 액세스를 제한하는 방법을 설명합니다. 작업 예제는 [서비스 작업에 대 한 액세스 권한 부여](../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)를 참조 하세요.  
+Windows 도메인 컴퓨터의 리소스에 대한 액세스 제어는 기본적인 보안 작업입니다. 예를 들어, 특정 사용자만 급여 정보와 같은 민감한 데이터를 볼 수 있어야 합니다. 이 항목에서는 사용자가 미리 정의된 그룹에 속하도록 요청하여 메서드에 대한 액세스를 제한하는 방법을 설명합니다. 작업 예제는 [서비스 작업에 대 한 액세스 권한 부여](./samples/authorizing-access-to-service-operations.md)를 참조 하세요.  
   
  작업은 두 가지 별도의 절차로 구성됩니다. 첫 번째는 그룹을 만들어 이 그룹을 사용자로 채웁니다. 두 번째는 그룹을 지정할 <xref:System.Security.Permissions.PrincipalPermissionAttribute> 클래스를 적용합니다.  
   
@@ -39,9 +39,9 @@ Windows 도메인 컴퓨터의 리소스에 대한 액세스 제어는 기본적
   
 ### <a name="to-demand-user-membership"></a>사용자 멤버 자격을 요구하려면  
   
-1. 구현 된 서비스 계약 코드가 포함 된 WCF (Windows Communication Foundation) 코드 파일을 엽니다. 계약을 구현 하는 방법에 대 한 자세한 내용은 [서비스 계약 구현](../../../docs/framework/wcf/implementing-service-contracts.md)을 참조 하세요.  
+1. 구현 된 서비스 계약 코드가 포함 된 WCF (Windows Communication Foundation) 코드 파일을 엽니다. 계약을 구현 하는 방법에 대 한 자세한 내용은 [서비스 계약 구현](implementing-service-contracts.md)을 참조 하세요.  
   
-2. <xref:System.Security.Permissions.PrincipalPermissionAttribute> 특성을 특정 그룹에 대해 제한되어야 하는 각 메서드에 적용합니다. <xref:System.Security.Permissions.SecurityAttribute.Action%2A> 속성을 <xref:System.Security.Permissions.SecurityAction.Demand>로 설정하고 <xref:System.Security.Permissions.PrincipalPermissionAttribute.Role%2A> 속성을 그룹 이름으로 설정합니다. 예를 들어:  
+2. <xref:System.Security.Permissions.PrincipalPermissionAttribute> 특성을 특정 그룹에 대해 제한되어야 하는 각 메서드에 적용합니다. <xref:System.Security.Permissions.SecurityAttribute.Action%2A> 속성을 <xref:System.Security.Permissions.SecurityAction.Demand>로 설정하고 <xref:System.Security.Permissions.PrincipalPermissionAttribute.Role%2A> 속성을 그룹 이름으로 설정합니다. 예를 들면,  
   
      [!code-csharp[c_PrincipalPermissionAttribute#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_principalpermissionattribute/cs/source.cs#1)]
      [!code-vb[c_PrincipalPermissionAttribute#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_principalpermissionattribute/vb/source.vb#1)]  
@@ -52,7 +52,7 @@ Windows 도메인 컴퓨터의 리소스에 대한 액세스 제어는 기본적
 ## <a name="using-a-certificate-to-control-access-to-a-method"></a>인증서를 사용하여 메서드에 대한 액세스 제어  
  또한 클라이언트 자격 증명 형식이 인증서인 경우 `PrincipalPermissionAttribute` 클래스를 사용하여 메서드에 대한 액세스를 제어할 수 있습니다. 이를 수행하려면 인증서의 주체 및 지문이 있어야 합니다.  
   
- 인증서의 속성 [을 검사 하려면 방법: MMC 스냅인](../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)을 사용 하 여 인증서를 봅니다. 지문 값 [을 찾으려면 방법: 인증서](../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)의 지문을 검색 합니다.  
+ 인증서의 속성을 검사 하려면 [방법: MMC 스냅인을 사용 하 여 인증서 보기](./feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)를 참조 하세요. 지문 값을 찾으려면 [방법: 인증서의 손 도장 (thumbprint) 검색](./feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)을 참조 하세요.  
   
 #### <a name="to-control-access-using-a-certificate"></a>인증서를 사용하여 액세스를 제어하려면  
   
@@ -84,11 +84,11 @@ Windows 도메인 컴퓨터의 리소스에 대한 액세스 제어는 기본적
      [!code-csharp[c_PrincipalPermissionAttribute#3](../../../samples/snippets/csharp/VS_Snippets_CFX/c_principalpermissionattribute/cs/source.cs#3)]
      [!code-vb[c_PrincipalPermissionAttribute#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_principalpermissionattribute/vb/source.vb#3)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Security.Permissions.PrincipalPermissionAttribute>
 - <xref:System.Security.Permissions.SecurityAction.Demand>
 - <xref:System.Security.Permissions.PrincipalPermissionAttribute.Role%2A>
-- [서비스 작업에 대한 액세스 승인](../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)
-- [보안 개요](../../../docs/framework/wcf/feature-details/security-overview.md)
-- [서비스 계약 구현](../../../docs/framework/wcf/implementing-service-contracts.md)
+- [서비스 작업에 대한 액세스 승인](./samples/authorizing-access-to-service-operations.md)
+- [보안 개요](./feature-details/security-overview.md)
+- [서비스 계약 구현](implementing-service-contracts.md)

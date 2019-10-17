@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF [WCF], what's new
 - Windows Communication Foundation [WCF], what's new
 ms.assetid: 7e93fe73-af93-46b5-9f63-32f761ee40cf
-ms.openlocfilehash: a50db521e986972e864ac60c8b84a63d3d1de69b
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 0a065676d81b36f32729bb08c23025825e94d3bc
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834872"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320453"
 ---
 # <a name="whats-new-in-windows-communication-foundation-45"></a>Windows Communication Foundation 4.5의 새로운 기능
 
@@ -18,11 +18,11 @@ ms.locfileid: "71834872"
 
 ## <a name="wcf-simplification-features"></a>WCF 단순화 기능
 
-WCF 4.5 애플리케이션을 더 쉽게 개발하고 유지할 수 있도록 많은 작업이 이루어졌습니다. 자세한 내용은 [WCF 간소화 기능](../../../docs/framework/wcf/wcf-simplification-features.md)을 참조 하세요.
+WCF 4.5 애플리케이션을 더 쉽게 개발하고 유지할 수 있도록 많은 작업이 이루어졌습니다. 자세한 내용은 [WCF 간소화 기능](wcf-simplification-features.md)을 참조 하세요.
 
 ### <a name="task-based-async-support"></a>태스크 기반 비동기 지원
 
-기본적으로 서비스 참조를 추가하면 작업 반환 비동기 서비스 작업 메서드가 생성됩니다. 이는 동기 및 비동기 메서드에 대해 수행됩니다. 따라서 새로운 작업 기반 비동기 프로그래밍 모델을 사용하여 비동기적으로 서비스 작업을 호출할 수 있습니다. 생성된 프록시 메서드를 호출하면 WCF는 비동기 작업을 나타내는 작업 개체를 생성하고 해당 작업를 사용자에게 반환합니다. 작업이 완료 되 면 작업이 완료 됩니다. 비동기 작업을 구현 하는 경우이를 작업 기반 비동기 작업으로 구현할 수 있습니다. 자세한 내용은 [동기 및 비동기 작업](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)을 참조 하세요.
+기본적으로 서비스 참조를 추가하면 작업 반환 비동기 서비스 작업 메서드가 생성됩니다. 이는 동기 및 비동기 메서드에 대해 수행됩니다. 따라서 새로운 작업 기반 비동기 프로그래밍 모델을 사용하여 비동기적으로 서비스 작업을 호출할 수 있습니다. 생성된 프록시 메서드를 호출하면 WCF는 비동기 작업을 나타내는 작업 개체를 생성하고 해당 작업를 사용자에게 반환합니다. 작업이 완료 되 면 작업이 완료 됩니다. 비동기 작업을 구현 하는 경우이를 작업 기반 비동기 작업으로 구현할 수 있습니다. 자세한 내용은 [동기 및 비동기 작업](synchronous-and-asynchronous-operations.md)을 참조 하세요.
 
 ### <a name="simplified-generated-configuration-files"></a>단순화되어 생성된 구성 파일
 
@@ -36,19 +36,19 @@ WCF는 이제 계약 중심 개발을 지원합니다. Svcutil.exe에는 WSDL �
 
 ### <a name="add-service-reference-from-a-portable-subset-project"></a>이식 가능한 하위 집합 프로젝트의 서비스 참조 추가
 
-이식 가능한 하위 집합 프로젝트를 사용하면 복수 .NET 플랫폼(데스크톱, Silverlight, Windows Phone, XBOX)을 지원하면서 .NET 어셈블리 프로그래머가 하나의 소스 트리를 유지하고 시스템을 빌드할 수 있습니다. 이식 가능한 하위 집합 프로젝트는 .net 플랫폼에서 사용할 수 있는 .net framework 어셈블리인 .NET 이식 가능한 라이브러리만 참조 합니다. 개발자 환경은 다른 WCF 클라이언트 애플리케이션에 서비스 참조를 추가하는 것과 동일합니다. 자세한 내용은 [이식 가능한 하위 집합 프로젝트의 서비스 참조 추가](../../../docs/framework/wcf/add-service-reference-in-a-portable-subset-project.md)을 참조 하세요.
+이식 가능한 하위 집합 프로젝트를 사용하면 복수 .NET 플랫폼(데스크톱, Silverlight, Windows Phone, XBOX)을 지원하면서 .NET 어셈블리 프로그래머가 하나의 소스 트리를 유지하고 시스템을 빌드할 수 있습니다. 이식 가능한 하위 집합 프로젝트는 .net 플랫폼에서 사용할 수 있는 .net framework 어셈블리인 .NET 이식 가능한 라이브러리만 참조 합니다. 개발자 환경은 다른 WCF 클라이언트 애플리케이션에 서비스 참조를 추가하는 것과 동일합니다. 자세한 내용은 [이식 가능한 하위 집합 프로젝트의 서비스 참조 추가](add-service-reference-in-a-portable-subset-project.md)을 참조 하세요.
 
 ### <a name="aspnet-compatibility-mode-default-changed"></a>ASP.NET 호환 모드 기본값 변경
 
-WCF는 개발자가 WCF 서비스를 작성할 때 ASP.NET HTTP 파이프라인 기능에 완전하게 액세스할 수 있게 해 주는 ASP.NET 호환 모드를 제공합니다. 이 모드를 사용 하려면 web.config의 [@no__t 2serviceHostingEnvironment >](../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) 섹션에서 `aspNetCompatibilityEnabled` 특성을 true로 설정 해야 합니다. 또한 이 appDomain의 모든 서비스는 `RequirementsMode`의 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> 속성이 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> 또는 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>로 설정되어야 합니다. 기본적으로 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>이 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>로 설정 됩니다. 자세한 내용은 Windows Communication Foundation 및 [WCF 서비스와 ASP.NET](../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md) [의 새로운 기능](../../../docs/framework/wcf/whats-new.md) 을 참조 하세요.
+WCF는 개발자가 WCF 서비스를 작성할 때 ASP.NET HTTP 파이프라인 기능에 완전하게 액세스할 수 있게 해 주는 ASP.NET 호환 모드를 제공합니다. 이 모드를 사용 하려면 web.config의 [\<serviceHostingEnvironment >](../configure-apps/file-schema/wcf/servicehostingenvironment.md) 섹션에서 `aspNetCompatibilityEnabled` 특성을 true로 설정 해야 합니다. 또한이 appDomain의 모든 서비스에는 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> 또는 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>로 설정 된 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>에 대 한 `RequirementsMode` 속성이 있어야 합니다. 기본적으로 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>로 설정 됩니다. 자세한 내용은 [WCF 서비스 및 ASP.NET](./feature-details/wcf-services-and-aspnet.md)를 참조 하세요.
 
 ### <a name="new-transport-default-values"></a>새 전송 기본값
 
-구성을 단순화하기 위해 여러 전송 속성의 기본값이 변경되었습니다. 자세한 내용은 [WCF 간소화 기능](../../../docs/framework/wcf/wcf-simplification-features.md)을 참조 하세요.
+구성을 단순화하기 위해 여러 전송 속성의 기본값이 변경되었습니다. 자세한 내용은 [WCF 간소화 기능](wcf-simplification-features.md)을 참조 하세요.
 
 ### <a name="xmldictionaryreaderquotas"></a>XmlDictionaryReaderQuotas
 
-<xref:System.Xml.XmlDictionaryReaderQuotas>에는 메시지를 만드는 동안 인코더가 사용하는 메모리의 크기를 제한하는 XML 사전 판독기에 대한 구성 가능 할당량 값이 포함됩니다. 이러한 할당량은 구성 가능하지만, 개발자가 이를 명시적으로 설정해야 할 가능성을 줄이기 위해 기본값이 변경되었습니다. 자세한 내용은 [WCF 간소화 기능](../../../docs/framework/wcf/wcf-simplification-features.md)을 참조 하세요.
+<xref:System.Xml.XmlDictionaryReaderQuotas>에는 메시지를 만드는 동안 인코더가 사용하는 메모리의 크기를 제한하는 XML 사전 판독기에 대한 구성 가능 할당량 값이 포함됩니다. 이러한 할당량은 구성 가능하지만, 개발자가 이를 명시적으로 설정해야 할 가능성을 줄이기 위해 기본값이 변경되었습니다. 자세한 내용은 [WCF 간소화 기능](wcf-simplification-features.md)을 참조 하세요.
 
 ### <a name="wcf-configuration-validation"></a>WCF 구성 유효성 검사
 
@@ -60,7 +60,7 @@ WCF 서비스의 기존 및 새 개발자들이 서비스를 구성하는 데 �
 
 ## <a name="streaming-improvements"></a>스트리밍 향상
 
-수신 측이 읽고 있지 않거나 느리게 읽고 있을 때 전송 측이 스레드를 차단하지 않는 진정한 의미의 비동기 스트리밍을 추가 지원하여 확장성을 향상시켰습니다. 클라이언트가 스트리밍된 메시지를 IIS에서 호스팅된 WCF 서비스에 전송할 때 메시지 버퍼링 제한을 제거하였습니다. 자세한 내용은 [WCF 간소화 기능](../../../docs/framework/wcf/wcf-simplification-features.md)을 참조 하세요.
+수신 측이 읽고 있지 않거나 느리게 읽고 있을 때 전송 측이 스레드를 차단하지 않는 진정한 의미의 비동기 스트리밍을 추가 지원하여 확장성을 향상시켰습니다. 클라이언트가 스트리밍된 메시지를 IIS에서 호스팅된 WCF 서비스에 전송할 때 메시지 버퍼링 제한을 제거하였습니다. 자세한 내용은 [WCF 간소화 기능](wcf-simplification-features.md)을 참조 하세요.
 
 ## <a name="simplifying-exposing-an-endpoint-over-https-with-iis"></a>IIS를 사용하여 HTTPS에 엔드포인트 노출 단순화
 
@@ -72,19 +72,19 @@ HTTPS에서 엔드포인트 노출을 단순화하기 위해 HTTPS 프로토콜 
 
 ## <a name="websocket-support"></a>WebSocket 지원
 
-WebSocket은 TCP와 유사한 성능 특성으로 포트 80 및 443에서 진정한 의미의 양방향 통신을 제공하는 기술입니다. WebSocket 전송에서 통신을 지원하기 위해 새로운 바인딩 두 개가 추가되었습니다. <xref:System.ServiceModel.NetHttpBinding>와 <xref:System.ServiceModel.NetHttpsBinding>을 참조하세요. 자세한 내용은 다음을 참조하십시오. [시스템 제공 바인딩](../../../docs/framework/wcf/system-provided-bindings.md)
+WebSocket은 TCP와 유사한 성능 특성으로 포트 80 및 443에서 진정한 의미의 양방향 통신을 제공하는 기술입니다. WebSocket 전송에서 통신을 지원하기 위해 새로운 바인딩 두 개가 추가되었습니다. <xref:System.ServiceModel.NetHttpBinding>와 <xref:System.ServiceModel.NetHttpsBinding>을 참조하세요. 자세한 내용은 [시스템 제공 바인딩](system-provided-bindings.md)을 참조 하세요.
 
 ## <a name="new-transport-default-values"></a>새 전송 기본값
 
 다음 표에는 변경된 설정과 추가 정보를 찾을 수 있는 위치가 나와 있습니다.
 
-|속성|켜짐|새 기본값|추가 정보|
+|속성|켜기|새 기본값|추가 정보|
 |--------------|--------|-----------------|------------------------------|
 |channelInitializationTimeout|<xref:System.ServiceModel.NetTcpBinding>|30초|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ChannelInitializationTimeout%2A>|
 |listenBacklog|<xref:System.ServiceModel.NetTcpBinding>|12 * 프로세서 수|<xref:System.ServiceModel.NetTcpBinding.ListenBacklog%2A>|
-|maxPendingAccepts|ConnectionOrientedTransportBindingElement<br /><br /> SMSvcHost.exe|2 * 전송용 프로세서 수<br /><br /> 4 @no__t-Smsvchost.exe에 대 한 프로세서 수 0|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingAccepts%2A> [Net.tcp 포트 공유 서비스를 구성 하는](../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md) 중|
+|maxPendingAccepts|ConnectionOrientedTransportBindingElement<br /><br /> SMSvcHost.exe|2 * 전송용 프로세서 수<br /><br /> 4 \* Smsvchost.exe에 대 한 프로세서 수|[Net.tcp 포트 공유 서비스를 구성](./feature-details/configuring-the-net-tcp-port-sharing-service.md) <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingAccepts%2A>|
 |maxPendingConnections|ConnectionOrientedTransportBindingElement|12 * 프로세서 수|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingConnections%2A>|
-|receiveTimeout|SMSvcHost.exe|30초|[Net.TCP Port Sharing Service 구성](../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)|
+|receiveTimeout|SMSvcHost.exe|30초|[Net.TCP Port Sharing Service 구성](./feature-details/configuring-the-net-tcp-port-sharing-service.md)|
 
 ## <a name="xml-editor-tooltips"></a>XML 편집기 도구 설명
 
@@ -92,13 +92,13 @@ WCF 서비스의 기존 및 새 개발자들이 서비스를 구성하는 데 �
 
 ## <a name="configuring-wcf-services-in-code"></a>코드로 WCF 서비스 구성
 
-WCF (Windows Communication Foundation)를 사용 하면 개발자가 구성 파일 또는 코드를 사용 하 여 서비스를 구성할 수 있습니다. 구성 파일은 배포 후 서비스를 구성해야 하는 경우에 유용합니다. 구성 파일을 사용할 경우 IT 전문가가 구성 파일을 업데이트하기만 하면 되고 다시 컴파일할 필요가 없습니다. 하지만 구성 파일은 관리하기가 복잡하고 어려울 수 있습니다. 구성 파일 디버깅은 지원되지 않으며 구성 요소는 이름으로 참조되므로 구성 파일을 작성하기가 어렵고 오류가 발생하기 쉽습니다. WCF를 사용 하면 코드에서 서비스를 구성할 수도 있습니다. 이전 버전의 WCF (4.0 및 이전 버전)에서 코드의 서비스 구성은 자체 호스팅 시나리오에서 쉽기 때문에 클래스 <xref:System.ServiceModel.ServiceHost> 를 통해 ServiceHost를 호출 하기 전에 끝점과 동작을 구성할 수 있었습니다. 그러나 웹 호스팅 시나리오에서는 <xref:System.ServiceModel.ServiceHost> 클래스에 액세스할 수 없습니다. 웹 호스팅 서비스를 구성하려면 `System.ServiceModel.ServiceHostFactory`를 만들고 필요한 구성을 수행하는 <xref:System.ServiceModel.Activation.ServiceHostFactory>를 만들어야 했습니다. .NET 4.5부터 WCF는 자체 호스팅 서비스와 웹 호스팅 서비스를 코드에서 더 쉽게 구성 하는 방법을 제공 합니다. 자세한 내용은 [코드에서 WCF 서비스 구성](../../../docs/framework/wcf/configuring-wcf-services-in-code.md)을 참조 하세요.
+WCF (Windows Communication Foundation)를 사용 하면 개발자가 구성 파일 또는 코드를 사용 하 여 서비스를 구성할 수 있습니다. 구성 파일은 배포 후 서비스를 구성해야 하는 경우에 유용합니다. 구성 파일을 사용할 경우 IT 전문가가 구성 파일을 업데이트하기만 하면 되고 다시 컴파일할 필요가 없습니다. 하지만 구성 파일은 관리하기가 복잡하고 어려울 수 있습니다. 구성 파일 디버깅은 지원되지 않으며 구성 요소는 이름으로 참조되므로 구성 파일을 작성하기가 어렵고 오류가 발생하기 쉽습니다. WCF를 사용 하면 코드에서 서비스를 구성할 수도 있습니다. 이전 버전의 WCF (4.0 및 이전 버전)에서 코드의 서비스 구성은 자체 호스팅 시나리오에서 쉽기 때문에 <xref:System.ServiceModel.ServiceHost> 클래스를 통해 ServiceHost를 호출 하기 전에 끝점과 동작을 구성할 수 있었습니다. 그러나 웹 호스팅 시나리오에서는 <xref:System.ServiceModel.ServiceHost> 클래스에 액세스할 수 없습니다. 웹 호스팅 서비스를 구성하려면 `System.ServiceModel.ServiceHostFactory`를 만들고 필요한 구성을 수행하는 <xref:System.ServiceModel.Activation.ServiceHostFactory>를 만들어야 했습니다. .NET 4.5부터 WCF는 자체 호스팅 서비스와 웹 호스팅 서비스를 코드에서 더 쉽게 구성 하는 방법을 제공 합니다. 자세한 내용은 [코드에서 WCF 서비스 구성](configuring-wcf-services-in-code.md)을 참조 하세요.
 
 ## <a name="channelfactory-caching"></a>ChannelFactory 캐싱
 
 WCF 클라이언트 애플리케이션에서는 <xref:System.ServiceModel.ChannelFactory%601> 클래스를 사용하여 WCF 서비스와의 통신 채널을 만듭니다. <xref:System.ServiceModel.ChannelFactory%601> 인스턴스를 만들 때는 다음 작업이 필요하기 때문에 약간의 오버헤드가 발생합니다.
 
-1. 생성 된 <xref:System.ServiceModel.Description.ContractDescription> 트리
+1. <xref:System.ServiceModel.Description.ContractDescription> 트리 생성
 
 2. 필요한 모든 CLR 형식 반영
 
@@ -106,7 +106,7 @@ WCF 클라이언트 애플리케이션에서는 <xref:System.ServiceModel.Channe
 
 4. 리소스 삭제
 
-이 오버헤드를 최소화하기 위해 사용자가 WCF 클라이언트 프록시를 사용할 때 WCF가 채널 팩터리를 캐시할 수 있습니다. 자세한 내용은 [채널 팩터리 및 캐싱](../../../docs/framework/wcf/feature-details/channel-factory-and-caching.md)을 참조 하세요.
+이 오버헤드를 최소화하기 위해 사용자가 WCF 클라이언트 프록시를 사용할 때 WCF가 채널 팩터리를 캐시할 수 있습니다. 자세한 내용은 [채널 팩터리 및 캐싱](./feature-details/channel-factory-and-caching.md)을 참조 하세요.
 
 ## <a name="compression-and-the-binary-encoder"></a>압축 및 이진 인코더
 
@@ -122,7 +122,7 @@ HTTP 전송 및 전송 보안을 사용할 경우 단일 WCF 엔드포인트에�
 
 ## <a name="idn-support"></a>IDN 지원
 
-IDN(Internationalized Domain Name)을 사용하는 WCF 서비스에 대한 지원이 추가되었습니다. 자세한 내용은 [WCF 및 국제화 도메인 이름](../../../docs/framework/wcf/feature-details/wcf-and-internationalized-domain-names.md)을 참조 하세요.
+IDN(Internationalized Domain Name)을 사용하는 WCF 서비스에 대한 지원이 추가되었습니다. 자세한 내용은 [WCF 및 국제화 도메인 이름](./feature-details/wcf-and-internationalized-domain-names.md)을 참조 하세요.
 
 ## <a name="httpclient"></a>HttpClient
 
@@ -138,7 +138,7 @@ IDN(Internationalized Domain Name)을 사용하는 WCF 서비스에 대한 지�
 
 ## <a name="paste-data-as-classes"></a>데이터를 클래스로 붙여넣기
 
-WCF 프로젝트에서는 XML에 정의된 데이터 형식(서비스에 노출된 형식 등)을 코드 페이지에 직접 붙여넣을 수 있습니다. XML 형식은 CLR 형식으로 붙여 넣게 됩니다. 자세한 내용은 [XML에서 데이터 형식 클래스 생성](../../../docs/framework/wcf/generating-data-type-classes-from-xml.md) 을 참조 하세요.
+WCF 프로젝트에서는 XML에 정의된 데이터 형식(서비스에 노출된 형식 등)을 코드 페이지에 직접 붙여넣을 수 있습니다. XML 형식은 CLR 형식으로 붙여 넣게 됩니다. 자세한 내용은 [XML에서 데이터 형식 클래스 생성](generating-data-type-classes-from-xml.md) 을 참조 하세요.
 
 ## <a name="webservicehost-and-default-endpoints"></a>WebServiceHost 및 기본 엔드포인트
 

@@ -5,23 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 885037f7-1c2b-4d7a-90d9-06b89be172f2
-ms.openlocfilehash: d3224b1d732fb82ffe68e8ce0bd410850004cb95
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b9790d3fb5fc20b3d2c6ce776070274ef0403732
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967162"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319878"
 ---
 # <a name="how-to-specify-a-service-binding-in-configuration"></a>방법: 구성에서 서비스 바인딩 지정
-이 예제에서 `ICalculator` 계약이 기본 계산기 서비스에 대해 정의되고, 서비스가 `CalculatorService` 클래스에 구현된 다음 해당 엔드포인트가 Web.config 파일에 구성됩니다. 여기서 서비스는 <xref:System.ServiceModel.BasicHttpBinding>을 사용하는 것으로 지정됩니다. 구성 대신 코드를 사용 하 여이 서비스를 구성 하는 방법에 대 한 [자세한 내용은 방법: 코드](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md)에서 서비스 바인딩을 지정 합니다.  
+이 예제에서 `ICalculator` 계약이 기본 계산기 서비스에 대해 정의되고, 서비스가 `CalculatorService` 클래스에 구현된 다음 해당 엔드포인트가 Web.config 파일에 구성됩니다. 여기서 서비스는 <xref:System.ServiceModel.BasicHttpBinding>을 사용하는 것으로 지정됩니다. 구성 대신 코드를 사용 하 여이 서비스를 구성 하는 방법에 대 한 자세한 내용은 [방법: 코드에서 서비스 바인딩 지정](how-to-specify-a-service-binding-in-code.md)을 참조 하세요.  
   
- 일반적으로 바인딩 및 주소 정보를 코드에서 명령적으로 지정하지 않고 구성에서 선언적으로 지정하는 것이 좋습니다. 일반적으로 배포된 서비스의 바인딩과 주소가 서비스를 배포할 때 사용된 바인딩 및 주소와 다르기 때문에 코드로 엔드포인트를 정의하는 것은 효과적이지 않습니다. 일반적으로 바인딩 및 주소 지정 정보를 코드와 구분하면 애플리케이션을 다시 컴파일하거나 다시 배포할 필요 없이 해당 정보를 변경할 수 있습니다.  
+ 일반적으로 바인딩 및 주소 정보를 코드에서 명령적으로 지정하지 않고 구성에서 선언적으로 지정하는 것이 좋습니다. 일반적으로 배포 된 서비스에 대 한 바인딩 및 주소가 서비스를 개발 하는 동안 사용 된 것과 다르기 때문에 일반적으로 코드에서 끝점을 정의 하는 것은 실용적이 지 않습니다. 일반적으로 바인딩 및 주소 지정 정보를 코드와 구분하면 애플리케이션을 다시 컴파일하거나 다시 배포할 필요 없이 해당 정보를 변경할 수 있습니다.  
   
- [구성 편집기 도구 (SvcConfigEditor)](../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)를 사용 하 여 다음 구성 단계를 모두 수행할 수 있습니다.  
+ [구성 편집기 도구 (SvcConfigEditor)](configuration-editor-tool-svcconfigeditor-exe.md)를 사용 하 여 다음 구성 단계를 모두 수행할 수 있습니다.  
   
- 이 예제의 소스 복사에 대해서는 [Basicbinding](../../../docs/framework/wcf/samples/basicbinding.md)을 참조 하세요.  
+ 이 예제의 소스 복사에 대해서는 [Basicbinding](./samples/basicbinding.md)을 참조 하세요.  
   
-### <a name="to-specify-the-basichttpbinding-to-use-to-configure-the-service"></a>서비스를 구성하는 데 사용할 BasicHttpBinding을 지정하려면  
+## <a name="to-specify-the-basichttpbinding-to-use-to-configure-the-service"></a>서비스를 구성하는 데 사용할 BasicHttpBinding을 지정하려면  
   
 1. 서비스 유형에 대한 서비스 계약을 정의합니다.  
   
@@ -79,9 +79,9 @@ ms.locfileid: "69967162"
     <%@ServiceHost language=c# Service="CalculatorService" %>   
     ```  
   
-### <a name="to-modify-the-default-values-of-the-binding-properties"></a>바인딩 속성의 기본값을 수정하려면  
+## <a name="to-modify-the-default-values-of-the-binding-properties"></a>바인딩 속성의 기본값을 수정하려면  
   
-1. 의 <xref:System.ServiceModel.WSHttpBinding>기본 속성 값 중 하나를 수정 하려면 [ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) 요소 내에 새 바인딩 구성 `<binding name="Binding1">` 이름을 만들고이 바인딩에서 바인딩의 특성에 대 한 새 값을 설정 합니다. 요소인. 예를 들어 기본 열기 및 닫기 시간 제한 값을 1분에서 2분으로 변경하려면 구성 파일에 다음을 추가합니다.  
+1. @No__t_0의 기본 속성 값 중 하나를 수정 하려면 [\<wsHttpBinding >](../configure-apps/file-schema/wcf/wshttpbinding.md) 요소 내에 새 바인딩 구성 이름 `<binding name="Binding1">`을 만들고이 바인딩 요소에서 바인딩의 특성에 대 한 새 값을 설정 합니다. 예를 들어 기본 열기 및 닫기 시간 제한 값을 1분에서 2분으로 변경하려면 구성 파일에 다음을 추가합니다.  
   
     ```xml  
     <wsHttpBinding>  
@@ -92,7 +92,7 @@ ms.locfileid: "69967162"
     </wsHttpBinding>  
     ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
-- [바인딩을 사용하여 서비스 및 클라이언트 구성](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [엔드포인트 주소 지정](../../../docs/framework/wcf/specifying-an-endpoint-address.md)
+- [바인딩을 사용하여 서비스 및 클라이언트 구성](using-bindings-to-configure-services-and-clients.md)
+- [엔드포인트 주소 지정](specifying-an-endpoint-address.md)

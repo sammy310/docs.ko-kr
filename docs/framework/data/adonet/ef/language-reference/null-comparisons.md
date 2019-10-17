@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ef88af8c-8dfe-4556-8b56-81df960a900b
-ms.openlocfilehash: 0996b7d864c5892e383cb98d4065e99b096206d1
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 8eca2ee1afec5662e40d4f43347c469bd538c066
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854327"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319491"
 ---
 # <a name="null-comparisons"></a>null 비교
 데이터 소스의 `null` 값은 값을 알 수 없음을 나타냅니다. LINQ to Entities 쿼리에서는 null 값을 확인할 수 있습니다. 즉, null 값 또는 null이 아닌 데이터가 있는 행 에서만 특정 계산 또는 비교가 수행 되도록 할 수 있습니다. 그러나 CLR Null 의미 체계는 데이터 소스의 Null 의미 체계와 다를 수 있습니다. 대부분의 데이터베이스는 세 개의 값으로 구성된 논리 버전을 사용하여 Null 비교를 처리합니다. 즉, Null 값에 대한 비교는 `true` 또는 `false`가 되지 않고 `unknown`이 됩니다. ANSI Null은 이렇게 구현되는 경우가 많지만 항상 그런 것은 아닙니다.  
   
- 기본적으로 SQL Server에서 Null은 Null과 같음 비교는 Null 값을 반환합니다. 다음 예에서는 `ShipDate` 가 null 인 행은 결과 집합에서 제외 되 고 transact-sql 문은 0 개 행을 반환 합니다.  
+ 기본적으로 SQL Server에서 Null은 Null과 같음 비교는 Null 값을 반환합니다. 다음 예에서는 `ShipDate`가 null 인 행이 결과 집합에서 제외 되 고 Transact-sql 문은 0 개 행을 반환 합니다.  
   
-```  
+```sql  
 -- Find order details and orders with no ship date.  
 SELECT h.SalesOrderID  
 FROM Sales.SalesOrderHeader h  
@@ -44,8 +44,8 @@ WHERE h.ShipDate IS Null
  [!code-vb[DP L2E Conceptual Examples#CastResultsIsNull](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#castresultsisnull)]  
   
 ## <a name="passing-null-collections-to-aggregate-functions"></a>Null 컬렉션을 집계 함수에 전달  
- LINQ to Entities에서를 지 원하는 `IQueryable` 컬렉션을 집계 함수에 전달 하면 데이터베이스에서 집계 작업이 수행 됩니다. 메모리 내에서 수행 된 쿼리와 데이터베이스에서 수행 된 쿼리 결과에 차이가 있을 수 있습니다. 메모리 내 쿼리를 사용 하는 경우 일치 하는 항목이 없는 경우 쿼리는 0을 반환 합니다. 데이터베이스에서 동일한 쿼리가 `null`을 반환합니다. `null` 값이 LINQ 집계 함수에 전달 되 면 예외가 throw 됩니다. 가능한 `null` 값을 허용 하려면 쿼리 결과를 수신 하는 형식의 형식 및 속성을 nullable 형식으로 캐스팅 합니다.  
+ LINQ to Entities에서 `IQueryable`를 지 원하는 컬렉션을 집계 함수에 전달 하면 데이터베이스에서 집계 작업이 수행 됩니다. 메모리 내에서 수행 된 쿼리와 데이터베이스에서 수행 된 쿼리 결과에 차이가 있을 수 있습니다. 메모리 내 쿼리를 사용 하는 경우 일치 하는 항목이 없는 경우 쿼리는 0을 반환 합니다. 데이터베이스에서 동일한 쿼리가 `null`을 반환합니다. @No__t_0 값이 LINQ 집계 함수에 전달 되 면 예외가 throw 됩니다. 가능한 `null` 값을 허용 하려면 쿼리 결과를 받는 형식의 형식 및 속성을 nullable 형식으로 캐스팅 합니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [LINQ to Entities 쿼리의 식](expressions-in-linq-to-entities-queries.md)

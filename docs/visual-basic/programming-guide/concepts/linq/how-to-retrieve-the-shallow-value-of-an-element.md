@@ -1,15 +1,15 @@
 ---
-title: '방법: (Visual Basic) 요소의 단순 값 검색'
+title: '방법: 요소의 단순 값 검색 (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 730a6670-fb8c-41fc-8a1b-eb97a837e432
-ms.openlocfilehash: 69e85c3b87ef1052bbb3eab832f93774fa35066f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 184186a92865b022118b9989633a97c75274e7f4
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61918088"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320429"
 ---
-# <a name="how-to-retrieve-the-shallow-value-of-an-element-visual-basic"></a>방법: (Visual Basic) 요소의 단순 값 검색
+# <a name="how-to-retrieve-the-shallow-value-of-an-element-visual-basic"></a>방법: 요소의 단순 값 검색 (Visual Basic)
 
 이 항목에서는 요소의 부분 값을 가져오는 방법을 보여 줍니다. 단일 문자열로 연결된 모든 하위 요소의 값을 포함하는 상세 값과 달리 부분 값은 특정 요소의 값입니다.
 
@@ -69,13 +69,13 @@ End Module
 
 이 예제는 다음과 같은 출력을 생성합니다.
 
-```
+```console
 Column  Name="CustomerId"   =Customer.CustomerId.Heading
 Column  Name="Name"         =Customer.Name.Heading
 Column  Name="CustomerId"   =Customer.CustomerId
 Column  Name="Name"         =Customer.Name
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [LINQ to XML 축(Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)

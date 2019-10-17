@@ -2,19 +2,19 @@
 title: REF(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: c5f4cb35-69e9-44cc-b63b-ee38922bbda1
-ms.openlocfilehash: 9d35306d1299e91ecaa55a7d2818ee1e2982793f
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 08bcaad4fdc0cf5324ff9976fcf48c23b206e72f
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249193"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319388"
 ---
 # <a name="ref-entity-sql"></a>REF(Entity SQL)
 엔터티 인스턴스에 대한 참조를 반환합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```sql  
 REF( expression )   
 ```  
   
@@ -25,7 +25,7 @@ REF( expression )
 ## <a name="return-value"></a>반환 값  
  지정한 엔터티 인스턴스에 대한 참조입니다.  
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
  엔터티 참조는 엔터티 키와 엔터티 집합 이름으로 구성됩니다. 여러 엔터티 집합이 같은 엔터티 형식을 기반으로 할 수 있으므로 특정 엔터티 키가 여러 엔터티 집합에 나타날 수 있습니다. 하지만 엔터티 참조는 항상 고유합니다. 입력 식이 보관된 엔터티를 나타내는 경우 이 엔터티에 대한 참조가 반환됩니다. 입력 식이 보관된 엔터티가 아닌 경우 Null 참조가 반환됩니다.  
   
  속성 추출 연산자(.)를 사용하여 엔터티의 속성에 액세스하면 해당 참조가 자동으로 역참조됩니다.  
@@ -33,13 +33,13 @@ REF( expression )
 ## <a name="example"></a>예제  
  다음 Entity SQL 쿼리는 REF 연산자를 사용하여 입력 엔터티 인수에 대한 참조를 반환합니다. 속성 추출 연산자(.)를 사용하여 Product 엔터티의 속성에 액세스하고 있으므로 같은 쿼리에서 참조를 역참조합니다. 쿼리는 AdventureWorks Sales 모델을 기반으로 합니다. 이 쿼리를 컴파일하고 실행하려면 다음 단계를 수행하세요.  
   
-1. [방법: PrimitiveType 결과](../how-to-execute-a-query-that-returns-primitivetype-results.md)를 반환 하는 쿼리를 실행 합니다.  
+1. [방법: PrimitiveType 결과를 반환 하는 쿼리 실행](../how-to-execute-a-query-that-returns-primitivetype-results.md)의 절차를 따릅니다.  
   
 2. 다음 쿼리를 `ExecutePrimitiveTypeQuery` 메서드에 인수로 전달합니다.  
   
- [!code-csharp[DP EntityServices Concepts 2#REF](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#ref)]  
+ [!code-sql[DP EntityServices Concepts#REF](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#ref)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [DEREF](deref-entity-sql.md)
 - [CREATEREF](createref-entity-sql.md)

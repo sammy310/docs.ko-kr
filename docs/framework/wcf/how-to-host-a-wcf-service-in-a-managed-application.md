@@ -1,45 +1,45 @@
 ---
-title: '방법: 관리형 애플리케이션에서 WCF 서비스 호스트'
+title: '방법: 관리되는 애플리케이션에서 WCF 서비스 호스팅'
 ms.date: 09/17/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5eb29db0-b6dc-4e77-8c68-0a62f79d743b
-ms.openlocfilehash: b6d1c9c38e2cc5f1b1b7b5538af0339987563de6
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: e3adcad6ba70aa64b797325cd45a043301d7e680
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637587"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320973"
 ---
-# <a name="how-to-host-a-wcf-service-in-a-managed-app"></a>방법: 관리 되는 앱에서 WCF 서비스 호스팅
+# <a name="how-to-host-a-wcf-service-in-a-managed-app"></a>방법: 관리 되는 응용 프로그램에서 WCF 서비스 호스팅
 
 관리되는 애플리케이션 내에서 서비스를 호스팅하려면 관리되는 애플리케이션 코드 내에 서비스에 대한 코드를 포함하고, 코드에서 명령적으로, 구성을 통해 선언적으로 또는 기본 엔드포인트를 사용해 서비스에 대한 엔드포인트를 정의한 다음 <xref:System.ServiceModel.ServiceHost>의 인스턴스를 만듭니다.
 
-메시지 받기를 시작하려면 <xref:System.ServiceModel.ICommunicationObject.Open%2A>에서 <xref:System.ServiceModel.ServiceHost>을 호출합니다. 이렇게 하면 서비스에 대한 수신기가 만들어지고 열립니다. 관리되는 응용 프로그램이 호스팅 작업을 직접 수행하므로 이런 방식으로 서비스를 호스팅하는 것을 "자체 호스팅"이라고 합니다. 서비스를 닫으려면 <xref:System.ServiceModel.Channels.CommunicationObject.Close%2A?displayProperty=nameWithType>에서 <xref:System.ServiceModel.ServiceHost>를 호출합니다.
+메시지 받기를 시작하려면 <xref:System.ServiceModel.ICommunicationObject.Open%2A>에서 <xref:System.ServiceModel.ServiceHost>을 호출합니다. 이렇게 하면 서비스에 대한 수신기가 만들어지고 열립니다. 관리되는 애플리케이션이 호스팅 작업을 직접 수행하므로 이런 방식으로 서비스를 호스팅하는 것을 &quot;자체 호스팅&quot;이라고 합니다. 서비스를 닫으려면 <xref:System.ServiceModel.Channels.CommunicationObject.Close%2A?displayProperty=nameWithType>에서 <xref:System.ServiceModel.ServiceHost>를 호출합니다.
 
-서비스는 관리되는 Windows 서비스, IIS(인터넷 정보 서비스) 또는 WAS(Windows Process Activation Service)에서 호스팅될 수도 있습니다. 호스팅 서비스에 대 한 옵션에 대 한 자세한 내용은 참조 하세요. [호스팅 서비스](../../../docs/framework/wcf/hosting-services.md)합니다.
+서비스는 관리되는 Windows 서비스, IIS(인터넷 정보 서비스) 또는 WAS(Windows Process Activation Service)에서 호스팅될 수도 있습니다. 서비스의 호스팅 옵션에 대 한 자세한 내용은 [호스팅 서비스](hosting-services.md)를 참조 하세요.
 
-관리되는 애플리케이션에서 서비스를 호스팅할 경우 최소한의 배포 인프라를 필요로 하기 때문에 가장 유연한 옵션입니다. 관리 되는 응용 프로그램에서 서비스를 호스트 하는 방법에 대 한 자세한 내용은 참조 하세요. [관리 되는 응용 프로그램에서 호스팅](../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md)합니다.
+관리되는 애플리케이션에서 서비스를 호스팅할 경우 최소한의 배포 인프라를 필요로 하기 때문에 가장 유연한 옵션입니다. 관리 되는 응용 프로그램에서 서비스를 호스팅하는 방법에 대 한 자세한 내용은 [관리 되는 응용 프로그램에서 호스팅](./feature-details/hosting-in-a-managed-application.md)을 참조 하세요.
 
 다음 절차에서는 콘솔 애플리케이션에서 자체 호스팅된 서비스를 구현하는 방법을 보여 줍니다.
 
-## <a name="create-a-self-hosted-service"></a>자체 호스팅된 서비스 만들기
+## <a name="create-a-self-hosted-service"></a>자체 호스팅 서비스 만들기
 
 1. 새 콘솔 응용 프로그램을 만듭니다.
 
-   1. Visual Studio를 열고 선택 **새로 만들기** > **프로젝트** 에서 합니다 **파일** 메뉴.
+   1. Visual Studio를 열고 **파일** 메뉴에서 **새로 만들기**  > **프로젝트** 를 선택 합니다.
 
-   2. 에 **설치 된 템플릿** 목록에서 **Visual C#** 또는 **Visual Basic**를 선택한 후 **Windows Desktop**합니다.
+   2. **설치 된 템플릿** 목록에서  **C# 시각적 개체** 또는 **Visual Basic**을 선택한 다음 **Windows 데스크톱**을 선택 합니다.
 
-   3. 선택 된 **콘솔 앱** 템플릿. 형식 `SelfHost` 에 **이름** 확인란을 선택한 다음 **확인**합니다.
+   3. **콘솔 앱** 템플릿을 선택 합니다. **이름** 상자에 `SelfHost`를 입력 한 다음 **확인을**선택 합니다.
 
-2. 마우스 오른쪽 단추로 클릭 **SelfHost** 에 **솔루션 탐색기** 선택한 **참조 추가**합니다. 선택 **System.ServiceModel** 에서 합니다 **.NET** 탭을 선택한 다음 **확인**합니다.
+2. **솔루션 탐색기** 에서 **SelfHost** 을 마우스 오른쪽 단추로 클릭 하 고 **참조 추가**를 선택 합니다. **.Net** 탭에서 **system.servicemodel** 을 선택 하 고 **확인**을 선택 합니다.
 
     > [!TIP]
-    > 경우는 **솔루션 탐색기** 창이 표시, 선택 되지 않으면 **솔루션 탐색기** 에서 합니다 **뷰** 메뉴.
+    > **솔루션 탐색기** 창이 표시 되지 않으면 **보기** 메뉴에서 **솔루션 탐색기** 를 선택 합니다.
 
-3. 두 번 클릭 **Program.cs** 하거나 **Module1.vb** 에서 **솔루션 탐색기** 열려 있지 않으면 코드 창에서 엽니다. 파일의 맨 위에 다음 문을 추가 합니다.
+3. **솔루션 탐색기** 에서 **Program.cs** 또는 module1.vb를 두 번 클릭 하 여 코드 창에서 엽니다 (아직 열려 있지 않은 경우 **).** 파일의 맨 위에 다음 문을 추가 합니다.
 
      [!code-csharp[CFX_SelfHost4#1](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_selfhost4/cs/program.cs#1)]
      [!code-vb[CFX_SelfHost4#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#1)]
@@ -50,7 +50,7 @@ ms.locfileid: "65637587"
      [!code-vb[CFX_SelfHost4#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#2)]
 
     > [!NOTE]
-    > 정의 및 서비스 인터페이스를 구현 하는 방법에 대 한 자세한 내용은 참조 하세요. [방법: 서비스 계약을 정의](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md) 고 [방법: 서비스 계약을 구현](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)합니다.
+    > 서비스 인터페이스를 정의 하 고 구현 하는 방법에 대 한 자세한 내용은 [방법: 서비스 계약 정의](how-to-define-a-wcf-service-contract.md) 및 [방법: 서비스 계약 구현](how-to-implement-a-wcf-contract.md)을 참조 하세요.
 
 5. 서비스의 기본 주소를 사용하여 `Main` 메서드 맨 위에 <xref:System.Uri> 클래스의 인스턴스를 만듭니다.
 
@@ -63,29 +63,29 @@ ms.locfileid: "65637587"
      [!code-vb[CFX_SelfHost4#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#4)]
 
     > [!NOTE]
-    > 이 예제에서는 기본 엔드포인트를 사용하며, 이 서비스에는 구성 파일이 필요하지 않습니다. 엔드포인트를 구성하지 않으면 런타임이 서비스에서 구현되는 각 서비스 계약의 각 기본 주소에 대해 엔드포인트를 하나씩 만듭니다. 기본 끝점에 대 한 자세한 내용은 참조 하세요. [Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md) 하 고 [Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)합니다.
+    > 이 예제에서는 기본 엔드포인트를 사용하며, 이 서비스에는 구성 파일이 필요하지 않습니다. 엔드포인트를 구성하지 않으면 런타임이 서비스에서 구현되는 각 서비스 계약의 각 기본 주소에 대해 엔드포인트를 하나씩 만듭니다. 기본 끝점에 대 한 자세한 내용은 [WCF 서비스에 대 한](./samples/simplified-configuration-for-wcf-services.md) [간소화 된 구성](simplified-configuration.md) 및 단순화 된 구성을 참조 하세요.
 
-7. 키를 눌러 **Ctrl**+**Shift**+**B** 솔루션을 빌드합니다.
+7. **Ctrl** +**shift** +**B** 를 눌러 솔루션을 빌드합니다.
 
 ## <a name="test-the-service"></a>서비스 테스트
 
-1. 키를 눌러 **Ctrl**+**F5** 서비스를 실행 합니다.
+1. **Ctrl** +**f5** 키를 눌러 서비스를 실행 합니다.
 
-2. 오픈 **WCF 테스트 클라이언트**합니다.
+2. **WCF 테스트 클라이언트**를 엽니다.
 
     > [!TIP]
-    > 열려는 **WCF 테스트 클라이언트**, Visual Studio 용 개발자 명령 프롬프트를 열고 및 실행 **WcfTestClient.exe**합니다.
+    > **WCF 테스트 클라이언트**를 열려면 Visual Studio에 대 한 개발자 명령 프롬프트를 열고 **wcftestclient.exe**를 실행 합니다.
 
-3. 선택 **추가 서비스** 에서 합니다 **파일** 메뉴.
+3. **파일** 메뉴에서 **서비스 추가** 를 선택 합니다.
 
-4. 형식 `http://localhost:8080/hello` 주소 상자에 클릭 **확인**합니다.
+4. 주소 상자에 `http://localhost:8080/hello`을 입력 하 고 **확인을**클릭 합니다.
 
     > [!TIP]
     > 서비스가 실행 중인지 확인하십시오. 그렇지 않으면 이 단계는 실패합니다. 코드에서 기본 주소를 변경한 경우에는 이 단계에서 수정된 기본 주소를 사용하십시오.
 
-5. 두 번 클릭 **SayHello** 아래의 합니다 **내 서비스 프로젝트** 노드. 에 사용자 이름을 입력 합니다 **값** 열에는 **요청** 목록 및 클릭 **Invoke**합니다.
+5. **내 서비스 프로젝트** 노드 아래에서 **SayHello** 를 두 번 클릭 합니다. **요청** 목록에서 **값** 열에 이름을 입력 하 고 **호출**을 클릭 합니다.
 
-   회신 메시지에 표시 합니다 **응답** 목록입니다.
+   **응답** 목록에 회신 메시지가 표시 됩니다.
 
 ## <a name="example"></a>예제
 
@@ -94,16 +94,16 @@ ms.locfileid: "65637587"
 [!code-csharp[CFX_SelfHost4#5](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_selfhost4/cs/program.cs#5)]
 [!code-vb[CFX_SelfHost4#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#5)]
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Uri>
 - <xref:System.Configuration.ConfigurationManager.AppSettings%2A>
 - <xref:System.Configuration.ConfigurationManager>
-- [방법: IIS에서 WCF 서비스 호스팅](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)
-- [자체 호스팅](../../../docs/framework/wcf/samples/self-host.md)
-- [서비스 호스팅](../../../docs/framework/wcf/hosting-services.md)
-- [방법: 서비스 계약 정의](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)
-- [방법: 서비스 계약 구현](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)
-- [ServiceModel Metadata 유틸리티 도구(Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
-- [바인딩을 사용하여 서비스 및 클라이언트 구성](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [시스템 제공 바인딩](../../../docs/framework/wcf/system-provided-bindings.md)
+- [방법: IIS에서 WCF 서비스 호스트](./feature-details/how-to-host-a-wcf-service-in-iis.md)
+- [자체 호스팅](./samples/self-host.md)
+- [서비스 호스팅](hosting-services.md)
+- [방법: 서비스 계약 정의](how-to-define-a-wcf-service-contract.md)
+- [방법: 서비스 계약 구현](how-to-implement-a-wcf-contract.md)
+- [ServiceModel Metadata 유틸리티 도구(Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md)
+- [바인딩을 사용하여 서비스 및 클라이언트 구성](using-bindings-to-configure-services-and-clients.md)
+- [시스템 제공 바인딩](system-provided-bindings.md)

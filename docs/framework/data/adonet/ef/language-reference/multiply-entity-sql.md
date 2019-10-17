@@ -2,19 +2,19 @@
 title: '* 곱하기 (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: 508ce246-4e86-47dd-a605-4af4bebb9891
-ms.openlocfilehash: 19fb73d327f91303de938a5f49866339413b9698
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 7006f5143e8cc18156f748ae7664f3787c9ff5c9
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250056"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319606"
 ---
 # <a name="-multiply-entity-sql"></a>* (곱하기) (Entity SQL)
 두 식을 곱합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```sql  
 expression * expression  
 ```  
   
@@ -28,12 +28,12 @@ expression * expression
 ## <a name="example"></a>예제  
  다음 Entity SQL 쿼리에서는 * 산술 연산자를 사용하여 두 숫자를 곱합니다. 쿼리는 AdventureWorks Sales 모델을 기반으로 합니다. 이 쿼리를 컴파일하고 실행하려면 다음 단계를 수행하세요.  
   
-1. [방법: StructuralType 결과](../how-to-execute-a-query-that-returns-structuraltype-results.md)를 반환 하는 쿼리를 실행 합니다.  
+1. [How to: Execute a Query that Returns StructuralType Results](../how-to-execute-a-query-that-returns-structuraltype-results.md)의 절차를 따릅니다.  
   
 2. 다음 쿼리를 `ExecuteStructuralTypeQuery` 메서드에 인수로 전달합니다.  
   
- [!code-csharp[DP EntityServices Concepts 2#MULTIPLY](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#multiply)]  
+ [!code-sql[DP EntityServices Concepts#MULTIPLY](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#multiply)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [엔터티 SQL 참조](entity-sql-reference.md)
