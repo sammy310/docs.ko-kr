@@ -17,6 +17,8 @@
       href: file-format.md
     - name: '방법: .NET Core에서 어셈블리 언로드 기능 사용 및 디버그'
       href: unloadability.md
+    - name: 참조 어셈블리
+      href: reference-assemblies.md
     - name: 어셈블리 로드 해결
       href: resolve-loads.md
     - name: 어셈블리를 사용한 프로그램
@@ -54,9 +56,9 @@
         - name: Friend 어셈블리
           href: friend.md
           items:
-            - name: '방법: 서명되지 않은 Friend 어셈블리 만들기'
+            - name: '방법: 서명되지 않은 friend 어셈블리 만들기'
               href: create-unsigned-friend.md
-            - name: '방법: 서명된 Friend 어셈블리 만들기'
+            - name: '방법: 서명된 friend 어셈블리 만들기'
               href: create-signed-friend.md
         - name: '방법: 파일이 어셈블리인지 확인'
           href: identify.md
