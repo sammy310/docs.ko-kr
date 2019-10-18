@@ -1,0 +1,40 @@
+- name: 'C# 6.0 초안 사양'
+  items:
+    - name: 소개
+      href: ../../../../_csharplang/spec/introduction.md
+    - name: 어휘 구조
+      href: ../../../../_csharplang/spec/lexical-structure.md
+    - name: 기본 개념
+      href: ../../../../_csharplang/spec/basic-concepts.md
+    - name: 유형
+      href: ../../../../_csharplang/spec/types.md
+    - name: 변수
+      href: ../../../../_csharplang/spec/variables.md
+    - name: 변환
+      href: ../../../../_csharplang/spec/conversions.md
+    - name: 표현식
+      href: ../../../../_csharplang/spec/expressions.md
+    - name: 문
+      href: ../../../../_csharplang/spec/statements.md
+    - name: 네임스페이스
+      href: ../../../../_csharplang/spec/namespaces.md
+    - name: 클래스
+      href: ../../../../_csharplang/spec/classes.md
+    - name: 구조체
+      href: ../../../../_csharplang/spec/structs.md
+    - name: 배열
+      href: ../../../../_csharplang/spec/arrays.md
+    - name: 인터페이스
+      href: ../../../../_csharplang/spec/interfaces.md
+    - name: 열거형
+      href: ../../../../_csharplang/spec/enums.md
+    - name: 대리자
+      href: ../../../../_csharplang/spec/delegates.md
+    - name: 예외
+      href: ../../../../_csharplang/spec/exceptions.md
+    - name: 특성
+      href: ../../../../_csharplang/spec/attributes.md
+    - name: 안전하지 않은 코드
+      href: ../../../../_csharplang/spec/unsafe-code.md
+    - name: 설명서 주석
+      href: ../../../../_csharplang/spec/documentation-comments.md

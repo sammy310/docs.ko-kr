@@ -4,12 +4,12 @@ description: 이식 프로세스를 이해하고 .NET Framework 프로젝트를 
 author: cartermp
 ms.date: 09/13/2019
 ms.custom: seodec18
-ms.openlocfilehash: b6c02932b5d9c7ccc2743dd38dddf2904f9c24e4
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: c349f7df3726e7a9814e5ad5e738742ab1bb9ff8
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039656"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522991"
 ---
 # <a name="port-your-code-from-net-framework-to-net-core"></a>.NET Framework에서 .NET Core로 코드 포팅
 
@@ -41,9 +41,9 @@ ms.locfileid: "71039656"
 
 다음 목록은 포팅 프로세스 중에 사용하면 도움이 되는 도구를 보여 줍니다.
 
-* .NET 이식성 분석기 - [명령줄 도구](https://github.com/Microsoft/dotnet-apiport/releases) 또는 [Visual Studio Extension](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer)으로, .NET Framework와 대상 .NET Core 간에 코드를 이식할 수 있는 정도에 대한 보고서를 생성할 수 있는 도구입니다. 이 보고서에는 대상 .NET Core 플랫폼에서 누락된 유형 및 API의 어셈블리별 분석이 포함되어 있습니다. 자세한 내용은 [.NET 이식성 분석기](../../standard/analyzers/portability-analyzer.md)를 참조하세요. 특정 대상 .NET 플랫폼 공개 화면에서 누락된 API의 간격을 식별하는 데 도움이 되므로 이식을 시작하기 전에 .NET 이식성 분석기 도구를 실행하는 것이 좋습니다.
-* .NET API 분석기 - 여러 플랫폼에서 <xref:System.PlatformNotSupportedException>을 throw하는 .NET Standard API를 검색하고 더 이상 사용되지 않는 호출을 탐색하며, 다른 플랫폼에서 C# API에 대한 잠재적 호환성 위험을 검색하는 Roslyn 분석기입니다. 자세한 내용은 [.NET API 분석기](../../standard/analyzers/api-analyzer.md)를 참조하세요. 이 분석기는 이미 다른 플랫폼에서 런타임 동작의 차이점을 식별하기 위해 .NET Core 프로젝트를 만든 후에 유용합니다.
-* 역방향 패키지 검색 - 형식을 검색하고 해당 형식을 포함하는 패키지를 찾을 수 있는 [유용한 웹 서비스](https://packagesearch.azurewebsites.net)입니다.
+- .NET 이식성 분석기 - [명령줄 도구](https://github.com/Microsoft/dotnet-apiport/releases) 또는 [Visual Studio Extension](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer)으로, .NET Framework와 대상 .NET Core 간에 코드를 이식할 수 있는 정도에 대한 보고서를 생성할 수 있는 도구입니다. 이 보고서에는 대상 .NET Core 플랫폼에서 누락된 유형 및 API의 어셈블리별 분석이 포함되어 있습니다. 자세한 내용은 [.NET 이식성 분석기](../../standard/analyzers/portability-analyzer.md)를 참조하세요. 특정 대상 .NET 플랫폼 공개 화면에서 누락된 API의 간격을 식별하는 데 도움이 되므로 이식을 시작하기 전에 .NET 이식성 분석기 도구를 실행하는 것이 좋습니다.
+- .NET API 분석기 - 여러 플랫폼에서 <xref:System.PlatformNotSupportedException>을 throw하는 .NET Standard API를 검색하고 더 이상 사용되지 않는 호출을 탐색하며, 다른 플랫폼에서 C# API에 대한 잠재적 호환성 위험을 검색하는 Roslyn 분석기입니다. 자세한 내용은 [.NET API 분석기](../../standard/analyzers/api-analyzer.md)를 참조하세요. 이 분석기는 이미 다른 플랫폼에서 런타임 동작의 차이점을 식별하기 위해 .NET Core 프로젝트를 만든 후에 유용합니다.
+- 역방향 패키지 검색 - 형식을 검색하고 해당 형식을 포함하는 패키지를 찾을 수 있는 [유용한 웹 서비스](https://packagesearch.azurewebsites.net)입니다.
 
 또한 [CsprojToVs2017](https://github.com/hvanbakel/CsprojToVs2017) 도구를 사용하여 작은 솔루션 또는 개별 프로젝트를 .NET Core 프로젝트 파일 형식으로 포팅할 수 있습니다.
 
