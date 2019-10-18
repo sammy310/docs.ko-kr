@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XML comments
 - XML documentation [Visual Basic], creating
 ms.assetid: 27b5b06c-09b9-496a-8245-f9542d846230
-ms.openlocfilehash: ff93a7bb2d8fdef68fc956d4c569ca5ad37afb2c
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 5b317706e3e8e0c5958f5a3d0fd859d68600bc7a
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71054110"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72524484"
 ---
 # <a name="how-to-create-xml-documentation-in-visual-basic"></a>방법: Visual Basic에서 XML 문서 만들기
 
@@ -22,23 +22,23 @@ ms.locfileid: "71054110"
 
 1. **코드 편집기**에서 문서를 만들 형식 또는 멤버 위의 줄에 커서를 놓습니다.
 
-2. ( `'''` 세 개의 작은 따옴표)를 입력 합니다.
+2. @No__t_0 (세 개의 작은따옴표)를 입력 합니다.
 
     형식 또는 멤버에 대 한 XML 뼈대가 **코드 편집기**에 추가 됩니다.
 
 3. 적절 한 태그 사이에 설명 정보를 추가 합니다.
 
     > [!NOTE]
-    > XML 문서 블록 내에 줄을 추가 하는 경우 각 줄은로 `'''`시작 해야 합니다.
+    > XML 문서 블록 내에 줄을 추가 하는 경우 각 줄은 `'''`으로 시작 해야 합니다.
 
 4. 형식 또는 멤버를 사용 하는 코드를 새 XML 문서 주석과 함께 추가 합니다.
 
-    IntelliSense는 형식 또는 멤버에 \<대 한 요약 > 태그의 텍스트를 표시 합니다.
+    IntelliSense는 형식 또는 멤버에 대 한 \<summary > 태그의 텍스트를 표시 합니다.
 
-5. 코드를 컴파일하여 문서 주석을 포함 하는 XML 파일을 생성 합니다. 자세한 내용은 [/doc](../../../visual-basic/reference/command-line-compiler/doc.md)를 참조하세요.
+5. 코드를 컴파일하여 문서 주석을 포함 하는 XML 파일을 생성 합니다. 자세한 내용은 [-doc](../../../visual-basic/reference/command-line-compiler/doc.md)를 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [코드를 XML로 문서화](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)
 - [XML 주석 태그](../../../visual-basic/language-reference/xmldoc/index.md)
-- [/doc](../../../visual-basic/reference/command-line-compiler/doc.md)
+- [-doc](../../../visual-basic/reference/command-line-compiler/doc.md)
