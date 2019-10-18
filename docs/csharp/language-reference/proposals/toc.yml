@@ -1,0 +1,80 @@
+- name: 최신 기능 사양
+  items:
+    - name: 'C# 7.0 사양 제안'
+      items:
+        - name: 패턴 일치
+          href: ../../../../_csharplang/proposals/csharp-7.0/pattern-matching.md
+        - name: 로컬 함수
+          href: ../../../../_csharplang/proposals/csharp-7.0/local-functions.md
+        - name: 출력 변수 선언
+          href: ../../../../_csharplang/proposals/csharp-7.0/out-var.md
+        - name: Throw 식
+          href: ../../../../_csharplang/proposals/csharp-7.0/throw-expression.md
+        - name: 이진 리터럴
+          href: ../../../../_csharplang/proposals/csharp-7.0/binary-literals.md
+        - name: 자릿수 구분 기호
+          href: ../../../../_csharplang/proposals/csharp-7.0/digit-separators.md
+    - name: 'C# 7.1 사양 제안'
+      items:
+        - name: 비동기 Main 메서드
+          href: ../../../../_csharplang/proposals/csharp-7.1/async-main.md
+        - name: 기본 식
+          href: ../../../../_csharplang/proposals/csharp-7.1/target-typed-default.md
+        - name: 튜플 이름 유추
+          href: ../../../../_csharplang/proposals/csharp-7.1/infer-tuple-names.md
+        - name: 제네릭과 패턴 일치
+          href: ../../../../_csharplang/proposals/csharp-7.1/generics-pattern-match.md
+    - name: 'C# 7.2 사양 제안'
+      items:
+        - name: 읽기 전용 참조
+          href: ../../../../_csharplang/proposals/csharp-7.2/readonly-ref.md
+        - name: ref 유사 형식에 대한 컴파일 시간 안전
+          href: ../../../../_csharplang/proposals/csharp-7.2/span-safety.md
+        - name: 뒤에 오지 않는 명명된 인수
+          href: ../../../../_csharplang/proposals/csharp-7.2/non-trailing-named-arguments.md
+        - name: 비공개 보호
+          href: ../../../../_csharplang/proposals/csharp-7.2/private-protected.md
+        - name: 조건부 참조
+          href: ../../../../_csharplang/proposals/csharp-7.2/conditional-ref.md
+        - name: 선행 숫자 구분 기호
+          href: ../../../../_csharplang/proposals/csharp-7.2/leading-separator.md
+    - name: 'C# 7.3 사양 제안'
+      items:
+        - name: 관리되지 않는 제네릭 형식 제약 조건
+          href: ../../../../_csharplang/proposals/csharp-7.3/blittable.md
+        - name: 이동 가능/이동 불가능 컨텍스트에 관계없이 `fixed` 필드 인덱싱에는 고정이 필요하지 않음
+          href: ../../../../_csharplang/proposals/csharp-7.3/indexing-movable-fixed-fields.md
+        - name: 패턴 기반 `fixed` 문
+          href: ../../../../_csharplang/proposals/csharp-7.3/pattern-based-fixed.md
+        - name: 참조 로컬 재할당
+          href: ../../../../_csharplang/proposals/csharp-7.3/ref-local-reassignment.md
+        - name: Stackalloc 배열 이니셜라이저
+          href: ../../../../_csharplang/proposals/csharp-7.3/stackalloc-array-initializers.md
+        - name: 자동 구현 속성 필드 대상 특성
+          href: ../../../../_csharplang/proposals/csharp-7.3/auto-prop-field-attrs.md
+        - name: 이니셜라이저의 식 변수
+          href: ../../../../_csharplang/proposals/csharp-7.3/expression-variables-in-initializers.md
+        - name: 튜플 같음(==) 및 같지 않음(!=)
+          href: ../../../../_csharplang/proposals/csharp-7.3/tuple-equality.md
+        - name: 향상된 오버로드 후보
+          href: ../../../../_csharplang/proposals/csharp-7.3/improved-overload-candidates.md
+    - name: 'C# 8.0 사양 제안'
+      items:
+        - name: Nullable 참조 형식 - 제안
+          href: ../../../../_csharplang/proposals/csharp-8.0/nullable-reference-types.md
+        - name: Nullable 참조 형식 - 사양
+          href: ../../../../_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md
+        - name: 재귀 패턴 일치
+          href: ../../../../_csharplang/proposals/csharp-8.0/patterns.md
+        - name: 기본 인터페이스 메서드
+          href: ../../../../_csharplang/proposals/csharp-8.0/default-interface-methods.md
+        - name: 비동기 스트림
+          href: ../../../../_csharplang/proposals/csharp-8.0/async-streams.md
+        - name: 범위
+          href: ../../../../_csharplang/proposals/csharp-8.0/ranges.md
+        - name: 패턴 기반 using 및 using 선언
+          href: ../../../../_csharplang/proposals/csharp-8.0/using.md
+        - name: Null 결합 할당
+          href: ../../../../_csharplang/proposals/csharp-8.0/null-coalescing-assignment.md
+        - name: 읽기 전용 인스턴스 멤버
+          href: ../../../../_csharplang/proposals/csharp-8.0/readonly-instance-members.md
