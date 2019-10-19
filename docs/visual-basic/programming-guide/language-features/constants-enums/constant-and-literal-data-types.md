@@ -9,45 +9,45 @@ helpviewer_keywords:
 - literals [Visual Basic], coercing data type
 - declarations [Visual Basic], data types
 ms.assetid: 057206d2-3a5b-40b9-b3af-57446f9b52fa
-ms.openlocfilehash: 50e36aa13439bafcca27a7153a8c5d6043f03975
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9db7fa3f36021a39fafe6cf3da5af7070f0b5b0d
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906973"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582972"
 ---
 # <a name="constant-and-literal-data-types-visual-basic"></a>상수 및 리터럴 데이터 형식(Visual Basic)
-리터럴 값인 변수의 값 또는 숫자 3 또는 문자열 "Hello"와 같은 식의 결과가 아니라 자체적으로 표현 됩니다. 상수는 리터럴 대신 해당 값이 달라질 변수와 달리 프로그램 전체에서이 동일한 값을 유지 하는 의미 있는 이름입니다.  
+리터럴은 변수 값 또는 식의 결과 (예: 숫자 3 또는 문자열 "Hello")가 아니라 자체로 표현 되는 값입니다. 상수는 리터럴 자리를 사용 하 고 값이 변경 될 수 있는 변수와 달리 프로그램 전체에서 동일한 값을 유지 하는 의미 있는 이름입니다.  
   
- 때 [Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md) 은 `Off` 하 고 [Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md) 는 `On`, 데이터 형식으로 모든 상수를 명시적으로 선언 해야 합니다. 다음 예제에서는 데이터의 유형은 `MyByte` 데이터 형식으로 명시적으로 선언 된 `Byte`:  
+ [옵션 유추](../../../../visual-basic/language-reference/statements/option-infer-statement.md) 가 `Off` 되 고 [option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md) 가 `On` 경우 데이터 형식을 사용 하 여 명시적으로 모든 상수를 선언 해야 합니다. 다음 예에서는 `MyByte` 데이터 형식이 명시적으로 `Byte` 데이터 형식으로 선언 됩니다.  
   
  [!code-vb[VbVbalrConstants#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConstants/VB/Class1.vb#1)]  
   
- 때 `Option Infer` 은 `On` 또는 `Option Strict` 은 `Off`를 사용 하 여 데이터 형식을 지정 하지 않고 상수를 선언할 수 있습니다는 `As` 절. 컴파일러는 상수 식의 형식에서 형식을 결정합니다. 기본적으로 캐스팅 된 리터럴 숫자 정수는 `Integer` 데이터 형식입니다. 부동 소수점 숫자에 대 한 기본 데이터 형식 `Double`, 및 키워드 `True` 하 고 `False` 지정을 `Boolean` 상수입니다.  
+ @No__t_0 `On` 또는 `Option Strict` `Off` 경우에는 `As` 절을 사용 하 여 데이터 형식을 지정 하지 않고 상수를 선언할 수 있습니다. 컴파일러는 식의 형식에서 상수의 형식을 결정 합니다. 숫자 정수 리터럴은 기본적으로 `Integer` 데이터 형식으로 캐스팅 됩니다. 부동 소수점 숫자의 기본 데이터 형식은 `Double` 되며 키워드 `True` 및 `False` `Boolean` 상수를 지정 합니다.  
   
 ## <a name="literals-and-type-coercion"></a>리터럴 및 형식 강제 변환  
- 일부 경우에는 특정 데이터 형식에 리터럴을 강제로 하려는 예를 들어, 매우 큰 정수 리터럴 값 형식의 변수에 할당할 때 `Decimal`합니다. 다음 예제에서는 오류가 발생 합니다.  
+ 경우에 따라 리터럴을 특정 데이터 형식으로 강제 지정할 수 있습니다. 예를 들어 `Decimal` 형식의 변수에 특히 긴 정수 리터럴 값을 할당 하는 경우입니다. 다음 예에서는 오류를 생성 합니다.  
   
-```  
+```vb  
 Dim myDecimal as Decimal  
 myDecimal = 100000000000000000000   ' This causes a compiler error.  
 ```  
   
- 리터럴 표현에서 오류 결과입니다. 합니다 `Decimal` 데이터 형식을 큰 값을 가질 수 있지만 리터럴으로 암시적으로 표시 됩니다는 `Long`, 수는 없습니다.  
+ 리터럴 표현에서 발생 하는 오류입니다. @No__t_0 데이터 형식에는이 값이 너무 클 수 있지만 리터럴은 암시적으로 `Long`으로 표현 됩니다.  
   
- 리터럴 두 가지 방법으로 특정 데이터 형식으로 강제 변환할 수 있습니다: 형식 문자를 추가 하 여 또는 묶기 문자 안에 배치 하 여 합니다. 형식 문자 또는 문자를 포함 해야 합니다 즉시 리터럴 앞 이나 뒤의 공백이 나 어떠한 종류의 문자 없이 합니다.  
+ 리터럴를 특정 데이터 형식으로 강제 변환할 수 있습니다. 여기에는 형식 문자를 추가 하거나 묶기 문자 내에 배치 하는 방법입니다. 형식 문자 또는 바깥쪽 문자는 문자를 사용 하지 않고 리터럴 앞뒤에 바로 앞 이나 뒤에와 야 합니다.  
   
- 이전 예제가 제대로 실행 되도록 하려면 추가 하는 `D` 형식으로 나타낼 수를 발생 시키는 리터럴 문자를 `Decimal`:  
+ 이전 예제를 사용 하려면 `D` 형식 문자를 리터럴에 추가 하 여 `Decimal`으로 표시 되도록 할 수 있습니다.  
   
  [!code-vb[VbVbalrConstants#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConstants/VB/Class1.vb#2)]  
   
- 다음 예제에서는 형식 문자 및 문자 바깥쪽의 올바른 사용법을 보여 줍니다.  
+ 다음 예제에서는 형식 문자 및 묶기 문자를 올바르게 사용 하는 방법을 보여 줍니다.  
   
  [!code-vb[VbVbalrConstants#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConstants/VB/Class1.vb#3)]  
   
- 다음 표에서 바깥쪽 문자 및 Visual Basic에서 사용할 수 있는 형식 문자.  
+ 다음 표에서는 Visual Basic에서 사용할 수 있는 바깥쪽 문자 및 형식 문자를 보여 줍니다.  
   
-|데이터 형식|구분 기호|추가 형식 문자|  
+|데이터 형식|묶기 문자|추가 된 형식 문자|  
 |---|---|---|  
 |`Boolean`|(없음)|(없음)|  
 |`Byte`|(없음)|(없음)|  
@@ -55,13 +55,13 @@ myDecimal = 100000000000000000000   ' This causes a compiler error.
 |`Date`|#|(없음)|  
 |`Decimal`|(없음)|D 또는 @|  
 |`Double`|(없음)|R 또는 #|  
-|`Integer`|(없음)|I 또는 %|  
+|`Integer`|(없음)|I 또는%|  
 |`Long`|(없음)|L 또는 &|  
 |`Short`|(없음)|S|  
 |`Single`|(없음)|F 또는!|  
 |`String`|"|(없음)|  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [사용자 정의 상수](../../../../visual-basic/programming-guide/language-features/constants-enums/user-defined-constants.md)
 - [방법: 상수 선언](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md)

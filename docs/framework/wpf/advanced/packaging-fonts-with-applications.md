@@ -10,12 +10,12 @@ helpviewer_keywords:
 - typography [WPF], packaging fonts with applications
 - packaging fonts with applications [WPF]
 ms.assetid: db15ee48-4d24-49f5-8b9d-a64460865286
-ms.openlocfilehash: 18a8037b6b4433a4a83860eae205174f3036d6e8
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: c90d554338da21a55f058fdf1ce27b8ee28e682b
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005020"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72580931"
 ---
 # <a name="packaging-fonts-with-applications"></a>애플리케이션과 함께 글꼴 패키징
 이 항목에서는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 응용 프로그램으로 글꼴을 패키지 하는 방법에 대 한 개요를 제공 합니다.  
@@ -25,9 +25,9 @@ ms.locfileid: "72005020"
 
 <a name="introduction_to_packaging_fonts"></a>   
 ## <a name="introduction-to-packaging-fonts"></a>글꼴 패키징 소개  
- @No__t-0 응용 프로그램 내에서 사용자 인터페이스 텍스트 및 다른 유형의 텍스트 기반 콘텐츠를 표시 하는 리소스로 글꼴을 쉽게 패키지할 수 있습니다. 글꼴은 애플리케이션의 어셈블리 파일 내에 포함하거나 별도로 저장할 수 있습니다. 리소스 전용 글꼴 라이브러리를 만들어 애플리케이션에서 이를 참조하도록 할 수도 있습니다.  
+ 사용자 인터페이스 텍스트 및 다른 형식의 텍스트 기반 콘텐츠를 표시 하기 위해 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램 내의 리소스로 글꼴을 쉽게 패키지할 수 있습니다. 글꼴은 애플리케이션의 어셈블리 파일 내에 포함하거나 별도로 저장할 수 있습니다. 리소스 전용 글꼴 라이브러리를 만들어 애플리케이션에서 이를 참조하도록 할 수도 있습니다.  
   
- OpenType 및 TrueType® 글꼴에는 글꼴에 대 한 글꼴 포함 라이선스 권한을 나타내는 형식 플래그 fsType가 포함 되어 있습니다. 그러나 이 형식 플래그는 문서에 저장된 포함된 글꼴만 참조하고 애플리케이션에 포함된 글꼴은 참조하지 않습니다. @No__t-0 개체를 만들고 <xref:System.Windows.Media.GlyphTypeface.EmbeddingRights%2A> 속성을 참조 하 여 글꼴에 대 한 글꼴 포함 권한을 검색할 수 있습니다. FsType 플래그에 대 한 자세한 내용은 [OpenType 사양의](https://www.microsoft.com/typography/otspec/os2.htm) "OS/2 및 Windows 메트릭" 섹션을 참조 하세요.  
+ OpenType 및 TrueType® 글꼴에는 글꼴에 대 한 글꼴 포함 라이선스 권한을 나타내는 형식 플래그 fsType가 포함 되어 있습니다. 그러나 이 형식 플래그는 문서에 저장된 포함된 글꼴만 참조하고 애플리케이션에 포함된 글꼴은 참조하지 않습니다. @No__t_0 개체를 만들고 해당 <xref:System.Windows.Media.GlyphTypeface.EmbeddingRights%2A> 속성을 참조 하 여 글꼴에 대 한 글꼴 포함 권한을 검색할 수 있습니다. FsType 플래그에 대 한 자세한 내용은 [OpenType 사양의](https://www.microsoft.com/typography/otspec/os2.htm) "OS/2 및 Windows 메트릭" 섹션을 참조 하세요.  
   
  [Microsoft 입력 체계](https://docs.microsoft.com/typography/) 웹 사이트에는 특정 글꼴 공급 업체를 찾거나 사용자 지정 작업을 위한 글꼴 공급 업체를 찾는 데 도움이 되는 연락처 정보가 포함 되어 있습니다.  
   
@@ -81,19 +81,19 @@ ms.locfileid: "72005020"
 ```  
   
 > [!NOTE]
-> 응용 프로그램에 리소스를 리소스로 추가 하는 경우 응용 프로그램의 프로젝트 파일에서 `<EmbeddedResource>` 요소가 아니라 `<Resource>` 요소를 설정 해야 합니다. 빌드 작업에 대 한 `<EmbeddedResource>` 요소는 지원 되지 않습니다.  
+> 응용 프로그램에 리소스를 리소스로 추가 하는 경우 응용 프로그램의 프로젝트 파일에서 `<EmbeddedResource>` 요소가 아니라 `<Resource>` 요소를 설정 해야 합니다. 빌드 작업에 대 한 `<EmbeddedResource>` 요소가 지원 되지 않습니다.  
   
  다음 태그 예제에서는 애플리케이션의 글꼴 리소스를 참조하는 방법을 보여 줍니다.  
   
  [!code-xaml[FontSnippets#FontPackageSnippet1](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontPackageSnippets.xaml#fontpackagesnippet1)]  
   
 ### <a name="referencing-font-resource-items-from-code"></a>코드에서 글꼴 리소스 항목 참조  
- 코드에서 글꼴 리소스 항목을 참조 하려면 두 부분으로 구성 된 글꼴 리소스 참조 (기본 [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)])를 제공 해야 합니다. 및 글꼴 위치 참조입니다. 이러한 값은 <xref:System.Windows.Media.FontFamily.%23ctor%2A> 메서드에 대 한 매개 변수로 사용 됩니다. 다음 코드 예제에서는 `resources` 이라는 프로젝트 하위 디렉터리에서 응용 프로그램의 글꼴 리소스를 참조 하는 방법을 보여 줍니다.  
+ 코드에서 글꼴 리소스 항목을 참조 하려면 기본 URI (uniform resource identifier) 라는 두 부분으로 구성 된 글꼴 리소스 참조를 제공 해야 합니다. 및 글꼴 위치 참조입니다. 이러한 값은 <xref:System.Windows.Media.FontFamily.%23ctor%2A> 메서드에 대 한 매개 변수로 사용 됩니다. 다음 코드 예제에서는 `resources` 이라는 프로젝트 하위 디렉터리에서 응용 프로그램의 글꼴 리소스를 참조 하는 방법을 보여 줍니다.  
   
  [!code-csharp[FontSnippets#FontPackageSnippet2](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontPackageSnippets.xaml.cs#fontpackagesnippet2)]
  [!code-vb[FontSnippets#FontPackageSnippet2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontpackagesnippets.xaml.vb#fontpackagesnippet2)]  
   
- 기본 [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]은 글꼴 리소스가 있는 응용 프로그램 하위 디렉터리를 포함할 수 있습니다. 이 경우 글꼴 위치 참조는 디렉터리를 지정할 필요가 없지만 선행 "`./`"을 포함 해야 합니다 .이는 글꼴 리소스가 기본 [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]로 지정 된 동일한 디렉터리에 있음을 나타냅니다. 다음 코드 예제에서는 위의 코드 예제에 나오는 것과 동일한 글꼴 리소스 항목을 참조하는 다른 방법을 보여 줍니다.  
+ 기본 URI (uniform resource identifier)는 글꼴 리소스가 있는 응용 프로그램 하위 디렉터리를 포함할 수 있습니다. 이 경우 글꼴 위치 참조는 디렉터리를 지정할 필요가 없지만 선행 "`./`"을 포함 해야 합니다 .이는 기본 URI (uniform resource identifier)로 지정 된 동일한 디렉터리에 글꼴 리소스가 있음을 나타냅니다. 다음 코드 예제에서는 위의 코드 예제에 나오는 것과 동일한 글꼴 리소스 항목을 참조하는 다른 방법을 보여 줍니다.  
   
  [!code-csharp[FontSnippets#FontPackageSnippet5](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontPackageSnippets.xaml.cs#fontpackagesnippet5)]
  [!code-vb[FontSnippets#FontPackageSnippet5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontpackagesnippets.xaml.vb#fontpackagesnippet5)]  
@@ -119,12 +119,12 @@ ms.locfileid: "72005020"
  [!code-vb[FontSnippets#FontPackageSnippet4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/pages/homepage.xaml.vb#fontpackagesnippet4)]  
   
 ### <a name="enumerating-fonts-in-an-application"></a>애플리케이션의 글꼴 열거  
- 응용 프로그램에서 리소스 항목으로 글꼴을 열거 하려면 <xref:System.Windows.Media.Fonts.GetFontFamilies%2A> 또는 <xref:System.Windows.Media.Fonts.GetTypefaces%2A> 메서드를 사용 합니다. 다음 예제에서는 <xref:System.Windows.Media.Fonts.GetFontFamilies%2A> 메서드를 사용 하 여 응용 프로그램 글꼴 위치에서 <xref:System.Windows.Media.FontFamily> 개체의 컬렉션을 반환 하는 방법을 보여 줍니다. 이 경우에는 응용 프로그램에 “resources”라는 하위 디렉터리가 있습니다.  
+ 응용 프로그램에서 리소스 항목으로 글꼴을 열거 하려면 <xref:System.Windows.Media.Fonts.GetFontFamilies%2A> 또는 <xref:System.Windows.Media.Fonts.GetTypefaces%2A> 메서드를 사용 합니다. 다음 예제에서는 <xref:System.Windows.Media.Fonts.GetFontFamilies%2A> 메서드를 사용 하 여 응용 프로그램 글꼴 위치에서 <xref:System.Windows.Media.FontFamily> 개체의 컬렉션을 반환 하는 방법을 보여 줍니다. 이 경우에는 애플리케이션에 “resources”라는 하위 디렉터리가 있습니다.  
   
  [!code-csharp[FontSnippets#FontsSnippet3](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontFamilySnippets.xaml.cs#fontssnippet3)]
  [!code-vb[FontSnippets#FontsSnippet3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontfamilysnippets.xaml.vb#fontssnippet3)]  
   
- 다음 예제에서는 <xref:System.Windows.Media.Fonts.GetTypefaces%2A> 메서드를 사용 하 여 응용 프로그램 글꼴 위치에서 <xref:System.Windows.Media.Typeface> 개체의 컬렉션을 반환 하는 방법을 보여 줍니다. 이 경우에는 응용 프로그램에 “resources”라는 하위 디렉터리가 있습니다.  
+ 다음 예제에서는 <xref:System.Windows.Media.Fonts.GetTypefaces%2A> 메서드를 사용 하 여 응용 프로그램 글꼴 위치에서 <xref:System.Windows.Media.Typeface> 개체의 컬렉션을 반환 하는 방법을 보여 줍니다. 이 경우에는 애플리케이션에 “resources”라는 하위 디렉터리가 있습니다.  
   
  [!code-csharp[FontSnippets#FontsSnippet7](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontFamilySnippets.xaml.cs#fontssnippet7)]
  [!code-vb[FontSnippets#FontsSnippet7](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontfamilysnippets.xaml.vb#fontssnippet7)]  
@@ -152,19 +152,19 @@ ms.locfileid: "72005020"
  [!code-xaml[OpenTypeFontsSample#OpenTypeFontsSample1](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontsSample/CS/Kootenay.xaml#opentypefontssample1)]  
   
 > [!NOTE]
-> 이 SDK에는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램에서 사용할 수 있는 샘플 OpenType 글꼴 집합이 포함 되어 있습니다. 글꼴은 리소스 전용 라이브러리에 정의되어 있습니다. 자세한 내용은 [샘플 OpenType 글꼴 팩](sample-opentype-font-pack.md)을 참조하세요.  
+> 이 SDK에는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램과 함께 사용할 수 있는 샘플 OpenType 글꼴 집합이 포함 되어 있습니다. 글꼴은 리소스 전용 라이브러리에 정의되어 있습니다. 자세한 내용은 [샘플 OpenType 글꼴 팩](sample-opentype-font-pack.md)을 참조하세요.  
   
 <a name="limitations_on_font_usage"></a>   
 ## <a name="limitations-on-font-usage"></a>글꼴 사용의 제한 사항  
- 다음 목록에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램에서 글꼴 패키징 및 사용에 대 한 몇 가지 제한 사항을 설명 합니다.  
+ 다음 목록에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램의 글꼴 패키징 및 사용에 대 한 몇 가지 제한 사항을 설명 합니다.  
   
 - **글꼴 포함 권한 비트:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 애플리케이션은 글꼴 포함 권한 비트를 확인하거나 적용하지 않습니다. 자세한 내용은 [Introduction_to_Packing Fonts](#introduction_to_packaging_fonts) 섹션을 참조 하세요.  
   
-- **원본 사이트 글꼴:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램은 http 또는 ftp [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]에 대 한 글꼴 참조를 허용 하지 않습니다.  
+- **원본 사이트 글꼴:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램에서 http 또는 ftp URI (uniform resource identifier)에 대 한 글꼴 참조를 허용 하지 않습니다.  
   
-- Pack: notation: [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램을 **사용 하는 절대 URI** 는 글꼴에 대 한 절대 [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] 참조의 일부로 "pack:"를 사용 하 여 프로그래밍 방식으로 <xref:System.Windows.Media.FontFamily> 개체를 만들 수 없습니다. 예를 들어 `"pack://application:,,,/resources/#Pericles Light"`은 잘못 된 글꼴 참조입니다.  
+- **Pack: notation: [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램을 사용 하는 절대 uri** 는 글꼴에 대 한 절대 uri (uniform resource identifier) 참조의 일부로 "pack:"를 사용 하 여 프로그래밍 방식으로 <xref:System.Windows.Media.FontFamily> 개체를 만들 수 없습니다. 예를 들어 `"pack://application:,,,/resources/#Pericles Light"`은 잘못 된 글꼴 참조입니다.  
   
-- **자동 글꼴 포함:** 디자인 타임에는 응용 프로그램의 글꼴 사용을 검색 하 고 응용 프로그램의 리소스에 글꼴을 자동으로 포함 하는 것을 지원 하지 않습니다.  
+- **자동 글꼴 포함:** 디자인 타임에는 애플리케이션에서 사용하는 글꼴을 검색하여 애플리케이션의 리소스에 자동으로 해당 글꼴을 포함하는 기능이 지원되지 않습니다.  
   
 - **글꼴 하위 집합:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 애플리케이션은 고정되지 않은 문서에 대해서는 글꼴 하위 집합을 만드는 것을 지원하지 않습니다.  
   
@@ -174,7 +174,7 @@ ms.locfileid: "72005020"
 
 - <xref:System.Windows.Documents.Typography>
 - <xref:System.Windows.Media.FontFamily>
-- [Microsoft 입력 체계: 링크, 뉴스 및 연락처 @ no__t-0
+- [Microsoft 입력 체계: 링크, 뉴스 및 연락처](https://docs.microsoft.com/typography/)
 - [OpenType 사양](https://www.microsoft.com/typography/otspec/)
 - [OpenType 글꼴 기능](opentype-font-features.md)
 - [샘플 OpenType 글꼴 팩](sample-opentype-font-pack.md)
