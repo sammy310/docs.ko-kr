@@ -1,5 +1,5 @@
 ---
-title: '방법: (Visual Basic) 상수 선언'
+title: '방법: 상수 선언(Visual Basic)'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.constant
@@ -23,49 +23,49 @@ helpviewer_keywords:
 - module-level constants and variables
 - Object data type [Visual Basic], declaring constants
 ms.assetid: f901b4fa-481f-4621-822e-427060577ad1
-ms.openlocfilehash: b84afe4e354d4029bc61ba67bc93bd36a3430de4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8b84ab5e8edebba3048c5cddf723198cf3f28858
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64610608"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72579918"
 ---
-# <a name="how-to-declare-a-constant-visual-basic"></a>방법: (Visual Basic) 상수 선언
-사용 된 `Const` 상수를 선언 하 고 해당 값을 설정 하는 문. 상수를 선언 하 여 값으로 의미 있는 이름을 할당 합니다. 상수 선언 되 면 수정 하거나 새 값을 지정할 수 없습니다.  
+# <a name="how-to-declare-a-constant-visual-basic"></a>방법: 상수 선언(Visual Basic)
+@No__t_0 문을 사용 하 여 상수를 선언 하 고 해당 값을 설정 합니다. 상수를 선언 하 여 값에 의미 있는 이름을 할당 합니다. 상수를 선언한 후에는 수정 하거나 새 값을 할당할 수 없습니다.  
   
- 프로시저 내에서 또는 선언 부분 모듈, 클래스 또는 구조체에서에서 상수를 선언합니다. 클래스 또는 구조 수준 상수 `Private` 기본적으로 선언할 수도 있지만 `Public`, `Friend`, `Protected`, 또는 `Protected Friend` 적절 한 수준의 코드 액세스에 대 한 합니다.  
+ 프로시저 내에서 상수를 선언 하거나 모듈, 클래스 또는 구조체의 선언 섹션에서 상수를 선언 합니다. 클래스 또는 구조체 수준 상수는 기본적으로 `Private` 되지만 적절 한 수준의 코드 액세스에 대해 `Public`, `Friend`, `Protected` 또는 `Protected Friend`로 선언할 수도 있습니다.  
   
- 상수 (규칙은 변수 이름 만들기에 대 한 것과 동일)을 올바른 심볼 이름 및 숫자 또는 문자열 상수 및 연산자 (함수 호출 없음)의 구성 된 식에 있어야 합니다.  
+ 상수에는 유효한 기호화 된 이름 (규칙은 변수 이름을 만드는 데 사용할 수 있는 이름)과 숫자 또는 문자열 상수와 연산자로 구성 된 식 (함수 호출은 제외)이 있어야 합니다.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ### <a name="to-declare-a-constant"></a>상수를 선언 하려면  
   
-- 액세스 지정자를 포함 하는 선언을 작성 합니다 `Const` 키워드 및 다음 예와 같이 식:  
+- 다음 예제와 같이 액세스 지정자, `Const` 키워드 및 식을 포함 하는 선언을 작성 합니다.  
   
      [!code-vb[VbEnumsTask#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#8)]  
   
-     때 [Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md) 됩니다 `Off` 및 [Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md) 됩니다 `On`, 데이터 형식을 지정 하 여 명시적으로 상수를 선언 해야 합니다 (`Boolean`, `Byte`, `Char`, `DateTime`, `Decimal`를 `Double`, `Integer`, `Long`를 `Short`를 `Single`, 또는 `String`).  
+     [옵션 유추](../../../../visual-basic/language-reference/statements/option-infer-statement.md) 가 `Off` 되 고 [option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md) 가 `On` 이면 데이터 형식 (`Boolean`, `Byte`, `Char`, `DateTime`, `Decimal`, `Double`를 지정 하 여 상수를 명시적으로 선언 해야 0 , 1, 2, 3 또는 4).  
   
-     때 `Option Infer` 은 `On` 또는 `Option Strict` 은 `Off`를 사용 하 여 데이터 형식을 지정 하지 않고 상수를 선언할 수 있습니다는 `As` 절. 컴파일러는 상수 식의 형식에서 형식을 결정합니다. 자세한 내용은 [상수 및 리터럴 데이터 형식](constant-and-literal-data-types.md)합니다.  
+     @No__t_0 `On` 또는 `Option Strict` `Off` 경우에는 `As` 절을 사용 하 여 데이터 형식을 지정 하지 않고 상수를 선언할 수 있습니다. 컴파일러는 식의 형식에서 상수의 형식을 결정 합니다. 자세한 내용은 [상수 및 리터럴 데이터 형식](constant-and-literal-data-types.md)을 참조 하세요.  
   
-### <a name="to-declare-a-constant-that-has-an-explicitly-stated-data-type"></a>명시적된 데이터 형식이 있는 상수를 선언 하려면  
+### <a name="to-declare-a-constant-that-has-an-explicitly-stated-data-type"></a>명시적으로 언급 된 데이터 형식이 있는 상수를 선언 하려면  
   
-- 포함 하는 선언을 작성 합니다 `As` 키워드 및는 명시적 데이터 형식, 다음 예제와 같이:  
+- 다음 예제와 같이 `As` 키워드 및 명시적 데이터 형식을 포함 하는 선언을 작성 합니다.  
   
      [!code-vb[VbEnumsTask#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#9)]  
   
-     코드를 한 줄만 하는 단일 상수를 선언 하는 경우 더 쉽게 읽을 수 있지만 단일 줄에 여러 상수를 선언할 수 있습니다. 한 줄에 여러 상수를 선언 하는 경우 모든 있어야 동일한 액세스 레벨 (`Public`, `Private`, `Friend`, `Protected`, 또는 `Protected Friend`).  
+     한 줄에 하나의 상수만 선언 하는 경우 코드를 더 쉽게 읽을 수 있지만 단일 줄에 여러 상수를 선언할 수 있습니다. 단일 줄에 여러 상수를 선언 하는 경우 모두 동일한 액세스 수준 (`Public`, `Private`, `Friend`, `Protected` 또는 `Protected Friend`)을 가져야 합니다.  
   
 ### <a name="to-declare-multiple-constants-on-a-single-line"></a>한 줄에 여러 상수를 선언 하려면  
   
-- 다음 예제와 같이 공백, 쉼표와 선언을 구분 합니다.  
+- 다음 예제와 같이 선언을 쉼표와 공백으로 구분 합니다.  
   
-    ```  
+    ```vb  
     Public Const Four As Integer = 4, Five As Integer = 5, Six As Integer = 44  
     ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [Const 문](../../../../visual-basic/language-reference/statements/const-statement.md)
 - [상수 및 리터럴 데이터 형식](constant-and-literal-data-types.md)
@@ -79,7 +79,7 @@ ms.locfileid: "64610608"
 - [방법: 열거형 멤버 참조](how-to-refer-to-an-enumeration-member.md)
 - [열거형 및 이름 한정](enumerations-and-name-qualification.md)
 - [방법: 열거형 반복](how-to-iterate-through-an-enumeration.md)
-- [방법: 열거형 값과 연결 된 문자열 확인](how-to-determine-the-string-associated-with-an-enumeration-value.md)
+- [방법: 열거형 값과 연결된 문자열 확인](how-to-determine-the-string-associated-with-an-enumeration-value.md)
 - [열거형을 사용하는 경우](when-to-use-an-enumeration.md)
 
 - [열거형 개요](enumerations-overview.md)
