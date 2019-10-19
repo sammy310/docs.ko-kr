@@ -9,18 +9,18 @@ helpviewer_keywords:
 - navigation topologies [WPF]
 - dynamically-generated topology
 ms.assetid: 5d5ee837-629a-4933-869a-186dc22ac43d
-ms.openlocfilehash: b62432d64393f4fb749af2e25c42e2e0161de219
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5d9b09085ed8057f53cae9f9177682b01e698f6d
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69950744"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72580717"
 ---
 # <a name="navigation-topologies-overview"></a>탐색 토폴로지 개요
-<a name="introduction"></a>이 개요에서는의 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]탐색 토폴로지를 소개 합니다. 세 가지 일반적인 탐색 토폴로지를 샘플과 함께 차례로 설명합니다.  
+<a name="introduction"></a>이 개요에서는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]의 탐색 토폴로지를 소개 합니다. 세 가지 일반적인 탐색 토폴로지를 샘플과 함께 차례로 설명합니다.  
   
 > [!NOTE]
-> 이 항목을 읽기 전에 페이지 함수를 사용 하 여의 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 구조적 탐색 개념에 대해 잘 알고 있어야 합니다. 이러한 두 항목에 대 한 자세한 내용은 [구조적 탐색 개요](structured-navigation-overview.md)를 참조 하세요.  
+> 이 항목을 읽기 전에 페이지 함수를 사용 하 여 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]에서 구조화 된 탐색 개념에 대해 잘 알고 있어야 합니다. 이러한 두 항목에 대 한 자세한 내용은 [구조적 탐색 개요](structured-navigation-overview.md)를 참조 하세요.  
   
  이 항목에는 다음과 같은 단원이 포함되어 있습니다.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "69950744"
   
 <a name="Navigation_Topologies"></a>   
 ## <a name="navigation-topologies"></a>탐색 토폴로지  
- 에서 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]탐색은 일반적으로 클릭 시 다른<xref:System.Windows.Controls.Page>페이지로 이동 하는<xref:System.Windows.Documents.Hyperlink>하이퍼링크 ()가 있는 페이지 ()로 구성 됩니다. 탐색 되는 페이지는 ( [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] [WPF의 Pack uri](pack-uris-in-wpf.md)참조)로 식별 됩니다. 페이지, 하이퍼링크 및 [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)]를 표시 하는 다음과 같은 간단한 예제를 살펴보겠습니다.  
+ @No__t_0 탐색은 일반적으로 클릭 하면 다른 페이지로 이동 하는 하이퍼링크 (<xref:System.Windows.Documents.Hyperlink>)가 있는 페이지 (<xref:System.Windows.Controls.Page>)로 구성 됩니다. 탐색 되는 페이지는 Uri (uniform resource identifier)로 식별 됩니다 ( [WPF의 Pack uri](pack-uris-in-wpf.md)참조). 페이지, 하이퍼링크 및 Uri (uniform resource identifier)를 보여 주는 다음과 같은 간단한 예제를 살펴보겠습니다.  
   
  [!code-xaml[NavigationTopologiesOverviewSnippets#Page1](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationTopologiesOverviewSnippets/CS/Page1.xaml#page1)]  
   
@@ -44,7 +44,7 @@ ms.locfileid: "69950744"
   
  이러한 페이지는 페이지 간에 이동할 수 있는 방법에 의해 구조가 결정 되는 *탐색 토폴로지에서* 정렬 됩니다. 이 특정 탐색 토폴로지는 간단한 시나리오에 적합하지만 탐색은 더 복잡한 토폴로지를 필요로 하며 그중 일부는 애플리케이션이 실행 중일 때만 정의할 수 있습니다.  
   
- 이 항목에서는 *고정 선형*, *고정 계층*및 *동적으로 생성 된*세 가지 일반적인 탐색 토폴로지에 대해 설명 합니다. 각 탐색 토폴로지는 다음 그림에 표시 된 것 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 과 같은가 있는 샘플을 사용 하 여 보여 줍니다.  
+ 이 항목에서는 *고정 선형*, *고정 계층*및 *동적으로 생성 된*세 가지 일반적인 탐색 토폴로지에 대해 설명 합니다. 각 탐색 토폴로지는 다음 그림에 표시 된 것과 같은 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 있는 샘플을 사용 하 여 보여 줍니다.  
   
  ![데이터 항목 및 탐색 단추가 있는 작업 페이지](./media/navigation-topologies-overview/navigation-topology-data-items.png)  
   
@@ -54,7 +54,7 @@ ms.locfileid: "69950744"
   
 - **고정 토폴로지**: 컴파일 시 정의되며 런타임 시 변경되지 않습니다. 고정 토폴로지는 선형 순서 또는 계층적 순서로 고정된 페이지 시퀀스를 탐색하는 데 유용합니다.  
   
-- **동적 토폴로지**: 사용자, 응용 프로그램 또는 시스템에서 수집한 입력을 기반으로 런타임 시 정의됩니다. 동적 토폴로지는 페이지를 다른 시퀀스로 탐색할 수 있을 때 유용합니다.  
+- **동적 토폴로지**: 사용자, 애플리케이션 또는 시스템에서 수집한 입력을 기반으로 런타임 시 정의됩니다. 동적 토폴로지는 페이지를 다른 시퀀스로 탐색할 수 있을 때 유용합니다.  
   
  페이지를 사용하여 탐색 토폴로지를 만들 수도 있지만 샘플에서는 페이지 함수를 사용하는데 이 기능이 토폴로지의 페이지를 통해 데이터를 전달하고 반환하는 지원을 단순화하는 추가 지원을 제공하기 때문입니다.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "69950744"
   
  고정 선형 토폴로지를 탐색하는 일반적인 동작은 다음과 같습니다.  
   
-- 호출 페이지에서 마법사를 초기화하고 첫 번째 마법사 페이지로 이동하는 시작 프로그램 페이지로 이동합니다. 호출 페이지에서 첫 번째 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]마법사 페이지 <xref:System.Windows.Navigation.PageFunction%601>를 직접 호출할 수 있으므로 시작 관리자 페이지가 필요 하지 않습니다. 그러나 시작 페이지를 사용하면 특히 초기화가 복잡한 경우 마법사 초기화를 단순화할 수 있습니다.  
+- 호출 페이지에서 마법사를 초기화하고 첫 번째 마법사 페이지로 이동하는 시작 프로그램 페이지로 이동합니다. 호출 페이지에서 첫 번째 마법사 페이지를 직접 호출할 수 있으므로 시작 관리자 페이지 ([!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 없는 <xref:System.Windows.Navigation.PageFunction%601>)가 필요 하지 않습니다. 그러나 시작 페이지를 사용하면 특히 초기화가 복잡한 경우 마법사 초기화를 단순화할 수 있습니다.  
   
 - 사용자는 뒤로 및 앞으로 단추(또는 하이퍼링크)를 사용하여 페이지 사이를 탐색할 수 있습니다.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "69950744"
   
  고정 계층적 구조의 페이지를 탐색하는 시퀀스가 런타임에 결정되더라도 사용자 환경은 고정 선형 토폴로지의 사용자 환경과 동일합니다.  
   
-- 호출 페이지에서 마법사를 초기화하고 첫 번째 마법사 페이지로 이동하는 시작 프로그램 페이지로 이동합니다. 호출 페이지에서 첫 번째 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]마법사 페이지 <xref:System.Windows.Navigation.PageFunction%601>를 직접 호출할 수 있으므로 시작 관리자 페이지가 필요 하지 않습니다. 그러나 시작 페이지를 사용하면 특히 초기화가 복잡한 경우 마법사 초기화를 단순화할 수 있습니다.  
+- 호출 페이지에서 마법사를 초기화하고 첫 번째 마법사 페이지로 이동하는 시작 프로그램 페이지로 이동합니다. 호출 페이지에서 첫 번째 마법사 페이지를 직접 호출할 수 있으므로 시작 관리자 페이지 ([!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 없는 <xref:System.Windows.Navigation.PageFunction%601>)가 필요 하지 않습니다. 그러나 시작 페이지를 사용하면 특히 초기화가 복잡한 경우 마법사 초기화를 단순화할 수 있습니다.  
   
 - 사용자는 뒤로 및 앞으로 단추(또는 하이퍼링크)를 사용하여 페이지 사이를 탐색할 수 있습니다.  
   
@@ -124,7 +124,7 @@ ms.locfileid: "69950744"
   
  탐색 시퀀스를 동적으로 생성된 토폴로지라고 합니다. 다른 탐색 토폴로지와 마찬가지로 사용자의 환경은 이전 토폴로지의 경우와 같습니다.  
   
-- 호출 페이지에서 마법사를 초기화하고 첫 번째 마법사 페이지로 이동하는 시작 프로그램 페이지로 이동합니다. 호출 페이지에서 첫 번째 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]마법사 페이지 <xref:System.Windows.Navigation.PageFunction%601>를 직접 호출할 수 있으므로 시작 관리자 페이지가 필요 하지 않습니다. 그러나 시작 페이지를 사용하면 특히 초기화가 복잡한 경우 마법사 초기화를 단순화할 수 있습니다.  
+- 호출 페이지에서 마법사를 초기화하고 첫 번째 마법사 페이지로 이동하는 시작 프로그램 페이지로 이동합니다. 호출 페이지에서 첫 번째 마법사 페이지를 직접 호출할 수 있으므로 시작 관리자 페이지 ([!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 없는 <xref:System.Windows.Navigation.PageFunction%601>)가 필요 하지 않습니다. 그러나 시작 페이지를 사용하면 특히 초기화가 복잡한 경우 마법사 초기화를 단순화할 수 있습니다.  
   
 - 사용자는 뒤로 및 앞으로 단추(또는 하이퍼링크)를 사용하여 페이지 사이를 탐색할 수 있습니다.  
   
@@ -140,7 +140,7 @@ ms.locfileid: "69950744"
   
 - 마법사가 완료되면(승인 또는 취소) 마법사가 구성하는 페이지가 저널에서 제거됩니다. 이렇게 하면 마법사의 각 인스턴스가 격리되어 잠재적인 데이터 또는 비정상 상태를 피할 수 있습니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Windows.Controls.Page>
 - <xref:System.Windows.Navigation.PageFunction%601>

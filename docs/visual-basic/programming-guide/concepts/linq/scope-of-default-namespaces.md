@@ -2,12 +2,12 @@
 title: Visual Basic의 기본 네임 스페이스 범위
 ms.date: 07/20/2015
 ms.assetid: d4cce80c-342f-4097-be8b-40ab0bfa90ba
-ms.openlocfilehash: af868454c9d1dce7d8bf5a1902f64eff8db8780c
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: a08d140cfc68c36c26487ab47fc82dd3bf522fa8
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710350"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72581878"
 ---
 # <a name="scope-of-default-namespaces-in-visual-basic"></a>Visual Basic의 기본 네임 스페이스 범위
 XML 트리에 나타나는 기본 네임스페이스는 쿼리에 범위에 포함되지 않습니다. 기본 네임스페이스에 있는 XML을 사용하는 경우 <xref:System.Xml.Linq.XNamespace> 변수를 선언하고 로컬 이름과 결합하여 쿼리에서 사용할 정규화된 이름을 만들어야 합니다.  
@@ -50,7 +50,7 @@ End Module
 ### <a name="comments"></a>주석  
  이 예제의 결과는 다음과 같습니다.  
   
-```  
+```console  
 Result set follows:  
 End of result set  
 ```  
@@ -91,7 +91,7 @@ End Module
 ### <a name="comments"></a>주석  
  이 예제의 결과는 다음과 같습니다.  
   
-```  
+```console  
 Result set follows:  
 1  
 2  
@@ -99,6 +99,6 @@ Result set follows:
 End of result set  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [네임 스페이스 개요 (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)

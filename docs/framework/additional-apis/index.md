@@ -1,6 +1,6 @@
 ---
 title: 추가 클래스 라이브러리 및 API
-ms.date: 10/09/2019
+ms.date: 10/17/2019
 helpviewer_keywords:
 - Additional class libraries
 - Additional managed libraries
@@ -10,12 +10,12 @@ ms.assetid: cf2d9006-b631-4e5d-81cd-20aab78c60f1
 author: mairaw
 ms.author: mairaw
 ms.topic: conceptual
-ms.openlocfilehash: b869ca2f5e17db9a204a8b757b5e24ebb209d7c5
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 809ac026244b24aee69ec0d6c40c10a1248c234c
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395654"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72579111"
 ---
 # <a name="additional-class-libraries-and-apis"></a>추가 클래스 라이브러리 및 API
 
@@ -36,7 +36,7 @@ ms.locfileid: "72395654"
   
 | 프로젝트 | 설명 |  
 | ------- | ----------- |  
-| <xref:System.Text.CodePagesEncodingProvider> | @No__t-0 클래스를 확장 하 여 유니버설 Windows 플랫폼를 대상으로 하는 앱에서 코드 페이지 인코딩을 사용할 수 있도록 합니다. |  
+| <xref:System.Text.CodePagesEncodingProvider> | @No__t_0 클래스를 확장 하 여 유니버설 Windows 플랫폼를 대상으로 하는 앱에서 코드 페이지 인코딩을 사용할 수 있도록 합니다. |  
   
 ## <a name="private-apis"></a>전용 API  
 
@@ -57,20 +57,21 @@ ms.locfileid: "72395654"
 * [SqlTypes입니다. SetLength 메서드](system.data.sqltypes.sqlstreamchars.setlength.md)
 * [SqlTypes 메서드를 작성 합니다.](system.data.sqltypes.sqlstreamchars.write.md)
 * [시스템 .Net 연결 클래스](connection.md)
-* [시스템 .Net. 연결. m @ no__t-1WriteList 필드](m_writelist.md)
+* [시스템 .Net. 연결 \_WriteList 필드](m_writelist.md)
 * [시스템 .Net ConnectionGroup 클래스](connectiongroup.md)
-* [시스템 .Net. ConnectionGroup. m @ no__t-1ConnectionList 필드](m_connectionlist.md)
+* [시스템 .Net. ConnectionGroup. m \_ConnectionList 필드](m_connectionlist.md)
 * [CoreResponseData 클래스](coreresponsedata.md)
-* [CoreResponseData @ no__t-1ResponseHeaders 필드](coreresponsedata_m_responseheaders.md)
-* [시스템 .Net. CoreResponseData @ no__t-1StatusCode 필드](coreresponsedata_m_statuscode.md)
-* [1AutoRedirects 필드 (필드) @no__t](_autoredirects.md)
-* [1CoreResponse 필드 (필드) @no__t](httpwebrequest__coreresponse.md)
-* [1HttpResponse 필드 (필드) @no__t](_httpresponse.md)
-* [시스템 .Net. ServicePoint. m @ no__t-1ConnectionGroupList 필드](m_connectiongrouplist.md)
-* [시스템 .Net. ServicePointManager. s @ no__t-1ServicePointTable 필드](s_servicepointtable.md)
-* [1isDebuggerCheckDisabledForTestPurposes @ no__t-s i m 진단. s](s-isdebuggercheckdisabledfortestpurposes-field.md)
+* [CoreResponseData \_ResponseHeaders 필드](coreresponsedata_m_responseheaders.md)
+* [CoreResponseData \_StatusCode 필드](coreresponsedata_m_statuscode.md)
+* [시스템 .Net \_AutoRedirects 필드](_autoredirects.md)
+* [시스템 .Net \_CoreResponse 필드](httpwebrequest__coreresponse.md)
+* [시스템 .Net \_HttpResponse 필드](_httpresponse.md)
+* [시스템 .Net. ServicePoint. m \_ConnectionGroupList 필드](m_connectiongrouplist.md)
+* [시스템 .Net. ServicePointManager \_ServicePointTable 필드](s_servicepointtable.md)
+* [System.web. s s i Diagnostics \_isDebuggerCheckDisabledForTestPurposes 필드](s-isdebuggercheckdisabledfortestpurposes-field.md)
 * [DataMemberFieldEditor 클래스입니다.](datamemberfieldeditor-class.md)
 * [DataMemberListEditor 클래스입니다.](datamemberlisteditor-class.md)
+* [CreateSqlReader 메서드입니다.](system.xml.xmlreader.createsqlreader.md)
 * [adodb.dll. 연결 인터페이스](adodb.connection.md)
 * [adodb.dll. EventReason 열거형](adodb.eventreasonenum.md)
 * [adodb.dll. EventStatus 열거형](adodb.eventstatusenum.md)
