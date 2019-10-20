@@ -4,12 +4,12 @@ description: .NET Framework 프로젝트용 서비스 참조 추가와 유사하
 author: mlacouture
 ms.date: 04/19/2018
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 11a18161db0fde522442e2412c4522811c5dd40a
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 5c5759dcc0f428c763eddb84f3d3652fbc548cb2
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926455"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522239"
 ---
 # <a name="use-the-wcf-web-service-reference-provider-tool"></a>WCF Web Service Reference Provider 도구 사용
 
@@ -20,16 +20,16 @@ ms.locfileid: "70926455"
 
 ## <a name="prerequisites"></a>전제 조건
 
-* [Visual Studio 2017 15.5](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) 이상 버전
+- [Visual Studio 2017 15.5](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) 이상 버전
 
 ## <a name="how-to-use-the-extension"></a>확장을 사용하는 방법
 
 > [!NOTE]
 > **WCF Web Service Reference** 옵션은 다음과 같은 프로젝트 템플릿을 사용하여 만든 프로젝트에 적용할 수 있습니다.
 >
-> * **Visual C#**  >  **.NET Core**
-> * **Visual C#**  >  **.NET Standard**
-> * **Visual C#**  > **Web** > **ASP.NET Core Web Application**
+> - **Visual C#**  >  **.NET Core**
+> - **Visual C#**  >  **.NET Standard**
+> - **Visual C#**  > **Web** > **ASP.NET Core Web Application**
 
 이 문서에서는 **ASP.NET Core 웹 애플리케이션** 프로젝트 템플릿을 예로 사용하여 WCF 서비스 참조를 프로젝트에 추가하는 과정을 안내합니다.
 
@@ -68,9 +68,9 @@ ms.locfileid: "70926455"
 
 진행률을 표시하면서 도구가 다음을 수행합니다.
 
-* WCF 서비스에서 메타데이터를 다운로드합니다.
-* *reference.cs*라는 파일에 서비스 참조 코드를 생성하고 **연결된 서비스** 노드 아래의 프로젝트에 추가합니다.
-* 대상 플랫폼에서 컴파일 및 실행하는 데 필요한 NuGet 패키지 참조로 프로젝트 파일(.csproj)을 업데이트합니다.
+- WCF 서비스에서 메타데이터를 다운로드합니다.
+- *reference.cs*라는 파일에 서비스 참조 코드를 생성하고 **연결된 서비스** 노드 아래의 프로젝트에 추가합니다.
+- 대상 플랫폼에서 컴파일 및 실행하는 데 필요한 NuGet 패키지 참조로 프로젝트 파일(.csproj)을 업데이트합니다.
 
 ![Visual Studio 진행률 창](./media/wcf-web-service-reference-guide/wcfcs-ProgressWindow.png)
 
@@ -84,4 +84,4 @@ ms.locfileid: "70926455"
 
 ### <a name="release-notes"></a>릴리스 정보
 
-* 알려진 문제를 비롯한 업데이트된 릴리스 정보는 [릴리스 정보](https://github.com/dotnet/wcf/blob/master/release-notes/WCF-Web-Service-Reference-notes.md)를 참조하세요.
+- 알려진 문제를 비롯한 업데이트된 릴리스 정보는 [릴리스 정보](https://github.com/dotnet/wcf/blob/master/release-notes/WCF-Web-Service-Reference-notes.md)를 참조하세요.

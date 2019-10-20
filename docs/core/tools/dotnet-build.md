@@ -2,12 +2,12 @@
 title: dotnet build 명령
 description: dotnet build 명령은 프로젝트와 모든 종속성을 빌드합니다.
 ms.date: 10/07/2019
-ms.openlocfilehash: db353feebab920dc8f63b9854d14f050adeb0b79
-ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
+ms.openlocfilehash: 0a3e2c0e441cfdd1cb8266bc77dc1aba08af84d6
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72250186"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522787"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
@@ -66,85 +66,85 @@ dotnet build [-h|--help]
 
 ## <a name="options"></a>옵션
 
-* **`-c|--configuration {CONFIGURATION}`**
+- **`-c|--configuration {Debug|Release}`**
 
   빌드 구성을 정의합니다. 대부분의 프로젝트에 대한 기본값은 `Debug`이지만 프로젝트의 빌드 구성 설정을 재정의할 수 있습니다.
 
-* **`-f|--framework <FRAMEWORK>`**
+- **`-f|--framework <FRAMEWORK>`**
 
   특정 [프레임워크](../../standard/frameworks.md)에 대해 컴파일합니다. 프레임워크는 [프로젝트 파일](csproj.md)에 정의해야 합니다.
 
-* **`--force`**
+- **`--force`**
 
   마지막 복원이 성공한 경우에도 모든 종속성을 강제 확인합니다. 이 플래그를 지정하는 것은 *project.assets.json* 파일을 삭제하는 것과 같습니다. .NET Core 2.0 SDK 이후 사용할 수 있습니다.
 
-* **`-h|--help`**
+- **`-h|--help`**
 
   명령에 대한 간단한 도움말을 출력합니다.
 
-* **`--interactive`**
+- **`--interactive`**
 
   명령이 중지되고 사용자 입력 또는 작업을 대기할 수 있도록 허용합니다. 예를 들어 인증을 완료합니다. .NET Core 3.0 SDK 이후 사용할 수 있습니다.
 
-* **`--no-dependencies`**
+- **`--no-dependencies`**
 
   프로젝트 간(P2P) 참조를 무시하고 지정된 루트 프로젝트만 빌드합니다.
 
-* **`--no-incremental`**
+- **`--no-incremental`**
 
   빌드를 증분 빌드에 안전하지 않은 것으로 표시합니다. 이 플래그로 증분 컴파일이 해제되고 프로젝트 종속성 그래프를 강제로 완전히 다시 빌드합니다.
 
-* **`--no-restore`**
+- **`--no-restore`**
 
   빌드하는 동안 암시적 복원을 실행하지 않습니다. .NET Core 2.0 SDK 이후 사용할 수 있습니다.
 
-* **`--nologo`**
+- **`--nologo`**
 
   시작 배너 또는 저작권 메시지를 표시하지 않습니다. .NET Core 3.0 SDK 이후 사용할 수 있습니다.
 
-* **`-o|--output <OUTPUT_DIRECTORY>`**
+- **`-o|--output <OUTPUT_DIRECTORY>`**
 
   빌드된 이진 파일을 배치할 디렉터리입니다. 이 옵션을 지정하는 경우 `--framework`도 정의해야 합니다. 지정하지 않으면 기본 경로는 `./bin/<configuration>/<framework>/`입니다.
 
-* **`-r|--runtime <RUNTIME_IDENTIFIER>`**
+- **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
   대상 런타임을 지정합니다. RID(런타임 식별자) 목록은 [RID 카탈로그](../rid-catalog.md)를 참조하세요.
 
-* **`-v|--verbosity <LEVEL>`**
+- **`-v|--verbosity <LEVEL>`**
 
   MSBuild의 자세한 정도 수준을 설정합니다. 허용되는 값은 `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, `diag[nostic]`입니다. 기본값은 `minimal`입니다.
 
-* **`--version-suffix <VERSION_SUFFIX>`**
+- **`--version-suffix <VERSION_SUFFIX>`**
 
   프로젝트를 빌드할 때 사용할 `$(VersionSuffix)` 속성의 값을 설정합니다. `$(Version)` 속성이 설정되지 않은 경우에만 작동합니다. 그런 다음, `$(Version)`이 대시로 구분하여 `$(VersionSuffix)`와 결합된 `$(VersionPrefix)`로 설정됩니다.
 
 ## <a name="examples"></a>예
 
-* 프로젝트 및 해당 종속성을 빌드합니다.
+- 프로젝트 및 해당 종속성을 빌드합니다.
 
   ```dotnetcli
   dotnet build
   ```
 
-* 릴리스 구성을 사용하여 프로젝트 및 해당 종속성을 빌드합니다.
+- 릴리스 구성을 사용하여 프로젝트 및 해당 종속성을 빌드합니다.
 
   ```dotnetcli
   dotnet build --configuration Release
   ```
 
-* 특정 런타임(이 예제의 경우 Ubuntu 18.04)에 대한 프로젝트 및 해당 종속성을 빌드합니다.
+- 특정 런타임(이 예제의 경우 Ubuntu 18.04)에 대한 프로젝트 및 해당 종속성을 빌드합니다.
 
   ```dotnetcli
   dotnet build --runtime ubuntu.18.04-x64
   ```
 
-* 프로젝트를 빌드하고 복원 작업 중 지정된 NuGet 패키지 소스를 사용합니다(.NET Core 2.0 SDK 이상 버전).
+- 프로젝트를 빌드하고 복원 작업 중 지정된 NuGet 패키지 소스를 사용합니다(.NET Core 2.0 SDK 이상 버전).
 
   ```dotnetcli
   dotnet build --source c:\packages\mypackages
   ```
 
-* `-p` [MSBuild 옵션](#msbuild)을 사용하여 프로젝트를 빌드하고 버전 1.2.3.4를 빌드 매개 변수로 설정합니다.
+- `-p` [MSBuild 옵션](#msbuild)을 사용하여 프로젝트를 빌드하고 버전 1.2.3.4를 빌드 매개 변수로 설정합니다.
 
   ```dotnetcli
   dotnet build -p:Version=1.2.3.4

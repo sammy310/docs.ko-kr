@@ -2,18 +2,19 @@
 title: .NET Core 명령줄 도구 아키텍처
 description: .NET Core 도구 레이어 및 최신 버전의 변경 내용에 대해 알아봅니다.
 ms.date: 03/06/2017
-ms.openlocfilehash: e9226a314932eb73c6474c0fd17c77c87683e6db
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 05183a9edc26615e00d6383043fd10d8bec06f2b
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675695"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72521302"
 ---
 # <a name="high-level-overview-of-changes-in-the-net-core-tools"></a>.NET Core 도구의 변경 내용에 대한 대략적인 개요
 
 이 문서에서는 .NET Core 도구의 계층화 및 CLI 명령의 구현에 대한 변경 사항 정보와 함께 *project.json*에서 MSBuild 및 *csproj* 프로젝트 시스템으로 이전하는 것과 관련된 변경 사항을 설명합니다. 이러한 변화는 2017년 3월 7일에 발표된 .NET Core SDK 1.0과 Visual Studio 2017에서 나타났지만([알림](https://devblogs.microsoft.com/dotnet/announcing-net-core-tools-1-0/) 참조), 처음에는 .NET Core SDK Preview 3 릴리스와 함께 구현되었습니다.
 
 ## <a name="moving-away-from-projectjson"></a>project.json로부터의 이동
+
 .NET Core용 도구의 가장 큰 변화는 프로젝트 시스템이 [project.json에서 csproj로 전환](https://devblogs.microsoft.com/dotnet/changes-to-project-json/)되었다는 점입니다. 최신 버전의 명령줄 도구는 *project.json* 파일을 지원하지 않습니다. 즉, project.json 기반 애플리케이션 및 라이브러리를 빌드, 실행 또는 게시하는 데 사용할 수 없습니다. 이 버전의 도구를 사용하려면 기존 프로젝트를 마이그레이션하거나 새 프로젝트를 시작해야 합니다. 
 
 이러한 흐름에 포함되어 project.json 프로젝트를 빌드하기 위해 개발된 사용자 지정 빌드 엔진이 전문적이고 완전한 기능의 빌드 엔진인 [MSBuild](https://github.com/Microsoft/msbuild)로 바뀌었습니다. MSBuild는.NET 커뮤니티에서 잘 알려진 엔진으로 플랫폼의 첫 번째 릴리스 이후 핵심 기술로 부상하였습니다. 물론 .NET Core 애플리케이션을 구축해야 하므로 MSBuild는 .NET Core로 이식되었으며, .NET Core에서 실행하는 모든 플랫폼에서 사용할 수 있습니다. NET Core의 주요 기능 중 하나는 플랫폼 간 개발 스택에 대한 것으로 이 이동으로 인해 이 기능이 없어지진 않습니다.
@@ -22,6 +23,7 @@ ms.locfileid: "57675695"
 > 처음 MSBuild를 사용하는 경우 자세한 내용을 보려면 [MSBuild 개념](/visualstudio/msbuild/msbuild-concepts) 문서를 읽어 시작할 수 있습니다. 
 
 ## <a name="the-tooling-layers"></a>도구 레이어
+
 기존 프로젝트 시스템으로부터의 이동과 빌드 엔진 전환에 따라 이러한 변화로 인해 전체 .NET Core 도구 에코 시스템의 전반적인 "계층"에도 변화가 있는지 자연스럽게 질문이 나오게 됩니다. 새로운 비트 및 구성 요소가 있을까요?
 
 다음 그림에 나와 있는 것처럼 이전에 알고 있는 Preview 2 계층을 빠르게 환기시켜보겠습니다.
@@ -46,23 +48,27 @@ ms.locfileid: "57675695"
 
 사용 관점으로 보면 CLI를 사용하는 방식은 변경되지 않습니다. CLI에는 Preview 2 릴리스에 있는 핵심 명령이 아직 있습니다.
 
-* `new`
-* `restore`
-* `run` 
-* `build`
-* `publish`
-* `test`
-* `pack` 
+- `new`
+- `restore`
+- `run` 
+- `build`
+- `publish`
+- `test`
+- `pack` 
 
 이러한 명령은 여전히 사용자가 예상하는 대로 수행됩니다(프로젝트 새로 구동, 빌드, 게시, 압축 등). 대부분의 옵션은 변경되지 않고 그대로 있습니다. 이 사이트의 설명서 또는 명령의 도움말 화면(`dotnet <command> --help` 사용)을 참조하여 변경 내용을 살펴볼 수 있습니다. 
 
 실행 관점에서 CLI 명령은 매개 변수를 사용하고 "원시" MSBuild에 대한 호출을 생성하여 필요한 속성을 설정하고 원하는 대상을 실행합니다. 이해를 돕기 위해 다음 명령을 고려해 보세요. 
 
-   `dotnet publish -o pub -c Release`
+   ```dotnetcli
+   dotnet publish -o pub -c Release
+   ```
     
 이 명령은 "릴리스" 구성을 사용하여 애플리케이션을 `pub` 폴더에 게시합니다. 내부적으로 이 명령은 다음과 같은 MSBuild 호출로 변환됩니다. 
 
-   `dotnet msbuild -t:Publish -p:OutputPath=pub -p:Configuration=Release`
+   ```dotnetcli
+   dotnet msbuild -t:Publish -p:OutputPath=pub -p:Configuration=Release
+   ```
 
 이 규칙에서 주목할 만한 예외는 `new` 및 `run` 명령으로 MSBuild 대상으로 구현되지 않았습니다.
 

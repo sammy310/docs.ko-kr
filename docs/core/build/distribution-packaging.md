@@ -4,12 +4,12 @@ description: 배포를 위해 .NET Core를 패키지하고 이름과 버전을 �
 author: tmds
 ms.date: 10/09/2019
 ms.custom: seodec18
-ms.openlocfilehash: 3c41ce8a4a9ac1a914de2535a9b2423a7ddfa2cf
-ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
+ms.openlocfilehash: 715eb944c3e7626696f64e63b874e2f77595cf46
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72250135"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72393591"
 ---
 # <a name="net-core-distribution-packaging"></a>.NET Core 배포 패키징
 
@@ -72,7 +72,7 @@ ms.locfileid: "72250135"
 
 - (3) **sdk/\<sdk version>** SDK("도구"라고도 함)는 .NET Core 라이브러리 및 애플리케이션을 작성하고 빌드하는 데 사용할 수 있는 관리형 도구 집합입니다. SDK는 .NET Core CLI(명령줄 인터페이스), 관리형 언어 컴파일러, MSBuild 및 연결된 빌드 작업과 대상, NuGet, 새 프로젝트 템플릿 등을 포함합니다.
 
-- (4) **sdk/NuGetFallbackFolder**에는 `dotnet restore` 또는 `dotnet build /t:Restore` 실행처럼 복원 작업 중에 SDK에서 사용하는 NuGet 패키지의 캐시가 포함됩니다. 이 폴더는 .NET Core 3.0 이전에만 사용됩니다. `nuget.org`에서 미리 빌드된 이진 자산을 포함하므로 소스에서 빌드할 수 없습니다.
+- (4) **sdk/NuGetFallbackFolder**에는 `dotnet restore` 또는 `dotnet build` 실행처럼 복원 작업 중에 SDK에서 사용하는 NuGet 패키지의 캐시가 포함됩니다. 이 폴더는 .NET Core 3.0 이전에만 사용됩니다. `nuget.org`에서 미리 빌드된 이진 자산을 포함하므로 소스에서 빌드할 수 없습니다.
 
 **공유** 폴더에는 프레임워크가 포함됩니다. 공유 프레임워크는 다른 애플리케이션에서 사용할 수 있도록 중앙 위치에 라이브러리의 집합을 제공합니다.
 

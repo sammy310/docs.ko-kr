@@ -4,12 +4,12 @@ description: 자체 포함된 배포에 대한 dotnet 게시 변경 내용에 �
 author: KathleenDollard
 ms.date: 05/31/2018
 ms.custom: seodec18
-ms.openlocfilehash: 9af1454ede03b277f9b1a10e1d99a997e38809ea
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
+ms.openlocfilehash: 6a0cdfb34973822c2f40cdb37d4038d3b7ad8e2a
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53656299"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522094"
 ---
 # <a name="self-contained-deployment-runtime-roll-forward"></a>자체 포함된 배포 런타임 롤포워드
 
@@ -28,8 +28,8 @@ ms.locfileid: "53656299"
 
 `publish` 작업의 일부로 `restore`를 실행하는 것은 사용자 시나리오에 적합하지 않을 수 있습니다. 자체 포함된 애플리케이션을 만드는 동안 `publish` 중에 `restore`되지 않도록 다음을 수행합니다.
 
-* `RuntimeIdentifiers` 속성을 게시할 모든 [RID](../rid-catalog.md)의 세미콜론으로 구분된 목록으로 설정합니다.
-* `TargetLatestRuntimePatch` 속성을 `true`으로 설정합니다.
+- `RuntimeIdentifiers` 속성을 게시할 모든 [RID](../rid-catalog.md)의 세미콜론으로 구분된 목록으로 설정합니다.
+- `TargetLatestRuntimePatch` 속성을 `true`으로 설정합니다.
 
 ## <a name="no-restore-argument-with-dotnet-publish-options"></a>dotnet 게시 옵션으로 복원 안 함 인수
 

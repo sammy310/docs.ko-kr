@@ -4,12 +4,12 @@ description: .NET Framework 프로젝트용 WCF svcutil 도구와 유사하게, 
 author: mlacouture
 ms.date: 02/22/2019
 ms.custom: seodec18
-ms.openlocfilehash: c6eb17ca6cd4ce920cd358a87d2a4a6759dc3439
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 49b0579c284af74d270cac04d302ce231dcb9357
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117209"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522837"
 ---
 # <a name="wcf-dotnet-svcutil-tool-for-net-core"></a>.NET Core용 WCF dotnet-svcutil 도구
 
@@ -28,19 +28,19 @@ WCF(Windows Communication Foundation) **dotnet-svcutil** 도구는 네트워크 
 
 # <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
 
-* [.NET Core 2.1 SDK](https://dotnet.microsoft.com/download) 이상 버전
-* 선호하는 코드 편집기
+- [.NET Core 2.1 SDK](https://dotnet.microsoft.com/download) 이상 버전
+- 선호하는 코드 편집기
 
 # <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
 
-* [.NET Core 1.0.4 SDK](https://dotnet.microsoft.com/download) 이상 버전
-* 선호하는 코드 편집기
+- [.NET Core 1.0.4 SDK](https://dotnet.microsoft.com/download) 이상 버전
+- 선호하는 코드 편집기
 
 ---
 
 ## <a name="getting-started"></a>시작
 
-다음 예제에서는 .NET Core 웹 프로젝트에 웹 서비스 참조를 추가하고 서비스를 호출하는 데 필요한 단계를 안내합니다. _HelloSvcutil_이라는 .NET Core 웹 애플리케이션을 만들고 다음 계약을 구현하는 웹 서비스에 대한 참조를 추가합니다.
+다음 예제에서는 .NET Core 웹 프로젝트에 웹 서비스 참조를 추가하고 서비스를 호출하는 데 필요한 단계를 안내합니다. *HelloSvcutil*이라는 .NET Core 웹 애플리케이션을 만들고 다음 계약을 구현하는 웹 서비스에 대한 참조를 추가합니다.
 
 ```csharp
 [ServiceContract]
@@ -177,8 +177,8 @@ dotnet svcutil --help
 
 ## <a name="release-notes"></a>릴리스 정보
 
-* 알려진 문제를 비롯한 업데이트된 릴리스 정보는 [릴리스 정보](https://github.com/dotnet/wcf/blob/master/release-notes/dotnet-svcutil-notes.md)를 참조하세요.
+- 알려진 문제를 비롯한 업데이트된 릴리스 정보는 [릴리스 정보](https://github.com/dotnet/wcf/blob/master/release-notes/dotnet-svcutil-notes.md)를 참조하세요.
 
 ## <a name="information"></a>정보
 
-* [dotnet-svcutil NuGet 패키지](https://nuget.org/packages/dotnet-svcutil)
+- [dotnet-svcutil NuGet 패키지](https://nuget.org/packages/dotnet-svcutil)

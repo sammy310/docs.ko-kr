@@ -4,12 +4,12 @@ description: .NET Framework에서 .NET Core로 프로젝트를 포팅하기 위�
 author: cartermp
 ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: 6c0f55150a4a1c4d0fb8b3125565c9ab8ade3117
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 36d1c1d2090a0fb9e6f48fe519d15897579df2d5
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904329"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72521480"
 ---
 # <a name="analyze-your-dependencies-to-port-code-to-net-core"></a>.NET Core로 코드를 포팅하기 위해 종속성 분석
 
@@ -20,8 +20,8 @@ ms.locfileid: "55904329"
 프로젝트에서 NuGet 패키지를 참조하는 경우 .NET Core와 호환되는지 확인해야 합니다.
 여기에는 두 가지 방법이 있습니다.
 
-* [NuGet 패키지 탐색기 앱 사용](#analyze-nuget-packages-using-nuget-package-explorer)
-* [nuget.org 사이트 사용](#analyze-nuget-packages-using-nugetorg)
+- [NuGet 패키지 탐색기 앱 사용](#analyze-nuget-packages-using-nuget-package-explorer)
+- [nuget.org 사이트 사용](#analyze-nuget-packages-using-nugetorg)
 
 패키지를 분석한 후 .NET Core 및 대상 .NET Framework와 호환되지 않는 경우 [.NET Framework 호환 모드](#net-framework-compatibility-mode)가 이식 프로세스에 도움이 될 수 있는지 확인할 수 있습니다.
 

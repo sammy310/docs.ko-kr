@@ -1,14 +1,14 @@
 ---
-ms.openlocfilehash: 4d67da34cf692133df95480a7f0215943337a34e
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 3d0a90a57c2b1c2759b8420e74c284668d54e9cb
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72003011"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72526761"
 ---
 ### <a name="duplicated-apis-removed-from-windows-forms"></a>Windows Forms에서 중복된 API가 제거되었습니다.
 
-.Net core 3.0 미리 보기 4부터 <xref:System.Windows.Forms?displayProperty=fullName> 네임스페이스에서 실수로 중복된 많은 API가 .NET Core 3.0 RC1에서 제거되었습니다. 
+.Net core 3.0 미리 보기 4부터 <xref:System.Windows.Forms?displayProperty=fullName> 네임스페이스에서 실수로 중복된 많은 API가 .NET Core 3.0 RC1에서 제거되었습니다.
 
 #### <a name="change-description"></a>변경 내용 설명
 
@@ -38,7 +38,7 @@ Windows Forms
 
 - API 분석을 통해 검색할 수 없습니다.
 
-<!-- 
+<!--
 
 ### Affected APIs
 

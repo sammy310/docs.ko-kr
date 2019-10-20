@@ -5,12 +5,12 @@ author: thraka
 ms.date: 06/25/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: 3455720d729f813d9b6f32e433adffa4dc40dce4
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 1f4e73287fca650b20ed5617c8dfd80e0bd8363c
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926144"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318282"
 ---
 # <a name="tutorial-create-a-project-template"></a>자습서: 프로젝트 템플릿 만들기
 
@@ -159,7 +159,7 @@ Worker Service                                    worker                [C#]    
 
 ### <a name="test-the-project-template"></a>프로젝트 템플릿 테스트
 
-항목 템플릿을 설치했으므로 이제 템플릿을 테스트합니다. _test_ 폴더로 이동하고 `dotnet new console`을 사용하여 새 콘솔 애플리케이션을 만듭니다. 그러면 `dotnet run` 명령으로 쉽게 테스트할 수 있는 작업 프로젝트가 생성됩니다.
+항목 템플릿을 설치했으므로 이제 템플릿을 테스트합니다. _test_ 폴더로 이동하고 `dotnet new consoleasync`을 사용하여 새 콘솔 애플리케이션을 만듭니다. 그러면 `dotnet run` 명령으로 쉽게 테스트할 수 있는 작업 프로젝트가 생성됩니다.
 
 ```console
 C:\test> dotnet new consoleasync

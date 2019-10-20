@@ -4,12 +4,12 @@ description: Windows 호환 기능 팩 및 이를 사용하여 기존 .NET Frame
 author: terrajobst
 ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: 71e390881d4e9c7836622abeed49c0ea2e5f7526
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: adf2aaab27b5a8afcc89fceac67184d3b1974037
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202557"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72521284"
 ---
 # <a name="use-the-windows-compatibility-pack-to-port-code-to-net-core"></a>Windows 호환성 팩을 사용하여 코드를 .NET Core로 포팅
 
@@ -25,23 +25,23 @@ ms.locfileid: "70202557"
 
 Windows 전용을 포함하는 약 20,000 개의 API와 다음과 같은 기술 영역에서 플랫폼 간 API를 제공합니다.
 
-* 코드 페이지
-* CodeDom
-* 구성
-* 디렉터리 서비스
-* 그리기
-* ODBC
-* 사용 권한
-* 포트
-* Windows ACL(액세스 제어 목록)
-* WCF(Windows Communication Foundation)
-* Windows Cryptography
-* Windows EventLog
-* WMI(Windows Management Instrumentation)
-* Windows 성능 카운터
-* Windows 레지스트리
-* Windows 런타임 캐싱
-* Windows 서비스
+- 코드 페이지
+- CodeDom
+- Configuration
+- 디렉터리 서비스
+- 그리기
+- ODBC
+- 사용 권한
+- 포트
+- Windows ACL(액세스 제어 목록)
+- WCF(Windows Communication Foundation)
+- Windows Cryptography
+- Windows EventLog
+- WMI(Windows Management Instrumentation)
+- Windows 성능 카운터
+- Windows 레지스트리
+- Windows 런타임 캐싱
+- Windows 서비스
 
 자세한 내용은 [호환성 팩의 사양](https://github.com/dotnet/designs/blob/master/accepted/compat-pack/compat-pack.md)을 참조하세요.
 
