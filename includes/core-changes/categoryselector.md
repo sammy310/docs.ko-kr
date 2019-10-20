@@ -1,21 +1,21 @@
 ---
-ms.openlocfilehash: 83ddbd365b76a5bcf6bb922a4a214dccaf70df07
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 122d76b04e2ca7468cf13ead1d2de29d9b4588c5
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72023114"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72393620"
 ---
 > [!div class="op_single_selector"]
 >
+> - [ASP.NET Core](~/docs/core/compatibility/aspnetcore.md)
 > - [CoreFx](~/docs/core/compatibility/corefx.md)
 > - [암호화](~/docs/core/compatibility/cryptography.md)
+> - [EF Core](/ef/core/what-is-new/ef-core-3.0/breaking-changes)
 > - [전역화](~/docs/core/compatibility/globalization.md)
 > - [네트워킹](~/docs/core/compatibility/networking.md)
 > - [Visual Basic](~/docs/core/compatibility/visualbasic.md)
 > - [Windows Forms](~/docs/core/compatibility/winforms.md)
-> - [GitHub의 ASP.NET Core](https://github.com/aspnet/Announcements/issues?q=is%3Aissue+is%3Aopen+label%3A%22Breaking+change%22+label%3A3.0.0)
-> - [EF Core](/ef/core/what-is-new/ef-core-3.0/breaking-changes)
 
 <!--
 

@@ -4,58 +4,58 @@ description: Windows 호환 기능 팩 및 이를 사용하여 기존 .NET Frame
 author: terrajobst
 ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: 71e390881d4e9c7836622abeed49c0ea2e5f7526
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: adf2aaab27b5a8afcc89fceac67184d3b1974037
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202557"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72521284"
 ---
-# <a name="use-the-windows-compatibility-pack-to-port-code-to-net-core"></a><span data-ttu-id="b5193-103">Windows 호환성 팩을 사용하여 코드를 .NET Core로 포팅</span><span class="sxs-lookup"><span data-stu-id="b5193-103">Use the Windows Compatibility Pack to port code to .NET Core</span></span>
+# <a name="use-the-windows-compatibility-pack-to-port-code-to-net-core"></a><span data-ttu-id="220d8-103">Windows 호환성 팩을 사용하여 코드를 .NET Core로 포팅</span><span class="sxs-lookup"><span data-stu-id="220d8-103">Use the Windows Compatibility Pack to port code to .NET Core</span></span>
 
-<span data-ttu-id="b5193-104">기존 코드를 .NET Core로 포팅할 때 가장 일반적인 문제 중 일부는 .NET Framework에만 있는 API 및 기술에 대한 종속성입니다.</span><span class="sxs-lookup"><span data-stu-id="b5193-104">Some of the most common issues found when porting existing code to .NET Core are dependencies on APIs and technologies that are only found in the .NET Framework.</span></span> <span data-ttu-id="b5193-105">‘Windows 호환성 팩’은 이러한 기술을 대부분 제공하므로 .NET Core 애플리케이션과 .NET Standard 라이브러리를 훨씬 쉽게 빌드할 수 있습니다. </span><span class="sxs-lookup"><span data-stu-id="b5193-105">The *Windows Compatibility Pack* provides many of these technologies, so it's much easier to build .NET Core applications and .NET Standard libraries.</span></span>
+<span data-ttu-id="220d8-104">기존 코드를 .NET Core로 포팅할 때 가장 일반적인 문제 중 일부는 .NET Framework에만 있는 API 및 기술에 대한 종속성입니다.</span><span class="sxs-lookup"><span data-stu-id="220d8-104">Some of the most common issues found when porting existing code to .NET Core are dependencies on APIs and technologies that are only found in the .NET Framework.</span></span> <span data-ttu-id="220d8-105">‘Windows 호환성 팩’은 이러한 기술을 대부분 제공하므로 .NET Core 애플리케이션과 .NET Standard 라이브러리를 훨씬 쉽게 빌드할 수 있습니다. </span><span class="sxs-lookup"><span data-stu-id="220d8-105">The *Windows Compatibility Pack* provides many of these technologies, so it's much easier to build .NET Core applications and .NET Standard libraries.</span></span>
 
-<span data-ttu-id="b5193-106">이 패키지는 수정 없이 API 집합 및 기존 코드 컴파일을 크게 증가시키는 논리적 [.NET Standard 2.0의 확장](../whats-new/dotnet-core-2-0.md#api-changes-and-library-support)입니다.</span><span class="sxs-lookup"><span data-stu-id="b5193-106">This package is a logical [extension of .NET Standard 2.0](../whats-new/dotnet-core-2-0.md#api-changes-and-library-support) that significantly increases API set and existing code compiles with almost no modifications.</span></span> <span data-ttu-id="b5193-107">그러나 .NET Standard에 대한 약속을 지키기 위해("모든 .NET 구현이 제공하는 API의 집합") 레지스트리, WMI(Windows Management Instrumentation) 또는 리플렉션 내보내기 API와 같은 모든 플랫폼에서 작동할 수 없는 기술을 포함하지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="b5193-107">But in order to keep the promise of .NET Standard ("it is the set of APIs that all .NET implementations provide"), this didn't include technologies that can't work across all platforms, such as registry, Windows Management Instrumentation (WMI), or reflection emit APIs.</span></span>
+<span data-ttu-id="220d8-106">이 패키지는 수정 없이 API 집합 및 기존 코드 컴파일을 크게 증가시키는 논리적 [.NET Standard 2.0의 확장](../whats-new/dotnet-core-2-0.md#api-changes-and-library-support)입니다.</span><span class="sxs-lookup"><span data-stu-id="220d8-106">This package is a logical [extension of .NET Standard 2.0](../whats-new/dotnet-core-2-0.md#api-changes-and-library-support) that significantly increases API set and existing code compiles with almost no modifications.</span></span> <span data-ttu-id="220d8-107">그러나 .NET Standard에 대한 약속을 지키기 위해("모든 .NET 구현이 제공하는 API의 집합") 레지스트리, WMI(Windows Management Instrumentation) 또는 리플렉션 내보내기 API와 같은 모든 플랫폼에서 작동할 수 없는 기술을 포함하지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="220d8-107">But in order to keep the promise of .NET Standard ("it is the set of APIs that all .NET implementations provide"), this didn't include technologies that can't work across all platforms, such as registry, Windows Management Instrumentation (WMI), or reflection emit APIs.</span></span>
 
-<span data-ttu-id="b5193-108">*Windows 호환 기능 팩*은 .NET Standard의 위에 있으며 Windows에만 해당하는 기술에 대한 액세스를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="b5193-108">The *Windows Compatibility Pack* sits on top of .NET Standard and provides access to technologies that are Windows only.</span></span> <span data-ttu-id="b5193-109">.NET Core로 이동하려고 하지만 첫 번째 단계로 Windows에 머물려는 고객에게 특히 유용합니다.</span><span class="sxs-lookup"><span data-stu-id="b5193-109">It's especially useful for customers that want to move to .NET Core but plan to stay on Windows as a first step.</span></span> <span data-ttu-id="b5193-110">해당 시나리오에서 Windows 전용 기술을 사용할 수 없는 것은 아키텍처 이점이 없는 마이그레이션 장애물일 뿐입니다.</span><span class="sxs-lookup"><span data-stu-id="b5193-110">In that scenario, not being able to use Windows-only technologies is only a migration hurdle with zero architectural benefits.</span></span>
+<span data-ttu-id="220d8-108">*Windows 호환 기능 팩*은 .NET Standard의 위에 있으며 Windows에만 해당하는 기술에 대한 액세스를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="220d8-108">The *Windows Compatibility Pack* sits on top of .NET Standard and provides access to technologies that are Windows only.</span></span> <span data-ttu-id="220d8-109">.NET Core로 이동하려고 하지만 첫 번째 단계로 Windows에 머물려는 고객에게 특히 유용합니다.</span><span class="sxs-lookup"><span data-stu-id="220d8-109">It's especially useful for customers that want to move to .NET Core but plan to stay on Windows as a first step.</span></span> <span data-ttu-id="220d8-110">해당 시나리오에서 Windows 전용 기술을 사용할 수 없는 것은 아키텍처 이점이 없는 마이그레이션 장애물일 뿐입니다.</span><span class="sxs-lookup"><span data-stu-id="220d8-110">In that scenario, not being able to use Windows-only technologies is only a migration hurdle with zero architectural benefits.</span></span>
 
-## <a name="package-contents"></a><span data-ttu-id="b5193-111">패키지 콘텐츠</span><span class="sxs-lookup"><span data-stu-id="b5193-111">Package contents</span></span>
+## <a name="package-contents"></a><span data-ttu-id="220d8-111">패키지 콘텐츠</span><span class="sxs-lookup"><span data-stu-id="220d8-111">Package contents</span></span>
 
-<span data-ttu-id="b5193-112">*Windows 호환 기능 팩*은 NuGet 패키지 [Microsoft.Windows.Compatibility](https://www.nuget.org/packages/Microsoft.Windows.Compatibility)를 통해 제공되며 .NET Core 또는 .NET Standard를 대상으로 하는 프로젝트에서 참조할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b5193-112">The *Windows Compatibility Pack* is provided via the NuGet Package [Microsoft.Windows.Compatibility](https://www.nuget.org/packages/Microsoft.Windows.Compatibility) and can be referenced from projects targeting .NET Core or .NET Standard.</span></span>
+<span data-ttu-id="220d8-112">*Windows 호환 기능 팩*은 NuGet 패키지 [Microsoft.Windows.Compatibility](https://www.nuget.org/packages/Microsoft.Windows.Compatibility)를 통해 제공되며 .NET Core 또는 .NET Standard를 대상으로 하는 프로젝트에서 참조할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="220d8-112">The *Windows Compatibility Pack* is provided via the NuGet Package [Microsoft.Windows.Compatibility](https://www.nuget.org/packages/Microsoft.Windows.Compatibility) and can be referenced from projects targeting .NET Core or .NET Standard.</span></span>
 
-<span data-ttu-id="b5193-113">Windows 전용을 포함하는 약 20,000 개의 API와 다음과 같은 기술 영역에서 플랫폼 간 API를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="b5193-113">It provides about 20,000 APIs, including Windows-only as well as cross-platform APIs from the following technology areas:</span></span>
+<span data-ttu-id="220d8-113">Windows 전용을 포함하는 약 20,000 개의 API와 다음과 같은 기술 영역에서 플랫폼 간 API를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="220d8-113">It provides about 20,000 APIs, including Windows-only as well as cross-platform APIs from the following technology areas:</span></span>
 
-* <span data-ttu-id="b5193-114">코드 페이지</span><span class="sxs-lookup"><span data-stu-id="b5193-114">Code Pages</span></span>
-* <span data-ttu-id="b5193-115">CodeDom</span><span class="sxs-lookup"><span data-stu-id="b5193-115">CodeDom</span></span>
-* <span data-ttu-id="b5193-116">구성</span><span class="sxs-lookup"><span data-stu-id="b5193-116">Configuration</span></span>
-* <span data-ttu-id="b5193-117">디렉터리 서비스</span><span class="sxs-lookup"><span data-stu-id="b5193-117">Directory Services</span></span>
-* <span data-ttu-id="b5193-118">그리기</span><span class="sxs-lookup"><span data-stu-id="b5193-118">Drawing</span></span>
-* <span data-ttu-id="b5193-119">ODBC</span><span class="sxs-lookup"><span data-stu-id="b5193-119">ODBC</span></span>
-* <span data-ttu-id="b5193-120">사용 권한</span><span class="sxs-lookup"><span data-stu-id="b5193-120">Permissions</span></span>
-* <span data-ttu-id="b5193-121">포트</span><span class="sxs-lookup"><span data-stu-id="b5193-121">Ports</span></span>
-* <span data-ttu-id="b5193-122">Windows ACL(액세스 제어 목록)</span><span class="sxs-lookup"><span data-stu-id="b5193-122">Windows Access Control Lists (ACL)</span></span>
-* <span data-ttu-id="b5193-123">WCF(Windows Communication Foundation)</span><span class="sxs-lookup"><span data-stu-id="b5193-123">Windows Communication Foundation (WCF)</span></span>
-* <span data-ttu-id="b5193-124">Windows Cryptography</span><span class="sxs-lookup"><span data-stu-id="b5193-124">Windows Cryptography</span></span>
-* <span data-ttu-id="b5193-125">Windows EventLog</span><span class="sxs-lookup"><span data-stu-id="b5193-125">Windows EventLog</span></span>
-* <span data-ttu-id="b5193-126">WMI(Windows Management Instrumentation)</span><span class="sxs-lookup"><span data-stu-id="b5193-126">Windows Management Instrumentation (WMI)</span></span>
-* <span data-ttu-id="b5193-127">Windows 성능 카운터</span><span class="sxs-lookup"><span data-stu-id="b5193-127">Windows Performance Counters</span></span>
-* <span data-ttu-id="b5193-128">Windows 레지스트리</span><span class="sxs-lookup"><span data-stu-id="b5193-128">Windows Registry</span></span>
-* <span data-ttu-id="b5193-129">Windows 런타임 캐싱</span><span class="sxs-lookup"><span data-stu-id="b5193-129">Windows Runtime Caching</span></span>
-* <span data-ttu-id="b5193-130">Windows 서비스</span><span class="sxs-lookup"><span data-stu-id="b5193-130">Windows Services</span></span>
+- <span data-ttu-id="220d8-114">코드 페이지</span><span class="sxs-lookup"><span data-stu-id="220d8-114">Code Pages</span></span>
+- <span data-ttu-id="220d8-115">CodeDom</span><span class="sxs-lookup"><span data-stu-id="220d8-115">CodeDom</span></span>
+- <span data-ttu-id="220d8-116">Configuration</span><span class="sxs-lookup"><span data-stu-id="220d8-116">Configuration</span></span>
+- <span data-ttu-id="220d8-117">디렉터리 서비스</span><span class="sxs-lookup"><span data-stu-id="220d8-117">Directory Services</span></span>
+- <span data-ttu-id="220d8-118">그리기</span><span class="sxs-lookup"><span data-stu-id="220d8-118">Drawing</span></span>
+- <span data-ttu-id="220d8-119">ODBC</span><span class="sxs-lookup"><span data-stu-id="220d8-119">ODBC</span></span>
+- <span data-ttu-id="220d8-120">사용 권한</span><span class="sxs-lookup"><span data-stu-id="220d8-120">Permissions</span></span>
+- <span data-ttu-id="220d8-121">포트</span><span class="sxs-lookup"><span data-stu-id="220d8-121">Ports</span></span>
+- <span data-ttu-id="220d8-122">Windows ACL(액세스 제어 목록)</span><span class="sxs-lookup"><span data-stu-id="220d8-122">Windows Access Control Lists (ACL)</span></span>
+- <span data-ttu-id="220d8-123">WCF(Windows Communication Foundation)</span><span class="sxs-lookup"><span data-stu-id="220d8-123">Windows Communication Foundation (WCF)</span></span>
+- <span data-ttu-id="220d8-124">Windows Cryptography</span><span class="sxs-lookup"><span data-stu-id="220d8-124">Windows Cryptography</span></span>
+- <span data-ttu-id="220d8-125">Windows EventLog</span><span class="sxs-lookup"><span data-stu-id="220d8-125">Windows EventLog</span></span>
+- <span data-ttu-id="220d8-126">WMI(Windows Management Instrumentation)</span><span class="sxs-lookup"><span data-stu-id="220d8-126">Windows Management Instrumentation (WMI)</span></span>
+- <span data-ttu-id="220d8-127">Windows 성능 카운터</span><span class="sxs-lookup"><span data-stu-id="220d8-127">Windows Performance Counters</span></span>
+- <span data-ttu-id="220d8-128">Windows 레지스트리</span><span class="sxs-lookup"><span data-stu-id="220d8-128">Windows Registry</span></span>
+- <span data-ttu-id="220d8-129">Windows 런타임 캐싱</span><span class="sxs-lookup"><span data-stu-id="220d8-129">Windows Runtime Caching</span></span>
+- <span data-ttu-id="220d8-130">Windows 서비스</span><span class="sxs-lookup"><span data-stu-id="220d8-130">Windows Services</span></span>
 
-<span data-ttu-id="b5193-131">자세한 내용은 [호환성 팩의 사양](https://github.com/dotnet/designs/blob/master/accepted/compat-pack/compat-pack.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="b5193-131">For more information, see the [specification of the compatibility pack](https://github.com/dotnet/designs/blob/master/accepted/compat-pack/compat-pack.md).</span></span>
+<span data-ttu-id="220d8-131">자세한 내용은 [호환성 팩의 사양](https://github.com/dotnet/designs/blob/master/accepted/compat-pack/compat-pack.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="220d8-131">For more information, see the [specification of the compatibility pack](https://github.com/dotnet/designs/blob/master/accepted/compat-pack/compat-pack.md).</span></span>
 
-## <a name="get-started"></a><span data-ttu-id="b5193-132">시작</span><span class="sxs-lookup"><span data-stu-id="b5193-132">Get started</span></span>
+## <a name="get-started"></a><span data-ttu-id="220d8-132">시작</span><span class="sxs-lookup"><span data-stu-id="220d8-132">Get started</span></span>
 
-1. <span data-ttu-id="b5193-133">이식하기 전에 [이식 프로세스](index.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="b5193-133">Before porting, make sure to take a look at the [Porting Process](index.md).</span></span>
+1. <span data-ttu-id="220d8-133">이식하기 전에 [이식 프로세스](index.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="220d8-133">Before porting, make sure to take a look at the [Porting Process](index.md).</span></span>
 
-2. <span data-ttu-id="b5193-134">기존 코드를 .NET Core 또는 .NET Standard로 이식하는 경우 NuGet 패키지 [Microsoft.Windows.Compatibility](https://www.nuget.org/packages/Microsoft.Windows.Compatibility)를 설치합니다.</span><span class="sxs-lookup"><span data-stu-id="b5193-134">When porting existing code to .NET Core or .NET Standard, install the NuGet package [Microsoft.Windows.Compatibility](https://www.nuget.org/packages/Microsoft.Windows.Compatibility).</span></span>
+2. <span data-ttu-id="220d8-134">기존 코드를 .NET Core 또는 .NET Standard로 이식하는 경우 NuGet 패키지 [Microsoft.Windows.Compatibility](https://www.nuget.org/packages/Microsoft.Windows.Compatibility)를 설치합니다.</span><span class="sxs-lookup"><span data-stu-id="220d8-134">When porting existing code to .NET Core or .NET Standard, install the NuGet package [Microsoft.Windows.Compatibility](https://www.nuget.org/packages/Microsoft.Windows.Compatibility).</span></span>
 
-3. <span data-ttu-id="b5193-135">Windows에서 유지하려는 경우 모두 준비되었습니다.</span><span class="sxs-lookup"><span data-stu-id="b5193-135">If you want to stay on Windows, you're all set.</span></span>
+3. <span data-ttu-id="220d8-135">Windows에서 유지하려는 경우 모두 준비되었습니다.</span><span class="sxs-lookup"><span data-stu-id="220d8-135">If you want to stay on Windows, you're all set.</span></span>
 
-4. <span data-ttu-id="b5193-136">Linux 또는 macOS에서 .NET Core 애플리케이션 또는 .NET Standard 라이브러리를 실행하려는 경우 [API 분석기](../../standard/analyzers/api-analyzer.md)를 사용하여 플랫폼 간에 작동하지 않는 API의 사용량을 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="b5193-136">If you want to run the .NET Core application or .NET Standard library on Linux or macOS, use the [API Analyzer](../../standard/analyzers/api-analyzer.md) to find usage of APIs that won't work cross-platform.</span></span>
+4. <span data-ttu-id="220d8-136">Linux 또는 macOS에서 .NET Core 애플리케이션 또는 .NET Standard 라이브러리를 실행하려는 경우 [API 분석기](../../standard/analyzers/api-analyzer.md)를 사용하여 플랫폼 간에 작동하지 않는 API의 사용량을 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="220d8-136">If you want to run the .NET Core application or .NET Standard library on Linux or macOS, use the [API Analyzer](../../standard/analyzers/api-analyzer.md) to find usage of APIs that won't work cross-platform.</span></span>
 
-5. <span data-ttu-id="b5193-137">이러한 API의 사용량을 제거하거나 플랫폼 간 대체 방법으로 바꾸거나 다음과 같은 플랫폼 검사를 사용하여 보호합니다.</span><span class="sxs-lookup"><span data-stu-id="b5193-137">Either remove the usages of those APIs, replace them with cross-platform alternatives, or guard them using a platform check, like:</span></span>
+5. <span data-ttu-id="220d8-137">이러한 API의 사용량을 제거하거나 플랫폼 간 대체 방법으로 바꾸거나 다음과 같은 플랫폼 검사를 사용하여 보호합니다.</span><span class="sxs-lookup"><span data-stu-id="220d8-137">Either remove the usages of those APIs, replace them with cross-platform alternatives, or guard them using a platform check, like:</span></span>
 
     ```csharp
     private static string GetLoggingPath()
@@ -77,4 +77,4 @@ ms.locfileid: "70202557"
     }
     ```
 
-<span data-ttu-id="b5193-138">데모의 경우 [Windows 호환 기능 팩의 Channel 9 비디오](https://channel9.msdn.com/Events/Connect/2017/T123)를 확인하세요.</span><span class="sxs-lookup"><span data-stu-id="b5193-138">For a demo, check out the [Channel 9 video of the Windows Compatibility Pack](https://channel9.msdn.com/Events/Connect/2017/T123).</span></span>
+<span data-ttu-id="220d8-138">데모의 경우 [Windows 호환 기능 팩의 Channel 9 비디오](https://channel9.msdn.com/Events/Connect/2017/T123)를 확인하세요.</span><span class="sxs-lookup"><span data-stu-id="220d8-138">For a demo, check out the [Channel 9 video of the Windows Compatibility Pack](https://channel9.msdn.com/Events/Connect/2017/T123).</span></span>
