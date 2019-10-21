@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XML documentation [C#]
 - C# language, XML documentation features
 ms.assetid: 8f33917b-9577-4c9a-818a-640dbbb0b399
-ms.openlocfilehash: 06b0c3b7877337d8a5703403af98dbacdf3ea93c
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 3e59783a7f306d3d2a510fe3337a4c6490dcb3e8
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834171"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523456"
 ---
 # <a name="how-to-use-the-xml-documentation-features"></a>방법: XML 문서 기능 사용
 
@@ -135,7 +135,7 @@ XML 문서는 ///로 시작합니다. 새 프로젝트를 만드는 경우 마�
 ## <a name="see-also"></a>참고 항목
 
 - [C# 프로그래밍 가이드](../index.md)
-- [/doc(C# 컴파일러 옵션)](../../language-reference/compiler-options/doc-compiler-option.md)
+- [-doc(C# 컴파일러 옵션)](../../language-reference/compiler-options/doc-compiler-option.md)
 - [XML 문서 주석](./index.md)
 - [DocFX 설명서 프로세서](https://dotnet.github.io/docfx/)
 - [Sandcastle 설명서 프로세서](https://github.com/EWSoftware/SHFB)

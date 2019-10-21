@@ -9,12 +9,12 @@ helpviewer_keywords:
 - aliases [C#], extern keyword
 - aliases, extern keyword
 ms.assetid: f487bf4f-c943-4fca-851b-e540c83d9027
-ms.openlocfilehash: a701ae02adebfa2dda8fb65053dbf2ebbe83328b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 09d1247c51f0e600973840cfef2d3b396d9bf0d0
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924690"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72520283"
 ---
 # <a name="extern-alias-c-reference"></a>extern alias(C# 참조)
 정규화된 형식 이름이 동일한 어셈블리의 두 버전을 참조해야 할 수 있습니다. 예를 들어 동일한 애플리케이션에서 어셈블리 버전을 두 개 이상 사용해야 할 수 있습니다. 외부 어셈블리 별칭을 사용하면 각 어셈블리의 네임스페이스를 별칭으로 명명된 루트 수준 네임스페이스 내에서 래핑하여 동일한 파일에서 사용하도록 할 수 있습니다.  
@@ -47,4 +47,4 @@ ms.locfileid: "69924690"
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)
 - [C# 키워드](./index.md)
 - [:: 연산자](../operators/namespace-alias-qualifier.md)
-- [/reference(C# 컴파일러 옵션)](../compiler-options/reference-compiler-option.md)
+- [-reference(C# 컴파일러 옵션)](../compiler-options/reference-compiler-option.md)

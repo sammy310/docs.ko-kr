@@ -2,12 +2,12 @@
 title: API 게이트웨이 패턴과 클라이언트-마이크로 서비스 간 직접 통신
 description: API 게이트웨이 패턴과 클라이언트-마이크로 서비스 간 직접 통신의 차이점 및 사용법을 이해합니다.
 ms.date: 01/07/2019
-ms.openlocfilehash: d895ae50e50ade2f8285117491733d5c9814b732
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 6b42650b2dbce093f12fe02b1605c95076dc8592
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834445"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522954"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>API 게이트웨이 패턴과 클라이언트-마이크로 서비스 간 직접 통신
 
@@ -17,7 +17,7 @@ ms.locfileid: "71834445"
 
 가능한 방법은 클라이언트-마이크로 서비스 간 직접 통신 아키텍처를 사용하는 것입니다. 이 방법에서 클라이언트 앱은 그림 4-12에 나와 있는 것처럼 일부 마이크로 서비스에 직접 요청을 만듭니다.
 
-![클라이언트-마이크로 서비스 간 통신 아키텍처를 보여 주는 다이어그램입니다.](./media/direct-client-to-microservice-communication-versus-the-API-Gateway-pattern/direct-client-to-microservice-communication.png)
+![클라이언트-마이크로 서비스 간 통신 아키텍처를 보여 주는 다이어그램입니다.](./media/direct-client-to-microservice-communication.png)
 
 **그림 4-12**. 클라이언트-마이크로 서비스 간 직접 통신 아키텍처 사용
 
