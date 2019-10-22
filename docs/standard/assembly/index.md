@@ -14,12 +14,12 @@ helpviewer_keywords:
 - type boundaries
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 903a553b5383620f15cce274c61a440b7bbb1d7d
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 5fb809b564df17d6320b7ffce3d757fa0fee7639
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70970010"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72583017"
 ---
 # <a name="assemblies-in-net"></a>.NET 어셈블리
 
@@ -114,7 +114,8 @@ C#에서는 단일 애플리케이션에서 동일한 어셈블리의 두 버전
 
 - [.NET 어셈블리 파일 형식](file-format.md)
 - [.NET 어셈블리](index.md)
-- [Friend 어셈블리](friend.md)
+- [friend 어셈블리](friend.md)
+- [참조 어셈블리](reference-assemblies.md)
 - [방법: 어셈블리 로드 및 언로드](load-unload.md)
 - [방법: .NET Core에서 어셈블리 언로드 기능 사용 및 디버그](unloadability.md)
 - [방법: 파일이 어셈블리인지 확인](identify.md)

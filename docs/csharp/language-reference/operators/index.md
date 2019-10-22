@@ -9,12 +9,12 @@ helpviewer_keywords:
 - operator associativity [C#]
 - expressions [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 766da517d247361f747591c3758e8610927866a9
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 7d69528804cf0cee1302fd62fa2301e06076897a
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71116106"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72579210"
 ---
 # <a name="c-operators-c-reference"></a>C# 연산자(C# 참조)
 
@@ -42,12 +42,12 @@ Console.WriteLine(a); //  output: 8
 
 | 연산자 | 범주 또는 이름 |
 | --------- | ---------------- |
-| [x.y](member-access-operators.md#member-access-operator-), [x?.y](member-access-operators.md#null-conditional-operators--and-), [x?[y]](member-access-operators.md#null-conditional-operators--and-), [f(x)](member-access-operators.md#invocation-operator-), [a&#91;i&#93;](member-access-operators.md#indexer-operator-), [x++](arithmetic-operators.md#increment-operator-), [x--](arithmetic-operators.md#decrement-operator---), [new](new-operator.md), [typeof](type-testing-and-cast.md#typeof-operator), [checked](../keywords/checked.md), [unchecked](../keywords/unchecked.md), [default](default.md), [nameof](nameof.md), [delegate](delegate-operator.md), [sizeof](sizeof.md), [stackalloc](stackalloc.md), [x->y](pointer-related-operators.md#pointer-member-access-operator--) | 기본 연산자 |
+| [x.y](member-access-operators.md#member-access-operator-), [x?.y](member-access-operators.md#null-conditional-operators--and-), [x?[y]](member-access-operators.md#null-conditional-operators--and-), [f(x)](member-access-operators.md#invocation-operator-), [a&#91;i&#93;](member-access-operators.md#indexer-operator-), [x++](arithmetic-operators.md#increment-operator-), [x--](arithmetic-operators.md#decrement-operator---), [new](new-operator.md), [typeof](type-testing-and-cast.md#typeof-operator), [checked](../keywords/checked.md), [unchecked](../keywords/unchecked.md), [default](default.md), [nameof](nameof.md), [delegate](delegate-operator.md), [sizeof](sizeof.md), [stackalloc](stackalloc.md), [x->y](pointer-related-operators.md#pointer-member-access-operator--) | 주 |
 | [+x](arithmetic-operators.md#unary-plus-and-minus-operators), [-x](arithmetic-operators.md#unary-plus-and-minus-operators), [\!x](boolean-logical-operators.md#logical-negation-operator-), [~x](bitwise-and-shift-operators.md#bitwise-complement-operator-), [++x](arithmetic-operators.md#increment-operator-), [--x](arithmetic-operators.md#decrement-operator---), [^x](member-access-operators.md#index-from-end-operator-), [(T)x](type-testing-and-cast.md#cast-operator-), [await](await.md), [&x](pointer-related-operators.md#address-of-operator-), [*x](pointer-related-operators.md#pointer-indirection-operator-), [true 및 false](true-false-operators.md) | 단항 |
 | [x..y](member-access-operators.md#range-operator-) | 범위 |
 | [x * y](arithmetic-operators.md#multiplication-operator-), [x / y](arithmetic-operators.md#division-operator-), [x % y](arithmetic-operators.md#remainder-operator-) | 곱하기|
 | [x + y](arithmetic-operators.md#addition-operator-), [x – y](arithmetic-operators.md#subtraction-operator--) | 더하기 |
-| [x \<\<  y](bitwise-and-shift-operators.md#left-shift-operator-), [x >> y](bitwise-and-shift-operators.md#right-shift-operator-) | 시프트 |
+| [x \<\<  y](bitwise-and-shift-operators.md#left-shift-operator-), [x >> y](bitwise-and-shift-operators.md#right-shift-operator-) | Shift |
 | [x \< y](comparison-operators.md#less-than-operator-), [x > y](comparison-operators.md#greater-than-operator-), [x \<= y](comparison-operators.md#less-than-or-equal-operator-), [x >= y](comparison-operators.md#greater-than-or-equal-operator-), [is](type-testing-and-cast.md#is-operator), [as](type-testing-and-cast.md#as-operator) | 관계형 및 형식 테스트 |
 | [x == y](equality-operators.md#equality-operator-), [x != y](equality-operators.md#inequality-operator-) | 같음 |
 | `x & y` | [부울 논리 AND](boolean-logical-operators.md#logical-and-operator-) 또는 [비트 논리 AND](bitwise-and-shift-operators.md#logical-and-operator-) |
@@ -63,8 +63,8 @@ Console.WriteLine(a); //  output: 8
 
 연산자의 우선 순위가 같은 경우 연산자의 결합성이 연산이 수행되는 순서를 결정합니다.
 
-- ‘왼쪽 결합성이 있는’ 연산자는 왼쪽에서 오른쪽으로 계산됩니다.  [대입 연산자](assignment-operator.md) 및 [null 병합 연산자 `??`](null-coalescing-operator.md)를 제외하고, 모든 이진 연산자는 왼쪽 결합성이 있습니다. 예를 들어, `a + b - c`는 `(a + b) - c`로 계산됩니다.
-- ‘오른쪽 결합성이 있는’ 연산자는 오른쪽에서 왼쪽으로 계산됩니다.  대입 연산자, null 병합 연산자 `??` 및 [조건 연산자 `?:`](conditional-operator.md)은 오른쪽 결합성이 있습니다. 예를 들어, `x = y = z`는 `x = (y = z)`로 계산됩니다.
+- ‘왼쪽 결합성이 있는’ 연산자는 왼쪽에서 오른쪽으로 계산됩니다.  [대입 연산자](assignment-operator.md) 및 [null 병합 연산자 ](null-coalescing-operator.md)를 제외하고, 모든 이진 연산자는 왼쪽 결합성이 있습니다. 예를 들어, `a + b - c`는 `(a + b) - c`로 계산됩니다.
+- ‘오른쪽 결합성이 있는’ 연산자는 오른쪽에서 왼쪽으로 계산됩니다.  대입 연산자, null 병합 연산자 및 [조건 연산자 `?:`](conditional-operator.md)는 오른쪽 결합성이 있습니다. 예를 들어, `x = y = z`는 `x = (y = z)`로 계산됩니다.
 
 괄호를 사용하여 연산자 결합성에 따라 주어진 계산 순서를 변경합니다.
 
@@ -85,7 +85,7 @@ Console.WriteLine($"a = {a}, b = {b}");  // output: a = 1, b = 6
 |`a / b + c * d`|a, b, /, c, d, *, +|
 |`a / (b + c) * d`|a, b, c, +, /, d, *|
 
-일반적으로 모든 연산자 피연산자가 계산됩니다. 일부 연산자는 조건부로 피연산자를 계산합니다. 즉, 이와 같은 연산자의 첫 번째 피연산자 값이 다른 피연산자를 계산해야 할지 여부 또는 계산해야 할 다른 피연산자를 정의합니다. 이에 해당하는 연산자는 조건부 논리 [AND(`&&`)](boolean-logical-operators.md#conditional-logical-and-operator-) 및 [OR(`||`)](boolean-logical-operators.md#conditional-logical-or-operator-) 연산자, [null 병합 연산자 `??`](null-coalescing-operator.md), [null 조건부 연산자 `?.` 및 `?[]`](member-access-operators.md#null-conditional-operators--and-), [조건 연산자 `?:`](conditional-operator.md)입니다. 자세한 내용은 각 연산자의 설명을 참조하세요.
+일반적으로 모든 연산자 피연산자가 계산됩니다. 일부 연산자는 조건부로 피연산자를 계산합니다. 즉, 이와 같은 연산자의 첫 번째 피연산자 값이 다른 피연산자를 계산해야 할지 여부 또는 계산해야 할 다른 피연산자를 정의합니다. 이에 해당하는 연산자는 조건부 논리 [AND(`&&`)](boolean-logical-operators.md#conditional-logical-and-operator-) 및 [OR(`||`)](boolean-logical-operators.md#conditional-logical-or-operator-) 연산자, [null 병합 연산자 `??` 및 `??=`](null-coalescing-operator.md), [null 조건부 연산자 `?.` 및 `?[]`](member-access-operators.md#null-conditional-operators--and-), 그리고 [조건 연산자 `?:`](conditional-operator.md)입니다. 자세한 내용은 각 연산자의 설명을 참조하세요.
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 
