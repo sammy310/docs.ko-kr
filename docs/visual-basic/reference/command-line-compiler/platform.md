@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /platform compiler option [Visual Basic]
 - -platform compiler option [Visual Basic]
 ms.assetid: f9bc61e6-e854-4ae1-87b9-d6244de23fd1
-ms.openlocfilehash: 21526484b8423f9b366da64307bc44f8fb061fe9
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 741c36473d80b2581718d969a7037f6c81ff4bf5
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005300"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775593"
 ---
 # <a name="-platform-visual-basic"></a>-platform (Visual Basic)
 출력 파일을 실행할 수 있는 CLR(공용 언어 런타임) 플랫폼 버전을 지정합니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "72005300"
 |`anycpu`|임의의 플랫폼에서 실행되도록 어셈블리를 컴파일합니다. 애플리케이션은 32비트 버전 Windows에서는 32비트 애플리케이션으로, 64비트 버전 Windows에서는 64비트 애플리케이션으로 실행됩니다. 이 플래그가 기본값입니다.|  
 |`anycpu32bitpreferred`|임의의 플랫폼에서 실행되도록 어셈블리를 컴파일합니다. 애플리케이션은 32비트 및 64비트 버전 Windows 둘 다에서 32비트 애플리케이션으로 실행됩니다. 이 플래그는 실행 파일 ()에 대해서만 유효 합니다. EXE)를 사용 하려면 .NET Framework 4.5가 필요 합니다.|  
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
  출력 파일의 대상 프로세서 유형을 지정하려면 `-platform` 옵션을 사용합니다.  
   
  일반적으로 Visual Basic에서 작성된 .NET Framework 어셈블리는 플랫폼에 관계없이 동일하게 실행됩니다. 그러나 플랫폼별로 동작이 다른 경우도 있습니다. 이러한 경우의 일반적인 예는 다음과 같습니다.  
@@ -83,6 +83,6 @@ vbc -platform:x86 myFile.vb
   
 ## <a name="see-also"></a>참조
 
-- [/target (Visual Basic)](target.md)
+- [-target (Visual Basic)](target.md)
 - [Visual Basic 명령줄 컴파일러](index.md)
 - [샘플 컴파일 명령줄](sample-compilation-command-lines.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /optioninfer compiler option [Visual Basic]
 - optioninfer compiler option [Visual Basic]
 ms.assetid: f6c09db1-0553-464a-abe3-d4510c61d6ed
-ms.openlocfilehash: c6fc7e9dcfbce938ad75b0f357c2bfa9cd10703a
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: d7209e431b84e52e487bccbf73bd633a346efde0
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005317"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775614"
 ---
 # <a name="-optioninfer"></a>-optioninfer
 변수 선언에서 지역 형식 유추를 사용하도록 설정합니다.  
@@ -33,8 +33,8 @@ ms.locfileid: "72005317"
 > [!NOTE]
 > `-noconfig` 옵션을 사용하여 vbc.rsp에 지정된 값 대신 컴파일러의 내부 기본값을 유지할 수 있습니다. 이 옵션에 대한 컴파일러 기본값은 `-optioninfer-`입니다.  
   
-## <a name="remarks"></a>설명  
- 소스 코드 파일에 [유추할 문이](../../../visual-basic/language-reference/statements/option-infer-statement.md)포함 된 경우 문은 `-optioninfer` 명령줄 컴파일러 설정을 재정의 합니다.  
+## <a name="remarks"></a>주의  
+ 소스 코드 파일에 [옵션 유추 문이](../../../visual-basic/language-reference/statements/option-infer-statement.md)포함 되어 있으면 문이 `-optioninfer` 명령줄 컴파일러 설정을 재정의 합니다.  
   
 ### <a name="to-set--optioninfer-in-the-visual-studio-ide"></a>Visual Studio IDE에서을 설정 하려면  
   
@@ -60,5 +60,5 @@ vbc -optioninfer+ test.vb
 - [지역 형식 유추](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
 - [옵션 대화 상자, 프로젝트, Visual Basic 기본값](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
 - [프로젝트 디자이너, 컴파일 페이지(Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)
-- [/noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)
+- [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)
 - [명령줄에서 빌드](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)

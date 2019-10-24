@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b6014613-641c-4912-9e2f-83a99210a037
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 27d1a8cc80db9e17000880c006ac1d7c1bd12fec
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: 5c0b3c9d13267abe50ee187bce0c56485be29613
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68631497"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775290"
 ---
 # <a name="applying-interop-attributes"></a>Interop 특성 적용
 <xref:System.Runtime.InteropServices> 네임스페이스는 디자인 타임에 사용자가 적용한 특성, 변환 과정에서 COM interop 도구 및 API가 적용한 특성, 사용자 또는 COM interop가 적용한 특성 등 세 가지 범주의 interop 관련 특성을 제공합니다.  
@@ -40,7 +40,8 @@ ms.locfileid: "68631497"
 |<xref:System.Runtime.InteropServices.ComSourceInterfacesAttribute>|클래스에 대한 이벤트의 소스인 인터페이스를 식별합니다.<br /><br /> COM interop 도구는 이 특성을 적용할 수 있습니다.|  
 |<xref:System.Runtime.InteropServices.ComUnregisterFunctionAttribute>|프로세스 중 사용자가 작성한 코드를 실행할 수 있도록, COM에서 어셈블리 등록을 취소할 때 메서드를 호출해야 함을 나타냅니다.|  
 |<xref:System.Runtime.InteropServices.ComVisibleAttribute>|특성 값이 **false**와 같을 때 COM에 보이지 않는 형식을 렌더링합니다. 이 특성을 개별 형식 또는 전체 어셈블리에 적용하여 COM 표시 유형을 제어할 수 있습니다. 기본적으로 관리되는 모든 공용 형식이 표시됩니다. 표시하려는 경우에는 특성이 필요하지 않습니다.|  
-|<xref:System.Runtime.InteropServices.DispIdAttribute>|메서드 또는 필드의 COM DISPID(디스패치 식별자)를 지정합니다. 이 특성에는 설명하는 메서드, 필드 또는 속성에 대한 DISPID가 포함됩니다.<br /><br /> COM interop 도구는 이 특성을 적용할 수 있습니다.|  
+|<xref:System.Runtime.InteropServices.DispIdAttribute>|메서드 또는 필드의 COM DISPID(디스패치 식별자)를 지정합니다. 이 특성에는 설명하는 메서드, 필드 또는 속성에 대한 DISPID가 포함됩니다.<br /><br /> COM interop 도구는 이 특성을 적용할 수 있습니다.| 
+|<xref:System.Runtime.InteropServices.ComDefaultInterfaceAttribute>|.NET에서 구현 된 COM 클래스의 기본 인터페이스를 나타냅니다.<br /><br /> COM interop 도구는 이 특성을 적용할 수 있습니다.|
 |<xref:System.Runtime.InteropServices.FieldOffsetAttribute>|**StructLayoutAttribute**와 함께 사용하고 **LayoutKind**가 명시적으로 설정된 경우 클래스 내 각 필드의 실제 위치를 나타냅니다.|  
 |<xref:System.Runtime.InteropServices.GuidAttribute>|클래스, 인터페이스 또는 전체 형식 라이브러리의 GUID(Globally Unique Identifier)를 지정합니다. 특성에 전달된 문자열은 **System.Guid** 형식에 허용되는 생성자 인수인 형식이어야 합니다.<br /><br /> COM interop 도구는 이 특성을 적용할 수 있습니다.|  
 |<xref:System.Runtime.InteropServices.IDispatchImplAttribute>|이중 인터페이스와 dispinterface를 COM에 노출할 때 공용 언어 런타임에서 사용하는 **IDispatch** 인터페이스 구현을 나타냅니다.|  
@@ -67,7 +68,7 @@ ms.locfileid: "68631497"
 |<xref:System.Runtime.InteropServices.TypeLibTypeAttribute>|원래 COM 형식 라이브러리에서 이 형식에 대해 가져온 **TYPEFLAGS**를 포함합니다.|  
 |<xref:System.Runtime.InteropServices.TypeLibVarAttribute>|원래 COM 형식 라이브러리에서 이 변수에 대해 가져온 **VARFLAGS**를 포함합니다.|  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Runtime.InteropServices>
 - [.NET Framework 구성 요소를 COM에 노출](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)

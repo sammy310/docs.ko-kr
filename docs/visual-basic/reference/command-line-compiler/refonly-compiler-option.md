@@ -7,16 +7,16 @@ helpviewer_keywords:
 - /refonly compiler option [Visual Basic]
 - -refonly compiler option [Visual Basic]
 - refonly compiler option [Visual Basic]
-ms.openlocfilehash: 4093e98738cf6e41cd450229d82e3672fe9687ec
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8e64989ac1410b51991027ffcb33e8dae0c0284b
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788871"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775561"
 ---
 # <a name="-refonly-visual-basic"></a>-refonly (Visual Basic)
 
-합니다 **-refonly** 옵션 컴파일 기본 출력은 구현 어셈블리 대신 참조 어셈블리를 함을 나타냅니다. `-refonly` 매개 변수는 참조 어셈블리가 실행될 수 없을 때 PDB 출력을 자동으로 사용하지 않도록 설정합니다.
+**-Refonly** 옵션은 컴파일의 기본 출력이 구현 어셈블리 대신 참조 어셈블리 여야 함을 나타냅니다. `-refonly` 매개 변수는 참조 어셈블리가 실행될 수 없을 때 PDB 출력을 자동으로 사용하지 않도록 설정합니다.
 
 [!INCLUDE[compiler-options](~/includes/compiler-options.md)]
 
@@ -26,17 +26,15 @@ ms.locfileid: "61788871"
 -refonly
 ```
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
-Visual Basic 지원은 `-refout` 버전 15.3부터 전환 합니다.
+Visual Basic 버전 15.3부터 `-refonly` 스위치를 지원 합니다.
 
-참조 어셈블리는 구현 코드가 없는 메타 데이터를 포함 하는 메타 데이터 전용 어셈블리입니다. 익명 형식을 제외한 모든 항목에 대 한 형식 및 멤버 정보가 포함 됩니다. 본문이 없는 경우와 대조적으로 `throw null` 본문을 사용하는 이유는 PEVerify가 실행 및 전달될 수 있도록 하여 메타데이터의 완전성을 검증하기 위한 것입니다.
-
-참조 어셈블리는 어셈블리 수준 포함 [ReferenceAssembly](xref:System.Runtime.CompilerServices.ReferenceAssemblyAttribute) 특성입니다. 이 특성을 소스에서 지정할 수 있습니다. 이렇게 하면 컴파일러가 특성을 합성할 필요가 없습니다. 이 특성으로 인해 런타임 실행을 위한 참조 어셈블리 로드를 거부 되지만 리플렉션 전용 컨텍스트에서 로드 될 여전히 수 있습니다. 어셈블리에 반영 되는 도구를 참조 어셈블리를 리플렉션 전용으로 로드를 확인 해야 합니다. 그렇지 않으면 런타임에서 throw 된 <xref:System.BadImageFormatException>합니다.
+참조 어셈블리는 라이브러리의 공용 API 화면을 나타내는 데 필요한 최소한의 메타 데이터만 포함 하는 특수 한 형식의 어셈블리입니다. 여기에는 빌드 도구에서 어셈블리를 참조할 때 중요 한 모든 멤버에 대 한 선언이 포함 되지만, 해당 API 계약에 대 한 관찰 효과가 없는 전용 멤버의 모든 멤버 구현 및 선언은 제외 됩니다. 자세한 내용은 .NET의 [참조 어셈블리](../../../standard/assembly/reference-assemblies.md) 가이드를 참조 하세요.
 
 `-refonly` 및 [`-refout`](refout-compiler-option.md) 옵션은 함께 사용할 수 없습니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [/refout](refout-compiler-option.md)
 - [Visual Basic 명령줄 컴파일러](index.md)
