@@ -3,12 +3,12 @@ title: project.json에서 .NET Core 마이그레이션
 description: project.json을 사용하여 이전 .NET Core 프로젝트를 마이그레이션하는 방법 알아보기
 ms.date: 07/19/2017
 ms.custom: seodec18
-ms.openlocfilehash: 167f0707bbaf34ce12a1c56ee2320e7cc4f48bd3
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 2912262d1191114d2314fed89e31c91c114f1935
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698924"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72773907"
 ---
 # <a name="migrating-net-core-projects-from-projectjson"></a>project.json에서 .NET Core 프로젝트 마이그레이션
 
@@ -40,7 +40,7 @@ Visual Studio에서 선택한 프로젝트가 자동으로 마이그레이션됩
 마이그레이션된 파일(*project.json*, *global.json*, *.xproj* 및 솔루션 파일)은 *Backup* 폴더로 이동합니다. 마이그레이션된 솔루션 파일은 Visual Studio 2017 또는 Visual Studio 2019로 업그레이드되며, Visual Studio 2015 이전 버전에서는 해당 솔루션 파일을 열 수 없습니다. 마이그레이션 보고서를 포함하는 *UpgradeLog.htm*이라는 파일도 저장되고 자동으로 열립니다.
 
 > [!IMPORTANT]
-> Visual Studio 2015를 사용하여 프로젝트를 마이그레이션할 수 없습니다.
+> Visual Studio 2019 버전 16.3 이상에서는 *.xproj* 파일을 로드하거나 마이그레이션할 수 없습니다. 또한 Visual Studio 2015는 *.xproj* 파일을 마이그레이션하는 기능을 제공하지 않습니다. 이 Visual Studio 버전 중 하나를 사용 중인 경우 적절한 버전의 Visual Studio를 설치하거나 다음에 설명된 명령줄 마이그레이션 도구를 사용하세요.
 
 ### <a name="dotnet-migrate"></a>dotnet 마이그레이션
 
@@ -49,17 +49,17 @@ Visual Studio에서 선택한 프로젝트가 자동으로 마이그레이션됩
 마이그레이션된 파일(*project.json*, *global.json* 및 *.xproj*)은 *backup* 폴더로 이동합니다.
 
 > [!NOTE]
-> Visual Studio Code를 사용 중인 경우 `dotnet migrate` 명령은 `tasks.json`과 같은 Visual Studio Code 관련 파일을 수정하지 않습니다. 이러한 파일은 수동으로 변경해야 합니다.
-> Project Ryder나 다른 편집기 또는 Visual Studio 이외의 IDE(통합 개발 환경)를 사용 중인 경우에도 마찬가지입니다.
+> Visual Studio Code를 사용 중인 경우 `dotnet migrate` 명령은 *tasks.json* 같은 Visual Studio Code 관련 파일을 수정하지 않습니다. 이러한 파일은 수동으로 변경해야 합니다.
+> 편집기 또는 Visual Studio 이외의 IDE(통합 개발 환경)를 사용 중인 경우에도 마찬가지입니다.
 
-project.json 및 csproj 형식 간을 비교하려면 [project.json 및 csproj 속성 간 매핑](../tools/project-json-to-csproj.md)을 참조하세요.
+*project.json* 형식과 *.csproj* 형식을 비교하려면 [project.json 및 csproj 속성 간 매핑](../tools/project-json-to-csproj.md)을 참조하세요.
 
-### <a name="common-issues"></a>일반적인 문제
+“No executable found matching command dotnet-migrate”(dotnet-migrate
 
-- “No executable found matching command dotnet-migrate”(dotnet-migrate 명령과 일치하는 실행 파일을 찾을 수 없습니다.) 오류가 발생하는 경우 다음을 수행합니다.
+> 명령과 일치하는 실행 파일을 찾을 수 없습니다.) 오류가 발생하는 경우 다음을 수행합니다.
 
-`dotnet --version`을 실행하여 사용 중인 버전을 확인합니다. [`dotnet migrate`](../tools/dotnet-migrate.md)을 사용하려면 .NET Core CLI RC3 이상이 필요합니다.
-*global.json* 파일이 현재 또는 상위 디렉터리에 있고 `sdk` 버전이 이전 버전으로 설정된 경우 이 오류가 발생합니다.
+`dotnet --version`을 실행하여 사용 중인 버전을 확인합니다. [`dotnet migrate`](../tools/dotnet-migrate.md)는 .NET Core SDK 1.0.0에 도입되었고 버전 3.0.100에서 제거되었습니다.
+*global.json* 파일이 현재 또는 부모 디렉터리에 있고 해당 파일이 지정하는 `sdk` 버전이 이 범위를 벗어나는 경우 이 오류가 발생합니다.
 
 ## <a name="migration-from-dnx-to-csproj"></a>DNX에서 csproj로 마이그레이션
 

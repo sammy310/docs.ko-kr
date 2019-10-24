@@ -2,12 +2,12 @@
 title: Docker 기반 애플리케이션에 대한 개발 프로세스
 description: Docker 기반 애플리케이션 개발 옵션을 개괄적으로 살펴봅니다. Windows용 Visual Studio, Mac용 Visual Studio 또는 여러 플랫폼(Windows, Mac, Linux)을 지원하는 Visual Studio Code를 사용합니다.
 ms.date: 09/27/2018
-ms.openlocfilehash: a32b27f3d98ed7ebf63b637ec0c979c22ee8e1e8
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 6299d67299948dce1081a211b350e657b2c1b951
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70295140"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72770132"
 ---
 # <a name="development-process-for-docker-based-applications"></a>Docker 기반 애플리케이션에 대한 개발 프로세스
 
@@ -19,7 +19,7 @@ ms.locfileid: "70295140"
 
 완전하고 강력한 IDE를 선호하든지 아니면 간단하고 민첩한 편집기를 선호하든지 상관없이 Microsoft는 Docker 애플리케이션을 개발하는 데 사용할 수 있는 도구를 제공합니다.
 
-**Visual Studio(Windows용)** . Visual Studio를 사용하여 Docker 기반 애플리케이션을 개발할 때에는 이미 기본 제공되는 Docker용 도구와 함께 제공되는 Visual Studio 2017 버전 15.7 이상을 사용하는 것이 좋습니다. Docker용 도구를 통해 대상 Docker 환경에서 직접 애플리케이션을 개발하고 실행할 수 있으며, 애플리케이션의 유효성을 검사할 수 있습니다. F5 키를 눌러 애플리케이션(단일 컨테이너 또는 여러 컨테이너)을 Docker 호스트에 직접 실행 및 디버그하거나, Ctrl+F5를 눌러 컨테이너를 다시 빌드하지 않고도 애플리케이션을 편집 및 새로 고칠 수 있습니다. 이는 Docker 기반 앱을 위한 가장 강력한 개발 옵션입니다.
+**Visual Studio(Windows용)** . Visual Studio를 사용하여 Docker 기반 애플리케이션을 개발하는 경우 이미 기본 제공되는 Docker용 도구와 함께 제공되는 Visual Studio 2017 버전 15.7 이상을 사용하는 것이 좋습니다. Docker용 도구를 통해 대상 Docker 환경에서 직접 애플리케이션을 개발하고 실행할 수 있으며, 애플리케이션의 유효성을 검사할 수 있습니다. F5 키를 눌러 애플리케이션(단일 컨테이너 또는 여러 컨테이너)을 Docker 호스트에 직접 실행 및 디버그하거나, Ctrl+F5를 눌러 컨테이너를 다시 빌드하지 않고도 애플리케이션을 편집 및 새로 고칠 수 있습니다. 이는 Docker 기반 앱을 위한 가장 강력한 개발 옵션입니다.
 
 **Mac용 Visual Studio.** macOS에서 실행되는 Xamarin Studio의 확장인 IDE로, 2017년 중반부터 Docker를 지원합니다. 이는 Mac 컴퓨터에서 작업 중인 개발자로, 강력한 IDE도 사용하고자 하는 경우에 권장되는 옵션입니다.
 
@@ -37,7 +37,7 @@ ms.locfileid: "70295140"
 
 - **Windows CE(Community Edition)를 위한 Docker Desktop** \
   [https://hub.docker.com/editions/community/docker-ce-desktop-windows](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
-  
+
 - **Mac CE(Community Edition)를 위한 Docker Desktop** \
   [https://hub.docker.com/editions/community/docker-ce-desktop-mac](https://hub.docker.com/editions/community/docker-ce-desktop-mac)
 

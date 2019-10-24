@@ -3,12 +3,12 @@ title: C# 둘러보기 - C# 가이드
 description: C#을 처음 사용하시나요? 언어의 기본 사항에 대해 알아봅니다.
 ms.date: 04/05/2019
 ms.custom: seoapril2019
-ms.openlocfilehash: eaaa5a259f0776a2749ed899d0406aee041a8442
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: b497ff05b29ce349fe2be3f8b9bc1a8697d6b30b
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105657"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774070"
 ---
 # <a name="a-tour-of-the-c-language"></a>C# 언어 둘러보기
 
@@ -26,15 +26,15 @@ C# 프로그램 및 라이브러리가 호환되는 방식으로 계속 진화�
 
 “Hello, World” 프로그램은 프로그래밍 언어를 소개하는 데 일반적으로 사용됩니다. C#에서는 다음과 같습니다.
 
-[!code-csharp[Hello World](../../../samples/snippets/csharp/tour/hello/Program.cs#L1-L8)]
+[!code-csharp[Hello World](~/samples/snippets/csharp/tour/hello/Program.cs)]
 
-C# 소스 파일은 일반적으로 파일 확장명이 `.cs`입니다. “Hello, World” 프로그램이 파일 `hello.cs`에 저장되어 있다고 가정할 경우 프로그램은 명령줄을 사용하여 컴파일될 수 있습니다.
+C# 소스 파일은 일반적으로 파일 확장명이 `.cs`입니다. “Hello, World” 프로그램이 파일 *hello.cs*에 저장되어 있다고 가정할 경우 프로그램은 다음 명령줄을 사용하여 컴파일할 수 있습니다.
 
 ```console
 csc hello.cs
 ```
 
-여기서는 hello.exe라는 실행 가능한 어셈블리를 생성합니다. 이 애플리케이션이 실행될 때 생성하는 출력은 다음과 같습니다.
+이 명령줄은 *hello.exe*라는 실행 가능한 어셈블리를 생성합니다. 이 애플리케이션이 실행될 때 생성하는 출력은 다음과 같습니다.
 
 ```console
 Hello, World
@@ -49,7 +49,7 @@ Hello, World
 
 프로그램의 출력은 `System` 네임스페이스에 있는 `Console` 클래스의 `WriteLine` 메서드에 의해 생성됩니다. 이 클래스는 기본적으로는 컴파일러에서 자동으로 참조되는 표준 클래스 라이브러리를 통해 제공됩니다.
 
-C#에 대해 자세히 알아볼 수 있는 많은 리소스가 있습니다.  다음 항목에서는 C# 언어의 요소에 대한 개요를 제공합니다. 이러한 개요는 언어의 모든 요소에 대한 기본 정보를 제공하고 C# 언어의 요소를 보다 깊이 있게 이해하는 데 필요한 정보를 제공합니다.
+C#에 대해 자세히 알아볼 수 있는 많은 리소스가 있습니다. 다음 항목에서는 C# 언어의 요소에 대한 개요를 제공합니다. 이러한 개요는 언어의 모든 요소에 대한 기본 정보를 제공하고 C# 언어의 요소를 보다 깊이 있게 이해하는 데 필요한 정보를 제공합니다.
 
 - [프로그램 구조](program-structure.md)
   - C#의 핵심적인 조직 개념은 ***프로그램***, ***네임스페이스***, ***형식***, ***멤버*** 및 ***어셈블리***입니다.

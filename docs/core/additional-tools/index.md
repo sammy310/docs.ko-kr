@@ -4,12 +4,12 @@ description: .NET Core 기능을 지원하고 확장하는, 설치 가능한 추
 author: mlacouture
 ms.date: 11/27/2018
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 75c74c16367bacf66fa2fb56d7666a07f7274aff
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c885d6f6b0417a80dd6e26afe9572766738c5b4b
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65631964"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771963"
 ---
 # <a name="net-core-additional-tools-overview"></a>.NET Core 추가 도구 개요
 
@@ -22,7 +22,7 @@ WCF(Windows Communication Foundation) Web Service Reference는 [Visual Studio 20
 ## <a name="wcf-dotnet-svcutil-tooldotnet-svcutil-guidemd"></a>[WCF dotnet-svcutil 도구](dotnet-svcutil-guide.md)
 
 WCF(Windows Communication Foundation) dotnet-svcutil 도구는 네트워크 위치 또는 WSDL 파일의 웹 서비스에서 메타데이터를 검색하고, 해당 웹 서비스 작업을 액세스하는 데 사용할 수 있는 메서드와 함께 WCF 프록시 클래스를 정의하는 .NET Core 호환 소스 파일을 생성하는 .NET Core CLI 도구입니다.
-**dotnet-svcutil** 도구는 Visual Studio 2017 v15.5와 함께 처음 제공된 [**WCF Web Service Reference**](wcf-web-service-reference-guide.md) Visual Studio 연결 서비스 공급자에 대한 대체 옵션입니다. .NET Core CLI 도구인 **dotnet svcutil** 도구는 Linux, macOS, Windows에서 플랫폼 간에 사용할 수 있습니다.
+**dotnet-svcutil** 도구는 Visual Studio 2017 버전 15.5와 함께 처음 제공된 [**WCF Web Service Reference**](wcf-web-service-reference-guide.md) Visual Studio 연결 서비스 공급자에 대한 대체 옵션입니다. .NET Core CLI 도구인 **dotnet svcutil** 도구는 Linux, macOS, Windows에서 플랫폼 간에 사용할 수 있습니다.
 
 ## <a name="wcf-dotnet-svcutilxmlserializer-tooldotnet-svcutilxmlserializer-guidemd"></a>[WCF dotnet-svcutil.xmlserializer 도구](dotnet-svcutil.xmlserializer-guide.md)
 
