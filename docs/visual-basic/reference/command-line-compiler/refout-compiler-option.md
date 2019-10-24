@@ -7,12 +7,12 @@ helpviewer_keywords:
 - refout compiler option [Visual Basic]
 - /refout compiler option [Visual Basic]
 - -refout compiler option [Visual Basic]
-ms.openlocfilehash: c11d83ff37da41faa3dc6b66a87e2c52c5f6c7ac
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 552e611f222bfcc3ce12520ecdb891fd7b8b21de
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582868"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775556"
 ---
 # <a name="-refout-visual-basic"></a>-refout (Visual Basic)
 
@@ -35,9 +35,7 @@ ms.locfileid: "72582868"
 
 Visual Basic 버전 15.3부터 `-refout` 스위치를 지원 합니다.
 
-참조 어셈블리는 메타 데이터를 포함 하지만 구현 코드는 포함 하지 않는 메타 데이터 전용 어셈블리입니다. 익명 형식을 제외한 모든 항목에 대 한 형식 및 멤버 정보를 포함 합니다. 해당 메서드 본문은 단일 `throw null` 문으로 바뀝니다. 본문이 아닌 `throw null` 메서드 본문을 사용 하는 이유는 PEVerify를 실행 하 고 통과 하 여 메타 데이터의 완전성을 확인할 수 있도록 하는 것입니다.
-
-참조 어셈블리에는 어셈블리 수준 [Referenceassembly](xref:System.Runtime.CompilerServices.ReferenceAssemblyAttribute) 특성이 포함 됩니다. 이 특성을 소스에서 지정할 수 있습니다. 이렇게 하면 컴파일러가 특성을 합성할 필요가 없습니다. 이 특성으로 인해 런타임은 실행을 위해 참조 어셈블리를 로드 하는 것을 거부 하지만 여전히 리플렉션 전용 컨텍스트에서 로드 될 수 있습니다. 어셈블리를 반영 하는 도구는 참조 어셈블리를 리플렉션 전용으로 로드 하도록 해야 합니다. 그렇지 않으면 런타임에서 <xref:System.BadImageFormatException>을 throw 합니다.
+참조 어셈블리는 라이브러리의 공용 API 화면을 나타내는 데 필요한 최소한의 메타 데이터만 포함 하는 특수 한 형식의 어셈블리입니다. 여기에는 빌드 도구에서 어셈블리를 참조할 때 중요 한 모든 멤버에 대 한 선언이 포함 되지만, 해당 API 계약에 대 한 관찰 효과가 없는 전용 멤버의 모든 멤버 구현 및 선언은 제외 됩니다. 자세한 내용은 .NET의 [참조 어셈블리](../../../standard/assembly/reference-assemblies.md) 가이드를 참조 하세요.
 
 `-refout` 및 [`-refonly`](refonly-compiler-option.md) 옵션은 함께 사용할 수 없습니다.
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - late binding [Visual Basic]
 - implicit conversions [Visual Basic]
 ms.assetid: 5883e0c1-a920-4274-8e46-b0ff047eaee5
-ms.openlocfilehash: afe2181e031a651767e6a6eec0397300b03fce50
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 8b7dfcfa394ed2c45adec9661ee1ea5823435223
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582563"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775438"
 ---
 # <a name="option-strict-statement"></a>Option Strict 문
 암시적 데이터 형식 변환을 확대 변환 으로만 제한 하 고 런타임에 바인딩을 허용 하지 않으며 `Object` 형식을 생성 하는 암시적 형식화를 허용 하지 않습니다.  
@@ -104,7 +104,7 @@ Option Strict { On | Off }
 ## <a name="when-an-option-strict-statement-is-not-present"></a>Option Strict 문이 없는 경우  
  소스 코드에 `Option Strict` 문이 포함 되어 있지 않으면 [컴파일 페이지, 프로젝트 디자이너 (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) 에서 **Option strict** 설정이 사용 됩니다. **컴파일 페이지** 에는 오류를 생성 하는 조건에 대 한 추가 제어를 제공 하는 설정이 있습니다.  
   
- 명령줄 컴파일러를 사용 하는 경우 [/thstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md) 컴파일러 옵션을 사용 하 여 `Option Strict`에 대 한 설정을 지정할 수 있습니다.  
+ 명령줄 컴파일러를 사용 하는 경우 [-옵션 strict](../../../visual-basic/reference/command-line-compiler/optionstrict.md) 컴파일러 옵션을 사용 하 여 `Option Strict`에 대 한 설정을 지정할 수 있습니다.  
   
 ### <a name="to-set-option-strict-in-the-ide"></a>IDE에서 Option Strict를 설정 하려면  
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
@@ -132,7 +132,7 @@ Option Strict { On | Off }
  이 대화 상자에서 `Option Strict` 설정 하려면 **도구** 메뉴에서 **옵션**을 클릭 합니다. **옵션** 대화 상자에서 **프로젝트 및 솔루션**을 확장하고 **VB 기본값**을 클릭합니다. **VB 기본값** 의 초기 기본 설정은 `Off`입니다.  
   
 ### <a name="to-set-option-strict-on-the-command-line"></a>명령줄에서 Option Strict를 설정 하려면  
- **Vbc** 명령에 [/shstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md) 컴파일러 옵션을 포함 합니다.  
+ **Vbc** 명령에 [-옵션 strict](../../../visual-basic/reference/command-line-compiler/optionstrict.md) 컴파일러 옵션을 포함 합니다.  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 축소 변환 인 암시적 형식 변환으로 인해 발생 하는 컴파일 시간 오류를 보여 줍니다. 이 범주의 오류는 **컴파일 페이지**의 **암시적 변환** 조건에 해당 합니다.  
@@ -162,5 +162,5 @@ Option Strict { On | Off }
 - [XML의 포함 식](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)
 - [완화된 대리자 변환](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
 - [Office 솔루션에서 런타임에 바인딩](/visualstudio/vsto/late-binding-in-office-solutions)
-- [/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)
+- [-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)
 - [옵션 대화 상자, 프로젝트, Visual Basic 기본값](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)

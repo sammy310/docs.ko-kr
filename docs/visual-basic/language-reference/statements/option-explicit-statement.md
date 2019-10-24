@@ -11,12 +11,12 @@ helpviewer_keywords:
 - explicit variable declaration
 - Option Explicit statement [Visual Basic]
 ms.assetid: e82ac1ad-2cd3-49b2-b985-8bcf016f3fcc
-ms.openlocfilehash: 19ff8cf1dbcdb941e38f23be4cb68d3a5e5b83a8
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 0405814efecbdff5769af36b27dce1cd3305aab5
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582574"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775490"
 ---
 # <a name="option-explicit-statement-visual-basic"></a>Option Explicit 문(Visual Basic)
 파일의 모든 변수를 명시적으로 선언 하거나 변수의 암시적 선언을 허용 합니다.  
@@ -43,7 +43,7 @@ Option Explicit { On | Off }
 > 일반적으로 `Off`로 `Option Explicit`를 설정 하는 것은 좋은 방법이 아닙니다. 하나 이상의 위치에서 변수 이름을 잘못 입력할 수 있습니다. 그러면 프로그램이 실행될 때 예기치 않은 결과가 발생할 수 있습니다.  
   
 ## <a name="when-an-option-explicit-statement-is-not-present"></a>Option Explicit 문이 없는 경우  
- 소스 코드에 `Option Explicit` 문이 포함 되어 있지 않은 경우 [컴파일 페이지, 프로젝트 디자이너 (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) 에 대 한 **Option Explicit** 설정이 사용 됩니다. 명령줄 컴파일러를 사용 하는 경우 [/chexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md) 컴파일러 옵션이 사용 됩니다.  
+ 소스 코드에 `Option Explicit` 문이 포함 되어 있지 않은 경우 [컴파일 페이지, 프로젝트 디자이너 (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) 에 대 한 **Option Explicit** 설정이 사용 됩니다. 명령줄 컴파일러를 사용 하는 경우 [-옵션 explicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md) 컴파일러 옵션이 사용 됩니다.  
   
 #### <a name="to-set-option-explicit-in-the-ide"></a>IDE에서 Option Explicit를 설정 하려면  
   
@@ -57,7 +57,7 @@ Option Explicit { On | Off }
   
 #### <a name="to-set-option-explicit-on-the-command-line"></a>명령줄에서 Option Explicit를 설정 하려면  
   
-- **Vbc** 명령에 [/pronameexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md) 컴파일러 옵션을 포함 합니다.  
+- **Vbc** 명령에 [-옵션 explicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md) 컴파일러 옵션을 포함 합니다.  
   
 ## <a name="example"></a>예제  
  다음 예에서는 `Option Explicit` 문을 사용 하 여 모든 변수를 명시적으로 선언 합니다. 선언 되지 않은 변수를 사용 하려고 하면 컴파일 타임에 오류가 발생 합니다.  
@@ -72,7 +72,7 @@ Option Explicit { On | Off }
 - [ReDim 문](../../../visual-basic/language-reference/statements/redim-statement.md)
 - [Option Compare 문](../../../visual-basic/language-reference/statements/option-compare-statement.md)
 - [Option Strict 문](../../../visual-basic/language-reference/statements/option-strict-statement.md)
-- [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)
-- [/optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)
-- [/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)
+- [-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)
+- [-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)
+- [-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)
 - [옵션 대화 상자, 프로젝트, Visual Basic 기본값](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
