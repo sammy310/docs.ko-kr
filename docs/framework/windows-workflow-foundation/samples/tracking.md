@@ -2,22 +2,19 @@
 title: 추적
 ms.date: 03/30/2017
 ms.assetid: afdcd9bd-b462-4b2a-aac7-bebf9c80be81
-ms.openlocfilehash: bba4f3400633f2cb697518c1125a5dc8a71cb597
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 21089d6e94a5c1127b21c526f3ae9c63098ec906
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62004850"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774235"
 ---
-# <a name="tracking"></a><span data-ttu-id="41b90-102">추적</span><span class="sxs-lookup"><span data-stu-id="41b90-102">Tracking</span></span>
-<span data-ttu-id="41b90-103">이 섹션에는 추적에서 Windows WF (Workflow Foundation) 워크플로 보여 주는 샘플이 들어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="41b90-103">This section contains samples that demonstrate workflow tracking in Windows Workflow Foundation (WF).</span></span>  
-  
-## <a name="in-this-section"></a><span data-ttu-id="41b90-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="41b90-104">In This Section</span></span>  
- [<span data-ttu-id="41b90-105">사용자 지정 추적</span><span class="sxs-lookup"><span data-stu-id="41b90-105">Custom Tracking</span></span>](custom-tracking.md)  
- <span data-ttu-id="41b90-106">사용자 지정 추적 참가자를 만들고 추적 데이터의 내용을 콘솔에 쓰는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="41b90-106">Demonstrates how to create a custom tracking participant and write the contents of the tracking data to console.</span></span>  
-  
- [<span data-ttu-id="41b90-107">Windows에서 이벤트 추적으로 이벤트 추적</span><span class="sxs-lookup"><span data-stu-id="41b90-107">Tracking Events into Event Tracing in Windows</span></span>](tracking-events-into-event-tracing-in-windows.md)  
- <span data-ttu-id="41b90-108">워크플로 서비스에 대해 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 추적을 사용하고 ETW(Event Tracing for Windows)에 추적 이벤트를 내보내는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="41b90-108">Demonstrates how to enable [!INCLUDE[wf1](../../../../includes/wf1-md.md)] tracking on a workflow service and emit the tracking events in Event Tracing for Windows (ETW).</span></span>  
-  
- [<span data-ttu-id="41b90-109">SQL 추적</span><span class="sxs-lookup"><span data-stu-id="41b90-109">SQL Tracking</span></span>](sql-tracking.md)  
- <span data-ttu-id="41b90-110">SQL 데이터베이스에 추적 레코드를 기록하는 사용자 지정 SQL 추적 참가자를 작성하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="41b90-110">Demonstrates how to write a custom SQL tracking participant, that writes tracking records to a SQL database.</span></span>
+# <a name="tracking"></a><span data-ttu-id="1723f-102">추적</span><span class="sxs-lookup"><span data-stu-id="1723f-102">Tracking</span></span>
+<span data-ttu-id="1723f-103">이 섹션에는 WF (Windows Workflow Foundation)의 워크플로 추적을 보여 주는 샘플이 포함 되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1723f-103">This section contains samples that demonstrate workflow tracking in Windows Workflow Foundation (WF).</span></span>
+
+## <a name="in-this-section"></a><span data-ttu-id="1723f-104">단원 내용</span><span class="sxs-lookup"><span data-stu-id="1723f-104">In This Section</span></span>
+ <span data-ttu-id="1723f-105">[사용자 지정 추적](custom-tracking.md) 사용자 지정 추적 참가자를 만들고 추적 데이터의 내용을 콘솔에 쓰는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="1723f-105">[Custom Tracking](custom-tracking.md) Demonstrates how to create a custom tracking participant and write the contents of the tracking data to console.</span></span>
+
+ <span data-ttu-id="1723f-106">[Windows에서 이벤트 추적으로 이벤트 추적](tracking-events-into-event-tracing-in-windows.md) 워크플로 서비스에 대 한 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 추적을 사용 하도록 설정 하 고 ETW (ETW(Windows용 이벤트 추적))에서 추적 이벤트를 내보내는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="1723f-106">[Tracking Events into Event Tracing in Windows](tracking-events-into-event-tracing-in-windows.md) Demonstrates how to enable [!INCLUDE[wf1](../../../../includes/wf1-md.md)] tracking on a workflow service and emit the tracking events in Event Tracing for Windows (ETW).</span></span>
+
+ <span data-ttu-id="1723f-107">[SQL 추적](sql-tracking.md) SQL 데이터베이스에 추적 레코드를 기록 하는 사용자 지정 SQL 추적 참가자를 작성 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="1723f-107">[SQL Tracking](sql-tracking.md) Demonstrates how to write a custom SQL tracking participant that writes tracking records to a SQL database.</span></span>
