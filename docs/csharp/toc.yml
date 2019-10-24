@@ -1298,14 +1298,16 @@
               items:
                 - name: 값 형식의 기능
                   href: language-reference/keywords/value-types.md
-                - name: bool
-                  href: language-reference/keywords/bool.md
                 - name: 정수 숫자 형식
-                  displayName: 'sbyte, byte, short, ushort, int, uint, long, ulong, integer'
+                  displayName: 'sbyte, byte, short, ushort, int, uint, long, ulong, integer, literal'
                   href: language-reference/builtin-types/integral-numeric-types.md
                 - name: 부동 소수점 숫자 형식
-                  displayName: 'float, decimal, double, rational, real'
+                  displayName: 'float, decimal, double, rational, real, literal'
                   href: language-reference/builtin-types/floating-point-numeric-types.md
+                - name: 기본 제공 숫자 변환
+                  href: language-reference/builtin-types/numeric-conversions.md
+                - name: bool
+                  href: language-reference/keywords/bool.md
                 - name: char
                   href: language-reference/keywords/char.md
                 - name: enum
@@ -1316,11 +1318,11 @@
               items:
                 - name: 참조 형식의 기능
                   href: language-reference/keywords/reference-types.md
-                - name: 클래스
-                  href: language-reference/keywords/class.md
                 - name: 기본 제공 참조 형식
                   displayName: 'object, delegate, dynamic, string'
                   href: language-reference/builtin-types/reference-types.md
+                - name: 클래스
+                  href: language-reference/keywords/class.md
                 - name: interface(인터페이스)
                   href: language-reference/keywords/interface.md
             - name: void
@@ -1337,10 +1339,6 @@
                   href: language-reference/keywords/value-types-table.md
                 - name: 기본값 표
                   href: language-reference/keywords/default-values-table.md
-                - name: 암시적 숫자 변환표
-                  href: language-reference/keywords/implicit-numeric-conversions-table.md
-                - name: 명시적 숫자 변환표
-                  href: language-reference/keywords/explicit-numeric-conversions-table.md
                 - name: 숫자 결과 서식 지정 표
                   href: language-reference/keywords/formatting-numeric-results-table.md
         - name: 한정자
