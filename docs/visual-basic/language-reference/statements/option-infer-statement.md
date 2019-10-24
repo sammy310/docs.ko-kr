@@ -11,12 +11,12 @@ helpviewer_keywords:
 - declaring variables [Visual Basic], inferred
 - inferred variable declaration
 ms.assetid: 4ad3e6e9-8f5b-4209-a248-de22ef6e4652
-ms.openlocfilehash: 52da5d059369f8f5a85c23d1ed5ade97523a0e78
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 4dcca0f0ed9989577ded27bab7cf3b16f3036964
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582627"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775450"
 ---
 # <a name="option-infer-statement"></a>Option Infer 문
 
@@ -62,7 +62,7 @@ Option Infer { On | Off }
 
 ## <a name="when-an-option-infer-statement-is-not-present"></a>Option Infer 문이 없는 경우
 
-소스 코드에 `Option Infer` 문이 포함 되어 있지 않은 경우 [컴파일 페이지, 프로젝트 디자이너 (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) 에 대 한 **옵션 유추 옵션이** 사용 됩니다. 명령줄 컴파일러를 사용 하는 경우 [/shles](../../../visual-basic/reference/command-line-compiler/optioninfer.md) 컴파일러 옵션이 사용 됩니다.
+소스 코드에 `Option Infer` 문이 포함 되어 있지 않은 경우 [컴파일 페이지, 프로젝트 디자이너 (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) 에 대 한 **옵션 유추 옵션이** 사용 됩니다. 명령줄 컴파일러를 사용 하는 경우 [-옵션 추론](../../../visual-basic/reference/command-line-compiler/optioninfer.md) 컴파일러 옵션이 사용 됩니다.
 
 #### <a name="to-set-option-infer-in-the-ide"></a>IDE에서 Option Infer를 설정하려면
 
@@ -76,7 +76,7 @@ Option Infer { On | Off }
 
 #### <a name="to-set-option-infer-on-the-command-line"></a>명령줄에서 Option Infer를 설정하려면
 
-**Vbc** 명령에 [/chleerles](../../../visual-basic/reference/command-line-compiler/optioninfer.md) 옵션을 포함 합니다.
+**Vbc** 명령에 [-옵션 추론](../../../visual-basic/reference/command-line-compiler/optioninfer.md) 컴파일러 옵션을 포함 합니다.
 
 ## <a name="default-data-types-and-values"></a>기본 데이터 형식 및 값
 
@@ -109,5 +109,5 @@ Option Infer { On | Off }
 - [Option Explicit 문](../../../visual-basic/language-reference/statements/option-explicit-statement.md)
 - [Option Strict 문](../../../visual-basic/language-reference/statements/option-strict-statement.md)
 - [옵션 대화 상자, 프로젝트, Visual Basic 기본값](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
-- [/optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)
+- [-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)
 - [boxing 및 unboxing](../../../csharp/programming-guide/types/boxing-and-unboxing.md)

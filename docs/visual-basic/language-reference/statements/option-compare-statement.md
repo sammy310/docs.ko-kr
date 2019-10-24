@@ -18,12 +18,12 @@ helpviewer_keywords:
 - Option Compare statement [Visual Basic]
 - text [Visual Basic], comparing
 ms.assetid: 54e8eeeb-3b0d-4fb9-acce-fbfbd5975f6e
-ms.openlocfilehash: 43d3faf3a6630cd308913ce2325a5f7fe96e474c
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: efd033e6c12637b8dc12fb886f46a267e677aa42
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72581578"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775501"
 ---
 # <a name="option-compare-statement"></a>Option Compare 문
 문자열 데이터를 비교할 때 사용할 기본 비교 방법을 선언합니다.  
@@ -59,7 +59,7 @@ Option Compare { Binary | Text }
  `(A=a) < (À = à) < (B=b) < (E=e) < (Ê = ê) < (Z=z) < (Ø = ø)`  
   
 ## <a name="when-an-option-compare-statement-is-not-present"></a>Option Compare 문이 없는 경우  
- 소스 코드에 `Option Compare` 문이 포함 되어 있지 않으면 [컴파일 페이지, 프로젝트 디자이너 (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) 에서 **Option Compare** 설정이 사용 됩니다. 명령줄 컴파일러를 사용 하는 경우 [/thcompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md) 컴파일러 옵션에 지정 된 설정이 사용 됩니다.  
+ 소스 코드에 `Option Compare` 문이 포함 되어 있지 않으면 [컴파일 페이지, 프로젝트 디자이너 (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) 에서 **Option Compare** 설정이 사용 됩니다. 명령줄 컴파일러를 사용 하는 경우 [-옵션 비교](../../../visual-basic/reference/command-line-compiler/optioncompare.md) 컴파일러 옵션에 지정 된 설정이 사용 됩니다.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
@@ -75,7 +75,7 @@ Option Compare { Binary | Text }
   
 #### <a name="to-set-option-compare-on-the-command-line"></a>명령줄에서 Option Compare를 설정하려면  
   
-- **Vbc** 명령에 [/shcompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md) 컴파일러 옵션을 포함 합니다.  
+- **Vbc** 명령에 [-옵션 compare](../../../visual-basic/reference/command-line-compiler/optioncompare.md) 컴파일러 옵션을 포함 합니다.  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 `Option Compare` 문을 사용하여 이진 비교를 기본 문자열 비교 방법으로 설정합니다. 이 코드를 사용하려면 `Option Compare Binary` 문의 주석 처리를 제거하여 소스 파일 맨 위에 삽입합니다.  
@@ -94,7 +94,7 @@ Option Compare { Binary | Text }
 - <xref:Microsoft.VisualBasic.Strings.Replace%2A>
 - <xref:Microsoft.VisualBasic.Strings.Split%2A>
 - <xref:Microsoft.VisualBasic.Strings.StrComp%2A>
-- [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)
+- [-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)
 - [비교 연산자](../../../visual-basic/language-reference/operators/comparison-operators.md)
 - [Visual Basic의 비교 연산자](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
 - [Like 연산자](../../../visual-basic/language-reference/operators/like-operator.md)

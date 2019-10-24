@@ -1,5 +1,5 @@
 ---
-title: 인증서 작업
+title: 인증서 사용
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: bbe9341b1fb50985c235bd7f34961f1718f46bc0
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: ac69b38df3439932be7f65d871c64700585538cb
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045220"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774295"
 ---
-# <a name="working-with-certificates"></a>인증서 작업
+# <a name="working-with-certificates"></a>인증서 사용
 
 WCF(Windows Communication Foundation) 보안을 프로그래밍하려면 일반적으로 X.509 디지털 인증서를 사용하여 클라이언트 및 서버를 인증하고, 암호화하고, 메시지에 디지털 서명합니다. 이 항목에서는 X.509 디지털 인증서 기능과 WCF에서 인증서 기능을 사용하는 방법을 간략하게 설명하며, 이러한 개념을 자세히 설명하거나 WCF 및 인증서를 사용하여 일반 작업을 수행하는 방법을 보여 주는 항목에 대한 링크를 제공합니다.
 
@@ -26,7 +26,7 @@ WCF(Windows Communication Foundation) 보안을 프로그래밍하려면 일반�
 
 ## <a name="viewing-certificates"></a>인증서 보기
 
-인증서로 작업하려면 인증서를 표시하여 해당 속성을 검사해야 하는 경우가 종종 있습니다. 이 작업은 MMC(Microsoft Management Console) 스냅인 도구를 사용하여 쉽게 수행할 수 있습니다. 자세한 내용은 [방법: MMC 스냅인](how-to-view-certificates-with-the-mmc-snap-in.md)을 사용 하 여 인증서를 봅니다.
+인증서로 작업하려면 인증서를 표시하여 해당 속성을 검사해야 하는 경우가 종종 있습니다. 이 작업은 MMC(Microsoft Management Console) 스냅인 도구를 사용하여 쉽게 수행할 수 있습니다. 자세한 내용은 [방법: MMC 스냅인을 사용하여 인증서 보기](how-to-view-certificates-with-the-mmc-snap-in.md)를 참조하세요.
 
 ## <a name="certificate-stores"></a>인증서 저장소
 
@@ -34,7 +34,7 @@ WCF(Windows Communication Foundation) 보안을 프로그래밍하려면 일반�
 
 - **로컬 컴퓨터 저장소**. 여기에는 ASP.NET과 같은 컴퓨터 프로세스에서 액세스 하는 인증서가 포함 됩니다. 클라이언트에 서버를 인증하는 인증서를 저장하려면 이 위치를 사용합니다.
 
-- **현재 사용자 저장소**. 대화형 응용 프로그램은 일반적으로 컴퓨터의 현재 사용자에 대한 인증서를 여기에 저장합니다. 클라이언트 응용 프로그램을 만들 경우 일반적으로 서비스에 사용자를 인증하는 인증서를 이 위치에 저장합니다.
+- **현재 사용자 저장소**. 대화형 애플리케이션은 일반적으로 컴퓨터의 현재 사용자에 대한 인증서를 여기에 저장합니다. 클라이언트 애플리케이션을 만들 경우 일반적으로 서비스에 사용자를 인증하는 인증서를 이 위치에 저장합니다.
 
 이러한 두 저장소는 하위 저장소로 세분화됩니다. WCF로 프로그래밍할 때 가장 중요한 하위 저장소는 다음과 같습니다.
 
@@ -43,7 +43,7 @@ WCF(Windows Communication Foundation) 보안을 프로그래밍하려면 일반�
   > [!IMPORTANT]
   > 로컬 컴퓨터는 인증서를 신뢰할 수 있는 타사 인증 기관에서 가져오지 않았더라도 이 저장소에 있는 모든 인증서를 암시적으로 신뢰합니다. 따라서 발급자를 완전히 신뢰하고 결과를 이해하는 경우가 아니면 이 저장소에 인증서를 저장하지 마십시오.
 
-- **개인**. 이 저장소는 컴퓨터 사용과 연관된 인증서에 사용됩니다. 일반적으로 이 저장소는 신뢰할 수 있는 루트 인증 기관 저장소에 있는 인증 기관 인증서 중 하나에서 발급한 인증서에 사용됩니다. 또한 여기에 있는 인증서는 응용 프로그램에서 자체 발급하고 신뢰할 수 있습니다.
+- **개인**. 이 저장소는 컴퓨터 사용과 연관된 인증서에 사용됩니다. 일반적으로 이 저장소는 신뢰할 수 있는 루트 인증 기관 저장소에 있는 인증 기관 인증서 중 하나에서 발급한 인증서에 사용됩니다. 또한 여기에 있는 인증서는 애플리케이션에서 자체 발급하고 신뢰할 수 있습니다.
 
 인증서 저장소에 대한 자세한 내용은 [인증서 저장소](/windows/desktop/secauthn/certificate-stores)를 참조하세요.
 
@@ -57,13 +57,13 @@ WCF(Windows Communication Foundation) 보안을 프로그래밍하려면 일반�
 
 ### <a name="accessing-stores"></a>저장소 액세스
 
-저장소는 컴퓨터에 있는 폴더처럼 ACL(액세스 제어 목록)에 의해 보호됩니다. 인터넷 정보 서비스 (IIS)에서 호스팅하는 서비스를 만들 때 ASP.NET 계정으로 ASP.NET 프로세스가 실행 됩니다. 이 계정은 서비스에 사용되는 인증서가 들어 있는 저장소에 대한 액세스 권한이 있어야 합니다. 각각의 주 저장소는 기본 액세스 목록으로 보호되지만, 목록을 수정할 수 있습니다. 저장소 액세스를 위한 개별 역할을 만들 경우 해당 역할에 액세스 권한을 부여해야 합니다. Winhttpcertconfig.exe 도구를 사용 하 여 액세스 목록을 수정 하는 방법에 대 한 자세한 [내용은 방법: 개발](how-to-create-temporary-certificates-for-use-during-development.md)하는 동안 사용할 임시 인증서를 만듭니다. IIS에서 클라이언트 인증서 사용에 대한 자세한 내용은 [ASP.NET 웹 애플리케이션에서 인증을 위해 클라이언트 인증서를 사용하여 웹 서비스를 호출하는 방법](https://support.microsoft.com/en-us/help/901183/how-to-call-a-web-service-by-using-a-client-certificate-for-authentica)을 참조하세요.
+저장소는 컴퓨터에 있는 폴더처럼 ACL(액세스 제어 목록)에 의해 보호됩니다. 인터넷 정보 서비스 (IIS)에서 호스팅하는 서비스를 만들 때 ASP.NET 계정으로 ASP.NET 프로세스가 실행 됩니다. 이 계정은 서비스에 사용되는 인증서가 들어 있는 저장소에 대한 액세스 권한이 있어야 합니다. 각각의 주 저장소는 기본 액세스 목록으로 보호되지만, 목록을 수정할 수 있습니다. 저장소 액세스를 위한 개별 역할을 만들 경우 해당 역할에 액세스 권한을 부여해야 합니다. WinHttpCertConfig.exe 도구를 사용하여 액세스 목록을 수정하는 방법에 대한 자세한 내용은 [방법: 개발 중 사용할 임시 인증서 만들기](how-to-create-temporary-certificates-for-use-during-development.md)를 참조하세요.
 
 ## <a name="chain-trust-and-certificate-authorities"></a>신뢰 체인 및 인증 기관
 
 인증서는 개별 인증서가 인증서를 발급한 CA에 연결되는 계층 구조에 만들어집니다. 이 링크는 CA의 인증서로 연결됩니다. 그런 다음 CA의 인증서가 원래 CA의 인증서를 발급 한 CA에 연결 됩니다. 이 프로세스는 루트 CA의 인증서에 도달할 때까지 반복됩니다. 루트 CA의 인증서는 본질적으로 신뢰할 수 있는 인증서입니다.
 
-디지털 인증서는 *신뢰 체인*이라고도 하는 이 계층 구조를 사용하여 엔터티를 인증하는 데 사용됩니다. 인증서를 두 번 클릭한 다음 **인증서 경로** 탭을 클릭하여 MMC 스냅인을 통해 인증서의 체인을 볼 수 있습니다. 인증 기관에 대 한 인증서 체인을 [가져오는 방법에 대 한 자세한 내용은 방법: 서명을](specify-the-certificate-authority-chain-verify-signatures-wcf.md)확인 하는 데 사용 되는 인증 기관 인증서 체인을 지정 합니다.
+디지털 인증서는 *신뢰 체인*이라고도 하는 이 계층 구조를 사용하여 엔터티를 인증하는 데 사용됩니다. 인증서를 두 번 클릭 한 다음 **인증서 경로** 탭을 클릭 하 여 MMC 스냅인을 통해 인증서의 체인을 볼 수 있습니다. 인증 기관에 대 한 인증서 체인을 가져오는 방법에 대 한 자세한 내용은 [방법: 서명을 확인 하는 데 사용 되는 인증 기관 인증서 체인 지정](specify-the-certificate-authority-chain-verify-signatures-wcf.md)을 참조 하세요.
 
 > [!NOTE]
 > 신뢰할 수 있는 루트 기관 인증서 저장소에 발급자의 인증서를 넣어 발급자를 신뢰할 수 있는 루트 기관으로 지정할 수 있습니다.
@@ -72,7 +72,7 @@ WCF(Windows Communication Foundation) 보안을 프로그래밍하려면 일반�
 
 새 서비스를 만들 때 신뢰할 수 있는 루트 인증서를 통해 발급되지 않은 인증서를 사용하거나 발급하는 인증서 자체가 신뢰할 수 있는 루트 인증 기관 저장소에 없을 수도 있습니다. 개발 용도로만 인증서에 대한 신뢰 체인을 검사하는 메커니즘을 일시적으로 사용하지 않도록 설정할 수 있습니다. 이 작업을 수행하려면 `CertificateValidationMode` 속성을 `PeerTrust` 또는 `PeerOrChainTrust`로 설정합니다. 두 모드는 인증서가 자체 발급되거나(신뢰 피어) 신뢰 체인의 일부일 수 있음을 지정합니다. 다음 클래스에 대한 속성을 설정할 수 있습니다.
 
-|클래스|속성|
+|인스턴스|속성|
 |-----------|--------------|
 |<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication>|<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.CertificateValidationMode%2A?displayProperty=nameWithType>|
 |<xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>|<xref:System.ServiceModel.Security.X509PeerCertificateAuthentication.CertificateValidationMode%2A?displayProperty=nameWithType>|
@@ -105,7 +105,7 @@ PowerShell New-selfsignedcertificate cmdlet은 x.509 인증서와 개인 키/공
 
 3. 루트 기관 인증서를 신뢰할 수 있는 루트 인증 기관 저장소로 가져옵니다.
 
-4. 단계별 지침에 대 한 자세한 내용은 [방법: 개발](how-to-create-temporary-certificates-for-use-during-development.md)하는 동안 사용할 임시 인증서를 만듭니다.
+4. 단계별 지침은 [방법: 개발 중 사용할 임시 인증서 만들기](how-to-create-temporary-certificates-for-use-during-development.md)를 참조하세요.
 
 ## <a name="which-certificate-to-use"></a>사용할 인증서
 
@@ -113,9 +113,9 @@ PowerShell New-selfsignedcertificate cmdlet은 x.509 인증서와 개인 키/공
 
 ### <a name="service-certificates"></a>서비스 인증서
 
-서비스 인증서의 주요 작업은 클라이언트에 서버를 인증하는 것입니다. 클라이언트에서 서버를 인증할 때 초기 검사 중 하나는 **주체** 필드의 값을 서비스를 연결하는 데 사용된 URI(Uniform Resource Identifier)와 비교하는 것입니다. 두 항목의 DNS가 일치해야 합니다. 예를 들어 서비스의 URI가 이면 **제목** 필드 `http://www.contoso.com/endpoint/` 에도 값 `www.contoso.com`이 포함 되어야 합니다.
+서비스 인증서의 주요 작업은 클라이언트에 서버를 인증하는 것입니다. 클라이언트에서 서버를 인증할 때 초기 검사 중 하나는 **주체** 필드의 값을 서비스를 연결하는 데 사용된 URI(Uniform Resource Identifier)와 비교하는 것입니다. 두 항목의 DNS가 일치해야 합니다. 예를 들어 서비스의 URI가 `http://www.contoso.com/endpoint/` 되는 경우에는 **제목** 필드에도 `www.contoso.com` 값이 포함 되어야 합니다.
 
-필드는 값을 나타내는 이니셜 접두사가 붙은 여러 값을 포함할 수 있습니다. 가장 일반적으로 초기화는 일반적인 이름에 대 한 "CN"입니다 (예 `CN = www.contoso.com`:). **주체** 필드를 비워둘 수도 있습니다. 이 경우 **주체 대체 이름** 필드는 **DNS 이름** 값을 포함할 수 있습니다.
+필드는 값을 나타내는 이니셜 접두사가 붙은 여러 값을 포함할 수 있습니다. 가장 일반적으로 초기화는 일반적인 이름에 대 한 "CN"입니다 (예: `CN = www.contoso.com`). **주체** 필드를 비워둘 수도 있습니다. 이 경우 **주체 대체 이름** 필드는 **DNS 이름** 값을 포함할 수 있습니다.
 
 또한 인증서의 **용도** 필드 값은 “서버 인증” 또는 “클라이언트 인증”과 같은 적절한 값을 포함해야 합니다.
 
@@ -141,7 +141,7 @@ PowerShell New-selfsignedcertificate cmdlet은 x.509 인증서와 개인 키/공
 
 WCF에서는 서비스 또는 클라이언트에서 메시지를 인증, 암호화 또는 디지털 서명하는 데 사용할 인증서 또는 인증서 집합을 지정해야 할 수 있습니다. 이 작업은 X.509 인증서를 나타내는 다양한 클래스의 `SetCertificate` 메서드를 사용하여 프로그래밍 방식으로 수행할 수 있습니다. 다음 클래스에서는 `SetCertificate` 메서드를 사용하여 인증서를 지정합니다.
 
-|클래스|메서드|
+|인스턴스|메서드|
 |-----------|------------|
 |<xref:System.ServiceModel.Security.PeerCredential>|<xref:System.ServiceModel.Security.PeerCredential.SetCertificate%2A>|
 |<xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential>|<xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A>|
@@ -186,9 +186,9 @@ Windows 사용자 계정을 나타내는 토큰에 X.509 인증서를 매핑하�
 
 [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] 이상을 사용하는 경우 WCF는 인증서를 Windows 계정에 매핑하기 전에 해당 인증서가 도메인 정책을 준수하는지 확인합니다.
 
-WCF의 첫 번째 릴리스에서는 도메인 정책을 참조하지 않고 매핑을 수행했습니다. 따라서 매핑을 실행할 때 X.509 인증서가 도메인 정책에 맞지 않을 경우 첫 번째 릴리스에서 작동했던 이전 응용 프로그램이 실패할 수 있습니다.
+WCF의 첫 번째 릴리스에서는 도메인 정책을 참조하지 않고 매핑을 수행했습니다. 따라서 매핑을 실행할 때 X.509 인증서가 도메인 정책에 맞지 않을 경우 첫 번째 릴리스에서 작동했던 이전 애플리케이션이 실패할 수 있습니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.ServiceModel.Channels>
 - <xref:System.ServiceModel.Security>

@@ -3,20 +3,20 @@ title: Windows Workflow Foundation 4 성능
 ms.date: 03/30/2017
 ms.assetid: 67d2b3e8-3777-49f8-9084-abbb33b5a766
 ms.openlocfilehash: c656d1e23c7314cfd7b772faef842296d03e4af1
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/14/2019
+ms.lasthandoff: 10/22/2019
 ms.locfileid: "70989577"
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Windows Workflow Foundation 4 성능
 
- Microsoft [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] 에는 성능에 대 한 많은 투자를 갖춘 WF (Windows Workflow Foundation)의 주요 수정 버전이 포함 되어 있습니다.  이 새로운 수정 버전에서는 .NET Framework 3.0 및 [!INCLUDE[wf1](../../../includes/wf1-md.md)]의 일부로 제공된 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 이전 버전의 디자인이 상당 부분 변경되었습니다. 성능과 유용성을 보다 향상시키기 위해 프로그래밍 모델, 런타임 및 도구의 핵심에서 다시 설계되었습니다. 이 항목에서는 이러한 수정 버전의 중요한 성능 특징을 보여 주고 이전 버전의 성능 특징과 비교합니다.
+ Microsoft [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)]에는 성능에 대 한 많은 투자를 갖춘 WF (Windows Workflow Foundation)의 주요 수정 버전이 포함 되어 있습니다.  이 새로운 수정 버전에서는 .NET Framework 3.0 및 [!INCLUDE[wf1](../../../includes/wf1-md.md)]의 일부로 제공된 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 이전 버전의 디자인이 상당 부분 변경되었습니다. 성능과 유용성을 보다 향상시키기 위해 프로그래밍 모델, 런타임 및 도구의 핵심에서 다시 설계되었습니다. 이 항목에서는 이러한 수정 버전의 중요한 성능 특징을 보여 주고 이전 버전의 성능 특징과 비교합니다.
 
  개별 워크플로 구성 요소 성능은 WF3과 WF4 사이에 몇 배나 증가했습니다.  이렇게 하면 직접 코딩 된 Windows Communication Foundation (WCF) 서비스와 WCF 워크플로 서비스 간의 간격이 매우 작게 유지 됩니다.  WF4에서는 워크플로 대기 시간이 훨씬 줄었습니다.  지속성 성능은 2.5-3.0의 비율로 증가했습니다.  워크플로 추적을 통한 상태 모니터링의 오버헤드가 훨씬 줄었습니다.  이러한 특성은 애플리케이션에서 WF4로 마이그레이션하거나 채택하는 강력한 이유가 됩니다.
 
 ## <a name="terminology"></a>용어
- 이 항목의 나머지 부분에서는 [!INCLUDE[wf1](../../../includes/wf1-md.md)]에 도입된 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 버전을 WF4라고 지칭합니다.  [!INCLUDE[wf1](../../../includes/wf1-md.md)]는 .net 3.0에서 도입 되었으며 s p 1을 통해 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 몇 가지 사소한 수정이 있었습니다. 이 항목의 나머지 부분에서는 Workflow Foundation의 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 버전을 WF3이라고 지칭합니다. WF3은 WF4와 함께 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]에 포함되어 있습니다. WF3 아티팩트를 W F 4로 마이그레이션하는 방법에 대 한 자세한 내용은 다음을 참조 하세요. [Windows Workflow Foundation 4 마이그레이션 가이드](https://go.microsoft.com/fwlink/?LinkID=153313)
+ 이 항목의 나머지 부분에서는 [!INCLUDE[wf1](../../../includes/wf1-md.md)]에 도입된 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 버전을 WF4라고 지칭합니다.  [!INCLUDE[wf1](../../../includes/wf1-md.md)]은 .NET 3.0에서 도입 되었으며 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] s p 1을 통해 몇 가지 사소한 수정 사항이 있었습니다. 이 항목의 나머지 부분에서는 Workflow Foundation의 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 버전을 WF3이라고 지칭합니다. WF3은 WF4와 함께 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]에 포함되어 있습니다. WF3 아티팩트를 W F 4로 마이그레이션하는 방법에 대 한 자세한 내용은 [Windows Workflow Foundation 4 마이그레이션 가이드](https://go.microsoft.com/fwlink/?LinkID=153313) 를 참조 하세요.
 
  WCF (Windows Communication Foundation)는 서비스 지향 응용 프로그램을 빌드하기 위한 Microsoft의 통합 프로그래밍 모델입니다. WF3와 함께 .NET 3.0의 일부로 처음 도입 되었으며 현재는 .NET Framework의 주요 구성 요소 중 하나입니다.
 
@@ -49,7 +49,7 @@ ms.locfileid: "70989577"
  일반적으로 I/O 또는 분산 컴퓨팅 작업과 같은 장기 실행 차단 작업에 대해 비동기 프로그래밍을 사용하면 애플리케이션의 성능과 확장성이 향상됩니다. WF4에서는 기본 작업 형식 <xref:System.Activities.AsyncCodeActivity>, <xref:System.Activities.AsyncCodeActivity%601>를 통해 비동기 지원을 제공합니다. 런타임은 기본적으로 비동기 작업을 이해하므로 비동기 작업이 처리되는 동안 자동으로 인스턴스를 지속적이지 않은 영역에 배치할 수 있습니다. 워크플로 스케줄러 스레드를 보류하지 않고 병렬로 실행될 수 있는 작업을 차단하지 않으면서 비동기 작업을 수행하기 위해 이러한 유형에서 사용자 지정 작업이 파생될 수 있습니다.
 
 ### <a name="messaging"></a>메시징
- 처음에 WF3은 외부 이벤트 또는 웹 서비스 호출을 통해 매우 제한된 메시징을 지원했습니다. .Net 3.5에서 워크플로는 wcf 클라이언트로 구현 되거나 및 <xref:System.Workflow.Activities.SendActivity> <xref:System.Workflow.Activities.ReceiveActivity>를 통해 wcf 서비스로 노출 될 수 있습니다. W F 4에서 워크플로 기반 메시징 프로그래밍의 개념은 WCF 메시징 논리를 WF에 긴밀 하 게 통합 하 여 더욱 강화 되었습니다.
+ 처음에 WF3은 외부 이벤트 또는 웹 서비스 호출을 통해 매우 제한된 메시징을 지원했습니다. .NET 3.5에서는 워크플로를 WCF 클라이언트로 구현 하거나 <xref:System.Workflow.Activities.SendActivity> 및 <xref:System.Workflow.Activities.ReceiveActivity>를 통해 WCF 서비스로 노출할 수 있습니다. W F 4에서 워크플로 기반 메시징 프로그래밍의 개념은 WCF 메시징 논리를 WF에 긴밀 하 게 통합 하 여 더욱 강화 되었습니다.
 
  .NET 4의 WCF에서 제공 하는 통합 메시지 처리 파이프라인은 W F 4 services가 WF3 보다 훨씬 향상 된 성능 및 확장성을 제공 하는 데 도움이 됩니다. WF4는 복잡한 MEP(메시지 Exchange 패턴)를 모델링할 수 있는 보다 풍부한 메시징 프로그래밍 지원도 제공합니다. 개발자는 형식화된 서비스 계약을 사용하여 프로그래밍을 간소화하거나 형식화되지 않은 서비스 계약을 사용하여 serialization 비용 없이 성능을 향상시킬 수 있습니다. WF4의 <xref:System.ServiceModel.Activities.SendMessageChannelCache> 클래스를 통한 클라이언트 쪽 채널 캐싱 지원은 개발자가 최소한의 노력으로 빠른 애플리케이션을 빌드하는 데 도움이 됩니다. 자세한 내용은 [Send 활동의 캐시 공유 수준 변경](../wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md)을 참조 하세요.
 
@@ -62,7 +62,7 @@ ms.locfileid: "70989577"
  WF4에서는 선언적 프로그래밍을 지원하므로 큰 워크플로의 경우 디자인 타임 성능을 위해 보다 엄격한 요구 사항이 명시적으로 부과됩니다. WF4의 워크플로 디자이너에서는 WF3에 비해 큰 워크플로에 대한 확장성이 향상되었습니다. WF3 디자이너에서는 몇백 개의 작업으로 구성된 워크플로도 거의 로드할 수 없는 반면에 WF4 디자이너는 UI 가상화 지원을 통해 1000개 작업으로 구성된 큰 워크플로를 몇 초 만에 쉽게 로드할 수 있습니다.
 
 ## <a name="component-level-performance-comparisons"></a>구성 요소 수준 성능 비교
- 이 단원에는 WF3 및 WF4 워크플로의 개별 작업을 직접 비교한 결과 데이터가 포함되어 있습니다.  지속성과 같은 주요 영역이 개별 작업 구성 요소보다 성능에 더 큰 영향을 줍니다.  이제 구성 요소가 직접 코딩된 오케스트레이션 논리와 비교될 수 있을 만큼 빠르기 때문에 WF4의 개별 구성 요소 성능 향상은 중요합니다.  다음 섹션에서 설명 하는 예제입니다. "서비스 컴퍼지션 시나리오"
+ 이 단원에는 WF3 및 WF4 워크플로의 개별 작업을 직접 비교한 결과 데이터가 포함되어 있습니다.  지속성과 같은 주요 영역이 개별 작업 구성 요소보다 성능에 더 큰 영향을 줍니다.  이제 구성 요소가 직접 코딩된 오케스트레이션 논리와 비교될 수 있을 만큼 빠르기 때문에 WF4의 개별 구성 요소 성능 향상은 중요합니다.  다음 섹션에서 설명 하는 예제는 "Service 컴퍼지션 시나리오"입니다.
 
 ### <a name="environment-setup"></a>환경 설치
  ![워크플로 성능 측정에 대 한 환경 설정](./media/performance/performance-test-environment.gif)
@@ -138,7 +138,7 @@ class WorkScope :
     }
 ```
 
- 오류 처리기는 활동을 `WorkScope` 대상으로 합니다. W F 4 워크플로는 동일 하 게 간단 합니다.  <xref:System.Activities.Statements.CompensableActivity>에는 본문과 보정 처리기가 있습니다.  명시적 보정은 시퀀스의 다음 항목입니다.  본문 작업과 보정 처리기 작업은 모두 빈 구현입니다.
+ 오류 처리기는 `WorkScope` 작업을 대상으로 합니다. W F 4 워크플로는 동일 하 게 간단 합니다.  <xref:System.Activities.Statements.CompensableActivity>에는 본문과 보정 처리기가 있습니다.  명시적 보정은 시퀀스의 다음 항목입니다.  본문 작업과 보정 처리기 작업은 모두 빈 구현입니다.
 
 ```csharp
 public sealed class CompensableActivityEmptyCompensation : CodeActivity
@@ -174,7 +174,7 @@ public sealed class CompensableActivityEmptyCompensation : CodeActivity
  모든 테스트는 트랜잭션 범위 테스트를 제외하고 초당 워크플로 수로 측정됩니다.  위에서 볼 수 있듯이 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 런타임 성능이 전반적으로, 특히 while 루프와 같이 동일한 작업을 여러 번 실행해야 하는 영역에서 향상되었습니다.
 
 ## <a name="service-composition-scenario"></a>서비스 컴퍼지션 시나리오
- 이전 섹션인 "구성 요소 수준 성능 비교"에 표시 된 것 처럼 WF3와 W F 4 간의 오버 헤드가 크게 감소 했습니다.  Wcf 워크플로 서비스는 이제 직접 코딩 된 wcf 서비스의 성능과 거의 일치 하지만 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 런타임의 모든 혜택을 유지 합니다.  이 테스트 시나리오는 WCF 서비스를 W F 4의 WCF 워크플로 서비스와 비교 합니다.
+ 이전 섹션인 "구성 요소 수준 성능 비교"에 표시 된 것 처럼 WF3와 W F 4 간의 오버 헤드가 크게 감소 했습니다.  이제 WCF 워크플로 서비스는 직접 코딩 된 WCF 서비스의 성능과 거의 일치 하지만 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 런타임의 모든 이점을 누릴 수 있습니다.  이 테스트 시나리오는 WCF 서비스를 W F 4의 WCF 워크플로 서비스와 비교 합니다.
 
 ### <a name="online-store-service"></a>온라인 저장소 서비스
  Windows Workflow Foundation의 장점 중 하나는 여러 서비스를 사용 하 여 프로세스를 작성 하는 기능입니다.  이러한 예로 서비스 호출 두 개를 오케스트레이션하여 주문을 구입하는 온라인 저장소 서비스가 있습니다.  첫 번째 단계에서는 주문 확인 서비스를 사용하여 주문을 확인합니다.  두 번째 단계에서는 웨어하우스 서비스를 사용하여 주문을 채웁니다.
@@ -189,7 +189,7 @@ public sealed class CompensableActivityEmptyCompensation : CodeActivity
 ### <a name="performance"></a>성능
 ![온라인 저장소 서비스 성능을 보여 주는 세로 막대형 차트](./media/performance/online-store-performance-graph.gif)
 
- 채널 풀링 없이 백엔드 TCP 서비스에 연결하는 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 서비스는 처리량에 17.2% 영향을 줍니다.  채널 풀링을 사용할 경우 약 23.8% 손실이 있습니다.  HTTP의 경우 영향은 훨씬 낮습니다. 풀링 및 8.1%가 없는 4.3%  HTTP를 사용할 때는 채널 풀링의 이점이 거의 없다는 것도 중요합니다.
+ 채널 풀링 없이 백엔드 TCP 서비스에 연결하는 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 서비스는 처리량에 17.2% 영향을 줍니다.  채널 풀링을 사용할 경우 약 23.8% 손실이 있습니다.  HTTP의 경우 영향이 훨씬 적습니다. 풀링이 없을 경우 4.3% 손실이 있고 풀링을 사용할 경우 8.1% 손실이 있습니다.  HTTP를 사용할 때는 채널 풀링의 이점이 거의 없다는 것도 중요합니다.
 
  이 테스트에서 직접 코딩 된 WCF 서비스와 비교 했을 때 W F 4 런타임에서 오버 헤드가 발생 하는 경우 최악의 시나리오로 간주 될 수 있습니다.  이 테스트의 백 엔드 서비스 두 개는 거의 작업을 수행하지 않습니다.  실제 엔드투엔드 시나리오에서는 이러한 서비스가 데이터베이스 호출과 같은 보다 광범위한 작업을 수행하여 전송 계층이 성능에 미치는 영향을 줄입니다.  이러한 장점 외에도 WF4에서 사용 가능한 기능의 이점 덕분에 Workflow Foundation은 오케스트레이션 서비스를 만들 때 유용한 선택이 됩니다.
 
@@ -217,10 +217,10 @@ public sealed class CompensableActivityEmptyCompensation : CodeActivity
 
  ![WF3 및 W F 4를 사용 하는 WCF 워크플로 서비스의 콜드 및 웜 대기 시간을 보여 주는 세로 막대형 차트](./media/performance/latency-results-graph.gif)
 
- 이전 차트에서 콜드은 지정 된 워크플로에 대 한 기존 <xref:System.ServiceModel.WorkflowServiceHost> 가 없는 경우를 나타냅니다.  즉, 콜드 대기 시간은 워크플로가 처음 사용되고 있으며 XOML 또는 XAML을 컴파일해야 하는 경우입니다.  웜 대기 시간은 워크플로 형식이 이미 컴파일된 경우 새 워크플로 인스턴스를 만드는 시간입니다.  WF4 사례에서는 워크플로 복잡성에 거의 차이가 없지만 WF3 사례에서는 선형으로 진행합니다.
+ 이전 차트에서 콜드은 지정 된 워크플로에 대 한 기존 <xref:System.ServiceModel.WorkflowServiceHost> 없는 경우를 나타냅니다.  즉, 콜드 대기 시간은 워크플로가 처음 사용되고 있으며 XOML 또는 XAML을 컴파일해야 하는 경우입니다.  웜 대기 시간은 워크플로 형식이 이미 컴파일된 경우 새 워크플로 인스턴스를 만드는 시간입니다.  WF4 사례에서는 워크플로 복잡성에 거의 차이가 없지만 WF3 사례에서는 선형으로 진행합니다.
 
 #### <a name="correlation-throughput"></a>상관 관계 처리량
- WF4에서는 콘텐츠 기반의 새 상관 관계 기능이 도입되었습니다.  WF3은 컨텍스트 기반 상관 관계만 제공했습니다.  컨텍스트 기반 상관 관계는 특정 WCF 채널 바인딩에 대해서만 수행할 수 있습니다.  이러한 바인딩을 사용하는 경우 메시지 헤더에 워크플로 ID가 삽입됩니다.  WF3 런타임은 워크플로를 해당 ID로만 식별할 수 있었습니다.  내용 기반 상관 관계를 사용하면 워크플로 작성자가 계정 번호, 고객 ID 등의 관련 데이터 부분에서 상관 관계 키를 만들 수 있습니다.
+ WF4에서는 콘텐츠 기반의 새 상관 관계 기능이 도입되었습니다.  WF3은 컨텍스트 기반 상관 관계만 제공했습니다.  컨텍스트 기반 상관 관계는 특정 WCF 채널 바인딩에 대해서만 수행할 수 있습니다.  이러한 바인딩을 사용하는 경우 메시지 헤더에 워크플로 ID가 삽입됩니다.  WF3 런타임은 해당 Id로만 워크플로를 식별할 수 있었습니다.  내용 기반 상관 관계를 사용 하면 워크플로 작성자가 계정 번호 또는 고객 Id와 같은 관련 데이터 부분에서 상관 관계 키를 만들 수 있습니다.
 
  컨텍스트 기반 상관 관계는 상관 관계 키가 메시지 헤더에 있다는 점에서 성능 이점이 있습니다.  deserialization/메시지 복사 없이 메시지에서 키를 읽을 수 있습니다.  콘텐츠 기반 상관 관계에서는 상관 관계 키가 메시지 본문에 저장됩니다.  XPath 식을 사용하여 키를 찾습니다.  이 추가 처리 비용은 메시지 크기, 본문에서 키의 깊이 및 키 개수에 따라 달라집니다.  이 테스트에서는 컨텍스트 및 콘텐츠 기반 상관 관계를 비교하고 여러 키를 사용할 때의 성능 저하를 보여 줍니다.
 
@@ -230,7 +230,7 @@ public sealed class CompensableActivityEmptyCompensation : CodeActivity
 #### <a name="test-setup"></a>테스트 설치
 ![상관 관계 처리량 워크플로 테스트](./media/performance/correlation-throughput-workflow.gif "상관 관계 처리량 워크플로 테스트 설정")
 
- 이전 워크플로는 [지 속성](#persistence) 섹션에서 사용 된 것과 동일 합니다. 지 속성이 없는 상관 관계 테스트의 경우에는 런타임에 지 속성 공급자가 설치 되지 않습니다. 상관 관계는 다음 두 위치에서 발생 합니다. CreateOrder 및 CompleteOrder.
+ 이전 워크플로는 [지 속성](#persistence) 섹션에서 사용 된 것과 동일 합니다. 지 속성이 없는 상관 관계 테스트의 경우에는 런타임에 지 속성 공급자가 설치 되지 않습니다. 상관 관계는 CreateOrder 및 CompleteOrder의 두 위치에서 발생합니다.
 
 #### <a name="test-results"></a>테스트 결과
 ![상관 관계 처리량](./media/performance/correlation-throughput-graph.gif "상관 관계 처리량 그래프")
@@ -300,11 +300,11 @@ public sealed class CompensableActivityEmptyCompensation : CodeActivity
  이 그래프에서 확인할 명확한 추세 중 하나는 WF3과 WF4에서 모두 중첩이 메모리 사용에 미치는 영향이 비교적 최소화된다는 것입니다.  가장 중요한 메모리 영향은 지정된 워크플로의 작업 수에서 비롯됩니다.  시퀀스 1000, 복잡한 깊이 5 시퀀스 5 및 복잡한 깊이 7 시퀀스 1 변형의 데이터가 주어질 경우 작업 수가 수천 개로 늘어나면 메모리 사용 증가가 더 두드러집니다.  ~29K 작업이 있는 극단적인 사례(깊이 7 시퀀스 1)에서 WF4는 WF3보다 거의 79% 더 적은 메모리를 사용합니다.
 
 ### <a name="multiple-workflow-definitions-test"></a>여러 워크플로 정의 테스트
- WF3 및 WF4에서 워크플로를 호스트하는 데 사용 가능한 옵션 때문에 워크플로 정의당 메모리 측정은 두 가지 테스트로 나뉩니다.  이러한 테스트는 지정된 워크플로가 정의당 한 번만 인스턴스화되고 실행된다는 점에서 워크플로 복잡성 테스트와는 다른 방식으로 실행됩니다.  워크플로 정의와 해당 호스트가 AppDomain 수명 동안 메모리에 남아 있기 때문입니다.  지정된 워크플로 인스턴스를 실행할 때 사용된 메모리를 가비지 수집 중에 정리해야 합니다.  호스팅 옵션에 대한 자세한 내용은 WF4에 대한 마이그레이션 지침을 참조하세요. 자세한 내용은 WF Migration Cookbook [를 참조 하세요. 워크플로 호스팅](https://go.microsoft.com/fwlink/?LinkID=153313).
+ WF3 및 WF4에서 워크플로를 호스트하는 데 사용 가능한 옵션 때문에 워크플로 정의당 메모리 측정은 두 가지 테스트로 나뉩니다.  이러한 테스트는 지정된 워크플로가 정의당 한 번만 인스턴스화되고 실행된다는 점에서 워크플로 복잡성 테스트와는 다른 방식으로 실행됩니다.  워크플로 정의와 해당 호스트가 AppDomain 수명 동안 메모리에 남아 있기 때문입니다.  지정된 워크플로 인스턴스를 실행할 때 사용된 메모리를 가비지 수집 중에 정리해야 합니다.  호스팅 옵션에 대한 자세한 내용은 WF4에 대한 마이그레이션 지침을 참조하세요. 자세한 내용은 [WF Migration Cookbook: 워크플로 호스팅](https://go.microsoft.com/fwlink/?LinkID=153313)을 참조 하세요.
 
  여러 가지 방법으로 워크플로 정의 테스트에 사용할 많은 워크플로 정의를 만들 수 있습니다.  예를 들어, 코드 생성을 사용하여 이름만 제외하고 모두 동일한 1000개 워크플로 집합을 만들고 각 워크플로를 개별 파일에 저장할 수 있습니다.  이 방법은 콘솔 호스팅 테스트에 사용되었습니다.  WF3에서는 워크플로 정의를 실행하기 위해 <xref:System.Workflow.Runtime.WorkflowRuntime> 클래스가 사용되었습니다.  WF4는 <xref:System.Activities.WorkflowApplication>을 사용하여 단일 워크플로 인스턴스를 만들거나 직접 <xref:System.Activities.WorkflowInvoker>를 사용하여 메서드 호출인 것처럼 작업을 실행할 수 있습니다.  <xref:System.Activities.WorkflowApplication>은 단일 워크플로 인스턴스의 호스트이며 기능 패리티가 <xref:System.Workflow.Runtime.WorkflowRuntime>에 더 가깝기 때문에 이 테스트에서는 이 클래스가 사용되었습니다.
 
- IIS에서 워크플로를 호스트하는 경우 XAMLX 또는 XOML 파일을 모두 생성하는 대신 <xref:System.Web.Hosting.VirtualPathProvider>를 사용하여 새 <xref:System.ServiceModel.WorkflowServiceHost>를 만들 수 있습니다.  는 <xref:System.Web.Hosting.VirtualPathProvider> 들어오는 요청을 처리 하 고 데이터베이스에서 로드 될 수 있거나이 경우 즉석에서 생성 되는 "가상 파일"을 사용 하 여 응답 합니다.  따라서 실제 파일 1000개를 만들 필요는 없습니다.
+ IIS에서 워크플로를 호스트하는 경우 XAMLX 또는 XOML 파일을 모두 생성하는 대신 <xref:System.Web.Hosting.VirtualPathProvider>를 사용하여 새 <xref:System.ServiceModel.WorkflowServiceHost>를 만들 수 있습니다.  <xref:System.Web.Hosting.VirtualPathProvider>는 들어오는 요청을 처리 하 고 데이터베이스에서 로드 될 수 있거나이 경우 즉석에서 생성 되는 "가상 파일"을 사용 하 여 응답 합니다.  따라서 실제 파일 1000개를 만들 필요는 없습니다.
 
  콘솔 테스트에서 사용된 워크플로 정의는 단일 작업이 포함된 단순한 순차 워크플로였습니다.  단일 작업은 WF3 사례의 경우 비어 있는 <xref:System.Workflow.Activities.CodeActivity>이고 WF4 사례의 경우 `Comment` 작업이었습니다.  IIS 호스팅 사례에서는 메시지 수신에서 시작되고 회신 전송에서 끝나는 워크플로를 사용했습니다.
 
@@ -319,7 +319,7 @@ public sealed class CompensableActivityEmptyCompensation : CodeActivity
 |콘솔 애플리케이션 호스트 워크플로|18 MB|9 MB|
 |IIS 호스트 워크플로 서비스|446 MB|364 MB|
 
- IIS에서 워크플로 정의를 호스트 하는 것은 <xref:System.ServiceModel.WorkflowServiceHost>, 자세한 WCF 서비스 아티팩트 및 호스트와 관련 된 메시지 처리 논리로 인해 훨씬 더 많은 메모리를 사용 합니다.
+ IIS에서 워크플로 정의를 호스트 하는 것은 <xref:System.ServiceModel.WorkflowServiceHost>, 자세한 WCF 서비스 아티팩트 및 호스트와 연결 된 메시지 처리 논리로 인해 훨씬 더 많은 메모리를 소비 합니다.
 
  WF3의 콘솔 호스팅에서는 워크플로가 XOML 대신 코드로 구현되었습니다.  WF4에서는 XAML을 사용하는 것이 기본값입니다.  XAML은 어셈블리에 포함된 리소스로 저장되며 런타임 중에 컴파일되어 워크플로 구현을 제공합니다.  이 프로세스와 연결된 약간의 오버헤드가 있습니다.  WF3과 WF4의 공정한 비교를 위해 XAML 대신 코딩된 워크플로가 사용되었습니다.  다음은 WF4 워크플로 중 하나의 예제입니다.
 
@@ -384,9 +384,9 @@ public class Workflow1 : Activity
 
 - PhysicalDisk\\% Avg. Disk Queue Length
 
-- PhysicalDisk\Avg. Disk Read Queue Length
+- PhysicalDisk\Avg. Disk 읽기 큐 길이
 
-- PhysicalDisk\Avg. Disk Write Queue Length
+- PhysicalDisk\Avg. 디스크 쓰기 큐 길이
 
 - PhysicalDisk\Current Disk Queue Length
 
@@ -451,4 +451,4 @@ public class Workflow1 : Activity
  직선 WF3을 통해 Interop을 사용할 경우 성능이 훨씬 향상됩니다.  그러나 WF4 작업과 비교할 경우 이러한 증가는 무시될 수 있습니다.
 
 ## <a name="summary"></a>요약
- WF4의 성능에 대한 막대한 투자는 중요한 여러 영역에서 충분한 결실을 맺었습니다.  경우에 따라 개별 워크플로 구성 요소의 성능은 보다 간결한 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 런타임으로 인해 WF3보다 WF4에서 수백 배 더 빠릅니다.  대기 시간 수치도 훨씬 낫습니다.  즉, WCF 오케스트레이션 서비스를 직접 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 코딩 하는 것과 반대로를 사용 하는 경우의 성능 저하는를 사용 하 [!INCLUDE[wf1](../../../includes/wf1-md.md)]는 추가 이점을 고려 하 여 매우 작습니다.  지속성 성능은 2.5-3.0의 비율로 증가했습니다.  이제 워크플로 추적을 통한 상태 모니터링의 오버헤드가 매우 적습니다.  WF3에서 WF4로의 이동을 고려하는 사용자를 위해 포괄적인 마이그레이션 가이드 집합이 제공됩니다.  이러한 모든 특성 때문에 WF4는 복잡한 애플리케이션을 작성할 때 유용한 옵션이 됩니다.
+ WF4의 성능에 대한 막대한 투자는 중요한 여러 영역에서 충분한 결실을 맺었습니다.  경우에 따라 개별 워크플로 구성 요소의 성능은 보다 간결한 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 런타임으로 인해 WF3보다 WF4에서 수백 배 더 빠릅니다.  대기 시간 수치도 훨씬 낫습니다.  즉, WCF 오케스트레이션 서비스를 직접 코딩 하는 것과는 반대로 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 사용에 대 한 성능 저하는 [!INCLUDE[wf1](../../../includes/wf1-md.md)]사용의 추가 이점을 고려 하 여 매우 작습니다.  지속성 성능은 2.5-3.0의 비율로 증가했습니다.  이제 워크플로 추적을 통한 상태 모니터링의 오버헤드가 매우 적습니다.  WF3에서 WF4로의 이동을 고려하는 사용자를 위해 포괄적인 마이그레이션 가이드 집합이 제공됩니다.  이러한 모든 특성 때문에 WF4는 복잡한 애플리케이션을 작성할 때 유용한 옵션이 됩니다.
