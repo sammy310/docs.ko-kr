@@ -10,12 +10,12 @@ ms.assetid: cf2d9006-b631-4e5d-81cd-20aab78c60f1
 author: mairaw
 ms.author: mairaw
 ms.topic: conceptual
-ms.openlocfilehash: 809ac026244b24aee69ec0d6c40c10a1248c234c
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 4b47847e9d6e9424d4442d655c40a637383c7229
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72579111"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72847076"
 ---
 # <a name="additional-class-libraries-and-apis"></a>추가 클래스 라이브러리 및 API
 
@@ -36,7 +36,7 @@ ms.locfileid: "72579111"
   
 | 프로젝트 | 설명 |  
 | ------- | ----------- |  
-| <xref:System.Text.CodePagesEncodingProvider> | @No__t_0 클래스를 확장 하 여 유니버설 Windows 플랫폼를 대상으로 하는 앱에서 코드 페이지 인코딩을 사용할 수 있도록 합니다. |  
+| <xref:System.Text.CodePagesEncodingProvider> | <xref:System.Text.EncodingProvider> 클래스를 확장 하 여 유니버설 Windows 플랫폼를 대상으로 하는 앱에서 코드 페이지 인코딩을 사용할 수 있도록 합니다. |  
   
 ## <a name="private-apis"></a>전용 API  
 
@@ -57,18 +57,22 @@ ms.locfileid: "72579111"
 * [SqlTypes입니다. SetLength 메서드](system.data.sqltypes.sqlstreamchars.setlength.md)
 * [SqlTypes 메서드를 작성 합니다.](system.data.sqltypes.sqlstreamchars.write.md)
 * [시스템 .Net 연결 클래스](connection.md)
-* [시스템 .Net. 연결 \_WriteList 필드](m_writelist.md)
+* [시스템 .Net. 연결\_WriteList 필드](m_writelist.md)
 * [시스템 .Net ConnectionGroup 클래스](connectiongroup.md)
-* [시스템 .Net. ConnectionGroup. m \_ConnectionList 필드](m_connectionlist.md)
+* [시스템 .Net. ConnectionGroup. m\_Connectiongroup 필드](m_connectionlist.md)
+* [시스템 .Net. ConnectStream. 연결 속성](system.net.connectstream.connection.md)
 * [CoreResponseData 클래스](coreresponsedata.md)
-* [CoreResponseData \_ResponseHeaders 필드](coreresponsedata_m_responseheaders.md)
-* [CoreResponseData \_StatusCode 필드](coreresponsedata_m_statuscode.md)
-* [시스템 .Net \_AutoRedirects 필드](_autoredirects.md)
-* [시스템 .Net \_CoreResponse 필드](httpwebrequest__coreresponse.md)
-* [시스템 .Net \_HttpResponse 필드](_httpresponse.md)
-* [시스템 .Net. ServicePoint. m \_ConnectionGroupList 필드](m_connectiongrouplist.md)
-* [시스템 .Net. ServicePointManager \_ServicePointTable 필드](s_servicepointtable.md)
-* [System.web. s s i Diagnostics \_isDebuggerCheckDisabledForTestPurposes 필드](s-isdebuggercheckdisabledfortestpurposes-field.md)
+* [CoreResponseData\_ResponseHeaders 필드](coreresponsedata_m_responseheaders.md)
+* [CoreResponseData\_StatusCode 필드](coreresponsedata_m_statuscode.md)
+* [AutoRedirects 필드\_](_autoredirects.md)
+* [CoreResponse 필드\_](httpwebrequest__coreresponse.md)
+* [Httpresponse.cache 필드\_](_httpresponse.md)
+* [시스템 .Net. PooledStream. NetworkStream 속성](system.net.pooledstream.networkstream.md)
+* [시스템 .Net. ServicePoint. m\_ConnectionGroupList 필드](m_connectiongrouplist.md)
+* [시스템 .Net. ServicePointManager\_Servicepointmanager 필드](s_servicepointtable.md)
+* [시스템 .Net. TlsStream 필드](system.net.tlsstream.m_worker.md)
+* [시스템 .Net. SslState. Sslstate 속성](system.net.security.sslstate.sslprotocol.md)
+* [IsDebuggerCheckDisabledForTestPurposes 필드를\_합니다.](s-isdebuggercheckdisabledfortestpurposes-field.md)
 * [DataMemberFieldEditor 클래스입니다.](datamemberfieldeditor-class.md)
 * [DataMemberListEditor 클래스입니다.](datamemberlisteditor-class.md)
 * [CreateSqlReader 메서드입니다.](system.xml.xmlreader.createsqlreader.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - GAC (global assembly cache), publisher policy assembly
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
-ms.openlocfilehash: 5484dfeb8cf5292fb43393bb39b9878114119d29
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 608918828bf72369a1bd48e2391e2423078e9df0
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991189"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846841"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>방법: 게시자 정책 만들기
 
@@ -26,7 +26,7 @@ ms.locfileid: "70991189"
 
 3. 전역 어셈블리 캐시에 게시자 정책 어셈블리를 추가 합니다.
 
-게시자 정책에 대 한 스키마는 [어셈블리 버전 리디렉션](redirect-assembly-versions.md)에 설명 되어 있습니다. 다음 예에서는의 `myAssembly` 한 버전을 다른 버전으로 리디렉션하는 게시자 정책 파일을 보여 줍니다.
+게시자 정책에 대 한 스키마는 [어셈블리 버전 리디렉션](redirect-assembly-versions.md)에 설명 되어 있습니다. 다음 예에서는 `myAssembly` 한 버전을 다른 버전으로 리디렉션하는 게시자 정책 파일을 보여 줍니다.
 
 ```xml
 <configuration>
@@ -55,7 +55,7 @@ ms.locfileid: "70991189"
 
 명령 프롬프트에서 다음 명령을 입력 합니다.
 
-**al /link:** *publisherPolicyFile* **/out:** *publisherPolicyAssemblyFile* **/keyfile:** *keyPairFile* **/platform:** *processorArchitecture*
+**al/link:** *publisherPolicyFile* **/Out:** *publisherPolicyAssemblyFile* **/keyfile:** *keyPairFile* **/platform:** *processorArchitecture*
 
 이 명령에서 다음을 수행 합니다.
 
@@ -63,7 +63,7 @@ ms.locfileid: "70991189"
 
 - *PublisherPolicyAssemblyFile* 인수는이 명령에서 생성 되는 게시자 정책 어셈블리의 이름입니다. 어셈블리 파일 이름은 다음 형식을 따라야 합니다.
 
-  **policy.** *majorNumber* **.** *minorNumber* **.** *mainAssemblyName* **.dll**
+  **policy.** *majorNumber* **.** *minorNumber* **.** *Mainassemblyname* **.dll**
 
 - *KeyPairFile* 인수는 키 쌍을 포함 하는 파일의 이름입니다. 동일한 키 쌍을 사용 하 여 어셈블리 및 게시자 정책 어셈블리에 서명 해야 합니다.
 
@@ -72,13 +72,13 @@ ms.locfileid: "70991189"
   > [!NOTE]
   > 특정 프로세서 아키텍처를 대상으로 하는 기능은 .NET Framework 2.0부터 사용할 수 있습니다.
 
-특정 프로세서 아키텍처를 대상으로 지정 하는 기능은 .NET Framework 2.0부터 사용할 수 있습니다. 다음 명령은 이라는 `policy.1.0.myAssembly` `pub.config`게시자 정책 파일에서 라는 게시자 정책 어셈블리를 만들어에 강력한 이름을 할당 합니다. 어셈블리는 `sgKey.snk` 파일의 키 쌍을 사용 하 고 어셈블리는 x86 프로세서 아키텍처를 대상으로 지정 합니다.
+특정 프로세서 아키텍처를 대상으로 하는 기능은 .NET Framework 2.0부터 사용할 수 있습니다. 다음 명령은 `pub.config`이라는 게시자 정책 파일에서 `policy.1.0.myAssembly` 라는 게시자 정책 어셈블리를 만들고, `sgKey.snk` 파일의 키 쌍을 사용 하 여 어셈블리에 강력한 이름을 할당 하 고, 어셈블리가 x86 프로세서를 대상으로 하도록 지정 합니다. 마이크로아키텍처.
 
 ```
 al /link:pub.config /out:policy.1.0.myAssembly.dll /keyfile:sgKey.snk /platform:x86
 ```
 
-게시자 정책 어셈블리는 적용 되는 어셈블리의 프로세서 아키텍처와 일치 해야 합니다. 따라서 어셈블리의 <xref:System.Reflection.AssemblyName.ProcessorArchitecture%2A> <xref:System.Reflection.ProcessorArchitecture.MSIL>값이 인 경우 해당 어셈블리에 대 한 게시자 정책 어셈블리는를 사용 `/platform:anycpu`하 여 만들어야 합니다. 각 프로세서별 어셈블리에 대해 별도의 게시자 정책 어셈블리를 제공 해야 합니다.
+게시자 정책 어셈블리는 적용 되는 어셈블리의 프로세서 아키텍처와 일치 해야 합니다. 따라서 어셈블리의 <xref:System.Reflection.AssemblyName.ProcessorArchitecture%2A> 값이 <xref:System.Reflection.ProcessorArchitecture.MSIL>인 경우 `/platform:anycpu`를 사용 하 여 해당 어셈블리에 대 한 게시자 정책 어셈블리를 만들어야 합니다. 각 프로세서별 어셈블리에 대해 별도의 게시자 정책 어셈블리를 제공 해야 합니다.
 
 이 규칙의 결과는 어셈블리에 대 한 프로세서 아키텍처를 변경 하기 위해 올바른 프로세서 아키텍처를 사용 하 여 새 게시자 정책 어셈블리를 제공할 수 있도록 버전 번호의 주 또는 부 구성 요소를 변경 해야 한다는 것입니다. 어셈블리에 다른 프로세서 아키텍처가 있으면 이전 게시자 정책 어셈블리에서 어셈블리를 서비스 할 수 없습니다.
 
@@ -92,9 +92,9 @@ al /link:pub.config /out:policy.1.0.myAssembly.dll /keyfile:sgKey.snk /platform:
 
 명령 프롬프트에서 다음 명령을 입력 합니다.
 
-**gacutil /i**  *publisherPolicyAssemblyFile*
+**gacutil.exe/I**  *publisherPolicyAssemblyFile*
 
-다음 명령은 전역 어셈블리 `policy.1.0.myAssembly.dll` 캐시에를 추가 합니다.
+다음 명령은 전역 어셈블리 캐시에 `policy.1.0.myAssembly.dll`를 추가 합니다.
 
 ```
 gacutil /i policy.1.0.myAssembly.dll
@@ -103,7 +103,7 @@ gacutil /i policy.1.0.myAssembly.dll
 > [!IMPORTANT]
 > 원본 게시자 정책 파일이 어셈블리와 동일한 디렉터리에 있는 경우가 아니면 게시자 정책 어셈블리를 전역 어셈블리 캐시에 추가할 수 없습니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [어셈블리를 사용한 프로그래밍](../../standard/assembly/program.md)
 - [런타임에서 어셈블리를 찾는 방법](../deployment/how-the-runtime-locates-assemblies.md)
