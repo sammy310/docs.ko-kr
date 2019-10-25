@@ -2,12 +2,12 @@
 title: Docker 컨테이너, 이미지 및 레지스트리
 description: 애플리케이션 배포의 Docker 방식에서 리지스트리가 전체적으로 수행하는 주요 역할을 알아봅니다.
 ms.date: 02/15/2019
-ms.openlocfilehash: 7becadc3de16d96f8d6f167cf49c6cdd3bcc0d32
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 32240ac4f6dec67531d8e618cff153d235c073c7
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673520"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72394617"
 ---
 # <a name="docker-containers-images-and-registries"></a>Docker 컨테이너, 이미지 및 레지스트리
 
@@ -19,9 +19,11 @@ Docker를 사용할 때 앱 또는 서비스를 만들고 컨테이너 및 해�
 
 그림 1-4는 Docker의 이미지와 레지스트리가 다른 구성 요소와 어떤 관계가 있는지 보여줍니다. 그것은 또한 공급업체로부터 제공되는 여러 레지스트리를 보여줍니다.
 
-![Docker의 기본 분류: 레지스트리는 이미지가 저장되고 컨테이너를 빌드하여 서비스 또는 웹앱을 실행하기 위해 가져올 수 있는 책장과 같습니다. 온-프레미스 및 퍼블릭 클라우드의 프라이빗 Docker 레지스트리가 있습니다. Docker 허브는 엔터프라이즈급 솔루션인 Docker Trusted Registry와 함께 Docker에서 유지 관리되는 공용 레지스트리이며, Azure는 Azure Container Registry를 제공합니다. AWS, Google 등에도 컨테이너 레지스트리가 있습니다.](./media/image4.png)
+![Docker의 기본 분류를 보여 주는 다이어그램](./media/docker-containers-images-and-registries/taxonomy-docker-terms-concepts.png)
 
 **그림 1-4**. Docker 용어 및 개념의 분류
+
+레지스트리는 이미지가 저장되고 컨테이너를 빌드하여 서비스 또는 웹앱을 실행하기 위해 가져올 수 있는 책장과 같습니다. 온-프레미스 및 퍼블릭 클라우드의 프라이빗 Docker 레지스트리가 있습니다. Docker 허브는 엔터프라이즈급 솔루션인 Docker Trusted Registry와 함께 Docker에서 유지 관리되는 공용 레지스트리이며, Azure는 Azure Container Registry를 제공합니다. AWS, Google 등에도 컨테이너 레지스트리가 있습니다.
 
 레지스티리에 이미지를 저장하면 프레임워크 수준에서 모든 종속성을 포함한 정적 및 변경할 수 없는 애플리케이션 비트를 저장할 수 있습니다. 그런 다음, 여러 환경에서 이미지를 버전화하고 배포할 수 있으므로 일관된 배포 단위를 제공할 수 있습니다.
 

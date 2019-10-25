@@ -3,12 +3,12 @@ title: Docker 소개
 description: 이 문서에서는 .NET Core 애플리케이션 컨텍스트에서 Docker를 소개하고 간략하게 설명합니다.
 ms.date: 03/20/2019
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 5da71215e3b539f10993677d23d89e2b8a49cb39
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 3f40d2723feb5a31066115ae11cafba11981f1b4
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70799358"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523006"
 ---
 # <a name="introduction-to-net-and-docker"></a>.NET 및 Docker 소개
 
@@ -52,27 +52,27 @@ Microsoft는 특정 시나리오를 위한 맞춤형 이미지를 제공합니�
 
 다양한 Azure 서비스에서 컨테이너를 지원합니다. 애플리케이션을 위한 Docker 이미지를 생성하여 다음 서비스 중 하나에 배포합니다.
 
-* [AKS(Azure Kubernetes Service)](https://azure.microsoft.com/services/kubernetes-service/)\
+- [AKS(Azure Kubernetes Service)](https://azure.microsoft.com/services/kubernetes-service/)\
 Kubernetes를 사용하여 Linux 컨테이너를 확장 및 오케스트레이션합니다.
 
-* [Azure App Service](https://azure.microsoft.com/services/app-service/containers/)\
+- [Azure App Service](https://azure.microsoft.com/services/app-service/containers/)\
 PaaS 환경에서 Linux 컨테이너를 사용하여 웹앱 또는 API를 배포합니다.
 
-* [Azure Container Instances](https://azure.microsoft.com/services/container-instances/)\
+- [Azure Container Instances](https://azure.microsoft.com/services/container-instances/)\
 더 높은 수준의 관리 서비스 없이 클라우드에서 컨테이너를 호스트합니다.
 
-* [Azure Batch](https://azure.microsoft.com/services/batch/)\
+ [Azure Batch](https://azure.microsoft.com/services/batch/)\
 컨테이너를 사용하여 반복적인 컴퓨팅 작업을 실행합니다.
 
-* [Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/)\
-Windows Server 컨테이너를 사용하여 .NET 애플리케이션 및 마이크로 서비스를 이동하고 전환하고 현대화합니다.
+- [Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/)\
+Windows Server 컨테이너를 사용하여 .NET 애플리케이션 및 마이크로서비스를 이동 및 전환하고 현대화합니다.
 
-* [Azure Container Registry](https://azure.microsoft.com/services/container-registry/)\
+- [Azure Container Registry](https://azure.microsoft.com/services/container-registry/)\
 모든 형식의 Azure 배포에서 컨테이너 이미지 저장 및 관리합니다.
 
 ## <a name="next-steps"></a>다음 단계
 
-* [.NET Core 애플리케이션을 컨테이너화하는 방법 알아보기](build-docker-netcore-container.md)
-* [ASP.NET Core 애플리케이션을 컨테이너화하는 방법을 알아봅니다.](/aspnet/core/host-and-deploy/docker/building-net-docker-images)
-* [ASP.NET Core 마이크로 서비스 알아보기 자습서 확인해 보기](https://dotnet.microsoft.com/learn/web/aspnet-microservice-tutorial/intro)
-* [Visual Studio의 컨테이너 도구에 대해 알아보기](/visualstudio/containers/overview)
+- [.NET Core 애플리케이션을 컨테이너화하는 방법 알아보기](build-docker-netcore-container.md)
+- [ASP.NET Core 애플리케이션을 컨테이너화하는 방법을 알아봅니다.](/aspnet/core/host-and-deploy/docker/building-net-docker-images)
+- [ASP.NET Core 마이크로 서비스 알아보기 자습서 확인해 보기](https://dotnet.microsoft.com/learn/web/aspnet-microservice-tutorial/intro)
+- [Visual Studio의 컨테이너 도구에 대해 알아보기](/visualstudio/containers/overview)

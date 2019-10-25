@@ -2,12 +2,12 @@
 title: async 및 await를 사용한 TAP(작업 비동기 프로그래밍) 모델(C#)
 ms.date: 05/22/2017
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
-ms.openlocfilehash: 3ced168bada4167418bf27861c5b8666b02aa70e
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 644830ac62a4df23f22d8f91e9b3c768dd611451
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291332"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395701"
 ---
 # <a name="task-asynchronous-programming-model"></a>작업 비동기 프로그래밍 모델
 
@@ -46,7 +46,7 @@ C#의 [async](../../../language-reference/keywords/async.md) 및 [await](../../.
 
 ```csharp
 async Task<int> AccessTheWebAsync()
-{ 
+{
     // You need to add a reference to System.Net.Http to declare client.
     var client = new HttpClient();
 
@@ -60,7 +60,7 @@ async Task<int> AccessTheWebAsync()
     // The await operator suspends AccessTheWebAsync.
     //  - AccessTheWebAsync can't continue until getStringTask is complete.
     //  - Meanwhile, control returns to the caller of AccessTheWebAsync.
-    //  - Control resumes here when getStringTask is complete. 
+    //  - Control resumes here when getStringTask is complete.
     //  - The await operator then retrieves the string result from getStringTask.
     string urlContents = await getStringTask;
 
@@ -259,7 +259,7 @@ Windows 런타임 프로그래밍의 비동기 API에는 작업과 유사한 다
 
 다음 코드는 이 문서에서 설명하는 WPF 애플리케이션의 *MainWindow.xaml.cs* 파일입니다. [비동기 샘플: "Async 및 Await를 사용하는 비동기 프로그래밍"의 예제](https://docs.microsoft.com/samples/dotnet/samples/async-and-await-cs/)에서 샘플을 다운로드할 수 있습니다.
 
-[!code-csharp[async](~/samples/async/async-and-await/cs/MainWindow.xaml.cs)] 
+[!code-csharp[async](~/samples/async/async-and-await/cs/MainWindow.xaml.cs)]
 
 ## <a name="see-also"></a>참고 항목
 
@@ -267,4 +267,3 @@ Windows 런타임 프로그래밍의 비동기 API에는 작업과 유사한 다
 - [await](../../../language-reference/operators/await.md)
 - [비동기 프로그래밍](../../../async.md)
 - [비동기 개요](../../../../standard/async.md)
- 

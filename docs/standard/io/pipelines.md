@@ -9,12 +9,12 @@ helpviewer_keywords:
 - I/O [.NET], Pipelines
 author: rick-anderson
 ms.author: riande
-ms.openlocfilehash: 9e26fb36b77e38c81273ccda370a203dd3388e5c
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 9efd7a7581a1e8bd2cb5f544edd1b4c965aa1866
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291694"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395927"
 ---
 # <a name="systemiopipelines-in-net"></a>.NET의 System.IO.Pipelines
 
@@ -23,6 +23,7 @@ ms.locfileid: "72291694"
 <a name="solve"></a>
 
 ## <a name="what-problem-does-systemiopipelines-solve"></a>System.IO.Pipelines이 해결하는 문제
+
 <!-- corner case doesn't MT (machine translate)   -->
 스트리밍 데이터를 구문 분석하는 앱은 특수하고 비정상적인 코드 흐름이 많은 상용구 코드로 구성됩니다. 상용구와 특수 사례 코드는 복잡하고 유지관리가 어렵습니다.
 
@@ -38,7 +39,7 @@ async Task ProcessLinesAsync(NetworkStream stream)
 {
     var buffer = new byte[1024];
     await stream.ReadAsync(buffer, 0, buffer.Length);
-    
+
     // Process a single line from the buffer
     ProcessLine(buffer);
 }
@@ -55,7 +56,7 @@ async Task ProcessLinesAsync(NetworkStream stream)
 
 * 새 줄을 찾을 때까지 들어오는 데이터를 버퍼링합니다.
 * 버퍼에 반환된 모든 줄을 구문 분석합니다.
-* 줄이 1KB(1024바이트)보다 클 수 있습니다. 코드는 버퍼 안의 전체 줄에 맞추기 위해 구분 기호를 찾을 때까지 입력 버퍼의 크기를 조정해야 합니다.
+* 줄이 1KB(1024바이트)보다 클 수 있습니다. 버퍼 내부의 전체 줄을 맞추려면 구분 기호를 찾을 때까지 코드에서 입력 버퍼의 크기를 조정해야 합니다.
 
   * 버퍼 크기를 조정하는 경우 입력에 더 긴 줄이 표시되면 더 많은 버퍼 복사본이 생성됩니다.
   * 불필요한 공간을 줄이려면 줄 읽기에 사용되는 버퍼를 압축합니다.
@@ -97,7 +98,7 @@ async Task ProcessLinesAsync(NetworkStream stream)
 * 두 가지 중요 한 정보를 포함하는 <xref:System.IO.Pipelines.ReadResult>를 반환합니다.
 
   * `ReadOnlySequence<byte>` 형식으로 읽은 데이터입니다.
-  * EOF(데이터의 끝)에 도달했는지 여부를 나타내는 부울 `IsCompleted`입니다. 
+  * EOF(데이터의 끝)에 도달했는지 여부를 나타내는 부울 `IsCompleted`입니다.
 
 EOL(줄의 끝) 구분 기호를 찾은 후 줄을 구문 분석합니다.
 
@@ -304,7 +305,7 @@ bool TryParseMessage(ref ReadOnlySequence<byte> buffer, out Message message);
 
 ## <a name="pipewriter"></a>PipeWriter
 
-<xref:System.IO.Pipelines.PipeWriter>는 호출자를 대신해 쓰기 위한 버퍼를 관리합니다. `PipeWriter`는 [`IBufferWriter<byte>`](xref:System.Buffers.IBufferWriter`1)를 구현합니다. `IBufferWriter<byte>`는 추가 버퍼 복사본 없이 쓰기를 수행하기 위해 버퍼에 액세스할 수 있습니다.
+<xref:System.IO.Pipelines.PipeWriter>는 호출자를 대신해 쓰기 위한 버퍼를 관리합니다. `PipeWriter`는 [`IBufferWriter<byte>`](xref:System.Buffers.IBufferWriter%601)를 구현합니다. `IBufferWriter<byte>`는 추가 버퍼 복사본 없이 쓰기를 수행하기 위해 버퍼에 액세스할 수 있습니다.
 
 [!code-csharp[MyPipeWriter](~/samples/snippets/csharp/pipelines/MyPipeWriter.cs?name=snippet)]
 

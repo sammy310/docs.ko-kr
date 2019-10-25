@@ -5,12 +5,12 @@ author: mlacouture
 ms.date: 01/19/2017
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 4a9c24455136fe4ccd13379d05c16d6b7cbf85de
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 403651978667c8cf531c3f87f1156f67206fb490
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117018"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522822"
 ---
 # <a name="using-microsoft-xml-serializer-generator-on-net-core"></a>.NET Core에서 Microsoft XML Serializer Generator 사용
 
@@ -18,11 +18,11 @@ ms.locfileid: "71117018"
 
 > [!div class="checklist"]
 >
-> * .NET Core 앱을 만드는 방법
-> * Microsoft.XmlSerializer.Generator 패키지에 대한 참조를 추가하는 방법
-> * MyApp.csproj를 편집하여 종속성을 추가하는 방법
-> * 클래스 및 XmlSerializer를 추가하는 방법
-> * 애플리케이션을 빌드하고 실행하는 방법
+> - .NET Core 앱을 만드는 방법
+> - Microsoft.XmlSerializer.Generator 패키지에 대한 참조를 추가하는 방법
+> - MyApp.csproj를 편집하여 종속성을 추가하는 방법
+> - 클래스 및 XmlSerializer를 추가하는 방법
+> - 애플리케이션을 빌드하고 실행하는 방법
 
 .NET Framework용 [Xml Serializer Generator(sgen.exe)](../../standard/serialization/xml-serializer-generator-tool-sgen-exe.md)와 마찬가지로, [Microsoft.XmlSerializer.Generator NuGet 패키지](https://www.nuget.org/packages/Microsoft.XmlSerializer.Generator)는 .NET Core 및 .NET Standard 프로젝트와 동일합니다. <xref:System.Xml.Serialization.XmlSerializer>를 사용하여 해당 형식의 개체를 직렬화하거나 역직렬화할 때 XML serialization의 시작 성능을 향상시키기 위해 어셈블리에 포함된 형식의 XML serialization 어셈블리를 만듭니다.
 
@@ -30,8 +30,8 @@ ms.locfileid: "71117018"
 
 이 자습서를 완료하려면 다음이 필요합니다.
 
-* [.NET Core 2.1 SDK](https://dotnet.microsoft.com/download) 이상
-* 선호하는 코드 편집기
+- [.NET Core 2.1 SDK](https://dotnet.microsoft.com/download) 이상.
+- 선호하는 코드 편집기
 
 > [!TIP]
 > 코드 편집기를 설치해야 하나요? [Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)를 체험해 보세요.
@@ -122,14 +122,14 @@ dotnet run
 지금까지 다음 작업을 수행했습니다.
 > [!div class="checklist"]
 >
-> * .NET Core 앱을 생성했습니다.
-> * Microsoft.XmlSerializer.Generator 패키지에 대한 참조를 추가했습니다.
-> * MyApp.csproj를 편집하여 종속성을 추가했습니다.
-> * 클래스 및 XmlSerializer를 추가했습니다.
-> * 애플리케이션을 빌드하고 실행했습니다.
+> - .NET Core 앱을 생성했습니다.
+> - Microsoft.XmlSerializer.Generator 패키지에 대한 참조를 추가했습니다.
+> - MyApp.csproj를 편집하여 종속성을 추가했습니다.
+> - 클래스 및 XmlSerializer를 추가했습니다.
+> - 애플리케이션을 빌드하고 실행했습니다.
 
 ## <a name="related-resources"></a>관련 참고 자료
 
-* [XML serialization 소개](../../standard/serialization/introducing-xml-serialization.md)
-* [방법: XmlSerializer를 사용하여 serialize(C#)](../../csharp/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)
-* [방법: XmlSerializer를 사용하여 serialize(Visual Basic)](../../visual-basic/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)
+- [XML serialization 소개](../../standard/serialization/introducing-xml-serialization.md)
+- [방법: XmlSerializer를 사용하여 serialize(C#)](../../csharp/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)
+- [방법: XmlSerializer를 사용하여 serialize(Visual Basic)](../../visual-basic/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)

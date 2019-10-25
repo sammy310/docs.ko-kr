@@ -5,12 +5,12 @@ ms.date: 10/03/2018
 helpviewer_keywords:
 - strings [C#], comparison
 - comparing strings [C#]
-ms.openlocfilehash: bce234ca3a86f057ec35e1c53d22169ee29b7b94
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: a3e5f8dd9cfac809aafc2533463390cd5a64e0d6
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58759874"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395449"
 ---
 # <a name="how-to-compare-strings-in-c"></a>C\#에서 문자열을 비교하는 방법
 
@@ -29,19 +29,19 @@ ms.locfileid: "58759874"
 
 ## <a name="default-ordinal-comparisons"></a>기본 서수 비교
 
-가장 일반적인 작업인
+기본적으로 가장 일반적인 작업:
 
 - <xref:System.String.CompareTo%2A?displayProperty=nameWithType>
 - <xref:System.String.Equals%2A?displayProperty=nameWithType>
-- <xref:System.String.op_Equality%2A?displayProperty=nameWithType> 
+- <xref:System.String.op_Equality%2A?displayProperty=nameWithType> 및 <xref:System.String.op_Inequality%2A?displayProperty=nameWithType>, 즉 [같음 연산자 `==` 및 `!=`](../language-reference/operators/equality-operators.md#string-equality)는 각각
 
-은(는) 서수 비교, 대/소문자 구분 비교를 사용하고 현재 문화권을 사용합니다. 결과는 다음 예제에서 확인할 수 있습니다.
+대/소문자 구분 서수 비교를 수행하고 필요한 경우 현재 문화권을 사용합니다. 다음은 해당 예입니다.
 
 [!code-csharp-interactive[Comparing strings using an ordinal comparison](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#1)]
 
-기본 서수 비교는 문자열을 비교할 때 언어 규칙을 고려하지 않습니다. 두 문자열에서 각 <xref:System.Char> 개체의 이진값을 비교합니다. 결과적으로, 기본 서수 비교도 대/소문자를 구분합니다. 
+기본 서수 비교는 문자열을 비교할 때 언어 규칙을 고려하지 않습니다. 두 문자열에서 각 <xref:System.Char> 개체의 이진값을 비교합니다. 결과적으로, 기본 서수 비교도 대/소문자를 구분합니다.
 
-<xref:System.String.Equals%2A?displayProperty=nameWithType> 및 <xref:System.String.op_Equality%2A?displayProperty=nameWithType>의 같음에 대한 테스트는 <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 및 <xref:System.String.Compare(System.String,System.String)?displayProperty=nameWithType)> 메서드를 사용한 문자열 비교와 다릅니다. 같음에 대한 테스트가 대/소문자 구분 서수 비교를 수행하는 동안 비교 메서드는 현재 문화권을 사용하여 대/소문자 구분하고 문화권 구분 비교를 수행합니다. 기본 비교 메서드는 종종 다양한 유형의 비교를 수행하기 때문에 수행할 비교 형식을 명시적으로 지정하는 오버로드를 호출하여 코드의 의도를 항상 명확히 하는 것이 좋습니다.
+<xref:System.String.Equals%2A?displayProperty=nameWithType>, `==` 및 `!=` 연산자의 동일성에 대한 테스트는 <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 및 <xref:System.String.Compare(System.String,System.String)?displayProperty=nameWithType)> 메서드를 사용한 문자열 비교와 다릅니다. 동일성에 대한 테스트가 대/소문자 구분 서수 비교를 수행하는 동안 비교 메서드는 현재 문화권을 사용하여 대/소문자를 구분하고 문화권 구분 비교를 수행합니다. 기본 비교 메서드는 종종 다양한 유형의 비교를 수행하기 때문에 수행할 비교 형식을 명시적으로 지정하는 오버로드를 호출하여 코드의 의도를 항상 명확히 하는 것이 좋습니다.
 
 ## <a name="case-insensitive-ordinal-comparisons"></a>대/소문자를 구분하지 않는 서수 비교
 
@@ -102,7 +102,7 @@ Windows에서 언어 비교를 서수 비교로 변경하면 "cop", "coop" 및 "
 
 [!code-csharp-interactive[Sorting an array of strings](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#5)]
 
-배열이 정렬되면 이진 검색을 사용하여 항목을 검색할 수 있습니다. 이진 검색은 컬렉션의 중간에서 시작하여 컬렉션의 절반에서 검색 문자열이 포함되어 있는지 확인합니다. 이후의 각 비교는 컬렉션의 나머지 부분을 절반으로 세분합니다.  배열은 <xref:System.StringComparer.CurrentCulture?displayProperty=nameWithType>을 사용하여 정렬됩니다. 로컬 함수 `ShowWhere`는 문자열이 발견된 위치에 대한 정보를 표시합니다. 문자열을 찾을 수 없는 경우 반환된 값은 발견된 그 위치를 나타냅니다. 
+배열이 정렬되면 이진 검색을 사용하여 항목을 검색할 수 있습니다. 이진 검색은 컬렉션의 중간에서 시작하여 컬렉션의 절반에서 검색 문자열이 포함되어 있는지 확인합니다. 이후의 각 비교는 컬렉션의 나머지 부분을 절반으로 세분합니다.  배열은 <xref:System.StringComparer.CurrentCulture?displayProperty=nameWithType>을 사용하여 정렬됩니다. 로컬 함수 `ShowWhere`는 문자열이 발견된 위치에 대한 정보를 표시합니다. 문자열을 찾을 수 없는 경우 반환된 값은 발견된 그 위치를 나타냅니다.
 
 [!code-csharp-interactive[Searching in a sorted array](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#6)]
 

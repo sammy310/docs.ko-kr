@@ -4,12 +4,12 @@ description: "'이 애플리케이션을 시작할 수 없음' 대화 상자가 
 author: rpetrusha
 ms.author: ronpet
 ms.date: 09/05/2019
-ms.openlocfilehash: 2534979e8dea886c2d7298c57e12b66d7a962c69
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 8fa8381f1b05445f259b4e4af5cc17fa487b2ce0
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71401283"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319174"
 ---
 # <a name="troubleshooting-a-this-application-could-not-be-started-error-message"></a>‘이 애플리케이션을 시작할 수 없음’ 오류 메시지 문제 해결
 
@@ -53,7 +53,7 @@ ms.locfileid: "71401283"
    |Windows Vista SP2|[.NET Framework 4.6](https://www.microsoft.com/download/details.aspx?id=48130)|
 
    > [!NOTE]
-   >  Windows 10 2019년 5월 업데이트에는 .NET Framework 4.8이 미리 설치되어 있습니다.
+   > Windows 10 2019년 5월 업데이트에는 .NET Framework 4.8이 미리 설치되어 있습니다.
 
 1. 애플리케이션을 시작하려고 합니다.
 

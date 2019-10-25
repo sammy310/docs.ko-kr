@@ -2,12 +2,12 @@
 title: Docker 애플리케이션의 상태 및 데이터
 description: 컨테이너화된 애플리케이션에서 상태를 저장하는 데 사용할 수 있는 옵션을 알아봅니다.
 ms.date: 02/15/2019
-ms.openlocfilehash: bc171a419632f2ac61c7c9bf6b201b84e0691c3a
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: b2368efb0eff2bdce48b77b2addcc4de89822c74
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673560"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72394628"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Docker 애플리케이션의 상태 및 데이터
 
@@ -47,7 +47,7 @@ Docker 컨테이너에서:
 
 그림 4-5와 같이 일반 Docker 볼륨은 호스트 서버 또는 VM의 물리적 장벽 내부가 아닌 컨테이너 외부에 저장될 수 있습니다. 그러나 Docker 컨테이너는 호스트 서버 또는 VM 간의 볼륨에 액세스할 수 없습니다. 즉, 이러한 볼륨을 사용하면 여러 Docker 호스트에서 실행되는 컨테이너 간에 공유되는 데이터를 관리할 수 없지만 원격 호스트를 지원하는 볼륨 드라이버를 사용하여 수행할 수 있습니다.
 
-![볼륨을 컨테이너 간에 공유할 수 있지만 원격 호스트를 지원하는 원격 드라이버를 사용하지 않는 한 동일한 호스트에서만 공유할 수 있습니다. ](./media/image5.png)
+![컨테이너 외부에 저장된 Docker 볼륨을 보여 주는 다이어그램](./media/state-and-data-in-docker-applications/container-based-application-external-data-sources.png)
 
 **그림 4-5** 컨테이너 기반 애플리케이션에 대한 볼륨 및 외부 데이터 원본
 
@@ -61,7 +61,7 @@ Docker 컨테이너에서:
 
 - 파일 스토리지는 표준 SMB 프로토콜을 사용하여 레거시 애플리케이션을 위한 공유 스토리지를 제공합니다. Azure 가상 머신 및 클라우드 서비스는 탑재된 공유를 통해 애플리케이션 구성 요소 간에 파일 데이터를 공유할 수 있습니다. 온-프레미스 애플리케이션은 파일 서비스 REST API를 통해 공유 파일 데이터에 액세스할 수 있습니다.
 
-- Table Storage는 구조화된 데이터 세트을 저장합니다. 테이블 스토리지는 NoSQL 키 특성 데이터 저장소입니다. 이를 통해 많은 양의 데이터를 신속하게 개발하고 빠르게 액세스할 수 있습니다.
+- 테이블 스토리지는 구조화된 데이터 세트를 저장합니다. 테이블 스토리지는 NoSQL 키 특성 데이터 저장소입니다. 이를 통해 많은 양의 데이터를 신속하게 개발하고 빠르게 액세스할 수 있습니다.
 
 **관계형 데이터베이스 및 NoSQL 데이터베이스** SQL Server, PostgreSQL, Oracle과 같은 관계형 데이터베이스 또는 Azure Cosmos DB, MongoDB와 같은 NoSQL 데이터베이스 등 다양한 외부 데이터베이스가 있습니다. 이러한 데이터베이스는 그 토픽이 완전히 다르므로 이 가이드에서 설명하지 않습니다.
 

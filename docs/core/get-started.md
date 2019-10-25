@@ -4,12 +4,12 @@ description: Windows, Linux 및 macOS에서 .NET Core 애플리케이션을 빌�
 author: thraka
 ms.author: adegeo
 ms.date: 09/19/2019
-ms.openlocfilehash: 7dc134696e7dacf531fa6c7f4d84b63eb785ef25
-ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
+ms.openlocfilehash: 9dbc3ebc8d43fe2570a90f4e10fd155a5b114351
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71151511"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72521631"
 ---
 # <a name="get-started-with-net-core"></a>.NET Core 시작
 
@@ -44,19 +44,13 @@ Hello World!
 
 # <a name="windowstabwindows"></a>[Windows](#tab/windows)
 
-* [Visual Studio 2017에서 .NET Core를 사용하여 C# “Hello World” 애플리케이션 빌드.](./tutorials/with-visual-studio.md)
-
-* [Visual Studio 2017에서 .NET Core를 사용하여 C# 클래스 라이브러리 빌드.](./tutorials/library-with-visual-studio.md)
-
-* [Visual Studio 2017에서 .NET Core를 사용하여 Visual Basic “Hello World” 애플리케이션 빌드.](./tutorials/vb-with-visual-studio.md)
-
-* [Visual Studio 2017에서 Visual Basic 및 .NET Core로 클래스 라이브러리 빌드.](./tutorials/vb-library-with-visual-studio.md)  
-
-* [Visual Studio Code 및 .NET Core를 설치 및 사용하는 방법](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core/)에 관한 비디오 시청.
-
-* [Visual Studio 2017 및 .NET Core를 설치 및 사용하는 방법](https://channel9.msdn.com/Blogs/dotnet/Get-Started-NET-Core-Visual-Studio-2017/)에 관한 비디오 시청.
-
-* [명령줄을 사용하여 .NET Core 시작.](tutorials/using-with-xplat-cli.md)
+- [Visual Studio 2017에서 .NET Core를 사용하여 C# “Hello World” 애플리케이션 빌드.](./tutorials/with-visual-studio.md)
+- [Visual Studio 2017에서 .NET Core를 사용하여 C# 클래스 라이브러리 빌드.](./tutorials/library-with-visual-studio.md)
+- [Visual Studio 2017에서 .NET Core를 사용하여 Visual Basic “Hello World” 애플리케이션 빌드.](./tutorials/vb-with-visual-studio.md)
+- [Visual Studio 2017에서 Visual Basic 및 .NET Core로 클래스 라이브러리 빌드.](./tutorials/vb-library-with-visual-studio.md)  
+- [Visual Studio Code 및 .NET Core를 설치 및 사용하는 방법](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core/)에 관한 비디오 시청.
+- [Visual Studio 2017 및 .NET Core를 설치 및 사용하는 방법](https://channel9.msdn.com/Blogs/dotnet/Get-Started-NET-Core-Visual-Studio-2017/)에 관한 비디오 시청.
+- [명령줄을 사용하여 .NET Core 시작.](tutorials/using-with-xplat-cli.md)
 
 지원되는 Windows 버전 목록은 [Windows 개발을 위한 필수 조건](windows-prerequisites.md) 문서를 참조하세요.
 
@@ -64,9 +58,8 @@ Hello World!
 
 다음 단계별 자습서에 따라 .NET Core 애플리케이션 개발을 시작할 수 있습니다.
 
-* [명령줄을 사용하여 .NET Core 시작.](tutorials/using-with-xplat-cli.md)
-
-* [Ubuntu에서 C# 및 .NET Core를 사용하여 Visual Studio Code 시작](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu)에 관한 비디오 시청.
+- [명령줄을 사용하여 .NET Core 시작.](tutorials/using-with-xplat-cli.md)
+- [Ubuntu에서 C# 및 .NET Core를 사용하여 Visual Studio Code 시작](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu)에 관한 비디오 시청.
 
 지원되는 Linux 배포판 및 버전 목록은 [Linux 개발을 위한 필수 조건](linux-prerequisites.md) 문서를 참조하세요.
 
@@ -74,15 +67,11 @@ Hello World!
 
 다음 단계별 자습서에 따라 .NET Core 애플리케이션 개발을 시작할 수 있습니다.
 
-* [macOS에서 C# 및 .NET Core를 사용하여 Visual Studio Code 시작](https://channel9.msdn.com/Blogs/dotnet/Get-started-VSCode-NET-Core-Mac)에 관한 비디오 시청.
-
-* [Visual Studio Code를 사용하여 macOS에서 .NET Core 시작.](tutorials/using-on-macos.md)
-
-* [명령줄을 사용하여 .NET Core 시작.](tutorials/using-with-xplat-cli.md)
-
-* [Mac용 Visual Studio를 사용하여 macOS에서 .NET Core 시작.](tutorials/using-on-mac-vs.md)
-
-* [Mac용 Visual Studio를 사용하여 macOS에서 완전한 .NET Core 솔루션 빌드.](tutorials/using-on-mac-vs-full-solution.md)
+- [macOS에서 C# 및 .NET Core를 사용하여 Visual Studio Code 시작](https://channel9.msdn.com/Blogs/dotnet/Get-started-VSCode-NET-Core-Mac)에 관한 비디오 시청.
+- [Visual Studio Code를 사용하여 macOS에서 .NET Core 시작.](tutorials/using-on-macos.md)
+- [명령줄을 사용하여 .NET Core 시작.](tutorials/using-with-xplat-cli.md)
+- [Mac용 Visual Studio를 사용하여 macOS에서 .NET Core 시작.](tutorials/using-on-mac-vs.md)
+- [Mac용 Visual Studio를 사용하여 macOS에서 완전한 .NET Core 솔루션 빌드.](tutorials/using-on-mac-vs-full-solution.md)
 
 지원되는 OS X/macOS 버전 목록은 [macOS 개발을 위한 필수 구성 요소](macos-prerequisites.md) 항목을 참조하세요.
 

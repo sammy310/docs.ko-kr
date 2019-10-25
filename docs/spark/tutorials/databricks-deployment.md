@@ -4,12 +4,12 @@ description: Databricks에 .NET for Apache Spark 애플리케이션을 배포하
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 035a3c36337413153ee0370aec154d48b84a4711
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: 55fa9b42e04a540deb245887d601e6cce0e6e623
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71957244"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72583516"
 ---
 # <a name="deploy-a-net-for-apache-spark-application-to-databricks"></a>Databricks에 .NET for Apache Spark 애플리케이션 배포
 
@@ -19,17 +19,17 @@ ms.locfileid: "71957244"
 
 > [!div class="checklist"]
 >
-> - Microsoft.Spark.Worker 준비
-> - Spark .NET 앱 게시
-> - Databricks에 앱 배포
-> - 앱 실행
+> * Microsoft.Spark.Worker 준비
+> * Spark .NET 앱 게시
+> * Databricks에 앱 배포
+> * 앱 실행
 
 ## <a name="prerequisites"></a>전제 조건
 
 시작하기 전에 다음을 수행합니다.
 
-- [Databricks CLI](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html)를 다운로드합니다.
-- [install-worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh)를 로컬 머신에 다운로드합니다. 이 도우미 스크립트는 나중에 .NET for Apache Spark 종속 파일을 Spark 클러스터의 작업자 노드에 복사하는 데 사용합니다.
+* [Databricks CLI](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html)를 다운로드합니다.
+* [install-worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh)를 로컬 머신에 다운로드합니다. 이 도우미 스크립트는 나중에 .NET for Apache Spark 종속 파일을 Spark 클러스터의 작업자 노드에 복사하는 데 사용합니다.
 
 ## <a name="prepare-worker-dependencies"></a>작업자 종속성 준비
 
@@ -63,15 +63,15 @@ ms.locfileid: "71957244"
 
 4. 클러스터가 액세스할 수 있는 분산 파일 시스템(예: DBFS)에 다음을 업로드합니다.
 
-   - `microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar`: 이 jar은 [Microsoft.Spark](https://www.nuget.org/packages/Microsoft.Spark/) NuGet 패키지의 일부로 포함되며 앱의 빌드 출력 디렉터리에 공동 배치됩니다.
-   - `<your app>.zip`
-   - 각 실행기의 작업 디렉터리에 배치할 파일(예: 모든 작업자에 액세스할 수 있는 공통 데이터 또는 종속성 파일) 또는 어셈블리(예: 앱에서 사용하는 사용자 정의 함수 또는 라이브러리가 포함된 DLL).
+   * `microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar`: 이 jar은 [Microsoft.Spark](https://www.nuget.org/packages/Microsoft.Spark/) NuGet 패키지의 일부로 포함되며 앱의 빌드 출력 디렉터리에 공동 배치됩니다.
+   * `<your app>.zip`
+   * 각 실행기의 작업 디렉터리에 배치할 파일(예: 모든 작업자에 액세스할 수 있는 공통 데이터 또는 종속성 파일) 또는 어셈블리(예: 앱에서 사용하는 사용자 정의 함수 또는 라이브러리가 포함된 DLL).
 
 ## <a name="deploy-to-databricks"></a>Databricks에 배포
 
 [Databricks](https://databricks.com)는 Apache Spark를 사용하여 클라우드 기반 빅 데이터 처리를 제공하는 플랫폼입니다.
 
-> [!Note] 
+> [!NOTE]
 > [Azure Databricks](https://azure.microsoft.com/services/databricks/) 및 [AWS Databricks](https://databricks.com/aws)는 Linux 기반입니다. 따라서 Databricks에 앱을 배포하려면 앱이 .NET Standard와 호환되며 [.NET Core 컴파일러](https://dotnet.microsoft.com/download)를 사용하여 앱을 컴파일하는지 확인합니다.
 
 Databricks를 사용하면 .NET for Apache Spark 앱을 기존 활성 클러스터에 제출하거나 작업을 시작할 때마다 새 클러스터를 만들 수 있습니다. 이 작업을 수행하려면 .NET for Apache Spark 앱을 제출하기 전에 **Microsoft.Spark.Worker**를 설치해야 합니다.
@@ -103,7 +103,7 @@ Databricks를 사용하면 .NET for Apache Spark 앱을 기존 활성 클러스�
 
    ![스크립트 동작 이미지](./media/databricks-deployment/deployment-databricks-init-script.png)
 
-## <a name="run-your-app"></a>앱 실행 
+## <a name="run-your-app"></a>앱 실행
 
 `set JAR` 또는 `spark-submit`을 사용하여 작업을 Databricks에 제출할 수 있습니다.
 
@@ -122,7 +122,7 @@ Databricks를 사용하면 .NET for Apache Spark 앱을 기존 활성 클러스�
    | 매개 변수   | 값                                                |
    |-------------|------------------------------------------------------|
    | 기본 클래스  | org.apache.spark.deploy.dotnet.DotnetRunner          |
-   | 인수   | /dbfs/apps/<your-app-name>.zip <your-app-main-class> |
+   | 인수   | /dbfs/apps/\<your-app-name>.zip \<your-app-main-class> |
 
 4. 이전 섹션에서 **Init 스크립트**를 만든 기존 클러스터를 가리키도록 **클러스터**를 구성합니다.
 
@@ -130,28 +130,28 @@ Databricks를 사용하면 .NET for Apache Spark 앱을 기존 활성 클러스�
 
 1. [Databricks CLI](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html)를 사용하여 Databricks 클러스터에 애플리케이션을 업로드합니다.
 
-      ```bash
-      cd <path-to-your-app-publish-directory>
-      databricks fs cp <your-app-name>.zip dbfs:/apps/<your-app-name>.zip
-      ```
+    ```bash
+    cd <path-to-your-app-publish-directory>
+    databricks fs cp <your-app-name>.zip dbfs:/apps/<your-app-name>.zip
+    ```
 
 2. 이 단계는 앱 어셈블리(예: 종속성과 함께 사용자 정의 함수를 포함하는 DLL)를 각 **Microsoft.Spark.Worker**의 작업 디렉터리에 배치해야 하는 경우에만 필요합니다.
 
-   - Databricks 클러스터에 애플리케이션 어셈블리 업로드
-      
+   * Databricks 클러스터에 애플리케이션 어셈블리 업로드
+
       ```bash
       cd <path-to-your-app-publish-directory>
       databricks fs cp <assembly>.dll dbfs:/apps/dependencies
       ```
 
-   - [db-init.sh](https://github.com/dotnet/spark/blob/master/deployment/db-init.sh)에서 앱 종속성 섹션의 주석 처리를 제거한 후 앱 종속성 경로를 가리키고 Databricks 클러스터에 업로드하도록 해당 섹션을 수정합니다.
-   
+   * [db-init.sh](https://github.com/dotnet/spark/blob/master/deployment/db-init.sh)에서 앱 종속성 섹션의 주석 처리를 제거한 후 앱 종속성 경로를 가리키고 Databricks 클러스터에 업로드하도록 해당 섹션을 수정합니다.
+
       ```bash
       cd <path-to-db-init-and-install-worker>
       databricks fs cp db-init.sh dbfs:/spark-dotnet/db-init.sh
       ```
-   
-   - 클러스터를 다시 시작합니다.
+
+   * 클러스터를 다시 시작합니다.
 
 3. Databricks 작업 영역에서 Databricks 클러스터로 이동합니다. **작업**에서 작업을 선택한 후 **지금 실행**을 선택하여 작업을 실행합니다.
 
@@ -163,9 +163,9 @@ Databricks를 사용하면 .NET for Apache Spark 앱을 기존 활성 클러스�
 
 2. 다음 매개 변수를 사용하여 `spark-submit`을 구성합니다.
 
-      ```bash
-      ["--files","/dbfs/<path-to>/<app assembly/file to deploy to worker>","--class","org.apache.spark.deploy.dotnet.DotnetRunner","/dbfs/<path-to>/microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar","/dbfs/<path-to>/<app name>.zip","<app bin name>","app arg1","app arg2"]
-      ```
+    ```bash
+    ["--files","/dbfs/<path-to>/<app assembly/file to deploy to worker>","--class","org.apache.spark.deploy.dotnet.DotnetRunner","/dbfs/<path-to>/microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar","/dbfs/<path-to>/<app name>.zip","<app bin name>","app arg1","app arg2"]
+    ```
 
 3. Databricks 작업 영역에서 Databricks 클러스터로 이동합니다. **작업**에서 작업을 선택한 후 **지금 실행**을 선택하여 작업을 실행합니다.
 

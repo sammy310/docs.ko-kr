@@ -2,12 +2,12 @@
 title: .NET Core용 csproj 형식에 대한 추가 사항
 description: 기존 및 .NET Core csproj 파일 간의 차이점에 대해 알아보기
 ms.date: 04/08/2019
-ms.openlocfilehash: 2ec1aaff88754848d844a56b1744beb2efa4cd89
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: d7fca40caaeb83152b8ae5260bf918981362d2c3
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291240"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522793"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core용 csproj 형식에 대한 추가 사항
 
@@ -33,11 +33,11 @@ ms.locfileid: "72291240"
 
 `Microsoft.NETCore.App` 또는 `NETStandard.Library` 메타패키지가 암시적으로 참조되기 때문에 권장되는 모범 사례는 다음과 같습니다.
 
-* .NET Core 또는 .NET Standard를 대상으로 하는 경우 절대로 프로젝트 파일의 `<PackageReference>` 항목을 통해 `Microsoft.NETCore.App` 또는 `NETStandard.Library` 메타패키지를 명시적으로 참조하지 않습니다.
-* .NET Core를 대상으로 할 때 특정 버전의 런타임이 필요한 경우 메타패키지를 참조하는 대신 프로젝트의 `<RuntimeFrameworkVersion>` 속성(예: `1.0.4`)을 사용해야 합니다.
-  * 예를 들어 [자체 포함 배포](../deploying/index.md#self-contained-deployments-scd)를 사용하고, 1.0.0 LTS 런타임이라는 특정 패치 버전이 필요한 경우 이런 일이 발생할 수 있습니다.
-* .NET Standard를 대상으로 할 때 특정 버전의 `NETStandard.Library` 메타패키지가 필요한 경우 `<NetStandardImplicitPackageVersion>` 속성을 사용하고 필요한 버전을 설정할 수 있습니다.
-* .NET Framework 프로젝트의 `Microsoft.NETCore.App` 또는 `NETStandard.Library` 메타패키지에 참조를 명시적으로 추가하거나 업데이트하지 마십시오. .NET Standard 기반 NuGet 패키지를 사용할 때 모든 버전의 `NETStandard.Library`가 필요한 경우 NuGet은 자동으로 해당 버전을 설치합니다.
+- .NET Core 또는 .NET Standard를 대상으로 하는 경우 절대로 프로젝트 파일의 `<PackageReference>` 항목을 통해 `Microsoft.NETCore.App` 또는 `NETStandard.Library` 메타패키지를 명시적으로 참조하지 않습니다.
+- .NET Core를 대상으로 할 때 특정 버전의 런타임이 필요한 경우 메타패키지를 참조하는 대신 프로젝트의 `<RuntimeFrameworkVersion>` 속성(예: `1.0.4`)을 사용해야 합니다.
+  - 예를 들어 [자체 포함 배포](../deploying/index.md#self-contained-deployments-scd)를 사용하고, 1.0.0 LTS 런타임이라는 특정 패치 버전이 필요한 경우 이런 일이 발생할 수 있습니다.
+- .NET Standard를 대상으로 할 때 특정 버전의 `NETStandard.Library` 메타패키지가 필요한 경우 `<NetStandardImplicitPackageVersion>` 속성을 사용하고 필요한 버전을 설정할 수 있습니다.
+- .NET Framework 프로젝트의 `Microsoft.NETCore.App` 또는 `NETStandard.Library` 메타패키지에 참조를 명시적으로 추가하거나 업데이트하지 마십시오. .NET Standard 기반 NuGet 패키지를 사용할 때 모든 버전의 `NETStandard.Library`가 필요한 경우 NuGet은 자동으로 해당 버전을 설치합니다.
 
 ## <a name="implicit-version-for-some-package-references"></a>일부 패키지 참조의 암시적 버전
 
@@ -59,8 +59,8 @@ ASP.NET Core 메타패키지에 대한 이 참조의 동작은 대부분의 일�
 
 버전이 지정되면 프레임워크 종속 배포의 경우 ASP.NET Core 공유 프레임워크의 최소 버전으로 처리되고, 자체 포함 배포의 경우 정확한 버전으로 처리됩니다.    다음과 같은 결과가 나타날 수 있습니다.
 
-* 서버에 설치된 ASP.NET Core 버전이 PackageReference에 지정된 버전보다 낮으면 .NET Core 프로세스가 시작되지 않습니다. Azure와 같은 호스팅 환경에서 업데이트를 제공되기 전에 일반적으로 NuGet.org에서 메타패키지 업데이트를 사용할 수 있습니다. ASP.NET Core에 대한 PackageReference에서 버전을 업데이트하면 배포된 애플리케이션이 실패할 수 있습니다.
-* 애플리케이션이 [자체 포함 배포](../deploying/index.md#self-contained-deployments-scd)로 배포되면 애플리케이션에는 .NET Core에 대한 최신 보안 업데이트가 포함되지 않을 수 있습니다. 버전이 지정되지 않으면 SDK는 자체 포함 배포에 최신 버전의 ASP.NET Core를 자동으로 포함할 수 있습니다.
+- 서버에 설치된 ASP.NET Core 버전이 PackageReference에 지정된 버전보다 낮으면 .NET Core 프로세스가 시작되지 않습니다. Azure와 같은 호스팅 환경에서 업데이트를 제공되기 전에 일반적으로 NuGet.org에서 메타패키지 업데이트를 사용할 수 있습니다. ASP.NET Core에 대한 PackageReference에서 버전을 업데이트하면 배포된 애플리케이션이 실패할 수 있습니다.
+- 애플리케이션이 [자체 포함 배포](../deploying/index.md#self-contained-deployments-scd)로 배포되면 애플리케이션에는 .NET Core에 대한 최신 보안 업데이트가 포함되지 않을 수 있습니다. 버전이 지정되지 않으면 SDK는 자체 포함 배포에 최신 버전의 ASP.NET Core를 자동으로 포함할 수 있습니다.
 
 ## <a name="default-compilation-includes-in-net-core-projects"></a>.NET Core 프로젝트의 기본 컴파일 포함 사항
 
@@ -160,19 +160,20 @@ ASP.NET Core 메타패키지에 대한 이 참조의 동작은 대부분의 일�
 
 이러한 특성은 다음 항목 중 하나 이상을 포함할 수 있습니다. 둘 이상을 포함하는 경우 세미콜론 `;` 문자로 구분합니다.
 
-* `Compile` - lib 폴더의 콘텐츠를 컴파일에 사용할 수 있습니다.
-* `Runtime` - 런타임 폴더의 콘텐츠가 분산됩니다.
-* `ContentFiles` - *contentfiles* 폴더의 콘텐츠가 사용됩니다.
-* `Build` - 빌드 폴더의 속성/대상이 사용됩니다.
-* `Native` - 런타임에 네이티브 자산의 콘텐츠가 출력 폴더에 복사됩니다.
-* `Analyzers` – 분석기가 사용됩니다.
+- `Compile` - *lib* 폴더의 콘텐츠를 컴파일에 사용할 수 있습니다.
+- `Runtime` - *런타임* 폴더의 콘텐츠가 분산됩니다.
+- `ContentFiles` - *contentfiles* 폴더의 콘텐츠가 사용됩니다.
+- `Build` - *빌드* 폴더의 속성/대상이 사용됩니다.
+- `Native` - 런타임에 네이티브 자산의 콘텐츠가 *출력* 폴더에 복사됩니다.
+- `Analyzers` – 분석기가 사용됩니다.
 
 또는 다음 특성이 포함될 수 있습니다.
 
-* `None` – 자산이 사용되지 않습니다.
-* `All` – 모든 자산이 사용됩니다.
+- `None` – 자산이 사용되지 않습니다.
+- `All` – 모든 자산이 사용됩니다.
 
 ### <a name="dotnetclitoolreference"></a>DotNetCliToolReference
+
 `<DotNetCliToolReference>` 항목 요소는 사용자가 프로젝트의 컨텍스트에서 복원할 CLI 도구를 지정합니다. 이 요소는 *project.json*의 `tools` 노드를 대체합니다.
 
 ```xml
@@ -416,11 +417,11 @@ key=value 쌍의 세미콜론으로 구분된 목록입니다.
 
 메모:
 
-* `AssemblyVersion` 및 `FileVersion` 기본값은 접미사 없이 `$(Version)` 값을 사용하는 것입니다. 예를 들어 `$(Version)`가 `1.2.3-beta.4`인 경우 값은 `1.2.3`입니다.
-* `InformationalVersion`은 기본적으로 `$(Version)` 값으로 설정됩니다.
-* 속성이 있는 경우 `InformationalVersion`에 `$(SourceRevisionId)`가 추가됩니다. `IncludeSourceRevisionInInformationalVersion`을 사용하여 사용하지 않도록 설정할 수 있습니다.
-* `Copyright` 및 `Description` 속성도 NuGet 메타데이터에 사용됩니다.
-* `Configuration`은 모든 빌드 프로세스와 공유되고 `dotnet` 명령의 `--configuration` 매개 변수를 통해 설정됩니다.
+- `AssemblyVersion` 및 `FileVersion` 기본값은 접미사 없이 `$(Version)` 값을 사용하는 것입니다. 예를 들어 `$(Version)`가 `1.2.3-beta.4`인 경우 값은 `1.2.3`입니다.
+- `InformationalVersion`은 기본적으로 `$(Version)` 값으로 설정됩니다.
+- 속성이 있는 경우 `InformationalVersion`에 `$(SourceRevisionId)`가 추가됩니다. `IncludeSourceRevisionInInformationalVersion`을 사용하여 사용하지 않도록 설정할 수 있습니다.
+- `Copyright` 및 `Description` 속성도 NuGet 메타데이터에 사용됩니다.
+- `Configuration`은 모든 빌드 프로세스와 공유되고 `dotnet` 명령의 `--configuration` 매개 변수를 통해 설정됩니다.
 
 ### <a name="generateassemblyinfo"></a>GenerateAssemblyInfo
 

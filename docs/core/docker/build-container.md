@@ -4,12 +4,12 @@ description: 이 자습서에서는 Docker를 사용하여 .NET Core 애플리�
 ms.date: 06/26/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 5e05fd2a38770ce348fbbfcfaa88267217b806bf
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: b344731c7d356f3705d9909b6901234f91ec7d6d
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71116554"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72521879"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>자습서: .NET Core 앱 컨테이너화
 
@@ -19,10 +19,10 @@ ms.locfileid: "71116554"
 
 > [!div class="checklist"]
 >
-> * 간단한 .NET Core 앱 만들기 및 게시
-> * .NET Core용 Dockerfile 만들기 및 구성
-> * Docker 이미지 빌드
-> * Docker 컨테이너 만들기 및 실행
+> - 간단한 .NET Core 앱 만들기 및 게시
+> - .NET Core용 Dockerfile 만들기 및 구성
+> - Docker 이미지 빌드
+> - Docker 컨테이너 만들기 및 실행
 
 .NET Core 애플리케이션용 Docker 컨테이너 빌드 및 배포 작업을 알아봅니다. Docker 플랫폼은 Docker 엔진을 사용하여 Docker 이미지로 앱을 신속하게 빌드하고 패키지합니다.    이 이미지는 계층화된 컨테이너에서 배포되고 실행되도록 *Dockerfile* 형식으로 작성됩니다.
 
@@ -30,16 +30,16 @@ ms.locfileid: "71116554"
 
 다음 필수 구성 요소를 설치합니다.
 
-* [.NET Core 2.2 SDK](https://dotnet.microsoft.com/download)\
+- [.NET Core 2.2 SDK](https://dotnet.microsoft.com/download)\
 .NET Core가 설치되어 있는 경우 `dotnet --info` 명령을 사용하여 사용 중인 SDK를 확인합니다.
 
-* [Docker Community Edition](https://www.docker.com/products/docker-desktop)
+- [Docker Community Edition](https://www.docker.com/products/docker-desktop)
 
-* *Dockerfile* 및 .NET Core 예제 앱의 임시 작업 폴더입니다. 이 자습서에서는 이름 `docker-working`이 작업 폴더로 사용됩니다.
+- *Dockerfile* 및 .NET Core 예제 앱의 임시 작업 폴더입니다. 이 자습서에서는 이름 `docker-working`이 작업 폴더로 사용됩니다.
 
 ### <a name="use-sdk-version-22"></a>SDK 버전 2.2 사용
 
-3\.0 같은 최신 SDK를 사용하는 경우 앱에서 2.2 SDK를 사용해야 하는지 확인합니다. 작업 폴더에 `global.json`이라는 파일을 만들고 다음 json 코드를 붙여넣습니다.
+3\.0 같은 최신 SDK를 사용하는 경우 앱에서 2.2 SDK를 사용해야 하는지 확인합니다. 작업 폴더에 *global.json*이라는 파일을 만들고 다음 JSON 코드를 붙여넣습니다.
 
 ```json
 {
@@ -53,7 +53,7 @@ ms.locfileid: "71116554"
 
 ## <a name="create-net-core-app"></a>.NET Core 앱 만들기
 
-Docker 컨테이너가 실행되는 .NET Core 앱이 필요합니다. 아직 없는 경우, 터미널을 열고 작업 폴더를 만든 후 입력합니다. 작업 폴더에서 다음 명령을 실행하여 app이라는 하위 디렉터리에서 새 프로젝트를 만듭니다.
+Docker 컨테이너가 실행되는 .NET Core 앱이 필요합니다. 아직 없는 경우, 터미널을 열고 작업 폴더를 만든 후 입력합니다. 작업 폴더에서 다음 명령을 실행하여 *app*이라는 하위 디렉터리에서 새 프로젝트를 만듭니다.
 
 ```dotnetcli
 dotnet new console -o app -n myapp
@@ -83,7 +83,7 @@ docker-working
 Hello World!
 ```
 
-기본 템플릿은 터미널에 인쇄한 후 종료되는 앱을 만듭니다. 이 자습서에서는 무한 반복되는 앱을 사용합니다. 텍스트 편집기에서 **Program.cs** 파일을 엽니다. 현재는 다음 코드와 같이 표시됩니다.
+기본 템플릿은 터미널에 인쇄한 후 종료되는 앱을 만듭니다. 이 자습서에서는 무한 반복되는 앱을 사용합니다. 텍스트 편집기에서 *Program.cs* 파일을 엽니다. 현재는 다음 코드와 같이 표시됩니다.
 
 ```csharp
 using System;
@@ -113,7 +113,7 @@ namespace myapp
         {
             var counter = 0;
             var max = args.Length != 0 ? Convert.ToInt32(args[0]) : -1;
-            while(max == -1 || counter < max)
+            while (max == -1 || counter < max)
             {
                 counter++;
                 Console.WriteLine($"Counter: {counter}");
@@ -124,7 +124,7 @@ namespace myapp
 }
 ```
 
-파일을 저장하고 `dotnet run`을 사용하여 프로그램을 다시 테스트합니다. 이 앱은 무한 실행된다는 점을 명심하세요. 취소 명령 <kbd>CTRL+C</kbd>를 사용하여 앱을 중지합니다. 다음 출력이 표시됩니다.
+파일을 저장하고 `dotnet run`을 사용하여 프로그램을 다시 테스트합니다. 이 앱은 무한 실행된다는 점을 명심하세요. 취소 명령 <kbd>CTRL</kbd>+<kbd>C</kbd>를 사용하여 앱을 중지합니다. 다음 출력이 표시됩니다.
 
 ```console
 > dotnet run
@@ -144,15 +144,15 @@ Counter: 4
 
 Docker 이미지에 .NET Core 앱을 추가하기 전에 해당 앱을 게시합니다. 앱이 시작될 때 컨테이너가 게시된 버전의 앱을 실행하는지 확인하려고 합니다.
 
-작업 폴더에서 예제 소스 코드가 있는 **app** 폴더를 입력하고 다음 명령을 실행합니다.
+작업 폴더에서 예제 소스 코드가 있는 *app* 폴더를 입력하고 다음 명령을 실행합니다.
 
 ```dotnetcli
 dotnet publish -c Release
 ```
 
-이 명령은 앱을 **publish** 폴더로 컴파일합니다. 작업 폴더에서 **publish** 폴더의 경로는 `.\app\bin\Release\netcoreapp2.2\publish\`이어야 합니다.
+이 명령은 앱을 *publish* 폴더로 컴파일합니다. 작업 폴더에서 *publish* 폴더의 경로는 `.\app\bin\Release\netcoreapp2.2\publish\`이어야 합니다.
 
-publish 폴더의 디렉터리 목록을 가져오고 **myapp.dll**이 생성되었는지 확인합니다. **app** 폴더에서 다음 명령 중 하나를 실행합니다.
+publish 폴더의 디렉터리 목록을 가져오고 *myapp.dll*이 생성되었는지 확인합니다. *app* 폴더에서 다음 명령 중 하나를 실행합니다.
 
 ```console
 > dir bin\Release\netcoreapp2.2\publish
@@ -229,7 +229,7 @@ COPY app/bin/Release/netcoreapp2.2/publish/ app/
 ENTRYPOINT ["dotnet", "app/myapp.dll"]
 ```
 
-`COPY` 명령은 컴퓨터의 지정된 폴더를 컨테이너의 폴더에 복사하도록 Docker에 지시합니다. 이 예제에서 **publish** 폴더는 컨테이너의 **app** 폴더에 복사됩니다.
+`COPY` 명령은 컴퓨터의 지정된 폴더를 컨테이너의 폴더에 복사하도록 Docker에 지시합니다. 이 예제에서 *publish* 폴더는 컨테이너의 *app* 폴더에 복사됩니다.
 
 다음 명령인 `ENTRYPOINT`는 컨테이너가 실행 파일로 실행되게 컨테이너를 구성하도록 Docker에 지시합니다. 컨테이너가 시작되면 `ENTRYPOINT` 명령이 실행됩니다. 이 명령이 종료되면 컨테이너가 자동으로 중지됩니다.
 
@@ -289,7 +289,7 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 0e8f3c2ca32c        myimage             "dotnet app/myapp.dll"   7 minutes ago       Up 8 seconds           boring_matsumoto
 ```
 
-마찬가지로 `docker stop` 명령은 컨테이너를 중지합니다. 다음 예제에서는 `docker stop` 명령을 사용하여 컨테이너를 중지한 후 `docker ps` 명령을 사용하여 컨테이너가 실행 중이지 않음을 보여 줍니다.
+마찬가지로 `docker stop` 명령은 컨테이너를 중지합니다. 다음 예제에서는 `docker stop` 명령을 사용하여 컨테이너를 중지한 다음, `docker ps` 명령을 사용하여 컨테이너가 실행 중이지 않음을 보여 줍니다.
 
 ```console
 > docker stop boring_matsumoto
@@ -370,7 +370,8 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 `docker run` 명령을 사용하면 *Dockerfile*에서 `ENTRYPOINT` 명령을 수정하고 해당 컨테이너에만 해당하는 다른 작업을 실행할 수 있습니다. 예를 들어 다음 명령을 사용하여 `bash` 또는 `cmd.exe`를 실행합니다. 필요에 따라 명령을 편집합니다.
 
 #### <a name="windows"></a>Windows
-이 예제에서 `ENTRYPOINT`는 `cmd.exe`로 변경됩니다. <kbd>Ctrl+C</kbd>를 눌러 프로세스를 종료하고 컨테이너를 중지합니다.
+
+이 예제에서 `ENTRYPOINT`는 `cmd.exe`로 변경됩니다. <kbd>CTRL</kbd>+<kbd>C</kbd>를 눌러 프로세스를 종료하고 컨테이너를 중지합니다.
 
 ```console
 > docker run -it --rm --entrypoint "cmd.exe" myimage
@@ -411,13 +412,13 @@ exit
 
 Docker에는 컨테이너 및 이미지로 수행할 작업을 다루는 다른 명령이 있습니다. 이 Docker 명령은 컨테이너 관리에 필수적입니다.
 
-* [docker build](https://docs.docker.com/engine/reference/commandline/build/)
-* [docker run](https://docs.docker.com/engine/reference/commandline/run/)
-* [docker ps](https://docs.docker.com/engine/reference/commandline/ps/)
-* [docker stop](https://docs.docker.com/engine/reference/commandline/stop/)
-* [docker rm](https://docs.docker.com/engine/reference/commandline/rm/)
-* [docker rmi](https://docs.docker.com/engine/reference/commandline/rmi/)
-* [docker image](https://docs.docker.com/engine/reference/commandline/image/)
+- [docker build](https://docs.docker.com/engine/reference/commandline/build/)
+- [docker run](https://docs.docker.com/engine/reference/commandline/run/)
+- [docker ps](https://docs.docker.com/engine/reference/commandline/ps/)
+- [docker stop](https://docs.docker.com/engine/reference/commandline/stop/)
+- [docker rm](https://docs.docker.com/engine/reference/commandline/rm/)
+- [docker rmi](https://docs.docker.com/engine/reference/commandline/rmi/)
+- [docker image](https://docs.docker.com/engine/reference/commandline/image/)
 
 ## <a name="clean-up-resources"></a>리소스 정리
 
@@ -455,7 +456,7 @@ docker rmi mcr.microsoft.com/dotnet/core/runtime:2.2
 
 ## <a name="next-steps"></a>다음 단계
 
-* [ASP.NET Core 마이크로 서비스 자습서 확인 보기](https://dotnet.microsoft.com/learn/web/aspnet-microservice-tutorial/intro)
-* [컨테이너를 지원하는 Azure 서비스 검토](https://azure.microsoft.com/overview/containers/)
-* [Dockerfile 명령에 대해 읽어 보기](https://docs.docker.com/engine/reference/builder/)
-* [Visual studio용 컨테이너 도구 살펴보기](/visualstudio/containers/overview)
+- [ASP.NET Core 마이크로 서비스 자습서 확인 보기](https://dotnet.microsoft.com/learn/web/aspnet-microservice-tutorial/intro)
+- [컨테이너를 지원하는 Azure 서비스 검토](https://azure.microsoft.com/overview/containers/)
+- [Dockerfile 명령에 대해 읽어 보기](https://docs.docker.com/engine/reference/builder/)
+- [Visual studio용 컨테이너 도구 살펴보기](/visualstudio/containers/overview)

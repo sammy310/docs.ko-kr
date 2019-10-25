@@ -3,26 +3,26 @@ title: 플러그 인을 사용하여 .NET Core 애플리케이션 만들기
 description: 플러그 인을 지원하는 .NET Core 애플리케이션을 만드는 방법을 알아봅니다.
 author: jkoritzinsky
 ms.author: jekoritz
-ms.date: 01/28/2019
-ms.openlocfilehash: 54f616a7b2b20b7682963e9f5d503878bb512c90
-ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
+ms.date: 10/16/2019
+ms.openlocfilehash: 5267a56d0742d8e1cae4a81c058bc4ee05e83b4e
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72250170"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72579498"
 ---
 # <a name="create-a-net-core-application-with-plugins"></a>플러그 인을 사용하여 .NET Core 애플리케이션 만들기
 
-이 자습서에서는 다음을 수행하는 방법을 보여 줍니다.
+이 자습서에서는 플러그 인을 로드할 사용자 지정 <xref:System.Runtime.Loader.AssemblyLoadContext>를 만드는 방법을 보여 줍니다. <xref:System.Runtime.Loader.AssemblyDependencyResolver>는 플러그 인의 종속성을 확인하는 데 사용됩니다. 이 자습서에서는 플러그 인의 종속성을 호스팅 애플리케이션에서 올바르게 격리합니다. 다음을 수행하는 방법을 알아봅니다.
 
 - 플러그 인을 지원하는 프로젝트를 구성합니다.
 - 각 플러그 인을 로드하는 사용자 지정 <xref:System.Runtime.Loader.AssemblyLoadContext>를 만듭니다.
-- `System.Runtime.Loader.AssemblyDependencyResolver` 형식을 사용하여 플러그 인에 종속성을 포함할 수 있습니다.
+- <xref:System.Runtime.Loader.AssemblyDependencyResolver?displayProperty=fullName> 형식을 사용하여 플러그 인에 종속성을 포함할 수 있습니다.
 - 빌드 아티팩트를 복사하기만 하면 쉽게 배포할 수 있는 작성자 플러그 인입니다.
 
 ## <a name="prerequisites"></a>전제 조건
 
-- [.NET Core 3.0](https://dotnet.microsoft.com/download) 또는 최신 버전을 설치합니다.
+- [.NET Core 3.0 SDK](https://dotnet.microsoft.com/download) 또는 최신 버전을 설치합니다.
 
 ## <a name="create-the-application"></a>애플리케이션 만들기
 
@@ -213,7 +213,7 @@ static Assembly LoadPlugin(string relativePath)
 
 플러그 인은 각 플러그 인에서 다른 `PluginLoadContext` 인스턴스를 사용하여 문제가 발생하지 않고 다르거나 충돌하는 종속성을 포함할 수 있습니다.
 
-## <a name="create-a-simple-plugin-with-no-dependencies"></a>종속성이 없는 간단한 플러그 인 만들기
+## <a name="simple-plugin-with-no-dependencies"></a>종속성이 없는 간단한 플러그 인
 
 루트 폴더에서 다시 다음을 수행합니다.
 
@@ -256,19 +256,19 @@ static Assembly LoadPlugin(string relativePath)
 </ItemGroup>
 ```
 
-`<Private>false</Private>` 요소는 매우 중요합니다. 그러면 MSBuild에서 *PluginBase.dll*을 HelloPlugin의 출력 디렉터리에 복사하지 않도록 지시합니다. *PluginBase.dll* 어셈블리가 출력 디렉터리에 표시되는 경우 `PluginLoadContext`는 *HelloPlugin.dll* 어셈블리를 로드할 때 거기서 해당 어셈블리를 찾아 함께 로드합니다. 이 시점에서 `HelloPlugin.HelloCommand` 형식은 기본 로드 컨텍스트에 로드된 `ICommand` 인터페이스가 아닌 `HelloPlugin` 프로젝트의 출력 디렉터리에서 *PluginBase.dll*의 `ICommand` 인터페이스를 구현합니다. 런타임에서 이러한 두 가지 형식을 다른 어셈블리와 다르게 인식하므로 `AppWithPlugin.Program.CreateCommands` 메서드는 해당 명령을 찾지 못합니다. 결과적으로, 플러그 인 인터페이스를 포함하는 어셈블리에 대한 참조에 `<Private>false</Private>` 메타데이터가 필요합니다.
+`<Private>false</Private>` 요소는 중요합니다. 그러면 MSBuild에서 *PluginBase.dll*을 HelloPlugin의 출력 디렉터리에 복사하지 않도록 지시합니다. *PluginBase.dll* 어셈블리가 출력 디렉터리에 표시되는 경우 `PluginLoadContext`는 *HelloPlugin.dll* 어셈블리를 로드할 때 거기서 해당 어셈블리를 찾아 함께 로드합니다. 이 시점에서 `HelloPlugin.HelloCommand` 형식은 기본 로드 컨텍스트에 로드된 `ICommand` 인터페이스가 아닌 `HelloPlugin` 프로젝트의 출력 디렉터리에서 *PluginBase.dll*의 `ICommand` 인터페이스를 구현합니다. 런타임에서 이러한 두 가지 형식을 다른 어셈블리와 다른 형식으로 인식하므로 `AppWithPlugin.Program.CreateCommands` 메서드는 해당 명령을 찾지 못합니다. 결과적으로, 플러그 인 인터페이스를 포함하는 어셈블리에 대한 참조에 `<Private>false</Private>` 메타데이터가 필요합니다.
 
 이제 `HelloPlugin` 프로젝트가 완료되었으므로 `HelloPlugin` 플러그 인을 찾을 수 있는 위치를 인식하도록 `AppWithPlugin` 프로젝트를 업데이트해야 합니다. `// Paths to plugins to load` 주석 뒤에 `@"HelloPlugin\bin\Debug\netcoreapp3.0\HelloPlugin.dll"`을 `pluginPaths` 배열의 요소로 추가합니다.
 
-## <a name="create-a-plugin-with-library-dependencies"></a>라이브러리 종속성을 포함한 플러그 인 만들기
+## <a name="plugin-with-library-dependencies"></a>라이브러리 종속성이 있는 플러그 인
 
-모든 플러그 인은 "Hello World"보다 복잡하며, 여러 플러그 인에는 다른 라이브러리에 대한 종속성이 포함됩니다. 샘플에서 `JsonPlugin` 및 `OldJson` 플러그 인 프로젝트는 `Newtonsoft.Json`에 대한 NuGet 패키지 종속성을 포함한 플러그 인의 두 가지 예제를 보여줍니다. 프로젝트 파일 자체에는 프로젝트 참조에 대한 특수 정보가 없으며, (`pluginPaths` 배열에 플러그 인 경로를 추가하면) AppWithPlugin 앱과 동일하게 실행하는 경우에도 플러그 인은 완벽하게 실행됩니다. 그러나 이러한 프로젝트는 참조된 어셈블리를 출력 디렉터리에 복사하지 않습니다. 따라서 어셈블리는 플러그 인이 작동하도록 사용자의 머신에 표시되어야 합니다. 이 문제는 두 가지 방법으로 해결할 수 있습니다. 첫 번째 방법은 클래스 라이브러리를 게시하는 `dotnet publish` 명령을 사용하는 것입니다. 또는 플러그 인에서 `dotnet build`의 출력을 사용하려는 경우 플러그 인의 프로젝트 파일에서 `<PropertyGroup>` 태그 사이에 `<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>` 속성을 추가하면 됩니다. 예제는 `XcopyablePlugin` 플러그 인 프로젝트를 참조하세요.
+모든 플러그 인은 "Hello World"보다 복잡하며, 여러 플러그 인에는 다른 라이브러리에 대한 종속성이 포함됩니다. 샘플에서 `JsonPlugin` 및 `OldJson` 플러그 인 프로젝트는 `Newtonsoft.Json`에 대한 NuGet 패키지 종속성을 포함한 플러그 인의 두 가지 예제를 보여줍니다. 프로젝트 파일 자체에는 프로젝트 참조에 대한 특수 정보가 없으며, (`pluginPaths` 배열에 플러그 인 경로를 추가한 후) AppWithPlugin 앱과 동일하게 실행하는 경우에도 플러그 인은 완벽하게 실행됩니다. 그러나 이러한 프로젝트는 참조된 어셈블리를 출력 디렉터리에 복사하지 않습니다. 따라서 어셈블리는 플러그 인이 작동하도록 사용자의 머신에 표시되어야 합니다. 이 문제는 두 가지 방법으로 해결할 수 있습니다. 첫 번째 방법은 클래스 라이브러리를 게시하는 `dotnet publish` 명령을 사용하는 것입니다. 또는 플러그 인에서 `dotnet build`의 출력을 사용하려는 경우 플러그 인의 프로젝트 파일에서 `<PropertyGroup>` 태그 사이에 `<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>` 속성을 추가하면 됩니다. 예제는 `XcopyablePlugin` 플러그 인 프로젝트를 참조하세요.
 
-## <a name="other-plugin-examples-in-the-sample"></a>이 샘플의 다른 플러그 인 예제
+## <a name="other-examples-in-the-sample"></a>이 샘플의 기타 예제
 
 이 자습서의 전체 소스 코드는 [dotnet/samples 리포지토리](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin)에서 찾을 수 있습니다. 완료된 샘플에는 `AssemblyDependencyResolver` 동작의 몇 가지 다른 예제가 포함됩니다. 예를 들어 `AssemblyDependencyResolver` 개체는 NuGet 패키지에 포함된 지역화된 위성 어셈블리뿐만 아니라 네이티브 라이브러리를 확인할 수도 있습니다. 샘플 리포지토리의 `UVPlugin` 및 `FrenchPlugin`에서 이와 같은 시나리오를 보여 줍니다.
 
-## <a name="how-to-reference-a-plugin-interface-assembly-defined-in-a-nuget-package"></a>NuGet 패키지에 정의된 플러그 인 인터페이스 어셈블리를 참조하는 방법
+## <a name="reference-a-plugin-from-a-nuget-package"></a>NuGet 패키지에서 플러그 인 참조
 
 `A.PluginBase`라는 NuGet 패키지에 정의된 플러그 인 인터페이스가 포함된 앱 A가 있다고 가정하겠습니다. 플러그 인 프로젝트에서 패키지를 올바르게 참조하려면 어떻게 할까요? 프로젝트 참조의 경우 프로젝트 파일의 `ProjectReference` 요소에서 `<Private>false</Private>` 메타데이터를 사용하면 dll이 출력에 복사되지 않도록 방지합니다.
 

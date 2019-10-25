@@ -4,19 +4,19 @@ description: .NET Core로 이식하는 데 사용할 수 있는 도구 중 일�
 author: cartermp
 ms.author: mairaw
 ms.date: 12/07/2018
-ms.openlocfilehash: d0b74b5708f31922b72fa0e236c8bbe69ae06217
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 0478719617741946768cfe8e220a1dd402667998
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632249"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72521340"
 ---
 # <a name="tools-to-help-with-porting-to-net-core"></a>.NET Core로 이식하는 작업에 도움이 되는 도구
 
 이 문서에 나와 있는 도구가 이식할 때 유용할 수 있습니다.
 
-* [.NET Portability Analyzer](../../standard/analyzers/portability-analyzer.md)는 .NET Framework와 .NET Core 사이에 코드를 얼마나 이식 가능한지에 대한 보고서를 생성할 수 있는 도구 체인입니다.  [명령줄 도구](https://github.com/Microsoft/dotnet-apiport/releases)로 사용하는 경우 [Visual Studio 확장](https://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b)으로 사용하는 경우
-* [.NET API 분석기](../../standard/analyzers/api-analyzer.md) - 여러 플랫폼에서 C# API에 대한 잠재적 호환성 위험을 검색하고 사용되지 않는 API 호출을 탐지하는 Roslyn 분석기입니다.
+- [.NET Portability Analyzer](../../standard/analyzers/portability-analyzer.md) - .NET Framework와 .NET Core 간에 코드를 얼마나 이식 가능한지에 대한 보고서를 생성할 수 있는 도구 체인입니다.  [명령줄 도구](https://github.com/Microsoft/dotnet-apiport/releases)로 사용하는 경우 [Visual Studio 확장](https://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b)으로 사용하는 경우
+- [.NET API 분석기](../../standard/analyzers/api-analyzer.md) - 여러 플랫폼에서 C# API에 대한 잠재적 호환성 위험을 검색하고 사용되지 않는 API 호출을 탐지하는 Roslyn 분석기입니다.
 
 또한 [CsprojToVs2017](https://github.com/hvanbakel/CsprojToVs2017) 도구를 사용하여 작은 솔루션 또는 개별 프로젝트를 .NET Core 프로젝트 파일 형식으로 포팅할 수 있습니다.
 

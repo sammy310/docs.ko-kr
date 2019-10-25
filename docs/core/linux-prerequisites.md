@@ -3,20 +3,20 @@ title: Linux에서 .NET Core의 필수 구성 요소
 description: Linux 컴퓨터에서 .NET Core 애플리케이션을 개발, 배포 및 실행하기 위해 지원되는 Linux 버전 및 .NET Core 종속성입니다.
 author: leecow
 ms.author: leecow
-ms.date: 09/25/2019
-ms.openlocfilehash: 4c5d79459c9d69111ca6452d9305f0deb37212b8
-ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
+ms.date: 10/11/2019
+ms.openlocfilehash: 0e798e86fcf88a1b7a67f50c2301e10ad725fad8
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/28/2019
-ms.locfileid: "71591694"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72521494"
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>Linux에서 .NET Core의 필수 구성 요소
 
 이 문서에서는 Linux에서 .NET Core 애플리케이션을 개발하는 데 필요한 종속성을 보여 줍니다. 다음에 나오는 지원되는 Linux 배포/버전 및 종속성은 Linux에서 .NET Core 앱을 개발하기 위한 두 가지 방법에 적용됩니다.
 
-* [즐겨 찾는 편집기를 사용하는 명령줄](tutorials/using-with-xplat-cli.md)
-* [Visual Studio Code](https://code.visualstudio.com/)
+- [즐겨 찾는 편집기를 사용하는 명령줄](tutorials/using-with-xplat-cli.md)
+- [Visual Studio Code](https://code.visualstudio.com/)
 
 > [!NOTE]
 > .NET Core SDK 패키지는 프로덕션 서버/환경에서 필요하지 않습니다. .NET Core 런타임 패키지만 프로덕션 환경에 배포된 앱에 필요합니다. NET Core 런타임은 자체 포함된 배포의 일부로 앱으로 배포되지만 프레임워크 종속 배포된 앱에 대해 별도로 배포되어야 합니다. 프레임워크 종속 및 자체 포함된 배포 형식에 대한 자세한 내용은 [.NET Core 애플리케이션 배포](./deploying/index.md)를 참조하세요. 또한 특정 지침은 [자체 포함된 Linux 애플리케이션](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md)을 참조하세요.
@@ -112,41 +112,55 @@ ARM64에 .NET Core 3.0을 설치하는 방법에 대한 자세한 내용은 [Lin
 
 Ubuntu 배포에는 다음과 같은 라이브러리 설치가 필요합니다.
 
-* liblttng-ust0
-* libcurl3(14.x 및 16.x용)
-* libcurl4(18.x용)
-* libssl1.0.0
-* libkrb5-3
-* zlib1g
-* libicu52(14.x용)
-* libicu55(16.x용)
-* libicu57(17.x용)
-* libicu60(18.x용)
+- liblttng-ust0
+- libcurl3(14.x 및 16.x용)
+- libcurl4(18.x용)
+- libssl1.0.0
+- libkrb5-3
+- zlib1g
+- libicu52(14.x용)
+- libicu55(16.x용)
+- libicu57(17.x용)
+- libicu60(18.x용)
 
 .NET Core 2.1 이전 버전의 경우 다음 종속성도 필요합니다.
 
-* libunwind8
-* libuuid1
+- libunwind8
+- libuuid1
+
+*System.Drawing.Common* 어셈블리를 사용하는 .NET Core 애플리케이션의 경우 다음 종속성도 필요합니다.
+
+* libgdiplus(버전 6.0.1 이상)
+
+> [!NOTE]
+> 대부분의 Ubuntu 버전은 libgdiplus의 이전 버전을 포함합니다. 시스템에 Mono 리포지토리를 추가하여 최신 버전의 libgdiplus를 설치할 수 있습니다. 자세한 내용은 <https://www.mono-project.com/download/stable/>을 참조하세요.
 
 ### <a name="centos-and-fedora"></a>CentOS 및 Fedora
 
 CentOS 배포에는 다음과 같은 라이브러리 설치가 필요합니다.
 
-* lttng-ust
-* libcurl
-* openssl-libs
-* krb5-libs
-* libicu
-* zlib
+- lttng-ust
+- libcurl
+- openssl-libs
+- krb5-libs
+- libicu
+- zlib
 
 Fedora 사용자: openssl 버전 >= 1.1인 경우 compat-openssl10을 설치해야 합니다.
 
 .NET Core 2.1 이전 버전의 경우 다음 종속성도 필요합니다.
 
-* libunwind
-* libuuid
+- libunwind
+- libuuid
 
 종속성에 대한 자세한 내용은 [자체 포함 Linux 애플리케이션](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md)을 참조하세요.
+
+*System.Drawing.Common* 어셈블리를 사용하는 .NET Core 애플리케이션의 경우 다음 종속성도 필요합니다.
+
+* libgdiplus(버전 6.0.1 이상)
+
+> [!NOTE]
+> CentOS와 Fedora의 대부분의 버전은 libgdiplus의 이전 버전을 포함합니다. 시스템에 Mono 리포지토리를 추가하여 최신 버전의 libgdiplus를 설치할 수 있습니다. 자세한 내용은 <https://www.mono-project.com/download/stable/>을 참조하세요.
 
 ## <a name="installing-net-core-dependencies-with-the-native-installers"></a>기본 설치 관리자를 사용하여 .NET Core 종속성 설치
 
@@ -154,8 +168,8 @@ Fedora 사용자: openssl 버전 >= 1.1인 경우 compat-openssl10을 설치해�
 
 Linux에는 두 가지 패키지 선택 항목이 있습니다.
 
-* 피드 기반 패키지 관리자 사용(예: Ubuntu의 경우 apt-get, CentOS/RHEL의 경우 yum).
-* 패키지 자체 사용(DEB 또는 RPM).
+- 피드 기반 패키지 관리자 사용(예: Ubuntu의 경우 apt-get, CentOS/RHEL의 경우 yum).
+- 패키지 자체 사용(DEB 또는 RPM).
 
 ### <a name="scripting-installs-with-the-net-core-installer-script"></a>.NET Core 설치 관리자 스크립트를 사용하여 설치 스크립팅
 
@@ -173,8 +187,8 @@ Linux에는 두 가지 패키지 선택 항목이 있습니다.
 
 지원되는 Linux 배포/버전에 .NET Core 설치에 문제가 있는 경우 설치된 배포/버전에 대한 다음 항목을 참조하세요.
 
-* [.NET Core 3.0 알려진 문제](https://github.com/dotnet/core/tree/master/release-notes/3.0)
-* [.NET Core 2.2 알려진 문제](https://github.com/dotnet/core/tree/master/release-notes/2.2)
-* [.NET Core 2.1 알려진 문제](https://github.com/dotnet/core/tree/master/release-notes/2.1)
-* [.NET Core 1.1 알려진 문제](https://github.com/dotnet/core/blob/master/release-notes/1.1)
-* [.NET Core 1.0 알려진 문제](https://github.com/dotnet/core/blob/master/release-notes/1.0)
+- [.NET Core 3.0 알려진 문제](https://github.com/dotnet/core/tree/master/release-notes/3.0)
+- [.NET Core 2.2 알려진 문제](https://github.com/dotnet/core/tree/master/release-notes/2.2)
+- [.NET Core 2.1 알려진 문제](https://github.com/dotnet/core/tree/master/release-notes/2.1)
+- [.NET Core 1.1 알려진 문제](https://github.com/dotnet/core/blob/master/release-notes/1.1)
+- [.NET Core 1.0 알려진 문제](https://github.com/dotnet/core/blob/master/release-notes/1.0)

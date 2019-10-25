@@ -2,18 +2,18 @@
 title: Docker 앱을 위한 내부 루프 개발 워크플로
 description: Docker 애플리케이션 개발을 위한 "내부 루프" 워크플로에 대해 알아봅니다.
 ms.date: 02/15/2019
-ms.openlocfilehash: 565852511f3a837066d5da5cf0e3ab0a902dd7da
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: 5f534b23f5e0042e68343deb0c1e9e0ee2e64600
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71956549"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72394772"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Docker 앱을 위한 내부 루프 개발 워크플로
 
 전체 DevOps 주기를 포함하는 외부 루프 워크플로를 트리거하기 전에 각 개발자의 머신에서 앱 자체 코딩, 선호하는 언어 또는 플랫폼 사용 및 로컬로 테스트를 모두 시작합니다(그림 4-21). 그러나 모든 경우 선택하는 언어, 프레임워크 또는 플랫폼과 상관없이 공통되는 중요한 지점이 있습니다. 이 특정 워크플로에서는 항상 Docker 컨테이너를 개발 및 테스트하되, 로컬로 수행합니다.
 
-![내부 루프 개발 환경의 개념을 보여 주는 다이어그램입니다.](./media/docker-apps-inner-loop-workflow/inner-loop-development-context.png)
+![내부 루프 개발 환경의 개념을 보여 주는 다이어그램](./media/docker-apps-inner-loop-workflow/inner-loop-development-context.png)
 
 **그림 4-21**. 내부 루프 개발 컨텍스트
 
@@ -266,7 +266,7 @@ Visual Studio Code는 Node.js 및 다른 플랫폼(예: .NET Core 컨테이너)�
 또한 다음 섹션에서 설명하는 대로 Windows용 또는 Mac용 Visual Studio를 사용하는 경우 Docker의 .NET Core 또는 .NET Framework 컨테이너를 디버그할 수도 있습니다.
 
 > [!TIP]
-> Node.js Docker 컨테이너 디버깅에 대한 자세한 내용은 <https://blog.docker.com/2016/07/live-debugging-docker/> 및 <https://blogs.msdn.microsoft.com/user_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/>을 참조하세요.
+> Node.js Docker 컨테이너 디버깅에 대한 자세한 내용은 <https://blog.docker.com/2016/07/live-debugging-docker/> 및 <https://blogs.msdn.microsoft.com/user_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/> 내용을 참조하세요.
 
 >[!div class="step-by-step"]
 >[이전](docker-apps-development-environment.md)

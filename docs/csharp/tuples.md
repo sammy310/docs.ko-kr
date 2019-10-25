@@ -3,12 +3,12 @@ title: 튜플 형식 - C# 가이드
 description: C#의 명명되지 않은 튜플 형식과 명명된 튜플 형식에 대한 자세한 정보
 ms.date: 05/15/2018
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: 00330af38044b07128551b7dc74c7d831c7a5626
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 7e5df8c20dbbddbe84a56883a6d2a027f32d8ff7
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105906"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319751"
 ---
 # <a name="c-tuple-types"></a>C# 튜플 형식
 
@@ -282,6 +282,20 @@ if (("Althea", "Goodwin") == p)
 ```
 
 `Deconstruct` 메서드는 `Person` 개체 `p`를 두 개의 문자열이 포함된 튜플로 변환할 수 있지만 같음 테스트의 컨텍스트에 적용할 수 없습니다.
+
+## <a name="tuples-as-out-parameters"></a>출력 매개 변수 튜플
+
+튜플을 출력 매개 변수 *자체*로 사용할 수 있습니다. 앞서 [분해](#deconstruction) 섹션에서 언급한 모호성과 혼동하지 마세요. 메서드 호출에서 튜플의 도형만 설명해야 합니다.
+
+[!code-csharp[TuplesAsOutParameters](~/samples/snippets/csharp/tuples/program.cs#01_TupleAsOutVariable "Tuples as out parameters")]
+
+또는 [_명명되지 않은_](#named-and-unnamed-tuples) 튜플을 사용하고 해당 필드를 `Item1` 및 `Item2`로 참조할 수 있습니다.
+
+```csharp
+dict.TryGetValue(2, out (int, string) pair);
+// ...
+Console.WriteLine($"{pair.Item1}: {pair.Item2}");
+```
 
 ## <a name="conclusion"></a>결론 
 

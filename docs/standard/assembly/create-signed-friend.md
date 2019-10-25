@@ -5,12 +5,12 @@ ms.assetid: bab62063-61e6-453f-905f-77673df9534e
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 19c301c6b96e1070447401af9105fba2e0f0837f
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 3bf71adc694f3c6e072990717198b4f2003cd503
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972812"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523890"
 ---
 # <a name="how-to-create-signed-friend-assemblies"></a>방법: 서명된 friend 어셈블리 만들기
 이 예제에서는 강력한 이름을 가진 어셈블리와 함께 friend 어셈블리를 사용하는 방법을 보여 줍니다. 두 어셈블리에 모두 강력한 이름을 지정해야 합니다. 이 예제의 두 어셈블리는 모두 동일한 키를 사용하지만 두 어셈블리에 서로 다른 키를 사용할 수 있습니다.  
@@ -130,9 +130,9 @@ ms.locfileid: "70972812"
 
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
 - [.NET 어셈블리](index.md)
-- [Friend 어셈블리](friend.md)
+- [friend 어셈블리](friend.md)
 - [방법: 서명되지 않은 friend 어셈블리 만들기](create-unsigned-friend.md)
-- [/keyfile(C#)](../../csharp/language-reference/compiler-options/keyfile-compiler-option.md)
+- [-keyfile(C#)](../../csharp/language-reference/compiler-options/keyfile-compiler-option.md)
 - [-keyfile(Visual Basic)](../../visual-basic/reference/command-line-compiler/keyfile.md)
 - [Sn.exe(강력한 이름 도구)](../../framework/tools/sn-exe-strong-name-tool.md)
 - [강력한 이름의 어셈블리 만들기 및 사용](create-use-strong-named.md)

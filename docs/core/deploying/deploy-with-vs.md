@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 4e8fbfa14c241c79f8708dfc2b288eeff2899891
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: e905d48da31bb5a2e16a645620f2c4f57dda4413
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216245"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522813"
 ---
 # <a name="deploy-net-core-apps-with-visual-studio"></a>Visual Studio를 사용하여 .NET Core 앱 배포
 
@@ -194,7 +194,7 @@ Visual Studio에서 앱을 게시하려면 다음을 수행합니다.
   
 1. Visual Studio에서 애플리케이션을 게시하는 위치를 선택합니다.
 
-   단일 플랫폼에만 게시하는 경우 **폴더 선택** 텍스트 상자의 기본값을 적용합니다. 이렇게 하면 애플리케이션의 프레임워크 종속 배포를 *\<project-directory&gt;\bin\Release\netcoreapp2.1\publish\* 디렉터리에 게시합니다.
+   단일 플랫폼에만 게시하는 경우 **폴더 선택** 텍스트 상자의 기본값을 적용합니다. 이렇게 하면 애플리케이션의 프레임워크 종속 배포를 *\<project-directory>\bin\Release\netcoreapp2.1\publish* 디렉터리에 게시합니다.
 
    둘 이상의 플랫폼에 게시하는 경우 대상 플랫폼을 식별하는 문자열을 추가합니다. 예를 들어, 파일 경로에 "linux" 문자열을 추가하면 Visual Studio는 애플리케이션의 프레임워크 종속 배포를 *\<project-directory&gt;\bin\Release\netcoreapp2.1\publish\linux* 디렉터리에 게시합니다.
 

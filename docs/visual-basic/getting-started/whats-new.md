@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: d286cc811c87f2d45d5a9e6d4e8acd9c430ff346
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 64f8d536212cd379337ad437c1e15ae356890ddb
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71835256"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72581971"
 ---
 # <a name="whats-new-for-visual-basic"></a>Visual Basic의 새로운 기능
 
@@ -26,34 +26,49 @@ Visual Basic 16.0 / Visual Studio 2019 버전 16.0
 
 ## <a name="previous-versions"></a>이전 버전
 
-Visual Basic 15.8 / Visual Studio 2017 버전 15.8 새 기능에 대해서는 [Visual Basic 15.8](#visual-basic-158)을 참조하세요.
+Visual Basic 15.8 / Visual Studio 2017 Version 15.8  
+새 기능은 [Visual Basic 15.8](#visual-basic-158)을 참조하세요.
 
-Visual Basic 15.5 / Visual Studio 2017 Version 15.5 새 기능에 대해서는 [Visual Basic 15.5](#visual-basic-155)를 참조하세요.
+Visual Basic 15.5 / Visual Studio 2017 버전 15.5  
+새 기능은 [Visual Basic 15.5](#visual-basic-155)를 참조하세요.
 
-Visual Basic 15.3 / Visual Studio 2017 Version 15.3 새 기능에 대해서는 [Visual Basic 15.3](#visual-basic-153)을 참조하세요.
+Visual Basic 15.3 / Visual Studio 2017 버전 15.3  
+새 기능은 [Visual Basic 15.3](#visual-basic-153)을 참조하세요.
 
-Visual Basic 2017 / Visual Studio 2017 새 기능에 대해서는 [Visual Basic 2017](#visual-basic-2017)을 참조하세요.
+Visual Basic 2017 / Visual Studio 2017  
+새 기능은 [Visual Basic 2017](#visual-basic-2017)을 참조하세요.
 
-Visual Basic / Visual Studio 2015 새 기능에 대해서는 [Visual Basic 14](#visual-basic-14)를 참조하세요.
+Visual Basic / Visual Studio 2015  
+새 기능은 [Visual Basic 14](#visual-basic-14)를 참조하세요.
 
-Visual Basic / Visual Studio 2013 .NET 컴파일러 플랫폼(“Roslyn”)의 기술 미리 보기
+Visual Basic / Visual Studio 2013  
+.NET 컴파일러 플랫폼("Roslyn")의 기술 미리 보기
 
-Visual Basic / Visual Studio 2012 `Async` 및 `await` 키워드, 반복기, 호출자 정보 특성
+Visual Basic / Visual Studio 2012  
+`Async` 및 `await` 키워드, 반복기, 호출자 정보 특성
 
-Visual Basic, Visual Studio 2010 자동으로 구현된 속성, 컬렉션 이니셜라이저, 암시적 줄 연속, 동적, 제네릭 공변성(Covariance)/반공변성(Contravariance), 전역 네임스페이스 액세스
+Visual Basic, Visual Studio 2010  
+자동으로 구현된 속성, 컬렉션 이니셜라이저, 암시적 줄 연속, 동적, 제네릭 공변성(Covariance)/반공변성(Contravariance), 전역 네임스페이스 액세스
 
-Visual Basic / Visual Studio 2008 LINQ(통합 언어 쿼리), XML 리터럴, 지역 형식 유추, 개체 이니셜라이저, 익명 형식, 확장 메서드, 로컬 `var` 형식 유추, 람다 식, `if` 연산자, 부분 메서드(Partial Method), nullable 값 형식
+Visual Basic / Visual Studio 2008  
+LINQ(통합 언어 쿼리), XML 리터럴, 지역 형식 유추, 개체 이니셜라이저, 익명 형식, 확장 메서드, 로컬 `var` 형식 유추, 람다 식, `if` 연산자, 부분 메서드(Partial Method), nullable 값 형식
 
-Visual Basic / Visual Studio 2005 `My` 형식 및 도우미 형식(앱, 컴퓨터, 파일 시스템, 네트워크에 액세스)
+Visual Basic / Visual Studio 2005  
+`My` 형식 및 도우미 형식(앱, 컴퓨터, 파일 시스템, 네트워크에 액세스)
 
-Visual Basic / Visual Studio .NET 2003 비트 시프트 연산자, 루프 변수 선언
+Visual Basic / Visual Studio .NET 2003  
+비트 시프트 연산자, 루프 변수 선언
 
-Visual Basic / Visual Studio .NET 2002 Visual Basic .NET의 첫 번째 릴리스
+Visual Basic / Visual Studio .NET 2002  
+Visual Basic .NET의 첫 번째 릴리스
 
 ## <a name="visual-basic-160"></a>Visual Basic 16.0
-Visual Basic 16.0은 .NET Core에 더 많은 Visual Basic 런타임 기능(microsoft.visualbasic.dll)을 제공하는 데 초점을 맞추며, .NET Core에 초점을 맞춘 Visual Basic의 첫 번째 버전입니다. Visual Basic 런타임의 많은 부분은 WinForms에 종속되며, 이후 버전의 Visual Basic에 추가될 예정입니다. 
 
-**문 내의 더 많은 위치에서 주석 허용** Visual Basic 15.8 및 이전 버전에서는 빈 줄, 문의 끝 또는 암시적 줄 연속이 허용되는 문 내의 특정 위치에서만 주석이 허용됩니다. Visual Basic 16.0부터 명시적 줄 연속 뒤와 공백 다음 밑줄로 시작하는 줄의 문 내에서도 주석이 허용됩니다.
+Visual Basic 16.0은 .NET Core에 더 많은 Visual Basic 런타임 기능(microsoft.visualbasic.dll)을 제공하는 데 초점을 맞추며, .NET Core에 초점을 맞춘 Visual Basic의 첫 번째 버전입니다. Visual Basic 런타임의 많은 부분은 WinForms에 종속되며, 이후 버전의 Visual Basic에 추가될 예정입니다.
+
+**문 내의 더 많은 위치에서 주석 허용**
+
+Visual Basic 15.8 및 이전 버전에서는 빈 줄, 문의 끝 또는 암시적 줄 연속이 허용되는 문 내의 특정 위치에서만 주석이 허용됩니다. Visual Basic 16.0부터 명시적 줄 연속 뒤와 공백 다음 밑줄로 시작하는 줄의 문 내에서도 주석이 허용됩니다.
 
 ```vb
 Public Sub Main()

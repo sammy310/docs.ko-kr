@@ -2,12 +2,12 @@
 title: 높은 확장성 및 가용성을 위한 마이크로 서비스 및 다중 컨테이너 애플리케이션 오케스트레이션
 description: 실제 프로덕션 애플리케이션은 모든 컨테이너의 상태, 워크로드 및 수명 주기를 처리하는 오케스트레이터를 통해 배포하고 관리해야 합니다.
 ms.date: 02/15/2019
-ms.openlocfilehash: 8f2cef774acde47e9a1bb4680342b5e2c66ac154
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: dcc1c8686210e34df33aef024429898a098fa33d
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70990493"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395384"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>높은 확장성 및 가용성을 위한 마이크로 서비스 및 다중 컨테이너 애플리케이션 오케스트레이션
 
@@ -15,7 +15,7 @@ ms.locfileid: "70990493"
 
 그림 4-6에서는 여러 마이크로서비스(컨테이너)로 구성된 애플리케이션의 클러스터에 배포하는 방법을 보여줍니다.
 
-![클러스터로 구성된 Docker 애플리케이션: 각 서비스 인스턴스에 대해 하나의 컨테이너를 사용합니다. Docker 컨테이너는 "배포 단위"이고 컨테이너는 Docker의 인스턴스입니다. 호스트는 여러 컨테이너를 처리합니다.](./media/image6.png)
+![클러스터에서 구성된 Docker 애플리케이션을 보여 주는 다이어그램](./media/orchestrate-high-scalability-availability/composed-docker-applications-cluster.png)
 
 **그림 4-6** 컨테이너의 클러스터
 
@@ -35,12 +35,12 @@ Docker CLI(명령줄 인터페이스)는 한 호스트에서 한 컨테이너를
 
 ## <a name="software-platforms-for-container-clustering-orchestration-and-scheduling"></a>컨테이너 클러스터링, 오케스트레이션 및 예약용 소프트웨어 플랫폼
 
-| 플랫폼 | 설명 |
+| 플랫폼 | 주석 |
 |:---:|:---|
-| **Kubernetes** <br/> ![Kubernetes 로고](./media/kubernetes-logo.png) | [*Kubernetes*](https://kubernetes.io/)는 클러스터 인프라와 컨테이너 예약에서 기능 오케스트레이션에 이르기까지 다양한 기능을 제공하는 오픈 소스 제품입니다. 이를 통해 호스트 클러스터 전체에서 애플리케이션 컨테이너의 배포, 확장 및 작업을 자동화할 수 있습니다. <br/> <br/> *Kubernetes*는 쉽게 관리하고 검색할 수 있도록 애플리케이션 컨테이너를 논리 단위로 그룹화하는 컨테이너 중심 인프라를 제공합니다. <br/> <br/> *Kubernetes*의 완성도는 Linux에서 높았지만, Windows에서는 그렇지 못했습니다. |
-| **AKS(Azure Kubernetes Service)** <br/> ![Azure Kubernetes Service 로고](./media/aks-logo.png) | [AKS(Azure Kubernetes Service)](https://azure.microsoft.com/services/kubernetes-service/)는 Kubernetes 클러스터의 관리, 배포 및 운영을 간소화하는 Azure에서 관리되는 Kubernetes 컨테이너 오케스트레이션 서비스입니다. |
-| **Azure Service Fabric** <br/> ![Azure Service Fabric Logo](./media/service-fabric-logo.png) | [Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview)은 애플리케이션을 빌드하기 위한 Microsoft 마이크로 서비스 플랫폼입니다. 서비스의 [오케스트레이터](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-resource-manager-introduction)이며, 머신의 클러스터를 만듭니다. Service Fabric은 서비스를 컨테이너 또는 일반 프로세스로 배포할 수 있습니다. 또한 동일한 애플리케이션 및 클러스터 내의 컨테이너에 있는 서비스와 프로세스에 있는 서비스를 혼합할 수도 있습니다. <br/> <br/> *Service Fabric* 클러스터는 Azure, 온-프레미스 또는 모든 클라우드에 배포할 수 있습니다. 그러나 Azure에서의 배포는 관리 방식으로 간소화됩니다. <br/> <br/> *Service Fabric*은 [상태 저장 서비스](https://azure.microsoft.com/documentation/articles/service-fabric-reliable-services-introduction/) 및[ Reliable Actors](https://azure.microsoft.com/documentation/articles/service-fabric-reliable-actors-introduction/)와 같이 규범적 [Service Fabric 프로그래밍 모델](https://azure.microsoft.com/documentation/articles/service-fabric-choose-framework/)(추가 및 선택 사양)을 제공합니다. <br/> <br/> *Service Fabric*의 완성도는 Windows에서 높았지만(Windows에서 진화), Linux에서는 그렇지 못했습니다. <br/> <br/> 2017년 이후 Service Fabric에서 Linux 및 Windows 컨테이너를 모두 지원합니다. |
-| **Azure Service Fabric Mesh** <br/> ![Azure Service Fabric Mesh 로고](./media/azure-service-fabric-mesh-logo.png) | [*Azure Service Fabric Mesh*](https://docs.microsoft.com/azure/service-fabric-mesh/service-fabric-mesh-overview)는 Service Fabric과 동일한 안정성, 중요 업무용 성능 및 규모를 제공하지만, 완전 관리형 및 서버리스 플랫폼도 제공합니다. 클러스터, VM, 스토리지 또는 네트워킹 구성을 관리할 필요가 없습니다. 애플리케이션의 개발에만 주력할 수 있습니다. <br/> <br/> *Service Fabric Mesh*는 Windows 및 Linux 컨테이너를 모두 지원하므로 원하는 프로그래밍 언어와 프레임워크를 사용하여 개발할 수 있습니다.
+| **Kubernetes** <br/> ![Kubernetes로고 이미지입니다.](./media/orchestrate-high-scalability-availability/kubernetes-container-orchestration-system-logo.png) | [*Kubernetes*](https://kubernetes.io/)는 클러스터 인프라와 컨테이너 예약에서 기능 오케스트레이션에 이르기까지 다양한 기능을 제공하는 오픈 소스 제품입니다. 이를 통해 호스트 클러스터 전체에서 애플리케이션 컨테이너의 배포, 확장 및 작업을 자동화할 수 있습니다. <br/> <br/> *Kubernetes*는 쉽게 관리하고 검색할 수 있도록 애플리케이션 컨테이너를 논리 단위로 그룹화하는 컨테이너 중심 인프라를 제공합니다. <br/> <br/> *Kubernetes*의 완성도는 Linux에서 높았지만, Windows에서는 그렇지 못했습니다. |
+| **AKS(Azure Kubernetes Service)** <br/> ![Azure Kubernetes Service 로고의 이미지입니다.](./media/orchestrate-high-scalability-availability/azure-kubernetes-service-logo.png) | [AKS(Azure Kubernetes Service)](https://azure.microsoft.com/services/kubernetes-service/)는 Kubernetes 클러스터의 관리, 배포 및 운영을 간소화하는 Azure에서 관리되는 Kubernetes 컨테이너 오케스트레이션 서비스입니다. |
+| **Azure Service Fabric** <br/> ![Azure Service Fabric 로고 이미지](./media/orchestrate-high-scalability-availability/azure-service-fabric-logo.png) | [Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview)은 애플리케이션을 빌드하기 위한 Microsoft 마이크로 서비스 플랫폼입니다. 서비스의 [오케스트레이터](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-resource-manager-introduction)이며, 머신의 클러스터를 만듭니다. Service Fabric은 서비스를 컨테이너 또는 일반 프로세스로 배포할 수 있습니다. 또한 동일한 애플리케이션 및 클러스터 내의 컨테이너에 있는 서비스와 프로세스에 있는 서비스를 혼합할 수도 있습니다. <br/> <br/> *Service Fabric* 클러스터는 Azure, 온-프레미스 또는 모든 클라우드에 배포할 수 있습니다. 그러나 Azure에서의 배포는 관리 방식으로 간소화됩니다. <br/> <br/> *Service Fabric*은 [상태 저장 서비스](https://azure.microsoft.com/documentation/articles/service-fabric-reliable-services-introduction/) 및[ Reliable Actors](https://azure.microsoft.com/documentation/articles/service-fabric-reliable-actors-introduction/)와 같이 규범적 [Service Fabric 프로그래밍 모델](https://azure.microsoft.com/documentation/articles/service-fabric-choose-framework/)(추가 및 선택 사양)을 제공합니다. <br/> <br/> *Service Fabric*의 완성도는 Windows에서 높았지만(Windows에서 진화), Linux에서는 그렇지 못했습니다. <br/> <br/> 2017년 이후 Service Fabric에서 Linux 및 Windows 컨테이너를 모두 지원합니다. |
+| **Azure Service Fabric Mesh** <br/> ![Azure Service Fabric Mesh 로고 이미지](./media/orchestrate-high-scalability-availability/azure-service-fabric-mesh-logo.png) | [*Azure Service Fabric Mesh*](https://docs.microsoft.com/azure/service-fabric-mesh/service-fabric-mesh-overview)는 Service Fabric과 동일한 안정성, 중요 업무용 성능 및 규모를 제공하지만, 완전 관리형 및 서버리스 플랫폼도 제공합니다. 클러스터, VM, 스토리지 또는 네트워킹 구성을 관리할 필요가 없습니다. 애플리케이션의 개발에만 주력할 수 있습니다. <br/> <br/> *Service Fabric Mesh*는 Windows 및 Linux 컨테이너를 모두 지원하므로 원하는 프로그래밍 언어와 프레임워크를 사용하여 개발할 수 있습니다.
 
 ## <a name="using-container-based-orchestrators-in-azure"></a>Azure에서 컨테이너 기반 오케스트레이터 사용
 
@@ -54,7 +54,7 @@ AKS는 컨테이너화된 애플리케이션을 실행하도록 미리 구성된
 
 Azure Kubernetes Service는 Azure용으로 특별히 인기 있는 Docker 클러스터링 오픈 소스 도구 및 기술의 구성을 최적화합니다. 컨테이너와 애플리케이션 구성 모두에 이식성을 제공하는 개방형 솔루션을 얻을 수 있습니다. 사용자가 크기, 호스트 수, 오케스트레이터 도구를 선택하고, AKS에서 다른 모든 작업을 처리합니다.
 
-![Kubernetes 클러스터 구조: DNS, 스케줄러, 프록시 등을 처리하는 하나의 마스터 노드와 컨테이너를 호스트하는 여러 작업자 노드가 있습니다.](media/image36.png)
+![Kubernetes 클러스터 구조를 보여 주는 다이어그램입니다.](./media/orchestrate-high-scalability-availability/kubernetes-cluster-simplified-structure.png)
 
 **그림 4-7**. Kubernetes 클러스터의 단순화된 구조 및 토폴로지
 
@@ -64,7 +64,7 @@ Azure Kubernetes Service는 Azure용으로 특별히 인기 있는 Docker 클러
 
 [Docker가 2018년 7월에 발표한](https://blog.docker.com/2018/07/kubernetes-is-now-available-in-docker-desktop-stable-channel/) 개발 환경에서 [Docker Desktop](https://www.docker.com/community-edition)을 설치하기만 하면 Kubernetes를 단일 개발 머신(Windows 10 또는 macOS)에서도 실행할 수 있습니다. 그림 4-8처럼 나중에 클라우드(AKS)에 배포하여 통합 테스트를 수행할 수 있습니다.
 
-![Docker는 Docker Desktop으로 Kubernetes 클러스터에 대한 개발 머신 지원을 2018년 7월에 발표했습니다.](media/kubernetes-development-environment.png)
+![AKS에 배포되는 개발 머신의 Kubernetes를 보여 주는 다이어그램](./media/orchestrate-high-scalability-availability/kubernetes-development-environment.png)
 
 **그림 4-8**. 개발 머신 및 클라우드에서 Kubernetes 실행
 
@@ -96,13 +96,13 @@ Helm 차트 및 Kubernetes에 대한 자세한 구현 정보는 [Helm 차트를 
 
 Azure Dev Spaces는 Visual Studio 2017 또는 Visual Studio Code를 사용하기만 하면 Azure의 글로벌 Kubernetes 클러스터에서 직접 반복하고 디버그할 수 있기 때문에 개발 팀이 Kubernetes에서 생산성을 높일 수 있습니다. Azure에 있는 Kubernetes 클러스터는 공유된 관리 Kubernetes 클러스터이므로, 팀은 함께 협력할 수 있습니다. 코드를 따로 개발한 다음, 글로벌 클러스터에 배포하고 종속성을 복제 또는 모의하지 않고 다른 구성 요소를 사용하여 엔드투엔드 테스트를 수행합니다.
 
-그림 4-9처럼 Azure Dev Spaces의 가장 다른 기능은 클러스터에 글로벌 배포의 나머지 부분과 통합하여 실행할 수 있는 '공간'을 만드는 기능입니다.
+그림 4-9처럼 Azure Dev Spaces의 가장 차별화되는 기능은 클러스터에 글로벌 배포의 나머지 부분과 통합하여 실행할 수 있는 '공간'을 만드는 기능입니다.
 
-![Azure Dev Spaces는 새 버전의 테스트를 쉽게 하기 위해 개발 컨테이너 인스턴스와 프로덕션 마이크로 서비스를 투명하게 혼합하여 일치시킬 수 있습니다.](media/image38.png)
+![Azure Dev Spaces에서 여러 공백을 사용하는 방법을 보여 주는 다이어그램입니다.](./media/orchestrate-high-scalability-availability/use-multiple-spaces-azure-dev.png)
 
 **그림 4-9** Azure Dev Spaces에서 여러 공간 사용
 
-기본적으로 Azure에서 공유 개발 공간을 설정할 수 있습니다. 각 개발자는 애플리케이션의 일부에만 집중할 수 있으며, 시나리오에 종속된 다른 모든 서비스와 클라우드 리소스가 이미 포함되어 있는 개발 공간에서 "사전 커밋 코드"를 반복적으로 개발할 수 있습니다. 종속성은 항상 최신 상태로 유지되며 개발자가 생산을 미러링하는 방식으로 작업합니다.
+Azure Dev Spaces는 새 버전의 테스트를 쉽게 하기 위해 개발 컨테이너 인스턴스와 프로덕션 마이크로 서비스를 투명하게 혼합하여 일치시킬 수 있습니다. 기본적으로 Azure에서 공유 개발 공간을 설정할 수 있습니다. 각 개발자는 애플리케이션의 일부에만 집중할 수 있으며, 시나리오에 종속된 다른 모든 서비스와 클라우드 리소스가 이미 포함되어 있는 개발 공간에서 "사전 커밋 코드"를 반복적으로 개발할 수 있습니다. 종속성은 항상 최신 상태로 유지되며 개발자가 생산을 미러링하는 방식으로 작업합니다.
 
 Azure Dev Spaces는 공간이라는 개념을 제공합니다. 이 공간을 사용하면 팀 구성원을 방해할 염려 없이 격리된 상태에서 작업할 수 있습니다. 이 기능은 URL 접두사를 기반으로 합니다. 컨테이너 요청의 URL에 개발 공간 접두사를 사용하면 Azure Dev Spaces는 해당 공간(있는 경우)에 대해 배포한 특별 버전의 컨테이너를 실행합니다. 그렇지 않으면 글로벌/통합 버전을 실행합니다.
 
@@ -137,11 +137,11 @@ Service Fabric은 서비스 구축하는 방법과 관련하여 제약이 없으
 
 그림 4-10처럼 Service Fabric에서 간단한 프로세스 또는 Docker 컨테이너로 마이크로서비스를 만들고 실행할 수 있습니다. 동일한 Service Fabric 클러스터 내에서 컨테이너 기반 마이크로 서비스와 프로세스 기반 마이크로 서비스를 함께 사용할 수도 있습니다.
 
-![Azure Service Fabric 클러스터 비교: 마이크로서비스에 대해 하나의 프로세스를 실행하는 프로세스입니다. 마이크로서비스는 여러 컨테이너가 있는 Docker를 실행하는 컨테이너로, 마이크로서비스당 하나의 컨테이너로 실행됩니다.](./media/azure-service-fabric-cluster-types.png)
+![Azure Service Fabric 클러스터 비교를 보여 주는 다이어그램](./media/orchestrate-high-scalability-availability/azure-service-fabric-cluster-types.png)
 
 **그림 4-10** Azure Service Fabric에서 프로세스 또는 컨테이너로 마이크로 서비스 배포
 
-Linux 및 Windows 호스트 기반 Service Fabric 클러스터는 Linux Docker 컨테이너와 Windows 컨테이너를 각각 실행할 수 있습니다.
+첫 번째 이미지에서는 마이크로 서비스가 프로세스로 표시됩니다. 여기서 각 노드는 각 마이크로 서비스에 대해 하나의 프로세스를 실행합니다. 두 번째 이미지에는 마이크로 서비스가 컨테이너로 표시됩니다. 여기서 각 노드는 마이크로 서비스당 컨테이너 하나씩 여러 컨테이너를 사용하여 Docker를 실행합니다. Linux 및 Windows 호스트 기반 Service Fabric 클러스터는 Linux Docker 컨테이너와 Windows 컨테이너를 각각 실행할 수 있습니다.
 
 Azure Service Fabric에서 컨테이너 지원에 대한 최신 정보는 [Service Fabric 및 컨테이너](https://docs.microsoft.com/azure/service-fabric/service-fabric-containers-overview)를 참조하세요.
 
@@ -149,11 +149,11 @@ Service Fabric은 물리적 구현과 다른 논리적 아키텍처(비즈니스
 
 그림 4-10처럼 논리적/비즈니스 마이크로서비스 관점에서 생각해 보면, Service Fabric 상태 저장 Reliable Service를 구현할 때 일반적으로 두 가지 서비스 계층을 구현해야 합니다. 첫 번째는 여러 개의 파티션(각 파티션은 상태 저장 서비스)을 처리하는 백 엔드 상태 저장 신뢰할 수 있는 서비스입니다. 두 번째는 다중 파티션 또는 상태 저장 서비스 인스턴스에서 라우팅 및 데이터 집계를 담당하는 프런트 엔드 서비스 또는 Gateway 서비스입니다. 또한 이 Gateway 서비스는 백 엔드 서비스에 액세스하는 재시도 루프로 클라이언트 쪽 통신을 처리합니다. 사용자 지정 서비스를 구현하거나, 기본 제공 Service Fabric [역방향 프록시](https://docs.microsoft.com/azure/service-fabric/service-fabric-reverseproxy)를 사용할 수 있는 경우 Gateway 서비스라고 합니다.
 
-![Service Fabric은 컨테이너의 여러 상태 저장 신뢰할 수 있는 서비스를 지원하는 방법이 있습니다.](./media/service-fabric-stateful-business-microservice.png)
+![컨테이너의 여러 상태 저장 서비스를 보여 주는 다이어그램](./media/orchestrate-high-scalability-availability/service-fabric-stateful-business-microservice.png)
 
 **그림 4-11** 여러 상태 저장 서비스 인스턴스 및 사용자 지정 게이트웨이 프런트 엔드가 있는 비즈니스 마이크로서비스
 
-어떤 경우에도 Service Fabric 상태 저장 Reliable Services를 사용하면 여러 물리적 서비스로 구성된 논리적 또는 비즈니스 마이크로서비스(바인딩된 컨텍스트)가 있습니다. 그림 4-11처럼 각 Gateway 서비스 및 Partition 서비스를 ASP.NET Web API 서비스로 구현할 수 있습니다.
+어떤 경우에도 Service Fabric 상태 저장 Reliable Services를 사용하면 여러 물리적 서비스로 구성된 논리적 또는 비즈니스 마이크로서비스(바인딩된 컨텍스트)가 있습니다. 그림 4-11처럼 각 Gateway 서비스 및 Partition 서비스를 ASP.NET Web API 서비스로 구현할 수 있습니다. Service Fabric은 컨테이너의 여러 상태 저장 신뢰할 수 있는 서비스를 지원하는 방법이 있습니다.
 
 Service Fabric에서는 오케스트레이터 또는 클러스터의 패키징 및 배포 단위인 [Service Fabric 애플리케이션](https://docs.microsoft.com/azure/service-fabric/service-fabric-application-model)으로 서비스 그룹을 그룹화 및 배포할 수 있습니다. 따라서 Service Fabric 애플리케이션을 이 자치 비즈니스 및 논리적 마이크로 서비스 경계 또는 바인딩된 컨텍스트에도 매핑할 수 있으므로 이러한 서비스를 자율적으로 배포할 수 있습니다.
 
@@ -161,15 +161,15 @@ Service Fabric에서는 오케스트레이터 또는 클러스터의 패키징 �
 
 Service Fabric의 컨테이너와 관련해서는 Service Fabric 클러스터 내의 컨테이너 이미지에 서비스를 배포할 수도 있습니다. 그림 4-12처럼 거의 대부분 서비스당 하나의 컨테이너만 있습니다.
 
-![Service Fabric 애플리케이션은 외부 데이터베이스에 액세스하는 여러 컨테이너를 실행할 수 있으며 전체 세트는 비즈니스 마이크로서비스의 논리적 경계가 됩니다.](./media/azure-service-fabric-business-microservice.png)
+![서비스 공급당 하나의 컨테이너를 데이터베이스에 표시하는 다이어그램](./media/orchestrate-high-scalability-availability/azure-service-fabric-business-microservice.png)
 
 **그림 4-12**. Service Fabric에 여러 서비스(컨테이너)가 있는 비즈니스 마이크로 서비스
 
-그러나 Service Fabric에서는 소위 “사이드카” 컨테이너(논리적 서비스의 일부로 함께 배포해야 하는 두 개의 컨테이너)도 가능합니다. 중요한 것은 비즈니스 마이크로 서비스가 여러 응집 요소 주위의 논리적 경계라는 것입니다. 대부분의 경우, 단일 데이터 모델을 사용하는 단일 서비스일 수 있지만 일부 다른 경우에는 여러 개의 물리적 서비스가 있을 수도 있습니다.
+Service Fabric 애플리케이션은 외부 데이터베이스에 액세스하는 여러 컨테이너를 실행할 수 있으며 전체 세트는 비즈니스 마이크로 서비스의 논리적 경계가 됩니다. 그러나 Service Fabric에서는 소위 “사이드카” 컨테이너(논리적 서비스의 일부로 함께 배포해야 하는 두 개의 컨테이너)도 가능합니다. 중요한 것은 비즈니스 마이크로 서비스가 여러 응집 요소 주위의 논리적 경계라는 것입니다. 대부분의 경우, 단일 데이터 모델을 사용하는 단일 서비스일 수 있지만 일부 다른 경우에는 여러 개의 물리적 서비스가 있을 수도 있습니다.
 
 그림 4-13처럼 동일한 Service Fabric 애플리케이션에서 컨테이너의 서비스와 프로세스의 서비스를 혼합할 수 있습니다.
 
-![Service Fabric 애플리케이션은 동일한 노드에서 서비스와 컨테이너를 모두 실행합니다.](./media/business-microservice-mapped-to-service-fabric-application.png)
+![프로세스 및 동일한 앱의 컨테이너에 있는 서비스를 보여 주는 다이어그램](./media/orchestrate-high-scalability-availability/business-microservice-mapped-to-service-fabric-application.png)
 
 **그림 4-13**. 컨테이너 및 상태 저장 서비스와 함께 Service Fabric 애플리케이션에 매핑된 비즈니스 마이크로 서비스
 
@@ -181,11 +181,11 @@ Azure Service Fabric에서 컨테이너 지원에 대한 자세한 내용은 [Se
 
 그러나 서비스 자체는 Service Fabric에서도 상태가 유지될 수 있습니다. 즉, 데이터가 마이크로 서비스 내에 있습니다. 이 데이터는 동일한 서버에 있을 뿐만 아니라 마이크로 서비스 프로세스, 메모리 내에 있으며 하드 드라이브에 보관되어 다른 노드에 복제될 수 있습니다. 그림 4-14는 다양한 방식을 보여 줍니다.
 
-![상태 비저장 서비스에서 상태(지속성, 데이터베이스)는 마이크로서비스에서 제외됩니다. 상태 저장 서비스에서 상태는 마이크로서비스 내에 유지됩니다.](./media/stateless-vs-stateful-microservices.png)
+![상태 비저장 및 상태 저장 서비스의 비교를 보여 주는 다이어그램](./media/orchestrate-high-scalability-availability/stateless-vs-stateful-microservices.png)
 
 **그림 4-14**. 상태 비저장 및 상태 저장 마이크로 서비스
 
-상태 비저장 방식은 완벽하게 유효하며 기존의 잘 알려진 패턴과 유사하기 때문에 상태 저장 마이크로 서비스보다 쉽게 구현할 수 있습니다. 그러나 상태 비저장 마이크로 서비스는 프로세스와 데이터 원본 간에 대기 시간을 둡니다. 또한 캐시 및 대기열을 추가하여 성능을 향상시키려는 경우 더욱 복잡해집니다. 결과적으로 너무 많은 계층을 가진 복잡한 아키텍처로 끝날 수 있습니다.
+상태 비저장 서비스에서 상태(지속성, 데이터베이스)는 마이크로 서비스에서 제외됩니다. 상태 저장 서비스에서 상태는 마이크로 서비스 내에 유지됩니다. 상태 비저장 방식은 완벽하게 유효하며 기존의 잘 알려진 패턴과 유사하기 때문에 상태 저장 마이크로 서비스보다 쉽게 구현할 수 있습니다. 그러나 상태 비저장 마이크로 서비스는 프로세스와 데이터 원본 간에 대기 시간을 둡니다. 또한 캐시 및 대기열을 추가하여 성능을 향상시키려는 경우 더욱 복잡해집니다. 결과적으로 너무 많은 계층을 가진 복잡한 아키텍처로 끝날 수 있습니다.
 
 반대로 [상태 저장 마이크로 서비스](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction#when-to-use-reliable-services-apis)는 도메인 논리와 데이터 간에 대기 시간이 없기 때문에 고급 시나리오에서 뛰어납니다. 대량의 데이터 처리, 게임 백 엔드, 서비스 형태의 데이터베이스 및 기타 대기 시간이 적은 시나리오는 모두 상태 저장 서비스를 활용하여 로컬 상태에서 더 빠르게 액세스할 수 있습니다.
 
@@ -203,7 +203,7 @@ Azure Service Fabric Mesh는 개발자가 인프라를 관리하지 않고 중�
 
 그림 4-15처럼 Service Fabric Mesh에 호스트되는 애플리케이션은 이를 구동하는 인프라에 대한 걱정 없이 실행 및 확장됩니다.
 
-![Docker 데스크톱에서 실행되는 다중 컨테이너 앱은 인프라에 대한 걱정 없이 Azure Service Fabric Mesh에 배포할 수 있습니다.](media/image39.png)
+![로컬 리포지토리에서 Service Fabric Mesh로의 배포를 보여 주는 다이어그램](media/orchestrate-high-scalability-availability/deploy-microservice-containers-apps-service-fabric-mesh.png)
 
 **그림 4-15**. Service Fabric Mesh에 마이크로 서비스/컨테이너 애플리케이션 배포
 
@@ -215,7 +215,7 @@ Azure Service Fabric Mesh는 개발자가 인프라를 관리하지 않고 중�
 
 다음 표는 워크로드 및 OS 포커스에 따라 사용할 오케스트레이터에 대한 지침을 제공합니다.
 
-![Azure Kubernetes Services는 Windows보다 Linux에서 더 완성도가 높으며 컨테이너를 기반으로 하는 마이크로서비스를 배포하는 데 주로 사용됩니다. Azure Service Fabric(클러스터 및 메시 모두)은 Linux보다 Windows에서 더 성숙하며, 일반적으로 컨테이너를 기반으로 하는 마이크로 서비스, 일반 프로세스 및 상태 저장 서비스에 기반한 마이크로 서비스에 사용됩니다.](media/image40.png)
+![Kubernetes와 Service Fabric을 비교하는 테이블의 이미지](media/orchestrate-high-scalability-availability/orchestrator-selection-azure-guidance.png)
 
 **그림 4-16**. Azure 지침에서 오케스트레이터 선택
 

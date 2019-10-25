@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 653da4ba-3752-4d1f-a08a-de017dc86ecc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f05f66af71b86ccaefe19c0ddce2bfe7572f1084
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d993042cbb435826b92bbcc62f1320a310a02627
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33567577"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320014"
 ---
 # <a name="net-framework-application-essentials"></a>.NET Framework 애플리케이션 주요 사항
 .NET Framework 설명서의 이 섹션은 .NET Framework의 기본 애플리케이션 개발 작업에 대한 정보를 제공합니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "33567577"
  [날짜, 시간 및 표준 시간대](../../docs/standard/datetime/index.md)  
  표준 시간대 인식 애플리케이션에서 표준 시간대 및 표준 시간대 변환 작업을 수행하는 방법을 설명합니다.  
   
- [응용 프로그램 도메인 및 어셈블리](../../docs/framework/app-domains/index.md)  
+ [애플리케이션 도메인 및 어셈블리](../../docs/framework/app-domains/index.md)  
  어셈블리 및 애플리케이션 도메인을 만들고 이에 대한 작업을 수행하는 방법을 설명합니다.  
   
  [serialization](../../docs/standard/serialization/index.md)  
@@ -52,15 +52,14 @@ ms.locfileid: "33567577"
  리소스 만들기 및 저장에 대한 .NET Framework 지원을 설명합니다. 또한 이 섹션에서는 지역화된 리소스에 대한 지원과 지역화된 리소스를 패키징 및 배포하기 위한 위성 어셈블리 리소스 모델을 설명합니다.  
   
  [전역화 및 지역화](../../docs/standard/globalization-localization/index.md)  
- 지역화 대비 응응 프로그램을 디자인하고 개발하는 데 도움이 되는 정보를 제공합니다.  
+ 지역화 대비 애플리케이션을 디자인하고 개발하는 데 도움이 되는 정보를 제공합니다.  
   
- 액세스 가능성  
- UI(사용자 인터페이스) 관련 정보에 대한 프로그래밍 액세스를 제공하여 보조 기술 제품 및 자동화된 테스트 프레임워크의 요구 사항을 해결하는 액세스 가능성 프레임워크인 Microsoft UI 자동화에 대한 정보를 제공합니다.  
+ [접근성](../../docs/framework/ui-automation/index.md) UI(사용자 인터페이스) 관련 정보에 대한 프로그래밍 액세스를 제공하여 보조 기술 제품 및 자동화된 테스트 프레임워크의 요구 사항을 해결하는 액세스 가능성 프레임워크인 Microsoft UI 자동화에 대한 정보를 제공합니다.  
   
  [특성](../../docs/standard/attributes/index.md)  
  특성을 사용하여 메타데이터를 사용자 지정할 수 있는 방법을 설명합니다.  
   
- [64비트 응용 프로그램](../../docs/framework/64-bit-apps.md)  
+ [64비트 애플리케이션](../../docs/framework/64-bit-apps.md)  
  Windows 64비트 운영 체제에서 실행할 애플리케이션 개발 관련 문제를 설명합니다.  
   
 ## <a name="related-sections"></a>관련 단원  

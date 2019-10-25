@@ -2,12 +2,12 @@
 title: .NET Core 정보
 description: .NET Core에 대한 자세히 알아봅니다.
 ms.date: 09/17/2019
-ms.openlocfilehash: 1baad9d6611a4c4340012b9a467d3499ad9ab834
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 8b96e1e8f882ee69bcf7db58ca7a5eeab89fb4fd
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71181921"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395179"
 ---
 # <a name="about-net-core"></a>.NET Core 정보
 
@@ -113,7 +113,7 @@ Windows 및 Unix 구현은 크기가 비슷합니다. CoreFX에서 [Microsoft.Wi
 
 ### <a name="comparison-with-mono"></a>Mono와 비교
 
-[Mono](https://www.mono-project.com/)는 원본 플랫폼 간 .NET입니다. .NET Framework의 [오픈 소스]([open-source](https://github.com/mono/mono)) 대안으로 시작되었으며, iOS 및 Android 디바이스가 보편화되면서 모바일 디바이스 대상 프로그램으로 전환되었습니다. .NET Framework의 커뮤니티 복제본으로 생각할 수 있습니다. Mono 프로젝트 팀은 호환되는 구현을 제공하기 위해 Microsoft에서 게시한 오픈 [.NET 표준](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md)(특히 ECMA 335)을 사용했습니다.
+[Mono](https://www.mono-project.com/)는 원본 플랫폼 간 .NET입니다. .NET Framework의 [오픈 소스](https://github.com/mono/mono)) 대안으로 시작되었으며, iOS 및 Android 디바이스가 보편화되면서 모바일 디바이스 대상 프로그램으로 전환되었습니다. .NET Framework의 커뮤니티 복제본으로 생각할 수 있습니다. Mono 프로젝트 팀은 호환되는 구현을 제공하기 위해 Microsoft에서 게시한 오픈 [.NET 표준](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md)(특히 ECMA 335)을 사용했습니다.
 
 .NET Core와 Mono 간의 주요 차이점은 다음과 같습니다.
 

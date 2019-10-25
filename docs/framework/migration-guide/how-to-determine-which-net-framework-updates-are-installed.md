@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 53c7b5f7-d47a-402a-b194-7244a696a88b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c4c505c679c46494f7dc2534c2bbe9f50243a7dd
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1c69d4bb370087dddafbfed41cbfb1fef229677c
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790072"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318966"
 ---
 # <a name="how-to-determine-which-net-framework-security-updates-and-hotfixes-are-installed"></a>방법: 설치된 .NET Framework 보안 업데이트 및 핫픽스 확인
 
@@ -29,7 +29,7 @@ ms.locfileid: "70790072"
 
 컴퓨터에 설치된 각 .NET Framework 버전에 대해 설치된 보안 업데이트 및 핫픽스는 Windows 레지스트리에 나열됩니다. 레지스트리 편집기(*regedit.exe*)를 사용하여 이 정보를 볼 수 있습니다.
 
-1. **regedit.exe** 프로그램을 엽니다. Windows 8 및 이후 버전에서는 **시작** ![Windows 로고](../get-started/media/windowskeyboardlogo.png "Windowskeyboardlogo")을 마우스 오른쪽 단추로 클릭한 다음 **실행**을 선택합니다. **열기** 상자에 **regedit**를 입력하고 **확인**을 선택합니다.
+1. **regedit.exe** 프로그램을 엽니다. Windows 8 및 이후 버전에서는 **시작** ![Windows 키 로고 스크린샷](./media/how-to-determine-which-net-framework-updates-are-installed/windows-keyboard-logo.png "Windowskeyboardlogo")을 마우스 오른쪽 단추로 클릭한 다음 **실행**을 선택합니다. **열기** 상자에 **regedit**를 입력하고 **확인**을 선택합니다.
 
 2. 레지스트리 편집기에서 다음 하위 키를 엽니다.
 

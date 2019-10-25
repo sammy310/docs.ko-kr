@@ -6,12 +6,12 @@ helpviewer_keywords:
 - dynamic [C#], about dynamic type
 - dynamic type [C#]
 ms.assetid: 3828989d-c967-4a51-b948-857ebc8fdf26
-ms.openlocfilehash: 4141c64ff6dbbec60b53a41862a4273df6ef51ab
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: aef64f538aecb0fc5dadec850020d7c01d02ccbd
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588353"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523543"
 ---
 # <a name="using-type-dynamic-c-programming-guide"></a>dynamic 형식 사용(C# 프로그래밍 가이드)
 
@@ -66,7 +66,7 @@ DLR(동적 언어 런타임)은 .NET Framework 4의 새로운 API입니다. DLR�
 
 C# 4에는 Office Automation API 등의 COM API와 상호 운용 환경을 개선하는 몇 가지 기능이 포함되어 있습니다. 개선 사항 중에는 `dynamic` 형식의 사용 및 [명명된 인수 및 선택적 인수](../classes-and-structs/named-and-optional-arguments.md)의 사용이 포함됩니다.
 
-많은 COM 메서드는 형식을 `object`로 지정하여 인수 형식 및 반환 형식의 변환을 허용합니다. C#에서는 강력한 형식의 변수로 조정하기 위해 값을 명시적으로 캐스팅해야 했습니다. [/link(C# 컴파일러 옵션)](../../language-reference/compiler-options/link-compiler-option.md) 옵션을 사용하여 컴파일하는 경우 `dynamic` 형식을 사용하면 COM 서명에서 `object`의 발생을 마치 `dynamic` 형식인 것처럼 취급하여 캐스팅을 상당 부분 피할 수 있습니다. 예를 들어 다음 문은 `dynamic` 형식은 있고 `dynamic` 형식은 없는 Microsoft Office Excel 스프레드시트의 셀에 액세스하는 방법과 대조됩니다.
+많은 COM 메서드는 형식을 `object`로 지정하여 인수 형식 및 반환 형식의 변환을 허용합니다. C#에서는 강력한 형식의 변수로 조정하기 위해 값을 명시적으로 캐스팅해야 했습니다. [-link(C# 컴파일러 옵션)](../../language-reference/compiler-options/link-compiler-option.md) 옵션을 사용하여 컴파일하는 경우 `dynamic` 형식을 사용하면 COM 서명에서 `object`의 발생을 마치 `dynamic` 형식인 것처럼 취급하여 캐스팅을 상당 부분 피할 수 있습니다. 예를 들어 다음 문은 `dynamic` 형식은 있고 `dynamic` 형식은 없는 Microsoft Office Excel 스프레드시트의 셀에 액세스하는 방법과 대조됩니다.
 
 [!code-csharp[csOfficeWalkthrough#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#12)]
 

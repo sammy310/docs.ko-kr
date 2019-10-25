@@ -5,12 +5,12 @@ ms.date: 09/12/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: 2abd8588aa314b630c995e0c78b5869ec00a89df
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: 31169116abdda7308ed216902b335a6b77fbcfc4
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72179368"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72321272"
 ---
 # <a name="deploy-a-model-to-azure-functions"></a>Azure Functions에 모델 배포
 
@@ -75,7 +75,7 @@ Azure Functions 서버리스 환경을 통해 HTTP에서의 예측을 위해 미
     ```csharp
     public class AnalyzeSentiment
     {
-    
+
     }
     ```
 
@@ -85,7 +85,7 @@ Azure Functions 서버리스 환경을 통해 HTTP에서의 예측을 위해 미
 
 1. 프로젝트에서 *DataModels* 디렉터리를 만들어 데이터 모델을 저장합니다. 솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **추가 > 새 폴더**를 선택합니다. “DataModels”를 입력하고 Enter 키를 누릅니다.
 2. 솔루션 탐색기에서 *DataModels* 디렉터리를 마우스 오른쪽 단추로 클릭하고 **추가 > 새 항목**을 선택합니다.
-3. **새 항목 추가** 대화 상자에서 **클래스**를 선택하고 **이름** 필드를 *SentimentData.cs*로 변경합니다. 그런 다음, **추가** 단추를 선택합니다. 
+3. **새 항목 추가** 대화 상자에서 **클래스**를 선택하고 **이름** 필드를 *SentimentData.cs*로 변경합니다. 그런 다음, **추가** 단추를 선택합니다.
 
     *SentimentData.cs* 파일이 코드 편집기에서 열립니다. 다음 using 문을 *SentimentData.cs*의 맨 위에 추가합니다.
 
@@ -113,7 +113,7 @@ Azure Functions 서버리스 환경을 통해 HTTP에서의 예측을 위해 미
 [종속성 주입](https://en.wikipedia.org/wiki/Dependency_injection)에 대한 자세한 내용은 다음 링크를 참조하세요.
 
 1. **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **추가** > **새 항목**을 선택합니다.
-1. **새 항목 추가** 대화 상자에서 **클래스**를 선택하고 **이름** 필드를 *Startup.cs*로 변경합니다. 그런 다음, **추가** 단추를 선택합니다. 
+1. **새 항목 추가** 대화 상자에서 **클래스**를 선택하고 **이름** 필드를 *Startup.cs*로 변경합니다. 그런 다음, **추가** 단추를 선택합니다.
 
     *Startup.cs* 파일이 코드 편집기에서 열립니다. 다음 using 문을 *Startup.cs*의 맨 위에 추가합니다.
 
@@ -141,13 +141,13 @@ Azure Functions 서버리스 환경을 통해 HTTP에서의 예측을 위해 미
     }
     ```
 
-개략적으로 이 코드는 애플리케이션을 수동으로 초기화하지 않고도 애플리케이션에서 요청할 때 나중에 사용할 수 있도록 자동으로 개체 및 서비스를 초기화합니다. 
+개략적으로 이 코드는 애플리케이션을 수동으로 초기화하지 않고도 애플리케이션에서 요청할 때 나중에 사용할 수 있도록 자동으로 개체 및 서비스를 초기화합니다.
 
-기계 학습 모델은 정적이지 않습니다. 새 학습 데이터를 사용할 수 있게 되면 모델을 다시 학습하고 다시 배포합니다. 최신 버전의 모델을 애플리케이션으로 가져오는 한 가지 방법은 전체 애플리케이션을 다시 배포하는 것입니다. 그러나 이 경우 애플리케이션 가동 중지 시간이 발생합니다. `PredictionEnginePool` 서비스는 애플리케이션을 가동 중지하지 않으면서 업데이트된 모델을 다시 로드하는 메커니즘을 제공합니다. 
+기계 학습 모델은 정적이지 않습니다. 새 학습 데이터를 사용할 수 있게 되면 모델을 다시 학습하고 다시 배포합니다. 최신 버전의 모델을 애플리케이션으로 가져오는 한 가지 방법은 전체 애플리케이션을 다시 배포하는 것입니다. 그러나 이 경우 애플리케이션 가동 중지 시간이 발생합니다. `PredictionEnginePool` 서비스는 애플리케이션을 가동 중지하지 않으면서 업데이트된 모델을 다시 로드하는 메커니즘을 제공합니다.
 
 `watchForChanges` 매개 변수를 `true`로 설정하면 `PredictionEnginePool`은 파일 시스템 변경 알림을 수신 대기하고 파일이 변경될 때 이벤트를 발생시키는 [`FileSystemWatcher`](xref:System.IO.FileSystemWatcher)를 시작합니다. 그러면 `PredictionEnginePool`에서 모델을 자동으로 다시 로드하도록 지정할 수 있는 메시지가 표시됩니다.
 
-모델은 `modelName` 매개 변수로 식별되므로 변경 시, 애플리케이션당 두 개 이상의 모델이 다시 로드될 수 있습니다. 
+모델은 `modelName` 매개 변수로 식별되므로 변경 시, 애플리케이션당 두 개 이상의 모델이 다시 로드될 수 있습니다.
 
 > [!TIP]
 > 또는 원격으로 저장된 모델을 사용하는 경우 `FromUri` 메서드를 사용할 수 있습니다. `FromUri`는 파일 변경 이벤트를 감시하지 않고, 원격 위치에서 변경 내용을 폴링합니다. 폴링 간격의 기본값은 5분입니다. 애플리케이션의 요구 사항에 따라 폴링 간격을 늘리거나 줄일 수 있습니다. 아래 코드 샘플에서 `PredictionEnginePool`은 1분마다 지정된 URI에 저장된 모델을 폴링합니다.
@@ -209,7 +209,7 @@ ILogger log)
     ```
 
     성공하면 출력이 아래 텍스트와 같이 표시됩니다.
-    
+
     ```powershell
     Negative
     ```

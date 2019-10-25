@@ -4,12 +4,12 @@ description: 각 .NET Core 버전의 호환성이 손상되는 변경에 대해 
 ms.date: 08/12/2019
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bc057c41850a4cc0c0806af607990c7dcae51fdc
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 94dd59865afbde73c82f6e1b61a2f054cc188c72
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216441"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72393625"
 ---
 # <a name="net-core-breaking-changes"></a>.NET Core 호환성이 손상되는 변경 사항
 
@@ -18,7 +18,7 @@ ms.locfileid: "71216441"
 .NET Core 3.0에서 도입된 호환성이 손상되는 변경을 자세히 설명하는 개별 문제를 다음 GitHub 리포지토리에서 확인할 수도 있습니다.
 
 - .NET Core의 경우 [dotnet/docs](https://github.com/dotnet/docs/issues?q=is%3Aopen+is%3Aissue+label%3Abreaking-change) 리포지토리.
-- ASP.NET Core의 경우 [aspnet/AspNetCore](https://github.com/aspnet/Announcements/issues?q=is%3Aissue+is%3Aopen+label%3A%22Breaking+change%22+label%3A3.0.0) 리포지토리.
+- ASP.NET Core의 경우 [aspnet/Announcements](https://github.com/aspnet/Announcements/issues?q=is%3Aissue+is%3Aopen+label%3A%22Breaking+change%22+label%3A3.0.0) 리포지토리.
 - Entity Framework Core의 경우 [aspnet/EntityFrameworkCore](https://github.com/aspnet/EntityFrameworkCore/issues?q=is%3Aopen+is%3Aissue+label%3Abreaking-change) 리포지토리.
 
 ## <a name="breaking-changes-by-version"></a>버전별 호환성이 손상되는 변경 사항

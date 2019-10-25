@@ -4,12 +4,12 @@ description: .NET 이식성 분석기 도구를 사용하여 .NET Core, .NET Sta
 ms.date: 09/13/2019
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: 246c1d25a99e61d7e2f69f1b65ae3534d22571ba
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: a3979d792b4cfd1f7949a3c8e14c6f856e9e3e21
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053996"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320088"
 ---
 # <a name="the-net-portability-analyzer"></a>.NET 이식성 분석기
 
@@ -29,14 +29,14 @@ ms.locfileid: "71053996"
 
 Visual Studio에서 .NET 이식성 분석기 사용을 시작하려면 먼저 [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer)에서 확장을 다운로드하고 설치해야 합니다. Visual Studio 2017 이상에서 작동합니다. **분석** > **이식성 분석기 설정**을 통해 Visual Studio에서 구성하고 대상 플랫폼을 선택할 수 있습니다. 이 플랫폼은 현재 어셈블리가 빌드된 플랫폼/버전과 비교하여 이식성 간격을 평가하려는 .NET 플랫폼/버전입니다.
 
-![이식성 스크린샷](./media/portability-analyzer/portability-screenshot.png)
+![이식성 분석기의 스크린샷](./media/portability-analyzer/portability-screenshot.png)
 
 ApiPort 콘솔 애플리케이션을 사용하여 [ApiPort 리포지토리](https://aka.ms/apiportdownload)에서 다운로드할 수도 있습니다. `listTargets` 명령 옵션을 사용하여 사용 가능한 대상 목록을 표시한 다음, `-t` 또는 `--target` 명령 옵션을 지정하여 대상 플랫폼을 선택할 수 있습니다. 
 
 ### <a name="analyze-portability"></a>이식성 분석
 Visual Studio에서 전체 프로젝트를 분석하려면 **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **어셈블리 이식성 분석**을 선택합니다. 전체 프로젝트를 분석하지 않으려면 **분석** 메뉴로 이동한 다음 **어셈블리 이식성 분석**을 선택합니다. 여기서 프로젝트의 실행 파일 또는 DLL을 선택합니다.
 
-![솔루션 탐색기에서 이식성 분석기](./media/portability-analyzer/portability-solution-explorer.png)
+![솔루션 탐색기에서 이식성 분석기의 스크린샷](./media/portability-analyzer/portability-solution-explorer.png)
 
 [ApiPort 콘솔 앱](https://aka.ms/apiportdownload)을 사용할 수도 있습니다. 
 
@@ -52,13 +52,13 @@ Visual Studio에서 전체 프로젝트를 분석하려면 **솔루션 탐색기
 
 #### <a name="portability-summary"></a>이식성 요약 
 
-![이식성 요약](./media/portability-analyzer/portabilitysummary.png)
+![이식성 요약의 스크린샷](./media/portability-analyzer/api-catalog-portablility-summary.png)
 
 보고서의 이식성 요약 섹션에는 실행에 포함된 각 어셈블리에 대한 이식성 백분율이 표시됩니다. 이전 예제에서 `svcutil` 앱에 사용되는 .NET Framework API의 71.24%는 .NET Core + 플랫폼 확장에서 사용할 수 있습니다. 여러 어셈블리에 대해 .NET Portability Analyzer 도구를 실행하는 경우 각 어셈블리에는 이식성 요약 보고서에 행이 있어야 합니다.
 
 #### <a name="details"></a>세부 정보
 
-![이식성 세부 정보](./media/portability-analyzer/portabilitydetails.png)
+![이식성 세부 정보의 스크린샷](./media/portability-analyzer/api-catalog-portablility-details.png)
 
 보고서의 **세부 정보** 섹션에는 선택된 **대상 플랫폼**에서 누락된 API가 나열되어 있습니다. 
 
@@ -70,7 +70,7 @@ Visual Studio에서 전체 프로젝트를 분석하려면 **솔루션 탐색기
 
 #### <a name="missing-assemblies"></a>어셈블리 누락
 
-![이식성 세부 정보](./media/portability-analyzer/missingassemblies.png)
+![누락된 어셈블리의 스크린샷](./media/portability-analyzer/api-catalog-missing-assemblies.png)
 
 보고서에서 누락된 어셈블리 섹션을 찾을 수 있습니다. 이 어셈블리 목록은 분석된 어셈블리에서 참조되고 분석되지 않았음을 알려줍니다. 사용자가 소유한 어셈블리인 경우 API 수준의 세부 이식성 보고서를 가져올 수 있도록 API 이식성 분석기 실행에 포함합니다. 타사 라이브러리인 경우 대상 플랫폼을 지원하는 최신 버전이 있는지 확인합니다. 그렇다면 최신 버전으로 이동하는 것이 좋습니다. 결국, 이 목록에는 앱이 사용하는 모든 타사 어셈블리가 포함되어 있으며 대상 플래폼을 지원하는 버전이 있음을 확인할 수 있습니다.  
 

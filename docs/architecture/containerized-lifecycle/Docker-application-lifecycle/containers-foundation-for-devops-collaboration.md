@@ -2,18 +2,18 @@
 title: DevOps 협업의 기반으로 사용되는 컨테이너
 description: DevOps를 간소화하기 위한 컨테이너의 주요 역할을 이해합니다.
 ms.date: 02/15/2019
-ms.openlocfilehash: 37faf00f270414df363f36894317f31f81a2937e
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 16cccef0545f0da14128e31dc8f7ad78369cf23a
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68672770"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72394804"
 ---
 # <a name="containers-as-the-foundation-for-devops-collaboration"></a>DevOps 협업의 기반으로 사용되는 컨테이너
 
 컨테이너 및 Docker 기술의 본래 특성상 개발자는 “내 머신에서 작동한다”는 일반적인 변명을 하지 않고 소프트웨어 및 종속성을 IT 운영 부서 및 프로덕션 환경과 쉽게 공유할 수 있습니다. 컨테이너는 서로 다른 환경 간의 애플리케이션 충돌을 해결합니다. 컨테이너 및 Docker는 개발자와 IT 운영 부서를 더 가깝게 만들어 효과적으로 협업하기 쉽게 해주는 간접적인 효과가 있습니다. 컨테이너 워크플로를 채택하면 많은 고객에게 이전부터 추구해 왔지만 더 복잡한 릴리스 및 빌드 파이프라인 구성을 통해 구현해야 했던 DevOps 지속성을 제공합니다. 컨테이너는 DevOps의 빌드/테스트/배포 파이프라인을 간소화합니다.
 
-![Docker는 개발/디자인 워크로드의 개발자와 설계자 및 실행/모니터링/관리 워크로드의 IT 운영 부서를 원활히 연결하는 데 도움이 됩니다.](./media/image1.png)
+![Docker 앱의 수명 주기에 대한 소유권을 보여 주는 다이어그램](./media/containers-foundation-for-devops-collaboration/persona-workloads-docker-container-lifecycle.png)
 
 **그림 2-1.** 컨테이너화된 Docker 애플리케이션의 수명 주기에서 "가상 사용자별" 주요 워크로드
 
@@ -57,7 +57,7 @@ Docker 컨테이너화 및 마이크로서비스 사용으로 조직의 개발 �
 
 그림 2-2는 특정 DevOps 작업과 자산의 이 인스턴스에 초점을 맞추어 Docker 애플리케이션 수명 주기의 더 자세한 워크플로를 보여줍니다.
 
-![이 다이어그램은 DevOps의 "외부 루프"를 보여줍니다. 코드가 리포지토리에 푸시되면 CI 파이프라인이 시작된 후 CD 파이프라인을 시작하고 해당 파이프라인에서 애플리케이션이 배포됩니다. 배포된 애플리케이션에서 수집된 메트릭은 개발 워크로드에 피드백되며, 여기서 "내부 루프"가 발생하므로 개발 팀은 사용자 및 비즈니스 요구에 응답하는 실질적인 데이터를 갖게 됩니다.](./media/image2.png)
+![Docker 앱의 일반적인 엔드투엔드 수명 주기를 보여 주는 다이어그램](./media/containers-foundation-for-devops-collaboration/generic-end-to-enddpcker-app-life-cycle.png)
 
 **그림 2-2.** Docker 컨테이너화된 애플리케이션 수명 주기에 대한 고급 워크플로
 
