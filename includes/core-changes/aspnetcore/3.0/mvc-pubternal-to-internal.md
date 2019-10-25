@@ -1,0 +1,75 @@
+---
+ms.openlocfilehash: 09fd95ba5f3aee59f2abdfbb4e64eb6202e2b873
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72394423"
+---
+### <a name="mvc-pubternal-types-changed-to-internal"></a><span data-ttu-id="4e968-101">MVC: "Pubternal" 유형이 내부로 변경됨</span><span class="sxs-lookup"><span data-stu-id="4e968-101">MVC: "Pubternal" types changed to internal</span></span>
+
+<span data-ttu-id="4e968-102">ASP.NET Core 3.0에서는 MVC의 모든 "pubternal" 형식이 지원되는 네임스페이스에서 `public` 또는 필요에 따라 `internal`로 업데이트되었습니다.</span><span class="sxs-lookup"><span data-stu-id="4e968-102">In ASP.NET Core 3.0, all "pubternal" types in MVC were updated to either be `public` in a supported namespace or `internal` as appropriate.</span></span>
+
+#### <a name="change-description"></a><span data-ttu-id="4e968-103">변경 내용 설명</span><span class="sxs-lookup"><span data-stu-id="4e968-103">Change description</span></span>
+
+<span data-ttu-id="4e968-104">ASP.NET Core에서 "pubternal" 형식은 `public`으로 선언되었지만 `.Internal` 접미사가 지정된 네임스페이스에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4e968-104">In ASP.NET Core, "pubternal" types are declared as `public` but reside in a `.Internal`-suffixed namespace.</span></span> <span data-ttu-id="4e968-105">이러한 형식은 `public`이지만 지원 정책이 없으며 호환성이 손상되는 변경이 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="4e968-105">While these types are `public`, they have no support policy and are subject to breaking changes.</span></span> <span data-ttu-id="4e968-106">아쉽게도 이러한 형식의 우발적 사용이 일반적으로 발생하므로 이러한 프로젝트에 대한 호환성이 손상되는 변경이 발생하고 프레임워크를 유지 관리하는 기능이 제한됩니다.</span><span class="sxs-lookup"><span data-stu-id="4e968-106">Unfortunately, accidental use of these types has been common, resulting in breaking changes to these projects and limiting the ability to maintain the framework.</span></span>
+
+#### <a name="version-introduced"></a><span data-ttu-id="4e968-107">도입된 버전</span><span class="sxs-lookup"><span data-stu-id="4e968-107">Version introduced</span></span>
+
+<span data-ttu-id="4e968-108">3.0</span><span class="sxs-lookup"><span data-stu-id="4e968-108">3.0</span></span>
+
+#### <a name="old-behavior"></a><span data-ttu-id="4e968-109">이전 동작</span><span class="sxs-lookup"><span data-stu-id="4e968-109">Old behavior</span></span>
+
+<span data-ttu-id="4e968-110">MVC의 일부 형식은 `public`이지만 `.Internal` 네임스페이스에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4e968-110">Some types in MVC were `public` but in a `.Internal` namespace.</span></span> <span data-ttu-id="4e968-111">이러한 형식에는 지원 정책이 없었으며 호환성이 손상되는 변경이 적용되었습니다.</span><span class="sxs-lookup"><span data-stu-id="4e968-111">These types had no support policy and were subject to breaking changes.</span></span>
+
+#### <a name="new-behavior"></a><span data-ttu-id="4e968-112">새 동작</span><span class="sxs-lookup"><span data-stu-id="4e968-112">New behavior</span></span>
+
+<span data-ttu-id="4e968-113">이러한 모든 형식은 지원되는 네임스페이스에서 `public`으로 업데이트되거나 `internal`로 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="4e968-113">All such types are updated either to be `public` in a supported namespace or marked as `internal`.</span></span>
+
+#### <a name="reason-for-change"></a><span data-ttu-id="4e968-114">변경 이유</span><span class="sxs-lookup"><span data-stu-id="4e968-114">Reason for change</span></span>
+
+<span data-ttu-id="4e968-115">"pubternal" 형식의 우발적 사용이 일반적으로 발생하므로 이러한 프로젝트에 대한 호환성이 손상되는 변경이 발생하고 프레임워크를 유지 관리하는 기능이 제한됩니다.</span><span class="sxs-lookup"><span data-stu-id="4e968-115">Accidental use of the "pubternal" types has been common, resulting in breaking changes to these projects and limiting the ability to maintain the framework.</span></span>
+
+#### <a name="recommended-action"></a><span data-ttu-id="4e968-116">권장 작업</span><span class="sxs-lookup"><span data-stu-id="4e968-116">Recommended action</span></span>
+
+<span data-ttu-id="4e968-117">실제로 `public`이 되고 지원되는 새 네임스페이스로 이동한 형식을 사용하는 경우 새 네임스페이스와 일치하도록 참조를 업데이트합니다.</span><span class="sxs-lookup"><span data-stu-id="4e968-117">If you're using types that have become truly `public` and have been moved into a new, supported namespace, update your references to match the new namespaces.</span></span>
+
+<span data-ttu-id="4e968-118">`internal`로 표시된 형식을 사용하는 경우에는 다른 방법을 찾아야 합니다.</span><span class="sxs-lookup"><span data-stu-id="4e968-118">If you're using types that have become marked as `internal`, you'll need to find an alternative.</span></span> <span data-ttu-id="4e968-119">이전에 "pubternal" 형식은 공용으로 지원되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="4e968-119">The previously "pubternal" types were never supported for public use.</span></span> <span data-ttu-id="4e968-120">이러한 네임스페이스의 앱에 중요한 특정 형식이 있는 경우 [aspnet/AspNetCore ](https://github.com/aspnet/AspNetCore/issues)에서 문제를 해결합니다.</span><span class="sxs-lookup"><span data-stu-id="4e968-120">If there are specific types in these namespaces that are critical to your apps, file an issue at [aspnet/AspNetCore](https://github.com/aspnet/AspNetCore/issues).</span></span> <span data-ttu-id="4e968-121">요청된 형식 `public`을 만드는 것을 고려할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4e968-121">Considerations may be made for making the requested types `public`.</span></span>
+
+#### <a name="category"></a><span data-ttu-id="4e968-122">범주</span><span class="sxs-lookup"><span data-stu-id="4e968-122">Category</span></span>
+
+<span data-ttu-id="4e968-123">ASP.NET Core</span><span class="sxs-lookup"><span data-stu-id="4e968-123">ASP.NET Core</span></span>
+
+#### <a name="affected-apis"></a><span data-ttu-id="4e968-124">영향을 받는 API</span><span class="sxs-lookup"><span data-stu-id="4e968-124">Affected APIs</span></span>
+
+<span data-ttu-id="4e968-125">이 변경 내용에는 다음 네임스페이스의 형식이 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="4e968-125">This change includes types in the following namespaces:</span></span>
+
+- `Microsoft.AspNetCore.Mvc.Cors.Internal`
+- `Microsoft.AspNetCore.Mvc.DataAnnotations.Internal`
+- `Microsoft.AspNetCore.Mvc.Formatters.Internal`
+- `Microsoft.AspNetCore.Mvc.Formatters.Json.Internal`
+- `Microsoft.AspNetCore.Mvc.Formatters.Xml.Internal`
+- `Microsoft.AspNetCore.Mvc.Internal`
+- `Microsoft.AspNetCore.Mvc.ModelBinding.Internal`
+- `Microsoft.AspNetCore.Mvc.Razor.Internal`
+- `Microsoft.AspNetCore.Mvc.RazorPages.Internal`
+- `Microsoft.AspNetCore.Mvc.TagHelpers.Internal`
+- `Microsoft.AspNetCore.Mvc.ViewFeatures.Internal`
+
+<!--
+
+#### Affected APIs
+
+- `N:Microsoft.AspNetCore.Mvc.Cors.Internal`
+- `N:Microsoft.AspNetCore.Mvc.DataAnnotations.Internal`
+- `N:Microsoft.AspNetCore.Mvc.Formatters.Internal`
+- `N:Microsoft.AspNetCore.Mvc.Formatters.Json.Internal`
+- `N:Microsoft.AspNetCore.Mvc.Formatters.Xml.Internal`
+- `N:Microsoft.AspNetCore.Mvc.Internal`
+- `N:Microsoft.AspNetCore.Mvc.ModelBinding.Internal`
+- `N:Microsoft.AspNetCore.Mvc.Razor.Internal`
+- `N:Microsoft.AspNetCore.Mvc.RazorPages.Internal`
+- `N:Microsoft.AspNetCore.Mvc.TagHelpers.Internal`
+- `N:Microsoft.AspNetCore.Mvc.ViewFeatures.Internal`
+
+-->
