@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: 6340bc3fb2291601ba2a9812e0a438839f0718bc
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 41a0885f828e45e1216805533a977fc3d5eaf5cb
+ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971816"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798894"
 ---
 # <a name="code-access-security-and-adonet"></a>코드 액세스 보안 및 ADO.NET
 .NET Framework는 역할 기반 보안과 CAS(코드 액세스 보안)를 제공합니다. 두 보안 기능 모두 CLR(공용 언어 런타임)이 제공하는 공용 인프라를 사용하여 구현되었습니다. 비관리 코드의 경우 대부분의 애플리케이션은 사용자 또는 보안 주체 권한으로 실행됩니다. 결과적으로 높은 권한을 가진 사용자가 악의적이거나 오류가 많은 소프트웨어를 실행하면 컴퓨터 시스템과 개인 데이터가 손상될 수 있습니다.  
@@ -67,15 +67,15 @@ ms.locfileid: "70971816"
   
  다음 표에서는 사용 가능한 <xref:System.Data.SqlClient.SqlClientPermissionAttribute> 속성과 해당 설명의 목록을 보여 줍니다.  
   
-|권한 속성|Description|  
+|권한 속성|설명|  
 |-----------------------------------|-----------------|  
-|`Action`|보안 동작을 가져오거나 설정합니다. <xref:System.Security.Permissions.SecurityAttribute>에서 상속됩니다.|  
-|`AllowBlankPassword`|연결 문자열에서 빈 암호 사용을 활성화하거나 비활성화합니다. 빈 암호 사용을 활성화하는 `true`와 빈 암호 사용을 비활성화하는 `false`를 값으로 사용할 수 있습니다. <xref:System.Data.Common.DBDataPermissionAttribute>에서 상속됩니다.|  
-|`ConnectionString`|허용되는 연결 문자열을 지정합니다. 여러 개의 연결 문자열을 식별할 수 있습니다. **참고:**  연결 문자열은 사용자 ID 또는 암호를 포함할 수 없습니다. 이번 릴리스에서는 .NET Framework 구성 도구를 사용하여 연결 문자열 제한을 변경할 수 없습니다. <br /><br /> <xref:System.Data.Common.DBDataPermissionAttribute>에서 상속됩니다.|  
-|`KeyRestrictions`|허용되거나 허용되지 않는 연결 문자열 매개 변수를 식별합니다. 연결 문자열 매개 변수는 형식  *\<매개 변수 이름 > =* 에서 식별 됩니다. 여러 매개 변수를 세미콜론(;)으로 구분하여 지정할 수 있습니다. **참고:**  `KeyRestrictions`를 지정하지 않고 `KeyRestrictionBehavior` 속성을 `AllowOnly` 또는 `PreventUsage`로 설정한 경우에는 추가 연결 문자열 매개 변수가 허용되지 않습니다. <xref:System.Data.Common.DBDataPermissionAttribute>에서 상속됩니다.|  
-|`KeyRestrictionBehavior`|연결 문자열 매개 변수를 허용되는 유일한 추가 매개 변수(`AllowOnly`)로 식별하거나 허용되지 않는 추가 매개 변수(`PreventUsage`)로 식별합니다. 기본값은 `AllowOnly`입니다. <xref:System.Data.Common.DBDataPermissionAttribute>에서 상속됩니다.|  
-|`TypeID`|파생 클래스에서 구현될 때 이 특성의 고유 식별자를 가져옵니다. <xref:System.Attribute>에서 상속됩니다.|  
-|`Unrestricted`|리소스에 무제한 권한이 선언되었는지 여부를 나타냅니다. <xref:System.Security.Permissions.SecurityAttribute>에서 상속됩니다.|  
+|`Action`|보안 동작을 가져오거나 설정합니다. <xref:System.Security.Permissions.SecurityAttribute>에서 상속 됩니다.|  
+|`AllowBlankPassword`|연결 문자열에서 빈 암호 사용을 활성화하거나 비활성화합니다. 빈 암호 사용을 활성화하는 `true`와 빈 암호 사용을 비활성화하는 `false`를 값으로 사용할 수 있습니다. <xref:System.Data.Common.DBDataPermissionAttribute>에서 상속 됩니다.|  
+|`ConnectionString`|허용되는 연결 문자열을 지정합니다. 여러 개의 연결 문자열을 식별할 수 있습니다. **참고:**  연결 문자열에 사용자 ID 또는 암호를 포함 하지 마십시오. 이번 릴리스에서는 .NET Framework 구성 도구를 사용하여 연결 문자열 제한을 변경할 수 없습니다. <br /><br /> <xref:System.Data.Common.DBDataPermissionAttribute>에서 상속 됩니다.|  
+|`KeyRestrictions`|허용되거나 허용되지 않는 연결 문자열 매개 변수를 식별합니다. 연결 문자열 매개 변수는 *\<매개 변수 이름 > =* 형식으로 식별 됩니다. 여러 매개 변수를 세미콜론 (;)을 사용 하 여 구분 하 여 지정할 수 있습니다. **참고:**  `KeyRestrictions`지정 하지 않지만 `KeyRestrictionBehavior` 속성을 `AllowOnly` 또는 `PreventUsage`로 설정한 경우에는 추가 연결 문자열 매개 변수가 허용 되지 않습니다. <xref:System.Data.Common.DBDataPermissionAttribute>에서 상속 됩니다.|  
+|`KeyRestrictionBehavior`|연결 문자열 매개 변수를 허용되는 유일한 추가 매개 변수(`AllowOnly`)로 식별하거나 허용되지 않는 추가 매개 변수(`PreventUsage`)로 식별합니다. 기본값은 `AllowOnly`입니다. <xref:System.Data.Common.DBDataPermissionAttribute>에서 상속 됩니다.|  
+|`TypeID`|파생 클래스에서 구현될 때 이 특성의 고유 식별자를 가져옵니다. <xref:System.Attribute>에서 상속 됩니다.|  
+|`Unrestricted`|리소스에 무제한 권한이 선언되었는지 여부를 나타냅니다. <xref:System.Security.Permissions.SecurityAttribute>에서 상속 됩니다.|  
   
 #### <a name="connectionstring-syntax"></a>ConnectionString 구문  
  다음 예제에서는 구성 파일의 `connectionStrings` 요소를 사용하여 특정 연결 문자열만 사용하도록 하는 방법을 보여 줍니다. 구성 파일에서 연결 문자열을 저장 하 고 검색 하는 방법에 대 한 자세한 내용은 [연결 문자열](connection-strings.md) 을 참조 하세요.  
@@ -89,7 +89,7 @@ ms.locfileid: "70971816"
 ```  
   
 #### <a name="keyrestrictions-syntax"></a>KeyRestrictions 구문  
- 다음 예에서는 동일한 연결 문자열을 사용 하도록 설정 하 `Encrypt` 고 및 `Packet Size` 연결 문자열 옵션을 사용 하도록 설정 하지만 다른 연결 문자열 옵션 사용은 제한 합니다.  
+ 다음 예에서는 동일한 연결 문자열을 사용 하도록 설정 하 고 `Encrypt` 및 `Packet Size` 연결 문자열 옵션을 사용 하도록 설정 하지만 다른 연결 문자열 옵션의 사용을 제한 합니다.  
   
 ```xml  
 <connectionStrings>  
@@ -136,7 +136,7 @@ ms.locfileid: "70971816"
 ```  
   
 ### <a name="enabling-partial-trust-with-a-custom-permission-set"></a>사용자 지정 권한 집합을 사용하여 부분 신뢰 활성화  
- 특정 영역에 대해 <xref:System.Data.SqlClient> 권한 사용을 활성화하려면 시스템 관리자는 사용자 지정 권한 집합을 만들고 이를 특정 영역에 대한 권한 집합으로 설정해야 합니다. `LocalIntranet`과 같은 기본 권한 집합은 수정할 수 없습니다. <xref:System.Data.SqlClient> 예를 들어 <xref:System.Security.Policy.Zone> `LocalIntranet` <xref:System.Data.SqlClient> 의 `LocalIntranet`가 있는 코드에 대 한 권한을 포함 하려면 시스템 관리자가에 대 한 권한 집합을 복사 하 고 이름을 "CustomLocalIntranet"로 바꾼 다음 권한을 추가 합니다. 가져오기 [caspol.exe (코드 액세스 보안 정책 도구)](../../tools/caspol-exe-code-access-security-policy-tool.md)를 사용 하는 CustomLocalIntranet 권한 집합을 설정 하 고의 `LocalIntranet_Zone` 권한 집합을 CustomLocalIntranet로 설정 합니다.  
+ 특정 영역에 대해 <xref:System.Data.SqlClient> 권한 사용을 활성화하려면 시스템 관리자는 사용자 지정 권한 집합을 만들고 이를 특정 영역에 대한 권한 집합으로 설정해야 합니다. `LocalIntranet`과 같은 기본 권한 집합은 수정할 수 없습니다. 예를 들어 `LocalIntranet`<xref:System.Security.Policy.Zone> 있는 코드에 대 한 <xref:System.Data.SqlClient> 권한을 포함 하려면 시스템 관리자가 `LocalIntranet`에 대 한 권한 집합을 복사 하 고 이름을 "CustomLocalIntranet"로 바꾼 후 <xref:System.Data.SqlClient> 권한을 추가 하 고 CustomLocalIntranet를 가져옵니다. [caspol.exe (코드 액세스 보안 정책 도구)](../../tools/caspol-exe-code-access-security-policy-tool.md)를 사용 하 여 권한 집합을 설정 하 고 `LocalIntranet_Zone`의 권한 집합을 CustomLocalIntranet로 설정 합니다.  
   
 ### <a name="sample-permission-set"></a>권한 집합 예제  
  다음은 부분 신뢰 권한일 경우의 .NET Framework Data Provider for SQL Server에 대한 권한 집합 예제입니다. 사용자 지정 권한 집합을 만드는 방법에 대 한 자세한 내용은 [caspol.exe를 사용 하 여 권한 집합 구성](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4ybs46y6(v=vs.100))을 참조 하세요.  
@@ -166,7 +166,7 @@ AllowBlankPassword="False">
  다음 예제에서는 특정 연결 문자열을 필요로 하는 코드를 작성하는 방법을 보여 줍니다. 또한 이 예제에서는 시스템 관리자가 실제로 CAS 정책을 사용하여 구현하는 <xref:System.Data.SqlClient>에 대한 무제한 권한을 거부하는 것을 시뮬레이션합니다.  
   
 > [!IMPORTANT]
-> ADO.NET에 대한 CAS 권한을 디자인할 때 올바른 패턴은 가장 제한이 심한 경우(권한이 없는 경우)부터 시작하여 코드가 수행해야 하는 특정 작업에 필요한 특정 권한을 추가하는 것입니다. 반대 패턴인 모든 권한을 부여한 다음 특정 권한을 부여하지 않는 방식은 동일한 연결 문자열을 표현하는 방법이 많으므로 안전하지 않습니다. 예를 들어, 모든 권한을 부여한 다음 연결 문자열 "server=someserver"에 대해 사용할 수 있는 권한을 주지 않아도 "server=someserver.mycompany.com"은 여전히 허용됩니다. 항상 권한을 전혀 부여하지 않은 상태에서 시작하여 권한 집합에 허점이 생길 위험을 줄이는 것이 좋습니다.  
+> ADO.NET에 대한 CAS 권한을 디자인할 때 올바른 패턴은 가장 제한이 심한 경우(권한이 없는 경우)부터 시작하여 코드가 수행해야 하는 특정 작업에 필요한 특정 권한을 추가하는 것입니다. 반대 패턴인 모든 권한을 부여한 다음 특정 권한을 부여하지 않는 방식은 동일한 연결 문자열을 표현하는 방법이 많으므로 안전하지 않습니다. 예를 들어 모든 권한으로 시작한 다음 연결 문자열 "server = someserver" 사용을 거부 하려고 하면 "server = someserver" 문자열이 계속 허용 됩니다. 항상 권한을 부여 하지 않고 시작 하 여 사용 권한 집합에 구멍이 있을 가능성이 줄어듭니다.  
   
  다음 코드에서는 적절한 CAS 권한이 없는 경우 `SqlClient`가 <xref:System.Security.SecurityException>을 throw하는 보안 요구를 수행하는 방식을 보여 줍니다. <xref:System.Security.SecurityException> 출력은 콘솔 창에 표시됩니다.  
   
@@ -192,11 +192,11 @@ Failed, as expected: Request failed.
 ## <a name="interoperability-with-unmanaged-code"></a>비관리 코드와의 상호 운용성  
  CLR 외부에서 실행되는 코드를 비관리 코드라고 합니다. 따라서 비관리 코드에는 CAS와 같은 보안 메커니즘을 적용할 수 없습니다. 비관리 코드로는 COM 구성 요소, ActiveX 인터페이스, Windows API 함수 등이 있습니다. 비관리 코드를 실행할 때에는 특수한 보안 고려 사항이 적용되므로 전체적인 애플리케이션 보안이 손상되지 않습니다. 자세한 내용은 [비관리 코드 상호 운용](../../interop/index.md)을 참조하세요.  
   
- .NET Framework는 COM interop를 통해 액세스를 제공함으로써 기존 COM 구성 요소에 대한 이전 버전과의 호환성도 지원합니다. 즉, 관련 COM 형식을 가져오는 COM interop 도구를 사용하여 COM 구성 요소를 .NET Framework 애플리케이션에 통합할 수 있습니다. COM 형식을 가져온 후에는 즉시 사용할 수 있습니다. COM interop을 사용하면 어셈블리 메타데이터를 형식 라이브러리로 내보내고 관리 구성 요소를 COM 구성 요소로 등록하여 COM 클라이언트에서 관리 코드에 액세스할 수도 있습니다. 자세한 내용은 [고급 COM 상호 운용성](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx)을 참조 하세요.  
+ .NET Framework는 COM interop를 통해 액세스를 제공함으로써 기존 COM 구성 요소에 대한 이전 버전과의 호환성도 지원합니다. 즉, 관련 COM 형식을 가져오는 COM interop 도구를 사용하여 COM 구성 요소를 .NET Framework 애플리케이션에 통합할 수 있습니다. COM 형식을 가져온 후에는 즉시 사용할 수 있습니다. COM interop을 사용하면 어셈블리 메타데이터를 형식 라이브러리로 내보내고 관리 구성 요소를 COM 구성 요소로 등록하여 COM 클라이언트에서 관리 코드에 액세스할 수도 있습니다. 자세한 내용은 [고급 COM 상호 운용성](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))을 참조 하세요.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
-- [ADO.NET 응용 프로그램 보안](securing-ado-net-applications.md)
+- [ADO.NET 애플리케이션 보안](securing-ado-net-applications.md)
 - [네이티브 및 .NET Framework 코드의 보안](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1787tk12(v=vs.100))
 - [역할 기반 보안](../../../standard/security/role-based-security.md)
 - [ADO.NET 개요](ado-net-overview.md)

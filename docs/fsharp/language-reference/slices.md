@@ -2,16 +2,16 @@
 title: 조각 (F#)
 description: 기존 F# 데이터 형식에 조각을 사용 하는 방법과 다른 데이터 형식에 대 한 사용자 고유의 조각을 정의 하는 방법에 대해 알아봅니다.
 ms.date: 01/22/2019
-ms.openlocfilehash: 3067982c2b4249312c7e9365bbfb994be840911d
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: cbff1b055ea99ef708f9db191be49275e630ee90
+ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627138"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798912"
 ---
 # <a name="slices"></a>조각
 
-에서 F#조각은 데이터 형식의 하위 집합입니다. 데이터 형식에서 조각을 가져올 수 있으려면 데이터 형식이 범위 내에 있는 `GetSlice` [형식 확장](type-extensions.md) 또는 메서드를 정의 해야 합니다. 이 문서에서는 기존 F# 형식에서 조각을 가져오는 방법 및 사용자 고유의 조각을 정의 하는 방법을 설명 합니다.
+에서 F#조각은 데이터 형식의 하위 집합입니다. 데이터 형식에서 조각을 가져올 수 있으려면 데이터 형식이 범위 내에 있는 `GetSlice` 메서드나 [형식 확장](type-extensions.md) 으로 정의 해야 합니다. 이 문서에서는 기존 F# 형식에서 조각을 가져오는 방법 및 사용자 고유의 조각을 정의 하는 방법을 설명 합니다.
 
 조각은 [인덱서와](./members/indexed-properties.md)비슷하지만 기본 데이터 구조에서 단일 값을 생성 하는 대신 여러 개를 생성 합니다.
 
@@ -89,19 +89,19 @@ let twoByTwo = A.[0..1,0..1]
 printfn "%A" twoByTwo
 ```
 
-핵심 F# 라이브러리는 3d 배열을 정의 `GetSlice`하지 않습니다. 차원의 다른 배열이 나 다른 배열을 조각화 하려는 경우에는 멤버를 `GetSlice` 직접 정의 해야 합니다.
+핵심 F# 라이브러리는 3d 배열에 대 한`GetSlice`를 정의 하지 않습니다. 차원의 다른 배열이 나 다른 배열을 조각화 하려는 경우 `GetSlice` 멤버를 직접 정의 해야 합니다.
 
 ## <a name="defining-slices-for-other-data-structures"></a>다른 데이터 구조에 대 한 조각 정의
 
 핵심 F# 라이브러리는 제한 된 형식 집합에 대 한 조각을 정의 합니다. 더 많은 데이터 형식에 대 한 조각을 정의 하려는 경우 형식 정의 자체 나 형식 확장에서이 작업을 수행할 수 있습니다.
 
-예를 들어, 편리한 데이터 조작을 허용 하기 위해 <xref:System.ArraySegment%601> 클래스의 조각을 정의 하는 방법은 다음과 같습니다.
+예를 들어 편리한 데이터 조작을 허용 하기 위해 <xref:System.ArraySegment%601> 클래스에 대 한 조각을 정의 하는 방법은 다음과 같습니다.
 
 ```fsharp
 open System
 
 type ArraySegment<'TItem> with
-    member segment.GetSlice(?start, ?finish) =
+    member segment.GetSlice(start, finish) =
         let start = defaultArg start 0
         let finish = defaultArg finish segment.Count
         ArraySegment(segment.Array, segment.Offset + start, finish - start)
@@ -112,7 +112,7 @@ let slice = arr.[2..5] //[ 3; 4; 5]
 
 ### <a name="use-inlining-to-avoid-boxing-if-it-is-necessary"></a>필요한 경우 boxing을 방지 하려면 인라인을 사용 합니다.
 
-실제로 struct 인 형식에 대 한 조각을 정의 하는 경우 `inline` `GetSlice` 멤버를 정의 하는 것이 좋습니다. 컴파일러 F# 는 선택적 인수를 최적화 하 여 조각화의 결과로 힙 할당을 방지 합니다. 이는 힙에 할당 될 수 없는와 <xref:System.Span%601> 같은 조각화 구문에 매우 중요 합니다.
+실제로 struct 인 형식에 대 한 조각을 정의 하는 경우 `GetSlice` 멤버를 `inline` 하는 것이 좋습니다. 컴파일러 F# 는 선택적 인수를 최적화 하 여 조각화의 결과로 힙 할당을 방지 합니다. 이는 힙에 할당 될 수 없는 <xref:System.Span%601> 같은 조각화 구문에 매우 중요 합니다.
 
 ```fsharp
 open System
@@ -135,6 +135,6 @@ printSpan sp.[0..3] // [|1; 2; 3|]
 printSpan sp.[1..2] // |2; 3|]
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [인덱싱된 속성](./members/indexed-properties.md)
