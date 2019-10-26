@@ -9,12 +9,12 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
-ms.openlocfilehash: 2609a54ce8ba2076c35567fe5bc1d9961f6fef3f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f0082bd99b154f87ab90bee7a89afdb8405f6623
+ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69942056"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72920309"
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>연습: WPF 애플리케이션에서 애플리케이션 데이터 캐싱
 캐싱을 사용하면 빠른 액세스를 위해 데이터를 메모리에 저장할 수 있습니다. 데이터에 다시 액세스할 때 애플리케이션은 원래 소스에서 검색하는 대신 캐시에서 데이터를 가져올 수 있습니다. 이 경우 성능과 확장성이 향상됩니다. 또한 캐싱을 사용하면 데이터 소스를 일시적으로 사용할 수 없는 경우에도 데이터를 사용할 수 있습니다.
@@ -22,9 +22,9 @@ ms.locfileid: "69942056"
  .NET Framework는 .NET Framework 응용 프로그램에서 캐싱을 사용할 수 있도록 하는 클래스를 제공 합니다. 이러한 클래스는 <xref:System.Runtime.Caching> 네임 스페이스에 있습니다.
 
 > [!NOTE]
-> <xref:System.Runtime.Caching> 네임 스페이스는 .NET Framework 4의 새로운입니다. 이 네임 스페이스는 모든 .NET Framework 응용 프로그램에서 캐싱을 사용할 수 있도록 합니다. 이전 버전의 .NET Framework에서 캐싱은 <xref:System.Web> 네임 스페이스 에서만 사용할 수 있으므로 ASP.NET 클래스에 대 한 종속성이 필요 했습니다.
+> <xref:System.Runtime.Caching> 네임 스페이스는 .NET Framework 4에 새로 있습니다. 이 네임 스페이스는 모든 .NET Framework 응용 프로그램에서 캐싱을 사용할 수 있도록 합니다. 이전 버전의 .NET Framework에서 캐싱은 <xref:System.Web> 네임 스페이스 에서만 사용할 수 있으므로 ASP.NET 클래스에 대 한 종속성이 필요 했습니다.
 
- 이 연습에서는 .NET Framework에서 사용할 수 있는 캐싱 기능을 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 응용 프로그램의 일부로 사용 하는 방법을 보여 줍니다. 이 연습에서는 텍스트 파일의 내용을 캐시 합니다.
+ 이 연습에서는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 응용 프로그램의 일부로 .NET Framework에서 사용할 수 있는 캐싱 기능을 사용 하는 방법을 보여 줍니다. 이 연습에서는 텍스트 파일의 내용을 캐시 합니다.
 
  이 연습에서 수행할 작업은 다음과 같습니다.
 
@@ -40,10 +40,10 @@ ms.locfileid: "69942056"
 
 - 캐시 된 파일의 경로를 모니터링 하 고 모니터링 되는 항목에 대 한 변경 내용을 캐시 인스턴스에 알립니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>Prerequisites
  이 연습을 완료하려면 다음 사항이 필요합니다.
 
-- Microsoft Visual Studio 2010
+- Visual Studio 2010
 
 - 적은 양의 텍스트를 포함 하는 텍스트 파일입니다. 텍스트 파일의 내용은 메시지 상자에 표시 됩니다. 이 연습에서 설명 하는 코드는 사용자가 다음 파일을 사용 하 고 있다고 가정 합니다.
 
@@ -78,7 +78,7 @@ ms.locfileid: "69942056"
      WPF 디자이너가 **디자인** 뷰에서 열리고 mainwindow.xaml 파일이 표시 됩니다. Visual Studio에서 **My Project** 폴더, 응용 프로그램 .xaml 파일 및 mainwindow.xaml 파일을 만듭니다.
 
 ## <a name="targeting-the-net-framework-and-adding-a-reference-to-the-caching-assemblies"></a>.NET Framework 대상 지정 및 캐싱 어셈블리에 대 한 참조 추가
- 기본적으로 WPF 응용 프로그램은를 [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]대상으로 합니다. WPF 응용 프로그램 <xref:System.Runtime.Caching> 에서 네임 스페이스를 사용 하려면 응용 프로그램이 .NET Framework 4 (가 [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]아님)를 대상으로 하 고 네임 스페이스에 대 한 참조를 포함 해야 합니다.
+ 기본적으로 WPF 응용 프로그램은 [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]를 대상으로 합니다. WPF 응용 프로그램에서 <xref:System.Runtime.Caching> 네임 스페이스를 사용 하려면 응용 프로그램이 .NET Framework 4 ([!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]아님)를 대상으로 하 고 네임 스페이스에 대 한 참조를 포함 해야 합니다.
 
  따라서 다음 단계는 .NET Framework 대상을 변경 하 고 <xref:System.Runtime.Caching> 네임 스페이스에 대 한 참조를 추가 하는 것입니다.
 
@@ -97,7 +97,7 @@ ms.locfileid: "69942056"
 
      **고급 컴파일러 설정** 대화 상자가 표시 됩니다.
 
-4. **대상 프레임 워크 (모든 구성)** 목록에서 .NET Framework 4를 선택 합니다. 선택 [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]하지 마십시오.
+4. **대상 프레임 워크 (모든 구성)** 목록에서 .NET Framework 4를 선택 합니다. [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]를 선택 하지 마십시오.
 
 5. **확인**을 클릭합니다.
 
@@ -119,7 +119,7 @@ ms.locfileid: "69942056"
 
      응용 프로그램에 대 한 속성 창이 표시 됩니다.
 
-2. **응용 프로그램** 탭을 클릭합니다.
+2. **애플리케이션** 탭을 클릭합니다.
 
 3. **대상 프레임 워크** 목록에서 .NET Framework 4를 선택 합니다. **.NET Framework 4 클라이언트 프로필**을 선택 하지 마십시오.
 
@@ -136,16 +136,16 @@ ms.locfileid: "69942056"
 
 1. **솔루션 탐색기**에서 mainwindow.xaml 파일을 두 번 클릭 하 여 엽니다.
 
-2. **일반 WPF 컨트롤**의 `Button` **도구 상자**에서 컨트롤을 `MainWindow` 창으로 끌어 옵니다.
+2. **도구 상자**의 **공용 WPF 컨트롤**에서 `Button` 컨트롤을 `MainWindow` 창으로 끌어 옵니다.
 
-3. **속성** 창에서 `Content` `Button` 컨트롤의 속성을 설정 하 여 캐시를 **가져옵니다**.
+3. **속성** 창에서 `Button` 컨트롤의 `Content` 속성을 설정 하 여 캐시를 **가져옵니다**.
 
 ## <a name="initializing-the-cache-and-caching-an-entry"></a>캐시 초기화 및 항목 캐싱
  다음으로 다음 작업을 수행 하는 코드를 추가 합니다.
 
 - Cache 클래스의 인스턴스를 만듭니다. 즉, 새 <xref:System.Runtime.Caching.MemoryCache> 개체를 인스턴스화합니다.
 
-- 캐시에서 개체를 <xref:System.Runtime.Caching.HostFileChangeMonitor> 사용 하 여 텍스트 파일의 변경 내용을 모니터링 하도록 지정 합니다.
+- 캐시에서 <xref:System.Runtime.Caching.HostFileChangeMonitor> 개체를 사용 하 여 텍스트 파일의 변경 내용을 모니터링 하도록 지정 합니다.
 
 - 텍스트 파일을 읽고 해당 내용을 캐시 항목으로 캐시 합니다.
 
@@ -179,7 +179,7 @@ ms.locfileid: "69942056"
 
      <xref:System.Runtime.Caching.ObjectCache> 클래스는 메모리 내 개체 캐시를 제공 하는 기본 제공 클래스입니다.
 
-4. 다음 코드를 추가 하 여 라는 `filecontents`캐시 항목의 내용을 읽습니다.
+4. `filecontents`라는 캐시 항목의 내용을 읽으려면 다음 코드를 추가 합니다.
 
     ```vb
     Dim fileContents As String = TryCast(cache("filecontents"), String)
@@ -189,7 +189,7 @@ ms.locfileid: "69942056"
     string fileContents = cache["filecontents"] as string;
     ```
 
-5. 다음 코드를 추가 하 여 라는 `filecontents` 캐시 항목이 있는지 여부를 확인 합니다.
+5. `filecontents` 라는 캐시 항목이 있는지 확인 하는 다음 코드를 추가 합니다.
 
     ```vb
     If fileContents Is Nothing Then
@@ -206,7 +206,7 @@ ms.locfileid: "69942056"
 
      지정 된 캐시 엔트리가 없으면 텍스트 파일을 읽고 캐시에 캐시 항목으로 추가 해야 합니다.
 
-6. 블록에 다음 코드를 추가 하 여 10 초 후에 <xref:System.Runtime.Caching.CacheItemPolicy> 캐시 엔트리가 만료 되도록 지정 하는 새 개체를 만듭니다. `if/then`
+6. `if/then` 블록에서 다음 코드를 추가 하 여 10 초 후에 캐시 엔트리가 만료 되도록 지정 하는 새 <xref:System.Runtime.Caching.CacheItemPolicy> 개체를 만듭니다.
 
     ```vb
     Dim policy As New CacheItemPolicy()
@@ -218,7 +218,7 @@ ms.locfileid: "69942056"
     policy.AbsoluteExpiration = DateTimeOffset.Now.AddSeconds(10.0);
     ```
 
-     제거 또는 만료 정보를 제공 하지 않는 경우 기본값은입니다 <xref:System.Runtime.Caching.ObjectCache.InfiniteAbsoluteExpiration>. 즉, 캐시 항목이 절대 시간에 따라 만료 되지 않습니다. 대신 캐시 항목은 메모리가 부족할 때만 만료 됩니다. 가장 좋은 방법은 항상 절대 또는 상대 (sliding) 만료를 명시적으로 제공 하는 것입니다.
+     제거 또는 만료 정보를 제공 하지 않는 경우 기본값은 <xref:System.Runtime.Caching.ObjectCache.InfiniteAbsoluteExpiration>입니다. 즉, 캐시 항목이 절대 시간에 따라 만료 되지 않습니다. 대신 캐시 항목은 메모리가 부족할 때만 만료 됩니다. 가장 좋은 방법은 항상 절대 또는 상대 (sliding) 만료를 명시적으로 제공 하는 것입니다.
 
 7. `if/then` 블록 내에서 이전 단계에서 추가한 코드 뒤에 다음 코드를 추가 하 여 모니터링 하려는 파일 경로에 대 한 컬렉션을 만들고 텍스트 파일의 경로를 컬렉션에 추가 합니다.
 
@@ -233,9 +233,9 @@ ms.locfileid: "69942056"
     ```
 
     > [!NOTE]
-    > 사용할 텍스트 파일을 사용할 수 없는 `c:\cache\cacheText.txt`경우 텍스트 파일을 사용할 경로를 지정 합니다.
+    > 사용 하려는 텍스트 파일이 `c:\cache\cacheText.txt`되지 않은 경우 텍스트 파일을 사용할 경로를 지정 합니다.
 
-8. 이전 단계에서 추가한 코드 뒤에 다음 코드를 추가 하 여 캐시 항목에 대 한 변경 <xref:System.Runtime.Caching.HostFileChangeMonitor> 모니터의 컬렉션에 새 개체를 추가 합니다.
+8. 이전 단계에서 추가한 코드 뒤에 다음 코드를 추가 하 여 캐시 항목에 대 한 변경 모니터 컬렉션에 새 <xref:System.Runtime.Caching.HostFileChangeMonitor> 개체를 추가 합니다.
 
     ```vb
     policy.ChangeMonitors.Add(New HostFileChangeMonitor(filePaths))
@@ -245,7 +245,7 @@ ms.locfileid: "69942056"
     policy.ChangeMonitors.Add(new HostFileChangeMonitor(filePaths));
     ```
 
-     개체 <xref:System.Runtime.Caching.HostFileChangeMonitor> 는 텍스트 파일의 경로를 모니터링 하 고 변경 내용이 발생 하는 경우 캐시에 알립니다. 이 예에서는 파일의 내용이 변경 되 면 캐시 항목이 만료 됩니다.
+     <xref:System.Runtime.Caching.HostFileChangeMonitor> 개체는 텍스트 파일의 경로를 모니터링 하 고 변경 내용이 발생 하는 경우 캐시에 알립니다. 이 예에서는 파일의 내용이 변경 되 면 캐시 항목이 만료 됩니다.
 
 9. 이전 단계에서 추가한 코드 뒤에 다음 코드를 추가 하 여 텍스트 파일의 내용을 읽습니다.
 
@@ -259,7 +259,7 @@ ms.locfileid: "69942056"
 
      캐시 엔트리가 만료 되는 시점을 확인할 수 있도록 날짜 및 시간 타임 스탬프가 추가 됩니다.
 
-10. 이전 단계에서 추가한 코드 뒤에 다음 코드를 추가 하 여 파일 내용을 캐시 개체 <xref:System.Runtime.Caching.CacheItem> 에 인스턴스로 삽입 합니다.
+10. 이전 단계에서 추가한 코드 뒤에 다음 코드를 추가 하 여 파일 내용을 캐시 개체에 <xref:System.Runtime.Caching.CacheItem> 인스턴스로 삽입 합니다.
 
     ```vb
     cache.Set("filecontents", fileContents, policy)
@@ -269,9 +269,9 @@ ms.locfileid: "69942056"
     cache.Set("filecontents", fileContents, policy);
     ```
 
-     이전에 만든 개체를 <xref:System.Runtime.Caching.CacheItemPolicy> 매개 변수로 전달 하 여 캐시 엔트리를 제거 하는 방법에 대 한 정보를 지정 합니다.
+     이전에 만든 <xref:System.Runtime.Caching.CacheItemPolicy> 개체를 매개 변수로 전달 하 여 캐시 엔트리를 제거 하는 방법에 대 한 정보를 지정 합니다.
 
-11. `if/then` 블록 뒤에 다음 코드를 추가 하 여 캐시 된 파일 콘텐츠를 메시지 상자에 표시 합니다.
+11. `if/then` 블록 후에 다음 코드를 추가 하 여 캐시 된 파일 콘텐츠를 메시지 상자에 표시 합니다.
 
     ```vb
     MessageBox.Show(fileContents)
@@ -288,7 +288,7 @@ ms.locfileid: "69942056"
 
 #### <a name="to-test-caching-in-the-wpf-application"></a>WPF 응용 프로그램에서 캐싱을 테스트 하려면
 
-1. Ctrl+F5를 눌러 응용 프로그램을 실행합니다.
+1. Ctrl+F5를 눌러 애플리케이션을 실행합니다.
 
      `MainWindow` 창이 표시 됩니다.
 
@@ -319,13 +319,13 @@ ms.locfileid: "69942056"
     > [!NOTE]
     > 파일을 변경 하는 데 더 많은 시간을 허용 하려면 제거 시간을 20 초 이상으로 늘릴 수 있습니다.
 
-## <a name="code-example"></a>코드 예
+## <a name="code-example"></a>코드 예제
  이 연습을 완료 한 후에는 만든 프로젝트에 대 한 코드는 다음 예제와 유사 합니다.
 
  [!code-csharp[CachingWPFApplications#1](~/samples/snippets/csharp/VS_Snippets_Wpf/CachingWPFApplications/CSharp/MainWindow.xaml.cs#1)]
  [!code-vb[CachingWPFApplications#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CachingWPFApplications/VisualBasic/MainWindow.xaml.vb#1)]
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Runtime.Caching.MemoryCache>
 - <xref:System.Runtime.Caching.ObjectCache>

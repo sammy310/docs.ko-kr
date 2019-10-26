@@ -17,12 +17,12 @@ helpviewer_keywords:
 - application development [WPF], files
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
-ms.openlocfilehash: 2bf815a5b34726b8316eea53786811abec00f5bb
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: e50f542086aadc2f61412fe409d7df0f49422718
+ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72581723"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72920371"
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>WPF 애플리케이션 리소스, 콘텐츠 및 데이터 파일
 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] 응용 프로그램은 종종 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], 이미지, 비디오, 오디오 등의 실행 불가능 한 데이터를 포함 하는 파일에 의존 합니다. WPF (Windows Presentation Foundation)는 응용 프로그램 데이터 파일 이라고 하는 이러한 유형의 데이터 파일을 구성 하 고, 식별 하 고, 사용할 수 있는 특별 한 지원을 제공 합니다. 이러한 지원에는 다음을 포함한 특정 애플리케이션 데이터 파일 형식 집합이 포함됩니다.  
@@ -55,7 +55,7 @@ ms.locfileid: "72581723"
 > 이 섹션에서 설명 하는 리소스 파일은 [XAML 리소스](../advanced/xaml-resources.md) 에 설명 된 리소스 파일과 다르며 [응용 프로그램 리소스 관리 (.net)](/visualstudio/ide/managing-application-resources-dotnet)에 설명 된 포함 된 리소스 또는 링크 된 리소스와 다릅니다.  
   
 ### <a name="configuring-resource-files"></a>리소스 파일 구성  
- @No__t_0에서 리소스 파일은 MSBuild (Microsoft build engine) 프로젝트에 `Resource` 항목으로 포함 되는 파일입니다.  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]에서 리소스 파일은 MSBuild (Microsoft build engine) 프로젝트에 `Resource` 항목으로 포함 되는 파일입니다.  
   
 ```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ... >  
@@ -68,7 +68,7 @@ ms.locfileid: "72581723"
 ```  
   
 > [!NOTE]
-> @No__t_0 프로젝트에 파일을 추가 하 고 해당 `Build Action`를 `Resource`로 설정 하 여 리소스 파일을 만듭니다.  
+> Visual Studio에서는 프로젝트에 파일을 추가 하 고 해당 `Build Action`를 `Resource`으로 설정 하 여 리소스 파일을 만듭니다.  
   
  프로젝트가 빌드되면 MSBuild는 리소스를 어셈블리로 컴파일합니다.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "72581723"
  [!code-csharp[WPFAssemblyResourcesSnippets#LoadAPageResourceFileManuallyCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetResourceStreamSnippetWindow.xaml.cs#loadapageresourcefilemanuallycode)]
  [!code-vb[WPFAssemblyResourcesSnippets#LoadAPageResourceFileManuallyCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/ApplicationGetResourceStreamSnippetWindow.xaml.vb#loadapageresourcefilemanuallycode)]  
   
- @No__t_0를 호출 하 여 <xref:System.IO.Stream>에 대 한 액세스를 제공 하는 동안이를 설정할 속성의 형식으로 변환 하는 작업을 추가로 수행 해야 합니다. 대신 코드를 사용 하 여 리소스 파일을 형식의 속성에 직접 로드 하 여 <xref:System.IO.Stream>를 열고 변환 하는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]을 수행할 수 있습니다.  
+ <xref:System.Windows.Application.GetResourceStream%2A>를 호출 하 여 <xref:System.IO.Stream>에 대 한 액세스를 제공 하는 동안이를 설정할 속성의 형식으로 변환 하는 작업을 추가로 수행 해야 합니다. 대신 코드를 사용 하 여 리소스 파일을 형식의 속성에 직접 로드 하 여 <xref:System.IO.Stream>를 열고 변환 하는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]을 수행할 수 있습니다.  
   
  다음 예제에서는 코드를 사용 하 여 <xref:System.Windows.Controls.Frame> (`pageFrame`)에 직접 <xref:System.Windows.Controls.Page>를 로드 하는 방법을 보여 줍니다.  
   
@@ -109,12 +109,12 @@ ms.locfileid: "72581723"
 ```  
   
 > [!NOTE]
-> @No__t_0 새 <xref:System.Windows.Window>, <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Page>, <xref:System.Windows.Documents.FlowDocument> 또는 <xref:System.Windows.ResourceDictionary>를 프로젝트에 추가 하면 마크업 파일에 대 한 `Build Action` 기본적으로 `Page` 됩니다.  
+> Visual Studio에서 프로젝트에 새 <xref:System.Windows.Window>, <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Page>, <xref:System.Windows.Documents.FlowDocument>또는 <xref:System.Windows.ResourceDictionary>를 추가 하면 마크업 파일에 대 한 `Build Action` 기본적으로 `Page`됩니다.  
   
- @No__t_0 항목이 있는 프로젝트가 컴파일되면 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 항목이 이진 형식으로 변환 되 고 연결 된 어셈블리로 컴파일됩니다. 결과적으로 이 파일을 일반적인 리소스 파일과 같은 방법으로 사용할 수 있습니다.  
+ `Page` 항목이 있는 프로젝트가 컴파일되면 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 항목이 이진 형식으로 변환 되 고 연결 된 어셈블리로 컴파일됩니다. 결과적으로 이 파일을 일반적인 리소스 파일과 같은 방법으로 사용할 수 있습니다.  
   
 > [!NOTE]
-> @No__t_0 파일을 `Resource` 항목으로 구성 하 고 코드에 코드를 사용할 수 없는 경우 원시 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 원시 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]의 이진 버전이 아닌 어셈블리로 컴파일됩니다.  
+> [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 파일을 `Resource` 항목으로 구성 하 고 코드에 코드를 사용할 수 없는 경우 원시 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 원시 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]의 이진 버전이 아닌 어셈블리로 컴파일됩니다.  
   
 <a name="Content_Files"></a>   
 ## <a name="content-files"></a>콘텐츠 파일  
@@ -140,17 +140,17 @@ ms.locfileid: "72581723"
 ```  
   
 > [!NOTE]
-> @No__t_0 프로젝트에 파일을 추가 하 고 해당 `Build Action`를 `Content`로 설정 하 여 콘텐츠 파일을 만들고 `Copy to Output Directory`를 `Copy always` (`Always`와 같음) 및 `Copy if newer` (`PreserveNewest`와 같음)로 설정 합니다.  
+> Visual Studio에서는 프로젝트에 파일을 추가 하 고 해당 `Build Action` `Content`로 설정 하 고 `Copy to Output Directory`를 `Copy always` (`Always`와 같음) 및 `Copy if newer` (`PreserveNewest`와 같음)로 설정 하 여 콘텐츠 파일을 만듭니다.  
   
  프로젝트가 빌드되면 <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> 특성이 각 콘텐츠 파일에 대 한 어셈블리의 메타 데이터로 컴파일됩니다.  
   
  `[assembly: AssemblyAssociatedContentFile("ContentFile.xaml")]`  
   
- @No__t_0 값은 프로젝트에서 해당 위치에 상대적인 콘텐츠 파일 경로를 의미 합니다. 예를 들어 콘텐츠 파일이 프로젝트 하위 폴더에 있는 경우 추가 경로 정보가 <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> 값에 통합 됩니다.  
+ <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> 값은 프로젝트에서 해당 위치에 상대적인 콘텐츠 파일 경로를 의미 합니다. 예를 들어 콘텐츠 파일이 프로젝트 하위 폴더에 있는 경우 추가 경로 정보가 <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> 값에 통합 됩니다.  
   
  `[assembly: AssemblyAssociatedContentFile("Resources/ContentFile.xaml")]`  
   
- @No__t_0 값은 빌드 출력 폴더의 콘텐츠 파일에 대 한 경로 값 이기도 합니다.  
+ <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> 값은 빌드 출력 폴더의 콘텐츠 파일에 대 한 경로 값 이기도 합니다.  
   
 ### <a name="using-content-files"></a>콘텐츠 파일 사용  
  콘텐츠 파일을 로드 하려면 <xref:System.Windows.Application> 클래스의 <xref:System.Windows.Application.GetContentStream%2A> 메서드를 호출 하 여 원하는 콘텐츠 파일을 식별 하는 pack URI를 전달 합니다. <xref:System.Windows.Application.GetContentStream%2A>는 콘텐츠 파일을 <xref:System.IO.Stream>로 노출 하 고 해당 콘텐츠 형식을 설명 하는 <xref:System.Windows.Resources.StreamResourceInfo> 개체를 반환 합니다.  
@@ -160,7 +160,7 @@ ms.locfileid: "72581723"
  [!code-csharp[WPFAssemblyResourcesSnippets#LoadAPageContentFileManuallyCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetContentStreamSnippetWindow.xaml.cs#loadapagecontentfilemanuallycode)]
  [!code-vb[WPFAssemblyResourcesSnippets#LoadAPageContentFileManuallyCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/ApplicationGetContentStreamSnippetWindow.xaml.vb#loadapagecontentfilemanuallycode)]  
   
- @No__t_0를 호출 하 여 <xref:System.IO.Stream>에 대 한 액세스를 제공 하는 동안이를 설정할 속성의 형식으로 변환 하는 작업을 추가로 수행 해야 합니다. 대신 코드를 사용 하 여 리소스 파일을 형식의 속성에 직접 로드 하 여 <xref:System.IO.Stream>를 열고 변환 하는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]을 수행할 수 있습니다.  
+ <xref:System.Windows.Application.GetContentStream%2A>를 호출 하 여 <xref:System.IO.Stream>에 대 한 액세스를 제공 하는 동안이를 설정할 속성의 형식으로 변환 하는 작업을 추가로 수행 해야 합니다. 대신 코드를 사용 하 여 리소스 파일을 형식의 속성에 직접 로드 하 여 <xref:System.IO.Stream>를 열고 변환 하는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]을 수행할 수 있습니다.  
   
  다음 예제에서는 코드를 사용 하 여 <xref:System.Windows.Controls.Frame> (`pageFrame`)에 직접 <xref:System.Windows.Controls.Page>를 로드 하는 방법을 보여 줍니다.  
   
@@ -187,12 +187,12 @@ ms.locfileid: "72581723"
   
  [!code-xaml[WPFAssemblyResourcesSnippets#AbsolutePackUriFileHttpReferenceXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/AbsolutePackUriPage.xaml#absolutepackurifilehttpreferencexaml)]  
   
- 하지만 file:/// 및 http:// 스키마를 사용하려면 애플리케이션이 완전히 신뢰되어야 합니다. 응용 프로그램이 인터넷 이나 인트라넷에서 시작 된 [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] 경우 해당 위치에서 시작 된 응용 프로그램에 허용 되는 사용 권한 집합만 요청 하는 경우 느슨한 파일은 응용 프로그램의 원본 사이트 에서만 로드 될 수 있습니다 (시작 위치). 이러한 파일은 *원본 사이트* 파일 이라고 합니다.  
+ 하지만 file:/// 및 http:// 스키마를 사용하려면 애플리케이션이 완전히 신뢰되어야 합니다. 응용 프로그램이 인터넷 이나 인트라넷에서 시작 된 [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] 경우 해당 위치에서 시작 된 응용 프로그램에 허용 되는 사용 권한 집합만 요청 하는 경우 느슨한 파일은 응용 프로그램의 원본 사이트 에서만 로드할 수 있습니다 ( 시작 위치). 이러한 파일은 *원본 사이트* 파일 이라고 합니다.  
   
  원본 사이트 파일이 부분 신뢰 애플리케이션에서만 사용되는 것은 아니지만 부분 신뢰 애플리케이션에서는 원본 사이트 파일만을 사용할 수 있습니다. 완전 신뢰 애플리케이션의 경우에서도 빌드할 때 인식하지 못한 애플리케이션 데이터 파일을 로드해야 할 경우가 있습니다. 완전 신뢰 애플리케이션은 file:///을 사용할 수 있지만 이 경우 애플리케이션 데이터 파일이 애플리케이션 어셈블리와 같은 폴더 또는 하위 폴더에 설치될 수 있습니다. file:///에는 파일의 전체 경로를 사용해야 하기 때문에 file:///을 사용하는 방법보다 원본 사이트 참조를 사용하는 방법이 쉽습니다.  
   
 > [!NOTE]
-> 원본 사이트 파일은 클라이언트 컴퓨터의 [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)]와 함께 캐시 되지 않지만 콘텐츠 파일은입니다. 따라서 구체적으로 요청된 경우에만 다운로드됩니다. @No__t_0 응용 프로그램에 큰 미디어 파일이 있는 경우 해당 파일을 원본 사이트로 구성 하면 초기 응용 프로그램 시작 속도가 훨씬 빨라지고, 파일은 요청 시에만 다운로드 됩니다.  
+> 원본 사이트 파일은 클라이언트 컴퓨터의 [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)]와 함께 캐시 되지 않지만 콘텐츠 파일은입니다. 따라서 구체적으로 요청된 경우에만 다운로드됩니다. [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] 응용 프로그램에 큰 미디어 파일이 있는 경우 해당 파일을 원본 사이트로 구성 하면 초기 응용 프로그램 시작 속도가 훨씬 빨라지고, 파일은 요청 시에만 다운로드 됩니다.  
   
 ### <a name="configuring-site-of-origin-files"></a>원본 사이트 파일 구성  
  원본 사이트 파일이 없거나 컴파일할 때 알 수 없는 경우에는 `XCopy` 명령줄 프로그램 또는 [!INCLUDE[TLA#tla_wininstall](../../../../includes/tlasharptla-wininstall-md.md)]를 사용 하는 등의 방법으로 필요한 파일을 런타임에 사용할 수 있도록 기존 배포 메커니즘을 사용 해야 합니다.  
@@ -210,7 +210,7 @@ ms.locfileid: "72581723"
 ```  
   
 > [!NOTE]
-> @No__t_0에서는 파일을 프로젝트에 추가 하 고 해당 `Build Action`를 `None`로 설정 하 여 원본 사이트 파일을 만듭니다.  
+> Visual Studio에서는 프로젝트에 파일을 추가 하 고 해당 `Build Action`를 `None`으로 설정 하 여 원본 사이트 파일을 만듭니다.  
   
  프로젝트가 빌드되면 MSBuild는 지정 된 파일을 빌드 출력 폴더에 복사 합니다.  
   
@@ -222,7 +222,7 @@ ms.locfileid: "72581723"
  [!code-csharp[WPFAssemblyResourcesSnippets#LoadAPageSOOFileManuallyCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/SOOPage.xaml.cs#loadapagesoofilemanuallycode)]
  [!code-vb[WPFAssemblyResourcesSnippets#LoadAPageSOOFileManuallyCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/SOOPage.xaml.vb#loadapagesoofilemanuallycode)]  
   
- @No__t_0를 호출 하 여 <xref:System.IO.Stream>에 대 한 액세스를 제공 하는 동안이를 설정할 속성의 형식으로 변환 하는 작업을 추가로 수행 해야 합니다. 대신 코드를 사용 하 여 리소스 파일을 형식의 속성에 직접 로드 하 여 <xref:System.IO.Stream>를 열고 변환 하는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]을 수행할 수 있습니다.  
+ <xref:System.Windows.Application.GetRemoteStream%2A>를 호출 하 여 <xref:System.IO.Stream>에 대 한 액세스를 제공 하는 동안이를 설정할 속성의 형식으로 변환 하는 작업을 추가로 수행 해야 합니다. 대신 코드를 사용 하 여 리소스 파일을 형식의 속성에 직접 로드 하 여 <xref:System.IO.Stream>를 열고 변환 하는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]을 수행할 수 있습니다.  
   
  다음 예제에서는 코드를 사용 하 여 <xref:System.Windows.Controls.Frame> (`pageFrame`)에 직접 <xref:System.Windows.Controls.Page>를 로드 하는 방법을 보여 줍니다.  
   

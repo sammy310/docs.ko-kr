@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WPF [WPF], about application development
 - application development [WPF], about
 ms.assetid: 2996ce5e-81e9-49ae-881b-952db3dd1b7e
-ms.openlocfilehash: 405a8d3c8b922d0f74e522e85ea3096d989c478e
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 85218bd4b6e900bd4508a5c90132419a07846f2c
+ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582497"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72920207"
 ---
 # <a name="application-development"></a>애플리케이션 개발
 <a name="introduction"></a>WPF (Windows Presentation Foundation)는 다음과 같은 종류의 응용 프로그램을 개발 하는 데 사용할 수 있는 프레젠테이션 프레임 워크입니다.  
@@ -74,7 +74,7 @@ ms.locfileid: "72582497"
   
  <xref:System.Windows.Window>는 대화 상자로 알려진 특별한 유형의 창을 만드는 기능을 지원합니다. 모달 및 모덜리스 유형의 대화 상자를 모두 만들 수 있습니다.  
   
- 편의를 위해 응용 프로그램에 대 한 재사용 및 일관적인 사용자 환경의 이점은 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] <xref:Microsoft.Win32.OpenFileDialog>, <xref:Microsoft.Win32.SaveFileDialog> 및 <xref:System.Windows.Controls.PrintDialog>의 세 가지 일반적인 Windows 대화 상자를 노출 합니다.  
+ 편의를 위해 응용 프로그램에 대 한 재사용 및 일관적인 사용자 환경의 이점은 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] <xref:Microsoft.Win32.OpenFileDialog>, <xref:Microsoft.Win32.SaveFileDialog>및 <xref:System.Windows.Controls.PrintDialog>의 세 가지 일반적인 Windows 대화 상자를 노출 합니다.  
   
  메시지 상자는 중요한 텍스트 정보를 보여 주고 간단한 예/아니요/확인/취소 질문을 묻는 특별한 유형의 대화 상자입니다. <xref:System.Windows.MessageBox> 클래스를 사용하여 메시지 상자를 만들고 표시합니다.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "72582497"
   
 <a name="Build_and_Deploy"></a>   
 ## <a name="build-and-deploy"></a>빌드 및 배포  
- 명령줄 컴파일러를 사용하여 명령 프롬프트에서 간단한 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 애플리케이션을 빌드할 수 있지만 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]와 [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]가 통합되어 개발 및 빌드 프로세스를 단순화한 추가 지원을 제공합니다. 자세한 내용은 [WPF 애플리케이션 빌드](building-a-wpf-application-wpf.md)를 참조하세요.  
+ 간단한 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램은 명령줄 컴파일러를 사용 하 여 명령 프롬프트에서 빌드할 수 있지만 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Visual Studio와 통합 되어 개발 및 빌드 프로세스를 간소화 하는 추가 지원을 제공 합니다. 자세한 내용은 [WPF 애플리케이션 빌드](building-a-wpf-application-wpf.md)를 참조하세요.  
   
  빌드하는 애플리케이션의 유형에 따라 선택할 수 있는 하나 이상의 배포 옵션이 있습니다. 자세한 내용은 [WPF 애플리케이션 배포](deploying-a-wpf-application-wpf.md)를 참조하세요.  
   

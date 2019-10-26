@@ -12,17 +12,17 @@ helpviewer_keywords:
 - graphics features [WPF]
 - transition effects [WPF]
 ms.assetid: 1817d9dc-3d6c-46cb-afc8-63b0bae35e37
-ms.openlocfilehash: be8dcfce44347e8099e8cfa693bcee341514de2b
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 150b742c2195c07abf2b2823871627b0ba827580
+ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291433"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72919983"
 ---
 # <a name="graphics-and-multimedia"></a>그래픽 및 멀티미디어
 
 <a name="introduction"></a>
- @ no__t-2는 멀티미디어, 벡터 그래픽, 애니메이션 및 콘텐츠 컴퍼지션을 지원 하 여 개발자가 흥미로운 사용자 인터페이스 및 콘텐츠를 쉽게 빌드할 수 있도록 합니다. [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]를 사용하여 벡터 그래픽이나 복잡한 애니메이션을 만든 후 미디어를 애플리케이션에 통합할 수 있습니다.
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]는 멀티미디어, 벡터 그래픽, 애니메이션 및 콘텐츠 컴퍼지션을 지원 하 여 개발자가 흥미로운 사용자 인터페이스 및 콘텐츠를 쉽게 빌드할 수 있도록 합니다. Visual Studio를 사용 하 여 벡터 그래픽 또는 복잡 한 애니메이션을 만들고 미디어를 응용 프로그램에 통합할 수 있습니다.
 
 이 항목에서는 그래픽, 전환 효과, 소리 및 비디오를 애플리케이션에 추가할 수 있도록 하는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]의 그래픽, 애니메이션 및 미디어 기능을 소개합니다.
 
@@ -45,11 +45,11 @@ ms.locfileid: "72291433"
 
 - 픽셀 셰이더 3 지원
 
-  WPF 4는 응용 프로그램이 p (픽셀 셰이더) 버전 3.0을 사용 하 여 효과를 쓸 수 있도록 함으로써 WPF 3.5 s p 1에 도입 된 <xref:System.Windows.Media.Effects.ShaderEffect> 지원 기능을 기반으로 구축 되었습니다. PS 3.0 셰이더 모델은 PS 2.0보다 더 정교해졌으며 지원되는 하드웨어에 더 많은 영향을 미칠 수 있습니다.
+  WPF 4는 응용 프로그램이 p (픽셀 셰이더) 버전 3.0을 사용 하 여 효과를 쓸 수 있도록 하 여 WPF 3.5 s p 1에 도입 된 <xref:System.Windows.Media.Effects.ShaderEffect> 지원을 기반으로 합니다. PS 3.0 셰이더 모델은 PS 2.0보다 더 정교해졌으며 지원되는 하드웨어에 더 많은 영향을 미칠 수 있습니다.
 
 - 감속/가속 함수
 
-  감속/가속 함수를 사용하여 애니메이션을 개선하고 동작을 좀 더 강력히 제어할 수 있습니다. 예를 들어 <xref:System.Windows.Media.Animation.ElasticEase>을 애니메이션에 적용 하 여 애니메이션에 튕기는 동작을 제공할 수 있습니다. 자세한 내용은 <xref:System.Windows.Media.Animation> 네임 스페이스의 감속/가속 유형을 참조 하세요.
+  감속/가속 함수를 사용하여 애니메이션을 개선하고 동작을 좀 더 강력히 제어할 수 있습니다. 예를 들어 애니메이션에 <xref:System.Windows.Media.Animation.ElasticEase>를 적용 하 여 애니메이션에 튕기는 동작을 제공할 수 있습니다. 자세한 내용은 <xref:System.Windows.Media.Animation> 네임 스페이스의 감속/가속 유형을 참조 하세요.
 
 <a name="graphics_and_rendering"></a>
 
@@ -59,7 +59,7 @@ WPF는 고품질의 2차원 그래픽을 지원합니다. 기능으로는 브러
 
 ### <a name="2-d-shapes"></a>2차원 도형
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]은 다음 그림에 표시 된 사각형 및 타원과 같은 일반적으로 사용 되는 벡터 그리기 2 차원 도형 라이브러리를 제공 합니다.
+[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]는 다음 그림에 표시 된 사각형 및 타원과 같이 일반적으로 사용 되는 벡터 그리기 2 차원 도형 라이브러리를 제공 합니다.
 
 ![타원과 사각형을 보여 주는 다이어그램](./media/index/two-deminsional-shapes-ellipses-rectangles.png)
 
@@ -101,7 +101,7 @@ End Class
 
 ### <a name="2-d-geometries"></a>2차원 기하 도형
 
-@No__t-0이 제공 하는 2 차원 셰이프가 충분 하지 않은 경우 기 하 도형 및 경로에 대 한 @no__t 1 지원을 사용 하 여 직접 만들 수 있습니다. 다음 그림에서는 기하 도형을 그리기 브러시로 사용하여 도형을 만들고 다른 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 요소를 클리핑하는 방법을 보여 줍니다.
+[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]에서 제공 하는 2 차원 셰이프가 충분 하지 않을 경우 기 하 도형 및 경로에 대 한 지원을 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 사용 하 여 직접 만들 수 있습니다. 다음 그림에서는 기하 도형을 그리기 브러시로 사용하여 도형을 만들고 다른 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 요소를 클리핑하는 방법을 보여 줍니다.
 
 ![기 하 도형을 사용 하 여 도형을 만드는 방법을 보여 주는 스크린샷](./media/index/use-geometries-create-shapes.png)
 
@@ -109,7 +109,7 @@ End Class
 
 ### <a name="2-d-effects"></a>2차원 효과
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]은 다양 한 효과를 만드는 데 사용할 수 있는 2 차원 클래스 라이브러리를 제공 합니다. @No__t-0의 2 차원 렌더링 기능은 그라데이션, 비트맵, 그림 및 비디오를 포함 하는 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 요소를 그리는 기능을 제공 합니다. 그리고 회전, 크기 조정 및 기울이기를 사용 하 여 조작할 수 있습니다. 다음 그림에서는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 브러시를 사용하여 획득할 수 있는 많은 효과의 예를 보여 줍니다.
+[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]는 다양 한 효과를 만드는 데 사용할 수 있는 2 차원 클래스 라이브러리를 제공 합니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]의 2 차원 렌더링 기능은 그라데이션, 비트맵, 그림 및 비디오를 포함 하는 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 요소를 그리는 기능을 제공 합니다. 그리고 회전, 크기 조정 및 기울이기를 사용 하 여 조작할 수 있습니다. 다음 그림에서는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 브러시를 사용하여 획득할 수 있는 많은 효과의 예를 보여 줍니다.
 
 ![여러 WPF 브러시 및 그리기 요소를 보여 주는 그림입니다.](./media/index/brushes-paint-elements.png)
 
@@ -119,7 +119,7 @@ End Class
 
 ## <a name="3-d-rendering"></a>3차원 렌더링
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]은 더 흥미로운 레이아웃, [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 및 데이터 시각화를 만들 수 있도록 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]의 2 차원 그래픽 지원과 통합 되는 3 차원 렌더링 기능 집합을 제공 합니다. 스펙트럼의 한쪽 끝에서-0 @no__t을 사용 하면 다음 그림에서 설명 하는 3 차원 모양의 표면에 2 차원 이미지를 렌더링할 수 있습니다.
+[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]는 더 흥미로운 레이아웃, [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]및 데이터 시각화를 만들 수 있도록 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]에서 2 차원 그래픽 지원과 통합 되는 3 차원 렌더링 기능 집합을 제공 합니다. 스펙트럼의 한쪽 끝에서 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]를 사용 하면 다음 그림에서 설명 하는 3 차원 모양의 표면에 2 차원 이미지를 렌더링할 수 있습니다.
 
 ![질감이 다른 3 차원 도형을 보여 주는 샘플의 스크린샷](./media/index/visual-three-dimensional-shape.png)
 
@@ -157,7 +157,7 @@ End Class
 <MediaElement Source="media\numbers.wmv" Width="450" Height="250" />
 ```
 
-<xref:System.Windows.Controls.MediaElement>은 비디오와 오디오를 둘 다 재생할 수 있으며 사용자 지정 Ui를 간편 하 게 만들 수 있을 만큼 확장할 수 있습니다.
+<xref:System.Windows.Controls.MediaElement>은 비디오와 오디오를 모두 재생할 수 있으며 사용자 지정 Ui를 쉽게 만들 수 있도록 확장 가능 합니다.
 
 자세한 내용은 [멀티미디어 개요](multimedia-overview.md)를 참조하세요.
 

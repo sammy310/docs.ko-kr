@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 925250a2284a47d0f9caf93158e2e23d9283aef3
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: fdeb40f1e092f8c7e96e9d59e1b07673201fbe9d
+ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774741"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72920383"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>WPF 보안 전략 - 플랫폼 보안
 WPF (Windows Presentation Foundation)는 다양 한 보안 서비스를 제공 하지만 운영 체제, CLR 및 Internet Explorer를 포함 하는 기본 플랫폼의 보안 기능도 활용 합니다. 이러한 계층이 결합되어 다음 그림과 같이 단일 실패 지점을 방지하는 강력한 심층 방어 보안 모델인 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]를 제공합니다.  
@@ -165,7 +165,7 @@ Windows Vista의 WPF 사용자는 "최소 권한 사용자 액세스", 코드 �
   
 <a name="ClickOnce_Deployment"></a>   
 ### <a name="clickonce-deployment"></a>ClickOnce 배포  
- ClickOnce는 .NET Framework와 함께 제공 되는 포괄적인 배포 기술 이며 [!INCLUDE[TLA#tla_visualstu](../../../includes/tlasharptla-visualstu-md.md)]와 통합 됩니다. 자세한 내용은 [clickonce 보안 및 배포](/visualstudio/deployment/clickonce-security-and-deployment) 를 참조 하세요. ClickOnce를 사용 하 여 독립 실행형 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램을 배포할 수 있지만 브라우저에서 호스팅되는 응용 프로그램은 ClickOnce를 사용 하 여 배포 해야 합니다.  
+ ClickOnce는 .NET Framework에 포함 되어 있으며 Visual Studio와 통합 되는 포괄적인 배포 기술입니다 (자세한 내용은 [clickonce 보안 및 배포](/visualstudio/deployment/clickonce-security-and-deployment) 참조). ClickOnce를 사용 하 여 독립 실행형 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램을 배포할 수 있지만 브라우저에서 호스팅되는 응용 프로그램은 ClickOnce를 사용 하 여 배포 해야 합니다.  
   
  ClickOnce를 사용 하 여 배포 된 응용 프로그램에는 CAS (코드 액세스 보안)를 통해 추가 보안 계층이 제공 됩니다. 기본적으로 ClickOnce 배포 응용 프로그램은 필요한 사용 권한을 요청 합니다. 애플리케이션이 배포된 소스 영역에 대한 권한 집합을 초과하지 않는 경우에만 해당 권한이 부여됩니다. 시작 영역의 권한 집합에서 제공 하는 것 보다 작은 경우라도 사용 권한 집합을 필요한 권한 으로만 줄이면 응용 프로그램이 액세스할 수 있는 리소스 수가 최소한으로 줄어듭니다. 따라서 애플리케이션을 가로채는 경우 클라이언트 컴퓨터의 손상 가능성이 줄어듭니다.  
   
@@ -179,7 +179,7 @@ Windows Vista의 WPF 사용자는 "최소 권한 사용자 액세스", 코드 �
   
 <a name="Microsoft_Internet_Explorer_Security"></a>   
 ## <a name="microsoft-internet-explorer-security"></a>Microsoft Internet Explorer 보안  
- 보안 문제를 줄이고 보안 구성을 간소화 하는 것 외에도 Microsoft Internet Explorer 6 (SP2)에는 [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)] 사용자의 보안을 강화 하는 향상 된 보안 기능이 포함 되어 있습니다. 이러한 기능은 사용자가 검색 환경을 보다 효율적으로 제어할 수 있도록 하기 위한 것입니다.  
+ 보안 문제를 줄이고 보안 구성을 간소화 하는 것 외에도 Microsoft Internet Explorer 6 (SP2)에는 [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)]사용자의 보안을 강화 하는 향상 된 보안 기능이 포함 되어 있습니다. 이러한 기능은 사용자가 검색 환경을 보다 효율적으로 제어할 수 있도록 하기 위한 것입니다.  
   
  IE6 SP2 이전에는 사용자에 게 다음이 적용 될 수 있습니다.  
   
@@ -195,7 +195,7 @@ Windows Vista의 WPF 사용자는 "최소 권한 사용자 액세스", 코드 �
   
  동일한 사용자 시작 논리가 보안 프롬프트를 **열기** /**저장** 하는 데에도 적용 됩니다. 이전에 설치 된 컨트롤의 업그레이드를 나타내지 않는 한 ActiveX 설치 대화 상자는 항상 알림 표시줄 아래에 트래핑 됩니다. 이러한 조치가 결합되어 사용자에게 더 안전하고 제어된 사용자 환경을 제공합니다. 사용자가 원하지 않는 소프트웨어나 악성 소프트웨어를 설치하도록 유인하는 사이트로부터 보호되기 때문입니다.  
   
- 또한 이러한 기능은 IE6 s p 2를 사용 하 여 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램을 다운로드 하 고 설치할 수 있는 웹 사이트를 검색 하는 고객을 보호 합니다. 특히 IE6 s p 2가 사용자 환경을 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 구축 하는 데 사용 된 기술에 관계 없이 악의적인 응용 프로그램 또는 유해한 응용 프로그램을 설치할 기회를 줄이는 향상 된 사용자 환경을 제공 하기 때문입니다. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]는 ClickOnce를 사용 하 여 인터넷을 통해 응용 프로그램을 쉽게 다운로드할 수 있도록 이러한 보호 기능에 추가 합니다. [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)]은 인터넷 영역 보안 샌드박스 내에서 실행되므로 매끄럽게 시작할 수 있습니다. 반면, 독립 실행형 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 애플리케이션을 실행하려면 완전 신뢰가 필요합니다. 이러한 응용 프로그램의 경우 ClickOnce는 시작 프로세스 중에 보안 대화 상자를 표시 하 여 응용 프로그램의 추가 보안 요구 사항을 사용 하도록 알립니다. 그러나 사용자가 시작해야 하고, 사용자가 시작한 논리에 의해 제어되며, 취소할 수 있습니다.  
+ 또한 이러한 기능은 IE6 s p 2를 사용 하 여 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램을 다운로드 하 고 설치할 수 있는 웹 사이트를 검색 하는 고객을 보호 합니다. 특히 IE6 s p 2가 사용자 환경을 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]구축 하는 데 사용 된 기술에 관계 없이 악의적인 응용 프로그램 또는 유해한 응용 프로그램을 설치할 기회를 줄이는 향상 된 사용자 환경을 제공 하기 때문입니다. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]는 ClickOnce를 사용 하 여 인터넷을 통해 응용 프로그램을 쉽게 다운로드할 수 있도록 이러한 보호 기능에 추가 합니다. [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)]은 인터넷 영역 보안 샌드박스 내에서 실행되므로 매끄럽게 시작할 수 있습니다. 반면, 독립 실행형 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 애플리케이션을 실행하려면 완전 신뢰가 필요합니다. 이러한 응용 프로그램의 경우 ClickOnce는 시작 프로세스 중에 보안 대화 상자를 표시 하 여 응용 프로그램의 추가 보안 요구 사항을 사용 하도록 알립니다. 그러나 사용자가 시작해야 하고, 사용자가 시작한 논리에 의해 제어되며, 취소할 수 있습니다.  
   
  Internet Explorer 7은 보안에 대 한 지속적인 약정의 일환으로 IE6 s p 2의 보안 기능을 통합 하 고 확장 합니다.  
   
