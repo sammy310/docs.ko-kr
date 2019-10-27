@@ -184,8 +184,6 @@
           href: deploying-wcf-applications-with-clickonce.md
     - name: 관리 및 진단
       href: diagnostics/
-    - name: 시스템 요구 사항
-      href: wcf-system-requirements.md
     - name: WCF에 필요한 운영 체제 리소스
       href: operating-system-resources-required-by-wcf.md
     - name: 설치 문제 해결
