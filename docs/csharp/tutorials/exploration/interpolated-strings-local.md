@@ -4,12 +4,12 @@ description: 이 자습서에서는 C# 문자열 보간 기능을 사용하여 �
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/23/2018
-ms.openlocfilehash: e142c48cd944fd6119c697a299308dc9ce1203ca
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 813623f4036813d7c1af440a60387f5d8e889354
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834130"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774043"
 ---
 # <a name="use-string-interpolation-to-construct-formatted-strings"></a>문자열 보간을 사용하여 형식이 지정된 문자열 생성
 
@@ -68,9 +68,9 @@ using System;
 public class Vegetable
 {
    public Vegetable(string name) => Name = name;
-   
+
    public string Name { get; }
-   
+
    public override string ToString() => Name;
 }
 
@@ -107,7 +107,7 @@ Console.WriteLine($"On {date:d}, the price of {item} was {price:C2} per {unit}."
 
 콜론(“:”)과 형식 문자열을 사용하여 보간 식에 따라 형식 문자열을 지정합니다. "d"는 간단한 날짜 형식을 나타내는 [표준 날짜 및 시간 형식 문자열](../../../standard/base-types/standard-date-and-time-format-strings.md#the-short-date-d-format-specifier)입니다. "C2"는 소수점 뒤 두 자릿수를 포함하는 통화 값으로 숫자를 나타내는 [표준 숫자 형식 문자열](../../../standard/base-types/standard-numeric-format-strings.md#the-currency-c-format-specifier)입니다.
 
-.NET 라이브러리의 많은 형식은 미리 정의된 형식 문자열 집합을 지원합니다. 여기에는 모든 숫자 형식과 날짜 및 시간 형식이 포함됩니다. 형식 문자열을 지원하는 형식의 전체 목록을 보려면 [.NET의 서식 지정 형식](../../../standard/base-types/formatting-types.md) 문서의 [형식 문자열 및 .NET 클래스 라이브러리 형식](../../../standard/base-types/formatting-types.md#stringRef)을 참조하세요.
+.NET 라이브러리의 많은 형식은 미리 정의된 형식 문자열 집합을 지원합니다. 여기에는 모든 숫자 형식과 날짜 및 시간 형식이 포함됩니다. 형식 문자열을 지원하는 형식의 전체 목록을 보려면 [.NET의 서식 지정 형식](../../../standard/base-types/formatting-types.md) 문서의 [형식 문자열 및 .NET 클래스 라이브러리 형식](../../../standard/base-types/formatting-types.md#format-strings-and-net-types)을 참조하세요.
 
 텍스트 편집기에서 형식 문자열을 수정하고, 변경할 때마다 프로그램을 다시 실행하여 날짜 및 시간의 서식과 숫자 값에 미치는 영향을 확인해 보세요. `{date:d}`의 "d"를 "t"(짧은 시간 형식 표시), "y"(연도 및 월 표시) 및 "yyyy"(연도를 4자리 숫자로 표시)로 변경합니다. `{price:C2}`의 "C2"를 "e"(지수 표기) 및 "F3"(소수점 뒤 세 자릿수의 숫자 값)으로 변경합니다.
 

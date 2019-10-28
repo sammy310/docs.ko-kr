@@ -29,12 +29,12 @@ helpviewer_keywords:
 - ^ operator [C#]
 - bitwise logical OR operator [C#]
 - '| operator [C#]'
-ms.openlocfilehash: c18a06971887049a443f0bd1af7c77610a787a27
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 0a251e8d04f31a736ee6acbf4b8e913cfb8ca6df
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67609950"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771717"
 ---
 # <a name="bitwise-and-shift-operators-c-reference"></a>비트 및 시프트 연산자(C# 참조)
 
@@ -158,7 +158,7 @@ x = x op y
 
 ## <a name="shift-count-of-the-shift-operators"></a>시프트 연산자의 시프트 수
 
-시트프 연산자 `<<` 및 `>>`의 경우 오른쪽 피연산자의 형식은 [int](../builtin-types/integral-numeric-types.md)이거나 `int`로의 [미리 정의된 암시적 숫자 변환](../keywords/implicit-numeric-conversions-table.md)이 있는 형식이어야 합니다.
+시트프 연산자 `<<` 및 `>>`의 경우 오른쪽 피연산자의 형식은 [int](../builtin-types/integral-numeric-types.md)이거나 `int`로의 [미리 정의된 암시적 숫자 변환](../builtin-types/numeric-conversions.md#implicit-numeric-conversions)이 있는 형식이어야 합니다.
 
 `x << count` 및 `x >> count`식의 경우 실제 시프트 수는 다음과 같이 `x` 형식에 따라 달라집니다.
 

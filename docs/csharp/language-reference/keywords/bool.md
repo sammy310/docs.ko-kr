@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - bool keyword [C#]
 ms.assetid: 551cfe35-2632-4343-af49-33ad12da08e2
-ms.openlocfilehash: 3e4e83b52cd6b275e68039693c774f6490f2b88f
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 880e8c0b733afbf5c09f543e06a5a4a858d2b456
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69606050"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771856"
 ---
 # <a name="bool-c-reference"></a>bool(C# 참조)
 
@@ -57,5 +57,3 @@ C++에서 `bool` 형식의 값은 `int` 형식의 값으로 변환될 수 있습
 - [C# 키워드](./index.md)
 - [정수 형식](../builtin-types/integral-numeric-types.md)
 - [기본 제공 형식 표](./built-in-types-table.md)
-- [암시적 숫자 변환 표](./implicit-numeric-conversions-table.md)
-- [명시적 숫자 변환 표](./explicit-numeric-conversions-table.md)
