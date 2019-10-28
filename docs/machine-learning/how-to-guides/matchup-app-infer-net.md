@@ -3,12 +3,12 @@ title: Infer.NET 및 확률적 프로그래밍을 사용하여 게임 대전 목
 description: Infer.NET과 함께 확률적 프로그래밍을 사용하여 TrueSkill의 간소화된 버전을 기반으로 게임 대전 목록 앱을 만드는 방법을 알아봅니다.
 ms.date: 05/06/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: f6f91aecfe7fdeffb7e8913309046c7942ecbab7
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: 69515c7b3518c35bf84335c453408b1466f93f34
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71957207"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774538"
 ---
 # <a name="create-a-game-match-up-list-app-with-infernet-and-probabilistic-programming"></a>Infer.NET 및 확률적 프로그래밍을 사용하여 게임 대전 목록 앱 만들기
 
@@ -45,7 +45,7 @@ dotnet add package Microsoft.ML.Probabilistic.Compiler
 
 ## <a name="design-your-model"></a>모델 디자인
 
-예제 샘플에서는 사무실에서 진행되는 탁구 또는 테이블 축구 대전을 사용합니다. 각 대전의 참가자 및 결과가 제공됩니다.  이 데이터에서 플레이어의 기술을 유추하려고 합니다. 각 플레이어는 정상적으로 배포된 잠재 기술을 보유하고 플레이어의 특정 대전 성과는 이 기술의 정리되지 않은 버전이라고 가정하겠습니다. 데이터는 승자의 성과를 패자의 성과보다 크도록 제한합니다. 이는 팀, 그리기 및 기타 확장을 지원하는 인기 있는 [TrueSkill](https://www.microsoft.com/en-us/research/project/trueskill-ranking-system/) 모델의 간소화된 버전입니다. 이 모델의 [고급 버전](https://www.microsoft.com/en-us/research/publication/trueskill-2-improved-bayesian-skill-rating-system/)은 최대 판매 게임 타이틀인 Halo and Gears of War의 대전표 작성에 사용됩니다.
+예제 샘플에서는 사무실에서 진행되는 탁구 또는 테이블 축구 대전을 사용합니다. 각 대전의 참가자 및 결과가 제공됩니다.  이 데이터에서 플레이어의 기술을 유추하려고 합니다. 각 플레이어는 정상적으로 배포된 잠재 기술을 보유하고 플레이어의 특정 대전 성과는 이 기술의 정리되지 않은 버전이라고 가정하겠습니다. 데이터는 승자의 성과를 패자의 성과보다 크도록 제한합니다. 이는 팀, 그리기 및 기타 확장을 지원하는 인기 있는 [TrueSkill](https://www.microsoft.com/research/project/trueskill-ranking-system/) 모델의 간소화된 버전입니다. 이 모델의 [고급 버전](https://www.microsoft.com/research/publication/trueskill-2-improved-bayesian-skill-rating-system/)은 최대 판매 게임 타이틀인 Halo and Gears of War의 대전표 작성에 사용됩니다.
 
 유추된 플레이어 기술을, 기술의 불확실성 측정값인 해당 차이와 함께 나열해야 합니다.
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Windows Forms, control licenses
 - licensed controls [Windows Forms]
 ms.assetid: 2de803b8-495e-4982-b209-19a72aba0460
-ms.openlocfilehash: 2e66534cac1edcc6759321c3024effa4990faeda
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 17ab7317ff1147dc79fae4ef3068cd9bc2143907
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044503"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774200"
 ---
 # <a name="lcexe-license-compiler"></a>Lc.exe(라이선스 컴파일러)
 라이선스 컴파일러를 사용하면 라이선스 정보가 들어 있는 텍스트 파일을 읽고, 공용 언어 런타임 실행 파일에 리소스로 포함될 수 있는 바이너리 파일을 생성할 수 있습니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "71044503"
   
 ```console
       lc /target:  
-targetPE /complist:filename [/outdir:path]  
+targetPE /complist:filename [-outdir:path]  
 /i:modules [/nologo] [/v]  
 ```  
   
