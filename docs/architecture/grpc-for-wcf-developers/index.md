@@ -3,16 +3,14 @@ title: WCF 개발자를 위한 ASP.NET Core gRPC - WCF 개발자를 위한 gRPC
 description: 작성할 항목
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: dc39fc96e7154fb50acd0b65a58586b3fa12ab50
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 6a5b4f6d0b47a272f7a753e22bfd61b06202944a
+ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71696913"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72919384"
 ---
 # <a name="aspnet-core-grpc-for-wcf-developers"></a>WCF 개발자를 위한 ASP.NET Core gRPC
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 ![표지 이미지](./media/cover.png)
 
@@ -62,7 +60,7 @@ TODO
 
 **이 항목 업데이트**
 
-이 가이드의 대상 사용자는 gRPC 서비스를 사용하여 .NET 4 이전 버전의 WCF 솔루션을 ASP.NET Core 3.0으로 마이그레이션하려는 WCF 개발자, 개발 책임자 및 설계자입니다.
+이 가이드의 대상 사용자는 gRPC 서비스를 사용하여 .NET Framework 4 이전 버전의 WCF 솔루션을 ASP.NET Core 3.0으로 마이그레이션하려는 WCF 개발자, 개발 책임자 및 설계자입니다.
 
 ## <a name="how-you-can-use-this-guide"></a>이 가이드를 사용하는 방법
 

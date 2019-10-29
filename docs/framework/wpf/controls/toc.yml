@@ -497,7 +497,7 @@
         - name: '연습: 사용자 지정 애니메이션 효과가 있는 단추 만들기'
           href: walkthroughs-create-a-custom-animated-button.md
           items:
-            - name: Microsoft Expression Blend를 사용하여 단추 만들기
+            - name: Blend를 사용하여 단추 만들기
               href: walkthrough-create-a-button-by-using-microsoft-expression-blend.md
             - name: XAML을 사용하여 단추 만들기
               href: walkthrough-create-a-button-by-using-xaml.md
