@@ -1560,15 +1560,16 @@
       items:
         - name: 개요
           href: language-reference/operators/index.md
+          displayName: 'operator precedence, operator associativity'
         - name: 산술 연산자
           href: language-reference/operators/arithmetic-operators.md
           displayName: '++, --, +, -, *, /, %, +=, -=, *=, /=, %=, checked, unchecked'
         - name: 부울 논리 연산자
           href: language-reference/operators/boolean-logical-operators.md
-          displayName: '!, &&, ||, &, |, ^, &=, |=, ^='
+          displayName: '!, &&, ||, &, |, ^, &=, |=, ^=, AND, XOR, OR'
         - name: 비트 및 시프트 연산자
           href: language-reference/operators/bitwise-and-shift-operators.md
-          displayName: '~, &, |, ^, <<, >>, &=, |=, ^=, <<=, >>='
+          displayName: '~, &, |, ^, <<, >>, &=, |=, ^=, <<=, >>=, AND, XOR, OR'
         - name: 같음 연산자
           href: language-reference/operators/equality-operators.md
           displayName: '==, !='
@@ -1580,16 +1581,16 @@
           displayName: '., [], ?., ?[], (), indexer, null-conditional, Elvis, invocation, ^, index from end, hat, .., range'
         - name: 형식 테스트 및 캐스트 연산자
           href: language-reference/operators/type-testing-and-cast.md
-          displayName: 'is operator, is keyword, as operator, as keyword, typeof, (), conversion'
+          displayName: 'is operator, is keyword, as operator, as keyword, typeof, (), explicit, conversion'
         - name: 사용자 정의 전환 연산자
           href: language-reference/operators/user-defined-conversion-operators.md
           displayName: 'implicit, explicit'
         - name: 포인터 관련 연산자
           href: language-reference/operators/pointer-related-operators.md
           displayName: '&, *, ->, [], +, -, ++, --, ==, !=, <, >, <=, >=, dereference, address-of, indirection'
-        - name: = 연산자
+        - name: 대입 연산자
           href: language-reference/operators/assignment-operator.md
-          displayName: 'assignment, ref'
+          displayName: '=, ref, compound'
         - name: + 및 += 연산자
           href: language-reference/operators/addition-operator.md
           displayName: 'string concatenation, delegate combination, event subscription'
@@ -1607,7 +1608,7 @@
           displayName: 'null-coalescing, assignment'
         - name: => 연산자
           href: language-reference/operators/lambda-operator.md
-          displayName: lambda
+          displayName: 'lambda, expression body definition'
         - name: ':: 연산자'
           href: language-reference/operators/namespace-alias-qualifier.md
           displayName: 'namespace alias qualifier, global namespace'
@@ -1624,6 +1625,7 @@
           href: language-reference/operators/nameof.md
         - name: new 연산자
           href: language-reference/operators/new-operator.md
+          displayName: constructor
         - name: sizeof 연산자
           href: language-reference/operators/sizeof.md
         - name: stackalloc 연산자
