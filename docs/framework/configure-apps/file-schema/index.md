@@ -21,64 +21,85 @@ helpviewer_keywords:
 - configuration settings [.NET Framework], applications
 - configuration file reference [.NET Framework]
 ms.assetid: 69003d39-dc8a-460c-a6be-e6d93e690b38
-ms.openlocfilehash: c3b5518b4b86c2e6f47825d552f49579c5ac0a6d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 35ed53fc480e218df595794f80af2458f3ecec38
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921039"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039153"
 ---
-# <a name="configuration-file-schema-for-the-net-framework"></a><span data-ttu-id="b8214-102">.NET Framework의 구성 파일 스키마</span><span class="sxs-lookup"><span data-stu-id="b8214-102">Configuration file schema for the .NET Framework</span></span>
+# <a name="configuration-file-schema-for-the-net-framework"></a><span data-ttu-id="64b34-102">.NET Framework의 구성 파일 스키마</span><span class="sxs-lookup"><span data-stu-id="64b34-102">Configuration file schema for the .NET Framework</span></span>
 
-<span data-ttu-id="b8214-103">구성 파일은 설정을 변경하고 응용 프로그램을 위한 정책을 설정하는 데 사용할 수 있는 표준 XML 파일입니다.</span><span class="sxs-lookup"><span data-stu-id="b8214-103">Configuration files are standard XML files that you can use to change settings and set policies for your apps.</span></span> <span data-ttu-id="b8214-104">.NET Framework 구성 스키마는 응용 프로그램의 동작을 제어하기 위해 구성 파일에 사용할 수 있는 요소로 구성됩니다.</span><span class="sxs-lookup"><span data-stu-id="b8214-104">The .NET Framework configuration schema consists of elements that you can use in configuration files to control the behavior of your apps.</span></span> <span data-ttu-id="b8214-105">이 섹션의 목차에는 시작, 런타임, 네트워크 및 구성 설정의 다른 형식에 대한 스키마 계층 구조가 반영되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b8214-105">The table of contents for this section reflects the schema hierarchy for startup, runtime, network, and other types of configuration settings.</span></span>
+<span data-ttu-id="64b34-103">구성 파일은 설정을 변경하고 응용 프로그램을 위한 정책을 설정하는 데 사용할 수 있는 표준 XML 파일입니다.</span><span class="sxs-lookup"><span data-stu-id="64b34-103">Configuration files are standard XML files that you can use to change settings and set policies for your apps.</span></span> <span data-ttu-id="64b34-104">.NET Framework 구성 스키마는 응용 프로그램의 동작을 제어하기 위해 구성 파일에 사용할 수 있는 요소로 구성됩니다.</span><span class="sxs-lookup"><span data-stu-id="64b34-104">The .NET Framework configuration schema consists of elements that you can use in configuration files to control the behavior of your apps.</span></span> <span data-ttu-id="64b34-105">이 섹션의 목차에는 시작, 런타임, 네트워크 및 구성 설정의 다른 형식에 대한 스키마 계층 구조가 반영되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="64b34-105">The table of contents for this section reflects the schema hierarchy for startup, runtime, network, and other types of configuration settings.</span></span>
 
-<span data-ttu-id="b8214-106">구성 파일의 형식, 서식 및 위치에 대한 자세한 내용은 [앱 구성](../index.md) 문서를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="b8214-106">For information about the types, format, and location of configuration files, see the article [Configuring Apps](../index.md).</span></span> <span data-ttu-id="b8214-107">구성 파일을 직접 편집하려면 먼저 XML에 익숙해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="b8214-107">Familiarize yourself with XML if you want to edit the configuration files directly.</span></span>
+<span data-ttu-id="64b34-106">구성 파일의 형식, 형식 및 위치에 대 한 자세한 내용은 [앱 구성](../index.md)을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="64b34-106">For information about the types, format, and location of configuration files, see [Configure apps](../index.md).</span></span> <span data-ttu-id="64b34-107">구성 파일을 직접 편집하려면 먼저 XML에 익숙해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="64b34-107">Familiarize yourself with XML if you want to edit the configuration files directly.</span></span>
 
 > [!IMPORTANT]
-> <span data-ttu-id="b8214-108">구성 파일에서 XML 태그 및 특성은 대/소문자를 구분합니다.</span><span class="sxs-lookup"><span data-stu-id="b8214-108">XML tags and attributes in configuration files are case-sensitive.</span></span>
+> <span data-ttu-id="64b34-108">구성 파일에서 XML 태그 및 특성은 대/소문자를 구분합니다.</span><span class="sxs-lookup"><span data-stu-id="64b34-108">XML tags and attributes in configuration files are case-sensitive.</span></span>
 
-## <a name="in-this-section"></a><span data-ttu-id="b8214-109">단원 내용</span><span class="sxs-lookup"><span data-stu-id="b8214-109">In this section</span></span>
+## <a name="in-this-section"></a><span data-ttu-id="64b34-109">이 섹션의 내용</span><span class="sxs-lookup"><span data-stu-id="64b34-109">In this section</span></span>
 
-<span data-ttu-id="b8214-110">[ **\<configuration>** 요소](configuration-element.md) 모든 구성 파일의 최상위 요소인 `<configuration>` 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="b8214-110">[**\<configuration>** Element](configuration-element.md) Describes the `<configuration>` element, which is the top-level element for all configuration files.</span></span>
+<span data-ttu-id="64b34-110">[ **구성 >** 요소를\<](configuration-element.md)</span><span class="sxs-lookup"><span data-stu-id="64b34-110">[**\<configuration>** Element](configuration-element.md)</span></span>\
+<span data-ttu-id="64b34-111">모든 구성 파일의 최상위 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="64b34-111">The top-level element for all configuration files.</span></span>
 
-<span data-ttu-id="b8214-111">[ **\<assemblyBinding>** 요소](assemblybinding-element-for-configuration.md) 구성 수준에서 어셈블리 바인딩 정책을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="b8214-111">[**\<assemblyBinding>** Element](assemblybinding-element-for-configuration.md) Specifies assembly binding policy at the configuration level.</span></span>
+<span data-ttu-id="64b34-112">[ **assemblybinding >** 요소를\<](assemblybinding-element-for-configuration.md)</span><span class="sxs-lookup"><span data-stu-id="64b34-112">[**\<assemblyBinding>** Element](assemblybinding-element-for-configuration.md)</span></span>\
+<span data-ttu-id="64b34-113">구성 수준에서 어셈블리 바인딩 정책을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="64b34-113">Specifies assembly binding policy at the configuration level.</span></span>
 
-<span data-ttu-id="b8214-112">[ **\<linkedConfiguration>** 요소](linkedconfiguration-element.md) 포함할 구성 파일을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="b8214-112">[**\<linkedConfiguration>** Element](linkedconfiguration-element.md) Specifies a configuration file to include.</span></span>
+<span data-ttu-id="64b34-114">[ **\<linkedConfiguration >** 요소](linkedconfiguration-element.md)</span><span class="sxs-lookup"><span data-stu-id="64b34-114">[**\<linkedConfiguration>** Element](linkedconfiguration-element.md)</span></span>\
+<span data-ttu-id="64b34-115">포함할 구성 파일을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="64b34-115">Specifies a configuration file to include.</span></span>
 
-<span data-ttu-id="b8214-113">[시작 설정 스키마](./startup/index.md) 사용할 공용 언어 런타임 버전을 지정하는 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="b8214-113">[Startup Settings Schema](./startup/index.md) Describes the elements that specify which version of the common language runtime to use.</span></span>
+<span data-ttu-id="64b34-116">[시작 설정 스키마](./startup/index.md)</span><span class="sxs-lookup"><span data-stu-id="64b34-116">[Startup Settings Schema](./startup/index.md)</span></span>\
+<span data-ttu-id="64b34-117">사용할 공용 언어 런타임의 버전을 지정 하는 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="64b34-117">Elements that specify which version of the common language runtime to use.</span></span>
 
-<span data-ttu-id="b8214-114">[런타임 설정 스키마](./runtime/index.md) 어셈블리 바인딩 및 런타임 동작을 구성하는 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="b8214-114">[Runtime Settings Schema](./runtime/index.md) Describes the elements that configure assembly binding and runtime behavior.</span></span>
+<span data-ttu-id="64b34-118">[런타임 설정 스키마](./runtime/index.md)</span><span class="sxs-lookup"><span data-stu-id="64b34-118">[Runtime Settings Schema](./runtime/index.md)</span></span>\
+<span data-ttu-id="64b34-119">어셈블리 바인딩 및 런타임 동작을 구성 하는 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="64b34-119">Elements that configure assembly binding and runtime behavior.</span></span>
 
-<span data-ttu-id="b8214-115">[네트워크 설정 스키마](./network/index.md) .NET Framework에서 인터넷에 연결하는 방법을 지정하는 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="b8214-115">[Network Settings Schema](./network/index.md) Describes the elements that specify how the .NET Framework connects to the Internet.</span></span>
+<span data-ttu-id="64b34-120">[네트워크 설정 스키마](./network/index.md)</span><span class="sxs-lookup"><span data-stu-id="64b34-120">[Network Settings Schema](./network/index.md)</span></span>\
+<span data-ttu-id="64b34-121">.NET Framework 인터넷에 연결 하는 방법을 지정 하는 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="64b34-121">Elements that specify how the .NET Framework connects to the internet.</span></span>
 
-<span data-ttu-id="b8214-116">[암호화 설정 스키마](./cryptography/index.md) 암호화 알고리즘을 구현하는 클래스에 알고리즘 이름을 매핑하는 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="b8214-116">[Cryptography Settings Schema](./cryptography/index.md) Describes elements that map friendly algorithm names to classes that implement cryptography algorithms.</span></span>
+<span data-ttu-id="64b34-122">[암호화 설정 스키마](./cryptography/index.md)</span><span class="sxs-lookup"><span data-stu-id="64b34-122">[Cryptography Settings Schema](./cryptography/index.md)</span></span>\
+<span data-ttu-id="64b34-123">암호화 알고리즘을 구현 하는 클래스에 알고리즘 이름을 매핑하는 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="64b34-123">Elements that map friendly algorithm names to classes that implement cryptography algorithms.</span></span>
 
-<span data-ttu-id="b8214-117">[구성 섹션 스키마](configuration-sections-schema.md) 사용자 지정 설정에 대한 구성 섹션을 만들고 사용하는 데 필요한 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="b8214-117">[Configuration Sections Schema](configuration-sections-schema.md) Describes the elements used to create and use configuration sections for custom settings.</span></span>
+<span data-ttu-id="64b34-124">[구성 섹션 스키마](configuration-sections-schema.md)</span><span class="sxs-lookup"><span data-stu-id="64b34-124">[Configuration Sections Schema](configuration-sections-schema.md)</span></span>\
+<span data-ttu-id="64b34-125">사용자 지정 설정에 대 한 구성 섹션을 만들고 사용 하는 데 사용 되는 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="64b34-125">Elements used to create and use configuration sections for custom settings.</span></span>
 
-<span data-ttu-id="b8214-118">[추적 및 디버그 설정 스키마](./trace-debug/index.md) 추적 스위치 및 수신기를 지정하는 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="b8214-118">[Trace and Debug Settings Schema](./trace-debug/index.md) Describes the elements that specify trace switches and listeners.</span></span>
+<span data-ttu-id="64b34-126">[추적 및 디버그 설정 스키마](./trace-debug/index.md)</span><span class="sxs-lookup"><span data-stu-id="64b34-126">[Trace and Debug Settings Schema](./trace-debug/index.md)</span></span>\
+<span data-ttu-id="64b34-127">추적 스위치 및 수신기를 지정 하는 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="64b34-127">Elements that specify trace switches and listeners.</span></span>
 
-<span data-ttu-id="b8214-119">[컴파일러 및 언어 공급자 설정 스키마](./compiler/index.md) 사용 가능한 언어 공급자의 컴파일러 구성을 지정하는 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="b8214-119">[Compiler and Language Provider Settings Schema](./compiler/index.md) Describes the elements that specify compiler configuration for available language providers.</span></span>
+<span data-ttu-id="64b34-128">[컴파일러 및 언어 공급자 설정 스키마](./compiler/index.md)</span><span class="sxs-lookup"><span data-stu-id="64b34-128">[Compiler and Language Provider Settings Schema](./compiler/index.md)</span></span>\
+<span data-ttu-id="64b34-129">사용 가능한 언어 공급자의 컴파일러 구성을 지정 하는 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="64b34-129">Elements that specify compiler configuration for available language providers.</span></span>
 
-<span data-ttu-id="b8214-120">[애플리케이션 설정 스키마](application-settings-schema.md) Windows Forms 또는 ASP.NET 애플리케이션에서 애플리케이션 범위 및 사용자 범위 설정을 저장하고 검색하는 데 사용할 수 있는 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="b8214-120">[Application Settings Schema](application-settings-schema.md) Describes the elements that enable a Windows Forms or ASP.NET application to store and retrieve application-scoped and user-scoped settings.</span></span>
+<span data-ttu-id="64b34-130">[응용 프로그램 설정 스키마](application-settings-schema.md)</span><span class="sxs-lookup"><span data-stu-id="64b34-130">[Application Settings Schema](application-settings-schema.md)</span></span>\
+<span data-ttu-id="64b34-131">Windows Forms 또는 ASP.NET 응용 프로그램에서 응용 프로그램 범위 및 사용자 범위 설정을 저장 하 고 검색 하는 데 사용할 수 있는 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="64b34-131">Elements that enable a Windows Forms or ASP.NET application to store and retrieve application-scoped and user-scoped settings.</span></span>
 
-<span data-ttu-id="b8214-121">[앱 설정 스키마](./appsettings/index.md) 파일 경로, XML Web services URL 또는 애플리케이션의 기타 사용자 지정 구성 정보와 같은 사용자 지정 애플리케이션 설정이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b8214-121">[App Settings Schema](./appsettings/index.md) Contains custom application settings, such as file paths, XML Web service URLs, or any other custom configuration information for an application.</span></span>
+<span data-ttu-id="64b34-132">[앱 설정 스키마](./appsettings/index.md)</span><span class="sxs-lookup"><span data-stu-id="64b34-132">[App Settings Schema](./appsettings/index.md)</span></span>\
+<span data-ttu-id="64b34-133">파일 경로, XML Web services URL 또는 애플리케이션의 기타 사용자 지정 구성 정보와 같은 사용자 지정 애플리케이션 설정이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="64b34-133">Contains custom application settings, such as file paths, XML Web service URLs, or any other custom configuration information for an application.</span></span>
 
-<span data-ttu-id="b8214-122">[웹 설정 스키마](./web/index.md) ASP.NET이 IIS와 같은 호스트 애플리케이션과 함께 작동하는 방법을 구성하기 위한 요소를 비롯한 웹 설정 스키마의 모든 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="b8214-122">[Web Settings Schema](./web/index.md) All elements in the Web settings schema, which includes elements for configuring how ASP.NET works with a host application such as IIS.</span></span> <span data-ttu-id="b8214-123">*Aspnet.config* 파일에서 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="b8214-123">Used in *Aspnet.config* files.</span></span>
+<span data-ttu-id="64b34-134">[웹 설정 스키마](./web/index.md)</span><span class="sxs-lookup"><span data-stu-id="64b34-134">[Web Settings Schema](./web/index.md)</span></span>\
+<span data-ttu-id="64b34-135">ASP.NET가 IIS와 같은 호스트 응용 프로그램과 함께 작동 하는 방법을 구성 하기 위한 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="64b34-135">Elements for configuring how ASP.NET works with a host application such as IIS.</span></span> <span data-ttu-id="64b34-136">*Aspnet.config* 파일에서 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="64b34-136">Used in *Aspnet.config* files.</span></span>
 
-<span data-ttu-id="b8214-124">[Windows Forms 구성 스키마](winforms/index.md) 다중 모니터 및 높은 DPI 지원과 같은 사용자 지정을 비롯하여 Windows Forms 애플리케이션 구성 섹션의 모든 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="b8214-124">[Windows Forms Configuration Schema](winforms/index.md) All elements in the Windows Forms application configuration section, which includes customizations such as multi-monitor and high DPI support.</span></span>
+<span data-ttu-id="64b34-137">[Windows Forms 구성 스키마](winforms/index.md)</span><span class="sxs-lookup"><span data-stu-id="64b34-137">[Windows Forms Configuration Schema](winforms/index.md)</span></span>\
+<span data-ttu-id="64b34-138">다중 모니터 및 높은 DPI 지원과 같은 사용자 지정을 포함 하는 Windows Forms 응용 프로그램 구성 섹션의 모든 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="64b34-138">All elements in the Windows Forms application configuration section, which includes customizations such as multi-monitor and high-DPI support.</span></span>
 
-<span data-ttu-id="b8214-125">[WCF 구성 스키마](./wcf/index.md) WCF 서비스 및 클라이언트 애플리케이션을 구성하는 데 사용할 수 있는 모든 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="b8214-125">[WCF Configuration Schema](./wcf/index.md) All elements that enable you to configure WCF service and client applications.</span></span>
+<span data-ttu-id="64b34-139">[WCF 구성 스키마](./wcf/index.md)</span><span class="sxs-lookup"><span data-stu-id="64b34-139">[WCF Configuration Schema](./wcf/index.md)</span></span>\
+<span data-ttu-id="64b34-140">WCF 서비스 및 클라이언트 응용 프로그램을 구성 하는 데 사용할 수 있는 모든 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="64b34-140">All elements that enable you to configure WCF service and client applications.</span></span>
 
-<span data-ttu-id="b8214-126">[WCF 지시문 구문](./wcf-directive/index.md) .svc 컴파일러에서 사용하는 페이지별 특성을 정의하는 `@ServiceHost` 지시문에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="b8214-126">[WCF Directive Syntax](./wcf-directive/index.md) Describes the `@ServiceHost` directive, which defines page-specific attributes used by the .svc compiler.</span></span>
+<span data-ttu-id="64b34-141">[WCF 지시문 구문](./wcf-directive/index.md)</span><span class="sxs-lookup"><span data-stu-id="64b34-141">[WCF Directive Syntax](./wcf-directive/index.md)</span></span>\
+<span data-ttu-id="64b34-142">.Svc 컴파일러에서 사용 하는 페이지 관련 특성을 정의 하는 `@ServiceHost` 지시문에 대해 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="64b34-142">Describes the `@ServiceHost` directive, which defines page-specific attributes used by the .svc compiler.</span></span>
 
-<span data-ttu-id="b8214-127">[WIF 구성 스키마](windows-identity-foundation/index.md) WIF(Windows Identity Foundation) 구성 스키마의 모든 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="b8214-127">[WIF Configuration Schema](windows-identity-foundation/index.md) All elements of the Windows Identity Foundation (WIF) configuration schema.</span></span>
+<span data-ttu-id="64b34-143">[WIF 구성 스키마](windows-identity-foundation/index.md)</span><span class="sxs-lookup"><span data-stu-id="64b34-143">[WIF Configuration Schema](windows-identity-foundation/index.md)</span></span>\
+<span data-ttu-id="64b34-144">WIF (Windows Identity Foundation) 구성 스키마의 모든 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="64b34-144">All elements of the Windows Identity Foundation (WIF) configuration schema.</span></span>
 
-## <a name="related-sections"></a><span data-ttu-id="b8214-128">관련 단원</span><span class="sxs-lookup"><span data-stu-id="b8214-128">Related sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="64b34-145">관련 단원</span><span class="sxs-lookup"><span data-stu-id="64b34-145">Related sections</span></span>
 
-<span data-ttu-id="b8214-129">[원격 설정 스키마](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/z415cf9a(v=vs.100)) 원격을 구현하는 클라이언트 및 서버 애플리케이션을 구성하는 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="b8214-129">[Remoting Settings Schema](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/z415cf9a(v=vs.100)) Describes the elements that configure client and server applications that implement remoting.</span></span>
+<span data-ttu-id="64b34-146">[원격 설정 스키마](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/z415cf9a(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="64b34-146">[Remoting Settings Schema](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/z415cf9a(v=vs.100))</span></span>\
+<span data-ttu-id="64b34-147">리모팅을 구현하는 클라이언트 및 서버 응용 프로그램을 구성하는 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="64b34-147">Describes the elements that configure client and server applications that implement remoting.</span></span>
 
-<span data-ttu-id="b8214-130">[ASP.NET 설정 스키마](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b5ysx397(v=vs.100)) ASP.NET 웹 애플리케이션의 동작을 제어하는 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="b8214-130">[ASP.NET Settings Schema](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b5ysx397(v=vs.100)) Describes the elements that control the behavior of ASP.NET Web applications.</span></span>
+<span data-ttu-id="64b34-148">[ASP.NET Settings 스키마](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b5ysx397(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="64b34-148">[ASP.NET Settings Schema](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b5ysx397(v=vs.100))</span></span>\
+<span data-ttu-id="64b34-149">ASP.NET 웹 응용 프로그램의 동작을 제어하는 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="64b34-149">Describes the elements that control the behavior of ASP.NET Web applications.</span></span>
 
-<span data-ttu-id="b8214-131">[웹 서비스 설정 스키마](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cctwteet(v=vs.100)) ASP.NET 웹 서비스와 해당 클라이언트의 동작을 제어하는 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="b8214-131">[Web Services Settings Schema](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cctwteet(v=vs.100)) Describes the elements that control the behavior of ASP.NET Web services and their clients.</span></span>
+<span data-ttu-id="64b34-150">[웹 서비스 설정 스키마](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cctwteet(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="64b34-150">[Web Services Settings Schema](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cctwteet(v=vs.100))</span></span>\
+<span data-ttu-id="64b34-151">ASP.NET 웹 서비스와 해당 클라이언트를 제어하는 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="64b34-151">Describes the elements that control the behavior of ASP.NET Web services and their clients.</span></span>
 
-<span data-ttu-id="b8214-132">[.NET Framework 앱 구성](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kza1yk3a(v=vs.100)) .NET Framework에서 보안, 어셈블리 바인딩 및 원격을 구성하는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="b8214-132">[Configuring .NET Framework Apps](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kza1yk3a(v=vs.100)) Describes how to configure security, assembly binding, and remoting in the .NET Framework.</span></span>
+<span data-ttu-id="64b34-152">[.NET Framework 앱 구성](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kza1yk3a(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="64b34-152">[Configuring .NET Framework Apps](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kza1yk3a(v=vs.100))</span></span>\
+<span data-ttu-id="64b34-153">.NET Framework에서 보안, 어셈블리 바인딩 및 리모팅을 구성하는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="64b34-153">Describes how to configure security, assembly binding, and remoting in the .NET Framework.</span></span>
