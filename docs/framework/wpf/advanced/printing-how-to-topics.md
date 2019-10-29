@@ -5,19 +5,19 @@ helpviewer_keywords:
 - printing [WPF]
 - print system management [WPF]
 ms.assetid: 5f3d391a-4afd-49ee-ad99-ceb737c0c8a8
-ms.openlocfilehash: db40213bd6e20468706afda8a11d76e5a5a3c4e0
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 9ca812948926f80d9f8ec5b8cead4538d09fa7a1
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70254260"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73035624"
 ---
 # <a name="printing-how-to-topics"></a>인쇄 방법 항목
-이 섹션의 항목에서는에 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 포함 된 인쇄 및 인쇄 시스템 관리 기능과 새 XPS (XML Paper Specification) 인쇄 경로를 사용 하는 방법을 보여 줍니다.  
+이 섹션의 항목에서는 새 XPS (XML Paper Specification) 인쇄 경로 뿐만 아니라 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에 포함 된 인쇄 및 인쇄 시스템 관리 기능을 사용 하는 방법을 보여 줍니다.  
   
-## <a name="in-this-section"></a>섹션 내용  
+## <a name="in-this-section"></a>단원 내용  
  [인쇄 대화 상자 호출](how-to-invoke-a-print-dialog.md)  
- [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] 인쇄 대화 상자 개체를 선언 하 고 코드를 사용 하 여 Windows Presentation Foundation (WPF) 응용 프로그램에서 대화 상자를 호출 하는 XAML 태그에 대 한 지침입니다.  
+ Microsoft Windows 인쇄 대화 상자 개체를 선언 하 고 코드를 사용 하 여 Windows Presentation Foundation (WPF) 응용 프로그램에서 대화 상자를 호출 하는 XAML 태그에 대 한 지침입니다.  
   
  [프린터 복제](how-to-clone-a-printer.md)  
  기존 인쇄 큐와 정확히 같은 속성을 사용 하 여 두 번째 인쇄 큐를 설치 하는 방법에 대 한 지침입니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "70254260"
  런타임 인쇄 시스템 개체의 속성 및 해당 형식을 검색 하는 방법에 대 한 지침입니다.  
   
  [프로그래밍 방식으로 XPS 파일 인쇄](how-to-programmatically-print-xps-files.md)  
- 를 사용 하지 않고도 XPS (XML Paper Specification) 파일을 빠르게 인쇄 하 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]는 방법에 대 한 지침입니다.  
+ [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]없이 XPS (XML Paper Specification) 파일을 빠르게 인쇄 하는 방법에 대 한 지침입니다.  
   
  [원격으로 프린터 상태 조사](how-to-remotely-survey-the-status-of-printers.md)  
  용지 걸림이 나 기타 문제가 발생 한 프린터를 검색 하기 위해 프린터를 조사 하는 유틸리티를 만드는 방법에 대 한 지침입니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "70254260"
  [PrintTicket 유효성 검사 및 병합](how-to-validate-and-merge-printtickets.md)  
  인쇄 티켓이 유효 하며 프린터에서 지원 하지 않는 항목을 요청 하지 않는 경우를 확인 하는 지침을 설명 합니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Printing>
 - <xref:System.Printing.IndexedProperties>

@@ -3,12 +3,12 @@ title: 사용자 지정 토큰 처리기
 ms.date: 03/30/2017
 ms.assetid: 5062669f-8bfc-420a-a25d-d8ab992ab10e
 author: BrucePerlerMS
-ms.openlocfilehash: f7d611bf396f028ff23a39cd529825f99fec300a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ccf794b4c229bbc9b40ae7ec2fd649825122cecf
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650430"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040552"
 ---
 # <a name="custom-token-handlers"></a>사용자 지정 토큰 처리기
 이 항목에서는 WIF의 토큰 처리기 및 토큰 처리기를 사용하여 토큰을 처리하는 방법을 설명합니다. WIF에서 기본적으로 지원되지 않는 토큰 형식에 대한 사용자 지정 토큰 처리기를 만드는 데 필요한 항목에 대해서도 설명합니다.  
@@ -76,7 +76,7 @@ ms.locfileid: "64650430"
     <system.identityModel>  
         <identityConfiguration saveBootstrapContext="true">  
             <securityTokenHandlers>  
-                <remove type="System.IdentityModel.Tokens.SamlSecurityTokenHandler, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=abcdefg123456789">  
+                <remove type="System.IdentityModel.Tokens.SamlSecurityTokenHandler, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=abcdefg123456789" />  
                 <add type="CustomToken.MyCustomTokenHandler, CustomToken" />  
             </securityTokenHandlers>  
         </identityConfiguration>  

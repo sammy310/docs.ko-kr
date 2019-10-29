@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a5333e19-8e55-4aa9-82dc-ca8745e516ed
-ms.openlocfilehash: 9919bad113eb11a38ce137a2cbbf6c67bd5b21ef
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 84048a3fba2b32b1ae745160e2b405c04b738c65
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794079"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040233"
 ---
 # <a name="enabling-query-notifications"></a>쿼리 알림 사용
 쿼리 알림을 사용하는 애플리케이션에는 공통적인 요구 사항이 적용됩니다. SQL 쿼리 알림을 지원하도록 데이터 소스를 올바르게 구성해야 하며, 사용자는 올바른 클라이언트측 및 서버측 권한을 가지고 있어야 합니다.  
@@ -26,7 +26,7 @@ ms.locfileid: "70794079"
 - 모니터링하는 데이터가 변경될 경우 알림을 처리하는 코드를 제공합니다.  
   
 ## <a name="query-notifications-requirements"></a>쿼리 알림 요구 사항  
- 다음과 같은 요구 사항을 충족하는 SELECT 문에 대해 쿼리 알림을 사용할 수 있습니다. 다음 표에는 SQL Server 온라인 설명서의 Service Broker 및 쿼리 알림 문서에 대한 링크가 나와 있습니다.  
+ 쿼리 알림은 특정 요구 사항 목록을 충족 하는 SELECT 문에 대해서만 지원 됩니다. 다음 표에는 SQL Server 온라인 설명서의 Service Broker 및 쿼리 알림 문서에 대한 링크가 나와 있습니다.  
   
  **SQL Server 설명서**  
   
@@ -55,7 +55,7 @@ ms.locfileid: "70794079"
   
  쿼리 알림 샘플을 올바르게 실행하려면 데이터베이스 서버에서 다음 Transact-SQL 문을 실행해야 합니다.  
   
-```  
+```sql
 CREATE QUEUE ContactChangeMessages;  
   
 CREATE SERVICE ContactChangeNotifications  
@@ -79,12 +79,12 @@ CREATE SERVICE ContactChangeNotifications
 ### <a name="using-sqldependency"></a>SqlDependency 사용  
  <xref:System.Data.SqlClient.SqlDependency>를 사용하려면 사용 중인 SQL Server 데이터베이스에 대해 Service Broker를 활성화해야 하며 사용자는 알림을 수신할 수 있는 권한이 있어야 합니다. 알림 큐 같은 Service Broker 개체는 미리 정의되어 있습니다.  
   
- 또한 <xref:System.Data.SqlClient.SqlDependency>는 작업자 스레드를 자동으로 실행하여 큐에 게시되는 알림을 처리하고, Service Broker 메시지를 구문 분석하여 해당 정보를 이벤트 인수 데이터로 노출합니다. <xref:System.Data.SqlClient.SqlDependency>는 `Start` 메서드를 호출하여 데이터베이스에 대해 종속성을 설정함으로써 초기화해야 합니다. 이 메서드는 애플리케이션을 초기화하는 동안 필요한 데이터베이스 연결마다 한 번씩만 호출해야 하는 정적 메서드입니다. 만들어진 각 종속성 연결에 대해 애플리케이션이 종료될 때 `Stop` 메서드를 호출해야 합니다.  
+ 또한 <xref:System.Data.SqlClient.SqlDependency>는 작업자 스레드를 자동으로 실행하여 큐에 게시되는 알림을 처리하고, Service Broker 메시지를 구문 분석하여 해당 정보를 이벤트 인수 데이터로 노출합니다. <xref:System.Data.SqlClient.SqlDependency>는 `Start` 메서드를 호출하여 데이터베이스에 대해 종속성을 설정함으로써 초기화해야 합니다. 이 메서드는 애플리케이션을 초기화하는 동안 필요한 데이터베이스 연결마다 한 번씩만 호출해야 하는 정적 메서드입니다. 만들어진 각 종속성 연결에 대해 응용 프로그램이 종료될 때 `Stop` 메서드를 호출해야 합니다.  
   
 ### <a name="using-sqlnotificationrequest"></a>SqlNotificationRequest 사용  
  이와 반대로 <xref:System.Data.Sql.SqlNotificationRequest>를 사용하려면 전체 수신 인프라를 직접 구현해야 합니다. 또한 큐, 서비스, 큐에서 지원하는 메시지 유형 같은 모든 지원되는 Service Broker 개체를 정의해야 합니다. 이 수동 접근 방식은 애플리케이션에 특별한 알림 메시지 또는 알림 동작이 필요하거나 애플리케이션이 보다 큰 Service Broker 애플리케이션에 속해 있는 경우에 유용합니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [SQL Server에서 쿼리 알림](query-notifications-in-sql-server.md)
 - [ADO.NET 개요](../ado-net-overview.md)

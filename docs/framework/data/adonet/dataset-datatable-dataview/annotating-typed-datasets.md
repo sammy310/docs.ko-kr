@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f82aaa62-321e-4c8a-b51b-9d1114700170
-ms.openlocfilehash: 351175b96d354a264a9280018ce21de8870beda2
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: df6da84dfc120e3f6c3cb0e46729ca2cecc9fe3a
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784797"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040394"
 ---
 # <a name="annotating-typed-datasets"></a>형식화된 데이터 세트에 주석 지정
 주석을 사용하면 원본으로 사용하는 스키마를 수정하지 않고 형식화된 <xref:System.Data.DataSet>의 요소 이름을 수정할 수 있습니다. 기본 스키마의 요소 이름을 수정 하면 형식화 된 데이터 **집합이** 데이터 소스에 없는 개체를 참조 하 고 데이터 소스에 존재 하는 개체에 대 한 참조도 손실 됩니다.  
   
- 주석을 사용 하 여 형식화 된 **데이터 집합** 의 개체 이름을 더 의미 있는 이름으로 사용자 지정 하 여, 클라이언트에서 사용할 수 있는 코드를 더 쉽게 읽고 형식화 된 **데이터 집합** 을 쉽게 만들 수 있습니다. 기본 스키마는 그대로 유지 됩니다. 예를 들어 **Northwind** 데이터베이스의 **Customers** 테이블에 대 한 다음 스키마 요소는 **customersrow** 및 <xref:System.Data.DataRowCollection> 명명 된 **고객**의 **DataRow** 개체 이름을 생성 합니다.  
+ 주석을 사용 하 여 형식화 된 **데이터 집합** 의 개체 이름을 더 의미 있는 이름으로 사용자 지정 하 여, 클라이언트에서 사용할 수 있는 코드를 더 쉽게 읽고 형식화 된 **데이터 집합** 을 쉽게 만들 수 있습니다. 기본 스키마는 그대로 유지 됩니다. 예를 들어 **Northwind** 데이터베이스의 **customers** 테이블에 대 한 다음 스키마 요소는 **DataRow** 개체 이름이 **customersrow** 이 고 이름이 **Customers**인 <xref:System.Data.DataRowCollection>를 생성 합니다.  
   
 ```xml  
 <xs:element name="Customers">  
@@ -43,7 +43,7 @@ ms.locfileid: "70784797"
   
  다음 표에서는 사용할 수 있는 주석을 보여 줍니다.  
   
-|Annotation|Description|  
+|주석|설명|  
 |----------------|-----------------|  
 |**typedName**|개체의 이름입니다.|  
 |**typedPlural**|개체 컬렉션의 이름입니다.|  
@@ -53,16 +53,16 @@ ms.locfileid: "70784797"
   
  다음 표에서는 **Nullvalue** 주석에 대해 지정할 수 있는 값을 보여 줍니다.  
   
-|nullValue 값|Description|  
+|nullValue 값|설명|  
 |---------------------|-----------------|  
 |*대체 값*|반환될 값을 지정합니다. 반환되는 값은 요소의 형식과 일치해야 합니다. 예를 들어, `nullValue="0"`을 사용하여 null 정수 필드에 0을 반환합니다.|  
-|**_throw**|예외를 throw합니다. 기본값입니다.|  
+|**throw (_s)**|예외를 throw합니다. 기본값입니다.|  
 |**_null**|기본 형식이 발견되면 null 참조를 반환하거나 예외를 throw합니다.|  
-|**_empty**|문자열의 경우 **system.string**을 반환 하 고, 그렇지 않은 경우 빈 생성자에서 만든 개체를 반환 합니다. 기본 형식이 발견되면 예외를 throw합니다.|  
+|**비어 있음 (_s)**|문자열의 경우 **system.string**을 반환 하 고, 그렇지 않은 경우 빈 생성자에서 만든 개체를 반환 합니다. 기본 형식이 발견되면 예외를 throw합니다.|  
   
  다음 표에서는 형식화 된 **데이터 집합** 의 개체에 대 한 기본값과 사용 가능한 주석을 보여 줍니다.  
   
-|개체/메서드/이벤트|기본값|Annotation|  
+|개체/메서드/이벤트|기본|주석|  
 |---------------------------|-------------|----------------|  
 |**DataTable**|TableNameDataTable|typedPlural|  
 |**DataTable** 메서드|NewTableNameRow<br /><br /> AddTableNameRow<br /><br /> DeleteTableNameRow|typedName|  
@@ -74,9 +74,9 @@ ms.locfileid: "70784797"
 |**부모** 접근자|TableNameRow|typedParent|  
 |**데이터 집합** 이벤트|TableNameRowChangeEvent<br /><br /> TableNameRowChangeEventHandler|typedName|  
   
- 형식화 된 **데이터 집합** 주석을 사용 하려면 XSD (XML 스키마 정의 언어) 스키마에 다음 **xmlns** 참조를 포함 해야 합니다. 데이터베이스 테이블에서 xsd를 만들려면 또는 <xref:System.Data.DataSet.WriteXmlSchema%2A> [Visual Studio에서 데이터 집합 작업](/visualstudio/data-tools/dataset-tools-in-visual-studio)을 참조 하세요.  
+ 형식화 된 **데이터 집합** 주석을 사용 하려면 XSD (XML 스키마 정의 언어) 스키마에 다음 **xmlns** 참조를 포함 해야 합니다. 데이터베이스 테이블에서 xsd를 만들려면 <xref:System.Data.DataSet.WriteXmlSchema%2A> 또는 [Visual Studio에서 데이터 집합 작업](/visualstudio/data-tools/dataset-tools-in-visual-studio)을 참조 하세요.  
   
-```  
+```xml  
 xmlns:codegen="urn:schemas-microsoft-com:xml-msprop"  
 ```  
   
@@ -134,7 +134,7 @@ codegen:typedParent="Customer" codegen:typedChildren="GetOrders">
 </xs:schema>  
 ```  
   
- 다음 코드 예제에서는 샘플 스키마에서 만든 강력한 형식의 **데이터 집합** 을 사용 합니다. 하나 <xref:System.Data.SqlClient.SqlDataAdapter> 를 사용 하 여 **Customers** 테이블 <xref:System.Data.SqlClient.SqlDataAdapter> 을 채우고 **Orders** 테이블을 채웁니다. 강력한 형식의 **데이터 집합** 은 **datarelations**을 정의 합니다.  
+ 다음 코드 예제에서는 샘플 스키마에서 만든 강력한 형식의 **데이터 집합** 을 사용 합니다. 이는 한 <xref:System.Data.SqlClient.SqlDataAdapter>를 사용 하 여 **Customers** 테이블을 채우고 다른 <xref:System.Data.SqlClient.SqlDataAdapter>를 사용 하 여 **Orders** 테이블을 채웁니다. 강력한 형식의 **데이터 집합** 은 **datarelations**을 정의 합니다.  
   
 ```vb  
 ' Assumes a valid SqlConnection object named connection.  
@@ -222,10 +222,10 @@ protected static void OnCustomerChanged(object sender, CustomerDataSet.CustomerC
     }  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Data.DataColumnCollection>
 - <xref:System.Data.DataSet>
-- [형식화된 데이터 집합](typed-datasets.md)
-- [DataSet, DataTable 및 DataView](index.md)
+- [형식화된 데이터 세트](typed-datasets.md)
+- [DataSets, DataTables 및 DataViews](index.md)
 - [ADO.NET 개요](../ado-net-overview.md)

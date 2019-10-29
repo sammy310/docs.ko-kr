@@ -2,12 +2,12 @@
 title: 보안 고려 사항(Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: 1865afb384cfff41ede953c00f01cc96aea9a080
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: d9adf4ed9e340ff589117f160e370c7d1595a207
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854252"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039863"
 ---
 # <a name="security-considerations-entity-framework"></a>보안 고려 사항(Entity Framework)
 이 항목에서는 Entity Framework 응용 프로그램 개발, 배포 및 실행과 관련 된 보안 고려 사항에 대해 설명 합니다. 또한 보안 .NET Framework 응용 프로그램을 만들기 위한 권장 사항을 따라야 합니다. 자세한 내용은 [보안 개요](../security-overview.md)를 참조 하세요.  
@@ -46,12 +46,12 @@ ms.locfileid: "70854252"
   
 - 동적으로 연결을 만들 때는 연결 문자열 작성기를 사용합니다.  
   
-     런타임에 연결 문자열을 생성해야 하는 경우 <xref:System.Data.EntityClient.EntityConnectionStringBuilder> 클래스를 사용합니다. 이 문자열 작성기 클래스는 잘못된 입력 정보의 유효성을 검사하고 이스케이프하여 연결 문자열 삽입 공격을 방지합니다. 자세한 내용은 [방법: EntityConnection 연결 문자열](how-to-build-an-entityconnection-connection-string.md)을 작성 합니다. 또한 적절 한 문자열 작성기 클래스를 사용 하 여 Entity Framework 연결 문자열의 일부인 데이터 소스 연결 문자열을 생성 합니다. ADO.NET 공급자에 대 한 연결 문자열 작성기에 대 한 자세한 내용은 [연결 문자열 작성기](../connection-string-builders.md)를 참조 하세요.  
+     런타임에 연결 문자열을 생성해야 하는 경우 <xref:System.Data.EntityClient.EntityConnectionStringBuilder> 클래스를 사용합니다. 이 문자열 작성기 클래스는 잘못된 입력 정보의 유효성을 검사하고 이스케이프하여 연결 문자열 삽입 공격을 방지합니다. 자세한 내용은 [방법: EntityConnection 연결 문자열 작성](how-to-build-an-entityconnection-connection-string.md)을 참조 하세요. 또한 적절 한 문자열 작성기 클래스를 사용 하 여 Entity Framework 연결 문자열의 일부인 데이터 소스 연결 문자열을 생성 합니다. ADO.NET 공급자에 대 한 연결 문자열 작성기에 대 한 자세한 내용은 [연결 문자열 작성기](../connection-string-builders.md)를 참조 하세요.  
   
  자세한 내용은 [연결 정보 보호](../protecting-connection-information.md)를 참조하세요.  
   
 #### <a name="do-not-expose-an-entityconnection-to-untrusted-users"></a>EntityConnection을 신뢰할 수 없는 사용자에게 노출하지 않습니다.  
- <xref:System.Data.EntityClient.EntityConnection> 개체는 기본 연결의 연결 문자열을 노출합니다. <xref:System.Data.EntityClient.EntityConnection> 개체에 액세스할 수 있는 사용자는 기본 연결의 <xref:System.Data.ConnectionState>도 변경할 수 있습니다. <xref:System.Data.EntityClient.EntityConnection> 클래스는 스레드로부터 안전하지 않습니다.  
+ <xref:System.Data.EntityClient.EntityConnection> 개체는 기본 연결의 연결 문자열을 노출합니다. <xref:System.Data.EntityClient.EntityConnection> 개체에 액세스할 수 있는 사용자는 기본 연결의 <xref:System.Data.ConnectionState>도 변경할 수 있습니다. <xref:System.Data.EntityClient.EntityConnection> 클래스는 스레드로부터 안전 하지 않습니다.  
   
 #### <a name="do-not-pass-connections-outside-the-security-context"></a>연결을 보안 컨텍스트 외부로 전달하지 않습니다.  
  연결이 설정된 후 보안 컨텍스트 외부로 해당 연결을 전달하면 안 됩니다. 예를 들어, 연결을 열 수 있는 권한이 있는 스레드에서 연결을 전역 위치에 저장하면 안 됩니다. 전역 위치에서 연결을 사용할 수 있으면 다른 악성 스레드에서 명시적으로 해당 권한이 부여되지 않아도 열린 연결을 사용할 수 있습니다.  
@@ -73,7 +73,7 @@ ms.locfileid: "70854252"
   
 - <xref:System.Security.Permissions.SecurityPermission>: <xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter> 인터페이스를 사용하여 예외를 serialize할 수 있는 <xref:System.Runtime.Serialization.ISerializable>  
   
-- 데이터베이스 연결을 열고 데이터베이스에 대해 명령을 실행할 수 있는 권한 (예: <xref:System.Data.SqlClient.SqlClientPermission> SQL Server 데이터베이스)  
+- 데이터베이스 연결을 열고 데이터베이스에 대해 명령을 실행할 수 있는 권한 (예: SQL Server 데이터베이스에 대 한 <xref:System.Data.SqlClient.SqlClientPermission>)  
   
  자세한 내용은 [Code Access Security and ADO.NET](../code-access-security.md)을 참조하세요.  
   
@@ -81,9 +81,9 @@ ms.locfileid: "70854252"
  Entity Framework는 보안 권한을 적용 하지 않으며 신뢰할 수 있는지 여부에 관계 없이 프로세스에서 사용자가 제공한 데이터 개체 코드를 호출 합니다. 클라이언트 인증 및 권한 부여가 데이터 스토리지 및 해당 애플리케이션에서 수행되는지 확인합니다.  
   
 #### <a name="restrict-access-to-all-configuration-files"></a>모든 구성 파일에 대한 액세스를 제한합니다.  
- 관리자는 enterprisesec .config, app.config, machine.config 및 응용 프로그램 구성 파일 \<> *응용*프로그램을 포함 하 여 응용 프로그램에 대 한 구성을 지정 하는 모든 파일에 대 한 쓰기 권한을 제한 해야 합니다. exe .config.  
+ 관리자는 응용 프로그램에 대 한 구성을 지정 하는 모든 파일에 대 한 쓰기 권한을 제한 해야 합니다. 예를 들어 enterprisesec .config, web.config, machine.config 및 응용 프로그램 구성 파일 \<*응용*프로그램 >를 포함 합니다. exe .config.  
   
- 공급자 고정 이름은 app.config에서 수정할 수 있습니다. 클라이언트 응용 프로그램은 강력한 이름을 사용하여 표준 공급자 팩터리 모델을 통해 기본 공급자에 액세스해야 합니다.  
+ 공급자 고정 이름은 app.config에서 수정할 수 있습니다. 클라이언트 응용 프로그램은 강력한 이름을 사용 하 여 표준 공급자 팩터리 모델을 통해 기본 공급자에 액세스 해야 합니다.  
   
 #### <a name="restrict-permissions-to-the-model-and-mapping-files"></a>모델 및 매핑 파일에 대한 권한을 제한합니다.  
  관리자는 모델 및 매핑 파일(.edmx, .csdl, .ssdl 및 .msl)에 대한 쓰기 권한을 모델 또는 매핑을 수정하는 사용자로만 제한해야 합니다. Entity Framework는 런타임에 이러한 파일에 대 한 읽기 액세스만 필요 합니다. 또한 관리자는 엔터티 데이터 모델 도구에서 생성 된 개체 계층 및 미리 컴파일된 뷰 소스 코드 파일에 대 한 액세스를 제한 해야 합니다.  
@@ -102,7 +102,7 @@ ms.locfileid: "70854252"
   
 - LINQ to Entities 삽입 공격:  
   
-     쿼리 컴퍼지션은 LINQ to Entities에서 가능 하지만 개체 모델 API를 통해 수행 됩니다. 쿼리와 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 달리 LINQ to Entities 쿼리는 문자열 조작 이나 연결을 사용 하 여 구성 되지 않으며 기존 SQL 삽입 공격에 취약 하지 않습니다.  
+     쿼리 컴퍼지션은 LINQ to Entities에서 가능 하지만 개체 모델 API를 통해 수행 됩니다. [!INCLUDE[esql](../../../../../includes/esql-md.md)] 쿼리와 달리 LINQ to Entities 쿼리는 문자열 조작 이나 연결을 사용 하 여 구성 되지 않으며 기존 SQL 삽입 공격에 취약 하지 않습니다.  
   
 #### <a name="prevent-very-large-result-sets"></a>결과 집합이 너무 커지지 않도록 합니다.  
  결과 집합이 매우 크면 클라이언트에서 결과 집합의 크기에 비례하여 리소스를 사용하는 작업을 수행할 경우 클라이언트 시스템이 종료될 수 있습니다. 결과 집합은 다음 조건에서 매우 커질 수 있습니다.  
@@ -113,18 +113,18 @@ ms.locfileid: "70854252"
   
 - 중첩된 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 쿼리  
   
- 사용자 입력을 허용하는 경우 해당 입력으로 인해 결과 집합이 시스템에서 처리할 수 있는 것보다 더 커지지 않도록 해야 합니다. LINQ to Entities 또는의 <xref:System.Linq.Queryable.Take%2A> [!INCLUDE[esql](../../../../../includes/esql-md.md)] [LIMIT](./language-reference/limit-entity-sql.md) 연산자를 사용 하 여 결과 집합의 크기를 제한할 수도 있습니다.  
+ 사용자 입력을 허용하는 경우 해당 입력으로 인해 결과 집합이 시스템에서 처리할 수 있는 것보다 더 커지지 않도록 해야 합니다. LINQ to Entities에서 <xref:System.Linq.Queryable.Take%2A> 메서드를 사용 하거나 [!INCLUDE[esql](../../../../../includes/esql-md.md)]의 [LIMIT](./language-reference/limit-entity-sql.md) 연산자를 사용 하 여 결과 집합의 크기를 제한할 수도 있습니다.  
   
 #### <a name="avoid-returning-iqueryable-results-when-exposing-methods-to-potentially-untrusted-callers"></a>신뢰할 수 없는 호출자에 메서드를 노출할 때 IQueryable 결과를 반환하지 않도록 합니다.  
  다음과 같은 이유로 신뢰할 수 없는 호출자에 노출되는 메서드에서 <xref:System.Linq.IQueryable%601> 형식을 반환하지 않도록 해야 합니다.  
   
 - <xref:System.Linq.IQueryable%601> 형식을 노출하는 쿼리의 사용자가 보안 데이터를 노출하거나 결과 집합의 크기를 늘리는 메서드를 결과에 대해 호출할 수 있습니다. 예를 들어 다음과 같은 메서드 시그니처가 있다고 가정합니다.  
   
-    ```  
+    ```csharp  
     public IQueryable<Customer> GetCustomer(int customerId)  
     ```  
   
-     이 쿼리의 사용자는 반환된 `.Include("Orders")` 에 대해 `IQueryable<Customer>` 를 호출하여 쿼리에서 노출하도록 의도되지 않은 데이터를 검색할 수 있습니다. 메서드의 반환 형식을 <xref:System.Collections.Generic.IEnumerable%601>로 변경하고 `.ToList()`와 같이 결과를 구체화하는 메서드를 호출하면 이 문제를 방지할 수 있습니다.  
+    이 쿼리의 사용자는 반환된 `.Include("Orders")` 에 대해 `IQueryable<Customer>` 를 호출하여 쿼리에서 노출하도록 의도되지 않은 데이터를 검색할 수 있습니다. 메서드의 반환 형식을 <xref:System.Collections.Generic.IEnumerable%601>로 변경하고 `.ToList()`와 같이 결과를 구체화하는 메서드를 호출하면 이 문제를 방지할 수 있습니다.  
   
 - <xref:System.Linq.IQueryable%601> 쿼리는 결과가 반복될 때 실행되므로 <xref:System.Linq.IQueryable%601> 형식을 노출하는 쿼리의 사용자가 throw된 예외를 catch할 수 있습니다. 예외에는 사용자에게 허용되지 않는 정보가 포함될 수 있습니다.  
   
@@ -132,7 +132,7 @@ ms.locfileid: "70854252"
  다음 보안 고려 사항은 엔터티 형식을 생성하고 사용할 때 적용됩니다.  
   
 #### <a name="do-not-share-an-objectcontext-across-application-domains"></a>애플리케이션 도메인에서 ObjectContext를 공유하지 않습니다.  
- 둘 이상의 애플리케이션 도메인과 <xref:System.Data.Objects.ObjectContext>를 공유하면 연결 문자열의 정보가 노출될 수 있습니다. 대신, serialized 개체 또는 개체 그래프를 다른 애플리케이션 도메인으로 전송한 다음 해당 애플리케이션 도메인의 <xref:System.Data.Objects.ObjectContext>에 개체를 연결해야 합니다. 자세한 내용은 [개체 직렬화](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738446(v=vs.100))합니다.  
+ 둘 이상의 애플리케이션 도메인과 <xref:System.Data.Objects.ObjectContext>를 공유하면 연결 문자열의 정보가 노출될 수 있습니다. 대신, serialized 개체 또는 개체 그래프를 다른 애플리케이션 도메인으로 전송한 다음 해당 애플리케이션 도메인의 <xref:System.Data.Objects.ObjectContext>에 개체를 연결해야 합니다. 자세한 내용은 [개체 직렬화](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738446(v=vs.100))를 참조 하세요.  
   
 #### <a name="prevent-type-safety-violations"></a>형식 안전성을 위반하지 않도록 합니다.  
  형식 안전성을 위반 하는 경우 Entity Framework는 개체의 데이터 무결성을 보장할 수 없습니다. 형식 안전성 위반은 신뢰할 수 없는 애플리케이션이 완전 신뢰 코드 액세스 보안을 사용하여 실행될 수 있도록 하는 경우에 발생할 수 있습니다.  
@@ -145,10 +145,10 @@ ms.locfileid: "70854252"
 ASP.NET 응용 프로그램에서 경로를 사용 하는 경우 다음 사항을 고려해 야 합니다.  
   
 #### <a name="verify-whether-your-host-performs-path-checks"></a>호스트에서 경로 검사를 수행하는지 여부를 확인합니다.  
- `|DataDirectory|` (파이프 기호 안에 포함 됨) 대체 문자열이 사용 되는 경우 ADO.NET는 확인 된 경로가 지원 되는지 확인 합니다. 예를 들어, ".."은 `DataDirectory` 뒤에 사용할 수 없습니다. 웹 응용 프로그램 루트 연산자 (`~`)를 확인 하는 것과 동일한 검사는 ASP.NET를 호스팅하는 프로세스에 의해 수행 됩니다. IIS는이 검사를 수행 합니다. 그러나 IIS 이외의 호스트는 확인 된 경로가 지원 되는지 확인할 수 없습니다. Entity Framework 응용 프로그램을 배포 하는 호스트의 동작을 알고 있어야 합니다.  
+ `|DataDirectory|` (파이프 기호 안에 포함 됨) 대체 문자열이 사용 되는 경우 ADO.NET는 확인 된 경로가 지원 되는지 확인 합니다. 예를 들어, ".."은 `DataDirectory` 뒤에 사용할 수 없습니다. ASP.NET를 호스팅하는 프로세스에서 웹 응용 프로그램 루트 연산자 (`~`)를 확인 하는 것과 동일한 검사를 수행 합니다. IIS는이 검사를 수행 합니다. 그러나 IIS 이외의 호스트는 확인 된 경로가 지원 되는지 확인할 수 없습니다. Entity Framework 응용 프로그램을 배포 하는 호스트의 동작을 알고 있어야 합니다.  
   
 #### <a name="do-not-make-assumptions-about-resolved-path-names"></a>확인된 경로 이름에 대해 가정하지 않습니다.  
- 응용 프로그램의 런타임 중에 루트 연산자 (`~`) `DataDirectory` 및 대체 문자열을 확인 하는 값이 일정 하 게 유지 되어야 하지만 Entity Framework 호스트에서 이러한 값을 수정 하는 것을 제한 하지 않습니다.  
+ 루트 연산자 (`~`) 및 `DataDirectory` 대체 문자열 확인이 확인 되는 값은 응용 프로그램의 런타임 중에 일정 하 게 유지 되어야 하지만, Entity Framework 호스트에서 이러한 값을 수정 하는 것을 제한 하지 않습니다.  
   
 #### <a name="verify-the-path-length-before-deployment"></a>배포 전에 경로 길이를 확인합니다.  
  Entity Framework 응용 프로그램을 배포 하기 전에 루트 연산자 (~) 및 `DataDirectory` 대체 문자열의 값이 운영 체제의 경로 길이 제한을 초과 하지 않는지 확인 해야 합니다. ADO.NET 데이터 공급자는 경로 길이가 유효한 제한 범위 내에 있는지 확인 하지 않습니다.  
@@ -162,8 +162,8 @@ ADO.NET metadata service 구성 요소는 개인 정보를 기록 하지 않습�
 #### <a name="do-not-accept-metadataworkspace-objects-from-untrusted-sources"></a>신뢰할 수 없는 소스의 MetadataWorkspace 개체를 허용하지 않습니다.  
  애플리케이션에서 신뢰할 수 없는 소스의 <xref:System.Data.Metadata.Edm.MetadataWorkspace> 클래스 인스턴스를 허용하면 안 됩니다. 대신, 명시적으로 작업 영역을 생성하고 해당 소스에서 채워야 합니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
-- [ADO.NET 응용 프로그램 보안](../securing-ado-net-applications.md)
+- [ADO.NET 애플리케이션 보안](../securing-ado-net-applications.md)
 - [배포 고려 사항](deployment-considerations.md)
 - [마이그레이션 고려 사항](migration-considerations.md)

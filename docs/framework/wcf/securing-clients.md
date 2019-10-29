@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - clients [WCF], security considerations
 ms.assetid: 44c8578c-9a5b-4acd-8168-1c30a027c4c5
-ms.openlocfilehash: 988e868b1a1698d00a6d77fd715b2a76b1790132
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: f8fe5c5e0afac071ce7e036ceccd0b66351b0e1d
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321260"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040878"
 ---
 # <a name="securing-clients"></a>클라이언트에 보안 설정
 WCF (Windows Communication Foundation)에서 서비스는 클라이언트에 대 한 보안 요구 사항을 결정 합니다. 즉, 서비스는 사용할 보안 모드 및 클라이언트가 자격 증명을 제공해야 하는지 여부를 지정합니다. 따라서 클라이언트 보안 설정 프로세스는 간단합니다. 서비스에서 가져온 메타데이터를 사용하여(게시된 경우) 클라이언트를 빌드하면 됩니다. 메타데이터는 클라이언트를 구성하는 방법을 지정합니다. 서비스에서 클라이언트가 자격 증명을 제공해야 하는 경우 요구 사항에 맞는 자격 증명을 가져와야 합니다. 이 항목에서는 이 과정을 자세히 설명합니다. 보안 서비스를 만드는 방법에 대 한 자세한 내용은 [서비스 보안](securing-services.md)설정을 참조 하세요.  
   
 ## <a name="the-service-specifies-security"></a>서비스에서 보안 지정  
- 기본적으로 WCF 바인딩에는 보안 기능이 사용 됩니다. (@No__t_0는 예외입니다.) 따라서 WCF를 사용 하 여 서비스를 만든 경우 인증, 기밀성 및 무결성을 보장 하기 위해 보안을 구현할 가능성이 높아집니다. 이러한 경우 서비스가 제공하는 메타데이터는 보안 통신 채널을 설정하는 데 필요한 사항을 표시합니다. 서비스 메타데이터에 보안 요구 사항이 없는 경우 서비스에 SSL(Secure Sockets Layer) over HTTP와 같은 보안 스키마를 적용할 수 없습니다. 그러나 서비스에서 클라이언트가 자격 증명을 제공해야 하는 경우 클라이언트 개발자, 배포자 또는 관리자는 클라이언트가 서비스에게 자신을 인증하는 데 사용할 실제 자격 증명을 제공해야 합니다.  
+ 기본적으로 WCF 바인딩에는 보안 기능이 사용 됩니다. (<xref:System.ServiceModel.BasicHttpBinding>는 예외입니다.) 따라서 WCF를 사용 하 여 서비스를 만든 경우 인증, 기밀성 및 무결성을 보장 하기 위해 보안을 구현할 가능성이 높아집니다. 이러한 경우 서비스가 제공하는 메타데이터는 보안 통신 채널을 설정하는 데 필요한 사항을 표시합니다. 서비스 메타데이터에 보안 요구 사항이 없는 경우 서비스에 SSL(Secure Sockets Layer) over HTTP와 같은 보안 스키마를 적용할 수 없습니다. 그러나 서비스에서 클라이언트가 자격 증명을 제공해야 하는 경우 클라이언트 개발자, 배포자 또는 관리자는 클라이언트가 서비스에게 자신을 인증하는 데 사용할 실제 자격 증명을 제공해야 합니다.  
   
 ## <a name="obtaining-metadata"></a>메타데이터 가져오기  
  클라이언트를 만들 때 첫 번째 단계는 클라이언트가 통신할 서비스에 대한 메타데이터를 가져오는 것입니다. 이 작업은 다음 두 가지 방법으로 수행할 수 있습니다. 첫째, 서비스가 MEX (metadata exchange) 끝점을 게시 하거나 HTTP 또는 HTTPS를 통해 메타 데이터를 사용할 수 있도록 설정 하는 경우 클라이언트에 대 한 코드 파일을 모두 생성 하는 [ServiceModel Metadata 유틸리티 도구 (svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md)를 사용 하 여 메타 데이터를 다운로드할 수 있습니다. 구성 파일을 비롯 하 여 도구를 사용 하는 방법에 대 한 자세한 내용은 [WCF 클라이언트를 사용 하 여 서비스 액세스](accessing-services-using-a-wcf-client.md)를 참조 하세요. 서비스가 MEX 끝점을 게시 하지 않고 HTTP 또는 HTTPS를 통해 메타 데이터를 사용할 수 있도록 하지 않는 경우 서비스 작성자에 게 보안 요구 사항 및 메타 데이터를 설명 하는 설명서를 문의 해야 합니다.  
@@ -95,14 +95,15 @@ WCF (Windows Communication Foundation)에서 서비스는 클라이언트에 대
 <configuration>  
   <system.serviceModel>  
     <behaviors>  
-      <endpointBehaviors>  
+      <endpointBehaviors>
         <behavior name="myEndpointBehavior">  
           <clientCredentials>  
             <clientCertificate findvalue="myMachineName"   
             storeLocation="Current" X509FindType="FindBySubjectName" />  
           </clientCredentials>  
-        </behavior>              
-    </behaviors>  
+        </behavior>
+      </endpointBehaviors>
+    </behaviors>
   </system.serviceModel>  
 </configuration>  
 ```  

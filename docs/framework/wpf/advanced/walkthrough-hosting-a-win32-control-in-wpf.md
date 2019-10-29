@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hosting Win32 control in WPF [WPF]
 - Win32 code [WPF], WPF interoperation
 ms.assetid: a676b1eb-fc55-4355-93ab-df840c41cea0
-ms.openlocfilehash: cc27189afd2185d5f0a1eeacccf4c537dd3d9c2e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 56f096dd7ba4feb677394cd26be9858a33842018
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69917538"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040814"
 ---
 # <a name="walkthrough-hosting-a-win32-control-in-wpf"></a>연습: WPF에서 Win32 컨트롤 호스팅
 WPF (Windows Presentation Foundation)는 응용 프로그램을 만들기 위한 다양 한 환경을 제공 합니다. 그러나 Win32 코드에 상당한 투자를 한 경우 WPF 응용 프로그램에서 해당 코드를 완전히 다시 작성 하는 것 보다 최소한의 코드를 다시 사용 하는 것이 더 효과적일 수 있습니다. Wpf는 WPF 페이지에서 Win32 창을 호스팅하기 위한 간단한 메커니즘을 제공 합니다.  
@@ -35,33 +35,33 @@ WPF (Windows Presentation Foundation)는 응용 프로그램을 만들기 위한
   
  기본 호스팅 절차는 다음과 같습니다.  
   
-1. 창을 호스트 하는 WPF 페이지를 구현 합니다. 한 가지 방법은 호스트 된 창 <xref:System.Windows.Controls.Border> 에 대 한 페이지의 섹션을 예약 하는 요소를 만드는 것입니다.  
+1. 창을 호스트 하는 WPF 페이지를 구현 합니다. 한 가지 방법은 호스트 된 창에 대 한 페이지의 섹션을 예약 하는 <xref:System.Windows.Controls.Border> 요소를 만드는 것입니다.  
   
-2. 에서 <xref:System.Windows.Interop.HwndHost>상속 되는 컨트롤을 호스트 하는 클래스를 구현 합니다.  
+2. <xref:System.Windows.Interop.HwndHost>에서 상속 되는 컨트롤을 호스트 하는 클래스를 구현 합니다.  
   
 3. 해당 클래스에서 <xref:System.Windows.Interop.HwndHost> 클래스 멤버 <xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A>를 재정의 합니다.  
   
-4. 호스팅된 창을 WPF 페이지가 포함 된 창의 자식으로 만듭니다. 기존 WPF 프로그래밍은 명시적으로 사용할 필요가 없지만 호스팅 페이지는 핸들 (HWND)이 포함 된 창입니다. <xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A> 메서드의 매개 변수를 `hwndParent` 통해 페이지 HWND를 수신 합니다. 호스트된 창은 이 HWND의 자식으로 만들어야 합니다.  
+4. 호스팅된 창을 WPF 페이지가 포함 된 창의 자식으로 만듭니다. 기존 WPF 프로그래밍은 명시적으로 사용할 필요가 없지만 호스팅 페이지는 핸들 (HWND)이 포함 된 창입니다. <xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A> 메서드의 `hwndParent` 매개 변수를 통해 페이지 HWND를 수신 합니다. 호스트된 창은 이 HWND의 자식으로 만들어야 합니다.  
   
 5. 호스트 창을 만들었으면 호스트된 창의 HWND를 반환합니다. 하나 이상의 Win32 컨트롤을 호스트 하려는 경우 일반적으로 호스트 창을 HWND의 자식으로 만들고 컨트롤을 해당 호스트 창의 자식으로 만듭니다. 호스트 창에서 컨트롤을 래핑하여 WPF 페이지가 컨트롤에서 알림을 받을 수 있는 간단한 방법을 제공 하 고,이를 통해 HWND 경계에서 알림과 관련 된 몇 가지 특정 Win32 문제를 처리 합니다.  
   
-6. 자식 컨트롤의 알림과 같이 호스트 창으로 전송되는 선택한 메시지를 처리합니다. 그런 경우 두 가지 방법이 있습니다.  
+6. 자식 컨트롤의 알림과 같이 호스트 창으로 전송되는 선택한 메시지를 처리합니다. 이렇게 하는 데는 두 가지 방법이 있습니다.  
   
-    - 호스팅 클래스에서 메시지를 처리 하려는 경우 <xref:System.Windows.Interop.HwndHost.WndProc%2A> <xref:System.Windows.Interop.HwndHost> 클래스의 메서드를 재정의 합니다.  
+    - 호스팅 클래스에서 메시지를 처리 하려면 <xref:System.Windows.Interop.HwndHost> 클래스의 <xref:System.Windows.Interop.HwndHost.WndProc%2A> 메서드를 재정의 합니다.  
   
-    - WPF에서 메시지를 처리 하도록 하려는 경우 코드 숨김으로 <xref:System.Windows.Interop.HwndHost> 클래스 <xref:System.Windows.Interop.HwndHost.MessageHook> 이벤트를 처리 합니다. 이 이벤트는 호스트된 창에서 받은 모든 메시지에 대해 발생합니다. 이 옵션을 선택 하는 경우에도를 <xref:System.Windows.Interop.HwndHost.WndProc%2A>재정의 해야 하지만 최소한의 구현만 필요 합니다.  
+    - WPF에서 메시지를 처리 하 게 하려면 코드 숨김으로 <xref:System.Windows.Interop.HwndHost> 클래스 <xref:System.Windows.Interop.HwndHost.MessageHook> 이벤트를 처리 합니다. 이 이벤트는 호스트된 창에서 받은 모든 메시지에 대해 발생합니다. 이 옵션을 선택 하는 경우에도 <xref:System.Windows.Interop.HwndHost.WndProc%2A>를 재정의 해야 하지만 최소한의 구현만 필요 합니다.  
   
-7. 의 <xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A> <xref:System.Windows.Interop.HwndHost.WndProc%2A> 및 메서드를재정의합니다.<xref:System.Windows.Interop.HwndHost> 이러한 메서드를 재정의 하 여 <xref:System.Windows.Interop.HwndHost> 계약을 충족 해야 하지만 최소한의 구현만 제공 하면 됩니다.  
+7. <xref:System.Windows.Interop.HwndHost>의 <xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A> 및 <xref:System.Windows.Interop.HwndHost.WndProc%2A> 메서드를 재정의 합니다. <xref:System.Windows.Interop.HwndHost> 계약을 충족 하려면 이러한 메서드를 재정의 해야 하지만 최소한의 구현만 제공 하면 됩니다.  
   
-8. 코드를 작성 하는 파일에서 컨트롤 호스팅 클래스의 인스턴스를 만들고이를 창을 호스트 하기 위한 <xref:System.Windows.Controls.Border> 요소의 자식으로 만듭니다.  
+8. 코드를 작성 하는 파일에서 컨트롤 호스팅 클래스의 인스턴스를 만들고 창을 호스팅하기 위한 <xref:System.Windows.Controls.Border> 요소의 자식으로 만듭니다.  
   
-9. 컨트롤에서 보내는 알림과 같이 자식 창에서 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] 메시지를 보내고 처리 하 여 호스팅된 창과 통신 합니다.  
+9. 호스팅된 창과 통신 합니다. 예를 들어, 컨트롤에서 보낸 알림과 같은 자식 창에서 메시지를 처리 하 고 해당 자식 창에서 메시지를 처리 합니다.  
   
 <a name="page_layout"></a>   
 ## <a name="implement-the-page-layout"></a>페이지 레이아웃 구현  
- ListBox 컨트롤을 호스트 하는 WPF 페이지의 레이아웃은 두 개의 영역으로 구성 됩니다. 페이지의 왼쪽은 Win32 컨트롤을 조작할 수 있는를 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 제공 하는 몇 가지 WPF 컨트롤을 호스팅합니다. 페이지의 오른쪽 위에는 호스트된 ListBox 컨트롤에 대한 사각형 영역이 있습니다.  
+ ListBox 컨트롤을 호스트 하는 WPF 페이지의 레이아웃은 두 개의 영역으로 구성 됩니다. 페이지의 왼쪽은 Win32 컨트롤을 조작할 수 있는 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]를 제공 하는 몇 가지 WPF 컨트롤을 호스팅합니다. 페이지의 오른쪽 위에는 호스트된 ListBox 컨트롤에 대한 사각형 영역이 있습니다.  
   
- 이 레이아웃을 구현 하는 코드는 매우 간단 합니다. Root 요소 <xref:System.Windows.Controls.DockPanel> 는 두 개의 자식 요소가 있는입니다. 첫 번째 <xref:System.Windows.Controls.Border> 는 ListBox 컨트롤을 호스트 하는 요소입니다. 이 요소는 페이지의 오른쪽 위에 있는 200x200 정사각형을 사용합니다. 두 번째는 정보 <xref:System.Windows.Controls.StackPanel> 를 표시 하 고 노출 된 상호 운용성 속성을 설정 하 여 ListBox 컨트롤을 조작할 수 있도록 하는 WPF 컨트롤 집합을 포함 하는 요소입니다. 의 <xref:System.Windows.Controls.StackPanel>자식인 각 요소에 대 한 참조 자료는 아래 예제 코드에 나열 되어 있지만 여기서는 설명 하지 않습니다 (기본 항목을 참조 하세요.) .이 요소에 대 한 자세한 내용은 상호 운용 모델에는 이러한 모델이 필요 하지 않으며 샘플에 일부 상호 작용을 추가 하기 위해 제공 됩니다.  
+ 이 레이아웃을 구현 하는 코드는 매우 간단 합니다. Root 요소는 두 개의 자식 요소가 있는 <xref:System.Windows.Controls.DockPanel>입니다. 첫 번째 요소는 ListBox 컨트롤을 호스트 하는 <xref:System.Windows.Controls.Border> 요소입니다. 이 요소는 페이지의 오른쪽 위에 있는 200x200 정사각형을 사용합니다. 두 번째는 정보를 표시 하 고 노출 된 상호 운용성 속성을 설정 하 여 ListBox 컨트롤을 조작할 수 있도록 하는 WPF 컨트롤 집합을 포함 하는 <xref:System.Windows.Controls.StackPanel> 요소입니다. <xref:System.Windows.Controls.StackPanel>의 자식인 각 요소에 대 한 참조 자료는 아래 예제 코드에 나열 되어 있지만 여기서는 설명 하지 않습니다 (기본 항목을 참조 하세요.). 이러한 요소에 대 한 자세한 내용은 상호 운용 모델에는 이러한 모델이 필요 하지 않으며 샘플에 일부 상호 작용을 추가 하기 위해 제공 됩니다.  
   
  [!code-xaml[WPFHostingWin32Control#WPFUI](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/Page1.xaml#wpfui)]  
   
@@ -92,7 +92,7 @@ WPF (Windows Presentation Foundation)는 응용 프로그램을 만들기 위한
  [!code-csharp[WPFHostingWin32Control#IntPtrProperty](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/ControlHost.cs#intptrproperty)]
  [!code-vb[WPFHostingWin32Control#IntPtrProperty](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/ControlHost.vb#intptrproperty)]  
   
- ListBox 컨트롤은 호스트 창의 자식으로 만듭니다. 두 창의 너비와 높이는 위에서 설명한 대로 생성자에 전달된 값으로 설정됩니다. 이렇게 하면 호스트 창과 컨트롤의 크기가 페이지에서 예약된 영역과 동일해집니다.  Windows를 만든 후 샘플은 호스트 창의 HWND를 <xref:System.Runtime.InteropServices.HandleRef> 포함 하는 개체를 반환 합니다.  
+ ListBox 컨트롤은 호스트 창의 자식으로 만듭니다. 두 창의 너비와 높이는 위에서 설명한 대로 생성자에 전달된 값으로 설정됩니다. 이렇게 하면 호스트 창과 컨트롤의 크기가 페이지에서 예약된 영역과 동일해집니다.  Windows를 만든 후 샘플은 호스트 창의 HWND를 포함 하는 <xref:System.Runtime.InteropServices.HandleRef> 개체를 반환 합니다.  
   
  [!code-csharp[WPFHostingWin32Control#BuildWindowCore](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/ControlHost.cs#buildwindowcore)]
  [!code-vb[WPFHostingWin32Control#BuildWindowCore](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/ControlHost.vb#buildwindowcore)]  
@@ -102,7 +102,7 @@ WPF (Windows Presentation Foundation)는 응용 프로그램을 만들기 위한
   
 <a name="destroywindow_wndproc"></a>   
 ### <a name="implement-destroywindow-and-wndproc"></a>DestroyWindow 및 WndProc 구현  
- 이외 <xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A>에도의 <xref:System.Windows.Interop.HwndHost.WndProc%2A> <xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A>및메서드 를 재정의 해야 합니다. <xref:System.Windows.Interop.HwndHost> 이 예제에서는 컨트롤에 대 한 메시지가 <xref:System.Windows.Interop.HwndHost.MessageHook> 처리기에 의해 처리 되므로 및 <xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A> 의 <xref:System.Windows.Interop.HwndHost.WndProc%2A> 구현은 최소화 됩니다. 의 <xref:System.Windows.Interop.HwndHost.WndProc%2A>경우 메시지를 처리 하지 않고 `false` 0을 반환 함을 나타내려면를로 설정 `handled` 합니다. 의 <xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A>경우 창을 제거 하기만 하면 됩니다.  
+ <xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A>외에도 <xref:System.Windows.Interop.HwndHost>의 <xref:System.Windows.Interop.HwndHost.WndProc%2A> 및 <xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A> 메서드를 재정의 해야 합니다. 이 예제에서는 컨트롤에 대 한 메시지가 <xref:System.Windows.Interop.HwndHost.MessageHook> 처리기에 의해 처리 되므로 <xref:System.Windows.Interop.HwndHost.WndProc%2A> 및 <xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A>의 구현은 최소화 됩니다. <xref:System.Windows.Interop.HwndHost.WndProc%2A>경우 `handled`를 `false`로 설정 하 여 메시지가 처리 되지 않았음을 나타내고 0을 반환 합니다. <xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A>의 경우 창을 제거 하면 됩니다.  
   
  [!code-csharp[WPFHostingWin32Control#WndProcDestroy](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/ControlHost.cs#wndprocdestroy)]
  [!code-vb[WPFHostingWin32Control#WndProcDestroy](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/ControlHost.vb#wndprocdestroy)]  
@@ -112,12 +112,12 @@ WPF (Windows Presentation Foundation)는 응용 프로그램을 만들기 위한
   
 <a name="host_the_control"></a>   
 ## <a name="host-the-control-on-the-page"></a>페이지에서 컨트롤 호스트  
- 페이지에서 컨트롤을 호스트 하려면 먼저 `ControlHost` 클래스의 새 인스턴스를 만듭니다. 컨트롤 (`ControlHostElement`)이 포함 된 border 요소의 높이와 너비를 `ControlHost` 생성자에 전달 합니다. 이렇게 하면 ListBox 크기가 정확하게 조정됩니다. 그런 다음 호스트 `ControlHost` <xref:System.Windows.Controls.Decorator.Child%2A> 의<xref:System.Windows.Controls.Border>속성에 개체를 할당 하 여 페이지에서 컨트롤을 호스팅합니다.  
+ 페이지에서 컨트롤을 호스트 하려면 먼저 `ControlHost` 클래스의 새 인스턴스를 만듭니다. 컨트롤 (`ControlHostElement`)이 포함 된 border 요소의 높이와 너비를 `ControlHost` 생성자에 전달 합니다. 이렇게 하면 ListBox 크기가 정확하게 조정됩니다. 그런 다음 `ControlHost` 개체를 호스트 <xref:System.Windows.Controls.Border>의 <xref:System.Windows.Controls.Decorator.Child%2A> 속성에 할당 하 여 페이지에서 컨트롤을 호스팅합니다.  
   
- 이 샘플은 컨트롤에서 메시지를 <xref:System.Windows.Interop.HwndHost.MessageHook> 수신 `ControlHost` 하는 처리기를의 이벤트에 연결 합니다. 이 이벤트는 호스트된 창으로 전송된 모든 메시지에 대해 발생됩니다. 이 경우 컨트롤의 알림을 포함하여 실제 ListBox 컨트롤을 래핑하는 창에 전송된 메시지입니다. 샘플에서는 SendMessage를 호출하여 컨트롤에서 정보를 가져오고 해당 내용을 수정합니다. 페이지가 컨트롤과 통신하는 방법에 대한 자세한 내용은 다음 섹션에서 설명합니다.  
+ 이 샘플에서는 `ControlHost`의 <xref:System.Windows.Interop.HwndHost.MessageHook> 이벤트에 처리기를 연결 하 여 컨트롤에서 메시지를 받습니다. 이 이벤트는 호스트된 창으로 전송된 모든 메시지에 대해 발생됩니다. 이 경우 컨트롤의 알림을 포함하여 실제 ListBox 컨트롤을 래핑하는 창에 전송된 메시지입니다. 샘플에서는 SendMessage를 호출하여 컨트롤에서 정보를 가져오고 해당 내용을 수정합니다. 페이지가 컨트롤과 통신하는 방법에 대한 자세한 내용은 다음 섹션에서 설명합니다.  
   
 > [!NOTE]
-> SendMessage에 대 한 두 개의 PInvoke 선언이 있습니다. 이는 `wParam` 매개 변수를 사용 하 여 문자열을 전달 하 고 다른 하나는 정수를 전달 하기 때문에 필요 합니다. 데이터가 올바르게 마샬링되도록 하려면 각 시그니처에 대해 별도의 선언이 필요합니다.  
+> SendMessage에 대 한 두 개의 PInvoke 선언이 있습니다. 이는 `wParam` 매개 변수를 사용 하 여 문자열을 전달 하 고 다른 매개 변수를 사용 하 여 정수를 전달 하기 때문에 필요 합니다. 데이터가 올바르게 마샬링되도록 하려면 각 시그니처에 대해 별도의 선언이 필요합니다.  
   
  [!code-csharp[WPFHostingWin32Control#HostWindowClass](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/Page1.xaml.cs#hostwindowclass)]
  [!code-vb[WPFHostingWin32Control#HostWindowClass](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/Page1.xaml.vb#hostwindowclass)]  
@@ -139,20 +139,20 @@ WPF (Windows Presentation Foundation)는 응용 프로그램을 만들기 위한
   
  또한 사용자는 기존 Win32 응용 프로그램과 마찬가지로 목록 상자에서 항목을 클릭 하 여 선택할 수 있습니다. 표시된 데이터는 사용자가 항목을 선택 또는 추가하여 목록 상자의 상태를 변경할 때마다 업데이트됩니다.  
   
- 항목을 추가 하려면 목록 상자 [ `LB_ADDSTRING` 에 메시지](/windows/desktop/Controls/lb-addstring)를 보냅니다. 항목을 삭제 하려면를 [`LB_GETCURSEL`](/windows/desktop/Controls/lb-getcursel) 전송 하 여 현재 선택 항목의 인덱스를 가져온 [`LB_DELETESTRING`](/windows/desktop/Controls/lb-deletestring) 다음 항목을 삭제 합니다. 또한이 샘플은 [`LB_GETCOUNT`](/windows/desktop/Controls/lb-getcount)를 보내고 반환 된 값을 사용 하 여 항목 수를 표시 하는 표시를 업데이트 합니다. 이러한 두 인스턴스 [`SendMessage`](/windows/desktop/api/winuser/nf-winuser-sendmessage) 는 모두 이전 섹션에서 설명한 PInvoke 선언 중 하나를 사용 합니다.  
+ 항목을 추가 하려면 목록 상자 [`LB_ADDSTRING` 메시지](/windows/desktop/Controls/lb-addstring)를 보냅니다. 항목을 삭제 하려면 [`LB_GETCURSEL`](/windows/desktop/Controls/lb-getcursel) 를 전송 하 여 현재 선택 항목의 인덱스를 가져온 다음 [`LB_DELETESTRING`](/windows/desktop/Controls/lb-deletestring) 하 여 항목을 삭제 합니다. 이 샘플은 또한 [`LB_GETCOUNT`](/windows/desktop/Controls/lb-getcount)를 보내고 반환 된 값을 사용 하 여 항목 수를 표시 하는 표시를 업데이트 합니다. 이러한 [`SendMessage`](/windows/desktop/api/winuser/nf-winuser-sendmessage) 인스턴스는 모두 이전 섹션에서 설명한 PInvoke 선언 중 하나를 사용 합니다.  
   
  [!code-csharp[WPFHostingWin32Control#AppendDeleteText](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/Page1.xaml.cs#appenddeletetext)]
  [!code-vb[WPFHostingWin32Control#AppendDeleteText](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/Page1.xaml.vb#appenddeletetext)]  
   
- 사용자가 항목을 선택 하거나 선택 항목을 변경 하면 컨트롤은 페이지에 대 한 <xref:System.Windows.Interop.HwndHost.MessageHook> 이벤트를 발생 시키는 [ `WM_COMMAND` 메시지](/windows/desktop/menurc/wm-command)를 전송 하 여 호스트 창에 알립니다. 처리기는 호스트 창의 주 창 프로시저와 같은 정보를 수신합니다. 또한 부울 값 `handled`에 대 한 참조를 전달 합니다. 메시지를 `handled` 처리 `true` 했으며 추가 처리가 필요 하지 않음을 나타내려면를로 설정 합니다.  
+ 사용자가 항목을 선택 하거나 선택 내용을 변경 하면 컨트롤은 페이지에 대 한 <xref:System.Windows.Interop.HwndHost.MessageHook> 이벤트를 발생 시키는 [`WM_COMMAND` 메시지](/windows/desktop/menurc/wm-command)를 전송 하 여 호스트 창에 알립니다. 처리기는 호스트 창의 주 창 프로시저와 같은 정보를 수신합니다. 또한 `handled`부울 값에 대 한 참조를 전달 합니다. `handled`를 `true` 설정 하 여 메시지를 처리 했으며 추가 처리가 필요 하지 않음을 나타낼 수 있습니다.  
   
- [`WM_COMMAND`](/windows/desktop/menurc/wm-command)은 다양 한 이유로 전송 되므로 알림 ID를 검사 하 여 처리할 이벤트 인지 여부를 확인 해야 합니다. ID는 `wParam` 매개 변수의 상위 단어에 포함 되어 있습니다. 이 샘플에서는 비트 연산자를 사용 하 여 ID를 추출 합니다. 사용자가 선택을 변경 하거나 변경 하는 경우 ID [`LBN_SELCHANGE`](/windows/desktop/Controls/lbn-selchange)는가 됩니다.  
+ [`WM_COMMAND`](/windows/desktop/menurc/wm-command) 은 다양 한 이유로 전송 되므로 알림 ID를 검사 하 여 처리할 이벤트 인지 여부를 확인 해야 합니다. ID는 `wParam` 매개 변수의 상위 단어에 포함 되어 있습니다. 이 샘플에서는 비트 연산자를 사용 하 여 ID를 추출 합니다. 사용자가 선택을 변경 하거나 변경 하는 경우 ID가 [`LBN_SELCHANGE`](/windows/desktop/Controls/lbn-selchange)됩니다.  
   
- 이 [`LBN_SELCHANGE`](/windows/desktop/Controls/lbn-selchange) 수신 되 면 샘플은 [ `LB_GETCURSEL` ](/windows/desktop/Controls/lb-getcursel)컨트롤에 메시지를 전송 하 여 선택한 항목의 인덱스를 가져옵니다. 텍스트를 가져오려면 먼저를 <xref:System.Text.StringBuilder>만듭니다. 그런 다음 컨트롤 [ `LB_GETTEXT` 을 메시지](/windows/desktop/Controls/lb-gettext)에 보냅니다. 빈 <xref:System.Text.StringBuilder> 개체`wParam` 를 매개 변수로 전달 합니다. 가 [`SendMessage`](/windows/desktop/api/winuser/nf-winuser-sendmessage) 반환 되 면 <xref:System.Text.StringBuilder> 에는 선택한 항목의 텍스트가 포함 됩니다. 이를 [`SendMessage`](/windows/desktop/api/winuser/nf-winuser-sendmessage) 사용 하려면 아직 또 다른 PInvoke 선언이 필요 합니다.  
+ [`LBN_SELCHANGE`](/windows/desktop/Controls/lbn-selchange) 수신 되 면이 샘플은 컨트롤을 [`LB_GETCURSEL` 메시지로](/windows/desktop/Controls/lb-getcursel)보내서 선택 된 항목의 인덱스를 가져옵니다. 텍스트를 가져오려면 먼저 <xref:System.Text.StringBuilder>를 만듭니다. 그런 다음 컨트롤을 [`LB_GETTEXT` 메시지로](/windows/desktop/Controls/lb-gettext)보냅니다. 빈 <xref:System.Text.StringBuilder> 개체를 `wParam` 매개 변수로 전달 합니다. [`SendMessage`](/windows/desktop/api/winuser/nf-winuser-sendmessage) 반환 될 때 <xref:System.Text.StringBuilder>에는 선택한 항목의 텍스트가 포함 됩니다. 이 [`SendMessage`](/windows/desktop/api/winuser/nf-winuser-sendmessage) 사용 하려면 아직 다른 PInvoke 선언이 필요 합니다.  
   
- 마지막으로를 `handled` `true` 로 설정 하 여 메시지가 처리 되었음을 표시 합니다.  
+ 마지막으로 `handled`를 `true`으로 설정 하 여 메시지가 처리 되었음을 표시 합니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Windows.Interop.HwndHost>
 - [WPF 및 Win32 상호 운용성](wpf-and-win32-interoperation.md)

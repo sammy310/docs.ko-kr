@@ -2,12 +2,12 @@
 title: 공급자 매니페스트 지정
 ms.date: 03/30/2017
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
-ms.openlocfilehash: cc58bbc82f3930f087b5da0c64afb4f9f03e905b
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: bef4868ccc52d287baaceca32c4943723be7531f
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854497"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040488"
 ---
 # <a name="provider-manifest-specification"></a>공급자 매니페스트 지정
 이 단원에서는 데이터 저장소 공급자가 데이터 저장소의 형식 및 함수를 지원하는 방법에 대해 설명합니다.  
@@ -54,7 +54,7 @@ ms.locfileid: "70854497"
   
  다음 두 섹션이 있는 XML 파일을 작성합니다.  
   
-- EDM 용어로 표현 되는 공급자 유형 목록 및 양방향 매핑을 정의 합니다. EDM-공급자 및 공급자-EDM.  
+- EDM 측면에서 표현되고 양방향(EDM-공급자 및 공급자-EDM)의 매핑을 정의하는 공급자 형식의 목록  
   
 - 매개 변수와 반환 형식이 EDM 측면에서 표현된, 공급자가 지원하는 함수의 목록  
   
@@ -68,7 +68,7 @@ ms.locfileid: "70854497"
 ### <a name="provider-manifest-token"></a>공급자 매니페스트 토큰  
  데이터 저장소 연결이 열린 경우 공급자가 올바른 매니페스트를 반환하기 위해 정보를 쿼리할 수 있습니다. 이는 연결 정보를 사용할 수 없거나 저장소에 연결할 수 없는 오프라인 시나리오에서는 가능하지 않을 수 있습니다. .ssdl 파일에서 `ProviderManifestToken` 요소의 `Schema` 특성을 사용하여 매니페스트를 식별할 수 있습니다. 이 특성에는 필수 형식이 없습니다. 공급자는 저장소에 대한 연결을 열지 않고 매니페스트를 식별하는 데 필요한 최소한의 정보를 선택합니다.  
   
- 예:  
+ 예를 들면,  
   
 ```xml  
 <Schema Namespace="Northwind" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:edm="http://schemas.microsoft.com/ado/2006/04/edm/ssdl" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">  
@@ -77,13 +77,13 @@ ms.locfileid: "70854497"
 ## <a name="provider-manifest-programming-model"></a>공급자 매니페스트 프로그래밍 모델  
  공급자는 <xref:System.Data.Common.DbXmlEnabledProviderManifest>에서 파생되므로 매니페스트를 선언적으로 지정할 수 있습니다. 다음 그림에서는 공급자의 클래스 계층 구조를 보여 줍니다.  
   
- ![None](./media/d541eba3-2ee6-4cd1-88f5-89d0b2582a6c.gif "d541eba3-2ee6-4cd1-88f5-89d0b2582a6c")  
+ ![없음](./media/d541eba3-2ee6-4cd1-88f5-89d0b2582a6c.gif "d541eba3-2ee6-4cd1-88f5-89d0b2582a6c")  
   
 ### <a name="discoverability-api"></a>검색 기능 API  
  공급자 매니페스트는 데이터 저장소 연결이나 공급자 매니페스트 토큰을 사용하여 저장소 메타데이터 로더(StoreItemCollection)에 의해 로드됩니다.  
   
 #### <a name="using-a-data-store-connection"></a>데이터 저장소 연결 사용  
- 데이터 저장소 연결을 사용할 수 있는 경우를 <xref:System.Data.Common.DbProviderServices.GetProviderManifestToken%2A?displayProperty=nameWithType> 호출 하 여 <xref:System.Data.Common.DbProviderServices.GetProviderManifest%2A> 메서드에 전달 되는 토큰을 반환 합니다 .이 <xref:System.Data.Common.DbProviderManifest>토큰은을 반환 합니다. 이 메서드는의 `GetDbProviderManifestToken`공급자 구현에 위임 합니다.  
+ 데이터 저장소 연결을 사용할 수 있는 경우 <xref:System.Data.Common.DbProviderServices.GetProviderManifestToken%2A?displayProperty=nameWithType>를 호출 하 여 <xref:System.Data.Common.DbProviderManifest>을 반환 하는 <xref:System.Data.Common.DbProviderServices.GetProviderManifest%2A> 메서드에 전달 되는 토큰을 반환 합니다. 이 메서드는 공급자의 `GetDbProviderManifestToken`구현에 위임 합니다.  
   
 ```csharp
 public string GetProviderManifestToken(DbConnection connection);  
@@ -93,7 +93,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 #### <a name="using-a-provider-manifest-token"></a>공급자 매니페스트 토큰 사용  
  오프라인 시나리오의 경우 토큰이 SSDL 표현에서 선택됩니다. SSDL을 사용 하면 ProviderManifestToken을 지정할 수 있습니다 (자세한 내용은 [Schema 요소 (SSDL)](/ef/ef6/modeling/designer/advanced/edmx/ssdl-spec#schema-element-ssdl) 참조). 예를 들어, 연결을 열 수 없는 경우 SSDL에는 매니페스트에 대한 정보를 지정하는 공급자 매니페스트 토큰이 있습니다.  
   
-```  
+```csharp  
 public DbProviderManifest GetProviderManifest(string manifestToken);  
 ```  
   
@@ -248,37 +248,37 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
   
  공급자 매니페스트에서 이 형식 정보를 표현하기 위해 각 TypeInformation 선언은 각 형식에 대한 몇 가지 패싯 설명을 정의해야 합니다.  
   
-|특성 이름|데이터 형식|필수|Default Value|설명|  
+|특성 이름|데이터 형식|필요한 공간|기본값|설명|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
-|이름|String|예|n/a|공급자별 데이터 형식 이름|  
-|PrimitiveTypeKind|PrimitiveTypeKind|예|n/a|EDM 형식 이름|  
+|name|String|예|N/A|공급자별 데이터 형식 이름|  
+|PrimitiveTypeKind|PrimitiveTypeKind|예|N/A|EDM 형식 이름|  
   
 ###### <a name="function-node"></a>Function 노드  
  각 Function은 공급자를 통해 사용할 수 있는 단일 함수를 정의합니다.  
   
-|특성 이름|데이터 형식|필수|Default Value|Description|  
+|특성 이름|데이터 형식|필요한 공간|기본값|설명|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
-|이름|String|예|n/a|함수의 식별자/이름입니다.|  
+|name|String|예|N/A|함수의 식별자/이름입니다.|  
 |ReturnType|String|아니요|Void|함수의 EDM 반환 형식입니다.|  
-|Aggregate|Boolean|아니요|거짓|함수가 집계 함수인 경우 True입니다.|  
+|Aggregate|Boolean|아니요|False|함수가 집계 함수인 경우 True입니다.|  
 |BuiltIn|Boolean|아니요|True|함수가 데이터 저장소에 기본 제공되는 경우 True입니다.|  
 |StoreFunctionName|String|아니요|\<이름 >|데이터 저장소의 함수 이름입니다.  함수 이름의 리디렉션 수준을 허용합니다.|  
-|NiladicFunction|Boolean|아니요|거짓|함수가 매개 변수를 필요로 하지 않고 매개 변수 없이 호출되는 경우 True입니다.|  
-|ParameterType<br /><br /> 의미 체계|ParameterSemantics|아니요|AllowImplicit<br /><br /> 변환|쿼리 파이프라인에서 매개 변수 형식 대체를 처리할 방법에 대한 선택 항목:<br /><br /> -   ExactMatchOnly<br />-   AllowImplicitPromotion<br />-   AllowImplicitConversion|  
+|NiladicFunction|Boolean|아니요|False|함수가 매개 변수를 필요로 하지 않고 매개 변수 없이 호출되는 경우 True입니다.|  
+|ParameterType<br /><br /> 의미 체계|ParameterSemantics|아니요|AllowImplicit<br /><br /> 변환|쿼리 파이프라인에서 매개 변수 형식 대체를 처리할 방법에 대한 선택 항목:<br /><br /> - ExactMatchOnly<br />- AllowImplicitPromotion<br />- AllowImplicitConversion|  
   
  **Parameters 노드**  
   
  각 함수에는 하나 이상의 Parameter 노드로 구성된 컬렉션이 있습니다.  
   
-|특성 이름|데이터 형식|필수|Default Value|설명|  
+|특성 이름|데이터 형식|필요한 공간|기본값|설명|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
-|이름|String|예|n/a|매개 변수의 식별자/이름입니다.|  
-|형식|String|예|n/a|매개 변수의 EDM 형식입니다.|  
-|모드|매개 변수<br /><br /> Direction|예|n/a|매개 변수의 방향:<br /><br /> -in<br />-out<br />-inout|  
+|name|String|예|N/A|매개 변수의 식별자/이름입니다.|  
+|Type|String|예|N/A|매개 변수의 EDM 형식입니다.|  
+|모드|매개 변수<br /><br /> 방향|예|N/A|매개 변수의 방향:<br /><br /> -in<br />-out<br />-inout|  
   
 ##### <a name="namespace-attribute"></a>Namespace 특성  
- 각 데이터 저장소 공급자는 매니페스트에서 정의된 정보에 대한 네임스페이스 또는 네임스페이스 그룹을 정의해야 합니다. 이 네임스페이스를 Entity SQL 쿼리에서 사용하여 함수 및 형식의 이름을 확인할 수 있습니다(예: 말합니다. SqlServer. 해당 네임스페이스는 Entity SQL 쿼리에서 표준 함수를 지원할 수 있도록 엔터티 서비스에서 정의하는 정식 네임스페이스인 EDM과 달라야 합니다.  
+ 각 데이터 저장소 공급자는 매니페스트에서 정의된 정보에 대한 네임스페이스 또는 네임스페이스 그룹을 정의해야 합니다. 이 네임스페이스를 Entity SQL 쿼리에서 사용하여 함수 및 형식의 이름을 확인할 수 있습니다(예: SqlServer). 해당 네임스페이스는 Entity SQL 쿼리에서 표준 함수를 지원할 수 있도록 엔터티 서비스에서 정의하는 정식 네임스페이스인 EDM과 달라야 합니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [Entity Framework 데이터 공급자 작성](writing-an-ef-data-provider.md)

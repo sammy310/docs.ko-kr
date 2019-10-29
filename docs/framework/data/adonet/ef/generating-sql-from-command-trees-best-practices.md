@@ -2,12 +2,12 @@
 title: 명령 트리에서 SQL 생성 - 최선의 방법
 ms.date: 03/30/2017
 ms.assetid: 71ef6a24-4c4f-4254-af3a-ffc0d855b0a8
-ms.openlocfilehash: 9859c7df941ae6681c991001e0d1e5a50c7ffc60
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 869722b91550855a184a74e706271c3e2d417b84
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855008"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039993"
 ---
 # <a name="generating-sql-from-command-trees---best-practices"></a>명령 트리에서 SQL 생성 - 최선의 방법
 
@@ -31,7 +31,7 @@ ORDER BY …
 
 예를 들어, 다음과 같은 쿼리 명령 트리를 살펴보겠습니다.
 
-```
+```csharp
 Project (
 a.x,
    a = Filter(
@@ -68,7 +68,7 @@ WHERE b.y = 5
 
 왼쪽 편 조인(다른 조인의 왼쪽 자식으로 나타나는 조인)은 단일 SQL SELECT 문으로 보다 쉽게 평면화할 수 있습니다. 예를 들어, 다음과 같은 쿼리 명령 트리를 살펴보겠습니다.
 
-```
+```csharp
 InnerJoin(
    a = LeftOuterJoin(
    b = Extent("TableA")
@@ -90,7 +90,7 @@ INNER JOIN TableC as d ON b.y = d.z
 
 그러나 왼쪽 편 조인이 아닌 조인은 쉽게 평면화할 수 없으므로 평면화하려고 하면 안 됩니다. 다음 쿼리 명령 트리의 조인을 예로 들 수 있습니다.
 
-```
+```csharp
 InnerJoin(
    a = Extent("TableA")
    b = LeftOuterJoin(
@@ -145,8 +145,8 @@ ON b.y = d.z
 
 ## <a name="mapping-primitive-types"></a>기본 형식 매핑
 
-개념적(EDM) 형식을 공급자 형식에 매핑하는 경우 가능한 모든 값이 들어가도록 가장 넓은 형식(Int32)에 매핑해야 합니다. 또한 BLOB 형식과 같은 많은 작업에 사용할 수 없는 형식 (예: `ntext` SQL Server)에는 매핑되지 않습니다.
+개념적(EDM) 형식을 공급자 형식에 매핑하는 경우 가능한 모든 값이 들어가도록 가장 넓은 형식(Int32)에 매핑해야 합니다. 또한 BLOB 형식과 같은 많은 작업에 사용할 수 없는 형식 (예: SQL Server의 `ntext`)에는 매핑되지 않습니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [SQL 생성](sql-generation.md)

@@ -2,12 +2,12 @@
 title: SQL Server에서 가장으로 권한 사용자 지정
 ms.date: 03/30/2017
 ms.assetid: dc733d09-1d6d-4af0-9c4b-8d24504860f1
-ms.openlocfilehash: b5dcef80afffa7bb3722a09020c5445dbc47f16a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 0d5e62019ae8806a7a182919fa06819a08d01301
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70782476"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040457"
 ---
 # <a name="customizing-permissions-with-impersonation-in-sql-server"></a>SQL Server에서 가장으로 권한 사용자 지정
 많은 수의 애플리케이션에서 저장 프로시저를 사용하여 데이터에 액세스하며, 이 경우 소유권 체인을 사용하여 액세스를 기본 테이블로 제한합니다. 저장 프로시저에 EXECUTE 권한을 부여하고 기본 테이블에 대한 권한을 취소하거나 거부할 수 있습니다. SQL Server에서는 저장 프로시저 및 테이블의 소유자가 동일한 경우 호출자의 권한을 확인하지 않습니다. 그러나 개체의 소유자가 다른 경우 또는 동적 SQL의 경우에는 소유권 체인이 작동하지 않습니다.  
@@ -17,7 +17,7 @@ ms.locfileid: "70782476"
 ## <a name="context-switching-with-the-execute-as-statement"></a>EXECUTE AS 문을 사용하여 컨텍스트 전환  
  Transact-SQL의 EXECUTE AS 문을 사용하면 다른 로그인 또는 데이터베이스 사용자를 가장하여 문의 실행 컨텍스트를 전환할 수 있습니다. 이 방법은 쿼리와 프로시저를 다른 사용자로 테스트할 때 유용합니다.  
   
-```  
+```sql  
 EXECUTE AS LOGIN = 'loginName';  
 EXECUTE AS USER = 'userName';  
 ```  
@@ -36,7 +36,7 @@ EXECUTE AS USER = 'userName';
   
 1. 로그인에 매핑되지 않는 데이터베이스에 프록시 사용자를 만듭니다. 이 단계는 필수 사항은 아니지만 권한 관리에 도움이 됩니다.  
   
-```  
+```sql
 CREATE USER proxyUser WITHOUT LOGIN  
 ```  
   
@@ -44,7 +44,7 @@ CREATE USER proxyUser WITHOUT LOGIN
   
 2. 저장 프로시저 또는 사용자 정의 함수에 EXECUTE AS 절을 추가합니다.  
   
-```  
+```sql
 CREATE PROCEDURE [procName] WITH EXECUTE AS 'proxyUser' AS ...  
 ```  
   
@@ -54,7 +54,7 @@ CREATE PROCEDURE [procName] WITH EXECUTE AS 'proxyUser' AS ...
 ### <a name="using-execute-as-with-revert"></a>REVERT와 함께 EXECUTE AS 사용  
  Transact-SQL REVERT 문을 사용하여 원래 실행 컨텍스트로 되돌아갈 수 있습니다.  
   
- 선택적 절 (NO REVERT COOKIE = @variableName)을 사용 하면 @variableName 변수에 올바른 값이 포함 된 경우 실행 컨텍스트를 다시 호출자로 전환할 수 있습니다. 이를 통해 연결 풀링이 사용되는 환경에서 실행 컨텍스트를 다시 호출자로 전환할 수 있습니다. 의 @variableName 값은 EXECUTE AS 문의 호출자 에게만 알려져 있으므로 호출자는 응용 프로그램을 호출 하는 최종 사용자가 실행 컨텍스트를 변경할 수 없도록 보장할 수 있습니다. 연결이 닫히면 연결은 풀로 반환됩니다. ADO.NET의 연결 풀링에 대 한 자세한 내용은 [연결 풀링 (ADO.NET) SQL Server](../sql-server-connection-pooling.md)을 참조 하세요.  
+ WITH REVERT COOKIE = @variableName인 선택적 절을 사용 하면 @variableName 변수에 올바른 값이 포함 된 경우 실행 컨텍스트를 다시 호출자로 전환할 수 있습니다. 이를 통해 연결 풀링이 사용되는 환경에서 실행 컨텍스트를 다시 호출자로 전환할 수 있습니다. @variableName의 값은 EXECUTE AS 문의 호출자 에게만 알려져 있으므로 호출자는 응용 프로그램을 호출 하는 최종 사용자가 실행 컨텍스트를 변경할 수 없도록 보장할 수 있습니다. 연결이 닫히면 연결은 풀로 반환됩니다. ADO.NET의 연결 풀링에 대 한 자세한 내용은 [연결 풀링 (ADO.NET) SQL Server](../sql-server-connection-pooling.md)을 참조 하세요.  
   
 ### <a name="specifying-the-execution-context"></a>실행 컨텍스트 지정  
  사용자 지정 외에도 EXECUTE AS는 다음 키워드와 함께 사용할 수 있습니다.  
@@ -65,11 +65,11 @@ CREATE PROCEDURE [procName] WITH EXECUTE AS 'proxyUser' AS ...
   
 - SELF. SELF로 실행할 경우 저장 프로시저 작성자의 보안 컨텍스트에서 실행됩니다. 지정된 사용자로 실행하는 것과 같으며, 여기서 지정된 사용자는 프로시저를 만들거나 변경하는 사용자입니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
-- [ADO.NET 응용 프로그램 보안](../securing-ado-net-applications.md)
+- [ADO.NET 애플리케이션 보안](../securing-ado-net-applications.md)
 - [SQL Server 보안 개요](overview-of-sql-server-security.md)
-- [SQL Server의 응용 프로그램 보안 시나리오](application-security-scenarios-in-sql-server.md)
+- [SQL Server의 애플리케이션 보안 시나리오](application-security-scenarios-in-sql-server.md)
 - [SQL Server에서 저장 프로시저를 사용하여 권한 관리](managing-permissions-with-stored-procedures-in-sql-server.md)
 - [SQL Server에서 동적 보안 SQL 작성](writing-secure-dynamic-sql-in-sql-server.md)
 - [SQL Server에서 저장 프로시저에 서명](signing-stored-procedures-in-sql-server.md)

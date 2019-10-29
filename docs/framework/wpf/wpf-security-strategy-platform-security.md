@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: fdeb40f1e092f8c7e96e9d59e1b07673201fbe9d
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 7559c7ec9aef8f95336d53e62ca9bf5861a9b22f
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920383"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040721"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>WPF 보안 전략 - 플랫폼 보안
 WPF (Windows Presentation Foundation)는 다양 한 보안 서비스를 제공 하지만 운영 체제, CLR 및 Internet Explorer를 포함 하는 기본 플랫폼의 보안 기능도 활용 합니다. 이러한 계층이 결합되어 다음 그림과 같이 단일 실패 지점을 방지하는 강력한 심층 방어 보안 모델인 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]를 제공합니다.  
@@ -31,17 +31,15 @@ WPF (Windows Presentation Foundation)는 다양 한 보안 서비스를 제공 �
   
  이 항목의 나머지 부분에서는 특히 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]와 관련된 각 계층의 기능을 설명합니다.  
 
-<a name="Operating_System_Security"></a>   
 ## <a name="operating-system-security"></a>운영 체제 보안  
 Windows의 핵심은 WPF로 빌드된 응용 프로그램을 포함 하 여 모든 Windows 응용 프로그램에 대 한 보안 기반을 형성 하는 몇 가지 보안 기능을 제공 합니다. 이 항목에서는 wpf에 중요 한 이러한 보안 기능의 범위 뿐만 아니라 WPF를 사용 하 여 심층 방어를 제공 하는 방법을 설명 합니다.  
   
-<a name="Microsoft_Windows_XP_Service_Pack_2__SP2_"></a>   
 ### <a name="microsoft-windows-xp-service-pack-2-sp2"></a>Microsoft Windows XP SP2(서비스 팩 2)  
  Windows의 일반적인 검토 및 강화 외에도이 항목에서 설명 하는 [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)]의 세 가지 주요 기능이 있습니다.  
   
 - /GS 컴파일  
   
-- [!INCLUDE[TLA#tla_win_update](../../../includes/tlasharptla-win-update-md.md)]  
+- Microsoft Windows 업데이트.  
   
 #### <a name="gs-compilation"></a>/GS 컴파일  
  [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)]는 CLR과 같은 모든 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 종속성을 포함 하 여 많은 핵심 시스템 라이브러리를 다시 컴파일하여 버퍼 오버런을 완화 하는 기능을 제공 합니다. 이 작업을 위해 /GS 매개 변수와 C/C++ 명령줄 컴파일러를 함께 사용합니다. 버퍼 오버런을 명시적으로 피해야 하지만 /GS 컴파일은 실수 또는 악의적으로 만들어진 잠재적인 취약성에 대한 심층 방어의 예를 제공합니다.  
@@ -52,10 +50,6 @@ Windows의 핵심은 WPF로 빌드된 응용 프로그램을 포함 하 여 모�
   
  [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 애플리케이션에 다른 방어 계층을 추가하기 위해 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]는 /GS 플래그로 컴파일됩니다.  
   
-#### <a name="microsoft-windows-update-enhancements"></a>Microsoft Windows 업데이트 향상 기능  
- [!INCLUDE[TLA#tla_win_update](../../../includes/tlasharptla-win-update-md.md)]에서는 업데이트 다운로드 및 설치 프로세스를 간소화하기 위해 [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)]도 향상되었습니다. 이러한 변경 내용은 특히 보안 업데이트와 관련해서 시스템을 최신 상태로 유지할 수 있게 하여 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 고객의 보안을 훨씬 향상시킵니다.  
-  
-<a name="Windows_Vista"></a>   
 ### <a name="windows-vista"></a>Windows Vista  
 Windows Vista의 WPF 사용자는 "최소 권한 사용자 액세스", 코드 무결성 검사 및 권한 격리를 비롯 한 운영 체제의 추가 보안 향상 기능을 활용 합니다.  
   
@@ -72,8 +66,7 @@ Windows Vista의 WPF 사용자는 "최소 권한 사용자 액세스", 코드 �
   
 #### <a name="code-integrity-checks"></a>코드 무결성 검사  
  Windows Vista에서는 로드/실행 시 악성 코드가 시스템 파일이 나 커널에 삽입 되는 것을 방지 하기 위해 보다 심층적인 코드 무결성 검사를 통합 합니다. 이는 시스템 파일 보호 수준을 벗어납니다.  
-  
-<a name="Limited_Rights_Process_for_Browser_Hosted_Applications"></a>   
+   
 ### <a name="limited-rights-process-for-browser-hosted-applications"></a>브라우저에서 호스트된 애플리케이션에 대한 제한된 권한 프로세스  
  브라우저에서 호스트된 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 애플리케이션은 인터넷 영역 샌드박스 내에서 실행됩니다. Microsoft Internet Explorer와의 통합을 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 추가 지원으로이 보호를 확장 합니다.  
   
@@ -81,11 +74,9 @@ Windows Vista의 WPF 사용자는 "최소 권한 사용자 액세스", 코드 �
   
  [최소 권한 사용자 계정 사용을](https://docs.microsoft.com/previous-versions/tn-archive/cc700846%28v=technet.10%29)참조 하세요.  
   
-<a name="Common_Language_Runtime_Security"></a>   
 ## <a name="common-language-runtime-security"></a>공용 언어 런타임 보안  
  CLR (공용 언어 런타임)은 유효성 검사 및 확인, CAS (코드 액세스 보안) 및 보안에 중요 한 방법론을 포함 하는 다양 한 주요 보안 이점을 제공 합니다.  
-  
-<a name="Validation_and_Verification"></a>   
+    
 ### <a name="validation-and-verification"></a>유효성 검사 및 확인  
  어셈블리 격리와 무결성을 제공 하기 위해 CLR은 유효성 검사 프로세스를 사용 합니다. CLR 유효성 검사는 어셈블리 외부를 가리키는 주소에 대해 PE (이식 가능한 실행) 파일 형식의 유효성을 검사 하 여 어셈블리가 격리 되도록 합니다. 또한 CLR 유효성 검사는 어셈블리 내에 포함 된 메타 데이터의 무결성에 대 한 유효성을 검사 합니다.  
   
@@ -103,7 +94,6 @@ Windows Vista의 WPF 사용자는 "최소 권한 사용자 액세스", 코드 �
   
  안정형 코드의 이점은 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] .NET Framework를 기반으로 하는 주요 이유입니다. 검증할 수 있는 코드를 사용하면 가능한 취약성이 악용될 가능성이 훨씬 줄어듭니다.  
   
-<a name="Code_Access_Security"></a>   
 ### <a name="code-access-security"></a>코드 액세스 보안  
  클라이언트 컴퓨터는 파일 시스템, 레지스트리, 인쇄 서비스, 사용자 인터페이스, 리플렉션 및 환경 변수를 포함하여 관리되는 애플리케이션이 액세스할 수 있는 다양한 리소스를 노출합니다. 관리 되는 응용 프로그램이 클라이언트 컴퓨터의 리소스에 액세스할 수 있으려면 먼저 .NET Framework 권한이 있어야 합니다. CAS의 사용 권한은 <xref:System.Security.CodeAccessPermission>의 서브 클래스입니다. CAS는 관리 되는 응용 프로그램이 액세스할 수 있는 각 리소스에 대해 하나의 하위 클래스를 구현 합니다.  
   
@@ -163,13 +153,11 @@ Windows Vista의 WPF 사용자는 "최소 권한 사용자 액세스", 코드 �
   
  플랫폼 측면에서 **Assert** 를 올바르게 사용 하는 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]를 담당 합니다. **Assert** 를 잘못 사용 하면 악성 코드가 권한을 상승 시킬 수 있습니다. 따라서 필요한 경우에만 **Assert** 를 호출 하 고 sandbox 제한이 그대로 유지 되도록 하는 것이 중요 합니다. 예를 들어 샌드박스 코드는 임의의 파일을 열 수 없지만 글꼴을 사용할 수 있습니다. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 샌드박스 응용 프로그램에서 **Assert**를 호출 하 여 글꼴 기능을 사용할 수 있도록 하 고, [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]는 샌드박스가 적용 된 응용 프로그램 대신 해당 글꼴을 포함 하는 것으로 알려진 파일을 읽을 수 있습니다  
   
-<a name="ClickOnce_Deployment"></a>   
 ### <a name="clickonce-deployment"></a>ClickOnce 배포  
  ClickOnce는 .NET Framework에 포함 되어 있으며 Visual Studio와 통합 되는 포괄적인 배포 기술입니다 (자세한 내용은 [clickonce 보안 및 배포](/visualstudio/deployment/clickonce-security-and-deployment) 참조). ClickOnce를 사용 하 여 독립 실행형 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램을 배포할 수 있지만 브라우저에서 호스팅되는 응용 프로그램은 ClickOnce를 사용 하 여 배포 해야 합니다.  
   
  ClickOnce를 사용 하 여 배포 된 응용 프로그램에는 CAS (코드 액세스 보안)를 통해 추가 보안 계층이 제공 됩니다. 기본적으로 ClickOnce 배포 응용 프로그램은 필요한 사용 권한을 요청 합니다. 애플리케이션이 배포된 소스 영역에 대한 권한 집합을 초과하지 않는 경우에만 해당 권한이 부여됩니다. 시작 영역의 권한 집합에서 제공 하는 것 보다 작은 경우라도 사용 권한 집합을 필요한 권한 으로만 줄이면 응용 프로그램이 액세스할 수 있는 리소스 수가 최소한으로 줄어듭니다. 따라서 애플리케이션을 가로채는 경우 클라이언트 컴퓨터의 손상 가능성이 줄어듭니다.  
   
-<a name="Security_Critical_Methodology"></a>   
 ### <a name="security-critical-methodology"></a>보안에 중요한 방법론  
  사용 권한을 사용 하 여 XBAP 응용 프로그램에 대 한 인터넷 영역 샌드박스를 사용 하도록 설정 하는 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 코드는 최대한 높은 수준의 보안 감사 및 제어로 유지 해야 합니다. 이러한 요구 사항을 용이 하 게 하기 위해 .NET Framework는 권한을 상승 시키는 코드를 관리 하기 위한 새로운 지원을 제공 합니다. 특히 CLR을 사용 하면 권한을 상승 하는 코드를 식별 하 고 <xref:System.Security.SecurityCriticalAttribute>로 표시할 수 있습니다. <xref:System.Security.SecurityCriticalAttribute>로 표시 되지 않은 코드는이 방법론을 사용 하 여 *투명* 하 게 됩니다. 반대로, <xref:System.Security.SecurityCriticalAttribute>로 표시되지 않은 관리 코드는 권한을 높일 수 있습니다.  
   
@@ -177,7 +165,6 @@ Windows Vista의 WPF 사용자는 "최소 권한 사용자 액세스", 코드 �
   
  .NET Framework는 개발자가 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (APTCA)로 표시 되 고 사용자의 GAC (전역 어셈블리 캐시)에 배포 된 관리 되는 어셈블리를 작성할 수 있도록 하 여 XBAP 인터넷 영역 샌드박스를 확장할 수 있습니다. 어셈블리에 APTCA로 표시하는 경우 인터넷의 악성 코드를 비롯한 모든 코드에서 해당 어셈블리를 호출할 수 있으므로 중요한 보안 작업입니다. 이 작업을 수행할 때는 주의해서 최선의 방법을 사용해야 하며, 사용자가 해당 소프트웨어를 신뢰해야 설치됩니다.  
   
-<a name="Microsoft_Internet_Explorer_Security"></a>   
 ## <a name="microsoft-internet-explorer-security"></a>Microsoft Internet Explorer 보안  
  보안 문제를 줄이고 보안 구성을 간소화 하는 것 외에도 Microsoft Internet Explorer 6 (SP2)에는 [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)]사용자의 보안을 강화 하는 향상 된 보안 기능이 포함 되어 있습니다. 이러한 기능은 사용자가 검색 환경을 보다 효율적으로 제어할 수 있도록 하기 위한 것입니다.  
   

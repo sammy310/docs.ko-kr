@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Web service binding [WPF]
 - data binding [WPF], Web service
 ms.assetid: 77e2d373-69ba-4cbd-b6f5-2c83c38fc98b
-ms.openlocfilehash: 72638101b73e6b43fa225885b2e1f27d87b22826
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: d752f4815de16daa466302881116e80aceec6edf
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920140"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040900"
 ---
 # <a name="how-to-bind-to-a-web-service"></a>방법: 웹 서비스 바인딩
 이 예제에서는 웹 서비스 메서드 호출에서 반환 되는 개체에 바인딩하는 방법을 보여 줍니다.  
@@ -32,18 +32,18 @@ ms.locfileid: "72920140"
   
 4. **Go** 를 누르고 **참조를 추가**합니다.  
   
- 그런 다음 웹 서비스 메서드를 호출 하 고 적절 한 컨트롤 또는 창의 <xref:System.Windows.FrameworkElement.DataContext%2A>을 반환 된 개체로 설정 합니다. MTPS 서비스의 **Getcontent** 메서드는 **getcontentrequest** 개체에 대 한 참조를 사용 합니다. 따라서 다음 예제에서는 먼저 요청 개체를 설정 합니다.  
+ 그런 다음 웹 서비스 메서드를 호출 하 고 적절 한 컨트롤 또는 창의 <xref:System.Windows.FrameworkElement.DataContext%2A>을 반환 된 개체로 설정 합니다. MTPS 서비스의 `GetContent` 메서드는 `getContentRequest` 개체에 대 한 참조를 사용 합니다. 따라서 다음 예제에서는 먼저 요청 개체를 설정 합니다.  
   
  [!code-csharp[BindToWebService#Namespace](~/samples/snippets/csharp/VS_Snippets_Wpf/BindToWebService/CSharp/Window1.xaml.cs#namespace)]
  [!code-vb[BindToWebService#Namespace](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BindToWebService/VisualBasic/Window1.xaml.vb#namespace)]  
 [!code-csharp[BindToWebService#WebServiceCall](~/samples/snippets/csharp/VS_Snippets_Wpf/BindToWebService/CSharp/Window1.xaml.cs#webservicecall)]
 [!code-vb[BindToWebService#WebServiceCall](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BindToWebService/VisualBasic/Window1.xaml.vb#webservicecall)]  
   
- <xref:System.Windows.FrameworkElement.DataContext%2A> 설정 된 후에는 <xref:System.Windows.FrameworkElement.DataContext%2A>가 설정 된 개체의 속성에 대 한 바인딩을 만들 수 있습니다. 이 예제에서 <xref:System.Windows.FrameworkElement.DataContext%2A>는 **Getcontent** 메서드에서 반환한 **getcontentresponse** 개체로 설정 됩니다. 다음 예제에서 <xref:System.Windows.Controls.ItemsControl>는에 바인딩되고 **Getcontentresponse**의 availableVersionsAndLocales **로캘** 값을 표시 합니다.  
+ <xref:System.Windows.FrameworkElement.DataContext%2A> 설정 된 후에는 <xref:System.Windows.FrameworkElement.DataContext%2A>가 설정 된 개체의 속성에 대 한 바인딩을 만들 수 있습니다. 이 예제에서 <xref:System.Windows.FrameworkElement.DataContext%2A>는 `GetContent` 메서드에서 반환 되는 `getContentResponse` 개체로 설정 됩니다. 다음 예제에서 <xref:System.Windows.Controls.ItemsControl>는에 바인딩되고 `getContentResponse``availableVersionsAndLocales`의 `locale` 값을 표시 합니다.  
   
  [!code-xaml[BindToWebService#Binding](~/samples/snippets/csharp/VS_Snippets_Wpf/BindToWebService/CSharp/Window1.xaml#binding)]  
   
- **Getcontentresponse**의 구조에 대 한 자세한 내용은 [콘텐츠 서비스 설명서](https://services.msdn.microsoft.com/ContentServices/ContentService.asmx)를 참조 하세요.  
+ `getContentResponse`구조에 대 한 자세한 내용은 [콘텐츠 서비스 설명서](https://services.msdn.microsoft.com/ContentServices/ContentService.asmx)를 참조 하세요.  
   
 ## <a name="see-also"></a>참조
 

@@ -28,12 +28,12 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: b9aa3f4e386ca5de79fe028b10d0d68343aba06b
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: e62825a88858a63984860cbc8a1c570f784f663f
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920028"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040871"
 ---
 # <a name="wpf-windows-overview"></a>WPF 창 개요
 사용자는 Windows를 통해 Windows Presentation Foundation (WPF) 독립 실행형 응용 프로그램과 상호 작용 합니다. 창의 기본 용도는 데이터를 시각화하는 콘텐츠를 호스트하고 사용자가 데이터와 상호 작용할 수 있도록 하는 것입니다. 독립 실행형 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램은 <xref:System.Windows.Window> 클래스를 사용 하 여 자체 창을 제공 합니다. 이 항목에서는 독립 실행형 응용 프로그램에서 windows를 만들고 관리 하는 기본적인 사항을 다루기 전에 <xref:System.Windows.Window> 소개 합니다.  
@@ -442,7 +442,7 @@ ms.locfileid: "72920028"
  [!code-xaml[WindowsOverviewSnippets#WindowStyleWindowMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowStyleWindow.xaml#windowstylewindowmarkup1)]  
   
 #### <a name="non-rectangular-window-style"></a>사각형이 아닌 창 스타일  
- <xref:System.Windows.Window.WindowStyle%2A> 수 있는 테두리 스타일로 충분 하지 않은 경우도 있습니다. 예를 들어 [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] 사용 하는 것과 같이 사각형이 아닌 테두리를 사용 하 여 응용 프로그램을 만들 수 있습니다.  
+ <xref:System.Windows.Window.WindowStyle%2A> 수 있는 테두리 스타일로 충분 하지 않은 경우도 있습니다. 예를 들어 Microsoft Windows Media Player에서 사용 하는 것과 같이 사각형이 아닌 테두리를 사용 하 여 응용 프로그램을 만들 수 있습니다.  
   
  예를 들어 다음 그림에 표시 된 음성 거품형 창을 살펴보겠습니다.  
   

@@ -2,15 +2,15 @@
 title: 대량 복사 예제 설정
 ms.date: 03/30/2017
 ms.assetid: d4dde6ac-b8b6-4593-965a-635c8fb2dadb
-ms.openlocfilehash: ac09ed85315aee7c6b29952916088ebe6e301eb9
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 28fa5cde1dcbaf9f38450116a56fc11d904edc1c
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794425"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040262"
 ---
 # <a name="bulk-copy-example-setup"></a>대량 복사 예제 설정
-<xref:System.Data.SqlClient.SqlBulkCopy> 클래스를 사용하면 SQL Server 테이블에만 데이터를 쓸 수 있습니다. 이 항목에 표시 된 코드 샘플은 SQL Server 예제 데이터베이스 **AdventureWorks**를 사용 합니다. 코드 샘플에서는 기존 테이블을 변경하지 않도록 사용자가 먼저 만드는 테이블에 데이터를 씁니다.  
+<xref:System.Data.SqlClient.SqlBulkCopy> 클래스를 사용 하 여 SQL Server 테이블에만 데이터를 쓸 수 있습니다. 이 항목에 표시 된 코드 샘플은 SQL Server 예제 데이터베이스 **AdventureWorks**를 사용 합니다. 코드 샘플에서는 기존 테이블을 변경하지 않도록 사용자가 먼저 만드는 테이블에 데이터를 씁니다.  
   
  **BulkCopyDemoMatchingColumns** 및 **BulkCopyDemoDifferentColumns** 테이블은 둘 다 **AdventureWorks** **Production. Products** 테이블을 기반으로 합니다. 이러한 테이블을 사용 하는 코드 샘플에서는 데이터를 **Production** 테이블에서 이러한 샘플 테이블 중 하나로 추가 합니다. **BulkCopyDemoDifferentColumns** 테이블은 샘플에서 원본 데이터의 열을 대상 테이블에 매핑하는 방법을 보여 주는 경우 사용 됩니다. **BulkCopyDemoMatchingColumns** 는 대부분의 다른 샘플에 사용 됩니다.  
   
@@ -22,7 +22,7 @@ ms.locfileid: "70794425"
 ## <a name="table-setup"></a>테이블 설정  
  코드 샘플을 올바르게 실행하는 데 필요한 테이블을 만들려면 SQL Server 데이터베이스에서 다음 Transact-SQL 문을 실행해야 합니다.  
   
-```  
+```sql
 USE AdventureWorks  
   
 IF EXISTS (SELECT * FROM dbo.sysobjects   
@@ -81,7 +81,7 @@ CREATE TABLE [dbo].[BulkCopyDemoOrderDetail]([SalesOrderID] [int] NOT NULL,
 ) ON [PRIMARY]) ON [PRIMARY]  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [SQL Server에서 대량 복사 작업](bulk-copy-operations-in-sql-server.md)
 - [ADO.NET 개요](../ado-net-overview.md)

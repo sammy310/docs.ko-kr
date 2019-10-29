@@ -2,12 +2,12 @@
 title: 수정 SQL 생성
 ms.date: 03/30/2017
 ms.assetid: 2188a39d-46ed-4a8b-906a-c9f15e6fefd1
-ms.openlocfilehash: 94b6c3c97e8255db2dc4d72bae6c6c12905d9710
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: b6c1b71effba17d33c035d0f1df386bf56d405b5
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854295"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039894"
 ---
 # <a name="modification-sql-generation"></a>수정 SQL 생성
 
@@ -29,7 +29,7 @@ DbModificationCommandTree는 DbCommandTree에서 상속하는 수정 DML 작업(
 
 Entity Framework에서 생성 되는 DbModificationCommandTree 및 해당 구현은 항상 단일 행 작업을 나타냅니다. 이 단원에서는 .NET Framework 버전 3.5에서 이러한 형식과 관련 제약 조건에 대해 설명합니다.
 
-![Diagram](./media/558ba7b3-dd19-48d0-b91e-30a76415bf5f.gif "558ba7b3-dd19-48d0-b91e-30a76415bf5f")
+![다이어그램](./media/558ba7b3-dd19-48d0-b91e-30a76415bf5f.gif "558ba7b3-dd19-48d0-b91e-30a76415bf5f")
 
 DbModificationCommandTree에는 수정 작업의 대상 집합을 나타내는 Target 속성이 있습니다. Target의 Expression 속성은 입력 집합을 정의하며 항상 DbScanExpression입니다.  DbScanExpression은 대상의 메타 데이터 속성 "정의 쿼리"가 null이 아닌 경우 테이블이 나 뷰 또는 쿼리를 사용 하 여 정의 된 데이터 집합을 나타낼 수 있습니다.
 
@@ -62,9 +62,7 @@ Returning 값은 삽입되거나 업데이트된 행을 기반으로 반환될 �
 
 SetClauses는 삽입 또는 업데이트 작업을 정의하는 insert 또는 update set 절의 목록을 지정합니다.
 
-```
-The elements of the list are specified as type DbModificationClause, which specifies a single clause in an insert or update modification operation. DbSetClause inherits from DbModificationClause and specifies the clause in a modification operation that sets the value of a property. Beginning in version 3.5 of the .NET Framework, all elements in SetClauses are of type SetClause.
-```
+목록의 요소는 insert 또는 update 수정 작업에서 단일 절을 지정 하는 DbModificationClause 형식으로 지정 됩니다. DbSetClause은 DbModificationClause에서 상속 하 고 속성의 값을 설정 하는 수정 작업에서 절을 지정 합니다. .NET Framework 버전 3.5부터 SetClauses 모든 요소는 Setclauses 유형입니다.
 
 Property는 업데이트할 속성을 지정합니다. Property는 항상 해당 DbModificationCommandTree의 Target에 대한 참조를 나타내는 DbVariableReferenceExpression을 통한 DbPropertyExpression입니다.
 
@@ -116,7 +114,7 @@ DbPropertyExpression의 인스턴스가 항상 입력 테이블을 나타내는 
 
 샘플 공급자에서 지정된 DbInsertCommandTree의 경우 생성된 INSERT 명령은 아래의 두 삽입 템플릿 중 하나를 따릅니다.
 
-첫 번째 템플릿에는 SetClauses 목록의 값에 따라 삽입을 수행하는 명령과 Returning 속성이 null이 아닌 경우 삽입된 행의 Returning 속성에 지정된 속성을 반환하는 SELECT 문이 있습니다. 조건자 요소 "\@ @ROWCOUNT > 0"은 행이 삽입 된 경우 true입니다. Scope_identity ()는 id에 삽입 된 마지막 &#124; id 값을 반환 하기 때문에 조건자 요소 "Keymemberi = keyValueI scope_identity ()"는 keymemberi가 저장소 생성 키인 경우에만 "keymemberi = scope_identity ()" 셰이프를 사용 합니다. 저장소 생성) 열
+첫 번째 템플릿에는 SetClauses 목록의 값에 따라 삽입을 수행하는 명령과 Returning 속성이 null이 아닌 경우 삽입된 행의 Returning 속성에 지정된 속성을 반환하는 SELECT 문이 있습니다. 행이 삽입 된 경우에는 조건자 요소 "\@@ROWCOUNT > 0"이 true입니다. Scope_identity ()는 id에 삽입 된 마지막 &#124; id 값을 반환 하기 때문에 조건자 요소 "Keymemberi = keyValueI scope_identity ()"는 keymemberi가 저장소 생성 키인 경우에만 "keymemberi = scope_identity ()" 셰이프를 사용 합니다. 저장소 생성) 열
 
 ```sql
 -- first insert Template
@@ -160,7 +158,7 @@ using (NorthwindEntities northwindContext = new NorthwindEntities()) {
 
 이 코드에서는 공급자에 전달되는 다음 명령 트리를 생성합니다.
 
-```
+```output
 DbInsertCommandTree
 |_Parameters
 |_Target : 'target'
@@ -212,7 +210,7 @@ WHERE <predicate>
  WHERE @@ROWCOUNT > 0 AND keyMember0 = keyValue0 AND .. keyMemberI =  keyValueI | scope_identity()  .. AND  keyMemberN = keyValueN]
 ```
 
-Set 절이 지정 되지 않은 경우에만 set@i 절에 가짜 set 절 ("= 0")이 있습니다. 이는 모든 저장소 계산 열이 다시 계산되도록 하기 위한 것입니다.
+Set 절은 set 절이 지정 되지 않은 경우에만 가짜 set 절 ("@i = 0")을 포함 합니다. 이는 모든 저장소 계산 열이 다시 계산되도록 하기 위한 것입니다.
 
 Returning 속성이 null이 아닌 경우에만 Returning 속성에 지정된 속성을 반환하기 위해 SELECT 문이 생성됩니다.
 
@@ -230,7 +228,7 @@ using (NorthwindEntities northwindContext = new NorthwindEntities()) {
 
 이 사용자 코드에서는 공급자에 전달되는 다음 명령 트리를 생성합니다.
 
-```
+```output
 DbUpdateCommandTree
 |_Parameters
 |_Target : 'target'
@@ -281,7 +279,7 @@ using (NorthwindEntities northwindContext = new NorthwindEntities()) {
 
 이 사용자 코드에서는 공급자에 전달되는 다음 명령 트리를 생성합니다.
 
-```
+```output
 DbDeleteCommandTree
 |_Parameters
 |_Target : 'target'
@@ -300,6 +298,6 @@ delete [dbo].[Categories]
 where ([CategoryID] = @p0)
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [Entity Framework 데이터 공급자 작성](writing-an-ef-data-provider.md)

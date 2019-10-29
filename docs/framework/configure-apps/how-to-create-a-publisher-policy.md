@@ -7,12 +7,12 @@ helpviewer_keywords:
 - GAC (global assembly cache), publisher policy assembly
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
-ms.openlocfilehash: 608918828bf72369a1bd48e2391e2423078e9df0
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 346671d4febd5f3999f1f4fbf2fe4b7e475ae5fa
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846841"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040196"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>방법: 게시자 정책 만들기
 
@@ -55,26 +55,28 @@ ms.locfileid: "72846841"
 
 명령 프롬프트에서 다음 명령을 입력 합니다.
 
-**al/link:** *publisherPolicyFile* **/Out:** *publisherPolicyAssemblyFile* **/keyfile:** *keyPairFile* **/platform:** *processorArchitecture*
+```console
+al /link:publisherPolicyFile /out:publisherPolicyAssemblyFile /keyfile:keyPairFile /platform:processorArchitecture
+```
 
 이 명령에서 다음을 수행 합니다.
 
-- *PublisherPolicyFile* 인수는 게시자 정책 파일의 이름입니다.
+- `publisherPolicyFile` 인수는 게시자 정책 파일의 이름입니다.
 
-- *PublisherPolicyAssemblyFile* 인수는이 명령에서 생성 되는 게시자 정책 어셈블리의 이름입니다. 어셈블리 파일 이름은 다음 형식을 따라야 합니다.
+- `publisherPolicyAssemblyFile` 인수는이 명령에서 생성 되는 게시자 정책 어셈블리의 이름입니다. 어셈블리 파일 이름은 다음 형식을 따라야 합니다.
 
-  **policy.** *majorNumber* **.** *minorNumber* **.** *Mainassemblyname* **.dll**
+  ' majorNumber. minorNumber '
 
-- *KeyPairFile* 인수는 키 쌍을 포함 하는 파일의 이름입니다. 동일한 키 쌍을 사용 하 여 어셈블리 및 게시자 정책 어셈블리에 서명 해야 합니다.
+- `keyPairFile` 인수는 키 쌍을 포함 하는 파일의 이름입니다. 동일한 키 쌍을 사용 하 여 어셈블리 및 게시자 정책 어셈블리에 서명 해야 합니다.
 
-- *ProcessorArchitecture* 인수는 프로세서별 어셈블리에서 대상으로 지정 된 플랫폼을 식별 합니다.
+- `processorArchitecture` 인수는 프로세서별 어셈블리에서 대상으로 지정 된 플랫폼을 식별 합니다.
 
   > [!NOTE]
   > 특정 프로세서 아키텍처를 대상으로 하는 기능은 .NET Framework 2.0부터 사용할 수 있습니다.
 
 특정 프로세서 아키텍처를 대상으로 하는 기능은 .NET Framework 2.0부터 사용할 수 있습니다. 다음 명령은 `pub.config`이라는 게시자 정책 파일에서 `policy.1.0.myAssembly` 라는 게시자 정책 어셈블리를 만들고, `sgKey.snk` 파일의 키 쌍을 사용 하 여 어셈블리에 강력한 이름을 할당 하 고, 어셈블리가 x86 프로세서를 대상으로 하도록 지정 합니다. 마이크로아키텍처.
 
-```
+```console
 al /link:pub.config /out:policy.1.0.myAssembly.dll /keyfile:sgKey.snk /platform:x86
 ```
 
@@ -92,11 +94,13 @@ al /link:pub.config /out:policy.1.0.myAssembly.dll /keyfile:sgKey.snk /platform:
 
 명령 프롬프트에서 다음 명령을 입력 합니다.
 
-**gacutil.exe/I**  *publisherPolicyAssemblyFile*
+```console
+gacutil /i publisherPolicyAssemblyFile
+```
 
 다음 명령은 전역 어셈블리 캐시에 `policy.1.0.myAssembly.dll`를 추가 합니다.
 
-```
+```console
 gacutil /i policy.1.0.myAssembly.dll
 ```
 

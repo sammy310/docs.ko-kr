@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d023260a-a66a-4c39-b8f4-090cd130e730
-ms.openlocfilehash: 357812aa95ea731fe86fbe49b2cb1b2806e3915a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: a9c81c8554c0fb393c10ed69f84c8b2d936ec1e6
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784870"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040124"
 ---
 # <a name="dataadapter-datatable-and-datacolumn-mappings"></a>DataAdapter DataTable 및 DataColumn 매핑
-**DataAdapter** 의 TableMappings 속성에는 0 개 이상의 <xref:System.Data.Common.DataTableMapping> 개체 컬렉션이 포함 되어 있습니다. **DataTableMapping** 는 데이터 원본에 대 한 쿼리에서 반환 되는 데이터와에 <xref:System.Data.DataTable>대 한 마스터 매핑을 제공 합니다. **DataTableMapping** 이름은 **DataTable** 이름 대신 **DataAdapter**의 **Fill** 메서드에 전달할 수 있습니다. 다음 예에서는 **Authors** 테이블에 대해 **AuthorsMapping** 라는 **DataTableMapping** 를 만듭니다.  
+**DataAdapter** 는 **TableMappings** 속성에 0 개 이상의 <xref:System.Data.Common.DataTableMapping> 개체의 컬렉션을 포함 합니다. **DataTableMapping** 는 데이터 원본에 대 한 쿼리에서 반환 되는 데이터와 <xref:System.Data.DataTable>간의 마스터 매핑을 제공 합니다. **DataTableMapping** 이름은 **DataTable** 이름 대신 **DataAdapter**의 **Fill** 메서드에 전달할 수 있습니다. 다음 예에서는 **Authors** 테이블에 대해 **AuthorsMapping** 라는 **DataTableMapping** 를 만듭니다.  
   
 ```vb  
 workAdapter.TableMappings.Add("AuthorsMapping", "Authors")  
@@ -27,7 +27,7 @@ workAdapter.TableMappings.Add("AuthorsMapping", "Authors");
   
  **Dataadapter**의 **Fill** 또는 **Update** 메서드를 호출할 때 **TableName** 또는 **DataTableMapping** 이름을 지정 하지 않으면 **dataadapter** 는 "Table" 이라는 **DataTableMapping** 을 찾습니다. 해당 **DataTableMapping** 없는 경우 **DataTable** 의 **TableName** 은 "Table"입니다. 이름이 "Table" 인 **DataTableMapping** 를 만들어 기본 **DataTableMapping** 을 지정할 수 있습니다.  
   
- 다음 코드 예제에서는 <xref:System.Data.Common> 네임 스페이스에서 **DataTableMapping** 을 만들고 이름을 "Table"로 지정 하 여 지정 된 **DataAdapter** 의 기본 매핑으로 설정 합니다. 그런 다음이 예에서는 쿼리 결과의 첫 번째 테이블 ( **northwind** 데이터베이스의 **Customers** 테이블)의 열을의 **Northwind** <xref:System.Data.DataSet>Customers 테이블에 있는 더 많은 사용자에 게 친숙 한 이름 집합으로 매핑합니다. 매핑되지 않는 열의 경우 데이터 소스의 열 이름이 사용됩니다.  
+ 다음 코드 예제에서는 <xref:System.Data.Common> 네임 스페이스에서 **DataTableMapping** 을 만들고 이름을 "Table"로 지정 하 여 지정 된 **DataAdapter** 의 기본 매핑으로 만듭니다. 그런 다음 쿼리 결과의 첫 번째 테이블의 열 ( **northwind** 데이터베이스의 **Customers** 테이블)을 <xref:System.Data.DataSet>의 **northwind Customers** 테이블에 있는 사용자에 게 친숙 한 이름 집합으로 매핑합니다. 매핑되지 않는 열의 경우 데이터 소스의 열 이름이 사용됩니다.  
   
 ```vb  
 Dim mapping As DataTableMapping = _  
@@ -86,18 +86,27 @@ adapter.Fill(custDS, "Customers");
 ## <a name="handling-multiple-result-sets"></a>여러 개의 결과 집합 처리  
  **SelectCommand** 에서 여러 테이블을 반환 하는 경우 **채우기** 는 지정 된 테이블 이름부터 시작 하 여 **TableName** 형식으로 계속 하 여 **데이터 집합**의 테이블에 대 한 증분 값을 포함 하는 테이블 이름을 자동으로 생성 합니다. *N*( **TableName1**부터 시작) 테이블 매핑을 사용 하 여 자동으로 생성 된 테이블 이름을 **데이터 집합**의 테이블에 대해 지정 하려는 이름에 매핑할 수 있습니다. 예를 들어 **고객** 및 **주문의**두 테이블을 반환 하는 **SelectCommand** 의 경우 **Fill**에 대 한 다음 호출을 실행 합니다.  
   
-```  
+```vb  
 adapter.Fill(customersDataSet, "Customers")  
 ```  
-  
- **데이터 집합**에는 두 개의 테이블이 생성 됩니다. **고객** 및 **Customers1**. 테이블 매핑을 사용 하 여 두 번째 테이블이 **Customers1**대신 **Orders** 라는 이름으로 지정 되도록 할 수 있습니다. 이렇게 하려면 다음 예제와 같이 **Customers1** 의 원본 테이블을 **데이터 집합** 테이블 **주문**에 매핑합니다.  
-  
+
+```csharp  
+adapter.Fill(customersDataSet, "Customers");  
 ```  
+
+ **데이터 집합**에는 **Customers** 및 **Customers1**라는 두 개의 테이블이 생성 됩니다. 테이블 매핑을 사용 하 여 두 번째 테이블이 **Customers1**대신 **Orders** 라는 이름으로 지정 되도록 할 수 있습니다. 이렇게 하려면 다음 예제와 같이 **Customers1** 의 원본 테이블을 **데이터 집합** 테이블 **주문**에 매핑합니다.  
+  
+```vb  
 adapter.TableMappings.Add("Customers1", "Orders")  
 adapter.Fill(customersDataSet, "Customers")  
 ```  
+
+```csharp  
+adapter.TableMappings.Add("Customers1", "Orders");  
+adapter.Fill(customersDataSet, "Customers");  
+```
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [DataAdapter 및 DataReader](dataadapters-and-datareaders.md)
 - [ADO.NET에서 데이터 검색 및 수정](retrieving-and-modifying-data.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 89befaff-bb46-4290-8382-e67cdb0e3de9
-ms.openlocfilehash: 81e8bd5ba9274c84ffe18f617978b61238ebeff2
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: b18c67f5573d375fe0872d76d69a1f0aafa7e7f6
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70782434"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040434"
 ---
 # <a name="database-mirroring-in-sql-server"></a>SQL Server에서 데이터베이스 미러링
 SQL Server의 데이터베이스 미러링을 사용하면 대기 서버에서 SQL Server 데이터베이스의 복사본, 즉 미러를 유지할 수 있습니다. 미러링을 사용하면 항상 두 개의 개별 데이터 복사본을 가질 수 있으므로 고가용성 및 완벽한 데이터 중복이 제공됩니다. .NET Data Provider for SQL Server에서는 데이터베이스 미러링을 암시적으로 지원하므로 SQL Server 데이터베이스에 대해 미러링이 구성되고 나면 개발자가 별도의 동작을 수행하거나 코드를 작성할 필요가 없습니다. 또한 <xref:System.Data.SqlClient.SqlConnection> 개체는 장애 조치 파트너 서버의 이름을 <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>에 제공할 수 있는 명시적인 연결 모드를 지원합니다.  
@@ -26,7 +26,7 @@ SQL Server의 데이터베이스 미러링을 사용하면 대기 서버에서 S
 ## <a name="specifying-the-failover-partner-in-the-connection-string"></a>연결 문자열에 장애 조치 파트너 지정  
  연결 문자열에 장애 조치 파트너 서버의 이름을 제공하면 클라이언트에서는 클라이언트 애플리케이션이 처음 연결될 때 주 데이터베이스를 사용할 수 없을 경우 장애 조치 파트너와의 연결을 투명하게 시도합니다.  
   
-```  
+```csharp
 ";Failover Partner=PartnerServerName"  
 ```  
   
@@ -59,10 +59,10 @@ string activeServer = connection.DataSource;
 ## <a name="database-mirroring-resources"></a>데이터베이스 미러링 리소스  
  미러링 구성, 배포 및 관리에 대 한 개념 설명서 및 정보는 SQL Server 설명서에서 다음 리소스를 참조 하세요.  
   
-|리소스|Description|  
+|리소스|설명|  
 |--------------|-----------------|  
 |[데이터베이스 미러링](/sql/database-engine/database-mirroring/database-mirroring-sql-server)|SQL Server에서 미러링을 설정 및 구성하는 방법을 설명합니다.|  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ADO.NET 개요](../ado-net-overview.md)

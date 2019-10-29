@@ -2,20 +2,20 @@
 title: OLE DB, ODBC 및 Oracle 연결 풀링
 ms.date: 03/30/2017
 ms.assetid: 2bd83b1e-3ea9-43c4-bade-d9cdb9bbbb04
-ms.openlocfilehash: b83b53550964b3149f3bc711eaf119e749d1834b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4b801032e67d1c4c51fed8556ff1fea05c214aff
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794697"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039840"
 ---
 # <a name="ole-db-odbc-and-oracle-connection-pooling"></a>OLE DB, ODBC 및 Oracle 연결 풀링
-연결 풀링을 사용하면 응용 프로그램의 성능 및 확장성을 대폭 향상시킬 수 있습니다. 이 단원에서는 OLE DB, ODBC 및 Oracle용 .NET Framework 데이터 공급자에 대한 연결 풀링에 대해 설명합니다.  
+연결 풀링을 사용하면 애플리케이션의 성능 및 확장성을 대폭 향상시킬 수 있습니다. 이 단원에서는 OLE DB, ODBC 및 Oracle용 .NET Framework 데이터 공급자에 대한 연결 풀링에 대해 설명합니다.  
   
 ## <a name="connection-pooling-for-oledb"></a>OleDb에 대한 연결 풀링  
  .NET Framework Data Provider for OLE DB에서는 OLE DB 세션 풀링을 사용하여 자동으로 연결을 풀링합니다. 연결 문자열 인수를 사용하면 풀링이 포함된 OLE DB 서비스를 활성화하거나 비활성화할 수 있습니다. 예를 들어, 다음 연결 문자열은 OLE DB 세션 풀링과 자동 트랜잭션 인리스트먼트를 비활성화합니다.  
   
-```  
+```csharp
 Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=SSPI;  
 ```  
   
@@ -48,7 +48,7 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
   
  네트워크에 존재하지 않는 서버에 대한 연결이 있는 경우 연결 풀러에서 이 연결을 검색하지 못하고 잘못된 연결로 표시하지 못해도 풀에서 선택할 수는 있습니다. 이 경우 예외가 발생합니다. 그러나 연결을 풀로 회수하려면 계속해서 연결을 닫아야 합니다.  
   
- 클래스의 `Close` 메서드에 있는 `Dispose`, `Connection` 또는 다른 관리 개체에 `DataReader` 또는 `Finalize`를 호출해서는 안 됩니다. 종료자에서는 클래스에 직접 속한 관리되지 않는 리소스만 해제합니다. 클래스에 관리되지 않는 리소스가 없는 경우 클래스 정의에 `Finalize` 메서드를 포함하지 마세요. 자세한 내용은 [가비지 수집](../../../standard/garbage-collection/index.md)합니다.  
+ 클래스의 `Close` 메서드에 있는 `Dispose`, `Connection` 또는 다른 관리 개체에 `DataReader` 또는 `Finalize`를 호출해서는 안 됩니다. 종료자에서는 클래스에 직접 속한 관리되지 않는 리소스만 해제합니다. 클래스에 관리되지 않는 리소스가 없는 경우 클래스 정의에 `Finalize` 메서드를 포함하지 마세요. 자세한 내용은 [가비지 수집](../../../standard/garbage-collection/index.md)을 참조 하세요.  
   
 ### <a name="transaction-support"></a>트랜잭션 지원  
  연결은 트랜잭션 컨텍스트에 따라 풀에서 선택되어 할당됩니다. 요청하는 스레드의 컨텍스트와 할당된 연결의 컨텍스트는 반드시 일치해야 합니다. 따라서 각 연결 풀은 실제로 연결 된 트랜잭션 컨텍스트가 없는 연결로 나뉜 다음, 각각 특정 트랜잭션 컨텍스트의 연결을 포함 하는 *N* 개의 하위 분류로 나뉩니다.  
@@ -60,15 +60,15 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
   
  다음 표에서는 연결 풀링 동작을 조정하는 데 사용할 수 있는 <xref:System.Data.OracleClient.OracleConnection.ConnectionString%2A> 값을 설명합니다.  
   
-|이름|기본|Description|  
+|name|기본|설명|  
 |----------|-------------|-----------------|  
-|`Connection Lifetime`|0|연결이 풀로 반환되면 연결을 만든 시간을 현재 시간과 비교하여 이 시간 간격(초)이 `Connection Lifetime`에서 지정한 값을 초과하는 경우 연결이 제거됩니다. 이는 클러스터링된 구성에서 실행 중인 서버와 방금 온라인 상태가 된 서버 사이에 로드 균형 조정을 강제로 조정하는 데 유용합니다.<br /><br /> 값 0은 풀링된 연결이 최대 시간 제한을 갖도록 합니다.|  
+|`Connection Lifetime`|0|연결이 풀로 반환되면 연결을 만든 시간을 현재 시간과 비교하여 이 시간 간격(초)이 `Connection Lifetime`에서 지정한 값을 초과하면 연결이 제거됩니다. 이는 클러스터링된 구성에서 실행 중인 서버와 방금 온라인 상태가 된 서버 사이에 로드 균형 조정을 강제로 조정하는 데 유용합니다.<br /><br /> 값 0은 풀링된 연결이 최대 시간 제한을 갖도록 합니다.|  
 |`Enlist`|'true'|`true`이면 풀러는 트랜잭션 컨텍스트가 존재하는 경우 해당 연결을 만들기 스레드의 현재 트랜잭션 컨텍스트에 자동으로 인리스트먼트합니다.|  
-|`Max Pool Size`|100|풀에 허용되는 최대 연결 수입니다.|  
+|`Max Pool Size`|100|풀에서 허용 되는 최대 연결 수입니다.|  
 |`Min Pool Size`|0|풀에서 유지되는 최소 연결 수입니다.|  
 |`Pooling`|'true'|`true`이면 연결이 적절한 풀에서 선택되거나 필요한 경우 연결이 만들어져 적절한 풀에 추가됩니다.|  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [연결 풀링](connection-pooling.md)
 - [성능 카운터](performance-counters.md)

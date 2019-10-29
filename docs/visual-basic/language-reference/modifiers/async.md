@@ -7,16 +7,16 @@ helpviewer_keywords:
 - Async [Visual Basic]
 - Async keyword [Visual Basic]
 ms.assetid: 1be8b4b5-9689-41b5-bd33-b906bfd53bc5
-ms.openlocfilehash: fc0ae67c0ebc11a0428ffc18c8db103b619e27ec
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: aaf5a95edb9cba9726163be3925b006a7641597c
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524798"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040849"
 ---
 # <a name="async-visual-basic"></a>Async(Visual Basic)
 
-@No__t_0 한정자는 수정 하는 메서드 또는 [람다 식이](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md) 비동기 임을 나타냅니다. 이러한 메서드를 *비동기 메서드*라고 합니다.
+`Async` 한정자는 수정 하는 메서드 또는 [람다 식이](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md) 비동기 임을 나타냅니다. 이러한 메서드를 *비동기 메서드*라고 합니다.
 
 비동기 메서드는 호출자의 스레드를 차단하지 않고 오래 실행될 수 있는 작업을 수행하는 편리한 방법을 제공합니다. 비동기 메서드의 호출자는 비동기 메서드가 완료 될 때까지 기다리지 않고 작업을 다시 시작할 수 있습니다.
 
@@ -43,13 +43,13 @@ Public Async Function ExampleMethodAsync() As Task(Of Integer)
 End Function
 ```
 
-일반적으로 `Async` 키워드에 의해 수정 된 메서드에는 하나 이상의 [wait](../../../visual-basic/language-reference/modifiers/async.md) 식 또는 문이 포함 됩니다. 대기 중인 작업이 완료될 때까지 일시 중단된 지점인 첫 번째 `Await`에 도달할 때까지 이 메서드는 동기적으로 실행됩니다. 그리고 메서드의 호출자로 컨트롤이 반환됩니다. 메서드에 `Await` 식 혹은 문이 포함되지 않은 경우에는 메서드가 일시 중단되지 않고 동기 메서드와 같은 방식으로 실행됩니다. 컴파일러 경고는 `Await` 포함 되지 않은 모든 비동기 메서드에 대 한 경고를 표시 합니다 .이 경우에는 오류가 발생할 수 있기 때문입니다. 자세한 내용은 [컴파일러 오류](../../../visual-basic/language-reference/error-messages/because-this-call-is-not-awaited-the-current-method-continues-to-run.md)를 참조 하세요.
+일반적으로 `Async` 키워드에 의해 수정 된 메서드에는 하나 이상의 [wait](../../../visual-basic/language-reference/modifiers/async.md) 식 또는 문이 포함 됩니다. 대기 중인 작업이 완료될 때까지 일시 중단된 지점인 첫 번째 `Await`에 도달할 때까지 이 메서드는 동기적으로 실행됩니다. 그리고 메서드의 호출자로 컨트롤이 반환됩니다. 메서드에 `Await` 식 또는 문이 포함 되어 있지 않으면 메서드가 일시 중단 되지 않고 동기 메서드를 통해 실행 됩니다. 컴파일러 경고는 `Await` 포함 되지 않은 모든 비동기 메서드에 대 한 경고를 표시 합니다 .이 경우에는 오류가 발생할 수 있기 때문입니다. 자세한 내용은 [컴파일러 오류](../error-messages/bc42358.md)를 참조 하세요.
 
 `Async` 키워드는 예약되지 않은 키워드입니다. 이 키워드는 메서드 또는 람다 식을 수정할 때의 키워드입니다. 다른 모든 컨텍스트에서는 식별자로 해석됩니다.
 
 ## <a name="return-types"></a>반환 형식
 
-비동기 메서드는 [Sub](../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) 프로시저 이거나 반환 형식이 <xref:System.Threading.Tasks.Task> 또는 <xref:System.Threading.Tasks.Task%601> 인 [함수](../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md) 프로시저입니다. 메서드는 [ByRef](../../../visual-basic/language-reference/modifiers/byref.md) 매개 변수를 선언할 수 없습니다.
+비동기 메서드는 [Sub](../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) 프로시저 이거나 반환 형식이 <xref:System.Threading.Tasks.Task> 또는 <xref:System.Threading.Tasks.Task%601>인 [함수](../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md) 프로시저입니다. 메서드는 [ByRef](../../../visual-basic/language-reference/modifiers/byref.md) 매개 변수를 선언할 수 없습니다.
 
 메서드의 [return](../../../visual-basic/language-reference/statements/return-statement.md) 문에 TResult 형식의 피연산자가 있는 경우 비동기 메서드의 반환 형식으로 `Task(Of TResult)`를 지정합니다. 메서드가 완료되었을 때 의미 있는 값이 반환되지 않을 경우 `Task`를 사용합니다. 즉, 메서드를 호출하면 `Task`가 반환되지만 `Task`가 완료된 경우 `Await`를 대기 중인 모든 `Task` 문이 결과 값을 생성하지 않습니다.
 
