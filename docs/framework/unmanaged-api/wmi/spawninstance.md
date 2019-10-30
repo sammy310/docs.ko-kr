@@ -14,21 +14,19 @@ helpviewer_keywords:
 - SpawnInstance function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 529905bd9286520a8e09479bfc95ef0b614f53e9
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: f93b4fbd5429ed2bdae8fb707e61df024cd8fd6e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798211"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73107509"
 ---
-# <a name="spawninstance-function"></a><span data-ttu-id="eb5ba-103">SpawnInstance 함수</span><span class="sxs-lookup"><span data-stu-id="eb5ba-103">SpawnInstance function</span></span>
-<span data-ttu-id="eb5ba-104">클래스의 새 인스턴스를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="eb5ba-104">Creates a new instance of a class.</span></span>    
+# <a name="spawninstance-function"></a><span data-ttu-id="1caf7-103">SpawnInstance 함수</span><span class="sxs-lookup"><span data-stu-id="1caf7-103">SpawnInstance function</span></span>
+<span data-ttu-id="1caf7-104">클래스의 새 인스턴스를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="1caf7-104">Creates a new instance of a class.</span></span>    
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
-## <a name="syntax"></a><span data-ttu-id="eb5ba-105">구문</span><span class="sxs-lookup"><span data-stu-id="eb5ba-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1caf7-105">구문</span><span class="sxs-lookup"><span data-stu-id="1caf7-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT SpawnInstance (
@@ -38,46 +36,46 @@ HRESULT SpawnInstance (
    [out] IWbemClassObject**  ppNewInstance); 
 ```  
 
-## <a name="parameters"></a><span data-ttu-id="eb5ba-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="eb5ba-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="1caf7-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="1caf7-106">Parameters</span></span>
 
 `vFunc`  
-<span data-ttu-id="eb5ba-107">진행 이 매개 변수는 사용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="eb5ba-107">[in] This parameter is unused.</span></span>
+<span data-ttu-id="1caf7-107">진행 이 매개 변수는 사용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="1caf7-107">[in] This parameter is unused.</span></span>
 
 `ptr`  
-<span data-ttu-id="eb5ba-108">진행 [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) 인스턴스에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="eb5ba-108">[in] A pointer to an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.</span></span>
+<span data-ttu-id="1caf7-108">진행 [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) 인스턴스에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="1caf7-108">[in] A pointer to an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.</span></span>
 
 `lFlags`  
-<span data-ttu-id="eb5ba-109">[in] 예약되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="eb5ba-109">[in] Reserved.</span></span> <span data-ttu-id="eb5ba-110">이 매개 변수는 0 이어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="eb5ba-110">This parameter must be 0.</span></span>
+<span data-ttu-id="1caf7-109">[in] 예약되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1caf7-109">[in] Reserved.</span></span> <span data-ttu-id="1caf7-110">이 매개 변수는 0 이어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="1caf7-110">This parameter must be 0.</span></span>
 
 `ppNewInstance`  
-<span data-ttu-id="eb5ba-111">제한이 클래스의 새 인스턴스에 대 한 포인터를 받습니다.</span><span class="sxs-lookup"><span data-stu-id="eb5ba-111">[out] Receives the pointer to the new instance of the class.</span></span> <span data-ttu-id="eb5ba-112">오류가 발생 하면 새 개체가 반환 `ppNewInstance` 되지 않고 수정 되지 않은 상태로 유지 됩니다.</span><span class="sxs-lookup"><span data-stu-id="eb5ba-112">If an error occurs, a new object is not returned, and `ppNewInstance` is left unmodified.</span></span>
+<span data-ttu-id="1caf7-111">제한이 클래스의 새 인스턴스에 대 한 포인터를 받습니다.</span><span class="sxs-lookup"><span data-stu-id="1caf7-111">[out] Receives the pointer to the new instance of the class.</span></span> <span data-ttu-id="1caf7-112">오류가 발생 하면 새 개체가 반환 되지 않고 `ppNewInstance`는 수정 되지 않은 상태로 유지 됩니다.</span><span class="sxs-lookup"><span data-stu-id="1caf7-112">If an error occurs, a new object is not returned, and `ppNewInstance` is left unmodified.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="eb5ba-113">반환 값</span><span class="sxs-lookup"><span data-stu-id="eb5ba-113">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="1caf7-113">반환 값</span><span class="sxs-lookup"><span data-stu-id="1caf7-113">Return value</span></span>
 
-<span data-ttu-id="eb5ba-114">이 함수에서 반환 되는 다음 값은 *WbemCli* 헤더 파일에 정의 되어 있거나 코드에서 상수로 정의할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="eb5ba-114">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
+<span data-ttu-id="1caf7-114">이 함수에서 반환 되는 다음 값은 *WbemCli* 헤더 파일에 정의 되어 있거나 코드에서 상수로 정의할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1caf7-114">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
 
-|<span data-ttu-id="eb5ba-115">상수</span><span class="sxs-lookup"><span data-stu-id="eb5ba-115">Constant</span></span>  |<span data-ttu-id="eb5ba-116">값</span><span class="sxs-lookup"><span data-stu-id="eb5ba-116">Value</span></span>  |<span data-ttu-id="eb5ba-117">Description</span><span class="sxs-lookup"><span data-stu-id="eb5ba-117">Description</span></span>  |
+|<span data-ttu-id="1caf7-115">상수</span><span class="sxs-lookup"><span data-stu-id="1caf7-115">Constant</span></span>  |<span data-ttu-id="1caf7-116">값</span><span class="sxs-lookup"><span data-stu-id="1caf7-116">Value</span></span>  |<span data-ttu-id="1caf7-117">설명</span><span class="sxs-lookup"><span data-stu-id="1caf7-117">Description</span></span>  |
 |---------|---------|---------|
-| `WBEM_E_INCOMPLETE_CLASS` | <span data-ttu-id="eb5ba-118">0x80041020</span><span class="sxs-lookup"><span data-stu-id="eb5ba-118">0x80041020</span></span> | <span data-ttu-id="eb5ba-119">`ptr`는 유효한 클래스 정의가 아니므로 새 인스턴스를 생성할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="eb5ba-119">`ptr` is not a valid class definition and cannot spawn new instances.</span></span> <span data-ttu-id="eb5ba-120">불완전 하거나 [PutClassWmi](putclasswmi.md)를 호출 하 여 Windows Management에 등록 되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="eb5ba-120">Either it is incomplete or it has not been registered with Windows Management by calling [PutClassWmi](putclasswmi.md).</span></span> |
-| `WBEM_E_OUT_OF_MEMORY` | <span data-ttu-id="eb5ba-121">0x80041006</span><span class="sxs-lookup"><span data-stu-id="eb5ba-121">0x80041006</span></span> | <span data-ttu-id="eb5ba-122">메모리가 부족 하 여 작업을 완료할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="eb5ba-122">Not enough memory is available to complete the operation.</span></span> |
-| `WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="eb5ba-123">0x80041008</span><span class="sxs-lookup"><span data-stu-id="eb5ba-123">0x80041008</span></span> | <span data-ttu-id="eb5ba-124">`ppNewClass`가 `null`인 경우</span><span class="sxs-lookup"><span data-stu-id="eb5ba-124">`ppNewClass` is `null`.</span></span> |
-| `WBEM_S_NO_ERROR` | <span data-ttu-id="eb5ba-125">0</span><span class="sxs-lookup"><span data-stu-id="eb5ba-125">0</span></span> | <span data-ttu-id="eb5ba-126">함수 호출에 성공 했습니다.</span><span class="sxs-lookup"><span data-stu-id="eb5ba-126">The function call was successful.</span></span>  |
+| `WBEM_E_INCOMPLETE_CLASS` | <span data-ttu-id="1caf7-118">0x80041020</span><span class="sxs-lookup"><span data-stu-id="1caf7-118">0x80041020</span></span> | <span data-ttu-id="1caf7-119">`ptr`은 올바른 클래스 정의가 아니므로 새 인스턴스를 생성할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="1caf7-119">`ptr` is not a valid class definition and cannot spawn new instances.</span></span> <span data-ttu-id="1caf7-120">불완전 하거나 [PutClassWmi](putclasswmi.md)를 호출 하 여 Windows Management에 등록 되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="1caf7-120">Either it is incomplete or it has not been registered with Windows Management by calling [PutClassWmi](putclasswmi.md).</span></span> |
+| `WBEM_E_OUT_OF_MEMORY` | <span data-ttu-id="1caf7-121">0x80041006</span><span class="sxs-lookup"><span data-stu-id="1caf7-121">0x80041006</span></span> | <span data-ttu-id="1caf7-122">메모리가 부족 하 여 작업을 완료할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="1caf7-122">Not enough memory is available to complete the operation.</span></span> |
+| `WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="1caf7-123">0x80041008</span><span class="sxs-lookup"><span data-stu-id="1caf7-123">0x80041008</span></span> | <span data-ttu-id="1caf7-124">`ppNewClass`가 `null`입니다.</span><span class="sxs-lookup"><span data-stu-id="1caf7-124">`ppNewClass` is `null`.</span></span> |
+| `WBEM_S_NO_ERROR` | <span data-ttu-id="1caf7-125">0</span><span class="sxs-lookup"><span data-stu-id="1caf7-125">0</span></span> | <span data-ttu-id="1caf7-126">함수 호출에 성공 했습니다.</span><span class="sxs-lookup"><span data-stu-id="1caf7-126">The function call was successful.</span></span>  |
   
-## <a name="remarks"></a><span data-ttu-id="eb5ba-127">설명</span><span class="sxs-lookup"><span data-stu-id="eb5ba-127">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="1caf7-127">주의</span><span class="sxs-lookup"><span data-stu-id="1caf7-127">Remarks</span></span>
 
-<span data-ttu-id="eb5ba-128">이 함수는 [IWbemClassObject:: SpawnInstance](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-spawninstance) 메서드에 대 한 호출을 래핑합니다.</span><span class="sxs-lookup"><span data-stu-id="eb5ba-128">This function wraps a call to the [IWbemClassObject::SpawnInstance](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-spawninstance) method.</span></span>
+<span data-ttu-id="1caf7-128">이 함수는 [IWbemClassObject:: SpawnInstance](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-spawninstance) 메서드에 대 한 호출을 래핑합니다.</span><span class="sxs-lookup"><span data-stu-id="1caf7-128">This function wraps a call to the [IWbemClassObject::SpawnInstance](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-spawninstance) method.</span></span>
 
-<span data-ttu-id="eb5ba-129">`ptr`는 Windows Management에서 가져온 클래스 정의 여야 합니다.</span><span class="sxs-lookup"><span data-stu-id="eb5ba-129">`ptr` must be a class definition obtained from Windows Management.</span></span> <span data-ttu-id="eb5ba-130">인스턴스에서 인스턴스를 생성 하는 것은 지원 되지만 반환 된 인스턴스는 비어 있습니다. 그런 다음이 클래스 정의를 사용 하 여 새 인스턴스를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="eb5ba-130">(Note that spawning an instance from an instance is supported but the returned instance is empty.) You then use this class definition to create new instances.</span></span> <span data-ttu-id="eb5ba-131">Windows 관리에 인스턴스를 쓰려면 [Putinstancewmi](putinstancewmi.md) 함수를 호출 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="eb5ba-131">A call to the [PutInstanceWmi](putinstancewmi.md) function is required if you intend to write the instance to Windows Management.</span></span>
+<span data-ttu-id="1caf7-129">`ptr`은 Windows Management에서 가져온 클래스 정의 여야 합니다.</span><span class="sxs-lookup"><span data-stu-id="1caf7-129">`ptr` must be a class definition obtained from Windows Management.</span></span> <span data-ttu-id="1caf7-130">인스턴스에서 인스턴스를 생성 하는 것은 지원 되지만 반환 된 인스턴스는 비어 있습니다. 그런 다음이 클래스 정의를 사용 하 여 새 인스턴스를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="1caf7-130">(Note that spawning an instance from an instance is supported but the returned instance is empty.) You then use this class definition to create new instances.</span></span> <span data-ttu-id="1caf7-131">Windows 관리에 인스턴스를 쓰려면 [Putinstancewmi](putinstancewmi.md) 함수를 호출 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="1caf7-131">A call to the [PutInstanceWmi](putinstancewmi.md) function is required if you intend to write the instance to Windows Management.</span></span>
 
-<span data-ttu-id="eb5ba-132">에서 `ppNewClass` 반환 되는 새 개체는 자동으로 현재 개체의 서브 클래스가 됩니다.</span><span class="sxs-lookup"><span data-stu-id="eb5ba-132">The new object returned in `ppNewClass` automatically becomes a subclass of the current object.</span></span> <span data-ttu-id="eb5ba-133">이 동작은 재정의할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="eb5ba-133">This behavior cannot be overridden.</span></span> <span data-ttu-id="eb5ba-134">서브 클래스 (파생 클래스)를 만들 수 있는 다른 방법은 없습니다.</span><span class="sxs-lookup"><span data-stu-id="eb5ba-134">There is no other method by which subclasses (derived classes) can be created.</span></span>
+<span data-ttu-id="1caf7-132">`ppNewClass`에서 반환 되는 새 개체는 자동으로 현재 개체의 서브 클래스가 됩니다.</span><span class="sxs-lookup"><span data-stu-id="1caf7-132">The new object returned in `ppNewClass` automatically becomes a subclass of the current object.</span></span> <span data-ttu-id="1caf7-133">이 동작은 재정의할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="1caf7-133">This behavior cannot be overridden.</span></span> <span data-ttu-id="1caf7-134">서브 클래스 (파생 클래스)를 만들 수 있는 다른 방법은 없습니다.</span><span class="sxs-lookup"><span data-stu-id="1caf7-134">There is no other method by which subclasses (derived classes) can be created.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="eb5ba-135">요구 사항</span><span class="sxs-lookup"><span data-stu-id="eb5ba-135">Requirements</span></span>  
- <span data-ttu-id="eb5ba-136">**플랫폼** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="eb5ba-136">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1caf7-135">요구 사항</span><span class="sxs-lookup"><span data-stu-id="1caf7-135">Requirements</span></span>  
+ <span data-ttu-id="1caf7-136">**플랫폼:** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="1caf7-136">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="eb5ba-137">**헤더:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="eb5ba-137">**Header:** WMINet_Utils.idl</span></span>  
+ <span data-ttu-id="1caf7-137">**헤더:** WMINet_Utils</span><span class="sxs-lookup"><span data-stu-id="1caf7-137">**Header:** WMINet_Utils.idl</span></span>  
   
- <span data-ttu-id="eb5ba-138">**.NET Framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="eb5ba-138">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ <span data-ttu-id="1caf7-138">**.NET Framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="1caf7-138">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="eb5ba-139">참고자료</span><span class="sxs-lookup"><span data-stu-id="eb5ba-139">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1caf7-139">참조</span><span class="sxs-lookup"><span data-stu-id="1caf7-139">See also</span></span>
 
-- [<span data-ttu-id="eb5ba-140">WMI 및 성능 카운터 (관리 되지 않는 API 참조)</span><span class="sxs-lookup"><span data-stu-id="eb5ba-140">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+- [<span data-ttu-id="1caf7-140">WMI 및 성능 카운터 (관리 되지 않는 API 참조)</span><span class="sxs-lookup"><span data-stu-id="1caf7-140">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)

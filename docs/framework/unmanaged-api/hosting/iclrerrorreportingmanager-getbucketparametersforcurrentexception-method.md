@@ -15,21 +15,19 @@ helpviewer_keywords:
 ms.assetid: a13ec8a6-8e18-4acb-8054-77f5b1a0e0b9
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 276a69deecccc91b3c511403c2bd0d5c0baabd9d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b24f8ed4f5e2c6e0022f5599f2ab8c44a30a561a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772810"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129272"
 ---
-# <a name="iclrerrorreportingmanagergetbucketparametersforcurrentexception-method"></a><span data-ttu-id="3166c-102">ICLRErrorReportingManager::GetBucketParametersForCurrentException 메서드</span><span class="sxs-lookup"><span data-stu-id="3166c-102">ICLRErrorReportingManager::GetBucketParametersForCurrentException Method</span></span>
-<span data-ttu-id="3166c-103">Watson 버킷이 호출 스레드에서 현재 예외를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="3166c-103">Gets the Watson bucket for the current exception on the calling thread.</span></span>  
+# <a name="iclrerrorreportingmanagergetbucketparametersforcurrentexception-method"></a><span data-ttu-id="f9d65-102">ICLRErrorReportingManager::GetBucketParametersForCurrentException 메서드</span><span class="sxs-lookup"><span data-stu-id="f9d65-102">ICLRErrorReportingManager::GetBucketParametersForCurrentException Method</span></span>
+<span data-ttu-id="f9d65-103">호출 스레드의 현재 예외에 대 한 Watson 버킷을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="f9d65-103">Gets the Watson bucket for the current exception on the calling thread.</span></span>  
   
- <span data-ttu-id="3166c-104">A *버킷* 는 동일한 코드 오류에 관련 된 오류 데이터의 컬렉션입니다.</span><span class="sxs-lookup"><span data-stu-id="3166c-104">A *bucket* is a collection of error data that is related to the same code defect.</span></span> <span data-ttu-id="3166c-105">*Watson* 예외와 연결 된 데이터 수집 및 분석에 대 한 기술 집합을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="3166c-105">*Watson* refers to a set of technologies for collecting and analyzing data that is associated with an exception.</span></span>  
+ <span data-ttu-id="f9d65-104">*버킷은* 동일한 코드 오류와 관련 된 오류 데이터의 컬렉션입니다.</span><span class="sxs-lookup"><span data-stu-id="f9d65-104">A *bucket* is a collection of error data that is related to the same code defect.</span></span> <span data-ttu-id="f9d65-105">*Watson* 은 예외와 관련 된 데이터를 수집 및 분석 하기 위한 일련의 기술을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="f9d65-105">*Watson* refers to a set of technologies for collecting and analyzing data that is associated with an exception.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3166c-106">구문</span><span class="sxs-lookup"><span data-stu-id="3166c-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f9d65-106">구문</span><span class="sxs-lookup"><span data-stu-id="f9d65-106">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetBucketParametersForCurrentException(  
@@ -37,19 +35,19 @@ HRESULT GetBucketParametersForCurrentException(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="3166c-107">매개 변수</span><span class="sxs-lookup"><span data-stu-id="3166c-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f9d65-107">매개 변수</span><span class="sxs-lookup"><span data-stu-id="f9d65-107">Parameters</span></span>  
  `pParams`  
- <span data-ttu-id="3166c-108">[out] 에 대 한 포인터를 [BucketParameters](../../../../docs/framework/unmanaged-api/hosting/bucketparameters-structure.md) 예외에 대 한 오류 데이터를 포함 하는 구조입니다.</span><span class="sxs-lookup"><span data-stu-id="3166c-108">[out] A pointer to a [BucketParameters](../../../../docs/framework/unmanaged-api/hosting/bucketparameters-structure.md) structure that contains error data for the exception.</span></span>  
+ <span data-ttu-id="f9d65-108">제한이 예외에 대 한 오류 데이터를 포함 하는 [BucketParameters](../../../../docs/framework/unmanaged-api/hosting/bucketparameters-structure.md) 구조체에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="f9d65-108">[out] A pointer to a [BucketParameters](../../../../docs/framework/unmanaged-api/hosting/bucketparameters-structure.md) structure that contains error data for the exception.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3166c-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="3166c-109">Requirements</span></span>  
- <span data-ttu-id="3166c-110">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="3166c-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f9d65-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="f9d65-109">Requirements</span></span>  
+ <span data-ttu-id="f9d65-110">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="f9d65-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3166c-111">**헤더:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="3166c-111">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="f9d65-111">**헤더:** Mscoree.dll</span><span class="sxs-lookup"><span data-stu-id="f9d65-111">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="3166c-112">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="3166c-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="f9d65-112">**라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="f9d65-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="3166c-113">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3166c-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="f9d65-113">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f9d65-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3166c-114">참고자료</span><span class="sxs-lookup"><span data-stu-id="3166c-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f9d65-114">참조</span><span class="sxs-lookup"><span data-stu-id="f9d65-114">See also</span></span>
 
-- [<span data-ttu-id="3166c-115">ICLRErrorReportingManager 인터페이스</span><span class="sxs-lookup"><span data-stu-id="3166c-115">ICLRErrorReportingManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)
+- [<span data-ttu-id="f9d65-115">ICLRErrorReportingManager 인터페이스</span><span class="sxs-lookup"><span data-stu-id="f9d65-115">ICLRErrorReportingManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)
