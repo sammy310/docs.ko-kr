@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 84296b55-c2c5-424c-ac9c-8e28e2895945
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f6f5cd47abd4c17021bc324898a096ff70a3db2e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5a957a042875b546a18a17422f355b712756e91c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739997"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73098164"
 ---
 # <a name="cordebughandletype-enumeration"></a>CorDebugHandleType 열거형
 핸들 형식을 나타냅니다.  
@@ -37,13 +35,13 @@ typedef enum CorDebugHandleType {
   
 ## <a name="members"></a>멤버  
   
-|멤버|Description|  
+|멤버|설명|  
 |------------|-----------------|  
-|`HANDLE_STRONG`|핸들이 강력한 개체에서 가비지 수집에 의해 회수 되지 않도록 합니다.|  
-|`HANDLE_WEAK_TRACK_RESURRECTION`|핸들이 약한는 하지 않는 개체에서 가비지 수집에 의해 회수 합니다.<br /><br /> 개체는 수집 하는 경우 핸들이 무효화 됩니다.|  
+|`HANDLE_STRONG`|핸들이 강력 하므로 가비지 수집에 의해 개체가 회수 되지 않습니다.|  
+|`HANDLE_WEAK_TRACK_RESURRECTION`|핸들은 weak 이며 가비지 수집에 의해 개체가 회수 되는 것을 방지 하지 않습니다.<br /><br /> 개체를 수집 하면 핸들이 무효화 됩니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
@@ -51,6 +49,6 @@ typedef enum CorDebugHandleType {
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [디버깅 열거형](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

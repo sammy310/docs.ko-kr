@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: c0774f70-5bed-45e8-9922-fdad778c4c33
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 39bc1316bb7d8e2aba3390499437aadf263dac07
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 739b491d343c0eba76160c15719069ffae385f46
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739853"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73097970"
 ---
 # <a name="cordebugjitcompilerflags-enumeration"></a>CorDebugJITCompilerFlags 열거형
 관리되는 JIT(Just-In-Time) 컴파일러의 동작에 영향을 주는 값을 포함합니다.  
@@ -40,14 +38,14 @@ typedef enum CorDebugJITCompilerFlags {
   
 ## <a name="members"></a>멤버  
   
-|멤버|Description|  
+|멤버|설명|  
 |------------|-----------------|  
-|`CORDEBUG_JIT_DEFAULT`|컴파일러는 컴파일 데이터를 추적 해야 하 고 최적화를 사용 하면를 지정 합니다.|  
-|`CORDEBUG_JIT_DISABLE_OPTIMIZATION`|컴파일러 최적화가 사용 하지 않도록 설정 하지만 컴파일 데이터를 추적 하도록 지정 합니다.|  
-|`CORDEBUG_JIT_ENABLE_ENC`|컴파일러는 컴파일 데이터를 사용 하지 않도록 설정 최적화를 추적 하도록 및 편집 하며 계속 기술을 지정 합니다.|  
+|`CORDEBUG_JIT_DEFAULT`|컴파일러가 컴파일 데이터를 추적 하 고 최적화를 허용 하도록 지정 합니다.|  
+|`CORDEBUG_JIT_DISABLE_OPTIMIZATION`|컴파일러가 컴파일 데이터를 추적 하지만 최적화를 사용 하지 않도록 지정 합니다.|  
+|`CORDEBUG_JIT_ENABLE_ENC`|컴파일러가 컴파일 데이터를 추적 하 고, 최적화를 사용 하지 않도록 설정 하 고, 편집 하며 계속 하기 기술을 사용 하도록 지정 합니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
@@ -55,6 +53,6 @@ typedef enum CorDebugJITCompilerFlags {
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [디버깅 열거형](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

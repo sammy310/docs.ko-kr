@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c96770b0-3e09-47bb-bd29-20353b043459
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0fc65f5b55082970a0cd59a6850aaaa6779d0821
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 002c6cccb3ddf29b831ba5e14baa5e51f1b82433
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766414"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73095888"
 ---
 # <a name="icordebugobjectvaluegetfieldvalue-method"></a>ICorDebugObjectValue::GetFieldValue 메서드
-이 개체 값에 대해 지정된 된 클래스의 지정된 된 필드의 값을 가져옵니다.  
+이 개체 값에 대해 지정 된 클래스의 지정 된 필드 값을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,21 +37,21 @@ HRESULT GetFieldValue (
   
 ## <a name="parameters"></a>매개 변수  
  `pClass`  
- [in] 필드 값을 검색할 원본에 대 한 클래스를 나타내는 "ICorDebugClass" 개체에 대 한 포인터입니다.  
+ 진행 필드 값을 가져올 클래스를 나타내는 "ICorDebugClass" 개체에 대 한 포인터입니다.  
   
  `fieldDef`  
- [in] `mdFieldDef` 필드를 설명 하는 메타 데이터를 참조 하는 토큰입니다.  
+ 진행 필드를 설명 하는 메타 데이터를 참조 하는 `mdFieldDef` 토큰입니다.  
   
  `ppValue`  
- [out] 지정된 된 필드의 값을 나타내는 "ICorDebugValue" 개체에 대 한 포인터입니다.  
+ 제한이 지정 된 필드의 값을 나타내는 "ICorDebugValue" 개체에 대 한 포인터입니다.  
   
-## <a name="remarks"></a>설명  
- 에 지정 된 클래스는 `pClass` 매개 변수는 개체 값의 클래스 계층 구조에서 이어야 하며 필드에는 해당 클래스의 필드 여야 합니다.  
+## <a name="remarks"></a>주의  
+ `pClass` 매개 변수에 지정 된 클래스는 개체 값 클래스의 계층 구조에 있어야 하 고 필드는 해당 클래스의 필드 여야 합니다.  
   
- `GetFieldValue` 메서드는 제네릭 클래스 및 제네릭 개체에 대 한 실패 하지 것입니다. 예를 들어 경우 MyDictionary\<V > 사전에서 상속\<문자열, V >, MyDictionary 형식의 개체 값 이며\<int32 > 전달 합니다 `ICorDebugClass` 사전에 대 한 개체\<K, V > 됩니다 사전의 필드를 정상적으로 가져옴\<string, int32 >.  
+ `GetFieldValue` 메서드는 제네릭 개체와 제네릭 클래스에 대해 계속 성공 합니다. 예를 들어 MyDictionary\<V >가 사전\<문자열, V >에서 상속 되 고 개체 값이 MyDictionary\<int32 > 형식인 경우, 사전 `ICorDebugClass` K\<에 대 한 > 개체를 전달 하면 V가 사전\<문자열, int32 >입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
@@ -61,4 +59,4 @@ HRESULT GetFieldValue (
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조

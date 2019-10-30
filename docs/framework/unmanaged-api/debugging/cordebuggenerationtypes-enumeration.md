@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9f25b64f-eedd-4ae5-8b0e-cfdfb9b6c5d8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 193f5ffe96e89a00bed8a3c88ee346ba3ea9f2b4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 362e917e1684c91bde80a8b5c2e6a27a18a99190
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740024"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73098194"
 ---
 # <a name="cordebuggenerationtypes-enumeration"></a>CorDebugGenerationTypes 열거형
 관리되는 힙에 대한 메모리 영역 생성을 지정합니다.  
@@ -39,17 +37,17 @@ typedef enum CorDebugGenerationTypes {
   
 ## <a name="members"></a>멤버  
   
-|멤버 이름|Description|  
+|멤버 이름|설명|  
 |-----------------|-----------------|  
 |`CorDebug_Gen0`|0세대.|  
 |`CorDebug_Gen1`|1세대.|  
 |`CorDebug_Gen2`|2세대.|  
-|`CorDebug_LOH`|대형 개체 힙입니다.|  
+|`CorDebug_LOH`|Large object heap입니다.|  
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
@@ -57,6 +55,6 @@ typedef enum CorDebugGenerationTypes {
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [디버깅 열거형](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

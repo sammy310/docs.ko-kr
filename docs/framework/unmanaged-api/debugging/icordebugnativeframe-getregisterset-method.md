@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6f309b5f-5556-4f1e-b1dd-4fe97fc81d01
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c6029ac8c9ab988efa78bbfaf0843154ac656671
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ac7601f89c125cecbfbd212118420a800f495742
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765792"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73096805"
 ---
 # <a name="icordebugnativeframegetregisterset-method"></a>ICorDebugNativeFrame::GetRegisterSet 메서드
-이 스택 프레임에 대해 설정 하는 레지스터를 가져옵니다.  
+이 스택 프레임에 대 한 레지스터 집합을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,10 +35,10 @@ HRESULT GetRegisterSet (
   
 ## <a name="parameters"></a>매개 변수  
  `ppRegisters`  
- [out] 주소에 대 한 포인터를 [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) 이 스택 프레임에 대 한 레지스터를 나타내는 개체를 설정 합니다.  
+ 제한이 이 스택 프레임의 레지스터 집합을 나타내는 [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) 개체의 주소에 대 한 포인터입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
@@ -48,4 +46,4 @@ HRESULT GetRegisterSet (
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조

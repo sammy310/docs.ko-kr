@@ -9,14 +9,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, exposing .NET Framework components
 - COM interop, exposing COM components
 ms.assetid: 4b8afb52-fb8d-4e65-b47c-fd82956a3cdd
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 04ebdf5d3e5caf2c34823528703f75cf972f302f
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: f0b9bc03225ae3d2365a21fd3b78d09c08d4fc1a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68631397"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73091577"
 ---
 # <a name="qualifying-net-types-for-com-interoperation"></a>COM 상호 운용성을 위한 .NET 형식의 정규화
 어셈블리에서 형식을 COM 애플리케이션으로 노출하려는 경우 디자인 타임에 COM interop의 요구 사항을 고려하세요. 다음 지침을 준수하면 관리되는 형식(클래스, 인터페이스, 구조체 및 열거형)이 COM 형식과 원활하게 통합됩니다.  
@@ -47,7 +45,7 @@ ms.locfileid: "68631397"
   
  COM으로 내보낼 때 관리되는 형식의 상속 계층 구조가 평면화됩니다. 관리되는 환경과 관리되지 않는 환경에서는 버전 관리도 다릅니다. COM에 노출된 형식에는 관리되는 다른 형식과 동일한 버전 관리 특성이 없습니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Runtime.InteropServices.ComVisibleAttribute>
 - [.NET Framework 구성 요소를 COM에 노출](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
