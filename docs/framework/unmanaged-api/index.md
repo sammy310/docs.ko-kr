@@ -7,14 +7,12 @@ helpviewer_keywords:
 - native API reference [.NET Framework]
 - unmanaged API reference [.NET Framework]
 ms.assetid: 9aa000ee-c04c-492c-ae4f-83ecdf4fdbbe
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 677bee7319a80e405098f0dd5c8684765806c5f7
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: f7dd78b889129998dee31a22f5dd23325613b8ea
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796877"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73092021"
 ---
 # <a name="unmanaged-api-reference"></a>관리되지 않는 API 참조
 이 섹션에는 런타임 호스트, 컴파일러, 디스어셈블러, 난독 처리기, 디버거, 프로파일러 등의 관리 코드 관련 애플리케이션에서 사용할 수 있는 관리되지 않는 API에 대한 정보가 포함되어 있습니다.  

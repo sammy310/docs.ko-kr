@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 689e7f28-20c1-4d5c-9baa-17441cd63a88
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fd105a5cbdb857aaa902e60968ff1d94473259b6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6ea2b24d37f56a5cb9e6b3dea0d666c8acc719dc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754247"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73091040"
 ---
 # <a name="icordebugframecreatestepper-method"></a>ICorDebugFrame::CreateStepper 메서드
-디버거가이 ICorDebugFrame 기준으로 단계별 실행 작업을 수행할 수 있도록 스텝을 가져옵니다.  
+디버거가이 ICorDebugFrame에 비해 단계별 작업을 수행할 수 있도록 하는 스텝 퍼를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,13 +35,13 @@ HRESULT CreateStepper (
   
 ## <a name="parameters"></a>매개 변수  
  `ppStepper`  
- [out] 디버거를 현재 프레임을 기준으로 단계별 실행 작업을 수행할 수 있도록 ICorDebugStepper 개체의 주소에 대 한 포인터입니다.  
+ 제한이 디버거가 현재 프레임에 상대적인 단계별 작업을 수행할 수 있도록 하는 ICorDebugStepper 개체의 주소에 대 한 포인터입니다.  
   
-## <a name="remarks"></a>설명  
- 프레임이 활성 상태인 경우에 스텝 퍼 개체를 해당 단계가 완료 되기 전에 프레임으로 반환 일반적으로 해야 합니다.  
+## <a name="remarks"></a>주의  
+ 프레임이 활성화 되어 있지 않으면 단계가 완료 되기 전에 스텝 퍼 개체가 프레임으로 돌아가야 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   

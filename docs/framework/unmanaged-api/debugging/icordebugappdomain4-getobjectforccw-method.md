@@ -2,14 +2,12 @@
 title: ICorDebugAppDomain4::GetObjectForCCW 메서드
 ms.date: 03/30/2017
 ms.assetid: 2cacdb85-e7b8-42e7-b310-c3e8c22e5d33
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7ab4905c55a1395e9ae5cba8343e6b832622005d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8b046eb5926bb9aa4738e8fff8e61b0b7c23a3aa
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737636"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73088825"
 ---
 # <a name="icordebugappdomain4getobjectforccw-method"></a>ICorDebugAppDomain4::GetObjectForCCW 메서드
 CCW(COM 호출 가능 래퍼) 포인터에서 관리되는 개체를 가져옵니다.  
@@ -28,12 +26,12 @@ HRESULT GetObjectForCCW(
  [in] CCW(COM 호출 가능 래퍼) 포인터입니다.  
   
  `ppManagedObject`  
- [out] 지정된 된 CCW 포인터에 해당 하는 관리 되는 개체를 나타내는 "ICorDebugValue" 개체의 주소에 대 한 포인터입니다.  
+ 제한이 지정 된 CCW 포인터에 해당 하는 관리 되는 개체를 나타내는 "ICorDebugValue" 개체의 주소에 대 한 포인터입니다.  
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
@@ -41,7 +39,7 @@ HRESULT GetObjectForCCW(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ICorDebugAppDomain4 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain4-interface.md)
 - [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

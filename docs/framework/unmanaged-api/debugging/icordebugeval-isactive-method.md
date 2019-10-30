@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: bf2bba24-d278-43bd-b1c5-35680e748d3e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: be7dde136c5bc26148468d3d8031426b17f44292
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bd10af53d7803964ed6e699ce5328aa8a860216c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67753124"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73085016"
 ---
 # <a name="icordebugevalisactive-method"></a>ICorDebugEval::IsActive 메서드
-ICorDebugEval 개체가이 현재 실행 되 고 있는지 여부를 나타내는 값을 가져옵니다.  
+이 ICorDebugEval 개체가 현재 실행 중인지 여부를 나타내는 값을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,10 +35,10 @@ HRESULT IsActive (
   
 ## <a name="parameters"></a>매개 변수  
  `pbActive`  
- [out] 이 평가 활성 상태 인지 여부를 지정 하는 값에 대 한 포인터입니다.  
+ 제한이 이 평가가 활성 상태 인지 여부를 나타내는 값에 대 한 포인터입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   

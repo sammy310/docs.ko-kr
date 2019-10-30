@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d5f54a34-6335-4708-b407-a756ec70fab4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a90f0a0319d88654d0310530749ef35b7095e0fb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3836b6c08098d38516c8a25260fb28998a2317fe
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754432"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73084778"
 ---
 # <a name="icordebugeval2newstringwithlength-method"></a>ICorDebugEval2::NewStringWithLength 메서드
-지정된 된 콘텐츠를 사용 하 여 지정 된 길이의 문자열을 만듭니다.  
+지정 된 내용을 사용 하 여 지정 된 길이의 문자열을 만듭니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,18 +36,18 @@ HRESULT NewStringWithLength (
   
 ## <a name="parameters"></a>매개 변수  
  `string`  
- [in] 문자열 값에 대 한 포인터입니다.  
+ 진행 문자열 값에 대 한 포인터입니다.  
   
  `uiLength`  
- [in] 문자열의 길이입니다.  
+ 진행 문자열의 길이입니다.  
   
-## <a name="remarks"></a>설명  
- 경우 문자열의 후행 null 문자 이어야 하는데 관리 되는 문자열에서 호출자는 `NewStringWithLength` 메서드 문자열 길이 후행 null 문자를 포함 해야 합니다.  
+## <a name="remarks"></a>주의  
+ 문자열의 후행 null 문자가 관리 되는 문자열에 있어야 하는 경우 `NewStringWithLength` 메서드의 호출자가 문자열 길이에 후행 null 문자를 포함 하는지 확인 해야 합니다.  
   
- 스레드가 현재 실행 중인 응용 프로그램 도메인에서 문자열 항상 만들어집니다.  
+ 문자열은 항상 스레드가 현재 실행 중인 응용 프로그램 도메인에 만들어집니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   

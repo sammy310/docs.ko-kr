@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ed71961e-ae9b-4dfc-9554-06637696d697
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8e0159ce6ad1087838681214533d386f4d44cee2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d4de3405f84bfc08f7e1519bc7f9604eb1f5a14e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737466"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73088299"
 ---
 # <a name="icordebugarrayvaluegetelementtype-method"></a>ICorDebugArrayValue::GetElementType 메서드
-단순 형식 배열의 요소를 나타내는 값을 가져옵니다.  
+배열에 있는 요소의 단순 형식을 나타내는 값을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,10 +35,10 @@ HRESULT GetElementType (
   
 ## <a name="parameters"></a>매개 변수  
  `pType`  
- [out] CorElementType 열거형 형식을 나타내는 값에 대 한 포인터입니다.  
+ 제한이 형식을 나타내는 CorElementType 열거형의 값에 대 한 포인터입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   

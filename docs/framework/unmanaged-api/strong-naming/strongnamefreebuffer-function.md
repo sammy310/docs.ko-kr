@@ -18,14 +18,12 @@ helpviewer_keywords:
 ms.assetid: eda21ecf-4734-4f92-aaba-9f34884385db
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 639664c6ce5714b554f30bff2569a12bf48d1671
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 11821acbeeb04ae09464eb0e032b9bf387914168
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70799131"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73095056"
 ---
 # <a name="strongnamefreebuffer-function"></a>StrongNameFreeBuffer 함수
 [StrongNameGetPublicKey](strongnamegetpublickey-function.md), [StrongNameTokenFromPublicKey](strongnametokenfrompublickey-function.md) 또는 [StrongNameSignatureGeneration](strongnamesignaturegeneration-function.md)과 같은 강력한 이름 함수에 대한 이전 호출로 할당된 메모리를 해제합니다.  
@@ -45,15 +43,15 @@ VOID StrongNameFreeBuffer (
  진행 해제할 메모리에 대 한 포인터입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** StrongName.h  
+ **헤더:** StrongName  
   
- **라이브러리** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [StrongNameFreeBuffer 메서드](../hosting/iclrstrongname-strongnamefreebuffer-method.md)
 - [ICLRStrongName 인터페이스](../hosting/iclrstrongname-interface.md)
