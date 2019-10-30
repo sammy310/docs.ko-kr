@@ -2,14 +2,12 @@
 title: AXL_AUTHENTICODE_TIMESTAMPER_INFO 구조
 ms.date: 03/30/2017
 ms.assetid: 89e41a81-0f41-45ad-8f20-a120e4ff24fb
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ae7879e1f6598108d839287792ed441391764ae2
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 036397928703aea6199a59ae9c1e66153c30ec7b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70776651"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132500"
 ---
 # <a name="axl_authenticode_timestamper_info-structure"></a>AXL_AUTHENTICODE_TIMESTAMPER_INFO 구조
 Authenticode 타임스탬퍼 정보를 정의합니다.  
@@ -28,7 +26,7 @@ typedef struct _AXL_AUTHENTICODE_SIGNER_INFO {
   
 ## <a name="members"></a>멤버  
   
-|멤버|Description|  
+|멤버|설명|  
 |------------|-----------------|  
 |`cbSize`|이 구조체의 크기입니다.|  
 |`dwError`|오류 코드입니다.|  
@@ -36,6 +34,6 @@ typedef struct _AXL_AUTHENTICODE_SIGNER_INFO {
 |`ftTimestamp`|타임스탬프의 시간입니다.|  
 |`pChainContext`|타임스탬퍼의 체인 컨텍스트입니다.  [CERT_CONTEXT](/windows/win32/api/wincrypt/ns-wincrypt-cert_context) 구조체를 참조 하세요.|  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [Authenticode](index.md)

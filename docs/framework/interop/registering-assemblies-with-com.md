@@ -7,14 +7,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, registering assemblies
 - registering assemblies
 ms.assetid: 87925795-a3ae-4833-b138-125413478551
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6482d5fa046409d15913ea26300d298238750326
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 9ff24a5705058d4e303b3b64b454ced8548053a4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648548"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73113801"
 ---
 # <a name="registering-assemblies-with-com"></a>COM에 어셈블리 등록
 [어셈블리 등록 도구(Regasm.exe)](../tools/regasm-exe-assembly-registration-tool.md)라는 명령줄 도구를 실행하여 COM과 사용할 어셈블리를 등록하거나 등록 취소할 수 있습니다. COM 클라이언트에서 .NET Framework 클래스를 투명하게 사용할 수 있도록 Regasm.exe에서는 클래스에 대한 정보를 시스템 레지스트리에 추가합니다. <xref:System.Runtime.InteropServices.RegistrationServices> 클래스는 이와 동등한 기능을 제공합니다.  
@@ -43,7 +41,7 @@ ms.locfileid: "64648548"
   
  `InprocServer32` 하위 키의 경우, 기존 COM 형식 라이브러리의 위치에 Mscoree.dll의 참조가 표시되어 공용 언어 런타임을 통해 관리 개체가 생성되었음을 나타냅니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [.NET Framework 구성 요소를 COM에 노출](exposing-dotnet-components-to-com.md)
 - [방법: COM에서 .NET 형식 참조](how-to-reference-net-types-from-com.md)

@@ -2,14 +2,12 @@
 title: .NET 네이티브로 시작 속도 개선 측정
 ms.date: 03/30/2017
 ms.assetid: c4d25b24-9c1a-4b3e-9705-97ba0d6c0289
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 74011a4c70cc8f7da3973698a43b1e97cffb9f9b
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 771bf8deba8e851eadf356c647169a21428ddcff
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927076"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128352"
 ---
 # <a name="measuring-startup-improvement-with-net-native"></a>.NET 네이티브로 시작 속도 개선 측정
 .NET 네이티브 앱의 시작 시간을 크게 향상 시킵니다. 이러한 속도 개선은 휴대용 저전력 디바이스와 복잡한 앱에서 특히 두드러지게 나타납니다. 이 항목에서는 이러한 시작 속도 개선을 측정하는 데 필요한 기본적인 계측을 시작하는 방법을 설명합니다.  
@@ -47,7 +45,7 @@ ms.locfileid: "70927076"
   
 - 앱이 새 스토리 동기화를 완료할 때  
   
- 앱을 계측 하는 것은 간단 합니다. 파생 클래스에서 적절 한 메서드를 호출 하기만 하면 됩니다. 이전 예제에서는 `AppEventSource`를 사용하면 다음과 같이 앱을 계측할 수 있습니다.  
+ 앱은 파생 클래스에 대해 적절한 메서드를 호출하는 것만으로 간편하게 계측할 수 있습니다. 이전 예제에서는 `AppEventSource`를 사용하면 다음과 같이 앱을 계측할 수 있습니다.  
   
  [!code-csharp[ProjectN_ETW#2](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_etw/cs/etw2.cs#2)]  
   
@@ -65,7 +63,7 @@ ms.locfileid: "70927076"
 perfview -KernelEvents:Process -OnlyProviders:*MyCompany-MyApp collect outputFile   
 ```  
   
- 각 항목이 나타내는 의미는 다음과 같습니다.  
+ 여기서  
   
  `-KernelEvents:Process`  
  프로세스가 시작 및 중지되는 시기를 확인할 것임을 나타냅니다. 이 경우 다른 이벤트 시간에서 앱의 Process/Start 이벤트 시간을 빼야 하므로 해당 이벤트를 확인해야 합니다.  
@@ -97,6 +95,6 @@ perfview -KernelEvents:Process -OnlyProviders:*MyCompany-MyApp collect outputFil
   
  원본 앱과 .NET 네이티브 도구 체인을 사용 하 여 빌드한 버전 모두에 대해이 절차를 반복 하면 성능 차이를 비교할 수 있습니다.   .NET 네이티브 앱은 일반적으로 non-.NET 네이티브 앱 보다 빠르게 시작 됩니다. 관련 정보를 보다 자세하게 파악하려는 경우 PerfView를 통해 시간이 가장 많이 걸리는 코드 부분도 확인할 수 있습니다. 자세한 내용은 [PerfView 자습서](https://channel9.msdn.com/Series/PerfView-Tutorial)를 보거나 [Vance Morrison의 블로그 게시물](https://blogs.msdn.microsoft.com/vancem/2011/12/28/publication-of-the-perfview-performance-analysis-tool/)을 읽으세요.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Diagnostics.Tracing.EventSource>

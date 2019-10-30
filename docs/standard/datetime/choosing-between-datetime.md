@@ -13,14 +13,12 @@ helpviewer_keywords:
 - time zones [.NET Framework], type options
 - DateTime structure
 ms.assetid: 07f17aad-3571-4014-9ef3-b695a86f3800
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f51ac96105f6d6ae0ea5fbd57a0dc50735e470a3
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 5425d94daf8ab023bef4a1a68f06d5c276499825
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71835304"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132573"
 ---
 # <a name="choosing-between-datetime-datetimeoffset-timespan-and-timezoneinfo"></a>DateTime, DateTimeOffset, TimeSpan 및 TimeZoneInfo 중 선택
 
@@ -40,10 +38,10 @@ ms.locfileid: "71835304"
 
 - 날짜 및 시간 산술 연산을 수행합니다(단일 시점을 고유하고 명확하게 식별하는 결과를 제공할 수 있음).
 
-.NET에는 날짜 및 시간을 사용 하는 응용 프로그램을 빌드하는 데 사용할 수 있는 <xref:System.DateTime>, <xref:System.DateTimeOffset>, <xref:System.TimeSpan> 및 @no__t 3 형식이 포함 되어 있습니다.
+.NET에는 날짜 및 시간을 사용 하는 응용 프로그램을 빌드하는 데 사용할 수 있는 <xref:System.DateTime>, <xref:System.DateTimeOffset>, <xref:System.TimeSpan>및 <xref:System.TimeZoneInfo> 형식이 포함 되어 있습니다.
 
 > [!NOTE]
-> 해당 기능이 <xref:System.TimeZoneInfo> 클래스에 거의 완전히 통합 되었기 때문에이 항목에서는 @no__t에 대해 다루지 않습니다. 가능 하면 사용 합니다 <xref:System.TimeZoneInfo> 대신 클래스는 <xref:System.TimeZone> 클래스입니다.
+> 이 항목에서는 해당 기능이 <xref:System.TimeZoneInfo> 클래스에 거의 완전히 통합 되었기 때문에 <xref:System.TimeZone> 설명 하지 않습니다. 가능 하면 <xref:System.TimeZone> 클래스 대신 <xref:System.TimeZoneInfo> 클래스를 사용 합니다.
 
 ## <a name="the-datetime-structure"></a>DateTime 구조체
 
@@ -100,7 +98,7 @@ ms.locfileid: "71835304"
 
 - 경과 시간을 측정합니다. 예를 들어 <xref:System.Diagnostics.Stopwatch.Elapsed%2A?displayProperty=nameWithType> 속성은 경과 시간 측정을 시작 하는 <xref:System.Diagnostics.Stopwatch> 메서드 중 하나를 호출한 후 경과 된 시간 간격을 반영 하는 <xref:System.TimeSpan> 값을 반환 합니다.
 
-@No__t-0 값은 특정 날짜에 대 한 참조 없이 시간을 반영 하는 경우 <xref:System.DateTime> 값을 대체 하는 데 사용할 수도 있습니다. 이 사용법은 <xref:System.DateTime.TimeOfDay%2A?displayProperty=nameWithType> 및 <xref:System.DateTimeOffset.TimeOfDay%2A?displayProperty=nameWithType> 속성과 비슷하며 날짜를 참조 하지 않고 시간을 나타내는 <xref:System.TimeSpan> 값을 반환 합니다. 예를 들어 <xref:System.TimeSpan> 구조체를 사용하여 매일 상점을 여는 시간 또는 닫는 시간을 반영하거나 정기 이벤트가 발생하는 시간을 나타낼 수 있습니다.
+<xref:System.TimeSpan> 값은 특정 날짜에 대 한 참조 없이 시간을 반영 하는 <xref:System.DateTime> 값에 대 한 대체 값으로 사용 될 수도 있습니다. 이 사용법은 <xref:System.DateTime.TimeOfDay%2A?displayProperty=nameWithType> 및 <xref:System.DateTimeOffset.TimeOfDay%2A?displayProperty=nameWithType> 속성과 비슷하며 날짜를 참조 하지 않고 시간을 나타내는 <xref:System.TimeSpan> 값을 반환 합니다. 예를 들어 <xref:System.TimeSpan> 구조체를 사용하여 매일 상점을 여는 시간 또는 닫는 시간을 반영하거나 정기 이벤트가 발생하는 시간을 나타낼 수 있습니다.
 
 다음 예제에서는 상점을 여는 시간과 닫는 시간에 사용되는 `StoreInfo` 개체와 상점의 표준 시간대를 나타내는 <xref:System.TimeSpan> 개체가 포함된 <xref:System.TimeZoneInfo> 구조체를 정의합니다. 구조체에는 현지 표준 시간대에 있는 것으로 가정되는 사용자가 지정한 시간에 상점이 열려 있는지 여부를 나타내는 `IsOpenNow` 및 `IsOpenAt`의 두 메서드도 포함됩니다.
 
@@ -114,7 +112,7 @@ ms.locfileid: "71835304"
 
 ## <a name="the-timezoneinfo-class"></a>TimeZoneInfo 클래스
 
-<xref:System.TimeZoneInfo> 클래스는 지구의 표준 시간대를 나타내며, 한 표준 시간대의 날짜 및 시간을 다른 표준 시간대의 해당 항목으로 변환할 수 있습니다. <xref:System.TimeZoneInfo> 클래스를 사용하면 모든 날짜 및 시간 값이 명확하게 단일 시점을 식별하도록 날짜 및 시간 작업을 할 수 있습니다. <xref:System.TimeZoneInfo> 클래스는 확장도 가능합니다. Windows 시스템에 대해 제공되고 레지스트리에 정의된 표준 시간대 정보에 따라 달라지지만 사용자 지정 표준 시간대 생성을 지원합니다. 또한 표준 시간대 정보의 직렬화 및 역직렬화를 지원합니다.
+<xref:System.TimeZoneInfo> class represents any of the Earth's time zones, and enables the conversion of any date and time in one time zone to its equivalent in another time zone. <xref:System.TimeZoneInfo> 클래스를 사용하면 모든 날짜 및 시간 값이 명확하게 단일 시점을 식별하도록 날짜 및 시간 작업을 할 수 있습니다. <xref:System.TimeZoneInfo> 클래스는 확장도 가능합니다. Windows 시스템에 대해 제공되고 레지스트리에 정의된 표준 시간대 정보에 따라 달라지지만 사용자 지정 표준 시간대 생성을 지원합니다. 또한 표준 시간대 정보의 직렬화 및 역직렬화를 지원합니다.
 
 <xref:System.TimeZoneInfo> 클래스를 완전히 활용하기 위해 추가 개발 작업이 필요한 경우도 있습니다. 날짜 및 시간 값이 속해 있는 표준 시간대와 긴밀 하 게 연결 되지 않은 경우에는 추가 작업이 필요 합니다. 응용 프로그램에서 날짜 및 시간을 관련 표준 시간대와 연결 하기 위한 몇 가지 메커니즘을 제공 하지 않는 한 특정 날짜 및 시간 값이 표준 시간대에서 분리 될 수 있습니다. 이 정보를 연결하는 한 가지 방법으로 날짜 및 시간 값, 그리고 연결되는 표준 시간대 개체를 둘 다 포함하는 클래스나 구조체를 정의합니다.
 

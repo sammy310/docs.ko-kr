@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 644ece86-384d-4c63-9fba-52c789616ff7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ac3fc157543f2990c7c9f9917140b35f8948108e
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 04c36d1e5f0e79b71963683a3b613a9ad7392bcf
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395481"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125520"
 ---
 # <a name="icordebugcodeenumnext-method"></a>ICorDebugCodeEnum::Next 메서드
 
@@ -48,7 +46,7 @@ HRESULT Next (
 제한이 각각 `ICorDebugCode` 개체를 가리키는 포인터의 배열입니다.
 
 `pceltFetched`  
-제한이 실제로 반환 된 @no__t 인스턴스 수에 대 한 포인터입니다. @No__t-0이 1 이면이 값은 null 일 수 있습니다.
+제한이 실제로 반환 된 `ICorDebugCode` 인스턴스 수에 대 한 포인터입니다. `celt` 일 경우이 값은 null 일 수 있습니다.
 
 ## <a name="requirements"></a>요구 사항
 

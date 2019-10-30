@@ -17,14 +17,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 261c5583-8a76-412d-bda7-9b8ee3b131e5
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9b95d686529da83a5a52edb80219874530212dcc
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 150c0f63d52590ea9cf80a3e991375f10ce1a124
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991264"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119930"
 ---
 # <a name="how-to-build-a-multifile-assembly"></a>방법: 다중 파일 어셈블리 빌드
 
@@ -226,9 +224,9 @@ ms.locfileid: "70991264"
 
     [MSIL 디스어셈블러(Ildasm.exe)](../tools/ildasm-exe-il-disassembler.md)를 사용하면 어셈블리의 콘텐츠를 검사 할 수 있으며, 파일이 어셈블리인지 모듈인지를 결정할 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [어셈블리 만들기](../../standard/assembly/create.md)
-- [방법: 어셈블리 콘텐츠 보기](../../standard/assembly/view-contents.md)
+- [방법: 어셈블리 내용 보기](../../standard/assembly/view-contents.md)
 - [런타임에서 어셈블리를 찾는 방법](../deployment/how-the-runtime-locates-assemblies.md)
 - [다중 파일 어셈블리](multifile-assemblies.md)

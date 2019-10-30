@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 66a89acf-8c32-44c0-8787-960c99c7b3ec
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2710d14d6e73879fd17a6b58659463ea205f2384
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 80979f0424469bb1d4771ad6507bb8c9d5364ab4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795371"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73108604"
 ---
 # <a name="createhistoryreader-function"></a>CreateHistoryReader 함수
 지정 된 파일에 대 한 기록 판독기를 만듭니다.  
@@ -45,18 +43,18 @@ HRESULT CreateHistoryReader (
 ## <a name="return-value"></a>반환 값  
  이 메서드는 Winerror.h에 정의 된 대로 표준 COM 오류 코드와 함께 다음 표에 설명 된 값을 반환 합니다.  
   
-|반환 코드|Description|  
+|반환 코드|설명|  
 |-----------------|-----------------|  
 |S_OK|메서드가 성공적으로 완료 되었음을 나타냅니다.|  
-|E_INVALIDARG|`wzFilePath` 또는`ppHistoryReader` 가 null 참조로 설정 됨을 나타냅니다.|  
+|E_INVALIDARG|`wzFilePath` 또는 `ppHistoryReader` null 참조로 설정 됨을 나타냅니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
- **라이브러리** Fusion.dll  
+ **라이브러리:** Fusion .dll  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [Fusion 전역 정적 함수](fusion-global-static-functions.md)

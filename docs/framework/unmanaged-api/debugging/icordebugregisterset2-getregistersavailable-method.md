@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: f3ed344b-0d3a-44e8-8000-2a97e0805a2c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5d4ab49aaccd77fac497bd86413915e82c99ed3e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d0b6960a24e246c7a538e8ffc59fa380a4b8e2a7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744912"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131365"
 ---
 # <a name="icordebugregisterset2getregistersavailable-method"></a>ICorDebugRegisterSet2::GetRegistersAvailable 메서드
 사용 가능한 레지스터의 비트맵을 제공 하는 바이트 배열을 가져옵니다.  
@@ -41,21 +39,21 @@ HRESULT GetRegistersAvailable (
  [in] `availableRegChunks` 배열의 크기입니다.  
   
  `availableRegChunks`  
- [out] 바이트 배열에는 각 비트 레지스터에 해당합니다. 레지스터 사용 가능한 경우 레지스터의 해당 비트가 설정 됩니다.  
+ 제한이 각 비트가 레지스터에 해당 하는 바이트 배열입니다. 레지스터를 사용할 수 있는 경우 레지스터의 해당 비트가 설정 됩니다.  
   
-## <a name="remarks"></a>설명  
- CorDebugRegister 열거형의 값을 다른 마이크로프로세서의 레지스터를 지정합니다. 각 값의 상위 5 비트는 인덱스를 `availableRegChunks` 바이트 배열입니다. 각 값의 세 가지 하위 비트는 인덱싱된 바이트에서 비트 위치를 식별 합니다. 지정 된 `CorDebugRegister` 특정 레지스터를 마스크의 레지스터의 위치를 지정 하는 값은 다음과 같이 결정 됩니다.  
+## <a name="remarks"></a>주의  
+ CorDebugRegister 열거형의 값은 다른 마이크로프로세서의 레지스터를 지정 합니다. 각 값의 상위 5 비트는 `availableRegChunks` 바이트 배열에 대 한 인덱스입니다. 각 값의 하위 3 비트는 인덱싱된 바이트 내의 비트 위치를 식별 합니다. 특정 레지스터를 지정 하는 `CorDebugRegister` 값을 지정 하는 경우 마스크의 레지스터 위치는 다음과 같이 결정 됩니다.  
   
-1. 정확한 바이트에 액세스 하는 데 필요한 인덱스를 추출 합니다 `availableRegChunks` 배열:  
+1. `availableRegChunks` 배열의 올바른 바이트에 액세스 하는 데 필요한 인덱스를 추출 합니다.  
   
-     `CorDebugRegister` 값 >> 3  
+     `CorDebugRegister` 값 > > 3  
   
-2. 여기서 0 비트는 최하위 비트에서 인덱싱된 바이트 비트 위치를 추출 합니다.  
+2. 인덱싱된 바이트 내에서 비트 위치를 추출 합니다. 여기서 bit 0은 최하위 비트입니다.  
   
-     `CorDebugRegister` 값 및 7  
+     `CorDebugRegister` 값 & 7  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
@@ -63,7 +61,7 @@ HRESULT GetRegistersAvailable (
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ICorDebugRegisterSet2 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)
 - [ICorDebugRegisterSet 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)

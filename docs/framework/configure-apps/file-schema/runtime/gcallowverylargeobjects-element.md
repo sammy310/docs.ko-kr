@@ -5,21 +5,19 @@ helpviewer_keywords:
 - gcAllowVeryLargeObjects element
 - <gcAllowVeryLargeObjects> element
 ms.assetid: 5c7ea24a-39ac-4e5f-83b7-b9f9a1b556ab
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3f638a880aaa21bc41d2575f3609dabae158c1a0
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: b6230833808ec45d702502e36f929db4e03173e1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252579"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73116801"
 ---
 # <a name="gcallowverylargeobjects-element"></a>\<Gcallowverylargeobjects> > 요소
 64비트 플랫폼에서 총 크기가 2GB보다 큰 배열을 사용하도록 설정합니다.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<런타임 >** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<gcAllowVeryLargeObjects>**  
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp;&nbsp;&nbsp;&nbsp; **\<gcallowverylargeobjects> >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -41,11 +39,11 @@ ms.locfileid: "70252579"
   
 |값|설명|  
 |-----------|-----------------|  
-|`false`|전체 크기의 2gb 보다 큰 배열은 사용할 수 없습니다. 이 값이 기본값입니다.|  
+|`false`|전체 크기의 2gb 보다 큰 배열은 사용할 수 없습니다. 기본값입니다.|  
 |`true`|총 크기가 2gb 보다 큰 배열은 64 비트 플랫폼에서 사용 하도록 설정 됩니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
- 없음  
+ 없음.  
   
 ### <a name="parent-elements"></a>부모 요소  
   
@@ -54,7 +52,7 @@ ms.locfileid: "70252579"
 |`configuration`|공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.|  
 |`runtime`|런타임 초기화 옵션에 대한 정보를 포함합니다.|  
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
  응용 프로그램 구성 파일에서이 요소를 사용 하면 크기가 2gb 보다 큰 배열은 가능 하지만 개체 크기나 배열 크기에 대 한 다른 제한은 변경 되지 않습니다.  
   
 - 배열의 최대 요소 수는 <xref:System.UInt32.MaxValue?displayProperty=nameWithType>입니다.  
@@ -81,7 +79,7 @@ ms.locfileid: "70252579"
 
 .NET Framework 4.5 이상 버전
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [런타임 설정 스키마](index.md)
 - [구성 파일 스키마](../index.md)

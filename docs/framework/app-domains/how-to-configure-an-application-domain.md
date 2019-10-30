@@ -9,14 +9,12 @@ helpviewer_keywords:
 - application domains, configuring
 - ApplicationBase property
 ms.assetid: 07ea8438-7a34-49f0-a7e8-3d6ff7e4a482
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 06883646982aa6bd642dc4fce7881a289dad5901
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: ca28984fa4a328e33d8d9bf79641cc451160f5ea
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053200"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119915"
 ---
 # <a name="how-to-configure-an-application-domain"></a>방법: 애플리케이션 도메인 구성
 <xref:System.AppDomainSetup> 클래스를 사용하여 새 애플리케이션 도메인에 대한 구성 정보를 공용 언어 런타임에 제공할 수 있습니다. 사용자 고유의 애플리케이션 도메인을 만들 때 가장 중요한 속성은 <xref:System.AppDomainSetup.ApplicationBase%2A>입니다. 다른 **AppDomainSetup** 속성은 런타임 호스트에서 특정 애플리케이션 도메인을 구성하는 데 주로 사용됩니다.  
@@ -33,7 +31,7 @@ ms.locfileid: "71053200"
  [!code-csharp[ADApplicationBase#2](../../../samples/snippets/csharp/VS_Snippets_CLR/ADApplicationBase/CS/source2.cs#2)]
  [!code-vb[ADApplicationBase#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/ADApplicationBase/VB/source2.vb#2)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [애플리케이션 도메인으로 프로그래밍](application-domains.md#programming-with-application-domains)
 - [애플리케이션 도메인 사용](use.md)

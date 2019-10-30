@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 54d31e7b-b1e2-4f2b-8a4f-867b8759fe41
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d769aab51c743fa3337fd5784ad35748ae5f8962
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 41f1ec39c8916d15eec6af92cee391a8581426d8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756687"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138420"
 ---
 # <a name="icordebugheapvaluecreaterelocbreakpoint-method"></a>ICorDebugHeapValue::CreateRelocBreakpoint 메서드
-이 메서드는 현재 버전의.NET Framework에서 구현 되지 않았습니다.  
+이 메서드는 현재 버전의 .NET Framework에서 구현 되지 않습니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,7 +34,7 @@ HRESULT CreateRelocBreakpoint (
 ```  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   

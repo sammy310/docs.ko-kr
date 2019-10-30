@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: fb8c14f7-d461-43d1-8b47-adb6723b9b93
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 198141545119976cb9107bc9c09b913572e266ce
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9a2f513d40d722f1b0aad823ac7c0d93bda5615f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781121"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123267"
 ---
 # <a name="mdainfo-structure"></a>MDAInfo 구조체
-에 대 한 세부 정보를 제공 합니다 `Event_MDAFired` 관리 디버깅 도우미 (MDA) 만들기를 트리거하는 이벤트입니다.  
+MDA (관리 디버깅 도우미) 만들기를 트리거하는 `Event_MDAFired` 이벤트에 대 한 세부 정보를 제공 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,30 +37,30 @@ typedef struct _MDAInfo {
   
 |멤버|설명|  
 |------------|-----------------|  
-|`lpMDACaption`|현재 MDA의 제목입니다. 제목 트리거되는 실패의 종류를 설명 합니다 `Event_MDAFired` 이벤트입니다.|  
+|`lpMDACaption`|현재 MDA의 제목입니다. 제목은 `Event_MDAFired` 이벤트를 트리거한 오류의 종류를 설명 합니다.|  
 |`lpMDAMessage`|현재 MDA에서 제공 하는 출력 메시지입니다.|  
   
-## <a name="remarks"></a>설명  
- 관리 디버깅 도우미 (Mda)은 런타임 실행 엔진에서 디버깅을 CLR (공용 언어 런타임) 잘못 된 상태를 식별 하는 등의 작업을 수행 하려면 함께에서 작동 하는 도우미 또는 상태에 대 한 추가 정보를 덤프 합니다 엔진입니다. Mda는 트래핑할 수 없는 이벤트에 대 한 XML 메시지를 생성 합니다. 관리 및 비관리 코드 간의 전환이 디버깅을 위해 특히 유용 합니다.  
+## <a name="remarks"></a>주의  
+ Mda (관리 디버깅 도우미)는 CLR (공용 언어 런타임)과 함께 작동 하 여 런타임 실행 엔진에서 잘못 된 조건을 식별 하거나 상태에 대 한 추가 정보를 덤프 하는 등의 작업을 수행 하는 디버깅 보조 기능입니다. 엔진. Mda는 트래핑 하기 어려운 이벤트에 대 한 XML 메시지를 생성 합니다. 이러한 코드는 관리 코드와 비관리 코드 간의 전환을 디버깅 하는 데 특히 유용 합니다.  
   
- MDA의 생성을 트리거하는 이벤트가 발생 하는 경우 다음 단계를 수행 하는 런타임:  
+ MDA 생성을 트리거하는 이벤트가 발생 하면 런타임에서 다음 단계를 수행 합니다.  
   
-- 호스트에 등록 되지 않은 경우는 [IActionOnCLREvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-interface.md) 를 호출 하 여 인스턴스 [iclroneventmanager:: Registeractiononevent](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-registeractiononevent-method.md) 대 한 알림을 받아보려면는 `Event_MDAFired` 런타임에서 계속 이벤트를 해당 기본적으로 호스팅되지 않은 동작입니다.  
+- 호스트에서 `Event_MDAFired` 이벤트를 알리도록 [ICLROnEventManager:: RegisterActionOnEvent](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-registeractiononevent-method.md) 를 호출 하 여 [IActionOnCLREvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-interface.md) 인스턴스를 등록 하지 않은 경우 런타임은 기본적으로 호스팅되지 않는 동작으로 진행 합니다.  
   
-- 이 이벤트에 대 한 처리기를 등록 하는 호스트 하는 경우 런타임에서 프로세스에 디버거가 연결 되어 있는지 여부를 확인 합니다. 이 경우 런타임에서 디버거를 시작 합니다. 디버거가 계속 될 때 호스트를 호출 합니다. 디버거가 연결 되어 있으면 런타임에서 호출 `IActionOnCLREvent::OnEvent` 에 대 한 포인터를 전달 하 고는 `MDAInfo` 인스턴스를 `data` 매개 변수입니다.  
+- 호스트에서이 이벤트에 대 한 처리기를 등록 한 경우 런타임은 디버거가 프로세스에 연결 되어 있는지 여부를 확인 합니다. 인 경우 런타임이 디버거로 중단 됩니다. 디버거가 계속 되 면 호스트를 호출 합니다. 디버거가 연결 되지 않은 경우 런타임은 `IActionOnCLREvent::OnEvent`를 호출 하 고 포인터를 `data` 매개 변수로 `MDAInfo` 인스턴스에 전달 합니다.  
   
- 호스트는 Mda를 활성화 하는 데는 MDA가 활성화 될 때 알림을 받을 선택할 수 있습니다. 이렇게 하면 호스트 기본 동작을 재정의 하 고 프로세스 상태가 손상 방지 하기 위해 이벤트를 발생 하는 관리 되는 스레드를 중단할 수 있습니다. Mda를 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [관리 디버깅 도우미를 사용 하 여 오류 진단](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)합니다.  
+ 호스트는 mda를 활성화 하 고 MDA가 활성화 될 때 알리도록 선택할 수 있습니다. 이렇게 하면 호스트에서 기본 동작을 재정의 하 고 이벤트를 발생 시킨 관리 되는 스레드를 중단 하 여 프로세스 상태가 손상 되지 않도록 할 수 있습니다. Mda를 사용 하는 방법에 대 한 자세한 내용은 [관리 디버깅 도우미를 사용 하 여 오류 진단](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)을 참조 하세요.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** MSCorEE.idl  
+ **헤더:** Mscoree.dll  
   
- **라이브러리:** MSCorEE.dll에 리소스로 포함  
+ **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [호스팅 구조체](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
 - [관리 디버깅 도우미를 사용하여 오류 진단](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

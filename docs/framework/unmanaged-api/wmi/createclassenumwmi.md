@@ -14,14 +14,12 @@ helpviewer_keywords:
 - CreateClassEnumWmi function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a696a6f02f6d3a5afbcb45e5566e4b667739e2c5
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1d637479bd140e635ee647a1e30d03343d8b0dcd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798735"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73107526"
 ---
 # <a name="createclassenumwmi-function"></a>CreateClassEnumWmi 함수
 지정된 선택 조건을 충족하는 모든 클래스에 대한 열거자를 반환합니다.
@@ -48,7 +46,7 @@ HRESULT CreateClassEnumWmi (
 ## <a name="parameters"></a>매개 변수
 
 `strSuperclass`\
-진행 `null` 그렇지 않거나 비어 있는 경우 부모 클래스의 이름을 지정 하 고, 열거자는이 클래스의 서브 클래스만 반환 합니다. 이거나 비어 있고 `lFlags` WBEM_FLAG_SHALLOW 경우는 최상위 클래스 (부모 클래스가 없는 클래스)만 반환 합니다. `null` 이거나 비어 있고 `lFlags` 가`WBEM_FLAG_DEEP`이면 네임 스페이스의 모든 클래스를 반환 합니다. `null`
+진행 `null` 또는 비어 있지 않은 경우 부모 클래스의 이름을 지정 합니다. 열거자는이 클래스의 서브 클래스만 반환 합니다. `null` 되거나 비어 있고 `lFlags` WBEM_FLAG_SHALLOW 경우는 최상위 클래스 (부모 클래스가 없는 클래스)만 반환 합니다. `null` 되거나 비어 있고 `lFlags` `WBEM_FLAG_DEEP`경우는 네임 스페이스의 모든 클래스를 반환 합니다.
 
 `lFlags`\
 진행 이 함수의 동작에 영향을 주는 플래그의 조합입니다. 다음 값은 *WbemCli* 헤더 파일에 정의 되어 있거나 코드에서 상수로 정의할 수 있습니다.
@@ -62,7 +60,7 @@ HRESULT CreateClassEnumWmi (
 | `WBEM_FLAG_FORWARD_ONLY` | 0x20 | 함수는 앞 으로만 이동 가능한 열거자를 반환 합니다. 일반적으로 앞 으로만 이동 가능한 열거자는 기존 열거자 보다 더 빠르고 메모리를 사용 하지만, 이러한 열거자는 호출을 [복제할](clone.md)수 없습니다. |
 | `WBEM_FLAG_BIDIRECTIONAL` | 0 | WMI는 해제할 때까지 열거형의 개체에 대 한 포인터를 유지 합니다. |
 
-권장 플래그 `WBEM_FLAG_RETURN_IMMEDIATELY` 는 최상의 성능을 `WBEM_FLAG_FORWARD_ONLY` 위해 및입니다.
+권장 플래그는 `WBEM_FLAG_RETURN_IMMEDIATELY` 하 고 최상의 성능을 위해 `WBEM_FLAG_FORWARD_ONLY` 됩니다.
 
 `pCtx`\
 진행 일반적으로이 값은 `null`입니다. 그렇지 않으면 요청 된 클래스를 제공 하는 공급자가 사용할 수 있는 [iwbemcontext 개체가 올바르지](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) 인스턴스에 대 한 포인터입니다.
@@ -92,7 +90,7 @@ HRESULT CreateClassEnumWmi (
 
 이 함수에서 반환 되는 다음 값은 *WbemCli* 헤더 파일에 정의 되어 있거나 코드에서 상수로 정의할 수 있습니다.
 
-|상수  |값  |Description  |
+|상수  |값  |설명  |
 |---------|---------|---------|
 | `WBEM_E_ACCESS_DENIED` | 0x80041003 | 사용자에 게 함수가 반환할 수 있는 하나 이상의 클래스를 볼 수 있는 권한이 없습니다. |
 | `WBEM_E_FAILED` | 0x80041001 | 지정 되지 않은 오류가 발생 했습니다. |
@@ -103,7 +101,7 @@ HRESULT CreateClassEnumWmi (
 | `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | 현재 프로세스와 WMI 간의 RPC (원격 프로시저 호출) 링크에 오류가 발생 했습니다. |
 |`WBEM_S_NO_ERROR` | 0 | 함수 호출에 성공 했습니다.  |
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 이 함수는 [IWbemServices:: CreateClassEnum](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemservices-createclassenum) 메서드에 대 한 호출을 래핑합니다.
 
@@ -111,12 +109,12 @@ HRESULT CreateClassEnumWmi (
 
 ## <a name="requirements"></a>요구 사항
 
-**플랫폼** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하십시오.
+**플랫폼:** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.
 
-**헤더:** WMINet_Utils.idl
+**헤더:** WMINet_Utils
 
 **.NET Framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [WMI 및 성능 카운터 (관리 되지 않는 API 참조)](index.md)

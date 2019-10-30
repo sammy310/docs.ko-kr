@@ -14,34 +14,32 @@ helpviewer_keywords:
 ms.assetid: 8adbf092-c3ba-4bee-b25b-0de6e43a4ce5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 32f27d6c15a99282eee20d2563a4ca741238d846
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 466b0ceec8ce9c9800393f96055730ecafc153b3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61638517"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120543"
 ---
 # <a name="iclrreferenceassemblyenum-interface"></a>ICLRReferenceAssemblyEnum 인터페이스
-파일 또는 스트림을 만들거나 해당 id를 이해 하지 않고도 내부 공용 언어 런타임 (CLR)에 있는 어셈블리 id 데이터를 사용 하 여 참조 되는 어셈블리의 집합을 조작 하는 호스트를 사용할 수 있는 메서드를 제공 합니다.  
+호스트에서 해당 id를 만들거나 이해할 필요 없이 CLR (공용 언어 런타임)의 내부 어셈블리 id 데이터를 사용 하 여 파일이 나 스트림이 참조 하는 어셈블리 집합을 조작할 수 있도록 하는 메서드를 제공 합니다.  
   
 ## <a name="methods"></a>메서드  
   
 |메서드|설명|  
 |------------|-----------------|  
-|[Get 메서드](../../../../docs/framework/unmanaged-api/hosting/iclrreferenceassemblyenum-get-method.md)|제공 된 인덱스에 있는 어셈블리 id를 가져옵니다.|  
+|[Get 메서드](../../../../docs/framework/unmanaged-api/hosting/iclrreferenceassemblyenum-get-method.md)|제공 된 인덱스에서 어셈블리 id를 가져옵니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** MSCorEE.h  
+ **헤더:** Mscoree.dll  
   
- **라이브러리:** MSCorEE.dll에 리소스로 포함  
+ **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ICLRAssemblyIdentityManager 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
 - [ICLRAssemblyReferenceList 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)

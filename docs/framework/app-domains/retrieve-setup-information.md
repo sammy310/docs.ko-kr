@@ -10,14 +10,12 @@ helpviewer_keywords:
 - retrieving setup information
 - application domains, retrieving setup information
 ms.assetid: 5cdb12ae-1e37-4a62-8ec7-93d6dcc6e8d9
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 719ea15de135d8bbeb7bb88ea3d5b5874e30b5d6
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 4d06a8a3ccfa35af283323478ee44a7da63d896d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053098"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119744"
 ---
 # <a name="retrieving-setup-information-from-an-application-domain"></a>애플리케이션 도메인에서 설치 정보 검색
 애플리케이션 도메인의 각 인스턴스는 두 속성과 <xref:System.AppDomainSetup> 정보로 구성됩니다. <xref:System.AppDomain?displayProperty=nameWithType> 클래스를 사용하여 애플리케이션 도메인에서 설치 정보를 검색할 수 있습니다. 이 클래스는 애플리케이션 도메인에 대한 구성 정보를 검색하는 여러 멤버를 제공합니다.  
@@ -36,7 +34,7 @@ ms.locfileid: "71053098"
  [!code-csharp[AppDomain_Setup#3](../../../samples/snippets/csharp/VS_Snippets_CLR/AppDomain_Setup/CS/source3.cs#3)]
  [!code-vb[AppDomain_Setup#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AppDomain_Setup/VB/source3.vb#3)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [애플리케이션 도메인으로 프로그래밍](application-domains.md#programming-with-application-domains)
 - [애플리케이션 도메인 사용](use.md)

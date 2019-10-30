@@ -1,5 +1,5 @@
 ---
-title: '방법: 글로벌 어셈블리 캐시에서 어셈블리 제거'
+title: '방법: 전역 어셈블리 캐시에서 어셈블리 제거'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - assemblies [.NET Framework], global assembly cache
@@ -11,16 +11,14 @@ helpviewer_keywords:
 - Global Assembly Cache tool
 - GAC (global assembly cache), removing assemblies
 ms.assetid: acdcc588-b458-436d-876c-726de68244c1
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7a085ff6955f706bcd90f895c42e6405a28d408a
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: c7d85222f35a61154e3eec70d8c9dad2ca6a32f3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834047"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119862"
 ---
-# <a name="how-to-remove-an-assembly-from-the-global-assembly-cache"></a>방법: 글로벌 어셈블리 캐시에서 어셈블리 제거
+# <a name="how-to-remove-an-assembly-from-the-global-assembly-cache"></a>방법: 전역 어셈블리 캐시에서 어셈블리 제거
 
 GAC(전역 어셈블리 캐시)에서 어셈블리를 제거하는 다음 두 가지 방법이 있습니다.
 
@@ -39,7 +37,7 @@ GAC(전역 어셈블리 캐시)에서 어셈블리를 제거하는 다음 두 �
 > [!WARNING]
 > 어셈블리가 일부 애플리케이션에서 여전히 필요할 수 있으므로 프로덕션 시스템에서 어셈블리를 제거하려는 경우 Gacutil.exe를 사용하면 안 됩니다. 대신, GAC에 설치하는 각 어셈블리에 대한 참조 횟수를 유지 관리하는 Windows Installer를 사용해야 합니다.
 
-다음 예제에서는 전역 어셈블리 캐시에서 `hello.dll` 이라는 어셈블리를 제거 합니다.
+다음 예제에서는 전역 어셈블리 캐시에서 `hello.dll` 라는 어셈블리를 제거 합니다.
 
 ```console
 gacutil -u hello
@@ -55,5 +53,5 @@ gacutil -u hello
 ## <a name="see-also"></a>참조
 
 - [어셈블리 및 전역 어셈블리 캐시 사용](working-with-assemblies-and-the-gac.md)
-- [방법: 글로벌 어셈블리 캐시에 어셈블리 설치](install-assembly-into-gac.md)
+- [방법: 전역 어셈블리 캐시에 어셈블리 설치](install-assembly-into-gac.md)
 - [Gacutil.exe(전역 어셈블리 캐시 도구)](../tools/gacutil-exe-gac-tool.md)

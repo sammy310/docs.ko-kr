@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4723bd1c-eddb-4ed2-897a-010024a47e01
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5f6926d66a438cfc4fd97d7120e359b737212dde
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e5d7a6b9826a734363d6beeb2e3fab8422964558
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738625"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73113349"
 ---
 # <a name="iclrdatatargetrequest-method"></a>ICLRDataTarget::Request 메서드
-구현에 의해 정의 된 대로 작업을 요청 하는 공용 언어 런타임 (CLR) 데이터 액세스 서비스에서 호출 됩니다.  
+구현에 정의 된 대로 작업을 요청 하기 위해 CLR (공용 언어 런타임) 데이터 액세스 서비스에 의해 호출 됩니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -43,34 +41,34 @@ HRESULT Request (
   
 ## <a name="parameters"></a>매개 변수  
  `reqCode`  
- [in] 사용자 정의입니다.  
+ 진행 사용자 정의.  
   
  `inBufferSize`  
- [in] 들어오는 요청에 사용 되는 입력된 버퍼의 크기입니다.  
+ 진행 들어오는 요청에 사용 되는 입력 버퍼의 크기입니다.  
   
  `inBuffer`  
- [in] 요청이 포함 된 버퍼입니다.  
+ 진행 요청을 포함 하는 버퍼입니다.  
   
  `outBufferSize`  
- [in] 응답에 사용 되는 출력 버퍼의 크기입니다.  
+ 진행 응답에 사용 되는 출력 버퍼의 크기입니다.  
   
  `outBuffer`  
- [out] 응답을 포함 하는 버퍼입니다.  
+ 제한이 응답을 포함 하는 버퍼입니다.  
   
-## <a name="remarks"></a>설명  
- `Request` 메서드를 용이 하 게 지정 되지 않은 사용자 지정 작업을 추가 합니다. 즉,이 메서드는 인터페이스 정의 수정할 필요 없이 확장성을 제공 합니다.  
+## <a name="remarks"></a>주의  
+ `Request` 메서드는 지정 되지 않은 사용자 지정 작업의 추가를 용이 하 게 합니다. 즉,이 메서드는 인터페이스 정의를 수정할 필요 없이 확장성을 제공 합니다.  
   
  이 메서드는 디버깅 애플리케이션의 작성자가 구현합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** ClrData.idl, ClrData.h  
+ **헤더:** ClrData .idl, ClrData .h  
   
  **라이브러리:** CorGuids.lib  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ICLRDataTarget 인터페이스](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)

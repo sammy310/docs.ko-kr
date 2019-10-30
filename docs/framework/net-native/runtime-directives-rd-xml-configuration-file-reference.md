@@ -2,14 +2,12 @@
 title: 런타임 지시문(rd.xml) 구성 파일 참조
 ms.date: 03/30/2017
 ms.assetid: 8241523f-d8e1-4fb6-bf6a-b29bfe07b38a
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: adfc0ae6d9bdae333daacee525c7775acd5a8029
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: f4c51dc269775d14d395cb464b3787cc987e086d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049133"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128135"
 ---
 # <a name="runtime-directives-rdxml-configuration-file-reference"></a>런타임 지시문(rd.xml) 구성 파일 참조
 
@@ -41,27 +39,27 @@ ms.locfileid: "71049133"
 
 참조 정보를 확인하려면 다음 구조체의 요소를 선택하거나 [런타임 지시문 요소](runtime-directive-elements.md)를 참조하세요. 다음 계층 구조에서 줄임표는 재귀 구조를 표시합니다. 괄호 안의 정보는 해당 요소가 필수 항목인지 선택적 항목인지와 요소가 사용되는 경우 허용되는 인스턴스 수(하나 또는 여러 개)를 나타냅니다.
 
-[지시문](directives-element-net-native.md) [1:1] [응용 프로그램](application-element-net-native.md) [0:1] [어셈블리](assembly-element-net-native.md) [0: m] [네임 스페이스](namespace-element-net-native.md) [0: m]. 을 선택합니다. 을 선택합니다.
-[유형](type-element-net-native.md) [0: M]. 을 선택합니다. 을 선택합니다.
-[Typeinstantiation](typeinstantiation-element-net-native.md) (생성 된 제네릭 형식) [0: M]. 을 선택합니다. 을 선택합니다.
-[네임 스페이스](namespace-element-net-native.md) [0: M] [네임 스페이스](namespace-element-net-native.md) [0: M]. 을 선택합니다. 을 선택합니다.
-[유형](type-element-net-native.md) [0: M]. 을 선택합니다. 을 선택합니다.
-[Typeinstantiation](typeinstantiation-element-net-native.md) (생성 된 제네릭 형식) [0: M]. 을 선택합니다. 을 선택합니다.
-[유형](type-element-net-native.md) [0: M] [하위 유형](subtypes-element-net-native.md) (포함 형식의 하위 클래스) O:1 [유형](type-element-net-native.md) [0: M]. 을 선택합니다. 을 선택합니다.
-[Typeinstantiation](typeinstantiation-element-net-native.md) (생성 된 제네릭 형식) [0: M]. 을 선택합니다. 을 선택합니다.
-[Attributeimplies](attributeimplies-element-net-native.md) (형식이 포함 된 특성) O:1 [GenericParameter](genericparameter-element-net-native.md) [0: M] [메서드](method-element-net-native.md) [0: M] [매개 변수](parameter-element-net-native.md) [0: M] [Typeparameter](typeparameter-element-net-native.md) [0: M] [GenericParameter](genericparameter-element-net-native.md) [0: M] [Methodinstantiation](methodinstantiation-element-net-native.md) (생성 된 제네릭 메서드) [0: M] [속성](property-element-net-native.md) [0: M] [필드](field-element-net-native.md) [0: M] [이벤트](event-element-net-native.md) [0: M] [Typeinstantiation](typeinstantiation-element-net-native.md) (생성 된 제네릭 형식) [0: M] [유형](type-element-net-native.md) [0: M]. 을 선택합니다. 을 선택합니다.
-[Typeinstantiation](typeinstantiation-element-net-native.md) (생성 된 제네릭 형식) [0: M]. 을 선택합니다. 을 선택합니다.
-[메서드](method-element-net-native.md) [0: M] [매개 변수](parameter-element-net-native.md) [0: M] [Typeparameter](typeparameter-element-net-native.md) [0: M] [GenericParameter](genericparameter-element-net-native.md) [0: M] [Methodinstantiation](methodinstantiation-element-net-native.md) (생성 된 제네릭 메서드) [0: M] [속성](property-element-net-native.md) [0: M] [필드](field-element-net-native.md) [0: M] [이벤트](event-element-net-native.md) [0: M] [라이브러리](library-element-net-native.md) [0: M] [어셈블리](assembly-element-net-native.md) [0: M] [네임 스페이스](namespace-element-net-native.md) [0: M]. 을 선택합니다. 을 선택합니다.
-[유형](type-element-net-native.md) [0: M]. 을 선택합니다. 을 선택합니다.
-[Typeinstantiation](typeinstantiation-element-net-native.md) (생성 된 제네릭 형식) [0: M]. 을 선택합니다. 을 선택합니다.
-[네임 스페이스](namespace-element-net-native.md) [0: M] [네임 스페이스](namespace-element-net-native.md) [0: M]. 을 선택합니다. 을 선택합니다.
-[유형](type-element-net-native.md) [0: M]. 을 선택합니다. 을 선택합니다.
-[Typeinstantiation](typeinstantiation-element-net-native.md) (생성 된 제네릭 형식) [0: M]. 을 선택합니다. 을 선택합니다.
-[유형](type-element-net-native.md) [0: M] [하위 유형](subtypes-element-net-native.md) (포함 형식의 하위 클래스) O:1 [유형](type-element-net-native.md) [0: M]. 을 선택합니다. 을 선택합니다.
-[Typeinstantiation](typeinstantiation-element-net-native.md) (생성 된 제네릭 형식) [0: M]. 을 선택합니다. 을 선택합니다.
-[Attributeimplies](attributeimplies-element-net-native.md) (형식이 포함 된 특성) O:1 [GenericParameter](genericparameter-element-net-native.md) [0: M] [메서드](method-element-net-native.md) [0: M] [Methodinstantiation](methodinstantiation-element-net-native.md) (생성 된 제네릭 메서드) [0: M] [속성](property-element-net-native.md) [0: M] [필드](field-element-net-native.md) [0: M] [이벤트](event-element-net-native.md) [0: M] [Typeinstantiation](typeinstantiation-element-net-native.md) (생성 된 제네릭 형식) [0: M] [유형](type-element-net-native.md) [0: M]. 을 선택합니다. 을 선택합니다.
-[Typeinstantiation](typeinstantiation-element-net-native.md) (생성 된 제네릭 형식) [0: M]. 을 선택합니다. 을 선택합니다.
-[메서드](method-element-net-native.md) [0: M] [Methodinstantiation](methodinstantiation-element-net-native.md) (생성 된 제네릭 메서드) [0: M] [속성](property-element-net-native.md) [0: M] [필드](field-element-net-native.md) [0: M] [이벤트](event-element-net-native.md) [0: M]
+[지시문](directives-element-net-native.md) [1:1] [응용 프로그램](application-element-net-native.md) [0:1] [어셈블리](assembly-element-net-native.md) [0: m] [네임 스페이스](namespace-element-net-native.md) [0: m]. 이어야 합니다. 이어야 합니다.
+[0: M]을 [입력](type-element-net-native.md) 합니다. 이어야 합니다. 이어야 합니다.
+[Typeinstantiation](typeinstantiation-element-net-native.md) (생성 된 제네릭 형식) [0: M]. 이어야 합니다. 이어야 합니다.
+[네임 스페이스](namespace-element-net-native.md) [0: m] [네임 스페이스](namespace-element-net-native.md) [0: m]. 이어야 합니다. 이어야 합니다.
+[0: M]을 [입력](type-element-net-native.md) 합니다. 이어야 합니다. 이어야 합니다.
+[Typeinstantiation](typeinstantiation-element-net-native.md) (생성 된 제네릭 형식) [0: M]. 이어야 합니다. 이어야 합니다.
+[0: m] 형식 (포함 형식의 [하위](subtypes-element-net-native.md) 클래스) [O:1] [형식](type-element-net-native.md) [0: m]을 [입력](type-element-net-native.md) 합니다. 이어야 합니다. 이어야 합니다.
+[Typeinstantiation](typeinstantiation-element-net-native.md) (생성 된 제네릭 형식) [0: M]. 이어야 합니다. 이어야 합니다.
+[Attributeimplies](attributeimplies-element-net-native.md) (특성을 포함 하는 형식) [O:1 [] GenericParameter](genericparameter-element-net-native.md) [0: m] [메서드](method-element-net-native.md) [0: m] [매개](parameter-element-net-native.md) 변수 [0: m] [typeparameter](typeparameter-element-net-native.md) [0: m] [GenericParameter](genericparameter-element-net-native.md) [0: m] [methodinstantiation](methodinstantiation-element-net-native.md) ( 생성 된 제네릭 메서드) [0: M] [속성](property-element-net-native.md) [0: m] [필드](field-element-net-native.md) [0: m] [이벤트](event-element-net-native.md) [0: m] [typeinstantiation](typeinstantiation-element-net-native.md) (생성 된 제네릭 형식) [0: m] [형식](type-element-net-native.md) [0: m]. 이어야 합니다. 이어야 합니다.
+[Typeinstantiation](typeinstantiation-element-net-native.md) (생성 된 제네릭 형식) [0: M]. 이어야 합니다. 이어야 합니다.
+[메서드](method-element-net-native.md) [0: m] [매개](parameter-element-net-native.md) 변수 [0: m] [typeparameter](typeparameter-element-net-native.md) [0: M [] GenericParameter](genericparameter-element-net-native.md) [0: m [] methodinstantiation](methodinstantiation-element-net-native.md) (생성 된 제네릭 메서드) [0: m] [속성](property-element-net-native.md) [0: m] [필드](field-element-net-native.md) [0: m] [이벤트](event-element-net-native.md) [ [0: m] Library](library-element-net-native.md) [0: m] [어셈블리](assembly-element-net-native.md) [0: m] [네임 스페이스](namespace-element-net-native.md) [0: m]. 이어야 합니다. 이어야 합니다.
+[0: M]을 [입력](type-element-net-native.md) 합니다. 이어야 합니다. 이어야 합니다.
+[Typeinstantiation](typeinstantiation-element-net-native.md) (생성 된 제네릭 형식) [0: M]. 이어야 합니다. 이어야 합니다.
+[네임 스페이스](namespace-element-net-native.md) [0: m] [네임 스페이스](namespace-element-net-native.md) [0: m]. 이어야 합니다. 이어야 합니다.
+[0: M]을 [입력](type-element-net-native.md) 합니다. 이어야 합니다. 이어야 합니다.
+[Typeinstantiation](typeinstantiation-element-net-native.md) (생성 된 제네릭 형식) [0: M]. 이어야 합니다. 이어야 합니다.
+[0: m] 형식 (포함 형식의 [하위](subtypes-element-net-native.md) 클래스) [O:1] [형식](type-element-net-native.md) [0: m]을 [입력](type-element-net-native.md) 합니다. 이어야 합니다. 이어야 합니다.
+[Typeinstantiation](typeinstantiation-element-net-native.md) (생성 된 제네릭 형식) [0: M]. 이어야 합니다. 이어야 합니다.
+[Attributeimplies](attributeimplies-element-net-native.md) (특성 포함) [O:1] [GenericParameter](genericparameter-element-net-native.md) [0: m] [메서드](method-element-net-native.md) [0: m] [methodinstantiation](methodinstantiation-element-net-native.md) (생성 된 제네릭 메서드) [0: m] [속성](property-element-net-native.md) [0: m] [필드](field-element-net-native.md) [0: m] [이벤트](event-element-net-native.md) [0 : M] [Typeinstantiation](typeinstantiation-element-net-native.md) (생성 된 제네릭 형식) [0: m] [형식](type-element-net-native.md) [0: m]. 이어야 합니다. 이어야 합니다.
+[Typeinstantiation](typeinstantiation-element-net-native.md) (생성 된 제네릭 형식) [0: M]. 이어야 합니다. 이어야 합니다.
+[메서드](method-element-net-native.md) [0: M] [methodinstantiation](methodinstantiation-element-net-native.md) (생성 된 제네릭 메서드) [0: m] [속성](property-element-net-native.md) [0: m] [필드](field-element-net-native.md) [0: m] [이벤트](event-element-net-native.md) [0: m]
 
 [Application](application-element-net-native.md) 요소는 특성을 포함할 수 없거나 [런타임 지시문 및 정책 섹션](#Directives)에서 설명하는 정책 특성을 포함할 수 있습니다.
 
@@ -92,43 +90,43 @@ ms.locfileid: "71049133"
 
 [Application](application-element-net-native.md), [Assembly](assembly-element-net-native.md), [AttributeImplies](attributeimplies-element-net-native.md), [Namespace](namespace-element-net-native.md), [Subtypes](subtypes-element-net-native.md) 및 [Type](type-element-net-native.md) 요소는 다음 정책 형식을 지원합니다.
 
-- `Activate`. 인스턴스를 활성화할 수 있도록 생성자에 대한 런타임 액세스를 제어합니다.
+- `Activate` 인스턴스를 활성화할 수 있도록 생성자에 대한 런타임 액세스를 제어합니다.
 
-- `Browse`. 프로그램 요소에 대한 정보 쿼리를 제어하지만 런타임 액세스를 사용하도록 설정하지는 않습니다.
+- `Browse` 프로그램 요소에 대한 정보 쿼리를 제어하지만 런타임 액세스를 사용하도록 설정하지는 않습니다.
 
-- `Dynamic`. 동적 프로그래밍을 수행할 수 있도록 생성자, 메서드, 필드, 속성 및 이벤트를 비롯한 모든 형식 멤버에 대한 런타임 액세스를 제어합니다.
+- `Dynamic` 동적 프로그래밍을 수행할 수 있도록 생성자, 메서드, 필드, 속성 및 이벤트를 비롯한 모든 형식 멤버에 대한 런타임 액세스를 제어합니다.
 
-- `Serialize`. Newtonsoft JSON serializer 등의 타사 라이브러리를 통해 형식 인스턴스를 serialize 및 deserialize할 수 있도록 생성자, 필드 및 속성에 대한 런타임 액세스를 제어합니다.
+- `Serialize` Newtonsoft JSON serializer 등의 타사 라이브러리를 통해 형식 인스턴스를 serialize 및 deserialize할 수 있도록 생성자, 필드 및 속성에 대한 런타임 액세스를 제어합니다.
 
-- `DataContractSerializer`. <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> 클래스를 사용하는 serialization에 대한 정책을 제어합니다.
+- `DataContractSerializer` <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> 클래스를 사용하는 serialization에 대한 정책을 제어합니다.
 
-- `DataContractJsonSerializer`. <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> 클래스를 사용하는 JSON serialization에 대한 정책을 제어합니다.
+- `DataContractJsonSerializer` <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> 클래스를 사용하는 JSON serialization에 대한 정책을 제어합니다.
 
-- `XmlSerializer`. <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> 클래스를 사용하는 XML serialization에 대한 정책을 제어합니다.
+- `XmlSerializer` <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> 클래스를 사용하는 XML serialization에 대한 정책을 제어합니다.
 
-- `MarshalObject`. WinRT 및 COM에 대한 참조 형식을 마샬링하는 정책을 제어합니다.
+- `MarshalObject` WinRT 및 COM에 대한 참조 형식을 마샬링하는 정책을 제어합니다.
 
-- `MarshalDelegate`. 네이티브 코드에 대한 함수 포인터로 대리자 형식을 마샬링하는 정책을 제어합니다.
+- `MarshalDelegate` 네이티브 코드에 대한 함수 포인터로 대리자 형식을 마샬링하는 정책을 제어합니다.
 
-- `MarshalStructure` . 구조체를 네이티브 코드로 마샬링하는 정책을 제어합니다.
+- `MarshalStructure`. 구조체를 네이티브 코드로 마샬링하는 정책을 제어합니다.
 
 이러한 정책 형식과 연관된 설정은 다음과 같습니다.
 
-- `All`. 도구 체인에서 제거하지 않는 모든 형식과 멤버에 대해 정책을 사용하도록 설정합니다.
+- `All` 도구 체인에서 제거하지 않는 모든 형식과 멤버에 대해 정책을 사용하도록 설정합니다.
 
-- `Auto`. 기본 동작을 사용합니다. 정책을 지정하지 않는 것은 부모 요소에 의해 정책이 재정의되는 등의 경우를 제외하면 해당 정책을 `Auto`로 설정하는 것과 같습니다.
+- `Auto` 기본 동작을 사용합니다. 정책을 지정하지 않는 것은 부모 요소에 의해 정책이 재정의되는 등의 경우를 제외하면 해당 정책을 `Auto`로 설정하는 것과 같습니다.
 
-- `Excluded`. 프로그램 요소에 대한 정책을 사용하지 않도록 설정합니다.
+- `Excluded` 프로그램 요소에 대한 정책을 사용하지 않도록 설정합니다.
 
-- `Public`. 도구 체인이 멤버를 불필요한 것으로 결정하여 제거하는 경우가 아니면 public 형식 또는 멤버에 대해서는 정책을 사용하도록 설정합니다. 멤버가 제거되는 경우에는 `Required Public`을 사용하여 멤버를 유지하고 리플렉션 기능이 포함되도록 해야 합니다.
+- `Public` 도구 체인이 멤버를 불필요한 것으로 결정하여 제거하는 경우가 아니면 public 형식 또는 멤버에 대해서는 정책을 사용하도록 설정합니다. 멤버가 제거되는 경우에는 `Required Public`을 사용하여 멤버를 유지하고 리플렉션 기능이 포함되도록 해야 합니다.
 
-- `PublicAndInternal`. 도구 체인에서 제거하지 않는 public 및 내부 형식이나 멤버에 대해 정책을 사용하도록 설정합니다.
+- `PublicAndInternal` 도구 체인에서 제거하지 않는 public 및 내부 형식이나 멤버에 대해 정책을 사용하도록 설정합니다.
 
-- `Required Public`. 사용 여부에 관계없이 도구 체인이 public 형식과 멤버를 유지해야 하도록 지정하고 해당 형식과 멤버에 대해 정책을 사용하도록 설정합니다.
+- `Required Public` 사용 여부에 관계없이 도구 체인이 public 형식과 멤버를 유지해야 하도록 지정하고 해당 형식과 멤버에 대해 정책을 사용하도록 설정합니다.
 
-- `Required PublicAndInternal`. 사용 여부에 관계없이 도구 체인이 public 및 내부 형식과 멤버를 모두 유지해야 하도록 지정하고 해당 형식과 멤버에 대해 정책을 사용하도록 설정합니다.
+- `Required PublicAndInternal` 사용 여부에 관계없이 도구 체인이 public 및 내부 형식과 멤버를 모두 유지해야 하도록 지정하고 해당 형식과 멤버에 대해 정책을 사용하도록 설정합니다.
 
-- `Required All`. 사용 여부에 관계없이 도구 체인이 모든 형식과 멤버를 유지해야 하도록 지정하고 해당 형식과 멤버에 대해 정책을 사용하도록 설정합니다.
+- `Required All` 사용 여부에 관계없이 도구 체인이 모든 형식과 멤버를 유지해야 하도록 지정하고 해당 형식과 멤버에 대해 정책을 사용하도록 설정합니다.
 
 예를 들어 다음 런타임 지시문 파일은 DataClasses.dll 어셈블리의 모든 형식과 멤버에 대한 정책을 정의합니다. 이 정책은 모든 public 속성의 serialization에 대해 리플렉션을 사용하도록 설정하고, 모든 형식 및 형식 멤버를 검색할 수 있도록 설정하고, `Dynamic` 특성을 통해 모든 형식을 활성화할 수 있도록 설정하고, 모든 public 형식 및 멤버에 대해 리플렉션을 사용하도록 설정합니다.
 
@@ -405,7 +403,7 @@ ms.locfileid: "71049133"
 
 #### <a name="the-effect-of-xmlserializer-datacontractserializer-and-datacontractjsonserializer-policies"></a>XmlSerializer, DataContractSerializer 및 DataContractJsonSerializer 정책의 영향
 
-리플렉션 기반 serializer <xref:System.Xml.Serialization.XmlSerializer>에 사용 되는 <xref:System.Runtime.Serialization.DataContractSerializer> <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> `Serialize` 정책과 달리, 및 정책은 .NET 네이티브 도구 체인에 알려진 일련의 직렬 변환기를 사용 하도록 설정 하는 데 사용 됩니다. 이러한 serializer는 리플렉션을 사용하여 구현되지 않으며 런타임에 serialize할 수 있는 형식 집합은 리플렉션 가능한 형식과 비슷한 방식으로 결정됩니다.
+리플렉션 기반 serializer를 위한 `Serialize` 정책과 달리 <xref:System.Xml.Serialization.XmlSerializer>, <xref:System.Runtime.Serialization.DataContractSerializer>및 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 정책은 .NET 네이티브 도구 체인에 알려진 일련의 직렬 변환기를 사용 하도록 설정 하는 데 사용 됩니다. 이러한 serializer는 리플렉션을 사용하여 구현되지 않으며 런타임에 serialize할 수 있는 형식 집합은 리플렉션 가능한 형식과 비슷한 방식으로 결정됩니다.
 
 이러한 정책 중 하나를 형식에 적용하면 일치하는 serializer를 사용하여 형식을 serialize할 수 있습니다. 또한 serialization 엔진이 serialization을 수행해야 한다고 정적으로 확인할 수 있는 모든 형식도 serialize할 수 있습니다.
 
@@ -413,7 +411,7 @@ ms.locfileid: "71049133"
 
 자세한 내용은 [Windows 스토어 앱을 .NET 네이티브로 마이그레이션](migrating-your-windows-store-app-to-net-native.md)에서 “직렬 변환기의 차이점” 섹션을 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [런타임 지시문 요소](runtime-directive-elements.md)
 - [리플렉션 및 .NET 네이티브](reflection-and-net-native.md)

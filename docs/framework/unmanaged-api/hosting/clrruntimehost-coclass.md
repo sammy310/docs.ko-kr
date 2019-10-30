@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 2ac9cbf5-8a2d-4e4f-8831-0dad8ef0a897
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 841b05ca1037d82046820554878d883f94687d34
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b1e595e1a4f1b462437f47207b998829a8bd774d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779152"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129459"
 ---
 # <a name="clrruntimehost-coclass"></a>CLRRuntimeHost Coclass
-런타임에서 코드 실행을 관리 하기 위한 인터페이스를 제공 합니다.  
+런타임에의 한 코드 실행을 관리 하기 위한 인터페이스를 제공 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,20 +35,20 @@ coclass CLRRuntimeHost {
   
 ## <a name="interfaces"></a>인터페이스  
   
-|인터페이스|Description|  
+|인터페이스|설명|  
 |---------------|-----------------|  
-|[ICLRRuntimeHost 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)|런타임에서 응용 프로그램의 실행을 제어 하기 위한 메서드를 제공 합니다.|  
-|[ICLRValidator 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-interface.md)|이식 가능한 실행 가능 이미지의 유효성 검사 및 유효성 검사 오류를 자세히 보고 메서드를 제공 합니다.|  
+|[ICLRRuntimeHost 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)|런타임에의 한 응용 프로그램 실행을 제어 하는 메서드를 제공 합니다.|  
+|[ICLRValidator 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-interface.md)|이식 가능한 실행 이미지의 유효성을 검사 하 고 유효성 검사 오류에 대 한 자세한 보고를 위한 메서드를 제공 합니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** MSCorEE.idl  
+ **헤더:** Mscoree.dll  
   
- **라이브러리:** MSCorEE.dll에 리소스로 포함  
+ **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [호스팅 Coclass](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)

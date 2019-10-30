@@ -1,15 +1,13 @@
 ---
 title: WMI 및 성능 카운터(관리되지 않는 API 참조)
 description: WMI 및 성능 카운터 정보에 대한 .NET Framework 관리되지 않는 API를 요약합니다.
-author: rpetrusha
-ms.author: ronpet
 ms.date: 11/06/2017
-ms.openlocfilehash: bbf22496098f848cc7c55652198d792c6f631c15
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f28cd25ee6c3511dc5ac8a6dd4076c81f43fe74a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049312"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127414"
 ---
 # <a name="windows-management-instrumentation-wmi-and-performance-counters-unmanaged-api-reference"></a>WMI(Windows Management Instrumentation) 및 성능 카운터(관리되지 않는 API 참조)
 
@@ -19,7 +17,7 @@ ms.locfileid: "62049312"
 
 API에는 다음 함수가 포함됩니다.
 
-| 함수 | 설명 |
+| 기능 | 설명 |
 |---------|---------|
 | [BeginEnumeration 함수](beginenumeration.md) | 열거자를 WMI 개체 속성 열거형의 시작 부분으로 다시 설정합니다. |
 | [BeginMethodEnumeration 함수](beginmethodenumeration.md) |  개체에 사용할 수 있는 메서드의 열거형을 시작합니다. |

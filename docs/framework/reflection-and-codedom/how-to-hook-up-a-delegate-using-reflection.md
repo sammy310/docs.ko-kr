@@ -10,14 +10,12 @@ helpviewer_keywords:
 - reflection, adding event-handler delegates
 - delegates [.NET Framework], adding event handlers with reflection
 ms.assetid: 076ee62d-a964-449e-a447-c31b33518b81
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 937dca59be8b83526ebf6cd4c369532b1a8b9afe
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 14a9694708b36b23ecef453d530ad3b939a046ba
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71045976"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130125"
 ---
 # <a name="how-to-hook-up-a-delegate-using-reflection"></a>방법: 리플렉션을 사용하여 대리자 후크
 리플렉션을 사용하여 어셈블리를 로드하고 실행하는 경우 C# `+=` 연산자 또는 Visual Basic [AddHandler 문](../../visual-basic/language-reference/statements/addhandler-statement.md)과 같은 언어 기능을 사용하여 이벤트를 연결할 수 없습니다. 다음 절차에서는 리플렉션을 통해 필요한 모든 형식을 가져와 기존 메서드를 이벤트에 연결하는 방법 및 리플렉션 내보내기를 사용하여 동적 메서드를 만들고 이벤트에 연결하는 방법을 보여 줍니다.  
@@ -105,7 +103,7 @@ ms.locfileid: "71045976"
  [!code-csharp[HookUpDelegate#1](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#1)]
  [!code-vb[HookUpDelegate#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HookUpDelegate/vb/source.vb#1)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>
 - <xref:System.Reflection.Emit.DynamicMethod>

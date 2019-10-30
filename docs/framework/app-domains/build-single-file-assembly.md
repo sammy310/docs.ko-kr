@@ -1,5 +1,5 @@
 ---
-title: '방법: .NET Framework 단일 파일 어셈블리 빌드'
+title: '방법: 단일 파일 어셈블리 .NET Framework 빌드'
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assembly manifest, single-file assemblies
@@ -13,16 +13,14 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a6063221-43a5-4d3e-814c-288a4ec69aec
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 98f06e62e1070f78faa77ef7d83fd80a62984684
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: af1bfb89b01a316a858cbb45bf19a26a16d90016
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991241"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119945"
 ---
-# <a name="how-to-build-a-net-framework-single-file-assembly"></a>방법: .NET Framework 단일 파일 어셈블리 빌드
+# <a name="how-to-build-a-net-framework-single-file-assembly"></a>방법: 단일 파일 어셈블리 .NET Framework 빌드
 
 가장 단순한 형식의 어셈블리인 단일 파일 어셈블리에는 형식 정보 및 구현과 [어셈블리 매니페스트](../../standard/assembly/manifest.md)가 포함되어 있습니다. 명령줄 컴파일러 또는 Visual Studio를 사용하여 .NET Framework를 대상으로 하는 단일 파일 어셈블리를 만들 수 있습니다. 기본적으로 컴파일러는 확장명이 *.exe*인 어셈블리 파일을 만듭니다.
 
@@ -86,7 +84,7 @@ csc -out:myCodeLibrary.dll -t:library myCode.cs
 vbc -out:myCodeLibrary.dll -t:library myCode.vb
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [어셈블리 만들기](../../standard/assembly/create.md)
 - [다중 파일 어셈블리](multifile-assemblies.md)

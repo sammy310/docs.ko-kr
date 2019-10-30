@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f967c93d-9a7f-4aaf-99a1-a1317899ff3f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5e9e33e65b1cdeabe203c67ee4d4f259e2f7ac99
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0c455706b0d644d2444e9fbdf49c5a5d4f5295a9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67770075"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122398"
 ---
 # <a name="icordebugthreadenumnext-method"></a>ICorDebugThreadEnum::Next 메서드
-현재 위치부터 시작 하는 열거형에서 지정 된 ICorDebugThread 인스턴스의 수를 가져옵니다.  
+현재 위치에서 시작 하 여 열거형에서 지정 된 ICorDebugThread 인스턴스의 수를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,16 +38,16 @@ HRESULT Next (
   
 ## <a name="parameters"></a>매개 변수  
  `celt`  
- [in] 수가 `ICorDebugThread` 인스턴스를 검색할 수 있습니다.  
+ 진행 검색할 `ICorDebugThread` 인스턴스 수입니다.  
   
  `threads`  
- [out] 각각 가리키는 포인터 배열을 `ICorDebugThread` 스레드를 나타내는 개체입니다.  
+ 제한이 각각 스레드를 나타내는 `ICorDebugThread` 개체를 가리키는 포인터의 배열입니다.  
   
  `pceltFetched`  
- [out] 개수에 대 한 포인터 `ICorDebugThread` 실제로 반환 된 인스턴스. 이 값은 null 일 수 있으면 `celt` 하나입니다.  
+ 제한이 실제로 반환 된 `ICorDebugThread` 인스턴스 수에 대 한 포인터입니다. `celt` 일 경우이 값은 null 일 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   

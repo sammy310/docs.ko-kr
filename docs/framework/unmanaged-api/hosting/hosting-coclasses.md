@@ -6,30 +6,28 @@ helpviewer_keywords:
 - unmanaged coclasses [.NET Framework], hosting
 - coclasses [.NET Framework hosting]
 ms.assetid: e32d8667-58ee-4760-814f-d22963881622
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8dbe16c1bd9293cd109e9ce7f1211d6651551bc5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f23d2c9828a2ccce058fbb4829a41f1af5b25a11
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61946083"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127009"
 ---
 # <a name="hosting-coclasses"></a>호스팅 Coclass
-이 섹션에서는 호스팅 API를 사용 하는 관리 되지 않는 API coclass를 설명 합니다.  
+이 섹션에서는 호스팅 API가 사용 하는 관리 되지 않는 API coclass에 대해 설명 합니다.  
   
-## <a name="in-this-section"></a>섹션 내용  
+## <a name="in-this-section"></a>단원 내용  
  [CLRRuntimeHost Coclass](../../../../docs/framework/unmanaged-api/hosting/clrruntimehost-coclass.md)  
- 런타임에서 코드 실행을 관리 하기 위한 인터페이스를 제공 합니다.  
+ 런타임에의 한 코드 실행을 관리 하기 위한 인터페이스를 제공 합니다.  
   
  [ComCallUnmarshal Coclass](../../../../docs/framework/unmanaged-api/hosting/comcallunmarshal-coclass.md)  
- 인터페이스 포인터의 마샬링을 관리에 대 한 인터페이스를 제공 합니다.  
+ 인터페이스 포인터의 마샬링을 관리 하기 위한 인터페이스를 제공 합니다.  
   
  [CorRuntimeHost Coclass](../../../../docs/framework/unmanaged-api/hosting/corruntimehost-coclass.md)  
- 공용 언어 런타임에서 실행 되는 응용 프로그램 관리에 대 한 인터페이스를 제공 합니다.  
+ 공용 언어 런타임에서 실행 되는 응용 프로그램을 관리 하기 위한 인터페이스를 제공 합니다.  
   
  [TypeNameFactory Coclass](../../../../docs/framework/unmanaged-api/hosting/typenamefactory-coclass.md)  
- 형식 이름의 분해를 관리 하는 인터페이스를 제공 합니다.  
+ 형식 이름의 분해를 관리 하기 위한 인터페이스를 제공 합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
  [호스팅 인터페이스](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  

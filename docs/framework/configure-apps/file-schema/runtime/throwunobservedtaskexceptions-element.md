@@ -8,21 +8,19 @@ helpviewer_keywords:
 - ThrowUnobservedTaskExceptions element
 - <ThrowUnobservedTaskExceptions> element
 ms.assetid: cea7e588-8b8d-48d2-9ad5-8feaf3642c18
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3ed1e66c4aadab656455686a7a1e5028b035676a
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 99eef6b8c264e21df7f4ecf9fc79dc607d484a0a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252261"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73115414"
 ---
 # <a name="throwunobservedtaskexceptions-element"></a>\<ThrowUnobservedTaskExceptions > 요소
 작업 예외가 처리되지 않으면 실행 중인 프로세스를 종료할지를 지정합니다.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<런타임 >** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<ThrowUnobservedTaskExceptions>**  
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp;&nbsp;&nbsp;&nbsp; **\<ThrowUnobservedTaskExceptions >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -44,11 +42,11 @@ ms.locfileid: "70252261"
   
 |값|설명|  
 |-----------|-----------------|  
-|`false`|처리 되지 않은 작업 예외에 대 한 실행 중인 프로세스를 종료 하지 않습니다. 이 값이 기본값입니다.|  
+|`false`|처리 되지 않은 작업 예외에 대 한 실행 중인 프로세스를 종료 하지 않습니다. 기본값입니다.|  
 |`true`|처리 되지 않은 작업 예외에 대 한 실행 중인 프로세스를 종료 합니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
- 없음  
+ 없음.  
   
 ### <a name="parent-elements"></a>부모 요소  
   
@@ -58,14 +56,14 @@ ms.locfileid: "70252261"
 |`runtime`|런타임 초기화 옵션에 대한 정보를 포함합니다.|  
 |||  
   
-## <a name="remarks"></a>설명  
- 와 <xref:System.Threading.Tasks.Task> 연결 된 예외가 관찰 되지 않은 경우에는 작업이 없으며 <xref:System.Threading.Tasks.Task.Wait%2A> , 부모가 연결 <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> 되지 않으며, 속성을 읽지 않은 경우 태스크 예외가 관찰 되지 않은으로 간주 됩니다.  
+## <a name="remarks"></a>주의  
+ <xref:System.Threading.Tasks.Task>와 연결 된 예외가 관찰 되지 않은 경우 <xref:System.Threading.Tasks.Task.Wait%2A> 작업이 없으며, 부모는 연결 되지 않으며 <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> 속성을 읽지 않은 것으로 간주 됩니다.  
   
- .NET Framework 4에서는 기본적으로 관찰 되지 않은 예외가 있는이 가비지 <xref:System.Threading.Tasks.Task> 수집 되는 경우 종료자는 예외를 throw 하 고 프로세스를 종료 합니다. 프로세스 종료는 가비지 수집 및 종료 시간에 따라 결정 됩니다.  
+ .NET Framework 4에서는 기본적으로 관찰 되지 않은 예외가 있는 <xref:System.Threading.Tasks.Task> 가비지 수집 되는 경우 종료자는 예외를 throw 하 고 프로세스를 종료 합니다. 프로세스 종료는 가비지 수집 및 종료 시간에 따라 결정 됩니다.  
   
- 개발자가 작업을 기반으로 비동기 코드를 보다 쉽게 작성할 수 있도록 .NET Framework 4.5은 관찰 되지 않은 예외에 대 한이 기본 동작을 변경 합니다. 관찰 되지 않은 예외는 <xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException> 여전히 이벤트를 발생 시킵니다. 하지만 기본적으로이 프로세스는 종료 되지 않습니다. 대신, 이벤트 처리기가 예외를 준수 하는지 여부에 관계 없이 이벤트가 발생 한 후 예외가 무시 됩니다.  
+ 개발자가 작업을 기반으로 비동기 코드를 보다 쉽게 작성할 수 있도록 .NET Framework 4.5은 관찰 되지 않은 예외에 대 한이 기본 동작을 변경 합니다. 관찰 되지 않은 예외는 여전히 <xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException> 이벤트를 발생 시킬 수 있지만 기본적으로 프로세스가 종료 되지 않습니다. 대신, 이벤트 처리기가 예외를 준수 하는지 여부에 관계 없이 이벤트가 발생 한 후 예외가 무시 됩니다.  
   
- .NET Framework 4.5에서는 응용 프로그램 구성 파일에서 [ \<ThrowUnobservedTaskExceptions > 요소](throwunobservedtaskexceptions-element.md) 를 사용 하 여 예외를 throw 하는 .NET Framework 4 동작을 사용 하도록 설정할 수 있습니다.  
+ .NET Framework 4.5에서는 응용 프로그램 구성 파일에서 [\<ThrowUnobservedTaskExceptions > 요소](throwunobservedtaskexceptions-element.md) 를 사용 하 여 예외를 throw 하는 .NET Framework 4 동작을 사용 하도록 설정할 수 있습니다.  
   
  다음 방법 중 하나로 예외 동작을 지정할 수도 있습니다.  
   
@@ -90,7 +88,7 @@ ms.locfileid: "70252261"
  [!code-csharp[ThrowUnobservedTaskExceptions#1](../../../../../samples/snippets/csharp/VS_Snippets_CLR/throwunobservedtaskexceptions/cs/program.cs#1)]
  [!code-vb[ThrowUnobservedTaskExceptions#1](../../../../../samples/snippets/visualbasic/VS_Snippets_CLR/throwunobservedtaskexceptions/vb/program.vb#1)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [런타임 설정 스키마](index.md)
 - [구성 파일 스키마](../index.md)

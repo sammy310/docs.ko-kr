@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 392e9009-40ef-40e3-ad4d-7ce93a989e78
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bf285b6e1f703c8776937fa33c7ab5801f04f80f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 62fcdb60b83c88738ebe2e39455b8eae60fb705e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69950156"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126775"
 ---
 # <a name="iclrappdomainresourcemonitorgetcurrentsurvived-method"></a>ICLRAppDomainResourceMonitor::GetCurrentSurvived 메서드
 마지막 전체 차단 가비지 수집을 수행 하 고 현재 응용 프로그램 도메인에서 참조 하는 바이트 수를 가져옵니다.  
@@ -54,21 +52,21 @@ HRESULT STDMETHODCALLTYPE GetCurrentSurvived(
 |S_OK|메서드가 완료되었습니다.|  
 |COR_E_APPDOMAINUNLOADED|응용 프로그램 도메인이 언로드 되었거나 존재 하지 않습니다.|  
   
-## <a name="remarks"></a>설명  
- 통계는 전체 차단 가비지 수집 후에만 업데이트 됩니다. 즉, 컬렉션이 발생 하는 동안 응용 프로그램을 중지 하는 모든 세대를 포함 하는 컬렉션입니다. 예를 들어를 <xref:System.GC.Collect?displayProperty=nameWithType> 메서드 오버 로드는 전체 차단 컬렉션을 수행 합니다. 동시 가비지 수집은 백그라운드에서 발생 하 고 응용 프로그램을 차단 하지 않습니다.  
+## <a name="remarks"></a>주의  
+ 통계는 전체 차단 가비지 수집 후에만 업데이트 됩니다. 즉, 컬렉션이 발생 하는 동안 응용 프로그램을 중지 하는 모든 세대를 포함 하는 컬렉션입니다. 예를 들어 <xref:System.GC.Collect?displayProperty=nameWithType> 메서드 오버 로드는 전체 차단 컬렉션을 수행 합니다. 동시 가비지 수집은 백그라운드에서 발생 하 고 응용 프로그램을 차단 하지 않습니다.  
   
- 메서드 `GetCurrentSurvived` 는 관리 되 <xref:System.AppDomain.MonitoringSurvivedMemorySize%2A?displayProperty=nameWithType> 는 속성에 해당 하는 관리 되지 않는 속성입니다.  
+ `GetCurrentSurvived` 메서드는 관리 되는 <xref:System.AppDomain.MonitoringSurvivedMemorySize%2A?displayProperty=nameWithType> 속성에 해당 하는 관리 되지 않는 항목입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** MetaHost.h  
+ **헤더:** MetaHost  
   
- **라이브러리** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ICLRAppDomainResourceMonitor 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)
 - [애플리케이션 도메인 리소스 모니터링](../../../standard/garbage-collection/app-domain-resource-monitoring.md)

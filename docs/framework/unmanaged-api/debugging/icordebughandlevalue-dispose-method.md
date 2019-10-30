@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c1542811-0a7f-4235-bcfd-b24370d6f24b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d21703aa911b5222fff71282e6da26aa5c0e2853
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 957035591090fb5a6a615662c4840ff16509ee20
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756850"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138502"
 ---
 # <a name="icordebughandlevaluedispose-method"></a>ICorDebugHandleValue::Dispose 메서드
-명시적으로 인터페이스 포인터를 해제 하지 않고이 ICorDebugHandleValue 개체에서 참조 하는 핸들을 해제 합니다.  
+인터페이스 포인터를 명시적으로 해제 하지 않고이 ICorDebugHandleValue 개체에서 참조 하는 핸들을 해제 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -34,7 +32,7 @@ HRESULT Dispose ();
 ```  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   

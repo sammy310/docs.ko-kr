@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 31b8e65b-95e7-4748-ab93-8074cd5556b4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 45c3bc7612d79dcf819f04994bc1121796d36a64
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0d64752ceeffe2e085974c44f675ee092391c384
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771174"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133578"
 ---
 # <a name="icordebugthreadclearcurrentexception-method"></a>ICorDebugThread::ClearCurrentException 메서드
-이 메서드가 구현되지 않았습니다. 이 메서드를 사용하지 마십시오.  
+이 메서드는 구현 되지 않습니다. 이 메서드를 사용하지 마십시오.  
   
 ## <a name="syntax"></a>구문  
   
@@ -34,7 +32,7 @@ HRESULT ClearCurrentException();
 ```  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   

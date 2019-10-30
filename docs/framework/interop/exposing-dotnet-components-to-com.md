@@ -6,14 +6,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, exposing .NET Framework components
 - COM interop, exposing COM components
 ms.assetid: e42a65f7-1e61-411f-b09a-aca1bbce24c6
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: db4380e97cf4d556248f42981b350160710f1dd8
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 09045fb455a2163641d6f4af0ba07520ead59f1e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051811"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123483"
 ---
 # <a name="exposing-net-components-to-com"></a>.NET 구성 요소를 COM에 공개
 
@@ -51,7 +49,7 @@ ms.locfileid: "71051811"
 
      강력한 이름의 어셈블리는 전역 어셈블리 캐시에 설치할 수 있고 게시자의 시그니처가 필요합니다. 강력한 이름이 아닌 어셈블리는 클라이언트의 애플리케이션 디렉터리에 설치해야 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [비관리 코드와의 상호 운용](index.md)
 - [COM Interop 샘플: COM 클라이언트 및 .NET 서버](com-interop-sample-com-client-and-net-server.md)

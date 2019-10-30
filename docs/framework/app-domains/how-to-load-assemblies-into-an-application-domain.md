@@ -9,14 +9,12 @@ helpviewer_keywords:
 - application domains, loading assemblies
 - loading assemblies
 ms.assetid: 1432aa2d-bd83-4346-bf3b-a1b7920e2aa9
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 86b66d0a88864188d67aab19de67aaa857a06eaa
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: c560e2c5858de67442ccbcd18c8f92b142cc178d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053164"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119900"
 ---
 # <a name="how-to-load-assemblies-into-an-application-domain"></a>방법: 애플리케이션 도메인에 어셈블리 로드
 애플리케이션 도메인에 어셈블리를 로드하는 방법에는 여러 가지가 있습니다. <xref:System.Reflection.Assembly?displayProperty=nameWithType> 클래스의 `static`(Visual Basic에서는 `Shared`) <xref:System.Reflection.Assembly.Load%2A> 메서드를 사용하는 것이 좋습니다. 어셈블리를 로드할 수 있는 다른 방법은 다음과 같습니다.  
@@ -46,7 +44,7 @@ ms.locfileid: "71053164"
  [!code-csharp[System.AppDomain.Load#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.load/cs/source2.cs#2)]
  [!code-vb[System.AppDomain.Load#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.load/vb/source2.vb#2)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A>
 - [애플리케이션 도메인으로 프로그래밍](application-domains.md#programming-with-application-domains)

@@ -9,21 +9,19 @@ helpviewer_keywords:
 - container tags, <developmentMode> element
 - <developmentMode> element
 ms.assetid: 60e79a8c-415a-497d-be29-b9d0fd9bdee3
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0253c3ced52b575097fe5d18abb8ce188c0164fb
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 4a062da31740edb8f0c7a4f4db8b09800c687587
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252692"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73117625"
 ---
 # <a name="developmentmode-element"></a>\<developmentMode > 요소
 런타임이 DEVPATH 환경 변수로 지정된 디렉터리에서 어셈블리를 검색할지를 지정합니다.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<런타임 >** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<developmentMode>**  
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp;&nbsp;&nbsp;&nbsp; **\<developmentMode >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -48,7 +46,7 @@ ms.locfileid: "70252692"
 |**false**|는 DEVPATH 환경 변수로 지정 된 디렉터리에서 어셈블리를 검색 하지 않습니다. 이것이 기본값입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
- 없음  
+ 없음.  
   
 ### <a name="parent-elements"></a>부모 요소  
   
@@ -57,7 +55,7 @@ ms.locfileid: "70252692"
 |`configuration`|공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.|  
 |`runtime`|어셈블리 바인딩 및 가비지 컬렉션에 대한 정보를 포함합니다.|  
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
  이 설정은 개발 시에만 사용 합니다. 런타임은 DEVPATH에서 찾은 강력한 이름의 어셈블리에 대 한 버전을 확인 하지 않습니다. 단순히 찾은 첫 번째 어셈블리를 사용 합니다.  
   
 ## <a name="example"></a>예제  
@@ -71,8 +69,8 @@ ms.locfileid: "70252692"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [런타임 설정 스키마](index.md)
 - [구성 파일 스키마](../index.md)
-- [방법: DEVPATH를 사용 하 여 어셈블리 찾기](../../how-to-locate-assemblies-by-using-devpath.md)
+- [방법: DEVPATH를 사용하여 어셈블리 찾기](../../how-to-locate-assemblies-by-using-devpath.md)

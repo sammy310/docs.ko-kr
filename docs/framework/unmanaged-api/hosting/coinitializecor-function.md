@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9b9079fb-579e-4141-b3f0-791072dd40dc
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7b2b7b89c73b59f4f735369659daabb6a8f88300
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e8d65e739504e01a7d11b37d1b34d7313b13a5e1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779092"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138331"
 ---
 # <a name="coinitializecor-function"></a>CoInitializeCor 함수
 `CoInitializeCor`는 사용되지 않습니다.  
@@ -35,12 +33,12 @@ STDAPI CoInitializeCor (
 );  
 ```  
   
-## <a name="remarks"></a>설명  
- 공용 언어 런타임 초기화를 사용 하 여 [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) 하거나 [CorBindToCurrentRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtocurrentruntime-function.md)합니다.  
+## <a name="remarks"></a>주의  
+ 공용 언어 런타임을 초기화 하려면 [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) 또는 [CorBindToCurrentRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtocurrentruntime-function.md)중 하나를 사용 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **헤더:** Cor.h  
+ **헤더:** Cor  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [메타데이터 전역 정적 함수](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

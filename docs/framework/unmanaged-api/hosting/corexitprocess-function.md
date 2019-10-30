@@ -18,14 +18,12 @@ helpviewer_keywords:
 ms.assetid: a5cab4c6-990e-47f3-8798-cf422b791015
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6e1104a98afb32dea687949e9c723124014c1e62
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fe61503cdf46b6b2cf568deb78b96f8fa885c203
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69925309"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136927"
 ---
 # <a name="corexitprocess-function"></a>CorExitProcess 함수
 현재 관리 되지 않는 프로세스를 종료 합니다.  
@@ -44,20 +42,20 @@ void STDMETHODCALLTYPE CorExitProcess (
  `exitCode`  
  프로세스 종료 코드를 지정 하는 정수입니다.  
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
   
 > [!NOTE]
-> .NET Framework 4 `CorExitProcess` 부터는 기존 api가 바인딩된 런타임 뿐만 아니라 프로세스에서 시작 된 모든 런타임을 종료 합니다.  
+> .NET Framework 4부터 `CorExitProcess`는 기존 Api가 바인딩된 런타임 뿐만 아니라 프로세스에서 시작 된 모든 런타임을 종료 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** MSCorEE.h  
+ **헤더:** Mscoree.dll  
   
- **라이브러리** MSCorEE.dll  
+ **라이브러리:** Mscoree.dll  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [사용되지 않는 CLR 호스팅 함수](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

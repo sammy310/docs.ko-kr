@@ -14,33 +14,31 @@ helpviewer_keywords:
 ms.assetid: 368881ab-c4ea-4731-bf22-c596aac7c66c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e2c3a3057003d0035bfcb096a94c84d610e3056f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cf4fa9c5ec35391a0e772e25112f305bfa6e1564
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61985514"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126896"
 ---
 # <a name="iappdomainbinding-interface"></a>IAppDomainBinding 인터페이스
-CLR (공용 언어 런타임) 응용 프로그램 도메인이 만들어졌는지 호스트 응용 프로그램에 알리기 위해 호출 하는 방법을 제공 합니다.  
+응용 프로그램 도메인이 생성 되었음을 호스트 응용 프로그램에 알리기 위해 CLR (공용 언어 런타임)에 의해 호출 되는 메서드를 제공 합니다.  
   
 ## <a name="methods"></a>메서드  
   
 |메서드|설명|  
 |------------|-----------------|  
-|[OnAppDomain 메서드](../../../../docs/framework/unmanaged-api/hosting/iappdomainbinding-onappdomain-method.md)|CLR (공용 언어 런타임) 응용 프로그램 도메인이 만들어졌는지 호스트에 알리기 위해 호출 됩니다.|  
+|[OnAppDomain 메서드](../../../../docs/framework/unmanaged-api/hosting/iappdomainbinding-onappdomain-method.md)|응용 프로그램 도메인이 생성 되었음을 호스트에 알리기 위해 CLR (공용 언어 런타임)에 의해 호출 됩니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** MSCorEE.h  
+ **헤더:** Mscoree.dll  
   
- **라이브러리:** MSCorEE.dll에 리소스로 포함  
+ **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [호스팅 인터페이스](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

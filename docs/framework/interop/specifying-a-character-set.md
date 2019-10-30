@@ -10,14 +10,12 @@ helpviewer_keywords:
 - attribute fields in platform invoke, CharSet
 - CharSet field
 ms.assetid: a8347eb1-295f-46b9-8a78-63331f9ecc50
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9ee68d0da3b7f23d4de0192da076ef6f71d6d222
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 0db1cd8d75b45f6d718168793c873e5867028269
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051629"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125168"
 ---
 # <a name="specifying-a-character-set"></a>문자 집합 지정
 <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> 필드는 문자열 마샬링을 제어하고 플랫폼 호출이 DLL에서 함수 이름을 찾는 방법을 결정합니다. 이 항목에서는 두 동작에 대해 모두 설명합니다.  
@@ -146,7 +144,7 @@ extern "C" int MessageBox(
     HWND hWnd, String* lpText, String* lpCaption, unsigned int uType);
 ```
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Runtime.InteropServices.DllImportAttribute>
 - [관리 코드에서 프로토타입 만들기](creating-prototypes-in-managed-code.md)

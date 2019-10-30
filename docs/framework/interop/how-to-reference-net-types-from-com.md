@@ -12,14 +12,12 @@ helpviewer_keywords:
 - type libraries
 - COM interop, importing type library
 ms.assetid: 54917f6f-cb18-4103-b622-856b55da93f3
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 081548f9004d2fedf4d49845d3f44d4609fa508e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 0223cb25b933cc84af49aa86d90259fdf1fd3efc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626302"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124169"
 ---
 # <a name="how-to-reference-net-types-from-com"></a>방법: COM에서 .NET 형식 참조
 클라이언트 및 서버 코드의 관점에서 COM과 .NET Framework의 차이점은 크게 눈에 띄지 않습니다. Microsoft Visual Basic 클라이언트는 개체 메서드와 구문, 속성 및 필드를 정확히 다른 COM 개체인 것처럼 노출하는 개체 브라우저에서 .NET 개체를 볼 수 있습니다.  
@@ -28,7 +26,7 @@ ms.locfileid: "64626302"
   
 ### <a name="to-import-a-library"></a>라이브러리를 가져오려면  
   
-- **#import** 지시문에서 **raw_interfaces_only** 옵션을 지정합니다. 예:  
+- **#import** 지시문에서 **raw_interfaces_only** 옵션을 지정합니다. 예를 들면,  
   
     ```cpp  
     #import "..\LoanLib\LoanLib.tlb" raw_interfaces_only  
@@ -36,14 +34,14 @@ ms.locfileid: "64626302"
   
      또는  
   
-- Mscorlib.tlb에 대한 #import 지시문을 포함합니다. 예:  
+- Mscorlib.tlb에 대한 #import 지시문을 포함합니다. 예를 들면,  
   
     ```cpp  
     #import "mscorlib.tlb"  
     #import "..\LoanLib\LoanLib.tlb"  
     ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [.NET Framework 구성 요소를 COM에 노출](exposing-dotnet-components-to-com.md)
 - [COM에 어셈블리 등록](registering-assemblies-with-com.md)

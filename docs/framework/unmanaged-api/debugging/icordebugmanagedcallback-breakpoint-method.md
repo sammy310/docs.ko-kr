@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 60b279b0-a726-46d2-8c53-76986a007ebb
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4f49fac3951c130c3cf06b6861beb06b89c27dfb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8a4f7d4f422d80d044bcb92065dbefc7f421a069
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759898"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122594"
 ---
 # <a name="icordebugmanagedcallbackbreakpoint-method"></a>ICorDebugManagedCallback::Breakpoint 메서드
-중단점에 도달할 때 디버거를에 알립니다.  
+중단점에 도달 하면 디버거에 알립니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,16 +37,16 @@ HRESULT Breakpoint (
   
 ## <a name="parameters"></a>매개 변수  
  `pAppDomain`  
- [in] 중단점이 포함 된 응용 프로그램 도메인을 나타내는 ICorDebugAppDomain 개체에 대 한 포인터입니다.  
+ 진행 중단점이 포함 된 응용 프로그램 도메인을 나타내는 ICorDebugAppDomain 개체에 대 한 포인터입니다.  
   
  `pThread`  
- [in] 중단점이 포함 된 스레드를 나타내는 ICorDebugThread 개체에 대 한 포인터입니다.  
+ 진행 중단점이 포함 된 스레드를 나타내는 ICorDebugThread 개체에 대 한 포인터입니다.  
   
  `pBreakpoint`  
- [in] 중단점을 나타내는 ICorDebugBreakpoint 개체에 대 한 포인터입니다.  
+ 진행 중단점을 나타내는 ICorDebugBreakpoint 개체에 대 한 포인터입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
@@ -56,6 +54,6 @@ HRESULT Breakpoint (
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ICorDebugManagedCallback 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
