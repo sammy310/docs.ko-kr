@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: e7d3ecf5-09d2-4d94-abb6-ff3483deebb6
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 56f1dd892429724866182248b0c0413a7d2437cd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e4061580d59b0cf2a6e6e481d5242005e9452caf
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766065"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128868"
 ---
 # <a name="icordebugprocessgethandle-method"></a>ICorDebugProcess::GetHandle 메서드
 프로세스에 대 한 핸들을 가져옵니다.  
@@ -35,13 +33,13 @@ HRESULT GetHandle([out] HPROCESS *phProcessHandle);
   
 ## <a name="parameters"></a>매개 변수  
  `phProcessHandle`  
- [out] 에 대 한 포인터는 `HPROCESS` 프로세스에 대 한 핸들입니다.  
+ 제한이 프로세스에 대 한 핸들에 해당 하는 `HPROCESS`에 대 한 포인터입니다.  
   
-## <a name="remarks"></a>설명  
- 디버깅 인터페이스에 검색된 핸들을 소유 합니다. 디버거 사용 하 여 핸들을 복제 해야 합니다.  
+## <a name="remarks"></a>주의  
+ 검색 된 핸들은 디버깅 인터페이스가 소유 합니다. 디버거는 사용 하기 전에 핸들을 복제 해야 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   

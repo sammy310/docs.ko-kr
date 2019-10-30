@@ -14,14 +14,12 @@ helpviewer_keywords:
 - ResetSecurity function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1636d7de8273389e785131dbc1145affd5d3b45f
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 95d91eac21e82e55af2f5e9ab181b770832f5ad0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798262"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120206"
 ---
 # <a name="resetsecurity-function"></a>ResetSecurity 함수
 제공된 가장 토큰을 현재 스레드에 할당합니다.   
@@ -43,17 +41,17 @@ HRESULT ResetSecurity (
 
 ## <a name="return-value"></a>반환 값
 
-함수가 성공 하면 반환 값 `S_OK` 은 (0)입니다.
+함수가 성공 하면 반환 값은 `S_OK` (0)입니다.
 
 함수가 실패 하면 반환 값은 0이 아닌 오류 코드입니다. 확장 오류 정보를 가져오려면 [Geterrorinfo](geterrorinfo.md) 함수를 호출 합니다.
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** WMINet_Utils.idl  
+ **헤더:** WMINet_Utils  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [WMI 및 성능 카운터 (관리 되지 않는 API 참조)](index.md)

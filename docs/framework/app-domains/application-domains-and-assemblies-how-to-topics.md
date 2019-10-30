@@ -5,14 +5,12 @@ helpviewer_keywords:
 - assemblies [.NET Framework], how-tos
 - application domains, how-tos
 ms.assetid: 2264054e-712e-47e4-8657-1aa1cfec3e3d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b5d7f97a4ec67e4932aaee922897a16362f6a78c
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: bcb2ae00b02571b97dfc23100a1e5a7d3e7d8f12
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053233"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119985"
 ---
 # <a name="application-domains-and-assemblies-how-to-topics"></a>애플리케이션 도메인 및 어셈블리 방법 항목
 다음 섹션에는 애플리케이션 도메인 및 어셈블리를 사용한 프로그래밍에 대한 개념 설명서에 나오는 모든 방법 항목에 대한 링크가 있습니다.  
@@ -33,7 +31,7 @@ ms.locfileid: "71053233"
   
 - [방법: 어셈블리의 정규화된 이름 식별](../../standard/assembly/find-fully-qualified-name.md)  
   
-- [방법: 단일 파일 어셈블리 빌드](build-single-file-assembly.md)  
+- [방법: 단일 파일 어셈블리 만들기](build-single-file-assembly.md)  
   
 - [방법: 다중 파일 어셈블리 빌드](build-multifile-assembly.md)  
   
@@ -45,14 +43,14 @@ ms.locfileid: "71053233"
   
 - [방법: 강력한 이름 건너뛰기 기능 비활성화](../../standard/assembly/disable-strong-name-bypass-feature.md)  
   
-- [방법: 글로벌 어셈블리 캐시에 어셈블리 설치](install-assembly-into-gac.md)  
+- [방법: 전역 어셈블리 캐시에 어셈블리 설치](install-assembly-into-gac.md)  
   
-- [방법: 글로벌 어셈블리 캐시의 내용 보기](how-to-view-the-contents-of-the-gac.md)  
+- [방법: 전역 어셈블리 캐시의 내용 보기](how-to-view-the-contents-of-the-gac.md)  
   
-- [방법: 글로벌 어셈블리 캐시에서 어셈블리 제거](how-to-remove-an-assembly-from-the-gac.md)  
+- [방법: 전역 어셈블리 캐시에서 어셈블리 제거](how-to-remove-an-assembly-from-the-gac.md)  
   
-- [방법: 어셈블리 콘텐츠 보기](../../standard/assembly/view-contents.md)  
+- [방법: 어셈블리 내용 보기](../../standard/assembly/view-contents.md)  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [애플리케이션 도메인 및 어셈블리](index.md)

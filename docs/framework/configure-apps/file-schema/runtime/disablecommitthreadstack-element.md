@@ -8,21 +8,19 @@ helpviewer_keywords:
 - <disableCommitThreadStack> element
 - disableCommitThreadStack element
 ms.assetid: 3559d46a-7640-4c72-9a11-7e980768929e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2fa32d64f3ce440981c5f26d731051a118ed9254
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 8aefb8a20d6a95c5b8062d0c03dcb28a3557ca3d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252664"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73117469"
 ---
 # <a name="disablecommitthreadstack-element"></a>\<disableCommitThreadStack > 요소
 스레드가 시작될 때 전체 스레드 스택을 커밋할지 여부를 지정합니다.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<런타임 >** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<disableCommitThreadStack>**  
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp;&nbsp;&nbsp;&nbsp; **\<disableCommitThreadStack >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -47,7 +45,7 @@ ms.locfileid: "70252664"
 |1|스레드가 시작될 때 전체 스레드 스택을 커밋하는 공용 언어 런타임의 기본 동작을 해제합니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
- 없음  
+ 없음.  
   
 ### <a name="parent-elements"></a>부모 요소  
   
@@ -56,7 +54,7 @@ ms.locfileid: "70252664"
 |`configuration`|공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.|  
 |`runtime`|어셈블리 바인딩 및 가비지 컬렉션에 대한 정보를 포함합니다.|  
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
  공용 언어 런타임의 기본 동작은 스레드가 시작될 때 전체 스레드 스택을 커밋하는 것입니다. 메모리가 제한적인 서버에서 대량의 스레드를 만들어야 하며 이러한 스레드 대부분이 스택 공간을 매우 적게 사용하는 경우, 스레드가 시작될 때 공용 언어 런타임이 전체 스레드 스택을 즉시 커밋하지 않는다면 서버 성능이 개선될 수 있습니다.  
   
 > [!NOTE]
@@ -73,7 +71,7 @@ ms.locfileid: "70252664"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [런타임 설정 스키마](index.md)
 - [구성 파일 스키마](../index.md)

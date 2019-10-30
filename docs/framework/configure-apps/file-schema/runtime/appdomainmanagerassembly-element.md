@@ -5,21 +5,19 @@ helpviewer_keywords:
 - <appDomainManagerAssembly> element
 - appDomainManagerAssembly element
 ms.assetid: c7c56e39-a700-44f5-b94e-411bfce339d9
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 083e3ba21dcd196eacfe3d9fd649c211da9dc125
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 7ba52cdf0102af05954509a11fa90e9b8a337876
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252844"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73118311"
 ---
 # <a name="appdomainmanagerassembly-element"></a>\<appDomainManagerAssembly > 요소
 프로세스의 기본 애플리케이션 도메인용 애플리케이션 도메인 관리자를 제공하는 어셈블리를 지정합니다.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<런타임 >** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<appDomainManagerAssembly>**  
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp;&nbsp;&nbsp;&nbsp; **\<appDomainManagerAssembly >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,7 +36,7 @@ ms.locfileid: "70252844"
 |`value`|필수 특성입니다. 프로세스의 기본 응용 프로그램 도메인에 대 한 응용 프로그램 도메인 관리자를 제공 하는 어셈블리의 표시 이름을 지정 합니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
- 없음  
+ 없음.  
   
 ### <a name="parent-elements"></a>부모 요소  
   
@@ -47,21 +45,21 @@ ms.locfileid: "70252844"
 |`configuration`|공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.|  
 |`runtime`|어셈블리 바인딩 및 가비지 컬렉션에 대한 정보를 포함합니다.|  
   
-## <a name="remarks"></a>설명  
- 응용 프로그램 도메인 관리자의 유형을 지정 하려면이 요소와 [ \<appDomainManagerType >](appdomainmanagertype-element.md) 요소를 모두 지정 해야 합니다. 이러한 요소 중 하나를 지정 하지 않으면 다른 요소는 무시 됩니다.  
+## <a name="remarks"></a>주의  
+ 응용 프로그램 도메인 관리자의 유형을 지정 하려면이 요소와 [\<appDomainManagerType >](appdomainmanagertype-element.md) 요소를 모두 지정 해야 합니다. 이러한 요소 중 하나를 지정 하지 않으면 다른 요소는 무시 됩니다.  
   
- 기본 응용 프로그램 도메인이 로드 <xref:System.TypeLoadException> 되 면 지정 된 어셈블리가 없거나 어셈블리에 [ \<appDomainManagerType >](appdomainmanagertype-element.md) 요소에 지정 된 형식이 포함 되어 있지 않은 경우이 throw 되 고, 프로세스가 실패 합니다. 시작. 어셈블리를 찾았지만 버전 정보가 일치 <xref:System.IO.FileLoadException> 하지 않으면이 throw 됩니다.  
+ 기본 응용 프로그램 도메인이 로드 될 때 지정 된 어셈블리가 없거나 어셈블리에 [\<appDomainManagerType >](appdomainmanagertype-element.md) 요소에 지정 된 형식이 포함 되어 있지 않으면 <xref:System.TypeLoadException> throw 됩니다. 그리고 프로세스가 시작 되지 않습니다. 어셈블리를 찾았지만 버전 정보가 일치 하지 않으면 <xref:System.IO.FileLoadException>이 throw 됩니다.  
   
- 기본 응용 프로그램 도메인에 대 한 응용 프로그램 도메인 관리자 유형을 지정 하는 경우 기본 응용 프로그램 도메인에서 만든 다른 응용 프로그램 도메인은 응용 프로그램 도메인 관리자 유형을 상속 합니다. <xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=nameWithType> 및<xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=nameWithType> 속성을 사용 하 여 새 응용 프로그램 도메인에 대해 다른 응용 프로그램 도메인 관리자 유형을 지정 합니다.  
+ 기본 응용 프로그램 도메인에 대 한 응용 프로그램 도메인 관리자 유형을 지정 하는 경우 기본 응용 프로그램 도메인에서 만든 다른 응용 프로그램 도메인은 응용 프로그램 도메인 관리자 유형을 상속 합니다. <xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=nameWithType> 및 <xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=nameWithType> 속성을 사용 하 여 새 응용 프로그램 도메인에 대해 다른 응용 프로그램 도메인 관리자 유형을 지정 합니다.  
   
- 응용 프로그램 도메인 관리자 유형을 지정 하려면 응용 프로그램에 완전 신뢰가 필요 합니다. (예를 들어, 데스크톱에서 실행 중인 응용 프로그램에 완전 신뢰) 응용 프로그램에 완전 신뢰가 없는 경우는 <xref:System.TypeLoadException> throw 됩니다.  
+ 응용 프로그램 도메인 관리자 유형을 지정 하려면 응용 프로그램에 완전 신뢰가 필요 합니다. (예를 들어, 데스크톱에서 실행 중인 애플리케이션에 완전 신뢰) 애플리케이션에 완전 신뢰가 없는 경우는 <xref:System.TypeLoadException> throw 됩니다.  
   
  어셈블리 표시 이름의 형식은 <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType> 속성을 참조 하세요.  
   
  이 구성 요소는 .NET Framework 4 이상 에서만 사용할 수 있습니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 프로세스 `MyMgr` 의 기본 응용 프로그램 도메인에 대 한 응용 프로그램 도메인 관리자를 `AdMgrExample` 어셈블리의 형식으로 지정 하는 방법을 보여 줍니다.  
+ 다음 예에서는 프로세스의 기본 응용 프로그램 도메인에 대 한 응용 프로그램 도메인 관리자를 `AdMgrExample` 어셈블리의 `MyMgr` 형식으로 지정 하는 방법을 보여 줍니다.  
   
 ```xml  
 <configuration>  
@@ -73,7 +71,7 @@ ms.locfileid: "70252844"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=nameWithType>
 - <xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=nameWithType>

@@ -11,14 +11,12 @@ helpviewer_keywords:
 - identifying DLL functions
 - DLL functions
 ms.assetid: 3e3f6780-6d90-4413-bad7-ba641220364d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: deae99f5bdc7c187997d4bad4957b2fcdccdc166
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 1a94bb2020b07ba8405d901f46ec4a0687e79700
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051722"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121972"
 ---
 # <a name="identifying-functions-in-dlls"></a>DLL 함수 식별
 DLL 함수 ID는 다음 요소로 구성됩니다.  
@@ -45,7 +43,7 @@ DLL 함수 ID는 다음 요소로 구성됩니다.
   
  Windows API에 대한 전체 설명서는 플랫폼 SDK를 참조하세요. 플랫폼 호출에서 사용되는 .NET 기반 선언을 생성하는 방법을 보여 주는 예제는 [플랫폼 호출을 사용하여 데이터 마샬링](marshaling-data-with-platform-invoke.md)을 참조하세요.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [관리되지 않는 DLL 함수 사용](consuming-unmanaged-dll-functions.md)
 - [진입점 지정](specifying-an-entry-point.md)

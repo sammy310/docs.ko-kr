@@ -9,14 +9,12 @@ helpviewer_keywords:
 - reflection emit, dynamic methods
 - dynamic methods
 ms.assetid: 07d08a99-62c5-4254-bce2-2a75e55a18ab
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b5c6de2bde111ae459dbcfa1c0a7363d406f5f80
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 7da9d0bea755b90f73077fcd56558ed66a80e2eb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69928252"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130146"
 ---
 # <a name="how-to-define-and-execute-dynamic-methods"></a>방법: 동적 메서드 정의 및 실행
 다음 절차에서는 간단한 동적 메서드 및 클래스 인스턴스에 바인딩된 동적 메서드를 정의하고 실행하는 방법을 보여 줍니다. 동적 메서드에 대한 자세한 내용은 <xref:System.Reflection.Emit.DynamicMethod> 클래스 및 [리플렉션 내보내기 동적 메서드 시나리오](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sfk2s47t(v=vs.100))를 참조하세요.  
@@ -101,7 +99,7 @@ ms.locfileid: "69928252"
      [!code-csharp[DynamicMethodHowTo#16](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#16)]
      [!code-vb[DynamicMethodHowTo#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#16)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드 예제에서는 간단한 동적 메서드 및 클래스 인스턴스에 바인딩된 동적 메서드를 보여 줍니다.  
   
  간단한 동적 메서드는 32비트 정수인 인수 하나를 사용하고 해당 정수의 64비트 거듭제곱을 반환합니다. 제네릭 대리자는 메서드를 호출하는 데 사용됩니다.  
@@ -114,7 +112,7 @@ ms.locfileid: "69928252"
  [!code-csharp[DynamicMethodHowTo#1](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#1)]
  [!code-vb[DynamicMethodHowTo#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#1)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Reflection.Emit.DynamicMethod>
 - [리플렉션 내보내기 사용](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y322t50(v=vs.100))

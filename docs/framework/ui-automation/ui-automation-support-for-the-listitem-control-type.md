@@ -6,12 +6,12 @@ helpviewer_keywords:
 - List Item control type
 - UI Automation, List Item control type
 ms.assetid: 34f533bf-fc14-4e78-8fee-fb7107345fab
-ms.openlocfilehash: 64431150969c25da9781871ad8dcd30e029cd62e
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: c2b1406519c80368cd00a888c541ec9abfce7faa
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039433"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123075"
 ---
 # <a name="ui-automation-support-for-the-listitem-control-type"></a>ListItem 컨트롤 형식에 대한 UI 자동화 지원
 > [!NOTE]
@@ -65,7 +65,7 @@ ms.locfileid: "73039433"
 |<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|종속|정보를 표시하거나 숨기도록 항목을 조작할 수 있는 경우 이 컨트롤 패턴을 구현해야 합니다.|  
 |<xref:System.Windows.Automation.Provider.IValueProvider>|종속|항목을 편집할 수 있는 경우 이 컨트롤 패턴을 구현해야 합니다. 목록 항목 컨트롤이 변경되면 <xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>및 <xref:System.Windows.Automation.Provider.IValueProvider.Value%2A>의 값이 변경됩니다.|  
 |<xref:System.Windows.Automation.Provider.IGridItemProvider>|종속|목록 컨테이너 내에서 항목 간 공간 탐색이 지원되고 컨테이너가 행 및 열로 정렬된 경우 Grid Item 컨트롤 패턴을 구현해야 합니다.|  
-|<xref:System.Windows.Automation.Provider.IInvokeProvider>|종속|선택된 항목과 별개로, 항목에서 수행할 수 있는 명령이 있는 경우 이 패턴을 구현해야 합니다. 이는 일반적으로 목록 항목 컨트롤을 두 번 클릭하는 것과 연관된 동작입니다. [!INCLUDE[TLA#tla_winexpl](../../../includes/tlasharptla-winexpl-md.md)]에서 문서를 시작 하거나 Microsoft Windows Media Player에서 음악 파일을 재생 하는 경우를 예로 들 수 있습니다.|  
+|<xref:System.Windows.Automation.Provider.IInvokeProvider>|종속|선택된 항목과 별개로, 항목에서 수행할 수 있는 명령이 있는 경우 이 패턴을 구현해야 합니다. 이는 일반적으로 목록 항목 컨트롤을 두 번 클릭하는 것과 연관된 동작입니다. Microsoft Windows 탐색기에서 문서를 시작 하거나 Microsoft Windows Media Player에서 음악 파일을 재생 하는 경우를 예로 들 수 있습니다.|  
   
 <a name="Required_UI_Automation_Events"></a>   
 ## <a name="required-ui-automation-events"></a>필요한 UI 자동화 이벤트  

@@ -6,19 +6,17 @@ helpviewer_keywords:
 - debugging global static functions [.NET Framework]
 - unmanaged global static functions [.NET Framework], debugging
 ms.assetid: efc64414-77c3-48d0-881a-8594ed416aad
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e2403d736d031aab52525fc12b5071e764a8bde1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 965724c1e937fa62f05c33b0dcf8a5c8b9e1b029
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698527"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124312"
 ---
 # <a name="debugging-global-static-functions"></a>디버깅 전역 정적 함수
 이 섹션에서는 디버깅 API에서 사용하는 관리되지 않는 전역 정적 함수에 대해 설명합니다.  
   
-## <a name="in-this-section"></a>섹션 내용  
+## <a name="in-this-section"></a>단원 내용  
  [_EFN_GetManagedExcepStack 함수](../../../../docs/framework/unmanaged-api/debugging/efn-getmanagedexcepstack-function.md)  
  관리되는 예외 개체 주소를 제공하면 내부에 포함된 스택 추적의 문자열 버전을 반환합니다.  
   

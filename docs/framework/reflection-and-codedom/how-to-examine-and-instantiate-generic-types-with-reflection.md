@@ -9,14 +9,12 @@ helpviewer_keywords:
 - reflection, generic types
 - generics [.NET Framework], reflection
 ms.assetid: f93b03b0-1778-43fc-bc6d-35983d210e74
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6e15ef69c4777cdafe2e5861050a1ccc1f6a1a70
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 62e4e066740d0422f8f7045b043a5725278c209c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046013"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130132"
 ---
 # <a name="how-to-examine-and-instantiate-generic-types-with-reflection"></a>방법: 리플렉션을 사용하여 제네릭 형식 검사 및 인스턴스화
 다른 형식에 대한 정보와 동일한 방식으로 제네릭 형식에 대한 정보를 가져올 수 있습니다. 제네릭 형식을 나타내는 <xref:System.Type> 개체를 검사하면 됩니다. 원칙의 차이점은 제네릭 형식에는 제네릭 형식 매개 변수를 나타내는 <xref:System.Type> 개체 목록이 있다는 것입니다. 이 섹션의 첫 번째 절차에서는 제네릭 형식을 검사합니다.  
@@ -115,7 +113,7 @@ ms.locfileid: "71046013"
  [!code-csharp[HowToGeneric#1](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToGeneric/CS/ur.cs#1)]
  [!code-vb[HowToGeneric#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToGeneric/VB/ur.vb#1)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Type>
 - <xref:System.Reflection.MethodInfo>

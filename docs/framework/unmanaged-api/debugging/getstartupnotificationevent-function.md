@@ -16,14 +16,12 @@ helpviewer_keywords:
 ms.assetid: c94b1b61-045a-4695-bacd-0f18c5acc246
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f67f3ef57b4996eb4a956c596b76fb94b1bdfd7a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fb158b35165fb229fc78169e2508679b6749752e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738895"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122946"
 ---
 # <a name="getstartupnotificationevent-function"></a>GetStartupNotificationEvent 함수
 지정된 대상 프로세스에 로드 중인 CLR(공용 언어 런타임)에서 신호를 전송할 이벤트 핸들을 만들거나 엽니다.  
@@ -55,16 +53,16 @@ HRESULT GetStartupNotificationEvent
  E_FAIL(또는 다른 E_ 반환 코드)  
  시작 알림 이벤트에 대한 핸들을 가져올 수 없습니다.  
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
  Windows 운영 체제에서 `debuggeePID`는 OS 프로세스 식별자에 매핑됩니다.  
   
  이벤트 신호를 전송한 CLR에서 관리 코드를 실행하기 전에 이벤트 신호가 전송됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** dbgshim.h  
+ **헤더:** dbgshim.dll  
   
  **라이브러리:** dbgshim.dll  
   
- **.NET framework 버전:** 3.5 SP1
+ **.NET Framework 버전:** 3.5 SP1

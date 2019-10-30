@@ -8,14 +8,12 @@ helpviewer_keywords:
 - objects, interop marshaling
 - interop marshaling, objects
 ms.assetid: c2ef0284-b061-4e12-b6d3-6a502b9cc558
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b2c6e8a013d6486ec55723b91d6bfb6b838c9be5
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
-ms.translationtype: HT
+ms.openlocfilehash: e0de715a3ed33eedf212fc3e0e9930c9cbaa0a38
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044175"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123584"
 ---
 # <a name="default-marshaling-for-objects"></a>개체에 대한 마샬링
 
@@ -134,7 +132,7 @@ struct ObjectHolder {
 
 다음 표에서는 관리 개체 형식 및 해당 COM 변형 형식을 보여 줍니다. 이러한 형식은 호출되는 메서드의 시그니처가 <xref:System.Object?displayProperty=nameWithType> 형식인 경우에만 변환됩니다.
 
-|개체 유형|COM 변형 형식|
+|개체 형식|COM 변형 형식|
 |-----------------|----------------------|
 |Null 개체 참조(Visual Basic의 경우 **Nothing**).|**VT_EMPTY**|
 |<xref:System.DBNull?displayProperty=nameWithType>|**VT_NULL**|
@@ -237,12 +235,12 @@ mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));
 |**TypeCode.Decimal**|**VT_DECIMAL**|
 |**TypeCode.DateTime**|**VT_DATE**|
 |**TypeCode.String**|**VT_BSTR**|
-|지원되지 않습니다.|**VT_INT**|
-|지원되지 않습니다.|**VT_UINT**|
-|지원되지 않습니다.|**VT_ARRAY**|
-|지원되지 않습니다.|**VT_RECORD**|
-|지원되지 않습니다.|**VT_CY**|
-|지원되지 않습니다.|**VT_VARIANT**|
+|지원되지 않음|**VT_INT**|
+|지원되지 않음|**VT_UINT**|
+|지원되지 않음|**VT_ARRAY**|
+|지원되지 않음|**VT_RECORD**|
+|지원되지 않음|**VT_CY**|
+|지원되지 않음|**VT_VARIANT**|
 
 COM 변형 값은 **IConvertible.To** *Type* 인터페이스를 호출하여 결정됩니다. 여기서 **To** *Type*은 **IConvertible.GetTypeCode**에서 반환된 형식에 해당하는 변환 루틴입니다. 예를 들어 **IConvertible.GetTypeCode**에서 **TypeCode.Double**을 반환하는 개체는 **VT_R8** 형식의 COM 변형으로 마샬링됩니다. **IConvertible** 인터페이스를 캐스팅하고 <xref:System.IConvertible.ToDouble%2A> 메서드를 호출하여 COM 변형의 **dblVal** 필드에 저장된 변형 값을 가져올 수 있습니다.
 
@@ -250,7 +248,7 @@ COM 변형 값은 **IConvertible.To** *Type* 인터페이스를 호출하여 결
 
 변형을 개체에 마샬링하면 마샬링된 변형의 형식 및 때때로 값에 따라 생성된 개체 형식이 결정됩니다. 다음 표에서는 각 변형 형식 및 변형이 COM에서 .NET Framework로 전달될 때 마샬러가 만드는 일치하는 개체 형식을 나타냅니다.
 
-|COM 변형 형식|개체 유형|
+|COM 변형 형식|개체 형식|
 |----------------------|-----------------|
 |**VT_EMPTY**|Null 개체 참조(Visual Basic의 경우 **Nothing**).|
 |**VT_NULL**|<xref:System.DBNull?displayProperty=nameWithType>|
@@ -276,7 +274,7 @@ COM 변형 값은 **IConvertible.To** *Type* 인터페이스를 호출하여 결
 |**VT_ARRAY** &#124; **VT_** \*|<xref:System.Array?displayProperty=nameWithType>|
 |**VT_CY**|<xref:System.Decimal?displayProperty=nameWithType>|
 |**VT_RECORD**|일치하는 boxed 값 형식.|
-|**VT_VARIANT**|지원되지 않습니다.|
+|**VT_VARIANT**|지원되지 않음|
 
 COM에서 관리 코드에 전달된 다음 다시 COM에 전달되는 변형 형식은 호출하는 동안 동일한 변형 형식을 유지할 수 없습니다. **VT_DISPATCH** 형식 변형이 COM에서 .NET Framework에 전달될 경우 어떤 일이 나타나는지 살펴봅니다. 마샬링하는 동안 변형은 <xref:System.Object?displayProperty=nameWithType>로 변환됩니다. **Object**가 다시 COM에 전달되면 다시 **VT_UNKNOWN** 형식 변형에 마샬링됩니다. 개체가 관리 코드에서 COM에 마샬링될 때 생성된 변형이 처음에 개체를 생성하는 데 사용되는 변형과 같은 형식이라는 보장은 없습니다.
 
@@ -321,7 +319,7 @@ COM에서 관리 코드에 전달된 다음 다시 COM에 전달되는 변형 �
 |**변형**  *v* **(VT_BYREF** *&#124;* **VT_\*)**|**개체**  *o*|Never|
 |**변형**  *v* **(VT_BYREF** *&#124;* **VT_)**|**Ref 개체**  *o*|형식이 변경되지 않은 경우에만.|
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [기본 마샬링 동작](default-marshaling-behavior.md)
 - [Blittable 형식 및 비 Blittable 형식](blittable-and-non-blittable-types.md)

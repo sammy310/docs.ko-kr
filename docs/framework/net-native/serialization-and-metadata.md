@@ -2,14 +2,12 @@
 title: Serialization 및 메타데이터
 ms.date: 03/30/2017
 ms.assetid: 619ecf1c-1ca5-4d66-8934-62fe7aad78c6
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ec8180da9637ec2b2c4e1b432773b4f9f1ac908b
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 1805b6ca06d584237303d1366222419da3e8b9ef
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049178"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128118"
 ---
 # <a name="serialization-and-metadata"></a>Serialization 및 메타데이터
 
@@ -47,7 +45,7 @@ ms.locfileid: "71049178"
   
 ### <a name="typeof-used-outside-the-constructor"></a>생성자 외부에서 사용되는 typeof
 
- 다음 코드와 같이 이러한 serialization 클래스의 생성자를 호출 하 C# 고 생성자의 <xref:System.Type> 매개 변수에 제공 된 식 외부에서 [typeof](../../csharp/language-reference/operators/type-testing-and-cast.md#typeof-operator) 연산자를 사용 하는 경우 .NET 네이티브 컴파일러에서 형식을 확인할 수 없습니다.  
+ 다음 코드와 같이 이러한 serialization 클래스의 생성자를 호출 하 C# 고 생성자의 <xref:System.Type> 매개 변수에 제공 된 식 외부에서 [typeof](../../csharp/language-reference/operators/type-testing-and-cast.md#typeof-operator) 연산자를 사용 하는 경우 .NET 네이티브 컴파일러는 형식을 확인할 수 없습니다.  
   
  [!code-csharp[ProjectN#6](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#6)]  
   
@@ -57,7 +55,7 @@ ms.locfileid: "71049178"
 <Type Name="DataSet" Browse="Required Public" />  
 ```  
   
- 마찬가지로 다음 코드와 같이와 같은 <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Type%5B%5D%29?displayProperty=nameWithType> 생성자를 호출 하 고 serialize 할 추가 <xref:System.Type> 개체의 배열을 제공 하는 경우 .NET 네이티브 컴파일러는 이러한 형식을 확인할 수 없습니다.  
+ 마찬가지로, 다음 코드와 같이 <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Type%5B%5D%29?displayProperty=nameWithType> 같은 생성자를 호출 하 고 serialize 할 추가 <xref:System.Type> 개체 배열을 제공 하는 경우 .NET 네이티브 컴파일러는 이러한 형식을 확인할 수 없습니다.  
   
  [!code-csharp[ProjectN#7](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#7)]  
   
@@ -69,7 +67,7 @@ ms.locfileid: "71049178"
   
  이 예제에 사용된 구문에 대한 자세한 내용은 [\<Type> 요소](type-element-net-native.md)를 참조하세요.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [런타임 지시문(rd.xml) 구성 파일 참조](runtime-directives-rd-xml-configuration-file-reference.md)
 - [런타임 지시문 요소](runtime-directive-elements.md)

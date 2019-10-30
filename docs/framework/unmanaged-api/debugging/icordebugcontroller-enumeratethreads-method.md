@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 73f536f6-4668-4a4a-b3e4-ac7df862d5be
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 73b84179717e4b96a5c3637b85ae936a23bbf42d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 291f6c05171b5e507afaa70537aafdc9002a506e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748861"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125405"
 ---
 # <a name="icordebugcontrollerenumeratethreads-method"></a>ICorDebugController::EnumerateThreads 메서드
-프로세스에서 현재 관리 되는 스레드에 대 한 열거자를 가져옵니다.  
+프로세스의 활성 관리 되는 스레드에 대 한 열거자를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,13 +35,13 @@ HRESULT EnumerateThreads (
   
 ## <a name="parameters"></a>매개 변수  
  `ppThreads`  
- [out] 프로세스에서 활성화 된 모든 관리 되는 스레드에 대 한 열거자를 나타내는 "ICorDebugThreadEnum" 개체의 주소에 대 한 포인터입니다.  
+ 제한이 프로세스에서 활성화 된 모든 관리 되는 스레드에 대 한 열거자를 나타내는 "ICorDebugThreadEnum" 개체의 주소에 대 한 포인터입니다.  
   
-## <a name="remarks"></a>설명  
- 스레드 후 활성 차트로 간주 됩니다는 [icordebugmanagedcallback:: Createthread](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createthread-method.md) 콜백 디스패치 된 전과 합니다 [icordebugmanagedcallback:: Exitthread](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitthread-method.md) 디스패치 된 콜백 . 관리 되는 스레드 없을 수 있습니다 반드시 모든 관리 되는 프레임 스택에 해당 합니다. 스레드 이전에 열거할 수는 [icordebugmanagedcallback:: Createprocess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) 콜백 합니다. 열거형은 자연스럽 게 비어 있게 됩니다.  
+## <a name="remarks"></a>주의  
+ [ICorDebugManagedCallback:: CreateThread](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createthread-method.md) 콜백이 디스패치 된 후, [ICorDebugManagedCallback:: exitthread](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitthread-method.md) 콜백이 디스패치 되기 전에는 스레드가 활성 상태인 것으로 간주 됩니다. 관리 되는 스레드의 스택에 관리 되는 프레임이 반드시 있어야 하는 것은 아닙니다. [ICorDebugManagedCallback:: CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) 콜백 전에도 스레드를 열거할 수 있습니다. 열거형은 자연스럽 게 비어 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
@@ -51,4 +49,4 @@ HRESULT EnumerateThreads (
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조

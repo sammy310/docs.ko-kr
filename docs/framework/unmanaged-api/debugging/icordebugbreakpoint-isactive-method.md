@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 06e583d6-d88a-4ff5-bb95-5c48618a461c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6d78208c180638e9048ae39664b8ce8f57be90da
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8df4e1df7836f340bb04fc47d1ca55e0fb7c9f0e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745162"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122765"
 ---
 # <a name="icordebugbreakpointisactive-method"></a>ICorDebugBreakpoint::IsActive 메서드
-나타내는 값을 가져옵니다 여부를이 `ICorDebugBreakpoint` 활성화 되어 있습니다.  
+이 `ICorDebugBreakpoint` 활성화 되어 있는지 여부를 나타내는 값을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,10 +35,10 @@ HRESULT IsActive (
   
 ## <a name="parameters"></a>매개 변수  
  `pbActive`  
- [out] `true` , 그렇지 않으면이 중단점이 있으면 `false`합니다.  
+ [out]이 중단점이 활성화 되어 있으면 `true`이 고, 그렇지 않으면입니다. 그렇지 않으면 `false`합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   

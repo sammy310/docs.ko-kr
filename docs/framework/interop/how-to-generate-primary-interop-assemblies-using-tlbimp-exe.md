@@ -6,14 +6,12 @@ helpviewer_keywords:
 - Tlbimp.exe
 - Type Library Importer
 ms.assetid: 5419011c-6e57-40f6-8c65-386db8f7a651
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ac60fa96b7c9ce6991f89e8c6a37ff5da4a34a50
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: e46295b89b042452cb6e303302a8b88d68d58426
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051774"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123918"
 ---
 # <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a>방법: Tlbimp.exe를 사용하여 주 Interop 어셈블리 생성
 
@@ -69,6 +67,6 @@ tlbimp LibUtil.tlb /primary /keyfile:CompanyA.snk /namespace:CompanyA.LibUtil /o
 tlbimp MyLib.tlb /primary /keyfile:CompanyB.snk /namespace:CompanyB.MyLib /reference:CompanyA.LibUtil.dll /out:CompanyB.MyLib.dll
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [방법: 주 Interop 어셈블리 등록](how-to-register-primary-interop-assemblies.md)

@@ -14,19 +14,17 @@ helpviewer_keywords:
 - signed assemblies
 - COM interop, exposing COM components
 ms.assetid: ea8a403e-ae03-4faa-9d9b-02179ec72992
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 080ef48ade496a55f414b64158a40fe0e551c2aa
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
-ms.translationtype: HT
+ms.openlocfilehash: 04f8e53220b2e0fa09735400ae84dcb8b1c3478a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567291"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123561"
 ---
 # <a name="deploying-an-interop-application"></a>Interop 애플리케이션 배포
 Interop 애플리케이션에는 일반적으로 .NET 클라이언트 어셈블리, 고유한 COM 형식 라이브러리를 나타내는 하나 이상의 interop 어셈블리 및 하나 이상의 등록된 COM 구성 요소가 포함됩니다. Visual Studio 및 Windows SDK에서는 [형식 라이브러리를 어셈블리로 가져오기](importing-a-type-library-as-an-assembly.md)에 설명된 대로 형식 라이브러리를 interop 어셈블리로 가져오고 변환하는 도구를 제공합니다. Interop 애플리케이션을 배포하는 두 가지 방법은 다음과 같습니다.  
   
-- 포함된 interop 형식 사용: .NET Framework 4부터 interop 어셈블리의 형식 정보를 실행 파일에 포함하도록 컴파일러에 지시할 수 있습니다. 컴파일러는 애플리케이션에서 사용하는 형식 정보만 포함합니다. Interop 어셈블리를 애플리케이션에 배포할 필요는 없습니다. 이것이 권장되는 방법입니다.  
+- 포함 된 interop 형식 사용: .NET Framework 4부터 interop 어셈블리의 형식 정보를 실행 파일에 포함 하도록 컴파일러에 지시할 수 있습니다. 컴파일러는 애플리케이션에서 사용하는 형식 정보만 포함합니다. Interop 어셈블리를 애플리케이션에 배포할 필요는 없습니다. 이것이 권장되는 방법입니다.  
   
 - Interop 어셈블리 배포: interop 어셈블리에 대한 표준 참조를 만들 수 있습니다. 이 경우 interop 어셈블리를 애플리케이션에 배포해야 합니다. 이 방법을 적용하는데 전용 COM 구성 요소를 사용하지 않을 경우 관리 코드에 통합하려는 COM 구성 요소의 작성자가 게시한 PIA(주 interop 어셈블리)를 항상 참조하세요. 주 interop 어셈블리를 생성 및 사용하는 방법에 대한 자세한 내용은 [주 Interop 어셈블리](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100))를 참조하세요.  
   
@@ -45,7 +43,7 @@ Interop 애플리케이션에는 일반적으로 .NET 클라이언트 어셈블�
 ### <a name="shared-assemblies"></a>공유 어셈블리  
  여러 애플리케이션에서 공유되는 어셈블리는 전역 어셈블리 캐시라는 중앙 집중식 리포지토리에 설치해야 합니다. .NET 클라이언트는 전역 어셈블리 캐시에서 시그니처 및 설치된 interop 어셈블리의 동일한 복사본에 액세스할 수 있습니다. 주 interop 어셈블리를 생성 및 사용하는 방법에 대한 자세한 내용은 [주 Interop 어셈블리](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100))를 참조하세요.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [.NET Framework에 COM 구성 요소 노출](exposing-com-components.md)
 - [형식 라이브러리를 어셈블리로 가져오기](importing-a-type-library-as-an-assembly.md)

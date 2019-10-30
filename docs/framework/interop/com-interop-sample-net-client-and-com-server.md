@@ -9,14 +9,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, samples
 - COM interop, samples
 ms.assetid: a3f752bb-8945-4e1b-8163-71def6e9f137
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3e4205c09d8f43a03b5c8b2e1be5029a543c158b
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 721e94c0f7a83de8a70942272e7c31374f7004a4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051859"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123692"
 ---
 # <a name="com-interop-sample-net-client-and-com-server"></a>COM Interop 샘플: .NET 클라이언트 및 COM 서버
 이 샘플에서는 [COM 서버](#cpconcominteropsamplenetclientcomserveranchor2)에 액세스하도록 빌드된 [.NET 클라이언트](#cpconcominteropsamplenetclientcomserveranchor1)가 COM coclass 인스턴스를 만들고 클래스 멤버를 호출하여 담보 대출 계산을 수행하는 방법을 보여 줍니다.  
@@ -299,6 +297,6 @@ static double Round(double value, short digits)
 }  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [.NET Framework에 COM 구성 요소 노출](exposing-com-components.md)

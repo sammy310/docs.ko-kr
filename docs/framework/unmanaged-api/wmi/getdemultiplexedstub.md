@@ -14,14 +14,12 @@ helpviewer_keywords:
 - GetDemultiplexedStub function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a2d3885a4a9e54950909053ba18de5b1891e7edf
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 9cc028b3300b43f8a0fb3e29f8b5ac6e1817b8c1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798603"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127465"
 ---
 # <a name="getdemultiplexedstub-function"></a>GetDemultiplexedStub 함수
 클라이언트가 Windows 관리에서 비동기 호출을 수신하는 데 도움이 되는 개체 전달자 싱크를 만듭니다.
@@ -44,24 +42,24 @@ HRESULT GetDemultiplexedStub (
 진행 [IWbemObjectSink](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectsink)의 클라이언트 in-process 구현에 대 한 포인터입니다.
 
 `isLocal`  
-진행 이벤트가 로컬 (`true`) 인지 여부를 나타내는 플래그 이거나, `false`그렇지 않으면입니다.
+진행 이벤트가 로컬 (`true`) 인지 여부를 나타내는 플래그입니다. 그렇지 않으면 `false`합니다.
 
 `ppObject`  
 제한이 클라이언트에서 Windows 관리를 통해 비동기 호출을 받을 수 있도록 지 원하는 개체 전달자 싱크입니다.
 
 ## <a name="return-value"></a>반환 값
 
-함수가 성공 하면 반환 값 `S_OK` 은 (0)입니다.
+함수가 성공 하면 반환 값은 `S_OK` (0)입니다.
 
 함수가 실패 하면 반환 값은 0이 아닌 오류 코드입니다. 확장 오류 정보를 가져오려면 [Geterrorinfo](geterrorinfo.md) 함수를 호출 합니다.
     
 ## <a name="requirements"></a>요구 사항  
- **플랫폼** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** WMINet_Utils.idl  
+ **헤더:** WMINet_Utils  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [WMI 및 성능 카운터 (관리 되지 않는 API 참조)](index.md)

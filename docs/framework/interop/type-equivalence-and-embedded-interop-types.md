@@ -7,14 +7,12 @@ helpviewer_keywords:
 - primary interop assemblies,not necessary in CLR version 4
 - NoPIA
 ms.assetid: 78892eba-2a58-4165-b4b1-0250ee2f41dc
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 137aeaab4e63adbb81c0f3d90718def10f906e6a
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
-ms.translationtype: HT
+ms.openlocfilehash: ee9d2d94d62f262ef61edc66ce915e1227532d67
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489241"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126401"
 ---
 # <a name="type-equivalence-and-embedded-interop-types"></a>형식 동등 및 포함된 Interop 형식
 
@@ -53,7 +51,7 @@ ms.locfileid: "66489241"
 
 - 형식을 COM 가져오기 형식으로 지정합니다. <xref:System.Runtime.InteropServices.ComImportAttribute> 특성이 있는 인터페이스는 COM 가져오기 형식입니다. 인터페이스, 구조체, 열거형 또는 대리자가 정의되어 있는 어셈블리에 <xref:System.Runtime.InteropServices.ImportedFromTypeLibAttribute> 특성이 있는 경우 해당 항목은 COM 가져오기 형식입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Type.IsEquivalentTo%2A>
 - [관리 코드에서 COM 형식 사용](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))

@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: dbb1c4dc-269a-459b-ab1d-6c70788782ce
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e2a083f46f24d6f3f24c63dd2415b85f975cfa29
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 27f991c12ea7786d6146b5731848ca5ad3a37e21
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912858"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125367"
 ---
 # <a name="icordebugcontroller-interface"></a>ICorDebugController 인터페이스
 
@@ -29,7 +27,7 @@ ms.locfileid: "69912858"
   
 ## <a name="methods"></a>메서드  
   
-|메서드|Description|  
+|메서드|설명|  
 |------------|-----------------|  
 |`ICorDebugController::CanCommitChanges`|이 메서드는 사용되지 않습니다.|  
 |`ICorDebugController::CommitChanges`|이 메서드는 사용되지 않습니다.|  
@@ -42,21 +40,21 @@ ms.locfileid: "69912858"
 |[Stop 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-stop-method.md)|프로세스에서 관리 코드를 실행 하는 모든 스레드에서 협조적 중지를 수행 합니다.|  
 |[Terminate 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-terminate-method.md)|지정 된 종료 코드를 사용 하 여 프로세스를 종료 합니다.|  
   
-## <a name="remarks"></a>설명  
- 에서 `ICorDebugController` 프로세스를 제어 하는 경우 범위에 프로세스의 모든 스레드가 포함 됩니다. 가 `ICorDebugController` 응용 프로그램 도메인을 제어 하는 경우 해당 특정 응용 프로그램 도메인의 스레드만 범위에 포함 됩니다.  
+## <a name="remarks"></a>주의  
+ `ICorDebugController` 프로세스를 제어 하는 경우 프로세스의 모든 스레드가 범위에 포함 됩니다. `ICorDebugController` 응용 프로그램 도메인을 제어 하는 경우 해당 특정 응용 프로그램 도메인의 스레드만 범위에 포함 됩니다.  
   
 > [!NOTE]
 > 이 인터페이스는 크로스 시스템 또는 크로스 프로세스 원격 호출을 지원하지 않습니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
- **라이브러리** CorGuids.lib  
+ **라이브러리:** CorGuids.lib  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

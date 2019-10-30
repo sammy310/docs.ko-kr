@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8edad30c-30ff-4bee-813c-75525a82fc93
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7bd983a41307a4244b5426b8f6b997569cd631e9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9bb257a3d84d5022b9ae13c89a34572485d3033b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67770503"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126953"
 ---
 # <a name="iapartmentcallbackdocallback-method"></a>IApartmentCallback::DoCallback 메서드
-아파트 내의 지정된 된 함수를 실행합니다.  
+아파트 내에서 지정 된 함수를 실행 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,20 +36,20 @@ HRESULT _stdcall DoCallback(
   
 ## <a name="parameters"></a>매개 변수  
  `pFunc`  
- [in] 아파트 내에서 실행 되는 함수에 대 한 포인터입니다.  
+ 진행 아파트 내에서 실행 되는 함수에 대 한 포인터입니다.  
   
  `pData`  
- [in] 함수의 인수에 대 한 포인터입니다.  
+ 진행 함수 인수에 대 한 포인터입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** MSCorEE.h  
+ **헤더:** Mscoree.dll  
   
- **라이브러리:** MSCorEE.dll에 리소스로 포함  
+ **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [IApartmentCallback 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iapartmentcallback-interface.md)

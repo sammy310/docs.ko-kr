@@ -6,24 +6,22 @@ helpviewer_keywords:
 - unmanaged enumerations [.NET Framework], debugging
 - enumerations [.NET Framework debugging]
 ms.assetid: 3af9f584-f1b4-4154-aeaa-8fce7c9f8b50
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5edd6dfb3dac05ce4614c43949f2ec4c19b5f742
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7948b78da1db5267ce53364af1e4a26ff73801e0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698514"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124326"
 ---
 # <a name="debugging-enumerations"></a>디버깅 열거형
 이 섹션에서는 디버깅 API에서 사용하는 관리되지 않는 열거형에 대해 설명합니다.  
   
-## <a name="in-this-section"></a>섹션 내용  
+## <a name="in-this-section"></a>단원 내용  
  [CLR_DEBUGGING_PROCESS_FLAGS 열거형](../../../../docs/framework/unmanaged-api/debugging/clr-debugging-process-flags-enumeration.md)  
- 사용 되는 값을 제공 합니다 [iclrdebugging:: Openvirtualprocess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md) 메서드.  
+ [ICLRDebugging:: OpenVirtualProcess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md) 메서드에서 사용 하는 값을 제공 합니다.  
   
  [CLRDataEnumMemoryFlags 열거형](../../../../docs/framework/unmanaged-api/debugging/clrdataenummemoryflags-enumeration.md)  
- 메모리 영역에 대 한 호출을 나타내는 합니다 [iclrdataenummemoryregions:: Enummemoryregions](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md) 메서드를 포함 해야 합니다.  
+ [ICLRDataEnumMemoryRegions:: EnumMemoryRegions](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md) 메서드에 대 한 호출에 포함 되어야 하는 메모리 영역을 나타냅니다.  
   
  [COR_PUB_ENUMPROCESS 열거형](../../../../docs/framework/unmanaged-api/debugging/cor-pub-enumprocess-enumeration.md)  
  열거할 프로세스 형식을 식별합니다.  
@@ -41,16 +39,16 @@ ms.locfileid: "61698514"
  내보낸 함수가 관리 코드를 호출하는 이유를 설명합니다.  
   
  CorDebugCreateProcessFlags  
- 에 대 한 호출에서 사용할 수 있는 추가 디버깅 옵션을 제공 합니다 [icordebug:: Createprocess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md) 메서드.  
+ [ICorDebug:: CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md) 메서드 호출에 사용할 수 있는 추가 디버깅 옵션을 제공 합니다.  
   
  [CorDebugDebugEventKind 열거형](../../../../docs/framework/unmanaged-api/debugging/cordebugdebugeventkind-enumeration.md)  
- 정보를 가져올 디코딩되는 이벤트의 형식을 나타내는 합니다 [DecodeEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md) 메서드.  
+ [DecodeEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md) 메서드가 정보를 디코딩하는 이벤트의 유형을 나타냅니다.  
   
  [CorDebugDecodeEventFlagsWindows 열거형](../../../../docs/framework/unmanaged-api/debugging/cordebugdecodeeventflagswindows-enumeration.md)  
  Windows 플랫폼에서 디버그 이벤트에 대한 추가 정보를 제공합니다.  
   
  CorDebugExceptionCallbackType  
- 수행 되는 콜백의 형식을 나타냅니다는 [ICorDebugManagedCallback2::Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md) 이벤트입니다.  
+ [ICorDebugManagedCallback2:: Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md) 이벤트에서 생성 된 콜백의 형식을 나타냅니다.  
   
  [CorDebugExceptionFlags 열거형](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionflags-enumeration.md)  
  예외에 대한 추가 정보를 제공합니다.  
@@ -83,7 +81,7 @@ ms.locfileid: "61698514"
  관리되는 JIT(Just-In-Time) 컴파일러의 동작에 영향을 주는 값을 포함합니다.  
   
  [CorDebugJITCompilerFlagsDeprecated 열거형](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflagsdeprecated-enumeration.md)  
- 사용되지 않습니다. 사용 합니다 `CORDEBUG_JIT_DEFAULT` 의 멤버는 [CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) 열거형 대신 합니다.  
+ 사용되지 않습니다. 대신 [CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) 열거형의 `CORDEBUG_JIT_DEFAULT` 멤버를 사용 합니다.  
   
  CorDebugMappingResult  
  IP(명령 포인터)의 값을 가져온 방법에 대한 세부 정보를 제공합니다.  
@@ -95,7 +93,7 @@ ms.locfileid: "61698514"
  디버거가 네이티브 이미지 캐시에서 네이티브(NGen) 이미지를 로드하는지 여부를 결정하는 값을 제공합니다.  
   
  [CorDebugPlatform 열거형](../../../../docs/framework/unmanaged-api/debugging/cordebugplatform-enumeration.md)  
- 사용 되는 대상 플랫폼 값을 제공 합니다 [icordebugdatatarget:: Getplatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) 메서드.  
+ [ICorDebugDataTarget:: GetPlatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) 메서드에서 사용 하는 대상 플랫폼 값을 제공 합니다.  
   
  [CorDebugRecordFormat 열거형](../../../../docs/framework/unmanaged-api/debugging/cordebugrecordformat-enumeration.md)  
  네이티브 예외 디버그 이벤트에 대한 정보가 포함된 바이트 배열의 데이터 형식을 설명합니다.  
@@ -134,12 +132,12 @@ ms.locfileid: "61698514"
  디버깅/추적 스위치에 대해 수행된 작업을 나타냅니다.  
   
  [VariableLocationType 열거형](../../../../docs/framework/unmanaged-api/debugging/variablelocationtype-enumeration.md)  
- 변수의 네이티브 위치 유형을 나타냅니다.  
+ 변수의 기본 위치 유형을 나타냅니다.  
   
  [WriteableMetadataUpdateMode 열거형](../../../../docs/framework/unmanaged-api/debugging/writeablemetadataupdatemode-enumeration.md)  
  메타데이터에 대한 메모리 내 업데이트가 디버거에 표시되는지 여부를 지정하는 값을 제공합니다. 
 
- [ClrDataSourceType 열거형](../../../../docs/framework/unmanaged-api/debugging/clrdatasourcetype-enumeration.md) CLRDATA_IL_ADDRESS_MAP 구조에서 사용 되는 값을 제공 합니다.
+ [ClrDataSourceType 열거형](../../../../docs/framework/unmanaged-api/debugging/clrdatasourcetype-enumeration.md) CLRDATA_IL_ADDRESS_MAP 구조체에서 사용 되는 값을 제공 합니다.
 
 ## <a name="related-sections"></a>관련 단원  
  [디버깅 Coclass](../../../../docs/framework/unmanaged-api/debugging/debugging-coclasses.md)  

@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: cc7b0e5b-48c3-4509-8ebb-611ddb1f7ec2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4244ef04d6789b7c17ccc8330cb0c26a6c9f3866
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 295deeec2e8eb42ccaa4d0cfb8b08b32438d047c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765556"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120247"
 ---
 # <a name="iclrruntimeinfogetinterface-method"></a>ICLRRuntimeInfo::GetInterface 메서드
-현재 프로세스에 CLR을 로드 하 고 같은 런타임 인터페이스 포인터를 반환 [ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)하십시오 [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md), 및 [IMetaDataDispenserEx](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)합니다.  
+CLR을 현재 프로세스로 로드 하 고 [ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md), [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)및 [IMetaDataDispenserEx](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)와 같은 런타임 인터페이스 포인터를 반환 합니다.  
   
- 이 메서드를 모두 대체 합니다 `CorBindTo`*의 함수는 [사용 되지 않는 CLR 호스팅 함수](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md) 섹션입니다.  
+ 이 메서드는 [사용 되지 않는 CLR 호스팅 함수](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md) 섹션의 모든 `CorBindTo`* 함수를 대체 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,13 +38,13 @@ HRESULT GetInterface(
   
 ## <a name="parameters"></a>매개 변수  
  `rclsid`  
- [in] Coclass의 CLSID 인터페이스입니다.  
+ 진행 Coclass의 CLSID 인터페이스입니다.  
   
  `riid`  
- [in] 요청 된 IID `rclsid` 인터페이스입니다.  
+ 진행 요청 된 `rclsid` 인터페이스의 IID입니다.  
   
  `ppUnk`  
- [out] 쿼리 인터페이스에 대 한 포인터입니다.  
+ 제한이 쿼리 된 인터페이스에 대 한 포인터입니다.  
   
 ## <a name="return-value"></a>반환 값  
  이 메서드는 다음과 같은 특정 HRESULT뿐만 아니라 메서드 오류를 나타내는 HRESULT 오류도 반환합니다.  
@@ -55,13 +53,13 @@ HRESULT GetInterface(
 |-------------|-----------------|  
 |S_OK|메서드가 완료되었습니다.|  
 |E_POINTER|`ppUnk`가 null입니다.|  
-|E_OUTOFMEMORY|요청을 처리할 수 있는 메모리가 부족 합니다.|  
-|CLR_E_SHIM_LEGACYRUNTIMEALREADYBOUND|다양 한 런타임 이미 레거시 CLR 버전 2 정품 인증 정책에 바인딩 되었습니다.|  
+|E_OUTOFMEMORY|메모리가 부족 하 여 요청을 처리할 수 없습니다.|  
+|CLR_E_SHIM_LEGACYRUNTIMEALREADYBOUND|다른 런타임이 이미 레거시 CLR 버전 2 활성화 정책에 바인딩되어 있습니다.|  
   
-## <a name="remarks"></a>설명  
- 이 메서드를 사용 하면 CLR을 로드할 수는 있지만 초기화 되지 않았습니다.  
+## <a name="remarks"></a>주의  
+ 이 메서드로 인해 CLR이 로드 되지만 초기화 되지는 않습니다.  
   
- 다음 테이블에 대 한 지원 되는 조합을 보여 줍니다 `rclsid` 고 `riid`입니다.  
+ 다음 표에서는 `rclsid` 및 `riid`에 대해 지원 되는 조합을 보여 줍니다.  
   
 |`rclsid`|`riid`|  
 |--------------|------------|  
@@ -75,15 +73,15 @@ HRESULT GetInterface(
 |CLSID_CLRStrongName|IID_ICLRStrongName|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** MetaHost.h  
+ **헤더:** MetaHost  
   
- **라이브러리:** MSCorEE.dll에 리소스로 포함  
+ **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ICLRRuntimeInfo 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
 - [호스팅 인터페이스](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

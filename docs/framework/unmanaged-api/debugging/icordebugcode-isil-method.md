@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 132ef8cc-d938-43f3-b8f2-e3b97c0ceb33
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1b7cbadbd1494d5e4d1488dd12296f4f90890127
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 77e55c4c3644ac4bd76f5c92152f4ee86cf5fa9a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395493"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125559"
 ---
 # <a name="icordebugcodeisil-method"></a>ICorDebugCode::IsIL 메서드
 
@@ -39,7 +37,7 @@ HRESULT IsIL (
 ## <a name="parameters"></a>매개 변수
 
 `pbIL`  
-[out] `ICorDebugCode` @no__t MSIL로 컴파일된 코드를 나타내는 경우 0입니다. 그렇지 않으면-2를 @no__t 합니다.
+[out]이 `ICorDebugCode` MSIL로 컴파일된 코드를 나타내는 경우 `true` 합니다. 그렇지 않으면 `false`합니다.
 
 ## <a name="requirements"></a>요구 사항
 

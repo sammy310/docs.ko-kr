@@ -14,14 +14,12 @@ helpviewer_keywords:
 - CloneEnumWbemClassObject function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1605314f94fd82d2a2cd7be105dde9e273f607bc
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 9d2442161aaa83693a33f9efc230c09b8c4426e2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798703"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128728"
 ---
 # <a name="cloneenumwbemclassobject-function"></a>CloneEnumWbemClassObject 함수
 열거형의 현재 위치를 유지하면서 열거자의 논리적 복사본을 만듭니다.
@@ -76,7 +74,7 @@ HRESULT CloneEnumWbemClassObject (
 | `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | 현재 프로세스와 WMI 간의 RPC (원격 프로시저 호출) 링크에 오류가 발생 했습니다. |
 | `WBEM_S_NO_ERROR` | 0 | 함수 호출에 성공 했습니다.  |
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 이 함수는 [IEnumWbemClassObject:: Clone](/windows/desktop/api/wbemcli/nf-wbemcli-ienumwbemclassobject-clone) 메서드에 대 한 호출을 래핑합니다.
 
@@ -89,12 +87,12 @@ HRESULT CloneEnumWbemClassObject (
 예제를 보려면 [IEnumWbemClassObject:: Clone](/windows/desktop/api/wbemcli/nf-wbemcli-ienumwbemclassobject-clone) 메서드를 참조 하세요.
 
 ## <a name="requirements"></a>요구 사항
- **플랫폼** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하십시오.
+ **플랫폼:** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.
 
- **헤더:** WMINet_Utils.idl
+ **헤더:** WMINet_Utils
 
  **.NET Framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [WMI 및 성능 카운터 (관리 되지 않는 API 참조)](index.md)

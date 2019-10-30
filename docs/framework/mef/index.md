@@ -8,14 +8,12 @@ helpviewer_keywords:
 - Managed Extensibility Framework, overview
 - MEF, overview
 ms.assetid: 6c61b4ec-c6df-4651-80f1-4854f8b14dde
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6fc66837dc31dc1697bcb4ad6dddfb57bfb99bd4
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: da73200513d451ee391fb6dd9c214a5b8ca771c6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68434090"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126342"
 ---
 # <a name="managed-extensibility-framework-mef"></a>MEF(Managed Extensibility Framework)
 
@@ -64,7 +62,7 @@ MEF(Managed Extensibility Framework)는 확장 가능한 경량 애플리케이�
 
 ## <a name="simplecalculator-an-example-application"></a>SimpleCalculator: 예제 애플리케이션
 
-MEF에서 수행할 수 있는 작업을 확인하는 가장 간단한 방법은 간단한 MEF 애플리케이션을 빌드하는 것입니다. 이 예제에서는 SimpleCalculator라는 매우 간단한 계산기를 빌드합니다. SimpleCalculator에서는 "5+3" 또는 "6-2"와 같은 형식의 기본적인 산술 명령을 수락하고 정답을 반환하는 콘솔 응용 프로그램을 만들려고 합니다. MEF를 사용하면 애플리케이션 코드를 변경하지 않고도 새 연산자를 추가할 수 있습니다.
+MEF에서 수행할 수 있는 작업을 확인하는 가장 간단한 방법은 간단한 MEF 애플리케이션을 빌드하는 것입니다. 이 예제에서는 SimpleCalculator라는 매우 간단한 계산기를 빌드합니다. SimpleCalculator에서는 &quot;5+3&quot; 또는 &quot;6-2&quot;와 같은 형식의 기본적인 산술 명령을 수락하고 정답을 반환하는 콘솔 애플리케이션을 만들려고 합니다. MEF를 사용하면 애플리케이션 코드를 변경하지 않고도 새 연산자를 추가할 수 있습니다.
 
 이 예제의 전체 코드를 다운로드하려면 [SimpleCalculator sample](https://code.msdn.microsoft.com/windowsdesktop/Simple-Calculator-MEF-1152654e)(SimpleCalculator 샘플)을 참조하세요.
 

@@ -1,5 +1,5 @@
 ---
-title: '방법: HRESULT 및 예외 매핑'
+title: '방법: Hresult 및 예외 매핑'
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -11,16 +11,14 @@ helpviewer_keywords:
 - COM interop, HRESULTs
 - COM interop, exceptions
 ms.assetid: 610b364b-2761-429d-9c4a-afbc3e66f1b9
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 60173739842835a705a72da4e7ab442cacfc08d2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 13dcca5f35750ad3e8bd6ea4f6dd443fe9a8ee94
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306549"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123875"
 ---
-# <a name="how-to-map-hresults-and-exceptions"></a>방법: HRESULT 및 예외 매핑
+# <a name="how-to-map-hresults-and-exceptions"></a>방법: Hresult 및 예외 매핑
 COM 메서드는 HRESULT를 반환하여 오류를 보고하고, .NET 메서드는 예외를 throw하여 오류를 보고합니다. 런타임은 두 항목 간의 전환을 처리합니다. .NET Framework의 각 예외 클래스는 HRESULT에 매핑됩니다.  
   
  사용자 정의 예외 클래스는 적절한 모든 HRESULT를 지정할 수 있습니다. 이러한 예외 클래스는 예외 개체에서 **HResult** 필드를 설정하여 예외 생성 시 반환될 HRESULT를 동적으로 변경할 수 있습니다. 예외에 대한 추가 정보는 관리되지 않는 프로세스의 .NET 개체에서 구현되는 **IErrorInfo** 인터페이스를 통해 클라이언트에 제공됩니다.  
@@ -136,13 +134,13 @@ CMyClass::MethodThatThrows
 |**HelpLink**|**IErrorInfo->HelpContext**가 0이 아니면 **IErrorInfo->GetHelpFile**와 “#” 및 **IErrorInfo->GetHelpContext**를 연결하여 문자열을 구성합니다. 이외의 경우에는 **IErrorInfo->GetHelpFile**에서 문자열이 반환됩니다.|  
 |**InnerException**|항상 null 참조(Visual Basic의 경우 **Nothing**).|  
 |**메시지**|**IErrorInfo->GetDescription**에서 반환된 문자열.|  
-|**소스**|**IErrorInfo->GetSource**에서 반환된 문자열.|  
+|**Source**|**IErrorInfo->GetSource**에서 반환된 문자열.|  
 |**StackTrace**|스택 추적입니다.|  
 |**TargetSite**|실패한 HRESULT를 반환한 메서드의 이름.|  
   
  **Message**, **Source** 및 **StackTrace**와 같은 예외 필드는 **StackOverflowException**에 사용할 수 없습니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [고급 COM 상호 운용성](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))
 - [예외](../../standard/exceptions/index.md)

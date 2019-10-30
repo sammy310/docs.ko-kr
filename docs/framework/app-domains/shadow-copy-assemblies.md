@@ -6,14 +6,12 @@ helpviewer_keywords:
 - application domains, shadow copying assemblies
 - shadow copying assemblies
 ms.assetid: de8b8759-fca7-4260-896b-5a4973157672
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: df1c86f2d75b0046af851585e943e13d668d8c55
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 40a1b5062d45b7b540af7058b82b77c664070d2e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053077"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119774"
 ---
 # <a name="shadow-copying-assemblies"></a>어셈블리 섀도 복사
 
@@ -84,7 +82,7 @@ ms.locfileid: "71053077"
 
 <xref:System.AppDomain> 클래스에는 애플리케이션 도메인에서 섀도 복사를 제어하는 데 사용될 수 있는 <xref:System.AppDomain.SetShadowCopyFiles%2A> 및 <xref:System.AppDomain.ClearShadowCopyPath%2A>와 같은 여러 가지 메서드가 있지만 이들 메서드는 .NET Framework 버전 2.0에서 사용되지 않는 것으로 표시되었습니다. 섀도 복사를 사용하도록 애플리케이션 도메인을 구성할 경우 <xref:System.AppDomainSetup> 클래스의 속성을 사용하는 것이 좋습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.AppDomainSetup.ShadowCopyFiles%2A?displayProperty=nameWithType>
 - <xref:System.AppDomainSetup.CachePath%2A?displayProperty=nameWithType>

@@ -12,14 +12,12 @@ helpviewer_keywords:
 - assemblies [.NET Framework], reflection-only loader context
 - reflection-only loader context
 ms.assetid: 9818b660-52f5-423d-a9af-e75163aa7068
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8e22dcf7db5ec2c78a79e574604e0b39b4962727
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
-ms.translationtype: HT
+ms.openlocfilehash: cac6b3b3adf070ad6070e5c5941653f20dedd907
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971851"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130112"
 ---
 # <a name="how-to-load-assemblies-into-the-reflection-only-context"></a>방법: 리플렉션 전용 컨텍스트에 어셈블리 로드
 
@@ -41,7 +39,7 @@ ms.locfileid: "68971851"
     > [!NOTE]
     > 어셈블리에 또는 해당 내용에 적용되는 특성은 어셈블리에서 정의되거나, 리플렉션 전용 컨텍스트에 로드된 다른 어셈블리에서 정의될 수 있습니다. 특성이 정의되어 있는 위치를 미리 확인할 수는 없습니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 다음 코드 예제에서는 리플렉션 전용 컨텍스트에 로드된 어셈블리에 적용된 특성을 검사하는 방법을 보여 줍니다.
 
@@ -54,7 +52,7 @@ ms.locfileid: "68971851"
 [!code-csharp[CustomAttributeData#1](../../../samples/snippets/csharp/VS_Snippets_CLR/CustomAttributeData/CS/source.cs#1)]
 [!code-vb[CustomAttributeData#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CustomAttributeData/VB/source.vb#1)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A>
 - <xref:System.Reflection.Assembly.ReflectionOnly%2A>
