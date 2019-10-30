@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 300af43f-b3eb-4ce5-9ead-30dbfc5fbcc3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0d9c44420edfa4bd2d159f8044e72e5e913401f2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d0f3f6206a215b0296f6e183f48d69d8d979a02d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766324"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73095817"
 ---
-# <a name="icordebugobjectvaluegetmanagedcopy-method"></a><span data-ttu-id="2eab6-102">ICorDebugObjectValue::GetManagedCopy 메서드</span><span class="sxs-lookup"><span data-stu-id="2eab6-102">ICorDebugObjectValue::GetManagedCopy Method</span></span>
-<span data-ttu-id="2eab6-103">`GetManagedCopy`는 사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="2eab6-103">`GetManagedCopy` is obsolete.</span></span> <span data-ttu-id="2eab6-104">이 메서드를 호출 하지 마세요.</span><span class="sxs-lookup"><span data-stu-id="2eab6-104">Do not call this method.</span></span>  
+# <a name="icordebugobjectvaluegetmanagedcopy-method"></a><span data-ttu-id="bad11-102">ICorDebugObjectValue::GetManagedCopy 메서드</span><span class="sxs-lookup"><span data-stu-id="bad11-102">ICorDebugObjectValue::GetManagedCopy Method</span></span>
+<span data-ttu-id="bad11-103">`GetManagedCopy`는 사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="bad11-103">`GetManagedCopy` is obsolete.</span></span> <span data-ttu-id="bad11-104">이 메서드를 호출 하지 마십시오.</span><span class="sxs-lookup"><span data-stu-id="bad11-104">Do not call this method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2eab6-105">구문</span><span class="sxs-lookup"><span data-stu-id="2eab6-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="bad11-105">구문</span><span class="sxs-lookup"><span data-stu-id="bad11-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetManagedCopy (  
@@ -35,7 +33,7 @@ HRESULT GetManagedCopy (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="2eab6-106">요구 사항</span><span class="sxs-lookup"><span data-stu-id="2eab6-106">Requirements</span></span>  
- <span data-ttu-id="2eab6-107">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="2eab6-107">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="bad11-106">요구 사항</span><span class="sxs-lookup"><span data-stu-id="bad11-106">Requirements</span></span>  
+ <span data-ttu-id="bad11-107">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="bad11-107">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2eab6-108">참고자료</span><span class="sxs-lookup"><span data-stu-id="2eab6-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bad11-108">참조</span><span class="sxs-lookup"><span data-stu-id="bad11-108">See also</span></span>

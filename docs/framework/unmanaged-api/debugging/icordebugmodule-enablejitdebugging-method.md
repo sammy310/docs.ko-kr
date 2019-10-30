@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 0a65e2a4-5bb6-496c-ae6f-40474426b5a6
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8aeb6ed448539db2720fee0d42cfcc344fd3bbf7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: da532ee1b5909a68bedbb9e6f6c96333e88002a8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67762768"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73109721"
 ---
-# <a name="icordebugmoduleenablejitdebugging-method"></a><span data-ttu-id="5f82e-102">ICorDebugModule::EnableJITDebugging 메서드</span><span class="sxs-lookup"><span data-stu-id="5f82e-102">ICorDebugModule::EnableJITDebugging Method</span></span>
-<span data-ttu-id="5f82e-103">Just-in-time (JIT) 컴파일러가이 모듈 내에서 메서드에 대 한 디버깅 정보를 유지할지 여부를 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="5f82e-103">Controls whether the just-in-time (JIT) compiler preserves debugging information for methods within this module.</span></span>  
+# <a name="icordebugmoduleenablejitdebugging-method"></a><span data-ttu-id="c9bfd-102">ICorDebugModule::EnableJITDebugging 메서드</span><span class="sxs-lookup"><span data-stu-id="c9bfd-102">ICorDebugModule::EnableJITDebugging Method</span></span>
+<span data-ttu-id="c9bfd-103">JIT (just-in-time) 컴파일러에서이 모듈의 메서드에 대 한 디버깅 정보를 유지할지 여부를 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="c9bfd-103">Controls whether the just-in-time (JIT) compiler preserves debugging information for methods within this module.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5f82e-104">구문</span><span class="sxs-lookup"><span data-stu-id="5f82e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c9bfd-104">구문</span><span class="sxs-lookup"><span data-stu-id="c9bfd-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT EnableJITDebugging(  
@@ -36,21 +34,21 @@ HRESULT EnableJITDebugging(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="5f82e-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="5f82e-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c9bfd-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="c9bfd-105">Parameters</span></span>  
  `bTrackJITInfo`  
- <span data-ttu-id="5f82e-106">[in] 이 값을 설정 `true` 는 MSIL (intermediate language) 버전의 Microsoft 및이 모듈에서 각 메서드의 JIT 컴파일된 버전 간의 매핑 정보를 유지 하기 위해 JIT 컴파일러를 사용 하도록 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="5f82e-106">[in] Set this value to `true` to enable the JIT compiler to preserve mapping information between the Microsoft intermediate language (MSIL) version and the JIT-compiled version of each method in this module.</span></span>  
+ <span data-ttu-id="c9bfd-106">진행 JIT 컴파일러에서이 모듈의 각 메서드에 대 한 MSIL (Microsoft 중간 언어) 버전과 JIT 컴파일된 버전 사이의 매핑 정보를 유지할 수 있도록 하려면이 값을 `true`로 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="c9bfd-106">[in] Set this value to `true` to enable the JIT compiler to preserve mapping information between the Microsoft intermediate language (MSIL) version and the JIT-compiled version of each method in this module.</span></span>  
   
  `bAllowJitOpts`  
- <span data-ttu-id="5f82e-107">[in] 이 값을 설정 `true` 디버깅에 대 한 특정 관련 JIT 최적화를 사용 하 여 코드를 생성 하는 JIT 컴파일러를 사용 하도록 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="5f82e-107">[in] Set this value to `true` to enable the JIT compiler to generate code with certain JIT-specific optimizations for debugging.</span></span>  
+ <span data-ttu-id="c9bfd-107">진행 JIT 컴파일러에서 디버깅을 위해 특정 JIT 관련 최적화를 사용 하 여 코드를 생성할 수 있도록 하려면이 값을 `true`로 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="c9bfd-107">[in] Set this value to `true` to enable the JIT compiler to generate code with certain JIT-specific optimizations for debugging.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="5f82e-108">설명</span><span class="sxs-lookup"><span data-stu-id="5f82e-108">Remarks</span></span>  
- <span data-ttu-id="5f82e-109">JIT 디버깅이 디버거가 활성 상태일 때 로드 되는 모든 모듈에 대해 기본적으로 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="5f82e-109">JIT debugging is enabled by default for all modules that are loaded when the debugger is active.</span></span> <span data-ttu-id="5f82e-110">프로그래밍 방식으로 사용 하도록 설정 하거나 사용 하지 않도록 설정 된 전역 설정을 재정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="5f82e-110">Programmatically enabling or disabling the settings overrides global settings.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c9bfd-108">주의</span><span class="sxs-lookup"><span data-stu-id="c9bfd-108">Remarks</span></span>  
+ <span data-ttu-id="c9bfd-109">JIT 디버깅은 디버거가 활성 상태일 때 로드 되는 모든 모듈에 대해 기본적으로 사용 하도록 설정 됩니다.</span><span class="sxs-lookup"><span data-stu-id="c9bfd-109">JIT debugging is enabled by default for all modules that are loaded when the debugger is active.</span></span> <span data-ttu-id="c9bfd-110">프로그래밍 방식으로 설정을 사용 하거나 사용 하지 않도록 설정 하면 전역 설정이 재정의 됩니다.</span><span class="sxs-lookup"><span data-stu-id="c9bfd-110">Programmatically enabling or disabling the settings overrides global settings.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5f82e-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="5f82e-111">Requirements</span></span>  
- <span data-ttu-id="5f82e-112">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="5f82e-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c9bfd-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="c9bfd-111">Requirements</span></span>  
+ <span data-ttu-id="c9bfd-112">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="c9bfd-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5f82e-113">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="5f82e-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="c9bfd-113">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c9bfd-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="5f82e-114">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5f82e-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c9bfd-114">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c9bfd-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="5f82e-115">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5f82e-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+ <span data-ttu-id="c9bfd-115">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c9bfd-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
