@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: e0eed5a8-fa6d-4818-bd00-7babcea30325
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f37fab4d877ae804996f46290e3576cecc5a25ca
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 39f5c1813b08f4d72c610820b1434e29eb4aec8e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767619"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121270"
 ---
-# <a name="icordebugprocess5gettypefortypeid-method"></a><span data-ttu-id="c3d9c-102">ICorDebugProcess5::GetTypeForTypeID 메서드</span><span class="sxs-lookup"><span data-stu-id="c3d9c-102">ICorDebugProcess5::GetTypeForTypeID Method</span></span>
-<span data-ttu-id="c3d9c-103">형식 식별자를 ICorDebugType 값으로 변환 합니다.</span><span class="sxs-lookup"><span data-stu-id="c3d9c-103">Converts a type identifier to an ICorDebugType value.</span></span>  
+# <a name="icordebugprocess5gettypefortypeid-method"></a><span data-ttu-id="8d0c7-102">ICorDebugProcess5::GetTypeForTypeID 메서드</span><span class="sxs-lookup"><span data-stu-id="8d0c7-102">ICorDebugProcess5::GetTypeForTypeID Method</span></span>
+<span data-ttu-id="8d0c7-103">형식 식별자를 ICorDebugType 값으로 변환 합니다.</span><span class="sxs-lookup"><span data-stu-id="8d0c7-103">Converts a type identifier to an ICorDebugType value.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c3d9c-104">구문</span><span class="sxs-lookup"><span data-stu-id="c3d9c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8d0c7-104">구문</span><span class="sxs-lookup"><span data-stu-id="8d0c7-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetTypeForTypeID(  
@@ -36,26 +34,26 @@ HRESULT GetTypeForTypeID(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c3d9c-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="c3d9c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="8d0c7-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="8d0c7-105">Parameters</span></span>  
  `id`  
- <span data-ttu-id="c3d9c-106">[in] 형식 식별자입니다.</span><span class="sxs-lookup"><span data-stu-id="c3d9c-106">[in] The type identifier.</span></span>  
+ <span data-ttu-id="8d0c7-106">진행 유형 식별자입니다.</span><span class="sxs-lookup"><span data-stu-id="8d0c7-106">[in] The type identifier.</span></span>  
   
  `ppType`  
- <span data-ttu-id="c3d9c-107">[out] ICorDebugType 개체의 주소에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="c3d9c-107">[out] A pointer to the address of an ICorDebugType object.</span></span>  
+ <span data-ttu-id="8d0c7-107">제한이 ICorDebugType 개체의 주소에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="8d0c7-107">[out] A pointer to the address of an ICorDebugType object.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="c3d9c-108">설명</span><span class="sxs-lookup"><span data-stu-id="c3d9c-108">Remarks</span></span>  
- <span data-ttu-id="c3d9c-109">경우에 따라 형식 식별자를 반환 하는 메서드는 null을 반환 `COR_TYPEID` 값입니다.</span><span class="sxs-lookup"><span data-stu-id="c3d9c-109">In some cases, methods that return a type identifier may return a null `COR_TYPEID` value.</span></span> <span data-ttu-id="c3d9c-110">이 값으로 전달 될 합니다 `id` 인수를 `GetTypeForTypeID` 메서드는 실패 하 고 반환 `E_FAIL`.</span><span class="sxs-lookup"><span data-stu-id="c3d9c-110">If this value is passed as the `id` argument, the `GetTypeForTypeID` method will fail and return `E_FAIL`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8d0c7-108">주의</span><span class="sxs-lookup"><span data-stu-id="8d0c7-108">Remarks</span></span>  
+ <span data-ttu-id="8d0c7-109">경우에 따라 형식 식별자를 반환 하는 메서드가 null `COR_TYPEID` 값을 반환할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8d0c7-109">In some cases, methods that return a type identifier may return a null `COR_TYPEID` value.</span></span> <span data-ttu-id="8d0c7-110">이 값이 `id` 인수로 전달 되 면 `GetTypeForTypeID` 메서드가 실패 하 고 `E_FAIL`반환 됩니다.</span><span class="sxs-lookup"><span data-stu-id="8d0c7-110">If this value is passed as the `id` argument, the `GetTypeForTypeID` method will fail and return `E_FAIL`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c3d9c-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="c3d9c-111">Requirements</span></span>  
- <span data-ttu-id="c3d9c-112">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="c3d9c-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8d0c7-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="8d0c7-111">Requirements</span></span>  
+ <span data-ttu-id="8d0c7-112">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="8d0c7-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c3d9c-113">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c3d9c-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="8d0c7-113">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="8d0c7-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="c3d9c-114">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c3d9c-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="8d0c7-114">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8d0c7-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="c3d9c-115">**.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c3d9c-115">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="8d0c7-115">**.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8d0c7-115">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c3d9c-116">참고자료</span><span class="sxs-lookup"><span data-stu-id="c3d9c-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8d0c7-116">참조</span><span class="sxs-lookup"><span data-stu-id="8d0c7-116">See also</span></span>
 
-- [<span data-ttu-id="c3d9c-117">ICorDebugProcess5 인터페이스</span><span class="sxs-lookup"><span data-stu-id="c3d9c-117">ICorDebugProcess5 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
-- [<span data-ttu-id="c3d9c-118">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="c3d9c-118">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="8d0c7-117">ICorDebugProcess5 인터페이스</span><span class="sxs-lookup"><span data-stu-id="8d0c7-117">ICorDebugProcess5 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
+- [<span data-ttu-id="8d0c7-118">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="8d0c7-118">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

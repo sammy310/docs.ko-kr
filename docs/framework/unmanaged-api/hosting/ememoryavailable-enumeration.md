@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 38e72a06-dbed-473b-a59b-7e0b3ea4f2af
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 76fc5f578e6da731ffd6406344d00cda8b57f493
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: aec3c5f140df7eab10ea2bfa33634a4d853adcb0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772402"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134299"
 ---
-# <a name="ememoryavailable-enumeration"></a><span data-ttu-id="c865b-102">EMemoryAvailable 열거형</span><span class="sxs-lookup"><span data-stu-id="c865b-102">EMemoryAvailable Enumeration</span></span>
-<span data-ttu-id="c865b-103">컴퓨터의 사용 가능한 실제 메모리의 크기를 나타내는 값을 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="c865b-103">Contains values that indicate the amount of free physical memory on the computer.</span></span> <span data-ttu-id="c865b-104">이러한 값을 이벤트에 메모리에서 반환 하는 상위 및 하위 논리적으로 매핑할는 `CreateMemoryResourceNotification` Windows api에서 함수입니다.</span><span class="sxs-lookup"><span data-stu-id="c865b-104">These values logically map to the events for high and low memory returned from the `CreateMemoryResourceNotification` function in the Windows API.</span></span>  
+# <a name="ememoryavailable-enumeration"></a><span data-ttu-id="aa03b-102">EMemoryAvailable 열거형</span><span class="sxs-lookup"><span data-stu-id="aa03b-102">EMemoryAvailable Enumeration</span></span>
+<span data-ttu-id="aa03b-103">컴퓨터에서 사용 가능한 실제 메모리의 양을 나타내는 값을 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="aa03b-103">Contains values that indicate the amount of free physical memory on the computer.</span></span> <span data-ttu-id="aa03b-104">이러한 값은 Windows API의 `CreateMemoryResourceNotification` 함수에서 반환 되는 높은 메모리와 낮은 메모리에 대 한 이벤트에 논리적으로 매핑됩니다.</span><span class="sxs-lookup"><span data-stu-id="aa03b-104">These values logically map to the events for high and low memory returned from the `CreateMemoryResourceNotification` function in the Windows API.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c865b-105">구문</span><span class="sxs-lookup"><span data-stu-id="c865b-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="aa03b-105">구문</span><span class="sxs-lookup"><span data-stu-id="aa03b-105">Syntax</span></span>  
   
 ```cpp  
 typedef enum {  
@@ -36,26 +34,26 @@ typedef enum {
 } EMemoryAvailable;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="c865b-106">멤버</span><span class="sxs-lookup"><span data-stu-id="c865b-106">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="aa03b-106">멤버</span><span class="sxs-lookup"><span data-stu-id="aa03b-106">Members</span></span>  
   
-|<span data-ttu-id="c865b-107">멤버</span><span class="sxs-lookup"><span data-stu-id="c865b-107">Member</span></span>|<span data-ttu-id="c865b-108">Description</span><span class="sxs-lookup"><span data-stu-id="c865b-108">Description</span></span>|  
+|<span data-ttu-id="aa03b-107">멤버</span><span class="sxs-lookup"><span data-stu-id="aa03b-107">Member</span></span>|<span data-ttu-id="aa03b-108">설명</span><span class="sxs-lookup"><span data-stu-id="aa03b-108">Description</span></span>|  
 |------------|-----------------|  
-|`eMemoryAvailableHigh`|<span data-ttu-id="c865b-109">다양 한 실제 메모리를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c865b-109">Plenty of physical memory is available.</span></span>|  
-|`eMemoryAvailableLow`|<span data-ttu-id="c865b-110">매우 작은 실제 메모리를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c865b-110">Very little physical memory is available.</span></span>|  
-|`eMemoryAvailableNeutral`|<span data-ttu-id="c865b-111">사용 가능한 실제 메모리를 보통 수준입니다.</span><span class="sxs-lookup"><span data-stu-id="c865b-111">The available physical memory is neutral.</span></span>|  
+|`eMemoryAvailableHigh`|<span data-ttu-id="aa03b-109">충분 한 실제 메모리를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="aa03b-109">Plenty of physical memory is available.</span></span>|  
+|`eMemoryAvailableLow`|<span data-ttu-id="aa03b-110">거의 실제 메모리를 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="aa03b-110">Very little physical memory is available.</span></span>|  
+|`eMemoryAvailableNeutral`|<span data-ttu-id="aa03b-111">사용 가능한 실제 메모리가 중립입니다.</span><span class="sxs-lookup"><span data-stu-id="aa03b-111">The available physical memory is neutral.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="c865b-112">설명</span><span class="sxs-lookup"><span data-stu-id="c865b-112">Remarks</span></span>  
- <span data-ttu-id="c865b-113">에 대 한 호출을 사용 하는 CLR (공용 언어 런타임)에서 호스트에서이 값은 전달 된 [iclrmemorynotificationcallback:: Onmemorynotification](../../../../docs/framework/unmanaged-api/hosting/iclrmemorynotificationcallback-onmemorynotification-method.md) 메서드.</span><span class="sxs-lookup"><span data-stu-id="c865b-113">This value is passed by the host to the common language runtime (CLR) by using a call to the [ICLRMemoryNotificationCallback::OnMemoryNotification](../../../../docs/framework/unmanaged-api/hosting/iclrmemorynotificationcallback-onmemorynotification-method.md) method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="aa03b-112">주의</span><span class="sxs-lookup"><span data-stu-id="aa03b-112">Remarks</span></span>  
+ <span data-ttu-id="aa03b-113">이 값은 [ICLRMemoryNotificationCallback:: OnMemoryNotification](../../../../docs/framework/unmanaged-api/hosting/iclrmemorynotificationcallback-onmemorynotification-method.md) 메서드를 호출 하 여 호스트에서 CLR (공용 언어 런타임)로 전달 됩니다.</span><span class="sxs-lookup"><span data-stu-id="aa03b-113">This value is passed by the host to the common language runtime (CLR) by using a call to the [ICLRMemoryNotificationCallback::OnMemoryNotification](../../../../docs/framework/unmanaged-api/hosting/iclrmemorynotificationcallback-onmemorynotification-method.md) method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c865b-114">요구 사항</span><span class="sxs-lookup"><span data-stu-id="c865b-114">Requirements</span></span>  
- <span data-ttu-id="c865b-115">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="c865b-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="aa03b-114">요구 사항</span><span class="sxs-lookup"><span data-stu-id="aa03b-114">Requirements</span></span>  
+ <span data-ttu-id="aa03b-115">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="aa03b-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c865b-116">**헤더:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="c865b-116">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="aa03b-116">**헤더:** Mscoree.dll</span><span class="sxs-lookup"><span data-stu-id="aa03b-116">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="c865b-117">**라이브러리:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="c865b-117">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="aa03b-117">**라이브러리:** Mscoree.dll</span><span class="sxs-lookup"><span data-stu-id="aa03b-117">**Library:** MSCorEE.dll</span></span>  
   
- <span data-ttu-id="c865b-118">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c865b-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="aa03b-118">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="aa03b-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c865b-119">참고자료</span><span class="sxs-lookup"><span data-stu-id="c865b-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="aa03b-119">참조</span><span class="sxs-lookup"><span data-stu-id="aa03b-119">See also</span></span>
 
-- [<span data-ttu-id="c865b-120">호스팅 열거형</span><span class="sxs-lookup"><span data-stu-id="c865b-120">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [<span data-ttu-id="aa03b-120">호스팅 열거형</span><span class="sxs-lookup"><span data-stu-id="aa03b-120">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

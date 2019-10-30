@@ -15,24 +15,22 @@ helpviewer_keywords:
 ms.assetid: 3002f051-7aaa-4669-9314-cbc65b3a1772
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7771691950fac34b30a804d507688deaa0548314
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5389082f60a97d4da97bfce1c121a9e983b9ae79
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766750"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126849"
 ---
-# <a name="icatalogservicesautodone-method"></a><span data-ttu-id="1a141-102">ICatalogServices::Autodone 메서드</span><span class="sxs-lookup"><span data-stu-id="1a141-102">ICatalogServices::Autodone Method</span></span>
-<span data-ttu-id="1a141-103">이 메서드는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="1a141-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
+# <a name="icatalogservicesautodone-method"></a><span data-ttu-id="804fd-102">ICatalogServices::Autodone 메서드</span><span class="sxs-lookup"><span data-stu-id="804fd-102">ICatalogServices::Autodone Method</span></span>
+<span data-ttu-id="804fd-103">이 메서드는 .NET Framework 인프라를 지원 하며 사용자 코드에서 직접 사용 하기 위한 것이 아닙니다.</span><span class="sxs-lookup"><span data-stu-id="804fd-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1a141-104">구문</span><span class="sxs-lookup"><span data-stu-id="1a141-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="804fd-104">구문</span><span class="sxs-lookup"><span data-stu-id="804fd-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT Autodone ( );  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="1a141-105">참고자료</span><span class="sxs-lookup"><span data-stu-id="1a141-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="804fd-105">참조</span><span class="sxs-lookup"><span data-stu-id="804fd-105">See also</span></span>
 
-- [<span data-ttu-id="1a141-106">호스팅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="1a141-106">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [<span data-ttu-id="804fd-106">호스팅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="804fd-106">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

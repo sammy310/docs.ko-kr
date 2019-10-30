@@ -1,5 +1,5 @@
 ---
-title: '방법: 미리 정의된 UTC 및 현지 표준 시간대 개체에 액세스'
+title: '방법: 미리 정의 된 UTC 및 현지 표준 시간대 개체에 액세스'
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,48 +13,46 @@ helpviewer_keywords:
 - time zones [.NET Framework], retrieving
 - time zones [.NET Framework], UTC
 ms.assetid: 961fb70b-83f0-4dab-a042-cb5fcd817cf5
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8aa19118ce0837b9ce0eb523f3e086fcbcecb9e8
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: ef22753d9934a52d955412a4493b608f265519aa
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106561"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132599"
 ---
-# <a name="how-to-access-the-predefined-utc-and-local-time-zone-objects"></a><span data-ttu-id="5e8c1-102">방법: 미리 정의된 UTC 및 현지 표준 시간대 개체에 액세스</span><span class="sxs-lookup"><span data-stu-id="5e8c1-102">How to: Access the predefined UTC and local time zone objects</span></span>
+# <a name="how-to-access-the-predefined-utc-and-local-time-zone-objects"></a><span data-ttu-id="8c5be-102">방법: 미리 정의 된 UTC 및 현지 표준 시간대 개체에 액세스</span><span class="sxs-lookup"><span data-stu-id="8c5be-102">How to: Access the predefined UTC and local time zone objects</span></span>
 
-<span data-ttu-id="5e8c1-103">클래스 <xref:System.TimeZoneInfo> 는 미리 정의 된 표준 <xref:System.TimeZoneInfo.Utc%2A> 시간대 <xref:System.TimeZoneInfo.Local%2A>개체에 대 한 코드 액세스를 제공 하는 및의 두 속성을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="5e8c1-103">The <xref:System.TimeZoneInfo> class provides two properties, <xref:System.TimeZoneInfo.Utc%2A> and <xref:System.TimeZoneInfo.Local%2A>, that give your code access to predefined time zone objects.</span></span> <span data-ttu-id="5e8c1-104">이 항목에서는 이러한 속성들이 반환하는 <xref:System.TimeZoneInfo> 개체에 액세스하는 방법에 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="5e8c1-104">This topic discusses how to access the <xref:System.TimeZoneInfo> objects returned by those properties.</span></span>
+<span data-ttu-id="8c5be-103"><xref:System.TimeZoneInfo> 클래스는 미리 정의 된 표준 시간대 개체에 대 한 코드 액세스를 제공 하는 두 개의 속성인 <xref:System.TimeZoneInfo.Utc%2A> 및 <xref:System.TimeZoneInfo.Local%2A>를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="8c5be-103">The <xref:System.TimeZoneInfo> class provides two properties, <xref:System.TimeZoneInfo.Utc%2A> and <xref:System.TimeZoneInfo.Local%2A>, that give your code access to predefined time zone objects.</span></span> <span data-ttu-id="8c5be-104">이 항목에서는 이러한 속성들이 반환하는 <xref:System.TimeZoneInfo> 개체에 액세스하는 방법에 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="8c5be-104">This topic discusses how to access the <xref:System.TimeZoneInfo> objects returned by those properties.</span></span>
 
-### <a name="to-access-the-coordinated-universal-time-utc-timezoneinfo-object"></a><span data-ttu-id="5e8c1-105">UTC TimeZoneInfo 개체에 액세스하려면</span><span class="sxs-lookup"><span data-stu-id="5e8c1-105">To access the Coordinated Universal Time (UTC) TimeZoneInfo object</span></span>
+### <a name="to-access-the-coordinated-universal-time-utc-timezoneinfo-object"></a><span data-ttu-id="8c5be-105">UTC TimeZoneInfo 개체에 액세스하려면</span><span class="sxs-lookup"><span data-stu-id="8c5be-105">To access the Coordinated Universal Time (UTC) TimeZoneInfo object</span></span>
 
-1. <span data-ttu-id="5e8c1-106">(Visual Basic)`Shared` 속성을 사용 <xref:System.TimeZoneInfo.Utc%2A?displayProperty=nameWithType> 하 여 utc (협정 세계시)에 액세스 합니다. `static`</span><span class="sxs-lookup"><span data-stu-id="5e8c1-106">Use the `static` (`Shared` in Visual Basic) <xref:System.TimeZoneInfo.Utc%2A?displayProperty=nameWithType> property to access Coordinated Universal Time.</span></span>
+1. <span data-ttu-id="8c5be-106">`static` (Visual Basic의`Shared`) <xref:System.TimeZoneInfo.Utc%2A?displayProperty=nameWithType> 속성을 사용 하 여 협정 세계시에 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8c5be-106">Use the `static` (`Shared` in Visual Basic) <xref:System.TimeZoneInfo.Utc%2A?displayProperty=nameWithType> property to access Coordinated Universal Time.</span></span>
 
-2. <span data-ttu-id="5e8c1-107">속성에서 반환 하 <xref:System.TimeZoneInfo> 는 개체를 개체 변수에 할당 하는 대신 <xref:System.TimeZoneInfo.Utc%2A?displayProperty=nameWithType> 속성을 통해 협정 세계시에 계속 액세스 합니다.</span><span class="sxs-lookup"><span data-stu-id="5e8c1-107">Rather than assigning the <xref:System.TimeZoneInfo> object returned by the property to an object variable, continue to access Coordinated Universal Time through the <xref:System.TimeZoneInfo.Utc%2A?displayProperty=nameWithType> property.</span></span>
+2. <span data-ttu-id="8c5be-107">속성에서 반환 하는 <xref:System.TimeZoneInfo> 개체를 개체 변수에 할당 하는 대신 <xref:System.TimeZoneInfo.Utc%2A?displayProperty=nameWithType> 속성을 통해 Utc (협정 세계시)에 계속 액세스 합니다.</span><span class="sxs-lookup"><span data-stu-id="8c5be-107">Rather than assigning the <xref:System.TimeZoneInfo> object returned by the property to an object variable, continue to access Coordinated Universal Time through the <xref:System.TimeZoneInfo.Utc%2A?displayProperty=nameWithType> property.</span></span>
 
-### <a name="to-access-the-local-time-zone"></a><span data-ttu-id="5e8c1-108">현지 표준 시간대 TimeZoneInfo 개체에 액세스하려면</span><span class="sxs-lookup"><span data-stu-id="5e8c1-108">To access the local time zone</span></span>
+### <a name="to-access-the-local-time-zone"></a><span data-ttu-id="8c5be-108">현지 표준 시간대 TimeZoneInfo 개체에 액세스하려면</span><span class="sxs-lookup"><span data-stu-id="8c5be-108">To access the local time zone</span></span>
 
-1. <span data-ttu-id="5e8c1-109">`static` (VisualBasic`Shared` ) 속성을사용하여<xref:System.TimeZoneInfo.Local%2A?displayProperty=nameWithType> 로컬 시스템 표준 시간대에 액세스 합니다.</span><span class="sxs-lookup"><span data-stu-id="5e8c1-109">Use the `static` (`Shared` in Visual Basic) <xref:System.TimeZoneInfo.Local%2A?displayProperty=nameWithType> property to access the local system time zone.</span></span>
+1. <span data-ttu-id="8c5be-109">`static` (Visual Basic의`Shared`) <xref:System.TimeZoneInfo.Local%2A?displayProperty=nameWithType> 속성을 사용 하 여 로컬 시스템 표준 시간대에 액세스 합니다.</span><span class="sxs-lookup"><span data-stu-id="8c5be-109">Use the `static` (`Shared` in Visual Basic) <xref:System.TimeZoneInfo.Local%2A?displayProperty=nameWithType> property to access the local system time zone.</span></span>
 
-2. <span data-ttu-id="5e8c1-110">속성에서 반환 하 <xref:System.TimeZoneInfo> 는 개체를 개체 변수에 할당 하는 대신 <xref:System.TimeZoneInfo.Local%2A?displayProperty=nameWithType> 속성을 통해 현지 표준 시간대에 계속 액세스 합니다.</span><span class="sxs-lookup"><span data-stu-id="5e8c1-110">Rather than assigning the <xref:System.TimeZoneInfo> object returned by the property to an object variable, continue to access the local time zone through the <xref:System.TimeZoneInfo.Local%2A?displayProperty=nameWithType> property.</span></span>
+2. <span data-ttu-id="8c5be-110">속성에서 반환 하는 <xref:System.TimeZoneInfo> 개체를 개체 변수에 할당 하는 대신 <xref:System.TimeZoneInfo.Local%2A?displayProperty=nameWithType> 속성을 통해 현지 표준 시간대에 계속 액세스 합니다.</span><span class="sxs-lookup"><span data-stu-id="8c5be-110">Rather than assigning the <xref:System.TimeZoneInfo> object returned by the property to an object variable, continue to access the local time zone through the <xref:System.TimeZoneInfo.Local%2A?displayProperty=nameWithType> property.</span></span>
 
-## <a name="example"></a><span data-ttu-id="5e8c1-111">예제</span><span class="sxs-lookup"><span data-stu-id="5e8c1-111">Example</span></span>
+## <a name="example"></a><span data-ttu-id="8c5be-111">예제</span><span class="sxs-lookup"><span data-stu-id="8c5be-111">Example</span></span>
 
-<span data-ttu-id="5e8c1-112">다음 코드에서는 <xref:System.TimeZoneInfo.Local%2A?displayProperty=nameWithType> 및 <xref:System.TimeZoneInfo.Utc%2A?displayProperty=nameWithType> 속성을 사용하여 시간을 미국 및 캐나다 동부 표준 시간대에서 변환하고 해당 표준 시간대 이름을 콘솔에 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="5e8c1-112">The following code uses the <xref:System.TimeZoneInfo.Local%2A?displayProperty=nameWithType> and <xref:System.TimeZoneInfo.Utc%2A?displayProperty=nameWithType> properties to convert a time from the U.S. and Canadian Eastern Standard time zone, as well as to display the time zone name to the console.</span></span>
+<span data-ttu-id="8c5be-112">다음 코드에서는 <xref:System.TimeZoneInfo.Local%2A?displayProperty=nameWithType> 및 <xref:System.TimeZoneInfo.Utc%2A?displayProperty=nameWithType> 속성을 사용하여 시간을 미국 및 캐나다 동부 표준 시간대에서 변환하고 해당 표준 시간대 이름을 콘솔에 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="8c5be-112">The following code uses the <xref:System.TimeZoneInfo.Local%2A?displayProperty=nameWithType> and <xref:System.TimeZoneInfo.Utc%2A?displayProperty=nameWithType> properties to convert a time from the U.S. and Canadian Eastern Standard time zone, as well as to display the time zone name to the console.</span></span>
 
 [!code-csharp[System.TimeZone2.Concepts#13](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#13)]
 [!code-vb[System.TimeZone2.Concepts#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#13)]
 
-<span data-ttu-id="5e8c1-113">항상 통해 현지 표준 시간대에 액세스 해야 합니다 <xref:System.TimeZoneInfo.Local%2A?displayProperty=nameWithType> 현지 시간을 할당 하는 것이 아니라 속성 시간대를 <xref:System.TimeZoneInfo> 개체 변수입니다.</span><span class="sxs-lookup"><span data-stu-id="5e8c1-113">You should always access the local time zone through the <xref:System.TimeZoneInfo.Local%2A?displayProperty=nameWithType> property rather than assigning the local time zone to a <xref:System.TimeZoneInfo> object variable.</span></span> <span data-ttu-id="5e8c1-114">마찬가지로 <xref:System.TimeZoneInfo> 개체 변수에 utc 영역을 할당 하는 대신 속성 <xref:System.TimeZoneInfo.Utc%2A?displayProperty=nameWithType> 을 통해 항상 협정 세계시에 액세스 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="5e8c1-114">Similarly, you should always access Coordinated Universal Time through the <xref:System.TimeZoneInfo.Utc%2A?displayProperty=nameWithType> property rather than assigning the UTC zone to a <xref:System.TimeZoneInfo> object variable.</span></span> <span data-ttu-id="5e8c1-115">그래야 합니다 <xref:System.TimeZoneInfo> 개체 변수를 호출 하 여 무효화 하지는 <xref:System.TimeZoneInfo.ClearCachedData%2A?displayProperty=nameWithType> 메서드.</span><span class="sxs-lookup"><span data-stu-id="5e8c1-115">This prevents the <xref:System.TimeZoneInfo> object variable from being invalidated by a call to the <xref:System.TimeZoneInfo.ClearCachedData%2A?displayProperty=nameWithType> method.</span></span>
+<span data-ttu-id="8c5be-113">현지 표준 시간대를 <xref:System.TimeZoneInfo> 개체 변수에 할당 하는 대신 항상 <xref:System.TimeZoneInfo.Local%2A?displayProperty=nameWithType> 속성을 통해 현지 표준 시간대에 액세스 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="8c5be-113">You should always access the local time zone through the <xref:System.TimeZoneInfo.Local%2A?displayProperty=nameWithType> property rather than assigning the local time zone to a <xref:System.TimeZoneInfo> object variable.</span></span> <span data-ttu-id="8c5be-114">마찬가지로 <xref:System.TimeZoneInfo> 개체 변수에 UTC 영역을 할당 하는 대신 <xref:System.TimeZoneInfo.Utc%2A?displayProperty=nameWithType> 속성을 통해 항상 협정 세계시에 액세스 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="8c5be-114">Similarly, you should always access Coordinated Universal Time through the <xref:System.TimeZoneInfo.Utc%2A?displayProperty=nameWithType> property rather than assigning the UTC zone to a <xref:System.TimeZoneInfo> object variable.</span></span> <span data-ttu-id="8c5be-115">이렇게 하면 <xref:System.TimeZoneInfo.ClearCachedData%2A?displayProperty=nameWithType> 메서드를 호출 하 여 <xref:System.TimeZoneInfo> 개체 변수가 무효화 되는 것을 방지할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8c5be-115">This prevents the <xref:System.TimeZoneInfo> object variable from being invalidated by a call to the <xref:System.TimeZoneInfo.ClearCachedData%2A?displayProperty=nameWithType> method.</span></span>
 
-## <a name="compiling-the-code"></a><span data-ttu-id="5e8c1-116">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="5e8c1-116">Compiling the code</span></span>
+## <a name="compiling-the-code"></a><span data-ttu-id="8c5be-116">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="8c5be-116">Compiling the code</span></span>
 
-<span data-ttu-id="5e8c1-117">이 예제에는 다음 사항이 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="5e8c1-117">This example requires:</span></span>
+<span data-ttu-id="8c5be-117">이 예제에는 다음 사항이 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="8c5be-117">This example requires:</span></span>
 
-- <span data-ttu-id="5e8c1-118">문을 사용 하 여 C# 네임 스페이스를 가져옵니다 (코드에 필요) <xref:System> `using` .</span><span class="sxs-lookup"><span data-stu-id="5e8c1-118">That the <xref:System> namespace be imported with the `using` statement (required in C# code).</span></span>
+- <span data-ttu-id="8c5be-118"><xref:System> 네임 스페이스는 `using` 문을 사용 하 여 가져옵니다 (코드에 C# 필요).</span><span class="sxs-lookup"><span data-stu-id="8c5be-118">That the <xref:System> namespace be imported with the `using` statement (required in C# code).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="5e8c1-119">참고자료</span><span class="sxs-lookup"><span data-stu-id="5e8c1-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8c5be-119">참조</span><span class="sxs-lookup"><span data-stu-id="8c5be-119">See also</span></span>
 
-- [<span data-ttu-id="5e8c1-120">날짜, 시간 및 표준 시간대</span><span class="sxs-lookup"><span data-stu-id="5e8c1-120">Dates, times, and time zones</span></span>](../../../docs/standard/datetime/index.md)
-- [<span data-ttu-id="5e8c1-121">로컬 시스템에 정의된 표준 시간대 찾기</span><span class="sxs-lookup"><span data-stu-id="5e8c1-121">Finding the time zones defined on a local system</span></span>](../../../docs/standard/datetime/finding-the-time-zones-on-local-system.md)
-- [<span data-ttu-id="5e8c1-122">방법: TimeZoneInfo 개체 인스턴스화</span><span class="sxs-lookup"><span data-stu-id="5e8c1-122">How to: Instantiate a TimeZoneInfo object</span></span>](../../../docs/standard/datetime/instantiate-time-zone-info.md)
+- [<span data-ttu-id="8c5be-120">날짜, 시간 및 표준 시간대</span><span class="sxs-lookup"><span data-stu-id="8c5be-120">Dates, times, and time zones</span></span>](../../../docs/standard/datetime/index.md)
+- [<span data-ttu-id="8c5be-121">로컬 시스템에 정의된 표준 시간대 찾기</span><span class="sxs-lookup"><span data-stu-id="8c5be-121">Finding the time zones defined on a local system</span></span>](../../../docs/standard/datetime/finding-the-time-zones-on-local-system.md)
+- [<span data-ttu-id="8c5be-122">방법: TimeZoneInfo 개체 인스턴스화</span><span class="sxs-lookup"><span data-stu-id="8c5be-122">How to: Instantiate a TimeZoneInfo object</span></span>](../../../docs/standard/datetime/instantiate-time-zone-info.md)

@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 40123b30-a589-46b3-95d3-af7b2b0baa05
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 16cb3495bbc2fa9ead25afd5e7120774b021a37f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b30f6f5ce22290dc3750cef0171349ec5ff2f76a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67773555"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126744"
 ---
-# <a name="iclrassemblyidentitymanagergetbindingidentityfromstream-method"></a><span data-ttu-id="5a4c3-102">ICLRAssemblyIdentityManager::GetBindingIdentityFromStream 메서드</span><span class="sxs-lookup"><span data-stu-id="5a4c3-102">ICLRAssemblyIdentityManager::GetBindingIdentityFromStream Method</span></span>
-<span data-ttu-id="5a4c3-103">지정한 스트림에서 어셈블리에 대 한 정식 어셈블리 id 데이터를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="5a4c3-103">Gets the canonical assembly identity data for the assembly in the specified stream.</span></span>  
+# <a name="iclrassemblyidentitymanagergetbindingidentityfromstream-method"></a><span data-ttu-id="ea95f-102">ICLRAssemblyIdentityManager::GetBindingIdentityFromStream 메서드</span><span class="sxs-lookup"><span data-stu-id="ea95f-102">ICLRAssemblyIdentityManager::GetBindingIdentityFromStream Method</span></span>
+<span data-ttu-id="ea95f-103">지정 된 스트림의 어셈블리에 대 한 정식 어셈블리 id 데이터를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="ea95f-103">Gets the canonical assembly identity data for the assembly in the specified stream.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5a4c3-104">구문</span><span class="sxs-lookup"><span data-stu-id="5a4c3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ea95f-104">구문</span><span class="sxs-lookup"><span data-stu-id="ea95f-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetBindingIdentityFromStream (  
@@ -38,42 +36,42 @@ HRESULT GetBindingIdentityFromStream (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="5a4c3-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="5a4c3-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ea95f-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="ea95f-105">Parameters</span></span>  
  `pStream`  
- <span data-ttu-id="5a4c3-106">[in] 계산할 어셈블리 스트림입니다.</span><span class="sxs-lookup"><span data-stu-id="5a4c3-106">[in] The assembly stream to be evaluated.</span></span>  
+ <span data-ttu-id="ea95f-106">진행 평가할 어셈블리 스트림입니다.</span><span class="sxs-lookup"><span data-stu-id="ea95f-106">[in] The assembly stream to be evaluated.</span></span>  
   
  `dwFlags`  
- <span data-ttu-id="5a4c3-107">[in] 향후 확장성을 위해 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="5a4c3-107">[in] Provided for future extensibility.</span></span> <span data-ttu-id="5a4c3-108">CLR_ASSEMBLY_IDENTITY_FLAGS_DEFAULT에는 CLR (공용 언어 런타임)의 현재 버전을 지 원하는 유일한 값입니다.</span><span class="sxs-lookup"><span data-stu-id="5a4c3-108">CLR_ASSEMBLY_IDENTITY_FLAGS_DEFAULT is the only value that the current version of the common language runtime (CLR) supports.</span></span>  
+ <span data-ttu-id="ea95f-107">진행 향후 확장성을 위해 제공 됩니다.</span><span class="sxs-lookup"><span data-stu-id="ea95f-107">[in] Provided for future extensibility.</span></span> <span data-ttu-id="ea95f-108">CLR_ASSEMBLY_IDENTITY_FLAGS_DEFAULT는 현재 버전의 CLR (공용 언어 런타임)에서 지 원하는 유일한 값입니다.</span><span class="sxs-lookup"><span data-stu-id="ea95f-108">CLR_ASSEMBLY_IDENTITY_FLAGS_DEFAULT is the only value that the current version of the common language runtime (CLR) supports.</span></span>  
   
  `pwzBuffer`  
- <span data-ttu-id="5a4c3-109">[out] 불투명 한 어셈블리 id 데이터를 포함 하는 버퍼입니다.</span><span class="sxs-lookup"><span data-stu-id="5a4c3-109">[out] A buffer containing the opaque assembly identity data.</span></span>  
+ <span data-ttu-id="ea95f-109">제한이 불투명 어셈블리 id 데이터를 포함 하는 버퍼입니다.</span><span class="sxs-lookup"><span data-stu-id="ea95f-109">[out] A buffer containing the opaque assembly identity data.</span></span>  
   
  `pcchBufferSize`  
- <span data-ttu-id="5a4c3-110">[out에서] 크기 `pwzBuffer`합니다.</span><span class="sxs-lookup"><span data-stu-id="5a4c3-110">[in, out] The size of `pwzBuffer`.</span></span>  
+ <span data-ttu-id="ea95f-110">[in, out] `pwzBuffer`크기입니다.</span><span class="sxs-lookup"><span data-stu-id="ea95f-110">[in, out] The size of `pwzBuffer`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="5a4c3-111">반환 값</span><span class="sxs-lookup"><span data-stu-id="5a4c3-111">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="ea95f-111">반환 값</span><span class="sxs-lookup"><span data-stu-id="ea95f-111">Return Value</span></span>  
   
-|<span data-ttu-id="5a4c3-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="5a4c3-112">HRESULT</span></span>|<span data-ttu-id="5a4c3-113">Description</span><span class="sxs-lookup"><span data-stu-id="5a4c3-113">Description</span></span>|  
+|<span data-ttu-id="ea95f-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="ea95f-112">HRESULT</span></span>|<span data-ttu-id="ea95f-113">설명</span><span class="sxs-lookup"><span data-stu-id="ea95f-113">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="5a4c3-114">S_OK</span><span class="sxs-lookup"><span data-stu-id="5a4c3-114">S_OK</span></span>|<span data-ttu-id="5a4c3-115">메서드가 성공적으로 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="5a4c3-115">The method returned successfully.</span></span>|  
-|<span data-ttu-id="5a4c3-116">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="5a4c3-116">E_INVALIDARG</span></span>|<span data-ttu-id="5a4c3-117">제공 된 `pStream` null입니다.</span><span class="sxs-lookup"><span data-stu-id="5a4c3-117">The supplied `pStream` is null.</span></span>|  
-|<span data-ttu-id="5a4c3-118">ERROR_INSUFFICIENT_BUFFER</span><span class="sxs-lookup"><span data-stu-id="5a4c3-118">ERROR_INSUFFICIENT_BUFFER</span></span>|<span data-ttu-id="5a4c3-119">크기 `pwzBuffer` 너무 작습니다.</span><span class="sxs-lookup"><span data-stu-id="5a4c3-119">The size of `pwzBuffer` is too small.</span></span>|  
-|<span data-ttu-id="5a4c3-120">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="5a4c3-120">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="5a4c3-121">CLR이 로드 된 프로세스에 또는 CLR 상태인는 관리 코드를 실행 하거나 호출을 처리할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="5a4c3-121">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="5a4c3-122">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="5a4c3-122">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="5a4c3-123">호출 시간이 초과 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="5a4c3-123">The call timed out.</span></span>|  
-|<span data-ttu-id="5a4c3-124">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="5a4c3-124">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="5a4c3-125">호출자가 잠금을 소유 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="5a4c3-125">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="5a4c3-126">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="5a4c3-126">HOST_E_ABANDONED</span></span>|<span data-ttu-id="5a4c3-127">이벤트가 차단 된 스레드가 취소 된 또는 파이버를 대기 하 고 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5a4c3-127">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="5a4c3-128">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="5a4c3-128">E_FAIL</span></span>|<span data-ttu-id="5a4c3-129">알 수 없는 치명적인 오류가 발생 했습니다.</span><span class="sxs-lookup"><span data-stu-id="5a4c3-129">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="5a4c3-130">메서드가 E_FAIL을 반환 하는 경우 CLR은 프로세스 내에서 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="5a4c3-130">If a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="5a4c3-131">메서드를 호스트 하는 데 대 한 후속 호출 HOST_E_CLRNOTAVAILABLE를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="5a4c3-131">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="ea95f-114">S_OK</span><span class="sxs-lookup"><span data-stu-id="ea95f-114">S_OK</span></span>|<span data-ttu-id="ea95f-115">메서드가 성공적으로 반환 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="ea95f-115">The method returned successfully.</span></span>|  
+|<span data-ttu-id="ea95f-116">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="ea95f-116">E_INVALIDARG</span></span>|<span data-ttu-id="ea95f-117">제공 된 `pStream`가 null입니다.</span><span class="sxs-lookup"><span data-stu-id="ea95f-117">The supplied `pStream` is null.</span></span>|  
+|<span data-ttu-id="ea95f-118">ERROR_INSUFFICIENT_BUFFER</span><span class="sxs-lookup"><span data-stu-id="ea95f-118">ERROR_INSUFFICIENT_BUFFER</span></span>|<span data-ttu-id="ea95f-119">`pwzBuffer` 크기가 너무 작습니다.</span><span class="sxs-lookup"><span data-stu-id="ea95f-119">The size of `pwzBuffer` is too small.</span></span>|  
+|<span data-ttu-id="ea95f-120">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="ea95f-120">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="ea95f-121">CLR이 프로세스에 로드 되지 않았거나 CLR이 관리 코드를 실행할 수 없거나 호출을 성공적으로 처리할 수 없는 상태에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ea95f-121">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="ea95f-122">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="ea95f-122">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="ea95f-123">호출 시간이 초과 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="ea95f-123">The call timed out.</span></span>|  
+|<span data-ttu-id="ea95f-124">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="ea95f-124">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="ea95f-125">호출자가 잠금을 소유 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="ea95f-125">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="ea95f-126">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="ea95f-126">HOST_E_ABANDONED</span></span>|<span data-ttu-id="ea95f-127">차단 된 스레드나 파이버에서 대기 하는 동안 이벤트를 취소 했습니다.</span><span class="sxs-lookup"><span data-stu-id="ea95f-127">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="ea95f-128">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="ea95f-128">E_FAIL</span></span>|<span data-ttu-id="ea95f-129">알 수 없는 치명적인 오류가 발생 했습니다.</span><span class="sxs-lookup"><span data-stu-id="ea95f-129">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="ea95f-130">메서드가 E_FAIL을 반환 하는 경우 해당 프로세스 내에서 더 이상 CLR을 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="ea95f-130">If a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="ea95f-131">호스팅 메서드에 대 한 후속 호출은 HOST_E_CLRNOTAVAILABLE을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="ea95f-131">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="5a4c3-132">요구 사항</span><span class="sxs-lookup"><span data-stu-id="5a4c3-132">Requirements</span></span>  
- <span data-ttu-id="5a4c3-133">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="5a4c3-133">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ea95f-132">요구 사항</span><span class="sxs-lookup"><span data-stu-id="ea95f-132">Requirements</span></span>  
+ <span data-ttu-id="ea95f-133">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="ea95f-133">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5a4c3-134">**헤더:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="5a4c3-134">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="ea95f-134">**헤더:** Mscoree.dll</span><span class="sxs-lookup"><span data-stu-id="ea95f-134">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="5a4c3-135">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="5a4c3-135">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="ea95f-135">**라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="ea95f-135">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="5a4c3-136">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5a4c3-136">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="ea95f-136">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ea95f-136">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5a4c3-137">참고자료</span><span class="sxs-lookup"><span data-stu-id="5a4c3-137">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ea95f-137">참조</span><span class="sxs-lookup"><span data-stu-id="ea95f-137">See also</span></span>
 
-- [<span data-ttu-id="5a4c3-138">ICLRAssemblyIdentityManager 인터페이스</span><span class="sxs-lookup"><span data-stu-id="5a4c3-138">ICLRAssemblyIdentityManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
-- [<span data-ttu-id="5a4c3-139">ICLRAssemblyReferenceList 인터페이스</span><span class="sxs-lookup"><span data-stu-id="5a4c3-139">ICLRAssemblyReferenceList Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)
+- [<span data-ttu-id="ea95f-138">ICLRAssemblyIdentityManager 인터페이스</span><span class="sxs-lookup"><span data-stu-id="ea95f-138">ICLRAssemblyIdentityManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
+- [<span data-ttu-id="ea95f-139">ICLRAssemblyReferenceList 인터페이스</span><span class="sxs-lookup"><span data-stu-id="ea95f-139">ICLRAssemblyReferenceList Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)

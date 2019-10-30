@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: c2541c30-fa6e-43b6-9682-77d8898f33e1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 28d96177e839613d40e8c500e334c92b05c6e96a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1a65f9f117ff013a1f6dc7403a5bc0c7b3dbb2c3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67762192"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136598"
 ---
-# <a name="icordebugmodulecreatebreakpoint-method"></a><span data-ttu-id="ba249-102">ICorDebugModule::CreateBreakpoint 메서드</span><span class="sxs-lookup"><span data-stu-id="ba249-102">ICorDebugModule::CreateBreakpoint Method</span></span>
-<span data-ttu-id="ba249-103">이 메서드는 현재 버전의.NET Framework에서 구현 되지에.</span><span class="sxs-lookup"><span data-stu-id="ba249-103">This method has not been implemented in the current version of the .NET Framework.</span></span>  
+# <a name="icordebugmodulecreatebreakpoint-method"></a><span data-ttu-id="4ea5e-102">ICorDebugModule::CreateBreakpoint 메서드</span><span class="sxs-lookup"><span data-stu-id="4ea5e-102">ICorDebugModule::CreateBreakpoint Method</span></span>
+<span data-ttu-id="4ea5e-103">이 메서드는 .NET Framework 현재 버전에서 구현 되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="4ea5e-103">This method has not been implemented in the current version of the .NET Framework.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ba249-104">구문</span><span class="sxs-lookup"><span data-stu-id="ba249-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4ea5e-104">구문</span><span class="sxs-lookup"><span data-stu-id="4ea5e-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT CreateBreakpoint(  
@@ -35,5 +33,5 @@ HRESULT CreateBreakpoint(
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="ba249-105">요구 사항</span><span class="sxs-lookup"><span data-stu-id="ba249-105">Requirements</span></span>  
- <span data-ttu-id="ba249-106">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="ba249-106">**Header:** CorDebug.idl, CorDebug.h</span></span>
+## <a name="requirements"></a><span data-ttu-id="4ea5e-105">요구 사항</span><span class="sxs-lookup"><span data-stu-id="4ea5e-105">Requirements</span></span>  
+ <span data-ttu-id="4ea5e-106">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="4ea5e-106">**Header:** CorDebug.idl, CorDebug.h</span></span>

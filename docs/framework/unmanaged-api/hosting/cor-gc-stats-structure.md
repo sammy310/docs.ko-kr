@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 8d4ff73e-739b-40f6-9349-359fbc99c2f9
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1085bec812d797d3fbe4ea63ef447d4c466149f2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 12c00ed009e0e57436a71aed256b07a58ba68a32
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965051"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138345"
 ---
-# <a name="cor_gc_stats-structure"></a><span data-ttu-id="d540b-102">COR_GC_STATS 구조체</span><span class="sxs-lookup"><span data-stu-id="d540b-102">COR_GC_STATS Structure</span></span>
-<span data-ttu-id="d540b-103">CLR (공용 언어 런타임)의 가비지 수집 메커니즘에 대 한 통계를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="d540b-103">Provides statistics about the garbage collection mechanism of the common language runtime (CLR).</span></span>  
+# <a name="cor_gc_stats-structure"></a><span data-ttu-id="0ae92-102">COR_GC_STATS 구조체</span><span class="sxs-lookup"><span data-stu-id="0ae92-102">COR_GC_STATS Structure</span></span>
+<span data-ttu-id="0ae92-103">CLR (공용 언어 런타임)의 가비지 수집 메커니즘에 대 한 통계를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="0ae92-103">Provides statistics about the garbage collection mechanism of the common language runtime (CLR).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d540b-104">구문</span><span class="sxs-lookup"><span data-stu-id="d540b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0ae92-104">구문</span><span class="sxs-lookup"><span data-stu-id="0ae92-104">Syntax</span></span>  
   
 ```cpp  
 typedef struct _COR_GC_STATS {  
@@ -44,32 +42,32 @@ typedef struct _COR_GC_STATS {
 } COR_GC_STATS;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="d540b-105">멤버</span><span class="sxs-lookup"><span data-stu-id="d540b-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="0ae92-105">멤버</span><span class="sxs-lookup"><span data-stu-id="0ae92-105">Members</span></span>  
   
-|<span data-ttu-id="d540b-106">멤버</span><span class="sxs-lookup"><span data-stu-id="d540b-106">Member</span></span>|<span data-ttu-id="d540b-107">설명</span><span class="sxs-lookup"><span data-stu-id="d540b-107">Description</span></span>|  
+|<span data-ttu-id="0ae92-106">멤버</span><span class="sxs-lookup"><span data-stu-id="0ae92-106">Member</span></span>|<span data-ttu-id="0ae92-107">설명</span><span class="sxs-lookup"><span data-stu-id="0ae92-107">Description</span></span>|  
 |------------|-----------------|  
-|`Flags`|<span data-ttu-id="d540b-108">계산 되 고 반환 되어야 하는 필드 값을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="d540b-108">Indicates which field values should be calculated and returned.</span></span>|  
-|`ExplicitGCCount`|<span data-ttu-id="d540b-109">외부 요청에 의해 강제 적용 된 가비지 수집 수를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="d540b-109">Indicates the number of garbage collections that were forced by external request.</span></span>|  
-|`GenCollectionsTaken`|<span data-ttu-id="d540b-110">각 세대에 대해 수행 되는 가비지 컬렉션 수를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="d540b-110">Indicates the number of garbage collections performed for each generation.</span></span>|  
-|`CommittedKBytes`|<span data-ttu-id="d540b-111">모든 힙에서 커밋된 총 kb 수입니다.</span><span class="sxs-lookup"><span data-stu-id="d540b-111">The total number of kilobytes committed in all heaps.</span></span>|  
-|`ReservedKBytes`|<span data-ttu-id="d540b-112">모든 힙에서 예약 된 총 kb 수입니다.</span><span class="sxs-lookup"><span data-stu-id="d540b-112">The total number of kilobytes reserved in all heaps.</span></span>|  
-|`Gen0HeapSizeKBytes`|<span data-ttu-id="d540b-113">0 세대 힙의 크기 (kb)입니다.</span><span class="sxs-lookup"><span data-stu-id="d540b-113">The size, in kilobytes, of the generation-zero heap.</span></span>|  
-|`Gen1HeapSizeKBytes`|<span data-ttu-id="d540b-114">1 세대 힙의 크기 (kb)입니다.</span><span class="sxs-lookup"><span data-stu-id="d540b-114">The size, in kilobytes, of the generation-one heap.</span></span>|  
-|`Gen2HeapSizeKBytes`|<span data-ttu-id="d540b-115">2 세대 힙의 크기 (kb)입니다.</span><span class="sxs-lookup"><span data-stu-id="d540b-115">The size, in kilobytes, of the generation-two heap.</span></span>|  
-|`LargeObjectHeapSizeKBytes`|<span data-ttu-id="d540b-116">큰 개체 힙의 크기 (kb)입니다.</span><span class="sxs-lookup"><span data-stu-id="d540b-116">The size, in kilobytes, of the large object heap.</span></span>|  
-|`KBytesPromotedFromGen0`|<span data-ttu-id="d540b-117">0 세대에서 1 세대로 수준이 올려진 개체의 크기 (kb)입니다.</span><span class="sxs-lookup"><span data-stu-id="d540b-117">The size, in kilobytes, of the objects promoted from generation zero to generation one.</span></span>|  
-|`KBytesPromotedFromGen1`|<span data-ttu-id="d540b-118">1 세대에서 2 세대로 수준이 올려진 개체의 크기 (kb)입니다.</span><span class="sxs-lookup"><span data-stu-id="d540b-118">The size, in kilobytes, of the objects promoted from generation one to generation two.</span></span>|  
+|`Flags`|<span data-ttu-id="0ae92-108">계산 되 고 반환 되어야 하는 필드 값을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="0ae92-108">Indicates which field values should be calculated and returned.</span></span>|  
+|`ExplicitGCCount`|<span data-ttu-id="0ae92-109">외부 요청에 의해 강제 적용 된 가비지 수집 수를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="0ae92-109">Indicates the number of garbage collections that were forced by external request.</span></span>|  
+|`GenCollectionsTaken`|<span data-ttu-id="0ae92-110">각 세대에 대해 수행 되는 가비지 컬렉션 수를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="0ae92-110">Indicates the number of garbage collections performed for each generation.</span></span>|  
+|`CommittedKBytes`|<span data-ttu-id="0ae92-111">모든 힙에서 커밋된 총 kb 수입니다.</span><span class="sxs-lookup"><span data-stu-id="0ae92-111">The total number of kilobytes committed in all heaps.</span></span>|  
+|`ReservedKBytes`|<span data-ttu-id="0ae92-112">모든 힙에서 예약 된 총 kb 수입니다.</span><span class="sxs-lookup"><span data-stu-id="0ae92-112">The total number of kilobytes reserved in all heaps.</span></span>|  
+|`Gen0HeapSizeKBytes`|<span data-ttu-id="0ae92-113">0 세대 힙의 크기 (kb)입니다.</span><span class="sxs-lookup"><span data-stu-id="0ae92-113">The size, in kilobytes, of the generation-zero heap.</span></span>|  
+|`Gen1HeapSizeKBytes`|<span data-ttu-id="0ae92-114">1 세대 힙의 크기 (kb)입니다.</span><span class="sxs-lookup"><span data-stu-id="0ae92-114">The size, in kilobytes, of the generation-one heap.</span></span>|  
+|`Gen2HeapSizeKBytes`|<span data-ttu-id="0ae92-115">2 세대 힙의 크기 (kb)입니다.</span><span class="sxs-lookup"><span data-stu-id="0ae92-115">The size, in kilobytes, of the generation-two heap.</span></span>|  
+|`LargeObjectHeapSizeKBytes`|<span data-ttu-id="0ae92-116">큰 개체 힙의 크기 (kb)입니다.</span><span class="sxs-lookup"><span data-stu-id="0ae92-116">The size, in kilobytes, of the large object heap.</span></span>|  
+|`KBytesPromotedFromGen0`|<span data-ttu-id="0ae92-117">0 세대에서 1 세대로 수준이 올려진 개체의 크기 (kb)입니다.</span><span class="sxs-lookup"><span data-stu-id="0ae92-117">The size, in kilobytes, of the objects promoted from generation zero to generation one.</span></span>|  
+|`KBytesPromotedFromGen1`|<span data-ttu-id="0ae92-118">1 세대에서 2 세대로 수준이 올려진 개체의 크기 (kb)입니다.</span><span class="sxs-lookup"><span data-stu-id="0ae92-118">The size, in kilobytes, of the objects promoted from generation one to generation two.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="d540b-119">설명</span><span class="sxs-lookup"><span data-stu-id="d540b-119">Remarks</span></span>  
- <span data-ttu-id="d540b-120">[ICLRGCManager:: getstats](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md) 메서드를 사용 하려면 `Flags` `COR_GC_STATS` 구조체의 필드를 [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) 열거형의 하나 이상의 값으로 설정 하 여 설정할 통계를 지정 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="d540b-120">The [ICLRGCManager::GetStats](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md) method requires the `Flags` field of the `COR_GC_STATS` structure to be set to one or more values of the [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) enumeration to specify which statistics are to be set.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="0ae92-119">주의</span><span class="sxs-lookup"><span data-stu-id="0ae92-119">Remarks</span></span>  
+ <span data-ttu-id="0ae92-120">[ICLRGCManager:: GetStats](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md) 메서드를 사용 하려면 `COR_GC_STATS` 구조의 `Flags` 필드를 [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) 열거형의 값 중 하나 이상으로 설정 하 여 설정할 통계를 지정 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="0ae92-120">The [ICLRGCManager::GetStats](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md) method requires the `Flags` field of the `COR_GC_STATS` structure to be set to one or more values of the [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) enumeration to specify which statistics are to be set.</span></span>  
   
- <span data-ttu-id="d540b-121">다음 표에서는이 구조체에 의해 제공 되는 통계를 두 [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) 열거형 값 `COR_GC_COUNTS` `COR_GC_MEMORYUSAGE`에 매핑합니다.</span><span class="sxs-lookup"><span data-stu-id="d540b-121">The following table maps the statistics provided by this structure to the two [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) enumeration values, `COR_GC_COUNTS` and `COR_GC_MEMORYUSAGE`.</span></span>  
+ <span data-ttu-id="0ae92-121">다음 표에서는이 구조체에 의해 제공 되는 통계를 두 [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) 열거형 값 `COR_GC_COUNTS` 및 `COR_GC_MEMORYUSAGE`에 매핑합니다.</span><span class="sxs-lookup"><span data-stu-id="0ae92-121">The following table maps the statistics provided by this structure to the two [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) enumeration values, `COR_GC_COUNTS` and `COR_GC_MEMORYUSAGE`.</span></span>  
   
-|<span data-ttu-id="d540b-122">COR_GC_COUNTS에서 지정</span><span class="sxs-lookup"><span data-stu-id="d540b-122">Specified by COR_GC_COUNTS</span></span>|<span data-ttu-id="d540b-123">COR_GC_MEMORYUSAGE에서 지정</span><span class="sxs-lookup"><span data-stu-id="d540b-123">Specified by COR_GC_MEMORYUSAGE</span></span>|  
+|<span data-ttu-id="0ae92-122">COR_GC_COUNTS에서 지정</span><span class="sxs-lookup"><span data-stu-id="0ae92-122">Specified by COR_GC_COUNTS</span></span>|<span data-ttu-id="0ae92-123">COR_GC_MEMORYUSAGE에서 지정</span><span class="sxs-lookup"><span data-stu-id="0ae92-123">Specified by COR_GC_MEMORYUSAGE</span></span>|  
 |----------------------------------|---------------------------------------|  
 |`ExplicitGCCount`<br /><br /> `GenCollectionsTaken`|`CommittedKBytes`<br /><br /> `ReservedKBytes`<br /><br /> `Gen0HeapSizeKBytes`<br /><br /> `Gen1HeapSizeKBytes`<br /><br /> `Gen2HeapSizeKBytes`<br /><br /> `LargeObjectHeapSizeKBytes`<br /><br /> `KBytesPromotedFromGen0`<br /><br /> `KBytesPromotedFromGen1`|  
   
- <span data-ttu-id="d540b-124">사용 예는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="d540b-124">An example of the usage is as follows:</span></span>  
+ <span data-ttu-id="0ae92-124">사용 예는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="0ae92-124">An example of the usage is as follows:</span></span>  
   
 ```cpp  
 COR_GC_STATS GCStats;  
@@ -77,17 +75,17 @@ GCStats.Flags = COR_GC_COUNTS | COR_GC_MEMORYUSAGE;
 pCLRGCManager->GetStats(&GCStats);  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="d540b-125">요구 사항</span><span class="sxs-lookup"><span data-stu-id="d540b-125">Requirements</span></span>  
- <span data-ttu-id="d540b-126">**플랫폼** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="d540b-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0ae92-125">요구 사항</span><span class="sxs-lookup"><span data-stu-id="0ae92-125">Requirements</span></span>  
+ <span data-ttu-id="0ae92-126">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="0ae92-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d540b-127">**헤더:** GCHost.idl</span><span class="sxs-lookup"><span data-stu-id="d540b-127">**Header:** GCHost.idl</span></span>  
+ <span data-ttu-id="0ae92-127">**헤더:** GCHost</span><span class="sxs-lookup"><span data-stu-id="0ae92-127">**Header:** GCHost.idl</span></span>  
   
- <span data-ttu-id="d540b-128">**라이브러리** Mscoree.dll에 리소스로 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="d540b-128">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="0ae92-128">**라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="0ae92-128">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="d540b-129">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d540b-129">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="0ae92-129">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0ae92-129">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d540b-130">참고자료</span><span class="sxs-lookup"><span data-stu-id="d540b-130">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0ae92-130">참조</span><span class="sxs-lookup"><span data-stu-id="0ae92-130">See also</span></span>
 
-- [<span data-ttu-id="d540b-131">호스팅 구조체</span><span class="sxs-lookup"><span data-stu-id="d540b-131">Hosting Structures</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
-- [<span data-ttu-id="d540b-132">자동 메모리 관리</span><span class="sxs-lookup"><span data-stu-id="d540b-132">Automatic Memory Management</span></span>](../../../standard/automatic-memory-management.md)
-- [<span data-ttu-id="d540b-133">가비지 수집</span><span class="sxs-lookup"><span data-stu-id="d540b-133">Garbage Collection</span></span>](../../../standard/garbage-collection/index.md)
+- [<span data-ttu-id="0ae92-131">호스팅 구조체</span><span class="sxs-lookup"><span data-stu-id="0ae92-131">Hosting Structures</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
+- [<span data-ttu-id="0ae92-132">자동 메모리 관리</span><span class="sxs-lookup"><span data-stu-id="0ae92-132">Automatic Memory Management</span></span>](../../../standard/automatic-memory-management.md)
+- [<span data-ttu-id="0ae92-133">가비지 수집</span><span class="sxs-lookup"><span data-stu-id="0ae92-133">Garbage Collection</span></span>](../../../standard/garbage-collection/index.md)

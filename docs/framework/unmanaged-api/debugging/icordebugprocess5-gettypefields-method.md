@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 6a0ad3ee-dacb-47e9-abae-4536bcc4804b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2d413b17da0b6f241f9078bfeb3bd035d4d07a81
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0045285a3da22f468c2426bb3b9c4ae7e3e1d7c7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767634"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132666"
 ---
-# <a name="icordebugprocess5gettypefields-method"></a><span data-ttu-id="7b03c-102">ICorDebugProcess5::GetTypeFields 메서드</span><span class="sxs-lookup"><span data-stu-id="7b03c-102">ICorDebugProcess5::GetTypeFields Method</span></span>
-<span data-ttu-id="7b03c-103">형식에 속하는 필드에 대 한 정보를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b03c-103">Provides information about the fields that belong to a type.</span></span>  
+# <a name="icordebugprocess5gettypefields-method"></a><span data-ttu-id="9aae9-102">ICorDebugProcess5::GetTypeFields 메서드</span><span class="sxs-lookup"><span data-stu-id="9aae9-102">ICorDebugProcess5::GetTypeFields Method</span></span>
+<span data-ttu-id="9aae9-103">형식에 속하는 필드에 대 한 정보를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="9aae9-103">Provides information about the fields that belong to a type.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7b03c-104">구문</span><span class="sxs-lookup"><span data-stu-id="7b03c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9aae9-104">구문</span><span class="sxs-lookup"><span data-stu-id="9aae9-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetTypeFields(  
@@ -38,32 +36,32 @@ HRESULT GetTypeFields(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="7b03c-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="7b03c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="9aae9-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="9aae9-105">Parameters</span></span>  
  `id`  
- <span data-ttu-id="7b03c-106">[in] 식별자 인 필드 정보를 검색할 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="7b03c-106">[in] The identifier of the type whose field information is retrieved.</span></span>  
+ <span data-ttu-id="9aae9-106">진행 필드 정보를 검색할 형식의 식별자입니다.</span><span class="sxs-lookup"><span data-stu-id="9aae9-106">[in] The identifier of the type whose field information is retrieved.</span></span>  
   
  `celt`  
- <span data-ttu-id="7b03c-107">[in] 수가 [COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) 필드 정보를 검색할 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="7b03c-107">[in] The number of [COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) objects whose field information is to be retrieved.</span></span>  
+ <span data-ttu-id="9aae9-107">진행 필드 정보를 검색할 [COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) 개체의 수입니다.</span><span class="sxs-lookup"><span data-stu-id="9aae9-107">[in] The number of [COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) objects whose field information is to be retrieved.</span></span>  
   
  `fields`  
- <span data-ttu-id="7b03c-108">[out] 배열을 [COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) 형식에 속하는 필드에 대 한 정보를 제공 하는 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="7b03c-108">[out] An array of [COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) objects that provide information about the fields that belong to the type.</span></span>  
+ <span data-ttu-id="9aae9-108">제한이 형식에 속하는 필드에 대 한 정보를 제공 하는 [COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) 개체의 배열입니다.</span><span class="sxs-lookup"><span data-stu-id="9aae9-108">[out] An array of [COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) objects that provide information about the fields that belong to the type.</span></span>  
   
  `pceltNeeded`  
- <span data-ttu-id="7b03c-109">[out] 개수에 대 한 포인터 [COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) 에 포함 된 개체 `fields`합니다.</span><span class="sxs-lookup"><span data-stu-id="7b03c-109">[out] A pointer to the number of [COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) objects included in `fields`.</span></span>  
+ <span data-ttu-id="9aae9-109">제한이 `fields`에 포함 된 [COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) 개체 수에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="9aae9-109">[out] A pointer to the number of [COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) objects included in `fields`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="7b03c-110">설명</span><span class="sxs-lookup"><span data-stu-id="7b03c-110">Remarks</span></span>  
- <span data-ttu-id="7b03c-111">`celt` 필드를 채우는 메서드를 사용 하 여 필드 정보를 가져올 수를 지정 하는 매개 변수 `fields`의 값과 일치 해야 합니다 `COR_TYPE_LAYOUT::numFields` 필드입니다.</span><span class="sxs-lookup"><span data-stu-id="7b03c-111">The `celt` parameter, which specifies the number of fields whose field information the method uses to populate `fields`, should correspond to the value of the `COR_TYPE_LAYOUT::numFields` field.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="9aae9-110">주의</span><span class="sxs-lookup"><span data-stu-id="9aae9-110">Remarks</span></span>  
+ <span data-ttu-id="9aae9-111">메서드가 `fields`를 채우는 데 사용 하는 필드 정보가 있는 필드의 수를 지정 하는 `celt` 매개 변수는 `COR_TYPE_LAYOUT::numFields` 필드의 값에 해당 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="9aae9-111">The `celt` parameter, which specifies the number of fields whose field information the method uses to populate `fields`, should correspond to the value of the `COR_TYPE_LAYOUT::numFields` field.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7b03c-112">요구 사항</span><span class="sxs-lookup"><span data-stu-id="7b03c-112">Requirements</span></span>  
- <span data-ttu-id="7b03c-113">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="7b03c-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9aae9-112">요구 사항</span><span class="sxs-lookup"><span data-stu-id="9aae9-112">Requirements</span></span>  
+ <span data-ttu-id="9aae9-113">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="9aae9-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7b03c-114">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="7b03c-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="9aae9-114">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="9aae9-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="7b03c-115">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="7b03c-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="9aae9-115">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9aae9-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="7b03c-116">**.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7b03c-116">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="9aae9-116">**.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9aae9-116">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7b03c-117">참고자료</span><span class="sxs-lookup"><span data-stu-id="7b03c-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9aae9-117">참조</span><span class="sxs-lookup"><span data-stu-id="9aae9-117">See also</span></span>
 
-- [<span data-ttu-id="7b03c-118">ICorDebugProcess5 인터페이스</span><span class="sxs-lookup"><span data-stu-id="7b03c-118">ICorDebugProcess5 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
-- [<span data-ttu-id="7b03c-119">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="7b03c-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="9aae9-118">ICorDebugProcess5 인터페이스</span><span class="sxs-lookup"><span data-stu-id="9aae9-118">ICorDebugProcess5 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
+- [<span data-ttu-id="9aae9-119">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="9aae9-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -15,21 +15,19 @@ helpviewer_keywords:
 ms.assetid: 6105c13e-d9cd-44d2-a95a-924e042830c7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 505bba3bb5d08c13e29543c20df2daaebc863d12
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 77a0a8f58c11673a1958d837b4c3a21a05754c94
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768010"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138327"
 ---
-# <a name="corbindtocurrentruntime-function"></a><span data-ttu-id="c49dc-102">CorBindToCurrentRuntime 함수</span><span class="sxs-lookup"><span data-stu-id="c49dc-102">CorBindToCurrentRuntime Function</span></span>
-<span data-ttu-id="c49dc-103">XML 파일에 저장 된 버전 정보를 사용 하 여 프로세스에는 CLR (공용 언어 런타임)을 로드 합니다.</span><span class="sxs-lookup"><span data-stu-id="c49dc-103">Loads the common language runtime (CLR) into a process by using version information stored in an XML file.</span></span> <span data-ttu-id="c49dc-104">XML 파일의 형식은 표준 응용 프로그램 구성 파일을 따라 모델링 됩니다.</span><span class="sxs-lookup"><span data-stu-id="c49dc-104">The format of the XML file is modeled after the standard application configuration file.</span></span> <span data-ttu-id="c49dc-105">구성 파일에 대한 자세한 내용은 [구성 파일 스키마](../../../../docs/framework/configure-apps/file-schema/index.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="c49dc-105">For more information about configuration files, see [Configuration File Schema](../../../../docs/framework/configure-apps/file-schema/index.md).</span></span>  
+# <a name="corbindtocurrentruntime-function"></a><span data-ttu-id="511b6-102">CorBindToCurrentRuntime 함수</span><span class="sxs-lookup"><span data-stu-id="511b6-102">CorBindToCurrentRuntime Function</span></span>
+<span data-ttu-id="511b6-103">XML 파일에 저장 된 버전 정보를 사용 하 여 CLR (공용 언어 런타임)을 프로세스로 로드 합니다.</span><span class="sxs-lookup"><span data-stu-id="511b6-103">Loads the common language runtime (CLR) into a process by using version information stored in an XML file.</span></span> <span data-ttu-id="511b6-104">XML 파일의 형식은 표준 응용 프로그램 구성 파일 다음에 모델링 됩니다.</span><span class="sxs-lookup"><span data-stu-id="511b6-104">The format of the XML file is modeled after the standard application configuration file.</span></span> <span data-ttu-id="511b6-105">구성 파일에 대한 자세한 내용은 [구성 파일 스키마](../../../../docs/framework/configure-apps/file-schema/index.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="511b6-105">For more information about configuration files, see [Configuration File Schema](../../../../docs/framework/configure-apps/file-schema/index.md).</span></span>  
   
- <span data-ttu-id="c49dc-106">.NET Framework 4에서이 함수에 사용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="c49dc-106">This function has been deprecated in the .NET Framework 4.</span></span> <span data-ttu-id="c49dc-107">참조 [공용 언어 런타임을 프로세스로 로드](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/01918c6x(v=vs.100))합니다.</span><span class="sxs-lookup"><span data-stu-id="c49dc-107">See [Loading the Common Language Runtime into a Process](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/01918c6x(v=vs.100)).</span></span>  
+ <span data-ttu-id="511b6-106">이 함수는 .NET Framework 4에서 더 이상 사용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="511b6-106">This function has been deprecated in the .NET Framework 4.</span></span> <span data-ttu-id="511b6-107">[프로세스에 공용 언어 런타임 로드](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/01918c6x(v=vs.100))를 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="511b6-107">See [Loading the Common Language Runtime into a Process](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/01918c6x(v=vs.100)).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c49dc-108">구문</span><span class="sxs-lookup"><span data-stu-id="c49dc-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="511b6-108">구문</span><span class="sxs-lookup"><span data-stu-id="511b6-108">Syntax</span></span>  
   
 ```cpp  
 HRESULT CorBindToCurrentRuntime (  
@@ -40,37 +38,37 @@ HRESULT CorBindToCurrentRuntime (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c49dc-109">매개 변수</span><span class="sxs-lookup"><span data-stu-id="c49dc-109">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="511b6-109">매개 변수</span><span class="sxs-lookup"><span data-stu-id="511b6-109">Parameters</span></span>  
  `pwszFileName`  
- <span data-ttu-id="c49dc-110">[in] 로드 하기 위해 CLR의 버전을 지정 하는 응용 프로그램 구성 파일의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="c49dc-110">[in] The name of an application configuration file that specifies the version of the CLR to load.</span></span> <span data-ttu-id="c49dc-111">파일 이름이 정규화 되지 않은 경우 호출을 수행 하는 실행 파일과 동일한 디렉터리에 있는 간주 됩니다.</span><span class="sxs-lookup"><span data-stu-id="c49dc-111">If the file name is not fully qualified, it is assumed to be in the same directory as the executable making the call.</span></span>  
+ <span data-ttu-id="511b6-110">진행 로드할 CLR 버전을 지정 하는 응용 프로그램 구성 파일의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="511b6-110">[in] The name of an application configuration file that specifies the version of the CLR to load.</span></span> <span data-ttu-id="511b6-111">파일 이름이 정규화 되지 않은 경우 호출을 수행 하는 실행 파일과 동일한 디렉터리에 있는 것으로 간주 됩니다.</span><span class="sxs-lookup"><span data-stu-id="511b6-111">If the file name is not fully qualified, it is assumed to be in the same directory as the executable making the call.</span></span>  
   
- <span data-ttu-id="c49dc-112">로드할 런타임 버전을 version 특성에 의해 설명 됩니다 합니다 [ \<requiredRuntime >](../../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md) 구성 파일의 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="c49dc-112">The version of the runtime to be loaded is described by the version attribute in the [\<requiredRuntime>](../../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md) element of the configuration file.</span></span>  
+ <span data-ttu-id="511b6-112">로드할 런타임 버전은 구성 파일의 [\<requiredRuntime >](../../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md) 요소의 version 특성에 설명 되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="511b6-112">The version of the runtime to be loaded is described by the version attribute in the [\<requiredRuntime>](../../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md) element of the configuration file.</span></span>  
   
- <span data-ttu-id="c49dc-113">버전이 지정 된 경우 또는 경우는 `<requiredRuntime>` 요소를 찾을 수 없습니다, 최신 버전의 컴퓨터에 설치 된 CLR 로드 됩니다.</span><span class="sxs-lookup"><span data-stu-id="c49dc-113">If no version is specified, or if the `<requiredRuntime>` element cannot be found, the latest version of the CLR that is installed on the machine is loaded.</span></span>  
+ <span data-ttu-id="511b6-113">버전을 지정 하지 않거나 `<requiredRuntime>` 요소를 찾을 수 없는 경우 컴퓨터에 설치 된 CLR의 최신 버전이 로드 됩니다.</span><span class="sxs-lookup"><span data-stu-id="511b6-113">If no version is specified, or if the `<requiredRuntime>` element cannot be found, the latest version of the CLR that is installed on the machine is loaded.</span></span>  
   
  `rclsid`  
- <span data-ttu-id="c49dc-114">[in] 합니다 `CLSID` 중 하나를 구현 하는 coclass의 합니다 [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) 또는 [ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md) 인터페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="c49dc-114">[in] The `CLSID` of the coclass that implements either the [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) or the [ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md) interface.</span></span> <span data-ttu-id="c49dc-115">지원 되는 값은 CLSID_CorRuntimeHost CLSID_CLRRuntimeHost입니다.</span><span class="sxs-lookup"><span data-stu-id="c49dc-115">Supported values are CLSID_CorRuntimeHost or CLSID_CLRRuntimeHost.</span></span>  
+ <span data-ttu-id="511b6-114">진행 [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) 또는 [ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md) 인터페이스를 구현 하는 coclass 의 `CLSID`입니다.</span><span class="sxs-lookup"><span data-stu-id="511b6-114">[in] The `CLSID` of the coclass that implements either the [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) or the [ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md) interface.</span></span> <span data-ttu-id="511b6-115">지원 되는 값은 CLSID_CorRuntimeHost 또는 CLSID_CLRRuntimeHost입니다.</span><span class="sxs-lookup"><span data-stu-id="511b6-115">Supported values are CLSID_CorRuntimeHost or CLSID_CLRRuntimeHost.</span></span>  
   
  `riid`  
- <span data-ttu-id="c49dc-116">[in] `IID` 요청 하는 인터페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="c49dc-116">[in] The `IID` of the interface you are requesting.</span></span> <span data-ttu-id="c49dc-117">지원 되는 값은 IID_ICorRuntimeHost IID_ICLRRuntimeHost입니다.</span><span class="sxs-lookup"><span data-stu-id="c49dc-117">Supported values are IID_ICorRuntimeHost or IID_ICLRRuntimeHost.</span></span>  
+ <span data-ttu-id="511b6-116">진행 요청 하는 인터페이스의 `IID`입니다.</span><span class="sxs-lookup"><span data-stu-id="511b6-116">[in] The `IID` of the interface you are requesting.</span></span> <span data-ttu-id="511b6-117">지원 되는 값은 IID_ICorRuntimeHost 또는 IID_ICLRRuntimeHost입니다.</span><span class="sxs-lookup"><span data-stu-id="511b6-117">Supported values are IID_ICorRuntimeHost or IID_ICLRRuntimeHost.</span></span>  
   
  `ppv`  
- <span data-ttu-id="c49dc-118">[out] 반환 된 인터페이스 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="c49dc-118">[out] The returned interface pointer.</span></span>  
+ <span data-ttu-id="511b6-118">제한이 반환 된 인터페이스 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="511b6-118">[out] The returned interface pointer.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c49dc-119">요구 사항</span><span class="sxs-lookup"><span data-stu-id="c49dc-119">Requirements</span></span>  
- <span data-ttu-id="c49dc-120">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="c49dc-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="511b6-119">요구 사항</span><span class="sxs-lookup"><span data-stu-id="511b6-119">Requirements</span></span>  
+ <span data-ttu-id="511b6-120">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="511b6-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c49dc-121">**헤더:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="c49dc-121">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="511b6-121">**헤더:** Mscoree.dll</span><span class="sxs-lookup"><span data-stu-id="511b6-121">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="c49dc-122">**라이브러리:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="c49dc-122">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="511b6-122">**라이브러리:** Mscoree.dll</span><span class="sxs-lookup"><span data-stu-id="511b6-122">**Library:** MSCorEE.dll</span></span>  
   
- <span data-ttu-id="c49dc-123">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c49dc-123">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="511b6-123">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="511b6-123">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c49dc-124">참고자료</span><span class="sxs-lookup"><span data-stu-id="c49dc-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="511b6-124">참조</span><span class="sxs-lookup"><span data-stu-id="511b6-124">See also</span></span>
 
-- [<span data-ttu-id="c49dc-125">CorBindToRuntime 함수</span><span class="sxs-lookup"><span data-stu-id="c49dc-125">CorBindToRuntime Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md)
-- [<span data-ttu-id="c49dc-126">CorBindToRuntimeByCfg 함수</span><span class="sxs-lookup"><span data-stu-id="c49dc-126">CorBindToRuntimeByCfg Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md)
-- [<span data-ttu-id="c49dc-127">CorBindToRuntimeEx 함수</span><span class="sxs-lookup"><span data-stu-id="c49dc-127">CorBindToRuntimeEx Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)
-- [<span data-ttu-id="c49dc-128">CorBindToRuntimeHost 함수</span><span class="sxs-lookup"><span data-stu-id="c49dc-128">CorBindToRuntimeHost Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimehost-function.md)
-- [<span data-ttu-id="c49dc-129">ICorRuntimeHost 인터페이스</span><span class="sxs-lookup"><span data-stu-id="c49dc-129">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
-- [<span data-ttu-id="c49dc-130">사용되지 않는 CLR 호스팅 함수</span><span class="sxs-lookup"><span data-stu-id="c49dc-130">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [<span data-ttu-id="511b6-125">CorBindToRuntime 함수</span><span class="sxs-lookup"><span data-stu-id="511b6-125">CorBindToRuntime Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md)
+- [<span data-ttu-id="511b6-126">CorBindToRuntimeByCfg 함수</span><span class="sxs-lookup"><span data-stu-id="511b6-126">CorBindToRuntimeByCfg Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md)
+- [<span data-ttu-id="511b6-127">CorBindToRuntimeEx 함수</span><span class="sxs-lookup"><span data-stu-id="511b6-127">CorBindToRuntimeEx Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)
+- [<span data-ttu-id="511b6-128">CorBindToRuntimeHost 함수</span><span class="sxs-lookup"><span data-stu-id="511b6-128">CorBindToRuntimeHost Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimehost-function.md)
+- [<span data-ttu-id="511b6-129">ICorRuntimeHost 인터페이스</span><span class="sxs-lookup"><span data-stu-id="511b6-129">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+- [<span data-ttu-id="511b6-130">사용되지 않는 CLR 호스팅 함수</span><span class="sxs-lookup"><span data-stu-id="511b6-130">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

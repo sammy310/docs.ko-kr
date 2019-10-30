@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 5b132ef1-8d4b-4525-89b3-54123596c194
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c137a10d5da94d04509385fc97d71535d33fae93
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c6def272ecc7bd2b6e946e2c9623f0b60587d317
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758744"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128804"
 ---
-# <a name="icordebugprocessgetthreadcontext-method"></a><span data-ttu-id="9d1cc-102">ICorDebugProcess::GetThreadContext 메서드</span><span class="sxs-lookup"><span data-stu-id="9d1cc-102">ICorDebugProcess::GetThreadContext Method</span></span>
-<span data-ttu-id="9d1cc-103">이 프로세스에서 지정 된 스레드에 대 한 컨텍스트를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="9d1cc-103">Gets the context for the given thread in this process.</span></span>  
+# <a name="icordebugprocessgetthreadcontext-method"></a><span data-ttu-id="41496-102">ICorDebugProcess::GetThreadContext 메서드</span><span class="sxs-lookup"><span data-stu-id="41496-102">ICorDebugProcess::GetThreadContext Method</span></span>
+<span data-ttu-id="41496-103">이 프로세스의 지정 된 스레드에 대 한 컨텍스트를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="41496-103">Gets the context for the given thread in this process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9d1cc-104">구문</span><span class="sxs-lookup"><span data-stu-id="9d1cc-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="41496-104">구문</span><span class="sxs-lookup"><span data-stu-id="41496-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetThreadContext(  
@@ -37,28 +35,28 @@ HRESULT GetThreadContext(
     BYTE context[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="9d1cc-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="9d1cc-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="41496-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="41496-105">Parameters</span></span>  
  `threadID`  
- <span data-ttu-id="9d1cc-106">[in] 컨텍스트를 검색 하려는 스레드의 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="9d1cc-106">[in] The ID of the thread for which to retrieve the context.</span></span>  
+ <span data-ttu-id="41496-106">진행 컨텍스트를 검색할 스레드의 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="41496-106">[in] The ID of the thread for which to retrieve the context.</span></span>  
   
  `contextSize`  
- <span data-ttu-id="9d1cc-107">[in] `context` 배열의 크기입니다.</span><span class="sxs-lookup"><span data-stu-id="9d1cc-107">[in] The size of the `context` array.</span></span>  
+ <span data-ttu-id="41496-107">[in] `context` 배열의 크기입니다.</span><span class="sxs-lookup"><span data-stu-id="41496-107">[in] The size of the `context` array.</span></span>  
   
  `context`  
- <span data-ttu-id="9d1cc-108">[out에서] 스레드의 컨텍스트를 설명 하는 바이트 배열입니다.</span><span class="sxs-lookup"><span data-stu-id="9d1cc-108">[in, out] An array of bytes that describe the thread's context.</span></span>  
+ <span data-ttu-id="41496-108">[in, out] 스레드의 컨텍스트를 설명 하는 바이트 배열입니다.</span><span class="sxs-lookup"><span data-stu-id="41496-108">[in, out] An array of bytes that describe the thread's context.</span></span>  
   
- <span data-ttu-id="9d1cc-109">컨텍스트는 스레드가 실행 중인 프로세서의 아키텍처를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="9d1cc-109">The context specifies the architecture of the processor on which the thread is executing.</span></span>  
+ <span data-ttu-id="41496-109">컨텍스트는 스레드가 실행 되는 프로세서의 아키텍처를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="41496-109">The context specifies the architecture of the processor on which the thread is executing.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="9d1cc-110">설명</span><span class="sxs-lookup"><span data-stu-id="9d1cc-110">Remarks</span></span>  
- <span data-ttu-id="9d1cc-111">디버거에서 Win32 대신이 메서드를 호출 해야 `GetThreadContext` 메서드는 해당 컨텍스트가 일시적으로 변경 된 "도용" 상태의 스레드가 실제로 수 있으므로 합니다.</span><span class="sxs-lookup"><span data-stu-id="9d1cc-111">The debugger should call this method rather than the Win32 `GetThreadContext` method, because the thread may actually be in a "hijacked" state, in which its context has been temporarily changed.</span></span> <span data-ttu-id="9d1cc-112">스레드는 네이티브 코드의 경우에이 메서드를 사용 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="9d1cc-112">This method should be used only when a thread is in native code.</span></span> <span data-ttu-id="9d1cc-113">사용 하 여 [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) 스레드에 관리 코드에 대 한 합니다.</span><span class="sxs-lookup"><span data-stu-id="9d1cc-113">Use [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) for threads in managed code.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="41496-110">주의</span><span class="sxs-lookup"><span data-stu-id="41496-110">Remarks</span></span>  
+ <span data-ttu-id="41496-111">스레드가 실제로 해당 컨텍스트가 일시적으로 변경 된 "하이재킹" 상태가 될 수 있으므로 디버거가 Win32 `GetThreadContext` 메서드 대신이 메서드를 호출 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="41496-111">The debugger should call this method rather than the Win32 `GetThreadContext` method, because the thread may actually be in a "hijacked" state, in which its context has been temporarily changed.</span></span> <span data-ttu-id="41496-112">이 메서드는 스레드가 네이티브 코드에 있는 경우에만 사용 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="41496-112">This method should be used only when a thread is in native code.</span></span> <span data-ttu-id="41496-113">관리 코드에서 스레드에 대해 [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) 를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="41496-113">Use [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) for threads in managed code.</span></span>  
   
- <span data-ttu-id="9d1cc-114">반환 되는 데이터에는 현재 플랫폼에 대 한 상황에 맞는 구조입니다.</span><span class="sxs-lookup"><span data-stu-id="9d1cc-114">The data returned is a context structure for the current platform.</span></span> <span data-ttu-id="9d1cc-115">Win32의 경우와 마찬가지로 `GetThreadContext` 메서드를 호출자에 게 초기화 해야 합니다 `context` 이 메서드를 호출 하기 전에 매개 변수입니다.</span><span class="sxs-lookup"><span data-stu-id="9d1cc-115">Just as with the Win32 `GetThreadContext` method, the caller should initialize the `context` parameter before calling this method.</span></span>  
+ <span data-ttu-id="41496-114">반환 된 데이터는 현재 플랫폼에 대 한 컨텍스트 구조입니다.</span><span class="sxs-lookup"><span data-stu-id="41496-114">The data returned is a context structure for the current platform.</span></span> <span data-ttu-id="41496-115">Win32 `GetThreadContext` 메서드와 마찬가지로 호출자는이 메서드를 호출 하기 전에 `context` 매개 변수를 초기화 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="41496-115">Just as with the Win32 `GetThreadContext` method, the caller should initialize the `context` parameter before calling this method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9d1cc-116">요구 사항</span><span class="sxs-lookup"><span data-stu-id="9d1cc-116">Requirements</span></span>  
- <span data-ttu-id="9d1cc-117">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="9d1cc-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="41496-116">요구 사항</span><span class="sxs-lookup"><span data-stu-id="41496-116">Requirements</span></span>  
+ <span data-ttu-id="41496-117">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="41496-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9d1cc-118">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="9d1cc-118">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="41496-118">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="41496-118">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="9d1cc-119">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9d1cc-119">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="41496-119">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="41496-119">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="9d1cc-120">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9d1cc-120">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+ <span data-ttu-id="41496-120">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="41496-120">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>

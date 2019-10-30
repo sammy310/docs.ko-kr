@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 1ded7639-dacb-4db1-961c-d1ceaec01959
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ebbc076f52c661a394eff51954fceefe8e439ded
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0f6a369691ab2e4e9fd2e5d9731fb1dc0a42ba11
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779886"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127790"
 ---
-# <a name="icorconfigurationsetdebuggerthreadcontrol-method"></a><span data-ttu-id="9c848-102">ICorConfiguration::SetDebuggerThreadControl 메서드</span><span class="sxs-lookup"><span data-stu-id="9c848-102">ICorConfiguration::SetDebuggerThreadControl Method</span></span>
-<span data-ttu-id="9c848-103">디버깅 서비스를 호출 하는 공용 언어 런타임 (CLR) 스레드를 차단 하 고 차단을 해제 때 디버깅을 위해 콜백 인터페이스를 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="9c848-103">Sets the callback interface that the debugging services will call as common language runtime (CLR) threads are blocked and unblocked for debugging.</span></span>  
+# <a name="icorconfigurationsetdebuggerthreadcontrol-method"></a><span data-ttu-id="53853-102">ICorConfiguration::SetDebuggerThreadControl 메서드</span><span class="sxs-lookup"><span data-stu-id="53853-102">ICorConfiguration::SetDebuggerThreadControl Method</span></span>
+<span data-ttu-id="53853-103">디버깅 서비스에서 CLR (공용 언어 런타임) 스레드가 차단 되 고 차단 해제 될 때 호출 되는 콜백 인터페이스를 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="53853-103">Sets the callback interface that the debugging services will call as common language runtime (CLR) threads are blocked and unblocked for debugging.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9c848-104">구문</span><span class="sxs-lookup"><span data-stu-id="9c848-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="53853-104">구문</span><span class="sxs-lookup"><span data-stu-id="53853-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetDebuggerThreadControl (  
@@ -35,19 +33,19 @@ HRESULT SetDebuggerThreadControl (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="9c848-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="9c848-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="53853-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="53853-105">Parameters</span></span>  
  `pDebuggerThreadControl`  
- <span data-ttu-id="9c848-106">[in] 에 대 한 포인터를 [IDebuggerThreadControl](../../../../docs/framework/unmanaged-api/hosting/idebuggerthreadcontrol-interface.md) 개체를 차단 하 고 디버깅 서비스에 의해 스레드 차단을 해제 하는 방법에 대 한 호스트에 알립니다.</span><span class="sxs-lookup"><span data-stu-id="9c848-106">[in] A pointer to an [IDebuggerThreadControl](../../../../docs/framework/unmanaged-api/hosting/idebuggerthreadcontrol-interface.md) object that notifies the host about the blocking and unblocking of threads by the debugging services.</span></span>  
+ <span data-ttu-id="53853-106">진행 디버깅 서비스에의 한 스레드 차단 및 차단 해제에 대해 호스트에 알리는 [IDebuggerThreadControl](../../../../docs/framework/unmanaged-api/hosting/idebuggerthreadcontrol-interface.md) 개체에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="53853-106">[in] A pointer to an [IDebuggerThreadControl](../../../../docs/framework/unmanaged-api/hosting/idebuggerthreadcontrol-interface.md) object that notifies the host about the blocking and unblocking of threads by the debugging services.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9c848-107">요구 사항</span><span class="sxs-lookup"><span data-stu-id="9c848-107">Requirements</span></span>  
- <span data-ttu-id="9c848-108">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="9c848-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="53853-107">요구 사항</span><span class="sxs-lookup"><span data-stu-id="53853-107">Requirements</span></span>  
+ <span data-ttu-id="53853-108">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="53853-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9c848-109">**헤더:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="9c848-109">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="53853-109">**헤더:** Mscoree.dll</span><span class="sxs-lookup"><span data-stu-id="53853-109">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="9c848-110">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="9c848-110">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="53853-110">**라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="53853-110">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="9c848-111">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9c848-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="53853-111">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="53853-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9c848-112">참고자료</span><span class="sxs-lookup"><span data-stu-id="9c848-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="53853-112">참조</span><span class="sxs-lookup"><span data-stu-id="53853-112">See also</span></span>
 
-- [<span data-ttu-id="9c848-113">ICorConfiguration 인터페이스</span><span class="sxs-lookup"><span data-stu-id="9c848-113">ICorConfiguration Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorconfiguration-interface.md)
+- [<span data-ttu-id="53853-113">ICorConfiguration 인터페이스</span><span class="sxs-lookup"><span data-stu-id="53853-113">ICorConfiguration Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorconfiguration-interface.md)

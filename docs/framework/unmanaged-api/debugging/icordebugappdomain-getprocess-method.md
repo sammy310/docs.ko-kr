@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 9d0b9628-a91c-40d0-b9bc-00b34a396b8f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: eebb0c39cb8ae69dfce1e865f2784bbe9a408786
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 46d045712e5d3f688ec35d039ccfecba0088037c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737835"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134697"
 ---
-# <a name="icordebugappdomaingetprocess-method"></a><span data-ttu-id="9bff3-102">ICorDebugAppDomain::GetProcess 메서드</span><span class="sxs-lookup"><span data-stu-id="9bff3-102">ICorDebugAppDomain::GetProcess Method</span></span>
-<span data-ttu-id="9bff3-103">응용 프로그램 도메인을 포함 하는 프로세스를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="9bff3-103">Gets the process containing the application domain.</span></span>  
+# <a name="icordebugappdomaingetprocess-method"></a><span data-ttu-id="daa94-102">ICorDebugAppDomain::GetProcess 메서드</span><span class="sxs-lookup"><span data-stu-id="daa94-102">ICorDebugAppDomain::GetProcess Method</span></span>
+<span data-ttu-id="daa94-103">응용 프로그램 도메인을 포함 하는 프로세스를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="daa94-103">Gets the process containing the application domain.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9bff3-104">구문</span><span class="sxs-lookup"><span data-stu-id="9bff3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="daa94-104">구문</span><span class="sxs-lookup"><span data-stu-id="daa94-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetProcess (  
@@ -35,15 +33,15 @@ HRESULT GetProcess (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="9bff3-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="9bff3-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="daa94-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="daa94-105">Parameters</span></span>  
  `ppProcess`  
- <span data-ttu-id="9bff3-106">[out] 프로세스를 나타내는 ICorDebugProcess 개체의 주소에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="9bff3-106">[out] A pointer to the address of an ICorDebugProcess object that represents the process.</span></span>  
+ <span data-ttu-id="daa94-106">제한이 프로세스를 나타내는 ICorDebugProcess 개체의 주소에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="daa94-106">[out] A pointer to the address of an ICorDebugProcess object that represents the process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9bff3-107">요구 사항</span><span class="sxs-lookup"><span data-stu-id="9bff3-107">Requirements</span></span>  
- <span data-ttu-id="9bff3-108">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="9bff3-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="daa94-107">요구 사항</span><span class="sxs-lookup"><span data-stu-id="daa94-107">Requirements</span></span>  
+ <span data-ttu-id="daa94-108">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="daa94-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9bff3-109">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="9bff3-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="daa94-109">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="daa94-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="9bff3-110">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9bff3-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="daa94-110">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="daa94-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="9bff3-111">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9bff3-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="daa94-111">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="daa94-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

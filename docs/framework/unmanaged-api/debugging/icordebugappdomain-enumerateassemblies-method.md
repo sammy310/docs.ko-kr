@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 7add64f9-19a8-46a9-be62-905d5e7d1bd8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6bacd93baae3f0c0b70c4b910e8130551b4f3e48
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 573b08fcf2ce0fa5ce3187df6ae6a1c2cc385f52
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738057"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134003"
 ---
-# <a name="icordebugappdomainenumerateassemblies-method"></a><span data-ttu-id="f60e1-102">ICorDebugAppDomain::EnumerateAssemblies 메서드</span><span class="sxs-lookup"><span data-stu-id="f60e1-102">ICorDebugAppDomain::EnumerateAssemblies Method</span></span>
-<span data-ttu-id="f60e1-103">응용 프로그램 도메인에서 어셈블리에 대 한 열거자를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="f60e1-103">Gets an enumerator for the assemblies in the application domain.</span></span>  
+# <a name="icordebugappdomainenumerateassemblies-method"></a><span data-ttu-id="3d04d-102">ICorDebugAppDomain::EnumerateAssemblies 메서드</span><span class="sxs-lookup"><span data-stu-id="3d04d-102">ICorDebugAppDomain::EnumerateAssemblies Method</span></span>
+<span data-ttu-id="3d04d-103">응용 프로그램 도메인의 어셈블리에 대 한 열거자를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="3d04d-103">Gets an enumerator for the assemblies in the application domain.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f60e1-104">구문</span><span class="sxs-lookup"><span data-stu-id="f60e1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3d04d-104">구문</span><span class="sxs-lookup"><span data-stu-id="3d04d-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT EnumerateAssemblies (  
@@ -35,15 +33,15 @@ HRESULT EnumerateAssemblies (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f60e1-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="f60e1-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="3d04d-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="3d04d-105">Parameters</span></span>  
  `ppAssemblies`  
- <span data-ttu-id="f60e1-106">[out] 응용 프로그램 도메인의 어셈블리에 대 한 열거자는 ICorDebugAssemblyEnum 개체의 주소에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="f60e1-106">[out] A pointer to the address of an ICorDebugAssemblyEnum object that is the enumerator for the assemblies in the application domain.</span></span>  
+ <span data-ttu-id="3d04d-106">제한이 응용 프로그램 도메인에 있는 어셈블리의 열거자 인 ICorDebugAssemblyEnum 개체의 주소에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="3d04d-106">[out] A pointer to the address of an ICorDebugAssemblyEnum object that is the enumerator for the assemblies in the application domain.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f60e1-107">요구 사항</span><span class="sxs-lookup"><span data-stu-id="f60e1-107">Requirements</span></span>  
- <span data-ttu-id="f60e1-108">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="f60e1-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3d04d-107">요구 사항</span><span class="sxs-lookup"><span data-stu-id="3d04d-107">Requirements</span></span>  
+ <span data-ttu-id="3d04d-108">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="3d04d-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f60e1-109">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f60e1-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="3d04d-109">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="3d04d-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="f60e1-110">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f60e1-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="3d04d-110">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3d04d-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="f60e1-111">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f60e1-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="3d04d-111">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3d04d-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

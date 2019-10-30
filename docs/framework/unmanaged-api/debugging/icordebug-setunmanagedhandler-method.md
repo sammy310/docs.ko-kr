@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 6b546be4-f86d-4536-8cfc-1d08e5066eb6
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f50a4bedfee0c402bb76265371d3b9809263ef97
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 36d314211d95dff6648753f5d550a2cfd402a918
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738130"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134041"
 ---
-# <a name="icordebugsetunmanagedhandler-method"></a><span data-ttu-id="8dff8-102">ICorDebug::SetUnmanagedHandler 메서드</span><span class="sxs-lookup"><span data-stu-id="8dff8-102">ICorDebug::SetUnmanagedHandler Method</span></span>
-<span data-ttu-id="8dff8-103">관리 되지 않는 이벤트에 대 한 이벤트 처리기 개체를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="8dff8-103">Specifies the event handler object for unmanaged events.</span></span>  
+# <a name="icordebugsetunmanagedhandler-method"></a><span data-ttu-id="5c17f-102">ICorDebug::SetUnmanagedHandler 메서드</span><span class="sxs-lookup"><span data-stu-id="5c17f-102">ICorDebug::SetUnmanagedHandler Method</span></span>
+<span data-ttu-id="5c17f-103">관리 되지 않는 이벤트에 대 한 이벤트 처리기 개체를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="5c17f-103">Specifies the event handler object for unmanaged events.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8dff8-104">구문</span><span class="sxs-lookup"><span data-stu-id="8dff8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5c17f-104">구문</span><span class="sxs-lookup"><span data-stu-id="5c17f-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetUnmanagedHandler (  
@@ -35,22 +33,22 @@ HRESULT SetUnmanagedHandler (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="8dff8-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="8dff8-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="5c17f-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="5c17f-105">Parameters</span></span>  
  `pCallback`  
- <span data-ttu-id="8dff8-106">[in] 에 대 한 포인터를 [ICorDebugUnmanagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugunmanagedcallback-interface.md) 관리 되지 않는 이벤트에 대 한 이벤트 처리기를 나타내는 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="8dff8-106">[in] A pointer to an [ICorDebugUnmanagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugunmanagedcallback-interface.md) object that represents the event handler for unmanaged events.</span></span>  
+ <span data-ttu-id="5c17f-106">진행 관리 되지 않는 이벤트에 대 한 이벤트 처리기를 나타내는 [ICorDebugUnmanagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugunmanagedcallback-interface.md) 개체에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="5c17f-106">[in] A pointer to an [ICorDebugUnmanagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugunmanagedcallback-interface.md) object that represents the event handler for unmanaged events.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="8dff8-107">설명</span><span class="sxs-lookup"><span data-stu-id="8dff8-107">Remarks</span></span>  
- <span data-ttu-id="8dff8-108">이벤트 처리기 개체 관리 되지 않는 이벤트에 대 한 호출 후 설정 해야 합니다 [icordebug:: Initialize](../../../../docs/framework/unmanaged-api/debugging/icordebug-initialize-method.md) 을 호출 하기 전에 [icordebug:: Createprocess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md) 또는 [icordebug:: Debugactiveprocess ](../../../../docs/framework/unmanaged-api/debugging/icordebug-debugactiveprocess-method.md).</span><span class="sxs-lookup"><span data-stu-id="8dff8-108">The event handler object for unmanaged events must be set after a call to [ICorDebug::Initialize](../../../../docs/framework/unmanaged-api/debugging/icordebug-initialize-method.md) and before any calls to [ICorDebug::CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md) or [ICorDebug::DebugActiveProcess](../../../../docs/framework/unmanaged-api/debugging/icordebug-debugactiveprocess-method.md).</span></span> <span data-ttu-id="8dff8-109">그러나 레거시 용도로 하지 해야 첫 번째 기본 디버그 이벤트가 발생할 때까지 관리 되지 않는 이벤트에 대 한 이벤트 처리기 개체를 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="8dff8-109">However, for legacy purposes, you are not required to set the event handler object for unmanaged events until the first native debug event is raised.</span></span> <span data-ttu-id="8dff8-110">특히 경우 `ICorDebug::CreateProcess` 가 주 스레드를 재개할 때까지 이벤트를 디스패치할 수 없는 네이티브 디버그 CREATE_SUSPENDED 플래그를 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="8dff8-110">Specifically, if `ICorDebug::CreateProcess` has set the CREATE_SUSPENDED flag, native debug events cannot be dispatched until the main thread is resumed.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="5c17f-107">주의</span><span class="sxs-lookup"><span data-stu-id="5c17f-107">Remarks</span></span>  
+ <span data-ttu-id="5c17f-108">관리 되지 않는 이벤트에 대 한 이벤트 처리기 개체는 [ICorDebug:: Initialize](../../../../docs/framework/unmanaged-api/debugging/icordebug-initialize-method.md) 를 호출한 후 [ICorDebug:: CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md) 또는 [ICorDebug::D e버그 activeprocess](../../../../docs/framework/unmanaged-api/debugging/icordebug-debugactiveprocess-method.md)를 호출 하기 전에 설정 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="5c17f-108">The event handler object for unmanaged events must be set after a call to [ICorDebug::Initialize](../../../../docs/framework/unmanaged-api/debugging/icordebug-initialize-method.md) and before any calls to [ICorDebug::CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md) or [ICorDebug::DebugActiveProcess](../../../../docs/framework/unmanaged-api/debugging/icordebug-debugactiveprocess-method.md).</span></span> <span data-ttu-id="5c17f-109">그러나 레거시를 위해 첫 번째 네이티브 디버그 이벤트가 발생할 때까지 관리 되지 않는 이벤트에 대 한 이벤트 처리기 개체를 설정할 필요가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="5c17f-109">However, for legacy purposes, you are not required to set the event handler object for unmanaged events until the first native debug event is raised.</span></span> <span data-ttu-id="5c17f-110">특히 CREATE_SUSPENDED 플래그를 설정 `ICorDebug::CreateProcess` 경우 주 스레드를 다시 시작할 때까지 네이티브 디버그 이벤트를 발송할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="5c17f-110">Specifically, if `ICorDebug::CreateProcess` has set the CREATE_SUSPENDED flag, native debug events cannot be dispatched until the main thread is resumed.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8dff8-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="8dff8-111">Requirements</span></span>  
- <span data-ttu-id="8dff8-112">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="8dff8-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5c17f-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="5c17f-111">Requirements</span></span>  
+ <span data-ttu-id="5c17f-112">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="5c17f-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8dff8-113">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="8dff8-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="5c17f-113">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="5c17f-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="8dff8-114">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8dff8-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="5c17f-114">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5c17f-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="8dff8-115">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8dff8-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="5c17f-115">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5c17f-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8dff8-116">참고자료</span><span class="sxs-lookup"><span data-stu-id="8dff8-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5c17f-116">참조</span><span class="sxs-lookup"><span data-stu-id="5c17f-116">See also</span></span>
 
-- [<span data-ttu-id="8dff8-117">ICorDebug 인터페이스</span><span class="sxs-lookup"><span data-stu-id="8dff8-117">ICorDebug Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [<span data-ttu-id="5c17f-117">ICorDebug 인터페이스</span><span class="sxs-lookup"><span data-stu-id="5c17f-117">ICorDebug Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)

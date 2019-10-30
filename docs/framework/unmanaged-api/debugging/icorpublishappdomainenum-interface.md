@@ -14,37 +14,35 @@ helpviewer_keywords:
 ms.assetid: bb798c56-042e-475d-a245-b6fac36d0c07
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0f6d4af7c01f91dff77d6ba715ef845f523c7fb6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cbe2aa48a8b67b0b6e88f7b5267bc70848fe3cec
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61993553"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140320"
 ---
-# <a name="icorpublishappdomainenum-interface"></a><span data-ttu-id="2c270-102">ICorPublishAppDomainEnum 인터페이스</span><span class="sxs-lookup"><span data-stu-id="2c270-102">ICorPublishAppDomainEnum Interface</span></span>
-<span data-ttu-id="2c270-103">서브 클래스는 [ICorPublishEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md) 의 컬렉션을 이동 하는 메서드를 제공 하는 인터페이스 [ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md) 프로세스 내에서 현재 존재 하는 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="2c270-103">A subclass of the [ICorPublishEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md) interface that provides methods to traverse a collection of [ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md) objects that currently exist within a process.</span></span>  
+# <a name="icorpublishappdomainenum-interface"></a><span data-ttu-id="15449-102">ICorPublishAppDomainEnum 인터페이스</span><span class="sxs-lookup"><span data-stu-id="15449-102">ICorPublishAppDomainEnum Interface</span></span>
+<span data-ttu-id="15449-103">프로세스 내에 현재 존재 하는 [ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md) 개체의 컬렉션을 순회 하는 메서드를 제공 하는 [ICorPublishEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md) 인터페이스의 서브 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="15449-103">A subclass of the [ICorPublishEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md) interface that provides methods to traverse a collection of [ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md) objects that currently exist within a process.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="2c270-104">메서드</span><span class="sxs-lookup"><span data-stu-id="2c270-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="15449-104">메서드</span><span class="sxs-lookup"><span data-stu-id="15449-104">Methods</span></span>  
   
-|<span data-ttu-id="2c270-105">메서드</span><span class="sxs-lookup"><span data-stu-id="2c270-105">Method</span></span>|<span data-ttu-id="2c270-106">설명</span><span class="sxs-lookup"><span data-stu-id="2c270-106">Description</span></span>|  
+|<span data-ttu-id="15449-105">메서드</span><span class="sxs-lookup"><span data-stu-id="15449-105">Method</span></span>|<span data-ttu-id="15449-106">설명</span><span class="sxs-lookup"><span data-stu-id="15449-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="2c270-107">Next 메서드</span><span class="sxs-lookup"><span data-stu-id="2c270-107">Next Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomainenum-next-method.md)|<span data-ttu-id="2c270-108">지정 된 수를 가져옵니다 `ICorPublishAppDomain` 현재 위치부터 컬렉션의 인스턴스.</span><span class="sxs-lookup"><span data-stu-id="2c270-108">Gets the specified number of `ICorPublishAppDomain` instances from the collection, starting at the current position.</span></span>|  
+|[<span data-ttu-id="15449-107">Next 메서드</span><span class="sxs-lookup"><span data-stu-id="15449-107">Next Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomainenum-next-method.md)|<span data-ttu-id="15449-108">현재 위치에서 시작 하 여 컬렉션에서 지정 된 수의 `ICorPublishAppDomain` 인스턴스를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="15449-108">Gets the specified number of `ICorPublishAppDomain` instances from the collection, starting at the current position.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="2c270-109">설명</span><span class="sxs-lookup"><span data-stu-id="2c270-109">Remarks</span></span>  
- <span data-ttu-id="2c270-110">합니다 `ICorPublishAppDomainEnum` 추상 인터페이스의 메서드를 구현 하는 인터페이스 [ICorPublishEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="2c270-110">The `ICorPublishAppDomainEnum` interface implements the methods of the abstract interface, [ICorPublishEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="15449-109">주의</span><span class="sxs-lookup"><span data-stu-id="15449-109">Remarks</span></span>  
+ <span data-ttu-id="15449-110">`ICorPublishAppDomainEnum` 인터페이스는 추상 인터페이스인 [ICorPublishEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md)의 메서드를 구현 합니다.</span><span class="sxs-lookup"><span data-stu-id="15449-110">The `ICorPublishAppDomainEnum` interface implements the methods of the abstract interface, [ICorPublishEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2c270-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="2c270-111">Requirements</span></span>  
- <span data-ttu-id="2c270-112">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="2c270-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="15449-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="15449-111">Requirements</span></span>  
+ <span data-ttu-id="15449-112">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="15449-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2c270-113">**헤더:** CorPub.idl, CorPub.h</span><span class="sxs-lookup"><span data-stu-id="2c270-113">**Header:** CorPub.idl, CorPub.h</span></span>  
+ <span data-ttu-id="15449-113">**헤더:** CorPub .idl, CorPub. h</span><span class="sxs-lookup"><span data-stu-id="15449-113">**Header:** CorPub.idl, CorPub.h</span></span>  
   
- <span data-ttu-id="2c270-114">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2c270-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="15449-114">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="15449-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="2c270-115">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2c270-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="15449-115">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="15449-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2c270-116">참고자료</span><span class="sxs-lookup"><span data-stu-id="2c270-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="15449-116">참조</span><span class="sxs-lookup"><span data-stu-id="15449-116">See also</span></span>
 
-- [<span data-ttu-id="2c270-117">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="2c270-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [<span data-ttu-id="2c270-118">CorpubPublish Coclass</span><span class="sxs-lookup"><span data-stu-id="2c270-118">CorpubPublish Coclass</span></span>](../../../../docs/framework/unmanaged-api/debugging/corpubpublish-coclass.md)
+- [<span data-ttu-id="15449-117">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="15449-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="15449-118">CorpubPublish Coclass</span><span class="sxs-lookup"><span data-stu-id="15449-118">CorpubPublish Coclass</span></span>](../../../../docs/framework/unmanaged-api/debugging/corpubpublish-coclass.md)

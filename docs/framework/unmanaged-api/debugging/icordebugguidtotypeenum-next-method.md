@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: c9937666-8e18-484d-9fe0-b9ac95199530
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9f334b4a28b0573fa938c2fda340c0c03175ff18
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f6f190cd5b2f208df5a4ed88b650af671f2e6c5c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756880"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138521"
 ---
-# <a name="icordebugguidtotypeenumnext-method"></a><span data-ttu-id="6eba9-102">ICorDebugGuidToTypeEnum::Next 메서드</span><span class="sxs-lookup"><span data-stu-id="6eba9-102">ICorDebugGuidToTypeEnum::Next Method</span></span>
-<span data-ttu-id="6eba9-103">지정 된 개수를 가져옵니다 [CorDebugGuidToTypeMapping](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md) Guid 형식 정보를 매핑하는 인스턴스.</span><span class="sxs-lookup"><span data-stu-id="6eba9-103">Gets the specified number of [CorDebugGuidToTypeMapping](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md) instances that map GUIDs to type information.</span></span>  
+# <a name="icordebugguidtotypeenumnext-method"></a><span data-ttu-id="add11-102">ICorDebugGuidToTypeEnum::Next 메서드</span><span class="sxs-lookup"><span data-stu-id="add11-102">ICorDebugGuidToTypeEnum::Next Method</span></span>
+<span data-ttu-id="add11-103">Guid를 형식 정보에 매핑하는 지정 된 수의 [CorDebugGuidToTypeMapping](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md) 인스턴스를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="add11-103">Gets the specified number of [CorDebugGuidToTypeMapping](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md) instances that map GUIDs to type information.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6eba9-104">구문</span><span class="sxs-lookup"><span data-stu-id="6eba9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="add11-104">구문</span><span class="sxs-lookup"><span data-stu-id="add11-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT Next(  
@@ -37,28 +35,28 @@ HRESULT Next(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="6eba9-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="6eba9-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="add11-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="add11-105">Parameters</span></span>  
  `celt`  
- <span data-ttu-id="6eba9-106">[in] GUID-유형 매핑 개체를 검색할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6eba9-106">[in] The number of GUID-to-type mapping objects to be retrieved.</span></span>  
+ <span data-ttu-id="add11-106">진행 검색할 GUID-형식 매핑 개체의 수입니다.</span><span class="sxs-lookup"><span data-stu-id="add11-106">[in] The number of GUID-to-type mapping objects to be retrieved.</span></span>  
   
  `values`  
- <span data-ttu-id="6eba9-107">[out] 각각 가리키는 포인터 배열을 [CorDebugGuidToTypeMapping](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md) 해당 ICorDebugType 개체에는 Windows 런타임 GUID를 매핑하는 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="6eba9-107">[out] An array of pointers, each of which points to a [CorDebugGuidToTypeMapping](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md) object that maps a Windows Runtime GUID to its corresponding ICorDebugType object.</span></span>  
+ <span data-ttu-id="add11-107">제한이 각각 Windows 런타임 GUID를 해당 ICorDebugType 개체에 매핑하는 [CorDebugGuidToTypeMapping](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md) 개체를 가리키는 포인터의 배열입니다.</span><span class="sxs-lookup"><span data-stu-id="add11-107">[out] An array of pointers, each of which points to a [CorDebugGuidToTypeMapping](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md) object that maps a Windows Runtime GUID to its corresponding ICorDebugType object.</span></span>  
   
  `pceltFetched`  
- <span data-ttu-id="6eba9-108">[out] 개수에 대 한 포인터 [CorDebugGuidToTypeMapping](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md) 개체에 실제로 반환 된 `values`합니다.</span><span class="sxs-lookup"><span data-stu-id="6eba9-108">[out] A pointer to the number of [CorDebugGuidToTypeMapping](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md) objects actually returned in `values`.</span></span>  
+ <span data-ttu-id="add11-108">제한이 `values`에서 실제로 반환 된 [CorDebugGuidToTypeMapping](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md) 개체 수에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="add11-108">[out] A pointer to the number of [CorDebugGuidToTypeMapping](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md) objects actually returned in `values`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="6eba9-109">설명</span><span class="sxs-lookup"><span data-stu-id="6eba9-109">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="add11-109">주의</span><span class="sxs-lookup"><span data-stu-id="add11-109">Remarks</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6eba9-110">요구 사항</span><span class="sxs-lookup"><span data-stu-id="6eba9-110">Requirements</span></span>  
- <span data-ttu-id="6eba9-111">**플랫폼:** Windows 런타임</span><span class="sxs-lookup"><span data-stu-id="6eba9-111">**Platforms:** Windows Runtime</span></span>  
+## <a name="requirements"></a><span data-ttu-id="add11-110">요구 사항</span><span class="sxs-lookup"><span data-stu-id="add11-110">Requirements</span></span>  
+ <span data-ttu-id="add11-111">**플랫폼:** Windows 런타임</span><span class="sxs-lookup"><span data-stu-id="add11-111">**Platforms:** Windows Runtime</span></span>  
   
- <span data-ttu-id="6eba9-112">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="6eba9-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="add11-112">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="add11-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="6eba9-113">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6eba9-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="add11-113">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="add11-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="6eba9-114">**.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6eba9-114">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="add11-114">**.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="add11-114">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6eba9-115">참고자료</span><span class="sxs-lookup"><span data-stu-id="6eba9-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="add11-115">참조</span><span class="sxs-lookup"><span data-stu-id="add11-115">See also</span></span>
 
-- [<span data-ttu-id="6eba9-116">ICorDebugGuidToTypeEnum 인터페이스</span><span class="sxs-lookup"><span data-stu-id="6eba9-116">ICorDebugGuidToTypeEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugguidtotypeenum-interface.md)
-- [<span data-ttu-id="6eba9-117">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="6eba9-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="add11-116">ICorDebugGuidToTypeEnum 인터페이스</span><span class="sxs-lookup"><span data-stu-id="add11-116">ICorDebugGuidToTypeEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugguidtotypeenum-interface.md)
+- [<span data-ttu-id="add11-117">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="add11-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 4dff3646-a050-4bd9-ac31-fe307e8637ec
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9a0764cb212a95412a4dcf9455b7648ee863951e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: dd588fa85ff8aaa396a8d0e52a738ada46c2a9b1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767671"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128611"
 ---
-# <a name="ihostmemorymanagervirtualalloc-method"></a><span data-ttu-id="0d39f-102">IHostMemoryManager::VirtualAlloc 메서드</span><span class="sxs-lookup"><span data-stu-id="0d39f-102">IHostMemoryManager::VirtualAlloc Method</span></span>
-<span data-ttu-id="0d39f-103">역할을 해당 하는 Win32 함수에 대 한 논리적 래퍼입니다.</span><span class="sxs-lookup"><span data-stu-id="0d39f-103">Serves as a logical wrapper for the corresponding Win32 function.</span></span> <span data-ttu-id="0d39f-104">Win32 구현의 `VirtualAlloc` 예약 하거나 호출 프로세스의 가상 주소 공간에서 페이지의 영역을 커밋합니다.</span><span class="sxs-lookup"><span data-stu-id="0d39f-104">The Win32 implementation of `VirtualAlloc` reserves or commits a region of pages in the virtual address space of the calling process.</span></span>  
+# <a name="ihostmemorymanagervirtualalloc-method"></a><span data-ttu-id="24758-102">IHostMemoryManager::VirtualAlloc 메서드</span><span class="sxs-lookup"><span data-stu-id="24758-102">IHostMemoryManager::VirtualAlloc Method</span></span>
+<span data-ttu-id="24758-103">해당 Win32 함수에 대 한 논리 래퍼로 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="24758-103">Serves as a logical wrapper for the corresponding Win32 function.</span></span> <span data-ttu-id="24758-104">`VirtualAlloc`의 Win32 구현은 호출 하는 프로세스의 가상 주소 공간에서 페이지 영역을 예약 하거나 커밋합니다.</span><span class="sxs-lookup"><span data-stu-id="24758-104">The Win32 implementation of `VirtualAlloc` reserves or commits a region of pages in the virtual address space of the calling process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0d39f-105">구문</span><span class="sxs-lookup"><span data-stu-id="0d39f-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="24758-105">구문</span><span class="sxs-lookup"><span data-stu-id="24758-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT VirtualAlloc (  
@@ -40,51 +38,51 @@ HRESULT VirtualAlloc (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="0d39f-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="0d39f-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="24758-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="24758-106">Parameters</span></span>  
  `pAddress`  
- <span data-ttu-id="0d39f-107">[in] 할당할 영역의 시작 주소에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="0d39f-107">[in] A pointer to the starting address of the region to allocate.</span></span>  
+ <span data-ttu-id="24758-107">진행 할당할 영역의 시작 주소에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="24758-107">[in] A pointer to the starting address of the region to allocate.</span></span>  
   
  `dwSize`  
- <span data-ttu-id="0d39f-108">[in] 영역의 바이트 크기입니다.</span><span class="sxs-lookup"><span data-stu-id="0d39f-108">[in] The size, in bytes, of the region.</span></span>  
+ <span data-ttu-id="24758-108">진행 영역의 크기 (바이트)입니다.</span><span class="sxs-lookup"><span data-stu-id="24758-108">[in] The size, in bytes, of the region.</span></span>  
   
  `flAllocationType`  
- <span data-ttu-id="0d39f-109">[in] 메모리 할당의 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="0d39f-109">[in] The type of memory allocation.</span></span>  
+ <span data-ttu-id="24758-109">진행 메모리 할당의 유형입니다.</span><span class="sxs-lookup"><span data-stu-id="24758-109">[in] The type of memory allocation.</span></span>  
   
  `flProtect`  
- <span data-ttu-id="0d39f-110">[in] 할당할 페이지 영역에 대 한 메모리 보호 합니다.</span><span class="sxs-lookup"><span data-stu-id="0d39f-110">[in] Memory protection for the region of pages to be allocated.</span></span>  
+ <span data-ttu-id="24758-110">진행 할당할 페이지 영역에 대 한 메모리 보호입니다.</span><span class="sxs-lookup"><span data-stu-id="24758-110">[in] Memory protection for the region of pages to be allocated.</span></span>  
   
  `dwCriticalLevel`  
- <span data-ttu-id="0d39f-111">[in] [EMemoryCriticalLevel](../../../../docs/framework/unmanaged-api/hosting/ememorycriticallevel-enumeration.md) 영향 할당 오류를 나타내는 값입니다.</span><span class="sxs-lookup"><span data-stu-id="0d39f-111">[in] An [EMemoryCriticalLevel](../../../../docs/framework/unmanaged-api/hosting/ememorycriticallevel-enumeration.md) value that indicates the impact of an allocation failure.</span></span>  
+ <span data-ttu-id="24758-111">진행 할당 오류의 영향을 나타내는 [EMemoryCriticalLevel](../../../../docs/framework/unmanaged-api/hosting/ememorycriticallevel-enumeration.md) 값입니다.</span><span class="sxs-lookup"><span data-stu-id="24758-111">[in] An [EMemoryCriticalLevel](../../../../docs/framework/unmanaged-api/hosting/ememorycriticallevel-enumeration.md) value that indicates the impact of an allocation failure.</span></span>  
   
  `ppMem`  
- <span data-ttu-id="0d39f-112">[out] 요청을 처리 하지 못한 경우 null을 할당 된 메모리의 시작 주소에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="0d39f-112">[out] Pointer to the starting address of the allocated memory, or null if the request could not be satisfied.</span></span>  
+ <span data-ttu-id="24758-112">제한이 할당 된 메모리의 시작 주소에 대 한 포인터 이거나, 요청을 충족 하지 못할 경우 null입니다.</span><span class="sxs-lookup"><span data-stu-id="24758-112">[out] Pointer to the starting address of the allocated memory, or null if the request could not be satisfied.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="0d39f-113">반환 값</span><span class="sxs-lookup"><span data-stu-id="0d39f-113">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="24758-113">반환 값</span><span class="sxs-lookup"><span data-stu-id="24758-113">Return Value</span></span>  
   
-|<span data-ttu-id="0d39f-114">HRESULT</span><span class="sxs-lookup"><span data-stu-id="0d39f-114">HRESULT</span></span>|<span data-ttu-id="0d39f-115">설명</span><span class="sxs-lookup"><span data-stu-id="0d39f-115">Description</span></span>|  
+|<span data-ttu-id="24758-114">HRESULT</span><span class="sxs-lookup"><span data-stu-id="24758-114">HRESULT</span></span>|<span data-ttu-id="24758-115">설명</span><span class="sxs-lookup"><span data-stu-id="24758-115">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="0d39f-116">S_OK</span><span class="sxs-lookup"><span data-stu-id="0d39f-116">S_OK</span></span>|<span data-ttu-id="0d39f-117">`VirtualAlloc` 성공적으로 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="0d39f-117">`VirtualAlloc` returned successfully.</span></span>|  
-|<span data-ttu-id="0d39f-118">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="0d39f-118">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="0d39f-119">프로세스에는 CLR (공용 언어 런타임)에 로드 되지 또는 CLR 상태인는 관리 코드를 실행 하거나 호출을 처리할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="0d39f-119">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="0d39f-120">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="0d39f-120">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="0d39f-121">호출 시간이 초과 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="0d39f-121">The call timed out.</span></span>|  
-|<span data-ttu-id="0d39f-122">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="0d39f-122">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="0d39f-123">호출자가 잠금을 소유 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="0d39f-123">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="0d39f-124">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="0d39f-124">HOST_E_ABANDONED</span></span>|<span data-ttu-id="0d39f-125">이벤트가 차단 된 스레드가 취소 된 또는 파이버를 대기 하 고 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0d39f-125">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="0d39f-126">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="0d39f-126">E_FAIL</span></span>|<span data-ttu-id="0d39f-127">알 수 없는 치명적인 오류가 발생 했습니다.</span><span class="sxs-lookup"><span data-stu-id="0d39f-127">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="0d39f-128">메서드 E_FAIL을 반환 하는 경우 CLR은 프로세스 내에서 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="0d39f-128">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="0d39f-129">메서드를 호스트 하는 데 대 한 후속 호출 HOST_E_CLRNOTAVAILABLE를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="0d39f-129">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
-|<span data-ttu-id="0d39f-130">E_OUTOFMEMORY</span><span class="sxs-lookup"><span data-stu-id="0d39f-130">E_OUTOFMEMORY</span></span>|<span data-ttu-id="0d39f-131">할당 요청을 완료 하려면 사용할 수 있는 메모리가 부족 합니다.</span><span class="sxs-lookup"><span data-stu-id="0d39f-131">Not enough memory was available to complete the allocation request</span></span>|  
+|<span data-ttu-id="24758-116">S_OK</span><span class="sxs-lookup"><span data-stu-id="24758-116">S_OK</span></span>|<span data-ttu-id="24758-117">`VirtualAlloc` 성공적으로 반환 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="24758-117">`VirtualAlloc` returned successfully.</span></span>|  
+|<span data-ttu-id="24758-118">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="24758-118">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="24758-119">CLR (공용 언어 런타임)이 프로세스에 로드 되지 않았거나 CLR이 관리 코드를 실행할 수 없거나 호출을 성공적으로 처리할 수 없는 상태에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="24758-119">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="24758-120">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="24758-120">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="24758-121">호출 시간이 초과 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="24758-121">The call timed out.</span></span>|  
+|<span data-ttu-id="24758-122">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="24758-122">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="24758-123">호출자가 잠금을 소유 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="24758-123">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="24758-124">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="24758-124">HOST_E_ABANDONED</span></span>|<span data-ttu-id="24758-125">차단 된 스레드나 파이버에서 대기 하는 동안 이벤트를 취소 했습니다.</span><span class="sxs-lookup"><span data-stu-id="24758-125">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="24758-126">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="24758-126">E_FAIL</span></span>|<span data-ttu-id="24758-127">알 수 없는 치명적인 오류가 발생 했습니다.</span><span class="sxs-lookup"><span data-stu-id="24758-127">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="24758-128">메서드가 E_FAIL을 반환 하는 경우 프로세스 내에서 더 이상 CLR을 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="24758-128">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="24758-129">호스팅 메서드에 대 한 후속 호출은 HOST_E_CLRNOTAVAILABLE을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="24758-129">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="24758-130">E_OUTOFMEMORY</span><span class="sxs-lookup"><span data-stu-id="24758-130">E_OUTOFMEMORY</span></span>|<span data-ttu-id="24758-131">할당 요청을 완료 하는 데 사용할 수 있는 메모리가 부족 합니다.</span><span class="sxs-lookup"><span data-stu-id="24758-131">Not enough memory was available to complete the allocation request</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="0d39f-132">설명</span><span class="sxs-lookup"><span data-stu-id="0d39f-132">Remarks</span></span>  
- <span data-ttu-id="0d39f-133">호출 하 여 프로세스의 주소 공간에서 영역을 예약 `VirtualAlloc`합니다.</span><span class="sxs-lookup"><span data-stu-id="0d39f-133">You reserve a region in the address space of your process by calling `VirtualAlloc`.</span></span> <span data-ttu-id="0d39f-134">`pAddress` 하려는 메모리 블록의 시작 주소를 포함 하는 매개 변수입니다.</span><span class="sxs-lookup"><span data-stu-id="0d39f-134">The `pAddress` parameter contains the beginning address of the memory block you want.</span></span> <span data-ttu-id="0d39f-135">이 매개 변수는 일반적으로 설정 하는 null입니다.</span><span class="sxs-lookup"><span data-stu-id="0d39f-135">This parameter is typically set to null.</span></span> <span data-ttu-id="0d39f-136">운영 체제는 프로세스에 사용할 수 있는 사용 가능한 주소 범위 레코드를 유지합니다.</span><span class="sxs-lookup"><span data-stu-id="0d39f-136">The operating system keeps a record of free address ranges available to your process.</span></span> <span data-ttu-id="0d39f-137">`pAddress` null 값에는 시스템에서 판단 되는 영역을 예약 하도록 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="0d39f-137">A `pAddress` value of null instructs the system to reserve the region wherever it sees fit.</span></span> <span data-ttu-id="0d39f-138">또는 메모리 블록에 대 한 특정 시작 주소를 제공할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0d39f-138">Alternatively, you can provide a specific starting address for the memory block.</span></span> <span data-ttu-id="0d39f-139">두 경우 모두 출력 매개 변수 `ppMem` 할당된 된 메모리에 대 한 포인터로 반환 됩니다.</span><span class="sxs-lookup"><span data-stu-id="0d39f-139">In both cases, the output parameter `ppMem` is returned as a pointer to the allocated memory.</span></span> <span data-ttu-id="0d39f-140">함수 자체에 HRESULT 값을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="0d39f-140">The function itself returns an HRESULT value.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="24758-132">주의</span><span class="sxs-lookup"><span data-stu-id="24758-132">Remarks</span></span>  
+ <span data-ttu-id="24758-133">`VirtualAlloc`를 호출 하 여 프로세스의 주소 공간에서 영역을 예약 합니다.</span><span class="sxs-lookup"><span data-stu-id="24758-133">You reserve a region in the address space of your process by calling `VirtualAlloc`.</span></span> <span data-ttu-id="24758-134">`pAddress` 매개 변수에는 원하는 메모리 블록의 시작 주소가 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="24758-134">The `pAddress` parameter contains the beginning address of the memory block you want.</span></span> <span data-ttu-id="24758-135">이 매개 변수는 일반적으로 null로 설정 됩니다.</span><span class="sxs-lookup"><span data-stu-id="24758-135">This parameter is typically set to null.</span></span> <span data-ttu-id="24758-136">운영 체제는 프로세스에 사용할 수 있는 무료 주소 범위에 대 한 레코드를 유지 합니다.</span><span class="sxs-lookup"><span data-stu-id="24758-136">The operating system keeps a record of free address ranges available to your process.</span></span> <span data-ttu-id="24758-137">Null 값이 null 이면 시스템이 적합 `pAddress` 한 위치에 있는 영역을 예약 합니다.</span><span class="sxs-lookup"><span data-stu-id="24758-137">A `pAddress` value of null instructs the system to reserve the region wherever it sees fit.</span></span> <span data-ttu-id="24758-138">또는 메모리 블록에 대 한 특정 시작 주소를 제공할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="24758-138">Alternatively, you can provide a specific starting address for the memory block.</span></span> <span data-ttu-id="24758-139">두 경우 모두 `ppMem` 출력 매개 변수는 할당 된 메모리에 대 한 포인터로 반환 됩니다.</span><span class="sxs-lookup"><span data-stu-id="24758-139">In both cases, the output parameter `ppMem` is returned as a pointer to the allocated memory.</span></span> <span data-ttu-id="24758-140">함수 자체는 HRESULT 값을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="24758-140">The function itself returns an HRESULT value.</span></span>  
   
- <span data-ttu-id="0d39f-141">Win32 `VirtualAlloc` 함수에는 한 `ppMem` 매개 변수를 대신 할당된 된 메모리에 대 한 포인터를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="0d39f-141">The Win32 `VirtualAlloc` function does not have a `ppMem` parameter, and returns the pointer to the allocated memory instead.</span></span> <span data-ttu-id="0d39f-142">자세한 내용은 Windows 플랫폼 설명서를 참조 하십시오.</span><span class="sxs-lookup"><span data-stu-id="0d39f-142">For more information, see the Windows Platform documentation.</span></span>  
+ <span data-ttu-id="24758-141">Win32 `VirtualAlloc` 함수는 `ppMem` 매개 변수를 포함 하지 않으며 대신 할당 된 메모리에 대 한 포인터를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="24758-141">The Win32 `VirtualAlloc` function does not have a `ppMem` parameter, and returns the pointer to the allocated memory instead.</span></span> <span data-ttu-id="24758-142">자세한 내용은 Windows 플랫폼 설명서를 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="24758-142">For more information, see the Windows Platform documentation.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0d39f-143">요구 사항</span><span class="sxs-lookup"><span data-stu-id="0d39f-143">Requirements</span></span>  
- <span data-ttu-id="0d39f-144">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="0d39f-144">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="24758-143">요구 사항</span><span class="sxs-lookup"><span data-stu-id="24758-143">Requirements</span></span>  
+ <span data-ttu-id="24758-144">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="24758-144">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0d39f-145">**헤더:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="0d39f-145">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="24758-145">**헤더:** Mscoree.dll</span><span class="sxs-lookup"><span data-stu-id="24758-145">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="0d39f-146">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="0d39f-146">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="24758-146">**라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="24758-146">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="0d39f-147">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0d39f-147">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="24758-147">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="24758-147">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0d39f-148">참고자료</span><span class="sxs-lookup"><span data-stu-id="0d39f-148">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="24758-148">참조</span><span class="sxs-lookup"><span data-stu-id="24758-148">See also</span></span>
 
-- [<span data-ttu-id="0d39f-149">IHostMemoryManager 인터페이스</span><span class="sxs-lookup"><span data-stu-id="0d39f-149">IHostMemoryManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)
+- [<span data-ttu-id="24758-149">IHostMemoryManager 인터페이스</span><span class="sxs-lookup"><span data-stu-id="24758-149">IHostMemoryManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)

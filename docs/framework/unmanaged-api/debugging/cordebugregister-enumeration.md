@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 003bb138-7960-4291-ac88-0d87e470ff70
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bed3c461935c5a2bc912ed9ed16d147fddaf8a1a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d182476130e611e57df232c9652cda4bec002c31
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739659"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132772"
 ---
-# <a name="cordebugregister-enumeration"></a><span data-ttu-id="62e98-102">CorDebugRegister 열거형</span><span class="sxs-lookup"><span data-stu-id="62e98-102">CorDebugRegister Enumeration</span></span>
-<span data-ttu-id="62e98-103">지정한 프로세서 아키텍처에 연결된 레지스터를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="62e98-103">Specifies the registers associated with a given processor architecture.</span></span>  
+# <a name="cordebugregister-enumeration"></a><span data-ttu-id="e66d2-102">CorDebugRegister 열거형</span><span class="sxs-lookup"><span data-stu-id="e66d2-102">CorDebugRegister Enumeration</span></span>
+<span data-ttu-id="e66d2-103">지정한 프로세서 아키텍처에 연결된 레지스터를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="e66d2-103">Specifies the registers associated with a given processor architecture.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="62e98-104">구문</span><span class="sxs-lookup"><span data-stu-id="62e98-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e66d2-104">구문</span><span class="sxs-lookup"><span data-stu-id="e66d2-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum CorDebugRegister {  
@@ -114,101 +112,101 @@ typedef enum CorDebugRegister {
 } CorDebugRegister;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="62e98-105">멤버</span><span class="sxs-lookup"><span data-stu-id="62e98-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="e66d2-105">멤버</span><span class="sxs-lookup"><span data-stu-id="e66d2-105">Members</span></span>  
   
-|<span data-ttu-id="62e98-106">멤버</span><span class="sxs-lookup"><span data-stu-id="62e98-106">Member</span></span>|<span data-ttu-id="62e98-107">Description</span><span class="sxs-lookup"><span data-stu-id="62e98-107">Description</span></span>|  
+|<span data-ttu-id="e66d2-106">멤버</span><span class="sxs-lookup"><span data-stu-id="e66d2-106">Member</span></span>|<span data-ttu-id="e66d2-107">설명</span><span class="sxs-lookup"><span data-stu-id="e66d2-107">Description</span></span>|  
 |------------|-----------------|  
-|`REGISTER_INSTRUCTION_POINTER`|<span data-ttu-id="62e98-108">프로세서의 명령 포인터 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="62e98-108">An instruction pointer register on any processor.</span></span>|  
-|`REGISTER_STACK_POINTER`|<span data-ttu-id="62e98-109">프로세서의 스택 포인터 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="62e98-109">A stack pointer register on any processor.</span></span>|  
-|`REGISTER_FRAME_POINTER`|<span data-ttu-id="62e98-110">프로세서의 프레임 포인터 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="62e98-110">A frame pointer register on any processor.</span></span>|  
-|`REGISTER_X86_EIP`|<span data-ttu-id="62e98-111">x86 프로세서의 명령 포인터 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="62e98-111">The instruction pointer register on the x86 processor.</span></span>|  
-|`REGISTER_X86_ESP`|<span data-ttu-id="62e98-112">x86 프로세서의 스택 포인터 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="62e98-112">The stack pointer register on the x86 processor.</span></span>|  
-|`REGISTER_X86_EBP`|<span data-ttu-id="62e98-113">x86 프로세서의 기본 포인터 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="62e98-113">The base pointer register on the x86 processor.</span></span>|  
-|`REGISTER_X86_EAX`|<span data-ttu-id="62e98-114">x86 프로세서의 A 데이터 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="62e98-114">The A data register on the x86 processor.</span></span>|  
-|`REGISTER_X86_ECX`|<span data-ttu-id="62e98-115">x86 프로세서의 C 데이터 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="62e98-115">The C data register on the x86 processor.</span></span>|  
-|`REGISTER_X86_EDX`|<span data-ttu-id="62e98-116">x86 프로세서의 D 데이터 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="62e98-116">The D data register on the x86 processor.</span></span>|  
-|`REGISTER_X86_EBX`|<span data-ttu-id="62e98-117">x86 프로세서의 B 데이터 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="62e98-117">The B data register on the x86 processor.</span></span>|  
-|`REGISTER_X86_ESI`|<span data-ttu-id="62e98-118">x86 프로세서의 소스 인덱스 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="62e98-118">The source index register on the x86 processor.</span></span>|  
-|`REGISTER_X86_EDI`|<span data-ttu-id="62e98-119">x86 프로세서의 대상 인덱스 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="62e98-119">The destination index register on the x86 processor.</span></span>|  
-|`REGISTER_X86_FPSTACK_0`|<span data-ttu-id="62e98-120">x86 FP(부동 소수점) 프로세서의 스택 레지스터 0입니다.</span><span class="sxs-lookup"><span data-stu-id="62e98-120">The stack register 0 on the x86 floating-point (FP) processor.</span></span>|  
-|`REGISTER_X86_FPSTACK_1`|<span data-ttu-id="62e98-121">x86 FP 프로세서의 1번 스택 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="62e98-121">The #1 stack register on the x86 FP processor.</span></span>|  
-|`REGISTER_X86_FPSTACK_2`|<span data-ttu-id="62e98-122">x86 FP 프로세서의 2번 스택 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="62e98-122">The #2 stack register on the x86 FP processor.</span></span>|  
-|`REGISTER_X86_FPSTACK_3`|<span data-ttu-id="62e98-123">x86 FP 프로세서의 3번 스택 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="62e98-123">The #3 stack register on the x86 FP processor.</span></span>|  
-|`REGISTER_X86_FPSTACK_4`|<span data-ttu-id="62e98-124">x86 FP 프로세서의 4번 스택 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="62e98-124">The #4 stack register on the x86 FP processor.</span></span>|  
-|`REGISTER_X86_FPSTACK_5`|<span data-ttu-id="62e98-125">x86 FP 프로세서의 5번 스택 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="62e98-125">The #5 stack register on the x86 FP processor.</span></span>|  
-|`REGISTER_X86_FPSTACK_6`|<span data-ttu-id="62e98-126">x86 FP 프로세서의 6번 스택 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="62e98-126">The #6 stack register on the x86 FP processor.</span></span>|  
-|`REGISTER_X86_FPSTACK_7`|<span data-ttu-id="62e98-127">x86 FP 프로세서의 7번 스택 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="62e98-127">The #7 stack register on the x86 FP processor.</span></span>|  
-|`REGISTER_AMD64_RIP`|<span data-ttu-id="62e98-128">AMD64 프로세서의 명령 포인터 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="62e98-128">The instruction pointer register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_RSP`|<span data-ttu-id="62e98-129">AMD64 프로세서의 스택 포인터 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="62e98-129">The stack pointer register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_RBP`|<span data-ttu-id="62e98-130">AMD64 프로세서의 기본 포인터 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="62e98-130">The base pointer register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_RAX`|<span data-ttu-id="62e98-131">AMD64 프로세서의 A 데이터 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="62e98-131">The A data register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_RCX`|<span data-ttu-id="62e98-132">AMD64 프로세서의 C 데이터 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="62e98-132">The C data register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_RDX`|<span data-ttu-id="62e98-133">AMD64 프로세서의 D 데이터 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="62e98-133">The D data register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_RBX`|<span data-ttu-id="62e98-134">AMD64 프로세서의 B 데이터 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="62e98-134">The B data register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_RSI`|<span data-ttu-id="62e98-135">AMD64 프로세서의 소스 인덱스 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="62e98-135">The source index register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_RDI`|<span data-ttu-id="62e98-136">AMD64 프로세서의 대상 인덱스 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="62e98-136">The destination index register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_R8`|<span data-ttu-id="62e98-137">AMD64 프로세서의 8번 데이터 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="62e98-137">The #8 data register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_R9`|<span data-ttu-id="62e98-138">AMD64 프로세서의 9번 데이터 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="62e98-138">The #9 data register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_R10`|<span data-ttu-id="62e98-139">AMD64 프로세서의 10번 데이터 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="62e98-139">The #10 data register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_R11`|<span data-ttu-id="62e98-140">AMD64 프로세서의 11번 데이터 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="62e98-140">The #11 data register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_R12`|<span data-ttu-id="62e98-141">AMD64 프로세서의 12번 데이터 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="62e98-141">The #12 data register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_R13`|<span data-ttu-id="62e98-142">AMD64 프로세서의 13번 데이터 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="62e98-142">The #13 data register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_R14`|<span data-ttu-id="62e98-143">AMD64 프로세서의 14번 데이터 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="62e98-143">The #14 data register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_R15`|<span data-ttu-id="62e98-144">AMD64 프로세서의 15번 데이터 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="62e98-144">The #15 data register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_XMM0`|<span data-ttu-id="62e98-145">AMD64 프로세서의 0번 멀티미디어 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="62e98-145">The #0 multimedia register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_XMM1`|<span data-ttu-id="62e98-146">AMD64 프로세서의 1번 멀티미디어 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="62e98-146">The #1 multimedia register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_XMM2`|<span data-ttu-id="62e98-147">AMD64 프로세서의 2번 멀티미디어 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="62e98-147">The #2 multimedia register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_XMM3`|<span data-ttu-id="62e98-148">AMD64 프로세서의 3번 멀티미디어 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="62e98-148">The #3 multimedia register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_XMM4`|<span data-ttu-id="62e98-149">AMD64 프로세서의 4번 멀티미디어 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="62e98-149">The #4 multimedia register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_XMM5`|<span data-ttu-id="62e98-150">AMD64 프로세서의 5번 멀티미디어 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="62e98-150">The #5 multimedia register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_XMM6`|<span data-ttu-id="62e98-151">AMD64 프로세서의 6번 멀티미디어 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="62e98-151">The #6 multimedia register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_XMM7`|<span data-ttu-id="62e98-152">AMD64 프로세서의 7번 멀티미디어 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="62e98-152">The #7 multimedia register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_XMM8`|<span data-ttu-id="62e98-153">AMD64 프로세서의 8번 멀티미디어 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="62e98-153">The #8 multimedia register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_XMM9`|<span data-ttu-id="62e98-154">AMD64 프로세서의 9번 멀티미디어 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="62e98-154">The #9 multimedia register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_XMM10`|<span data-ttu-id="62e98-155">AMD64 프로세서의 10번 멀티미디어 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="62e98-155">The #10 multimedia register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_XMM11`|<span data-ttu-id="62e98-156">AMD64 프로세서의 11번 멀티미디어 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="62e98-156">The #11 multimedia register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_XMM12`|<span data-ttu-id="62e98-157">AMD64 프로세서의 12번 멀티미디어 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="62e98-157">The #12 multimedia register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_XMM13`|<span data-ttu-id="62e98-158">AMD64 프로세서의 13번 멀티미디어 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="62e98-158">The #13 multimedia register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_XMM14`|<span data-ttu-id="62e98-159">AMD64 프로세서의 14번 멀티미디어 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="62e98-159">The #14 multimedia register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_XMM15`|<span data-ttu-id="62e98-160">AMD64 프로세서의 15번 멀티미디어 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="62e98-160">The #15 multimedia register on the AMD64 processor.</span></span>|  
-|`REGISTER_IA64_BSP`|<span data-ttu-id="62e98-161">IA-64 프로세서의 스택 포인터 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="62e98-161">The stack pointer register on the IA-64 processor.</span></span>|  
-|`REGISTER_IA64_R0`|<span data-ttu-id="62e98-162">IA-64 프로세서의 0번 데이터 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="62e98-162">The #0 data register on the IA-64 processor.</span></span>|  
-|`REGISTER_IA64_F0`|<span data-ttu-id="62e98-163">IA-64 프로세서의 0번 FP 데이터 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="62e98-163">The #0 FP data register on the IA-64 processor.</span></span>|  
-|`REGISTER_ARM_PC`|<span data-ttu-id="62e98-164">ARM 프로세서의 프로그램 카운터 레지스터(R15)입니다.</span><span class="sxs-lookup"><span data-stu-id="62e98-164">The program counter register (R15) on the ARM processor.</span></span>|  
-|`REGISTER_ARM_SP`|<span data-ttu-id="62e98-165">ARM 프로세서의 스택 포인터 레지스터(R13)입니다.</span><span class="sxs-lookup"><span data-stu-id="62e98-165">The stack pointer register (R13) on the ARM processor.</span></span>|  
-|`REGISTER_ARM_R0`|<span data-ttu-id="62e98-166">ARM 프로세서의 데이터 레지스터 R0입니다.</span><span class="sxs-lookup"><span data-stu-id="62e98-166">Data register R0 on the ARM processor.</span></span>|  
-|`REGISTER_ARM_R1`|<span data-ttu-id="62e98-167">ARM 프로세서의 데이터 레지스터 R1입니다.</span><span class="sxs-lookup"><span data-stu-id="62e98-167">Data register R1 on the ARM processor.</span></span>|  
-|`REGISTER_ARM_R2`|<span data-ttu-id="62e98-168">ARM 프로세서의 데이터 레지스터 R2입니다.</span><span class="sxs-lookup"><span data-stu-id="62e98-168">Data register R2 on the ARM processor.</span></span>|  
-|`REGISTER_ARM_R3`|<span data-ttu-id="62e98-169">ARM 프로세서의 데이터 레지스터 R3입니다.</span><span class="sxs-lookup"><span data-stu-id="62e98-169">Data register R3 on the ARM processor.</span></span>|  
-|`REGISTER_ARM_R4`|<span data-ttu-id="62e98-170">ARM 프로세서의 레지스터 R4입니다.</span><span class="sxs-lookup"><span data-stu-id="62e98-170">Register R4 on the ARM processor.</span></span>|  
-|`REGISTER_ARM_R5`|<span data-ttu-id="62e98-171">ARM 프로세서의 레지스터 R5입니다.</span><span class="sxs-lookup"><span data-stu-id="62e98-171">Register R5 on the ARM processor.</span></span>|  
-|`REGISTER_ARM_R6`|<span data-ttu-id="62e98-172">ARM 프로세서의 레지스터 R6입니다.</span><span class="sxs-lookup"><span data-stu-id="62e98-172">Register R6 on the ARM processor.</span></span>|  
-|`REGISTER_ARM_R7`|<span data-ttu-id="62e98-173">ARM 프로세서의 레지스터 R7(THUMB 프레임 포인터)입니다.</span><span class="sxs-lookup"><span data-stu-id="62e98-173">Register R7 (the THUMB frame pointer) on the ARM processor.</span></span>|  
-|`REGISTER_ARM_R8`|<span data-ttu-id="62e98-174">ARM 프로세서의 레지스터 R8입니다.</span><span class="sxs-lookup"><span data-stu-id="62e98-174">Register R8 on the ARM processor.</span></span>|  
-|`REGISTER_ARM_R9`|<span data-ttu-id="62e98-175">ARM 프로세서의 레지스터 R9입니다.</span><span class="sxs-lookup"><span data-stu-id="62e98-175">Register R9 on the ARM processor.</span></span>|  
-|`REGISTER_ARM_R10`|<span data-ttu-id="62e98-176">ARM 프로세서의 레지스터 R10입니다.</span><span class="sxs-lookup"><span data-stu-id="62e98-176">Register R10 on the ARM processor.</span></span>|  
-|`REGISTER_ARM_R11`|<span data-ttu-id="62e98-177">ARM 프로세서의 프레임 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="62e98-177">The frame pointer on the ARM processor.</span></span>|  
-|`REGISTER_ARM_R12`|<span data-ttu-id="62e98-178">ARM 프로세서의 레지스터 R12입니다.</span><span class="sxs-lookup"><span data-stu-id="62e98-178">Register R12 on the ARM processor.</span></span>|  
-|`REGISTER_ARM_LR`|<span data-ttu-id="62e98-179">ARM 프로세서의 링크 레지스터(R14)입니다.</span><span class="sxs-lookup"><span data-stu-id="62e98-179">The link register (R14) on the ARM processor.</span></span>|  
+|`REGISTER_INSTRUCTION_POINTER`|<span data-ttu-id="e66d2-108">프로세서의 명령 포인터 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="e66d2-108">An instruction pointer register on any processor.</span></span>|  
+|`REGISTER_STACK_POINTER`|<span data-ttu-id="e66d2-109">프로세서의 스택 포인터 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="e66d2-109">A stack pointer register on any processor.</span></span>|  
+|`REGISTER_FRAME_POINTER`|<span data-ttu-id="e66d2-110">프로세서의 프레임 포인터 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="e66d2-110">A frame pointer register on any processor.</span></span>|  
+|`REGISTER_X86_EIP`|<span data-ttu-id="e66d2-111">x86 프로세서의 명령 포인터 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="e66d2-111">The instruction pointer register on the x86 processor.</span></span>|  
+|`REGISTER_X86_ESP`|<span data-ttu-id="e66d2-112">x86 프로세서의 스택 포인터 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="e66d2-112">The stack pointer register on the x86 processor.</span></span>|  
+|`REGISTER_X86_EBP`|<span data-ttu-id="e66d2-113">x86 프로세서의 기본 포인터 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="e66d2-113">The base pointer register on the x86 processor.</span></span>|  
+|`REGISTER_X86_EAX`|<span data-ttu-id="e66d2-114">x86 프로세서의 A 데이터 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="e66d2-114">The A data register on the x86 processor.</span></span>|  
+|`REGISTER_X86_ECX`|<span data-ttu-id="e66d2-115">x86 프로세서의 C 데이터 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="e66d2-115">The C data register on the x86 processor.</span></span>|  
+|`REGISTER_X86_EDX`|<span data-ttu-id="e66d2-116">x86 프로세서의 D 데이터 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="e66d2-116">The D data register on the x86 processor.</span></span>|  
+|`REGISTER_X86_EBX`|<span data-ttu-id="e66d2-117">x86 프로세서의 B 데이터 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="e66d2-117">The B data register on the x86 processor.</span></span>|  
+|`REGISTER_X86_ESI`|<span data-ttu-id="e66d2-118">x86 프로세서의 소스 인덱스 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="e66d2-118">The source index register on the x86 processor.</span></span>|  
+|`REGISTER_X86_EDI`|<span data-ttu-id="e66d2-119">x86 프로세서의 대상 인덱스 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="e66d2-119">The destination index register on the x86 processor.</span></span>|  
+|`REGISTER_X86_FPSTACK_0`|<span data-ttu-id="e66d2-120">x86 FP(부동 소수점) 프로세서의 스택 레지스터 0입니다.</span><span class="sxs-lookup"><span data-stu-id="e66d2-120">The stack register 0 on the x86 floating-point (FP) processor.</span></span>|  
+|`REGISTER_X86_FPSTACK_1`|<span data-ttu-id="e66d2-121">x86 FP 프로세서의 1번 스택 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="e66d2-121">The #1 stack register on the x86 FP processor.</span></span>|  
+|`REGISTER_X86_FPSTACK_2`|<span data-ttu-id="e66d2-122">x86 FP 프로세서의 2번 스택 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="e66d2-122">The #2 stack register on the x86 FP processor.</span></span>|  
+|`REGISTER_X86_FPSTACK_3`|<span data-ttu-id="e66d2-123">x86 FP 프로세서의 3번 스택 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="e66d2-123">The #3 stack register on the x86 FP processor.</span></span>|  
+|`REGISTER_X86_FPSTACK_4`|<span data-ttu-id="e66d2-124">x86 FP 프로세서의 4번 스택 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="e66d2-124">The #4 stack register on the x86 FP processor.</span></span>|  
+|`REGISTER_X86_FPSTACK_5`|<span data-ttu-id="e66d2-125">x86 FP 프로세서의 5번 스택 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="e66d2-125">The #5 stack register on the x86 FP processor.</span></span>|  
+|`REGISTER_X86_FPSTACK_6`|<span data-ttu-id="e66d2-126">x86 FP 프로세서의 6번 스택 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="e66d2-126">The #6 stack register on the x86 FP processor.</span></span>|  
+|`REGISTER_X86_FPSTACK_7`|<span data-ttu-id="e66d2-127">x86 FP 프로세서의 7번 스택 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="e66d2-127">The #7 stack register on the x86 FP processor.</span></span>|  
+|`REGISTER_AMD64_RIP`|<span data-ttu-id="e66d2-128">AMD64 프로세서의 명령 포인터 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="e66d2-128">The instruction pointer register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_RSP`|<span data-ttu-id="e66d2-129">AMD64 프로세서의 스택 포인터 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="e66d2-129">The stack pointer register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_RBP`|<span data-ttu-id="e66d2-130">AMD64 프로세서의 기본 포인터 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="e66d2-130">The base pointer register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_RAX`|<span data-ttu-id="e66d2-131">AMD64 프로세서의 A 데이터 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="e66d2-131">The A data register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_RCX`|<span data-ttu-id="e66d2-132">AMD64 프로세서의 C 데이터 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="e66d2-132">The C data register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_RDX`|<span data-ttu-id="e66d2-133">AMD64 프로세서의 D 데이터 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="e66d2-133">The D data register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_RBX`|<span data-ttu-id="e66d2-134">AMD64 프로세서의 B 데이터 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="e66d2-134">The B data register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_RSI`|<span data-ttu-id="e66d2-135">AMD64 프로세서의 소스 인덱스 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="e66d2-135">The source index register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_RDI`|<span data-ttu-id="e66d2-136">AMD64 프로세서의 대상 인덱스 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="e66d2-136">The destination index register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_R8`|<span data-ttu-id="e66d2-137">AMD64 프로세서의 8번 데이터 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="e66d2-137">The #8 data register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_R9`|<span data-ttu-id="e66d2-138">AMD64 프로세서의 9번 데이터 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="e66d2-138">The #9 data register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_R10`|<span data-ttu-id="e66d2-139">AMD64 프로세서의 10번 데이터 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="e66d2-139">The #10 data register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_R11`|<span data-ttu-id="e66d2-140">AMD64 프로세서의 11번 데이터 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="e66d2-140">The #11 data register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_R12`|<span data-ttu-id="e66d2-141">AMD64 프로세서의 12번 데이터 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="e66d2-141">The #12 data register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_R13`|<span data-ttu-id="e66d2-142">AMD64 프로세서의 13번 데이터 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="e66d2-142">The #13 data register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_R14`|<span data-ttu-id="e66d2-143">AMD64 프로세서의 14번 데이터 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="e66d2-143">The #14 data register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_R15`|<span data-ttu-id="e66d2-144">AMD64 프로세서의 15번 데이터 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="e66d2-144">The #15 data register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_XMM0`|<span data-ttu-id="e66d2-145">AMD64 프로세서의 0번 멀티미디어 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="e66d2-145">The #0 multimedia register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_XMM1`|<span data-ttu-id="e66d2-146">AMD64 프로세서의 1번 멀티미디어 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="e66d2-146">The #1 multimedia register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_XMM2`|<span data-ttu-id="e66d2-147">AMD64 프로세서의 2번 멀티미디어 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="e66d2-147">The #2 multimedia register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_XMM3`|<span data-ttu-id="e66d2-148">AMD64 프로세서의 3번 멀티미디어 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="e66d2-148">The #3 multimedia register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_XMM4`|<span data-ttu-id="e66d2-149">AMD64 프로세서의 4번 멀티미디어 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="e66d2-149">The #4 multimedia register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_XMM5`|<span data-ttu-id="e66d2-150">AMD64 프로세서의 5번 멀티미디어 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="e66d2-150">The #5 multimedia register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_XMM6`|<span data-ttu-id="e66d2-151">AMD64 프로세서의 6번 멀티미디어 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="e66d2-151">The #6 multimedia register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_XMM7`|<span data-ttu-id="e66d2-152">AMD64 프로세서의 7번 멀티미디어 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="e66d2-152">The #7 multimedia register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_XMM8`|<span data-ttu-id="e66d2-153">AMD64 프로세서의 8번 멀티미디어 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="e66d2-153">The #8 multimedia register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_XMM9`|<span data-ttu-id="e66d2-154">AMD64 프로세서의 9번 멀티미디어 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="e66d2-154">The #9 multimedia register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_XMM10`|<span data-ttu-id="e66d2-155">AMD64 프로세서의 10번 멀티미디어 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="e66d2-155">The #10 multimedia register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_XMM11`|<span data-ttu-id="e66d2-156">AMD64 프로세서의 11번 멀티미디어 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="e66d2-156">The #11 multimedia register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_XMM12`|<span data-ttu-id="e66d2-157">AMD64 프로세서의 12번 멀티미디어 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="e66d2-157">The #12 multimedia register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_XMM13`|<span data-ttu-id="e66d2-158">AMD64 프로세서의 13번 멀티미디어 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="e66d2-158">The #13 multimedia register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_XMM14`|<span data-ttu-id="e66d2-159">AMD64 프로세서의 14번 멀티미디어 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="e66d2-159">The #14 multimedia register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_XMM15`|<span data-ttu-id="e66d2-160">AMD64 프로세서의 15번 멀티미디어 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="e66d2-160">The #15 multimedia register on the AMD64 processor.</span></span>|  
+|`REGISTER_IA64_BSP`|<span data-ttu-id="e66d2-161">IA-64 프로세서의 스택 포인터 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="e66d2-161">The stack pointer register on the IA-64 processor.</span></span>|  
+|`REGISTER_IA64_R0`|<span data-ttu-id="e66d2-162">IA-64 프로세서의 0번 데이터 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="e66d2-162">The #0 data register on the IA-64 processor.</span></span>|  
+|`REGISTER_IA64_F0`|<span data-ttu-id="e66d2-163">IA-64 프로세서의 0번 FP 데이터 레지스터입니다.</span><span class="sxs-lookup"><span data-stu-id="e66d2-163">The #0 FP data register on the IA-64 processor.</span></span>|  
+|`REGISTER_ARM_PC`|<span data-ttu-id="e66d2-164">ARM 프로세서의 프로그램 카운터 레지스터(R15)입니다.</span><span class="sxs-lookup"><span data-stu-id="e66d2-164">The program counter register (R15) on the ARM processor.</span></span>|  
+|`REGISTER_ARM_SP`|<span data-ttu-id="e66d2-165">ARM 프로세서의 스택 포인터 레지스터(R13)입니다.</span><span class="sxs-lookup"><span data-stu-id="e66d2-165">The stack pointer register (R13) on the ARM processor.</span></span>|  
+|`REGISTER_ARM_R0`|<span data-ttu-id="e66d2-166">ARM 프로세서의 데이터 레지스터 R0입니다.</span><span class="sxs-lookup"><span data-stu-id="e66d2-166">Data register R0 on the ARM processor.</span></span>|  
+|`REGISTER_ARM_R1`|<span data-ttu-id="e66d2-167">ARM 프로세서의 데이터 레지스터 R1입니다.</span><span class="sxs-lookup"><span data-stu-id="e66d2-167">Data register R1 on the ARM processor.</span></span>|  
+|`REGISTER_ARM_R2`|<span data-ttu-id="e66d2-168">ARM 프로세서의 데이터 레지스터 R2입니다.</span><span class="sxs-lookup"><span data-stu-id="e66d2-168">Data register R2 on the ARM processor.</span></span>|  
+|`REGISTER_ARM_R3`|<span data-ttu-id="e66d2-169">ARM 프로세서의 데이터 레지스터 R3입니다.</span><span class="sxs-lookup"><span data-stu-id="e66d2-169">Data register R3 on the ARM processor.</span></span>|  
+|`REGISTER_ARM_R4`|<span data-ttu-id="e66d2-170">ARM 프로세서의 레지스터 R4입니다.</span><span class="sxs-lookup"><span data-stu-id="e66d2-170">Register R4 on the ARM processor.</span></span>|  
+|`REGISTER_ARM_R5`|<span data-ttu-id="e66d2-171">ARM 프로세서의 레지스터 R5입니다.</span><span class="sxs-lookup"><span data-stu-id="e66d2-171">Register R5 on the ARM processor.</span></span>|  
+|`REGISTER_ARM_R6`|<span data-ttu-id="e66d2-172">ARM 프로세서의 레지스터 R6입니다.</span><span class="sxs-lookup"><span data-stu-id="e66d2-172">Register R6 on the ARM processor.</span></span>|  
+|`REGISTER_ARM_R7`|<span data-ttu-id="e66d2-173">ARM 프로세서의 레지스터 R7(THUMB 프레임 포인터)입니다.</span><span class="sxs-lookup"><span data-stu-id="e66d2-173">Register R7 (the THUMB frame pointer) on the ARM processor.</span></span>|  
+|`REGISTER_ARM_R8`|<span data-ttu-id="e66d2-174">ARM 프로세서의 레지스터 R8입니다.</span><span class="sxs-lookup"><span data-stu-id="e66d2-174">Register R8 on the ARM processor.</span></span>|  
+|`REGISTER_ARM_R9`|<span data-ttu-id="e66d2-175">ARM 프로세서의 레지스터 R9입니다.</span><span class="sxs-lookup"><span data-stu-id="e66d2-175">Register R9 on the ARM processor.</span></span>|  
+|`REGISTER_ARM_R10`|<span data-ttu-id="e66d2-176">ARM 프로세서의 레지스터 R10입니다.</span><span class="sxs-lookup"><span data-stu-id="e66d2-176">Register R10 on the ARM processor.</span></span>|  
+|`REGISTER_ARM_R11`|<span data-ttu-id="e66d2-177">ARM 프로세서의 프레임 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="e66d2-177">The frame pointer on the ARM processor.</span></span>|  
+|`REGISTER_ARM_R12`|<span data-ttu-id="e66d2-178">ARM 프로세서의 레지스터 R12입니다.</span><span class="sxs-lookup"><span data-stu-id="e66d2-178">Register R12 on the ARM processor.</span></span>|  
+|`REGISTER_ARM_LR`|<span data-ttu-id="e66d2-179">ARM 프로세서의 링크 레지스터(R14)입니다.</span><span class="sxs-lookup"><span data-stu-id="e66d2-179">The link register (R14) on the ARM processor.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="62e98-180">설명</span><span class="sxs-lookup"><span data-stu-id="62e98-180">Remarks</span></span>  
- <span data-ttu-id="62e98-181">IA-64 프로세서에는 범용 데이터 레지스터와 부동 소수점 데이터 레지스터가 각각 128개씩 있지만 `REGISTER_IA64_R0` 및 `REGISTER_IA64_F0` 값만 제공됩니다.</span><span class="sxs-lookup"><span data-stu-id="62e98-181">There are 128 general-purpose data registers and 128 floating-point data registers on the IA-64 processor, but only values `REGISTER_IA64_R0` and `REGISTER_IA64_F0` are provided.</span></span> <span data-ttu-id="62e98-182">나머지 값은 다음과 같이 결정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="62e98-182">The other values can be determined as follows:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e66d2-180">주의</span><span class="sxs-lookup"><span data-stu-id="e66d2-180">Remarks</span></span>  
+ <span data-ttu-id="e66d2-181">IA-64 프로세서에는 범용 데이터 레지스터와 부동 소수점 데이터 레지스터가 각각 128개씩 있지만 `REGISTER_IA64_R0` 및 `REGISTER_IA64_F0` 값만 제공됩니다.</span><span class="sxs-lookup"><span data-stu-id="e66d2-181">There are 128 general-purpose data registers and 128 floating-point data registers on the IA-64 processor, but only values `REGISTER_IA64_R0` and `REGISTER_IA64_F0` are provided.</span></span> <span data-ttu-id="e66d2-182">나머지 값은 다음과 같이 결정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e66d2-182">The other values can be determined as follows:</span></span>  
   
-- <span data-ttu-id="62e98-183">`REGISTER_IA64_R0`~`REGISTER_IA64_R1` 값의 경우 레지스터 번호를 `REGISTER_IA64_R127`에 더합니다. 그러면 IA-64 프로세서에서 1번~127번 데이터 레지스터에 해당하는 값이 생성됩니다.</span><span class="sxs-lookup"><span data-stu-id="62e98-183">Add the register number to `REGISTER_IA64_R0` for values `REGISTER_IA64_R1` through `REGISTER_IA64_R127`, which correspond to the #1 data register through the #127 data register on the IA-64 processor.</span></span>  
+- <span data-ttu-id="e66d2-183">`REGISTER_IA64_R0`~`REGISTER_IA64_R1` 값의 경우 레지스터 번호를 `REGISTER_IA64_R127`에 더합니다. 그러면 IA-64 프로세서에서 1번~127번 데이터 레지스터에 해당하는 값이 생성됩니다.</span><span class="sxs-lookup"><span data-stu-id="e66d2-183">Add the register number to `REGISTER_IA64_R0` for values `REGISTER_IA64_R1` through `REGISTER_IA64_R127`, which correspond to the #1 data register through the #127 data register on the IA-64 processor.</span></span>  
   
-- <span data-ttu-id="62e98-184">`REGISTER_IA64_F0`~`REGISTER_IA64_F1` 값의 경우 레지스터 번호를 `REGISTER_IA64_F127`에 더합니다. 그러면 IA-64 프로세서에서 1번~127번 FP 데이터 레지스터에 해당하는 값이 생성됩니다.</span><span class="sxs-lookup"><span data-stu-id="62e98-184">Add the register number to `REGISTER_IA64_F0` for values `REGISTER_IA64_F1` through `REGISTER_IA64_F127`, which correspond to the #1 FP data register through the #127 FP data register on the IA-64 processor.</span></span>  
+- <span data-ttu-id="e66d2-184">`REGISTER_IA64_F0`~`REGISTER_IA64_F1` 값의 경우 레지스터 번호를 `REGISTER_IA64_F127`에 더합니다. 그러면 IA-64 프로세서에서 1번~127번 FP 데이터 레지스터에 해당하는 값이 생성됩니다.</span><span class="sxs-lookup"><span data-stu-id="e66d2-184">Add the register number to `REGISTER_IA64_F0` for values `REGISTER_IA64_F1` through `REGISTER_IA64_F127`, which correspond to the #1 FP data register through the #127 FP data register on the IA-64 processor.</span></span>  
   
- <span data-ttu-id="62e98-185">예를 들어 IA-64 프로세서의 83번 데이터 레지스터를 지정해야 한다면 `REGISTER_IA64_R0` + 83을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="62e98-185">For example, if you need to specify the #83 data register on the IA-64 processor, use `REGISTER_IA64_R0` + 83.</span></span>  
+ <span data-ttu-id="e66d2-185">예를 들어 IA-64 프로세서의 83번 데이터 레지스터를 지정해야 한다면 `REGISTER_IA64_R0` + 83을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="e66d2-185">For example, if you need to specify the #83 data register on the IA-64 processor, use `REGISTER_IA64_R0` + 83.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="62e98-186">요구 사항</span><span class="sxs-lookup"><span data-stu-id="62e98-186">Requirements</span></span>  
- <span data-ttu-id="62e98-187">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="62e98-187">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e66d2-186">요구 사항</span><span class="sxs-lookup"><span data-stu-id="e66d2-186">Requirements</span></span>  
+ <span data-ttu-id="e66d2-187">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="e66d2-187">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="62e98-188">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="62e98-188">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="e66d2-188">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e66d2-188">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="62e98-189">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="62e98-189">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="e66d2-189">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e66d2-189">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="62e98-190">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="62e98-190">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="e66d2-190">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e66d2-190">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="62e98-191">참고자료</span><span class="sxs-lookup"><span data-stu-id="62e98-191">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e66d2-191">참조</span><span class="sxs-lookup"><span data-stu-id="e66d2-191">See also</span></span>
 
-- [<span data-ttu-id="62e98-192">디버깅 열거형</span><span class="sxs-lookup"><span data-stu-id="62e98-192">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [<span data-ttu-id="e66d2-192">디버깅 열거형</span><span class="sxs-lookup"><span data-stu-id="e66d2-192">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

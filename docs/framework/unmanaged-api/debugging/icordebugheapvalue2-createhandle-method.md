@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: fbc418e8-fa22-420d-84ec-e0e1800db041
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: da5c5a12df5689f113857045ba4bcda696bda8f5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b9eab1274f2d0ad562c0dec6adeddb85c6cfc458
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756722"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138385"
 ---
-# <a name="icordebugheapvalue2createhandle-method"></a><span data-ttu-id="f908e-102">ICorDebugHeapValue2::CreateHandle 메서드</span><span class="sxs-lookup"><span data-stu-id="f908e-102">ICorDebugHeapValue2::CreateHandle Method</span></span>
-<span data-ttu-id="f908e-103">이 ICorDebugHeapValue2 개체로 표현 되는 힙 값에 대 한 지정 된 형식의 핸들을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="f908e-103">Creates a handle of the specified type for the heap value represented by this ICorDebugHeapValue2 object.</span></span>  
+# <a name="icordebugheapvalue2createhandle-method"></a><span data-ttu-id="a4c57-102">ICorDebugHeapValue2::CreateHandle 메서드</span><span class="sxs-lookup"><span data-stu-id="a4c57-102">ICorDebugHeapValue2::CreateHandle Method</span></span>
+<span data-ttu-id="a4c57-103">이 ICorDebugHeapValue2 개체가 나타내는 힙 값에 대해 지정 된 형식의 핸들을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="a4c57-103">Creates a handle of the specified type for the heap value represented by this ICorDebugHeapValue2 object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f908e-104">구문</span><span class="sxs-lookup"><span data-stu-id="f908e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a4c57-104">구문</span><span class="sxs-lookup"><span data-stu-id="a4c57-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT CreateHandle (  
@@ -36,23 +34,23 @@ HRESULT CreateHandle (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f908e-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="f908e-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a4c57-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="a4c57-105">Parameters</span></span>  
  `type`  
- <span data-ttu-id="f908e-106">[in] 만들려는 핸들의 형식을 지정 하는 CorDebugHandleType 열거형의 값입니다.</span><span class="sxs-lookup"><span data-stu-id="f908e-106">[in] A value of the CorDebugHandleType enumeration that specifies the type of handle to be created.</span></span>  
+ <span data-ttu-id="a4c57-106">진행 만들 핸들의 유형을 지정 하는 CorDebugHandleType 열거형의 값입니다.</span><span class="sxs-lookup"><span data-stu-id="a4c57-106">[in] A value of the CorDebugHandleType enumeration that specifies the type of handle to be created.</span></span>  
   
  `ppHandle`  
- <span data-ttu-id="f908e-107">[out] 이 힙 값에 대 한 새 핸들을 나타내는 ICorDebugHandleValue 개체의 주소에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="f908e-107">[out] A pointer to the address of an ICorDebugHandleValue object that represents the new handle for this heap value.</span></span>  
+ <span data-ttu-id="a4c57-107">제한이 이 힙 값의 새 핸들을 나타내는 ICorDebugHandleValue 개체의 주소에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="a4c57-107">[out] A pointer to the address of an ICorDebugHandleValue object that represents the new handle for this heap value.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="f908e-108">설명</span><span class="sxs-lookup"><span data-stu-id="f908e-108">Remarks</span></span>  
- <span data-ttu-id="f908e-109">핸들 힙 값을 사용 하 여 연결 된 응용 프로그램 도메인에서 만들어지고 응용 프로그램 도메인이 언로드된 경우 유효 하지 않게 됩니다.</span><span class="sxs-lookup"><span data-stu-id="f908e-109">The handle will be created in the application domain that is associated with the heap value, and will become invalid if the application domain gets unloaded.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a4c57-108">주의</span><span class="sxs-lookup"><span data-stu-id="a4c57-108">Remarks</span></span>  
+ <span data-ttu-id="a4c57-109">이 핸들은 힙 값과 연결 된 응용 프로그램 도메인에 생성 되며 응용 프로그램 도메인이 언로드될 경우 유효 하지 않게 됩니다.</span><span class="sxs-lookup"><span data-stu-id="a4c57-109">The handle will be created in the application domain that is associated with the heap value, and will become invalid if the application domain gets unloaded.</span></span>  
   
- <span data-ttu-id="f908e-110">같은 힙 값에 대 한이 함수를 여러 번 호출을 여러 핸들을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="f908e-110">Multiple calls to this function for the same heap value will create multiple handles.</span></span> <span data-ttu-id="f908e-111">가비지 수집의 성능에 영향을 주는 처리 하기 때문에 디버거에서 상대적으로 적은 수의 한 번에 활성 상태인 처리 (약 256) 자체를 제한 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="f908e-111">Because handles affect the performance of the garbage collector, the debugger should limit itself to a relatively small number of handles (about 256) that are active at a time.</span></span>  
+ <span data-ttu-id="a4c57-110">동일한 힙 값에 대해이 함수를 여러 번 호출 하면 여러 개의 핸들이 생성 됩니다.</span><span class="sxs-lookup"><span data-stu-id="a4c57-110">Multiple calls to this function for the same heap value will create multiple handles.</span></span> <span data-ttu-id="a4c57-111">핸들이 가비지 수집기의 성능에 영향을 주므로 디버거는 한 번에 활성 상태인 상대적으로 적은 수의 핸들 (약 256)으로 제한 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="a4c57-111">Because handles affect the performance of the garbage collector, the debugger should limit itself to a relatively small number of handles (about 256) that are active at a time.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f908e-112">요구 사항</span><span class="sxs-lookup"><span data-stu-id="f908e-112">Requirements</span></span>  
- <span data-ttu-id="f908e-113">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="f908e-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a4c57-112">요구 사항</span><span class="sxs-lookup"><span data-stu-id="a4c57-112">Requirements</span></span>  
+ <span data-ttu-id="a4c57-113">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="a4c57-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f908e-114">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f908e-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="a4c57-114">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="a4c57-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="f908e-115">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f908e-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="a4c57-115">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a4c57-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="f908e-116">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f908e-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+ <span data-ttu-id="a4c57-116">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a4c57-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>

@@ -15,20 +15,18 @@ helpviewer_keywords:
 ms.assetid: 8463a98a-de4a-418e-beb0-9611885ae6b0
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 65218eb6b5ba26bfb1cbee4f1f276c39e8623c5d
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 83801f7133df6ffb4bdf4a816142849f40baeb53
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71700697"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125655"
 ---
-# <a name="icordebugcodegetencremapsequencepoints-method"></a><span data-ttu-id="e8677-102">ICorDebugCode::GetEnCRemapSequencePoints 메서드</span><span class="sxs-lookup"><span data-stu-id="e8677-102">ICorDebugCode::GetEnCRemapSequencePoints Method</span></span>
+# <a name="icordebugcodegetencremapsequencepoints-method"></a><span data-ttu-id="faeff-102">ICorDebugCode::GetEnCRemapSequencePoints 메서드</span><span class="sxs-lookup"><span data-stu-id="faeff-102">ICorDebugCode::GetEnCRemapSequencePoints Method</span></span>
 
-<span data-ttu-id="e8677-103">이 메서드는 현재 버전의 .NET Framework에서 구현 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="e8677-103">This method is not implemented in the current version of the .NET Framework.</span></span>
+<span data-ttu-id="faeff-103">이 메서드는 현재 버전의 .NET Framework에서 구현 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="faeff-103">This method is not implemented in the current version of the .NET Framework.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="e8677-104">구문</span><span class="sxs-lookup"><span data-stu-id="e8677-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="faeff-104">구문</span><span class="sxs-lookup"><span data-stu-id="faeff-104">Syntax</span></span>
 
 ```cpp
 HRESULT GetEnCRemapSequencePoints(
