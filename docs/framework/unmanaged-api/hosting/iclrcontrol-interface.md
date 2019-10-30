@@ -14,42 +14,40 @@ helpviewer_keywords:
 ms.assetid: a24fd905-1fa6-45a0-ad65-e9e2ee58861e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f70e7958cc9ac198738ed72732fe7b6563c89067
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 914a2f6103fb0ffb9a7b9fcb895ecf0cd62f3c43
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61970068"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126602"
 ---
-# <a name="iclrcontrol-interface"></a><span data-ttu-id="a010e-102">ICLRControl 인터페이스</span><span class="sxs-lookup"><span data-stu-id="a010e-102">ICLRControl Interface</span></span>
-<span data-ttu-id="a010e-103">참조 하는 데 사용 하는 CLR (공용 언어 런타임)의 측면을 구성 하는 메서드를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="a010e-103">Provides methods that allow a host to get references to, and configure aspects of, the common language runtime (CLR).</span></span>  
+# <a name="iclrcontrol-interface"></a><span data-ttu-id="41847-102">ICLRControl 인터페이스</span><span class="sxs-lookup"><span data-stu-id="41847-102">ICLRControl Interface</span></span>
+<span data-ttu-id="41847-103">호스트가 CLR (공용 언어 런타임)에 대 한 참조를 가져오고의 측면을 구성 하는 데 사용할 수 있는 메서드를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="41847-103">Provides methods that allow a host to get references to, and configure aspects of, the common language runtime (CLR).</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="a010e-104">메서드</span><span class="sxs-lookup"><span data-stu-id="a010e-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="41847-104">메서드</span><span class="sxs-lookup"><span data-stu-id="41847-104">Methods</span></span>  
   
-|<span data-ttu-id="a010e-105">메서드</span><span class="sxs-lookup"><span data-stu-id="a010e-105">Method</span></span>|<span data-ttu-id="a010e-106">설명</span><span class="sxs-lookup"><span data-stu-id="a010e-106">Description</span></span>|  
+|<span data-ttu-id="41847-105">메서드</span><span class="sxs-lookup"><span data-stu-id="41847-105">Method</span></span>|<span data-ttu-id="41847-106">설명</span><span class="sxs-lookup"><span data-stu-id="41847-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="a010e-107">GetCLRManager 메서드</span><span class="sxs-lookup"><span data-stu-id="a010e-107">GetCLRManager Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-getclrmanager-method.md)|<span data-ttu-id="a010e-108">호스트 CLR을 구성 하 여 관리자 형식의 모든 인스턴스에 대 한 인터페이스 포인터를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="a010e-108">Gets an interface pointer to an instance of any of the manager types the host can use to configure the CLR.</span></span>|  
-|[<span data-ttu-id="a010e-109">SetAppDomainManagerType 메서드</span><span class="sxs-lookup"><span data-stu-id="a010e-109">SetAppDomainManagerType Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-setappdomainmanagertype-method.md)|<span data-ttu-id="a010e-110">파생 된 형식을 설정 <xref:System.AppDomainManager> 응용 프로그램 도메인 관리자에 대 한 형식으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="a010e-110">Sets a type derived from <xref:System.AppDomainManager> as the type for application domain managers.</span></span>|  
+|[<span data-ttu-id="41847-107">GetCLRManager 메서드</span><span class="sxs-lookup"><span data-stu-id="41847-107">GetCLRManager Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-getclrmanager-method.md)|<span data-ttu-id="41847-108">호스트가 CLR을 구성 하는 데 사용할 수 있는 관리자 형식의 인스턴스에 대 한 인터페이스 포인터를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="41847-108">Gets an interface pointer to an instance of any of the manager types the host can use to configure the CLR.</span></span>|  
+|[<span data-ttu-id="41847-109">SetAppDomainManagerType 메서드</span><span class="sxs-lookup"><span data-stu-id="41847-109">SetAppDomainManagerType Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-setappdomainmanagertype-method.md)|<span data-ttu-id="41847-110"><xref:System.AppDomainManager>에서 파생 된 형식을 응용 프로그램 도메인 관리자의 형식으로 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="41847-110">Sets a type derived from <xref:System.AppDomainManager> as the type for application domain managers.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="a010e-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="a010e-111">Requirements</span></span>  
- <span data-ttu-id="a010e-112">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="a010e-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="41847-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="41847-111">Requirements</span></span>  
+ <span data-ttu-id="41847-112">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="41847-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a010e-113">**헤더:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="a010e-113">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="41847-113">**헤더:** Mscoree.dll</span><span class="sxs-lookup"><span data-stu-id="41847-113">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="a010e-114">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="a010e-114">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="41847-114">**라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="41847-114">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="a010e-115">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a010e-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="41847-115">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="41847-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a010e-116">참고자료</span><span class="sxs-lookup"><span data-stu-id="a010e-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="41847-116">참조</span><span class="sxs-lookup"><span data-stu-id="41847-116">See also</span></span>
 
-- [<span data-ttu-id="a010e-117">ICLRAssemblyIdentityManager 인터페이스</span><span class="sxs-lookup"><span data-stu-id="a010e-117">ICLRAssemblyIdentityManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
-- [<span data-ttu-id="a010e-118">ICLRDebugManager 인터페이스</span><span class="sxs-lookup"><span data-stu-id="a010e-118">ICLRDebugManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-interface.md)
-- [<span data-ttu-id="a010e-119">ICLRGCManager 인터페이스</span><span class="sxs-lookup"><span data-stu-id="a010e-119">ICLRGCManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-interface.md)
-- [<span data-ttu-id="a010e-120">ICLRHostBindingPolicyManager 인터페이스</span><span class="sxs-lookup"><span data-stu-id="a010e-120">ICLRHostBindingPolicyManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md)
-- [<span data-ttu-id="a010e-121">ICLRHostProtectionManager 인터페이스</span><span class="sxs-lookup"><span data-stu-id="a010e-121">ICLRHostProtectionManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrhostprotectionmanager-interface.md)
-- [<span data-ttu-id="a010e-122">ICLROnEventManager 인터페이스</span><span class="sxs-lookup"><span data-stu-id="a010e-122">ICLROnEventManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-interface.md)
-- [<span data-ttu-id="a010e-123">ICLRPolicyManager 인터페이스</span><span class="sxs-lookup"><span data-stu-id="a010e-123">ICLRPolicyManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)
-- [<span data-ttu-id="a010e-124">IHostControl 인터페이스</span><span class="sxs-lookup"><span data-stu-id="a010e-124">IHostControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-interface.md)
-- [<span data-ttu-id="a010e-125">호스팅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="a010e-125">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [<span data-ttu-id="41847-117">ICLRAssemblyIdentityManager 인터페이스</span><span class="sxs-lookup"><span data-stu-id="41847-117">ICLRAssemblyIdentityManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
+- [<span data-ttu-id="41847-118">ICLRDebugManager 인터페이스</span><span class="sxs-lookup"><span data-stu-id="41847-118">ICLRDebugManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-interface.md)
+- [<span data-ttu-id="41847-119">ICLRGCManager 인터페이스</span><span class="sxs-lookup"><span data-stu-id="41847-119">ICLRGCManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-interface.md)
+- [<span data-ttu-id="41847-120">ICLRHostBindingPolicyManager 인터페이스</span><span class="sxs-lookup"><span data-stu-id="41847-120">ICLRHostBindingPolicyManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md)
+- [<span data-ttu-id="41847-121">ICLRHostProtectionManager 인터페이스</span><span class="sxs-lookup"><span data-stu-id="41847-121">ICLRHostProtectionManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrhostprotectionmanager-interface.md)
+- [<span data-ttu-id="41847-122">ICLROnEventManager 인터페이스</span><span class="sxs-lookup"><span data-stu-id="41847-122">ICLROnEventManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-interface.md)
+- [<span data-ttu-id="41847-123">ICLRPolicyManager 인터페이스</span><span class="sxs-lookup"><span data-stu-id="41847-123">ICLRPolicyManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)
+- [<span data-ttu-id="41847-124">IHostControl 인터페이스</span><span class="sxs-lookup"><span data-stu-id="41847-124">IHostControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-interface.md)
+- [<span data-ttu-id="41847-125">호스팅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="41847-125">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

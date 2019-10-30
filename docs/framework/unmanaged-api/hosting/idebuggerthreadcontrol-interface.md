@@ -14,35 +14,33 @@ helpviewer_keywords:
 ms.assetid: 0a270c42-a7d1-45f1-a64d-fa3e84d14532
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7a551d3cc6ab3dd3887f232018f8201de4036d1b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a65f9f0f29a43cf3d26b4b2bc5f6f594f0557009
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61699658"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133167"
 ---
-# <a name="idebuggerthreadcontrol-interface"></a><span data-ttu-id="b87c1-102">IDebuggerThreadControl 인터페이스</span><span class="sxs-lookup"><span data-stu-id="b87c1-102">IDebuggerThreadControl Interface</span></span>
-<span data-ttu-id="b87c1-103">차단 하는 방법에 대 한 호스트에 알리고 디버깅 서비스에 의해 스레드 차단 해제에 대 한 메서드를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="b87c1-103">Provides methods for notifying the host about the blocking and unblocking of threads by the debugging services.</span></span>  
+# <a name="idebuggerthreadcontrol-interface"></a><span data-ttu-id="d6024-102">IDebuggerThreadControl 인터페이스</span><span class="sxs-lookup"><span data-stu-id="d6024-102">IDebuggerThreadControl Interface</span></span>
+<span data-ttu-id="d6024-103">디버깅 서비스에서 스레드의 차단 및 차단 해제에 대해 호스트에 알리는 메서드를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="d6024-103">Provides methods for notifying the host about the blocking and unblocking of threads by the debugging services.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="b87c1-104">메서드</span><span class="sxs-lookup"><span data-stu-id="b87c1-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="d6024-104">메서드</span><span class="sxs-lookup"><span data-stu-id="d6024-104">Methods</span></span>  
   
-|<span data-ttu-id="b87c1-105">메서드</span><span class="sxs-lookup"><span data-stu-id="b87c1-105">Method</span></span>|<span data-ttu-id="b87c1-106">설명</span><span class="sxs-lookup"><span data-stu-id="b87c1-106">Description</span></span>|  
+|<span data-ttu-id="d6024-105">메서드</span><span class="sxs-lookup"><span data-stu-id="d6024-105">Method</span></span>|<span data-ttu-id="d6024-106">설명</span><span class="sxs-lookup"><span data-stu-id="d6024-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="b87c1-107">ThreadIsBlockingForDebugger 메서드</span><span class="sxs-lookup"><span data-stu-id="b87c1-107">ThreadIsBlockingForDebugger Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/idebuggerthreadcontrol-threadisblockingfordebugger-method.md)|<span data-ttu-id="b87c1-108">이 콜백은 보내는 스레드가 호스트에 알리는 디버깅 서비스 내에서 블록입니다.</span><span class="sxs-lookup"><span data-stu-id="b87c1-108">Notifies the host that the thread that is sending this callback is about to block within the debugging services.</span></span>|  
-|[<span data-ttu-id="b87c1-109">ReleaseAllRuntimeThreads 메서드</span><span class="sxs-lookup"><span data-stu-id="b87c1-109">ReleaseAllRuntimeThreads Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/idebuggerthreadcontrol-releaseallruntimethreads-method.md)|<span data-ttu-id="b87c1-110">디버깅 서비스 차단 되는 모든 스레드를 해제 하려는 호스트에 알립니다.</span><span class="sxs-lookup"><span data-stu-id="b87c1-110">Notifies the host that the debugging services are about to release all threads that are blocked.</span></span>|  
-|[<span data-ttu-id="b87c1-111">StartBlockingForDebugger 메서드</span><span class="sxs-lookup"><span data-stu-id="b87c1-111">StartBlockingForDebugger Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/idebuggerthreadcontrol-startblockingfordebugger-method.md)|<span data-ttu-id="b87c1-112">디버깅 서비스 시작 모든 스레드를 차단 하려는 호스트에 알립니다.</span><span class="sxs-lookup"><span data-stu-id="b87c1-112">Notifies the host that the debugging services are about to start blocking all threads.</span></span>|  
+|[<span data-ttu-id="d6024-107">ThreadIsBlockingForDebugger 메서드</span><span class="sxs-lookup"><span data-stu-id="d6024-107">ThreadIsBlockingForDebugger Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/idebuggerthreadcontrol-threadisblockingfordebugger-method.md)|<span data-ttu-id="d6024-108">이 콜백을 보내는 스레드가 디버깅 서비스 내에서 차단 됨을 호스트에 알립니다.</span><span class="sxs-lookup"><span data-stu-id="d6024-108">Notifies the host that the thread that is sending this callback is about to block within the debugging services.</span></span>|  
+|[<span data-ttu-id="d6024-109">ReleaseAllRuntimeThreads 메서드</span><span class="sxs-lookup"><span data-stu-id="d6024-109">ReleaseAllRuntimeThreads Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/idebuggerthreadcontrol-releaseallruntimethreads-method.md)|<span data-ttu-id="d6024-110">디버깅 서비스가 차단 된 모든 스레드를 해제 하려고 한다는 사실을 호스트에 알립니다.</span><span class="sxs-lookup"><span data-stu-id="d6024-110">Notifies the host that the debugging services are about to release all threads that are blocked.</span></span>|  
+|[<span data-ttu-id="d6024-111">StartBlockingForDebugger 메서드</span><span class="sxs-lookup"><span data-stu-id="d6024-111">StartBlockingForDebugger Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/idebuggerthreadcontrol-startblockingfordebugger-method.md)|<span data-ttu-id="d6024-112">디버깅 서비스가 모든 스레드를 차단 하기 시작 했음을 호스트에 알립니다.</span><span class="sxs-lookup"><span data-stu-id="d6024-112">Notifies the host that the debugging services are about to start blocking all threads.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="b87c1-113">요구 사항</span><span class="sxs-lookup"><span data-stu-id="b87c1-113">Requirements</span></span>  
- <span data-ttu-id="b87c1-114">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="b87c1-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d6024-113">요구 사항</span><span class="sxs-lookup"><span data-stu-id="d6024-113">Requirements</span></span>  
+ <span data-ttu-id="d6024-114">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="d6024-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b87c1-115">**헤더:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="b87c1-115">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="d6024-115">**헤더:** Mscoree.dll</span><span class="sxs-lookup"><span data-stu-id="d6024-115">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="b87c1-116">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="b87c1-116">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="d6024-116">**라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="d6024-116">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="b87c1-117">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b87c1-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="d6024-117">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d6024-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b87c1-118">참고자료</span><span class="sxs-lookup"><span data-stu-id="b87c1-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d6024-118">참조</span><span class="sxs-lookup"><span data-stu-id="d6024-118">See also</span></span>
 
-- [<span data-ttu-id="b87c1-119">호스팅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="b87c1-119">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [<span data-ttu-id="d6024-119">호스팅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="d6024-119">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

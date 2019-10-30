@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 28e4b2f6-9589-445c-be24-24a3306795e7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0d74da502492065dbffb5e5499581263760636c7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ef9e339c74b2d2785d758ed9c4adfc1901073253
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737073"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139366"
 ---
-# <a name="icordebugprocessreadmemory-method"></a><span data-ttu-id="b9b66-102">ICorDebugProcess::ReadMemory 메서드</span><span class="sxs-lookup"><span data-stu-id="b9b66-102">ICorDebugProcess::ReadMemory Method</span></span>
-<span data-ttu-id="b9b66-103">이 프로세스에 대 한 메모리의 지정된 된 영역을 읽습니다.</span><span class="sxs-lookup"><span data-stu-id="b9b66-103">Reads a specified area of memory for this process.</span></span>  
+# <a name="icordebugprocessreadmemory-method"></a><span data-ttu-id="057c7-102">ICorDebugProcess::ReadMemory 메서드</span><span class="sxs-lookup"><span data-stu-id="057c7-102">ICorDebugProcess::ReadMemory Method</span></span>
+<span data-ttu-id="057c7-103">이 프로세스에 대해 지정 된 메모리 영역을 읽습니다.</span><span class="sxs-lookup"><span data-stu-id="057c7-103">Reads a specified area of memory for this process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b9b66-104">구문</span><span class="sxs-lookup"><span data-stu-id="b9b66-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="057c7-104">구문</span><span class="sxs-lookup"><span data-stu-id="057c7-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT ReadMemory(  
@@ -37,31 +35,31 @@ HRESULT ReadMemory(
     [out] SIZE_T *read);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b9b66-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="b9b66-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="057c7-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="057c7-105">Parameters</span></span>  
  `address`  
- <span data-ttu-id="b9b66-106">[in] `CORDB_ADDRESS` 읽을 메모리의 기본 주소를 지정 하는 값입니다.</span><span class="sxs-lookup"><span data-stu-id="b9b66-106">[in] A `CORDB_ADDRESS` value that specifies the base address of the memory to be read.</span></span>  
+ <span data-ttu-id="057c7-106">진행 읽을 메모리의 기준 주소를 지정 하는 `CORDB_ADDRESS` 값입니다.</span><span class="sxs-lookup"><span data-stu-id="057c7-106">[in] A `CORDB_ADDRESS` value that specifies the base address of the memory to be read.</span></span>  
   
  `size`  
- <span data-ttu-id="b9b66-107">[in] 메모리에서 읽을 바이트 수입니다.</span><span class="sxs-lookup"><span data-stu-id="b9b66-107">[in] The number of bytes to be read from memory.</span></span>  
+ <span data-ttu-id="057c7-107">진행 메모리에서 읽을 바이트 수입니다.</span><span class="sxs-lookup"><span data-stu-id="057c7-107">[in] The number of bytes to be read from memory.</span></span>  
   
  `buffer`  
- <span data-ttu-id="b9b66-108">[out] 메모리의 콘텐츠를 받는 버퍼입니다.</span><span class="sxs-lookup"><span data-stu-id="b9b66-108">[out] A buffer that receives the contents of the memory.</span></span>  
+ <span data-ttu-id="057c7-108">제한이 메모리의 콘텐츠를 받는 버퍼입니다.</span><span class="sxs-lookup"><span data-stu-id="057c7-108">[out] A buffer that receives the contents of the memory.</span></span>  
   
  `read`  
- <span data-ttu-id="b9b66-109">[out] 지정된 된 버퍼에 전송 된 바이트 수에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="b9b66-109">[out] A pointer to the number of bytes transferred into the specified buffer.</span></span>  
+ <span data-ttu-id="057c7-109">제한이 지정 된 버퍼로 전송 된 바이트 수에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="057c7-109">[out] A pointer to the number of bytes transferred into the specified buffer.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="b9b66-110">설명</span><span class="sxs-lookup"><span data-stu-id="b9b66-110">Remarks</span></span>  
- <span data-ttu-id="b9b66-111">`ReadMemory` 디버기에 서의 관리 되지 않는 부분에 의해 사용 중인 메모리 영역을 검사 하는 interop 디버깅에서 사용할 메서드는 주로 합니다.</span><span class="sxs-lookup"><span data-stu-id="b9b66-111">The `ReadMemory` method is primarily intended to be used by interop debugging to inspect memory regions that are being used by the unmanaged portion of the debuggee.</span></span> <span data-ttu-id="b9b66-112">또한이 메서드 Microsoft MSIL (intermediate language) 코드와 네이티브 JIT 컴파일된 코드를 읽는 데 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b9b66-112">This method can also be used to read Microsoft intermediate language (MSIL) code and native JIT-compiled code.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="057c7-110">주의</span><span class="sxs-lookup"><span data-stu-id="057c7-110">Remarks</span></span>  
+ <span data-ttu-id="057c7-111">`ReadMemory` 메서드는 주로 interop 디버깅에서 디버기의 관리 되지 않는 부분에 사용 되는 메모리 영역을 검사 하는 데 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="057c7-111">The `ReadMemory` method is primarily intended to be used by interop debugging to inspect memory regions that are being used by the unmanaged portion of the debuggee.</span></span> <span data-ttu-id="057c7-112">이 메서드를 사용 하 여 MSIL (Microsoft 중간 언어) 코드 및 네이티브 JIT 컴파일된 코드를 읽을 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="057c7-112">This method can also be used to read Microsoft intermediate language (MSIL) code and native JIT-compiled code.</span></span>  
   
- <span data-ttu-id="b9b66-113">반환 되는 데이터에서 제거 됩니다. 관리 되는 중단점을 `buffer` 매개 변수입니다.</span><span class="sxs-lookup"><span data-stu-id="b9b66-113">Any managed breakpoints will be removed from the data that is returned in the `buffer` parameter.</span></span> <span data-ttu-id="b9b66-114">설정 된 기본 중단점 조정 없이 만들어질 [ICorDebugProcess2::SetUnmanagedBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="b9b66-114">No adjustments will be made for native breakpoints set by [ICorDebugProcess2::SetUnmanagedBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md).</span></span>  
+ <span data-ttu-id="057c7-113">모든 관리 되는 중단점은 `buffer` 매개 변수에 반환 되는 데이터에서 제거 됩니다.</span><span class="sxs-lookup"><span data-stu-id="057c7-113">Any managed breakpoints will be removed from the data that is returned in the `buffer` parameter.</span></span> <span data-ttu-id="057c7-114">[ICorDebugProcess2:: SetUnmanagedBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md)에 의해 설정 된 네이티브 중단점에 대해서는 조정이 수행 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="057c7-114">No adjustments will be made for native breakpoints set by [ICorDebugProcess2::SetUnmanagedBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md).</span></span>  
   
- <span data-ttu-id="b9b66-115">프로세스 메모리의 캐싱 없음이 수행 됩니다.</span><span class="sxs-lookup"><span data-stu-id="b9b66-115">No caching of process memory is performed.</span></span>  
+ <span data-ttu-id="057c7-115">프로세스 메모리의 캐싱이 수행 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="057c7-115">No caching of process memory is performed.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b9b66-116">요구 사항</span><span class="sxs-lookup"><span data-stu-id="b9b66-116">Requirements</span></span>  
- <span data-ttu-id="b9b66-117">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="b9b66-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="057c7-116">요구 사항</span><span class="sxs-lookup"><span data-stu-id="057c7-116">Requirements</span></span>  
+ <span data-ttu-id="057c7-117">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="057c7-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b9b66-118">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b9b66-118">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="057c7-118">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="057c7-118">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="b9b66-119">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b9b66-119">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="057c7-119">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="057c7-119">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="b9b66-120">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b9b66-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="057c7-120">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="057c7-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

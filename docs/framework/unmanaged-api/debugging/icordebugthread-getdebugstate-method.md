@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 9be27b0c-1d99-4722-b0d4-40cf6753ce5c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0baabbb736365b138d1754e68070207b4310bf57
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f054f8f2bd7c322e722a1e17290ba6fbad9e37b0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67762452"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133519"
 ---
-# <a name="icordebugthreadgetdebugstate-method"></a><span data-ttu-id="3aae2-102">ICorDebugThread::GetDebugState 메서드</span><span class="sxs-lookup"><span data-stu-id="3aae2-102">ICorDebugThread::GetDebugState Method</span></span>
-<span data-ttu-id="3aae2-103">이 ICorDebugThread 개체의 현재 디버그 상태를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="3aae2-103">Gets the current debug state of this ICorDebugThread object.</span></span>  
+# <a name="icordebugthreadgetdebugstate-method"></a><span data-ttu-id="49212-102">ICorDebugThread::GetDebugState 메서드</span><span class="sxs-lookup"><span data-stu-id="49212-102">ICorDebugThread::GetDebugState Method</span></span>
+<span data-ttu-id="49212-103">이 ICorDebugThread 개체의 현재 디버그 상태를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="49212-103">Gets the current debug state of this ICorDebugThread object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3aae2-104">구문</span><span class="sxs-lookup"><span data-stu-id="3aae2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="49212-104">구문</span><span class="sxs-lookup"><span data-stu-id="49212-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetDebugState (  
@@ -35,18 +33,18 @@ HRESULT GetDebugState (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="3aae2-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="3aae2-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="49212-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="49212-105">Parameters</span></span>  
  `pState`  
- <span data-ttu-id="3aae2-106">[out] 이 스레드의 현재 디버그 상태를 설명 하는 CorDebugThreadState 열거형 값의 비트 조합에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="3aae2-106">[out] A pointer to a bitwise combination of CorDebugThreadState enumeration values that describes the current debug state of this thread.</span></span>  
+ <span data-ttu-id="49212-106">제한이 이 스레드의 현재 디버그 상태를 설명 하는 CorDebugThreadState 열거형 값의 비트 조합에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="49212-106">[out] A pointer to a bitwise combination of CorDebugThreadState enumeration values that describes the current debug state of this thread.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="3aae2-107">설명</span><span class="sxs-lookup"><span data-stu-id="3aae2-107">Remarks</span></span>  
- <span data-ttu-id="3aae2-108">현재 프로세스를 중지할 경우 `pState` 프로세스가 계속 될이 스레드에 대 한 현재의 실제 상태 되지 경우이 스레드에 대 한 존재 하도록 디버그 상태를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="3aae2-108">If the process is currently stopped, `pState` represents the debug state that would exist for this thread if the process were to be continued, not the actual current state of this thread.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="49212-107">주의</span><span class="sxs-lookup"><span data-stu-id="49212-107">Remarks</span></span>  
+ <span data-ttu-id="49212-108">프로세스가 현재 중지 된 경우이 스레드의 실제 현재 상태가 아닌 프로세스가 계속 되는 경우이 스레드에 대해 존재 하는 디버그 상태를 `pState` 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="49212-108">If the process is currently stopped, `pState` represents the debug state that would exist for this thread if the process were to be continued, not the actual current state of this thread.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3aae2-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="3aae2-109">Requirements</span></span>  
- <span data-ttu-id="3aae2-110">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="3aae2-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="49212-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="49212-109">Requirements</span></span>  
+ <span data-ttu-id="49212-110">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="49212-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3aae2-111">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="3aae2-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="49212-111">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="49212-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="3aae2-112">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3aae2-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="49212-112">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="49212-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="3aae2-113">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3aae2-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="49212-113">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="49212-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

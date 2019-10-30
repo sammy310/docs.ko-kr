@@ -12,19 +12,17 @@ api_type:
 ms.assetid: 66076ed5-f05c-4114-9788-94cb143abb8a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 07065b15f449c2bcb84df7bbdcce65d61de007ee
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 5a090b7c4801e6b2baf56f1d80e7e52f2aaa9293
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69038341"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73112297"
 ---
-# <a name="iclrdatatarget3getexceptioncontextrecord-method"></a><span data-ttu-id="d94fb-102">ICLRDataTarget3::GetExceptionContextRecord 메서드</span><span class="sxs-lookup"><span data-stu-id="d94fb-102">ICLRDataTarget3::GetExceptionContextRecord Method</span></span>
-<span data-ttu-id="d94fb-103">CLR(공용 언어 런타임) 데이터 액세스 서비스에 의해 호출되어 대상 프로세스와 연결된 컨텍스트 레코드를 검색합니다.</span><span class="sxs-lookup"><span data-stu-id="d94fb-103">Called by the common language runtime (CLR) data access services to retrieve the context record associated with the target process.</span></span> <span data-ttu-id="d94fb-104">예를 들어 덤프 대상의 경우,이는 `ExceptionParam` 인수를 통해 Windows 디버그 도움말 라이브러리 (dbghelp.dll)의 [MiniDumpWriteDump](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump) 함수에 전달 된 컨텍스트 레코드와 동일 합니다.</span><span class="sxs-lookup"><span data-stu-id="d94fb-104">For example, for a dump target, this would be equivalent to the context record passed in via the `ExceptionParam` argument to the [MiniDumpWriteDump](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump) function in the Windows Debug Help Library (DbgHelp).</span></span>  
+# <a name="iclrdatatarget3getexceptioncontextrecord-method"></a><span data-ttu-id="97f77-102">ICLRDataTarget3::GetExceptionContextRecord 메서드</span><span class="sxs-lookup"><span data-stu-id="97f77-102">ICLRDataTarget3::GetExceptionContextRecord Method</span></span>
+<span data-ttu-id="97f77-103">CLR(공용 언어 런타임) 데이터 액세스 서비스에 의해 호출되어 대상 프로세스와 연결된 컨텍스트 레코드를 검색합니다.</span><span class="sxs-lookup"><span data-stu-id="97f77-103">Called by the common language runtime (CLR) data access services to retrieve the context record associated with the target process.</span></span> <span data-ttu-id="97f77-104">예를 들어 덤프 대상의 경우이 값은 Windows 디버그 도움말 라이브러리 (Dbghelp.dll)의 [MiniDumpWriteDump](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump) 함수에 `ExceptionParam` 인수를 통해 전달 되는 컨텍스트 레코드와 동일 합니다.</span><span class="sxs-lookup"><span data-stu-id="97f77-104">For example, for a dump target, this would be equivalent to the context record passed in via the `ExceptionParam` argument to the [MiniDumpWriteDump](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump) function in the Windows Debug Help Library (DbgHelp).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d94fb-105">구문</span><span class="sxs-lookup"><span data-stu-id="d94fb-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="97f77-105">구문</span><span class="sxs-lookup"><span data-stu-id="97f77-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetExceptionContextRecord(  
@@ -34,41 +32,41 @@ HRESULT GetExceptionContextRecord(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d94fb-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="d94fb-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="97f77-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="97f77-106">Parameters</span></span>  
  `bufferSize`  
- <span data-ttu-id="d94fb-107">[in] 입력 버퍼 크기(바이트)로,</span><span class="sxs-lookup"><span data-stu-id="d94fb-107">[in] The input buffer size, in bytes.</span></span> <span data-ttu-id="d94fb-108">컨텍스트 레코드를 포함할 수 있을 정도로 커야 합니다.</span><span class="sxs-lookup"><span data-stu-id="d94fb-108">This must be large enough to accommodate the context record.</span></span>  
+ <span data-ttu-id="97f77-107">[in] 입력 버퍼 크기(바이트)로,</span><span class="sxs-lookup"><span data-stu-id="97f77-107">[in] The input buffer size, in bytes.</span></span> <span data-ttu-id="97f77-108">컨텍스트 레코드를 포함할 수 있을 정도로 커야 합니다.</span><span class="sxs-lookup"><span data-stu-id="97f77-108">This must be large enough to accommodate the context record.</span></span>  
   
  `bufferUsed`  
- <span data-ttu-id="d94fb-109">[out] 실제로 버퍼에 기록되는 바이트 수를 받는 `ULONG32` 형식에 대한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="d94fb-109">[out] A pointer to a `ULONG32` type that receives the number of bytes actually written to the buffer.</span></span>  
+ <span data-ttu-id="97f77-109">[out] 실제로 버퍼에 기록되는 바이트 수를 받는 `ULONG32` 형식에 대한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="97f77-109">[out] A pointer to a `ULONG32` type that receives the number of bytes actually written to the buffer.</span></span>  
   
  `buffer`  
- <span data-ttu-id="d94fb-110">[out] 컨텍스트 레코드 복사본을 받는 메모리 버퍼에 대한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="d94fb-110">[out] A pointer to a memory buffer that receives a copy of the context record.</span></span> <span data-ttu-id="d94fb-111">예외 레코드는 [컨텍스트](/windows/win32/api/winnt/ns-winnt-arm64_nt_context) 형식으로 반환 됩니다.</span><span class="sxs-lookup"><span data-stu-id="d94fb-111">The exception record is returned as a [CONTEXT](/windows/win32/api/winnt/ns-winnt-arm64_nt_context) type.</span></span>  
+ <span data-ttu-id="97f77-110">[out] 컨텍스트 레코드 복사본을 받는 메모리 버퍼에 대한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="97f77-110">[out] A pointer to a memory buffer that receives a copy of the context record.</span></span> <span data-ttu-id="97f77-111">예외 레코드는 [컨텍스트](/windows/win32/api/winnt/ns-winnt-arm64_nt_context) 형식으로 반환 됩니다.</span><span class="sxs-lookup"><span data-stu-id="97f77-111">The exception record is returned as a [CONTEXT](/windows/win32/api/winnt/ns-winnt-arm64_nt_context) type.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="d94fb-112">반환 값</span><span class="sxs-lookup"><span data-stu-id="d94fb-112">Return Value</span></span>  
- <span data-ttu-id="d94fb-113">반환 값은 성공 시 `S_OK`이고 실패 시에는 오류 `HRESULT` 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="d94fb-113">The return value is `S_OK` on success, or a failure `HRESULT` code on failure.</span></span> <span data-ttu-id="d94fb-114">`HRESULT` 코드는 다음을 비롯한 여러 항목을 포함할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d94fb-114">The `HRESULT` codes can include but are not limited to the following:</span></span>  
+## <a name="return-value"></a><span data-ttu-id="97f77-112">반환 값</span><span class="sxs-lookup"><span data-stu-id="97f77-112">Return Value</span></span>  
+ <span data-ttu-id="97f77-113">반환 값은 성공 시 `S_OK`이고 실패 시에는 오류 `HRESULT` 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="97f77-113">The return value is `S_OK` on success, or a failure `HRESULT` code on failure.</span></span> <span data-ttu-id="97f77-114">`HRESULT` 코드는 다음을 비롯한 여러 항목을 포함할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="97f77-114">The `HRESULT` codes can include but are not limited to the following:</span></span>  
   
-|<span data-ttu-id="d94fb-115">반환 코드</span><span class="sxs-lookup"><span data-stu-id="d94fb-115">Return code</span></span>|<span data-ttu-id="d94fb-116">Description</span><span class="sxs-lookup"><span data-stu-id="d94fb-116">Description</span></span>|  
+|<span data-ttu-id="97f77-115">반환 코드</span><span class="sxs-lookup"><span data-stu-id="97f77-115">Return code</span></span>|<span data-ttu-id="97f77-116">설명</span><span class="sxs-lookup"><span data-stu-id="97f77-116">Description</span></span>|  
 |-----------------|-----------------|  
-|`S_OK`|<span data-ttu-id="d94fb-117">메서드가 정상적으로 실행되었습니다.</span><span class="sxs-lookup"><span data-stu-id="d94fb-117">Method succeeded.</span></span> <span data-ttu-id="d94fb-118">컨텍스트 레코드가 출력 버퍼에 복사되었습니다.</span><span class="sxs-lookup"><span data-stu-id="d94fb-118">The context record has been copied to the output buffer.</span></span>|  
-|`HRESULT_FROM_WIN32(ERROR_NOT_FOUND)`|<span data-ttu-id="d94fb-119">컨텍스트 레코드가 대상에 연결되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="d94fb-119">No context record is associated with the target.</span></span>|  
-|`HRESULT_FROM_WIN32(ERROR_BAD_LENGTH)`|<span data-ttu-id="d94fb-120">입력 버퍼 크기가 컨텍스트 레코드를 수용할 수 있을 정도로 크지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="d94fb-120">The input buffer size is not large enough to accommodate the context record.</span></span>|  
+|`S_OK`|<span data-ttu-id="97f77-117">메서드가 정상적으로 실행되었습니다.</span><span class="sxs-lookup"><span data-stu-id="97f77-117">Method succeeded.</span></span> <span data-ttu-id="97f77-118">컨텍스트 레코드가 출력 버퍼에 복사되었습니다.</span><span class="sxs-lookup"><span data-stu-id="97f77-118">The context record has been copied to the output buffer.</span></span>|  
+|`HRESULT_FROM_WIN32(ERROR_NOT_FOUND)`|<span data-ttu-id="97f77-119">컨텍스트 레코드가 대상에 연결되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="97f77-119">No context record is associated with the target.</span></span>|  
+|`HRESULT_FROM_WIN32(ERROR_BAD_LENGTH)`|<span data-ttu-id="97f77-120">입력 버퍼 크기가 컨텍스트 레코드를 수용할 수 있을 정도로 크지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="97f77-120">The input buffer size is not large enough to accommodate the context record.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="d94fb-121">설명</span><span class="sxs-lookup"><span data-stu-id="d94fb-121">Remarks</span></span>  
- <span data-ttu-id="d94fb-122">[컨텍스트](/windows/win32/api/winnt/ns-winnt-arm64_nt_context) 는 Windows SDK에서 제공 하는 헤더에 정의 된 플랫폼별 구조입니다.</span><span class="sxs-lookup"><span data-stu-id="d94fb-122">[CONTEXT](/windows/win32/api/winnt/ns-winnt-arm64_nt_context) is a platform-specific structure defined in headers provided by the Windows SDK.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="97f77-121">주의</span><span class="sxs-lookup"><span data-stu-id="97f77-121">Remarks</span></span>  
+ <span data-ttu-id="97f77-122">[컨텍스트](/windows/win32/api/winnt/ns-winnt-arm64_nt_context) 는 Windows SDK에서 제공 하는 헤더에 정의 된 플랫폼별 구조입니다.</span><span class="sxs-lookup"><span data-stu-id="97f77-122">[CONTEXT](/windows/win32/api/winnt/ns-winnt-arm64_nt_context) is a platform-specific structure defined in headers provided by the Windows SDK.</span></span>  
   
- <span data-ttu-id="d94fb-123">이 메서드는 디버깅 애플리케이션의 작성자가 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="d94fb-123">This method is implemented by the writer of the debugging application.</span></span>  
+ <span data-ttu-id="97f77-123">이 메서드는 디버깅 애플리케이션의 작성자가 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="97f77-123">This method is implemented by the writer of the debugging application.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d94fb-124">요구 사항</span><span class="sxs-lookup"><span data-stu-id="d94fb-124">Requirements</span></span>  
- <span data-ttu-id="d94fb-125">**플랫폼** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="d94fb-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="97f77-124">요구 사항</span><span class="sxs-lookup"><span data-stu-id="97f77-124">Requirements</span></span>  
+ <span data-ttu-id="97f77-125">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="97f77-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d94fb-126">**헤더:** ClrData .idl, ClrData .h</span><span class="sxs-lookup"><span data-stu-id="d94fb-126">**Header:** ClrData.idl, ClrData.h</span></span>  
+ <span data-ttu-id="97f77-126">**헤더:** ClrData .idl, ClrData .h</span><span class="sxs-lookup"><span data-stu-id="97f77-126">**Header:** ClrData.idl, ClrData.h</span></span>  
   
- <span data-ttu-id="d94fb-127">**라이브러리** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d94fb-127">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="97f77-127">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="97f77-127">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="d94fb-128">**.NET Framework 버전:** [!INCLUDE[v451_update](../../../../includes/net-current-v451-nov-plus.md)]</span><span class="sxs-lookup"><span data-stu-id="d94fb-128">**.NET Framework Versions:** [!INCLUDE[v451_update](../../../../includes/net-current-v451-nov-plus.md)]</span></span>  
+ <span data-ttu-id="97f77-128">**.NET Framework 버전:** [!INCLUDE[v451_update](../../../../includes/net-current-v451-nov-plus.md)]</span><span class="sxs-lookup"><span data-stu-id="97f77-128">**.NET Framework Versions:** [!INCLUDE[v451_update](../../../../includes/net-current-v451-nov-plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d94fb-129">참고자료</span><span class="sxs-lookup"><span data-stu-id="d94fb-129">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="97f77-129">참조</span><span class="sxs-lookup"><span data-stu-id="97f77-129">See also</span></span>
 
-- [<span data-ttu-id="d94fb-130">ICLRDataTarget3 인터페이스</span><span class="sxs-lookup"><span data-stu-id="d94fb-130">ICLRDataTarget3 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-interface.md)
-- [<span data-ttu-id="d94fb-131">GetExceptionRecord 메서드</span><span class="sxs-lookup"><span data-stu-id="d94fb-131">GetExceptionRecord Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-getexceptionrecord-method.md)
-- [<span data-ttu-id="d94fb-132">GetExceptionThreadID 메서드</span><span class="sxs-lookup"><span data-stu-id="d94fb-132">GetExceptionThreadID Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-getexceptionthreadid-method.md)
+- [<span data-ttu-id="97f77-130">ICLRDataTarget3 인터페이스</span><span class="sxs-lookup"><span data-stu-id="97f77-130">ICLRDataTarget3 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-interface.md)
+- [<span data-ttu-id="97f77-131">GetExceptionRecord 메서드</span><span class="sxs-lookup"><span data-stu-id="97f77-131">GetExceptionRecord Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-getexceptionrecord-method.md)
+- [<span data-ttu-id="97f77-132">GetExceptionThreadID 메서드</span><span class="sxs-lookup"><span data-stu-id="97f77-132">GetExceptionThreadID Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-getexceptionthreadid-method.md)
