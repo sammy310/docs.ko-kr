@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8809d00e-beaa-4dcf-b4e8-e89d0a5406b7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 11d5e2eb5e2743fca4876ed09add79be3eba514f
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: 206e4fb232f4786a76525d24aa379b25d6d2f71d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274199"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73099353"
 ---
 # <a name="cor_debug_step_range-structure"></a>COR_DEBUG_STEP_RANGE 구조체
 코드 범위에 대한 오프셋 정보를 포함합니다.  
@@ -45,15 +43,15 @@ typedef struct {
 |`endOffset`|범위 끝의 오프셋입니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** CorDebug.idl  
+ **헤더:** CorDebug .idl  
   
- **라이브러리** CorGuids.lib  
+ **라이브러리:** CorGuids.lib  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [StepRange 메서드](icordebugstepper-steprange-method.md)
 - [디버깅 구조체](debugging-structures.md)

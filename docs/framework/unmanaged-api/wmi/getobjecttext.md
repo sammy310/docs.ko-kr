@@ -14,14 +14,12 @@ helpviewer_keywords:
 - GetObjectText function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d47fcd59204a4d114fc9f0dc5bc4550ba1681f33
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 412e1ad503fa0e0b4f813298c0ac96ae80098c06
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798500"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73102463"
 ---
 # <a name="getobjecttext-function"></a>GetObjectText 함수
 MOF (MOF(Managed Object Format)) 구문에서 개체의 텍스트 렌더링을 반환 합니다.
@@ -48,10 +46,10 @@ HRESULT GetObjectText (
 진행 [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) 인스턴스에 대 한 포인터입니다.
 
 `lFlags`  
-진행 일반적으로 0입니다. ( `WBEM_FLAG_NO_FLAVORS` 또는 0x1)을 지정 하면 전파 또는 버전 정보 없이 한정자가 포함 됩니다.
+진행 일반적으로 0입니다. `WBEM_FLAG_NO_FLAVORS` (또는 0x1)을 지정 하면 전파 또는 버전 정보 없이 한정자가 포함 됩니다.
 
 `pstrObjectText`   
-제한이 항목 `null` 에 대 한 포인터입니다. 반환 시 개체의 MOF 구문 `BSTR` 렌더링을 포함 하는 새로 할당 된입니다.  
+제한이 항목의 `null`에 대 한 포인터입니다. 반환 시 개체의 MOF 구문 렌더링을 포함 하는 새로 할당 된 `BSTR`입니다.  
 
 ## <a name="return-value"></a>반환 값
 
@@ -64,7 +62,7 @@ HRESULT GetObjectText (
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 메모리가 부족 하 여 작업을 완료할 수 없습니다. |
 |`WBEM_S_NO_ERROR` | 0 | 함수 호출에 성공 했습니다.  |
   
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 이 함수는 [IWbemClassObject:: GetObjectText](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getobjecttext) 메서드에 대 한 호출을 래핑합니다.
 
@@ -73,17 +71,17 @@ HRESULT GetObjectText (
 다음 알고리즘은 메서드의 매개 변수 텍스트를 다시 생성 하는 데 사용 됩니다.
 
 1. 매개 변수는 식별자 값의 순서에 따라 다시 시퀀싱 됩니다.
-1. `[in]` 및`[out]` 로 지정 된 매개 변수는 단일 매개 변수로 결합 됩니다.
+1. `[in]` 및 `[out]`으로 지정 된 매개 변수는 단일 매개 변수로 결합 됩니다.
  
-`pstrObjectText`는 `null` 함수를 호출할 때에 대 한 포인터 여야 합니다. 포인터가 할당 취소 되지 않으므로 메서드 호출 전에 유효한 문자열을 가리키지 않아야 합니다.
+함수가 호출 될 때 `pstrObjectText`는 `null`에 대 한 포인터 여야 합니다. 포인터가 할당 취소 되지 않으므로 메서드 호출 전에 유효한 문자열을 가리키지 않아야 합니다.
 
 ## <a name="requirements"></a>요구 사항  
-**플랫폼** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하십시오.  
+**플랫폼:** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** WMINet_Utils.idl  
+ **헤더:** WMINet_Utils  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [WMI 및 성능 카운터 (관리 되지 않는 API 참조)](index.md)
