@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: a746a849-463c-44f5-a2f0-9e812ed8bcc3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fe34ffded73e8305e4ade3bb9b402b1d8e1bcc49
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e23dfb86c2129a02a0ca95de8c89d8294e97ad81
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764685"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136844"
 ---
 # <a name="createdebugginginterfacefromversion-function"></a>CreateDebuggingInterfaceFromVersion 함수
-만듭니다는 [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) 개체 정보를 기반으로 지정 된 버전입니다.  
+지정 된 버전 정보를 기반으로 [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) 개체를 만듭니다.  
   
- 이 함수는.NET Framework 4에서 사용 되지 않습니다. CLR (공용 언어 런타임) 2.0에 대 한 인터페이스를 가져오려면 대신 합니다 [iclrruntimeinfo:: Getinterface](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getinterface-method.md) 메서드 인터페이스 식별자 IID_ICorDebug CLSID_CLRDebuggingLegacy 클래스 식별자를 지정 합니다. CLR 4에 대 한 인터페이스를 가져오거나 나중에 호출 하 여 [CLRCreateInstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md) 함수 및 클래스 식별자 CLSID_CLRDebugging 및 IID_ICLRDebugging 인터페이스 식별자를 지정 합니다.  
+ 이 함수는 .NET Framework 4에서 사용 되지 않습니다. 대신 CLR (공용 언어 런타임) 2.0에 대 한 인터페이스를 가져오려면 [ICLRRuntimeInfo:: GetInterface](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getinterface-method.md) 메서드를 사용 하 고 클래스 식별자 CLSID_CLRDebuggingLegacy 및 인터페이스 식별자 IID_ICorDebug를 지정 합니다. CLR 4 이상에 대 한 인터페이스를 가져오려면 [Clrcreateinstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md) 함수를 호출 하 고 클래스 식별자 CLSID_CLRDebugging 및 인터페이스 식별자 IID_ICLRDebugging를 지정 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -41,34 +39,34 @@ HRESULT CreateDebuggingInterfaceFromVersion (
   
 ## <a name="parameters"></a>매개 변수  
  `iDebuggerVersion`  
- [in] 버전 `ICorDebug` 디버거에 의해 예상 됩니다. 참조 된 [CorDebugInterfaceVersion](../../../../docs/framework/unmanaged-api/debugging/cordebuginterfaceversion-enumeration.md) 유효한 값에 대 한 열거형입니다.  
+ 진행 디버거에 필요한 `ICorDebug` 버전입니다. 올바른 값은 [Cordebuginterfaceversion](../../../../docs/framework/unmanaged-api/debugging/cordebuginterfaceversion-enumeration.md) 열거형을 참조 하세요.  
   
  `szDebuggeeVersion`  
- [in] 응용 프로그램 또는 프로세스를 디버깅할 수와 연결 된 공용 언어 런타임 버전입니다. 참조를 [GetVersionFromProcess](../../../../docs/framework/unmanaged-api/hosting/getversionfromprocess-function.md) 하거나 [GetRequestedRuntimeVersion](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md) 이 값을 검색 하는 방법은 메서드.  
+ 진행 디버그할 응용 프로그램 또는 프로세스와 연결 된 공용 언어 런타임 버전입니다. 이 값을 검색 하는 방법에 대 한 자세한 내용은 [Getversionfromprocess](../../../../docs/framework/unmanaged-api/hosting/getversionfromprocess-function.md) 또는 [GetRequestedRuntimeVersion](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md) 메서드를 참조 하세요.  
   
  `ppCordb`  
- [out] 에 대 한 포인터를 받는 위치를 `ICorDebug` 개체입니다.  
+ 제한이 `ICorDebug` 개체에 대 한 포인터를 수신 하는 위치입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 이 메서드는 다음 값 외에도 WinError.h 파일에 정의 된 대로 표준 COM 오류 코드를 반환 합니다.  
+ 이 메서드는 다음 값 외에도 Winerror.h 파일에 정의 된 표준 COM 오류 코드를 반환 합니다.  
   
-|반환 코드|Description|  
+|반환 코드|설명|  
 |-----------------|-----------------|  
 |S_OK|메서드가 완료되었습니다.|  
-|E_INVALIDARG|`szDebuggeeVersion` 또는 `ppCordb` 는 null 또는 버전 문자열이 잘못 되었습니다.|  
+|E_INVALIDARG|`szDebuggeeVersion` 또는 `ppCordb`가 null 이거나 버전 문자열이 잘못 되었습니다.|  
   
-## <a name="remarks"></a>설명  
- `szDebuggeeVersion` 매개 변수 MSCorDbi.dll의 해당 버전에 매핑됩니다.  
+## <a name="remarks"></a>주의  
+ `szDebuggeeVersion` 매개 변수는 해당 버전의 Mscordbi.dll에 매핑됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** MSCorEE.h  
+ **헤더:** Mscoree.dll  
   
- **라이브러리:** MSCorEE.dll  
+ **라이브러리:** Mscoree.dll  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [사용되지 않는 CLR 호스팅 함수](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

@@ -18,21 +18,19 @@ helpviewer_keywords:
 - data marshaling, platform invoke
 - marshaling, platform invoke
 ms.assetid: 027832a2-9b43-4fd9-9b45-7f4196261a4e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a53c8b7b88bd25a6611c33218c7a386de55889e9
-ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
+ms.openlocfilehash: 669e147f9c7b4ba901ade38f1ab8b41163c4f125
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71151759"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73114022"
 ---
 # <a name="marshaling-classes-structures-and-unions"></a>클래스, 구조체 및 공용 구조체 마샬링
 .NET Framework에서는 클래스와 구조체가 서로 비슷합니다. 둘 다 필드, 속성 및 이벤트를 포함할 수 있습니다. 또한 정적 및 비정적 메서드를 포함할 수 있습니다. 한 가지 주목할 만한 차이점은 구조체는 값 형식이고 클래스는 참조 형식이라는 것입니다.  
   
  다음 표에서는 클래스, 구조체 및 공용 구조체에 대한 마샬링 옵션을 나열하고 용도를 설명하며 해당하는 플랫폼 호출 샘플에 대한 링크를 제공합니다.  
   
-|형식|설명|샘플|  
+|Type|설명|예제|  
 |----------|-----------------|------------|  
 |값 방식 클래스.|관리되는 사례와 같이 정수 멤버를 In/Out 매개 변수로 사용하여 클래스를 전달합니다.|SysTime 샘플|  
 |값 방식 구조체.|구조체를 In 매개 변수로 전달합니다.|Structures 샘플|  
@@ -68,7 +66,7 @@ ms.locfileid: "71151759"
     void TestArrayInStruct( MYARRAYSTRUCT* pStruct );  
     ```  
   
- [PinvokeLib.dll](marshaling-data-with-platform-invoke.md#pinvokelibdll)은 앞에 나열된 함수와 네 가지 구조에 대한 구현을 포함하는 관리되지 않는 사용자 지정 라이브러리입니다. **MYPERSON**, **MYPERSON2**, **MYPERSON3** 및 **MYARRAYSTRUCT**. 이러한 구조체에는 다음과 같은 요소가 포함됩니다.  
+ [PinvokeLib.dll](marshaling-data-with-platform-invoke.md#pinvokelibdll)은 앞에 나열된 함수 및 4개의 구조체(**MYPERSON**, **MYPERSON2**, **MYPERSON3** 및 **MYARRAYSTRUCT**)에 대한 구현을 포함하는 관리되지 않는 사용자 지정 라이브러리입니다. 이러한 구조체에는 다음과 같은 요소가 포함됩니다.  
   
 ```cpp  
 typedef struct _MYPERSON  
@@ -288,7 +286,7 @@ typedef struct _MYSTRSTRUCT2
  [!code-csharp[Conceptual.Interop.Marshaling#21](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/outarrayofstructs.cs#21)]
  [!code-vb[Conceptual.Interop.Marshaling#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/outarrayofstructs.vb#21)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [플랫폼 호출을 사용하여 데이터 마샬링](marshaling-data-with-platform-invoke.md)
 - [문자열 마샬링](marshaling-strings.md)

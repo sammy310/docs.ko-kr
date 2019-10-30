@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e8ab7c41-d508-4ed9-8a31-ead072b5a314
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4c460bc644017f32fdb96d35e5f42981ac09f825
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cd43dce995c2bc9a45a0c8134a91b20cb1dec26e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738375"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73111423"
 ---
 # <a name="iclrdebuggingopenvirtualprocess-method"></a>ICLRDebugging::OpenVirtualProcess 메서드
-프로세스에 로드 된 공용 언어 런타임 (CLR) 모듈에 해당 하는 ICorDebugProcess 인터페이스를 가져옵니다.  
+프로세스에 로드 된 CLR (공용 언어 런타임) 모듈에 해당 하는 ICorDebugProcess 인터페이스를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -43,52 +41,52 @@ HRESULT OpenVirtualProcess(
   
 ## <a name="parameters"></a>매개 변수  
  `moduleBaseAddress`  
- [in] 대상 프로세스에서 모듈의 기본 주소입니다. 지정된 된 모듈이 CLR 모듈이 없으면 COR_E_NOT_CLR 반환 됩니다.  
+ 진행 대상 프로세스에 있는 모듈의 기본 주소입니다. 지정 된 모듈이 CLR 모듈이 아닌 경우 COR_E_NOT_CLR이 반환 됩니다.  
   
  `pDataTarget`  
- [in] 데이터 대상 추상화를 관리 되는 경우 디버거가 프로세스 상태를 검사할 수 있습니다. 디버거를 구현 해야 합니다 [ICorDebugDataTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md) 인터페이스입니다. 구현 해야 합니다 [ICLRDebuggingLibraryProvider](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md) 디버깅 중인 CLR 설치 되지 않은 로컬 컴퓨터의 시나리오를 지원 하도록 인터페이스입니다.  
+ 진행 관리 되는 디버거가 프로세스 상태를 검사할 수 있도록 하는 데이터 대상 추상화입니다. 디버거는 [ICorDebugDataTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md) 인터페이스를 구현 해야 합니다. 디버깅 중인 CLR이 컴퓨터에 로컬로 설치 되지 않은 시나리오를 지원 하려면 [ICLRDebuggingLibraryProvider](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md) 인터페이스를 구현 해야 합니다.  
   
  `pLibraryProvider`  
- [in] 버전별 디버깅 라이브러리 있고에 로드 된 요청 수를 허용 하는 라이브러리 공급자 콜백 인터페이스입니다. 경우에이 매개 변수는 필수 `ppProcess` 나 `pFlags` 아닙니다 `null`합니다.  
+ 진행 버전별 디버깅 라이브러리를 요청 시 배치 하 고 로드할 수 있도록 하는 라이브러리 공급자 콜백 인터페이스입니다. 이 매개 변수는 `ppProcess` 또는 `pFlags` `null`되지 않은 경우에만 필요 합니다.  
   
  `pMaxDebuggerSupportedVersion`  
- [in] 이 디버거를 디버깅할 수는 CLR의 가장 높은 버전입니다. 주, 부를 지정 하 고 및 빌드 버전을 디버거에서이 CLR 최신 하 고, 수정 번호 서비스 릴리스 이후 전체 CLR을 수용 하기 위해 65535로 설정 해야 합니다.  
+ 진행 이 디버거가 디버그할 수 있는 가장 높은 버전의 CLR입니다. 이 디버거를 지 원하는 최신 CLR 버전의 주 버전, 부 버전 및 빌드 버전을 지정 하 고 향후 현재 위치의 CLR 서비스 릴리스를 수용할 수 있도록 수정 번호를 65535으로 설정 해야 합니다.  
   
  `riidProcess`  
- [in] 검색할 ICorDebugProcess 인터페이스의 ID입니다. 현재 허용 되는 유일한 값은 IID_CORDEBUGPROCESS3, IID_CORDEBUGPROCESS2, 및 IID_CORDEBUGPROCESS 합니다.  
+ 진행 검색할 ICorDebugProcess 인터페이스의 ID입니다. 현재 유일 하 게 허용 되는 값은 IID_CORDEBUGPROCESS3, IID_CORDEBUGPROCESS2 및 IID_CORDEBUGPROCESS입니다.  
   
  `ppProcess`  
- [out] 로 식별 되는 COM 인터페이스에 대 한 포인터 `riidProcess`합니다.  
+ 제한이 `riidProcess`으로 식별 되는 COM 인터페이스에 대 한 포인터입니다.  
   
  `pVersion`  
- [out에서] CLR의 버전입니다. 이 값은 입력에 대해 `null`합니다. 가리킬 수도 있습니다는 [CLR_DEBUGGING_VERSION](../../../../docs/framework/unmanaged-api/debugging/clr-debugging-version-structure.md) 구조체의 경우에서 구조체 `wStructVersion` 필드를 0 (영)으로 초기화 되어야 합니다.  
+ [in, out] CLR의 버전입니다. 입력 시이 값을 `null`수 있습니다. [CLR_DEBUGGING_VERSION](../../../../docs/framework/unmanaged-api/debugging/clr-debugging-version-structure.md) 구조체를 가리킬 수도 있습니다 .이 경우 구조체의 `wStructVersion` 필드는 0으로 초기화 되어야 합니다.  
   
- 반환된 된 출력에서 `CLR_DEBUGGING_VERSION` 구조 CLR의 버전 정보를 사용 하 여 채워집니다.  
+ 출력에서 반환 된 `CLR_DEBUGGING_VERSION` 구조는 CLR의 버전 정보로 채워집니다.  
   
  `pdwFlags`  
- [out] 지정 된 런타임에 대 한 정보 제공 용 이므로 플래그입니다. 참조 된 [CLR_DEBUGGING_PROCESS_FLAGS](../../../../docs/framework/unmanaged-api/debugging/clr-debugging-process-flags-enumeration.md) 플래그에 대 한 항목입니다.  
+ 제한이 지정 된 런타임에 대 한 정보 플래그입니다. 플래그에 대 한 설명은 [CLR_DEBUGGING_PROCESS_FLAGS](../../../../docs/framework/unmanaged-api/debugging/clr-debugging-process-flags-enumeration.md) 항목을 참조 하세요.  
   
 ## <a name="return-value"></a>반환 값  
  이 메서드는 다음과 같은 특정 HRESULT뿐만 아니라 메서드 오류를 나타내는 HRESULT 오류도 반환합니다.  
   
-|HRESULT|Description|  
+|HRESULT|설명|  
 |-------------|-----------------|  
 |S_OK|메서드가 완료되었습니다.|  
-|E_POINTER|`pDataTarget`가 `null`인 경우|  
-|CORDBG_E_LIBRARY_PROVIDER_ERROR|합니다 [ICLRDebuggingLibraryProvider](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md) 콜백 오류를 반환 하거나 유효한 핸들을 제공 하지 않습니다.|  
-|CORDBG_E_MISSING_DATA_TARGET_INTERFACE|`pDataTarget` 이 버전의 런타임이 필요한 데이터 대상 인터페이스를 구현 하지 않습니다.|  
-|CORDBG_E_NOT_CLR|표시 된 모듈이 CLR 모듈이 아닙니다. 메모리가 손상, 모듈을 사용할 수 없는 CLR 버전은 shim 된 버전 보다 최신 때문에 CLR 모듈을 검색할 수 없는 경우에이 HRESULT 반환 됩니다.|  
-|CORDBG_E_UNSUPPORTED_DEBUGGING_MODEL|이 런타임 버전에서이 디버깅 모델을 지원 하지 않습니다. 현재 디버깅 모델을.NET Framework 4 이전 버전의 CLR에서 지원 되지 않습니다. `pwszVersion` 출력 매개 변수는 여전히이 오류 후 올바른 값으로 설정 됩니다.|  
-|CORDBG_E_UNSUPPORTED_FORWARD_COMPAT|버전의 CLR이 디버거에서 지원 해야 하는 버전 보다 큽니다. `pwszVersion` 출력 매개 변수는 여전히이 오류 후 올바른 값으로 설정 됩니다.|  
+|E_POINTER|`pDataTarget`가 `null`입니다.|  
+|CORDBG_E_LIBRARY_PROVIDER_ERROR|[ICLRDebuggingLibraryProvider](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md) 콜백에서 오류를 반환 하거나 올바른 핸들을 제공 하지 않습니다.|  
+|CORDBG_E_MISSING_DATA_TARGET_INTERFACE|`pDataTarget`는이 버전의 런타임에 필요한 데이터 대상 인터페이스를 구현 하지 않습니다.|  
+|CORDBG_E_NOT_CLR|표시 된 모듈이 CLR 모듈이 아닙니다. 이 HRESULT는 메모리가 손상 되었거나, 모듈을 사용할 수 없거나, CLR 버전이 shim 버전 보다 이후 CLR 모듈을 검색할 수 없는 경우에도 반환 됩니다.|  
+|CORDBG_E_UNSUPPORTED_DEBUGGING_MODEL|이 런타임 버전은이 디버깅 모델을 지원 하지 않습니다. 현재 디버깅 모델은 .NET Framework 4 이전 CLR 버전에서 지원 되지 않습니다. 이 오류가 발생 한 후에도 `pwszVersion` 출력 매개 변수가 올바른 값으로 설정 됩니다.|  
+|CORDBG_E_UNSUPPORTED_FORWARD_COMPAT|CLR 버전이이 디버거가 지원 하기 위해 클레임 하는 버전 보다 큽니다. 이 오류가 발생 한 후에도 `pwszVersion` 출력 매개 변수가 올바른 값으로 설정 됩니다.|  
 |E_NO_INTERFACE|`riidProcess` 인터페이스를 사용할 수 없습니다.|  
-|CORDBG_E_UNSUPPORTED_VERSION_STRUCT|합니다 `CLR_DEBUGGING_VERSION` 구조에 대 한 인식 된 값이 없는 `wStructVersion`합니다. 이 이번에 허용 되는 유일한 값은 0입니다.|  
+|CORDBG_E_UNSUPPORTED_VERSION_STRUCT|`CLR_DEBUGGING_VERSION` 구조체에 `wStructVersion`에 대해 인식 되는 값이 없습니다. 지금은 허용 되는 값은 0입니다.|  
   
 ## <a name="exceptions"></a>예외  
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
@@ -96,7 +94,7 @@ HRESULT OpenVirtualProcess(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [디버깅](../../../../docs/framework/unmanaged-api/debugging/index.md)

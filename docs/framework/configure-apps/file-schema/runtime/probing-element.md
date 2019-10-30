@@ -9,22 +9,20 @@ helpviewer_keywords:
 - container tags, <probing> element
 - probing element
 ms.assetid: 09c80fc9-1ba5-4192-89f7-3a79b2e4b024
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ae789e99a1306102c67f2252760e215989132406
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: e9e48ea97e1b70fef7fcc78a113e18c5fec23b7c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971623"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73115859"
 ---
 # <a name="probing-element"></a>\<검색 > 요소
 어셈블리를 로드할 때 검색할 공용 언어 런타임에 대 한 응용 프로그램 기본 하위 디렉터리를 지정 합니다.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<런타임 >** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<assemblyBinding >** ](assemblybinding-element-for-runtime.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<probing>**  
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp; &nbsp; &nbsp; &nbsp;[ **\<assemblyBinding >** ](assemblybinding-element-for-runtime.md) \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**검색\<**  
   
 ## <a name="syntax"></a>구문  
   
@@ -43,7 +41,7 @@ ms.locfileid: "70971623"
   
 ### <a name="child-elements"></a>자식 요소  
 
-없음  
+없음.  
   
 ### <a name="parent-elements"></a>부모 요소  
   
@@ -66,7 +64,7 @@ ms.locfileid: "70971623"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [런타임 설정 스키마](index.md)
 - [구성 파일 스키마](../index.md)
