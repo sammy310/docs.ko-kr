@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 103c8502-81fe-40d7-9c1e-9008d8fb19e1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: edd70dd4cfc2e26b30ee0deec79b7d126d1f76a1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cceafc8358ce2b0eafa62a3855c4eb1e96adae11
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738593"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73113309"
 ---
 # <a name="iclrdatatargetsetthreadcontext-method"></a>ICLRDataTarget::SetThreadContext 메서드
-대상 프로세스에서 지정 된 스레드의 현재 컨텍스트를 설정합니다. 이 메서드는 공용 언어 런타임 (CLR) 데이터 액세스 서비스에 의해 호출 됩니다.  
+대상 프로세스에서 지정 된 스레드의 현재 컨텍스트를 설정 합니다. 이 메서드는 CLR (공용 언어 런타임) 데이터 액세스 서비스에 의해 호출 됩니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,28 +38,28 @@ HRESULT SetThreadContext (
   
 ## <a name="parameters"></a>매개 변수  
  `threadID`  
- [in] 대상 프로세스에서 스레드의 운영 체제 식별자입니다.  
+ 진행 대상 프로세스의 스레드에 대 한 운영 체제 식별자입니다.  
   
  `contextSize`  
- [in] 컨텍스트 크기입니다.  
+ 진행 컨텍스트의 크기입니다.  
   
  `context`  
- [in] 컨텍스트를 포함 하는 버퍼에 대 한 포인터입니다.  
+ 진행 컨텍스트를 포함 하는 버퍼에 대 한 포인터입니다.  
   
- 데이터를 `context` Win32 형식의 버퍼 됩니다 `CONTEXT` 구조입니다. 컨텍스트 프로세서별 등록 데이터를 지정 하므로 Win32 정의 `CONTEXT` 구조는 프로세서 아키텍처에 따라 달라 집니다. Win32의 정의 대 한 WinNT.h 헤더 파일 참조 `CONTEXT` 구조입니다.  
+ `context` 버퍼의 데이터는 Win32 `CONTEXT` 구조의 형식이 됩니다. 컨텍스트는 프로세서 관련 레지스터 데이터를 지정 하므로 Win32 `CONTEXT` 구조의 정의는 프로세서의 아키텍처에 따라 달라 집니다. Win32 `CONTEXT` 구조체의 정의는 Winnt.exe 헤더 파일을 참조 하세요.  
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
  이 메서드는 디버깅 애플리케이션의 작성자가 구현합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** ClrData.idl, ClrData.h  
+ **헤더:** ClrData .idl, ClrData .h  
   
  **라이브러리:** CorGuids.lib  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ICLRDataTarget 인터페이스](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)

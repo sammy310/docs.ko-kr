@@ -9,22 +9,20 @@ helpviewer_keywords:
 - <qualifyAssembly> element
 - qualifyAssembly element
 ms.assetid: ad6442f6-1a9d-43b6-b733-04ac1b7f9b82
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 581b19cf74dcb5c2d5c4a549847629503fe0b6ff
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 17cfe9fc39d65f146beef5d02c701f5e3e2fbbe1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252366"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73115777"
 ---
 # <a name="qualifyassembly-element"></a>\<B l y > 요소
 부분 이름이 사용될 때 동적으로 로드되어야 하는 어셈블리의 전체 이름을 지정합니다.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<런타임 >** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<assemblyBinding >** ](assemblybinding-element-for-runtime.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<qualifyAssembly>**  
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp; &nbsp; &nbsp; &nbsp;[ **\<assemblyBinding >** ](assemblybinding-element-for-runtime.md) \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<b l y >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -45,7 +43,7 @@ ms.locfileid: "70252366"
 |`fullName`|필수 특성입니다.<br /><br /> 전역 어셈블리 캐시에 표시 되는 어셈블리의 전체 이름을 지정 합니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
- 없음  
+ 없음.  
   
 ### <a name="parent-elements"></a>부모 요소  
   
@@ -55,13 +53,13 @@ ms.locfileid: "70252366"
 |`configuration`|공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.|  
 |`runtime`|어셈블리 바인딩 및 가비지 컬렉션에 대한 정보를 포함합니다.|  
   
-## <a name="remarks"></a>설명  
- 부분 어셈블리 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 이름을 사용 하 여 메서드를 호출 하면 공용 언어 런타임이 응용 프로그램 기본 디렉터리 에서만 어셈블리를 검색 합니다. 응용 프로그램 구성 파일에서  **bly>요소를사용하여전체어셈블리정보(이름,버전,공개키토큰및문화권)를제공하고공용언어런타임에서어셈블리를검색합니다.\<** 전역 어셈블리 캐시입니다.  
+## <a name="remarks"></a>주의  
+ 부분 어셈블리 이름을 사용 하 여 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 메서드를 호출 하면 공용 언어 런타임이 응용 프로그램 기본 디렉터리 에서만 어셈블리를 검색 합니다. 응용 프로그램 구성 파일의 **\<b l y >** 요소를 사용 하 여 전체 어셈블리 정보 (이름, 버전, 공개 키 토큰 및 문화권)를 제공 하 고 공용 언어 런타임에서 전역으로 어셈블리를 검색 합니다. 어셈블리 캐시.  
   
- **FullName** 특성에는 어셈블리 id의 네 가지 필드인 이름, 버전, 공개 키 토큰 및 문화권이 포함 되어야 합니다. **PartialName** 특성은 어셈블리를 부분적으로 참조 해야 합니다. 적어도 어셈블리의 텍스트 이름 (가장 일반적인 경우)을 지정 해야 하지만 버전, 공개 키 토큰 또는 문화권 (또는 4의 모든 조합)을 포함할 수도 있습니다. **PartialName** 은 호출에 지정 된 이름과 일치 해야 합니다. 예를 들어 구성 파일에서 `"math"` 를 **partialName** 특성으로 지정 하 고 코드에서를 `Assembly.Load("math, Version=3.3.3.3")` 호출할 수 없습니다.  
+ **FullName** 특성에는 어셈블리 id의 네 가지 필드인 이름, 버전, 공개 키 토큰 및 문화권이 포함 되어야 합니다. **PartialName** 특성은 어셈블리를 부분적으로 참조 해야 합니다. 적어도 어셈블리의 텍스트 이름 (가장 일반적인 경우)을 지정 해야 하지만 버전, 공개 키 토큰 또는 문화권 (또는 4의 모든 조합)을 포함할 수도 있습니다. **PartialName** 은 호출에 지정 된 이름과 일치 해야 합니다. 예를 들어 `"math"`를 구성 파일에 **partialName** 특성으로 지정 하 고 코드에서 `Assembly.Load("math, Version=3.3.3.3")`를 호출할 수 없습니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는에 대 한 호출 `Assembly.Load("math")` 을 `Assembly.Load("math,version=1.0.0.0,publicKeyToken=a1690a5ea44bab32,culture=neutral")`논리적으로 바꿉니다.  
+ 다음 예에서는 호출 `Assembly.Load("math")`를 `Assembly.Load("math,version=1.0.0.0,publicKeyToken=a1690a5ea44bab32,culture=neutral")`으로 논리적으로 바꿉니다.  
   
 ```xml  
 <configuration>  
@@ -75,7 +73,7 @@ ms.locfileid: "70252366"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [런타임 설정 스키마](index.md)
 - [런타임에서 어셈블리를 찾는 방법](../../../deployment/how-the-runtime-locates-assemblies.md)

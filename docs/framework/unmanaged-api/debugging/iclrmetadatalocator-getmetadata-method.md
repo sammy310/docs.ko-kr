@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 704a8893-ac56-43b4-90ea-715f38ccb40e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 235b93f4176858372a83331730ddea8b97179cc8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1f28a4b4acd9d6050d33b9824aa49a9b9041b59b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738363"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73111241"
 ---
 # <a name="iclrmetadatalocatorgetmetadata-method"></a>ICLRMetadataLocator::GetMetadata 메서드
-이미지의 메타 데이터를 검색 하는 공용 언어 런타임 (CLR) 데이터 액세스 서비스에서 호출 됩니다.  
+이미지의 메타 데이터를 검색 하기 위해 CLR (공용 언어 런타임) 데이터 액세스 서비스에 의해 호출 됩니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -46,44 +44,44 @@ HRESULT GetMetadata(
   
 ## <a name="parameters"></a>매개 변수  
  `imagePath`  
- [in] 이미지 파일의 경로 지정 하는 문자열입니다.  
+ 진행 이미지 파일의 경로를 지정 하는 문자열입니다.  
   
  `imageTimestamp`  
- [in] 이미지 파일의 타임 스탬프입니다.  
+ 진행 이미지 파일의 타임 스탬프입니다.  
   
  `imageSize`  
- [in] 이미지 파일의 크기입니다.  
+ 진행 이미지 파일의 크기입니다.  
   
  `mvid`  
- [in] 이미지의 전역 고유 식별자입니다.  
+ 진행 이미지의 guid (globally unique identifier)입니다.  
   
  `mdRva`  
- [in] 상대 가상 주소 (RVA) 메타 데이터입니다. 주소는 이미지 기준 주소에 상대적입니다.  
+ 진행 메타 데이터의 RVA (상대 가상 주소)입니다. 주소는 이미지 기준 주소를 기준으로 합니다.  
   
  `flags`  
- [in] 사용 하도록 예약 합니다.  
+ 진행 나중에 사용 하도록 예약 되어 있습니다.  
   
  `bufferSize`  
- [in] 메타 데이터를 배치 하는 버퍼의 크기입니다.  
+ 진행 메타 데이터를 저장할 버퍼의 크기입니다.  
   
  `buffer`  
- [out] 메타 데이터를 배치 하는 버퍼입니다.  
+ 제한이 메타 데이터를 저장할 버퍼입니다.  
   
  `dataSize`  
- [out] 반환 되는 메타 데이터의 크기입니다.  
+ 제한이 반환 되는 메타 데이터의 크기입니다.  
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
  이 메서드는 디버깅 애플리케이션의 작성자가 구현합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** ClrData.idl, ClrData.h  
+ **헤더:** ClrData .idl, ClrData .h  
   
  **라이브러리:** CorGuids.lib  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ICLRMetadataLocator 인터페이스](../../../../docs/framework/unmanaged-api/debugging/iclrmetadatalocator-interface.md)

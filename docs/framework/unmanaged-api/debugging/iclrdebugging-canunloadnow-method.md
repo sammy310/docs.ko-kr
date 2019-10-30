@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 62e0630c-8cb7-45d2-b622-5a472abfd8cf
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e69957bdc5f70aba361b2574a7f6ebe26d4dd43f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4eb6682ac5a8b7788d97f752f249d85886fba0b6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738400"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73111645"
 ---
 # <a name="iclrdebuggingcanunloadnow-method"></a>ICLRDebugging::CanUnloadNow 메서드
-라이브러리에서 제공 하는 여부를 확인 한 [ICLRDebuggingLibraryProvider](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md) 인터페이스 사용에서 되었거나 언로드할 수 있습니다.  
+[ICLRDebuggingLibraryProvider](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md) 인터페이스에서 제공 된 라이브러리가 아직 사용 중인지 또는 언로드될 수 있는지를 확인 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -35,24 +33,24 @@ HRESULT CanUnloadNow(HMODULE hModule);
   
 ## <a name="parameters"></a>매개 변수  
  `hmodule`  
- [in] 대상 프로세스에서 모듈의 기본 주소입니다.  
+ 진행 대상 프로세스에 있는 모듈의 기본 주소입니다.  
   
 ## <a name="return-value"></a>반환 값  
  이 메서드는 다음과 같은 특정 HRESULT뿐만 아니라 메서드 오류를 나타내는 HRESULT 오류도 반환합니다.  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
-|S_OK|참조 되는 모듈 `hmodule` 언로드할 수 있습니다.|  
-|S_FALSE|참조 되는 모듈 `hmodule` 사용 중입니다.|  
+|S_OK|`hmodule`에서 참조 하는 모듈을 언로드할 수 있습니다.|  
+|S_FALSE|`hmodule`에서 참조 하는 모듈이 아직 사용 중입니다.|  
 |COR_E_NOT_CLR|표시 된 모듈이 CLR 모듈이 아닙니다.|  
   
 ## <a name="exceptions"></a>예외  
   
-## <a name="remarks"></a>설명  
- 이 메서드는 모든 참조를 확인 인스턴스의 `ICorDebug*` 릴리스된 인터페이스 이며 스레드가 없는 현재 호출 내 합니다 [iclrdebugging:: Openvirtualprocess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md) 메서드.  
+## <a name="remarks"></a>주의  
+ 이 메서드는 `ICorDebug*` 인터페이스의 모든 인스턴스가 해제 되었고 현재 [ICLRDebugging:: OpenVirtualProcess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md) 메서드 호출 내에 스레드가 없는지 확인 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
@@ -60,7 +58,7 @@ HRESULT CanUnloadNow(HMODULE hModule);
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [디버깅](../../../../docs/framework/unmanaged-api/debugging/index.md)

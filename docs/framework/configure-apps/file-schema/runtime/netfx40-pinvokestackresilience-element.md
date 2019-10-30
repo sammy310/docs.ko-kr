@@ -5,21 +5,19 @@ helpviewer_keywords:
 - <NetFx40_PInvokeStackResilience> element
 - NetFx40_PInvokeStackResilience element
 ms.assetid: 39fb1588-72a4-4479-af74-0605233b68bd
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8f4dffe5428ccb7541055fa4f3f335f57deaf2ec
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 86f50aafe0b21d5080288e09ac7118ca1e4c939a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252437"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73116154"
 ---
 # <a name="netfx40_pinvokestackresilience-element"></a>\<NetFx40_PInvokeStackResilience > 요소
 
 런타임이 잘못된 플랫폼 호출 선언을 실행 시간에 자동으로 수정할지를 지정합니다. 자동 수정을 수행하는 경우 관리 코드와 비관리 코드 간 전환 속도가 느려집니다.
 
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<런타임 >** ](runtime-element.md)\
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
 &nbsp;&nbsp;&nbsp;&nbsp; **\<NetFx40_PInvokeStackResilience >**  
 
 ## <a name="syntax"></a>구문
@@ -40,14 +38,14 @@ ms.locfileid: "70252437"
 
 ## <a name="enabled-attribute"></a>enabled 특성
 
-|값|Description|
+|값|설명|
 |-----------|-----------------|
 |`0`|런타임은 잘못 된 플랫폼 호출 선언을 검색 하 고 수정 하지 않는 .NET Framework 4에서 도입 된 더 빠른 interop 마샬링 아키텍처를 사용 합니다. 기본값입니다.|
 |`1`|런타임에서는 잘못 된 플랫폼 호출 선언을 검색 하 고 수정 하는 느린 전환을 사용 합니다.|
 
 ### <a name="child-elements"></a>자식 요소
 
-없음
+없음.
 
 ### <a name="parent-elements"></a>부모 요소
 
@@ -56,7 +54,7 @@ ms.locfileid: "70252437"
 |`configuration`|공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.|
 |`runtime`|런타임 초기화 옵션에 대한 정보를 포함합니다.|
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 이 요소를 사용 하면 잘못 된 플랫폼 호출 선언에 대해 런타임 복원 력을 더 빠르게 수행할 수 있습니다.
 
@@ -64,7 +62,7 @@ ms.locfileid: "70252437"
 
 개발 하는 동안 잘못 된 선언을 쉽게 검색할 수 있도록 Visual Studio 디버깅 환경이 개선 되었습니다. [PINVOKESTACKIMBALANCE](../../../debug-trace-profile/pinvokestackimbalance-mda.md) MDA (관리 디버깅 도우미)는 디버거가 연결 된 상태에서 응용 프로그램을 실행할 때 잘못 된 플랫폼 호출 선언이 있음을 알려 줍니다.
 
-응용 프로그램에서 다시 컴파일할 수 없는 구성 요소를 사용 하 고 잘못 된 플랫폼 호출 선언이 있는 시나리오를 해결 하기 위해 요소 `NetFx40_PInvokeStackResilience` 를 사용할 수 있습니다. Opts를 사용 하 여 `enabled="1"` 이 요소를 응용 프로그램 구성 파일에 추가 하는 것은 이전 버전의 .NET Framework 동작을 사용 하 여 호환성 모드로 전환 하는 것이 더 느린 전환의 비용입니다. 이전 버전의 .NET Framework에 대해 컴파일된 어셈블리는 자동으로이 호환 모드로 옵트인 되며이 요소가 필요 하지 않습니다.
+응용 프로그램에서 다시 컴파일할 수 없는 구성 요소를 사용 하 고 잘못 된 플랫폼 호출 선언이 있는 시나리오를 해결 하기 위해 `NetFx40_PInvokeStackResilience` 요소를 사용할 수 있습니다. `enabled="1"`를 사용 하 여 응용 프로그램 구성 파일에이 요소를 추가 하면 이전 버전의 .NET Framework 동작을 사용 하 여 호환성 모드로 전환 하는 것이 opts. 이전 버전의 .NET Framework에 대해 컴파일된 어셈블리는 자동으로이 호환 모드로 옵트인 되며이 요소가 필요 하지 않습니다.
 
 ## <a name="configuration-file"></a>구성 파일
 
@@ -82,7 +80,7 @@ ms.locfileid: "70252437"
 </configuration>
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [런타임 설정 스키마](index.md)
 - [구성 파일 스키마](../index.md)

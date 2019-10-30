@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: bd042f89-10b1-40ca-946e-46da082f5263
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0086906b23cc65825bbd54a54e544fa9ec7b211e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 3d3fd88a2c1ac90f823b23d8d2bcb5b177a625c3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796272"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73109006"
 ---
 # <a name="assemblycomparisonresult-enumeration"></a>AssemblyComparisonResult 열거형
 [CompareAssemblyIdentity](compareassemblyidentity-function.md) 함수에 의해 결정 된 두 어셈블리 id의 동일성을 나타냅니다.  
@@ -47,7 +45,7 @@ typedef enum _tagAssemblyComparisonResult {
   
 ## <a name="members"></a>멤버  
   
-|멤버 이름|Description|  
+|멤버 이름|설명|  
 |-----------------|-----------------|  
 |`ACR_EquivalentFullMatch`|비교의 모든 어셈블리 필드가 일치 함을 나타냅니다.|  
 |`ACR_EquivalentFXUnified`|.NET Framework 버전 2.0에서 어셈블리 버전 번호의 CLR (공용 언어 런타임 버전) 통합에 따라 어셈블리가 동일한 것으로 간주 됨을 나타냅니다.|  
@@ -63,15 +61,15 @@ typedef enum _tagAssemblyComparisonResult {
 |`ACR_Unknown`|같지 않음의 원인을 알 수 없음을 나타냅니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Fusion. h  
   
- **라이브러리** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [CompareAssemblyIdentity 함수](compareassemblyidentity-function.md)
 - [Fusion 열거형](fusion-enumerations.md)

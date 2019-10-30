@@ -14,14 +14,12 @@ helpviewer_keywords:
 - VerifyClientKey function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b674e959ab93cf76b84e2af41e875a50b7d115f4
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 0a0680651eb192e2798ede00048599c5130e63f1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798194"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73107353"
 ---
 # <a name="verifyclientkey-function"></a>VerifyClientKey 함수
 클라이언트 키가 올바른 보안을 유지하는지 확인합니다.  
@@ -36,17 +34,17 @@ LONG VerifyClientKey();
 
 ## <a name="return-value"></a>반환 값
 
-함수가 성공 하면 반환 값 `ERROR_SUCCESS` 은 (0)입니다.
+함수가 성공 하면 반환 값은 `ERROR_SUCCESS` (0)입니다.
 
 함수가 실패 하면 반환 값은 *winerror.h*에 정의 된 0이 아닌 오류 코드입니다.
 
 ## <a name="requirements"></a>요구 사항  
- **플랫폼** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** WMINet_Utils.def  
+ **헤더:** WMINet_Utils  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [WMI 및 성능 카운터 (관리 되지 않는 API 참조)](index.md)
