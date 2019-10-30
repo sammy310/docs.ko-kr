@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 701281dd-2936-45c8-a1f0-3bf7332b093b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c2042d0936359a85d203375c42be0d8a096f004e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fc3f77adf33502bfbc3d65ff5131420093fbbec8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739755"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73097933"
 ---
-# <a name="cordebugmappingresult-enumeration"></a><span data-ttu-id="0ccd2-102">CorDebugMappingResult 열거형</span><span class="sxs-lookup"><span data-stu-id="0ccd2-102">CorDebugMappingResult Enumeration</span></span>
-<span data-ttu-id="0ccd2-103">IP(명령 포인터)의 값을 가져온 방법에 대한 세부 정보를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="0ccd2-103">Provides the details of how the value of the instruction pointer (IP) was obtained.</span></span>  
+# <a name="cordebugmappingresult-enumeration"></a><span data-ttu-id="fee7e-102">CorDebugMappingResult 열거형</span><span class="sxs-lookup"><span data-stu-id="fee7e-102">CorDebugMappingResult Enumeration</span></span>
+<span data-ttu-id="fee7e-103">IP(명령 포인터)의 값을 가져온 방법에 대한 세부 정보를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="fee7e-103">Provides the details of how the value of the instruction pointer (IP) was obtained.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0ccd2-104">구문</span><span class="sxs-lookup"><span data-stu-id="0ccd2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fee7e-104">구문</span><span class="sxs-lookup"><span data-stu-id="fee7e-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum CorDebugMappingResult {  
@@ -39,29 +37,29 @@ typedef enum CorDebugMappingResult {
 } CorDebugMappingResult;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="0ccd2-105">멤버</span><span class="sxs-lookup"><span data-stu-id="0ccd2-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="fee7e-105">멤버</span><span class="sxs-lookup"><span data-stu-id="fee7e-105">Members</span></span>  
   
-|<span data-ttu-id="0ccd2-106">멤버</span><span class="sxs-lookup"><span data-stu-id="0ccd2-106">Member</span></span>|<span data-ttu-id="0ccd2-107">설명</span><span class="sxs-lookup"><span data-stu-id="0ccd2-107">Description</span></span>|  
+|<span data-ttu-id="fee7e-106">멤버</span><span class="sxs-lookup"><span data-stu-id="fee7e-106">Member</span></span>|<span data-ttu-id="fee7e-107">설명</span><span class="sxs-lookup"><span data-stu-id="fee7e-107">Description</span></span>|  
 |------------|-----------------|  
-|`MAPPING_PROLOG`|<span data-ttu-id="0ccd2-108">네이티브 코드를 프롤로그에 이므로 IP의 값은 0입니다.</span><span class="sxs-lookup"><span data-stu-id="0ccd2-108">The native code is in the prolog, so the value of the IP is 0.</span></span>|  
-|`MAPPING_EPILOG`|<span data-ttu-id="0ccd2-109">네이티브 코드 에필로그에서 이므로 IP의 값은 메서드의 마지막 명령의 주소입니다.</span><span class="sxs-lookup"><span data-stu-id="0ccd2-109">The native code is in an epilog, so the value of the IP is the address of the last instruction of the method.</span></span>|  
-|`MAPPING_NO_INFO`|<span data-ttu-id="0ccd2-110">매핑 정보가 없는 IP의 값이 0 이므로 메서드를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0ccd2-110">No mapping information is available for the method, so the value of the IP is 0.</span></span>|  
-|`MAPPING_UNMAPPED_ADDRESS`|<span data-ttu-id="0ccd2-111">메서드에 대 한 매핑 정보에 경우에 현재 주소는 Microsoft intermediate language (MSIL) 코드에 매핑할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="0ccd2-111">Although there is mapping information for the method, the current address cannot be mapped to Microsoft intermediate language (MSIL) code.</span></span> <span data-ttu-id="0ccd2-112">IP의 값은 0입니다.</span><span class="sxs-lookup"><span data-stu-id="0ccd2-112">The value of the IP is 0.</span></span>|  
-|`MAPPING_EXACT`|<span data-ttu-id="0ccd2-113">메서드는 MSIL 코드를 정확 하 게 매핑되어 있거나 프레임 IP의 값은 정확 하 게 해석 되었으므로 합니다.</span><span class="sxs-lookup"><span data-stu-id="0ccd2-113">Either the method maps exactly to MSIL code or the frame has been interpreted, so the value of the IP is accurate.</span></span>|  
-|`MAPPING_APPROXIMATE`|<span data-ttu-id="0ccd2-114">메서드를 성공적으로 매핑되지만 IP의 값은 근사치일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0ccd2-114">The method was successfully mapped, but the value of the IP may be approximate.</span></span>|  
+|`MAPPING_PROLOG`|<span data-ttu-id="fee7e-108">네이티브 코드는 프롤로그에 있으므로 IP의 값은 0입니다.</span><span class="sxs-lookup"><span data-stu-id="fee7e-108">The native code is in the prolog, so the value of the IP is 0.</span></span>|  
+|`MAPPING_EPILOG`|<span data-ttu-id="fee7e-109">네이티브 코드는 에필로그에 있으므로 IP의 값은 메서드의 마지막 명령의 주소입니다.</span><span class="sxs-lookup"><span data-stu-id="fee7e-109">The native code is in an epilog, so the value of the IP is the address of the last instruction of the method.</span></span>|  
+|`MAPPING_NO_INFO`|<span data-ttu-id="fee7e-110">메서드에 대 한 매핑 정보를 사용할 수 없으므로 IP의 값은 0입니다.</span><span class="sxs-lookup"><span data-stu-id="fee7e-110">No mapping information is available for the method, so the value of the IP is 0.</span></span>|  
+|`MAPPING_UNMAPPED_ADDRESS`|<span data-ttu-id="fee7e-111">메서드에 대 한 매핑 정보가 있지만 현재 주소를 MSIL (Microsoft 중간 언어) 코드에 매핑할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="fee7e-111">Although there is mapping information for the method, the current address cannot be mapped to Microsoft intermediate language (MSIL) code.</span></span> <span data-ttu-id="fee7e-112">IP의 값은 0입니다.</span><span class="sxs-lookup"><span data-stu-id="fee7e-112">The value of the IP is 0.</span></span>|  
+|`MAPPING_EXACT`|<span data-ttu-id="fee7e-113">메서드가 MSIL 코드에 정확히 매핑 되었거나 프레임이 해석 되었으므로 IP 값은 정확 합니다.</span><span class="sxs-lookup"><span data-stu-id="fee7e-113">Either the method maps exactly to MSIL code or the frame has been interpreted, so the value of the IP is accurate.</span></span>|  
+|`MAPPING_APPROXIMATE`|<span data-ttu-id="fee7e-114">메서드가 성공적으로 매핑 되었지만 IP의 값이 근사값이 될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fee7e-114">The method was successfully mapped, but the value of the IP may be approximate.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="0ccd2-115">설명</span><span class="sxs-lookup"><span data-stu-id="0ccd2-115">Remarks</span></span>  
- <span data-ttu-id="0ccd2-116">사용할 수는 [icordebugilframe:: Getip](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getip-method.md) 메서드 명령 포인터의 값을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="0ccd2-116">You can use the [ICorDebugILFrame::GetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getip-method.md) method to obtain the value of the instruction pointer.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="fee7e-115">주의</span><span class="sxs-lookup"><span data-stu-id="fee7e-115">Remarks</span></span>  
+ <span data-ttu-id="fee7e-116">[ICorDebugILFrame:: GetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getip-method.md) 메서드를 사용 하 여 명령 포인터의 값을 가져올 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fee7e-116">You can use the [ICorDebugILFrame::GetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getip-method.md) method to obtain the value of the instruction pointer.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0ccd2-117">요구 사항</span><span class="sxs-lookup"><span data-stu-id="0ccd2-117">Requirements</span></span>  
- <span data-ttu-id="0ccd2-118">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="0ccd2-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="fee7e-117">요구 사항</span><span class="sxs-lookup"><span data-stu-id="fee7e-117">Requirements</span></span>  
+ <span data-ttu-id="fee7e-118">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="fee7e-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0ccd2-119">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="0ccd2-119">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="fee7e-119">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="fee7e-119">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="0ccd2-120">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0ccd2-120">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="fee7e-120">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="fee7e-120">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="0ccd2-121">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0ccd2-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="fee7e-121">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fee7e-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0ccd2-122">참고자료</span><span class="sxs-lookup"><span data-stu-id="0ccd2-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fee7e-122">참조</span><span class="sxs-lookup"><span data-stu-id="fee7e-122">See also</span></span>
 
-- [<span data-ttu-id="0ccd2-123">디버깅 열거형</span><span class="sxs-lookup"><span data-stu-id="0ccd2-123">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [<span data-ttu-id="fee7e-123">디버깅 열거형</span><span class="sxs-lookup"><span data-stu-id="fee7e-123">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
