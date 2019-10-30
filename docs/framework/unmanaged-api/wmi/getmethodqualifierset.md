@@ -14,14 +14,12 @@ helpviewer_keywords:
 - GetMethodQualifierSet function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 86a7788736c3c12cfcfd405de88dfadfb14c1eca
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1a36200fd214d013a10ed21c22e1f652de2cbf17
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798535"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73102570"
 ---
 # <a name="getmethodqualifierset-function"></a>GetMethodQualifierSet 함수
 
@@ -52,19 +50,19 @@ HRESULT GetMethodQualifierSet (
 진행 메서드 이름입니다. `wszMethod`는 유효한 `LPCWSTR`을 가리켜야 합니다.
 
 `ppQualSet`\
-제한이 메서드 한정자에 대 한 액세스를 허용 하는 인터페이스 포인터를 받습니다. `ppQualSet`가 `null`이 될 수 없는 경우 오류가 발생 하면 새 개체가 반환 되지 않고 포인터가를 `null`가리키도록 설정 됩니다.
+제한이 메서드 한정자에 대 한 액세스를 허용 하는 인터페이스 포인터를 받습니다. `ppQualSet`가 `null`이 될 수 없는 경우 오류가 발생 하면 새 개체가 반환 되지 않고 포인터가 `null`를 가리키도록 설정 됩니다.
 
 ## <a name="return-value"></a>반환 값
 
 이 함수에서 반환 되는 다음 값은 *WbemCli* 헤더 파일에 정의 되어 있거나 코드에서 상수로 정의할 수 있습니다.
 
-|상수  |값  |Description  |
+|상수  |값  |설명  |
 |---------|---------|---------|
 |`WBEM_E_NOT_FOUND` | 0x80041002 | 지정 된 메서드가 없습니다. |
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 매개 변수가 인 `null`경우 |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 매개 변수가 `null`입니다. |
 |`WBEM_S_NO_ERROR` | 0 | 함수 호출에 성공 했습니다.  |
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 이 함수는 [IWbemClassObject:: GetMethodQualifierSet](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethodqualifierset) 메서드에 대 한 호출을 래핑합니다.
 
@@ -74,12 +72,12 @@ HRESULT GetMethodQualifierSet (
 
 ## <a name="requirements"></a>요구 사항
 
-**플랫폼** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하십시오.
+**플랫폼:** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.
 
-**헤더:** WMINet_Utils.idl
+**헤더:** WMINet_Utils
 
 **.NET Framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [WMI 및 성능 카운터 (관리 되지 않는 API 참조)](index.md)

@@ -8,14 +8,12 @@ api_location:
 api_type:
 - DLLExport
 ms.assetid: 00118de7-33c6-41c4-8e1f-5d5e35e0da83
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3d8ab96c758b946684af78bfa21822fdaf96530a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 7cd25a24533b04dc45ee734f9e9639391311405a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70786978"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73099738"
 ---
 # <a name="certverifyauthenticodelicense-function"></a>CertVerifyAuthenticodeLicense 함수
 Authenticode XrML 라이선스의 유효성을 확인합니다.  
@@ -65,7 +63,7 @@ HRESULT CertVerifyAuthenticodeLicense (
 ## <a name="return-value"></a>반환 값  
  성공하는 경우 `S_OK`가 반환됩니다. 그러지 않으면 오류 코드가 반환됩니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [Authenticode](index.md)
 - [GetHashFromHandle 메서드](../hosting/iclrstrongname-gethashfromhandle-method.md)

@@ -14,33 +14,31 @@ helpviewer_keywords:
 ms.assetid: 436683ef-9849-4b24-89a9-28c06d148dce
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fcdcb8d70e04430ac09c78f0ef0ce1d95358db53
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 954043414b7cdbbf701f34375372f91dd68a359c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61922007"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73102713"
 ---
 # <a name="iobjecthandle-interface"></a>IObjectHandle 인터페이스
-간접 참조에서 래핑 해제 값으로 마샬링 개체에 대 한 메서드를 제공합니다.  
+간접 참조에서 값으로 마샬링하는 개체를 래핑 해제 하는 메서드를 제공 합니다.  
   
 ## <a name="methods"></a>메서드  
   
 |메서드|설명|  
 |------------|-----------------|  
-|[Unwrap 메서드](../../../../docs/framework/unmanaged-api/hosting/iobjecthandle-unwrap-method.md)|간접 참조의 값으로 마샬링된 개체를 래핑 해제 됩니다.|  
+|[Unwrap 메서드](../../../../docs/framework/unmanaged-api/hosting/iobjecthandle-unwrap-method.md)|의 래핑을 해제에서 값으로 마샬링하는 개체를 참조 하세요.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** MSCorEE.h  
+ **헤더:** Mscoree.dll  
   
- **라이브러리:** MSCorEE.dll에 리소스로 포함  
+ **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [호스팅 인터페이스](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

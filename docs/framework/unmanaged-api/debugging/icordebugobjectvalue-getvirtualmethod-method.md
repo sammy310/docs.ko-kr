@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f783ebc3-e952-46e6-9325-14dd2c666f21
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c1e8ffefbe52344edd782b7d5d5b8d01b57f11f3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 30fcf15ed5f612820fc2836995b1e0206f580763
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766256"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73095761"
 ---
 # <a name="icordebugobjectvaluegetvirtualmethod-method"></a>ICorDebugObjectValue::GetVirtualMethod 메서드
-`GetVirtualMethod` 이 버전의.NET Framework에서 구현 되지 않았습니다.  
+이 버전의 .NET Framework에서는 `GetVirtualMethod` 구현 되어 있지 않습니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,4 +37,4 @@ HRESULT GetVirtualMethod (
 ## <a name="requirements"></a>요구 사항  
  **헤더:** CorDebug.idl, CorDebug.h  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조

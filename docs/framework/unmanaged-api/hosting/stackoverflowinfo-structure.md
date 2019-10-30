@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 519389f2-0217-436c-99d4-93a76ebce5b5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7de5a6d38d43c20ce52f609ef6514a1f28022416
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1072026f92edbc646653c6dd74ec8e22d5b887e5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781132"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73105915"
 ---
 # <a name="stackoverflowinfo-structure"></a>StackOverflowInfo 구조체
-오버플로 인해 throw 된 예외 유형 발생 한 오버플로 및 정보를 저장 합니다.  
+발생 한 오버플로 형식과 오버플로로 인해 throw 된 예외에 대 한 정보를 저장 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,23 +35,23 @@ typedef struct _StackOverflowInfo {
   
 ## <a name="members"></a>멤버  
   
-|멤버|Description|  
+|멤버|설명|  
 |------------|-----------------|  
-|`soType`|값을 [StackOverflowType](../../../../docs/framework/unmanaged-api/hosting/stackoverflowtype-enumeration.md) 오버플로의 형식을 지정 하는 열거형입니다.|  
-|`pExceptionInfo`|Win32에 대 한 포인터 `EXCEPTION_POINTERS` 예외가 컴퓨터 독립적 설명과 함께 예외 레코드 및 예외 시 컴퓨터 종속 설명은 프로세서 컨텍스트를 사용 하 여 컨텍스트 레코드를 포함 하는 개체입니다.|  
+|`soType`|오버플로 유형을 지정 하는 [StackOverflowType](../../../../docs/framework/unmanaged-api/hosting/stackoverflowtype-enumeration.md) 열거형의 값입니다.|  
+|`pExceptionInfo`|예외에 대 한 컴퓨터 독립적 설명과 함께 예외 레코드를 포함 하는 Win32 `EXCEPTION_POINTERS` 개체에 대 한 포인터로, 예외 발생 시 프로세서 컨텍스트에 대 한 컴퓨터 종속 설명을 포함 하는 컨텍스트 레코드를 포함 합니다.|  
   
-## <a name="remarks"></a>설명  
- A `StackOverflowInfo` 개체를 전달 하는 [iactiononclrevent:: Onevent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-onevent-method.md) 에 대 한 메서드 `Event_StackOverflow` 이벤트입니다.  
+## <a name="remarks"></a>주의  
+ `StackOverflowInfo` 개체는 `Event_StackOverflow` 이벤트에 대해 [IActionOnCLREvent:: OnEvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-onevent-method.md) 메서드에 전달 됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** MSCorEE.idl  
+ **헤더:** Mscoree.dll  
   
- **라이브러리:** MSCorEE.dll에 리소스로 포함  
+ **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [호스팅 구조체](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)

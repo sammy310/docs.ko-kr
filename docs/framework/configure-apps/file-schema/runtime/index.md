@@ -6,73 +6,71 @@ helpviewer_keywords:
 - configuration schema [.NET Framework], runtime settings
 - runtime settings schema
 ms.assetid: f04816ab-110d-4e28-9283-845d6d9a4a68
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5b340ef99b489b66c62971cacedccdfe609d0b1a
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 5a46a2fcb0fe5a9dfc426cea589c8a9eec47e7a3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252529"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73116547"
 ---
 # <a name="runtime-settings-schema"></a>런타임 설정 스키마
 
 런타임 설정은 공용 언어 런타임에서 .NET Framework를 대상으로 하는 애플리케이션을 구성하는 데 사용됩니다.
 
-## <a name="the-runtime-section-and-its-parent-and-child-elements"></a>\<런타임 > 섹션과 해당 부모 및 자식 요소
+## <a name="the-runtime-section-and-its-parent-and-child-elements"></a>\<런타임 > 섹션과 부모 및 자식 요소
 
 [\<configuration>](../configuration-element.md)\
-&nbsp;&nbsp;[\<runtime>](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<alwaysFlowImpersonationPolicy>](alwaysflowimpersonationpolicy-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<AppContextSwitchOverrides>](appcontextswitchoverrides-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<appDomainManagerAssembly>](appdomainmanagerassembly-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<appDomainManagerType>](appdomainmanagertype-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<appDomainResourceMonitoring>](appdomainresourcemonitoring-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<assemblyBinding>](assemblybinding-element-for-runtime.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<dependentAssembly>](dependentassembly-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<assemblyIdentity>](assemblyidentity-element-for-runtime.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<bindingRedirect>](bindingredirect-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<codeBase>](codebase-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<Y apply >](publisherpolicy-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<probing>](probing-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<qualifyAssembly>](qualifyassembly-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<Supportportability> >](supportportability-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<bypassTrustedAppStrongNames>](bypasstrustedappstrongnames-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<CompatSortNLSVersion>](compatsortnlsversion-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<developmentMode>](developmentmode-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<disableCachingBindingFailures>](disablecachingbindingfailures-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<disableCommitThreadStack>](disablecommitthreadstack-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<disableFusionUpdatesFromADManager>](disablefusionupdatesfromadmanager-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<EnableAmPmParseAdjustment>](enableampmparseadjustment-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<enforceFIPSPolicy>](enforcefipspolicy-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<etwEnable>](etwenable-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<forcePerformanceCounterUniqueSharedMemoryReads>](forceperformancecounteruniquesharedmemoryreads-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<gcAllowVeryLargeObjects>](gcconcurrent-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<gcConcurrent>](gcconcurrent-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<GCCpuGroup>](gccpugroup-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<gcServer>](gcserver-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<generatePublisherEvidence>](generatepublisherevidence-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<legacyCorruptedStateExceptionsPolicy>](legacycorruptedstateexceptionspolicy-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<legacyImpersonationPolicy>](legacyimpersonationpolicy-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<loadfromRemoteSources>](loadfromremotesources-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<NetFx40_LegacySecurityPolicy>](netfx40-legacysecuritypolicy-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<NetFx40_PInvokeStackResilience>](netfx40-pinvokestackresilience-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<NetFx45_CultureAwareComparerGetHashCode_LongStrings>](netfx45-cultureawarecomparergethashcode-longstrings-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<PreferComInsteadOfManagedRemoting>](prefercominsteadofmanagedremoting-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<relativeBindForResources>](relativebindforresources-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<shadowCopyVerifyByTimeStamp>](shadowcopyverifybytimestamp-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<Thread_UseAllCpuGroups>](thread-useallcpugroups-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<ThrowUnobservedTaskExceptions>](throwunobservedtaskexceptions-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<TimeSpan_LegacyFormatMode>](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<useLegacyJit>](uselegacyjit-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<UseRandomizedStringHashAlgorithm>](userandomizedstringhashalgorithm-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<UseSmallInternalThreadStacks>](usesmallinternalthreadstacks-element.md)\
-&nbsp;&nbsp;[\<>의 런타임 캐싱](system-runtime-caching-element-cache-settings.md)\
+[\<런타임 >](runtime-element.md) &nbsp;&nbsp;\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<alwaysFlowImpersonationPolicy >](alwaysflowimpersonationpolicy-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<AppContextSwitchOverrides](appcontextswitchoverrides-element.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<appDomainManagerAssembly >](appdomainmanagerassembly-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<appDomainManagerType >](appdomainmanagertype-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<appDomainResourceMonitoring >](appdomainresourcemonitoring-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<assemblyBinding](assemblybinding-element-for-runtime.md) >
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<dependentAssembly >](dependentassembly-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<assemblyIdentity >](assemblyidentity-element-for-runtime.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<bindingRedirect >](bindingredirect-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<코드 베이스 >](codebase-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<y apply >](publisherpolicy-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<검색 >](probing-element.md)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<b l y >](qualifyassembly-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<supportportability> >](supportportability-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<bypassTrustedAppStrongNames >](bypasstrustedappstrongnames-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<CompatSortNLSVersion >](compatsortnlsversion-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<developmentMode >](developmentmode-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<disableCachingBindingFailures >](disablecachingbindingfailures-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<disableCommitThreadStack >](disablecommitthreadstack-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<disableFusionUpdatesFromADManager >](disablefusionupdatesfromadmanager-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<EnableAmPmParseAdjustment >](enableampmparseadjustment-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<enforceFIPSPolicy >](enforcefipspolicy-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<etwEnable](etwenable-element.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<forcePerformanceCounterUniqueSharedMemoryReads >](forceperformancecounteruniquesharedmemoryreads-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<gcallowverylargeobjects> >](gcconcurrent-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<gcConcurrent >](gcconcurrent-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<GCCpuGroup >](gccpugroup-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<gcServer >](gcserver-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<generatePublisherEvidence >](generatepublisherevidence-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<legacyCorruptedStateExceptionsPolicy >](legacycorruptedstateexceptionspolicy-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<legacyImpersonationPolicy >](legacyimpersonationpolicy-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<loadfromRemoteSources >](loadfromremotesources-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<y >](netfx40-legacysecuritypolicy-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<NetFx40_PInvokeStackResilience >](netfx40-pinvokestackresilience-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<NetFx45_CultureAwareComparerGetHashCode_LongStrings >](netfx45-cultureawarecomparergethashcode-longstrings-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<PreferComInsteadOfManagedRemoting >](prefercominsteadofmanagedremoting-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<런타임은 relativebindforresources> 요소가 >](relativebindforresources-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<p >](shadowcopyverifybytimestamp-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<Thread_UseAllCpuGroups >](thread-useallcpugroups-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<ThrowUnobservedTaskExceptions >](throwunobservedtaskexceptions-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<TimeSpan_LegacyFormatMode >](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<uselegacyjit> >](uselegacyjit-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<UseRandomizedStringHashAlgorithm >](userandomizedstringhashalgorithm-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<UseSmallInternalThreadStacks >](usesmallinternalthreadstacks-element.md)\
+&nbsp;&nbsp;[\<](system-runtime-caching-element-cache-settings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;[\<memoryCache >](memorycache-element-cache-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<namedCaches >](namedcaches-element-cache-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<> 추가](add-element-for-namedcaches.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<> 지우기](clear-element-for-namedcaches.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<> 제거](remove-element-for-namedcaches.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<namedCaches >](namedcaches-element-cache-settings.md)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[추가](add-element-for-namedcaches.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<clear >](clear-element-for-namedcaches.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<제거 >](remove-element-for-namedcaches.md)  
 
 ## <a name="alphabetical-list-of-runtime-elements"></a>\<런타임 > 요소의 사전순 목록
 
@@ -110,9 +108,9 @@ ms.locfileid: "70252529"
 |[\<loadfromRemoteSources>](loadfromremotesources-element.md)|원격 소스의 어셈블리를 완전 신뢰로 로드할지를 지정합니다.|
 |[\<memoryCache>](memorycache-element-cache-settings.md)|<xref:System.Runtime.Caching.MemoryCache> 클래스를 기반으로 하는 캐시 구성에 사용되는 요소를 정의합니다.|
 |[\<namedCaches>](namedcaches-element-cache-settings.md)|`namedCache` 인스턴스에 대한 구성 설정 컬렉션을 포함합니다.|
-|[\<NetFx40_LegacySecurityPolicy>](netfx40-legacysecuritypolicy-element.md)|런타임이 레거시 CAS(코드 액세스 보안) 정책을 사용할지를 지정합니다.|
-|[\<NetFx40_PInvokeStackResilience>](netfx40-pinvokestackresilience-element.md)|런타임이 잘못된 플랫폼 호출 선언을 실행 시간에 자동으로 수정할지를 지정합니다. 자동 수정을 수행하는 경우 관리 코드와 비관리 코드 간 전환 속도가 느려집니다.|
-|[\<NetFx45_CultureAwareComparerGetHashCode_LongStrings>](netfx45-cultureawarecomparergethashcode-longstrings-element.md)|런타임이 <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> 메서드에 대한 해시 코드를 계산하기 위해 고정된 양의 메모리를 사용할지 여부를 지정합니다.|
+|[\<y >](netfx40-legacysecuritypolicy-element.md)|런타임이 레거시 CAS(코드 액세스 보안) 정책을 사용할지를 지정합니다.|
+|[\<NetFx40_PInvokeStackResilience >](netfx40-pinvokestackresilience-element.md)|런타임이 잘못된 플랫폼 호출 선언을 실행 시간에 자동으로 수정할지를 지정합니다. 자동 수정을 수행하는 경우 관리 코드와 비관리 코드 간 전환 속도가 느려집니다.|
+|[\<NetFx45_CultureAwareComparerGetHashCode_LongStrings >](netfx45-cultureawarecomparergethashcode-longstrings-element.md)|런타임이 <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> 메서드에 대한 해시 코드를 계산하기 위해 고정된 양의 메모리를 사용할지 여부를 지정합니다.|
 |[\<PreferComInsteadOfManagedRemoting>](prefercominsteadofmanagedremoting-element.md)|런타임이 애플리케이션 도메인 경계 간에 원격 모드가 아닌 COM interop를 사용하도록 지정합니다.|
 |[\<probing>](probing-element.md)|어셈블리를 로드할 때 런타임이 검색하는 하위 디렉터리를 지정합니다.|
 |[\<publisherPolicy>](publisherpolicy-element.md)|런타임이 게시자 정책을 적용할지를 지정합니다.|
@@ -123,14 +121,14 @@ ms.locfileid: "70252529"
 |[\<shadowCopyTimeStampVerification>](shadowcopyverifybytimestamp-element.md)|섀도 복사가 .NET Framework 4에서 도입 된 기본 시작 동작을 사용 하는지 아니면 이전 버전의 .NET Framework의 시작 동작으로 돌아가는지를 지정 합니다.|
 |[\<supportPortability>](supportportability-element.md)|애플리케이션 이식성을 위해 어셈블리를 동일하게 간주하는 기본 동작을 사용하지 않도록 설정함으로써, 애플리케이션이 .NET Framework의 서로 다른 두 구현에서 같은 어셈블리를 참조할 수 있도록 지정합니다.|
 |[\<system.runtime.caching>](system-runtime-caching-element-cache-settings.md)|기본 메모리 내 개체 캐시에 대한 구성 정보를 제공합니다.|
-|[\<Thread_UseAllCpuGroups>](thread-useallcpugroups-element.md)|런타임이 모든 CPU 그룹에 관리되는 스레드를 배포할지를 지정합니다.|
+|[\<Thread_UseAllCpuGroups >](thread-useallcpugroups-element.md)|런타임이 모든 CPU 그룹에 관리되는 스레드를 배포할지를 지정합니다.|
 |[\<ThrowUnobservedTaskExceptions>](throwunobservedtaskexceptions-element.md)|작업 예외가 처리되지 않으면 실행 중인 프로세스를 종료할지를 지정합니다.|
-|[\<TimeSpan_LegacyFormatMode>](runtime-element.md)|런타임이 <xref:System.TimeSpan> 값에 대해 레거시 서식을 사용할지를 지정합니다.|
+|[\<TimeSpan_LegacyFormatMode >](runtime-element.md)|런타임이 <xref:System.TimeSpan> 값에 대해 레거시 서식을 사용할지를 지정합니다.|
 |[\<useLegacyJit>](uselegacyjit-element.md)|공용 언어 런타임이 Just-In-Time 컴파일에 레거시 64비트 JIT 컴파일러를 사용할지를 결정합니다.|
 |[\<UseRandomizedStringHashAlgorithm>](userandomizedstringhashalgorithm-element.md)|런타임이 애플리케이션 도메인별로 문자열의 해시 코드를 계산할지를 지정합니다.|
 |[\<UseSmallInternalThreadStacks>](usesmallinternalthreadstacks-element.md)|런타임이 내부적으로 사용하는 특정 스레드를 만들 때 기본 스택 크기가 아닌 명시적 스택 크기를 사용하도록 요청합니다.|
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [구성 파일 스키마](../index.md)
 - [동시 가비지 수집을 사용 하지 않도록 설정 하려면](gcconcurrent-element.md#to-disable-background-garbage-collection)
