@@ -9,22 +9,20 @@ helpviewer_keywords:
 - interoperation with unmanaged code, samples
 - COM interop, samples
 ms.assetid: a3f752bb-8945-4e1b-8163-71def6e9f137
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3e4205c09d8f43a03b5c8b2e1be5029a543c158b
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 721e94c0f7a83de8a70942272e7c31374f7004a4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051859"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123692"
 ---
-# <a name="com-interop-sample-net-client-and-com-server"></a><span data-ttu-id="84541-102">COM Interop 샘플: .NET 클라이언트 및 COM 서버</span><span class="sxs-lookup"><span data-stu-id="84541-102">COM Interop Sample: .NET Client and COM Server</span></span>
-<span data-ttu-id="84541-103">이 샘플에서는 [COM 서버](#cpconcominteropsamplenetclientcomserveranchor2)에 액세스하도록 빌드된 [.NET 클라이언트](#cpconcominteropsamplenetclientcomserveranchor1)가 COM coclass 인스턴스를 만들고 클래스 멤버를 호출하여 담보 대출 계산을 수행하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="84541-103">This sample demonstrates how a [.NET client](#cpconcominteropsamplenetclientcomserveranchor1), built to access a [COM server](#cpconcominteropsamplenetclientcomserveranchor2), creates an instance of a COM coclass and calls class members to perform mortgage calculations.</span></span>  
+# <a name="com-interop-sample-net-client-and-com-server"></a><span data-ttu-id="6eccb-102">COM Interop 샘플: .NET 클라이언트 및 COM 서버</span><span class="sxs-lookup"><span data-stu-id="6eccb-102">COM Interop Sample: .NET Client and COM Server</span></span>
+<span data-ttu-id="6eccb-103">이 샘플에서는 [COM 서버](#cpconcominteropsamplenetclientcomserveranchor2)에 액세스하도록 빌드된 [.NET 클라이언트](#cpconcominteropsamplenetclientcomserveranchor1)가 COM coclass 인스턴스를 만들고 클래스 멤버를 호출하여 담보 대출 계산을 수행하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="6eccb-103">This sample demonstrates how a [.NET client](#cpconcominteropsamplenetclientcomserveranchor1), built to access a [COM server](#cpconcominteropsamplenetclientcomserveranchor2), creates an instance of a COM coclass and calls class members to perform mortgage calculations.</span></span>  
   
- <span data-ttu-id="84541-104">이 예제에서 클라이언트는 **Loan** coclass 인스턴스를 만들고 호출한 다음 4개의 인수(4개 중 하나는 0임)를 인스턴스에 전달하고 계산 내용을 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="84541-104">In this example, the client creates and calls an instance of the **Loan** coclass, passes four arguments (one of those four being equal to zero) to the instance, and displays the computations.</span></span> <span data-ttu-id="84541-105">이 샘플의 코드 조각이 이 섹션 전반에 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="84541-105">Code fragments from this sample appear throughout this section.</span></span>  
+ <span data-ttu-id="6eccb-104">이 예제에서 클라이언트는 **Loan** coclass 인스턴스를 만들고 호출한 다음 4개의 인수(4개 중 하나는 0임)를 인스턴스에 전달하고 계산 내용을 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="6eccb-104">In this example, the client creates and calls an instance of the **Loan** coclass, passes four arguments (one of those four being equal to zero) to the instance, and displays the computations.</span></span> <span data-ttu-id="6eccb-105">이 샘플의 코드 조각이 이 섹션 전반에 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="6eccb-105">Code fragments from this sample appear throughout this section.</span></span>  
   
 <a name="cpconcominteropsamplenetclientcomserveranchor1"></a>   
-## <a name="net-client"></a><span data-ttu-id="84541-106">.NET 클라이언트</span><span class="sxs-lookup"><span data-stu-id="84541-106">.NET Client</span></span>  
+## <a name="net-client"></a><span data-ttu-id="6eccb-106">.NET 클라이언트</span><span class="sxs-lookup"><span data-stu-id="6eccb-106">.NET Client</span></span>  
   
 ```vb  
 Imports System  
@@ -154,7 +152,7 @@ public class LoanApp {
 ```  
   
 <a name="cpconcominteropsamplenetclientcomserveranchor2"></a>   
-## <a name="com-server"></a><span data-ttu-id="84541-107">COM 서버</span><span class="sxs-lookup"><span data-stu-id="84541-107">COM Server</span></span>  
+## <a name="com-server"></a><span data-ttu-id="6eccb-107">COM 서버</span><span class="sxs-lookup"><span data-stu-id="6eccb-107">COM Server</span></span>  
   
 ```cpp  
 // Loan.cpp : Implementation of CLoan  
@@ -299,6 +297,6 @@ static double Round(double value, short digits)
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="84541-108">참고 항목</span><span class="sxs-lookup"><span data-stu-id="84541-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6eccb-108">참조</span><span class="sxs-lookup"><span data-stu-id="6eccb-108">See also</span></span>
 
-- [<span data-ttu-id="84541-109">.NET Framework에 COM 구성 요소 노출</span><span class="sxs-lookup"><span data-stu-id="84541-109">Exposing COM Components to the .NET Framework</span></span>](exposing-com-components.md)
+- [<span data-ttu-id="6eccb-109">.NET Framework에 COM 구성 요소 노출</span><span class="sxs-lookup"><span data-stu-id="6eccb-109">Exposing COM Components to the .NET Framework</span></span>](exposing-com-components.md)

@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: a5ff40b0-d04e-40d5-a007-cc6ee7c3a9ae
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 88f3c270d2ab0adc0b683fda0e0f4bc1d474fb09
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: de292b4631e1bcf9f0d31e2e2acaa5fdff96f4f8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61765448"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124231"
 ---
-# <a name="icordebugerrorinfoenum-interface"></a><span data-ttu-id="af4f1-102">ICorDebugErrorInfoEnum 인터페이스</span><span class="sxs-lookup"><span data-stu-id="af4f1-102">ICorDebugErrorInfoEnum Interface</span></span>
+# <a name="icordebugerrorinfoenum-interface"></a><span data-ttu-id="af584-102">ICorDebugErrorInfoEnum 인터페이스</span><span class="sxs-lookup"><span data-stu-id="af584-102">ICorDebugErrorInfoEnum Interface</span></span>
 
-<span data-ttu-id="af4f1-103">`ICorDebugErrorInfoEnum`는 사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="af4f1-103">`ICorDebugErrorInfoEnum` is obsolete.</span></span> <span data-ttu-id="af4f1-104">이 인터페이스를 사용하지 마십시오.</span><span class="sxs-lookup"><span data-stu-id="af4f1-104">Do not use this interface.</span></span>  
+<span data-ttu-id="af584-103">`ICorDebugErrorInfoEnum`는 사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="af584-103">`ICorDebugErrorInfoEnum` is obsolete.</span></span> <span data-ttu-id="af584-104">이 인터페이스를 사용하지 마십시오.</span><span class="sxs-lookup"><span data-stu-id="af584-104">Do not use this interface.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="af4f1-105">참고자료</span><span class="sxs-lookup"><span data-stu-id="af4f1-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="af584-105">참조</span><span class="sxs-lookup"><span data-stu-id="af584-105">See also</span></span>
 
-- [<span data-ttu-id="af4f1-106">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="af4f1-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="af584-106">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="af584-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

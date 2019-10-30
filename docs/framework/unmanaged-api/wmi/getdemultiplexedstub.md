@@ -14,21 +14,19 @@ helpviewer_keywords:
 - GetDemultiplexedStub function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a2d3885a4a9e54950909053ba18de5b1891e7edf
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 9cc028b3300b43f8a0fb3e29f8b5ac6e1817b8c1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798603"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127465"
 ---
-# <a name="getdemultiplexedstub-function"></a><span data-ttu-id="7d9aa-103">GetDemultiplexedStub 함수</span><span class="sxs-lookup"><span data-stu-id="7d9aa-103">GetDemultiplexedStub function</span></span>
-<span data-ttu-id="7d9aa-104">클라이언트가 Windows 관리에서 비동기 호출을 수신하는 데 도움이 되는 개체 전달자 싱크를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="7d9aa-104">Creates an object forwarder sink to assist a client in receiving asynchronous calls from Windows Management.</span></span>
+# <a name="getdemultiplexedstub-function"></a><span data-ttu-id="88c10-103">GetDemultiplexedStub 함수</span><span class="sxs-lookup"><span data-stu-id="88c10-103">GetDemultiplexedStub function</span></span>
+<span data-ttu-id="88c10-104">클라이언트가 Windows 관리에서 비동기 호출을 수신하는 데 도움이 되는 개체 전달자 싱크를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="88c10-104">Creates an object forwarder sink to assist a client in receiving asynchronous calls from Windows Management.</span></span>
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
-## <a name="syntax"></a><span data-ttu-id="7d9aa-105">구문</span><span class="sxs-lookup"><span data-stu-id="7d9aa-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="88c10-105">구문</span><span class="sxs-lookup"><span data-stu-id="88c10-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetDemultiplexedStub (
@@ -38,30 +36,30 @@ HRESULT GetDemultiplexedStub (
 ); 
 ```  
 
-## <a name="parameters"></a><span data-ttu-id="7d9aa-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="7d9aa-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="88c10-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="88c10-106">Parameters</span></span>
 
 `pObject`  
-<span data-ttu-id="7d9aa-107">진행 [IWbemObjectSink](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectsink)의 클라이언트 in-process 구현에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="7d9aa-107">[in] A pointer to the client's in-process implementation of [IWbemObjectSink](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectsink).</span></span>
+<span data-ttu-id="88c10-107">진행 [IWbemObjectSink](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectsink)의 클라이언트 in-process 구현에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="88c10-107">[in] A pointer to the client's in-process implementation of [IWbemObjectSink](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectsink).</span></span>
 
 `isLocal`  
-<span data-ttu-id="7d9aa-108">진행 이벤트가 로컬 (`true`) 인지 여부를 나타내는 플래그 이거나, `false`그렇지 않으면입니다.</span><span class="sxs-lookup"><span data-stu-id="7d9aa-108">[in] A flag that indicates whether the event is local (`true`); otherwise, `false`.</span></span>
+<span data-ttu-id="88c10-108">진행 이벤트가 로컬 (`true`) 인지 여부를 나타내는 플래그입니다. 그렇지 않으면 `false`합니다.</span><span class="sxs-lookup"><span data-stu-id="88c10-108">[in] A flag that indicates whether the event is local (`true`); otherwise, `false`.</span></span>
 
 `ppObject`  
-<span data-ttu-id="7d9aa-109">제한이 클라이언트에서 Windows 관리를 통해 비동기 호출을 받을 수 있도록 지 원하는 개체 전달자 싱크입니다.</span><span class="sxs-lookup"><span data-stu-id="7d9aa-109">[out] A object forwarder sink to assist a client in receiving asynchronous calls from Windows Management.</span></span>
+<span data-ttu-id="88c10-109">제한이 클라이언트에서 Windows 관리를 통해 비동기 호출을 받을 수 있도록 지 원하는 개체 전달자 싱크입니다.</span><span class="sxs-lookup"><span data-stu-id="88c10-109">[out] A object forwarder sink to assist a client in receiving asynchronous calls from Windows Management.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="7d9aa-110">반환 값</span><span class="sxs-lookup"><span data-stu-id="7d9aa-110">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="88c10-110">반환 값</span><span class="sxs-lookup"><span data-stu-id="88c10-110">Return value</span></span>
 
-<span data-ttu-id="7d9aa-111">함수가 성공 하면 반환 값 `S_OK` 은 (0)입니다.</span><span class="sxs-lookup"><span data-stu-id="7d9aa-111">If the function succeeds, the return value is `S_OK` (0).</span></span>
+<span data-ttu-id="88c10-111">함수가 성공 하면 반환 값은 `S_OK` (0)입니다.</span><span class="sxs-lookup"><span data-stu-id="88c10-111">If the function succeeds, the return value is `S_OK` (0).</span></span>
 
-<span data-ttu-id="7d9aa-112">함수가 실패 하면 반환 값은 0이 아닌 오류 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="7d9aa-112">If the function fails, the return value is a non-zero error code.</span></span> <span data-ttu-id="7d9aa-113">확장 오류 정보를 가져오려면 [Geterrorinfo](geterrorinfo.md) 함수를 호출 합니다.</span><span class="sxs-lookup"><span data-stu-id="7d9aa-113">To get extended error information, call the [GetErrorInfo](geterrorinfo.md) function.</span></span>
+<span data-ttu-id="88c10-112">함수가 실패 하면 반환 값은 0이 아닌 오류 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="88c10-112">If the function fails, the return value is a non-zero error code.</span></span> <span data-ttu-id="88c10-113">확장 오류 정보를 가져오려면 [Geterrorinfo](geterrorinfo.md) 함수를 호출 합니다.</span><span class="sxs-lookup"><span data-stu-id="88c10-113">To get extended error information, call the [GetErrorInfo](geterrorinfo.md) function.</span></span>
     
-## <a name="requirements"></a><span data-ttu-id="7d9aa-114">요구 사항</span><span class="sxs-lookup"><span data-stu-id="7d9aa-114">Requirements</span></span>  
- <span data-ttu-id="7d9aa-115">**플랫폼** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="7d9aa-115">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="88c10-114">요구 사항</span><span class="sxs-lookup"><span data-stu-id="88c10-114">Requirements</span></span>  
+ <span data-ttu-id="88c10-115">**플랫폼:** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="88c10-115">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7d9aa-116">**헤더:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="7d9aa-116">**Header:** WMINet_Utils.idl</span></span>  
+ <span data-ttu-id="88c10-116">**헤더:** WMINet_Utils</span><span class="sxs-lookup"><span data-stu-id="88c10-116">**Header:** WMINet_Utils.idl</span></span>  
   
- <span data-ttu-id="7d9aa-117">**.NET Framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="7d9aa-117">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ <span data-ttu-id="88c10-117">**.NET Framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="88c10-117">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7d9aa-118">참고자료</span><span class="sxs-lookup"><span data-stu-id="7d9aa-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="88c10-118">참조</span><span class="sxs-lookup"><span data-stu-id="88c10-118">See also</span></span>
 
-- [<span data-ttu-id="7d9aa-119">WMI 및 성능 카운터 (관리 되지 않는 API 참조)</span><span class="sxs-lookup"><span data-stu-id="7d9aa-119">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+- [<span data-ttu-id="88c10-119">WMI 및 성능 카운터 (관리 되지 않는 API 참조)</span><span class="sxs-lookup"><span data-stu-id="88c10-119">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)

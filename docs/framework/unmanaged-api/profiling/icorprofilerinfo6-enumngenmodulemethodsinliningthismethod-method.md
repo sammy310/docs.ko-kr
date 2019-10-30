@@ -2,20 +2,18 @@
 title: ICorProfilerInfo6::EnumNgenModuleMethodsInliningThisMethod 메서드
 ms.date: 03/30/2017
 ms.assetid: b933dfe6-7833-40cb-aad8-40842dc3034f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 870a71de2aee2e9b725749157791c49836c6ea00
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 103fe1b6845edfe0a364db979557db63511f6ee3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636875"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130379"
 ---
-# <a name="icorprofilerinfo6enumngenmodulemethodsinliningthismethod-method"></a><span data-ttu-id="92c6b-102">ICorProfilerInfo6::EnumNgenModuleMethodsInliningThisMethod 메서드</span><span class="sxs-lookup"><span data-stu-id="92c6b-102">ICorProfilerInfo6::EnumNgenModuleMethodsInliningThisMethod Method</span></span>
+# <a name="icorprofilerinfo6enumngenmodulemethodsinliningthismethod-method"></a><span data-ttu-id="d0b27-102">ICorProfilerInfo6::EnumNgenModuleMethodsInliningThisMethod 메서드</span><span class="sxs-lookup"><span data-stu-id="d0b27-102">ICorProfilerInfo6::EnumNgenModuleMethodsInliningThisMethod Method</span></span>
 
-<span data-ttu-id="92c6b-103">인라인 지정된 메서드를 지정 된 NGen 모듈에 정의 된 모든 메서드는 열거자를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="92c6b-103">Returns an enumerator to all the methods that are defined in a given NGen module and inline a given method.</span></span>
+<span data-ttu-id="d0b27-103">지정 된 NGen 모듈에 정의 되어 있고 지정 된 메서드를 인라인 하는 모든 메서드에 대 한 열거자를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="d0b27-103">Returns an enumerator to all the methods that are defined in a given NGen module and inline a given method.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="92c6b-104">구문</span><span class="sxs-lookup"><span data-stu-id="92c6b-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="d0b27-104">구문</span><span class="sxs-lookup"><span data-stu-id="d0b27-104">Syntax</span></span>
 
 ```cpp
 HRESULT EnumNgenModuleMethodsInliningThisMethod(
@@ -27,62 +25,62 @@ HRESULT EnumNgenModuleMethodsInliningThisMethod(
 );
 ```
 
-## <a name="parameters"></a><span data-ttu-id="92c6b-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="92c6b-105">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="d0b27-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="d0b27-105">Parameters</span></span>
 
 `inlinersModuleId`\
-<span data-ttu-id="92c6b-106">[in] NGen 모듈의 식별자입니다.</span><span class="sxs-lookup"><span data-stu-id="92c6b-106">[in] The identifier of an NGen module.</span></span>
+<span data-ttu-id="d0b27-106">진행 NGen 모듈의 식별자입니다.</span><span class="sxs-lookup"><span data-stu-id="d0b27-106">[in] The identifier of an NGen module.</span></span>
 
 `inlineeModuleId`\
-<span data-ttu-id="92c6b-107">[in] 정의 하는 모듈의 식별자 `inlineeMethodId`합니다.</span><span class="sxs-lookup"><span data-stu-id="92c6b-107">[in] The identifier of a module that defines `inlineeMethodId`.</span></span> <span data-ttu-id="92c6b-108">자세한 내용은 설명 부분을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="92c6b-108">See the Remarks section for more information.</span></span>
+<span data-ttu-id="d0b27-107">진행 `inlineeMethodId`를 정의 하는 모듈의 식별자입니다.</span><span class="sxs-lookup"><span data-stu-id="d0b27-107">[in] The identifier of a module that defines `inlineeMethodId`.</span></span> <span data-ttu-id="d0b27-108">자세한 내용은 설명 부분을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="d0b27-108">See the Remarks section for more information.</span></span>
 
 `inlineeMethodId`\
-<span data-ttu-id="92c6b-109">[in] 인라인 메서드의 식별자입니다.</span><span class="sxs-lookup"><span data-stu-id="92c6b-109">[in] The identifier of an inlined method.</span></span> <span data-ttu-id="92c6b-110">자세한 내용은 설명 부분을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="92c6b-110">See the Remarks section for more information.</span></span>
+<span data-ttu-id="d0b27-109">진행 인라인 된 메서드의 식별자입니다.</span><span class="sxs-lookup"><span data-stu-id="d0b27-109">[in] The identifier of an inlined method.</span></span> <span data-ttu-id="d0b27-110">자세한 내용은 설명 부분을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="d0b27-110">See the Remarks section for more information.</span></span>
 
 `incompleteData`\
-<span data-ttu-id="92c6b-111">[out] 나타내는 플래그 있는지 여부를 `ppEnum` 지정된 메서드를 인라인 처리 하는 모든 메서드를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="92c6b-111">[out] A flag that indicates whether `ppEnum` contains all methods inlining a given method.</span></span>  <span data-ttu-id="92c6b-112">자세한 내용은 설명 부분을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="92c6b-112">See the Remarks section for more information.</span></span>
+<span data-ttu-id="d0b27-111">제한이 `ppEnum` 지정 된 메서드를 인라인 하는 모든 메서드를 포함 하는지 여부를 나타내는 플래그입니다.</span><span class="sxs-lookup"><span data-stu-id="d0b27-111">[out] A flag that indicates whether `ppEnum` contains all methods inlining a given method.</span></span>  <span data-ttu-id="d0b27-112">자세한 내용은 설명 부분을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="d0b27-112">See the Remarks section for more information.</span></span>
 
 `ppEnum`\
-<span data-ttu-id="92c6b-113">[out] 열거자의 주소에 대 한 포인터</span><span class="sxs-lookup"><span data-stu-id="92c6b-113">[out] A pointer to the address of an enumerator</span></span>
+<span data-ttu-id="d0b27-113">제한이 열거자의 주소에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="d0b27-113">[out] A pointer to the address of an enumerator</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="92c6b-114">설명</span><span class="sxs-lookup"><span data-stu-id="92c6b-114">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="d0b27-114">주의</span><span class="sxs-lookup"><span data-stu-id="d0b27-114">Remarks</span></span>
 
-<span data-ttu-id="92c6b-115">`inlineeModuleId` 및 `inlineeMethodId` 인라인 처리 하지 않을 수 있는 메서드에 대 한 전체 식별자를 결합 합니다.</span><span class="sxs-lookup"><span data-stu-id="92c6b-115">`inlineeModuleId` and `inlineeMethodId` together form the full identifier for the method that might be inlined.</span></span> <span data-ttu-id="92c6b-116">예를 들어 모듈 `A` 메서드를 정의 `Simple.Add`:</span><span class="sxs-lookup"><span data-stu-id="92c6b-116">For example, assume module `A` defines a method `Simple.Add`:</span></span>
+<span data-ttu-id="d0b27-115">`inlineeModuleId` 및 `inlineeMethodId` 함께 인라인 될 수 있는 메서드의 전체 식별자를 형성 합니다.</span><span class="sxs-lookup"><span data-stu-id="d0b27-115">`inlineeModuleId` and `inlineeMethodId` together form the full identifier for the method that might be inlined.</span></span> <span data-ttu-id="d0b27-116">예를 들어 모듈 `A` `Simple.Add`메서드를 정의 한다고 가정 합니다.</span><span class="sxs-lookup"><span data-stu-id="d0b27-116">For example, assume module `A` defines a method `Simple.Add`:</span></span>
 
 ```csharp
 Simple.Add(int a, int b)
 { return a + b; }
 ```
 
-<span data-ttu-id="92c6b-117">모듈 B 정의 `Fancy.AddTwice`:</span><span class="sxs-lookup"><span data-stu-id="92c6b-117">and module B defines `Fancy.AddTwice`:</span></span>
+<span data-ttu-id="d0b27-117">및 모듈 B는 `Fancy.AddTwice`을 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="d0b27-117">and module B defines `Fancy.AddTwice`:</span></span>
 
 ```csharp
 Fancy.AddTwice(int a, int b)
 { return Simple.Add(a,b) + Simple.Add(a,b); }
 ```
 
-<span data-ttu-id="92c6b-118">또한 가정 있습니다 `Fancy.AddTwice` 인라인 호출을 `SimpleAdd`입니다.</span><span class="sxs-lookup"><span data-stu-id="92c6b-118">Lets also assume that `Fancy.AddTwice` inlines the call to `SimpleAdd`.</span></span> <span data-ttu-id="92c6b-119">프로파일러를 사용 하 여이 열거자는 인라인이 모듈 B의에서 정의 된 모든 메서드를 찾을 `Simple.Add`, 하 고 결과 열거는 `AddTwice`합니다.</span><span class="sxs-lookup"><span data-stu-id="92c6b-119">A profiler could use this enumerator to find all methods defined in module B which inline `Simple.Add`, and the result would enumerate `AddTwice`.</span></span>  <span data-ttu-id="92c6b-120">`inlineeModuleId` 모듈의 식별자 `A`, 및 `inlineeMethodId` 의 식별자 `Simple.Add(int a, int b)`합니다.</span><span class="sxs-lookup"><span data-stu-id="92c6b-120">`inlineeModuleId` is the identifier of module `A`, and `inlineeMethodId` is the identifier of `Simple.Add(int a, int b)`.</span></span>
+<span data-ttu-id="d0b27-118">에서는 `Fancy.AddTwice`이 `SimpleAdd`에 대 한 호출을 inlines 한다고 가정 합니다.</span><span class="sxs-lookup"><span data-stu-id="d0b27-118">Lets also assume that `Fancy.AddTwice` inlines the call to `SimpleAdd`.</span></span> <span data-ttu-id="d0b27-119">프로파일러에서는이 열거자를 사용 하 여 `Simple.Add`인라인 된 모듈 B에 정의 된 모든 메서드를 찾을 수 있으며, 결과는 `AddTwice`를 열거 합니다.</span><span class="sxs-lookup"><span data-stu-id="d0b27-119">A profiler could use this enumerator to find all methods defined in module B which inline `Simple.Add`, and the result would enumerate `AddTwice`.</span></span>  <span data-ttu-id="d0b27-120">`inlineeModuleId`는 모듈 `A`의 식별자 이며 `inlineeMethodId`는 `Simple.Add(int a, int b)`의 식별자입니다.</span><span class="sxs-lookup"><span data-stu-id="d0b27-120">`inlineeModuleId` is the identifier of module `A`, and `inlineeMethodId` is the identifier of `Simple.Add(int a, int b)`.</span></span>
 
-<span data-ttu-id="92c6b-121">경우 `incompleteData` 함수 뒤도 마찬가지 열거자에 없는 인라인 처리 하는 모든 메서드는 지정 된 메서드를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="92c6b-121">If `incompleteData` is true after the function returns, the enumerator does not contain all methods inlining a given method.</span></span> <span data-ttu-id="92c6b-122">이 경우 발생할 수 있습니다 또는 inliners 모듈의 직접 또는 간접 종속성 보다 아직 로드 하지 않은 합니다.</span><span class="sxs-lookup"><span data-stu-id="92c6b-122">This can happen when one or more direct or indirect dependencies of inliners module haven't been loaded yet.</span></span> <span data-ttu-id="92c6b-123">프로파일러에 정확한 데이터가 필요 이상의 모듈이 로드 되는 경우 가급적 각 모듈을 로드할 때 나중에 재시도 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="92c6b-123">If a profiler needs accurate data, it should retry later when more modules are loaded, preferably on each module load.</span></span>
+<span data-ttu-id="d0b27-121">함수가 반환 된 후 `incompleteData` true 이면 열거자에 지정 된 메서드를 인라인 하는 메서드가 모두 포함 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="d0b27-121">If `incompleteData` is true after the function returns, the enumerator does not contain all methods inlining a given method.</span></span> <span data-ttu-id="d0b27-122">Inliners 모듈의 직접 또는 간접 종속성이 하나 이상 아직 로드 되지 않은 경우이 문제가 발생할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d0b27-122">This can happen when one or more direct or indirect dependencies of inliners module haven't been loaded yet.</span></span> <span data-ttu-id="d0b27-123">프로파일러가 정확한 데이터를 필요로 하는 경우에는 나중에 각 모듈 로드에서 더 많은 모듈이 로드 될 때 다시 시도해 야 합니다.</span><span class="sxs-lookup"><span data-stu-id="d0b27-123">If a profiler needs accurate data, it should retry later when more modules are loaded, preferably on each module load.</span></span>
 
-<span data-ttu-id="92c6b-124">`EnumNgenModuleMethodsInliningThisMethod` 에서 제한 사항을 해결 하려면 메서드를 사용할 수 ReJIT에 대 한 인라인 처리 합니다.</span><span class="sxs-lookup"><span data-stu-id="92c6b-124">The `EnumNgenModuleMethodsInliningThisMethod` method can be used to work around limitations on inlining for ReJIT.</span></span> <span data-ttu-id="92c6b-125">ReJIT 메서드의 구현을 변경 하 고 만든 다음 새 코드를 즉석에서 프로파일러를 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="92c6b-125">ReJIT lets a profiler change the implementation of a method and then create new code for it on the fly.</span></span> <span data-ttu-id="92c6b-126">예를 들어 변경 수 `Simple.Add` 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="92c6b-126">For example, we could change `Simple.Add` as follows:</span></span>
+<span data-ttu-id="d0b27-124">`EnumNgenModuleMethodsInliningThisMethod` 메서드를 사용 하 여 ReJIT의 인라인에 대 한 제한 사항을 해결할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d0b27-124">The `EnumNgenModuleMethodsInliningThisMethod` method can be used to work around limitations on inlining for ReJIT.</span></span> <span data-ttu-id="d0b27-125">ReJIT를 사용 하면 프로파일러가 메서드 구현을 변경한 다음 즉석에서 새 코드를 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d0b27-125">ReJIT lets a profiler change the implementation of a method and then create new code for it on the fly.</span></span> <span data-ttu-id="d0b27-126">예를 들어 다음과 같이 `Simple.Add`를 변경할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d0b27-126">For example, we could change `Simple.Add` as follows:</span></span>
 
 ```csharp
 Simple.Add(int a, int b)
 { return 42; }
 ```
 
-<span data-ttu-id="92c6b-127">그러나 때문 `Fancy.AddTwice` 에 이미 인라인 `Simple.Add`, 동일 하 게 동작 이전과 같이 계속 합니다.</span><span class="sxs-lookup"><span data-stu-id="92c6b-127">However because `Fancy.AddTwice` has already inlined `Simple.Add`, it continues to have the same behavior as before.</span></span> <span data-ttu-id="92c6b-128">호출자가 해당 한계를 해결 하기 위해 인라인 있는 모든 모듈의 모든 메서드에 대 한 검색 `Simple.Add` 사용 하 여 `ICorProfilerInfo5::RequestRejit` 해당 메서드의 각 합니다.</span><span class="sxs-lookup"><span data-stu-id="92c6b-128">To work around that limitation, the caller has to search for all methods in all modules that inline `Simple.Add` and use `ICorProfilerInfo5::RequestRejit` on each of those methods.</span></span> <span data-ttu-id="92c6b-129">새 동작을 갖습니다 메서드 다시 컴파일된 경우 `Simple.Add` 이전 동작을 대신 합니다.</span><span class="sxs-lookup"><span data-stu-id="92c6b-129">When the methods are re-compiled, they will have the new behavior of `Simple.Add` instead of the old behavior.</span></span>
+<span data-ttu-id="d0b27-127">그러나 `Fancy.AddTwice` 이미 `Simple.Add`인라인 되어 있기 때문에 이전과 같은 동작이 계속 됩니다.</span><span class="sxs-lookup"><span data-stu-id="d0b27-127">However because `Fancy.AddTwice` has already inlined `Simple.Add`, it continues to have the same behavior as before.</span></span> <span data-ttu-id="d0b27-128">이 제한을 해결 하기 위해 호출자는 `Simple.Add` 인라인 하는 모든 모듈의 모든 메서드를 검색 하 고 이러한 각 메서드에서 `ICorProfilerInfo5::RequestRejit`를 사용 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="d0b27-128">To work around that limitation, the caller has to search for all methods in all modules that inline `Simple.Add` and use `ICorProfilerInfo5::RequestRejit` on each of those methods.</span></span> <span data-ttu-id="d0b27-129">메서드를 다시 컴파일하면 이전 동작 대신 `Simple.Add`의 새 동작이 발생 합니다.</span><span class="sxs-lookup"><span data-stu-id="d0b27-129">When the methods are re-compiled, they will have the new behavior of `Simple.Add` instead of the old behavior.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="92c6b-130">요구 사항</span><span class="sxs-lookup"><span data-stu-id="92c6b-130">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="d0b27-130">요구 사항</span><span class="sxs-lookup"><span data-stu-id="d0b27-130">Requirements</span></span>
 
-<span data-ttu-id="92c6b-131">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="92c6b-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>
+<span data-ttu-id="d0b27-131">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="d0b27-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>
 
-<span data-ttu-id="92c6b-132">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="92c6b-132">**Header:** CorProf.idl, CorProf.h</span></span>
+<span data-ttu-id="d0b27-132">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="d0b27-132">**Header:** CorProf.idl, CorProf.h</span></span>
 
-<span data-ttu-id="92c6b-133">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="92c6b-133">**Library:** CorGuids.lib</span></span>
+<span data-ttu-id="d0b27-133">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d0b27-133">**Library:** CorGuids.lib</span></span>
 
-<span data-ttu-id="92c6b-134">**.NET Framework 버전:** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="92c6b-134">**.NET Framework Versions:** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]</span></span>
+<span data-ttu-id="d0b27-134">**.NET Framework 버전:** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d0b27-134">**.NET Framework Versions:** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="92c6b-135">참고자료</span><span class="sxs-lookup"><span data-stu-id="92c6b-135">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d0b27-135">참조</span><span class="sxs-lookup"><span data-stu-id="d0b27-135">See also</span></span>
 
-- [<span data-ttu-id="92c6b-136">ICorProfilerInfo6 인터페이스</span><span class="sxs-lookup"><span data-stu-id="92c6b-136">ICorProfilerInfo6 Interface</span></span>](icorprofilerinfo6-interface.md)
+- [<span data-ttu-id="d0b27-136">ICorProfilerInfo6 인터페이스</span><span class="sxs-lookup"><span data-stu-id="d0b27-136">ICorProfilerInfo6 Interface</span></span>](icorprofilerinfo6-interface.md)

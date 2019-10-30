@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: bc4288b6-3331-4ae3-990d-e1d6e62ecb67
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 89237c20cbb145d14b7afbda8c00eb14b441d0d4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d6ee36ac4d4510637e5f8240c3b8930a9bec7970
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745273"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123841"
 ---
-# <a name="icordebugchaingetregisterset-method"></a><span data-ttu-id="1170d-102">ICorDebugChain::GetRegisterSet 메서드</span><span class="sxs-lookup"><span data-stu-id="1170d-102">ICorDebugChain::GetRegisterSet Method</span></span>
-<span data-ttu-id="1170d-103">이 체인의 활성 부분에 대해 설정 하는 레지스터를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="1170d-103">Gets the register set for the active part of this chain.</span></span>  
+# <a name="icordebugchaingetregisterset-method"></a><span data-ttu-id="53777-102">ICorDebugChain::GetRegisterSet 메서드</span><span class="sxs-lookup"><span data-stu-id="53777-102">ICorDebugChain::GetRegisterSet Method</span></span>
+<span data-ttu-id="53777-103">이 체인의 활성 부분에 대 한 레지스터 집합을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="53777-103">Gets the register set for the active part of this chain.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1170d-104">구문</span><span class="sxs-lookup"><span data-stu-id="1170d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="53777-104">구문</span><span class="sxs-lookup"><span data-stu-id="53777-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetRegisterSet (  
@@ -35,15 +33,15 @@ HRESULT GetRegisterSet (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="1170d-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="1170d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="53777-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="53777-105">Parameters</span></span>  
  `ppRegisters`  
- <span data-ttu-id="1170d-106">[out] 주소에 대 한 포인터를 [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) 이 체인의 활성 부분에 대 한 등록을 나타내는 개체를 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="1170d-106">[out] A pointer to the address of an [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) object that represents the register set for the active part of this chain.</span></span>  
+ <span data-ttu-id="53777-106">제한이 이 체인의 활성 부분에 대 한 레지스터 집합을 나타내는 [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) 개체의 주소에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="53777-106">[out] A pointer to the address of an [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) object that represents the register set for the active part of this chain.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1170d-107">요구 사항</span><span class="sxs-lookup"><span data-stu-id="1170d-107">Requirements</span></span>  
- <span data-ttu-id="1170d-108">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="1170d-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="53777-107">요구 사항</span><span class="sxs-lookup"><span data-stu-id="53777-107">Requirements</span></span>  
+ <span data-ttu-id="53777-108">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="53777-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1170d-109">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="1170d-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="53777-109">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="53777-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="1170d-110">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1170d-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="53777-110">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="53777-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="1170d-111">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1170d-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="53777-111">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="53777-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

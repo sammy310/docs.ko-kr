@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: e58dac7b-85c3-41ca-b9aa-3a7fc9ae6680
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5619dea17b9a7140238fd559d2f6b1a5d190ac33
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d23b695550c8444264934f7aca4fa185064e89c5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761903"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130735"
 ---
-# <a name="icordebugmanagedcallbackloadclass-method"></a><span data-ttu-id="76d05-102">ICorDebugManagedCallback::LoadClass 메서드</span><span class="sxs-lookup"><span data-stu-id="76d05-102">ICorDebugManagedCallback::LoadClass Method</span></span>
-<span data-ttu-id="76d05-103">로드 된 클래스는 디버거에 알립니다.</span><span class="sxs-lookup"><span data-stu-id="76d05-103">Notifies the debugger that a class has been loaded.</span></span>  
+# <a name="icordebugmanagedcallbackloadclass-method"></a><span data-ttu-id="75530-102">ICorDebugManagedCallback::LoadClass 메서드</span><span class="sxs-lookup"><span data-stu-id="75530-102">ICorDebugManagedCallback::LoadClass Method</span></span>
+<span data-ttu-id="75530-103">클래스가 로드 되었음을 디버거에 알립니다.</span><span class="sxs-lookup"><span data-stu-id="75530-103">Notifies the debugger that a class has been loaded.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="76d05-104">구문</span><span class="sxs-lookup"><span data-stu-id="76d05-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="75530-104">구문</span><span class="sxs-lookup"><span data-stu-id="75530-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT LoadClass (  
@@ -36,28 +34,28 @@ HRESULT LoadClass (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="76d05-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="76d05-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="75530-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="75530-105">Parameters</span></span>  
  `pAppDomain`  
- <span data-ttu-id="76d05-106">[in] 클래스 로드 된 응용 프로그램 도메인을 나타내는 ICorDebugAppDomain 개체에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="76d05-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain into which the class has been loaded.</span></span>  
+ <span data-ttu-id="75530-106">진행 클래스가 로드 된 응용 프로그램 도메인을 나타내는 ICorDebugAppDomain 개체에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="75530-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain into which the class has been loaded.</span></span>  
   
  `c`  
- <span data-ttu-id="76d05-107">[in] 클래스를 나타내는 ICorDebugClass 개체에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="76d05-107">[in] A pointer to an ICorDebugClass object that represents the class.</span></span>  
+ <span data-ttu-id="75530-107">진행 클래스를 나타내는 ICorDebugClass 개체에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="75530-107">[in] A pointer to an ICorDebugClass object that represents the class.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="76d05-108">설명</span><span class="sxs-lookup"><span data-stu-id="76d05-108">Remarks</span></span>  
- <span data-ttu-id="76d05-109">이 콜백 클래스를 포함 하는 모듈에 대 한 클래스 로딩을 사용 하도록 설정 된 경우에 발생 합니다.</span><span class="sxs-lookup"><span data-stu-id="76d05-109">This callback occurs only if class loading has been enabled for the module that contains the class.</span></span> <span data-ttu-id="76d05-110">클래스 로드는 동적 모듈의 항상 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="76d05-110">Class loading is always enabled for dynamic modules.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="75530-108">주의</span><span class="sxs-lookup"><span data-stu-id="75530-108">Remarks</span></span>  
+ <span data-ttu-id="75530-109">이 콜백은 클래스를 포함 하는 모듈에 대해 클래스 로드를 사용 하도록 설정한 경우에만 발생 합니다.</span><span class="sxs-lookup"><span data-stu-id="75530-109">This callback occurs only if class loading has been enabled for the module that contains the class.</span></span> <span data-ttu-id="75530-110">동적 모듈에는 클래스 로드를 항상 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="75530-110">Class loading is always enabled for dynamic modules.</span></span>  
   
- <span data-ttu-id="76d05-111">`LoadClass` 콜백 동적 모듈에 새로 생성 된 클래스에 중단점을 바인딩할 적절 한 시간을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="76d05-111">The `LoadClass` callback provides an appropriate time to bind breakpoints to newly generated classes in dynamic modules.</span></span>  
+ <span data-ttu-id="75530-111">`LoadClass` 콜백은 동적 모듈에서 새로 생성 된 클래스에 중단점을 바인딩하는 데 적절 한 시간을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="75530-111">The `LoadClass` callback provides an appropriate time to bind breakpoints to newly generated classes in dynamic modules.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="76d05-112">요구 사항</span><span class="sxs-lookup"><span data-stu-id="76d05-112">Requirements</span></span>  
- <span data-ttu-id="76d05-113">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="76d05-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="75530-112">요구 사항</span><span class="sxs-lookup"><span data-stu-id="75530-112">Requirements</span></span>  
+ <span data-ttu-id="75530-113">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="75530-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="76d05-114">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="76d05-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="75530-114">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="75530-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="76d05-115">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="76d05-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="75530-115">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="75530-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="76d05-116">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="76d05-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="75530-116">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="75530-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="76d05-117">참고자료</span><span class="sxs-lookup"><span data-stu-id="76d05-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="75530-117">참조</span><span class="sxs-lookup"><span data-stu-id="75530-117">See also</span></span>
 
-- [<span data-ttu-id="76d05-118">UnloadClass 메서드</span><span class="sxs-lookup"><span data-stu-id="76d05-118">UnloadClass Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadclass-method.md)
-- [<span data-ttu-id="76d05-119">ICorDebugManagedCallback 인터페이스</span><span class="sxs-lookup"><span data-stu-id="76d05-119">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [<span data-ttu-id="75530-118">UnloadClass 메서드</span><span class="sxs-lookup"><span data-stu-id="75530-118">UnloadClass Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadclass-method.md)
+- [<span data-ttu-id="75530-119">ICorDebugManagedCallback 인터페이스</span><span class="sxs-lookup"><span data-stu-id="75530-119">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
