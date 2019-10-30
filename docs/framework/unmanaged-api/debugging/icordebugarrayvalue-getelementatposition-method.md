@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6fd5eaa4-1997-4910-82f5-3887480db764
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4cfdaeb1bc298c10cbae01c946ffb867cef21d17
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 10584442d7e0bd61e6decaf2b494dfe39f339d6d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737554"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73088425"
 ---
 # <a name="icordebugarrayvaluegetelementatposition-method"></a>ICorDebugArrayValue::GetElementAtPosition 메서드
-0부터 시작 하는 1 차원 배열로 간주 하 여 지정된 된 위치에서 요소를 가져옵니다.  
+배열을 0부터 시작 하는 1 차원 배열로 처리 하는 지정 된 위치에 있는 요소를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,16 +36,16 @@ HRESULT GetElementAtPosition (
   
 ## <a name="parameters"></a>매개 변수  
  `nPosition`  
- [in] 검색할 요소의 위치입니다.  
+ 진행 검색할 요소의 위치입니다.  
   
  `ppValue`  
- [out] 요소의 값을 나타내는 ICorDebugValue 개체의 주소에 대 한 포인터입니다.  
+ 제한이 요소의 값을 나타내는 ICorDebugValue 개체의 주소에 대 한 포인터입니다.  
   
-## <a name="remarks"></a>설명  
- 다차원 배열의 레이아웃이 C++ 의 배열 레이아웃 스타일입니다.  
+## <a name="remarks"></a>주의  
+ 다중 차원 배열의 레이아웃은 배열 레이아웃의 스타일을 C++ 따릅니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   

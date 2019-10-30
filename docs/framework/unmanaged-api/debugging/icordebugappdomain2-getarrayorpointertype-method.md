@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 97e493f5-3a62-4ec7-b42f-4af57bf71f57
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fd8f71ca75a795ab86c61140eacbbcfb0a18b590
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 166f6bb50849df8550871958d7034fdf2a841abb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737809"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73089110"
 ---
 # <a name="icordebugappdomain2getarrayorpointertype-method"></a>ICorDebugAppDomain2::GetArrayOrPointerType 메서드
-지정된 된 형식에 대 한 포인터 또는 지정된 된 형식에 대 한 참조의 배열을 가져옵니다.  
+지정 된 형식의 배열 또는 지정 된 형식에 대 한 포인터 또는 참조를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,19 +38,19 @@ HRESULT GetArrayOrPointerType (
   
 ## <a name="parameters"></a>매개 변수  
  `elementType`  
- [in] 기본 네이티브 형식 (배열, 포인터 또는 참조)를 만들 수를 지정 하는 CorElementType 열거형의 값입니다.  
+ 진행 만들 기본 네이티브 형식 (배열, 포인터 또는 참조)을 지정 하는 CorElementType 열거형의 값입니다.  
   
  `nRank`  
- [in] 배열의 순위 (차원의 수)입니다. 이 값은 0 이어야 하는 경우 `elementType` 포인터 또는 참조 형식을 지정 합니다.  
+ 진행 배열의 차수 (차원의 수)입니다. `elementType` 포인터나 참조 형식을 지정 하는 경우이 값은 0 이어야 합니다.  
   
  `pTypeArg`  
- [in] 배열의 형식을 나타내는 ICorDebugType 개체에 대 한 포인터, 포인터 또는 참조를 만들 수 있습니다.  
+ 진행 만들 배열, 포인터 또는 참조의 형식을 나타내는 ICorDebugType 개체에 대 한 포인터입니다.  
   
  `ppType`  
- [out] 주소에 대 한 포인터는 `ICorDebugType` 생성 된 배열, 포인터 형식 또는 참조를 나타내는 개체를 입력 합니다.  
+ 제한이 생성 된 배열, 포인터 형식 또는 참조 형식을 나타내는 `ICorDebugType` 개체의 주소에 대 한 포인터입니다.  
   
-## <a name="remarks"></a>설명  
- 변수의 *elementType* 다음 중 하나 여야 합니다.  
+## <a name="remarks"></a>주의  
+ *ElementType* 의 값은 다음 중 하나 여야 합니다.  
   
 - ELEMENT_TYPE_PTR  
   
@@ -60,10 +58,10 @@ HRESULT GetArrayOrPointerType (
   
 - ELEMENT_TYPE_ARRAY 또는 ELEMENT_TYPE_SZARRAY  
   
- 경우 값 *elementType* ELEMENT_TYPE_PTR 인지, ELEMENT_TYPE_BYREF *nRank* 0 이어야 합니다.  
+ *ElementType* 의 값이 ELEMENT_TYPE_PTR 또는 ELEMENT_TYPE_BYREF 인 경우 *n rank* 는 0 이어야 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
