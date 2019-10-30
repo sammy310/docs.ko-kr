@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 7105a6c8-6e4e-48de-ac3d-74ac75e5de2e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 95b4e1762e5f7701bfce2edc4f7bd4f8cecb28b3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ebbbdf02837cb1257ec4756c9d67f5a1ac0136fe
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747404"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131185"
 ---
 # <a name="ecustomdumpitemkind-enumeration"></a>ECustomDumpItemKind 열거형
-향후 확장을 위한 예약 된 [CustomDumpItem](../../../../docs/framework/unmanaged-api/hosting/customdumpitem-structure.md) 구조입니다.  
+[Customfcitem](../../../../docs/framework/unmanaged-api/hosting/customdumpitem-structure.md) 구조의 이후 확장을 위해 예약 되었습니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,20 +34,20 @@ typedef enum {
   
 ## <a name="members"></a>멤버  
   
-|멤버|Description|  
+|멤버|설명|  
 |------------|-----------------|  
-|`DUMP_ITEM_None`|나중에 사용하도록 예약되어 있습니다.|  
+|`DUMP_ITEM_None`|나중에 사용하기 위해 예약되어 있습니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** MSCorEE.h  
+ **헤더:** Mscoree.dll  
   
- **라이브러리:** MSCorEE.dll  
+ **라이브러리:** Mscoree.dll  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ICLRErrorReportingManager 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)
 - [호스팅 열거형](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

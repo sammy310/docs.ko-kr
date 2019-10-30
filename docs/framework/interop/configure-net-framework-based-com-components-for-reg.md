@@ -8,14 +8,12 @@ helpviewer_keywords:
 - registration-free COM interop, configuring .NET-based components
 - activation, registration-free
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: baabff187fb8a22aea37c4fb4c1dc11a680d3bb8
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 61f5f0f3ec9a4386fa12e7511b4a518f2b56a21c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70853846"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123662"
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>방법: 등록이 필요 없는 활성화를 위한 .NET Framework 기반 COM 구성 요소 구성
 .NET Framework 기반 구성 요소에 대한 등록 없는 활성화는 COM 구성 요소보다 약간 더 복잡합니다. 설치 프로그램에 다음 두 개의 매니페스트가 필요합니다.  
@@ -105,7 +103,7 @@ ms.locfileid: "70853846"
   
 4. 어셈블리에 있는 각 클래스를 식별합니다. `<clrClass>` 요소를 사용하여 관리되는 어셈블리에 있는 각 클래스를 고유하게 식별합니다. `<assembly>` 요소의 하위 요소인 요소에는 다음 표에 설명된 특성이 있습니다.  
   
-    |특성|설명|필수|  
+    |특성|설명|필요한 공간|  
     |---------------|-----------------|--------------|  
     |`clsid`|활성화할 클래스를 지정하는 식별자입니다.|예|  
     |`description`|구성 요소에 대해 사용자에게 알려주는 문자열입니다. 기본값은 빈 문자열입니다.|아니요|  
@@ -170,7 +168,7 @@ ms.locfileid: "70853846"
   
      이번에도 `myresource.res`는 포함 리소스를 포함하는 리소스 파일의 이름입니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [등록이 필요 없는 COM interop](registration-free-com-interop.md)
 - [등록이 필요 없는 COM Interop에 대한 요구 사항](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f8h7012w(v=vs.100))

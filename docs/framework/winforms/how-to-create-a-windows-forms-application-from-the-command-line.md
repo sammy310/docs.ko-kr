@@ -9,18 +9,16 @@ helpviewer_keywords:
 - Windows Forms, getting started
 - Windows Forms, creating basic form
 ms.assetid: 45ad3f8b-1c26-4c9f-91a9-3bb0759a47a4
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: da7fdab1cf67ffd47acb75533fcfdb89664c86d3
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: af1548602ece8ea0f5720a836ec05648854e198f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834817"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127242"
 ---
 # <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>방법: 명령줄에서 Windows Forms 응용 프로그램 만들기
 
-다음 절차에서는 명령줄에서 Windows Forms 애플리케이션을 만들고 실행하기 위해 완료해야 하는 기본 단계를 설명합니다. Visual Studio에서는 이러한 절차가 광범위하게 지원됩니다.  [또한 연습: WPF](../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)에서 Windows Forms 컨트롤 호스팅.
+다음 절차에서는 명령줄에서 Windows Forms 애플리케이션을 만들고 실행하기 위해 완료해야 하는 기본 단계를 설명합니다. Visual Studio에서는 이러한 절차가 광범위하게 지원됩니다.  또한 [연습: WPF에서 Windows Forms 컨트롤 호스팅을](../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)참조 하세요.
   
 ## <a name="procedure"></a>프로시저  
   
@@ -36,7 +34,7 @@ ms.locfileid: "71834817"
      [!code-csharp[System.Windows.Forms.BasicForm#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.BasicForm#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/VB/Form1.vb#3)]  
   
-3. 에 대해 `Form1`매개 변수가 없는 생성자를 만듭니다.
+3. `Form1`에 대 한 매개 변수가 없는 생성자를 만듭니다.
   
      이후 절차에서 생성자에 더 많은 코드를 추가합니다.
   
@@ -45,9 +43,9 @@ ms.locfileid: "71834817"
   
 4. 클래스에 `Main` 메서드를 추가합니다.
   
-    1. C# 하 여 Windows Forms 응용 프로그램이 단일 스레드 아파트 인지 지정 합니다. `Main` <xref:System.STAThreadAttribute> (Visual Basic를 사용 하 여 개발 된 Windows forms 응용 프로그램은 기본적으로 단일 스레드 아파트 모델을 사용 하므로 Visual Basic에서는이 특성이 필요 하지 않습니다.)  
+    1. <xref:System.STAThreadAttribute>를 C# `Main` 메서드에 적용 하 여 Windows Forms 응용 프로그램이 단일 스레드 아파트 인지 지정 합니다. (Visual Basic를 사용 하 여 개발 된 Windows forms 응용 프로그램은 기본적으로 단일 스레드 아파트 모델을 사용 하므로 Visual Basic에서는이 특성이 필요 하지 않습니다.)  
   
-    2. 을 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> 호출 하 여 응용 프로그램에 운영 체제 스타일을 적용 합니다.  
+    2. <xref:System.Windows.Forms.Application.EnableVisualStyles%2A>를 호출 하 여 응용 프로그램에 운영 체제 스타일을 적용 합니다.  
   
     3. 폼 인스턴스를 만들고 실행합니다.  
   
@@ -60,13 +58,13 @@ ms.locfileid: "71834817"
   
 2. 폼을 컴파일합니다.  
   
-    - 을 사용 C#하는 경우 다음을 입력 합니다.`csc form1.cs`  
+    - 을 사용 C#하는 경우 다음을 입력 `csc form1.cs`  
   
          `-or-`  
   
-    - Visual Basic를 사용 하는 경우 다음을 입력 합니다.`vbc form1.vb`  
+    - Visual Basic를 사용 하는 경우 다음을 입력 합니다. `vbc form1.vb`  
   
-3. 명령 프롬프트에서 다음을 입력 합니다.`Form1.exe`  
+3. 명령 프롬프트에서 다음을 입력 합니다. `Form1.exe`  
   
 ## <a name="adding-a-control-and-handling-an-event"></a>컨트롤 추가 및 이벤트 처리
 

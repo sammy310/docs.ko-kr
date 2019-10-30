@@ -1,5 +1,5 @@
 ---
-title: ServicePointManager.s_ServicePointTable Field
+title: ServicePointManager. s_ServicePointTable 필드
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -10,18 +10,18 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 24459679-291c-401a-9def-e42b29466fcf
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 840d068d282e3ba35df5aee6a11ff96d9e6bfdbd
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 68445f4a290b9f4fe2696e35cda391b6c0ee8f85
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301385"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119997"
 ---
-# <a name="servicepointmanagersservicepointtable-field"></a>ServicePointManager.s\_ServicePointTable Field
+# <a name="servicepointmanagers_servicepointtable-field"></a>ServicePointManager\_Servicepointmanager 필드
 
-`ServicePointManager.s_ServicePointTable` <xref:System.Collections.Hashtable> 활성 HTTP 연결의 목록을 포함 하는 (<xref:System.Net.ServicePoint>s)에 <xref:System.AppDomain>합니다.
+`ServicePointManager.s_ServicePointTable`는 <xref:System.AppDomain>의 활성 HTTP 연결 (<xref:System.Net.ServicePoint>s) 목록이 포함 된 <xref:System.Collections.Hashtable>입니다.
 
 ## <a name="syntax"></a>구문
   
@@ -30,14 +30,14 @@ private static Hashtable s_ServicePointTable
 ```
 
 > [!WARNING]
-> `ServicePointManager.s_ServicePointTable` 필드가 private 이며 코드에서 직접 사용할 하려고 하지 않습니다.
+> `ServicePointManager.s_ServicePointTable` 필드는 private 이며 코드에서 직접 사용할 수 없습니다.
 > 
-> Microsoft는 어떤 상황에서 프로덕션 응용 프로그램에서이 필드의 사용을 지원 하지 않습니다.
+> Microsoft는 어떤 경우에도 프로덕션 응용 프로그램에서이 필드를 사용 하는 것을 지원 하지 않습니다.
 
 ## <a name="requirements"></a>요구 사항
 
 **네임스페이스:** <xref:System.Net>
 
-**어셈블리:** 시스템 (에: System.dll)
+**어셈블리:** 시스템 (system.string)
 
-**.NET framework 버전:** 2.0부터 사용할 수 있습니다.
+**.NET Framework 버전:** 2.0부터 사용할 수 있습니다.

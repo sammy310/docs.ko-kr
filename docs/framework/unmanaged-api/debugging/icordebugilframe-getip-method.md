@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 18217ba1-1776-4297-a3b9-f77e64b0fead
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4d7eca3c2825707c9190436377bba7e4bb0d5447
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7e1605eede55360e72d65da6744bc1dcce4f107f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67757966"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130986"
 ---
 # <a name="icordebugilframegetip-method"></a>ICorDebugILFrame::GetIP 메서드
-명령 포인터의 값 및 명령 포인터의 값을 가져온 방법에 대해 설명 하는 비트 조합 값을 가져옵니다.  
+명령 포인터의 값과 명령 포인터의 값을 가져오는 방법을 설명 하는 비트 조합 값을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,18 +36,18 @@ HRESULT GetIP (
   
 ## <a name="parameters"></a>매개 변수  
  `pnOffset`  
- [out] 명령 포인터의 값입니다.  
+ 제한이 명령 포인터의 값입니다.  
   
  `pMappingResult`  
- [out] 명령 포인터의 값을 가져온 방법에 대해 설명 하는 CorDebugMappingResult 열거형 값의 비트 조합에 대 한 포인터입니다.  
+ 제한이 명령 포인터의 값을 가져오는 방법을 설명 하는 CorDebugMappingResult 열거형 값의 비트 조합에 대 한 포인터입니다.  
   
-## <a name="remarks"></a>설명  
- 명령 포인터의 값은 함수의 Microsoft MSIL (intermediate language) 코드에 대 한 스택 프레임의 오프셋입니다. 스택 프레임을 활성 상태인 경우이 주소는 다음 명령을 실행 합니다. 스택 프레임을 활성 상태인 경우이 주소는 스택 프레임을 다시 활성화 되 면를 실행 하려면 다음 명령입니다.  
+## <a name="remarks"></a>주의  
+ 명령 포인터의 값은 함수의 MSIL (Microsoft 중간 언어) 코드에 대 한 스택 프레임의 오프셋입니다. 스택 프레임이 활성 상태인 경우이 주소는 다음에 실행할 명령입니다. 스택 프레임이 활성 상태가 아닌 경우이 주소는 스택 프레임이 다시 활성화 될 때 실행할 다음 명령입니다.  
   
- 이 프레임-just-in-time (JIT) 컴파일된 프레임 이면 명령 포인터의 값에 매핑하여 이전 버전과 실제 네이티브 명령 포인터에서 값을 근사치 수만 있도록 결정 됩니다.  
+ 이 프레임이 JIT (just-in-time) 컴파일된 프레임 인 경우 실제 네이티브 명령 포인터에서 역방향으로 매핑하여 명령 포인터의 값이 결정 되므로 값은 근사값이 될 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   

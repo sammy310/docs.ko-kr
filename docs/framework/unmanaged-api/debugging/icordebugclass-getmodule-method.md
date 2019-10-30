@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 87029cc4-e5e1-42d5-8b98-655bb7ece520
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 205b7670bac55d428d7458b7accaee5e00b00b03
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 94f2d20816bfc28118877f52c04237c41b3859e3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745579"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125782"
 ---
 # <a name="icordebugclassgetmodule-method"></a>ICorDebugClass::GetModule 메서드
 이 클래스를 정의 하는 모듈을 가져옵니다.  
@@ -37,10 +35,10 @@ HRESULT GetModule (
   
 ## <a name="parameters"></a>매개 변수  
  `pModule`  
- [out] 이 클래스를 정의 하는 모듈을 나타내는 ICorDebugModule 개체의 주소에 대 한 포인터입니다.  
+ 제한이 이 클래스가 정의 된 모듈을 나타내는 ICorDebugModule 개체의 주소에 대 한 포인터입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   

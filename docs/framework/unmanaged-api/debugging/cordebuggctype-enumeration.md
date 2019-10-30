@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 880ca92a-42d4-42a5-9b9c-c2848eb39c6a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f101fe2a84a26efb23f57bac3aaf4f0e64a4d36c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b954aa0e4db10fd4b3bde951c7f27d18b8634f5a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740038"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132193"
 ---
 # <a name="cordebuggctype-enumeration"></a>CorDebugGCType 열거형
 가비지 수집기가 실행되고 있는 위치(워크스테이션 또는 서버)를 나타냅니다.  
@@ -41,13 +39,13 @@ typedef enum CorDebugGCType {
   
 |멤버 이름|설명|  
 |-----------------|-----------------|  
-|`CorDebugWorkstationGC`|가비지 수집기는 워크스테이션에서 실행 됩니다.|  
-|`CorDebugServerGC`|가비지 수집기는 서버에서 실행 됩니다.|  
+|`CorDebugWorkstationGC`|워크스테이션에서 가비지 수집기가 실행 되 고 있습니다.|  
+|`CorDebugServerGC`|서버에서 가비지 수집기가 실행 되 고 있습니다.|  
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
@@ -55,6 +53,6 @@ typedef enum CorDebugGCType {
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [디버깅 열거형](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

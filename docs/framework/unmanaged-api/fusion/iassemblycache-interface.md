@@ -14,21 +14,19 @@ helpviewer_keywords:
 ms.assetid: 71ea170f-872d-4fc5-81b6-27da1dec9b19
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6dab5fe941fce3c23ba718906b29c80c6d257c2f
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 5ed0075da1429c70900750f3f28e8ce36a41fb28
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796775"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134536"
 ---
 # <a name="iassemblycache-interface"></a>IAssemblyCache 인터페이스
 Fusion 기술에서 사용할 전역 어셈블리 캐시를 나타냅니다.  
   
 ## <a name="methods"></a>메서드  
   
-|메서드|Description|  
+|메서드|설명|  
 |------------|-----------------|  
 |[CreateAssemblyCacheItem 메서드](iassemblycache-createassemblycacheitem-method.md)|새 [Iassemblycacheitem](iassemblycacheitem-interface.md)에 대 한 참조를 가져옵니다.|  
 |[CreateAssemblyScavenger 메서드](iassemblycache-createassemblyscavenger-method.md)|Fusion 기술에서 내부용으로 사용 하도록 예약 되어 있습니다.|  
@@ -37,13 +35,13 @@ Fusion 기술에서 사용할 전역 어셈블리 캐시를 나타냅니다.
 |[UninstallAssembly 메서드](iassemblycache-uninstallassembly-method.md)|전역 어셈블리 캐시에서 지정 된 어셈블리를 제거 합니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Fusion. h  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [Fusion 인터페이스](fusion-interfaces.md)
 - [전역 어셈블리 캐시](../../app-domains/gac.md)

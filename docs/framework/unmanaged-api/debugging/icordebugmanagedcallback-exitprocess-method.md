@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 63a7d47a-0d54-4e29-9767-9f09feaa38b7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 04b8ac6751024e64cc866fce1cfe72fb42e41200
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4518637eb47acf416a02c045f8ca6f8a90167277
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760444"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130782"
 ---
 # <a name="icordebugmanagedcallbackexitprocess-method"></a>ICorDebugManagedCallback::ExitProcess 메서드
-프로세스가 종료 되었는지 디버거에 알립니다.  
+프로세스가 종료 되었음을 디버거에 알립니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,17 +35,17 @@ HRESULT ExitProcess (
   
 ## <a name="parameters"></a>매개 변수  
  `pProcess`  
- [in] 프로세스를 나타내는 ICorDebugProcess 개체에 대 한 포인터입니다.  
+ 진행 프로세스를 나타내는 ICorDebugProcess 개체에 대 한 포인터입니다.  
   
-## <a name="remarks"></a>설명  
- 계속할 수 없습니다는 `ExitProcess` 이벤트입니다. 이 이벤트는 프로세스를 중지할 표시 되는 반면 다른 이벤트를 비동기적으로 발생 될 수 있습니다. 일반적으로 외부 요인으로 인해 중지 하는 동안 프로세스를 종료 하는 경우 발생할 수 있습니다.  
+## <a name="remarks"></a>주의  
+ `ExitProcess` 이벤트는 계속할 수 없습니다. 프로세스가 중지 된 상태로 표시 되는 동안이 이벤트는 다른 이벤트에 대해 비동기적으로 실행 될 수 있습니다. 이러한 문제는 일반적으로 일부 외부 force로 인해 중지 되는 동안 프로세스가 종료 되는 경우에 발생할 수 있습니다.  
   
- CLR (공용 언어 런타임)을 이미 관리 되는 콜백을 전달 하 고, 경우이 이벤트 후 해당 콜백이 반환 될 때까지 지연 됩니다.  
+ CLR (공용 언어 런타임)에서 이미 관리 되는 콜백을 디스패치할 경우이 이벤트는 해당 콜백이 반환 될 때까지 지연 됩니다.  
   
- `ExitProcess` 이벤트는 종료 시 호출 보장 되는 유일한 종료/언로드 이벤트입니다.  
+ `ExitProcess` 이벤트는 종료 시 호출 되도록 보장 되는 유일한 exit/unload 이벤트입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
@@ -55,6 +53,6 @@ HRESULT ExitProcess (
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ICorDebugManagedCallback 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

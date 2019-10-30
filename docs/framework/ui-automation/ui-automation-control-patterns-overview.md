@@ -5,12 +5,12 @@ helpviewer_keywords:
 - control patterns
 - UI Automation, control patterns
 ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
-ms.openlocfilehash: 548828f8e9948e000a15fd19a4475ef715e110d8
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: a3daf75417260d7e761da2e90c595471b2a4b2a2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039460"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131508"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>UI 자동화 컨트롤 패턴 개요
 > [!NOTE]
@@ -56,7 +56,7 @@ ms.locfileid: "73039460"
 |<xref:System.Windows.Automation.DockPattern>|<xref:System.Windows.Automation.Provider.IDockProvider>|도킹 컨테이너에서 도킹될 수 있는 컨트롤에 사용됩니다. 예를 들면, 도구 모음 또는 도구 팔레트입니다.|  
 |<xref:System.Windows.Automation.ExpandCollapsePattern>|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|확장하거나 축소할 수 있는 컨트롤에 사용됩니다. 예를 들면, **파일** 메뉴와 같은 애플리케이션의 메뉴 항목입니다.|  
 |<xref:System.Windows.Automation.GridPattern>|<xref:System.Windows.Automation.Provider.IGridProvider>|지정된 셀로 이동 및 크기 조정과 같은 표 기능을 지원하는 컨트롤에 사용됩니다. 예를 들면, Windows 탐색기의 큰 아이콘 보기 또는 [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)]의 헤더 없는 단순 테이블입니다.|  
-|<xref:System.Windows.Automation.GridItemPattern>|<xref:System.Windows.Automation.Provider.IGridItemProvider>|표 내에서 셀이 있는 컨트롤에 사용됩니다. 개별 셀은 GridItem 패턴을 지원해야 합니다. 예를 들면, [!INCLUDE[TLA#tla_winexpl](../../../includes/tlasharptla-winexpl-md.md)] 자세히 보기의 각 셀입니다.|  
+|<xref:System.Windows.Automation.GridItemPattern>|<xref:System.Windows.Automation.Provider.IGridItemProvider>|표 내에서 셀이 있는 컨트롤에 사용됩니다. 개별 셀은 GridItem 패턴을 지원해야 합니다. 예를 들어 Microsoft Windows 탐색기 자세히 보기의 각 셀이 있습니다.|  
 |<xref:System.Windows.Automation.InvokePattern>|<xref:System.Windows.Automation.Provider.IInvokeProvider>|호출할 수 있는 컨트롤(예: 단추)에 사용됩니다.|  
 |<xref:System.Windows.Automation.MultipleViewPattern>|<xref:System.Windows.Automation.Provider.IMultipleViewProvider>|동일한 정보, 데이터 또는 자식 항목 집합의 여러 표현 간을 전환할 수 있는 컨트롤에 사용됩니다. 예를 들면, 데이터를 축소판, 타일, 아이콘, 목록 또는 자세히 보기로 사용할 수 있는 목록 뷰 컨트롤입니다.|  
 |<xref:System.Windows.Automation.RangeValuePattern>|<xref:System.Windows.Automation.Provider.IRangeValueProvider>|컨트롤에 적용할 수 있는 값의 범위가 있는 컨트롤에 사용됩니다. 예를 들어, 연도를 나타내는 회전자 컨트롤의 범위는 1900 ~ 2010이고 월을 나타내는 다른 회전자 컨트롤의 범위는 1 ~ 12입니다.|  
@@ -70,7 +70,7 @@ ms.locfileid: "73039460"
 |<xref:System.Windows.Automation.TogglePattern>|<xref:System.Windows.Automation.Provider.IToggleProvider>|상태를 전환할 수 있는 컨트롤에 사용됩니다. 예를 들면, 확인란 및 선택 가능한 메뉴 항목입니다.|  
 |<xref:System.Windows.Automation.TransformPattern>|<xref:System.Windows.Automation.Provider.ITransformProvider>|크기 조정, 이동 및 회전할 수 있는 컨트롤에 사용됩니다. Transform 컨트롤 패턴은 디자이너, 폼, 그래픽 편집기 및 그리기 애플리케이션에서 일반적으로 사용됩니다.|  
 |<xref:System.Windows.Automation.ValuePattern>|<xref:System.Windows.Automation.Provider.IValueProvider>|클라이언트가 값 범위를 지원하지 않는 컨트롤에 값을 설정하거나 가져올 수 있습니다. 예를 들면, 날짜 시간 선택입니다.|  
-|<xref:System.Windows.Automation.WindowPattern>|<xref:System.Windows.Automation.Provider.IWindowProvider>|Microsoft Windows 운영 체제에 대 한 기본적인 개념인 windows 관련 정보를 공개 합니다. Windows 컨트롤의 예로는 최상위 응용 프로그램 창 ([!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)], [!INCLUDE[TLA#tla_winexpl](../../../includes/tlasharptla-winexpl-md.md)]등), MDI (다중 문서 인터페이스) 자식 창 및 대화 상자가 있습니다.|  
+|<xref:System.Windows.Automation.WindowPattern>|<xref:System.Windows.Automation.Provider.IWindowProvider>|Microsoft Windows 운영 체제에 대 한 기본적인 개념인 windows 관련 정보를 공개 합니다. Windows 컨트롤의 예로는 최상위 응용 프로그램 창 ([!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)], Microsoft Windows 탐색기 등), MDI (다중 문서 인터페이스) 자식 창 및 대화 상자가 있습니다.|  
   
 ## <a name="see-also"></a>참조
 

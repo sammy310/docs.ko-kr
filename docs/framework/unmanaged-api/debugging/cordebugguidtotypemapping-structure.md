@@ -16,17 +16,15 @@ helpviewer_keywords:
 ms.assetid: 57dbccd9-b16d-4da3-ae25-7a2cf9adf679
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 38e1b19d6340f559e6f8b7e0f7bc042a10df16c3
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 313f6649448653ad630d616c7dbf739653e352dc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025994"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132836"
 ---
 # <a name="cordebugguidtotypemapping-structure"></a>CorDebugGuidToTypeMapping 구조체
-Windows 런타임 GUID 해당 ICorDebugType 개체에 매핑됩니다.  
+Windows 런타임 GUID를 해당 ICorDebugType 개체에 매핑합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -42,10 +40,10 @@ typedef struct CorDebugGuidToTypeMapping {
 |멤버|설명|  
 |------------|-----------------|  
 |`iid`|캐시 된 Windows 런타임 형식의 GUID입니다.|  
-|`pType`|캐시 된 유형에 대 한 정보를 제공 하는 ICorDebugType 개체에 대 한 포인터입니다.|  
+|`pType`|캐시 된 형식에 대 한 정보를 제공 하는 ICorDebugType 개체에 대 한 포인터입니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** Windows 런타임입니다.  
+ **플랫폼:** Windows 런타임.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
@@ -53,7 +51,7 @@ typedef struct CorDebugGuidToTypeMapping {
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [디버깅 구조체](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
 - [디버깅](../../../../docs/framework/unmanaged-api/debugging/index.md)

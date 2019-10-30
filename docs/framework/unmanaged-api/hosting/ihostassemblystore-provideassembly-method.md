@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 625c3dd5-a3f0-442c-adde-310dadbb5054
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f5fab4ef0d67ab6b86510bd4b2f814d9456213fb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a93d700c9c398076d87156cd2eb9c6d0d08cccfd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763986"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124483"
 ---
 # <a name="ihostassemblystoreprovideassembly-method"></a>IHostAssemblyStore::ProvideAssembly 메서드
-참조 되지 않은 어셈블리에 대 한 참조를 가져옵니다 합니다 [ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md) 에서 반환 되는 [ihostassemblymanager:: Getnonhoststoreassemblies](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-getnonhoststoreassemblies-method.md)합니다. 호출 하는 CLR (공용 언어 런타임) `ProvideAssembly` 목록에 나타나지 않는 각 어셈블리에 대 한 합니다.  
+[IHostAssemblyManager:: GetNonHostStoreAssemblies](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-getnonhoststoreassemblies-method.md)에서 반환 된 [ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md) 에서 참조 하지 않는 어셈블리에 대 한 참조를 가져옵니다. CLR (공용 언어 런타임)은 목록에 표시 되지 않는 각 어셈블리에 대 한 `ProvideAssembly`를 호출 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -41,46 +39,46 @@ HRESULT ProvideAssembly (
   
 ## <a name="parameters"></a>매개 변수  
  `pBindInfo`  
- [in] 에 대 한 포인터를 [AssemblyBindInfo](../../../../docs/framework/unmanaged-api/hosting/assemblybindinfo-structure.md) 버전 관리 정책의 유무를 포함 하 여 특정 바인딩 특성을 결정 하는 호스트 인스턴스 및 바인딩할 어셈블리입니다.  
+ 진행 호스트에서 버전 관리 정책 유무를 비롯 하 여 특정 바인딩 특성을 확인 하는 데 사용 하는 [Assemblybindinfo](../../../../docs/framework/unmanaged-api/hosting/assemblybindinfo-structure.md) 인스턴스에 대 한 포인터와 바인딩할 어셈블리입니다.  
   
  `pAssemblyId`  
- [out] 이 요청된 된 어셈블리에 대 한 고유 식별자에 대 한 포인터 `IStream`합니다.  
+ 제한이 이 `IStream`에 대해 요청 된 어셈블리의 고유 식별자에 대 한 포인터입니다.  
   
  `pHostContext`  
- [out] 플랫폼에 대 한 필요 없이 요청된 된 어셈블리의 증명 정보를 확인 하는 데 사용 되는 호스트 관련 데이터에 대 한 포인터를 호출 합니다. `pHostContext` 에 해당 하는 <xref:System.Reflection.Assembly.HostContext%2A> 관리 되는 속성 <xref:System.Reflection.Assembly> 클래스입니다.  
+ 제한이 플랫폼 호출이 없어도 요청 된 어셈블리의 증명 정보를 확인 하는 데 사용 되는 호스트 관련 데이터에 대 한 포인터입니다. `pHostContext`는 관리 되는 <xref:System.Reflection.Assembly> 클래스의 <xref:System.Reflection.Assembly.HostContext%2A> 속성에 해당 합니다.  
   
  `ppStmAssemblyImage`  
- [out] 주소에 대 한 포인터는 `IStream` 를 로드할 어셈블리를 찾을 수 없는 경우 null 또는 이식 가능한 실행 파일 (PE) 이미지를 포함 하는 합니다.  
+ 제한이 로드할 PE (이식 가능한 실행) 이미지를 포함 하는 `IStream`의 주소에 대 한 포인터 이거나, 어셈블리를 찾을 수 없는 경우 null입니다.  
   
  `ppStmPDB`  
- [out] 주소에 대 한 포인터는 `IStream` 경우 포함 된 null을 프로그램 디버그 (PDB) 정보를.pdb 파일을 찾을 수 없습니다.  
+ 제한이 PDB (프로그램 디버그) 정보를 포함 하는 `IStream`의 주소에 대 한 포인터 이거나 .pdb 파일을 찾을 수 없는 경우 null입니다.  
   
 ## <a name="return-value"></a>반환 값  
   
-|HRESULT|Description|  
+|HRESULT|설명|  
 |-------------|-----------------|  
-|S_OK|`ProvideAssembly` 성공적으로 반환 합니다.|  
-|HOST_E_CLRNOTAVAILABLE|CLR이 로드 된 프로세스에 또는 CLR 상태인는 관리 코드를 실행 하거나 호출을 처리할 수 없습니다.|  
+|S_OK|`ProvideAssembly` 성공적으로 반환 되었습니다.|  
+|HOST_E_CLRNOTAVAILABLE|CLR이 프로세스에 로드 되지 않았거나 CLR이 관리 코드를 실행할 수 없거나 호출을 성공적으로 처리할 수 없는 상태에 있습니다.|  
 |HOST_E_TIMEOUT|호출 시간이 초과 되었습니다.|  
 |HOST_E_NOT_OWNER|호출자가 잠금을 소유 하지 않습니다.|  
-|HOST_E_ABANDONED|이벤트가 차단 된 스레드가 취소 된 또는 파이버를 대기 하 고 있습니다.|  
-|E_FAIL|알 수 없는 치명적인 오류가 발생 했습니다. 메서드 E_FAIL을 반환 하는 경우 CLR은 프로세스 내에서 사용할 수 없습니다. 메서드를 호스트 하는 데 대 한 후속 호출 HOST_E_CLRNOTAVAILABLE를 반환 합니다.|  
-|COR_E_FILENOTFOUND (0X80070002)|요청된 된 어셈블리를 찾을 수 없습니다.|  
-|E_NOT_SUFFICIENT_BUFFER|지정 된 버퍼 크기가 `pAssemblyId` 호스트 반환 하려고 하는 식별자를 보유할 만큼 크지 않습니다.|  
+|HOST_E_ABANDONED|차단 된 스레드나 파이버에서 대기 하는 동안 이벤트를 취소 했습니다.|  
+|E_FAIL|알 수 없는 치명적인 오류가 발생 했습니다. 메서드가 E_FAIL을 반환 하는 경우 프로세스 내에서 더 이상 CLR을 사용할 수 없습니다. 호스팅 메서드에 대 한 후속 호출은 HOST_E_CLRNOTAVAILABLE을 반환 합니다.|  
+|COR_E_FILENOTFOUND (0x80070002)|요청 된 어셈블리를 찾을 수 없습니다.|  
+|E_NOT_SUFFICIENT_BUFFER|`pAssemblyId`로 지정 된 버퍼 크기가 호스트에서 반환 하려는 식별자를 저장할 만큼 크지 않습니다.|  
   
-## <a name="remarks"></a>설명  
- 에 대 한 id 값을 반환 `pAssemblyId` 호스트에 의해 지정 됩니다. 식별자는 프로세스의 수명 내에서 고유 해야 합니다. CLR은 스트림에 대 한 고유 식별자로이 값을 사용 합니다. 값에 대해 각 값을 검사 `pAssemblyId` 에 대 한 다른 호출에서 반환 된 `ProvideAssembly`합니다. 동일한 호스트 반환 `pAssemblyId` 다른 값 `IStream`, CLR 해당 스트림의 내용을 이미 매핑되는지 여부를 확인 합니다. 그렇다면 런타임 대신 새 이미지의 기존 복사본을 로드 합니다.  
+## <a name="remarks"></a>주의  
+ `pAssemblyId`에 대해 반환 되는 id 값은 호스트에서 지정 합니다. 식별자는 프로세스의 수명 내에서 고유 해야 합니다. CLR은이 값을 스트림의 고유 식별자로 사용 합니다. `ProvideAssembly`에 대 한 다른 호출에서 반환 된 `pAssemblyId` 값에 대해 각 값을 검사 합니다. 호스트에서 다른 `IStream`에 대해 동일한 `pAssemblyId` 값을 반환 하는 경우 CLR은 해당 스트림의 내용이 이미 매핑 되었는지 여부를 확인 합니다. 이 경우 런타임에서는 새 이미지를 매핑하는 대신 이미지의 기존 복사본을 로드 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** MSCorEE.h  
+ **헤더:** Mscoree.dll  
   
- **라이브러리:** MSCorEE.dll에 리소스로 포함  
+ **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ICLRAssemblyReferenceList 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)
 - [IHostAssemblyManager 인터페이스](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md)

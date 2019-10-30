@@ -6,14 +6,12 @@ helpviewer_keywords:
 - native API reference [.NET Framework], fusion
 - fusion [.NET Framework], using the unmanaged API
 ms.assetid: f8f20967-ea17-4900-bf05-87a078095fe6
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ed9020aac5b9196eb9e074161371c4e42e79509e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 2bf7bbb59cf983ed536a579ee3a418603f78b49a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796345"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131646"
 ---
 # <a name="fusion-unmanaged-api-reference"></a>Fusion(관리되지 않는 API 참조)
 Fusion API는 애플리케이션 리소스의 올바른 버전을 찾기 위해 런타임 호스트가 애플리케이션 리소스의 속성에 액세스할 수 있도록 합니다.  

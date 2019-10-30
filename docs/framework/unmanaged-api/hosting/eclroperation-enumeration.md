@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 5aef6808-5aac-4b2f-a2c7-fee1575c55ed
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 01b000ed3d75ddb6a7882cb8f03ff2cec64fb9fe
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6becc44b061ff2baac63437b6a72375d1c3735b2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767882"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131156"
 ---
 # <a name="eclroperation-enumeration"></a>EClrOperation 열거형
-호스트 정책 작업을 적용할 수 있는 작업 집합을 설명 합니다.  
+호스트에서 정책 작업을 적용할 수 있는 작업 집합을 설명 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -42,35 +40,35 @@ typedef enum {
   
 ## <a name="members"></a>멤버  
   
-|멤버|Description|  
+|멤버|설명|  
 |------------|-----------------|  
-|`OPR_AppDomainRudeUnload`|호스트 정책 작업을 수행할 때 지정할 수는 <xref:System.AppDomain> 정상적이 지 않은 (강제) 방식으로 언로드되는 합니다.|  
-|`OPR_AppDomainUnload`|호스트 정책 작업을 수행할 때 지정할 수는 <xref:System.AppDomain> 언로드됩니다.|  
-|`OPR_FinalizerRun`|호스트 종료 자가 실행 시 수행 될 정책 작업을 지정할 수 있습니다.|  
-|`OPR_ProcessExit`|호스트는 프로세스가 종료 시 수행 될 정책 작업을 지정할 수 있습니다.|  
-|`OPR_ThreadAbort`|호스트 정책 스레드가 중단 될 때 수행할 작업을 지정할 수 있습니다.|  
-|`OPR_ThreadRudeAbortInCriticalRegion`|호스트 정책 코드의 중요 영역에서 강제 스레드 중단이 발생할 경우 수행할 작업을 지정할 수 있습니다.|  
-|`OPR_ThreadRudeAbortInNonCriticalRegion`|호스트 코드는 중요 하지 않은 영역에서 강제 스레드 중단이 발생할 경우 되려면 정책 작업을 지정할 수 있습니다.|  
+|`OPR_AppDomainRudeUnload`|호스트는 <xref:System.AppDomain>가 정상적이 지 않은 방식으로 언로드될 때 수행할 정책 동작을 지정할 수 있습니다.|  
+|`OPR_AppDomainUnload`|호스트는 <xref:System.AppDomain> 언로드될 때 수행할 정책 동작을 지정할 수 있습니다.|  
+|`OPR_FinalizerRun`|호스트는 종료 자가 실행 될 때 수행할 정책 작업을 지정할 수 있습니다.|  
+|`OPR_ProcessExit`|호스트는 프로세스가 종료 될 때 수행할 정책 동작을 지정할 수 있습니다.|  
+|`OPR_ThreadAbort`|호스트는 스레드가 중단 될 때 수행할 정책 동작을 지정할 수 있습니다.|  
+|`OPR_ThreadRudeAbortInCriticalRegion`|호스트는 중요 한 코드 영역에서 잘못 된 스레드 중단이 발생 하는 경우 수행할 정책 작업을 지정할 수 있습니다.|  
+|`OPR_ThreadRudeAbortInNonCriticalRegion`|호스트는 중요 하지 않은 코드 영역에서 잘못 된 스레드 중단이 발생 하는 경우 수행할 정책 작업을 지정할 수 있습니다.|  
   
-## <a name="remarks"></a>설명  
- 공용 언어 런타임 (CLR) 안정성 인프라 중단 되 고 리소스 간에 코드 및 코드의 중요 하지 않은 지역에서 발생 하는 중요 한 영역에서 발생 하는 할당 오류를 구분 합니다. 이 차이 호스트 코드에서 오류가 발생 하는 위치에 따라 다양 한 정책을 설정할 수 있도록 설계 되었습니다.  
+## <a name="remarks"></a>주의  
+ CLR (공용 언어 런타임) 안정성 인프라는 중요 한 코드 영역에서 발생 하는 중단 및 리소스 할당 오류와 중요 하지 않은 코드 영역에서 발생 하는 오류를 구분 합니다. 이러한 구분은 호스트에서 코드에 오류가 발생 하는 위치에 따라 다른 정책을 설정할 수 있도록 설계 되었습니다.  
   
- A *중요 한 코드 영역* CLR에서 해당 작업을 중단 또는 리소스에는 현재 태스크에만 영향이 대 한 요청을 완료 하지 못함을 줄 수 없는 공간이 있습니다. 예를 들어 작업 잠금을 보유 하는 메모리 할당 요청 시 오류를 나타내는 hresult가 하는 경우 충분 하지 않기 위해 해당 작업의 안정성을 중단 합니다 <xref:System.AppDomain>이므로 <xref:System.AppDomain> 다른 포함 될 수 있습니다 동일한 잠금을 대기 하는 태스크입니다. 중단할 현재 작업 응답을 중지 하도록 다른 작업이 발생할 수 있습니다. 이런 경우 호스트 해야 전체를 언로드할 수 <xref:System.AppDomain> 위험 잠재적 불안정 하는 대신 합니다.  
+ *중요 한 코드 영역은* CLR에서 작업 중단 또는 리소스에 대 한 요청 완료 실패로 인해 현재 작업에만 영향을 줄 수 있음을 보장할 수 없는 공간입니다. 예를 들어 태스크가 잠금을 보유 하 고 메모리 할당 요청을 수행할 때 실패를 나타내는 HRESULT를 수신 하는 경우, <xref:System.AppDomain> 다른 작업을 포함할 수 있기 때문에 해당 작업을 중단 하 여 <xref:System.AppDomain>의 안정성을 보장 하는 것 만으로는 충분 하지 않습니다. 동일한 잠금이 대기 중입니다. 현재 작업을 중단 하면 다른 작업의 응답이 중지 될 수 있습니다. 이러한 경우 호스트는 잠재적으로 불안정 한 위험 보다는 전체 <xref:System.AppDomain>를 언로드할 수 있어야 합니다.  
   
- A *중요 하지 않은 코드 영역의*, 다른 한편으로 여기서 CLR 중단 또는 실패는 오류가 발생 하는 작업에만 영향이 보장할 수 영역입니다.  
+ 반면, *중요 하지 않은 코드 영역은*CLR에서 중단 또는 실패가 오류가 발생 한 작업에만 영향을 줄 수 있도록 보장 하는 영역입니다.  
   
- 또한 CLR 정상적이 고 정상 되지 않은 (강제) 중단을 구분합니다. 일반적으로 정상적으로 중단 하기 위해 모든 노력 강제 중단은 이러한 보증도 하지 않습니다 하는 동안 작업을 중단 하기 전에 예외 처리 루틴 및 종료자를 실행 합니다.  
+ 또한 CLR은 정상 및 정상 (강제) 중단을 구분 합니다. 일반적으로 정상 또는 정상 abort는 작업을 중단 하기 전에 예외 처리 루틴 및 종료자를 실행 하는 데 모든 노력을 하지만, 잘못 된 abort는 이러한 보장이 없습니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** MSCorEE.h  
+ **헤더:** Mscoree.dll  
   
- **라이브러리:** MSCorEE.dll  
+ **라이브러리:** Mscoree.dll  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [EClrFailure 열거형](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md)
 - [EPolicyAction 열거형](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md)

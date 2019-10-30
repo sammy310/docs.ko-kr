@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 86c397c3-81d8-463e-a248-3cbe06c44d9d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d70797d810d6dd2fe97c1f0f3b9c45a18fb2afba
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 84b5da043f9bd437ee9099135ba865c1ab23bb9d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767548"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129664"
 ---
 # <a name="icordebugprocess5enumerategcreferences-method"></a>ICorDebugProcess5::EnumerateGCReferences 메서드
-프로세스에서 가비지 수집 되도록 모든 개체에 대 한 열거자를 가져옵니다.  
+프로세스에서 가비지 수집 될 모든 개체에 대 한 열거자를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,16 +36,16 @@ HRESULT EnumerateGCReferences(
   
 ## <a name="parameters"></a>매개 변수  
  `enumerateWeakReferences`  
- [in] Weak references는 또한을 열거할 수 있는지 여부를 나타내는 부울 값입니다. 하는 경우 `enumerateWeakReferences` 됩니다 `true`는 `ppEnum` 열거자는 강력한 참조와 약한 참조를 모두 포함 됩니다. 하는 경우 `enumerateWeakReferences` 는 `false`, 열거자에 대 한 강력한 참조만 포함 되어 있습니다.  
+ 진행 약한 참조도 열거 되는지 여부를 나타내는 부울 값입니다. `enumerateWeakReferences` `true`경우 `ppEnum` 열거자에는 강력한 참조와 weak 참조가 모두 포함 됩니다. `enumerateWeakReferences` `false`이면 열거자에는 강력한 참조만 포함 됩니다.  
   
  `ppEnum`  
- [out] 주소에 대 한 포인터를 [ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md) 즉 열거자 개체에 대 한 가비지 수집 되도록 합니다.  
+ 제한이 가비지 수집 될 개체의 열거자 인 [ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md) 의 주소에 대 한 포인터입니다.  
   
-## <a name="remarks"></a>설명  
- 이 메서드는 프로세스에서 관리 되는 개체에 대 한 전체 루 팅 체인을 확인 하는 방법을 제공 하며는 개체가 여전히 유지 되는 이유를 확인 하기 위해 사용할 수 있습니다.  
+## <a name="remarks"></a>주의  
+ 이 메서드는 프로세스에서 관리 되는 개체에 대 한 전체 루 팅 체인을 확인 하는 방법을 제공 하 고 개체의 활성 상태를 확인 하는 데 사용할 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
@@ -55,7 +53,7 @@ HRESULT EnumerateGCReferences(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ICorDebugProcess5 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
 - [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

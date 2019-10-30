@@ -13,14 +13,12 @@ helpviewer_keywords:
 ms.assetid: 95d2aa0d-8eeb-4a9f-a216-5249f7e2c167
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ce0f11547d4b16516b7c78d1b1947f5c4bc831a3
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 46cd8b5c22f48ba45c4da7fa8876d6807a21f2b3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798806"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124149"
 ---
 # <a name="resolvetypelib-method"></a>ResolveTypeLib 메서드
 정규화 된 경로를 반환 하 여 형식 라이브러리의 단순 이름을 확인 합니다.  
@@ -60,21 +58,21 @@ HRESULT ResolveTypeLib(
  `pbstrResolvedTlbName`  
  제한이 `bstrSimpleName` 매개 변수에 이름이 지정 된 형식 라이브러리의 전체 경로를 포함 하는 [BSTR](https://docs.microsoft.com/previous-versions/windows/desktop/automat/bstr) 에 대 한 포인터입니다.  
   
-## <a name="remarks"></a>설명  
- [Tlbexp.exe (형식 라이브러리 내보내기)](../../tools/tlbexp-exe-type-library-exporter.md) 를 처리 하는 동안 [LoadTypeLibWithResolver 함수](loadtypelibwithresolver-function.md) 에서 메서드를호출합니다.`ResolveTypeLib`  
+## <a name="remarks"></a>주의  
+ `ResolveTypeLib` 메서드는 [tlbexp.exe (형식 라이브러리 내보내기)](../../tools/tlbexp-exe-type-library-exporter.md) 를 처리 하는 동안 [LoadTypeLibWithResolver 함수](loadtypelibwithresolver-function.md) 에서 호출 됩니다.  
   
- 이 인터페이스의 사용자 지정 구현은 `bstrSimpleName` 매개 변수에서 이름이 인 형식 라이브러리의 전체 경로를 포함 하는 [BSTR](https://docs.microsoft.com/previous-versions/windows/desktop/automat/bstr) 을 반환 해야 합니다.  
+ 이 인터페이스의 사용자 지정 구현은 `bstrSimpleName` 매개 변수에 명명 된 형식 라이브러리의 전체 경로를 포함 하는 [BSTR](https://docs.microsoft.com/previous-versions/windows/desktop/automat/bstr) 을 반환 해야 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** TlbRef.idl, TlbRef.h  
+ **헤더:** TlbRef, TlbRef  
   
- **라이브러리** TlbRef.lib  
+ **라이브러리:** TlbRef  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [Tlbexp 도우미 함수](index.md)
 - [LoadTypeLibEx](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)

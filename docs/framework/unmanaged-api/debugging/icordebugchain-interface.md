@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: f671f519-1cb3-4ae5-b9f1-abc5e783459f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 93ada40bd88e53cd06f5e8d8136b2d527d7741e6
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8baf3567e4ae188f88ad3a2df157cffab3f597ac
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69969300"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125794"
 ---
 # <a name="icordebugchain-interface"></a>ICorDebugChain 인터페이스
 
@@ -29,7 +27,7 @@ ms.locfileid: "69969300"
   
 ## <a name="methods"></a>메서드  
   
-|메서드|Description|  
+|메서드|설명|  
 |------------|-----------------|  
 |[EnumerateFrames 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-enumerateframes-method.md)|최신 프레임에서 시작 하 여 체인의 모든 관리 되는 스택 프레임을 포함 하는 열거자를 가져옵니다.|  
 |[GetActiveFrame 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getactiveframe-method.md)|체인의 활성 (가장 최근) 프레임을 가져옵니다.|  
@@ -44,21 +42,21 @@ ms.locfileid: "69969300"
 |[GetThread 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getthread-method.md)|이 호출 체인이 속한 실제 스레드를 가져옵니다.|  
 |[IsManaged 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-ismanaged-method.md)|이 체인이 관리 코드를 실행 하 고 있는지 여부를 나타내는 값을 가져옵니다.|  
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
  체인의 스택 프레임은 연속 된 스택 공간을 차지 하 고 동일한 스레드와 컨텍스트를 공유 합니다. 체인은 관리 코드 체인 또는 비관리 코드 체인을 나타낼 수 있습니다. 빈 `ICorDebugChain` 인스턴스는 관리 되지 않는 코드 체인을 나타냅니다.  
   
 > [!NOTE]
 > 이 인터페이스는 크로스 시스템 또는 크로스 프로세스 원격 호출을 지원하지 않습니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
- **라이브러리** CorGuids.lib  
+ **라이브러리:** CorGuids.lib  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

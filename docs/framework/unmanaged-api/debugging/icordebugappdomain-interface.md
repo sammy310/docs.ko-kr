@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: be7ae711-1217-4a44-be40-166e29641b77
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 12753ab65f9339e8f6c3049bb72755e87464eb1a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9abcb765357a0f305ae5acae77a4a13b07a003a3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963105"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134680"
 ---
 # <a name="icordebugappdomain-interface"></a>ICorDebugAppDomain 인터페이스
 
@@ -29,7 +27,7 @@ ms.locfileid: "69963105"
   
 ## <a name="methods"></a>메서드  
   
-|메서드|Description|  
+|메서드|설명|  
 |------------|-----------------|  
 |[Attach 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain-attach-method.md)|응용 프로그램 도메인에 디버거를 연결 합니다.|  
 |[EnumerateAssemblies 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain-enumerateassemblies-method.md)|응용 프로그램 도메인의 어셈블리에 대 한 열거자를 가져옵니다.|  
@@ -42,20 +40,20 @@ ms.locfileid: "69963105"
 |[GetProcess 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain-getprocess-method.md)|응용 프로그램 도메인을 포함 하는 프로세스를 가져옵니다.|  
 |[IsAttached 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain-isattached-method.md)|디버거가 응용 프로그램 도메인에 연결 되어 있는지 여부를 확인 합니다.|  
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
   
 > [!NOTE]
 > 이 인터페이스는 크로스 시스템 또는 크로스 프로세스 원격 호출을 지원하지 않습니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
- **라이브러리** CorGuids.lib  
+ **라이브러리:** CorGuids.lib  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

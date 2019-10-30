@@ -14,14 +14,12 @@ helpviewer_keywords:
 - BeginMethodEnumeration function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8a7b93bacabdfdd0551418644a7d9a4b1643c3d9
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: a27787052757098d4edb2d8516e22d8a03b7009a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798768"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138796"
 ---
 # <a name="beginenumeration-function"></a>BeginEnumeration 함수
 개체에 사용할 수 있는 메서드의 열거를 시작 합니다.  
@@ -60,22 +58,22 @@ HRESULT BeginMethodEnumeration (
 
 |상수  |값  |설명  |
 |---------|---------|---------|
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `lEnnumFlags`가 0이 아니고 지정 된 플래그 중 하나가 아닌 경우 |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `lEnnumFlags` 0이 아니고 지정 된 플래그 중 하나가 아닌 경우 |
 |`WBEM_S_NO_ERROR` | 0 | 함수 호출에 성공 했습니다.  |
   
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 이 함수는 [IWbemClassObject:: BeginMethodEnumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-beginmethodenumeration) 메서드에 대 한 호출을 래핑합니다.
 
 이 메서드 호출은 현재 개체가 클래스 정의 인 경우에만 지원 됩니다. 인스턴스를 가리키는 [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) 포인터에서 메서드 조작을 사용할 수 없습니다. 메서드가 열거 되는 순서는 [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)의 지정 된 인스턴스에 대해 고정이 되도록 보장 됩니다.
 
 ## <a name="requirements"></a>요구 사항  
- **플랫폼** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** WMINet_Utils.idl  
+ **헤더:** WMINet_Utils  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [WMI 및 성능 카운터 (관리 되지 않는 API 참조)](index.md)

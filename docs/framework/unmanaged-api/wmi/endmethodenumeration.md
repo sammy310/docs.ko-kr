@@ -14,14 +14,12 @@ helpviewer_keywords:
 - EndMethodEnumeration function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: cdcf49bd748a423b1cebfba88644aa961f1c7b65
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 174cf76d4b0ddf07e67e02bff20a983dca08819a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70799350"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132015"
 ---
 # <a name="endmethodenumeration-function"></a>EndMethodEnumeration 함수
 [Beginmethodenumeration 함수](beginmethodenumeration.md)를 호출 하 여 시작 된 열거 시퀀스를 종료 합니다.  
@@ -49,24 +47,24 @@ HRESULT EndMethodEnumeration (
 
 이 함수에서 반환 되는 다음 값은 *WbemCli* 헤더 파일에 정의 되어 있거나 코드에서 상수로 정의할 수 있습니다.
 
-|상수  |값  |Description  |
+|상수  |값  |설명  |
 |---------|---------|---------|
 |`WBEM_E_UNEXPECTED` | 0x8004101d | 내부 오류가 발생했습니다. |
 |`WBEM_S_NO_ERROR` | 0 | 함수 호출에 성공 했습니다.  |
   
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 이 함수는 [IWbemClassObject:: EndMethodEnumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-endmethodenumeration) 메서드에 대 한 호출을 래핑합니다.
 
-호출자는 [Beginmethodenumeration 함수](beginmethodenumeration.md)를 사용 하 여 열거형 시퀀스를 시작한 다음 메서드가 반환 `WBEM_S_NO_MORE_DATA`될 때까지 [nextmethod 함수](nextmethod.md )를 호출 합니다. 호출자는를 호출 `EndMethodEnumeration`하 여 선택적으로 시퀀스를 완료 합니다. 호출자는 언제 든 지를 호출 `EndMethodEnumeration` 하 여 열거를 일찍 종료할 수 있습니다.
+호출자는 [Beginmethodenumeration 함수](beginmethodenumeration.md)를 사용 하 여 열거형 시퀀스를 시작한 다음 메서드가 `WBEM_S_NO_MORE_DATA`를 반환할 때까지 [nextmethod 함수](nextmethod.md )를 호출 합니다. 호출자가 필요에 따라 `EndMethodEnumeration`를 호출 하 여 시퀀스를 완료 합니다. 호출자는 언제 든 지 `EndMethodEnumeration`를 호출 하 여 열거형을 종료할 수 있습니다.
 
 ## <a name="requirements"></a>요구 사항  
- **플랫폼** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** WMINet_Utils.idl  
+ **헤더:** WMINet_Utils  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [WMI 및 성능 카운터 (관리 되지 않는 API 참조)](index.md)

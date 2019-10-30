@@ -7,22 +7,22 @@ helpviewer_keywords:
 - clear Element
 - <clear> Element
 ms.assetid: 6d18c7be-27db-438b-8fb5-765d396b0b7b
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5d5da531bff3a0e9e198ba9b5ab6cf2b52bf36b5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c3e1c3a3cfd61a9fa8e7abdae9a25ec1bc674492
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921310"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119225"
 ---
-# <a name="clear-element-for-appsettings"></a>\<appSettings에 대 한 \<> 요소 지우기 >
+# <a name="clear-element-for-appsettings"></a>\<appSettings에 대 한 \<clear > 요소 >
 
 사용자 지정 응용 프로그램 설정을 지웁니다.
 
 [ **\<configuration>** ](../configuration-element.md)   
 &nbsp;&nbsp;[ **\<appSettings>** ](appsettings-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp; **\<clear>**
+&nbsp;&nbsp;&nbsp;&nbsp; **\<clear >**
 
 ## <a name="syntax"></a>구문
 
@@ -56,6 +56,6 @@ ms.locfileid: "69921310"
 </appSettings>
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [.NET Framework에 대 한 구성 파일 스키마](../index.md)

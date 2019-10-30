@@ -12,14 +12,12 @@ helpviewer_keywords:
 - profiling managed code
 - profiling managed code [Windows Store Apps]
 ms.assetid: 1c8eb2e7-f20a-42f9-a795-71503486a0f5
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8368930e60210b0cb470700e9c9470c57d536c13
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: da5942f9a2138a536d158f75a6977d20bf31b41c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291418"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140393"
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>CLR 프로파일러 및 Windows 스토어 앱
 
@@ -27,7 +25,7 @@ ms.locfileid: "72291418"
 
 ## <a name="introduction"></a>소개
 
-소개 단락을 지난 후에는 CLR 프로 파일링 API에 대해 잘 알고 있습니다. 관리 되는 데스크톱 응용 프로그램에 대해 잘 작동 하는 진단 도구를 이미 작성 했습니다. 이제 도구가 관리 되는 Windows 스토어 앱에서 작동 하도록 할 수 있습니다. 아마도 이미이 작업을 수행 하려고 했 고 간단한 작업이 아니라는 것을 발견 했습니다. 실제로 모든 도구 개발자에 게 명확 하지 않을 수 있는 몇 가지 고려 사항이 있습니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
+소개 단락을 지난 후에는 CLR 프로 파일링 API에 대해 잘 알고 있습니다. 관리 되는 데스크톱 응용 프로그램에 대해 잘 작동 하는 진단 도구를 이미 작성 했습니다. 이제 도구가 관리 되는 Windows 스토어 앱에서 작동 하도록 할 수 있습니다. 아마도 이미이 작업을 수행 하려고 했 고 간단한 작업이 아니라는 것을 발견 했습니다. 실제로 모든 도구 개발자에 게 명확 하지 않을 수 있는 몇 가지 고려 사항이 있습니다. 예를 들면,
 
 - Windows 스토어 앱은 심각 하 게 감소 된 권한으로 컨텍스트에서 실행 됩니다.
 
@@ -49,7 +47,7 @@ CLR 프로 파일링 API를 처음 접하는 경우이 항목의 끝에 있는 �
 
 이 항목 전체에서 사용 되는 용어는 다음과 같습니다.
 
-**응용 프로그램**
+**애플리케이션**
 
 프로파일러가 분석 중인 응용 프로그램입니다. 일반적으로이 응용 프로그램의 개발자는 이제 프로파일러를 사용 하 여 응용 프로그램의 문제를 진단 하는 데 도움이 됩니다. 일반적으로이 응용 프로그램은 Windows 데스크톱 응용 프로그램 이지만이 항목에서는 Windows 스토어 앱을 살펴보겠습니다.
 
@@ -114,7 +112,7 @@ NET Runtime version 4.0.30319.17929 - Loading profiler failed during CoCreateIns
 
 ### <a name="startup-load"></a>시작 로드
 
-일반적으로 데스크톱 앱에서 프로파일러 UI는 필요한 CLR 프로 파일링 API 환경 변수 (예: `COR_PROFILER`, `COR_ENABLE_PROFILING`, `COR_PROFILER_PATH`)를 포함 하는 환경 블록을 초기화 하 고 새를 만들어 프로파일러 DLL의 시작 로드를 확인 합니다. 해당 환경 블록을 사용 하는 프로세스입니다. Windows 스토어 앱의 경우에도 마찬가지 이지만 메커니즘은 다릅니다.
+일반적으로 데스크톱 앱에서 프로파일러 UI는 필요한 CLR 프로 파일링 API 환경 변수 (예: `COR_PROFILER`, `COR_ENABLE_PROFILING`및 `COR_PROFILER_PATH`)를 포함 하는 환경 블록을 초기화 하 고 새를 만들어 프로파일러 DLL의 시작 로드를 확인 합니다. 해당 환경 블록을 사용 하는 프로세스입니다. Windows 스토어 앱의 경우에도 마찬가지 이지만 메커니즘은 다릅니다.
 
 **관리자 권한으로 실행 안 함**
 
@@ -124,7 +122,7 @@ NET Runtime version 4.0.30319.17929 - Loading profiler failed during CoCreateIns
 
 먼저 시작할 Windows 스토어 앱을 프로파일러 사용자에 게 요청 하는 것이 좋습니다. 데스크톱 앱의 경우 파일 찾아보기 대화 상자를 표시 하 고 사용자가 .exe 파일을 찾아 선택 합니다. 그러나 Windows 스토어 앱은 서로 다르며 찾아보기 대화 상자를 사용 하는 것은 적합 하지 않습니다. 대신, 해당 사용자가 선택할 수 있도록 설치 된 Windows 스토어 앱 목록을 사용자에 게 표시 하는 것이 좋습니다.
 
-@No__t-0 클래스를 사용 하 여이 목록을 생성할 수 있습니다. `PackageManager`은 데스크톱 앱에서 사용할 수 있는 Windows 런타임 클래스 이며 실제로 데스크톱 응용 프로그램 *에서만* 사용할 수 있습니다.
+<xref:Windows.Management.Deployment.PackageManager> 클래스를 사용 하 여이 목록을 생성할 수 있습니다. `PackageManager`는 데스크톱 앱에서 사용할 수 있는 Windows 런타임 클래스 이며 실제로 데스크톱 응용 프로그램 *에서만* 사용할 수 있습니다.
 
 에서 C# 데스크톱 응용 프로그램으로 작성 된 가상 프로파일러 UI의 다음 코드 예제는 `PackageManager`을 사용 하 여 Windows 앱 목록을 생성 합니다.
 
@@ -137,7 +135,7 @@ IEnumerable<Package> packages = packageManager.FindPackagesForUser(currentUserSI
 
 **사용자 지정 환경 블록 지정**
 
-새 COM 인터페이스인 [Ipackagedebugsettings](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ipackagedebugsettings)를 사용 하면 일부 형식의 진단을 더 쉽게 수행할 수 있도록 Windows 스토어 앱의 실행 동작을 사용자 지정할 수 있습니다. 이러한 메서드 중 하나인 [Enabledebugging](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipackagedebugsettings-enabledebugging)을 사용 하면 자동 프로세스 일시 중단을 사용 하지 않도록 설정 하는 것과 같은 다른 유용한 효과와 함께 환경 블록이 시작 될 때 Windows 스토어 앱에 전달할 수 있습니다. 환경 블록은 CLR에서 프로파일러 DLL을 로드 하는 데 사용 하는 환경 변수 (`COR_PROFILER`, `COR_ENABLE_PROFILING` 및 `COR_PROFILER_PATH)`)를 지정 해야 하기 때문에 중요 합니다.
+새 COM 인터페이스인 [Ipackagedebugsettings](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ipackagedebugsettings)를 사용 하면 일부 형식의 진단을 더 쉽게 수행할 수 있도록 Windows 스토어 앱의 실행 동작을 사용자 지정할 수 있습니다. 이러한 메서드 중 하나인 [Enabledebugging](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipackagedebugsettings-enabledebugging)을 사용 하면 자동 프로세스 일시 중단을 사용 하지 않도록 설정 하는 것과 같은 다른 유용한 효과와 함께 환경 블록이 시작 될 때 Windows 스토어 앱에 전달할 수 있습니다. 환경 블록은 CLR에서 프로파일러 DLL을 로드 하는 데 사용 하는 환경 변수 (`COR_PROFILER`, `COR_ENABLE_PROFILING`및 `COR_PROFILER_PATH)`)를 지정 해야 하기 때문에 중요 합니다.
 
 다음 코드 조각을 살펴봅니다.
 
@@ -149,15 +147,15 @@ pkgDebugSettings.EnableDebugging(packageFullName, debuggerCommandLine,
 
 다음과 같은 몇 가지 항목을 받아야 합니다.
 
-- `packageFullName`은 패키지를 반복 하 고 `package.Id.FullName`을 잡기는 동안 결정 될 수 있습니다.
+- `packageFullName` 패키지를 반복 하 고 `package.Id.FullName`를 가져오는 동안 결정할 수 있습니다.
 
-- `debuggerCommandLine`은 조금 더 흥미로운 부분입니다. Windows 스토어 앱에 사용자 지정 환경 블록을 전달 하려면 간단 하 고 간단한 더미 디버거를 작성 해야 합니다. Windows에서 Windows 스토어 앱이 일시 중단 된 후 다음 예제와 같이 명령줄을 사용 하 여 디버거를 시작 하 여 디버거를 연결 합니다.
+- `debuggerCommandLine`는 조금 더 흥미로운 부분입니다. Windows 스토어 앱에 사용자 지정 환경 블록을 전달 하려면 간단 하 고 간단한 더미 디버거를 작성 해야 합니다. Windows에서 Windows 스토어 앱이 일시 중단 된 후 다음 예제와 같이 명령줄을 사용 하 여 디버거를 시작 하 여 디버거를 연결 합니다.
 
     ```console
     MyDummyDebugger.exe -p 1336 -tid 1424
     ```
 
-     여기서 `-p 1336`은 Windows 스토어 앱의 프로세스 ID 1336을 의미 하 고 `-tid 1424`은 스레드 ID 1424이 일시 중단 된 스레드 임을 의미 합니다. 더미 디버거는 명령줄에서 ThreadID를 구문 분석 하 고 해당 스레드를 다시 시작한 후 종료 합니다.
+     여기서 `-p 1336`은 Windows 스토어 앱에 프로세스 ID 1336이 있음을 의미 하 고 `-tid 1424` 스레드 ID 1424은 일시 중단 된 스레드입니다. 더미 디버거는 명령줄에서 ThreadID를 구문 분석 하 고 해당 스레드를 다시 시작한 후 종료 합니다.
 
      이 작업을 수행 C++ 하는 몇 가지 예제 코드는 다음과 같습니다. 오류 검사를 추가 해야 합니다.
 
@@ -253,7 +251,7 @@ pkgDebugSettings.EnableDebugging(packageFullName, null /* debuggerCommandLine */
 
 Windows API를 탐색할 때 모든 API는 데스크톱 앱, Windows 스토어 앱 또는 둘 다에 적용 되는 것으로 설명 됩니다. 예를 들어 [InitializeCriticalSectionAndSpinCount](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionandspincount) 함수 설명서의 **요구 사항** 섹션에서는 함수가 데스크톱 앱에만 적용 됨을 나타냅니다. 반면 [InitializeCriticalSectionEx](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionex) 함수는 데스크톱 앱과 Windows 스토어 앱 모두에 사용할 수 있습니다.
 
-프로파일러 DLL을 개발할 때 Windows 스토어 앱 인 것 처럼 처리 하 고 Windows 스토어 앱에서 사용할 수 있는 것으로 문서화 된 Api만 사용 합니다. 종속성을 분석 하 고 (예를 들어, 프로파일러 DLL에 대 한 `link /dump /imports`을 실행 하 여 감사를) 문서를 검색 하 여 어떤 종속성이 확인 되 고 없는지 확인할 수 있습니다. 대부분의 경우 안전 하다 고 문서화 된 최신 형태의 API로 대체 하 여 위반을 수정할 수 있습니다 (예: [InitializeCriticalSectionAndSpinCount](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionandspincount) 를 [InitializeCriticalSectionEx](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionex)로 대체).
+프로파일러 DLL을 개발할 때 Windows 스토어 앱 인 것 처럼 처리 하 고 Windows 스토어 앱에서 사용할 수 있는 것으로 문서화 된 Api만 사용 합니다. 종속성을 분석 하 고 (예를 들어, 프로파일러 DLL에 대 한 `link /dump /imports`를 실행 하 여 감사를 수행할 수 있음) 문서를 검색 하 여 어떤 종속성이 확인 되 고 없는지 확인할 수 있습니다. 대부분의 경우 안전 하다 고 문서화 된 최신 형태의 API로 대체 하 여 위반을 수정할 수 있습니다 (예: [InitializeCriticalSectionAndSpinCount](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionandspincount) 를 [InitializeCriticalSectionEx](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionex)로 대체).
 
 프로파일러 dll은 데스크톱 앱에만 적용 되는 Api를 호출 하지만 Windows 스토어 앱 내에서 프로파일러 DLL이 로드 된 경우에도 작동 하는 것 처럼 보일 수 있습니다. Windows 스토어 앱 프로세스에 로드 된 경우 프로파일러 DLL의 Windows 스토어 앱과 함께 사용 하기 위해 문서화 되지 않은 API를 사용 하는 것은 위험 합니다.
 
@@ -298,13 +296,13 @@ ApplicationData appData =
 tempDir = appData.TemporaryFolder.Path;
 ```
 
-한편, 사용자의 프로파일러 DLL은 기본적으로 동일한 작업을 수행할 수 있지만 [Applicationdata. Current](xref:Windows.Storage.ApplicationData.Current%2A) 속성을 사용 하 여 <xref:Windows.Storage.ApplicationData> 클래스를 더욱 쉽게 얻을 수 있습니다.
+한편, 사용자의 프로파일러 DLL은 기본적으로 동일한 작업을 수행할 수 있지만 [Applicationdata. Current](xref:Windows.Storage.ApplicationData.Current%2A) 속성을 사용 하 여 <xref:Windows.Storage.ApplicationData> 클래스에 보다 쉽게 액세스할 수 있습니다.
 
 **이벤트를 통해 통신**
 
 프로파일러 UI와 프로파일러 DLL 간에 간단한 신호 의미 체계가 필요한 경우 Windows 스토어 앱 및 데스크톱 앱 내에서 이벤트를 사용할 수 있습니다.
 
-프로파일러 DLL에서 [Createeventex](/windows/desktop/api/synchapi/nf-synchapi-createeventexa) 함수를 호출 하 여 원하는 이름을 가진 명명 된 이벤트를 만들 수 있습니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
+프로파일러 DLL에서 [Createeventex](/windows/desktop/api/synchapi/nf-synchapi-createeventexa) 함수를 호출 하 여 원하는 이름을 가진 명명 된 이벤트를 만들 수 있습니다. 예를 들면,
 
 ```cpp
 // Profiler DLL in Windows Store app (C++).
@@ -319,7 +317,7 @@ CreateEventEx(
 
 `AppContainerNamedObjects\<acSid>\MyNamedEvent`
 
-`<acSid>`은 Windows 스토어 앱의 AppContainer SID입니다. 이 항목의 이전 섹션에서는 현재 사용자에 대해 설치 된 패키지를 반복 하는 방법을 살펴보았습니다. 해당 샘플 코드에서 packageId를 가져올 수 있습니다. PackageId에서 다음과 유사한 코드를 사용 하 여 `<acSid>`을 얻을 수 있습니다.
+`<acSid>`은 Windows 스토어 앱의 AppContainer SID입니다. 이 항목의 이전 섹션에서는 현재 사용자에 대해 설치 된 패키지를 반복 하는 방법을 살펴보았습니다. 해당 샘플 코드에서 packageId를 가져올 수 있습니다. PackageId에서 다음과 유사한 코드를 사용 하 여 `<acSid>`를 얻을 수 있습니다.
 
 ```csharp
 IntPtr acPSID;
@@ -334,7 +332,7 @@ GetAppContainerFolderPath(acSid, out acDir);
 
 ### <a name="no-shutdown-notifications"></a>종료 알림 없음
 
-Windows 스토어 응용 프로그램 내에서 실행 하는 경우 프로파일러 DLL은 [ICorProfilerCallback:: Shutdown](icorprofilercallback-shutdown-method.md) 또는 [DllMain](/windows/desktop/Dlls/dllmain) (`DLL_PROCESS_DETACH`)을 사용 하 여 windows 스토어 앱이 종료 되었음을 프로파일러 dll에 알리기 위해 호출 되지 않아야 합니다. 실제로 호출 되지 않는 것으로 간주 됩니다. 지금까지 대부분의 프로파일러 Dll은 디스크에 캐시를 플러시하고, 파일을 닫고, 다시 프로파일러 UI로 알림을 보내는 등의 편리한 위치로 알림을 사용 했습니다. 그러나 이제 프로파일러 DLL을 약간 다르게 구성 해야 합니다.
+Windows 스토어 응용 프로그램 내에서 실행 하는 경우 프로파일러 DLL은 [ICorProfilerCallback:: Shutdown](icorprofilercallback-shutdown-method.md) 또는 [DllMain](/windows/desktop/Dlls/dllmain) (`DLL_PROCESS_DETACH`)을 사용 하 여 windows 스토어 앱이 종료 되었음을 프로파일러 dll에 알리기 위해 호출 하지 않아야 합니다. 실제로 호출 되지 않는 것으로 간주 됩니다. 지금까지 대부분의 프로파일러 Dll은 디스크에 캐시를 플러시하고, 파일을 닫고, 다시 프로파일러 UI로 알림을 보내는 등의 편리한 위치로 알림을 사용 했습니다. 그러나 이제 프로파일러 DLL을 약간 다르게 구성 해야 합니다.
 
 프로파일러 DLL은 전달 될 때 정보를 기록 해야 합니다. 성능상의 이유로 일괄 처리의 크기가 일부 임계값을 초과 하 여 메모리에서 정보를 일괄 처리 하 고 디스크에 플러시하 려 할 수 있습니다. 그러나 디스크에 아직 플러시되지 않은 정보는 손실 될 수 있다고 가정 합니다. 즉, 임계값을 신중 하 게 선택 하 고 프로파일러 DLL에서 작성 된 불완전 한 정보를 처리 하기 위해 프로파일러 UI를 확정 해야 합니다.
 
@@ -354,7 +352,7 @@ Windows 스토어 응용 프로그램 내에서 실행 하는 경우 프로파�
 
 CLR이 염려 하는 한 모든 WinMD 파일은 모듈입니다. 따라서 CLR 프로 파일링 API는 다른 관리 되는 모듈에 대 한 것과 동일한 방식으로 WinMD 파일이 로드 될 때 프로파일러 DLL에 지시 하 고의 moduleid 합니다.
 
-프로파일러 DLL은 [ICorProfilerInfo3:: GetModuleInfo2](icorprofilerinfo3-getmoduleinfo2-method.md) 메서드를 호출 하 고 [COR_PRF_MODULE_WINDOWS_RUNTIME](cor-prf-module-flags-enumeration.md) 플래그에 대 한 `pdwModuleFlags` 출력 매개 변수를 검사 하 여 다른 모듈의 WinMD 파일을 구분할 수 있습니다. ModuleID가 WinMD를 나타내는 경우에만 설정 됩니다.
+프로파일러 DLL은 [ICorProfilerInfo3:: GetModuleInfo2](icorprofilerinfo3-getmoduleinfo2-method.md) 메서드를 호출 하 고 [COR_PRF_MODULE_WINDOWS_RUNTIME](cor-prf-module-flags-enumeration.md) 플래그에 대 한 `pdwModuleFlags` output 매개 변수를 검사 하 여 다른 모듈의 WinMD 파일을 구분할 수 있습니다. ModuleID가 WinMD를 나타내는 경우에만 설정 됩니다.
 
 ### <a name="reading-metadata-from-winmds"></a>Winmd에서 메타 데이터 읽기
 
@@ -362,7 +360,7 @@ CLR이 염려 하는 한 모든 WinMD 파일은 모듈입니다. 따라서 CLR �
 
 따라서 메타 데이터 Api를 사용할 때 프로파일러가 가져오는 뷰 (raw Windows 런타임 뷰 또는 매핑된 .NET Framework 뷰)  대답은 사용자에 게 있습니다.
 
-WinMD에서 [ICorProfilerInfo:: GetModuleMetaData](icorprofilerinfo-getmodulemetadata-method.md) 메서드를 호출 하 여 [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)와 같은 메타 데이터 인터페이스를 가져오는 경우 `dwOpenFlags` 매개 변수에서 [ofnotransform](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) 을 설정 하 여이 매핑을 해제할 수 있습니다. 그렇지 않으면 기본적으로 매핑이 사용 됩니다. 일반적으로 프로파일러는 매핑을 사용 하도록 설정 하 여 프로파일러 DLL이 WinMD 메타 데이터에서 가져오는 문자열 (예: 형식 이름)이 프로파일러 사용자에 게 친숙 하 고 자연스럽 게 보이도록 합니다.
+WinMD에서 [ICorProfilerInfo:: GetModuleMetaData](icorprofilerinfo-getmodulemetadata-method.md) 메서드를 호출 하 여 [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)와 같은 메타 데이터 인터페이스를 가져오는 경우 `dwOpenFlags` 매개 변수에 [ofnotransform](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) 을 설정 하도록 선택 하 여이 매핑을 해제할 수 있습니다. 그렇지 않으면 기본적으로 매핑이 사용 됩니다. 일반적으로 프로파일러는 매핑을 사용 하도록 설정 하 여 프로파일러 DLL이 WinMD 메타 데이터에서 가져오는 문자열 (예: 형식 이름)이 프로파일러 사용자에 게 친숙 하 고 자연스럽 게 보이도록 합니다.
 
 ### <a name="modifying-metadata-from-winmds"></a>Winmd에서 메타 데이터 수정
 
@@ -384,13 +382,13 @@ Winmd의 메타 데이터 수정은 지원 되지 않습니다. WinMD 파일에 
 
 관련 점은 프로파일러에서 만든 스레드에 대해 수행 되는 호출은 프로파일러 DLL의 [ICorProfilerCallback](icorprofilercallback-interface.md) 메서드 중 하나를 구현 하는 외부에서 수행 되는 경우에도 항상 동기로 간주 됩니다. 이상 사용 되는 경우 이제 [Forcegc 메서드](icorprofilerinfo-forcegc-method.md)를 호출 하 여 CLR에서 프로파일러의 스레드를 관리 되는 스레드로 전환 했으므로 해당 스레드는 더 이상 프로파일러의 스레드로 간주 되지 않습니다. 따라서 CLR은 해당 스레드에 대해 동기로 한정 되는 항목에 대 한 보다 엄격한 정의를 적용 합니다. 즉, 호출이 프로파일러 DLL의 [ICorProfilerCallback](icorprofilercallback-interface.md) 메서드 중 하나에서 시작 되어야 동기로 한정 됩니다.
 
-실제로는 무엇을 의미 하나요? 대부분의 [ICorProfilerInfo](icorprofilerinfo-interface.md) 메서드는 동기적으로 호출 되는 것이 안전 하며, 그렇지 않은 경우 즉시 실패 합니다. 따라서 프로파일러 DLL이 일반적으로 프로파일러 생성 스레드에 대해 수행 되는 다른 호출 (예: [RequestProfilerDetach](icorprofilerinfo3-requestprofilerdetach-method.md), [RequestReJIT](icorprofilerinfo4-requestrejit-method.md)또는 [Requestrevert](icorprofilerinfo4-requestrevert-method.md))에 대해 [forcegc 메서드](icorprofilerinfo-forcegc-method.md) 스레드를 다시 사용할 경우 문제가 발생할 수 있습니다. . [DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) 와 같은 비동기 안전 함수에도 관리 되는 스레드에서 호출 될 때 특별 한 규칙이 있습니다. 자세한 내용은 블로그 게시물 [Profiler 스택 탐색을 참조 하세요. 자세한 내용은 기본 사항 및 @ no__t-0 이상입니다.
+실제로는 무엇을 의미 하나요? 대부분의 [ICorProfilerInfo](icorprofilerinfo-interface.md) 메서드는 동기적으로 호출 되는 것이 안전 하며, 그렇지 않은 경우 즉시 실패 합니다. 따라서 프로파일러 DLL이 일반적으로 프로파일러 생성 스레드에 대해 수행 되는 다른 호출 (예: [RequestProfilerDetach](icorprofilerinfo3-requestprofilerdetach-method.md), [RequestReJIT](icorprofilerinfo4-requestrejit-method.md)또는 [Requestrevert](icorprofilerinfo4-requestrevert-method.md))에 대해 [forcegc 메서드](icorprofilerinfo-forcegc-method.md) 스레드를 다시 사용할 경우 문제가 발생할 수 있습니다. . [DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) 와 같은 비동기 안전 함수에도 관리 되는 스레드에서 호출 될 때 특별 한 규칙이 있습니다. 자세한 내용은 블로그 게시물 [Profiler 스택 탐색: 기본 사항 및 이후](https://blogs.msdn.microsoft.com/davbr/2005/10/06/profiler-stack-walking-basics-and-beyond/) 항목을 참조 하세요.
 
 따라서 프로파일러 DLL이 [Forcegc 메서드](icorprofilerinfo-forcegc-method.md) 를 호출 하는 데 사용 하는 모든 스레드는 gc를 트리거하는 목적 *으로만* 사용 되 고 gc 콜백에 응답 하는 것이 좋습니다. 스택 샘플링 또는 분리와 같은 다른 작업을 수행 하기 위해 프로 파일링 API를 호출 해서는 안 됩니다.
 
 ### <a name="conditionalweaktablereferences"></a>ConditionalWeakTableReferences
 
-.NET Framework 4.5부터 프로파일러에 *종속 핸들*에 대 한 자세한 정보를 제공 하는 새로운 GC 콜백 [ConditionalWeakTableElementReferences](icorprofilercallback5-conditionalweaktableelementreferences-method.md)이 있습니다. 이러한 핸들은 GC 수명 관리를 위해 소스 개체에서 대상 개체에 대 한 참조를 효과적으로 추가 합니다. 종속 핸들은 새로운 것은 아니지만 관리 코드에서 프로그래밍 하는 개발자는 Windows 8 및 .NET Framework 4.5 이전에도 <xref:System.Runtime.CompilerServices.ConditionalWeakTable%602?displayProperty=nameWithType> 클래스를 사용 하 여 고유한 종속 핸들을 만들 수 있었습니다.
+.NET Framework 4.5부터 프로파일러에 *종속 핸들*에 대 한 자세한 정보를 제공 하는 새로운 GC 콜백 [ConditionalWeakTableElementReferences](icorprofilercallback5-conditionalweaktableelementreferences-method.md)이 있습니다. 이러한 핸들은 GC 수명 관리를 위해 소스 개체에서 대상 개체에 대 한 참조를 효과적으로 추가 합니다. 종속 핸들은 새로운 항목이 아닙니다. 관리 코드에서 프로그래밍 하는 개발자는 Windows 8 및 .NET Framework 4.5 이전에도 <xref:System.Runtime.CompilerServices.ConditionalWeakTable%602?displayProperty=nameWithType> 클래스를 사용 하 여 고유한 종속 핸들을 만들 수 있었습니다.
 
 그러나 관리 되는 XAML Windows 스토어 앱은 이제 종속 핸들을 많이 사용 합니다. 특히 CLR은 관리 되는 개체와 관리 되지 않는 Windows 런타임 개체 간의 참조 주기 관리를 지원 하기 위해이를 사용 합니다. 즉, 힙 그래프의 나머지 가장자리와 함께 시각화할 수 있도록 메모리 프로파일러에서 이러한 종속 핸들에 대 한 정보를 얻는 것 보다 더 중요 합니다. 프로파일러 DLL은 [RootReferences2](icorprofilercallback2-rootreferences2-method.md), [ObjectReferences](icorprofilercallback-objectreferences-method.md)및 [ConditionalWeakTableElementReferences](icorprofilercallback5-conditionalweaktableelementreferences-method.md) 를 함께 사용 하 여 힙 그래프의 전체 뷰를 구성 해야 합니다.
 
@@ -398,7 +396,7 @@ Winmd의 메타 데이터 수정은 지원 되지 않습니다. WinMD 파일에 
 
 CLR 프로 파일링 API를 사용 하 여 Windows 스토어 응용 프로그램 내에서 실행 되는 관리 코드를 분석할 수 있습니다. 실제로 개발 중인 기존 프로파일러를 사용 하 여 Windows 스토어 앱을 대상으로 지정할 수 있도록 특정 변경 작업을 수행할 수 있습니다. 프로파일러 UI는 디버깅 모드에서 Windows 스토어 앱을 활성화 하기 위해 새 Api를 사용 해야 합니다. 프로파일러 DLL이 Windows 스토어 앱에 적용 가능한 Api만 사용 하는지 확인 합니다. 프로파일러 DLL과 프로파일러 UI 간의 통신 메커니즘은 windows 스토어 앱 API 제한을 염두에 둔 상태에서 Windows 스토어 앱에 대 한 제한 된 사용 권한을 인식 하 여 작성 해야 합니다. 프로파일러 DLL은 CLR이 Winmd를 처리 하는 방법과 관리 되는 스레드를 기준으로 가비지 수집기의 동작이 어떻게 다른가 무엇 인지 알고 있어야 합니다.
 
-## <a name="resources"></a>리소스
+## <a name="resources"></a>자료
 
 **공용 언어 런타임**
 

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9ee96c9d-7a3d-4129-a6cc-7675c7f2dda4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1065c8d710ddbd6088ee0db694a43e098564e707
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5715f0634346dd0c6591cfe5687690aa0fba95f1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750384"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125314"
 ---
 # <a name="icordebugdatatargetgetplatform-method"></a>ICorDebugDataTarget::GetPlatform 메서드
-프로세서 아키텍처와 대상 프로세스가 실행 되는 운영 체제를 포함 하 여 플랫폼에 대 한 정보를 제공 합니다.  
+대상 프로세스가 실행 되는 프로세서 아키텍처 및 운영 체제를 포함 하 여 플랫폼에 대 한 정보를 제공 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -35,21 +33,21 @@ HRESULT GetPlatform([out] CorDebugPlatform * pTargetPlatform);
   
 ## <a name="parameters"></a>매개 변수  
  `pTargetPlatform`  
- [out] 에 대 한 포인터를 [CorDebugPlatformEnum](../../../../docs/framework/unmanaged-api/debugging/cordebugplatform-enumeration.md) 대상 플랫폼을 설명 하는 열거형입니다.  
+ 제한이 대상 플랫폼을 설명 하는 [Cordebugplatformenum](../../../../docs/framework/unmanaged-api/debugging/cordebugplatform-enumeration.md) 열거형에 대 한 포인터입니다.  
   
-## <a name="remarks"></a>설명  
- `CorDebugPlatformEnum` 열거형 반환 값은 사용 된 [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) 포인터 크기, 주소 공간 레이아웃, 레지스터 집합, 명령 형식, 상황에 맞는 레이아웃 대상 프로세스의 세부 정보를 확인 하는 인터페이스 및 호출 규칙입니다.  
+## <a name="remarks"></a>주의  
+ `CorDebugPlatformEnum` 열거형 반환 값은 [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) 인터페이스에서 포인터 크기, 주소 공간 레이아웃, 레지스터 집합, 명령 형식, 컨텍스트 레이아웃, 호출 규칙 등의 대상 프로세스에 대 한 세부 정보를 확인 하는 데 사용 됩니다.  
   
- `pTargetPlatform` 값 사용에는 실제 하드웨어를 지정 하는 대신 대상에 대해 에뮬레이트 되는 플랫폼을 참조할 수 있습니다. 예를 들어, 64 비트 버전 Windows 운영 체제의 Windows (WOW) 환경에서 Windows에서 실행 중인 프로세스를 사용 해야 합니다 `CORDB_PLATFORM_WINDOWS_X86` 의 값을 [CorDebugPlatformEnum](../../../../docs/framework/unmanaged-api/debugging/cordebugplatform-enumeration.md) 열거형입니다.  
+ `pTargetPlatform` 값은 사용 중인 실제 하드웨어를 지정 하는 대신 대상에 대해 에뮬레이트하는 플랫폼을 참조할 수 있습니다. 예를 들어 Windows 운영 체제 64 비트 버전의 WOW (Windows on Windows) 환경에서 실행 되는 프로세스는 [Cordebugplatformenum](../../../../docs/framework/unmanaged-api/debugging/cordebugplatform-enumeration.md) 열거형의 `CORDB_PLATFORM_WINDOWS_X86` 값을 사용 해야 합니다.  
   
- 이 메서드는 성공 해야 합니다. 실패 한 경우 대상 플랫폼을 사용할 수 없는 합니다. 메서드는 다음과 같은 이유로 실패할 수 있습니다.  
+ 이 메서드는 성공 해야 합니다. 실패 한 경우 대상 플랫폼을 사용할 수 없습니다. 메서드는 다음과 같은 이유로 실패할 수 있습니다.  
   
-- 대상에 대해 에뮬레이트 되는 플랫폼을 사용할 수 없는 합니다.  
+- 대상에 대해 에뮬레이트하는 플랫폼을 사용할 수 없습니다.  
   
-- 대상 플랫폼에는 실제 하드웨어를 사용할 수 없습니다.  
+- 대상 플랫폼의 실제 하드웨어를 사용할 수 없습니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
@@ -57,7 +55,7 @@ HRESULT GetPlatform([out] CorDebugPlatform * pTargetPlatform);
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ICorDebugDataTarget 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)
 - [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

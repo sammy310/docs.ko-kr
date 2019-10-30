@@ -14,14 +14,12 @@ helpviewer_keywords:
 - Get function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 17304dc8330e4f8571f25b8544f1049dff229f2b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 60f29b91000fd3c07efea88dcc319eb283a4af78
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798600"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120323"
 ---
 # <a name="get-function"></a>Get 함수
 
@@ -58,19 +56,19 @@ HRESULT Get (
 [in] 예약되어 있습니다. 이 매개 변수는 0 이어야 합니다.
 
 `pVal`\
-제한이 함수가 성공적으로 반환 되 면에는 `wszName` 속성 값이 포함 됩니다. `pval` 인수에 올바른 형식과 한정자의 값이 할당 됩니다.
+제한이 함수가 성공적으로 반환 되는 경우 `wszName` 속성의 값을 포함 합니다. `pval` 인수에는 한정자의 올바른 형식 및 값이 할당 됩니다.
 
 `pvtType`\
-제한이 함수가 성공적으로 반환 되 면에는 속성 형식을 나타내는 [CIM 형식 상수가](/windows/win32/api/wbemcli/ne-wbemcli-cimtype_enumeration) 포함 됩니다. 값은 일 `null`수도 있습니다. 
+제한이 함수가 성공적으로 반환 되 면에는 속성 형식을 나타내는 [CIM 형식 상수가](/windows/win32/api/wbemcli/ne-wbemcli-cimtype_enumeration) 포함 됩니다. 해당 값은 `null`수도 있습니다. 
 
 `plFlavor`\
-제한이 함수가 성공적으로 반환 되 면는 속성의 원본에 대 한 정보를 수신 합니다. 해당 값은 이거나 `null` *WbemCli* 헤더 파일에 정의 된 다음 WBEM_FLAVOR_TYPE 상수 중 하나일 수 있습니다. 
+제한이 함수가 성공적으로 반환 되 면는 속성의 원본에 대 한 정보를 수신 합니다. 해당 값은 `null`이거나 *WbemCli* 헤더 파일에 정의 된 다음 WBEM_FLAVOR_TYPE 상수 중 하나일 수 있습니다. 
 
-|상수  |값  |Description  |
+|상수  |값  |설명  |
 |---------|---------|---------|
 | `WBEM_FLAVOR_ORIGIN_SYSTEM` | 0x40 | 속성은 표준 시스템 속성입니다. |
 | `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | 클래스의 경우: 속성은 부모 클래스에서 상속 됩니다. <br> 인스턴스의 경우: 부모 클래스에서 상속 된 속성은 인스턴스에 의해 수정 되지 않았습니다.  |
-| `WBEM_FLAVOR_ORIGIN_LOCAL` | 0 | 클래스의 경우: 속성이 파생 클래스에 속해 있습니다. <br> 인스턴스의 경우: 속성은 인스턴스에 의해 수정 됩니다. 즉, 값을 제공 했거나 한정자를 추가 하거나 수정 했습니다. |
+| `WBEM_FLAVOR_ORIGIN_LOCAL` | 0 | 클래스의 경우: 속성이 파생 클래스에 속합니다. <br> 인스턴스의 경우: 속성은 인스턴스에 의해 수정 됩니다. 즉, 값을 제공 했거나 한정자를 추가 하거나 수정 했습니다. |
 
 ## <a name="return-value"></a>반환 값
 
@@ -84,22 +82,22 @@ HRESULT Get (
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 메모리가 부족 하 여 작업을 완료할 수 없습니다. |
 |`WBEM_S_NO_ERROR` | 0 | 함수 호출에 성공 했습니다.  |
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 이 함수는 [IWbemClassObject:: Get](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-get) 메서드에 대 한 호출을 래핑합니다.
 
-함수 `Get` 는 시스템 속성을 반환할 수도 있습니다.
+`Get` 함수는 시스템 속성을 반환할 수도 있습니다.
 
 `pVal`인수에는 한정자와 COM [VariantInit](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantinit) 함수에 대 한 올바른 형식 및 값이 할당 됩니다.
 
 ## <a name="requirements"></a>요구 사항
 
- **플랫폼** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하십시오.
+ **플랫폼:** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.
 
- **헤더:** WMINet_Utils.idl
+ **헤더:** WMINet_Utils
 
  **.NET Framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [WMI 및 성능 카운터 (관리 되지 않는 API 참조)](index.md)

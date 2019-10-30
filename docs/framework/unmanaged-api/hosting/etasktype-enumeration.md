@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: aa527b31-89d4-41f2-ad6f-63b76950b7df
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 73098077e3860d3f4a8a02921ecedf8dff24165b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bc956827ad59fc655137e4147e6d98b6d097d470
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774053"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138197"
 ---
 # <a name="etasktype-enumeration"></a>ETaskType 열거형
-으로 표시 되는 작업의 형식을 나타내는 값을 포함 한 [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) 또는 [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) 인터페이스입니다.  
+[ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) 또는 [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) 인터페이스로 표시 되는 작업의 유형을 나타내는 값을 포함 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -48,27 +46,27 @@ typedef enum ETaskType {
   
 |멤버|설명|  
 |------------|-----------------|  
-|`TT_ADUNLOAD`|응용 프로그램 도메인 언로드 작업을 나타냅니다.|  
-|`TT_DEBUGGERHELPER`|디버거 도우미 작업을 나타냅니다.|  
-|`TT_FINALIZER`|종료 자가 작업을 나타냅니다.|  
-|`TT_GC`|가비지 수집 작업을 나타냅니다.|  
-|`TT_THREADPOOL_GATE`|게이트 스레드 작업을 나타냅니다.|  
-|`TT_THREADPOOL_IOCOMPLETION`|I/O 스레드 작업 또는 완료 포트 스레드 작업을 나타냅니다.|  
-|`TT_THREADPOOL_TIMER`|타이머 스레드 작업을 나타냅니다.|  
-|`TT_THREADPOOL_WAIT`|대기 스레드 작업을 나타냅니다.|  
-|`TT_THREADPOOL_WORKER`|작업자 스레드 작업을 나타냅니다.|  
-|`TT_UNKNOWN`|알 수 없으면 작업 합니다.|  
-|`TT_USER`|사용자 작업을 나타냅니다.|  
+|`TT_ADUNLOAD`|인터페이스는 응용 프로그램 도메인 언로드 태스크를 나타냅니다.|  
+|`TT_DEBUGGERHELPER`|인터페이스는 디버거 도우미 태스크를 나타냅니다.|  
+|`TT_FINALIZER`|인터페이스는 종료자 작업을 나타냅니다.|  
+|`TT_GC`|인터페이스는 가비지 수집 작업을 나타냅니다.|  
+|`TT_THREADPOOL_GATE`|인터페이스는 게이트 스레드 작업을 나타냅니다.|  
+|`TT_THREADPOOL_IOCOMPLETION`|인터페이스는 i/o 스레드 작업 또는 완료 포트 스레드 작업을 나타냅니다.|  
+|`TT_THREADPOOL_TIMER`|인터페이스는 타이머 스레드 작업을 나타냅니다.|  
+|`TT_THREADPOOL_WAIT`|인터페이스는 대기 스레드 태스크를 나타냅니다.|  
+|`TT_THREADPOOL_WORKER`|인터페이스는 작업자 스레드 태스크를 나타냅니다.|  
+|`TT_UNKNOWN`|작업을 알 수 없습니다.|  
+|`TT_USER`|인터페이스는 사용자 작업을 나타냅니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** MSCorEE.h  
+ **헤더:** Mscoree.dll  
   
- **라이브러리:** MSCorEE.dll  
+ **라이브러리:** Mscoree.dll  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [호스팅 열거형](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

@@ -8,14 +8,12 @@ helpviewer_keywords:
 - .NET Native
 - C# and native compilation
 ms.assetid: 47cd5648-9469-4b1d-804c-43cc04384045
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5993cfdb0f50d8e474a4f18280d181d9ec2fdfa4
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 1f176e81905fe68c6d740a13240fe814659a7a59
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049663"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128383"
 ---
 # <a name="compiling-apps-with-net-native"></a>.NET 네이티브로 앱 컴파일
 
@@ -61,13 +59,13 @@ ms.locfileid: "71049663"
 
 Windows 10용 Windows 앱의 경우 앱 패키지(.appx 파일)의 .NET 네이티브 코드 컴파일 이진 파일을 Windows 스토어에 업로드합니다.
 
-## <a name="in-this-section"></a>섹션 내용
+## <a name="in-this-section"></a>단원 내용
 
 .NET 네이티브 코드 컴파일을 사용한 앱 개발에 대한 자세한 내용은 다음 항목을 참조하세요.
 
 - [.NET 네이티브 코드 컴파일 시작: 개발자 환경 연습](getting-started-with-net-native.md)
 
-- [.NET 네이티브 및 컴파일:](net-native-and-compilation.md) .NET 네이티브 프로젝트를 네이티브 코드로 컴파일하는 방법입니다.
+- [.NET 네이티브 및 컴파일:](net-native-and-compilation.md) .NET 네이티브에서 프로젝트를 네이티브 코드로 컴파일하는 방법입니다.
 
 - [리플렉션 및 .NET 네이티브](reflection-and-net-native.md)
 

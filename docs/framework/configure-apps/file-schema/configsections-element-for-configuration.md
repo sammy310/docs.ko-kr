@@ -7,21 +7,21 @@ helpviewer_keywords:
 - configSections Element
 - <configSections> Element
 ms.assetid: 9f963c1b-dc3f-4220-a8b6-2dd7a5a8e039
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 31b53837e24029fc7ff0b576d95c0213041a434e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6024144b6f12df22369366f04c3cbad02c5011d5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927668"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119023"
 ---
-# <a name="configsections-element-for-configuration"></a>\<구성 >에 대 한 \<configsections > 요소
+# <a name="configsections-element-for-configuration"></a>\<구성에 대 한 configSections > 요소를 \<
 
 구성 섹션과 네임 스페이스 선언을 포함 합니다.
 
 [ **\<configuration>** ](configuration-element.md)   
-&nbsp;&nbsp; **\<configSections>**
+**configSections을\<** &nbsp;&nbsp;
 
 ## <a name="attributes"></a>특성
 
@@ -37,14 +37,14 @@ ms.locfileid: "69927668"
 
 |     | 설명 |
 | --- | ----------- |
-| [ **\<section>** ](section-element.md) | 구성 섹션 선언을 포함 합니다. |
-| [ **\<sectionGroup>** ](sectiongroup-element-for-configsections.md) | 구성 섹션에 대 한 네임 스페이스를 정의 합니다. |
+| [ **\<섹션 >** ](section-element.md) | 구성 섹션 선언을 포함 합니다. |
+| [ **\<sectionGroup >** ](sectiongroup-element-for-configsections.md) | 구성 섹션에 대 한 네임 스페이스를 정의 합니다. |
 | [ **\<remove>** ](remove-element-for-configsections.md) | 미리 정의 된 섹션 또는 섹션 그룹을 제거 합니다. |
 | [ **\<clear>** ](clear-element-for-configsections.md) | 이전에 정의 된 모든 섹션과 섹션 그룹을 지웁니다. |
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
-이 요소가 구성 파일에 있으면  **\<구성 >** 요소의 첫 번째 자식 요소 여야 합니다.
+이 요소는 구성 파일에 있는 경우 **\<configuration >** 요소의 첫 번째 자식 요소 여야 합니다.
 
 ## <a name="example"></a>예제
 
@@ -64,8 +64,8 @@ ms.locfileid: "69927668"
 
 ## <a name="configuration-file"></a>구성 파일
 
-이 요소는 응용 프로그램 구성 파일, 컴퓨터 구성 파일 (machine.config) 및응용 프로그램 디렉터리 수준에 없는 web.config 파일에서 사용할 수 있습니다.
+이 요소는 응용 프로그램 구성 파일 *, 컴퓨터 구성 파일 (machine.config*) 및 응용 프로그램 디렉터리 수준에 없는 *web.config 파일* 에서 사용할 수 있습니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [.NET Framework에 대 한 구성 파일 스키마](index.md)

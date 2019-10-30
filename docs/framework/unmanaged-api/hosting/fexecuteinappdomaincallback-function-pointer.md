@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 2709f18f-3eee-497f-bc33-3ab7a485599b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8edd2a42ed1b826e1b6ea09e92165bc9fa967a8b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 970468bc2f50144c62c6e3cbcf9c00c2027f7663
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760242"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138176"
 ---
 # <a name="fexecuteinappdomaincallback-function-pointer"></a>FExecuteInAppDomainCallback 함수 포인터
-CLR (공용 언어 런타임) 관리 되는 코드를 실행 하 여 호출 되는 함수를 가리킵니다.  
+관리 코드를 실행 하기 위해 CLR (공용 언어 런타임)에 의해 호출 되는 함수를 가리킵니다.  
   
- .NET Framework 4에서이 함수 포인터에 사용 되지 않습니다.  
+ 이 함수 포인터는 .NET Framework 4에서 더 이상 사용 되지 않습니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,19 +36,19 @@ typedef HRESULT (__stdcall *FExecuteInAppDomainCallback) (
   
 ## <a name="parameters"></a>매개 변수  
  `cookie`  
- [in] 관리 되는 코드를 실행할 수 있는 불투명 호출자에 게 할당 된 메모리에 대 한 포인터입니다.  
+ 진행 실행할 관리 코드를 포함 하는 불투명 호출자 할당 메모리에 대 한 포인터입니다.  
   
- 할당 및이 메모리의 수명을 (CLR) 호출자에 의해 제어 됩니다. CLR 관리 되는 힙 메모리 아닙니다.  
+ 이 메모리의 할당 및 수명은 호출자 (즉, CLR)에 의해 제어 됩니다. 이는 CLR 관리 되는 힙 메모리가 아닙니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** MSCorEE.h  
+ **헤더:** Mscoree.dll  
   
- **라이브러리:** MSCorWks.dll  
+ **라이브러리:** Mscorwks.dll  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [사용되지 않는 CLR 호스팅 함수](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: e3a1ce48-9bb9-4ed6-a5fe-5e1819a6333f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 89cf2a12b0a693bbed3e8a3c1134d0f2b2a72a30
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5826297d8151cf05e1ec08acbf5c9cd381d2452b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754457"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137798"
 ---
 # <a name="icordebugfunction2getversionnumber-method"></a>ICorDebugFunction2::GetVersionNumber 메서드
 이 함수의 편집 하며 계속 하기 버전을 가져옵니다.  
@@ -37,19 +35,19 @@ HRESULT GetVersionNumber (
   
 ## <a name="parameters"></a>매개 변수  
  `pnVersion`  
- [out] 이 ICorDebugFunction2 개체로 표현 되는 함수의 버전 번호를 나타내는 정수에 대 한 포인터입니다.  
+ 제한이 이 ICorDebugFunction2 개체가 나타내는 함수의 버전 번호를 나타내는 정수에 대 한 포인터입니다.  
   
-## <a name="remarks"></a>설명  
- 런타임에서 수행 된 각 모듈에 디버그 세션 중 편집 횟수를 추적 합니다. 함수 버전 번호는 하나의 함수에 적용 된 편집 횟수 초과 합니다. 함수의 원래 버전은 1입니다. 수는 모듈에 대 한 될 때마다 증가 [ICorDebugModule2::ApplyChanges](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-applychanges-method.md) 해당 모듈에서 호출 됩니다. 따라서 첫 번째 및 세 번째 호출에서 함수 본문 바뀌었으면 `ICorDebugModule2::ApplyChanges`, `GetVersionNumber` 버전 1, 2 또는 4 해당 함수에 대 한 하지만 하지 버전 3 반환할 수 있습니다. (해당 함수가 없는 버전 3 해야 합니다.)  
+## <a name="remarks"></a>주의  
+ 런타임은 디버그 세션 중에 각 모듈에 수행 된 편집 횟수를 추적 합니다. 함수의 버전 번호는 함수를 도입 하는 편집의 수보다 하나 이상입니다. 함수의 원래 버전이 버전 1입니다. 이 모듈에 대해 [ICorDebugModule2:: ApplyChanges](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-applychanges-method.md) 가 호출 될 때마다 모듈의 숫자가 증가 합니다. 따라서 함수의 본문이 `GetVersionNumber` `ICorDebugModule2::ApplyChanges`에 대 한 첫 번째 및 세 번째 호출에서 대체 된 경우에는 해당 함수에 대 한 버전 1, 2 또는 4를 반환할 수 있지만 버전 3은 반환할 수 없습니다. 이 함수에는 버전 3이 포함 되지 않습니다.  
   
- 버전 번호는 각 모듈에 대해 개별적으로 추적 됩니다. 따라서 모듈 1 모듈 2 없음에 4 개의 편집을 수행한 다음 편집 모듈 1에서 6의 버전 번호를 모듈 1의 모든 편집된 함수에 할당 됩니다. 모듈 2를 편집 하는 동일한 모듈 2의 함수 2의 버전 번호를 받습니다.  
+ 버전 번호는 각 모듈에 대해 개별적으로 추적 됩니다. 따라서 모듈 1에서 4 개의 편집을 수행 하 고 모듈 2에서는 지정 하지 않을 경우 모듈 1에서 다음 편집은 모듈 1의 모든 편집 된 함수에 버전 번호 6을 할당 합니다. 동일한 편집이 모듈 2를 터치 하는 경우 모듈 2의 함수는 버전 번호 2를 가져옵니다.  
   
- 하 여 버전 번호를 가져올는 `GetVersionNumber` 메서드를 여 가져온 보다 작을 수 있습니다 [icordebugfunction:: Getcurrentversionnumber](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getcurrentversionnumber-method.md)합니다.  
+ `GetVersionNumber` 메서드에서 얻은 버전 번호는 [ICorDebugFunction:: GetCurrentVersionNumber](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getcurrentversionnumber-method.md)에서 가져온 버전 보다 낮을 수 있습니다.  
   
- 합니다 [icordebugcode:: Getversionnumber](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getversionnumber-method.md) 와 동일한 작업을 수행 하는 메서드 `ICorDebugFunction2::GetVersionNumber`합니다.  
+ [ICorDebugCode:: GetVersionNumber](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getversionnumber-method.md) 메서드는 `ICorDebugFunction2::GetVersionNumber`와 동일한 작업을 수행 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   

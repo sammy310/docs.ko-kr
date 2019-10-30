@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8d4ff73e-739b-40f6-9349-359fbc99c2f9
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1085bec812d797d3fbe4ea63ef447d4c466149f2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 12c00ed009e0e57436a71aed256b07a58ba68a32
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965051"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138345"
 ---
 # <a name="cor_gc_stats-structure"></a>COR_GC_STATS 구조체
 CLR (공용 언어 런타임)의 가비지 수집 메커니즘에 대 한 통계를 제공 합니다.  
@@ -60,10 +58,10 @@ typedef struct _COR_GC_STATS {
 |`KBytesPromotedFromGen0`|0 세대에서 1 세대로 수준이 올려진 개체의 크기 (kb)입니다.|  
 |`KBytesPromotedFromGen1`|1 세대에서 2 세대로 수준이 올려진 개체의 크기 (kb)입니다.|  
   
-## <a name="remarks"></a>설명  
- [ICLRGCManager:: getstats](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md) 메서드를 사용 하려면 `Flags` `COR_GC_STATS` 구조체의 필드를 [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) 열거형의 하나 이상의 값으로 설정 하 여 설정할 통계를 지정 해야 합니다.  
+## <a name="remarks"></a>주의  
+ [ICLRGCManager:: GetStats](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md) 메서드를 사용 하려면 `COR_GC_STATS` 구조의 `Flags` 필드를 [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) 열거형의 값 중 하나 이상으로 설정 하 여 설정할 통계를 지정 해야 합니다.  
   
- 다음 표에서는이 구조체에 의해 제공 되는 통계를 두 [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) 열거형 값 `COR_GC_COUNTS` `COR_GC_MEMORYUSAGE`에 매핑합니다.  
+ 다음 표에서는이 구조체에 의해 제공 되는 통계를 두 [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) 열거형 값 `COR_GC_COUNTS` 및 `COR_GC_MEMORYUSAGE`에 매핑합니다.  
   
 |COR_GC_COUNTS에서 지정|COR_GC_MEMORYUSAGE에서 지정|  
 |----------------------------------|---------------------------------------|  
@@ -78,15 +76,15 @@ pCLRGCManager->GetStats(&GCStats);
 ```  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** GCHost.idl  
+ **헤더:** GCHost  
   
- **라이브러리** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [호스팅 구조체](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
 - [자동 메모리 관리](../../../standard/automatic-memory-management.md)

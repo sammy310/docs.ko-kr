@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6fae3b23-5c9f-47c0-85d8-6bb75e050786
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 80465c8d1f1f9e09c0675de1667b999b332b9f6b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a5cda98cac0bc3fc6fb101fd0404b062224cb578
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738151"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134090"
 ---
 # <a name="icordebuginitialize-method"></a>ICorDebug::Initialize 메서드
 초기화는 `ICorDebug` 개체입니다.  
@@ -33,11 +31,11 @@ ms.locfileid: "67738151"
 HRESULT Initialize ();  
 ```  
   
-## <a name="remarks"></a>설명  
- 디버거를 호출 해야 `Initialize` 디버깅을 초기화 하는 시간을 만들 때 서비스입니다. 이 메서드를 다른 메서드 전에 호출 해야 `ICorDebug` 라고 합니다.  
+## <a name="remarks"></a>주의  
+ 디버거는 만든 시간에 `Initialize`를 호출 하 여 디버깅 서비스를 초기화 해야 합니다. `ICorDebug`에서 다른 메서드를 호출 하기 전에이 메서드를 호출 해야 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
@@ -45,6 +43,6 @@ HRESULT Initialize ();
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ICorDebug 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)

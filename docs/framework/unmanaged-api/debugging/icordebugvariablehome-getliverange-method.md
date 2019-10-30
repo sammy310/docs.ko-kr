@@ -1,5 +1,5 @@
 ---
-title: IcorDebugVariableHome::GetLiveRange 메서드
+title: 'IcorDebugVariableHome:: GetLiveRange 메서드'
 ms.date: 03/30/2017
 api_name:
 - ICorDebugVariableHome.GetLiveRange
@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 87277e1a-1595-4729-9e25-d1c3ac18ce5f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b293a3e166bb2614b5d0b064485178f5a569db48
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a8b8955d2f4c164031974f0d9021fb766ff2c030
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774149"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125122"
 ---
-# <a name="icordebugvariablehomegetliverange-method"></a>IcorDebugVariableHome::GetLiveRange 메서드
-이 변수는 라이브 기본 범위를 가져옵니다.  
+# <a name="icordebugvariablehomegetliverange-method"></a>IcorDebugVariableHome:: GetLiveRange 메서드
+이 변수가 활성 상태인 기본 범위를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,13 +36,13 @@ HRESULT GetLiveRange(
   
 ## <a name="parameters"></a>매개 변수  
  `pStartOffset`  
- [out] 변수는 첫 번째 실시간 논리 오프셋입니다.  
+ 제한이 변수가 첫 번째 라이브 오프셋입니다.  
   
  `pEndOffset`  
- [out] 변수는 마지막 라이브 지점 이후에 즉시 논리 오프셋입니다.  
+ 제한이 변수가 마지막으로 지속 된 지점 바로 다음의 논리적 오프셋입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
@@ -52,6 +50,6 @@ HRESULT GetLiveRange(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ICorDebugVariableHome 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)

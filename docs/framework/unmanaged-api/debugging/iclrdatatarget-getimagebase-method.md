@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 091c5f32-c160-49e3-a75f-4692e084c8e4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9dbb655d6ed0b9bd88c5eedf61a191401a805fb3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fed643ae52f50b1b8cd134880c644c8941da6f56
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738763"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122870"
 ---
 # <a name="iclrdatatargetgetimagebase-method"></a>ICLRDataTarget::GetImageBase 메서드
-지정된 된 이미지의 기본 메모리 주소를 가져옵니다.  
+지정 된 이미지의 기본 메모리 주소를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,23 +36,23 @@ HRESULT GetImageBase (
   
 ## <a name="parameters"></a>매개 변수  
  `imagePath`  
- [in] 해당 경로 포함 하는 이미지의 파일 이름입니다.  
+ 진행 경로를 포함 하는 이미지의 파일 이름입니다.  
   
  `baseAddress`  
- [out] 이미지의 기준 주소를 저장 하는 CLRDATA_ADDRESS 포인터입니다.  
+ 제한이 이미지의 기준 주소를 저장 하는 CLRDATA_ADDRESS에 대 한 포인터입니다.  
   
-## <a name="remarks"></a>설명  
- 이미지 파일 이름을 수도 있습니다는 경로 없을 수 있습니다. 경로 지정 하는 경우 일치 하는 이루어집니다 전체 경로입니다. 그렇지 않으면 일치 하는 파일 이름에만 적용 됩니다.  
+## <a name="remarks"></a>주의  
+ 이미지 파일 이름에 경로가 있을 수도 있고 없을 수도 있습니다. 경로를 지정 하면 전체 경로에서 일치가 수행 됩니다. 그렇지 않으면 파일 이름에 대해서만 일치가 수행 됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** ClrData.idl, ClrData.h  
+ **헤더:** ClrData .idl, ClrData .h  
   
  **라이브러리:** CorGuids.lib  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ICLRDataTarget 인터페이스](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)

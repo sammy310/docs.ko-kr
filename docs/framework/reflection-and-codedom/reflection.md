@@ -21,14 +21,12 @@ helpviewer_keywords:
 - discovering type information at run time
 - type system, reflection
 ms.assetid: d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 57f0a13a5e57898add667082d670de39431f940f
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 1768acd65b738af068cf98a8b8340c3179e9b885
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71045872"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130055"
 ---
 # <a name="reflection-in-net"></a>.NET에서의 리플렉션
 
@@ -85,7 +83,7 @@ ms.locfileid: "71045872"
 |[방법: 리플렉션을 사용하여 대리자 후크](how-to-hook-up-a-delegate-using-reflection.md)|메서드의 대리자를 만들고 대리자를 이벤트에 후크하는 방법을 설명합니다. 런타임에 <xref:System.Reflection.Emit.DynamicMethod>를 사용하여 이벤트 처리 메서드를 만드는 방법을 설명합니다.|  
 |[동적 메서드 및 어셈블리 내보내기](emitting-dynamic-methods-and-assemblies.md)|동적 어셈블리 및 동적 메서드를 생성하는 방법을 설명합니다.|  
   
-## <a name="reference"></a>참조  
+## <a name="reference"></a>참고  
 
 <xref:System.Type?displayProperty=nameWithType>  
   

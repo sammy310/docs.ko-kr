@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 189c36be-028c-4fba-a002-5edfb8fcd07f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 82f6c96e64b1197b5762c0ad7dbed5458b5d71a3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8cebb66ecf298eaaca0e7af23a9b8c6a2932c23f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760901"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131821"
 ---
 # <a name="icordebugstackwalknext-method"></a>ICorDebugStackWalk::Next 메서드
-이동 합니다 [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) 다음 프레임으로 개체입니다.  
+[ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) 개체를 다음 프레임으로 이동 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,20 +34,20 @@ HRESULT Next();
 ## <a name="return-value"></a>반환 값  
  이 메서드는 다음과 같은 특정 HRESULT뿐만 아니라 메서드 오류를 나타내는 HRESULT 오류도 반환합니다.  
   
-|HRESULT|Description|  
+|HRESULT|설명|  
 |-------------|-----------------|  
-|S_OK|런타임은 다음 프레임으로 성공적으로 해제 되었습니다 (설명 참조).|  
-|E_FAIL|`ICorDebugStackWalk` 개체를 이동할 수 없습니다.|  
+|S_OK|런타임이 다음 프레임으로 성공적으로 해제 되었습니다 (설명 참조).|  
+|E_FAIL|`ICorDebugStackWalk` 개체를 고급으로 지정할 수 없습니다.|  
 |CORDBG_S_AT_END_OF_STACK|이 해제의 결과로 스택의 끝에 도달 했습니다.|  
-|CORDBG_E_PAST_END_OF_STACK|프레임 포인터 끝 스택;에 이미 따라서 추가 프레임 없음 액세스할 수 있습니다.|  
+|CORDBG_E_PAST_END_OF_STACK|프레임 포인터가 이미 스택의 끝에 있습니다. 따라서 추가 프레임에는 액세스할 수 없습니다.|  
   
 ## <a name="exceptions"></a>예외  
   
-## <a name="remarks"></a>설명  
- 합니다 `Next` 메서드 발전을 `ICorDebugStackWalk` 런타임은 현재 프레임을 해제할 수 있는 경우에 호출 프레임으로 개체입니다. 그렇지 않으면 개체 런타임에서 해제 수 있는 다음 프레임으로 이동 합니다.  
+## <a name="remarks"></a>주의  
+ `Next` 메서드는 런타임에서 현재 프레임을 해제할 수 있는 경우에만 호출 하는 프레임으로 `ICorDebugStackWalk` 개체를 이동 합니다. 그렇지 않으면 개체는 런타임에서 해제할 수 있는 다음 프레임으로 이동 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
@@ -57,7 +55,7 @@ HRESULT Next();
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ICorDebugStackWalk 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)
 - [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

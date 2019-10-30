@@ -2,12 +2,12 @@
 title: LINQ to XML로 WPF 데이터 바인딩
 ms.date: 10/22/2019
 ms.topic: conceptual
-ms.openlocfilehash: c423ad9c8069b78b2e69a88d25d8e12bd3a3a1b7
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 53bc5e09d3c837b69c8f215b1b5c61d1b745f683
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72921025"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139804"
 ---
 # <a name="overview-of-wpf-data-binding-with-linq-to-xml"></a>LINQ to XML를 사용한 WPF 데이터 바인딩 개요
 
@@ -91,4 +91,4 @@ WPF 동적 바인딩을 구현하기 위해 동적 속성은 <xref:System.Window
 - [LINQ to XML 동적 속성](linq-to-xml-dynamic-properties.md)
 - [WPF의 XAML](/dotnet/framework/wpf/advanced/xaml-in-wpf)
 - [데이터 바인딩(WPF)](/dotnet/framework/wpf/data/data-binding-wpf)
-- [워크플로 마크업 사용](http://go.microsoft.com/fwlink/?LinkId=98685)
+- [워크플로 마크업 사용](https://go.microsoft.com/fwlink/?LinkId=98685)

@@ -14,14 +14,12 @@ helpviewer_keywords:
 - SetSecurity function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 94c76213acb66116105d181e9961a33976047ee7
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6d27779bcfc97e1c4156b8782896e83d4754491b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798242"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120222"
 ---
 # <a name="setsecurity-function"></a>SetSecurity 함수
 
@@ -41,25 +39,25 @@ HRESULT SetSecurity (
 ## <a name="parameters"></a>매개 변수
 
 `pNeedToReset`\
-제한이 함수가 반환 될 때 [resetsecurity](resetsecurity.md) 함수를 호출 하 `boolean` 여 토큰을 다시 설정 해야 하는지 여부를 나타내는에 대 한 포인터를 포함 합니다.
+제한이 함수가 반환 될 때 [Resetsecurity](resetsecurity.md) 함수를 호출 하 여 토큰을 다시 설정 해야 하는지 여부를 나타내는 `boolean`에 대 한 포인터를 포함 합니다.
 
 `token`\
-제한이 함수가 반환 될 때 현재 스레드와 연결 된 가장 토큰의 핸들에 대 한 포인터를 포함 합니다. 현재 스레드와 연결 된 `null` 토큰이 없는 경우 값은이 될 수 있습니다. 
+제한이 함수가 반환 될 때 현재 스레드와 연결 된 가장 토큰의 핸들에 대 한 포인터를 포함 합니다. 현재 스레드와 연결 된 토큰이 없는 경우 해당 값을 `null` 수 있습니다. 
 
 ## <a name="return-value"></a>반환 값
 
-함수가 성공 하면 반환 값 `S_OK` 은 (0)입니다.
+함수가 성공 하면 반환 값은 `S_OK` (0)입니다.
 
 함수가 실패 하면 반환 값은 0이 아닌 오류 코드입니다. 확장 오류 정보를 가져오려면 [Geterrorinfo](geterrorinfo.md) 함수를 호출 합니다.
 
 ## <a name="requirements"></a>요구 사항
 
- **플랫폼** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하십시오.
+ **플랫폼:** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.
 
- **헤더:** WMINet_Utils.idl
+ **헤더:** WMINet_Utils
 
  **.NET Framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [WMI 및 성능 카운터 (관리 되지 않는 API 참조)](index.md)

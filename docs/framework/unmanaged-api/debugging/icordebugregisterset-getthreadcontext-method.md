@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0f63400b-dc1c-48d6-b51a-75c3f7f28e03
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ef7619316cae46df350bd75a2c6838828f7e9c82
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: db4f9bc6277015055cbcdb509628f2862a71dbc4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747187"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127161"
 ---
 # <a name="icordebugregistersetgetthreadcontext-method"></a>ICorDebugRegisterSet::GetThreadContext 메서드
 현재 스레드의 컨텍스트를 가져옵니다.  
@@ -39,18 +37,18 @@ HRESULT GetThreadContext(
   
 ## <a name="parameters"></a>매개 변수  
  `contextSize`  
- [in] 크기 (바이트)의는 `context` 배열입니다.  
+ 진행 `context` 배열의 크기 (바이트)입니다.  
   
  `context`  
- [out에서] Win32를 구성 하는 바이트 배열을 `CONTEXT` 현재 플랫폼에 대 한 구조입니다.  
+ [in, out] 현재 플랫폼에 대 한 Win32 `CONTEXT` 구조를 구성 하는 바이트 배열입니다.  
   
-## <a name="remarks"></a>설명  
- 디버거는 Win32 대신이 함수를 호출 해야 `GetThreadContext` 상황에 일시적으로 변경 "도용" 상태에서 스레드 수 있기 때문에 작동 합니다. 반환 되는 데이터는 Win32 `CONTEXT` 현재 플랫폼에 대 한 구조입니다.  
+## <a name="remarks"></a>주의  
+ 스레드가 일시적으로 변경 된 "하이재킹" 상태가 될 수 있으므로 디버거가 Win32 `GetThreadContext` 함수 대신이 함수를 호출 해야 합니다. 반환 되는 데이터는 현재 플랫폼에 대 한 Win32 `CONTEXT` 구조입니다.  
   
- 비-리프 프레임에 대 한 클라이언트를 사용 하 여 어떤 레지스터 올바른지 확인 해야 [icordebugregisterset:: Getregistersavailable](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-getregistersavailable-method.md)합니다.  
+ 리프가 아닌 프레임의 경우 클라이언트는 [ICorDebugRegisterSet:: GetRegistersAvailable](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-getregistersavailable-method.md)를 사용 하 여 유효한 레지스터를 확인 해야 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
@@ -58,7 +56,7 @@ HRESULT GetThreadContext(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ICorDebugRegisterSet 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)
 - [ICorDebugRegisterSet2 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)

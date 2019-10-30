@@ -14,14 +14,12 @@ helpviewer_keywords:
 - Initialize function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1bc3688b30180bdcde0a87027955a789de749f90
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: b1f96b6285911b12d72ac136127d736b75d44023
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798433"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127387"
 ---
 # <a name="initialize-function"></a>Initialize 함수
 
@@ -41,20 +39,20 @@ HRESULT Initialize(
 
 `bAllowIManagementObjectQI`
 
-진행 `true` WMI 개체에 대 한 QueryInterface 호출이 허용 되는지 여부를 나타내려면입니다. `false` 그렇지 않으면입니다.
+[in] WMI 개체에 대 한 QueryInterface 호출이 허용 됨을 나타내는 `true`입니다. 그렇지 않으면 `false` 합니다.
 
 ## <a name="return-value"></a>반환 값
 
-함수는 항상 ( `S_OK` 0)을 반환 합니다.
+함수는 항상 `S_OK` (0)를 반환 합니다.
 
 ## <a name="requirements"></a>요구 사항
 
-**플랫폼** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하십시오.
+**플랫폼:** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.
 
-**헤더:** WMINet_Utils.def
+**헤더:** WMINet_Utils
 
 **.NET Framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [WMI 및 성능 카운터 (관리 되지 않는 API 참조)](index.md)

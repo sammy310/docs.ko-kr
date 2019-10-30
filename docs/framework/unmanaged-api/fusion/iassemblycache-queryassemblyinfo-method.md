@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 09313cb5-06f6-43bd-94f4-1055c6b0c99a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 08b9fdee1138becd4cd5a933f96021c470aadf1f
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e975db68252e866a0bf7898f1c9d3cbe67bbe24f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796784"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134573"
 ---
 # <a name="iassemblycachequeryassemblyinfo-method"></a>IAssemblyCache::QueryAssemblyInfo 메서드
 지정 된 어셈블리에 대 한 요청 된 데이터를 가져옵니다.  
@@ -52,12 +50,12 @@ HRESULT QueryAssemblyInfo (
  [in, out] 어셈블리에 대 한 데이터를 포함 하는 [ASSEMBLY_INFO](assembly-info-structure.md) 구조체입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Fusion. h  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [IAssemblyCache 인터페이스](iassemblycache-interface.md)

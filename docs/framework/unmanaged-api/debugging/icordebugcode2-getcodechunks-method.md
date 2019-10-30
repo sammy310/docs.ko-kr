@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 210a2f02-2678-4555-bc4a-78a0408764c8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d64773aa0d35f2e97232576d145dfcba624812ec
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: e419ebb6ffd404368baf32e591e08c4a70645127
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395523"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121117"
 ---
 # <a name="icordebugcode2getcodechunks-method"></a>ICorDebugCode2::GetCodeChunks 메서드
 
@@ -42,13 +40,13 @@ HRESULT GetCodeChunks (
 ## <a name="parameters"></a>매개 변수
 
 `cbufSize`  
-진행 @No__t-0 배열의 크기입니다.
+진행 `chunks` 배열의 크기입니다.
 
 `pcnumChunks`  
-제한이 @No__t-0 배열에서 반환 된 청크의 수입니다.
+제한이 `chunks` 배열에 반환 된 청크의 수입니다.
 
 `chunks`  
-제한이 각각 단일 코드 청크를 나타내는 "CodeChunkInfo" 구조체의 배열입니다. @No__t-0의 값이 0 이면이 매개 변수는 null 일 수 있습니다.
+제한이 각각 단일 코드 청크를 나타내는 "CodeChunkInfo" 구조체의 배열입니다. `cbufSize` 값이 0 이면이 매개 변수는 null 일 수 있습니다.
 
 ## <a name="remarks"></a>주의
 

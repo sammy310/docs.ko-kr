@@ -2,14 +2,12 @@
 title: Windows 스토어 앱을 .NET 네이티브로 마이그레이션
 ms.date: 03/30/2017
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fdff7aa92e4c1c357c83b625a6daadbf0a8d556b
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 7eea089ef9b492e156758d170394b17d74a60a64
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049510"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128317"
 ---
 # <a name="migrating-your-windows-store-app-to-net-native"></a>Windows 스토어 앱을 .NET 네이티브로 마이그레이션
 
@@ -29,7 +27,7 @@ ms.locfileid: "71049510"
 
 ## <a name="general-runtime-differences"></a>일반 런타임 차이점
 
-- 앱이 CLR ( <xref:System.TypeLoadException>공용 언어 런타임)에서 실행 될 때 JIT 컴파일러에서 throw 되는와 같은 예외는 일반적으로 .NET 네이티브에서 처리 될 때 컴파일 시간 오류가 발생 합니다.
+- 앱이 CLR (공용 언어 런타임)에서 실행 될 때 JIT 컴파일러가 throw 하는 <xref:System.TypeLoadException>와 같은 예외는 일반적으로 .NET 네이티브에서 처리 될 때 컴파일 시간 오류가 발생 합니다.
 
 - 앱 UI 스레드에서 <xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=nameWithType> 메서드를 호출해서는 안 됩니다. 이로 인해 .NET 네이티브에 교착 상태가 발생할 수 있습니다.
 
@@ -55,7 +53,7 @@ ms.locfileid: "71049510"
 
 예를 들어 데이터 바인딩을 사용하려면 앱이 속성 이름을 함수에 매핑할 수 있어야 합니다. Windows 스토어 앱용 .NET에서는 공용 언어 런타임이 리플렉션을 자동으로 사용하여 관리되는 형식 및 공개적으로 사용 가능한 네이티브 형식에 대해 이 기능을 제공합니다. .NET 네이티브에서 컴파일러는 데이터를 바인딩할 형식에 대 한 메타 데이터를 자동으로 포함 합니다.
 
-.NET 네이티브 컴파일러는 힌트 또는 지시문을 요구 하지 않고 작동 하 <xref:System.Collections.Generic.List%601> 는 <xref:System.Collections.Generic.Dictionary%602>및와 같은 일반적으로 사용 되는 제네릭 형식을 처리할 수도 있습니다. [동적](../../csharp/language-reference/keywords/dynamic.md) 키워드도 일정한 제한 내에서 지원됩니다.
+.NET 네이티브 컴파일러는 힌트 또는 지시문을 요구 하지 않고 작동 하는 <xref:System.Collections.Generic.List%601> 및 <xref:System.Collections.Generic.Dictionary%602>와 같은 일반적으로 사용 되는 제네릭 형식을 처리할 수도 있습니다. [동적](../../csharp/language-reference/keywords/dynamic.md) 키워드도 일정한 제한 내에서 지원됩니다.
 
 > [!NOTE]
 > 앱을 .NET 네이티브로 이식할 때 모든 동적 코드 경로를 철저 하 게 테스트 해야 합니다.
@@ -81,7 +79,7 @@ Windows 스토어 앱 용 .NET과 .NET 네이티브 간의 동작에는 다양 �
 
 - .NET Framework 클래스 라이브러리의 형식 및 멤버에 대한 개인 리플렉션은 지원되지 않습니다. 그러나 고유한 개인 형식과 멤버 및 타사 라이브러리의 형식과 멤버에 대해서는 리플렉션을 수행할 수 있습니다.
 
-- <xref:System.Reflection.ParameterInfo.HasDefaultValue%2A?displayProperty=nameWithType> 속성은 반환 값을 나타내는 `false` 개체에 대해 <xref:System.Reflection.ParameterInfo>를 올바르게 반환합니다. 그러나 Windows 스토어 앱용 .NET에서는 `true`가 반환됩니다. IL(중간 언어)은 이러한 반환을 직접 지원하지 않으며 해석은 언어에 따라 달라집니다.
+- <xref:System.Reflection.ParameterInfo.HasDefaultValue%2A?displayProperty=nameWithType> 속성은 반환 값을 나타내는 `false` 개체에 대해 <xref:System.Reflection.ParameterInfo> 를 올바르게 반환합니다. 그러나 Windows 스토어 앱용 .NET에서는 `true`가 반환됩니다. IL(중간 언어)은 이러한 반환을 직접 지원하지 않으며 해석은 언어에 따라 달라집니다.
 
 - <xref:System.RuntimeFieldHandle> 및 <xref:System.RuntimeMethodHandle> 구조체에서는 public 멤버를 사용할 수 없습니다. 이러한 형식은 LINQ, 식 트리 및 정적 배열 초기화에서만 지원됩니다.
 
@@ -93,7 +91,7 @@ Windows 스토어 앱 용 .NET과 .NET 네이티브 간의 동작에는 다양 �
 
 - 리플렉션을 사용하여 포인터 필드를 가져오거나 설정할 수는 없습니다.
 
-- 인수 개수가 잘못 되 고 인수 중 하나의 형식이 잘못 된 경우 .NET 네이티브는 <xref:System.ArgumentException> <xref:System.Reflection.TargetParameterCountException>대신을 throw 합니다.
+- 인수 개수가 잘못 되 고 인수 중 하나의 형식이 잘못 된 경우 .NET 네이티브는 <xref:System.Reflection.TargetParameterCountException>대신 <xref:System.ArgumentException>을 throw 합니다.
 
 - 예외의 이진 serialization은 일반적으로 지원되지 않습니다. 그러므로 serialize할 수 없는 개체를 <xref:System.Exception.Data%2A?displayProperty=nameWithType> 사전에 추가할 수 있습니다.
 
@@ -159,35 +157,35 @@ Windows 스토어 앱 용 .NET과 .NET 네이티브 간의 동작에는 다양 �
 
 **기타 API**
 
-- 특성이 형식에 <xref:System.PlatformNotSupportedException>적용 되지 않으면<xref:System.Runtime.InteropServices.GuidAttribute> [TypeInfo.GUID](xref:System.Type.GUID) 속성이 예외를 throw 합니다. GUID는 주로 COM 지원을 위해 사용됩니다.
+- <xref:System.Runtime.InteropServices.GuidAttribute> 특성이 형식에 적용 되지 않으면 [TypeInfo](xref:System.Type.GUID) 속성은 <xref:System.PlatformNotSupportedException> 예외를 throw 합니다. GUID는 주로 COM 지원을 위해 사용됩니다.
 
-- 메서드 <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> 는 .NET 네이티브에서 짧은 날짜를 포함 하는 문자열을 올바르게 구문 분석 합니다. 그러나 Microsoft 기술 자료 문서 [KB2803771](https://support.microsoft.com/kb/2803771) 및 [KB2803755](https://support.microsoft.com/kb/2803755)에서 설명하는 날짜 및 시간 구문 분석 변경 내용과의 호환성은 유지되지 않습니다.
+- <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> 메서드는 .NET 네이티브에서 짧은 날짜를 포함 하는 문자열을 올바르게 구문 분석 합니다. 그러나 Microsoft 기술 자료 문서 [KB2803771](https://support.microsoft.com/kb/2803771) 및 [KB2803755](https://support.microsoft.com/kb/2803755)에서 설명하는 날짜 및 시간 구문 분석 변경 내용과의 호환성은 유지되지 않습니다.
 
-- <xref:System.Numerics.BigInteger.ToString%2A?displayProperty=nameWithType>`("E")` .NET 네이티브에서 올바르게 반올림 됩니다. 일부 CLR 버전에서는 결과 문자열이 반올림되는 대신 잘립니다.
+- <xref:System.Numerics.BigInteger.ToString%2A?displayProperty=nameWithType> `("E")` .NET 네이티브에서 올바르게 반올림 됩니다. 일부 CLR 버전에서는 결과 문자열이 반올림되는 대신 잘립니다.
 
 <a name="HttpClient"></a>
 
 ### <a name="httpclient-differences"></a>HttpClient의 차이점
 
-.NET 네이티브에서 클래스는 <xref:System.Net.Http.HttpClientHandler> Windows 스토어 앱 용 표준 .net에서 <xref:Windows.Web.Http.Filters.HttpBaseProtocolFilter> 사용 되는 <xref:System.Net.WebRequest> 및 <xref:System.Net.WebResponse> 클래스 대신 클래스를 통해 내부적으로 WinINet을 사용 합니다.  WinINet은 <xref:System.Net.Http.HttpClientHandler> 클래스에서 지원하는 구성 옵션 중 일부만 지원합니다.  그 결과는 다음과 같습니다.
+.NET 네이티브에서 <xref:System.Net.Http.HttpClientHandler> 클래스는 내부적으로 Windows 스토어 앱 용 표준 .NET에서 사용 되는 <xref:System.Net.WebRequest> 및 <xref:System.Net.WebResponse> 클래스 대신 WinINet (<xref:Windows.Web.Http.Filters.HttpBaseProtocolFilter> 클래스를 통해)을 사용 합니다.  WinINet은 <xref:System.Net.Http.HttpClientHandler> 클래스에서 지원하는 구성 옵션 중 일부만 지원합니다.  그 결과는 다음과 같습니다.
 
-- 의 일부 기능 속성 <xref:System.Net.Http.HttpClientHandler> 은 .NET 네이티브에서 반환 `false` 하는 반면 Windows 스토어 `true` 앱 용 표준 .net에서는를 반환 합니다.
+- <xref:System.Net.Http.HttpClientHandler>에 대 한 일부 기능 속성은 .NET 네이티브에 `false`를 반환 하지만 Windows 스토어 앱 용 표준 .NET에서 `true`를 반환 합니다.
 
-- 일부 구성 속성 `get` 접근자는 Windows 스토어 앱 용 .net의 기본 구성 가능한 값과 다른 .NET 네이티브의 고정 값을 항상 반환 합니다.
+- 일부 구성 속성 `get` 접근자는 Windows 스토어 앱 용 .NET의 기본 구성 가능한 값과 다른 .NET 네이티브의 고정 값을 항상 반환 합니다.
 
 다음 하위 섹션에서 몇 가지 추가적인 동작 차이점에 대해 설명합니다.
 
 **프록시**
 
-클래스 <xref:Windows.Web.Http.Filters.HttpBaseProtocolFilter> 는 요청 별로 프록시 구성 또는 재정의를 지원 하지 않습니다.  즉, .NET 네이티브의 모든 요청은 <xref:System.Net.Http.HttpClientHandler.UseProxy%2A?displayProperty=nameWithType> 속성의 값에 따라 시스템에서 구성 된 프록시 서버를 사용 하거나 프록시 서버를 사용 하지 않습니다.  Windows 스토어 앱용 .NET에서는 <xref:System.Net.Http.HttpClientHandler.Proxy%2A?displayProperty=nameWithType> 속성을 통해 프록시 서버가 정의됩니다.  .NET 네이티브에서를 이외의 값 <xref:System.Net.Http.HttpClientHandler.Proxy%2A?displayProperty=nameWithType> `null` 으로 설정 하면 <xref:System.PlatformNotSupportedException> 예외가 throw 됩니다.  속성 <xref:System.Net.Http.HttpClientHandler.SupportsProxy%2A?displayProperty=nameWithType> 은 .NET 네이티브 `false` 에 대해를 반환 하는 `true` 반면 Windows 스토어 앱에 대 한 표준 .NET Framework을 반환 합니다.
+<xref:Windows.Web.Http.Filters.HttpBaseProtocolFilter> 클래스는 요청 별로 프록시 구성 또는 재정의를 지원 하지 않습니다.  즉, .NET 네이티브의 모든 요청은 <xref:System.Net.Http.HttpClientHandler.UseProxy%2A?displayProperty=nameWithType> 속성의 값에 따라 시스템에서 구성 된 프록시 서버를 사용 하거나 프록시 서버를 사용 하지 않습니다.  Windows 스토어 앱용 .NET에서는 <xref:System.Net.Http.HttpClientHandler.Proxy%2A?displayProperty=nameWithType> 속성을 통해 프록시 서버가 정의됩니다.  .NET 네이티브에서 <xref:System.Net.Http.HttpClientHandler.Proxy%2A?displayProperty=nameWithType>를 `null` 이외의 값으로 설정 하면 <xref:System.PlatformNotSupportedException> 예외가 throw 됩니다.  <xref:System.Net.Http.HttpClientHandler.SupportsProxy%2A?displayProperty=nameWithType> 속성은 .NET 네이티브에 대 한 `false`를 반환 하는 반면 Windows 스토어 앱에 대 한 표준 .NET Framework `true`을 반환 합니다.
 
 **자동 리디렉션**
 
-클래스 <xref:Windows.Web.Http.Filters.HttpBaseProtocolFilter> 는 최대 자동 리디렉션 수를 구성할 수 없습니다.  Windows 스토어 앱용 표준 .NET에서는 <xref:System.Net.Http.HttpClientHandler.MaxAutomaticRedirections%2A?displayProperty=nameWithType> 속성의 기본값이 50이며, 이 값은 수정 가능합니다. .NET 네이티브에서이 속성의 값은 10이 고 수정 하려고 하면 <xref:System.PlatformNotSupportedException> 예외가 throw 됩니다.  속성 <xref:System.Net.Http.HttpClientHandler.SupportsRedirectConfiguration%2A?displayProperty=nameWithType> 은 .NET 네이티브 `false` 에 대해를 반환 하는 `true` 반면 Windows 스토어 앱 용 .net에서는를 반환 합니다.
+<xref:Windows.Web.Http.Filters.HttpBaseProtocolFilter> 클래스는 최대 자동 리디렉션 수를 구성할 수 없습니다.  Windows 스토어 앱용 표준 .NET에서는 <xref:System.Net.Http.HttpClientHandler.MaxAutomaticRedirections%2A?displayProperty=nameWithType> 속성의 기본값이 50이며, 이 값은 수정 가능합니다. .NET 네이티브에서이 속성의 값은 10이 고 수정 하려고 하면 <xref:System.PlatformNotSupportedException> 예외가 throw 됩니다.  <xref:System.Net.Http.HttpClientHandler.SupportsRedirectConfiguration%2A?displayProperty=nameWithType> 속성은 .NET 네이티브에 대 한 `false`를 반환 하는 반면 Windows 스토어 앱 용 .NET에서 `true`를 반환 합니다.
 
 **자동 압축 풀기**
 
-Windows 스토어 앱용 .NET에서는 <xref:System.Net.Http.HttpClientHandler.AutomaticDecompression%2A?displayProperty=nameWithType> 속성을 <xref:System.Net.DecompressionMethods.Deflate>또는 <xref:System.Net.DecompressionMethods.GZip>중 하나로 설정하거나, <xref:System.Net.DecompressionMethods.Deflate> 및 <xref:System.Net.DecompressionMethods.GZip>둘 다로 설정하거나, <xref:System.Net.DecompressionMethods.None>으로 설정할 수 있습니다.  .NET 네이티브는, <xref:System.Net.DecompressionMethods.Deflate> 또는 <xref:System.Net.DecompressionMethods.None>와 <xref:System.Net.DecompressionMethods.GZip>함께 지원 됩니다.  <xref:System.Net.Http.HttpClientHandler.AutomaticDecompression%2A> 속성을 <xref:System.Net.DecompressionMethods.Deflate> 또는 <xref:System.Net.DecompressionMethods.GZip> 중 하나만으로 설정하면 <xref:System.Net.DecompressionMethods.Deflate> 및 <xref:System.Net.DecompressionMethods.GZip>둘 다로 자동 설정됩니다.
+Windows 스토어 앱용 .NET에서는 <xref:System.Net.Http.HttpClientHandler.AutomaticDecompression%2A?displayProperty=nameWithType> 속성을 <xref:System.Net.DecompressionMethods.Deflate>또는 <xref:System.Net.DecompressionMethods.GZip>중 하나로 설정하거나, <xref:System.Net.DecompressionMethods.Deflate> 및 <xref:System.Net.DecompressionMethods.GZip>둘 다로 설정하거나, <xref:System.Net.DecompressionMethods.None>으로 설정할 수 있습니다.  .NET 네이티브 <xref:System.Net.DecompressionMethods.GZip>또는 <xref:System.Net.DecompressionMethods.None>와 함께 <xref:System.Net.DecompressionMethods.Deflate>만 지원 합니다.  <xref:System.Net.Http.HttpClientHandler.AutomaticDecompression%2A> 속성을 <xref:System.Net.DecompressionMethods.Deflate> 또는 <xref:System.Net.DecompressionMethods.GZip> 중 하나만으로 설정하면 <xref:System.Net.DecompressionMethods.Deflate> 및 <xref:System.Net.DecompressionMethods.GZip>둘 다로 자동 설정됩니다.
 
 **쿠키**
 
@@ -195,7 +193,7 @@ Windows 스토어 앱용 .NET에서는 <xref:System.Net.Http.HttpClientHandler.A
 
 **자격 증명**
 
-Windows 스토어 앱용 .NET에서는 <xref:System.Net.Http.HttpClientHandler.UseDefaultCredentials%2A?displayProperty=nameWithType> 및 <xref:System.Net.Http.HttpClientHandler.Credentials%2A?displayProperty=nameWithType> 속성이 독립적으로 작동합니다.  또한 <xref:System.Net.Http.HttpClientHandler.Credentials%2A> 속성은 <xref:System.Net.ICredentials> 인터페이스를 구현하는 모든 개체를 수락합니다.  .NET 네이티브에서 <xref:System.Net.Http.HttpClientHandler.UseDefaultCredentials%2A> 속성을로 `true` <xref:System.Net.Http.HttpClientHandler.Credentials%2A> 설정 하면 속성이 `null`로 설정 됩니다.  또한 <xref:System.Net.Http.HttpClientHandler.Credentials%2A> 속성은 `null`, <xref:System.Net.CredentialCache.DefaultCredentials%2A>또는 <xref:System.Net.NetworkCredential>형식 개체로만 설정할 수 있습니다.  다른 <xref:System.Net.ICredentials> 개체(가장 널리 사용되는 항목은 <xref:System.Net.CredentialCache>)를 <xref:System.Net.Http.HttpClientHandler.Credentials%2A> 속성에 할당하면 <xref:System.PlatformNotSupportedException>이 throw됩니다.
+Windows 스토어 앱용 .NET에서는 <xref:System.Net.Http.HttpClientHandler.UseDefaultCredentials%2A?displayProperty=nameWithType> 및 <xref:System.Net.Http.HttpClientHandler.Credentials%2A?displayProperty=nameWithType> 속성이 독립적으로 작동합니다.  또한 <xref:System.Net.Http.HttpClientHandler.Credentials%2A> 속성은 <xref:System.Net.ICredentials> 인터페이스를 구현하는 모든 개체를 수락합니다.  .NET 네이티브에서 <xref:System.Net.Http.HttpClientHandler.UseDefaultCredentials%2A> 속성을 `true`로 설정 하면 <xref:System.Net.Http.HttpClientHandler.Credentials%2A> 속성이 `null`됩니다.  또한 <xref:System.Net.Http.HttpClientHandler.Credentials%2A> 속성은 `null`, <xref:System.Net.CredentialCache.DefaultCredentials%2A>또는 <xref:System.Net.NetworkCredential>형식 개체로만 설정할 수 있습니다.  다른 <xref:System.Net.ICredentials> 개체(가장 널리 사용되는 항목은 <xref:System.Net.CredentialCache>)를 <xref:System.Net.Http.HttpClientHandler.Credentials%2A> 속성에 할당하면 <xref:System.PlatformNotSupportedException>이 throw됩니다.
 
 **기타 지원되지 않거나 구성할 수 없는 기능**
 
@@ -213,9 +211,9 @@ Windows 스토어 앱용 .NET에서는 <xref:System.Net.Http.HttpClientHandler.U
 ### <a name="interop-differences"></a>interop 차이점
  **사용되지 않는 API**
 
- 관리되는 코드와의 상호 운용성을 위해 제공되었던 사용 빈도가 낮은 여러 API가 더 이상 사용되지 않습니다. .NET 네이티브와 함께 사용 하는 경우 이러한 api는 <xref:System.NotImplementedException> 또는 <xref:System.PlatformNotSupportedException> 예외를 throw 하거나 컴파일러 오류가 발생할 수 있습니다. Windows 스토어 앱용 .NET에서는 이러한 API가 사용되지 않는 것으로 표시되지만 호출해도 컴파일러 오류가 아닌 컴파일러 경고가 생성됩니다.
+ 관리되는 코드와의 상호 운용성을 위해 제공되었던 사용 빈도가 낮은 여러 API가 더 이상 사용되지 않습니다. .NET 네이티브와 함께 사용 하는 경우 이러한 Api는 <xref:System.NotImplementedException> 또는 <xref:System.PlatformNotSupportedException> 예외를 throw 하거나 컴파일러 오류가 발생할 수 있습니다. Windows 스토어 앱용 .NET에서는 이러한 API가 사용되지 않는 것으로 표시되지만 호출해도 컴파일러 오류가 아닌 컴파일러 경고가 생성됩니다.
 
- 마샬링에 `VARIANT` 사용 되지 않는 api는 다음과 같습니다.
+ `VARIANT` 마샬링에 대해 사용 되지 않는 Api는 다음과 같습니다.
 
 - <xref:System.Runtime.InteropServices.BStrWrapper?displayProperty=nameWithType>
 - <xref:System.Runtime.InteropServices.CurrencyWrapper?displayProperty=nameWithType>
@@ -240,17 +238,17 @@ Windows 스토어 앱용 .NET에서는 <xref:System.Net.Http.HttpClientHandler.U
 - <xref:System.Runtime.InteropServices.ComEventsHelper?displayProperty=nameWithType>
 - <xref:System.Runtime.InteropServices.ComSourceInterfacesAttribute>
 
-.NET 네이티브에서 지원 되지 <xref:System.Runtime.InteropServices.ICustomQueryInterface?displayProperty=nameWithType> 않는 인터페이스에서 사용 되지 않는 api는 다음과 같습니다.
+.NET 네이티브에서 지원 되지 않는 <xref:System.Runtime.InteropServices.ICustomQueryInterface?displayProperty=nameWithType> 인터페이스에서 사용 되지 않는 Api는 다음과 같습니다.
 
-- <xref:System.Runtime.InteropServices.ICustomQueryInterface?displayProperty=nameWithType>(모든 멤버)
-- <xref:System.Runtime.InteropServices.CustomQueryInterfaceMode?displayProperty=nameWithType>(모든 멤버)
-- <xref:System.Runtime.InteropServices.CustomQueryInterfaceResult?displayProperty=nameWithType>(모든 멤버)
+- <xref:System.Runtime.InteropServices.ICustomQueryInterface?displayProperty=nameWithType> (모든 멤버)
+- <xref:System.Runtime.InteropServices.CustomQueryInterfaceMode?displayProperty=nameWithType> (모든 멤버)
+- <xref:System.Runtime.InteropServices.CustomQueryInterfaceResult?displayProperty=nameWithType> (모든 멤버)
 - <xref:System.Runtime.InteropServices.Marshal.GetComInterfaceForObject%28System.Object%2CSystem.Type%2CSystem.Runtime.InteropServices.CustomQueryInterfaceMode%29?displayProperty=fullName>
 
 기타 지원 되지 않는 interop 기능은 다음과 같습니다.
 
-- <xref:System.Runtime.InteropServices.ICustomAdapter?displayProperty=nameWithType>(모든 멤버)
-- <xref:System.Runtime.InteropServices.SafeBuffer?displayProperty=nameWithType>(모든 멤버)
+- <xref:System.Runtime.InteropServices.ICustomAdapter?displayProperty=nameWithType> (모든 멤버)
+- <xref:System.Runtime.InteropServices.SafeBuffer?displayProperty=nameWithType> (모든 멤버)
 - <xref:System.Runtime.InteropServices.UnmanagedType.Currency?displayProperty=fullName>
 - <xref:System.Runtime.InteropServices.UnmanagedType.VBByRefStr?displayProperty=fullName>
 - <xref:System.Runtime.InteropServices.UnmanagedType.AnsiBStr?displayProperty=fullName>
@@ -274,7 +272,7 @@ Windows 스토어 앱용 .NET에서는 <xref:System.Net.Http.HttpClientHandler.U
 
  대부분의 플랫폼 호출 및 COM interop 시나리오는 .NET 네이티브에서 계속 지원 됩니다. 특히 WinRT(Windows 런타임) API와의 모든 상호 운용성 및 Windows 런타임에 필요한 모든 마샬링은 지원됩니다. 여기에는 다음에 대한 마샬링 지원이 포함됩니다.
 
-- 배열(<xref:System.Runtime.InteropServices.UnmanagedType.ByValArray?displayProperty=nameWithType> 포함)
+- 배열( <xref:System.Runtime.InteropServices.UnmanagedType.ByValArray?displayProperty=nameWithType>포함)
 
 - `BStr`
 
@@ -338,7 +336,7 @@ Windows 스토어 앱용 .NET에서는 <xref:System.Net.Http.HttpClientHandler.U
 
 **DataAnnotations(System.ComponentModel.DataAnnotations)**
 
-<xref:System.ComponentModel.DataAnnotations> 및<xref:System.ComponentModel.DataAnnotations.Schema> 네임 스페이스의 형식은 .NET 네이티브에서 지원 되지 않습니다. 여기에는 windows 8 용 Windows 스토어 앱 용 .NET에서 제공 되는 다음과 같은 형식이 포함 됩니다.
+<xref:System.ComponentModel.DataAnnotations> 및 <xref:System.ComponentModel.DataAnnotations.Schema> 네임 스페이스의 형식은 .NET 네이티브에서 지원 되지 않습니다. 여기에는 windows 8 용 Windows 스토어 앱 용 .NET에서 제공 되는 다음과 같은 형식이 포함 됩니다.
 
 - <xref:System.ComponentModel.DataAnnotations.AssociationAttribute?displayProperty=nameWithType>
 - <xref:System.ComponentModel.DataAnnotations.ConcurrencyCheckAttribute?displayProperty=nameWithType>
@@ -368,7 +366,7 @@ Windows 스토어 앱용 .NET에서는 <xref:System.Net.Http.HttpClientHandler.U
 
  **Visual Basic**
 
-Visual Basic 현재 .NET 네이티브에서 지원 되지 않습니다. <xref:Microsoft.VisualBasic> 및<xref:Microsoft.VisualBasic.CompilerServices> 네임 스페이스의 다음 형식은 .NET 네이티브 사용할 수 없습니다.
+Visual Basic 현재 .NET 네이티브에서 지원 되지 않습니다. <xref:Microsoft.VisualBasic> 및 <xref:Microsoft.VisualBasic.CompilerServices> 네임 스페이스의 다음 형식은 .NET 네이티브에서 사용할 수 없습니다.
 
 - <xref:Microsoft.VisualBasic.CallType?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.Constants?displayProperty=nameWithType>
@@ -390,11 +388,11 @@ Visual Basic 현재 .NET 네이티브에서 지원 되지 않습니다. <xref:Mi
 
 **리플렉션 컨텍스트(System.Reflection.Context 네임스페이스)**
 
-클래스 <xref:System.Reflection.Context.CustomReflectionContext?displayProperty=nameWithType> 는 .NET 네이티브에서 지원 되지 않습니다.
+.NET 네이티브에서는 <xref:System.Reflection.Context.CustomReflectionContext?displayProperty=nameWithType> 클래스가 지원 되지 않습니다.
 
 **RTC(System.Net.Http.Rtc)**
 
-클래스 `System.Net.Http.RtcRequestFactory` 는 .NET 네이티브에서 지원 되지 않습니다.
+.NET 네이티브에서는 `System.Net.Http.RtcRequestFactory` 클래스가 지원 되지 않습니다.
 
 **Windows Communication Foundation (WCF) (System.ServiceModel.\*)**
 
@@ -583,7 +581,7 @@ Visual Basic 현재 .NET 네이티브에서 지원 되지 않습니다. <xref:Mi
 
 <xref:System.Runtime.Serialization.DataContractSerializer>, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>및 <xref:System.Xml.Serialization.XmlSerializer> 클래스의 serialization 및 deserialization에는 다음과 같은 차이점이 있습니다.
 
-- .NET 네이티브 <xref:System.Runtime.Serialization.DataContractSerializer> 에서 및 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 는 해당 형식이 루트 serialization 형식이 아닌 기본 클래스 멤버를 포함 하는 파생 클래스를 serialize 또는 deserialize 할 수 없습니다. 예를 들어 다음 코드에서 `Y` 를 serialize 또는 deserialize하려고 하면 오류가 발생합니다.
+- .NET 네이티브에서 <xref:System.Runtime.Serialization.DataContractSerializer> 및 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>는 해당 형식이 루트 serialization 형식이 아닌 기본 클래스 멤버를 포함 하는 파생 클래스를 serialize 또는 deserialize 할 수 없습니다. 예를 들어 다음 코드에서 `Y` 를 serialize 또는 deserialize하려고 하면 오류가 발생합니다.
 
   [!code-csharp[ProjectN#10](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/compat3.cs#10)]
 
@@ -633,7 +631,7 @@ Visual Basic 현재 .NET 네이티브에서 지원 되지 않습니다. <xref:Mi
 
 - <xref:System.Xml.Serialization.XmlSerializer> 는 <xref:System.Xml.Serialization.IXmlSerializable> 사용자 지정 serialization 인터페이스를 따르지 않습니다. 이 인터페이스를 구현하는 클래스가 있는 경우 <xref:System.Xml.Serialization.XmlSerializer> 는 해당 형식을 POCO(Plain Old CLR 개체) 형식으로 간주하여 public 속성만 serialize합니다.
 
-- 일반 <xref:System.Exception> 개체 직렬화는 및 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>에서 <xref:System.Runtime.Serialization.DataContractSerializer> 잘 작동 하지 않습니다.
+- 일반 <xref:System.Exception> 개체 직렬화는 <xref:System.Runtime.Serialization.DataContractSerializer> 및 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>에서 제대로 작동 하지 않습니다.
 
 <a name="VS"></a>
 
@@ -663,7 +661,7 @@ Visual Studio에서 기본적으로 사용되는 x86 빌드 도구를 사용합�
 
 Windows 스토어 앱 프로젝트에 대 한 단위 테스트 라이브러리에서 .NET 네이티브를 사용 하도록 설정 하는 것은 지원 되지 않으며 프로젝트 빌드에 실패 합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [시작](getting-started-with-net-native.md)
 - [런타임 지시문(rd.xml) 구성 파일 참조](runtime-directives-rd-xml-configuration-file-reference.md)

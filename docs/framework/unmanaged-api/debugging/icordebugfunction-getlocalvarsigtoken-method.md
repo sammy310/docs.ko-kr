@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 31e53494-bcc9-4981-91a4-f7e0f02cad48
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e03e7a965bc923d91cb0c83a9ea8ea5899da63a9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c159a175ddd380015cc2dc21637c8b63fd3caea6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754663"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137892"
 ---
 # <a name="icordebugfunctiongetlocalvarsigtoken-method"></a>ICorDebugFunction::GetLocalVarSigToken 메서드
-ICorDebugFunction 인스턴스에 의해 표현 되는 함수의 로컬 변수 서명에 대 한 메타 데이터를 토큰을 가져옵니다.  
+이 ICorDebugFunction 인스턴스가 나타내는 함수의 지역 변수 서명에 대 한 메타 데이터 토큰을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,10 +35,10 @@ HRESULT GetLocalVarSigToken (
   
 ## <a name="parameters"></a>매개 변수  
  `pmdSig`  
- [out] 에 대 한 포인터를 `mdSignature` 이 함수의 로컬 변수 서명에 대 한 토큰 또는 `mdSignatureNil`이면이 함수에 로컬 변수가 없습니다.  
+ 제한이 이 함수에 대 한 지역 변수 시그니처의 `mdSignature` 토큰에 대 한 포인터 이거나,이 함수에 지역 변수가 없는 경우 `mdSignatureNil`입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   

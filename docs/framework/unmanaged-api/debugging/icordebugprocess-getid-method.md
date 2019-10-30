@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b0ba8453-fa7e-4c14-93e5-335409cd4a47
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9ebdf0dd2457cd10e31ff71c32b1c09d0e014431
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ae0c23e3d48df6add8951a6d90029185a99bb323
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765992"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128838"
 ---
 # <a name="icordebugprocessgetid-method"></a>ICorDebugProcess::GetID 메서드
-프로세스의 운영 체제 (OS) ID를 가져옵니다.  
+프로세스의 OS (운영 체제) ID를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -35,10 +33,10 @@ HRESULT GetID([out] DWORD *pdwProcessId);
   
 ## <a name="parameters"></a>매개 변수  
  `pdwProcessId`  
- [out] 프로세스의 고유 ID입니다.  
+ 제한이 프로세스의 고유 ID입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   

@@ -23,14 +23,12 @@ helpviewer_keywords:
 - compiling satellite assemblies
 - re-signing assemblies
 ms.assetid: 8d5c6044-2919-41d2-8321-274706b295ac
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 17465b07172788f18a432784653afadda18467fe
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 2ab4fc990e0c524e0c77fa0bdedd7c263edb21b2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71045693"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129968"
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>데스크톱 응용 프로그램용 위성 어셈블리 만들기
 
@@ -88,7 +86,7 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
   
  Al.exe에서 사용할 수 있는 전체 옵션 목록을 보려면 [어셈블리 링커(Al.exe)](../tools/al-exe-assembly-linker.md)를 참조하세요.
   
-## <a name="satellite-assemblies-an-example"></a>위성 어셈블리: 예제  
+## <a name="satellite-assemblies-an-example"></a>위성 어셈블리: 예  
  다음은 지역화된 인사말이 들어 있는 메시지 상자를 표시하는 간단한 "Hello world" 예제입니다. 이 예제에서는 영어(미국), 프랑스어(프랑스) 및 러시아어(러시아) 문화권에 대한 리소스가 포함되고 해당 대체 문화권은 영어입니다. 예제를 만들려면 다음을 수행합니다.  
   
 1. 기본 문화권의 리소스를 포함하는 Greeting.resx 또는 Greeting.txt라는 리소스 파일을 만듭니다. 값이 “Hello world!”인 `HelloString`이라는 단일 문자열을 이 파일에 저장합니다.
@@ -198,7 +196,7 @@ sn –R StringLibrary.resources.dll RealKeyPair.snk
 
 ### <a name="installing-a-satellite-assembly-in-the-global-assembly-cache"></a>전역 어셈블리 캐시에 위성 어셈블리 설치
 
-런타임이 리소스 대체 프로세스에서 리소스를 검색할 때, 가장 먼저 [전역 어셈블리 캐시](../app-domains/gac.md)에서 찾습니다. 자세한 내용은 [리소스 패키지 및 배포](packaging-and-deploying-resources-in-desktop-apps.md) 항목의 “리소스 대체 프로세스” 섹션을 참조하세요. 위성 어셈블리를 강력한 이름으로 서명하는 즉시 [전역 어셈블리 캐시 도구(Gacutil.exe)](../tools/gacutil-exe-gac-tool.md)를 사용하여 전역 어셈블리 캐시에 설치할 수 있습니다.
+런타임이 리소스 대체 프로세스에서 리소스를 검색할 때, 가장 먼저 [전역 어셈블리 캐시](../app-domains/gac.md)에서 찾습니다. 자세한 내용은 [리소스 패키징 및 배포](packaging-and-deploying-resources-in-desktop-apps.md) 항목의 "리소스 대체 프로세스" 섹션을 참조 하세요. 위성 어셈블리를 강력한 이름으로 서명 하는 즉시 [전역 어셈블리 캐시 도구 (gacutil.exe)](../tools/gacutil-exe-gac-tool.md)를 사용 하 여 전역 어셈블리 캐시에 설치할 수 있습니다.
 
 다음 Gacutil.exe 명령은 StringLibrary.resources.dll을 전역 어셈블리 캐시에 설치합니다.
 
@@ -208,7 +206,7 @@ gacutil -i:StringLibrary.resources.dll
 
 **/i** 옵션은 Gacutil.exe가 지정된 어셈블리를 전역 어셈블리 캐시에 설치하도록 지정합니다. 위성 어셈블리가 캐시에 설치된 후, 포함된 리소스는 위성 어셈블리를 사용하도록 설계된 모든 애플리케이션에서 사용할 수 있게 됩니다.
 
-### <a name="resources-in-the-global-assembly-cache-an-example"></a>글로벌 어셈블리 캐시의 리소스: 예제
+### <a name="resources-in-the-global-assembly-cache-an-example"></a>전역 어셈블리 캐시의 리소스: 예
 
 다음 예제에서는 .NET Framework 클래스 라이브러리에서 메서드를 사용하여 지역화된 인사말을 리소스 파일에서 추출하고 반환합니다. 라이브러리 및 리소스를 전역 어셈블리 캐시에 등록합니다. 예제에는 영어(미국), 프랑스어(프랑스), 러시아어(러시아) 및 영미 문화권에 대한 리소스가 포함됩니다. 영어는 기본 문화권으로, 해당 리소스는 주 어셈블리에 저장됩니다. 처음 예제는 라이브러리 및 퍼블릭 키를 가진 위성 어셈블리의 서명을 연기한 다음, 퍼블릭/프라이빗 키 쌍을 사용하여 다시 서명합니다. 예제를 만들려면 다음을 수행합니다.
 
@@ -318,7 +316,7 @@ gacutil -i:StringLibrary.resources.dll
 
 14. Example.exe를 실행합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [리소스 패키징 및 배포](packaging-and-deploying-resources-in-desktop-apps.md)
 - [어셈블리 서명 연기](../../standard/assembly/delay-sign.md)

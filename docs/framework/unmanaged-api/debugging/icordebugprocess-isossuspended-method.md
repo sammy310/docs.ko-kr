@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 83406cb2-5797-4402-872d-89c9516aefec
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 275f62c8211f71f067d310dd4b3af2ddb11e93d7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 21da69d4bff0f17eb607dda45fb7dbafea8c59f7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755465"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128766"
 ---
 # <a name="icordebugprocessisossuspended-method"></a>ICorDebugProcess::IsOSSuspended 메서드
-이 프로세스를 중지 하는 디버거 결과로 지정 된 스레드가 일시 중단 된 여부를 나타내는 값을 가져옵니다.  
+디버거에서이 프로세스를 중지 한 결과로 지정 된 스레드가 일시 중단 되었는지 여부를 나타내는 값을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,18 +35,18 @@ HRESULT IsOSSuspended(
   
 ## <a name="parameters"></a>매개 변수  
  `threadID`  
- [in] 해당 스레드의 ID입니다.  
+ 진행 해당 스레드의 ID입니다.  
   
  `pbSuspended`  
- [out] 부울 값에 대 한 포인터 `true` 지정된 된 스레드의 일시 중단 된 그렇지 않은 경우 *`pbSuspended` 는 `false`합니다.  
+ 제한이 지정 된 스레드가 일시 중단 된 경우 `true` 되는 부울 값에 대 한 포인터입니다. 그렇지 않으면 *`pbSuspended` `false`됩니다.  
   
-## <a name="remarks"></a>설명  
- 지정 된 스레드의 Win32 일시 중단 횟수가 지정된 된 스레드에으로 일시 중단 된 결과로 디버거가이 프로세스를 중지 하는 경우 1 씩 증가 합니다. 디버거 사용자 인터페이스 (UI) 운영 체제를 표시 하는 경우 계정에이 정보를 사용 하려고 합니다. (OS) 사용자에 게 스레드 개수를 일시 중단 합니다.  
+## <a name="remarks"></a>주의  
+ 디버거가이 프로세스를 중지 한 결과로 지정 된 스레드가 일시 중단 되 면 지정 된 스레드의 Win32 일시 중단 횟수가 1 씩 증가 합니다. 디버거 UI (사용자 인터페이스)는 사용자에 게 스레드의 OS (운영 체제) 일시 중단 횟수가 표시 되는 경우이 정보를 고려 하는 것이 좋습니다.  
   
- `IsOSSuspended` 메서드가 관리 되지 않는 디버깅의 경우에만 적합 합니다. 관리 되는 디버깅 하는 동안 스레드는 협조적으로 일시 중단 된 것이 아니라 OS 일시 중단 됩니다.  
+ `IsOSSuspended` 메서드는 관리 되지 않는 디버깅 컨텍스트에서만 의미가 있습니다. 관리 디버깅 중에는 스레드가 OS 일시 중단 되지 않고 협조적으로 일시 중단 됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   

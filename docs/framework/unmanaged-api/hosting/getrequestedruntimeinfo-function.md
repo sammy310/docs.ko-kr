@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 0dfd7cdc-c116-4e25-b56a-ac7b0378c942
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 62a6f6d6e73ce42c8c86d4e458322e5bd361f412
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cd1d9e768698115bee22e35699b044e0c3526d2d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778133"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136315"
 ---
 # <a name="getrequestedruntimeinfo-function"></a>GetRequestedRuntimeInfo 함수
-버전 및 디렉터리는 CLR (공용 언어 런타임) 응용 프로그램에서 요청한 정보를 가져옵니다.  
+응용 프로그램에서 요청 하는 CLR (공용 언어 런타임)에 대 한 버전 및 디렉터리 정보를 가져옵니다.  
   
- .NET Framework 4에서이 함수에 사용 되지 않습니다.  
+ 이 함수는 .NET Framework 4에서 더 이상 사용 되지 않습니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -49,64 +47,64 @@ HRESULT GetRequestedRuntimeInfo (
   
 ## <a name="parameters"></a>매개 변수  
  `pExe`  
- [in] 응용 프로그램의 이름입니다.  
+ 진행 응용 프로그램의 이름입니다.  
   
  `pwszVersion`  
- [in] 런타임의 버전 번호를 지정 하는 문자열입니다.  
+ 진행 런타임의 버전 번호를 지정 하는 문자열입니다.  
   
  `pConfigurationFile`  
- [in] 연결 된 구성 파일의 이름을 `pExe`입니다.  
+ 진행 `pExe`와 연결 된 구성 파일의 이름입니다.  
   
  `startupFlags`  
- [in] 하나 이상의 합니다 [STARTUP_FLAGS](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md) 열거형 값입니다.  
+ 진행 하나 이상의 [STARTUP_FLAGS](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md) 열거형 값입니다.  
   
  `runtimeInfoFlags`  
- [in] 하나 이상의 합니다 [RUNTIME_INFO_FLAGS](../../../../docs/framework/unmanaged-api/hosting/runtime-info-flags-enumeration.md) 열거형 값입니다.  
+ 진행 하나 이상의 [RUNTIME_INFO_FLAGS](../../../../docs/framework/unmanaged-api/hosting/runtime-info-flags-enumeration.md) 열거형 값입니다.  
   
  `pDirectory`  
- [out] 완료 되 면 런타임에 대 한 디렉터리 경로 포함 하는 버퍼입니다.  
+ 제한이 성공적으로 완료 되 면 런타임에 대 한 디렉터리 경로를 포함 하는 버퍼입니다.  
   
  `dwDirectory`  
- [in] Directory 버퍼의 길이입니다.  
+ 진행 디렉터리 버퍼의 길이입니다.  
   
  `dwDirectoryLength`  
- [out] 디렉터리 경로 문자열의 길이에 대 한 포인터입니다.  
+ 제한이 디렉터리 경로 문자열의 길이에 대 한 포인터입니다.  
   
  `pVersion`  
- [out] 성공적으로 완료 되는 런타임의 버전 번호를 포함 하는 버퍼입니다.  
+ 제한이 성공적으로 완료 되 면 런타임의 버전 번호를 포함 하는 버퍼입니다.  
   
  `cchBuffer`  
- [in] 버전 문자열 버퍼의 길이입니다.  
+ 진행 버전 문자열 버퍼의 길이입니다.  
   
  `dwlength`  
- [out] 버전 문자열의 길이에 대 한 포인터입니다.  
+ 제한이 버전 문자열의 길이에 대 한 포인터입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 이 메서드는 다음 값 외에도 WinError.h에 정의 된 대로 표준 구성 요소 개체 모델 (COM) 오류 코드를 반환 합니다.  
+ 이 메서드는 Winerror.h에 정의 된 대로 다음 값 외에 표준 COM (구성 요소 개체 모델) 오류 코드를 반환 합니다.  
   
-|반환 코드|Description|  
+|반환 코드|설명|  
 |-----------------|-----------------|  
 |S_OK|메서드가 완료되었습니다.|  
-|ERROR_INSUFFICIENT_BUFFER|디렉터리 버퍼가 디렉터리 경로 저장 하기에 충분 하지 않습니다.<br /><br /> -또는-<br /><br /> 버전 버퍼의 버전 문자열을 저장할 만큼 크지 않습니다.|  
+|ERROR_INSUFFICIENT_BUFFER|디렉터리 버퍼가 디렉터리 경로를 저장할 만큼 크지 않습니다.<br /><br /> 또는<br /><br /> 버전 버퍼의 크기가 작아서 버전 문자열을 저장할 수 없습니다.|  
   
-## <a name="remarks"></a>설명  
- `GetRequestedRuntimeInfo` 메서드 최신 컴퓨터에 설치할 필요가 없는 프로세스에 로드 된 버전에 대 한 런타임 정보를 반환 합니다.  
+## <a name="remarks"></a>주의  
+ `GetRequestedRuntimeInfo` 메서드는 프로세스에 로드 된 버전에 대 한 런타임 정보를 반환 합니다 .이 정보는 컴퓨터에 최신 버전이 설치 되어 있지 않아도 됩니다.  
   
- .NET framework 버전 2.0에서 사용 하 여 최신 버전에 대 한 정보를 얻을 수는 `GetRequestedRuntimeInfo` 같이 메서드:  
+ .NET Framework 버전 2.0에서는 다음과 같이 `GetRequestedRuntimeInfo` 방법을 사용 하 여 설치 된 최신 버전에 대 한 정보를 가져올 수 있습니다.  
   
-- 지정 된 `pExe`, `pwszVersion`, 및 `pConfigurationFile` 매개 변수를 null로 합니다.  
+- `pExe`, `pwszVersion`및 `pConfigurationFile` 매개 변수를 null로 지정 합니다.  
   
-- RUNTIME_INFO_UPGRADE_VERSION 플래그를 지정 합니다 `RUNTIME_INFO_FLAGS` 열거형을 `runtimeInfoFlags` 매개 변수.  
+- `runtimeInfoFlags` 매개 변수에 대 한 `RUNTIME_INFO_FLAGS` 열거형에 RUNTIME_INFO_UPGRADE_VERSION 플래그를 지정 합니다.  
   
  `GetRequestedRuntimeInfo` 메서드는 다음과 같은 상황에서 최신 CLR 버전을 반환 하지 않습니다.  
   
-- 특정 CLR 버전을 로드 하도록 지정 하는 응용 프로그램 구성 파일에 있습니다. .NET Framework를 사용 하 여 구성 파일에 대 한 null을 지정 하는 경우에는 `pConfigurationFile` 매개 변수입니다.  
+- 특정 CLR 버전 로드를 지정 하는 응용 프로그램 구성 파일이 있습니다. `pConfigurationFile` 매개 변수에 null을 지정 하는 경우에도 .NET Framework는 구성 파일을 사용 합니다.  
   
-- 합니다 [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) 이전 버전의 CLR 지정 메서드가 호출 되었습니다.  
+- 이전 CLR 버전을 지정 하 여 [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) 메서드를 호출 했습니다.  
   
-- 이전 버전의 CLR에 대해 컴파일된 응용 프로그램 실행 중입니다.  
+- 이전 CLR 버전용으로 컴파일된 응용 프로그램이 현재 실행 중입니다.  
   
- 에 대 한 합니다 `runtimeInfoFlags` 매개 변수를 지정할 수 있습니다만 아키텍처 상수 중 하나는 `RUNTIME_INFO_FLAGS` 번 열거형:  
+ `runtimeInfoFlags` 매개 변수의 경우 `RUNTIME_INFO_FLAGS` 열거의 아키텍처 상수인 한 번에 하나만 지정할 수 있습니다.  
   
 - RUNTIME_INFO_REQUEST_IA64  
   
@@ -115,15 +113,15 @@ HRESULT GetRequestedRuntimeInfo (
 - RUNTIME_INFO_REQUEST_X86  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** MSCorEE.h  
+ **헤더:** Mscoree.dll  
   
- **라이브러리:** MSCorEE.dll  
+ **라이브러리:** Mscoree.dll  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [GetRequestedRuntimeVersion 함수](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md)
 - [GetVersionFromProcess 함수](../../../../docs/framework/unmanaged-api/hosting/getversionfromprocess-function.md)

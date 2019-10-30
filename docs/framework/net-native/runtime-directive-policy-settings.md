@@ -2,14 +2,12 @@
 title: 런타임 지시문 정책 설정
 ms.date: 03/30/2017
 ms.assetid: cb52b1ef-47fd-4609-b69d-0586c818ac9e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 33253c249842824a529f4e8b24d4ca4228733041
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 6001e3855610e7da5262c46413b775da3bea305c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049210"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128160"
 ---
 # <a name="runtime-directive-policy-settings"></a>런타임 지시문 정책 설정
 
@@ -34,7 +32,7 @@ ms.locfileid: "71049210"
 
   다음 표에는 리플렉션 정책 형식과 해당 형식을 사용할 수 있는 프로그램 요소가 나와 있습니다.
 
-  |요소|Activate|Browse|Dynamic|
+  |요소|Activate|Browse|동적|
   |-------------|--------------|------------|-------------|
   |[\<Application>](application-element-net-native.md)|✓|✓|✓|
   |[\<Assembly>](assembly-element-net-native.md)|✓|✓|✓|
@@ -130,7 +128,7 @@ ms.locfileid: "71049210"
 |`Required PublicAndInternal`|public 및 내부 형식 또는 멤버에 대해 정책을 사용하도록 설정하며 public 및 내부 형식 또는 멤버의 메타데이터를 항상 사용할 수 있습니다. 이 설정은 도구 체인이 필요하다고 결정하는 public 및 내부 형식과 멤버의 메타데이터만 제공하는 `PublicAndInternal`과는 다릅니다.|✓||
 |`Required All`|도구 체인이 사용 여부에 관계없이 모든 형식과 멤버를 유지해야 하도록 지정하고 해당 형식과 멤버에 대해 정책을 사용하도록 설정합니다.|✓||
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [런타임 지시문(rd.xml) 구성 파일 참조](runtime-directives-rd-xml-configuration-file-reference.md)
 - [런타임 지시문 요소](runtime-directive-elements.md)

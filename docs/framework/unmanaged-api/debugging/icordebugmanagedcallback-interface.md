@@ -14,21 +14,19 @@ helpviewer_keywords:
 ms.assetid: b47f1d61-c7dc-4196-b926-0b08c94f7041
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 25e40103a2925cbd2a181b8e39c3873e4d7c842c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 96dedcd27e87c5afc504e7840100eb121410675e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69940041"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130752"
 ---
 # <a name="icordebugmanagedcallback-interface"></a>ICorDebugManagedCallback 인터페이스
 디버거 콜백을 처리하는 메서드를 제공합니다.  
   
 ## <a name="methods"></a>메서드  
   
-|메서드|Description|  
+|메서드|설명|  
 |------------|-----------------|  
 |[Break 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-break-method.md)|코드 스트림의 <xref:System.Reflection.Emit.OpCodes.Break> 명령이 실행 될 때 디버거에 알립니다.|  
 |[Breakpoint 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-breakpoint-method.md)|중단점에 도달 하면 디버거에 알립니다.|  
@@ -57,26 +55,26 @@ ms.locfileid: "69940041"
 |[UnloadModule 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadmodule-method.md)|CLR 모듈 (DLL)이 언로드 되었음을 디버거에 알립니다.|  
 |[UpdateModuleSymbols 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-updatemodulesymbols-method.md)|CLR 모듈의 기호가 변경 되었음을 디버거에 알립니다.|  
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
  모든 콜백은 동일한 스레드에서 호출 되며 동기화 된 상태의 프로세스와 함께 호출 됩니다.  
   
- 각 콜백 구현에서는 [ICorDebugController:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) 를 호출 하 여 실행을 다시 시작 해야 합니다. 콜백이 `ICorDebugController::Continue` 반환 되기 전에가 호출 되지 않으면 프로세스가 중지 된 상태로 유지 되 고가 호출 될 때까지 `ICorDebugController::Continue` 이벤트 콜백이 더 이상 발생 하지 않습니다.  
+ 각 콜백 구현에서는 [ICorDebugController:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) 를 호출 하 여 실행을 다시 시작 해야 합니다. 콜백이 반환 되기 전에 `ICorDebugController::Continue`가 호출 되지 않으면 프로세스가 중지 된 상태로 유지 되 고 `ICorDebugController::Continue`를 호출할 때까지 이벤트 콜백이 더 이상 발생 하지 않습니다.  
   
- 디버거는 .NET Framework 버전 2.0 응용 프로그램을 디버깅 하는 경우 [ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md) 을 구현 해야 합니다. `ICorDebugManagedCallback` 또는`ICorDebugManagedCallback2` 의 인스턴스는 [ICorDebug:: setmanagedhandler](../../../../docs/framework/unmanaged-api/debugging/icordebug-setmanagedhandler-method.md)에 콜백 개체로 전달 됩니다.  
+ 디버거는 .NET Framework 버전 2.0 응용 프로그램을 디버깅 하는 경우 [ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md) 을 구현 해야 합니다. `ICorDebugManagedCallback` 또는 `ICorDebugManagedCallback2`의 인스턴스는 [ICorDebug:: SetManagedHandler](../../../../docs/framework/unmanaged-api/debugging/icordebug-setmanagedhandler-method.md)에 콜백 개체로 전달 됩니다.  
   
 > [!NOTE]
 > 이 인터페이스는 크로스 시스템 또는 크로스 프로세스 원격 호출을 지원하지 않습니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
- **라이브러리** CorGuids.lib  
+ **라이브러리:** CorGuids.lib  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ICorDebug 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
 - [ICorDebugManagedCallback2 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)

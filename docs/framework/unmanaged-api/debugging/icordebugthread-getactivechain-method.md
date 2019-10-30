@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f50de1f7-40ef-4949-b542-1d9a61f7bfef
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 59328c8b7e86694610de20ade72a98a4280b439d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 99a617ef21ee3c3319b1ebe7d3ab8367659b6ef8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67762623"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133550"
 ---
 # <a name="icordebugthreadgetactivechain-method"></a>ICorDebugThread::GetActiveChain 메서드
-이 ICorDebugThread 개체의 현재 (가장 최근) 스택 체인에는 인터페이스 포인터를 가져옵니다.  
+이 ICorDebugThread 개체의 활성 (가장 최근) 스택 체인에 대 한 인터페이스 포인터를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,13 +35,13 @@ HRESULT GetActiveChain (
   
 ## <a name="parameters"></a>매개 변수  
  `ppChain`  
- [out] 스택 체인을 나타내는 ICorDebugChain 개체의 주소에 대 한 포인터입니다.  
+ 제한이 스택 체인을 나타내는 ICorDebugChain 개체의 주소에 대 한 포인터입니다.  
   
-## <a name="remarks"></a>설명  
- `ppChain` 매개 변수는 스택 체인이 현재 활성화 되어 있으면 null입니다.  
+## <a name="remarks"></a>주의  
+ 현재 활성 상태인 스택 체인이 없으면 `ppChain` 매개 변수는 null입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   

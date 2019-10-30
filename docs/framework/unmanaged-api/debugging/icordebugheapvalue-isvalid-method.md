@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 68e20e62-203d-46d8-bb91-8d3c61cfacc3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3ca3b86e90dcb76c1fece44cf2c5ed68e073d8e7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7edf0065fa7eb39dada167a682f2b634a438f1f3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67757213"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138406"
 ---
 # <a name="icordebugheapvalueisvalid-method"></a>ICorDebugHeapValue::IsValid 메서드
-이 ICorDebugHeapValue이 나타내는 개체가 올바른지 여부를 나타내는 값을 가져옵니다.  
+이 ICorDebugHeapValue 나타내는 개체가 유효한 지 여부를 나타내는 값을 가져옵니다.  
   
- 이 메서드는.NET Framework 버전 2.0에서에서 더 이상 사용 되지 되었습니다.  
+ 이 메서드는 .NET Framework 버전 2.0에서 더 이상 사용 되지 않습니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,15 +37,15 @@ HRESULT IsValid (
   
 ## <a name="parameters"></a>매개 변수  
  `pbValid`  
- [out] 힙에서이 값이 유효한 지 여부를 나타내는 부울 값에 대 한 포인터입니다.  
+ 제한이 힙의이 값이 유효한 지 여부를 나타내는 부울 값에 대 한 포인터입니다.  
   
-## <a name="remarks"></a>설명  
- 값을 가비지 수집기에서 회수 된 경우에 올바르지 않습니다.  
+## <a name="remarks"></a>주의  
+ 가비지 수집기에서 회수 한 값이 잘못 되었습니다.  
   
- 이 메서드는 사용되지 않습니다. .NET Framework 2.0에서는 모든 값이 될 때까지 유효 [icordebugcontroller:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) 이때 값은 유효성을 검사 하지 않습니다.에서 호출 됩니다.  
+ 이 메서드는 사용되지 않습니다. .NET Framework 2.0에서 모든 값은 [ICorDebugController:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) 가 호출 될 때까지 유효 하며, 이때 값이 무효화 됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   

@@ -16,14 +16,12 @@ helpviewer_keywords:
 ms.assetid: d977ad29-6619-42e1-b0be-bc25ea950e80
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b1c28f32a4b24393483241bd2d7d6f550b8b65ba
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 13e1468ef5a48f18910c1f8082cdd7c4849da14a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796900"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132692"
 ---
 # <a name="getcachepath-function"></a>GetCachePath 함수
 지정 된 플래그를 사용 하 여 캐시 된 어셈블리에 대 한 경로를 가져옵니다.  
@@ -46,16 +44,16 @@ HRESULT GetCachePath (
  제한이 경로에 대 한 반환 포인터입니다.  
   
  `pcchPath`  
- [in, out] 요청 된 최대 길이 `pwzCachePath`이며 반환 될 때의 `pwzCachePath`실제 길이입니다.  
+ [in, out] 요청 된 최대 `pwzCachePath`길이 이며 반환 시 `pwzCachePath`의 실제 길이입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Fusion. h  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ASM_CACHE_FLAGS 열거형](asm-cache-flags-enumeration.md)
 - [Fusion 전역 정적 함수](fusion-global-static-functions.md)

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: fbc418e8-fa22-420d-84ec-e0e1800db041
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: da5c5a12df5689f113857045ba4bcda696bda8f5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b9eab1274f2d0ad562c0dec6adeddb85c6cfc458
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756722"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138385"
 ---
 # <a name="icordebugheapvalue2createhandle-method"></a>ICorDebugHeapValue2::CreateHandle 메서드
-이 ICorDebugHeapValue2 개체로 표현 되는 힙 값에 대 한 지정 된 형식의 핸들을 만듭니다.  
+이 ICorDebugHeapValue2 개체가 나타내는 힙 값에 대해 지정 된 형식의 핸들을 만듭니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,18 +36,18 @@ HRESULT CreateHandle (
   
 ## <a name="parameters"></a>매개 변수  
  `type`  
- [in] 만들려는 핸들의 형식을 지정 하는 CorDebugHandleType 열거형의 값입니다.  
+ 진행 만들 핸들의 유형을 지정 하는 CorDebugHandleType 열거형의 값입니다.  
   
  `ppHandle`  
- [out] 이 힙 값에 대 한 새 핸들을 나타내는 ICorDebugHandleValue 개체의 주소에 대 한 포인터입니다.  
+ 제한이 이 힙 값의 새 핸들을 나타내는 ICorDebugHandleValue 개체의 주소에 대 한 포인터입니다.  
   
-## <a name="remarks"></a>설명  
- 핸들 힙 값을 사용 하 여 연결 된 응용 프로그램 도메인에서 만들어지고 응용 프로그램 도메인이 언로드된 경우 유효 하지 않게 됩니다.  
+## <a name="remarks"></a>주의  
+ 이 핸들은 힙 값과 연결 된 응용 프로그램 도메인에 생성 되며 응용 프로그램 도메인이 언로드될 경우 유효 하지 않게 됩니다.  
   
- 같은 힙 값에 대 한이 함수를 여러 번 호출을 여러 핸들을 만듭니다. 가비지 수집의 성능에 영향을 주는 처리 하기 때문에 디버거에서 상대적으로 적은 수의 한 번에 활성 상태인 처리 (약 256) 자체를 제한 해야 합니다.  
+ 동일한 힙 값에 대해이 함수를 여러 번 호출 하면 여러 개의 핸들이 생성 됩니다. 핸들이 가비지 수집기의 성능에 영향을 주므로 디버거는 한 번에 활성 상태인 상대적으로 적은 수의 핸들 (약 256)으로 제한 해야 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   

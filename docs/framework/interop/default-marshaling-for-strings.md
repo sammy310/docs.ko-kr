@@ -8,14 +8,12 @@ helpviewer_keywords:
 - strings, interop marshaling
 - interop marshaling, strings
 ms.assetid: 9baea3ce-27b3-4b4f-af98-9ad0f9467e6f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d39d4dfd5413b95300b70f27437bd27ca2d67a20
-ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
-ms.translationtype: HT
+ms.openlocfilehash: 49f2d871a42db484e20f0bfc35634a0e8b959c2e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65452392"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123554"
 ---
 # <a name="default-marshaling-for-strings"></a>문자열에 대한 기본 마샬링
 
@@ -287,7 +285,7 @@ Public Class Window
 End Class
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [기본 마샬링 동작](default-marshaling-behavior.md)
 - [문자열 마샬링](marshaling-strings.md)

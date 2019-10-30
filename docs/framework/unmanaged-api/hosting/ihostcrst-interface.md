@@ -14,40 +14,38 @@ helpviewer_keywords:
 ms.assetid: ac298ebd-0815-47e4-a823-30b31baab903
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 939f100e8ee386642a29c33827a8339caf0467b9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 108492ba298e9f8429b2acd890ab3404365bc602
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61967832"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130520"
 ---
 # <a name="ihostcrst-interface"></a>IHostCrst 인터페이스
-스레딩에 대 한 중요 한 섹션의 호스트의 표현으로 사용 됩니다.  
+스레딩에 대 한 중요 한 섹션의 호스트 표현으로 사용 됩니다.  
   
 ## <a name="methods"></a>메서드  
   
 |메서드|설명|  
 |------------|-----------------|  
-|[Enter 메서드](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-enter-method.md)|중요 섹션에 진입 합니다.|  
-|[Leave 메서드](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-leave-method.md)|임계 영역을 유지합니다.|  
-|[SetSpinCount 메서드](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-setspincount-method.md)|중요 섹션의 스핀 수를 설정합니다.|  
-|[TryEnter 메서드](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-tryenter-method.md)|중요 섹션 및 보고서 성공 또는 실패를 즉시 입력 하려고 합니다.|  
+|[Enter 메서드](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-enter-method.md)|임계 영역을 입력 합니다.|  
+|[Leave 메서드](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-leave-method.md)|임계 영역을 남겨 둡니다.|  
+|[SetSpinCount 메서드](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-setspincount-method.md)|임계 영역에 대 한 회전 수를 설정 합니다.|  
+|[TryEnter 메서드](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-tryenter-method.md)|임계 영역에 대 한 시작을 시도 하 고 성공 또는 실패를 즉시 보고 합니다.|  
   
-## <a name="remarks"></a>설명  
- `IHostCrst` 와 같은 Win32 함수를 사용 하는 대신는 CLR (공용 언어 런타임) 임계 영역을 호스트의 표시와 직접 통신 하도록 허용 `EnterCriticalSection` 또는 `LeaveCriticalSection`합니다.  
+## <a name="remarks"></a>주의  
+ `IHostCrst`를 사용 하면 CLR (공용 언어 런타임)이 `EnterCriticalSection` 또는 `LeaveCriticalSection`같은 Win32 함수를 사용 하는 대신 CLR (공용 언어 런타임)에서 중요 한 섹션의 호스트 표현과 직접 통신할 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** MSCorEE.h  
+ **헤더:** Mscoree.dll  
   
- **라이브러리:** MSCorEE.dll에 리소스로 포함  
+ **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ICLRSyncManager 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
 - [IHostSyncManager 인터페이스](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)

@@ -14,14 +14,12 @@ helpviewer_keywords:
 - QualifierSet_Put function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 40688a0e4273233245d00fcd927f95945a43f712
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: a35025c6d16455a51b7b22d822ba77337ddd894a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798264"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120228"
 ---
 # <a name="qualifierset_put-function"></a>QualifierSet_Put 함수
 
@@ -53,10 +51,10 @@ HRESULT QualifierSet_Put (
 진행 쓸 한정자의 이름입니다.
 
 `pVal`\
-진행 쓸 한정자를 포함 하 `VARIANT` 는 유효한에 대 한 포인터입니다. 이 매개 변수 수 없습니다 `null`합니다.
+진행 쓸 한정자를 포함 하는 유효한 `VARIANT`에 대 한 포인터입니다. 이 매개 변수를 `null`수 없습니다.
 
 `lFlavor`\
-진행 이 한정자에 대 한 원하는 한정자 특색을 정의 하는 다음 상수 중 하나입니다. 기본값은 `WBEM_FLAVOR_OVERRIDABLE`(0)입니다.
+진행 이 한정자에 대 한 원하는 한정자 특색을 정의 하는 다음 상수 중 하나입니다. 기본값은 `WBEM_FLAVOR_OVERRIDABLE` (0)입니다.
 
 |상수  |값  |설명  |
 |---------|---------|---------|
@@ -70,26 +68,26 @@ HRESULT QualifierSet_Put (
 
 이 함수에서 반환 되는 다음 값은 *WbemCli* 헤더 파일에 정의 되어 있거나 코드에서 상수로 정의할 수 있습니다.
 
-|상수  |값  |Description  |
+|상수  |값  |설명  |
 |---------|---------|---------|
-| `WBEM_E_CANNOT_BE_KEY` | 0x8004101f | 키가 될 수 없는 속성에 **키** 한정자를 지정 하는 잘못 된 시도가 있었습니다. 키 개체에 대 한 클래스 정의에 지정 되 고 인스턴스 단위로 변경할 수 없습니다. |
+| `WBEM_E_CANNOT_BE_KEY` | 0x8004101f | 키가 될 수 없는 속성에 **키** 한정자를 지정 하는 잘못 된 시도가 있었습니다. 키는 개체에 대 한 클래스 정의에 지정 되며 인스턴스별 으로만 변경할 수 없습니다. |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | 매개 변수가 잘못 되었습니다. |
 | `WBEM_E_INVALID_QUALIFIER_TYPE` | 0x80041029 | `pVal` 매개 변수가 올바른 한정자 형식이 아닙니다. |
-| `WBEM_E_OVERRIDE_NOT_ALLOWED` | 0x8004101a | 소유 하는 개체가 재정의를 허용 `QualifierSet_Put` 하지 않기 때문에 한정자에서 메서드를 호출할 수 없습니다. |
+| `WBEM_E_OVERRIDE_NOT_ALLOWED` | 0x8004101a | 소유 하는 개체가 재정의를 허용 하지 않으므로 한정자에서 `QualifierSet_Put` 메서드를 호출할 수 없습니다. |
 | `WBEM_S_NO_ERROR` | 0 | 함수 호출에 성공 했습니다.  |
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 이 함수는 [IWbemQualifierSet::P 세계](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-put) 메서드에 대 한 호출을 래핑합니다.
 
 ## <a name="requirements"></a>요구 사항
 
-**플랫폼** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하십시오.
+**플랫폼:** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.
 
-**헤더:** WMINet_Utils.idl
+**헤더:** WMINet_Utils
 
 **.NET Framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [WMI 및 성능 카운터 (관리 되지 않는 API 참조)](index.md)

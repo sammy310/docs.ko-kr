@@ -7,22 +7,22 @@ helpviewer_keywords:
 - remove Element
 - <remove> Element
 ms.assetid: 218c4464-e007-4539-803f-7c8b0a909fd8
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 121b1c4b124ba07ff3bd312fd3832d3da592f486
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0695d5638589d1afe48553fe32b8d070e3938353
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921291"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119196"
 ---
-# <a name="remove-element-for-appsettings"></a>\<appSettings >에 대 \<한 > 요소 제거
+# <a name="remove-element-for-appsettings"></a>\<appSettings에 대 한 > 요소 \<제거 >
 
 사용자 지정 응용 프로그램 설정을 제거 합니다.
 
 [ **\<configuration>** ](../configuration-element.md)   
 &nbsp;&nbsp;[ **\<appSettings>** ](appsettings-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp; **\<remove>**
+&nbsp;&nbsp;&nbsp;&nbsp; **\<제거**
 
 ## <a name="syntax"></a>구문
 
@@ -50,7 +50,7 @@ ms.locfileid: "69921291"
 
 ## <a name="example"></a>예제
 
-다음 예제에서는에 대 한 `ApplicationName`사용자 지정 구성 설정을 제거 하는 방법을 보여 줍니다.
+다음 예제에서는 `ApplicationName`에 대 한 사용자 지정 구성 설정을 제거 하는 방법을 보여 줍니다.
 
 ```xml
 <appSettings>
@@ -58,6 +58,6 @@ ms.locfileid: "69921291"
 </appSettings>
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [.NET Framework에 대 한 구성 파일 스키마](../index.md)

@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: b0192104-6073-4089-a4df-dc29ee033074
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3d080145ac63882e04412b44c34d040a75746243
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c8cfc9cdf6580a002f6ac15080012a9e8c63be20
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767531"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129657"
 ---
 # <a name="icordebugprocess5enumerateheap-method"></a>ICorDebugProcess5::EnumerateHeap 메서드
 관리 되는 힙의 개체에 대 한 열거자를 가져옵니다.  
@@ -37,15 +35,15 @@ HRESULT EnumerateHeap(
   
 ## <a name="parameters"></a>매개 변수  
  `ppObject`  
- [out] 주소에 대 한 포인터를 [ICorDebugHeapEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-interface.md) 인터페이스 개체는 관리 되는 힙에 있는 개체에 대 한 열거자입니다.  
+ 제한이 관리 되는 힙에 있는 개체의 열거자 인 [ICorDebugHeapEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-interface.md) interface 개체의 주소에 대 한 포인터입니다.  
   
-## <a name="remarks"></a>설명  
- 호출 하기 전에 합니다 `ICorDebugProcess5::EnumerateHeap` 호출 해야 합니다는 [ICorDebugProcess5::GetGCHeapInformation](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getgcheapinformation-method.md) 메서드의 값을 검사 합니다 `areGCStructuresValid` 반환 된 필드 [COR_HEAPINFO](../../../../docs/framework/unmanaged-api/debugging/cor-heapinfo-structure.md) 가비지 수집 힙의 현재 상태에서 열거 가능한 지 확인 하는 개체입니다. 또한 합니다 `ICorDebugProcess5::EnumerateHeap` 반환 `E_FAIL` 관리 되는 힙 할당에 대 한 너무 일찍 메모리 하기 전에 프로세스의 수명에에서 연결 하는 경우.  
+## <a name="remarks"></a>주의  
+ `ICorDebugProcess5::EnumerateHeap` 메서드를 호출 하기 전에 [ICorDebugProcess5:: GetGCHeapInformation](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getgcheapinformation-method.md) 메서드를 호출 하 고 반환 된 [COR_HEAPINFO](../../../../docs/framework/unmanaged-api/debugging/cor-heapinfo-structure.md) 개체의 `areGCStructuresValid` 필드 값을 검사 하 여 해당 개체의 가비지 수집 힙이 현재 상태는 열거 가능 합니다. 또한 관리 되는 힙의 메모리를 할당 하기 전에 프로세스의 수명 동안 너무 일찍 연결 하는 경우에는 `ICorDebugProcess5::EnumerateHeap` `E_FAIL`를 반환 합니다.  
   
- 합니다 [ICorDebugHeapEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-interface.md) 인터페이스 개체는 열거할 수 있도록 ICorDebugEnum 인터페이스에서 파생 하는 표준 열거자 [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) 개체입니다. 이 메서드는 [ICorDebugHeapEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-interface.md) 사용 하 여 컬렉션 개체 [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) 모든 개체에 대 한 정보를 제공 하는 인스턴스. 컬렉션을 포함할 수도 있습니다 [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) 으로 없습니다 루트인 개체에 대 한 정보를 제공 하는 인스턴스 개체 하지만 가비지 수집기에 의해 아직 수집 하지 않았습니다.  
+ [ICorDebugHeapEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-interface.md) interface 개체는 ICorDebugEnum 인터페이스에서 파생 된 표준 열거자로, [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) 개체를 열거 하는 데 사용할 수 있습니다. 이 메서드는 모든 개체에 대 한 정보를 제공 하는 [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) 인스턴스로 [ICorDebugHeapEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-interface.md) collection 개체를 채웁니다. 컬렉션에는 개체에 의해 루 지는 않지만 가비지 수집기에서 아직 수집 되지 않은 개체에 대 한 정보를 제공 하는 [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) 인스턴스가 포함 될 수도 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
@@ -53,7 +51,7 @@ HRESULT EnumerateHeap(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ICorDebugProcess5 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
 - [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

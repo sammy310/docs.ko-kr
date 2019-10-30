@@ -2,14 +2,12 @@
 title: Windows 스토어 앱용 .NET을 위한 MEF
 ms.date: 03/30/2017
 ms.assetid: 7667770e-d163-4ad6-a303-085cf73db2f2
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 255892e4dd3938028f488f80d8fba367590976f7
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: dafa6ddcd55940ea9bab61b79b6ab77896a1916f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051624"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126356"
 ---
 # <a name="mef-for-net-for-windows-store-apps"></a>Windows 스토어 앱용 .NET을 위한 MEF
 <xref:System.Composition?displayProperty=nameWithType> 및 자식 네임스페이스에는 MEF(Managed Extensibility Framework)를 사용하여 확장 가능한 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 앱을 개발하기 위한 형식이 포함되어 있습니다. 이러한 네임스페이스는 [!INCLUDE[win8](../../../includes/win8-md.md)] 운영 체제에 대한 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] 하위 집합의 일부입니다.  
@@ -26,7 +24,7 @@ ms.locfileid: "71051624"
   
  [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] 및 여기에 포함된 네임스페이스 및 형식 목록에 대한 자세한 내용은 Windows 개발자 센터의 [Windows 스토어 앱용 .NET 개요](https://go.microsoft.com/fwlink/p/?LinkID=238312)를 참조하세요.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Windows 스토어 앱용 .NET 개요](https://go.microsoft.com/fwlink/p/?LinkID=238312)
 - [Windows 스토어 앱용 .NET – 지원되는 API](https://go.microsoft.com/fwlink/p/?LinkID=247912)

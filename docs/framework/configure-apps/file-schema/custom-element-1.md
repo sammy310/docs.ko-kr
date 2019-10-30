@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - custom element
 ms.assetid: e62056c6-b351-40eb-afc0-cc13fc44e45e
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8fae3673fe72d036802cb1a8366aaa2430c38884
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ac2d01121e81b545556fb082fa7b82c31cccf9da
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927496"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73118843"
 ---
 # <a name="custom-element-for-singletagsectionhandler"></a>SingleTagSectionHandler에 대 한 사용자 지정 요소
 
-\<섹션 > 요소에 정의 되 고 클래스를 <xref:System.Configuration.SingleTagSectionHandler> 사용 하는 사용자 지정 구성 섹션의 설정을 정의 합니다.
+\<section > 요소에 의해 정의 되 고 <xref:System.Configuration.SingleTagSectionHandler> 클래스를 사용 하는 사용자 지정 구성 섹션의 설정을 정의 합니다.
 
 [ **\<configuration>** ](configuration-element.md)   
-&nbsp;&nbsp; *\<sectionName>*
+&nbsp;&nbsp; *\<섹션 이름 >*
 
 ## <a name="syntax"></a>구문
 
@@ -42,13 +42,13 @@ ms.locfileid: "69927496"
 
 없음
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
-섹션 이름 > 요소는 [**configsections > 요소의 section > 태그에 의해 정의 되는 사용자 지정 요소입니다. \<** ](configsections-element-for-configuration.md) [ **\<** ](section-element.md)  **\<** 를 호출할 <xref:System.Collections.IDictionary> <xref:System.Configuration.Configuration.GetSection(System.String)?displayProperty=nameWithType>때 구성 시스템에서 개체를 반환 합니다.
+**\<섹션 이름 >** 요소는 [ **\<configsections >** ](configsections-element-for-configuration.md) 요소의 [ **\<섹션 >** ](section-element.md) 태그에 의해 정의 되는 사용자 지정 요소입니다. <xref:System.Configuration.Configuration.GetSection(System.String)?displayProperty=nameWithType>를 호출할 때 구성 시스템에서 <xref:System.Collections.IDictionary> 개체를 반환 합니다.
 
 ## <a name="example"></a>예제
 
-다음 예제에서는 <xref:System.Configuration.SingleTagSectionHandler> 클래스에서 읽은 설정을 포함 하는  **\<sampleSection >** 이라는 사용자 지정 요소를 선언 합니다.
+다음 예제에서는 <xref:System.Configuration.SingleTagSectionHandler> 클래스에서 읽은 설정을 포함 하는 **\<sampleSection >** 이라는 사용자 지정 요소를 선언 합니다.
 
 ```xml
 <configuration>
@@ -64,8 +64,8 @@ ms.locfileid: "69927496"
 
 ## <a name="configuration-file"></a>구성 파일
 
-이 요소는 응용 프로그램 구성 파일, 컴퓨터 구성 파일 (machine.config) 및응용 프로그램 디렉터리 수준에 없는 web.config 파일에서 사용할 수 있습니다.
+이 요소는 응용 프로그램 구성 파일 *, 컴퓨터 구성 파일 (machine.config*) 및 응용 프로그램 디렉터리 수준에 없는 *web.config 파일* 에서 사용할 수 있습니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [.NET Framework에 대 한 구성 파일 스키마](index.md)

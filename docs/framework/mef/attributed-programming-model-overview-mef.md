@@ -8,14 +8,12 @@ helpviewer_keywords:
 - MEF, attributed programming model
 - attributed programming model [MEF]
 ms.assetid: 49b787ff-2741-4836-ad51-c3017dc592d4
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bed67019fdd3bb81585d08349715a895dfe5a681
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
-ms.translationtype: HT
+ms.openlocfilehash: 63fb3d627364810fac5ddb0bfd3adc3c0421c9cc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363954"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126379"
 ---
 # <a name="attributed-programming-model-overview-mef"></a>특성을 사용하는 프로그래밍 모델 개요(MEF)
 
@@ -201,7 +199,7 @@ public class MyClass
 }
 ```
 
-계약 형식이 `dynamic` 키워드에서 유추되는 경우 모든 계약 형식과 일치합니다. 이 경우 가져오기는 **항상** 일치시킬 계약 이름을 지정해야 합니다. (계약 이름이 지정되지 않은 경우 가져오기는 아무 내보내기와도 일치하지 않는 것으로 간주됩니다.) 다음 두 내보내기는 모두 이전 가져오기와 일치합니다.
+계약 형식이 `dynamic` 키워드에서 유추되는 경우 모든 계약 형식과 일치합니다. 이 경우 가져오기는 **항상** 일치시킬 계약 이름을 지정해야 합니다. 계약 이름이 지정 되지 않은 경우 가져오기는 내보내기와 일치 하지 않는 것으로 간주 됩니다. 다음 내보내기는 모두 이전 가져오기와 일치 합니다.
 
 ```vb
 <Export("TheString", GetType(IMyAddin))>
@@ -343,7 +341,7 @@ public MyClass([Import(typeof(IMySubAddin))]IMyAddin MyAddin)
 
 `Import` 특성은 파트가 작동하기 위한 요구 사항을 지정합니다. 가져오기를 수행할 수 없는 경우 해당 파트의 컴퍼지션이 실패하고 파트를 사용할 수 없습니다.
 
-*속성을 사용하여 가져오기가* 선택적 `AllowDefault` 이 되도록 지정할 수 있습니다. 이 경우 가져오기가 사용 가능한 모든 내보내기와 일치하지 않더라도 컴퍼지션이 성공하며, 가져오기 속성이 해당 속성 형식의 기본값(개체 속성의 경우 `null`, 부울의 경우 `false` 또는 숫자 속성의 경우 0)으로 설정됩니다. 다음 클래스에서는 선택적 가져오기를 사용합니다.
+*속성을 사용하여 가져오기가* 선택적 `AllowDefault` 이 되도록 지정할 수 있습니다. 이 경우 가져오기가 사용 가능한 내보내기와 일치 하지 않는 경우에도 컴퍼지션이 성공 하 고, 가져오기 속성이 해당 속성 형식에 대 한 기본값으로 설정 됩니다 (개체 속성의 경우`null`, 부울의 경우 `false`, 숫자 속성의 경우 0). 다음 클래스는 선택적 가져오기를 사용 합니다.
 
 ```vb
 Public Class MyClass1
@@ -687,7 +685,7 @@ public class NumFour : NumThree
 }
 ```
 
-`InheritedExport` 특성이 연결된 메타데이터가 있는 경우 해당 메타데이터도 상속됩니다. (자세한 내용은 앞의 “메타데이터 및 메타데이터 보기” 섹션을 참조하세요.) 상속된 메타데이터는 서브클래스에 의해 수정될 수 없습니다. 그러나 동일한 계약 이름 및 계약 형식을 사용하되 새 메타데이터를 포함하여 `InheritedExport` 특성을 다시 선언함으로써 서브클래스는 상속된 메타데이터를 새 메타데이터로 바꿀 수 있습니다. 다음 클래스에서는 이 원칙을 보여 줍니다. `MegaLogger` 파트는 `Logger` 에서 상속되고 `InheritedExport` 특성을 포함합니다. `MegaLogger` 는 Status라는 새 메타데이터를 다시 선언하므로 `Logger`에서 Name 및 Version을 상속하지 않습니다.
+`InheritedExport` 특성이 연결된 메타데이터가 있는 경우 해당 메타데이터도 상속됩니다. 자세한 내용은 앞의 "메타 데이터 및 메타 데이터 뷰" 섹션을 참조 하세요. 서브 클래스는 상속 된 메타 데이터를 수정할 수 없습니다. 그러나 동일한 계약 이름 및 계약 형식을 사용하되 새 메타데이터를 포함하여 `InheritedExport` 특성을 다시 선언함으로써 서브클래스는 상속된 메타데이터를 새 메타데이터로 바꿀 수 있습니다. 다음 클래스에서는 이 원칙을 보여 줍니다. `MegaLogger` 파트는 `Logger` 에서 상속되고 `InheritedExport` 특성을 포함합니다. `MegaLogger` 는 Status라는 새 메타데이터를 다시 선언하므로 `Logger`에서 Name 및 Version을 상속하지 않습니다.
 
 ```vb
 <InheritedExport(GetType(IPlugin))>
@@ -747,7 +745,7 @@ public class MegaLogger : Logger        {
 }
 ```
 
-메타데이터를 재정의하기 위해 `InheritedExport` 특성을 다시 선언할 때 계약 형식이 동일한지 확인합니다. (앞의 예제에서 `IPlugin`이 계약 형식입니다.) 계약 형식이 다를 경우 재정의하는 대신 두 번째 특성이 파트에서 두 번째 독립 내보내기를 만듭니다. 일반적으로 이는 앞의 예제에 표시된 것처럼 `InheritedExport` 특성을 재정의할 때 계약 형식을 명시적으로 지정해야 함을 의미합니다.
+메타데이터를 재정의하기 위해 `InheritedExport` 특성을 다시 선언할 때 계약 형식이 동일한지 확인합니다. 이전 예제에서 `IPlugin`은 계약 형식입니다. 서로 다른 경우를 재정의 하는 대신 두 번째 특성은 파트에서 별도의 두 번째 내보내기를 만듭니다. 일반적으로 이는 앞의 예제에 표시된 것처럼 `InheritedExport` 특성을 재정의할 때 계약 형식을 명시적으로 지정해야 함을 의미합니다.
 
 인터페이스는 직접 인스턴스화될 수 없으므로 일반적으로 `Export` 또는 `Import` 특성으로 데코레이팅될 수 없습니다. 그러나 인터페이스는 인터페이스 수준에서 `InheritedExport` 특성으로 데코레이팅될 수 있고, 연결된 모든 메타데이터와 함께 해당 내보내기는 모든 구현 클래스에서 상속됩니다. 그러나 인터페이스 자체는 파트로 사용할 수 없습니다.
 
@@ -982,7 +980,7 @@ public class PartSeven
 
 `IPartImportsSatisfiedNotification` 은 `OnImportsSatisfied`라는 메서드 하나를 포함합니다. 이 메서드는 컴퍼지션이 완료되고 파트의 가져오기가 사용할 준비가 되면 인터페이스를 구현하는 모든 파트에서 컴퍼지션 컨테이너에 의해 호출됩니다. 다른 파트의 가져오기를 채우기 위해 컴퍼지션 엔진에 의해 파트가 만들어집니다. 파트의 가져오기가 설정되기 전에는 파트 생성자의 가져온 값이 `ImportingConstructor` 특성을 사용하여 필수 구성 요소로 지정되지 않은 한 해당 값을 사용하거나 조작하는 모든 초기화를 수행할 수 없습니다. 이 방법은 일반적으로 선호되는 방법이지만 일부 경우 생성자 삽입을 사용하지 못할 수도 있습니다. 이러한 경우 `OnImportsSatisfied`에서 초기화를 수행할 수 있으며 파트가 `IPartImportsSatisfiedNotification`을 구현해야 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [Channel 9 비디오: Managed Extensibility Framework로 애플리케이션 열기](https://channel9.msdn.com/events/TechEd/NorthAmerica/2009/DTL328)
-- [Channel 9 비디오: MEF(Managed Extensibility Framework) 2.0](https://channel9.msdn.com/posts/NET-45-Oleg-Lvovitch-and-Kevin-Ransom-Managed-Extensibility-Framework-MEF-20)
+- [Channel 9 동영상: Managed Extensibility Framework로 애플리케이션 열기](https://channel9.msdn.com/events/TechEd/NorthAmerica/2009/DTL328)
+- [Channel 9 동영상: MEF(Managed Extensibility Framework) 2.0](https://channel9.msdn.com/posts/NET-45-Oleg-Lvovitch-and-Kevin-Ransom-Managed-Extensibility-Framework-MEF-20)

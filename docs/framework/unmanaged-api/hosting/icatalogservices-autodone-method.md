@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3002f051-7aaa-4669-9314-cbc65b3a1772
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7771691950fac34b30a804d507688deaa0548314
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5389082f60a97d4da97bfce1c121a9e983b9ae79
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766750"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126849"
 ---
 # <a name="icatalogservicesautodone-method"></a>ICatalogServices::Autodone 메서드
-이 메서드는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
+이 메서드는 .NET Framework 인프라를 지원 하며 사용자 코드에서 직접 사용 하기 위한 것이 아닙니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -33,6 +31,6 @@ ms.locfileid: "67766750"
 HRESULT Autodone ( );  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [호스팅 인터페이스](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

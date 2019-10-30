@@ -14,14 +14,12 @@ helpviewer_keywords:
 - QualifierSet_EndEnumeration function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2c5a817174ec4c4e4407c19bb1d6d2d852d86dd2
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 82627fa416f71e123ed2c03bae4584e4433310eb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798324"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127284"
 ---
 # <a name="qualifierset_endenumeration-function"></a>QualifierSet_EndEnumeration 함수
 [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) 함수를 호출 하 여 시작 된 열거를 종료 합니다.  
@@ -53,7 +51,7 @@ HRESULT QualifierSet_EndEnumeration (
 |---------|---------|---------|
 |`WBEM_S_NO_ERROR` | 0 | 함수 호출에 성공 했습니다.  |
   
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 이 함수는 [IWbemQualifierSet:: EndEnumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-endenumeration) 메서드에 대 한 호출을 래핑합니다.
 
@@ -61,12 +59,12 @@ HRESULT QualifierSet_EndEnumeration (
 
 ## <a name="requirements"></a>요구 사항  
 
-**플랫폼** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하십시오.  
+**플랫폼:** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
-**헤더:** WMINet_Utils.idl  
+**헤더:** WMINet_Utils  
   
 **.NET Framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [WMI 및 성능 카운터 (관리 되지 않는 API 참조)](index.md)

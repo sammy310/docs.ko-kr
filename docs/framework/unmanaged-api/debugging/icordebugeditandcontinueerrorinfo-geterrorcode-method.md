@@ -15,18 +15,16 @@ helpviewer_keywords:
 ms.assetid: 2f82fb2c-a42e-48bf-af41-a15e40f636c6
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a0ef1e6511bf8e452a336ba6ea02359fe41e07cd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7aff0c5dfce033bf4c55019b38546e39223850a0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61996114"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137020"
 ---
 # <a name="icordebugeditandcontinueerrorinfogeterrorcode-method"></a>ICorDebugEditAndContinueErrorInfo::GetErrorCode 메서드
-`GetErrorCode`는 사용되지 않습니다. 이 메서드를 호출 하지 마세요.  
+`GetErrorCode`는 사용되지 않습니다. 이 메서드를 호출 하지 마십시오.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -7,14 +7,14 @@ helpviewer_keywords:
 - Windows Forms, app settings schema
 - configuration schema [.NET Framework], app settings
 ms.assetid: 99347d62-3ea5-40b6-bfec-c31431011422
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d02f9f952c0ca7651d27571111a2d29f3d1130fe
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3b931b76aa09b3f62fbd799990975268af4f7293
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921298"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119214"
 ---
 # <a name="app-settings-schema"></a>앱 설정 스키마
 
@@ -28,14 +28,14 @@ ms.locfileid: "69921298"
 
 | 요소 | 설명 |
 | ------- | ----------- |
-| [ **\<appSettings>** ](appsettings-element-for-configuration.md) | 응용 프로그램 설정을 제어하기 위한 **\<add>** , **\<clear>** 및 **\<remove>** 태그가 포함되어 있습니다. 선택적 **파일** 특성이 있습니다. |
+| [ **\<appSettings>** ](appsettings-element-for-configuration.md) | 애플리케이션 설정을 제어하기 위한 **\<add&gt;** , **\<clear&gt;** 및 **\<remove&gt;** 태그가 포함되어 있습니다. 선택적 **파일** 특성이 있습니다. |
 | [ **\<add>** ](add-element-for-appsettings.md) | 설정을 정의합니다. **\<appSettings>** 의 자식 요소입니다. **키** 및 **값** 특성이 필요합니다. |
 | [ **\<clear>** ](clear-element-for-appsettings.md) | 모든 설정을 지웁니다. **\<appSettings>** 의 자식 요소입니다. 특성이 없습니다. |
 | [ **\<remove>** ](remove-element-for-appsettings.md) | 설정을 제거합니다. **\<appSettings>** 의 자식 요소입니다. **키** 특성이 필요합니다. |
 
 ## <a name="appsettings-element"></a>\<appSettings> 요소
 
-이 요소에는 응용 프로그램 설정을 제어하기 위한 **\<add>** , **\<clear>** 및 **\<remove>** 태그가 포함되어 있습니다. **파일**에 대한 선택적 특성을 정의합니다.
+이 요소에는 애플리케이션 설정을 제어하기 위한 **\<add&gt;** , **\<clear&gt;** 및 **\<remove&gt;** 태그가 포함되어 있습니다. **파일**에 대한 선택적 특성을 정의합니다.
 
 ## <a name="add-element"></a>\<add> 요소
 
@@ -43,7 +43,7 @@ ms.locfileid: "69921298"
 
 ## <a name="clear-element"></a>\<clear> 요소
 
-상속된 사용자 지정 응용 프로그램 설정에 대한 참조를 모두 제거하고, **\<clear>** 요소 다음의 **\<add>** 요소에 의해 추가된 참조만 허용합니다. 특성 없음을 정의합니다.
+상속된 사용자 지정 애플리케이션 설정에 대한 참조를 모두 제거하고, **\<clear&gt;** 요소 다음의 **\<add&gt;** 요소에 의해 추가된 참조만 허용합니다. 특성 없음을 정의합니다.
 
 ## <a name="remove-element"></a>\<remove> 요소
 
@@ -70,7 +70,7 @@ ms.locfileid: "69921298"
 </configuration>
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
-- [응용 프로그램 설정 개요](../../../winforms/advanced/application-settings-overview.md)
-- [응용 프로그램 설정 아키텍처](../../../winforms/advanced/application-settings-architecture.md)
+- [애플리케이션 설정 개요](../../../winforms/advanced/application-settings-overview.md)
+- [애플리케이션 설정 아키텍처](../../../winforms/advanced/application-settings-architecture.md)

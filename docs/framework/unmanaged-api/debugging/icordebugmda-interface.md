@@ -14,21 +14,19 @@ helpviewer_keywords:
 ms.assetid: 8ecbb854-295c-4dd4-b9fc-01ebeac46e06
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a662185bb84e9a66573b43b26ffcd256ecb943f5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4201fe23bf54388510088e21471edce91809e94c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69909845"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129793"
 ---
 # <a name="icordebugmda-interface"></a>ICorDebugMDA 인터페이스
 MDA(관리 디버깅 도우미) 메시지를 나타냅니다.  
   
 ## <a name="methods"></a>메서드  
   
-|메서드|Description|  
+|메서드|설명|  
 |------------|-----------------|  
 |[GetDescription 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-getdescription-method.md)|이 MDA에 대 한 설명을 포함 하는 문자열을 가져옵니다.|  
 |[GetFlags 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-getflags-method.md)|이 MDA와 연결 된 플래그를 가져옵니다.|  
@@ -36,21 +34,21 @@ MDA(관리 디버깅 도우미) 메시지를 나타냅니다.
 |[GetOSThreadId 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-getosthreadid-method.md)|이 MDA가 실행 되 고 있는 운영 체제 스레드 식별자를 가져옵니다.|  
 |[GetXML 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-getxml-method.md)|이 MDA와 연결 된 전체 XML 스트림을 가져옵니다.|  
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
   
 > [!NOTE]
 > 이 인터페이스는 크로스 시스템 또는 크로스 프로세스 원격 호출을 지원하지 않습니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
- **라이브러리** CorGuids.lib  
+ **라이브러리:** CorGuids.lib  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [관리 디버깅 도우미를 사용하여 오류 진단](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

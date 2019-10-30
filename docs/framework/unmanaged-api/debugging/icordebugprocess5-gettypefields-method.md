@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6a0ad3ee-dacb-47e9-abae-4536bcc4804b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2d413b17da0b6f241f9078bfeb3bd035d4d07a81
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0045285a3da22f468c2426bb3b9c4ae7e3e1d7c7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767634"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132666"
 ---
 # <a name="icordebugprocess5gettypefields-method"></a>ICorDebugProcess5::GetTypeFields 메서드
 형식에 속하는 필드에 대 한 정보를 제공 합니다.  
@@ -40,22 +38,22 @@ HRESULT GetTypeFields(
   
 ## <a name="parameters"></a>매개 변수  
  `id`  
- [in] 식별자 인 필드 정보를 검색할 형식입니다.  
+ 진행 필드 정보를 검색할 형식의 식별자입니다.  
   
  `celt`  
- [in] 수가 [COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) 필드 정보를 검색할 개체입니다.  
+ 진행 필드 정보를 검색할 [COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) 개체의 수입니다.  
   
  `fields`  
- [out] 배열을 [COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) 형식에 속하는 필드에 대 한 정보를 제공 하는 개체입니다.  
+ 제한이 형식에 속하는 필드에 대 한 정보를 제공 하는 [COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) 개체의 배열입니다.  
   
  `pceltNeeded`  
- [out] 개수에 대 한 포인터 [COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) 에 포함 된 개체 `fields`합니다.  
+ 제한이 `fields`에 포함 된 [COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) 개체 수에 대 한 포인터입니다.  
   
-## <a name="remarks"></a>설명  
- `celt` 필드를 채우는 메서드를 사용 하 여 필드 정보를 가져올 수를 지정 하는 매개 변수 `fields`의 값과 일치 해야 합니다 `COR_TYPE_LAYOUT::numFields` 필드입니다.  
+## <a name="remarks"></a>주의  
+ 메서드가 `fields`를 채우는 데 사용 하는 필드 정보가 있는 필드의 수를 지정 하는 `celt` 매개 변수는 `COR_TYPE_LAYOUT::numFields` 필드의 값에 해당 해야 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
@@ -63,7 +61,7 @@ HRESULT GetTypeFields(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ICorDebugProcess5 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
 - [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

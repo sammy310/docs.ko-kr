@@ -2,14 +2,12 @@
 title: 리플렉션을 사용하는 API
 ms.date: 03/30/2017
 ms.assetid: f9532629-6594-4a41-909f-d083f30a42f3
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9d120dcf49f1c9097eee04434062a0363a7e144a
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 7329ac339912042fc5d2fb335faa3bf74ed03b8d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049970"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128537"
 ---
 # <a name="apis-that-rely-on-reflection"></a>리플렉션을 사용하는 API
 경우에 따라 코드에서 리플렉션을 사용 하는 것은 명확 하지 않으므로 .NET 네이티브 도구 체인은 런타임에 필요한 메타 데이터를 유지 하지 않습니다. 이 항목에서는 리플렉션 API의 일부로는 간주되지 않지만 리플렉션을 사용해야 정상적으로 실행되는 몇 가지 일반적인 API 또는 프로그래밍 패턴에 대해 설명합니다. 소스 코드에서 이러한 API를 사용하는 경우 해당 API 호출 시 런타임에 [MissingMetadataException](missingmetadataexception-class-net-native.md) 예외 또는 일부 기타 예외가 발생하지 않도록 API에 대한 정보를 런타임 지시문(.rd.xml) 파일에 추가할 수 있습니다.  
@@ -31,7 +29,7 @@ ms.locfileid: "71049970"
   
 성능상의 이유로 다음 형식의 메타 데이터가 제거 되었으므로이 작업을 수행할 수 없습니다.  
   
-`App1.AppClass`1 < > '.  
+`App1.AppClass`1 < System.web > '입니다.  
   
  다음 런타임 지시문을 런타임 지시문 파일에 추가하여 `Activate`를 통한 `AppClass<T>`의 특정 인스턴스화에 대해 <xref:System.Int32?displayProperty=nameWithType> 메타데이터를 추가할 수 있습니다.  
   
@@ -90,7 +88,7 @@ Unfortunately, no further information is available.
 <Type Name="App1.Class1[]" Browse="Required Public" />  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [시작](getting-started-with-net-native.md)
 - [런타임 지시문(rd.xml) 구성 파일 참조](runtime-directives-rd-xml-configuration-file-reference.md)

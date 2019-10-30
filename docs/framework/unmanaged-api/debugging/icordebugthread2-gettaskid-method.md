@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6ba3c6ee-4ba1-4c98-bf1e-8531acd3da09
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1272df17a9a9a500b84f62914811b8d109bf3cdd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d5f2838007504e56ad44614a6778083be046629f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768959"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140076"
 ---
 # <a name="icordebugthread2gettaskid-method"></a>ICorDebugThread2::GetTaskID 메서드
 이 스레드에서 실행 중인 작업의 식별자를 가져옵니다.  
@@ -37,13 +35,13 @@ HRESULT GetTaskID (
   
 ## <a name="parameters"></a>매개 변수  
  `pTaskId`  
- [out] 이 ICorDebugThread2 개체로 표현 되는 스레드에서 실행 중인 작업의 식별자에 대 한 포인터입니다.  
+ 제한이 이 ICorDebugThread2 개체가 나타내는 스레드에서 실행 중인 작업의 식별자에 대 한 포인터입니다.  
   
-## <a name="remarks"></a>설명  
- 작업은 스레드는 연결에 연결 하는 경우 스레드에서 실행할만 있습니다. `GetTaskID` 반환 값이 0 인 `pTaskId` 스레드에 대 한 연결을 사용 하 여 연결 되지 않은 경우.  
+## <a name="remarks"></a>주의  
+ 스레드가 연결과 연결 된 경우에만 스레드에서 작업을 실행할 수 있습니다. 스레드가 연결과 연결 되어 있지 않으면 `GetTaskID` `pTaskId`에서 0을 반환 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   

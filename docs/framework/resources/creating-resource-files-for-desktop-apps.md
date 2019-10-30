@@ -10,14 +10,12 @@ helpviewer_keywords:
 - application resources, creating files
 - resource files, creating
 ms.assetid: 6c5ad891-66a0-4e7a-adcf-f41863ba6d8d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 893b6e6e61e23bdc0da1902407017a836bc6cbe8
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 92e52fb130adecd6acdbeb8eac8d624d3c291094
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71045677"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129972"
 ---
 # <a name="create-resource-files-for-net-apps"></a>.NET 앱의 리소스 파일 만들기
 
@@ -60,7 +58,7 @@ name2=value2
 
  .txt 및 .restext 파일의 리소스 파일 형식은 같습니다. .restext 파일 확장명은 단순히 텍스트 파일을 텍스트 기반 리소스 파일로 즉시 식별할 수 있도록 합니다.
 
- 문자열 리소스는 *name/value* 쌍으로 나타납니다. 여기서 *name*은 리소스를 식별하는 문자열이고, *value*는 *name*을 <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=nameWithType>과 같은 리소스 검색 메서드에 전달할 때 반환되는 리소스 문자열입니다. *name* 및 *value*는 등호(=)로 구분해야 합니다. 예:
+ 문자열 리소스는 *name/value* 쌍으로 나타납니다. 여기서 *name*은 리소스를 식별하는 문자열이고, *value*는 *name*을 <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=nameWithType>과 같은 리소스 검색 메서드에 전달할 때 반환되는 리소스 문자열입니다. *name* 및 *value*는 등호(=)로 구분해야 합니다. 예를 들면,
 
 ```text
 FileMenuName=File
@@ -72,7 +70,7 @@ HelpMenuName=Help
 > [!CAUTION]
 > 암호, 보안이 중요한 정보 또는 개인 데이터를 저장할 때는 리소스 파일을 사용하지 마세요.
 
- 빈 문자열(즉, <xref:System.String.Empty?displayProperty=nameWithType> 값을 가진 리소스)은 텍스트 파일에 사용할 수 있습니다. 예:
+ 빈 문자열(즉, <xref:System.String.Empty?displayProperty=nameWithType> 값을 가진 리소스)은 텍스트 파일에 사용할 수 있습니다. 예를 들면,
 
 ```text
 EmptyString=
@@ -94,7 +92,7 @@ CancelButton=Cancel
 
  텍스트 파일에 중복된 *name*이 포함된 경우 [리소스 파일 생성기(Resgen.exe)](../tools/resgen-exe-resource-file-generator.md)는 경고를 표시하고 두 번째 이름을 무시합니다.
 
- *value*에는 줄 바꿈 문자가 포함될 수 없지만 `\n` 같은 C 언어 스타일의 이스케이프 문자를 사용하여 새 줄을 나타내고 `\t`를 사용하여 탭을 나타낼 수 있습니다. 이스케이프된 경우 백슬래시 문자를 포함할 수도 있습니다(예: "\\\\"). 또한 빈 문자열이 허용됩니다.
+ *값* 에는 줄 바꿈 문자가 포함 될 수 없지만 `\n`와 같은 C 언어 스타일 이스케이프 문자를 사용 하 여 새 줄을 나타내고 `\t` 탭을 나타낼 수 있습니다. 이스케이프 된 경우 백슬래시 문자를 포함할 수도 있습니다 (예: "\\\\"). 또한 빈 문자열이 허용됩니다.
 
  little-endian 또는 big-endian 바이트 순서의 UTF-8 인코딩이나 UTF-16 인코딩을 사용하여 텍스트 파일 형식으로 리소스를 저장해야 합니다. 하지만 .txt 파일을 .resources 파일로 변환하는 [리소스 파일 생성기(Resgen.exe)](../tools/resgen-exe-resource-file-generator.md)는 기본적으로 파일을 UTF-8로 처리합니다. Resgen.exe가 UTF-16을 사용하여 인코딩된 파일을 인식하게 하려면 파일 시작 부분에 유니코드 바이트 순서 표시(U+FEFF)를 포함해야 합니다.
 
@@ -204,7 +202,7 @@ csc greeting.cs -resource:GreetingResources.resources
 
 컴파일 시간에 Visual Studio에서는 먼저 프로젝트의 .resx 파일을 이진 리소스(.resources) 파일로 변환하고 프로젝트 *obj* 디렉터리의 하위 디렉터리에 저장합니다. Visual Studio에서는 지역화된 리소스가 포함되지 않은 모든 리소스 파일을 프로젝트에서 생성된 주 어셈블리에 포함합니다. 리소스 파일에 지역화된 리소스가 포함된 경우 Visual Studio에서는 각 지역화된 문화권에 대한 개별 위성 어셈블리에 리소스 파일을 포함합니다. 그런 다음, 각 위성 어셈블리를 이름이 지역화된 문화권과 일치하는 디렉터리에 저장합니다. 예를 들어 지역화된 영어(미국) 리소스는 en-US 하위 디렉터리의 위성 어셈블리에 저장됩니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Resources>
 - [데스크톱 앱의 리소스](index.md)

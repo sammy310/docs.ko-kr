@@ -7,14 +7,12 @@ helpviewer_keywords:
 - interop marshaling, copying
 - interop marshaling, pinning
 ms.assetid: 0059f576-e460-4e70-b257-668870e420b8
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 90ed12862c4cadc45777150deb1b9f91f111bf41
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: f6db7d37293015911c1285d39e19bf7542a7ac59
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64750505"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123637"
 ---
 # <a name="copying-and-pinning"></a>복사 및 고정
 
@@ -33,7 +31,7 @@ ms.locfileid: "64750505"
 서식 있는 [blittable](blittable-and-non-blittable-types.md) 클래스의 경우 수정된 레이아웃(서식 있음)을 포함하고 관리되는 메모리와 관리되지 않는 메모리에서 모두 공통적인 데이터 표현을 사용합니다. 이러한 형식에 마샬링이 필요하면 힙의 개체 포인터가 호출 수신자에게 직접 전달됩니다. 호출 수신자는 포인터로 참조되는 메모리 위치의 콘텐츠를 변경할 수 있습니다.
 
 > [!NOTE]
-> 매개 변수가 Out 또는 In/Out으로 표시된 경우 호출 수신자는 메모리 콘텐츠를 변경할 수 있습니다. 반면 호출 수신자는 매개 변수가 In(서식 있는 blittable 형식의 기본값)으로 마샬링되도록 설정된 경우 콘텐츠 변경을 피해야 합니다. In 개체를 수정하면 같은 클래스를 형식 라이브러리로 내보내고 아파트 간 호출을 수행하는 데 사용할 경우 문제가 발생합니다.
+> 매개 변수가 Out 또는 In/Out으로 표시 되는 경우 호출 수신자는 메모리 내용을 변경할 수 있습니다. 이와 대조적으로, 매개 변수가 형식이 지정 된 blittable 형식의 기본값인에서로 마샬링하는 것으로 설정 된 경우에는 호출 수신자가 콘텐츠를 변경 하지 않아야 합니다. In 개체를 수정하면 같은 클래스를 형식 라이브러리로 내보내고 아파트 간 호출을 수행하는 데 사용할 경우 문제가 발생합니다.
 
 ## <a name="formatted-non-blittable-classes"></a>서식 있는 비 Blittable 클래스
 
@@ -80,7 +78,7 @@ ms.locfileid: "64750505"
 
 <xref:System.Text.StringBuilder?displayProperty=nameWithType>가 값으로 전달되면 마샬러는 **StringBuilder**의 내부 버퍼에 대한 참조를 호출자에게 직접 전달합니다. 호출자와 호출 수신자가 버퍼 크기가 동의해야 합니다. 호출자는 적절한 길이의 **StringBuilder**를 만들어야 합니다. 호출 수신자는 버퍼가 오버런되지 않도록 필요한 예방 조치를 수행해야 합니다. **StringBuilder**는 값으로 전달되는 참조 형식이 기본적으로 In 매개 변수로 전달되는 규칙의 예외입니다. 항상 In/Out으로 전달됩니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [기본 마샬링 동작](default-marshaling-behavior.md)
 - [방향 특성](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))

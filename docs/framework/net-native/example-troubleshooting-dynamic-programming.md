@@ -1,17 +1,15 @@
 ---
-title: '예제: 동적 프로그래밍 문제 해결'
+title: '예: 동적 프로그래밍 문제 해결'
 ms.date: 03/30/2017
 ms.assetid: 42ed860a-a022-4682-8b7f-7c9870784671
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 866ec425fd66ee8b3b62263180ac7e6d776108f0
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: ff179854066d024a89cb5a84a19d0b9bb054d6e5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049798"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128449"
 ---
-# <a name="example-troubleshooting-dynamic-programming"></a>예제: 동적 프로그래밍 문제 해결
+# <a name="example-troubleshooting-dynamic-programming"></a>예: 동적 프로그래밍 문제 해결
 > [!NOTE]
 > 이 항목은 시험판 소프트웨어인 .NET Native Developer Preview를 참조합니다. 이 Preview 버전은 [Microsoft Connect 웹 사이트](https://go.microsoft.com/fwlink/?LinkId=394611)에서 다운로드할 수 있습니다(등록 필요).  
   
@@ -50,7 +48,7 @@ App!$43_System::Threading::SendOrPostCallback.InvokeOpenStaticThunk
   
  이 경우 `App.Core.ViewModels`에 대해 런타임 지시문을 추가하면 문제가 해결됩니다. 근본 원인은 <xref:System.Type.GetType%28System.String%29?displayProperty=nameWithType> 메서드에 대한 API 호출에서 **null**이 반환된 것이며, 앱은 충돌이 해결될 때까지 문제를 자동으로 무시합니다.  
   
- 동적 프로그래밍에서 .NET 네이티브에서 리플렉션 api를 사용할 때는 오류 발생 시 예외를 throw 하 <xref:System.Type.GetType%2A?displayProperty=nameWithType> 는 오버 로드를 사용 하는 것이 좋습니다.  
+ 동적 프로그래밍에서 .NET 네이티브에서 리플렉션 Api를 사용할 때는 오류 발생 시 예외를 throw 하는 <xref:System.Type.GetType%2A?displayProperty=nameWithType> 오버 로드를 사용 하는 것이 좋습니다.  
   
 ## <a name="is-this-an-isolated-case"></a>사례의 격리 여부 확인  
  `App.Core.ViewModels` 사용 시에는 다른 문제도 발생할 수 있습니다.  따라서 각 메타데이터 누락 예외를 파악하여 수정할지 아니면 시간 절약을 위해 대형 형식 클래스에 대한 지시문을 추가할지를 결정해야 합니다.  여기서는 생성되는 출력 바이너리의 크기가 증가해도 문제가 없다면 `dynamic`에 대해 `App.Core.ViewModels` 메타데이터를 추가하는 것이 가장 효율적인 방법입니다.  
@@ -58,7 +56,7 @@ App!$43_System::Threading::SendOrPostCallback.InvokeOpenStaticThunk
 ## <a name="could-the-code-be-rewritten"></a>코드 다시 작성 가능 여부 확인  
  앱에서 `typeof(LayoutApplicationVM)` 대신 `Type.GetType("LayoutApplicationVM")`를 사용했다면 도구 체인이 `browse` 메타데이터를 보존했을 수 있습니다.  그러나 `invoke` 메타데이터는 작성되지 않았으므로 형식을 인스턴스화할 때 [MissingMetadataException](missingmetadataexception-class-net-native.md) 예외가 발생합니다. 이 예외를 방지하려면 `dynamic` 정책을 지정하는 형식 또는 네임스페이스에 대해 런타임 지시문을 추가해야 합니다. 런타임 지시문에 대한 자세한 내용은 [런타임 지시문(rd.xml) 구성 파일 참조](runtime-directives-rd-xml-configuration-file-reference.md)를 참조하세요.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [시작](getting-started-with-net-native.md)
-- [예제: 데이터를 바인딩할 때 예외 처리](example-handling-exceptions-when-binding-data.md)
+- [예: 데이터를 바인딩하는 경우 예외 처리](example-handling-exceptions-when-binding-data.md)

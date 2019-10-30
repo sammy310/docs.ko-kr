@@ -7,22 +7,22 @@ helpviewer_keywords:
 - add Element
 - <add> Element
 ms.assetid: 8734efdc-00f6-4a65-bba6-084c5bc65246
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 594ba4f289012e775e93acba98056b60bdd94cbd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 09864ea8f174d0c23f26db49f8cc0d43608522a0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927744"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119332"
 ---
-# <a name="add-element-for-appsettings"></a>\<appSettings >에 대 \<한 > 요소 추가
+# <a name="add-element-for-appsettings"></a>\<appSettings에 대 한 > 요소를 추가 \<
 
 사용자 지정 응용 프로그램 설정을 추가 합니다.
 
 [ **\<configuration>** ](../configuration-element.md)   
 &nbsp;&nbsp;[ **\<appSettings>** ](appsettings-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp; **\<add>**
+&nbsp;&nbsp;&nbsp;&nbsp; **\<추가**
 
 ## <a name="syntax"></a>구문
 
@@ -37,7 +37,7 @@ ms.locfileid: "69927744"
 |           | 설명 |
 | --------- | ----------- |
 | **key**   | 필수 특성입니다.<br><br>추가할 키의 이름을 지정 합니다. |
-| **값** | 필수 특성입니다.<br><br>추가할 키의 값을 지정 합니다. |
+| **value** | 필수 특성입니다.<br><br>추가할 키의 값을 지정 합니다. |
 
 ## <a name="parent-element"></a>부모 요소
 
@@ -68,6 +68,6 @@ ms.locfileid: "69927744"
 </appSettings>
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [.NET Framework에 대 한 구성 파일 스키마](../index.md)

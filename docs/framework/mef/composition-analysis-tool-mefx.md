@@ -6,14 +6,12 @@ helpviewer_keywords:
 - MEF, Composition Analysis Tool
 - Mefx [MEF], Composition Analysis Tool
 ms.assetid: c48a7f93-83bb-4a06-aea0-d8e7bd1502ad
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f3777627caec7fc0d383804f71d9b7d3f09756fd
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
-ms.translationtype: HT
+ms.openlocfilehash: bb2748b16a16d7d01b076402889829f5b31a1912
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894126"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126365"
 ---
 # <a name="composition-analysis-tool-mefx"></a>컴퍼지션 분석 도구(Mefx)
 컴퍼지션 분석 도구(Mefx)는 MEF(Managed Extensibility Framework) 파트를 포함하는 라이브러리(.dll) 및 애플리케이션(.exe) 파일을 분석하는 명령줄 애플리케이션입니다. Mefx는 주로 번거로운 추적 코드를 애플리케이션 자체에 추가할 필요 없이 MEF 애플리케이션에서 컴퍼지션 실패를 진단하는 방법을 개발자에게 제공하는 데 사용됩니다. 타사에서 제공된 라이브러리의 파트를 이해할 때 유용할 수 있습니다. 이 항목에서는 Mefx를 사용하는 방법을 설명하고 해당 구문에 대한 참조를 제공합니다.  

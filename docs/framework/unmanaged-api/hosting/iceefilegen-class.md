@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 90368606-506e-40df-be1f-8d595159203f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 44241d02051c9bd54f93a19fa6044e4973fdef9e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6914437b9b238c1d82cf4cc8a480a15dd8dda7ad
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69950266"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126802"
 ---
 # <a name="iceefilegen-class"></a>ICeeFileGen 클래스
 네이티브 PE (이식 가능한 실행) 파일을 만드는 기능을 제공 합니다. 일반적으로이 인터페이스는 컴파일러에서 컴파일된 출력 실행 파일을 생성 하는 데 사용 됩니다.  
@@ -237,12 +235,12 @@ public:
 ```  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** ICeeFileGen.h  
+ **헤더:** ICeeFileGen  
   
  **.NET Framework 버전:** 1.0  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [호스팅 인터페이스](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

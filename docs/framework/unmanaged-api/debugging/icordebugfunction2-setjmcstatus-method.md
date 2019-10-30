@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 22c27b01-2869-4214-b840-5921f7c874fc
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 67959b2ebbfb62b47a1b2a770e278d043fc66d21
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 758364b2d63343e464b727d5a1c1817533a6acea
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754921"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137790"
 ---
 # <a name="icordebugfunction2setjmcstatus-method"></a>ICorDebugFunction2::SetJMCStatus 메서드
-Just My Code에 대 한이 ICorDebugFunction2 함수가 표시 단계별로 실행 합니다.  
+내 코드만 단계별 실행을 위해이 ICorDebugFunction2가 나타내는 함수를 표시 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,20 +35,20 @@ HRESULT SetJMCStatus (
   
 ## <a name="parameters"></a>매개 변수  
  `bIsJustMyCode`  
- [in] 로 `true` 사용자 코드로; 함수를 표시 하려면이 고, 그렇지로 `false`.  
+ 진행 함수를 사용자 코드로 표시 하려면 `true`로 설정 합니다. 그렇지 않으면 `false`로 설정 합니다.  
   
 ## <a name="return-values"></a>반환 값  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
-|`S_OK`|함수를 표시 했습니다.|  
-|`CORDBG_E_FUNCTION_NOT_DEBUGGABLE`|디버깅할 수 없습니다 때문에 사용자 코드로 함수를 표시할 수 없습니다.|  
+|`S_OK`|함수가로 표시 되었습니다.|  
+|`CORDBG_E_FUNCTION_NOT_DEBUGGABLE`|디버깅할 수 없으므로 함수를 사용자 코드로 표시할 수 없습니다.|  
   
-## <a name="remarks"></a>설명  
- 내 코드만 스텝 사용자 코드가 아닌 건너뜁니다. 사용자 코드에 디버깅 가능한 코드가의 하위 집합 이어야 합니다.  
+## <a name="remarks"></a>주의  
+ 내 코드만 스텝 퍼는 사용자가 아닌 코드를 건너뜁니다. 사용자 코드는 디버깅 가능한 코드의 하위 집합 이어야 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   

@@ -2,14 +2,12 @@
 title: .NET 네이티브 및 컴파일
 ms.date: 03/30/2017
 ms.assetid: e38ae4f3-3e3d-42c3-a4b8-db1aa9d84f85
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1a15d30ea4d6e0f4456460248e96428419117d85
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: cf5c9f05b2f2cb4ca15e4add5b53bc9bdca757a3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049434"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128254"
 ---
 # <a name="net-native-and-compilation"></a>.NET 네이티브 및 컴파일
 
@@ -104,7 +102,7 @@ ms.locfileid: "71049434"
 
 - NGEN 이미지는 손상되기 쉽습니다. 예를 들어 종속성에 패치나 변경을 적용하려면 일반적으로 패치나 변경을 사용하는 어셈블리도 다시 NGEN되어야 합니다. 이는 특히 .NET Framework 클래스 라이브러리의 시스템 라이브러리에 적용됩니다. 반대로 .NET 네이티브에서는 애플리케이션을 서로 독립적으로 처리할 수 있습니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [메타데이터 및 자동 기술 구성 요소](../../standard/metadata-and-self-describing-components.md)
 - [내부 .NET 네이티브 (Channel 9 비디오)](https://channel9.msdn.com/Shows/Going+Deep/Inside-NET-Native)

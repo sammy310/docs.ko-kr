@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: a684f7d7-d0c2-4690-b721-639e613f11f8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c2ea0bf215c0d2abfe9beb29d736f893073d3be8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cc02f63808b1929b93777c8bbc67c47000b0b424
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739515"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132743"
 ---
 # <a name="cordebugunmappedstop-enumeration"></a>CorDebugUnmappedStop 열거형
 스텝퍼에 의해 코드 실행에서 중지를 트리거할 수 있는 매핑되지 않은 코드 형식을 지정합니다.  
@@ -42,21 +40,21 @@ typedef enum CorDebugUnmappedStop {
   
 ## <a name="members"></a>멤버  
   
-|멤버|Description|  
+|멤버|설명|  
 |------------|-----------------|  
-|`STOP_NONE`|모든 종류의 매핑되지 않은 코드에서 중지 하지 마십시오.|  
-|`STOP_PROLOG`|프롤로그 코드에서 중지 합니다.|  
+|`STOP_NONE`|모든 형식의 매핑되지 않은 코드에서 중지 하지 마십시오.|  
+|`STOP_PROLOG`|프롤로그 코드에서를 중지 합니다.|  
 |`STOP_EPILOG`|에필로그 코드에서 중지 합니다.|  
-|`STOP_NO_MAPPING_INFO`|매핑 정보가 없는 코드에서 중지 합니다.|  
-|`STOP_OTHER_UNMAPPED`|프롤로그, 에필로그, 아니요-매핑 정보 또는 관리 되지 않는 범주에 맞지 않는 매핑되지 않은 코드에서 중지 합니다.|  
-|`STOP_UNMANAGED`|비관리 코드에서 중지 합니다. 이 값은 interop 디버깅에 유효 합니다.|  
-|`STOP_ALL`|모든 유형의 매핑되지 않은 코드에서 중지 합니다.|  
+|`STOP_NO_MAPPING_INFO`|매핑 정보가 없는 코드에서를 중지 합니다.|  
+|`STOP_OTHER_UNMAPPED`|프롤로그, 에필로그, 매핑되지 않음 정보 또는 관리 되지 않는 범주에 맞지 않는 매핑되지 않은 코드에서 중지 합니다.|  
+|`STOP_UNMANAGED`|비관리 코드에서 중지 합니다. 이 값은 interop 디버깅에만 사용할 수 있습니다.|  
+|`STOP_ALL`|매핑되지 않은 모든 형식의 코드에서 중지 합니다.|  
   
-## <a name="remarks"></a>설명  
- 사용 된 [icordebugstepper:: Setunmappedstopmask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md) 스텝 퍼 터 매핑되지 않은 코드를 지정 하는 플래그를 설정 하는 방법입니다.  
+## <a name="remarks"></a>주의  
+ [ICorDebugStepper:: SetUnmappedStopMask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md) 메서드를 사용 하 여 스텝 퍼가 중지 될 매핑되지 않은 코드를 지정 하는 플래그를 설정 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
@@ -64,6 +62,6 @@ typedef enum CorDebugUnmappedStop {
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [디버깅 열거형](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

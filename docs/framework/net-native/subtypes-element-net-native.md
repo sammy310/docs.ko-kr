@@ -1,17 +1,15 @@
 ---
-title: <Subtypes>요소 (.NET 네이티브)
+title: <Subtypes> 요소 (.NET 네이티브)
 ms.date: 03/30/2017
 ms.assetid: fb854070-248b-46cf-9dab-c322e2b4d624
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2af1acc02b18c5b97ef66ccae9b70c1f5327bff4
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 9f090e7d1558d31111345e2c9b8dabb55b7122c1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049122"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128104"
 ---
-# <a name="subtypes-element-net-native"></a>\<하위 유형 > 요소 (.NET 네이티브)
+# <a name="subtypes-element-net-native"></a>\<하위 형식 > 요소 (.NET 네이티브)
 포함 형식에서 상속된 모든 클래스에 런타임 정책을 적용합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -34,7 +32,7 @@ ms.locfileid: "71049122"
   
 ### <a name="attributes"></a>특성  
   
-|특성|특성 유형|Description|  
+|특성|특성 유형|설명|  
 |---------------|--------------------|-----------------|  
 |`Activate`|반사|선택적 특성입니다. 인스턴스를 활성화할 수 있도록 생성자에 대한 런타임 액세스를 제어합니다.|  
 |`Browse`|반사|선택적 특성입니다. 프로그램 요소에 대한 정보 쿼리를 제어하지만 런타임 액세스를 사용하도록 설정하지는 않습니다.|  
@@ -49,20 +47,20 @@ ms.locfileid: "71049122"
   
 ## <a name="all-attributes"></a>모든 특성  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |*policy_setting*|이 정책 형식에 적용할 설정입니다. 가능한 값은 `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` 및 `Required All`입니다. 자세한 내용은 [런타임 지시문 정책 설정](runtime-directive-policy-settings.md)을 참조하세요.|  
   
 ### <a name="child-elements"></a>자식 요소  
- 없음  
+ 없음.  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<Type>](type-element-net-native.md)|형식 및 모든 해당 멤버에 리플렉션 정책을 적용합니다.|  
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
  `<Subtypes>` 요소는 포함 형식의 모든 하위 형식에 정책을 적용합니다. 파생 형식 및 해당 기본 클래스에 각기 다른 정책을 적용하려는 경우 이 요소를 사용합니다.  
   
  리플렉션, serialization 및 interop 특성은 모두 선택적 항목이지만 하나 이상 있어야 합니다.  
@@ -89,7 +87,7 @@ ms.locfileid: "71049122"
   
  [!code-csharp[ProjectN_Reflection#5](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/subtypes.cs#5)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [\<형식 > 요소](type-element-net-native.md)
 - [런타임 지시문(rd.xml) 구성 파일 참조](runtime-directives-rd-xml-configuration-file-reference.md)

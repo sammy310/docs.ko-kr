@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 554284e7-3f6c-4d40-8da5-1c9317fbd484
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8a6db1990df2ed6b29d548c147ed40b5bc98254d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d9430c5a1f37a0507b383ea5437f7d7fed706c43
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745683"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123858"
 ---
 # <a name="icordebugchaingetstackrange-method"></a>ICorDebugChain::GetStackRange 메서드
-이 체인에 대 한 스택 세그먼트의 주소 범위를 가져옵니다.  
+이 체인의 스택 세그먼트에 대 한 주소 범위를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,16 +36,16 @@ HRESULT GetStackRange (
   
 ## <a name="parameters"></a>매개 변수  
  `pStart`  
- [out] 에 대 한 포인터를 `CORDB_ADDRESS` 스택 세그먼트의 시작 주소입니다.  
+ 제한이 스택 세그먼트의 시작 주소인 `CORDB_ADDRESS` 값에 대 한 포인터입니다.  
   
  `pEnd`  
- [out] 에 대 한 포인터를 `CORDB_ADDRESS` 값 스택 세그먼트의 끝 주소입니다.  
+ 제한이 스택 세그먼트의 끝 주소인 `CORDB_ADDRESS` 값에 대 한 포인터입니다.  
   
-## <a name="remarks"></a>설명  
- 숫자 범위는 스택 프레임 위치를 비교 하기 위해. 실제로 스택에 저장 된 대 한 가정을 만들 수 없습니다.  
+## <a name="remarks"></a>주의  
+ 숫자 범위는 스택 프레임 위치를 비교 하는 경우에만 의미가 있습니다. 실제로 스택에 저장 되는 항목에 대 한 가정을 만들 수는 없습니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   

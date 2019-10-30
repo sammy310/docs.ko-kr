@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6ef8ac9b-9803-4b65-8b13-25f3e0b1bc6b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b518a3be939c70b207a71d79a3d362dba26fd3d0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2f91891164f1f80617cab10347eb4a7a08762c10
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774195"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140344"
 ---
 # <a name="icorpublishappdomaingetname-method"></a>ICorPublishAppDomain::GetName 메서드
-이 표시 되는 응용 프로그램 도메인의 이름을 가져옵니다 [ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md)합니다.  
+이 [ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md)가 나타내는 응용 프로그램 도메인의 이름을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -43,25 +41,25 @@ HRESULT GetName (
  [in] `szName` 배열의 크기입니다.  
   
  `pcchName`  
- [out] 반환 된 null 문자를 포함 하는 와이드 문자의 수에 대 한 포인터를 `szName` 배열입니다.  
+ 제한이 `szName` 배열에 반환 된 null 문자를 포함 하는 와이드 문자 수에 대 한 포인터입니다.  
   
  `szName`  
- [out] 이름을 저장 하는 배열입니다.  
+ 제한이 이름을 저장할 배열입니다.  
   
-## <a name="remarks"></a>설명  
- 하는 경우 `szName` 가 null이 아닌 합니다 `GetName` 메서드를 복사 `cchName` 문자 (null 종결자 포함)에 `szName`입니다. 반환 된 null이 아닌 경우 `pcchName`, 실제 이름 (null 종결자 포함)의 문자 수에 저장 됩니다는 `szName` 배열입니다.  
+## <a name="remarks"></a>주의  
+ `szName` null이 아닌 경우 `GetName` 메서드는 최대 `cchName` 문자 (null 종결자 포함)를 `szName`로 복사 합니다. `pcchName`에서 null이 아닌이 반환 되는 경우에는 이름 (null 종결자 포함)의 실제 문자 수가 `szName` 배열에 저장 됩니다.  
   
- `GetName` 메서드 복사 된 문자 수에 관계 없이 S_OK HRESULT를 반환 합니다.  
+ `GetName` 메서드는 복사 된 문자 수에 관계 없이 S_OK HRESULT를 반환 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** CorPub.idl, CorPub.h  
+ **헤더:** CorPub .idl, CorPub. h  
   
  **라이브러리:** CorGuids.lib  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ICorPublishAppDomain 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md)

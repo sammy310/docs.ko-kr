@@ -1,15 +1,13 @@
 ---
-title: <TypeParameter>요소 (.NET 네이티브)
+title: <TypeParameter> 요소 (.NET 네이티브)
 ms.date: 03/30/2017
 ms.assetid: d37bb1b7-1ddc-4c6d-8ecf-583f804a2479
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0de00b9313b60b3a527dd0380ae90d82731a8c02
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: c69b535f3a01c287d30189138130066fc10a77e2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049057"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128918"
 ---
 # <a name="typeparameter-element-net-native"></a>\<TypeParameter > 요소 (.NET 네이티브)
 메서드로 전달된 Type 인수가 나타내는 형식에 정책을 적용합니다.  
@@ -57,20 +55,20 @@ ms.locfileid: "71049057"
   
 ## <a name="all-other-attributes"></a>기타 모든 특성  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |*policy_setting*|이 정책 형식에 적용할 설정입니다. 가능한 값은 `All`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` 및 `Required All`입니다. 자세한 내용은 [런타임 지시문 정책 설정](runtime-directive-policy-settings.md)을 참조하세요.|  
   
 ### <a name="child-elements"></a>자식 요소  
- 없음  
+ 없음.  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<Method>](method-element-net-native.md)|생성자 또는 메서드에 런타임 리플렉션 정책을 적용합니다.|  
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
  `<TypeParameter>` 요소는 <xref:System.Type> 형식 매개 변수에만 적용할 수 있다는 점을 제외하면 [\<Parameter>](parameter-element-net-native.md) 요소와 비슷합니다. 이 요소는 `Name` 특성으로 지정된 형식 인수에 의해 런타임에 표시되는 형식에 정책을 적용합니다.  
   
  예를 들어 NewtonSoft JSON serializer는 정적 `JsonConvert.DeserializeObject(String value, Type type)` 메서드를 포함합니다. 다음 리플렉션 지시문은  
@@ -94,7 +92,7 @@ Object obj = JsonConvert.DeserializeObject(data, t);
   
  리플렉션 지시문은 런타임에 `StockQuote` 형식의 메타데이터를 NewtonSoft JSON serializer에 제공합니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [\<Method> 요소](method-element-net-native.md)
 - [런타임 지시문(rd.xml) 구성 파일 참조](runtime-directives-rd-xml-configuration-file-reference.md)

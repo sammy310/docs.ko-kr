@@ -7,14 +7,12 @@ helpviewer_keywords:
 - DLR
 - IronRuby
 ms.assetid: f769a271-8aff-4bea-bfab-6160217ce23d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e6b6de8f0a178914c46ba5a65dfb56795cf23c71
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: f0bd28823c5b8efc0b773ad588f2f232f8a41502
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046119"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130274"
 ---
 # <a name="dynamic-language-runtime-overview"></a>동적 언어 런타임 개요
 
@@ -91,7 +89,7 @@ DLR은 호출 사이트에서 바인더를 사용하여 .NET Framework뿐 아니
 ## <a name="dlr-documentation"></a>DLR 설명서
  오픈 소스 버전의 DLR을 사용하여 언어에 동적 동작을 추가하는 방법이나 .NET Framework에 동적 언어를 사용할 수 있도록 하는 방법에 대한 자세한 내용은 GitHub의 [IronLanguages/dlr](https://github.com/IronLanguages/dlr/tree/master/Docs) 리포지토리에 있는 설명서를 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Dynamic.ExpandoObject>
 - <xref:System.Dynamic.DynamicObject>

@@ -1,5 +1,5 @@
 ---
-title: '방법: 글로벌 어셈블리 캐시에 어셈블리 설치'
+title: '방법: 전역 어셈블리 캐시에 어셈블리 설치'
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assemblies [.NET Framework], global assembly cache
@@ -9,16 +9,14 @@ helpviewer_keywords:
 - Global Assembly Cache tool
 - windows installer, global assembly cache
 ms.assetid: a7e6f091-d02c-49ba-b736-7295cb0eb743
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: de5ae03ab885c4368e39b6339b5a14d1082e6df5
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: e670f5dba47393b7df047fb4e6f7d92df8cb187c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972872"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119800"
 ---
-# <a name="how-to-install-an-assembly-into-the-global-assembly-cache"></a>방법: 글로벌 어셈블리 캐시에 어셈블리 설치
+# <a name="how-to-install-an-assembly-into-the-global-assembly-cache"></a>방법: 전역 어셈블리 캐시에 어셈블리 설치
 
 GAC(글로벌 어셈블리 캐시)는 여러 애플리케이션이 공유하는 어셈블리를 저장합니다. 다음 구성 요소 중 하나를 사용하여 [글로벌 어셈블리 캐시](gac.md)에 어셈블리를 설치합니다. 
 
@@ -26,7 +24,7 @@ GAC(글로벌 어셈블리 캐시)는 여러 애플리케이션이 공유하는 
 - [전역 어셈블리 캐시 도구](#global-assembly-cache-tool)
 
 > [!IMPORTANT]
-> 강력한 이름의 어셈블리만 전역 어셈블리 캐시에 설치할 수 있습니다. 강력한 이름의 어셈블리를 만드는 방법에 대한 자세한 내용은 [방법: 강력한 이름으로 어셈블리 서명](../../standard/assembly/sign-strong-name.md)을 참조하세요.
+> 강력한 이름의 어셈블리만 전역 어셈블리 캐시에 설치할 수 있습니다. 강력한 이름의 어셈블리를 만드는 방법에 대 한 자세한 내용은 [방법: 강력한 이름으로 어셈블리 서명](../../standard/assembly/sign-strong-name.md)을 참조 하세요.
 
 ## <a name="windows-installer"></a>Windows Installer
 
@@ -58,9 +56,9 @@ gacutil -i hello.dll
 > [!NOTE]
 > 이전 버전의 .NET Framework에서는 *Shfusion.dll* Windows 셸 확장을 통해 파일 탐색기로 어셈블리를 끌어와서 설치할 수 있었습니다. .NET Framework 4부터는 *Shfusion.dll*이 사용되지 않습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [어셈블리 및 전역 어셈블리 캐시 사용](working-with-assemblies-and-the-gac.md)
-- [방법: 글로벌 어셈블리 캐시에서 어셈블리 제거](how-to-remove-an-assembly-from-the-gac.md)
+- [방법: 전역 어셈블리 캐시에서 어셈블리 제거](how-to-remove-an-assembly-from-the-gac.md)
 - [Gacutil.exe(전역 어셈블리 캐시 도구)](../tools/gacutil-exe-gac-tool.md)
 - [방법: 강력한 이름으로 어셈블리 서명](../../standard/assembly/sign-strong-name.md)

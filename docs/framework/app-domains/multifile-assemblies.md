@@ -10,14 +10,12 @@ helpviewer_keywords:
 - code modules
 - multifile assemblies
 ms.assetid: 13509e73-db77-4645-8165-aad8dfaedff6
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b4c288a54194e89eb90b6ac512cf45184376e952
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 8ffb0482ebd01a056d9ffd80a74ec0332e1b8dff
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971871"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119789"
 ---
 # <a name="multifile-assemblies"></a>다중 파일 어셈블리
 
@@ -41,7 +39,7 @@ ms.locfileid: "70971871"
 
 어셈블리를 만든 후 어셈블리 매니페스트가 포함된 파일(따라서 어셈블리)에 서명하거나 파일 및 어셈블리에 강력한 이름을 지정하고 전역 어셈블리 캐시에 넣을 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [방법: 다중 파일 어셈블리 빌드](build-multifile-assembly.md)
 - [어셈블리를 사용한 프로그램](../../standard/assembly/program.md)

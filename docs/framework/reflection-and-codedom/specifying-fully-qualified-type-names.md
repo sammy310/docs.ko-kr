@@ -14,14 +14,12 @@ helpviewer_keywords:
 - special characters
 - IDENTIFIER
 ms.assetid: d90b1e39-9115-4f2a-81c0-05e7e74e5580
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 656b82daffc62824ed663ea7080bd6d20cd0dadc
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 707c71482196d789ed9a88db34af048ec57734fb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71045823"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130029"
 ---
 # <a name="specifying-fully-qualified-type-names"></a>정규화된 형식 이름 지정
 
@@ -128,7 +126,7 @@ AssemblyProperty
 |\\*|포인터 형식.|
 |\\[|배열 차원 구분 기호.|
 |\\]|배열 차원 구분 기호.|
-|\\.|배열 사양에서 마침표가 사용된 경우에만 마침표 앞에 백슬래시를 사용합니다. NamespaceSpec의 마침표는 백슬래시를 사용하지 않습니다.|
+|\\|배열 사양에서 마침표가 사용된 경우에만 마침표 앞에 백슬래시를 사용합니다. NamespaceSpec의 마침표는 백슬래시를 사용하지 않습니다.|
 |\\\|필요한 경우 백슬래시를 문자열 리터럴로 사용합니다.|
 
 AssemblyNameSpec을 제외한 모든 TypeSpec 구성 요소에서 공백은 관련이 있습니다. AssemblyNameSpec에서는 ',' 구분 기호 앞의 공백은 관련이 있지만 ',' 구분 기호 뒤의 공백은 무시됩니다.
@@ -145,10 +143,10 @@ AssemblyNameSpec을 제외한 모든 TypeSpec 구성 요소에서 공백은 관�
 
 |속성 이름|설명|허용 가능한 값|
 |-------------------|-----------------|----------------------|
-|**버전**|어셈블리 버전 번호|*Major.Minor.Build.Revision*. 여기서 *Major*, *Minor*, *Build*, *Revision*은 0에서 65535 사이의 정수입니다.|
+|**Version**|어셈블리 버전 번호|*Major.Minor.Build.Revision*. 여기서 *Major*, *Minor*, *Build*, *Revision*은 0에서 65535 사이의 정수입니다.|
 |**PublicKey**|전체 공개 키|16진수 형식인 전체 공개 키의 문자열 값입니다. null 참조(Visual Basic에서는 **Nothing**)를 지정하여 프라이빗 어셈블리를 명시적으로 나타냅니다.|
 |**PublicKeyToken**|공개 키 토큰(전체 공개 키의 8바이트 해시)|16진수 형식인 공개 키 토큰의 문자열 값입니다. null 참조(Visual Basic에서는 **Nothing**)를 지정하여 프라이빗 어셈블리를 명시적으로 나타냅니다.|
-|**문화권**|어셈블리 문화권|RFC-1766 형식의 어셈블리 문화권 또는 언어 독립적인(비위성) 어셈블리의 경우 "중립"입니다.|
+|**문화권**.|어셈블리 문화권|RFC-1766 형식의 어셈블리 문화권 또는 언어 독립적인(비위성) 어셈블리의 경우 "중립"입니다.|
 |**사용자 지정**|사용자 지정 BLOB(Binary Large Object)입니다. 현재 [네이티브 이미지 생성기(Ngen)](../tools/ngen-exe-native-image-generator.md)에서 생성된 어셈블리에서만 사용됩니다.|설치되는 어셈블리가 네이티브 이미지이므로 네이티브 이미지 캐시에 설치해야 함을 어셈블리 캐시에 알리기 위해 네이티브 이미지 생성기 도구에서 사용하는 사용자 지정 문자열입니다. zap 문자열이라고도 합니다.|
 
 다음 예제에서는 기본 문화권을 사용하는 단순한 이름의 어셈블리에 대한 **AssemblyName**을 보여 줍니다.
@@ -216,7 +214,7 @@ BNF 문법에서 ReflectionEmitDimension은 <xref:System.Reflection.Emit.ModuleB
 
 **ModuleBuilder.GetType**의 경우 `MyArray[0..5]`는 크기가 6, 하한이 0인 1차원 배열을 나타냅니다. `MyArray[4…]`는 크기를 알 수 없고 하한이 4인 1차원 배열을 나타냅니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Reflection.AssemblyName>
 - <xref:System.Reflection.Emit.ModuleBuilder>

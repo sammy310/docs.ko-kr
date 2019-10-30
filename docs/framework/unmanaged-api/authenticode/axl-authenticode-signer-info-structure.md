@@ -2,14 +2,12 @@
 title: AXL_AUTHENTICODE_SIGNER_INFO 구조
 ms.date: 03/30/2017
 ms.assetid: 81c0f8b4-ce35-4716-8651-b642d40648a2
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9aaa0258b53b6b39874c8c99c71ecf53cbdb8f97
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 00132bb378d69c0db9fe9d762407707346238917
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70787071"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132508"
 ---
 # <a name="axl_authenticode_signer_info-structure"></a>AXL_AUTHENTICODE_SIGNER_INFO 구조
 Authenticode 서명자 정보를 정의합니다.  
@@ -40,6 +38,6 @@ typedef struct _AXL_AUTHENTICODE_SIGNER_INFO {
 |`pwszDescriptionUrl`|설명의 URL입니다.|  
 |`pChainContext`|서명자의 체인 컨텍스트입니다. [CERT_CONTEXT](/windows/win32/api/wincrypt/ns-wincrypt-cert_context) 구조체를 참조 하세요.|  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [Authenticode](index.md)

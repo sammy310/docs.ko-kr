@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7137e3d1-1dad-48d8-8c37-16ac816534d3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e18097dd380ee354e5652886544d40da074f1230
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: db24228de7e8c98fd97f890b1e408515172299b3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747630"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125666"
 ---
 # <a name="icordebugcodegetcode-method"></a>ICorDebugCode::GetCode 메서드
-디스어셈블리에 대 한 형식이 지정된 된 함수에 대 한 모든 코드를 가져옵니다. 이 메서드는.NET Framework 버전 2.0에서에서 더 이상 사용 되지 되었습니다. 사용 하 여 [ICorDebugCode2::GetCodeChunks](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md) 대신 합니다.  
+지정 된 함수에 대 한 코드를 모두 가져오고 디스어셈블리에 맞게 형식이 지정 됩니다. 이 메서드는 .NET Framework 버전 2.0에서 더 이상 사용 되지 않습니다. 대신 [ICorDebugCode2:: GetCodeChunks](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md) 를 사용 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -42,32 +40,32 @@ HRESULT GetCode (
   
 ## <a name="parameters"></a>매개 변수  
  `startOffset`  
- [in] 오프셋은 함수의 시작 부분입니다.  
+ 진행 함수 시작의 오프셋입니다.  
   
  `endOffset`  
- [in] 함수 끝의 오프셋입니다.  
+ 진행 함수 끝의 오프셋입니다.  
   
  `cBufferAlloc`  
- [in] 크기는 `buffer` 에 코드가 반환 되는 배열입니다.  
+ 진행 코드가 반환 될 `buffer` 배열의 크기입니다.  
   
  `buffer`  
- [out] 코드가 반환 되는 배열입니다.  
+ 제한이 코드가 반환 되는 배열입니다.  
   
  `pcBufferSize`  
- [out] 반환 된 바이트 수입니다.  
+ 제한이 반환 된 바이트 수입니다.  
   
-## <a name="remarks"></a>설명  
- 함수 코드에 여러 개의 청크로 나뉘어, 네이티브 오프셋을 증가 하는 순서에 연결 되며 됩니다. 명령 경계 확인 하지 않습니다.  
+## <a name="remarks"></a>주의  
+ 함수의 코드가 여러 청크로 분할 된 경우에는 기본 오프셋의 오름차순으로 연결 됩니다. 명령 경계는 확인 되지 않습니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET framework 버전:** 1.1, 1.0  
+ **.NET Framework 버전:** 1.1, 1.0  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [GetCodeChunks 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md)

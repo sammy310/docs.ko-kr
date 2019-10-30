@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 78b0f14f-2fae-4e63-8412-4df119ee8468
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fd707685dfff31644565db18e72dc153d25781f4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f40030a2034057e83de51a21655a686f30b9ee88
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761084"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137450"
 ---
 # <a name="icordebugmanagedcallback2exception-method"></a>ICorDebugManagedCallback2::Exception 메서드
-예외 처리기 검색을 시작한 디버거에 알립니다.  
+예외 처리기에 대 한 검색이 시작 되었음을 디버거에 알립니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -42,39 +40,39 @@ HRESULT Exception (
   
 ## <a name="parameters"></a>매개 변수  
  `pAppDomain`  
- [in] 예외가 throw 된 스레드를 포함 하는 응용 프로그램 도메인을 나타내는 ICorDebugAppDomain 개체에 대 한 포인터입니다.  
+ 진행 예외가 throw 된 스레드를 포함 하는 응용 프로그램 도메인을 나타내는 ICorDebugAppDomain 개체에 대 한 포인터입니다.  
   
  `pThread`  
- [in] 예외가 throw 된 스레드를 나타내는 ICorDebugThread 개체에 대 한 포인터입니다.  
+ 진행 예외가 throw 된 스레드를 나타내는 ICorDebugThread 개체에 대 한 포인터입니다.  
   
  `pFrame`  
- [in] 프레임을 기준으로를 나타내는 ICorDebugFrame 개체에 대 한 포인터를 `dwEventType` 매개 변수입니다. 자세한 내용은 주의 섹션의 표를 참조 합니다.  
+ 진행 `dwEventType` 매개 변수에 의해 결정 되는 프레임을 나타내는 ICorDebugFrame 개체에 대 한 포인터입니다. 자세한 내용은 주의 섹션의 표를 참조 하십시오.  
   
  `nOffset`  
- [in] 기준으로 오프셋을 지정 하는 정수를 `dwEventType` 매개 변수입니다. 자세한 내용은 주의 섹션의 표를 참조 합니다.  
+ 진행 `dwEventType` 매개 변수에 의해 결정 되는 오프셋을 지정 하는 정수입니다. 자세한 내용은 주의 섹션의 표를 참조 하십시오.  
   
  `dwEventType`  
- [in] 이 예외 콜백의 유형을 지정 하는 CorDebugExceptionCallbackType 열거형의 값입니다.  
+ 진행 이 예외 콜백의 형식을 지정 하는 CorDebugExceptionCallbackType 열거형의 값입니다.  
   
  `dwFlags`  
- [in] 값을 [CorDebugExceptionFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionflags-enumeration.md) 예외에 대 한 추가 정보를 지정 하는 열거형  
+ 진행 예외에 대 한 추가 정보를 지정 하는 [Cordebugexceptionflags](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionflags-enumeration.md) 열거형의 값입니다.  
   
-## <a name="remarks"></a>설명  
- `Exception` 콜백 예외 처리 프로세스의 검색 단계 동안 다양 한 지점에서 호출 됩니다. 즉,이 호출할 수 있습니다 동안 두 번 이상 예외를 해제 합니다.  
+## <a name="remarks"></a>주의  
+ `Exception` 콜백은 예외 처리 프로세스의 검색 단계 중에 다양 한 지점에서 호출 됩니다. 즉, 예외를 해제 하는 동안 두 번 이상 호출할 수 있습니다.  
   
- 처리 중인 예외를 참조 하는 ICorDebugThread 개체에서 검색할 수 있습니다는 `pThread` 매개 변수입니다.  
+ 처리 되는 예외는 `pThread` 매개 변수에서 참조 하는 ICorDebugThread 개체에서 검색할 수 있습니다.  
   
- 특정 프레임 및 오프셋 하 여 결정 됩니다는 `dwEventType` 다음과 같은 매개 변수:  
+ 특정 프레임과 오프셋은 다음과 같이 `dwEventType` 매개 변수에 의해 결정 됩니다.  
   
 |`dwEventType`의 값|`pFrame`의 값|`nOffset`의 값|  
 |----------------------------|-----------------------|------------------------|  
-|DEBUG_EXCEPTION_FIRST_CHANCE|예외를 발생 시킨 프레임입니다.|프레임에 명령 포인터입니다.|  
-|DEBUG_EXCEPTION_USER_FIRST_CHANCE|예외가 throw 된 지점과 가장 가까운 사용자 코드 프레임입니다.|프레임에 명령 포인터입니다.|  
-|DEBUG_EXCEPTION_CATCH_HANDLER_FOUND|Catch 처리기가 포함 된 프레임입니다.|Catch 처리기 부분에 대 한 Microsoft MSIL (intermediate language) 오프셋입니다.|  
-|DEBUG_EXCEPTION_UNHANDLED|NULL|정의 되지 않았습니다.|  
+|DEBUG_EXCEPTION_FIRST_CHANCE|예외를 throw 한 프레임입니다.|프레임의 명령 포인터입니다.|  
+|DEBUG_EXCEPTION_USER_FIRST_CHANCE|Throw 된 예외의 지점에 가장 가까운 사용자 코드 프레임입니다.|프레임의 명령 포인터입니다.|  
+|DEBUG_EXCEPTION_CATCH_HANDLER_FOUND|Catch 처리기를 포함 하는 프레임입니다.|Catch 처리기 시작 부분의 MSIL (Microsoft 중간 언어) 오프셋입니다.|  
+|DEBUG_EXCEPTION_UNHANDLED|NULL|되지.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
@@ -82,7 +80,7 @@ HRESULT Exception (
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ICorDebugManagedCallback2 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)
 - [ICorDebugManagedCallback 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

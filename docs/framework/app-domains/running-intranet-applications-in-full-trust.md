@@ -6,14 +6,12 @@ helpviewer_keywords:
 - intranet applications, running in full trust
 - running intranet applications in full trust
 ms.assetid: ee13c0a8-ab02-49f7-b8fb-9eab16c6c4f0
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 542bc3e593a5355fe709503cfa3b7d115fc0483b
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: c93f84dc53abbb86cbfc4ae36e9cdcbe0bd50273
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053088"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119752"
 ---
 # <a name="running-intranet-applications-in-full-trust"></a>완전 신뢰 모드에서 인트라넷 애플리케이션 실행
 
@@ -37,6 +35,6 @@ ms.locfileid: "71053088"
   
 - 64비트 컴퓨터에서는 시스템 레지스트리의 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework 키 아래에 하위 키를 만듭니다. 키 이름 LegacyMyComputerZone, DWORD 값 1을 사용합니다. HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\.NETFramework 키 아래에 동일한 하위 키를 만듭니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [어셈블리를 사용한 프로그래밍](../../standard/assembly/program.md)

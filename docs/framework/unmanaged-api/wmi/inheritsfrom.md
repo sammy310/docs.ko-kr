@@ -14,14 +14,12 @@ helpviewer_keywords:
 - InheritsFrom function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0c32c54ec56ea0fe4f4039ca6438a91338edbadb
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6bda63377251e3a208dfb1620896535ccdf8ccd8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798454"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127427"
 ---
 # <a name="inheritsfrom-function"></a>InheritsFrom 함수
 현재 클래스 또는 인스턴스가 지정된 부모 클래스에서 파생되는지 여부를 결정합니다.
@@ -55,21 +53,21 @@ HRESULT InheritsFrom (
 
 |상수  |값  |설명  |
 |---------|---------|---------|
-| `WBEM_S_NO_ERROR` | 0 | 현재 개체는에서 `wszAncestor`상속 됩니다.  |
-| `WBEM_S_FALSE` | 1 | 현재 개체가에서 `wszAncestor`상속 되지 않는 경우 |
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `wszAncestor`가 `null`인 경우 |
+| `WBEM_S_NO_ERROR` | 0 | 현재 개체는 `wszAncestor`에서 상속 됩니다.  |
+| `WBEM_S_FALSE` | 1 | 현재 개체가 `wszAncestor`에서 상속 되지 않습니다. |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `wszAncestor`가 `null`입니다. |
   
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 이 함수는 [IWbemClassObject:: InheritsFrom](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-inheritsfrom) 메서드에 대 한 호출을 래핑합니다.
 
 ## <a name="requirements"></a>요구 사항  
- **플랫폼** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** WMINet_Utils.idl  
+ **헤더:** WMINet_Utils  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [WMI 및 성능 카운터 (관리 되지 않는 API 참조)](index.md)

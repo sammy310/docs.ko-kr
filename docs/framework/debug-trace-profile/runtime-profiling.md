@@ -11,14 +11,12 @@ helpviewer_keywords:
 - profiling applications
 - Performance Console
 ms.assetid: ccd68284-f3a8-47b8-bc3f-92e5fe3a1640
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 163022256dfbeb303a500d9c1d574054c5b550d7
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: daa2ae4fbbed78bda4648b4b3077fa7d96a9b3f3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052295"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121556"
 ---
 # <a name="runtime-profiling"></a>런타임 프로파일링
 프로파일링은 모든 개발 또는 배포 시나리오에서 성능 데이터를 수집하는 방법입니다. 이 섹션은 애플리케이션 성능에 대한 정보를 수집하려는 개발자 및 시스템 관리자를 위한 것입니다.  
@@ -42,11 +40,11 @@ ms.locfileid: "71052295"
   
 6. **선택한 개체의 인스턴스** 목록 상자에서 **\<All instances>** 를 클릭하여 공용 언어 런타임에 대한 성능 카운터를 전역적으로(시스템 전체에서) 모니터링하도록 지정합니다.  
   
-     -또는-  
+     또는  
   
-     **선택한 개체의 인스턴스** 목록 상자에서 응용 프로그램 이름을 클릭하여 해당 응용 프로그램에 대한 성능 카운터를 모니터링합니다.  
+     **선택한 개체의 인스턴스** 목록 상자에서 애플리케이션 이름을 클릭하여 해당 애플리케이션에 대한 성능 카운터를 모니터링합니다.  
   
-     여러 버전의 런타임을 구분하거나 이름이 같은 여러 애플리케이션의 차이를 분명히 보여 주려면 레지스트리 키도 수정해야 합니다. 자세한 내용은 [성능 카운터 및 In-Process Side-By-Side 응용 프로그램](performance-counters-and-in-process-side-by-side-applications.md)을 참조하세요.  
+     여러 버전의 런타임을 구분하거나 이름이 같은 여러 애플리케이션의 차이를 분명히 보여 주려면 레지스트리 키도 수정해야 합니다. 자세한 내용은 [Performance Counters and In-Process Side-By-Side Applications](performance-counters-and-in-process-side-by-side-applications.md)을 참조하세요.  
   
 > [!NOTE]
 > 성능 콘솔이 실행되는 동안 새로운 성능 카운터가 설치되면 새로운 카운터를 표시하기 위해 성능 콘솔을 중지하고 다시 시작합니다.  
@@ -54,18 +52,18 @@ ms.locfileid: "71052295"
  특정 영역이나 원격 공유에 있는 어셈블리를 프로파일링하려면 성능 카운터를 실행하는 컴퓨터에서 원격 어셈블리를 완전히 신뢰해야 합니다. 어셈블리를 충분히 신뢰하지 않는 경우 성능 카운터가 작동하지 않습니다. 여러 다른 영역에 신뢰를 부여하는 데 관한 내용은 [Caspol.exe(코드 액세스 보안 정책 도구)](../tools/caspol-exe-code-access-security-policy-tool.md)를 참조하세요.  
   
 > [!NOTE]
-> .NET Framework 4가 설치 된 시스템에서 .net을 사용 하 여 개발 된 응용 프로그램의 경우 성능 모니터는 **.NET Clr 데이터** 및 **.net clr 네트워킹**등 일부 범주의 성능 카운터에 대 한 데이터를 표시 하지 않을 수 있습니다. 프레임 워크 1.1. 이 경우, [\<forcePerformanceCounterUniqueSharedMemoryReads>](../configure-apps/file-schema/runtime/forceperformancecounteruniquesharedmemoryreads-element.md) 요소를 응용 프로그램의 구성 파일에 추가하여 성능 모니터가 이 데이터를 표시하도록 구성할 수 있습니다.  
+> .NET Framework 4가 설치 된 시스템에서 .net을 사용 하 여 개발 된 응용 프로그램의 경우 성능 모니터는 **.NET Clr 데이터** 및 **.net clr 네트워킹**등 일부 범주의 성능 카운터에 대 한 데이터를 표시 하지 않을 수 있습니다. 프레임 워크 1.1. 이 경우, [\<forcePerformanceCounterUniqueSharedMemoryReads&gt;](../configure-apps/file-schema/runtime/forceperformancecounteruniquesharedmemoryreads-element.md) 요소를 애플리케이션의 구성 파일에 추가하여 성능 모니터가 이 데이터를 표시하도록 구성할 수 있습니다.  
   
 ## <a name="reading-and-creating-performance-counters-programmatically"></a>프로그래밍 방식으로 성능 카운터 읽기 및 만들기  
  .NET Framework는 성능 콘솔에서 사용할 수 있는 것과 동일한 성능 정보를 프로그래밍 방식으로 액세스 하는 데 사용할 수 있는 클래스를 제공 합니다. 또한 이러한 클래스를 사용하여 사용자 지정 성능 카운터를 만들 수도 있습니다. 다음 표에서는 .NET Framework에서 제공 하는 일부 성능 모니터링 클래스에 대해 설명 합니다.  
   
-|클래스|설명|  
+|인스턴스|설명|  
 |-----------|-----------------|  
 |<xref:System.Diagnostics.PerformanceCounter?displayProperty=nameWithType>|Windows NT 성능 카운터 구성 요소를 나타냅니다. 이 클래스를 사용하여 기존의 미리 정의된 카운터 또는 사용자 지정 카운터를 읽고 성능 데이터를 사용자 지정 카운터에 쓰거나 게시할 수 있습니다.|  
 |<xref:System.Diagnostics.PerformanceCounterCategory?displayProperty=nameWithType>|컴퓨터에서 카운터 및 카운터 범주를 조작하기 위한 여러 메서드를 제공합니다.|  
 |<xref:System.Diagnostics.PerformanceCounterInstaller?displayProperty=nameWithType>|`PerformanceCounter` 구성 요소에 대해 설치 관리자를 지정합니다.|  
 |<xref:System.Diagnostics.PerformanceCounterType?displayProperty=nameWithType>|`NextValue` 에 대한 `PerformanceCounter`메서드를 계산하는 수식을 지정합니다.|  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [성능 카운터](performance-counters.md)

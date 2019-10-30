@@ -14,14 +14,12 @@ helpviewer_keywords:
 - reflection emit, dynamic methods
 - dynamic methods
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 002434cf51b221a456c8752b5b1388912f875a28
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: fd420c9754494b95c55df403edec87743572db03
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71045748"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129987"
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>연습: 부분 신뢰 시나리오에서 코드 내보내기
 
@@ -223,7 +221,7 @@ ms.locfileid: "71045748"
 
 - Visual Studio에서 이 코드 예제를 빌드하는 경우 <xref:System.AppDomain.CreateInstanceAndUnwrap%2A> 메서드에 클래스를 전달할 때 네임스페이스를 포함하도록 해당 클래스의 이름을 변경해야 합니다. 기본적으로 네임스페이스는 프로젝트의 이름입니다. 예를 들어 프로젝트가 "PartialTrust"이면 클래스 이름은 "PartialTrust.Worker"입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [리플렉션 내보내기의 보안 문제점](security-issues-in-reflection-emit.md)
 - [방법: 샌드박스에서 부분적으로 신뢰할 수 있는 코드 실행](../misc/how-to-run-partially-trusted-code-in-a-sandbox.md)
