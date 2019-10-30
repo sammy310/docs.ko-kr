@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: a1c4d165-9bdc-4ca8-940e-292d4ffcc338
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d8ea7df9396e9199d04ad5609daa9d2b01761f36
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e64a0512e05965b3da2e7486e986ee34ca8a20d6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798899"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73104298"
 ---
-# <a name="gettypelibinfo-function"></a><span data-ttu-id="1f447-102">GetTypeLibInfo 함수</span><span class="sxs-lookup"><span data-stu-id="1f447-102">GetTypeLibInfo Function</span></span>
-<span data-ttu-id="1f447-103">[TLIBATTR](https://docs.microsoft.com/windows/win32/api/oaidl/ns-oaidl-tlibattr) 구조를 시험하여 지정된 형식 라이브러리에 대한 정보를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="1f447-103">Returns information about the specified type library by examining its [TLIBATTR](https://docs.microsoft.com/windows/win32/api/oaidl/ns-oaidl-tlibattr) structure.</span></span>  
+# <a name="gettypelibinfo-function"></a><span data-ttu-id="4c9a8-102">GetTypeLibInfo 함수</span><span class="sxs-lookup"><span data-stu-id="4c9a8-102">GetTypeLibInfo Function</span></span>
+<span data-ttu-id="4c9a8-103">[TLIBATTR](https://docs.microsoft.com/windows/win32/api/oaidl/ns-oaidl-tlibattr) 구조를 시험하여 지정된 형식 라이브러리에 대한 정보를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="4c9a8-103">Returns information about the specified type library by examining its [TLIBATTR](https://docs.microsoft.com/windows/win32/api/oaidl/ns-oaidl-tlibattr) structure.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1f447-104">구문</span><span class="sxs-lookup"><span data-stu-id="1f447-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4c9a8-104">구문</span><span class="sxs-lookup"><span data-stu-id="4c9a8-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetTypeLibInfo(  
@@ -39,40 +37,40 @@ HRESULT GetTypeLibInfo(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="1f447-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="1f447-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="4c9a8-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="4c9a8-105">Parameters</span></span>  
  `szFile`  
- <span data-ttu-id="1f447-106">진행 형식 라이브러리의 파일 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="1f447-106">[in] The file name of the type library.</span></span>  
+ <span data-ttu-id="4c9a8-106">진행 형식 라이브러리의 파일 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="4c9a8-106">[in] The file name of the type library.</span></span>  
   
  `pTypeLibID`  
- <span data-ttu-id="1f447-107">제한이 형식 라이브러리의 GUID입니다.</span><span class="sxs-lookup"><span data-stu-id="1f447-107">[out] The GUID of the type library.</span></span>  
+ <span data-ttu-id="4c9a8-107">제한이 형식 라이브러리의 GUID입니다.</span><span class="sxs-lookup"><span data-stu-id="4c9a8-107">[out] The GUID of the type library.</span></span>  
   
  `pTypeLibLCID`  
- <span data-ttu-id="1f447-108">제한이 형식 라이브러리의 지역화 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="1f447-108">[out] The localization ID of the type library.</span></span>  
+ <span data-ttu-id="4c9a8-108">제한이 형식 라이브러리의 지역화 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="4c9a8-108">[out] The localization ID of the type library.</span></span>  
   
  `pTypeLibPlatform`  
- <span data-ttu-id="1f447-109">제한이 형식 라이브러리의 대상 운영 체제를 식별 하는 [syskind](https://docs.microsoft.com/windows/win32/api/oaidl/ne-oaidl-syskind) 플래그입니다.</span><span class="sxs-lookup"><span data-stu-id="1f447-109">[out] A [SYSKIND](https://docs.microsoft.com/windows/win32/api/oaidl/ne-oaidl-syskind) flag that identifies the target operating system for the type library.</span></span> <span data-ttu-id="1f447-110">일반적인 값은 SYS_WIN32 및 SYS_WIN64입니다.</span><span class="sxs-lookup"><span data-stu-id="1f447-110">Common values are SYS_WIN32 and SYS_WIN64.</span></span>  
+ <span data-ttu-id="4c9a8-109">제한이 형식 라이브러리의 대상 운영 체제를 식별 하는 [syskind](https://docs.microsoft.com/windows/win32/api/oaidl/ne-oaidl-syskind) 플래그입니다.</span><span class="sxs-lookup"><span data-stu-id="4c9a8-109">[out] A [SYSKIND](https://docs.microsoft.com/windows/win32/api/oaidl/ne-oaidl-syskind) flag that identifies the target operating system for the type library.</span></span> <span data-ttu-id="4c9a8-110">일반적인 값은 SYS_WIN32 및 SYS_WIN64입니다.</span><span class="sxs-lookup"><span data-stu-id="4c9a8-110">Common values are SYS_WIN32 and SYS_WIN64.</span></span>  
   
  `pTypeLibMajorVer`  
- <span data-ttu-id="1f447-111">제한이 형식 라이브러리의 주 버전 번호입니다.</span><span class="sxs-lookup"><span data-stu-id="1f447-111">[out] The major version number of the type library.</span></span> <span data-ttu-id="1f447-112">예를 들어 버전 *x. y*의 경우 주 버전 번호는 *x*입니다.</span><span class="sxs-lookup"><span data-stu-id="1f447-112">For example, for version *x.y*, the major version number is *x*.</span></span>  
+ <span data-ttu-id="4c9a8-111">제한이 형식 라이브러리의 주 버전 번호입니다.</span><span class="sxs-lookup"><span data-stu-id="4c9a8-111">[out] The major version number of the type library.</span></span> <span data-ttu-id="4c9a8-112">예를 들어 버전 *x. y*의 경우 주 버전 번호는 *x*입니다.</span><span class="sxs-lookup"><span data-stu-id="4c9a8-112">For example, for version *x.y*, the major version number is *x*.</span></span>  
   
  `pTypeLibMinorVer`  
- <span data-ttu-id="1f447-113">제한이 형식 라이브러리의 부 버전 번호입니다.</span><span class="sxs-lookup"><span data-stu-id="1f447-113">[out] The minor version number of the type library.</span></span> <span data-ttu-id="1f447-114">예를 들어 버전 *x. y*의 경우 부 버전 번호는 *y*입니다.</span><span class="sxs-lookup"><span data-stu-id="1f447-114">For example, for version *x.y*, the minor version number is *y*.</span></span>  
+ <span data-ttu-id="4c9a8-113">제한이 형식 라이브러리의 부 버전 번호입니다.</span><span class="sxs-lookup"><span data-stu-id="4c9a8-113">[out] The minor version number of the type library.</span></span> <span data-ttu-id="4c9a8-114">예를 들어 버전 *x. y*의 경우 부 버전 번호는 *y*입니다.</span><span class="sxs-lookup"><span data-stu-id="4c9a8-114">For example, for version *x.y*, the minor version number is *y*.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="1f447-115">설명</span><span class="sxs-lookup"><span data-stu-id="1f447-115">Remarks</span></span>  
- <span data-ttu-id="1f447-116">함수 `GetTypeLibInfo` 는 [tlbexp.exe (형식 라이브러리 내보내기)](../../tools/tlbexp-exe-type-library-exporter.md)에 의해 호출 됩니다.</span><span class="sxs-lookup"><span data-stu-id="1f447-116">The `GetTypeLibInfo` function is called by the [Tlbexp.exe (Type Library Exporter)](../../tools/tlbexp-exe-type-library-exporter.md).</span></span> <span data-ttu-id="1f447-117">이 도구는 CLR (공용 언어 런타임) 어셈블리의 형식을 설명 하는 형식 라이브러리를 생성 합니다.</span><span class="sxs-lookup"><span data-stu-id="1f447-117">This tool generates a type library that describes the types in a common language runtime (CLR) assembly.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="4c9a8-115">주의</span><span class="sxs-lookup"><span data-stu-id="4c9a8-115">Remarks</span></span>  
+ <span data-ttu-id="4c9a8-116">`GetTypeLibInfo` 함수는 [tlbexp.exe (형식 라이브러리 내보내기)](../../tools/tlbexp-exe-type-library-exporter.md)에서 호출 됩니다.</span><span class="sxs-lookup"><span data-stu-id="4c9a8-116">The `GetTypeLibInfo` function is called by the [Tlbexp.exe (Type Library Exporter)](../../tools/tlbexp-exe-type-library-exporter.md).</span></span> <span data-ttu-id="4c9a8-117">이 도구는 CLR (공용 언어 런타임) 어셈블리의 형식을 설명 하는 형식 라이브러리를 생성 합니다.</span><span class="sxs-lookup"><span data-stu-id="4c9a8-117">This tool generates a type library that describes the types in a common language runtime (CLR) assembly.</span></span>  
   
- <span data-ttu-id="1f447-118">매개 변수가 null 인 경우이 함수는 `HRESULT` 의 `E_POINTER`를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="1f447-118">If any parameter is null, the function returns an `HRESULT` of `E_POINTER`.</span></span> <span data-ttu-id="1f447-119">그 외의 경우 `S_OK`를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="1f447-119">Otherwise, it returns `S_OK`.</span></span>  
+ <span data-ttu-id="4c9a8-118">매개 변수가 null 인 경우 함수는 `E_POINTER``HRESULT`을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="4c9a8-118">If any parameter is null, the function returns an `HRESULT` of `E_POINTER`.</span></span> <span data-ttu-id="4c9a8-119">그 외의 경우 `S_OK`를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="4c9a8-119">Otherwise, it returns `S_OK`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1f447-120">요구 사항</span><span class="sxs-lookup"><span data-stu-id="1f447-120">Requirements</span></span>  
- <span data-ttu-id="1f447-121">**플랫폼** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="1f447-121">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4c9a8-120">요구 사항</span><span class="sxs-lookup"><span data-stu-id="4c9a8-120">Requirements</span></span>  
+ <span data-ttu-id="4c9a8-121">**플랫폼:** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="4c9a8-121">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1f447-122">**헤더:** TlbRef.h</span><span class="sxs-lookup"><span data-stu-id="1f447-122">**Header:** TlbRef.h</span></span>  
+ <span data-ttu-id="4c9a8-122">**헤더:** TlbRef</span><span class="sxs-lookup"><span data-stu-id="4c9a8-122">**Header:** TlbRef.h</span></span>  
   
- <span data-ttu-id="1f447-123">**라이브러리** TlbRef.lib</span><span class="sxs-lookup"><span data-stu-id="1f447-123">**Library:** TlbRef.lib</span></span>  
+ <span data-ttu-id="4c9a8-123">**라이브러리:** TlbRef</span><span class="sxs-lookup"><span data-stu-id="4c9a8-123">**Library:** TlbRef.lib</span></span>  
   
- <span data-ttu-id="1f447-124">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1f447-124">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="4c9a8-124">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4c9a8-124">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1f447-125">참고자료</span><span class="sxs-lookup"><span data-stu-id="1f447-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4c9a8-125">참조</span><span class="sxs-lookup"><span data-stu-id="4c9a8-125">See also</span></span>
 
-- [<span data-ttu-id="1f447-126">Tlbexp 도우미 함수</span><span class="sxs-lookup"><span data-stu-id="1f447-126">Tlbexp Helper Functions</span></span>](index.md)
-- [<span data-ttu-id="1f447-127">LoadTypeLibEx 함수</span><span class="sxs-lookup"><span data-stu-id="1f447-127">LoadTypeLibEx Function</span></span>](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)
+- [<span data-ttu-id="4c9a8-126">Tlbexp 도우미 함수</span><span class="sxs-lookup"><span data-stu-id="4c9a8-126">Tlbexp Helper Functions</span></span>](index.md)
+- [<span data-ttu-id="4c9a8-127">LoadTypeLibEx 함수</span><span class="sxs-lookup"><span data-stu-id="4c9a8-127">LoadTypeLibEx Function</span></span>](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)
