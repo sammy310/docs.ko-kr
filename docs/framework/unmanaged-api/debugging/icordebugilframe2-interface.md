@@ -14,40 +14,38 @@ helpviewer_keywords:
 ms.assetid: f94b9d53-d8f8-4424-a95e-53a1bfd26e4a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d02dab01eca3bd4f8ce3ae7ace7f9d4be8233dca
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 08c2946a9bd6251f377ea594c0c3ca5d1bd98c67
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69917013"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73095087"
 ---
-# <a name="icordebugilframe2-interface"></a><span data-ttu-id="18887-102">ICorDebugILFrame2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="18887-102">ICorDebugILFrame2 Interface</span></span>
+# <a name="icordebugilframe2-interface"></a><span data-ttu-id="7210e-102">ICorDebugILFrame2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="7210e-102">ICorDebugILFrame2 Interface</span></span>
 
-<span data-ttu-id="18887-103">ICorDebugILFrame 인터페이스의 논리적 확장입니다.</span><span class="sxs-lookup"><span data-stu-id="18887-103">A logical extension of the ICorDebugILFrame interface.</span></span>  
+<span data-ttu-id="7210e-103">ICorDebugILFrame 인터페이스의 논리적 확장입니다.</span><span class="sxs-lookup"><span data-stu-id="7210e-103">A logical extension of the ICorDebugILFrame interface.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="18887-104">메서드</span><span class="sxs-lookup"><span data-stu-id="18887-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="7210e-104">메서드</span><span class="sxs-lookup"><span data-stu-id="7210e-104">Methods</span></span>  
   
-|<span data-ttu-id="18887-105">메서드</span><span class="sxs-lookup"><span data-stu-id="18887-105">Method</span></span>|<span data-ttu-id="18887-106">Description</span><span class="sxs-lookup"><span data-stu-id="18887-106">Description</span></span>|  
+|<span data-ttu-id="7210e-105">메서드</span><span class="sxs-lookup"><span data-stu-id="7210e-105">Method</span></span>|<span data-ttu-id="7210e-106">설명</span><span class="sxs-lookup"><span data-stu-id="7210e-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="18887-107">EnumerateTypeParameters 메서드</span><span class="sxs-lookup"><span data-stu-id="18887-107">EnumerateTypeParameters Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe2-enumeratetypeparameters-method.md)|<span data-ttu-id="18887-108">이 프레임의 <xref:System.Type> 매개 변수를 포함 하는 ICorDebugTypeEnum 개체를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="18887-108">Gets an ICorDebugTypeEnum object that contains the <xref:System.Type> parameters in this frame.</span></span>|  
-|[<span data-ttu-id="18887-109">RemapFunction 메서드</span><span class="sxs-lookup"><span data-stu-id="18887-109">RemapFunction Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe2-remapfunction-method.md)|<span data-ttu-id="18887-110">새 MSIL 오프셋을 지정 하 여 편집 된 함수를 다시 매핑합니다.</span><span class="sxs-lookup"><span data-stu-id="18887-110">Remaps an edited function by specifying the new MSIL offset.</span></span>|  
+|[<span data-ttu-id="7210e-107">EnumerateTypeParameters 메서드</span><span class="sxs-lookup"><span data-stu-id="7210e-107">EnumerateTypeParameters Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe2-enumeratetypeparameters-method.md)|<span data-ttu-id="7210e-108">이 프레임의 <xref:System.Type> 매개 변수를 포함 하는 ICorDebugTypeEnum 개체를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="7210e-108">Gets an ICorDebugTypeEnum object that contains the <xref:System.Type> parameters in this frame.</span></span>|  
+|[<span data-ttu-id="7210e-109">RemapFunction 메서드</span><span class="sxs-lookup"><span data-stu-id="7210e-109">RemapFunction Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe2-remapfunction-method.md)|<span data-ttu-id="7210e-110">새 MSIL 오프셋을 지정 하 여 편집 된 함수를 다시 매핑합니다.</span><span class="sxs-lookup"><span data-stu-id="7210e-110">Remaps an edited function by specifying the new MSIL offset.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="18887-111">설명</span><span class="sxs-lookup"><span data-stu-id="18887-111">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="7210e-111">주의</span><span class="sxs-lookup"><span data-stu-id="7210e-111">Remarks</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="18887-112">이 인터페이스는 크로스 시스템 또는 크로스 프로세스 원격 호출을 지원하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="18887-112">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+> <span data-ttu-id="7210e-112">이 인터페이스는 크로스 시스템 또는 크로스 프로세스 원격 호출을 지원하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="7210e-112">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="18887-113">요구 사항</span><span class="sxs-lookup"><span data-stu-id="18887-113">Requirements</span></span>  
- <span data-ttu-id="18887-114">**플랫폼** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="18887-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7210e-113">요구 사항</span><span class="sxs-lookup"><span data-stu-id="7210e-113">Requirements</span></span>  
+ <span data-ttu-id="7210e-114">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="7210e-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="18887-115">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="18887-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="7210e-115">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="7210e-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="18887-116">**라이브러리** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="18887-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="7210e-116">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="7210e-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="18887-117">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="18887-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="7210e-117">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7210e-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="18887-118">참고자료</span><span class="sxs-lookup"><span data-stu-id="18887-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7210e-118">참조</span><span class="sxs-lookup"><span data-stu-id="7210e-118">See also</span></span>
 
-- [<span data-ttu-id="18887-119">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="18887-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="7210e-119">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="7210e-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
