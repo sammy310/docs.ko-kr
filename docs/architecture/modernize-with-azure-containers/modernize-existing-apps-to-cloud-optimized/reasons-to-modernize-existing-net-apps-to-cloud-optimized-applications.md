@@ -2,12 +2,12 @@
 title: 기존 .NET 앱을 클라우드 최적화 응용 프로그램에 현대화 하는 이유
 description: Azure 클라우드 및 Windows 컨테이너를 사용 하 여 기존 .NET 응용 프로그램 현대화 | 기존 .NET 앱을 클라우드 최적화 응용 프로그램에 현대화 하는 이유
 ms.date: 04/28/2018
-ms.openlocfilehash: 3154f9a9e11b42330fcc753ffd961316e4ada335
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 55eb3fb9b0b6c91e25bcdb23056a8a8e51463ef7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72522923"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73093630"
 ---
 # <a name="reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications"></a>기존 .NET 앱을 클라우드 최적화 응용 프로그램에 현대화 하는 이유
 
@@ -19,7 +19,7 @@ ms.locfileid: "72522923"
 
 아래 줄은 조직이 클라우드 최적화 응용 프로그램을 빌드 및 관리 하는 경우 고객에 게 더 빨리 솔루션을 배치 하 고 관련 된 시장에 새로운 아이디어를 제공할 수 있다는 것입니다.
 
-## <a name="cloud-optimized-application-principles-and-tenets"></a>클라우드 최적화 응용 프로그램 원리 및 개념 
+## <a name="cloud-optimized-application-principles-and-tenets"></a>클라우드 최적화 응용 프로그램 원리 및 개념
 
 클라우드의 향상 된 기능은 대부분의 목표를 달성 하는 데 중점을 두 며, 비용을 절감 하 고 민첩성을 향상 시켜 비즈니스 성장을 개선 합니다. 이러한 목표는 응용 프로그램을 릴리스 및 배송할 때 프로세스를 단순화 하 고 충돌을 줄이기 때문에 달성 됩니다.
 

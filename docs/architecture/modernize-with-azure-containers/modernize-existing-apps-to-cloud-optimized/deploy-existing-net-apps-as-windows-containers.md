@@ -1,23 +1,23 @@
 ---
 title: 기존 .NET 앱을 Windows 컨테이너로 배포
-description: Azure 클라우드와 Windows 컨테이너를 사용하여 기존 .NET 응용 프로그램 최신화 | 기존 .NET 앱을 Windows 컨테이너로 배포
+description: Azure 클라우드 및 Windows 컨테이너를 사용 하 여 기존 .NET 응용 프로그램 현대화 | 기존 .NET 앱을 Windows 컨테이너로 배포
 ms.date: 04/29/2018
-ms.openlocfilehash: 997b32e51272be2126bd824de1f8f026d77ca203
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 28568ca363bfc8100f78b100f8a7f0242c4f04c9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318623"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73089554"
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>기존 .NET 앱을 Windows 컨테이너로 배포
 
-Windows 컨테이너를 기반으로 하는 배포는 클라우드에 최적화된 응용 프로그램과 클라우드 네이티브 응용 프로그램에 적용할 수 있습니다.
+Windows 컨테이너를 기반으로 하는 배포는 클라우드 최적화 응용 프로그램 및 클라우드 네이티브 응용 프로그램에 적용 됩니다.
 
-그러나 이 가이드와 특히 다음 절에서는 응용 프로그램을 재설계하지 않아도 되는 *클라우드에 최적화*된 응용 프로그램에 대한 Windows 컨테이너 사용을 중점적으로 설명합니다.
+그러나이 가이드와 특히 다음 섹션에서는 응용 프로그램을 다시 설계 하지 않아도 되는 *클라우드 최적화* 응용 프로그램을 위해 Windows 컨테이너를 사용 하는 데 중점을 두어야 합니다.
 
 ## <a name="what-are-containers-linux-or-windows"></a>컨테이너 란? (Linux 또는 Windows)
 
-컨테이너는 응용 프로그램을 격리된 자체 패키지로 마무리하는 방법입니다. 해당 컨테이너에서 응용 프로그램은 컨테이너 외부에 있는 응용 프로그램 또는 프로세스의 영향을 받지 않습니다. 응용 프로그램이 하나의 프로세스로 성공적으로 실행되는 데 의존하는 모든 것이 컨테이너 내부에 있습니다. 컨테이너가 이동할 수 있는 곳이라면, 직접 종속성 측면에서 응용 프로그램의 요구사항이 충족됩니다.실행에 필요한 모든 항목(라이브러리 종속성, 런타임 등)이 함께 번들되기 때문입니다.
+컨테이너는 응용 프로그램을 자체 격리 된 패키지로 래핑하는 방법입니다. 컨테이너에서 응용 프로그램은 컨테이너 외부에 존재 하는 응용 프로그램이 나 프로세스의 영향을 받지 않습니다. 프로세스가 컨테이너 내부에 있을 때 응용 프로그램이 성공적으로 실행 되도록 하는 모든 것입니다. 컨테이너가 이동 될 수 있는 모든 경우에는 응용 프로그램의 요구 사항이 항상 직접 종속성을 기준으로 충족 되며, 실행 해야 하는 모든 항목 (라이브러리 종속성, 런타임 등)과 함께 제공 됩니다.
 
 컨테이너의 주요 특징은 컨테이너가 필요한 모든 종속성과 함께 제공 되므로 다른 배포에서 환경을 동일 하 게 만드는 것입니다. 컴퓨터에서 응용 프로그램을 디버깅 한 다음 동일한 환경을 보장 하 여 다른 컴퓨터에 배포할 수 있습니다.
 
@@ -93,15 +93,15 @@ Dockerfile 파일에 이미지 이름을 추가할 때 .NET Framework 기반 Win
 
 > | **태그가** | **시스템 및 버전** |
 > |---|---|
-> | **microsoft/dotnet-framework:4.x-windowsservercore** | Windows Server Core의 .NET Framework 4.x |
-> | **microsoft/aspnet:4.x-windowsservercore** | Windows Server Core에서 추가 ASP.NET 사용자 지정을 포함 한 .NET Framework 4.x |
+> | **microsoft/dotnet-framework: 4.x-windowsservercore** | Windows Server Core의 .NET Framework 4.x |
+> | **microsoft/aspnet: 4.x-windowsservercore** | Windows Server Core에서 추가 ASP.NET 사용자 지정을 포함 한 .NET Framework 4.x |
 
 .NET Core (Linux 및 Windows 용 플랫폼 간)의 경우 태그는 다음과 같습니다.
 
 > | **태그가** | **시스템 및 버전**
 > |---|---|
-> | **microsoft/dotnet:2.0.0-runtime** | Linux의 .NET Core 2.0 런타임 전용 |
-> | **microsoft/dotnet:2.0.0-runtime-nanoserver** | Windows Nano Server의 .NET Core 2.0 런타임 전용 |
+> | **microsoft/dotnet: 2.0.0** | Linux의 .NET Core 2.0 런타임 전용 |
+> | **microsoft/dotnet: 2.0.0-nanoserver** | Windows Nano Server의 .NET Core 2.0 런타임 전용 |
 
 ### <a name="multi-arch-images"></a>다중 아키텍처 이미지
 
@@ -115,7 +115,7 @@ Linux 컨테이너와 마찬가지로, Windows Server 컨테이너는 Docker 엔
 
 **Windows Server 컨테이너**: 프로세스 및 네임 스페이스 격리 기술을 통해 응용 프로그램 격리를 제공 합니다. Windows Server 컨테이너는 컨테이너 호스트와 호스트에서 실행 되는 모든 컨테이너와 커널을 공유 합니다. 이러한 컨테이너는 악의적인 보안 경계를 제공 하지 않으므로 신뢰할 수 없는 코드를 분리 하는 데 사용 하면 안 됩니다. 공유 커널 공간 때문에 이러한 컨테이너에는 동일한 커널 버전 및 구성이 필요 합니다.
 
-**Hyper-v 격리**: 는 최적화 된 VM에서 각 컨테이너를 실행 하 여 Windows Server 컨테이너에서 제공 하는 격리를 확장 합니다. 이 구성에서 컨테이너 호스트의 커널은 동일한 호스트의 다른 컨테이너와 공유 되지 않습니다. 이러한 컨테이너는 악의적인 다중 테 넌 트 호스팅을 위해 설계 되었으며, VM의 보안 보증은 동일 합니다. 이러한 컨테이너는 호스트 또는 호스트의 다른 컨테이너와 커널을 공유 하지 않기 때문에 서로 다른 버전 및 구성을 사용 하 여 커널을 실행할 수 있습니다 (지원 되는 버전 포함). 예를 들어 windows 10의 모든 Windows 컨테이너는 Hyper-v 격리를 사용 하 여 Windows Server 커널 버전 및 구성을 활용 합니다.
+**Hyper-v 격리**: 매우 최적화 된 VM에서 각 컨테이너를 실행 하 여 Windows Server 컨테이너에서 제공 하는 격리를 확장 합니다. 이 구성에서 컨테이너 호스트의 커널은 동일한 호스트의 다른 컨테이너와 공유 되지 않습니다. 이러한 컨테이너는 악의적인 다중 테 넌 트 호스팅을 위해 설계 되었으며, VM의 보안 보증은 동일 합니다. 이러한 컨테이너는 호스트 또는 호스트의 다른 컨테이너와 커널을 공유 하지 않기 때문에 서로 다른 버전 및 구성을 사용 하 여 커널을 실행할 수 있습니다 (지원 되는 버전 포함). 예를 들어 windows 10의 모든 Windows 컨테이너는 Hyper-v 격리를 사용 하 여 Windows Server 커널 버전 및 구성을 활용 합니다.
 
 Hyper-v 격리를 사용 하거나 사용 하지 않고 Windows에서 컨테이너를 실행 하는 것은 런타임 결정입니다. 처음에 Hyper-v 격리를 사용 하 여 컨테이너를 만들도록 선택 하 고 런타임에 Windows Server 컨테이너로 실행 하도록 선택할 수 있습니다.
 
@@ -129,7 +129,7 @@ Hyper-v 격리를 사용 하거나 사용 하지 않고 Windows에서 컨테이�
 
     <https://docs.microsoft.com/virtualization/windowscontainers/about/>
 
-- **Infographic: Microsoft 및 컨테이너 @ no__t-0
+- **Infographic: Microsoft 및 컨테이너**
 
     <https://info.microsoft.com/rs/157-GQE-382/images/Container%20infographic%201.4.17.pdf>
 
@@ -154,11 +154,11 @@ PaaS (Platform as a Service) 수준에서 동시에 배치 되는 컨테이너�
 
 - **Azure App Service**
 - **Azure Kubernetes 서비스 (AKS 및 ACS)**
-- **Azure Batch** 
+- **Azure Batch**
 
 그런 다음 사용자 지정 컨테이너 이미지를 등록 하 고 배포 하는 경우 모든 이전 제품에서 사용할 수 있는 Azure에서 호스트 되는 확장성이 높은 컨테이너 레지스트리를 Azure Container Registry 합니다.
 
-또한 컨테이너에서 Azure의 다른 관리 서비스 (예: Azure SQL Database, Azure Redis cache, Azure Cosmos DB 등)를 사용할 수 있습니다. 또한 Azure 내에서 컨테이너를 사용할 수 있는 Cloud Foundry 및 OpenShift와 같은 Azure Marketplace에서 사용할 수 있는 타사 솔루션/플랫폼이 있습니다. 
+또한 컨테이너에서 Azure의 다른 관리 서비스 (예: Azure SQL Database, Azure Redis cache, Azure Cosmos DB 등)를 사용할 수 있습니다. 또한 Azure 내에서 컨테이너를 사용할 수 있는 Cloud Foundry 및 OpenShift와 같은 Azure Marketplace에서 사용할 수 있는 타사 솔루션/플랫폼이 있습니다.
 
 다음 섹션에서는 Windows 컨테이너를 대상으로 지정 하는 경우 이러한 각 Azure 제품 및 솔루션을 사용 하는 시기에 대 한 Microsoft의 권장 사항을 살펴볼 수 있습니다.
 
