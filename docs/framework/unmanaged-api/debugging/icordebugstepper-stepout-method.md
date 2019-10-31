@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: aae0f48c-4ede-4256-9251-a7fc85a229dc
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 36a33b74a692761d772a888ce918aa28a2d92678
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6c1d7db8aacaf81d47abd4a9cd972b44f56a3bb1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760561"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137517"
 ---
 # <a name="icordebugstepperstepout-method"></a>ICorDebugStepper::StepOut 메서드
-현재 프레임 호출 프레임으로 컨트롤을 반환 하는 경우 완료 하 고 포함 스레드를 통해 단일 단계로이 ICorDebugStepper 발생 합니다.  
+이 ICorDebugStepper이 포함 하는 스레드를 한 단계씩 실행 하 고 현재 프레임에서 제어를 호출 프레임으로 반환할 때 완료 되도록 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -33,15 +31,15 @@ ms.locfileid: "67760561"
 HRESULT StepOut ();  
 ```  
   
-## <a name="remarks"></a>설명  
- `StepOut` 호출 프레임에 현재 프레임에서 정상적으로 반환 된 후 작업이 완료 됩니다.  
+## <a name="remarks"></a>주의  
+ 현재 프레임에서 호출 프레임으로 정상적으로 반환 된 후 `StepOut` 작업이 완료 됩니다.  
   
- 경우 `StepOut` 때 호출 된 경우 비관리 코드에서 호출 하는 관리 코드의 현재 프레임을 반환 하는 경우 단계 완료 됩니다.  
+ 비관리 코드에서 `StepOut`가 호출 되 면 현재 프레임이 해당를 호출한 관리 코드로 반환 될 때 단계가 완료 됩니다.  
   
- .NET framework 버전 2.0에서 사용 하지 마십시오 `StepOut` 실패 하기 때문에 플래그가 설정 된 STOP_UNMANAGED를 사용 하 여 합니다. (사용 하 여 [icordebugstepper:: Setunmappedstopmask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md) 단계별 실행에 대 한 플래그를 설정 합니다.) Interop 디버거 나가야 합니다 네이티브 코드 자체입니다.  
+ .NET Framework 버전 2.0에서는 STOP_UNMANAGED 플래그가 설정 된 `StepOut`를 사용 하지 않습니다. ( [ICorDebugStepper:: SetUnmappedStopMask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md) 를 사용 하 여 단계별 실행 플래그를 설정 합니다.) Interop 디버거는 네이티브 코드 자체를 프로시저 단위로 실행 해야 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   

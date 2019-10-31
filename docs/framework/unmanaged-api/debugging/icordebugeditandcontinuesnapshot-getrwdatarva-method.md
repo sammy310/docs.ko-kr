@@ -15,18 +15,16 @@ helpviewer_keywords:
 ms.assetid: 3e07b233-dd41-45ba-a4f9-662e4b006f1f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 31ad3032b50298e08f349049adab8aa18a09f12e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7b8b685e520d19ef1ba6b8caea2f26625eeba323
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61996088"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137490"
 ---
 # <a name="icordebugeditandcontinuesnapshotgetrwdatarva-method"></a>ICorDebugEditAndContinueSnapshot::GetRwDataRVA 메서드
-`GetRwDataRVA`는 사용되지 않습니다. 이 메서드를 호출 하지 마세요.  
+`GetRwDataRVA`는 사용되지 않습니다. 이 메서드를 호출 하지 마십시오.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

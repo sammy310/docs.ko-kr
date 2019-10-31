@@ -16,14 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3d2fe9bd-75ef-4364-84a6-da1e1994ac1a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b68624b962ed610dbeecd3e4cead769ab1400f4a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1571ff796a10c5ddcd85cc2ce130e62eab2ed8f2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739215"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132079"
 ---
 # <a name="createversionstringfrommodule-function"></a>CreateVersionStringFromModule 함수
 대상 프로세스의 CLR(공용 언어 런타임) 경로에서 버전 문자열을 만듭니다.  
@@ -73,16 +71,16 @@ HRESULT CreateVersionStringFromModule (
  E_FAIL(또는 다른 E_ 반환 코드)  
  `pidDebuggee`가 유효한 프로세스 또는 다른 실패를 참조하지 않습니다.  
   
-## <a name="remarks"></a>설명  
- 이 함수는 `pidDebuggee`로 식별된 CLR 프로세스 및 `szModuleName`으로 지정된 문자열 경로를 수락합니다. `pBuffer`가 가리키는 버퍼에 버전 문자열이 반환됩니다. 이 문자열은 함수 사용자에게 불투명합니다. 즉, 버전 문자열 자체에는 내포된 의미가 없습니다. 이 함수의 컨텍스트에서 되 고 [CreateDebuggingInterfaceFromVersion 함수](../../../../docs/framework/unmanaged-api/debugging/createdebugginginterfacefromversion-function-for-silverlight.md)합니다.  
+## <a name="remarks"></a>주의  
+ 이 함수는 `pidDebuggee`로 식별된 CLR 프로세스 및 `szModuleName`으로 지정된 문자열 경로를 수락합니다. `pBuffer`가 가리키는 버퍼에 버전 문자열이 반환됩니다. 이 문자열은 함수 사용자에게 불투명합니다. 즉, 버전 문자열 자체에는 내포된 의미가 없습니다. 이 함수의 컨텍스트와 [CreateDebuggingInterfaceFromVersion 함수](../../../../docs/framework/unmanaged-api/debugging/createdebugginginterfacefromversion-function-for-silverlight.md)에서만 사용 됩니다.  
   
  이 함수는 두 번 호출해야 합니다. 처음 호출할 때는 `pBuffer` 및 `cchBuffer` 둘 다에 대해 null을 전달합니다. 이렇게 하면 `pBuffer`에 필요한 버퍼의 크기가 `pdwLength`에 반환됩니다. 그런 다음 두 번째로 함수를 호출하고 버퍼에 `pBuffer`에, 해당 크기를 `cchBuffer`에 전달할 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** dbgshim.h  
+ **헤더:** dbgshim.dll  
   
  **라이브러리:** dbgshim.dll  
   
- **.NET framework 버전:** 3.5 SP1
+ **.NET Framework 버전:** 3.5 SP1

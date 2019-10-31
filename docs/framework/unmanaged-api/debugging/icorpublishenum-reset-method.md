@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8a4d9c86-b5ef-460a-9731-1d8c91b93a0b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8c9486b8ad0acb53e13f6a9202ce2d713ffe5fce
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f12ff1486d39fe3d7d33f6afc061e5d0e610750c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765009"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140469"
 ---
 # <a name="icorpublishenumreset-method"></a>ICorPublishEnum::Reset 메서드
-열거형의 시작 부분에 커서를 이동합니다.  
+커서를 열거형의 시작 부분으로 이동 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -34,17 +32,17 @@ HRESULT Reset ();
 ```  
   
 ## <a name="parameters"></a>매개 변수  
- `Reset` 매개 변수를 사용 합니다.  
+ `Reset` 매개 변수를 사용 하지 않습니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** CorPub.idl, CorPub.h  
+ **헤더:** CorPub .idl, CorPub. h  
   
  **라이브러리:** CorGuids.lib  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ICorPublishEnum 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md)

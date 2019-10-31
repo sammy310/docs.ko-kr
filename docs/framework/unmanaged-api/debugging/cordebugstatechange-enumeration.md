@@ -10,14 +10,12 @@ api_type:
 ms.assetid: 1d4424ab-5143-4e50-a84a-ceeb4ddf3bba
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 676489880cb30ca540cb78d70797dbf4eedf7395
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 239e3a82df0e6010278669f9f429bfad0d163319
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739591"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133720"
 ---
 # <a name="cordebugstatechange-enumeration"></a>CorDebugStateChange 열거형
 
@@ -35,18 +33,18 @@ typedef enum CorDebugStateChange
 
 ## <a name="members"></a>멤버
 
-| 멤버            | Description                                                              |
+| 멤버            | 설명                                                              |
 | ----------------- | ------------------------------------------------------------------------ |
 | `PROCESS_RUNNING` | 프로세스가 정방향 실행을 통해 새로운 메모리 상태에 도달했습니다.            |
 | `FLUSH_ALL`       | 프로세스의 메모리가 이전과 임의적으로 달라질 수 있습니다. |
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
- 멤버는 `CorDebugStateChange` 디버거를 호출 하는 경우 열거를 인수로 제공 되는 `ProcessStateChanged` 메서드 사용 하 여 [ICorDebugProcess4::ProcessStateChanged](icordebugprocess4-processstatechanged-method.md) 또는 [ICorDebugProcess6:: ProcessStateChanged](icordebugprocess6-processstatechanged-method.md)
+ 디버거가 [ICorDebugProcess4::P rocessstatechanged](icordebugprocess4-processstatechanged-method.md) 또는 [ICorDebugProcess6::P rocessstatechanged](icordebugprocess6-processstatechanged-method.md) 를 사용 하 여 `ProcessStateChanged` 메서드를 호출할 때 `CorDebugStateChange` 열거형의 멤버가 인수로 제공 됩니다.
 
 ## <a name="requirements"></a>요구 사항
 
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.
 
  **헤더:** CorDebug.idl, CorDebug.h
 
@@ -54,7 +52,7 @@ typedef enum CorDebugStateChange
 
  **.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v20plus-md.md)]
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [디버깅 열거형](debugging-enumerations.md)
 - [디버깅](index.md)

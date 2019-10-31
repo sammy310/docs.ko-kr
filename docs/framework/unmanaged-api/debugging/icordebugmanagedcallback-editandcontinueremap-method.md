@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 24a8fcce-317e-48ff-aefc-d86123ada935
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 100688ece4ebb984d3d03823ab01bbaae7d395db
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3fd1686eb268b9d4e347fe28e067a5321327dbd3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760277"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137383"
 ---
 # <a name="icordebugmanagedcallbackeditandcontinueremap-method"></a>ICorDebugManagedCallback::EditAndContinueRemap 메서드
-이 메서드는 사용되지 않습니다. 통합된 개발 환경 (IDE) 매핑 변경 이벤트를 보냈음을 디버거에 알립니다.  
+이 메서드는 사용되지 않습니다. 다시 매핑 이벤트는 IDE (통합 개발 환경)에 전송 되었음을 디버거에 알립니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,11 +36,11 @@ HRESULT EditAndContinueRemap (
 );  
 ```  
   
-## <a name="remarks"></a>설명  
- `EditAndContinueRemap` 메서드 된 업데이트 된 함수의 이전 버전의 코드를 실행 하려는 경우 호출 됩니다. 공용 언어 런타임 호출을 `EditAndContinueRemap` IDE에 다시 매핑 이벤트를 보내는 방법.  
+## <a name="remarks"></a>주의  
+ `EditAndContinueRemap` 메서드는 이전 버전의 업데이트 된 함수에서 코드를 실행 하려고 할 때 호출 됩니다. 공용 언어 런타임에서는 `EditAndContinueRemap` 메서드를 호출 하 여 다시 매핑 이벤트를 IDE에 보냅니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
@@ -50,6 +48,6 @@ HRESULT EditAndContinueRemap (
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ICorDebugManagedCallback 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

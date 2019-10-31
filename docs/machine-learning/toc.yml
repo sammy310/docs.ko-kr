@@ -30,6 +30,8 @@
         - name: 영화 추천(행렬 인수 분해)
           href: tutorials/movie-recommendation.md
         - name: 이미지 분류(전이 학습)
+          href: tutorials/image-classification-api-transfer-learning.md
+        - name: 이미지 분류(모델 컴퍼지션)
           href: tutorials/image-classification.md
         - name: 제품 판매 분석(변칙 검색)
           href: tutorials/sales-anomaly-detection.md
@@ -93,6 +95,8 @@
               href: how-to-guides/serve-model-web-api-ml-net.md
     - name: 도구
       items:
+        - name: 모델 작성기에 데이터 로드
+          href: how-to-guides/load-data-model-builder.md
         - name: 모델 작성기 설치
           href: how-to-guides/install-model-builder.md
         - name: CLI 설치

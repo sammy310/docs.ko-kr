@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: fe248069-b33c-48e1-a777-06ac9b239c54
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3d9dc94689083d79858319387747eb9dafe8b2f6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6c73afb00cbd104cff3d310d1369097b459c131e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739568"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133682"
 ---
 # <a name="cordebugstepreason-enumeration"></a>CorDebugStepReason 열거형
 개별 단계의 결과를 나타냅니다.  
@@ -42,18 +40,18 @@ typedef enum CorDebugStepReason {
   
 ## <a name="members"></a>멤버  
   
-|멤버|Description|  
+|멤버|설명|  
 |------------|-----------------|  
-|`STEP_NORMAL`|단계별 실행는 동일한 함수 내에서 정상적으로 완료 합니다.|  
-|`STEP_RETURN`|단계별 함수 반환 후 정상적으로 계속 합니다.|  
-|`STEP_CALL`|단계별 실행이 새로 호출 된 함수의 시작 부분에 정상적으로 계속 합니다.|  
-|`STEP_EXCEPTION_FILTER`|예외가 생성 되었습니다 및 컨트롤 예외 필터에 전달 되었습니다.|  
-|`STEP_EXCEPTION_HANDLER`|예외가 생성 되었습니다 및 컨트롤은 예외 처리기로 전달 되었습니다.|  
-|`STEP_INTERCEPT`|컨트롤은 인터셉터로 전달 되었습니다.|  
-|`STEP_EXIT`|단계를 완료 하기 전에 스레드가 종료 합니다.|  
+|`STEP_NORMAL`|단계별 실행은 동일한 함수 내에서 정상적으로 완료 됩니다.|  
+|`STEP_RETURN`|함수가 반환 된 후에도 정상적으로 계속 실행 됩니다.|  
+|`STEP_CALL`|새로 호출 된 함수가 시작 될 때 계속 해 서 단계별로 진행 합니다.|  
+|`STEP_EXCEPTION_FILTER`|예외가 생성 되었으며 컨트롤이 예외 필터로 전달 되었습니다.|  
+|`STEP_EXCEPTION_HANDLER`|예외가 생성 되었으며 컨트롤이 예외 처리기에 전달 되었습니다.|  
+|`STEP_INTERCEPT`|컨트롤이 인터셉터로 전달 되었습니다.|  
+|`STEP_EXIT`|단계가 완료 되기 전에 스레드가 종료 되었습니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
@@ -61,7 +59,7 @@ typedef enum CorDebugStepReason {
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [StepComplete 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-stepcomplete-method.md)
 - [디버깅 열거형](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

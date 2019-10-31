@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5944edd1-0914-4efa-aba0-d5a277c38b1a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 57de11c1c40c05befcf3c99c31c2e07e1ecaec5a
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: 21f90e06b3b02ebc6c97610b6edc35697601f0ac
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71273966"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132296"
 ---
 # <a name="cordebugblockingobject-structure"></a>CorDebugBlockingObject 구조체
 스레드를 차단 하는 개체와 스레드가 차단 되는 특정 이유를 정의 합니다.  
@@ -45,18 +43,18 @@ CorDebugBlockingReason blockingReason;
 |`dwTimeout`|차단 작업의 제한 시간이 초과 될 때까지 걸리는 시간 (밀리초) 이거나, 제한 시간이 초과 되지 않음을 나타내는 무한 값입니다. 제한 시간 값은 계속 남아 있는 시간을 제외 하 고 차단 작업의 총 시간 길이를 지정 합니다.|  
 |`blockingReason`|이 개체에서 스레드가 차단 된 이유입니다.|  
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** CorDebug.idl  
+ **헤더:** CorDebug .idl  
   
- **라이브러리** CorGuids.lib  
+ **라이브러리:** CorGuids.lib  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [디버깅 구조체](debugging-structures.md)
 - [디버깅](index.md)

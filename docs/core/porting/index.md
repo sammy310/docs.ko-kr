@@ -4,12 +4,12 @@ description: 이식 프로세스를 이해하고 .NET Framework 프로젝트를 
 author: cartermp
 ms.date: 10/22/2019
 ms.custom: seodec18
-ms.openlocfilehash: 0684be25cee6ae3f778e7134b4c3a29ac87caf25
-ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
+ms.openlocfilehash: 89f00e5c6ce7f3cea7a3135c9b2856c54a70da40
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72798801"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73038527"
 ---
 # <a name="overview-of-the-porting-process-from-net-framework-to-net-core"></a>.NET Framework에서 .NET Core로의 이식 프로세스 개요
 

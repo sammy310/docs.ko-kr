@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a4fb291f-5630-49ba-a49a-5b66c3b71e49
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9031f5df0d0f48dc2844cdfd0654ee4ab876cc22
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
-ms.translationtype: HT
+ms.openlocfilehash: 2e61a9ed1a1ccaa2f9f1543efa1d33c3fcf00061
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842530"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130839"
 ---
 # <a name="reading-an-xml-document-into-the-dom"></a>DOM에 XML 문서 읽어오기
 다양한 형식으로 XML 정보를 메모리에 읽어옵니다. 문자열, 스트림, URL, 텍스트 판독기 또는 <xref:System.Xml.XmlReader>에서 파생된 클래스에서 XML 정보를 읽어올 수 있습니다.  
@@ -22,7 +20,7 @@ ms.locfileid: "48842530"
   
  XML DOM(문서 개체 모델)이 로드될 때 만들어지는 노드는 각 <xref:System.Xml.XmlDocument.Load%2A> 메서드에 따라 다릅니다. 다음 표에서는 일부 <xref:System.Xml.XmlDocument.Load%2A> 메서드 간의 차이점 및 이러한 차이점을 다루는 항목을 보여 줍니다.  
   
-|Subject|항목|  
+|제목|항목|  
 |-------------|-----------|  
 |공백 노드 만들기|DOM을 로드하는 데 사용된 개체는 DOM에 생성된 공백 및 유효 공백 노드에 영향을 줍니다. 자세한 내용은 [DOM을 로드할 경우 공백 문자 및 유효 공백 문자 처리](../../../../docs/standard/data/xml/white-space-and-significant-white-space-handling-when-loading-the-dom.md)를 참조하세요.|  
 |특정 노드부터 XML 로드 또는 전체 XML 문서 로드|<xref:System.Xml.XmlDocument.Load%2A?displayProperty=nameWithType> 메서드를 사용하면 특정 노드에서 DOM으로 데이터를 로드할 수 있습니다. 자세한 내용은. [판독기에서 데이터 로드](../../../../docs/standard/data/xml/load-data-from-a-reader.md)를 참조하세요.|  
@@ -70,6 +68,6 @@ public class Sample
 }  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [XML DOM(문서 개체 모델)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

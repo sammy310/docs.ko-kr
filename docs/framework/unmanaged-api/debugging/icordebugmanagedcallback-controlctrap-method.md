@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0500854e-2121-43d9-a028-64312da35258
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1e0217019aa9b8ff85716c62c27c0f4d5547074a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: da35db8a943fda5fb3fbf4126684bb9cb7243001
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759786"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137423"
 ---
 # <a name="icordebugmanagedcallbackcontrolctrap-method"></a>ICorDebugManagedCallback::ControlCTrap 메서드
-CTRL + C는 디버깅 중인 프로세스에서 포착 되는 디버거에 알립니다.  
+디버깅 중인 프로세스에서 CTRL + C가 트랩 되었음을 디버거에 알립니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,7 +35,7 @@ HRESULT ControlCTrap (
   
 ## <a name="parameters"></a>매개 변수  
  `pProcess`  
- [in] CTRL + C를 트래핑 하는 프로세스를 나타내는 ICorDebugProcess 개체에 대 한 포인터입니다.  
+ 진행 CTRL + C가 트래핑 된 프로세스를 나타내는 ICorDebugProcess 개체에 대 한 포인터입니다.  
   
 ## <a name="return-value"></a>반환 값  
   
@@ -46,11 +44,11 @@ HRESULT ControlCTrap (
 |S_OK|디버거는 CTRL + C 트랩을 처리 합니다.|  
 |S_FALSE|디버거는 CTRL + C 트랩을 처리 하지 않습니다.|  
   
-## <a name="remarks"></a>설명  
- 이 콜백에 대 한 프로세스 내에서 모든 응용 프로그램 도메인 중지 됩니다.  
+## <a name="remarks"></a>주의  
+ 이 콜백에 대해 프로세스 내의 모든 응용 프로그램 도메인이 중지 됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
@@ -58,6 +56,6 @@ HRESULT ControlCTrap (
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ICorDebugManagedCallback 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

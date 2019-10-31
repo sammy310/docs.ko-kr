@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: af317171-d66d-4114-89eb-063554c74940
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 944e02fe83ba71b51ffb154748acff9c6dd662fe
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2655151d34275b1b0fdc5d0903dd57fcea646014
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764017"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137313"
 ---
 # <a name="icordebugmodule3createreaderforinmemorysymbols-method"></a>ICorDebugModule3::CreateReaderForInMemorySymbols 메서드
 동적 모듈에 대 한 디버그 기호 판독기를 만듭니다.  
@@ -37,41 +35,41 @@ HRESULT CreateReaderForInMemorySymbols (
   
 ## <a name="parameters"></a>매개 변수  
  riid  
- [in] 반환할 COM 인터페이스의 IID입니다. 일반적으로 [ISymUnmanagedReader 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)합니다.  
+ 진행 반환할 COM 인터페이스의 IID입니다. 일반적으로이 인터페이스는 [ISymUnmanagedReader 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)입니다.  
   
  ppObj  
- [out] 반환 되는 인터페이스에 대 한 포인터에 대 한 포인터입니다.  
+ 제한이 반환 된 인터페이스에 대 한 포인터에 대 한 포인터입니다.  
   
 ## <a name="return-value"></a>반환 값  
  S_OK  
  판독기를 만들었습니다.  
   
  CORDBG_E_MODULE_LOADED_FROM_DISK  
- 모듈에는 메모리 내 또는 동적 모듈이 아닙니다.  
+ 모듈이 메모리 내 또는 동적 모듈이 아닙니다.  
   
  CORDBG_E_SYMBOLS_NOT_AVAILABLE  
- 기호는 응용 프로그램에서 지정 되지 않은 또는 아직 지원 되지 않습니다.  
+ 응용 프로그램에서 기호를 제공 하지 않았거나 아직 사용할 수 없습니다.  
   
  E_FAIL(또는 다른 E_ 반환 코드)  
  판독기를 만들 수 없습니다.  
   
-## <a name="remarks"></a>설명  
- 이 메서드가 될 수 있습니다도 메모리 내 (동적이 아닌) 모듈에 대 한 기호 판독기 개체를 만드는 데에 기호를 먼저 사용할 (나타난 합니다 [UpdateModuleSymbols 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-updatemodulesymbols-method.md) 콜백).  
+## <a name="remarks"></a>주의  
+ 이 메서드를 사용 하 여 메모리 내 (동적이 아닌) 모듈에 대 한 기호 판독기 개체를 만들 수도 있습니다. 단, 기호를 처음 사용할 수 있는 경우에만 ( [UpdateModuleSymbols 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-updatemodulesymbols-method.md) 콜백에서 표시).  
   
- 이 메서드가 호출 될 때마다 새 판독기 인스턴스를 반환 합니다 (같은 [CComPtrBase::CoCreateInstance](/cpp/atl/reference/ccomptrbase-class#cocreateinstance)). 디버거에서 결과 캐시 하 고 기본 데이터를 변경한 경우에 새 인스턴스를 요청 해야 하므로 (즉을 [LoadClass 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md) 콜백을 수신).  
+ 이 메서드는 호출 될 때마다 새 판독기 인스턴스를 반환 합니다 (예 [: Ccomptrbase:: CoCreateInstance](/cpp/atl/reference/ccomptrbase-class#cocreateinstance)). 따라서 디버거는 기본 데이터가 변경 되었을 수 있는 경우 (즉, [LoadClass 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md) 콜백이 수신 될 때)에만 결과를 캐시 하 고 새 인스턴스를 요청 해야 합니다.  
   
- 첫 번째 형식이 로드 될 때까지 동적 모듈에서는 사용할 수 있는 모든 기호를 있지 않은 (표시 된 대로 합니다 [LoadClass 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md) 콜백).  
+ 동적 모듈에는 첫 번째 형식이 로드 될 때까지 사용할 수 있는 기호가 없습니다 ( [LoadClass 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md) 콜백에 표시 됨).  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET framework 버전:** 4.5, 4, 3.5 SP1  
+ **.NET Framework 버전:** 4.5, 4, 3.5 SP1  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ICorDebugRemoteTarget 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)
 - [ICorDebug 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)

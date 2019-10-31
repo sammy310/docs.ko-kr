@@ -962,9 +962,9 @@
         - name: 레코드 길이가 잘못되었습니다.
           href: language-reference/error-messages/bad-record-length.md
         - name: 이 호출이 대기되지 않으므로 호출이 완료되기 전에 현재 메서드가 계속 실행됩니다.
-          href: language-reference/error-messages/because-this-call-is-not-awaited-the-current-method-continues-to-run.md
-        - name: 익명 형식이 다른 필드를 초기화하는 데 사용되는 필드를 포함하고 있으므로 식 트리로 변환할 수 없습니다.
-          href: language-reference/error-messages/cannot-convert-anonymous-type-to-expression-tree.md
+          href: language-reference/error-messages/bc42358.md
+        - name: 무명 형식의 속성이 다른 속성을 초기화하는 데 사용되므로 무명 형식을 식 트리로 변환할 수 없습니다.
+          href: language-reference/error-messages/bc36548.md
         - name: ActiveX 구성 요소를 만들 수 없습니다.
           href: language-reference/error-messages/cannot-create-activex-component.md
         - name: '''<name>''은(는) ''System.MarshalByRefObject''를 기본 클래스로 사용하는 ''<name>'' 클래스의 값 형식 필드 ''<classname>''의 멤버이므로 참조할 수 없습니다.'

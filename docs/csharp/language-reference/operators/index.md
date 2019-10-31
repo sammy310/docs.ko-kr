@@ -9,12 +9,12 @@ helpviewer_keywords:
 - operator associativity [C#]
 - expressions [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 7d69528804cf0cee1302fd62fa2301e06076897a
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 78233b9a18f4369ebb086f2016af3f945b6a654a
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72579210"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039011"
 ---
 # <a name="c-operators-c-reference"></a>C# 연산자(C# 참조)
 
@@ -85,7 +85,7 @@ Console.WriteLine($"a = {a}, b = {b}");  // output: a = 1, b = 6
 |`a / b + c * d`|a, b, /, c, d, *, +|
 |`a / (b + c) * d`|a, b, c, +, /, d, *|
 
-일반적으로 모든 연산자 피연산자가 계산됩니다. 일부 연산자는 조건부로 피연산자를 계산합니다. 즉, 이와 같은 연산자의 첫 번째 피연산자 값이 다른 피연산자를 계산해야 할지 여부 또는 계산해야 할 다른 피연산자를 정의합니다. 이에 해당하는 연산자는 조건부 논리 [AND(`&&`)](boolean-logical-operators.md#conditional-logical-and-operator-) 및 [OR(`||`)](boolean-logical-operators.md#conditional-logical-or-operator-) 연산자, [null 병합 연산자 `??` 및 `??=`](null-coalescing-operator.md), [null 조건부 연산자 `?.` 및 `?[]`](member-access-operators.md#null-conditional-operators--and-), 그리고 [조건 연산자 `?:`](conditional-operator.md)입니다. 자세한 내용은 각 연산자의 설명을 참조하세요.
+일반적으로 모든 연산자 피연산자가 계산됩니다. 그러나 일부 연산자는 조건부로 피연산자를 계산합니다. 즉, 이와 같은 연산자의 첫 번째 피연산자 값이 다른 피연산자를 계산해야 할지 여부 또는 계산해야 할 다른 피연산자를 정의합니다. 이에 해당하는 연산자는 조건부 논리 [AND(`&&`)](boolean-logical-operators.md#conditional-logical-and-operator-) 및 [OR(`||`)](boolean-logical-operators.md#conditional-logical-or-operator-) 연산자, [null 병합 연산자 `??` 및 `??=`](null-coalescing-operator.md), [null 조건부 연산자 `?.` 및 `?[]`](member-access-operators.md#null-conditional-operators--and-), 그리고 [조건 연산자 `?:`](conditional-operator.md)입니다. 자세한 내용은 각 연산자에 관한 설명을 참조하세요.
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 
