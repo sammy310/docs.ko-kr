@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
-ms.openlocfilehash: 26b7e3a287c00f103129632ae8b0db882d468ef3
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: a634667ec8d963ef52abbdbe517a57d10e4a60fa
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71352981"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040213"
 ---
 # <a name="handling-null-values"></a>Null 값 처리
 관계형 데이터베이스에서 null 값은 열의 값이 없거나 알 수 없을 때 사용됩니다. null은 빈 문자열(문자 또는 datetime 데이터 형식의 경우)도 아니고 0 값(숫자 데이터 형식의 경우)도 아닙니다. ANSI SQL-92 사양에서는 모든 null이 일관성 있게 처리되도록 모든 데이터 형식에 대해 null이 동일해야 함을 규정하고 있습니다. <xref:System.Data.SqlTypes> 네임스페이스에서는 <xref:System.Data.SqlTypes.INullable> 인터페이스를 구현함으로써 null 의미 체계를 제공합니다. <xref:System.Data.SqlTypes>의 각 데이터 형식마다 해당 데이터 형식의 인스턴스에 할당할 수 있는 고유의 `IsNull` 속성과 `Null` 값이 있습니다.  
@@ -32,26 +32,26 @@ ms.locfileid: "71352981"
 ## <a name="nulls-and-sqlboolean"></a>Null과 SqlBoolean  
  모든 <xref:System.Data.SqlTypes> 간의 비교는 <xref:System.Data.SqlTypes.SqlBoolean>을 반환합니다. 각 `IsNull`의 `SqlType` 함수는 <xref:System.Data.SqlTypes.SqlBoolean>을 반환하며 null 값을 검사하는 데 사용할 수 있습니다. 다음 진위표는 AND, OR 및 NOT 연산자가 null 값이 있을 때 어떻게 작용하는지 보여 줍니다. (T=true, F=false, U=unknown 또는 null)  
   
- ![Truth Table](./media/truthtable-bpuedev11.gif "TruthTable_bpuedev11")  
+ ![참 테이블](./media/truthtable-bpuedev11.gif "TruthTable_bpuedev11")  
   
 ### <a name="understanding-the-ansi_nulls-option"></a>ANSI_NULLS 옵션 이해  
- <xref:System.Data.SqlTypes>는 SQL Server에서 ANSI_NULLS 옵션이 설정되어 있을 때와 동일한 의미 체계를 제공합니다. 모든 산술 연산자 (+,-, \*,/,%), 비트 연산자 (~, &, \|) 및 대부분의 함수는 null @no__t을 반환 합니다.  
+ <xref:System.Data.SqlTypes>는 SQL Server에서 ANSI_NULLS 옵션이 설정되어 있을 때와 동일한 의미 체계를 제공합니다. 모든 산술 연산자 (+,-, \*,/,%), 비트 연산자 (~, &, \|) 및 대부분의 함수는 속성 `IsNull`를 제외 하 고 피연산자 또는 인수가 null 인 경우 null을 반환 합니다.  
   
  ANSI SQL-92 표준은 WHERE 절에서 *columnName* = NULL을 지원 하지 않습니다. SQL Server에서는 ANSI_NULLS 옵션이 데이터베이스의 기본 null 허용 여부와 null 값에 대한 비교 평가를 모두 제어합니다. ANSI_NULLS를 사용하는 경우(기본값)에는 null 값을 테스트할 때 식에서 IS NULL 연산자를 사용해야 합니다. 예를 들어, 다음 비교는 ANSI_NULLS가 사용될 때 항상 알 수 없음 상태를 반환합니다.  
   
-```  
+```sql
 colname > NULL  
 ```  
   
  null 값을 포함하는 변수와의 비교 역시 알 수 없음 상태를 반환합니다.  
   
-```  
+```sql
 colname > @MyVariable  
 ```  
   
  null 값을 테스트하려면 IS NULL 또는 IS NOT NULL 조건자를 사용하세요. 그러면 WHERE 절이 복잡해질 수 있습니다. 예를 들어, AdventureWorks Customer 테이블의 TerritoryID 열에서는 null 값을 허용합니다. SELECT 문에서 다른 값은 물론 null 값도 테스트해야 하는 경우에는 다음과 같이 IS NULL 조건부가 포함되어야 합니다.  
   
-```  
+```sql
 SELECT CustomerID, AccountNumber, TerritoryID  
 FROM AdventureWorks.Sales.Customer  
 WHERE TerritoryID IN (1, 2, 3)  
@@ -87,7 +87,7 @@ WHERE TerritoryID IN (1, 2, 3)
   
  또한 다음 규칙은 `DataRow.["columnName"]` null 할당의 인스턴스에도 적용됩니다.  
   
-1. 기본 *기본값* 은 강력한 형식의 null 열을 제외한 모든 값에 대해 `DbNull.Value`입니다. 여기에는 적절 한 강력한 형식의 null 값이 있습니다.  
+1. 강력한 형식의 null 열을 제외한 모든 값에 대 한 기본 *기본값* 은 적절 한 강력한 형식의 null 값으로 `DbNull.Value` 됩니다.  
   
 2. Null 값은 "xsi:nil"에서와 같이 XML 파일과의 직렬화 중에는 작성되지 않습니다.  
   
@@ -98,21 +98,21 @@ WHERE TerritoryID IN (1, 2, 3)
 5. <xref:System.Data.DataRow.IsNull%2A> 메서드는 `true`와 `DbNull.Value`에 대해 모두 `INullable.Null`를 반환합니다.  
   
 ## <a name="assigning-null-values"></a>Null 값 할당  
- 모든 <xref:System.Data.SqlTypes> 인스턴스의 기본값은 null입니다.  
+ <xref:System.Data.SqlTypes> 인스턴스의 기본값은 null입니다.  
   
  <xref:System.Data.SqlTypes>의 Null은 형식마다 다르며 `DbNull`과 같은 단일 값으로 표현할 수 없습니다. `IsNull` 속성을 사용하여 null을 검사합니다.  
   
  다음 코드 예제와 같이 Null 값을 <xref:System.Data.DataColumn>에 할당할 수 있습니다. 예외를 트리거하지 않고 null 값을 `SqlTypes` 변수에 직접 할당할 수 있습니다.  
   
 ### <a name="example"></a>예제  
- 다음 코드 예제에서는 <xref:System.Data.DataTable> 및 <xref:System.Data.SqlTypes.SqlInt32>으로 정의된 두 개의 열이 포함된 <xref:System.Data.SqlTypes.SqlString>을 만듭니다. 이 코드는 값이 알려져 있는 행과 null 값의 행을 하나씩 추가한 다음 변수에 값을 할당하고 콘솔 창에 출력을 표시하여 <xref:System.Data.DataTable>을 반복합니다.  
+ 다음 코드 예에서는 <xref:System.Data.SqlTypes.SqlInt32> 및 <xref:System.Data.SqlTypes.SqlString>으로 정의 된 두 개의 열이 있는 <xref:System.Data.DataTable>를 만듭니다. 이 코드는 알려진 값의 한 행 (null 값의 한 행)을 추가 하 고 <xref:System.Data.DataTable>를 반복 하 여 변수에 값을 할당 하 고 콘솔 창에 출력을 표시 합니다.  
   
  [!code-csharp[DataWorks SqlTypes.IsNull#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlTypes.IsNull/CS/source.cs#1)]
  [!code-vb[DataWorks SqlTypes.IsNull#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlTypes.IsNull/VB/source.vb#1)]  
   
- 이 예제의 결과는 다음과 같습니다.  
+ 이 예에서는 다음 결과를 표시 합니다.  
   
-```  
+```output
 isColumnNull=False, ID=123, Description=Side Mirror  
 isColumnNull=True, ID=Null, Description=Null  
 ```  
@@ -127,7 +127,7 @@ isColumnNull=True, ID=Null, Description=Null
   
  이 코드의 출력은 다음과 같습니다.  
   
-```  
+```output
 SqlString.Equals shared/static method:  
   Two nulls=Null  
   
@@ -141,7 +141,7 @@ String.Equals instance method:
   Two empty strings=True   
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [SQL Server 데이터 형식 및 ADO.NET](sql-server-data-types.md)
 - [ADO.NET 개요](../ado-net-overview.md)

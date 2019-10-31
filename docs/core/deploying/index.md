@@ -1,16 +1,14 @@
 ---
 title: .NET Core 애플리케이션 배포
 description: .NET Core 애플리케이션을 배포하는 방법을 알아봅니다.
-author: rpetrusha
-ms.author: ronpet
 ms.date: 12/03/2018
 ms.custom: seodec18
-ms.openlocfilehash: 6f88659fcef49eba9344d3c4b2f0245b4072d7ab
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fd15d41065b0a6ecb1a0bf04a0f0ab292a0a5fb7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61613380"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73089191"
 ---
 # <a name="net-core-application-deployment"></a>.NET Core 애플리케이션 배포
 
@@ -48,7 +46,7 @@ FDD 배포에는 다음과 같은 여러 가지 장점이 있습니다.
 
 자체 포함 배포에서는 앱과 필요한 타사 종속성 외에도 앱을 빌드하는 데 사용한 .NET Core 버전도 배포합니다. SCD를 만들 때 다양한 플랫폼의 [.NET Core에 대한 기본 종속성](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md)을 포함하지 않으므로 앱을 실행하려면 이러한 종속성이 있어야 합니다. 런타임 시 버전 바인딩에 대한 자세한 내용은 [.NET Core의 버전 바인딩](../versions/selection.md)에 대한 문서를 참조하세요.
 
-NET Core 2.1 SDK(버전 2.1.300)부터 .NET Core는 ‘패치 버전 롤포워드’를 지원합니다. 자체 포함 배포를 만들 때 .NET Core 도구는 애플리케이션에서 대상으로 하는 .NET Core 버전의 최신 서비스 런타임을 자동으로 포함합니다. (최근 서비스 런타임에는 보안 패치 및 기타 버그 수정이 포함됩니다.) 서비스 런타임은 빌드 시스템에 존재하지 않아도 됩니다. NuGet.org에서 자동으로 다운로드됩니다. 패치 버전 롤포워드를 옵트아웃하는 방법을 비롯하여 자세한 내용은 [자체 포함 배포 런타임 롤포워드](runtime-patch-selection.md)를 참조하세요.
+NET Core 2.1 SDK(버전 2.1.300)부터 .NET Core는 ‘패치 버전 롤포워드’를 지원합니다.  자체 포함 배포를 만들 때 .NET Core 도구는 애플리케이션에서 대상으로 하는 .NET Core 버전의 최신 서비스 런타임을 자동으로 포함합니다. (최근 서비스 런타임에는 보안 패치 및 기타 버그 수정이 포함됩니다.) 서비스 런타임은 빌드 시스템에 존재하지 않아도 됩니다. NuGet.org에서 자동으로 다운로드됩니다. 패치 버전 롤포워드를 옵트아웃하는 방법을 비롯하여 자세한 내용은 [자체 포함 배포 런타임 롤포워드](runtime-patch-selection.md)를 참조하세요.
 
 FDD 및 SCD 배포는 별도의 호스트 실행 파일을 사용하므로 게시자 서명이 있는 SCD에 대해 호스트 실행 파일에 서명할 수 있습니다.
 

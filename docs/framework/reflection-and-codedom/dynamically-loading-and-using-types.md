@@ -12,14 +12,12 @@ helpviewer_keywords:
 - implicit late binding
 - reflection, dynamically using types
 ms.assetid: db985bec-5942-40ec-b13a-771ae98623dc
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 21d0425de072c91cf7111162e405f826e00e849d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 940f334ec6a42c4d8da461d634051ff979b8f98d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046100"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130261"
 ---
 # <a name="dynamically-loading-and-using-types"></a>동적으로 형식 로드 및 사용
 리플렉션은 언어 컴파일러에서 암시적 런타임에 바인딩을 구현하는 데 사용되는 인프라를 제공합니다. 바인딩은 고유하게 지정된 형식에 해당하는 선언(즉, 구현)을 찾는 프로세스입니다. 이 프로세스가 컴파일 시간이 아닌 런타임에 수행되는 경우 이를 런타임에 바인딩이라고 합니다. Visual Basic을 통해 코드에서 암시적 런타임에 바인딩을 사용할 수 있고, Visual Basic 컴파일러는 리플렉션을 사용하여 개체 형식을 가져오는 도우미 메서드를 호출합니다. 인수가 도우미 메서드에 전달되면 런타임에 적절한 메서드가 호출됩니다. 이러한 인수는 메서드를 호출하는 인스턴스(개체), 호출된 메서드의 이름(문자열) 및 호출된 메서드에 전달된 인수(개체 배열)입니다.  
@@ -66,11 +64,11 @@ End Module
   
  **BindToMethod**는 호출할 <xref:System.Reflection.MethodBase>를 반환하거나 해당 호출이 가능하지 않은 경우 null 참조(Visual Basic의 경우 **Nothing**)를 반환합니다. **MethodBase** 반환 값은 일반적인 사례인 경우에도 *match* 매개 변수에 포함된 값 중 하나일 필요가 없습니다.  
   
- ByRef 인수가 있으면 호출자가 해당 인수를 되찾으려고 할 수 있습니다. 따라서 **BindToMethod**가 인수 배열을 조작한 경우 **Binder**를 사용하여 클라이언트가 인수 배열을 다시 원래 폼에 매핑할 수 있습니다. 이 작업을 위해 호출자는 인수 순서가 변경되지 않도록 보장해야 합니다. 인수가 이름으로 저장되면 **Binder**는 인수 배열을 다시 정렬하고 호출자는 이 순서를 인식합니다. 자세한 내용은 <xref:System.Reflection.Binder.ReorderArgumentArray%2A?displayProperty=nameWithType>을 참조하세요.  
+ ByRef 인수가 있으면 호출자가 해당 인수를 되찾으려고 할 수 있습니다. 따라서 **BindToMethod**가 인수 배열을 조작한 경우 **Binder**를 사용하여 클라이언트가 인수 배열을 다시 원래 폼에 매핑할 수 있습니다. 이 작업을 위해 호출자는 인수 순서가 변경되지 않도록 보장해야 합니다. 인수가 이름으로 저장되면 **Binder**는 인수 배열을 다시 정렬하고 호출자는 이 순서를 인식합니다. 자세한 내용은 <xref:System.Reflection.Binder.ReorderArgumentArray%2A?displayProperty=nameWithType>을 참조하십시오.  
   
  사용 가능한 멤버 집합은 형식 또는 기본 형식에 정의된 멤버입니다. <xref:System.Reflection.BindingFlags>가 지정되면 접근성이 있는 멤버가 집합에 반환됩니다. **BindingFlags.NonPublic**이 지정되지 않으면 바인더가 접근성 규칙을 적용해야 합니다. **Public** 또는 **NonPublic** 바인딩 플래그를 지정할 경우에는 **Instance** 또는 **Static** 바인딩 플래그도 지정해야 합니다. 그렇지 않으면 멤버가 반환되지 않습니다.  
   
- 지정된 이름의 멤버가 하나만 있는 경우에는 콜백이 필요하지 않고 바인딩이 해당 메서드에서 수행됩니다. 코드 예제의 사례 1은 이러한 점을 보여줍니다. 하나의 **PrintBob** 메서드만 사용할 수 있으므로 콜백이 필요하지 않습니다.  
+ 지정된 이름의 멤버가 하나만 있는 경우에는 콜백이 필요하지 않고 바인딩이 해당 메서드에서 수행됩니다. 코드 예제의 사례 1이 이 내용을 보여 줍니다. 하나의 **PrintBob** 메서드만 사용할 수 있으므로 콜백이 필요하지 않습니다.  
   
  사용 가능한 집합에 두 개 이상의 멤버가 있으면 이러한 메서드가 모두 적절한 메서드를 선택하고 반환하는 **BindToMethod**에 전달됩니다. 코드 예제의 사례 2에는 **PrintValue**라는 두 개의 메서드가 있습니다. **BindToMethod**를 호출하여 적절한 메서드를 선택합니다.  
   
@@ -98,7 +96,7 @@ End Module
   
  <xref:System.Type> 클래스에는 **Binder** 형식의 매개 변수를 사용하여 특정 멤버에 대한 참조를 확인하는 **Get** 메서드가 포함됩니다. <xref:System.Type.GetConstructor%2A?displayProperty=nameWithType>, <xref:System.Type.GetMethod%2A?displayProperty=nameWithType> 및 <xref:System.Type.GetProperty%2A?displayProperty=nameWithType>는 해당 멤버에 대한 시그니처 정보를 제공하여 현재 형식의 특정 멤버를 검색합니다. <xref:System.Reflection.Binder.SelectMethod%2A?displayProperty=nameWithType> 및 <xref:System.Reflection.Binder.SelectProperty%2A?displayProperty=nameWithType>는 해당하는 메서드의 지정된 시그니처 정보를 선택하기 위해 콜백됩니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType>
 - <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>

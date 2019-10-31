@@ -21,9 +21,9 @@ Visual Basic를 사용 하면 조건을 테스트 하 고 해당 테스트의 �
   
  다음 그림은 조건이 true 인지 false 인지에 따라 조건이 true 인지 테스트 하 고 다른 작업을 수행 하는 의사 결정 구조를 보여 줍니다.  
   
- ![... 인 경우의 순서도 그런 다음 ... Else 생성.](./media/decision-structures/if-then-else-construction.gif)  
+ ![If...Then...Else 생성.](./media/decision-structures/if-then-else-construction.gif)  
   
-## <a name="ifthenelse-construction"></a>... 그런 다음 ... Else 생성  
+## <a name="ifthenelse-construction"></a>If...Then...Else 생성  
  `If...Then...Else`구문을 사용 하면 하나 이상의 조건을 테스트 하 고 각 조건에 따라 하나 이상의 문을 실행할 수 있습니다. 조건을 테스트 하 고 다음과 같은 방법으로 작업을 수행할 수 있습니다.  
   
 - 조건이 인 경우 하나 이상의 문을 실행 합니다.`True`  
@@ -34,12 +34,12 @@ Visual Basic를 사용 하면 조건을 테스트 하 고 해당 테스트의 �
   
 - 이전 조건이 인 경우 추가 조건 테스트`False`  
   
- 이러한 모든 가능성을 제공 하는 컨트롤 구조는 다음과 같은 경우입니다. [ 그런 다음 ... Else 문](../../../../visual-basic/language-reference/statements/if-then-else-statement.md). 하나의 테스트와 한 개의 문이 실행 되는 경우 한 줄 버전을 사용할 수 있습니다. 더 복잡 한 조건 및 동작 집합이 있는 경우 여러 줄 버전을 사용할 수 있습니다.  
+ 이러한 모든 가능성을 제공 하는 컨트롤 구조는 다음과 같은 경우입니다. [If...Then...Else 문](../../../../visual-basic/language-reference/statements/if-then-else-statement.md). 하나의 테스트와 한 개의 문이 실행 되는 경우 한 줄 버전을 사용할 수 있습니다. 더 복잡 한 조건 및 동작 집합이 있는 경우 여러 줄 버전을 사용할 수 있습니다.  
   
-## <a name="selectcase-construction"></a>...를 선택 합니다. 사례 생성  
- 이 `Select...Case` 구문을 사용 하면 식을 한 번 계산 하 고 가능한 다른 값에 따라 다른 문 집합을 실행할 수 있습니다. 자세한 내용은 Select ...를 참조 하세요. [ Case 문](../../../../visual-basic/language-reference/statements/select-case-statement.md).  
+## <a name="selectcase-construction"></a>Select...Case 생성  
+ 이 `Select...Case` 구문을 사용 하면 식을 한 번 계산 하 고 가능한 다른 값에 따라 다른 문 집합을 실행할 수 있습니다. 자세한 내용은 를 참조 하세요. [Select...Case 문](../../../../visual-basic/language-reference/statements/select-case-statement.md).  
   
-## <a name="trycatchfinally-construction"></a>Try ... Catch ... Finally 생성  
+## <a name="trycatchfinally-construction"></a>Try...Catch...Finally 생성  
  `Try...Catch...Finally`구문을 사용 하 여 문 중 하나에서 예외가 발생 하는 경우 제어를 유지 하는 환경에서 문 집합을 실행할 수 있습니다. 다른 예외에 대해 다른 작업을 수행할 수 있습니다. 필요에 관계 없이 전체 `Try...Catch...Finally` 생성을 끝내기 전에 실행 되는 코드 블록을 선택적으로 지정할 수 있습니다. 자세한 내용은 [Try...Catch...Finally 문](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)을 참조하세요.  
   
 > [!NOTE]

@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 72dd76ba-239e-45ac-9ded-318fb07d6c6d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 404cd5513a1cbd353faed41030a80ec2abef235f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: eaba6b2166a82cfe825ffb98db515e24d4656462
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774203"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138225"
 ---
 # <a name="epolicyaction-enumeration"></a>EPolicyAction 열거형
-호스트에서 설명 하는 작업에 대해 설정할 정책 작업을 설명 [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) 에 정의 된 오류 [EClrFailure](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md)합니다.  
+[EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) 및 [EClrFailure](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md)에서 설명 하는 오류에 설명 된 작업에 대해 호스트가 설정할 수 있는 정책 작업에 대해 설명 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -45,32 +43,32 @@ typedef enum {
   
 ## <a name="members"></a>멤버  
   
-|멤버|Description|  
+|멤버|설명|  
 |------------|-----------------|  
-|`eAbortThread`|CLR (공용 언어 런타임) 스레드를 정상적으로 중단 하도록 지정 합니다. 모든 실행 하려는 시도 포함 하는 정상적인 중단 `finally` 차단 된 `catch` 스레드 중단 및 종료자와 관련 된 블록입니다.|  
-|`eDisableRuntime`|CLR 사용 안 함된 상태를 시작 해야를 지정 합니다. 더 이상 영향을 받는 프로세스에서 관리 되는 코드를 실행할 수 있습니다 하 고 clr에서 스레드가 차단 됩니다.|  
-|`eExitProcess`|CLR 종료자 실행 등 정리 및 로깅 작업을 수행 하는 프로세스의 정상 종료 하면을 지정 합니다.|  
-|`eFastExitProcess`|CLR 프로세스를 종료 하도록 즉시 종료자를 실행 하거나 정리 및 로깅 작업을 수행 하지 않고 지정 합니다. 그러나 디버거에 알림이 전송 됩니다.|  
-|`eNoAction`|조치가 취해야 합니다를 지정 합니다.|  
-|`eRudeAbortThread`|CLR 강제 스레드 중단을 수행 해야 한다고 지정 합니다. 경우에 `catch` 하 고 `finally` 블록으로 표시 된 <xref:System.EnterpriseServices.MustRunInClientContextAttribute> 실행 됩니다.|  
-|`eRudeExitProcess`|CLR 종료자를 실행 하거나 작업을 기록 하지 않고 프로세스를 종료 하도록 지정 합니다.|  
-|`eRudeUnloadAppDomain`|CLR의 잘못 된 언로드를 수행 하도록 지정 된 <xref:System.AppDomain>합니다. 로 표시만 종료자 <xref:System.EnterpriseServices.MustRunInClientContextAttribute> 실행 됩니다. 마찬가지로, 모든 스레드가이 사용 하 여 <xref:System.AppDomain> 해당 스택 수신를 `ThreadAbortException`, 하지만 경우에 `catch` 하 고 `finally` 블록으로 표시 <xref:System.EnterpriseServices.MustRunInClientContextAttribute> 실행 됩니다.|  
-|`eThrowException`|메모리, 버퍼 오버플로 등과 같은 조건에 적합 한 예외를 throw 해야를 지정 합니다.|  
-|`eUnloadAppDomain`|지정 된 <xref:System.AppDomain> 로드 해야 합니다. CLR은 종료자를 실행 하려고 시도 합니다.|  
+|`eAbortThread`|CLR (공용 언어 런타임)이 스레드를 정상적으로 중단 하도록 지정 합니다. 정상적인 중단에는 모든 `finally` 블록을 실행 하려는 시도, 스레드 중단과 관련 된 `catch` 블록 및 종료자가 포함 됩니다.|  
+|`eDisableRuntime`|CLR이 비활성화 상태를 시작 하도록 지정 합니다. 영향을 받는 프로세스에서 더 이상 관리 코드를 실행할 수 없으며, 스레드가 CLR에 시작 되지 않도록 차단 됩니다.|  
+|`eExitProcess`|CLR에서 종료자 실행, 정리 및 로깅 작업 수행을 포함 하 여 프로세스의 정상적인 종료를 시도 하도록 지정 합니다.|  
+|`eFastExitProcess`|종료자를 실행 하거나 정리 및 로깅 작업을 수행 하지 않고 CLR에서 즉시 프로세스를 종료 하도록 지정 합니다. 그러나 알림이 디버거로 전송 됩니다.|  
+|`eNoAction`|아무 동작도 수행 하지 않도록 지정 합니다.|  
+|`eRudeAbortThread`|CLR에서 잘못 된 스레드 중단을 수행 하도록 지정 합니다. <xref:System.EnterpriseServices.MustRunInClientContextAttribute> 표시 된 `catch` 및 `finally` 블록만 실행 됩니다.|  
+|`eRudeExitProcess`|CLR에서 종료자 또는 로깅 작업을 실행 하지 않고 프로세스를 종료 하도록 지정 합니다.|  
+|`eRudeUnloadAppDomain`|CLR이 <xref:System.AppDomain>의 강제 언로드를 수행 하도록 지정 합니다. <xref:System.EnterpriseServices.MustRunInClientContextAttribute> 표시 된 종료자만 실행 됩니다. 마찬가지로 해당 스택에서이 <xref:System.AppDomain> 있는 모든 스레드는 `ThreadAbortException`를 받으며 <xref:System.EnterpriseServices.MustRunInClientContextAttribute> 표시 된 `catch` 및 `finally` 블록만 실행 됩니다.|  
+|`eThrowException`|조건에 적합 한 예외 (예: 메모리 부족, 버퍼 오버플로 등)를 throw 하도록 지정 합니다.|  
+|`eUnloadAppDomain`|<xref:System.AppDomain>를 언로드하기 위해 지정 합니다. CLR에서 종료자를 실행 하려고 합니다.|  
   
-## <a name="remarks"></a>설명  
- 호스트의 메서드를 호출 하 여 정책을 실행 하도록 설정 하는 [ICLRPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md) 인터페이스입니다. 강제 하 고 정상적으로 중단에 대 한 내용은 참조는 [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) 열거형입니다.  
+## <a name="remarks"></a>주의  
+ 호스트는 [ICLRPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md) 인터페이스의 메서드를 호출 하 여 정책 작업을 설정 합니다. 강제 및 정상적인 중단에 대 한 자세한 내용은 [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) 열거형을 참조 하세요.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** MSCorEE.h  
+ **헤더:** Mscoree.dll  
   
- **라이브러리:** MSCorEE.dll  
+ **라이브러리:** Mscoree.dll  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [EClrFailure 열거형](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md)
 - [ICLRPolicyManager 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)

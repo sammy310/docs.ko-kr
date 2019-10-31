@@ -14,14 +14,12 @@ helpviewer_keywords:
 - CreateInstanceEnumWmi function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b7709d9c50a494013ece2f91b3acc213278f0e57
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 9ffa718be0e8b67471fdf8cb277df201388d2840
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798909"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130411"
 ---
 # <a name="createinstanceenumwmi-function"></a>CreateInstanceEnumWmi 함수
 
@@ -49,12 +47,12 @@ HRESULT CreateInstanceEnumWmi (
 ## <a name="parameters"></a>매개 변수
 
 `strFilter`\
-진행 인스턴스가 필요한 클래스의 이름입니다. 이 매개 변수 수 없습니다 `null`합니다.
+진행 인스턴스가 필요한 클래스의 이름입니다. 이 매개 변수를 `null`수 없습니다.
 
 `lFlags`\
 진행 이 함수의 동작에 영향을 주는 플래그의 조합입니다. 다음 값은 *WbemCli* 헤더 파일에 정의 되어 있거나 코드에서 상수로 정의할 수 있습니다.
 
-|상수  |값  |Description  |
+|상수  |값  |설명  |
 |---------|---------|---------|
 | `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | 설정 하는 경우 함수는 현재 연결 로캘의 지역화 된 네임 스페이스에 저장 된 수정 된 한정자를 검색 합니다. <br/> 설정 되지 않은 경우 함수는 직접 실행 네임 스페이스에 저장 된 한정자만 검색 합니다. |
 | `WBEM_FLAG_DEEP` | 0 | 열거형에는이 및 계층의 모든 하위 클래스가 포함 됩니다. |
@@ -63,7 +61,7 @@ HRESULT CreateInstanceEnumWmi (
 | `WBEM_FLAG_FORWARD_ONLY` | 0x20 | 함수는 앞 으로만 이동 가능한 열거자를 반환 합니다. 일반적으로 앞 으로만 이동 가능한 열거자는 기존 열거자 보다 더 빠르고 메모리를 사용 하지만, 이러한 열거자는 호출을 [복제할](clone.md)수 없습니다. |
 | `WBEM_FLAG_BIDIRECTIONAL` | 0 | WMI는 해제할 때까지 열거형의 개체에 대 한 포인터를 유지 합니다. |
 
-권장 플래그 `WBEM_FLAG_RETURN_IMMEDIATELY` 는 최상의 성능을 `WBEM_FLAG_FORWARD_ONLY` 위해 및입니다.
+권장 플래그는 `WBEM_FLAG_RETURN_IMMEDIATELY` 하 고 최상의 성능을 위해 `WBEM_FLAG_FORWARD_ONLY` 됩니다.
 
 `pCtx`\
 진행 일반적으로이 값은 `null`입니다. 그렇지 않으면 요청 된 인스턴스를 제공 하는 공급자가 사용할 수 있는 [iwbemcontext 개체가 올바르지](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) 인스턴스에 대 한 포인터입니다.
@@ -104,7 +102,7 @@ HRESULT CreateInstanceEnumWmi (
 | `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | 현재 프로세스와 WMI 간의 RPC (원격 프로시저 호출) 링크에 오류가 발생 했습니다. |
 |`WBEM_S_NO_ERROR` | 0 | 함수 호출에 성공 했습니다.  |
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 이 함수는 [IWbemServices:: CreateClassEnum](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemservices-createinstanceenum) 메서드에 대 한 호출을 래핑합니다.
 
@@ -114,12 +112,12 @@ HRESULT CreateInstanceEnumWmi (
 
 ## <a name="requirements"></a>요구 사항
 
-**플랫폼** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하십시오.
+**플랫폼:** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.
 
-**헤더:** WMINet_Utils.idl
+**헤더:** WMINet_Utils
 
 **.NET Framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [WMI 및 성능 카운터 (관리 되지 않는 API 참조)](index.md)

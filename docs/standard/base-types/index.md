@@ -7,14 +7,12 @@ helpviewer_keywords:
 - base types
 - type system, base types
 ms.assetid: 028d0ce8-ebc2-4a88-a16f-17508f6d0bd6
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e78da65eb8ef7db6dd01c1c1d3d313ac8946431a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8fa22ce749dc7d117a4a37de5d09abd9892eeab7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051197"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73103541"
 ---
 # <a name="working-with-base-types-in-net"></a>.NET의 기본 형식 작업
 이 섹션에서는 형식 지정, 변환 및 일반 작업을 포함하여 .NET 기본 형식 작업에 대해 설명합니다.  

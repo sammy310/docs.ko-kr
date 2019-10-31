@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: e4412dc2-c338-4cfb-94d8-f682095dd2b1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1dcbd8bb566331a6a2d4217eeec0441fbd3e6ff6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e76800316885c27c697421d454341d5f0789c611
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739864"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73097946"
 ---
 # <a name="cordebuginternalframetype-enumeration"></a>CorDebugInternalFrameType 열거형
-스택 프레임 형식을 식별합니다. 이 열거형은에서 사용 된 [icordebuginternalframe:: Getframetype](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe-getframetype-method.md) 메서드.  
+스택 프레임 형식을 식별합니다. 이 열거형은 [ICorDebugInternalFrame:: GetFrameType](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe-getframetype-method.md) 메서드에서 사용 됩니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -49,20 +47,20 @@ typedef enum CorDebugInternalFrameType {
   
 |멤버|설명|  
 |------------|-----------------|  
-|`STUBFRAME_NONE`|null 값입니다. `ICorDebugInternalFrame::GetFrameType` 메서드는이 값을 반환 하지 않습니다.|  
-|`STUBFRAME_M2U`|관리-비관리 스텁 프레임입니다.|  
-|`STUBFRAME_U2M`|관리 되지 않는-managed 스텁 프레임입니다.|  
-|`STUBFRAME_APPDOMAIN_TRANSITION`|응용 프로그램 도메인 간에 전환 합니다.|  
+|`STUBFRAME_NONE`|Null 값입니다. `ICorDebugInternalFrame::GetFrameType` 메서드는이 값을 반환 하지 않습니다.|  
+|`STUBFRAME_M2U`|관리 되는 관리 되지 않는 스텁 프레임입니다.|  
+|`STUBFRAME_U2M`|관리 되지 않는 스텁 프레임입니다.|  
+|`STUBFRAME_APPDOMAIN_TRANSITION`|응용 프로그램 도메인 간 전환|  
 |`STUBFRAME_LIGHTWEIGHT_FUNCTION`|간단한 메서드 호출입니다.|  
-|`STUBFRAME_FUNC_EVAL`|함수 실행의 시작입니다.|  
-|`STUBFRAME_INTERNALCALL`|공용 언어 런타임에 대 한 내부 호출 합니다.|  
-|`STUBFRAME_CLASS_INIT`|클래스 초기화를 시작 합니다.|  
-|`STUBFRAME_EXCEPTION`|예외가 throw 됩니다.|  
+|`STUBFRAME_FUNC_EVAL`|함수 계산의 시작입니다.|  
+|`STUBFRAME_INTERNALCALL`|공용 언어 런타임에 대 한 내부 호출입니다.|  
+|`STUBFRAME_CLASS_INIT`|클래스 초기화의 시작입니다.|  
+|`STUBFRAME_EXCEPTION`|Throw 되는 예외입니다.|  
 |`STUBFRAME_SECURITY`|코드 액세스 보안에 사용 되는 프레임입니다.|  
-|`STUBFRAME_JIT_COMPILATION`|런타임은 메서드를 JIT 컴파일하는입니다.|  
+|`STUBFRAME_JIT_COMPILATION`|런타임은 메서드를 JIT 컴파일하는 것입니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
@@ -70,6 +68,6 @@ typedef enum CorDebugInternalFrameType {
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [디버깅 열거형](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
