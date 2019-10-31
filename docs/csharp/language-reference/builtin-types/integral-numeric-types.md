@@ -1,7 +1,7 @@
 ---
 title: 정수 숫자 형식 - C# 참조
 description: 각 정수 숫자 형식에 대한 범위, 스토리지 크기 및 용도에 대해 알아봅니다.
-ms.date: 10/18/2019
+ms.date: 10/22/2019
 f1_keywords:
 - byte
 - byte_CSharpKeyword
@@ -32,12 +32,12 @@ helpviewer_keywords:
 - uint keyword [C#]
 - long keyword [C#]
 - ulong keyword [C#]
-ms.openlocfilehash: 3d4f3164d67a000123417619f3be6be455d5ab87
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: c255711e4b165fdca27d50c6bd0f2debfe15ae25
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72579190"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72773862"
 ---
 # <a name="integral-numeric-types--c-reference"></a>정수 숫자 형식(C# 참조)
 
@@ -100,7 +100,7 @@ var binaryLiteral = 0b_0010_1010;
 
 정수 리터럴로 표시되는 값이 <xref:System.UInt64.MaxValue?displayProperty=nameWithType>를 초과하면 컴파일 오류 [CS1021](../../misc/cs1021.md)이 발생합니다.
 
-정수 리터럴로 표시되는 값은 결정된 리터럴 형식보다 범위가 작은 유형으로 암시적으로 변환될 수 있습니다. 이는 값이 대상 형식의 범위 내에 있을 때 가능합니다.
+결정된 정수 리터럴 형식이 `int`이고 값이 대상 형식의 범위 내에 있는 경우, 리터럴이 나타내는 값을 암시적으로 `sbyte`, `byte`, `short`, `ushort`, `uint` 또는 `ulong`으로 변환될 수 있습니다.
 
 ```csharp
 byte a = 17;
@@ -118,9 +118,7 @@ var longVariable = (long)42;
 
 ## <a name="conversions"></a>변환
 
-대상 유형에는 소스 유형의 모든 값을 저장할 수 있는 두 개의 정수 유형 간에 암시적 변환(*확대 변환*이라고 함)이 있습니다. 예를 들어 `int` 값의 범위가 `long`의 적절한 하위 집합이기 때문에 `int`에서 `long`으로의 암시적 변환이 있습니다. 더 작은 부호 없는 정수 형식에서 더 큰 부호 있는 정수 형식으로 암시적 변환이 있습니다. 정수 형식에서 부동 소수점 형식으로 변환하는 암시적 변환도 있습니다.  부호 있는 정수 형식에서 부호 없는 정수 형식으로 변환하는 암시적 변환은 없습니다.
-
-암시적 변환이 소스 유형에서 대상 유형으로 정의되지 않은 경우 명시적 캐스트를 사용하여 하나의 정수 형식을 다른 정수 형식으로 변환해야 합니다. 이를 *축소 변환*이라고 합니다. 변환이 데이터 손실을 초래할 수 있기 때문에 명시적인 사례가 필요합니다.
+모든 정수 숫자 형식을 다른 정수 숫자 형식으로 변환할 수 있습니다. 대상 형식이 소스 형식의 모든 값을 저장할 수 있는 경우 변환은 암시적입니다. 그렇지 않으면 [cast 연산자 `()`](../operators/type-testing-and-cast.md#cast-operator-)를 사용하여 명시적 변환을 호출해야 합니다. 자세한 내용은 [기본 제공 숫자 변환](numeric-conversions.md)을 참조하세요.
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 
@@ -132,8 +130,7 @@ var longVariable = (long)42;
 ## <a name="see-also"></a>참고 항목
 
 - [C# 참조](../index.md)
-- [부동 소수점 형식](floating-point-numeric-types.md)
-- [기본값 표](../keywords/default-values-table.md)
-- [숫자 결과 형식 지정 표](../keywords/formatting-numeric-results-table.md)
 - [기본 제공 형식 표](../keywords/built-in-types-table.md)
+- [부동 소수점 형식](floating-point-numeric-types.md)
+- [숫자 결과 형식 지정 표](../keywords/formatting-numeric-results-table.md)
 - [.NET의 숫자](../../../standard/numerics.md)

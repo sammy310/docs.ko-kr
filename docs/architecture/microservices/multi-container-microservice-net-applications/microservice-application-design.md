@@ -2,12 +2,12 @@
 title: 마이크로 서비스 지향 애플리케이션 디자인
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | 마이크로 서비스 지향 애플리케이션의 장점과 단점을 이해하면 최신 정보에 입각한 결정을 내릴 수 있습니다.
 ms.date: 10/02/2018
-ms.openlocfilehash: dc3c8ccd95505cb828383f499b9bf950e7c12a30
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 1c2fe341c62111e915df35aab818b8a980004834
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039822"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72772053"
 ---
 # <a name="designing-a-microservice-oriented-application"></a>마이크로 서비스 지향 애플리케이션 디자인
 
@@ -65,7 +65,7 @@ ms.locfileid: "71039822"
 
 애플리케이션은 여러 스토어 UI 프런트 엔드(웹 애플리케이션 및 네이티브 모바일 앱)를 포함한 여러 하위 시스템과 내부 마이크로 서비스에 대한 통합 진입점으로 여러 API 게이트웨이가 있는 모든 필수 서버 쪽 작업을 위한 백 엔드 마이크로 서비스 및 컨테이너로 구성됩니다. 그림 6-1은 참조 애플리케이션의 아키텍처입니다.
 
-![모바일 및 SPA 클라이언트는 단일 API 게이트웨이 엔드포인트와 통신한 다음, 마이크로 서비스와 통신합니다. 일반적인 웹 클라이언트는 마이크로 서비스와 통신하는 MVC 마이크로 서비스와 통신합니다.](./media/image1.png)
+![모바일 및 SPA 클라이언트가 단일 API 게이트웨이 엔드포인트와 통신한 다음, 엔드포인트가 마이크로 서비스와 통신합니다. 일반적인 웹 클라이언트는 마이크로 서비스와 통신하는 MVC 마이크로 서비스와 통신합니다.](./media/image1.png)
 
 **그림 6-1**. 개발 환경을 위한 eShopOnContainers 참조 애플리케이션 아키텍처
 

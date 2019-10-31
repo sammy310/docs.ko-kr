@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0c0fa0e2c59856beda65ec5804b8896352db98b3
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: 2c1b73108227160aaff28525beeca7f3bd4cb5f8
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72180188"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775318"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>가비지 수집 기본 사항
 
@@ -125,7 +125,7 @@ CLR에 의해 가비지 수집기가 초기화되고 나면 가비지 수집기�
 
 가비지 수집에서 회수되지 않는 개체는 남은 개체라고 하며 다음 세대로 승격됩니다. 0세대 가비지 수집에서 남은 개체는 1세대로 승격되고, 1세대 가비지 수집에서 남은 개체는 2세대로 승격되며, 2세대 가비지 수집에서 남은 개체는 2세대에 그대로 있습니다.
 
-가비지 수집기는 한 세대의 잔존율이 높음을 탐지하면 해당 세대에 대한 할당 임계값을 늘려 다음 수집에서 충분한 회수 메모리 크기가 확보되도록 합니다. CLR은 애플리케이션의 작업 집합이 너무 커지지 않도록 하는 것과 가비지 수집이 너무 많은 시간을 소요하지 않도록 하는 두 가지 우선 순위 사이에서 지속적으로 균형을 유지합니다.
+가비지 수집기는 한 세대의 잔존율이 높음을 탐지하면 해당 세대에 대한 할당 임계값을 늘려 다음 수집에서 충분한 회수 메모리 크기가 확보되도록 합니다. CLR은 가비지 수집을 지연하여 애플리케이션의 작업 집합이 너무 커지지 않도록 하는 것과 가비지 수집이 너무 자주 실행되지 않도록 하는 두 가지 우선 순위 사이에서 지속적으로 균형을 유지합니다.
 
 ### <a name="ephemeral-generations-and-segments"></a>임시 세대 및 세그먼트
 
@@ -283,7 +283,7 @@ CLR에 의해 가비지 수집기가 초기화되고 나면 가비지 수집기�
 
 다음 그림에서는 워크스테이션의 개별 전용 스레드에서 수행되는 백그라운드 가비지 수집을 보여 줍니다.
 
-![백그라운드 워크스테이션 가비지 수집을 보여주는 다이어그램입니다.](./media/fundamentals/background-workstation-garbage-collection.png "백그라운드 워크스테이션 가비지 수집을 보여주는 다이어그램입니다.")
+![백그라운드 워크스테이션 가비지 수집을 보여 주는 다이어그램](./media/fundamentals/background-workstation-garbage-collection.png "백그라운드 워크스테이션 가비지 수집을 보여주는 다이어그램.")
 
 [맨 위로 이동](#top)
 
@@ -295,7 +295,7 @@ CLR에 의해 가비지 수집기가 초기화되고 나면 가비지 수집기�
 
 다음 그림에서는 서버의 개별 전용 스레드에서 수행되는 백그라운드 가비지 수집을 보여 줍니다.
 
-![백그라운드 서버 가비지 수집을 보여주는 다이어그램입니다.](./media/fundamentals/background-server-garbage-collection.png "백그라운드 서버 가비지 수집을 보여주는 다이어그램입니다.")
+![백그라운드 서버 가비지 수집을 보여 주는 다이어그램](./media/fundamentals/background-server-garbage-collection.png "백그라운드 서버 가비지 수집을 보여주는 다이어그램.")
 
 ## <a name="see-also"></a>참고 항목
 

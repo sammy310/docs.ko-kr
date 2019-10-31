@@ -3,12 +3,12 @@ title: .NET Compiler Platform SDK 구문 모델 사용
 description: 이 개요에서는 구문 노드를 이해하고 조작하는 데 사용하는 형식에 대한 이해를 제공합니다.
 ms.date: 10/15/2017
 ms.custom: mvc
-ms.openlocfilehash: a48d48168dffdb439c984f5b4209019514b3b970
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 940d2756ef7735ee96d38d0286f99fadf7b81dc6
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353301"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774095"
 ---
 # <a name="work-with-syntax"></a>구문 작업
 
@@ -19,31 +19,31 @@ ms.locfileid: "33353301"
 
 ## <a name="syntax-trees"></a>구문 트리
 
-구문 트리는 컴파일, 코드 분석, 바인딩, 리팩터링, IDE 기능 및 코드 생성에 사용되는 기본 구조입니다. 소스 코드의 어떠한 부분도 먼저 식별되고 잘 알려진 많은 구조적 언어 요소 중 하나로 분류되지 않고 인식되지 않습니다. 
+구문 트리는 컴파일, 코드 분석, 바인딩, 리팩터링, IDE 기능 및 코드 생성에 사용되는 기본 구조입니다. 소스 코드의 어떠한 부분도 먼저 식별되고 잘 알려진 많은 구조적 언어 요소 중 하나로 분류되지 않고 인식되지 않습니다.
 
-구문 트리에는 세 가지 주요 특성이 있습니다. 첫 번째 특성은 구문 트리가 최고의 충실도로 모든 원본 정보를 저장하는 것입니다. 즉, 구문 트리에는 공백, 설명 및 전처리기 지시문을 포함하여 원본 텍스트에서 발견되는 모든 정보, 모든 문법 구문, 모든 어휘 토큰 및 사이의 모든 항목이 포함됩니다. 예를 들어 원본에서 언급된 각 리터럴은 입력된 대로 정확하게 표시됩니다. 구문 트리는 프로그램이 불완전하거나 형식이 잘못된 경우 구문 트리에 건너뛰거나 누락된 토큰을 표시하여 소스 코드의 오류를 나타냅니다.  
+구문 트리에는 세 가지 주요 특성이 있습니다. 첫 번째 특성은 구문 트리가 최고의 충실도로 모든 원본 정보를 저장하는 것입니다. 즉, 구문 트리에는 공백, 설명 및 전처리기 지시문을 포함하여 원본 텍스트에서 발견되는 모든 정보, 모든 문법 구문, 모든 어휘 토큰 및 사이의 모든 항목이 포함됩니다. 예를 들어 원본에서 언급된 각 리터럴은 입력된 대로 정확하게 표시됩니다. 구문 트리는 프로그램이 불완전하거나 형식이 잘못된 경우 구문 트리에 건너뛰거나 누락된 토큰을 표시하여 소스 코드의 오류를 나타냅니다.
 
-이는 두 번째 구문 트리의 특성을 활성화합니다. 파서에서 가져온 구문 트리는 구문 분석된 정확한 텍스트를 생성할 수 있습니다. 구문 노드에서 해당 노드를 기반으로 하는 하위 트리의 텍스트 표현을 가져올 수 있습니다. 구문 트리가 원본 텍스트를 생성하고 편집하는 방법으로 사용될 수 있다는 것을 의미합니다. 암시적으로 해당 텍스트를 만든 트리를 만들고, 변경 내용에서 새 트리를 기존 트리로 만들어 구문 트리를 편집하여 텍스트를 효과적으로 편집했습니다. 
+이는 두 번째 구문 트리의 특성을 활성화합니다. 파서에서 가져온 구문 트리는 구문 분석된 정확한 텍스트를 생성할 수 있습니다. 구문 노드에서 해당 노드를 기반으로 하는 하위 트리의 텍스트 표현을 가져올 수 있습니다. 구문 트리가 원본 텍스트를 생성하고 편집하는 방법으로 사용될 수 있다는 것을 의미합니다. 암시적으로 해당 텍스트를 만든 트리를 만들고, 변경 내용에서 새 트리를 기존 트리로 만들어 구문 트리를 편집하여 텍스트를 효과적으로 편집했습니다.
 
-구문 트리의 세 번째 특성은 변경할 수 없으며 스레드로부터 안전하다는 것입니다.  즉, 트리를 얻으면 이는 코드의 현재 상태의 스냅숏이며 변경되지 않습니다. 따라서 여러 사용자는 잠금 또는 중복 없이 서로 다른 스레드에서 동시에 동일한 구문 트리와 상호 작용할 수 있습니다. 트리를 변경할 수 없으며 트리에 직접 수정을 만들 수 없으므로 팩터리 메서드는 트리의 추가 스냅숏을 만들어 구문 트리를 만들고 수정하도록 돕습니다. 트리는 기본 노드를 다시 사용하는 방법에서 효율적이므로 빠르게 작은 추가 메모리로 새 버전을 다시 빌드할 수 있습니다.
+구문 트리의 세 번째 특성은 변경할 수 없으며 스레드로부터 안전하다는 것입니다.  즉, 트리를 얻으면 이는 코드의 현재 상태의 스냅샷이며 변경되지 않습니다. 따라서 여러 사용자는 잠금 또는 중복 없이 서로 다른 스레드에서 동시에 동일한 구문 트리와 상호 작용할 수 있습니다. 트리를 변경할 수 없으며 트리에 직접 수정을 만들 수 없으므로 팩터리 메서드는 트리의 추가 스냅샷을 만들어 구문 트리를 만들고 수정하도록 돕습니다. 트리는 기본 노드를 다시 사용하는 방법에서 효율적이므로 빠르게 작은 추가 메모리로 새 버전을 다시 빌드할 수 있습니다.
 
-구문 트리는 비터미널 구조 요소가 다른 요소를 부모로 삼는 문자 그대로 트리 데이터 구조입니다. 각 구문 트리는 노드, 토큰 및 기타 정보로 구성되어 있습니다.  
+구문 트리는 비터미널 구조 요소가 다른 요소를 부모로 삼는 문자 그대로 트리 데이터 구조입니다. 각 구문 트리는 노드, 토큰 및 기타 정보로 구성되어 있습니다.
 
 ## <a name="syntax-nodes"></a>구문 노드
 
-구문 노드는 구문 트리의 기본 요소 중 하나입니다. 이러한 노드는 선언, 명령문, 절 및 식과 같은 구문 구조를 나타냅니다. 구문 노드의 각 범주는 <xref:Microsoft.CodeAnalysis.SyntaxNode?displayProperty=nameWithType>에서 파생되는 별도 클래스로 나타냅니다. 노드 클래스의 집합은 확장할 수 없습니다. 
+구문 노드는 구문 트리의 기본 요소 중 하나입니다. 이러한 노드는 선언, 명령문, 절 및 식과 같은 구문 구조를 나타냅니다. 구문 노드의 각 범주는 <xref:Microsoft.CodeAnalysis.SyntaxNode?displayProperty=nameWithType>에서 파생되는 별도 클래스로 나타냅니다. 노드 클래스의 집합은 확장할 수 없습니다.
 
-모든 구문 노드는 구문 트리에서 비터미널 노드입니다. 즉, 항상 다른 노드 및 토큰을 자식으로 갖습니다. 다른 노드의 자식으로 각 노드는 <xref:Microsoft.CodeAnalysis.SyntaxNode.Parent?displayProperty=nameWithType> 속성을 통해 액세스할 수 있는 부모 노드를 갖습니다. 노드 및 트리를 변경할 수 없기 때문에 부모 노드는 변경되지 않습니다. 트리의 루트는 null 부모를 갖습니다.  
+모든 구문 노드는 구문 트리에서 비터미널 노드입니다. 즉, 항상 다른 노드 및 토큰을 자식으로 갖습니다. 다른 노드의 자식으로 각 노드는 <xref:Microsoft.CodeAnalysis.SyntaxNode.Parent?displayProperty=nameWithType> 속성을 통해 액세스할 수 있는 부모 노드를 갖습니다. 노드 및 트리를 변경할 수 없기 때문에 부모 노드는 변경되지 않습니다. 트리의 루트는 null 부모를 갖습니다.
 
-각 노드에는 원본 텍스트에서의 위치에 따라 순서대로 자식 노드의 목록을 반환하는 <xref:Microsoft.CodeAnalysis.SyntaxNode.ChildNodes?displayProperty=nameWithType> 메서드가 있습니다. 이 목록은 토큰을 포함하지 않습니다. 각 노드에는 해당 노드를 기반으로 하는 하위 트리에 존재하는 모든 노드, 토큰 또는 기타 정보의 목록을 나타내는 <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantNodes%2A>, <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantTokens%2A> 또는 <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantTrivia%2A> 등의 하위 목록을 검사하는 메서드가 있습니다.  
+각 노드에는 원본 텍스트에서의 위치에 따라 순서대로 자식 노드의 목록을 반환하는 <xref:Microsoft.CodeAnalysis.SyntaxNode.ChildNodes?displayProperty=nameWithType> 메서드가 있습니다. 이 목록은 토큰을 포함하지 않습니다. 각 노드에는 해당 노드의 하위 트리에 있는 모든 노드, 토큰 또는 기타 정보 목록을 나타내는 <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantNodes%2A>, <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantTokens%2A>, <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantTrivia%2A> 등의 하위 항목을 검사하는 메서드도 있습니다.
 
 또한 각 구문 노드 하위 클래스는 강력한 형식의 속성을 통해 동일한 모든 자식을 노출합니다. 예를 들어 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax> 노드 클래스에는 이진 연산자, <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Left>, <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.OperatorToken> 및 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Right>에 해당하는 3개의 추가 속성이 있습니다. <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Left> 및 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Right>의 형식은 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax>이며 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.OperatorToken>의 형식은 <xref:Microsoft.CodeAnalysis.SyntaxToken>입니다.
 
-일부 구문 노드에는 선택적 자식이 있습니다. 예를 들어 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.IfStatementSyntax>에는 선택적 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.ElseClauseSyntax>가 있습니다. 자식이 없는 경우 속성은 null을 반환합니다. 
+일부 구문 노드에는 선택적 자식이 있습니다. 예를 들어 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.IfStatementSyntax>에는 선택적 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.ElseClauseSyntax>가 있습니다. 자식이 없는 경우 속성은 null을 반환합니다.
 
 ## <a name="syntax-tokens"></a>구문 토큰
 
-구문 토큰은 코드의 가장 작은 구문 조각을 나타내는 언어 문법의 터미널입니다. 다른 노드 또는 토큰의 부모가 아닙니다. 구문 토큰은 키워드, 식별자, 리터럴 및 문장 부호로 구성됩니다. 
+구문 토큰은 코드의 가장 작은 구문 조각을 나타내는 언어 문법의 터미널입니다. 다른 노드 또는 토큰의 부모가 아닙니다. 구문 토큰은 키워드, 식별자, 리터럴 및 문장 부호로 구성됩니다.
 
 효율성 향상을 위해 <xref:Microsoft.CodeAnalysis.SyntaxToken> 형식은 CLR 값 형식입니다. 따라서 구문 노드와 달리 표시되는 토큰의 종류에 따라 의미가 있는 속성을 조합하여 모든 종류의 토큰에 대해 하나의 구문만 있습니다.
 
@@ -65,13 +65,13 @@ ms.locfileid: "33353301"
 
 각 노드, 토큰 또는 기타 정보는 원본 텍스트 내의 해당 위치와 구성된 문자 수를 알고 있습니다. 텍스트 위치는 0부터 시작하는 `char` 인덱스인 32비트 정수로 표현됩니다. <xref:Microsoft.CodeAnalysis.Text.TextSpan> 개체는 시작 위치 및 문자 수이며 정수로 표현됩니다. <xref:Microsoft.CodeAnalysis.Text.TextSpan>의 길이가 0인 경우 두 문자 사이의 위치를 나타냅니다.
 
-각 노드에는 <xref:Microsoft.CodeAnalysis.SyntaxNode.Span*> 및 <xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan*>이라는 두 가지 <xref:Microsoft.CodeAnalysis.Text.TextSpan> 속성이 있습니다. 
+각 노드에는 <xref:Microsoft.CodeAnalysis.SyntaxNode.Span*> 및 <xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan*>이라는 두 가지 <xref:Microsoft.CodeAnalysis.Text.TextSpan> 속성이 있습니다.
 
 <xref:Microsoft.CodeAnalysis.SyntaxNode.Span*> 속성은 노드의 하위 트리에 있는 첫 번째 토큰의 시작부터 마지막 토큰의 끝에 이르는 텍스트 범위입니다. 이 범위는 모든 선행 또는 후행 기타 정보를 포함하지 않습니다.
 
 <xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan*> 속성은 노드의 일반 범위와 모든 선행 또는 후행 기타 정보의 범위를 포함하는 텍스트 범위입니다.
 
-예: 
+예:
 
 ``` csharp
       if (x > 3)
@@ -87,7 +87,7 @@ ms.locfileid: "33353301"
 
 각 노드, 토큰 또는 기타 정보에는 표시되는 정확한 구문 요소를 식별하는 <xref:System.Int32?displayProperty=nameWithType> 형식의 <xref:Microsoft.CodeAnalysis.SyntaxNode.RawKind?displayProperty=nameWithType> 속성이 있습니다. 이 값은 언어별 열거형으로 캐스팅될 수 있습니다. 각 언어, C# 또는 VB에는 문법에서 가능한 모든 노드, 토큰 및 기타 정보 요소를 나열하는 단일 `SyntaxKind` 열거형(각각 <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind?displayProperty=nameWithType> 및 <xref:Microsoft.CodeAnalysis.VisualBasic.SyntaxKind?displayProperty=nameWithType>)이 있습니다. <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind*?displayProperty=nameWithType> 또는 <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.Kind*?displayProperty=nameWithType> 확장 메서드에 액세스하여 이 변환을 자동으로 수행할 수 있습니다.
 
-<xref:Microsoft.CodeAnalysis.SyntaxToken.RawKind> 속성은 동일한 노드 클래스를 공유하는 구문 노드 형식의 쉬운 명확성을 허용합니다. 토큰 및 기타 정보의 경우 이 속성은 요소의 한 형식을 다른 형식에서 구분하는 유일한 방법입니다. 
+<xref:Microsoft.CodeAnalysis.SyntaxToken.RawKind> 속성은 동일한 노드 클래스를 공유하는 구문 노드 형식의 쉬운 명확성을 허용합니다. 토큰 및 기타 정보의 경우 이 속성은 요소의 한 형식을 다른 형식에서 구분하는 유일한 방법입니다.
 
 예를 들어 단일 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax> 클래스에는 자식으로 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Left>, <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.OperatorToken> 및 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Right>가 있습니다. <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind*> 속성은 구문 노드의 <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.AddExpression>, <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.SubtractExpression> 또는 <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.MultiplyExpression> 종류인지를 구분합니다.
 

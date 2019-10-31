@@ -6,12 +6,12 @@ ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
 author: natke
 ms.author: nakersha
-ms.openlocfilehash: 8ae966330ca85722c72c92e26363d99c7d9de3e7
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 399e9ce3288d53049e968688736f5b953d7e5b80
+ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698645"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72799080"
 ---
 # <a name="tutorial-generate-an-mlnet-image-classification-model-from-a-pre-trained-tensorflow-model"></a>자습서: 미리 학습된 TensorFlow 모델에서 ML.NET 이미지 분류 모델 생성
 
@@ -39,13 +39,13 @@ TensorFlow 모델은 이미지를 천 개 범주로 분류하도록 학습되었
 
 ## <a name="prerequisites"></a>전제 조건
 
-* “.NET Core 플랫폼 간 개발” 워크로드가 설치된 [Visual Studio 2017 15.6 이상](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017).
+* “.NET Core 플랫폼 간 개발” 워크로드가 설치된 [Visual Studio 2017 버전 15.6 이상](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)
 
 * Microsoft.ML 1.3.1 Nuget 패키지
 * Microsoft.ML.ImageAnalytics 1.3.1 Nuget 패키지
 * Microsoft.ML.TensorFlow 1.3.1 Nuget 패키지
 
-* [자습서 자산 디렉터리 .ZIP 파일](https://download.microsoft.com/download/0/E/5/0E5E0136-21CE-4C66-AC18-9917DED8A4AD/image-classifier-assets.zip)
+* [자습서 자산 디렉터리 .ZIP 파일](https://github.com/dotnet/samples/blob/master/machine-learning/tutorials/TransferLearningTF/image-classifier-assets.zip)
 
 * [InceptionV1 기계 학습 모델](https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip)
 
@@ -137,7 +137,7 @@ toaster2.png    appliance
 
 ### <a name="download-assets"></a>자산 다운로드
 
-1. [프로젝트 자산 디렉터리 zip 파일](https://download.microsoft.com/download/0/E/5/0E5E0136-21CE-4C66-AC18-9917DED8A4AD/image-classifier-assets.zip)을 다운로드하고 압축을 풉니다.
+1. [프로젝트 자산 디렉터리 zip 파일](https://github.com/dotnet/samples/blob/master/machine-learning/tutorials/TransferLearningTF/image-classifier-assets.zip)을 다운로드하고 압축을 풉니다.
 
 1. `assets` 디렉터리를 *TransferLearningTF* 프로젝트 디렉터리에 복사합니다. 이 디렉터리 및 해당 하위 디렉터리에는 이 자습서에 필요한 데이터 및 지원 파일이 포함되어 있습니다(다음 단계에서 다운로드 및 추가하는 Inception 모델 제외).
 
@@ -246,7 +246,7 @@ toaster2.png    appliance
 
     [!code-csharp[PredictSingle](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#PredictSingle)]
 
-    예측을 가져오려면 [Predict()](xref:Microsoft.ML.PredictionEngine%602.Predict%2A) 메서드를 사용합니다. [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602)은 데이터의 단일 인스턴스에 대한 예측을 수행할 수 있는 편리한 API입니다. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)은 스레드로부터 안전하지 않습니다. 단일 스레드 또는 프로토타입 환경에서 사용할 수 있습니다. 프로덕션 환경에서 성능 및 스레드 보안을 개선하려면 `PredictionEnginePool` 서비스를 사용합니다. 이 서비스는 애플리케이션 전체에서 사용할 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) 개체의 [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601)을 만듭니다. [ASP.NET Core 웹 API에서 `PredictionEnginePool`을 사용하는 방법](https://docs.microsoft.com/en-us/dotnet/machine-learning/how-to-guides/serve-model-web-api-ml-net#register-predictionenginepool-for-use-in-the-application)에 대한 자세한 내용은 이 가이드를 참조하세요.
+    예측을 가져오려면 [Predict()](xref:Microsoft.ML.PredictionEngine%602.Predict%2A) 메서드를 사용합니다. [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602)은 데이터의 단일 인스턴스에 대한 예측을 수행할 수 있는 편리한 API입니다. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)은 스레드로부터 안전하지 않습니다. 단일 스레드 또는 프로토타입 환경에서 사용할 수 있습니다. 프로덕션 환경에서 성능 및 스레드 보안을 개선하려면 `PredictionEnginePool` 서비스를 사용합니다. 이 서비스는 애플리케이션 전체에서 사용할 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) 개체의 [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601)을 만듭니다. [ASP.NET Core Web API에서 `PredictionEnginePool`을 사용하는 방법](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application)에 대한 이 가이드를 참조하세요.
 
     > [!NOTE]
     > `PredictionEnginePool` 서비스 확장은 현재 미리 보기 상태입니다.
@@ -282,7 +282,7 @@ ML.NET 모델 파이프라인은 추정기의 체인입니다. 파이프라인 �
 
     [!code-csharp[ScoreTensorFlowModel](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#ScoreTensorFlowModel)]
 
-    파이프라인의 이 단계는 TensorFlow 모델을 메모리로 로드한 다음, TensorFlow 모델 네트워크를 통해 픽셀 값의 벡터를 처리합니다. 심층 학습 모델에 입력을 적용하고 모델을 사용하여 출력을 생성하는 것을 **점수 매기기**라고 합니다. 모델을 전체적으로 사용하는 경우 점수를 매기기 위해 유추 또는 예측을 수행됩니다. 
+    파이프라인의 이 단계는 TensorFlow 모델을 메모리로 로드한 다음, TensorFlow 모델 네트워크를 통해 픽셀 값의 벡터를 처리합니다. 심층 학습 모델에 입력을 적용하고 모델을 사용하여 출력을 생성하는 것을 **점수 매기기**라고 합니다. 모델을 전체적으로 사용하는 경우 점수를 매기기 위해 유추 또는 예측을 수행됩니다.
 
     이 경우에는 유추를 수행하는 계층인 마지막 계층을 제외한 모든 TensorFlow 모델을 사용합니다. 마지막에서 두 번째 계층의 출력은 `softmax_2_preactivation`이 레이블로 지정됩니다. 이 계층의 출력은 사실상 원래 입력 이미지의 특징을 나타내는 기능 벡터입니다.
 
@@ -323,7 +323,7 @@ ML.NET 모델 파이프라인은 추정기의 체인입니다. 파이프라인 �
     [!code-csharp[LoadAndTransformTestData](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#LoadAndTransformTestData "Load and transform test data")]
 
     모델을 평가하는 데 사용할 수 있는 몇 가지 샘플 이미지가 있습니다. 학습 데이터와 마찬가지로, 이러한 이미지도 모델에서 변환할 수 있도록 `IDataView`로 로드해야 합니다.
-   
+
 1. `GenerateModel()` 메서드에 다음 코드를 추가하여 모델을 평가합니다.
 
     [!code-csharp[Evaluate](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#Evaluate)]

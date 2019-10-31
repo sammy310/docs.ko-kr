@@ -2,12 +2,12 @@
 title: Ocelot을 사용하여 API 게이트웨이 구현
 description: Ocelot을 사용하여 API 게이트웨이를 구현하는 방법과 컨테이너 기반 환경에서 Ocelot을 사용하는 방법을 알아봅니다.
 ms.date: 10/02/2018
-ms.openlocfilehash: 2a1c7b0f4baa979864ac32d555f65397531884b8
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: cb452c330712ecf536cdf09f41fdbf828a4e9314
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68676190"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771178"
 ---
 # <a name="implement-api-gateways-with-ocelot"></a>Ocelot을 사용하여 API 게이트웨이 구현
 
@@ -390,7 +390,7 @@ API 게이트웨이를 여러 API 게이트웨이로 분할하면 마이크로 �
 
 더 확대하면 다음 이미지의 "쇼핑" 비즈니스 영역에서 API 게이트웨이에서 수집기 서비스를 사용하는 경우 클라이언트 앱과 마이크로 서비스 간에 전송량이 감소되었음을 확인할 수 있습니다.
 
-![수집기 서비스를 보여주는 eShopOnContainers 아키텍처 확대는 최종 클라이언트에서 전송량을 줄이기 위해 여러 마이크로 서비스의 응답을 "조인"하여 응답을 "어셈블"합니다.](./media/image38.png)
+![최종 클라이언트에서 전송량을 줄이기 위해 여러 마이크로 서비스의 응답을 “조인”하여 응답을 “어셈블”하는 집계 서비스를 보여 주는 eShopOnContainers 아키텍처 확대](./media/image38.png)
 
 **그림 6-38** 집계 서비스의 비전 확대
 

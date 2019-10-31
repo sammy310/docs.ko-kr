@@ -3,12 +3,12 @@ title: 안전하고 효율적인 C# 코드 작성
 description: 최근 C# 언어의 향상된 기능을 통해 성능이 이전에는 안전하지 않은 코드와 연결되어 있는 안정형 안전 코드를 작성할 수 있습니다.
 ms.date: 10/23/2018
 ms.custom: mvc
-ms.openlocfilehash: 73ad7a84d2ad47f0e0242825d250247ffb39928e
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 89a0bcf28c3c398865082e120ca9c16fe2c00651
+ms.sourcegitcommit: 9b2ef64c4fc10a4a10f28a223d60d17d7d249ee8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832937"
+ms.lasthandoff: 10/26/2019
+ms.locfileid: "72960837"
 ---
 # <a name="write-safe-and-efficient-c-code"></a>안전하고 효율적인 C# 코드 작성
 
@@ -21,9 +21,10 @@ C#의 새 기능을 사용하면 향상된 성능으로 안정형의 안전 코�
 이 문서에서는 다음과 같은 리소스 관리 기술에 중점을 둡니다.
 
 - 형식이 **변경할 수 없음** 상태이며 [`in`](language-reference/keywords/in-parameter-modifier.md) 매개 변수를 사용하는 경우 컴파일러가 복사본을 저장할 수 있음을 나타내도록 [`readonly struct`](language-reference/keywords/readonly.md#readonly-struct-example)를 선언합니다.
+- 형식을 변경할 수 없는 경우, `struct` 멤버를 `readonly`로 선언하여 멤버가 상태를 수정하지 않음을 나타냅니다.
 - 반환 값이 <xref:System.IntPtr.Size?displayProperty=nameWithType>보다 큰 `struct`이고 스토리지 수명이 값을 반환하는 메서드보다 클 경우 [`ref readonly`](language-reference/keywords/ref.md#reference-return-values) 반환을 사용합니다.
 - 성능 상의 이유로 `readonly struct`의 크기가 <xref:System.IntPtr.Size?displayProperty=nameWithType>보다 큰 경우 `in` 매개 변수로 전달해야 합니다.
-- 성능에 부정적인 영향을 주거나 모호한 동작으로 이어질 수 있으므로 `readonly` 한정자로 선언되지 않는 한, `struct`를 `in` 매개 변수로 전달해서는 안 됩니다.
+- `readonly` 한정자로 선언되었거나 메서드가 구조체의 `readonly` 멤버만 호출하는 경우를 제외하고 `struct`를 `in` 매개 변수로 전달하면 안 됩니다. 이 지침을 위반하면 성능이 저하되고 모호한 동작이 발생할 수 있습니다.
 - 메모리를 바이트의 시퀀스로 사용하도록[`ref struct`](language-reference/keywords/ref.md#ref-struct-types) 또는 `readonly ref struct`(예: <xref:System.Span%601> 또는 <xref:System.ReadOnlySpan%601>)를 사용합니다.
 
 이러한 기술을 통해 **참조** 및 **값**에 관한 상충적인 두 가지 목표 간에 균형을 유지할 수 있습니다. [참조 형식](programming-guide/types/index.md#reference-types)인 변수는 메모리의 위치에 대한 참조를 유지합니다. [값 형식](programming-guide/types/index.md#value-types)인 변수는 직접 해당 값을 포함합니다. 이러한 차이는 메모리 리소스를 관리하는 데 중요한 차이점을 강조합니다. **값 형식**은 일반적으로 메서드에 전달되거나 메서드에서 반환된 경우 복사됩니다. 이 동작에는 값 형식의 멤버를 호출하는 경우 `this`의 값을 복사하는 동작이 포함됩니다. 복사의 비용은 형식의 크기와 관련이 있습니다. **참조 형식**은 관리형 힙에 할당됩니다. 각 새 개체는 새로 할당해야 하고 이후에 회수되어야 합니다. 이러한 두 작업은 모두 시간이 걸립니다. 참조 형식이 메서드에 인수로 전달되거나 메서드에서 반환되면 참조가 복사됩니다.
@@ -67,6 +68,51 @@ readonly public struct ReadonlyPoint3D
 ```
 
 디자인 의도가 변경할 수 없는 값 형식을 만드는 것이라면 이 권장 사항을 따릅니다. 성능 개선 사항은 추가적인 혜택입니다. `readonly struct`는 디자인 의도를 명확하게 표현합니다.
+
+## <a name="declare-readonly-members-when-a-struct-cant-be-immutable"></a>구조체를 변경할 수 없는 경우 readonly 멤버 선언
+
+C# 8.0 이상에서는 구조체 형식이 변경 가능한 경우 `readonly`로 변경되지 않는 멤버를 선언해야 합니다. 예를 들어 다음은 3D 요소 구조의 변경 가능한 변형입니다.
+
+```csharp
+public struct Point3D
+{
+    public Point3D(double x, double y, double z)
+    {
+        this.X = x;
+        this.Y = y;
+        this.Z = z;
+    }
+
+    private double _x;
+    public double X 
+    { 
+        readonly get { return _x;}; 
+        set { _x = value; }
+    }
+    
+    private double _y;
+    public double Y 
+    { 
+        readonly get { return _y;}; 
+        set { _y = value; }
+    }
+
+    private double _z;
+    public double Z 
+    { 
+        readonly get { return _z;}; 
+        set { _z = value; }
+    }
+
+    public readonly double Distance => Math.Sqrt(X * X + Y * Y + Z * Z);
+
+    public readonly override string ToString() => $"{X, Y, Z }";
+}
+```
+
+위의 샘플에서는 `readonly` 한정자를 적용할 수 있는 여러 위치(메서드, 속성, 속성 접근자)를 보여 줍니다. 자동 구현 속성을 사용하는 경우, 컴파일러에서 읽기/쓰기 속성의 `get` 접근자에 `readonly` 한정자를 추가합니다. 컴파일러는 `get` 접근자만 있는 속성의 자동 구현 속성 선언에 `readonly` 한정자를 추가합니다.
+
+상태를 변경하지 않는 멤버에 `readonly` 한정자를 추가하면 두 가지 관련 혜택이 있습니다. 첫째, 컴파일러에서 의도를 적용합니다. 해당 멤버는 구조체 상태를 변경할 수 없으며, `readonly`로 표시되지 않은 멤버에 액세스할 수도 없습니다. 둘째, 컴파일러에서 `readonly` 멤버에 액세스할 때 `in` 매개 변수의 방어형 복사본을 만들지 않습니다. 컴파일러는 `readonly` 멤버가 `struct`를 수정하지 않도록 하여 이 최적화를 안전하게 지원할 수 있습니다.
 
 ## <a name="use-ref-readonly-return-statements-for-large-structures-when-possible"></a>가능하면 큰 구조체에 `ref readonly return` 문 사용
 
@@ -175,7 +221,7 @@ public struct Point3D
 
 `Point3D` 구조체는 읽기 전용 구조체가 *아닙니다*. 이 메서드의 본문에는 6개의 서로 다른 속성 액세스 호출이 있습니다. 첫 번째 검사에서 이러한 액세스가 안전하다고 생각했을 것입니다. 결국 `get` 접근자는 개체의 상태를 수정하면 안됩니다. 하지만 이를 적용하는 언어 규칙이 없습니다. 일반적인 관습일 뿐입니다. 모든 형식은 내부 상태를 수정한 `get` 접근자를 구현할 수 있습니다. 일부 언어 보장 없이 컴파일러는 모든 멤버를 호출하기 전에 인수의 임시 복사본을 만들어야 합니다. 임시 스토리지가 스택에 만들어지고, 인수 값이 임시 스토리지에 복사되며, 값이 `this` 인수로 각 멤버 액세스에 대한 스택으로 복사됩니다. 다양한 상황에서 이러한 복사는 인수 형식이 `readonly struct`가 아닌 경우 값으로 전달이 읽기 전용 참조로 전달보다 더 빠를 정도로 성능을 저하시킵니다.
 
-대신 거리 계산이 변경할 수 없는 구조체인 `ReadonlyPoint3D`를 사용하는 경우 임시 개체는 필요하지 않습니다.
+대신, 거리 계산에서 변경이 불가능한 구조체인 `ReadonlyPoint3D`를 사용하는 경우에는 임시 개체가 필요하지 않습니다.
 
 [!code-csharp[readonlyInArgument](../../samples/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#ReadOnlyInArgument "Specifying a readonly in argument")]
 

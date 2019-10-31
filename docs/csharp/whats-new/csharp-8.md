@@ -2,12 +2,12 @@
 title: C# 8.0의 새로운 기능 - C# 가이드
 description: C# 8.0의 새로운 기능을 살펴봅니다.
 ms.date: 09/20/2019
-ms.openlocfilehash: 12e41a3bca981d04f7b29970eba1f737254f2b58
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: e6a2357f4405b4eb31b12a1e3faa6896a31c21a1
+ms.sourcegitcommit: 9b2ef64c4fc10a4a10f28a223d60d17d7d249ee8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72579142"
+ms.lasthandoff: 10/26/2019
+ms.locfileid: "72960825"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0의 새로운 기능
 
@@ -40,7 +40,7 @@ C#8.0은 다음 기능 및 향상된 기능을 C# 언어에 추가합니다.
 
 ## <a name="readonly-members"></a>읽기 전용 멤버
 
-구조체의 멤버에 `readonly` 한정자를 적용할 수 있습니다. 이것은 멤버가 상태를 수정하지 않음을 나타냅니다. 이것이 `readonly` 한정자를 `struct` 선언에 적용하는 것보다 더 세부적입니다.  다음과 같이 변경 가능한 구조체를 고려합니다.
+구조체의 멤버에 `readonly` 한정자를 적용할 수 있습니다. 이 한정자는 멤버가 상태를 수정하지 않음을 나타냅니다. 이것이 `readonly` 한정자를 `struct` 선언에 적용하는 것보다 더 세부적입니다.  다음과 같이 변경 가능한 구조체를 고려합니다.
 
 ```csharp
 public struct Point
@@ -61,7 +61,7 @@ public readonly override string ToString() =>
     $"({X}, {Y}) is {Distance} from the origin";
 ```
 
-`ToString`은 `readonly`로 표시되지 않은 `Distance` 속성에 액세스하므로 이전 변경은 컴파일러 경고를 생성합니다.
+`ToString`은 `readonly`로 표시되지 않은 `Distance` 속성에 액세스하므로 위와 같이 변경할 경우 컴파일러 경고가 생성됩니다.
 
 ```console
 warning CS8656: Call to non-readonly member 'Point.Distance.get' from a 'readonly' member results in an implicit copy of 'this'
@@ -73,7 +73,9 @@ warning CS8656: Call to non-readonly member 'Point.Distance.get' from a 'readonl
 public readonly double Distance => Math.Sqrt(X * X + Y * Y);
 ```
 
-`readonly` 한정자가 읽기 전용 속성에 필요합니다. 컴파일러는 `get` 접근자가 상태를 수정하지 않는다고 가정하지 않습니다. 명시적으로 `readonly`를 선언해야 합니다. 컴파일러는 `readonly` 멤버가 상태를 수정하지 않는다는 규칙을 적용합니다. 다음 메서드는 `readonly` 한정자를 제거하지 않는 한 컴파일하지 않습니다.
+읽기 전용 속성에는 `readonly` 한정자가 필요합니다. 컴파일러는 `get` 접근자가 상태를 수정하지 않는다고 가정하지 않습니다. 명시적으로 `readonly`를 선언해야 합니다. 단, 자동 구현 속성은 예외입니다. 컴파일러에서 모든 자동 구현 getter를 readonly로 처리하므로 예제의 `X` 및 `Y` 속성에는 `readonly` 한정자를 추가할 필요가 없습니다.
+
+컴파일러는 `readonly` 멤버가 상태를 수정하지 않는다는 규칙을 적용합니다. `readonly` 한정자를 제거하지 않을 경우 다음 메서드는 컴파일되지 않습니다.
 
 ```csharp
 public readonly void Translate(int xOffset, int yOffset)
@@ -83,7 +85,7 @@ public readonly void Translate(int xOffset, int yOffset)
 }
 ```
 
-이 기능을 사용하여 디자인 의도를 지정할 수 있으므로 컴파일러는 이를 적용하고 디자인 의도에 따라 최적화를 수행할 수 있습니다.
+이 기능을 사용하여 디자인 의도를 지정할 수 있으므로 컴파일러는 이를 적용하고 디자인 의도에 따라 최적화를 수행할 수 있습니다. [`readonly`](../language-reference/keywords/readonly.md#readonly-member-examples)에 대한 언어 참조 문서에서 읽기 전용 멤버를 자세히 알아볼 수 있습니다.
 
 ## <a name="default-interface-methods"></a>기본 인터페이스 메서드
 
@@ -256,7 +258,7 @@ static Quadrant GetQuadrant(Point point) => point switch
 
 이 [패턴 일치에 대한 고급 자습서](../tutorials/pattern-matching.md)에서 패턴 일치 기법을 탐색할 수 있습니다.
 
-## <a name="using-declarations"></a>using 선언
+## <a name="using-declarations"></a>Using 선언
 
 **using 선언**은 `using` 키워드 뒤에 오는 변수 선언입니다. using 선언은 선언되는 변수를 바깥쪽 범위의 끝에서 삭제하라고 컴파일러에 알립니다. 텍스트 파일을 쓰는 다음 코드를 예로 들어 보겠습니다.
 
@@ -345,13 +347,13 @@ int M()
 
 ## <a name="disposable-ref-structs"></a>삭제 가능한 ref struct
 
-`ref` 한정자와 함께 선언된 `struct`는 인터페이스를 구현할 수 없으므로 <xref:System.IDisposable>을 구현할 수 없습니다. 따라서 `ref struct`가 삭제 가능해지려면 액세스 가능한 `void Dispose()` 메서드를 가져야 합니다. 이것은 `readonly ref struct` 선언에도 적용됩니다.
+`ref` 한정자를 사용하여 선언된 `struct`는 인터페이스를 구현할 수 없으므로 <xref:System.IDisposable>을 구현할 수 없습니다. 따라서 `ref struct`가 삭제 가능해지려면 액세스 가능한 `void Dispose()` 메서드를 가져야 합니다. 이 기능은 `readonly ref struct` 선언에도 적용됩니다.
 
 ## <a name="nullable-reference-types"></a>nullable 참조 형식
 
 nullable 주석 컨텍스트에서 참조 형식의 변수는 모두 **nullable이 아닌 참조 형식**으로 간주됩니다. 변수가 null이 될 수 있음을 나타내려면 형식 이름 뒤에 `?`를 추가하여 해당 변수를 **nullable 참조 형식**으로 선언해야 합니다.
 
-nullable이 아닌 참조 형식의 경우, 로컬 변수가 선언될 때 null이 아닌 값으로 초기화되도록 컴파일러가 흐름 분석을 사용합니다. 필드는 생성 시점에 초기화되어야 합니다. 생성자(있는 경우)를 호출함으로써 또는 이니셜라이저에 의해 변수가 설정되지 않으면 컴파일러에서 경고를 생성합니다. 또한, nullable이 아닌 참조 형식은 null이 될 수 있는 값에 할당할 수 없습니다.
+nullable이 아닌 참조 형식의 경우, 로컬 변수가 선언될 때 null이 아닌 값으로 초기화되도록 컴파일러가 흐름 분석을 사용합니다. 필드는 생성 시점에 초기화되어야 합니다. 사용 가능한 생성자 호출이나 이니셜라이저를 통해 변수가 설정되지 않으면 컴파일러에서 경고를 생성합니다. 또한, nullable이 아닌 참조 형식은 null이 될 수 있는 값에 할당할 수 없습니다.
 
 nullable 참조 형식은 할당되지 않았는지 또는 null로 초기화되었는지 검사되지 않습니다. 단, nullable 참조 형식의 변수가 액세스되거나 nullable이 아닌 참조 형식에 할당되기 전에 null에 대해 검사되도록 컴파일러가 흐름 분석을 사용합니다.
 
@@ -402,7 +404,7 @@ await foreach (var number in GenerateSequence())
 
 인덱스에 대한 규칙을 사용하여 시작하겠습니다. `sequence`배열을 고려합니다. `0` 인덱스는 `sequence[0]`과 동일합니다. `^0` 인덱스는 `sequence[sequence.Length]`와 동일합니다. `sequence[^0]`은 `sequence[sequence.Length]`처럼 예외를 throw합니다. `n`이 어떤 숫자이든, 인덱스 `^n`은 `sequence.Length - n`과 동일합니다.
 
-한 범위는 어떤 범위의 *시작* 및 *끝*을 지정합니다. 범위의 시작은 포함되지만 범위의 끝은 포함되지 않으므로, ‘시작’은 범위에 포함되고 ‘끝’은 범위에 포함되지 않습니다.   `[0..sequence.Length]`가 전체 범위를 나타내는 것처럼 `[0..^0]` 범위는 전체 범위를 나타냅니다.
+한 범위는 어떤 범위의 *시작* 및 *끝*을 지정합니다. 범위의 시작은 포함되지만, 범위의 끝은 포함되지 않으므로, *시작*은 범위에 포함되고 *끝*은 범위에 포함되지 않습니다. `[0..sequence.Length]`가 전체 범위를 나타내는 것처럼 `[0..^0]` 범위는 전체 범위를 나타냅니다.
 
 몇 가지 예를 살펴보겠습니다. 다음과 같은 배열이 있습니다. 앞에서부터의 인덱스와 뒤에서부터의 인덱스가 주석으로 처리되어 있습니다.
 
@@ -429,13 +431,13 @@ Console.WriteLine($"The last word is {words[^1]}");
 // writes "dog"
 ```
 
-다음 코드는 “quick”, “brown”, “fox”라는 단어를 포함하는 하위 범위를 만듭니다. 이 하위 범위에는 `words[1]`부터 `words[3]`까지 포함되며, `words[4]` 요소는 포함되지 않습니다.
+다음 코드는 “quick”, “brown”, “fox”라는 단어를 포함하는 하위 범위를 만듭니다. 이 하위 범위에는 `words[1]`부터 `words[3]`까지 포함되며, `words[4]` 요소가 범위에 없습니다.
 
 ```csharp
 var quickBrownFox = words[1..4];
 ```
 
-다음 코드는 “lazy”와 “dog”를 포함하는 하위 범위를 만듭니다. 이 하위 범위에는 `words[^2]`과 `words[^1]`이 포함되며. 끝 인덱스 `words[^0]`는 포함되지 않습니다.
+다음 코드는 “lazy”와 “dog”를 포함하는 하위 범위를 만듭니다. 이 하위 범위에는 `words[^2]`과 `words[^1]`이 포함되며. 끝 인덱스 `words[^0]`은 포함되지 않습니다.
 
 ```csharp
 var lazyDog = words[^2..^0];
@@ -485,7 +487,7 @@ Console.WriteLine(i);  // output: 17
 
 ## <a name="unmanaged-constructed-types"></a>관리되지 않는 생성 형식
 
-C# 7.3 이전 버전에서 생성 형식(하나 이상의 형식 인수를 포함하는 형식)은 [관리되지 않는 형식](../language-reference/builtin-types/unmanaged-types.md)일 수 없습니다. C# 8.0부터는 관리되지 않는 형식의 필드만 포함된 경우 생성된 값 형식이 관리되지 않습니다.
+C# 7.3 및 이전 버전에서 생성 형식(하나 이상의 형식 인수를 포함하는 형식)은 [관리되지 않는 형식](../language-reference/builtin-types/unmanaged-types.md)일 수 없습니다. C# 8.0부터는 관리되지 않는 형식의 필드만 포함된 경우 생성된 값 형식이 관리되지 않습니다.
 
 예를 들어 다음과 같은 제네릭 `Coords<T>` 형식의 정의를 살펴보겠습니다.
 

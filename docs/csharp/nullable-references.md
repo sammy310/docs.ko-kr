@@ -2,12 +2,12 @@
 title: nullable 참조 형식
 description: 이 문서에서는 C# 8.0에 추가된 nullable 참조 형식에 대해 간략하게 설명합니다. 이 기능이 신규 및 기존의 프로젝트의 null 참조 예외에 대해 어떻게 안전성을 제공하는지 알아봅니다.
 ms.date: 02/19/2019
-ms.openlocfilehash: a108c73064b40171a58df0796d4a0b75eddebbff
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 2c2148b3ae50ce6c00e523390ea02686d9106b8b
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319059"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846755"
 ---
 # <a name="nullable-reference-types"></a>nullable 참조 형식
 
@@ -63,7 +63,7 @@ Nullable 컨텍스트를 통해 컴파일러가 참조 형식 변수를 해석�
 - `warnings`: nullable 주석 컨텍스트가 **disabled**입니다. nullable 경고 컨텍스트가 **enabled**입니다.
   - 참조 형식의 변수가 모호합니다. 모든 null 허용 여부 경고가 enabled입니다.
 - `annotations`: nullable 주석 컨텍스트가 **enabled**입니다. nullable 경고 컨텍스트가 **disabled**입니다.
-  - 참조 형식의 변수가 모호합니다. 모든 null 허용 여부 경고가 disabled입니다.
+  - 참조 형식의 변수(예: 문자열)는 null을 허용하지 않습니다. 모든 null 허용 여부 경고가 disabled입니다.
 - `disable`: nullable 주석 컨텍스트가 **disabled**입니다. nullable 경고 컨텍스트가 **disabled**입니다.
   - 참조 형식의 변수는 이전 버전의 C#과 마찬가지로 모호할 수 있습니다. 모든 null 허용 여부 경고가 disabled입니다.
 

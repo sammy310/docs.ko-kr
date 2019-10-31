@@ -2,12 +2,12 @@
 title: Docker란?
 description: Docker에 대해 좀 더 깊이 생각해 보세요. 여기서 간단한 비유가 도움이 될 수 있습니다.
 ms.date: 02/15/2019
-ms.openlocfilehash: 7747c4985af27be0a073fad2f22622f697f4ce27
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 7fd3c599afda2d59e0d56756bd61495f2d0370a0
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673430"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72770712"
 ---
 # <a name="what-is-docker"></a>Docker란?
 
@@ -35,7 +35,7 @@ Docker 이미지 컨테이너는 Linux 및 Windows에서 기본적으로 실행�
 
 그림 1-3은 VM과 Docker 컨테이너 비교를 보여 줍니다.
 
-![VM의 경우 기본적으로 호스트 서버에 세 가지 기본 계층인 인프라, 호스트 운영 체제 및 하이퍼바이저가 있고, 이들 계층 위에서 각 VM에는 고유한 OS 및 모든 필요한 라이브러리가 포함됩니다. 반면, Docker의 경우 호스트 서버에는 인프라와 OS만 있고, 그 위에는 컨테이너를 격리 상태로 유지하지만 기본 OS 서비스를 공유하는 컨테이너 엔진이 있습니다.](./media/image3.png)
+![VM의 경우 기본적으로 호스트 서버에 세 가지 기본 계층인 인프라, 호스트 운영 체제 및 하이퍼바이저가 있고, 이들 계층 위에서 각 VM에는 고유한 OS 및 모든 필요한 라이브러리가 포함됩니다. 반면에 Docker의 경우 호스트 서버에는 인프라와 OS만 있고, 그 위에 컨테이너를 격리 상태로 유지하지만, 기본 OS 서비스를 공유하는 컨테이너 엔진이 있습니다.](./media/image3.png)
 
 **그림 1-3**. 기존의 가상 머신과 Docker 컨테이너 비교
 

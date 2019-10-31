@@ -2,12 +2,12 @@
 title: Polly를 통해 지수 백오프를 사용하여 HTTP 호출 다시 시도 구현
 description: Polly와 HttpClientFactory를 사용하여 HTTP 오류를 처리하는 방법을 알아봅니다.
 ms.date: 01/07/2019
-ms.openlocfilehash: 82b3b0d37815e2f16ed3be1b1e7de37019b08ee8
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 9988f70513959c099c771fcc0221bba7e2e70200
+ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318403"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798822"
 ---
 # <a name="implement-http-call-retries-with-exponential-backoff-with-httpclientfactory-and-polly-policies"></a>HttpClientFactory 및 Polly 정책을 통해 지수 백오프를 사용하여 HTTP 호출 다시 시도 구현
 
@@ -53,17 +53,20 @@ Polly를 사용하면 HTTP 예외(예: 오류 로깅)가 발생하는 경우 수
 
 ## <a name="add-a-jitter-strategy-to-the-retry-policy"></a>재시도 정책에 지터 전략 추가
 
-일반 재시도 정책은 동시성, 확장성 및 경합이 높은 경우 시스템에 영향을 미칠 수 있습니다. 부분 작동 중단 상황에서 여러 클라이언트로부터 유사한 재시도가 대규모로 발생하는 문제를 해결하기 위해 재시도 알고리즘/정책에 지터 전략을 추가하면 좋습니다. 이렇게 하면 지수 백오프에 임의성을 추가하여 엔드투엔드 시스템의 전체 성능을 높일 수 있습니다. 이렇게 문제가 발생했을 때 급증 문제를 분산시킵니다. 일반 Polly 정책을 사용하는 경우 지터를 구현하는 코드는 다음 예제와 같을 수 있습니다.
+일반 재시도 정책은 동시성, 확장성 및 경합이 높은 경우 시스템에 영향을 미칠 수 있습니다. 부분 작동 중단 상황에서 여러 클라이언트로부터 유사한 재시도가 대규모로 발생하는 문제를 해결하기 위해 재시도 알고리즘/정책에 지터 전략을 추가하면 좋습니다. 이렇게 하면 지수 백오프에 임의성을 추가하여 엔드투엔드 시스템의 전체 성능을 높일 수 있습니다. 이렇게 문제가 발생했을 때 급증 문제를 분산시킵니다. 원칙은 다음 예제에서 확인할 수 있습니다.
 
 ```csharp
 Random jitterer = new Random(); 
-Policy
-  .Handle<HttpResponseException>() // etc
-  .WaitAndRetry(5,    // exponential back-off plus some jitter
-      retryAttempt => TimeSpan.FromSeconds(Math.Pow(2, retryAttempt))  
-                    + TimeSpan.FromMilliseconds(jitterer.Next(0, 100)) 
-  );
+var retryWithJitterPolicy = HttpPolicyExtensions
+    .HandleTransientHttpError()
+    .OrResult(msg => msg.StatusCode == System.Net.HttpStatusCode.NotFound)
+    .WaitAndRetryAsync(6,    // exponential back-off plus some jitter
+        retryAttempt => TimeSpan.FromSeconds(Math.Pow(2, retryAttempt))  
+                      + TimeSpan.FromMilliseconds(jitterer.Next(0, 100)) 
+    );
 ```
+
+Polly는 프로젝트 웹 사이트를 통해 프로덕션 준비가 완료된 지터 알고리즘을 제공합니다.
 
 ## <a name="additional-resources"></a>추가 자료
 
@@ -75,6 +78,9 @@ Policy
 
 - **Polly(.NET 복원력 및 transient-fault-handling 라이브러리)**  
   <https://github.com/App-vNext/Polly>
+
+- **Polly: 지터를 사용하여 다시 시도**  
+  <https://github.com/App-vNext/Polly/wiki/Retry-with-jitter>
 
 - **Marc Brooker. 지터: 임의성으로 작업을 더 효율적인 만들기**  
   <https://brooker.co.za/blog/2015/03/21/backoff.html>

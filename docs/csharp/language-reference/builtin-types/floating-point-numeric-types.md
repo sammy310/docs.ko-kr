@@ -1,7 +1,7 @@
 ---
 title: 부동 소수점 숫자 형식 - C# 참조
 description: 기본 제공 C# 부동 소수점 형식의 개요
-ms.date: 10/18/2019
+ms.date: 10/22/2019
 f1_keywords:
 - float
 - float_CSharpKeyword
@@ -18,12 +18,12 @@ helpviewer_keywords:
 - floating-point numbers [C#], float keyword
 - double data type [C#]
 - decimal keyword [C#]
-ms.openlocfilehash: fa6cbb869d90113414cc6f8ffe231386c3596b1d
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 4d71f7eea3f574e483dc4250f5c87e1ffd551f2f
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72579377"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771898"
 ---
 # <a name="floating-point-numeric-types-c-reference"></a>부동 소수점 숫자 형식(C# 참조)
 
@@ -105,13 +105,7 @@ Console.WriteLine(m);  // output: 1500000
 
 ## <a name="conversions"></a>변환
 
-`float` 값의 범위는 `double`의 적절한 하위 집합이고 `float`에서 `double`까지의 정밀도 손실이 없으므로 `float`에서 `double`로의 암시적 변환(*확대 변환*이라고 함)이 있습니다.
-
-암시적 변환이 소스 유형에서 대상 유형으로 정의되지 않은 경우 명시적 캐스트를 사용하여 하나의 부동 소수점 형식을 다른 부동 소수점 형식으로 변환해야 합니다. 이를 *축소 변환*이라고 합니다. 변환이 데이터 손실을 초래할 수 있기 때문에 명시적인 사례가 필요합니다. `decimal` 유형은 `float` 또는 `double`보다 더 높은 정밀도를 가지므로 다른 부동 소수점 형식과 `decimal` 형식 간의 암시적 변환은 없습니다.
-
-암시적 숫자 변환에 대한 자세한 내용은 [암시적 숫자 변환 표](../keywords/implicit-numeric-conversions-table.md)를 참조하세요.
-
-명시적 숫자 변환에 대한 자세한 내용은 [명시적 숫자 변환 표](../keywords/explicit-numeric-conversions-table.md)를 참조하세요.
+부동 소수점 숫자 형식 간의 암시적 변환은 `float`에서 `double`로의 암시적 변환 하나뿐입니다. 그러나 [명시적 캐스트](../operators/type-testing-and-cast.md#cast-operator-)를 사용하여 부동 소수점 형식을 다른 부동 소수점 형식으로 변환할 수 있습니다. 자세한 내용은 [기본 제공 숫자 변환](numeric-conversions.md)을 참조하세요.
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 
@@ -124,10 +118,9 @@ Console.WriteLine(m);  // output: 1500000
 ## <a name="see-also"></a>참고 항목
 
 - [C# 참조](../index.md)
-- [정수 형식](integral-numeric-types.md)
 - [기본 제공 형식 표](../keywords/built-in-types-table.md)
-- [.NET의 숫자](../../../standard/numerics.md)
-- [캐스팅 및 형식 변환](../../programming-guide/types/casting-and-type-conversions.md)
-- <xref:System.Numerics.Complex?displayProperty=nameWithType>
+- [정수 형식](integral-numeric-types.md)
 - [숫자 결과 형식 지정 표](../keywords/formatting-numeric-results-table.md)
 - [표준 숫자 형식 문자열](../../../standard/base-types/standard-numeric-format-strings.md)
+- [.NET의 숫자](../../../standard/numerics.md)
+- <xref:System.Numerics.Complex?displayProperty=nameWithType>

@@ -2,12 +2,12 @@
 title: Web API를 사용하여 마이크로 서비스 애플리케이션 계층 구현
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | Web API 애플리케이션 계층에서 종속성 주입 및 중재자 패턴과 해당 구현 정보를 이해합니다.
 ms.date: 10/08/2018
-ms.openlocfilehash: df304ffbe2406323e3dcf42b9eb989b02a62b28b
-ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
+ms.openlocfilehash: 38c0bdb32666ab727c573d466d3e30d739bdd3b3
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72249741"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771110"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Web API를 사용하여 마이크로 서비스 에플리케이션 계층 구현
 
@@ -181,7 +181,7 @@ Autofac에는 [이름 규칙에 따라 어셈블리 및 등록 형식 검사](ht
 
 그림 7-24에서 볼 수 있듯이, 패턴은 클라이언트 쪽의 명령을 수락하고, 이 명령을 도메인 모델 규칙에 따라 처리하고, 마지막으로 트랜잭션으로 상태를 유지하는 것을 기반으로 합니다.
 
-![CQRS의 쓰기 쪽에 대한 상위 수준 보기: UI 앱은 도메인 모델 및 데이터베이스를 업데이트할 인프라에 따라 달라지는 CommandHandler를 가져오는 API를 통해 명령을 보냅니다.](./media/image21.png)
+![CQRS의 쓰기 쪽에 대한 상위 수준 보기: UI 앱이 API를 통해 명령을 보내고, 이 명령은 도메인 모델 및 인프라를 사용하여 데이터베이스를 업데이트하는 CommandHandler로 전달됩니다.](./media/image21.png)
 
 **그림 7-24**. CQRS 패턴의 명령 또는 "트랜잭션 쪽"에 대한 개괄적인 보기
 

@@ -5,12 +5,12 @@ ms.date: 09/11/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: 42f8d51f2547cd6f3240a05420b2da10b7cf52e3
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: b85d77900c5d9227ecc6fe81b8a8d68171dd9ef5
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72179388"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774516"
 ---
 # <a name="deploy-a-model-in-an-aspnet-core-web-api"></a>ASP.NET Core Web API에 모델 배포
 
@@ -21,7 +21,7 @@ ASP.NET Core Web API를 사용하여 웹에서 미리 학습된 ML.NET 기계 �
 
 ## <a name="prerequisites"></a>전제 조건
 
-- “.NET Core 플랫폼 간 개발” 워크로드가 설치된 [Visual Studio 2017 15.6 이상](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017).
+- “.NET Core 플랫폼 간 개발” 워크로드가 설치된 [Visual Studio 2017 버전 15.6 이상](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)
 - PowerShell.
 - 미리 학습된 모델입니다. [ML.NET 감정 분석 자습서](../tutorials/sentiment-analysis.md)를 사용하여 자체 모델을 빌드하거나 이 [미리 학습된 감정 분석 기계 학습 모델](https://github.com/dotnet/samples/blob/master/machine-learning/models/sentimentanalysis/sentiment_model.zip) 다운로드
 
@@ -62,9 +62,9 @@ ASP.NET Core Web API를 사용하여 웹에서 미리 학습된 ML.NET 기계 �
     ```csharp
     using Microsoft.ML.Data;
     ```
-    
+
     기존 클래스 정의를 제거하고 다음 코드를 **SentimentData.cs** 파일에 추가합니다.
-    
+
     ```csharp
     public class SentimentData
     {
@@ -83,9 +83,9 @@ ASP.NET Core Web API를 사용하여 웹에서 미리 학습된 ML.NET 기계 �
     ```csharp
     using Microsoft.ML.Data;
     ```
-    
+
     기존 클래스 정의를 제거하고 다음 코드를 *SentimentPrediction.cs* 파일에 추가합니다.
-    
+
     ```csharp
     public class SentimentPrediction : SentimentData
     {
@@ -99,7 +99,7 @@ ASP.NET Core Web API를 사용하여 웹에서 미리 학습된 ML.NET 기계 �
     }
     ```
 
-    `SentimentPrediction`는 `SentimentData`에서 상속됩니다. 이렇게 하면 모델에서 생성된 출력과 함께 `SentimentText` 속성의 원래 데이터를 더 쉽게 볼 수 있습니다. 
+    `SentimentPrediction`는 `SentimentData`에서 상속됩니다. 이렇게 하면 모델에서 생성된 출력과 함께 `SentimentText` 속성의 원래 데이터를 더 쉽게 볼 수 있습니다.
 
 ## <a name="register-predictionenginepool-for-use-in-the-application"></a>애플리케이션에서 사용하기 위해 PredictionEnginePool 등록
 
@@ -130,22 +130,22 @@ ASP.NET Core Web API를 사용하여 웹에서 미리 학습된 ML.NET 기계 �
     }
     ```
 
-개략적으로 이 코드는 애플리케이션을 수동으로 초기화하지 않고도 애플리케이션에서 요청할 때 나중에 사용할 수 있도록 자동으로 개체 및 서비스를 초기화합니다. 
+개략적으로 이 코드는 애플리케이션을 수동으로 초기화하지 않고도 애플리케이션에서 요청할 때 나중에 사용할 수 있도록 자동으로 개체 및 서비스를 초기화합니다.
 
-기계 학습 모델은 정적이지 않습니다. 새 학습 데이터를 사용할 수 있게 되면 모델을 다시 학습하고 다시 배포합니다. 최신 버전의 모델을 애플리케이션으로 가져오는 한 가지 방법은 전체 애플리케이션을 다시 배포하는 것입니다. 그러나 이 경우 애플리케이션 가동 중지 시간이 발생합니다. `PredictionEnginePool` 서비스는 애플리케이션을 가동 중지하지 않으면서 업데이트된 모델을 다시 로드하는 메커니즘을 제공합니다. 
+기계 학습 모델은 정적이지 않습니다. 새 학습 데이터를 사용할 수 있게 되면 모델을 다시 학습하고 다시 배포합니다. 최신 버전의 모델을 애플리케이션으로 가져오는 한 가지 방법은 전체 애플리케이션을 다시 배포하는 것입니다. 그러나 이 경우 애플리케이션 가동 중지 시간이 발생합니다. `PredictionEnginePool` 서비스는 애플리케이션을 가동 중지하지 않으면서 업데이트된 모델을 다시 로드하는 메커니즘을 제공합니다.
 
 `watchForChanges` 매개 변수를 `true`로 설정하면 `PredictionEnginePool`은 파일 시스템 변경 알림을 수신 대기하고 파일이 변경될 때 이벤트를 발생시키는 [`FileSystemWatcher`](xref:System.IO.FileSystemWatcher)를 시작합니다. 그러면 `PredictionEnginePool`에서 모델을 자동으로 다시 로드하도록 지정할 수 있는 메시지가 표시됩니다.
 
-모델은 `modelName` 매개 변수로 식별되므로 변경 시, 애플리케이션당 두 개 이상의 모델이 다시 로드될 수 있습니다. 
+모델은 `modelName` 매개 변수로 식별되므로 변경 시, 애플리케이션당 두 개 이상의 모델이 다시 로드될 수 있습니다.
 
 > [!TIP]
 > 또는 원격으로 저장된 모델을 사용하는 경우 `FromUri` 메서드를 사용할 수 있습니다. `FromUri`는 파일 변경 이벤트를 감시하지 않고, 원격 위치에서 변경 내용을 폴링합니다. 폴링 간격의 기본값은 5분입니다. 애플리케이션의 요구 사항에 따라 폴링 간격을 늘리거나 줄일 수 있습니다. 아래 코드 샘플에서 `PredictionEnginePool`은 1분마다 지정된 URI에 저장된 모델을 폴링합니다.
->    
+>
 >```csharp
 >builder.Services.AddPredictionEnginePool<SentimentData, SentimentPrediction>()
 >   .FromUri(
->       modelName: "SentimentAnalysisModel", 
->       uri:"https://github.com/dotnet/samples/raw/master/machine-learning/models/sentimentanalysis/sentiment_model.zip", 
+>       modelName: "SentimentAnalysisModel",
+>       uri:"https://github.com/dotnet/samples/raw/master/machine-learning/models/sentimentanalysis/sentiment_model.zip",
 >       period: TimeSpan.FromMinutes(1));
 >```
 
@@ -165,7 +165,7 @@ ASP.NET Core Web API를 사용하여 웹에서 미리 학습된 ML.NET 기계 �
     ```
 
     기존 클래스 정의를 제거하고 다음 코드를 *PredictController.cs* 파일에 추가합니다.
-    
+
     ```csharp
     public class PredictController : ControllerBase
     {
@@ -207,7 +207,7 @@ ASP.NET Core Web API를 사용하여 웹에서 미리 학습된 ML.NET 기계 �
     ```
 
     성공하면 출력이 아래 텍스트와 같이 표시됩니다.
-    
+
     ```powershell
     Negative
     ```

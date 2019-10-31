@@ -110,15 +110,15 @@
             - name: 정규식 예제
               href: regular-expression-examples.md
               items:
-                - name: '예제: HREF 스캐닝'
+                - name: '예: HREF 스캐닝'
                   href: regular-expression-example-scanning-for-hrefs.md
-                - name: '예제: 날짜 형식 변경'
+                - name: '예: 날짜 형식 변경'
                   href: regular-expression-example-changing-date-formats.md
                 - name: '방법: URL에서 프로토콜 및 포트 번호 추출'
                   href: how-to-extract-a-protocol-and-port-number-from-a-url.md
                 - name: '방법: 문자열에서 유효하지 않은 문자 제거'
                   href: how-to-strip-invalid-characters-from-a-string.md
-                - name: '방법: 문자열이 올바른 이메일 형식인지 확인'
+                - name: '방법: 문자열이 올바른 전자 메일 형식인지 확인'
                   href: how-to-verify-that-strings-are-in-valid-email-format.md
         - name: .NET의 문자 인코딩
           href: character-encoding.md

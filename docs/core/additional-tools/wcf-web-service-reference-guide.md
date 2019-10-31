@@ -4,12 +4,12 @@ description: .NET Framework 프로젝트용 서비스 참조 추가와 유사하
 author: mlacouture
 ms.date: 04/19/2018
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 5c5759dcc0f428c763eddb84f3d3652fbc548cb2
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 28eaae4a83d918f8a9e5376eb3c8d42843ffa027
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72522239"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72773952"
 ---
 # <a name="use-the-wcf-web-service-reference-provider-tool"></a>WCF Web Service Reference Provider 도구 사용
 
@@ -20,7 +20,7 @@ ms.locfileid: "72522239"
 
 ## <a name="prerequisites"></a>전제 조건
 
-- [Visual Studio 2017 15.5](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) 이상 버전
+- [Visual Studio 2017 버전 15.5](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) 이상 버전
 
 ## <a name="how-to-use-the-extension"></a>확장을 사용하는 방법
 

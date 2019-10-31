@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: b5382965-0053-47cf-b92f-862860275a01
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3e46934d9156bf3adebc010fb99ade10a1a35e09
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 746abee0861b32900e757f030ab6165f297b83ed
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523810"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774219"
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe(어셈블리 링커)
 
 어셈블리 링커는 모듈 또는 리소스 파일인 하나 이상의 파일에서 어셈블리 매니페스트가 있는 파일을 생성합니다. 모듈이란 어셈블리 매니페스트가 없는 IL(Intermediate Language) 파일입니다.
 
 > [!NOTE]
-> Visual Studio 2008부터 C# 및 Visual Basic 컴파일러가 모두 Win32 매니페스트를 어셈블리에 자동으로 포함합니다. 자세한 내용은 [/win32manifest(C# 컴파일러 옵션)](../../csharp/language-reference/compiler-options/win32manifest-compiler-option.md)을 참조하세요.
+> Visual Studio 2008부터 C# 및 Visual Basic 컴파일러가 모두 Win32 매니페스트를 어셈블리에 자동으로 포함합니다. 자세한 내용은 [-win32manifest(C# 컴파일러 옵션)](../../csharp/language-reference/compiler-options/win32manifest-compiler-option.md)를 참조하세요.
 
 이 도구는 자동으로 Visual Studio와 함께 설치됩니다. 이 도구를 실행하려면 Visual Studio용 개발자 명령 프롬프트(또는 Windows 7의 Visual Studio 명령 프롬프트)를 사용합니다. 자세한 내용은 [명령 프롬프트](developer-command-prompt-for-vs.md)를 참조하세요.
 

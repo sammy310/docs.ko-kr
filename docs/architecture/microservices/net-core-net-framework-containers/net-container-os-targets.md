@@ -2,12 +2,12 @@
 title: .NET 컨테이너에서 대상으로 지정할 OS
 description: 컨테이너화된 .NET 애플리케이션을 위한 .NET 마이크로 서비스 아키텍처 | .NET 컨테이너에서 대상으로 지정할 OS
 ms.date: 01/07/2019
-ms.openlocfilehash: 7380889374e69ca4d3c981a401af703c19263de5
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 8bcfa0212f84c575a63f76e05edec1e511cadc36
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039683"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72772011"
 ---
 # <a name="what-os-to-target-with-net-containers"></a>.NET 컨테이너에서 대상으로 지정할 OS
 
@@ -25,6 +25,9 @@ Linux의 경우 공식 .NET Docker 이미지(예: Debian)에서 여러 배포판
 
 다른 Linux 배포판을 사용하려 하거나 Microsoft에서 제공하지 않는 버전 이미지가 필요한 경우 자체 Docker 이미지를 만들 수도 있습니다. 예를 들어 .NET Framework 및Windows Server Core에서 실행되는 기존 ASP.NET Core를 통해 이미지를 만들 수 있으나 Docker에는 그렇게 일반적인 시나리오가 아닙니다.
 
+> [!IMPORTANT]
+> Windows Server Core 이미지를 사용하는 경우, 전체 Windows 이미지와 비교해서 일부 DLL이 누락된 것을 확인할 수 있습니다. [GitHub 주석](https://github.com/microsoft/dotnet-framework-docker/issues/299#issuecomment-511537448)에 설명된 대로, 이미지 빌드 시간에 누락된 파일을 추가하면 이 문제를 해결할 수 있습니다.
+
 Dockerfile 파일에 이미지 이름을 추가할 때는 다음 예제에서처럼 사용하는 태그에 따라 운영 체제와 버전을 선택할 수 있습니다.
 
 | 이미지 | 주석 |
@@ -33,6 +36,11 @@ Dockerfile 파일에 이미지 이름을 추가할 때는 다음 예제에서처
 | mcr.microsoft.com/dotnet/core/aspnet:2.2 | ASP.NET Core 2.2 다중 아키텍처: Docker 호스트에 따라 Linux 및 Windows Nano Server를 지원합니다. <br/> aspnetcore 이미지에는 ASP.NET Core에 대한 몇 가지 최적화가 있습니다. |
 | mcr.microsoft.com/dotnet/core/aspnet:2.2-alpine | Linux Alpine distro의 .NET Core 2.2 런타임 전용 |
 | mcr.microsoft.com/dotnet/core/aspnet:2.2-nanoserver-1803 | Windows Nano Server(Windows Server 버전 1803)의 .NET Core 2.2 런타임 전용 |
+
+## <a name="additional-resources"></a>추가 자료
+
+- **WindowsCodecsExt.dll이 누락되어 BitmapDecoder가 실패함(GitHub 문제)**  
+  <https://github.com/microsoft/dotnet-framework-docker/issues/299>
 
 > [!div class="step-by-step"]
 > [이전](container-framework-choice-factors.md)

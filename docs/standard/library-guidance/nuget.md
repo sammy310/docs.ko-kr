@@ -4,12 +4,12 @@ description: .NET 라이브러리용 NuGet을 사용하여 패키지하는 모�
 author: jamesnk
 ms.author: mairaw
 ms.date: 01/15/2019
-ms.openlocfilehash: 9cf30fa41af2d31e416bae1d75d8880ece7dde3e
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 9288bf440692302c3a0b1954236540af6363f367
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895203"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775308"
 ---
 # <a name="nuget"></a>NuGet
 
@@ -99,7 +99,7 @@ NuGet.org는 자체 [기호 서버 리포지토리](/nuget/create-packages/symbo
 > [!IMPORTANT]
 > NuGet.org 기호 서버는 SDK 스타일 프로젝트에서 생성한 새 [이식 가능한 기호 파일](https://github.com/dotnet/core/blob/master/Documentation/diagnostics/portable_pdb.md)(`*.pdb`)만 지원합니다.
 >
-> .NET 라이브러리를 디버그할 때 NuGet.org 기호 서버를 사용하려면 개발자에게 Visual Studio 2017 15.9 이상이 있어야 합니다.
+> .NET 라이브러리를 디버그할 때 NuGet.org 기호 서버를 사용하려면 개발자에게 Visual Studio 2017 버전 15.9 이상이 있어야 합니다.
 
 기호 패키지를 만드는 대신 기본 NuGet 패키지에 기호 파일을 포함시킬 수 있습니다. 기본 NuGet 패키지는 더 클 것이지만 포함된 기호 파일은 개발자가 NuGet.org 기호 서버를 구성할 필요가 없음을 의미합니다. SDK 스타일 프로젝트를 사용하여 NuGet 패키지를 빌드하는 경우 `AllowedOutputExtensionsInPackageBuildOutputFolder` 속성을 설정하여 기호 파일을 포함시킬 수 있습니다.
 

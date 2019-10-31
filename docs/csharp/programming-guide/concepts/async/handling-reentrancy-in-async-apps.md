@@ -2,12 +2,12 @@
 title: 비동기 앱에서 재진입 처리(C#)
 ms.date: 07/20/2015
 ms.assetid: 47c5075e-c448-45ce-9155-ed4e7e98c677
-ms.openlocfilehash: 3b6c5e29559a5350bdce7ad8bcf971281bb79994
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 9a6189624eff988ec6b0ac8a93330d591ed46a8c
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204304"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72772032"
 ---
 # <a name="handling-reentrancy-in-async-apps-c"></a>비동기 앱에서 재진입 처리(C#)
 
@@ -29,6 +29,9 @@ ms.locfileid: "70204304"
 
 > [!NOTE]
 > 예제를 실행하려면 Visual Studio 2012 이상 및 .NET Framework 4.5 이상이 컴퓨터에 설치되어 있어야 합니다.
+
+> [!NOTE]
+> 현재 앱 개발에 사용할 최소 버전은 TLS(전송 계층 보안) 버전 1.2입니다. 앱이 .NET Framework 4.7 이전 버전을 대상으로 하는 경우, [.NET Framework를 사용한 TLS(전송 계층 보안) 모범 사례](../../../../framework/network-programming/tls.md)는 다음 문서를 참조하세요. 
 
 ## <a name="BKMK_RecognizingReentrancy"></a> 재진입 인식
 
@@ -581,7 +584,7 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
 
 4. 프로젝트 형식 목록에서 **WPF 애플리케이션**을 선택합니다.
 
-5. 프로젝트 이름을 `WebsiteDownloadWPF`로 지정한 다음 **확인**을 선택합니다.
+5. 프로젝트 이름을 `WebsiteDownloadWPF`로 지정하고 .NET Framework 버전 4.6 이상을 선택한 다음, **확인** 단추를 클릭합니다.
 
      **솔루션 탐색기**에 새 프로젝트가 표시됩니다.
 
@@ -609,7 +612,9 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
 
      텍스트 상자와 버튼이 포함된 간단한 창이 MainWindow.xaml의 **디자인** 보기에 나타납니다.
 
-8. <xref:System.Net.Http>에 대한 참조를 추가합니다.
+8. **솔루션 탐색기**에서 **참조**를 마우스 오른쪽 단추로 클릭하고 **참조 추가**를 선택합니다.
+
+     아직 선택하지 않은 경우 <xref:System.Net.Http>에 대한 참조를 추가합니다.
 
 9. **솔루션 탐색기**에서 MainWindow.xaml.cs의 바로 가기 메뉴를 열고 **코드 보기**를 선택합니다.
 
@@ -641,6 +646,7 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
         {
             public MainWindow()
             {
+                System.Net.ServicePointManager.SecurityProtocol |= System.Net.SecurityProtocolType.Tls12;
                 InitializeComponent();
             }
 

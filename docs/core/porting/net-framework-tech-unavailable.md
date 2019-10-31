@@ -2,18 +2,17 @@
 title: .NET Core에서 사용할 수 없는 .NET Framework 기술
 description: .NET Core에서 사용할 수 없는 .NET Framework 기술에 대해 알아보기
 author: cartermp
-ms.author: mairaw
 ms.date: 04/30/2019
-ms.openlocfilehash: 87c3dd337ad44fd21b255afa7c03b528cd8a42ad
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: e5626d7b3e402848e2e84c49d4e98e109f62982d
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69660606"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846808"
 ---
 # <a name="net-framework-technologies-unavailable-on-net-core"></a>.NET Core에서 사용할 수 없는 .NET Framework 기술
 
-.NET Framework 라이브러리에서 사용할 수 있는 AppDomain, 원격 통신, CAS(코드 액세스 보안), 보안 투명도와 같은 몇몇 기술은 .NET Core에서 사용할 수 없습니다. 라이브러리가 이러한 기술 중 하나 이상에 의존하는 경우 아래에 설명된 대체 방법을 고려하세요. API 호환성에 대한 자세한 정보를 위해 CoreFX 팀이 GitHub에서 [행동 변경/호환 중단 및 사용 중단/레거시 API 목록](https://github.com/dotnet/corefx/wiki/ApiCompat)을 유지 관리합니다.
+.NET Framework 라이브러리에서 사용할 수 있는 AppDomain, 원격 통신, CAS(코드 액세스 보안), 보안 투명도와 같은 몇몇 기술은 .NET Core에서 사용할 수 없습니다. 라이브러리가 이러한 기술 중 하나 이상에 의존하는 경우 아래에 설명된 대체 방법을 고려하세요. API 호환성에 대한 자세한 내용은 [.NET Core 호환성이 손상되는 변경](../compatibility/breaking-changes.md) 문서를 참조하세요.
 
 API 또는 기술이 현재 구현되지 않았기 때문에 이들을 고의로 지원하지 않는 것은 아닙니다. 발생하는 특정 문제가 설계 상의 문제인 경우 먼저 .NET Core용 GitHub 리포지토리를 검색해야 하지만 이러한 지표를 찾을 수 없는 경우 특정 API 및 기술을 요청하려면 GitHub의 [dotnet/corefx 리포지토리 문제](https://github.com/dotnet/corefx/issues)에서 문제를 제기하세요. [문제의 이식 요청](https://github.com/dotnet/corefx/labels/port-to-core)은 `port-to-core` 레이블로 표시됩니다.
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d2ce0683-343d-403e-bb8d-209186f7a19d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0b3cf60d670e7fdfa624599bc0eeddc99219c202
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 0ce98912e579e0dd570822c1f7c2133bb05ed491
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044014"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72773974"
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe(Windows 런타임 메타데이터 내보내기 도구)
 Windows 런타임 메타데이터 내보내기 도구(Winmdexp.exe)는 .NET Framework 모듈을 Windows 런타임 메타데이터가 포함된 파일로 변환합니다. .NET Framework 어셈블리 및 Windows 런타임 메타데이터 파일이 같은 물리적 형식을 사용하지만 메타데이터 테이블의 내용에 차이가 있습니다. 즉, .NET Framework 어셈블리는 Windows 런타임 구성 요소로 자동으로 사용할 수 있습니다. .NET Framework 모듈을 Windows 런타임 구성 요소로 전환하는 프로세스를 ‘내보내기’라고 합니다.  .NET Framework 4.5 및 .NET Framework 4.5.1에서 결과 Windows 메타데이터(.winmd) 파일은 메타데이터와 구현이 모두 포함됩니다.  
@@ -33,7 +33,7 @@ winmdexp [options] winmdmodule
   
 |인수 또는 옵션|설명|  
 |------------------------|-----------------|  
-|`winmdmodule`|내보낼 모듈(.winmdobj)을 지정합니다. 하나의 모듈만 허용됩니다. 이 모듈을 만들려면 `/target` 컴파일러 옵션을 `winmdobj` 대상과 함께 사용합니다. [/target:winmdobj(C# 컴파일러 옵션)](../../csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md) 또는 [/target(Visual Basic)](../../visual-basic/reference/command-line-compiler/target.md)을 참조하세요.|  
+|`winmdmodule`|내보낼 모듈(.winmdobj)을 지정합니다. 하나의 모듈만 허용됩니다. 이 모듈을 만들려면 `/target` 컴파일러 옵션을 `winmdobj` 대상과 함께 사용합니다. [-target:winmdobj(C# 컴파일러 옵션)](../../csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md) 또는 [-target(Visual Basic)](../../visual-basic/reference/command-line-compiler/target.md)을 참조하세요.|  
 |`/docfile:` `docfile`<br /><br /> `/d:` `docfile`|Winmdexp.exe가 생성하는 출력 XML 문서 파일을 지정합니다. .NET Framework 4.5에서는 기본적으로 출력 파일이 XML 설명서 파일과 같습니다.|  
 |`/moduledoc:` `docfile`<br /><br /> `/md:` `docfile`|컴파일러가 `winmdmodule`로 생성한 XML 문서 파일의 이름을 지정합니다.|  
 |`/modulepdb:` `symbolfile`<br /><br /> `/mp:` `symbolfile`|`winmdmodule`에 대한 기호를 포함하는 프로그램 데이터베이스(PDB) 파일의 이름을 지정합니다.|  

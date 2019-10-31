@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: fd4026bc-2c3d-4b27-86dc-ec5e96018181
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d1d7e6e098b6ce497dfe74f0afe2322b33a787c6
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 8aaa74eee5372dd7ba1ed145632f718d9ecce8ed
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053262"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72773982"
 ---
 # <a name="64-bit-applications"></a>64비트 애플리케이션
 애플리케이션을 컴파일할 때 Windows 64비트 운영 체제에서 네이티브 애플리케이션으로 실행되거나 WOW64(Windows 64비트 기반 Windows 32비트)를 통해 실행되도록 지정할 수 있습니다. WOW64는 32비트 애플리케이션이 64비트 시스템에서 실행되도록 하는 호환성 환경입니다. WOW64는 Windows 운영 체제의 모든 64비트 버전에 포함됩니다.  
@@ -56,9 +56,9 @@ ms.locfileid: "71053262"
   
 |컴파일러|컴파일러 옵션|  
 |--------------|---------------------|  
-|Visual Basic|[/platform (Visual Basic)](../visual-basic/reference/command-line-compiler/platform.md)|  
+|Visual Basic|[-platform(Visual Basic)](../visual-basic/reference/command-line-compiler/platform.md)|  
 |Visual C#|[-platform(C# 컴파일러 옵션)](../csharp/language-reference/compiler-options/platform-compiler-option.md)|  
-|Visual C++|**/clr:safe**를 사용하여 플랫폼 제약 없는 MSIL(Microsoft intermediate language) 애플리케이션을 만들 수 있습니다. 자세한 내용은 [/clr(공용 언어 런타임 컴파일)](/cpp/build/reference/clr-common-language-runtime-compilation)을 참조하세요.<br /><br /> Visual C++에는 각 64비트 운영 체제에 대한 별도의 컴파일러가 포함됩니다. Visual C++를 사용하여 64비트 Windows 운영 체제에서 실행되는 네이티브 애플리케이션을 만드는 방법에 대한 자세한 내용은 [64비트 프로그래밍](/cpp/build/configuring-programs-for-64-bit-visual-cpp)을 참조하세요.|  
+|Visual C++|**/clr:safe**를 사용하여 플랫폼 제약 없는 MSIL(Microsoft intermediate language) 애플리케이션을 만들 수 있습니다. 자세한 내용은 [-clr(공용 언어 런타임 컴파일)](/cpp/build/reference/clr-common-language-runtime-compilation)을 참조하세요.<br /><br /> Visual C++에는 각 64비트 운영 체제에 대한 별도의 컴파일러가 포함됩니다. Visual C++를 사용하여 64비트 Windows 운영 체제에서 실행되는 네이티브 애플리케이션을 만드는 방법에 대한 자세한 내용은 [64비트 프로그래밍](/cpp/build/configuring-programs-for-64-bit-visual-cpp)을 참조하세요.|  
   
 ## <a name="determining-the-status-of-an-exe-file-or-dll-file"></a>.exe 파일 또는 .dll 파일 상태 확인  
  .exe 파일이나 .dll 파일을 특정 플랫폼 또는 WOW64에서만 실행해야 하는지를 확인하려면 [CorFlags.exe(CorFlags 변환 도구)](./tools/corflags-exe-corflags-conversion-tool.md)를 옵션없이 사용합니다. CorFlags.exe를 사용하여 .exe 파일이나 .dll 파일의 플랫폼 상태를 변경할 수도 있습니다. Visual Studio 어셈블리의 CLR 헤더에서 주 런타임 버전은 2로 설정되고 부 런타임 버전 번호는 5로 설정됩니다. 부 런타임 버전이 0으로 설정된 애플리케이션은 레거시 애플리케이션으로 처리되고 항상 WOW64를 통해 실행됩니다.  

@@ -1,13 +1,13 @@
 ---
 title: dotnet build 명령
 description: dotnet build 명령은 프로젝트와 모든 종속성을 빌드합니다.
-ms.date: 10/07/2019
-ms.openlocfilehash: 0a3e2c0e441cfdd1cb8266bc77dc1aba08af84d6
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.date: 10/14/2019
+ms.openlocfilehash: fe2135c150be46997699f756f7f0c9bc18bbb529
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72522787"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846821"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
@@ -32,9 +32,17 @@ dotnet build [-h|--help]
 
 ## <a name="description"></a>설명
 
-`dotnet build` 명령은 이진 파일 집합으로 프로젝트와 해당 종속성을 빌드합니다. 이진 파일에는 *.dll* 확장명을 갖는 IL(중간 언어)의 프로젝트 코드와 *.pdb* 확장명을 가지며 디버깅에 사용되는 기호 파일이 포함됩니다. 애플리케이션의 종속성을 나열하는 종속성 JSON 파일( *.deps.json*)이 생성됩니다. 애플리케이션에 대한 공유 런타임 및 해당 버전을 지정하는 *.runtimeconfig.json* 파일이 생성됩니다.
+`dotnet build` 명령은 이진 파일 집합으로 프로젝트와 해당 종속성을 빌드합니다. 이진 파일에는 확장명이 *.dll*인 IL(중간 언어) 파일의 프로젝트 코드가 포함됩니다.  프로젝트 형식 및 설정에 따라 다음과 같은 다른 파일이 포함될 수도 있습니다.
 
-프로젝트에 NuGet의 라이브러리와 같은 타사 종속성이 있는 경우, 이러한 종속성은 NuGet 캐시에서 확인되고 프로젝트의 빌드 출력으로 사용할 수 없습니다. 따라서 `dotnet build`의 제품을 실행하기 위해 다른 컴퓨터로 전송할 준비가 되지 않았습니다. 이는 실행 가능한 프로젝트(애플리케이션) 빌드로 .NET Framework가 설치된 컴퓨터에서 실행할 수 있는 출력을 생성하는 .NET Framework의 동작과는 대조적입니다. .NET Core에서 비슷한 환경을 사용하려면 [dotnet publish](dotnet-publish.md) 명령을 사용해야 합니다. 자세한 내용은 [.NET Core 애플리케이션 배포](../deploying/index.md)를 참조하세요.
+- 프로젝트 형식이 .NET Core 3.0 이상을 대상으로 하는 실행 파일인 경우 애플리케이션을 실행하는 데 사용할 수 있는 실행 파일
+- 확장명이 *.pdb*인 디버깅에 사용되는 기호 파일
+- 애플리케이션 또는 라이브러리의 종속성을 나열하는 *.deps.json* 파일
+- 애플리케이션의 공유 런타임 및 해당 버전을 지정하는 *.runtimeconfig.json* 파일
+- 프로젝트 참조 또는 NuGet 패키지 참조를 통해 프로젝트가 종속된 다른 라이브러리
+
+.NET Core 3.0 이전 버전을 대상으로 하는 실행 가능 프로젝트의 경우 NuGet의 라이브러리 종속성은 일반적으로 출력 폴더에 복사되지 않습니다.  런타임에 NuGet 전역 패키지 폴더에서 확인됩니다. 따라서 `dotnet build`의 제품을 실행하기 위해 다른 컴퓨터로 전송할 준비가 되지 않았습니다. 배포할 수 있는 애플리케이션 버전을 만들려면 [dotnet publish](dotnet-publish.md) 명령 등을 사용하여 애플리케이션을 게시해야 합니다. 자세한 내용은 [.NET Core 애플리케이션 배포](../deploying/index.md)를 참조하세요.
+
+.NET Core 3.0 이상을 대상으로 하는 실행 가능 프로젝트의 경우 라이브러리 종속성이 출력 폴더에 복사됩니다. 따라서 웹 프로젝트 등에 다른 게시 특정 논리가 없는 경우 빌드 출력을 배포할 수 있습니다.
 
 빌드하려면 애플리케이션의 종속성을 나열하는 *project.assets.json* 파일이 필요합니다. [`dotnet restore`](dotnet-restore.md)가 실행되면 파일이 만들어집니다. 자산 파일이 없으면 도구로 참조 어셈블리를 확인할 수 없으므로 오류가 발생합니다. .NET Core 1.x SDK를 사용할 경우 `dotnet build`를 실행하기 전에 `dotnet restore`를 명시적으로 실행해야 합니다. .NET Core 2.0 SDK부터 `dotnet restore`는 `dotnet build`를 실행할 때 암시적으로 실행됩니다. 빌드 명령을 실행할 때 암시적 복원을 사용하지 않으려면 `--no-restore` 옵션을 전달하면 됩니다.
 
@@ -48,7 +56,7 @@ dotnet build [-h|--help]
 </PropertyGroup>
 ```
 
-라이브러리를 생성하려면 `<OutputType>` 속성을 생략합니다. 빌드된 출력의 주요 차이점은 라이브러리에 대한 IL DLL이 진입점을 포함하지 않으며 실행할 수 없다는 것입니다.
+라이브러리를 생성하려면 `<OutputType>` 속성을 생략하거나 속성 값을 `Library`로 변경합니다. 라이브러리의 IL DLL은 진입점을 포함하지 않으며 실행할 수 없습니다.
 
 ### <a name="msbuild"></a>MSBuild
 
@@ -56,7 +64,7 @@ dotnet build [-h|--help]
 
 해당 옵션 외에도, `dotnet build` 명령은 속성 설정에 대한 `-p` 또는 로거를 정의하는 `-l`처럼 MSBuild 옵션도 수락합니다. 이러한 옵션에 대한 자세한 내용은 [MSBuild 명령줄 참조](/visualstudio/msbuild/msbuild-command-line-reference)를 확인하세요. 또는 [dotnet msbuild](dotnet-msbuild.md) 명령을 사용할 수도 있습니다.
 
-`dotnet build` 실행은 `dotnet msbuild -restore -target:Build`와 같습니다.
+`dotnet build` 실행은 `dotnet msbuild -restore` 실행과 같지만 출력의 기본 세부 정보 표시가 다릅니다.
 
 ## <a name="arguments"></a>인수
 
@@ -104,7 +112,7 @@ dotnet build [-h|--help]
 
 - **`-o|--output <OUTPUT_DIRECTORY>`**
 
-  빌드된 이진 파일을 배치할 디렉터리입니다. 이 옵션을 지정하는 경우 `--framework`도 정의해야 합니다. 지정하지 않으면 기본 경로는 `./bin/<configuration>/<framework>/`입니다.
+  빌드된 이진 파일을 배치할 디렉터리입니다. 지정하지 않으면 기본 경로는 `./bin/<configuration>/<framework>/`입니다.  `TargetFrameworks` 속성을 통해 여러 개의 대상 프레임워크가 지정된 프로젝트의 경우 이 옵션을 지정할 때 `--framework`도 정의해야 합니다.
 
 - **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 

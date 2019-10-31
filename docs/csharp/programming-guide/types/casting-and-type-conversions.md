@@ -10,12 +10,12 @@ helpviewer_keywords:
 - casting [C#]
 - converting types [C#]
 ms.assetid: 568df58a-d292-4b55-93ba-601578722878
-ms.openlocfilehash: 19b4ec08cc8790df0e9a99204c0401b1b873eb20
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: fd5960f9820e90d49afe3ba748136f1a2d3ce690
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588430"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774106"
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>캐스팅 및 형식 변환(C# 프로그래밍 가이드)
 
@@ -30,7 +30,7 @@ i = "Hello"; // error CS0029: Cannot implicitly convert type 'string' to 'int'
   
 - **암시적 변환**: 변환은 형식이 안전하고 데이터가 손실되지 않으므로 특수 구문이 필요하지 않습니다. 예제에는 작은 정수 형식에서 큰 정수 형식으로의 변환 및 파생 클래스에서 기본 클래스로의 변환이 포함됩니다.  
   
-- **명시적 변환(캐스트)** : 명시적 변환에는 캐스트 연산자가 필요합니다. 변환 시 정보가 손실되거나 다른 이유로 변환에 실패할 경우 캐스팅이 필요합니다.  일반적인 예제에는 숫자를 정밀도가 낮거나 범위가 더 작은 형식으로 변환하는 작업과 기본 클래스 인스턴스를 파생 클래스로 변환하는 작업이 포함됩니다.  
+- **명시적 변환(캐스트)** : 명시적 변환에는 [캐스트 연산자`()`](../../language-reference/operators/type-testing-and-cast.md#cast-operator-)가 필요합니다. 변환 시 정보가 손실되거나 다른 이유로 변환에 실패할 경우 캐스팅이 필요합니다. 일반적인 예제에는 숫자를 정밀도가 낮거나 범위가 더 작은 형식으로 변환하는 작업과 기본 클래스 인스턴스를 파생 클래스로 변환하는 작업이 포함됩니다.  
   
 - **사용자 정의 변환**: 사용자 정의 변환은 기본 클래스-파생 클래스 관계가 없는 사용자 지정 형식 간의 명시적 및 암시적 변환을 사용하도록 정의할 수 있는 특수 메서드를 통해 수행됩니다. 자세한 내용은 [사용자 정의 변환 연산자](../../language-reference/operators/user-defined-conversion-operators.md)를 참조하세요.  
   
@@ -42,7 +42,7 @@ i = "Hello"; // error CS0029: Cannot implicitly convert type 'string' to 'int'
   
  [!code-csharp[csProgGuideTypes#34](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#34)]  
   
- 모든 암시적 숫자 변환 규칙의 전체 목록은 [암시적 숫자 변환 표](../../language-reference/keywords/implicit-numeric-conversions-table.md)를 참조하세요.  
+ 모든 암시적 숫자 변환의 전체 목록은 [기본 제공 숫자 변환](../../language-reference/builtin-types/numeric-conversions.md) 문서의 [암시적 숫자 변환](../../language-reference/builtin-types/numeric-conversions.md#implicit-numeric-conversions) 섹션을 참조하세요.
   
  참조 형식의 경우 클래스에서 직접 또는 간접 기본 클래스나 인터페이스로의 암시적 변환이 항상 존재합니다. 파생 클래스에 항상 기본 클래스의 모든 멤버가 포함되므로 특수 구문이 필요하지 않습니다.  
   
@@ -57,7 +57,7 @@ Base b = d; // Always OK.
   
  [!code-csharp[csProgGuideTypes#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#2)]  
   
- 허용되는 명시적 숫자 변환 목록은 [명시적 숫자 변환 표](../../language-reference/keywords/explicit-numeric-conversions-table.md)를 참조하세요.  
+ 지원되는 명시적 숫자 변환의 전체 목록은 [기본 제공 숫자 변환](../../language-reference/builtin-types/numeric-conversions.md) 문서의 [명시적 숫자 변환](../../language-reference/builtin-types/numeric-conversions.md#explicit-numeric-conversions) 섹션을 참조하세요.
   
  참조 형식의 경우 기본 형식에서 파생 형식으로 변환해야 할 경우에는 명시적 캐스트가 필요합니다.  
   

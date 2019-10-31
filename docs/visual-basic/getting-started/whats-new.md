@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: 64f8d536212cd379337ad437c1e15ae356890ddb
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: f5630f7947125dd5eb8a5b58e79add1aec4c689b
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72581971"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774913"
 ---
 # <a name="whats-new-for-visual-basic"></a>Visual Basic의 새로운 기능
 
@@ -21,45 +21,45 @@ ms.locfileid: "72581971"
 
 ## <a name="current-version"></a>현재 버전
 
-Visual Basic 16.0 / Visual Studio 2019 버전 16.0  
+Visual Basic 16.0/Visual Studio 2019 버전 16.0\
 새 기능은 [Visual Basic 16.0](#visual-basic-160)을 참조하세요.
 
 ## <a name="previous-versions"></a>이전 버전
 
-Visual Basic 15.8 / Visual Studio 2017 Version 15.8  
+Visual Basic 15.8/Visual Studio 2017 버전 15.8\
 새 기능은 [Visual Basic 15.8](#visual-basic-158)을 참조하세요.
 
-Visual Basic 15.5 / Visual Studio 2017 버전 15.5  
+Visual Basic 15.5/Visual Studio 2017 버전 15.5\
 새 기능은 [Visual Basic 15.5](#visual-basic-155)를 참조하세요.
 
-Visual Basic 15.3 / Visual Studio 2017 버전 15.3  
+Visual Basic 15.3/Visual Studio 2017 버전 15.3\
 새 기능은 [Visual Basic 15.3](#visual-basic-153)을 참조하세요.
 
-Visual Basic 2017 / Visual Studio 2017  
+Visual Basic 2017/Visual Studio 2017\
 새 기능은 [Visual Basic 2017](#visual-basic-2017)을 참조하세요.
 
-Visual Basic / Visual Studio 2015  
+Visual Basic/Visual Studio 2015\
 새 기능은 [Visual Basic 14](#visual-basic-14)를 참조하세요.
 
-Visual Basic / Visual Studio 2013  
+Visual Basic/Visual Studio 2013\
 .NET 컴파일러 플랫폼("Roslyn")의 기술 미리 보기
 
-Visual Basic / Visual Studio 2012  
+Visual Basic/Visual Studio 2012\
 `Async` 및 `await` 키워드, 반복기, 호출자 정보 특성
 
-Visual Basic, Visual Studio 2010  
+Visual Basic, Visual Studio 2010\
 자동으로 구현된 속성, 컬렉션 이니셜라이저, 암시적 줄 연속, 동적, 제네릭 공변성(Covariance)/반공변성(Contravariance), 전역 네임스페이스 액세스
 
-Visual Basic / Visual Studio 2008  
+Visual Basic/Visual Studio 2008\
 LINQ(통합 언어 쿼리), XML 리터럴, 지역 형식 유추, 개체 이니셜라이저, 익명 형식, 확장 메서드, 로컬 `var` 형식 유추, 람다 식, `if` 연산자, 부분 메서드(Partial Method), nullable 값 형식
 
-Visual Basic / Visual Studio 2005  
+Visual Basic/Visual Studio 2005\
 `My` 형식 및 도우미 형식(앱, 컴퓨터, 파일 시스템, 네트워크에 액세스)
 
-Visual Basic / Visual Studio .NET 2003  
+Visual Basic/Visual Studio .NET 2003\
 비트 시프트 연산자, 루프 변수 선언
 
-Visual Basic / Visual Studio .NET 2002  
+Visual Basic/Visual Studio .NET 2002\
 Visual Basic .NET의 첫 번째 릴리스
 
 ## <a name="visual-basic-160"></a>Visual Basic 16.0
@@ -108,7 +108,6 @@ Dim b1 As Byte = CByte(Int(d))                 ' Result: 173
 Dim s1 AS Short = CShort(Math.Truncate(s))     ' Result: 173
 Dim i2 As Integer = CInt(Math.Ceiling(d))      ' Result: 174
 Dim i3 As Integer = CInt(Math.Round(s))        ' Result: 174
-
 ```
 
 부동 소수점 값을 반올림하는 것이 아니라 잘린다는 점에 유의하세요.
@@ -237,7 +236,7 @@ yyyy-mm-dd 형식(`#2015-03-17 16:10 PM#`)의 날짜 리터럴을 사용할 수 
 
 **읽기 전용 인터페이스 속성**
 
-읽기/쓰기 속성을 사용하여 읽기 전용 인터페이스 속성을 구현할 수 있습니다.  이러한 인터페이스는 최소 기능을 보장하며 구현 클래스에서 속성이 설정되도록 허용하는 것을 차단하지 않습니다.
+읽기/쓰기 속성을 사용하여 읽기 전용 인터페이스 속성을 구현할 수 있습니다. 이러한 인터페이스는 최소 기능을 보장하며 구현 클래스에서 속성이 설정되도록 허용하는 것을 차단하지 않습니다.
 
 [TypeOf \<expr> IsNot \<type>](../../visual-basic/language-reference/operators/typeof-operator.md)
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - expressions [C#]
 - C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
-ms.openlocfilehash: 1a0e94f40a9dc861b32e6a1c12935faadda9921b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2db08bd89b5e0fc612599f83cb02178aef5ee5fb
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921803"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774176"
 ---
 # <a name="expressions-c-programming-guide"></a>식(C# 프로그래밍 가이드)
 
@@ -33,7 +33,7 @@ System.Convert.ToInt32("35");
   
 ## <a name="overflows"></a>오버플로
 
- 값이 값 형식의 최대값보다 클 경우 숫자 식에서 오버플로가 발생할 수 있습니다. 자세한 내용은 [Checked 및 Unchecked](../../language-reference/keywords/checked-and-unchecked.md) 및 [명시적 숫자 변환 표](../../language-reference/keywords/explicit-numeric-conversions-table.md)를 참조하세요.  
+ 값이 값 형식의 최대값보다 클 경우 숫자 식에서 오버플로가 발생할 수 있습니다. 자세한 내용은 [기본 제공 숫자 변환](../../language-reference/builtin-types/numeric-conversions.md) 문서의 [명시적 숫자 변환](../../language-reference/builtin-types/numeric-conversions.md#explicit-numeric-conversions) 섹션과 [Checked 및 Unchecked](../../language-reference/keywords/checked-and-unchecked.md)를 참조하세요.
   
 ## <a name="operator-precedence-and-associativity"></a>연산자 우선 순위 및 결합성
 

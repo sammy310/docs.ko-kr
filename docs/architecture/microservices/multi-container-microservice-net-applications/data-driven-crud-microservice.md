@@ -2,12 +2,12 @@
 title: 단순 데이터 기반 CRUD 마이크로 서비스 만들기
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | 마이크로 서비스 애플리케이션의 컨텍스트 내에서 단순 CRUD(데이터 기반) 마이크로 서비스의 생성을 이해합니다.
 ms.date: 01/07/2019
-ms.openlocfilehash: 74d9022ffa70ade6ae6e7d405403524dfbc2145a
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: db179d9d7d5be5b03f8409b823ee87e71e1c7135
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039908"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771199"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>단순 데이터 기반 CRUD 마이크로 서비스 만들기
 
@@ -43,7 +43,7 @@ Docker 컨테이너 안에서 SQL Server 같은 데이터베이스 서버를 실
 
 프로젝트를 만든 후에는 다른 Web API 프로젝트에서와 마찬가지로 Entity Framework API 또는 타 API를 사용하여 MVC 컨트롤러를 구현할 수 있습니다. 새 Web API 프로젝트에서는 마이크로 서비스의 종속성이 ASP.NET Core 자체 밖에 없습니다. 내부적으로 *Microsoft.AspNetCore.All* 종속성 내에서는 그림 6-7에서처럼 Entity Framework 및 기타 여러 .NET Core NuGet 패키지를 참조하고 있습니다.
 
-![API 프로젝트에는 모든 필수 패키지에 대한 참조를 포함하는 Microsoft.AspNetCore.App NuGet 패키지에 대한 참조가 포함되어 있습니다. 여기에는 다른 패키지도 포함할 수 있습니다.](./media/image8.png)
+![API 프로젝트에는 모든 필수 패키지에 대한 참조를 포함하는 Microsoft.AspNetCore.App NuGet 패키지 참조가 포함되어 있습니다. 여기에는 다른 패키지도 포함할 수 있습니다.](./media/image8.png)
 
 **그림 6-7** 간단한 CRUD Web API 마이크로 서비스의 종속성
 
@@ -118,7 +118,7 @@ public class CatalogController : ControllerBase
         ICatalogIntegrationEventService catalogIntegrationEventService)
     {
         _catalogContext = context ?? throw new ArgumentNullException(nameof(context));
-        _catalogIntegrationEventService = catalogIntegrationEventService 
+        _catalogIntegrationEventService = catalogIntegrationEventService
             ?? throw new ArgumentNullException(nameof(catalogIntegrationEventService));
 
         _settings = settings.Value;
@@ -328,7 +328,7 @@ Swagger의 메타데이터는 Microsoft Flow, PowerApps 및 Azure Logic Apps에�
 
 *swagger-ui*에 따라 기능 API 도움말 페이지의 양식으로 ASP.NET Core REST API 애플리케이션에 대한 Swagger 메타데이터 생성을 자동화하는 방법은 여러 가지가 있습니다.
 
-가장 잘 알고 있는 방법은 아마도 [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers)에서 현재 사용되는 [Swashbuckle](https://github.com/domaindrivendev/Swashbuckle.AspNetCore)일 것입니다. 이 가이드에서 자세히 다루겠지만 Swagger 또는 OpenAPI 사양에서 및 [NSwagStudio](https://github.com/RSuter/NSwag/wiki/NSwagStudio)를 사용하는 컨트롤러가 포함된 .dll을 검사하여 Typescript 및 C\# API 클라이언트뿐만 아니라 C\# 컨트롤러를 생성할 수 있는 [NSwag](https://github.com/RSuter/NSwag)를 사용하는 옵션도 있습니다.
+가장 잘 알려진 방법은 현재 [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers)에서 사용되는 [Swashbuckle](https://github.com/domaindrivendev/Swashbuckle.AspNetCore)일 것입니다. 이 가이드에서 좀 더 자세히 살펴보겠지만 [NSwag](https://github.com/RSuter/NSwag)를 사용하는 옵션도 있습니다. NSwag는 Swagger 또는 OpenAPI 사양에서 또는 [NSwagStudio](https://github.com/RSuter/NSwag/wiki/NSwagStudio)를 통해 컨트롤러가 포함된 .dll을 검사하여 Typescript와 C\# API 클라이언트 및 C\# 컨트롤러를 생성할 수 있습니다.
 
 ### <a name="how-to-automate-api-swagger-metadata-generation-with-the-swashbuckle-nuget-package"></a>Swashbuckle NuGet 패키지에서 API Swagger 메타데이터 생성을 자동화하는 방법
 

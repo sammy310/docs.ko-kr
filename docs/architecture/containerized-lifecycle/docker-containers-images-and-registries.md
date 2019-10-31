@@ -2,12 +2,12 @@
 title: Docker 컨테이너, 이미지 및 레지스트리
 description: 애플리케이션 배포의 Docker 방식에서 리지스트리가 전체적으로 수행하는 주요 역할을 알아봅니다.
 ms.date: 02/15/2019
-ms.openlocfilehash: 32240ac4f6dec67531d8e618cff153d235c073c7
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: bfef21cab7be89abaf33b89366d7cff2115a7cc6
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394617"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72770925"
 ---
 # <a name="docker-containers-images-and-registries"></a>Docker 컨테이너, 이미지 및 레지스트리
 
@@ -15,7 +15,7 @@ Docker를 사용할 때 앱 또는 서비스를 만들고 컨테이너 및 해�
 
 앱 또는 서비스를 실행하려면 앱의 이미지가 인스턴스화되어 Docker 호스트에서 실행되는 컨테이너를 만듭니다. 컨테이너는 개발 환경 또는 PC에서 초기에 테스트됩니다.
 
-이미지 라이브러리로 사용되는 이미지를 레지스티리에 저장합니다. 프로덕션 오케스트레이터에 배포할 때 레지스트리가 필요합니다. Docker는 [Docker 허브](https://hub.docker.com/)를 통해 공용 레지스트리를 관리합니다. 다른 공급업체는 다른 이미지 컬렉션을 위한 [Azure Container Registry](https://azure.microsoft.com/services/container-registry/) 등의 레지스트리를 제공합니다. 또는 기업에서는 자체 Docker 이미지를 위해 개인 레지스트리 온-프레미스를 가질 수 있습니다.
+이미지 라이브러리 역할을 하는 레지스트리에 이미지를 저장합니다. 프로덕션 오케스트레이터에 배포할 때 레지스트리가 필요합니다. Docker는 [Docker 허브](https://hub.docker.com/)를 통해 공용 레지스트리를 관리합니다. 다른 공급업체는 다른 이미지 컬렉션을 위한 [Azure Container Registry](https://azure.microsoft.com/services/container-registry/) 등의 레지스트리를 제공합니다. 또는 기업에서는 자체 Docker 이미지를 위해 개인 레지스트리 온-프레미스를 가질 수 있습니다.
 
 그림 1-4는 Docker의 이미지와 레지스트리가 다른 구성 요소와 어떤 관계가 있는지 보여줍니다. 그것은 또한 공급업체로부터 제공되는 여러 레지스트리를 보여줍니다.
 

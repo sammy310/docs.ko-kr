@@ -3,12 +3,12 @@ title: ML.NET 자동화 ML API 사용 방법
 description: ML.NET 자동화 ML API는 모델 빌드 프로세스를 자동화하고 배포 준비된 모델을 생성합니다. 자동화된 기계 학습 작업을 구성하기 위해 사용할 수 있는 옵션에 대해 알아보세요.
 ms.date: 04/24/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: a7057337fb6ff19a1e402d7bf74a766b246ea3c1
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: bb1cd66e7341f2ada57d533d8b2dcbb48f08f726
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332714"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774560"
 ---
 # <a name="how-to-use-the-mlnet-automated-machine-learning-api"></a>ML.NET 자동화 기계 학습 API 사용 방법
 
@@ -89,7 +89,7 @@ using Microsoft.ML.AutoML;
     ```
 
 1. `CacheDirectory` 설정은 AutoML 작업 중 학습된 모든 모델이 저장될 디렉터리의 포인터입니다. `CacheDirectory`가 null로 설정된 경우 모델은 디스크로 기록되는 대신 메모리에 유지됩니다.
- 
+
     ```csharp
     experimentSettings.CacheDirectory = null;
     ```
@@ -128,7 +128,7 @@ ML 작업당 지원되는 트레이너 목록은 아래의 해당 링크에서 �
 ## <a name="data-pre-processing-and-featurization"></a>데이터 사전 처리 및 기능화
 
 > [!NOTE]
-> 기능 열은 [`Boolean`](https://docs.microsoft.com/en-us/dotnet/api/system.boolean), [`Single`](https://docs.microsoft.com/en-us/dotnet/api/system.single) 및 [`String`](https://docs.microsoft.com/en-us/dotnet/api/system.string) 유형만 지원합니다.
+> 기능 열은 <xref:System.Boolean>, <xref:System.Single> 및 <xref:System.String> 형식만 지원했습니다.
 
 데이터 사전 처리는 기본적으로 발생하며 사용자를 위해 다음 단계가 자동으로 수행됩니다.
 
@@ -141,9 +141,9 @@ ML 작업당 지원되는 트레이너 목록은 아래의 해당 링크에서 �
     데이터 형식에 대한 기본값으로 누락 값 셀을 채웁니다. 입력 열과 동일한 슬롯 개수로 표시기 기능을 추가합니다. 입력 열이 누락된 경우 추가된 표시기 기능의 값은 `1`이며, 그렇지 않으면 `0`입니다.
 
 1. 추가 기능 생성
-    
+
     텍스트 기능: 유니그램 및 트라이그램을 사용하는 BOW(Bag of words) 기능
-    
+
     범주 기능: 카디널리티가 낮은 기능에 대한 원 핫 인코딩(One-hot encoding), 카디널리티가 높은 범주 기능에 대한 원 핫 해시 인코딩(one-hot-hash encoding)
 
 1. 변환 및 인코딩
@@ -191,7 +191,7 @@ ExperimentResult<RegressionMetrics> experimentResult = experiment
 AutoML은 학습 데이터를 제공할 수 있는 오버로드된 실험 Execute 메서드를 제공합니다. 내부적으로 자동화된 ML은 데이터를 학습-검증 분할로 나눕니다.
 
 ```csharp
-experiment.Execute(trainDataView);   
+experiment.Execute(trainDataView);
 ```
 
 ### <a name="custom-validation-dataset"></a>사용자 지정 유효성 검사 데이터 세트
@@ -199,7 +199,7 @@ experiment.Execute(trainDataView);
 보통 시계열 데이터가 있는 케이스이기 때문에 임의 분할이 허용되지 않는 경우 사용자 지정 유효성 검사 데이터 세트를 사용합니다. 사용자 고유의 유효성 검사 데이터 세트를 지정할 수 있습니다. 이 모델은 하나 이상의 임의 데이터 세트 대신 지정된 유효성 검사 데이터 세트를 기준으로 평가됩니다.
 
 ```csharp
-experiment.Execute(trainDataView, validationDataView);   
+experiment.Execute(trainDataView, validationDataView);
 ```
 
 ## <a name="explore-model-metrics"></a>모델 메트릭 탐색

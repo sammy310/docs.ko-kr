@@ -2,12 +2,12 @@
 title: ASP.NET Core 서비스 및 웹앱 테스트
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | 컨테이너에서 ASP.NET Core 서비스 및 웹앱을 테스트하기 위한 아키텍처를 탐색합니다.
 ms.date: 10/02/2018
-ms.openlocfilehash: 042f7a6171a88025d3d4a8e37c4deceb416e5711
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 278d12b8215195351673a41149db5af6fcecddfb
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291277"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72772023"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>ASP.NET Core 서비스 및 웹앱 테스트
 
@@ -138,9 +138,9 @@ public class PrimeWebDefaultRequestShould
 
 2. **마이크로 서비스 기능/통합 테스트**는 각 마이크로 서비스에 대한 인프라를 포함하는 테스트 사례가 있지만 서로 격리되고 **{MicroserviceName}.FunctionalTests** 프로젝트에 포함되어 있습니다.
 
-3. **애플리케이션 기능/통합 테스트**: 여러 마이크로 서비스를 실행하는 테스트 사례와 함께 마이크로 서비스 통합에 집중합니다. 이러한 테스트는 프로젝트 **Application.FunctionalTests**에 있습니다.
+3. **애플리케이션 기능/통합 테스트**: 여러 마이크로 서비스를 실행하는 테스트 사례를 사용하여 마이크로 서비스 통합에 집중합니다. 이러한 테스트는 프로젝트 **Application.FunctionalTests**에 있습니다.
 
-4. **부하 테스트**: 각 마이크로 서비스에 대한 응답 시간에 집중합니다. 이러한 테스트는 프로젝트 **LoadTest**에 있으며 Visual Studio 2017 Enterprise Edition이 필요합니다.
+4. **부하 테스트**: 각 마이크로 서비스의 응답 시간에 집중합니다. 이러한 테스트는 프로젝트 **LoadTest**에 있으며 Visual Studio 2017 Enterprise Edition이 필요합니다.
 
 마이크로 서비스별 단위 및 통합 테스트는 각 마이크로 서비스 테스트 폴더에 포함되어 있으며, 애플리케이션 부하 테스트는 그림 6-25와 같이 솔루션 폴더의 테스트 폴더 아래에 포함되어 있습니다.
 

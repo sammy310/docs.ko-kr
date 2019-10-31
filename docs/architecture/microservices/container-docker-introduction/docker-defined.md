@@ -2,12 +2,12 @@
 title: Docker란?
 description: 컨테이너화된 .NET 애플리케이션을 위한 .NET 마이크로 서비스 아키텍처 | Docker란?
 ms.date: 08/31/2018
-ms.openlocfilehash: 7f7844f51e96914c1432332d9b641ea65bf48f07
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 6fb08157a78bfaee48e0bf919fc5942eadf0f287
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674860"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771351"
 ---
 # <a name="what-is-docker"></a>Docker란?
 
@@ -37,7 +37,7 @@ Docker 이미지 컨테이너는 Linux 및 Windows에서 기본적으로 실행�
 
 | 가상 컴퓨터 | Docker 컨테이너 |
 | -----------------| ------------------|
-|![VM의 경우 기본적으로 호스트 서버에 세 가지 기본 계층인 인프라, 호스트 운영 체제 및 하이퍼바이저가 있고, 이들 계층 위에서 각 VM에는 고유한 OS 및 모든 필요한 라이브러리가 포함됩니다.](./media/image3.png)|![Docker의 경우 호스트 서버에는 인프라와 OS만 있고, 그 위에는 컨테이너를 격리 상태로 유지하지만 기본 OS 서비스를 공유하는 컨테이너 엔진이 있습니다.](./media/image4.png)|
+|![VM의 경우 기본적으로 호스트 서버에 세 가지 기본 계층인 인프라, 호스트 운영 체제 및 하이퍼바이저가 있고, 이들 계층 위에서 각 VM에는 고유한 OS 및 모든 필요한 라이브러리가 포함됩니다.](./media/image3.png)|![Docker의 경우 호스트 서버에는 인프라와 OS만 있고, 그 위에 컨테이너를 격리 상태로 유지하지만, 기본 OS 서비스를 공유하는 컨테이너 엔진이 있습니다.](./media/image4.png)|
 |가상 머신에는 애플리케이션, 필수 라이브러리 또는 바이너리 및 전체 게스트 운영 체제가 포함됩니다. 전체 가상화를 위해서는 컨테이너화보다 더 많은 리소스가 필요합니다. | 컨테이너에는 애플리케이션과 모든 종속성이 포함됩니다. 그러나 컨테이너는 호스트 운영 체제의 사용자 공간에 있는 격리 프로세스로 실행 중인 다른 컨테이너와 OS 커널을 공유합니다. 단, 각 컨테이너가 컨테이너별로 특수 가상 머신 내부에서 실행되는 Hyper-V 컨테이너는 예외입니다. |
 
 **그림 2-3**. 기존의 가상 머신과 Docker 컨테이너 비교

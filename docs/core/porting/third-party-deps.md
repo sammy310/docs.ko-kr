@@ -2,28 +2,40 @@
 title: .NET Core로 코드를 포팅하기 위해 종속성 분석
 description: .NET Framework에서 .NET Core로 프로젝트를 포팅하기 위해 외부 종속성을 분석하는 방법을 알아봅니다.
 author: cartermp
-ms.date: 12/07/2018
+ms.date: 10/22/2019
 ms.custom: seodec18
-ms.openlocfilehash: 36d1c1d2090a0fb9e6f48fe519d15897579df2d5
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 5fa5a20e9a2b5427401835a0c1c6e1845d86c3ef
+ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72521480"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798786"
 ---
 # <a name="analyze-your-dependencies-to-port-code-to-net-core"></a>.NET Core로 코드를 포팅하기 위해 종속성 분석
 
-코드를 .NET Core 또는 .NET Standard로 포팅하려면 종속성을 파악해야 합니다. 외부 종속성은 프로젝트에서 참조하지만 빌드하지 않는 [NuGet 패키지](#analyze-referenced-nuget-packages-in-your-projects) 또는 [DLL](#analyze-dependencies-that-arent-nuget-packages)입니다. 각 종속성을 평가하고 .NET Core와 호환되지 않는 종속성에 대한 대체 계획을 개발합니다. 종속성이 .NET Core와 호환되는지 확인하는 방법은 다음과 같습니다.
+코드를 .NET Core 또는 .NET Standard로 포팅하려면 종속성을 파악해야 합니다. 외부 종속성은 프로젝트에서 참조하지만 직접 빌드하지 않는 NuGet 패키지 또는 `.dll`입니다.
 
-## <a name="analyze-referenced-nuget-packages-in-your-projects"></a>프로젝트에서 참조된 NuGet 패키지 분석
+## <a name="migrate-your-nuget-packages-to-packagereference"></a>NuGet 패키지를 `PackageReference`로 마이그레이션
 
-프로젝트에서 NuGet 패키지를 참조하는 경우 .NET Core와 호환되는지 확인해야 합니다.
-여기에는 두 가지 방법이 있습니다.
+.NET Core는 [PackageReference](/nuget/consume-packages/package-references-in-project-files)를 사용하여 패키지 종속성을 지정합니다. [packages.config](/nuget/reference/packages-config)를 사용하여 프로젝트의 패키지를 지정하는 경우, `packages.config`가 .NET Core에서 지원되지 않으므로 `PackageReference` 형식으로 변환해야 합니다.
 
-- [NuGet 패키지 탐색기 앱 사용](#analyze-nuget-packages-using-nuget-package-explorer)
-- [nuget.org 사이트 사용](#analyze-nuget-packages-using-nugetorg)
+마이그레이션 방법에 대한 자세한 내용은 [packages.config에서 PackageReference로 마이그레이션](/nuget/reference/migrate-packages-config-to-package-reference) 문서를 참조하세요.
 
-패키지를 분석한 후 .NET Core 및 대상 .NET Framework와 호환되지 않는 경우 [.NET Framework 호환 모드](#net-framework-compatibility-mode)가 이식 프로세스에 도움이 될 수 있는지 확인할 수 있습니다.
+## <a name="upgrade-your-nuget-packages"></a>NuGet 패키지 업그레이드
+
+프로젝트를 `PackageReference` 형식으로 마이그레이션한 후 패키지가 .NET Core와 호환되는지 확인해야 합니다.
+
+먼저 패키지를 가능한 최신 버전으로 업그레이드합니다. Visual Studio의 NuGet 패키지 관리자 UI를 사용하면 됩니다. 최신 버전의 패키지 종속성은 .NET Core와 이미 호환될 가능성이 큽니다.
+
+## <a name="analyze-your-package-dependencies"></a>패키지 종속성 분석
+
+변환 및 업그레이드된 패키지 종속성이 .NET Core에서 작동하는지 확인하지 않은 경우 다음과 같은 몇 가지 방법으로 확인할 수 있습니다.
+
+### <a name="analyze-nuget-packages-using-nugetorg"></a>nuget.org를 사용하여 NuGet 패키지 분석
+
+패키지 페이지의 **종속성** 섹션 아래에 있는 [nuget.org](https://www.nuget.org/)에서 각 패키지가 지원하는 TFM(대상 프레임워크 모니커)을 확인할 수 있습니다.
+
+사이트를 사용하여 호환성을 쉽게 확인할 수 있지만, 일부 패키지의 **종속성** 정보는 사이트에 제공되지 않습니다.
 
 ### <a name="analyze-nuget-packages-using-nuget-package-explorer"></a>NuGet 패키지 탐색기를 사용하여 NuGet 패키지 분석
 
@@ -37,27 +49,7 @@ NuGet 패키지 폴더를 검사하는 가장 쉬운 방법은 [NuGet 패키지 
 4. 검색 결과에서 패키지 이름을 선택하고 **열기**를 클릭합니다.
 5. 오른쪽에서 *lib* 폴더를 확장하고 폴더 이름을 찾습니다.
 
-다음 이름 중 하나를 사용하여 폴더를 찾습니다.
-
-```
-netstandard1.0
-netstandard1.1
-netstandard1.2
-netstandard1.3
-netstandard1.4
-netstandard1.5
-netstandard1.6
-netstandard2.0
-netcoreapp1.0
-netcoreapp1.1
-netcoreapp2.0
-netcoreapp2.1
-netcoreapp2.2
-portable-net45-win8
-portable-win8-wpa8
-portable-net451-win81
-portable-net45-win8-wpa8-wpa81
-```
+`netstandardX.Y` 또는 `netcoreappX.Y` 패턴 중 하나를 사용하는 이름을 가진 폴더를 찾습니다.
 
 이러한 값은 [.NET Standard](../../standard/net-standard.md), .NET Core의 버전에 매핑되는 [TFM(대상 프레임워크 모니커)](../../standard/frameworks.md) 및 .NET Core와 호환되는 기존의 PCL(이식 가능한 클래스 라이브러리) 프로필입니다.
 
@@ -65,15 +57,9 @@ portable-net45-win8-wpa8-wpa81
 > 패키지에서 지원하는 TFM을 살펴볼 때 호환되는 동안 `netcoreapp*`은 .NET Standard 프로젝트용이 아닌 .NET Core 프로젝트용입니다.
 > `netstandard*`가 아닌 `netcoreapp*`만을 대상으로 하는 라이브러리는 다른 .NET Core 앱에서만 사용할 수 있습니다.
 
-### <a name="analyze-nuget-packages-using-nugetorg"></a>nuget.org를 사용하여 NuGet 패키지 분석
+## <a name="net-framework-compatibility-mode"></a>.NET Framework 호환 모드
 
-또는 패키지 페이지의 **종속성** 섹션 아래의 [nuget.org](https://www.nuget.org/)에서 패키지가 지원하는 TFM을 확인할 수 있습니다.
-
-사이트를 사용하는 것이 호환성을 확인하는 쉬운 방법이지만 **종속성** 정보를 모든 패키지에 대한 사이트에서 사용할 수 없습니다.
-
-### <a name="net-framework-compatibility-mode"></a>.NET Framework 호환 모드
-
-NuGet 패키지를 분석한 후 대부분의 NuGet 패키지와 마찬가지로 .NET Framework만 대상으로 하는 것을 확인할 수 있습니다.
+NuGet 패키지를 분석한 후 .NET Framework만 대상으로 하는 것이 확인되는 경우도 있습니다.
 
 .NET Standard 2.0부터 .NET Framework 호환성 모드가 도입되었습니다. 이 호환 모드에서는 .NET Standard 및 .NET Core 프로젝트에서 .NET Framework 라이브러리를 참조할 수 있습니다. .NET Framework 라이브러리 참조는 라이브러리가 WPF(Windows Presentation Foundation) API를 사용하는 것처럼 모든 프로젝트에 대해 작동하지 않지만 많은 이식 시나리오를 차단 해제합니다.
 
@@ -92,12 +78,6 @@ NuGet 패키지를 분석한 후 대부분의 NuGet 패키지와 마찬가지로
 ```
 
 Visual Studio에서 컴파일러 경고를 제거하는 방법에 대한 자세한 내용은 [NuGet 패키지에 대한 경고 표시 안 함](/visualstudio/ide/how-to-suppress-compiler-warnings#suppress-warnings-for-nuget-packages)을 참조하세요.
-
-## <a name="port-your-packages-to-packagereference"></a>`PackageReference`로 패키지 포팅
-
-.NET Core는 [PackageReference](/nuget/consume-packages/package-references-in-project-files)를 사용하여 패키지 종속성을 지정합니다. [packages.config](/nuget/reference/packages-config)를 사용하여 패키지를 지정하는 경우 `PackageReference`로 변환해야 합니다.
-
-[packages.config에서 PackageReference로 마이그레이션](/nuget/reference/migrate-packages-config-to-package-reference)에서 자세히 알아볼 수 있습니다.
 
 ## <a name="what-to-do-when-your-nuget-package-dependency-doesnt-run-on-net-core"></a>NuGet 패키지 종속성이 .NET Core에서 실행되지 않는 경우 수행할 작업
 

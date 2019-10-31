@@ -6,18 +6,18 @@ ms.date: 04/12/2018
 ms.technology: dotnet-standard
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 476b6047fe9872f13f2f0298fb331eb7d888a73d
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: f69dfe77e5d485c4c7ffcbf2b98657eab87d452d
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117858"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775227"
 ---
 # <a name="whats-new-in-the-net-standard"></a>.NET Standard의 새로운 기능
 
 .NET Standard는 해당 버전의 표준에 부합하는 .NET 구현체에서 사용할 수 있어야 하는 버전이 지정된 API 집합을 정의합니다. .NET Standard는 라이브러리 개발자에서 대상으로 지정됩니다. .NET Standard 버전을 대상으로 하는 라이브러리는 Standard의 해당 버전을 지원하는 모든 .NET Framework, .NET Core 또는 Xamarin 구현체에서 사용할 수 있습니다.
 
-.NET Standard의 최신 버전은 2.0입니다. 이 버전은 .NET Core 워크로드가 설치된 Visual Studio 2017 버전 15.3은 물론 .NET Core 2.0 SDK에 포함되어 있습니다.
+.NET Standard의 최신 버전은 2.0입니다. 이 버전은 .NET Core 워크로드가 설치된 Visual Studio 2017 버전 15.3과 .NET Core 2.0 SDK에 포함되어 있습니다.
 
 ## <a name="supported-net-implementations"></a>지원되는 .NET 구현체
 
@@ -61,7 +61,7 @@ ms.locfileid: "71117858"
 
 ### <a name="support-for-visual-basic"></a>Visual Basic에 대한 지원
 
-이제 Visual Basic에서 .NET Standard 라이브러리를 개발할 수 있습니다. .NET Core 워크로드가 설치된 Visual Studio 2017 버전 15.3 이상을 사용하는 Visual Basic 개발자의 경우 이제 Visual Studio에는 .NET Standard 클래스 라이브러리 템플릿이 포함됩니다. 다른 개발 도구와 환경을 사용하는 Visual Basic 개발자의 경우 [dotnet new](../../core/tools/dotnet-new.md) 명령을 사용하여 .NET Standard 라이브러리 프로젝트를 만들 수 있습니다. 자세한 내용은 [.NET Standard 라이브러리에 대한 도구 지원](#tooling-support-for-net-standard-libraries)을 참조하세요.
+이제 Visual Basic에서 .NET Standard 라이브러리를 개발할 수 있습니다. .NET Core 워크로드가 설치된 Visual Studio 2017 버전 15.3 이상을 사용하는 Visual Basic 개발자의 경우 Visual Studio에 .NET Standard 클래스 라이브러리 템플릿이 포함되어 있습니다. 다른 개발 도구와 환경을 사용하는 Visual Basic 개발자의 경우 [dotnet new](../../core/tools/dotnet-new.md) 명령을 사용하여 .NET Standard 라이브러리 프로젝트를 만들 수 있습니다. 자세한 내용은 [.NET Standard 라이브러리에 대한 도구 지원](#tooling-support-for-net-standard-libraries)을 참조하세요.
 
 ### <a name="tooling-support-for-net-standard-libraries"></a>.NET Standard 라이브러리의 도구 지원
 

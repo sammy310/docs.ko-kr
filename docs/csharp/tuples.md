@@ -3,12 +3,12 @@ title: 튜플 형식 - C# 가이드
 description: C#의 명명되지 않은 튜플 형식과 명명된 튜플 형식에 대한 자세한 정보
 ms.date: 05/15/2018
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: 7e5df8c20dbbddbe84a56883a6d2a027f32d8ff7
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 3c8d4acfe231be63e1d70d467cbb72ecfa4f767d
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319751"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774066"
 ---
 # <a name="c-tuple-types"></a>C# 튜플 형식
 
@@ -77,7 +77,7 @@ C# 7.1부터 튜플에 대한 필드 이름은 튜플을 초기화하는 데 사
 
 후보 필드 이름이 튜플 필드에 프로젝션되지 않는 두 가지 경우가 있습니다.
 
-1. 후보 이름이 예약된 튜플 이름인 경우. `Item3`, `ToString` 또는 `Rest`를 예로 들 수 있습니다.
+1. 후보 이름이 예약된 튜플 이름인 경우. 예를 들면 `Item3`, `ToString` 또는 `Rest`입니다.
 1. 후보 이름이 명시적이든 암시적이든 다른 튜플 필드 이름과 중복되는 경우.
 
 이러한 경우는 모호성을 방지합니다. 이러한 이름은 튜플의 필드에 대한 필드 이름으로 사용될 경우 모호성을 일으킬 수 있습니다. 두 경우 모두 컴파일 시간 오류가 발생하지 않습니다. 대신, 프로젝션된 이름이 없는 요소에는 프로젝션된 의미 체계 이름이 없습니다.  다음 예제에서는 이러한 경우를 보여 줍니다.

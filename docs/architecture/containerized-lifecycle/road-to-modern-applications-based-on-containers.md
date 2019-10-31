@@ -2,12 +2,12 @@
 title: 컨테이너에 기반한 최신 애플리케이션으로 전환
 description: Docker, 컨테이너 및 마이크로서비스 아키텍처는 모든 상황에 맞는 솔루션이 아닙니다. 여기서 결정하는 데 도움이 되는 일부 참조를 찾을 수 있습니다.
 ms.date: 11/23/2018
-ms.openlocfilehash: e9d2ab121819b5769a07de299c37ad5ddd589f39
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 0bc1adcd89c19b512032ee8fdf1a6e28cea96ee8
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673480"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72770700"
 ---
 # <a name="road-to-modern-applications-based-on-containers"></a>컨테이너에 기반한 최신 애플리케이션으로 전환
 
@@ -15,7 +15,7 @@ ms.locfileid: "68673480"
 
 프로젝트를 시작하기 전에 개발 팀, 예산 또는 인프라에 미치는 영향을 평가하기 위해 새로운 개발 패러다임의 채택은 주의 깊게 이루어져야 합니다.
 
-Microsoft는 사용자가 정보에 입각한 결정을 내리고, 새 애플리케이션의 성공적인 개발, 배포 및 운영을 통해 팀을 안내하는 데 도움이 되는 다양한 지침, 샘플 애플리케이션 및 eBook 모음을 만들어 왔습니다.
+Microsoft는 정보를 토대로 결정할 수 있도록 지원하고 팀이 새 애플리케이션을 성공적으로 개발, 배포 및 운영할 수 있도록 안내하는 다양한 지침, 샘플 애플리케이션 및 eBook 모음을 작성했습니다.
 
 이 책은 컨테이너를 기반으로 하는 새로운 최신 애플리케이션을 개발하는 과정에서 직면하게 되는 다양한 요구 사항과 과제를 다루는 Microsoft의 가이드 제품군에 속합니다.
 
