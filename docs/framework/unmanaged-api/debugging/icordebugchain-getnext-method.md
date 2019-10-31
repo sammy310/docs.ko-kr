@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8d9744a5-e08b-4ab2-9855-5c22711cc1e6
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 990786fbb3cc853f7f399d60fa686bb5d60018af
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 132734dfb6ba9d70836638ab67564fc215e9bc40
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745704"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73192123"
 ---
 # <a name="icordebugchaingetnext-method"></a>ICorDebugChain::GetNext 메서드
 스레드에 대 한 다음 프레임 체인을 가져옵니다.  
@@ -37,10 +35,10 @@ HRESULT GetNext (
   
 ## <a name="parameters"></a>매개 변수  
  `ppChain`  
- [out] 다음 스레드 프레임 체인을 나타내는 ICorDebugChain 개체의 주소에 대 한 포인터입니다. 이 체인은 마지막 체인 경우 `ppChain` null입니다.  
+ 제한이 스레드에 대 한 다음 프레임 체인을 나타내는 ICorDebugChain 개체의 주소에 대 한 포인터입니다. 이 체인이 마지막 체인이 면 `ppChain`은 null입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   

@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC31019
 ms.assetid: 0845b245-11bb-46fd-95ca-f6cef3c318ef
-ms.openlocfilehash: e0a00c4f57e45d65ff46fb9487a603a67d5a9e5c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 087735722fcd4dd789e25aacf6eeefffb490dac5
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64620591"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73198196"
 ---
-# <a name="unable-to-write-to-output-file-filename-error"></a>출력 파일에 쓸 수 없습니다. '\<파일 이름 >': \<오류 >
+# <a name="unable-to-write-to-output-file-filename-error"></a>출력 파일 '\<filename > '에 쓸 수 없습니다. \<오류 >
 파일을 만드는 동안 문제가 발생했습니다.  
   
  출력 파일을 쓰기 위해 열 수 없습니다. 파일 또는 파일이 포함된 폴더가 다른 프로세스에서 단독으로 사용되도록 열려 있거나 읽기 전용 특성이 설정되어 있을 수 있습니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "64620591"
   
 3. 오류가 계속 발생하면 컴퓨터를 다시 시작합니다.  
   
-4. 오류가 다시 발생 하는 경우에 Visual Basic을 다시 설치 하십시오.  
+4. 오류가 다시 발생 하면 Visual Basic를 다시 설치 합니다.  
   
 5. 다시 설치 후에도 오류가 계속 발생하면 Microsoft 기술 지원 서비스에 알립니다.  
   
@@ -45,18 +45,18 @@ ms.locfileid: "64620591"
   
 1. 원하는 폴더를 엽니다.  
   
-2. 클릭 합니다 **뷰** 아이콘 선택 **세부 정보**합니다.  
+2. **보기** 아이콘을 클릭 하 고 **세부 정보**를 선택 합니다.  
   
-3. 선택한 열 머리글을 마우스 오른쪽 단추로 클릭 **특성** 드롭 다운 목록에서.  
+3. 열 머리글을 마우스 오른쪽 단추로 클릭 하 고 드롭다운 목록에서 **특성** 을 선택 합니다.  
   
 ### <a name="to-change-the-attributes-of-a-file-or-folder"></a>파일이나 폴더의 특성을 변경하려면  
   
-1. **파일 탐색기**파일 또는 폴더를 마우스 오른쪽 단추로 클릭 하 고 선택 **속성**합니다.  
+1. **파일 탐색기**에서 파일 또는 폴더를 마우스 오른쪽 단추로 클릭 하 고 **속성**을 선택 합니다.  
   
-2. 에 **특성** 섹션을 **일반** 탭을 선택 취소를 **읽기 전용** 상자.  
+2. **일반** 탭의 **특성** 섹션에서 **읽기 전용** 상자의 선택을 취소 합니다.  
   
 3. **확인**을 누릅니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
-- [의견 보내기](/visualstudio/ide/talk-to-us)
+- [의견 보내기](/visualstudio/ide/feedback-options)

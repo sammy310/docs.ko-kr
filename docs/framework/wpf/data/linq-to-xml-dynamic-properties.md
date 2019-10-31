@@ -2,12 +2,12 @@
 title: LINQ to XML 동적 속성 참조
 ms.date: 10/22/2019
 ms.topic: reference
-ms.openlocfilehash: ca3684716f9b562d0e6a006c26730a1d1a28f8b1
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 48b51e92eb78786b2cc189e3e7daa00875b41585
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72921217"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197044"
 ---
 # <a name="linq-to-xml-dynamic-properties"></a>LINQ to XML 동적 속성
 
@@ -21,7 +21,7 @@ ms.locfileid: "72921217"
 
 - 인덱서 형식으로 해석되는 <xref:System.Xml.Linq.XElement>의 [Elements](elements-xelement-dynamic-property.md) 및 [Descendants](descendants-xelement-dynamic-property.md) 속성과 같은 인덱싱된 값 - 인덱서 형식을 원하는 값이나 컬렉션으로 확인하려면 확장된 이름 매개 변수가 인덱서 형식에 전달되어야 합니다.
 
-<xref:System.Collections.Generic.IEnumerable%601> 형식의 인덱싱된 값을 반환하는 모든 동적 속성은 지연된 실행을 사용합니다. 지연된 실행에 대한 자세한 내용은 [LINQ 쿼리 소개(C#)](/dotnet/csharp/programming-guide/concepts/linq/introduction-to-linq-queries)를 참조하세요.
+<xref:System.Collections.Generic.IEnumerable%601> 형식의 인덱싱된 값을 반환하는 모든 동적 속성은 지연된 실행을 사용합니다. 지연된 실행에 대한 자세한 내용은 [LINQ 쿼리 소개(C#)](../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)를 참조하세요.
 
 ## <a name="reference"></a>참고
 
@@ -33,4 +33,4 @@ ms.locfileid: "72921217"
 
 - [LINQ to XML로 WPF 데이터 바인딩](wpf-data-binding-with-linq-to-xml-overview.md)
 - [LINQ to XML로 WPF 데이터 바인딩 개요](wpf-data-binding-with-linq-to-xml-overview.md)
-- [LINQ 쿼리 소개(C#)](/dotnet/csharp/programming-guide/concepts/linq/introduction-to-linq-queries)
+- [LINQ 쿼리 소개(C#)](../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)

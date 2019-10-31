@@ -11,18 +11,18 @@ ms.assetid: 2e92d8e8-f0e4-4df7-9f07-2acf35cd798c
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.openlocfilehash: 5e5112aa0b025648ce68a93f0f3da026ec99fe89
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: fc6f988d6ffd270eba4abe277ca34fa2eeec56fd
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69987142"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197432"
 ---
 # <a name="walkthrough-create-new-wpf-content-on-windows-forms-at-design-time"></a>연습: 디자인 타임에 Windows Forms에서 새 WPF 콘텐츠 만들기
 
 이 문서에서는 Windows Forms 기반 응용 프로그램에서 사용할 WPF (Windows Presentation Foundation) 컨트롤을 만드는 방법을 보여 줍니다.
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>Prerequisites
 
 이 연습을 완료하려면 Visual Studio가 필요합니다.
 
@@ -56,9 +56,9 @@ Visual Studio를 열고 Visual Basic 또는 시각적 개체 C# `HostingWpf`에 
 
 2. 디자인 뷰에서 `UserControl1`이 선택되었는지 확인합니다.
 
-3. **속성** 창에서 <xref:System.Windows.FrameworkElement.Width%2A> 및 <xref:System.Windows.FrameworkElement.Height%2A> 속성의 값을 **200**로 설정 합니다.
+3. **속성** 창에서 <xref:System.Windows.FrameworkElement.Width%2A> 값을 설정 하 고 <xref:System.Windows.FrameworkElement.Height%2A> 속성을 **200**으로 설정 합니다.
 
-4. **도구 상자**에서 컨트롤을 <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType> 디자인 화면으로 끌어 옵니다.
+4. **도구 상자**에서 <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType> 컨트롤을 디자인 화면으로 끌어 옵니다.
 
 5. **속성** 창에서 <xref:System.Windows.Controls.TextBox.Text%2A> 속성의 값을 **Hosted Content**로 설정 합니다.
 
@@ -69,7 +69,7 @@ Visual Studio를 열고 Visual Basic 또는 시각적 개체 C# `HostingWpf`에 
 
 ## <a name="add-a-wpf-control-to-a-windows-form"></a>Windows Form에 WPF 컨트롤 추가
 
-폼에서 새 WPF 컨트롤을 사용할 준비가 되었습니다. Windows Forms는 <xref:System.Windows.Forms.Integration.ElementHost> 컨트롤을 사용 하 여 WPF 콘텐츠를 호스팅합니다.
+폼에서 새 WPF 컨트롤을 사용할 준비가 되었습니다. Windows Forms은 <xref:System.Windows.Forms.Integration.ElementHost> 컨트롤을 사용 하 여 WPF 콘텐츠를 호스팅합니다.
 
 Windows Form에 WPF 컨트롤을 추가 하려면 다음을 수행 합니다.
 
@@ -81,7 +81,7 @@ Windows Form에 WPF 컨트롤을 추가 하려면 다음을 수행 합니다.
 
     - WPF 컨트롤을 호스트할 폼에 <xref:System.Windows.Forms.Integration.ElementHost> 컨트롤이 자동으로 만들어집니다.
 
-    - 컨트롤 <xref:System.Windows.Forms.Integration.ElementHost> `elementHost1` 의 이름이이 고 **속성** 창에서 해당 <xref:System.Windows.Forms.Integration.ElementHost.Child%2A> 속성이 **UserControl1**로 설정 된 것을 볼 수 있습니다.
+    - <xref:System.Windows.Forms.Integration.ElementHost> 컨트롤의 이름은 `elementHost1` 하 고 **속성** 창에서 <xref:System.Windows.Forms.Integration.ElementHost.Child%2A> 속성이 **UserControl1**로 설정 된 것을 볼 수 있습니다.
 
     - WPF 어셈블리에 대한 참조가 프로젝트에 추가됩니다.
 
@@ -89,22 +89,22 @@ Windows Form에 WPF 컨트롤을 추가 하려면 다음을 수행 합니다.
 
 4. **ElementHost Tasks** 스마트 태그 패널에서 **부모 컨테이너에서 도킹**을 선택 합니다.
 
-5. **F5** 키를 눌러 응용 프로그램을 빌드하고 실행합니다.
+5. **F5** 키를 눌러 애플리케이션을 빌드하고 실행합니다.
 
 ## <a name="next-steps"></a>다음 단계
 
 Windows Forms와 WPF는 서로 다른 기술이지만 긴밀하게 상호 운용하도록 설계되었습니다. 응용 프로그램에서 다양 한 모양과 동작을 제공 하려면 다음을 시도 합니다.
 
-- WPF 페이지에서 Windows Forms 컨트롤을 호스트합니다. 자세한 내용은 [연습: WPF](../../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)에서 Windows Forms 컨트롤 호스팅.
+- WPF 페이지에서 Windows Forms 컨트롤을 호스트합니다. 자세한 내용은 [연습: WPF에서 Windows Forms 컨트롤 호스팅](../../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)을 참조 하세요.
 
-- WPF 콘텐츠에 Windows Forms 시각적 스타일을 적용합니다. 자세한 내용은 [방법: 하이브리드 응용 프로그램](../../wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md)에서 비주얼 스타일을 사용 하도록 설정 합니다.
+- WPF 콘텐츠에 Windows Forms 시각적 스타일을 적용합니다. 자세한 내용은 [방법: 혼합 애플리케이션에서 비주얼 스타일 사용](../../wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md)을 참조하세요.
 
-- WPF 콘텐츠의 스타일을 변경합니다. 자세한 내용은 [연습: WPF 콘텐츠](walkthrough-styling-wpf-content.md)스타일 지정
+- WPF 콘텐츠의 스타일을 변경합니다. 자세한 내용은 [연습: WPF 콘텐츠 스타일](walkthrough-styling-wpf-content.md)지정을 참조 하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [마이그레이션 및 상호 운용성](../../wpf/advanced/migration-and-interoperability.md)
 - [WPF 컨트롤 사용](using-wpf-controls.md)
-- [Visual Studio에서 XAML 디자인](/visualstudio/designers/designing-xaml-in-visual-studio)
+- [Visual Studio에서 XAML 디자인](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)

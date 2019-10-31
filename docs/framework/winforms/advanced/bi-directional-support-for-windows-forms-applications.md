@@ -7,18 +7,18 @@ helpviewer_keywords:
 - localization [Windows Forms], bi-directional support in Windows
 - bi-directional language support [Windows Forms], Windows applications
 - Windows Forms, bi-directional support
-ms.openlocfilehash: 3bf90636bf1fc4b20b23c61fdd90033b3da35ddd
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0b99dcdb9549a2319efe8a78eb4bca33f40f2cb0
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141192"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197497"
 ---
 # <a name="bi-directional-support-for-windows-forms-applications"></a>Windows Forms 애플리케이션에 대한 양방향 지원
 Visual Studio를 사용 하 여 아랍어 및 히브리어와 같은 양방향 (오른쪽에서 왼쪽) 언어를 지 원하는 Windows 기반 응용 프로그램을 만들 수 있습니다. 여기에는 표준 폼, 대화 상자, MDI 폼 및 이러한 폼에서 사용할 수 있는 모든 컨트롤(즉, <xref:System.Windows.Forms.Control> 네임스페이스의 모든 개체)이 포함됩니다.
 
 ## <a name="culture-support"></a>문화권 지원
- 문화권 및 UI 문화권 설정은 애플리케이션에서 날짜, 시간, 통화 및 기타 정보를 사용하는 방법을 결정합니다. 양방향 언어에 대한 문화권 및 UI 문화권 지원은 다른 언어의 경우와 동일합니다. 자세한 내용은 [전역 Windows forms 및 web forms을 위한 문화권 관련 클래스](/visualstudio/ide/culture-specific-classes-for-global-windows-forms-and-web-forms)를 참조 하세요.
+ 문화권 및 UI 문화권 설정은 애플리케이션에서 날짜, 시간, 통화 및 기타 정보를 사용하는 방법을 결정합니다. 양방향 언어에 대한 문화권 및 UI 문화권 지원은 다른 언어의 경우와 동일합니다. 자세한 내용은 [전역 Windows forms 및 web forms을 위한 문화권 관련 클래스](/visualstudio/ide/globalizing-and-localizing-applications)를 참조 하세요.
 
 ## <a name="righttoleft-and-righttoleftlayout-properties"></a>RightToLeft 및 RightToLeftLayout 속성
  폼이 파생되는 기본 <xref:System.Windows.Forms.Control> 클래스는 폼과 해당 컨트롤의 읽기 순서를 변경하기 위해 설정할 수 있는 <xref:System.Windows.Forms.Control.RightToLeft%2A> 속성을 포함합니다. 폼의 <xref:System.Windows.Forms.Control.RightToLeft%2A> 속성을 설정하는 경우 기본적으로 폼의 컨트롤이 이 설정을 상속합니다. 그러나 대부분의 컨트롤에서 <xref:System.Windows.Forms.Control.RightToLeft%2A> 속성을 개별적으로 설정할 수도 있습니다. [방법: 전역화를 위해 Windows Forms에서 오른쪽에서 왼쪽으로 텍스트 표시](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/7d3337xw(v=vs.100))를 참조하세요.

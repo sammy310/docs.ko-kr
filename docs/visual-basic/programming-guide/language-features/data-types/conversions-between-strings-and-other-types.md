@@ -9,22 +9,22 @@ helpviewer_keywords:
 - type conversion [Visual Basic], string
 - regional options
 ms.assetid: c3a99596-f09a-44a5-81dd-1b89a094f1df
-ms.openlocfilehash: e1530c1772808249546b453294fc848c31c1e581
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 06dabbb5d5dfbfb545f01afb157fd532ca0551df
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582934"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197341"
 ---
 # <a name="conversions-between-strings-and-other-types-visual-basic"></a>문자열과 다른 형식 사이의 변환(Visual Basic)
 숫자, `Boolean` 또는 날짜/시간 값을 `String`로 변환할 수 있습니다. 문자열의 내용이 대상 데이터 형식의 유효한 값으로 해석 될 수 있는 경우 문자열 값에서 숫자, `Boolean` 또는 `Date`으로 반대 방향으로 변환할 수도 있습니다. 사용할 수 없는 경우 런타임 오류가 발생 합니다.  
   
- 어느 방향에서 든 이러한 모든 할당에 대 한 변환은 축소 변환입니다. 형식 변환 키워드 (`CBool`, `CByte`, `CDate`, `CDbl`, `CDec`, `CInt`, `CLng`, `CSByte`, `CShort`, `CSng`, 0, 1를 사용 해야 2 , 3 및 4). @No__t_0 및 <xref:Microsoft.VisualBasic.Conversion.Val%2A> 함수를 통해 문자열과 숫자 간의 변환을 추가로 제어할 수 있습니다.  
+ 어느 방향에서 든 이러한 모든 할당에 대 한 변환은 축소 변환입니다. 형식 변환 키워드 (`CBool`, `CByte`, `CDate`, `CDbl`, `CDec`, `CInt`, `CLng`, `CSByte`, `CShort`, `CSng`, 0, 1를 사용 해야 2 , 3 및 4). <xref:Microsoft.VisualBasic.Strings.Format%2A> 및 <xref:Microsoft.VisualBasic.Conversion.Val%2A> 함수를 통해 문자열과 숫자 간의 변환을 추가로 제어할 수 있습니다.  
   
  클래스 또는 구조체를 정의한 경우 `String`와 클래스 또는 구조체의 형식 간에 형식 변환 연산자를 정의할 수 있습니다. 자세한 내용은 [How to: Define a Conversion Operator](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)을 참조하세요.  
   
 ## <a name="conversion-of-numbers-to-strings"></a>숫자를 문자열로 변환  
- @No__t_0 함수를 사용 하 여 숫자를 서식이 지정 된 문자열로 변환할 수 있습니다. 여기에는 적절 한 숫자 뿐만 아니라 통화 기호 (예: `$`), 천 단위 구분 기호 또는 *자릿수 구분 기호* (예: @no)와 같은 기호 서식 지정도 포함 될 수 있습니다. __t_3) 및 소수 구분 기호 (예: `.`). `Format`은 Windows **제어판**에 지정 된 **국가별 옵션** 설정에 따라 적절 한 기호를 자동으로 사용 합니다.  
+ `Format` 함수를 사용 하 여 숫자를 서식이 지정 된 문자열로 변환할 수 있습니다. 여기에는 해당 숫자 뿐만 아니라 통화 기호 (예: `$`), 천 단위 구분 기호 또는 *자릿수 구분 기호* (예:)와 같은 기호 서식 지정도 포함 될 수 있습니다. `,`)와 소수 구분 기호 (예: `.`). `Format`은 Windows **제어판**에 지정 된 **국가별 옵션** 설정에 따라 적절 한 기호를 자동으로 사용 합니다.  
   
  다음 예제에 나와 있는 것 처럼 연결 (`&`) 연산자는 숫자를 문자열로 암시적으로 변환할 수 있습니다.  
   
@@ -34,7 +34,7 @@ Str = "The total count is " & count
 ```  
   
 ## <a name="conversion-of-strings-to-numbers"></a>문자열을 숫자로 변환  
- @No__t_0 함수를 사용 하 여 문자열의 숫자를 숫자로 명시적으로 변환할 수 있습니다. `Val` 숫자, 공백, 탭, 줄 바꿈 또는 마침표 이외의 문자를 발견할 때까지 문자열을 읽습니다. "& O" 및 "& H" 시퀀스는 번호 시스템의 밑수를 변경 하 고 검색을 종료 합니다. 읽기를 중지할 때까지 `Val`는 모든 적절 한 문자를 숫자 값으로 변환 합니다. 예를 들어 다음 문은 `141.825` 값을 반환 합니다.  
+ `Val` 함수를 사용 하 여 문자열의 숫자를 숫자로 명시적으로 변환할 수 있습니다. `Val` 숫자, 공백, 탭, 줄 바꿈 또는 마침표 이외의 문자를 발견할 때까지 문자열을 읽습니다. "& O" 및 "& H" 시퀀스는 번호 시스템의 밑수를 변경 하 고 검색을 종료 합니다. 읽기를 중지할 때까지 `Val`는 모든 적절 한 문자를 숫자 값으로 변환 합니다. 예를 들어 다음 문은 `141.825` 값을 반환 합니다.  
   
  `Val("   14   1.825 miles")`  
   
@@ -49,4 +49,4 @@ Str = "The total count is " & count
 - [배열 규칙](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)
 - [데이터 형식](../../../../visual-basic/language-reference/data-types/index.md)
 - [형식 변환 함수](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [.NET Framework 기반의 국가별 애플리케이션 소개](/visualstudio/ide/introduction-to-international-applications-based-on-the-dotnet-framework)
+- [세계화 및 지역화된 앱 개발](/visualstudio/ide/globalizing-and-localizing-applications)

@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30145
 ms.assetid: 2e7eb2b9-eda6-4bdb-95cc-72c7f0be7528
-ms.openlocfilehash: 530aaee40be92bf72ee4b83b4141108e9b81c8a1
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 5776755a57fbc2b0086b1c9b6cfbb2f2b7eb03fa
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70968862"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197266"
 ---
-# <a name="unable-to-emit-assembly-error-message"></a>어셈블리를 내보낼 수 없습니다 \<. 오류 메시지 >
+# <a name="unable-to-emit-assembly-error-message"></a>어셈블리를 내보낼 수 없습니다. 오류 메시지를 \<
 
 Visual Basic 컴파일러는 어셈블리 링커 (*al.exe*, Alink 라고도 함)를 호출 하 여 매니페스트를 사용 하 여 어셈블리를 생성 하 고, 링커가 어셈블리 만들기의 내보내기 단계에서 오류를 보고 합니다.
 
@@ -59,9 +59,9 @@ Visual Basic 컴파일러는 어셈블리 링커 (*al.exe*, Alink 라고도 함)
 
 6. Visual Studio에서 방금 만든 파일에 .NET 어셈블리 참조를 추가 합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [Al.exe](../../../framework/tools/al-exe-assembly-linker.md)
 - [Sn.exe(강력한 이름 도구)](../../../framework/tools/sn-exe-strong-name-tool.md)
 - [방법: 퍼블릭/프라이빗 키 쌍 만들기](../../../standard/assembly/create-public-private-key-pair.md)
-- [의견 보내기](/visualstudio/ide/talk-to-us)
+- [의견 보내기](/visualstudio/ide/feedback-options)

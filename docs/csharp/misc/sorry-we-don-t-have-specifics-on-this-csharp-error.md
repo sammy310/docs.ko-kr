@@ -677,12 +677,12 @@ f1_keywords:
 helpviewer_keywords:
 - errors [C#], additional information
 ms.assetid: 48320e4a-6e17-45a6-9966-88c6ec89bd2f
-ms.openlocfilehash: f60c2e3caec215c60851e669eabf554617149096
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 68ea00c6f5f97e61adaeb53aed8464cf874814e7
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002171"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73196234"
 ---
 # <a name="sorry-we-dont-have-specifics-on-this-c-error"></a>죄송 합니다. 이 C# 오류에 대한 구체적인 정보가 없습니다.
 
@@ -694,11 +694,11 @@ ms.locfileid: "72002171"
  [스택 오버플로](https://stackoverflow.com/questions/tagged/c%23)  
 시각적 개체 C#에 대 한 질문과 문제에 대 한 질문과 대답 웹 사이트를 제공 합니다.  
 
- 다음 항목도 참조하세요.  
+ 또한 다음을 참조 하세요.  
  [Visual C# 프로그래머를 위한 추가 리소스](../getting-started/additional-resources.md)  
   
 ## <a name="see-also"></a>참조
 
 - [C# 프로그래밍 가이드](../programming-guide/index.md)
 - [C# 참조](../language-reference/index.md)
-- [의견 보내기](/visualstudio/ide/talk-to-us)
+- [의견 보내기](/visualstudio/ide/feedback-options)

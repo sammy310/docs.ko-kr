@@ -10,12 +10,12 @@ helpviewer_keywords:
 - reserved words, Visual Basic keywords
 - Visual Basic, keywords
 ms.assetid: b5a65ef0-c408-4836-afb6-e6828c0771ca
-ms.openlocfilehash: 66eb6984bb6bb93dc7015a9da8c3099637bc2722
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 08444d757ed4186494100e54415e504c1ef117ce
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039392"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197514"
 ---
 # <a name="keywords-visual-basic"></a>키워드(Visual Basic)
 
@@ -53,37 +53,39 @@ ms.locfileid: "73039392"
 |[IsNot](../operators/isnot-operator.md)|[Let](../queries/let-clause.md)|[Lib](../statements/declare-statement.md)|[Like](../operators/like-operator.md)|  
 |[Long](../data-types/long-data-type.md)|[Loop](../statements/do-loop-statement.md)|[Me](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)|[Mod](../operators/mod-operator.md)|  
 |[모듈](../modifiers/module-keyword.md)|[Module 문](../statements/module-statement.md)|[MustInherit](../modifiers/mustinherit.md)|[New](../modifiers/mustoverride.md)|  
-|[MyBase](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)|[MyClass](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)|[Namespace](../statements/namespace-statement.md)|[Narrowing](../modifiers/narrowing.md)|  
-|[New 제약 조건](../statements/type-list.md)|[New 연산자](../operators/new-operator.md)|[다음](../statements/for-next-statement.md)|[Next(Resume에서)](../statements/resume-statement.md)|  
-|[Not](../operators/not-operator.md)|[Nothing](../nothing.md)|[NotInheritable](../modifiers/notinheritable.md)|[NotOverridable](../modifiers/notoverridable.md)|  
-|[개체](../data-types/object-data-type.md)|[Of](../statements/of-clause.md)|[On](../../../visual-basic/misc/on.md)|[Operator](../statements/operator-statement.md)|  
-|[옵션](../statements/option-keyword-statement.md)|[Optional](../modifiers/optional.md)|[Or](../operators/or-operator.md)|[OrElse](../operators/orelse-operator.md)|  
-|[Out(제네릭 한정자)](../modifiers/out-generic-modifier.md)|[오버로드](../modifiers/overloads.md)|[재정의 가능](../modifiers/overridable.md)|[재정의](../modifiers/overrides.md)|  
-|[ParamArray](../modifiers/paramarray.md)|[부분](../modifiers/partial.md)|[전용](../modifiers/private.md)|[Property](../statements/property-statement.md)|  
-|[보호됨](../modifiers/protected.md)|[Public](../modifiers/public.md)|[RaiseEvent](../statements/raiseevent-statement.md)|[ReadOnly](../modifiers/readonly.md)|  
-|[ReDim](../statements/redim-statement.md)|[REM](../statements/rem-statement.md)|[RemoveHandler](../statements/removehandler-statement.md)|[Resume](../statements/resume-statement.md)|  
-|[Return](../statements/return-statement.md)|[SByte](../data-types/sbyte-data-type.md)|[선택](../statements/select-case-statement.md)|[Set](../statements/set-statement.md)|  
-|[Shadows](../modifiers/shadows.md)|[공유](../modifiers/shared.md)|[Short](../data-types/short-data-type.md)|[Single](../data-types/single-data-type.md)|  
-|[Static](../modifiers/static.md)|[Step](../statements/for-next-statement.md)|[Stop](../statements/stop-statement.md)|[String](../data-types/string-data-type.md)|  
-|[Structure 제약 조건](../statements/type-list.md)|[Structure 문](../statements/structure-statement.md)|[Sub](../statements/sub-statement.md)|[SyncLock](../statements/synclock-statement.md)|  
-|[Then](../statements/then-statement.md)|[Throw](../statements/throw-statement.md)|[대상](../statements/for-next-statement.md)|[True](../data-types/boolean-data-type.md)|  
-|[Try](../statements/try-catch-finally-statement.md)|[TryCast](../operators/trycast-operator.md)|[TypeOf…Is](../operators/typeof-operator.md)|[UInteger](../data-types/uinteger-data-type.md)|  
-|[ULong](../data-types/ulong-data-type.md)|[UShort](../data-types/ushort-data-type.md)|[Using](../statements/using-statement.md)|`Variant`|  
-|`Wend`|[When](../statements/try-catch-finally-statement.md)|[While](../statements/while-end-while-statement.md)|[확장](../modifiers/widening.md)|  
-|[With](../statements/with-end-with-statement.md)|[WithEvents](../modifiers/withevents.md)|[WriteOnly](../modifiers/writeonly.md)|[Xor](../operators/xor-operator.md)|  
-|[#Const](../directives/const-directive.md)|[#Else](../directives/if-then-else-directives.md)|[#ElseIf](../directives/if-then-else-directives.md)|[#End](../directives/if-then-else-directives.md)|  
-|[#If](../directives/if-then-else-directives.md)|[=](../operators/assignment-operator.md)|[&](../operators/concatenation-operator.md)|[&=](../operators/and-assignment-operator.md)|  
-|[*](../operators/multiplication-operator.md)|[*=](../operators/multiplication-assignment-operator.md)|[/](../operators/floating-point-division-operator.md)|[/=](../operators/floating-point-division-assignment-operator.md)|  
-|[\\](../operators/integer-division-operator.md)|[\\=](../operators/integer-division-assignment-operator.md)|[^](../operators/exponentiation-operator.md)|[^=](../operators/exponentiation-assignment-operator.md)|  
-|[+](../operators/addition-operator.md)|[+=](../operators/addition-assignment-operator.md)|[-](../operators/subtraction-operator.md)|[-=](../operators/subtraction-assignment-operator.md)|  
-|[>> 연산자](../operators/right-shift-operator.md)|[>>= 연산자](../operators/right-shift-assignment-operator.md)|[<<](../operators/left-shift-operator.md)|[<\<=](../operators/left-shift-assignment-operator.md)|  
-  
+|[MyBase](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)|[MyClass](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)|[NameOf](../operators/nameof.md)|[Namespace](../statements/namespace-statement.md)|
+|[Narrowing](../modifiers/narrowing.md)|[New 제약 조건](../statements/type-list.md)|[New 연산자](../operators/new-operator.md)|[다음](../statements/for-next-statement.md)|
+|[Next(Resume에서)](../statements/resume-statement.md)|[Not](../operators/not-operator.md)|[Nothing](../nothing.md)|[NotInheritable](../modifiers/notinheritable.md)|
+|[NotOverridable](../modifiers/notoverridable.md)|[개체](../data-types/object-data-type.md)|[Of](../statements/of-clause.md)|[On](../../../visual-basic/misc/on.md)|
+|[Operator](../statements/operator-statement.md)|[옵션](../statements/option-keyword-statement.md)|[Optional](../modifiers/optional.md)|[Or](../operators/or-operator.md)|
+|[OrElse](../operators/orelse-operator.md)|[Out(제네릭 한정자)](../modifiers/out-generic-modifier.md)|[오버로드](../modifiers/overloads.md)|[재정의 가능](../modifiers/overridable.md)|
+|[재정의](../modifiers/overrides.md)|[ParamArray](../modifiers/paramarray.md)|[부분](../modifiers/partial.md)|[전용](../modifiers/private.md)|
+|[Property](../statements/property-statement.md)|[보호됨](../modifiers/protected.md)|[Public](../modifiers/public.md)|[RaiseEvent](../statements/raiseevent-statement.md)|
+|[ReadOnly](../modifiers/readonly.md)|[ReDim](../statements/redim-statement.md)|[REM](../statements/rem-statement.md)|[RemoveHandler](../statements/removehandler-statement.md)|
+|[Resume](../statements/resume-statement.md)|[Return](../statements/return-statement.md)|[SByte](../data-types/sbyte-data-type.md)|[선택](../statements/select-case-statement.md)|
+[Set](../statements/set-statement.md)|[Shadows](../modifiers/shadows.md)|[공유](../modifiers/shared.md)|[Short](../data-types/short-data-type.md)|
+|[Single](../data-types/single-data-type.md)|[Static](../modifiers/static.md)|[Step](../statements/for-next-statement.md)|[Stop](../statements/stop-statement.md)|
+|[String](../data-types/string-data-type.md)|[Structure 제약 조건](../statements/type-list.md)|[Structure 문](../statements/structure-statement.md)|[Sub](../statements/sub-statement.md)|
+|[SyncLock](../statements/synclock-statement.md)|[Then](../statements/then-statement.md)|[Throw](../statements/throw-statement.md)|[대상](../statements/for-next-statement.md)|
+|[True](../data-types/boolean-data-type.md)|[Try](../statements/try-catch-finally-statement.md)|[TryCast](../operators/trycast-operator.md)|[TypeOf…Is](../operators/typeof-operator.md)|
+|[UInteger](../data-types/uinteger-data-type.md)|[ULong](../data-types/ulong-data-type.md)|[UShort](../data-types/ushort-data-type.md)|[Using](../statements/using-statement.md)|
+|`Variant`|`Wend`|[When](../statements/try-catch-finally-statement.md)|[While](../statements/while-end-while-statement.md)|
+[확장](../modifiers/widening.md)|[With](../statements/with-end-with-statement.md)|[WithEvents](../modifiers/withevents.md)|[WriteOnly](../modifiers/writeonly.md)|
+[Xor](../operators/xor-operator.md)|[#Const](../directives/const-directive.md)|[#Else](../directives/if-then-else-directives.md)|[#ElseIf](../directives/if-then-else-directives.md)|
+|[#End](../directives/if-then-else-directives.md)|[#If](../directives/if-then-else-directives.md)|[=](../operators/assignment-operator.md)|[&](../operators/concatenation-operator.md)|
+|[&=](../operators/and-assignment-operator.md)|[*](../operators/multiplication-operator.md)|[*=](../operators/multiplication-assignment-operator.md)|[/](../operators/floating-point-division-operator.md)|
+[/=](../operators/floating-point-division-assignment-operator.md)|[\\](../operators/integer-division-operator.md)|[\\=](../operators/integer-division-assignment-operator.md)|[^](../operators/exponentiation-operator.md)|
+|[^=](../operators/exponentiation-assignment-operator.md)|[+](../operators/addition-operator.md)|[+=](../operators/addition-assignment-operator.md)|[-](../operators/subtraction-operator.md)|
+|[-=](../operators/subtraction-assignment-operator.md)|[>> 연산자](../operators/right-shift-operator.md)|[>>= 연산자](../operators/right-shift-assignment-operator.md)|[<<](../operators/left-shift-operator.md)|
+|[<\<=](../operators/left-shift-assignment-operator.md)|
+
 > [!NOTE]
-> `EndIf`, `GoSub`, `Variant`및 `Wend`는 Visual Basic에서 더 이상 사용 되지 않지만 예약 된 키워드로 유지 됩니다. `Let` 키워드의 의미가 변경되었습니다. `Let`은 이제 LINQ 쿼리에서 사용됩니다. 자세한 내용은 [Let 절](../queries/let-clause.md)을 참조하세요.  
-  
-## <a name="unreserved-keywords"></a>예약되지 않은 키워드  
- 다음 키워드는 예약되어 있지 않습니다. 즉, 이러한 키워드를 프로그래밍 요소의 이름으로 사용할 수 있습니다. 하지만 이렇게 하면 코드를 읽기 힘들어 사소한 오류를 찾기 어려울 수 있으므로 권장하지 않습니다.  
-  
+> `EndIf`, `GoSub`, `Variant`및 `Wend`는 Visual Basic에서 더 이상 사용 되지 않지만 예약 된 키워드로 유지 됩니다. `Let` 키워드의 의미가 변경되었습니다. `Let`은 이제 LINQ 쿼리에서 사용됩니다. 자세한 내용은 [Let 절](../queries/let-clause.md)을 참조하세요.
+
+## <a name="unreserved-keywords"></a>예약되지 않은 키워드
+
+다음 키워드는 예약되어 있지 않습니다. 즉, 이러한 키워드를 프로그래밍 요소의 이름으로 사용할 수 있습니다. 하지만 이렇게 하면 코드를 읽기 힘들어 사소한 오류를 찾기 어려울 수 있으므로 권장하지 않습니다.
+
 |||||  
 |---|---|---|---|  
 |[Aggregate](../queries/aggregate-clause.md)|[ANSI](../modifiers/ansi.md)|[어셈블리](../modifiers/assembly.md)|[비동기](../modifiers/async.md)|  
@@ -118,7 +120,7 @@ ms.locfileid: "73039392"
 |[연산자 요약](operators-summary.md)|대입 및 비교 식과 기타 연산자를 나열합니다.|  
 |[레지스트리 요약](registry-summary.md)|프로그램 설정을 읽고, 저장 및 삭제하는 데 사용되는 함수를 나열합니다.|  
 |[문자열 조작 요약](string-manipulation-summary.md)|문자열을 조작하는 데 사용되는 함수를 나열합니다.|  
-  
+
 ## <a name="see-also"></a>참조
 
 - [Visual Basic 런타임 라이브러리 멤버](../runtime-library-members.md)

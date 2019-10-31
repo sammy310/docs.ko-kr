@@ -2,12 +2,12 @@
 title: LINQ to XML로 WPF 데이터 바인딩
 ms.date: 10/22/2019
 ms.topic: conceptual
-ms.openlocfilehash: 53bc5e09d3c837b69c8f215b1b5c61d1b745f683
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 53aba3295b98ae4a476b321cb585e1bbbdd45dad
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139804"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197382"
 ---
 # <a name="overview-of-wpf-data-binding-with-linq-to-xml"></a>LINQ to XML를 사용한 WPF 데이터 바인딩 개요
 
@@ -36,7 +36,7 @@ WPF 데이터 바인딩을 통해 UI 요소에서 속성 중 하나를 데이터
 |바인딩 원본|표시하기 위해 UI 요소에 제공되는 하나 이상의 값에 대한 원본 개체입니다. WPF는 CLR 개체, ADO.NET 데이터 개체, XML 데이터(XPath 또는 LINQ to XML 쿼리의 데이터) 또는 다른 <xref:System.Windows.DependencyObject>를 바인딩 원본으로 자동으로 지원합니다.|
 |원본 경로|바인딩될 값이나 값의 집합으로 확인되는 바인딩 원본의 속성입니다.|
 
-종속성 속성은 UI 요소의 동적으로 계산된 속성을 나타내는 WPF에 특정한 개념입니다. 예를 들어, 종속성 속성에는 기본값이나 부모 요소에서 제공하는 값이 있는 경우가 많습니다. 이러한 특수 속성은 표준 속성의 경우처럼 필드가 아니라 <xref:System.Windows.DependencyProperty> 클래스의 인스턴스로 지원됩니다. 자세한 내용은 [종속성 속성 개요](/dotnet/framework/wpf/advanced/dependency-properties-overview)를 참조하세요.
+종속성 속성은 UI 요소의 동적으로 계산된 속성을 나타내는 WPF에 특정한 개념입니다. 예를 들어, 종속성 속성에는 기본값이나 부모 요소에서 제공하는 값이 있는 경우가 많습니다. 이러한 특수 속성은 표준 속성의 경우처럼 필드가 아니라 <xref:System.Windows.DependencyProperty> 클래스의 인스턴스로 지원됩니다. 자세한 내용은 [종속성 속성 개요](../advanced/dependency-properties-overview.md)를 참조하세요.
 
 ### <a name="dynamic-data-binding-in-wpf"></a>WPF의 동적 데이터 바인딩
 
@@ -89,6 +89,6 @@ WPF 동적 바인딩을 구현하기 위해 동적 속성은 <xref:System.Window
 
 - [LINQ to XML로 WPF 데이터 바인딩](wpf-data-binding-with-linq-to-xml-overview.md)
 - [LINQ to XML 동적 속성](linq-to-xml-dynamic-properties.md)
-- [WPF의 XAML](/dotnet/framework/wpf/advanced/xaml-in-wpf)
+- [WPF의 XAML](../advanced/xaml-in-wpf.md)
 - [데이터 바인딩(WPF)](/dotnet/framework/wpf/data/data-binding-wpf)
 - [워크플로 마크업 사용](https://go.microsoft.com/fwlink/?LinkId=98685)

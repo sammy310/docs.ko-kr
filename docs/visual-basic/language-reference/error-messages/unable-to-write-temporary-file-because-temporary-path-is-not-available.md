@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30698
 ms.assetid: 3b77b7e3-8b17-40de-b4e1-05e4b9b325ad
-ms.openlocfilehash: e6e7590c10c2234e2bbe2f39a00428494105caae
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 88f97e9314d5bc77b86dad22f1a7e794cf0caa3b
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766963"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197012"
 ---
 # <a name="unable-to-write-temporary-file-because-temporary-path-is-not-available"></a>임시 경로를 사용할 수 없으므로 임시 파일에 쓸 수 없습니다.
-Visual Basic에서 임시 파일을 저장할 경로 확인 하지 못했습니다.  
+Visual Basic 임시 파일이 저장 되는 경로를 확인할 수 없습니다.  
   
  **오류 ID:** BC30698  
   
@@ -23,8 +23,8 @@ Visual Basic에서 임시 파일을 저장할 경로 확인 하지 못했습니�
   
 1. Visual Studio를 다시 시작합니다.  
   
-2. 문제가 지속 되 면 Visual Studio를 다시 설치 합니다.  
+2. 문제가 계속 되 면 Visual Studio를 다시 설치 합니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
-- [의견 보내기](/visualstudio/ide/talk-to-us)
+- [의견 보내기](/visualstudio/ide/feedback-options)
