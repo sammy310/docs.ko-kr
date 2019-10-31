@@ -40,9 +40,6 @@
       items:
         - name: HTTP
           href: http.md
-          items:
-            - name: HttpListener
-              href: httplistener.md
         - name: '방법: HTTP 관련 속성에 액세스'
           href: how-to-access-http-specific-properties.md
         - name: 연결 관리
