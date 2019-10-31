@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 0500854e-2121-43d9-a028-64312da35258
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1e0217019aa9b8ff85716c62c27c0f4d5547074a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: da35db8a943fda5fb3fbf4126684bb9cb7243001
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759786"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137423"
 ---
-# <a name="icordebugmanagedcallbackcontrolctrap-method"></a><span data-ttu-id="bf2b1-102">ICorDebugManagedCallback::ControlCTrap 메서드</span><span class="sxs-lookup"><span data-stu-id="bf2b1-102">ICorDebugManagedCallback::ControlCTrap Method</span></span>
-<span data-ttu-id="bf2b1-103">CTRL + C는 디버깅 중인 프로세스에서 포착 되는 디버거에 알립니다.</span><span class="sxs-lookup"><span data-stu-id="bf2b1-103">Notifies the debugger that a CTRL+C is trapped in the process that is being debugged.</span></span>  
+# <a name="icordebugmanagedcallbackcontrolctrap-method"></a><span data-ttu-id="52016-102">ICorDebugManagedCallback::ControlCTrap 메서드</span><span class="sxs-lookup"><span data-stu-id="52016-102">ICorDebugManagedCallback::ControlCTrap Method</span></span>
+<span data-ttu-id="52016-103">디버깅 중인 프로세스에서 CTRL + C가 트랩 되었음을 디버거에 알립니다.</span><span class="sxs-lookup"><span data-stu-id="52016-103">Notifies the debugger that a CTRL+C is trapped in the process that is being debugged.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bf2b1-104">구문</span><span class="sxs-lookup"><span data-stu-id="bf2b1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="52016-104">구문</span><span class="sxs-lookup"><span data-stu-id="52016-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT ControlCTrap (  
@@ -35,29 +33,29 @@ HRESULT ControlCTrap (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="bf2b1-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="bf2b1-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="52016-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="52016-105">Parameters</span></span>  
  `pProcess`  
- <span data-ttu-id="bf2b1-106">[in] CTRL + C를 트래핑 하는 프로세스를 나타내는 ICorDebugProcess 개체에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="bf2b1-106">[in] A pointer to an ICorDebugProcess object that represents the process in which the CTRL+C is trapped.</span></span>  
+ <span data-ttu-id="52016-106">진행 CTRL + C가 트래핑 된 프로세스를 나타내는 ICorDebugProcess 개체에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="52016-106">[in] A pointer to an ICorDebugProcess object that represents the process in which the CTRL+C is trapped.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="bf2b1-107">반환 값</span><span class="sxs-lookup"><span data-stu-id="bf2b1-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="52016-107">반환 값</span><span class="sxs-lookup"><span data-stu-id="52016-107">Return Value</span></span>  
   
-|<span data-ttu-id="bf2b1-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="bf2b1-108">HRESULT</span></span>|<span data-ttu-id="bf2b1-109">설명</span><span class="sxs-lookup"><span data-stu-id="bf2b1-109">Description</span></span>|  
+|<span data-ttu-id="52016-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="52016-108">HRESULT</span></span>|<span data-ttu-id="52016-109">설명</span><span class="sxs-lookup"><span data-stu-id="52016-109">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="bf2b1-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="bf2b1-110">S_OK</span></span>|<span data-ttu-id="bf2b1-111">디버거는 CTRL + C 트랩을 처리 합니다.</span><span class="sxs-lookup"><span data-stu-id="bf2b1-111">The debugger will handle the CTRL+C trap.</span></span>|  
-|<span data-ttu-id="bf2b1-112">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="bf2b1-112">S_FALSE</span></span>|<span data-ttu-id="bf2b1-113">디버거는 CTRL + C 트랩을 처리 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="bf2b1-113">The debugger will not handle the CTRL+C trap.</span></span>|  
+|<span data-ttu-id="52016-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="52016-110">S_OK</span></span>|<span data-ttu-id="52016-111">디버거는 CTRL + C 트랩을 처리 합니다.</span><span class="sxs-lookup"><span data-stu-id="52016-111">The debugger will handle the CTRL+C trap.</span></span>|  
+|<span data-ttu-id="52016-112">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="52016-112">S_FALSE</span></span>|<span data-ttu-id="52016-113">디버거는 CTRL + C 트랩을 처리 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="52016-113">The debugger will not handle the CTRL+C trap.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="bf2b1-114">설명</span><span class="sxs-lookup"><span data-stu-id="bf2b1-114">Remarks</span></span>  
- <span data-ttu-id="bf2b1-115">이 콜백에 대 한 프로세스 내에서 모든 응용 프로그램 도메인 중지 됩니다.</span><span class="sxs-lookup"><span data-stu-id="bf2b1-115">All application domains within the process are stopped for this callback.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="52016-114">주의</span><span class="sxs-lookup"><span data-stu-id="52016-114">Remarks</span></span>  
+ <span data-ttu-id="52016-115">이 콜백에 대해 프로세스 내의 모든 응용 프로그램 도메인이 중지 됩니다.</span><span class="sxs-lookup"><span data-stu-id="52016-115">All application domains within the process are stopped for this callback.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="bf2b1-116">요구 사항</span><span class="sxs-lookup"><span data-stu-id="bf2b1-116">Requirements</span></span>  
- <span data-ttu-id="bf2b1-117">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="bf2b1-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="52016-116">요구 사항</span><span class="sxs-lookup"><span data-stu-id="52016-116">Requirements</span></span>  
+ <span data-ttu-id="52016-117">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="52016-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="bf2b1-118">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="bf2b1-118">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="52016-118">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="52016-118">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="bf2b1-119">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="bf2b1-119">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="52016-119">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="52016-119">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="bf2b1-120">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bf2b1-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="52016-120">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="52016-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bf2b1-121">참고자료</span><span class="sxs-lookup"><span data-stu-id="bf2b1-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="52016-121">참조</span><span class="sxs-lookup"><span data-stu-id="52016-121">See also</span></span>
 
-- [<span data-ttu-id="bf2b1-122">ICorDebugManagedCallback 인터페이스</span><span class="sxs-lookup"><span data-stu-id="bf2b1-122">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [<span data-ttu-id="52016-122">ICorDebugManagedCallback 인터페이스</span><span class="sxs-lookup"><span data-stu-id="52016-122">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

@@ -6,23 +6,21 @@ helpviewer_keywords:
 - global static functions [.NET Framework hosting], version 4
 - .NET Framework 4, hosting global static functions
 ms.assetid: 07a1a6e1-db73-4555-81df-bc4054c51492
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6cb46d3684e36ca203b3ea5b58491150af4ffd58
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 58b2b6faaf96a8c4f0c0422f2092c3752fbe822f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490150"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133704"
 ---
-# <a name="net-framework-4-hosting-global-static-functions"></a><span data-ttu-id="aa1b2-102">.NET Framework 4 호스팅 전역 정적 함수</span><span class="sxs-lookup"><span data-stu-id="aa1b2-102">.NET Framework 4 Hosting Global Static Functions</span></span>
-<span data-ttu-id="aa1b2-103">.NET Framework 4 MSCorEE.dll에 새 내보낸된 메서드를 제공합니다. [CLRCreateIntstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="aa1b2-103">The .NET Framework 4 introduces one new exported method in MSCorEE.dll: [CLRCreateIntstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md).</span></span>  
+# <a name="net-framework-4-hosting-global-static-functions"></a><span data-ttu-id="6d425-102">.NET Framework 4 호스팅 전역 정적 함수</span><span class="sxs-lookup"><span data-stu-id="6d425-102">.NET Framework 4 Hosting Global Static Functions</span></span>
+<span data-ttu-id="6d425-103">.NET Framework 4에서는 새 내보낸 메서드를 Mscoree.dll에서 도입 했습니다. [Clrcreateintstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md).</span><span class="sxs-lookup"><span data-stu-id="6d425-103">The .NET Framework 4 introduces one new exported method in MSCorEE.dll: [CLRCreateIntstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md).</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="aa1b2-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="aa1b2-104">In This Section</span></span>  
- [<span data-ttu-id="aa1b2-105">CLRCreateInstance 함수</span><span class="sxs-lookup"><span data-stu-id="aa1b2-105">CLRCreateInstance Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md)  
- <span data-ttu-id="aa1b2-106">세 가지 인터페이스 중 하나를 제공 합니다. [ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)하십시오 [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md), 또는 [ICLRDebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="aa1b2-106">Provides one of three interfaces: [ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md), [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md), or [ICLRDebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md).</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="6d425-104">단원 내용</span><span class="sxs-lookup"><span data-stu-id="6d425-104">In This Section</span></span>  
+ [<span data-ttu-id="6d425-105">CLRCreateInstance 함수</span><span class="sxs-lookup"><span data-stu-id="6d425-105">CLRCreateInstance Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md)  
+ <span data-ttu-id="6d425-106">[ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md), [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md)또는 [ICLRDebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md)의 세 가지 인터페이스 중 하나를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="6d425-106">Provides one of three interfaces: [ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md), [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md), or [ICLRDebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="aa1b2-107">참고자료</span><span class="sxs-lookup"><span data-stu-id="aa1b2-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6d425-107">참조</span><span class="sxs-lookup"><span data-stu-id="6d425-107">See also</span></span>
 
-- [<span data-ttu-id="aa1b2-108">호스팅 전역 정적 함수</span><span class="sxs-lookup"><span data-stu-id="aa1b2-108">Hosting Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-global-static-functions.md)
-- [<span data-ttu-id="aa1b2-109">호스팅</span><span class="sxs-lookup"><span data-stu-id="aa1b2-109">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [<span data-ttu-id="6d425-108">호스팅 전역 정적 함수</span><span class="sxs-lookup"><span data-stu-id="6d425-108">Hosting Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-global-static-functions.md)
+- [<span data-ttu-id="6d425-109">호스팅</span><span class="sxs-lookup"><span data-stu-id="6d425-109">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)

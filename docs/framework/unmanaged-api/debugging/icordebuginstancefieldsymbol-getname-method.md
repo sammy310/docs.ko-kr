@@ -1,20 +1,18 @@
 ---
-title: ICorDebugInstanceFieldSymbol::GetName 메서드
+title: 'ICorDebugInstanceFieldSymbol:: GetName 메서드'
 ms.date: 03/30/2017
 ms.assetid: d9c12b1f-9c1d-4943-8e9e-93b55faf085f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5b1b3cc489c504942806b043fa2e3b76d5415d84
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d88e18b8d6d497098e340b396972f9ead28dbaf6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936942"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139046"
 ---
-# <a name="icordebuginstancefieldsymbolgetname-method"></a><span data-ttu-id="54d65-102">ICorDebugInstanceFieldSymbol::GetName 메서드</span><span class="sxs-lookup"><span data-stu-id="54d65-102">ICorDebugInstanceFieldSymbol::GetName Method</span></span>
-<span data-ttu-id="54d65-103">인스턴스 필드의 이름을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="54d65-103">Gets the name of the instance field.</span></span>  
+# <a name="icordebuginstancefieldsymbolgetname-method"></a><span data-ttu-id="57b3a-102">ICorDebugInstanceFieldSymbol:: GetName 메서드</span><span class="sxs-lookup"><span data-stu-id="57b3a-102">ICorDebugInstanceFieldSymbol::GetName Method</span></span>
+<span data-ttu-id="57b3a-103">인스턴스 필드의 이름을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="57b3a-103">Gets the name of the instance field.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="54d65-104">구문</span><span class="sxs-lookup"><span data-stu-id="54d65-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="57b3a-104">구문</span><span class="sxs-lookup"><span data-stu-id="57b3a-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetName(  
@@ -24,31 +22,31 @@ HRESULT GetName(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="54d65-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="54d65-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="57b3a-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="57b3a-105">Parameters</span></span>  
  `cchName`  
- <span data-ttu-id="54d65-106">[in] `szName` 버퍼의 문자 수입니다.</span><span class="sxs-lookup"><span data-stu-id="54d65-106">[in] The number of characters in the `szName` buffer.</span></span>  
+ <span data-ttu-id="57b3a-106">[in] `szName` 버퍼의 문자 수입니다.</span><span class="sxs-lookup"><span data-stu-id="57b3a-106">[in] The number of characters in the `szName` buffer.</span></span>  
   
  `pcchName`  
- <span data-ttu-id="54d65-107">[out] `szName` 버퍼에 실제로 기록된 문자 수에 대한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="54d65-107">[out] A pointer to the number of characters actually written to the `szName` buffer.</span></span>  
+ <span data-ttu-id="57b3a-107">[out] `szName` 버퍼에 실제로 기록된 문자 수에 대한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="57b3a-107">[out] A pointer to the number of characters actually written to the `szName` buffer.</span></span>  
   
  `szName`  
- <span data-ttu-id="54d65-108">[out] 반환된 이름을 저장하는 문자 배열입니다.</span><span class="sxs-lookup"><span data-stu-id="54d65-108">[out] A character array that stores the returned name.</span></span>  
+ <span data-ttu-id="57b3a-108">[out] 반환된 이름을 저장하는 문자 배열입니다.</span><span class="sxs-lookup"><span data-stu-id="57b3a-108">[out] A character array that stores the returned name.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="54d65-109">설명</span><span class="sxs-lookup"><span data-stu-id="54d65-109">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="57b3a-109">주의</span><span class="sxs-lookup"><span data-stu-id="57b3a-109">Remarks</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="54d65-110">이 메서드는 .NET 네이티브에서만 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="54d65-110">This method is available with .NET Native only.</span></span>  
+> <span data-ttu-id="57b3a-110">이 메서드는 .NET 네이티브에서만 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="57b3a-110">This method is available with .NET Native only.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="54d65-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="54d65-111">Requirements</span></span>  
- <span data-ttu-id="54d65-112">**플랫폼** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="54d65-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="57b3a-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="57b3a-111">Requirements</span></span>  
+ <span data-ttu-id="57b3a-112">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="57b3a-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="54d65-113">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="54d65-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="57b3a-113">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="57b3a-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="54d65-114">**라이브러리** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="54d65-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="57b3a-114">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="57b3a-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="54d65-115">**.NET Framework 버전:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="54d65-115">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
+ <span data-ttu-id="57b3a-115">**.NET Framework 버전:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="57b3a-115">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="54d65-116">참고자료</span><span class="sxs-lookup"><span data-stu-id="54d65-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="57b3a-116">참조</span><span class="sxs-lookup"><span data-stu-id="57b3a-116">See also</span></span>
 
-- [<span data-ttu-id="54d65-117">ICorDebugInstanceFieldSymbol 인터페이스</span><span class="sxs-lookup"><span data-stu-id="54d65-117">ICorDebugInstanceFieldSymbol Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebuginstancefieldsymbol-interface.md)
-- [<span data-ttu-id="54d65-118">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="54d65-118">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="57b3a-117">ICorDebugInstanceFieldSymbol 인터페이스</span><span class="sxs-lookup"><span data-stu-id="57b3a-117">ICorDebugInstanceFieldSymbol Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebuginstancefieldsymbol-interface.md)
+- [<span data-ttu-id="57b3a-118">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="57b3a-118">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
