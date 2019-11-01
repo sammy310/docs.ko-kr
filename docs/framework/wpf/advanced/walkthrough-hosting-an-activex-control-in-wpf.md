@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ActiveX controls [WPF interoperability]
 - hosting ActiveX controls [WPF]
 ms.assetid: 1931d292-0dd1-434f-963c-dcda7638d75a
-ms.openlocfilehash: 959bc7942eaae91c0a7a72124f6ab1ab92a3553f
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 8679181d720d9550cf60034a7cf1809b79198e83
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040831"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197894"
 ---
 # <a name="walkthrough-hosting-an-activex-control-in-wpf"></a>연습: WPF에서 ActiveX 컨트롤 호스팅
 브라우저와의 상호 작용을 개선 하기 위해 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]기반 응용 프로그램에서 Microsoft ActiveX 컨트롤을 사용할 수 있습니다. 이 연습에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 페이지의 컨트롤로 Microsoft Windows Media Player를 호스트 하는 방법을 보여 줍니다.
@@ -109,6 +109,6 @@ Visual Studio는 컨트롤이 디자인 화면에 추가 될 때 Microsoft Activ
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [Visual Studio에서 XAML 디자인](/visualstudio/designers/designing-xaml-in-visual-studio)
+- [Visual Studio에서 XAML 디자인](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)
 - [연습: WPF에서 Windows Forms 복합 컨트롤 호스팅](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
 - [연습: Windows Forms에서 WPF 복합 컨트롤 호스팅](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
