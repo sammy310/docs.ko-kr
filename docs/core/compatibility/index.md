@@ -1,15 +1,13 @@
 ---
 title: 호환성이 손상되는 변경 평가 - .NET Core
 description: .NET Core에서 개발자를 위해 .NET 버전 간의 호환성을 유지하는 방법을 알아봅니다.
-author: rpetrusha
-ms.author: ronpet
 ms.date: 06/10/2019
-ms.openlocfilehash: c68a19b8b98a98bb9c64f5b9fa60b378935e6e93
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 4c3f051bf37ea4753d916ee22fedf97a9bad5892
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "67736565"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73089354"
 ---
 # <a name="evaluate-breaking-changes-in-net-core"></a>.NET Core의 호환성이 손상되는 변경 평가
 
@@ -26,7 +24,7 @@ ms.locfileid: "67736565"
 > [!NOTE]
 > 이진 호환성, 이전 버전과 호환성 등의 호환성 범주에 대한 정의는 [호환성이 손상되는 변경 범주](categories.md)를 참조하세요.
 
-다음 섹션에서는 .NET Core API의 변경 범주 및 애플리케이션 호환성에 미치는 영향을 설명합니다. ✔️ 아이콘은 특정 종류의 변경이 허용됨을 나타내고, ❌ 아이콘은 허용되지 않음을 나타내며, ❓ 아이콘은 허용될 수도 있고, 허용되지 않을 수 있는 변경을 나타냅니다. 이 마지막 범주의 변경 내용은 이전 동작이 얼마나 예측 가능하고, 명확하며, 일관성이 있었는지에 대한 판단과 평가가 필요합니다.
+다음 섹션에서는 .NET Core API의 변경 범주 및 애플리케이션 호환성에 미치는 영향을 설명합니다. ✔️ 아이콘은 특정 종류의 변경이 허용됨을 나타내고, ❌ 아이콘은 허용되지 않음을 나타내며, ❓ 아이콘은 허용되거나 허용되지 않을 수 있는 변경을 나타냅니다. 이 마지막 범주의 변경 내용은 이전 동작이 얼마나 예측 가능하고, 명확하며, 일관성이 있었는지에 대한 판단과 평가가 필요합니다.
 
 > [!NOTE]
 > .NET Core 라이브러리의 변경 내용을 평가하는 방법에 대한 가이드 역할을 할 뿐 아니라, 라이브러리 개발자는 이러한 기준을 사용하여 여러 .NET 구현과 버전을 대상으로 하는 고유한 라이브러리의 변경 내용을 평가할 수도 있습니다.
@@ -85,7 +83,7 @@ ms.locfileid: "67736565"
 
 - **❌ [struct](../../csharp/language-reference/keywords/struct.md) 형식을 `ref struct` 형식으로 변경하거나 그 반대로 변경**
 
-- **❌ 형식의 표시 유형 축소**
+- **❌ 표시 형식 축소**
 
    단, 형식의 표시 유형을 늘릴 수는 있습니다.
 
@@ -135,7 +133,7 @@ ms.locfileid: "67736565"
 
 - **❌ 매개 변수 추가, 제거 또는 순서 변경**
 
-- **❌ 매개 변수에서 [in](../../csharp/language-reference/keywords/in.md), [out](../../csharp/language-reference/keywords/out.md) 또는 [ref](../../csharp/language-reference/keywords/ref.md) 키워드 추가 또는 제거**
+- **❌ 매개 변수에서 i[n](../../csharp/language-reference/keywords/in.md), [out](../../csharp/language-reference/keywords/out.md) 또는 [ref](../../csharp/language-reference/keywords/ref.md) 키워드 추가 또는 제거**
 
 - **❌ 매개 변수 이름 바꾸기(대/소문자 변경 포함)**
 
@@ -147,7 +145,7 @@ ms.locfileid: "67736565"
 
 - **❌ `ref` 반환 값에서 `ref readonly` 반환 값으로 변경**
 
-- **❌️ 가상 메서드 또는 인터페이스에 대해 `ref readonly`에서 `ref` 반환 값으로 변경**
+- **❌ 가상 메서드 또는 인터페이스의 `ref readonly`에서 `ref` 반환 값으로 변경**
 
 - **❌ 멤버에서 [abstract](../../csharp/language-reference/keywords/abstract.md) 추가 또는 제거**
 
@@ -176,7 +174,7 @@ ms.locfileid: "67736565"
 
 - **❌ 매개 변수가 없는 생성자를 추가하지 않고 이전에 생성자가 없었던 클래스에 생성자 추가**
 
-- **❌️ 필드에 [readonly](../../csharp/language-reference/keywords/readonly.md) 추가**
+- **❌ 필드에 [readonly](../../csharp/language-reference/keywords/readonly.md) 추가**
 
 - **❌ 멤버의 표시 유형 축소**
 
@@ -221,11 +219,11 @@ ms.locfileid: "67736565"
 
 - **❌ 속성, 필드, 반환 값 또는 [out](../../csharp/language-reference/keywords/out-parameter-modifier.md) 매개 변수의 반환 값 범위 확장**
 
-- **❌ 속성, 필드, 메서드 또는 [out](../../csharp/language-reference/keywords/out-parameter-modifier.md) 매개 변수의 반환 값 변경**
+- **❌ 속성, 필드, 메서드 반환 값 또는 [out](../../csharp/language-reference/keywords/out-parameter-modifier.md) 매개 변수의 반환 값 변경**
 
 - **❌ 속성, 필드 또는 매개 변수의 기본값 변경**
 
-- **❌ 숫자 반환 값의 전체 자릿수 변경**
+- **❌ 숫자 반환 값의 정밀도 변경**
 
 - **❓ 입력 구문 분석 및 새 예외 throw 변경(구문 분석 동작이 문서에 지정되지 않은 경우 포함)**
 
@@ -266,7 +264,7 @@ ms.locfileid: "67736565"
 
 - **✔️ 식별할 수 ‘없는’ 특성 값 변경** 
 
-- **❌ 식별할 수 ‘있는’ 특성 값 변경** 
+- **❌ 식별할 수 *있는* 특성 값 변경**
 
 - **❓ 특성 제거**
 
@@ -276,7 +274,7 @@ ms.locfileid: "67736565"
 
 - **✔️ 플랫폼에서 이전에 지원되지 않은 작업 지원**
 
-- **❌ 이전에 플랫폼에서 지원된 작업에 대해 특정 서비스 팩 요구 또는 지원 안 함**
+- **❌이전에 플랫폼에서 지원된 작업에 대해 특정 서비스 팩 요구 또는 지원 안 함**
 
 ## <a name="internal-implementation-changes"></a>내부 구현 변경
 

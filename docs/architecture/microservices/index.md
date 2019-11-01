@@ -2,12 +2,12 @@
 title: .NET 마이크로 서비스. 컨테이너화된 .NET 애플리케이션을 위한 아키텍처
 description: 컨테이너화된 .NET 애플리케이션에 대한 .NET 마이크로 서비스 아키텍처 | 마이크로 서비스는 독립적으로 배포 가능한 모듈 형식 서비스입니다. (Linux 및 Windows용) Docker 컨테이너는서비스 및 해당 종속성을 단일 단위로 묶어서 배포 및 테스트를 간소화합니다. 그러면 격리된 환경에서 실행됩니다.
 ms.date: 01/07/2019
-ms.openlocfilehash: dcfff8b06dc77b47e6586ea82c82acc30a5cf3df
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 7fa4935fe56ca873a5311812637964083e34170e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70848871"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73089905"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET 마이크로 서비스: 컨테이너화된 .NET 애플리케이션을 위한 아키텍처
 
@@ -15,16 +15,16 @@ ms.locfileid: "70848871"
 
 **EDITION v2.2** - ASP.NET Core 2.2로 업데이트되었습니다
 
-이 가이드는 마이크로 서비스 기반 애플리케이션을 개발하고 컨테이너를 사용하여 해당 애플리케이션을 관리하는 방법을 소개합니다. 또한 .NET Core 및 Docker 컨테이너를 사용하여 아키텍처를 설계 및 구현하는 방법에 대해 설명합니다. 
+이 가이드는 마이크로 서비스 기반 애플리케이션을 개발하고 컨테이너를 사용하여 해당 애플리케이션을 관리하는 방법을 소개합니다. 또한 .NET Core 및 Docker 컨테이너를 사용하여 아키텍처를 설계 및 구현하는 방법에 대해 설명합니다.
 
 더 쉽게 ​​시작할 수 있도록 이 가이드는 탐색 가능한 참조 컨테이너화된 애플리케이션 및 마이크로 서비스 기반 애플리케이션에 중점을 두고 있습니다. 참조 애플리케이션은 [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) GitHub 리포지토리에서 제공됩니다.
 
 ## <a name="action-links"></a>작업 링크
 
-- 다음 중 원하는 형식으로 이 전자책 다운로드: | [PDF](https://aka.ms/microservicesebook) | [MOBI](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook-mobi) | [EPUB](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook-epub) |
+- 이 eBook을 원하는 형식으로 다운로드(영어 버전에만 해당): | [PDF](https://aka.ms/microservicesebook) | [MOBI](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook-mobi) | [EPUB](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook-epub) |
 
 - 참조 애플리케이션인 [GitHub의 eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) 클론/포크
- 
+
 - [Channel 9의 소개 비디오](https://aka.ms/microservices-video) 보기
 
 - 지금 바로 [마이크로 서비스 아키텍처](https://aka.ms/MicroservicesArchitecture) 알아보기
@@ -47,7 +47,7 @@ Windows 및 Linux 에코시스템에서 가장 중요한 공급업체가 지원�
 
 ## <a name="version"></a>버전
 
-이 가이드는 **.NET Core 2.2** 버전 및 .NET Core 2.2와 동시에 제공되는 동일한 기술 “웨이브”(즉, Azure 기술 및 타사의 추가 기술)에 관련된 여러 추가 업데이트를 다루도록 수정되었습니다. 이런 이유로 책 버전도 버전 **2.2**로 업데이트되었습니다. 
+이 가이드는 **.NET Core 2.2** 버전 및 .NET Core 2.2와 동시에 제공되는 동일한 기술 “웨이브”(즉, Azure 기술 및 타사의 추가 기술)에 관련된 여러 추가 업데이트를 다루도록 수정되었습니다. 이런 이유로 책 버전도 버전 **2.2**로 업데이트되었습니다.
 
 ## <a name="what-this-guide-does-not-cover"></a>이 가이드에서 다루지 않는 내용
 
@@ -72,7 +72,7 @@ Windows 및 Linux 에코시스템에서 가장 중요한 공급업체가 지원�
 
 ## <a name="related-microservice-and-container-based-reference-application-eshoponcontainers"></a>관련 마이크로 서비스 및 컨테이너 기반 참조 애플리케이션: eShopOnContainers
 
-eShopOnContainers 애플리케이션은 Docker 컨테이너를 사용하여 배포되도록 설계된 .NET Core 및 마이크로 서비스용 오픈 소스 참조 앱입니다. 이 애플리케이션은 몇 가지 온라인 스토어 UI 프런트 엔드(Web MVC 앱, Web SPA 및 네이티브 모바일 앱)를 비롯한 여러 하위 시스템으로 구성됩니다. 또한 필요한 모든 서버 쪽 작업을 위한 백 엔드 마이크로 서비스 및 컨테이너를 포함하고 있습니다. 
+eShopOnContainers 애플리케이션은 Docker 컨테이너를 사용하여 배포되도록 설계된 .NET Core 및 마이크로 서비스용 오픈 소스 참조 앱입니다. 이 애플리케이션은 몇 가지 온라인 스토어 UI 프런트 엔드(Web MVC 앱, Web SPA 및 네이티브 모바일 앱)를 비롯한 여러 하위 시스템으로 구성됩니다. 또한 필요한 모든 서버 쪽 작업을 위한 백 엔드 마이크로 서비스 및 컨테이너를 포함하고 있습니다.
 
 이 애플리케이션의 목적은 아키텍처 패턴을 소개하는 것입니다. 실제 애플리케이션을 시작하기 위한 **즉시 사용 가능한 템플릿은 아닙니다**. 사실상, 이 애플리케이션은 잠재적으로 흥미로운 새 기술이 등장할 때 이 기술을 테스트하는 데에도 사용되므로 영구적인 베타 상태입니다.
 
