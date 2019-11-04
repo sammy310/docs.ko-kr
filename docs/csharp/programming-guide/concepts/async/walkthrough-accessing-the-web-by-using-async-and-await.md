@@ -2,12 +2,12 @@
 title: '연습: async 및 await를 사용하여 웹에 액세스(C#)'
 ms.date: 07/20/2015
 ms.assetid: c95d8d71-5a98-4bf0-aaf4-45fed2ebbacd
-ms.openlocfilehash: 0c80bb079e66a56d6bbc30ba43269aee7ac4ab5b
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: 30677be2299dfa4411263dc5c61093fc0ca0f442
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168375"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73195646"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-c"></a>연습: async 및 await를 사용하여 웹에 액세스(C#)
 
@@ -62,7 +62,7 @@ async/await 기능을 사용하여 비동기 프로그램을 보다 쉽고 직�
 
 6. 텍스트 상자와 단추가 둘 다 **MainWindow** 창에 나타나도록 위치를 지정합니다.
 
-     WPF XAML 디자이너에 대한 자세한 내용은 [XAML 디자이너를 사용하여 UI 만들기](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio)를 참조하세요.
+     WPF XAML 디자이너에 대한 자세한 내용은 [XAML 디자이너를 사용하여 UI 만들기](/visualstudio/xaml-tools/creating-a-ui-by-using-xaml-designer-in-visual-studio)를 참조하세요.
 
 ## <a name="add-a-reference"></a>참조 추가
 

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 32c7f4e9e4736145f9275b74f34c04404e7c770a
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 771238c53dc97f4cf4068968f3c68500ba9f87da
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72393991"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73198509"
 ---
 ### <a name="caching-microsoftextensionscachingsqlserver-uses-new-sqlclient-package"></a>캐싱: Microsoft.Extensions.Caching.SqlServer는 새 SqlClient 패키지를 사용합니다.
 
@@ -28,7 +28,7 @@ ms.locfileid: "72393991"
 
 #### <a name="recommended-action"></a>권장 작업
 
-고객은 `Microsoft.Extensions.Caching.SqlServer` 패키지에서 반환된 형식을 사용하고 `System.Data.SqlClient` 형식으로 캐스팅하지 않는 한 이러한 호환성이 손상되는 변경에 대해 걱정할 필요가 없습니다. 예를 들어 다른 사용자가 `DbConnection`을 [이전 SqlConnection 형식](xref:System.Data.SqlClient.SqlConnection)으로 캐스팅하는 경우 캐스팅을 새 `Microsoft.Data.SqlClient.SqlConnection` 형식으로 변경해야 합니다. 
+고객은 `Microsoft.Extensions.Caching.SqlServer` 패키지에서 반환된 형식을 사용하고 `System.Data.SqlClient` 형식으로 캐스팅하지 않는 한 이러한 호환성이 손상되는 변경에 대해 걱정할 필요가 없습니다. 예를 들어 다른 사용자가 `DbConnection`을 [이전 SqlConnection 형식](xref:System.Data.SqlClient.SqlConnection)으로 캐스팅하는 경우 캐스팅을 새 `Microsoft.Data.SqlClient.SqlConnection` 형식으로 변경해야 합니다.
 
 #### <a name="category"></a>범주
 

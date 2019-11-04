@@ -2,12 +2,12 @@
 title: 기본 쿼리(LINQ to XML)(C#)
 ms.date: 07/20/2015
 ms.assetid: d333bb7d-20c1-448a-95b7-e5ba07915744
-ms.openlocfilehash: 3b94c17ef78a97c925dc64f19af27c8f491688d5
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 273ffb9de17d01d0c3a9e1e7ac89d1ebf80b44fb
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594865"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418638"
 ---
 # <a name="basic-queries-linq-to-xml-c"></a>기본 쿼리(LINQ to XML)(C#)
 이 단원에서는 기본 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 쿼리의 예제를 제공합니다.  
@@ -32,4 +32,4 @@ ms.locfileid: "69594865"
   
 ## <a name="see-also"></a>참고 항목
 
-- [XML 트리 쿼리(C#)](./querying-xml-trees.md)
+- [XML 트리 쿼리(C#)](how-to-find-an-element-with-a-specific-attribute.md)

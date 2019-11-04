@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: e6bb1d53cbe1883b8faef75bd22942bd4f65a5e6
-ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
+ms.openlocfilehash: 84b6bfc32f5a73597b227098e5aee1e3450cf85b
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71181711"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73198499"
 ---
 ### <a name="switchsystemwindowsformsenablevisualstylevalidation-compatibility-switch-not-supported"></a>Switch.System.Windows.Forms.EnableVisualStyleValidation 호환성 스위치가 지원되지 않음
 
@@ -12,7 +12,7 @@ ms.locfileid: "71181711"
 
 #### <a name="change-description"></a>변경 내용 설명
 
-.NET Framework에서는 애플리케이션이 `Switch.System.Windows.Forms.EnableVisualStyleValidation` 호환성 스위치를 통해 숫자 형태로 제공된 시각적 개체 스타일의 유효성 검사를 옵트아웃할 수 있었습니다. 
+.NET Framework에서는 애플리케이션이 `Switch.System.Windows.Forms.EnableVisualStyleValidation` 호환성 스위치를 통해 숫자 형태로 제공된 시각적 개체 스타일의 유효성 검사를 옵트아웃할 수 있었습니다.
 
 .NET Core에서는 `Switch.System.Windows.Forms.EnableVisualStyleValidation` 스위치가 지원되지 않습니다.
 

@@ -9,14 +9,12 @@ helpviewer_keywords:
 - tasks, cancellation
 - asynchronous task cancellation
 ms.assetid: 3ecf1ea9-e399-4a6a-a0d6-8475f48dcb28
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b7fefbfd33788ea84a8daf9dfbab452802ffd50d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 17cabde95644dbc1584dd85b99e26ff7c5cb686d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650752"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139977"
 ---
 # <a name="task-cancellation"></a>작업 취소
 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 및 <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> 클래스는 .NET Framework에서 취소 토큰을 사용하는 방법으로 취소 기능을 지원합니다. 자세한 내용은 [관리되는 스레드의 취소](../../../docs/standard/threading/cancellation-in-managed-threads.md)를 참조하세요. 작업 클래스에서 취소하려면 취소할 수 있는 작업을 나타내는 사용자 대리자와 취소를 요청한 코드 간의 협조가 필요합니다.  성공적으로 취소하려면 <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> 메서드를 호출하는 요청 코드와 적절한 시간에 이루어지는 작업을 종료하는 사용자 대리자가 필요합니다. 다음 방법 중 하나를 사용하여 작업을 종료할 수 있습니다.  

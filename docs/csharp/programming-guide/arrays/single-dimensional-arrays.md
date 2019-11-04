@@ -6,12 +6,12 @@ helpviewer_keywords:
 - single-dimensional arrays [C#]
 - arrays [C#], single-dimensional
 ms.assetid: 2cec1196-1de0-49d2-baf2-c607c33310e8
-ms.openlocfilehash: 17c384ec327d4a80ed614dce6254baa5bfb2e960
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 5559acd162b26a94b009ec21691d1501c90db290
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69597305"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419525"
 ---
 # <a name="single-dimensional-arrays-c-programming-guide"></a>1차원 배열(C# 프로그래밍 가이드)
 
@@ -55,7 +55,7 @@ ms.locfileid: "69597305"
   
  이 문의 결과는 `SomeType`이 값 형식인지 또는 참조 형식인지에 따라 달라집니다. 값 형식인 경우 이 문은 각각 `SomeType` 형식인 10개 요소의 배열을 만듭니다. `SomeType`이 참조 형식인 경우 이 문은 각각 null 참조로 초기화된 10개 요소의 배열을 만듭니다.  
   
- 값 형식과 참조 형식에 대한 자세한 내용은 [형식](../../language-reference/keywords/types.md)을 참조하세요.  
+ 값 형식과 참조 형식에 대한 자세한 내용은 [형식](/dotnet/csharp/language-reference/keywords)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목
 

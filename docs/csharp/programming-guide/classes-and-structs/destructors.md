@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C# language, finalizers
 - finalizers [C#]
 ms.assetid: 1ae6e46d-a4b1-4a49-abe5-b97f53d9e049
-ms.openlocfilehash: 9936d56582afd160bf3464d18efd3acf47c7af60
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f7cb9bd05d08a33be53abad58b78b39e36c6dffe
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924490"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419356"
 ---
 # <a name="finalizers-c-programming-guide"></a>종료자(C# 프로그래밍 가이드)
 종료자(**소멸자**라고도 함)는 가비지 수집기에서 클래스 인스턴스를 수집할 때 필요한 최종 정리를 수행하는 데 사용됩니다.  
@@ -85,7 +85,7 @@ protected override void Finalize()
   
 ## <a name="c-language-specification"></a>C# 언어 사양  
 
-자세한 내용은 [C# 언어 사양](../../language-reference/language-specification/index.md)의 [소멸자](~/_csharplang/spec/classes.md#destructors) 섹션을 참조하세요.
+자세한 내용은 [C# 언어 사양](/dotnet/csharp/language-reference/language-specification/introduction)의 [소멸자](~/_csharplang/spec/classes.md#destructors) 섹션을 참조하세요.
   
 ## <a name="see-also"></a>참고 항목
 

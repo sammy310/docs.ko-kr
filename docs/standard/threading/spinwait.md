@@ -8,17 +8,15 @@ dev_langs:
 helpviewer_keywords:
 - synchronization primitives, SpinWait
 ms.assetid: 36012f42-34e5-4f86-adf4-973f433ed6c6
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9b66ec913a6e8726710d90737f97c04335ae6e4f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 91588fc6e9c3c8e85de6a315c0743efb0137ecd5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54676434"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128995"
 ---
 # <a name="spinwait"></a>SpinWait
-<xref:System.Threading.SpinWait?displayProperty=nameWithType>는 커널 이벤트에 필요한 비용이 많이 드는 컨텍스트 스위치 및 커널 전환을 방지하기 위해 하위 수준 시나리오에서 사용할 수 있는 단순한 동기화 유형입니다. 멀티 코어 컴퓨터에서, 리소스를 장기간 보유하지 않아도 되는 경우 몇십 번 또는 몇백 번의 주기 동안 대기 스레드가 사용자 모드에서 회전한 다음, 리소스를 획득하려고 시도하는 것이 더 효율적일 수 있습니다. 회전 후에 리소스가 사용 가능해지면 몇천 번의 주기를 절약하는 것입니다. 리소스를 여전히 사용할 수 없는 경우에는 몇 번의 주기만 사용한 것이며 커널 기반의 대기를 계속 입력할 수 있습니다. 이 회전 후 대기 조합을 ‘2단계 대기 작업’이라고도 합니다.  
+<xref:System.Threading.SpinWait?displayProperty=nameWithType>는 커널 이벤트에 필요한 비용이 많이 드는 컨텍스트 스위치 및 커널 전환을 방지하기 위해 하위 수준 시나리오에서 사용할 수 있는 단순한 동기화 유형입니다. 멀티 코어 컴퓨터에서, 리소스를 장기간 보유하지 않아도 되는 경우 몇십 번 또는 몇백 번의 주기 동안 대기 스레드가 사용자 모드에서 회전한 다음, 리소스를 획득하려고 시도하는 것이 더 효율적일 수 있습니다. 회전 후에 리소스가 사용 가능해지면 몇천 번의 주기를 절약하는 것입니다. 리소스를 여전히 사용할 수 없는 경우에는 몇 번의 주기만 사용한 것이며 커널 기반의 대기를 계속 입력할 수 있습니다. 이 회전 후 대기 조합을 ‘2단계 대기 작업’이라고도 합니다.   
   
  <xref:System.Threading.SpinWait>는 <xref:System.Threading.ManualResetEvent>와 같은 커널 이벤트를 래핑하는 .NET Framework 유형과 함께 사용하도록 설계되었습니다. <xref:System.Threading.SpinWait>는 한 프로그램의 기본 회전 기능에 대해 자동으로 사용될 수도 있습니다.  
   

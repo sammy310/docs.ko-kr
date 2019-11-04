@@ -2,12 +2,12 @@
 title: 비동기 메시지 기반 통신
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | 비동기 메시지 기반 통신은 마이크로 서비스 아키텍처에서 필수 개념입니다. 마이크로 서비스를 서로 독립적인 상태로 유지하는 동시에, 결국은 동기화된 상태로 유지하는 가장 좋은 방법이기 때문입니다.
 ms.date: 09/20/2018
-ms.openlocfilehash: c362bdaf41fee5ee20516b89b8bec12d6c0557cf
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 84eaf70178cce91a86dae8a55badb0b4ddd6a7c1
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72522749"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454237"
 ---
 # <a name="asynchronous-message-based-communication"></a>비동기 메시지 기반 통신
 
@@ -77,11 +77,11 @@ ms.locfileid: "72522749"
 
 - 전체 [이벤트 소싱](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing) 패턴을 사용합니다.
 
-- [보낼 메일함 패턴](http://www.kamilgrzybek.com/design/the-outbox-pattern/) 사용: 이벤트를 만들고 게시하는 이벤트 생성자 구성 요소의 기본이 되는 메시지 큐로서의 트랜잭션 데이터베이스 테이블입니다.
+- [보낼 메일함 패턴](https://www.kamilgrzybek.com/design/the-outbox-pattern/) 사용: 이벤트를 만들고 게시하는 이벤트 생성자 구성 요소의 기본이 되는 메시지 큐로서의 트랜잭션 데이터베이스 테이블입니다.
 
 비동기 통신을 사용할 때 고려해야 할 추가 토픽은 메시지 idempotence 및 메시지 중복입니다. 이들 토픽은 이 가이드의 뒷부분에 나오는 [마이크로 서비스(통합 이벤트) 간 이벤트 기반 통신 구현](../multi-container-microservice-net-applications/integration-event-based-microservice-communications.md) 섹션에서 다룹니다.
 
-## <a name="additional-resources"></a>추가 자료
+## <a name="additional-resources"></a>추가 리소스
 
 - **이벤트 기반 메시징** \
   <https://soapatterns.org/design_patterns/event_driven_messaging>

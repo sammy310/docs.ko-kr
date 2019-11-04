@@ -6,14 +6,12 @@ helpviewer_keywords:
 - CorFlags.exe
 - portable executable files, CorFlags section
 ms.assetid: ef900f8f-71ca-4dde-9b8c-95ddb0d7d89c
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 63e70ae8cd110786ad7d2069088dbfdfde736a28
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: e1251b6660db45f3af4f6e57114b1b10da18bd0a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846743"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129857"
 ---
 # <a name="corflagsexe-corflags-conversion-tool"></a>CorFlags.exe(CorFlags 변환 도구)
 CorFlags 변환 도구를 사용하면 이식할 수 있는 실행 가능 이미지 헤더의 CorFlags 섹션을 구성할 수 있습니다.  

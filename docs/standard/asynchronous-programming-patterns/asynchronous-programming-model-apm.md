@@ -11,14 +11,12 @@ helpviewer_keywords:
 - stopping asynchronous operations
 - asynchronous programming, beginning operations
 ms.assetid: c9b3501e-6bc6-40f9-8efd-4b6d9e39ccf0
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3c03a6dadae98d75b06b96bb3cde67db4747b8c7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0a9ea3c8c9c589bb5954fa9771ffd1bb095f6d73
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69950877"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140147"
 ---
 # <a name="asynchronous-programming-model-apm"></a>APM(비동기 프로그래밍 모델)
 <xref:System.IAsyncResult> 디자인 패턴을 사용하는 비동기 작업은 각각 비동기 작업 *OperationName*을 시작하고 종료하는 `BeginOperationName` 및 `EndOperationName`이라는 두 개의 메서드로 구현됩니다. 예를 들어 <xref:System.IO.FileStream> 클래스는 파일에서 바이트를 비동기적으로 읽는 <xref:System.IO.FileStream.BeginRead%2A> 및 <xref:System.IO.FileStream.EndRead%2A> 메서드를 제공합니다. 이러한 메서드는 비동기 버전의 <xref:System.IO.FileStream.Read%2A> 메서드를 구현합니다.  

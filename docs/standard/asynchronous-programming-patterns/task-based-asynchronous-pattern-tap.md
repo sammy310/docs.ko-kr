@@ -12,14 +12,12 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET Framework support for
 - .NET Framework, asynchronous design patterns
 ms.assetid: 8cef1fcf-6f9f-417c-b21f-3fd8bac75007
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 052f6a61fb1b03b060e22bbff2d8124ac3a1c0c0
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: f61ad49753da9d96e733ea667095722ddc238fe1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66377653"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121106"
 ---
 # <a name="task-based-asynchronous-pattern-tap"></a>TAP(작업 기반 비동기 패턴)
 TAP(작업 기반 비동기 패턴)은 임의 비동기 작업을 나타내는 데 사용되는 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 네임스페이스의 <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> 및 <xref:System.Threading.Tasks?displayProperty=nameWithType> 형식을 기준으로 합니다. TAP은 새로운 개발을 위해 비동기 디자인 패턴을 권장합니다.  
@@ -189,7 +187,7 @@ Public MethodNameAsync(…, cancellationToken As CancellationToken,
   
  여러 오버로드가 취소 또는 진행률을 선택하도록 노출되는 경우 취소 또는 진행률을 지원하지 않는 오버로드는 이를 지원하는 오버로드에 대해 취소의 경우 <xref:System.Threading.CancellationToken.None%2A> 및 진행률의 경우 `null`이 전달된 것처럼 동작해야 합니다.  
   
-## <a name="related-topics"></a>관련 항목  
+## <a name="related-topics"></a>관련된 항목  
   
 |제목|설명|  
 |-----------|-----------------|  

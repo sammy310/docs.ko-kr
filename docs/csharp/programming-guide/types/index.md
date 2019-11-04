@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: a5ccd0e9e0e3e5bedad06a619be115c362b38e0d
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 5c5586c2ee41b12e9b5706603b4c2f62207566ed
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71392163"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73417714"
 ---
 # <a name="types-c-programming-guide"></a>형식(C# 프로그래밍 가이드)
 
@@ -74,7 +74,7 @@ C#에서는 정수, 부동 소수점 값, 부울 식, 텍스트 문자, 10진수
 
 .NET의 형식 시스템에 대한 다음과 같은 두 가지 기초 사항을 이해해야 합니다.
 
-- 형식 시스템은 상속 원칙을 지원합니다. 형식은 *기본 형식*이라는 다른 형식에서 파생될 수 있습니다. 파생 형식은 기본 형식의 메서드, 속성 및 기타 멤버를 상속합니다(몇 가지 제한 사항 있음). 기본 형식이 다른 형식에서 파생될 수도 있습니다. 이 경우 파생 형식은 상속 계층 구조에 있는 두 기본 형식의 멤버를 상속합니다. <xref:System.Int32?displayProperty=nameWithType>(C# 키워드: [int](../../language-reference/builtin-types/integral-numeric-types.md))와 같은 기본 제공 숫자 형식을 포함한 모든 형식은 기본적으로 단일 기본 형식 <xref:System.Object?displayProperty=nameWithType>(C# 키워드: [object](../../language-reference/keywords/object.md))에서 파생됩니다. 이 통합 형식 계층 구조를 CTS([공용 형식 시스템](../../../standard/base-types/common-type-system.md))라고 합니다. C#의 상속에 대한 자세한 내용은 [상속](../classes-and-structs/inheritance.md)을 참조하세요.
+- 형식 시스템은 상속 원칙을 지원합니다. 형식은 *기본 형식*이라는 다른 형식에서 파생될 수 있습니다. 파생 형식은 기본 형식의 메서드, 속성 및 기타 멤버를 상속합니다(몇 가지 제한 사항 있음). 기본 형식이 다른 형식에서 파생될 수도 있습니다. 이 경우 파생 형식은 상속 계층 구조에 있는 두 기본 형식의 멤버를 상속합니다. <xref:System.Int32?displayProperty=nameWithType>(C# 키워드: [int](../../language-reference/builtin-types/integral-numeric-types.md))와 같은 기본 제공 숫자 형식을 포함한 모든 형식은 기본적으로 단일 기본 형식 <xref:System.Object?displayProperty=nameWithType>(C# 키워드: [object](../../language-reference/builtin-types/reference-types.md))에서 파생됩니다. 이 통합 형식 계층 구조를 CTS([공용 형식 시스템](../../../standard/base-types/common-type-system.md))라고 합니다. C#의 상속에 대한 자세한 내용은 [상속](../classes-and-structs/inheritance.md)을 참조하세요.
 
 - CTS의 각 형식은 *값 형식* 또는 *참조 형식*으로 정의됩니다. 여기에는 .NET 클래스 라이브러리의 모든 사용자 지정 형식과 자체 사용자 정의 형식도 포함됩니다. [struct](../../language-reference/keywords/struct.md)를 사용하여 정의한 형식은 값 형식이고, 모든 기본 제공 숫자 형식은 `structs`입니다. [class](../../language-reference/keywords/class.md) 키워드를 사용하여 정의한 형식은 참조 형식입니다. 참조 형식과 값 형식의 컴파일 타임 규칙 및 런타임 동작은 서로 다릅니다.
 
@@ -126,7 +126,7 @@ char c = 'Z';
 
 ### <a name="reference-types"></a>참조 형식
 
-[클래스](../../language-reference/keywords/class.md), [대리자](../../language-reference/keywords/delegate.md), 배열 또는 [인터페이스](../../language-reference/keywords/interface.md)로 정의되는 형식은 *참조 형식*입니다. 런타임에 참조 형식의 변수를 선언하면 [new](../../language-reference/operators/new-operator.md) 연산자를 사용하여 개체를 명시적으로 만들거나 다음 예제와 같이 `new`를 사용하여 다른 곳에서 만들어진 개체를 할당할 때까지 변수에는 [null](../../language-reference/keywords/null.md) 값이 포함됩니다.
+[클래스](../../language-reference/keywords/class.md), [대리자](../../language-reference/builtin-types/reference-types.md), 배열 또는 [인터페이스](../../language-reference/keywords/interface.md)로 정의되는 형식은 *참조 형식*입니다. 런타임에 참조 형식의 변수를 선언하면 [new](../../language-reference/operators/new-operator.md) 연산자를 사용하여 개체를 명시적으로 만들거나 다음 예제와 같이 `new`를 사용하여 다른 곳에서 만들어진 개체를 할당할 때까지 변수에는 [null](../../language-reference/keywords/null.md) 값이 포함됩니다.
 
 ```csharp
 MyClass mc = new MyClass();
@@ -166,7 +166,7 @@ stringList.Add("String example");
 stringList.Add(4);
 ```
 
-형식 매개 변수를 사용하면 각 요소를 [개체](../../language-reference/keywords/object.md)로 변환할 필요 없이 같은 클래스를 재사용하여 요소 형식을 포함할 수 있습니다. 컴파일러는 컬렉션 요소의 특정 형식을 인식하며, 예를 들어 이전 예제에서 `stringList` 개체에 정수를 추가하려는 경우 컴파일 시간에 오류를 발생시킬 수 있기 때문에 제네릭 컬렉션 클래스를 *강력한 형식의 컬렉션*이라고 합니다. 자세한 내용은 [제네릭](../generics/index.md)을 참조하세요.
+형식 매개 변수를 사용하면 각 요소를 [개체](../../language-reference/builtin-types/reference-types.md)로 변환할 필요 없이 같은 클래스를 재사용하여 요소 형식을 포함할 수 있습니다. 컴파일러는 컬렉션 요소의 특정 형식을 인식하며, 예를 들어 이전 예제에서 `stringList` 개체에 정수를 추가하려는 경우 컴파일 시간에 오류를 발생시킬 수 있기 때문에 제네릭 컬렉션 클래스를 *강력한 형식의 컬렉션*이라고 합니다. 자세한 내용은 [제네릭](../generics/index.md)을 참조하세요.
 
 ## <a name="implicit-types-anonymous-types-and-nullable-value-types"></a>암시적 형식, 무명 형식 및 nullable 값 형식
 

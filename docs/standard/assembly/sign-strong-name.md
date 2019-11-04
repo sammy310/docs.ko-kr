@@ -7,18 +7,16 @@ helpviewer_keywords:
 - assemblies [.NET Framework], signing
 - assemblies [.NET Framework], strong-named
 ms.assetid: 2c30799a-a826-46b4-a25d-c584027a6c67
-author: rpetrusha
-ms.author: ronpet
 dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 527fd68ef40e152b57a1fc98113094d3b41fbaae
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: c9ddbcf8f7b6307ab2d89b819aee4809f753a0fe
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972554"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138608"
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a>방법: 강력한 이름으로 어셈블리 서명
 
@@ -56,7 +54,7 @@ ms.locfileid: "70972554"
 
 **al** **/out:** \<*assemblyName*>  *\<moduleName>* **/keyfile:** \<*keyfileName*>  
 
-여기서  
+위치:  
 
 - *assemblyName*은 어셈블리 링커가 내보낼 강력하게 서명된 어셈블리( *.dll* 또는 *.exe* 파일)의 이름입니다.  
   

@@ -15,15 +15,13 @@ helpviewer_keywords:
 - source code execution
 - code, runtime functionality
 ms.assetid: 059a624e-f7db-4134-ba9f-08b676050482
-author: rpetrusha
-ms.author: ronpet
 ms.custom: updateeachrelease
-ms.openlocfilehash: a1e1fd2b7843299fdd8fbd62dbfba6c62a7be50f
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c866e3d1a4de31361843f5c071510fd18247cb39
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645004"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132806"
 ---
 # <a name="common-language-runtime-clr-overview"></a>CLR(공용 언어 런타임) 개요
 
@@ -79,7 +77,7 @@ ms.locfileid: "65645004"
 |4.7(4.7.1 및 4.7.2 포함)|4|
 |4.8|4|
 
-## <a name="related-topics"></a>관련 항목
+## <a name="related-topics"></a>관련된 항목
 
 |제목|설명|
 |-----------|-----------------|

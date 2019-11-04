@@ -10,21 +10,19 @@ helpviewer_keywords:
 - TPL dataflow library, joining blocks in
 - dataflow blocks, joining in TPL
 ms.assetid: e9c1ada4-ac57-4704-87cb-2f5117f8151d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a7becba9c7626e79f9d001a6a21ed92a336e9d11
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 66fd7ed7a98b8be8f88f65ecb52710a1e40af778
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591986"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139734"
 ---
 # <a name="how-to-use-joinblock-to-read-data-from-multiple-sources"></a>방법: JoinBlock을 사용하여 여러 소스에서 데이터 읽기
 이 문서에서는 <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> 클래스를 사용하여 여러 소스에서 데이터를 사용할 수 있는 경우 작업을 수행하는 방법을 설명합니다. 또한 non-greedy 모드를 사용하여 여러 조인 블록이 데이터 소스를 보다 효율적으로 공유할 수 있도록 하는 방법을 보여 줍니다.
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
 
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 세 가지 리소스 형식인 `NetworkResource`, `FileResource` 및 `MemoryResource`를 정의하고 리소스를 사용할 수 있게 되면 작업을 수행합니다. 이 예제에서는 첫 번째 작업을 수행하기 위해 `NetworkResource` 및 `MemoryResource` 쌍이 필요하고, 두 번째 작업을 수행하기 위해 `FileResource` 및 `MemoryResource` 쌍이 필요합니다. 필요한 리소스를 모두 사용할 수 있을 때 이러한 작업이 수행될 수 있도록 하기 위해 이 예제에서는 <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> 클래스를 사용합니다. <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> 개체는 모든 소스에서 데이터를 받으면 해당 데이터를 대상에 전파합니다. 이 예제에서 대상은 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> 개체입니다. 두 <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> 개체 모두 `MemoryResource` 개체의 공유 풀에서 읽습니다.  
   
  [!code-csharp[TPLDataflow_NonGreedyJoin#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_nongreedyjoin/cs/nongreedyjoin.cs#1)]

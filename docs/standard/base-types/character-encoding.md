@@ -11,15 +11,13 @@ helpviewer_keywords:
 - encoding, choosing
 - encoding, fallback strategy
 ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
-author: rpetrusha
-ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 248628d9907a3984b2c06e5f2f3a1e5c2faa2a67
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 3ac5602c32ce0dcfe21e913868faa7ab356e4194
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040543"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120599"
 ---
 # <a name="character-encoding-in-net"></a>.NET의 문자 인코딩
 
@@ -69,7 +67,7 @@ ms.locfileid: "70040543"
 
 <xref:System.Text.Encoding.GetEncodings%2A?displayProperty=nameWithType> 메서드를 호출하여 .NET에서 사용할 수 있는 모든 인코딩에 대한 정보를 검색할 수 있습니다. .NET에서는 다음 표에 나열된 문자 인코딩 시스템을 지원합니다.
 
-|인코딩|클래스|설명|장점/단점|
+|Encoding|클래스|설명|장점/단점|
 |--------------|-----------|-----------------|-------------------------------|
 |ASCII|<xref:System.Text.ASCIIEncoding>|바이트의 하위 7비트를 사용하여 제한된 범위의 문자를 인코딩합니다.|이 인코딩은 U+0000에서 U+007F 사이의 문자 값만 지원하므로 대부분의 경우 국제화된 애플리케이션에는 적합하지 않습니다.|
 |UTF-7|<xref:System.Text.UTF7Encoding>|7비트 ASCII 문자 시퀀스로 문자를 나타냅니다. 비 ASCII 유니코드 문자는 ASCII 문자의 이스케이프 시퀀스로 표시됩니다.|UTF-7은 전자 메일 및 뉴스 그룹 프로토콜과 같은 프로토콜을 지원합니다. 그러나 UTF-7은 특별히 안전하거나 강력하지 않습니다. 경우에 따라 1비트를 변경해도 전체 UTF-7 문자열의 해석이 완전히 바뀔 수 있습니다. 다른 UTF-7 문자열이 동일한 텍스트를 인코딩할 수도 있습니다. 비 ASCII 문자를 포함하는 시퀀스의 경우 UTF-7에서 UTF-8보다 많은 공간이 필요하며 인코딩/디코딩 속도가 느려집니다. 따라서 가능하면 UTF-7 대신 UTF-8을 사용해야 합니다.|

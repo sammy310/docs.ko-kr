@@ -2,14 +2,13 @@
 title: '방법: 지역화된 예외 메시지를 사용하여 사용자 정의 예외 만들기'
 description: '방법: 지역화된 예외 메시지를 사용하여 사용자 정의 예외 만드는 방법 알아보기'
 author: Youssef1313
-ms.author: ronpet
 ms.date: 09/13/2019
-ms.openlocfilehash: b4aa567fccda9354bc5959d6b9838d678d53abef
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 453e332541628770932da2a6802fdcaee5211a84
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71696712"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141532"
 ---
 # <a name="how-to-create-user-defined-exceptions-with-localized-exception-messages"></a>방법: 지역화된 예외 메시지를 사용하여 사용자 정의 예외 만들기
 

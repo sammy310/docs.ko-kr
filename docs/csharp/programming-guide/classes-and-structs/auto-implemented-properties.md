@@ -6,12 +6,12 @@ helpviewer_keywords:
 - auto-implemented properties [C#]
 - properties [C#], auto-implemented
 ms.assetid: aa55fa97-ccec-431f-b5e9-5ac789fd32b7
-ms.openlocfilehash: 44f3beb9de8c9d339c42db26bb9c510998abc7d7
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 212fdde3a5ecc8b0a43e33bec3537bd57b1387e9
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69597140"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419409"
 ---
 # <a name="auto-implemented-properties-c-programming-guide"></a>자동으로 구현된 속성(C# 프로그래밍 가이드)
 C# 3.0 이상에서는 속성 접근자에 추가적인 논리가 필요하지 않을 경우 자동 구현 속성을 통해 속성 선언이 더 간결해집니다. 이를 통해 클라이언트 코드에서 개체를 만들 수도 있습니다. 다음 예제와 같이 속성을 선언할 때 컴파일러는 속성의 `get` 및 `set` 접근자를 통해서만 액세스할 수 있는 전용 익명 지원 필드를 만듭니다.  
@@ -32,4 +32,4 @@ public string FirstName { get; set; } = "Jane";
 ## <a name="see-also"></a>참고 항목
 
 - [속성](./properties.md)
-- [한정자](../../language-reference/keywords/modifiers.md)
+- [한정자](/dotnet/csharp/language-reference/keywords)

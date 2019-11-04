@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: dc9f37ae0cd6eef2c67e62421571290bba1c2233
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 503d61cb86c83e2f32ad40c60a127ae255ef71b0
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394385"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73198508"
 ---
 ### <a name="mvc-async-suffix-trimmed-from-controller-action-names"></a>MVC: 컨트롤러 작업 이름에서 잘린 비동기 접미사
 
@@ -48,7 +48,7 @@ ASP.NET Core 3.0에서 작업은 `Product/List`를 통해 라우팅할 수 있�
 ```csharp
 services.AddMvc(options =>
 {
-   options.SuppressAsyncSuffixInActionNames = false; 
+   options.SuppressAsyncSuffixInActionNames = false;
 });
 ```
 
@@ -66,7 +66,7 @@ services.AddMvc(options =>
 ```csharp
 services.AddMvc(options =>
 {
-   options.SuppressAsyncSuffixInActionNames = false; 
+   options.SuppressAsyncSuffixInActionNames = false;
 });
 ```
 

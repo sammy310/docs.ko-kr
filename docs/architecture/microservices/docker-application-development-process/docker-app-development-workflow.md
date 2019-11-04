@@ -2,12 +2,12 @@
 title: Docker 앱에 대한 개발 워크플로
 description: Docker 기반 애플리케이션 개발 워크플로의 세부 정보를 확인하세요. 먼저 단계별로 살펴보고 Dockerfile 최적화에 대한 세부 정보를 알아본 후 Visual Studio 사용 시 사용 가능한 간소화된 워크플로를 마지막으로 확인하세요.
 ms.date: 01/07/2019
-ms.openlocfilehash: cd599753a5e89504f11226e89837df7665bca641
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 8a4d87d84ca59304266a52b0a977f878189108f0
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771494"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73417248"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Docker 앱에 대한 개발 워크플로
 
@@ -41,7 +41,7 @@ Visual Studio 2017을 사용하는 경우 이러한 단계의 상당 부분이 �
 
 ![1 - 앱 코딩](./media/image2.png)
 
-## <a name="step-1-start-coding-and-create-your-initial-application-or-service-baseline"></a>1단계: 코딩을 시작하고 초기 애플리케이션 또는 서비스 기준 만들기
+## <a name="step-1-start-coding-and-create-your-initial-application-or-service-baseline"></a>1단계. 코딩을 시작하고 초기 애플리케이션 또는 서비스 기준 만들기
 
 Docker 애플리케이션 개발은 Docker 없이 애플리케이션을 개발하는 방법과 비슷합니다. 다른 점은 Docker를 개발하는 동안 로컬 환경의 Docker 컨테이너 내에서 실행되는 애플리케이션을 배포하고 테스트한다는 점입니다(Docker를 사용하는 Linux VM 환경 또는 Windows 컨테이너를 사용하는 Windows 환경).
 
@@ -59,7 +59,7 @@ Docker 애플리케이션 개발은 Docker 없이 애플리케이션을 개발�
 
 심지어 애플리케이션에서 Docker를 사용하도록 설정하고 Docker에 배포 및 테스트하기 전에도 일반 .NET에서 애플리케이션 코딩을 시작할 수 있습니다(컨테이너를 사용하려는 경우 일반적으로 .NET Core). 하지만 되도록이면 빨리 Docker에서 작업을 시작하는 것이 좋습니다. 실제로 사용하게 될 환경이고 문제를 최대한 신속하게 검색할 수 있기 때문입니다. 이렇게 하도록 권장하는 이유는 Visual Studio를 사용하면 거의 투명한 것처럼 느껴지는 Docker를 손쉽게 작업할 수 있기 때문입니다. 가장 대표적인 예로 Visual Studio에서 다중 컨테이너 애플리케이션을 디버깅하는 경우를 들 수 있습니다.
 
-### <a name="additional-resources"></a>추가 자료
+### <a name="additional-resources"></a>추가 리소스
 
 - **Windows용 Docker CE 시작** \
   <https://docs.docker.com/docker-for-windows/>
@@ -114,10 +114,10 @@ ENTRYPOINT ["dotnet", " MySingleContainerWebApp.dll "]
 
 사용하는 언어 및 프레임워크에 따라 Dockerfile에서 추가 구성 설정을 지정할 수 있습니다. 예를 들어 `["dotnet", "MySingleContainerWebApp.dll"]`이 포함된 ENTRYPOINT 줄은 Docker에 .NET Core 애플리케이션을 실행하라고 알려줍니다. SDK 및 .NET Core CLI(dotnet CLI)를 사용하여 .NET 애플리케이션을 빌드하고 실행하는 경우 이 설정이 달라집니다. 결론적으로 ENTRYPOINT 줄 및 기타 설정은 개발자가 애플리케이션에 대해 선택하는 언어 및 플랫폼에 따라 달라집니다.
 
-### <a name="additional-resources"></a>추가 자료
+### <a name="additional-resources"></a>추가 리소스
 
 - **.NET Core 애플리케이션에 대한 Docker 이미지 작성** \
-  [https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images](../../../core/docker/building-net-docker-images.md)
+  [https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images](/aspnet/core/host-and-deploy/docker/building-net-docker-images)
 
 - **고유의 이미지 빌드**. 공식 Docker 설명서에 있습니다.\
   <https://docs.docker.com/engine/tutorials/dockerimages/>
@@ -296,7 +296,7 @@ RUN dotnet restore
 
 개발자 고유의 Docker 기본 이미지를 처음부터 새로 만들 수 있습니다. 이 시나리오는 Docker를 시작하는 분들에게는 권장하지 않지만, 자신만의 고유한 기본 이미지 비트를 설정하고 싶은 분들은 그렇게 하셔도 됩니다.
 
-### <a name="additional-resources"></a>추가 자료
+### <a name="additional-resources"></a>추가 리소스
 
 - **다중 아키텍처 .NET Core 이미지**.\
   <https://github.com/dotnet/announcements/issues/14>
@@ -491,7 +491,7 @@ Visual Studio 2017을 사용하여 다중 컨테이너 애플리케이션을 실
 
 **그림 5-12**. Visual Studio 2017에서 다중 컨테이너 앱 실행
 
-### <a name="additional-resources"></a>추가 자료
+### <a name="additional-resources"></a>추가 리소스
 
 - **원격 Docker 호스트에 ASP.NET 컨테이너 배포** \
   <https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker>
@@ -528,7 +528,7 @@ Visual Studio 2017을 사용하여 컨테이너를 실행하고 디버깅할 때
 
 편집기/CLI 방식을 사용하여 개발하는 경우 컨테이너를 디버깅하기가 훨씬 어려우며 추적을 생성하여 디버그하는 것이 좋습니다.
 
-### <a name="additional-resources"></a>추가 자료
+### <a name="additional-resources"></a>추가 리소스
 
 - **로컬 Docker 컨테이너에서 앱 디버그** \
   [https://docs.microsoft.com/visualstudio/containers/edit-and-refresh](/visualstudio/containers/edit-and-refresh)
@@ -546,7 +546,7 @@ Visual Studio를 사용하면 편집기/CLI 방식을 사용할 때보다 워크
 
 또한 2단계(프로젝트에 Docker 지원 추가)를 한 번만 수행하면 됩니다. 따라서 다른 개발에서 .NET을 사용하여 수행하는 일반적인 개발 작업과 워크플로가 비슷합니다. 내부에서 어떤 동작이 발생하는지(이미지 빌드 프로세스, 사용하는 기본 이미지, 컨테이너 배포 등) 알아야 하며, 때로는 Dockerfile 또는 docker-compose.yml 파일을 편집하여 동작을 사용자 지정해야 합니다. 하지만 Visual Studio를 사용하여 대부분의 작업이 대폭 간소화되므로 개발자의 생산성이 크게 향상됩니다.
 
-### <a name="additional-resources"></a>추가 자료
+### <a name="additional-resources"></a>추가 리소스
 
 - **Steve Lasker. Visual Studio 2017을 사용한 .NET Docker 개발** \
   <https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T111>

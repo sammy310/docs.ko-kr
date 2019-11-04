@@ -2,12 +2,12 @@
 title: docker-compose.yml을 사용하여 다중 컨테이너 애플리케이션 정의
 description: docker-compose.yml을 사용하여 다중 컨테이너 애플리케이션에서 마이크로 서비스 컴퍼지션을 지정하는 방법입니다.
 ms.date: 10/02/2018
-ms.openlocfilehash: 8c0f1a654d27b32e613b84d3862198ad96f32e1c
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 938a9aa192f82628051bd7dc065f661f510ba544
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039740"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73416708"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>docker-compose.yml을 사용하여 다중 컨테이너 애플리케이션 정의
 
@@ -418,7 +418,7 @@ docker-compose는 .env 파일의 각 줄이 \<변수\>=\<값\> 형식이 되도�
 
 런타임 환경에서 설정된 값은 항상 .env 파일 내부에 정의된 값을 재정의합니다. 비슷한 방식으로 명령줄 명령 인수를 통해 전달된 값도 .env 파일에 설정된 기본값을 재정의합니다.
 
-#### <a name="additional-resources"></a>추가 자료
+#### <a name="additional-resources"></a>추가 리소스
 
 - **Docker Compose 개요** \
     <https://docs.docker.com/compose/overview/>
@@ -461,13 +461,13 @@ ENTRYPOINT ["dotnet", "run"]
 
 빠른 시작을 위해 런타임 이미지도 자동으로 aspnetcore\_urls를 포트 80으로 설정하고 Ngen을 사용하여 어셈블리의 네이티브 이미지 캐시를 만듭니다.
 
-#### <a name="additional-resources"></a>추가 자료
+#### <a name="additional-resources"></a>추가 리소스
 
 - **ASP.NET Core를 사용하여 최적화된 Docker 이미지 빌드**  
   <https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/>
 
 - **.NET Core 애플리케이션에 대한 Docker 이미지 작성**  
-  [https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images](../../../core/docker/building-net-docker-images.md)
+  [https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images](/aspnet/core/host-and-deploy/docker/building-net-docker-images)
 
 > [!div class="step-by-step"]
 > [이전](data-driven-crud-microservice.md)

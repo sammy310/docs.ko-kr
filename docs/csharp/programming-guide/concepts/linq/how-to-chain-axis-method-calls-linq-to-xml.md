@@ -2,12 +2,12 @@
 title: '방법: 축 메서드 호출 연결(LINQ to XML)(C#)'
 ms.date: 07/20/2015
 ms.assetid: 067e6da2-ee32-486d-803c-e611b328e39a
-ms.openlocfilehash: 573efb50dd889d1e10fc3a74bb5c7d9a8ac30eab
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 3dfb2849bc2e2af9290738ed06938f80f3416f72
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594087"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418402"
 ---
 # <a name="how-to-chain-axis-method-calls-linq-to-xml-c"></a>방법: 축 메서드 호출 연결(LINQ to XML)(C#)
 코드에 사용할 수 있는 일반적인 방법은 축 메서드를 호출한 다음 확장명 메서드 축 중 하나를 호출하는 것입니다.  
@@ -118,4 +118,4 @@ foreach (XElement e in names)
   
 ## <a name="see-also"></a>참고 항목
 
-- [LINQ to XML 축(C#)](./linq-to-xml-axes.md)
+- [LINQ to XML 축(C#)](linq-to-xml-axes-overview.md)

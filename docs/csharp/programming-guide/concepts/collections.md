@@ -2,12 +2,12 @@
 title: 컬렉션(C#)
 ms.date: 07/20/2015
 ms.assetid: 317d7dc3-8587-4873-8b3e-556f86497939
-ms.openlocfilehash: 712ae4c9b4cf577ab728e4b78582445070e08049
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 23d73a26bbe0e711bb3a081994826e06634c4bac
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69595288"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418701"
 ---
 # <a name="collections-c"></a>컬렉션(C#)
 
@@ -351,7 +351,7 @@ private static void FindInDictionary2(string symbol)
 
 ## <a name="using-linq-to-access-a-collection"></a>LINQ를 사용하여 컬렉션에 액세스
 
-LINQ(통합 언어 쿼리)를 사용하여 컬렉션에 액세스할 수 있습니다. LINQ 쿼리는 필터링, 정렬 및 그룹화 기능을 제공합니다. 자세한 내용은 [C#에서 LINQ 시작](./linq/getting-started-with-linq.md)을 참조하세요.
+LINQ(통합 언어 쿼리)를 사용하여 컬렉션에 액세스할 수 있습니다. LINQ 쿼리는 필터링, 정렬 및 그룹화 기능을 제공합니다. 자세한 내용은 [C#에서 LINQ 시작](/dotnet/csharp/programming-guide/concepts/linq/)을 참조하세요.
 
 다음 예제에서는 제네릭 `List`에 대해 LINQ 쿼리를 실행합니다. LINQ 쿼리는 결과를 포함하는 다른 컬렉션을 반환합니다.
 

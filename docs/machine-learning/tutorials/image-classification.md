@@ -1,17 +1,17 @@
 ---
 title: '자습서: 미리 학습된 TensorFlow 모델에서 ML.NET 이미지 분류 모델 생성'
 description: 기존 TensorFlow 모델에서 새로운 ML.NET 이미지 분류 모델로 정보를 전이하는 방법을 알아봅니다. TensorFlow 모델은 이미지를 천 개 범주로 분류하도록 학습되었습니다. ML.NET 모델은 전이 학습을 사용하여 이미지를 좀 더 광범위한 범주로 분류합니다.
-ms.date: 09/30/2019
+ms.date: 10/30/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
 author: natke
 ms.author: nakersha
-ms.openlocfilehash: 399e9ce3288d53049e968688736f5b953d7e5b80
-ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
+ms.openlocfilehash: bd25a24e467148c46958b6e7ce7b18e181dab5fd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72799080"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129595"
 ---
 # <a name="tutorial-generate-an-mlnet-image-classification-model-from-a-pre-trained-tensorflow-model"></a>자습서: 미리 학습된 TensorFlow 모델에서 ML.NET 이미지 분류 모델 생성
 
@@ -143,7 +143,7 @@ toaster2.png    appliance
 
 1. [Inception 모델](https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip)을 다운로드하고 압축을 풉니다.
 
-1. 방금 *TransferLearningTF* 프로젝트 `assets/inputs-train/inception` 디렉터리에 압축을 푼 `inception5h` 디렉터리의 콘텐츠를 복사합니다. 이 디렉터리에는 다음 이미지와 같이 이 자습서에 필요한 모델 및 추가 지원 파일이 포함되어 있습니다.
+1. 방금 *TransferLearningTF* 프로젝트 `assets/inception` 디렉터리에 압축을 푼 `inception5h` 디렉터리의 콘텐츠를 복사합니다. 이 디렉터리에는 다음 이미지와 같이 이 자습서에 필요한 모델 및 추가 지원 파일이 포함되어 있습니다.
 
    ![Inception 디렉터리 콘텐츠](./media/image-classification/inception-files.png)
 
@@ -362,22 +362,14 @@ ML.NET 모델 파이프라인은 추정기의 체인입니다. 파이프라인 �
 
     ```console
     =============== Training classification model ===============
-    Image: broccoli.jpg predicted as: food with score: 0.976743
-    Image: pizza.jpg predicted as: food with score: 0.9751652
-    Image: pizza2.jpg predicted as: food with score: 0.9660203
-    Image: teddy2.jpg predicted as: toy with score: 0.9748783
-    Image: teddy3.jpg predicted as: toy with score: 0.9829691
-    Image: teddy4.jpg predicted as: toy with score: 0.9868168
-    Image: toaster.jpg predicted as: appliance with score: 0.9769174
-    Image: toaster2.png predicted as: appliance with score: 0.9800823
+    Image: broccoli2.jpg predicted as: food with score: 0.8955513
+    Image: pizza3.jpg predicted as: food with score: 0.9667718
+    Image: teddy6.jpg predicted as: toy with score: 0.9797683
     =============== Classification metrics ===============
-    LogLoss is: 0.0228266745633507
-    PerClassLogLoss is: 0.0277501705149937 , 0.0186303530571291 , 0.0217359128952187
+    LogLoss is: 0.0653774699265059
+    PerClassLogLoss is: 0.110315812569315 , 0.0204391272836966 , 0
     =============== Making single image classification ===============
-    Image: toaster3.jpg predicted as: appliance with score: 0.9625379
-
-    C:\Program Files\dotnet\dotnet.exe (process 4304) exited with code 0.
-    Press any key to close this window . . .
+    Image: toaster3.jpg predicted as: appliance with score: 0.9646884
     ```
 
 지금까지 이제 ML.NET에서 `TensorFlow` 모델에 전이 학습을 적용하여 이미지 분류를 위한 기계 학습 모델을 성공적으로 빌드했습니다.

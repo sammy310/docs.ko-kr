@@ -9,14 +9,12 @@ helpviewer_keywords:
 - parsing text with regular expressions, threads
 - pattern-matching with regular expressions, threads
 ms.assetid: 7c4a167b-5236-4cde-a2ca-58646230730f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1c0bcab0757bc48f6a8216dd5878f0289e49a275
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: db25028e10872cfca08d28518c795414d06c5d49
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47075012"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124794"
 ---
 # <a name="thread-safety-in-regular-expressions"></a>정규식의 스레드로부터의 안전성
 <xref:System.Text.RegularExpressions.Regex> 클래스 자체는 스레드로부터 안전하고 변경할 수 없습니다(읽기 전용). 즉, 모든 스레드에서 **Regex** 개체를 만들어 스레드 간에 공유할 수 있습니다. 일치하는 메서드는 모든 스레드에서 호출할 수 있고 전역 상태를 변경하지 않습니다.  
@@ -25,7 +23,7 @@ ms.locfileid: "47075012"
   
  여러 스레드에서 **Regex** 결과 개체를 공유할 수 없는 경우 이러한 개체는 동기화된 메서드를 호출하여 스레드로부터 안전한 인스턴스로 변환할 수 있습니다. 열거자를 제외한 모든 정규식 클래스는 스레드로부터 안전하거나 동기화된 메서드에서 스레드로부터 안전한 개체로 변환될 수 있습니다.  
   
- 열거자만이 예외입니다. 응용 프로그램은 컬렉션 열거자에 대한 호출을 직렬화해야 합니다. 규칙은 다음과 같습니다. 컬렉션을 둘 이상의 스레드에서 동시에 열거할 수 있는 경우 열거자에서 트래버스하는 컬렉션의 루트 개체에 대한 열거자 메서드 동기화해야 합니다.  
+ 열거자만이 예외입니다. 애플리케이션은 컬렉션 열거자에 대한 호출을 직렬화해야 합니다. 규칙은 다음과 같습니다. 컬렉션을 둘 이상의 스레드에서 동시에 열거할 수 있는 경우 열거자에서 트래버스하는 컬렉션의 루트 개체에 대한 열거자 메서드 동기화해야 합니다.  
   
 ## <a name="see-also"></a>참고 항목
 

@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: a16d443a37fb0bb5f6bdc4a39e7dcb4f91c54ead
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 74b989a2413d2192f7cf5208e400eaed879ea096
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394248"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73198503"
 ---
 ### <a name="authorization-iauthorizationpolicyprovider-implementations-require-new-method"></a>권한 부여: IAuthorizationPolicyProvider 구현에는 새 메서드가 필요합니다.
 
 ASP.NET Core 3.0에서는 새 `GetFallbackPolicyAsync` 메서드가 `IAuthorizationPolicyProvider`에 추가되었습니다. 이 대체 정책은 정책이 지정되지 않은 경우 권한 부여 미들웨어에서 사용됩니다.
 
-자세한 내용은 [aspnet/AspNetCore#9759](https://github.com/aspnet/AspNetCore/pull/9759)를 참조하세요. 
+자세한 내용은 [aspnet/AspNetCore#9759](https://github.com/aspnet/AspNetCore/pull/9759)를 참조하세요.
 
 #### <a name="version-introduced"></a>도입된 버전
 

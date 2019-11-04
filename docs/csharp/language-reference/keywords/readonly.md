@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: 6c48806e54f11bce930d03a53b010c337e6658f8
-ms.sourcegitcommit: 9b2ef64c4fc10a4a10f28a223d60d17d7d249ee8
+ms.openlocfilehash: 30419200cfce785d7fcbbf59650241580a1f0ce4
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "72960847"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454967"
 ---
 # <a name="readonly-c-reference"></a>readonly(C# 참조)
 
@@ -27,13 +27,13 @@ ms.locfileid: "72960847"
   - 참조 형식에는 해당 데이터에 대한 참조가 포함되므로, `readonly` 참조 형식인 필드는 항상 같은 개체를 참조해야 합니다. 해당 개체는 변경할 수 있습니다. `readonly` 한정자는 필드가 참조 형식의 다른 인스턴스로 바뀌지 않도록 합니다. 그러나 이 한정자는 필드의 인스턴스 데이터가 읽기 전용 필드를 통해 수정되는 것을 방지하지는 않습니다.
 
   > [!WARNING]
-  > 변경 가능한 참조 형식인, 외부에서 볼 수 있는 읽기 전용 필드가 포함된 외부에서 볼 수 있는 형식은 보안상 취약할 수 있으며 경고 [CA2104](/visualstudio/code-quality/ca2104-do-not-declare-read-only-mutable-reference-types) : “변경 가능한 읽기 전용 참조 형식을 선언하지 마세요.”를 실행할 수 있습니다.
+  > 변경 가능한 참조 형식인, 외부에서 볼 수 있는 읽기 전용 필드가 포함된 외부에서 볼 수 있는 형식은 보안상 취약할 수 있으며 경고 [CA2104](/visualstudio/code-quality/ca2104) : “변경 가능한 읽기 전용 참조 형식을 선언하지 마세요.”를 실행할 수 있습니다.
 
 - [`readonly struct` 정의](#readonly-struct-example)에서 `readonly`는 `struct`가 불변임을 나타냅니다.
 - [`readonly` 멤버 정의](#readonly-member-examples)에서 `readonly`는 `struct`의 멤버가 구조체의 내부 상태를 변경하지 않음을 나타냅니다.
 - [`ref readonly` 메서드 반환](#ref-readonly-return-example)에서 `readonly` 한정자는 메서드가 참조를 반환하고 해당 참조에 쓰기가 허용되지 않음을 나타냅니다.
 
-`readonly sturct` 및 `ref readonly` 컨텍스트는 C# 7.2에서 추가되었습니다. `readonly` 구조체 멤버는 C# 8.0에서 추가되었습니다.
+`readonly struct` 및 `ref readonly` 컨텍스트는 C# 7.2에서 추가되었습니다. `readonly` 구조체 멤버는 C# 8.0에서 추가되었습니다.
 
 ## <a name="readonly-field-example"></a>읽기 전용 필드 예제
 
@@ -161,6 +161,6 @@ public string Message { readonly get; set; }
 - [C# 참조](../index.md)
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)
 - [C# 키워드](index.md)
-- [한정자](modifiers.md)
+- [한정자](index.md)
 - [const](const.md)
 - [필드](../../programming-guide/classes-and-structs/fields.md)

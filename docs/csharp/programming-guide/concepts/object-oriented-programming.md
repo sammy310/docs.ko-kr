@@ -2,12 +2,12 @@
 title: 개체 지향 프로그래밍(C#)
 ms.date: 07/20/2015
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-ms.openlocfilehash: 50b38833582ebe46836ccfab4e1ebeb98b53a96e
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 121d2e43f6896179756067e661be6d7960a1ee64
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659873"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418038"
 ---
 # <a name="object-oriented-programming-c"></a>개체 지향 프로그래밍(C#)
 
@@ -450,7 +450,7 @@ class SampleClass
 
 - [대리자](../delegates/index.md)
 
-- [delegate](../../language-reference/keywords/delegate.md)
+- [delegate](../../language-reference/builtin-types/reference-types.md)
 
 ## <a name="see-also"></a>참고 항목
 

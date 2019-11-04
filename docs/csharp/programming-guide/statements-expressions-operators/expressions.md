@@ -6,12 +6,12 @@ helpviewer_keywords:
 - expressions [C#]
 - C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
-ms.openlocfilehash: 2db08bd89b5e0fc612599f83cb02178aef5ee5fb
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: e08220362c0acec6060ade75131e34a6b3fb7390
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774176"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73417689"
 ---
 # <a name="expressions-c-programming-guide"></a>식(C# 프로그래밍 가이드)
 
@@ -47,7 +47,7 @@ System.Convert.ToInt32("35");
   
  [!code-csharp[csProgGuideStatements#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#2)]  
   
- 리터럴에 대한 자세한 내용은 [형식](../../language-reference/keywords/types.md)을 참조하세요.  
+ 리터럴에 대한 자세한 내용은 [형식](/dotnet/csharp/language-reference/keywords)을 참조하세요.  
   
  앞의 예제에서 `i` 및 `s`는 둘 다 지역 변수를 식별하는 단순 이름입니다. 이러한 변수가 식에 사용되는 경우 변수 이름은 현재 메모리의 변수 위치에 저장된 값으로 평가됩니다. 이는 다음 예제에서 확인할 수 있습니다.  
   

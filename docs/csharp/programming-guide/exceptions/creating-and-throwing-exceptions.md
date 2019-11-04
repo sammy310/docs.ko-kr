@@ -8,12 +8,12 @@ helpviewer_keywords:
 - exceptions [C#], creating
 - exceptions [C#], throwing
 ms.assetid: 6bbba495-a115-4c6d-90cc-1f4d7b5f39e2
-ms.openlocfilehash: 605a28f8f804c11a9a6636c7a17ec5782cc5a429
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: dfc852722531c06f986f54221ad094b13496561f
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590309"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73417943"
 ---
 # <a name="creating-and-throwing-exceptions-c-programming-guide"></a>예외 만들기 및 Throw(C# 프로그래밍 가이드)
 예외는 프로그램을 실행하는 동안 오류가 발생했음을 나타내는 데 사용됩니다. 오류를 설명하는 예외 개체가 만들어지고 [throw](../../language-reference/keywords/throw.md) 키워드를 통해 *throw*됩니다. 그런 다음 런타임에 가장 호환성이 높은 예외 처리기를 검색합니다.  
@@ -64,7 +64,7 @@ ms.locfileid: "69590309"
   
 ## <a name="c-language-specification"></a>C# 언어 사양  
 
-자세한 내용은 [C# 언어 사양](../../language-reference/language-specification/index.md)의 [예외](~/_csharplang/spec/exceptions.md) 및 [throw 문](~/_csharplang/spec/statements.md#the-throw-statement)을 참조하세요. 언어 사양은 C# 구문 및 사용법에 대 한 신뢰할 수 있는 소스 됩니다.
+자세한 내용은 [C# 언어 사양](/dotnet/csharp/language-reference/language-specification/introduction)의 [예외](~/_csharplang/spec/exceptions.md) 및 [throw 문](~/_csharplang/spec/statements.md#the-throw-statement)을 참조하세요. 언어 사양은 C# 구문 및 사용법에 대 한 신뢰할 수 있는 소스 됩니다.
   
 ## <a name="see-also"></a>참고 항목
 

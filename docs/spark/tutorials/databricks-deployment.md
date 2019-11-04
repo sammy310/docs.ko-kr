@@ -4,12 +4,12 @@ description: Databricks에 .NET for Apache Spark 애플리케이션을 배포하
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 9e338886c68845d5f95e7beb0cd7ac3a729d3281
-ms.sourcegitcommit: 9b2ef64c4fc10a4a10f28a223d60d17d7d249ee8
+ms.openlocfilehash: c1c1a57fb2b79826218f8ed94d568b37d4689560
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "72961050"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454269"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-databricks"></a>자습서: Databricks에 .NET for Apache Spark 애플리케이션 배포
 
@@ -18,10 +18,11 @@ ms.locfileid: "72961050"
 이 자습서에서는 다음과 같은 작업을 수행하는 방법을 살펴봅니다.
 
 > [!div class="checklist"]
-> Azure Databricks 작업 영역 만들기
-> .NET for Apache Spark 앱 게시
-> Spark 작업 및 Spark 클러스터 만들기
-> Spark 클러스터에서 앱 실행
+>
+> - Azure Databricks 작업 영역 만들기
+> - .NET for Apache Spark 앱 게시
+> - Spark 작업 및 Spark 클러스터 만들기
+> - Spark 클러스터에서 앱 실행
 
 ## <a name="prerequisites"></a>전제 조건
 
@@ -44,7 +45,7 @@ ms.locfileid: "72961050"
    ![Azure Portal에서 Azure Databricks 리소스 만들기](./media/databricks-deployment/create-databricks-resource.png)
 
 2. **Azure Databricks 서비스** 아래에서 Databricks 작업 영역을 만들기 위한 값을 제공합니다.
-    
+
     |속성  |설명  |
     |---------|---------|
     |**작업 영역 이름**     | Databricks 작업 영역에 대한 이름을 제공합니다.        |
@@ -58,10 +59,10 @@ ms.locfileid: "72961050"
 
 ## <a name="install-azure-databricks-tools"></a>Azure Databricks 도구 설치
 
-**Databricks CLI**를 사용하여 Azure Databricks 클러스터에 연결하고 로컬 머신에서 파일을 업로드할 수 있습니다. Databricks 클러스터는 DBFS(Databricks 파일 시스템)를 통해 파일에 액세스합니다. 
+**Databricks CLI**를 사용하여 Azure Databricks 클러스터에 연결하고 로컬 머신에서 파일을 업로드할 수 있습니다. Databricks 클러스터는 DBFS(Databricks 파일 시스템)를 통해 파일에 액세스합니다.
 
 1. Databricks CLI를 사용하려면 Python 3.6 이상이 필요합니다. Python이 이미 설치되어 있는 경우 이 단계를 건너뛰어도 됩니다.
- 
+
    **Windows:**
 
    [Windows용 Python을 다운로드](https://www.python.org/ftp/python/3.7.4/python-3.7.4.exe)합니다.
@@ -106,14 +107,14 @@ ms.locfileid: "72961050"
 
 1. Microsoft.Spark.Worker를 통해 Apache Spark는 사용자가 작성했을 수 있는 UDF(사용자 정의 함수) 등의 앱을 실행합니다. [Microsoft.Spark.Worker](https://github.com/dotnet/spark/releases/download/v0.6.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz)를 다운로드합니다.
 
-2. *install-worker.sh*는 .NET for Apache Spark 종속 파일을 클러스터의 노드에 복사하는 데 사용할 수 있는 스크립트입니다. 
+2. *install-worker.sh*는 .NET for Apache Spark 종속 파일을 클러스터의 노드에 복사하는 데 사용할 수 있는 스크립트입니다.
 
-   로컬 컴퓨터에 **install-worker.sh**라는 새 파일을 만들고 GitHub에 있는 [install-worker.sh 콘텐츠](https://raw.githubusercontent.com/dotnet/spark/master/deployment/install-worker.sh)를 붙여넣습니다. 
+   로컬 컴퓨터에 **install-worker.sh**라는 새 파일을 만들고 GitHub에 있는 [install-worker.sh 콘텐츠](https://raw.githubusercontent.com/dotnet/spark/master/deployment/install-worker.sh)를 붙여넣습니다.
 
 3. *db-init.sh*는 Databricks Spark 클러스터에 종속성을 설치하는 스크립트입니다.
 
-   로컬 컴퓨터에 **db-init.sh**라는 새 파일을 만들고 GitHub에 있는 [db-init.sh 콘텐츠](https://github.com/dotnet/spark/blob/master/deployment/db-init.sh)를 붙여넣습니다. 
-   
+   로컬 컴퓨터에 **db-init.sh**라는 새 파일을 만들고 GitHub에 있는 [db-init.sh 콘텐츠](https://github.com/dotnet/spark/blob/master/deployment/db-init.sh)를 붙여넣습니다.
+
    방금 만든 파일에서 `DOTNET_SPARK_RELEASE` 변수를 `https://github.com/dotnet/spark/releases/download/v0.6.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz`로 설정합니다. *db-init.sh* 파일의 나머지 내용은 그대로 둡니다.
 
 > [!Note]
@@ -121,7 +122,7 @@ ms.locfileid: "72961050"
 
 ## <a name="publish-your-app"></a>앱 게시
 
-[.NET for Apache Spark - Get Started in 10-Minutes](https://dotnet.microsoft.com/learn/data/spark-tutorial/intro)(.NET for Apache Spark - 10분 이내에 시작하기) 자습서에서 만든 *mySparkApp*을 게시하여 Spark 클러스터가 앱을 실행하는 데 필요한 모든 파일에 액세스할 수 있도록 합니다. 
+[.NET for Apache Spark - Get Started in 10-Minutes](https://dotnet.microsoft.com/learn/data/spark-tutorial/intro)(.NET for Apache Spark - 10분 이내에 시작하기) 자습서에서 만든 *mySparkApp*을 게시하여 Spark 클러스터가 앱을 실행하는 데 필요한 모든 파일에 액세스할 수 있도록 합니다.
 
 1. 다음 명령을 실행하여 *mySparkApp*을 게시합니다.
 
@@ -163,13 +164,13 @@ ms.locfileid: "72961050"
    databricks fs cp Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz dbfs:/spark-dotnet/   Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz
    ```
 
-2. 다음 명령을 실행하여 클러스터에서 앱을 실행하는 데 필요한 나머지 파일(압축 게시 폴더, *input.txt* 및 *microsoft-spark-2.4.x-0.3.0.jar*)을 업로드합니다. 
+2. 다음 명령을 실행하여 클러스터에서 앱을 실행하는 데 필요한 나머지 파일(압축 게시 폴더, *input.txt* 및 *microsoft-spark-2.4.x-0.3.0.jar*)을 업로드합니다.
 
    ```console
-   cd mySparkApp 
+   cd mySparkApp
    databricks fs cp input.txt dbfs:/input.txt
-   
-   cd mySparkApp\bin\Release\netcoreapp3.0\ubuntu.16.04-x64 directory 
+
+   cd mySparkApp\bin\Release\netcoreapp3.0\ubuntu.16.04-x64 directory
    databricks fs cp mySparkApp.zip dbfs:/spark-dotnet/publish.zip
    databricks fs cp microsoft-spark-2.4.x-0.6.0.jar dbfs:/spark-dotnet/microsoft-spark-2.4.x-0.6.0.jar
    ```
@@ -178,7 +179,7 @@ ms.locfileid: "72961050"
 
 .NET for Apache Spark 작업을 실행하는 데 사용하는 명령인 **spark-submit**을 실행하는 작업을 통해 Azure Databricks에서 앱이 실행됩니다.
 
-1. Azure Databricks 작업 영역에서 **작업** 아이콘, **+ 작업 만들기**를 차례로 선택합니다. 
+1. Azure Databricks 작업 영역에서 **작업** 아이콘, **+ 작업 만들기**를 차례로 선택합니다.
 
    ![Azure Databricks 작업 만들기](./media/databricks-deployment/create-job.png)
 
@@ -196,7 +197,7 @@ ms.locfileid: "72961050"
 
 1. 작업으로 이동한 다음 **편집**을 선택하여 작업 클러스터를 구성합니다.
 
-2. 클러스터를 **Spark 2.4.1**로 설정합니다. **고급 옵션** > **Init 스크립트**를 선택합니다. Init 스크립트 경로를 `dbfs:/spark-dotnet/db-init.sh`로 설정합니다. 
+2. 클러스터를 **Spark 2.4.1**로 설정합니다. **고급 옵션** > **Init 스크립트**를 선택합니다. Init 스크립트 경로를 `dbfs:/spark-dotnet/db-init.sh`로 설정합니다.
 
    ![Azure Databricks에서 Spark 클러스터 구성](./media/databricks-deployment/cluster-config.png)
 
@@ -208,7 +209,7 @@ ms.locfileid: "72961050"
 
 2. 작업 클러스터를 만드는 데 몇 분 정도 걸립니다. 클러스터를 만들고 나면 작업이 제출되고 출력을 볼 수 있습니다.
 
-3. 왼쪽 메뉴에서 **클러스터**를 선택한 다음, 작업의 이름과 실행을 선택합니다. 
+3. 왼쪽 메뉴에서 **클러스터**를 선택한 다음, 작업의 이름과 실행을 선택합니다.
 
 4. **드라이버 로그**를 선택하여 작업의 출력을 살펴봅니다. 앱 실행이 완료되면 시작 로컬 실행과 동일한 단어 개수 테이블이 표준 출력 콘솔에 기록됩니다.
 

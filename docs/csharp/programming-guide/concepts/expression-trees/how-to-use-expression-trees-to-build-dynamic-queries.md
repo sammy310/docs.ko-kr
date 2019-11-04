@@ -2,12 +2,12 @@
 title: '방법: 식 트리를 사용하여 동적 쿼리 빌드(C#)'
 ms.date: 07/20/2015
 ms.assetid: 52cd44dd-a3ec-441e-b93a-4eca388119c7
-ms.openlocfilehash: 400668e51fda4a728b42679c37a07399d1f73326
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 7f18539dba17f9fcb8769ca56d977908c58e6579
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69595068"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418685"
 ---
 # <a name="how-to-use-expression-trees-to-build-dynamic-queries-c"></a>방법: 식 트리를 사용하여 동적 쿼리 빌드(C#)
 LINQ에서는 식 트리를 사용하여 <xref:System.Linq.IQueryable%601>을 구현하는 데이터 소스를 대상으로 하는 구조적 쿼리를 나타냅니다. 예를 들어 LINQ 공급자는 관계형 데이터 저장소를 쿼리하기 위한 <xref:System.Linq.IQueryable%601> 인터페이스를 구현합니다. C# 컴파일러는 이러한 데이터 소스를 대상으로 하는 쿼리를 런타임에 식 트리를 작성하는 코드로 컴파일합니다. 그런 다음 쿼리 공급자는 식 트리 데이터 구조를 트래버스하고 데이터 소스에 적합한 쿼리 언어로 변환할 수 있습니다.  
@@ -109,4 +109,4 @@ foreach (string company in results)
 
 - [식 트리(C#)](./index.md)
 - [방법: 식 트리 실행(C#)](./how-to-execute-expression-trees.md)
-- [방법: 런타임에 동적으로 조건자 필터 지정](../../linq-query-expressions/how-to-dynamically-specify-predicate-filters-at-runtime.md)
+- [방법: 런타임에 동적으로 조건자 필터 지정](../../../linq/dynamically-specify-predicate-filters-at-runtime.md)

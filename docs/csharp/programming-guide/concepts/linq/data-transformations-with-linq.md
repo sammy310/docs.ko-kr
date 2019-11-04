@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data sources [LINQ in C#], data transformations
 - data transformations [LINQ in C#]
 ms.assetid: 674eae9e-bc72-4a88-aed3-802b45b25811
-ms.openlocfilehash: f042042f36e373ec05e8f0f15c14027463653578
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8dd57a43f814d7e41ec74af3eeb6d797fef41c9c
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924312"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418627"
 ---
 # <a name="data-transformations-with-linq-c"></a>LINQ를 통한 데이터 변환(C#)
 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]는 데이터 검색만을 위한 도구는 아닙니다. 데이터 변환을 위한 강력한 도구이기도 합니다. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리를 사용하여 소스 시퀀스를 입력으로 사용하고 다양한 방법으로 수정하여 새 출력 시퀀스를 만들 수 있습니다. 정렬 및 그룹화를 통해 요소 자체를 수정하지 않고 시퀀스 자체를 수정할 수 있습니다. 하지만 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리의 가장 강력한 기능은 새 형식을 만드는 기능일 것입니다. 이 작업은 [select](../../../language-reference/keywords/select-clause.md) 절에서 수행합니다. 예를 들어, 아래와 같은 작업을 수행할 수 있습니다.  
@@ -103,5 +103,5 @@ ms.locfileid: "69924312"
 - [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)
 - [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)
 - [LINQ to XML(C#)](./linq-to-xml-overview.md)
-- [LINQ 쿼리 식](../../linq-query-expressions/index.md)
+- [LINQ 쿼리 식](../../../linq/index.md)
 - [select 절](../../../language-reference/keywords/select-clause.md)

@@ -5,12 +5,12 @@ ms.date: 08/09/2019
 author: sdmaclea
 ms.author: stmaclea
 ms.topic: overview
-ms.openlocfilehash: 0388bd1fa29ce1caad93c917503dac9eed8974e1
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: f6b5fc1f92171b61dcab162b782ca7212c602d76
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "72303667"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73416681"
 ---
 # <a name="dependency-loading-in-net-core"></a>.NET Core에서 종속성 로딩
 
@@ -39,4 +39,4 @@ ms.locfileid: "72303667"
 
 ## <a name="how-to-use-and-debug-assembly-unloadability-in-net-core"></a>.NET Core에서 어셈블리 언로드 기능을 사용하고 디버그하는 방법
 
-[.NET Core에서 어셈블리 언로드 기능을 사용하고 디버그하는 방법](../../standard/assembly/unloadability-howto.md) 문서는 단계별 자습서입니다. .NET Core 애플리케이션을 로드하고 실행한 다음, 언로드하는 방법을 보여 줍니다. 이 문서는 디버깅 팁도 제공합니다.
+[.NET Core에서 어셈블리 언로드 기능을 사용하고 디버그하는 방법](../../standard/assembly/unloadability.md) 문서는 단계별 자습서입니다. .NET Core 애플리케이션을 로드하고 실행한 다음, 언로드하는 방법을 보여 줍니다. 이 문서는 디버깅 팁도 제공합니다.

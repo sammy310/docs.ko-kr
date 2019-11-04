@@ -2,12 +2,12 @@
 title: LINQ(Language-Integrated Query)(C#)
 ms.date: 02/02/2017
 ms.assetid: 19dd1782-905b-4a9d-a3e9-618453037fa2
-ms.openlocfilehash: d75c34cd63eb439203ef6757e62e18936eb3606a
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 07a9d68c042d524ee9faba8122b406a81e816378
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72773912"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418236"
 ---
 # <a name="language-integrated-query-linq"></a>LINQ(Language-Integrated Query)
 
@@ -40,7 +40,7 @@ SQL Server 데이터베이스, XML 문서, ADO.NET 데이터 세트 및 <xref:Sy
 
 LINQ에 대한 자세한 내용을 알아보려면 [쿼리 식 기본 사항](../../../linq/query-expression-basics.md)에서 몇 가지 기본 개념을 익힌 후 관심 있는 LINQ 기술에 대한 설명서를 읽어보세요.
 
-- XML 문서: [LINQ to XML](linq-to-xml.md)  
+- XML 문서: [LINQ to XML](linq-to-xml-overview.md)  
 - ADO.NET Entity Framework: [LINQ to Entities](../../../../framework/data/adonet/ef/language-reference/linq-to-entities.md)
 - .NET 컬렉션, 파일, 문자열 등: [LINQ to Objects](linq-to-objects.md)
 

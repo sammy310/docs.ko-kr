@@ -6,15 +6,15 @@ helpviewer_keywords:
 - delegates [C#], with named vs. anonymous methods
 - methods [C#], in delegates
 ms.assetid: 98fa8c61-66b6-4146-986c-3236c4045733
-ms.openlocfilehash: 9df143fb183ef2fc7e951b2cee47d18ce4b11942
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 50df0e9c42d366c9c79dde3b0d34f85b8e552a45
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590652"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418027"
 ---
 # <a name="delegates-with-named-vs-anonymous-methods-c-programming-guide"></a>대리자 비교: 명명된 메서드 및 무명 메서드(C# 프로그래밍 가이드)
-[대리자](../../language-reference/keywords/delegate.md)는 명명된 메서드에 연결할 수 있습니다. 명명된 메서드를 사용하여 대리자를 인스턴스화하면 메서드가 매개 변수로 전달됩니다. 예를 들면 다음과 같습니다.  
+[대리자](../../language-reference/builtin-types/reference-types.md)는 명명된 메서드에 연결할 수 있습니다. 명명된 메서드를 사용하여 대리자를 인스턴스화하면 메서드가 매개 변수로 전달됩니다. 예를 들면 다음과 같습니다.  
   
  [!code-csharp[csProgGuideDelegates#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#1)]  
   

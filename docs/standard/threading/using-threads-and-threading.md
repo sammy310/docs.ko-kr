@@ -6,14 +6,12 @@ helpviewer_keywords:
 - threading [.NET Framework], about threading
 - managed threading
 ms.assetid: 9b5ec2cd-121b-4d49-b075-222cf26f2344
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d23a12ff92202ace69cb80ff59d6afcb5d8f8243
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: 863fa565f7c107214273912a6d110b7664bffe6b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65960372"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131493"
 ---
 # <a name="using-threads-and-threading"></a>스레드 및 스레딩 사용
 
@@ -44,7 +42,7 @@ ms.locfileid: "65960372"
 
 다음 표에서는 <xref:System.Threading.Thread> 속성의 일부를 보여줍니다.  
   
-|속성|설명|  
+|자산|설명|  
 |--------------|-----------|  
 |<xref:System.Threading.Thread.IsAlive%2A>|스레드가 시작되었으며 정상적으로 종료 또는 중단되지 않은 경우 `true`를 반환합니다.|  
 |<xref:System.Threading.Thread.IsBackground%2A>|스레드가 백그라운드 스레드인지를 나타내는 부울을 가져오거나 설정합니다. 백그라운드 스레드는 포그라운드 스레드와 유사하지만 백그라운드 스레드의 경우 프로세스가 중지되도록 허용합니다. 프로세스에 속하는 모든 포그라운드 스레드가 중지되면 공용 언어 런타임은 여전히 활성 상태인 백그라운드 스레드에 대해 <xref:System.Threading.Thread.Abort%2A> 메서드를 호출하여 프로세스를 종료합니다. 자세한 내용은 [포그라운드 및 백그라운드 스레드](foreground-and-background-threads.md)를 참조하세요.|  

@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, with other asynchronous models
 ms.assetid: e7b31170-a156-433f-9f26-b1fc7cd1776f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 57f274d55ba5723ce8e0b51a7a39e98e95855e28
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 27766c10d0624b5eda8256a3211662036a1b16b3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64653922"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139941"
 ---
 # <a name="tpl-and-traditional-net-framework-asynchronous-programming"></a>TPL 및 일반적인 .NET Framework 비동기 프로그래밍
 .NET Framework에서는 I/O에 바인딩된 비동기 작업과 계산에 바인딩된 비동기 작업을 수행하도록 다음 표준 패턴 두 개를 제공합니다.  

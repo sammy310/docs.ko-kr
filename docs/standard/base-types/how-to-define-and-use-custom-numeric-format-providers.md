@@ -15,14 +15,12 @@ helpviewer_keywords:
 - format providers [.NET Framework]
 - custom format strings
 ms.assetid: a281bfbf-6596-45ed-a2d6-3782d535ada2
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b3898caa90c695ae681c2d9b20abbba57a2a9f61
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 151bf40cf042517b7441b89688122373259dc7dc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65590476"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140069"
 ---
 # <a name="how-to-define-and-use-custom-numeric-format-providers"></a>방법: 사용자 지정 숫자 형식 공급 기업 정의 및 사용
 .NET Framework에서는 숫자 값의 문자열 표현을 광범위하게 제어할 수 있습니다. 숫자 값의 형식을 사용자 지정하기 위한 다음과 같은 기능을 지원합니다.  
@@ -63,7 +61,7 @@ ms.locfileid: "65590476"
   
 2. <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 서식 지정 메서드를 호출하여 사용자 지정 서식 지정 개체, 형식 지정자(또는 지정자를 사용하지 않는 경우 <xref:System.String.Empty?displayProperty=nameWithType>) 및 서식을 지정할 숫자 값을 전달합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 미국 전화 번호를 나타내는 숫자를 NANP 또는 E.123 형식으로 변환하는 `TelephoneFormatter`라는 사용자 지정 숫자 형식 공급자를 정의합니다. 메서드는 두 가지 형식 지정자 "N"(NANP 형식 출력)과 "I"(국제 E.123 형식 출력)를 처리합니다.  
   
  [!code-csharp[Formatting.HowTo.NumericValue#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.NumericValue/cs/Telephone1.cs#1)]

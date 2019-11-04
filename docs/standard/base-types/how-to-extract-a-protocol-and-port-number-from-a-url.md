@@ -13,14 +13,12 @@ helpviewer_keywords:
 - regular expressions [.NET Framework], examples
 - pattern-matching with regular expressions, examples
 ms.assetid: ab7f62b3-6d2c-4efb-8ac6-28600df5fd5c
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a08e97b02e2f60422132e97e2f3f7d4d2d5b8ec4
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: f2704e3fb5ceb68609a475d52e11030177ad760b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46583787"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138731"
 ---
 # <a name="how-to-extract-a-protocol-and-port-number-from-a-url"></a>방법: URL에서 프로토콜 및 포트 번호 추출
 다음 예제에서는 URL에서 프로토콜 및 포트 번호를 추출합니다.  
@@ -33,7 +31,7 @@ ms.locfileid: "46583787"
   
  정규식 패턴 `^(?<proto>\w+)://[^/]+?(?<port>:\d+)?/`는 다음 표와 같이 해석할 수 있습니다.  
   
-|무늬|설명|  
+|패턴|설명|  
 |-------------|-----------------|  
 |`^`|문자열의 시작 부분에서 일치 항목 찾기를 시작합니다.|  
 |`(?<proto>\w+)`|하나 이상의 단어 문자를 찾습니다. 이 그룹의 이름을 `proto`로 지정합니다.|  

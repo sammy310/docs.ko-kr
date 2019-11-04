@@ -6,14 +6,12 @@ helpviewer_keywords:
 - strings [.NET Framework], manipulating
 - manipulating strings
 ms.assetid: d4568ff3-9f83-4549-acd8-47aec2194ac0
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ca4e24cb882daf7efd14da83011d50d05a85232b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5188c4f1099aad486e921dfba0c6c4216613ba4e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33567590"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73135227"
 ---
 # <a name="manipulating-strings-in-net"></a>.NET에서 문자열 조작
 .NET에서는 효율적으로 문자열을 생성, 비교 및 수정하고 대량 텍스트와 데이터를 빠르게 구문 분석하여 텍스트 패턴을 검색, 제거 및 바꿀 수 있도록 하는 광범위한 루틴 집합을 제공합니다.  

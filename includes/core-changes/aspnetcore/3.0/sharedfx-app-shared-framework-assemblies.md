@@ -1,14 +1,14 @@
 ---
-ms.openlocfilehash: a4bf8cff59ffe01b7465e227c0b1d1e7d93f16e7
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 8344fdedcff34f102b73f977b688abc15563bd4c
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394115"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73198513"
 ---
 ### <a name="shared-framework-assemblies-removed-from-microsoftaspnetcoreapp"></a>공유 프레임워크: Microsoft.AspNetCore.App에서 제거되는 어셈블리
 
-ASP.NET Core 3.0부터 ASP.NET Core 공유 프레임워크(`Microsoft.AspNetCore.App`)에는 Microsoft에서 완전히 개발하고, 지원하고, 서비스를 제공하는 자사 어셈블리만 포함되어 있습니다. 
+ASP.NET Core 3.0부터 ASP.NET Core 공유 프레임워크(`Microsoft.AspNetCore.App`)에는 Microsoft에서 완전히 개발하고, 지원하고, 서비스를 제공하는 자사 어셈블리만 포함되어 있습니다.
 
 #### <a name="change-description"></a>변경 내용 설명
 

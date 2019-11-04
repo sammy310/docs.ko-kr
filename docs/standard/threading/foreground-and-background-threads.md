@@ -8,14 +8,12 @@ helpviewer_keywords:
 - foreground threads
 - background threads
 ms.assetid: cfe0d632-dd35-47e0-91ad-f742a444005e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8dbad5da42f5ed4e03751534a3a183615a9757cc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9e93f07b3b84264373db0317919b6ee519c8127c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69960030"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138044"
 ---
 # <a name="foreground-and-background-threads"></a>포그라운드 및 백그라운드 스레드
 관리되는 스레드는 백그라운드 스레드 또는 포그라운드 스레드입니다. 백그라운드 스레드는 하나의 예외가 있는 포그라운드 스레드와 동일합니다. 백그라운드 스레드는 관리되는 실행 환경을 계속 실행하지 않습니다. 모든 포그라운드 스레드가 관리되는 프로세스(.exe 파일이 관리되는 어셈블리인 프로세스)에서 중지되면 시스템이 모든 백그라운드 스레드를 중지하고 종료됩니다.  

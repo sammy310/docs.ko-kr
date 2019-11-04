@@ -2,12 +2,12 @@
 title: 호환성이 손상되는 변경 평가 - .NET Core
 description: .NET Core에서 개발자를 위해 .NET 버전 간의 호환성을 유지하는 방법을 알아봅니다.
 ms.date: 06/10/2019
-ms.openlocfilehash: 4c3f051bf37ea4753d916ee22fedf97a9bad5892
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a4a1b5c4e81cec783248c6110b0af9844eb3f4af
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73089354"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73416665"
 ---
 # <a name="evaluate-breaking-changes-in-net-core"></a>.NET Core의 호환성이 손상되는 변경 평가
 
@@ -139,7 +139,7 @@ ms.locfileid: "73089354"
 
   다음 두 가지 이유로 호환성이 손상되는 변경으로 간주됩니다.
   
-  - Visual Basic의 런타임에 바인딩 기능, C#의 [dynamic](../../csharp/language-reference/keywords/dynamic.md)과 같은 런타임에 바인딩 시나리오의 호환성이 손상됩니다.
+  - Visual Basic의 런타임에 바인딩 기능, C#의 [dynamic](../../csharp/language-reference/builtin-types/reference-types.md#the-dynamic-type)과 같은 런타임에 바인딩 시나리오의 호환성이 손상됩니다.
   
   - 개발자가 [명명된 인수](../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md#named-arguments)를 사용하는 경우 [소스 호환성](categories.md#source-compatibility)이 손상됩니다.
 
