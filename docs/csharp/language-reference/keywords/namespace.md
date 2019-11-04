@@ -9,58 +9,58 @@ helpviewer_keywords:
 - namespace keyword [C#]
 - scope [C#]
 ms.assetid: 0a788423-9110-42e0-97d9-bda41ca4870f
-ms.openlocfilehash: 8cc1d1461a33ab94f8ae399d6ff40f26eaf7f74a
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: d1e30162cbce65193783d2fb0607900f209cc648
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039460"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422682"
 ---
-# <a name="namespace-c-reference"></a><span data-ttu-id="25e92-102">namespace(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="25e92-102">namespace (C# Reference)</span></span>
+# <a name="namespace-c-reference"></a><span data-ttu-id="eb1de-102">namespace(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="eb1de-102">namespace (C# Reference)</span></span>
 
-<span data-ttu-id="25e92-103">`namespace` 키워드는 관련 개체 집합을 포함하는 범위를 선언하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="25e92-103">The `namespace` keyword is used to declare a scope that contains a set of related objects.</span></span> <span data-ttu-id="25e92-104">네임스페이스를 사용하여 코드 요소를 구성하고 전역적으로 고유한 형식을 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="25e92-104">You can use a namespace to organize code elements and to create globally unique types.</span></span>
+<span data-ttu-id="eb1de-103">`namespace` 키워드는 관련 개체 집합을 포함하는 범위를 선언하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="eb1de-103">The `namespace` keyword is used to declare a scope that contains a set of related objects.</span></span> <span data-ttu-id="eb1de-104">네임스페이스를 사용하여 코드 요소를 구성하고 전역적으로 고유한 형식을 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="eb1de-104">You can use a namespace to organize code elements and to create globally unique types.</span></span>
 
 [!code-csharp[csrefKeywordsNamespace#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#1)]
 
-## <a name="remarks"></a><span data-ttu-id="25e92-105">설명</span><span class="sxs-lookup"><span data-stu-id="25e92-105">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="eb1de-105">설명</span><span class="sxs-lookup"><span data-stu-id="eb1de-105">Remarks</span></span>
 
-<span data-ttu-id="25e92-106">네임스페이스 내에서 다음 형식 중 0개 이상을 선언할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="25e92-106">Within a namespace, you can declare zero or more of the following types:</span></span>
+<span data-ttu-id="eb1de-106">네임스페이스 내에서 다음 형식 중 0개 이상을 선언할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="eb1de-106">Within a namespace, you can declare zero or more of the following types:</span></span>
 
-- <span data-ttu-id="25e92-107">다른 네임스페이스</span><span class="sxs-lookup"><span data-stu-id="25e92-107">another namespace</span></span>
+- <span data-ttu-id="eb1de-107">다른 네임스페이스</span><span class="sxs-lookup"><span data-stu-id="eb1de-107">another namespace</span></span>
 
-- [<span data-ttu-id="25e92-108">class</span><span class="sxs-lookup"><span data-stu-id="25e92-108">class</span></span>](class.md)
+- [<span data-ttu-id="eb1de-108">class</span><span class="sxs-lookup"><span data-stu-id="eb1de-108">class</span></span>](class.md)
 
-- [<span data-ttu-id="25e92-109">interface</span><span class="sxs-lookup"><span data-stu-id="25e92-109">interface</span></span>](interface.md)
+- [<span data-ttu-id="eb1de-109">interface</span><span class="sxs-lookup"><span data-stu-id="eb1de-109">interface</span></span>](interface.md)
 
-- [<span data-ttu-id="25e92-110">struct</span><span class="sxs-lookup"><span data-stu-id="25e92-110">struct</span></span>](struct.md)
+- [<span data-ttu-id="eb1de-110">struct</span><span class="sxs-lookup"><span data-stu-id="eb1de-110">struct</span></span>](struct.md)
 
-- [<span data-ttu-id="25e92-111">enum</span><span class="sxs-lookup"><span data-stu-id="25e92-111">enum</span></span>](enum.md)
+- [<span data-ttu-id="eb1de-111">enum</span><span class="sxs-lookup"><span data-stu-id="eb1de-111">enum</span></span>](enum.md)
 
-- [<span data-ttu-id="25e92-112">delegate</span><span class="sxs-lookup"><span data-stu-id="25e92-112">delegate</span></span>](delegate.md)
+- [<span data-ttu-id="eb1de-112">delegate</span><span class="sxs-lookup"><span data-stu-id="eb1de-112">delegate</span></span>](../builtin-types/reference-types.md)
 
-<span data-ttu-id="25e92-113">C# 소스 파일에서 네임스페이스를 명시적으로 선언하는지 여부에 관계없이 컴파일러는 기본 네임스페이스를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="25e92-113">Whether or not you explicitly declare a namespace in a C# source file, the compiler adds a default namespace.</span></span> <span data-ttu-id="25e92-114">전역 네임스페이스라고도 하는 이 명명되지 않은 네임스페이스는 모든 파일에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="25e92-114">This unnamed namespace, sometimes referred to as the global namespace, is present in every file.</span></span> <span data-ttu-id="25e92-115">전역 네임스페이스의 모든 식별자는 명명된 네임스페이스에서 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="25e92-115">Any identifier in the global namespace is available for use in a named namespace.</span></span>
+<span data-ttu-id="eb1de-113">C# 소스 파일에서 네임스페이스를 명시적으로 선언하는지 여부에 관계없이 컴파일러는 기본 네임스페이스를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="eb1de-113">Whether or not you explicitly declare a namespace in a C# source file, the compiler adds a default namespace.</span></span> <span data-ttu-id="eb1de-114">전역 네임스페이스라고도 하는 이 명명되지 않은 네임스페이스는 모든 파일에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="eb1de-114">This unnamed namespace, sometimes referred to as the global namespace, is present in every file.</span></span> <span data-ttu-id="eb1de-115">전역 네임스페이스의 모든 식별자는 명명된 네임스페이스에서 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="eb1de-115">Any identifier in the global namespace is available for use in a named namespace.</span></span>
 
-<span data-ttu-id="25e92-116">네임스페이스는 암시적으로 공용 액세스를 사용하며 이 설정은 수정할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="25e92-116">Namespaces implicitly have public access and this is not modifiable.</span></span> <span data-ttu-id="25e92-117">네임스페이스의 요소에 할당할 수 있는 액세스 한정자에 대한 설명은 [액세스 한정자](access-modifiers.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="25e92-117">For a discussion of the access modifiers you can assign to elements in a namespace, see [Access Modifiers](access-modifiers.md).</span></span>
+<span data-ttu-id="eb1de-116">네임스페이스는 암시적으로 공용 액세스를 사용하며 이 설정은 수정할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="eb1de-116">Namespaces implicitly have public access and this is not modifiable.</span></span> <span data-ttu-id="eb1de-117">네임스페이스의 요소에 할당할 수 있는 액세스 한정자에 대한 설명은 [액세스 한정자](access-modifiers.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="eb1de-117">For a discussion of the access modifiers you can assign to elements in a namespace, see [Access Modifiers](access-modifiers.md).</span></span>
 
-<span data-ttu-id="25e92-118">둘 이상의 선언에서 네임스페이스를 정의할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="25e92-118">It is possible to define a namespace in two or more declarations.</span></span> <span data-ttu-id="25e92-119">예를 들어 다음 예제에서는 `MyCompany` 네임스페이스의 일부로 두 클래스를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="25e92-119">For example, the following example defines two classes as part of the `MyCompany` namespace:</span></span>
+<span data-ttu-id="eb1de-118">둘 이상의 선언에서 네임스페이스를 정의할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="eb1de-118">It is possible to define a namespace in two or more declarations.</span></span> <span data-ttu-id="eb1de-119">예를 들어 다음 예제에서는 `MyCompany` 네임스페이스의 일부로 두 클래스를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="eb1de-119">For example, the following example defines two classes as part of the `MyCompany` namespace:</span></span>
 
 [!code-csharp[csrefKeywordsNamespace#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#2)]
 
-## <a name="example"></a><span data-ttu-id="25e92-120">예</span><span class="sxs-lookup"><span data-stu-id="25e92-120">Example</span></span>
+## <a name="example"></a><span data-ttu-id="eb1de-120">예</span><span class="sxs-lookup"><span data-stu-id="eb1de-120">Example</span></span>
 
-<span data-ttu-id="25e92-121">다음 예제에서는 중첩된 네임스페이스에서 정적 메서드를 호출하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="25e92-121">The following example shows how to call a static method in a nested namespace.</span></span>
+<span data-ttu-id="eb1de-121">다음 예제에서는 중첩된 네임스페이스에서 정적 메서드를 호출하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="eb1de-121">The following example shows how to call a static method in a nested namespace.</span></span>
 
 [!code-csharp[csrefKeywordsNamespace#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#3)]
 
-## <a name="c-language-specification"></a><span data-ttu-id="25e92-122">C# 언어 사양</span><span class="sxs-lookup"><span data-stu-id="25e92-122">C# language specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="eb1de-122">C# 언어 사양</span><span class="sxs-lookup"><span data-stu-id="eb1de-122">C# language specification</span></span>
 
-<span data-ttu-id="25e92-123">자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [네임스페이스](~/_csharplang/spec/namespaces.md) 섹션을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="25e92-123">For more information, see the [Namespaces](~/_csharplang/spec/namespaces.md) section of the [C# language specification](~/_csharplang/spec/introduction.md).</span></span>
+<span data-ttu-id="eb1de-123">자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [네임스페이스](~/_csharplang/spec/namespaces.md) 섹션을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="eb1de-123">For more information, see the [Namespaces](~/_csharplang/spec/namespaces.md) section of the [C# language specification](~/_csharplang/spec/introduction.md).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="25e92-124">참고 항목</span><span class="sxs-lookup"><span data-stu-id="25e92-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="eb1de-124">참고 항목</span><span class="sxs-lookup"><span data-stu-id="eb1de-124">See also</span></span>
 
-- [<span data-ttu-id="25e92-125">C# 참조</span><span class="sxs-lookup"><span data-stu-id="25e92-125">C# reference</span></span>](../index.md)
-- [<span data-ttu-id="25e92-126">C# 키워드</span><span class="sxs-lookup"><span data-stu-id="25e92-126">C# keywords</span></span>](index.md)
-- [<span data-ttu-id="25e92-127">using</span><span class="sxs-lookup"><span data-stu-id="25e92-127">using</span></span>](using-directive.md)
-- [<span data-ttu-id="25e92-128">using static</span><span class="sxs-lookup"><span data-stu-id="25e92-128">using static</span></span>](using-static.md)
-- [<span data-ttu-id="25e92-129">네임스페이스 별칭 한정자`::`</span><span class="sxs-lookup"><span data-stu-id="25e92-129">Namespace alias qualifier `::`</span></span>](../operators/namespace-alias-qualifier.md)
-- [<span data-ttu-id="25e92-130">네임스페이스</span><span class="sxs-lookup"><span data-stu-id="25e92-130">Namespaces</span></span>](../../programming-guide/namespaces/index.md)
+- [<span data-ttu-id="eb1de-125">C# 참조</span><span class="sxs-lookup"><span data-stu-id="eb1de-125">C# reference</span></span>](../index.md)
+- [<span data-ttu-id="eb1de-126">C# 키워드</span><span class="sxs-lookup"><span data-stu-id="eb1de-126">C# keywords</span></span>](index.md)
+- [<span data-ttu-id="eb1de-127">using</span><span class="sxs-lookup"><span data-stu-id="eb1de-127">using</span></span>](using-directive.md)
+- [<span data-ttu-id="eb1de-128">using static</span><span class="sxs-lookup"><span data-stu-id="eb1de-128">using static</span></span>](using-static.md)
+- [<span data-ttu-id="eb1de-129">네임스페이스 별칭 한정자`::`</span><span class="sxs-lookup"><span data-stu-id="eb1de-129">Namespace alias qualifier `::`</span></span>](../operators/namespace-alias-qualifier.md)
+- [<span data-ttu-id="eb1de-130">네임스페이스</span><span class="sxs-lookup"><span data-stu-id="eb1de-130">Namespaces</span></span>](../../programming-guide/namespaces/index.md)
