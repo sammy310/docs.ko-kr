@@ -2,12 +2,12 @@
 title: 계산 식
 description: 제어 흐름 구문 및 바인딩을 사용 하 여 시퀀싱 하 F# 고 결합할 수 있는 계산을 작성 하기 위한 편리한 구문을 만드는 방법에 대해 알아봅니다.
 ms.date: 03/15/2019
-ms.openlocfilehash: ea560bb6eec82672544c7c442b671b63e405474c
-ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
+ms.openlocfilehash: 2f0eb7686378766f6b379f0401589490f01a1963
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72799052"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424750"
 ---
 # <a name="computation-expressions"></a>계산 식
 
@@ -304,7 +304,7 @@ module Eventually =
     // This is boilerplate in terms of "result", "catch", and "bind".
     let tryFinally expr compensation =
         catch (expr)
-        |> bind (fun res -> 
+        |> bind (fun res ->
             compensation();
             match res with
             | Ok value -> result value
@@ -335,9 +335,9 @@ module Eventually =
     // This is boilerplate in terms of "catch", "result", and "bind".
     let forLoop (collection:seq<_>) func =
         let ie = collection.GetEnumerator()
-        tryFinally 
-            (whileLoop 
-                (fun () -> ie.MoveNext()) 
+        tryFinally
+            (whileLoop
+                (fun () -> ie.MoveNext())
                 (delay (fun () -> let value = ie.Current in func value)))
             (fun () -> ie.Dispose())
 
@@ -375,7 +375,7 @@ comp |> step |> step
 // prints "x = 1"
 // prints "x = 2"
 // returns "Done 7"
-comp |> step |> step |> step |> step 
+comp |> step |> step |> step |> step
 ```
 
 계산 식에는 식이 반환 하는 기본 형식이 있습니다. 기본 형식은 계산 된 결과 또는 수행 될 수 있는 지연 계산을 나타내거나 일부 형식의 컬렉션을 반복 하는 방법을 제공할 수 있습니다. 이전 예제에서는 기본 형식이 **결국**였습니다. 시퀀스 식의 경우 기본 형식은 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>입니다. 쿼리 식의 경우 기본 형식은 <xref:System.Linq.IQueryable?displayProperty=nameWithType>입니다. 비동기 워크플로의 경우 기본 형식은 [`Async`](https://msdn.microsoft.com/library/03eb4d12-a01a-4565-a077-5e83f17cf6f7)입니다. `Async` 개체는 결과를 계산 하기 위해 수행할 작업을 나타냅니다. 예를 들어 [`Async.RunSynchronously`](https://msdn.microsoft.com/library/0a6663a9-50f2-4d38-8bf3-cefd1a51fd6b) 를 호출 하 여 계산을 실행 하 고 결과를 반환 합니다.

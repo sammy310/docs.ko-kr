@@ -4,12 +4,12 @@ description: .NET Core, ASP.NET Core 및 .NET에 대해 배우는 데 도움이 
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
-ms.openlocfilehash: e4906feb7cda026848c990c7dd6f1dc8146dc7aa
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 7953d178e9a24fc42f11b6bc5c866805ec381137
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855779"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423567"
 ---
 # <a name="net-samples-and-tutorials"></a>.NET 샘플 및 자습서
 
@@ -49,7 +49,7 @@ ms.locfileid: "70855779"
 
 이 샘플에서는 C# 인덱서에 대한 구문 및 기능을 보여 줍니다. [완료된 샘플](https://github.com/dotnet/samples/tree/master/csharp/indexers)은 GitHub의 dotnet/samples 리포지토리에서 사용 가능합니다.
 
-**[대리자 및 이벤트](../csharp/delegates-events.md)**
+**[대리자 및 이벤트](../csharp/delegates-overview.md)**
 
 이 샘플에서는 C# 대리자와 이벤트에 대한 구문 및 기능을 보여 줍니다. [완료된 샘플](https://github.com/dotnet/samples/tree/master/csharp/delegates-and-events)은 GitHub의 dotnet/samples 리포지토리에서 사용 가능합니다. 이벤트에 중점을 두는 [두 번째 샘플](https://github.com/dotnet/samples/tree/master/csharp/events)도 동일한 리포지토리에 있습니다.
 
@@ -95,15 +95,11 @@ ms.locfileid: "70855779"
 
 이 자습서에서는 플러그 인 아키텍처를 지원하는.NET Core에서 간단한 애플리케이션을 빌드하는 방법을 보여줍니다. [완료된 샘플](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin)은 GitHub의 dotnet/samples 리포지토리에서 사용 가능합니다.
 
-## <a name="deploying-to-containers"></a>컨테이너에 배포
+## <a name="deploy-to-containers"></a>컨테이너에 배포
 
-**[Windows Docker 컨테이너에서 ASP.NET MVC 애플리케이션 실행](../framework/docker/aspnetmvc.md)**
+**[Windows Docker 컨테이너에서 ASP.NET MVC 애플리케이션 실행](/aspnet/mvc/overview/deployment/docker-aspnetmvc)**
 
 이 자습서에서는 Windows Docker 컨테이너에 기존 ASP.NET MVC 응용 프로그램을 배포하는 방법을 보여 줍니다. [완료된 샘플](https://github.com/dotnet/samples/tree/master/framework/docker/MVCRandomAnswerGenerator)은 GitHub의 dotnet/samples 리포지토리에서 사용 가능합니다.
-
-**[Windows 컨테이너에서 .NET Framework 콘솔 애플리케이션 실행](../framework/docker/console.md)**
-
-이 자습서에서는 Windows 컨테이너에 기존 콘솔 앱을 배포하는 방법을 보여 줍니다. [완료된 샘플](https://github.com/dotnet/samples/tree/master/framework/docker/ConsoleRandomAnswerGenerator)은 GitHub의 dotnet/samples 리포지토리에서 사용 가능합니다.
 
 ## <a name="viewing-and-downloading-samples"></a>샘플 보기 및 다운로드
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Web service binding [WPF]
 - data binding [WPF], Web service
 ms.assetid: 77e2d373-69ba-4cbd-b6f5-2c83c38fc98b
-ms.openlocfilehash: d752f4815de16daa466302881116e80aceec6edf
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 76fa13d4a12362d04c832fd59ee69db5a6811029
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040900"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454455"
 ---
 # <a name="how-to-bind-to-a-web-service"></a>방법: 웹 서비스 바인딩
 이 예제에서는 웹 서비스 메서드 호출에서 반환 되는 개체에 바인딩하는 방법을 보여 줍니다.  
@@ -47,6 +47,6 @@ ms.locfileid: "73040900"
   
 ## <a name="see-also"></a>참조
 
-- [데이터 바인딩 개요](data-binding-overview.md)
+- [데이터 바인딩 개요](../../../desktop-wpf/data/data-binding-overview.md)
 - [바인딩 소스 개요](binding-sources-overview.md)
 - [XAML의 바인딩에 사용할 수 있는 데이터 만들기](how-to-make-data-available-for-binding-in-xaml.md)

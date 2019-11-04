@@ -2,12 +2,12 @@
 title: LINQ to XML 축 개요(C#)
 ms.date: 07/20/2015
 ms.assetid: 516792fb-461d-40a8-8a50-9993a51258fc
-ms.openlocfilehash: b775a37869f0c8baa7d482475e301347cb77c538
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: b984232f03815ac78b792af2289f15eeb0578cd5
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69591930"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418204"
 ---
 # <a name="linq-to-xml-axes-overview-c"></a>LINQ to XML 축 개요(C#)
 XML 트리를 만들거나 XML 문서를 XML 트리에 로드한 후 XML 트리를 쿼리하여 요소와 특성을 찾고 해당 값을 검색할 수 있습니다. *축 메서드*(*축*)를 통해 컬렉션을 검색합니다. 일부 축은 <xref:System.Xml.Linq.XElement> 컬렉션을 반환하는 <xref:System.Xml.Linq.XDocument> 및 <xref:System.Collections.Generic.IEnumerable%601> 클래스의 메서드이고, 일부 축은 <xref:System.Xml.Linq.Extensions> 클래스의 확장 메서드입니다. 확장명 메서드로 구현되는 축은 컬렉션에 대해 작동하고 컬렉션을 반환합니다.  
@@ -56,4 +56,4 @@ XML 트리를 만들거나 XML 문서를 XML 트리에 로드한 후 XML 트리�
   
 ## <a name="see-also"></a>참고 항목
 
-- [LINQ to XML 축(C#)](./linq-to-xml-axes.md)
+- [LINQ to XML 축(C#)](linq-to-xml-axes-overview.md)

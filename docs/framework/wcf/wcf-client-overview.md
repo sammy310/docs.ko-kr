@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], architecture
 ms.assetid: f60d9bc5-8ade-4471-8ecf-5a07a936c82d
-ms.openlocfilehash: 9aba83bd3e05e3f390b3d1553bd7974c64c41037
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 180de3f571426441155a19b98ab750fcdbb3888e
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321341"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420654"
 ---
 # <a name="wcf-client-overview"></a>WCF 클라이언트 개요
 이 섹션에서는 클라이언트 응용 프로그램에서 수행 하는 작업, WCF (Windows Communication Foundation) 클라이언트를 구성 하 고 만들고 사용 하는 방법 및 클라이언트 응용 프로그램의 보안을 설정 하는 방법을 설명 합니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "72321341"
 ## <a name="obtain-the-service-contract-bindings-and-addresses"></a>서비스 계약, 바인딩 및 주소 가져오기  
  WCF에서 서비스 및 클라이언트는 관리 되는 특성, 인터페이스 및 메서드를 사용 하 여 계약을 모델링 합니다. 클라이언트 애플리케이션에서 서비스에 연결하려면 서비스 계약에 대한 형식 정보를 가져와야 합니다. 일반적으로이 작업은 서비스에서 메타 데이터를 다운로드 하는 [ServiceModel Metadata 유틸리티 도구 (svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md)를 사용 하 여이 작업을 수행 하 고, 선택한 언어로 관리 되는 소스 코드 파일로 변환 하 고, 클라이언트 응용 프로그램 구성 파일을 만듭니다. WCF 클라이언트 개체를 구성 하는 데 사용할 수 있습니다. 예를 들어 `MyCalculatorService`를 호출 하는 WCF 클라이언트 개체를 만들고 해당 서비스에 대 한 메타 데이터가 `http://computerName/MyCalculatorService/Service.svc?wsdl`에 게시 되는 경우 다음 코드 예제에서는 Svcutil.exe를 사용 하 여 서비스 동료가 포함 된 `ClientCode.vb` 파일을 가져오는 방법을 보여 줍니다. 관리 코드에서 ntract.  
   
-```  
+```console  
 svcutil /language:vb /out:ClientCode.vb /config:app.config http://computerName/MyCalculatorService/Service.svc?wsdl  
 ```  
   
@@ -169,7 +169,7 @@ End Interface
  작업이 호출되는 방법은 클라이언트 개발자에 의해 지정됩니다. 작업을 구성하는 메시지는 관리되는 코드에 표시될 때 동기 메서드나 비동기 메서드에 매핑될 수 있기 때문입니다. 따라서 작업을 비동기적으로 호출하는 클라이언트를 빌드하려면 Svcutil.exe에서 `/async` 옵션을 사용하여 비동기 클라이언트 코드를 생성할 수 있습니다. 자세한 내용은 [방법: 비동기적으로 서비스 작업 호출](./feature-details/how-to-call-wcf-service-operations-asynchronously.md)을 참조 하세요.  
   
 ## <a name="calling-services-using-wcf-client-channels"></a>WCF 클라이언트 채널을 사용하여 서비스 호출  
- WCF 클라이언트 형식은 <xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType> 인터페이스에서 파생 되는 <xref:System.ServiceModel.ClientBase%601> 확장 하 여 기본 채널 시스템을 노출 합니다. <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> 클래스와의 대상 서비스 계약을 사용하여 서비스를 호출할 수 있습니다. 자세한 내용은 [WCF 클라이언트 아키텍처](./feature-details/client-architecture.md)를 참조 하세요.  
+ WCF 클라이언트 형식은 <xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType> 인터페이스에서 파생 되는 <xref:System.ServiceModel.ClientBase%601>확장 하 여 기본 채널 시스템을 노출 합니다. <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> 클래스와의 대상 서비스 계약을 사용하여 서비스를 호출할 수 있습니다. 자세한 내용은 [WCF 클라이언트 아키텍처](./feature-details/client-architecture.md)를 참조 하세요.  
   
 ## <a name="see-also"></a>참조
 

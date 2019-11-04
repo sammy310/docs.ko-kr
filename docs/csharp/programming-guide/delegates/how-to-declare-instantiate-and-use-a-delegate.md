@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], declaring and instantiating
 ms.assetid: 61c4895f-f785-48f8-8bfe-db73b411c4ae
-ms.openlocfilehash: 565ae2a6c42de57570f564edc9d0bde5cab8efa8
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: bd3d80023f6cb382f057e976dba01daf5e28db50
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590621"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423317"
 ---
 # <a name="how-to-declare-instantiate-and-use-a-delegate-c-programming-guide"></a>방법: 대리자 선언, 인스턴스화 및 사용(C# 프로그래밍 가이드)
 C# 1.0 이상 버전에서는 다음 예제와 같이 대리자를 선언할 수 있습니다.  
@@ -23,7 +23,7 @@ C# 1.0 이상 버전에서는 다음 예제와 같이 대리자를 선언할 수
   
  [!code-csharp[csProgGuideDelegates#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#32)]  
   
- C# 2.0 이상 버전에서는 다음 예제와 같이 익명 메서드를 사용하여 [delegate](../../language-reference/keywords/delegate.md)를 선언하고 초기화할 수도 있습니다.  
+ C# 2.0 이상 버전에서는 다음 예제와 같이 익명 메서드를 사용하여 [delegate](../../language-reference/builtin-types/reference-types.md)를 선언하고 초기화할 수도 있습니다.  
   
  [!code-csharp[csProgGuideDelegates#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#15)]  
   

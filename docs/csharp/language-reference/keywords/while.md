@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - while keyword [C#]
 ms.assetid: 72a0765c-6852-4aca-b327-4a11cb7f5c59
-ms.openlocfilehash: 486936ae29552891c6a58913b6d5cf9a0d725a69
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: ab0a8ba0b724757b4f239daf1d3319b989c4531a
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66422488"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73421911"
 ---
 # <a name="while-c-reference"></a>while(C# 참조)
 
@@ -25,7 +25,7 @@ ms.locfileid: "66422488"
 
 [goto](goto.md), [return](return.md) 또는 [throw](throw.md) 문으로 `while` 루프를 종료할 수도 있습니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 다음 예제에서는 `while` 문의 사용법을 보여 줍니다. **Run**을 선택하여 예제 코드를 실행합니다. 그런 다음, 코드를 수정하고 다시 실행할 수 있습니다.
 
@@ -33,7 +33,7 @@ ms.locfileid: "66422488"
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 
-자세한 내용은 [C# 언어 사양](../language-specification/index.md)의 [while 문](~/_csharplang/spec/statements.md#the-while-statement) 섹션을 참조하세요.
+자세한 내용은 [C# 언어 사양](/dotnet/csharp/language-reference/language-specification/introduction)의 [while 문](~/_csharplang/spec/statements.md#the-while-statement) 섹션을 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
 

@@ -7,24 +7,24 @@ helpviewer_keywords:
 - controls [WPF], Label
 - Label control [WPF]
 ms.assetid: 241c1ce2-60f8-4613-a0ec-9b9bb25fb6af
-ms.openlocfilehash: 131eb251493b77f13b5dc59a3a03504be8868e8a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 73f36325a2621cc834e1bef8d2060dec1a8c133d
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052055"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423770"
 ---
 # <a name="label"></a>레이블
-<xref:System.Windows.Controls.Label> 컨트롤은 일반적으로에 정보를 제공 합니다 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]합니다.  지금까지 <xref:System.Windows.Controls.Label> 텍스트만 포함 되어 있는 때문 합니다 <xref:System.Windows.Controls.Label> 함께 제공 되는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 는 <xref:System.Windows.Controls.ContentControl>, 텍스트를 포함할 수 있습니다 또는 <xref:System.Windows.UIElement>.  
+<xref:System.Windows.Controls.Label> 컨트롤은 일반적으로 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]에 정보를 제공 합니다.  <xref:System.Windows.Controls.Label>에는 텍스트만 포함 되어 있지만 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]와 함께 제공 되는 <xref:System.Windows.Controls.Label>는 <xref:System.Windows.Controls.ContentControl>이므로 텍스트 또는 <xref:System.Windows.UIElement>를 포함할 수 있습니다.  
   
- <xref:System.Windows.Controls.Label> 액세스 키에 대 한 기능 및 시각적 지원을 제공 합니다. 와 같은 컨트롤에 대 한 빠른 키보드 액세스를 사용 하도록 설정에 자주 사용 된 <xref:System.Windows.Controls.TextBox>합니다. 할당할를 <xref:System.Windows.Controls.Label> 에 <xref:System.Windows.Controls.Control>설정는 <xref:System.Windows.Controls.Label.Target%2A?displayProperty=nameWithType> 속성 액세스 키를 누를 때 포커스를 받아야 하는 컨트롤을 합니다.  
+ <xref:System.Windows.Controls.Label>는 액세스 키에 대 한 기능 및 시각적 지원을 모두 제공 합니다. <xref:System.Windows.Controls.TextBox>와 같은 컨트롤에 대 한 빠른 키보드 액세스를 설정 하는 데 자주 사용 됩니다. <xref:System.Windows.Controls.Control>에 <xref:System.Windows.Controls.Label>를 할당 하려면 사용자가 액세스 키를 누를 때 포커스를 가져올 컨트롤에 <xref:System.Windows.Controls.Label.Target%2A?displayProperty=nameWithType> 속성을 설정 합니다.  
   
- 다음 이미지는 <xref:System.Windows.Controls.Label> 대상으로 하는 "테마"는 <xref:System.Windows.Controls.ComboBox>합니다.  사용자가 누르면는 <xref:System.Windows.Controls.ComboBox> 포커스를 받습니다.  자세한 내용은 [방법: 레이블의 대상 속성 설정](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752101(v=vs.90))합니다.  
+ 다음 이미지는 <xref:System.Windows.Controls.ComboBox>를 대상으로 하는 <xref:System.Windows.Controls.Label> "테마"를 보여 줍니다.  사용자가를 누르면 <xref:System.Windows.Controls.ComboBox> 포커스를 받습니다.  자세한 내용은 [방법: 레이블의 Target 속성 설정](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752101(v=vs.90))을 참조 하세요.  
   
- ![표시 속성을 사용 하 여 레이블이 지정 된 보여 줍니다](./media/labeledby.JPG "LabeledBy")  
+ ![사용 별 레이블이 지정 된 표시 속성 대화 상자의 스크린샷](./media/label/display-properties-labeled-by.png "LabeledBy")  
   
-## <a name="in-this-section"></a>섹션 내용  
- [방법: 선택키가 있고 텍스트 줄 바꿈 하는 컨트롤 만들기](how-to-create-a-control-that-has-an-access-key-and-text-wrapping.md)  
+## <a name="in-this-section"></a>단원 내용  
+ [방법: 선택 키 및 텍스트 줄 바꿈이 있는 컨트롤 만들기](how-to-create-a-control-that-has-an-access-key-and-text-wrapping.md)  
   
-## <a name="reference"></a>참조  
+## <a name="reference"></a>참고  
  <xref:System.Windows.Controls.Label>

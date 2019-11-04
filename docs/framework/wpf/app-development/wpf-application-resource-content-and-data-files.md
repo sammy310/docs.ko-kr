@@ -17,15 +17,15 @@ helpviewer_keywords:
 - application development [WPF], files
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
-ms.openlocfilehash: e50f542086aadc2f61412fe409d7df0f49422718
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
-ms.translationtype: MT
+ms.openlocfilehash: 6b1a78ec56032d84d9699c2ecda89308779ee2da
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920371"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73421142"
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>WPF 애플리케이션 리소스, 콘텐츠 및 데이터 파일
-[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] 응용 프로그램은 종종 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], 이미지, 비디오, 오디오 등의 실행 불가능 한 데이터를 포함 하는 파일에 의존 합니다. WPF (Windows Presentation Foundation)는 응용 프로그램 데이터 파일 이라고 하는 이러한 유형의 데이터 파일을 구성 하 고, 식별 하 고, 사용할 수 있는 특별 한 지원을 제공 합니다. 이러한 지원에는 다음을 포함한 특정 애플리케이션 데이터 파일 형식 집합이 포함됩니다.  
+Microsoft Windows 응용 프로그램은 종종 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], 이미지, 비디오, 오디오 등의 실행 불가능 한 데이터를 포함 하는 파일에 의존 합니다. WPF (Windows Presentation Foundation)는 응용 프로그램 데이터 파일 이라고 하는 이러한 유형의 데이터 파일을 구성 하 고, 식별 하 고, 사용할 수 있는 특별 한 지원을 제공 합니다. 이러한 지원에는 다음을 포함한 특정 애플리케이션 데이터 파일 형식 집합이 포함됩니다.  
   
 - **리소스 파일**: 실행 파일이 나 라이브러리 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 어셈블리로 컴파일되는 데이터 파일입니다.  
   
@@ -187,15 +187,15 @@ ms.locfileid: "72920371"
   
  [!code-xaml[WPFAssemblyResourcesSnippets#AbsolutePackUriFileHttpReferenceXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/AbsolutePackUriPage.xaml#absolutepackurifilehttpreferencexaml)]  
   
- 하지만 file:/// 및 http:// 스키마를 사용하려면 애플리케이션이 완전히 신뢰되어야 합니다. 응용 프로그램이 인터넷 이나 인트라넷에서 시작 된 [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] 경우 해당 위치에서 시작 된 응용 프로그램에 허용 되는 사용 권한 집합만 요청 하는 경우 느슨한 파일은 응용 프로그램의 원본 사이트 에서만 로드할 수 있습니다 ( 시작 위치). 이러한 파일은 *원본 사이트* 파일 이라고 합니다.  
+ 하지만 file:/// 및 http:// 스키마를 사용하려면 애플리케이션이 완전히 신뢰되어야 합니다. 응용 프로그램이 인터넷 또는 인트라넷에서 시작 된 XBAP (XAML 브라우저 응용 프로그램)이 고, 해당 위치에서 시작 된 응용 프로그램에 허용 되는 사용 권한 집합만 요청 하는 경우 느슨한 파일은 응용 프로그램의 원본 사이트 (시작 위치)입니다. 이러한 파일은 *원본 사이트* 파일 이라고 합니다.  
   
  원본 사이트 파일이 부분 신뢰 애플리케이션에서만 사용되는 것은 아니지만 부분 신뢰 애플리케이션에서는 원본 사이트 파일만을 사용할 수 있습니다. 완전 신뢰 애플리케이션의 경우에서도 빌드할 때 인식하지 못한 애플리케이션 데이터 파일을 로드해야 할 경우가 있습니다. 완전 신뢰 애플리케이션은 file:///을 사용할 수 있지만 이 경우 애플리케이션 데이터 파일이 애플리케이션 어셈블리와 같은 폴더 또는 하위 폴더에 설치될 수 있습니다. file:///에는 파일의 전체 경로를 사용해야 하기 때문에 file:///을 사용하는 방법보다 원본 사이트 참조를 사용하는 방법이 쉽습니다.  
   
 > [!NOTE]
-> 원본 사이트 파일은 클라이언트 컴퓨터의 [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)]와 함께 캐시 되지 않지만 콘텐츠 파일은입니다. 따라서 구체적으로 요청된 경우에만 다운로드됩니다. [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] 응용 프로그램에 큰 미디어 파일이 있는 경우 해당 파일을 원본 사이트로 구성 하면 초기 응용 프로그램 시작 속도가 훨씬 빨라지고, 파일은 요청 시에만 다운로드 됩니다.  
+> 원본 사이트 파일은 클라이언트 컴퓨터의 XBAP (XAML 브라우저 응용 프로그램)를 사용 하 여 캐시 되지 않지만 콘텐츠 파일은입니다. 따라서 구체적으로 요청된 경우에만 다운로드됩니다. XBAP (XAML 브라우저 응용 프로그램) 응용 프로그램에 큰 미디어 파일이 있는 경우 이러한 파일을 원본 사이트로 구성 하면 초기 응용 프로그램 시작 속도가 훨씬 빨라지고 요청 시에만 파일이 다운로드 됩니다.  
   
 ### <a name="configuring-site-of-origin-files"></a>원본 사이트 파일 구성  
- 원본 사이트 파일이 없거나 컴파일할 때 알 수 없는 경우에는 `XCopy` 명령줄 프로그램 또는 [!INCLUDE[TLA#tla_wininstall](../../../../includes/tlasharptla-wininstall-md.md)]를 사용 하는 등의 방법으로 필요한 파일을 런타임에 사용할 수 있도록 기존 배포 메커니즘을 사용 해야 합니다.  
+ 원본 사이트 파일이 존재 하지 않거나 컴파일할 때 알 수 없는 경우 `XCopy` 명령줄 프로그램 또는 Microsoft Windows를 사용 하 여 필요한 파일을 런타임에 사용할 수 있도록 하기 위해 기존 배포 메커니즘을 사용 해야 합니다. Installer.  
   
  컴파일 시간에서 원본 사이트에 배치 하려는 파일을 알 수 있지만 명시적 종속성을 방지 하려는 경우 해당 파일을 MSBuild 프로젝트에 `None` 항목으로 추가할 수 있습니다. 콘텐츠 파일과 마찬가지로 MSBuild `CopyToOutputDirectory` 특성을 설정 하 여 원본 사이트 파일이 빌드된 어셈블리에 상대적인 위치로 복사 되도록 지정 하 고 `Always` 값 또는 `PreserveNewest` 값을 지정 해야 합니다.  
   

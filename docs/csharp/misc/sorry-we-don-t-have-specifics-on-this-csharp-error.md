@@ -677,12 +677,12 @@ f1_keywords:
 helpviewer_keywords:
 - errors [C#], additional information
 ms.assetid: 48320e4a-6e17-45a6-9966-88c6ec89bd2f
-ms.openlocfilehash: 68ea00c6f5f97e61adaeb53aed8464cf874814e7
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: bc19224f980091e6046494fd4d708af2b03041da
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73196234"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419709"
 ---
 # <a name="sorry-we-dont-have-specifics-on-this-c-error"></a>죄송 합니다. 이 C# 오류에 대한 구체적인 정보가 없습니다.
 
@@ -695,7 +695,7 @@ ms.locfileid: "73196234"
 시각적 개체 C#에 대 한 질문과 문제에 대 한 질문과 대답 웹 사이트를 제공 합니다.  
 
  또한 다음을 참조 하세요.  
- [Visual C# 프로그래머를 위한 추가 리소스](../getting-started/additional-resources.md)  
+ [Visual C# 프로그래머를 위한 추가 리소스](../getting-started/index.md)  
   
 ## <a name="see-also"></a>참조
 

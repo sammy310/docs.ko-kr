@@ -2,12 +2,12 @@
 title: dotnet new 명령
 description: dotnet new 명령은 지정된 템플릿을 기반으로 새 .NET Core 프로젝트를 만듭니다.
 ms.date: 05/06/2019
-ms.openlocfilehash: b61b5fd53f470c30b636026fa19ebfad834d6354
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: c9529e135f48c80f445c91038294a3e7266486f1
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117664"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420470"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -731,7 +731,7 @@ dotnet new [-h|--help]
 
 ---
 
-## <a name="examples"></a>예제
+## <a name="examples"></a>예
 
 템플릿 이름을 지정하여 C# 콘솔 애플리케이션 프로젝트를 만듭니다.
 
@@ -776,6 +776,6 @@ ASP.NET Core용 단일 페이지 애플리케이션 템플릿 버전 2.0을 설�
 ## <a name="see-also"></a>참고 항목
 
 - [dotnet new에 대한 사용자 지정 템플릿](custom-templates.md)
-- [dotnet용 사용자 지정 템플릿 새로 만들기](../tutorials/create-custom-template.md)
+- [dotnet용 사용자 지정 템플릿 새로 만들기](../tutorials/cli-templates-create-item-template.md)
 - [dotnet/dotnet-template-samples GitHub repo](https://github.com/dotnet/dotnet-template-samples)(dotnet/dotnet-template-samples GitHub 리포지토리)
 - [Available templates for dotnet new](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new)(dotnet new에 대한 사용 가능한 템플릿)

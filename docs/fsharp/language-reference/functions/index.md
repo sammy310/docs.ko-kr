@@ -2,12 +2,12 @@
 title: 함수
 description: 의 함수 및에서 F# 일반적인 함수형 F# 프로그래밍 구문을 지 원하는 방법에 대해 알아봅니다.
 ms.date: 05/16/2016
-ms.openlocfilehash: 6f65ce692169b71abe8d2eff7ef07b66975d478b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: c6b8307f51ffcdc77fe4352b2305fca1f247ccbb
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630708"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423950"
 ---
 # <a name="functions"></a>함수
 
@@ -24,7 +24,7 @@ let [inline] function-name parameter-list [ : return-type ] = function-body
 let rec function-name parameter-list = recursive-function-body
 ```
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 *function-name*은 함수를 나타내는 식별자입니다. *parameter-list*는 공백으로 구분되는 연속 매개 변수로 구성됩니다. 매개 변수 섹션에 설명된 대로 각 매개 변수에 대해 명시적 형식을 지정할 수 있습니다. 특정 인수 형식을 지정하지 않으면 컴파일러가 함수 본문에서 형식을 유추하려고 합니다. *함수 본문*은 식으로 구성됩니다. 함수 본문을 구성하는 식은 일반적으로 여러 식으로 구성된 복합 식이며, 복합 식은 반환 값이 되는 최종 식으로 수렴됩니다. *반환 형식*은 그 뒤에 콜론이 나오며 선택 사항입니다. 반환 값의 형식을 명시적으로 지정하지 않으면 컴파일러가 최종 식에서 반환 형식을 결정합니다.
 
@@ -38,7 +38,7 @@ let f x = x + 1
 
 함수를 `inline`으로 표시할 수 있습니다. `inline`에 대한 내용은 [인라인 함수](../functions/inline-functions.md)를 참조하세요.
 
-## <a name="scope"></a>범위
+## <a name="scope"></a>Scope
 
 모듈 범위 이외의 모든 범위 수준에서 값 또는 함수 이름을 다시 사용할 수 있습니다. 이름을 다시 사용하는 경우 나중에 선언된 이름이 이전에 선언된 이름을 섀도 처리합니다. 그러나 모듈의 최상위 수준 범위에서는 이름이 고유해야 합니다. 예를 들어 다음 코드가 모듈 범위에 표시되는 경우에는 오류가 발생하지만 함수 내에 표시되는 경우에는 오류가 발생하지 않습니다.
 
@@ -76,7 +76,7 @@ let f x = (x, x)
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet103.fs)]
 
-자세한 내용은 [코드 서식 지정 지침](../code-formatting-guidelines.md) 및 [자세한 구문](../verbose-syntax.md)을 참조하세요.
+자세한 내용은 [코드 서식 지정 지침](../../style-guide/formatting.md) 및 [자세한 구문](../verbose-syntax.md)을 참조하세요.
 
 ## <a name="return-values"></a>반환 값
 
@@ -142,7 +142,7 @@ F#에서 모든 함수는 값으로 간주됩니다. 사실 이들을 *함수 �
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet112.fs)]
 
-`fun` 키워드를 사용하여 람다 식을 정의합니다. 람다 식은 함수 정의와 유사합니다. 단, `=` 토큰 대신 `->` 토큰이 함수 본문에서 인수 목록을 구분하는 데 사용됩니다. 일반 함수 정의에서와 같이, 인수 형식이 명시적으로 유추되거나 지정될 수 있으며 람다 식의 반환 형식은 본문의 마지막 식 형식에서 유추됩니다. 자세한 내용은 람다 식을 [참조 하세요. `fun` 키워드](../functions/lambda-expressions-the-fun-keyword.md)입니다.
+`fun` 키워드를 사용하여 람다 식을 정의합니다. 람다 식은 함수 정의와 유사합니다. 단, `=` 토큰 대신 `->` 토큰이 함수 본문에서 인수 목록을 구분하는 데 사용됩니다. 일반 함수 정의에서와 같이, 인수 형식이 명시적으로 유추되거나 지정될 수 있으며 람다 식의 반환 형식은 본문의 마지막 식 형식에서 유추됩니다. 자세한 내용은 [람다 식: `fun` 키워드](../functions/lambda-expressions-the-fun-keyword.md)를 참조하세요.
 
 ## <a name="function-composition-and-pipelining"></a>함수 컴퍼지션 및 파이프라인
 
@@ -202,7 +202,7 @@ let result4 = Pipeline2 2
 
 특정 형식의 메서드는 오버로드할 수 있지만 함수를 오버로드할 수는 없습니다. 자세한 내용은 [메서드](../members/methods.md)를 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [값](../values/index.md)
 - [F# 언어 참조](../index.md)

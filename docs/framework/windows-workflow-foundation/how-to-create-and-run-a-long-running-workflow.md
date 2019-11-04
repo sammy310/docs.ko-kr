@@ -1,23 +1,23 @@
 ---
-title: '방법: 장기 실행 워크플로 만들기 및 실행'
+title: 'How to: Create and Run a Long Running Workflow'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: c0043c89-2192-43c9-986d-3ecec4dd8c9c
-ms.openlocfilehash: 15ee10120f4d4c92bdc95cb48cb3cb838f526343
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: e5083b3d12cecc395500ef13405effa7b7e51633
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044371"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420626"
 ---
-# <a name="how-to-create-and-run-a-long-running-workflow"></a>방법: 장기 실행 워크플로 만들기 및 실행
+# <a name="how-to-create-and-run-a-long-running-workflow"></a>How to: Create and Run a Long Running Workflow
 
-WF (Windows Workflow Foundation)의 중앙 기능 중 하나는 유휴 워크플로를 데이터베이스에 유지 하 고 언로드하는 런타임 기능입니다. [방법: 콘솔 응용 프로그램](how-to-run-a-workflow.md) 을 사용 하 여 워크플로를 호스트 하는 기본 사항을 보여 주는 워크플로를 실행 합니다. 예제에서는 워크플로 시작 방법, 워크플로 수명 주기 처리기 및 책갈피 다시 시작 방법을 보여 줍니다. 워크플로 지속성을 효과적으로 보여 주기 위해서는 여러 워크플로 인스턴스의 시작 및 다시 시작을 지원하는 좀 더 복잡한 워크플로 호스트가 필요합니다. 자습서의 이 단계에서는 여러 워크플로 인스턴스의 시작 및 다시 시작과 워크플로 지속성을 지원하는 Windows Form 호스트 애플리케이션을 만드는 방법을 보여 주고, 이후 자습서 단계에서 설명하는 추적 및 버전 관리 등의 고급 기능에 대한 기본 사항을 제공합니다.
+WF (Windows Workflow Foundation)의 중앙 기능 중 하나는 유휴 워크플로를 데이터베이스에 유지 하 고 언로드하는 런타임 기능입니다. [방법: 워크플로 실행](how-to-run-a-workflow.md) 의 단계에서는 콘솔 응용 프로그램을 사용 하 여 워크플로를 호스트 하는 기본 사항을 보여 줍니다. 예제에서는 워크플로 시작 방법, 워크플로 수명 주기 처리기 및 책갈피 다시 시작 방법을 보여 줍니다. 워크플로 지속성을 효과적으로 보여 주기 위해서는 여러 워크플로 인스턴스의 시작 및 다시 시작을 지원하는 좀 더 복잡한 워크플로 호스트가 필요합니다. 자습서의 이 단계에서는 여러 워크플로 인스턴스의 시작 및 다시 시작과 워크플로 지속성을 지원하는 Windows Form 호스트 애플리케이션을 만드는 방법을 보여 주고, 이후 자습서 단계에서 설명하는 추적 및 버전 관리 등의 고급 기능에 대한 기본 사항을 제공합니다.
 
 > [!NOTE]
-> 이 자습서 단계와 이후 단계에서는 다음과 같은 [방법으로 세 가지 워크플로 유형을 모두 사용 합니다. 워크플로](how-to-create-a-workflow.md)를 만듭니다. 세 가지 유형을 모두 완료 하지 않은 경우 [Windows Workflow Foundation (WF45)-초보자](https://go.microsoft.com/fwlink/?LinkID=248976)를 위한 자습서에서 완료 된 버전의 단계를 다운로드할 수 있습니다.
+> 이 자습서 단계와 이후 단계에서는 [방법: 워크플로 만들기](how-to-create-a-workflow.md)의 세 가지 워크플로 유형을 모두 사용 합니다. 세 가지 유형을 모두 완료 하지 않은 경우 [Windows Workflow Foundation (WF45)-초보자](https://go.microsoft.com/fwlink/?LinkID=248976)를 위한 자습서에서 완료 된 버전의 단계를 다운로드할 수 있습니다.
 
 > [!NOTE]
 > 자습서의 전체 버전을 다운로드 하거나 비디오 연습을 보려면 [Windows Workflow Foundation (WF45)-초보자](https://go.microsoft.com/fwlink/?LinkID=248976)를 위한 자습서를 참조 하세요.
@@ -70,51 +70,51 @@ WF (Windows Workflow Foundation)의 중앙 기능 중 하나는 유휴 워크플
 
 1. **솔루션 탐색기** 에서 **NumberGuessWorkflowHost** 을 마우스 오른쪽 단추로 클릭 하 고 **참조 추가**를 선택 합니다.
 
-2. **참조 추가** 목록에서 `DurableInstancing` **어셈블리** 를 선택 하 고 **어셈블리 검색** 상자에를 입력 합니다. 그러면 어셈블리가 필터링되므로 원하는 참조를 손쉽게 선택할 수 있습니다.
+2. **참조 추가** 목록에서 **어셈블리** 를 선택 하 고 **어셈블리 검색** 상자에 `DurableInstancing`을 입력 합니다. 그러면 어셈블리가 필터링되므로 원하는 참조를 손쉽게 선택할 수 있습니다.
 
 3. **검색 결과** 목록에서 **DurableInstancing** 및 **DurableInstancing** 옆의 확인란을 선택 하 고 **확인**을 클릭 합니다.
 
 ### <a name="BKMK_CreateForm"></a>워크플로 호스트 폼을 만들려면
 
 > [!NOTE]
-> 이 절차에서는 폼을 수동으로 추가 및 구성하는 방법을 단계별로 설명합니다. 필요한 경우 자습서용 솔루션 파일을 다운로드하고 프로젝트에 전체 폼을 추가할 수 있습니다. 자습서 파일을 다운로드 하려면 [Windows Workflow Foundation (WF45)-초보자](https://go.microsoft.com/fwlink/?LinkID=248976)를 위한 자습서를 참조 하세요. 파일이 다운로드 되 면 **NumberGuessWorkflowHost** 를 마우스 오른쪽 단추로 클릭 하 고 **참조 추가**를 선택 합니다. **System.object** 와 **Drawing**에 대 한 참조를 추가 합니다. 이러한 참조는 **추가**, **새 항목** 메뉴에서 새 양식을 추가 하는 경우 자동으로 추가 되지만 양식을 가져올 때 수동으로 추가 해야 합니다. 참조가 추가 되 면 **솔루션 탐색기** 에서 **NumberGuessWorkflowHost** 을 마우스 오른쪽 단추로 클릭 하 고 **추가**, **기존 항목**을 선택 합니다. 프로젝트 파일에서폴더를 찾아 WorkflowHostForm.cs (또는 WorkflowHostForm)를 선택 하 고 추가를 클릭 합니다. `Form` 양식을 가져오도록 선택 하는 경우 다음 섹션으로 건너뛰어 [폼의 속성 및 도우미 메서드를 추가할](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods)수 있습니다.
+> 이 절차에서는 폼을 수동으로 추가 및 구성하는 방법을 단계별로 설명합니다. 필요한 경우 자습서용 솔루션 파일을 다운로드하고 프로젝트에 전체 폼을 추가할 수 있습니다. 자습서 파일을 다운로드 하려면 [Windows Workflow Foundation (WF45)-초보자](https://go.microsoft.com/fwlink/?LinkID=248976)를 위한 자습서를 참조 하세요. 파일이 다운로드 되 면 **NumberGuessWorkflowHost** 를 마우스 오른쪽 단추로 클릭 하 고 **참조 추가**를 선택 합니다. **System.object** 와 **Drawing**에 대 한 참조를 추가 합니다. 이러한 참조는 **추가**, **새 항목** 메뉴에서 새 양식을 추가 하는 경우 자동으로 추가 되지만 양식을 가져올 때 수동으로 추가 해야 합니다. 참조가 추가 되 면 **솔루션 탐색기** 에서 **NumberGuessWorkflowHost** 을 마우스 오른쪽 단추로 클릭 하 고 **추가**, **기존 항목**을 선택 합니다. 프로젝트 파일에서 `Form` 폴더로 이동 하 여 **WorkflowHostForm.cs** (또는 **WorkflowHostForm**)를 선택 하 고 **추가**를 클릭 합니다. 양식을 가져오도록 선택 하는 경우 다음 섹션으로 건너뛰어 [폼의 속성 및 도우미 메서드를 추가할](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods)수 있습니다.
 
 1. **솔루션 탐색기** 에서 **NumberGuessWorkflowHost** 을 마우스 오른쪽 단추로 클릭 하 고 **추가**, **새 항목**을 차례로 선택 합니다.
 
-2. **설치 된** 템플릿 목록에서 **Windows Form**을 선택 하 고 `WorkflowHostForm` **이름** 상자에를 입력 한 다음 **추가**를 클릭 합니다.
+2. **설치 된** 템플릿 목록에서 **Windows Form**을 선택 하 고 **이름** 상자에 `WorkflowHostForm`를 입력 한 다음 **추가**를 클릭 합니다.
 
 3. 폼에 다음 속성을 구성합니다.
 
     |속성|값|
     |--------------|-----------|
     |FormBorderStyle|FixedSingle|
-    |MaximizeBox|거짓|
+    |MaximizeBox|False|
     |Size|400, 420|
 
 4. 폼에 다음 컨트롤을 지정된 순서대로 추가하고 지시된 대로 속성을 구성합니다.
 
-    |컨트롤|속성: 값|
+    |Control|속성: 값|
     |-------------|---------------------|
-    |**Button**|이름: NewGame<br /><br /> 위치: 13, 13<br /><br /> 크기: 75, 23<br /><br /> 본문 새 게임|
-    |**레이블**|위치: 94, 18<br /><br /> 본문 1부터 다음까지 수로 추측|
+    |**Button**|이름: NewGame<br /><br /> 위치: 13, 13<br /><br /> 크기: 75, 23<br /><br /> 텍스트: 새 게임|
+    |**레이블**|위치: 94, 18<br /><br /> Text: 1에서 사이의 숫자를 추측 합니다.|
     |**ComboBox**|이름: NumberRange<br /><br /> DropDownStyle: DropDownList<br /><br /> 항목: 10, 100, 1000<br /><br /> 위치: 228, 12<br /><br /> 크기: 143, 21|
-    |**레이블**|위치: 13, 43<br /><br /> 본문 워크플로 형식|
-    |**ComboBox**|이름: WorkflowType<br /><br /> DropDownStyle: DropDownList<br /><br /> 항목: StateMachineNumberGuessWorkflow, FlowchartNumberGuessWorkflow, SequentialNumberGuessWorkflow<br /><br /> 위치: 94, 40<br /><br /> 크기: 277, 21|
-    |**레이블**|이름: WorkflowVersion<br /><br /> 위치: 13, 362<br /><br /> 본문 워크플로 버전|
-    |**GroupBox**|위치: 13, 67<br /><br /> 크기: 358, 287<br /><br /> 본문 게임|
+    |**레이블**|위치: 13, 43<br /><br /> 텍스트: 워크플로 유형|
+    |**ComboBox**|이름: WorkflowType<br /><br /> DropDownStyle: DropDownList<br /><br /> 항목: Statemachinenumberguessworkflow.xaml, Flowchartnumberguessworkflow.xaml, Sequentialnumberguessworkflow.xaml<br /><br /> 위치: 94, 40<br /><br /> 크기: 277, 21|
+    |**레이블**|이름: WorkflowVersion<br /><br /> 위치: 13, 362<br /><br /> 텍스트: 워크플로 버전|
+    |**GroupBox**|위치: 13, 67<br /><br /> 크기: 358, 287<br /><br /> 텍스트: Game|
 
     > [!NOTE]
     > 다음 컨트롤을 추가 하는 경우 해당 컨트롤을 GroupBox에 배치 합니다.
 
-    |컨트롤|속성: 값|
+    |Control|속성: 값|
     |-------------|---------------------|
-    |**레이블**|위치: 7, 20<br /><br /> 본문 워크플로 인스턴스 ID|
+    |**레이블**|위치: 7, 20<br /><br /> 텍스트: 워크플로 인스턴스 Id|
     |**ComboBox**|이름: InstanceId<br /><br /> DropDownStyle: DropDownList<br /><br /> 위치: 121, 17<br /><br /> 크기: 227, 21|
-    |**레이블**|위치: 7, 47<br /><br /> 본문 추측|
-    |**TextBox**|이름: 추측<br /><br /> 위치: 50, 44<br /><br /> 크기: 65, 20|
-    |**Button**|이름: EnterGuess<br /><br /> 위치: 121, 42<br /><br /> 크기: 75, 23<br /><br /> 본문 추측 입력|
-    |**Button**|이름: QuitGame<br /><br /> 위치: 274, 42<br /><br /> 크기: 75, 23<br /><br /> 본문 끝내기|
-    |**TextBox**|이름: WorkflowStatus<br /><br /> 위치: 10, 73<br /><br /> 줄 True<br /><br /> ReadOnly: True<br /><br /> 스크롤 세로<br /><br /> 크기: 338, 208|
+    |**레이블**|위치: 7, 47<br /><br /> 텍스트: Guess|
+    |**TextBox**|이름: Guess<br /><br /> 위치: 50, 44<br /><br /> 크기: 65, 20|
+    |**Button**|이름: 이름 추측<br /><br /> 위치: 121, 42<br /><br /> 크기: 75, 23<br /><br /> 텍스트: Guess를 입력 합니다.|
+    |**Button**|이름: QuitGame<br /><br /> 위치: 274, 42<br /><br /> 크기: 75, 23<br /><br /> 텍스트: 종료|
+    |**TextBox**|이름: WorkflowStatus<br /><br /> 위치: 10, 73<br /><br /> 여러 줄: True<br /><br /> ReadOnly: True<br /><br /> 스크롤 막대: 세로<br /><br /> 크기: 338, 208|
 
 5. 폼의 **Acceptbutton** 속성을 속성 **추측**으로 설정 합니다.
 
@@ -187,7 +187,7 @@ WF (Windows Workflow Foundation)의 중앙 기능 중 하나는 유휴 워크플
     }
     ```
 
-    콤보 `InstanceId` 상자는 지속형 워크플로 인스턴스 id의 목록을 표시 하 고 속성은 `WorkflowInstanceId` 현재 선택한 워크플로를 반환 합니다.
+    `InstanceId` 콤보 상자에는 지속형 워크플로 인스턴스 id의 목록이 표시 되 고 `WorkflowInstanceId` 속성은 현재 선택한 워크플로를 반환 합니다.
 
 5. 폼의 `Load` 이벤트에 대한 처리기를 추가합니다. 처리기를 추가 하려면 폼의 **디자인 뷰로** 전환 하 고 **속성** 창 맨 위에 있는 **이벤트** 아이콘을 클릭 한 다음 **로드**를 두 번 클릭 합니다.
 
@@ -234,7 +234,7 @@ WF (Windows Workflow Foundation)의 중앙 기능 중 하나는 유휴 워크플
 
     폼이 로드되면 `SqlWorkflowInstanceStore`가 구성되고 범위 및 워크플로 유형 콤보 상자가 기본값으로 설정되며 지속형 워크플로 인스턴스가 `InstanceId` 콤보 상자에 추가됩니다.
 
-7. `SelectedIndexChanged`에 대한 `InstanceId` 처리기를 추가합니다. 처리기를 추가 하려면 폼의 **디자인 뷰로** 전환 하 고, `InstanceId` 콤보 상자를 선택 하 고, **속성** 창 맨 위에 있는 **이벤트** 아이콘을 클릭 한 다음 **SelectedIndexChanged**을 두 번 클릭 합니다.
+7. `SelectedIndexChanged`에 대한 `InstanceId` 처리기를 추가합니다. 처리기를 추가 하려면 폼의 **디자인 뷰로** 전환 하 고 `InstanceId` 콤보 상자를 선택한 다음 **속성** 창 맨 위에 있는 **이벤트** 아이콘을 클릭 하 고 **SelectedIndexChanged**를 두 번 클릭 합니다.
 
     ```vb
     Private Sub InstanceId_SelectedIndexChanged(sender As Object, e As EventArgs) Handles InstanceId.SelectedIndexChanged
@@ -454,7 +454,7 @@ WF (Windows Workflow Foundation)의 중앙 기능 중 하나는 유휴 워크플
     wfApp.InstanceStore = store;
     ```
 
-3. 그런 다음 `StringWriter` 인스턴스를 만들어 `Extensions`의 `WorkflowApplication` 컬렉션에 추가합니다. 가 확장에 추가 되 면 모든 `WriteLine` 활동 출력을 캡처합니다. `StringWriter` 워크플로가 유휴 상태가 되면 `WriteLine` 출력이 `StringWriter`에서 추출되어 폼에 표시될 수 있습니다.
+3. 그런 다음 `StringWriter` 인스턴스를 만들어 `Extensions`의 `WorkflowApplication` 컬렉션에 추가합니다. `StringWriter` 확장에 추가 되 면 모든 `WriteLine` 활동 출력을 캡처합니다. 워크플로가 유휴 상태가 되면 `WriteLine` 출력이 `StringWriter`에서 추출되어 폼에 표시될 수 있습니다.
 
     ```vb
     'Add a StringWriter to the extensions. This captures the output
@@ -483,7 +483,7 @@ WF (Windows Workflow Foundation)의 중앙 기능 중 하나는 유휴 워크플
                 UpdateStatus("Workflow Canceled.")
             Else
                 Dim Turns As Integer = Convert.ToInt32(e.Outputs("Turns"))
-                UpdateStatus(String.Format("Congratulations, you guessed the number in {0} turns.", Turns))
+                UpdateStatus($"Congratulations, you guessed the number in {Turns} turns.")
             End If
             GameOver()
         End Sub
@@ -494,9 +494,7 @@ WF (Windows Workflow Foundation)의 중앙 기능 중 하나는 유휴 워크플
     {
         if (e.CompletionState == ActivityInstanceState.Faulted)
         {
-            UpdateStatus(string.Format("Workflow Terminated. Exception: {0}\r\n{1}",
-                e.TerminationException.GetType().FullName,
-                e.TerminationException.Message));
+            UpdateStatus($"Workflow Terminated. Exception: {e.TerminationException.GetType().FullName}\r\n{e.TerminationException.Message}");
         }
         else if (e.CompletionState == ActivityInstanceState.Canceled)
         {
@@ -505,7 +503,7 @@ WF (Windows Workflow Foundation)의 중앙 기능 중 하나는 유휴 워크플
         else
         {
             int Turns = Convert.ToInt32(e.Outputs["Turns"]);
-            UpdateStatus(string.Format("Congratulations, you guessed the number in {0} turns.", Turns));
+            UpdateStatus($"Congratulations, you guessed the number in {Turns} turns.");
         }
         GameOver();
     };
@@ -516,16 +514,12 @@ WF (Windows Workflow Foundation)의 중앙 기능 중 하나는 유휴 워크플
     ```vb
     wfApp.Aborted = _
         Sub(e As WorkflowApplicationAbortedEventArgs)
-            UpdateStatus(String.Format("Workflow Aborted. Exception: {0}" & vbCrLf & "{1}", _
-                e.Reason.GetType().FullName, _
-                e.Reason.Message))
+            UpdateStatus($"Workflow Aborted. Exception: {0e.Reason.GetType().FullName}" & vbCrLf & $"{e.Reason.Message}")
         End Sub
 
     wfApp.OnUnhandledException = _
         Function(e As WorkflowApplicationUnhandledExceptionEventArgs)
-            UpdateStatus(String.Format("Unhandled Exception: {0}" & vbCrLf & "{1}", _
-                e.UnhandledException.GetType().FullName, _
-                e.UnhandledException.Message))
+            UpdateStatus($"Unhandled Exception: {e.UnhandledException.GetType().FullName}" & vbCrLf & $"{e.UnhandledException.Message}")
             GameOver()
             Return UnhandledExceptionAction.Terminate
         End Function
@@ -534,16 +528,12 @@ WF (Windows Workflow Foundation)의 중앙 기능 중 하나는 유휴 워크플
     ```csharp
     wfApp.Aborted = delegate(WorkflowApplicationAbortedEventArgs e)
     {
-        UpdateStatus(string.Format("Workflow Aborted. Exception: {0}\r\n{1}",
-                e.Reason.GetType().FullName,
-                e.Reason.Message));
+        UpdateStatus($"Workflow Aborted. Exception: {e.Reason.GetType().FullName}\r\n{e.Reason.Message}");
     };
 
     wfApp.OnUnhandledException = delegate(WorkflowApplicationUnhandledExceptionEventArgs e)
     {
-        UpdateStatus(string.Format("Unhandled Exception: {0}\r\n{1}",
-                e.UnhandledException.GetType().FullName,
-                e.UnhandledException.Message));
+        UpdateStatus($"Unhandled Exception: {e.UnhandledException.GetType().FullName}\r\n{e.UnhandledException.Message}");
         GameOver();
         return UnhandledExceptionAction.Terminate;
     };
@@ -600,23 +590,19 @@ WF (Windows Workflow Foundation)의 중앙 기능 중 하나는 유휴 워크플
                     UpdateStatus("Workflow Canceled.")
                 Else
                     Dim Turns As Integer = Convert.ToInt32(e.Outputs("Turns"))
-                    UpdateStatus(String.Format("Congratulations, you guessed the number in {0} turns.", Turns))
+                    UpdateStatus($"Congratulations, you guessed the number in {Turns} turns.")
                 End If
                 GameOver()
             End Sub
 
         wfApp.Aborted = _
             Sub(e As WorkflowApplicationAbortedEventArgs)
-                UpdateStatus(String.Format("Workflow Aborted. Exception: {0}" & vbCrLf & "{1}", _
-                    e.Reason.GetType().FullName, _
-                    e.Reason.Message))
+                UpdateStatus($"Workflow Aborted. Exception: {e.Reason.GetType().FullName}" & vbCrLf & $"{e.Reason.Message}")
             End Sub
 
         wfApp.OnUnhandledException = _
             Function(e As WorkflowApplicationUnhandledExceptionEventArgs)
-                UpdateStatus(String.Format("Unhandled Exception: {0}" & vbCrLf & "{1}", _
-                    e.UnhandledException.GetType().FullName, _
-                    e.UnhandledException.Message))
+                UpdateStatus($"Unhandled Exception: {e.UnhandledException.GetType().FullName}" & vbCrLf & $"{e.UnhandledException.Message}")
                 GameOver()
                 Return UnhandledExceptionAction.Terminate
             End Function
@@ -648,9 +634,7 @@ WF (Windows Workflow Foundation)의 중앙 기능 중 하나는 유휴 워크플
         {
             if (e.CompletionState == ActivityInstanceState.Faulted)
             {
-                UpdateStatus(string.Format("Workflow Terminated. Exception: {0}\r\n{1}",
-                    e.TerminationException.GetType().FullName,
-                    e.TerminationException.Message));
+                UpdateStatus($"Workflow Terminated. Exception: {e.TerminationException.GetType().FullName}\r\n{e.TerminationException.Message}");
             }
             else if (e.CompletionState == ActivityInstanceState.Canceled)
             {
@@ -659,23 +643,19 @@ WF (Windows Workflow Foundation)의 중앙 기능 중 하나는 유휴 워크플
             else
             {
                 int Turns = Convert.ToInt32(e.Outputs["Turns"]);
-                UpdateStatus(string.Format("Congratulations, you guessed the number in {0} turns.", Turns));
+                UpdateStatus($"Congratulations, you guessed the number in {Turns} turns.");
             }
             GameOver();
         };
 
         wfApp.Aborted = delegate(WorkflowApplicationAbortedEventArgs e)
         {
-            UpdateStatus(string.Format("Workflow Aborted. Exception: {0}\r\n{1}",
-                    e.Reason.GetType().FullName,
-                    e.Reason.Message));
+            UpdateStatus($"Workflow Aborted. Exception: {e.Reason.GetType().FullName}\r\n{e.Reason.Message}");
         };
 
         wfApp.OnUnhandledException = delegate(WorkflowApplicationUnhandledExceptionEventArgs e)
         {
-            UpdateStatus(string.Format("Unhandled Exception: {0}\r\n{1}",
-                    e.UnhandledException.GetType().FullName,
-                    e.UnhandledException.Message));
+            UpdateStatus($"Unhandled Exception: {e.UnhandledException.GetType().FullName}\r\n{e.UnhandledException.Message}");
             GameOver();
             return UnhandledExceptionAction.Terminate;
         };
@@ -695,9 +675,9 @@ WF (Windows Workflow Foundation)의 중앙 기능 중 하나는 유휴 워크플
 
 ### <a name="BKMK_WorkflowVersionMap"></a>여러 워크플로 유형 시작 및 다시 시작을 사용 하도록 설정 하려면
 
-워크플로 인스턴스를 다시 시작하려면 호스트에서 워크플로 정의를 제공해야 합니다. 이 자습서에는 세 가지 워크플로 유형이 있으며 이후 자습서 단계에서는 이러한 유형의 여러 버전을 소개합니다. 호스트 애플리케이션에서는 `WorkflowIdentity`를 통해 식별 정보를 지속형 워크플로 인스턴스에 연결할 수 있습니다. 이 단원의 단계에서는 유틸리티 클래스를 만들어 지속형 워크플로 인스턴스의 워크플로 ID를 해당 워크플로 정의에 쉽게 매핑할 수 있도록 하는 방법을 보여 줍니다. 및 버전 관리에 `WorkflowIdentity` 대 한 자세한 내용은 [WorkflowIdentity 및 버전 관리 사용](using-workflowidentity-and-versioning.md)을 참조 하세요.
+워크플로 인스턴스를 다시 시작하려면 호스트에서 워크플로 정의를 제공해야 합니다. 이 자습서에는 세 가지 워크플로 유형이 있으며 이후 자습서 단계에서는 이러한 유형의 여러 버전을 소개합니다. 호스트 애플리케이션에서는 `WorkflowIdentity`를 통해 식별 정보를 지속형 워크플로 인스턴스에 연결할 수 있습니다. 이 단원의 단계에서는 유틸리티 클래스를 만들어 지속형 워크플로 인스턴스의 워크플로 ID를 해당 워크플로 정의에 쉽게 매핑할 수 있도록 하는 방법을 보여 줍니다. `WorkflowIdentity` 및 버전 관리에 대 한 자세한 내용은 [WorkflowIdentity 및 버전 관리 사용](using-workflowidentity-and-versioning.md)을 참조 하세요.
 
-1. **솔루션 탐색기** 에서 **NumberGuessWorkflowHost** 을 마우스 오른쪽 단추로 클릭 하 고 **추가**, **클래스**를 차례로 선택 합니다. 이름 `WorkflowVersionMap` 상자에 를 입력 하 고 **추가**를 클릭 합니다.
+1. **솔루션 탐색기** 에서 **NumberGuessWorkflowHost** 을 마우스 오른쪽 단추로 클릭 하 고 **추가**, **클래스**를 차례로 선택 합니다. **이름** 상자에 `WorkflowVersionMap`을 입력 하 고 **추가**를 클릭 합니다.
 
 2. 다음 `using` 또는 `Imports` 문을 파일의 맨 위에 다른 `using` 또는 `Imports` 문과 함께 추가합니다.
 
@@ -813,7 +793,7 @@ WF (Windows Workflow Foundation)의 중앙 기능 중 하나는 유휴 워크플
 
 ### <a name="BKMK_StartWorkflow"></a>새 워크플로를 시작 하려면
 
-1. `Click`에 대한 `NewGame` 처리기를 추가합니다. 처리기를 추가 하려면 폼의 **디자인 뷰로** 전환 하 고를 두 번 클릭 `NewGame`합니다. `NewGame_Click` 처리기가 추가되고 폼의 뷰가 코드 뷰로 전환됩니다. 이 단추를 클릭할 때마다 새 워크플로가 시작됩니다.
+1. `Click`에 대한 `NewGame` 처리기를 추가합니다. 처리기를 추가 하려면 폼의 **디자인 뷰로** 전환 하 고 `NewGame`를 두 번 클릭 합니다. `NewGame_Click` 처리기가 추가되고 폼의 뷰가 코드 뷰로 전환됩니다. 이 단추를 클릭할 때마다 새 워크플로가 시작됩니다.
 
     ```vb
     Private Sub NewGame_Click(sender As Object, e As EventArgs) Handles NewGame.Click
@@ -1008,7 +988,7 @@ WF (Windows Workflow Foundation)의 중앙 기능 중 하나는 유휴 워크플
 
 ### <a name="BKMK_ResumeWorkflow"></a>워크플로를 다시 시작 하려면
 
-1. `Click`에 대한 `EnterGuess` 처리기를 추가합니다. 처리기를 추가 하려면 폼의 **디자인 뷰로** 전환 하 고를 두 번 클릭 `EnterGuess`합니다. 이 단추를 클릭할 때마다 워크플로가 다시 시작됩니다.
+1. `Click`에 대한 `EnterGuess` 처리기를 추가합니다. 처리기를 추가 하려면 폼의 **디자인 뷰로** 전환 하 고 `EnterGuess`를 두 번 클릭 합니다. 이 단추를 클릭할 때마다 워크플로가 다시 시작됩니다.
 
     ```vb
     Private Sub EnterGuess_Click(sender As Object, e As EventArgs) Handles EnterGuess.Click
@@ -1224,7 +1204,7 @@ WF (Windows Workflow Foundation)의 중앙 기능 중 하나는 유휴 워크플
 
 ### <a name="BKMK_TerminateWorkflow"></a>워크플로를 종료 하려면
 
-1. `Click`에 대한 `QuitGame` 처리기를 추가합니다. 처리기를 추가 하려면 폼의 **디자인 뷰로** 전환 하 고를 두 번 클릭 `QuitGame`합니다. 이 단추를 클릭할 때마다 현재 선택된 워크플로가 종료됩니다.
+1. `Click`에 대한 `QuitGame` 처리기를 추가합니다. 처리기를 추가 하려면 폼의 **디자인 뷰로** 전환 하 고 `QuitGame`를 두 번 클릭 합니다. 이 단추를 클릭할 때마다 현재 선택된 워크플로가 종료됩니다.
 
     ```vb
     Private Sub QuitGame_Click(sender As Object, e As EventArgs) Handles QuitGame.Click
@@ -1296,9 +1276,9 @@ WF (Windows Workflow Foundation)의 중앙 기능 중 하나는 유휴 워크플
     wfApp.Terminate("User resigns.");
     ```
 
-### <a name="BKMK_BuildAndRun"></a> 응용 프로그램을 빌드하고 실행하려면
+### <a name="BKMK_BuildAndRun"></a> 애플리케이션을 빌드하고 실행하려면
 
-1. **솔루션 탐색기** 에서 **Program.cs** (또는 module1.vb)를 두 번 클릭 하 여 코드를 표시 합니다.
+1. **솔루션 탐색기** 에서 **Program.cs** (또는 module1.vb)를 두 번 클릭 하 여 코드를 표시 **합니다.**
 
 2. 다음 `using`(또는 `Imports`) 문을 파일의 맨 위에 다른 `using`(또는 `Imports`) 문과 함께 추가합니다.
 
@@ -1310,7 +1290,7 @@ WF (Windows Workflow Foundation)의 중앙 기능 중 하나는 유휴 워크플
     using System.Windows.Forms;
     ```
 
-3. 방법:에서 [기존 워크플로 호스팅 코드를 제거 하거나 주석으로 처리 합니다. 워크플로](how-to-run-a-workflow.md)를 실행 하 고 다음 코드로 바꿉니다.
+3. [방법: 워크플로 실행](how-to-run-a-workflow.md)에서 기존 워크플로 호스팅 코드를 제거 하거나 주석으로 처리 하 고 다음 코드로 바꿉니다.
 
     ```vb
     Sub Main()
@@ -1329,12 +1309,12 @@ WF (Windows Workflow Foundation)의 중앙 기능 중 하나는 유휴 워크플
 
 4. **솔루션 탐색기** 에서 **NumberGuessWorkflowHost** 을 마우스 오른쪽 단추로 클릭 하 고 **속성**을 선택 합니다. **응용 프로그램** 탭에서 **출력 형식**에 대 한 **Windows 응용 프로그램** 을 지정 합니다. 이 단계는 선택적이지만 이 단계를 수행하지 않으면 폼뿐만 아니라 콘솔 창도 표시됩니다.
 
-5. Ctrl+Shift+B를 눌러 응용 프로그램을 빌드합니다.
+5. Ctrl+Shift+B를 눌러 애플리케이션을 빌드합니다.
 
 6. **NumberGuessWorkflowHost** 가 시작 응용 프로그램으로 설정 되어 있는지 확인 하 고 Ctrl + F5를 눌러 응용 프로그램을 시작 합니다.
 
-7. 추측 게임의 범위와 시작할 워크플로 유형을 선택 하 고 **새 게임**을 클릭 합니다. 추측 상자에 guess를 입력 하 고 **이동** 을 클릭 하 여 추측을 제출 합니다. `WriteLine` 활동의 출력이 폼에 표시됩니다.
+7. 추측 게임의 범위와 시작할 워크플로 유형을 선택 하 고 **새 게임**을 클릭 합니다. **추측 상자에** guess를 입력 하 고 **이동** 을 클릭 하 여 추측을 제출 합니다. `WriteLine` 활동의 출력이 폼에 표시됩니다.
 
 8. 여러 워크플로 유형 및 숫자 범위를 사용 하 여 여러 워크플로를 시작 하 고, 몇 가지 추측을 입력 하 고, **워크플로 인스턴스 Id** 목록에서 선택 하 여 워크플로 사이를 전환 합니다.
 
-    새 워크플로로 전환할 경우 이전 추측 값 및 워크플로 진행률이 상태 창에 표시되지 않습니다. 상태를 사용할 수 없는 것은 상태가 캡처 및 저장되지 않았기 때문입니다. 자습서의 다음 단계에서 [방법: 사용자 지정 추적 참가자](how-to-create-a-custom-tracking-participant.md)를 만듭니다 .이 정보를 저장 하는 사용자 지정 추적 참가자를 만듭니다.
+    새 워크플로로 전환할 경우 이전 추측 값 및 워크플로 진행률이 상태 창에 표시되지 않습니다. 상태를 사용할 수 없는 것은 상태가 캡처 및 저장되지 않았기 때문입니다. 자습서의 다음 단계인 [방법: 사용자 지정 추적 참가자 만들기](how-to-create-a-custom-tracking-participant.md)에서이 정보를 저장 하는 사용자 지정 추적 참가자를 만듭니다.

@@ -3,12 +3,12 @@ title: 대리자에 대한 일반적인 패턴
 description: 코드에서 대리자를 사용하여 구성 요소 간의 강력한 결합을 방지하기 위한 일반적인 패턴에 대해 알아봅니다.
 ms.date: 06/20/2016
 ms.assetid: 0ff8fdfd-6a11-4327-b061-0f2526f35b43
-ms.openlocfilehash: ea0e0b7af361b76c4b46b0a180e07b44c1fa07e1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 174ae4129464c9d2e787048793cec764121ca4aa
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59095700"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454074"
 ---
 # <a name="common-patterns-for-delegates"></a>대리자에 대한 일반적인 패턴
 
@@ -58,7 +58,7 @@ public static IEnumerable<TSource> Where<TSource> (this IEnumerable<TSource> sou
 
 위의 정적 클래스는 사용할 수 있는 가장 간단한 클래스입니다. 메시지를 콘솔에 기록하는 메서드에 대한 단일 구현을 작성해야 합니다. 
 
-[!code-csharp[LogToConsole](../../samples/csharp/delegates-and-events/Program.cs#LogToConsole "A Console logger.")]
+[!code-csharp[LogToConsole](../../samples/csharp/delegates-and-events/LoggingMethods.cs#LogToConsole "A Console logger.")]
 
 마지막으로 로거에 선언된 WriteMessage 대리자에 대리자를 연결함으로써 대리자를 연결해야 합니다.
 
@@ -107,13 +107,13 @@ Core Framework에 정의된 대리자 형식을 사용하면 사용자가 대리
 
 ```csharp
 var fileOutput = new FileLogger("log.txt");
-Logger.WriteMessage += LogToConsole;
+Logger.WriteMessage += LoggingMethods.LogToConsole; // LoggingMethods is the static class we utilized earlier
 ```
 
 나중에 시스템에 문제를 발생시키지 않고 동일한 애플리케이션에서도 대리자 중 하나를 제거할 수 있습니다.
 
 ```csharp
-Logger.WriteMessage -= LogToConsole;
+Logger.WriteMessage -= LoggingMethods.LogToConsole;
 ```
 
 ## <a name="practices"></a>사례

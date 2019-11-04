@@ -7,12 +7,12 @@ dev_langs:
 - vb
 ms.technology: dotnet-standard
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
-ms.openlocfilehash: af266a551a194f55bc4951a8bdb0e9af6f823663
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: e1f419dd57c1e90d7ebb57ef572f338a34d1c509
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662999"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423630"
 ---
 # <a name="language-independence-and-language-independent-components"></a>언어 독립성 및 언어 독립적 구성 요소
 
@@ -230,7 +230,7 @@ public class Counter
 
    public override string ToString()
    {
-      return String.Format("{0}). ", ctr);
+      return $"{ctr}). ";
    }
 
    public UInt32 Value
@@ -276,7 +276,7 @@ Public Class Counter
    End Sub
 
    Public Overrides Function ToString() As String
-      Return String.Format("{0}). ", ctr)
+      Return $"{ctr}). "
    End Function
 
    Public ReadOnly Property Value As UInt32

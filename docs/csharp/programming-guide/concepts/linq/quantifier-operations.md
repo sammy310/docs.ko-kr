@@ -2,12 +2,12 @@
 title: 수량자 작업(C#)
 ms.date: 07/20/2015
 ms.assetid: 84ac2ac2-7a63-4581-bc4c-14e34be1493b
-ms.openlocfilehash: 4a0f5b2c90d4b71a945dee02a32cbe897818c538
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 5899af79799d5b8404e60027d7ba1b005c4b1b79
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69591472"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423357"
 ---
 # <a name="quantifier-operations-c"></a>수량자 작업(C#)
 수량자 작업은 시퀀스에서 조건을 충족하는 요소가 일부인지 전체인지를 나타내는 <xref:System.Boolean> 값을 반환합니다.  
@@ -30,5 +30,5 @@ ms.locfileid: "69591472"
 
 - <xref:System.Linq>
 - [표준 쿼리 연산자 개요(C#)](./standard-query-operators-overview.md)
-- [방법: 런타임에 동적으로 조건자 필터 지정](../../linq-query-expressions/how-to-dynamically-specify-predicate-filters-at-runtime.md)
+- [방법: 런타임에 동적으로 조건자 필터 지정](../../../linq/dynamically-specify-predicate-filters-at-runtime.md)
 - [방법: 지정된 단어 집합이 들어 있는 문장 쿼리(LINQ)(C#)](./how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq.md)

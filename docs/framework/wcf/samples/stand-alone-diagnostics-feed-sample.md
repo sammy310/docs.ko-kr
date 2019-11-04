@@ -2,19 +2,19 @@
 title: 독립형 진단 피드 샘플
 ms.date: 03/30/2017
 ms.assetid: d31c6c1f-292c-4d95-8e23-ed8565970ea5
-ms.openlocfilehash: 6b83bda154a76fe10487da00359e0ceace8ce8cb
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: c8a64c209711734b4915f332e9242346e295ddea
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044675"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73417038"
 ---
 # <a name="stand-alone-diagnostics-feed-sample"></a>독립형 진단 피드 샘플
 이 샘플에서는 Windows Communication Foundation (WCF)를 사용 하 여 배포 하기 위해 RSS/Atom 피드를 만드는 방법을 보여 줍니다. 개체 모델의 기본 사항 및 Windows Communication Foundation (WCF) 서비스에서 설정 하는 방법을 보여 주는 기본적인 "Hello World" 프로그램입니다.  
   
- WCF는 배포 피드를 특수 데이터 형식을 <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>반환 하는 서비스 작업으로 모델링 합니다. <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>의 인스턴스는 피드를 RSS 2.0 및 ATOM 1.0 형식으로 serialize할 수 있습니다. 다음 샘플 코드에서는 사용된 계약을 보여 줍니다.  
+ WCF는 <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>특수 데이터 형식을 반환 하는 서비스 작업으로 배포 피드를 모델링 합니다. <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>의 인스턴스는 피드를 RSS 2.0 및 ATOM 1.0 형식으로 serialize할 수 있습니다. 다음 샘플 코드에서는 사용된 계약을 보여 줍니다.  
   
-```  
+```csharp  
 [ServiceContract(Namespace = "")]  
     interface IDiagnosticsService  
     {  
@@ -32,11 +32,11 @@ ms.locfileid: "70044675"
     }  
 ```  
   
- 작업 `GetProcesses` 에는 WCF가 서비스 <xref:System.ServiceModel.Web.WebGetAttribute> 작업에 HTTP GET 요청을 디스패치 하는 방법을 제어 하 고 전송 되는 메시지의 형식을 지정 하는 데 사용할 수 있는 특성으로 주석이 추가 됩니다.  
+ `GetProcesses` 작업에는 WCF가 서비스 작업에 HTTP GET 요청을 디스패치 하는 방법 및 전송 되는 메시지의 형식을 지정 하는 방법을 제어할 수 있는 <xref:System.ServiceModel.Web.WebGetAttribute> 특성으로 주석이 추가 됩니다.  
   
  모든 WCF 서비스와 마찬가지로 배포 피드는 모든 관리 되는 응용 프로그램에서 자체 호스팅될 수 있습니다. 배포 서비스가 제대로 작동하려면 특정 바인딩(<xref:System.ServiceModel.WebHttpBinding>) 및 특정 엔드포인트 동작(<xref:System.ServiceModel.Description.WebHttpBehavior>)이 필요합니다. 새 <xref:System.ServiceModel.Web.WebServiceHost> 클래스는 특정 구성 없이 이러한 엔드포인트를 만들기 위해 다음과 같이 편리한 API를 제공합니다.  
   
-```  
+```csharp  
 WebServiceHost host = new WebServiceHost(typeof(ProcessService), new Uri("http://localhost:8000/diagnostics"));  
   
             //The WebServiceHost will automatically provide a default endpoint at the base address  
@@ -49,11 +49,11 @@ WebServiceHost host = new WebServiceHost(typeof(ProcessService), new Uri("http:/
 <%@ ServiceHost Language="C#|VB" Debug="true" Service="ProcessService" %>  
 ```  
   
- 이 서비스는 표준 HTTP GET을 사용하여 요청을 받기 때문에 RSS 또는 ATOM 인식 클라이언트를 사용하여 서비스에 액세스할 수 있습니다. 예를 들어 RSS 인식 브라우저에서 또는 `http://localhost:8000/diagnostics/feed/?format=atom` `http://localhost:8000/diagnostics/feed/?format=rss` 으로 이동 하 여이 서비스의 출력을 볼 수 있습니다.
+ 이 서비스는 표준 HTTP GET을 사용하여 요청을 받기 때문에 RSS 또는 ATOM 인식 클라이언트를 사용하여 서비스에 액세스할 수 있습니다. 예를 들어 RSS 인식 브라우저에서 `http://localhost:8000/diagnostics/feed/?format=atom` 또는 `http://localhost:8000/diagnostics/feed/?format=rss`로 이동 하 여이 서비스의 출력을 볼 수 있습니다.
   
  또한 [WCF 배포 개체 모델이 Atom 및 RSS에 매핑되는 방법을](../../../../docs/framework/wcf/feature-details/how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md) 사용 하 여 배포 된 데이터를 읽고 명령적 코드를 사용 하 여 처리할 수 있습니다.  
   
-```  
+```csharp  
 XmlReader reader = XmlReader.Create( "http://localhost:8000/diagnostics/feed/?format=rss",  
 new XmlReaderSettings()  
 {  
@@ -82,18 +82,18 @@ foreach (SyndicationItem i in feed.Items)
   
 3. 콘솔 애플리케이션을 실행합니다.  
   
-4. 콘솔 응용 프로그램이 실행 되는 동안 RSS 인식 `http://localhost:8000/diagnostics/feed/?format=atom` 브라우저로 `http://localhost:8000/diagnostics/feed/?format=rss` 이동 하거나 사용 합니다.  
+4. 콘솔 응용 프로그램이 실행 되는 동안 RSS 인식 브라우저를 사용 하 여 `http://localhost:8000/diagnostics/feed/?format=atom` 또는 `http://localhost:8000/diagnostics/feed/?format=rss`로 이동 합니다.  
   
 > [!IMPORTANT]
 > 컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Syndication\DiagnosticsFeed`  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [WCF 웹 HTTP 프로그래밍 모델](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
 - [WCF 배포](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)

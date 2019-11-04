@@ -7,12 +7,12 @@ helpviewer_keywords:
 - exceptions [C#]
 - C# language, exceptions
 ms.assetid: 0001887f-4fa2-47e2-8034-2819477e2344
-ms.openlocfilehash: 1442daf646a29c3822d06d0b649f462b37523fe2
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 3506406a441cb2028c00d5b8ed87b57cc6dff38b
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002119"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423262"
 ---
 # <a name="exceptions-and-exception-handling-c-programming-guide"></a>예외 및 예외 처리(C# 프로그래밍 가이드)
 
@@ -53,7 +53,7 @@ C# 언어의 예외 처리 기능은 프로그램이 실행 중일 때 발생하
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 
-자세한 내용은 [C# 언어 사양](../../language-reference/language-specification/index.md)의 [예외](~/_csharplang/spec/exceptions.md)를 참조하세요. 언어 사양은 C# 구문 및 사용법에 대 한 신뢰할 수 있는 소스 됩니다.
+자세한 내용은 [C# 언어 사양](/dotnet/csharp/language-reference/language-specification/introduction)의 [예외](~/_csharplang/spec/exceptions.md)를 참조하세요. 언어 사양은 C# 구문 및 사용법에 대 한 신뢰할 수 있는 소스 됩니다.
 
 ## <a name="see-also"></a>참고 항목
 

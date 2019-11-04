@@ -6,21 +6,21 @@ helpviewer_keywords:
 - smart tags
 - designer actions
 ms.assetid: cac337e6-00f6-4584-80f4-75728f5ea113
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 34c14c0afd9632b06947fd72e46ddbda070cfb0f
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: 07fb43a711ae8b1e2e375b17b136c07f35b1cf39
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015760"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459581"
 ---
 # <a name="walkthrough-perform-common-tasks-using-smart-tags"></a>연습: 스마트 태그를 사용 하 여 일반 작업 수행
 
 Windows Forms 응용 프로그램에 대 한 폼과 컨트롤을 구성할 때 반복적으로 수행 하는 많은 태스크가 있습니다. 일반적으로 수행 되는 작업은 다음과 같습니다.
 
-- 에서 <xref:System.Windows.Forms.TabControl>탭 추가 또는 제거
+- <xref:System.Windows.Forms.TabControl>에서 탭 추가 또는 제거
 
 - 컨트롤을 부모에 도킹 합니다.
 
@@ -42,9 +42,9 @@ Windows Forms 응용 프로그램에 대 한 폼과 컨트롤을 구성할 때 �
 
 스마트 태그는 디자인 타임에이를 제공 하는 컨트롤에서 항상 사용할 수 있습니다.
 
-1. 를 <xref:System.Windows.Forms.TabControl> **도구 상자** 에서 폼으로 끌어옵니다. 의 측면![에표시](./media/vs-winformsmttagglyph.gif)되는 스마트 태그 문자 모양 (스마트 태그 문자 모양)을 확인 합니다. <xref:System.Windows.Forms.TabControl>
+1. <xref:System.Windows.Forms.TabControl>를 **도구 상자** 에서 폼으로 끌어옵니다. <xref:System.Windows.Forms.TabControl>측면에 표시 되는 스마트 태그 문자 모양 (![스마트 태그 문자 모양](./media/vs-winformsmttagglyph.gif))을 확인 합니다.
 
-2. 스마트 태그 문자 모양을 클릭 합니다. 문자 모양 옆에 나타나는 바로 가기 메뉴에서 **추가 탭** 항목을 선택 합니다. 새 탭 페이지가에 추가 <xref:System.Windows.Forms.TabControl>되는지 확인 합니다.
+2. 스마트 태그 문자 모양을 클릭 합니다. 문자 모양 옆에 나타나는 바로 가기 메뉴에서 **추가 탭** 항목을 선택 합니다. 새 탭 페이지가 <xref:System.Windows.Forms.TabControl>에 추가 되는지 확인 합니다.
 
 3. <xref:System.Windows.Forms.TableLayoutPanel> 도구 상자 **에서** 컨트롤을 폼으로 끌어다 놓습니다.
 
@@ -54,7 +54,7 @@ Windows Forms 응용 프로그램에 대 한 폼과 컨트롤을 구성할 때 �
 
 6. 스마트 태그 문자 모양을 클릭 합니다. 문자 모양 옆에 나타나는 바로 가기 메뉴에서 **가로 분할자 방향** 항목을 선택 합니다. <xref:System.Windows.Forms.SplitContainer> 컨트롤의 분할자 막대가 이제 가로 방향으로 표시 되는지 확인 합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Windows.Forms.TextBox>
 - <xref:System.Windows.Forms.TabControl>

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - implicitly-typed arrays [C#]
 - C# language, implicitly typed arrays
 ms.assetid: e05be95c-6732-403d-ae42-b35f057cbbea
-ms.openlocfilehash: 36ca18adc392643107b43a947656846f3b94a2eb
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: ac47ec6e69b7910f474378eebd91d58c171a802e
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69597348"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419558"
 ---
 # <a name="implicitly-typed-arrays-c-programming-guide"></a>암시적으로 형식화된 배열(C# 프로그래밍 가이드)
 
@@ -40,4 +40,4 @@ ms.locfileid: "69597348"
 - [익명 형식](../classes-and-structs/anonymous-types.md)
 - [개체 이니셜라이저 및 컬렉션 이니셜라이저](../classes-and-structs/object-and-collection-initializers.md)
 - [var](../../language-reference/keywords/var.md)
-- [LINQ 쿼리 식](../linq-query-expressions/index.md)
+- [C#의 LINQ](../../linq/index.md)

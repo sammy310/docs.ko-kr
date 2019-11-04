@@ -6,12 +6,12 @@ ms.assetid: b8d7cf43-d1f2-4f3d-adb0-4f3a6428edc0
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 35290796b89262cafd8bce63bb97da203853f569
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: d8ea49bbe400c5ec478a94ad7c1adb759af28abb
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72921031"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454201"
 ---
 # <a name="wpf-overview"></a>WPF 개요
 
@@ -612,7 +612,7 @@ WPF 컨트롤의 기본 사용자 인터페이스는 일반적으로 다른 컨�
 
 리소스 및 리소스 사전은 테마 및 스킨에 대한 WPF 지원의 기반이 됩니다.
 
-자세한 내용은 [리소스](advanced/xaml-resources.md)를 참조하세요.
+자세한 내용은 [리소스](../../desktop-wpf/fundamentals/xaml-resources-define.md)를 참조하세요.
 
 ### <a name="custom-controls"></a>사용자 지정 컨트롤
 

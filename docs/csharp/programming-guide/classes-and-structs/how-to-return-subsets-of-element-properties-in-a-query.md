@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - anonymous types [C#], for subsets of element properties
 ms.assetid: fabdf349-f443-4e3f-8368-6c471be1dd7b
-ms.openlocfilehash: 2c9fea2189819058187020c2e67b8826659fbed4
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 196383731507137bf4309d38d27b36f29b23a06c
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205438"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419309"
 ---
 # <a name="how-to-return-subsets-of-element-properties-in-a-query-c-programming-guide"></a>방법: 쿼리에서 요소 속성의 하위 집합 반환(C# 프로그래밍 가이드)
 이러한 조건이 둘 다 적용되는 경우 쿼리 식에서 무명 형식을 사용합니다.  
@@ -50,4 +50,4 @@ Console.WriteLine(student.First + " " + student.Last);
 
 - [C# 프로그래밍 가이드](../index.md)
 - [익명 형식](./anonymous-types.md)
-- [LINQ 쿼리 식](../linq-query-expressions/index.md)
+- [C#의 LINQ](../../linq/index.md)

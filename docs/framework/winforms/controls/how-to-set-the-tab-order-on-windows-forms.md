@@ -10,15 +10,15 @@ helpviewer_keywords:
 - controls [Windows Forms], setting tab order
 - Windows Forms, setting tab order
 ms.assetid: 71fa8e76-0472-414b-ad3c-0f90166e0ad7
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 8a0a1c76b996f10de0ca963c5d8bdc2325a3f6b6
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 026cff06a8d662cb40107fa76cf6d7989fe30cf1
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69987095"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458529"
 ---
 # <a name="how-to-set-the-tab-order-on-windows-forms"></a>방법: Windows Forms에서 탭 순서 설정
 
@@ -28,7 +28,7 @@ ms.locfileid: "69987095"
 
 1. Visual Studio의 **보기** 메뉴에서 **탭 순서**를 선택 합니다.
 
-   이렇게 하면 폼에서 탭 순서 선택 모드가 활성화 됩니다. <xref:System.Windows.Forms.Control.TabIndex%2A> 속성을 나타내는 숫자가 각 컨트롤의 왼쪽 위 모퉁이에 나타납니다.
+   이렇게 하면 폼에서 탭 순서 선택 모드가 활성화 됩니다. <xref:System.Windows.Forms.Control.TabIndex%2A> 속성을 나타내는 숫자가 각 컨트롤의 왼쪽 위 모퉁이에 표시 됩니다.
 
 2. 원하는 탭 순서를 설정 하려면 컨트롤을 순서 대로 클릭 합니다.
 
@@ -38,24 +38,24 @@ ms.locfileid: "69987095"
 3. 완료 되 면 **보기** 메뉴에서 **탭 순서** 를 다시 선택 하 여 탭 순서 모드를 유지 합니다.
 
    > [!NOTE]
-   > 포커스를 가져올 수 없는 컨트롤 및 비활성화 된 컨트롤과 보이지 않는 컨트롤 <xref:System.Windows.Forms.Control.TabIndex%2A> 에는 속성이 없으며 탭 순서에 포함 되지 않습니다. 사용자가 Tab 키를 누를 때 이러한 컨트롤을 건너뜁니다.
+   > 포커스를 가져올 수 없는 컨트롤, 비활성화 된 컨트롤 및 보이지 않는 컨트롤은 <xref:System.Windows.Forms.Control.TabIndex%2A> 속성이 없으며 탭 순서에 포함 되지 않습니다. 사용자가 Tab 키를 누를 때 이러한 컨트롤을 건너뜁니다.
 
-또는 <xref:System.Windows.Forms.Control.TabIndex%2A> 속성을 사용 하 여 속성 창에서 탭 순서를 설정할 수 있습니다. 컨트롤 <xref:System.Windows.Forms.Control.TabIndex%2A> 의 속성은 탭 순서에서 위치가 지정 되는 위치를 결정 합니다. 기본적으로 그려진 첫 번째 컨트롤의 <xref:System.Windows.Forms.Control.TabIndex%2A> 값은 0이 고, 두 번째 <xref:System.Windows.Forms.Control.TabIndex%2A> 컨트롤의 값은 1입니다.
+또는 <xref:System.Windows.Forms.Control.TabIndex%2A> 속성을 사용 하 여 속성 창에서 탭 순서를 설정할 수 있습니다. 컨트롤의 <xref:System.Windows.Forms.Control.TabIndex%2A> 속성은 탭 순서에서 위치가 지정 되는 위치를 결정 합니다. 기본적으로 그려진 첫 번째 컨트롤의 <xref:System.Windows.Forms.Control.TabIndex%2A> 값은 0이 고, 두 번째 컨트롤의 <xref:System.Windows.Forms.Control.TabIndex%2A>은 1입니다.
 
-또한 기본적으로 컨트롤 <xref:System.Windows.Forms.GroupBox> <xref:System.Windows.Forms.Control.TabIndex%2A> 에는 정수 값이 있습니다. 컨트롤 <xref:System.Windows.Forms.GroupBox> 자체는 런타임에 포커스를 가질 수 없습니다. 따라서 내의 각 컨트롤에는 <xref:System.Windows.Forms.GroupBox> 0부터 시작 하 <xref:System.Windows.Forms.Control.TabIndex%2A> 는 10 진수 값이 있습니다. 물론, <xref:System.Windows.Forms.Control.TabIndex%2A> <xref:System.Windows.Forms.GroupBox> 컨트롤의가 증가 하면 그에 따라 컨트롤이 증가 합니다. 5에서 6 <xref:System.Windows.Forms.Control.TabIndex%2A> 사이의 <xref:System.Windows.Forms.Control.TabIndex%2A> 값을 변경한 경우 해당 그룹의 첫 번째 컨트롤 값이 자동으로 6.0로 변경 됩니다.
+또한 기본적으로 <xref:System.Windows.Forms.GroupBox> 컨트롤에는 정수 <xref:System.Windows.Forms.Control.TabIndex%2A> 값이 있습니다. 런타임에는 <xref:System.Windows.Forms.GroupBox> 컨트롤 자체에 포커스를 둘 수 없습니다. 따라서 <xref:System.Windows.Forms.GroupBox> 내의 각 컨트롤에는 0부터 시작 하는 고유한 10 진수 <xref:System.Windows.Forms.Control.TabIndex%2A> 값이 있습니다. 기본적으로 <xref:System.Windows.Forms.GroupBox> 컨트롤의 <xref:System.Windows.Forms.Control.TabIndex%2A> 증가 하면 그 안에 포함 된 컨트롤이 그에 따라 증가 됩니다. <xref:System.Windows.Forms.Control.TabIndex%2A> 값을 5에서 6으로 변경한 경우 해당 그룹에 있는 첫 번째 컨트롤의 <xref:System.Windows.Forms.Control.TabIndex%2A> 값이 자동으로 6.0로 변경 됩니다.
 
-마지막으로, 폼의 많은 컨트롤은 탭 순서에서 건너뛸 수 있습니다. 일반적으로 런타임에 Tab 키를 누르면 탭 순서의 각 컨트롤이 선택 됩니다. <xref:System.Windows.Forms.Control.TabStop%2A> 속성을 끄면 폼의 탭 순서에서 컨트롤이 전달 되도록 할 수 있습니다.
+마지막으로, 폼의 많은 컨트롤은 탭 순서에서 건너뛸 수 있습니다. 일반적으로 런타임에 Tab 키를 누르면 탭 순서의 각 컨트롤이 선택 됩니다. <xref:System.Windows.Forms.Control.TabStop%2A> 속성을 끄면 폼의 탭 순서에서 컨트롤을 전달 하도록 만들 수 있습니다.
 
 ## <a name="to-remove-a-control-from-the-tab-order"></a>탭 순서에서 컨트롤을 제거 하려면
 
-속성 창에서 컨트롤 <xref:System.Windows.Forms.Control.TabStop%2A> 의 속성을 **false** 로 설정 합니다.
+**속성** 창에서 컨트롤의 <xref:System.Windows.Forms.Control.TabStop%2A> 속성을 **false** 로 설정 합니다.
 
-Tab 키를 <xref:System.Windows.Forms.Control.TabStop%2A> 사용 하 여 컨트롤을 `false` 순환할 때 컨트롤이 생략 되더라도 속성이로 설정 된 컨트롤은 탭 순서에서 해당 위치를 계속 유지 합니다.
+Tab 키를 사용 하 여 컨트롤을 순환할 때 컨트롤이 생략 되는 경우에도 <xref:System.Windows.Forms.Control.TabStop%2A> 속성이 `false`로 설정 된 컨트롤은 탭 순서에서 해당 위치를 계속 유지 합니다.
 
 > [!NOTE]
-> 라디오 단추 그룹은 런타임에 단일 탭 정지를 가집니다. 선택 된 <xref:System.Windows.Forms.RadioButton.Checked%2A> 단추 (즉, 속성이로 `true`설정 된 단추) <xref:System.Windows.Forms.Control.TabStop%2A> 의 속성은 자동으로 <xref:System.Windows.Forms.Control.TabStop%2A> 로 `true`설정 되 고 다른 단추의 속성은로 `false`설정 됩니다. 컨트롤을 그룹화 <xref:System.Windows.Forms.RadioButton> 하는 방법에 대 한 자세한 내용은 [그룹화 Windows Forms RadioButton 컨트롤이 집합으로 작동 하도록 설정](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)을 참조 하세요.
+> 라디오 단추 그룹은 런타임에 단일 탭 정지를 가집니다. 선택 된 단추 (즉, <xref:System.Windows.Forms.RadioButton.Checked%2A> 속성이 `true`로 설정 된 단추의 <xref:System.Windows.Forms.Control.TabStop%2A> 속성은 자동으로 `true`로 설정 되 고 다른 단추의 <xref:System.Windows.Forms.Control.TabStop%2A> 속성은 `false`로 설정 됩니다. <xref:System.Windows.Forms.RadioButton> 컨트롤을 그룹화 하는 방법에 대 한 자세한 내용은 [그룹화 Windows Forms RadioButton 컨트롤이 집합으로 작동 하는 방법](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)을 참조 하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [Windows Forms 컨트롤](index.md)
 - [Windows Forms에 사용할 수 있는 컨트롤](controls-to-use-on-windows-forms.md)

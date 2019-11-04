@@ -9,12 +9,12 @@ helpviewer_keywords:
 - select keyword [C#]
 - select clause [C#]
 ms.assetid: df01e266-5781-4aaa-80c4-67cf28ea093f
-ms.openlocfilehash: 3ba52fccc0521df1a0bb5b6177575dc5d2152248
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: f1bfbeccaf6c3916a591f6447760fa01c3f8a3b6
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633830"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422361"
 ---
 # <a name="select-clause-c-reference"></a>select 절(C# 참조)
 
@@ -45,5 +45,5 @@ ms.locfileid: "65633830"
 - [from 절](from-clause.md)
 - [partial(메서드)(C# 참조)](partial-method.md)
 - [익명 형식](../../programming-guide/classes-and-structs/anonymous-types.md)
-- [LINQ 쿼리 식](../../programming-guide/linq-query-expressions/index.md)
-- [C#에서 LINQ 시작](../../programming-guide/concepts/linq/getting-started-with-linq.md)
+- [C#의 LINQ](../../linq/index.md)
+- [C#에서 LINQ 시작](/dotnet/csharp/programming-guide/concepts/linq/)

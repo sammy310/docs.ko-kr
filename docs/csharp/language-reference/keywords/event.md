@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - event keyword [C#]
 ms.assetid: 7858fd85-153b-4259-85d0-6aa13c35f174
-ms.openlocfilehash: 4149663422908069b5b65ed3c32ccc6dbdfd7729
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: a6a62881f7205891bafe039a42da44eb8f8d03c0
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69605808"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422823"
 ---
 # <a name="event-c-reference"></a>event(C# 참조)
 `event` 키워드는 게시자 클래스에서 이벤트를 선언하는 데 사용됩니다.  
@@ -53,5 +53,5 @@ ms.locfileid: "69605808"
 - [C# 키워드](./index.md)
 - [add](./add.md)
 - [remove](./remove.md)
-- [한정자](./modifiers.md)
+- [한정자](index.md)
 - [방법: 대리자 조합(멀티캐스트 대리자)](../../programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)

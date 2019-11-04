@@ -2,12 +2,12 @@
 title: '방법: 다시 호스트된 디자이너에서 유효성 검사 오류 표시'
 ms.date: 03/30/2017
 ms.assetid: 5aa8fb53-8f75-433b-bc06-7c7d33583d5d
-ms.openlocfilehash: 608868882f4bec23c03f0ec78f65673e76056030
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: d36883eb77864ccc16cb5882d0de216e1aaaa589
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989658"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420603"
 ---
 # <a name="how-to-display-validation-errors-in-a-rehosted-designer"></a>방법: 다시 호스트된 디자이너에서 유효성 검사 오류 표시
 이 항목에서는 다시 호스트된 [!INCLUDE[wfd1](../../../includes/wfd1-md.md)]에서 유효성 검사 오류를 검색하고 게시하는 방법에 대해 설명합니다. 또한 다시 호스트된 디자이너의 워크플로가 유효한지 확인하는 절차도 제공합니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "70989658"
         {  
             public void ShowValidationErrors(IList<ValidationErrorInfo> errors)  
             {  
-                errors.ToList().ForEach(vei => Debug.WriteLine(string.Format("Error: {0} ", vei.Message)));  
+                errors.ToList().ForEach(vei => Debug.WriteLine($"Error: {vei.Message}"));  
             }  
         }  
     }  

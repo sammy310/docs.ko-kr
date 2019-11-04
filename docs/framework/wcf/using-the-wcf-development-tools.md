@@ -2,12 +2,12 @@
 title: WCF 개발 도구 사용
 ms.date: 03/30/2017
 ms.assetid: 054adb87-c244-4d5a-83d1-0b2b44bd454b
-ms.openlocfilehash: 27cefb1ca1f4748f0d074ffdcd47cd6faa29da00
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: afa62a63aa955dc868791da635418331f93e9e87
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320281"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420687"
 ---
 # <a name="using-the-wcf-development-tools"></a>WCF 개발 도구 사용
 이 섹션에서는 WCFservice 개발에 도움이 될 수 있는 Visual Studio 개발 도구에 대해 설명 합니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "72320281"
   
  [!INCLUDE[wv](../../../includes/wv-md.md)]의 강화된 관리자 계정으로 Netsh.exe를 사용하여 액세스 권한을 수정할 수 있습니다. 다음은 Netsh.exe를 사용하는 예입니다.  
   
-```  
+```console  
 netsh http add urlacl url=http://+:8001/MyService user=<domain>\<user>  
 ```  
   

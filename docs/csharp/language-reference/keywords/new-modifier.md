@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - new modifier keyword [C#]
 ms.assetid: a2e20856-33b9-4620-b535-a60dbce8349b
-ms.openlocfilehash: f62255be9c74a221836b23058bd48a835f38f629
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 082cd37eca6b5de1251d73a5483665f8a98b0132
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69608622"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422675"
 ---
 # <a name="new-modifier-c-reference"></a>new 한정자(C# 참조)
 
@@ -63,6 +63,6 @@ The keyword new is required on 'MyDerivedC.x' because it hides inherited member 
 - [C# 참조](../../language-reference/index.md)
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)
 - [C# 키워드](index.md)
-- [한정자](modifiers.md)
+- [한정자](index.md)
 - [Override 및 New 키워드를 사용하여 버전 관리](../../programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)
 - [Override 및 New 키워드를 사용해야 하는 경우](../../programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)

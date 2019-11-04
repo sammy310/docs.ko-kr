@@ -15,35 +15,35 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-ms.openlocfilehash: b6de7aab77c168f353b39b44853fc224cbf0244d
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 0758a537ee457a8fe5a778e2a2c24a8ba13c263b
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70254086"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460868"
 ---
 # <a name="printing-overview"></a>인쇄 개요
-Microsoft .NET 프레임 워크에서 Windows Presentation Foundation (WPF)를 사용 하는 응용 프로그램 개발자는 다양 한 새로운 인쇄 및 인쇄 시스템 관리 Api 집합을 사용할 수 있습니다. [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)]에서는 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 응용 프로그램을 만드는 개발자와 비관리 코드를 사용하는 개발자도 이러한 인쇄 시스템 향상 기능을 일부 사용할 수 있습니다. 이 새로운 기능의 핵심은 새로운 XPS (XML Paper Specification) 파일 형식 및 XPS 인쇄 경로입니다.  
+Microsoft .NET 프레임 워크에서 Windows Presentation Foundation (WPF)를 사용 하는 응용 프로그램 개발자는 다양 한 새로운 인쇄 및 인쇄 시스템 관리 Api 집합을 사용할 수 있습니다. [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)]에서는 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 애플리케이션을 만드는 개발자와 비관리 코드를 사용하는 개발자도 이러한 인쇄 시스템 향상 기능을 일부 사용할 수 있습니다. 이 새로운 기능의 핵심은 새로운 XPS (XML Paper Specification) 파일 형식 및 XPS 인쇄 경로입니다.  
   
- 이 항목에는 다음 섹션이 수록되어 있습니다.  
+ 이 항목에는 다음과 같은 섹션이 포함되어 있습니다.  
   
 <a name="introduction_to_XPS"></a>   
 ## <a name="about-xps"></a>XPS 정보  
- XPS는 전자 문서 형식, 스풀 파일 형식 및 페이지 설명 언어입니다. , OPC (open 패키징 규칙) 및 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]기타 산업 표준을 사용 하 여 플랫폼 간 문서를 만드는 오픈 문서 형식입니다. XPS는 디지털 문서를 생성, 공유, 인쇄, 표시 및 보관 하는 프로세스를 간소화 합니다. XPS에 대 한 자세한 내용은 [Xps 문서](/windows/desktop/printdocs/documents)를 참조 하세요.  
+ XPS는 전자 문서 형식, 스풀 파일 형식 및 페이지 설명 언어입니다. [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)], OPC (Open 패키징 규칙) 및 기타 산업 표준을 사용 하 여 플랫폼 간 문서를 만드는 오픈 문서 형식입니다. XPS는 디지털 문서를 생성, 공유, 인쇄, 표시 및 보관 하는 프로세스를 간소화 합니다. XPS에 대 한 자세한 내용은 [Xps 문서](/windows/desktop/printdocs/documents)를 참조 하세요.  
   
- 를 사용 하 여 xps 기반 콘텐츠를 인쇄 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 하는 여러 가지 기술은 [프로그래밍 방식으로 xps 파일 인쇄](how-to-programmatically-print-xps-files.md)에서 보여 줍니다. 이 항목에 포함된 내용을 검토하는 동안 이러한 예제를 참조하는 것이 유용할 수도 있습니다. 비관리 코드 개발자는 [MXDC_ESCAPE 함수](/windows/desktop/printdocs/mxdc-escape)에 대 한 설명서를 참조 해야 합니다. Windows Forms 개발자는 전체 XPS 인쇄 경로를 <xref:System.Drawing.Printing> 지원 하지 않지만 하이브리드 GDI-XPS 인쇄 경로를 지 원하는 네임 스페이스의 API를 사용 해야 합니다. 아래의 **인쇄 경로 아키텍처**를 참조하세요.  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]를 사용 하 여 XPS 기반 콘텐츠를 인쇄 하는 여러 가지 기술은 [Xps 파일을 프로그래밍 방식으로 인쇄](how-to-programmatically-print-xps-files.md)하는 방법을 보여 줍니다. 이 항목에 포함된 내용을 검토하는 동안 이러한 예제를 참조하는 것이 유용할 수도 있습니다. 비관리 코드 개발자는 [MXDC_ESCAPE 함수](/windows/desktop/printdocs/mxdc-escape)에 대 한 설명서를 참조 해야 합니다. Windows Forms 개발자는 전체 XPS 인쇄 경로를 지원 하지 않지만 하이브리드 GDI-XPS 인쇄 경로를 지 원하는 <xref:System.Drawing.Printing> 네임 스페이스의 API를 사용 해야 합니다. 아래의 **인쇄 경로 아키텍처**를 참조하세요.  
   
 <a name="XPS_print_path_intro"></a>   
 ## <a name="xps-print-path"></a>XPS 인쇄 경로  
  XPS (XML Paper Specification) 인쇄 경로는 Windows 응용 프로그램에서 인쇄를 처리 하는 방법을 다시 정의 하는 새로운 Windows 기능입니다. XPS는 문서 표시 언어 (예: RTF), 인쇄 스풀러 형식 (예: WMF) 및 페이지 설명 언어 (예: PCL 또는 포스트 스크립트)를 대체할 수 있기 때문입니다. 새 인쇄 경로는 응용 프로그램 게시에서 인쇄 드라이버 또는 장치에 있는 최종 처리까지 XPS 형식을 유지 합니다.  
   
- Xps 인쇄 경로는 xps 프린터 드라이버 모델 (XPSDrv)을 기반으로 하며,이를 통해 인쇄, 향상 된 색 [!INCLUDE[TLA#tla_wys](../../../../includes/tlasharptla-wys-md.md)] 지원, 향상 된 인쇄 성능 등의 개발자에 게 몇 가지 이점을 제공 합니다. XPSDrv에 대 한 자세한 내용은 [Windows 드라이버 키트 설명서](/windows-hardware/drivers/)를 참조 하세요.  
+ XPS 인쇄 경로는 XPS 프린터 드라이버 모델 (XPSDrv)을 기반으로 하며,이를 통해 사용자가 WYSIWYG (볼 수 있는 항목) 인쇄, 향상 된 색 지원, 향상 된 인쇄 성능 등의 개발자에 게 몇 가지 이점을 제공 합니다. XPSDrv에 대 한 자세한 내용은 [Windows 드라이버 키트 설명서](/windows-hardware/drivers/)를 참조 하세요.  
   
  XPS 문서에 대 한 인쇄 스풀러 작업은 기본적으로 이전 버전의 Windows와 동일 합니다. 그러나 기존 GDI 인쇄 경로 외에도 XPS 인쇄 경로를 지원 하도록 향상 되었습니다. 새 인쇄 경로는 기본적으로 XPS 스풀 파일을 사용 합니다. 이전 버전의 Windows 용으로 작성 된 사용자 모드 프린터 드라이버는 계속 작동 하지만 XPS 인쇄 경로를 사용 하려면 XPSDrv (XPS 프린터 드라이버)가 필요 합니다.  
   
  XPS 인쇄 경로의 이점은 다음과 같습니다.  
   
-- [!INCLUDE[TLA2#tla_wys](../../../../includes/tla2sharptla-wys-md.md)] 인쇄 지원  
+- WYSIWYG 인쇄 지원  
   
 - 32bpc(채널당 비트), CMYK, 명명된 색, n-잉크 및 투명도와 그라데이션 기본 지원을 포함하는 고급 색 프로필에 대한 기본 지원입니다.  
   
@@ -60,9 +60,9 @@ Microsoft .NET 프레임 워크에서 Windows Presentation Foundation (WPF)를 �
 - 확장 가능한 필터 파이프라인. XPSDrv (XPS 프린터 드라이버) 필터 파이프라인은 XPS 문서의 직접 인쇄와 확장 가능한 인쇄를 둘 다 사용할 수 있도록 설계 되었습니다. 자세한 내용은 [XPSDrv 프린터 드라이버](/windows-hardware/drivers/print/xpsdrv-printer-drivers)(영문)를 참조 하세요. 
   
 ### <a name="print-path-architecture"></a>인쇄 경로 아키텍처  
- 및 .NET Framework [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 응용 프로그램은 모두 xps를 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 지원 하 고, Windows Forms 응용 프로그램은 xps를 xps로 변환 하 여 xps 프린터 드라이버 (XPSDrv)에 대해 xps 형식의 콘텐츠를 만듭니다. 이러한 응용 프로그램은 XPS 인쇄 경로를 사용할 필요가 없으며 EMF (확장 메타 파일) 기반 인쇄를 계속 사용할 수 있습니다. 그러나 대부분의 XPS 기능과 향상 된 기능은 XPS 인쇄 경로를 대상으로 하는 응용 프로그램 에서만 사용할 수 있습니다.  
+ [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 및 .NET Framework 응용 프로그램 모두 XPS를 지 원하는 반면, [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 및 Windows Forms 응용 프로그램은 xps 프린터 드라이버 (XPSDrv)에 대해 XPS 형식의 콘텐츠를 만들기 위해 GDI-XPS 변환을 사용 합니다. 이러한 응용 프로그램은 XPS 인쇄 경로를 사용할 필요가 없으며 EMF (확장 메타 파일) 기반 인쇄를 계속 사용할 수 있습니다. 그러나 대부분의 XPS 기능과 향상 된 기능은 XPS 인쇄 경로를 대상으로 하는 응용 프로그램 에서만 사용할 수 있습니다.  
   
- 및 Windows Forms 응용 프로그램에서 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] xpsdrv 기반 프린터를 사용할 수 있도록 하기 위해 xpsdrv (xps 프린터 드라이버)는 GDI를 xps 형식으로 변환할 수 있도록 지원 합니다. 또한 XPSDrv 모델은 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 응용 프로그램에서 xps 문서를 인쇄할 수 있도록 xps를 GDI 형식으로 변환 합니다. 응용 프로그램의 경우 쓰기 작업의 대상 인쇄 큐에 XPSDrv 드라이버가 없는 <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> 경우 <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> 에는 <xref:System.Windows.Xps.XpsDocumentWriter> 클래스의 및 메서드에서 XPS를 GDI 형식으로 변환 하는 작업을 자동으로 수행 합니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Windows Forms 응용 프로그램은 XPS 문서를 인쇄할 수 없습니다.  
+ [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 및 Windows Forms 응용 프로그램에서 XPSDrv 기반 프린터를 사용할 수 있도록 하기 위해 XPSDrv (XPS 프린터 드라이버)는 GDI를 XPS 형식으로 변환할 수 있도록 지원 합니다. 또한 XPSDrv 모델은 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 응용 프로그램에서 XPS 문서를 인쇄할 수 있도록 XPS 용 변환기를 제공 합니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램의 경우 쓰기 작업의 대상 인쇄 큐에 XPSDrv 드라이버가 없을 때마다 XPS를 GDI 형식으로 변환 하는 작업은 <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> 및 <xref:System.Windows.Xps.XpsDocumentWriter> 클래스의 <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> 메서드에서 자동으로 수행 됩니다. Windows Forms 응용 프로그램은 XPS 문서를 인쇄할 수 없습니다.  
   
  다음 그림에서는 인쇄 하위 시스템을 보여 주며 Microsoft에서 제공 하는 부분과 소프트웨어 및 하드웨어 공급 업체에서 정의 되는 부분을 정의 합니다.  
   
@@ -72,13 +72,13 @@ Microsoft .NET 프레임 워크에서 Windows Presentation Foundation (WPF)를 �
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]는 기본 및 고급 API를 모두 정의 합니다. 광범위 한 인쇄 사용자 지정 이나 전체 XPS 기능 집합에 대 한 액세스가 필요 하지 않은 응용 프로그램의 경우 기본 인쇄 지원을 사용할 수 있습니다. 기본 인쇄 지원은 최소한의 구성이 필요하며 익숙한 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]를 제공하는 인쇄 대화 상자 컨트롤을 통해 노출됩니다. 이 간소화 된 인쇄 모델을 사용 하 여 많은 XPS 기능을 사용할 수 있습니다.  
   
 #### <a name="printdialog"></a>PrintDialog  
- 컨트롤 <xref:System.Windows.Controls.PrintDialog?displayProperty=nameWithType> 은, 구성 및 XPS 작업 제출을 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]위한 단일 진입점을 제공 합니다. 컨트롤을 인스턴스화하고 사용하는 방법에 대한 자세한 내용은 [인쇄 대화 상자 호출](how-to-invoke-a-print-dialog.md)을 참조하세요.  
+ <xref:System.Windows.Controls.PrintDialog?displayProperty=nameWithType> 컨트롤은 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], 구성 및 XPS 작업 제출을 위한 단일 진입점을 제공 합니다. 컨트롤을 인스턴스화하고 사용하는 방법에 대한 자세한 내용은 [인쇄 대화 상자 호출](how-to-invoke-a-print-dialog.md)을 참조하세요.  
   
 ### <a name="advanced-xps-printing"></a>고급 XPS 인쇄  
- 전체 XPS 기능 집합에 액세스 하려면 고급 인쇄 API를 사용 해야 합니다. 몇 가지 관련 API에 대해서는 아래에서 자세히 설명 합니다. XPS 인쇄 경로 api의 전체 목록은 <xref:System.Windows.Xps> 및 <xref:System.Printing> 네임 스페이스 참조를 참조 하세요.  
+ 전체 XPS 기능 집합에 액세스 하려면 고급 인쇄 API를 사용 해야 합니다. 몇 가지 관련 API에 대해서는 아래에서 자세히 설명 합니다. XPS 인쇄 경로 Api의 전체 목록은 <xref:System.Windows.Xps> 및 <xref:System.Printing> 네임 스페이스 참조를 참조 하세요.  
   
 #### <a name="printticket-and-printcapabilities"></a>PrintTicket 및 PrintCapabilities  
- <xref:System.Printing.PrintTicket> 및<xref:System.Printing.PrintCapabilities> 클래스는 고급 XPS 기능의 기초가 됩니다. 두 유형의 개체는 모두 데이터 정렬, 양면 인쇄, 스테이플링 등과 같은 인쇄 지향 기능의 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 형식 구조체입니다. 이러한 구조체는 인쇄 스키마에서 정의됩니다. <xref:System.Printing.PrintTicket>은 인쇄 작업을 처리하는 방법을 프린터에 지시합니다. <xref:System.Printing.PrintCapabilities> 클래스는 프린터 기능을 정의합니다. 프린터 기능 쿼리를 통해 프린터에서 지원하는 기능을 완전히 활용하는 <xref:System.Printing.PrintTicket>을 만들 수 있습니다. 마찬가지로, 지원되지 않는 기능을 방지할 수 있습니다.  
+ <xref:System.Printing.PrintTicket> 및 <xref:System.Printing.PrintCapabilities> 클래스는 고급 XPS 기능의 기초가 됩니다. 두 가지 유형의 개체는 모두 데이터 정렬, 양면 인쇄, 스테이플링 등과 같은 인쇄 지향 기능의 형식 구조 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 됩니다. 이러한 구조는 인쇄 스키마에 의해 정의 됩니다. <xref:System.Printing.PrintTicket>은 인쇄 작업을 처리하는 방법을 프린터에 지시합니다. <xref:System.Printing.PrintCapabilities> 클래스는 프린터 기능을 정의합니다. 프린터 기능 쿼리를 통해 프린터에서 지원하는 기능을 완전히 활용하는 <xref:System.Printing.PrintTicket>을 만들 수 있습니다. 마찬가지로, 지원되지 않는 기능을 방지할 수 있습니다.  
   
  다음 예제에서는 코드를 사용하여 프린터의 <xref:System.Printing.PrintCapabilities>를 쿼리하고 <xref:System.Printing.PrintTicket>을 만드는 방법을 보여 줍니다.  
   
@@ -95,7 +95,7 @@ Microsoft .NET 프레임 워크에서 Windows Presentation Foundation (WPF)를 �
  [!code-vb[xpsprint#PrintQueueSnip](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsPrint/visualbasic/xpsprinthelper.vb#printqueuesnip)]  
   
 #### <a name="xpsdocumentwriter"></a>XpsDocumentWriter  
- 및 메서드가 많은 인은 XPS 문서를에 쓰는 데 사용 <xref:System.Printing.PrintQueue>됩니다. <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> <xref:System.Windows.Xps.XpsDocumentWriter> <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> 예를 들어, <xref:System.Windows.Xps.XpsDocumentWriter.Write%28System.Windows.Documents.FixedPage%2CSystem.Printing.PrintTicket%29> 메서드는 XPS <xref:System.Printing.PrintTicket> 문서를 동기적으로 출력 하는 데 사용 됩니다. 메서드 <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%28System.Windows.Documents.FixedDocument%2CSystem.Printing.PrintTicket%29> 는 XPS <xref:System.Printing.PrintTicket> 문서를 비동기적으로 출력 하는 데 사용 됩니다.  
+ 많은 <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> 및 <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> 메서드를 포함 하는 <xref:System.Windows.Xps.XpsDocumentWriter>은 XPS 문서를 <xref:System.Printing.PrintQueue>에 쓰는 데 사용 됩니다. 예를 들어 <xref:System.Windows.Xps.XpsDocumentWriter.Write%28System.Windows.Documents.FixedPage%2CSystem.Printing.PrintTicket%29> 메서드는 XPS 문서를 출력 하 고 동기적으로 <xref:System.Printing.PrintTicket> 하는 데 사용 됩니다. <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%28System.Windows.Documents.FixedDocument%2CSystem.Printing.PrintTicket%29> 메서드는 XPS 문서를 출력 하 고 비동기적으로 <xref:System.Printing.PrintTicket> 하는 데 사용 됩니다.  
   
  다음 예제에서는 코드를 사용하여 <xref:System.Windows.Xps.XpsDocumentWriter>를 만드는 방법을 보여 줍니다.  
   
@@ -106,7 +106,7 @@ Microsoft .NET 프레임 워크에서 Windows Presentation Foundation (WPF)를 �
   
 <a name="GDI_Print_Path_intro"></a>   
 ## <a name="gdi-print-path"></a>GDI 인쇄 경로  
- 응용 프로그램은 기본적으로 xps 인쇄 경로를 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 지원 하지만 Windows Forms 응용 프로그램은 일부 xps 기능을 활용할 수도 있습니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] XPSDrv (XPS 프린터 드라이버)는 GDI 기반 출력을 XPS 형식으로 변환할 수 있습니다. 고급 시나리오의 경우 [Microsoft MXDC (XPS 문서 변환기)](/windows/desktop/printdocs/microsoft-xps-document-converter--mxdc-)를 사용 하 여 콘텐츠의 사용자 지정 변환을 지원 합니다. 마찬가지로, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램은 <xref:System.Windows.Xps.XpsDocumentWriter> 클래스의 <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> 또는 <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> 메서드 중 하나를 호출 하 고 XpsDrv가 아닌 프린터를 대상 인쇄 큐로 지정 하 여 GDI 인쇄 경로로 출력할 수도 있습니다.  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램은 기본적으로 XPS 인쇄 경로를 지원 하지만 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 및 Windows Forms 응용 프로그램은 일부 XPS 기능을 활용할 수도 있습니다. XPSDrv (XPS 프린터 드라이버)는 GDI 기반 출력을 XPS 형식으로 변환할 수 있습니다. 고급 시나리오의 경우 [Microsoft MXDC (XPS 문서 변환기)](/windows/desktop/printdocs/microsoft-xps-document-converter--mxdc-)를 사용 하 여 콘텐츠의 사용자 지정 변환을 지원 합니다. 마찬가지로 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램은 <xref:System.Windows.Xps.XpsDocumentWriter> 클래스의 <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> 또는 <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> 메서드 중 하나를 호출 하 고 XpsDrv가 아닌 프린터를 대상 인쇄 큐로 지정 하 여 GDI 인쇄 경로로 출력할 수도 있습니다.  
 
 XPS 기능이 나 지원이 필요 하지 않은 응용 프로그램의 경우에는 현재 GDI 인쇄 경로가 변경 되지 않고 그대로 유지 됩니다.  
   
@@ -134,7 +134,7 @@ XPS 기능이 나 지원이 필요 하지 않은 응용 프로그램의 경우�
   
 - **ZIP 압축**. 모든 XPS 문서는 ZIP 압축을 사용 합니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Windows.Controls.PrintDialog>
 - <xref:System.Windows.Xps.XpsDocumentWriter>
@@ -146,5 +146,5 @@ XPS 기능이 나 지원이 필요 하지 않은 응용 프로그램의 경우�
 - [방법 항목](printing-how-to-topics.md)
 - [WPF의 문서](documents-in-wpf.md)
 - [XPS 문서](/windows/desktop/printdocs/documents)
-- [문서 serialization 및 저장소](document-serialization-and-storage.md)
+- [문서 serialization 및 스토리지](document-serialization-and-storage.md)
 - [MXDC (Microsoft XPS 문서 변환기)](/windows/desktop/printdocs/microsoft-xps-document-converter--mxdc-)

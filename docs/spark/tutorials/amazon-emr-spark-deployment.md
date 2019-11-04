@@ -4,12 +4,12 @@ description: Amazon EMR Spark에 .NET for Apache Spark 애플리케이션을 배
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 0eea5a40ae4643c7447e2f7281dc8b0db609ca79
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: a1ff1ba4d5e855e0ac36b99b0c9d63adfaaaac1e
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117949"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454942"
 ---
 # <a name="deploy-a-net-for-apache-spark-application-to-amazon-emr-spark"></a>Amazon EMR Spark에 .NET for Apache Spark 애플리케이션 배포
 
@@ -71,7 +71,7 @@ ms.locfileid: "71117949"
 
 [Amazon EMR](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-what-is-emr.html)은 AWS에서 빅 데이터 프레임워크 실행을 간소화하는 관리형 클러스터 플랫폼입니다.
 
-> [!NOTE] 
+> [!NOTE]
 > Amazon EMR Spark는 Linux 기반입니다. 따라서 Amazon EMR Spark에 앱을 배포하려면 앱이 .NET Standard와 호환되며 [.NET Core 컴파일러](https://dotnet.microsoft.com/download)를 사용하여 앱을 컴파일하는지 확인합니다.
 
 ### <a name="deploy-microsoftsparkworker"></a>Microsoft.Spark.Worker 배포

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - abstract keyword [C#]
 ms.assetid: b0797770-c1f3-4b4d-9441-b9122602a6bb
-ms.openlocfilehash: 547ecd9ff823f61bf3995c02959235b65a4a3979
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: a6c0ac86689c5d095fc077beb39d6281f77aab24
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69606149"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422950"
 ---
 # <a name="abstract-c-reference"></a>abstract(C# 참조)
 `abstract` 한정자는 수정되는 항목에 누락되거나 불완전한 구현이 있음을 나타냅니다. abstract 한정자는 클래스, 메서드, 속성, 인덱서 및 이벤트와 함께 사용될 수 있습니다. 클래스 선언에서 `abstract` 한정자를 사용하여 클래스가 자체에서 인스턴스화되지 않고 다른 클래스의 기본 클래스로만 사용됨을 나타냅니다. 추상으로 표시된 멤버는 추상 클래스에서 파생된 비 추상 클래스에 의해 구현되어야 합니다.
@@ -85,7 +85,7 @@ BaseClass bc = new BaseClass();   // Error
 
 - [C# 참조](../index.md)
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)
-- [한정자](./modifiers.md)
+- [한정자](index.md)
 - [virtual](./virtual.md)
 - [override](./override.md)
 - [C# 키워드](./index.md)

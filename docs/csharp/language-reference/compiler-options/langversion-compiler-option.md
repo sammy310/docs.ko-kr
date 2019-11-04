@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -langversion compiler option [C#]
 - langversion compiler option [C#]
 ms.assetid: 3fb00b05-a0ff-4782-b313-13a4c0f62d94
-ms.openlocfilehash: 81cf336f94815dd3f2c88995eb34ae03b8220097
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: 9588ec73250e8745426f6f6020c8d555a174d627
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72179913"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422955"
 ---
 # <a name="-langversion-c-compiler-options"></a>-langversion(C# 컴파일러 옵션)
 
@@ -68,7 +68,7 @@ C# 언어 버전을 지정하는 다른 방법은 [C# 언어 버전 선택](../c
 |버전|링크|설명|
 |-------|----|-----------|
 |C# 7.0 이상||현재 사용할 수 없음|
-|C# 6.0|[링크](../language-specification/index.md)|C# 언어 사양 버전 6 - 비공식 초안: .NET Foundation|
+|C# 6.0|[링크](/dotnet/csharp/language-reference/language-specification/introduction)|C# 언어 사양 버전 6 - 비공식 초안: .NET Foundation|
 |C# 5.0|[PDF 다운로드](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf)|표준 ECMA-334 다섯 번째 버전|
 |C# 3.0|[DOC 다운로드](https://download.microsoft.com/download/3/8/8/388e7205-bc10-4226-b2a8-75351c669b09/CSharp%20Language%20Specification.doc)|C# 언어 사양 버전 3.0: Microsoft Corporation|
 |C# 2.0|[PDF 다운로드](https://www.ecma-international.org/publications/files/ECMA-ST-ARCH/ECMA-334%204th%20edition%20June%202006.pdf)|표준 ECMA-334 네 번째 버전|

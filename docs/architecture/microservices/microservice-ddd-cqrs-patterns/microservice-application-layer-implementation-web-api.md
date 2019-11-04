@@ -2,12 +2,12 @@
 title: Web API를 사용하여 마이크로 서비스 애플리케이션 계층 구현
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | Web API 애플리케이션 계층에서 종속성 주입 및 중재자 패턴과 해당 구현 정보를 이해합니다.
 ms.date: 10/08/2018
-ms.openlocfilehash: 38c0bdb32666ab727c573d466d3e30d739bdd3b3
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: c73823a0449fdf81ba3d886efdef540bd1aa6121
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771110"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454855"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Web API를 사용하여 마이크로 서비스 에플리케이션 계층 구현
 
@@ -107,7 +107,7 @@ IoC 컨테이너에 형식을 등록할 때 가장 일반적인 패턴은 한 �
 
 .NET Core에서 DI를 사용하는 경우 어셈블리를 스캔하고 규칙에 따라 해당 형식을 자동으로 등록할 수 있도록 하는 것이 좋습니다. 이 기능은 현재 ASP.NET Core에서 사용할 수 없습니다. 하지만 [Scrutor](https://github.com/khellang/Scrutor) 라이브러리를 대신 사용할 수 있습니다. 이 방법은 IoC 컨테이너에 등록해야 하는 형식이 수십 개인 경우에 유용합니다.
 
-#### <a name="additional-resources"></a>추가 자료
+#### <a name="additional-resources"></a>추가 리소스
 
 - **Matthew King. Scrutor에 서비스 등록** \
   <https://www.mking.net/blog/registering-services-with-scrutor>
@@ -162,7 +162,7 @@ Autofac에는 [이름 규칙에 따라 어셈블리 및 등록 형식 검사](ht
 
 - IoC 컨테이너를 사용하는 모든 개체에서 공유되는 단일 인스턴스(ASP.NET Core IoC 컨테이너에 *singleton*(단일)으로 참조됨)
 
-#### <a name="additional-resources"></a>추가 자료
+#### <a name="additional-resources"></a>추가 리소스
 
 - **ASP.NET Core에서 종속성 주입 소개** \
   [https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection](/aspnet/core/fundamentals/dependency-injection)
@@ -392,16 +392,16 @@ public class CreateOrderCommandHandler
 
 - 집계의 작업 결과가 성공적이면 트랜잭션이 완료된 후 통합 이벤트를 발생시킵니다. (리포지토리와 같은 인프라 클래스를 통해 발생시킬 수도 있습니다.)
 
-#### <a name="additional-resources"></a>추가 자료
+#### <a name="additional-resources"></a>추가 리소스
 
 - **Mark Seemann. 경계에서 애플리케이션은 개체 지향적이지 않음** \
   <https://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/>
 
 - **명령 및 이벤트** \
-  <http://cqrs.nu/Faq/commands-and-events>
+  <https://cqrs.nu/Faq/commands-and-events>
 
 - **명령 처리기는 무엇을 수행하나요?** \
-  <http://cqrs.nu/Faq/command-handlers>
+  <https://cqrs.nu/Faq/command-handlers>
 
 - **Jimmy Bogard. 도메인 명령 패턴 - 처리기** \
   <https://jimmybogard.com/domain-command-patterns-handlers/>
@@ -793,7 +793,7 @@ public class CreateOrderCommandValidator : AbstractValidator<CreateOrderCommand>
 
 유사한 방식으로, 명령을 처리할 때 명령에 적용할 추가적인 측면이나 교차 편집 문제에 다른 동작은 구현할 수 있습니다.
 
-#### <a name="additional-resources"></a>추가 자료
+#### <a name="additional-resources"></a>추가 리소스
 
 ##### <a name="the-mediator-pattern"></a>중재자(mediator) 패턴
 

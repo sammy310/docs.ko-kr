@@ -8,18 +8,18 @@ helpviewer_keywords:
 - numeric formatting [C#]
 - String.Format method
 ms.assetid: 120ba537-4448-4c62-8676-7a8fdd98f496
-ms.openlocfilehash: 0f2b5bc54a0e9055d64a95dc229eaadf66687b43
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 2cba5e704787ae6368b2543c985babf2fde3b4dd
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66421960"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422750"
 ---
 # <a name="formatting-numeric-results-table-c-reference"></a>숫자 결과 형식 지정 표(C# 참조)
 
 다음 표에서는 숫자 결과 형식 지정에 대해 지원되는 형식 지정자를 보여 줍니다. 마지막 열의 형식 지정 결과는 “en-US” <xref:System.Globalization.CultureInfo>에 해당합니다.
 
-|형식 지정자|설명|예제|결과|  
+|형식 지정자|설명|예|결과|  
 |----------------------|-----------------|--------------|------------|  
 |C 또는 c|통화|`string s = $"{2.5:C}";`<br /><br /> `string s = $"{-2.5:C}";`|$2.50<br /><br /> ($2.50)|  
 |D 또는 d|Decimal|`string s = $"{25:D5}";`|00025|  
@@ -31,7 +31,7 @@ ms.locfileid: "66421960"
 |R 또는 r|라운드트립|`string s = $"{2.5:R}";`|2.5|  
 |X 또는 x|16진수|`string s = $"{250:X}";`<br /><br /> `string s = $"{0xffff:X}";`|FA<br /><br /> FFFF|  
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 형식 지정자를 사용하여 형식 문자열을 만듭니다. 형식 문자열은 `Axx` 형식입니다. 여기서 각 요소는 다음을 나타냅니다.
 
@@ -57,4 +57,4 @@ ms.locfileid: "66421960"
 - [형식 서식 지정](../../../standard/base-types/formatting-types.md)
 - [복합 형식 지정](../../../standard/base-types/composite-formatting.md)
 - [문자열 보간](../tokens/interpolated.md)
-- [string](string.md)
+- [string](../builtin-types/reference-types.md)

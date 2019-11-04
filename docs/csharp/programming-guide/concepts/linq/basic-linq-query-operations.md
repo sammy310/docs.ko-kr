@@ -17,17 +17,17 @@ helpviewer_keywords:
 - join clause [LINQ in C#]
 - group clause [LINQ in C#]
 ms.assetid: a7ea3421-1cf4-4df7-832a-aa22fe6379e9
-ms.openlocfilehash: 013e1960e6c5721e0bd7ce6998848ddce15a4e4d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 361101258caca763502f92d897866c75bc8d7da2
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924387"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418716"
 ---
 # <a name="basic-linq-query-operations-c"></a>기본 LINQ 쿼리 작업(C#)
 이 항목에서는 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리 식 및 쿼리에서 수행하는 일부 일반적인 작업을 간단히 소개합니다. 자세한 내용은 다음 항목을 참조하세요.  
   
- [LINQ 쿼리 식](../../linq-query-expressions/index.md)  
+ [LINQ 쿼리 식](../../../linq/index.md)  
   
  [표준 쿼리 연산자 개요(C#)](./standard-query-operators-overview.md)  
   
@@ -101,7 +101,7 @@ from order in Customer.Orders...
   
 ## <a name="see-also"></a>참고 항목
 
-- [LINQ 쿼리 식](../../linq-query-expressions/index.md)
+- [LINQ 쿼리 식](../../../linq/index.md)
 - [연습: C#에서 쿼리 작성](./walkthrough-writing-queries-linq.md)
 - [쿼리 키워드(LINQ)](../../../language-reference/keywords/query-keywords.md)
 - [익명 형식](../../classes-and-structs/anonymous-types.md)

@@ -8,15 +8,15 @@ helpviewer_keywords:
 - assembly folder registration [Windows Forms], Choose Toolbox Items dialog box
 - Choose Toolbox Items dialog box [Windows Forms], display control
 ms.assetid: 01ef6eba-d044-40f0-951d-78eff7ebd9a9
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 86ec8f9ae76f010ebbc3be393d8d257ba5cfc6b6
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: db4b3ac020e967a6a0c291103d825ac71cebda23
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834621"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458275"
 ---
 # <a name="how-to-display-a-control-in-the-choose-toolbox-items-dialog-box"></a>방법: 도구 상자 항목 선택 대화 상자에 컨트롤 표시
 
@@ -24,7 +24,7 @@ ms.locfileid: "71834621"
 
 도구 상자 항목 선택 대화 상자에 컨트롤을 표시 하려면 다음을 수행 합니다.
 
-- 컨트롤 어셈블리를 전역 어셈블리 캐시에 설치 합니다. 자세한 내용은 [방법: 글로벌 어셈블리 캐시에 어셈블리 설치](../../app-domains/install-assembly-into-gac.md)를 참조하세요.
+- 컨트롤 어셈블리를 전역 어셈블리 캐시에 설치 합니다. 자세한 내용은 [방법: 전역 어셈블리 캐시에 어셈블리 설치](../../app-domains/install-assembly-into-gac.md)를 참조하세요.
 
   또는
 
@@ -33,5 +33,5 @@ ms.locfileid: "71834621"
 ## <a name="see-also"></a>참조
 
 - [디자인 타임에 Windows Forms 컨트롤 개발](developing-windows-forms-controls-at-design-time.md)
-- [방법: 글로벌 어셈블리 캐시에 어셈블리 설치](../../app-domains/install-assembly-into-gac.md)
-- [연습: 사용자 지정 구성 요소를 사용 하 여 도구 상자 자동 채우기](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)
+- [방법: 전역 어셈블리 캐시에 어셈블리 설치](../../app-domains/install-assembly-into-gac.md)
+- [연습: 도구 상자에 자동으로 사용자 지정 구성 요소 채우기](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)

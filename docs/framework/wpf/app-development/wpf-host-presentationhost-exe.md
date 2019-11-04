@@ -5,19 +5,19 @@ helpviewer_keywords:
 - WPF Host application [WPF]
 - PresentationHost.exe
 ms.assetid: 3215bfa1-722c-4ac8-a7c5-bdd02d30afbd
-ms.openlocfilehash: ec8ec42c174d87834af5d4c651c1e8c8bde3b3e2
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 981e518a55f179c2fbf44534783c80fb230e4ecf
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72581696"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73421121"
 ---
 # <a name="wpf-host-presentationhostexe"></a>WPF 호스트(PresentationHost.exe)
 Windows Presentation Foundation (WPF) 호스트 (Presentationhost.exe)는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램을 호환 브라우저 (Microsoft Internet Explorer 6 이상 포함)에서 호스팅할 수 있도록 하는 응용 프로그램입니다. 기본적으로 Windows Presentation Foundation (WPF) 호스트는 브라우저에서 호스트 되는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 콘텐츠에 대 한 셸 및 MIME 처리기로 등록 됩니다 .이 처리기에는 다음이 포함 됩니다.  
   
 - 느슨하게 압축되지 않은 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 파일(.xaml).  
   
-- [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)](.xbap).  
+- XBAP (XAML 브라우저 응용 프로그램) (xbap).  
   
  이러한 형식의 파일에 대해서는 WPF (Windows Presentation Foundation) 호스트:  
   

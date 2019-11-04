@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - sealed keyword [C#]
 ms.assetid: 8e4ed5d3-10be-47db-9488-0da2008e6f3f
-ms.openlocfilehash: 7b9551fe892b0335fb445ab9edce4facca0badbe
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 84f838645bed6facc8b59ebf596d16373a9c6f86
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833343"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422371"
 ---
 # <a name="sealed-c-reference"></a>sealed(C# 참조)
 
@@ -76,6 +76,6 @@ sealed class B : A {}
 - [정적 클래스 및 정적 클래스 멤버](../../programming-guide/classes-and-structs/static-classes-and-static-class-members.md)
 - [추상/봉인된 클래스 및 클래스 멤버](../../programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)
 - [액세스 한정자](../../programming-guide/classes-and-structs/access-modifiers.md)
-- [한정자](modifiers.md)
+- [한정자](index.md)
 - [override](override.md)
 - [virtual](virtual.md)

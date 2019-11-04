@@ -4,20 +4,20 @@ description: Apache Spark 및 빅 데이터 시나리오에 대해 알아봅니�
 ms.date: 10/15/2019
 ms.topic: conceptual
 ms.custom: mvc
-ms.openlocfilehash: 187a37897c23809d91820bd79b476e775fb5b99b
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 653f355d09a045feabb3dee0f5737cb691cf2dc4
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583477"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458168"
 ---
 # <a name="what-is-apache-spark"></a>Apache Spark란?
 
-[Apache Spark](https://spark.apache.org/)는 메모리 내 처리를 지원하여 빅 데이터를 분석하는 애플리케이션의 성능을 향상시키는 오픈 소스 병렬 처리 프레임워크입니다. 빅 데이터 솔루션은 기존 데이터베이스에 비해 너무 크거나 복잡한 데이터를 처리하도록 설계되었습니다. Spark는 메모리에서 대량의 데이터를 처리하므로 디스크 기반 대체 방법보다 훨씬 빠릅니다. 
+[Apache Spark](https://spark.apache.org/)는 메모리 내 처리를 지원하여 빅 데이터를 분석하는 애플리케이션의 성능을 향상시키는 오픈 소스 병렬 처리 프레임워크입니다. 빅 데이터 솔루션은 기존 데이터베이스에 비해 너무 크거나 복잡한 데이터를 처리하도록 설계되었습니다. Spark는 메모리에서 대량의 데이터를 처리하므로 디스크 기반 대체 방법보다 훨씬 빠릅니다.
 
 ## <a name="common-big-data-scenarios"></a>일반적인 빅 데이터 시나리오
 
-대용량 데이터를 저장 및 처리하거나, 비정형 데이터를 변환하거나, 스트리밍 데이터를 처리해야 하는 경우 빅 데이터 아키텍처를 고려할 수 있습니다. Spark는 여러 빅 데이터 시나리오에 사용할 수 있는 범용 분산 처리 엔진입니다. 
+대용량 데이터를 저장 및 처리하거나, 비정형 데이터를 변환하거나, 스트리밍 데이터를 처리해야 하는 경우 빅 데이터 아키텍처를 고려할 수 있습니다. Spark는 여러 빅 데이터 시나리오에 사용할 수 있는 범용 분산 처리 엔진입니다.
 
 ### <a name="extract-transform-and-load-etl"></a>ETL(추출, 변환 및 로드)
 
@@ -33,7 +33,7 @@ ms.locfileid: "72583477"
 
 ### <a name="real-time-data-stream-processing"></a>실시간 데이터 스트림 처리
 
-스트리밍 또는 실시간 데이터는 이동 중인 데이터입니다. IoT 디바이스, 웹 로그, 클릭스트림의 원격 분석은 모두 데이터 스트리밍의 예입니다. 실시간 데이터를 처리하여 지리 공간적 분석, 원격 모니터링 및 변칙 검색과 같은 유용한 정보를 제공할 수 있습니다. 관계형 데이터와 마찬가지로 데이터를 출력 싱크로 이동하기 전에 스트리밍 데이터를 필터링, 집계 및 준비할 수 있습니다. Apache Spark는 [Spark Streaming](https://spark.apache.org/streaming/)을 통해 [실시간 데이터 스트림 처리](/azure/architecture/data-guide/big-data/real-time-processing)를 지원합니다. 
+스트리밍 또는 실시간 데이터는 이동 중인 데이터입니다. IoT 디바이스, 웹 로그, 클릭스트림의 원격 분석은 모두 데이터 스트리밍의 예입니다. 실시간 데이터를 처리하여 지리 공간적 분석, 원격 모니터링 및 변칙 검색과 같은 유용한 정보를 제공할 수 있습니다. 관계형 데이터와 마찬가지로 데이터를 출력 싱크로 이동하기 전에 스트리밍 데이터를 필터링, 집계 및 준비할 수 있습니다. Apache Spark는 [Spark Streaming](https://spark.apache.org/streaming/)을 통해 [실시간 데이터 스트림 처리](/azure/architecture/data-guide/big-data/real-time-processing)를 지원합니다.
 
 ### <a name="batch-processing"></a>일괄 처리
 

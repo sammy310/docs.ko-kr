@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ToString method, overriding in C#
 - inheritance [C#], overriding OnPaint and ToString
 ms.assetid: 8016db69-1f19-420c-8e17-98e8bebb7749
-ms.openlocfilehash: a2cf05dc6b288ffdaf1a20cf594231f48046a724
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 9dd567e537768ceb8b9f61ce58dccd443db38ec7
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596751"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419350"
 ---
 # <a name="how-to-override-the-tostring-method-c-programming-guide"></a>방법: ToString 메서드 재정의(C# 프로그래밍 가이드)
 
@@ -50,7 +50,7 @@ C#의 모든 클래스 또는 구조체는 <xref:System.Object> 클래스를 암
 - [C# 프로그래밍 가이드](../index.md)
 - [클래스 및 구조체](./index.md)
 - [문자열](../strings/index.md)
-- [string](../../language-reference/keywords/string.md)
+- [string](../../language-reference/builtin-types/reference-types.md)
 - [override](../../language-reference/keywords/override.md)
 - [virtual](../../language-reference/keywords/virtual.md)
 - [형식 서식 지정](../../../standard/base-types/formatting-types.md)

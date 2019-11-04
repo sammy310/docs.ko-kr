@@ -7,12 +7,12 @@ helpviewer_keywords:
 - queries [LINQ in C#], writing
 - writing LINQ queries
 ms.assetid: 2962a610-419a-4276-9ec8-4b7f2af0c081
-ms.openlocfilehash: 9b6592405d3047c8663b48137aa5b1f0eb14bdb4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f2135c6c3649ba2fc87e3b49770439688a58269b
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924102"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418063"
 ---
 # <a name="walkthrough-writing-queries-in-c-linq"></a>연습: C#에서 쿼리 작성(LINQ)
 이 연습에서는 LINQ 쿼리 식을 작성하는 데 사용되는 C # 언어 기능을 보여 줍니다.  
@@ -185,4 +185,4 @@ ms.locfileid: "69924102"
 ## <a name="see-also"></a>참고 항목
 
 - [LINQ(Language-Integrated Query)(C#)](./index.md)
-- [LINQ 쿼리 식](../../linq-query-expressions/index.md)
+- [LINQ 쿼리 식](../../../linq/index.md)

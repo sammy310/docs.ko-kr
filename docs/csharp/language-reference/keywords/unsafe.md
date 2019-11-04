@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - unsafe keyword [C#]
 ms.assetid: 7e818009-1c6e-4b9e-b769-3728a01586a0
-ms.openlocfilehash: bca12c1dd8c79a5ae17e4a9b7b75d3c7b302fb89
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: aa22eac9d4ae06753bbed1fd5733eddeddd81a46
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65875870"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422266"
 ---
 # <a name="unsafe-c-reference"></a>unsafe(C# 참조)
 
@@ -45,13 +45,13 @@ unsafe
 
 안전하지 않은 코드를 컴파일하려면 [`-unsafe`](../compiler-options/unsafe-compiler-option.md) 컴파일러 옵션을 지정해야 합니다. 안전하지 않은 코드는 공용 언어 런타임에서 확인할 수 없습니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 [!code-csharp[csrefKeywordsModifiers#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#22)]
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 
-자세한 내용은 [C# 언어 사양](../language-specification/index.md)의 [안전하지 않은 코드](~/_csharplang/spec/unsafe-code.md)를 참조하세요. 언어 사양은 C# 구문 및 사용법에 대 한 신뢰할 수 있는 소스 됩니다.
+자세한 내용은 [C# 언어 사양](/dotnet/csharp/language-reference/language-specification/introduction)의 [안전하지 않은 코드](~/_csharplang/spec/unsafe-code.md)를 참조하세요. 언어 사양은 C# 구문 및 사용법에 대 한 신뢰할 수 있는 소스 됩니다.
 
 ## <a name="see-also"></a>참고 항목
 

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - for keyword [C#]
 ms.assetid: 34041a40-2c87-467a-9ffb-a0417d8f67a8
-ms.openlocfilehash: 61315a04ca8d5a619a3dcaf43b15a309919d3c42
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: 5ebc478f8840173cacc0bc211061f3013379abd9
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70167878"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422786"
 ---
 # <a name="for-c-reference"></a>for(C# 참조)
 
@@ -93,7 +93,7 @@ i < 5
 i++
 ```
 
-## <a name="examples"></a>예제
+## <a name="examples"></a>예
 
 다음 예제에서는 *initializer* 섹션에서 외부 루프 변수에 값 할당, *initializer* 및 *iterator* 섹션에서 메서드 호출, *iterator* 섹션에서 두 변수의 값 변경과 같이 `for` 문 섹션의 여러 가지 덜 일반적인 사용법을 보여 줍니다. **Run**을 선택하여 예제 코드를 실행합니다. 그런 다음, 코드를 수정하고 다시 실행할 수 있습니다.
 
@@ -105,7 +105,7 @@ i++
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 
-자세한 내용은 [C# 언어 사양](../language-specification/index.md)의 [for 문](~/_csharplang/spec/statements.md#the-for-statement) 섹션을 참조하세요.
+자세한 내용은 [C# 언어 사양](/dotnet/csharp/language-reference/language-specification/introduction)의 [for 문](~/_csharplang/spec/statements.md#the-for-statement) 섹션을 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
 

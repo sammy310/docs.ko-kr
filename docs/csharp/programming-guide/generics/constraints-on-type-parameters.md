@@ -7,12 +7,12 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: 5c36639d76a6fbd4e36f39486369a55a56a6e3ea
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 62d0aacc3464969366cbdc8107adbc9a5c364b0c
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71396285"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73417795"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>형식 매개 변수에 대한 제약 조건(C# 프로그래밍 가이드)
 
@@ -33,7 +33,7 @@ ms.locfileid: "71396285"
 
 ## <a name="why-use-constraints"></a>제약 조건을 사용하는 이유
 
-형식 매개 변수 제약을 통해 허용되는 작업 및 메서드 호출 수를 제약 형식 및 해당 상속 계층 구조의 모든 형식에서 지원하는 작업 및 메서드 호출로 늘립니다. 제네릭 클래스 또는 메서드를 디자인할 때 제네릭 멤버에서 단순 할당 이외의 작업을 대해 수행하거나 <xref:System.Object?displayProperty=nameWithType>에서 지원하지 않는 메서드를 호출하는 경우 형식 매개 변수에 제약 조건을 적용해야 합니다. 예를 들어 기본 클래스 제약 조건은 이 형식의 개체나 이 형식에서 파생된 개체만 형식 인수로 사용된다고 컴파일러에 알립니다. 컴파일러에 이 보장이 있으면 해당 형식의 메서드가 제네릭 클래스에서 호출되도록 허용할 수 있습니다. 다음 코드 예제에서는 기본 클래스 제약 조건을 적용하여 `GenericList<T>` 클래스([제네릭 소개](introduction-to-generics.md)에 있음)에 추가할 수 있는 기능을 보여 줍니다.
+형식 매개 변수 제약을 통해 허용되는 작업 및 메서드 호출 수를 제약 형식 및 해당 상속 계층 구조의 모든 형식에서 지원하는 작업 및 메서드 호출로 늘립니다. 제네릭 클래스 또는 메서드를 디자인할 때 제네릭 멤버에서 단순 할당 이외의 작업을 대해 수행하거나 <xref:System.Object?displayProperty=nameWithType>에서 지원하지 않는 메서드를 호출하는 경우 형식 매개 변수에 제약 조건을 적용해야 합니다. 예를 들어 기본 클래스 제약 조건은 이 형식의 개체나 이 형식에서 파생된 개체만 형식 인수로 사용된다고 컴파일러에 알립니다. 컴파일러에 이 보장이 있으면 해당 형식의 메서드가 제네릭 클래스에서 호출되도록 허용할 수 있습니다. 다음 코드 예제에서는 기본 클래스 제약 조건을 적용하여 `GenericList<T>` 클래스([제네릭 소개](../../../standard/generics/index.md)에 있음)에 추가할 수 있는 기능을 보여 줍니다.
 
 [!code-csharp[using the class and struct constraints](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#9)]
 

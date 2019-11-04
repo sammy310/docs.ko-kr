@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: a83253e37d3afde9ed8266ec1195c9726f6462cc
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 8a2904d02b34058a87a77bbedbed3ccba4c80c58
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291599"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73421582"
 ---
 # <a name="tour-of-net"></a>.NET 둘러보기
 
@@ -37,7 +37,7 @@ Microsoft에서는 C#과 F#, VB(Visual Basic) 이 세 가지 .NET 언어를 적�
 
 ## <a name="automatic-memory-management"></a>자동 메모리 관리
 
-.NET에서는 [GC(가비지 수집)](garbagecollection/index.md)를 사용하여 프로그램의 메모리를 자동으로 관리합니다. GC는 메모리 관리를 지연하는 방식으로 작동하며 메모리를 즉각적으로 수집하기보다는 앱의 처리량을 우선합니다. .NET GC의 자세한 내용은 [GC(가비지 수집) 기본 사항](garbagecollection/fundamentals.md)을 확인하세요.
+.NET에서는 [GC(가비지 수집)](garbage-collection/index.md)를 사용하여 프로그램의 메모리를 자동으로 관리합니다. GC는 메모리 관리를 지연하는 방식으로 작동하며 메모리를 즉각적으로 수집하기보다는 앱의 처리량을 우선합니다. .NET GC의 자세한 내용은 [GC(가비지 수집) 기본 사항](garbage-collection/fundamentals.md)을 확인하세요.
 
 다음 두 줄에서는 모두 메모리를 할당합니다.
 

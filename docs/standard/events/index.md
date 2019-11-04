@@ -14,12 +14,12 @@ helpviewer_keywords:
 - events [.NET Core]
 - events [.NET Framework]
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
-ms.openlocfilehash: 67cba143957b50e8e8d7fa68e62b52775ca2f144
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a53a8123db64948503bd6d2da9a27fc414dc1e1f
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131628"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423534"
 ---
 # <a name="handling-and-raising-events"></a>이벤트 처리 및 발생
 
@@ -50,7 +50,7 @@ ms.locfileid: "73131628"
   
 대리자는 [멀티캐스트](xref:System.MulticastDelegate)로, 둘 이상의 이벤트 처리 메서드에 대한 참조를 포함할 수 있습니다. 자세한 내용은 <xref:System.Delegate> 참조 페이지를 참조하십시오. 대리자를 사용하면 유연하고 정밀하게 이벤트 처리를 제어할 수 있습니다. 대리자는 이벤트에 등록된 이벤트 처리기의 목록을 유지 관리하여 이벤트를 발생시키는 클래스의 이벤트 발송자 이벤트로서 작동합니다.  
   
-<xref:System.EventHandler> 및 <xref:System.EventHandler%601> 대리자가 작동하지 않는 시나리오의 경우, 대리자를 정의할 수 있습니다. 대리자를 정의해야 하는 시나리오(예: 제네릭을 인식할 수 없는 코드를 사용하여 작업해야 하는 경우)는 매우 드뭅니다. 선언에서 대리자는 C# [`delegate`](../../csharp/language-reference/keywords/delegate.md) 및 Visual Basic [`Delegate`](../../visual-basic/language-reference/statements/delegate-statement.md) 키워드를 사용하여 표시합니다. 다음 예제에서는 `ThresholdReachedEventHandler`라는 대리자를 선언하는 방법을 보여 줍니다.  
+<xref:System.EventHandler> 및 <xref:System.EventHandler%601> 대리자가 작동하지 않는 시나리오의 경우, 대리자를 정의할 수 있습니다. 대리자를 정의해야 하는 시나리오(예: 제네릭을 인식할 수 없는 코드를 사용하여 작업해야 하는 경우)는 매우 드뭅니다. 선언에서 대리자는 C# [`delegate`](../../csharp/language-reference/builtin-types/reference-types.md#the-delegate-type) 및 Visual Basic [`Delegate`](../../visual-basic/language-reference/statements/delegate-statement.md) 키워드를 사용하여 표시합니다. 다음 예제에서는 `ThresholdReachedEventHandler`라는 대리자를 선언하는 방법을 보여 줍니다.  
   
 [!code-csharp[EventsOverview#4](~/samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programtruncated.cs#4)]
 [!code-vb[EventsOverview#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#4)]  

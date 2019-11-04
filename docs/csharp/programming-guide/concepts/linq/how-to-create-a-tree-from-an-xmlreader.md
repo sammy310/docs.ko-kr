@@ -2,12 +2,12 @@
 title: '방법: XmlReader에서 트리 조각 만들기(C#)'
 ms.date: 07/20/2015
 ms.assetid: 60951c9c-7087-406c-b5bb-c60e58609b21
-ms.openlocfilehash: f632bbdad7d52ea37e2587516792dfd13178d702
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: a0cff596e0a6d50aefab3645a99beec3277d05ec
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69593880"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418319"
 ---
 # <a name="how-to-create-a-tree-from-an-xmlreader-c"></a>방법: XmlReader에서 트리 조각 만들기(C#)
 이 항목에서는 <xref:System.Xml.XmlReader>에서 XML 트리를 직접 만드는 방법을 보여 줍니다. <xref:System.Xml.Linq.XElement>에서 <xref:System.Xml.XmlReader>를 만들려면 요소 노드에 <xref:System.Xml.XmlReader>를 배치해야 합니다. <xref:System.Xml.XmlReader>는 주석과 처리 명령을 건너뛰지만 <xref:System.Xml.XmlReader>가 텍스트 노드에 배치되면 오류가 throw됩니다. 이러한 오류를 방지하려면 <xref:System.Xml.XmlReader>에서 XML 트리를 만들기 전에 항상 <xref:System.Xml.XmlReader>를 요소에 배치하세요.  
@@ -53,4 +53,4 @@ Console.WriteLine(e);
   
 ## <a name="see-also"></a>참고 항목
 
-- [XML 구문 분석(C#)](./parsing-xml.md)
+- [XML 구문 분석(C#)](how-to-parse-a-string.md)

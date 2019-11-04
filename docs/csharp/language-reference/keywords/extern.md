@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DllImport attribute
 - extern keyword [C#]
 ms.assetid: 9c3f02c4-51b8-4d80-9cb2-f2b6e1ae15c7
-ms.openlocfilehash: 387ef707166705c4df501bd6740d438683aa2d69
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 5f4a4b143578603a3285b1a3bc0b1efa11840e77
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203010"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422820"
 ---
 # <a name="extern-c-reference"></a>extern(C# 참조)
 
@@ -94,4 +94,4 @@ extern 키워드는 C++보다 C#에서 사용이 제한적입니다. C# 키워�
 - [C# 참조](../index.md)
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)
 - [C# 키워드](index.md)
-- [한정자](modifiers.md)
+- [한정자](index.md)

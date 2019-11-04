@@ -2,12 +2,12 @@
 title: 단락의 텍스트 검색(C#)
 ms.date: 07/20/2015
 ms.assetid: 127d635e-e559-408f-90c8-2bb621ca50ac
-ms.openlocfilehash: 986145fa62722a35d23831a3818b89e63529b85f
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: cedca9df84ee687a9e304cde0015b46d07956364
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253054"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423336"
 ---
 # <a name="retrieving-the-text-of-the-paragraphs-c"></a>단락의 텍스트 검색(C#)
 이 예제는 이전 예제 [단락 및 해당 스타일 검색(C#)](./retrieving-the-paragraphs-and-their-styles.md)을 기반으로 합니다. 이 새 예제에서는 각 단락의 텍스트를 문자열로 검색합니다.  
@@ -18,7 +18,7 @@ ms.locfileid: "70253054"
   
  물론 단락, 각 단락의 스타일 및 각 단락의 텍스트를 검색하는 기능이 포함된 단일 쿼리를 작성할 수도 있습니다. 그러나 복잡한 쿼리를 여러 쿼리로 나누면 생성되는 코드가 더욱 모듈화되고 유지 관리가 쉬워지기 때문에 유용한 경우가 많습니다. 또한 쿼리의 일부를 다시 사용해야 하는 경우 쿼리가 이런 방식으로 작성되면 리팩터링하기가 더 쉽습니다.  
   
- 서로 연결된 이러한 쿼리는 [자습서: 여러 쿼리 연결(C#)](./tutorial-chaining-queries-together.md) 항목에서 자세히 검사된 처리 모델을 사용합니다.  
+ 서로 연결된 이러한 쿼리는 [자습서: 여러 쿼리 연결(C#)](deferred-execution-and-lazy-evaluation-in-linq-to-xml.md) 항목에서 자세히 검사된 처리 모델을 사용합니다.  
   
 ## <a name="example"></a>예  
  이 예제에서는 WordprocessingML 문서를 처리하여 요소 노드, 스타일 이름 및 각 단락의 텍스트를 확인합니다. 이 예제는 이 자습서의 이전 예제를 기반으로 합니다. 새 쿼리는 아래에 있는 코드의 주석에서 호출됩니다.  
@@ -144,5 +144,5 @@ StyleName:Code >Hello World<
   
 ## <a name="see-also"></a>참고 항목
 
-- [자습서: WordprocessingML 문서에서 내용 조작(C#)](./tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [자습서: WordprocessingML 문서에서 내용 조작(C#)](shape-of-wordprocessingml-documents.md)
 - [LINQ to XML에서 지연 실행 및 지연 계산(C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
