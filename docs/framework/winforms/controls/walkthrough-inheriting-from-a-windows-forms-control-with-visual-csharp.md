@@ -8,19 +8,19 @@ helpviewer_keywords:
 - inheritance [Windows Forms], walkthroughs
 - custom controls [Windows Forms], inheritance
 ms.assetid: 09476da0-8d4c-4a4c-b969-649519dfb438
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 4a9a4b9bc15d2579837c3f4969a8d85293f10967
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: c54733a340b1855b3fc7b90ff2b5178fad8c5303
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015676"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460588"
 ---
-# <a name="walkthrough-inherit-from-a-windows-forms-control-with-c"></a>연습: C를 사용 하 여 Windows Forms 컨트롤에서 상속\#
+# <a name="walkthrough-inherit-from-a-windows-forms-control-with-c"></a>연습: C\#를 사용 하 여 Windows Forms 컨트롤에서 상속
 
-시각적 개체 C#를 사용 하면 *상속*을 통해 강력한 사용자 지정 컨트롤을 만들 수 있습니다. 상속을 통해 표준 Windows Forms 컨트롤의 모든 고유 기능을 유지하면서 사용자 지정 기능을 통합하는 컨트롤을 만들 수 있습니다. 이 연습에서는 `ValueButton`이라는 간단한 상속된 컨트롤을 만듭니다. 이 단추는 표준 Windows Forms <xref:System.Windows.Forms.Button> 컨트롤에서 기능을 상속 하 고 라는 `ButtonValue`사용자 지정 속성을 노출 합니다.
+시각적 개체 C#를 사용 하면 *상속*을 통해 강력한 사용자 지정 컨트롤을 만들 수 있습니다. 상속을 통해 표준 Windows Forms 컨트롤의 모든 고유 기능을 유지하면서 사용자 지정 기능을 통합하는 컨트롤을 만들 수 있습니다. 이 연습에서는 `ValueButton`이라는 간단한 상속된 컨트롤을 만듭니다. 이 단추는 표준 Windows Forms <xref:System.Windows.Forms.Button> 컨트롤에서 기능을 상속 하 고 `ButtonValue`이라는 사용자 지정 속성을 노출 합니다.
 
 ## <a name="create-the-project"></a>프로젝트 만들기
 
@@ -36,16 +36,16 @@ ms.locfileid: "70015676"
 
 3. **솔루션 탐색기**에서 **ValueButton.cs**를 마우스 오른쪽 단추로 클릭하고 **코드 보기**를 선택합니다.
 
-4. 문 줄을 `public partial class ValueButton`찾아이 컨트롤이 상속 <xref:System.Windows.Forms.UserControl> 되는 형식을로 <xref:System.Windows.Forms.Button>변경 합니다. `class` 이렇게 하면 상속 된 컨트롤이 <xref:System.Windows.Forms.Button> 컨트롤의 모든 기능을 상속할 수 있습니다.
+4. `class` statement 줄을 찾아 `public partial class ValueButton`하 고이 컨트롤이 <xref:System.Windows.Forms.UserControl>에서 상속 되는 형식을 <xref:System.Windows.Forms.Button>로 변경 합니다. 이렇게 하면 상속 된 컨트롤이 <xref:System.Windows.Forms.Button> 컨트롤의 모든 기능을 상속할 수 있습니다.
 
 5. **솔루션 탐색기**에서 **ValueButton.cs** 노드를 열어 디자이너에서 생성한 코드 파일인 **ValueButton.Designer.cs**를 표시합니다. **코드 편집기**에서 이 파일을 엽니다.
 
-6. 메서드를 `InitializeComponent` 찾아 <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A> 속성을 할당 하는 줄을 제거 합니다. 이 속성은 <xref:System.Windows.Forms.Button> 컨트롤에 없습니다.
+6. `InitializeComponent` 메서드를 찾고 <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A> 속성을 할당 하는 줄을 제거 합니다. 이 속성은 <xref:System.Windows.Forms.Button> 컨트롤에 없습니다.
 
 7. **파일** 메뉴에서 **모두 저장**을 선택하여 프로젝트를 저장합니다.
 
     > [!NOTE]
-    > 비주얼 디자이너는 더 이상 사용할 수 없습니다. 컨트롤은 <xref:System.Windows.Forms.Button> 자체적으로 그리기를 수행 하므로 디자이너에서 모양을 수정할 수 없습니다. 시각적 표시는 코드에서 수정 되지 않는 한, 상속 된 클래스 (즉, <xref:System.Windows.Forms.Button>)와 정확히 동일 합니다. UI 요소가 없는 구성 요소를 디자인 화면에 계속 추가할 수 있습니다.
+    > 비주얼 디자이너는 더 이상 사용할 수 없습니다. <xref:System.Windows.Forms.Button> 컨트롤은 자체적으로 그리기를 수행 하므로 디자이너에서 모양을 수정할 수 없습니다. 코드에서 수정 되지 않는 한, 시각적 표현은이 클래스에서 상속 하는 클래스 (즉, <xref:System.Windows.Forms.Button>)와 정확 하 게 동일 합니다. UI 요소가 없는 구성 요소를 디자인 화면에 계속 추가할 수 있습니다.
 
 ## <a name="add-a-property-to-your-inherited-control"></a>상속 된 컨트롤에 속성 추가
 
@@ -117,7 +117,7 @@ ms.locfileid: "70015676"
 
 5. **Buttonvalue** 속성을 **5**로 설정 합니다.
 
-6. **도구 상자**의 **모두 Windows Forms** 탭에서 <xref:System.Windows.Forms.Label> **레이블** 을 두 번 클릭 하 여 컨트롤을 폼에 추가 합니다.
+6. **도구 상자**의 **모두 Windows Forms** 탭에서 **레이블** 을 두 번 클릭 하 여 폼에 <xref:System.Windows.Forms.Label> 컨트롤을 추가 합니다.
 
 7. 폼 가운데에 레이블을 다시 배치합니다.
 
@@ -141,7 +141,7 @@ ms.locfileid: "70015676"
 
      숫자 '5'가 `label1`에 표시되며 상속된 컨트롤의 `ButtonValue` 속성이 `valueButton1_Click` 메서드를 통해 `label1`에 전달되었음을 보여 줍니다. 따라서 `ValueButton` 컨트롤은 표준 Windows Forms 단추의 모든 기능을 상속하지만 추가 사용자 지정 속성을 노출합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [방법: 도구 상자 항목 선택 대화 상자에 컨트롤 표시](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
-- [연습: 시각적 개체를 사용 하 여 복합 컨트롤 작성C#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
+- [연습: Visual C#에서 합성 컨트롤 작성](walkthrough-authoring-a-composite-control-with-visual-csharp.md)

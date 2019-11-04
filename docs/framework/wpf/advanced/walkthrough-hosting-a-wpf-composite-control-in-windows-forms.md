@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
-ms.openlocfilehash: 4a0b15ded5050833d4e87a30b977139834b624d4
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 39124b03b21fe1bc2a5dce3d8fb90ff372ab4853
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197939"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458928"
 ---
 # <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>연습: Windows Forms에서 WPF 복합 컨트롤 호스팅
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서는 애플리케이션을 만들기 위한 다양한 환경을 제공합니다. 그러나 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 코드에 상당한 투자가 있는 경우 기존 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 응용 프로그램을 처음부터 다시 작성 하는 대신 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]으로 확장 하는 것이 더 효과적일 수 있습니다. 일반적인 시나리오는 Windows Forms 응용 프로그램 내에서 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]으로 구현 된 하나 이상의 컨트롤을 포함 하려는 경우입니다. WPF 컨트롤을 사용자 지정 하는 방법에 대 한 자세한 내용은 [컨트롤 사용자 지정](../controls/control-customization.md)을 참조 하세요.  
@@ -87,7 +87,7 @@ ms.locfileid: "73197939"
 #### <a name="styling-the-ui-elements"></a>UI 요소 스타일 지정  
  데이터 입력 폼의 요소는 대부분 모양이 비슷합니다. 즉, 이러한 요소의 여러 속성 설정이 동일합니다. 이전 XAML은 각 요소의 특성을 별도로 설정 하는 대신 <xref:System.Windows.Style> 요소를 사용 하 여 요소의 클래스에 대 한 표준 속성 설정을 정의 합니다. 이 방법을 사용하면 컨트롤의 복잡도를 줄이고 하나의 스타일 특성을 통해 여러 요소의 모양을 변경할 수 있습니다.  
   
- <xref:System.Windows.Style> 요소는 <xref:System.Windows.Controls.Grid> 요소의 <xref:System.Windows.FrameworkElement.Resources%2A> 속성에 포함 되어 있으므로 컨트롤의 모든 요소에서 사용할 수 있습니다. 스타일의 이름을 지정 하는 경우 스타일 이름에 <xref:System.Windows.Style> 요소 집합을 추가 하 여 요소에 적용 합니다. 이름이 지정되지 않은 스타일은 요소의 기본 스타일이 됩니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 스타일에 대 한 자세한 내용은 [스타일 지정 및 템플릿](../controls/styling-and-templating.md)을 참조 하세요.  
+ <xref:System.Windows.Style> 요소는 <xref:System.Windows.Controls.Grid> 요소의 <xref:System.Windows.FrameworkElement.Resources%2A> 속성에 포함 되어 있으므로 컨트롤의 모든 요소에서 사용할 수 있습니다. 스타일의 이름을 지정 하는 경우 스타일 이름에 <xref:System.Windows.Style> 요소 집합을 추가 하 여 요소에 적용 합니다. 이름이 지정되지 않은 스타일은 요소의 기본 스타일이 됩니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 스타일에 대 한 자세한 내용은 [스타일 지정 및 템플릿](../../../desktop-wpf/fundamentals/styles-templates-overview.md)을 참조 하세요.  
   
  다음 XAML에서는 복합 컨트롤의 <xref:System.Windows.Style> 요소를 보여 줍니다. 스타일이 요소에 어떻게 적용되는지 확인하려면 앞의 XAML을 참조하세요. 예를 들어 마지막 <xref:System.Windows.Controls.TextBlock> 요소에는 `inlineText` 스타일이 있고 마지막 <xref:System.Windows.Controls.TextBox> 요소는 기본 스타일을 사용 합니다.  
   

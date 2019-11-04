@@ -6,17 +6,17 @@ helpviewer_keywords:
 - control patterns, Invoke
 - Invoke control pattern
 ms.assetid: e5b1e239-49f8-468e-bfec-1fba02ec9ac4
-ms.openlocfilehash: e9815e4c2c0740f213632681200e48c8e4786657
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 616bbab4d659cf00b1f730492e73ad6b847e3926
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71043388"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458009"
 ---
 # <a name="implementing-the-ui-automation-invoke-control-pattern"></a>UI 자동화 Invoke 컨트롤 패턴 구현
 
 > [!NOTE]
-> 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. 에 대 한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [최신 정보는 Windows Automation API: UI 자동화](https://go.microsoft.com/fwlink/?LinkID=156746).
+> 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](https://go.microsoft.com/fwlink/?LinkID=156746)를 참조하세요.
 
 이 항목에서는 이벤트 및 속성에 대한 정보를 포함하여 <xref:System.Windows.Automation.Provider.IInvokeProvider>를 구현하기 위한 지침 및 규칙을 제공합니다. 추가 참조에 대한 링크는 항목 끝에 나열되어 있습니다.
 
@@ -28,7 +28,7 @@ ms.locfileid: "71043388"
 
 Invoke 컨트롤 패턴을 구현할 때는 다음 지침 및 규칙에 유의하세요.
 
-- 동일한 동작이 다른 컨트롤 패턴 공급자를 통해 노출되지 않으면 컨트롤이 <xref:System.Windows.Automation.Provider.IInvokeProvider> 를 구현합니다. 예를 들어, 컨트롤의 <xref:System.Windows.Automation.InvokePattern.Invoke%2A> 메서드가 <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> 또는 <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> 메서드와 동일한 작업을 수행하는 경우 이 컨트롤은 <xref:System.Windows.Automation.Provider.IInvokeProvider>를 구현하지 않아야 합니다.
+- 동일한 동작이 다른 컨트롤 패턴 공급자를 통해 노출되지 않으면 컨트롤이 <xref:System.Windows.Automation.Provider.IInvokeProvider>를 구현합니다. 예를 들어, 컨트롤의 <xref:System.Windows.Automation.InvokePattern.Invoke%2A> 메서드가 <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> 또는 <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> 메서드와 동일한 작업을 수행하는 경우 이 컨트롤은 <xref:System.Windows.Automation.Provider.IInvokeProvider>를 구현하지 않아야 합니다.
 
 - 일반적으로 컨트롤은 미리 정의된 키보드 바로 가기 또는 몇 가지 키 입력의 조합을 클릭하거나, 두 번 클릭하거나, ENTER 키를 눌러 호출합니다.
 
@@ -47,11 +47,11 @@ Invoke 컨트롤 패턴을 구현할 때는 다음 지침 및 규칙에 유의�
 > [!NOTE]
 > 이 구현은 컨트롤을 마우스 관련 부작용의 결과로만 호출할 수 있는 경우 접근성 문제로 간주됩니다.
 
-- 컨트롤을 호출하는 것은 항목을 선택하는 것과 다릅니다. 그러나 컨트롤에 따라, 컨트롤 호출로 인해 항목이 잘못된 방식으로 선택될 수 있습니다. 예를 들어, 내 문서 폴더에서 [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] 문서 목록 항목을 호출하면 항목이 선택되고 문서가 열리는 두 가지 작업이 수행됩니다.
+- 컨트롤을 호출하는 것은 항목을 선택하는 것과 다릅니다. 그러나 컨트롤에 따라, 컨트롤 호출로 인해 항목이 잘못된 방식으로 선택될 수 있습니다. 예를 들어 내 문서 폴더에서 Microsoft Word 문서 목록 항목을 호출 하면 항목이 선택 되 고 문서가 열립니다.
 
 - 호출하는 즉시 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리에서 요소가 사라질 수 있습니다. 그 결과, 이벤트 콜백에서 제공하는 요소로부터 정보를 요청하는 작업에 실패할 수 있습니다. 이러한 문제의 해결 방법으로 캐시된 정보를 프리페치하는 것이 좋습니다.
 
-- 컨트롤은 여러 개의 컨트롤 패턴을 구현할 수 있습니다. 예를 들어, [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] 도구 모음의 채우기 색 컨트롤은 <xref:System.Windows.Automation.InvokePattern> 및 <xref:System.Windows.Automation.ExpandCollapsePattern> 컨트롤 패턴 둘 다 구현합니다. <xref:System.Windows.Automation.ExpandCollapsePattern> 은 메뉴를 노출하고 <xref:System.Windows.Automation.InvokePattern> 은 선택된 색으로 활성 상태의 선택 항목을 채웁니다.
+- 컨트롤은 여러 개의 컨트롤 패턴을 구현할 수 있습니다. 예를 들어 Microsoft Excel 도구 모음의 채우기 색 컨트롤은 <xref:System.Windows.Automation.InvokePattern> 및 <xref:System.Windows.Automation.ExpandCollapsePattern> 컨트롤 패턴을 모두 구현 합니다. <xref:System.Windows.Automation.ExpandCollapsePattern> 은 메뉴를 노출하고 <xref:System.Windows.Automation.InvokePattern> 은 선택된 색으로 활성 상태의 선택 항목을 채웁니다.
 
 <a name="Required_Members_for_the_IValueProvider_Interface"></a>
 
@@ -59,9 +59,9 @@ Invoke 컨트롤 패턴을 구현할 때는 다음 지침 및 규칙에 유의�
 
 <xref:System.Windows.Automation.Provider.IInvokeProvider>를 구현하려면 다음과 같은 속성 및 메서드가 필요합니다.
 
-|필요한 멤버|멤버 형식|참고|
+|필요한 멤버|멤버 형식|노트|
 |----------------------|-----------------|-----------|
-|<xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A>|메서드|<xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> 는 비동기 호출이며 차단하지 않고 즉시 반환해야 합니다.<br /><br /> 이 동작은 호출될 때 직접 또는 간접적으로 모달 대화 상자를 시작하는 컨트롤에 특히 중요합니다. 이벤트를 발생시킨 모든 UI 자동화 클라이언트는 모달 대화 상자가 닫힐 때까지 차단된 상태로 유지됩니다.|
+|<xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A>|메서드(method)|<xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A>는 비동기 호출이며 차단하지 않고 즉시 반환해야 합니다.<br /><br /> 이 동작은 호출될 때 직접 또는 간접적으로 모달 대화 상자를 시작하는 컨트롤에 특히 중요합니다. 이벤트를 발생시킨 모든 UI 자동화 클라이언트는 모달 대화 상자가 닫힐 때까지 차단된 상태로 유지됩니다.|
 
 <a name="Exceptions"></a>
 
@@ -73,7 +73,7 @@ Invoke 컨트롤 패턴을 구현할 때는 다음 지침 및 규칙에 유의�
 |--------------------|---------------|
 |<xref:System.Windows.Automation.ElementNotEnabledException>|컨트롤이 사용 설정되지 않은 경우.|
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [UI 자동화 컨트롤 패턴 개요](ui-automation-control-patterns-overview.md)
 - [UI 자동화 공급자의 컨트롤 패턴 지원](support-control-patterns-in-a-ui-automation-provider.md)

@@ -1,5 +1,5 @@
 ---
-title: '방법: 복합 컨트롤 작성'
+title: '방법: 합성 컨트롤 제작'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UserControl class [Windows Forms], creating composite controls
@@ -7,17 +7,17 @@ helpviewer_keywords:
 - user controls [Windows Forms], inheriting from
 - composite controls [Windows Forms], creating
 ms.assetid: 79c9cf05-5ab6-4a18-886d-88a64748b098
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 08cb07ceebf08b3096415f9b7370e2d955152cb6
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: 42ea424507b89576df8099fd4849dd2665135a55
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015929"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459429"
 ---
-# <a name="how-to-author-composite-controls"></a>방법: 복합 컨트롤 작성
+# <a name="how-to-author-composite-controls"></a>방법: 합성 컨트롤 제작
 
 여러 가지 방법으로 복합 컨트롤을 사용할 수 있습니다. Windows 데스크톱 애플리케이션 프로젝트의 일부로 작성하고 프로젝트의 양식에서만 사용할 수 있습니다. 또는 Windows 컨트롤 라이브러리 프로젝트에서 작성하고 프로젝트를 어셈블리로 컴파일하고 다른 프로젝트에서 컨트롤을 사용할 수 있습니다. 이를 상속 하거나 시각적 상속을 사용 하 여 특별 한 목적으로 신속 하 게 사용자 지정할 수 있습니다.
 
@@ -57,7 +57,7 @@ ms.locfileid: "70015929"
 
 ## <a name="to-inherit-from-a-composite-control-in-a-control-class-library"></a>컨트롤 클래스 라이브러리의 복합 컨트롤에서 상속하려면
 
-1. **파일** 메뉴에서 **추가**를 가리키고 **새 프로젝트**를 선택하여 새 **Windows 응용 프로그램** 프로젝트를 솔루션에 추가합니다.
+1. **파일** 메뉴에서 **추가**를 가리키고 **새 프로젝트**를 선택하여 새 **Windows 애플리케이션** 프로젝트를 솔루션에 추가합니다.
 
 2. **솔루션 탐색기**에서 새 프로젝트의 **References** 폴더를 마우스 오른쪽 단추로 클릭하고 **참조 추가**를 선택하여 **참조 추가** 대화 상자를 엽니다.
 
@@ -77,10 +77,10 @@ ms.locfileid: "70015929"
 
      DLL의 복합 컨트롤에서 상속된 구성 요소 컨트롤을 볼 수 있으며 **한정자** 속성이 **공용**인 컨트롤의 속성을 변경할 수 있습니다. **한정자** 속성이 **개인**인 컨트롤의 속성을 변경할 수 없습니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
-- [연습: 복합 컨트롤 작성](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
+- [연습: 합성 컨트롤 제작](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
 - [연습: Windows Forms 컨트롤에서 상속](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
 - [컨트롤 형식 권장 사항](control-type-recommendations.md)
-- [방법: Windows Forms에 대 한 Author 컨트롤](how-to-author-controls-for-windows-forms.md)
+- [방법: Windows Forms 컨트롤 제작](how-to-author-controls-for-windows-forms.md)
 - [사용자 지정 컨트롤의 종류](varieties-of-custom-controls.md)

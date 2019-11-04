@@ -2,16 +2,15 @@
 title: 프레임워크 라이브러리
 description: 라이브러리가 많은 일반 및 앱별 형식, 알고리즘 및 유틸리티 기능에 대한 구현을 제공하는 방법을 알아봅니다.
 author: richlander
-ms.author: ronpet
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 7b77b6c1-8367-4602-bff3-91e4c05ac643
-ms.openlocfilehash: 494ac194fe8dc9554c6e0d1d87ba2ed613d1d16b
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 9c0b5a07277de6e87e2692ebb7c4f73c03702801
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663222"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424966"
 ---
 # <a name="framework-libraries"></a>프레임워크 라이브러리
 
@@ -27,7 +26,7 @@ BCL은 가장 기본적인 형식과 유틸리티 기능을 제공하며 다른 
 
 .NET에는 모든 프로그램에서 사용되는(다양한 수준으로) 기본 형식 집합이 있습니다. 이러한 형식은 숫자, 문자열, 바이트, 임의 개체 등의 데이터를 포함합니다. C# 언어에는 이 형식의 키워드가 있습니다. 이러한 형식의 샘플 집합 및 일치하는 C# 키워드가 아래에 나와 있습니다.
 
-* <xref:System.Object?displayProperty=nameWithType>([object](../csharp/language-reference/keywords/object.md)) - CLR 형식 시스템의 궁극적인 기본 클래스입니다. 형식 계층 구조의 루트입니다.
+* <xref:System.Object?displayProperty=nameWithType>([object](../csharp/language-reference/builtin-types/reference-types.md#the-object-type)) - CLR 형식 시스템의 궁극적인 기본 클래스입니다. 형식 계층 구조의 루트입니다.
 * <xref:System.Int16?displayProperty=nameWithType>([short](../csharp/language-reference/builtin-types/integral-numeric-types.md)) - 16비트 부호 있는 정수 형식입니다. 부호 없는 <xref:System.UInt16>도 있습니다.
 * <xref:System.Int32?displayProperty=nameWithType>([int](../csharp/language-reference/builtin-types/integral-numeric-types.md)) - 32비트 부호 있는 정수 형식입니다. 부호 없는 [UInt32](../csharp/language-reference/builtin-types/integral-numeric-types.md)도 있습니다.
 * <xref:System.Single?displayProperty=nameWithType>([float](../csharp/language-reference/builtin-types/floating-point-numeric-types.md)) - 32비트 부동 소수점 형식입니다.
@@ -35,7 +34,7 @@ BCL은 가장 기본적인 형식과 유틸리티 기능을 제공하며 다른 
 * <xref:System.Byte?displayProperty=nameWithType>([byte](../csharp/language-reference/builtin-types/integral-numeric-types.md)) - 1바이트의 메모리를 나타내는 부호 없는 8비트 정수입니다.
 * <xref:System.Boolean?displayProperty=nameWithType>([bool](../csharp/language-reference/keywords/bool.md)) - `true` 또는 `false`를 나타내는 부울 형식입니다.
 * <xref:System.Char?displayProperty=nameWithType>([char](../csharp/language-reference/keywords/char.md)) - 유니코드 문자를 나타내는 16비트 숫자 형식입니다.
-* <xref:System.String?displayProperty=nameWithType>([string](../csharp/language-reference/keywords/string.md)) - 일련의 문자를 나타냅니다. `char[]`와 다르지만 `string`의 각 개별 `char`를 인덱싱할 수 있습니다.
+* <xref:System.String?displayProperty=nameWithType>([string](../csharp/language-reference/builtin-types/reference-types.md#the-string-type)) - 일련의 문자를 나타냅니다. `char[]`와 다르지만 `string`의 각 개별 `char`를 인덱싱할 수 있습니다.
 
 ## <a name="data-structures"></a>데이터 구조
 

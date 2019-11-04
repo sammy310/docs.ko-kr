@@ -7,29 +7,29 @@ helpviewer_keywords:
 - controls [WPF], ListView
 - ListView control [WPF]
 ms.assetid: fc3784a7-c9e8-4e2b-909a-7af37cef9b43
-ms.openlocfilehash: c90849c27f7bbef2338ef255350a7dccd40c99e3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 45f5b054b946e746e490c64b2b051bec80fc6b17
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61932589"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459331"
 ---
 # <a name="listview"></a>ListView
-<xref:System.Windows.Controls.ListView> 컨트롤은 데이터 항목 집합을 다른 레이아웃 보기에 표시 하기 위한 인프라를 제공 합니다.  
+<xref:System.Windows.Controls.ListView> 컨트롤은 여러 레이아웃 또는 뷰에서 데이터 항목 집합을 표시 하는 인프라를 제공 합니다.  
   
- 다음 그림에 표시 된 <xref:System.Windows.Controls.ListView>합니다.  
+ 다음 그림에서는 <xref:System.Windows.Controls.ListView>을 보여 줍니다.  
   
- ![GridView 출력이 있는 ListView를 보여주는 스크린샷.](./media/gridview-overview/listview-gridview-output.jpg)  
+ ![GridView를 출력 하는 ListView를 보여 주는 스크린샷](./media/gridview-overview/listview-gridview-output.jpg)  
   
-## <a name="in-this-section"></a>섹션 내용  
+## <a name="in-this-section"></a>단원 내용  
  [개요](listview-overviews.md)  
  [방법 항목](listview-how-to-topics.md)  
   
-## <a name="reference"></a>참조  
+## <a name="reference"></a>참고  
  <xref:System.Windows.Controls.ListView>  
   <xref:System.Windows.Controls.ListViewItem>  
   <xref:System.Windows.Controls.GridView>  
   
 ## <a name="related-sections"></a>관련 단원  
- [데이터 바인딩 개요](../data/data-binding-overview.md)  
+ [데이터 바인딩 개요](../../../desktop-wpf/data/data-binding-overview.md)  
   [데이터 템플릿 개요](../data/data-templating-overview.md)

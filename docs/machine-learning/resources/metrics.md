@@ -3,12 +3,12 @@ title: ML.NET 메트릭
 description: ML.NET 모델의 성능을 평가하기 위해 사용한 메트릭 이해
 ms.date: 04/29/2019
 author: natke
-ms.openlocfilehash: 45176902a195906e7b5cffd24fc9da839406ad9d
-ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
+ms.openlocfilehash: 362f2f382d050ff9ae246af2dffe3e15d22452eb
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67410525"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460738"
 ---
 # <a name="model-evaluation-metrics-in-mlnet"></a>ML.NET에서 모델 평가 메트릭
 
@@ -47,7 +47,7 @@ Macro-정확도는 이 예에서 작은 팀에 가중치를 초과 부과합니�
 
 다중 클래스 분류 메트릭에 대한 더 자세한 내용은 다음 문서를 참조하세요.
 
-- [정밀도, 재현율 및 F 점수의 Micro-및 Macro-평균](http://rushdishams.blogspot.com/2011/08/micro-and-macro-average-of-precision.html)
+- [정밀도, 재현율 및 F 점수의 Micro-및 Macro-평균](https://rushdishams.blogspot.com/2011/08/micro-and-macro-average-of-precision.html)
 - [불균형 데이터 세트를 사용한 다중 클래스 분류](https://towardsdatascience.com/machine-learning-multiclass-classification-with-imbalanced-data-set-29f6a177c1a)
 
 ## <a name="metrics-for-regression"></a>회귀용 메트릭

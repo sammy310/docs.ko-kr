@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WPF applications [WPF], deployment
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
-ms.openlocfilehash: ff6e76838ef2e3826c5b3dbeb44c748682902591
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
-ms.translationtype: HT
+ms.openlocfilehash: a1441f0cc3a7ac715a173be12e68c055ce36ff00
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73421068"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460139"
 ---
 # <a name="deploying-a-wpf-application-wpf"></a>WPF 애플리케이션 배포(WPF)
 Windows Presentation Foundation (WPF) 응용 프로그램을 빌드한 후 배포 해야 합니다. Windows 및 .NET Framework에는 몇 가지 배포 기술이 포함 되어 있습니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 애플리케이션을 배포하는 데 사용되는 배포 기술은 애플리케이션 종류에 따라 달라집니다. 이 항목에서는 각 배포 기술과 해당 기술이 각 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 애플리케이션 종류의 배포 요구 사항과 함께 사용되는 방법에 대해 간략하게 설명합니다.  
@@ -83,7 +83,7 @@ Windows Presentation Foundation (WPF) 응용 프로그램을 빌드한 후 배�
   
  마크업 전용 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 페이지는 XCopy 또는 Windows Installer를 사용 하 여 로컬 파일 시스템에 설치할 수 있습니다. 이러한 페이지는 Internet Explorer 또는 Windows 탐색기를 사용 하 여 볼 수 있습니다.  
   
- XAML에 대한 자세한 내용은 [XAML 개요(WPF)](../advanced/xaml-overview-wpf.md)를 참조하세요.  
+ XAML에 대한 자세한 내용은 [XAML 개요(WPF)](../../../desktop-wpf/fundamentals/xaml.md)를 참조하세요.  
   
 <a name="Deploying_XAML_Browser_Applications"></a>   
 ### <a name="deploying-xaml-browser-applications"></a>XAML 브라우저 애플리케이션 배포  

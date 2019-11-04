@@ -4,17 +4,18 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 4e4b5822306fa8f4e6b4437f4a1bef92b53a86b9
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 90e57c3d332155d42a38b8a01aba7dbb2c812d62
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046140"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458029"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>대형 응답성 .NET Framework 응용 프로그램 작성
+
 이 문서에서는 규모가 큰 .NET Framework 앱이나 파일 또는 데이터베이스와 같이 많은 양의 데이터를 처리하는 앱의 성능을 향상시키기 위한 팁을 제공합니다. 이러한 팁은 C# 및 Visual Basic 컴파일러를 관리 코드로 다시 작성하면서 수집되었으며, C# 컴파일러의 실제 몇 가지 예를 포함하고 있습니다. 
   
- .NET Framework는 앱을 빌드하는 생산성이 뛰어납니다. 강력하고 안전한 언어와 풍부한 라이브러리 컬렉션이 앱 빌드의 생산성을 높여 줍니다. 그러나 우수한 생산성에는 책임이 따르기 마련입니다. .NET Framework의 모든 기능을 사용하되, 필요한 경우 코드의 성능을 조정할 준비가 되어 있어야 합니다. 
+.NET Framework는 앱을 빌드하는 생산성이 뛰어납니다. 강력하고 안전한 언어와 풍부한 라이브러리 컬렉션이 앱 빌드의 생산성을 높여 줍니다. 그러나 우수한 생산성에는 책임이 따르기 마련입니다. .NET Framework의 모든 기능을 사용하되, 필요한 경우 코드의 성능을 조정할 준비가 되어 있어야 합니다. 
   
 ## <a name="why-the-new-compiler-performance-applies-to-your-app"></a>새 컴파일러 성능을 앱에 적용하는 이유  
  .NET 컴파일러 플랫폼("Roslyn") 팀은 Visual Studio에서 코드를 모델링 및 분석하고, 도구를 빌드하며, 보다 풍부한 코드 인식 환경을 가능하게 해주는 새로운 API를 제공하기 위해 C# 및 Visual Basic 컴파일러를 관리 코드로 다시 작성했습니다. 컴파일러를 다시 작성하고 새 컴파일러에서 Visual Studio 환경을 빌드한 결과, 규모가 큰 모든 .NET Framework 앱 또는 많은 데이터를 처리하는 모든 앱에 적용 가능한 유용한 성능 분석 정보가 드러났습니다. C# 컴파일러의 분석 정보 및 예를 활용하기 위해 컴파일러에 대해 알 필요는 없습니다. 
@@ -28,20 +29,20 @@ ms.locfileid: "71046140"
 ## <a name="just-the-facts"></a>팩트  
  성능을 조정하고 응답성 있는 .NET Framework 앱을 만들 때는 다음 팩트를 고려하세요. 
   
-### <a name="fact-1-dont-prematurely-optimize"></a>팩트 1: 중간에 최적화 안 함  
+### <a name="fact-1-dont-prematurely-optimize"></a>팩트 1: 너무 이르게 최적화하지 말 것  
  필요 이상으로 복잡한 코드를 작성하면 유지 관리, 디버깅 및 개선 비용이 발생합니다. 숙련된 프로그래머는 코딩 문제를 해결하는 방법에 대한 직관적인 감각을 지니고 있으며 보다 효율적인 코드를 작성합니다. 그러나 때로는 코드를 너무 이르게 최적화합니다. 예를 들어, 단순 배열이면 충분한 경우에 해시 테이블을 사용하거나 단순히 값을 다시 계산하는 대신 메모리를 누수시킬 수 있는 복잡한 캐싱을 사용합니다. 숙련된 프로그래머라 하더라도 성능에 대해 테스트하고 문제를 발견할 경우 코드를 분석해야 합니다. 
   
-### <a name="fact-2-if-youre-not-measuring-youre-guessing"></a>팩트 2: 측정 하지 않는 경우 추측 하 게 됩니다.  
+### <a name="fact-2-if-youre-not-measuring-youre-guessing"></a>팩트 2: 측정하는 것이 아니라면 추측하는 것일 뿐임  
  프로필과 측정값은 거짓말하지 않습니다. 프로필은 CPU가 완전히 로드되었는지 여부나 사용자가 디스크 I/O에서 차단되었는지 여부를 보여 줍니다. 프로필을 보면 할당하는 메모리의 종류와 양을 알 수 있을 뿐만 아니라 CPU가 GC([가비지 수집](../../standard/garbage-collection/index.md))에 많은 시간을 소비하고 있는지 여부도 알 수 있습니다. 
   
  앱의 핵심 사용자 환경 또는 시나리오에 대한 성능 목표를 설정하고 성능을 측정하기 위한 테스트를 작성해야 합니다. 과학적인 방법을 적용하여 실패 테스트를 조사합니다. 즉, 프로필을 사용하여 사용자를 안내하고, 문제가 무엇일지 가설을 세우고, 실험이나 코드 변경으로 가설을 테스트합니다. 정기 테스트로 시간의 흐름에 따른 기준 성능 측정값을 설정하여 성능 저하를 일으키는 변경 내용을 구분할 수 있습니다. 엄격한 방식으로 성능 작업에 접근하면 불필요한 코드 업데이트로 시간을 낭비하는 일이 없습니다. 
   
-### <a name="fact-3-good-tools-make-all-the-difference"></a>팩트 3: 모든 차이점을 지 원하는 좋은 도구  
+### <a name="fact-3-good-tools-make-all-the-difference"></a>팩트 3: 좋은 도구가 모든 차별화를 이뤄냄  
  좋은 도구를 사용하면 가장 큰 성능 문제(CPU, 메모리 또는 디스크)에 신속하게 파고들어 해당 병목 현상을 일으키는 코드를 찾을 수 있습니다. Microsoft는 [Visual Studio Profiler](/visualstudio/profiling/beginners-guide-to-performance-profiling) 및 [perfview](https://www.microsoft.com/download/details.aspx?id=28567)와 같은 다양 한 성능 도구를 제공 합니다. 
   
  PerfView는 디스크 I/O, GC 이벤트 및 메모리와 같은 깊이 있는 문제에 집중하는 데 도움을 주는 놀랄 만큼 강력한 도구로서 무료입니다. 성능 관련 ETW([Windows용 이벤트 추적](../wcf/samples/etw-tracing.md)) 이벤트를 캡처하여 앱, 프로세스, 스택 및 스레드 단위 정보를 쉽게 볼 수 있습니다. PerfView는 앱에서 할당하는 메모리의 양과 종류뿐만 아니라 함수 또는 호출 스택으로 인해 메모리가 할당되는 양이 어느 정도인지를 보여 줍니다. 자세한 내용은 도구에 포함된 다양한 도움말 항목, 데모 및 비디오(예: Channel 9의 [PerfView 자습서](https://channel9.msdn.com/Series/PerfView-Tutorial))를 참조하세요. 
   
-### <a name="fact-4-its-all-about-allocations"></a>팩트 4: 할당에 대 한 모든 것입니다.  
+### <a name="fact-4-its-all-about-allocations"></a>팩트 4: 결국은 모두 할당에 관련된 문제임  
  응답성 있는 .NET Framework 앱을 빌드하는 것은 거품 정렬 대신 빠른 정렬을 사용하는 등 알고리즘에 대한 문제라고 생각할 수 있지만 그렇지 않습니다. 응답성 있는 앱을 빌드하는 데 있어서 가장 큰 요인은 메모리를 할당하는 것이며, 특히 앱의 규모가 매우 크거나 앱이 많은 양의 데이터를 처리하는 경우에 그렇습니다. 
   
  새 컴파일러 API를 사용하여 응답성 있는 IDE 환경을 빌드하는 작업의 거의 전부는 할당을 피하고 캐싱 전략을 관리하는 것에 관련되었습니다. PerfView 추적은 새 C# 및 Visual Basic 컴파일러의 성능이 거의 CPU 바인딩이 아니라는 사실을 보여 줍니다. 이러한 새 컴파일러는 수십만 또는 수백만 개의 코드 줄을 읽고 메타데이터를 읽거나 생성된 코드를 내보낼 때 I/O 바인딩일 수 있습니다. UI 스레드 지연은 거의 전부 가비지 컬렉션 때문입니다. .NET Framework GC는 성능을 위해 많이 조정되었고 앱 코드가 실행되는 동안 해당 작업의 많은 부분을 동시에 수행합니다. 그러나 한 번의 할당으로 많은 비용이 드는 [gen2](../../standard/garbage-collection/fundamentals.md) 컬렉션이 트리거되어 모든 스레드가 중지될 수 있습니다. 
@@ -195,9 +196,9 @@ private bool TrimmedStringStartsWith(string text, int start, string prefix) {
 // etc... 
 ```  
   
- `WriteFormattedDocComment()`의 첫 번째 버전에서는 배열, 여러 부분 문자열 및 잘라낸 부분 문자열과 함께 빈 `params` 배열을 할당했습니다. "///"도 확인 합니다. 수정된 코드에서는 인덱싱만 사용하며 아무것도 할당하지 않습니다. 공백이 아닌 첫 번째 문자를 찾은 다음 문자 단위로 문자를 검사 하 여 문자열이 "///"로 시작 하는지 확인 합니다. 새 코드에서는 <xref:System.String.TrimStart%2A> 대신 `IndexOfFirstNonWhiteSpaceChar` 를 사용 하 여 공백이 아닌 문자가 발생 하는 첫 번째 인덱스 (지정 된 시작 인덱스 뒤의)를 반환 합니다. 해결 방법이 완벽하지는 않지만 완벽한 솔루션을 위해 유사한 해결 방법을 적용하는 방법을 확인할 수 있습니다. 코드 전체에 이 접근 방식을 적용하여 `WriteFormattedDocComment()`에서 모든 할당을 제거할 수 있습니다. 
+ `WriteFormattedDocComment()`의 첫 번째 버전에서는 배열, 여러 부분 문자열 및 잘라낸 부분 문자열과 함께 빈 `params` 배열을 할당했습니다. "///"도 확인 합니다. 수정된 코드에서는 인덱싱만 사용하며 아무것도 할당하지 않습니다. 공백이 아닌 첫 번째 문자를 찾은 다음 문자 단위로 문자를 검사 하 여 문자열이 "///"로 시작 하는지 확인 합니다. 새 코드는 <xref:System.String.TrimStart%2A> 대신 `IndexOfFirstNonWhiteSpaceChar`를 사용 하 여 공백이 아닌 문자가 발생 하는 첫 번째 인덱스 (지정 된 시작 인덱스 이후)를 반환 합니다. 해결 방법이 완벽하지는 않지만 완벽한 솔루션을 위해 유사한 해결 방법을 적용하는 방법을 확인할 수 있습니다. 코드 전체에 이 접근 방식을 적용하여 `WriteFormattedDocComment()`에서 모든 할당을 제거할 수 있습니다. 
   
- **예 4: StringBuilder**  
+ **예제 4: StringBuilder**  
   
  이 예제에서는 <xref:System.Text.StringBuilder> 개체를 사용합니다. 다음 함수에서는 제네릭 형식의 전체 형식 이름을 생성합니다.  
   
@@ -278,7 +279,7 @@ private static string GetStringAndReleaseBuilder(StringBuilder sb)
 ### <a name="linq-and-lambdas"></a>LINQ 및 람다  
 LINQ (언어 통합 쿼리)는 람다 식과 함께 생산성 기능의 예입니다. 그러나 시간이 지남에 따라 성능에 상당한 영향을 줄 수 있으며 코드를 다시 작성 해야 할 수도 있습니다.
   
- **예 5: 람다, List\<t > 및 IEnumerable\<t >**  
+ **예제 5: 람다, List\<T> 및 IEnumerable\<T>**  
   
  이 예제에서는 이름 문자열이 제공될 경우 [LINQ 및 기능 스타일 코드](https://blogs.msdn.microsoft.com/charlie/2007/01/27/anders-hejlsberg-on-linq-and-functional-programming/)를 사용하여 컴파일러 모델에서 기호를 찾습니다.  
   
@@ -304,7 +305,7 @@ Func<Symbol, bool> predicate = s => s.Name == name;
      return symbols.FirstOrDefault(predicate);  
 ```  
   
- 첫 번째 줄에서 [람다 식은](../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) `s => s.Name == name` 지역 변수 `name`를 [통해 닫습니다](https://blogs.msdn.microsoft.com/ericlippert/2003/09/17/what-are-closures/) . 즉, 이 코드에서는 `predicate`를 유지하는 [대리자](../../csharp/language-reference/keywords/delegate.md)에 대한 개체를 할당할 뿐만 아니라 `name`의 값을 캡처하는 환경을 유지하기 위한 정적 클래스를 할당합니다. 컴파일러는 다음과 같은 코드를 생성합니다.  
+ 첫 번째 줄에서 [람다 식](../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) `s => s.Name == name` `name`지역 변수를 [닫습니다](https://blogs.msdn.microsoft.com/ericlippert/2003/09/17/what-are-closures/) . 즉, 이 코드에서는 `predicate`를 유지하는 [대리자](../../csharp/language-reference/builtin-types/reference-types.md#the-delegate-type)에 대한 개체를 할당할 뿐만 아니라 `name`의 값을 캡처하는 환경을 유지하기 위한 정적 클래스를 할당합니다. 컴파일러는 다음과 같은 코드를 생성합니다.  
   
 ```csharp  
 // Compiler-generated class to hold environment state for lambda  
@@ -408,11 +409,11 @@ class Compilation { /*...*/
 }  
 ```  
   
- 캐싱이 포함된 새 코드에 `SyntaxTree`라는 `cachedResult` 필드가 있는 것을 볼 수 있습니다. 이 필드가 null이면 `GetSyntaxTreeAsync()`가 작동하고 결과를 캐시에 저장합니다. `GetSyntaxTreeAsync()`개체를 `SyntaxTree` 반환 합니다. 문제는 `async` 형식의 `Task<SyntaxTree>` 함수가 있고 `SyntaxTree` 형식의 값을 반환하는 경우 컴파일러가 결과를 유지하기 위해 Task를 할당하는 코드를 내보낸다는 점입니다(`Task<SyntaxTree>.FromResult()` 사용). Task는 완료됨으로 표시되고 결과는 즉시 사용 가능합니다. 새 컴파일러 코드에서 이미 완료된 <xref:System.Threading.Tasks.Task> 개체가 너무 자주 발생했는데, 이러한 할당을 해결함으로써 응답성이 현저히 향상되었습니다. 
+ 캐싱이 포함된 새 코드에 `SyntaxTree`라는 `cachedResult` 필드가 있는 것을 볼 수 있습니다. 이 필드가 null이면 `GetSyntaxTreeAsync()`가 작동하고 결과를 캐시에 저장합니다. `GetSyntaxTreeAsync()`에서 `SyntaxTree` 개체를 반환합니다. 문제는 `async` 형식의 `Task<SyntaxTree>` 함수가 있고 `SyntaxTree` 형식의 값을 반환하는 경우 컴파일러가 결과를 유지하기 위해 Task를 할당하는 코드를 내보낸다는 점입니다(`Task<SyntaxTree>.FromResult()` 사용). Task는 완료됨으로 표시되고 결과는 즉시 사용 가능합니다. 새 컴파일러 코드에서 이미 완료된 <xref:System.Threading.Tasks.Task> 개체가 너무 자주 발생했는데, 이러한 할당을 해결함으로써 응답성이 현저히 향상되었습니다. 
   
  **예제 6에 대한 해결 방법**  
   
- 완료 <xref:System.Threading.Tasks.Task> 된 할당을 제거 하려면 완료 된 결과를 사용 하 여 작업 개체를 캐시 하면 됩니다.  
+ 완료 된 <xref:System.Threading.Tasks.Task> 할당을 제거 하려면 완료 된 결과를 사용 하 여 작업 개체를 캐시 하면 됩니다.  
   
 ```csharp  
 class Compilation { /*...*/  
@@ -461,7 +462,7 @@ class Compilation { /*...*/
   
 - 결국은 모두 할당에 관련된 문제임 – 이 부분이 바로 컴파일러 플랫폼 팀이 새 컴파일러의 성능을 향상시키기 위해 대부분의 시간을 사용하는 부분입니다. 
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [이 항목의 프레젠테이션 비디오](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)
 - [초보자를 위한 성능 프로파일링 지침](/visualstudio/profiling/beginners-guide-to-performance-profiling)

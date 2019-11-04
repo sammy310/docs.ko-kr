@@ -17,12 +17,12 @@ helpviewer_keywords:
 - application development [WPF], files
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
-ms.openlocfilehash: 6b1a78ec56032d84d9699c2ecda89308779ee2da
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
-ms.translationtype: HT
+ms.openlocfilehash: a31dc2c5431c8201607462e8bdef4b8bae0fb41d
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73421142"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460920"
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>WPF 애플리케이션 리소스, 콘텐츠 및 데이터 파일
 Microsoft Windows 응용 프로그램은 종종 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], 이미지, 비디오, 오디오 등의 실행 불가능 한 데이터를 포함 하는 파일에 의존 합니다. WPF (Windows Presentation Foundation)는 응용 프로그램 데이터 파일 이라고 하는 이러한 유형의 데이터 파일을 구성 하 고, 식별 하 고, 사용할 수 있는 특별 한 지원을 제공 합니다. 이러한 지원에는 다음을 포함한 특정 애플리케이션 데이터 파일 형식 집합이 포함됩니다.  
@@ -52,7 +52,7 @@ Microsoft Windows 응용 프로그램은 종종 [!INCLUDE[TLA#tla_xaml](../../..
 - 응용 프로그램 데이터 파일을 지역화할 수 있어야 합니다 ( [WPF 세계화 및 지역화 개요](../advanced/wpf-globalization-and-localization-overview.md)참조).  
   
 > [!NOTE]
-> 이 섹션에서 설명 하는 리소스 파일은 [XAML 리소스](../advanced/xaml-resources.md) 에 설명 된 리소스 파일과 다르며 [응용 프로그램 리소스 관리 (.net)](/visualstudio/ide/managing-application-resources-dotnet)에 설명 된 포함 된 리소스 또는 링크 된 리소스와 다릅니다.  
+> 이 섹션에서 설명 하는 리소스 파일은 [XAML 리소스](../../../desktop-wpf/fundamentals/xaml-resources-define.md) 에 설명 된 리소스 파일과 다르며 [응용 프로그램 리소스 관리 (.net)](/visualstudio/ide/managing-application-resources-dotnet)에 설명 된 포함 된 리소스 또는 링크 된 리소스와 다릅니다.  
   
 ### <a name="configuring-resource-files"></a>리소스 파일 구성  
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]에서 리소스 파일은 MSBuild (Microsoft build engine) 프로젝트에 `Resource` 항목으로 포함 되는 파일입니다.  

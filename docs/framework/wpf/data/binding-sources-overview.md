@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 2df2cd11-6aac-4bdf-ab7b-ea5f464cd5ca
-ms.openlocfilehash: cf5873cdf137573826d5361d077e0534e8cba1f0
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 5d0d28213ed8b4a0d464793aeba6823db2405bbe
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920285"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459020"
 ---
 # <a name="binding-sources-overview"></a>바인딩 소스 개요
 데이터 바인딩에서 바인딩 소스 개체는 데이터를 가져오는 개체를 의미합니다. 이 항목에서는 바인딩 소스로 사용할 수 있는 개체 형식에 대해 설명합니다.
@@ -54,7 +54,7 @@ ms.locfileid: "72920285"
 ## <a name="using-entire-objects-as-a-binding-source"></a>전체 개체를 바인딩 소스로 사용
  전체 개체를 바인딩 소스로 사용할 수 있습니다. <xref:System.Windows.Data.Binding.Source%2A> 또는 <xref:System.Windows.FrameworkElement.DataContext%2A> 속성을 사용 하 여 바인딩 소스를 지정한 다음 빈 바인딩 선언을 제공할 수 있습니다. `{Binding}`. 이 방법이 유용한 시나리오의 예로는 문자열 형식 개체에 대한 바인딩, 관심 있는 속성이 여러 개 포함된 개체에 대한 바인딩 또는 컬렉션 개체에 대한 바인딩이 있습니다. 전체 컬렉션 개체에 대한 바인딩의 예제는 [계층적 데이터에 마스터-세부 패턴 사용](how-to-use-the-master-detail-pattern-with-hierarchical-data.md)을 참조하세요.
 
- 바인딩된 대상 속성에서 데이터가 의미를 가지려면 사용자 지정 논리를 적용해야 할 수 있습니다. 사용자 지정 논리는 사용자 지정 변환기 (기본 형식 변환이 존재 하지 않는 경우) 또는 <xref:System.Windows.DataTemplate>형식일 수 있습니다. 변환기에 대한 자세한 내용은 [데이터 바인딩 개요](data-binding-overview.md)의 데이터 변환 섹션을 참조하세요. 데이터 템플릿에 대한 자세한 내용은 [데이터 템플릿 개요](data-templating-overview.md)를 참조하세요.
+ 바인딩된 대상 속성에서 데이터가 의미를 가지려면 사용자 지정 논리를 적용해야 할 수 있습니다. 사용자 지정 논리는 사용자 지정 변환기 (기본 형식 변환이 존재 하지 않는 경우) 또는 <xref:System.Windows.DataTemplate>형식일 수 있습니다. 변환기에 대한 자세한 내용은 [데이터 바인딩 개요](../../../desktop-wpf/data/data-binding-overview.md)의 데이터 변환 섹션을 참조하세요. 데이터 템플릿에 대한 자세한 내용은 [데이터 템플릿 개요](data-templating-overview.md)를 참조하세요.
 
 <a name="collections"></a>
 ## <a name="using-collection-objects-as-a-binding-source"></a>컬렉션 개체를 바인딩 소스로 사용
@@ -64,7 +64,7 @@ ms.locfileid: "72920285"
 
  <xref:System.Collections.ObjectModel.ObservableCollection%601> 클래스는 <xref:System.Collections.Specialized.INotifyCollectionChanged> 인터페이스를 노출 하는 데이터 컬렉션의 기본 제공 구현입니다. 컬렉션 내의 개별 데이터 개체는 이전 섹션에 설명된 요구 사항을 충족해야 합니다. 예제는 [ObservableCollection 만들기 및 바인딩](how-to-create-and-bind-to-an-observablecollection.md)을 참조하세요. 사용자 고유의 컬렉션을 구현 하기 전에 <xref:System.Collections.ObjectModel.ObservableCollection%601> 또는 <xref:System.Collections.Generic.List%601>, <xref:System.Collections.ObjectModel.Collection%601>, <xref:System.ComponentModel.BindingList%601>등의 기존 컬렉션 클래스 중 하나를 사용 하는 것이 좋습니다.
 
- WPF는 컬렉션에 직접 바인딩되지 않습니다. 바인딩 소스로 컬렉션을 지정하면 WPF가 실제로 컬렉션의 기본 뷰에 바인딩됩니다. 기본 뷰에 대한 자세한 내용은 [데이터 바인딩 개요](data-binding-overview.md)를 참조하세요.
+ WPF는 컬렉션에 직접 바인딩되지 않습니다. 바인딩 소스로 컬렉션을 지정하면 WPF가 실제로 컬렉션의 기본 뷰에 바인딩됩니다. 기본 뷰에 대한 자세한 내용은 [데이터 바인딩 개요](../../../desktop-wpf/data/data-binding-overview.md)를 참조하세요.
 
  고급 시나리오가 있고 고유한 컬렉션을 구현 하려면 <xref:System.Collections.IList> 인터페이스를 사용 하는 것이 좋습니다. <xref:System.Collections.IList>는 인덱스를 통해 개별적으로 액세스할 수 있는 제네릭이 아닌 개체 컬렉션을 제공 하 여 성능을 향상 시킬 수 있습니다.
 
@@ -97,6 +97,6 @@ ms.locfileid: "72920285"
 - <xref:System.Windows.Data.ObjectDataProvider>
 - <xref:System.Windows.Data.XmlDataProvider>
 - [바인딩 소스 지정](how-to-specify-the-binding-source.md)
-- [데이터 바인딩 개요](data-binding-overview.md)
+- [데이터 바인딩 개요](../../../desktop-wpf/data/data-binding-overview.md)
 - [LINQ to XML로 WPF 데이터 바인딩 개요](wpf-data-binding-with-linq-to-xml-overview.md)
 - [데이터 바인딩 성능 최적화](../advanced/optimizing-performance-data-binding.md)

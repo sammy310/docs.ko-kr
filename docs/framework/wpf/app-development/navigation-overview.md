@@ -24,12 +24,12 @@ helpviewer_keywords:
 - programmatic navigation [WPF]
 - hyperlinks [WPF]
 ms.assetid: 86ad2143-606a-4e34-bf7e-51a2594248b8
-ms.openlocfilehash: 5a5c4c62799e1d2c190c2f7eaab12fff31e457ab
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
-ms.translationtype: HT
+ms.openlocfilehash: 619dc101cd8851cee24651b7e3098ae12ef46259
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425277"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459775"
 ---
 # <a name="navigation-overview"></a>탐색 개요
 
@@ -742,7 +742,7 @@ HTML로 이동 하려면 특수 권한이 필요 합니다. 예를 들어 인터
 
 ### <a name="navigating-to-custom-objects"></a>사용자 지정 개체 탐색
 
-사용자 지정 개체로 저장 되는 데이터가 있는 경우 해당 데이터를 표시 하는 한 가지 방법은 해당 개체에 바인딩되는 콘텐츠를 사용 하 여 <xref:System.Windows.Controls.Page>를 만드는 것입니다 ( [데이터 바인딩 개요](../data/data-binding-overview.md)참조). 개체를 표시하기 위해 전체 페이지를 만드는 오버헤드가 필요하지 않으면 페이지를 직접 탐색할 수 있습니다.
+사용자 지정 개체로 저장 되는 데이터가 있는 경우 해당 데이터를 표시 하는 한 가지 방법은 해당 개체에 바인딩되는 콘텐츠를 사용 하 여 <xref:System.Windows.Controls.Page>를 만드는 것입니다 ( [데이터 바인딩 개요](../../../desktop-wpf/data/data-binding-overview.md)참조). 개체를 표시하기 위해 전체 페이지를 만드는 오버헤드가 필요하지 않으면 페이지를 직접 탐색할 수 있습니다.
 
 다음 코드에서 구현 된 `Person` 클래스를 살펴보겠습니다.
 

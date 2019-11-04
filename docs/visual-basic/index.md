@@ -4,12 +4,12 @@ ms.date: 03/28/2018
 helpviewer_keywords:
 - programming, Visual Basic
 - Visual Basic
-ms.openlocfilehash: cb186e1c893e1c97c96f641edbdf1537a135bfcb
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 0e31502f617012c4f3596497f5b9c911c2dde167
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73191979"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73421288"
 ---
 # <a name="visual-basic-guide"></a>Visual Basic 가이드
 
@@ -42,7 +42,7 @@ Visual Basic이 아직 없는 경우 [Visual Studio](https://aka.ms/vsdownload?u
 - [COM Interop](../visual-basic/programming-guide/com-interop/index.md)  
   Visual Basic을 사용하여 COM(구성 요소 개체 모델)을 만들고 사용하는 작업과 관련된 상호 운용성 문제에 대해 설명합니다.
 
-- [샘플](../visual-basic/sample-applications.md)  
+- [샘플](https://github.com/dotnet/samples/tree/master/snippets/visualbasic)  
   샘플에 대한 정보를 포함합니다.
 
 - [연습](../visual-basic/walkthroughs.md)  

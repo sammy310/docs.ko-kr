@@ -10,57 +10,57 @@ helpviewer_keywords:
 - DataGrid [WPF], customizing the appearance of
 - DataGrid columns [WPF], using
 ms.assetid: bf89ea63-79b6-422b-bc9f-0485ad803216
-ms.openlocfilehash: dda712d58a4ff956de074ecd416402ba0aece5f4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f0887f36990de483139a9fde1472a78737cb7b72
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61912238"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460378"
 ---
 # <a name="datagrid"></a>DataGrid
-<xref:System.Windows.Controls.DataGrid> 컨트롤 표시 하 고 SQL database, LINQ 쿼리 또는 다른 바인딩 가능한 데이터 원본에서와 같은 다양 한 원본의 데이터를 편집할 수 있습니다. 자세한 내용은 [바인딩 소스 개요](../data/binding-sources-overview.md)를 참조하세요.  
+<xref:System.Windows.Controls.DataGrid> 컨트롤을 사용 하면 SQL 데이터베이스, LINQ 쿼리 또는 기타 바인딩 가능한 데이터 소스 등 다양 한 원본의 데이터를 표시 하 고 편집할 수 있습니다. 자세한 내용은 [바인딩 소스 개요](../data/binding-sources-overview.md)를 참조하세요.  
   
- 열과 같은 텍스트 컨트롤을 표시할 수 있습니다는 <xref:System.Windows.Controls.ComboBox>, 또는 템플릿에 포함 된 콘텐츠 이미지, 단추 등의 기타 WPF 콘텐츠가 있습니다. 사용할 수는 <xref:System.Windows.Controls.DataGridTemplateColumn> 템플릿에 정의 된 데이터를 표시 합니다. 다음 표에서 기본적으로 제공 되는 열 유형을 나열 합니다.  
+ 열에는 <xref:System.Windows.Controls.ComboBox>같은 텍스트, 컨트롤, 이미지, 단추 또는 템플릿에 포함 된 콘텐츠와 같은 기타 WPF 콘텐츠가 표시 될 수 있습니다. <xref:System.Windows.Controls.DataGridTemplateColumn>를 사용 하 여 템플릿에 정의 된 데이터를 표시할 수 있습니다. 다음 표에서는 기본적으로 제공 되는 열 유형을 나열 합니다.  
   
-|생성 된 열 형식|데이터 형식|  
+|생성 된 열 유형|데이터 형식|  
 |---------------------------|---------------|  
 |<xref:System.Windows.Controls.DataGridTextColumn>|<xref:System.String>|  
 |<xref:System.Windows.Controls.DataGridCheckBoxColumn>|<xref:System.Boolean>|  
 |<xref:System.Windows.Controls.DataGridComboBoxColumn>|<xref:System.Enum>|  
 |<xref:System.Windows.Controls.DataGridHyperlinkColumn>|<xref:System.Uri>|  
   
- <xref:System.Windows.Controls.DataGrid> 셀의 글꼴, 색 및 크기와 같은 모양이 사용자 지정할 수 있습니다. <xref:System.Windows.Controls.DataGrid> 다른 WPF 컨트롤의 스타일 지정 및 템플릿 기능을 모두 지원합니다. <xref:System.Windows.Controls.DataGrid> 기본 및 편집, 정렬 및 유효성 검사에 대 한 사용자 지정 가능한 동작에도 포함 됩니다.  
+ 셀 글꼴, 색, 크기 등의 모양을 사용자 지정할 수 <xref:System.Windows.Controls.DataGrid>. <xref:System.Windows.Controls.DataGrid>는 다른 WPF 컨트롤의 모든 스타일 및 템플릿 기능을 지원 합니다. 또한 <xref:System.Windows.Controls.DataGrid>에는 편집, 정렬 및 유효성 검사를 위한 기본 및 사용자 지정 가능 동작이 포함 되어 있습니다.  
   
- 다음 표에서 대 한 일반적인 작업 중 일부 <xref:System.Windows.Controls.DataGrid> 및 작업을 수행 하는 방법입니다. 관련된 된 API를 확인 하 여 자세한 내용 및 샘플 코드를 찾을 수 있습니다.  
+ 다음 표에서는 <xref:System.Windows.Controls.DataGrid>에 대 한 몇 가지 일반적인 작업과이를 수행 하는 방법을 보여 줍니다. 관련 API를 확인 하 여 추가 정보 및 샘플 코드를 찾을 수 있습니다.  
   
-|시나리오|방식|  
+|시나리오|방법|  
 |--------------|--------------|  
-|교대로 반복 되는 배경색|설정를 <xref:System.Windows.Controls.ItemsControl.AlternationIndex%2A> 속성을 2 이상 할당을 <xref:System.Windows.Media.Brush> 에 <xref:System.Windows.Controls.DataGrid.RowBackground%2A> 및 <xref:System.Windows.Controls.DataGrid.AlternatingRowBackground%2A> 속성.|  
-|셀 및 행 선택 동작을 정의 합니다.|<xref:System.Windows.Controls.DataGrid.SelectionMode%2A> 및 <xref:System.Windows.Controls.DataGrid.SelectionUnit%2A> 속성을 설정합니다.|  
-|헤더, 셀 및 행의 시각적 모양을 사용자 지정|새 적용 <xref:System.Windows.Style> 에 <xref:System.Windows.Controls.DataGrid.ColumnHeaderStyle%2A>를 <xref:System.Windows.Controls.DataGrid.RowHeaderStyle%2A>를 <xref:System.Windows.Controls.DataGrid.CellStyle%2A>, 또는 <xref:System.Windows.Controls.DataGrid.RowStyle%2A> 속성입니다.|  
-|크기 조정 옵션 설정|설정 합니다 <xref:System.Windows.FrameworkElement.Height%2A>, <xref:System.Windows.FrameworkElement.MaxHeight%2A>, <xref:System.Windows.FrameworkElement.MinHeight%2A>, <xref:System.Windows.FrameworkElement.Width%2A>를 <xref:System.Windows.FrameworkElement.MaxWidth%2A>, 또는 <xref:System.Windows.FrameworkElement.MinWidth%2A> 속성입니다. 자세한 내용은 [DataGrid 컨트롤의 크기 조정 옵션](sizing-options-in-the-datagrid-control.md)합니다.|  
-|선택한 항목에 액세스|확인 합니다 <xref:System.Windows.Controls.DataGrid.SelectedCells%2A> 선택한 셀을 가져올 속성 및 <xref:System.Windows.Controls.Primitives.MultiSelector.SelectedItems%2A> 선택한 행을 가져올 속성입니다. 자세한 내용은 <xref:System.Windows.Controls.DataGrid.SelectedCells%2A>을 참조하세요.|  
-|최종 사용자 상호 작용을 사용자 지정|설정 합니다 <xref:System.Windows.Controls.DataGrid.CanUserAddRows%2A>, <xref:System.Windows.Controls.DataGrid.CanUserDeleteRows%2A>, <xref:System.Windows.Controls.DataGrid.CanUserReorderColumns%2A>, <xref:System.Windows.Controls.DataGrid.CanUserResizeColumns%2A>를 <xref:System.Windows.Controls.DataGrid.CanUserResizeRows%2A>, 및 <xref:System.Windows.Controls.DataGrid.CanUserSortColumns%2A> 속성입니다.|  
-|취소 또는 자동으로 생성 된 열 변경|처리는 <xref:System.Windows.Controls.DataGrid.AutoGeneratingColumn> 이벤트입니다.|  
-|열 고정|설정 된 <xref:System.Windows.Controls.DataGrid.FrozenColumnCount%2A> 속성을 1로 설정 하 여 맨 왼쪽 위치로 이동 열은 <xref:System.Windows.Controls.DataGridColumn.DisplayIndex%2A> 속성을 0입니다.|  
-|데이터 원본으로 사용 하 여 XML 데이터|바인딩하는 <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> 에 <xref:System.Windows.Controls.DataGrid> 항목의 컬렉션을 나타내는 XPath 쿼리를 합니다. 각 열을 만들기는 <xref:System.Windows.Controls.DataGrid>합니다. XPath 쿼리 항목 소스에서 속성을 가져옵니다를 바인딩할을 설정 하 여 각 열을 바인딩하십시오. 예제를 보려면 <xref:System.Windows.Controls.DataGridTextColumn>를 참조하십시오.|  
+|교대로 반복 되는 배경색|<xref:System.Windows.Controls.ItemsControl.AlternationIndex%2A> 속성을 2 이상으로 설정한 다음 <xref:System.Windows.Controls.DataGrid.RowBackground%2A> 및 <xref:System.Windows.Controls.DataGrid.AlternatingRowBackground%2A> 속성에 <xref:System.Windows.Media.Brush>을 할당 합니다.|  
+|셀 및 행 선택 동작 정의|<xref:System.Windows.Controls.DataGrid.SelectionMode%2A> 및 <xref:System.Windows.Controls.DataGrid.SelectionUnit%2A> 속성을 설정합니다.|  
+|머리글, 셀 및 행의 시각적 모양 사용자 지정|<xref:System.Windows.Controls.DataGrid.ColumnHeaderStyle%2A>, <xref:System.Windows.Controls.DataGrid.RowHeaderStyle%2A>, <xref:System.Windows.Controls.DataGrid.CellStyle%2A>또는 <xref:System.Windows.Controls.DataGrid.RowStyle%2A> 속성에 새 <xref:System.Windows.Style>을 적용 합니다.|  
+|크기 조정 옵션 설정|<xref:System.Windows.FrameworkElement.Height%2A>, <xref:System.Windows.FrameworkElement.MaxHeight%2A>, <xref:System.Windows.FrameworkElement.MinHeight%2A>, <xref:System.Windows.FrameworkElement.Width%2A>, <xref:System.Windows.FrameworkElement.MaxWidth%2A>또는 <xref:System.Windows.FrameworkElement.MinWidth%2A> 속성을 설정 합니다. 자세한 내용은 [DataGrid 컨트롤의 크기 조정 옵션](sizing-options-in-the-datagrid-control.md)을 참조 하세요.|  
+|선택한 항목 액세스|<xref:System.Windows.Controls.DataGrid.SelectedCells%2A> 속성을 선택 하 여 선택한 셀을 가져오고 <xref:System.Windows.Controls.Primitives.MultiSelector.SelectedItems%2A> 속성을 선택 하 여 선택 된 행을 가져옵니다. 자세한 내용은 <xref:System.Windows.Controls.DataGrid.SelectedCells%2A>을 참조하십시오.|  
+|최종 사용자의 상호 작용 사용자 지정|<xref:System.Windows.Controls.DataGrid.CanUserAddRows%2A>, <xref:System.Windows.Controls.DataGrid.CanUserDeleteRows%2A>, <xref:System.Windows.Controls.DataGrid.CanUserReorderColumns%2A>, <xref:System.Windows.Controls.DataGrid.CanUserResizeColumns%2A>, <xref:System.Windows.Controls.DataGrid.CanUserResizeRows%2A>및 <xref:System.Windows.Controls.DataGrid.CanUserSortColumns%2A> 속성을 설정 합니다.|  
+|자동 생성 된 열 취소 또는 변경|<xref:System.Windows.Controls.DataGrid.AutoGeneratingColumn> 이벤트를 처리 합니다.|  
+|열 고정|<xref:System.Windows.Controls.DataGrid.FrozenColumnCount%2A> 속성을 1로 설정 하 고 <xref:System.Windows.Controls.DataGridColumn.DisplayIndex%2A> 속성을 0으로 설정 하 여 가장 왼쪽의 위치로 열을 이동 합니다.|  
+|XML 데이터를 데이터 원본으로 사용|<xref:System.Windows.Controls.DataGrid>의 <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> 항목의 컬렉션을 나타내는 XPath 쿼리에 바인딩합니다. <xref:System.Windows.Controls.DataGrid>에서 각 열을 만듭니다. 바인딩의 XPath를 항목 소스의 속성을 가져오는 쿼리에 설정 하 여 각 열을 바인딩합니다. 예제를 보려면 <xref:System.Windows.Controls.DataGridTextColumn>를 참조하세요.|  
   
 ## <a name="related-topics"></a>관련 항목  
   
 |제목|설명|  
 |-----------|-----------------|  
-|[연습: DataGrid 컨트롤에는 SQL Server 데이터베이스에서 데이터를 표시 합니다.](walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control.md)|엔터티 프레임 워크 요소를 추가할 새 WPF 프로젝트를 설정, 소스를 설정 및 데이터를 표시 하는 방법을 설명는 <xref:System.Windows.Controls.DataGrid>합니다.|  
-|[방법: DataGrid 컨트롤에 행 세부 정보 추가](how-to-add-row-details-to-a-datagrid-control.md)|행 세부 정보를 만드는 방법에 설명 된 <xref:System.Windows.Controls.DataGrid>합니다.|  
-|[방법: DataGrid 컨트롤을 사용 하 여 유효성 검사 구현](how-to-implement-validation-with-the-datagrid-control.md)|값의 유효성을 검사 하는 방법에 설명 <xref:System.Windows.Controls.DataGrid> 셀 및 행 및 유효성 검사 피드백을 표시 합니다.|  
-|[DataGrid 컨트롤에서의 기본 키보드 및 마우스 동작](default-keyboard-and-mouse-behavior-in-the-datagrid-control.md)|상호 작용 하는 방법에 설명 합니다 <xref:System.Windows.Controls.DataGrid> 키보드 및 마우스를 사용 하 여 제어 합니다.|  
-|[방법: 그룹, 정렬 및 DataGrid 컨트롤에서 데이터 필터링](how-to-group-sort-and-filter-data-in-the-datagrid-control.md)|데이터를 보는 방법에 설명 합니다.는 <xref:System.Windows.Controls.DataGrid> 그룹화, 정렬 및 데이터를 필터링 하 여 다양 한 방식에서입니다.|  
-|[DataGrid 컨트롤의 크기 조정 옵션](sizing-options-in-the-datagrid-control.md)|절대 및 자동 크기 조정 제어 하는 방법에 설명 합니다 <xref:System.Windows.Controls.DataGrid>합니다.|  
+|[연습: DataGrid 컨트롤에서 SQL Server 데이터베이스의 데이터 표시](walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control.md)|새 WPF 프로젝트를 설정 하 고, Entity Framework 요소를 추가 하 고, 소스를 설정 하 고, <xref:System.Windows.Controls.DataGrid>데이터를 표시 하는 방법을 설명 합니다.|  
+|[방법: DataGrid 컨트롤에 행 세부 정보 추가](how-to-add-row-details-to-a-datagrid-control.md)|<xref:System.Windows.Controls.DataGrid>에 대 한 행 세부 정보를 만드는 방법을 설명 합니다.|  
+|[방법: DataGrid 컨트롤을 사용하여 유효성 검사 구현](how-to-implement-validation-with-the-datagrid-control.md)|셀 및 행 <xref:System.Windows.Controls.DataGrid> 값의 유효성을 검사 하 고 유효성 검사 피드백을 표시 하는 방법을 설명 합니다.|  
+|[DataGrid 컨트롤에서의 기본 키보드 및 마우스 동작](default-keyboard-and-mouse-behavior-in-the-datagrid-control.md)|키보드와 마우스를 사용 하 여 <xref:System.Windows.Controls.DataGrid> 컨트롤과 상호 작용 하는 방법을 설명 합니다.|  
+|[방법: DataGrid 컨트롤에서 데이터 그룹화, 정렬 및 필터링](how-to-group-sort-and-filter-data-in-the-datagrid-control.md)|데이터를 그룹화, 정렬 및 필터링 하 여 다양 한 방법으로 <xref:System.Windows.Controls.DataGrid>의 데이터를 보는 방법에 대해 설명 합니다.|  
+|[DataGrid 컨트롤의 크기 조정 옵션](sizing-options-in-the-datagrid-control.md)|<xref:System.Windows.Controls.DataGrid>에서 절대 크기와 자동 크기 조정을 제어 하는 방법을 설명 합니다.|  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Windows.Controls.DataGrid>
 - [스타일 지정 및 템플릿](styling-and-templating.md)
-- [데이터 바인딩 개요](../data/data-binding-overview.md)
+- [데이터 바인딩 개요](../../../desktop-wpf/data/data-binding-overview.md)
 - [데이터 템플릿 개요](../data/data-templating-overview.md)
 - [컨트롤](index.md)
 - [WPF 콘텐츠 모델](wpf-content-model.md)

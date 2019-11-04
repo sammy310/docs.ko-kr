@@ -5,19 +5,19 @@ helpviewer_keywords:
 - WPF [WPF], about application development
 - application development [WPF], about
 ms.assetid: 2996ce5e-81e9-49ae-881b-952db3dd1b7e
-ms.openlocfilehash: 85218bd4b6e900bd4508a5c90132419a07846f2c
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: ce37eecf7edf2adcc4f56af27a5c658400f7abba
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920207"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420648"
 ---
 # <a name="application-development"></a>애플리케이션 개발
 <a name="introduction"></a>WPF (Windows Presentation Foundation)는 다음과 같은 종류의 응용 프로그램을 개발 하는 데 사용할 수 있는 프레젠테이션 프레임 워크입니다.  
   
 - 독립 실행형 응용 프로그램 (클라이언트 컴퓨터에 설치 되 고 실행 되는 실행 가능 어셈블리로 빌드된 기존 스타일의 Windows 응용 프로그램).  
   
-- [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] (실행 가능 어셈블리로 빌드되고 Microsoft Internet Explorer 또는 Mozilla Firefox와 같은 웹 브라우저에서 호스트 되는 탐색 페이지로 구성 된 응용 프로그램).  
+- Xbap (XAML 브라우저 응용 프로그램) (실행 가능 어셈블리로 빌드되고 Microsoft Internet Explorer 또는 Mozilla Firefox와 같은 웹 브라우저에서 호스트 되는 탐색 페이지로 구성 된 응용 프로그램)  
   
 - 사용자 지정 컨트롤 라이브러리(재사용 가능한 컨트롤을 포함하는 실행 불가능한 어셈블리)  
   
@@ -46,7 +46,7 @@ ms.locfileid: "72920207"
   
 - 독립 실행형 애플리케이션에서 창 관리  
   
-- 탐색 창 및 프레임이 있는 독립 실행형 애플리케이션 및 [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]에서 탐색 추적  
+- 탐색 창과 프레임을 사용 하 여 Xbap (XAML 브라우저 응용 프로그램) 및 독립 실행형 응용 프로그램에서 탐색을 추적 합니다.  
   
  이러한 기능은 *애플리케이션 정의*를 사용하여 애플리케이션에 추가되는 <xref:System.Windows.Application> 클래스에 의해 구현됩니다.  
   
@@ -86,15 +86,15 @@ ms.locfileid: "72920207"
   
 - 웹 브라우저에 호스트되는 독립 실행형 페이지  
   
-- 웹 브라우저에 호스트되는 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]로 컴파일된 페이지  
+- 웹 브라우저에서 호스팅되는 XBAP로 컴파일되는 페이지입니다.  
   
 - 독립 실행형 애플리케이션으로 컴파일되고 탐색 창(<xref:System.Windows.Navigation.NavigationWindow>)에서 호스트하는 페이지  
   
-- 독립 실행형 페이지나 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 또는 독립 실행형 애플리케이션으로 컴파일된 페이지에서 호스트할 수 있는 프레임(<xref:System.Windows.Controls.Frame>)에서 호스트되는 페이지  
+- 독립 실행형 페이지에서 호스팅될 수 있는 프레임 (<xref:System.Windows.Controls.Frame>)에서 호스트 되는 페이지 또는 XBAP 또는 독립 실행형 응용 프로그램으로 컴파일된 페이지.  
   
  탐색을 쉽게 하려면 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]에서 다음을 구현합니다.  
   
-- 애플리케이션 내 탐색을 지원하기 위해 <xref:System.Windows.Controls.Frame>, <xref:System.Windows.Navigation.NavigationWindow>, [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]에서 사용되는 탐색 요청을 처리하기 위한 공유 탐색 엔진 <xref:System.Windows.Navigation.NavigationService>  
+- <xref:System.Windows.Navigation.NavigationService><xref:System.Windows.Controls.Frame>, <xref:System.Windows.Navigation.NavigationWindow>, Xbap에서 응용 프로그램 간 탐색을 지원 하기 위해 사용 하는 탐색 요청을 처리 하기 위한 공유 탐색 엔진입니다.  
   
 - 탐색을 시작하는 탐색 메서드  
   
@@ -108,7 +108,7 @@ ms.locfileid: "72920207"
   
 <a name="Hosting"></a>   
 ## <a name="hosting"></a>호스팅  
- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] Microsoft Internet Explorer 또는 Firefox에서 호스팅될 수 있습니다. 각 호스팅 모델에는 [호스팅](hosting-wpf-applications.md)에서 다루는 고유한 고려 사항 및 제약 조건 집합이 있습니다.  
+ Xbap는 Microsoft Internet Explorer 또는 Firefox에서 호스팅될 수 있습니다. 각 호스팅 모델에는 [호스팅](hosting-wpf-applications.md)에서 다루는 고유한 고려 사항 및 제약 조건 집합이 있습니다.  
   
 <a name="Build_and_Deploy"></a>   
 ## <a name="build-and-deploy"></a>빌드 및 배포  
@@ -124,7 +124,7 @@ ms.locfileid: "72920207"
 |[애플리케이션 관리 개요](application-management-overview.md)|애플리케이션 수명, 창, 애플리케이션 리소스 및 탐색 관리를 비롯하여 <xref:System.Windows.Application> 클래스에 대해 개략적으로 설명합니다.|  
 |[WPF의 창](windows-in-wpf-applications.md)|<xref:System.Windows.Window> 클래스 및 대화 상자의 사용 방법을 비롯하여 애플리케이션의 창 관리에 대해 세부적으로 설명합니다.|  
 |[탐색 개요](navigation-overview.md)|애플리케이션 페이지 간의 탐색 관리에 대해 개략적으로 설명합니다.|  
-|[호스팅](hosting-wpf-applications.md)|[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]에 대한 개요를 설명합니다.|  
+|[호스팅](hosting-wpf-applications.md)|Xbap (XAML 브라우저 응용 프로그램)에 대 한 개요를 제공 합니다.|  
 |[빌드 및 배포](building-and-deploying-wpf-applications.md)|WPF 애플리케이션을 빌드하고 배포하는 방법에 대해 설명합니다.|  
 |[Visual Studio에서의 WPF 소개](../getting-started/introduction-to-wpf-in-vs.md)|WPF의 주요 기능에 대해 설명합니다.|  
 |[연습: 내 첫 WPF 데스크톱 애플리케이션](../getting-started/walkthrough-my-first-wpf-desktop-application.md)|페이지 탐색, 레이아웃, 컨트롤, 이미지, 스타일 및 바인딩을 사용하여 WPF 애플리케이션을 만드는 방법을 보여 주는 연습입니다.|

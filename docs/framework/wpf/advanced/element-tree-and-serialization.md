@@ -8,23 +8,23 @@ helpviewer_keywords:
 - serialization [WPF]
 - tree [WPF]
 ms.assetid: 8f57e879-180b-421f-b3d0-ac007ff2ce80
-ms.openlocfilehash: 4c178213e08add247311f0b71517ed292bd6658a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: afddaab6a7f5e9ef445da48d013ace59b84611cd
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61962445"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460477"
 ---
 # <a name="element-tree-and-serialization"></a>요소 트리 및 serialization
 WPF 프로그래밍 요소는 서로 트리 관계에 있는 형식으로 존재하는 경우가 많습니다. 예를 들어, XAML에 만든 애플리케이션 UI는 개체 트리로 개념화할 수 있습니다. 요소 트리는 두 개의 개별적이지만 경우에 따라 병렬 상태인 트리로 나눌 수 있습니다. 즉, 논리적 트리와 시각적 트리입니다. WPF의 Serialization에서는 이러한 두 트리의 상태 외에도 애플리케이션의 상태를 저장하고, XAML로 파일에 쓸 수 있습니다.  
   
-## <a name="in-this-section"></a>섹션 내용  
+## <a name="in-this-section"></a>단원 내용  
  [WPF의 트리](trees-in-wpf.md)  
  [XamlWriter.Save의 serialization 제한](serialization-limitations-of-xamlwriter-save.md)  
  [개체 트리에 없는 개체 요소 초기화](initialization-for-object-elements-not-in-an-object-tree.md)  
  [방법 항목](element-tree-and-serialization-how-to-topics.md)  
   
-## <a name="reference"></a>참조  
+## <a name="reference"></a>참고  
  <xref:System.Windows.Markup>  
   
  <xref:System.Windows.LogicalTreeHelper>  
@@ -35,9 +35,9 @@ WPF 프로그래밍 요소는 서로 트리 관계에 있는 형식으로 존재
  [WPF 아키텍처](wpf-architecture.md)  
   [WPF의 XAML](xaml-in-wpf.md)  
   [기본 요소](base-elements.md)  
-  [속성](properties-wpf.md)  
+  [데이터 액세스](properties-wpf.md)  
   [이벤트](events-wpf.md)  
   [입력](input-wpf.md)  
   [리소스](resources-wpf.md)  
-  [스타일 지정 및 템플릿](../controls/styling-and-templating.md)  
+  [스타일 지정 및 템플릿](../../../desktop-wpf/fundamentals/styles-templates-overview.md)  
   [스레딩 모델](threading-model.md)

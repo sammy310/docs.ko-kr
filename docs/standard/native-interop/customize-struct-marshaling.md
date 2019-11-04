@@ -7,12 +7,12 @@ ms.date: 01/18/2019
 dev_langs:
 - csharp
 - cpp
-ms.openlocfilehash: b174a817e82f9a9f123c79581656cc8e7179b435
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
-ms.translationtype: HT
+ms.openlocfilehash: f4b8402413f4d2f558d8e61ad4f10490dece9835
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929032"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423986"
 ---
 # <a name="customizing-structure-marshaling"></a>구조체 마샬링 사용자 지정
 
@@ -26,7 +26,7 @@ ms.locfileid: "70929032"
 
 **✔️** 네이티브 구조체에 공용 구조체 등의 명시적인 레이아웃도 있는 경우에만 마샬링할 때 `LayoutKind.Explicit`를 사용합니다.
 
-**❌** 비 Windows 플랫폼에서 구조체를 마샬링하는 경우 `LayoutKind.Explicit`를 사용하지 않습니다. .NET Core 런타임을 통해 Intel 또는 AMD 64비트 비 Windows 시스템에서 명시적 구조체를 네이티브 함수에 값으로 전달할 수 없습니다. 그러나 런타임은 모든 플랫폼에서 명시적 구조체를 참조로 전달하는 기능을 지원합니다.
+❌ .NET Core 3.0 이전 런타임을 대상으로 해야 하는 경우 Windows가 아닌 플랫폼에서 구조체를 마샬링할 때 `LayoutKind.Explicit`를 사용 **하지 않도록** 합니다. 3\.0 이전의 .NET Core 런타임에서는 Intel 또는 AMD 64 비트 비 Windows 시스템의 네이티브 함수에 대 한 명시적 구조체 전달을 지원 하지 않습니다. 그러나 런타임은 모든 플랫폼에서 명시적 구조체를 참조로 전달하는 기능을 지원합니다.
 
 ## <a name="customizing-boolean-field-marshaling"></a>부울 필드 마샬링 사용자 지정
 

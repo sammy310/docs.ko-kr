@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], XML namespaces
 - namespaces [WPF], XML
 ms.assetid: a47c832f-dc84-48f2-96d5-cde18fc4284b
-ms.openlocfilehash: 9d8ddc5445bac28c68cd6cc99acf3313613a8c7f
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 47ce0d951df39c7b60aa2a543baf845f5471de6c
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72919663"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460308"
 ---
 # <a name="how-to-use-xml-namespaces-in-data-binding"></a>방법: XML 네임스페이스를 데이터 바인딩에 사용
 ## <a name="example"></a>예제
@@ -32,5 +32,5 @@ ms.locfileid: "72919663"
 ## <a name="see-also"></a>참조
 
 - [XMLDataProvider 및 XPath 쿼리를 사용하여 XML 데이터에 바인딩](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)
-- [데이터 바인딩 개요](data-binding-overview.md)
+- [데이터 바인딩 개요](../../../desktop-wpf/data/data-binding-overview.md)
 - [방법 항목](data-binding-how-to-topics.md)

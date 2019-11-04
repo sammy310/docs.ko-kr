@@ -6,21 +6,19 @@ helpviewer_keywords:
 - developer's guide, deploying .NET Framework
 - deployment [.NET Framework], developer's guide
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: dbb196b5beb2fc04ff85f2924356699fd83f3ea6
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 3e87ba8c9442c4bba24e4e569cd20bdbdc76f6ec
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71833667"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457986"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>개발자를 위한 .NET Framework 배포 가이드
 이 항목에서는 앱과 함께 .NET Framework 4.5에서 [!INCLUDE[net_current](../../../includes/net-current-version.md)] 사이의 .NET Framework 버전을 설치하려는 개발자를 위한 정보를 제공합니다.
 
 다운로드 링크를 확인하려면 [재배포 가능 패키지](#redistributable-packages) 섹션을 참조하세요. 재배포 가능 패키지 및 언어 팩은 다음 Microsoft 다운로드 센터 페이지에서 다운로드할 수도 있습니다.
 
-- 모든 운영 체제용 .NET Framework 4.8([웹 설치 관리자](http://go.microsoft.com/fwlink/?LinkId=2085155) 또는 [오프라인 설치 관리자](https://go.microsoft.com/fwlink/?linkid=2088631))
+- 모든 운영 체제용 .NET Framework 4.8([웹 설치 관리자](https://go.microsoft.com/fwlink/?LinkId=2085155) 또는 [오프라인 설치 관리자](https://go.microsoft.com/fwlink/?linkid=2088631))
 
 - 모든 운영 체제용 .NET Framework 4.7.2([웹 설치 관리자](https://go.microsoft.com/fwlink/?LinkId=863262) 또는 [오프라인 설치 관리자](https://go.microsoft.com/fwlink/p/?LinkId=863265))
 
@@ -170,7 +168,7 @@ Visual Studio에서 InstallShield 배포를 선택하고 .NET Framework에 대�
 
 ### <a name="windows-installer-xml-wix-deployment"></a>WiX(Windows Installer XML) 배포
 
-WiX(Windows Installer XML) 도구 집합은 XML 소스 코드에서 Windows 설치 패키지를 빌드합니다. WiX는 MSI 및 MSM 설치 패키지를 빌드하기 위해 빌드 프로세스로 통합할 수 있는 명령줄 환경을 지원합니다. WiX를 사용하여 .NET Framework 배포 환경을 완벽하게 제어하기 위해 [.NET Framework를 필수 조건으로 지정](http://wixtoolset.org/documentation/manual/v3/howtos/redistributables_and_install_checks/install_dotnet.html)하거나 [chainer를 만들](http://wixtoolset.org/documentation/manual/v3/xsd/wix/exepackage.html) 수 있습니다. WiX에 대한 자세한 내용은 [WiX(Windows Installer XML) 도구 집합](http://wixtoolset.org/) 웹 사이트를 참조하세요.
+WiX(Windows Installer XML) 도구 집합은 XML 소스 코드에서 Windows 설치 패키지를 빌드합니다. WiX는 MSI 및 MSM 설치 패키지를 빌드하기 위해 빌드 프로세스로 통합할 수 있는 명령줄 환경을 지원합니다. WiX를 사용하여 .NET Framework 배포 환경을 완벽하게 제어하기 위해 [.NET Framework를 필수 조건으로 지정](https://wixtoolset.org/documentation/manual/v3/howtos/redistributables_and_install_checks/install_dotnet.html)하거나 [chainer를 만들](https://wixtoolset.org/documentation/manual/v3/xsd/wix/exepackage.html) 수 있습니다. WiX에 대한 자세한 내용은 [WiX(Windows Installer XML) 도구 집합](https://wixtoolset.org/) 웹 사이트를 참조하세요.
 
 <a name="installing_manually"></a>
 
@@ -290,7 +288,7 @@ WiX(Windows Installer XML) 도구 집합은 XML 소스 코드에서 Windows 설�
 
 | | |
 |-|-|
-| 키 | HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\1041 |
+| Key | HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\1041 |
 | name | Release |
 | 형식 | DWORD |
 

@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 05/01/2017
 ms.technology: dotnet-standard
 ms.assetid: 81c07080-acdf-4aef-a66d-0ab52fab2c04
-ms.openlocfilehash: 5c162258d6d365da8c6048590eb4c5eec6162973
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: ac9ad7e3730f8c430d42c4c8c8b63ab3d9cd091f
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70799312"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423822"
 ---
 # <a name="get-started"></a>시작
 
@@ -21,7 +21,7 @@ ms.locfileid: "70799312"
 
 * [C# 시작](../csharp/getting-started/index.md) 문서와 [C# 자습서](../csharp/tutorials/index.md)에서는 C# 중심으로 시작하는 다양한 방법을 제공합니다.
 
-* [F# 시작](../fsharp/tutorials/getting-started/index.md) 자습서에서는 F#을 사용하기 위한 기본적인 방법으로 Visual Studio, Visual Studio Code, 명령줄 도구 이렇게 세 가지를 제공합니다.
+* [F# 시작](../fsharp/get-started/index.md) 자습서에서는 F#을 사용하기 위한 기본적인 방법으로 Visual Studio, Visual Studio Code, 명령줄 도구 이렇게 세 가지를 제공합니다.
 
 * [Visual Basic 시작](../visual-basic/getting-started/index.md) 문서에서는 Visual Studio에서 Visual Basic을 사용하는 방법을 설명합니다.
 

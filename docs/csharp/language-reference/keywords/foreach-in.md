@@ -9,12 +9,12 @@ helpviewer_keywords:
 - foreach statement [C#]
 - in keyword [C#]
 ms.assetid: 5a9c5ddc-5fd3-457a-9bb6-9abffcd874ec
-ms.openlocfilehash: af4850b4c33727c818fb5a67d17fb6146627fa06
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: 9c1521f39dea72b51801a81b13e8a0203956731c
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67267739"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422804"
 ---
 # <a name="foreach-in-c-reference"></a>foreach, in(C# 참조)
 
@@ -29,7 +29,7 @@ C# 7.3부터는 열거자의 `Current` 속성이 [참조 반환 값](ref.md#refe
 
 `foreach` 문이 `null`에 적용되면 <xref:System.NullReferenceException>이 throw됩니다. `foreach` 문의 소스 컬렉션이 비어 있으면 `foreach` 루프의 본문이 실행되지 않고 건너뜁니다.
 
-## <a name="examples"></a>예제
+## <a name="examples"></a>예
 
 [!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
@@ -47,7 +47,7 @@ C# 7.3부터는 열거자의 `Current` 속성이 [참조 반환 값](ref.md#refe
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 
-자세한 내용은 [C# 언어 사양](../language-specification/index.md)의 [foreach 문](~/_csharplang/spec/statements.md#the-foreach-statement) 섹션을 참조하세요.
+자세한 내용은 [C# 언어 사양](/dotnet/csharp/language-reference/language-specification/introduction)의 [foreach 문](~/_csharplang/spec/statements.md#the-foreach-statement) 섹션을 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
 

@@ -1,21 +1,21 @@
 ---
-title: '방법: Windows Forms에서 컨트롤 잠금'
+title: '방법: Windows Forms에 컨트롤 고정'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms controls, locking
 - controls [Windows Forms], locking
 ms.assetid: 94efe0d2-c14e-4d14-b903-63ea9b07e290
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: f6dd079331c6c1883839efe5c6cb127044380fd2
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: d157ddc8be4b5fa0057241b562e76b566e8dad99
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69987468"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458348"
 ---
-# <a name="how-to-lock-controls-to-windows-forms"></a>방법: 컨트롤을 Windows Forms 잠금
+# <a name="how-to-lock-controls-to-windows-forms"></a>방법: 컨트롤을 Windows Forms로 잠그기
 
 Windows 응용 프로그램의 UI (사용자 인터페이스)를 디자인할 때 컨트롤이 제대로 배치 되 면 컨트롤을 잠가 다른 속성을 설정할 때 실수로 이동 하거나 크기를 조정할 수 없습니다.
 
@@ -47,7 +47,7 @@ Visual Studio의 **속성** 창에서 **Locked** 속성을 선택 하 고 **true
 
 **속성** 창에서 **Locked** 속성을 선택 하 고 **false**를 선택 합니다. (이름을 두 번 클릭 하면 속성 설정이 전환 됩니다.)
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [Windows Forms 컨트롤](index.md)
 - [개별 Windows Forms 컨트롤 레이블 지정 및 바로 가기 제공](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)

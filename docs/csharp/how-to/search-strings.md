@@ -6,12 +6,12 @@ helpviewer_keywords:
 - strings [C#], searching with String methods
 - strings [C#], searching with regular expressions
 ms.assetid: fb1d9a6d-598d-4a35-bd5f-b86012edcb2b
-ms.openlocfilehash: b9c27e419d37b6c0730f214d3b2b9bbdf7e30d11
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 12fb0e7c9fe02c3438fa989059dbea6238d24104
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202875"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420319"
 ---
 # <a name="how-to-search-strings"></a>방법: 문자열 검색
 
@@ -19,7 +19,7 @@ ms.locfileid: "57202875"
 
 [!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
-<xref:System.String?displayProperty=nameWithType> 클래스의 별칭인 [string](../language-reference/keywords/string.md) 형식은 문자열 내용을 검색하기 위한 여러 가지 유용한 메서드를 제공합니다. 그중에 <xref:System.String.Contains%2A>, <xref:System.String.StartsWith%2A>, <xref:System.String.EndsWith%2A>, <xref:System.String.IndexOf%2A>, <xref:System.String.LastIndexOf%2A>입니다. <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> 클래스는 텍스트에서 패턴을 검색하는 풍부한 어휘를 제공합니다. 이 문서에서는 이러한 기술 및 요구 사항에 대해 최상의 메서드를 선택하는 방법을 알아봅니다.
+<xref:System.String?displayProperty=nameWithType> 클래스의 별칭인 [string](../language-reference/builtin-types/reference-types.md#the-string-type) 형식은 문자열 내용을 검색하기 위한 여러 가지 유용한 메서드를 제공합니다. 그중에 <xref:System.String.Contains%2A>, <xref:System.String.StartsWith%2A>, <xref:System.String.EndsWith%2A>, <xref:System.String.IndexOf%2A>, <xref:System.String.LastIndexOf%2A>입니다. <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> 클래스는 텍스트에서 패턴을 검색하는 풍부한 어휘를 제공합니다. 이 문서에서는 이러한 기술 및 요구 사항에 대해 최상의 메서드를 선택하는 방법을 알아봅니다.
 
 ## <a name="does-a-string-contain-text"></a>문자열에 텍스트가 포함되어 있나요?
 

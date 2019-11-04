@@ -28,18 +28,18 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: e62825a88858a63984860cbc8a1c570f784f663f
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 8c650ceab57a46cb6dd396111e7a93163a62299f
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040871"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424938"
 ---
 # <a name="wpf-windows-overview"></a>WPF 창 개요
 사용자는 Windows를 통해 Windows Presentation Foundation (WPF) 독립 실행형 응용 프로그램과 상호 작용 합니다. 창의 기본 용도는 데이터를 시각화하는 콘텐츠를 호스트하고 사용자가 데이터와 상호 작용할 수 있도록 하는 것입니다. 독립 실행형 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램은 <xref:System.Windows.Window> 클래스를 사용 하 여 자체 창을 제공 합니다. 이 항목에서는 독립 실행형 응용 프로그램에서 windows를 만들고 관리 하는 기본적인 사항을 다루기 전에 <xref:System.Windows.Window> 소개 합니다.  
   
 > [!NOTE]
-> [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] 및 느슨한 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 페이지를 포함 하 여 브라우저에서 호스팅되는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램은 자체 창을 제공 하지 않습니다. 대신 Windows Internet Explorer에서 제공 하는 windows에서 호스팅됩니다. [WPF XAML 브라우저 응용 프로그램 개요](wpf-xaml-browser-applications-overview.md)를 참조 하세요.  
+> Xbap (XAML 브라우저 응용 프로그램) 및 느슨한 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 페이지를 비롯 한 브라우저에서 호스팅되는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램은 자체 창을 제공 하지 않습니다. 대신 Windows Internet Explorer에서 제공 하는 windows에서 호스팅됩니다. [WPF XAML 브라우저 응용 프로그램 개요](wpf-xaml-browser-applications-overview.md)를 참조 하세요.  
 
 <a name="TheWindowClass"></a>   
 ## <a name="the-window-class"></a>Window 클래스  
@@ -471,7 +471,7 @@ ms.locfileid: "73040871"
   
  그러나이는 ClickOnce를 사용 하 여 인터넷 또는 로컬 인트라넷 영역에서 시작 된 응용 프로그램에 부여 된 사용 권한 집합을 벗어납니다. 따라서 사용자는 ClickOnce 보안 경고를 받게 되며 응용 프로그램에 대 한 권한 집합을 완전 신뢰로 승격 시켜야 합니다.  
   
- 또한 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]는 기본적으로 창이 나 대화 상자를 표시할 수 없습니다. 독립 실행형 응용 프로그램 보안 고려 사항에 대 한 설명은 [WPF 보안 전략-플랫폼 보안](../wpf-security-strategy-platform-security.md)을 참조 하세요.  
+ 또한 Xbap는 기본적으로 창이 나 대화 상자를 표시할 수 없습니다. 독립 실행형 응용 프로그램 보안 고려 사항에 대 한 설명은 [WPF 보안 전략-플랫폼 보안](../wpf-security-strategy-platform-security.md)을 참조 하세요.  
   
 <a name="Other_Types_of_Windows"></a>   
 ## <a name="other-types-of-windows"></a>다른 유형의 창  

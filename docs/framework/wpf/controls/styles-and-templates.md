@@ -7,21 +7,21 @@ helpviewer_keywords:
 - styles [WPF]
 - templates [WPF]
 ms.assetid: 7fd571fd-d54a-40fc-b332-4c4015a5b6ff
-ms.openlocfilehash: d7a5e9515e78dd9c762973ca9854e04b44c1e18d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b47b9b7091e5421278fe867f79eb8abc62588b93
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790912"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459052"
 ---
 # <a name="styles-and-templates"></a>스타일 및 템플릿
-응용 프로그램, 문서 또는 사용자 인터페이스 (UI) 디자이너 시각적으로 뛰어난 응용 프로그램을 만들 수 있는 기능 (스타일, 템플릿, 트리거 및 스토리 보드)의 도구 모음에 Windows Presentation Foundation (WPF) 스타일 및 템플릿 참조 해당 제품에 대 한 특정 모양을 표준화할 합니다.  
+WPF (Windows Presentation Foundation) 스타일 지정 및 템플릿은 응용 프로그램, 문서 또는 UI (사용자 인터페이스) 디자이너에서 시각적으로 뛰어난 응용 프로그램을 만들 수 있도록 하는 기능 모음 (스타일, 템플릿, 트리거 및 스토리 보드)을 말합니다 제품에 대 한 특정 모양을 표준화 합니다.  
   
-## <a name="in-this-section"></a>섹션 내용  
- [스타일 지정 및 템플릿](styling-and-templating.md)  
-  [방법: ControlTemplate에서 생성 된 요소 찾기](how-to-find-controltemplate-generated-elements.md)  
+## <a name="in-this-section"></a>단원 내용  
+ [스타일 지정 및 템플릿](../../../desktop-wpf/fundamentals/styles-templates-overview.md)  
+  [방법: ControlTemplate에서 생성된 요소 찾기](how-to-find-controltemplate-generated-elements.md)  
   
-## <a name="reference"></a>참조  
+## <a name="reference"></a>참고  
  <xref:System.Windows.Style>  
   <xref:System.Windows.Controls.ControlTemplate>  
   <xref:System.Windows.DataTemplate>  

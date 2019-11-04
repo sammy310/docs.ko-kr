@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Visual Basic [WPF], event handlers
 - event handlers [WPF], Visual Basic
 ms.assetid: ad4eb9aa-3afc-4a71-8cf6-add3fbea54a1
-ms.openlocfilehash: 12ced911c6fded5dd9016ea377a3a4518c9c2ee1
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 9a3d579019db4d2b59a0252dbe63b4a6a0468849
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920334"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458307"
 ---
 # <a name="visual-basic-and-wpf-event-handling"></a>Visual Basic 및 WPF 이벤트 처리
 특히 Microsoft Visual Basic .NET 언어의 경우 특성을 사용 하 여 이벤트 처리기를 연결 하거나 <xref:System.Windows.UIElement.AddHandler%2A> 메서드를 사용 하는 대신 언어별 `Handles` 키워드를 사용 하 여 이벤트 처리기를 인스턴스와 연결할 수 있습니다. 그러나 처리기를 인스턴스에 연결하는 `Handles` 기술에는 몇 가지 제한 사항이 있습니다. 이는 `Handles` 구문이 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 이벤트 시스템의 특정 라우트된 이벤트 기능 중 일부를 지원할 수 없기 때문입니다.  
@@ -47,4 +47,4 @@ ms.locfileid: "72920334"
 - <xref:System.Windows.UIElement.AddHandler%2A>
 - [라우트된 이벤트를 처리된 것으로 표시 및 클래스 처리](marking-routed-events-as-handled-and-class-handling.md)
 - [라우트된 이벤트 개요](routed-events-overview.md)
-- [XAML 개요(WPF)](xaml-overview-wpf.md)
+- [XAML 개요(WPF)](../../../desktop-wpf/fundamentals/xaml.md)

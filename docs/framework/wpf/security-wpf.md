@@ -13,12 +13,12 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: 7e29b724259604a6ee09dff9cf9133b1739eb9ad
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
-ms.translationtype: HT
+ms.openlocfilehash: 908c3fb0baacc7fd75dae875e9a9d49a08fe5401
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424783"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459719"
 ---
 # <a name="security-wpf"></a>보안(WPF)
 <a name="introduction"></a>Windows Presentation Foundation (WPF) 독립 실행형 및 브라우저에서 호스팅되는 응용 프로그램을 개발 하는 경우 보안 모델을 고려해 야 합니다. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 독립 실행형 응용 프로그램은 Windows Installer (.msi), XCopy 또는 ClickOnce를 사용 하 여 배포 되었는지와 상관 없이 무제한 권한 (CAS**FullTrust** 권한 집합)으로 실행 됩니다. ClickOnce를 포함한 부분 신뢰, 독립 실행형 WPF 애플리케이션 배포가 지원되지 않습니다. 그러나 완전 신뢰 호스트 응용 프로그램은 .NET Framework 추가 기능 모델을 사용 하 여 부분 신뢰 <xref:System.AppDomain>를 만들 수 있습니다. 자세한 내용은 [WPF 추가 기능 개요](./app-development/wpf-add-ins-overview.md)를 참조 하세요.  
@@ -279,4 +279,4 @@ ms.locfileid: "73424783"
 - [애플리케이션에 대한 패턴 및 사례 보안 지침](https://go.microsoft.com/fwlink/?LinkId=117426)
 - [코드 액세스 보안](../misc/code-access-security.md)
 - [ClickOnce 보안 및 배포](/visualstudio/deployment/clickonce-security-and-deployment)
-- [XAML 개요(WPF)](./advanced/xaml-overview-wpf.md)
+- [XAML 개요(WPF)](../../desktop-wpf/fundamentals/xaml.md)

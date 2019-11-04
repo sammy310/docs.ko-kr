@@ -8,22 +8,22 @@ helpviewer_keywords:
 - resources [WPF]
 - reusing commonly defined objects [WPF]
 ms.assetid: 12ae4b67-cd0c-4c4d-a188-2c3de173bbb9
-ms.openlocfilehash: 3097fe627377e98ab283a5b6178acb9f74fc487c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8f3ab7a11757ba1936aae6e63ace28c4b336292b
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61981892"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458702"
 ---
 # <a name="resources-wpf"></a>리소스(WPF)
-리소스는 애플리케이션의 여러 위치에서 다시 사용할 수 있는 개체입니다. WPF는 다양 한 유형의 리소스를 지원합니다. 이러한 리소스는 주로 두 가지 유형의 리소스: XAML 리소스 및 리소스 데이터 파일입니다. XAML 리소스의 예로 브러시와 스타일이 있습니다. 리소스 데이터 파일은 응용 프로그램 해야 하는 실행 불가능 데이터 파일.  
+리소스는 애플리케이션의 여러 위치에서 다시 사용할 수 있는 개체입니다. WPF는 다양 한 형식의 리소스를 지원 합니다. 이러한 리소스는 주로 XAML 리소스와 리소스 데이터 파일의 두 가지 리소스 형식입니다. XAML 리소스의 예로는 브러시와 스타일이 있습니다. 리소스 데이터 파일은 응용 프로그램에 필요한 비실행 데이터 파일입니다.  
   
-## <a name="in-this-section"></a>섹션 내용  
- [XAML 리소스](xaml-resources.md)  
- [WPF 응용 프로그램 리소스, 콘텐츠 및 데이터 파일](../app-development/wpf-application-resource-content-and-data-files.md)  
+## <a name="in-this-section"></a>단원 내용  
+ [XAML 리소스](../../../desktop-wpf/fundamentals/xaml-resources-define.md)  
+ [WPF 애플리케이션 리소스, 콘텐츠 및 데이터 파일](../app-development/wpf-application-resource-content-and-data-files.md)  
  [WPF의 Pack URI](../app-development/pack-uris-in-wpf.md)  
   
-## <a name="reference"></a>참조  
+## <a name="reference"></a>참고  
  <xref:System.Windows.ResourceDictionary>  
   
  [StaticResource 태그 확장](staticresource-markup-extension.md)  

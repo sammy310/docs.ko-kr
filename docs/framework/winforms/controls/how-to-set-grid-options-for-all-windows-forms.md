@@ -8,17 +8,17 @@ helpviewer_keywords:
 - Windows Forms, grid options in designer
 - Windows Forms Designer
 ms.assetid: 36967466-1dfd-4fae-a7f1-7bf2cbc94048
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 681ae11052216c610d2f3ac7cf8846153d6a341c
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 5a69bbd25677e91d0a0c792a1e3c67f948fc90cb
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69987020"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460830"
 ---
-# <a name="how-to-set-grid-options-for-all-windows-forms"></a>방법: 모든 Windows Forms에 대 한 표 형태 옵션 설정
+# <a name="how-to-set-grid-options-for-all-windows-forms"></a>방법: 모든 Windows Forms에 대 한 모눈 옵션 설정
 
 Visual Studio 개발 환경에서 작업 하는 데 사용 되는 것 처럼 Windows Forms 디자이너에서 작업 하는 모든 폼과 프로젝트에 대 한 기본 설정을 지정할 수 있습니다.
 
@@ -28,8 +28,8 @@ Visual Studio 개발 환경에서 작업 하는 데 사용 되는 것 처럼 Win
 
 2. **옵션** 대화 상자의 왼쪽 창에서 **Windows Forms 디자이너**을 클릭 합니다.
 
-   오른쪽 창의 **레이아웃 설정** 머리글에서 새로 만드는 모든 폼에 대 한 기본 그리드 설정을 지정할 수 있습니다. 이러한 설정에는 그리드 크기, 컨트롤의 맞춤 여부 및 기본적으로 설정 되어 있는지 여부가 포함 됩니다. 또한 **SnapToGrid** 및 **맞춤선** 레이아웃 모드 중에서 선택할 수 있습니다. 맞춤선에 대 한 자세한 내용은 [연습: 맞춤선](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)을 사용 하 여 Windows Forms에 컨트롤 정렬
+   오른쪽 창의 **레이아웃 설정** 머리글에서 새로 만드는 모든 폼에 대 한 기본 그리드 설정을 지정할 수 있습니다. 이러한 설정에는 그리드 크기, 컨트롤의 맞춤 여부 및 기본적으로 설정 되어 있는지 여부가 포함 됩니다. 또한 **SnapToGrid** 및 **맞춤선** 레이아웃 모드 중에서 선택할 수 있습니다. 맞춤선에 대 한 자세한 내용은 [연습: 맞춤선을 사용 하 여 Windows Forms에서 컨트롤 정렬](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)을 참조 하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [옵션: Windows Forms 디자이너](/visualstudio/ide/reference/options-windows-forms-designer)

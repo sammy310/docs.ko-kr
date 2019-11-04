@@ -4,16 +4,16 @@ description: HDInsight에 .NET for Apache Spark 애플리케이션을 배포하�
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 2cb91032e0ce1d320b266772e8f9f1431df4a298
-ms.sourcegitcommit: 9b2ef64c4fc10a4a10f28a223d60d17d7d249ee8
+ms.openlocfilehash: 3604aff5d1f138071c941ea85546af03185d722d
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "72960974"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460725"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-azure-hdinsight"></a>자습서: Azure HDInsight에 .NET for Apache Spark 애플리케이션 배포
 
-이 자습서에서는 Azure HDInsight 클러스터를 통해 .NET for Apache Spark 앱을 클라우드에 배포하는 방법을 설명합니다. Hdinsight의 Spark 클러스터는 Azure Storage 및 Azure Data Lake Storage와 호환되므로, HDInsight를 사용하면 Azure에서 Spark 클러스터를 보다 쉽게 만들고 구성할 수 있습니다. 
+이 자습서에서는 Azure HDInsight 클러스터를 통해 .NET for Apache Spark 앱을 클라우드에 배포하는 방법을 설명합니다. Hdinsight의 Spark 클러스터는 Azure Storage 및 Azure Data Lake Storage와 호환되므로, HDInsight를 사용하면 Azure에서 Spark 클러스터를 보다 쉽게 만들고 구성할 수 있습니다.
 
 이 자습서에서는 다음과 같은 작업을 수행하는 방법을 살펴봅니다.
 
@@ -46,7 +46,7 @@ ms.locfileid: "72960974"
 
 ## <a name="create-an-hdinsight-cluster"></a>HDInsight 클러스터 만들기
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > HDInsight 클러스터에 대한 청구는 사용하지 않는 경우에도 분 단위로 비례 배분됩니다. 사용한 후에 클러스터를 삭제해야 합니다. 자세한 내용은 이 자습서의 [리소스 정리](#clean-up-resources) 섹션을 참조하세요.
 
 1. [Azure Portal](https://portal.azure.com)을 방문합니다.
@@ -82,7 +82,7 @@ ms.locfileid: "72960974"
 
 ## <a name="publish-your-app"></a>앱 게시
 
-[.NET for Apache Spark - Get Started in 10-Minutes](https://dotnet.microsoft.com/learn/data/spark-tutorial/intro)(.NET for Apache Spark - 10분 이내에 시작하기) 자습서에서 만든 *mySparkApp*을 게시하여 Spark 클러스터가 앱을 실행하는 데 필요한 모든 파일에 액세스할 수 있도록 합니다. 
+[.NET for Apache Spark - Get Started in 10-Minutes](https://dotnet.microsoft.com/learn/data/spark-tutorial/intro)(.NET for Apache Spark - 10분 이내에 시작하기) 자습서에서 만든 *mySparkApp*을 게시하여 Spark 클러스터가 앱을 실행하는 데 필요한 모든 파일에 액세스할 수 있도록 합니다.
 
 1. 다음 명령을 실행하여 *mySparkApp*을 게시합니다.
 
@@ -90,7 +90,7 @@ ms.locfileid: "72960974"
 
    ```console
    cd mySparkApp
-   dotnet publish -c Release -f netcoreapp3.0 -r ubuntu.16.04-x6
+   dotnet publish -c Release -f netcoreapp3.0 -r ubuntu.16.04-x64
    ```
 
    **Linux:**
@@ -114,7 +114,7 @@ ms.locfileid: "72960974"
 
 ## <a name="upload-files-to-azure"></a>Azure에 파일 업로드
 
-Azure Storage Explorer를 사용하여 클러스터 스토리지로 선택한 Blob 컨테이너에 다음 5개 파일을 업로드합니다. 
+Azure Storage Explorer를 사용하여 클러스터 스토리지로 선택한 Blob 컨테이너에 다음 5개 파일을 업로드합니다.
 
 * Microsoft.Spark.Worker
 * install-worker.sh
@@ -128,7 +128,7 @@ Azure Storage Explorer를 사용하여 클러스터 스토리지로 선택한 Bl
 
    ![Azure Storage Explorer에 파일 업로드](./media/hdinsight-deployment/upload-files-to-storage.png)
 
-3. *install-worker.sh*는 .NET for Apache Spark 종속 파일을 클러스터의 노드에 복사하는 데 사용할 수 있는 스크립트입니다. 
+3. *install-worker.sh*는 .NET for Apache Spark 종속 파일을 클러스터의 노드에 복사하는 데 사용할 수 있는 스크립트입니다.
 
    로컬 컴퓨터에 **install-worker.sh**라는 새 파일을 만들고 GitHub에 있는 [install-worker.sh 콘텐츠](https://raw.githubusercontent.com/dotnet/spark/master/deployment/install-worker.sh)를 붙여넣습니다. Blob 컨테이너에 *install-worker.sh*를 업로드합니다.
 
@@ -142,7 +142,7 @@ Azure Storage Explorer를 사용하여 클러스터 스토리지로 선택한 Bl
 
 ## <a name="run-the-hdinsight-script-action"></a>HDInsight 스크립트 동작 실행
 
-클러스터가 실행 중이고 Azure에 파일을 업로드했으면, 클러스터에서 **install-worker.sh** 스크립트를 실행합니다. 
+클러스터가 실행 중이고 Azure에 파일을 업로드했으면, 클러스터에서 **install-worker.sh** 스크립트를 실행합니다.
 
 1. Azure Portal에서 해당 HDInsight Spark 클러스터로 이동한 다음, **스크립트 동작**을 선택합니다.
 
@@ -154,7 +154,7 @@ Azure Storage Explorer를 사용하여 클러스터 스토리지로 선택한 Bl
    | name | 작업자 설치|
    | Bash 스크립트 URI |https://mystorageaccount.blob.core.windows.net/mycontainer/install-worker.sh </br> 이 URI를 확인하려면 Azure Storage Explorer에서 install-worker.sh를 마우스 오른쪽 단추로 클릭하고 속성을 선택합니다. |
    | 노드 유형| 작업자|
-   | 매개 변수 | azure </br> wasbs://mycontainer@myStorageAccount.blob.core.windows.net/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz </br> /usr/local/bin 
+   | 매개 변수 | azure </br> wasbs://mycontainer@myStorageAccount.blob.core.windows.net/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz </br> /usr/local/bin
 
 3. **만들기**를 선택하여 스크립트를 제출합니다.
 

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: eec46337-9696-435b-a375-dc5effae6992
-ms.openlocfilehash: f92f3c0f8d7b849772f96415d03b0924b1e341a3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c206faf81868d6e871327a73ef0680936b132918
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61922527"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459257"
 ---
 # <a name="examples-of-xml-serialization"></a>XML Serialization 예제
 
@@ -74,7 +74,7 @@ private void SerializeDataSet(string filename){
 
 ## <a name="serializing-an-xmlelement-and-xmlnode"></a>XmlElement 및 XmlNode serialize
 
-인스턴스를 serialize 할 수도 있습니다는 <xref:System.Xml.XmlElement> 또는 <xref:System.Xml.XmlNode> 클래스에 다음 코드 예제에 표시 된 대로 합니다.
+다음 코드 예제와 같이 <xref:System.Xml.XmlElement> 또는 <xref:System.Xml.XmlNode> 클래스의 인스턴스를 serialize 할 수도 있습니다.
 
 ```vb
 private Sub SerializeElement(filename As String)
@@ -123,7 +123,7 @@ private void SerializeNode(string filename){
 
 ## <a name="serializing-a-class-that-contains-a-field-returning-a-complex-object"></a>복잡한 개체를 반환하는 필드가 포함된 클래스 serialize
 
-속성 또는 필드가 복잡한 개체(예: 배열 또는 클래스 인스턴스)를 반환하는 경우 <xref:System.Xml.Serialization.XmlSerializer>는 그 개체를 주 XML 문서 내의 중첩된 요소로 변환합니다. 예를 들어, 다음 코드 예제의 첫째 클래스는 둘째 클래스의 인스턴스를 반환합니다.
+속성이 나 필드가 복합 개체 (예: 배열 또는 클래스 인스턴스)를 반환 하는 경우 <xref:System.Xml.Serialization.XmlSerializer>는이 개체를 주 XML 문서 내에 중첩 된 요소로 변환 합니다. 예를 들어, 다음 코드 예제의 첫째 클래스는 둘째 클래스의 인스턴스를 반환합니다.
 
 ```vb
 Public Class PurchaseOrder
@@ -192,11 +192,11 @@ public class Item
         <Item>
             <ItemID>aaa111</ItemID>
             <ItemPrice>34.22</ItemPrice>
-        <Item>
+        </Item>
         <Item>
             <ItemID>bbb222</ItemID>
             <ItemPrice>2.89</ItemPrice>
-        <Item>
+        </Item>
     </ItemsOrders>
 </PurchaseOrder>
 ```
@@ -370,7 +370,7 @@ public class Employee {
 
 `CreatePO` 메서드는 `PurchaseOrder`, `Address` 및 `OrderedItem` 클래스 개체를 만들고 public 필드 값을 설정합니다. 메서드는 <xref:System.Xml.Serialization.XmlSerializer>를 serialize하고 deserialize하는 데 사용되는 `PurchaseOrder` 클래스의 인스턴스도 생성합니다. 코드는 serialize될 클래스 형식을 생성자에 전달합니다. 또한 코드는 XML 스트림을 XML 문서에 쓰는 데 사용되는 `FileStream`도 만듭니다.
 
-`ReadPo` 메서드는 조금 더 간단합니다. deserialize할 개체를 만들고 그 값을 읽습니다. 와 마찬가지로 합니다 `CreatePo` 메서드를 먼저 구성 해야는 <xref:System.Xml.Serialization.XmlSerializer>를 생성자에 deserialize 할 클래스의 형식을 전달 합니다. 또한 XML 문서를 읽기 위해 <xref:System.IO.FileStream>이 필요합니다. 개체를 deserialize하기 위해 <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A>을 인수로 사용하여 <xref:System.IO.FileStream> 메서드를 호출합니다. deserialize된 개체는 `PurchaseOrder` 형식의 개체 변수로 캐스팅되어야 합니다. 그런 다음 코드는 deserialize된 `PurchaseOrder`의 값을 읽습니다. 작성된 PO.xml 파일을 읽어 실제 XML 출력을 볼 수 있습니다.
+`ReadPo` 메서드는 조금 더 간단합니다. deserialize할 개체를 만들고 그 값을 읽습니다. `CreatePo` 메서드와 마찬가지로 deserialize 할 클래스의 형식을 생성자에 전달 하 여 <xref:System.Xml.Serialization.XmlSerializer>를 먼저 생성 해야 합니다. 또한 XML 문서를 읽기 위해 <xref:System.IO.FileStream>이 필요합니다. 개체를 deserialize하기 위해 <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A>을 인수로 사용하여 <xref:System.IO.FileStream> 메서드를 호출합니다. deserialize된 개체는 `PurchaseOrder` 형식의 개체 변수로 캐스팅되어야 합니다. 그런 다음 코드는 deserialize된 `PurchaseOrder`의 값을 읽습니다. 작성된 PO.xml 파일을 읽어 실제 XML 출력을 볼 수 있습니다.
 
 ```vb
 Imports System
@@ -769,11 +769,11 @@ XML 출력은 다음과 같을 수 있습니다.
 </PurchaseOrder>
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
-- [XML serialization 소개](../../../docs/standard/serialization/introducing-xml-serialization.md)
-- [특성을 사용하여 XML serialization 제어](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)
-- [XML serialization을 제어하는 특성](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md)
+- [XML serialization 소개](introducing-xml-serialization.md)
+- [특성을 사용하여 XML serialization 제어](controlling-xml-serialization-using-attributes.md)
+- [XML serialization을 제어하는 특성](attributes-that-control-xml-serialization.md)
 - [XmlSerializer 클래스](xref:System.Xml.Serialization.XmlSerializer)
-- [방법: 개체 serialize](../../../docs/standard/serialization/how-to-serialize-an-object.md)
-- [방법: 개체 deserialize](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+- [방법: 개체 직렬화](how-to-serialize-an-object.md)
+- [방법: 개체 deserialize](how-to-deserialize-an-object.md)

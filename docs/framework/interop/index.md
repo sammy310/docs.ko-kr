@@ -10,12 +10,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, about interoperation
 - components [.NET Framework], interoperation with unmanaged code
 ms.assetid: ccb68ce7-b0e9-4ffb-839d-03b1cd2c1258
-ms.openlocfilehash: cdd8d2781331956289d2b74162e653ba1ee8fad6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 12183f390a5178f038c6dd2122a72a33e31ae0ee
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73114236"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457962"
 ---
 # <a name="interoperating-with-unmanaged-code"></a>비관리 코드와의 상호 운용
 
@@ -40,9 +40,6 @@ COM interop 및 플랫폼 호출에 대한 마샬링을 설명합니다.
 [방법: HRESULT 및 예외 매핑](how-to-map-hresults-and-exceptions.md)  
 실행과 HRESULT 간 매핑을 설명합니다.
 
-[COM 래퍼](com-wrappers.md)  
-COM interop에서 제공하는 래퍼에 대해 설명합니다.
-
 [동일 형식 및 포함된 Interop 형식](type-equivalence-and-embedded-interop-types.md)  
 COM 형식에 대한 형식 정보가 어셈블리에 포함되는 방식과 공용 언어 런타임에서 포함된 COM 형식이 동일한지 결정하는 방법을 설명합니다.
 
@@ -57,3 +54,8 @@ COM interop에서 Windows 레지스트리를 사용하지 않고 구성 요소�
 
 [방법: 등록이 필요 없는 활성화를 위한 .NET Framework 기반 COM 구성 요소 구성](configure-net-framework-based-com-components-for-reg.md)  
 애플리케이션 매니페스트를 만드는 방법과 구성 요소 매니페스트를 만들고 포함하는 방법에 대해 설명합니다.
+
+## <a name="related-sections"></a>관련 단원
+
+[COM 래퍼](../../standard/native-interop/com-wrappers.md)  
+COM interop에서 제공하는 래퍼에 대해 설명합니다.

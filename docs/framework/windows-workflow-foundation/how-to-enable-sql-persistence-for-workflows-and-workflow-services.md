@@ -1,16 +1,13 @@
 ---
 title: '방법: 워크플로 및 워크플로 서비스에 SQL 지속성 사용'
 ms.date: 03/30/2017
-dev_langs:
-- csharp
-- vb
 ms.assetid: ca7bf77f-3e5d-4b23-b17a-d0b60f46411d
-ms.openlocfilehash: b3ba21234af9555a4e40a0b587ac21473cff8761
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 4dc5648d748372828c5b9a36441bfb02eef045e1
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834833"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460883"
 ---
 # <a name="how-to-enable-sql-persistence-for-workflows-and-workflow-services"></a>방법: 워크플로 및 워크플로 서비스에 SQL 지속성 사용
 
@@ -29,7 +26,7 @@ SQL 워크플로 인스턴스 저장소 기능을 사용하기 전에 이 기능
 > [!IMPORTANT]
 > 지속성 데이터베이스를 만들지 않으면 호스트가 워크플로를 유지하려고 시도할 때 SQL 워크플로 인스턴스 저장소 기능에서 다음과 유사한 예외가 throw됩니다.
 >
-> System.Data.SqlClient.SqlException: 저장 프로시저 ' DurableInstancing '를 찾을 수 없습니다.
+> System.Data.SqlClient.SqlException: 'System.Activities.DurableInstancing.CreateLockOwner' 저장 프로시저를 찾을 수 없습니다.
 
 다음 단원에서는 SQL 워크플로 인스턴스 저장소를 사용하여 워크플로 및 워크플로 서비스에 지속성을 사용하는 방법을 설명합니다. SQL 워크플로 인스턴스 저장소의 속성에 대 한 자세한 내용은 [Sql 워크플로 인스턴스 저장소의 속성](properties-of-sql-workflow-instance-store.md)을 참조 하세요.
 
@@ -72,7 +69,7 @@ SQL 워크플로 인스턴스 저장소 기능을 사용하기 전에 이 기능
    ```
 
 > [!NOTE]
-> @No__t-0How to: 단계별 지침에 대 한 [시작 자습서](getting-started-tutorial.md) 의 장기 실행 워크플로 @ no__t-0 단계를 만들고 실행 합니다.
+> 단계별 지침은 방법: [시작 자습서](getting-started-tutorial.md) 의 [장기 실행 워크플로 만들기 및 실행](how-to-create-and-run-a-long-running-workflow.md) 단계를 참조 하세요.
 
 ## <a name="enabling-persistence-for-self-hosted-workflow-services-that-use-the-workflowservicehost"></a>WorkflowServiceHost를 사용하는 자체 호스팅 워크플로 서비스에 지속성 사용
 
@@ -92,7 +89,7 @@ SQL 워크플로 인스턴스 저장소 기능을 사용하기 전에 이 기능
     using System.ServiceModel.Activities.Description;
     ```
 
-3. `WorkflowServiceHost` 인스턴스를 만들고 워크플로 서비스에 대한 엔드포인트를 추가합니다.
+3. ph x="1" /&gt; 인스턴스를 만들고 워크플로 서비스에 대한 엔드포인트를 추가합니다.
 
     ```csharp
     WorkflowServiceHost host = new WorkflowServiceHost(new CountingWorkflow(), new Uri(hostBaseAddress));
@@ -129,7 +126,7 @@ workflowServiceHost.DurableInstancingOptions.InstanceStore = sqlInstanceStoreObj
 
 구성 파일을 통해 자체 호스팅 또는 WAS(Windows Process Activation Service) 호스팅 워크플로 서비스에 지속성을 사용할 수 있습니다. WAS 호스팅 워크플로 서비스는 자체 호스팅 워크플로 서비스와 마찬가지로 WorkflowServiceHost를 사용합니다.
 
-@No__t-0은 XML 구성을 통해 [SQL 워크플로 인스턴스 저장소](sql-workflow-instance-store.md) 속성을 편리 하 게 변경할 수 있도록 하는 서비스 동작입니다. WAS 호스팅 워크플로 서비스에는 Web.config 파일을 사용합니다. 다음 구성 예제에서는 구성 파일에서 `sqlWorkflowInstanceStore` 동작 요소를 사용하여 SQL 워크플로 인스턴스 저장소를 구성하는 방법을 보여 줍니다.
+`SqlWorkflowInstanceStoreBehavior`는 XML 구성을 통해 [SQL 워크플로 인스턴스 저장소](sql-workflow-instance-store.md) 속성을 편리 하 게 변경할 수 있도록 하는 서비스 동작입니다. WAS 호스팅 워크플로 서비스에는 Web.config 파일을 사용합니다. 다음 구성 예제에서는 구성 파일에서 `sqlWorkflowInstanceStore` 동작 요소를 사용하여 SQL 워크플로 인스턴스 저장소를 구성하는 방법을 보여 줍니다.
 
 ```xml
 <serviceBehaviors>
@@ -140,9 +137,8 @@ workflowServiceHost.DurableInstancingOptions.InstanceStore = sqlInstanceStoreObj
                     instanceCompletionAction="DeleteAll | DeleteNothing"
                     instanceLockedExceptionAction="NoRetry | BasicRetry |AggressiveRetry"
                     hostLockRenewalPeriod="00:00:30"
-                    runnableInstancesDetectionPeriod="00:00:05">
+                    runnableInstancesDetectionPeriod="00:00:05" />
 
-        <sqlWorkflowInstanceStore/>
     </behavior>
 </serviceBehaviors>
 ```
@@ -172,6 +168,6 @@ workflowServiceHost.DurableInstancingOptions.InstanceStore = sqlInstanceStoreObj
                     <add name="sqlWorkflowInstanceStore" type="System.Activities.DurableInstancing.SqlWorkflowInstanceStoreElement, System.Activities.DurableInstancing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
                 </behaviorExtensions>
             </extensions>
-        <system.serviceModel>
-    <configuration>
+        </system.serviceModel>
+    </configuration>
     ```

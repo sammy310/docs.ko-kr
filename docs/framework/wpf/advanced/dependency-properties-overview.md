@@ -14,19 +14,19 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-ms.openlocfilehash: b7401cd3e9551b378983193f4c5e8e4107954b74
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 663dd7a785200ddbc78cc0cd1fb5b43531982f42
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401421"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458950"
 ---
 # <a name="dependency-properties-overview"></a>종속성 속성 개요
 
 WPF(Windows Presentation Foundation)에서는 형식의 [속성](../../../standard/base-types/common-type-system.md#Properties) 기능을 확장하는 데 사용할 수 있는 서비스 집합을 제공합니다. 일반적으로 이러한 서비스를 WPF 속성 시스템이라고 통칭합니다. WPF 속성 시스템에서 지원하는 속성을 종속성 속성이라고 합니다. 이 개요에서는 WPF 속성 시스템 및 종속성 속성의 기능에 대해 설명합니다. XAML 및 코드에서 기존 종속성 속성을 사용하는 방법도 설명합니다. 또한 이 개요에서는 종속성 속성 메타데이터 같은 종속성 속성의 특수한 측면과 사용자 지정 클래스에서 종속성 속성을 직접 만드는 방법을 소개합니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
-이 항목에서는 .NET 형식 시스템 및 개체 지향 프로그래밍에 대한 기본 지식이 있다고 가정합니다. 이 항목의 예제를 따르려면 XAML을 이해하고 WPF 애플리케이션을 작성하는 방법도 알아야 합니다. 자세한 내용은 [연습: 내 첫 번째 WPF 데스크톱](../getting-started/walkthrough-my-first-wpf-desktop-application.md)응용 프로그램입니다.  
+## <a name="prerequisites"></a>Prerequisites
+이 항목에서는 .NET 형식 시스템 및 개체 지향 프로그래밍에 대한 기본 지식이 있다고 가정합니다. 이 항목의 예제를 따르려면 XAML을 이해하고 WPF 애플리케이션을 작성하는 방법도 알아야 합니다. 자세한 내용은 [연습: 내 첫 WPF 데스크톱 애플리케이션](../getting-started/walkthrough-my-first-wpf-desktop-application.md)을 참조하세요.  
   
 ## <a name="dependency-properties-and-clr-properties"></a>종속성 속성 및 CLR 속성
  WPF에서 속성은 일반적으로 표준 .NET [속성](../../../standard/base-types/common-type-system.md#Properties)으로 노출됩니다. 기본 수준에서는 이러한 속성을 직접 조작할 수 있으며 종속성 속성으로 구현되는지를 알 수 없습니다. 그러나 WPF 속성 시스템 기능의 일부 또는 전체를 잘 알고 있어야 이러한 기능을 활용할 수 있습니다.
@@ -40,11 +40,11 @@ SDK 참조에서는 속성에 대한 관리되는 참조 페이지에 [종속성
 
 다음은 종속성 속성에 사용되는 용어를 나열합니다.
 
-- **종속성 속성:** 에 <xref:System.Windows.DependencyProperty>의해 지원 되는 속성입니다.
+- **종속성 속성:** <xref:System.Windows.DependencyProperty>에서 지원하는 속성입니다.
 
-- **종속성 속성 식별자:** 종속성 속성을 등록할 때 반환 값으로 가져온 다음 클래스의 정적 멤버로 저장 되는 인스턴스입니다.<xref:System.Windows.DependencyProperty> 이 식별자는 WPF 속성 시스템과 상호 작용하는 많은 API에 대한 매개 변수로 사용됩니다.
+- **종속성 속성 식별자:** 종속성 속성을 등록할 때 반환 값으로 가져온 다음, 클래스의 정적 멤버로 저장하는 <xref:System.Windows.DependencyProperty> 인스턴스입니다. 이 식별자는 WPF 속성 시스템과 상호 작용하는 많은 API에 대한 매개 변수로 사용됩니다.
 
-- **CLR "래퍼":** 속성에 대 한 실제 get 및 set 구현입니다. 이러한 구현은 <xref:System.Windows.DependencyObject.GetValue%2A> 및 <xref:System.Windows.DependencyObject.SetValue%2A> 호출에서 종속성 속성 식별자를 사용하여 이 식별자를 통합하므로 WPF 속성 시스템을 사용하는 속성에 대한 지원을 제공합니다.
+- **CLR "래퍼":** 속성에 대한 실제 get 및 set 구현입니다. 이러한 구현은 <xref:System.Windows.DependencyObject.GetValue%2A> 및 <xref:System.Windows.DependencyObject.SetValue%2A> 호출에서 종속성 속성 식별자를 사용하여 이 식별자를 통합하므로 WPF 속성 시스템을 사용하는 속성에 대한 지원을 제공합니다.
 
 다음 예제에서는 `IsSpinning` 종속성 속성을 정의하고 <xref:System.Windows.DependencyProperty> 식별자와 이 식별자가 지원하는 속성의 관계를 보여 줍니다.
 
@@ -61,7 +61,7 @@ SDK 참조에서는 속성에 대한 관리되는 참조 페이지에 [종속성
 
 [!code-xaml[PropertiesOvwSupport#MostBasicProperty](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/Page1.xaml#mostbasicproperty)]
 
-XAML은 속성을 설정하는 다양한 구문 형식 지원 특정 속성에 사용할 구문은 형식 변환기의 존재 여부와 같은 다른 요소뿐만 아니라 속성에서 사용하는 값 형식에 따라 달라집니다. 속성 설정을 위한 XAML 구문에 대한 자세한 내용은 [XAML 개요(WPF)](xaml-overview-wpf.md) 및 [XAML 구문 정보](xaml-syntax-in-detail.md)를 참조하세요.
+XAML은 속성을 설정하는 다양한 구문 형식 지원 특정 속성에 사용할 구문은 형식 변환기의 존재 여부와 같은 다른 요소뿐만 아니라 속성에서 사용하는 값 형식에 따라 달라집니다. 속성 설정을 위한 XAML 구문에 대한 자세한 내용은 [XAML 개요(WPF)](../../../desktop-wpf/fundamentals/xaml.md) 및 [XAML 구문 정보](xaml-syntax-in-detail.md)를 참조하세요.
 
 비 특성 구문 예제로 다음 XAML 예제에서는 또 다른 단추 배경을 보여 줍니다. 이번에는 간단한 단색을 설정하는 대신 배경을 이미지로 설정하여 해당 이미지와 해당 이미지의 소스를 나타내는 요소가 중첩된 요소의 특성으로 지정됩니다. 이 예제는 속성 요소 구문의 예제입니다.
 
@@ -78,11 +78,11 @@ XAML은 속성을 설정하는 다양한 구문 형식 지원 특정 속성에 �
 [!code-csharp[PropertiesOvwSupport#ProceduralPropertyGet](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/Page1.xaml.cs#proceduralpropertyget)]
  [!code-vb[PropertiesOvwSupport#ProceduralPropertyGet](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page1.xaml.vb#proceduralpropertyget)]
 
-속성 시스템 api <xref:System.Windows.DependencyObject.GetValue%2A> <xref:System.Windows.DependencyObject.SetValue%2A> 를 직접 호출할 수도 있습니다. 이는 일반적으로 기존 속성을 사용 하는 경우에는 필요 하지 않습니다 (래퍼가 더 편리 하 고 개발자 도구에 대 한 속성을 더 잘 제공 함). 그러나 Api를 직접 호출 하는 것이 특정 시나리오에 적합 합니다.
+<xref:System.Windows.DependencyObject.GetValue%2A> 속성 시스템 Api를 호출 하 고 직접 <xref:System.Windows.DependencyObject.SetValue%2A> 수도 있습니다. 이는 일반적으로 기존 속성을 사용 하는 경우에는 필요 하지 않습니다 (래퍼가 더 편리 하 고 개발자 도구에 대 한 속성을 더 잘 제공 함). 그러나 Api를 직접 호출 하는 것이 특정 시나리오에 적합 합니다.
 
 또한 속성은 XAML에서 설정한 다음 나중에 코드 숨김을 통해 코드에서 액세스할 수 있습니다. 자세한 내용은 [WPF의 코드 숨김 및 XAML](code-behind-and-xaml-in-wpf.md)을 참조하세요.
 
-## <a name="property-functionality-provided-by-a-dependency-property"></a>종속성 속성이 제공하는 속성 기능
+## <a name="property-functionality-provided-by-a-dependency-property"></a>종속성 속성에서 제공하는 속성 기능
 종속성 속성은 필드에서 지원하는 속성과 반대로 속성의 기능을 확장하는 기능을 제공합니다. 종종 이러한 기능은 다음과 같은 특정 기능 중 하나를 지원하거나 나타냅니다.
 
 - [리소스](#resources)
@@ -99,7 +99,7 @@ XAML은 속성을 설정하는 다양한 구문 형식 지원 특정 속성에 �
 
 - [WPF Designer 통합](#wpf-designer-integration)
 
-### <a name="resources"></a>리소스
+### <a name="resources"></a>자료
 종속성 속성 값은 리소스를 참조하여 설정할 수 있습니다. 일반적으로 리소스는 페이지 루트 요소 또는 애플리케이션의 `Resources` 속성 값으로 지정됩니다. 이러한 위치를 통해 리소스에 가장 편리하게 액세스할 수 있습니다. 다음 예제에서는 <xref:System.Windows.Media.SolidColorBrush> 리소스를 정의하는 방법을 보여 줍니다.
 
 [!code-xaml[PropertiesOvwSupport#ResourcesResource](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page2.xaml#resourcesresource)]
@@ -168,7 +168,7 @@ XAML은 속성을 설정하는 다양한 구문 형식 지원 특정 속성에 �
 자세한 내용은 [속성 값 상속](property-value-inheritance.md)을 참조하세요.
 
 ### <a name="wpf-designer-integration"></a>WPF Designer 통합
-종속성 속성으로 구현되는 속성이 있는 사용자 지정 컨트롤은 적절한 [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] 지원을 받습니다. 한 가지 예는 **속성** 창을 사용하여 직접 및 연결된 종속성 속성을 편집하는 기능입니다. 자세한 내용은 [컨트롤 제작 개요](../controls/control-authoring-overview.md)를 참조하십시오.
+종속성 속성으로 구현되는 속성이 있는 사용자 지정 컨트롤은 적절한 [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] 지원을 받습니다. 한 가지 예는 **속성** 창을 사용하여 직접 및 연결된 종속성 속성을 편집하는 기능입니다. 자세한 내용은 [컨트롤 제작 개요](../controls/control-authoring-overview.md)를 참조하세요.
 
 ## <a name="dependency-property-value-precedence"></a>종속성 속성 값 우선 순위
 종속성 속성의 값을 가져오면 WPF 속성 시스템에 참여하는 다른 속성 기반 입력 중 하나를 통해 해당 속성에 설정된 값을 가져오는 것입니다. 종속성 속성 값 우선 순위는 속성이 해당 값을 가져오는 방법에 대한 다양한 시나리오가 예측 가능한 방식으로 상호 작용할 수 있도록 존재합니다.
@@ -196,9 +196,9 @@ XAML은 속성을 설정하는 다양한 구문 형식 지원 특정 속성에 �
 
 - 일반적으로 종속성 속성은 인스턴스에 액세스할 수 있는 모든 호출자가 액세스할 수 있거나 적어도 검색할 수 있는 public 속성으로 간주되어야 합니다. 자세한 내용은 [종속성 속성 보안](dependency-property-security.md)을 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [사용자 지정 종속성 속성](custom-dependency-properties.md)
 - [읽기 전용 종속성 속성](read-only-dependency-properties.md)
-- [XAML 개요(WPF)](xaml-overview-wpf.md)
+- [XAML 개요(WPF)](../../../desktop-wpf/fundamentals/xaml.md)
 - [WPF 아키텍처](wpf-architecture.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - loading non-resource files
 - application management [WPF]
 ms.assetid: 43adb517-21a7-4df3-98e8-09e9cdf764c4
-ms.openlocfilehash: 59c72d9ae12a014a8c47cb3b2852b337b173446c
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: efaf55220a41526b8952f01b8225f8336a4e8657
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72580626"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459671"
 ---
 # <a name="pack-uris-in-wpf"></a>WPF의 Pack URI
 
@@ -188,7 +188,7 @@ pack://*authority* /*경로*
 
 MSBuild `Page` 항목으로 구성 된 XAML 파일은 리소스 파일과 같은 방식으로 어셈블리로 컴파일됩니다. 따라서 리소스 파일에 대 한 pack Uri를 사용 하 여 MSBuild `Page` 항목을 식별할 수 있습니다.
 
-MSBuild `Page` 항목으로 일반적으로 구성 된 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 파일의 형식에는 다음 중 하나가 루트 요소로 포함 됩니다.
+MSBuild`Page` 항목으로 일반적으로 구성 된 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 파일의 형식에는 다음 중 하나가 루트 요소로 포함 됩니다.
 
 - <xref:System.Windows.Window?displayProperty=nameWithType>
 
@@ -255,9 +255,9 @@ Pack URI가 참조 하는 파일의 형식을 확인 하기 위해 다음 추론
 
 1. Pack URI와 일치 하는 <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> 특성에 대 한 어셈블리 메타 데이터를 검색 합니다.
 
-2. @No__t_0 특성이 있는 경우 pack URI의 경로는 콘텐츠 파일을 참조 합니다.
+2. <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> 특성이 있는 경우 pack URI의 경로는 콘텐츠 파일을 참조 합니다.
 
-3. @No__t_0 특성을 찾을 수 없는 경우 로컬 어셈블리로 컴파일되는 집합 리소스 파일을 검색 합니다.
+3. <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> 특성을 찾을 수 없는 경우 로컬 어셈블리로 컴파일되는 집합 리소스 파일을 검색 합니다.
 
 4. Pack URI의 경로와 일치 하는 리소스 파일이 있는 경우 pack URI의 경로는 리소스 파일을 참조 합니다.
 
@@ -265,7 +265,7 @@ Pack URI가 참조 하는 파일의 형식을 확인 하기 위해 다음 추론
 
 URI 확인은 다음을 참조 하는 uri에는 적용 되지 않습니다.
 
-- 참조 된 어셈블리의 콘텐츠 파일: 이러한 파일 형식은 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 지원 되지 않습니다.
+- 참조 된 어셈블리의 콘텐츠 파일: 이러한 파일 형식은 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]지원 되지 않습니다.
 
 - 참조 된 어셈블리에 포함 된 파일: 참조 된 어셈블리의 이름과 `;component` 접미사를 모두 포함 하기 때문에이를 식별 하는 Uri는 고유 합니다.
 
@@ -334,7 +334,7 @@ Pack uri를 사용 하 여 특성의 요소를 설정 하 여 태그에 pack URI
 
 ### <a name="using-pack-uris-in-code"></a>코드에서 Pack URI 사용
 
-@No__t_0 클래스를 인스턴스화하고 pack URI를 매개 변수로 생성자에 전달 하 여 코드에서 pack URI를 지정 합니다. 다음 예제를 통해 볼 수 있습니다.
+<xref:System.Uri> 클래스를 인스턴스화하고 pack URI를 매개 변수로 생성자에 전달 하 여 코드에서 pack URI를 지정 합니다. 다음 예제를 통해 볼 수 있습니다.
 
 ```csharp
 Uri uri = new Uri("pack://application:,,,/File.xaml");
@@ -397,7 +397,7 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
 
 ### <a name="common-pack-uri-scenarios"></a>일반적인 Pack URI 시나리오
 
-이전 섹션에서는 pack Uri를 구성 하 여 리소스, 콘텐츠 및 원본 사이트 파일을 식별 하는 방법에 대해 설명 했습니다. @No__t_0 이러한 구성은 다양 한 방법으로 사용 되며, 다음 섹션에서는 몇 가지 일반적인 사용법을 다룹니다.
+이전 섹션에서는 pack Uri를 구성 하 여 리소스, 콘텐츠 및 원본 사이트 파일을 식별 하는 방법에 대해 설명 했습니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]이러한 구성은 다양 한 방법으로 사용 되며, 다음 섹션에서는 몇 가지 일반적인 사용법을 다룹니다.
 
 <a name="Specifying_the_UI_to_Show_when_an_Application_Starts"></a>
 
@@ -407,11 +407,11 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
 
 [!code-xaml[PackURIOverviewSnippets#StartupUriWindow](~/samples/snippets/csharp/VS_Snippets_Wpf/PackURIOverviewSnippets/CS/Copy of App.xaml#startupuriwindow)]
 
-다음 예제와 같이 독립 실행형 응용 프로그램 및 [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]는 페이지를 초기 UI로 지정할 수도 있습니다.
+다음 예제와 같이 독립 실행형 응용 프로그램과 Xbap (XAML 브라우저 응용 프로그램)는 페이지를 초기 UI로 지정할 수도 있습니다.
 
 [!code-xaml[PackURIOverviewSnippets#StartupUriPage](~/samples/snippets/csharp/VS_Snippets_Wpf/PackURIOverviewSnippets/CS/App.xaml#startupuripage)]
 
-응용 프로그램이 독립 실행형 응용 프로그램이 고 <xref:System.Windows.Application.StartupUri%2A>를 사용 하 여 페이지가 지정 된 경우 페이지를 호스트 하는 <xref:System.Windows.Navigation.NavigationWindow> [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 열립니다. @No__t_0의 경우 페이지가 호스트 브라우저에 표시 됩니다.
+응용 프로그램이 독립 실행형 응용 프로그램이 고 <xref:System.Windows.Application.StartupUri%2A>를 사용 하 여 페이지가 지정 된 경우 페이지를 호스트 하는 <xref:System.Windows.Navigation.NavigationWindow> [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 열립니다. Xbap의 경우 페이지가 호스트 브라우저에 표시 됩니다.
 
 <a name="Navigating_to_a_Page"></a>
 
@@ -423,7 +423,7 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
 [!code-xaml[NavigationOverviewSnippets#HyperlinkXAML2](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithHyperlink.xaml#hyperlinkxaml2)]
 [!code-xaml[NavigationOverviewSnippets#HyperlinkXAML3](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithHyperlink.xaml#hyperlinkxaml3)]
 
-@No__t_0 탐색 하는 다양 한 방법에 대 한 자세한 내용은 [탐색 개요](navigation-overview.md)를 참조 하세요.
+[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]탐색 하는 다양 한 방법에 대 한 자세한 내용은 [탐색 개요](navigation-overview.md)를 참조 하세요.
 
 <a name="Specifying_a_Window_Icon"></a>
 
@@ -457,7 +457,7 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
 
 [!code-xaml[ResourceDictionarySnippets#ResourceDictionaryPackURI](~/samples/snippets/csharp/VS_Snippets_Wpf/ResourceDictionarySnippets/CS/App.xaml#resourcedictionarypackuri)]
 
-@No__t_0의 테마에 대 한 개요는 [스타일 지정 및 템플릿](../controls/styling-and-templating.md)을 참조 하세요.
+[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]의 테마에 대 한 개요는 [스타일 지정 및 템플릿](../../../desktop-wpf/fundamentals/styles-templates-overview.md)을 참조 하세요.
 
 ## <a name="see-also"></a>참조
 

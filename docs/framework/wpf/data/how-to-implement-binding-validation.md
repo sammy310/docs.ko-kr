@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data binding [WPF], validation of binding
 - binding [WPF], validation of
 ms.assetid: eb98b33d-9866-49ae-b981-bc5ff20d607a
-ms.openlocfilehash: 7a1a8df78a785066992472c7de37f958ae3467f1
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 245b05d9cfa7ca66dec310bd9a5291def0101d19
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920163"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459114"
 ---
 # <a name="how-to-implement-binding-validation"></a>방법: 바인딩 유효성 검사 구현
 
@@ -41,9 +41,9 @@ ms.locfileid: "72920163"
 
 전체 예제는 [바인딩 유효성 검사 샘플](https://github.com/Microsoft/WPF-Samples/tree/master/Data%20Binding/BindValidation)을 참조 하세요.
   
-사용자 지정 <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> 제공 하지 않으면 유효성 검사 오류가 있을 때 사용자에 게 시각적 피드백을 제공 하는 기본 오류 템플릿이 표시 됩니다. 자세한 내용은 [데이터 바인딩 개요](data-binding-overview.md)의 “데이터 유효성 검사”를 참조하세요. 또한 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]은 바인딩 소스 속성을 업데이트하는 동안 throw된 예외를 catch하는 기본 제공 유효성 검사 규칙을 제공합니다. 자세한 내용은 <xref:System.Windows.Controls.ExceptionValidationRule>을 참조하십시오.
+사용자 지정 <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> 제공 하지 않으면 유효성 검사 오류가 있을 때 사용자에 게 시각적 피드백을 제공 하는 기본 오류 템플릿이 표시 됩니다. 자세한 내용은 [데이터 바인딩 개요](../../../desktop-wpf/data/data-binding-overview.md)의 “데이터 유효성 검사”를 참조하세요. 또한 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]은 바인딩 소스 속성을 업데이트하는 동안 throw된 예외를 catch하는 기본 제공 유효성 검사 규칙을 제공합니다. 자세한 내용은 <xref:System.Windows.Controls.ExceptionValidationRule>을 참조하십시오.
 
 ## <a name="see-also"></a>참조
 
-- [데이터 바인딩 개요](data-binding-overview.md)
+- [데이터 바인딩 개요](../../../desktop-wpf/data/data-binding-overview.md)
 - [방법 항목](data-binding-how-to-topics.md)

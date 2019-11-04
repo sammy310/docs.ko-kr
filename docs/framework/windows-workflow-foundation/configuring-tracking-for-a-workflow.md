@@ -2,18 +2,18 @@
 title: 워크플로 추적 구성
 ms.date: 03/30/2017
 ms.assetid: 905adcc9-30a0-4918-acd6-563f86db988a
-ms.openlocfilehash: 889efc804bb45b384dfde5b4deb520a81d1e5486
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 25edef2edc23a3823a892c64809df21f333478db
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353059"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458906"
 ---
 # <a name="configuring-tracking-for-a-workflow"></a>워크플로 추적 구성
 
 워크플로는 다음과 같은 세 가지 방식으로 실행할 수 있습니다.
 
-- 다음에서 호스트됨 <xref:System.ServiceModel.Activities.WorkflowServiceHost>
+- <xref:System.ServiceModel.Activities.WorkflowServiceHost>에서 호스팅
 
 - <xref:System.Activities.WorkflowApplication>으로 실행
 
@@ -50,9 +50,9 @@ instance.Extensions.Add(trackingParticipant);
 
 ### <a name="configuring-workflow-service-tracking"></a>워크플로 서비스 추적 구성
 
-@No__t-0 서비스 호스트에서 호스팅될 때 워크플로를 WCF 서비스로 노출할 수 있습니다. <xref:System.ServiceModel.Activities.WorkflowServiceHost>는 워크플로 기반 서비스에 대한 특수 .NET ServiceHost 구현입니다. 이 단원에서는 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]에서 실행되는 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 워크플로 서비스에 대해 추적을 구성하는 방법에 대해 설명합니다. 이러한 추적 기능은 Web.config 파일(웹 호스팅 서비스의 경우) 또는 App.config 파일(콘솔 애플리케이션과 같은 독립 실행형 애플리케이션에서 호스트되는 서비스의 경우)을 통해 서비스 동작을 지정하거나, 코드를 통해 서비스 호스트에 대한 <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> 컬렉션에 추적별 동작을 추가하여 구성됩니다.
+워크플로는 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 서비스 호스트에서 호스팅될 때 WCF 서비스로 노출 될 수 있습니다. <xref:System.ServiceModel.Activities.WorkflowServiceHost>는 워크플로 기반 서비스에 대한 특수 .NET ServiceHost 구현입니다. 이 단원에서는 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]에서 실행되는 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 워크플로 서비스에 대해 추적을 구성하는 방법에 대해 설명합니다. 이러한 추적 기능은 Web.config 파일(웹 호스팅 서비스의 경우) 또는 App.config 파일(콘솔 애플리케이션과 같은 독립 실행형 애플리케이션에서 호스트되는 서비스의 경우)을 통해 서비스 동작을 지정하거나, 코드를 통해 서비스 호스트에 대한 <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> 컬렉션에 추적별 동작을 추가하여 구성됩니다.
 
-@No__t-0에서 호스트 되는 워크플로 서비스의 경우 다음 예제와 같이 구성 파일에서 < `behavior` > 요소를 사용 하 여 <xref:System.Activities.Tracking.EtwTrackingParticipant>을 추가할 수 있습니다.
+<xref:System.ServiceModel.WorkflowServiceHost>에서 호스트 되는 워크플로 서비스의 경우 다음 예제와 같이 구성 파일에서 <`behavior`> 요소를 사용 하 여 <xref:System.Activities.Tracking.EtwTrackingParticipant>를 추가할 수 있습니다.
 
 ```xml
 <behaviors>
@@ -61,7 +61,7 @@ instance.Extensions.Add(trackingParticipant);
           <etwTracking profileName="Sample Tracking Profile" />
         </behavior>
    </serviceBehaviors>
-<behaviors>
+</behaviors>
 ```
 
 또는 <xref:System.ServiceModel.WorkflowServiceHost>에서 호스트되는 워크플로 서비스의 경우 코드를 통해 <xref:System.Activities.Tracking.EtwTrackingParticipant> 동작 확장을 추가할 수 있습니다. 사용자 지정 추적 참가자를 추가하려면 다음 예제 코드와 같이 새 동작 확장을 만들어 <xref:System.ServiceModel.ServiceHost>에 추가합니다.
@@ -152,7 +152,7 @@ WF 실행을 추적할 때 특별히 관심을 두고 확인할 이벤트 뷰어
 
 디버그 추적 이벤트는 디버그 로그에 기록됩니다. 이벤트 뷰어에서 WF 디버그 추적 이벤트를 수집하려면 디버그 로그를 사용합니다.
 
-1. 이벤트 뷰어를 열려면 **시작**을 클릭 한 다음 실행을 클릭 **합니다.** 실행 대화 상자에서 `eventvwr`을 입력 합니다.
+1. 이벤트 뷰어를 열려면 **시작**을 클릭 한 다음 실행을 클릭 **합니다.** 실행 대화 상자에서 `eventvwr`를 입력 합니다.
 
 2. 이벤트 뷰어 대화 상자에서 **응용 프로그램 및 서비스 로그** 노드를 확장 합니다.
 
@@ -168,7 +168,7 @@ WF 4는 추적 레코드를 ETW(Windows용 이벤트 추적) 세션에 기록하
 
 추적 레코드를 보려면 아래 단계를 따릅니다.
 
-1. 이벤트 뷰어를 열려면 **시작**을 클릭 한 다음 실행을 클릭 **합니다.** 실행 대화 상자에서 `eventvwr`을 입력 합니다.
+1. 이벤트 뷰어를 열려면 **시작**을 클릭 한 다음 실행을 클릭 **합니다.** 실행 대화 상자에서 `eventvwr`를 입력 합니다.
 
 2. 이벤트 뷰어 대화 상자에서 **응용 프로그램 및 서비스 로그** 노드를 확장 합니다.
 
@@ -196,7 +196,7 @@ WF 4는 추적 레코드를 ETW(Windows용 이벤트 추적) 세션에 기록하
     </system.serviceModel>
     ```
 
-2. %Windir%\Microsoft.NET\Framework @ no__t-0 @ no__t의 최신 버전 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] > \Microsoft.Windows.ApplicationServer.Applications.man의 매니페스트 파일을 임시 위치로 복사 하 고 이름을로 바꿉니다. Applications_Provider1. man.
+2. %Windir%\Microsoft.NET\Framework\\\<최신 버전 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]> \Microsoft.Windows.ApplicationServer.Applications.man의 매니페스트 파일을 임시 위치로 복사한 후 이름을 Applications_Provider1. man.
 
 3. 매니페스트 파일의 GUID를 새 GUID로 변경합니다.
 

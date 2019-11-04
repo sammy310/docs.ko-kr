@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, control patterns for clients
 - control patterns, UI Automation clients
 ms.assetid: 571561d8-5f49-43a9-a054-87735194e013
-ms.openlocfilehash: e1d87920f64242379d1931a424aa38b676dc5ef5
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: c7d9eeceaba2ed8b624d3001dae86868ef626c08
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039455"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458109"
 ---
 # <a name="ui-automation-control-patterns-for-clients"></a>클라이언트용 UI 자동화 컨트롤 패턴
 > [!NOTE]
@@ -40,7 +40,7 @@ ms.locfileid: "73039455"
   
 <a name="uiautomation_with_variable_patterns"></a>   
 ## <a name="controls-with-variable-patterns"></a>가변 패턴을 사용하는 컨트롤  
- 일부 컨트롤 형식은 컨트롤의 상태 또는 컨트롤이 사용되는 방식에 따라 다양한 패턴을 지원합니다. 변수 패턴을 사용할 수 있는 컨트롤의 예로는 목록 보기 (미리 보기, 타일, 아이콘, 목록, 세부 정보), [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] 차트 (원형, 꺾은선형, 가로 막대형, 수식이 있는 셀 값), [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)]의 문서 영역 (보통, 웹 레이아웃, 윤곽선, 인쇄 레이아웃, 인쇄 미리 보기)이 있습니다. Microsoft Windows Media Player 스킨.  
+ 일부 컨트롤 형식은 컨트롤의 상태 또는 컨트롤이 사용되는 방식에 따라 다양한 패턴을 지원합니다. 변수 패턴을 사용할 수 있는 컨트롤의 예로는 목록 보기 (미리 보기, 타일, 아이콘, 목록, 세부 정보), Microsoft Excel 차트 (원형, 꺾은선형, 가로 막대형, 수식이 있는 셀 값), Microsoft Word의 문서 영역 (기본, 웹 레이아웃, 개요, 인쇄 레이아웃, 인쇄)이 있습니다. Preview) 및 Microsoft Windows Media Player 스킨이 있습니다.  
   
  사용자 지정 컨트롤 형식을 구현하는 컨트롤에는 해당 기능을 나타내는 데 필요한 컨트롤 패턴 집합이 있을 수 있습니다.  
   

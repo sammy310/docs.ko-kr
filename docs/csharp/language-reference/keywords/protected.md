@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - protected keyword [C#]
 ms.assetid: 05ce3794-6675-4025-bddb-eaaa0ec22892
-ms.openlocfilehash: a0420dd10d81c4ae893ab0447244a611091ed7b0
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: f54c3f36e5aeb428815d1c49cd797e559d156ea7
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69601980"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422573"
 ---
 # <a name="protected-c-reference"></a>protected(C# 참조)
 
@@ -49,7 +49,7 @@ protected 멤버는 해당 클래스 내에서 파생 클래스 인스턴스가 
 
 ## <a name="c-language-specification"></a>C# 언어 사양  
 
-자세한 내용은 [C# 언어 사양](../language-specification/index.md)의 [선언된 내게 필요한 옵션](~/_csharplang/spec/basic-concepts.md#declared-accessibility)을 참조하세요. C# 언어 사양은 C# 구문 및 사용법에 대한 신뢰할 수 있는 소스입니다.
+자세한 내용은 [C# 언어 사양](/dotnet/csharp/language-reference/language-specification/introduction)의 [선언된 내게 필요한 옵션](~/_csharplang/spec/basic-concepts.md#declared-accessibility)을 참조하세요. C# 언어 사양은 C# 구문 및 사용법에 대한 신뢰할 수 있는 소스입니다.
 
 ## <a name="see-also"></a>참고 항목
 
@@ -58,7 +58,7 @@ protected 멤버는 해당 클래스 내에서 파생 클래스 인스턴스가 
 - [C# 키워드](index.md)
 - [액세스 한정자](access-modifiers.md)
 - [액세스 수준](accessibility-levels.md)
-- [한정자](modifiers.md)
+- [한정자](index.md)
 - [public](public.md)
 - [private](private.md)
 - [internal](internal.md)
