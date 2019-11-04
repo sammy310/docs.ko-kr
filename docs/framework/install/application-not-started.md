@@ -1,15 +1,13 @@
 ---
 title: ‘이 애플리케이션을 시작할 수 없음’ 문제 해결
 description: "'이 애플리케이션을 시작할 수 없음' 대화 상자가 표시되면 어떻게 해야 하는지 알아보세요."
-author: rpetrusha
-ms.author: ronpet
 ms.date: 09/05/2019
-ms.openlocfilehash: 8fa8381f1b05445f259b4e4af5cc17fa487b2ce0
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 2140ab38c29d610634f71305c4337c324e0550d8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319174"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73092047"
 ---
 # <a name="troubleshooting-a-this-application-could-not-be-started-error-message"></a>‘이 애플리케이션을 시작할 수 없음’ 오류 메시지 문제 해결
 

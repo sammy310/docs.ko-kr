@@ -2,13 +2,14 @@
 title: nullable 참조 형식을 사용하여 디자인
 description: 이 고급 자습서에서는 nullable 참조 형식을 소개합니다. 참조 값이 null일 수 있는 경우에 대한 디자인 의도를 표현하고 컴파일러가 null일 수 없는 경우를 적용하게 하는 방법을 알아봅니다.
 ms.date: 02/19/2019
+ms.technology: csharp-null-safety
 ms.custom: mvc
-ms.openlocfilehash: 842b1bb6e0d3032c6181cccf77934541754ff8ec
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: 9cb9ac1b292e61d6a8a5f84be29a6a6c323725fc
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332327"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039680"
 ---
 # <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>자습서: nullable 참조 형식이 있는 기존 코드 마이그레이션
 

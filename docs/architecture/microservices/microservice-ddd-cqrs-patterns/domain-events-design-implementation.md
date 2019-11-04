@@ -2,12 +2,12 @@
 title: 도메인 이벤트. 디자인 및 구현
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | 집계 간에 통신을 설정하는 주요 개념인 도메인 이벤트의 세부적인 보기를 가져옵니다.
 ms.date: 10/08/2018
-ms.openlocfilehash: 4fe0c1fa04bbecb64783e070838ab796de4f90d6
-ms.sourcegitcommit: 10db6551ea3c971470cf5d2cc21ba1cbcefe5c55
+ms.openlocfilehash: eea72633d3460f51821e8a939b14acff2f17965c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72031846"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73093961"
 ---
 # <a name="domain-events-design-and-implementation"></a>도메인 이벤트: 디자인 및 구현
 
@@ -145,9 +145,9 @@ Udi Dahan은 이벤트를 관리하고 발생시키기 위해 정적 클래스�
 ```csharp
 public abstract class Entity
 {
-     //... 
+     //...
      private List<INotification> _domainEvents;
-     public List<INotification> DomainEvents => _domainEvents; 
+     public List<INotification> DomainEvents => _domainEvents;
 
      public void AddDomainEvent(INotification eventItem)
      {
@@ -194,7 +194,7 @@ public class OrderingContext : DbContext, IUnitOfWork
         // handlers that are using the same DbContext with Scope lifetime
         // B) Right AFTER committing data (EF SaveChanges) into the DB. This makes
         // multiple transactions. You will need to handle eventual consistency and
-        // compensatory actions in case of failures.        
+        // compensatory actions in case of failures.
         await _mediator.DispatchDomainEventsAsync(this);
 
         // After this line runs, all the changes (from the Command Handler and Domain
@@ -208,7 +208,7 @@ public class OrderingContext : DbContext, IUnitOfWork
 
 도메인 이벤트 발생시키기를(메모리 목록에 간단히 추가하기) 이벤트 처리기에 도메인 이벤트를 디스패치하기와 분리시킨 것이 전반적인 결과입니다. 또한 사용 중인 디스패처의 종류에 따라 이벤트를 동기적으로 또는 비동기적으로 디스패치할 수 있습니다.
 
-여기서 트랜잭션 경계가 중요한 역할을 한다는 점에 유의해야 합니다. 작업 단위와 트랜잭션이 둘 이상의 집합체에 있을 수 있으면(EF Core와 관계형 데이터베이스를 사용할 때처럼), 잘 작동할 수 있습니다. 하지만 트랜잭션이 여러 집합체에 있을 수 없으면(예: Azure CosmosDB와 같은 NoSQL 데이터베이스를 사용하는 경우) 일관성을 달성하기 위해 추가 단계를 구현해야 합니다. 이것은 지속성 무시가 보편적이지 않은 또 다른 이유이며, 사용하는 스토리지 시스템에 따라 달라집니다. 
+여기서 트랜잭션 경계가 중요한 역할을 한다는 점에 유의해야 합니다. 작업 단위와 트랜잭션이 둘 이상의 집합체에 있을 수 있으면(EF Core와 관계형 데이터베이스를 사용할 때처럼), 잘 작동할 수 있습니다. 하지만 트랜잭션이 여러 집합체에 있을 수 없으면(예: Azure CosmosDB와 같은 NoSQL 데이터베이스를 사용하는 경우) 일관성을 달성하기 위해 추가 단계를 구현해야 합니다. 이것은 지속성 무시가 보편적이지 않은 또 다른 이유이며, 사용하는 스토리지 시스템에 따라 달라집니다.
 
 ### <a name="single-transaction-across-aggregates-versus-eventual-consistency-across-aggregates"></a>집합체 전반의 단일 트랜잭션 및 집합체 전반의 최종 일관성
 
@@ -303,7 +303,7 @@ public class ValidateOrAddBuyerAggregateWhenOrderStartedDomainEventHandler
 
     public async Task Handle(OrderStartedDomainEvent orderStartedEvent)
     {
-        var cardTypeId = (orderStartedEvent.CardTypeId != 0) ? orderStartedEvent.CardTypeId : 1;        
+        var cardTypeId = (orderStartedEvent.CardTypeId != 0) ? orderStartedEvent.CardTypeId : 1;
         var userGuid = _identityService.GetUserIdentity();
         var buyer = await _buyerRepository.FindAsync(userGuid);
         bool buyerOriginallyExisted = (buyer == null) ? false : true;
@@ -321,7 +321,7 @@ public class ValidateOrAddBuyerAggregateWhenOrderStartedDomainEventHandler
                                        orderStartedEvent.CardExpiration,
                                        orderStartedEvent.Order.Id);
 
-        var buyerUpdated = buyerOriginallyExisted ? _buyerRepository.Update(buyer) 
+        var buyerUpdated = buyerOriginallyExisted ? _buyerRepository.Update(buyer)
                                                                       : _buyerRepository.Add(buyer);
 
         await _buyerRepository.UnitOfWork
@@ -342,7 +342,7 @@ public class ValidateOrAddBuyerAggregateWhenOrderStartedDomainEventHandler
 
 언급했듯이, 도메인 이벤트를 사용하여 도메인 내 변경의 파생 작업을 명시적으로 구현합니다. DDD 용어를 사용하려면, 도메인 이벤트를 사용하여 하나 또는 여러 집합체 전반에 파생 작업을 명시적으로 구현합니다. 추가적으로, 데이터베이스 잠금의 확장성을 높이고 영향을 줄이려면 동일한 도메인 내의 집합체 간에 최종 일관성을 사용합니다.
 
-## <a name="additional-resources"></a>추가 자료
+## <a name="additional-resources"></a>추가 리소스
 
 - **Greg Young. 도메인 이벤트란?** \
   <https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf#page=25>

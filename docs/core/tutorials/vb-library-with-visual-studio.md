@@ -1,18 +1,16 @@
 ---
 title: Visual Studio 2017에서 Visual Basic .NET Standard 클래스 라이브러리 빌드
 description: Visual Studio 2017을 사용하여 Visual Basic으로 작성된 .NET Standard 클래스 라이브러리를 빌드하는 방법 알아보기
-author: rpetrusha
-ms.author: ronpet
 ms.date: 08/07/2017
 dev_langs:
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: f14e4ffbebfe0d7e01d548a6d4f2dc8924633682
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 1daab377abe3b6b89f73ed48eafadeae4d7eee77
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59157302"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73100861"
 ---
 # <a name="build-a-net-standard-library-with-visual-basic-and-the-net-core-sdk-in-visual-studio-2017"></a>Visual Studio 2017에서 Visual Basic 및 .NET Core SDK를 사용하여 .NET Standard 라이브러리 빌드
 

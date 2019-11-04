@@ -10,14 +10,12 @@ helpviewer_keywords:
 - SemaphoreSlim class, about SemaphoreSlim class
 - threading [.NET Framework], Semaphore class
 ms.assetid: 7722a333-b974-47a2-a7c0-f09097fb644e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 25121ea2b089df49efa77dcf363e2a0e400b3bff
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b9f7c122ac8acf34f740aca5f0fafc162edcea82
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968431"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127579"
 ---
 # <a name="semaphore-and-semaphoreslim"></a>세마포 및 SemaphoreSlim
 로컬 또는 명명된(시스템 전체) 세마포를 나타내는 <xref:System.Threading.Semaphore?displayProperty=nameWithType> 클래스는 Win32 세마포 개체를 묶는 씬 래퍼입니다. Win32 세마포는 리소스 풀에 대한 액세스를 제어하는 데 사용할 수 있는 가산 세마포입니다.  

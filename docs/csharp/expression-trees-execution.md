@@ -2,13 +2,14 @@
 title: 식 트리 실행
 description: 식 트리를 실행 가능한 중간 언어(IL) 명령으로 변환하여 실행하는 방법을 알아봅니다.
 ms.date: 06/20/2016
+ms.technology: csharp-advanced-concepts
 ms.assetid: 109e0ac5-2a9c-48b4-ac68-9b6219cdbccf
-ms.openlocfilehash: f6dca5a3965924e8eb6e1c04fe7ffc3c78c7df93
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 9af4b346962cb743daddf774e8b3c1f8fa722ae4
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201848"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73037107"
 ---
 # <a name="executing-expression-trees"></a>식 트리 실행
 
@@ -45,7 +46,7 @@ Console.WriteLine(answer);
 
 이 대리자는 식 트리의 코드를 나타냅니다. 해당 대리자에 대한 핸들을 유지하고 나중에 호출할 수 있습니다. 식 트리가 나타내는 코드를 실행할 때마다 식 트리를 컴파일할 필요는 없습니다. 식 트리는 변경할 수 없으며 나중에 동일한 식 트리를 컴파일하면 동일한 코드를 실행하는 대리자가 만들어집니다.
 
-필요 없는 컴파일 호출을 방지하여 성능을 향상시키려면 보다 정교한 캐싱 메커니즘을 만들려고 해야 합니다. 임의의 식 트리 두 개를 비교하여 동일한 알고리즘을 나타내는지 확인하는 경우에도 실행하는 데 시간이 오래 걸릴 수 있습니다. `LambdaExpression.Compile()`의 추가 호출을 방지하여 절약한 계산 시간이 동일한 실행 코드에서 서로 다른 두 식 트리 결과를 확인하는 코드 실행 시간을 초과할 수 있습니다.
+필요 없는 컴파일 호출을 방지하여 성능을 향상시키려면 보다 정교한 캐싱 메커니즘을 만들려고 해야 합니다. 임의의 식 트리 두 개를 비교하여 동일한 알고리즘을 나타내는지 확인하는 경우에도 실행하는 데 시간이 오래 걸릴 수 있습니다. `LambdaExpression.Compile()`의 추가 호출을 방지하여 절약한 컴퓨팅 시간이 동일한 실행 코드에서 서로 다른 두 식 트리 결과를 확인하는 코드 실행 시간을 초과할 수 있습니다.
 
 ## <a name="caveats"></a>주의 사항
 

@@ -2,12 +2,12 @@
 title: 복원력 있는 Entity Framework Core SQL 연결 구현
 description: 복원력 있는 Entity Framework Core SQL 연결을 구현하는 방법을 알아봅니다. 이 기술은 클라우드에서 Azure SQL Database를 사용하는 경우에 특히 중요합니다.
 ms.date: 10/16/2018
-ms.openlocfilehash: 3bf5c1827cee1da69aeccdc9f15573c301fc9363
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 3128cf1be7f2dc8804a002556db232f4e0fc8c33
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674560"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73094045"
 ---
 # <a name="implement-resilient-entity-framework-core-sql-connections"></a>복원력 있는 Entity Framework Core SQL 연결 구현
 
@@ -49,7 +49,7 @@ EF 실행 전략(재시도 정책)을 사용할 때 해당 트랜잭션을 실�
 
 > System.InvalidOperationException: 구성된 실행 전략 ‘SqlServerRetryingExecutionStrategy’는 사용자가 시작한 트랜잭션을 지원하지 않습니다. 'DbContext.Database.CreateExecutionStrategy()'에서 반환된 실행 전략을 사용하여 트랜잭션을 다시 시도가 가능한 단위로 트랜잭션의 모든 작업을 실행합니다.
 
-해결책은 실행해야 하는 모든 것을 나타내는 대리자를 사용하여 EF 실행 전략을 수동으로 호출하는 것입니다. 일시적인 오류가 발생하면, 실행 전략에서 대리자를 다시 호출합니다. 예를 들어 다음 코드는 제품을 업데이트한 이후 다른 DbContext를 사용해야 하는 ProductPriceChangedIntegrationEvent 개체를 저장할 때, 두 개의 다중 DbContext(\_catalogContext 및 IntegrationEventLogContext)를 사용하여 eShopOnContainers에서 구현하는 방법을 보여 줍니다.
+해결책은 실행해야 하는 모든 것을 나타내는 대리자를 사용하여 EF 실행 전략을 수동으로 호출하는 것입니다. 일시적인 오류가 발생하면 실행 적략이 대리자를 다시 호출합니다. 예를 들어 다음 코드는 제품을 업데이트한 이후 다른 DbContext를 사용해야 하는 ProductPriceChangedIntegrationEvent 개체를 저장할 때, 두 개의 다중 DbContext(\_catalogContext 및 IntegrationEventLogContext)를 사용하여 eShopOnContainers에서 구현하는 방법을 보여 줍니다.
 
 ```csharp
 public async Task<IActionResult> UpdateProduct(
@@ -104,7 +104,7 @@ public class CatalogIntegrationEventService : ICatalogIntegrationEventService
         // https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency
         await ResilientTransaction.New(_catalogContext).ExecuteAsync(async () =>
         {
-            // Achieving atomicity between original catalog database 
+            // Achieving atomicity between original catalog database
             // operation and the IntegrationEventLog thanks to a local transaction
             await _catalogContext.SaveChangesAsync();
             await _eventLogService.SaveEventAsync(evt,
@@ -128,7 +128,7 @@ public class ResilientTransaction
 
     public async Task ExecuteAsync(Func<Task> action)
     {
-        // Use of an EF Core resiliency strategy when using multiple DbContexts 
+        // Use of an EF Core resiliency strategy when using multiple DbContexts
         // within an explicit BeginTransaction():
         // https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency
         var strategy = _context.Database.CreateExecutionStrategy();
@@ -144,7 +144,7 @@ public class ResilientTransaction
 }
 ```
 
-## <a name="additional-resources"></a>추가 자료
+## <a name="additional-resources"></a>추가 리소스
 
 - **ASP.NET MVC 애플리케이션에서 EF를 사용한 연결 복원력 및 명령 인터셉션** \
   [https://docs.microsoft.com/aspnet/mvc/overview/getting-started/getting-started-with-ef-using-mvc/connection-resiliency-and-command-interception-with-the-entity-framework-in-an-asp-net-mvc-application](/aspnet/mvc/overview/getting-started/getting-started-with-ef-using-mvc/connection-resiliency-and-command-interception-with-the-entity-framework-in-an-asp-net-mvc-application)

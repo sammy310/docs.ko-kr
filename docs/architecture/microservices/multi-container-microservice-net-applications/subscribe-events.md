@@ -2,12 +2,12 @@
 title: 이벤트 구독
 description: 컨테이너화된 .NET 애플리케이션의.NET 마이크로 서비스 아키텍처 | 통합 이벤트에 대한 게시 및 구독의 세부 정보를 이해합니다.
 ms.date: 10/02/2018
-ms.openlocfilehash: ac9715c7c282be845e1e47516d06945c31f70209
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 208b0f27aa1e6ceb6686e9e846b6e31d9f1c74df
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039777"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73035646"
 ---
 # <a name="subscribing-to-events"></a>이벤트 구독
 
@@ -105,7 +105,7 @@ CQRS 방식을 사용하는 경우와 같은 고급 마이크로 서비스의 �
 
 - [트랜잭션 로그 마이닝](https://www.scoop.it/t/sql-server-transaction-log-mining) 사용.
 
-- [아웃박스 패턴](http://gistlabs.com/2014/05/the-outbox/) 사용. 이 트랜잭션 테이블에는 통합 이벤트를 저장합니다(로컬 트랜잭션 확장).
+- [아웃박스 패턴](https://www.kamilgrzybek.com/design/the-outbox-pattern/) 사용. 이 트랜잭션 테이블에는 통합 이벤트를 저장합니다(로컬 트랜잭션 확장).
 
 이 시나리오의 경우 ES(이벤트 소싱) 패턴이 *가장* 적절하거나 적절한 방법 중 하나입니다. 하지만 대부분의 애플리케이션 시나리오에서는 전체 ES 시스템을 구현하지 못할 수 있습니다. ES란 현재 상태 데이터를 저장하는 대신 트랜잭션 데이터베이스에 도메인 이벤트만 저장하는 것을 의미합니다. 도메인 이벤트만 저장할 경우 시스템 기록을 사용할 수 있다는 점, 지난 시스템 상태를 확인할 수 있다는 점 등의 뛰어난 이점이 있습니다. 하지만 전체 ES 시스템을 구현하려면 대부분의 시스템을 재설계해야 하며 그 외에도 많은 복잡성과 요구 사항이 있습니다. 예를 들어 [이벤트 저장소](https://eventstore.org/) 등의 이벤트 소싱용으로 만든 데이터베이스 또는 Azure Cosmos DB, MongoDB, Cassandra, CouchDB, RavenDB 등의 문서 중심 데이터베이스를 사용하려는 경우가 있습니다. ES는 이 문제에 적합한 방식이지만 이벤트 소싱에 대해 잘 알고 있는 경우가 아니면 가장 쉬운 솔루션이 아닙니다.
 
@@ -320,13 +320,13 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 
 "재전달" 플래그가 설정된 경우에는 메시지가 이미 처리되었을 수 있으므로 수신자를 고려해야 합니다. 하지만 메시지가 처리된다는 보장은 없으며 메시지가 메시지 브로커에서 나온 이후 네트워크 문제 등의 이유로 수신자에게 도달하지 않을 수 있습니다. 반면, "재전달" 플래그가 설정되지 않은 경우 메시지는 확실히 두 번 이상 전송되지 않습니다. 따라서 수신자는 메시지에 "재배달" 플래그가 설정된 경우에만 메시지를 중복 제거하거나 멱등 방식으로 처리해야 합니다.
 
-### <a name="additional-resources"></a>추가 자료
+### <a name="additional-resources"></a>추가 리소스
 
 - **NServiceBus를 사용하여 포크된 eShopOnContainers(특정 소프트웨어)**  \
     <https://go.particular.net/eShopOnContainers>
 
 - **이벤트 기반 메시징** \
-    [http://soapatterns.org/design\_patterns/event\_driven\_messaging](http://soapatterns.org/design_patterns/event_driven_messaging)
+    <https://patterns.arcitura.com/soa-patterns/design_patterns/event_driven_messaging>
 
 - **Jimmy Bogard. 복원력에 대한 리팩터링: 결합 평가** \
     <https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/>

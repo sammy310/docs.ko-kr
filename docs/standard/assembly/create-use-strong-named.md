@@ -12,14 +12,12 @@ helpviewer_keywords:
 - strong-named assemblies, loading into trusted application domains
 - assembly binding, strong-named
 ms.assetid: ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 55869c107d245738df3af5ca9bb1b22195e90024
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 700eca16e7755823456c3e3ace17eb5e6b3526ac
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972776"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122506"
 ---
 # <a name="create-and-use-strong-named-assemblies"></a>강력한 이름의 어셈블리 만들기 및 사용
 
@@ -68,7 +66,7 @@ ms.locfileid: "70972776"
 
 개별 애플리케이션 또는 컴퓨터에 대해 이 기능을 사용하지 않도록 설정할 수 있습니다. [방법: 강력한 이름 건너뛰기 기능 사용 안 함](disable-strong-name-bypass-feature.md)을 참조하세요.
 
-## <a name="related-topics"></a>관련 항목
+## <a name="related-topics"></a>관련된 항목
 
 |제목|설명|
 |-----------|-----------------|

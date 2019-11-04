@@ -1,16 +1,15 @@
 ---
 title: 메서드 - C# 가이드
 description: 메서드, 메서드 매개 변수 및 메서드 반환 값의 개요
-author: rpetrusha
-ms.author: ronpet
+ms.technology: csharp-fundamentals
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: b95818e06d37b0e98bf55428ff97dd476f92fac7
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: f44c83408e884d76eef5e2b5abbca511fbae2a1f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168510"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73101495"
 ---
 # <a name="methods"></a>메서드
 
@@ -18,22 +17,6 @@ ms.locfileid: "70168510"
 
 > [!NOTE]
 > 이 항목에서는 명명된 메서드에 대해 설명합니다. 익명 함수에 대한 자세한 내용은 [익명 함수](programming-guide/statements-expressions-operators/anonymous-functions.md)를 참조하세요.
-
-이 항목에는 다음과 같은 단원이 포함되어 있습니다.
-
-- [메서드 시그니처](#signatures)
-- [메서드 호출](#invocation)
-- [상속 및 재정의된 메서드](#inherited)
-- [매개 변수 전달](#passing)
-  - [값으로 매개 변수 전달](#byval)
-  - [참조로 매개 변수 전달](#byref)
-  - [매개 변수 배열](#paramarray)
-- [선택적 매개 변수 및 인수](#optional)
-- [반환 값](#return)
-- [확장 메서드](#extension)
-- [비동기 메서드](#async)
-- [식 본문 멤버](#expr)
-- [반복기](#iterators)
 
 <a name="signatures"></a>
 
@@ -157,7 +140,7 @@ by ref 매개 변수를 사용하는 일반적인 패턴은 변수 값의 교환
 다음 종류의 식 중 하나로 매개 변수의 기본값을 할당해야 합니다.
 
 - 리터럴 문자열이나 숫자와 같은 상수
-- `new ValType` 형태의 식. 여기서 `ValType`은 값 형식입니다. 이 경우 형식의 실제 멤버가 아닌 값 형식의 매개 변수가 없는 암시적 생성자가 호출됩니다.
+- `new ValType()` 형태의 식. 여기서 `ValType`은 값 형식입니다. 이 경우 형식의 실제 멤버가 아닌 값 형식의 매개 변수가 없는 암시적 생성자가 호출됩니다.
 - `default(ValType)` 형태의 식. 여기서 `ValType`은 값 형식입니다.
 
 메서드에 필수 및 선택적 매개 변수가 둘 다 포함된 경우 선택적 매개 변수는 매개 변수 목록의 끝에서 모든 필수 매개 변수 다음에 정의됩니다.

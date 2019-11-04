@@ -2,14 +2,12 @@
 title: 암호화 관련 호환성이 손상되는 변경 - .NET Core
 description: .NET Core의 암호화 관련 호환성이 손상되는 변경 목록입니다.
 ms.date: 09/20/2019
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 80b62f9b32487e88a309ea7686f78d68af8f2e0a
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: ce6739c57df801ef6ae3ab35e31bba6ad4055caa
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216986"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73093089"
 ---
 # <a name="cryptography-breaking-changes"></a>암호화 관련 호환성이 손상되는 변경
 

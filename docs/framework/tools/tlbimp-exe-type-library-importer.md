@@ -10,14 +10,12 @@ helpviewer_keywords:
 - type libraries
 - converting type definitions
 ms.assetid: ec0a8d63-11b3-4acd-b398-da1e37e97382
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 048c2cd3d6b90dda951128a29a212928ee67c5a5
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: fcbbc99c06e7c9666d58133bef20b84ef40c98d5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971751"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73104326"
 ---
 # <a name="tlbimpexe-type-library-importer"></a>Tlbimp.exe(형식 라이브러리 가져오기)
 형식 라이브러리 가져오기 도구는 COM 형식 라이브러리에 있는 형식 정의를 공용 언어 런타임 어셈블리의 동등한 정의로 변환합니다. Tlbimp.exe의 출력은 원본 형식 라이브러리에 정의된 형식의 런타임 메타데이터를 포함하는 이진 파일(어셈블리)입니다. [Ildasm.exe](ildasm-exe-il-disassembler.md)와 같은 도구를 사용하여 이 파일을 검토할 수 있습니다.  
@@ -84,7 +82,7 @@ tlbimp tlbFile [options]
  
  여러 개의 형식 라이브러리를 포함하는 모듈에서 형식 라이브러리를 가져오는 경우 선택적으로 리소스 ID를 형식 라이브러리 파일에 추가할 수 있습니다. 이 파일이 현재 디렉터리에 있거나 전체 경로를 지정하는 경우에만 Tlbimp.exe를 사용하여 파일을 찾을 수 있습니다. 이 항목의 뒷부분에 있는 예제를 참조하십시오.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 명령을 사용하여 `myTest.tlb`에 있는 형식 라이브러리와 이름이 같고 확장명이 .dll인 어셈블리를 생성합니다.  
   
 ```console  

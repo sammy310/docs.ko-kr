@@ -2,13 +2,14 @@
 title: 식 트리
 description: .NET Core의 식 트리에 대해 알아본 다음 이를 사용하여 검사, 수정 및 실행할 수 있는 구조로 코드를 나타내는 방법을 알아봅니다.
 ms.date: 06/20/2016
+ms.technology: csharp-advanced-concepts
 ms.assetid: aceb4719-0d5a-4b19-b01f-b51063bcc54f
-ms.openlocfilehash: db6e23d1ad0014a7dbb58a0cd473e67d6bd9acc0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: b7d039ea4585953473dc88cebcc516ea240cdc3a
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59096617"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73036317"
 ---
 # <a name="expression-trees"></a>식 트리
 

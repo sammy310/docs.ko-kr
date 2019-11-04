@@ -5,14 +5,12 @@ helpviewer_keywords:
 - strong-named assemblies
 - strong naming [.NET Framework], enhanced
 ms.assetid: 6cf17a82-62a1-4f6d-8d5a-d7d06dec2bb5
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1ab1087a840fe41b9fac7779c73797c470899408
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 1d582513b10de88e4e5b9b9ef8c338599d6980f2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834888"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141165"
 ---
 # <a name="enhanced-strong-naming"></a>향상된 강력한 이름 지정
 강력한 이름 시그니처는 어셈블리를 식별하기 위한 .NET Framework의 ID 메커니즘입니다. 일반적으로 작성기(서명자)에서 수신자(검증 도구)로 전달되는 데이터의 무결성을 검사하는 데 사용되는 공개 키 디지털 시그니처입니다. 이 시그니처는 어셈블리의 고유 ID로 사용되고 어셈블리에 대한 참조가 모호하지 않은지 확인합니다. 어셈블리는 빌드 프로세스의 일부로 서명되고 나서 로드 시 확인됩니다.  

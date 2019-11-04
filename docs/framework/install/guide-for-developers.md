@@ -8,14 +8,12 @@ helpviewer_keywords:
 - installing .NET Framework
 - installation [.NET Framework]
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0c1a14f0ee36341c9579683f711ae78fc4df3f97
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 8c4b328cdecb468af57fe699283584e901772175
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71833650"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73091990"
 ---
 # <a name="install-the-net-framework-for-developers"></a>개발자용 .NET Framework 설치
 
@@ -37,7 +35,7 @@ ms.locfileid: "71833650"
 
 |.NET Framework 버전|개발자 설치|재배포 가능 설치|플랫폼 지원|
 |----------------------------|----------------------------|----------------------------------|----------------------|
-|**4.8**|[.NET Framework 4.8 개발자 팩](https://go.microsoft.com/fwlink/?linkid=2088517)|[다운로드 센터 4.8 웹 설치 관리자](http://go.microsoft.com/fwlink/?LinkId=2085155)<br/><br/>[다운로드 센터 4.8 오프라인 설치 관리자](https://go.microsoft.com/fwlink/?linkid=2088631)|**포함된 운영 체제:**<br/><br/>Windows 10 2019년 5월 업데이트<br /><br /> **설치 가능한 운영 체제:**<br/><br/>Windows 10 2018년 10월 업데이트<br/>Windows 10 2018년 4월 업데이트<br/>Windows 10 Fall Creators Update<br/>Windows 10 크리에이터스 업데이트 <br /> Windows 10 1주년 업데이트<br /> Windows 8.1 및 이전 버전<br /> Windows Server 2019<br/>Windows Server, 버전 1809<br/>Windows Server, 버전 1803<br /><br/> (전체 목록은 [시스템 요구 사항](../get-started/system-requirements.md) 참조)||
+|**4.8**|[.NET Framework 4.8 개발자 팩](https://go.microsoft.com/fwlink/?linkid=2088517)|[다운로드 센터 4.8 웹 설치 관리자](https://go.microsoft.com/fwlink/?LinkId=2085155)<br/><br/>[다운로드 센터 4.8 오프라인 설치 관리자](https://go.microsoft.com/fwlink/?linkid=2088631)|**포함된 운영 체제:**<br/><br/>Windows 10 2019년 5월 업데이트<br /><br /> **설치 가능한 운영 체제:**<br/><br/>Windows 10 2018년 10월 업데이트<br/>Windows 10 2018년 4월 업데이트<br/>Windows 10 Fall Creators Update<br/>Windows 10 크리에이터스 업데이트 <br /> Windows 10 1주년 업데이트<br /> Windows 8.1 및 이전 버전<br /> Windows Server 2019<br/>Windows Server, 버전 1809<br/>Windows Server, 버전 1803<br /><br/> (전체 목록은 [시스템 요구 사항](../get-started/system-requirements.md) 참조)||
 |**4.7.2**|[NET Framework 4.7.2 개발자 팩](https://go.microsoft.com/fwlink/?LinkId=874338)|[다운로드 센터 4.7.2 웹 설치 관리자](https://go.microsoft.com/fwlink/?LinkId=863262)<br/><br/>[다운로드 센터 4.7.2 오프라인 설치 관리자](https://go.microsoft.com/fwlink/?LinkId=863265)|**포함된 운영 체제:** <br/><br/>Windows 10 2018년 10월 업데이트<br/>Windows 10 2018년 4월 업데이트<br/>Windows Server 2019<br/>Windows Server, 버전 1809<br/>Windows Server, 버전 1803<br /><br /> **설치 가능한 운영 체제:**<br/> <br/>Windows 10 Fall Creators Update<br/>Windows 10 크리에이터스 업데이트 <br /> Windows 10 1주년 업데이트<br /> Windows 8.1 및 이전 버전<br /> Windows Server, 버전 1709 이상<br /><br/> (전체 목록은 [시스템 요구 사항](../get-started/system-requirements.md) 참조)||
 |**4.7.1**|[NET Framework 4.7.1 개발자 팩](https://go.microsoft.com/fwlink/?LinkId=852105)|[4.7.1 웹 설치 관리자 다운로드 페이지](https://go.microsoft.com/fwlink/?LinkId=852095)<br /><br /> [4.7.1 오프라인 설치 관리자 다운로드 페이지](https://go.microsoft.com/fwlink/?LinkId=852107)|**포함된 운영 체제:** <br/><br/>Windows 10 Fall Creators Update<br/>Windows Server, 버전 1709<br /><br /> **설치 가능한 운영 체제:**<br/><br/> Windows 10 크리에이터스 업데이트 <br /> Windows 10 1주년 업데이트<br /> Windows 8.1 및 이전 버전<br /> Windows Server 2016 이상<br /> (전체 목록은 [시스템 요구 사항](../get-started/system-requirements.md) 참조)||
 |**4.7**|[NET Framework 4.7 개발자 팩](https://go.microsoft.com/fwlink/?LinkId=825319)|[4.7 웹 설치 관리자의 다운로드 페이지](https://go.microsoft.com/fwlink/?LinkId=825299)<br /><br /> [4.7 오프라인 설치 관리자의 다운로드 페이지](https://go.microsoft.com/fwlink/?LinkId=825303)|**포함된 운영 체제:** <br/><br/>Windows 10 크리에이터스 업데이트<br /><br /> **설치 가능한 운영 체제:**<br /><br/> Windows 10 1주년 업데이트<br /> Windows 8.1 및 이전 버전<br /> Windows Server 2016 이상<br /> (전체 목록은 [시스템 요구 사항](../get-started/system-requirements.md) 참조)||
@@ -170,7 +168,7 @@ Visual Studio에서 애플리케이션을 빌드하거나 명령줄에서 MSBuil
 
 1. 설치된 .NET Framework 버전의 언어 팩 다운로드 페이지를 엽니다.
 
-    - [.NET Framework 4.8 언어 팩](http://go.microsoft.com/fwlink/?LinkId=2053984)
+    - [.NET Framework 4.8 언어 팩](https://go.microsoft.com/fwlink/?LinkId=2053984)
 
     - [.NET Framework 4.7.2 언어 팩](https://go.microsoft.com/fwlink/?LinkID=863258)
 

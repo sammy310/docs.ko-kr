@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - sizeof keyword [C#]
 ms.assetid: c548592c-677c-4f40-a4ce-e613f7529141
-ms.openlocfilehash: c455804923f4d0e7cc8f556bb9b9df34b6332d82
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: 32103043d4c3a8b38f4c8aad80282f6c0555719f
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796521"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73038931"
 ---
 # <a name="sizeof-operator-c-reference"></a>sizeof 연산자(C# 참조)
 
@@ -56,3 +56,4 @@ ms.locfileid: "68796521"
 - [포인터 관련 연산자](pointer-related-operators.md)
 - [포인터 형식](../../programming-guide/unsafe-code-pointers/pointer-types.md)
 - [메모리 및 범위 관련 형식](../../../standard/memory-and-spans/index.md)
+- [.NET의 제네릭](../../../standard/generics/index.md)

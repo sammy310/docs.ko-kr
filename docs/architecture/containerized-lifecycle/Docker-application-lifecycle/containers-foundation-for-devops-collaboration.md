@@ -2,12 +2,12 @@
 title: DevOps 협업의 기반으로 사용되는 컨테이너
 description: DevOps를 간소화하기 위한 컨테이너의 주요 역할을 이해합니다.
 ms.date: 02/15/2019
-ms.openlocfilehash: 16cccef0545f0da14128e31dc8f7ad78369cf23a
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 8258f4331212d92376d64fef318adcdff492f61f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394804"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73094495"
 ---
 # <a name="containers-as-the-foundation-for-devops-collaboration"></a>DevOps 협업의 기반으로 사용되는 컨테이너
 
@@ -51,7 +51,7 @@ Docker 컨테이너화 및 마이크로서비스 사용으로 조직의 개발 �
 
 - Microsoft Azure에서 컨테이너용 오픈 소스 도구/플랫폼을 어떻게 사용할 수 있나요?
 
-위의 모든 질문에 답할 수 있으면 애플리케이션(기존 또는 새 앱)을 Docker 컨테이너로 이동할 준비가 더 잘 된 것입니다. 
+위의 모든 질문에 답할 수 있으면 애플리케이션(기존 또는 새 앱)을 Docker 컨테이너로 이동할 준비가 더 잘 된 것입니다.
 
 ## <a name="introduction-to-a-generic-end-to-end-docker-application-life-cycle-workflow"></a>일반적인 엔드투엔드 Docker 애플리케이션 수명 주기 워크플로 소개
 

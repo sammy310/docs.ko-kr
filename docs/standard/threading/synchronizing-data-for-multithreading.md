@@ -7,14 +7,12 @@ helpviewer_keywords:
 - threading [.NET], synchronizing threads
 - managed threading
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: dc8381f8059e37c6c520c2402289124a506188e8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ecc1e234b03cb45075c40ff6698f71f8ce18d0de
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968422"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128971"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>다중 스레딩을 위한 데이터 동기화
 
@@ -32,12 +30,12 @@ ms.locfileid: "69968422"
   
  공용 언어 런타임은 클래스가 요구 사항에 따라 다양한 서로 다른 방식으로 동기화될 수 있는 범주의 수로 나뉘는 스레드 모델을 제공합니다. 다음 표는 지정된 동기화 범주로 필드 및 메서드에 대해 제공되는 동기화 지원을 보여 줍니다.  
   
-|범주|전역 필드|정적 필드|정적 메서드|인스턴스 필드|인스턴스 메서드|특정 코드 블록|  
+|Category|전역 필드|정적 필드|정적 메서드|인스턴스 필드|인스턴스 메서드|특정 코드 블록|  
 |--------------|-------------------|-------------------|--------------------|---------------------|----------------------|--------------------------|  
 |동기화 없음|아니요|아니요|아니요|아니요|아니요|아니요|  
 |동기화된 컨텍스트|아니요|아니요|아니요|예|예|아니요|  
 |동기화된 코드 영역|아니요|아니요|표시된 경우에만|아니요|표시된 경우에만|표시된 경우에만|  
-|수동 동기화|수동|수동|수동|수동|수동|수동|  
+|수동 동기화|수동|설명서|설명서|설명서|설명서|설명서|  
   
 ## <a name="no-synchronization"></a>동기화 없음  
  이것은 개체의 기본값입니다. 모든 스레드는 언제든지 모든 메서드 또는 필드에 액세스할 수 있습니다. 한 번에 하나의 스레드만 이러한 개체에 액세스해야 합니다.  

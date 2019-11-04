@@ -6,14 +6,12 @@ helpviewer_keywords:
 - garbage collection, intrusiveness
 - garbage collection, latency modes
 ms.assetid: 96278bb7-6eab-4612-8594-ceebfc887d81
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7a81a0015ae046682e1afa40c1c8d272357839ba
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8833c88c3221c0a375011eb62dd712340f7e89cd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622771"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120916"
 ---
 # <a name="latency-modes"></a>대기 모드
 개체를 회수하려면, 가비지 수집기가 애플리케이션의 실행 스레드를 모두 중지해야 합니다. 애플리케이션이 데이터를 검색하거나 콘텐츠를 표시하는 경우와 같은 일부 상황에서는 전체 가비지 컬렉션이 중요한 시간에 발생하여 성능이 저하될 수 있습니다. <xref:System.Runtime.GCSettings.LatencyMode%2A?displayProperty=nameWithType> 속성을 <xref:System.Runtime.GCLatencyMode?displayProperty=nameWithType> 값 중 하나로 설정하여 가비지 수집기의 개입을 조정할 수 있습니다.  

@@ -2,13 +2,14 @@
 title: 콘솔 애플리케이션
 description: 이 자습서에서는 .NET Core 및 C# 언어의 다양한 기능에 대해 설명합니다.
 ms.date: 03/06/2017
+ms.technology: csharp-fundamentals
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
-ms.openlocfilehash: 4324b25daa253b3d2446955ad9ca57c2f0294f0c
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 2b9948ce22eb221d9d757fcec4c556d365469fdf
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851013"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039256"
 ---
 # <a name="console-application"></a>콘솔 애플리케이션
 

@@ -10,14 +10,12 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - producer-consumer patterns, implementing [TPL]
 ms.assetid: 47a1d38c-fe9c-44aa-bd15-937bd5659b0b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6f57c0e2098cbd73edc34f34ba6e309bbf68fac9
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: 2db8cfcfc26b001703e08a501c430be4313aca03
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70167925"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73091483"
 ---
 # <a name="how-to-implement-a-producer-consumer-dataflow-pattern"></a>방법: 공급자-소비자 데이터 흐름 패턴 구현
 이 문서에서는 TPL 데이터 흐름 라이브러리를 사용하여 생산자-소비자 패턴을 구현하는 방법을 설명합니다. 이 패턴에서 *생산자*는 메시지 블록에 메시지를 보내고 *소비자*는 해당 블록에서 메시지를 읽습니다.  

@@ -20,14 +20,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions
 - strings [.NET Framework], regular expressions
 ms.assetid: 521b3f6d-f869-42e1-93e5-158c54a6895d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 89b527d4febb677512b3cdcf7cd47344d182ae26
-ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
+ms.openlocfilehash: ac034ff37b0b39f41d6f58381286706f9a9ac602
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71736859"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121708"
 ---
 # <a name="net-regular-expressions"></a>.NET 정규식
 정규식은 텍스트를 처리하는 강력하고 유연하며 효율적인 방법을 제공합니다. 정규식의 광범위한 패턴 일치 표기법을 사용하여 많은 양의 텍스트를 신속하게 구문 분석함으로써 특정 문자 패턴을 찾고, 텍스트의 유효성을 검사하여 해당 텍스트가 미리 정의된 패턴(예: 전자 메일 주소)과 일치하는지 확인하며, 텍스트 부분 문자열을 추출, 편집, 바꾸기 또는 삭제하고, 추출된 문자열을 컬렉션에 추가하여 보고서를 생성할 수 있습니다. 문자열을 처리하거나 텍스트의 큰 블록을 구문 분석하는 많은 애플리케이션의 경우 정규식은 필수적인 도구입니다.  
@@ -67,7 +65,7 @@ ms.locfileid: "71736859"
   
  정규식 패턴 `(Mr\.? |Mrs\.? |Miss |Ms\.? )`는 모든 "Mr", "Mr.", "Mrs", "Mrs.", "Miss", "Ms" 또는 "Ms."가 발생하는 것과 일치합니다. <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 메서드에 대한 호출은 일치하는 문자열을 <xref:System.String.Empty?displayProperty=nameWithType>로 바꿉니다. 즉, 원래 문자열에서 일치하는 문자열을 제거합니다.  
   
-### <a name="example-2-identifying-duplicated-words"></a>예제 2: 중복된 단어 식별  
+### <a name="example-2-identifying-duplicated-words"></a>예 2: 중복된 단어 식별  
  실수로 단어를 중복하는 것은 작성자가 흔히 하는 실수입니다. 다음 예제에서 보여 주는 것처럼 정규식을 사용하여 중복된 단어를 식별할 수 있습니다.  
   
  [!code-csharp[Conceptual.Regex#3](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex/cs/example2.cs#3)]
@@ -87,7 +85,7 @@ ms.locfileid: "71736859"
   
  입력 문자열에 부분 문자열 "this? This"가 포함되어 있습니다. 그러나 문장 부호가 중간에 있어 이는 중복으로 식별되지 않습니다.  
   
-### <a name="example-3-dynamically-building-a-culture-sensitive-regular-expression"></a>예제 3: 동적으로 문화권 구분 정규식 작성  
+### <a name="example-3-dynamically-building-a-culture-sensitive-regular-expression"></a>예 3: 동적으로 문화권 구분 정규식 작성  
  다음 예제에서는 정규식이 .NET의 전역화 기능에서 제공하는 유연성과 결합되었을 때의 성능을 설명합니다. 이 예제에서는 <xref:System.Globalization.NumberFormatInfo> 개체를 사용하여 시스템의 현재 문화권의 통화 값 형식을 확인합니다. 그런 다음 해당 정보를 사용하여 텍스트에서 통화 값을 추출하는 정규식을 동적으로 구성합니다. 각 일치 항목에 대해 숫자 문자열만 포함된 하위 그룹을 추출하여 <xref:System.Decimal> 값으로 변환하고 누계를 계산합니다.  
   
  [!code-csharp[Conceptual.Regex#1](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex/cs/example.cs#1)]

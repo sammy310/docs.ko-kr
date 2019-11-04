@@ -14,14 +14,12 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9a8f36016b19583a06118edc906cf60a82be32f8
-ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
+ms.openlocfilehash: ce4aeda8c9fb3c73d133316f985d99e7271411c9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70133739"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73103767"
 ---
 # <a name="custom-date-and-time-format-strings"></a>사용자 지정 날짜 및 시간 서식 문자열
 
@@ -46,7 +44,7 @@ ms.locfileid: "70133739"
 
 다음 표에서는 사용자 지정 날짜, 시간 형식 지정자, 각 형식 지정자가 만드는 결과 문자열을 보여 줍니다. 기본적으로 결과 문자열은 en-US 문화권의 형식 규칙을 반영합니다. 특정 형식 지정자가 지역화된 결과 문자열을 만드는 동시에 결과 문자열이 적용되는 문화도 명시합니다. 사용자 지정 날짜 및 시간 형식 문자열을 사용하는 방법에 대한 자세한 내용은 [참고](#notes) 섹션을 참조하세요.
 
-| 형식 지정자 | 설명 | 예제 |
+| 서식 지정자 | 설명 | 예제 |
 | ---------------------- | ----------------- | -------------- |
 |"d"|1부터 31까지의 일(월 기준)입니다.<br /><br /> 추가 정보: ["d" 사용자 지정 형식 지정자](#dSpecifier).|2009-06-01T13:45:30 -> 1<br /><br /> 2009-06-15T13:45:30 -> 15|
 |"dd"|01부터 31까지의 일(월 기준)입니다.<br /><br /> 추가 정보: [“dd” 사용자 지정 형식 지정자](#ddSpecifier).|2009-06-01T13:45:30 -> 01<br /><br /> 2009-06-15T13:45:30 -> 15|
@@ -655,7 +653,7 @@ ms.locfileid: "70133739"
 [!code-csharp[Formatting.DateAndTime.Custom#22](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/LiteralsEx3.cs#22)]
 [!code-vb[Formatting.DateAndTime.Custom#22](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/LiteralsEx3.vb#22)]
 
-## <a name="notes"></a>참고 사항
+## <a name="notes"></a>메모
 
 ### <a name="UsingSingleSpecifiers"></a> 단일 사용자 지정 형식 지정자 사용
 

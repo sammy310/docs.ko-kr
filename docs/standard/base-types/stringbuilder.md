@@ -16,14 +16,12 @@ helpviewer_keywords:
 - Insert method
 - strings [.NET Framework], StringBuilder object
 ms.assetid: 5c14867c-9a99-45bc-ae7f-2686700d377a
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2f18bdfaee1d79ce84a5b2822d52231f4bed098c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 19ee90f3300e3b610eeefd4949baa2759b834a60
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620060"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121672"
 ---
 # <a name="using-the-stringbuilder-class-in-net"></a>.NET에서 StringBuilder 클래스 사용
 <xref:System.String> 개체는 변경할 수 없습니다. <xref:System.String?displayProperty=nameWithType> 클래스에서 메서드 중 하나를 사용할 때마다 메모리에 새 문자열 개체가 생성되므로, 새 개체에 대한 공간을 새로 할당해야 합니다. 문자열을 반복적으로 수정해야 하는 경우 새로운 <xref:System.String> 개체 생성과 관련된 오버헤드로 인해 비용이 증가할 수 있습니다. 새 개체를 만들지 않고 문자열을 수정하려는 경우 <xref:System.Text.StringBuilder?displayProperty=nameWithType> 클래스를 사용할 수 있습니다. 예를 들어 <xref:System.Text.StringBuilder> 클래스를 사용하면 루프에서 많은 문자열을 연결할 때 성능이 향상될 수 있습니다.  
@@ -84,7 +82,7 @@ ms.locfileid: "54620060"
  [!code-csharp[Conceptual.StringBuilder#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.StringBuilder/cs/Example.cs#5)]
  [!code-vb[Conceptual.StringBuilder#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/Example.vb#5)]  
   
-### <a name="insert"></a>Insert  
+### <a name="insert"></a>삽입  
  <xref:System.Text.StringBuilder.Insert%2A> 메서드는 현재 <xref:System.Text.StringBuilder> 개체의 지정된 위치에 문자열 또는 개체를 추가합니다. 다음 예에서는 이 메서드를 사용하여 <xref:System.Text.StringBuilder> 개체의 여섯 번째 위치에 단어를 삽입합니다.  
   
  [!code-cpp[Conceptual.StringBuilder#6](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.StringBuilder/cpp/example.cpp#6)]
@@ -98,7 +96,7 @@ ms.locfileid: "54620060"
  [!code-csharp[Conceptual.StringBuilder#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.StringBuilder/cs/Example.cs#7)]
  [!code-vb[Conceptual.StringBuilder#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/Example.vb#7)]  
   
-### <a name="replace"></a>바꾸기  
+### <a name="replace"></a>Replace  
  **Replace** 메서드는 <xref:System.Text.StringBuilder> 개체 내의 문자를 다른 지정된 문자로 바꾸는 데 사용할 수 있습니다. 다음 예에서는 **Replace** 메서드를 사용하여 <xref:System.Text.StringBuilder> 개체에서 느낌표 문자(!)의 모든 인스턴스를 검색한 다음, 물음표 문자(?)로 바꿉니다.  
   
  [!code-cpp[Conceptual.StringBuilder#8](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.StringBuilder/cpp/example.cpp#8)]

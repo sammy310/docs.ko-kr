@@ -2,13 +2,14 @@
 title: C#에서 기본 인터페이스 메서드를 사용하여 안전하게 인터페이스 업데이트
 description: 이 고급 자습서에서는 해당 인터페이스를 구현하는 모든 클래스 및 구성 요소를 훼손하지 않고 기존 인터페이스 정의에 새 기능을 안전하게 추가할 수 있는 방법을 살펴봅니다.
 ms.date: 05/06/2019
+ms.technlogy: csharp-advanced-concepts
 ms.custom: mvc
-ms.openlocfilehash: 71fce2594dbf5ef3175a6b9bdf4e6edba754bb84
-ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
+ms.openlocfilehash: b9194b769a3ba6d2906d6177c2363d6093b85188
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72275988"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039246"
 ---
 # <a name="tutorial-update-interfaces-with-default-interface-methods-in-c-80"></a>자습서: C# 8.0에서 기본 인터페이스 메서드로 인터페이스를 업데이트
 

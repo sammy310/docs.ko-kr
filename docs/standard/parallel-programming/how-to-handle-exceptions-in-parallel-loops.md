@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - parallel loops, how to handle exceptions
 ms.assetid: 512f0d5a-4636-4875-b766-88f20044f143
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2ffc522b2ab13ae2098c01e6716e00aef5bef8e7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ae2fadd68cb211285e31e4ee990b6fb288056091
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962491"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73091551"
 ---
 # <a name="how-to-handle-exceptions-in-parallel-loops"></a>방법: 병렬 루프의 예외 처리
 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 및 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> 오버로드에는 throw될 수 있는 예외를 처리하기 위한 특별한 메커니즘이 없습니다. 이런 점에서 일반 `for` 및 `foreach` 루프(Visual Basic의 `For` 및 `For Each`)와 비슷합니다. 처리되지 않은 예외로 인해 루프가 즉시 종료됩니다.  

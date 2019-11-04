@@ -5,14 +5,12 @@ helpviewer_keywords:
 - assemblies [.NET Framework], programming
 - programming assemblies
 ms.assetid: 25918b15-701d-42c7-95fc-c290d08648d6
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 03babe701b46eab54a76094c4728af80e6d9911e
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 9f07d36d9e47189d53e367fd1406e5684c024aa3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972620"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73107065"
 ---
 # <a name="program-with-assemblies"></a>어셈블리를 사용한 프로그램
 어셈블리는 .NET Framework의 문서 블록으로서 배포, 버전 제어, 다시 사용, 활성화 범위 지정 및 보안 권한의 기본 단위를 형성합니다. 어셈블리는 형식 구현을 인식하는 데 필요한 정보와 함께 공용 언어 런타임을 제공합니다. 어셈블리는 서로 함께 사용되어 논리적 기능 단위를 형성하도록 빌드되는 형식 및 리소스의 컬렉션입니다. 런타임에 대해, 형식은 어셈블리 컨텍스트 외부에 존재하지 않습니다.  
@@ -22,7 +20,7 @@ ms.locfileid: "70972620"
 > [!NOTE]
 > .NET Framework 버전 2.0부터 런타임은 현재 로드된 런타임보다 높은 버전 번호를 가진 .NET Framework 버전으로 컴파일된 어셈블리를 로드하지 않습니다. 이는 버전 번호의 주 버전 및 부 버전 구성 요소 조합에 적용됩니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [어셈블리 만들기](create.md)  
  단일 파일 어셈블리와 다중 파일 어셈블리에 대해 설명합니다.  
   

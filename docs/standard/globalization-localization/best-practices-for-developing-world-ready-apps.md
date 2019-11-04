@@ -8,14 +8,12 @@ helpviewer_keywords:
 - globalization [.NET Framework], best practices
 - international applications [.NET Framework], best practices
 ms.assetid: f08169c7-aad8-4ec3-9a21-9ebd3b89986c
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d96e223b85178c7f2784a523e5609057d1432488
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: a2cd1039f95a763002922fc2fa24eff77838de80
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310540"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141286"
 ---
 # <a name="best-practices-for-developing-world-ready-applications"></a>지역화 대비 애플리케이션 개발을 위한 모범 사례
 

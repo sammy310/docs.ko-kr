@@ -13,14 +13,12 @@ helpviewer_keywords:
 - composite formatting
 - objects [.NET Framework], formatting multiple objects
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8d0574c7e0910a658f1dc80d8394f55b472c31a3
-ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
+ms.openlocfilehash: 12666ca5ad8f223f2fba4a63a7cc7525601367a2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "64634566"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73091564"
 ---
 # <a name="composite-formatting"></a>복합 형식 지정
 
@@ -87,7 +85,7 @@ ms.locfileid: "64634566"
   
  다음 표에는 미리 정의된 서식 문자열 집합을 지원하는 .NET Framework 클래스 라이브러리의 형식 또는 형식 범주와 지원되는 서식 문자열을 나열하는 항목에 대한 링크가 나와 있습니다. 문자열 서식 지정은 애플리케이션 정의 형식에서 지원하는 형식 문자열 집합을 정의하는, 모든 기존 형식을 위한 새 형식 문자열을 정의하는 확장 가능한 메커니즘입니다. 자세한 내용은 <xref:System.IFormattable> 및 <xref:System.ICustomFormatter> 인터페이스 항목을 참조하세요.  
   
-|형식 또는 형식 범주|참조|  
+|형식 또는 형식 범주|자세한 내용은 다음을 참조하세요.|  
 |---------------------------|---------|  
 |날짜 및 시간 형식(<xref:System.DateTime>, <xref:System.DateTimeOffset>)|[표준 날짜 및 시간 형식 문자열](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)<br /><br /> [사용자 지정 날짜 및 시간 형식 문자열](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|  
 |열거형 형식(<xref:System.Enum?displayProperty=nameWithType>에서 파생되는 모든 형식)|[Enumeration Format Strings](../../../docs/standard/base-types/enumeration-format-strings.md)|  

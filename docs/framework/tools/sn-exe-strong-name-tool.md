@@ -10,14 +10,12 @@ helpviewer_keywords:
 - strong-named assemblies, signing files
 - key pairs for signing files
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3ad535e9b862cce93244524c6cd67f667abaaa0e
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: dc9b8beafe1b174543afaf9da7e7180638d561ff
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72919350"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73104349"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe(강력한 이름 도구)
 강력한 이름 도구(Sn.exe)를 사용하면 [강력한 이름](../../standard/assembly/strong-named.md)으로 어셈블리에 서명할 수 있습니다. Sn.exe를 실행하면 키 관리, 서명 생성 및 서명 확인을 위한 옵션이 제공됩니다.  

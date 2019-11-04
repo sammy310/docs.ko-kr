@@ -2,13 +2,14 @@
 title: 표준 .NET 이벤트 패턴
 description: 표준 이벤트 소스를 만들고 코드에서 표준 이벤트를 구독 및 처리하는 방법과 .NET 이벤트 패턴에 대해 알아봅니다.
 ms.date: 06/20/2016
+ms.technology: csharp-fundamentals
 ms.assetid: 8a3133d6-4ef2-46f9-9c8d-a8ea8898e4c9
-ms.openlocfilehash: cd1ead318529d1afc5b27ff8710cebcaae9b7bc3
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: a050dc9a11470ff3b71488ce2ab4b92e607aa9b0
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65062962"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73037177"
 ---
 # <a name="standard-net-event-patterns"></a>표준 .NET 이벤트 패턴
 

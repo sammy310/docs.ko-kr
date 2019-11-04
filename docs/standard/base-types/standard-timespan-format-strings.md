@@ -17,14 +17,12 @@ helpviewer_keywords:
 - standard TimeSpan format strings
 - formatting [.NET Framework], time intervals
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bc2ca7a94ffb19f62f354bdfc3040490b57e2689
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5284eb52d7b50307e51945fc0b4a9deb8818f2e2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968545"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121690"
 ---
 # <a name="standard-timespan-format-strings"></a>표준 TimeSpan 서식 문자열
 <a name="Top"></a> 표준 <xref:System.TimeSpan> 형식 문자열은 단일 형식 지정자를 사용하여 서식 지정 작업으로 생성되는 <xref:System.TimeSpan> 값의 텍스트 표현을 정의합니다. 공백을 포함하여 문자가 두 개 이상 포함된 형식 문자열은 사용자 지정 <xref:System.TimeSpan> 형식 문자열로 해석됩니다. 자세한 내용은 [사용자 지정 TimeSpan 서식 문자열](../../../docs/standard/base-types/custom-timespan-format-strings.md)을 참조하세요.  
@@ -41,7 +39,7 @@ ms.locfileid: "69968545"
   
 <a name="top"></a> 다음 표에는 표준 시간 간격 형식 지정자가 나와 있습니다.  
   
-|형식 지정자|name|설명|예제|  
+|서식 지정자|name|설명|예|  
 |----------------------|----------|-----------------|--------------|  
 |"c"|상수(고정) 형식|이 지정자는 문화권을 구분하지 않으며 형식은 `[-][d'.']hh':'mm':'ss['.'fffffff]`입니다.<br /><br /> "t" 및 "T" 형식 문자열은 같은 결과를 생성합니다.<br /><br /> 추가 정보: [상수("c") 형식 지정자](#Constant).|`TimeSpan.Zero` -> 00:00:00<br /><br /> `New TimeSpan(0, 0, 30, 0)` -> 00:30:00<br /><br /> `New TimeSpan(3, 17, 25, 30, 500)` -> 3.17:25:30.5000000|  
 |"g"|일반 약식|이 지정자는 필요한 내용만 출력하고 문화권을 구분하며 형식은 `[-][d':']h':'mm':'ss[.FFFFFFF]`입니다.<br /><br /> 추가 정보: [일반 약식("g") 형식 지정자](#GeneralShort).|`New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50.5(en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50,5(fr-FR)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50.599(en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50,599(fr-FR)|  
@@ -78,7 +76,7 @@ ms.locfileid: "69968545"
   
 <a name="GeneralShort"></a>   
 ## <a name="the-general-short-g-format-specifier"></a>일반 약식("g") 형식 지정자  
- "g" <xref:System.TimeSpan> 형식 지정자는 필요한 요소만 포함하여 <xref:System.TimeSpan> 값의 문자열 표현을 압축 형식으로 반환합니다. 이 형식 지정자의 형식은 다음과 같습니다.  
+ "g" <xref:System.TimeSpan> 형식 지정자는 필요한 요소만 포함하여 <xref:System.TimeSpan> 값의 문자열 표현을 압축 형식으로 반환합니다. 다음과 같은 형식입니다.  
   
  [-][*d*:]*h*:*mm*:*ss*[.*FFFFFFF*]  
   

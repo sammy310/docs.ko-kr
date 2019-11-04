@@ -2,13 +2,14 @@
 title: XML 주석을 사용하여 코드 문서화
 description: XML 문서 주석을 사용하여 코드를 문서화하고 컴파일 시간에 XML 문서 파일을 생성하는 방법을 알아봅니다.
 ms.date: 02/14/2017
+ms.technology: csharp-fundamentals
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 048546407dbf94f274dd8c9c39e83c103efd75e1
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: a9142b36586de4d08dec6c4b72bfd1725b4830ac
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72521165"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73037660"
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>XML 주석을 사용하여 코드 문서화
 

@@ -12,14 +12,12 @@ helpviewer_keywords:
 - managed heap
 - runtime, automatic memory management
 ms.assetid: d4850de5-fa63-4936-a250-5678d118acba
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e80e524a8bac28195067ce6bd30504005fc4b5a0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d112bf6d145893bd7b0f99e2b233fc83e72fe227
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592538"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140575"
 ---
 # <a name="automatic-memory-management"></a>Automatic Memory Management
 자동 메모리 관리는 [관리되는 실행](../../docs/standard/managed-execution-process.md)을 수행하는 중에 공용 언어 런타임에서 제공되는 서비스 중 하나입니다. CLR의 가비지 수집기에서 애플리케이션의 메모리 할당과 해제를 관리합니다. 즉, 관리되는 애플리케이션을 개발할 때 개발자는 메모리 관리 작업을 수행하기 위해 코드를 작성할 필요가 없습니다. 자동 메모리 관리를 사용하면 실수로 개체 비우기를 수행하지 않거나 메모리 누수를 유발하거나 또는 이미 비워진 개체를 찾기 위해 메모리에 액세스하려는 경우 등의 일반적인 문제를 해결할 수 있습니다. 이 단원에서는 가비지 수집기에서 메모리를 할당하고 해제하는 방법에 대해 설명합니다.  

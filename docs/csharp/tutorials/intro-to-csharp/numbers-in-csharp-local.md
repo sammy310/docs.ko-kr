@@ -3,12 +3,12 @@ title: C#의 숫자 - C# 소개 자습서
 description: 숫자 형식, 해당 속성 및 메서드를 살펴보면서 C#을 학습합니다.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: e9d8b09bde6e87edf9f483c0c296dbb256343f58
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: b392682a245101e37a182cb92d36ccb1dd34b13e
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774018"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039697"
 ---
 # <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>C\#에서 정수 및 부동 소수점 수 조작
 
@@ -40,10 +40,16 @@ Console.WriteLine(c);
 다른 연산을 살펴보세요. `c`의 값을 쓰는 줄 뒤에 다음 줄을 추가합니다.
 
 ```csharp
+
+// subtraction
 c = a - b;
 Console.WriteLine(c);
+
+// multiplication
 c = a * b;
 Console.WriteLine(c);
+
+// division
 c = a / b;
 Console.WriteLine(c);
 ```
@@ -69,12 +75,20 @@ namespace NumbersInCSharp
         {
             int a = 18;
             int b = 6;
+            
+            // addition
             int c = a + b;
             Console.WriteLine(c);
+            
+            // subtraction
             c = a - b;
             Console.WriteLine(c);
+            
+            // multiplication
             c = a * b;
             Console.WriteLine(c);
+            
+            // division
             c = a / b;
             Console.WriteLine(c);
         }
@@ -153,12 +167,20 @@ namespace NumbersInCSharp
         {
             int a = 18;
             int b = 6;
+            
+            // addition
             int c = a + b;
             Console.WriteLine(c);
+            
+            // subtraction
             c = a - b;
             Console.WriteLine(c);
+            
+            // multiplication
             c = a * b;
             Console.WriteLine(c);
+            
+            // division
             c = a / b;
             Console.WriteLine(c);
         }

@@ -2,12 +2,12 @@
 title: Docker 용어
 description: 컨테이너화된 .NET 애플리케이션을 위한 .NET 마이크로 서비스 아키텍처 | Docker 용어
 ms.date: 01/07/2019
-ms.openlocfilehash: a5f78ea0e848ef14f6b37e2d97d7546df20096c2
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: 2735188c508a7bbb0101946429faec122b13a17b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72179413"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73090048"
 ---
 # <a name="docker-terminology"></a>Docker 용어
 
@@ -17,7 +17,7 @@ ms.locfileid: "72179413"
 
 **Dockerfile**: Docker 이미지를 빌드하는 방법에 대한 지침을 포함하는 텍스트 파일입니다. 배치 스크립트처럼 첫째 줄에 지정된 기본 이미지에서 시작하여, 필요한 작업 환경이 완성될 때까지 지침에 따라 필요한 프로그램을 설치하고 파일을 복사합니다.
 
-**빌드:** 해당 Dockerfile에서 제공하는 정보 및 컨텍스트에 외에도 이미지를 빌드하는 폴더의 추가 파일에 기반하여 컨테이너 이미지를 빌드하는 작업입니다. Docker **docker build** 명령을 사용하여 이미지를 빌드할 수 있습니다. 
+**빌드:** 해당 Dockerfile에서 제공하는 정보 및 컨텍스트에 외에도 이미지를 빌드하는 폴더의 추가 파일에 기반하여 컨테이너 이미지를 빌드하는 작업입니다. Docker **docker build** 명령을 사용하여 이미지를 빌드할 수 있습니다.
 
 **컨테이너**: Docker 이미지의 인스턴스입니다. 컨테이너는 단일 애플리케이션, 프로세스 또는 서비스의 실행을 나타냅니다. Docker 이미지의 콘텐츠, 실행 환경 및 명령의 표준 집합으로 구성됩니다. 서비스의 크기를 조정하는 경우 동일한 이미지에서 컨테이너의 여러 인스턴스를 만듭니다. 일괄 작업은 동일한 이미지에서 다중 컨테이너를 만들 수 있고 각 인스턴스에 다른 매개 변수를 전달합니다.
 
@@ -47,7 +47,7 @@ ms.locfileid: "72179413"
 
 **클러스터**: 애플리케이션이 클러스터 내의 여러 호스트에 걸쳐 분산된 서비스의 여러 인스턴스 크기를 조정할 수 있도록 단일 가상 Docker 호스트인 것처럼 노출된 Docker 호스트 컬렉션입니다. Docker 클러스터는 Kubernetes, Azure Service Fabric, Docker Swarm 및 Mesosphere DC/OS를 사용하여 만들 수 있습니다.
 
-**오케스트레이터**: 클러스터 및 Docker 호스트의 관리를 간소화하는 도구입니다. 오케스트레이터를 사용하면 CLI(명령줄 인터페이스)또는 그래픽 UI를 통해 해당 이미지, 컨테이너 및 호스트를 관리할 수 있습니다. 컨테이너 네트워킹, 구성, 부하 분산, 서비스 검색, 고가용성, Docker 호스트 구성 등을 관리할 수 있습니다. 오케스트레이터는 노드 컬렉션 간에 워크로드를 실행하고, 배포하고, 크기를 조정하고. 복구하는 작업을 담당합니다. 일반적으로 오케스트레이터 제품은 출시된 다른 제품 중에서 Kubernetes 및 Azure Service Fabric과 같은 클러스터 인프라를 제공하는 동일한 제품입니다. 
+**오케스트레이터**: 클러스터 및 Docker 호스트의 관리를 간소화하는 도구입니다. 오케스트레이터를 사용하면 CLI(명령줄 인터페이스)또는 그래픽 UI를 통해 해당 이미지, 컨테이너 및 호스트를 관리할 수 있습니다. 컨테이너 네트워킹, 구성, 부하 분산, 서비스 검색, 고가용성, Docker 호스트 구성 등을 관리할 수 있습니다. 오케스트레이터는 노드 컬렉션 간에 워크로드를 실행하고, 배포하고, 크기를 조정하고. 복구하는 작업을 담당합니다. 일반적으로 오케스트레이터 제품은 출시된 다른 제품 중에서 Kubernetes 및 Azure Service Fabric과 같은 클러스터 인프라를 제공하는 동일한 제품입니다.
 
 >[!div class="step-by-step"]
 >[이전](docker-defined.md)

@@ -12,20 +12,18 @@ helpviewer_keywords:
 - inline option constructs
 - options parameter
 ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d9cfdcbe1e533f70cdd37b5d0512c781c6c05d22
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: 4cc62696cb6589151e3abc59bbea64b693e8b3a2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71957349"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121726"
 ---
 # <a name="regular-expression-options"></a>정규식 옵션
 
 <a name="Top"></a> 기본적으로 입력 문자열을 정규식 패턴의 리터럴 문자와 비교할 때는 대/소문자를 구분하고, 정규식 패턴의 공백은 리터럴 공백 문자로 해석되며, 정규식의 캡처링 그룹은 명시적 및 암시적으로 명명됩니다. 정규식 옵션을 지정하여 기본 정규식 동작의 이러한 측면과 몇 가지 다른 측면을 수정할 수 있습니다. 다음 테이블에 나열되어 있는 이러한 옵션은 정규식 패턴의 일부로 인라인으로 포함되거나, <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> 클래스 생성자 또는 정적 패턴 일치 메서드에 <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> 열거형 값으로 제공될 수 있습니다.
 
-|RegexOptions 멤버|인라인 문자|효과|
+|RegexOptions 멤버|인라인 문자|결과|
 |-------------------------|----------------------|------------|
 |<xref:System.Text.RegularExpressions.RegexOptions.None>|사용할 수 없음|기본 동작을 사용합니다. 자세한 내용은 [기본 옵션](#Default)을 참조하세요.|
 |<xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase>|`i`|대/소문자를 구분하지 않는 일치를 사용합니다. 자세한 내용은 [대/소문자를 구분하지 않는 일치](#Case)를 참조하세요.|
@@ -114,7 +112,7 @@ ms.locfileid: "71957349"
 
 ## <a name="default-options"></a>기본 옵션
 
-<xref:System.Text.RegularExpressions.RegexOptions.None?displayProperty=nameWithType> 옵션은 지정된 옵션이 없고 정규식 엔진에서 해당 기본 동작을 사용함을 나타냅니다. 여기에는 다음과 같은 사항이 포함됩니다.
+<xref:System.Text.RegularExpressions.RegexOptions.None?displayProperty=nameWithType> 옵션은 지정된 옵션이 없고 정규식 엔진에서 해당 기본 동작을 사용함을 나타냅니다. 이 제품에는 다음이 포함됩니다.
 
 - 패턴이 ECMAScript 정규식이 아니라 정식으로 해석됩니다.
 
@@ -172,7 +170,7 @@ ms.locfileid: "71957349"
 
 정규식 패턴 `^(\w+)\s(\d+)\r*$`는 다음 테이블과 같이 정의됩니다.
 
-|무늬|설명|
+|패턴|설명|
 |-------------|-----------------|
 |`^`|줄의 시작 부분에서 시작합니다.|
 |`(\w+)`|하나 이상의 단어 문자를 찾습니다. 이 그룹은 첫 번째 캡처링 그룹입니다.|
@@ -227,7 +225,7 @@ ms.locfileid: "71957349"
 
 정규식 패턴 `\b\(?((?>\w+),?\s?)+[\.!?]\)?`는 다음 표와 같이 정의됩니다.
 
-|무늬|설명|
+|패턴|설명|
 |-------------|-----------------|
 |`\b`|단어 경계에서 시작합니다.|
 |`\(?`|0개 또는 1개의 여는 괄호("(")를 찾습니다.|
@@ -337,7 +335,7 @@ lookahead 어설션(`(?=`*subexpression*`)` 언어 요소) 및 lookbehind 어설
 
 이 정규식 패턴은 다음 테이블과 같이 정의됩니다.
 
-|무늬|설명|
+|패턴|설명|
 |-------------|-----------------|
 |`(?<=\d{1,2}\s)`|일치 항목의 시작 부분 앞에는 한 개 또는 두 개의 10진수와 그 뒤에 공백이 하나 있어야 합니다.|
 |`\w+`|하나 이상의 단어 문자를 찾습니다.|
@@ -374,7 +372,7 @@ ECMAScript의 동작과 정식 정규식의 동작은 문자 클래스 구문, �
 
   정규식은 다음 테이블과 같이 정의됩니다.
 
-  |무늬|설명|
+  |패턴|설명|
   |-------------|-----------------|
   |(a+)|문자 "a"를 1개 이상 찾습니다. 이 그룹은 두 번째 캡처링 그룹입니다.|
   |(\1)|첫 번째 캡처링 그룹에 의해 캡처된 부분 문자열을 찾습니다. 이 그룹은 세 번째 캡처링 그룹입니다.|

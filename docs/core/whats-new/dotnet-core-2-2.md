@@ -4,15 +4,13 @@ description: .NET Core 2.2에 있는 새로운 기능에 대해 알아봅니다.
 dev_langs:
 - csharp
 - vb
-author: rpetrusha
-ms.author: ronpet
 ms.date: 12/04/2018
-ms.openlocfilehash: 49a65dd44159e9800f7cf50a1edaa3d9e9b82e47
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 917b51e0cf36cca45135fda4a084eb2bca62e835
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677268"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73100688"
 ---
 # <a name="whats-new-in-net-core-22"></a>.NET Core 2.2의 새로운 기능
 
@@ -76,7 +74,7 @@ internal sealed class SimpleEventListener : EventListener
 
 **계층화된 컴파일은 옵트인 기능으로 유지됨**
 
-.NET Core 2.1에서 JIT 컴파일러는 새로운 컴파일러 기술인 ‘계층화된 컴파일’을 옵트인 기능으로 구현했습니다. 계층화된 컴파일의 목표는 성능 향상입니다. JIT 컴파일러가 수행하는 중요한 작업 중 하나는 코드 실행을 최적화하는 것입니다. 그러나 자주 사용되지 않는 코드 경로의 경우 컴파일러가 코드 최적화에 사용하는 시간이 런타임이 최적화되지 않은 코드 실행에 사용하는 시간보다 길 수 있습니다. 계층화된 컴파일은 JIT 컴파일에 다음과 같은 두 단계를 도입합니다.
+.NET Core 2.1에서 JIT 컴파일러는 새로운 컴파일러 기술인 ‘계층화된 컴파일’을 옵트인 기능으로 구현했습니다.  계층화된 컴파일의 목표는 성능 향상입니다. JIT 컴파일러가 수행하는 중요한 작업 중 하나는 코드 실행을 최적화하는 것입니다. 그러나 자주 사용되지 않는 코드 경로의 경우 컴파일러가 코드 최적화에 사용하는 시간이 런타임이 최적화되지 않은 코드 실행에 사용하는 시간보다 길 수 있습니다. 계층화된 컴파일은 JIT 컴파일에 다음과 같은 두 단계를 도입합니다.
 
 - 가능한 한 빨리 코드를 생성하는 **첫 번째 계층**.
 

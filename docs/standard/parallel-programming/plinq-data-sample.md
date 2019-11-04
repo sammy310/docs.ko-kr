@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, sample data
 ms.assetid: 4fccbb35-eaa5-44e9-a252-a5c3d4bc7604
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 60693a6570eff6f9d4980d8f29f1385bc7462f08
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: b13a2608df486f1de42514d4f8eaac49f04d345e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353159"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140016"
 ---
 # <a name="plinq-data-sample"></a>PLINQ 데이터 샘플
 이 샘플에는 고객, 제품, 주문 및 주문 세부 정보의 메모리 내 컬렉션으로 변환되는 메서드와 함께 .csv 형식의 예제 데이터가 포함되어 있습니다. PLINQ를 사용하여 더 실험해 보기 위해 다른 특정 항목의 코드 예제를 이 항목의 코드에 붙여넣고 `Main` 메서드에서 호출할 수 있습니다. 또한 사용자만의 PLINQ 쿼리에 이 데이터를 사용할 수도 있습니다.  
@@ -46,7 +44,7 @@ ms.locfileid: "71353159"
  [!code-csharp[PLINQ#50](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#50)]
  [!code-vb[PLINQ#50](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#50)]  
   
-## <a name="data"></a>데이터  
+## <a name="data"></a>Data  
   
 ```console  
 CUSTOMERS  

@@ -10,14 +10,12 @@ helpviewer_keywords:
 - enumeration format strings
 - formatting [.NET Framework], enumeration
 ms.assetid: dd1ff672-1052-42cf-8666-4924fb6cd1a1
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: be2e5dbe0d02bcec8974a1e52c0dce107d3bf46b
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 316c042b05e505b3e3e857ea41ae808a2a0282f5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052846"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126416"
 ---
 # <a name="enumeration-format-strings"></a>열거형 형식 문자열
 
@@ -53,7 +51,7 @@ ms.locfileid: "66052846"
 [!code-csharp[Formatting.Enum#4](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#4)]      
 [!code-vb[Formatting.Enum#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#4)]
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 다음 예제에서는 세 개의 항목 `Red`, `Blue` 및 `Green`으로 구성된 `Colors`라는 열거형을 정의합니다.
 

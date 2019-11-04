@@ -1,15 +1,13 @@
 ---
 title: 주요 변경 범주 - .NET Core
 description: .NET Core에서 주요 변경 내용을 분류하는 방법을 알아봅니다.
-author: rpetrusha
-ms.author: ronpet
 ms.date: 06/10/2019
-ms.openlocfilehash: e15b0c566584571440eb09c7fb981874b7517c48
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 058f2c2cdeed1e3e984f1de8ab493971d3937876
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698447"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73089438"
 ---
 # <a name="breaking-change-categories"></a>호환성이 손상되는 변경 범주
 

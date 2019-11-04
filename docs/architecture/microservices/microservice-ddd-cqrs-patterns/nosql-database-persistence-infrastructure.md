@@ -2,12 +2,12 @@
 title: NoSQL 데이터베이스를 지속성 인프라로 사용
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | 일반적으로 NoSql 데이터베이스를 사용하고, 특히 Azure Cosmos DB를 지속성을 구현하는 옵션으로 사용하는 것을 이해합니다.
 ms.date: 10/08/2018
-ms.openlocfilehash: d96d72fe675dfa830029e4311f2cf165a305c328
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: b184586dede6331e0babfa976c6fd641933d018e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039954"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73089864"
 ---
 # <a name="use-nosql-databases-as-a-persistence-infrastructure"></a>NoSQL 데이터베이스를 지속성 인프라로 사용
 
@@ -52,11 +52,11 @@ NoSQL 데이터베이스를 사용하는 경우 이점은 엔터티가 더욱 �
 
 ## <a name="introduction-to-azure-cosmos-db-and-the-native-cosmos-db-api"></a>Azure Cosmos DB 및 네이티브 Cosmos DB API 소개
 
-[Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/introduction)는 중요 애플리케이션에 대한 Microsoft의 전 세계적으로 분산된 데이터베이스 서비스입니다. Azure Cosmos DB는 [업계 최고의 SLA](https://azure.microsoft.com/support/legal/sla/cosmos-db/)로 지원되는 [턴키 방식으로 글로벌 배포](https://docs.microsoft.com/azure/cosmos-db/distribute-data-globally), 전 세계적인 [처리량 및 스토리지의 탄력적인 확장](https://docs.microsoft.com/azure/cosmos-db/partition-data), 한 자릿수 밀리초 대기 시간(99번째 백분위수), [5개의 잘 정의된 일관성 수준](https://docs.microsoft.com/azure/cosmos-db/consistency-levels) 및 보장되는 높은 가용성을 제공합니다. Azure Cosmos DB는 스키마 및 인덱스 관리를 처리할 필요 없이 [데이터를 자동으로 인덱싱합니다](https://www.vldb.org/pvldb/vol8/p1668-shukla.pdf). 다중 모델이며 문서, 키-값, 그래프 및 열 형식 데이터 모델을 지원합니다.
+[Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/introduction)는 중요 애플리케이션에 대한 Microsoft의 전 세계적으로 분산된 데이터베이스 서비스입니다. Azure Cosmos DB는 [업계 최고의 SLA](https://azure.microsoft.com/support/legal/sla/cosmos-db/)로 지원되는 [턴키 방식으로 글로벌 배포](https://docs.microsoft.com/azure/cosmos-db/distribute-data-globally), 전 세계적인 [처리량 및 스토리지의 탄력적인 확장](https://docs.microsoft.com/azure/cosmos-db/partition-data), 한 자릿수 밀리초 대기 시간(99번째 백분위수), [5개의 잘 정의된 일관성 수준](https://docs.microsoft.com/azure/cosmos-db/consistency-levels) 및 보장되는 높은 가용성을 제공합니다. Azure Cosmos DB는 사용자가 스키마 및 인덱스 관리를 처리하지 않아도 되도록 [데이터를 자동으로 인덱싱](https://www.vldb.org/pvldb/vol8/p1668-shukla.pdf)합니다. 또한 다중 모델 방식이며, 문서, 키-값, 그래프 및 열 형식 데이터 모델을 지원합니다.
 
 ![Azure Cosmos DB는 4개의 API 프로토콜로 액세스할 수 있는 전역적으로 분산된 낮은 대기 시간이 보장된 데이터베이스입니다. ](./media/image19.1.png)
 
-**그림 7-19**. Azure Cosmos DB 전역 배포
+**그림 7-19**. Azure Cosmos DB 글로벌 배포
 
 C\# 모델을 사용하여 Azure Cosmos DB API에서 사용될 집계를 구현하는 경우 집계는 EF Core와 함께 사용되는 C\# POCO 클래스와 유사할 수 있습니다. 차이점은 다음 코드에서처럼 애플리케이션 및 인프라 계층에서 사용하는 방법에 있습니다.
 
@@ -122,7 +122,7 @@ await client.CreateDocumentAsync(collectionUri, newOrder);
 
 다른 .NET 애플리케이션에서와 같이 컨테이너에서 실행되는 .NET 코드에서 Azure Cosmos DB 데이터베이스에 액세스할 수 있습니다. 예를 들어 eShopOnContainers의 Locations.API 및 Marketing.API 마이크로 서비스는 Azure Cosmos DB 데이터베이스를 사용할 수 있도록 구현됩니다.
 
-그러나 Docker 개발 환경 관점에서 Azure Cosmos DB에 제한이 있습니다. 2017년 말을 기준으로, 로컬 개발 컴퓨터(예: PC)에서 실행할 수 있는 온-프레미스 [Azure Cosmos DB 에뮬레이터](https://docs.microsoft.com/azure/cosmos-db/local-emulator)가 있는 경우에도 Linux가 아닌 Windows만 지원합니다. 
+그러나 Docker 개발 환경 관점에서 Azure Cosmos DB에 제한이 있습니다. 2017년 말을 기준으로, 로컬 개발 컴퓨터(예: PC)에서 실행할 수 있는 온-프레미스 [Azure Cosmos DB 에뮬레이터](https://docs.microsoft.com/azure/cosmos-db/local-emulator)가 있는 경우에도 Linux가 아닌 Windows만 지원합니다.
 
 Docker에서 이 에뮬레이터를 실행할 가능성도 있지만 Linux 컨테이너가 아닌 Windows 컨테이너에서만 실행합니다. 현재 Windows의 경우 Docker에 Linux 및 Windows 컨테이너를 동시에 배포할 수 없으므로 애플리케이션이 Linux 컨테이너로 배포되는 경우 개발 환경에 대한 초기 핸디캡이 있습니다. 배포되는 모든 컨테이너는 Linux 또는 Windows용이어야 합니다.
 
@@ -150,7 +150,7 @@ Cosmos DB 데이터베이스는 .NET용 MongoDB API뿐만 아니라 네이티브
 
 MongoDB API를 사용하는 명백한 이점은 솔루션이 두 데이터베이스 엔진, MongoDB 또는 Azure Cosmos DB에서 실행될 수 있으므로 다른 환경으로의 마이그레이션이 용이해야 한다는 것입니다. 그러나 경우에 따라 특정 데이터베이스 엔진의 기능을 완전히 활용하기 위해 네이티브 API(즉 네이티브 Cosmos DB API)를 사용하는 것이 유용합니다.
 
-클라우드에서 단순히 MongoDB와 Cosmos DB 사용 간의 자세한 비교는 [이 페이지에서 Azure Cosmos DB 사용의 이점](https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction)을 참조하세요. 
+클라우드에서 단순히 MongoDB와 Cosmos DB 사용 간의 자세한 비교는 [이 페이지에서 Azure Cosmos DB 사용의 이점](https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction)을 참조하세요.
 
 ### <a name="analyze-your-approach-for-production-applications-mongodb-api-vs-cosmos-db-api"></a>프로덕션 애플리케이션에 대한 접근 방식 분석: MongoDB API vs. Cosmos DB API 비교
 
@@ -194,12 +194,12 @@ public class Locations
     public string Description { get; set; }
     public double Latitude { get; set; }
     public double Longitude { get; set; }
-    public GeoJsonPoint<GeoJson2DGeographicCoordinates> Location 
+    public GeoJsonPoint<GeoJson2DGeographicCoordinates> Location
                                                              { get; private set; }
-    public GeoJsonPolygon<GeoJson2DGeographicCoordinates> Polygon 
+    public GeoJsonPolygon<GeoJson2DGeographicCoordinates> Polygon
                                                              { get; private set; }
     public void SetLocation(double lon, double lat) => SetPosition(lon, lat);
-    public void SetArea(List<GeoJson2DGeographicCoordinates> coordinatesList) 
+    public void SetArea(List<GeoJson2DGeographicCoordinates> coordinatesList)
                                                     => SetPolygon(coordinatesList);
 
     private void SetPosition(double lon, double lat)
@@ -246,7 +246,7 @@ public class LocationsContext
         {
             return _database.GetCollection<Locations>("Locations");
         }
-    }       
+    }
 }
 ```
 
@@ -301,7 +301,7 @@ ESHOP_PROD_EXTERNAL_DNS_NAME_OR_IP=<YourDockerHostIP>
 
 [Azure Cosmos DB에 MongoDB 애플리케이션 연결](https://docs.microsoft.com/azure/cosmos-db/connect-mongodb-account)에 설명된 것처럼 ESHOP_AZURE_COSMOSDB 줄의 주석 처리를 제거하고 Azure Portal에서 가져온 Azure Cosmos DB 연결 문자열로 업데이트해야 합니다.
 
-`ESHOP_AZURE_COSMOSDB` 글로벌 변수가 비어 있는 경우(`.env` 파일에서 주석으로 처리된 것을 의미함) 컨테이너는 eShopOnContainers에 배포된 로컬 MongoDB 컨테이너를 가리키는 기본 MongoDB 연결 문자열을 사용합니다. 이것은 following .yml 코드와 같이 `nosql.data`로 명명되며 docker-compose 파일에서 정의됩니다. 
+`ESHOP_AZURE_COSMOSDB` 글로벌 변수가 비어 있는 경우(`.env` 파일에서 주석으로 처리된 것을 의미함) 컨테이너는 eShopOnContainers에 배포된 로컬 MongoDB 컨테이너를 가리키는 기본 MongoDB 연결 문자열을 사용합니다. 이것은 following .yml 코드와 같이 `nosql.data`로 명명되며 docker-compose 파일에서 정의됩니다.
 
 ``` yml
 # docker-compose.yml
@@ -312,7 +312,7 @@ services:
     image: mongo
 ```
 
-#### <a name="additional-resources"></a>추가 자료
+#### <a name="additional-resources"></a>추가 리소스
 
 - **NoSQL 데이터베이스용 문서 데이터 모델링** \
   <https://docs.microsoft.com/azure/cosmos-db/modeling-data>

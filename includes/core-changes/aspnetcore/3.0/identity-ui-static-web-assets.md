@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 8d7942ef6c36c01a9ae7ae2a9739f26dfcda5813
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: c5e4b5619394f99a419fe48aee190ad741ea8c0d
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394067"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73041661"
 ---
 ### <a name="identity-ui-uses-static-web-assets-feature"></a>ID: UI는 정적 웹 자산 기능을 사용합니다.
 
@@ -23,11 +23,11 @@ ID UI가 정적 웹 자산 기능을 채택한 결과는 다음과 같습니다.
 
 #### <a name="old-behavior"></a>이전 동작
 
-ID UI의 기본 UI 프레임워크는 **부트스트랩 3**입니다. `Startup.ConfigureServices`에서 `AddIdentityUI` 메서드 호출에 대한 매개 변수를 사용하여 UI 프레임워크를 구성할 수 있습니다.
+ID UI의 기본 UI 프레임워크는 **부트스트랩 3**입니다. `Startup.ConfigureServices`에서 `AddDefaultUI` 메서드 호출에 대한 매개 변수를 사용하여 UI 프레임워크를 구성할 수 있습니다.
 
 #### <a name="new-behavior"></a>새 동작
 
-ID UI의 기본 UI 프레임워크는 **부트스트랩 4**입니다. UI 프레임워크는 `AddIdentityUI` 메서드 호출 대신 프로젝트 파일에 구성되어야 합니다.
+ID UI의 기본 UI 프레임워크는 **부트스트랩 4**입니다. UI 프레임워크는 `AddDefaultUI` 메서드 호출 대신 프로젝트 파일에 구성되어야 합니다.
 
 #### <a name="reason-for-change"></a>변경 이유
 
@@ -47,12 +47,12 @@ ASP.NET Core
 
 #### <a name="affected-apis"></a>영향을 받는 API
 
-<xref:Microsoft.AspNetCore.Identity.IdentityBuilderUIExtensions.AddDefaultUI(Microsoft.AspNetCore.Identity.IdentityBuilder)?displayProperty=nameWithType>
+<xref:Microsoft.AspNetCore.Identity.IdentityBuilderUIExtensions.AddDefaultUI(Microsoft.AspNetCore.Identity.IdentityBuilder,Microsoft.AspNetCore.Identity.UI.UIFramework)?displayProperty=nameWithType>
 
 <!-- 
 
 #### Affected APIs
 
-`M:Microsoft.AspNetCore.Identity.IdentityBuilderUIExtensions.AddDefaultUI(Microsoft.AspNetCore.Identity.IdentityBuilder)`
+`M:Microsoft.AspNetCore.Identity.IdentityBuilderUIExtensions.AddDefaultUI(Microsoft.AspNetCore.Identity.IdentityBuilder,Microsoft.AspNetCore.Identity.UI.UIFramework)`
 
 -->

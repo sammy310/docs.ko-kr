@@ -9,14 +9,12 @@ helpviewer_keywords:
 - type libraries
 - registering assemblies
 ms.assetid: 5220fe58-5aaf-4e8e-8bc3-b78c63025804
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 032f43aa16dbca0f4ab0477d586e7568230b7381
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 1af93ae89d027bccdd52b9cd9c49f8e620303677
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044261"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73104937"
 ---
 # <a name="regsvcsexe-net-services-installation-tool"></a>Regsvcs.exe(.NET 서비스 설치 도구)
 .NET 서비스 설치 도구를 사용하면 다음과 같은 작업을 수행할 수 있습니다.  
@@ -58,7 +56,7 @@ ms.locfileid: "71044261"
 |**/noreconfig**|기존의 대상 애플리케이션을 다시 구성하지 않습니다.|  
 |**/nologo**|Microsoft 시작 배너를 표시하지 않습니다.|  
 |**/parname:** *name*|찾거나 만들 COM+ 애플리케이션의 이름 또는 ID를 지정합니다.|  
-|**/reconfig**|기존의 대상 애플리케이션을 다시 구성합니다. 이 값이 기본값입니다.|  
+|**/reconfig**|기존의 대상 애플리케이션을 다시 구성합니다. 기본값입니다.|  
 |**/tlb:** *typelibraryfile*|설치할 형식 라이브러리 파일을 지정합니다.|  
 |**/u**|대상 애플리케이션을 제거합니다.|  
 |**/quiet**|자동 모드를 지정합니다. 즉, 로고 및 성공 메시지를 표시하지 않습니다.|  

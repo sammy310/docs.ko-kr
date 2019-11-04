@@ -13,14 +13,12 @@ helpviewer_keywords:
 - regular expressions [.NET Framework], examples
 - pattern-matching with regular expressions, examples
 ms.assetid: fae2c15b-7adf-4b15-b118-58eb3906994f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4e743f32637a7e15b4b017bbe30aa02ad8388fbe
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: d8546980dd0cf58ca7c095750f2749d5a6bc7723
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975968"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73084220"
 ---
 # <a name="regular-expression-example-scanning-for-hrefs"></a>정규식 예제: HREF 스캐닝
 다음 예제는 입력 문자열을 검색하고 모든 href="…" 값과 문자열에서의 해당 위치를 보여 줍니다.  
@@ -38,7 +36,7 @@ ms.locfileid: "56975968"
   
  정규식 패턴 `href\s*=\s*(?:["'](?<1>[^"']*)["']|(?<1>\S+))` 는 다음 테이블과 같이 해석됩니다.  
   
-|무늬|설명|  
+|패턴|설명|  
 |-------------|-----------------|  
 |`href`|리터럴 문자열 "href"과 일치합니다. 일치 항목 찾기에서는 대/소문자를 구분하지 않습니다.|  
 |`\s*`|0개 이상의 공백 문자가 일치하는지 확인합니다.|  

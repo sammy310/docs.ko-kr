@@ -2,13 +2,14 @@
 title: 패턴 일치 기능을 사용하여 데이터 형식 확장
 description: 이 고급 자습서에서는 패턴 일치 기술을 사용하여 개별적으로 생성된 데이터 및 알고리즘을 사용하여 기능을 만드는 방법을 보여 줍니다.
 ms.date: 03/13/2019
+ms-technology: csharp-whats-new
 ms.custom: mvc
-ms.openlocfilehash: 036a6bcda04771eb8cf3699af8756e83bb144389
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: ca7ae63a038fce0b2569e7a4bd1805765bc23d44
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332358"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039201"
 ---
 # <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>자습서: 패턴 일치 기능을 사용하여 데이터 형식 확장
 

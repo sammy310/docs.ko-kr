@@ -2,12 +2,12 @@
 title: 높은 확장성 및 가용성을 위한 마이크로 서비스 및 다중 컨테이너 애플리케이션 오케스트레이션
 description: Kubernetes 애플리케이션 수명 주기를 개발하는 동안 높은 확장성과 가용성 및 Azure Dev Spaces의 가능성을 위해 마이크로 서비스 및 다중 컨테이너 애플리케이션을 오케스트레이션하는 옵션을 검색합니다.
 ms.date: 09/20/2018
-ms.openlocfilehash: f0efad0134ec95028ecd49ad8d294ae4813940e9
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 3915e6386e66d40bedc92368bfbcda81790c6923
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834319"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73090138"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>높은 확장성 및 가용성을 위한 마이크로 서비스 및 다중 컨테이너 애플리케이션 오케스트레이션
 
@@ -62,11 +62,11 @@ Azure Kubernetes Service는 Azure용으로 특별히 인기 있는 Docker 클러
 
 개발 환경에서 Kubernetes가 [Docker Desktop](https://docs.docker.com/install/)을 설치하기만 하면 단일 개발 머신(Windows 10 또는 macOS)에서도 실행할 수 있는 [Docker를 2018년 7월에 발표](https://blog.docker.com/2018/07/kubernetes-is-now-available-in-docker-desktop-stable-channel/)했습니다. 그림 4-25와 같이 나중에 통합 테스트를 위해 클라우드(AKS)에 배포할 수 있습니다.
 
-![AKS에 배포되는 개발 머신의 Kubernetes를 보여 주는 다이어그램입니다.](./media/scalable-available-multi-container-microservice-applications/kubernetes-development-environment.png) 
+![AKS에 배포되는 개발 머신의 Kubernetes를 보여 주는 다이어그램입니다.](./media/scalable-available-multi-container-microservice-applications/kubernetes-development-environment.png)
 
 **그림 4-25** 개발 머신 및 클라우드에서 Kubernetes 실행
 
-## <a name="getting-started-with-azure-kubernetes-service-aks"></a>AKS(Azure Kubernetes Service) 시작 
+## <a name="getting-started-with-azure-kubernetes-service-aks"></a>AKS(Azure Kubernetes Service) 시작
 
 AKS를 사용하여 시작하려면 Azure 포털에서 또는 CLI를 사용하여 AKS 클러스터를 배포합니다. Azure에서 Kubernetes 클러스터를 배포하는 방법에 대한 자세한 내용은 [Azure Kubernetes Service(AKS) 클러스터 배포](https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal)를 참조하세요.
 
@@ -100,7 +100,7 @@ Azure Dev Spaces는 Visual Studio 2017 또는 Visual Studio Code를 사용하기
 
 **그림 4-26**. Azure Dev Spaces에서 여러 공간 사용
 
-기본적으로 Azure에 공유 개발 공간을 설정할 수 있습니다. 각 개발자는 애플리케이션에서 자신이 맡은 부분에만 집중할 수 있으며 자신의 시나리오에 의존하는 다른 모든 서비스 및 클라우드 리소스가 포함된 개발 공간에서 커밋 전 코드를 반복해서 개발할 수 있습니다. 종속성은 항상 최신 상태로 유지되며 개발자가 생산을 미러링하는 방식으로 작업합니다.
+기본적으로 Azure에 공유 개발 공간을 설정할 수 있습니다. 각 개발자는 애플리케이션에서 자신이 맡은 부분에만 집중할 수 있으며 자신의 시나리오에 의존하는 다른 모든 서비스 및 클라우드 리소스가 포함된 개발 공간에서 커밋 전 코드를 반복해서 개발할 수 있습니다. 종속성은 항상 최신이며, 개발자는 프로덕션을 미러하는 방식으로 작업합니다.
 
 Azure Dev Spaces는 팀 작업과 분리될 걱정 없이 상대적으로 격리되어 작업할 수 있는 공간의 개념을 제공합니다. 각 개발 공간은 고유하게 작업 중인 마이크로 서비스를 사용하여 "상위" 마스터 개발 공간의 마이크로 서비스(하나 이상)를 재정의할 수 있는 계층 구조의 일부입니다.
 
@@ -110,7 +110,7 @@ Azure Dev Spaces는 팀 작업과 분리될 걱정 없이 상대적으로 격리
 
 자세한 내용은 [Azure Dev Spaces로 팀 개발](https://docs.microsoft.com/azure/dev-spaces/team-development-netcore)에 대한 문서를 확인하세요.
 
-## <a name="additional-resources"></a>추가 자료
+## <a name="additional-resources"></a>추가 리소스
 
 - **AKS(Azure Kubernetes Service) 시작** \
   <https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal>

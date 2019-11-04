@@ -2,12 +2,12 @@
 title: Docker 컨테이너에 대해 .NET Framework를 선택하는 경우
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | Docker 컨테이너에 대해 .NET Framework를 선택하는 경우
 ms.date: 01/07/2019
-ms.openlocfilehash: 575af1bc1966a25a01acdcfe106870ad1b7c477d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 8316d17aae09ddbd70bd80af4f06d8cb029f2752
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039651"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73093759"
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>Docker 컨테이너에 대해 .NET Framework를 선택하는 경우
 
@@ -27,7 +27,7 @@ ms.locfileid: "71039651"
 
 그러나 .NET Standard 2.0 및 .NET Core 2.1 이후의 뛰어난 발전에도 불구하고 특정 NuGet 패키지에서 Windows를 실행해야 하고 .NET Core를 지원하지 않는 경우가 있을 수도 있습니다. 이러한 패키지가 애플리케이션에 매우 중요한 경우 Windows 컨테이너에서 .NET Framework를 사용해야 합니다.
 
-## <a name="using-net-technologies-not-available-for-net-core"></a>.NET Core에 사용할 수 없는 .NET 기술 사용 
+## <a name="using-net-technologies-not-available-for-net-core"></a>.NET Core에 사용할 수 없는 .NET 기술 사용
 
 일부 .NET Framework 기술은 현재 버전의 .NET Core(이 문서를 작성한 시점 이후 버전 2.2)에서 사용할 수 없습니다. 그 중 일부는 이후 .NET Core 릴리스(.NET Core 2.x)에서 사용할 수 있지만, 다른 일부는 .NET Core에서 대상으로 하는 새 애플리케이션 패턴에 적용되지 않으며 사용하지 못할 수도 있습니다.
 

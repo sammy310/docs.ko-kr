@@ -2,13 +2,14 @@
 title: 식 트리를 지원하는 프레임워크 형식
 description: 식 트리를 지원하는 프레임워크 형식, 식 트리 만들기, 식 트리 API 작업을 위한 기술에 대해 알아봅니다.
 ms.date: 06/20/2016
+ms.technology: csharp-advanced-concepts
 ms.assetid: e9c85021-0d36-48af-91b7-aaaa66f22654
-ms.openlocfilehash: d11a13000019faf2ab5c35d41d48fa199e901d1c
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 157e97594f27345ac96fe91f7dd6f29907c2c7ac
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70925964"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73037614"
 ---
 # <a name="framework-types-supporting-expression-trees"></a>식 트리를 지원하는 프레임워크 형식
 

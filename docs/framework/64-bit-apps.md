@@ -6,14 +6,12 @@ helpviewer_keywords:
 - 64-bit applications [C++]
 - 64-bit programming [C++]
 ms.assetid: fd4026bc-2c3d-4b27-86dc-ec5e96018181
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8aaa74eee5372dd7ba1ed145632f718d9ecce8ed
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 3ef6d02023570f5ec4013b070317c272a94b8212
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72773982"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120106"
 ---
 # <a name="64-bit-applications"></a>64비트 애플리케이션
 애플리케이션을 컴파일할 때 Windows 64비트 운영 체제에서 네이티브 애플리케이션으로 실행되거나 WOW64(Windows 64비트 기반 Windows 32비트)를 통해 실행되도록 지정할 수 있습니다. WOW64는 32비트 애플리케이션이 64비트 시스템에서 실행되도록 하는 호환성 환경입니다. WOW64는 Windows 운영 체제의 모든 64비트 버전에 포함됩니다.  

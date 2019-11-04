@@ -10,14 +10,12 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library, creating dataflow pipeline
 ms.assetid: 69308f82-aa22-4ac5-833d-e748533b58e8
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 870f65fdbf263913134d0528c200d3c2990a498c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 284be7789b6411055a6421fd07cc1b0605f6ea0c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59299009"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139865"
 ---
 # <a name="walkthrough-creating-a-dataflow-pipeline"></a>연습: 데이터 흐름 파이프라인 만들기
 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A?displayProperty=nameWithType> 및 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.TryReceive%2A?displayProperty=nameWithType> 메서드를 사용하여 소스 블록에서 메시지를 받을 수 있지만 메시지 블록을 연결하여 *데이터 흐름 파이프라인*을 만들 수도 있습니다. 데이터 흐름 파이프라인은 일련의 구성 요소 또는 *데이터 흐름 블록*으로, 각 구성 요소는 보다 큰 목표를 위해 특정 작업을 수행합니다. 데이터 흐름 파이프라인의 모든 데이터 흐름 블록은 다른 데이터 흐름 블록에서 메시지를 받으면 작업을 수행합니다. 이는 자동차 제조 조립 라인에 비유될 수 있습니다. 각 자동차가 조립 라인을 통과할 때 한 작업장에서는 프레임을 조립하고 다음 작업장에서는 엔진을 장착하는 식입니다. 조립 라인에서는 여러 대의 자동차를 동시에 조립할 수 있기 때문에 한 번에 자동차 전체를 조립하는 경우보다 처리량이 향상됩니다.
@@ -55,7 +53,7 @@ ms.locfileid: "59299009"
  [!code-csharp[TPLDataflow_Palindromes#3](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_palindromes/cs/dataflowpalindromes.cs#3)]
  [!code-vb[TPLDataflow_Palindromes#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_palindromes/vb/dataflowpalindromes.vb#3)]  
   
-|멤버|형식|설명|  
+|멤버|Type|설명|  
 |------------|----------|-----------------|  
 |`downloadString`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|웹에서 책 텍스트를 다운로드합니다.|  
 |`createWordList`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|책 텍스트를 단어의 배열로 나눕니다.|  

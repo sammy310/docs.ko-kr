@@ -2,13 +2,14 @@
 title: LINQ 작업
 description: 이 자습서에서는 LINQ를 사용하여 시퀀스를 생성하고, LINQ 쿼리에서 사용할 메서드를 작성하고, 즉시 계산 및 지연 계산 간을 구분하는 방법을 알아봅니다.
 ms.date: 10/29/2018
+ms.technology: csharp-linq
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: 72bb7475fc6b18650e0870bf99c4b8ddbac3ec9f
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: b25cd1763511f460537bccaf6011a3d23390ea72
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926611"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039167"
 ---
 # <a name="working-with-linq"></a>LINQ 작업
 

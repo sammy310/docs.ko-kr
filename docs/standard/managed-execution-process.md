@@ -10,14 +10,12 @@ helpviewer_keywords:
 - managed execution process
 - common language runtime, managed execution process
 ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d11567b3a5abca6e81ff0358295aa8516ef6443f
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 5ead3d1ac37b3c7ee50f18a81530720205678de2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70969025"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122000"
 ---
 # <a name="managed-execution-process"></a>관리되는 실행 프로세스
 <a name="introduction"></a> 관리되는 실행 프로세스에는 이 항목의 뒷부분에서 설명하는 다음 단계가 포함됩니다.  

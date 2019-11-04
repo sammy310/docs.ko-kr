@@ -8,14 +8,12 @@ helpviewer_keywords:
 - threading [.NET Framework],exceptions in managed threads
 - managed threading
 ms.assetid: 11294769-2e89-43cb-890e-ad4ad79cfbee
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 689ee44980a4a41b6d46ed9b68306c1b08c49586
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2c3215fd42e8cf6d6427d23f94c14db4230ddd02
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69960070"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138056"
 ---
 # <a name="exceptions-in-managed-threads"></a>관리되는 스레드의 예외
 NET Framework 버전 2.0부터 공용 언어 런타임을 통해 스레드에 있는 대부분의 처리되지 않은 예외가 정상적으로 진행됩니다. 즉, 대부분의 경우에서 처리되지 않은 예외는 애플리케이션을 종료시킵니다.  

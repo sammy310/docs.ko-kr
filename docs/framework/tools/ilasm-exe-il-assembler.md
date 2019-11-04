@@ -11,14 +11,12 @@ helpviewer_keywords:
 - Ilasm.exe
 - verifying MSIL performance
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b8d1ad081c8d783cd18054078a6eeb82428faa4d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: cb995e78e534048043886070536ef0dd0a45c057
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044628"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73105100"
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe(IL 어셈블러)
 
@@ -51,7 +49,7 @@ ilasm [options] filename [[options]filename...]
 |**/debug**[:**IMPL**&#124;**OPT**]|지역 변수 및 인수 이름과 줄 번호 등의 디버깅 정보를 포함합니다. PDB 파일을 만듭니다.<br /><br /> **/debug** 에 추가 값을 지정하지 않으면 JIT 최적화를 사용할 수 없고 PDB 파일의 시퀀스 위치를 사용합니다.<br /><br /> **IMPL** 은 JIT 최적화를 사용할 수 없도록 하고 암시적 시퀀스 위치를 사용합니다.<br /><br /> **OPT** 는 JIT 최적화를 사용할 수 있도록 하고 암시적 시퀀스 위치를 사용합니다.|
 |**/dll**|*.dll* 파일을 출력 파일로 생성합니다.|
 |**/enc:** `file`|지정한 소스 파일에서 편집하며 계속하기 델타를 만듭니다.<br /><br /> 이 인수는 교육용 버전에서만 사용되며, 상업용 버전에서는 지원되지 않습니다.|
-|**/exe**|실행 파일을 출력 파일로 생성합니다. 이 값이 기본값입니다.|
+|**/exe**|실행 파일을 출력 파일로 생성합니다. 기본값입니다.|
 |**/flags:** `integer`|ImageFlags를 공용 언어 런타임 헤더의 `integer`에서 지정한 값으로 설정합니다. .corflags IL 지시문이 파일에 지정된 경우 이 옵션을 사용하면 재정의됩니다. *integer*의 올바른 값 목록은 CorHdr.h, COMIMAGE_FLAGS를 참조하십시오.|
 |**/fold**|동일한 메서드 본문을 하나로 만듭니다.|
 |/**highentropyva**|높은 엔트로피 주소 공간 레이아웃 불규칙화(ASLR)가 지원되는 출력 실행 파일을 생성합니다. ( **/appcontainer**의 기본값)|

@@ -9,14 +9,12 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library, receiving data
 ms.assetid: fc2585dc-965e-4632-ace7-73dd02684ed3
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 17167467f52ab9afb8d7500f4f0eb744d8f60a6e
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: 89ab2bb18e5fe00a4d1b79d911bb0f7524b83104
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70169029"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124210"
 ---
 # <a name="how-to-perform-action-when-a-dataflow-block-receives-data"></a>방법: 데이터 흐름 블록에서 데이터를 받을 경우 작업 수행
 *실행 데이터 흐름 블록* 형식은 데이터를 받을 때 사용자가 제공한 대리자를 호출합니다. <xref:System.Threading.Tasks.Dataflow.ActionBlock%601?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Dataflow.TransformBlock%602?displayProperty=nameWithType> 및 <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602?displayProperty=nameWithType> 클래스는 실행 데이터 흐름 블록 형식입니다. 실행 데이터 흐름 블록에 작업 함수를 제공할 때 `delegate`(Visual Basic에서는 `Sub`) 키워드, <xref:System.Action%601>, <xref:System.Func%602> 또는 람다 식을 사용할 수 있습니다. 이 문서에서는 <xref:System.Func%602> 및 람다 식을 사용하여 실행 블록에서 작업을 수행하는 방법을 설명합니다.  

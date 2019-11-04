@@ -1,15 +1,13 @@
 ---
 title: 참조 반환 값 및 참조 로컬(C# 가이드)
 description: 참조 반환 및 참조 로컬 값을 정의하고 사용하는 방법을 알아봅니다.
-author: rpetrusha
-ms.author: ronpet
 ms.date: 04/04/2018
-ms.openlocfilehash: e23007deffea0f542d623be918cd1c61496d1362
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 99e0f9d995cf3bf5c0486415b6f2d578147d3c7f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353890"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73114482"
 ---
 # <a name="ref-returns-and-ref-locals"></a>참조 반환 및 참조 로컬
 

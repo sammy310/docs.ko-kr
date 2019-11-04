@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Internet, security
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
-ms.openlocfilehash: ad15c0d4bd69417fffd8bcad0805a3b78321e05b
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 2433d8b8563cace4415fb8fcd2d110f75d7d4304
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894949"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73196373"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>.NET Framework를 사용한 TLS(전송 계층 보안) 모범 사례
 
@@ -56,7 +56,7 @@ GitHub 문제 [.NET Framework를 사용한 TLS(전송 계층 보안) 모범 사�
 
 ASP.NET 애플리케이션의 경우 _web.config_의 `<system.web><httpRuntime targetFramework>` 요소를 검사하여 의도한 .NET Framework 버전을 사용하고 있는지 확인합니다.
 
-Windows Forms 및 기타 애플리케이션의 경우 [방법: 한 버전의 .NET Framework를 대상으로 지정](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework).
+Windows Forms 및 기타 애플리케이션의 경우 [방법: 한 버전의 .NET Framework를 대상으로 지정](/visualstudio/ide/visual-studio-multi-targeting-overview).
 
 다음 섹션을 사용하여 특정 TLS 또는 SSL 버전을 사용하지 않는지 확인합니다.
 

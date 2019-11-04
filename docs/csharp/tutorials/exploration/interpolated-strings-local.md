@@ -1,15 +1,13 @@
 ---
 title: 문자열 보간 - C# 자습서
 description: 이 자습서에서는 C# 문자열 보간 기능을 사용하여 더 큰 문자열에 형식이 지정된 식을 포함하는 방법을 보여 줍니다.
-author: rpetrusha
-ms.author: ronpet
 ms.date: 10/23/2018
-ms.openlocfilehash: 813623f4036813d7c1af440a60387f5d8e889354
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 53b9afa4c5ccdcb1f18d2947981aee6571b73134
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774043"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120114"
 ---
 # <a name="use-string-interpolation-to-construct-formatted-strings"></a>문자열 보간을 사용하여 형식이 지정된 문자열 생성
 

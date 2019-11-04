@@ -2,13 +2,14 @@
 title: 로컬 함수 및 람다 식
 description: 로컬 함수가 람다 식보다 더 적합한 선택일 수 있는 이유를 알아봅니다.
 ms.date: 06/27/2016
+ms.technology: csharp-advanced-concepts
 ms.assetid: 368d1752-3659-489a-97b4-f15d87e49ae3
-ms.openlocfilehash: 7577950314f8c57fba635db8b2bcd69e8d427dc3
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: a644b6868a37b3d6231a514dc37030cae062785a
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59611447"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73038809"
 ---
 # <a name="local-functions-compared-to-lambda-expressions"></a>로컬 함수 및 람다 식 비교
 

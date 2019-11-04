@@ -5,14 +5,12 @@ ms.date: 03/10/2017
 helpviewer_keywords:
 - using static directive [C#]
 ms.assetid: 8b8f9e34-c75e-469b-ba85-6f2eb4090314
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4fa8dc3c043665ca2f56facf516cb03e5c6bb9d7
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 1a0e26d8b0a14e0c77b724fc492588e08762e47f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66421760"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73099989"
 ---
 # <a name="using-static-directive-c-reference"></a>using 정적 지시문(C# 참조)
 
@@ -28,7 +26,7 @@ using static <fully-qualified-type-name>;
 
 `using static` 지시문은 C# 6에서 도입되었습니다.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 일반적으로 정적 멤버를 호출할 때 멤버 이름과 함께 형식 이름을 제공합니다. 형식의 멤버를 호출하기 위해 동일한 형식 이름을 반복해서 입력하면 코드가 복잡하고 난해해질 수 있습니다. 예를 들어 `Circle` 클래스에 대한 다음 정의에서는 <xref:System.Math> 클래스의 많은 멤버를 참조합니다.
 
@@ -44,7 +42,7 @@ using static <fully-qualified-type-name>;
 
  같은 컴파일 단위 또는 네임스페이스에서 여러 `using static` 지시문을 통해 다양한 형식에서 가져온 같은 이름을 사용하는 메서드는 메서드 그룹을 구성합니다.  이들 메서드 그룹 내에서 오버로드 확인은 일반 C# 규칙을 따릅니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 다음 예제에서는 형식 이름을 지정할 필요 없이 `using static` 지시문을 사용하여 <xref:System.Console>, <xref:System.Math> 및 <xref:System.String> 클래스의 정적 멤버를 사용 가능하게 합니다.
 

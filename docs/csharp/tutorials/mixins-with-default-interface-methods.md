@@ -1,13 +1,14 @@
 ---
 title: 기본 인터페이스 메서드를 사용하여 mixin 형식 만들기
 description: 기본 인터페이스 멤버를 사용하여 구현자에 대한 선택적 기본 구현으로 인터페이스를 확장할 수 있습니다.
+ms.technology: csharp-advanced-concepts
 ms.date: 10/04/2019
-ms.openlocfilehash: 4dee97226420139d9cd09ad75d7c8caf4967273d
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 798413f0071159893de39f3e190a9b2693571bb7
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321569"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039270"
 ---
 # <a name="tutorial-mix-in-functionality-when-creating-classes-using-interfaces-with-default-interface-methods"></a>자습서: 기본 인터페이스 메서드를 사용하는 인터페이스를 통해 클래스를 만드는 경우의 기능 혼합
 

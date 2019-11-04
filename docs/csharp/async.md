@@ -3,14 +3,15 @@ title: 비동기 프로그래밍 - C#
 description: .NET Core에서 제공하는 C# 언어 수준 비동기 프로그래밍 모델에 대해 알아봅니다.
 author: cartermp
 ms.date: 06/20/2016
+ms.technology: csharp-async
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
 ms.custom: seodec18
-ms.openlocfilehash: 246046fb5ac9b0c03df7df71ef426dc2ac6f0617
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: 86145e8971d9a59fba17368d9530f40d86bf2858
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168810"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73037680"
 ---
 # <a name="asynchronous-programming"></a>비동기 프로그래밍
 

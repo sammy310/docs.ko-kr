@@ -12,13 +12,12 @@ helpviewer_keywords:
 - timers, about timers
 ms.assetid: 7091500d-be18-499b-a942-95366ce185e5
 author: pkulikov
-ms.author: ronpet
-ms.openlocfilehash: 644ccf5951e9d2556fc697d2fd763f026fd0ebdb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d7d1fa13b02fe7425fa9b4cb81ba20297a23fe4b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617228"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128947"
 ---
 # <a name="timers"></a>타이머
 
@@ -46,7 +45,7 @@ ms.locfileid: "54617228"
 [!code-csharp[System.Threading.Timer#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.Timer/CS/source2.cs#2)]
 [!code-vb[System.Threading.Timer#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.Timer/VB/source2.vb#2)]
 
-자세한 내용과 예제를 보려면 <xref:System.Threading.Timer?displayProperty=nameWithType>을 참조하세요.
+자세한 내용과 예제는 <xref:System.Threading.Timer?displayProperty=nameWithType>를 참조하세요.
 
 ## <a name="the-systemtimerstimer-class"></a>System.Timers.Timer 클래스
 
@@ -54,7 +53,7 @@ ms.locfileid: "54617228"
 
 <xref:System.Timers.Timer?displayProperty=nameWithType> 개체를 만들 때 <xref:System.Timers.Timer.Elapsed> 이벤트가 발생되는 시간 간격을 지정할 수 있습니다. <xref:System.Timers.Timer.Enabled%2A> 속성을 사용하여 타이머에서 <xref:System.Timers.Timer.Elapsed> 이벤트가 발생되어야 하는지 여부를 나타냅니다. 지정된 간격이 지난 후에 <xref:System.Timers.Timer.Elapsed> 이벤트가 한 번만 발생해야 하는 경우 <xref:System.Timers.Timer.AutoReset%2A>을 `false`로 설정합니다. <xref:System.Timers.Timer.AutoReset%2A> 속성의 기본값은 `true`이며, 이는 즉 <xref:System.Timers.Timer.Elapsed> 이벤트가 <xref:System.Timers.Timer.Interval%2A> 속성에 정의된 간격으로 정기적으로 발생하는 것을 의미합니다.
 
-자세한 내용과 예제를 보려면 <xref:System.Timers.Timer?displayProperty=nameWithType>을 참조하세요.
+자세한 내용과 예제는 <xref:System.Timers.Timer?displayProperty=nameWithType>를 참조하세요.
   
 ## <a name="see-also"></a>참고 항목
 

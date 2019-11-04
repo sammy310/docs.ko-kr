@@ -8,14 +8,14 @@ helpviewer_keywords:
 - Help, Visual Basic Web sites
 - Visual Basic, videos
 ms.assetid: 9bfb42e9-327f-439b-935e-8884f6aca80c
-ms.openlocfilehash: dc7653b1d792c66b40c0ab1d55a1614c7a69b7d1
-ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
+ms.openlocfilehash: 9e55910573b3aa3aecf9082f1b77659a45f883a1
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68869056"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73196991"
 ---
-# <a name="additional-resources"></a>추가 자료
+# <a name="additional-resources"></a>추가 리소스
 
 다음 웹 사이트에서는 관련 지침과 일반적인 문제에 대한 대답을 제공합니다.
 
@@ -46,7 +46,7 @@ ms.locfileid: "68869056"
 |----------|----------------|
 |[Channel9](https://channel9.msdn.com/)|비디오, Wiki 및 포럼을 통해 커뮤니티를 지속적으로 운영합니다.|
 
-### <a name="support"></a>고객 지원팀
+### <a name="support"></a>지원
 
 |URL|설명|
 |----------|----------------|
@@ -64,4 +64,4 @@ ms.locfileid: "68869056"
 ## <a name="see-also"></a>참고 항목
 
 - [Visual Basic 시작](../../visual-basic/getting-started/index.md)
-- [의견 보내기](/visualstudio/ide/talk-to-us)
+- [의견 보내기](/visualstudio/ide/feedback-options)

@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, order preservation
 ms.assetid: 10d202bc-19e1-4b5c-bbf1-9a977322a9ca
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1ddb6a5534eb7ef2dc823ac05e03d3b2d3d0cee7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5b067fa277816e6105d37047c6c4996a4cbb9b5a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623964"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138216"
 ---
 # <a name="order-preservation-in-plinq"></a>PLINQ에서 순서 유지
 PLINQ에서 목표는 정확성을 유지하면서 성능을 최대화하는 것입니다. 쿼리는 가능한 한 빠르게 실행되지만 올바른 결과를 생성해야 합니다. 경우에 따라 정확성을 위해 소스 시퀀스의 순서를 유지해야 하지만 순서 지정의 계산 비용이 높을 수 있습니다. 따라서 기본적으로 PLINQ는 소스 시퀀스의 순서를 유지하지 않습니다. 이와 관련하여 PLINQ는 [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)]과 비슷하지만 순서를 유지하는 LINQ to Objects와는 다릅니다.  
@@ -69,14 +67,14 @@ PLINQ에서 목표는 정확성을 유지하면서 성능을 최대화하는 것
 |연산자|소스 시퀀스의 순서가 지정된 경우의 결과|소스 시퀀스의 순서가 지정되지 않은 경우의 결과|  
 |--------------|------------------------------------------------|--------------------------------------------------|  
 |<xref:System.Linq.ParallelEnumerable.Aggregate%2A>|비연관 또는 비누적 작업에 대한 비결정적 출력|비연관 또는 비누적 작업에 대한 비결정적 출력|  
-|<xref:System.Linq.ParallelEnumerable.All%2A>|적용할 수 없음|적용할 수 없음|  
-|<xref:System.Linq.ParallelEnumerable.Any%2A>|적용할 수 없음|적용할 수 없음|  
-|<xref:System.Linq.ParallelEnumerable.AsEnumerable%2A>|적용할 수 없음|적용할 수 없음|  
+|<xref:System.Linq.ParallelEnumerable.All%2A>|해당 없음|해당 없음|  
+|<xref:System.Linq.ParallelEnumerable.Any%2A>|해당 없음|해당 없음|  
+|<xref:System.Linq.ParallelEnumerable.AsEnumerable%2A>|해당 없음|해당 없음|  
 |<xref:System.Linq.ParallelEnumerable.Average%2A>|비연관 또는 비누적 작업에 대한 비결정적 출력|비연관 또는 비누적 작업에 대한 비결정적 출력|  
 |<xref:System.Linq.ParallelEnumerable.Cast%2A>|순서가 지정된 결과|순서가 지정되지 않은 결과|  
 |<xref:System.Linq.ParallelEnumerable.Concat%2A>|순서가 지정된 결과|순서가 지정되지 않은 결과|  
-|<xref:System.Linq.ParallelEnumerable.Count%2A>|적용할 수 없음|적용할 수 없음|  
-|<xref:System.Linq.ParallelEnumerable.DefaultIfEmpty%2A>|적용할 수 없음|적용할 수 없음|  
+|<xref:System.Linq.ParallelEnumerable.Count%2A>|해당 없음|해당 없음|  
+|<xref:System.Linq.ParallelEnumerable.DefaultIfEmpty%2A>|해당 없음|해당 없음|  
 |<xref:System.Linq.ParallelEnumerable.Distinct%2A>|순서가 지정된 결과|순서가 지정되지 않은 결과|  
 |<xref:System.Linq.ParallelEnumerable.ElementAt%2A>|지정된 요소 반환|임의 요소|  
 |<xref:System.Linq.ParallelEnumerable.ElementAtOrDefault%2A>|지정된 요소 반환|임의 요소|  
@@ -90,20 +88,20 @@ PLINQ에서 목표는 정확성을 유지하면서 성능을 최대화하는 것
 |<xref:System.Linq.ParallelEnumerable.Join%2A>|순서가 지정된 결과|순서가 지정되지 않은 결과|  
 |<xref:System.Linq.ParallelEnumerable.Last%2A>|지정된 요소 반환|임의 요소|  
 |<xref:System.Linq.ParallelEnumerable.LastOrDefault%2A>|지정된 요소 반환|임의 요소|  
-|<xref:System.Linq.ParallelEnumerable.LongCount%2A>|적용할 수 없음|적용할 수 없음|  
-|<xref:System.Linq.ParallelEnumerable.Min%2A>|적용할 수 없음|적용할 수 없음|  
+|<xref:System.Linq.ParallelEnumerable.LongCount%2A>|해당 없음|해당 없음|  
+|<xref:System.Linq.ParallelEnumerable.Min%2A>|해당 없음|해당 없음|  
 |<xref:System.Linq.ParallelEnumerable.OrderBy%2A>|시퀀스의 순서 변경|새 순서가 지정된 섹션 시작|  
 |<xref:System.Linq.ParallelEnumerable.OrderByDescending%2A>|시퀀스의 순서 변경|새 순서가 지정된 섹션 시작|  
-|<xref:System.Linq.ParallelEnumerable.Range%2A>|적용할 수 없음(<xref:System.Linq.ParallelEnumerable.AsParallel%2A>과 동일한 기본값)|적용할 수 없음|  
-|<xref:System.Linq.ParallelEnumerable.Repeat%2A>|적용할 수 없음(<xref:System.Linq.ParallelEnumerable.AsParallel%2A>과 동일한 기본값)|적용할 수 없음|  
+|<xref:System.Linq.ParallelEnumerable.Range%2A>|적용할 수 없음(<xref:System.Linq.ParallelEnumerable.AsParallel%2A>과 동일한 기본값)|해당 없음|  
+|<xref:System.Linq.ParallelEnumerable.Repeat%2A>|적용할 수 없음(<xref:System.Linq.ParallelEnumerable.AsParallel%2A>과 동일한 기본값)|해당 없음|  
 |<xref:System.Linq.ParallelEnumerable.Reverse%2A>|역방향 순서 지정|아무 작업도 수행하지 않습니다.|  
 |<xref:System.Linq.ParallelEnumerable.Select%2A>|순서가 지정된 결과|순서가 지정되지 않은 결과|  
 |<xref:System.Linq.ParallelEnumerable.Select%2A>(인덱싱됨)|순서가 지정된 결과|순서가 지정되지 않은 결과.|  
 |<xref:System.Linq.ParallelEnumerable.SelectMany%2A>|순서가 지정된 결과.|순서가 지정되지 않은 결과|  
 |<xref:System.Linq.ParallelEnumerable.SelectMany%2A>(인덱싱됨)|순서가 지정된 결과.|순서가 지정되지 않은 결과.|  
 |<xref:System.Linq.ParallelEnumerable.SequenceEqual%2A>|순서가 지정된 비교|순서가 지정되지 않은 비교|  
-|<xref:System.Linq.ParallelEnumerable.Single%2A>|적용할 수 없음|적용할 수 없음|  
-|<xref:System.Linq.ParallelEnumerable.SingleOrDefault%2A>|적용할 수 없음|적용할 수 없음|  
+|<xref:System.Linq.ParallelEnumerable.Single%2A>|해당 없음|해당 없음|  
+|<xref:System.Linq.ParallelEnumerable.SingleOrDefault%2A>|해당 없음|해당 없음|  
 |<xref:System.Linq.ParallelEnumerable.Skip%2A>|처음 *n*개 요소를 건너뜀|임의 *n*개 요소를 건너뜀|  
 |<xref:System.Linq.ParallelEnumerable.SkipWhile%2A>|순서가 지정된 결과.|비결정적. 현재 임의 순서로 SkipWhile 수행|  
 |<xref:System.Linq.ParallelEnumerable.Sum%2A>|비연관 또는 비누적 작업에 대한 비결정적 출력|비연관 또는 비누적 작업에 대한 비결정적 출력|  
@@ -112,7 +110,7 @@ PLINQ에서 목표는 정확성을 유지하면서 성능을 최대화하는 것
 |<xref:System.Linq.ParallelEnumerable.ThenBy%2A>|`OrderBy` 보완|`OrderBy` 보완|  
 |<xref:System.Linq.ParallelEnumerable.ThenByDescending%2A>|`OrderBy` 보완|`OrderBy` 보완|  
 |<xref:System.Linq.ParallelEnumerable.ToArray%2A>|순서가 지정된 결과|순서가 지정되지 않은 결과|  
-|<xref:System.Linq.ParallelEnumerable.ToDictionary%2A>|적용할 수 없음|적용할 수 없음|  
+|<xref:System.Linq.ParallelEnumerable.ToDictionary%2A>|해당 없음|해당 없음|  
 |<xref:System.Linq.ParallelEnumerable.ToList%2A>|순서가 지정된 결과|순서가 지정되지 않은 결과|  
 |<xref:System.Linq.ParallelEnumerable.ToLookup%2A>|순서가 지정된 결과|순서가 지정되지 않은 결과|  
 |<xref:System.Linq.ParallelEnumerable.Union%2A>|순서가 지정된 결과|순서가 지정되지 않은 결과|  

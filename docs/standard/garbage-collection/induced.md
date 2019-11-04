@@ -5,14 +5,12 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - garbage collection, forced
 ms.assetid: 019008fe-4708-4e65-bebf-04fd9941e149
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 149597f0e34448d9c275a2cb8cd4ffc250bec619
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 604b49ef577a46204b523ebf5a8575a30b81635e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492127"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120928"
 ---
 # <a name="induced-collections"></a>인덱싱된 컬렉션
 대부분의 경우 가비지 수집기가 수집을 수행할 적절한 시기를 결정할 수 있으며 가비지 수집기가 독립적으로 실행되는 것이 좋습니다. 강제된 컬렉션이 애플리케이션의 성능을 향상시키는 드문 경우도 있습니다. 이러한 경우에 가비지 수집을 강제하는 <xref:System.GC.Collect%2A?displayProperty=nameWithType> 메서드를 사용하여 가비지 수집을 유도할 수 있습니다.  

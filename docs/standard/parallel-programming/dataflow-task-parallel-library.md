@@ -9,14 +9,12 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library
 ms.assetid: 643575d0-d26d-4c35-8de7-a9c403e97dd6
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8fc88b06ee1e206208e6d6950f640966f53df3a1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7f5969bc6f73b2260ae1ffa4b0026d5b4119ff88
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924913"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134267"
 ---
 # <a name="dataflow-task-parallel-library"></a>데이터 흐름(작업 병렬 라이브러리)
 <a name="top"></a>TPL(작업 병렬 라이브러리)은 동시성 사용 애플리케이션의 견고성을 높이는 데 도움이 되는 데이터 흐름 구성 요소를 제공합니다. 이러한 데이터 흐름 구성 요소를 통칭하여 *TPL 데이터 흐름 라이브러리*라고 합니다. 이 데이터 흐름 모델은 정교하지 않은 데이터 흐름 및 파이프라인 작업을 위해 in-process 메시지 전달을 제공하여 행위자 기반 프로그래밍을 촉진합니다. 데이터 흐름 구성 요소는 TPL의 형식 및 예약 인프라를 바탕으로 빌드되며 비동기 프로그래밍에 대한 C#, Visual Basic 및 F# 언어 지원과 통합됩니다. 이러한 데이터 흐름 구성 요소는 비동기적으로 서로 통신해야 하는 여러 작업이 있는 경우나 데이터를 사용할 수 있게 될 때 해당 데이터를 처리하려는 경우에 유용합니다. 예를 들어 웹 카메라에서 이미지 데이터를 처리하는 애플리케이션의 경우, 데이터 흐름 모델을 사용함으로써 애플리케이션은 이미지 프레임을 사용할 수 있게 될 때 해당 이미지 프레임을 처리할 수 있습니다. 애플리케이션이 명도를 보정하거나 적목 현상을 줄이는 등의 작업을 수행하여 이미지 프레임을 개선하는 경우 데이터 흐름 구성 요소의 *파이프라인*을 만들 수 있습니다. 파이프라인의 각 단계에서는 TPL이 제공하는 기능과 같은 좀더 정교하지 않은 병렬 처리 기능을 사용하여 이미지를 변환할 수도 있습니다.  
@@ -49,7 +47,7 @@ ms.locfileid: "69924913"
   
  데이터 흐름 블록을 연결하여 기본 파이프라인을 만드는 예제는 [연습: 데이터 흐름 파이프라인 만들기](../../../docs/standard/parallel-programming/walkthrough-creating-a-dataflow-pipeline.md)를 참조하세요. 데이터 흐름 블록을 연결하여 보다 복잡한 네트워크를 만드는 예제는 [연습: Windows Forms 애플리케이션에서 데이터 흐름 사용](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md)을 참조하세요. 소스가 대상에 메시지를 제공한 후 소스에서 대상의 연결을 해제하는 예제는 [방법: 데이터 흐름 블록 링크 끊기](../../../docs/standard/parallel-programming/how-to-unlink-dataflow-blocks.md)를 참조하세요.  
   
-#### <a name="filtering"></a>필터링  
+#### <a name="filtering"></a>Filtering  
  <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A?displayProperty=nameWithType> 메서드를 호출하여 소스를 대상에 연결하는 경우 대상 블록이 메시지의 값에 따라 해당 메시지를 수락할지 아니면 거부할지를 결정하는 대리자를 제공할 수 있습니다. 이 필터링 메커니즘은 데이터 흐름 블록이 특정 값만 받도록 보장하는 유용한 방법입니다. 대부분의 미리 정의된 데이터 흐름 블록 형식의 경우 소스 블록이 여러 대상 블록에 연결되어 있으면 대상 블록이 메시지를 거부할 때 소스는 그 다음 대상에 해당 메시지를 제공합니다. 소스가 대상에 메시지를 제공하는 순서는 소스에 의해 정의되며 소스의 형식에 따라 달라질 수 있습니다. 대부분의 소스 블록 형식은 한 대상이 메시지를 수락할 후 해당 메시지의 제공을 중지합니다. 이 규칙의 한 가지 예외는 일부 대상이 메시지를 거부하는 경우에도 모든 대상에 각 메시지를 제공하는 <xref:System.Threading.Tasks.Dataflow.BroadcastBlock%601> 클래스입니다. 필터링을 사용하여 특정 메시지만 처리하는 예제는 [연습: Windows Forms 애플리케이션에서 데이터 흐름 사용](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md)을 참조하세요.  
   
 > [!IMPORTANT]
@@ -159,7 +157,7 @@ ms.locfileid: "69924913"
 #### <a name="summary-of-delegate-types"></a>대리자 형식 요약  
  다음 표에서는 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>, <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 및 <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> 개체에 제공할 수 있는 대리자 형식을 요약합니다. 또한 대리자 형식이 동기적으로 작동하는지, 아니면 비동기적으로 작동하는지를 지정합니다.  
   
-|형식|동기 대리자 형식|비동기 대리자 형식|  
+|Type|동기 대리자 형식|비동기 대리자 형식|  
 |----------|-------------------------------|--------------------------------|  
 |<xref:System.Threading.Tasks.Dataflow.ActionBlock%601>|`System.Action`|`System.Func<TInput, Task>`|  
 |<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|`System.Func<TInput, TOutput>`|`System.Func<TInput, Task<TOutput>>`|  

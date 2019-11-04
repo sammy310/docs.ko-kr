@@ -2,12 +2,12 @@
 title: .NET Core RID(런타임 식별자) 카탈로그
 description: RID(런타임 식별자) 및 .NET Core에서 RID의 사용 방법에 관해 알아봅니다.
 ms.date: 02/22/2019
-ms.openlocfilehash: 0d03e39c755b43e145edf5efe48422cbae7abcab
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: e6bc3f75858d4b67cc8598e49ff4ad75521f16d6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745744"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73100913"
 ---
 # <a name="net-core-rid-catalog"></a>.NET Core RID 카탈로그
 
@@ -27,19 +27,19 @@ NuGet 패키지에서 .NET 패키지의 플랫폼 관련 자산을 나타내는 
 
 구체적인 운영 체제를 나타내는 RID는 일반적으로 `[os].[version]-[architecture]-[additional qualifiers]`의 패턴을 따릅니다. 각각은 다음과 같습니다.
 
-- `[os]` - 운영 체제/플랫폼 모니커입니다. 예를 들어 `ubuntu`과 같은 형식입니다.
+- `[os]` - 운영 체제/플랫폼 모니커입니다. 예: `ubuntu`.
 
-- `[version]` - 점으로 구분된(`.`) 버전 번호 형식의 운영 체제 버전입니다. 예를 들어 `15.10`과 같은 형식입니다.
+- `[version]` - 점으로 구분된(`.`) 버전 번호 형식의 운영 체제 버전입니다. 예: `15.10`.
 
   - 버전은 마케팅 버전이어서는 **안 됩니다**. 마케팅 버전은 종종 다양한 플랫폼 API 노출 영역이 있는 운영 체제의 여러 개별 버전을 나타내기 때문입니다.
 
 - `[architecture]` - 프로세서 아키텍처입니다. 예를 들면 `x86`, `x64`, `arm`, `arm64` 등입니다.
 
-- `[additional qualifiers]` - 다른 플랫폼을 추가로 구분합니다. 예: `aot`
+- `[additional qualifiers]` - 다른 플랫폼을 추가로 구분합니다. 예를 들어 `aot`을 참조하십시오.
 
 ## <a name="rid-graph"></a>RID 그래프
 
-RID 그래프 또는 런타임 Fallback 그래프는 서로 호환되는 RID 목록입니다. RID는 [Microsoft.NETCore.Platforms](https://www.nuget.org/packages/Microsoft.NETCore.Platforms/) 패키지에 정의되어 있습니다. 지원되는 RID 및 RID 그래프 목록은 CoreFX 리포지토리에 있는 [*runtime.json*](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) 파일에서 확인할 수 있습니다. 이 파일에서 기본 RID를 제외하고 모든 RID에 `"#import"` 문이 포함되어 있음을 알 수 있습니다. 이러한 문은 호환되는 RID를 나타냅니다.
+RID 그래프 또는 런타임 Fallback 그래프는 서로 호환되는 RID 목록입니다. RID는 [Microsoft.NETCore.Platforms](https://www.nuget.org/packages/Microsoft.NETCore.Platforms/) 패키지에 정의되어 있습니다. 지원되는 RID 및 RID 그래프 목록은 CoreFX 리포지토리에 있는 [*runtime.json*](https://github.com/dotnet/corefx/blob/master/src/pkg/Microsoft.NETCore.Platforms/runtime.json) 파일에서 확인할 수 있습니다. 이 파일에서 기본 RID를 제외하고 모든 RID에 `"#import"` 문이 포함되어 있음을 알 수 있습니다. 이러한 문은 호환되는 RID를 나타냅니다.
 
 NuGet에서 패키지를 복원할 때 지정된 런타임에 대한 정확한 일치를 찾으려고 합니다.
 정확한 일치를 찾을 수 없는 경우 NuGet은 RID 그래프에 따라 가장 가까운 호환 시스템을 찾을 때까지 그래프를 다시 검색합니다.
@@ -80,7 +80,7 @@ RID를 사용할 때는 RID에 대한 다음과 같은 몇 가지 고려 사항�
 ## <a name="using-rids"></a>RID 사용
 
 RID를 사용할 수 있으려면 어떤 RID가 있는지 알아야 합니다. 새 값이 플랫폼에 정기적으로 추가됩니다.
-최신의 완전한 버전을 보려면 CoreFX 리포지토리에서 [runtime.json](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) 파일을 참조하세요.
+최신의 완전한 버전을 보려면 CoreFX 리포지토리에서 [runtime.json](https://github.com/dotnet/corefx/blob/master/src/pkg/Microsoft.NETCore.Platforms/runtime.json) 파일을 참조하세요.
 
 .NET Core 2.0 SDK에서는 이식 가능 RID라는 개념을 도입합니다. 이식 가능 RID란 RID 그래프에 새로 추가된 값으로서, 아직 특정 버전 또는 OS 배포에 연결되지 않았으며 .NET Core 2.0 이상을 사용할 때 권장됩니다. 대부분의 배포 RID는 이식 가능 RID에 매핑되므로 이 값은 여러 Linux 배포판을 다룰 때 매우 유용합니다.
 
@@ -88,7 +88,7 @@ RID를 사용할 수 있으려면 어떤 RID가 있는지 알아야 합니다. �
 
 ## <a name="windows-rids"></a>Windows RID
 
-자주 사용되는 값만 나열되어 있습니다. 최신의 완전한 버전을 보려면 CoreFX 리포지토리에서 [runtime.json](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) 파일을 참조하세요.
+자주 사용되는 값만 나열되어 있습니다. 최신의 완전한 버전을 보려면 CoreFX 리포지토리에서 [runtime.json](https://github.com/dotnet/corefx/blob/master/src/pkg/Microsoft.NETCore.Platforms/runtime.json) 파일을 참조하세요.
 
 - 이식 가능(.NET Core 2.0 이상 버전)
   - `win-x64`
@@ -112,7 +112,7 @@ RID를 사용할 수 있으려면 어떤 RID가 있는지 알아야 합니다. �
 
 ## <a name="linux-rids"></a>Linux RID
 
-자주 사용되는 값만 나열되어 있습니다. 최신의 완전한 버전을 보려면 CoreFX 리포지토리에서 [runtime.json](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) 파일을 참조하세요. 아래에 나열되지 않은 배포를 실행하는 디바이스의 경우, 이식 가능 RID 중 하나와 작동할 수 있습니다. 예를 들어, 여기에 나열되지 않은 Linux 배포를 실행하는 Raspberry Pi 디바이스는 `linux-arm`을 사용하여 대상으로 지정할 수 있습니다.
+자주 사용되는 값만 나열되어 있습니다. 최신의 완전한 버전을 보려면 CoreFX 리포지토리에서 [runtime.json](https://github.com/dotnet/corefx/blob/master/src/pkg/Microsoft.NETCore.Platforms/runtime.json) 파일을 참조하세요. 아래에 나열되지 않은 배포를 실행하는 디바이스의 경우, 이식 가능 RID 중 하나와 작동할 수 있습니다. 예를 들어, 여기에 나열되지 않은 Linux 배포를 실행하는 Raspberry Pi 디바이스는 `linux-arm`을 사용하여 대상으로 지정할 수 있습니다.
 
 - 이식 가능(.NET Core 2.0 이상 버전)
   - `linux-x64` (CentOS, Debian, Fedora, Ubuntu 및 파생 버전을 비롯한 대부분의 데스크톱 배포)
@@ -130,7 +130,7 @@ RID를 사용할 수 있으려면 어떤 RID가 있는지 알아야 합니다. �
 
 ## <a name="macos-rids"></a>macOS RID
 
-macOS RID는 이전 "OSX" 브랜딩을 사용합니다. 자주 사용되는 값만 나열되어 있습니다. 최신의 완전한 버전을 보려면 CoreFX 리포지토리에서 [runtime.json](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) 파일을 참조하세요.
+macOS RID는 이전 "OSX" 브랜딩을 사용합니다. 자주 사용되는 값만 나열되어 있습니다. 최신의 완전한 버전을 보려면 CoreFX 리포지토리에서 [runtime.json](https://github.com/dotnet/corefx/blob/master/src/pkg/Microsoft.NETCore.Platforms/runtime.json) 파일을 참조하세요.
 
 - 이식 가능(.NET Core 2.0 이상 버전)
   - `osx-x64` (최소 OS 버전: macOS 10.12 Sierra)
@@ -149,4 +149,4 @@ macOS RID는 이전 "OSX" 브랜딩을 사용합니다. 자주 사용되는 값�
 
 ## <a name="see-also"></a>참고 항목
 
-- [런타임 ID](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/readme.md)
+- [런타임 ID](https://github.com/dotnet/corefx/blob/master/src/pkg/Microsoft.NETCore.Platforms/readme.md)

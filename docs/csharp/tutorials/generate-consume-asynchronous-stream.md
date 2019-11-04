@@ -2,13 +2,14 @@
 title: 비동기 스트림 생성 및 사용
 description: 이 고급 자습서에서는 비동기 스트림을 생성 및 사용하여 비동기적으로 생성될 수 있는 데이터 시퀀스를 사용하는 더 자연스러운 방법을 제공하는 시나리오를 보여 줍니다.
 ms.date: 02/10/2019
+ms.technology: csharp-async
 ms.custom: mvc
-ms.openlocfilehash: 6c013d1b589367b77c6f77f88334317a6f3bc657
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 412e5de5d9d73846fe2af36e3def383364389c75
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72579214"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039216"
 ---
 # <a name="tutorial-generate-and-consume-async-streams-using-c-80-and-net-core-30"></a>자습서: C# 8.0 및 .NET Core 3.0을 사용하여 비동기 스트림 생성 및 사용
 

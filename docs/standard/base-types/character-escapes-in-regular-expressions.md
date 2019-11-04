@@ -15,15 +15,13 @@ helpviewer_keywords:
 - .NET Framework regular expressions, character escapes
 - constructs, character escapes
 ms.assetid: f49cc9cc-db7d-4058-8b8a-422bc08b29b0
-author: rpetrusha
-ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 248d434f7aad56d84d952fa27cf49f3d370f4a1c
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: 0179c4313ebce3cf6f2ad09d527d43aeb627bf77
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "69934825"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120584"
 ---
 # <a name="character-escapes-in-regular-expressions"></a>정규식의 문자 이스케이프
 정규식의 백슬래시(\\)는 다음 중 하나를 나타냅니다.  
@@ -40,7 +38,7 @@ ms.locfileid: "69934825"
   
 |문자 또는 시퀀스|설명|  
 |---------------------------|-----------------|  
-|다음을 제외한 모든 문자입니다.<br /><br /> 을 선택합니다. $ ^ { [ ( &#124; ) * + ? \ |**문자 또는 시퀀스** 열에 나열된 문자 이외의 문자는 정규식에서 특별한 의미를 가지지 않습니다. 문자 그대로 해석됩니다.<br /><br /> **문자 또는 시퀀스** 열에 포함된 문자는 특수 정규식 언어 요소입니다. 정규식에서 이들 문자를 찾으려면 문자를 이스케이프하거나 [긍정 문자 그룹](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)에 포함해야 합니다. 예를 들어 정규식 `\$\d+` 또는 `[$]\d+`는 "$1200"을 찾습니다.|  
+|다음을 제외한 모든 문자입니다.<br /><br /> . $ ^ { [ ( &#124; ) * + ? \ |**문자 또는 시퀀스** 열에 나열된 문자 이외의 문자는 정규식에서 특별한 의미를 가지지 않습니다. 문자 그대로 해석됩니다.<br /><br /> **문자 또는 시퀀스** 열에 포함된 문자는 특수 정규식 언어 요소입니다. 정규식에서 이들 문자를 찾으려면 문자를 이스케이프하거나 [긍정 문자 그룹](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)에 포함해야 합니다. 예를 들어 정규식 `\$\d+` 또는 `[$]\d+`는 "$1200"을 찾습니다.|  
 |`\a`|벨 문자인 `\u0007`을 찾습니다.|  
 |`\b`|`[`*character_group*`]` 문자 클래스에서 백스페이스 문자인 `\u0008`을 찾습니다.  [문자 클래스](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)를 참조하세요. 문자 클래스 이외에 `\b`는 단어 경계와 일치하는 앵커입니다. [앵커](../../../docs/standard/base-types/anchors-in-regular-expressions.md)를 참조하세요.|  
 |`\t`|탭 문자인 `\u0009`를 찾습니다.|  
@@ -63,7 +61,7 @@ ms.locfileid: "69934825"
   
  정규식 `\G(.+)[\t|\u007c](.+)\r?\n` 는 다음 테이블과 같이 해석됩니다.  
   
-|무늬|설명|  
+|패턴|설명|  
 |-------------|-----------------|  
 |`\G`|마지막 일치가 종료되면 일치를 시작합니다.|  
 |`(.+)`|임의 문자를 한 번 이상 찾습니다. 이 그룹은 첫 번째 캡처링 그룹입니다.|  

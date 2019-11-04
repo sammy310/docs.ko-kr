@@ -2,13 +2,14 @@
 title: 반복기
 description: 기본 제공 C# 반복기를 사용하는 방법 및 사용자 지정 반복기 메서드를 만드는 방법을 알아봅니다.
 ms.date: 06/20/2016
+ms.technology: csharp-advanced-concepts
 ms.assetid: 5cf36f45-f91a-4fca-a0b7-87f233e108e9
-ms.openlocfilehash: c378ceb651eed7e7a3d8c738bd4b2b3cf7de2a0f
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 1933ecf83e9fa234f9b88c815d8ab527997c97f2
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72773882"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73036409"
 ---
 # <a name="iterators"></a>반복기
 

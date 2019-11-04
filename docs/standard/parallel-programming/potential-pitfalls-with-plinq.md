@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, pitfalls
 ms.assetid: 75a38b55-4bc4-488a-87d5-89dbdbdc76a2
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2b996b09ed3973125d4d848d5e00c18ab02a6967
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 85098a0d10b4c05de52cd33d30ec5c4f4bbc594d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57673745"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139994"
 ---
 # <a name="potential-pitfalls-with-plinq"></a>PLINQ에서 발생할 수 있는 문제
 

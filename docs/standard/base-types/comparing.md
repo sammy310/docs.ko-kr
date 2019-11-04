@@ -18,19 +18,17 @@ helpviewer_keywords:
 - Equals method
 - StartsWith method
 ms.assetid: 977dc094-fe19-4955-98ec-d2294d04a4ba
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: dd5ec18147c074400457581618bacba11d9ee40a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e63b2a8ac44d6171f9c48990882780ea420f8c76
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963414"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73101666"
 ---
 # <a name="comparing-strings-in-net"></a>.NET에서 문자열 비교
 .NET에서는 문자열의 값을 비교하는 여러 가지 메서드를 제공합니다. 다음 표에서는 값 비교 메서드를 나열하고 설명합니다.  
   
-|메서드 이름|기능|  
+|메서드 이름|사용|  
 |-----------------|---------|  
 |<xref:System.String.Compare%2A?displayProperty=nameWithType>|두 문자열의 값을 비교합니다. 정수 값을 반환합니다.|  
 |<xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType>|로컬 문화권에 관계없이 두 문자열을 비교합니다. 정수 값을 반환합니다.|  

@@ -2,12 +2,12 @@
 title: CQRS 마이크로 서비스에서 읽기/쿼리 구현
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | Dapper를 사용하여 eShopOnContainers의 주문 마이크로 서비스에서 CQRS 쿼리 측면의 구현을 이해합니다.
 ms.date: 10/08/2018
-ms.openlocfilehash: c39a42b7f5200208a0f812665a2d1c87b4433ba9
-ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
+ms.openlocfilehash: 6541a0cb7ce8ac3946e119483308d91158bdb522
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72275790"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73094060"
 ---
 # <a name="implement-readsqueries-in-a-cqrs-microservice"></a>CQRS 마이크로 서비스에서 읽기/쿼리 구현
 
@@ -35,7 +35,7 @@ ms.locfileid: "72275790"
 
 ViewModel은 클래스에 정의된 정적 형식이 될 수 있습니다. 또는 개발자에게 매우 민첩한 주문 마이크로 서비스에서 구현되는 것과 같이 수행된 쿼리에 따라 동적으로 만들 수 있습니다.
 
-## <a name="use-dapper-as-a-micro-orm-to-perform-queries"></a>Dapper를 마이크로 ORM으로 사용하여 쿼리를 수행합니다. 
+## <a name="use-dapper-as-a-micro-orm-to-perform-queries"></a>Dapper를 마이크로 ORM으로 사용하여 쿼리를 수행합니다.
 
 마이크로 ORM, Entity Framework Core 또는 일반 ADO.NET을 쿼리에 사용할 수 있습니다. 샘플 애플리케이션에서 Dapper는 인기 있는 마이크로 ORM의 좋은 예인 eShopOnContainers에서 주문 마이크로 서비스로 선택되었습니다. 매우 작은 프레임워크이므로 뛰어난 성능으로 일반 SQL 쿼리를 실행할 수 있습니다. Dapper를 사용하면 여러 테이블에 액세스하고 조인할 수 있는 SQL 쿼리를 작성할 수 있습니다.
 
@@ -119,16 +119,16 @@ public class OrderQueries : IOrderQueries
         {
             connection.Open();
             return await connection.QueryAsync<OrderSummary>(
-                  @"SELECT o.[Id] as ordernumber, 
-                  o.[OrderDate] as [date],os.[Name] as [status], 
+                  @"SELECT o.[Id] as ordernumber,
+                  o.[OrderDate] as [date],os.[Name] as [status],
                   SUM(oi.units*oi.unitprice) as total
                   FROM [ordering].[Orders] o
-                  LEFT JOIN[ordering].[orderitems] oi ON  o.Id = oi.orderid 
+                  LEFT JOIN[ordering].[orderitems] oi ON  o.Id = oi.orderid
                   LEFT JOIN[ordering].[orderstatus] os on o.OrderStatusId = os.Id
                   GROUP BY o.[Id], o.[OrderDate], os.[Name]
                   ORDER BY o.[Id]");
         }
-    } 
+    }
 }
 ```
 
@@ -183,7 +183,7 @@ public class OrderSummary
 
 위의 이미지에서는 ViewModel 형식 및 반환될 수 있는 가능한 HTTP 상태 코드에 기반한 몇 가지 예제 값을 확인할 수 있습니다.
 
-## <a name="additional-resources"></a>추가 자료
+## <a name="additional-resources"></a>추가 리소스
 
 - **Dapper**  
  <https://github.com/StackExchange/dapper-dot-net>

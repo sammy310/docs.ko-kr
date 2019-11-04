@@ -5,14 +5,12 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - PLINQ queries, how to iterate directories
 ms.assetid: 354e8ce3-35c4-431c-99ca-7661d1f3901b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5da70cdca16c83b33e525aea588c02c696702ac7
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 90afc767e422515c6122b8a6ef0e63ffc07caf3a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929149"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73091376"
 ---
 # <a name="how-to-iterate-file-directories-with-plinq"></a>방법: PLINQ를 사용하여 파일 디렉터리 반복
 이 예제는 파일 디렉터리에서 작업을 병렬 처리하는 두 가지 간단한 방법을 보여줍니다. 첫 번째 쿼리는 <xref:System.IO.Directory.GetFiles%2A> 메서드를 사용하여 디렉터리 및 모든 하위 디렉터리에서 파일 이름 배열을 채웁니다. 이 메서드는 전체 배열이 채워질 때까지 반환되지 않으므로 작업 시작 시 지연이 발생할 수 있습니다. 그러나 배열이 채워진 후 PLINQ는 메서드를 매우 빠르게 병렬 처리할 수 있습니다.  

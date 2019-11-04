@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, how to control ordering
 ms.assetid: c67eccc7-004d-4b2f-987e-919cbbd62ef7
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7416f2f9c200d687d3f2c1f14b01cafdb48f85b1
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: d38c039fa99433d9476d62c1e96dff7e306fd766
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988193"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123118"
 ---
 # <a name="how-to-control-ordering-in-a-plinq-query"></a>방법: PLINQ 쿼리의 순서 제어
 다음 예제는 <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> 확장 메서드를 사용하여 PLINQ 쿼리에서 순서를 제어하는 방법을 보여줍니다.  
