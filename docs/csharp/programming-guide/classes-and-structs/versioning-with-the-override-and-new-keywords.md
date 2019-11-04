@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, versioning
 - C# language, override and new
 ms.assetid: 88247d07-bd0d-49e9-a619-45ccbbfdf0c5
-ms.openlocfilehash: 58023498c499569eebb9a0506bea434d2669de45
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: c85f5b6b4552dc4a10c7ad66b8f93331f97a8621
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596003"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73196207"
 ---
 # <a name="versioning-with-the-override-and-new-keywords-c-programming-guide"></a>Override 및 New 키워드를 사용하여 버전 관리(C# 프로그래밍 가이드)
 C# 언어는 서로 다른 라이브러리의 [기본](../../language-reference/keywords/base.md) 및 파생 클래스 간 버전 관리를 개발하고 이전 버전과의 호환성을 유지할 수 있도록 설계되었습니다. 예를 들어 파생 클래스의 멤버와 동일한 이름을 가진 기본 [클래스](../../language-reference/keywords/class.md)에 새 멤버가 추가되면 C#이 완전히 지원되고 예기치 않은 동작이 발생하지 않습니다. 따라서 클래스는 메서드가 상속된 메서드를 재정의할지 아니면 메서드가 유사한 이름의 상속된 메서드를 숨기는 새 메서드인지를 명시적으로 지정해야 합니다.  
@@ -56,7 +56,7 @@ C# 언어는 서로 다른 라이브러리의 [기본](../../language-reference/
   
  [!code-csharp[csProgGuideInheritance#44](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#44)]  
   
- 메서드가 새 기본 클래스 메서드를 재정의하도록 하지 않으려면 다음 고려 사항을 적용하세요. 두 메서드 간 혼동을 피하려면 메서드의 이름을 바꿀 수 있습니다. 이 방법은 시간이 오래 걸리고 오류가 발생하기 쉬우며 어떤 경우에는 실용적이지 않습니다. 그러나 프로젝트 규모가 비교적 작으면 Visual Studio 리팩터링 옵션을 사용하여 메서드의 이름을 바꿀 수 있습니다. 자세한 내용은 [클래스 및 형식 리팩터링(클래스 디자이너)](/visualstudio/ide/refactoring-classes-and-types-class-designer)을 참조하세요.  
+ 메서드가 새 기본 클래스 메서드를 재정의하도록 하지 않으려면 다음 고려 사항을 적용하세요. 두 메서드 간 혼동을 피하려면 메서드의 이름을 바꿀 수 있습니다. 이 방법은 시간이 오래 걸리고 오류가 발생하기 쉬우며 어떤 경우에는 실용적이지 않습니다. 그러나 프로젝트 규모가 비교적 작으면 Visual Studio 리팩터링 옵션을 사용하여 메서드의 이름을 바꿀 수 있습니다. 자세한 내용은 [클래스 및 형식 리팩터링(클래스 디자이너)](/visualstudio/ide/class-designer/refactoring-classes-and-types)을 참조하세요.  
   
  또는 파생 클래스 정의에서 `new` 키워드를 사용하여 경고를 방지할 수 있습니다.  
   

@@ -2,18 +2,20 @@
 title: C# 자습서
 description: C# 자습서를 탐색하여 C# 프로그램을 빌드하는 방법과 C# 언어 기능에 관해 학습합니다.
 ms.date: 10/25/2018
-ms.openlocfilehash: c2dd00505afbf4d8bc3f213a2f87751fe452f253
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: 3f3ca31c0fdeb5d7c60b25c4b45399569cc919b4
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557175"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73417106"
 ---
 # <a name="c-tutorials"></a>C# 자습서
 
 C# 자습서를 시작합니다. 브라우저에서 실행할 수 있는 대화형 단원을 시작합니다. 최신 자습서 및 고급 자습서는 머신에서 .NET 개발 도구를 사용해 C# 프로그램을 만드는 데 도움이 됩니다.
 
 ## <a name="introduction-to-c-interactive-tutorials"></a>C# 소개 대화형 자습서
+
+동영상 형식으로 탐색을 시작하려는 경우 [C# 101 동영상 시리즈](https://aka.ms/dotnet3-csharp)에서 C#에 대한 소개를 참조할 수 있습니다. 해당 자습서에서 다루는 여러 개념에 대해 학습하게 됩니다.
 
 첫 번째 단원에서는 작은 코드 조각을 사용하여 C# 개념을 설명합니다. C# 구문의 기본 사항과 문자열, 숫자 및 부울과 같은 데이터 형식을 사용하는 방법에 대해 학습합니다. 모두 대화형이며, 몇 분 내에 코드를 작성하여 실행할 수 있습니다. 이 첫 번째 단원에서는 프로그래밍이나 C# 언어에 대한 사전 지식이 없다고 가정합니다.
 

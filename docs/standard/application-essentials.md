@@ -5,14 +5,12 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - .NET Framework development
 ms.assetid: 653da4ba-3752-4d1f-a08a-de017dc86ecc
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d993042cbb435826b92bbcc62f1320a310a02627
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 494f3305f225e0130df30433f3fa0d06ca218068
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320014"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122544"
 ---
 # <a name="net-framework-application-essentials"></a>.NET Framework 애플리케이션 주요 사항
 .NET Framework 설명서의 이 섹션은 .NET Framework의 기본 애플리케이션 개발 작업에 대한 정보를 제공합니다.  
@@ -45,7 +43,7 @@ ms.locfileid: "72320014"
  [애플리케이션 도메인 및 어셈블리](../../docs/framework/app-domains/index.md)  
  어셈블리 및 애플리케이션 도메인을 만들고 이에 대한 작업을 수행하는 방법을 설명합니다.  
   
- [serialization](../../docs/standard/serialization/index.md)  
+ [직렬화](../../docs/standard/serialization/index.md)  
  개체의 상태를 지속하거나 전송할 수 있는 형식으로 변환하는 프로세스를 설명합니다.  
   
  [데스크톱 앱의 리소스](../../docs/framework/resources/index.md)  

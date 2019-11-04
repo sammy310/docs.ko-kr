@@ -10,15 +10,13 @@ helpviewer_keywords:
 - .NET Framework regular expressions, best practices
 - regular expressions, best practices
 ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
-author: rpetrusha
-ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 89585ff97183912feb9b9af0bd326041b7381bfb
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 56014469f14280deae5f220da6d786f4363ea98f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774301"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73105715"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>.NET의 정규식 모범 사례
 
@@ -105,7 +103,7 @@ ms.locfileid: "72774301"
 
 이 예제에서 사용된 정규식 `\p{Sc}+\s*\d+`는 입력 문자열에 통화 기호와 한 자릿수 이상의 숫자가 포함되었는지를 확인합니다. 패턴은 다음 표와 같이 정의됩니다.
 
-|무늬|설명|
+|패턴|설명|
 |-------------|-----------------|
 |`\p{Sc}+`|유니코드 기호와 통화 범주에 속하는 하나 이상의 문자가 일치하는지 확인합니다.|
 |`\s*`|0개 이상의 공백 문자가 일치하는지 확인합니다.|
@@ -126,7 +124,7 @@ ms.locfileid: "72774301"
 
 이 예제에 사용된 정규식 패턴 `\b(\w+((\r?\n)|,?\s))*\w+[.?:;!]`는 다음 표와 같이 정의됩니다.
 
-|무늬|설명|
+|패턴|설명|
 |-------------|-----------------|
 |`\b`|단어 경계에서 일치 항목 찾기를 시작합니다.|
 |`\w+`|하나 이상의 단어 문자를 찾습니다.|
@@ -170,7 +168,7 @@ ms.locfileid: "72774301"
 
 역추적이 일치하는 문자열 검색에 반드시 필요하지 않더라도 애플리케이션에서 역추적을 사용하기 위해 성능상의 이점을 포기하는 경우가 많습니다. 예를 들어 `\b\p{Lu}\w*\b`는 다음 표와 같이 대문자로 시작하는 모든 단어를 찾습니다.
 
-|무늬|설명|
+|패턴|설명|
 |-|-|
 |`\b`|단어 경계에서 일치 항목 찾기를 시작합니다.|
 |`\p{Lu}`|대문자를 찾습니다.|
@@ -193,7 +191,7 @@ ms.locfileid: "72774301"
 
 이러한 경우 중첩된 수량자를 제거하고 외부 하위 식을 길이가 0인 lookahead 또는 lookbehind 어설션으로 바꿔서 정규식 성능을 최적화할 수 있습니다. Lookahead 및 lookbehind 어설션은 앵커이므로 입력 문자열에서 포인터를 이동하지는 않지만 대신 이전 또는 이후 부분을 조회하여 지정된 조건이 충족되는지 확인합니다. 예를 들어 부품 번호 정규식은 `^[0-9A-Z][-.\w]*(?<=[0-9A-Z])\$$`로 다시 작성할 수 있습니다. 이 정규식 패턴은 다음 표에서와 같이 정의됩니다.
 
-|무늬|설명|
+|패턴|설명|
 |-------------|-----------------|
 |`^`|입력 문자열의 시작 부분에서 일치 항목 찾기를 시작합니다.|
 |`[0-9A-Z]`|일치하는 영숫자 문자를 찾습니다. 부품 번호는 적어도 이 문자 이상으로 구성되어야 합니다.|
@@ -243,7 +241,7 @@ ms.locfileid: "72774301"
 
 그룹화 구문은 종종 수량자를 정규식에 적용할 수 있도록 정규식에서만 사용되며, 이러한 하위 식으로 캡처된 그룹은 이후에 사용되지 않습니다. 예를 들어 정규식 `\b(\w+[;,]?\s?)+[.?!]`는 전체 문장을 캡처하도록 디자인되었습니다. 다음 표에서는 이 정규식에 포함된 언어 요소와 <xref:System.Text.RegularExpressions.Match> 개체의 <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 및 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 컬렉션에 미치는 영향에 대해 설명합니다.
 
-|무늬|설명|
+|패턴|설명|
 |-------------|-----------------|
 |`\b`|단어 경계에서 일치 항목 찾기를 시작합니다.|
 |`\w+`|하나 이상의 단어 문자를 찾습니다.|
@@ -272,7 +270,7 @@ ms.locfileid: "72774301"
 
 - `n` 언어 요소에서 `(?imnsx:subexpression)` 옵션을 사용합니다. 이 옵션은 `subexpression`에서 모든 명명되지 않은 캡처 또는 암시적인 캡처를 비활성화합니다. 명명되지 않은 또는 암시적인 중첩된 캡처링 그룹에 의한 캡처도 함께 비활성화됩니다.
 
-## <a name="related-topics"></a>관련 항목
+## <a name="related-topics"></a>관련된 항목
 
 |제목|설명|
 |-----------|-----------------|

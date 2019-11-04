@@ -11,14 +11,12 @@ helpviewer_keywords:
 - multiple attribute instances
 - attributes [.NET Framework], retrieving
 ms.assetid: 37dfe4e3-7da0-48b6-a3d9-398981524e1c
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8873b4938f654213bd659631175ba4526a35dcc3
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: fe5bb95d5e1f90c0dafa30977d76ea1d62125c99
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71957335"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130887"
 ---
 # <a name="retrieving-information-stored-in-attributes"></a>특성에 저장된 정보 검색
 사용자 지정 특성 검색은 간단한 프로세스입니다. 먼저, 검색하려는 특성의 인스턴스를 선언합니다. 그런 다음, <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType> 메서드를 사용하여 검색하려는 특성 값으로 새 특성을 초기화합니다. 새 특성이 초기화되면 해당 속성을 사용하여 값을 가져오기만 하면 됩니다.  

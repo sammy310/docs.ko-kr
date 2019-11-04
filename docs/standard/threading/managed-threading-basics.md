@@ -8,14 +8,12 @@ helpviewer_keywords:
 - threading [.NET Framework], about threading
 - managed threading
 ms.assetid: b2944911-0e8f-427d-a8bb-077550618935
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f55057e40a251be49898b9b1b7862bd243b2a70c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: bec769043ab630b37609bed12302ceff5b90474a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69913178"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139236"
 ---
 # <a name="managed-threading-basics"></a>관리형 스레딩 기본 사항
 
@@ -26,7 +24,7 @@ ms.locfileid: "69913178"
 > [!NOTE]
 > .NET Framework 4에서 작업 병렬 라이브러리 및 PLINQ는 다중 스레드 프로그램에서 작업 및 데이터 병렬 처리를 위한 API를 제공합니다. 자세한 내용은 [병렬 프로그래밍](../../../docs/standard/parallel-programming/index.md)을 참조하세요.  
   
-## <a name="in-this-section"></a>단원 내용
+## <a name="in-this-section"></a>섹션 내용
 
  [스레드 및 스레딩](../../../docs/standard/threading/threads-and-threading.md)  
  다중 스레드의 장단점에 대해 설명하고 스레드를 만들거나 스레드 풀 스레드를 사용할 수 있는 시나리오를 간략하게 설명합니다.  

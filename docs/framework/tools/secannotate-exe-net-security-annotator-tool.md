@@ -5,14 +5,12 @@ helpviewer_keywords:
 - SecAnnotate.exe
 - Security Annotator tool
 ms.assetid: 8104d208-7813-4a1d-8a75-58f9a7bcb8c9
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 146aef8c1e085ee3146585c3b5b1cda8004b9f7e
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 7c9fad9b420044cce2c9d75cca66ecdb5b0558cd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044207"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73104675"
 ---
 # <a name="secannotateexe-net-security-annotator-tool"></a>SecAnnotate.exe(.NET Security Annotator 도구)
 .NET Security Annotator 도구(SecAnnotate.exe)는 하나 이상의 어셈블리의 `SecurityCritical` 및 `SecuritySafeCritical` 부분을 식별하는 명령줄 애플리케이션입니다.  

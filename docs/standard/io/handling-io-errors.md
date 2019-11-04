@@ -8,17 +8,15 @@ dev_langs:
 helpviewer_keywords:
 - I/O, exception handling
 - I/O, errors
-author: rpetrusha
-ms.author: ronpet
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: d2ff4e69596e721f485d107317f261231615c5a6
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 51eb0e758f1ae8fb41c842ef9b32a9f8928af9ac
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126877"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120735"
 ---
 # <a name="handling-io-errors-in-net"></a>.NET에서 I/O 오류 처리
 
@@ -33,7 +31,7 @@ ms.locfileid: "53126877"
 - <xref:System.UnauthorizedAccessException?displayProperty=nameWithType>.
 - <xref:System.ArgumentException?displayProperty=nameWithType> - .NET Framework와 .NET Core 2.0 및 이전 버전에서 잘못된 경로 문자에 대해 throw됩니다.
 - <xref:System.NotSupportedException?displayProperty=nameWithType> - .NET Framework의 잘못된 콜론에 대해 throw됩니다.
-- <xref:System.Security.SecurityException?displayProperty=nameWithType> - .NET Framework에서만 필요한 권한이 없는, 제한된 신뢰로 실행되는 응용 프로그램에 대해 throw됩니다. (.NET Framework의 기본값은 완전 신뢰입니다.)
+- <xref:System.Security.SecurityException?displayProperty=nameWithType> - .NET Framework에서만 필요한 권한이 없는, 제한된 신뢰로 실행되는 애플리케이션에 대해 throw됩니다. (.NET Framework의 기본값은 완전 신뢰입니다.)
 
 ## <a name="mapping-error-codes-to-exceptions"></a>예외에 오류 코드 매핑
 
@@ -57,7 +55,7 @@ ms.locfileid: "53126877"
 | <xref:System.OperationCanceledException> | 예 | 예 |
 | <xref:System.UnauthorizedAccessException> | 예 | 예 |
 | <xref:System.ArgumentException> | .NET Core 2.0 및 이전| 예 |
-| <xref:System.NotSupportedException> | 아니요 | 예 |
+| <xref:System.NotSupportedException> | no | 예 |
 | <xref:System.Security.SecurityException> | 아니요 | 제한된 신뢰만 |
 
 ## <a name="handling-ioexception"></a>IOException 처리

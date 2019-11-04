@@ -25,14 +25,12 @@ helpviewer_keywords:
 - custom formatting [.NET Framework]
 - strings [.NET Framework], formatting
 ms.assetid: 0d1364da-5b30-4d42-8e6b-03378343343f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e9d53e7a75463e481b667a7ad84b68cb225e7f7c
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: e362ad75fd9989cc87751286f83918d340a58820
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774318"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141492"
 ---
 # <a name="format-types-in-net"></a>.NET의 형식 유형
 
@@ -53,7 +51,7 @@ ms.locfileid: "72774318"
 
 ## <a name="formatting-in-net"></a>.NET의 형식 지정
 
-서식 지정의 기본 메커니즘은 이 항목의 뒷부분에 나오는 [ToString 메서드를 사용한 기본 형식 지정](#default-formatting-using-the-tostring-method) 섹션에서 설명하는 <xref:System.Object.ToString%2A?displayProperty=nameWithType> 메서드의 기본 구현입니다. 그러나 .NET에서는 기본 형식 지정 지원을 수정하고 확장할 수 있는 여러 가지 방법을 제공합니다. 이러한 요구 사항은 다음과 같습니다.
+서식 지정의 기본 메커니즘은 이 항목의 뒷부분에 나오는 [ToString 메서드를 사용한 기본 형식 지정](#default-formatting-using-the-tostring-method) 섹션에서 설명하는 <xref:System.Object.ToString%2A?displayProperty=nameWithType> 메서드의 기본 구현입니다. 그러나 .NET에서는 기본 형식 지정 지원을 수정하고 확장할 수 있는 여러 가지 방법을 제공합니다. 여기에는 다음이 포함됩니다.
 
 - <xref:System.Object.ToString%2A?displayProperty=nameWithType> 메서드를 재정의하여 개체의 값에 대한 사용자 지정 문자열 표현을 정의합니다. 자세한 내용은 이 항목의 뒷부분에 있는 [ToString 메서드 재정의](#override-the-tostring-method) 섹션을 참조하세요.
 
@@ -103,7 +101,7 @@ ms.locfileid: "72774318"
 
 .NET에서 각 기본 값 형식의 `ToString` 메서드는 개체의 이름 대신 개체의 값을 표시하도록 재정의되었습니다. 다음 표에는 각 기본 형식의 재정의가 나와 있습니다. 재정의된 메서드의 대부분은 `ToString` 메서드의 다른 오버로드를 호출하고 이를 해당 형식에 대한 일반적인 형식을 정의하는 "G" 형식 지정자와 현재 문화권을 나타내는 <xref:System.IFormatProvider> 개체에 전달합니다.
 
-|형식|ToString 재정의|
+|Type|ToString 재정의|
 |----------|-----------------------|
 |<xref:System.Boolean>|<xref:System.Boolean.TrueString?displayProperty=nameWithType> 또는 <xref:System.Boolean.FalseString?displayProperty=nameWithType>을 반환합니다.|
 |<xref:System.Byte>|`Byte.ToString("G", NumberFormatInfo.CurrentInfo)` 을 호출하여 현재 문화권에 대한 <xref:System.Byte> 값의 형식을 지정합니다.|
@@ -237,7 +235,7 @@ ms.locfileid: "72774318"
 
 <xref:System.IFormatProvider>형식의 매개 변수를 포함하는 형식 지정 또는 문자열 변환 메서드가 많이 있기는 하지만 대부분의 경우 메서드가 호출될 때 매개 변수의 값이 무시됩니다. 다음 표에서는 매개 변수를 사용하는 형식 지정 메서드와 이러한 메서드가 <xref:System.Type> 메서드로 전달하는 <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> 개체의 형식을 보여 줍니다.
 
-|메서드|`formatType` 매개 변수의 형식|
+|방법|`formatType` 매개 변수의 형식|
 |------------|------------------------------------|
 |숫자 형식의`ToString` 메서드|<xref:System.Globalization.NumberFormatInfo?displayProperty=nameWithType>|
 |날짜 및 시간 형식의`ToString` 메서드|<xref:System.Globalization.DateTimeFormatInfo?displayProperty=nameWithType>|
@@ -349,7 +347,7 @@ ms.locfileid: "72774318"
 [!code-csharp[Conceptual.Formatting.Overview#16](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/icustomformatter1.cs#16)]
 [!code-vb[Conceptual.Formatting.Overview#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/icustomformatter1.vb#16)]
 
-## <a name="related-topics"></a>관련 항목
+## <a name="related-topics"></a>관련된 항목
 
 |제목|정의|
 |-----------|----------------|

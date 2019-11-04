@@ -6,14 +6,12 @@ helpviewer_keywords:
 - observer design pattern [.NET Framework], best practices
 - best practices [.NET Framework], observer design pattern
 ms.assetid: c834760f-ddd4-417f-abb7-a059679d5b8c
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c37480f18c100d66e78e851439bd15e2ecfdd381
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2da29e0baf429142707d0ddd39b1a11c13a17a90
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615189"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141544"
 ---
 # <a name="observer-design-pattern-best-practices"></a>관찰자 디자인 패턴 모범 사례
 .NET Framework에서는 관찰자 디자인 패턴이 인터페이스 집합으로 구현됩니다. <xref:System.IObservable%601?displayProperty=nameWithType> 인터페이스는 데이터 공급자를 나타냅니다. 이 데이터 공급자는 관찰자가 알림 구독을 취소할 수 있도록 하는 <xref:System.IDisposable> 구현도 제공합니다. <xref:System.IObserver%601?displayProperty=nameWithType> 인터페이스는 관찰자를 나타냅니다. 이 항목에는 이러한 인터페이스를 사용하여 관찰자 디자인 패턴을 구현할 때 개발자가 따라야 하는 모범 사례에 대해 설명합니다.  

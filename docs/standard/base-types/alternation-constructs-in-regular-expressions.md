@@ -15,15 +15,13 @@ helpviewer_keywords:
 - constructs, alternation
 - .NET Framework regular expressions, alternation constructs
 ms.assetid: 071e22e9-fbb0-4ecf-add1-8d2424f9f2d1
-author: rpetrusha
-ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: c6f33023d747ce20964c7cb83a66d6764b6030cd
-ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
+ms.openlocfilehash: 352cfd65cd4620d8274ff0a14ea507cd49522470
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71736610"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140560"
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a>정규식의 교체 구문
 
@@ -45,7 +43,7 @@ ms.locfileid: "71736610"
 
 `|` 문자를 사용하는 정규식인 `\bgr(a|e)y\b`는 다음 테이블과 같이 해석됩니다.
 
-|무늬|설명|  
+|패턴|설명|  
 |-------------|-----------------|  
 |`\b`|단어 경계를 시작합니다.|  
 |`gr`|문자 "gr"을 찾습니다.|  
@@ -59,7 +57,7 @@ ms.locfileid: "71736610"
 
 정규식 `\b(\d{2}-\d{7}|\d{3}-\d{2}-\d{4})\b`는 다음 테이블과 같이 해석됩니다.
   
-|무늬|설명|  
+|패턴|설명|  
 |-------------|-----------------|  
 |`\b`|단어 경계를 시작합니다.|  
 |<code>(\d{2}-\d{7}&#124;\d{3}-\d{2}-\d{4})</code>|10진수 2개, 하이픈, 10진수 7개 순의 일치 항목이나 10진수 3개, 하이픈, 10진수 2개, 또 다른 하이픈, 10진수 4개 순의 일치 항목을 찾습니다.|  
@@ -88,7 +86,7 @@ ms.locfileid: "71736610"
 
 정규식 패턴 `\b(?(\d{2}-)\d{2}-\d{7}|\d{3}-\d{2}-\d{4})\b`는 다음 테이블과 같이 해석됩니다.
 
-|무늬|설명|  
+|패턴|설명|  
 |-------------|-----------------|  
 |`\b`|단어 경계를 시작합니다.|  
 |`(?(\d{2}-)`|다음 문자 3개가 숫자 2개, 하이픈 순으로 구성되는지를 확인합니다.|  
@@ -118,7 +116,7 @@ ms.locfileid: "71736610"
 
 정규식 패턴 `\b(?<n2>\d{2}-)?(?(n2)\d{7}|\d{3}-\d{2}-\d{4})\b`는 다음 테이블과 같이 해석됩니다.
 
-|무늬|설명|  
+|패턴|설명|  
 |-------------|-----------------|  
 |`\b`|단어 경계를 시작합니다.|  
 |`(?<n2>\d{2}-)?`|숫자 2개, 하이픈 순의 일치 항목 0개 또는 1개를 찾습니다. 이 캡처링 그룹의 이름을 `n2`로 지정합니다.|  

@@ -11,14 +11,12 @@ helpviewer_keywords:
 - calendars [.NET Framework], displaying dates
 - displaying date and time data
 ms.assetid: ed324eff-4aff-4a76-b6c0-04e6c0d8f5a9
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: cdd500d8eda81708d67254cbc5dc8da701ae4e09
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 455996d091f92367667e7077a4524898cd8face6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963349"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138749"
 ---
 # <a name="how-to-display-dates-in-non-gregorian-calendars"></a>방법: 그레고리오력이 아닌 달력으로 날짜 표시
 <xref:System.DateTime> 및 <xref:System.DateTimeOffset> 형식은 양력을 기본 달력으로 사용합니다. 즉, 날짜 및 시간 값의 `ToString` 메서드를 호출하면 해당 날짜 및 시간이 다른 달력을 사용하여 생성된 경우에도 해당 날짜 및 시간의 문자열 표현을 양력 달력으로 표시합니다. 이 내용은 두 가지 방법을 사용하여 페르시아력으로 날짜 및 시간 값을 만들지만 <xref:System.DateTime.ToString%2A> 메서드를 호출할 때 해당 날짜 및 시간 값을 여전히 양력으로 표시하는 다음 예제에 설명되어 있습니다. 이 예제에서는 특정 달력의 날짜를 표시하기 위해 자주 사용되지만 잘못된 두 가지 방법을 보여 줍니다.  

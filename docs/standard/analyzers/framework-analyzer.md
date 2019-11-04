@@ -5,12 +5,12 @@ author: billwagner
 ms.author: wiwagn
 ms.date: 01/25/2018
 ms.technology: dotnet-standard
-ms.openlocfilehash: da5e72b96fec35404e7e9ae7930f3430143487d2
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 03268375739b34a43f38c60fbfd2c993da9f3840
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929303"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197955"
 ---
 # <a name="the-net-framework-analyzer"></a>.NET Framework 분석기
 
@@ -50,7 +50,7 @@ NuGet 패키지를 설치하면 솔루션을 빌드합니다. 분석기는 코�
 
 **범주:** 디자인
 
-**심각도:** 경고
+**심각도:** Warning
 
 추가 정보: [CA:1058: 형식은 특정 기본 형식을 확장하면 안 됩니다.](/visualstudio/code-quality/ca1058-types-should-not-extend-certain-base-types)
 
@@ -60,7 +60,7 @@ NuGet 패키지를 설치하면 솔루션을 빌드합니다. 분석기는 코�
 
 **범주:** 보안
 
-**심각도:** 경고
+**심각도:** Warning
 
 추가 정보: [## CA2153: 손상된 상태 예외를 catch하지 마세요.](/visualstudio/code-quality/ca2153-avoid-handling-corrupted-state-exceptions)
 
@@ -81,7 +81,7 @@ public class MyItemType
 
 **범주:** 사용
 
-**심각도:** 경고
+**심각도:** Warning
 
 추가 정보: [CA2229: serialization 생성자를 구현하십시오.](/visualstudio/code-quality/ca2229-implement-serialization-constructors)
 
@@ -91,7 +91,7 @@ serialize할 수 없는 형식의 인스턴스 필드가 serialize할 수 있는
 
 **범주:** 사용
 
-**심각도:** 경고
+**심각도:** Warning
 
 추가 정보: [CA2235: 모두 serialize할 수 없는 필드로 표시하십시오.](/visualstudio/code-quality/ca2235-mark-all-non-serializable-fields)
 
@@ -101,7 +101,7 @@ serialize할 수 없는 형식의 인스턴스 필드가 serialize할 수 있는
 
 **범주:** 사용
 
-**심각도:** 경고
+**심각도:** Warning
 
 추가 정보: [CA2237: ISerializable 형식을 serializable로 표시하세요.](/visualstudio/code-quality/ca2237-mark-iserializable-types-with-serializableattribute)
 
@@ -111,7 +111,7 @@ serialize할 수 없는 형식의 인스턴스 필드가 serialize할 수 있는
 
 **범주:** 보안
 
-**심각도:** 경고
+**심각도:** Warning
 
 추가 정보: [A3075: XML의 안전하지 않은 DTD 처리](/visualstudio/code-quality/ca2237-mark-iserializable-types-with-serializableattribute)
 
@@ -121,7 +121,7 @@ serialize할 수 없는 형식의 인스턴스 필드가 serialize할 수 있는
 
 **범주:** 보안
 
-**심각도:** 경고
+**심각도:** Warning
 
 추가 정보: [CA5350: 취약한 암호화 알고리즘을 사용하지 마세요.](/visualstudio/code-quality/ca5350-do-not-use-weak-cryptographic-algorithms)
 
@@ -131,6 +131,6 @@ serialize할 수 없는 형식의 인스턴스 필드가 serialize할 수 있는
 
 **범주:** 보안
 
-**심각도:** 경고
+**심각도:** Warning
 
-추가 정보: [CA5351: 손상된 암호화 알고리즘을 사용하지 마세요.](/visualstudio/code-quality/ca5351-do-not-use-broken-cryptographic-algorithms)
+추가 정보: [CA5351: 손상된 암호화 알고리즘을 사용하지 마세요.](/visualstudio/code-quality/ca5351)

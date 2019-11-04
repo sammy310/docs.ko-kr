@@ -11,14 +11,12 @@ helpviewer_keywords:
 - garbage collection, workstation garbage collection
 - garbage collection, managed heap
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2c1b73108227160aaff28525beeca7f3bd4cb5f8
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 840fe972192c6beb5d84017c288455f1cdf52177
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72775318"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121240"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>가비지 수집 기본 사항
 
@@ -140,7 +138,7 @@ CLR에 의해 가비지 수집기가 초기화되고 나면 가비지 수집기�
 |워크스테이션 GC|16MB|256 MB|
 |서버 GC|64MB|4 GB|
 |논리적 CPU 수가 4개를 초과하는 서버 GC|32MB|2GB|
-|논리적 CPU 수가 8개를 초과하는 서버 GC|16MB|1GB|
+|논리적 CPU 수가 8개를 초과하는 서버 GC|16MB|1 GB|
 
 임시 세그먼트에는 2세대 개체가 포함될 수 있습니다. 2세대 개체는 여러 세그먼트를 사용할 수 있습니다(프로세스에 필요하고 메모리가 허용하는 한도만큼).
 

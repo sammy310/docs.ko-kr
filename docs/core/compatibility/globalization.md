@@ -2,14 +2,12 @@
 title: 세계화 관련 호환성이 손상되는 변경 - .NET Core
 description: .NET Core의 세계화 관련 호환성이 손상되는 변경 목록입니다.
 ms.date: 09/20/2019
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8ae7ac4f88cd8a4d6657bfde8abd3dfda35579d1
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 0913ea9a3e520d8a0ce916f3730673305124103b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216980"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73093069"
 ---
 # <a name="globalization-breaking-changes"></a>세계화 관련 호환성이 손상되는 변경 
 

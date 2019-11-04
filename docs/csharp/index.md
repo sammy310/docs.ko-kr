@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Help, Visual C# documentation
 - C# language
 - Visual C#
-ms.openlocfilehash: 78a9bd2cf657376bbc324cdefd423b14a283f842
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 77db5201ab21dff1f04f76da5dd10d07aa377813
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70104725"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73191812"
 ---
 # <a name="c-guide"></a>C# 가이드
 
@@ -66,6 +66,6 @@ C# 가이드에는 여러 섹션이 있습니다. 순서대로 읽거나 가장 
 
 ## <a name="see-also"></a>참고 항목
 
-- [Visual C# 및 Visual Basic 시작](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
+- [Visual C# 시작](/visualstudio/ide/quickstart-csharp-console)
 - [.NET 가이드](../standard/index.md)
 - [C# 샘플](https://code.msdn.microsoft.com/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=C%23&f%5B0%5D.Text=C%23)

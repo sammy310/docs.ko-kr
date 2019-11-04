@@ -7,14 +7,12 @@ helpviewer_keywords:
 - regular expressions [.NET Framework]
 - strings [.NET Framework], regular expressions
 ms.assetid: e9fd53f2-ed56-4b09-b2ea-e9bc9d65e6d6
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: dc62fffe3ca51acf0f2098d2975665b91b052992
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 788fa2a6793e14189def4c30a0baf0d4a5cf6b0a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69930891"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128090"
 ---
 # <a name="regular-expression-examples"></a>정규식 예제
 이 섹션은 일반적인 애플리케이션에서 정규식 사용을 보여 주는 코드 예제를 포함합니다.  

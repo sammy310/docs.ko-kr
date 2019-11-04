@@ -8,19 +8,17 @@ dev_langs:
 helpviewer_keywords:
 - tasks, continuations
 ms.assetid: 0b45e9a2-de28-46ce-8212-1817280ed42d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1f88308dcea250c02d9c6cd7f326570f8bc0133c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bf8a1c028b7b987cb9a7340597087d799dfd4321
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64630113"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123170"
 ---
 # <a name="chaining-tasks-by-using-continuation-tasks"></a>연속 작업을 사용하여 작업 연결
 비동기 프로그래밍에서는 한 비동기 작업이 완료 시 두 번째 작업을 호출하고 해당 작업에 데이터를 전달하는 것이 일반적입니다. 일반적으로 연속 작업은 콜백 메서드를 통해 수행되었습니다. 작업 병렬 라이브러리에서는 *연속 작업*이 동일한 기능을 제공합니다. 연속 작업(연속이라고도 함)은 선행 작업이 완료될 때 다른 작업( *선행*이라고 함)이 호출하는 비동기 작업입니다.  
   
- 연속은 비교적 사용이 용이하지만 강력하고 유연합니다. 예를 들어 다음 작업을 할 수 있습니다.  
+ 연속은 비교적 사용이 용이하지만 강력하고 유연합니다. 예를 들어 다음을 수행할 수 있습니다.  
   
 - 선행 작업의 데이터를 연속 작업에 전달합니다.  
   

@@ -8,19 +8,17 @@ dev_langs:
 helpviewer_keywords:
 - parallel for loops, how to use local state
 ms.assetid: 68384064-7ee7-41e2-90e3-71f00bde01bb
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6ffac3df82268399aa35ff494e462e2b23c3894b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 14f4f1402f564d38bb508e893521a3951c1509f4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54610801"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139715"
 ---
 # <a name="how-to-write-a-parallelfor-loop-with-thread-local-variables"></a>방법: 스레드 로컬 변수를 사용하는 Parallel.For 루프 작성
-이 예제에서는 스레드 로컬 변수를 사용하여, <xref:System.Threading.Tasks.Parallel.For%2A> 루프에 의해 만들어진 각 별도 작업의 상태를 저장하고 검색하는 방법을 보여 줍니다. 스레드 지역 데이터를 사용하여, 공유 상태에 대한 많은 수의 액세스를 동기화하는 오버헤드를 방지할 수 있습니다. 반복할 때마다 공유 리소스에 쓰는 대신 작업의 반복이 모두 완료될 때까지 값을 계산하여 저장합니다. 그런 다음 공유 리소스에 최종 결과를 한 번 쓰거나, 최종 결과를 다른 메서드로 전달할 수 있습니다.  
+이 예제에서는 스레드 지역 변수를 사용하여, <xref:System.Threading.Tasks.Parallel.For%2A> 루프에 의해 만들어진 각 별도 작업의 상태를 저장하고 검색하는 방법을 보여 줍니다. 스레드 로컬 데이터를 사용하여, 공유 상태에 대한 많은 수의 액세스를 동기화하는 오버헤드를 방지할 수 있습니다. 반복할 때마다 공유 리소스에 쓰는 대신 작업의 반복이 모두 완료될 때까지 값을 계산하여 저장합니다. 그런 다음 공유 리소스에 최종 결과를 한 번 쓰거나, 최종 결과를 다른 메서드로 전달할 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 <xref:System.Threading.Tasks.Parallel.For%60%601%28System.Int32%2CSystem.Int32%2CSystem.Func%7B%60%600%7D%2CSystem.Func%7BSystem.Int32%2CSystem.Threading.Tasks.ParallelLoopState%2C%60%600%2C%60%600%7D%2CSystem.Action%7B%60%600%7D%29> 메서드를 호출하여 1백만 개의 요소가 포함된 배열의 값 합계를 계산합니다. 각 요소의 값은 해당 인덱스와 같습니다.  
   
  [!code-csharp[TPL_Parallel#05](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_parallel/cs/forandforeach_simple.cs#05)]
@@ -28,7 +26,7 @@ ms.locfileid: "54610801"
   
  모든 <xref:System.Threading.Tasks.Parallel.For%2A> 메서드의 처음 두 매개 변수는 시작 및 끝 반복 값을 지정합니다. 메서드의 이 오버로드에서 세 번째 매개 변수는 로컬 상태를 초기화하는 위치입니다. 이 컨텍스트에서 로컬 상태는 수명이 현재 스레드에 대한 루프의 첫 번째 반복 바로 전에서 마지막 반복 바로 후까지 연장되는 변수를 의미합니다.  
   
- 세 번째 매개 변수의 형식은 <xref:System.Func%601>이며, 여기서 `TResult`는 스레드 지역 변수를 저장하는 변수의 형식입니다. 해당 형식은 제네릭 <xref:System.Threading.Tasks.Parallel.For%60%601%28System.Int32%2CSystem.Int32%2CSystem.Func%7B%60%600%7D%2CSystem.Func%7BSystem.Int32%2CSystem.Threading.Tasks.ParallelLoopState%2C%60%600%2C%60%600%7D%2CSystem.Action%7B%60%600%7D%29> 메서드를 호출할 때 제공되는 제네릭 형식 인수에 의해 정의되며, 이 경우 <xref:System.Int64>입니다. 형식 인수는 컴파일러에 스레드 로컬 상태를 저장하는 데 사용되는 임시 변수의 형식을 알립니다. 이 예제에서 `() => 0`(또는 Visual Basic의 경우 `Function() 0`) 식은 스레드 지역 변수를 0으로 초기화합니다. 제네릭 형식 인수가 참조 형식 또는 사용자 정의 값 형식인 경우 식은 다음과 같습니다.  
+ 세 번째 매개 변수의 형식은 <xref:System.Func%601>이며, 여기서 `TResult`는 스레드 지역 변수를 저장하는 변수의 형식입니다. 해당 형식은 제네릭 <xref:System.Threading.Tasks.Parallel.For%60%601%28System.Int32%2CSystem.Int32%2CSystem.Func%7B%60%600%7D%2CSystem.Func%7BSystem.Int32%2CSystem.Threading.Tasks.ParallelLoopState%2C%60%600%2C%60%600%7D%2CSystem.Action%7B%60%600%7D%29> 메서드를 호출할 때 제공되는 제네릭 형식 인수에 의해 정의되며, 이 경우 <xref:System.Int64>입니다. 형식 인수는 컴파일러에 스레드 지역 상태를 저장하는 데 사용되는 임시 변수의 형식을 알립니다. 이 예제에서 `() => 0`(또는 Visual Basic의 경우 `Function() 0`) 식은 스레드 지역 변수를 0으로 초기화합니다. 제네릭 형식 인수가 참조 형식 또는 사용자 정의 값 형식인 경우 식은 다음과 같습니다.  
   
 ```csharp  
 () => new MyClass()  

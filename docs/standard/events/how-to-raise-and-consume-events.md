@@ -11,14 +11,12 @@ helpviewer_keywords:
 - raising events
 - events [.NET Framework], samples
 ms.assetid: 42afade7-3a02-4f2e-868b-95845f302f8f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: aa933e0fc589d0dbfec741e9db7fb11222cfdf38
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 256b5ae9ac2145e339136985872dfa5423aca730
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44193226"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131593"
 ---
 # <a name="how-to-raise-and-consume-events"></a>방법: 이벤트 발생 및 사용
 이 항목의 예제에서는 이벤트로 작업하는 방법을 보여 줍니다. 여기서 <xref:System.EventHandler> 대리자, <xref:System.EventHandler%601> 대리자 및 사용자 지정 대리자의 예제를 통해 데이터를 사용하거나 사용하지 않는 이벤트를 설명합니다.  

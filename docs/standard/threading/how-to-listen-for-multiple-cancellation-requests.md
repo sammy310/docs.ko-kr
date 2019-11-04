@@ -9,14 +9,12 @@ helpviewer_keywords:
 - cancellation tokens, joining
 - LinkedTokenSource, how to
 ms.assetid: 6f4f3804-2ed7-41b4-a97a-6e32b93f6e05
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2684f0fd43f84573933fc0a7107ce4f9035bc092
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e35472040b6ee1263ebc4c4968fa1822045a2064
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69913313"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138006"
 ---
 # <a name="how-to-listen-for-multiple-cancellation-requests"></a>방법: 여러 개의 취소 요청 수신 대기
 이 예제에서는 두 개의 취소 토큰 중 하나가 작업을 요청할 경우 작업을 취소할 수 있도록 두 개의 취소 토큰을 동시에 수신 대기하는 방법을 보여줍니다.  

@@ -8,14 +8,12 @@ helpviewer_keywords:
 - memory use, monitoring
 - application domains, resource monitoring
 ms.assetid: 318bedf8-7f35-4f00-b34a-2b7b8e3fa315
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8c7b9d7c2297fe30b02dc9782002413e9f38dc98
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 54e300bef1818fd08f27d7920eec68ee1f2c45bb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751542"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141386"
 ---
 # <a name="application-domain-resource-monitoring"></a>애플리케이션 도메인 리소스 모니터링
 
@@ -43,7 +41,7 @@ ARM이 사용되도록 설정되는 즉시 프로세스의 모든 애플리케�
 
 ARM은 애플리케이션 도메인에서 사용하는 총 프로세서 시간 및 메모리 사용에 대한 세 종류의 정보를 제공합니다.
 
-- **애플리케이션 도메인의 총 프로세서 시간(초)**: 이 값은 해당 수명 동안 애플리케이션 도메인의 실행 시간을 사용한 모든 스레드에 대해 운영 체제에서 보고한 스레드 시간을 더하여 계산됩니다. 차단되거나 중지 중인 스레드는 프로세서 시간을 사용하지 않습니다. 스레드가 네이티브 코드를 호출할 때 스레드가 네이티브 코드에 사용하는 시간은 호출이 수행된 애플리케이션 도메인의 계산에 포함됩니다.
+- **애플리케이션 도메인의 총 프로세서 시간(초)** : 이 값은 해당 수명 동안 애플리케이션 도메인의 실행 시간을 사용한 모든 스레드에 대해 운영 체제에서 보고한 스레드 시간을 더하여 계산됩니다. 차단되거나 중지 중인 스레드는 프로세서 시간을 사용하지 않습니다. 스레드가 네이티브 코드를 호출할 때 스레드가 네이티브 코드에 사용하는 시간은 호출이 수행된 애플리케이션 도메인의 계산에 포함됩니다.
 
   - 관리되는 API: <xref:System.AppDomain.MonitoringTotalProcessorTime%2A?displayProperty=nameWithType> 속성입니다.
 
@@ -51,7 +49,7 @@ ARM은 애플리케이션 도메인에서 사용하는 총 프로세서 시간 �
 
   - ETW 이벤트: `ThreadCreated`, `ThreadAppDomainEnter` 및 `ThreadTerminated` 이벤트입니다. 공급자 및 키워드에 대한 자세한 내용은 [CLR ETW 이벤트](../../../docs/framework/performance/clr-etw-events.md)의 “AppDomain 리소스 모니터링 이벤트”를 참조하세요.
 
-- **수명 기간 동안 애플리케이션 도메인이 수행한 총 관리 할당(바이트)**: 할당된 개체의 수명이 짧을 수 있기 때문에 총 할당이 애플리케이션 도메인의 메모리 사용을 항상 반영하는 것은 아닙니다. 그러나 애플리케이션이 엄청난 수의 개체를 할당하고 해제하는 경우 할당 비용이 상당할 수 있습니다.
+- **수명 기간 동안 애플리케이션 도메인이 수행한 총 관리 할당(바이트)** : 할당된 개체의 수명이 짧을 수 있기 때문에 총 할당이 애플리케이션 도메인의 메모리 사용을 항상 반영하는 것은 아닙니다. 그러나 애플리케이션이 엄청난 수의 개체를 할당하고 해제하는 경우 할당 비용이 상당할 수 있습니다.
 
   - 관리되는 API: <xref:System.AppDomain.MonitoringTotalAllocatedMemorySize%2A?displayProperty=nameWithType> 속성입니다.
 
@@ -59,7 +57,7 @@ ARM은 애플리케이션 도메인에서 사용하는 총 프로세서 시간 �
 
   - ETW 이벤트: `AppDomainMemAllocated` 이벤트, `Allocated` 필드입니다.
 
-- **애플리케이션 도메인에 의해 참조되고 가장 최근의 전체 차단 컬렉션 후에도 유지되는 관리 메모리(바이트)**: 이 수는 전체 차단 컬렉션 이후에만 정확합니다. 이는 백그라운드에서 발생하며 애플리케이션을 차단하지 않는 동시 컬렉션과는 대조적입니다. 예를 들어 <xref:System.GC.Collect?displayProperty=nameWithType> 메서드 오버로드로 인해 전체 차단 컬렉션이 발생합니다.
+- **애플리케이션 도메인에 의해 참조되고 가장 최근의 전체 차단 컬렉션 후에도 유지되는 관리 메모리(바이트)** : 이 수는 전체 차단 컬렉션 이후에만 정확합니다. 이는 백그라운드에서 발생하며 애플리케이션을 차단하지 않는 동시 컬렉션과는 대조적입니다. 예를 들어 <xref:System.GC.Collect?displayProperty=nameWithType> 메서드 오버로드로 인해 전체 차단 컬렉션이 발생합니다.
 
   - 관리되는 API: <xref:System.AppDomain.MonitoringSurvivedMemorySize%2A?displayProperty=nameWithType> 속성입니다.
 
@@ -67,7 +65,7 @@ ARM은 애플리케이션 도메인에서 사용하는 총 프로세서 시간 �
 
   - ETW 이벤트: `AppDomainMemSurvived` 이벤트, `Survived` 필드입니다.
 
-- **프로세스에 의해 참조되고 가장 최근의 전체 차단 컬렉션 후에도 유지되는 총 관리 메모리(바이트)**: 개별 애플리케이션 도메인의 유지되는 메모리는 이 숫자와 비교할 수 있습니다.
+- **프로세스에 의해 참조되고 가장 최근의 전체 차단 컬렉션 후에도 유지되는 총 관리 메모리(바이트)** : 개별 애플리케이션 도메인의 유지되는 메모리는 이 숫자와 비교할 수 있습니다.
 
   - 관리되는 API: <xref:System.AppDomain.MonitoringSurvivedProcessMemorySize%2A?displayProperty=nameWithType> 속성입니다.
 

@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - parallel programming, pitfalls
 ms.assetid: 1e357177-e699-4b8f-9e49-56d3513ed128
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4ee939096ef4e24397d03aa8a64405d66c740580
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ff6ac9e8c41ee203ae72e1b28c088f462ddf6a54
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946340"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140025"
 ---
 # <a name="potential-pitfalls-in-data-and-task-parallelism"></a>데이터 및 작업 병렬 처리에서 발생할 수 있는 문제
 대부분의 경우 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 및 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType>는 일반 순차적 루프에 대해 상당한 성능 향상을 제공할 수 있습니다. 그러나 루프를 병렬화하는 작업은 순차적 코드에서 일반적이지 않거나 전혀 발생하지 않는 문제를 일으킬 수 있는 복잡성을 도입합니다. 이 항목에서는 병렬 루프를 작성할 때 주의해야 할 사항을 나열합니다.  

@@ -8,17 +8,15 @@ helpviewer_keywords:
 - asynchronous programming, blocking applications
 - blocking application execution
 ms.assetid: cc5e2834-a65b-4df8-b750-7bdb79997fee
-author: rpetrusha
-ms.author: ronpet
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: d457a9c22f0eaea02fe744ebb24d02558710948b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: aed3b18c154d4b7a4390b28fb1f14536690f6b3a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64629021"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121324"
 ---
 # <a name="blocking-application-execution-by-ending-an-async-operation"></a>비동기 작업을 종료하여 애플리케이션 실행 차단
 비동기 작업의 결과를 기다리는 동안 다른 작업을 계속 수행할 수 없는 애플리케이션은 작업이 완료될 때까지 차단되어야 합니다. 다음 옵션 중 하나를 사용하여 비동기 작업이 완료될 때까지 대기하는 동안 애플리케이션의 기본 스레드를 차단합니다.  
@@ -29,7 +27,7 @@ ms.locfileid: "64629021"
   
  **End**_OperationName_ 메서드를 사용하여 비동기 작업이 완료될 때까지 차단하는 애플리케이션은 일반적으로 **Begin**_OperationName_ 메서드를 호출하고, 작업 결과 없이 완료할 수 있는 작업을 수행한 다음, **End**_OperationName_을 호출합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드 예제는 <xref:System.Net.Dns> 클래스에서 비동기 메서드를 사용하여 사용자가 지정한 컴퓨터의 Domain Name System 정보를 검색하는 방법을 보여줍니다. 이 방법을 사용할 경우 이러한 인수가 필요하지 않기 때문에 <xref:System.Net.Dns.BeginGetHostByName%2A>`requestCallback` 및 `stateObject` 매개 변수에 대해 `null`(Visual Basic의 `Nothing`)이 전달됩니다.  
   
  [!code-csharp[AsyncDesignPattern#1](../../../samples/snippets/csharp/VS_Snippets_CLR/AsyncDesignPattern/CS/Async_EndBlock.cs#1)]

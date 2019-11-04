@@ -9,14 +9,12 @@ helpviewer_keywords:
 - destroying threads
 - threading [.NET Framework], destroying threads
 ms.assetid: df54e648-c5d1-47c9-bd29-8e4438c1db6d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 986b4dee17c41928327e7b2672d641bbb8b16f1d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1852135e9b7f48d6556e27f16819ddd48805af21
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69960084"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138084"
 ---
 # <a name="destroying-threads"></a>스레드 제거
 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> 메서드는 관리되는 스레드를 영구적으로 중지하는 데 사용됩니다. <xref:System.Threading.Thread.Abort%2A>를 호출할 때 공용 언어 런타임이 대상 스레드에서 <xref:System.Threading.ThreadAbortException>을 throw하며, 대상 스레드가 이를 catch할 수 있습니다. 자세한 내용은 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>을 참조하세요.  

@@ -12,15 +12,13 @@ helpviewer_keywords:
 - characters, matching syntax
 - .NET Framework regular expressions, character classes
 ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
-author: rpetrusha
-ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: f6d96d14a4d05178a8f90c15edecb1318e8c5a36
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: dbfa61077cbfdd7da104dc12f304a4096b3c032d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71957195"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120608"
 ---
 # <a name="character-classes-in-regular-expressions"></a>정규식의 문자 클래스
 
@@ -87,7 +85,7 @@ ms.locfileid: "71957195"
   
  `gr[ae]y\s\S+?[\s|\p{P}]` 정규식은 다음과 같이 정의됩니다.  
   
-|무늬|설명|  
+|패턴|설명|  
 |-------------|-----------------|  
 |`gr`|리터럴 문자 "gr"을 찾습니다.|  
 |`[ae]`|"a" 또는 "e"를 찾습니다.|  
@@ -102,7 +100,7 @@ ms.locfileid: "71957195"
   
  `\b[A-Z]\w*\b` 정규식은 다음 테이블과 같이 정의됩니다.  
   
-|무늬|설명|  
+|패턴|설명|  
 |-------------|-----------------|  
 |`\b`|단어 경계를 시작합니다.|  
 |`[A-Z]`|A-Z의 대문자를 모두 찾습니다.|  
@@ -137,7 +135,7 @@ ms.locfileid: "71957195"
   
  부정 문자 그룹이 포함된 몇 가지 일반적인 정규식 패턴은 다음과 같습니다.  
   
-|무늬|설명|  
+|패턴|설명|  
 |-------------|-----------------|  
 |`[^aeiou]`|모음을 제외한 모든 문자를 찾습니다.|  
 |`[^\p{P}\d]`|문장 부호 및 10진수 문자를 제외한 모든 문자를 찾습니다.|  
@@ -149,7 +147,7 @@ ms.locfileid: "71957195"
   
  `\bth[^o]\w+\b` 정규식은 다음 테이블과 같이 정의됩니다.  
   
-|무늬|설명|  
+|패턴|설명|  
 |-------------|-----------------|  
 |`\b`|단어 경계를 시작합니다.|  
 |`th`|리터럴 문자 "th"를 찾습니다.|  
@@ -196,7 +194,7 @@ ms.locfileid: "71957195"
   
  `\b(\p{IsGreek}+(\s)?)+\p{Pd}\s(\p{IsBasicLatin}+(\s)?)+` 정규식은 다음 테이블과 같이 정의됩니다.  
   
-|무늬|설명|  
+|패턴|설명|  
 |-------------|-----------------|  
 |`\b`|단어 경계를 시작합니다.|  
 |`\p{IsGreek}+`|둘 이상의 그리스어 문자를 찾습니다.|  
@@ -229,7 +227,7 @@ ms.locfileid: "71957195"
 ## <a name="word-character-w"></a>단어 문자: \w  
  `\w`는 단어 문자를 찾습니다. 단어 문자는 다음 표에 나열된 유니코드 범주의 멤버입니다.  
   
-|범주|설명|  
+|Category|설명|  
 |--------------|-----------------|  
 |Ll|문자, 소문자|  
 |Lu|문자, 대문자|  
@@ -263,7 +261,7 @@ ms.locfileid: "71957195"
   
  즉, 다음 표에 나열된 유니코드 범주의 문자를 제외한 모든 문자를 찾습니다.  
   
-|범주|설명|  
+|Category|설명|  
 |--------------|-----------------|  
 |Ll|문자, 소문자|  
 |Lu|문자, 대문자|  
@@ -296,7 +294,7 @@ ms.locfileid: "71957195"
 ## <a name="whitespace-character-s"></a>공백 문자: \s  
  `\s`는 공백 문자를 찾습니다. 다음 표에 나열된 이스케이프 시퀀스 및 유니코드 범주와 동일합니다.  
   
-|범주|설명|  
+|Category|설명|  
 |--------------|-----------------|  
 |`\f`|용지 공급 문자, \u000C.|  
 |`\n`|줄 바꿈 문자, \u000A.|  
@@ -315,7 +313,7 @@ ms.locfileid: "71957195"
 |\b|단어 경계에서 일치 항목 찾기를 시작합니다.|  
 |\w+|하나 이상의 단어 문자를 찾습니다.|  
 |(e)?|"e"를 0개 또는 한 개 찾습니다.|  
-|초|"s"를 찾습니다.|  
+|s|"s"를 찾습니다.|  
 |(\s&#124;$)|공백 문자 또는 입력 문자열의 끝을 찾습니다.|  
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/whitespace1.cs#10)]
@@ -383,7 +381,7 @@ ms.locfileid: "71957195"
 ## <a name="supported-unicode-general-categories"></a>지원되는 유니코드 일반 범주  
  유니코드는 다음 표에 나와 있는 일반 범주를 정의합니다. 자세한 내용은 [유니코드 문자 데이터베이스](https://www.unicode.org/reports/tr44/)의 하위 항목인 "UCD 파일 형식"과 "일반 범주 값"을 참조하세요.  
   
-|범주|설명|  
+|Category|설명|  
 |--------------|-----------------|  
 |`Lu`|문자, 대문자|  
 |`Ll`|문자, 소문자|  

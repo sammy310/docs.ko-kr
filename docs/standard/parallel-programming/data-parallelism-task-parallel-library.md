@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - parallelism, data
 ms.assetid: 3f05f33f-f1da-4b16-81c2-9ceff1bef449
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 19e518db75fe3e45f57cbb6fab8c5281cceb4d34
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 72696a41cd3b71f47fdcf43e4ece70ebeb7d34d1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69939335"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123153"
 ---
 # <a name="data-parallelism-task-parallel-library"></a>데이터 병렬 처리(작업 병렬 라이브러리)
 *데이터 병렬 처리*는 소스 컬렉션 또는 배열의 요소에서 동일한 작업이 동시에(즉, 병렬로) 수행되는 시나리오를 가리킵니다. 데이터 병렬 작업에서 소스 컬렉션은 여러 스레드가 서로 다른 세그먼트에서 동시에 작동할 수 있도록 분할됩니다.  

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - generics [C#], type parameters
 - type parameters [C#]
 ms.assetid: a03b0ab2-0606-4b41-b7bf-e64d5bb4d18f
-ms.openlocfilehash: 27cd89c8e82036bf6353030b4f235c2ebe738e6d
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 992b71fa2afa6b511d09c69ade26e3b5bc13acd2
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69589690"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73195483"
 ---
 # <a name="generic-type-parameters-c-programming-guide"></a>제네릭 형식 매개 변수(C# 프로그래밍 가이드)
 
@@ -37,7 +37,7 @@ ms.locfileid: "69589690"
   
 - **선택적** 매개 변수 이름 안에 형식 매개 변수에 적용되는 제약 조건을 나타내 보세요. 예를 들어 `ISession`으로 제한되는 매개 변수의 이름은 `TSession`이 될 수 있습니다.
 
-코드 분석 규칙 [CA1715](/visualstudio/code-quality/ca1715-identifiers-should-have-correct-prefix)를 사용하여 형식 매개 변수의 이름이 적절하게 지정되었는지 확인할 수 있습니다.
+코드 분석 규칙 [CA1715](/visualstudio/code-quality/ca1715)를 사용하여 형식 매개 변수의 이름이 적절하게 지정되었는지 확인할 수 있습니다.
   
 ## <a name="see-also"></a>참고 항목
 

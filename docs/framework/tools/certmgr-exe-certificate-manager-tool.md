@@ -13,14 +13,12 @@ helpviewer_keywords:
 - CTLs
 - certificate revocation lists
 ms.assetid: 7e953b43-1374-4bbc-814f-53ca1b6b52bb
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 716513bdcf3ac1b8a2b2b29b23a8dc25a86a0d1c
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 06fe3a78d0b19720d4f83111980b88806312205f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044804"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129871"
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe(인증서 관리자 도구)
 인증서 관리자 도구(Certmgr.exe)를 사용하면 인증서, CTL(인증서 신뢰 목록) 및 CRL(인증서 해지 목록)을 관리할 수 있습니다.  
@@ -64,7 +62,7 @@ ms.locfileid: "71044804"
 |**/h**[**elp**]|이 도구의 명령 구문 및 옵션을 표시합니다.|  
 |**/n** *nam*|추가, 삭제 또는 저장할 인증서의 일반 이름을 지정합니다. 이 옵션은 인증서에 대해서만 사용할 수 있으며, CTL 또는 CRL에 대해서는 사용할 수 없습니다.|  
 |**/put**|인증서 저장소의 X.509 인증서, CTL 또는 CRL을 파일에 저장합니다. 이 파일은 X.509 형식으로 저장됩니다. **/7** 옵션을 **/put** 옵션과 함께 사용하여 파일을 PKCS #7 형식으로 저장할 수 있습니다. **/put** 옵션 다음에는 **/c**, **/CTL** 또는 **/CRL** 중 하나를 사용해야 하며, **/all** 옵션은 **/put**과 함께 사용할 수 없습니다.|  
-|**/r** *위치*|시스템 저장소의 레지스트리 위치를 식별합니다. 이 옵션은 **/s** 옵션을 지정하는 경우에만 고려됩니다. *위치*는 다음 중 하나여야 합니다.<br /><br /> -   `currentUser`는 인증서 저장소가 HKEY_CURRENT_USER 키 아래에 있음을 나타냅니다. 이 값이 기본값입니다.<br />-   `localMachine`은 인증서 저장소가 HKEY_LOCAL_MACHINE 키 아래에 있음을 나타냅니다.|  
+|**/r** *위치*|시스템 저장소의 레지스트리 위치를 식별합니다. 이 옵션은 **/s** 옵션을 지정하는 경우에만 고려됩니다. *위치*는 다음 중 하나여야 합니다.<br /><br /> -   `currentUser`는 인증서 저장소가 HKEY_CURRENT_USER 키 아래에 있음을 나타냅니다. 기본값입니다.<br />-   `localMachine`은 인증서 저장소가 HKEY_LOCAL_MACHINE 키 아래에 있음을 나타냅니다.|  
 |**/s**|인증서 저장소가 시스템 저장소임을 나타냅니다. 이 옵션을 지정하지 않으면 저장소가 **StoreFile**로 간주됩니다.|  
 |**/sha1** *sha1Hash*|추가, 삭제 또는 저장할 인증서, CTL 또는 CRL의 SHA1 해시를 지정합니다.|  
 |**/v**|세부 정보 표시 모드를 지정합니다. 즉, 인증서, CTL 및 CRL에 대한 자세한 정보를 표시합니다. 이 옵션은 **/add**, **/del** 또는 **/put** 옵션과 함께 사용할 수 없습니다.|  

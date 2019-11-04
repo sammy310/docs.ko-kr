@@ -6,14 +6,12 @@ helpviewer_keywords:
 - types, obsolete in .NET Framework 4.5
 - obsolete types [.NET Framework]
 ms.assetid: e636d024-0fac-45eb-b721-25a8c0ceca8f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d8af0f32c676f4438334f7c64b771e237db90dd3
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 748045c6e9d84ec71faa69ccfb9861472eb306e2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663850"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124127"
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>.NET Framework에서 사용되지 않는 형식
 
@@ -81,7 +79,7 @@ ms.locfileid: "67663850"
 
 ### <a name="assembly-mscorlibdll"></a>어셈블리: mscorlib.dll
 
-|Type|Message|
+|형식|메시지|
 |----------|-------------|
 |<xref:System.ExecutionEngineException?displayProperty=nameWithType>|이 형식은 이전에 런타임에서 지정되지 않은 심각한 오류를 나타냈습니다. 이 예외는 런타임에서 더 이상 발생하지 않으므로 이 형식은 사용되지 않습니다.|
 |<xref:System.Collections.CaseInsensitiveHashCodeProvider?displayProperty=nameWithType>|대신 <xref:System.StringComparer?displayProperty=nameWithType>를 사용하십시오.|
@@ -147,7 +145,7 @@ ms.locfileid: "67663850"
 
 ### <a name="assembly-systemcoredll"></a>어셈블리: System.Core.dll
 
-|Type|Message|
+|형식|메시지|
 |----------|-------------|
 |<xref:System.Runtime.CompilerServices.ExecutionScope?displayProperty=nameWithType>|이 형식을 사용하면 컴파일러 오류가 생성됩니다.<br /><br /> 이 형식은 사용하지 마십시오.|
 
@@ -157,7 +155,7 @@ ms.locfileid: "67663850"
 
 ### <a name="assembly-systemdatadll"></a>어셈블리: System.Data.dll
 
-|Type|Message|
+|형식|메시지|
 |----------|-------------|
 |<xref:System.Data.DataSysDescriptionAttribute?displayProperty=nameWithType>|<xref:System.Data.DataSysDescriptionAttribute>는 사용되지 않습니다.|
 |<xref:System.Data.PropertyAttributes?displayProperty=nameWithType>|<xref:System.Data.PropertyAttributes>는 사용되지 않습니다.|
@@ -170,7 +168,7 @@ ms.locfileid: "67663850"
 
 ### <a name="assembly-systemdataoracleclientdll"></a>어셈블리: System.Data.OracleClient.dll
 
-|Type|Message|
+|형식|메시지|
 |----------|-------------|
 |<xref:System.Data.OracleClient.OracleClientFactory?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleClientFactory>는 사용되지 않습니다.|
 |<xref:System.Data.OracleClient.OracleCommand?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleCommand>는 사용되지 않습니다.|
@@ -187,7 +185,7 @@ ms.locfileid: "67663850"
 
 ### <a name="assembly-systemdesigndll"></a>어셈블리: System.Design.dll
 
-|Type|Message|
+|형식|메시지|
 |----------|-------------|
 |<xref:System.ComponentModel.Design.LocalizationExtenderProvider?displayProperty=nameWithType>|이 클래스는 사용되지 않습니다. 대신 <xref:System.ComponentModel.Design.Serialization.CodeDomLocalizationProvider?displayProperty=nameWithType>를 사용하세요.|
 |<xref:System.Web.UI.Design.DataBindingCollectionConverter?displayProperty=nameWithType>|DataBindings 편집은 속성 표가 아닌 <xref:System.ComponentModel.Design.DesignerActionList?displayProperty=nameWithType>를 통해 시작되므로 이 형식은 사용하지 않는 것이 좋습니다.|
@@ -210,7 +208,7 @@ ms.locfileid: "67663850"
 
 ### <a name="assembly-systemdll"></a>어셈블리: System.dll
 
-|Type|Message|
+|형식|메시지|
 |----------|-------------|
 |<xref:System.ComponentModel.IComNativeDescriptorHandler?displayProperty=nameWithType>|이 인터페이스는 사용되지 않습니다. <xref:System.ComponentModel.TypeDescriptionProvider?displayProperty=nameWithType> 형식을 처리하려면 대신 <xref:System.ComponentModel.TypeDescriptor.ComObjectType%2A?displayProperty=nameWithType>를 추가합니다.|
 |<xref:System.ComponentModel.RecommendedAsConfigurableAttribute?displayProperty=nameWithType>|새 설정 모델을 사용하려면 대신 <xref:System.ComponentModel.SettingsBindableAttribute?displayProperty=nameWithType>를 사용하십시오.|
@@ -226,7 +224,7 @@ ms.locfileid: "67663850"
 
 ### <a name="assembly-systementerpriseservicesdll"></a>어셈블리: System.EnterpriseServices.dll
 
-|Type|Message|
+|형식|메시지|
 |----------|-------------|
 |<xref:System.EnterpriseServices.RegistrationHelperTx?displayProperty=nameWithType>|<xref:System.EnterpriseServices.RegistrationHelperTx> 클래스는 사용되지 않습니다.|
 
@@ -236,7 +234,7 @@ ms.locfileid: "67663850"
 
 ### <a name="assembly-systemnetdll"></a>어셈블리: System.Net.dll
 
-|Type|Message|
+|형식|메시지|
 |----------|-------------|
 |<xref:System.Net.INetworkProgress?displayProperty=nameWithType>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> 이 형식을 사용하면 컴파일러 오류가 생성됩니다.<br /><br /> 이 API는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.|
 |<xref:System.Net.IUnsafeWebRequestCreate?displayProperty=nameWithType>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> 이 형식을 사용하면 컴파일러 오류가 생성됩니다.<br /><br /> 이 API는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.|
@@ -254,7 +252,7 @@ ms.locfileid: "67663850"
 
 ### <a name="assembly-systemservicemodeldll"></a>어셈블리: System.ServiceModel.dll
 
-|Type|Message|
+|형식|메시지|
 |----------|-------------|
 |<xref:System.ServiceModel.NetPeerTcpBinding?displayProperty=nameWithType>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> 피어 채널 기능은 사용되지 않으며 향후 제거될 예정입니다.|
 |<xref:System.ServiceModel.Channels.HttpCookieContainerBindingElement?displayProperty=nameWithType>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> 이 형식은 사용되지 않습니다. Http <xref:System.Net.CookieContainer>를 사용하려면 Http 바인딩 또는 `AllowCookies`의 <xref:System.ServiceModel.Channels.HttpTransportBindingElement> 속성을 사용합니다.|
@@ -271,7 +269,7 @@ ms.locfileid: "67663850"
 
 ### <a name="assembly-systemwebdll"></a>어셈블리: System.Web.dll
 
-|Type|Message|
+|형식|메시지|
 |----------|-------------|
 |<xref:System.Web.Configuration.PassportAuthentication?displayProperty=nameWithType>|이 형식은 사용되지 않습니다. Passport 인증 제품은 더 이상 지원되지 않으며 [Microsoft Account](https://go.microsoft.com/fwlink/?LinkId=733413)로 대체되었습니다.|
 |<xref:System.Web.Mail.MailAttachment?displayProperty=nameWithType>|<xref:System.Net.Mail.Attachment?displayProperty=nameWithType>를 대신 사용하는 것이 좋습니다.|
@@ -293,7 +291,7 @@ ms.locfileid: "67663850"
 
 ### <a name="assembly-systemwebmobiledll"></a>어셈블리: System.Web.Mobile.dll
 
-|Type|Message|
+|형식|메시지|
 |----------|-------------|
 |<xref:System.Web.Mobile.CookielessData?displayProperty=nameWithType>|System.Web.Mobile.dll 어셈블리는 사용되지 않으므로 사용하면 안 됩니다. ASP.NET 모바일 애플리케이션을 개발하는 방법에 대한 자세한 내용은 [모바일용 ASP.NET](https://go.microsoft.com/fwlink/?LinkId=157231)을 참조하십시오.|
 |<xref:System.Web.Mobile.DeviceFilterElement?displayProperty=nameWithType>|System.Web.Mobile.dll 어셈블리는 사용되지 않으므로 사용하면 안 됩니다. ASP.NET 모바일 애플리케이션을 개발하는 방법에 대한 자세한 내용은 [모바일용 ASP.NET](https://go.microsoft.com/fwlink/?LinkId=157231)을 참조하십시오.|
@@ -494,7 +492,7 @@ ms.locfileid: "67663850"
 
 ### <a name="assembly-systemworkflowactivitiesdll"></a>어셈블리: System.Workflow.Activities.dll
 
-|Type|Message|
+|형식|메시지|
 |----------|-------------|
 |<xref:System.Workflow.Activities?displayProperty=nameWithType> 네임스페이스의 모든 형식|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> System.Workflow.\* 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*의 새 형식을 사용하세요.|
 |<xref:System.Workflow.Activities.Configuration.ActiveDirectoryRoleFactoryConfiguration?displayProperty=nameWithType>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> System.Workflow.\* 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*의 새 형식을 사용하세요.|
@@ -508,7 +506,7 @@ ms.locfileid: "67663850"
 
 ### <a name="assembly-systemworkflowcomponentmodeldll"></a>어셈블리: System.Workflow.ComponentModel.dll
 
-|Type|Message|
+|형식|메시지|
 |----------|-------------|
 |<xref:System.Workflow.ComponentModel> 및 <xref:System.Workflow.ComponentModel.GetValueOverride?displayProperty=nameWithType>를 제외한 <xref:System.Workflow.ComponentModel.SetValueOverride?displayProperty=nameWithType> 네임스페이스의 모든 형식|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> System.Workflow.\* 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*의 새 형식을 사용하세요.|
 |<xref:System.Workflow.ComponentModel.Compiler> 및 <xref:System.Workflow.ComponentModel.Compiler.ValidationError?displayProperty=nameWithType>를 제외한 <xref:System.Workflow.ComponentModel.Compiler.ValidationErrorCollection?displayProperty=nameWithType> 네임스페이스의 모든 형식|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> System.Workflow.\* 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*의 새 형식을 사용하세요.|
@@ -527,7 +525,7 @@ ms.locfileid: "67663850"
 
 ### <a name="assembly-systemworkflowruntimedll"></a>어셈블리: System.Workflow.Runtime.dll
 
-|Type|Message|
+|형식|메시지|
 |----------|-------------|
 |<xref:System.Activities.Statements.Interop?displayProperty=nameWithType>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br />Workflow Foundation 3.0 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*의 Workflow 4.0 형식을 사용하세요.|
 |<xref:System.Activities.Tracking.InteropTrackingRecord?displayProperty=nameWithType>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br />Workflow Foundation 3.0 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*의 Workflow 4.0 형식을 사용하세요.|
@@ -543,7 +541,7 @@ ms.locfileid: "67663850"
 
 ### <a name="assembly-systemworkflowservicesdll"></a>어셈블리: System.WorkflowServices.dll
 
-|Type|Message|
+|형식|메시지|
 |----------|-------------|
 |<xref:System.ServiceModel.WorkflowServiceHost?displayProperty=nameWithType>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> WF 3 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*의 새 WF 4 형식을 사용하세요.|
 |<xref:System.ServiceModel.Activation.WorkflowServiceHostFactory?displayProperty=nameWithType>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> WF 3 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*의 새 WF 4 형식을 사용하세요.|
@@ -573,7 +571,7 @@ ms.locfileid: "67663850"
 
 ### <a name="assembly-systemxamldll"></a>어셈블리: System.Xaml.dll
 
-|Type|Message|
+|형식|메시지|
 |----------|-------------|
 |<xref:System.Windows.Markup.AcceptedMarkupExtensionExpressionTypeAttribute?displayProperty=nameWithType>|XAML 파서에서 사용되지 않습니다. <xref:System.Windows.Markup.XamlSetMarkupExtensionAttribute?displayProperty=nameWithType>를 참조하십시오.|
 
@@ -583,7 +581,7 @@ ms.locfileid: "67663850"
 
 ### <a name="assembly-systemxmldll"></a>어셈블리: System.Xml.dll
 
-|Type|Message|
+|형식|메시지|
 |----------|-------------|
 |<xref:System.Xml.IApplicationResourceStreamResolver?displayProperty=nameWithType>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> 이 형식을 사용하면 컴파일러 오류가 생성됩니다.<br /><br /> 이 API는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.|
 |<xref:System.Xml.Schema.XmlSchemaCollection?displayProperty=nameWithType>|스키마 컴파일 및 유효성 검사에는 <xref:System.Xml.Schema.XmlSchemaSet?displayProperty=nameWithType>을 사용하십시오.|
@@ -597,7 +595,7 @@ ms.locfileid: "67663850"
 
 ### <a name="assembly-windowsbasedll"></a>어셈블리: WindowsBase.dll
 
-|Type|Message|
+|형식|메시지|
 |----------|-------------|
 |<xref:System.Windows.Markup.IReceiveMarkupExtension?displayProperty=nameWithType>|<xref:System.Windows.Markup.IReceiveMarkupExtension?displayProperty=nameWithType>는 사용되지 않습니다. 이 인터페이스는 더 이상 사용되지 않습니다.|
 
@@ -621,7 +619,7 @@ IEHost.dll 및 IEExec.exe 어셈블리는 .NET Framework에서 제거되었습�
 
 ### <a name="assembly-microsoftbuildenginedll"></a>어셈블리: Microsoft.Build.Engine.dll
 
-|Type|Message|
+|형식|메시지|
 |----------|-------------|
 |<xref:Microsoft.Build.BuildEngine.Engine?displayProperty=nameWithType>|이 클래스는 사용되지 않습니다. 대신 *Microsoft.Build* 어셈블리의 <xref:Microsoft.Build.Evaluation.ProjectCollection?displayProperty=nameWithType>을 사용하세요.|
 |<xref:Microsoft.Build.BuildEngine.Project?displayProperty=nameWithType>|이 클래스는 사용되지 않습니다. 대신 *Microsoft.Build* 어셈블리의 <xref:Microsoft.Build.Evaluation.ProjectCollection?displayProperty=nameWithType>을 사용하세요.|
@@ -632,7 +630,7 @@ IEHost.dll 및 IEExec.exe 어셈블리는 .NET Framework에서 제거되었습�
 
 ### <a name="assembly-microsoftjscriptdll"></a>어셈블리: Microsoft.JScript.dll
 
-|Type|Message|
+|형식|메시지|
 |----------|-------------|
 |<xref:Microsoft.JScript.Vsa.BaseVsaEngine?displayProperty=nameWithType>|이 형식은 Visual Studio 2005에서 더 이상 사용되지 않습니다. 이 기능을 대체할 수 없습니다. 추가 도움말은 <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=nameWithType> 문서를 참조하십시오.|
 |<xref:Microsoft.JScript.Vsa.BaseVsaSite?displayProperty=nameWithType>|이 형식은 Visual Studio 2005에서 더 이상 사용되지 않습니다. 이 기능을 대체할 수 없습니다. 추가 도움말은 <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=nameWithType> 문서를 참조하십시오.|
@@ -661,7 +659,7 @@ IEHost.dll 및 IEExec.exe 어셈블리는 .NET Framework에서 제거되었습�
 
 Visual Basic 6에서 마이그레이션에 대한 정보는 [Visual Basic 6.0 리소스 센터](https://docs.microsoft.com/previous-versions/visualstudio/visual-basic-6/visual-basic-6.0-documentation)를 참조하세요.
 
-|Type|Message|
+|형식|메시지|
 |----------|-------------|
 |<xref:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray?displayProperty=nameWithType>|이 멤버는 사용되지 않습니다.|
 |<xref:Microsoft.VisualBasic.Compatibility.VB6.BaseOcxArray?displayProperty=nameWithType>|이 멤버는 사용되지 않습니다.|
@@ -737,7 +735,7 @@ Visual Basic 6에서 마이그레이션에 대한 정보는 [Visual Basic 6.0 �
 
 ### <a name="assembly-microsoftvisualbasiccompatibilitydatadll"></a>어셈블리: Microsoft.VisualBasic.Compatibility.Data.dll
 
-|Type|Message|
+|형식|메시지|
 |----------|-------------|
 |<xref:Microsoft.VisualBasic.Compatibility.VB6.ADODC?displayProperty=nameWithType>|이 멤버는 사용되지 않습니다.|
 |<xref:Microsoft.VisualBasic.Compatibility.VB6.ADODC.BOFActionEnum?displayProperty=nameWithType>|이 멤버는 사용되지 않습니다.|
@@ -795,7 +793,7 @@ Visual Basic 6에서 마이그레이션에 대한 정보는 [Visual Basic 6.0 �
 
 ### <a name="assembly-microsoftvisualcdll"></a>어셈블리: Microsoft.VisualC.dll
 
-|Type|Message|
+|형식|메시지|
 |----------|-------------|
 |<xref:Microsoft.VisualC.DebugInfoInPDBAttribute?displayProperty=nameWithType>|Microsoft.VisualC.dll은 사용되지 않는 어셈블리이며 이전 버전과의 호환성을 위해서만 존재합니다.|
 |<xref:Microsoft.VisualC.DecoratedNameAttribute?displayProperty=nameWithType>|Microsoft.VisualC.dll은 사용되지 않는 어셈블리이며 이전 버전과의 호환성을 위해서만 존재합니다.|

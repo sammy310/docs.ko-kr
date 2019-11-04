@@ -8,14 +8,12 @@ helpviewer_keywords:
 - Cert2spc.exe
 - certificates, Software Publisher's Certificate
 ms.assetid: be434d7d-9c0d-46e7-8392-58a9b542d11d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0a18c10df32b9e958147bd132a27a4dba47389cc
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 809b7d0383f172a5fbcb2ac4ac3ffb96ff0b8e20
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044802"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129881"
 ---
 # <a name="cert2spcexe-software-publisher-certificate-test-tool"></a>Cert2spc.exe(SPC 테스트 도구)
 SPC(소프트웨어 게시자 인증서) 테스트 도구를 사용하면 하나 이상의 X.509 인증서에서 SPC를 만들 수 있습니다. Cert2spc.exe는 테스트 전용이며, VeriSign 또는 Thawte 같은 인증 기관에서 유효한 SPC를 받을 수 있습니다. X.509 인증서를 만드는 방법은 [Makecert.exe(인증서 작성 도구)](/windows/desktop/SecCrypto/makecert)를 참조하세요.  

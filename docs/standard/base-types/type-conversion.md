@@ -24,14 +24,12 @@ helpviewer_keywords:
 - Implicit operator
 - data types [.NET Framework], converting
 ms.assetid: ba36154f-064c-47d3-9f05-72f93a7ca96d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a8fc6f59b7a295cb73489a644da80976345cb172
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b125b3c6527da405deb600ba7334ef18220f1601
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69922686"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132875"
 ---
 # <a name="type-conversion-in-the-net-framework"></a>.NET Framework의 형식 변환
 <a name="top"></a> 모든 값에는 연결된 형식이 있으며, 이러한 형식은 값에 할당되는 공간, 포함할 수 있는 값의 범위, 값을 통해 사용할 수 있는 멤버 등의 특성을 정의합니다. 대부분의 값들은 하나 이상의 형식으로 표현될 수 있습니다. 예를 들어, 4라는 값은 정수 값 또는 부동 소수점 값으로 표현될 수 있습니다. 형식 변환을 수행하면 이전 형식과 동일한 값을 가지는 새 형식이 만들어지지만, 원래 개체의 ID(또는 실제 값)가 항상 동일하게 유지되지는 않습니다.  
@@ -46,7 +44,7 @@ ms.locfileid: "69922686"
   
 - 인터페이스 개체에서 그 인터페이스를 구현하는 원래 형식으로 다시 변환.  C#에서는 이러한 변환에 캐스팅 연산자가 필요합니다. Visual Basic에서는 `Option Strict`가 on이면 `CType` 연산자가 필요합니다.  
   
- 이러한 자동 변환 외에 .NET Framework는 사용자 지정 형식 변환을 지원하는 몇 가지 기능을 제공합니다. 이러한 요구 사항은 다음과 같습니다.  
+ 이러한 자동 변환 외에 .NET Framework는 사용자 지정 형식 변환을 지원하는 몇 가지 기능을 제공합니다. 여기에는 다음이 포함됩니다.  
   
 - 사용 가능한 형식 간 확대 변환을 정의하는 `Implicit` 연산자. 자세한 내용은 [암시적 연산자를 사용한 암시적 변환](#implicit_conversion_with_the_implicit_operator) 섹션을 참조하세요.  
   
@@ -91,7 +89,7 @@ ms.locfileid: "69922686"
   
  예를 들어, 다음 표와 같이 <xref:System.UInt32>, <xref:System.Int64> 및 <xref:System.UInt64> 데이터 형식은 <xref:System.Int32> 데이터 형식을 초과하는 범위를 포함합니다.  
   
-|형식|Int32 범위와 비교|  
+|Type|Int32 범위와 비교|  
 |----------|------------------------------------|  
 |<xref:System.Int64>|<xref:System.Int64.MaxValue?displayProperty=nameWithType>가 <xref:System.Int32.MaxValue?displayProperty=nameWithType>보다 크고 <xref:System.Int64.MinValue?displayProperty=nameWithType>가 <xref:System.Int32.MinValue?displayProperty=nameWithType>보다 작은 경우(보다 큰 음의 범위를 포함하는 경우)|  
 |<xref:System.UInt32>|<xref:System.UInt32.MaxValue?displayProperty=nameWithType>가 <xref:System.Int32.MaxValue?displayProperty=nameWithType>보다 큰 경우|  

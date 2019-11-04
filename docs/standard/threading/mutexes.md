@@ -8,14 +8,12 @@ helpviewer_keywords:
 - Mutex class, about Mutex class
 - threading [.NET Framework], cross-process synchronization
 ms.assetid: 9dd06e25-12c0-4a9e-855a-452dc83803e2
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8b2edf1f06873796bd63fceaca9a4bb99e509589
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 874f879697db0b47c73626350eeb05a01b38e1bc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910339"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127560"
 ---
 # <a name="mutexes"></a>뮤텍스
 <xref:System.Threading.Mutex> 개체를 사용하여 리소스에 대한 전용 액세스를 제공할 수 있습니다. <xref:System.Threading.Mutex> 클래스는 <xref:System.Threading.Monitor> 클래스보다 많은 시스템 리소스를 사용하지만 애플리케이션 도메인 경계를 넘어 마샬링될 수 있으며 여러 대기와 함께 사용될 수 있고 서로 다른 프로세스에서 스레드를 동기화하는 데 사용될 수 있습니다. 관리되는 동기화 메커니즘의 비교는 [동기화 기본 형식 개요](../../../docs/standard/threading/overview-of-synchronization-primitives.md)를 참조하세요.  

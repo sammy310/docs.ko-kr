@@ -8,19 +8,17 @@ dev_langs:
 helpviewer_keywords:
 - SpinWait, how to synchronize two-phase wait
 ms.assetid: b2ac4e4a-051a-4f65-b4b9-f8e103aff195
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 52b9164546d2061a65c79fb167b14543b0dae5a9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5bac174660177fd47e1f345e64581e35ae4c0ffc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576514"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137946"
 ---
 # <a name="how-to-use-spinwait-to-implement-a-two-phase-wait-operation"></a>방법: SpinWait을 사용하여 2단계 대기 작업 구현
 다음 예제는 <xref:System.Threading.SpinWait?displayProperty=nameWithType> 개체를 사용하여 2단계 대기 작업을 구현하는 방법을 보여줍니다. 첫 번째 단계에서 동기화 개체(`Latch`)는 잠금이 사용 가능해졌는지 여부를 확인하는 동안 몇 주기 동안 회전합니다. 두 번째 단계에서는 잠금이 사용 가능하게 되면 `Wait` 메서드에서 <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType>을 사용하여 대기를 수행하지 않고 반환합니다. 잠금이 사용 가능하지 않으면 `Wait`에서 대기를 수행합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제는 래치 동기화 기본 형식의 매우 기본적인 구현을 보여줍니다. 대기 시간이 매우 짧을 것으로 예상되는 경우 이 데이터 구조를 사용할 수 있습니다. 이 예제는 데모용으로만 제공됩니다. 프로그램에 래치 유형 기능이 필요한 경우 <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>을 사용해 보세요.  
   
  [!code-csharp[CDS_SpinWait#03](../../../samples/snippets/csharp/VS_Snippets_Misc/cds_spinwait/cs/spinwait03.cs#03)]

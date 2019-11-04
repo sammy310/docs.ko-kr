@@ -15,14 +15,12 @@ helpviewer_keywords:
 - security [.NET Framework], assemblies
 - integrity with assemblies
 ms.assetid: 1b5439c1-f3d5-4529-bd69-01814703d067
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b8cf99e766e3ea66440a30b4b616a1d90ec937e3
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 2cd12ea49723bdac734c6847d337d945a5cfcb5e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972572"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138627"
 ---
 # <a name="assembly-security-considerations"></a>어셈블리 보안 고려 사항
 <a name="top"></a> 어셈블리를 빌드할 때 어셈블리를 실행하는 데 필요한 권한을 지정할 수 있습니다. 어셈블리에 대한 특정 권한 부여 여부는 증명 정보를 바탕으로 합니다.  

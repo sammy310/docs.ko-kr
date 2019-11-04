@@ -16,15 +16,13 @@ helpviewer_keywords:
 - .NET Framework regular expressions, anchors
 - .NET Framework regular expressions, atomic zero-width assertions
 ms.assetid: 336391f6-2614-499b-8b1b-07a6837108a7
-author: rpetrusha
-ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 5f722977928604e5876e52a7329eef5c933bf2a7
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: bf5e98f895c17a3ab9b16e63601fa40fb9e15417
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046465"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140550"
 ---
 # <a name="anchors-in-regular-expressions"></a>정규식의 앵커
 <a name="top"></a> 앵커 또는 원자성 너비가 0인 어설션은 문자열에서 일치 항목이 나타나야 하는 위치를 지정합니다. 검색 식에서 앵커를 사용하면 정규식 엔진은 문자열을 통과하거나 문자를 사용하지 않고, 지정된 위치에서만 일치 항목을 검색합니다. 예를 들어 `^` 기호는 줄이나 문자열의 시작 부분에서 일치 항목 찾기를 시작하도록 지정합니다. 따라서 정규식 `^http:` 은 줄의 시작 부분에 나타날 때만 "http:"을 찾습니다. 다음 표에서는 .NET의 정규식에서 지원하는 앵커를 보여 줍니다.  
@@ -55,7 +53,7 @@ ms.locfileid: "70046465"
   
  정규식 패턴 `^((\w+(\s?)){2,}),\s(\w+\s\w+),(\s\d{4}(-(\d{4}|present))?,?)+` 는 다음 테이블과 같이 정의됩니다.  
   
-|무늬|설명|  
+|패턴|설명|  
 |-------------|-----------------|  
 |`^`|입력 문자열의 시작 부분(또는 메서드가 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 옵션과 함께 호출될 경우 줄의 시작 부분)에서 일치 항목 찾기를 시작합니다.|  
 |`((\w+(\s?)){2,}`|단어 문자 하나 이상과 0 또는 공백 하나 순으로 두 번 이상 나타내는 일치 항목을 찾습니다. 이 그룹은 첫 번째 캡처링 그룹입니다. 이 식은 두 번째 및 세 번째 캡처링 그룹도 정의합니다. 두 번째는 캡처된 단어로 구성되고 세 번째는 캡처된 공백으로 구성됩니다.|  
@@ -128,7 +126,7 @@ ms.locfileid: "70046465"
   
  정규식 `\G(\w+\s?\w*),?` 는 다음 테이블과 같이 해석됩니다.  
   
-|무늬|설명|  
+|패턴|설명|  
 |-------------|-----------------|  
 |`\G`|마지막 일치 항목 찾기가 종료된 위치에서 시작합니다.|  
 |`\w+`|하나 이상의 단어 문자를 찾습니다.|  
@@ -150,7 +148,7 @@ ms.locfileid: "70046465"
   
  정규식 패턴은 다음 테이블과 같이 해석됩니다.  
   
-|무늬|설명|  
+|패턴|설명|  
 |-------------|-----------------|  
 |`\b`|단어 경계에서 일치 항목 찾기를 시작합니다.|  
 |`are`|"are"를 찾습니다.|  
@@ -170,7 +168,7 @@ ms.locfileid: "70046465"
   
  정규식 패턴은 다음 테이블과 같이 해석됩니다.  
   
-|무늬|설명|  
+|패턴|설명|  
 |-------------|-----------------|  
 |`\B`|단어 경계에서 일치 항목 찾기를 시작하지 않습니다.|  
 |`qu`|"qu" 하위 문자열을 찾습니다.|  

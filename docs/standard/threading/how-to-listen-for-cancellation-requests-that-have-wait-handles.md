@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - cancellation, waiting with wait handles
 ms.assetid: 6e2aa49b-fc84-4bcf-962b-17db98b7edcb
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 67cf434737257a942e094fcb38ed18d597645d46
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 43ca52359a48d3ac5a27933fcc8ce56c07159cac
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69913340"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137983"
 ---
 # <a name="how-to-listen-for-cancellation-requests-that-have-wait-handles"></a>방법: 대기 핸들이 있는 취소 요청 수신 대기
 이벤트의 신호를 받을 때까지 대기하는 동안 메서드가 차단된 경우 취소 토큰의 값을 확인하고 적시에 응답할 수 없습니다. 첫 번째 예제는 기본적으로 통합 취소 프레임워크를 지원하지 않는 <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType>와 같은 이벤트에 대해 작업할 때 이 문제점을 해결하는 방법을 보여줍니다. 두 번째 예제는 통합 취소를 지원하는 <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>을 사용하는 보다 간소화된 접근 방식을 보여줍니다.  

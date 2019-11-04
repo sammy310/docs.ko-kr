@@ -7,14 +7,12 @@ helpviewer_keywords:
 - application development [.NET Framework], console
 - console applications
 ms.assetid: c21fb997-9f0e-40a5-8741-f73bba376bd8
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5c1658f27b66d9447d191d23801eba2d659ce9c2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1ec65795a7f3d706b2878dd8a8397ae42b61ce7e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69933894"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132860"
 ---
 # <a name="building-console-applications-in-the-net-framework"></a>.NET Framework에서 콘솔 애플리케이션 만들기
 .NET Framework의 애플리케이션에서는 <xref:System.Console?displayProperty=nameWithType> 클래스를 사용하여 콘솔로부터 문자를 읽거나 콘솔에 문자를 쓸 수 있습니다. 콘솔의 데이터는 표준 입력 스트림에서 읽혀지고 표준 출력 스트림으로 쓰여지며, 콘솔의 오류 데이터는 표준 오류 출력 스트림으로 쓰여집니다. 이러한 스트림은 애플리케이션이 시작될 때 콘솔과 자동으로 연결되며 <xref:System.Console.In%2A>, <xref:System.Console.Out%2A> 및 <xref:System.Console.Error%2A> 속성으로 나타납니다.  

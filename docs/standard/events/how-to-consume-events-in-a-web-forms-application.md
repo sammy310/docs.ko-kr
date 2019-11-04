@@ -12,14 +12,12 @@ helpviewer_keywords:
 - events [.NET Framework], consuming
 - Web Forms, event handling
 ms.assetid: 73bf8638-c4ec-4069-b0bb-a1dc79b92e32
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: dc1dee9377200e4c9fd575b8dcd00982db45f249
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 1f95fd0dcc12f2d4e47ee07e1e6bb15d91000f0f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59317820"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124782"
 ---
 # <a name="how-to-consume-events-in-a-web-forms-application"></a>방법: Web Forms 애플리케이션에서 이벤트 사용
 ASP.NET Web Forms 애플리케이션의 주된 활용 방식은 웹 페이지에 컨트롤을 채운 다음 사용자가 클릭하는 컨트롤에 따라 특정 작업을 수행하는 것입니다. 예를 들어, <xref:System.Web.UI.WebControls.Button?displayProperty=nameWithType> 컨트롤은 사용자가 웹 페이지에서 해당 컨트롤을 클릭하면 이벤트를 발생시킵니다. 이벤트를 처리하면 애플리케이션이 해당 단추 클릭에 대해 적절한 애플리케이션 논리를 수행할 수 있습니다.  

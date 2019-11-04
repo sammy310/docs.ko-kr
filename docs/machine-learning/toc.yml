@@ -39,14 +39,16 @@
           href: tutorials/object-detection-onnx.md
         - name: TensorFlow를 사용하여 감정 분류(텍스트 분류)
           href: tutorials/text-classification-tf.md
-    - name: 도구
+    - name: 모델 작성기 및 CLI
       items:
-        - name: 모델 작성기를 사용하여 가격 예측
+        - name: 가격 예측(모델 작성기 및 회귀)
           href: tutorials/predict-prices-with-model-builder.md
         - name: ML.NET CLI를 사용하여 감정 분석
           href: tutorials/mlnet-cli.md
-        - name: 모델 작성기 및 Razor Pages를 사용하여 감정 분석
+        - name: Razor Pages에서 감정 분석(모델 작성기 및 이진 분류)
           href: tutorials/sentiment-analysis-model-builder.md
+        - name: 상태 위반 범주화(모델 작성기 및 다중 클래스 분류)
+          href: tutorials/health-violation-classification-model-builder.md
     - name: Infer.NET
       items:
         - name: Infer.NET을 사용한 확률 프로그래밍

@@ -8,14 +8,12 @@ helpviewer_keywords:
 - weak references, long
 - garbage collection, weak references
 ms.assetid: 6a600fe5-3af3-4c64-82da-10a0a8e2d79b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 246e6572deefaf4546afe6fb5326ecc2286215a5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 120777ca3c26b1634bd2143863547cfa4ea5deac
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766816"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141337"
 ---
 # <a name="weak-references"></a>약한 참조
 애플리케이션의 코드가 해당 개체에 연결될 수 있는 반면 가비지 수집기는 애플리케이션에서 사용 중인 개체를 수집할 수 없습니다. 애플리케이션은 개체에 대한 강력한 참조를 가진다고 합니다.  
@@ -37,7 +35,7 @@ ms.locfileid: "67766816"
   
      가비지 수집에서 개체를 회수하는 경우 Short Weak Reference의 대상은 `null`이 됩니다. Weak Reference는 자체 관리되는 개체이며 다른 관리되는 개체와 마찬가지로 가비지 수집의 대상입니다.  짧은 약한 참조는 <xref:System.WeakReference>의 매개 변수 없는 생성자입니다.  
   
-- Long  
+- long  
   
      개체의 <xref:System.Object.Finalize%2A> 메서드가 호출된 후에 긴 약한 참조는 유지됩니다. 이렇게 하면 개체를 다시 만들 수 있지만 개체의 상태는 예측할 수 없게 됩니다. 긴 참조를 사용하려면 <xref:System.WeakReference> 생성자에서 `true`를 지정합니다.  
   

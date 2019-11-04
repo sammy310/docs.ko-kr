@@ -13,14 +13,12 @@ helpviewer_keywords:
 - converting numeric user input to number
 - numbers [.NET Framework], converting numeric user input to number
 ms.assetid: f27ddfb8-7479-4b79-8879-02a3bd8402d4
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5af942b5e7576c13ff7be8d11c0009fd0c4f7462
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 78ba284ad2e75b39c0fb1001b0f65b48c519dbb5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65882476"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140101"
 ---
 # <a name="how-to-convert-numeric-user-input-in-web-controls-to-numbers"></a>방법: 웹 컨트롤의 숫자 사용자 입력을 숫자로 변환
 전 세계 어디서든 웹 페이지를 표시할 수 있으므로 사용자가 거의 무제한의 형식으로 숫자 데이터를 <xref:System.Web.UI.WebControls.TextBox> 컨트롤에 입력할 수 있습니다. 따라서 웹 페이지 사용자의 로캘 및 문화권을 확인하는 것이 매우 중요합니다. 사용자 입력을 구문 분석할 때 사용자의 로캘 및 문화권에 의해 정의된 서식 지정 규칙을 적용할 수 있습니다.  
@@ -43,7 +41,7 @@ ms.locfileid: "65882476"
   
 6. 여전히 변환에 실패하거나 <xref:System.Web.HttpRequest.UserLanguages%2A> 속성에서 반환한 문자열 배열이 비어 있는 경우 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> 속성에서 반환하는 고정 문화권을 사용하여 문자열을 구문 분석합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제는 사용자에게 <xref:System.Web.UI.WebControls.TextBox> 컨트롤에 숫자 값을 입력하도록 요청하고 이 값을 숫자로 변환하는 웹 폼의 완벽한 코드 숨김 페이지입니다. 해당 숫자는 원래 입력과 동일한 서식 지정 규칙을 사용하여 double로 처리되고 표시됩니다.  
   
  [!code-csharp[Formatting.HowTo.ParseNumericInput#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.ParseNumericInput/cs/NumericUserInput1.aspx.cs#1)]
