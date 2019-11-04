@@ -677,28 +677,28 @@ f1_keywords:
 helpviewer_keywords:
 - errors [C#], additional information
 ms.assetid: 48320e4a-6e17-45a6-9966-88c6ec89bd2f
-ms.openlocfilehash: 68ea00c6f5f97e61adaeb53aed8464cf874814e7
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: bc19224f980091e6046494fd4d708af2b03041da
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73196234"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419709"
 ---
-# <a name="sorry-we-dont-have-specifics-on-this-c-error"></a><span data-ttu-id="07bf1-102">죄송 합니다. 이 C# 오류에 대한 구체적인 정보가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="07bf1-102">Sorry, we don't have specifics on this C# error</span></span>
+# <a name="sorry-we-dont-have-specifics-on-this-c-error"></a><span data-ttu-id="81d10-102">죄송 합니다. 이 C# 오류에 대한 구체적인 정보가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="81d10-102">Sorry, we don't have specifics on this C# error</span></span>
 
-<span data-ttu-id="07bf1-103">죄송 하지만이 오류에 대 한 특정 정보가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="07bf1-103">We're sorry, but we don’t have any specific information about this error.</span></span> <span data-ttu-id="07bf1-104">오류 번호와 메시지 텍스트를 검색하여 웹에서 정보를 찾을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="07bf1-104">You can search for the error number and message text to find information on the web.</span></span> <span data-ttu-id="07bf1-105">또는 다음 중 하나를 사용 하 여 다른 개발자에 게 요청할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="07bf1-105">Or you can ask other developers using one of these:</span></span>
+<span data-ttu-id="81d10-103">죄송 하지만이 오류에 대 한 특정 정보가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="81d10-103">We're sorry, but we don’t have any specific information about this error.</span></span> <span data-ttu-id="81d10-104">오류 번호와 메시지 텍스트를 검색하여 웹에서 정보를 찾을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="81d10-104">You can search for the error number and message text to find information on the web.</span></span> <span data-ttu-id="81d10-105">또는 다음 중 하나를 사용 하 여 다른 개발자에 게 요청할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="81d10-105">Or you can ask other developers using one of these:</span></span>
   
- [<span data-ttu-id="07bf1-106">Msdn 포럼-시각적 개체C#</span><span class="sxs-lookup"><span data-stu-id="07bf1-106">Msdn forums - Visual C#</span></span>](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=csharpgeneral)  
- <span data-ttu-id="07bf1-107">다른 포럼에서 다루지 않는 시각적 개체 C# 및 문제에 대 한 질문을 위한 포럼을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="07bf1-107">Provides a forum for questions about and issues with Visual C# that are not discussed in other forums.</span></span>  
+ [<span data-ttu-id="81d10-106">Msdn 포럼-시각적 개체C#</span><span class="sxs-lookup"><span data-stu-id="81d10-106">Msdn forums - Visual C#</span></span>](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=csharpgeneral)  
+ <span data-ttu-id="81d10-107">다른 포럼에서 다루지 않는 시각적 개체 C# 및 문제에 대 한 질문을 위한 포럼을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="81d10-107">Provides a forum for questions about and issues with Visual C# that are not discussed in other forums.</span></span>  
 
- [<span data-ttu-id="07bf1-108">스택 오버플로</span><span class="sxs-lookup"><span data-stu-id="07bf1-108">Stack Overflow</span></span>](https://stackoverflow.com/questions/tagged/c%23)  
-<span data-ttu-id="07bf1-109">시각적 개체 C#에 대 한 질문과 문제에 대 한 질문과 대답 웹 사이트를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="07bf1-109">Provides a QA website for questions about and issues with Visual C#.</span></span>  
+ [<span data-ttu-id="81d10-108">스택 오버플로</span><span class="sxs-lookup"><span data-stu-id="81d10-108">Stack Overflow</span></span>](https://stackoverflow.com/questions/tagged/c%23)  
+<span data-ttu-id="81d10-109">시각적 개체 C#에 대 한 질문과 문제에 대 한 질문과 대답 웹 사이트를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="81d10-109">Provides a QA website for questions about and issues with Visual C#.</span></span>  
 
- <span data-ttu-id="07bf1-110">또한 다음을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="07bf1-110">Also see:</span></span>  
- [<span data-ttu-id="07bf1-111">Visual C# 프로그래머를 위한 추가 리소스</span><span class="sxs-lookup"><span data-stu-id="07bf1-111">Additional Resources for Visual C# Programmers</span></span>](../getting-started/additional-resources.md)  
+ <span data-ttu-id="81d10-110">또한 다음을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="81d10-110">Also see:</span></span>  
+ [<span data-ttu-id="81d10-111">Visual C# 프로그래머를 위한 추가 리소스</span><span class="sxs-lookup"><span data-stu-id="81d10-111">Additional Resources for Visual C# Programmers</span></span>](../getting-started/index.md)  
   
-## <a name="see-also"></a><span data-ttu-id="07bf1-112">참조</span><span class="sxs-lookup"><span data-stu-id="07bf1-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="81d10-112">참조</span><span class="sxs-lookup"><span data-stu-id="81d10-112">See also</span></span>
 
-- [<span data-ttu-id="07bf1-113">C# 프로그래밍 가이드</span><span class="sxs-lookup"><span data-stu-id="07bf1-113">C# Programming Guide</span></span>](../programming-guide/index.md)
-- [<span data-ttu-id="07bf1-114">C# 참조</span><span class="sxs-lookup"><span data-stu-id="07bf1-114">C# Reference</span></span>](../language-reference/index.md)
-- [<span data-ttu-id="07bf1-115">의견 보내기</span><span class="sxs-lookup"><span data-stu-id="07bf1-115">Talk to Us</span></span>](/visualstudio/ide/feedback-options)
+- [<span data-ttu-id="81d10-113">C# 프로그래밍 가이드</span><span class="sxs-lookup"><span data-stu-id="81d10-113">C# Programming Guide</span></span>](../programming-guide/index.md)
+- [<span data-ttu-id="81d10-114">C# 참조</span><span class="sxs-lookup"><span data-stu-id="81d10-114">C# Reference</span></span>](../language-reference/index.md)
+- [<span data-ttu-id="81d10-115">의견 보내기</span><span class="sxs-lookup"><span data-stu-id="81d10-115">Talk to Us</span></span>](/visualstudio/ide/feedback-options)

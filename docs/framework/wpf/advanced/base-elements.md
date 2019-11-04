@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - base elements [WPF]
 ms.assetid: 55034aa5-3c1d-442a-8293-f4692d8ea6ae
-ms.openlocfilehash: a1f7105ee6590314eb2ebbfa52b511f55f83dc05
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d0d3c5198c6c4146cf92201b08781041043c4a72
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61926414"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73453601"
 ---
-# <a name="base-elements"></a><span data-ttu-id="7069b-102">기본 요소</span><span class="sxs-lookup"><span data-stu-id="7069b-102">Base Elements</span></span>
-<span data-ttu-id="7069b-103">네 가지 주요 클래스<xref:System.Windows.UIElement>, <xref:System.Windows.ContentElement>를 <xref:System.Windows.FrameworkElement>, 및 <xref:System.Windows.FrameworkContentElement>-상당 WPF 프로그래밍에서 사용할 수 있는 공통 요소 기능을 구현 합니다.</span><span class="sxs-lookup"><span data-stu-id="7069b-103">Four key classes--<xref:System.Windows.UIElement>, <xref:System.Windows.ContentElement>, <xref:System.Windows.FrameworkElement>, and <xref:System.Windows.FrameworkContentElement>--implement a substantial percentage of the common element functionality available in WPF programming.</span></span> <span data-ttu-id="7069b-104">이러한 네 가지 클래스 라고이 SDK에서 기본 요소 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="7069b-104">These four classes are referred to in this SDK as the base element classes.</span></span>  
+# <a name="base-elements"></a><span data-ttu-id="edc8f-102">기본 요소</span><span class="sxs-lookup"><span data-stu-id="edc8f-102">Base Elements</span></span>
+<span data-ttu-id="edc8f-103"><xref:System.Windows.UIElement>, <xref:System.Windows.ContentElement>, <xref:System.Windows.FrameworkElement>및 <xref:System.Windows.FrameworkContentElement>의 네 가지 주요 클래스는 WPF 프로그래밍에서 사용할 수 있는 공통 요소 기능의 상당 비율을 구현 합니다.</span><span class="sxs-lookup"><span data-stu-id="edc8f-103">Four key classes--<xref:System.Windows.UIElement>, <xref:System.Windows.ContentElement>, <xref:System.Windows.FrameworkElement>, and <xref:System.Windows.FrameworkContentElement>--implement a substantial percentage of the common element functionality available in WPF programming.</span></span> <span data-ttu-id="edc8f-104">이 네 클래스는이 SDK에서 기본 요소 클래스로 참조 됩니다.</span><span class="sxs-lookup"><span data-stu-id="edc8f-104">These four classes are referred to in this SDK as the base element classes.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="7069b-105">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="7069b-105">In This Section</span></span>  
- [<span data-ttu-id="7069b-106">기본 요소 개요</span><span class="sxs-lookup"><span data-stu-id="7069b-106">Base Elements Overview</span></span>](base-elements-overview.md)  
- [<span data-ttu-id="7069b-107">Freezable 개체 개요</span><span class="sxs-lookup"><span data-stu-id="7069b-107">Freezable Objects Overview</span></span>](freezable-objects-overview.md)  
- [<span data-ttu-id="7069b-108">맞춤, 여백 및 안쪽 여백 개요</span><span class="sxs-lookup"><span data-stu-id="7069b-108">Alignment, Margins, and Padding Overview</span></span>](alignment-margins-and-padding-overview.md)  
- [<span data-ttu-id="7069b-109">방법 항목</span><span class="sxs-lookup"><span data-stu-id="7069b-109">How-to Topics</span></span>](base-elements-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="edc8f-105">단원 내용</span><span class="sxs-lookup"><span data-stu-id="edc8f-105">In This Section</span></span>  
+ [<span data-ttu-id="edc8f-106">기본 요소 개요</span><span class="sxs-lookup"><span data-stu-id="edc8f-106">Base Elements Overview</span></span>](base-elements-overview.md)  
+ [<span data-ttu-id="edc8f-107">Freezable 개체 개요</span><span class="sxs-lookup"><span data-stu-id="edc8f-107">Freezable Objects Overview</span></span>](freezable-objects-overview.md)  
+ [<span data-ttu-id="edc8f-108">맞춤, 여백 및 안쪽 여백 개요</span><span class="sxs-lookup"><span data-stu-id="edc8f-108">Alignment, Margins, and Padding Overview</span></span>](alignment-margins-and-padding-overview.md)  
+ [<span data-ttu-id="edc8f-109">방법 항목</span><span class="sxs-lookup"><span data-stu-id="edc8f-109">How-to Topics</span></span>](base-elements-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="7069b-110">참조</span><span class="sxs-lookup"><span data-stu-id="7069b-110">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="edc8f-110">참고</span><span class="sxs-lookup"><span data-stu-id="edc8f-110">Reference</span></span>  
  <xref:System.Windows.UIElement>  
   
  <xref:System.Windows.ContentElement>  
@@ -31,13 +31,13 @@ ms.locfileid: "61926414"
   
  <xref:System.Windows.FrameworkContentElement>  
   
-## <a name="related-sections"></a><span data-ttu-id="7069b-111">관련 단원</span><span class="sxs-lookup"><span data-stu-id="7069b-111">Related Sections</span></span>  
- [<span data-ttu-id="7069b-112">WPF 아키텍처</span><span class="sxs-lookup"><span data-stu-id="7069b-112">WPF Architecture</span></span>](wpf-architecture.md)  
-  [<span data-ttu-id="7069b-113">WPF의 XAML</span><span class="sxs-lookup"><span data-stu-id="7069b-113">XAML in WPF</span></span>](xaml-in-wpf.md)  
-  [<span data-ttu-id="7069b-114">요소 트리 및 Serialization</span><span class="sxs-lookup"><span data-stu-id="7069b-114">Element Tree and Serialization</span></span>](element-tree-and-serialization.md)  
-  [<span data-ttu-id="7069b-115">속성</span><span class="sxs-lookup"><span data-stu-id="7069b-115">Properties</span></span>](properties-wpf.md)  
-  [<span data-ttu-id="7069b-116">이벤트</span><span class="sxs-lookup"><span data-stu-id="7069b-116">Events</span></span>](events-wpf.md)  
-  [<span data-ttu-id="7069b-117">입력</span><span class="sxs-lookup"><span data-stu-id="7069b-117">Input</span></span>](input-wpf.md)  
-  [<span data-ttu-id="7069b-118">리소스</span><span class="sxs-lookup"><span data-stu-id="7069b-118">Resources</span></span>](resources-wpf.md)  
-  [<span data-ttu-id="7069b-119">스타일 지정 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="7069b-119">Styling and Templating</span></span>](../controls/styling-and-templating.md)  
-  [<span data-ttu-id="7069b-120">스레딩 모델</span><span class="sxs-lookup"><span data-stu-id="7069b-120">Threading Model</span></span>](threading-model.md)
+## <a name="related-sections"></a><span data-ttu-id="edc8f-111">관련 단원</span><span class="sxs-lookup"><span data-stu-id="edc8f-111">Related Sections</span></span>  
+ [<span data-ttu-id="edc8f-112">WPF 아키텍처</span><span class="sxs-lookup"><span data-stu-id="edc8f-112">WPF Architecture</span></span>](wpf-architecture.md)  
+  [<span data-ttu-id="edc8f-113">WPF의 XAML</span><span class="sxs-lookup"><span data-stu-id="edc8f-113">XAML in WPF</span></span>](xaml-in-wpf.md)  
+  [<span data-ttu-id="edc8f-114">요소 트리 및 Serialization</span><span class="sxs-lookup"><span data-stu-id="edc8f-114">Element Tree and Serialization</span></span>](element-tree-and-serialization.md)  
+  [<span data-ttu-id="edc8f-115">데이터 액세스</span><span class="sxs-lookup"><span data-stu-id="edc8f-115">Properties</span></span>](properties-wpf.md)  
+  [<span data-ttu-id="edc8f-116">이벤트</span><span class="sxs-lookup"><span data-stu-id="edc8f-116">Events</span></span>](events-wpf.md)  
+  [<span data-ttu-id="edc8f-117">입력</span><span class="sxs-lookup"><span data-stu-id="edc8f-117">Input</span></span>](input-wpf.md)  
+  [<span data-ttu-id="edc8f-118">리소스</span><span class="sxs-lookup"><span data-stu-id="edc8f-118">Resources</span></span>](resources-wpf.md)  
+  [<span data-ttu-id="edc8f-119">스타일 지정 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="edc8f-119">Styling and Templating</span></span>](../../../desktop-wpf/fundamentals/styles-templates-overview.md)  
+  [<span data-ttu-id="edc8f-120">스레딩 모델</span><span class="sxs-lookup"><span data-stu-id="edc8f-120">Threading Model</span></span>](threading-model.md)

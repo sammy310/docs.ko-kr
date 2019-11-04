@@ -1,39 +1,39 @@
 ---
 title: 결과
-description: 사용 하는 방법을 알아봅니다는 F# 오류 코드를 작성할 수 있도록 'Result'를 입력 합니다.
+description: F# ' Result ' 유형을 사용 하 여 오류를 방지 하는 코드를 작성 하는 방법을 알아봅니다.
 ms.date: 04/24/2017
-ms.openlocfilehash: 36f60df8a2991c1d318e4921af6c9e89a0156918
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 187aa26ccbaac7e0ec998756377bb7b0489eb1ab
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645318"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424847"
 ---
-# <a name="results"></a><span data-ttu-id="f3ae2-103">결과</span><span class="sxs-lookup"><span data-stu-id="f3ae2-103">Results</span></span>
+# <a name="results"></a><span data-ttu-id="263ec-103">결과</span><span class="sxs-lookup"><span data-stu-id="263ec-103">Results</span></span>
 
-<span data-ttu-id="f3ae2-104">부터 F# 4.1 있습니다는 `Result<'T,'TFailure>` 종류입니다. 구성할 수 있는 오류 코드를 작성에 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f3ae2-104">Starting with F# 4.1, there is a `Result<'T,'TFailure>` type which you can use for writing error-tolerant code which can be composed.</span></span>
+<span data-ttu-id="263ec-104">F# 4.1부터 구성 될 수 있는 오류 허용 코드를 작성 하는 데 사용할 수 있는 `Result<'T,'TFailure>` 형식이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="263ec-104">Starting with F# 4.1, there is a `Result<'T,'TFailure>` type which you can use for writing error-tolerant code which can be composed.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="f3ae2-105">구문</span><span class="sxs-lookup"><span data-stu-id="f3ae2-105">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="263ec-105">구문</span><span class="sxs-lookup"><span data-stu-id="263ec-105">Syntax</span></span>
 
 ```fsharp
 // The definition of Result in FSharp.Core
 [<StructuralEquality; StructuralComparison>]
 [<CompiledName("FSharpResult`2")>]
 [<Struct>]
-type Result<'T,'TError> = 
-    | Ok of ResultValue:'T 
+type Result<'T,'TError> =
+    | Ok of ResultValue:'T
     | Error of ErrorValue:'TError
 ```
 
-## <a name="remarks"></a><span data-ttu-id="f3ae2-106">설명</span><span class="sxs-lookup"><span data-stu-id="f3ae2-106">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="263ec-106">주의</span><span class="sxs-lookup"><span data-stu-id="263ec-106">Remarks</span></span>
 
-<span data-ttu-id="f3ae2-107">결과 형식은 [구조체 구분 된 공용 구조체](discriminated-unions.md#struct-discriminated-unions)에 또 다른 기능은에 도입 F# 4.1 합니다.</span><span class="sxs-lookup"><span data-stu-id="f3ae2-107">Note that the result type is a [struct discriminated union](discriminated-unions.md#struct-discriminated-unions), which is another feature introduced in F# 4.1.</span></span>  <span data-ttu-id="f3ae2-108">구조적 같음 의미 체계 여기에 적용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="f3ae2-108">Structural equality semantics apply here.</span></span>
+<span data-ttu-id="263ec-107">결과 형식은 4.1에 F# 도입 된 또 다른 기능인 [구조체 구별 된 공용 구조체](discriminated-unions.md#struct-discriminated-unions)입니다.</span><span class="sxs-lookup"><span data-stu-id="263ec-107">Note that the result type is a [struct discriminated union](discriminated-unions.md#struct-discriminated-unions), which is another feature introduced in F# 4.1.</span></span>  <span data-ttu-id="263ec-108">구조적 같음 의미 체계가 여기에 적용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="263ec-108">Structural equality semantics apply here.</span></span>
 
-<span data-ttu-id="f3ae2-109">합니다 `Result` 유형은 monadic 오류 처리에는 라 불리는 일반적으로 사용 됩니다 [철도 지향 프로그래밍](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html) 내에서 F# 커뮤니티입니다.</span><span class="sxs-lookup"><span data-stu-id="f3ae2-109">The `Result` type is typically used in monadic error-handling, which is often referred to as [Railway-oriented Programming](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html) within the F# community.</span></span>  <span data-ttu-id="f3ae2-110">다음 간단한 예제에서는이 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="f3ae2-110">The following trivial example demonstrates this approach.</span></span>
+<span data-ttu-id="263ec-109">`Result` 형식은 일반적으로 F# 커뮤니티 내에서 [철도 지향 프로그래밍](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html) 이 라고도 하는 monadic 오류 처리에 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="263ec-109">The `Result` type is typically used in monadic error-handling, which is often referred to as [Railway-oriented Programming](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html) within the F# community.</span></span>  <span data-ttu-id="263ec-110">다음은이 방법을 보여 주는 간단한 예제입니다.</span><span class="sxs-lookup"><span data-stu-id="263ec-110">The following trivial example demonstrates this approach.</span></span>
 
 ```fsharp
 // Define a simple type which has fields that can be validated
-type Request = 
+type Request =
     { Name: string
       Email: string }
 
@@ -57,11 +57,11 @@ let validateEmail req =
     | _ -> Ok req
 
 let validateRequest reqResult =
-    reqResult 
+    reqResult
     |> Result.bind validateName
     |> Result.bind validateEmail
 
-let test() = 
+let test() =
     // Now, create a Request and pattern match on the result.
     let req1 = { Name = "Phillip"; Email = "phillip@contoso.biz" }
     let res1 = validateRequest (Ok req1)
@@ -80,9 +80,9 @@ let test() =
 test()
 ```
 
-<span data-ttu-id="f3ae2-111">알 수 있듯이 무척 쉽습니다 모두 반환 하려면 할 경우 다양 한 유효성 검사 함수 함께 연결 하는 `Result`합니다.</span><span class="sxs-lookup"><span data-stu-id="f3ae2-111">As you can see, it's quite easy to chain together various validation functions if you force them all to return a `Result`.</span></span>  <span data-ttu-id="f3ae2-112">수 있도록 필요에 따라 구성할 수 있는 작은 조각으로 다음과 같은 기능을 중단할 수이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f3ae2-112">This lets you break up functionality like this into small pieces which are as composable as you need them to be.</span></span>  <span data-ttu-id="f3ae2-113">이 역시의 추가 가치 *적용* 사용 [패턴 일치](pattern-matching.md) 끝에 일련의 유효성 검사, 결과적으로 적용 하는 더 높은 수준의 프로그램 정확성을 합니다.</span><span class="sxs-lookup"><span data-stu-id="f3ae2-113">This also has the added value of *enforcing* the use of [pattern matching](pattern-matching.md) at the end of a round of validation, which in turns enforces a higher degree of program correctness.</span></span>
+<span data-ttu-id="263ec-111">여기에서 볼 수 있듯이 모두 `Result`을 반환 하도록 강제 하는 경우 다양 한 유효성 검사 함수를 매우 쉽게 연결할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="263ec-111">As you can see, it's quite easy to chain together various validation functions if you force them all to return a `Result`.</span></span>  <span data-ttu-id="263ec-112">이를 통해 이러한 기능을 필요에 따라 구성 가능한 작은 부분으로 나눌 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="263ec-112">This lets you break up functionality like this into small pieces which are as composable as you need them to be.</span></span>  <span data-ttu-id="263ec-113">또한 유효성 검사의 끝에 [패턴 일치](pattern-matching.md) 를 사용 하는 것이 추가 된 값을 가지 며,이 *로 인해 더* 높은 수준의 프로그램 정확성이 적용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="263ec-113">This also has the added value of *enforcing* the use of [pattern matching](pattern-matching.md) at the end of a round of validation, which in turns enforces a higher degree of program correctness.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="f3ae2-114">참고자료</span><span class="sxs-lookup"><span data-stu-id="f3ae2-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="263ec-114">참조</span><span class="sxs-lookup"><span data-stu-id="263ec-114">See also</span></span>
 
-- [<span data-ttu-id="f3ae2-115">구별된 공용 구조체</span><span class="sxs-lookup"><span data-stu-id="f3ae2-115">Discriminated Unions</span></span>](discriminated-unions.md)
-- [<span data-ttu-id="f3ae2-116">패턴 일치</span><span class="sxs-lookup"><span data-stu-id="f3ae2-116">Pattern Matching</span></span>](pattern-matching.md)
+- [<span data-ttu-id="263ec-115">구별된 공용 구조체</span><span class="sxs-lookup"><span data-stu-id="263ec-115">Discriminated Unions</span></span>](discriminated-unions.md)
+- [<span data-ttu-id="263ec-116">패턴 일치</span><span class="sxs-lookup"><span data-stu-id="263ec-116">Pattern Matching</span></span>](pattern-matching.md)
