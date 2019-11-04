@@ -12,12 +12,12 @@ helpviewer_keywords:
 - controls [WPF], appearance specified by state
 - templates [WPF], custom for existing controls
 ms.assetid: 678dd116-43a2-4b8c-82b5-6b826f126e31
-ms.openlocfilehash: 0c79ba3dd42f2e65eb241409946e921577ced5f1
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 6d7401f9614e663351968dc6a2f85548735a176d
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920059"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460422"
 ---
 # <a name="customizing-the-appearance-of-an-existing-control-by-creating-a-controltemplate"></a>ControlTemplate을 만들어 기존 컨트롤의 모양 사용자 지정
 <a name="introduction"></a>컨트롤의 시각적 구조와 시각적 동작을 지정 하 <xref:System.Windows.Controls.ControlTemplate>입니다. 새 <xref:System.Windows.Controls.ControlTemplate>을 제공 하 여 컨트롤의 모양을 사용자 지정할 수 있습니다. <xref:System.Windows.Controls.ControlTemplate>를 만들 때 해당 기능을 변경 하지 않고 기존 컨트롤의 모양을 바꿉니다. 예를 들어, 기본 정사각형 셰이프 대신 응용 프로그램의 둥근 모양 단추를 만들 수 있지만 단추는 계속 해 서 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 이벤트를 발생 시킵니다.
@@ -262,4 +262,4 @@ ms.locfileid: "72920059"
 
 ## <a name="see-also"></a>참조
 
-- [스타일 지정 및 템플릿](styling-and-templating.md)
+- [스타일 지정 및 템플릿](../../../desktop-wpf/fundamentals/styles-templates-overview.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - service contracts [WCF], synchronous operations
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
-ms.openlocfilehash: eab8faa54aaf9031ac0809912bd659c43e39a11b
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 61dfa257676d6c274d846300c7ccae75a219cf4c
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321389"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424904"
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>동기 및 비동기 작업
 이 항목에서는 비동기 서비스 작업의 구현 및 호출에 대해 설명합니다.  
@@ -162,13 +162,13 @@ Function EndDoWork(ByRef inout As String, ByRef outonly As String, ByVal result 
   
  작업 기반 모델을 사용하는 경우 다음 코드 조각과 같이 await 키워드를 사용하여 작업을 호출합니다.  
   
-```  
+```csharp  
 await simpleServiceClient.SampleMethodTaskAsync("hello, world");  
 ```  
   
  이벤트 기반 비동기 패턴을 사용할 경우 응답 알림을 받기 위해 이벤트 처리기를 추가하기만 하면 되고 결과 이벤트가 사용자 인터페이스 스레드에서 자동으로 발생합니다. 이 방법을 사용하려면 다음 예제와 같이 [ServiceModel Metadata 유틸리티 도구(Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md)에서 **/async**와 **/tcv:Version35** 명령 옵션을 모두 지정합니다.  
   
-```  
+```console  
 svcutil http://localhost:8000/servicemodelsamples/service/mex /async /tcv:Version35  
 ```  
   
@@ -176,7 +176,7 @@ svcutil http://localhost:8000/servicemodelsamples/service/mex /async /tcv:Versio
   
  그러나 이벤트 기반 비동기 모델은 [!INCLUDE[netfx35_long](../../../includes/netfx35-long-md.md)]에서만 사용할 수 있으며, <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>를 사용하여 WCF 클라이언트 채널이 만들어진 경우에는 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]에서도 지원되지 않습니다. WCF 클라이언트 채널 개체가 있는 경우 <xref:System.IAsyncResult?displayProperty=nameWithType> 개체를 사용하여 작업을 비동기적으로 호출해야 합니다. 이 방법을 사용하려면 다음 예제와 같이 [ServiceModel Metadata 유틸리티 도구(Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md)에서 **/async** 명령 옵션을 지정합니다.  
   
-```  
+```console  
 svcutil http://localhost:8000/servicemodelsamples/service/mex /async   
 ```  
   

@@ -5,16 +5,16 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], how to use
 ms.assetid: 99a2fc27-a32e-4a34-921c-e65497520eec
-ms.openlocfilehash: f7ee014150a01fe0010048101576f2fece360146
-ms.sourcegitcommit: 10db6551ea3c971470cf5d2cc21ba1cbcefe5c55
+ms.openlocfilehash: a0422b5cd3083f351bde44deae5871599a649140
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72031871"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423296"
 ---
 # <a name="using-delegates-c-programming-guide"></a>대리자 사용(C# 프로그래밍 가이드)
 
-[대리자](../../language-reference/keywords/delegate.md)는 C 및 C++의 함수 포인터처럼 메서드를 안전하게 캡슐화하는 형식입니다. 함수 포인터와는 달리 대리자는 개체 지향적이고 형식이 안전하며 보안이 유지됩니다. 대리자의 형식은 대리자의 이름으로 정의됩니다. 다음 예제에서는 [string](../../language-reference/keywords/string.md)을 인수로 사용하고 [void](../../language-reference/keywords/void.md)를 반환하는 메서드를 캡슐화할 수 있는 `Del` 대리자를 선언합니다.
+[대리자](../../language-reference/builtin-types/reference-types.md)는 C 및 C++의 함수 포인터처럼 메서드를 안전하게 캡슐화하는 형식입니다. 함수 포인터와는 달리 대리자는 개체 지향적이고 형식이 안전하며 보안이 유지됩니다. 대리자의 형식은 대리자의 이름으로 정의됩니다. 다음 예제에서는 [string](../../language-reference/builtin-types/reference-types.md)을 인수로 사용하고 [void](../../language-reference/keywords/void.md)를 반환하는 메서드를 캡슐화할 수 있는 `Del` 대리자를 선언합니다.
 
 [!code-csharp[csProgGuideDelegates#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#21)]
 

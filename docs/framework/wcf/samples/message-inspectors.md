@@ -2,12 +2,12 @@
 title: 메시지 검사자
 ms.date: 03/30/2017
 ms.assetid: 9bd1f305-ad03-4dd7-971f-fa1014b97c9b
-ms.openlocfilehash: e7846b8710fa52a5b13de245b8b7147e217533db
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 01553084aa049688cd05fa36e46fb6f67983fb21
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039394"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424147"
 ---
 # <a name="message-inspectors"></a>메시지 검사자
 이 샘플에서는 클라이언트 및 서비스 메시지 검사자를 구현하고 구성하는 방법을 보여 줍니다.  
@@ -19,7 +19,7 @@ ms.locfileid: "70039394"
 ## <a name="message-inspector"></a>메시지 검사자  
  클라이언트 메시지 검사자는 <xref:System.ServiceModel.Dispatcher.IClientMessageInspector> 인터페이스를 구현하고 서비스 메시지 검사자는 <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector> 인터페이스를 구현합니다. 이러한 구현을 단일 클래스로 결합하여 양쪽에서 작동하는 메시지 검사자를 구성할 수 있습니다. 이 샘플에서는 이렇게 결합된 메시지 검사자를 구현합니다. 검사자는 들어오는 메시지와 나가는 메시지의 유효성을 검사하는 스키마 집합에 전달되어 구성되며, 이 검사자를 통해 개발자는 들어오는 메시지나 나가는 메시지의 유효성을 검사할지 여부와 검사자가 디스패치 모드에 있는지 클라이언트 모드에 있는지를 지정합니다. 이는 이 항목의 뒷부분에서 설명하는 오류 처리에 영향을 줄 수 있습니다.  
   
-```  
+```csharp  
 public class SchemaValidationMessageInspector : IClientMessageInspector, IDispatchMessageInspector  
 {  
     XmlSchemaSet schemaSet;  
@@ -43,7 +43,7 @@ public class SchemaValidationMessageInspector : IClientMessageInspector, IDispat
   
  메시지를 받아 채널 스택에서 처리한 후 서비스에 할당한 경우 deserialize하여 작업에 디스패치하기 전에 디스패처에서 <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A>를 호출합니다. 들어오는 메시지가 암호화된 경우 메시지 검사자에 도달하면 해당 메시지는 이미 암호가 해독되어 있습니다. 메서드는 참조 매개 변수로 전달된 `request` 메시지를 가져오며, 이를 통해 필요에 따라 메시지를 검사, 조작 또는 대체할 수 있습니다. 반환 값은 임의의 개체가 될 수 있으며 서비스에서 현재 메시지에 대한 회신을 반환할 때 <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%2A>에 전달되는 상관 관계 상태 개체로 사용됩니다. 이 샘플에서 <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A>는 메시지의 검사(유효성 검사)를 전용 로컬 메서드 `ValidateMessageBody`에 위임하며 상관 관계 상태 개체를 반환하지 않습니다. 이 메서드는 잘못된 메시지가 서비스에 전달되지 않도록 합니다.  
   
-```  
+```csharp  
 object IDispatchMessageInspector.AfterReceiveRequest(ref System.ServiceModel.Channels.Message request, System.ServiceModel.IClientChannel channel, System.ServiceModel.InstanceContext instanceContext)  
 {  
     if (validateRequest)  
@@ -58,9 +58,9 @@ object IDispatchMessageInspector.AfterReceiveRequest(ref System.ServiceModel.Cha
   
  <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%28System.ServiceModel.Channels.Message%40%2CSystem.Object%29>는 클라이언트로 회신을 다시 보낼 준비가 될 때마다 호출되며 단방향 메시지인 경우에는 들어오는 메시지가 처리되면 호출됩니다. 따라서 MEP에 관계없이 대칭적으로 확장을 호출할 수 있습니다. <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A>와 마찬가지로 메시지는 참조 매개 변수로 전달되며 검사, 수정 또는 대체할 수 있습니다. 이 샘플에서 수행되는 메시지 유효성 검사는 `ValidMessageBody` 메서드에 다시 위임되지만 이 경우 유효성 검사 오류 처리가 약간 다릅니다.  
   
- 서비스에서 유효성 검사 오류가 발생하면 `ValidateMessageBody` 메서드에서 <xref:System.ServiceModel.FaultException> 파생 예외를 throw합니다. <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A>에서는 SOAP 오류로 자동 변환되어 클라이언트로 전달되는 서비스 모델 인프라에 이러한 예외를 넣을 수 있습니다. <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%2A>에서는 서비스에서 throw된 오류 예외가 메시지 검사자가 호출되기 전에 변환되므로 <xref:System.ServiceModel.FaultException> 예외를 인프라에 넣으면 안 됩니다. 따라서 다음 구현에서는 알려진 `ReplyValidationFault` 예외를 catch하고 회신 메시지를 명시적인 오류 메시지로 바꿉니다. 이 메서드는 서비스 구현에서 잘못된 메시지를 반환하지 않도록 합니다.  
+ 서비스에서 유효성 검사 오류가 발생하면 `ValidateMessageBody` 메서드에서 <xref:System.ServiceModel.FaultException> 파생 예외를 throw합니다. <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A>에서는 SOAP 오류로 자동 변형되어 클라이언트로 전달되는 서비스 모델 인프라에 이러한 예외를 넣을 수 있습니다. <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%2A>에서는 서비스에서 throw된 오류 예외가 메시지 검사자가 호출되기 전에 변형되므로 <xref:System.ServiceModel.FaultException> 예외를 인프라에 넣으면 안 됩니다. 따라서 다음 구현에서는 알려진 `ReplyValidationFault` 예외를 catch하고 회신 메시지를 명시적인 오류 메시지로 바꿉니다. 이 메서드는 서비스 구현에서 잘못된 메시지를 반환하지 않도록 합니다.  
   
-```  
+```csharp  
 void IDispatchMessageInspector.BeforeSendReply(ref System.ServiceModel.Channels.Message reply, object correlationState)  
 {  
     if (validateReply)  
@@ -82,13 +82,13 @@ void IDispatchMessageInspector.BeforeSendReply(ref System.ServiceModel.Channels.
   
  클라이언트 메시지 검사자는 서비스 메시지 검사자와 매우 유사합니다. <xref:System.ServiceModel.Dispatcher.IClientMessageInspector>에서 구현되어야 하는 두 가지 메서드는 <xref:System.ServiceModel.Dispatcher.IClientMessageInspector.AfterReceiveReply%2A>와 <xref:System.ServiceModel.Dispatcher.IClientMessageInspector.BeforeSendRequest%2A>입니다.  
   
- <xref:System.ServiceModel.Dispatcher.IClientMessageInspector.BeforeSendRequest%2A>는 클라이언트 응용 프로그램이나 작업 포맷터에서 메시지가 작성되면 호출됩니다. 디스패처 메시지 검사자와 마찬가지로 메시지를 검사만 하거나 완전히 바꿀 수 있습니다. 이 샘플에서 검사자는 디스패치 메시지 검사자에도 사용된 동일한 로컬 `ValidateMessageBody` 도우미 메서드에 위임합니다.  
+ <xref:System.ServiceModel.Dispatcher.IClientMessageInspector.BeforeSendRequest%2A>는 클라이언트 애플리케이션이나 작업 포맷터에서 메시지가 작성되면 호출됩니다. 디스패처 메시지 검사자와 마찬가지로 메시지를 검사만 하거나 완전히 바꿀 수 있습니다. 이 샘플에서 검사자는 디스패치 메시지 검사자에도 사용된 동일한 로컬 `ValidateMessageBody` 도우미 메서드에 위임합니다.  
   
  생성자에 지정된 대로 클라이언트 유효성 검사와 서비스 유효성 검사에는 동작 면에서 차이가 있는데, 클라이언트 유효성 검사에서는 서비스 오류 때문이 아니라 로컬에서 이러한 예외가 발생하기 때문에 사용자 코드에 들어가는 로컬 예외가 throw됩니다. 일반적으로 서비스 디스패처 검사자는 오류를 throw하고 클라이언트 검사자는 예외를 throw하는 규칙이 있습니다.  
   
  이 <xref:System.ServiceModel.Dispatcher.IClientMessageInspector.BeforeSendRequest%2A> 구현에서는 잘못된 메시지를 서비스로 보내지 않도록 합니다.  
   
-```  
+```csharp  
 object IClientMessageInspector.BeforeSendRequest(ref System.ServiceModel.Channels.Message request, System.ServiceModel.IClientChannel channel)  
 {  
     if (validateRequest)  
@@ -101,7 +101,7 @@ object IClientMessageInspector.BeforeSendRequest(ref System.ServiceModel.Channel
   
  `AfterReceiveReply` 구현에서는 서비스에서 받은 잘못된 메시지가 클라이언트 사용자 코드로 전달되지 않도록 합니다.  
   
-```  
+```csharp  
 void IClientMessageInspector.AfterReceiveReply(ref System.ServiceModel.Channels.Message reply, object correlationState)  
 {  
     if (validateReply)  
@@ -115,7 +115,7 @@ void IClientMessageInspector.AfterReceiveReply(ref System.ServiceModel.Channels.
   
  오류가 발생하지 않으면 원본 메시지에서 속성 및 헤더를 복사하고 메모리 스트림에서 현재 유효성이 검사된 infoset을 사용하는 새 메시지가 생성됩니다. 이 메시지는 <xref:System.Xml.XmlDictionaryReader>에 의해 래핑되고 대체 메시지에 추가됩니다.  
   
-```  
+```csharp  
 void ValidateMessageBody(ref System.ServiceModel.Channels.Message message, bool isRequest)  
 {  
     if (!message.IsFault)  
@@ -162,7 +162,7 @@ void ValidateMessageBody(ref System.ServiceModel.Channels.Message message, bool 
   
  앞에서 설명한 대로 처리기에 의해 throw된 예외는 클라이언트와 서비스 간에 서로 다릅니다. 서비스에서는 예외가 <xref:System.ServiceModel.FaultException>에서 파생되고, 클라이언트에서는 예외가 일반적인 사용자 지정 예외입니다.  
   
-```  
+```csharp  
         void InspectionValidationHandler(object sender, ValidationEventArgs e)  
 {  
     if (e.Severity == XmlSeverityType.Error)  
@@ -206,7 +206,7 @@ void ValidateMessageBody(ref System.ServiceModel.Channels.Message message, bool 
   
  다음 `SchemaValidationBehavior` 클래스는 클라이언트 런타임이나 디스패치 런타임에 이 샘플의 메시지 검사자를 추가하는 데 사용된 동작입니다. 두 경우 모두 기본 구현에 해당됩니다. <xref:System.ServiceModel.Description.IEndpointBehavior.ApplyClientBehavior%2A> 및 <xref:System.ServiceModel.Description.IEndpointBehavior.ApplyDispatchBehavior%2A>에서는 메시지 검사자를 만들어 해당 런타임의 <xref:System.ServiceModel.Dispatcher.ClientRuntime.MessageInspectors%2A> 컬렉션에 추가합니다.  
   
-```  
+```csharp  
 public class SchemaValidationBehavior : IEndpointBehavior  
 {  
     XmlSchemaSet schemaSet;   
@@ -256,10 +256,10 @@ public class SchemaValidationBehavior : IEndpointBehavior
 ```  
   
 > [!NOTE]
-> 이 특정 동작은 특성을 겸용하지 않으므로 서비스 유형의 계약 형식에 선언적으로 추가할 수 없습니다. 이 동작은 특성 선언에서 스키마 컬렉션을 로드할 수 없기 때문에 디자인에 따라 결정되며 이 특성의 추가 구성 위치(예: 응용 프로그램 설정)를 참조하는 것은 나머지 서비스 모델 구성과 일치하지 않는 구성 요소를 만든다는 의미입니다. 따라서 이 동작은 코드와 서비스 모델 구성 확장을 통해 명령적으로만 추가할 수 있습니다.  
+> 이 특정 동작은 특성을 겸용하지 않으므로 서비스 유형의 계약 형식에 선언적으로 추가할 수 없습니다. 이 동작은 특성 선언에서 스키마 컬렉션을 로드할 수 없기 때문에 디자인에 따라 결정되며 이 특성의 추가 구성 위치(예: 애플리케이션 설정)를 참조하는 것은 나머지 서비스 모델 구성과 일치하지 않는 구성 요소를 만든다는 의미입니다. 따라서 이 동작은 코드와 서비스 모델 구성 확장을 통해 명령적으로만 추가할 수 있습니다.  
   
 ## <a name="adding-the-message-inspector-through-configuration"></a>구성을 통해 메시지 검사자 추가  
- 응용 프로그램 구성 파일에서 끝점에 대 한 사용자 지정 동작을 구성 하려면 서비스 모델에서 구현자를 통해에서 <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>파생 된 클래스로 표현 되는 구성 *확장 요소* 를 만들어야 합니다. 그런 다음 이 섹션에 설명된 다음 확장에 대해 표시된 대로 확장에 대한 서비스 모델의 구성 섹션에 이 확장을 추가해야 합니다.  
+ 응용 프로그램 구성 파일의 끝점에서 사용자 지정 동작을 구성 하려면 서비스 모델에서 구현자를 사용 하 여 <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>에서 파생 된 클래스로 표현 되는 구성 *확장 요소* 를 만들어야 합니다. 그런 다음 이 섹션에 설명된 다음 확장에 대해 표시된 대로 확장에 대한 서비스 모델의 구성 섹션에 이 확장을 추가해야 합니다.  
   
 ```xml  
 <system.serviceModel>  
@@ -273,7 +273,7 @@ public class SchemaValidationBehavior : IEndpointBehavior
 </system.serviceModel>  
 ```  
   
- 확장은 가장 일반적인 응용 프로그램이나 ASP.NET 구성 파일 또는 컴퓨터 구성 파일에서 추가할 수 있습니다.  
+ 확장은 가장 일반적인 애플리케이션이나 ASP.NET 구성 파일 또는 컴퓨터 구성 파일에서 추가할 수 있습니다.  
   
  구성 범위에 확장을 추가하면 다음 코드와 같이 동작 구성에 동작을 추가할 수 있습니다. 동작 구성은 필요에 따라 여러 엔드포인트에 적용할 수 있는 재사용 가능한 요소입니다. 여기에서 구성할 특정 동작은 <xref:System.ServiceModel.Description.IEndpointBehavior>를 구현하므로 이 동작은 구성 파일의 해당 구성 섹션에서만 유효합니다.  
   
@@ -299,7 +299,7 @@ public class SchemaValidationBehavior : IEndpointBehavior
   
  재정의된 `CreateBehavior` 메서드는 런타임에서 클라이언트나 엔드포인트를 빌드할 때 구성 데이터를 확인하여 동작 개체로 바꿉니다.  
   
-```  
+```csharp  
 public class SchemaValidationBehaviorExtensionElement : BehaviorExtensionElement  
 {  
     public SchemaValidationBehaviorExtensionElement()  
@@ -367,9 +367,9 @@ public bool ValidateRequest
 ```  
   
 ## <a name="adding-message-inspectors-imperatively"></a>명령으로 메시지 검사자 추가  
- 앞에서 설명한 이유로 인해 이 샘플에서 지원되지 않는 특성 및 구성이 아닌 동작은 명령 코드를 사용하여 클라이언트 및 서비스 런타임에 매우 쉽게 추가할 수 있습니다. 이 샘플에서는 클라이언트 응용 프로그램에서 이 작업을 수행하여 클라이언트 메시지 검사자를 테스트합니다. `GenericClient` 클래스는 엔드포인트 구성을 사용자 코드에 노출하는 <xref:System.ServiceModel.ClientBase%601>에서 파생됩니다. 예를 들어, 다음 코드와 같이 동작을 추가하면 클라이언트를 암시적으로 열기 전에 엔드포인트 구성을 변경할 수 있습니다. 서비스에서 동작을 추가하는 작업은 여기에 표시된 클라이언트 기술과 거의 동일하며 서비스 호스트를 열기 전에 수행해야 합니다.  
+ 앞에서 설명한 이유로 인해 이 샘플에서 지원되지 않는 특성 및 구성이 아닌 동작은 명령 코드를 사용하여 클라이언트 및 서비스 런타임에 매우 쉽게 추가할 수 있습니다. 이 샘플에서는 클라이언트 애플리케이션에서 이 작업을 수행하여 클라이언트 메시지 검사자를 테스트합니다. ph x="1" /&gt; 클래스는 엔드포인트 구성을 사용자 코드에 노출하는 <xref:System.ServiceModel.ClientBase%601>에서 파생됩니다. 예를 들어, 다음 코드와 같이 동작을 추가하면 클라이언트를 암시적으로 열기 전에 엔드포인트 구성을 변경할 수 있습니다. 서비스에서 동작을 추가하는 작업은 여기에 표시된 클라이언트 기술과 거의 동일하며 서비스 호스트를 열기 전에 수행해야 합니다.  
   
-```  
+```csharp  
 try  
 {  
     Console.WriteLine("*** Call 'Hello' with generic client, with client behavior");  
@@ -409,6 +409,6 @@ catch (Exception e)
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageInspectors`  

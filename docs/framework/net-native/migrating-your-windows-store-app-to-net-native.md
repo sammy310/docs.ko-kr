@@ -2,14 +2,14 @@
 title: Windows 스토어 앱을 .NET 네이티브로 마이그레이션
 ms.date: 03/30/2017
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
-ms.openlocfilehash: 7eea089ef9b492e156758d170394b17d74a60a64
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1942574e832ca7593d91c71370cc0af0c3051617
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128317"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73455618"
 ---
-# <a name="migrating-your-windows-store-app-to-net-native"></a>Windows 스토어 앱을 .NET 네이티브로 마이그레이션
+# <a name="migrate-your-windows-store-app-to-net-native"></a>.NET 네이티브로 Windows 스토어 앱 마이그레이션
 
 .NET 네이티브는 Windows 스토어 또는 개발자 컴퓨터에서 앱을 정적으로 컴파일하는 기능을 제공 합니다. 이 기능은 디바이스의 [네이티브 이미지 생성기(Ngen.exe)](../tools/ngen-exe-native-image-generator.md) 또는 JIT(Just-In-Time) 컴파일러가 Windows 스토어 앱에 대해 수행하는 동적 컴파일과는 다릅니다. 차이점에도 불구 하 고 .NET 네이티브는 [Windows 스토어 앱 용 .net과의](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29)호환성을 유지 하려고 합니다. 대부분의 경우 Windows 스토어 앱 용 .NET에서 작동 하는 작업은 .NET 네이티브 에서도 작동 합니다.  그러나 동작이 변경되는 경우도 있습니다. 이 문서에서는 다음과 같은 영역에서 Windows 스토어 앱 용 표준 .NET과 .NET 네이티브 간의 이러한 차이점에 대해 설명 합니다.
 
@@ -53,7 +53,7 @@ ms.locfileid: "73128317"
 
 예를 들어 데이터 바인딩을 사용하려면 앱이 속성 이름을 함수에 매핑할 수 있어야 합니다. Windows 스토어 앱용 .NET에서는 공용 언어 런타임이 리플렉션을 자동으로 사용하여 관리되는 형식 및 공개적으로 사용 가능한 네이티브 형식에 대해 이 기능을 제공합니다. .NET 네이티브에서 컴파일러는 데이터를 바인딩할 형식에 대 한 메타 데이터를 자동으로 포함 합니다.
 
-.NET 네이티브 컴파일러는 힌트 또는 지시문을 요구 하지 않고 작동 하는 <xref:System.Collections.Generic.List%601> 및 <xref:System.Collections.Generic.Dictionary%602>와 같은 일반적으로 사용 되는 제네릭 형식을 처리할 수도 있습니다. [동적](../../csharp/language-reference/keywords/dynamic.md) 키워드도 일정한 제한 내에서 지원됩니다.
+.NET 네이티브 컴파일러는 힌트 또는 지시문을 요구 하지 않고 작동 하는 <xref:System.Collections.Generic.List%601> 및 <xref:System.Collections.Generic.Dictionary%602>와 같은 일반적으로 사용 되는 제네릭 형식을 처리할 수도 있습니다. [동적](../../csharp/language-reference/builtin-types/reference-types.md#the-dynamic-type) 키워드도 일정한 제한 내에서 지원됩니다.
 
 > [!NOTE]
 > 앱을 .NET 네이티브로 이식할 때 모든 동적 코드 경로를 철저 하 게 테스트 해야 합니다.

@@ -2,17 +2,17 @@
 title: WS Transport With Message Credential
 ms.date: 03/30/2017
 ms.assetid: 0d092f3a-b309-439b-920b-66d8f46a0e3c
-ms.openlocfilehash: a2eade01ff3397d8f7ea790558909111c43b131d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: cc452ade4ef7d0d2d197f058d74ca0c3d0e0230d
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69959786"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423071"
 ---
 # <a name="ws-transport-with-message-credential"></a>WS Transport With Message Credential
 이 샘플에서는 메시지로 전달되는 클라이언트 자격 증명과 SSL 전송 보안을 조합하여 사용하는 방법을 보여 줍니다. 이 샘플에서는 `wsHttpBinding` 바인딩을 사용합니다.  
   
- 기본적으로 `wsHttpBinding` 바인딩은 HTTP 통신을 제공합니다. 전송 보안용으로 구성된 경우, 바인딩은 HTTPS 통신을 지원합니다. HTTPS는 통신을 통해 전송되는 메시지의 기밀성 및 무결성을 보호합니다. 하지만 서비스에 대한 클라이언트의 인증에 사용되는 인증 메커니즘은 HTTPS 전송에서 지원되는 범위로 제한됩니다. WCF (Windows Communication Foundation)는 이러한 `TransportWithMessageCredential` 제한을 극복 하기 위해 설계 된 보안 모드를 제공 합니다. 이 보안 모드가 구성되어 있으면 전송 보안을 사용하여 전송되는 메시지에 기밀성과 무결성을 제공하고 서비스 인증을 수행할 수 있습니다. 그러나 클라이언트 인증은 메시지에 직접 클라이언트 자격 증명을 추가 하 여 수행 됩니다. 그러면 전송 보안 모드의 성능 이점을 유지 하면서 클라이언트 인증에 대해 메시지 보안 모드에서 지 원하는 모든 자격 증명 형식을 사용할 수 있습니다.  
+ 기본적으로 `wsHttpBinding` 바인딩은 HTTP 통신을 제공합니다. 전송 보안용으로 구성된 경우, 바인딩은 HTTPS 통신을 지원합니다. HTTPS는 통신을 통해 전송되는 메시지의 기밀성 및 무결성을 보호합니다. 하지만 서비스에 대한 클라이언트의 인증에 사용되는 인증 메커니즘은 HTTPS 전송에서 지원되는 범위로 제한됩니다. WCF (Windows Communication Foundation)는 이러한 제한을 극복 하기 위해 설계 된 `TransportWithMessageCredential` 보안 모드를 제공 합니다. 이 보안 모드가 구성되어 있으면 전송 보안을 사용하여 전송되는 메시지에 기밀성과 무결성을 제공하고 서비스 인증을 수행할 수 있습니다. 그러나 클라이언트 인증은 메시지에 직접 클라이언트 자격 증명을 추가 하 여 수행 됩니다. 그러면 전송 보안 모드의 성능 이점을 유지 하면서 클라이언트 인증에 대해 메시지 보안 모드에서 지 원하는 모든 자격 증명 형식을 사용할 수 있습니다.  
   
  이 샘플에서는 `UserName` 자격 증명 형식을 사용하여 클라이언트를 서비스에 인증합니다.  
   
@@ -61,7 +61,7 @@ public string GetCallerIdentity()
   
  지정된 주소에서는 https:// 체계를 사용합니다. 바인딩 구성에서는 보안 모드를 `TransportWithMessageCredential`로 설정합니다. 서비스의 Web.config 파일에도 같은 보안 모드를 지정해야 합니다.  
   
- 이 샘플에 사용 된 인증서는 makecert.exe를 사용 하 여 만든 테스트 인증서 이므로 브라우저에서와 `https://localhost/servicemodelsamples/service.svc`같은 https: 주소에 액세스 하려고 하면 보안 경고가 나타납니다. WCF 클라이언트가 테스트 인증서를 사용 하 여 작동 하도록 허용 하기 위해 일부 추가 코드를 클라이언트에 추가 하 여 보안 경고를 표시 하지 않습니다. 이 코드 및 함께 사용되는 클래스는 프로덕션 인증서를 사용할 때에는 필요가 없습니다.  
+ 이 샘플에 사용 된 인증서는 Makecert.exe를 사용 하 여 만든 테스트 인증서 이므로 브라우저에서 `https://localhost/servicemodelsamples/service.svc`와 같은 https: 주소에 액세스 하려고 하면 보안 경고가 나타납니다. WCF 클라이언트가 테스트 인증서를 사용 하 여 작동 하도록 허용 하기 위해 일부 추가 코드를 클라이언트에 추가 하 여 보안 경고를 표시 하지 않습니다. 이 코드 및 함께 사용되는 클래스는 프로덕션 인증서를 사용할 때에는 필요가 없습니다.  
 
 ```csharp
 // WARNING: This code is only needed for test certificates such as those created by makecert. It is   
@@ -71,7 +71,7 @@ PermissiveCertificatePolicy.Enact("CN=ServiceModelSamples-HTTPS-Server");
   
  샘플을 실행하면 작업 요청 및 응답이 클라이언트 콘솔 창에 표시됩니다. 클라이언트를 종료하려면 클라이언트 창에서 Enter 키를 누릅니다.  
   
-```  
+```console  
 Username authentication required.  
 Provide a valid machine or domain account. [domain\\user]  
    Enter username:   

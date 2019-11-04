@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - private keyword [C#]
 ms.assetid: 654c0bb8-e6ac-4086-bf96-7474fa6aa1c8
-ms.openlocfilehash: a20c0a6fd729c2fc34449167eb92cb774bc3b84e
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 19e2925cd65cc9c68ff50d370398a4f401275940
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69602018"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422600"
 ---
 # <a name="private-c-reference"></a>private(C# 참조)
 
@@ -45,7 +45,7 @@ class Employee
 
 ## <a name="c-language-specification"></a>C# 언어 사양  
 
-자세한 내용은 [C# 언어 사양](../language-specification/index.md)의 [선언된 내게 필요한 옵션](~/_csharplang/spec/basic-concepts.md#declared-accessibility)을 참조하세요. C# 언어 사양은 C# 구문 및 사용법에 대한 신뢰할 수 있는 소스입니다.
+자세한 내용은 [C# 언어 사양](/dotnet/csharp/language-reference/language-specification/introduction)의 [선언된 내게 필요한 옵션](~/_csharplang/spec/basic-concepts.md#declared-accessibility)을 참조하세요. C# 언어 사양은 C# 구문 및 사용법에 대한 신뢰할 수 있는 소스입니다.
 
 ## <a name="see-also"></a>참고 항목
 
@@ -54,7 +54,7 @@ class Employee
 - [C# 키워드](index.md)
 - [액세스 한정자](access-modifiers.md)
 - [액세스 수준](accessibility-levels.md)
-- [한정자](modifiers.md)
+- [한정자](index.md)
 - [public](public.md)
 - [protected](protected.md)
 - [internal](internal.md)

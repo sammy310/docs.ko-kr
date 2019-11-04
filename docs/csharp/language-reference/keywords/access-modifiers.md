@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - access modifiers [C#]
 ms.assetid: 61c3fa51-c00f-48cb-9b49-c805dedd62d7
-ms.openlocfilehash: 5568d79c4a13b7b0db5a46bb4ebb2168ea66a2c9
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 7dfbc103b3fd0ebf8c349bd36dc54915782eb807
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69606101"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422932"
 ---
 # <a name="access-modifiers-c-reference"></a>액세스 한정자(C# 참조)
 액세스 한정자는 멤버 또는 형식의 선언된 접근성을 지정하는 데 사용되는 키워드입니다. 이 섹션에서는 다음 네 가지 액세스 한정자를 소개합니다.  
@@ -48,5 +48,5 @@ ms.locfileid: "69606101"
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)
 - [C# 키워드](./index.md)
 - [액세스 한정자](../../programming-guide/classes-and-structs/access-modifiers.md)
-- [액세스 키워드](./access-keywords.md)
-- [한정자](./modifiers.md)
+- [액세스 키워드](base.md)
+- [한정자](index.md)

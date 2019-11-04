@@ -31,21 +31,22 @@ helpviewer_keywords:
 - ConnectionClosed enumeration member
 - SecureChannelFailure enumeration member
 ms.assetid: 657141cd-5cf5-4fdb-a4b2-4c040eba84b5
-ms.openlocfilehash: bb478f0742e85cadd9509de823abb0d486170d37
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 7084c4579dd5fca0075c7516754195f7cea9e27c
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71048505"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458045"
 ---
 # <a name="handling-errors"></a>오류 처리
+
 <xref:System.Net.WebRequest> 및 <xref:System.Net.WebResponse> 클래스는 시스템 예외(예: <xref:System.ArgumentException>) 및 웹 관련 예외(<xref:System.Net.WebRequest.GetResponse%2A> 메서드에서 throw된 <xref:System.Net.WebException>)를 둘 다 throw합니다.  
   
- 각 **WebException**에는 <xref:System.Net.WebExceptionStatus> 열거형의 값을 포함하는 <xref:System.Net.WebException.Status%2A> 속성이 포함됩니다. **Status** 속성을 검사하여 발생한 오류를 확인하고 적절한 단계를 수행하여 오류를 해결할 수 있습니다.  
+각 **WebException**에는 <xref:System.Net.WebExceptionStatus> 열거형의 값을 포함하는 <xref:System.Net.WebException.Status%2A> 속성이 포함됩니다. **Status** 속성을 검사하여 발생한 오류를 확인하고 적절한 단계를 수행하여 오류를 해결할 수 있습니다.  
   
- 다음 표에서는 **Status** 속성의 가능한 값을 설명합니다.  
+다음 표에서는 **Status** 속성의 가능한 값을 설명합니다.  
   
-|상태|설명|  
+|Status|설명|  
 |------------|-----------------|  
 |ConnectFailure|원격 서비스가 전송 수준에서 연결될 수 없습니다.|  
 |ConnectionClosed|연결이 조기에 닫혔습니다.|  
@@ -66,9 +67,9 @@ ms.locfileid: "71048505"
 |ProxyNameResolutionFailure|이름 확인자 서비스가 프록시 호스트 이름을 확인할 수 없습니다.|  
 |UnknownError|알 수 없는 형식의 예외가 발생했습니다.|  
   
- **Status** 속성이 **WebExceptionStatus.ProtocolError**이면 서버의 응답이 포함된 **WebResponse**를 사용할 수 있습니다. 이 응답을 검사하여 프로토콜 오류의 실제 소스를 확인합니다.  
+**Status** 속성이 **WebExceptionStatus.ProtocolError**이면 서버의 응답이 포함된 **WebResponse**를 사용할 수 있습니다. 이 응답을 검사하여 프로토콜 오류의 실제 소스를 확인합니다.  
   
- 다음 예제에서는 **WebException**을 catch하는 방법을 보여 줍니다.  
+다음 예제에서는 **WebException**을 catch하는 방법을 보여 줍니다.  
   
 ```csharp  
 try   
@@ -163,11 +164,11 @@ Catch e As Exception
 End Try  
 ```  
   
- <xref:System.Net.Sockets.Socket> 클래스를 사용하는 애플리케이션은 Windows 소켓에서 오류가 발생할 경우 <xref:System.Net.Sockets.SocketException>을 throw합니다. <xref:System.Net.Sockets.TcpClient>, <xref:System.Net.Sockets.TcpListener> 및 <xref:System.Net.Sockets.UdpClient> 클래스는 **Socket** 클래스의 맨 위에 빌드되고 **SocketExceptions**도 throw합니다.  
+<xref:System.Net.Sockets.Socket> 클래스를 사용하는 애플리케이션은 Windows 소켓에서 오류가 발생할 경우 <xref:System.Net.Sockets.SocketException>을 throw합니다. <xref:System.Net.Sockets.TcpClient>, <xref:System.Net.Sockets.TcpListener> 및 <xref:System.Net.Sockets.UdpClient> 클래스는 **Socket** 클래스의 맨 위에 빌드되고 **SocketExceptions**도 throw합니다.  
   
- **SocketException**이 throw되면 **SocketException** 클래스는 마지막으로 발생한 운영 체제 소켓 오류로 <xref:System.Net.Sockets.SocketException.ErrorCode%2A> 속성을 설정합니다. 소켓 오류 코드에 대한 자세한 내용은 MSDN에서 Winsock 2.0 API 오류 코드 문서를 참조하세요.  
+**SocketException**이 throw되면 **SocketException** 클래스는 마지막으로 발생한 운영 체제 소켓 오류로 <xref:System.Net.Sockets.SocketException.ErrorCode%2A> 속성을 설정합니다. 소켓 오류 코드에 대한 자세한 내용은 MSDN에서 Winsock 2.0 API 오류 코드 문서를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목
 
-- [예외 처리 기본 사항](../../standard/exceptions/exception-handling-fundamentals.md)
+- [.NET의 예외 처리 및 Throw](../../standard/exceptions/index.md)
 - [데이터 요청](requesting-data.md)

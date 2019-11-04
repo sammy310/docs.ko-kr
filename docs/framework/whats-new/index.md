@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: 2f9d1c7835c95c904104a165a556b8d527343c30
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: be6f6b2d2213e96bc4e695ffbf7bc77f755ed492
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197778"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454992"
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework의 새로운 기능
 
@@ -1264,7 +1264,7 @@ ClickOnce는 이미 지원되는 1.0 프로토콜 외에 TLS 1.1 및 TLS 1.2를 
 
 - [.NET Framework 4.6.1 변경 내용 목록](https://go.microsoft.com/fwlink/?LinkId=622964)
 
-- [4.6.1의 애플리케이션 호환성](../migration-guide/application-compatibility-in-the-net-framework-4-6-1.md)
+- [4.6.1의 애플리케이션 호환성](../migration-guide/application-compatibility.md)
 
 - [.NET Framework API 차이점](https://go.microsoft.com/fwlink/?LinkId=622989)(GitHub에서)
 
@@ -1691,7 +1691,7 @@ Ngen PDB를 사용하면 NGen이 IL PDB에 대한 종속성 없이 IL-네이티�
 
   기본값은 60초입니다. `value`가 0으로 설정되면 순서가 잘못된 요청은 다음과 같은 텍스트의 오류로 인해 즉시 거부됩니다.
 
-  ```
+  ```console
   Operation 'Request3|{http://tempuri.org/}IService' on service instance with identifier '2b0667b6-09c8-4093-9d02-f6c67d534292' cannot be performed at this time. Please ensure that the operations are performed in the correct order and that the binding in use provides ordered delivery guarantees.
   ```
 
@@ -1970,7 +1970,7 @@ ASP.NET 4.5.1의 새로운 기능은 [Visual Studio 2013용 ASP.NET 및 Web Tool
 
 ### <a name="web"></a>웹
 
-ASP.NET 4.5 및 4.5.1은 Web Forms, WebSocket 지원, 비동기 처리기, 성능 향상 및 기타 많은 기능을 바인딩하는 모델을 추가합니다. 자세한 내용은 다음 리소스를 참조하십시오.
+ASP.NET 4.5 및 4.5.1은 Web Forms, WebSocket 지원, 비동기 처리기, 성능 향상 및 기타 많은 기능을 바인딩하는 모델을 추가합니다. 자세한 내용은 다음 자료를 참조하세요.
 
 - [ASP.NET 4.5 및 Visual Studio 2012](https://docs.microsoft.com/previous-versions/aspnet/hh420390(v=vs.110))
 

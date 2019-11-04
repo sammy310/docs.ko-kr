@@ -1,5 +1,5 @@
 ---
-title: '방법: Windows Forms에서 컨트롤 크기 조정'
+title: '방법: Windows Forms에서 컨트롤의 크기 조정'
 ms.date: 03/30/2017
 f1_keywords:
 - Size.Height
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - size [Windows Forms], controls
 - Windows Forms controls, size
 ms.assetid: d2dba441-a8c0-4705-b8e8-2e5d86d6e7ec
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 7e659bf02ea079afc10561e1d83f7ab7cef29a2e
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 3aacc9434199eb7881e362a67e1fe0c08784c4a7
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69987048"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459548"
 ---
 # <a name="how-to-resize-controls-on-windows-forms"></a>방법: Windows Forms에서 컨트롤 크기 조정
 
@@ -36,7 +36,7 @@ Visual Studio에서 크기를 조정할 컨트롤을 선택 하 고 8 개의 크
 
 2. **서식** 메뉴에서 **같은 크기로 설정**을 선택 하 고 네 가지 옵션 중 하나를 선택 합니다. 처음 세 명령은 첫 번째 선택 된 컨트롤과 일치 하도록 컨트롤의 크기를 변경 합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [Windows Forms 컨트롤](index.md)
 - [개별 Windows Forms 컨트롤 레이블 지정 및 바로 가기 제공](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)

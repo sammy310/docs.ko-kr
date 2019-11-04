@@ -2,15 +2,15 @@
 title: 메시지 큐에 대한 메시지 보안
 ms.date: 03/30/2017
 ms.assetid: 329aea9c-fa80-45c0-b2b9-e37fd7b85b38
-ms.openlocfilehash: 039ec21296392321fec40df2cae7383ccb3be6ea
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: d27ee01636e37ac8f09c4f7dc497f14bfac1b0f1
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039348"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424115"
 ---
 # <a name="message-security-over-message-queuing"></a>메시지 큐에 대한 메시지 보안
-이 샘플에서는 클라이언트에 대해 X.509v3 인증서를 통한 WS-Security 인증을 사용하며 MSMQ를 통해 서버의 X.509v3 인증서를 사용한 서버 인증을 수행해야 하는 응용 프로그램의 구현 방법을 보여 줍니다. 메시지 보안에서는 MSMQ 저장소에 있는 메시지의 암호화가 유지되며 응용 프로그램에서 메시지의 자체 인증을 수행할 수 있도록 하는 것이 더 좋습니다.
+이 샘플에서는 클라이언트에 대해 X.509v3 인증서를 통한 WS-Security 인증을 사용하며 MSMQ를 통해 서버의 X.509v3 인증서를 사용한 서버 인증을 수행해야 하는 애플리케이션의 구현 방법을 보여 줍니다. 메시지 보안에서는 MSMQ 스토리지에 있는 메시지의 암호화가 유지되며 애플리케이션에서 메시지의 자체 인증을 수행할 수 있도록 하는 것이 더 좋습니다.
 
  이 샘플은 [트랜잭션 된 MSMQ 바인딩](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) 샘플을 기반으로 합니다. 메시지가 암호화되고 서명됩니다.
 
@@ -28,7 +28,7 @@ ms.locfileid: "70039348"
 
     4. **트랜잭션** 상자를 확인 합니다.
 
-    5. 새 `ServiceModelSamplesTransacted` 큐의 이름으로을 입력 합니다.
+    5. 새 큐 이름으로 `ServiceModelSamplesTransacted`을 입력 합니다.
 
 3. C# 또는 Visual Basic .NET 버전의 솔루션을 빌드하려면 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)의 지침을 따릅니다.
 
@@ -55,9 +55,9 @@ ms.locfileid: "70039348"
   
 3. 클라이언트 프로그램 파일을 클라이언트 컴퓨터의 클라이언트 디렉터리로 복사합니다. Setup.bat, Cleanup.bat 및 ImportServiceCert.bat 파일도 클라이언트로 복사합니다.  
   
-4. 서버에서 `setup.bat service`를 실행합니다. 인수`service` 를 사용 하 여를 실행 하면 컴퓨터의 정규화 된 도메인 이름으로 서비스 인증서가 생성 되 `setup.bat` 고 서비스 인증서가 이름이 .cer 인 파일로 내보내집니다.  
+4. 서버에서 `setup.bat service`를 실행합니다. `service` 인수를 사용 하 여 `setup.bat`를 실행 하면 컴퓨터의 정규화 된 도메인 이름으로 서비스 인증서가 생성 되 고 서비스 인증서가 이름이 .cer 인 파일로 내보내집니다.  
   
-5. 컴퓨터의 정규화 된 도메인 이름과 같은 새 인증서 이름 ( `findValue` [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)특성에서)을 반영 하도록 서비스의 setup.exe를 편집 합니다.  
+5. 컴퓨터의 정규화 된 도메인 이름과 같은 새 인증서 이름 ( [\<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)의 `findValue` 특성)을 반영 하도록 서비스의 서비스의 setup.exe를 편집 합니다.  
   
 6. 서비스 디렉터리에서 클라이언트 컴퓨터의 클라이언트 디렉터리로 Service.cer 파일을 복사합니다.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "70039348"
 - 샘플 실행을 완료했으면 샘플 폴더에서 Cleanup.bat를 실행합니다.  
   
     > [!NOTE]
-    > 다중 컴퓨터 구성에서 이 샘플을 실행할 경우에는 이 스크립트로 클라이언트의 서비스 인증서를 제거할 수 없습니다. 컴퓨터에서 인증서를 사용 하는 WCF (Windows Communication Foundation) 샘플을 실행 한 경우에는 CurrentUser-비트 사용자 저장소에 설치 된 서비스 인증서를 지워야 합니다. 이렇게 하려면 다음 명령을 사용 합니다. `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`예를 들면 `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`와 같습니다.
+    > 다중 컴퓨터 구성에서 이 샘플을 실행할 경우에는 이 스크립트로 클라이언트의 서비스 인증서를 제거할 수 없습니다. 컴퓨터에서 인증서를 사용 하는 WCF (Windows Communication Foundation) 샘플을 실행 한 경우에는 CurrentUser-비트 사용자 저장소에 설치 된 서비스 인증서를 지워야 합니다. 이를 수행하려면 `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` 명령을 사용합니다(예: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`).
 
 ## <a name="requirements"></a>요구 사항
  이 샘플을 실행하려면 MSMQ가 설치되어 실행 중이어야 합니다.
@@ -90,7 +90,7 @@ ms.locfileid: "70039348"
 
  Windows Communication Foundation (WCF) 메시지는 MSMQ 메시지 본문에서 페이로드로 전달 되기 때문에 본문은 MSMQ 저장소에서 암호화 된 상태로 유지 됩니다. 그러면 원치 않는 노출로부터 메시지를 보호할 수 있습니다. MSMQ 자체에서는 전달하는 메시지의 암호화 여부를 인식하지 못합니다.
 
- 샘플에서는 MSMQ에서 메시지 수준의 상호 인증을 사용하는 방법을 보여 줍니다. 인증서는 out-of-band로 교환됩니다. 대기 중인 응용 프로그램의 경우에는 서비스와 클라이언트가 동시에 실행 중이어야 할 필요가 없기 때문에 항상 적용됩니다.
+ 샘플에서는 MSMQ에서 메시지 수준의 상호 인증을 사용하는 방법을 보여 줍니다. 인증서는 out-of-band로 교환됩니다. 대기 중인 애플리케이션의 경우에는 서비스와 클라이언트가 동시에 실행 중이어야 할 필요가 없기 때문에 항상 적용됩니다.
 
 ## <a name="description"></a>설명
  샘플 클라이언트 및 서비스 코드는 한 가지 차이점이 있는 [트랜잭션 된 MSMQ 바인딩](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) 샘플과 같습니다. 작업 계약에는 보호 수준에서 주석을 달아야 하기 때문에 메시지에 서명과 암호화가 필요합니다.
@@ -167,7 +167,7 @@ public interface IOrderProcessor
 
  보안 모드는 Message로 설정되며 ClientCredentialType은 Certificate로 설정됩니다.
 
- 서비스 구성에는 클라이언트에서 서비스를 인증할 때 사용된 서비스의 자격 증명을 지정하는 서비스 동작이 포함됩니다. 서버 인증서 주체 이름은 `findValue` [ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)의 특성에 지정 됩니다.
+ 서비스 구성에는 클라이언트에서 서비스를 인증할 때 사용된 서비스의 자격 증명을 지정하는 서비스 동작이 포함됩니다. 서버 인증서 주체 이름은 [\<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)의 `findValue` 특성에 지정 됩니다.
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -271,7 +271,7 @@ public class OrderProcessorService : IOrderProcessor
 
  서비스 코드를 실행하면 클라이언트 ID가 표시됩니다. 다음은 서비스 코드의 출력 샘플입니다.
 
-```
+```console
 The service is ready.
 Press <ENTER> to terminate service.
 
@@ -285,7 +285,7 @@ Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
         Order status: Pending
 ```
 
-## <a name="comments"></a>설명
+## <a name="comments"></a>주석
 
 - 클라이언트 인증서 만들기
 
@@ -300,7 +300,7 @@ Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
 
 - 서버의 신뢰할 수 있는 인증서 저장소에 클라이언트 인증서 설치.
 
-     배치 파일의 다음 줄에서는 서버에서 관련된 신뢰 여부를 결정할 수 있도록 서버의 TrustedPeople 저장소에 클라이언트 인증서를 복사합니다. 신뢰할 수 있는 사용자 저장소에 설치 된 인증서를 WCF (Windows Communication Foundation) 서비스에서 신뢰할 수 있도록 하려면 클라이언트 인증서 유효성 검사 모드를 또는 `PeerOrChainTrust` `PeerTrust` 값으로 설정 해야 합니다. 구성 파일을 사용하여 이런 작업을 수행하는 방법을 보려면 앞서 소개된 서비스 구성 샘플을 참조하십시오.
+     배치 파일의 다음 줄에서는 서버에서 관련된 신뢰 여부를 결정할 수 있도록 서버의 TrustedPeople 저장소에 클라이언트 인증서를 복사합니다. 신뢰할 수 있는 사용자 저장소에 설치 된 인증서를 WCF (Windows Communication Foundation) 서비스에서 신뢰 하려면 클라이언트 인증서 유효성 검사 모드를 `PeerOrChainTrust` 또는 `PeerTrust` 값으로 설정 해야 합니다. 구성 파일을 사용하여 이런 작업을 수행하는 방법을 보려면 앞서 소개된 서비스 구성 샘플을 참조하십시오.
 
     ```bat
     echo ************
@@ -329,18 +329,18 @@ Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
 
      다음 줄은 클라이언트의 신뢰할 수 있는 사용자 저장소에 서버 인증서를 복사합니다. 이 단계는 Makecert.exe에서 생성한 인증서를 클라이언트 컴퓨터에서 절대적으로 신뢰하지는 않기 때문에 필요합니다. Microsoft에서 발급한 인증서와 같이 클라이언트가 신뢰할 수 있는 루트 인증서를 기반으로 하는 인증서가 이미 있는 경우 클라이언트 인증서 저장소를 서버 인증서로 채우는 이 단계를 수행할 필요가 없습니다.
 
-    ```
+    ```console
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople
     ```
 
     > [!NOTE]
-    > 미국 영어 버전이 아닌 Microsoft Windows 버전을 사용하는 경우 Setup.bat 파일을 편집하여 "NT AUTHORITY\NETWORK SERVICE" 계정 이름을 해당 국가별 계정 이름으로 바꿔야 합니다.
+    > 영어가 아닌 버전의 Microsoft Windows를 사용 하는 경우에는 Setup.exe 파일을 편집 하 고 "NT AUTHORITY\NETWORK SERVICE" 계정 이름을 해당 지역으로 바꾸어야 합니다.
 
 > [!IMPORTANT]
 > 컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\MessageSecurity`  

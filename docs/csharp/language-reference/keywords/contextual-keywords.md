@@ -5,12 +5,12 @@ ms.date: 03/07/2017
 helpviewer_keywords:
 - contextual keywords [C#]
 ms.assetid: 7c76bc29-a754-4389-b0ab-f6b441018298
-ms.openlocfilehash: d16d8fee58f4480bc83da884caf0ff15981b09af
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: 9197ebb1fa48011c60a6d224497e57a604870fc3
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168613"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422864"
 ---
 # <a name="contextual-keywords-c-reference"></a>상황별 키워드(C# 참조)
 
@@ -21,7 +21,7 @@ ms.locfileid: "70168613"
 |[add](./add.md)|클라이언트 코드가 이벤트를 구독할 때 호출되는 사용자 지정 이벤트 접근자를 정의합니다.|  
 |[async](./async.md)|수정된 메서드, 람다 식 또는 무명 메서드가 비동기임을 나타냅니다.|  
 |[await](../operators/await.md)|대기 작업이 완료될 때까지 비동기 메서드를 일시 중단합니다.|  
-|[dynamic](./dynamic.md)|컴파일 시간 형식 검사를 우회하기 위해 수행하는 작업을 가능하게 하는 참조 형식을 정의합니다.|  
+|[dynamic](../builtin-types/reference-types.md)|컴파일 시간 형식 검사를 우회하기 위해 수행하는 작업을 가능하게 하는 참조 형식을 정의합니다.|  
 |[get](./get.md)|속성 또는 인덱서에 대한 접근자 메서드를 정의합니다.|  
 |[global](../operators/namespace-alias-qualifier.md)|별도로 명명되지 않은 전역 네임스페이스의 별칭입니다.|  
 |[partial](./partial-type.md)|같은 컴파일 단위 전체에서 partial 클래스, 구조체 및 인터페이스를 정의합니다.|  

@@ -1,15 +1,15 @@
 ---
-title: 하나가 (Visual Basic) 완료 되 면 남은 비동기 작업 취소
+title: 비동기 작업 하나가 완료 되 면 남은 비동기 작업 취소 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: c928b5a1-622f-4441-8baf-adca1dde197f
-ms.openlocfilehash: 587c863ba110f035ace5207d8404fd70b3befe37
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 329c1eb738f065ae34540e9980c80d44248da05c
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64755824"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419793"
 ---
-# <a name="cancel-remaining-async-tasks-after-one-is-complete-visual-basic"></a>하나가 (Visual Basic) 완료 되 면 남은 비동기 작업 취소
+# <a name="cancel-remaining-async-tasks-after-one-is-complete-visual-basic"></a>비동기 작업 하나가 완료 되 면 남은 비동기 작업 취소 (Visual Basic)
 
 <xref:System.Threading.CancellationToken>과 함께 <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> 메서드를 사용하면 한 작업이 완료될 때 나머지 작업을 모두 취소할 수 있습니다. `WhenAny` 메서드는 작업의 컬렉션인 인수를 사용합니다. 메서드는 모든 작업을 시작하고 단일 작업을 반환합니다. 컬렉션의 임의 작업이 완료되면 단일 작업이 완료됩니다.
 
@@ -20,7 +20,7 @@ ms.locfileid: "64755824"
 
 ## <a name="downloading-the-example"></a>예제 다운로드
 
-[Async 샘플: 애플리케이션 미세 조정](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)에서 WPF(Windows Presentation Foundation) 프로젝트를 다운로드한 후, 다음 단계를 수행합니다.
+[Async 샘플: 애플리케이션 세부 조정](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)에서 전체 WPF(Windows Presentation Foundation) 프로젝트를 다운로드한 후 다음 단계를 따를 수 있습니다.
 
 1. 다운로드한 파일의 압축을 푼 다음 Visual Studio를 시작합니다.
 
@@ -40,11 +40,11 @@ ms.locfileid: "64755824"
 
 ## <a name="building-the-example"></a>예제 빌드
 
-이 항목의 예제에서 개발 된 프로젝트에 추가 [비동기 작업 또는 작업 목록 취소](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md) 작업 목록을 취소 합니다. **취소** 단추는 명시적으로 사용되지 않지만 예제에서는 같은 UI를 사용합니다.
+이 항목의 예제에서는 [비동기 작업 취소 또는](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md) 작업 목록 취소에서 개발 된 프로젝트에 추가 합니다. **취소** 단추는 명시적으로 사용되지 않지만 예제에서는 같은 UI를 사용합니다.
 
 직접 예제를 빌드하려면 "예제 다운로드" 섹션의 지침을 단계별로 따르되, **CancelAListOfTasks**를 **시작 프로젝트**로 선택합니다. 이 항목의 변경 내용을 해당 프로젝트에 추가합니다.
 
-MainWindow.xaml.vb 파일에는 **CancelAListOfTasks** 프로젝트를에서 루프의 각 웹 사이트에 대 한 처리 단계를 이동 하 여 전환을 시작 `AccessTheWebAsync` 다음 비동기 메서드로 합니다.
+**Cancelalistoftasks** 프로젝트의 mainwindow.xaml 파일에서 각 웹 사이트에 대 한 처리 단계를 `AccessTheWebAsync`의 루프에서 다음 비동기 메서드로 이동 하 여 전환을 시작 합니다.
 
 ```vb
 ' ***Bundle the processing steps for a website into one async method.
@@ -100,18 +100,18 @@ End Function
 
     ```vb
     Dim length = Await firstFinishedTask
-    resultsTextBox.Text &= String.Format(vbCrLf & "Length of the downloaded website:  {0}" & vbCrLf, length)
+    resultsTextBox.Text &= vbCrLf & $"Length of the downloaded website:  {length}" & vbCrLf
     ```
 
 프로그램을 여러 번 실행하여 다른 다운로드가 먼저 완료되는지 확인합니다.
 
 ## <a name="complete-example"></a>완성된 예제
 
-다음 코드는 예제의 전체 MainWindow.xaml.vb 또는 MainWindow.xaml.cs 파일입니다. 별표는 이 예제에 대해 추가된 요소를 표시합니다.
+다음 코드는 예제의 전체 Mainwindow.xaml 또는 MainWindow.xaml.cs 파일입니다. 별표는 이 예제에 대해 추가된 요소를 표시합니다.
 
 <xref:System.Net.Http>에 대한 참조를 추가해야 합니다.
 
-[비동기 샘플: 애플리케이션 미세 조정](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)에서 프로젝트를 다운로드할 수 있습니다.
+[Async 샘플: 애플리케이션 미세 조정](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)에서 프로젝트를 다운로드할 수 있습니다.
 
 ```vb
 ' Add an Imports directive and a reference for System.Net.Http.
@@ -175,7 +175,7 @@ Class MainWindow
         ''    Dim urlContents As Byte() = Await response.Content.ReadAsByteArrayAsync()
 
         ''    resultsTextBox.Text &=
-        ''        String.Format(vbCrLf & "Length of the downloaded string: {0}." & vbCrLf, urlContents.Length)
+        ''        vbCrLf & $"Length of the downloaded string: {urlContents.Length}." & vbCrLf
         ''Next
 
         ' ***Create a query that, when executed, returns a collection of tasks.
@@ -196,7 +196,7 @@ Class MainWindow
         ' Run the program several times to demonstrate that different
         ' websites can finish first.
         Dim length = Await firstFinishedTask
-        resultsTextBox.Text &= String.Format(vbCrLf & "Length of the downloaded website:  {0}" & vbCrLf, length)
+        resultsTextBox.Text &= vbCrLf & $"Length of the downloaded website:  {length}" & vbCrLf
     End Function
 
     ' ***Bundle the processing steps for a website into one async method.
@@ -236,9 +236,9 @@ End Class
 ' Download complete.
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Threading.Tasks.Task.WhenAny%2A>
-- [Async 응용 프로그램 미세 조정(Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)
+- [Async 애플리케이션 미세 조정(Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)
 - [Async 및 Await를 사용한 비동기 프로그래밍(Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
-- [비동기 샘플: 애플리케이션 미세 조정](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
+- [Async 샘플: 애플리케이션 미세 조정](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

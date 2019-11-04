@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
-ms.openlocfilehash: cac7a7552d1a24480d614b7b90fdd8cf0ef8a3e8
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 04183b2404d26c783e14dc6f4cb4141bab0d7621
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197795"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424429"
 ---
 # <a name="building-a-wpf-application-wpf"></a>WPF 애플리케이션 빌드(WPF)
 
@@ -136,13 +136,13 @@ End Sub
 
 빌드 프로세스가 끝날 때 응용 프로그램 어셈블리와 콘텐츠 파일이 모두 준비 되 면 응용 프로그램에 대 한 ClickOnce 매니페스트가 생성 됩니다.
 
-배포 매니페스트 파일은 배포 모델, 즉 현재 버전, 업데이트 동작 및 게시자 ID를 디지털 시그니처와 함께 설명합니다. 이 매니페스트는 배포를 처리하는 관리자가 작성합니다. 파일 확장명은 .xbap([!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)])이며 설치된 애플리케이션의 경우 .application입니다. .xbap는 `HostInBrowser` 프로젝트 속성에 의해 지정되며 그 결과 매니페스트는 애플리케이션이 브라우저에 호스트되는 것으로 식별합니다.
+배포 매니페스트 파일은 배포 모델, 즉 현재 버전, 업데이트 동작 및 게시자 ID를 디지털 시그니처와 함께 설명합니다. 이 매니페스트는 배포를 처리하는 관리자가 작성합니다. 파일 확장명은 xbap (XAML 브라우저 응용 프로그램 (Xbap)의 경우)이 고, 설치 된 응용 프로그램의 경우 응용 프로그램입니다. .xbap는 `HostInBrowser` 프로젝트 속성에 의해 지정되며 그 결과 매니페스트는 애플리케이션이 브라우저에 호스트되는 것으로 식별합니다.
 
 애플리케이션 매니페스트(.exe.manifest 파일)는 애플리케이션 어셈블리 및 종속 라이브러리를 설명하고 애플리케이션에 필요한 사용 권한을 나열합니다. 이 파일은 애플리케이션 개발자가 작성합니다. ClickOnce 응용 프로그램을 시작 하기 위해 사용자는 응용 프로그램의 배포 매니페스트 파일을 엽니다.
 
-이러한 매니페스트 파일은 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]에 대해 항상 만들어집니다. 설치된 애플리케이션의 경우 프로젝트 파일에서 `GenerateManifests` 속성 값이 `true`로 지정되지 않는 한 만들어지지 않습니다.
+이러한 매니페스트 파일은 항상 Xbap에 대해 만들어집니다. 설치된 애플리케이션의 경우 프로젝트 파일에서 `GenerateManifests` 속성 값이 `true`로 지정되지 않는 한 만들어지지 않습니다.
 
-[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 일반적인 인터넷 영역 응용 프로그램에 할당 된 사용 권한 (<xref:System.Security.Permissions.WebBrowserPermission> 및 <xref:System.Security.Permissions.MediaPermission>에 대 한 두 가지 추가 권한을 얻을 수 있습니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 빌드 시스템은 애플리케이션 매니페스트에서 이러한 사용 권한을 선언합니다.
+Xbap는 일반적인 인터넷 영역 응용 프로그램에 할당 된 권한 (<xref:System.Security.Permissions.WebBrowserPermission> 및 <xref:System.Security.Permissions.MediaPermission>에 대 한 두 가지 추가 권한을 얻습니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 빌드 시스템은 애플리케이션 매니페스트에서 이러한 사용 권한을 선언합니다.
 
 <a name="Incremental_Build_Support"></a>
 

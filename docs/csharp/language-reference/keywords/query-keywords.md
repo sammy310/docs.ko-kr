@@ -6,12 +6,12 @@ helpviewer_keywords:
 - query keywords [C#]
 - LINQ [C#], query keywords
 ms.assetid: 6c9bec16-dbd7-4a7c-a060-fe4600b2021f
-ms.openlocfilehash: ed931871e8abbfd9ff421a1307fb21c3490493fb
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 44af3bf1a7c013c16c7b4a4528c3516621bea149
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69608460"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422542"
 ---
 # <a name="query-keywords-c-reference"></a>쿼리 키워드(C# 참조)
 
@@ -23,7 +23,7 @@ ms.locfileid: "69608460"
 |------------|-----------------|
 |[from](from-clause.md)|데이터 소스와 범위 변수(반복 변수와 유사함)를 지정합니다.|
 |[where](where-clause.md)|논리적 AND 및 OR 연산자(`&&` 또는 <code>&#124;&#124;</code>)로 구분된 하나 이상의 부울 식을 기준으로 소스 요소를 필터링합니다.|
-|[select](select-clause.md)|쿼리를 실행할 때 반환된 시퀀스의 요소에 사용할 형식 및 모양을 지정합니다.|
+|[선택](select-clause.md)|쿼리를 실행할 때 반환된 시퀀스의 요소에 사용할 형식 및 모양을 지정합니다.|
 |[group](group-clause.md)|지정된 키 값에 따라 쿼리 결과를 그룹화합니다.|
 |[into](into.md)|join, group 또는 select 절의 결과에 대한 참조로 사용할 수 있는 식별자를 제공합니다.|
 |[orderby](orderby-clause.md)|요소 형식에 대한 기본 비교자에 따라 오름차순 또는 내림차순으로 쿼리 결과를 정렬합니다.|
@@ -40,5 +40,5 @@ ms.locfileid: "69608460"
 
 - [C# 키워드](index.md)
 - [LINQ(Language-Integrated Query)](../../programming-guide/concepts/linq/index.md)
-- [LINQ 쿼리 식](../../programming-guide/linq-query-expressions/index.md)
-- [C#에서 LINQ 시작](../../programming-guide/concepts/linq/getting-started-with-linq.md)
+- [C#의 LINQ](../../linq/index.md)
+- [C#에서 LINQ 시작](/dotnet/csharp/programming-guide/concepts/linq/)

@@ -10,16 +10,15 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: ccc6a4c4640b5f473d21f4ab0c82df2034a8fd9d
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: fb7ad54f61d9dcfe94379aef14930a0395da5291
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920012"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424583"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>WPF XAML 브라우저 애플리케이션 개요
-<a name="introduction"></a>
-[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]는 웹 응용 프로그램과 리치 클라이언트 응용 프로그램의 기능을 결합 합니다. XBAP는 웹 애플리케이션처럼 웹 서버에 배포할 수 있으며 Internet Explorer 또는 Firefox에서 시작할 수 있습니다. 풍부한 클라이언트 응용 프로그램과 마찬가지로 Xbap는 WPF의 기능을 활용할 수 있습니다. XBAP를 개발하는 것은 리치 클라이언트 개발과도 비슷합니다. 이 항목에서는 XBAP 개발에 대한 간단하고 고급 수준의 소개를 제공하며 XBAP 개발이 표준 리치 클라이언트 개발과 다른 점을 설명합니다.
+<a name="introduction"></a>Xbap (XAML 브라우저 응용 프로그램)는 웹 응용 프로그램과 리치 클라이언트 응용 프로그램의 기능을 결합 합니다. XBAP는 웹 애플리케이션처럼 웹 서버에 배포할 수 있으며 Internet Explorer 또는 Firefox에서 시작할 수 있습니다. 풍부한 클라이언트 응용 프로그램과 마찬가지로 Xbap는 WPF의 기능을 활용할 수 있습니다. XBAP를 개발하는 것은 리치 클라이언트 개발과도 비슷합니다. 이 항목에서는 XBAP 개발에 대한 간단하고 고급 수준의 소개를 제공하며 XBAP 개발이 표준 리치 클라이언트 개발과 다른 점을 설명합니다.
 
  이 항목에는 다음과 같은 단원이 포함되어 있습니다.
 

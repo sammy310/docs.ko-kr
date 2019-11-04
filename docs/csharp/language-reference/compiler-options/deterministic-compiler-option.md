@@ -7,14 +7,12 @@ helpviewer_keywords:
 - -deterministic compiler option [C#]
 - deterministic compiler option [C#]
 - /deterministic compiler option [C#]
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e77c14a1c3a4ba11b8ae6556be4f1c3c0cd42788
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: ed5d1db4618649391f88affad67e62dd9fc95925
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202925"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73455178"
 ---
 # <a name="-deterministic"></a>-deterministic
 
@@ -40,7 +38,7 @@ ms.locfileid: "70202925"
   - 소스 파일
   - 참조된 어셈블리
   - 참조된 모듈
-  - 자료
+  - 리소스
   - 강력한 이름 키 파일
   - @ 지시 파일
   - 분석기
@@ -48,7 +46,7 @@ ms.locfileid: "70202925"
   - 분석기에서 사용할 수 있는 추가 파일
 - 현재 문화권(진단 및 예외 메시지가 생성되는 언어)
 - 인코딩이 지정되지 않은 경우 기본 인코딩(또는 현재 코드 페이지)
-- 컴파일러의 검색 경로(예: `/lib` 또는 `/recurse`로 지정)에 있는 파일의 존재 여부 및 내용
+- 컴파일러의 검색 경로(예: `-lib` 또는 `-recurse`로 지정)에 있는 파일의 존재 여부 및 내용
 - 컴파일러가 실행되는 CLR 플랫폼
 - `%LIBPATH%` 값(분석기 종속성 로드에 영향을 줄 수 있음)
 

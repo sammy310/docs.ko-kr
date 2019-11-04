@@ -1,21 +1,21 @@
 ---
-title: '전송: UDP를 통한 사용자 지정 트랜잭션 샘플'
+title: '전송: UDP 샘플에 의한 사용자 지정 트랜잭션'
 ms.date: 03/30/2017
 ms.assetid: 6cebf975-41bd-443e-9540-fd2463c3eb23
-ms.openlocfilehash: aeab56c122cff4c8a1ee87cb067f03ee0c2f3227
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: fcbc0ef6e747af953f545a06da965835595dd419
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044698"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423892"
 ---
-# <a name="transport-custom-transactions-over-udp-sample"></a>전송: UDP를 통한 사용자 지정 트랜잭션 샘플
-이 샘플은 전송을 기반으로 [합니다. Windows Communication Foundation](../../../../docs/framework/wcf/samples/transport-udp.md) (WCF)[전송 확장성](../../../../docs/framework/wcf/samples/transport-extensibility.md)의 UDP 샘플입니다. 이 샘플은 사용자 지정 트랜잭션 흐름을 지원하도록 UDP 전송 샘플을 확장하고 <xref:System.ServiceModel.Channels.TransactionMessageProperty> 속성의 사용 방법을 보여 줍니다.  
+# <a name="transport-custom-transactions-over-udp-sample"></a>전송: UDP 샘플에 의한 사용자 지정 트랜잭션
+이 샘플은 Windows Communication Foundation (WCF)[전송 확장성](../../../../docs/framework/wcf/samples/transport-extensibility.md)의 [전송: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) 샘플을 기반으로 합니다. 이 샘플은 사용자 지정 트랜잭션 흐름을 지원하도록 UDP 전송 샘플을 확장하고 <xref:System.ServiceModel.Channels.TransactionMessageProperty> 속성의 사용 방법을 보여 줍니다.  
   
 ## <a name="code-changes-in-the-udp-transport-sample"></a>UDP 전송 샘플의 코드 변경  
  트랜잭션 흐름을 보여 주기 위해 이 샘플에서는 `ICalculatorContract`의 트랜잭션 범위가 필요하도록 `CalculatorService.Add()`의 서비스 계약을 변경합니다. 또한 `System.Guid` 작업의 계약에 `Add` 매개 변수를 추가합니다. 이 매개 변수는 클라이언트 트랜잭션의 식별자를 서비스에 전달하는 데 사용됩니다.  
   
-```  
+```csharp  
 class CalculatorService : IDatagramContract, ICalculatorContract  
 {  
     [OperationBehavior(TransactionScopeRequired=true)]  
@@ -38,10 +38,10 @@ class CalculatorService : IDatagramContract, ICalculatorContract
 }  
 ```  
   
- [전송: Udp](../../../../docs/framework/wcf/samples/transport-udp.md) 샘플에서는 udp 패킷을 사용 하 여 클라이언트와 서비스 간에 메시지를 전달 합니다. [전송: 사용자 지정 전송](../../../../docs/framework/wcf/samples/transport-custom-transactions-over-udp-sample.md) 예제는 동일한 메커니즘을 사용 하 여 메시지를 전송 하지만 트랜잭션이 이동 하면 인코딩된 메시지와 함께 UDP 패킷에 삽입 됩니다.  
+ [전송: udp](../../../../docs/framework/wcf/samples/transport-udp.md) 샘플에서는 udp 패킷을 사용 하 여 클라이언트와 서비스 간에 메시지를 전달 합니다. [전송: 사용자 지정 전송 예제](../../../../docs/framework/wcf/samples/transport-custom-transactions-over-udp-sample.md) 는 동일한 메커니즘을 사용 하 여 메시지를 전송 하지만 트랜잭션이 이동 하면 인코딩된 메시지와 함께 UDP 패킷에 삽입 됩니다.  
   
-```  
-byte[] txmsgBuffer =                TransactionMessageBuffer.WriteTransactionMessageBuffer(txPropToken, messageBuffer);  
+```csharp  
+byte[] txmsgBuffer = TransactionMessageBuffer.WriteTransactionMessageBuffer(txPropToken, messageBuffer);  
   
 int bytesSent = this.socket.SendTo(txmsgBuffer, 0, txmsgBuffer.Length, SocketFlags.None, this.remoteEndPoint);  
 ```  
@@ -54,7 +54,7 @@ int bytesSent = this.socket.SendTo(txmsgBuffer, 0, txmsgBuffer.Length, SocketFla
   
 - 트랜잭션을 이동해야 하는 경우 `TransactionFlowProperty`를 사용하여 현재 앰비언트 트랜잭션을 메시지에 연결합니다. 이 작업은 `BeforeSendRequest()`에서 수행됩니다.  
   
-```  
+```csharp  
 public class TransactionFlowInspector : IClientMessageInspector  
 {  
    void IClientMessageInspector.AfterReceiveReply(ref           System.ServiceModel.Channels.Message reply, object correlationState)  
@@ -94,7 +94,7 @@ public class TransactionFlowInspector : IClientMessageInspector
   
  `TransactionFlowInspector` 자체는 사용자 지정 동작인 `TransactionFlowBehavior`를 사용하여 프레임워크에 전달됩니다.  
   
-```  
+```csharp  
 public class TransactionFlowBehavior : IEndpointBehavior  
 {  
        public void AddBindingParameters(ServiceEndpoint endpoint,            System.ServiceModel.Channels.BindingParameterCollection bindingParameters)  
@@ -119,7 +119,7 @@ public class TransactionFlowBehavior : IEndpointBehavior
   
  위 메커니즘을 유지한 상태에서 사용자 코드는 서비스 작업을 호출하기 전에 `TransactionScope`를 만듭니다. 트랜잭션을 서비스 작업으로 이동해야 하는 경우 메시지 검사자는 트랜잭션이 전송에 전달되는지 확인합니다.  
   
-```  
+```csharp  
 CalculatorContractClient calculatorClient = new CalculatorContractClient("SampleProfileUdpBinding_ICalculatorContract");  
 calculatorClient.Endpoint.Behaviors.Add(new TransactionFlowBehavior());               
   
@@ -153,7 +153,7 @@ catch (Exception)
   
  서비스는 클라이언트로부터 UDP 패킷을 수신한 다음 이 패킷을 deserialize하여 메시지와 트랜잭션을 추출합니다.  
   
-```  
+```csharp  
 count = listenSocket.EndReceiveFrom(result, ref dummy);  
   
 // read the transaction and message                       TransactionMessageBuffer.ReadTransactionMessageBuffer(buffer, count, out transaction, out msg);  
@@ -163,7 +163,7 @@ count = listenSocket.EndReceiveFrom(result, ref dummy);
   
  트랜잭션이 이동하면 `TransactionMessageProperty`의 메시지에 추가됩니다.  
   
-```  
+```csharp  
 message = MessageEncoderFactory.Encoder.ReadMessage(msg, bufferManager);  
   
 if (transaction != null)  
@@ -178,11 +178,11 @@ if (transaction != null)
   
 1. 솔루션을 빌드하려면 [Windows Communication Foundation 샘플 빌드](../../../../docs/framework/wcf/samples/building-the-samples.md)의 지침을 따르세요.  
   
-2. 현재 샘플은 [전송과 유사 하 게 실행 되어야 합니다. UDP](../../../../docs/framework/wcf/samples/transport-udp.md) 샘플. 이 샘플을 실행하려면 UdpTestService.exe를 실행하여 서비스를 시작합니다. [!INCLUDE[windowsver](../../../../includes/windowsver-md.md)]를 실행하는 경우에는 높은 권한으로 서비스를 시작해야 합니다. 이렇게 하려면 파일 탐색기에서 UdpTestService .exe를 마우스 오른쪽 단추로 클릭 하 고 **관리자 권한으로 실행**을 클릭 합니다.  
+2. 현재 샘플은 [전송: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) 샘플과 유사 하 게 실행 되어야 합니다. 이 샘플을 실행하려면 UdpTestService.exe를 실행하여 서비스를 시작합니다. [!INCLUDE[windowsver](../../../../includes/windowsver-md.md)]를 실행하는 경우에는 높은 권한으로 서비스를 시작해야 합니다. 이렇게 하려면 파일 탐색기에서 UdpTestService .exe를 마우스 오른쪽 단추로 클릭 하 고 **관리자 권한으로 실행**을 클릭 합니다.  
   
 3. 다음과 같은 출력이 표시됩니다.  
   
-    ```  
+    ```console  
     Testing Udp From Code.  
     Service is started from code...  
     Press <ENTER> to terminate the service and start service from config...  
@@ -190,7 +190,7 @@ if (transaction != null)
   
 4. 이때 UdpTestClient.exe를 실행하여 클라이언트를 시작할 수 있습니다. 클라이언트에서 생성되는 출력은 다음과 같습니다.  
   
-    ```  
+    ```console 
     0  
     3  
     6  
@@ -201,7 +201,7 @@ if (transaction != null)
   
 5. 서비스 출력은 다음과 같습니다.  
   
-    ```  
+    ```console 
     Hello, world!  
     Hello, world!  
     Hello, world!  
@@ -223,7 +223,7 @@ if (transaction != null)
   
 7. 구성을 사용하여 게시된 엔드포인트에 대해 클라이언트 애플리케이션을 실행하려면 서비스 애플리케이션 창에서 Enter 키를 누른 다음 테스트 클라이언트를 다시 실행합니다. 서비스에서 다음과 같이 출력되어야 합니다.  
   
-    ```  
+    ```console  
     Testing Udp From Config.  
     Service is started from config...  
     Press <ENTER> to terminate the service and exit...  
@@ -233,7 +233,7 @@ if (transaction != null)
   
 9. Svcutil.exe를 사용하여 클라이언트 코드 및 구성을 다시 생성하려면 서비스 애플리케이션을 시작한 다음 샘플의 루트 디렉터리에서 다음 Svcutil.exe 명령을 실행합니다.  
   
-    ```  
+    ```console  
     svcutil http://localhost:8000/udpsample/ /reference:UdpTransport\bin\UdpTransport.dll /svcutilConfig:svcutil.exe.config  
     ```  
   
@@ -258,10 +258,10 @@ if (transaction != null)
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Transactions\TransactionMessagePropertyUDPTransport`  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
-- [트랜스포트가 UDP](../../../../docs/framework/wcf/samples/transport-udp.md)
+- [전송: UDP](../../../../docs/framework/wcf/samples/transport-udp.md)

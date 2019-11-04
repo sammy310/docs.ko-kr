@@ -2,12 +2,12 @@
 title: Windows Communication Foundation 샘플의 일회 설치 절차
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-ms.openlocfilehash: 7c07f39ebff0caf97a9561f08826a0c95ac81140
-ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
+ms.openlocfilehash: 90463a83b8a10085d4df90a2832886e43c51c734
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72799022"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424923"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Windows Communication Foundation 샘플의 일회 설치 절차
 
@@ -31,7 +31,7 @@ ms.locfileid: "72799022"
     > [!WARNING]
     > IIS가 다시 설치된 경우 다음 명령을 다시 실행해야 합니다.
 
-    ```
+    ```console
     "%WINDIR%\Microsoft.Net\Framework\v4.0.30319\aspnet_regiis" –i –enable
     "%WINDIR%\Microsoft.Net\Framework\v4.0.30319\ServiceModelReg.exe" -r
     ```

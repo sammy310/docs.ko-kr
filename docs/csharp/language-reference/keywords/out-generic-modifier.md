@@ -6,12 +6,12 @@ helpviewer_keywords:
 - covariance, out keyword [C#]
 - out keyword [C#]
 ms.assetid: f8c20dec-a8bc-426a-9882-4076b1db1e00
-ms.openlocfilehash: 1316228a186976f313bb9f10032262974243a3ae
-ms.sourcegitcommit: 8598d446303b545eed2d520a6ccd061c1a7d00cb
+ms.openlocfilehash: 121faf46f1c5ba50f132dc180e9d4f802ac91696
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53334888"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422656"
 ---
 # <a name="out-generic-modifier-c-reference"></a>out(제네릭 한정자)(C# 참조)
 
@@ -56,4 +56,4 @@ ms.locfileid: "53334888"
 
 - [제네릭 인터페이스의 가변성](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
 - [in](in-generic-modifier.md)
-- [한정자](modifiers.md)
+- [한정자](index.md)

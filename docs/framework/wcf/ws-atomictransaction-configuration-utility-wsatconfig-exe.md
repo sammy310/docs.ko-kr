@@ -2,19 +2,19 @@
 title: WS-AtomicTransaction 구성 유틸리티(wsatConfig.exe)
 ms.date: 03/30/2017
 ms.assetid: 1c56cf98-3963-46d5-a4e1-482deae58c58
-ms.openlocfilehash: 5333c9c5caad502ce925fe4a45a039c553812ba6
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 161ac59e64e1a933049ed36ebb7140901686929c
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320194"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73425263"
 ---
 # <a name="ws-atomictransaction-configuration-utility-wsatconfigexe"></a>WS-AtomicTransaction 구성 유틸리티(wsatConfig.exe)
 WS-AtomicTransaction 구성 유틸리티는 기본 WS-AtomicTransaction 지원 설정을 구성하는 데 사용됩니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```console  
 wsatConfig [Options]  
 ```  
   

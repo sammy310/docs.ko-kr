@@ -5,12 +5,12 @@ author: richlander
 ms.date: 03/16/2017
 titleSuffix: ''
 ms.custom: seodec18
-ms.openlocfilehash: 9e40de3d95738a8af394690575010339e7faad19
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 7b6265cb652e6f3db702584295fac948d06ad5fc
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70925936"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420835"
 ---
 # <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>자습서에서 .NET Core 및 .NET Core SDK 도구 알아보기
 
@@ -49,6 +49,6 @@ ms.locfileid: "70925936"
 - [MSTest 및 .NET Core를 사용한 단위 테스트](../testing/unit-testing-with-mstest.md)
 - [여러 플랫폼에서 사용할 수 있는 도구로 라이브러리 개발](libraries.md)
 - [네이티브 코드에서 .NET Core 호스트](netcore-hosting.md)
-- [dotnet용 사용자 지정 템플릿 새로 만들기](create-custom-template.md)
+- [dotnet용 사용자 지정 템플릿 새로 만들기](cli-templates-create-item-template.md)
 
 ASP.NET Core 웹 애플리케이션 개발에 대한 자습서는 [ASP.NET Core 설명서](/aspnet/core/)를 참조하세요.

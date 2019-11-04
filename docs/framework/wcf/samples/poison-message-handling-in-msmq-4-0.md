@@ -2,12 +2,12 @@
 title: Poison Message Handling in MSMQ 4.0
 ms.date: 03/30/2017
 ms.assetid: ec8d59e3-9937-4391-bb8c-fdaaf2cbb73e
-ms.openlocfilehash: f20f7cec29574746edc84d45171cfa63a5682337
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 6f3ec0f097f1b18ca45333b7dc66431277816c60
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039084"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424320"
 ---
 # <a name="poison-message-handling-in-msmq-40"></a>Poison Message Handling in MSMQ 4.0
 이 샘플에서는 서비스에서 포이즌 메시지 처리를 수행하는 방법을 보여 줍니다. 이 샘플은 [트랜잭션 된 MSMQ 바인딩](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) 샘플을 기반으로 합니다. 이 샘플에서는 `netMsmqBinding`을 사용합니다. 이 서비스는 자체적으로 호스트되는 콘솔 애플리케이션으로서 이를 사용하여 서비스에서 대기된 메시지를 받는 것을 볼 수 있습니다.
@@ -27,13 +27,13 @@ ms.locfileid: "70039084"
 
  메시지가 포이즌으로 표시되면 메시지는 <xref:System.ServiceModel.MsmqBindingBase.ReceiveErrorHandling%2A> 열거의 설정에 따라 처리됩니다. 반복하려는 경우 가능한 값은 다음과 같습니다.
 
-- 오류 (기본값): 수신기 및 서비스 호스트에 오류를 발생 시킬 수도 있습니다.
+- Fault(기본값): 수신기와 서비스 호스트에 오류를 발생시킵니다.
 
-- 그림자 메시지를 삭제 합니다.
+- Drop: 메시지를 삭제합니다.
 
-- 옮기고 메시지를 포이즌 메시지 하위 큐로 이동 합니다. 이 값은 [!INCLUDE[wv](../../../../includes/wv-md.md)]에서만 사용할 수 있습니다.
+- Move: 메시지를 포이즌 메시지 하위 큐로 이동합니다. 이 값은 [!INCLUDE[wv](../../../../includes/wv-md.md)]에서만 사용할 수 있습니다.
 
-- 내용을 메시지를 거부 하 여 보낸 사람의 배달 못 한 편지 큐로 메시지를 다시 보내는 것입니다. 이 값은 [!INCLUDE[wv](../../../../includes/wv-md.md)]에서만 사용할 수 있습니다.
+- Reject: 메시지를 보낸 사람의 배달 못 한 편지 큐로 돌려보내는 방법으로 메시지를 거부합니다. 이 값은 [!INCLUDE[wv](../../../../includes/wv-md.md)]에서만 사용할 수 있습니다.
 
  이 샘플에서는 포이즌 메시지에 `Move` 처리를 사용하는 방법을 보여 줍니다. `Move`를 사용하면 메시지가 포이즌 하위 큐로 이동합니다.
 
@@ -233,7 +233,7 @@ public class OrderProcessorService : IOrderProcessor
 
  서비스가 실행되어 주문 처리를 시작하고 임의로 처리를 종료하기 시작합니다. 주문을 처리했다는 메시지가 나타나면 클라이언트를 다시 실행하여 서비스에서 실제로 메시지를 종료한 것이 확인될 때까지 다른 메시지를 보낼 수 있습니다. 구성된 포이즌 설정에 따라 최종 포이즌 큐로 이동하기 전에 메시지 처리가 한 번 시도됩니다.
 
-```
+```console
 The service is ready.
 Press <ENTER> to terminate service.
 
@@ -258,7 +258,7 @@ Aborting transaction, cannot process purchase order: 23e0b991-fbf9-4438-a0e2-20a
 
  포이즌 메시지 서비스를 시작하여 포이즌 큐에서 포이즌 메시지를 읽습니다. 이 예제에서는 포이즌 메시지 서비스가 메시지를 읽고 처리합니다. 종료되어 포이즌 메시지가 된 구매 주문을 포이즌 메시지 서비스에서 읽는 것을 확인할 수 있습니다.
 
-```
+```console
 The service is ready.
 Press <ENTER> to terminate service.
 
@@ -285,13 +285,13 @@ Processing Purchase Order: 23e0b991-fbf9-4438-a0e2-20adf93a4f89
 
     4. **트랜잭션** 상자를 확인 합니다.
 
-    5. 새 `ServiceModelSamplesTransacted` 큐의 이름으로을 입력 합니다.
+    5. 새 큐 이름으로 `ServiceModelSamplesTransacted`을 입력 합니다.
 
 3. C# 또는 Visual Basic .NET 버전의 솔루션을 빌드하려면 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)의 지침을 따릅니다.
 
 4. 단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면 localhost 대신 실제 호스트 이름을 반영 하도록 큐 이름을 변경 하 고 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)의 지침을 따르세요.
 
- 기본적으로 `netMsmqBinding` 바인딩 전송을 사용하여 보안이 설정됩니다. `MsmqAuthenticationMode` 및 `MsmqProtectionLevel` 속성은 모두 전송 보안의 형식을 결정합니다. 기본적으로 인증 모드는 `Windows`로 설정되고 보호 수준은 `Sign`으로 설정됩니다. MSMQ에서 인증 및 서명 기능을 제공하려면 도메인에 속해 있어야 합니다. 도메인에 속하지 않은 컴퓨터에서이 샘플을 실행 하는 경우 다음과 같은 오류가 표시 됩니다. "사용자의 내부 메시지 큐 인증서가 없습니다."
+ 기본적으로 `netMsmqBinding` 바인딩 전송을 사용하여 보안이 설정됩니다. `MsmqAuthenticationMode` 및 `MsmqProtectionLevel` 속성은 모두 전송 보안의 형식을 결정합니다. 기본적으로 인증 모드는 `Windows`로 설정되고 보호 수준은 `Sign`으로 설정됩니다. MSMQ에서 인증 및 서명 기능을 제공하려면 도메인에 속해 있어야 합니다. 도메인에 속하지 않은 컴퓨터에서 이 샘플을 실행할 경우 "사용자의 내부 메시지 큐 인증서가 없습니다."라는 오류 메시지가 표시됩니다.
 
 #### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup"></a>작업 그룹에 가입된 컴퓨터에서 샘플을 실행하려면
 
@@ -314,13 +314,13 @@ Processing Purchase Order: 23e0b991-fbf9-4438-a0e2-20adf93a4f89
     > [!NOTE]
     > `security mode`를 `None`으로 설정하는 것은 `MsmqAuthenticationMode`, `MsmqProtectionLevel` 및 `Message` 보안을 `None`으로 설정하는 것과 같습니다.  
   
-3. 메타데이터 교환을 작동하기 위해 http 바인딩을 사용하여 URL을 등록합니다. 이렇게 하려면 권한이 높은 명령 창에서 서비스를 실행해야 합니다. 그렇지 않으면와 `Unhandled Exception: System.ServiceModel.AddressAccessDeniedException: HTTP could not register URL http://+:8000/ServiceModelSamples/service/. Your process does not have access rights to this namespace (see https://go.microsoft.com/fwlink/?LinkId=70353 for details). ---> System.Net.HttpListenerException: Access is denied`같은 예외가 발생 합니다.  
+3. 메타데이터 교환을 작동하기 위해 http 바인딩을 사용하여 URL을 등록합니다. 이렇게 하려면 권한이 높은 명령 창에서 서비스를 실행해야 합니다. 그렇지 않으면 `Unhandled Exception: System.ServiceModel.AddressAccessDeniedException: HTTP could not register URL http://+:8000/ServiceModelSamples/service/. Your process does not have access rights to this namespace (see https://go.microsoft.com/fwlink/?LinkId=70353 for details). ---> System.Net.HttpListenerException: Access is denied`와 같은 예외가 발생 합니다.  
   
 > [!IMPORTANT]
 > 컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\Poison\MSMQ4`

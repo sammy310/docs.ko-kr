@@ -12,12 +12,12 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: e1daf9efd59b89d5d5be5f51cf9ac5e00750dda3
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 319f8b8c0225c7730112b1db073884b391945ac8
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72919734"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73421095"
 ---
 # <a name="wpf-add-ins-overview"></a>WPF 추가 기능 개요
 
@@ -171,21 +171,21 @@ UI 인 추가 기능을 구현 하는 방법을 보여 주는 예제는 [Ui 인 
 
 ## <a name="add-ins-and-xaml-browser-applications"></a>추가 기능 및 XAML 브라우저 애플리케이션
 
-지금까지의 예에서는 호스트 애플리케이션이 독립형 애플리케이션으로 설치되었습니다. 다음과 같은 추가 빌드 및 구현 요구 사항이 있긴 하지만 [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]에서도 추가 기능을 호스팅할 수 있습니다.
+지금까지의 예에서는 호스트 애플리케이션이 독립형 애플리케이션으로 설치되었습니다. 그러나 Xbap (XAML 브라우저 응용 프로그램)는 다음과 같은 추가 빌드 및 구현 요구 사항에 따라 추가 기능을 호스팅할 수도 있습니다.
 
-- [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]와 동일한 폴더에 있는 클라이언트 컴퓨터의 ClickOnce 응용 프로그램 캐시에 파이프라인 (폴더 및 어셈블리) 및 추가 기능 어셈블리를 다운로드 하도록 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 응용 프로그램 매니페스트를 특별히 구성 해야 합니다.
+- Xbap와 동일한 폴더에 있는 클라이언트 컴퓨터의 ClickOnce 응용 프로그램 캐시에 파이프라인 (폴더 및 어셈블리) 및 추가 기능 어셈블리를 다운로드 하도록 XBAP 응용 프로그램 매니페스트를 특별히 구성 해야 합니다.
 
-- 추가 기능을 검색 하 고 로드 하는 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 코드는 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]에 대 한 ClickOnce 응용 프로그램 캐시를 파이프라인과 추가 기능 위치로 사용 해야 합니다.
+- 추가 기능을 검색 하 고 로드 하는 XBAP 코드는 XBAP에 대 한 ClickOnce 응용 프로그램 캐시를 파이프라인 및 추가 기능 위치로 사용 해야 합니다.
 
-- 추가 기능이 원본 사이트에 있는 느슨한 파일을 참조하는 경우 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]는 특수 보안 컨텍스트에 추가 기능을 로드해야 합니다. 추가 기능이 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]에서 호스팅된 경우 이러한 추가 기능은 호스트 애플리케이션의 원본 사이트에 있는 느슨한 파일만 참조할 수 있습니다.
+- 추가 기능이 원본 사이트에 있는 느슨한 파일을 참조 하는 경우 XBAP는 추가 기능을 특수 보안 컨텍스트에 로드 해야 합니다. Xbap에서 호스트 되는 경우 추가 기능은 호스트 응용 프로그램의 원본 사이트에 있는 느슨한 파일만 참조할 수 있습니다.
 
 이러한 작업은 다음 하위 섹션에 자세히 설명되어 있습니다.
 
 ### <a name="configuring-the-pipeline-and-add-in-for-clickonce-deployment"></a>ClickOnce 배포를 위한 파이프라인 및 추가 기능 구성
 
-[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] ClickOnce 배포 캐시의 안전한 폴더에 다운로드 되어 실행 됩니다. [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]가 추가 기능을 호스트하려면 파이프라인과 추가 기능 어셈블리도 안전한 폴더에 다운로드해야 합니다. 이 작업을 수행하려면 다운로드할 파이프라인과 추가 기능 어셈블리를 모두 포함하도록 애플리케이션 매니페스트를 구성해야 합니다. Visual studio에서 파이프라인 어셈블리를 검색 하기 위해 파이프라인 및 추가 기능 어셈블리가 호스트 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 프로젝트의 루트 폴더에 있어야 하지만 Visual Studio에서는이 작업을 수행 하는 것이 가장 쉽습니다.
+Xbap는 ClickOnce 배포 캐시의 안전한 폴더에 다운로드 되어 실행 됩니다. XBAP에서 추가 기능을 호스트 하려면 파이프라인 및 추가 기능 어셈블리도 안전한 폴더에 다운로드 해야 합니다. 이 작업을 수행하려면 다운로드할 파이프라인과 추가 기능 어셈블리를 모두 포함하도록 애플리케이션 매니페스트를 구성해야 합니다. Visual studio에서 파이프라인 어셈블리를 검색 하기 위해 파이프라인 및 추가 기능 어셈블리가 호스트 XBAP 프로젝트의 루트 폴더에 있어야 하지만 Visual Studio에서는이 작업을 수행 하는 것이 가장 쉽습니다.
 
-결과적으로 첫 번째 단계에서는 각 파이프라인 어셈블리의 빌드 출력과 추가 기능 어셈블리 프로젝트를 설정하여 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 프로젝트의 루트에 파이프라인 및 추가 기능 어셈블리를 빌드합니다. 다음 표에서는 호스트 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 프로젝트와 동일한 솔루션 및 루트 폴더에 있는 파이프라인 어셈블리 프로젝트와 추가 기능 어셈블리 프로젝트의 빌드 출력 경로를 보여줍니다.
+따라서 첫 번째 단계는 각 파이프라인 어셈블리의 빌드 출력과 추가 기능 어셈블리 프로젝트를 설정 하 여 XBAP 프로젝트의 루트에 파이프라인 및 추가 기능 어셈블리를 빌드하는 것입니다. 다음 표에서는 호스트 XBAP 프로젝트와 동일한 솔루션 및 루트 폴더에 있는 파이프라인 어셈블리 프로젝트 및 추가 기능 어셈블리 프로젝트에 대 한 빌드 출력 경로를 보여 줍니다.
 
 표 1: XBAP로 호스팅되는 파이프라인 어셈블리의 출력 경로 빌드
 
@@ -197,21 +197,21 @@ UI 인 추가 기능을 구현 하는 방법을 보여 주는 예제는 [Ui 인 
 |호스트측 어댑터|`..\HostXBAP\HostSideAdapters\`|
 |추가 기능|`..\HostXBAP\AddIns\WPFAddIn1`|
 
-다음 단계는 다음을 수행 하 여 Visual Studio에서 파이프라인 어셈블리 및 추가 기능 어셈블리를 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 콘텐츠 파일로 지정 하는 것입니다.
+다음 단계는 다음을 수행 하 여 Visual Studio에서 파이프라인 어셈블리 및 추가 기능 어셈블리를 Xbap 콘텐츠 파일로 지정 하는 것입니다.
 
 1. 솔루션 탐색기에서 각 파이프라인 폴더를 마우스 오른쪽 단추로 클릭하고 **프로젝트에 포함**을 선택하여 프로젝트에 파이프라인 및 추가 기능 어셈블리 포함.
 
 2. **속성** 창에서 각 파이프라인 어셈블리 및 추가 기능 어셈블리의 **빌드 작업**을 **콘텐츠**로 설정.
 
-마지막 단계에서는 다운로드할 파이프라인 어셈블리 파일과 추가 기능 어셈블리 파일을 포함하도록 애플리케이션 매니페스트를 구성합니다. 파일은 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 응용 프로그램이 차지 하는 ClickOnce 캐시에 있는 폴더의 루트에 있는 폴더에 있어야 합니다. 다음을 수행 하 여 Visual Studio에서 구성을 수행할 수 있습니다.
+마지막 단계에서는 다운로드할 파이프라인 어셈블리 파일과 추가 기능 어셈블리 파일을 포함하도록 애플리케이션 매니페스트를 구성합니다. 파일은 XBAP 응용 프로그램이 차지 하는 ClickOnce 캐시에 있는 폴더의 루트에 있는 폴더에 있어야 합니다. 다음을 수행 하 여 Visual Studio에서 구성을 수행할 수 있습니다.
 
-1. [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 프로젝트를 마우스 오른쪽 단추로 클릭하고, **속성**, **게시** 순으로 클릭한 다음 **애플리케이션 파일** 단추를 클릭합니다.
+1. XBAP 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **속성**, **게시**를 차례로 클릭 한 다음 **응용 프로그램 파일** 단추를 클릭 합니다.
 
 2. **애플리케이션 파일** 대화 상자에서 각 파이프라인과 추가 기능 DLL의 **게시 상태**를 **포함(자동)** 으로 설정하고 각 파이프라인과 추가 기능 DLL에 대해 **그룹 다운로드**을 **(필수)** 로 설정합니다.
 
 ### <a name="using-the-pipeline-and-add-in-from-the-application-base"></a>애플리케이션 기준 위치에서 파이프라인과 추가 기능 사용
 
-파이프라인 및 추가 기능이 ClickOnce 배포에 대해 구성 된 경우에는 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]와 동일한 ClickOnce 캐시 폴더에 다운로드 됩니다. [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]의 파이프라인과 추가 기능을 사용하려면 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 코드를 통해 애플리케이션 기준 위치에서 가져와야 합니다. 파이프라인 및 추가 기능을 사용 하기 위한 .NET Framework 추가 기능 모델의 다양 한 형식 및 멤버는이 시나리오에 대 한 특별 한 지원을 제공 합니다. 먼저 <xref:System.AddIn.Hosting.PipelineStoreLocation.ApplicationBase> 열거형 값으로 경로를 식별 합니다. 다음을 포함하는 파이프라인을 사용하기 위해 관련 추가 기능 멤버의 오버로드와 함께 이 값을 사용합니다.
+파이프라인 및 추가 기능이 ClickOnce 배포용으로 구성 되 면 XBAP와 동일한 ClickOnce 캐시 폴더에 다운로드 됩니다. XBAP에서 파이프라인과 추가 기능을 사용 하려면 XBAP 코드에서 응용 프로그램 기반을 가져와야 합니다. 파이프라인 및 추가 기능을 사용 하기 위한 .NET Framework 추가 기능 모델의 다양 한 형식 및 멤버는이 시나리오에 대 한 특별 한 지원을 제공 합니다. 먼저 <xref:System.AddIn.Hosting.PipelineStoreLocation.ApplicationBase> 열거형 값으로 경로를 식별 합니다. 다음을 포함하는 파이프라인을 사용하기 위해 관련 추가 기능 멤버의 오버로드와 함께 이 값을 사용합니다.
 
 - <xref:System.AddIn.Hosting.AddInStore.FindAddIns%28System.Type%2CSystem.AddIn.Hosting.PipelineStoreLocation%29?displayProperty=nameWithType>
 

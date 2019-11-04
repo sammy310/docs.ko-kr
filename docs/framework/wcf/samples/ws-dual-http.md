@@ -2,12 +2,12 @@
 title: WS 다중 Http
 ms.date: 03/30/2017
 ms.assetid: 9997eba5-29ec-48db-86f3-fa77b241fb1a
-ms.openlocfilehash: 03cc5a2359c6430c04c6afb09f161b397fcb1afa
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: bc8958ab092f97e94a75bc366d576441c1a5bbbd
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038484"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424550"
 ---
 # <a name="ws-dual-http"></a>WS 다중 Http
 
@@ -21,7 +21,7 @@ Dual Http 샘플에서는 `WSDualHttpBinding` 바인딩을 구성하는 방법�
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.
+> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\DualHttp`
 
@@ -61,7 +61,7 @@ Dual Http 샘플에서는 `WSDualHttpBinding` 바인딩을 구성하는 방법�
 
 샘플을 실행하면 작업 요청 및 응답이 클라이언트 콘솔 창에 표시됩니다. 클라이언트를 종료하려면 클라이언트 창에서 Enter 키를 누릅니다.
 
-```
+```console
 Press <ENTER> to terminate client once the output is displayed.
 
 Result(100)
@@ -77,7 +77,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 
 1. 다음 명령을 사용 하 여 ASP.NET 4.0을 설치 합니다.
 
-    ```
+    ```console
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable
     ```
 
@@ -88,7 +88,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 4. 단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)의 지침을 따르세요.
 
     > [!IMPORTANT]
-    > 다중 컴퓨터 구성에서 클라이언트를 실행 하는 경우에는 `address` [ \< \<](../../configure-apps/file-schema/wcf/endpoint-of-client.md) `clientBaseAddress` [ 클라이언트>요소의끝점>의특성및의특성에서localhost를바꾸어야합니다.다음과\<](../../../../docs/framework/misc/binding.md) 같이 적절 한 컴퓨터의 이름을 사용 하 여 [ \<wsDualHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md) 요소의 > 요소를 바인딩합니다.
+    > 다중 컴퓨터 구성에서 클라이언트를 실행 하는 경우 [\<client > 요소 >\<끝점](../../configure-apps/file-schema/wcf/endpoint-of-client.md) 의 `address` 특성 및 [`clientBaseAddress` 바인딩의](../../../../docs/framework/misc/binding.md)\<특성 둘 다에서 localhost를 대체 해야 > [\<wsDualHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md) 요소의 요소로, 다음과 같이 적절 한 컴퓨터의 이름을 사용 합니다.
 
     ```xml
     <client>

@@ -6,18 +6,18 @@ helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: 8dacd4bf0102ccc2e769d10ce51e481b36004c3a
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: ad8d7075e609a1b03ec403b91126bbce7084923f
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252981"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423150"
 ---
 # <a name="strings-c-programming-guide"></a>문자열(C# 프로그래밍 가이드)
 문자열은 값이 텍스트인 <xref:System.String> 형식의 개체입니다. 내부적으로 텍스트는 <xref:System.Char> 개체의 순차적 읽기 전용 컬렉션으로 저장됩니다. C# 문자열의 끝에 null 종료 문자가 없으므로 C# 문자열에는 포함된 null 문자('\0')를 여러 개 사용할 수 있습니다. 문자열의 <xref:System.String.Length%2A> 속성은 유니코드 문자 수가 아닌 포함된 `Char` 개체 수를 나타냅니다. 문자열에서 개별 유니코드 코드 포인트에 액세스하려면 <xref:System.Globalization.StringInfo> 개체를 사용합니다.  
   
 ## <a name="string-vs-systemstring"></a>문자열과 System.String  
- C#에서 `string` 키워드는 <xref:System.String>의 별칭입니다. 따라서 `String` 및 `string`은 동일하며 원하는 명명 규칙을 사용할 수 있습니다. `String` 클래스는 문자열을 안전하게 작성, 조작 및 비교할 수 있도록 다양한 메서드를 제공합니다. 또한 C# 언어는 일반적인 문자열 작업을 간소화 하기 위해 일부 연산자를 오버로드합니다. 키워드에 대한 자세한 내용은 [string](../../language-reference/keywords/string.md)을 참조하세요. 형식 및 메서드에 대한 자세한 내용은 <xref:System.String>을 참조하세요.  
+ C#에서 `string` 키워드는 <xref:System.String>의 별칭입니다. 따라서 `String` 및 `string`은 동일하며 원하는 명명 규칙을 사용할 수 있습니다. `String` 클래스는 문자열을 안전하게 작성, 조작 및 비교할 수 있도록 다양한 메서드를 제공합니다. 또한 C# 언어는 일반적인 문자열 작업을 간소화 하기 위해 일부 연산자를 오버로드합니다. 키워드에 대한 자세한 내용은 [string](../../language-reference/builtin-types/reference-types.md)을 참조하세요. 형식 및 메서드에 대한 자세한 내용은 <xref:System.String>을 참조하세요.  
   
 ## <a name="declaring-and-initializing-strings"></a>문자열 선언 및 초기화  
  다음 예제에서와 같이 다양한 방법으로 문자열을 선언하고 초기화할 수 있습니다.  

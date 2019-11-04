@@ -2,15 +2,15 @@
 title: UDP 활성화
 ms.date: 03/30/2017
 ms.assetid: 4b0ccd10-0dfb-4603-93f9-f0857c581cb7
-ms.openlocfilehash: 13444ab1be440c8e1a5f945cd512afa33772ea57
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 6e8d2f4428e85c71571021e2735f90e2e0a9d35a
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044635"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424183"
 ---
 # <a name="udp-activation"></a>UDP 활성화
-이 샘플은 전송을 기반으로 [합니다. UDP](../../../../docs/framework/wcf/samples/transport-udp.md) 샘플. 전송을 확장 합니다 [. WAS](../../../../docs/framework/wcf/samples/transport-udp.md) (Windows process activation Service)를 사용한 프로세스 활성화를 지원 하기 위한 UDP 샘플입니다.  
+이 샘플은 [전송: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) 샘플을 기반으로 합니다. WAS (Windows Process Activation Service)를 사용한 프로세스 활성화를 지원 하도록 [전송: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) 샘플을 확장 합니다.  
   
  이 샘플은 크게 세 부분으로 구성됩니다.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "70044635"
  이 샘플에서는 WCF를 사용 하 여 활성기와 WAS 작업자 프로세스 간에 통신 합니다. 활성기에 상주하는 서비스를 제어 서비스라고 합니다.  
   
 ## <a name="protocol-handlers"></a>프로토콜 처리기  
- 수신기 어댑터가 `WebhostOpenListenerChannelInstance`를 호출한 후 WAS 프로세스 관리자는 작업자 프로세스를 시작합니다(시작되지 않은 경우). 그런 다음 작업자 프로세스 내부의 애플리케이션 관리자는 해당 `ListenerChannelId`에 대한 요청과 함께 UDP PPH(프로세스 프로토콜 처리기)를 로드합니다. PPH은 호출을 차례로 `IAdphManager`호출 합니다.`StartAppDomainProtocolListenerChannel` UDP AppDomain 프로토콜 처리기 (ADPH)를 시작 합니다.  
+ 수신기 어댑터가 `WebhostOpenListenerChannelInstance`를 호출한 후 WAS 프로세스 관리자는 작업자 프로세스를 시작합니다(시작되지 않은 경우). 그런 다음 작업자 프로세스 내부의 애플리케이션 관리자는 해당 `ListenerChannelId`에 대한 요청과 함께 UDP PPH(프로세스 프로토콜 처리기)를 로드합니다. PPH은 호출 `IAdphManager`를 전환 합니다.`StartAppDomainProtocolListenerChannel` UDP AppDomain 프로토콜 처리기 (ADPH)를 시작 합니다.  
   
 ## <a name="hostedudptransportconfiguration"></a>HostedUDPTransportConfiguration  
  이 정보는 다음과 같이 Web.config에 등록됩니다.  
@@ -77,7 +77,7 @@ ms.locfileid: "70044635"
   
 1. 다음 명령을 사용 하 여 ASP.NET 4.0을 설치 합니다.  
   
-    ```  
+    ```console  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
@@ -107,7 +107,7 @@ ms.locfileid: "70044635"
   
 - UDPActivation.dll: 모든 주요 UDP 구현이 포함된 라이브러리입니다.  
   
-- Service.dll: 서비스 코드입니다. 이 파일은 가상 애플리케이션 ServiceModelSamples의 \bin 디렉터리에 복사됩니다. 서비스 파일은 Service.svc이고 구성 파일은 Web.config입니다. 컴파일 후 이러한 파일은 %SystemDrive%\Inetpub\wwwroot\ServiceModelSamples 위치에 복사됩니다.  
+- Service.dll: 서비스 코드입니다. 이 파일은 가상 애플리케이션 ServiceModelSamples의 \bin 디렉터리에 복사됩니다. 서비스 파일은 서비스 .svc이 고 구성 파일은 Web.config입니다. 컴파일 후에는 다음 위치에 복사 됩니다 .%Systemdrive%\inetpub\wwwroot\servicemodelsamples로  
   
 - WasNetActivator: UDP 활성기 프로그램입니다.  
   
@@ -117,13 +117,13 @@ ms.locfileid: "70044635"
   
     - WAS(Windows Process Activation Service)  
   
-    - 인터넷 정보 서비스 (IIS): W3SVC.  
+    - IIS(Internet Information Services): W3SVC.  
   
 2. 그런 다음 활성기인 WasNetActivator.exe를 시작합니다. **활성화** 탭의 드롭다운 목록에서 유일한 프로토콜인 **UDP**를 선택 합니다. **시작** 단추를 클릭 하 여 활성기를 시작 합니다.  
   
 3. 활성기가 시작되었으면 명령 창에서 Client.exe를 실행하여 클라이언트 코드를 실행할 수 있습니다. 다음은 샘플 출력입니다.  
   
-    ```  
+    ```console  
     Testing Udp Activation.  
     Start the status service.  
     Sending UDP datagrams.  
@@ -158,6 +158,6 @@ ms.locfileid: "70044635"
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Transport\UdpActivation`  

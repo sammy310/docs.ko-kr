@@ -7,12 +7,12 @@ helpviewer_keywords:
 - accessing embedded objects
 - embedded objects, UI Automation
 ms.assetid: 93fdfbb9-0025-4b72-8ca0-0714adbb70d5
-ms.openlocfilehash: ba4df55c3359e2a81eef0b4947a744d80ed49497
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: a718a85ed42c4f8081348de20a195899f3c18c0a
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040595"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458123"
 ---
 # <a name="textpattern-and-embedded-objects-overview"></a>TextPattern 및 포함 개체 개요
 > [!NOTE]
@@ -20,7 +20,7 @@ ms.locfileid: "73040595"
   
  이 개요에서는 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 에서 포함된 개체 또는 자식 요소를 텍스트 문서나 컨테이너 내에서 노출하는 방법을 설명합니다.  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 포함 된 개체는 텍스트가 아닌 경계를 갖는 요소입니다. 예를 들어 [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] 스프레드시트 또는 Microsoft Windows Media 파일과 같은 이미지, 하이퍼링크, 테이블 또는 문서 형식입니다. 이는 요소가 한 애플리케이션에서 만들어져 다른 애플리케이션 내에서 포함 또는 연결되는 표준 정의와 다릅니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에서는 개체를 원래 애플리케이션 내에서 편집할 수 있는지 여부가 중요하지 않습니다.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 포함 된 개체는 텍스트가 아닌 경계를 갖는 요소입니다. 예를 들어 Microsoft Excel 스프레드시트나 Microsoft Windows Media 파일과 같은 이미지, 하이퍼링크, 테이블 또는 문서 형식입니다. 이는 요소가 한 애플리케이션에서 만들어져 다른 애플리케이션 내에서 포함 또는 연결되는 표준 정의와 다릅니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에서는 개체를 원래 애플리케이션 내에서 편집할 수 있는지 여부가 중요하지 않습니다.  
   
 <a name="Embedded_Objects_and_the_UI_Automation_Tree"></a>   
 ## <a name="embedded-objects-and-the-ui-automation-tree"></a>포함된 개체 및 UI 자동화 트리  

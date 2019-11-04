@@ -2,28 +2,28 @@
 title: 워크플로 서비스 등록 도구(WFServicesReg.exe)
 ms.date: 03/30/2017
 ms.assetid: 9e92c87b-99c5-4e8d-9d53-7944cc2b47d3
-ms.openlocfilehash: 0a9cd5039c085f82f5507c93ebe0855cc620825d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: bb0989fb8747a5065ce3d7332311cdefba95b80d
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916832"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73425297"
 ---
 # <a name="workflow-service-registration-tool-wfservicesregexe"></a>워크플로 서비스 등록 도구(WFServicesReg.exe)
 워크플로 서비스 등록 도구(WFServicesReg.exe)는 Windows WF(Workflow Foundation) 서비스의 구성 요소를 추가, 제거 또는 복구하는 데 사용할 수 있는 독립 실행형 도구입니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```console  
 WFServicesReg.exe [-c | -r | -v | -m | -i]  
 ```  
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
  이 도구는 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 설치 위치(특히 %windir%\Microsoft.NET\Framework\v3.5) 또는 %windir%\Microsoft.NET\Framework64\v3.5(64비트 시스템의 경우)에 있습니다.  
   
  다음 표에서는 워크플로 서비스 등록 도구(WFServicesReg.exe)에서 사용할 수 있는 옵션에 대해 설명합니다.  
   
-|옵션|Description|  
+|옵션|설명|  
 |------------|-----------------|  
 |`/c`|Windows Workflow Services를 구성합니다. 설치 및 복구 시나리오에서 사용됩니다.|  
 |`/r`|Windows Workflow Services 구성을 제거합니다.|  
@@ -56,11 +56,11 @@ WFServicesReg.exe [-c | -r | -v | -m | -i]
   
  이 도구는 또한 IIS 메타베이스에 .xoml과 .rules 스크립트 맵 및 처리기를 등록합니다.  
   
- [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] 및[!INCLUDE[wxp](../../../includes/wxp-md.md)] 컴퓨터 (iis 5.1 및 iis 6.0)에서 하나의 xoml 및. 규칙 스크립트 집합이 등록 됩니다.  
+ [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] 및 [!INCLUDE[wxp](../../../includes/wxp-md.md)] 컴퓨터 (IIS 5.1 및 IIS 6.0)에서는 하나의 xoml 및. 규칙 스크립트 집합이 등록 됩니다.  
   
  64비트 시스템에서 도구는 `Enable32BitAppOnWin64` 스위치를 사용할 수 있는 경우 WOW 모드 스크립트 맵을 등록하고, `Enable32BitAppOnWin64` 스위치를 사용할 수 없는 경우 네이티브 64비트 스크립트 맵을 등록합니다.  
   
- [!INCLUDE[wv](../../../includes/wv-md.md)] 및 Windows Server 2008 (IIS 7.0 이상) 컴퓨터에서는 두 개의 xoml 및. rules 처리기 집합이 등록 됩니다. 하나는 통합 모드이 고 하나는 클래식 모드입니다.  
+ [!INCLUDE[wv](../../../includes/wv-md.md)] 및 Windows Server 2008 (IIS 7.0 이상) 컴퓨터에서 두 개의 xoml 및. rules 처리기 집합이 등록 됩니다. 하나는 통합 모드이 고 하나는 클래식 모드입니다.  
   
  64비트 시스템에서는 `Enable32BitAppOnWin64` 스위치의 상태에 관계없이 처리기 집합 세 개가 등록됩니다. 하나는 통합 모드용, 하나는 WOW 클래식 모드용, 하나는 네이티브 64비트 클래식 모드용입니다.  
   

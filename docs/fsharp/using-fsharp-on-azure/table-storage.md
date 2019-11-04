@@ -3,14 +3,14 @@ title: F#을 사용하여 Azure Table 스토리지 시작
 description: Azure Table storage 또는 Azure Cosmos DB를 사용 하 여 클라우드에 구조화 된 데이터를 저장 합니다.
 author: sylvanc
 ms.date: 03/26/2018
-ms.openlocfilehash: 30ffd5f099dbb8efbf57104a2ade6c26304b7cee
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 6833e2264f7543f50b94892b6980140e4bf1cdd1
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395202"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424604"
 ---
-# <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>F @ no__t를 사용 하 여 Azure Table storage 및 Azure Cosmos DB Table API 시작 하기-0
+# <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>F\#를 사용 하 여 Azure Table storage 및 Azure Cosmos DB Table API 시작
 
 Azure Table storage는 클라우드에 구조화 된 NoSQL 데이터를 저장 하는 서비스입니다. Table storage는 스키마 없는 디자인을 사용 하는 키/특성 저장소입니다. 테이블 저장소는 스키마가 다르기 때문에 응용 프로그램의 요구 사항이 진화 함에 따라 데이터를 쉽게 적용할 수 있습니다. 모든 종류의 응용 프로그램에 대해 빠르고 비용 효율적으로 데이터에 액세스할 수 있습니다. 테이블 저장소는 일반적으로 유사한 데이터 볼륨에 대 한 기존 SQL 보다 비용이 훨씬 낮습니다.
 
@@ -40,11 +40,11 @@ Azure Table storage 용으로 작성 된 응용 프로그램은 코드를 변경
 
 이 문서의 샘플은 F# 응용 프로그램 또는 F# 스크립트에서 사용할 수 있습니다. F# 스크립트를 만들려면 F# 개발 환경에서 `.fsx` 확장명을 사용 하 여 파일을 만듭니다 (예: `tables.fsx`).
 
-그런 다음 [Paket](https://fsprojects.github.io/Paket/) 또는 [NuGet](https://www.nuget.org/) 과 같은 [패키지 관리자](package-management.md) 를 사용 하 여 @no__t 3 패키지를 설치 하 고 `#r` 지시어를 사용 하 여 스크립트에 `WindowsAzure.Storage.dll`를 참조 합니다. Microsoft Azure 네임 스페이스를 얻기 위해 `Microsoft.WindowsAzure.ConfigurationManager`에 대해 다시 수행 합니다.
+그런 다음 [Paket](https://fsprojects.github.io/Paket/) 또는 [NuGet](https://www.nuget.org/) 과 같은 [패키지 관리자](package-management.md) 를 사용 하 여 `WindowsAzure.Storage` 패키지를 설치 하 고 `#r` 지시어를 사용 하 여 스크립트에 `WindowsAzure.Storage.dll` 참조 합니다. Microsoft Azure 네임 스페이스를 얻기 위해 `Microsoft.WindowsAzure.ConfigurationManager`에 대해 다시 수행 합니다.
 
 ### <a name="add-namespace-declarations"></a>네임 스페이스 선언 추가
 
-@No__t-1 파일의 맨 위에 다음 `open` 문을 추가 합니다.
+`tables.fsx` 파일의 맨 위에 다음 `open` 문을 추가 합니다.
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L1-L5)]
 
@@ -54,7 +54,7 @@ Azure Storage Table service에 연결 하는 경우이 자습서에 대 한 연�
 
 ### <a name="get-your-azure-cosmos-db-connection-string"></a>Azure Cosmos DB 연결 문자열 가져오기
 
-Azure Cosmos DB에 연결 하는 경우이 자습서에 대 한 연결 문자열이 필요 합니다. Azure Portal에서 연결 문자열을 복사할 수 있습니다. Azure Portal의 Cosmos DB 계정에서 **설정** > **연결 문자열**로 이동 하 고 **복사** 단추를 클릭 하 여 기본 연결 문자열을 복사 합니다. 
+Azure Cosmos DB에 연결 하는 경우이 자습서에 대 한 연결 문자열이 필요 합니다. Azure Portal에서 연결 문자열을 복사할 수 있습니다. Azure Portal의 Cosmos DB 계정에서 **설정** > **연결 문자열**로 이동 하 고 **복사** 단추를 클릭 하 여 기본 연결 문자열을 복사 합니다.
 
 자습서의 경우 다음 예제와 같이 스크립트에 연결 문자열을 입력 합니다.
 
@@ -74,11 +74,11 @@ Azure Configuration Manager 사용은 선택 사항입니다. .NET Framework의 
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L21-L22)]
 
-@No__t-0이 반환 됩니다.
+그러면 `CloudStorageAccount`반환 됩니다.
 
 ### <a name="create-the-table-service-client"></a>Table service 클라이언트 만들기
 
-@No__t-0 클래스를 사용 하면 테이블 저장소에서 테이블과 엔터티를 검색할 수 있습니다. 서비스 클라이언트를 만드는 한 가지 방법은 다음과 같습니다.
+`CloudTableClient` 클래스를 사용 하면 테이블 저장소에서 테이블과 엔터티를 검색할 수 있습니다. 서비스 클라이언트를 만드는 한 가지 방법은 다음과 같습니다.
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L28-L29)]
 
@@ -92,11 +92,11 @@ Azure Configuration Manager 사용은 선택 사항입니다. .NET Framework의 
 
 ### <a name="add-an-entity-to-a-table"></a>테이블에 엔터티 추가
 
-엔터티는 `TableEntity`에서 상속 되는 형식을 가져야 합니다. 원하는 방식으로 `TableEntity`을 확장할 수 있지만 형식에 매개 변수가 없는 생성자가 *있어야 합니다* . @No__t-0 및 `set`이 모두 있는 속성만 Azure 테이블에 저장 됩니다.
+엔터티는 `TableEntity`에서 상속 되는 형식을 가져야 합니다. 원하는 방식으로 `TableEntity`을 확장할 수 있지만 형식에 매개 변수가 없는 생성자가 *있어야 합니다* . `get` 및 `set` 모두 포함 된 속성만 Azure 테이블에 저장 됩니다.
 
 엔터티의 파티션 및 행 키는 테이블에서 엔터티를 고유 하 게 식별 합니다. 동일한 파티션 키를 가진 엔터티는 다른 파티션 키를 사용 하는 것 보다 더 빨리 쿼리할 수 있지만 다양 한 파티션 키를 사용 하면 병렬 작업의 확장성을 높일 수 있습니다.
 
-다음은 파티션 키로 `lastName`을 사용 하 고 행 키로 `firstName`를 사용 하는 @no__t의 예입니다.
+다음은 `lastName`를 파티션 키로 사용 하 고 `firstName`를 행 키로 사용 하는 `Customer`의 예입니다.
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L45-L52)]
 
@@ -155,7 +155,7 @@ Azure Configuration Manager 사용은 선택 사항입니다. .NET Framework의 
 
 ### <a name="insert-or-replace-an-entity"></a>엔터티 삽입 또는 바꾸기
 
-경우에 따라 엔터티가 테이블에 있는지 여부를 알 수 없습니다. 이 경우 저장 된 현재 값이 더 이상 필요 하지 않습니다. @No__t-0을 사용 하 여 엔터티를 만들거나, 상태에 관계 없이 엔터티를 대체할 수 있습니다.
+경우에 따라 엔터티가 테이블에 있는지 여부를 알 수 없습니다. 이 경우 저장 된 현재 값이 더 이상 필요 하지 않습니다. `InsertOrReplace`를 사용 하 여 엔터티를 만들거나, 상태와 관계 없이 존재 하는 경우 대체할 수 있습니다.
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L134-L141)]
 

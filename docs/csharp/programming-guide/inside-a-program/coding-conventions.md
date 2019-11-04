@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C#, coding conventions
 - C# language, coding conventions
 ms.assetid: f4f60de9-d49b-4fb6-bab1-20e19ea24710
-ms.openlocfilehash: 27001d1697def083580ecdc742b4b8db924545aa
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 42e1814af38fa442255f6da79fb4862ce3d0f361
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69589418"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423201"
 ---
 # <a name="c-coding-conventions-c-programming-guide"></a>C# 코딩 규칙(C# 프로그래밍 가이드)
  코딩 규칙은 다음과 같은 용도로 사용됩니다.  
@@ -93,7 +93,7 @@ ms.locfileid: "69589418"
   
      [!code-csharp[csProgGuideCodingConventions#10](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#10)]  
   
-- [dynamic](../../language-reference/keywords/dynamic.md) 대신 `var`를 사용하지 않습니다.  
+- [dynamic](../../language-reference/builtin-types/reference-types.md) 대신 `var`를 사용하지 않습니다.  
   
 - [for](../../language-reference/keywords/for.md) 및 [foreach](../../language-reference/keywords/foreach-in.md) 루프의 루프 변수 형식을 결정하려면 암시적 형식을 사용합니다.  
   
@@ -163,7 +163,7 @@ ms.locfileid: "69589418"
   
 ### <a name="static-members"></a>정적 멤버  
   
-- *ClassName.StaticMember*와 같이 클래스 이름을 사용하여 [static](../../language-reference/keywords/static.md) 멤버를 호출합니다. 이렇게 하면 정적 액세스가 명확하게 표시되므로 코드를 보다 쉽게 읽을 수 있습니다.  파생 클래스 이름을 사용하여 기본 클래스에 정의된 정적 멤버를 정규화해서는 안 됩니다.  이 코드는 컴파일되기는 하지만 가독성이 떨어지며 나중에 파생 클래스와 이름이 같은 정적 멤버를 추가하면 코드가 손상될 수도 있습니다.  
+- ClassName.StaticMember와 같이 클래스 이름을 사용하여 [static](../../language-reference/keywords/static.md) 멤버를 호출합니다. 이렇게 하면 정적 액세스가 명확하게 표시되므로 코드를 보다 쉽게 읽을 수 있습니다.  파생 클래스 이름을 사용하여 기본 클래스에 정의된 정적 멤버를 정규화해서는 안 됩니다.  이 코드는 컴파일되기는 하지만 가독성이 떨어지며 나중에 파생 클래스와 이름이 같은 정적 멤버를 추가하면 코드가 손상될 수도 있습니다.  
   
 ### <a name="linq-queries"></a>LINQ 쿼리  
   

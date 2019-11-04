@@ -2,12 +2,12 @@
 title: 비동기 작업 또는 작업 목록 취소 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: a9ee1b71-5bec-4736-a1e9-448042dd7215
-ms.openlocfilehash: 73627455b1f4460edfe165126a388e961e98921f
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 89a78e9e423ab4cce9fd3627ec433072ade238dc
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353134"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419863"
 ---
 # <a name="cancel-an-async-task-or-a-list-of-tasks-visual-basic"></a>비동기 작업 또는 작업 목록 취소 (Visual Basic)
 
@@ -24,7 +24,7 @@ ms.locfileid: "71353134"
 
 ### <a name="downloading-the-example"></a>예제 다운로드
 
-[Async 샘플: 애플리케이션 미세 조정](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)에서 WPF(Windows Presentation Foundation) 프로젝트를 다운로드한 후, 다음 단계를 수행합니다.
+[Async 샘플: 애플리케이션 세부 조정](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)에서 전체 WPF(Windows Presentation Foundation) 프로젝트를 다운로드한 후 다음 단계를 따를 수 있습니다.
 
 1. 다운로드한 파일의 압축을 푼 다음 Visual Studio를 시작합니다.
 
@@ -86,7 +86,7 @@ ms.locfileid: "71353134"
           Dim contentLength As Integer = Await AccessTheWebAsync(cts.Token)
 
           resultsTextBox.Text &=
-              String.Format(vbCrLf & "Length of the downloaded string: {0}." & vbCrLf, contentLength)
+              vbCrLf & $"Length of the downloaded string: {contentLength}." & vbCrLf
 
           ' *** If cancellation is requested, an OperationCanceledException results.
       Catch ex As OperationCanceledException
@@ -107,8 +107,7 @@ ms.locfileid: "71353134"
 
         Dim client As HttpClient = New HttpClient()
 
-        resultsTextBox.Text &=
-            String.Format(vbCrLf & "Ready to download." & vbCrLf)
+        resultsTextBox.Text &= vbCrLf & "Ready to download." & vbCrLf
 
         ' You might need to slow things down to have a chance to cancel.
         Await Task.Delay(250)
@@ -145,7 +144,7 @@ ms.locfileid: "71353134"
 
 ### <a name="downloading-the-example"></a>예제 다운로드
 
-[Async 샘플: 애플리케이션 미세 조정](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)에서 WPF(Windows Presentation Foundation) 프로젝트를 다운로드한 후, 다음 단계를 수행합니다.
+[Async 샘플: 애플리케이션 세부 조정](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)에서 전체 WPF(Windows Presentation Foundation) 프로젝트를 다운로드한 후 다음 단계를 따를 수 있습니다.
 
 1. 다운로드한 파일의 압축을 푼 다음 Visual Studio를 시작합니다.
 
@@ -206,7 +205,7 @@ ms.locfileid: "71353134"
         Dim urlContents As Byte() = Await response.Content.ReadAsByteArrayAsync()
 
         resultsTextBox.Text &=
-            String.Format(vbCrLf & "Length of the downloaded string: {0}." & vbCrLf, urlContents.Length)
+            vbCrLf & $"Length of the downloaded string: {urlContents.Length}." & vbCrLf
     Next
     ```
 
@@ -258,7 +257,7 @@ ms.locfileid: "71353134"
 
 다음 섹션에는 각각의 이전 예제에 대한 코드가 있습니다. <xref:System.Net.Http>에 대한 참조를 추가해야 합니다.
 
-[비동기 샘플: 애플리케이션 미세 조정](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)에서 프로젝트를 다운로드할 수 있습니다.
+[Async 샘플: 애플리케이션 미세 조정](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)에서 프로젝트를 다운로드할 수 있습니다.
 
 ### <a name="cancel-a-task-example"></a>작업 취소 예제
 
@@ -287,7 +286,7 @@ Class MainWindow
             Dim contentLength As Integer = Await AccessTheWebAsync(cts.Token)
 
             resultsTextBox.Text &=
-                String.Format(vbCrLf & "Length of the downloaded string: {0}." & vbCrLf, contentLength)
+                vbCrLf & $"Length of the downloaded string: {contentLength}." & vbCrLf
 
             ' *** If cancellation is requested, an OperationCanceledException results.
         Catch ex As OperationCanceledException
@@ -315,7 +314,7 @@ Class MainWindow
         Dim client As HttpClient = New HttpClient()
 
         resultsTextBox.Text &=
-            String.Format(vbCrLf & "Ready to download." & vbCrLf)
+            vbCrLf & "Ready to download." & vbCrLf
 
         ' You might need to slow things down to have a chance to cancel.
         Await Task.Delay(250)
@@ -413,7 +412,7 @@ Class MainWindow
             Dim urlContents As Byte() = Await response.Content.ReadAsByteArrayAsync()
 
             resultsTextBox.Text &=
-                String.Format(vbCrLf & "Length of the downloaded string: {0}." & vbCrLf, urlContents.Length)
+                vbCrLf & $"Length of the downloaded string: {urlContents.Length}." & vbCrLf
         Next
     End Function
 
@@ -470,4 +469,4 @@ End Class
 - <xref:System.Threading.CancellationToken>
 - [Async 및 Await를 사용한 비동기 프로그래밍(Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
 - [Async 애플리케이션 미세 조정(Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)
-- [비동기 샘플: 애플리케이션 미세 조정](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
+- [Async 샘플: 애플리케이션 미세 조정](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

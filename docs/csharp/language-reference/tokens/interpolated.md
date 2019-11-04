@@ -11,13 +11,12 @@ helpviewer_keywords:
 - string interpolation [C#]
 - interpolated string [C#]
 author: pkulikov
-ms.author: ronpet
-ms.openlocfilehash: 53a8938a373136df65e23c162b94c4d8dc1f30b4
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: cda8582da9ca8262ec2ce6bcfbb76e2e2f5f6006
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253859"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73421853"
 ---
 # <a name="---string-interpolation-c-reference"></a>$ - 문자열 보간(C# 참조)
 
@@ -59,7 +58,7 @@ ms.locfileid: "70253859"
 
 [!code-csharp-interactive[example with ternary conditional operator](~/samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#3)]
 
-보간된 약어 문자열은 `@` 문자가 뒤에 오는 `$` 문자로 시작합니다. 약어 문자열에 대한 자세한 내용은 [문자열](../keywords/string.md) 및 [약어 식별자](verbatim.md) 항목을 참조하세요.
+보간된 약어 문자열은 `@` 문자가 뒤에 오는 `$` 문자로 시작합니다. 약어 문자열에 대한 자세한 내용은 [문자열](../builtin-types/reference-types.md) 및 [약어 식별자](verbatim.md) 항목을 참조하세요.
 
 > [!NOTE]
 > C# 8.0부터는 `$` 및 `@` 토큰을 순서에 관계없이 사용할 수 있습니다. `$@"..."` 및 `@$"..."`는 모두 유효한 보간된 약어 문자열입니다. 이전 C# 버전에서는 `$` 토큰이 `@` 토큰 앞에 나타나야 했습니다.

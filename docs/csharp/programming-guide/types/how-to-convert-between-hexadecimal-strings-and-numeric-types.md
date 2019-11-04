@@ -8,17 +8,17 @@ helpviewer_keywords:
 - strings [C#], converting hexadecimal strings
 - hexadecimal strings [C#]
 ms.assetid: 7115c49f-7d1d-40c3-8bd9-aae0cc1d46b6
-ms.openlocfilehash: a7109945192fe1577cd1b96c8b4d6c05270d54e8
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: e5013891db827e27b3cda55135fff4ee287cfcb4
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588378"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423141"
 ---
 # <a name="how-to-convert-between-hexadecimal-strings-and-numeric-types-c-programming-guide"></a>방법: 16진수 문자열과 숫자 형식 간 변환(C# 프로그래밍 가이드)
 이 예제에서는 다음 작업을 수행하는 방법을 보여 줍니다.  
   
-- [string](../../language-reference/keywords/string.md)에 있는 각 문자의 16진수 값을 가져옵니다.  
+- [string](../../language-reference/builtin-types/reference-types.md)에 있는 각 문자의 16진수 값을 가져옵니다.  
   
 - 16진수 문자열의 각 값에 해당하는 [char](../../language-reference/keywords/char.md)을 가져옵니다.  
   

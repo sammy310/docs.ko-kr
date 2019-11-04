@@ -12,12 +12,12 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: 5257d1d677246cdd6d826cd71ed3ffe116d2a4a6
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 76c778d1e2d45990793b5d9c7d4a8ee5a99fed46
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424119"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422293"
 ---
 # <a name="switch-c-reference"></a>switch(C# 참조)
 
@@ -44,7 +44,7 @@ ms.locfileid: "67424119"
 C# 6 이하에서 일치 식은 다음 형식의 값을 반환하는 식이어야 합니다.
 
 - [char](char.md)
-- [string](string.md)
+- [string](../builtin-types/reference-types.md)
 - [bool](bool.md)
 - [int](../builtin-types/integral-numeric-types.md) 또는 [long](../builtin-types/integral-numeric-types.md)과 같은 정수 계열 값
 - [enum](enum.md) 값
@@ -125,7 +125,7 @@ C# 6에서 상수 패턴만 지원하고 상수 값의 반복을 허용하지 �
 - 선언된 `const` 변수의 이름
 - 열거형 상수
 - [char](char.md) 리터럴
-- [string](string.md) 리터럴
+- [string](../builtin-types/reference-types.md) 리터럴
 
 상수 식은 다음과 같이 계산됩니다.
 
@@ -195,7 +195,7 @@ C# 7.0부터 case 문이 상호 배타적일 필요가 없으므로 `when` 절�
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 
-자세한 내용은 [C# 언어 사양](../language-specification/index.md)의 [switch 문](~/_csharplang/spec/statements.md#the-switch-statement)을 참조하세요. 언어 사양은 C# 구문 및 사용법에 대 한 신뢰할 수 있는 소스 됩니다.
+자세한 내용은 [C# 언어 사양](/dotnet/csharp/language-reference/language-specification/introduction)의 [switch 문](~/_csharplang/spec/statements.md#the-switch-statement)을 참조하세요. 언어 사양은 C# 구문 및 사용법에 대 한 신뢰할 수 있는 소스 됩니다.
 
 ## <a name="see-also"></a>참고 항목
 

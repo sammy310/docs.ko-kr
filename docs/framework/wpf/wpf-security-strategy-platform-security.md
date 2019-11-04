@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 7559c7ec9aef8f95336d53e62ca9bf5861a9b22f
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 9c237c06de1388de4c1fe6a6edb3fb5b52522d1f
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040721"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424622"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>WPF 보안 전략 - 플랫폼 보안
 WPF (Windows Presentation Foundation)는 다양 한 보안 서비스를 제공 하지만 운영 체제, CLR 및 Internet Explorer를 포함 하는 기본 플랫폼의 보안 기능도 활용 합니다. 이러한 계층이 결합되어 다음 그림과 같이 단일 실패 지점을 방지하는 강력한 심층 방어 보안 모델인 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]를 제공합니다.  
@@ -70,7 +70,7 @@ Windows Vista의 WPF 사용자는 "최소 권한 사용자 액세스", 코드 �
 ### <a name="limited-rights-process-for-browser-hosted-applications"></a>브라우저에서 호스트된 애플리케이션에 대한 제한된 권한 프로세스  
  브라우저에서 호스트된 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 애플리케이션은 인터넷 영역 샌드박스 내에서 실행됩니다. Microsoft Internet Explorer와의 통합을 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 추가 지원으로이 보호를 확장 합니다.  
   
- [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)]은 일반적으로 인터넷 영역 권한 집합을 통해 샌드박싱되므로 이러한 권한을 제거해도 호환성 관점에서 [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)]에 나쁜 영향을 주지 않습니다. 대신, 추가 심층 방어 계층이 만들어집니다. 샌드박스 애플리케이션이 다른 계층을 악용하고 프로세스를 가로챌 수 있는 경우 프로세스에 여전히 제한된 권한만 포함됩니다.  
+ Xbap (XAML 브라우저 응용 프로그램)는 일반적으로 인터넷 영역 권한 집합을 통해 샌드 박싱 되므로 이러한 권한을 제거 해도 호환성 관점에서 Xbap (XAML 브라우저 응용 프로그램)에는 영향을 주지 않습니다. 대신, 추가 심층 방어 계층이 만들어집니다. 샌드박스 애플리케이션이 다른 계층을 악용하고 프로세스를 가로챌 수 있는 경우 프로세스에 여전히 제한된 권한만 포함됩니다.  
   
  [최소 권한 사용자 계정 사용을](https://docs.microsoft.com/previous-versions/tn-archive/cc700846%28v=technet.10%29)참조 하세요.  
   
@@ -166,7 +166,7 @@ Windows Vista의 WPF 사용자는 "최소 권한 사용자 액세스", 코드 �
  .NET Framework는 개발자가 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (APTCA)로 표시 되 고 사용자의 GAC (전역 어셈블리 캐시)에 배포 된 관리 되는 어셈블리를 작성할 수 있도록 하 여 XBAP 인터넷 영역 샌드박스를 확장할 수 있습니다. 어셈블리에 APTCA로 표시하는 경우 인터넷의 악성 코드를 비롯한 모든 코드에서 해당 어셈블리를 호출할 수 있으므로 중요한 보안 작업입니다. 이 작업을 수행할 때는 주의해서 최선의 방법을 사용해야 하며, 사용자가 해당 소프트웨어를 신뢰해야 설치됩니다.  
   
 ## <a name="microsoft-internet-explorer-security"></a>Microsoft Internet Explorer 보안  
- 보안 문제를 줄이고 보안 구성을 간소화 하는 것 외에도 Microsoft Internet Explorer 6 (SP2)에는 [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)]사용자의 보안을 강화 하는 향상 된 보안 기능이 포함 되어 있습니다. 이러한 기능은 사용자가 검색 환경을 보다 효율적으로 제어할 수 있도록 하기 위한 것입니다.  
+ 보안 문제를 줄이고 보안 구성을 간소화 하는 것 외에도 Microsoft Internet Explorer 6 (SP2)에는 Xbap (XAML 브라우저 응용 프로그램) 사용자의 보안을 강화 하는 향상 된 보안 기능이 포함 되어 있습니다. 이러한 기능은 사용자가 검색 환경을 보다 효율적으로 제어할 수 있도록 하기 위한 것입니다.  
   
  IE6 SP2 이전에는 사용자에 게 다음이 적용 될 수 있습니다.  
   
@@ -182,7 +182,7 @@ Windows Vista의 WPF 사용자는 "최소 권한 사용자 액세스", 코드 �
   
  동일한 사용자 시작 논리가 보안 프롬프트를 **열기** /**저장** 하는 데에도 적용 됩니다. 이전에 설치 된 컨트롤의 업그레이드를 나타내지 않는 한 ActiveX 설치 대화 상자는 항상 알림 표시줄 아래에 트래핑 됩니다. 이러한 조치가 결합되어 사용자에게 더 안전하고 제어된 사용자 환경을 제공합니다. 사용자가 원하지 않는 소프트웨어나 악성 소프트웨어를 설치하도록 유인하는 사이트로부터 보호되기 때문입니다.  
   
- 또한 이러한 기능은 IE6 s p 2를 사용 하 여 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램을 다운로드 하 고 설치할 수 있는 웹 사이트를 검색 하는 고객을 보호 합니다. 특히 IE6 s p 2가 사용자 환경을 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]구축 하는 데 사용 된 기술에 관계 없이 악의적인 응용 프로그램 또는 유해한 응용 프로그램을 설치할 기회를 줄이는 향상 된 사용자 환경을 제공 하기 때문입니다. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]는 ClickOnce를 사용 하 여 인터넷을 통해 응용 프로그램을 쉽게 다운로드할 수 있도록 이러한 보호 기능에 추가 합니다. [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)]은 인터넷 영역 보안 샌드박스 내에서 실행되므로 매끄럽게 시작할 수 있습니다. 반면, 독립 실행형 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 애플리케이션을 실행하려면 완전 신뢰가 필요합니다. 이러한 응용 프로그램의 경우 ClickOnce는 시작 프로세스 중에 보안 대화 상자를 표시 하 여 응용 프로그램의 추가 보안 요구 사항을 사용 하도록 알립니다. 그러나 사용자가 시작해야 하고, 사용자가 시작한 논리에 의해 제어되며, 취소할 수 있습니다.  
+ 또한 이러한 기능은 IE6 s p 2를 사용 하 여 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램을 다운로드 하 고 설치할 수 있는 웹 사이트를 검색 하는 고객을 보호 합니다. 특히 IE6 s p 2가 사용자 환경을 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]구축 하는 데 사용 된 기술에 관계 없이 악의적인 응용 프로그램 또는 유해한 응용 프로그램을 설치할 기회를 줄이는 향상 된 사용자 환경을 제공 하기 때문입니다. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]는 ClickOnce를 사용 하 여 인터넷을 통해 응용 프로그램을 쉽게 다운로드할 수 있도록 이러한 보호 기능에 추가 합니다. Xbap (XAML 브라우저 응용 프로그램)는 인터넷 영역 보안 샌드박스 내에서 실행 되므로 매끄럽게 시작할 수 있습니다. 반면, 독립 실행형 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 애플리케이션을 실행하려면 완전 신뢰가 필요합니다. 이러한 응용 프로그램의 경우 ClickOnce는 시작 프로세스 중에 보안 대화 상자를 표시 하 여 응용 프로그램의 추가 보안 요구 사항을 사용 하도록 알립니다. 그러나 사용자가 시작해야 하고, 사용자가 시작한 논리에 의해 제어되며, 취소할 수 있습니다.  
   
  Internet Explorer 7은 보안에 대 한 지속적인 약정의 일환으로 IE6 s p 2의 보안 기능을 통합 하 고 확장 합니다.  
   

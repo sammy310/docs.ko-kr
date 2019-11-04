@@ -2,13 +2,14 @@
 title: System.Delegate 및 `delegate` 키워드
 description: .NET Framework에서 대리자를 지원하는 클래스와 해당 클래스가 ‘delegate’ 키워드에 매핑되는 방법을 설명합니다.
 ms.date: 06/20/2016
+ms.technology: csharp-fundamentals
 ms.assetid: f3742fda-13c2-4283-8966-9e21c2674393
-ms.openlocfilehash: 4cf2b113fc9e2c6621f648af7ecb272a42b1f056
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: f4635ff623feec9407021792cabd1677184b4d34
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465778"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420363"
 ---
 # <a name="systemdelegate-and-the-delegate-keyword"></a>System.Delegate 및 `delegate` 키워드
 
@@ -31,7 +32,7 @@ ms.locfileid: "58465778"
 public delegate int Comparison<in T>(T left, T right);
 ```
 
-컴파일러에서는 사용된 시그니처와 일치하는 `System.Delegate`에서 파생된 클래스를 생성합니다(이 경우 정수를 반환하고 두 개의 인수가 포함된 메서드). 해당 대리자의 형식은 `Comparison`입니다. `Comparison` 대리자 형식은 제네릭 형식입니다. 제네릭에 대한 자세한 내용은 [여기](generics.md)를 참조하세요.
+컴파일러에서는 사용된 시그니처와 일치하는 `System.Delegate`에서 파생된 클래스를 생성합니다(이 경우 정수를 반환하고 두 개의 인수가 포함된 메서드). 해당 대리자의 형식은 `Comparison`입니다. `Comparison` 대리자 형식은 제네릭 형식입니다. 제네릭에 대한 자세한 내용은 [여기](programming-guide/generics/index.md)를 참조하세요.
 
 구문이 변수를 선언하는 것처럼 보일 수 있지만 실제로는 *형식*을 선언합니다. 클래스 내부, 직접 네임스페이스 내부 또는 전역 네임스페이스에 대리자 형식을 정의할 수 있습니다.
 

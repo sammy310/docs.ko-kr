@@ -2,13 +2,14 @@
 title: 기본 형식 - C# 가이드
 description: 모든 C# 프로그램의 핵심 형식(숫자, 문자열 및 개체)을 알아봅니다.
 ms.date: 10/10/2016
+ms.technology: csharp-fundamentals
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-ms.openlocfilehash: b65e6ba61bd8886223403f869aa301703f89e8ba
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 7a75ad5080cd2646070447cbc3dcc46b8c73dd65
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834243"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420709"
 ---
 # <a name="types-variables-and-values"></a>형식, 변수 및 값
 
@@ -65,7 +66,7 @@ C#에서는 정수, 부동 소수점 값, 부울 식, 텍스트 문자, 10진수
   
 [!code-csharp[Generic types](../../samples/snippets/csharp/concepts/basic-types/generic-type.cs)]
   
-형식 매개 변수를 사용하면 각 요소를 [개체](language-reference/keywords/object.md)로 변환할 필요 없이 같은 클래스를 재사용하여 요소 형식을 포함할 수 있습니다. 컴파일러는 컬렉션 요소의 특정 형식을 인식하며, 예를 들어 이전 예제에서 `strings` 개체에 정수를 추가하려는 경우 컴파일 시간에 오류를 발생시킬 수 있기 때문에 제네릭 컬렉션 클래스를 *강력한 형식의 컬렉션*이라고 합니다. 자세한 내용은 [제네릭](programming-guide/generics/index.md)을 참조하세요.
+형식 매개 변수를 사용하면 각 요소를 [개체](language-reference/builtin-types/reference-types.md#the-object-type)로 변환할 필요 없이 같은 클래스를 재사용하여 요소 형식을 포함할 수 있습니다. 컴파일러는 컬렉션 요소의 특정 형식을 인식하며, 예를 들어 이전 예제에서 `strings` 개체에 정수를 추가하려는 경우 컴파일 시간에 오류를 발생시킬 수 있기 때문에 제네릭 컬렉션 클래스를 *강력한 형식의 컬렉션*이라고 합니다. 자세한 내용은 [제네릭](programming-guide/generics/index.md)을 참조하세요.
 
 ## <a name="implicit-types-anonymous-types-and-tuple-types"></a>암시적 형식, 무명 형식 및 튜플 형식
 
@@ -81,9 +82,9 @@ C#에서는 정수, 부동 소수점 값, 부울 식, 텍스트 문자, 10진수
   
 - 형식 시스템은 상속 원칙을 지원합니다. 형식은 *기본 형식*이라는 다른 형식에서 파생될 수 있습니다. 파생 형식은 기본 형식의 메서드, 속성 및 기타 멤버를 상속합니다(몇 가지 제한 사항 있음). 기본 형식이 다른 형식에서 파생될 수도 있습니다. 이 경우 파생 형식은 상속 계층 구조에 있는 두 기본 형식의 멤버를 상속합니다. <xref:System.Int32> (C# 키워드: `int`)와 같은 기본 제공 숫자 형식을 포함한 모든 형식은 기본적으로 단일 기본 형식 <xref:System.Object> (C# 키워드: `object`)에서 파생됩니다. 이 통합 형식 계층 구조를 CTS([공용 형식 시스템](../standard/common-type-system.md))라고 합니다. C#의 상속에 대한 자세한 내용은 [상속](programming-guide/classes-and-structs/inheritance.md)을 참조하세요.  
   
-- CTS의 각 형식은 *값 형식* 또는 *참조 형식*으로 정의됩니다. 여기에는 .NET Framework 클래스 라이브러리의 모든 사용자 지정 형식과 자체 사용자 지정 형식도 포함됩니다. [struct](language-reference/keywords/struct.md)를 사용하여 정의한 형식은 값 형식이고, 모든 기본 제공 숫자 형식은 **구조체**입니다. 값 형식에 대한 자세한 내용은 [구조체](structs.md)를 참조하세요. [class](language-reference/keywords/class.md) 키워드를 사용하여 정의한 형식은 참조 형식입니다. 참조 형식에 대한 자세한 내용은 [클래스](classes.md)를 참조하세요. 참조 형식과 값 형식의 컴파일 시간 규칙 및 런타임 동작은 서로 다릅니다.
+- CTS의 각 형식은 *값 형식* 또는 *참조 형식*으로 정의됩니다. 여기에는 .NET Framework 클래스 라이브러리의 모든 사용자 지정 형식과 자체 사용자 지정 형식도 포함됩니다. [struct](language-reference/keywords/struct.md)를 사용하여 정의한 형식은 값 형식이고, 모든 기본 제공 숫자 형식은 **구조체**입니다. 값 형식에 대한 자세한 내용은 [구조체](structs.md)를 참조하세요. [class](language-reference/keywords/class.md) 키워드를 사용하여 정의한 형식은 참조 형식입니다. 참조 형식에 대한 자세한 내용은 [클래스](programming-guide/classes-and-structs/classes.md)를 참조하세요. 참조 형식과 값 형식의 컴파일 시간 규칙 및 런타임 동작은 서로 다릅니다.
 
 ## <a name="see-also"></a>참고 항목
 
 - [구조체](structs.md)
-- [클래스](classes.md)
+- [클래스](programming-guide/classes-and-structs/classes.md)

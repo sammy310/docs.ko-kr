@@ -2,12 +2,12 @@
 title: 서비스 버전 관리
 ms.date: 03/30/2017
 ms.assetid: 37575ead-d820-4a67-8059-da11a2ab48e2
-ms.openlocfilehash: 68c41f2c349dbceb318976ee26db58fd00dae872
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 3f9fd87eacf67a1b23568dcf87df086e935879ba
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321480"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423681"
 ---
 # <a name="service-versioning"></a>서비스 버전 관리
 서비스 및 서비스가 노출하는 엔드포인트는 비즈니스 요구의 변경, 정보 기술의 요구 사항 또는 다른 문제 해결 등의 다양한 이유 때문에 최초로 배포된 후, 수명 동안 여러 차례에 걸쳐 변경되어야 할 수 있습니다. 각 변경 작업에는 새 버전의 서비스가 도입됩니다. 이 항목에서는 WCF (Windows Communication Foundation)에서 버전 관리를 고려 하는 방법에 대해 설명 합니다.  
@@ -132,7 +132,7 @@ ms.locfileid: "72321480"
   
  이러한 메커니즘 중 하나는 인터페이스를 사용하여 각 데이터 계약의 멤버를 정의하고, 해당 인터페이스를 구현하는 데이터 계약 클래스가 아닌 인터페이스 측면의 내부 구현 코드를 작성하는 것입니다. 서비스의 버전 1에 대한 다음 코드에서는 `IPurchaseOrderV1` 인터페이스와 `PurchaseOrderV1`을 보여 줍니다.  
   
-```  
+```csharp  
 public interface IPurchaseOrderV1  
 {  
     string OrderId { get; set; }  
@@ -153,7 +153,7 @@ public class PurchaseOrderV1 : IPurchaseOrderV1
   
  서비스 계약 작업은 `PurchaseOrderV1`의 측면에서 작성되지만, 실제 비즈니스 논리는 `IPurchaseOrderV1`의 측면에서 작성됩니다. 그런 다음, 버전 2에서는 다음 코드에서처럼 새 `IPurchaseOrderV2` 인터페이스와 새 `PurchaseOrderV2` 클래스가 있을 수 있습니다.  
   
-```  
+```csharp
 public interface IPurchaseOrderV2  
 {  
     DateTime OrderDate { get; set; }  

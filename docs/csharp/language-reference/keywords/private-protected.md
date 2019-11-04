@@ -3,12 +3,12 @@ title: private protected - C# 참조
 ms.custom: seodec18
 ms.date: 11/15/2017
 author: sputier
-ms.openlocfilehash: c739dd0b5a5457a66c11962ed86bcd2ffbf811ab
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: dfb2e754d81116012b9fc3f8fd4f6fe1ad0daef1
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661685"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422618"
 ---
 # <a name="private-protected-c-reference"></a>private protected (C# Reference)
 
@@ -76,7 +76,7 @@ class DerivedClass2 : BaseClass
 - [C# 키워드](index.md)
 - [액세스 한정자](access-modifiers.md)
 - [액세스 수준](accessibility-levels.md)
-- [한정자](modifiers.md)
+- [한정자](index.md)
 - [public](public.md)
 - [private](private.md)
 - [internal](internal.md)

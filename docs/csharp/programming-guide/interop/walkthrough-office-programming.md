@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-ms.openlocfilehash: 11e48c54ba82b51268b34d6db01d2f9d4ae61ad7
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: d4a2562324259bda0bab523849449d584736b2ae
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523580"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423193"
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>연습: Office 프로그래밍(C# 및 Visual Basic)
 
@@ -114,13 +114,13 @@ Visual Studio에서는 Microsoft Office 프로그래밍을 개선하는 C# 및 V
 
      [!code-vb[csOfficeWalkthrough#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csofficewalkthrough/vb/thisaddin.vb#7)]
 
-     여기서 추가하는 코드는 C#의 또 다른 기능, 즉 Office 등의 COM 호스트에서 반환되는 `Object` 값을 [dynamic](../../language-reference/keywords/dynamic.md) 형식인 것처럼 처리하는 기능을 보여 줍니다. [-link](../../language-reference/compiler-options/link-compiler-option.md) 컴파일러 옵션을 통해 어셈블리를 참조할 때 **Interop 형식 포함**을 기본값인 `True` 또는 그와 동일한 값으로 설정하면 이 작업이 자동으로 수행됩니다. `dynamic` 형식을 사용하면 Visual Basic의 기존 기능인 런타임에 바인딩을 사용할 수 있으며, C# 3.0 이하 버전 언어에서 필요했던 명시적 캐스팅을 사용할 필요가 없습니다.
+     여기서 추가하는 코드는 C#의 또 다른 기능, 즉 Office 등의 COM 호스트에서 반환되는 `Object` 값을 [dynamic](../../language-reference/builtin-types/reference-types.md) 형식인 것처럼 처리하는 기능을 보여 줍니다. [-link](../../language-reference/compiler-options/link-compiler-option.md) 컴파일러 옵션을 통해 어셈블리를 참조할 때 **Interop 형식 포함**을 기본값인 `True` 또는 그와 동일한 값으로 설정하면 이 작업이 자동으로 수행됩니다. `dynamic` 형식을 사용하면 Visual Basic의 기존 기능인 런타임에 바인딩을 사용할 수 있으며, C# 3.0 이하 버전 언어에서 필요했던 명시적 캐스팅을 사용할 필요가 없습니다.
 
      예를 들어 `excelApp.Columns[1]`는 `Object`를 반환하고, `AutoFit`는 Excel [범위](<xref:Microsoft.Office.Interop.Excel.Range>) 메서드입니다. `dynamic`을 사용하지 않는 경우에는 `excelApp.Columns[1]` 메서드를 호출하기 전에 `Range`에서 반환하는 개체를 `AutoFit` 인스턴스로 캐스팅해야 합니다.
 
      [!code-csharp[csOfficeWalkthrough#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#8)]
 
-     Interop 형식 포함에 대한 자세한 내용은 이 항목 뒷부분의 "PIA 참조를 찾으려면" 및 "PIA 종속성을 복원하려면" 절차를 참조하세요. `dynamic`에 대한 자세한 내용은 [dynamic](../../language-reference/keywords/dynamic.md) 또는 [dynamic 형식 사용](../types/using-type-dynamic.md)을 참조하세요.
+     Interop 형식 포함에 대한 자세한 내용은 이 항목 뒷부분의 "PIA 참조를 찾으려면" 및 "PIA 종속성을 복원하려면" 절차를 참조하세요. `dynamic`에 대한 자세한 내용은 [dynamic](../../language-reference/builtin-types/reference-types.md) 또는 [dynamic 형식 사용](../types/using-type-dynamic.md)을 참조하세요.
 
 ### <a name="to-invoke-displayinexcel"></a>DisplayInExcel를 호출하려면
 
@@ -199,7 +199,7 @@ Visual Studio에서는 Microsoft Office 프로그래밍을 개선하는 C# 및 V
 - [위치 및 이름으로 인수 전달](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md)
 - [명명된 인수 및 선택적 인수](../classes-and-structs/named-and-optional-arguments.md)
 - [초기 바인딩 및 런타임에 바인딩](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)
-- [dynamic](../../language-reference/keywords/dynamic.md)
+- [dynamic](../../language-reference/builtin-types/reference-types.md)
 - [dynamic 형식 사용](../types/using-type-dynamic.md)
 - [람다 식(Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
 - [람다 식(C#)](../statements-expressions-operators/lambda-expressions.md)

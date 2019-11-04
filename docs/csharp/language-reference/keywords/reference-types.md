@@ -9,12 +9,12 @@ helpviewer_keywords:
 - C# language, reference types
 - types [C#], reference types
 ms.assetid: 801cf030-6e2d-4a0d-9daf-1431b0c31f47
-ms.openlocfilehash: 27aed0a1805c1daf4491a3da26371e3312547a6f
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 61b9f8096e1b2093b1ea5589f4336618cd189c34
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69608618"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422453"
 ---
 # <a name="reference-types-c-reference"></a>참조 형식(C# 참조)
 
@@ -26,20 +26,20 @@ C# 형식은 참조 형식과 값 형식 두 가지가 있습니다. 참조 형�
 
 - [interface](interface.md)
 
-- [delegate](delegate.md)
+- [delegate](../builtin-types/reference-types.md)
 
  C#는 다음과 같은 기본 참조 형식도 제공합니다.
 
-- [dynamic](dynamic.md)
+- [dynamic](../builtin-types/reference-types.md)
 
-- [object](object.md)
+- [object](../builtin-types/reference-types.md)
 
-- [string](string.md)
+- [string](../builtin-types/reference-types.md)
 
 ## <a name="see-also"></a>참고 항목
 
 - [C# 참조](../index.md)
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)
 - [C# 키워드](index.md)
-- [유형](types.md)
+- [유형](/dotnet/csharp/language-reference/keywords)
 - [값 형식](value-types.md)

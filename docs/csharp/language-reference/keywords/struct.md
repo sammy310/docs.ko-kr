@@ -8,12 +8,12 @@ helpviewer_keywords:
 - struct keyword [C#]
 - structs [C#], struct keyword
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: 95c36cd039436dcddd3e2e2a3e1fae98ee885677
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a78488ad902b0a96a30ad197b0ece043543c3d69
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924662"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422309"
 ---
 # <a name="struct-c-reference"></a>struct(C# 참조)
 
@@ -38,7 +38,7 @@ public struct Book
 
 자세한 내용은 [구조체](../../programming-guide/classes-and-structs/structs.md)를 참조하세요.
 
-## <a name="examples"></a>예제
+## <a name="examples"></a>예
 
 예제 및 자세한 내용은 [구조체 사용](../../programming-guide/classes-and-structs/using-structs.md)을 참조하세요.
 
@@ -53,7 +53,7 @@ public struct Book
 - [C# 키워드](index.md)
 - [기본값 표](default-values-table.md)
 - [기본 제공 형식 표](built-in-types-table.md)
-- [유형](types.md)
+- [유형](/dotnet/csharp/language-reference/keywords)
 - [값 형식](value-types.md)
 - [class](class.md)
 - [interface](interface.md)

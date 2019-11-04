@@ -6,12 +6,12 @@ helpviewer_keywords:
 - MultipleView control pattern
 - control patterns, MultipleView
 ms.assetid: 5bf1b248-ffee-48c8-9613-0b134bbe9f6a
-ms.openlocfilehash: edef213c0f4d43a15b7c6842ef6c62e95544da66
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 62f0ba1dc8b7836a3b4699699b91b567eb8051f3
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039507"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458186"
 ---
 # <a name="implementing-the-ui-automation-multipleview-control-pattern"></a>UI 자동화 MultipleView 컨트롤 패턴 구현
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "73039507"
   
  <xref:System.Windows.Automation.MultipleViewPattern> 컨트롤 패턴은 동일한 정보 또는 자식 컨트롤 집합의 여러 표현 간을 전환할 수 있는 컨트롤을 지원하는 데 사용됩니다.  
   
- 여러 보기를 표시할 수 있는 컨트롤의 예로는 목록 보기 (콘텐츠를 축소판 그림, 타일, 아이콘 또는 세부 정보로 표시할 수 있음), [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] 차트 (원형, 꺾은선형, 가로 막대형, 수식이 있는 셀 값), [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] 문서 (보통, 웹 레이아웃, 인쇄 레이아웃, 읽기 레이아웃, 개요), Microsoft Outlook 달력 (년, 월, 주, 일) 및 Microsoft Windows Media Player 스킨이 있습니다. 지원되는 뷰는 컨트롤 개발자가 결정하며 컨트롤마다 다릅니다.  
+ 여러 보기를 표시할 수 있는 컨트롤의 예로는 목록 보기 (콘텐츠를 축소판 그림, 타일, 아이콘 또는 세부 정보로 표시할 수 있음), Microsoft Excel 차트 (원형, 꺾은선형, 가로 막대형, 수식이 있는 셀 값), Microsoft Word 문서 (보통, 웹 레이아웃, 인쇄) 등이 있습니다. 레이아웃, 읽기 레이아웃, 개요), Microsoft Outlook 일정 (연도, 월, 주, 일) 및 Microsoft Windows Media Player 스킨이 있습니다. 지원되는 뷰는 컨트롤 개발자가 결정하며 컨트롤마다 다릅니다.  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
 ## <a name="implementation-guidelines-and-conventions"></a>구현 지침 및 규칙  

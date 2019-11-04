@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - internal keyword [C#]
 ms.assetid: 6ee0785c-d7c8-49b8-bb72-0a4dfbcb6461
-ms.openlocfilehash: 7d97b7b05645b02a31af848c97758c7a1f6423b9
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: f72866cafbf291310d88fc6f18a5a15dc77c621d
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69602078"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422724"
 ---
 # <a name="internal-c-reference"></a>internal(C# 참조)
 `internal` 키워드는 형식 및 형식 멤버에 대한 [액세스 한정자](./access-modifiers.md)입니다. 
@@ -89,7 +89,7 @@ public class TestAccess
   
 ## <a name="c-language-specification"></a>C# 언어 사양  
 
-자세한 내용은 [C# 언어 사양](../language-specification/index.md)의 [선언된 내게 필요한 옵션](~/_csharplang/spec/basic-concepts.md#declared-accessibility)을 참조하세요. C# 언어 사양은 C# 구문 및 사용법에 대한 신뢰할 수 있는 소스입니다.
+자세한 내용은 [C# 언어 사양](/dotnet/csharp/language-reference/language-specification/introduction)의 [선언된 내게 필요한 옵션](~/_csharplang/spec/basic-concepts.md#declared-accessibility)을 참조하세요. C# 언어 사양은 C# 구문 및 사용법에 대한 신뢰할 수 있는 소스입니다.
   
 ## <a name="see-also"></a>참고 항목
 
@@ -98,7 +98,7 @@ public class TestAccess
 - [C# 키워드](./index.md)
 - [액세스 한정자](./access-modifiers.md)
 - [액세스 수준](./accessibility-levels.md)
-- [한정자](./modifiers.md)
+- [한정자](index.md)
 - [public](./public.md)
 - [private](./private.md)
 - [protected](./protected.md)

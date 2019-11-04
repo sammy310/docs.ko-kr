@@ -9,12 +9,12 @@ helpviewer_keywords:
 - I/O [.NET], Pipelines
 author: rick-anderson
 ms.author: riande
-ms.openlocfilehash: 9efd7a7581a1e8bd2cb5f544edd1b4c965aa1866
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 54b5f97aca131f52b9b5d9f54d7fa5ec00ba3d5b
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395927"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423671"
 ---
 # <a name="systemiopipelines-in-net"></a>.NET의 System.IO.Pipelines
 
@@ -148,7 +148,7 @@ var pipe = new Pipe(options);
 
 일반적으로 `async` 및 `await`를 사용하는 경우 비동기 코드는 <xref:System.Threading.Tasks.TaskScheduler> 또는 현재 <xref:System.Threading.SynchronizationContext>에서 다시 시작됩니다.
 
-I/O를 수행하는 경우 I/O가 수행되는 위치를 세부적으로 제어하는 것이 중요합니다. 이 컨트롤을 사용하면 CPU 캐시를 효과적으로 활용할 수 있습니다. 효율적인 캐싱은 웹 서버와 같은 고성능 앱에 매우 중요합니다. <xref:System.IO.Pipelines.PipeScheduler>는 비동기 콜백이 실행되는 위치에 대한 제어를 제공합니다. 기본적으로 다음과 같습니다.
+I/O를 수행하는 경우 I/O가 수행되는 위치를 세부적으로 제어하는 것이 중요합니다. 이 컨트롤을 사용하면 CPU 캐시를 효과적으로 활용할 수 있습니다. 효율적인 캐싱은 웹 서버와 같은 고성능 앱에 매우 중요합니다. <xref:System.IO.Pipelines.PipeScheduler>는 비동기 콜백이 실행되는 위치에 대한 제어를 제공합니다. 기본적으로:
 
 * 현재 <xref:System.Threading.SynchronizationContext>가 사용됩니다.
 * `SynchronizationContext`가 없으면 스레드 풀을 사용하여 콜백을 실행합니다.
@@ -191,7 +191,7 @@ bool TryParseMessage(ref ReadOnlySequence<byte> buffer, out Message message);
 
 [!code-csharp[ReadSingleMsg](~/samples/snippets/csharp/pipelines/ReadSingleMsg.cs?name=snippet)]
 
-위의 코드는:
+위의 코드는
 
 * 단일 메시지를 구문 분석합니다.
 * 사용된 `SequencePosition`을 업데이트하고 `SequencePosition`을 검사하여 잘린 입력 버퍼의 시작을 가리킵니다.
@@ -311,8 +311,8 @@ bool TryParseMessage(ref ReadOnlySequence<byte> buffer, out Message message);
 
 이전 코드는 다음과 같습니다.
 
-* <xref:System.IO.Pipelines.PipeWriter.GetSpan%2A>을 사용하여 `PipeWriter`에서 최소 5바이트의 버퍼를 요청합니다.
-* 반환된 `Span<byte>`에 ASCII 문자열 `"Hello"`를 위한 바이트를 씁니다.
+* <xref:System.IO.Pipelines.PipeWriter.GetMemory%2A>을 사용하여 `PipeWriter`에서 최소 5바이트의 버퍼를 요청합니다.
+* 반환된 `Memory<byte>`에 ASCII 문자열 `"Hello"`를 위한 바이트를 씁니다.
 * <xref:System.IO.Pipelines.PipeWriter.Advance%2A>를 호출하여 버퍼에 쓴 바이트 수를 표시합니다.
 * 기본 디바이스로 바이트를 전송하는 `PipeWriter`를 플러시합니다.
 

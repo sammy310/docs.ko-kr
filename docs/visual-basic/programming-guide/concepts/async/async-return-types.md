@@ -2,12 +2,12 @@
 title: 비동기 반환 형식 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 07890291-ee72-42d3-932a-fa4d312f2c60
-ms.openlocfilehash: f85b3ec536033fd6d3cdec8f5a6ac4f9f66077f3
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: a5553070dd68a0bc3eaad1c5e8c000f7a31f8783
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524333"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423963"
 ---
 # <a name="async-return-types-visual-basic"></a>비동기 반환 형식 (Visual Basic)
 
@@ -66,7 +66,7 @@ Dim result1 As Integer = Await TaskOfT_MethodAsync()
 Dim integerTask As Task(Of Integer) = TaskOfT_MethodAsync()
 
 ' You can do other work that does not rely on resultTask before awaiting.
-textBox1.Text &= String.Format("Application can continue working while the Task(Of T) runs. . . . " & vbCrLf)
+textBox1.Text &= "Application can continue working while the Task(Of T) runs. . . . " & vbCrLf
 
 Dim result2 As Integer = Await integerTask
 ```
@@ -76,9 +76,9 @@ Dim result2 As Integer = Await integerTask
 ```vb
 ' Display the values of the result1 variable, the result2 variable, and
 ' the resultTask.Result property.
-textBox1.Text &= String.Format(vbCrLf & "Value of result1 variable:   {0}" & vbCrLf, result1)
-textBox1.Text &= String.Format("Value of result2 variable:   {0}" & vbCrLf, result2)
-textBox1.Text &= String.Format("Value of resultTask.Result:  {0}" & vbCrLf, integerTask.Result)
+textBox1.Text &= vbCrLf & $"Value of result1 variable:   {result1}" & vbCrLf
+textBox1.Text &= $"Value of result2 variable:   {result2}" & vbCrLf
+textBox1.Text &= $"Value of resultTask.Result:  {integerTask.Result}" & vbCrLf
 ```
 
 ## <a name="BKMK_TaskReturnType"></a> Task 반환 형식
@@ -95,7 +95,7 @@ Async Function Task_MethodAsync() As Task
     ' asynchronous call.
     ' Task.Delay is a placeholder for actual work.
     Await Task.Delay(2000)
-    textBox1.Text &= String.Format(vbCrLf & "Sorry for the delay. . . ." & vbCrLf)
+    textBox1.Text &= vbCrLf & "Sorry for the delay. . . ." & vbCrLf
 
     ' This method has no return statement, so its return type is Task.
 End Function
@@ -119,14 +119,14 @@ Await Task_MethodAsync()
 Dim simpleTask As Task = Task_MethodAsync()
 
 ' You can do other work that does not rely on simpleTask before awaiting.
-textBox1.Text &= String.Format(vbCrLf & "Application can continue working while the Task runs. . . ." & vbCrLf)
+textBox1.Text &= vbCrLf & "Application can continue working while the Task runs. . . ." & vbCrLf
 
 Await simpleTask
 ```
 
 ## <a name="BKMK_VoidReturnType"></a> Void 반환 형식
 
-@No__t_0 프로시저의 주요 용도는 이벤트 처리기에 있습니다. 여기에는 반환 형식 (다른 언어에서는 void 반환 형식 이라고 함)이 없습니다. void 반환은 또한 "실행 후 제거"로 분류할 수 있는 작업을 수행하는 메서드 또는 viod를 반환하는 메서드를 재정의하는 데 사용할 수 있습니다. 하지만 void를 반환하는 비동기 메서드는 대기할 수가 없기 때문에 가능할 때마다 `Task`를 반환하는 것이 좋습니다. 이러한 메서드의 호출자는 호출된 비동기 메서드가 마치는 것을 기다리지 않고 완료될 때까지 계속 진행할 수 있어야 하므로, 해당 호출자는 비동기 메서드가 생성하는 모든 값 또는 예외와 독립되어 있어야 합니다.
+`Sub` 프로시저의 주요 용도는 이벤트 처리기에 있습니다. 여기에는 반환 형식 (다른 언어에서는 void 반환 형식 이라고 함)이 없습니다. void 반환은 또한 "실행 후 제거"로 분류할 수 있는 작업을 수행하는 메서드 또는 viod를 반환하는 메서드를 재정의하는 데 사용할 수 있습니다. 하지만 void를 반환하는 비동기 메서드는 대기할 수가 없기 때문에 가능할 때마다 `Task`를 반환하는 것이 좋습니다. 이러한 메서드의 호출자는 호출된 비동기 메서드가 마치는 것을 기다리지 않고 완료될 때까지 계속 진행할 수 있어야 하므로, 해당 호출자는 비동기 메서드가 생성하는 모든 값 또는 예외와 독립되어 있어야 합니다.
 
 void를 반환하는 비동기 메서드의 호출자는 메서드에서 발생한 예외를 처리할 수 없으므로 이처럼 처리되지 않은 예외는 애플리케이션을 실패하게 할 수 있습니다. <xref:System.Threading.Tasks.Task> 또는 <xref:System.Threading.Tasks.Task%601>를 반환하는 비동기 메서드에서 예외가 발생하는 경우 이 예외는 반환된 작업에 저장되고 작업이 대기 상태일 때 다시 throw됩니다. 따라서 예외를 생성할 수 있는 모든 비동기 메서드의 반환 형식이 <xref:System.Threading.Tasks.Task> 또는 <xref:System.Threading.Tasks.Task%601>인지 그리고 해당 메서드 호출이 대기 상태인지 확인해야 합니다.
 
@@ -218,15 +218,15 @@ End Sub
             Dim integerTask As Task(Of Integer) = TaskOfT_MethodAsync()
 
             ' You can do other work that does not rely on resultTask before awaiting.
-            textBox1.Text &= String.Format("Application can continue working while the Task(Of T) runs. . . . " & vbCrLf)
+            textBox1.Text &= "Application can continue working while the Task(Of T) runs. . . . " & vbCrLf
 
             Dim result2 As Integer = Await integerTask
 
             ' Display the values of the result1 variable, the result2 variable, and
             ' the resultTask.Result property.
-            textBox1.Text &= String.Format(vbCrLf & "Value of result1 variable:   {0}" & vbCrLf, result1)
-            textBox1.Text &= String.Format("Value of result2 variable:   {0}" & vbCrLf, result2)
-            textBox1.Text &= String.Format("Value of resultTask.Result:  {0}" & vbCrLf, integerTask.Result)
+            textBox1.Text &= vbCrLf & $"Value of result1 variable:   {result1}" & vbCrLf
+            textBox1.Text &= $"Value of result2 variable:   {result2}" & vbCrLf
+            textBox1.Text &= $"Value of resultTask.Result:  {integerTask.Result}" & vbCrLf
 
             ' Task
             ' Call and await the Task-returning async method in the same statement.
@@ -236,7 +236,7 @@ End Sub
             Dim simpleTask As Task = Task_MethodAsync()
 
             ' You can do other work that does not rely on simpleTask before awaiting.
-            textBox1.Text &= String.Format(vbCrLf & "Application can continue working while the Task runs. . . ." & vbCrLf)
+            textBox1.Text &= vbCrLf & "Application can continue working while the Task runs. . . ." & vbCrLf
 
             Await simpleTask
         End Function
@@ -269,7 +269,7 @@ End Sub
             ' asynchronous call.
             ' Task.Delay is a placeholder for actual work.
             Await Task.Delay(2000)
-            textBox1.Text &= String.Format(vbCrLf & "Sorry for the delay. . . ." & vbCrLf)
+            textBox1.Text &= vbCrLf & "Sorry for the delay. . . ." & vbCrLf
 
             ' This method has no return statement, so its return type is Task.
         End Function

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - volatile keyword [C#]
 ms.assetid: 78089bc7-7b38-4cfd-9e49-87ac036af009
-ms.openlocfilehash: 7200432780cb5a65bc5420b41c5dbd2e27a2c01f
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: e72173ba1b91f03ccb1c15ca6451ac997666bc7f
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633092"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422122"
 ---
 # <a name="volatile-c-reference"></a>volatile(C# 참조)
 
@@ -32,7 +32,7 @@ ms.locfileid: "65633092"
 
 `volatile` 키워드는 `class` 또는 `struct`의 필드에만 적용할 수 있습니다. 지역 변수는 `volatile`로 선언할 수 없습니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 다음 예제에서는 공용 필드 변수를 `volatile`로 선언하는 방법을 보여 줍니다.
 
@@ -54,6 +54,6 @@ ms.locfileid: "65633092"
 - [C# 참조](../index.md)
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)
 - [C# 키워드](index.md)
-- [한정자](modifiers.md)
+- [한정자](index.md)
 - [lock 문](lock-statement.md)
 - <xref:System.Threading.Interlocked>

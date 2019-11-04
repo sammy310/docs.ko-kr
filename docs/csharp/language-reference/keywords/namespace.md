@@ -9,12 +9,12 @@ helpviewer_keywords:
 - namespace keyword [C#]
 - scope [C#]
 ms.assetid: 0a788423-9110-42e0-97d9-bda41ca4870f
-ms.openlocfilehash: 8cc1d1461a33ab94f8ae399d6ff40f26eaf7f74a
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: d1e30162cbce65193783d2fb0607900f209cc648
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039460"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422682"
 ---
 # <a name="namespace-c-reference"></a>namespace(C# 참조)
 
@@ -36,7 +36,7 @@ ms.locfileid: "69039460"
 
 - [enum](enum.md)
 
-- [delegate](delegate.md)
+- [delegate](../builtin-types/reference-types.md)
 
 C# 소스 파일에서 네임스페이스를 명시적으로 선언하는지 여부에 관계없이 컴파일러는 기본 네임스페이스를 추가합니다. 전역 네임스페이스라고도 하는 이 명명되지 않은 네임스페이스는 모든 파일에 있습니다. 전역 네임스페이스의 모든 식별자는 명명된 네임스페이스에서 사용할 수 있습니다.
 

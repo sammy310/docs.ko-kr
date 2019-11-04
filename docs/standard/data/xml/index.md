@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: e695047f-3c0f-4045-8708-5baea91cc380
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 073b28d353bb7ea43775c7e20ddf7241cabf7d9a
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 60614a95e4091b4d7bd9ae3a71e2ddeca53e29ba
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67664012"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424862"
 ---
 # <a name="xml-documents-and-data"></a>XML 문서 및 데이터
 
@@ -62,7 +62,7 @@ ms.locfileid: "67664012"
 
 [XML 처리 옵션](../../../../docs/standard/data/xml/xml-processing-options.md) XML 데이터를 처리하기 위한 옵션을 설명합니다.
 
-[메모리 내 XML 데이터 처리](../../../../docs/standard/data/xml/processing-xml-data-in-memory.md) 메모리 내 XML 데이터를 처리하기 위한 다음과 같은 세 가지 모델을 설명합니다. [LINQ to XML(C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml.md) 및 [LINQ to XML(Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md), <xref:System.Xml.XmlDocument> 클래스(W3C 문서 개체 모델 기반) 및 <xref:System.Xml.XPath.XPathDocument> 클래스(XPath 데이터 모델 기반).
+[메모리 내 XML 데이터 처리](../../../../docs/standard/data/xml/processing-xml-data-in-memory.md) 메모리 내 XML 데이터를 처리하기 위한 다음과 같은 세 가지 모델을 설명합니다. [LINQ to XML(C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md) 및 [LINQ to XML(Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md), <xref:System.Xml.XmlDocument> 클래스(W3C 문서 개체 모델 기반) 및 <xref:System.Xml.XPath.XPathDocument> 클래스(XPath 데이터 모델 기반).
 
 [XSLT 변환](../../../../docs/standard/data/xml/xslt-transformations.md)\
 XSLT 프로세서의 사용 방법에 대해 설명합니다.

@@ -3,16 +3,18 @@ title: C# 소개 - 대화형 자습서
 description: 브라우저에서 C#에 대해 알아보고 사용자만의 개발 환경을 시작합니다.
 ms.date: 08/22/2019
 ms.custom: mvc
-ms.openlocfilehash: 1712e32175a95373ca85464bbdebed9ef99fb375
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 564af21fb0f9b6cf8b5c3591ff5622278a8cbb22
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70850772"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423097"
 ---
 # <a name="introduction-to-c"></a>C\# 소개
 
-C# 소개 자습서를 시작합니다. 브라우저에서 실행할 수 있는 대화형 단원을 시작합니다.
+C# 소개 자습서를 시작합니다. 브라우저에서 실행할 수 있는 대화형 단원을 시작합니다. 해당 대화형 단원을 시작하기 전에 [C# 101 동영상 시리즈](https://aka.ms/dotnet3-csharp)에서 C#의 기본 사항을 학습할 수 있습니다.
+
+> [!VIDEO https://channel9.msdn.com/Series/CSharp-101/What-is-C/player]
 
 첫 번째 단원에서는 작은 코드 조각을 사용하여 C# 개념을 설명합니다. C# 구문의 기본 사항과 문자열, 숫자 및 부울과 같은 데이터 형식을 사용하는 방법에 대해 학습합니다. 모두 대화형이며, 몇 분 내에 코드를 작성하여 실행할 수 있습니다. 이 첫 번째 단원에서는 프로그래밍이나 C# 언어에 대한 사전 지식이 없다고 가정합니다.
 

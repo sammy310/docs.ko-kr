@@ -6,12 +6,12 @@ helpviewer_keywords:
 - implicitly-typed local variables [C#]
 - var [C#]
 ms.assetid: b9218fb2-ef5d-4814-8a8e-2bc29b0bbc9b
-ms.openlocfilehash: 8c09ddc5a9db71a4e0bef0434d2fc14a4c088352
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 7010c38797ab64e5106c96c06cd814c143ca9c24
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65635557"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419382"
 ---
 # <a name="implicitly-typed-local-variables-c-programming-guide"></a>암시적 형식 지역 변수(C# 프로그래밍 가이드)
 
@@ -55,7 +55,7 @@ ms.locfileid: "65635557"
 
 [!code-csharp[csProgGuideLINQ#44](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideLINQ/CS/csRef30LangFeatures_2.cs#44)]
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 암시적 형식 변수 선언에는 다음과 같은 제한 사항이 적용됩니다.
 
@@ -99,7 +99,7 @@ private var bookTitles = new List<string>();
 - [익명 형식](anonymous-types.md)
 - [개체 이니셜라이저 및 컬렉션 이니셜라이저](object-and-collection-initializers.md)
 - [var](../../language-reference/keywords/var.md)
-- [LINQ 쿼리 식](../linq-query-expressions/index.md)
+- [C#의 LINQ](../../linq/index.md)
 - [LINQ(Language-Integrated Query)](../../linq/index.md)
 - [for](../../language-reference/keywords/for.md)
 - [foreach, in](../../language-reference/keywords/foreach-in.md)

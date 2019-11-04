@@ -2,12 +2,12 @@
 title: WMI Provider
 ms.date: 03/30/2017
 ms.assetid: 462f0db3-f4a4-4a4b-ac26-41fc25c670a4
-ms.openlocfilehash: 89e2d370919519953e714cb0d0020587b3f53c9d
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: dd24a6d270a0bd9012bbda2a53913167c9697bc5
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038506"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424509"
 ---
 # <a name="wmi-provider"></a>WMI Provider
 이 샘플에서는 WCF에서 빌드된 WMI(Windows Management Instrumentation) (WMI) 공급자를 사용 하 여 런타임에 WCF (Windows Communication Foundation) 서비스에서 데이터를 수집 하는 방법을 보여 줍니다. 또한 사용자 정의 WMI 개체를 서비스에 추가하는 방법도 보여 줍니다. 이 샘플에서는 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md) 에 대해 WMI 공급자를 활성화 하 고 런타임에 `ICalculator` 서비스에서 데이터를 수집 하는 방법을 보여 줍니다.  
@@ -16,7 +16,7 @@ ms.locfileid: "70038506"
   
  WCF는 런타임에 WBEM 호환 인터페이스를 통해 계측을 노출 하는 구성 요소인 WMI 공급자를 구현 합니다. 관리 도구는 런타임에 인터페이스를 통해 서비스에 연결될 수 있습니다. WCF는 주소, 바인딩, 동작 및 수신기와 같은 서비스 특성을 노출 합니다.  
   
- 기본 제공 WMI 공급자는 애플리케이션의 구성 파일에서 활성화합니다. 이 작업은 다음 샘플 `wmiProviderEnabled` 구성에 표시 된 것 처럼 [ \<system.servicemodel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) 섹션에서 [ \<진단 >](../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md) 의 특성을 통해 수행 됩니다.  
+ 기본 제공 WMI 공급자는 애플리케이션의 구성 파일에서 활성화합니다. 이 작업은 다음 샘플 구성에 표시 된 것 처럼 [\<system.servicemodel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) 섹션에서 [\<진단 >](../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md) 의 `wmiProviderEnabled` 특성을 통해 수행 됩니다.  
   
 ```xml  
 <system.serviceModel>  
@@ -32,19 +32,19 @@ ms.locfileid: "70038506"
  서비스에 WMI 개체를 추가하면 기본 제공 WMI 공급자 정보와 함께 사용자 정의 정보를 표시할 수 있습니다. 그러려면 Installutil.exe 애플리케이션을 사용하여 WMI에 서비스의 스키마를 게시합니다. 이 작업을 수행하기 위한 지침과 자세한 설명은 항목 끝 부분에 있는 설치 지침을 참조하십시오.  
   
 ## <a name="accessing-wmi-information"></a>WMI 정보 액세스  
- 다양한 방식으로 WMI 데이터에 액세스할 수 있습니다. Microsoft에서는 스크립트, Visual Basic 응용 프로그램, C++ 응용 프로그램 및 .NET Framework ()https://docs.microsoft.com/windows/desktop/wmisdk/using-wmi) 용 WMI api를 제공 합니다.  
+ 다양한 방식으로 WMI 데이터에 액세스할 수 있습니다. Microsoft는 스크립트, Visual Basic 응용 프로그램, C++ 응용 프로그램 및 .NET Framework (https://docs.microsoft.com/windows/desktop/wmisdk/using-wmi) 에 WMI api를 제공 합니다.  
   
  이 샘플에서는 두 개의 Java 스크립트를 사용합니다. 하나는 컴퓨터에서 실행 중인 서비스를 속성과 함께 나열하고, 다른 하나는 사용자 정의 WMI 데이터를 표시합니다. 스크립트에서는 WMI 공급자에 대한 연결을 열고, 데이터를 구문 분석하고, 수집된 데이터를 표시합니다.  
   
  샘플을 시작 하 여 WCF 서비스의 실행 중인 인스턴스를 만듭니다. 서비스가 실행 중인 동안 명령 프롬프트에서 다음 명령을 사용하여 각 Java 스크립트를 실행합니다.  
   
-```  
+```console  
 cscript EnumerateServices.js  
 ```  
   
  스크립트에서는 서비스에 포함된 계측에 액세스하여 다음 출력을 생성합니다.  
   
-```  
+```console  
 Microsoft (R) Windows Script Host Version 5.6  
 Copyright © Microsoft Corporation 1996-2001. All rights reserved.  
   
@@ -102,13 +102,13 @@ Copyright © Microsoft Corporation 1996-2001. All rights reserved.
   
  다음으로 두 번째 Java Script를 실행하여 사용자 정의 WMI 데이터를 표시합니다.  
   
-```  
+```console  
 cscript EnumerateCustomObjects.js  
 ```  
   
  스크립트에서는 서비스에 포함된 사용자 정의 계측에 액세스하여 다음 출력을 생성합니다.  
   
-```  
+```console 
 1 WMIObject(s) found.  
 |-PID:           30285bfd-9d66-4c4e-9be2-310499c5cef5  
 |-InstanceId:    3839  
@@ -139,10 +139,10 @@ cscript EnumerateCustomObjects.js
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\WMIProvider`  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [AppFabric 모니터링 샘플](https://go.microsoft.com/fwlink/?LinkId=193959)

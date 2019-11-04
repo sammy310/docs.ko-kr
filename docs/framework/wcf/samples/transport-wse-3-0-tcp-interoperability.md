@@ -1,15 +1,15 @@
 ---
-title: '전송: WSE 3.0 TCP 상호 운용성'
+title: 'Transport: WSE 3.0 TCP Interoperability'
 ms.date: 03/30/2017
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
-ms.openlocfilehash: 9b73f9ef93ebfabf2b1c39363bd64785e2892956
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6541ddf322a2084601daf2f1271ac5c888073f8f
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69941027"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423869"
 ---
-# <a name="transport-wse-30-tcp-interoperability"></a>전송: WSE 3.0 TCP 상호 운용성
+# <a name="transport-wse-30-tcp-interoperability"></a>Transport: WSE 3.0 TCP Interoperability
 WSE 3.0 TCP 상호 운용성 전송 샘플에서는 TCP 이중 세션을 WCF (사용자 지정 Windows Communication Foundation) 전송으로 구현 하는 방법을 보여 줍니다. 또한 채널 계층의 확장성을 사용하여 연결을 통해 기존에 배포된 시스템과 상호 작용할 수 있는 방법도 보여 줍니다. 다음 단계에서는이 사용자 지정 WCF 전송을 빌드하는 방법을 보여 줍니다.  
   
 1. TCP 소켓에서 시작하여 DIME 프레이밍을 사용하여 메시지 경계를 나타내는 <xref:System.ServiceModel.Channels.IDuplexSessionChannel>의 클라이언트 및 서버 구현을 만듭니다.  
@@ -23,7 +23,7 @@ WSE 3.0 TCP 상호 운용성 전송 샘플에서는 TCP 이중 세션을 WCF (�
 5. 사용자 지정 전송을 채널 스택에 추가하는 바인딩 요소를 추가합니다. 자세한 내용은 [바인딩 요소 추가]를 참조 하세요.  
   
 ## <a name="creating-iduplexsessionchannel"></a>IDuplexSessionChannel 만들기  
- WSE 3.0 TCP 상호 운용성 전송을 작성하는 첫 번째 단계는 <xref:System.ServiceModel.Channels.IDuplexSessionChannel> 위에 <xref:System.Net.Sockets.Socket>의 구현을 만드는 것입니다. `WseTcpDuplexSessionChannel`은 <xref:System.ServiceModel.Channels.ChannelBase>로부터 파생됩니다. 메시지를 보내는 논리는 다음 두 가지 주요 부분으로 구성 됩니다. (1) 메시지를 바이트로 인코딩하고 (2) 해당 바이트를 프레이밍 하 여 네트워크에 전송 합니다.  
+ WSE 3.0 TCP 상호 운용성 전송을 작성하는 첫 번째 단계는 <xref:System.ServiceModel.Channels.IDuplexSessionChannel> 위에 <xref:System.Net.Sockets.Socket>의 구현을 만드는 것입니다. `WseTcpDuplexSessionChannel`은 <xref:System.ServiceModel.Channels.ChannelBase>로부터 파생됩니다. 메시지를 보내는 논리는 (1) 메시지를 바이트로 인코딩한 다음 (2) 이러한 바이트를 프레이밍하여 연결을 통해 보내는 두 가지 주요 작업으로 구성됩니다.  
   
  `ArraySegment<byte> encodedBytes = EncodeMessage(message);`  
   
@@ -52,7 +52,7 @@ WSE 3.0 TCP 상호 운용성 전송 샘플에서는 TCP 이중 세션을 WCF (�
 ## <a name="channel-factory"></a>채널 팩터리  
  TCP 전송을 작성하는 다음 단계는 클라이언트 채널을 위한 <xref:System.ServiceModel.Channels.IChannelFactory>의 구현을 만드는 것입니다.  
   
-- `WseTcpChannelFactory`IDuplexSessionChannel > <xref:System.ServiceModel.Channels.ChannelFactoryBase>에서 \<파생 됩니다. 이는 `OnCreateChannel`을 재정의하여 클라이언트 채널을 생성하는 팩터리입니다.  
+- `WseTcpChannelFactory`는 <xref:System.ServiceModel.Channels.ChannelFactoryBase>\<IDuplexSessionChannel >에서 파생 됩니다. 이는 `OnCreateChannel`을 재정의하여 클라이언트 채널을 생성하는 팩터리입니다.  
   
  `protected override IDuplexSessionChannel OnCreateChannel(EndpointAddress remoteAddress, Uri via)`  
   
@@ -62,7 +62,7 @@ WSE 3.0 TCP 상호 운용성 전송 샘플에서는 TCP 이중 세션을 WCF (�
   
  `}`  
   
-- `ClientWseTcpDuplexSessionChannel`기본 `WseTcpDuplexSessionChannel` 에 논리를 추가 하 여 시간에 `channel.Open` TCP 서버에 연결 합니다. 다음 코드에 나온 것처럼 먼저 호스트 이름이 IP 주소로 확인됩니다.  
+- `ClientWseTcpDuplexSessionChannel` 기본 `WseTcpDuplexSessionChannel`에 `channel.Open` 시간에 TCP 서버에 연결 하는 논리를 추가 합니다. 다음 코드에 나온 것처럼 먼저 호스트 이름이 IP 주소로 확인됩니다.  
   
  `hostEntry = Dns.GetHostEntry(Via.Host);`  
   
@@ -79,7 +79,7 @@ WSE 3.0 TCP 상호 운용성 전송 샘플에서는 TCP 이중 세션을 WCF (�
 ## <a name="channel-listener"></a>채널 수신기  
  TCP 전송을 작성하는 다음 단계는 서버 채널을 수락하기 위한 <xref:System.ServiceModel.Channels.IChannelListener>의 구현을 만드는 것입니다.  
   
-- `WseTcpChannelListener`IDuplexSessionChannel > <xref:System.ServiceModel.Channels.ChannelListenerBase>에서 \<파생 되 고 [begin] Open 및 on [begin] Close에서 재정의 하 여 수신 소켓의 수명을 제어 합니다. OnOpen에서는 IP_ANY를 수신 대기하는 소켓이 만들어집니다. 더 고급 구현에서는 IPv6을 수신 대기하는 두 번째 소켓도 만들 수 있습니다. 또한 호스트 이름에 IP 주소를 지정할 수도 있습니다.  
+- `WseTcpChannelListener`는 <xref:System.ServiceModel.Channels.ChannelListenerBase>\<IDuplexSessionChannel >에서 파생 되 고 [Begin] 열기와 [Begin] Close에서 재정의 하 여 수신 소켓의 수명을 제어 합니다. OnOpen에서는 IP_ANY를 수신 대기하는 소켓이 만들어집니다. 더 고급 구현에서는 IPv6을 수신 대기하는 두 번째 소켓도 만들 수 있습니다. 또한 호스트 이름에 IP 주소를 지정할 수도 있습니다.  
   
  `IPEndPoint localEndpoint = new IPEndPoint(IPAddress.Any, uri.Port);`  
   
@@ -135,7 +135,7 @@ WSE 3.0 TCP 상호 운용성 전송 샘플에서는 TCP 이중 세션을 WCF (�
   
  클라이언트  
   
-```  
+```console  
 Calling soap://stockservice.contoso.com/wse/samples/2003/06/TcpSyncStockService  
   
 Symbol: FABRIKAM  
@@ -159,7 +159,7 @@ Press enter.
   
  서버:  
   
-```  
+```console  
 Listening for messages at soap://stockservice.contoso.com/wse/samples/2003/06/TcpSyncStockService  
   
 Press any key to exit when done...  

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - buttons [WPF]
 ms.assetid: 138c41c4-1759-4bbf-8d77-77031a06a8a0
-ms.openlocfilehash: a0792beca358de52a24bd9bb0dd48a20c175f8ff
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 6738b9e66c1223ea4ec50c070a421d119fd30bc4
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920179"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458688"
 ---
 # <a name="walkthrough-create-a-button-by-using-xaml"></a>연습: XAML을 사용하여 단추 만들기
 
@@ -92,7 +92,7 @@ ms.locfileid: "72920179"
 
      ![너비가 90이 고 여백이 10 인 단추](./media/custom-button-animatedbutton-2.gif "custom_button_AnimatedButton_2")
 
-     대상 개체를 미세 조정 하 고, 복잡 한 속성 값을 지정 하 고, 다른 스타일의 입력으로 스타일을 사용 하는 다양 한 방법을 포함 하 여 스타일을 사용 하 여 더 많은 작업을 수행할 수 있습니다. 자세한 내용은 [스타일 지정 및 템플릿](styling-and-templating.md)을 참조하세요.
+     대상 개체를 미세 조정 하 고, 복잡 한 속성 값을 지정 하 고, 다른 스타일의 입력으로 스타일을 사용 하는 다양 한 방법을 포함 하 여 스타일을 사용 하 여 더 많은 작업을 수행할 수 있습니다. 자세한 내용은 [스타일 지정 및 템플릿](../../../desktop-wpf/fundamentals/styles-templates-overview.md)을 참조하세요.
 
 3. **스타일 속성 값을 리소스에 설정 합니다.** 리소스를 사용 하면 일반적으로 정의 된 개체 및 값을 다시 사용할 수 있습니다. 코드를 모듈식으로 만들기 위해 리소스를 사용 하 여 복잡 한 값을 정의 하는 데 특히 유용 합니다. 다음 강조 표시 된 태그를 app.xaml에 추가 합니다.
 
@@ -439,7 +439,7 @@ ms.locfileid: "72920179"
 ## <a name="see-also"></a>참조
 
 - [Microsoft Expression Blend를 사용하여 단추 만들기](walkthrough-create-a-button-by-using-microsoft-expression-blend.md)
-- [스타일 지정 및 템플릿](styling-and-templating.md)
+- [스타일 지정 및 템플릿](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 - [애니메이션 개요](../graphics-multimedia/animation-overview.md)
 - [단색 및 그라데이션을 사용한 그리기 개요](../graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
 - [비트맵 효과 개요](../graphics-multimedia/bitmap-effects-overview.md)

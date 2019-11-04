@@ -2,12 +2,12 @@
 title: LINQ to Objects(C#)
 ms.date: 07/20/2015
 ms.assetid: c5c2c178-3529-4f6c-b3df-2d5267af7f22
-ms.openlocfilehash: 9e20b2c7278787671c7a27646b7cbaac78b57d5f
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 8c0eb71fffdd29d9599d74c789a66ec7caf1faeb
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69591857"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418171"
 ---
 # <a name="linq-to-objects-c"></a>LINQ to Objects(C#)
 “LINQ to Objects”라는 용어는 중간 LINQ 공급자 또는 [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md), [LINQ to XML](./linq-to-xml-overview.md) 등의 API를 사용하지 않고 모든 <xref:System.Collections.IEnumerable> 또는 <xref:System.Collections.Generic.IEnumerable%601> 컬렉션에 대해 LINQ 쿼리를 직접 사용하는 것입니다. LINQ를 사용하면 <xref:System.Collections.Generic.List%601>, <xref:System.Array>, <xref:System.Collections.Generic.Dictionary%602> 등의 모든 열거 가능 컬렉션을 쿼리할 수 있습니다. 컬렉션은 사용자가 정의할 수도 있고 .NET Framework API에서 반환할 수도 있습니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "69591857"
  [LINQ 및 문자열(C#)](./linq-and-strings.md)  
  LINQ를 사용하여 문자열 및 문자열 컬렉션을 쿼리하고 변환하는 방법을 설명합니다. 또한 이러한 원칙을 설명하는 항목의 링크도 제공합니다.  
   
- [LINQ 및 리플렉션(C#)](./linq-and-reflection.md)  
+ [LINQ 및 리플렉션(C#)](how-to-query-an-assembly-s-metadata-with-reflection-linq.md)  
  LINQ에서 리플렉션을 사용하는 방식을 보여 주는 샘플 링크를 제공합니다.  
   
  [LINQ 및 파일 디렉터리(C#)](./linq-and-file-directories.md)  

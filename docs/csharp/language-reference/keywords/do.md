@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - do keyword [C#]
 ms.assetid: 50725f79-9ba6-4898-aa78-6e331568a1bb
-ms.openlocfilehash: 5566965e77feb9d46584146829284e9e0be71539
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 08f964b1e5c78a429dc50f81398d840f58ec4b13
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66422045"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422845"
 ---
 # <a name="do-c-reference"></a>do(C# 참조)
 
@@ -25,7 +25,7 @@ ms.locfileid: "66422045"
 
 [goto](goto.md), [return](return.md) 또는 [throw](throw.md) 문으로 `do-while` 루프를 종료할 수도 있습니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 다음 예제에서는 `do` 문의 사용법을 보여 줍니다. **Run**을 선택하여 예제 코드를 실행합니다. 그런 다음, 코드를 수정하고 다시 실행할 수 있습니다.
 
@@ -33,7 +33,7 @@ ms.locfileid: "66422045"
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 
-자세한 내용은 [C# 언어 사양](../language-specification/index.md)의 [do 문](~/_csharplang/spec/statements.md#the-do-statement) 섹션을 참조하세요.
+자세한 내용은 [C# 언어 사양](/dotnet/csharp/language-reference/language-specification/introduction)의 [do 문](~/_csharplang/spec/statements.md#the-do-statement) 섹션을 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
 

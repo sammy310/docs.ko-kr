@@ -24,16 +24,16 @@ helpviewer_keywords:
 - programmatic navigation [WPF]
 - hyperlinks [WPF]
 ms.assetid: 86ad2143-606a-4e34-bf7e-51a2594248b8
-ms.openlocfilehash: c82bba5612e943eb261777074acffec7af330f22
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
-ms.translationtype: MT
+ms.openlocfilehash: 5a5c4c62799e1d2c190c2f7eaab12fff31e457ab
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920354"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73425277"
 ---
 # <a name="navigation-overview"></a>탐색 개요
 
-WPF (Windows Presentation Foundation)에서는 두 가지 유형의 응용 프로그램 (독립 실행형 응용 프로그램 및 [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]에서 사용할 수 있는 브라우저 스타일 탐색을 지원 합니다. 탐색할 수 있도록 콘텐츠를 패키지 하려면 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] <xref:System.Windows.Controls.Page> 클래스를 제공 합니다. <xref:System.Windows.Documents.Hyperlink>를 사용 하거나 프로그래밍 방식으로 <xref:System.Windows.Navigation.NavigationService>를 사용 하 여 한 <xref:System.Windows.Controls.Page>에서 다른 방법으로 선언적으로 탐색할 수 있습니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]는 저널을 사용하여 탐색했던 페이지를 기억했다가 다시 해당 페이지로 돌아옵니다.
+WPF (Windows Presentation Foundation)는 독립 실행형 응용 프로그램 및 Xbap (XAML 브라우저 응용 프로그램) 라는 두 가지 유형의 응용 프로그램에서 사용할 수 있는 브라우저 스타일 탐색을 지원 합니다. 탐색할 수 있도록 콘텐츠를 패키지 하려면 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] <xref:System.Windows.Controls.Page> 클래스를 제공 합니다. <xref:System.Windows.Documents.Hyperlink>를 사용 하거나 프로그래밍 방식으로 <xref:System.Windows.Navigation.NavigationService>를 사용 하 여 한 <xref:System.Windows.Controls.Page>에서 다른 방법으로 선언적으로 탐색할 수 있습니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]는 저널을 사용하여 탐색했던 페이지를 기억했다가 다시 해당 페이지로 돌아옵니다.
 
 <xref:System.Windows.Controls.Page>, <xref:System.Windows.Documents.Hyperlink>, <xref:System.Windows.Navigation.NavigationService>, 저널은 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]에서 제공 하는 탐색 지원의 핵심을 형성 합니다. 이 개요에서는 느슨한 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 파일, HTML 파일 및 개체에 대 한 탐색이 포함 된 고급 탐색 지원을 포함 하기 전에 이러한 기능을 자세히 살펴봅니다.
 
@@ -42,10 +42,10 @@ WPF (Windows Presentation Foundation)에서는 두 가지 유형의 응용 프�
 
 ## <a name="navigation-in-wpf-applications"></a>WPF 애플리케이션에서 탐색
 
-이 항목에서는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]의 주요 탐색 기능에 대 한 개요를 제공 합니다. 이러한 기능은 독립 실행형 응용 프로그램 및 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]모두 사용할 수 있습니다. 그러나이 항목에서는 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]컨텍스트 내에 이러한 기능을 제공 합니다.
+이 항목에서는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]의 주요 탐색 기능에 대 한 개요를 제공 합니다. 이러한 기능은 독립 실행형 응용 프로그램과 Xbap 모두에서 사용할 수 있지만이 항목에서는 XBAP 컨텍스트 내에서 이러한 기능을 제공 합니다.
 
 > [!NOTE]
-> 이 항목에서는 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]를 빌드하고 배포 하는 방법에 대해서는 설명 하지 않습니다. [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]에 대 한 자세한 내용은 [WPF XAML 브라우저 응용 프로그램 개요](wpf-xaml-browser-applications-overview.md)를 참조 하세요.
+> 이 항목에서는 Xbap를 빌드하고 배포 하는 방법에 대해서는 설명 하지 않습니다. Xbap에 대 한 자세한 내용은 [WPF XAML 브라우저 응용 프로그램 개요](wpf-xaml-browser-applications-overview.md)를 참조 하세요.
 
 이 섹션에서는 다음과 같은 탐색 측면에 대해 설명합니다.
 
@@ -121,16 +121,16 @@ WPF (Windows Presentation Foundation)에서는 두 가지 유형의 응용 프�
 
 ### <a name="configuring-a-start-page"></a>시작 페이지 구성
 
-[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]를 사용하려면 브라우저에 특정 규모의 애플리케이션 인프라가 호스트되어야 합니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]에서 <xref:System.Windows.Application> 클래스는 필요한 응용 프로그램 인프라를 설정 하는 응용 프로그램 정의의 일부입니다 ( [응용 프로그램 관리 개요](application-management-overview.md)참조).
+Xbap는 브라우저에서 호스트 되는 응용 프로그램 인프라의 특정 크기를 요구 합니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]에서 <xref:System.Windows.Application> 클래스는 필요한 응용 프로그램 인프라를 설정 하는 응용 프로그램 정의의 일부입니다 ( [응용 프로그램 관리 개요](application-management-overview.md)참조).
 
-응용 프로그램 정의는 일반적으로 태그와 코드를 모두 사용 하 여 구현 되며 마크업 파일은 MSBuild `ApplicationDefinition` 항목으로 구성 됩니다. [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]에 대 한 응용 프로그램 정의는 다음과 같습니다.
+응용 프로그램 정의는 일반적으로 태그와 코드를 모두 사용 하 여 구현 되며 마크업 파일은 MSBuild `ApplicationDefinition` 항목으로 구성 됩니다. 다음은 XBAP에 대 한 응용 프로그램 정의입니다.
 
 [!code-xaml[XBAPAppDefSnippets#XBAPApplicationDefinitionMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/XBAPAppDefSnippets/CSharp/App.xaml#xbapapplicationdefinitionmarkup)]
 
 [!code-csharp[XBAPAppDefSnippets#XBAPApplicationDefinitionCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/XBAPAppDefSnippets/CSharp/App.xaml.cs#xbapapplicationdefinitioncodebehind)]
 [!code-vb[XBAPAppDefSnippets#XBAPApplicationDefinitionCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XBAPAppDefSnippets/VisualBasic/Application.xaml.vb#xbapapplicationdefinitioncodebehind)]
 
-[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]은 해당 응용 프로그램 정의를 사용 하 여 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 시작 될 때 자동으로 로드 되는 <xref:System.Windows.Controls.Page> 시작 <xref:System.Windows.Controls.Page>을 지정할 수 있습니다. 이렇게 하려면 원하는 <xref:System.Windows.Controls.Page>에 대 한 URI (uniform resource identifier)를 사용 하 여 <xref:System.Windows.Application.StartupUri%2A> 속성을 설정 합니다.
+XBAP는 응용 프로그램 정의를 사용 하 여 시작 <xref:System.Windows.Controls.Page>(XBAP를 시작할 때 자동으로 로드 되는 <xref:System.Windows.Controls.Page>)를 지정할 수 있습니다. 이렇게 하려면 원하는 <xref:System.Windows.Controls.Page>에 대 한 URI (uniform resource identifier)를 사용 하 여 <xref:System.Windows.Application.StartupUri%2A> 속성을 설정 합니다.
 
 > [!NOTE]
 > 대부분의 경우 <xref:System.Windows.Controls.Page>는 응용 프로그램으로 컴파일되거나 응용 프로그램으로 배포 됩니다. 이러한 경우 <xref:System.Windows.Controls.Page>를 식별 하는 URI는 pack 체계를 준수 하는 URI *인 PACK uri* 입니다. Pack Uri는 [WPF의 Pack uri](pack-uris-in-wpf.md)에 자세히 설명 되어 있습니다. 아래에 설명된 http 체계를 사용하여 콘텐츠를 탐색할 수도 있습니다.
@@ -139,18 +139,18 @@ WPF (Windows Presentation Foundation)에서는 두 가지 유형의 응용 프�
 
 [!code-xaml[NavigationOverviewSnippets#XBAPApplicationDefinitionMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/App.xaml#xbapapplicationdefinitionmarkup)]
 
-이 예제에서 `StartupUri` 특성은 홈페이지를 식별 하는 상대 pack URI로 설정 됩니다. [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 시작 되 면 페이지를 자동으로 탐색 하 고 표시 합니다. 다음 그림은 웹 서버에서 시작 된 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 보여 주는 그림입니다.
+이 예제에서 `StartupUri` 특성은 홈페이지를 식별 하는 상대 pack URI로 설정 됩니다. XBAP를 시작 하면 .xaml이 자동으로 탐색 되 고 표시 됩니다. 이는 웹 서버에서 시작 된 XBAP를 보여 주는 다음 그림에 나와 있습니다.
 
 ![XBAP 페이지](./media/navigation-overview/xbap-launched-from-a-web-server.png "웹 서버에서 시작 된 XBAP를 표시 합니다.")
 
 > [!NOTE]
-> [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]의 개발 및 배포에 대 한 자세한 내용은 [WPF XAML 브라우저 응용 프로그램 개요](wpf-xaml-browser-applications-overview.md) 및 [Wpf 응용 프로그램 배포](deploying-a-wpf-application-wpf.md)를 참조 하세요.
+> Xbap의 개발 및 배포에 대 한 자세한 내용은 [WPF XAML 브라우저 응용 프로그램 개요](wpf-xaml-browser-applications-overview.md) 및 [Wpf 응용 프로그램 배포](deploying-a-wpf-application-wpf.md)를 참조 하세요.
 
 <a name="ConfiguringAXAMLPage"></a>
 
 ### <a name="configuring-the-host-windows-title-width-and-height"></a>호스트 창 제목, 너비 및 높이 구성
 
-위의 그림에서 알 수 있는 한 가지 사항은 브라우저와 탭 패널의 제목이 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]URI 임을 나타내는 것입니다. 이 제목은 길이가 길며 모양이나 정보 제공 측면 모두에서 그다지 유용하지 않습니다. 따라서 <xref:System.Windows.Controls.Page> <xref:System.Windows.Controls.Page.WindowTitle%2A> 속성을 설정 하 여 제목을 변경 하는 방법을 제공 합니다. 또한 <xref:System.Windows.Controls.Page.WindowWidth%2A> 및 <xref:System.Windows.Controls.Page.WindowHeight%2A>를 각각 설정 하 여 브라우저 창의 너비와 높이를 구성할 수 있습니다.
+위의 그림에서 알 수 있는 한 가지 사항은 브라우저와 탭 패널의 제목이 XBAP의 URI 임을 나타내는 것입니다. 이 제목은 길이가 길며 모양이나 정보 제공 측면 모두에서 그다지 유용하지 않습니다. 따라서 <xref:System.Windows.Controls.Page> <xref:System.Windows.Controls.Page.WindowTitle%2A> 속성을 설정 하 여 제목을 변경 하는 방법을 제공 합니다. 또한 <xref:System.Windows.Controls.Page.WindowWidth%2A> 및 <xref:System.Windows.Controls.Page.WindowHeight%2A>를 각각 설정 하 여 브라우저 창의 너비와 높이를 구성할 수 있습니다.
 
 다음 예제와 같이 <xref:System.Windows.Controls.Page.WindowTitle%2A>, <xref:System.Windows.Controls.Page.WindowWidth%2A>및 <xref:System.Windows.Controls.Page.WindowHeight%2A> 태그에서 선언적으로 설정할 수 있습니다.
 
@@ -164,7 +164,7 @@ WPF (Windows Presentation Foundation)에서는 두 가지 유형의 응용 프�
 
 ### <a name="hyperlink-navigation"></a>하이퍼링크 탐색
 
-일반적인 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]는 여러 페이지로 구성 됩니다. 한 페이지에서 다른 페이지로 이동 하는 가장 간단한 방법은 <xref:System.Windows.Documents.Hyperlink>를 사용 하는 것입니다. 다음 태그에 표시 된 `Hyperlink` 요소를 사용 하 여 <xref:System.Windows.Controls.Page>에 <xref:System.Windows.Documents.Hyperlink>를 선언적으로 추가할 수 있습니다.
+일반적인 XBAP는 여러 페이지로 구성 됩니다. 한 페이지에서 다른 페이지로 이동 하는 가장 간단한 방법은 <xref:System.Windows.Documents.Hyperlink>를 사용 하는 것입니다. 다음 태그에 표시 된 `Hyperlink` 요소를 사용 하 여 <xref:System.Windows.Controls.Page>에 <xref:System.Windows.Documents.Hyperlink>를 선언적으로 추가할 수 있습니다.
 
 [!code-xaml[NavigationOverviewSnippets#HyperlinkXAML1](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithHyperlink.xaml#hyperlinkxaml1)]
 [!code-xaml[NavigationOverviewSnippets#HyperlinkXAML2](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithHyperlink.xaml#hyperlinkxaml2)]
@@ -176,11 +176,11 @@ WPF (Windows Presentation Foundation)에서는 두 가지 유형의 응용 프�
 
 - 사용자가 텍스트 및 이미지와 같이 탐색을 시작 하기 위해 클릭할 수 있는 콘텐츠 (`Hyperlink` 요소에 포함 될 수 있는 콘텐츠의 경우 <xref:System.Windows.Documents.Hyperlink> 참조)
 
-다음 그림에서는 <xref:System.Windows.Documents.Hyperlink>있는 <xref:System.Windows.Controls.Page>의 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 보여 줍니다.
+다음 그림에서는 <xref:System.Windows.Documents.Hyperlink>포함 된 <xref:System.Windows.Controls.Page>의 XBAP를 보여 줍니다.
 
 ![하이퍼링크가 있는 페이지](./media/navigation-overview/xbap-with-a-page-with-a-hyperlink.png "그러면 하이퍼링크가 있는 페이지가 포함 된 XBAP가 표시 됩니다.")
 
-짐작할 수 있듯이 <xref:System.Windows.Documents.Hyperlink> 클릭 하면 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] `NavigateUri` 특성으로 식별 되는 <xref:System.Windows.Controls.Page>으로 이동 됩니다. 또한 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]는 Internet Explorer의 최근 페이지 목록에 이전 <xref:System.Windows.Controls.Page> 항목을 추가 합니다. 다음 그림에서 이를 확인할 수 있습니다.
+마찬가지로 <xref:System.Windows.Documents.Hyperlink> 클릭 하면 XBAP에서 `NavigateUri` 특성으로 식별 되는 <xref:System.Windows.Controls.Page>로 이동 합니다. 또한 XBAP는 Internet Explorer의 최근 페이지 목록에 이전 <xref:System.Windows.Controls.Page> 항목을 추가 합니다. 다음 그림에서 이를 확인할 수 있습니다.
 
 ![뒤로 및 앞으로 단추](./media/navigation-overview/back-and-forward-navigation.png "뒤로 및 앞으로 단추를 사용 하 여 탐색 합니다.")
 
@@ -371,10 +371,10 @@ Pack uri를 프로그래밍 방식으로 생성 해야 하는 경우 (예: 런�
 
 ![뒤로 및 앞으로 단추](./media/navigation-overview/back-and-forward-navigation.png "뒤로 및 앞으로 단추를 사용 하 여 탐색 합니다.")
 
-Internet Explorer에서 호스팅되는 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]의 경우 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]는 저널을 Internet Explorer의 탐색 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 통합 합니다. 이를 통해 사용자는 Internet Explorer의 **뒤로**, **앞**으로 및 **최근 페이지** 단추를 사용 하 여 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]에서 페이지를 탐색할 수 있습니다.
+Internet Explorer에서 호스트 되는 Xbap의 경우 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]는 저널을 Internet Explorer의 탐색 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 통합 합니다. 이를 통해 사용자는 Internet Explorer의 **뒤로**, **앞**으로 및 **최근 페이지** 단추를 사용 하 여 XBAP의 페이지를 탐색할 수 있습니다.
 
 > [!IMPORTANT]
-> Internet Explorer에서 사용자가 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]에서 다른 위치로 이동 하면 활성 상태로 유지 되지 않은 페이지의 저널 항목만 저널에 유지 됩니다. 페이지를 활성 상태로 유지 하는 방법에 대 한 설명은이 항목의 뒷부분에 나오는 [페이지 수명 및 저널](#PageLifetime) 을 참조 하세요.
+> Internet Explorer에서 사용자가 XBAP로 이동 하 여 다시 XBAP로 이동 하면 활성 상태로 유지 되지 않은 페이지의 저널 항목만 저널에 유지 됩니다. 페이지를 활성 상태로 유지 하는 방법에 대 한 설명은이 항목의 뒷부분에 나오는 [페이지 수명 및 저널](#PageLifetime) 을 참조 하세요.
 
 기본적으로 Internet Explorer의 **최근 페이지** 목록에 표시 되는 각 <xref:System.Windows.Controls.Page>에 대 한 텍스트는 <xref:System.Windows.Controls.Page>에 대 한 URI입니다. 대부분의 경우 이는 사용자에게 특히 의미가 없습니다. 다행히도 다음 옵션 중 하나를 사용하여 텍스트를 변경할 수 있습니다.
 
@@ -425,7 +425,7 @@ Internet Explorer에서 호스팅되는 [!INCLUDE[TLA2#tla_xbap#plural](../../..
 
 ### <a name="page-lifetime-and-the-journal"></a>페이지 수명 및 저널
 
-그래픽, 애니메이션 및 미디어를 포함 하 여 다양 한 콘텐츠를 포함 하는 여러 페이지를 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 하는 것이 좋습니다. 이와 같은 페이지의 메모리 사용량은 특히 비디오 및 오디오 미디어가 사용될 경우 매우 클 수 있습니다. 저널에서로 탐색 된 페이지를 "기억" 하는 경우 이러한 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]는 크고 많은 양의 메모리를 빠르게 소비할 수 있습니다.
+그래픽, 애니메이션 및 미디어를 포함 하 여 풍부한 콘텐츠가 포함 된 여러 페이지가 포함 된 XBAP를 생각해 보세요. 이와 같은 페이지의 메모리 사용량은 특히 비디오 및 오디오 미디어가 사용될 경우 매우 클 수 있습니다. 저널에서 탐색 된 페이지를 "기억" 하는 경우 이러한 XBAP는 크고 많은 양의 메모리를 빠르게 소비할 수 있습니다.
 
 이러한 이유로 저널의 기본 동작은 <xref:System.Windows.Controls.Page> 개체에 대 한 참조가 아니라 각 업무 일지 항목에 <xref:System.Windows.Controls.Page> 메타 데이터를 저장 하는 것입니다. 저널 항목을 탐색 하면 해당 <xref:System.Windows.Controls.Page> 메타 데이터가 지정 된 <xref:System.Windows.Controls.Page>의 새 인스턴스를 만드는 데 사용 됩니다. 따라서 탐색 되는 각 <xref:System.Windows.Controls.Page>에는 다음 그림에 나와 있는 수명이 표시 됩니다.
 
@@ -533,21 +533,21 @@ Internet Explorer에서 호스팅되는 [!INCLUDE[TLA2#tla_xbap#plural](../../..
 
 다음은 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]에서 쿠키가 지원 되는 몇 가지 방법입니다.
 
-- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 독립 실행형 응용 프로그램과 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 모두 쿠키를 만들고 관리할 수 있습니다.
+- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 독립 실행형 응용 프로그램과 Xbap는 모두 쿠키를 만들고 관리할 수 있습니다.
 
-- [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]에서 만든 쿠키는 브라우저에서 액세스할 수 있습니다.
+- XBAP에서 만든 쿠키는 브라우저에서 액세스할 수 있습니다.
 
-- 동일한 도메인의 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]에서 쿠키를 만들고 공유할 수 있습니다.
+- 동일한 도메인의 Xbap에서 쿠키를 만들고 공유할 수 있습니다.
 
-- 동일한 도메인의 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 및 HTML 페이지에서 쿠키를 만들고 공유할 수 있습니다.
+- 동일한 도메인의 Xbap 및 HTML 페이지에서 쿠키를 만들고 공유할 수 있습니다.
 
-- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 및 느슨한 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 페이지에서 웹 요청을 수행할 때 쿠키가 디스패치 됩니다.
+- Xbap 및 느슨한 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 페이지에서 웹 요청을 수행할 때 쿠키가 디스패치 됩니다.
 
-- 최상위 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]와 IFRAME에서 호스트 되는 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 모두 쿠키에 액세스할 수 있습니다.
+- IFRAME에서 호스트 되는 최상위 Xbap와 Xbap는 모두 쿠키에 액세스할 수 있습니다.
 
 - [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]의 쿠키 지원은 지원 되는 모든 브라우저에 대해 동일 합니다.
 
-- Internet Explorer에서 쿠키와 관련 된 P3P 정책은 특히 자사 및 타사 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]와 관련 하 여 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]에 의해 적용 됩니다.
+- Internet Explorer에서 쿠키와 관련 된 P3P 정책은 특히 자사 및 타사 Xbap와 관련 하 여 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]에 의해 적용 됩니다.
 
 <a name="Structured_Navigation"></a>
 
@@ -561,7 +561,7 @@ Internet Explorer에서 호스팅되는 [!INCLUDE[TLA2#tla_xbap#plural](../../..
 
 ## <a name="the-navigationwindow-class"></a>NavigationWindow 클래스
 
-지금까지 탐색 가능한 콘텐츠로 애플리케이션을 빌드하는 데 가장 많이 사용되는 탐색 서비스 영역을 살펴보았습니다. 이러한 서비스는 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]으로 제한 되지 않지만 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]컨텍스트에서 설명 했습니다. 최신 운영 체제 및 Windows 응용 프로그램은 최신 사용자의 브라우저 환경을 활용 하 여 브라우저 스타일 탐색을 독립 실행형 응용 프로그램에 통합 합니다. 일반적인 예는 다음과 같습니다.
+지금까지 탐색 가능한 콘텐츠로 애플리케이션을 빌드하는 데 가장 많이 사용되는 탐색 서비스 영역을 살펴보았습니다. 이러한 서비스는 xbap로 국한 되지 않지만 Xbap의 컨텍스트에서 설명 했습니다. 최신 운영 체제 및 Windows 응용 프로그램은 최신 사용자의 브라우저 환경을 활용 하 여 브라우저 스타일 탐색을 독립 실행형 응용 프로그램에 통합 합니다. 일반적인 예는 다음과 같습니다.
 
 - **단어 동의어 사전**: 선택한 단어를 탐색합니다.
 
@@ -569,7 +569,7 @@ Internet Explorer에서 호스팅되는 [!INCLUDE[TLA2#tla_xbap#plural](../../..
 
 - **마법사**: 복잡한 작업을 여러 페이지로 나누어 탐색할 수 있습니다. Windows 기능 추가 및 제거를 처리 하는 Windows 구성 요소 마법사를 예로 들 수 있습니다.
 
-브라우저 스타일 탐색을 독립 실행형 응용 프로그램에 통합 하기 위해 <xref:System.Windows.Navigation.NavigationWindow> 클래스를 사용할 수 있습니다. <xref:System.Windows.Navigation.NavigationWindow>은 <xref:System.Windows.Window>에서 파생 되며 제공 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]는 동일한 탐색 지원으로 확장 됩니다. <xref:System.Windows.Navigation.NavigationWindow>는 독립 실행형 응용 프로그램의 주 창 또는 대화 상자와 같은 보조 창으로 사용할 수 있습니다.
+브라우저 스타일 탐색을 독립 실행형 응용 프로그램에 통합 하기 위해 <xref:System.Windows.Navigation.NavigationWindow> 클래스를 사용할 수 있습니다. <xref:System.Windows.Navigation.NavigationWindow>은 <xref:System.Windows.Window>에서 파생 되며 Xbap에서 제공 하는 탐색에 대해 동일한 지원으로 확장 됩니다. <xref:System.Windows.Navigation.NavigationWindow>는 독립 실행형 응용 프로그램의 주 창 또는 대화 상자와 같은 보조 창으로 사용할 수 있습니다.
 
 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] (<xref:System.Windows.Window>, <xref:System.Windows.Controls.Page>등)에서 대부분의 최상위 클래스와 마찬가지로 <xref:System.Windows.Navigation.NavigationWindow>를 구현 하려면 태그와 코드 숨김으로 이루어진 조합을 사용 합니다. 다음 예제에서 이를 확인할 수 있습니다.
 
@@ -618,7 +618,7 @@ Internet Explorer에서 호스팅되는 [!INCLUDE[TLA2#tla_xbap#plural](../../..
 
 ## <a name="the-frame-class"></a>Frame 클래스
 
-브라우저와 <xref:System.Windows.Navigation.NavigationWindow> 모두 탐색 가능한 콘텐츠를 호스트 하는 창입니다. 애플리케이션의 콘텐츠가 전체 창에서 호스트될 필요가 없는 경우가 있습니다. 대신, 이러한 콘텐츠는 다른 콘텐츠 내에 호스트됩니다. <xref:System.Windows.Controls.Frame> 클래스를 사용 하 여 탐색 가능한 콘텐츠를 다른 콘텐츠에 삽입할 수 있습니다. <xref:System.Windows.Controls.Frame> <xref:System.Windows.Navigation.NavigationWindow> 및 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]와 동일한 지원을 제공 합니다.
+브라우저와 <xref:System.Windows.Navigation.NavigationWindow> 모두 탐색 가능한 콘텐츠를 호스트 하는 창입니다. 애플리케이션의 콘텐츠가 전체 창에서 호스트될 필요가 없는 경우가 있습니다. 대신, 이러한 콘텐츠는 다른 콘텐츠 내에 호스트됩니다. <xref:System.Windows.Controls.Frame> 클래스를 사용 하 여 탐색 가능한 콘텐츠를 다른 콘텐츠에 삽입할 수 있습니다. <xref:System.Windows.Controls.Frame>는 <xref:System.Windows.Navigation.NavigationWindow> 및 Xbap와 동일한 지원을 제공 합니다.
 
 다음 예제에서는 `Frame` 요소를 사용 하 여 선언적으로 <xref:System.Windows.Controls.Page>에 <xref:System.Windows.Controls.Frame>를 추가 하는 방법을 보여 줍니다.
 
@@ -626,13 +626,13 @@ Internet Explorer에서 호스팅되는 [!INCLUDE[TLA2#tla_xbap#plural](../../..
 [!code-xaml[NavigationOverviewSnippets#FrameHostPageXAML2](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/FrameHostPage.xaml#framehostpagexaml2)]
 [!code-xaml[NavigationOverviewSnippets#FrameHostPageXAML3](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/FrameHostPage.xaml#framehostpagexaml3)]
 
-이 태그는 <xref:System.Windows.Controls.Frame>에서 처음으로 탐색 해야 하는 <xref:System.Windows.Controls.Page>에 대 한 pack URI를 사용 하 여 `Frame` 요소의 `Source` 특성을 설정 합니다. 다음 그림에서는 여러 페이지 간을 탐색 한 <xref:System.Windows.Controls.Frame> 있는 <xref:System.Windows.Controls.Page>의 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 보여 줍니다.
+이 태그는 <xref:System.Windows.Controls.Frame>에서 처음으로 탐색 해야 하는 <xref:System.Windows.Controls.Page>에 대 한 pack URI를 사용 하 여 `Frame` 요소의 `Source` 특성을 설정 합니다. 다음 그림에서는 여러 페이지 간에 탐색 된 <xref:System.Windows.Controls.Frame> 있는 <xref:System.Windows.Controls.Page>의 XBAP를 보여 줍니다.
 
 ![여러 페이지 간에 탐색 된 프레임](./media/navigation-overview/frame-navigation-between-multiple-pages.png "그러면 여러 페이지 간의 프레임 탐색이 표시 됩니다.")
 
 <xref:System.Windows.Controls.Page>콘텐츠 내에서 <xref:System.Windows.Controls.Frame>를 사용 해야 할 필요는 없습니다. <xref:System.Windows.Window>콘텐츠 내에 <xref:System.Windows.Controls.Frame>을 호스트 하는 것도 일반적입니다.
 
-기본적으로 <xref:System.Windows.Controls.Frame>는 다른 저널이 없는 경우에만 자체 저널을 사용 합니다. <xref:System.Windows.Controls.Frame> <xref:System.Windows.Navigation.NavigationWindow> 또는 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]내에서 호스팅되는 콘텐츠의 일부인 경우 <xref:System.Windows.Controls.Frame> <xref:System.Windows.Navigation.NavigationWindow> 또는 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]에 속하는 저널을 사용 합니다. 그러나 경우에 따라 <xref:System.Windows.Controls.Frame> 자체 저널을 담당 해야 할 수도 있습니다. 한 가지 이유는 <xref:System.Windows.Controls.Frame>에서 호스트 되는 페이지 내에서 저널 탐색을 허용 하는 것입니다. 다음 그림에서 이를 확인할 수 있습니다.
+기본적으로 <xref:System.Windows.Controls.Frame>는 다른 저널이 없는 경우에만 자체 저널을 사용 합니다. <xref:System.Windows.Controls.Frame> <xref:System.Windows.Navigation.NavigationWindow> 또는 XBAP 내에서 호스팅되는 콘텐츠의 일부인 경우 <xref:System.Windows.Navigation.NavigationWindow> 또는 XBAP에 속하는 저널을 <xref:System.Windows.Controls.Frame> 사용 합니다. 그러나 경우에 따라 <xref:System.Windows.Controls.Frame> 자체 저널을 담당 해야 할 수도 있습니다. 한 가지 이유는 <xref:System.Windows.Controls.Frame>에서 호스트 되는 페이지 내에서 저널 탐색을 허용 하는 것입니다. 다음 그림에서 이를 확인할 수 있습니다.
 
 ![프레임 및 페이지 다이어그램](./media/navigation-overview/journal-navigation-within-pages-hosted-by-a-frame.png "프레임에서 호스트 되는 페이지 내에서 저널 탐색을 표시 합니다.")
 
@@ -665,7 +665,7 @@ Internet Explorer에서 호스팅되는 [!INCLUDE[TLA2#tla_xbap#plural](../../..
 
 ![탐색기 다이어그램](./media/navigation-overview/navigation-host-construction.png "탐색 호스트의 기본 생성")
 
-기본적으로 <xref:System.Windows.Navigation.NavigationWindow> 및 <xref:System.Windows.Controls.Frame>를 통해 브라우저에서 호스팅될 때 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]에서 제공 하는 것과 동일한 탐색 지원을 제공할 수 있습니다.
+기본적으로 <xref:System.Windows.Navigation.NavigationWindow> 및 <xref:System.Windows.Controls.Frame>를 통해 브라우저에서 호스팅될 때 XBAP에서 제공 하는 것과 동일한 탐색 지원을 제공할 수 있습니다.
 
 탐색 호스트는 <xref:System.Windows.Navigation.NavigationService> 및 저널을 사용 하는 것 외에도 <xref:System.Windows.Navigation.NavigationService> 구현 하는 것과 동일한 멤버를 구현 합니다. 다음 그림에서 이를 확인할 수 있습니다.
 
@@ -681,7 +681,7 @@ Internet Explorer에서 호스팅되는 [!INCLUDE[TLA2#tla_xbap#plural](../../..
 
 ## <a name="navigating-to-content-other-than-xaml-pages"></a>XAML 페이지 이외의 콘텐츠 탐색
 
-이 항목 전체에서 <xref:System.Windows.Controls.Page> 및 팩 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]의 다양 한 탐색 기능을 보여 주는 데 사용 되었습니다. 그러나 응용 프로그램으로 컴파일되는 <xref:System.Windows.Controls.Page>는 탐색할 수 있는 유일한 콘텐츠 형식이 아니라 pack [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 콘텐츠를 식별 하는 유일한 방법이 아닙니다.
+이 항목 전체에서 <xref:System.Windows.Controls.Page> 및 팩 Xbap는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]의 다양 한 탐색 기능을 보여 주기 위해 사용 되었습니다. 그러나 응용 프로그램으로 컴파일되는 <xref:System.Windows.Controls.Page>는 탐색할 수 있는 유일한 형식의 콘텐츠는 아닙니다 .이를 pack Xbap는 콘텐츠를 식별 하는 유일한 방법이 아닙니다.
 
 이 섹션에서 설명 하는 것 처럼 느슨한 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 파일, HTML 파일 및 개체로 이동할 수도 있습니다.
 
@@ -728,7 +728,7 @@ Internet Explorer에서 호스팅되는 [!INCLUDE[TLA2#tla_xbap#plural](../../..
 
 [!code-xaml[NavigationOverviewSnippets#FrameHtmlNavMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/FrameHTMLNavPage.xaml#framehtmlnavmarkup)]
 
-HTML로 이동 하려면 특수 권한이 필요 합니다. 예를 들어 인터넷 영역 부분 신뢰 보안 샌드박스에서 실행 되는 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]에서 이동할 수 없습니다. 자세한 내용은 [WPF 부분 신뢰 보안](../wpf-partial-trust-security.md)을 참조하세요.
+HTML로 이동 하려면 특수 권한이 필요 합니다. 예를 들어 인터넷 영역 부분 신뢰 보안 샌드박스에서 실행 되는 XBAP에서 이동할 수 없습니다. 자세한 내용은 [WPF 부분 신뢰 보안](../wpf-partial-trust-security.md)을 참조하세요.
 
 <a name="Navigating_to_HTML_Files_Using_WebBrowser"></a>
 
@@ -778,7 +778,7 @@ HTML로 이동 하려면 특수 권한이 필요 합니다. 예를 들어 인터
 
 ## <a name="security"></a>보안
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 탐색 지원을 통해 인터넷을 통해 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]를 탐색할 수 있으며,이를 통해 응용 프로그램에서 타사 콘텐츠를 호스트할 수 있습니다. 응용 프로그램과 사용자를 유해한 동작 으로부터 보호 하기 위해 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [보안](../security-wpf.md) 및 [WPF 부분 신뢰 보안](../wpf-partial-trust-security.md)에 설명 된 다양 한 보안 기능을 제공 합니다.
+[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 탐색 지원을 사용 하면 인터넷을 통해 Xbap를 탐색할 수 있으며 응용 프로그램에서 타사 콘텐츠를 호스트할 수 있습니다. 응용 프로그램과 사용자를 유해한 동작 으로부터 보호 하기 위해 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [보안](../security-wpf.md) 및 [WPF 부분 신뢰 보안](../wpf-partial-trust-security.md)에 설명 된 다양 한 보안 기능을 제공 합니다.
 
 ## <a name="see-also"></a>참조
 

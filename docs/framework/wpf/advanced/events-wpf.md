@@ -8,17 +8,17 @@ helpviewer_keywords:
 - events [WPF], windows
 - WPF [WPF], events
 ms.assetid: d3b93c6f-aa6b-486d-a010-d097ea8a516b
-ms.openlocfilehash: e6aa6fea3c19d452013e4e77d7ef4773a2f45343
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 70fbd1a4c4062708ab6082c4ec39e3e99354b004
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62010347"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460496"
 ---
 # <a name="events-wpf"></a>이벤트(WPF)
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서는 애플리케이션의 요소 트리에 있는 다양한 리스너의 처리기를 호출할 수 있는 라우트된 이벤트를 소개합니다.  
   
-## <a name="in-this-section"></a>섹션 내용  
+## <a name="in-this-section"></a>단원 내용  
  [라우트된 이벤트 개요](routed-events-overview.md)  
  [연결된 이벤트 개요](attached-events-overview.md)  
  [개체 수명 이벤트](object-lifetime-events.md)  
@@ -29,7 +29,7 @@ ms.locfileid: "62010347"
  [약한 이벤트 패턴](weak-event-patterns.md)  
  [방법 항목](events-how-to-topics.md)  
   
-## <a name="reference"></a>참조  
+## <a name="reference"></a>참고  
  <xref:System.Windows.RoutedEvent>  
   
  <xref:System.Windows.EventManager>  
@@ -41,9 +41,9 @@ ms.locfileid: "62010347"
   [WPF의 XAML](xaml-in-wpf.md)  
   [기본 요소](base-elements.md)  
   [요소 트리 및 Serialization](element-tree-and-serialization.md)  
-  [속성](properties-wpf.md)  
+  [데이터 액세스](properties-wpf.md)  
   [입력](input-wpf.md)  
   [리소스](resources-wpf.md)  
-  [스타일 지정 및 템플릿](../controls/styling-and-templating.md)  
+  [스타일 지정 및 템플릿](../../../desktop-wpf/fundamentals/styles-templates-overview.md)  
   [WPF 콘텐츠 모델](../controls/wpf-content-model.md)  
   [스레딩 모델](threading-model.md)

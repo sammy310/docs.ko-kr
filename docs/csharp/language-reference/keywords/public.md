@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - public keyword [C#]
 ms.assetid: 0ae45d16-a551-4b74-9845-57208de1328e
-ms.openlocfilehash: a68cbf3af2568cd3c197eaece9e2d5a25cdb4a6a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: dfb6e341ea0740225d7600f07af2813d39141b45
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633707"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422550"
 ---
 # <a name="public-c-reference"></a>public(C# 참조)
 
@@ -28,7 +28,7 @@ class SampleClass
 
 자세한 내용은 [액세스 한정자](../../programming-guide/classes-and-structs/access-modifiers.md) 및 [액세스 가능성 수준](accessibility-levels.md)을 참조하세요.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 다음 예제에서는 두 개의 클래스, `PointTest` 및 `MainClass`를 선언합니다. `PointTest`의 공용 멤버 `x` 및 `y`는 `MainClass`에서 직접 액세스합니다.
 
@@ -40,7 +40,7 @@ class SampleClass
 
 ## <a name="c-language-specification"></a>C# 언어 사양  
 
-자세한 내용은 [C# 언어 사양](../language-specification/index.md)의 [선언된 내게 필요한 옵션](~/_csharplang/spec/basic-concepts.md#declared-accessibility)을 참조하세요. C# 언어 사양은 C# 구문 및 사용법에 대한 신뢰할 수 있는 소스입니다.
+자세한 내용은 [C# 언어 사양](/dotnet/csharp/language-reference/language-specification/introduction)의 [선언된 내게 필요한 옵션](~/_csharplang/spec/basic-concepts.md#declared-accessibility)을 참조하세요. C# 언어 사양은 C# 구문 및 사용법에 대한 신뢰할 수 있는 소스입니다.
 
 ## <a name="see-also"></a>참고 항목
 
@@ -50,7 +50,7 @@ class SampleClass
 - [C# 키워드](index.md)
 - [액세스 한정자](access-modifiers.md)
 - [액세스 수준](accessibility-levels.md)
-- [한정자](modifiers.md)
+- [한정자](index.md)
 - [private](private.md)
 - [protected](protected.md)
 - [internal](internal.md)

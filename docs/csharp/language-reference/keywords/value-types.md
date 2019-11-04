@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 2a3e7f02ee9d210acae881edd170edbced82dab6
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 940d21bdd90d4594a39edc20283ca6a45ccf81fe
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353757"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422204"
 ---
 # <a name="value-types-c-reference"></a>값 형식(C# 참조)
 
@@ -54,7 +54,7 @@ ms.locfileid: "71353757"
 
 - 해당 피연산자가 모두 단순 형식 상수인 상수 식은 컴파일 시간에 계산됩니다.
 
-자세한 내용은 [C# 언어 사양](../language-specification/index.md)의 [단순 형식](~/_csharplang/spec/types.md#simple-types) 섹션을 참조하세요.
+자세한 내용은 [C# 언어 사양](/dotnet/csharp/language-reference/language-specification/introduction)의 [단순 형식](~/_csharplang/spec/types.md#simple-types) 섹션을 참조하세요.
 
 ## <a name="initializing-value-types"></a>값 형식 초기화
 
@@ -107,6 +107,6 @@ var p = new Point(); // Invoke parameterless constructor for the struct.
 - [C# 참조](../index.md)
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)
 - [C# 키워드](index.md)
-- [유형](types.md)
+- [유형](/dotnet/csharp/language-reference/keywords)
 - [참조 형식](reference-types.md)
 - [Nullable 값 형식](../../programming-guide/nullable-types/index.md)

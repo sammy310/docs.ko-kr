@@ -2,12 +2,12 @@
 title: Using the WCF Moniker with COM Clients
 ms.date: 03/30/2017
 ms.assetid: e2799bfe-88bd-49d7-9d6d-ac16a9b16b04
-ms.openlocfilehash: 2836b8c034a62602822ca629189e38eff818180a
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 321d59285b0ef86e4631634d90229a0d8e79657b
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038721"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424716"
 ---
 # <a name="using-the-wcf-moniker-with-com-clients"></a>Using the WCF Moniker with COM Clients
 이 샘플에서는 WCF (Windows Communication Foundation) 서비스 모니커를 사용 하 여 웹 서비스를 Microsoft Office Visual Basic for Applications (Office VBA) 또는 Visual Basic 6.0와 같은 COM 기반 개발 환경에 통합 하는 방법을 보여 줍니다. 이 샘플은 IIS(인터넷 정보 서비스)에서 호스트되는 Windows 스크립트 호스트 클라이언트(.vbs), 지원 클라이언트 라이브러리(.dll) 및 서비스 라이브러리(.dll)로 구성됩니다. 서비스는 계산기 서비스이고 COM 클라이언트는 서비스에서 수학 작업인 Add, Subtract, Multiply 및 Divide를 호출합니다. 클라이언트 동작이 메시지 상자 창에 표시됩니다.  
@@ -20,7 +20,7 @@ ms.locfileid: "70038721"
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Interop\COM`  
   
@@ -70,7 +70,7 @@ regasm.exe /tlb:CalcProxy.tlb client.dll
   
  만들어진 어셈블리는 전역 어셈블리 캐시에 추가되어야 합니다. 반드시 필요한 것은 아니지만 이렇게 하면 어셈블리를 찾는 런타임 프로세스가 단순화됩니다. 다음 명령은 전역 어셈블리 캐시에 어셈블리를 추가합니다.  
   
-```  
+```console  
 gacutil.exe /i client.dll  
 ```  
   
@@ -193,15 +193,15 @@ WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9,
     > [!NOTE]
     > [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[lserver](../../../../includes/lserver-md.md)], Windows 7 또는 Windows Server 2008 R2를 사용하는 경우에는 관리자 권한으로 명령 프롬프트를 실행해야 합니다.  
   
-4. `tlbexp.exe client.dll /out:CalcProxy.tlb` 을 입력 하 여 dll을 tlb 파일로 내보냅니다. "형식 라이브러리 내보내기 경고"가 발생할 수 있지만 제네릭 형식이 필요하지 않으므로 문제가 되지는 않습니다.  
+4. `tlbexp.exe client.dll /out:CalcProxy.tlb`를 입력 하 여 dll을 tlb 파일로 내보냅니다. "형식 라이브러리 내보내기 경고"가 발생할 수 있지만 제네릭 형식이 필요하지 않으므로 문제가 되지는 않습니다.  
   
-5. `regasm.exe /tlb:CalcProxy.tlb client.dll` 을 입력 하 여 형식을 COM에 등록 합니다. "형식 라이브러리 내보내기 경고"가 발생할 수 있지만 제네릭 형식이 필요하지 않으므로 문제가 되지는 않습니다.  
+5. `regasm.exe /tlb:CalcProxy.tlb client.dll`를 입력 하 여 형식을 COM에 등록 합니다. "형식 라이브러리 내보내기 경고"가 발생할 수 있지만 제네릭 형식이 필요하지 않으므로 문제가 되지는 않습니다.  
   
-6. `gacutil.exe /i client.dll` 을 입력 하 여 전역 어셈블리 캐시에 어셈블리를 추가 합니다.  
+6. `gacutil.exe /i client.dll`를 입력 하 여 전역 어셈블리 캐시에 어셈블리를 추가 합니다.  
   
 #### <a name="to-run-the-sample-on-the-same-computer"></a>단일 컴퓨터 구성에서 샘플을 실행하려면  
   
-1. 다음 주소 `http://localhost/servicemodelsamples/service.svc`를 입력 하 여 브라우저를 사용 하 여 서비스에 액세스할 수 있는지 테스트 합니다. 확인 페이지가 응답으로 표시됩니다.  
+1. 다음 주소를 입력 하 여 브라우저를 사용 하 여 서비스에 액세스할 수 있는지 테스트 합니다. `http://localhost/servicemodelsamples/service.svc`. 확인 페이지가 응답으로 표시됩니다.  
   
 2. 언어별 폴더의 \client에서 ComCalcClient.vbs를 실행합니다. 메시지 상자 창에 클라이언트 동작이 표시됩니다.  
   
@@ -223,11 +223,11 @@ WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9,
   
 7. 명령 프롬프트에서 클라이언트 컴퓨터의 대상 디렉터리로 이동합니다. [!INCLUDE[wv](../../../../includes/wv-md.md)] 또는 [!INCLUDE[lserver](../../../../includes/lserver-md.md)]을 사용할 경우 관리자 권한으로 명령 프롬프트를 실행해야 합니다.  
   
-8. `tlbexp.exe client.dll /out:CalcProxy.tlb` 을 입력 하 여 dll을 tlb 파일로 내보냅니다. "형식 라이브러리 내보내기 경고"가 발생할 수 있지만 제네릭 형식이 필요하지 않으므로 문제가 되지는 않습니다.  
+8. `tlbexp.exe client.dll /out:CalcProxy.tlb`를 입력 하 여 dll을 tlb 파일로 내보냅니다. "형식 라이브러리 내보내기 경고"가 발생할 수 있지만 제네릭 형식이 필요하지 않으므로 문제가 되지는 않습니다.  
   
-9. `regasm.exe /tlb:CalcProxy.tlb client.dll` 을 입력 하 여 형식을 COM에 등록 합니다. 명령을 실행 하기 전에가 포함 `regasm.exe` 된 폴더로 경로가 설정 되었는지 확인 합니다.  
+9. `regasm.exe /tlb:CalcProxy.tlb client.dll`를 입력 하 여 형식을 COM에 등록 합니다. 명령을 실행 하기 전에 `regasm.exe` 포함 된 폴더로 경로가 설정 되었는지 확인 합니다.  
   
-10. `gacutil.exe /i client.dll` 을 입력 하 여 전역 어셈블리 캐시에 어셈블리를 추가 합니다. 명령을 실행 하기 전에가 포함 `gacutil.exe` 된 폴더로 경로가 설정 되었는지 확인 합니다.  
+10. `gacutil.exe /i client.dll`를 입력 하 여 전역 어셈블리 캐시에 어셈블리를 추가 합니다. 명령을 실행 하기 전에 `gacutil.exe` 포함 된 폴더로 경로가 설정 되었는지 확인 합니다.  
   
 11. 클라이언트 컴퓨터에서 브라우저를 사용하여 서비스에 액세스할 수 있는지 테스트합니다.  
   

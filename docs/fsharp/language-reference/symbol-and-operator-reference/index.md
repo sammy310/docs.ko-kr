@@ -1,13 +1,13 @@
 ---
 title: 기호 및 연산자 참조
-description: 기호 및 연산자에 사용 되는 방법을 알아봅니다는 F# 프로그래밍 언어입니다.
+description: F# 프로그래밍 언어에 사용 되는 기호 및 연산자에 대해 알아봅니다.
 ms.date: 02/11/2019
-ms.openlocfilehash: 14ea7a66f7e9a79d24b62a4aa0564eecb891ee1a
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 0c177242991c39aa1a2b7566415b50385f3403d1
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67306193"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424055"
 ---
 # <a name="symbol-and-operator-reference"></a>기호 및 연산자 참조
 
@@ -23,12 +23,12 @@ ms.locfileid: "67306193"
 |기호 또는 연산자|링크|설명|
 |------------------|-----|-----------|
 |`!`|[참조 셀](../reference-cells.md)<br /><br />[계산 식](../computation-expressions.md)|<ul><li>참조 셀을 역참조합니다.<br /></li><li>키워드 뒤에서 워크플로가 제어하는 키워드 동작의 수정된 버전을 나타냅니다.<br /></li></ul>|
-|`!=`|해당 사항 없음.|<ul><li>F#에서 사용되지 않습니다. 다름 연산에서는 `<>`를 사용합니다.<br /></li></ul>|
+|`!=`|해당 없음.|<ul><li>F#에서 사용되지 않습니다. 다름 연산에서는 `<>`를 사용합니다.<br /></li></ul>|
 |`"`|[리터럴](../literals.md)<br /><br />[문자열](../strings.md)|<ul><li>텍스트 문자열을 구분합니다.<br /></li></ul>|
 |`"""`|[문자열](../strings.md)|축자 텍스트 문자열을 구분합니다. 문자열에서 작은따옴표를 사용하여 따옴표 문자를 나타낼 수 있다는 점에서 `@"..."`와는 다릅니다.|
 |`#`|[컴파일러 지시문](../compiler-directives.md)<br /><br />[유연한 형식](../flexible-types.md)|<ul><li>전처리기 또는 컴파일러 지시문에 `#light` 등의 접두사를 추가합니다.<br /></li><li>형식에 사용하는 경우 형식 또는 해당 파생 형식 중 하나를 참조하는 *유연한 형식*을 나타냅니다.<br /></li></ul>|
 |`$`|추가 정보가 제공되지 않습니다.|<ul><li>특정 컴파일러 생성 변수 및 함수 이름에 내부적으로 사용됩니다.<br /></li></ul>|
-|`%`|[산술 연산자](arithmetic-operators.md)<br /><br />[코드 인용](../code-quotations.md)|<ul><li>정수 나머지를 계산합니다.<br /></li><li>형식화된 코드 인용에 식을 연결하는 데 사용됩니다.<br /></li></ul>|
+|`%`|[산술 연산자](arithmetic-operators.md)<br /><br />[코드 인용](../code-quotations.md)|<ul><li>정수 나머지를 계산 합니다.<br /></li><li>형식화된 코드 인용에 식을 연결하는 데 사용됩니다.<br /></li></ul>|
 |`%%`|[코드 인용](../code-quotations.md)|<ul><li>형식화되지 않은 코드 인용에 식을 연결하는 데 사용됩니다.<br /></li></ul>|
 |`%?`|[null 허용 연산자](nullable-operators.md)|<ul><li>우변이 nullable 형식이 면 정수 나머지를 계산 합니다.<br /></li></ul>|
 |`&`|[일치 식](../match-expressions.md)|<ul><li>다른 언어와 상호 작용할 때 사용하기 위해 변경할 수 있는 값의 주소를 계산합니다.<br /></li><li>AND 패턴에 사용됩니다.<br /></li></ul>|
@@ -49,9 +49,9 @@ ms.locfileid: "67306193"
 |`-`|[산술 연산자](arithmetic-operators.md)|<ul><li>이항 연산자로 사용하는 경우 좌변에서 우변을 뺍니다.<br /></li><li>단항 연산자로 사용하는 경우 부정 연산을 수행합니다.<br /></li></ul>|
 |`-?`|[null 허용 연산자](nullable-operators.md)|<ul><li>우변이 nullable 형식이면 좌변에서 우변을 뺍니다.<br /></li></ul>|
 |`->`|[함수](../functions/index.md)<br /><br />[일치 식](../match-expressions.md)|<ul><li>함수 형식에서는 인수와 반환 값을 구분합니다.<br /></li><li>시퀀스 식에서 식을 생성하며, `yield` 키워드와 동일합니다.<br /></li><li>일치 식에서 사용됩니다.<br /></li></ul>|
-|`.`|[멤버](../members/index.md)<br /><br />[기본 형식](../primitive-types.md)|<ul><li>멤버에 액세스하고 개별 이름을 정규화된 이름으로 구분합니다.<br /></li><li>부동 소수점 수로 소수점을 지정합니다.<br /></li></ul>|
-|`..`|[루프: `for...in` Expression](../loops-for-in-expression.md)|<ul><li>범위를 지정합니다.<br /></li></ul>|
-|`.. ..`|[루프: `for...in` Expression](../loops-for-in-expression.md)|<ul><li>증분을 포함하여 범위를 지정합니다.<br /></li></ul>|
+|`.`|[멤버](../members/index.md)<br /><br />[기본 형식](../basic-types.md)|<ul><li>멤버에 액세스하고 개별 이름을 정규화된 이름으로 구분합니다.<br /></li><li>부동 소수점 수로 소수점을 지정합니다.<br /></li></ul>|
+|`..`|[루프: `for...in` 식](../loops-for-in-expression.md)|<ul><li>범위를 지정합니다.<br /></li></ul>|
+|`.. ..`|[루프: `for...in` 식](../loops-for-in-expression.md)|<ul><li>증분을 포함하여 범위를 지정합니다.<br /></li></ul>|
 |`.[...]`|[배열](../arrays.md)|<ul><li>배열 요소에 액세스합니다.<br /></li></ul>|
 |`/`|[산술 연산자](arithmetic-operators.md)<br /><br />[측정 단위](../units-of-measure.md)|<ul><li>좌변(분자)으로 우변(분모)을 나눕니다.<br /></li><li>측정 단위 형식에서 사용됩니다.<br /></li></ul>|
 |`/?`|[null 허용 연산자](nullable-operators.md)|<ul><li>우변이 nullable 형식이면 좌변으로 우변을 나눕니다.<br /></li></ul>|
@@ -61,7 +61,7 @@ ms.locfileid: "67306193"
 |`::`|[목록](../lists.md)<br /><br />[일치 식](../match-expressions.md)|<ul><li>목록을 만듭니다. 왼쪽의 요소가 오른쪽의 목록 앞에 추가됩니다.<br /></li><li>패턴 일치에서 목록의 파트를 구분하는 데 사용됩니다.<br /></li></ul>|
 |`:=`|[참조 셀](../reference-cells.md)|<ul><li>참조 셀에 값을 할당합니다.<br /></li></ul>|
 |`:>`|[캐스팅 및 변환](../casting-and-conversions.md)|<ul><li>특정 형식을 계층 구조의 상위 수준 형식으로 변환합니다.<br /></li></ul>|
-|`:?`|[일치 식](../match-expressions.md)|<ul><li>반환 `true` 값 (하위 형식인 경우 포함); 지정 된 형식과 일치 하는 경우, 그렇지 `false` (형식 테스트 연산자).<br /></li></ul>|
+|`:?`|[일치 식](../match-expressions.md)|<ul><li>값이 지정 된 형식과 일치 하면 `true`을 반환 합니다 (하위 형식 인 경우 포함). 그렇지 않으면 `false` (형식 테스트 연산자)을 반환 합니다.<br /></li></ul>|
 |`:?>`|[캐스팅 및 변환](../casting-and-conversions.md)|<ul><li>특정 형식을 계층 구조의 하위 수준 형식으로 변환합니다.<br /></li></ul>|
 |`;`|[자세한 구문](../verbose-syntax.md)<br /><br />[목록](../lists.md)<br /><br />[레코드](../records.md)|<ul><li>식을 구분합니다(대개 자세한 구문에서 사용됨).<br /></li><li>목록의 요소를 구분합니다.<br /></li><li>레코드의 필드를 구분합니다.<br /></li></ul>|
 |`<`|[산술 연산자](arithmetic-operators.md)|<ul><li>작음 연산을 계산합니다.<br /></li></ul>|
@@ -81,12 +81,12 @@ ms.locfileid: "67306193"
 |`<@@...@@>`|[코드 인용](../code-quotations.md)|<ul><li>형식화되지 않은 코드 인용을 구분합니다.<br /></li></ul>|
 |`=`|[산술 연산자](arithmetic-operators.md)|<ul><li>좌변이 우변과 같으면 `true`를 반환하고 같지 않으면 `false`를 반환합니다.<br /></li></ul>|
 |`=?`|[null 허용 연산자](nullable-operators.md)|<ul><li>우변이 nullable 형식이면 "같음" 연산을 계산합니다.<br /></li></ul>|
-|`==`|해당 사항 없음.|<ul><li>F#에서 사용되지 않습니다. 같음 연산에는 `=`를 사용합니다.<br /></li></ul>|
+|`==`|해당 없음.|<ul><li>F#에서 사용되지 않습니다. 같음 연산에는 `=`를 사용합니다.<br /></li></ul>|
 |`>`|[산술 연산자](arithmetic-operators.md)|<ul><li>좌변이 우변보다 크면 `true`를 반환하고 작거나 같으면 `false`를 반환합니다.<br /></li></ul>|
 |`>?`|[null 허용 연산자](nullable-operators.md)|<ul><li>우변이 nullable 형식이 면 "보다 큼" 작업을 계산 합니다.<br /></li></ul>|
 |`>>`|[함수](../functions/index.md)|<ul><li>두 함수를 작성합니다(정방향 컴퍼지션 연산자).<br /></li></ul>|
 |`>>>`|[비트 연산자](bitwise-operators.md)|<ul><li>좌변의 수량 비트를 우변에 지정된 자릿수만큼 우변으로 시프트합니다.<br /></li></ul>|
-|`>=`|[산술 연산자](arithmetic-operators.md)|<ul><li>반환 `true` 왼쪽 오른쪽; 보다 크거나 그렇지 않은 경우 반환 `false`합니다.<br /></li></ul>|
+|`>=`|[산술 연산자](arithmetic-operators.md)|<ul><li>좌 변이 우변 보다 크거나 같으면 `true`을 반환 합니다. 그렇지 않으면 `false`을 반환 합니다.<br /></li></ul>|
 |`>=?`|[null 허용 연산자](nullable-operators.md)|<ul><li>우변이 nullable 형식이면 "크거나 같음" 연산을 계산합니다.<br /></li></ul>|
 |`?`|[매개 변수 및 인수](../parameters-and-arguments.md)|<ul><li>선택적 인수를 지정합니다.<br /></li><li>동적 메서드 및 속성 호출을 위한 연산자로 사용됩니다. 고유한 구현을 제공해야 합니다.<br /></li></ul>|
 |`? ... <- ...`|추가 정보가 제공되지 않습니다.|<ul><li>동적 속성 설정 위한 연산자로 사용됩니다. 고유한 구현을 제공해야 합니다.<br /></li></ul>|
@@ -150,7 +150,7 @@ ms.locfileid: "67306193"
 
 F#에서는 사용자 지정 연산자 오버로드를 지원합니다. 즉, 고유한 연산자를 정의할 수 있습니다. 위의 표에서 *연산자*는 유효한 모든 연산자 문자 시퀀스(기본 제공 또는 사용자 정의)일 수 있으며 비어 있을 수도 있습니다. 따라서 이 표를 참조하여 원하는 수준의 우선 순위를 적용하기 위해 사용자 지정 연산자에 사용할 문자의 순서를 결정할 수 있습니다. 선행 `.` 문자는 컴파일러에서 우선 순위를 결정할 때 무시됩니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [F# 언어 참조](../index.md)
 - [연산자 오버로드](../operator-overloading.md)
