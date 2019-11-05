@@ -8,18 +8,20 @@ helpviewer_keywords:
 - Help, Visual C# documentation
 - C# language
 - Visual C#
-ms.openlocfilehash: 77db5201ab21dff1f04f76da5dd10d07aa377813
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: a7ddaac56177d13248caf6559221fff26d2d2c00
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73191812"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73416730"
 ---
 # <a name="c-guide"></a>C# 가이드
 
 C# 가이드는 C# 언어에 대한 많은 리소스를 제공합니다. 이 사이트는 다양한 사용자를 대상으로 합니다. 프로그래밍, C# 언어 및 .NET에 대한 사용 경험에 따라 이 가이드의 다른 섹션을 참조할 수 있습니다.
 
 - 완전 초보 개발자:
+  - [C# 101 동영상 시리즈](https://aka.ms/dotnet3-csharp)를 시청하세요. 이 동영상 시리즈는 이 자습서에서 살펴볼 중요한 개념을 소개합니다.
+
   - [C# 소개 자습서](tutorials/intro-to-csharp/index.md)를 시작합니다. 이 자습서에서는 브라우저에서 대화형으로 C# 언어를 살펴볼 수 있습니다. 여기에서 [다른 자습서](tutorials/index.md)로 넘어갈 수 있습니다. 이러한 자습서는 C# 프로그램을 처음부터 새로 만드는 방법을 보여 줍니다. 이 자습서는 프로그램을 만드는 단계별 프로세스를 제공합니다. 언어 개념 및 C# 프로그램을 직접 빌드하는 방법을 보여 줍니다. 먼저 개요 정보를 읽고 싶은 경우 [C# 언어 둘러보기](tour-of-csharp/index.md)를 읽어보세요. 여기서는 C# 언어의 개념을 설명합니다. 이 부분을 읽으면 이 언어를 기본적으로 이해하게 되고 자습서에 따라 작업을 진행하거나 직접 빌드할 수 있는 준비가 됩니다.
 
 - C#을 처음 사용하는 개발자:
@@ -61,7 +63,7 @@ C# 가이드에는 여러 섹션이 있습니다. 순서대로 읽거나 가장 
 - [언어 참조](language-reference/index.md)
   - 이 섹션에서는 C# 언어에 대한 참조 자료를 제공합니다. 이 자료는 C#의 구문 및 의미 체계를 이해하는 데 도움이 됩니다. 또한 형식, 연산자, 특성, 전처리기 지시문, 컴파일러 스위치, 컴파일러 오류 및 컴파일러 경고에 대한 참조 자료도 포함하고 있습니다.
 
-- [C# 언어 사양](./language-reference/language-specification/index.md)
+- [C# 언어 사양](/dotnet/csharp/language-reference/language-specification/introduction)
   - C# 언어 사양의 최신 버전에 대한 링크를 제공합니다.
 
 ## <a name="see-also"></a>참고 항목
