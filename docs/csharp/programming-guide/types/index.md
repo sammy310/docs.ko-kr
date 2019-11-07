@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 5c5586c2ee41b12e9b5706603b4c2f62207566ed
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 7d101e72a94ec1fecf44d4c883efb4f74e6d1d88
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73417714"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739207"
 ---
 # <a name="types-c-programming-guide"></a>형식(C# 프로그래밍 가이드)
 
@@ -174,7 +174,7 @@ stringList.Add(4);
 
 경우에 따라 저장하거나 메서드 경계 외부로 전달할 의도가 없는 관련 값의 단순 집합에 대한 명명된 형식을 만드는 것은 불편합니다. 이 목적으로는 *무명 형식*을 만들 수 있습니다. 자세한 내용은 [무명 형식](../classes-and-structs/anonymous-types.md)을 참조하세요.
 
-일반적인 값 형식은 [null](../../language-reference/keywords/null.md) 값을 가질 수 없습니다. 그러나 형식 뒤에 `?`를 추가하면 null 허용 값 형식을 예를 들어 `int?`는 [null](../../language-reference/keywords/null.md) 값을 가질 수도 있는 `int` 형식입니다. nullable 값 형식은 제네릭 구조체 형식 <xref:System.Nullable%601?displayProperty=nameWithType>의 인스턴스입니다. nullable 값 형식은 특히 숫자 값이 null일 수 있는 데이터베이스에 데이터를 전달하는 경우에 유용합니다. 자세한 내용은 [nullable 값 형식](../nullable-types/index.md)을 참조하세요.
+일반적인 값 형식은 [null](../../language-reference/keywords/null.md) 값을 가질 수 없습니다. 그러나 형식 뒤에 `?`를 추가하면 null 허용 값 형식을 예를 들어 `int?`는 [null](../../language-reference/keywords/null.md) 값을 가질 수도 있는 `int` 형식입니다. nullable 값 형식은 제네릭 구조체 형식 <xref:System.Nullable%601?displayProperty=nameWithType>의 인스턴스입니다. nullable 값 형식은 특히 숫자 값이 null일 수 있는 데이터베이스에 데이터를 전달하는 경우에 유용합니다. 자세한 내용은 [nullable 값 형식](../../language-reference/builtin-types/nullable-value-types.md)을 참조하세요.
 
 ## <a name="related-sections"></a>관련 단원
 

@@ -2,12 +2,12 @@
 title: 호환성이 손상되는 변경 평가 - .NET Core
 description: .NET Core에서 개발자를 위해 .NET 버전 간의 호환성을 유지하는 방법을 알아봅니다.
 ms.date: 06/10/2019
-ms.openlocfilehash: a4a1b5c4e81cec783248c6110b0af9844eb3f4af
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: f4e18a17f58452c9325f36390626ae690f5ed777
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73416665"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739355"
 ---
 # <a name="evaluate-breaking-changes-in-net-core"></a>.NET Core의 호환성이 손상되는 변경 평가
 
@@ -52,7 +52,7 @@ ms.locfileid: "73416665"
 - **✔️ [struct](../../csharp/language-reference/keywords/struct.md) 형식을 `readonly struct` 형식으로 변경**
 
   `readonly struct` 형식을 `struct` 형식으로 변경할 수는 없습니다.
-  
+
 - **✔️ ‘액세스할 수 있는’(public 또는 protected) 생성자가 없는 경우 형식에 [sealed](../../csharp/language-reference/keywords/sealed.md) 또는 [abstract](../../csharp/language-reference/keywords/abstract.md) 키워드 추가** 
 
 - **✔️ 형식의 표시 유형 확장**
@@ -138,9 +138,9 @@ ms.locfileid: "73416665"
 - **❌ 매개 변수 이름 바꾸기(대/소문자 변경 포함)**
 
   다음 두 가지 이유로 호환성이 손상되는 변경으로 간주됩니다.
-  
+
   - Visual Basic의 런타임에 바인딩 기능, C#의 [dynamic](../../csharp/language-reference/builtin-types/reference-types.md#the-dynamic-type)과 같은 런타임에 바인딩 시나리오의 호환성이 손상됩니다.
-  
+
   - 개발자가 [명명된 인수](../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md#named-arguments)를 사용하는 경우 [소스 호환성](categories.md#source-compatibility)이 손상됩니다.
 
 - **❌ `ref` 반환 값에서 `ref readonly` 반환 값으로 변경**
@@ -153,9 +153,9 @@ ms.locfileid: "73416665"
 
   C# 컴파일러는 비가상 메서드를 호출하기 위해 [callvirt](<xref:System.Reflection.Emit.OpCodes.Callvirt>) IL(중간 언어) 명령을 내보내는 경향이 있으므로(`callvirt`는 일반 호출과 달리 null 검사를 수행함) 호환성이 손상되는 변경이 아닌 경우가 많지만, 이 동작은 다음과 같은 몇 가지 이유로 가변적입니다.
   - .NET의 대상 언어가 C#만은 아닙니다.
-  
+
   - 대상 메서드가 비가상이고 null이 아닐 수 있는 경우(예: [?. null 전파 연산자](../../csharp/language-reference/operators/member-access-operators.md#null-conditional-operators--and-)를 통해 액세스한 메서드), C# 컴파일러는 항상 `callvirt`를 일반 호출에 최적화하려고 합니다.
-  
+
   메서드를 virtual로 설정하면 소비자 코드에서 비가상적으로 메서드를 호출하게 되는 경우가 자주 발생합니다.
 
 - **❌ 멤버에 [virtual](../../csharp/language-reference/keywords/virtual.md) 키워드 추가**

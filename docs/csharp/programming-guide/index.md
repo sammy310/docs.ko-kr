@@ -9,14 +9,15 @@ helpviewer_keywords:
 - Visual C#, programming concepts
 - C# language, concepts
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
-ms.openlocfilehash: 5eb9313003f767daf64a5b5c4f229c6c58a018ec
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: c9d879d1760f543d5a4722977d4dee8bca856016
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423243"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739196"
 ---
 # <a name="c-programming-guide"></a>C# 프로그래밍 가이드
+
 이 섹션에서는 핵심 C# 언어 기능과 .NET Framework를 통해 C#에서 액세스할 수 있는 기능에 대한 자세한 정보를 제공합니다.  
   
  이 섹션 대부분에서는 사용자가 C# 및 일반적인 프로그래밍 개념을 이미 알고 있다고 가정합니다. 프로그래밍 또는 C# 초급자인 경우 프로그래밍에 대한 사전 지식이 필요하지 않은 [C# 자습서 소개](../tutorials/intro-to-csharp/index.md) 또는 [.NET In-Browser 자습서](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1)를 참조할 수 있습니다.  
@@ -28,8 +29,9 @@ ms.locfileid: "73423243"
 [C# 프로그램 내부](./inside-a-program/index.md)  
   
 [Main()과 명령줄 인수](./main-and-command-args/index.md)  
- 
-## <a name="language-sections"></a>언어 섹션  
+
+## <a name="language-sections"></a>언어 섹션
+
 [문, 식, 연산자](./statements-expressions-operators/index.md)  
 
  [유형](./types/index.md)  
@@ -41,7 +43,7 @@ ms.locfileid: "73423243"
  [열거형 형식](./enumeration-types.md)  
   
  [대리자](./delegates/index.md)  
- 
+
  [배열](./arrays/index.md)  
   
  [문자열](./strings/index.md)  
@@ -62,13 +64,12 @@ ms.locfileid: "73423243"
   
  [네임스페이스](./namespaces/index.md)  
   
- [Nullable 값 형식](./nullable-types/index.md)  
-  
  [안전하지 않은 코드 및 포인터](./unsafe-code-pointers/index.md)  
   
  [XML 문서 주석](./xmldoc/index.md)  
   
-## <a name="platform-sections"></a>플랫폼 섹션  
+## <a name="platform-sections"></a>플랫폼 섹션
+
  [애플리케이션 도메인](../../framework/app-domains/application-domains.md)  
   
  [.NET 어셈블리](../../standard/assembly/index.md)  
