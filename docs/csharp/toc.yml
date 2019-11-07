@@ -1152,14 +1152,6 @@
           href: programming-guide/namespaces/using-namespaces.md
         - name: '방법: My 네임스페이스 사용'
           href: programming-guide/namespaces/how-to-use-the-my-namespace.md
-    - name: Nullable 값 형식
-      items:
-        - name: 개요
-          href: programming-guide/nullable-types/index.md
-        - name: nullable 값 형식 사용
-          href: programming-guide/nullable-types/using-nullable-types.md
-        - name: '방법: nullable 값 형식 식별'
-          href: programming-guide/nullable-types/how-to-identify-a-nullable-type.md
     - name: 안전하지 않은 코드 및 포인터
       items:
         - name: 개요 및 제한 사항
@@ -1314,6 +1306,9 @@
                   href: language-reference/keywords/enum.md
                 - name: struct
                   href: language-reference/keywords/struct.md
+                - name: Nullable 값 형식
+                  href: language-reference/builtin-types/nullable-value-types.md
+                  displayName: '? token, ? symbol'
             - name: 참조 형식
               items:
                 - name: 참조 형식의 기능
