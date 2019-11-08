@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
-ms.openlocfilehash: a634667ec8d963ef52abbdbe517a57d10e4a60fa
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 091fde9a6149f72577e0cf38c8ebf1536abdf6ea
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040213"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738208"
 ---
 # <a name="handling-null-values"></a>Null 값 처리
 관계형 데이터베이스에서 null 값은 열의 값이 없거나 알 수 없을 때 사용됩니다. null은 빈 문자열(문자 또는 datetime 데이터 형식의 경우)도 아니고 0 값(숫자 데이터 형식의 경우)도 아닙니다. ANSI SQL-92 사양에서는 모든 null이 일관성 있게 처리되도록 모든 데이터 형식에 대해 null이 동일해야 함을 규정하고 있습니다. <xref:System.Data.SqlTypes> 네임스페이스에서는 <xref:System.Data.SqlTypes.INullable> 인터페이스를 구현함으로써 null 의미 체계를 제공합니다. <xref:System.Data.SqlTypes>의 각 데이터 형식마다 해당 데이터 형식의 인스턴스에 할당할 수 있는 고유의 `IsNull` 속성과 `Null` 값이 있습니다.  
   
 > [!NOTE]
-> .NET Framework 버전 2.0에는 null을 허용하는 형식에 대한 지원 기능이 도입되었습니다. 프로그래머는 이 기능을 사용하여 값 형식이 내부 형식의 모든 값을 나타내도록 확장할 수 있습니다. 이러한 CLR null 허용 형식은 <xref:System.Nullable> 구조체의 인스턴스를 나타냅니다. 이 기능은 값 형식이 boxed 및 unboxed일 때 개체 형식과의 향상된 호환성을 제공하므로 특히 유용합니다. ANSI SQL null은 `null` 참조(Visual Basic에서는 `Nothing`)와 동일한 방식으로 동작하지 않기 때문에 CLR null 허용 형식으로 데이터베이스 null을 스토리지할 수는 없습니다. 데이터베이스 ANSI SQL null 값을 처리하려면 <xref:System.Data.SqlTypes> 대신 <xref:System.Nullable> null을 사용해야 합니다. Visual Basic에서 CLR nullable 형식을 사용 하는 방법에 대 한 자세한 내용은 [Nullable 값](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)형식 및 C# [nullable 값 형식 사용](../../../../csharp/programming-guide/nullable-types/using-nullable-types.md)을 참조 하세요.  
+> .NET Framework 버전 2.0에는 null을 허용하는 형식에 대한 지원 기능이 도입되었습니다. 프로그래머는 이 기능을 사용하여 값 형식이 내부 형식의 모든 값을 나타내도록 확장할 수 있습니다. 이러한 CLR null 허용 형식은 <xref:System.Nullable> 구조체의 인스턴스를 나타냅니다. 이 기능은 값 형식이 boxed 및 unboxed일 때 개체 형식과의 향상된 호환성을 제공하므로 특히 유용합니다. ANSI SQL null은 `null` 참조(Visual Basic에서는 `Nothing`)와 동일한 방식으로 동작하지 않기 때문에 CLR null 허용 형식으로 데이터베이스 null을 스토리지할 수는 없습니다. 데이터베이스 ANSI SQL null 값을 처리하려면 <xref:System.Data.SqlTypes> 대신 <xref:System.Nullable> null을 사용해야 합니다. Visual Basic에서 CLR nullable 형식을 사용 하는 방법에 대 한 자세한 내용은 [Nullable 값](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)형식 및 C# [nullable 값 형식](../../../../csharp/language-reference/builtin-types/nullable-value-types.md)참조를 참조 하세요.  
   
 ## <a name="nulls-and-three-valued-logic"></a>Null과 3중값 논리  
  열 정의에서 null 값을 허용하면 애플리케이션에 3중값 논리가 도입됩니다. 비교는 다음 세 가지 조건 중 하나로 평가할 수 있습니다.  
