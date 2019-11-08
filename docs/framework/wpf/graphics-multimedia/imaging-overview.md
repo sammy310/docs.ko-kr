@@ -21,12 +21,12 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-ms.openlocfilehash: 7c0168d5ca8b1d3bda709f934e454b2603d37b71
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: b60f2871062a12d3bee91a9c6d9883222b3034f4
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039876"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73733572"
 ---
 # <a name="imaging-overview"></a>이미징 개요
 이 항목에서는 Microsoft Windows Presentation Foundation Imaging 구성 요소에 대해 소개 합니다. 개발자는 WPF 이미징을 사용 하 여 이미지를 표시 하 고, 변환 하 고, 서식을 지정할 수 있습니다.  
@@ -165,7 +165,7 @@ ms.locfileid: "73039876"
 ## <a name="image-metadata"></a>이미지 메타데이터  
  일부 이미지 파일에는 파일의 콘텐츠나 특성을 설명하는 메타데이터가 포함되어 있습니다. 예를 들어 대부분의 디지털 카메라는 이미지를 캡처하는 데 사용되는 카메라의 제조업체와 모델에 대한 메타데이터를 포함하는 이미지를 만듭니다. 각 이미지 형식은 메타 데이터를 다르게 처리 하지만 WPF Imaging은 지원 되는 각 이미지 형식에 대 한 메타 데이터를 저장 및 검색 하는 일관 된 방법을 제공 합니다.  
   
- 메타 데이터에 대 한 액세스는 <xref:System.Windows.Media.Imaging.BitmapSource> 개체의 <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> 속성을 통해 제공 됩니다. <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A>는 이미지에 포함 된 모든 메타 데이터를 포함 하는 <xref:System.Windows.Media.Imaging.BitmapMetadata> 개체를 반환 합니다. 이 데이터는 하나의 메타데이터 스키마이거나 여러 다른 스키마의 조합일 수 있습니다. WPF Imaging은 다음과 같은 이미지 메타 데이터 스키마를 지원 합니다 .이는 Exif (Exchangeable image file), tEXt (PNG 텍스트 데이터), IFD (이미지 파일 디렉터리), IPTC (국제 누름 통신) 및 [!INCLUDE[TLA#tla_xmp](../../../../includes/tlasharptla-xmp-md.md)]입니다.  
+ 메타 데이터에 대 한 액세스는 <xref:System.Windows.Media.Imaging.BitmapSource> 개체의 <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> 속성을 통해 제공 됩니다. <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A>는 이미지에 포함 된 모든 메타 데이터를 포함 하는 <xref:System.Windows.Media.Imaging.BitmapMetadata> 개체를 반환 합니다. 이 데이터는 하나의 메타데이터 스키마이거나 여러 다른 스키마의 조합일 수 있습니다. WPF 이미징을 지 원하는 이미지 메타 데이터 스키마는 Exif (데이터 파일), 텍스트 (PNG 텍스트 데이터), IFD (이미지 파일 디렉터리), IPTC (국제 인쇄기 Council) 및 XMP (Extensible Metadata Platform)를 지원 합니다.  
   
  메타 데이터 읽기 프로세스를 간소화 하기 위해 <xref:System.Windows.Media.Imaging.BitmapMetadata> <xref:System.Windows.Media.Imaging.BitmapMetadata.Author%2A>, <xref:System.Windows.Media.Imaging.BitmapMetadata.Title%2A>및 <xref:System.Windows.Media.Imaging.BitmapMetadata.CameraModel%2A>같이 쉽게 액세스할 수 있는 여러 명명 된 속성을 제공 합니다. 이러한 명명된 속성 중 대부분은 메타데이터를 작성하는 데도 사용할 수 있습니다. 메타데이터 읽기에 대한 추가 지원이 메타데이터 쿼리 판독기를 통해 제공됩니다. <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A> 메서드는 *"/app1/exif/"* 와 같은 문자열 쿼리를 제공 하 여 메타 데이터 쿼리 판독기를 검색 하는 데 사용 됩니다. 다음 예에서는 <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A>를 사용 하 여 *"/Dext/Description"* 위치에 저장 된 텍스트를 가져옵니다.  
   

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Span elements [WPF]
 - bidirectional features [WPF]
 ms.assetid: fd850e25-7dba-408c-b521-8873e51dc968
-ms.openlocfilehash: 7d648741676ba947d901d26e3ee7c1289d3d4bc3
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 385ce8d263991361512371dcacff52fcf0bbe738
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73453881"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740943"
 ---
 # <a name="bidirectional-features-in-wpf-overview"></a>WPF의 양방향 기능 개요
 
@@ -98,7 +98,7 @@ HTML, [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] �
 
 <xref:System.Windows.FlowDirection> 올바른 경우에도이 응용 프로그램의 사용자는 출력에 의해 실망 됩니다. 숫자는 아라비아 숫자로 모양이 지정 되지 않습니다.
 
-XAML 요소에는 각 요소의 언어를 정의 하는 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 특성 (`xml:lang`)이 포함 될 수 있습니다. XAML은 트리의 부모 요소에 적용 되는 `xml:lang` 값이 자식 요소에 사용 되는 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 언어 원칙도 지원 합니다. 이전 예제에서는 <xref:System.Windows.Documents.Run> 요소나 최상위 요소에 대해 언어가 정의 되지 않았기 때문에 기본 `xml:lang` 사용 됩니다 .이는 XAML의 `en-US`입니다. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]의 내부 숫자 셰이핑 알고리즘은 해당 언어로 숫자 (이 경우 영어)를 선택 합니다. 아랍어 숫자가 올바르게 렌더링 되도록 하려면 `xml:lang` 설정 해야 합니다.
+XAML 요소에는 각 요소의 언어를 정의 하는 XML 특성 (`xml:lang`)이 포함 될 수 있습니다. 또한 XAML은 트리의 부모 요소에 적용 되는 `xml:lang` 값이 자식 요소에 사용 되는 XML 언어 원칙을 지원 합니다. 이전 예제에서는 <xref:System.Windows.Documents.Run> 요소나 최상위 요소에 대해 언어가 정의 되지 않았기 때문에 기본 `xml:lang` 사용 됩니다 .이는 XAML의 `en-US`입니다. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]의 내부 숫자 셰이핑 알고리즘은 해당 언어로 숫자 (이 경우 영어)를 선택 합니다. 아랍어 숫자가 올바르게 렌더링 되도록 하려면 `xml:lang` 설정 해야 합니다.
 
 다음 그림에서는 `xml:lang` 추가 된 예제를 보여 줍니다.
 

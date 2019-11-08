@@ -7,12 +7,12 @@ helpviewer_keywords:
 - strong-named assemblies, loading into trusted application domains
 - <bypassTrustedAppStrongNames> element
 ms.assetid: 71b2ebf6-3843-41e2-ad52-ffa5cd083a40
-ms.openlocfilehash: 50e67e97d74b896a680cc18270d32aa7a8eb8035
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 96361a6742d1d2f76cb237344189d3277d7c8069
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73118169"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739091"
 ---
 # <a name="bypasstrustedappstrongnames-element"></a>\<bypassTrustedAppStrongNames> 요소
 
@@ -72,7 +72,7 @@ ms.locfileid: "73118169"
 - 서명이 연기되지 않음
 
 > [!NOTE]
-> 레지스트리 키를 사용 하 여 컴퓨터의 모든 응용 프로그램에 대해 바이패스 기능이 꺼져 있는 경우이 구성 파일 설정은 적용 되지 않습니다. 자세한 내용은 [방법: 강력한 이름 건너뛰기 기능 사용 안 함](../../../app-domains/how-to-disable-the-strong-name-bypass-feature.md)을 참조 하세요.
+> 레지스트리 키를 사용 하 여 컴퓨터의 모든 응용 프로그램에 대해 바이패스 기능이 꺼져 있는 경우이 구성 파일 설정은 적용 되지 않습니다. 자세한 내용은 [방법: 강력한 이름 건너뛰기 기능 사용 안 함](../../../../standard/assembly/disable-strong-name-bypass-feature.md)을 참조 하세요.
 
 ## <a name="example"></a>예제
 

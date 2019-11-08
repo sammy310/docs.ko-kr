@@ -6,23 +6,23 @@ helpviewer_keywords:
 - data binding [WPF], binding to XML data using XmlDataProvider queries
 - binding [WPF], to XML data using XmlDataProvider queries
 ms.assetid: 7dcd018f-16aa-4870-8e47-c1b4ea31e574
-ms.openlocfilehash: 0f39c9d42abfaba1327f2c189ac6ce3d40db6e89
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: f075d646539de5d68e1c9c75d9664451125e9919
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459217"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73733556"
 ---
 # <a name="how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries"></a>방법: XMLData Provider 및 XPath 쿼리를 사용하여 XML 데이터에 바인딩
-이 예제에서는 <xref:System.Windows.Data.XmlDataProvider>를 사용 하 여 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 데이터에 바인딩하는 방법을 보여 줍니다.  
+이 예제에서는 <xref:System.Windows.Data.XmlDataProvider>를 사용 하 여 XML 데이터에 바인딩하는 방법을 보여 줍니다.  
   
- <xref:System.Windows.Data.XmlDataProvider>를 사용 하 여 응용 프로그램의 데이터 바인딩을 통해 액세스할 수 있는 기본 데이터는 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 노드의 모든 트리가 될 수 있습니다. 즉, <xref:System.Windows.Data.XmlDataProvider>는 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 노드의 트리를 바인딩 소스로 사용 하는 편리한 방법을 제공 합니다.  
+ <xref:System.Windows.Data.XmlDataProvider>를 사용 하면 응용 프로그램에서 데이터 바인딩을 통해 액세스할 수 있는 기본 데이터가 모든 XML 노드의 트리가 될 수 있습니다. 즉, <xref:System.Windows.Data.XmlDataProvider>은 모든 XML 노드 트리를 바인딩 소스로 사용 하는 편리한 방법을 제공 합니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서 데이터는 <xref:System.Windows.FrameworkElement.Resources%2A> 섹션 내에 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] *데이터 아일랜드* 로 직접 포함 됩니다. [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 데이터 고립 영역은 `<x:XData>` 태그로 래핑되어야 하며, 항상 단일 루트 노드가 있어야 합니다. 이 예에서는 *인벤토리*입니다.  
+ 다음 예제에서 데이터는 <xref:System.Windows.FrameworkElement.Resources%2A> 섹션 내에 XML *데이터 아일랜드* 로 직접 포함 됩니다. XML 데이터 아일랜드는 `<x:XData>` 태그에 래핑해야 하며 항상 단일 루트 노드 (이 예제에서는 *인벤토리* )를 포함 해야 합니다.  
   
 > [!NOTE]
-> [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 데이터의 루트 노드에는 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 네임스페이스를 빈 문자열로 설정하는 **xmlns** 특성이 있습니다. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 페이지에 인라인인 데이터 고립 영역에 XPath 쿼리를 적용하기 위한 요구 사항입니다. 이 인라인 경우 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]및 데이터 아일랜드는 <xref:System.Windows> 네임 스페이스를 상속 합니다. 따라서 XPath 쿼리가 <xref:System.Windows> 네임 스페이스에 의해 정규화 되지 않도록 하려면 네임 스페이스를 비워 두어야 합니다. 이렇게 하면 쿼리가 잘못 전달 됩니다.  
+> XML 데이터의 루트 노드에는 XML 네임 스페이스를 빈 문자열로 설정 하는 **xmlns** 특성이 있습니다. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 페이지에 인라인인 데이터 고립 영역에 XPath 쿼리를 적용하기 위한 요구 사항입니다. 이 인라인 경우 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]및 데이터 아일랜드는 <xref:System.Windows> 네임 스페이스를 상속 합니다. 따라서 XPath 쿼리가 <xref:System.Windows> 네임 스페이스에 의해 정규화 되지 않도록 하려면 네임 스페이스를 비워 두어야 합니다. 이렇게 하면 쿼리가 잘못 전달 됩니다.  
   
  [!code-xaml[XMLDataSource#1](~/samples/snippets/csharp/VS_Snippets_Wpf/XmlDataSource/CS/Window1.xaml#1)]  
   
@@ -48,11 +48,11 @@ ms.locfileid: "73459217"
   
  [!code-xaml[XmlDataSourceVariation#XmlNodePath](~/samples/snippets/csharp/VS_Snippets_Wpf/XmlDataSourceVariation/CS/Page1.xaml#xmlnodepath)]  
   
- 컴파일 시 데이터의 정확한 콘텐츠를 알아야 하므로, 일부 애플리케이션에서 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]를 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 페이지 소스의 데이터 고립 영역으로 포함하면 불편할 수 있습니다. 따라서 다음 예에서와 같이 외부 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 파일에서 데이터 가져오기도 지원됩니다.  
+ 일부 응용 프로그램에서는 데이터의 정확한 내용이 컴파일 타임에 인식 되어야 하므로 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 페이지의 소스 내에 XML을 데이터 아일랜드로 포함 하는 것이 불편할 수 있습니다. 따라서 다음 예제와 같이 외부 XML 파일에서 데이터 가져오기도 지원 됩니다.  
   
  [!code-xaml[XMLDataSource2#XmlFileExample](~/samples/snippets/csharp/VS_Snippets_Wpf/XmlDataSource2/CS/Window1.xaml#xmlfileexample)]  
   
- [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 데이터가 원격 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 파일에 있는 경우 다음과 같이 <xref:System.Windows.Data.XmlDataProvider.Source%2A> 특성에 적절 한 URL을 할당 하 여 데이터에 대 한 액세스를 정의 합니다.  
+ XML 데이터가 원격 XML 파일에 있는 경우 다음과 같이 <xref:System.Windows.Data.XmlDataProvider.Source%2A> 특성에 적절 한 URL을 할당 하 여 데이터에 대 한 액세스를 정의 합니다.  
   
 ```xml  
 <XmlDataProvider x:Key="BookData" Source="http://MyUrl" XPath="Books"/>  

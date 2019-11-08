@@ -14,12 +14,12 @@ helpviewer_keywords:
 - classes [WPF], mapping namespaces to
 - namespaces [WPF]
 ms.assetid: 5c0854e3-7470-435d-9fe2-93eec9d3634e
-ms.openlocfilehash: 6c06e18f7869f1b1041c4d5fb1608a87f2902d7b
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 8f381a06aa916be378052d00f0d65f37ef910433
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460581"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740657"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping-for-wpf-xaml"></a>WPF XAML을 위한 XAML 네임스페이스 및 네임스페이스 매핑
 이 항목에서는 WPF XAML 파일의 루트 태그에서 주로 찾을 수 있는 두 XAML 네임스페이스 매핑과 그 용도에 대해 자세하게 설명합니다. 또한 고유한 코드나 별도의 어셈블리에 정의된 요소에 사용할 수 있도록 유사한 매핑을 생성하는 방법에 대해서도 설명합니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "73460581"
   
  이러한 선언 간의 관계에서 `x:` 접두사 매핑은 XAML 언어 정의의 일부인 내장 항목을 지원하며, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]는 XAML을 언어로 사용하고 XAML에 대한 해당 개체의 어휘를 정의하는 하나의 구현입니다. WPF 어휘의 사용이 XAML 내장 항목 사용보다 훨씬 더 일반적일 것이므로 WPF 어휘가 기본값으로 매핑됩니다.  
   
- 이 [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)] 내에서 XAML 언어 내장 항목 지원을 매핑하기 위한 `x:` 접두사 규칙 뒤에는 프로젝트 템플릿, 샘플 코드 및 언어 기능의 설명서가 있습니다. XAML 네임스페이스는 기본적인 WPF 애플리케이션에도 필요한 여러 가지 일반적인 기능을 정의합니다. 예를 들어 partial 클래스를 통해 코드 숨김을 XAML 파일에 결합하려면 관련 XAML 파일의 루트 요소에서 해당 클래스를 `x:Class` 특성으로 명명해야 합니다. 또는 XAML 페이지에 정의된 요소 중 키가 지정된 리소스로 액세스하려는 요소에는 `x:Key` 특성을 설정해야 합니다. XAML의 이러한 특징과 기타 특징에 대한 자세한 내용은 [XAML 개요(WPF)](../../../desktop-wpf/fundamentals/xaml.md) 또는 [XAML 구문 정보](xaml-syntax-in-detail.md)를 참조하세요.  
+ XAML 언어 내장 함수를 매핑하기 위한 `x:` 접두사 규칙 뒤에는 프로젝트 템플릿, 샘플 코드 및이 SDK 내 언어 기능의 설명서가 나옵니다. XAML 네임스페이스는 기본적인 WPF 애플리케이션에도 필요한 여러 가지 일반적인 기능을 정의합니다. 예를 들어 partial 클래스를 통해 코드 숨김을 XAML 파일에 결합하려면 관련 XAML 파일의 루트 요소에서 해당 클래스를 `x:Class` 특성으로 명명해야 합니다. 또는 XAML 페이지에 정의된 요소 중 키가 지정된 리소스로 액세스하려는 요소에는 `x:Key` 특성을 설정해야 합니다. XAML의 이러한 특징과 기타 특징에 대한 자세한 내용은 [XAML 개요(WPF)](../../../desktop-wpf/fundamentals/xaml.md) 또는 [XAML 구문 정보](xaml-syntax-in-detail.md)를 참조하세요.  
   
 <a name="Mapping_To_Custom_Classes_and_Assemblies"></a>   
 ## <a name="mapping-to-custom-classes-and-assemblies"></a>사용자 지정 클래스 및 어셈블리 매핑  
@@ -105,7 +105,7 @@ End Namespace
   
 <a name="Mapping_CLR_Namespaces_to_XML_Namespaces_in_an"></a>   
 ## <a name="mapping-clr-namespaces-to-xml-namespaces-in-an-assembly"></a>CLR 네임스페이스를 어셈블리의 XML 네임스페이스에 매핑  
- WPF는 여러 CLR 네임스페이스를 단일 XAML 네임스페이스에 매핑하기 위해 XAML 프로세서에서 사용되는 CLR 특성을 정의합니다. 이 특성 <xref:System.Windows.Markup.XmlnsDefinitionAttribute>어셈블리를 생성 하는 소스 코드의 어셈블리 수준에 배치 됩니다. WPF 어셈블리 소스 코드에서는이 특성을 사용 하 여 <xref:System.Windows> 및 <xref:System.Windows.Controls>같은 다양 한 일반 네임 스페이스를 [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)] 네임 스페이스에 매핑합니다.  
+ WPF는 여러 CLR 네임스페이스를 단일 XAML 네임스페이스에 매핑하기 위해 XAML 프로세서에서 사용되는 CLR 특성을 정의합니다. 이 특성 <xref:System.Windows.Markup.XmlnsDefinitionAttribute>어셈블리를 생성 하는 소스 코드의 어셈블리 수준에 배치 됩니다. WPF 어셈블리 소스 코드에서는이 특성을 사용 하 여 <xref:System.Windows> 및 <xref:System.Windows.Controls>같은 다양 한 일반 네임 스페이스를 `http://schemas.microsoft.com/winfx/2006/xaml/presentation` 네임 스페이스에 매핑합니다.  
   
  <xref:System.Windows.Markup.XmlnsDefinitionAttribute>는 두 개의 매개 변수, 즉 XML/XAML 네임 스페이스 이름과 CLR 네임 스페이스 이름을 사용 합니다. 여러 CLR 네임 스페이스를 동일한 XML 네임 스페이스에 매핑하기 위해 둘 이상의 <xref:System.Windows.Markup.XmlnsDefinitionAttribute> 있을 수 있습니다. 매핑한 후에는 partial 클래스의 코드 숨김 페이지에서 적절한 `using` 문을 사용하여 정규화된 이름 없이도 이러한 네임스페이스의 멤버를 참조할 수 있습니다. 자세한 내용은 <xref:System.Windows.Markup.XmlnsDefinitionAttribute>를 참조 하세요.  
   

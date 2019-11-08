@@ -24,12 +24,12 @@ helpviewer_keywords:
 - programmatic navigation [WPF]
 - hyperlinks [WPF]
 ms.assetid: 86ad2143-606a-4e34-bf7e-51a2594248b8
-ms.openlocfilehash: 619dc101cd8851cee24651b7e3098ae12ef46259
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: a0916a2957eab6ae340fe914395eda44860da3b7
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459775"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73733731"
 ---
 # <a name="navigation-overview"></a>탐색 개요
 
@@ -85,7 +85,7 @@ WPF (Windows Presentation Foundation)는 독립 실행형 응용 프로그램 �
 
 [!code-xaml[NavigationOverviewSnippets#Page1XAML](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/Page1.xaml#page1xaml)]
 
-[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 태그에서 구현 된 <xref:System.Windows.Controls.Page>는 루트 요소로 `Page` 되어 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)][!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 네임 스페이스 선언이 필요 합니다. `Page` 요소에는 이동 하 여 표시 하려는 콘텐츠가 포함 되어 있습니다. 다음 태그와 같이 `Page.Content` property 요소를 설정 하 여 콘텐츠를 추가 합니다.
+[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 태그에서 구현 되는 <xref:System.Windows.Controls.Page> 루트 요소로 `Page` 되어 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]XML 네임 스페이스 선언이 필요 합니다. `Page` 요소에는 이동 하 여 표시 하려는 콘텐츠가 포함 되어 있습니다. 다음 태그와 같이 `Page.Content` property 요소를 설정 하 여 콘텐츠를 추가 합니다.
 
 [!code-xaml[NavigationOverviewSnippets#Page2XAML](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/Page2.xaml#page2xaml)]
 
@@ -106,7 +106,7 @@ WPF (Windows Presentation Foundation)는 독립 실행형 응용 프로그램 �
 
 태그 파일 및 코드 숨김 파일을 함께 사용하려면 다음과 같은 구성이 필요합니다.
 
-- 태그에서 `Page` 요소는 `x:Class` 특성을 포함 해야 합니다. 응용 프로그램을 빌드할 때 태그 파일에 `x:Class` 있으면 MSBuild (Microsoft build engine)가 <xref:System.Windows.Controls.Page>에서 파생 되 고 `x:Class` 특성으로 지정 된 이름을 갖는 `partial` 클래스를 만듭니다. 이렇게 하려면 `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"` ([!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 스키마)에 대 한 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 네임 스페이스 선언을 추가 해야 합니다. 생성 된 `partial` 클래스는 이벤트를 등록 하 고 태그에 구현 된 속성을 설정 하기 위해 호출 되는 `InitializeComponent`를 구현 합니다.
+- 태그에서 `Page` 요소는 `x:Class` 특성을 포함 해야 합니다. 응용 프로그램을 빌드할 때 태그 파일에 `x:Class` 있으면 MSBuild (Microsoft build engine)가 <xref:System.Windows.Controls.Page>에서 파생 되 고 `x:Class` 특성으로 지정 된 이름을 갖는 `partial` 클래스를 만듭니다. 이렇게 하려면 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 스키마 (`xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"`)에 대 한 XML 네임 스페이스 선언을 추가 해야 합니다. 생성 된 `partial` 클래스는 이벤트를 등록 하 고 태그에 구현 된 속성을 설정 하기 위해 호출 되는 `InitializeComponent`를 구현 합니다.
 
 - 코드를 사용 하는 경우 클래스는 태그의 `x:Class` 특성으로 지정 되는 동일한 이름을 가진 `partial` 클래스 여야 하며 <xref:System.Windows.Controls.Page>에서 파생 되어야 합니다. 이렇게 하면 응용 프로그램을 빌드할 때 태그 파일에 대해 생성 된 `partial` 클래스와 코드 숨김이 연결 될 수 있습니다 ( [WPF 응용 프로그램 빌드](building-a-wpf-application-wpf.md)참조).
 

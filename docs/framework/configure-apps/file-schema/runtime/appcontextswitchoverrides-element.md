@@ -8,12 +8,12 @@ helpviewer_keywords:
 - configuration switches
 - configuration
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
-ms.openlocfilehash: feb84fb3d8836168035ef8eed31728c6a0d00cba
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 881b9fedfaa42ffb402e226a6b271f47feb20617
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73118293"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736803"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<AppContextSwitchOverrides > 요소
 <xref:System.AppContext> 클래스에 사용되는 스위치를 하나 이상 정의하여 새 기능의 옵트아웃 메커니즘을 제공합니다.  
@@ -92,7 +92,7 @@ ms.locfileid: "73118293"
 |`Switch.System.Runtime.Serialization.`<br/>`DoNotUseECMAScriptV6EscapeControlCharacter` |[DataContractJsonSerializer](xref:System.Runtime.Serialization.Json.DataContractJsonSerializer) 가 ECMAScript V6 및 V8 표준을 기반으로 일부 제어 문자를 serialize 하는지 여부를 제어 합니다. 자세한 내용은 [완화: DataContractJsonSerializer로 제어 문자 serialization](../../../migration-guide/mitigation-serialization-control-characters.md)을 참조하세요.| .NET Framework 4.7 |
 |`Switch.System.Runtime.Serialization.`<br/>`DoNotUseTimeZoneInfo`|<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>에서 여러 조정 또는 표준 시간대에 대 한 단일 조정을 지원 하는지 여부를 제어 합니다. `true`경우 <xref:System.TimeZoneInfo> 형식을 사용 하 여 날짜 및 시간 데이터를 직렬화 및 deserialize 합니다. 그렇지 않으면 여러 조정 규칙을 지원 하지 않는 <xref:System.TimeZone> 유형을 사용 합니다.|.NET Framework 4.6.2|
 |`Switch.System.Runtime.Serialization.UseNewMaxArraySize`|개체 serialization 및 deserialization 중 <xref:System.Runtime.Serialization.ObjectManager?displayProperty=nameWithType>에서 더 큰 배열 크기를 사용할지 여부를 제어 합니다. 이 스위치를 `true`으로 설정 하 여 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>같은 형식으로 많은 개체 그래프의 serialization 및 deserialization 성능을 향상 시킬 수 있습니다. |.NET Framework 4.7.2|
-|`Switch.System.Security.ClaimsIdentity.`<br/>`SetActorAsReferenceWhenCopyingClaimsIdentity`|<xref:System.Security.Claims.ClaimsIdentity.%23ctor%28System.Security.Principal.IIdentity%29?displayProperty=nameWithType> 생성자가 새 개체의 <xref:System.Security.Claims.ClaimsIdentity.Actor%2A?displayProperty=nameWithType> 속성을 기존 개체 참조로 설정 하는지 여부를 제어 합니다. 자세한 내용은 [완화: ClaimsIdentity 생성자](../../../migration-guide/mitigation-claimsidentity-constructor.md)를 참조하세요.|.NET Framework 4.6.2|  
+|`Switch.System.Security.ClaimsIdentity.`<br/>`SetActorAsReferenceWhenCopyingClaimsIdentity`|<xref:System.Security.Claims.ClaimsIdentity.%23ctor%28System.Security.Principal.IIdentity%29?displayProperty=nameWithType> 생성자가 새 개체의 <xref:System.Security.Claims.ClaimsIdentity.Actor%2A?displayProperty=nameWithType> 속성을 기존 개체 참조로 설정 하는지 여부를 제어 합니다. 자세한 내용은 [완화: ClaimsIdentity 생성자](../../../migration-guide/retargeting/4.6.1-4.6.2.md)를 참조하세요.|.NET Framework 4.6.2|  
 |`Switch.System.Security.Cryptography.`<br/>`AesCryptoServiceProvider.DontCorrectlyResetDecryptor`|<xref:System.Security.Cryptography.AesCryptoServiceProvider> 암호 해독기를 다시 사용 하려고 하면 <xref:System.Security.Cryptography.CryptographicException>throw 되는지 여부를 제어 합니다. 자세한 내용은 [AesCryptoServiceProvider 암호 해독기에서 다시 사용할 수 있는 변환 제공](../../../migration-guide/retargeting/4.6.1-4.6.2.md#aescryptoserviceprovider-decryptor-provides-a-reusable-transform)을 참조 하세요.|.NET Framework 4.6.2|
 |`Switch.System.Security.Cryptography.`<br/>`DoNotAddrOfCspParentWindowHandle`|[System.security.cryptography.cspparameters.parentwindowhandle](xref:System.Security.Cryptography.CspParameters.ParentWindowHandle) 속성의 값이 창 핸들의 메모리 위치를 나타내는 [IntPtr](xref:System.IntPtr) 또는 창 핸들 (HWND) 인지 여부를 제어 합니다. 자세한 내용은 [완화: CspParameters.ParentWindowHandle에 HWND 필요](../../../migration-guide/retargeting/4.6.2-4.7.md#cspparametersparentwindowhandle-now-expects-hwnd-value)를 참조하세요. |.NET Framework 4.7|   
 |`Switch.System.Security.Cryptography.`<br/>`UseLegacyFipsThrow`|FIPS 모드에서 관리 되는 암호화 클래스를 사용 하 여 <xref:System.Security.Cryptography.CryptographicException> (`true`)를 throw 하거나 시스템 라이브러리 (`false`) 구현에 의존 하는지 여부를 제어 합니다.|.NET Framework 4.8|

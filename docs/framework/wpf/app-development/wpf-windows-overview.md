@@ -28,12 +28,12 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: 8c650ceab57a46cb6dd396111e7a93163a62299f
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 87d5ff67a9e95c5ec5385802d09d667ee8b6e0f9
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424938"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740683"
 ---
 # <a name="wpf-windows-overview"></a>WPF 창 개요
 사용자는 Windows를 통해 Windows Presentation Foundation (WPF) 독립 실행형 응용 프로그램과 상호 작용 합니다. 창의 기본 용도는 데이터를 시각화하는 콘텐츠를 호스트하고 사용자가 데이터와 상호 작용할 수 있도록 하는 것입니다. 독립 실행형 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램은 <xref:System.Windows.Window> 클래스를 사용 하 여 자체 창을 제공 합니다. 이 항목에서는 독립 실행형 응용 프로그램에서 windows를 만들고 관리 하는 기본적인 사항을 다루기 전에 <xref:System.Windows.Window> 소개 합니다.  
@@ -88,7 +88,7 @@ ms.locfileid: "73424938"
   
  [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 마크업 파일 및 코드 숨김이 함께 작동 하도록 설정 하려면 다음이 필요 합니다.  
   
-- 태그에서 `Window` 요소는 `x:Class` 특성을 포함 해야 합니다. 응용 프로그램을 빌드할 때 태그 파일에 `x:Class` 있으면 MSBuild (Microsoft build engine)가 <xref:System.Windows.Window>에서 파생 되 고 `x:Class` 특성으로 지정 된 이름을 갖는 `partial` 클래스를 만듭니다. 이렇게 하려면 `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"` ([!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 스키마)에 대 한 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 네임 스페이스 선언을 추가 해야 합니다. 생성 된 `partial` 클래스는 이벤트를 등록 하 고 태그에 구현 된 속성을 설정 하기 위해 호출 되는 `InitializeComponent` 메서드를 구현 합니다.  
+- 태그에서 `Window` 요소는 `x:Class` 특성을 포함 해야 합니다. 응용 프로그램을 빌드할 때 태그 파일에 `x:Class` 있으면 MSBuild (Microsoft build engine)가 <xref:System.Windows.Window>에서 파생 되 고 `x:Class` 특성으로 지정 된 이름을 갖는 `partial` 클래스를 만듭니다. 이렇게 하려면 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 스키마 (`xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"`)에 대 한 XML 네임 스페이스 선언을 추가 해야 합니다. 생성 된 `partial` 클래스는 이벤트를 등록 하 고 태그에 구현 된 속성을 설정 하기 위해 호출 되는 `InitializeComponent` 메서드를 구현 합니다.  
   
 - 코드를 사용 하는 경우 클래스는 태그의 `x:Class` 특성으로 지정 되는 동일한 이름을 가진 `partial` 클래스 여야 하며 <xref:System.Windows.Window>에서 파생 되어야 합니다. 이렇게 하면 응용 프로그램을 빌드할 때 태그 파일에 대해 생성 된 `partial` 클래스와 코드 숨김이 연결 될 수 있습니다 ( [WPF 응용 프로그램 빌드](building-a-wpf-application-wpf.md)참조).  
   

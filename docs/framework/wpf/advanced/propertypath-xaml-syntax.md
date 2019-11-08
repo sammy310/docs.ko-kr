@@ -5,12 +5,12 @@ helpviewer_keywords:
 - PropertyPath object [WPF]
 - XAML [WPF], PropertyPath object
 ms.assetid: 0e3cdf07-abe6-460a-a9af-3764b4fd707f
-ms.openlocfilehash: b2530793bfe1a158a0df1c34b2768e0c7ca351f3
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: f9176e61915b6c5cc05f120eade69a6d19cc4e6a
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459357"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740789"
 ---
 # <a name="propertypath-xaml-syntax"></a>PropertyPath XAML 구문
 
@@ -32,7 +32,7 @@ ms.locfileid: "73459357"
 
 데이터 바인딩은 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 기능으로 이를 통해 종속성 속성의 대상 값에 바인딩할 수 있습니다. 하지만 해당 데이터 바인딩의 소스는 종속성 속성이어야 하며 적용 가능한 데이터 공급자가 인식하는 모든 속성 형식일 수 있습니다. 속성 경로는 CLR (공용 언어 런타임) 개체 및 해당 속성에서 바인딩 소스를 가져오는 데 사용 되는 <xref:System.Windows.Data.ObjectDataProvider>에 특히 사용 됩니다.
 
-[!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]에 대 한 데이터 바인딩은 <xref:System.Windows.Data.Binding>에서 <xref:System.Windows.Data.Binding.Path%2A>을 사용 하지 않으므로 <xref:System.Windows.PropertyPath>를 사용 하지 않습니다. 대신 <xref:System.Windows.Data.Binding.XPath%2A>를 사용 하 고 데이터 [!INCLUDE[TLA#tla_xmldom](../../../../includes/tlasharptla-xmldom-md.md)]에 올바른 XPath 구문을 지정 합니다. <xref:System.Windows.Data.Binding.XPath%2A>은 문자열로도 지정 되지만 여기에는 설명 되어 있지 않습니다. [XMLDataProvider 및 XPath 쿼리를 사용 하 여 XML 데이터에 바인딩을](../data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)참조 하세요.
+XML에 대 한 데이터 바인딩은 <xref:System.Windows.Data.Binding>에서 <xref:System.Windows.Data.Binding.Path%2A>를 사용 하지 않으므로 <xref:System.Windows.PropertyPath>를 사용 하지 않습니다. 대신 <xref:System.Windows.Data.Binding.XPath%2A>를 사용 하 고 데이터의 XML 문서 개체 모델 (DOM)에 올바른 XPath 구문을 지정 합니다. <xref:System.Windows.Data.Binding.XPath%2A>은 문자열로도 지정 되지만 여기에는 설명 되어 있지 않습니다. [XMLDataProvider 및 XPath 쿼리를 사용 하 여 XML 데이터에 바인딩을](../data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)참조 하세요.
 
 데이터 바인딩의 속성 경로를 이해하는 열쇠는 개별 속성 값에 대한 바인딩을 대상으로 지정할 수 있거나 목록이나 컬렉션을 사용하는 대상 속성에 바인딩할 수 있다는 점입니다. 컬렉션을 바인딩하는 경우 컬렉션에 있는 데이터 항목의 수에 따라 확장 되는 <xref:System.Windows.Controls.ListBox>을 바인딩하는 경우 속성 경로는 개별 컬렉션 항목이 아닌 컬렉션 개체를 참조 해야 합니다. 데이터 바인딩 엔진은 데이터 원본으로 사용 되는 컬렉션을 바인딩 대상의 형식으로 자동으로 일치 시킵니다. 그러면 항목 배열로 <xref:System.Windows.Controls.ListBox> 채우기와 같은 동작이 발생 합니다.
 
@@ -76,7 +76,7 @@ ms.locfileid: "73459357"
 <object property="(ownerType.propertyName)" .../>
 ```
 
-괄호는 <xref:System.Windows.PropertyPath>의이 속성이 부분 한정자를 사용 하 여 생성 되어야 함을 의미 합니다. XML 네임스페이스를 사용하여 적절한 매핑이 있는 형식을 찾을 수 있습니다. `ownerType`는 각 어셈블리의 <xref:System.Windows.Markup.XmlnsDefinitionAttribute> 선언을 통해 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 프로세서가 액세스할 수 있는 형식을 검색 합니다. 대부분 애플리케이션에서는 기본 XML 네임스페이스가 [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)] 네임스페이스에 매핑되므로 접두사는 대개 사용자 지정 형식 또는 해당 네임스페이스 외부의 형식에만 필요합니다.  `propertyName`은 `ownerType`에 있는 속성의 이름으로 확인되어야 합니다. 일반적으로 이 구문은 다음 경우 중 하나에 사용됩니다.
+괄호는 <xref:System.Windows.PropertyPath>의이 속성이 부분 한정자를 사용 하 여 생성 되어야 함을 의미 합니다. XML 네임스페이스를 사용하여 적절한 매핑이 있는 형식을 찾을 수 있습니다. `ownerType`는 각 어셈블리의 <xref:System.Windows.Markup.XmlnsDefinitionAttribute> 선언을 통해 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 프로세서가 액세스할 수 있는 형식을 검색 합니다. 대부분 애플리케이션에서는 기본 XML 네임스페이스가 `http://schemas.microsoft.com/winfx/2006/xaml/presentation` 네임스페이스에 매핑되므로 접두사는 대개 사용자 지정 형식 또는 해당 네임스페이스 외부의 형식에만 필요합니다.  `propertyName`은 `ownerType`에 있는 속성의 이름으로 확인되어야 합니다. 일반적으로 이 구문은 다음 경우 중 하나에 사용됩니다.
 
 - 경로는 지정된 대상 형식이 없는 스타일 또는 템플릿인 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]에 지정됩니다. 스타일이 아니고 템플릿이 아닌 경우에 속성은 형식이 아닌 인스턴스에 있으므로 일반적으로 이를 제외한 다른 경우에는 정규화된 사용이 적절하지 않습니다.
 
@@ -97,7 +97,7 @@ ms.locfileid: "73459357"
 이 구문의 /는 계층적 데이터 소스 개체 내에서 탐색하는 데 사용되고 연속 / 문자가 있는 계층 구조에 대한 여러 단계는 지원되지 않습니다. 소스 순회는 데이터를 뷰의 UI와 동기화할 때 결정되는 현재 레코드 포인터 위치를 처리합니다. 계층적 데이터 소스 개체를 사용한 바인딩 및 데이터 바인딩의 현재 레코드 포인터 개념에 대한 자세한 내용은 [계층적 데이터에 마스터-세부 패턴 사용](../data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md) 또는 [데이터 바인딩 개요](../../../desktop-wpf/data/data-binding-overview.md)를 참조하세요.
 
 > [!NOTE]
-> 표면적으로 이 구문은 [!INCLUDE[TLA2#tla_xpath](../../../../includes/tla2sharptla-xpath-md.md)]와 비슷합니다. [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 데이터 소스에 바인딩하는 true [!INCLUDE[TLA2#tla_xpath](../../../../includes/tla2sharptla-xpath-md.md)] 식은 <xref:System.Windows.Data.Binding.Path%2A> 값으로 사용 되지 않고 함께 사용할 수 없는 <xref:System.Windows.Data.Binding.XPath%2A> 속성에 사용 됩니다.
+> 표면적이 구문은 XPath와 비슷합니다. XML 데이터 원본에 바인딩하기 위한 진정한 XPath 식은 <xref:System.Windows.Data.Binding.Path%2A> 값으로 사용 되지 않으며, 상호 배타적인 <xref:System.Windows.Data.Binding.XPath%2A> 속성에 사용 되어야 합니다.
 
 ### <a name="collection-views"></a>컬렉션 뷰
 
@@ -204,7 +204,7 @@ or
 <animation Storyboard.TargetProperty="(ownerType.propertyName)" .../>
 ```
 
-괄호는 <xref:System.Windows.PropertyPath>의이 속성이 부분 한정자를 사용 하 여 생성 되어야 함을 의미 합니다. XML 네임스페이스를 사용하여 형식을 찾을 수 있습니다. `ownerType`는 각 어셈블리의 <xref:System.Windows.Markup.XmlnsDefinitionAttribute> 선언을 통해 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 프로세서가 액세스할 수 있는 형식을 검색 합니다. 대부분 애플리케이션에서는 기본 XML 네임스페이스가 [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)] 네임스페이스에 매핑되므로 접두사는 대개 사용자 지정 형식 또는 해당 네임스페이스 외부의 형식에만 필요합니다. `propertyName`은 `ownerType`에 있는 속성의 이름으로 확인되어야 합니다. `propertyName`로 지정 된 속성은 <xref:System.Windows.DependencyProperty>이어야 합니다. 모든 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 연결된 속성은 종속성 속성으로 구현되므로 이 문제는 사용자 지정 연결된 속성에만 관련됩니다.
+괄호는 <xref:System.Windows.PropertyPath>의이 속성이 부분 한정자를 사용 하 여 생성 되어야 함을 의미 합니다. XML 네임스페이스를 사용하여 형식을 찾을 수 있습니다. `ownerType`는 각 어셈블리의 <xref:System.Windows.Markup.XmlnsDefinitionAttribute> 선언을 통해 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 프로세서가 액세스할 수 있는 형식을 검색 합니다. 대부분 애플리케이션에서는 기본 XML 네임스페이스가 `http://schemas.microsoft.com/winfx/2006/xaml/presentation` 네임스페이스에 매핑되므로 접두사는 대개 사용자 지정 형식 또는 해당 네임스페이스 외부의 형식에만 필요합니다. `propertyName`은 `ownerType`에 있는 속성의 이름으로 확인되어야 합니다. `propertyName`로 지정 된 속성은 <xref:System.Windows.DependencyProperty>이어야 합니다. 모든 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 연결된 속성은 종속성 속성으로 구현되므로 이 문제는 사용자 지정 연결된 속성에만 관련됩니다.
 
 <a name="indexanim"></a>
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - wrappers [WPF], implementing
 - dependency properties [WPF], custom
 ms.assetid: e6bfcfac-b10d-4f58-9f77-a864c2a2938f
-ms.openlocfilehash: 00596911cf603ae9615eb64d0aedefe90c2520bc
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 8e3ac7207a5ef05b94e97f005ecd17d5078669a4
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458997"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740893"
 ---
 # <a name="custom-dependency-properties"></a>사용자 지정 종속성 속성
 
@@ -35,7 +35,7 @@ ms.locfileid: "73458997"
 
 ## <a name="what-is-a-dependency-property"></a>종속성 속성이란?
 
-스타일 지정, 데이터 바인딩, 상속, 애니메이션 및 기본값을 종속성 속성으로 구현 하 여 지원 하기 위해 CLR (공용 언어 런타임) 속성을 사용 하도록 설정할 수 있습니다. 종속성 속성은 <xref:System.Windows.DependencyProperty.Register%2A> 메서드 (또는 <xref:System.Windows.DependencyProperty.RegisterReadOnly%2A>)를 호출 하 여 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 속성 시스템에 등록 되 고 <xref:System.Windows.DependencyProperty> 식별자 필드에 의해 지원 되는 속성입니다. 종속성 속성은 <xref:System.Windows.DependencyObject> 형식 에서만 사용할 수 있지만 <xref:System.Windows.DependencyObject>는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 클래스 계층 구조에서 매우 높습니다. 따라서 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 사용할 수 있는 대부분의 클래스는 종속성 속성을 지원할 수 있습니다. 종속성 속성 및 이 [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)]에서 종속성 속성을 설명하는 데 사용된 일부 용어 및 규칙에 대한 자세한 내용은 [종속성 속성 개요](dependency-properties-overview.md)를 참조하세요.
+스타일 지정, 데이터 바인딩, 상속, 애니메이션 및 기본값을 종속성 속성으로 구현 하 여 지원 하기 위해 CLR (공용 언어 런타임) 속성을 사용 하도록 설정할 수 있습니다. 종속성 속성은 <xref:System.Windows.DependencyProperty.Register%2A> 메서드 (또는 <xref:System.Windows.DependencyProperty.RegisterReadOnly%2A>)를 호출 하 여 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 속성 시스템에 등록 되 고 <xref:System.Windows.DependencyProperty> 식별자 필드에 의해 지원 되는 속성입니다. 종속성 속성은 <xref:System.Windows.DependencyObject> 형식 에서만 사용할 수 있지만 <xref:System.Windows.DependencyObject>는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 클래스 계층 구조에서 매우 높습니다. 따라서 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 사용할 수 있는 대부분의 클래스는 종속성 속성을 지원할 수 있습니다. 종속성 속성 및이 SDK에서 해당 속성을 설명 하는 데 사용 되는 용어 및 규칙에 대 한 자세한 내용은 [종속성 속성 개요](dependency-properties-overview.md)를 참조 하세요.
 
 <a name="example_dp"></a>
 

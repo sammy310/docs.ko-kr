@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 2df2cd11-6aac-4bdf-ab7b-ea5f464cd5ca
-ms.openlocfilehash: 5d0d28213ed8b4a0d464793aeba6823db2405bbe
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: e7546021fbfde3fceea7fd4f1eba10cdc90dff8b
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459020"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740618"
 ---
 # <a name="binding-sources-overview"></a>바인딩 소스 개요
 데이터 바인딩에서 바인딩 소스 개체는 데이터를 가져오는 개체를 의미합니다. 이 항목에서는 바인딩 소스로 사용할 수 있는 개체 형식에 대해 설명합니다.
@@ -25,7 +25,7 @@ ms.locfileid: "73459020"
 |CLR (공용 언어 런타임) 개체|공용 속성, 하위 속성 및 인덱서 뿐만 아니라 CLR (공용 언어 런타임) 개체의 공용 속성에 바인딩할 수 있습니다. 바인딩 엔진은 CLR 리플렉션을 사용 하 여 속성 값을 가져옵니다. 또는 <xref:System.ComponentModel.ICustomTypeDescriptor>를 구현 하거나 등록 된 <xref:System.ComponentModel.TypeDescriptionProvider> 있는 개체도 바인딩 엔진과 함께 사용할 수 있습니다.<br /><br /> 바인딩 소스로 사용할 수 있는 클래스를 구현하는 방법은 이 항목 뒷부분의 [바인딩 소스에 대한 클래스 구현](#classes)을 참조하세요.|
 |동적 개체|<xref:System.Dynamic.IDynamicMetaObjectProvider> 인터페이스를 구현 하는 개체의 사용 가능한 속성 및 인덱서를 바인딩할 수 있습니다. 코드의 멤버에 액세스할 수 있는 경우 바인딩할 수 있습니다. 예를 들어 동적 개체를 사용하여 `someObjet.AProperty`를 통해 코드의 멤버에 액세스할 수 있는 경우 바인딩 경로를 `AProperty`로 설정하여 바인딩할 수 있습니다.|
 |ADO.NET 개체|<xref:System.Data.DataTable>와 같은 ADO.NET 개체에 바인딩할 수 있습니다. ADO.NET <xref:System.Data.DataView>는 바인딩 엔진이 수신 하는 변경 알림을 제공 하는 <xref:System.ComponentModel.IBindingList> 인터페이스를 구현 합니다.|
-|[!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 개체|<xref:System.Xml.XmlNode>, <xref:System.Xml.XmlDocument>또는 <xref:System.Xml.XmlElement>에서 `XPath` 쿼리를 바인딩하고 실행할 수 있습니다. 태그의 바인딩 소스인 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 데이터에 쉽게 액세스 하는 방법은 <xref:System.Windows.Data.XmlDataProvider> 개체를 사용 하는 것입니다. 자세한 내용은 [XMLDataProvider 및 XPath 쿼리를 사용하여 XML 데이터에 바인딩](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)을 참조하세요.<br /><br /> LINQ to XML를 사용 하 여 <xref:System.Xml.Linq.XElement> 또는 <xref:System.Xml.Linq.XDocument>에 바인딩하거나 이러한 형식의 개체에 대해 실행 되는 쿼리 결과에 바인딩할 수도 있습니다. LINQ to XML를 사용 하 여 태그의 바인딩 소스인 XML 데이터에 액세스 하는 편리한 방법은 <xref:System.Windows.Data.ObjectDataProvider> 개체를 사용 하는 것입니다. 자세한 내용은 [XDocument, XElement 또는 LINQ for XML 쿼리 결과에 바인딩](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md)을 참조하세요.|
+|XML 개체|<xref:System.Xml.XmlNode>, <xref:System.Xml.XmlDocument>또는 <xref:System.Xml.XmlElement>에서 `XPath` 쿼리를 바인딩하고 실행할 수 있습니다. 태그의 바인딩 소스인 XML 데이터에 액세스 하는 편리한 방법은 <xref:System.Windows.Data.XmlDataProvider> 개체를 사용 하는 것입니다. 자세한 내용은 [XMLDataProvider 및 XPath 쿼리를 사용하여 XML 데이터에 바인딩](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)을 참조하세요.<br /><br /> LINQ to XML를 사용 하 여 <xref:System.Xml.Linq.XElement> 또는 <xref:System.Xml.Linq.XDocument>에 바인딩하거나 이러한 형식의 개체에 대해 실행 되는 쿼리 결과에 바인딩할 수도 있습니다. LINQ to XML를 사용 하 여 태그의 바인딩 소스인 XML 데이터에 액세스 하는 편리한 방법은 <xref:System.Windows.Data.ObjectDataProvider> 개체를 사용 하는 것입니다. 자세한 내용은 [XDocument, XElement 또는 LINQ for XML 쿼리 결과에 바인딩](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md)을 참조하세요.|
 |<xref:System.Windows.DependencyObject> 개체|모든 <xref:System.Windows.DependencyObject>의 종속성 속성에 바인딩할 수 있습니다. 예제는 [두 컨트롤의 속성 바인딩](how-to-bind-the-properties-of-two-controls.md)을 참조하세요.|
 
 <a name="classes"></a>
@@ -86,7 +86,7 @@ ms.locfileid: "73459020"
 
 - 항상 종속성 속성에 바인딩할 수 있습니다.
 
- [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 바인딩에 대한 사용 권한 요구 사항은 비슷합니다. 부분 신뢰 샌드박스에서 지정 된 데이터에 대 한 액세스 권한이 없는 경우 <xref:System.Windows.Data.XmlDataProvider> 실패 합니다.
+ XML 바인딩의 권한 요구 사항은 유사 합니다. 부분 신뢰 샌드박스에서 지정 된 데이터에 대 한 액세스 권한이 없는 경우 <xref:System.Windows.Data.XmlDataProvider> 실패 합니다.
 
  익명 형식 개체는 내부 개체입니다. 완전 신뢰 상태에서 실행 중인 경우에만 익명 형식의 속성에 바인딩할 수 있습니다. 익명 형식에 대한 자세한 내용은 [익명 형식(C# 프로그래밍 가이드)](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md) 또는 [익명 형식(Visual Basic)](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)(Visual Basic)을 참조하세요.
 

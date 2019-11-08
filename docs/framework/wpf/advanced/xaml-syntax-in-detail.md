@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: aa535c36b578e000ae6ddd7534838b07b0a5d756
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 10bd924664a469be26174fadf3892ee56aa33856
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459994"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740644"
 ---
 # <a name="xaml-syntax-in-detail"></a>XAML 구문 정보
 이 항목에서는 XAML 구문의 요소를 설명 하는 데 사용 되는 용어를 정의 합니다. 이러한 용어는이 설명서의 나머지 부분 전체에서 자주 사용 됩니다. WPF 설명서와 XAML을 사용 하는 다른 프레임 워크 또는 system.xaml 수준에서 XAML 언어 지원에 의해 설정 된 기본 XAML 개념에 대해 자주 사용 됩니다. 이 항목에서는 [XAML 개요 (WPF)](../../../desktop-wpf/fundamentals/xaml.md)항목에서 소개 하는 기본 용어를 확장 합니다.  
@@ -52,7 +52,7 @@ ms.locfileid: "73459994"
 #### <a name="members-of-types-and-class-inheritance"></a>형식 및 클래스 상속의 멤버  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 형식의 XAML 멤버로 표시 되는 속성 및 이벤트는 주로 기본 형식에서 상속 됩니다. 예를 들어 `<Button Background="Blue" .../>`예를 살펴보겠습니다. 클래스 정의, 리플렉션 결과 또는 설명서를 확인 하려는 경우 <xref:System.Windows.Controls.Control.Background%2A> 속성은 <xref:System.Windows.Controls.Button> 클래스에서 바로 선언 된 속성이 아닙니다. 대신 <xref:System.Windows.Controls.Control.Background%2A> 기본 <xref:System.Windows.Controls.Control> 클래스에서 상속 됩니다.  
   
- XAML 요소의 클래스 상속 동작은 스키마에서 적용 되는 XML 태그 해석을 통해 상당한 출발 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. 클래스 상속은 특히 중간 기본 클래스가 추상 이거나 인터페이스가 포함 된 경우 복잡할 수 있습니다. 이는 DTD 또는 XSD 형식과 같이 일반적으로 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 프로그래밍에 사용 되는 스키마 유형을 사용 하 여 XAML 요소 집합 및 해당 특성의 허용 되는 특성을 정확 하 게 표현 하기 어려운 한 가지 이유입니다. 또 다른 이유는 XAML 언어 자체의 확장성 및 형식 매핑 기능에서 허용 되는 형식 및 멤버의 고정 표현의 완전성을 배제 한다는 것입니다.  
+ XAML 요소의 클래스 상속 동작은 스키마에서 적용 되는 XML 태그 해석을 통해 상당한 출발 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. 클래스 상속은 특히 중간 기본 클래스가 추상 이거나 인터페이스가 포함 된 경우 복잡할 수 있습니다. 이는 DTD 또는 XSD 형식과 같이 일반적으로 XML 프로그래밍에 사용 되는 스키마 유형을 사용 하 여 XAML 요소 집합 및 허용 되는 특성을 정확 하 고 완전히 표현 하기 어려운 한 가지 이유입니다. 또 다른 이유는 XAML 언어 자체의 확장성 및 형식 매핑 기능에서 허용 되는 형식 및 멤버의 고정 표현의 완전성을 배제 한다는 것입니다.  
   
 <a name="object_element_syntax"></a>   
 ## <a name="object-element-syntax"></a>개체 요소 구문  

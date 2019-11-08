@@ -6,12 +6,12 @@ helpviewer_keywords:
 - user interface, see UI
 - accessibility, UI automation
 ms.assetid: 65847654-9994-4a9e-b36d-2dd5d998770b
-ms.openlocfilehash: 6e5501b152c4662f1456786ba51fd3f25923b34c
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: d803bd053acd876b3a38cfc52eb29818219e9423
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040539"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739577"
 ---
 # <a name="ui-automation-overview"></a>UI 자동화 개요
 > [!NOTE]
@@ -72,7 +72,7 @@ UI 자동화는 .NET Framework를 실행 하는 지원 되는 Windows 운영 체
 > [!NOTE]
 > 컨트롤 형식과 컨트롤 패턴 간에 일대일 대응이 없습니다. 단일 컨트롤 패턴은 여러 컨트롤 형식에서 지원될 수 있으며, 단일 컨트롤에는 각각 해당 동작의 다양한 측면을 노출하는 여러 컨트롤 패턴을 지원할 수 있습니다. 예를 들어, 콤보 상자에 둘 이상의 컨트롤 패턴이 있을 수 있으며 그중 하나는 확장 및 축소하는 기능을 나타내며 나머지 하나는 선택 메커니즘을 나타냅니다. 자세한 내용은 [UI Automation Control Types](ui-automation-control-types.md)을 참조하세요.  
   
- 또한[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 은 이벤트를 통해 클라이언트 애플리케이션에 정보를 제공합니다. [!INCLUDE[TLA2#tla_winevents](../../../includes/tla2sharptla-winevents-md.md)]와는 달리, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트는 브로드캐스트 메커니즘을 기반으로 하지 않습니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클라이언트는 특정 이벤트 알림을 등록하며, 이벤트 처리기에 전달되는 특정 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성 및 컨트롤 패턴 정보를 요청할 수 있습니다. 또한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트에는 이 이벤트를 발생시킨 요소에 대한 참조가 들어 있습니다. 공급자는 모든 클라이언트가 수신 대기하고 있는지 여부에 따라 선택적으로 이벤트를 발생시켜 성능을 향상시킬 수 있습니다.  
+ 또한[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 은 이벤트를 통해 클라이언트 애플리케이션에 정보를 제공합니다. WinEvents와 달리 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트는 브로드캐스트 메커니즘을 기반으로 하지 않습니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클라이언트는 특정 이벤트 알림을 등록하며, 이벤트 처리기에 전달되는 특정 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성 및 컨트롤 패턴 정보를 요청할 수 있습니다. 또한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트에는 이 이벤트를 발생시킨 요소에 대한 참조가 들어 있습니다. 공급자는 모든 클라이언트가 수신 대기하고 있는지 여부에 따라 선택적으로 이벤트를 발생시켜 성능을 향상시킬 수 있습니다.  
   
 ## <a name="see-also"></a>참조
 

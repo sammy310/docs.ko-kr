@@ -7,12 +7,12 @@ helpviewer_keywords:
 - classes [WPF], owners of dependency properties
 - metadata [WPF], dependency properties
 ms.assetid: 1fbada8e-4867-4ed1-8d97-62c07dad7ebc
-ms.openlocfilehash: 2abe89abf1ab246464c8f7a7ca7c87295b0b3946
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 178145b06cb937fb677b8454357bed774ed3003b
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458982"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740854"
 ---
 # <a name="dependency-property-value-precedence"></a>종속성 속성 값 우선 순위
 <a name="introduction"></a> 이 항목에서는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 속성 시스템의 작업 방식이 종속성 속성 값에 영향을 주는 방식을 설명하고 속성 시스템의 일면이 속성의 유효 값이 적용되는 우선 순위에 관해 설명합니다.  
@@ -109,7 +109,7 @@ ms.locfileid: "73458982"
   
 <a name="animations"></a>   
 ## <a name="coercion-animations-and-base-value"></a>강제 변환, 애니메이션 및 기준 값  
- 강제 변환 및 애니메이션은 모두 이 [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)] 전체에서 "기준 값"이라고 부르는 값에 적용됩니다. 따라서 기준 값은 항목 2에 도달할 때까지 위쪽으로 평가하여 결정된 값입니다.  
+ 강제 변환 및 애니메이션은 모두이 SDK 전체에서 "기본 값"으로 표현 되는 값에 대해 작동 합니다. 따라서 기준 값은 항목 2에 도달할 때까지 위쪽으로 평가하여 결정된 값입니다.  
   
  애니메이션의 경우, 그 애니메이션이 특정 동작의 "From" 및 "To"를 모두 지정하지 않거나 애니메이션이 완료되었을 때 기준 값으로 돌아가도록 되어 있는 경우는 애니메이션된 값에서 기준 값의 효과를 적용할 수 있습니다. 이 작동을 실제로 확인하려면 [From, To 및 By 애니메이션 대상 값 샘플](https://go.microsoft.com/fwlink/?LinkID=159988)을 실행하십시오. 예에서 직사각형 높이의 로컬 값을 초기 로컬 값이 애니메이션에 있는 "From" 값과 달라지도록 설정해 보십시오. 애니메이션은 "From" 값을 사용하여 시작하며, 시작된 후에는 기준 값을 대체합니다. 애니메이션은 중지 <xref:System.Windows.Media.Animation.FillBehavior>를 지정 하 여 완료 된 후 애니메이션에 대해 발견 된 값으로 돌아가도록 지정할 수 있습니다. 그 후에는 일반적인 우선 순위를 사용하여 기준 값을 결정합니다.  
   

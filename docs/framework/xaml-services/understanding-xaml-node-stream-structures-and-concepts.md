@@ -6,16 +6,16 @@ helpviewer_keywords:
 - nodes [XAML Services], XAML node stream
 - XAML [XAML Services], XAML node streams
 ms.assetid: 7c11abec-1075-474c-9d9b-778e5dab21c3
-ms.openlocfilehash: d6b2975b8e0338b121d00f5ec7f4ffb69d32ab6a
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 2c8093c3ef497bd836427f71098e62626f228e24
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70400731"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73733385"
 ---
 # <a name="understanding-xaml-node-stream-structures-and-concepts"></a>XAML 노드 스트림 구조 및 개념 이해
 
-.NET Framework XAML 서비스에 구현된 XAML 판독기와 XAML 작성기는 XAML 노드 스트림의 디자인 개념을 기반으로 합니다. XAML 노드 스트림은 XAML 노드 집합의 개념화입니다. 이 개념화에서 XAML 프로세서는 한 번에 하나씩 XAML의 노드 관계 구조를 처리합니다. 언제든지 하나의 현재 레코드 또는 현재 위치만 열린 XAML 노드 스트림에 있으며 API는 대부분 해당 위치에서 사용할 수 있는 정보만 보고합니다. XAML 노드 스트림의 현재 노드는 개체, 멤버 또는 값으로 설명될 수 있습니다. XAML을 XAML 노드 스트림으로 처리하여 XAML 판독기는 XAML 작성기와 통신하고 XAML을 포함하는 경로 로드 또는 경로 저장 작업 중에 프로그램이 XAML 노드 스트림을 보거나, 상호 작용하거나, 콘텐츠를 변경할 수 있게 할 수 있습니다. XAML 판독기/작성기 API 디자인 및 XAML 노드 스트림 개념은 이전의 관련된 판독기/작성기 디자인 및 개념과 비슷합니다(예: [!INCLUDE[TLA#tla_xmldom](../../../includes/tlasharptla-xmldom-md.md)] , <xref:System.Xml.XmlReader> 및 <xref:System.Xml.XmlWriter> 클래스). 이 항목에서는 XAML 노드 스트림 개념과 XAML 노드 수준에서 XAML 표현과 상호 작용하는 루틴을 작성하는 방법을 설명합니다.
+.NET Framework XAML 서비스에 구현된 XAML 판독기와 XAML 작성기는 XAML 노드 스트림의 디자인 개념을 기반으로 합니다. XAML 노드 스트림은 XAML 노드 집합의 개념화입니다. 이 개념화에서 XAML 프로세서는 한 번에 하나씩 XAML의 노드 관계 구조를 처리합니다. 언제든지 하나의 현재 레코드 또는 현재 위치만 열린 XAML 노드 스트림에 있으며 API는 대부분 해당 위치에서 사용할 수 있는 정보만 보고합니다. XAML 노드 스트림의 현재 노드는 개체, 멤버 또는 값으로 설명될 수 있습니다. XAML을 XAML 노드 스트림으로 처리하여 XAML 판독기는 XAML 작성기와 통신하고 XAML을 포함하는 경로 로드 또는 경로 저장 작업 중에 프로그램이 XAML 노드 스트림을 보거나, 상호 작용하거나, 콘텐츠를 변경할 수 있게 할 수 있습니다. XAML 판독기와 작성기 API 디자인 및 XAML 노드 스트림 개념은 DOM (XML 문서 개체 모델) 및 <xref:System.Xml.XmlReader> 및 <xref:System.Xml.XmlWriter> 클래스와 같은 이전 관련 판독기 및 작성기 디자인 및 개념과 비슷합니다. 이 항목에서는 XAML 노드 스트림 개념과 XAML 노드 수준에서 XAML 표현과 상호 작용하는 루틴을 작성하는 방법을 설명합니다.
 
 <a name="loading_into_a_xaml_reader"></a>
 
@@ -185,7 +185,7 @@ public class GameBoard {
 
 `EndObject` 가 `GameBoard`
 
-이 노드 스트림에는 형식 변환기 인스턴스가 없습니다. 그러나 `BoardSize`에 대한 <xref:System.Xaml.XamlMember>에서 <xref:System.Xaml.XamlMember.TypeConverter%2A?displayProperty=nameWithType>를 호출하여 형식 변환기 정보를 가져올 수 있습니다. 유효한 XAML 스키마 컨텍스트가 있는 경우 <xref:System.Xaml.Schema.XamlValueConverter%601.ConverterInstance%2A>에서 인스턴스를 가져와 변환기 메서드를 호출할 수도 있습니다.
+이 노드 스트림에는 형식 변환기 인스턴스가 없습니다. 그러나 <xref:System.Xaml.XamlMember.TypeConverter%2A?displayProperty=nameWithType> 에 대한 <xref:System.Xaml.XamlMember> 에서 `BoardSize`를 호출하여 형식 변환기 정보를 가져올 수 있습니다. 유효한 XAML 스키마 컨텍스트가 있는 경우 <xref:System.Xaml.Schema.XamlValueConverter%601.ConverterInstance%2A>에서 인스턴스를 가져와 변환기 메서드를 호출할 수도 있습니다.
 
 ### <a name="markup-extensions-in-the-xaml-node-stream"></a>XAML 노드 스트림의 태그 확장
 
@@ -209,17 +209,17 @@ XAML 텍스트 태그에서 특성 형태로 태그 확장 사용이 수행된 �
 
 다음 목록에서는 XAML 판독기가 지시문 XAML 멤버 노드를 소개해야 하는 모든 경우 및 .NET Framework XAML 서비스 구현에서 해당 멤버 노드가 식별되는 방식을 보여 줍니다.
 
-- **개체 노드에 대 한 초기화 텍스트:** 이 멤버 노드의 `_Initialization`이름은이 고, xaml 지시문을 나타내며, xaml 언어 xaml 네임 스페이스에서 정의 됩니다. <xref:System.Xaml.XamlLanguage.Initialization%2A>에서 해당 정적 엔터티를 가져올 수 있습니다.
+- **개체 노드에 대한 초기화 텍스트:** 이 멤버 노드의 이름은 `_Initialization`이고, XAML 지시문을 나타내며, XAML 언어 XAML 네임스페이스에서 정의됩니다. <xref:System.Xaml.XamlLanguage.Initialization%2A>에서 해당 정적 엔터티를 가져올 수 있습니다.
 
-- **태그 확장에 대 한 위치 매개 변수:** 이 멤버 노드의 `_PositionalParameters`이름은이 고 xaml 언어 xaml 네임 스페이스에서 정의 됩니다. 각각 입력 XAML에서 제공될 때 `,` 구분 기호 문자에서 분할하여 미리 구분된 위치 매개 변수인 개체의 제네릭 목록을 항상 포함합니다. <xref:System.Xaml.XamlLanguage.PositionalParameters%2A>에서 위치 매개 변수 지시문에 대한 정적 엔터티를 가져올 수 있습니다.
+- **태그 확장에 대한 위치 매개 변수:** 이 멤버 노드의 이름은 `_PositionalParameters`이고 XAML 언어 XAML 네임스페이스에서 정의됩니다. 각각 입력 XAML에서 제공될 때 `,` 구분 기호 문자에서 분할하여 미리 구분된 위치 매개 변수인 개체의 제네릭 목록을 항상 포함합니다. <xref:System.Xaml.XamlLanguage.PositionalParameters%2A>에서 위치 매개 변수 지시문에 대한 정적 엔터티를 가져올 수 있습니다.
 
-- **알 수 없는 내용:** 이 멤버 노드의 `_UnknownContent`이름은입니다. 엄격히 말해서, <xref:System.Xaml.XamlDirective>이며 XAML 언어 XAML 네임스페이스에서 정의됩니다. 이 지시문은 XAML 개체 요소에 소스 XAML의 콘텐츠가 포함되지만 현재 사용할 수 있는 XAML 스키마 컨텍스트에서 콘텐츠 속성을 확인할 수 없는 경우에 대한 센티널로 사용됩니다. XAML 노드 스트림에서 `_UnknownContent`라는 멤버를 확인하여 이러한 경우를 검색할 수 있습니다. 로드 경로 XAML 노드 스트림에서 다른 작업을 수행하지 않는 경우 임의 개체에서 <xref:System.Xaml.XamlObjectWriter> 멤버를 발견하면 시도된 `WriteEndObject` 에서 기본 `_UnknownContent` 가 발생합니다. 기본 <xref:System.Xaml.XamlXmlWriter> 가 발생하지 않고 멤버를 암시적으로 처리합니다. `_UnknownContent` 에서 <xref:System.Xaml.XamlLanguage.UnknownContent%2A>에 대한 정적 엔터티를 가져올 수 있습니다.
+- **알 수 없는 콘텐츠:** 이 멤버 노드의 이름은 `_UnknownContent`입니다. 엄격히 말해서, <xref:System.Xaml.XamlDirective>이며 XAML 언어 XAML 네임스페이스에서 정의됩니다. 이 지시문은 XAML 개체 요소에 소스 XAML의 콘텐츠가 포함되지만 현재 사용할 수 있는 XAML 스키마 컨텍스트에서 콘텐츠 속성을 확인할 수 없는 경우에 대한 센티널로 사용됩니다. XAML 노드 스트림에서 `_UnknownContent`라는 멤버를 확인하여 이러한 경우를 검색할 수 있습니다. 로드 경로 XAML 노드 스트림에서 다른 작업을 수행하지 않는 경우 임의 개체에서 <xref:System.Xaml.XamlObjectWriter> 멤버를 발견하면 시도된 `WriteEndObject` 에서 기본 `_UnknownContent` 가 발생합니다. 기본 <xref:System.Xaml.XamlXmlWriter> 가 발생하지 않고 멤버를 암시적으로 처리합니다. `_UnknownContent` 에서 <xref:System.Xaml.XamlLanguage.UnknownContent%2A>에 대한 정적 엔터티를 가져올 수 있습니다.
 
 - **컬렉션의 컬렉션 속성:** 일반적으로 XAML에 사용 되는 컬렉션 클래스의 지원 CLR 형식에는 컬렉션 항목을 포함 하는 명명 된 전용 속성이 있지만이 속성은 지원 형식 확인 전에 XAML 형식 시스템에서 알 수 없습니다. 대신, XAML 노드 스트림은 `Items` 자리 표시자를 컬렉션 XAML 형식의 멤버로 소개합니다. .NET Framework XAML 서비스 구현의 노드 스트림에서 이 지시문/멤버의 이름은 `_Items`입니다. 이 지시문에 대한 상수는 <xref:System.Xaml.XamlLanguage.Items%2A>에서 가져올 수 있습니다.
 
-    XAML 노드 스트림에는 지원 형식 확인 및 XAML 스키마 컨텍스트를 기준으로 구문 분석할 수 없는 항목이 있는 Items 속성이 포함 될 수 있습니다. 예를 들면 다음과 같습니다.
+    XAML 노드 스트림에는 지원 형식 확인 및 XAML 스키마 컨텍스트를 기준으로 구문 분석할 수 없는 항목이 있는 Items 속성이 포함 될 수 있습니다. 예를 들어 개체에 적용된
 
-- **XML 정의 멤버:** `xml:base`XML로 정의 `xml:lang` 된 및 `xml:space` 멤버는 .NET Framework xaml 서비스 구현에서, `base` `lang`및 `space` 라는 xaml 지시문으로 보고 됩니다. 이러한 멤버에 대한 네임스페이스는 XML 네임스페이스 `http://www.w3.org/XML/1998/namespace`입니다. 각 멤버에 대한 상수는 <xref:System.Xaml.XamlLanguage>에서 가져올 수 있습니다.
+- **XML로 정의된 멤버:** XML로 정의된 `xml:base`, `xml:lang` 및 `xml:space` 멤버는 .NET Framework XAML 서비스 구현에서 `base`, `lang`및 `space` 라는 XAML 지시문으로 보고됩니다. 이러한 멤버에 대한 네임스페이스는 XML 네임스페이스 `http://www.w3.org/XML/1998/namespace`입니다. 각 멤버에 대한 상수는 <xref:System.Xaml.XamlLanguage>에서 가져올 수 있습니다.
 
 ## <a name="node-order"></a>노드 순서
 
@@ -235,7 +235,7 @@ XAML 텍스트 태그에서 특성 형태로 태그 확장 사용이 수행된 �
 
 `GetObject` 는 새 개체를 생성하는 대신 XAML 개체 작성기가 개체의 포함 속성 값을 가져와야 하는 XAML 노드를 나타냅니다. `GetObject` 노드가 XAML 노드 스트림에서 발견되는 일반적인 경우는 컬렉션 개체 또는 사전 개체에 대해 지원 형식의 개체 모델에서 포함 속성이 의도적으로 읽기 전용일 때입니다. 이 시나리오에서는 컬렉션 또는 사전이 소유 형식의 초기화 논리에 의해 만들어지고 초기화(일반적으로 비어 있음)되는 경우가 많습니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Xaml.XamlObjectReader>
 - [XAML 서비스](index.md)

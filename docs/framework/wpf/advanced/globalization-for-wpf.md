@@ -7,19 +7,19 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: 04001f88e0f59fd4eb3ca84d846456be7740737e
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 1d6430ba5969d8a05db47baf9521d2409e596c23
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460490"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740859"
 ---
 # <a name="globalization-for-wpf"></a>WPF의 전역화
 이 항목에서는 글로벌 시장을 위해 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 응용 프로그램을 작성할 때 알아야 하는 문제를 소개 합니다. 세계화 프로그래밍 요소는 <xref:System.Globalization> 네임 스페이스의 .NET에서 정의 됩니다.
 
 <a name="xaml_globalization"></a>
 ## <a name="xaml-globalization"></a>XAML 전역화
- Extensible Application Markup Language (XAML)은 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]을 기반으로 하며 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 사양에 정의 된 세계화 지원을 활용 합니다. 다음 섹션에서는 알고 있어야 하는 몇 가지 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 기능에 대해 설명 합니다.
+ Extensible Application Markup Language (XAML)은 XML을 기반으로 하며 XML 사양에 정의 된 전역화 지원을 활용 합니다. 다음 섹션에서는 알고 있어야 하는 몇 가지 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 기능에 대해 설명 합니다.
 
 <a name="char_reference"></a>
 ### <a name="character-references"></a>문자 참조
@@ -143,7 +143,7 @@ ms.locfileid: "73460490"
 
 <a name="mui"></a>
 ### <a name="multilingual-user-interface"></a>다국어 사용자 인터페이스
- MUI (다국어 사용자 인터페이스)는 한 언어에서 다른 언어로 Ui를 전환 하기 위한 Microsoft 지원입니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램은 어셈블리 모델을 사용 하 여 MUI를 지원 합니다. 한 애플리케이션에는 언어 중립 어셈블리 외에도 언어별 위성 리소스 어셈블리도 포함됩니다. 진입점은 기본 어셈블리에서 관리되는 .EXE입니다.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 리소스 로더에서는 [!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)]의 resource manager를 활용 하 여 리소스 조회 및 대체를 지원 합니다. 여러 언어 위성 어셈블리는 동일한 기본 어셈블리와 작동합니다. 로드 되는 리소스 어셈블리는 현재 스레드의 <xref:System.Globalization.CultureInfo.CurrentUICulture%2A>에 따라 달라 집니다.
+ MUI (다국어 사용자 인터페이스)는 한 언어에서 다른 언어로 Ui를 전환 하기 위한 Microsoft 지원입니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램은 어셈블리 모델을 사용 하 여 MUI를 지원 합니다. 한 애플리케이션에는 언어 중립 어셈블리 외에도 언어별 위성 리소스 어셈블리도 포함됩니다. 진입점은 기본 어셈블리에서 관리되는 .EXE입니다.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 리소스 로더는 프레임 워크의 resource manager를 활용 하 여 리소스 조회 및 대체를 지원 합니다. 여러 언어 위성 어셈블리는 동일한 기본 어셈블리와 작동합니다. 로드 되는 리소스 어셈블리는 현재 스레드의 <xref:System.Globalization.CultureInfo.CurrentUICulture%2A>에 따라 달라 집니다.
 
 <a name="localizable_ui"></a>
 ### <a name="localizable-user-interface"></a>지역화할 수 있는 사용자 인터페이스
@@ -152,7 +152,7 @@ ms.locfileid: "73460490"
  리소스 관점에서 언어 종속 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]를 설명 하도록 디자인 된 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 파일은 리소스 요소 이므로 최종 배포 형식을 지역화 하 여 국제 언어를 지원 해야 합니다. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]는 이벤트를 처리할 수 없기 때문에 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 응용 프로그램은이 작업을 수행 하는 코드 블록을 포함 합니다. 자세한 내용은 [XAML 개요 (WPF)](../../../desktop-wpf/fundamentals/xaml.md)합니다. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 파일이 BAML 형식의 XAML로 토큰화 될 때 코드는 제거 되 고 다른 이진 파일로 컴파일됩니다. XAML 파일의 BAML 양식, 이미지 및 기타 형식의 관리 리소스 개체는 위성 리소스 어셈블리에 포함되어 다른 언어로 지역화되거나, 지역화가 필요하지 않은 경우 기본 어셈블리에 포함됩니다.
 
 > [!NOTE]
-> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램은 문자열 테이블, 이미지 등을 비롯 한 모든 [!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)]CLR 리소스를 지원 합니다.
+> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램은 문자열 테이블, 이미지 등을 비롯 한 모든 FrameworkCLR 리소스를 지원 합니다.
 
 <a name="building_localizable_apps"></a>
 ### <a name="building-localizable-applications"></a>지역화 가능 애플리케이션 빌드

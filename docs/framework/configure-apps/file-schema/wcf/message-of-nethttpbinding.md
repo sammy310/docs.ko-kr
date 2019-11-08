@@ -2,23 +2,23 @@
 title: <netHttpBinding>의 <message>
 ms.date: 03/30/2017
 ms.assetid: 9def5a35-475d-40d6-b716-ccdbd93863c7
-ms.openlocfilehash: 793e0541b1714d2afaafc634a9e9435e5243fa19
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 62b1793d18ddc8edc1f55b02137c4e0a9f7327d2
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70397831"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738965"
 ---
-# <a name="message-of-nethttpbinding"></a>\<netHttpBinding의 \<메시지 > >
-[ \<NetHttpBinding >](nethttpbinding.md)의 메시지 수준 보안 설정을 정의 합니다.  
+# <a name="message-of-nethttpbinding"></a>\<메시지 > \<netHttpBinding >
+[\<netHttpBinding >](nethttpbinding.md)의 메시지 수준 보안 설정을 정의 합니다.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<바인딩 >** ](bindings.md)\
+[ **\<system serviceModel >** ](system-servicemodel.md) &nbsp; &nbsp; \
+&nbsp;&nbsp;&nbsp;&nbsp;\<[**바인딩**](bindings.md) >
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<netHttpBinding >** ](nethttpbinding.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<바인딩 >** \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<보안 >** ](security-of-nethttpbinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<메시지 >**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**security >** ](security-of-nethttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**메시지 >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -34,24 +34,24 @@ ms.locfileid: "70397831"
   
 |특성|설명|  
 |---------------|-----------------|  
-|algorithmSuite|메시지 암호화 및 키 래핑 알고리즘을 설정합니다. 이 특성은 <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> 형식이며 알고리즘 및 키 크기를 지정합니다. 이러한 알고리즘은 보안 정책 언어(WS-SecurityPolicy) 사양에 지정된 알고리즘에 매핑됩니다.<br /><br /> 기본값은 `Basic256`입니다.|  
+|algorithmSuite|메시지 암호화 및 키 래핑 알고리즘을 설정합니다. 이 특성은 <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> 형식이며 알고리즘 및 키 크기를 지정합니다. 이러한 알고리즘은 WS-SecurityPolicy(Security Policy Language) 사양에 지정된 알고리즘에 매핑됩니다.<br /><br /> 기본값은 `Basic256`여야 합니다.|  
 |clientCredentialType|메시지 기반 보안을 사용하여 클라이언트 인증을 수행할 때 사용되는 자격 증명의 형식을 지정합니다. 기본값은 `UserName`입니다.|  
   
 ## <a name="clientcredentialtype-attribute"></a>clientCredentialType 특성  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |UserName|-사용자 이름 자격 증명을 사용 하 여 서버에 대해 클라이언트를 인증 해야 합니다. 이 자격 증명은 <`clientCredentials`> 요소를 사용 하 여 지정 해야 합니다.<br />-WCF는 암호 다이제스트를 보내거나 암호를 사용 하 여 키를 파생 하 고 메시지 보안에 이러한 키를 사용 하는 것을 지원 하지 않습니다. 따라서 WCF는 사용자 이름 자격 증명을 사용할 때 전송에 보안을 적용 합니다. `basicHttpBinding`의 경우 SSL 채널을 설정해야 합니다.|  
-|Certificate|클라이언트가 인증서를 사용하여 서버의 인증을 받도록 요구합니다. 이 경우 <`clientCredentials`> 및 <`clientCertificate`>를 사용 하 여 클라이언트 자격 증명을 지정 해야 합니다. 또한 메시지 보안 모드를 사용하는 경우 서비스 인증서를 사용하여 클라이언트를 구축해야 합니다. 이 경우 클래스 또는 <xref:System.ServiceModel.Description.ClientCredentials> `ClientCredentials` 동작 요소를 사용 하 여 서비스 자격 증명을 지정 하 고 serviceCredentials의 serviceCertificate > 요소 \<를 사용 하 여 서비스 인증서를 지정 해야 합니다.|  
+|인증서|클라이언트가 인증서를 사용하여 서버의 인증을 받도록 요구합니다. 이 경우 <`clientCredentials`> 및 <`clientCertificate`>를 사용 하 여 클라이언트 자격 증명을 지정 해야 합니다. 또한 메시지 보안 모드를 사용하는 경우 서비스 인증서를 사용하여 클라이언트를 구축해야 합니다. 이 경우 <xref:System.ServiceModel.Description.ClientCredentials> 클래스 또는 `ClientCredentials` behavior 요소를 사용 하 여 서비스 자격 증명을 지정 하 고 serviceCredentials의 \<serviceCertificate > 요소를 사용 하 여 서비스 인증서를 지정 해야 합니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
  없음  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
-|<`security`<의 > 요소`netHttpBinding`>|<`netHttpBinding`> 요소에 대 한 보안 기능을 정의 합니다.|  
+|`netHttpBinding`의 > 요소를 `security`<>|<`netHttpBinding`> 요소에 대 한 보안 기능을 정의 합니다.|  
   
 ## <a name="example"></a>예제  
  이 샘플에서는 basicHttpBinding 및 메시지 보안을 사용하는 애플리케이션을 구현하는 방법을 보여 줍니다. 다음 서비스 구성 예제에서 엔드포인트 정의는 basicHttpBinding을 지정하고 `Binding1`이라는 바인딩 구성을 참조합니다. 서비스가 클라이언트에게 자신을 인증하는 데 사용하는 인증서는 구성 파일의 `behaviors` 섹션에 있는 `serviceCredentials` 요소 아래에 설정됩니다. 클라이언트가 서비스에 자신을 인증하는 데 사용하는 인증서에 적용되는 유효성 검사 모드 또한 `behaviors` 섹션에서 `clientCertificate` 요소 아래에 설정됩니다.  
@@ -120,10 +120,10 @@ ms.locfileid: "70397831"
 </system.serviceModel>
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [서비스 및 클라이언트에 보안 설정](../../../wcf/feature-details/securing-services-and-clients.md)
 - [바인딩](../../../wcf/bindings.md)
 - [시스템 제공 바인딩 구성](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [바인딩을 사용하여 서비스 및 클라이언트 구성](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../misc/binding.md)
+- [\<binding >](bindings.md)

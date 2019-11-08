@@ -10,12 +10,12 @@ helpviewer_keywords:
 - templates [WPF], data
 - data templates [WPF]
 ms.assetid: 0f4d9f8c-0230-4013-bd7b-e8e7fed01b4a
-ms.openlocfilehash: d088342a08076c69b34f6c3d39dce076cb3890d4
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 377ee76e7e3537e9cae010189306611a503acbed
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460042"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740628"
 ---
 # <a name="data-templating-overview"></a>데이터 템플릿 개요
 WPF 데이터 템플릿 모델을 사용하면 데이터 표시를 매우 유연하게 정의할 수 있습니다. WPF 컨트롤에는 데이터 표시의 사용자 지정을 지원하는 기본 제공 기능이 있습니다. 이 항목에서는 먼저 <xref:System.Windows.DataTemplate>를 정의 하 고 사용자 지정 논리를 기반으로 하는 템플릿 선택, 계층적 데이터 표시에 대 한 지원 등의 기타 데이터 템플릿 기능을 도입 하는 방법을 보여 줍니다.  
@@ -54,7 +54,7 @@ WPF 데이터 템플릿 모델을 사용하면 데이터 표시를 매우 유연
   
  ![데이터 템플릿 샘플 스크린샷](./media/datatemplatingintro-fig2.png "DataTemplatingIntro_fig2")  
   
- 하지만 이 방법은 제한적이고 유연하지 않습니다. 또한 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 데이터에 바인딩할 경우 `ToString`을 재정의할 수 없습니다.  
+ 하지만 이 방법은 제한적이고 유연하지 않습니다. 또한 XML 데이터에 바인딩하는 경우 `ToString`를 재정의할 수 없습니다.  
   
 <a name="defining_simple_datatemplate"></a>   
 ### <a name="defining-a-simple-datatemplate"></a>간단한 DataTemplate 정의  
@@ -62,7 +62,7 @@ WPF 데이터 템플릿 모델을 사용하면 데이터 표시를 매우 유연
   
  [!code-xaml[DataTemplatingIntro_snip#Inline](~/samples/snippets/csharp/VS_Snippets_Wpf/DataTemplatingIntro_snip/CSharp/Window1.xaml#inline)]  
   
- 이 항목의 예제에 대 한 기본 데이터는 CLR 개체의 컬렉션입니다. [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 데이터에 바인딩할 경우 기본 개념은 같지만 약간의 구문적 차이점이 있습니다. 예를 들어 `Path=TaskName`하는 대신 <xref:System.Windows.Data.Binding.XPath%2A>을 `@TaskName` (`TaskName`가 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 노드의 특성인 경우)로 설정 합니다.  
+ 이 항목의 예제에 대 한 기본 데이터는 CLR 개체의 컬렉션입니다. XML 데이터에 바인딩하는 경우 기본 개념은 동일 하지만 약간의 구문상 차이가 있습니다. 예를 들어 `Path=TaskName`하는 대신 <xref:System.Windows.Data.Binding.XPath%2A>을 `@TaskName` (`TaskName`이 XML 노드의 특성인 경우)로 설정 합니다.  
   
  이제 <xref:System.Windows.Controls.ListBox>는 다음과 같습니다.  
   

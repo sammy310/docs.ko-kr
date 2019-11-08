@@ -18,12 +18,12 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: ef25123ed53ecf3e03e4f4c969bed2ef570591ad
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 22544b3bf2acf6e397f2ad5ae3de576bf491bd2b
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459036"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740733"
 ---
 # <a name="threading-model"></a>스레딩 모델
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]는 개발자가 스레딩의 어려움을 해결하도록 디자인되어 있습니다. 결과적으로 대부분의 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 개발자는 둘 이상의 스레드를 사용 하는 인터페이스를 작성할 필요가 없습니다. 다중 스레드 프로그램은 복잡하고 디버그하기 어려우므로 단일 스레드 솔루션이 있을 경우 피해야 합니다.  
@@ -49,7 +49,7 @@ ms.locfileid: "73459036"
   
  한 스레드만 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]를 수정할 수 있는 경우 백그라운드 스레드는 사용자와 상호 작용 하는 방법 백그라운드 스레드는 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 스레드에 게 작업을 대신 수행 하도록 요청할 수 있습니다. 이렇게 하려면 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 스레드의 <xref:System.Windows.Threading.Dispatcher> 작업 항목을 등록 합니다. <xref:System.Windows.Threading.Dispatcher> 클래스는 <xref:System.Windows.Threading.Dispatcher.Invoke%2A> 및 <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>작업 항목을 등록 하는 두 가지 메서드를 제공 합니다. 메서드는 둘 다 대리자 실행을 예약합니다. <xref:System.Windows.Threading.Dispatcher.Invoke%2A>는 동기 호출입니다. 즉, [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 스레드가 실제로 대리자 실행을 완료할 때까지 반환 되지 않습니다. <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>는 비동기 이며 즉시 반환 됩니다.  
   
- <xref:System.Windows.Threading.Dispatcher>은 우선 순위에 따라 큐의 요소를 정렬 합니다. <xref:System.Windows.Threading.Dispatcher> 큐에 요소를 추가할 때 지정할 수 있는 10 개의 수준이 있습니다. 이러한 우선 순위는 <xref:System.Windows.Threading.DispatcherPriority> 열거에서 유지 관리 됩니다. <xref:System.Windows.Threading.DispatcherPriority> 수준에 대 한 자세한 내용은 [!INCLUDE[TLA2#tla_winfxsdk](../../../../includes/tla2sharptla-winfxsdk-md.md)] 설명서에서 찾을 수 있습니다.  
+ <xref:System.Windows.Threading.Dispatcher>은 우선 순위에 따라 큐의 요소를 정렬 합니다. <xref:System.Windows.Threading.Dispatcher> 큐에 요소를 추가할 때 지정할 수 있는 10 개의 수준이 있습니다. 이러한 우선 순위는 <xref:System.Windows.Threading.DispatcherPriority> 열거에서 유지 관리 됩니다. <xref:System.Windows.Threading.DispatcherPriority> 수준에 대 한 자세한 내용은 Windows SDK 설명서에서 찾을 수 있습니다.  
   
 <a name="samples"></a>   
 ## <a name="threads-in-action-the-samples"></a>사용 중인 스레드: 샘플  

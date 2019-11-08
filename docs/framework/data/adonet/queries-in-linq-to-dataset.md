@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c1a78fa8-9f0c-40bc-a372-5575a48708fe
-ms.openlocfilehash: 5aaf33e5e2379ace4d32c59bd842889d0f9e32da
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 15a27c743f54a8ba6ea52edfde08731d8b439645
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794543"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73735414"
 ---
 # <a name="queries-in-linq-to-dataset"></a>LINQ to DataSet에서 쿼리
 쿼리는 데이터 소스에서 데이터를 검색하는 식입니다. 관계형 데이터베이스에는 SQL이 사용되고 XML에는 XQuery가 사용되는 것과 같이 쿼리는 일반적으로 특수화된 쿼리 언어로 표현됩니다. 따라서 개발자는 쿼리하는 데이터 소스나 데이터 형식에 따라 새로운 쿼리 언어를 배워야 했습니다. [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)]는 다양한 데이터 소스 및 형식에 사용할 수 있는 간단하고 일관된 모델을 제공합니다. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 쿼리에서는 항상 프로그래밍 개체를 사용합니다.  
   
  [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 쿼리 작업은 데이터 소스 가져오기, 쿼리 만들기 및 쿼리 실행으로 구성됩니다.  
   
- <xref:System.Collections.Generic.IEnumerable%601> 제네릭 인터페이스를 구현한 데이터 소스는 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]을 통해 쿼리할 수 있습니다. 에 <xref:System.Data.DataTableExtensions.AsEnumerable%2A> 대해를 <xref:System.Data.DataTable> 호출 하면 LINQ to DataSet 쿼리를 위한 데이터 <xref:System.Collections.Generic.IEnumerable%601> 원본으로 사용 되는 제네릭 인터페이스를 구현 하는 개체가 반환 됩니다.  
+ <xref:System.Collections.Generic.IEnumerable%601> 제네릭 인터페이스를 구현한 데이터 소스는 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]을 통해 쿼리할 수 있습니다. <xref:System.Data.DataTable>에서 <xref:System.Data.DataTableExtensions.AsEnumerable%2A>를 호출 하면 LINQ to DataSet 쿼리를 위한 데이터 원본으로 사용 되는 제네릭 <xref:System.Collections.Generic.IEnumerable%601> 인터페이스를 구현 하는 개체가 반환 됩니다.  
   
  쿼리에는 데이터 소스에서 검색하려는 정보를 정확히 지정해야 합니다. 또한 정보를 반환하기 전에 정보에 대한 정렬, 그룹화 및 구체화하는 방법을 쿼리에 지정할 수 있습니다. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]에서 쿼리는 변수에 저장됩니다. 값 시퀀스를 반환하도록 설계된 쿼리인 경우에는 쿼리 변수 자체가 열거 가능한 형식이어야 합니다. 이 쿼리 변수는 어떠한 작업을 수행하거나 데이터를 반환하지 않고 쿼리 정보를 저장하기만 합니다. 쿼리를 만든 후에는 해당 쿼리를 실행하여 데이터를 검색해야 합니다.  
   
@@ -59,9 +59,9 @@ ms.locfileid: "70794543"
  [!code-csharp[DP LINQ to DataSet Examples#ToArray2](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#toarray2)]
  [!code-vb[DP LINQ to DataSet Examples#ToArray2](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#toarray2)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [프로그래밍 가이드](programming-guide-linq-to-dataset.md)
 - [데이터 집합 쿼리](querying-datasets-linq-to-dataset.md)
-- [C#에서 LINQ 시작](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [C#에서 LINQ 시작](../../../csharp/programming-guide/concepts/linq/index.md)
 - [Visual Basic에서 LINQ 시작](../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)

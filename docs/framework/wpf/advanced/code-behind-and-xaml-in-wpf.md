@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XAML [WPF], code-behind
 - code-behind files [WPF], XAML
 ms.assetid: 9df6d3c9-aed3-471c-af36-6859b19d999f
-ms.openlocfilehash: 2e975745c2124ab2834eb82ed9b94563b44642b1
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: c18cce1898b8834c20d5e4af70c1b010e4b96e11
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73453679"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740908"
 ---
 # <a name="code-behind-and-xaml-in-wpf"></a>WPF의 코드 숨김 및 XAML
 <a name="introduction"></a>코드 숨김이 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 페이지가 태그 컴파일될 때 태그 정의 개체와 조인 된 코드를 설명 하는 데 사용 되는 용어입니다. 이 항목에서는 코드 숨김으로 사용할 요구 사항 뿐만 아니라 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]코드에 대 한 대체 인라인 코드 메커니즘에 대해 설명 합니다.  
@@ -50,7 +50,7 @@ ms.locfileid: "73453679"
   
 <a name="x_Code"></a>   
 ## <a name="xcode"></a>x:Code  
- [x:Code](../../xaml-services/x-code-intrinsic-xaml-type.md) 는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]에 정의 된 지시문 요소입니다. `x:Code` 지시문 요소는 인라인 프로그래밍 코드를 포함할 수 있습니다. 인라인으로 정의 된 코드는 같은 페이지의 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 상호 작용할 수 있습니다. 다음 예제에서는 인라인 C# 코드를 보여 줍니다. 코드는 `x:Code` 요소 내에 있으며, [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]내용을 이스케이프 하기 위해 `<CDATA[`...`]]>`에서 코드를 묶어야 합니다. 그러면 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 프로세서 ([!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 스키마 또는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 스키마를 해석)가 되지 않습니다. [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]로 내용을 그대로 해석 해 보세요.  
+ [x:Code](../../xaml-services/x-code-intrinsic-xaml-type.md) 는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]에 정의 된 지시문 요소입니다. `x:Code` 지시문 요소는 인라인 프로그래밍 코드를 포함할 수 있습니다. 인라인으로 정의 된 코드는 같은 페이지의 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 상호 작용할 수 있습니다. 다음 예제에서는 인라인 C# 코드를 보여 줍니다. 코드는 `x:Code` 요소 내에 있으며 XML에 대 한 내용을 이스케이프 하기 위해 `<CDATA[`...`]]>`에서 코드를 둘러싸야 합니다. 그러면 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 프로세서 ([!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 스키마 또는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 스키마를 해석)가 시도 하지 않습니다. 내용을 문자 그대로 XML로 해석 합니다.  
   
  [!code-xaml[XAMLOvwSupport#ButtonWithInlineCode](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page4.xaml#buttonwithinlinecode)]  
   

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-ms.openlocfilehash: 02a70e65cd53a8998395987770cd32efc82293d0
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 2ec979240b8fead10522817b77eef23e29409411
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459601"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740696"
 ---
 # <a name="wpf-architecture"></a>WPF 아키텍처
 이 항목에서는 Windows Presentation Foundation (WPF) 클래스 계층 구조 둘러보기를 제공 합니다. 이 항목은 대부분의 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 주요 하위 시스템을 다루며 이들이 어떻게 상호 작용하는지를 설명하고, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]의 설계자가 선택한 몇 가지 사항에 대해서 자세히 설명합니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "73459601"
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]에서 동시성을 논의할 때는 두 가지 핵심 개념인 디스패처와 스레드 선호도를 반드시 이해해야 합니다.  
   
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]의 디자인 단계에서 목표는 단일 실행 스레드로 이동하되 스레드가 아닌 "선호" 모델로 이동하는 것이었습니다. 스레드 선호도는 일부 형식의 상태를 저장하기 위해 구성 요소가 실행 스레드의 ID를 사용할 때 발생합니다. 이에 대한 가장 일반적인 형태는 TLS(스레드 로컬 저장소)를 사용하여 상태를 저장하는 것입니다. 스레드 선호도는 각 논리적 실행 스레드가 운영 체제에서 하나의 실제 스레드에만 소속될 수 있도록 합니다. 따라서 메모리를 많이 소비할 수 있습니다. 결국 WPF의 스레딩 모델은 스레드 선호도가 있는 단일 스레딩된 실행의 기존 User32 스레딩 모델과 계속 동기화됩니다. 이에 대한 주요 이유는 상호 운용성 때문입니다. [!INCLUDE[TLA2#tla_ole2.0](../../../../includes/tla2sharptla-ole2-0-md.md)], 클립보드, Internet Explorer 등의 시스템의 경우 모두 STA(단일 스레드 선호도) 실행이 필요합니다.  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]의 디자인 단계에서 목표는 단일 실행 스레드로 이동하되 스레드가 아닌 "선호" 모델로 이동하는 것이었습니다. 스레드 선호도는 일부 형식의 상태를 저장하기 위해 구성 요소가 실행 스레드의 ID를 사용할 때 발생합니다. 이에 대한 가장 일반적인 형태는 TLS(스레드 로컬 저장소)를 사용하여 상태를 저장하는 것입니다. 스레드 선호도는 각 논리적 실행 스레드가 운영 체제에서 하나의 실제 스레드에만 소속될 수 있도록 합니다. 따라서 메모리를 많이 소비할 수 있습니다. 결국 WPF의 스레딩 모델은 스레드 선호도가 있는 단일 스레딩된 실행의 기존 User32 스레딩 모델과 계속 동기화됩니다. 이는 상호 운용성이 가장 중요 한 이유입니다. OLE 2.0, 클립보드 및 Internet Explorer와 같은 시스템은 모두 STA (단일 스레드 선호도)를 실행 해야 합니다.  
   
  STA 스레딩이 포함된 개체가 있다면 스레드 간에 통신하고 올바른 스레드에 있는지를 확인할 수 있는 방법이 필요합니다. 여기에서 디스패처의 역할이 필요합니다. 디스패처는 우선 순위가 지정된 여러 개의 큐가 있는 기본 메시지 디스패치 시스템입니다. 메시지의 예로 원시 입력 알림(마우스 이동), 프레임워크 기능(레이아웃) 또는 사용자 명령(이 메서드 실행)을 들 수 있습니다. <xref:System.Windows.Threading.DispatcherObject>에서 파생 하 여 STA 동작을 포함 하는 CLR 개체를 만들고 만들 때 디스패처에 대 한 포인터를 지정 합니다.  
   

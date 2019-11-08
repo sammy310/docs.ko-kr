@@ -2,19 +2,19 @@
 title: <mexHttpsBinding>
 ms.date: 03/30/2017
 ms.assetid: f2ed3774-78b9-4a15-b79b-655f1ad68b86
-ms.openlocfilehash: d32db2180e06cba6662ed853ab1a259805680ea1
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 79c3c68d69bf3cf5a018e6cf62f34e5ec2ce0cd5
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70397819"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738929"
 ---
-# <a name="mexhttpsbinding"></a>\<mexHttpsBinding>
+# <a name="mexhttpsbinding"></a>\<mexHttpsBinding >
 HTTPS를 통한 WS-MEX(WS-MetadataExchange) 메시지 교환에 사용되는 바인딩의 설정을 지정합니다.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<바인딩 >** ](bindings.md)\
+[ **\<system serviceModel >** ](system-servicemodel.md) &nbsp; &nbsp; \
+&nbsp;&nbsp;&nbsp;&nbsp;\<[**바인딩**](bindings.md) >
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<mexHttpsBinding >**  
   
 ## <a name="syntax"></a>구문  
@@ -44,28 +44,28 @@ HTTPS를 통한 WS-MEX(WS-MetadataExchange) 메시지 교환에 사용되는 바
 |`sendTimeout`|보내기 작업을 완료하기 위해 제공된 시간 간격을 지정하는 <xref:System.TimeSpan> 값입니다. 이 값은 <xref:System.TimeSpan.Zero>보다 크거나 같아야 합니다. 기본값은 00:01:00입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
- 없음  
+ 없음.  
   
 ### <a name="parent-elements"></a>부모 요소  
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<bindings>](bindings.md)|이 요소는 표준 및 사용자 지정 바인딩의 컬렉션을 보유합니다.|  
+|[\<bindings >](bindings.md)|이 요소는 표준 및 사용자 지정 바인딩의 컬렉션을 보유합니다.|  
   
-## <a name="remarks"></a>설명  
- 이 바인딩은 기본적으로 인증서를 사용하여 전송 수준에서 보안을 지원할 수 있는 `WSHttpBinding` 바인딩입니다. 이러한 메타 데이터 끝점을 [구성 하 고 사용 하는 방법에 대 한 자세한 내용은 방법: 사용자 지정 WS-Metadata Exchange 바인딩](../../../wcf/extending/how-to-configure-a-custom-ws-metadata-exchange-binding.md)구성, [방법: MEX가 아닌 바인딩을](../../../wcf/extending/how-to-retrieve-metadata-over-a-non-mex-binding.md)통해 메타 데이터를 검색 하 고 샘플 [사용자 지정 보안 메타 데이터 끝점](../../../wcf/samples/custom-secure-metadata-endpoint.md)을 검색 합니다.  
+## <a name="remarks"></a>주의  
+ 이 바인딩은 기본적으로 인증서를 사용하여 전송 수준에서 보안을 지원할 수 있는 `WSHttpBinding` 바인딩입니다. 이러한 메타 데이터 끝점을 구성 하 고 사용 하는 방법에 대 한 자세한 내용은 [방법: 사용자 지정 WS-Metadata Exchange 바인딩 구성](../../../wcf/extending/how-to-configure-a-custom-ws-metadata-exchange-binding.md), [방법: MEX가 아닌 바인딩을 통해 메타 데이터 검색](../../../wcf/extending/how-to-retrieve-metadata-over-a-non-mex-binding.md)및 샘플 [사용자 지정 보안 메타 데이터 끝점](../../../wcf/samples/custom-secure-metadata-endpoint.md) 을 참조 하세요. .  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.ServiceModel.Description.MetadataExchangeBindings.CreateMexHttpsBinding%2A>
 - <xref:System.ServiceModel.Configuration.MexHttpsBindingElement>
-- [방법: 구성 파일을 사용 하 여 서비스에 대 한 메타 데이터 게시](../../../wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
+- [방법: 구성 파일을 사용하여 서비스의 메타데이터 게시](../../../wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
 - [사용자 지정 바인딩을 통해 메타데이터 게시 및 검색](../../../wcf/extending/publishing-and-retrieving-metadata-over-a-custom-binding.md)
 - [방법: 사용자 지정 WS-Metadata Exchange 바인딩 구성](../../../wcf/extending/how-to-configure-a-custom-ws-metadata-exchange-binding.md)
-- [방법: MEX가 아닌 바인딩을 통해 메타 데이터 검색](../../../wcf/extending/how-to-retrieve-metadata-over-a-non-mex-binding.md)
+- [방법: MEX가 아닌 바인딩을 통해 메타데이터 검색](../../../wcf/extending/how-to-retrieve-metadata-over-a-non-mex-binding.md)
 - [사용자 지정 보안 메타 데이터 엔드포인트](../../../wcf/samples/custom-secure-metadata-endpoint.md)
 - [메타데이터](../../../wcf/feature-details/metadata.md)
 - [바인딩](../../../wcf/bindings.md)
 - [시스템 제공 바인딩 구성](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [바인딩을 사용하여 서비스 및 클라이언트 구성](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../misc/binding.md)
+- [\<binding >](bindings.md)

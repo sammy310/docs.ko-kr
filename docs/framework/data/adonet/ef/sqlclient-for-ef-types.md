@@ -2,12 +2,12 @@
 title: Entity FrameworkTypes용 SqlClient
 ms.date: 03/30/2017
 ms.assetid: f2a95ead-c845-4e97-9fb3-04b444f7ed81
-ms.openlocfilehash: af3a4eea08dd3f4e1a134fcb66d92bc4a3b077c7
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: d132583bba2520d37693be6c4b085cfa514003e0
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248376"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737853"
 ---
 # <a name="sqlclient-for-entity-frameworktypes"></a>Entity FrameworkTypes용 SqlClient
 .NET Framework Data Provider for SQL Server(SqlClient) 공급자 매니페스트 파일에는 공급자 기본 형식의 목록, 각 형식의 패싯, 개념적 모델과 스토리지 모델 기본 형식 간의 매핑, 개념적 모델과 스토리지 모델 기본 형식 간의 승격과 변환 규칙이 포함되어 있습니다.  
@@ -16,40 +16,40 @@ ms.locfileid: "70248376"
   
 |공급자 형식<br /><br /> name|공급자 형식<br /><br /> 특성|`EDMSimpleType`<br /><br /> name|패싯|  
 |----------------------------|----------------------------------|------------------------------|------------|  
-|`bit`|n/a|`Edm.Boolean`|n/a|  
-|`tinyint`|n/a|`Edm.Byte`|n/a|  
-|`smallint`|n/a|`Edm.Int16`|n/a|  
-|`int`|n/a|`Edm.Int32`|n/a|  
-|`bigint`|n/a|`Edm.Int64`|n/a|  
-|`float`|n/a|`Edm.Double`|n/a|  
-|`real`|n/a|`Edm.Double`|n/a|  
-|`decimal`|n/a|`Edm.Decimal`|소수<br /><br /> 최대 1<br /><br /> 최대화 38<br /><br /> 기본 18<br /><br /> 상시 거짓<br /><br /> 배율을<br /><br /> 최대 0<br /><br /> 최대화 38<br /><br /> 기본 0<br /><br /> 상시 거짓|  
-|`numeric`|n/a|`Edm.Decimal`|소수<br /><br /> 최대 1<br /><br /> 최대화 38<br /><br /> 기본 18<br /><br /> 상시 거짓<br /><br /> 배율을<br /><br /> 최대 0<br /><br /> 최대화 38<br /><br /> 기본 0<br /><br /> 상시 거짓|  
-|`smallmoney`|n/a|`Edm.Decimal`|소수<br /><br /> 기본 10<br /><br /> 상시 True<br /><br /> 배율을<br /><br /> 기본 4<br /><br /> 상시 True|  
-|`money`|n/a|`Edm.Decimal`|소수<br /><br /> 기본 19<br /><br /> 상시 True<br /><br /> 배율을<br /><br /> 기본 4<br /><br /> 상시 True|  
-|`binary`|n/a|`Edm.Binary`|MaxLength:<br /><br /> 최대 1<br /><br /> 최대화 8000<br /><br /> 기본 8000<br /><br /> 상시 거짓<br /><br /> FixedLength:<br /><br /> 기본 True<br /><br /> 상시 True|  
-|`varbinary`|n/a|`Edm.Binary`|MaxLength:<br /><br /> 최대 1<br /><br /> 최대화 8000<br /><br /> 기본 8000<br /><br /> 상시 거짓<br /><br /> FixedLength:<br /><br /> 기본 거짓<br /><br /> 상시 True|  
-|`varbinary(max)`<br /><br /> 참고: 이 형식은 SQL Server 2000에서 지원 되지 않습니다.|n/a|`Edm.Binary`|MaxLength:<br /><br /> 기본 214748364780<br /><br /> 상시 True<br /><br /> FixedLength:<br /><br /> 기본 거짓<br /><br /> 상시 True|  
-|`image`|n/a|`Edm.Binary`|MaxLength:<br /><br /> 기본 2147483647<br /><br /> 상시 True<br /><br /> FixedLength:<br /><br /> 기본 거짓<br /><br /> 상시 True|  
-|`timestamp`|n/a|`Edm.Binary`|MaxLength:<br /><br /> 기본 8<br /><br /> 상시 True<br /><br /> FixedLength:<br /><br /> 기본 True<br /><br /> 상시 True|  
-|`rowversion`|n/a|`Edm.Binary`|MaxLength:<br /><br /> 기본 8<br /><br /> 상시 True<br /><br /> FixedLength:<br /><br /> 기본 True<br /><br /> 상시 True|  
-|`smalldatetime`|n/a|`Edm.DateTime`|소수<br /><br /> 기본 0<br /><br /> 상시 True|  
-|`datetime`|n/a|`Edm.DateTime`|소수<br /><br /> 기본 3<br /><br /> 상시 True|  
-|`date`<br /><br /> 참고: 이 형식은 SQL Server 2005 및 SQL Server 2000에서 지원 되지 않습니다.|n/a|`Edm.DateTime`|소수<br /><br /> 기본 0<br /><br /> 상시 거짓|  
-|`time`<br /><br /> 참고: 이 형식은 SQL Server 2005 및 SQL Server 2000에서 지원 되지 않습니다.|n/a|`Edm.Time`|소수<br /><br /> 기본 7<br /><br /> 상시 거짓|  
-|`datetime2`<br /><br /> 참고: 이 형식은 SQL Server 2005 및 SQL Server 2000에서 지원 되지 않습니다.|n/a|`Edm.DateTime`|소수<br /><br /> 기본 7<br /><br /> 상시 거짓|  
-|`datetimeoffset`<br /><br /> 참고: 이 형식은 SQL Server 2005 및 SQL Server 2000에서 지원 되지 않습니다.|n/a|`Edm.DateTimeOffset`|소수<br /><br /> 기본 7<br /><br /> 상시 거짓|  
-|`nvarchar`<br /><br /> 참고: 이 형식은 SQL Server 2000에서 지원 되지 않습니다.|n/a|`Edm.String`|MaxLength:<br /><br /> 최대 1<br /><br /> 최대화 4000<br /><br /> 기본 4000<br /><br /> 상시 거짓<br /><br /> 유니코드:<br /><br /> 기본 True<br /><br /> 상시 True<br /><br /> FixedLength:<br /><br /> 기본 거짓<br /><br /> 상시 True|  
-|`varchar`<br /><br /> 참고: 이 형식은 SQL Server 2000에서 지원 되지 않습니다.|n/a|`Edm.String`|MaxLength:<br /><br /> 최대 1<br /><br /> 최대화 8000<br /><br /> 기본 8000<br /><br /> 상시 거짓<br /><br /> 유니코드:<br /><br /> 기본 거짓<br /><br /> 상시 True<br /><br /> FixedLength:<br /><br /> 기본 거짓<br /><br /> 상시 True|  
-|`char`|n/a|`Edm.String`|MaxLength:<br /><br /> 최대 1<br /><br /> 최대화 8000<br /><br /> 기본 8000<br /><br /> 상시 거짓<br /><br /> 유니코드:<br /><br /> 기본 거짓<br /><br /> 상시 True<br /><br /> FixedLength:<br /><br /> 기본 True<br /><br /> 상시 True|  
-|`nchar`|n/a|`Edm.String`|MaxLength:<br /><br /> 최대 1<br /><br /> 최대화 4000<br /><br /> 기본 4000<br /><br /> 상시 거짓<br /><br /> 유니코드:<br /><br /> 기본 True<br /><br /> 상시 True<br /><br /> FixedLength:<br /><br /> 기본 True<br /><br /> 상시 True|  
-|`varchar`(`max`)|n/a|`Edm.String`|MaxLength:<br /><br /> 기본 2147483647<br /><br /> 상시 True<br /><br /> 유니코드:<br /><br /> 기본 거짓<br /><br /> 상시 True<br /><br /> FixedLength:<br /><br /> 기본 거짓<br /><br /> 상시 True|  
-|`nvarchar`(`max`)|n/a|`Edm.String`|MaxLength:<br /><br /> 기본 1073741823<br /><br /> 상시 True<br /><br /> 유니코드:<br /><br /> 기본 True<br /><br /> 상시 True<br /><br /> FixedLength:<br /><br /> 기본 거짓<br /><br /> 상시 True|  
-|`ntext`|같음 비교 가능: 거짓<br /><br /> 순서 비교 가능: 거짓|`Edm.String`|MaxLength:<br /><br /> 기본 1073741823<br /><br /> 상시 True<br /><br /> 유니코드:<br /><br /> 기본 거짓<br /><br /> 상시 True<br /><br /> FixedLength:<br /><br /> 기본 거짓<br /><br /> 상시 True|  
-|`text`|같음 비교 가능: 거짓<br /><br /> 순서 비교 가능: 거짓|`Edm.String`|MaxLength:<br /><br /> 기본 2147483647<br /><br /> 상시 True<br /><br /> 유니코드:<br /><br /> 기본 거짓<br /><br /> 상시 True<br /><br /> FixedLength:<br /><br /> 기본 거짓<br /><br /> 상시 True|  
-|`Unique`<br /><br /> `identifier`|같음 비교 가능: True<br /><br /> 순서 비교 가능: True|`Edm.Guid`|n/a|  
-|`xml`|같음 비교 가능: 거짓<br /><br /> 순서 비교 가능: 거짓|`Edm.String`|MaxLength:<br /><br /> 기본 1073741823<br /><br /> 상시 True<br /><br /> 유니코드:<br /><br /> 기본 True<br /><br /> 상시 True<br /><br /> FixedLength:<br /><br /> 기본 거짓<br /><br /> 상시 True|  
+|`bit`|N/A|`Edm.Boolean`|N/A|  
+|`tinyint`|N/A|`Edm.Byte`|N/A|  
+|`smallint`|N/A|`Edm.Int16`|N/A|  
+|`int`|N/A|`Edm.Int32`|N/A|  
+|`bigint`|N/A|`Edm.Int64`|N/A|  
+|`float`|N/A|`Edm.Double`|N/A|  
+|`real`|N/A|`Edm.Double`|N/A|  
+|`decimal`|N/A|`Edm.Decimal`|소수<br /><br /> -최소: 1<br /><br /> -최대: 38<br /><br /> -기본값: 18<br /><br /> -상수: False<br /><br /> 배율을<br /><br /> -최소: 0<br /><br /> -최대: 38<br /><br /> -기본값: 0<br /><br /> -상수: False|  
+|`numeric`|N/A|`Edm.Decimal`|소수<br /><br /> -최소: 1<br /><br /> -최대: 38<br /><br /> -기본값: 18<br /><br /> -상수: False<br /><br /> 배율을<br /><br /> -최소: 0<br /><br /> -최대: 38<br /><br /> -기본값: 0<br /><br /> -상수: False|  
+|`smallmoney`|N/A|`Edm.Decimal`|소수<br /><br /> -기본값: 10<br /><br /> -상수: True<br /><br /> 배율을<br /><br /> -기본값: 4<br /><br /> -상수: True|  
+|`money`|N/A|`Edm.Decimal`|소수<br /><br /> -기본값: 19<br /><br /> -상수: True<br /><br /> 배율을<br /><br /> -기본값: 4<br /><br /> -상수: True|  
+|`binary`|N/A|`Edm.Binary`|MaxLength<br /><br /> -최소: 1<br /><br /> -최대: 8000<br /><br /> -기본값: 8000<br /><br /> -상수: False<br /><br /> FixedLength:<br /><br /> -기본값: True<br /><br /> -상수: True|  
+|`varbinary`|N/A|`Edm.Binary`|MaxLength<br /><br /> -최소: 1<br /><br /> -최대: 8000<br /><br /> -기본값: 8000<br /><br /> -상수: False<br /><br /> FixedLength:<br /><br /> -기본값: False<br /><br /> -상수: True|  
+|`varbinary(max)`<br /><br /> 참고: SQL Server 2000에서는이 형식이 지원 되지 않습니다.|N/A|`Edm.Binary`|MaxLength<br /><br /> -기본값: 214748364780<br /><br /> -상수: True<br /><br /> FixedLength:<br /><br /> -기본값: False<br /><br /> -상수: True|  
+|`image`|N/A|`Edm.Binary`|MaxLength<br /><br /> -기본값: 2147483647<br /><br /> -상수: True<br /><br /> FixedLength:<br /><br /> -기본값: False<br /><br /> -상수: True|  
+|`timestamp`|N/A|`Edm.Binary`|MaxLength<br /><br /> -기본값: 8<br /><br /> -상수: True<br /><br /> FixedLength:<br /><br /> -기본값: True<br /><br /> -상수: True|  
+|`rowversion`|N/A|`Edm.Binary`|MaxLength<br /><br /> -기본값: 8<br /><br /> -상수: True<br /><br /> FixedLength:<br /><br /> -기본값: True<br /><br /> -상수: True|  
+|`smalldatetime`|N/A|`Edm.DateTime`|소수<br /><br /> -기본값: 0<br /><br /> -상수: True|  
+|`datetime`|N/A|`Edm.DateTime`|소수<br /><br /> -기본값: 3<br /><br /> -상수: True|  
+|`date`<br /><br /> 참고: SQL Server 2005 및 SQL Server 2000에서는이 형식이 지원 되지 않습니다.|N/A|`Edm.DateTime`|소수<br /><br /> -기본값: 0<br /><br /> -상수: False|  
+|`time`<br /><br /> 참고: SQL Server 2005 및 SQL Server 2000에서는이 형식이 지원 되지 않습니다.|N/A|`Edm.Time`|소수<br /><br /> -기본값: 7<br /><br /> -상수: False|  
+|`datetime2`<br /><br /> 참고: SQL Server 2005 및 SQL Server 2000에서는이 형식이 지원 되지 않습니다.|N/A|`Edm.DateTime`|소수<br /><br /> -기본값: 7<br /><br /> -상수: False|  
+|`datetimeoffset`<br /><br /> 참고: SQL Server 2005 및 SQL Server 2000에서는이 형식이 지원 되지 않습니다.|N/A|`Edm.DateTimeOffset`|소수<br /><br /> -기본값: 7<br /><br /> -상수: False|  
+|`nvarchar`<br /><br /> 참고: SQL Server 2000에서는이 형식이 지원 되지 않습니다.|N/A|`Edm.String`|MaxLength<br /><br /> -최소: 1<br /><br /> -최대: 4000<br /><br /> -기본값: 4000<br /><br /> -상수: False<br /><br /> 유니코드:<br /><br /> -기본값: True<br /><br /> -상수: True<br /><br /> FixedLength:<br /><br /> -기본값: False<br /><br /> -상수: True|  
+|`varchar`<br /><br /> 참고: SQL Server 2000에서는이 형식이 지원 되지 않습니다.|N/A|`Edm.String`|MaxLength<br /><br /> -최소: 1<br /><br /> -최대: 8000<br /><br /> -기본값: 8000<br /><br /> -상수: False<br /><br /> 유니코드:<br /><br /> -기본값: False<br /><br /> -상수: True<br /><br /> FixedLength:<br /><br /> -기본값: False<br /><br /> -상수: True|  
+|`char`|N/A|`Edm.String`|MaxLength<br /><br /> -최소: 1<br /><br /> -최대: 8000<br /><br /> -기본값: 8000<br /><br /> -상수: False<br /><br /> 유니코드:<br /><br /> -기본값: False<br /><br /> -상수: True<br /><br /> FixedLength:<br /><br /> -기본값: True<br /><br /> -상수: True|  
+|`nchar`|N/A|`Edm.String`|MaxLength<br /><br /> -최소: 1<br /><br /> -최대: 4000<br /><br /> -기본값: 4000<br /><br /> -상수: False<br /><br /> 유니코드:<br /><br /> -기본값: True<br /><br /> -상수: True<br /><br /> FixedLength:<br /><br /> -기본값: True<br /><br /> -상수: True|  
+|`varchar`(`max`)|N/A|`Edm.String`|MaxLength<br /><br /> -기본값: 2147483647<br /><br /> -상수: True<br /><br /> 유니코드:<br /><br /> -기본값: False<br /><br /> -상수: True<br /><br /> FixedLength:<br /><br /> -기본값: False<br /><br /> -상수: True|  
+|`nvarchar`(`max`)|N/A|`Edm.String`|MaxLength<br /><br /> -기본값: 1073741823<br /><br /> -상수: True<br /><br /> 유니코드:<br /><br /> -기본값: True<br /><br /> -상수: True<br /><br /> FixedLength:<br /><br /> -기본값: False<br /><br /> -상수: True|  
+|`ntext`|같음 비교 가능: False<br /><br /> 순서 비교 가능: False|`Edm.String`|MaxLength<br /><br /> -기본값: 1073741823<br /><br /> -상수: True<br /><br /> 유니코드:<br /><br /> -기본값: False<br /><br /> -상수: True<br /><br /> FixedLength:<br /><br /> -기본값: False<br /><br /> -상수: True|  
+|`text`|같음 비교 가능: False<br /><br /> 순서 비교 가능: False|`Edm.String`|MaxLength<br /><br /> -기본값: 2147483647<br /><br /> -상수: True<br /><br /> 유니코드:<br /><br /> -기본값: False<br /><br /> -상수: True<br /><br /> FixedLength:<br /><br /> -기본값: False<br /><br /> -상수: True|  
+|`Unique`<br /><br /> `identifier`|같음 비교 가능: True<br /><br /> 순서 비교 가능: True|`Edm.Guid`|N/A|  
+|`xml`|같음 비교 가능: False<br /><br /> 순서 비교 가능: False|`Edm.String`|MaxLength<br /><br /> -기본값: 1073741823<br /><br /> -상수: True<br /><br /> 유니코드:<br /><br /> -기본값: True<br /><br /> -상수: True<br /><br /> FixedLength:<br /><br /> -기본값: False<br /><br /> -상수: True|  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
-- [CSDL, SSDL 및 MSL 사양](./language-reference/csdl-ssdl-and-msl-specifications.md)
+- [CSDL, SSDL 및 MSL 사양](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec)

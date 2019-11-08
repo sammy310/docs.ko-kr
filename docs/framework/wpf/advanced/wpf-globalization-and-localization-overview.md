@@ -5,12 +5,12 @@ helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: a912e0437bf986aff65fc722065e912571427189
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: b8777e1402bef1708136a5f81a641beb8c761905
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73035792"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740703"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>WPF 전역화 및 지역화 개요
 
@@ -70,7 +70,7 @@ ms.locfileid: "73035792"
 
 ## <a name="localize-a-wpf-application"></a>WPF 애플리케이션 지역화
 
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램을 지역화할 때 몇 가지 옵션을 사용할 수 있습니다. 예를 들어 응용 프로그램의 지역화할 수 있는 리소스를 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 파일에 바인딩하거나, 지역화할 수 있는 텍스트를 resx 테이블에 저장 하거나, 지역화 담당자가 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 파일을 사용할 수 있습니다. 이 섹션에서는 다양 한 이점을 제공 하는 BAML 형태의 XAML을 사용 하는 지역화 워크플로에 대해 설명 합니다.
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램을 지역화할 때 몇 가지 옵션을 사용할 수 있습니다. 예를 들어 응용 프로그램의 지역화할 수 있는 리소스를 XML 파일에 바인딩하거나, 지역화할 수 있는 텍스트를 resx 테이블에 저장 하거나, 지역화 담당자가 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 파일을 사용할 수 있습니다. 이 섹션에서는 다양 한 이점을 제공 하는 BAML 형태의 XAML을 사용 하는 지역화 워크플로에 대해 설명 합니다.
 
 - 빌드한 후에 지역화할 수 있습니다.
 

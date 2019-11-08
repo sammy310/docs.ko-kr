@@ -7,19 +7,19 @@ helpviewer_keywords:
 - white-space processing in XAML [XAML Services]
 - characters [XAML Services], East Asian
 ms.assetid: cc9cc377-7544-4fd0-b65b-117b90bb0b23
-ms.openlocfilehash: 930e8a0013dd601aaafcd81340b3b9b8b69f8fdd
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 3661563dc7f5fa7346a12abab15013b56c376325
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458502"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740591"
 ---
 # <a name="white-space-processing-in-xaml"></a>XAML의 공백 처리
 XAML에 대 한 언어 규칙은 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 프로세서 구현에 따라 유효 공백을 처리 해야 합니다. 이 항목에서는 이들 XAML 언어 규칙에 대해 설명합니다. 또한 serialization을 위해 xaml 프로세서 및 XAML 작성기의 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 구현에 의해 정의 되는 추가 공백 처리를 문서화 합니다.  
   
 <a name="whitespace_definition"></a>   
 ## <a name="white-space-definition"></a>공백 정의  
- [!INCLUDE[TLA2#tla_xml](../../../includes/tla2sharptla-xml-md.md)]와 일치 하는 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]의 공백 문자는 공백, 줄 바꿈 및 탭입니다. 이러한 값은 각각 유니코드 값 0020, 000A 및 0009에 해당 합니다.  
+ XML과 일치 하는 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 공백 문자는 공백, 줄 바꿈 및 탭입니다. 이러한 값은 각각 유니코드 값 0020, 000A 및 0009에 해당 합니다.  
   
 <a name="whitespace_normalization"></a>   
 ## <a name="white-space-normalization"></a>공백 정규화  

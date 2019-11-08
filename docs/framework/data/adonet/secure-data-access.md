@@ -2,12 +2,12 @@
 title: 보안 데이터 액세스
 ms.date: 03/30/2017
 ms.assetid: 473ebd69-21a3-4627-b95e-4e04d035c56f
-ms.openlocfilehash: 122bdaf8467994f8f56ce3f6c92457be6b8b3155
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: c08f41be67f5d87635021e86ba5a5b33af9304cd
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70782767"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73735273"
 ---
 # <a name="secure-data-access"></a>보안 데이터 액세스
 보안 ADO.NET 코드를 쓰려면 내부 데이터 저장소 또는 데이터베이스에서 사용할 수 있는 보안 메커니즘을 알아야 합니다. 또한, 애플리케이션에 포함된 다른 기능이나 구성 요소의 보안 문제도 고려해야 합니다.  
@@ -21,7 +21,7 @@ ms.locfileid: "70782767"
   
  자세한 내용은 다음 리소스를 참조하세요.  
   
-|리소스|Description|  
+|리소스|설명|  
 |--------------|-----------------|  
 |[연결 정보 보호](protecting-connection-information.md)|보호되는 구성을 사용하여 연결 문자열을 암호화하는 것과 같이 연결 정보를 보호하는 기술과 최상의 보안 방법에 대해 설명합니다.|  
 |[데이터 액세스 전략에 대 한 권장 사항](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))|데이터 액세스 및 데이터베이스 작업 수행에 대한 권장 방법을 제공합니다.|  
@@ -29,7 +29,7 @@ ms.locfileid: "70782767"
 |[SQL Server 보안 개요](./sql/overview-of-sql-server-security.md)|SQL Server 보안 아키텍처에 대해 설명합니다.|  
   
 ## <a name="parameterized-commands-and-sql-injection"></a>매개 변수화된 명령 및 SQL 삽입  
- 매개 변수화된 명령을 사용하면 공격자가 SQL 문에 명령을 삽입하여 서버의 보안을 손상시키는 SQL 삽입 공격을 막을 수 있습니다. 매개 변수화된 명령에서는 외부 소스에서 가져온 값이 Transact-SQL 문의 일부가 아닌 값으로만 전달되도록 하여 SQL 삽입 공격으로부터 보호합니다. 따라서 값에 삽입된 Transact-SQL 명령이 데이터 소스에서 실행되지 않으며 매개 변수 값으로만 평가됩니다. 매개 변수화된 명령은 이러한 보안상의 장점뿐만 아니라 Transact-SQL 문과 함께 전달되거나 저장 프로시저에 전달되는 값을 구성할 수 있는 편리한 방법을 제공합니다.  
+ 매개 변수가 있는 명령을 사용 하면 공격자가 서버의 보안을 손상 시키는 SQL 문에 명령을 "삽입" 하는 SQL 삽입 공격을 방지할 수 있습니다. 매개 변수화된 명령에서는 외부 소스에서 가져온 값이 Transact-SQL 문의 일부가 아닌 값으로만 전달되도록 하여 SQL 삽입 공격으로부터 보호합니다. 따라서 값에 삽입된 Transact-SQL 명령이 데이터 소스에서 실행되지 않으며 매개 변수 값으로만 평가됩니다. 매개 변수화된 명령은 이러한 보안상의 장점뿐만 아니라 Transact-SQL 문과 함께 전달되거나 저장 프로시저에 전달되는 값을 구성할 수 있는 편리한 방법을 제공합니다.  
   
  매개 변수화된 명령 사용에 대한 자세한 내용은 다음 리소스를 참조하세요.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "70782767"
   
  자세한 내용은 다음 리소스를 참조하세요.  
   
-|리소스|Description|  
+|리소스|설명|  
 |--------------|-----------------|  
 |[스크립트 악용 개요](https://docs.microsoft.com/previous-versions/aspnet/w1sw53ds(v=vs.100))|스크립팅 및 SQL 문 악용으로부터 보호하는 방법에 대해 설명합니다.|  
   
@@ -53,9 +53,9 @@ ms.locfileid: "70782767"
   
  자세한 내용은 다음 리소스를 참조하세요.  
   
-|리소스|Description|  
+|리소스|설명|  
 |--------------|-----------------|  
-|[예외 처리 기본 사항](../../../standard/exceptions/exception-handling-fundamentals.md)|try/catch/finally 구조적 예외 처리의 기본 형태에 대해 설명합니다.|  
+|[.NET의 예외 처리 및 Throw](../../../standard/exceptions/index.md)|try/catch/finally 구조적 예외 처리의 기본 형태에 대해 설명합니다.|  
 |[예외에 대한 모범 사례](../../../standard/exceptions/best-practices-for-exceptions.md)|최상의 예외 처리 방법에 대해 설명합니다.|  
   
 ## <a name="protecting-microsoft-access-and-excel-data-sources"></a>Microsoft Access 및 Excel 데이터 소스 보호  
@@ -73,7 +73,7 @@ ms.locfileid: "70782767"
   
  자세한 내용은 다음 리소스를 참조하세요.  
   
-|리소스|Description|  
+|리소스|설명|  
 |--------------|-----------------|  
 |[역할 기반 보안](https://docs.microsoft.com/previous-versions/dotnet/netframework-1.1/s6y8k15h(v=vs.71))|COM+ 보안 서비스를 사용하여 관리 코드를 통합하는 방법에 대해 설명합니다.|  
   
@@ -82,14 +82,14 @@ ms.locfileid: "70782767"
   
  자세한 내용은 다음 리소스를 참조하세요.  
   
-|리소스|Description|  
+|리소스|설명|  
 |--------------|-----------------|  
 |[비관리 코드와의 상호 운용](../../interop/index.md)|COM 구성 요소를 .NET Framework에 노출하는 방법과 .NET Framework 구성 요소를 COM에 노출하는 방법에 대해 설명하는 항목을 제공합니다.|
 |[고급 COM 상호 운용성](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))|주 interop 어셈블리, 스레딩 및 사용자 지정 마샬링 등에 대해 설명하는 고급 항목을 제공합니다.|
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
-- [ADO.NET 응용 프로그램 보안](securing-ado-net-applications.md)
+- [ADO.NET 애플리케이션 보안](securing-ado-net-applications.md)
 - [SQL Server 보안](./sql/sql-server-security.md)
 - [데이터 액세스 전략에 대 한 권장 사항](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))
 - [연결 정보 보호](protecting-connection-information.md)

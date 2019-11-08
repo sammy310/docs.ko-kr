@@ -5,15 +5,15 @@ helpviewer_keywords:
 - binding data [WPF], performance
 - data binding [WPF], performance
 ms.assetid: 1506a35d-c009-43db-9f1e-4e230ad5be73
-ms.openlocfilehash: 31fdc3c31c8792fea5f3e71dedb7370ebd63c98e
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 9b302be3ed9f01ccd27470063f49966dc7d74708
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458552"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740803"
 ---
 # <a name="optimizing-performance-data-binding"></a>성능 최적화: 데이터 바인딩
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 데이터 바인딩은 애플리케이션이 데이터를 제공하고 상호 작용할 수 있는 간단하고 일관된 방법을 제공합니다. 요소는 CLR 개체 및 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]형식으로 다양 한 데이터 소스의 데이터에 바인딩될 수 있습니다.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 데이터 바인딩은 애플리케이션이 데이터를 제공하고 상호 작용할 수 있는 간단하고 일관된 방법을 제공합니다. 요소는 CLR 개체 및 XML 형식으로 다양 한 데이터 원본에서 데이터에 바인딩할 수 있습니다.  
   
  이 항목에서는 데이터 바인딩과 관련된 성능 권장 사항을 제공합니다.  
 
@@ -69,7 +69,7 @@ ms.locfileid: "73458552"
   
 <a name="Do_not_Convert_CLR_objects_to_Xml_Just_For_Data_Binding"></a>   
 ## <a name="do-not-convert-clr-objects-to-xml-just-for-data-binding"></a>데이터 바인딩만을 위해 CLR 개체를 XML로 변환 안 함  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]를 사용 하 여 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 내용에 데이터 바인딩할 수 있습니다. 그러나 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 콘텐츠에 대 한 데이터 바인딩은 CLR 개체에 대 한 데이터 바인딩 보다 속도가 느립니다. 데이터 바인딩을 위한 유일한 용도 이면 CLR 개체 데이터를 XML로 변환 하지 마십시오.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]를 사용 하 여 XML 콘텐츠에 데이터 바인딩할 수 있습니다. 그러나 XML 콘텐츠에 대 한 데이터 바인딩은 CLR 개체에 대 한 데이터 바인딩 보다 속도가 느립니다. 데이터 바인딩을 위한 유일한 용도 이면 CLR 개체 데이터를 XML로 변환 하지 마십시오.  
   
 ## <a name="see-also"></a>참조
 

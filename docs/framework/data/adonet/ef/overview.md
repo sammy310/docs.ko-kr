@@ -2,12 +2,12 @@
 title: Entity Framework 개요
 ms.date: 09/17/2018
 ms.assetid: a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0
-ms.openlocfilehash: 92aa7b9c1f163c0496a821cca375c8b7e1b21a5f
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: b68db4f139330ccc1da5057498a37a08d00ba266
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854349"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738502"
 ---
 # <a name="entity-framework-overview"></a>Entity Framework 개요
 
@@ -34,7 +34,7 @@ Entity Framework를 사용 하면 개발자가 기본 데이터베이스 테이�
 
 스토리지 모델과 매핑은 개념적 모델, 데이터 클래스 또는 애플리케이션 코드를 변경하지 않고도 필요에 따라 변경할 수 있습니다. 스토리지 모델은 공급자와 관련이 있으므로 다양한 데이터 소스에서 일관성 있는 개념적 모델을 사용할 수 있습니다.
 
-Entity Framework는 이러한 모델 및 매핑 파일을 사용 하 여 개념적 모델의 엔터티 및 관계에 대 한 만들기, 읽기, 업데이트 및 삭제 작업을 데이터 소스의 동등한 작업으로 사용 합니다. Entity Framework은 개념적 모델의 엔터티를 데이터 원본의 저장 프로시저에 매핑하는 것도 지원 합니다. 자세한 내용은 [CSDL, SSDL 및 MSL 사양](./language-reference/csdl-ssdl-and-msl-specifications.md)합니다.
+Entity Framework는 이러한 모델 및 매핑 파일을 사용 하 여 개념적 모델의 엔터티 및 관계에 대 한 만들기, 읽기, 업데이트 및 삭제 작업을 데이터 소스의 동등한 작업으로 사용 합니다. Entity Framework은 개념적 모델의 엔터티를 데이터 원본의 저장 프로시저에 매핑하는 것도 지원 합니다. 자세한 내용은 [CSDL, SSDL 및 MSL 사양](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec)을 참조 하세요.
 
 ## <a name="map-objects-to-data"></a>데이터에 개체 매핑
  개체 지향 프로그래밍을 사용하는 경우 데이터 스토리지 시스템과 상호 작용해야 합니다. 클래스의 구성은 관계형 데이터베이스 테이블의 구성을 미러링하는 경우가 많지만 완전히 일치하지는 않습니다. 여러 개의 정규화된 테이블이 하나의 클래스에 해당하는 경우가 많으며 클래스 간의 관계가 테이블 간의 관계와 다르게 표현되기도 합니다. 예를 들어 판매 주문의 고객을 나타내기 위해 `Order` 클래스는 `Customer` 클래스 인스턴스에 대한 참조가 포함된 속성을 사용할 수 있지만, 데이터베이스의 `Order` 테이블 행에는 `Customer` 테이블의 기본 키 값에 해당하는 값을 가진 외래 키 열(또는 열 집합)이 포함됩니다. `Customer` 클래스는 `Orders` 클래스 인스턴스의 컬렉션이 포함된 `Order` 속성을 가질 수 있는 반면, 데이터베이스의 `Customer` 테이블에는 해당하는 열이 없습니다. Entity Framework를 사용 하면 개발자는 이러한 방식으로 관계를 나타내거나 데이터베이스에 표시 되는 관계를 보다 긴밀 하 게 모델링할 수 있습니다.
@@ -45,9 +45,9 @@ Entity Framework는 이러한 모델 및 매핑 파일을 사용 하 여 개념�
 
 단순한 개체-관계형 매핑 솔루션 이상의 의미가 있는 Entity Framework는 근본적으로 응용 프로그램이 개념적 모델의 엔터티 및 관계로 표현된 데이터에 액세스하여 변경할 수 있도록 합니다. Entity Framework는 모델 및 매핑 파일의 정보를 사용 하 여 개념적 모델에 표시 된 엔터티 형식에 대 한 개체 쿼리를 데이터 소스 관련 쿼리로 변환 합니다. 쿼리 결과는 Entity Framework에서 관리 하는 개체로 구체화 됩니다. Entity Framework은 개념적 모델을 쿼리하고 개체를 반환 하는 다음과 같은 방법을 제공 합니다.
 
-- LINQ to Entities. 개념적 모델에 정의된 엔터티 형식을 쿼리하기 위한 LINQ(Language-Integrated Query) 지원을 제공합니다. 자세한 내용은 [LINQ to Entities](./language-reference/linq-to-entities.md)합니다.
+- LINQ to Entities. 개념적 모델에 정의된 엔터티 형식을 쿼리하기 위한 LINQ(Language-Integrated Query) 지원을 제공합니다. 자세한 내용은 [LINQ to Entities](./language-reference/linq-to-entities.md)를 참조 하세요.
 
-- [!INCLUDE[esql](../../../../../includes/esql-md.md)]. 개념적 모델의 엔터티와 직접 작동 하며 엔터티 데이터 모델 개념을 지 원하는, 저장소에 독립적인 SQL 언어입니다. [!INCLUDE[esql](../../../../../includes/esql-md.md)]는 EntityClient 공급자를 사용 하 여 실행 되는 개체 쿼리 및 쿼리와 함께 사용 됩니다. 자세한 내용은 [Entity SQL 개요](./language-reference/entity-sql-overview.md)를 참조 하세요.
+- [!INCLUDE[esql](../../../../../includes/esql-md.md)] 개념적 모델의 엔터티와 직접 작동 하며 엔터티 데이터 모델 개념을 지 원하는, 저장소에 독립적인 SQL 언어입니다. [!INCLUDE[esql](../../../../../includes/esql-md.md)]은 EntityClient 공급자를 사용 하 여 실행 되는 개체 쿼리 및 쿼리와 모두 사용 됩니다. 자세한 내용은 [Entity SQL 개요](./language-reference/entity-sql-overview.md)를 참조 하세요.
 
 Entity Framework는 EntityClient 데이터 공급자를 포함 합니다. 이 공급자는 연결을 관리 하 고, 엔터티 쿼리를 데이터 소스 관련 쿼리로 변환 하 고, Entity Framework에서 엔터티 데이터를 개체로 구체화 하는 데 사용 하는 데이터 판독기를 반환 합니다. 개체 구체화가 필요하지 않은 경우 응용 프로그램에서 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 쿼리를 실행하고 반환된 읽기 전용 데이터 판독기를 사용할 수 있도록 하여 EntityClient 공급자를 표준 ADO.NET 데이터 공급자처럼 사용할 수도 있습니다. 자세한 내용은 [Entity Framework에 대 한 EntityClient 공급자](entityclient-provider-for-the-entity-framework.md)를 참조 하세요.
 
@@ -55,11 +55,11 @@ Entity Framework는 EntityClient 데이터 공급자를 포함 합니다. 이 �
 
 ![Entity Framework 아키텍처 다이어그램](./media/wd-efarchdiagram.gif "wd_EFArchDiagram")
 
-엔터티 데이터 모델 도구는 개념적 모델의 엔터티 컨테이너를 `System.Data.Objects.ObjectContext` 나타내는 `System.Data.Entity.DbContext` 또는에서 파생 된 클래스를 생성할 수 있습니다. 이 개체 컨텍스트는 변경 내용을 추적하고 ID, 동시성 및 관계를 관리하기 위한 기능을 제공합니다. 또한 이 클래스는 데이터 소스에 삽입, 업데이트 및 삭제를 쓰는 `SaveChanges` 메서드를 노출합니다. 쿼리와 마찬가지로, 이러한 변경 작업은 시스템에서 자동으로 생성된 명령이나 개발자가 지정한 저장 프로시저로 수행됩니다.
+엔터티 데이터 모델 도구는 개념적 모델의 엔터티 컨테이너를 나타내는 `System.Data.Objects.ObjectContext` 또는 `System.Data.Entity.DbContext`에서 파생 된 클래스를 생성할 수 있습니다. 이 개체 컨텍스트는 변경 내용을 추적하고 ID, 동시성 및 관계를 관리하기 위한 기능을 제공합니다. 또한 이 클래스는 데이터 소스에 삽입, 업데이트 및 삭제를 쓰는 `SaveChanges` 메서드를 노출합니다. 쿼리와 마찬가지로, 이러한 변경 작업은 시스템에서 자동으로 생성된 명령이나 개발자가 지정한 저장 프로시저로 수행됩니다.
 
 ## <a name="data-providers"></a>데이터 공급자
 
-공급자 `EntityClient` 는 개념적 엔터티 및 관계를 기준으로 데이터에 액세스 하 여 ADO.NET 공급자 모델을 확장 합니다. [!INCLUDE[esql](../../../../../includes/esql-md.md)]을 사용하는 쿼리를 실행합니다. [!INCLUDE[esql](../../../../../includes/esql-md.md)]에서는 `EntityClient`가 데이터베이스와 통신할 수 있도록 기본 쿼리 언어를 제공합니다. 자세한 내용은 [Entity Framework에 대 한 EntityClient 공급자](entityclient-provider-for-the-entity-framework.md)를 참조 하세요.
+`EntityClient` 공급자는 개념적 엔터티 및 관계를 기준으로 데이터에 액세스 하 여 ADO.NET 공급자 모델을 확장 합니다. [!INCLUDE[esql](../../../../../includes/esql-md.md)]을 사용하는 쿼리를 실행합니다. [!INCLUDE[esql](../../../../../includes/esql-md.md)]에서는 `EntityClient`가 데이터베이스와 통신할 수 있도록 기본 쿼리 언어를 제공합니다. 자세한 내용은 [Entity Framework에 대 한 EntityClient 공급자](entityclient-provider-for-the-entity-framework.md)를 참조 하세요.
 
 Entity Framework에는 정식 명령 트리를 지 원하는 업데이트 된 SqlClient Data Provider 포함 되어 있습니다. 자세한 내용은 [Entity Framework SqlClient](sqlclient-for-the-entity-framework.md)(영문)를 참조 하세요.
 
@@ -67,7 +67,7 @@ Entity Framework에는 정식 명령 트리를 지 원하는 업데이트 된 Sq
 
 Visual Studio는 Entity Framework 런타임과 함께 매핑 및 모델링 도구를 포함 합니다. 자세한 내용은 [모델링 및 매핑](modeling-and-mapping.md)을 참조 하세요.
 
-## <a name="learn-more"></a>자세한 정보
+## <a name="learn-more"></a>자세히
 
 Entity Framework에 대 한 자세한 내용은 다음을 참조 하세요.
 
@@ -77,6 +77,6 @@ Entity Framework에 대 한 자세한 내용은 다음을 참조 하세요.
 
 [Entity Framework 리소스](resources.md) -개념 항목에 대 한 링크와 Entity Framework 응용 프로그램 빌드를 위한 외부 항목 및 리소스에 대 한 링크를 제공 합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ADO.NET Entity Framework](index.md)
