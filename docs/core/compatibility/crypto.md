@@ -2,17 +2,14 @@
 title: 암호화 관련 호환성이 손상되는 변경, 버전 2.2-3.0 - .NET Core
 description: .NET Core, ASP.NET Core, EF Core 버전 2.2에서 버전 3.0으로의 호환성이 손상되는 변경 사항 사항을 나열합니다.
 ms.date: 09/10/2019
-ms.openlocfilehash: ba330bdef4be8cfe0e74f5645adaf66b2e0051ac
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e8b2894e6988c0b475e45c6d5602a7f54943f3ed
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73089579"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739427"
 ---
 # <a name="breaking-changes-for-migration-from-version-22-to-30"></a>버전 2.2에서 3.0으로 마이그레이션 시 호환성이 손상되는 변경 내용
-
-> [!IMPORTANT]
-> 이 문서는 작성 중입니다. 이것은 .NET Core 호환성이 손상되는 변경 사항의 완전한 목록이 아닙니다. .NET Core 호환성이 손상되는 변경 사항에 대한 자세한 내용은 GitHub의 dotnet/docs 리포지토리에 있는 개별 [호환성이 손상되는 변경 문제](https://github.com/dotnet/docs/issues?q=is%3Aissue+is%3Aopen+label%3Abreaking-change)에서 검토할 수 있습니다. 
 
 .NET Core, ASP.NET Core 또는 EF Core 버전 2.2에서 버전 3.0으로 마이그레이션하는 경우, 앱에 영향을 줄 수 있는 호환성이 손상되는 변경에 대한 다음 항목을 검토하세요.
 

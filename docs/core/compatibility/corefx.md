@@ -2,17 +2,14 @@
 title: CoreFx 관련 호환성이 손상되는 변경 - .NET Core
 description: 기본 클래스 라이브러리인 .NET CoreFx 관련 호환성이 손상되는 변경 목록입니다.
 ms.date: 09/20/2019
-ms.openlocfilehash: 04ae857b5f46748ad57c742b6ccf421f57bc3138
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 028a5c1059a855d1de644dde9fd9ad5f85f47ffe
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73093422"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739795"
 ---
 # <a name="corefx-breaking-changes"></a>CoreFx 관련 호환성이 손상되는 변경
-
-> [!IMPORTANT]
-> 이 문서는 작성 중입니다. 이것은 .NET Core 호환성이 손상되는 변경 사항의 완전한 목록이 아닙니다. .NET Core 호환성이 손상되는 변경 사항에 대한 자세한 내용은 GitHub의 dotnet/docs 리포지토리에 있는 개별 [호환성이 손상되는 변경 문제](https://github.com/dotnet/docs/issues?q=is%3Aissue+is%3Aopen+label%3Abreaking-change)에서 검토할 수 있습니다.
 
 다음은 .NET Core 버전별 CoreFx 관련 호환성이 손상되는 변경 목록입니다. CoreFx는 .NET Core에서 사용되는 기본 형식과 기타 일반적인 형식을 제공합니다.
 

@@ -2,17 +2,14 @@
 title: Visual Basic 관련 호환성이 손상되는 변경 - .NET Core
 description: .NET Core에서 사용되는 Visual Basic 관련 호환성이 손상되는 변경 목록입니다.
 ms.date: 09/20/2019
-ms.openlocfilehash: c4db31079098ca48dfd0ef4708a55049dde619fe
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f7cd5160631ac696d542084a71dc44e65a94cabf
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73092807"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739331"
 ---
 # <a name="visual-basic-breaking-changes"></a>Visual Basic 관련 호환성이 손상되는 변경
-
-> [!IMPORTANT]
-> 이 문서는 작성 중입니다. 이것은 .NET Core 호환성이 손상되는 변경 사항의 완전한 목록이 아닙니다. .NET Core 호환성이 손상되는 변경 사항에 대한 자세한 내용은 GitHub의 dotnet/docs 리포지토리에 있는 개별 [호환성이 손상되는 변경 문제](https://github.com/dotnet/docs/issues?q=is%3Aissue+is%3Aopen+label%3Abreaking-change)에서 검토할 수 있습니다.
 
 다음은 .NET Core 버전별 Visual Basic 관련 호환성이 손상되는 변경 목록입니다.
 

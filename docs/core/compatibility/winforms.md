@@ -2,17 +2,14 @@
 title: Windows Forms 관련 호환성이 손상되는 변경 - .NET Core
 description: .NET Core용 Windows Forms 관련 호환성이 손상되는 변경 목록입니다.
 ms.date: 09/20/2019
-ms.openlocfilehash: 2aac8c81372a36f00df1b7f3ccd3432409f6c834
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7bdf17911ccefd19c5a3458f328b6ee41352acd9
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73092909"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739750"
 ---
 # <a name="breaking-changes-in-windows-forms"></a>Windows Forms 관련 호환성이 손상되는 변경
-
-> [!IMPORTANT]
-> 이 문서는 작성 중입니다. 이것은 .NET Core 호환성이 손상되는 변경 사항의 완전한 목록이 아닙니다. .NET Core 호환성이 손상되는 변경 사항에 대한 자세한 내용은 GitHub의 dotnet/docs 리포지토리에 있는 개별 [호환성이 손상되는 변경 문제](https://github.com/dotnet/docs/issues?q=is%3Aissue+is%3Aopen+label%3Abreaking-change)에서 검토할 수 있습니다.
 
 다음은 .NET Core 버전별 Windows Forms 관련 호환성이 손상되는 변경 목록입니다.
 
