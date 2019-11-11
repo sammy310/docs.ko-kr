@@ -23,7 +23,7 @@ ms.locfileid: "73422542"
 |------------|-----------------|
 |[from](from-clause.md)|데이터 소스와 범위 변수(반복 변수와 유사함)를 지정합니다.|
 |[where](where-clause.md)|논리적 AND 및 OR 연산자(`&&` 또는 <code>&#124;&#124;</code>)로 구분된 하나 이상의 부울 식을 기준으로 소스 요소를 필터링합니다.|
-|[선택](select-clause.md)|쿼리를 실행할 때 반환된 시퀀스의 요소에 사용할 형식 및 모양을 지정합니다.|
+|[select](select-clause.md)|쿼리를 실행할 때 반환된 시퀀스의 요소에 사용할 형식 및 모양을 지정합니다.|
 |[group](group-clause.md)|지정된 키 값에 따라 쿼리 결과를 그룹화합니다.|
 |[into](into.md)|join, group 또는 select 절의 결과에 대한 참조로 사용할 수 있는 식별자를 제공합니다.|
 |[orderby](orderby-clause.md)|요소 형식에 대한 기본 비교자에 따라 오름차순 또는 내림차순으로 쿼리 결과를 정렬합니다.|
