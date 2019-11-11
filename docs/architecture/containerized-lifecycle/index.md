@@ -2,12 +2,12 @@
 title: 컨테이너 및 Docker 소개
 description: Docker 사용의 주요 이점에 대한 간략적인 개요를 가져옵니다.
 ms.date: 02/15/2019
-ms.openlocfilehash: a03c67ed4fbc55c84e69fba5b7978863c8305e00
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 9ac08a64cd2465b4b88a266c1ec0925f37680bf9
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70295050"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738184"
 ---
 # <a name="introduction-to-containers-and-docker"></a>컨테이너 및 Docker 소개
 
@@ -19,7 +19,7 @@ ms.locfileid: "70295050"
 
 그림 1-1에 표시된 것처럼 각 컨테이너는 전체 웹 애플리케이션 또는 서비스를 실행할 수 있습니다. 이 예제에서는 Docker 호스트가 컨테이너 호스트이며 App1, App2, Svc1, Svc2가 컨테이너화된 애플리케이션 또는 서비스입니다.
 
-![VM 또는 물리적 서버의 OS에서 실행 중인 두 개의 애플리케이션 및 두 개의 서비스](./media/image1.png)
+![VM 또는 서버에서 실행되는 4개의 컨테이너를 보여 주는 다이어그램입니다.](./media/index/multiple-containers-single-host.png)
 
 **그림 1-1**. 컨테이너 호스트에서 실행되는 여러 컨테이너
 

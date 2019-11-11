@@ -4,12 +4,12 @@ description: .NET 마이크로 서비스 및 웹 애플리케이션 보안 - ASP
 author: mjrousos
 ms.author: wiwagn
 ms.date: 10/19/2018
-ms.openlocfilehash: f405b4199e8239e86c4799a649c3d87811d99828
-ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
+ms.openlocfilehash: b25f02140915ce87c5c478d8a8a5fe28ba7693b3
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72798848"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736979"
 ---
 # <a name="make-secure-net-microservices-and-web-applications"></a>.NET 마이크로 서비스 및 웹 애플리케이션 보안
 
@@ -21,15 +21,17 @@ ms.locfileid: "72798848"
 
 마이크로 서비스 시나리오에서 일반적으로 인증은 중앙에서 처리됩니다. API 게이트웨이를 사용하는 경우 그림 9-1에 표시된 것처럼 게이트웨이는 인증에 적합한 위치입니다. 이 방법을 사용하는 경우 메시지를 인증하는 데 추가 보안을 사용하지 않는 한 (API 게이트웨이 없이) 개별 마이크로 서비스에 직접 연결할 수 없습니다. 인증하는 메시지의 출처는 반드시 게이트웨이가 아니어도 무방합니다.
 
-![API 게이트웨이는 인증을 중앙 집중 방식으로 관리하는 경우 마이크로 서비스에 요청을 전달할 때 사용자 정보를 추가합니다.](./media/image1.png)
+![클라이언트 모바일 앱이 백 엔드와 상호 작용하는 방법을 보여 주는 다이어그램입니다.](./media/index/api-gateway-centralized-authentication.png)
 
 **그림 9-1**. API 게이트웨이를 통한 중앙 집중식 인증
 
-서비스에 직접 액세스할 수 있는 경우 Azure Active Directory 또는 STS(보안 토큰 서비스)로 작동하는 전용 인증 마이크로 서비스와 같은 인증 서비스를 사용하여 사용자를 인증할 수 있습니다. 신뢰 결정은 보안 토큰 또는 쿠키를 통해 서비스 간에 공유됩니다. (필요한 경우 [쿠키 공유](/aspnet/core/security/cookie-sharing)를 구현하여 이러한 토큰을 ASP.NET Core 애플리케이션 간에 공유할 수 있습니다.) 그림 9-2에서는 이 패턴을 보여줍니다.
+API 게이트웨이는 인증을 중앙 집중 방식으로 관리하는 경우 마이크로 서비스에 요청을 전달할 때 사용자 정보를 추가합니다. 서비스에 직접 액세스할 수 있는 경우 Azure Active Directory 또는 STS(보안 토큰 서비스)로 작동하는 전용 인증 마이크로 서비스와 같은 인증 서비스를 사용하여 사용자를 인증할 수 있습니다. 신뢰 결정은 보안 토큰 또는 쿠키를 통해 서비스 간에 공유됩니다. (필요한 경우 [쿠키 공유](/aspnet/core/security/cookie-sharing)를 구현하여 이러한 토큰을 ASP.NET Core 애플리케이션 간에 공유할 수 있습니다.) 그림 9-2에서는 이 패턴을 보여줍니다.
 
-![마이크로 서비스에 직접 액세스하는 경우 인증 및 권한 부여를 포함하는 트러스트는 마이크로 서비스 간에 공유되고, 전용 마이크로 서비스에서 발급한 보안 토큰에서 처리됩니다.](./media/image2.png)
+![백 엔드 마이크로 서비스를 통한 인증을 보여 주는 다이어그램입니다.](./media/index/identity-microservice-authentication.png)
 
 **그림9-2** ID 마이크로 서비스에 의한 인증. 인증 토큰을 사용하여 신뢰가 공유됨
+
+마이크로 서비스에 직접 액세스하는 경우 인증 및 권한 부여를 포함하는 트러스트는 마이크로 서비스 간에 공유되고, 전용 마이크로 서비스에서 발급한 보안 토큰에서 처리됩니다.
 
 ### <a name="authenticate-with-aspnet-core-identity"></a>ASP.NET Core ID를 사용한 인증
 
@@ -121,7 +123,7 @@ else
 
 Visual Studio에서 ASP.NET Core 웹 애플리케이션 프로젝트를 만들 때 **개별 사용자 계정** 인증 옵션을 선택한 경우 그림 9-3에 표시된 것처럼 외부 공급 기업을 통해 로그인하는 데 필요한 모든 코드는 이미 프로젝트에 있습니다.
 
-![인증을 변경하는 단추를 강조 표시하는 새 ASP.NET Core 웹 애플리케이션의 대화 상자입니다.](./media/image3.png)
+![새 ASP.NET Core 웹 애플리케이션 대화 상자의 스크린샷입니다.](./media/index/select-external-authentication-option.png)
 
 **그림 9-3** 웹 애플리케이션 프로젝트를 만들 경우 외부 인증 사용 옵션 선택
 

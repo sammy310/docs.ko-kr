@@ -216,7 +216,7 @@ public interface ICustomerManager
 ### <a name="add-code-to-the-client-that-sends-a-by-value-object"></a>클라이언트에 값 방식으로 개체를 전송하는 코드 추가  
  다음 코드에서는 클라이언트가 새로운 값 방식 customer 개체를 만들고, `ICustomerManager` 서비스와 통신하는 채널을 만든 다음 customer 개체를 전송하는 방법을 보여 줍니다.  
   
- customer 개체가 직렬화되어 서비스로 전송되며, 서비스에서 해당 개체의 새 복사본으로 역직렬화됩니다.  이 개체에 대한 서비스를 호출하는 모든 메서드는 서버에서 로컬로만 실행됩니다. 이 코드는 파생된 형식(`PremiumCustomer`)을 보내는 것을 보여줍니다.  서비스 계약에는 `Customer` 개체가 필요하지만 서비스 데이터 계약에서 [<xref:System.Runtime.Serialization.KnownTypeAttribute>] 특성을 사용하여 `PremiumCustomer`도 허용됨을 나타냅니다.  WCF에서 이 서비스 인터페이스를 통해 다른 형식을 직렬화하거나 deserialization하려고 하면 실패합니다.  
+ customer 개체가 직렬화되어 서비스로 전송되며, 서비스에서 해당 개체의 새 복사본으로 역직렬화됩니다.  이 개체에 대한 서비스를 호출하는 모든 메서드는 서버에서 로컬로만 실행됩니다. 이 코드는 파생된 형식(`PremiumCustomer`)을 보내는 것을 보여줍니다.  서비스 계약에는 `Customer` 개체가 필요하지만 서비스 데이터 계약에서 [<xref:System.Runtime.Serialization.KnownTypeAttribute>] 특성을 사용하여 `PremiumCustomer`도 허용됨을 나타냅니다.  WCF에서 이 서비스 인터페이스를 통해 다른 형식을 직렬화하거나 역직렬화하려고 하면 실패합니다.  
   
 ```csharp  
 PremiumCustomer customer = new PremiumCustomer();  

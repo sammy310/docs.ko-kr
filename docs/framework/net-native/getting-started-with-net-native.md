@@ -56,7 +56,7 @@ ms.locfileid: "73128404"
 
 직렬 변환기에는 두 가지 범주가 있으며 두 범주 모두 런타임 지시문 파일에 추가 항목이 필요합니다.
 
-- 리플렉션을 기반으로 하지 않는 serializer. <xref:System.Runtime.Serialization.DataContractSerializer>, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>, <xref:System.Xml.Serialization.XmlSerializer> 클래스와 같이 .NET Framework 클래스 라이브러리에 포함된 serializer는 리플렉션을 사용하지 않습니다. 그러나 serialize 또는 deserialize할 개체에 따라 코드를 생성해야 합니다.  자세한 내용은 [Serialization and Metadata](serialization-and-metadata.md)의 "Microsoft 직렬 변환기" 섹션을 참조하세요.
+- 리플렉션을 기반으로 하지 않는 serializer. <xref:System.Runtime.Serialization.DataContractSerializer>, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>, <xref:System.Xml.Serialization.XmlSerializer> 클래스와 같이 .NET Framework 클래스 라이브러리에 포함된 serializer는 리플렉션을 사용하지 않습니다. 그러나 직렬화 또는 역직렬화할 개체에 따라 코드를 생성해야 합니다.  자세한 내용은 [Serialization and Metadata](serialization-and-metadata.md)의 "Microsoft 직렬 변환기" 섹션을 참조하세요.
 
 - 타사 직렬 변환기. Newtonsoft.json JSON serializer가 가장 일반적으로 사용 되는 타사 직렬화 라이브러리는 일반적으로 리플렉션 기반 이며 개체 serialization 및 deserialization을 지원 하기 위해 \*파일의 항목이 필요 합니다. 자세한 내용은 [Serialization and Metadata](serialization-and-metadata.md)의 "타사 직렬 변환기" 섹션을 참조하세요.
 
@@ -98,7 +98,7 @@ ms.locfileid: "73128404"
 
 - 예외가 발생하기 전에 앱이 수행하려 했던 작업
 
-  - 예를 들어 데이터 바인딩, 데이터 serialize/deserialize, 리플렉션 API 직접 사용 등을 시도했을 수 있습니다.
+  - 예를 들어 데이터 바인딩, 데이터 직렬화/역직렬화, 리플렉션 API 직접 사용 등을 시도했을 수 있습니다.
 
 - 이 사례가 해당 형식에만 국한된 것인지 아니면 다른 형식에서도 같은 문제가 발생할 것으로 예상되는지 여부
 

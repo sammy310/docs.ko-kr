@@ -73,7 +73,7 @@ JSON(JavaScript Object Notation)은 클라이언트 브라우저 및 AJAX 사용
     Console.WriteLine(sr.ReadToEnd());
     ```
 
-## <a name="to-deserialize-an-instance-of-type-person-from-json"></a>JSON에서 형식 Person의 인스턴스를 deserialize하려면
+## <a name="to-deserialize-an-instance-of-type-person-from-json"></a>JSON에서 형식 Person의 인스턴스를 역직렬화하려면
 
 1. `Person`의 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject%2A> 메서드를 사용하여 JSON 인코딩된 데이터를 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>의 새 인스턴스로 deserialize합니다.
 

@@ -370,7 +370,7 @@ public class Employee {
 
 `CreatePO` 메서드는 `PurchaseOrder`, `Address` 및 `OrderedItem` 클래스 개체를 만들고 public 필드 값을 설정합니다. 메서드는 <xref:System.Xml.Serialization.XmlSerializer>를 serialize하고 deserialize하는 데 사용되는 `PurchaseOrder` 클래스의 인스턴스도 생성합니다. 코드는 serialize될 클래스 형식을 생성자에 전달합니다. 또한 코드는 XML 스트림을 XML 문서에 쓰는 데 사용되는 `FileStream`도 만듭니다.
 
-`ReadPo` 메서드는 조금 더 간단합니다. deserialize할 개체를 만들고 그 값을 읽습니다. `CreatePo` 메서드와 마찬가지로 deserialize 할 클래스의 형식을 생성자에 전달 하 여 <xref:System.Xml.Serialization.XmlSerializer>를 먼저 생성 해야 합니다. 또한 XML 문서를 읽기 위해 <xref:System.IO.FileStream>이 필요합니다. 개체를 deserialize하기 위해 <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A>을 인수로 사용하여 <xref:System.IO.FileStream> 메서드를 호출합니다. deserialize된 개체는 `PurchaseOrder` 형식의 개체 변수로 캐스팅되어야 합니다. 그런 다음 코드는 deserialize된 `PurchaseOrder`의 값을 읽습니다. 작성된 PO.xml 파일을 읽어 실제 XML 출력을 볼 수 있습니다.
+`ReadPo` 메서드는 조금 더 간단합니다. 역직렬화할 개체를 만들고 그 값을 읽습니다. `CreatePo` 메서드와 마찬가지로 deserialize 할 클래스의 형식을 생성자에 전달 하 여 <xref:System.Xml.Serialization.XmlSerializer>를 먼저 생성 해야 합니다. 또한 XML 문서를 읽기 위해 <xref:System.IO.FileStream>이 필요합니다. 개체를 deserialize하기 위해 <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A>을 인수로 사용하여 <xref:System.IO.FileStream> 메서드를 호출합니다. deserialize된 개체는 `PurchaseOrder` 형식의 개체 변수로 캐스팅되어야 합니다. 그런 다음 코드는 deserialize된 `PurchaseOrder`의 값을 읽습니다. 작성된 PO.xml 파일을 읽어 실제 XML 출력을 볼 수 있습니다.
 
 ```vb
 Imports System

@@ -151,7 +151,7 @@ catch (Exception)
 }  
 ```  
   
- 서비스는 클라이언트로부터 UDP 패킷을 수신한 다음 이 패킷을 deserialize하여 메시지와 트랜잭션을 추출합니다.  
+ 서비스는 클라이언트로부터 UDP 패킷을 수신한 다음 이 패킷을 역직렬화하여 메시지와 트랜잭션을 추출합니다.  
   
 ```csharp  
 count = listenSocket.EndReceiveFrom(result, ref dummy);  

@@ -76,7 +76,7 @@ ms.locfileid: "73128254"
 
 - 동적 또는 런타임 바인딩 호출.
 
-- 직렬화 및 deserialization
+- serialization 및 deserialization
 
 - COM interop
 

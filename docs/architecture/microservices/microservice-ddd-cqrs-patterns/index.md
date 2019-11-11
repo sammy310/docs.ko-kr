@@ -2,12 +2,12 @@
 title: DDD 및 CQRS 패턴을 사용하여 마이크로 서비스에서 비즈니스 복잡성 처리
 description: 컨테이너화된 .NET 애플리케이션을 위한 .NET 마이크로 서비스 아키텍처 | DDD 및 CQRS 패턴을 적용하여 복잡한 비즈니스 시나리오를 처리하는 방법 이해
 ms.date: 10/08/2018
-ms.openlocfilehash: d311641e2ac73205c04c3f1147b54991585ce851
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 88b105b68307c8587f877bb9ddf370e143d8539b
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70295104"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739832"
 ---
 # <a name="tackle-business-complexity-in-a-microservice-with-ddd-and-cqrs-patterns"></a>DDD 및 CQRS 패턴을 사용하여 마이크로 서비스에서 비즈니스 복잡성 처리
 
@@ -15,7 +15,9 @@ ms.locfileid: "70295104"
 
 이 섹션에서는 복잡한 하위 시스템 또는 끊임없이 변화하는 비즈니스 규칙을 사용하는 도메인 전문가의 지식에서 파생된 마이크로 서비스를 처리해야 할 때 구현하는 고급 마이크로 서비스에 중점을 둡니다. 이 섹션에서 사용된 아키텍처 패턴은 그림 7-1에 나와 있는 것처럼 DDD(도메인 기반 디자인) 및 CQRS(명령과 쿼리의 역할 분리) 접근 방식을 기반으로 합니다.
 
-![마이크로 서비스 패턴, API 게이트웨이, 복원력 있는 통신, 게시자/구독자 등의 외부 아키텍처와 데이터 기반/CRUD, DDD 패턴, 종속성 삽입, 여러 라이브러리 등의 내부 아키텍처 간 차이입니다.](./media/image1.png)
+:::image type="complex" source="./media/index/internal-versus-external-architecture.png" alt-text="외부 및 내부 아키텍처 패턴을 비교하는 다이어그램입니다.":::
+마이크로 서비스 패턴, API 게이트웨이, 복원력 있는 통신, 게시자/구독자 등의 외부 아키텍처와 데이터 기반/CRUD, DDD 패턴, 종속성 삽입, 여러 라이브러리 등의 내부 아키텍처 간 차이입니다.
+:::image-end:::
 
 **그림 7-1**. 각 마이크로 서비스에 대한 외부 마이크로 서비스 아키텍처 및 내부 아키텍처 패턴
 

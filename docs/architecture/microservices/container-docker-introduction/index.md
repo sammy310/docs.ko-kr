@@ -2,12 +2,12 @@
 title: 컨테이너 및 Docker 소개
 description: 컨테이너화된 .NET 애플리케이션을 위한 .NET 마이크로 서비스 아키텍처 | 컨테이너 및 Docker 소개
 ms.date: 08/31/2018
-ms.openlocfilehash: cb6244939f6ae89ba1dc824b55a21d1e010cef5e
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 364cbc0ba8149be1873df628a1ca243f420e7d0b
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70295146"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740058"
 ---
 # <a name="introduction-to-containers-and-docker"></a>컨테이너 및 Docker 소개
 
@@ -19,7 +19,7 @@ ms.locfileid: "70295146"
 
 그림 2-1에 표시된 것처럼 각 컨테이너는 전체 웹 애플리케이션 또는 서비스를 실행할 수 있습니다. 이 예제에서는 Docker 호스트가 컨테이너 호스트이며 앱 1, 앱 2, Svc 1, Svc 2가 컨테이너화된 애플리케이션 또는 서비스입니다.
 
-![VM 또는 물리적 서버의 OS에서 실행 중인 두 개의 애플리케이션 및 두 개의 서비스](./media/image1.png)
+![VM 또는 서버에서 실행되는 4개의 컨테이너를 보여 주는 다이어그램입니다.](./media/index/multiple-containers-single-host.png)
 
 **그림 2-1**. 컨테이너 호스트에서 실행되는 여러 컨테이너
 
