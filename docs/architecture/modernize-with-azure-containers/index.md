@@ -3,10 +3,10 @@ title: Modernize Existing .NET Applications With Azure Cloud and Windows Contain
 description: 이 eBook에서는 기존 애플리케이션을 Azure 클라우드 및 컨테이너로 리프트 앤 시프트하고 현대화하는 방법을 알아봅니다.
 ms.date: 04/28/2018
 ms.openlocfilehash: 67b1c7743697832684e96225e3d365da625ce6a3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 11/08/2019
 ms.locfileid: "73089766"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>Modernize existing .NET applications with Azure cloud and Windows Containers(2판)
