@@ -7,12 +7,12 @@ helpviewer_keywords:
 - assemblies [.NET Framework], creating
 - multifile assemblies
 ms.assetid: 54832ee9-dca8-4c8b-913c-c0b9d265e9a4
-ms.openlocfilehash: 8a00784e6aa2d663c738339367b4076e79ed9c95
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 81fffb2b2e1d56d6068bf6f663a13fad6968a383
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122495"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740513"
 ---
 # <a name="create-assemblies"></a>어셈블리 만들기
 
@@ -46,7 +46,6 @@ Visual Studio 등의 IDE 또는 Windows SDK에서 제공된 컴파일러와 도�
 
 ## <a name="see-also"></a>참고 항목
 
-- [어셈블리를 사용한 프로그램](program.md)
 - [어셈블리 버전 관리](versioning.md)
 - [방법: 단일 파일 어셈블리 빌드](../../framework/app-domains/build-single-file-assembly.md)
 - [방법: 다중 파일 어셈블리 빌드](../../framework/app-domains/build-multifile-assembly.md)

@@ -2,12 +2,12 @@
 title: 참조 반환 값 및 참조 로컬(C# 가이드)
 description: 참조 반환 및 참조 로컬 값을 정의하고 사용하는 방법을 알아봅니다.
 ms.date: 04/04/2018
-ms.openlocfilehash: 99e0f9d995cf3bf5c0486415b6f2d578147d3c7f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7ade422b5b3805ef2e1f487252a98fb85cdfe70c
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73114482"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736824"
 ---
 # <a name="ref-returns-and-ref-locals"></a>참조 반환 및 참조 로컬
 
@@ -25,7 +25,7 @@ C# 7.0부터 C#에서 참조 반환 값(ref return)을 지원합니다. 참조 �
 
 - 반환 값은 리터럴 `null`일 수 없습니다. `null`을 반환하면 컴파일러 오류 CS8156, “식이 참조로 반환될 수 없으므로 이 컨텍스트에서 해당 식을 사용할 수 없습니다.”가 생성됩니다.
 
-   참조 반환이 있는 메서드는 값이 현재 null(인스턴스화되지 않음) 값이거나 값 형식이 [nullable 값 형식](../nullable-types/index.md)인 변수에 별칭을 반환할 수 있습니다.
+   참조 반환이 있는 메서드는 값이 현재 null(인스턴스화되지 않음) 값이거나 값 형식이 [nullable 값 형식](../../language-reference/builtin-types/nullable-value-types.md)인 변수에 별칭을 반환할 수 있습니다.
 
 - 반환 값은 상수, 열거형 멤버, 속성의 값 형식 반환 값 또는 `class`나 `struct`의 메서드일 수 없습니다. 이 규칙을 위반하면 컴파일러 오류 CS8156, “식이 참조로 반환될 수 없으므로 이 컨텍스트에서 해당 식을 사용할 수 없습니다.”가 생성됩니다.
 

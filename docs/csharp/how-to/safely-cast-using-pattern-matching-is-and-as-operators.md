@@ -6,12 +6,12 @@ helpviewer_keywords:
 - cast operators [C#], as and is operators
 - as operator [C#]
 - is operator [C#]
-ms.openlocfilehash: d82c60374db637bb8ac879a23e2d74c39194ca18
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 8d090df1338c535b11a7fd3ec32f6d1cb00b338f
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353731"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739688"
 ---
 # <a name="how-to-safely-cast-by-using-pattern-matching-and-the-is-and-as-operators"></a>방법: 패턴 일치와 is 및 as 연산자를 사용하여 안전하게 캐스트
 
@@ -23,7 +23,7 @@ ms.locfileid: "71353731"
 
 위의 샘플은 패턴 일치 구문의 몇 가지 기능을 보여 줍니다. `if (a is Mammal m)` 및 `if (o is Mammal m)` 문은 테스트를 초기화 할당과 결합합니다. 할당은 테스트가 성공한 경우에만 발생합니다. 변수 `m`은 할당된 `if` 문의 포함되어 있는 범위에만 있습니다. 나중에 같은 방법으로 `m`에 액세스할 수 없습니다. 대화형 창에서 시도해 보세요.
 
-다음 샘플 코드에 표시된 대로 [nullable 값 형식](../programming-guide/nullable-types/index.md)에 값이 있는 경우 테스트할 때도 동일한 구문을 사용할 수 있습니다.
+다음 샘플 코드에 표시된 대로 [nullable 값 형식](../language-reference/builtin-types/nullable-value-types.md)에 값이 있는 경우 테스트할 때도 동일한 구문을 사용할 수 있습니다.
 
 [!code-csharp[Pattern matching with nullable types](../../../samples/snippets/csharp/how-to/safelycast/nullablepatternmatching/Program.cs#PatternMatchingNullable)]
 

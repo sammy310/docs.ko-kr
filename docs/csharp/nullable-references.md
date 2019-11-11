@@ -3,12 +3,12 @@ title: nullable 참조 형식
 description: 이 문서에서는 C# 8.0에 추가된 nullable 참조 형식에 대해 간략하게 설명합니다. 이 기능이 신규 및 기존의 프로젝트의 null 참조 예외에 대해 어떻게 안전성을 제공하는지 알아봅니다.
 ms.technology: csharp-null-safety
 ms.date: 02/19/2019
-ms.openlocfilehash: e20ea6efa389ba1aa0d8432a408c0b2a06a61c30
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: ded7234ecb746ba03ba59505b7189272886f1cbf
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039777"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737830"
 ---
 # <a name="nullable-reference-types"></a>nullable 참조 형식
 
@@ -28,7 +28,7 @@ C# 8.0에는 참조 형식 변수의 속성에 대한 중요한 설명을 할 �
 
 Nullable 참조 형식을 추가함으로써 의도를 보다 명확하게 선언할 수 있습니다. `null` 값은 변수가 값을 참조하지 않음을 나타내는 올바른 방법입니다. 코드에서 모든 `null` 값을 제거하는 데 이 기능을 사용하지 마세요. 대신, 컴파일러 및 코드를 읽는 다른 개발자에게 의도를 선언해야 합니다. 의도를 선언해 놓으면 컴파일러는 해당 의도와 일치하지 않는 코드 작성 시 이를 알려줍니다.
 
-**nullable 참조 형식**은 [nullable 값 형식](programming-guide/nullable-types/index.md)과 동일한 구문을 사용하여 작성합니다. 변수 형식에 `?`가 추가됩니다. 예를 들어 다음 변수 선언은 nullable 문자열 변수 `name`을 나타냅니다.
+**nullable 참조 형식**은 [nullable 값 형식](language-reference/builtin-types/nullable-value-types.md)과 동일한 구문을 사용하여 작성합니다. 변수 형식에 `?`가 추가됩니다. 예를 들어 다음 변수 선언은 nullable 문자열 변수 `name`을 나타냅니다.
 
 ```csharp
 string? name;

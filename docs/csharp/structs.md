@@ -4,12 +4,12 @@ description: 구조체 형식 및 만드는 방법을 알아봅니다.
 ms.date: 10/12/2016
 ms.technology: csharp-fundamentals
 ms.assetid: a7094b8c-7229-4b6f-82fc-824d0ea0ec40
-ms.openlocfilehash: 10971dc1a0b2c9d64ac8766734b3f6f630aa3ccf
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 39bf44dc187fbbc7aac71a1d5c5f3a4d7f446eb8
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423112"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739184"
 ---
 # <a name="structs"></a>구조체
 
@@ -53,21 +53,9 @@ ms.locfileid: "73423112"
   
 - 구조체는 인터페이스를 구현할 수 있습니다.
 
-## <a name="literal-values"></a>리터럴 값
-
-C#에서는 리터럴 값이 컴파일러에서 형식을 받습니다. 숫자의 끝에 문자를 추가하여 숫자 리터럴의 입력 방법을 지정할 수 있습니다. 예를 들어 값 4.56이 float로 처리되도록 지정하려면 숫자 뒤에 "f" 또는 "F"를 추가합니다(`4.56f`). 문자를 추가하지 않으면 컴파일러가 리터럴에 대해 `double` 형식을 유추합니다. 문자 접미사와 함께 지정할 수 있는 형식에 대한 자세한 내용은 [값 형식](./language-reference/keywords/value-types.md)에서 개별 형식의 참조 페이지를 참조하세요.  
-  
-리터럴은 형식화되고 모든 형식이 궁극적으로 <xref:System.Object>에서 파생되기 때문에 다음과 같은 코드를 작성하고 컴파일할 수 있습니다.  
-  
-[!code-csharp[Literal Values](../../samples/snippets/csharp/concepts/structs/literals.cs)]
-
-마지막 두 예제에서는 C# 7.0에서 도입된 언어 기능을 보여 줍니다. 첫 번째 예제에서는 밑줄 문자를 숫자 리터럴 내의 *숫자 구분 기호*로 사용할 수 있습니다. 가독성을 개선하기 위해 숫자 사이의 원하는 위치에 넣을 수 있습니다. 값에는 영향을 주지 않습니다.
-
-두 번째 예제에서는 16진수 표기법을 사용하는 대신 비트 패턴을 직접 지정할 수 있는 *이진 리터럴*을 보여 줍니다.
-
 ## <a name="nullable-value-types"></a>Nullable 값 형식
 
-일반적인 값 형식은 [null](language-reference/keywords/null.md) 값을 가질 수 없습니다. 그러나 형식 뒤에 `?`를 추가하면 null 허용 값 형식을 예를 들어 `int?`는 [null](./language-reference/keywords/null.md) 값을 가질 수도 있는 `int` 형식입니다. nullable 값 형식은 제네릭 구조체 형식 <xref:System.Nullable%601>의 인스턴스입니다. nullable 값 형식은 특히 숫자 값이 null이거나 정의되지 않을 수 있는 데이터베이스에 데이터를 전달하는 경우에 유용합니다. 자세한 내용은 [nullable 값 형식](programming-guide/nullable-types/index.md)을 참조하세요.
+일반적인 값 형식은 [null](language-reference/keywords/null.md) 값을 가질 수 없습니다. 그러나 형식 뒤에 `?`를 추가하면 null 허용 값 형식을 예를 들어 `int?`는 [null](./language-reference/keywords/null.md) 값을 가질 수도 있는 `int` 형식입니다. nullable 값 형식은 제네릭 구조체 형식 <xref:System.Nullable%601>의 인스턴스입니다. nullable 값 형식은 특히 숫자 값이 null이거나 정의되지 않을 수 있는 데이터베이스에 데이터를 전달하는 경우에 유용합니다. 자세한 내용은 [nullable 값 형식](language-reference/builtin-types/nullable-value-types.md)을 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
 

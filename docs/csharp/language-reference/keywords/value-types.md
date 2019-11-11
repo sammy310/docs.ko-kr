@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 940d21bdd90d4594a39edc20283ca6a45ccf81fe
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 8703532ff8551e8bd42128eb9e8cdcf2afd9dad8
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422204"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739670"
 ---
 # <a name="value-types-c-reference"></a>값 형식(C# 참조)
 
@@ -32,7 +32,7 @@ ms.locfileid: "73422204"
 
 참조 형식과 달리 값 형식에서는 새 형식을 파생할 수 없습니다. 그러나 참조 형식과 마찬가지로 구조체가 인터페이스를 구현할 수 있습니다.
 
-값 형식 변수는 기본적으로 `null`일 수 없습니다. 그러나 해당 [nullable 값 형식](../../programming-guide/nullable-types/index.md)의 변수는 `null`일 수 있습니다.
+값 형식 변수는 기본적으로 `null`일 수 없습니다. 그러나 해당 [nullable 값 형식](../builtin-types/nullable-value-types.md)의 변수는 `null`일 수 있습니다.
 
 각 값 형식에는 해당 형식의 기본값을 초기화하는 암시적 매개 변수 없는 생성자가 있습니다. 값 형식의 기본값에 대한 자세한 내용은 [기본값 표](default-values-table.md)를 참조하세요.
 
@@ -105,8 +105,6 @@ var p = new Point(); // Invoke parameterless constructor for the struct.
 ## <a name="see-also"></a>참고 항목
 
 - [C# 참조](../index.md)
-- [C# 프로그래밍 가이드](../../programming-guide/index.md)
 - [C# 키워드](index.md)
-- [유형](/dotnet/csharp/language-reference/keywords)
 - [참조 형식](reference-types.md)
-- [Nullable 값 형식](../../programming-guide/nullable-types/index.md)
+- [Nullable 값 형식](../builtin-types/nullable-value-types.md)
