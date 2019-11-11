@@ -1,4 +1,4 @@
-- name: 응용 프로그램 호환성
+- name: 애플리케이션 호환성
   items:
     - name: 호환성이 손상되는 변경 평가
       href: index.md
@@ -10,15 +10,15 @@
       items:
         - name: .NET Framework - .NET Core
           href: framework-core.md
-        - name: 2.2 - 3.0
+        - name: 2.2-3.0
           href: 2.2-3.0.md
-        - name: 3.0 미리보기 6 - 3.0 미리 보기 7
+        - name: 3.0 미리 보기 6 - 3.0 미리 보기 7
           href: 3.0.6-3.0.7.md
-        - name: 3.0 미리보기 7 - 3.0 미리 보기 8
+        - name: 3.0 미리 보기 7 - 3.0 미리 보기 8
           href: 3.0.7-3.0.8.md
-        - name: 3.0 미리보기 8 - 3.0 미리 보기 9
+        - name: 3.0 미리 보기 8 - 3.0 미리 보기 9
           href: 3.0.8-3.0.9.md
-        - name: 3.0 미리보기 9 - 3.0 RC1
+        - name: 3.0 미리 보기 9 - 3.0 RC1
           href: 3.0.9-3.0rc1.md
     - name: 범주별
       items:

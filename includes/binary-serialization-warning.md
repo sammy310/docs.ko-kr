@@ -7,4 +7,4 @@ ms.lasthandoff: 05/15/2019
 ms.locfileid: "65639118"
 ---
 > [!WARNING]
-> <span data-ttu-id="f3cea-101">이진 serialization은 위험할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f3cea-101">Binary serialization can be dangerous.</span></span> <span data-ttu-id="f3cea-102">신뢰할 수 없는 소스의 데이터를 deserialize하거나 직렬화된 데이터를 제어하고 있지 않은 시스템에 왕복하면 안 됩니다.</span><span class="sxs-lookup"><span data-stu-id="f3cea-102">Never deserialize data from an untrusted source and never round-trip serialized data to systems not under your control.</span></span>
+> <span data-ttu-id="ad52f-101">이진 serialization은 위험할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ad52f-101">Binary serialization can be dangerous.</span></span> <span data-ttu-id="ad52f-102">신뢰할 수 없는 소스의 데이터를 deserialize하거나 직렬화된 데이터를 제어하고 있지 않은 시스템에 왕복하면 안 됩니다.</span><span class="sxs-lookup"><span data-stu-id="ad52f-102">Never deserialize data from an untrusted source and never round-trip serialized data to systems not under your control.</span></span>
