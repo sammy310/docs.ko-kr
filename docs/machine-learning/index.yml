@@ -9,13 +9,13 @@ metadata:
   ms.collection: collection
   author: natke
   ms.author: nakersha
-  ms.date: 10/02/2019
-  ms.openlocfilehash: 4d9e3f78b02e7e95567dc9f025a1123966038770
-  ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+  ms.date: 10/30/2019
+  ms.openlocfilehash: 05d357af2088321524841bfc05f94f816f1bc306
+  ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 10/15/2019
-  ms.locfileid: "72320518"
+  ms.lasthandoff: 11/01/2019
+  ms.locfileid: "73423936"
 landingContent:
 - title: ML.NET 기본 사항
   linkLists:
@@ -51,14 +51,20 @@ landingContent:
       url: tutorials/sentiment-analysis-model-builder.md
     - text: 가격 예측( 모델 작성기)
       url: tutorials/predict-prices-with-model-builder.md
+    - text: 상태 위반 범주화(모델 작성기 및 SQL Server)
+      url: tutorials/health-violation-classification-model-builder.md
     - text: 지원 문제 범주화(API)
       url: tutorials/github-issue-classification.md
-    - text: TensorFlow를 사용하여 이미지 분류(API)
+    - text: 이미지 분류 API를 사용하여 이미지 분류(API)
+      url: tutorials/image-classification-api-transfer-learning.md
+    - text: 모델 컴퍼지션을 사용하여 이미지 분류(API)
       url: tutorials/image-classification.md
     - text: 이미지에서 개체 검색(API)
       url: tutorials/object-detection-onnx.md
     - text: 제품 판매의 변칙 검색(API)
       url: tutorials/sales-anomaly-detection.md
+    - text: 자전거 대여 수요 예측(API 및 SQL Server)
+      url: tutorials/time-series-demand-forecasting.md
     - text: 영화 추천기 빌드(API)
       url: tutorials/movie-recommendation.md
 - title: 방법 가이드
