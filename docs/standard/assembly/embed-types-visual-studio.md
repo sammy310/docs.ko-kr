@@ -5,12 +5,12 @@ ms.assetid: 55ed13c9-c5bb-4bc2-bcd8-0587eb568864
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 648aaaa86cf2d6bd2de989739694ba188c4bbc04
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 47a339de60301e01b52a4b8a3a85945624daf940
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73041026"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73733193"
 ---
 # <a name="walkthrough-embed-types-from-managed-assemblies-in-visual-studio"></a>연습: Visual Studio에 관리되는 어셈블리의 형식 포함
 
@@ -34,7 +34,7 @@ ms.locfileid: "73041026"
 
 ## <a name="conditions-and-limitations"></a>조건 및 제한 사항
 
-다음 조건에서는 어셈블리의 형식 정보를 포함할 수 있습니다. 
+다음 조건에서는 어셈블리의 형식 정보를 포함할 수 있습니다.
 
 - 어셈블리는 하나 이상의 공용 인터페이스를 제공합니다.
 - 포함된 인터페이스는 고유한 GUID가 있는 `ComImport` 특성 및 `Guid` 특성으로 주석이 추가됩니다.
@@ -321,5 +321,4 @@ ms.locfileid: "73041026"
 - [-link(Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md)
 - [C# 프로그래밍 가이드](../../csharp/programming-guide/index.md)
 - [프로그래밍 개념(Visual Basic)](../../visual-basic/programming-guide/concepts/index.md)
-- [어셈블리를 사용한 프로그램](program.md)
 - [.NET 어셈블리](index.md)
