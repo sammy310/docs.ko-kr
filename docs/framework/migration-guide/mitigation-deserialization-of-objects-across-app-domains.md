@@ -2,14 +2,12 @@
 title: '완화: 애플리케이션 도메인 간 개체의 deserialization'
 ms.date: 03/30/2017
 ms.assetid: 30c2d66c-04a8-41a5-ad31-646b937f61b5
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: de2456a1365a1fb48b3e9f126e090b8da77728cc
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: e2d90a77cab699646bd31eaa162d1bd1744fd51b
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894111"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457931"
 ---
 # <a name="mitigation-deserialization-of-objects-across-app-domains"></a>완화: 애플리케이션 도메인 간 개체의 deserialization
 경우에 따라 앱이 다양한 애플리케이션을 기반으로 하여 두 개 이상의 애플리케이션 도메인을 사용하면 여러 애플리케이션 도메인 간에 논리 호출 컨텍스트의 개체를 deserialize하려는 시도로 인해 예외가 throw됩니다.  
@@ -50,4 +48,4 @@ ms.locfileid: "70894111"
   
 ## <a name="see-also"></a>참고 항목
 
-- [런타임 변경 내용](runtime-changes-in-the-net-framework-4-5-1.md)
+- [애플리케이션 호환성](application-compatibility.md)

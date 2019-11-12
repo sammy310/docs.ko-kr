@@ -1,15 +1,15 @@
 ---
 title: '자습서: 지원 문제 분류 - 다중 클래스 분류'
 description: 다중 클래스 분류 시나리오에서 ML.NET을 사용하여 GitHub 문제를 분류하여 지정된 영역에 할당하는 방법을 알아봅니다.
-ms.date: 09/30/2019
+ms.date: 10/30/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: 7507463cfc5504182f028ab2ced9a03733c61f6d
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 1cd213653c23c4d713e03d53394885f1f3ebb6f5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774492"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73094587"
 ---
 # <a name="tutorial-categorize-support-issues-using-multiclass-classification-with-ml-net"></a>자습서: ML .NET에서 다중 클래스 분류를 사용하여 지원 문제 분류
 
@@ -278,7 +278,7 @@ public static void Evaluate(DataViewSchema trainingDataViewSchema)
 
 * 로그 손실 - [로그 손실](../resources/glossary.md#log-loss)을 참조하세요. 로그 손실을 가능한 한 0에 가깝게 합니다.
 
-* 로그 손실 감소 - [-inf, 100]의 범위입니다. 여기서 100은 완벽한 예측이고 0은 평균 예측을 나타냅니다. 로그 손실 감소를 가능한 한 0에 가깝게 합니다.
+* 로그 손실 감소 - [-inf, 1.00]의 범위입니다. 여기서 1.00은 완벽한 예측이고 0은 평균 예측을 나타냅니다. 로그 손실 감소를 가능한 한 1에 가깝게 합니다.
 
 ### <a name="displaying-the-metrics-for-model-validation"></a>모델 유효성 검사를 위해 메트릭 표시
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - conversions [C#], byte array to int
 - byte arrays [C#], converting to int
 ms.assetid: d6ac20e2-448e-4aea-99b9-faf04c6f1e79
-ms.openlocfilehash: 96507f03a3d64b96ef6059a92459bfc7fa854372
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: cb6252069302a28f8a85247aa4584a9284b26c4d
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395682"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73195459"
 ---
 # <a name="how-to-convert-a-byte-array-to-an-int-c-programming-guide"></a>방법: 바이트 배열을 정수로 변환(C# 프로그래밍 가이드)
 
@@ -35,7 +35,7 @@ ms.locfileid: "72395682"
 이 예제에서는 바이트 배열을 초기화하고, 컴퓨터 아키텍처가 little-endian이면 배열을 반전한 다음(즉, 최하위 바이트가 먼저 저장됨) [ToInt32(Byte\[\], Int32)](xref:System.BitConverter.ToInt32(System.Byte[],System.Int32)) 메서드를 호출하여 배열의 4바이트를 `int`로 변환합니다. [ToInt32(Byte\[\], Int32)](xref:System.BitConverter.ToInt32(System.Byte[],System.Int32))에 대한 두 번째 인수는 바이트 배열의 시작 인덱스를 지정합니다.
 
 > [!NOTE]
-> 출력은 컴퓨터 아키텍처의 endianess에 따라 달라질 수 있습니다.
+> 출력은 컴퓨터 아키텍처의 endianness에 따라 달라질 수 있습니다.
 
 [!code-csharp[csProgGuideTypes#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#22)]
 
@@ -44,7 +44,7 @@ ms.locfileid: "72395682"
 이 예제에서는 <xref:System.BitConverter> 클래스의 <xref:System.BitConverter.GetBytes%28System.Int32%29> 메서드를 호출하여 `int`를 바이트 배열로 변환합니다.
 
 > [!NOTE]
-> 출력은 컴퓨터 아키텍처의 endianess에 따라 달라질 수 있습니다.
+> 출력은 컴퓨터 아키텍처의 endianness에 따라 달라질 수 있습니다.
 
 [!code-csharp[csProgGuideTypes#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#23)]
 

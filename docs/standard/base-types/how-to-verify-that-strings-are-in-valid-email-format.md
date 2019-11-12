@@ -1,5 +1,5 @@
 ---
-title: '방법: 문자열이 올바른 이메일 형식인지 확인'
+title: '방법: 문자열이 올바른 전자 메일 형식인지 확인'
 ms.date: 12/10/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -18,16 +18,14 @@ helpviewer_keywords:
 - email [.NET Framework], validating
 - IsMatch method
 ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 352808e561a0f59d41f092eb7c70c40a591da5b6
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: c02fc215fa66951ae3333175191ab96a226a2afe
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846776"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197588"
 ---
-# <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>방법: 문자열이 유효한 전자 메일 형식인지 확인
+# <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>방법: 문자열이 올바른 전자 메일 형식인지 확인
 
 다음 예제에서는 정규식을 사용하여 문자열이 올바른 전자 메일 형식인지 확인합니다.
 
@@ -37,7 +35,7 @@ ms.locfileid: "72846776"
 
 전자 메일 주소가 올바른지 확인하기 위해 `IsValidEmail` 메서드는 <xref:System.Text.RegularExpressions.Regex.Replace%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.MatchEvaluator%29?displayProperty=nameWithType> 정규식 패턴으로 `(@)(.+)$` 메서드를 호출하여 전자 메일 주소에서 도메인 이름을 분리합니다. 세 번째 매개 변수는 일치하는 텍스트를 처리하고 대체하는 메서드를 나타내는 <xref:System.Text.RegularExpressions.MatchEvaluator> 대리자입니다. 정규식 패턴은 다음과 같이 해석됩니다.
 
-|무늬|설명|
+|패턴|설명|
 |-------------|-----------------|
 |`(@)`|@ 문자를 찾습니다. 이 그룹은 첫 번째 캡처링 그룹입니다.|
 |`(.+)`|하나 이상의 문자를 찾습니다. 이 그룹은 두 번째 캡처링 그룹입니다.|
@@ -52,7 +50,7 @@ ms.locfileid: "72846776"
 [!code-csharp[RegularExpressions.Examples.Email#7](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Examples.Email/cs/example4.cs#7)]
 [!code-vb[RegularExpressions.Examples.Email#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Examples.Email/vb/example4.vb#7)]
 
-이 예제에서 정규식 패턴 ``^(?(")(".+?(?<!\\)"@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))(?([)([(\d{1,3}.){3}\d{1,3}])|(([0-9a-z][-0-9a-z]*[0-9a-z]*\.)+[a-z0-9][-a-z0-9]{0,22}[a-z0-9]))$``는 다음 범례와 같이 해석됩니다. 정규식은 <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> 플래그를 사용하여 컴파일됩니다.
+이 예제에서 정규식 패턴 ``^(?(")(".+?(?<!\\)"@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-z][-0-9a-z]*[0-9a-z]*\.)+[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))$``는 다음 범례와 같이 해석됩니다. 정규식은 <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> 플래그를 사용하여 컴파일됩니다.
 
 `^` 패턴: 문자열의 시작 부분에서 일치 항목 찾기를 시작합니다.
 
@@ -64,7 +62,7 @@ ms.locfileid: "72846776"
 
 `(\.(?!\.))` 패턴: 다음 문자가 마침표이면 일치하게 됩니다. 마침표가 아니면 왼쪽에서 오른쪽으로 다음 문자를 검색하여 일치 항목을 계속 찾습니다. `(?!\.)` 는 메일 주소의 로컬 부분에 마침표 두 개가 연속으로 나타나지 않도록 하며 너비가 0인 부정 lookahead 어설션입니다.
 
-``|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w]`` 패턴: 다음 문자가 마침표가 아니면 단어 문자 또는 -!#$%&'*+/=?^`{}|~ 문자 중 하나를 찾습니다.
+``|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w]`` 패턴: 다음 문자가 마침표가 아니면 단어 문자 또는 -!#$%&'\*+/=?^\`{}|~ 문자 중 하나를 찾습니다.
 
 ``((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*`` 패턴: 교체 패턴(마침표가 아닌 문자 또는 여러 문자 중 하나 앞에 마침표가 있는 패턴)을 0번 이상 찾습니다.
 

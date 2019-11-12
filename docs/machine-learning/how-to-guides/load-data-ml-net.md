@@ -5,12 +5,12 @@ ms.date: 09/11/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to, title-hack-0625
-ms.openlocfilehash: 4008f38bf4a20113a3f5c865e38222e5b82f2acc
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 82a4d19a6296faa6d195e301016b1bf97d483a2c
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991356"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040798"
 ---
 # <a name="load-data-from-files-and-other-sources"></a>파일 및 기타 소스에서 데이터 로드
 
@@ -116,9 +116,10 @@ ML.NET은 SQL Server, Azure Database, Oracle, SQLite, PostgreSQL, Progress, IBM 
 
 ```SQL
 CREATE TABLE [House] (
-    [HouseId] int NOT NULL IDENTITY,
-    [Size] real NOT NULL,
-    [Price] real NOT NULL
+    [HouseId] INT NOT NULL IDENTITY,
+    [Size] INT NOT NULL,
+    [NumBed] INT NOT NULL,
+    [Price] REAL NOT NULL
     CONSTRAINT [PK_House] PRIMARY KEY ([HouseId])
 );
 ```
@@ -129,6 +130,8 @@ CREATE TABLE [House] (
 public class HouseData
 {
     public float Size { get; set; }
+    
+    public float NumBed { get; set; }
 
     public float Price { get; set; }
 }
@@ -147,12 +150,14 @@ DatabaseLoader loader = mlContext.Data.CreateDatabaseLoader<HouseData>();
 ```csharp
 string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=<YOUR-DB-FILEPATH>;Database=<YOUR-DB-NAME>;Integrated Security=True;Connect Timeout=30";
 
-string sqlCommand = "SELECT Size,Price FROM House";
+string sqlCommand = "SELECT Size, CAST(NumBed as REAL) as NumBed, Price FROM House";
 
-DatabaseSource dbSource = new DatabaseSource(SqlClientFactory.Instance,connectionString,sqlCommand);
+DatabaseSource dbSource = new DatabaseSource(SqlClientFactory.Instance, connectionString, sqlCommand);
 ```
 
-마지막으로 `Load` 메서드를 사용하여 데이터를 [`IDataView`](xref:Microsoft.ML.IDataView)에 로드합니다.
+[`Real`](xref:System.Data.SqlDbType) 형식이 아닌 숫자 데이터를 [`Real`](xref:System.Data.SqlDbType)로 변환해야 합니다. [`Real`](xref:System.Data.SqlDbType) 형식은 ML.NET 알고리즘에서 예상하는 입력 형식인 단정밀도 부동 소수점 값 또는 [`Single`](xref:System.Single)로 표현됩니다. 이 샘플에서 `NumBed` 열은 데이터베이스의 정수입니다. `CAST` 기본 제공 함수를 사용하여 [`Real`](xref:System.Data.SqlDbType)로 변환됩니다. `Price` 속성은 이미 로드된 대로 [`Real`](xref:System.Data.SqlDbType) 형식이기 때문입니다.
+
+`Load` 메서드를 사용하여 데이터를 [`IDataView`](xref:Microsoft.ML.IDataView)에 로드합니다.
 
 ```csharp
 IDataView data = loader.Load(dbSource);
@@ -205,3 +210,7 @@ MLContext mlContext = new MLContext();
 //Load Data
 IDataView data = mlContext.Data.LoadFromEnumerable<HousingData>(inMemoryCollection);
 ```
+
+## <a name="next-steps"></a>다음 단계
+
+모델 작성기를 사용하여 기계 학습 모델을 학습하는 경우 [모델 작성기에 학습 데이터 로드](load-data-model-builder.md)를 참조하세요.

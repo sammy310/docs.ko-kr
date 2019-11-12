@@ -1,16 +1,16 @@
 ---
 title: Azure Functions에 모델 배포
 description: Azure Functions를 사용하여 인터넷을 통해 예측하기 위한 ML.NET 감정 분석 기계 학습 모델 제공
-ms.date: 09/12/2019
+ms.date: 10/31/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: 4f805c638df9e60160c27fa08995ce393e59d007
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: bd08982e96f39a9685ddabc090ac3bc5c7855022
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774523"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424341"
 ---
 # <a name="deploy-a-model-to-azure-functions"></a>Azure Functions에 모델 배포
 
@@ -22,10 +22,13 @@ Azure Functions 서버리스 환경을 통해 HTTP에서의 예측을 위해 미
 ## <a name="prerequisites"></a>전제 조건
 
 - “.NET Core 플랫폼 간 개발” 워크로드 및 “Azure 개발”이 설치된 [Visual Studio 2017 버전 15.6 이상](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)
-- Microsoft.NET.Sdk.Functions NuGet 패키지 버전 1.0.28 이상
 - [Azure Functions 도구](/azure/azure-functions/functions-develop-vs#check-your-tools-version)
 - PowerShell
 - 미리 학습된 모델입니다. [ML.NET 감정 분석 자습서](../tutorials/sentiment-analysis.md)를 사용하여 자체 모델을 빌드하거나 이 [미리 학습된 감정 분석 기계 학습 모델](https://github.com/dotnet/samples/blob/master/machine-learning/models/sentimentanalysis/sentiment_model.zip) 다운로드
+
+## <a name="azure-functions-sample-overview"></a>Azure Functions 샘플 개요
+
+이 샘플은 미리 학습된 이진 분류 모델을 사용하여 텍스트의 감정을 긍정 또는 부정으로 분류하는 **C# HTTP 트리거 Azure Functions 애플리케이션**입니다. Azure Functions는 클라우드의 관리되는 서버리스 환경에서 작은 코드를 대규모로 실행하는 간편한 방법을 제공합니다. 이 샘플의 코드는 GitHub의 [dotnet/machinelearning-samples repository](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/end-to-end-apps/ScalableMLModelOnAzureFunction)에서 찾을 수 있습니다.
 
 ## <a name="create-azure-functions-project"></a>Azure Functions 프로젝트 만들기
 
@@ -35,7 +38,7 @@ Azure Functions 서버리스 환경을 통해 HTTP에서의 예측을 위해 미
 
     **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **추가** > **새 폴더**를 선택합니다. “MLModels”를 입력하고 Enter 키를 누릅니다.
 
-1. **Microsoft.ML NuGet 패키지**를 설치합니다.
+1. **Microsoft.ML NuGet 패키지** 버전 **1.3.1**을 설치합니다.
 
     솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **NuGet 패키지 관리**를 선택합니다. “nuget.org”를 패키지 소스로 선택하고, [찾아보기] 탭을 선택하고, **Microsoft.ML**을 검색하고, 목록에서 해당 패키지를 선택하고, **설치** 단추를 선택합니다. **변경 내용 미리 보기** 대화 상자에서 **확인** 단추를 선택한 다음, 나열된 패키지의 사용 조건에 동의하는 경우 **라이선스 승인** 대화 상자에서 **동의함** 단추를 선택합니다.
 
@@ -43,13 +46,13 @@ Azure Functions 서버리스 환경을 통해 HTTP에서의 예측을 위해 미
 
     솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **NuGet 패키지 관리**를 선택합니다. “nuget.org”를 패키지 소스로 선택하고 찾아보기 탭을 선택합니다. **Microsoft.Azure.Functions.Extensions**를 검색하고 목록에서 해당 패키지를 선택한 다음, **설치** 단추를 선택합니다. **변경 내용 미리 보기** 대화 상자에서 **확인** 단추를 선택한 다음, 나열된 패키지의 사용 조건에 동의하는 경우 **라이선스 승인** 대화 상자에서 **동의함** 단추를 선택합니다.
 
-1. **Microsoft.Extensions.ML NuGet 패키지**를 설치합니다.
+1. **Microsoft.Extensions.ML NuGet 패키지** 버전 **1.3.1**을 설치합니다.
 
     솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **NuGet 패키지 관리**를 선택합니다. “nuget.org”를 패키지 원본으로 선택하고, 찾아보기 탭을 선택하고, **Microsoft.Extensions.ML**을 검색하고, 목록에서 해당 패키지를 선택하고, **설치** 단추를 선택합니다. **변경 내용 미리 보기** 대화 상자에서 **확인** 단추를 선택한 다음, 나열된 패키지의 사용 조건에 동의하는 경우 **라이선스 승인** 대화 상자에서 **동의함** 단추를 선택합니다.
 
-1. **Microsoft.NET.Sdk.Functions NuGet 패키지**를 버전 1.0.28 이상으로 업데이트합니다.
+1. **Microsoft.NET.Sdk.Functions NuGet 패키지** 버전 1.0.28 이상을 설치합니다.
 
-    솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **NuGet 패키지 관리**를 선택합니다. “nuget.org”를 패키지 소스로 선택하고 설치 탭을 선택합니다. **Microsoft.NET.Sdk.Functions**를 검색하고 목록에서 해당 패키지를 선택한 다음, 버전 드롭다운에서 1.0.28 이상을 선택하고 **업데이트** 단추를 선택합니다. **변경 내용 미리 보기** 대화 상자에서 **확인** 단추를 선택한 다음, 나열된 패키지의 사용 조건에 동의하는 경우 **라이선스 승인** 대화 상자에서 **동의함** 단추를 선택합니다.
+    솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **NuGet 패키지 관리**를 선택합니다. “nuget.org”를 패키지 소스로 선택하고 설치 탭을 선택합니다. **Microsoft.NET.Sdk.Functions**를 검색하고 목록에서 해당 패키지를 선택한 다음, 버전 드롭다운에서 **1.0.28 이상**을 선택하고 **업데이트** 단추를 선택합니다. **변경 내용 미리 보기** 대화 상자에서 **확인** 단추를 선택한 다음, 나열된 패키지의 사용 조건에 동의하는 경우 **라이선스 승인** 대화 상자에서 **동의함** 단추를 선택합니다.
 
 ## <a name="add-pre-trained-model-to-project"></a>프로젝트에 미리 학습된 모델 추가
 
@@ -114,17 +117,11 @@ Azure Functions 서버리스 환경을 통해 HTTP에서의 예측을 위해 미
 
 1. **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **추가** > **새 항목**을 선택합니다.
 1. **새 항목 추가** 대화 상자에서 **클래스**를 선택하고 **이름** 필드를 *Startup.cs*로 변경합니다. 그런 다음, **추가** 단추를 선택합니다.
+1. 다음 using 문을 *Startup.cs*의 맨 위에 추가합니다.
 
-    *Startup.cs* 파일이 코드 편집기에서 열립니다. 다음 using 문을 *Startup.cs*의 맨 위에 추가합니다.
+    [!code-csharp [StartupUsings](~/machinelearning-samples/samples/csharp/end-to-end-apps/ScalableMLModelOnAzureFunction/SentimentAnalysisFunctionsApp/Startup.cs#L1-L6)]
 
-    ```csharp
-    using Microsoft.Azure.Functions.Extensions.DependencyInjection;
-    using Microsoft.Extensions.ML;
-    using SentimentAnalysisFunctionsApp;
-    using SentimentAnalysisFunctionsApp.DataModels;
-    ```
-
-    using 문 아래의 기존 코드를 제거하고 다음 코드를 *Startup.cs* 파일에 추가합니다.
+1. using 문 아래의 기존 코드를 제거하고 다음 코드를 추가합니다.
 
     ```csharp
     [assembly: FunctionsStartup(typeof(Startup))]
@@ -132,14 +129,22 @@ Azure Functions 서버리스 환경을 통해 HTTP에서의 예측을 위해 미
     {
         public class Startup : FunctionsStartup
         {
-            public override void Configure(IFunctionsHostBuilder builder)
-            {
-                builder.Services.AddPredictionEnginePool<SentimentData, SentimentPrediction>()
-                    .FromFile(modelName: "SentimentAnalysisModel", filePath:"MLModels/sentiment_model.zip", watchForChanges: true);
-            }
+
         }
     }
     ```
+
+1. 앱이 실행되는 환경 및 모델이 `Startup` 클래스 내에 있는 파일 경로를 저장할 변수를 정의합니다.
+
+    [!code-csharp [DefineStartupVars](~/machinelearning-samples/samples/csharp/end-to-end-apps/ScalableMLModelOnAzureFunction/SentimentAnalysisFunctionsApp/Startup.cs#L13-L14)]
+
+1. 그런 다음 `_environment` 및 `_modelPath` 변수 값을 설정하는 생성자를 만듭니다. 애플리케이션을 로컬로 실행하는 경우 기본 환경은 *개발*입니다.
+
+    [!code-csharp [StartupCtor](~/machinelearning-samples/samples/csharp/end-to-end-apps/ScalableMLModelOnAzureFunction/SentimentAnalysisFunctionsApp/Startup.cs#L16-L29)]
+
+1. 그런 다음 `Configure`라는 새 메서드를 추가하여 생성자 아래에 `PredictionEnginePool` 서비스를 등록합니다.
+
+    [!code-csharp [ConfigureServices](~/machinelearning-samples/samples/csharp/end-to-end-apps/ScalableMLModelOnAzureFunction/SentimentAnalysisFunctionsApp/Startup.cs#L31-L35)]
 
 개략적으로 이 코드는 애플리케이션을 수동으로 초기화하지 않고도 애플리케이션에서 요청할 때 나중에 사용할 수 있도록 자동으로 개체 및 서비스를 초기화합니다.
 
@@ -172,28 +177,7 @@ Azure Functions 서버리스 환경을 통해 HTTP에서의 예측을 위해 미
 
 *AnalyzeSentiment* 클래스에서 *Run* 메서드의 기존 구현을 다음 코드로 바꿉니다.
 
-```csharp
-[FunctionName("AnalyzeSentiment")]
-public async Task<IActionResult> Run(
-[HttpTrigger(AuthorizationLevel.Function, "post", Route = null)] HttpRequest req,
-ILogger log)
-{
-    log.LogInformation("C# HTTP trigger function processed a request.");
-
-    //Parse HTTP Request Body
-    string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
-    SentimentData data = JsonConvert.DeserializeObject<SentimentData>(requestBody);
-
-    //Make Prediction
-    SentimentPrediction prediction = _predictionEnginePool.Predict(modelName: "SentimentAnalysisModel", example: data);
-
-    //Convert prediction to string
-    string sentiment = Convert.ToBoolean(prediction.Prediction) ? "Positive" : "Negative";
-
-    //Return Prediction
-    return (ActionResult)new OkObjectResult(sentiment);
-}
-```
+[!code-csharp [AnalyzeRunMethod](~/machinelearning-samples/samples/csharp/end-to-end-apps/ScalableMLModelOnAzureFunction/SentimentAnalysisFunctionsApp/AnalyzeSentiment.cs#L26-L45)]
 
 `Run` 메서드가 실행되면 HTTP 요청에서 수신되는 데이터가 직렬 해제되어 `PredictionEnginePool`에 대한 입력으로 사용됩니다. 그런 다음, `Predict` 메서드가 `Startup` 클래스에 등록된 `SentimentAnalysisModel`을 사용하여 예측을 수행하고 성공하면 결과를 사용자에게 다시 반환합니다.
 

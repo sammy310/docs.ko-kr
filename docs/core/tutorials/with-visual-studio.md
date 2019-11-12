@@ -5,28 +5,28 @@ author: BillWagner
 ms.author: wiwagn
 ms.date: 09/13/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: b42a71993cb120c88b90e867b7af23873b99d280
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 3b397c8cac989fb7d1cbc1982cc2ce40a8777983
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039593"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454757"
 ---
 # <a name="build-a-c-hello-world-application-with-the-net-core-sdk-in-visual-studio-2017"></a>Visual Studio 2017에서 .NET Core SDK를 사용하여 C# Hello World 애플리케이션 빌드
 
-이 항목에서는 Visual Studio 2017에서 C#을 사용하여 간단한 .NET Core 콘솔 애플리케이션을 빌드, 디버그 및 게시하는 과정을 단계별로 소개합니다. Visual Studio 2017은 .NET Core 애플리케이션 빌드를 위해 필요한 모든 기능을 갖춘 개발 환경을 제공합니다. 플랫폼 특정 종속성이 없는 애플리케이션은 .NET Core에서 대상으로 하는 모든 플랫폼과 .NET Core가 설치된 모든 시스템에서 실행할 수 있습니다.
+이 문서에서는 Visual Studio 2017에서 C#을 사용하여 간단한 .NET Core 콘솔 애플리케이션을 빌드, 디버그 및 게시하는 과정을 단계별로 소개합니다. Visual Studio 2017은 .NET Core 애플리케이션 빌드를 위해 필요한 모든 기능을 갖춘 개발 환경을 제공합니다. 플랫폼 특정 종속성이 없는 애플리케이션은 .NET Core에서 대상으로 하는 모든 플랫폼과 .NET Core가 설치된 모든 시스템에서 실행할 수 있습니다.
 
 ## <a name="prerequisites"></a>전제 조건
 
-".NET Core 플랫폼 간 개발" 워크로드가 설치된 [Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs). .NET Core 2.1 버전 이상을 사용하여 앱을 개발할 수 있습니다.
+“.NET Core 플랫폼 간 개발” 워크로드가 설치된 [Visual Studio 2017 이상](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) .NET Core 2.1 버전 이상을 사용하여 앱을 개발할 수 있습니다.
 
-자세한 내용은 [Windows의 .NET Core에 대한 필수 조건](../windows-prerequisites.md) 항목을 참조하세요.
+자세한 내용은 [Windows의 .NET Core에 대한 필수 조건](../windows-prerequisites.md) 문서를 참조하세요.
 
 ## <a name="a-simple-hello-world-application"></a>간단한 Hello World 애플리케이션
 
 먼저 간단한 "Hello World" 콘솔 애플리케이션을 만들어 보겠습니다. 아래 단계를 수행합니다.
 
-1. Visual Studio 2017을 시작합니다. 메뉴 모음에서 **파일** > **새로 만들기** > **프로젝트**를 선택합니다. *새 프로젝트** 대화 상자에서 **Visual C#** 노드와 **.NET Core** 노드를 차례로 선택합니다. 그런 다음 **콘솔 앱(.NET Core)** 프로젝트 템플릿을 선택합니다. **이름** 텍스트 상자에 "HelloWorld"를 입력합니다. **확인** 단추를 선택합니다.
+1. Visual Studio를 실행합니다. 메뉴 모음에서 **파일** > **새로 만들기** > **프로젝트**를 선택합니다. **새 프로젝트** 대화 상자에서 **Visual C#** 노드와 **.NET Core** 노드를 차례로 선택합니다. 그런 다음 **콘솔 앱(.NET Core)** 프로젝트 템플릿을 선택합니다. **이름** 텍스트 상자에 "HelloWorld"를 입력합니다. **확인** 단추를 선택합니다.
 
    ![콘솔 앱이 선택된 새 프로젝트 대화 상자](./media/with-visual-studio/visual-studio-new-project.png)
 
@@ -59,7 +59,7 @@ ms.locfileid: "71039593"
 
 1. 코드 창에서 `static void Main(string[] args)` 줄 다음에 오는 여는 중괄호 바로 뒤, 첫 번째 닫는 중괄호 앞에 다음 C# 코드를 입력합니다.
 
-   [!code-csharp[GettingStarted#1](../../../samples/snippets/csharp/getting_started/with_visual_studio/helloworld.cs#1)]
+   [!code-csharp[GettingStarted#1](~/samples/snippets/csharp/getting_started/with_visual_studio/helloworld.cs#1)]
 
    이 코드는 `Main` 메서드의 콘텐츠를 바꿉니다.
 
@@ -81,7 +81,7 @@ ms.locfileid: "71039593"
 
 - 애플리케이션의 배포 가능한 버전을 개발 및 게시하는 방법에 대한 자세한 내용은 [Visual Studio 2017을 사용하여 .NET Core Hello World 애플리케이션 게시](publishing-with-visual-studio.md)를 참조하세요.
 
-## <a name="related-topics"></a>관련 항목
+## <a name="related-articles"></a>관련 문서
 
 콘솔 애플리케이션 대신 .NET Core 및 Visual Studio 2017을 사용하여 클래스 라이브러리를 빌드할 수도 있습니다. 단계별 지침을 보려면 [Visual Studio 2017에서 C# 및 .NET Core로 클래스 라이브러리 빌드](library-with-visual-studio.md)를 참조하세요.
 

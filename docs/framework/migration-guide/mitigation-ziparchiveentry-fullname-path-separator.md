@@ -8,14 +8,12 @@ helpviewer_keywords:
 - .NET Framework 4.6.1 retargeting changes
 - retargeting changes
 ms.assetid: 8d575722-4fb6-49a2-8a06-f72d62dc3766
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b97436ca2f81fea139689c7c2c2348718827b90f
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 021d22e90ba39a4d01cf7d64588fab2d724b6640
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70778857"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457727"
 ---
 # <a name="mitigation-ziparchiveentryfullname-path-separator"></a>완화: ZipArchiveEntry.FullName 경로 구분 기호
 .NET Framework 4.6.1을 대상으로 하는 앱부터 <xref:System.IO.Compression.ZipArchiveEntry.FullName%2A?displayProperty=nameWithType> 속성에 사용되는 경로 구분 기호가 이전 버전의 .NET Framework에서 사용된 백슬래시("\\")에서 슬래시("/")로 변경되었습니다.   <xref:System.IO.Compression.ZipFile.CreateFromDirectory%2A?displayProperty=nameWithType> 메서드의 오버로드 중 하나를 호출하여 <xref:System.IO.Compression.ZipArchiveEntry?displayProperty=nameWithType> 개체를 만듭니다.  
@@ -47,4 +45,4 @@ ms.locfileid: "70778857"
 ## <a name="see-also"></a>참고 항목
 
 - [대상 다시 지정 변경 내용](retargeting-changes-in-the-net-framework-4-6-1.md)
-- [4.6.1의 애플리케이션 호환성](application-compatibility-in-the-net-framework-4-6-1.md)
+- [애플리케이션 호환성](application-compatibility.md)

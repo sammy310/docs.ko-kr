@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - cancellation in .NET, overview
 ms.assetid: eea11fe5-d8b0-4314-bb5d-8a58166fb1c3
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3e39ee597f5142f2b3ccbd4ded49e59d6700ec8a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d4bbf30923d65ad7aeced80efa626136ae27491b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69960139"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138135"
 ---
 # <a name="cancellation-in-managed-threads"></a>관리되는 스레드의 취소
 .NET Framework 4부터 .NET Framework에서는 비동기 또는 장기 실행 비동기 작업의 협조적 취소를 위한 통합 모델을 사용합니다. 이 모델은 취소 토큰이라는 경량 개체에 기반을 둡니다. 취소할 수 있는 작업 하나 이상을 호출하는 개체가 새 스레드나 작업 등을 만드는 방식으로 토큰을 각 작업에 전달합니다. 개별 작업이 토큰 복사본을 다시 다른 작업에 전달할 수 있습니다. 나중에 토큰을 만든 개체가 해당 토큰을 사용하여 관련 작업이 수행 중인 작업을 중지하도록 요청할 수 있습니다. 요청 개체만 취소 요청을 실행할 수 있고 각 수신기는 적절한 시간에 적절한 방식으로 요청을 알리고 요청에 응답해야 합니다.  
@@ -31,11 +29,11 @@ ms.locfileid: "69960139"
 - <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> 메서드를 호출하여 취소 알림을 제공합니다.  
   
 > [!IMPORTANT]
-> <xref:System.Threading.CancellationTokenSource> 클래스는 <xref:System.IDisposable> 인터페이스를 구현합니다. 취소 토큰 소스 사용을 마치면 <xref:System.Threading.CancellationTokenSource.Dispose%2A?displayProperty=nameWithType> 메서드를 호출하여 토큰에 포함된 관리되지 않는 리소스를 해제해야 합니다.  
+> <xref:System.Threading.CancellationTokenSource> 클래스가 <xref:System.IDisposable> 인터페이스를 구현합니다. 취소 토큰 소스 사용을 마치면 <xref:System.Threading.CancellationTokenSource.Dispose%2A?displayProperty=nameWithType> 메서드를 호출하여 토큰에 포함된 관리되지 않는 리소스를 해제해야 합니다.  
   
  다음 그림에서는 토큰 소스와 모든 토큰 복사본의 관계를 보여 줍니다.  
   
- ![CancellationTokenSource 및 취소 토큰](../../../docs/standard/threading/media/vs-cancellationtoken.png "VS_CancellationToken")  
+ ![CancellationTokenSource 및 cancellation 토큰](../../../docs/standard/threading/media/vs-cancellationtoken.png "VS_CancellationToken")  
   
  새 취소 모델을 통해 취소 인식 애플리케이션 및 라이브러리를 더 쉽게 만들 수 있고 이 모델은 다음 기능을 지원합니다.  
   

@@ -3,12 +3,12 @@ title: C#의 역사 - C# 가이드
 description: 이 언어의 초창기 버전은 어떤 모습이었으며 이후 어떻게 변했는가?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: bce61d7a1838753f6cc2397440208e0c02b8194a
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 83934d9c8194d5109cea0e847d287c01c32a2955
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002699"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739099"
 ---
 # <a name="the-history-of-c"></a>C\#의 역사
 
@@ -57,7 +57,7 @@ C# 버전 1.2는 Visual Studio .NET 2003과 함께 제공됩니다. 여기에는
 - [제네릭](../programming-guide/generics/index.md)
 - [부분 형식(Partial Type)](../programming-guide/classes-and-structs/partial-classes-and-methods.md#partial-classes)
 - [무명 메서드](../language-reference/operators/delegate-operator.md)
-- [Nullable 값 형식](../programming-guide/nullable-types/index.md)
+- [Nullable 값 형식](../language-reference/builtin-types/nullable-value-types.md)
 - [반복기](../programming-guide/concepts/iterators.md)
 - [공변성(Covariance) 및 반공변성(Contravariance)](../programming-guide/concepts/covariance-contravariance/index.md)
 
@@ -104,7 +104,7 @@ Visual Studio 2010과 함께 릴리스된 C# 버전 4.0은 버전 3.0의 혁신�
 
 다음 버전에서는 몇 가지 흥미로운 새 기능이 도입되었습니다.
 
-- [동적 바인딩](../language-reference/keywords/dynamic.md)
+- [동적 바인딩](../language-reference/builtin-types/reference-types.md)
 - [명명된/선택적 인수](../programming-guide/classes-and-structs/named-and-optional-arguments.md)
 - [제네릭 공변(covariant) 및 반공변(contravariant)](../../standard/generics/covariance-and-contravariance.md)
 - [포함된 interop 형식](../../framework/interop/type-equivalence-and-embedded-interop-types.md)
@@ -132,7 +132,7 @@ Visual Studio 2012과 함께 릴리스된 C# 버전 5.0은 언어에 중점을 �
 
 ## <a name="c-version-60"></a>C# 버전 6.0
 
-버전 3.0과 5.0에서 C#은 개체 지향 언어의 주요 새 기능을 추가했습니다. Visual Studio 2013과 함께 릴리스된 버전 6.0은 주요 핵심 기능 대신 C# 프로그래밍을 보다 생산적으로 만드는 많은 작은 기능을 릴리스했습니다. 다음은 몇 가지 예입니다.
+버전 3.0과 5.0에서 C#은 개체 지향 언어의 주요 새 기능을 추가했습니다. Visual Studio 2015와 함께 릴리스된 버전 6.0은 주요 핵심 기능 대신 C# 프로그래밍을 보다 생산적으로 만드는 많은 작은 기능을 릴리스했습니다. 다음은 몇 가지 예입니다.
 
 - [정적 가져오기](./csharp-6.md#using-static)
 - [예외 필터](./csharp-6.md#exception-filters)

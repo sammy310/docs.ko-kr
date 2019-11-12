@@ -5,14 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 33f97d13-3022-43da-8b18-cdb5c88df9c2
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e98b447028ef9fa96233a71133aa82184d83cec8
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 45225d73ac60564d3e22c73270faab6b4e04d697
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70779161"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457830"
 ---
 # <a name="mitigation-tls-protocols"></a>완화: TLS 프로토콜
 .NET Framework 4.6부터 <xref:System.Net.ServicePointManager?displayProperty=nameWithType> 및 <xref:System.Net.Security.SslStream?displayProperty=nameWithType> 클래스에서 다음 세 개의 프로토콜 중 하나를 사용할 수 있습니다. Tls1.0, Tls1.1 또는 Tls 1.2. SSL3.0 프로토콜 및 RC4 암호화는 지원되지 않습니다.  
@@ -44,4 +42,4 @@ ms.locfileid: "70779161"
   
 ## <a name="see-also"></a>참고 항목
 
-- [대상 다시 지정 변경 내용](retargeting-changes-in-the-net-framework-4-6.md)
+- [애플리케이션 호환성](application-compatibility.md)

@@ -10,18 +10,18 @@ helpviewer_keywords:
 - implicit keyword [C#]
 - conversion operator [C#]
 - user-defined conversion [C#]
-ms.openlocfilehash: 8788883a6c60032de2ffab658fcf2721654fc6f7
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 25f042dec5fd5594b7e166cc064394e90db01c27
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69566670"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73036112"
 ---
 # <a name="user-defined-conversion-operators-c-reference"></a>사용자 정의 전환 연산자(C# 참조)
 
 사용자 정의 형식은 다른 형식에서 또는 다른 형식으로 사용자 지정 암시적 또는 명시적 변환을 정의할 수 있습니다.
 
-암시적 변환은 특별한 구문을 호출할 필요가 없으며, 할당과 메서드 호출과 같은 다양한 상황에서 발생할 수 있습니다. 미리 정의된 C# 암시적 변환은 항상 성공하며 예외를 throw하거나 정보가 손실되지 않습니다. 사용자 정의 암시적 변화도 이러한 방식으로 작동해야 합니다. 사용자 지정 변환이 예외를 throw하거나 정보가 손실될 수 있는 경우 이를 명시적 변환으로 정의합니다.
+암시적 변환은 특별한 구문을 호출할 필요가 없으며, 할당과 메서드 호출과 같은 다양한 상황에서 발생할 수 있습니다. 미리 정의된 C# 암시적 변환은 항상 성공하며 예외를 throw하지 않습니다. 사용자 정의 암시적 변화도 이러한 방식으로 작동해야 합니다. 사용자 지정 변환이 예외를 throw하거나 정보가 손실될 수 있는 경우 이를 명시적 변환으로 정의합니다.
 
 사용자 정의 변환은 [is](type-testing-and-cast.md#is-operator) 및 [as](type-testing-and-cast.md#as-operator) 연산자로 간주되지 않습니다. [캐스트 연산자 ()](type-testing-and-cast.md#cast-operator-)를 사용하여 사용자 정의 명시적 변환을 호출합니다.
 

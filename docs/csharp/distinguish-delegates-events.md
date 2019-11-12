@@ -2,13 +2,14 @@
 title: 대리자 및 이벤트를 구별
 description: 대리자와 이벤트 간의 차이점 및 .NET Core의 이러한 기능을 사용하는 경우를 각각 알아봅니다.
 ms.date: 06/20/2016
+ms.technology: csharp-fundamentals
 ms.assetid: 0fdc8629-2fdb-4a7c-a433-5b9d04eaf911
-ms.openlocfilehash: 2f9c26519d93314f4991829191723df5426b23b7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ff90af1d2b1a92f06eed58228f8e8ca5ff6b93ca
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33219140"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73037312"
 ---
 # <a name="distinguishing-delegates-and-events"></a>대리자 및 이벤트를 구별
 
@@ -35,7 +36,7 @@ UX 컨트롤은 이벤트를 수신하는 구독자가 없는 경우에도 여�
 
 또 다른 고려 사항은 대리자 메서드에 필요한 메서드 프로토타입입니다. 지금까지 살펴본 대로 이벤트에 사용된 대리자는 모두 void 반환 형식을 갖습니다. 또한 이벤트 인수 개체의 속성을 수정하여 이벤트 소스에 다시 정보를 전달하는 이벤트 처리기를 만드는 관용구가 있음을 확인했습니다. 이러한 관용구도 작업을 수행하기는 하지만 메서드에서 값을 반환하는 것만큼 자연스럽지 않습니다.
 
-이러한 두 추론은 종종 둘 다 제공될 수 있습니다. 대리자 메서드가 값을 반환하는 경우 어떤 방식으로든 알고리즘에 영향을 줄 가능성이 있습니다.
+이러한 두 가지 추론은 종종 존재할 수 있습니다. 대리자 메서드가 값을 반환하는 경우 어떤 방식으로든 알고리즘에 영향을 줄 수 있습니다.
 
 ## <a name="event-listeners-often-have-longer-lifetimes"></a>종종 이벤트 수신기의 수명이 길어짐 
 

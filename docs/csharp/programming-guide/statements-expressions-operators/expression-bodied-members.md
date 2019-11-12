@@ -5,14 +5,12 @@ ms.date: 02/06/2019
 helpviewer_keywords:
 - expression-bodied members[C#]
 - C# language, expresion-bodied members
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d7c282157639a6a60270ce8dbebbc91dd0e0a3f3
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 45dcc58b252963e80798ba86ca5c4f461d493fac
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826618"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120138"
 ---
 # <a name="expression-bodied-members-c-programming-guide"></a>식 본문 멤버(C# 프로그래밍 가이드)
 
@@ -89,9 +87,9 @@ C# 7.0부터는 식 본문 정의를 사용하여 `get` 및 `set` 속성 접근�
 
 ## <a name="indexers"></a>인덱서
 
-속성과 마찬가지로, get 접근자가 값을 반환하는 단일 문으로 구성되거나 set 접근자가 단순 할당을 수행하는 경우 인덱서의 get 및 set 접근자는 식 본문 정의로 구성됩니다.
+속성과 마찬가지로, `get` 접근자가 값을 반환하는 단일 식으로 구성되거나 `set` 접근자가 단순 할당을 수행하는 경우 인덱서의 `get` 및 `set` 접근자는 식 본문 정의로 구성됩니다.
 
-다음 예제에서는 다양한 스포츠의 이름이 포함된 내부 <xref:System.String> 배열을 포함하는 `Sports`라는 클래스를 정의합니다. 인덱서의 get 및 set 접근자는 둘 다 식 본문 정의로 구현됩니다.
+다음 예제에서는 다양한 스포츠의 이름이 포함된 내부 <xref:System.String> 배열을 포함하는 `Sports`라는 클래스를 정의합니다. 인덱서의 `get` 및 `set` 접근자는 둘 다 식 본문 정의로 구현됩니다.
 
 [!code-csharp[expression-bodied-indexer](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-indexers.cs#1)]
 

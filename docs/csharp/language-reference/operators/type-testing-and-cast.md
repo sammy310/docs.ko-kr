@@ -18,12 +18,12 @@ helpviewer_keywords:
 - cast expression [C#]
 - () operator [C#]
 - typeof operator [C#]
-ms.openlocfilehash: 62186409fdc1abb2275af535be3ae939a1e63323
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d2fd43644949c842ff883731d3c7f00228cabfd7
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69922289"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73038863"
 ---
 # <a name="type-testing-and-cast-operators-c-reference"></a>형식 테스트 및 캐스트 연산자(C# 참조)
 
@@ -52,7 +52,7 @@ E is T
 
 [!code-csharp[is with reference conversion](~/samples/csharp/language-reference/operators/TypeTestingAndConversionOperators.cs#IsWithReferenceConversion)]
 
-다음 예제에서는 `is` 연산자가 boxing 및 unboxing 변환은 고려하지만 숫자 변환을 고려하지 않는 것을 보여 줍니다.
+다음 예제에서는 `is` 연산자가 boxing 및 unboxing 변환은 고려하지만 [숫자 변환](../builtin-types/numeric-conversions.md)을 고려하지 않는 것을 보여 줍니다.
 
 [!code-csharp-interactive[is with int](~/samples/csharp/language-reference/operators/TypeTestingAndConversionOperators.cs#IsWithInt)]
 
@@ -101,7 +101,7 @@ E is T ? (T)(E) : (T)null
 > [!NOTE]
 > 앞의 예제와 같이, `as` 식의 결과를 `null`과 비교하여 변환에 성공했는지 확인해야 합니다. C# 7.0부터, [is 연산자](#type-testing-with-pattern-matching)를 사용하여 변환에 성공하는지 테스트하고, 성공한 경우 해당 결과를 새 변수에 할당할 수 있습니다.
 
-## <a name="cast-operator-"></a>캐스트 연산자 ()
+## <a name="cast-operator-"></a>캐스트 연산자()
 
 `(T)E` 형태의 캐스트 식은 `E` 식의 결과를 `T` 형식으로 명시적으로 변환합니다. `E` 형식에서 `T` 형식으로의 명시적 변환이 없는 경우 컴파일 시간 오류가 발생합니다. 런타임에 명시적 변환이 실패하고 캐스트 식이 예외를 throw할 수도 있습니다.
 
@@ -155,3 +155,4 @@ E is T ? (T)(E) : (T)null
 - [C# 참조](../index.md)
 - [C# 연산자](index.md)
 - [방법: 패턴 일치와 is 및 as 연산자를 사용하여 안전하게 캐스트](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md)
+- [.NET의 제네릭](../../../standard/generics/index.md)

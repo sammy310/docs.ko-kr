@@ -5,12 +5,12 @@ author: briacht
 ms.date: 09/30/2019
 ms.custom: mvc, title-hack-0516
 ms.topic: tutorial
-ms.openlocfilehash: 51dcf5cd85913f0e69ea51dff5101426cc57390f
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 2d960a43f7934e262fa0e19abfea0209aa4e9ff0
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774458"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73425224"
 ---
 # <a name="tutorial-build-a-movie-recommender-using-matrix-factorizaton-with-mlnet"></a>자습서: ML.NET에서 행렬 인수분해를 사용하여 영화 추천기 빌드
 
@@ -73,7 +73,7 @@ ms.locfileid: "72774458"
 
 2. 솔루션 탐색기에서 각 \*.csv 파일을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다. **고급** 아래에서 **출력 디렉터리에 복사** 값을 **변경된 내용만 복사**로 변경합니다.
 
-   ![VS의 최신 버전이면 복사](./media/movie-recommendation/copytoout.gif)
+   ![VS의 최신 버전이면 복사를 선택하는 사용자의 GIF](./media/movie-recommendation/copy-to-output-if-newer.gif)
 
 ## <a name="load-your-data"></a>데이터 로드
 
@@ -83,7 +83,7 @@ ML.NET 프로세스의 첫 번째 단계는 모델 학습 및 테스트 데이�
 
 다음은 \*.csv 파일의 데이터 미리 보기입니다.
 
-![데이터 미리 보기](./media/movie-recommendation/csv-dataset-preview.png)
+![CVS 데이터 세트 미리 보기의 스크린샷](./media/movie-recommendation/csv-file-dataset-preview.png)
 
 \*.csv 파일에는 다음 네 개의 열이 있습니다.
 
@@ -171,11 +171,11 @@ ML.NET에는 세 가지 주요 개념이 있습니다. [데이터](../resources/
 
 기계 학습 알고리즘은 특정 형식의 데이터가 필요합니다. `Transformers`는 표 형식 데이터를 호환 가능한 형식으로 변환하는 데 사용됩니다.
 
-![변환기 이미지](./media/movie-recommendation/transformer.png)
+![변환기 데이터 흐름의 다이어그램](./media/movie-recommendation/data-transformer-transformed.png)
 
 `Estimators`를 생성하여 ML.NET에서 `Transformers`를 만듭니다. `Estimators`는 데이터를 가져와서 `Transformers`를 반환합니다.
 
-![평가자 이미지](./media/movie-recommendation/estimator.png)
+![평가자 데이터 흐름의 다이어그램](./media/movie-recommendation/data-estimator-transformer.png)
 
 모델 학습에 사용할 권장 학습 알고리즘은 `Estimator`의 예입니다.
 

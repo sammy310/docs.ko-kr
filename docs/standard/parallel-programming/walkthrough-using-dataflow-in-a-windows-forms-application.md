@@ -7,14 +7,12 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - Windows Forms, and TPL
 ms.assetid: 9c65cdf7-660c-409f-89ea-59d7ec8e127c
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: dbe5b5db580e06bfd3e5723addd404eae7950e6c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b6f4b933f76834f48d522d9c97fb0c9b5c24e13d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946344"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139924"
 ---
 # <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>연습: Windows Forms 애플리케이션에서 데이터 흐름 사용
 이 문서에서는 Windows Forms 애플리케이션에서 이미지 처리를 수행하는 데이터 흐름 블록의 네트워크를 만드는 방법을 보여 줍니다.  
@@ -86,7 +84,7 @@ ms.locfileid: "69946344"
   
  다음 표에서는 네트워크의 멤버를 설명합니다.  
   
-|멤버|형식|설명|  
+|멤버|Type|설명|  
 |------------|----------|-----------------|  
 |`loadBitmaps`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|폴더 경로를 입력으로 사용하고 <xref:System.Drawing.Bitmap> 개체 컬렉션을 출력으로 생성합니다.|  
 |`createCompositeBitmap`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|<xref:System.Drawing.Bitmap> 개체 컬렉션을 입력으로 사용하고 복합 비트맵을 출력으로 생성합니다.|  

@@ -7,27 +7,27 @@ f1_keywords:
 helpviewer_keywords:
 - operator keyword [C#]
 - operator overloading [C#]
-ms.openlocfilehash: 130eb4be66d13b43e5605ef98a647fa9f4223014
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 04c8731867e32ce1000a511c9ab36db554664a97
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71116086"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73038947"
 ---
 # <a name="operator-overloading-c-reference"></a>연산자 오버로드(C# 참조)
 
-사용자 정의 형식은 미리 정의된 C# 연산자를 오버로드할 수 있습니다. 즉, 피연산자 중 하나 또는 두 개가 해당 형식일 때 형식은 작업의 사용자 정의 구현을 제공할 수 있습니다. [오버로드할 수 있는 연산자](#overloadable-operators) 섹션에는 오버로드할 수 있는 C# 연산자가 나와 있습니다.
+사용자 정의 형식은 미리 정의된 C# 연산자를 오버로드할 수 있습니다. 즉, 피연산자 중 하나 또는 두 개가 해당 형식인 경우 형식은 작업의 사용자 정의 구현을 제공할 수 있습니다. [오버로드할 수 있는 연산자](#overloadable-operators) 섹션에는 오버로드할 수 있는 C# 연산자가 나와 있습니다.
 
 `operator` 키워드를 사용하여 연산자를 선언합니다. 연산자 선언은 다음 규칙을 충족해야 합니다.
 
 - `public` 및 `static` 한정자를 모두 포함합니다.
-- 단항 연산자는 하나의 매개 변수를 사용합니다. 이항 연산자는 두 개의 매개 변수를 사용합니다. 각각의 경우 하나 이상의 매개 변수가 `T` 또는 `T?` 유형을 가져야 하며, 여기서 `T`는 연산자 선언이 포함된 유형입니다.
+- 단항 연산자에는 하나의 입력 매개 변수가 있습니다. 이항 연산자에는 두 개의 입력 매개 변수가 있습니다. 각각의 경우 하나 이상의 매개 변수가 `T` 또는 `T?` 유형을 가져야 하며, 여기서 `T`는 연산자 선언이 포함된 유형입니다.
 
 다음 예제에서는 유리수를 나타내는 간단한 구조를 정의합니다. 구조체가 [산술 연산자](arithmetic-operators.md) 중 일부를 오버로드합니다.
 
 [!code-csharp[fraction example](~/samples/csharp/language-reference/operators/OperatorOverloading.cs)]
 
-암시적 변환을 `int`에서 `Fraction`으로 정의하여 앞의 예제를 확장할 수 있습니다. 그런 다음, 오버로드된 연산자는 해당 두 형식의 인수를 지원합니다. 즉, 분수에 정수를 추가하고 그 결과로 분수를 얻을 수 있습니다.
+[암시적 변환](user-defined-conversion-operators.md)을 `int`에서 `Fraction`으로 정의하여 앞의 예제를 확장할 수 있습니다. 그런 다음, 오버로드된 연산자는 해당 두 형식의 인수를 지원합니다. 즉, 분수에 정수를 추가하고 그 결과로 분수를 얻을 수 있습니다.
 
 또한 `operator` 키워드를 사용하여 사용자 지정 형식 변환을 정의합니다. 자세한 내용은 [사용자 정의 변환 연산자](user-defined-conversion-operators.md)를 참조하세요.
 

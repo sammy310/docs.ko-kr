@@ -4,12 +4,12 @@ description: 제품 판매 데이터에 대한 변칙 검색 애플리케이션�
 ms.date: 07/17/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: ed4c24fac2348c021982ad593417b33d50347dd1
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 37c6b99fbd7db63c19201e0c6dce9b2b6d9f1932
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774434"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423596"
 ---
 # <a name="tutorial-detect-anomalies-in-product-sales-with-mlnet"></a>자습서: ML.NET을 사용하여 제품 판매의 변칙 검색
 
@@ -127,7 +127,7 @@ ML.NET의 데이터는 [IDataView 클래스](xref:Microsoft.ML.IDataView)로 표
 
 변칙 검색은 예기치 않거나 비정상적인 이벤트 또는 동작을 플래그합니다. 문제를 살펴봐야 할 곳에 대한 단서를 제공하고 "이상한가?"라는 질문에 대해 답할 수 있도록 도와줍니다.
 
-![이상한가](./media/sales-anomaly-detection/anomalydetection.png)
+!["이상한가" 변칙 검색의 예](./media/sales-anomaly-detection/time-series-anomaly-detection.png)
 
 변칙 검색은 시계열 데이터의 이상값 즉, 예상치 않거나 “이상한” 동작이 발생한 지정된 시계열의 지점을 검색하는 프로세스로서,
 
@@ -152,7 +152,7 @@ ML.NET에서 IID 급증 검색 또는 IID 변화점 검색 알고리즘은 [독�
 
 스파이크 검색의 목표는 대다수의 시계열 데이터 값과는 상당히 다른 갑작스럽지만 일시적인 버스트를 식별하는 것입니다. 의심스러운 희귀 항목, 이벤트 또는 관찰 사항을 시기적절하게 검색하여 최소화해야 합니다. 정전, 사이버 공격 또는 바이러스성 웹 콘텐츠 등의 다양한 변칙을 검색하기 위해 다음과 같은 접근 방식을 사용할 수 있습니다. 다음 이미지는 시계열 데이터 세트에서 급증의 예입니다.
 
-![SpikeDetection](./media/sales-anomaly-detection/SpikeDetection.png)
+![두 개의 급증 검색을 보여 주는 스크린샷](./media/sales-anomaly-detection/two-spike-detections.png)
 
 ### <a name="add-the-createemptydataview-method"></a>CreateEmptyDataView() 메서드 추가
 
@@ -266,7 +266,7 @@ Alert   Score   P-Value
 
 `Change points`은 수치 변화 및 추세와 같은 값의 시계열 이벤트 스트림 분산에서 지속적인 변화입니다. 이러한 지속적인 변화는 `spikes`보다 훨씬 오래 지속되며 심각한 이벤트를 나타낼 수 있습니다. `Change points`는 보통 육안으로는 보이지 않지만, 다음 메서드에서와 같은 접근법을 사용하여 데이터에서 검색할 수 있습니다.  다음 이미지는 변화점 검색의 예입니다.
 
-![ChangePointDetection](./media/sales-anomaly-detection/ChangePointDetection.png)
+![변화점 검색을 보여 주는 스크린샷](./media/sales-anomaly-detection/change-point-detection.png)
 
 ### <a name="create-the-detectchangepoint-method"></a>DetectChangepoint() 메서드 만들기
 

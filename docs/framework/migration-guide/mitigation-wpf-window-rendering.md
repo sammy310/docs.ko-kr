@@ -2,14 +2,12 @@
 title: '완화: WPF 창 렌더링'
 ms.date: 03/30/2017
 ms.assetid: 28ed6bf8-141b-4b73-a4e3-44a99fae5084
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 13091c06561da24d2fc03f810fd8b8687b21d9a4
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 42d6abf1ba6ed7c17a5a5604e98b5ee46d0c3ac2
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70789797"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457773"
 ---
 # <a name="mitigation-wpf-window-rendering"></a>완화: WPF 창 렌더링
 
@@ -23,7 +21,7 @@ Windows 8 이상에서 모니터 간의 WPF 창을 렌더링하는 작업에 미
 
 ## <a name="mitigation"></a>완화
 
-이 변경을 사용하지 않도록 설정하고 단일 디스플레이를 벗어나 확장될 때 WPF 창을 클리핑하는 이전 동작으로 되돌릴 수 있습니다. 여기에는 두 가지 방법이 있습니다.
+이 변경을 사용하지 않도록 설정하고 단일 디스플레이를 벗어나 확장될 때 WPF 창을 클리핑하는 이전 동작으로 되돌릴 수 있습니다. 이때 다음과 같은 두 가지 방법을 사용할 수 있습니다.
 
 - 애플리케이션 구성 파일의 `<appSettings>` 섹션에 `<EnableMultiMonitorDisplayClipping>` 요소를 추가하여 Windows 8 이상에서 실행되는 앱에서 이 동작을 사용하지 않거나 사용하도록 설정할 수 있습니다. 예를 들어 다음 구성 섹션은 클리핑 없이 렌더링을 사용하지 않도록 설정합니다.
 
@@ -43,4 +41,4 @@ Windows 8 이상에서 모니터 간의 WPF 창을 렌더링하는 작업에 미
 
 ## <a name="see-also"></a>참고 항목
 
-- [런타임 변경 내용](runtime-changes-in-the-net-framework-4-6.md)
+- [애플리케이션 호환성](application-compatibility.md)

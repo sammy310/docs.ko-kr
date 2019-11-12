@@ -2,14 +2,12 @@
 title: '완화: 경로 정규화'
 ms.date: 03/30/2017
 ms.assetid: 158d47b1-ba6d-4fa6-8963-a012666bdc31
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bc5ea69d80a225adfc2f409e8303ee1c241398db
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1e7b540975b84320d099ca004df5b6a87aa60f6a
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70779340"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457890"
 ---
 # <a name="mitigation-path-normalization"></a>완화: 경로 정규화
 .NET Framework 4.6.2를 대상으로 하는 앱부터 .NET Framework의 경로 정규화가 변경되었습니다.  
@@ -63,4 +61,4 @@ ms.locfileid: "70779340"
   
 ## <a name="see-also"></a>참고 항목
 
-- [대상 다시 지정 변경 내용](retargeting-changes-in-the-net-framework-4-6-2.md)
+- [애플리케이션 호환성](application-compatibility.md)

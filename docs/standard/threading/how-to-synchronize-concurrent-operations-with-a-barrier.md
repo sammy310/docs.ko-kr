@@ -1,5 +1,5 @@
 ---
-title: '방법: 동시 작업을 배리어와 동기화'
+title: '방법: 동시 실행 작업을 배리어와 동기화'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,16 +8,14 @@ dev_langs:
 helpviewer_keywords:
 - Barrier, how to use
 ms.assetid: e1a253ff-e0fb-4df8-95ff-d01a90d4cb19
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 16dc60fa9cd8782efbe1b6028413138b5991839e
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 33098878764c2f8a8c1f83a122028da40b984243
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48025350"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137969"
 ---
-# <a name="how-to-synchronize-concurrent-operations-with-a-barrier"></a>방법: 동시 작업을 배리어와 동기화
+# <a name="how-to-synchronize-concurrent-operations-with-a-barrier"></a>방법: 동시 실행 작업을 배리어와 동기화
 다음 예제는 <xref:System.Threading.Barrier>와 동시 작업을 동기화하는 방법을 보여줍니다.  
   
 ## <a name="example"></a>예  

@@ -1,15 +1,15 @@
 ---
-title: dotnet-add reference 명령
+title: dotnet add reference 명령
 description: dotnet add reference 명령은 프로젝트 간 참조를 추가하는 편리한 옵션을 제공합니다.
 ms.date: 06/26/2019
-ms.openlocfilehash: 79c8a787079e02f6cf227820c24bb4157b0292c6
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: c97975e11410cfaad18ca68832957d75a4a2fd09
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72522773"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73100810"
 ---
-# <a name="dotnet-add-reference"></a>dotnet-add reference
+# <a name="dotnet-add-reference"></a>dotnet add reference
 
 **이 문서 적용 대상: ✓** .NET Core 1.x SDK 이상 버전
 

@@ -5,14 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b73dd4f4-f2dc-47a2-9425-3896e92321fb
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d7f53a2e8684029c0d1329d29a88bd1788e62d43
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 99cc1eae08697909d89e5c1e46cd604c7da543bc
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70789670"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457744"
 ---
 # <a name="mitigation-xml-schema-validation"></a>완화: XML 스키마 유효성 검사
 .NET Framework 4.6에서 복합 키를 사용하고 한 개의 키가 비어 있는 경우 XSD 스키마 유효성 검사가 고유한 제약 조건 위반을 검색합니다.  
@@ -39,4 +37,4 @@ ms.locfileid: "70789670"
   
 ## <a name="see-also"></a>참고 항목
 
-- [대상 다시 지정 변경 내용](retargeting-changes-in-the-net-framework-4-6.md)
+- [애플리케이션 호환성](application-compatibility.md)

@@ -29,16 +29,16 @@ helpviewer_keywords:
 - ^ operator [C#]
 - bitwise logical OR operator [C#]
 - '| operator [C#]'
-ms.openlocfilehash: 0a251e8d04f31a736ee6acbf4b8e913cfb8ca6df
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 9336ff57722e575d3ecfdb3db2b99bf7bbb6b433
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771717"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039111"
 ---
 # <a name="bitwise-and-shift-operators-c-reference"></a>비트 및 시프트 연산자(C# 참조)
 
-다음 연산자는 [정수 형식](../builtin-types/integral-numeric-types.md)의 피연산자를 사용하여 비트 논리 또는 시프트 연산을 수행합니다.
+다음 연산자는 [정수 형식](../builtin-types/integral-numeric-types.md) 또는 [char](../keywords/char.md) 형식의 피연산자를 사용하여 비트 논리 또는 시프트 연산을 수행합니다.
 
 - 단항 [`~`(비트 보수)](#bitwise-complement-operator-) 연산자
 - 이진 [`<<`(왼쪽 시프트)](#left-shift-operator-) 및 [`>>`(오른쪽 시프트)](#right-shift-operator-) 시프트 연산자
@@ -82,11 +82,11 @@ ms.locfileid: "72771717"
 
 빈 상위 공백 비트 위치는 다음과 같이 왼쪽 피연산자 형식에 따라 설정됩니다.
 
-- 왼쪽 피연산자가 [int](../builtin-types/integral-numeric-types.md) 또는 [long](../builtin-types/integral-numeric-types.md) 형식인 경우 오른쪽 시프트 연산자는 *산술* 시프트를 수행합니다. 왼쪽 피연산자의 최상위 비트(부호 비트) 값이 빈 상위 비트 위치로 전파됩니다. 즉, 빈 상위 비트 위치는 왼쪽 피연산자가 음수가 아닌 경우 0으로 설정되고, 음수인 경우 1로 설정됩니다.
+- 왼쪽 피연산자가 `int` 또는 `long` 형식인 경우 오른쪽 시프트 연산자는 *산술* 시프트를 수행합니다. 왼쪽 피연산자의 최상위 비트(부호 비트) 값이 빈 상위 비트 위치로 전파됩니다. 즉, 빈 상위 비트 위치는 왼쪽 피연산자가 음수가 아닌 경우 0으로 설정되고, 음수인 경우 1로 설정됩니다.
 
   [!code-csharp-interactive[arithmetic right shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#ArithmeticRightShift)]
 
-- 왼쪽 피연산자가 [uint](../builtin-types/integral-numeric-types.md) 또는 [ulong](../builtin-types/integral-numeric-types.md) 형식이면 오른쪽 시프트 피연산자는 *논리적* 시프트를 수행합니다. 빈 상위 비트 위치가 항상 0으로 설정됩니다.
+- 왼쪽 피연산자가 `uint` 또는 `ulong` 형식이면 오른쪽 시프트 피연산자는 *논리적* 시프트를 수행합니다. 빈 상위 비트 위치가 항상 0으로 설정됩니다.
 
   [!code-csharp-interactive[logical right shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#LogicalRightShift)]
 
@@ -98,7 +98,7 @@ ms.locfileid: "72771717"
 
 [!code-csharp-interactive[bitwise AND](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#BitwiseAnd)]
 
-`bool` 유형의 피연산자의 경우 `&` 연산자는 해당 피연산자의 [논리 AND](boolean-logical-operators.md#logical-and-operator-)를 컴퓨팅합니다. 단항 `&` 연산자는 [address-of 연산자](pointer-related-operators.md#address-of-operator-)입니다.
+`bool` 피연산자의 경우 `&` 연산자는 피연산자의 [논리 AND](boolean-logical-operators.md#logical-and-operator-)를 컴퓨팅합니다. 단항 `&` 연산자는 [address-of 연산자](pointer-related-operators.md#address-of-operator-)입니다.
 
 ## <a name="logical-exclusive-or-operator-"></a>논리 배타적 OR 연산자 ^
 
@@ -106,7 +106,7 @@ ms.locfileid: "72771717"
 
 [!code-csharp-interactive[bitwise XOR](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#BitwiseXor)]
 
-`bool` 유형의 피연산자의 경우 `^` 연산자는 해당 피연산자의 [논리 배타적 OR](boolean-logical-operators.md#logical-exclusive-or-operator-)을 컴퓨팅합니다.
+`bool` 피연산자의 경우 `^` 연산자는 피연산자의 [논리 배타적 OR](boolean-logical-operators.md#logical-exclusive-or-operator-)을 컴퓨팅합니다.
 
 ## <a name="logical-or-operator-"></a>논리 OR 연산자 |
 
@@ -114,7 +114,7 @@ ms.locfileid: "72771717"
 
 [!code-csharp-interactive[bitwise OR](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#BitwiseOr)]
 
-`bool` 유형의 피연산자의 경우 `|` 연산자는 해당 피연산자의 [논리 OR](boolean-logical-operators.md#logical-or-operator-)을 컴퓨팅합니다.
+`bool` 피연산자의 경우 `|` 연산자는 피연산자의 [논리 OR](boolean-logical-operators.md#logical-or-operator-)을 컴퓨팅합니다.
 
 ## <a name="compound-assignment"></a>복합 할당
 
@@ -154,17 +154,17 @@ x = x op y
 
 [!code-csharp-interactive[operator precedence](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#Precedence)]
 
-우선 순위 수준에 따라 정렬된 전체 연산자 목록은 [C# 연산자](index.md)를 참조하세요.
+우선 순위 수준에 따라 정렬된 전체 연산자 목록은 [C# 연산자](index.md#operator-precedence) 문서의 [연산자 우선 순위](index.md) 섹션을 참조하세요.
 
 ## <a name="shift-count-of-the-shift-operators"></a>시프트 연산자의 시프트 수
 
-시트프 연산자 `<<` 및 `>>`의 경우 오른쪽 피연산자의 형식은 [int](../builtin-types/integral-numeric-types.md)이거나 `int`로의 [미리 정의된 암시적 숫자 변환](../builtin-types/numeric-conversions.md#implicit-numeric-conversions)이 있는 형식이어야 합니다.
+시트프 연산자 `<<` 및 `>>`의 경우 오른쪽 피연산자의 형식은 `int`이거나 `int`로의 [미리 정의된 암시적 숫자 변환](../builtin-types/numeric-conversions.md#implicit-numeric-conversions)이 있는 형식이어야 합니다.
 
 `x << count` 및 `x >> count`식의 경우 실제 시프트 수는 다음과 같이 `x` 형식에 따라 달라집니다.
 
-- `x`의 형식이 [int](../builtin-types/integral-numeric-types.md) 또는 [uint](../builtin-types/integral-numeric-types.md)이면 시프트 수는 오른쪽 피연산자의 하위 *5*비트로 정의됩니다. 즉, 시프트 수는 `count & 0x1F`(또는 `count & 0b_1_1111`)에서 계산됩니다.
+- `x`의 형식이 `int` 또는 `uint`이면 시프트 수는 오른쪽 피연산자의 하위 *5*비트로 정의됩니다. 즉, 시프트 수는 `count & 0x1F`(또는 `count & 0b_1_1111`)에서 계산됩니다.
 
-- `x`의 형식이 [long](../builtin-types/integral-numeric-types.md) 또는 [ulong](../builtin-types/integral-numeric-types.md)이면 시프트 수는 오른쪽 피연산자의 하위 *6*비트로 정의됩니다. 즉, 시프트 수는 `count & 0x3F`(또는 `count & 0b_11_1111`)에서 계산됩니다.
+- `x`의 형식이 `long` 또는 `ulong`이면 시프트 수는 오른쪽 피연산자의 하위 *6*비트로 정의됩니다. 즉, 시프트 수는 `count & 0x3F`(또는 `count & 0b_11_1111`)에서 계산됩니다.
 
 다음 예제에서는 해당 동작을 보여줍니다.
 
@@ -172,7 +172,7 @@ x = x op y
 
 ## <a name="enumeration-logical-operators"></a>열거형 논리 연산자
 
-`~`, `&`, `|` 및 `^` 연산자도 [열거형](../keywords/enum.md) 형식에 대해 정의됩니다. 동일한 열거형 형식의 피연산자인 경우, 기본 정수 형식의 해당 값에 대해 논리 연산을 수행됩니다. 예를 들어 기본 형식이 `U`인 열거형 형식 `T`의 `x` 및 `y`에 대해 `x & y` 식은 `(T)((U)x & (U)y)` 식과 동일한 결과를 생성합니다.
+`~`, `&`, `|` 및 `^` 연산자도 [열거형](../keywords/enum.md) 형식에 대해 지원됩니다. 동일한 열거형 형식의 피연산자인 경우, 기본 정수 형식의 해당 값에 대해 논리 연산을 수행됩니다. 예를 들어 기본 형식이 `U`인 열거형 형식 `T`의 `x` 및 `y`에 대해 `x & y` 식은 `(T)((U)x & (U)y)` 식과 동일한 결과를 생성합니다.
 
 일반적으로 [Flags](xref:System.FlagsAttribute) 특성으로 정의된 열거형 형식을 가진 비트 논리 연산자를 사용합니다. 자세한 내용은 [열거형 형식](../../programming-guide/enumeration-types.md) 문서의 [비트 플래그로서 열거형 형식](../../programming-guide/enumeration-types.md#enumeration-types-as-bit-flags)을 참조하세요.
 

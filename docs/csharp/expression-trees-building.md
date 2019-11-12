@@ -2,13 +2,14 @@
 title: 식 트리 작성
 description: 식 트리를 빌드하기 위한 기술을 알아봅니다.
 ms.date: 06/20/2016
+ms.technology: csharp-advanced-concepts
 ms.assetid: 542754a9-7f40-4293-b299-b9f80241902c
-ms.openlocfilehash: 7751af17aafa8e2d1a14125da43352108b1c1f95
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: 45628b00633c8d6ff51dbd5f5dbdda7ca25dd7c4
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207191"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73037102"
 ---
 # <a name="building-expression-trees"></a>식 트리 작성
 
@@ -16,7 +17,7 @@ ms.locfileid: "36207191"
 
 지금까지 살펴본 모든 식 트리는 C# 컴파일러에서 만들어졌습니다. `Expression<Func<T>>` 또는 유사한 형식의 변수 형식에 할당된 람다 식을 만들기만 하면 됐습니다. 그러나 식 트리를 만드는 유일한 방법은 아닙니다. 대부분의 시나리오에서는 런타임에 메모리에서 식을 작성해야 함을 알 수 있습니다. 
 
-식 트리는 변경할 수 없다는 사실로 인해 식 트리 작성은 복잡합니다. 변경할 수 없다는 것은 리프에서 루트까지 위로 트리를 작성해야 한다는 의미입니다. 식 트리를 작성하는 데 사용할 API에 이 사실이 반영됩니다. 즉, 노드를 작성하는 데 사용되는 메서드는 모든 자식을 인수로 사용합니다. 이 기술을 보여 주는 몇 가지 예제를 살펴보겠습니다.
+식 트리는 변경할 수 없다는 사실로 인해 식 트리 작성은 복잡합니다. 변경할 수 없다는 것은 리프에서 루트까지 위로 트리를 작성해야 한다는 의미입니다. 식 트리를 빌드하는 데 사용할 API는 다음과 같은 사실을 반영합니다. 노드를 빌드하는 데 사용할 메서드는 모든 자식을 인수로 사용합니다. 이 기술을 보여 주는 몇 가지 예제를 살펴보겠습니다.
 
 ## <a name="creating-nodes"></a>노드 만들기
 

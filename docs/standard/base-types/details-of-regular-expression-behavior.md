@@ -9,14 +9,12 @@ helpviewer_keywords:
 - regular expressions, behavior
 - .NET Framework regular expressions, behavior
 ms.assetid: 0ee1a6b8-caac-41d2-917f-d35570021b10
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f4d7cbd00dbf94900185643490b952ced7887965
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 6a7f29a95cd3042cda1c508ad7472e9378817ebe
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895225"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126432"
 ---
 # <a name="details-of-regular-expression-behavior"></a>정규식 동작 정보
 .NET Framework 정규식 엔진은 Perl, Python, Emacs 및 Tcl에서 사용하는 것과 같은 기존의 NFA(Nondeterministic Finite Automaton) 엔진을 통합하는 역추적 정규식 일치 도구입니다. 이를 통해 해당 awk, egrep 또는 lex와 같은 빠르지만 제한적인 순수 정규식 DFA(Deterministic Finite Automaton) 엔진과 구분합니다. 또한 표준화되지만 느린 POSIX NFA과도 구분합니다. 다음 섹션에서는 세 가지 유형의 정규식 엔진을 설명하고 기존 NFA 엔진을 사용하여 .NET Framework의 정규식을 구현하는 이유를 설명합니다.  
@@ -45,7 +43,7 @@ ms.locfileid: "70895225"
   
      이 정규식의 최대 일치 버전 및 최소 일치 버전은 다음 표와 같이 정의됩니다.
   
-    |무늬|설명|  
+    |패턴|설명|  
     |-------------|-----------------|  
     |`.+`(탐욕적 수량자)|적어도 한 번 문자를 찾습니다. 그러면 정규식 엔진이 전체 문자열을 검색하고 필요한 패턴의 나머지 부분을 찾는 데 필요한 역추적을 수행합니다.|  
     |`.+?`(게으른 수량자)|적어도 한 번 문자를 찾지만 가능한 한 적게 일치합니다.|  
@@ -61,7 +59,7 @@ ms.locfileid: "70895225"
   
      `\b[A-Z]+\b(?=\P{P})` 정규식은 다음 테이블과 같이 정의됩니다.  
   
-    |무늬|설명|  
+    |패턴|설명|  
     |-------------|-----------------|  
     |`\b`|단어 경계에서 일치 항목 찾기를 시작합니다.|  
     |`[A-Z]+`|알파벳 임의의 문자를 1회 이상 찾습니다. <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> 메서드가 <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> 옵션으로 호출되므로 이 비교는 대/소문자를 구분하지 않습니다.|  
@@ -77,7 +75,7 @@ ms.locfileid: "70895225"
   
      정규식 패턴 `\b(?!non)\w+\b` 는 다음 테이블과 같이 정의됩니다.  
   
-    |무늬|설명|  
+    |패턴|설명|  
     |-------------|-----------------|  
     |`\b`|단어 경계에서 일치 항목 찾기를 시작합니다.|  
     |`(?!non)`|현재 문자열이 "non"으로 시작하지 않으면 조회합니다. 그렇지 않으면 검색이 실패합니다.|  
@@ -93,7 +91,7 @@ ms.locfileid: "70895225"
   
      이 정규식 패턴은 다음 테이블과 같이 정의됩니다.  
   
-    |무늬|설명|  
+    |패턴|설명|  
     |-------------|-----------------|  
     |`^`|줄의 시작 부분에서 일치 항목 찾기를 시작합니다.|  
     |`(?<Pvt>\<PRIVATE\>\s)?`|0개 또는 1개의 뒤에 공백 문자가 있는 `<PRIVATE>` 문자열을 찾습니다. `Pvt`로 명명된 캡처 그룹에 일치 항목을 할당합니다.|  
@@ -131,11 +129,11 @@ ms.locfileid: "70895225"
   
      ``^[A-Z0-9]([-!#$%&'.*+/=?^`{}|~\w])*(?<=[A-Z0-9])$`` 정규식은 다음 테이블과 같이 정의됩니다.  
   
-    |무늬|설명|  
+    |패턴|설명|  
     |-------------|-----------------|  
     |`^`|문자열의 시작 부분에서 검색을 시작합니다.|  
     |`[A-Z0-9]`|숫자 또는 영숫자 문자를 찾습니다. 비교는 대소문자를 구분하지 않습니다.|  
-    |<code>([-!#$%&'.*+/=?^\`{}&#124;~\w])\*</code>|단어 문자 또는 -, !, #, $, %, &, ', ., \*, +, /, =, ?, ^, \`, {, }, &#124;이나 ~의 문자로 구성된 0개 이상의 일치 항목을 찾습니다.|  
+    |<code>([-!#$%&'.*+/=?^\`{}&#124;~\w])\*</code>단어 문자 또는  -, !, #, $, %, &, ', ., \*, +, /, =, ?, ^, \`, {, }, &#124;이나 ~의 문자로 구성된 0개 이상의 일치 항목을 찾습니다.|  
     |`(?<=[A-Z0-9])`|영숫자만 또는 숫자여야 하는 이전 문자를 확인합니다. 비교는 대소문자를 구분하지 않습니다.|  
     |`$`|문자열의 끝 부분에서 일치 항목 찾기를 끝냅니다.|  
   

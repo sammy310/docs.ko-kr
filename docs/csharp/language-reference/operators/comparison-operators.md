@@ -19,12 +19,12 @@ helpviewer_keywords:
 - <= operator [C#]
 - greater than or equal to operator [C#]
 - '>= operator [C#]'
-ms.openlocfilehash: d3e9bf1356218f223f959b423dfc048972b075d3
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: bb28e2adba896ae85b189858283376fbe3250dce
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661514"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039060"
 ---
 # <a name="comparison-operators-c-reference"></a>비교 연산자(C# 참조)
 

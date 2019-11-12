@@ -1,18 +1,18 @@
 ---
 title: '#if 전처리기 지시문 - C# 참조'
 ms.custom: seodec18
-ms.date: 06/30/2018
+ms.date: 10/27/2019
 f1_keywords:
 - '#if'
 helpviewer_keywords:
 - '#if directive [C#]'
 ms.assetid: 48cabbff-ca82-491f-a56a-eeccd528c7c2
-ms.openlocfilehash: d0297094fbb8098b706cb8c6338fa123afc0753b
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 561a628c60888a8d4f3c50c8413784e1ed210599
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69605694"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73036000"
 ---
 # <a name="if-c-reference"></a>#if(C# 참조)
 
@@ -40,13 +40,16 @@ C# 컴파일러는 `#if` 지시문과 [#endif](preprocessor-endif.md) 지시문�
 
 `#define`을 사용하여 만든 기호의 범위는 해당 기호가 정의된 파일입니다.
 
-빌드 시스템은 여러 [대상 프레임워크](../../../standard/frameworks.md)를 나타내는 미리 정의된 전처리기 기호도 인식합니다. 둘 이상의 .NET 구현 또는 버전을 대상으로 지정할 수 있는 애플리케이션을 만들 때 유용합니다.
+빌드 시스템은 SDK 스타일 프로젝트의 여러 [대상 프레임워크](../../../standard/frameworks.md)를 나타내는 미리 정의된 전처리기 기호도 인식합니다. 둘 이상의 .NET 구현 또는 버전을 대상으로 지정할 수 있는 애플리케이션을 만들 때 유용합니다.
 
 [!INCLUDE [Preprocessor symbols](~/includes/preprocessor-symbols.md)]
 
+> [!NOTE]
+> 기존 .NET Framework 프로젝트의 경우 프로젝트의 속성 페이지를 통해 Visual Studio의 여러 대상 프레임워크에 대한 조건부 컴파일 기호를 수동으로 구성해야 합니다.
+
 기타 미리 정의된 기호에는 DEBUG와 TRACE 상수가 있습니다. `#define`을 사용하여 프로젝트에 설정된 값을 재정의할 수 있습니다. 예를 들어 DEBUG 기호는 빌드 구성 특성(“디버그” 또는 “릴리스” 모드)에 따라 자동으로 설정됩니다.
 
-## <a name="examples"></a>예제
+## <a name="examples"></a>예
 
 다음 예제에서는 파일에 MYTEST 기호를 정의한 다음 MYTEST 및 DEBUG 기호의 값을 테스트하는 방법을 보여 줍니다. 이 예제의 출력은 디버그 구성 모드에서 프로젝트를 빌드했는지, 릴리스 구성 모드에서 프로젝트를 빌드했는지에 따라 다릅니다.
 

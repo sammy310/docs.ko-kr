@@ -32,12 +32,12 @@ helpviewer_keywords:
 - conditional OR operator [C#]
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
-ms.openlocfilehash: e355a89e27ea5bd6e4335b39c4e669610c4b0553
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 4a3e6986060b8e22d49110b8b9f275f41b743af2
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319100"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73036401"
 ---
 # <a name="boolean-logical-operators-c-reference"></a>부울 논리 연산자(C# 참조)
 
@@ -69,7 +69,7 @@ C# 8.0부터 단항 후위 `!` 연산자는 [null 허용 연산자](null-forgivi
 
 [조건부 논리 AND 연산자](#conditional-logical-and-operator-) `&&`도 해당 피연산자의 논리 AND를 계산하지만, 왼쪽 피연산자가 `false`로 평가되는 경우에는 오른쪽 피연산자를 평가하지 않습니다.
 
-정수 형식 피연산자의 경우 `&` 연산자는 해당 피연산자의 [비트 논리 AND](bitwise-and-shift-operators.md#logical-and-operator-)를 컴퓨팅합니다. 단항 `&` 연산자는 [address-of 연산자](pointer-related-operators.md#address-of-operator-)입니다.
+[정수 형식](../builtin-types/integral-numeric-types.md) 피연산자의 경우 `&` 연산자는 해당 피연산자의 [비트 논리 AND](bitwise-and-shift-operators.md#logical-and-operator-)를 컴퓨팅합니다. 단항 `&` 연산자는 [address-of 연산자](pointer-related-operators.md#address-of-operator-)입니다.
 
 ## <a name="logical-exclusive-or-operator-"></a>논리 배타적 OR 연산자 ^
 
@@ -77,7 +77,7 @@ C# 8.0부터 단항 후위 `!` 연산자는 [null 허용 연산자](null-forgivi
 
 [!code-csharp-interactive[logical exclusive OR](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#Xor)]
 
-정수 형식 피연산자의 경우 `^` 연산자는 해당 피연산자의 [비트 논리 배타적 OR](bitwise-and-shift-operators.md#logical-exclusive-or-operator-)을 컴퓨팅합니다.
+[정수 숫자 형식](../builtin-types/integral-numeric-types.md) 피연산자의 경우 `^` 연산자는 해당 피연산자의 [비트 논리 배타적 OR](bitwise-and-shift-operators.md#logical-exclusive-or-operator-)을 컴퓨팅합니다.
 
 ## <a name="logical-or-operator-"></a>논리 OR 연산자 |
 
@@ -91,7 +91,7 @@ C# 8.0부터 단항 후위 `!` 연산자는 [null 허용 연산자](null-forgivi
 
 [조건부 논리 OR 연산자](#conditional-logical-or-operator-) `||`도 해당 피연산자의 논리 OR을 계산하지만, 왼쪽 피연산자가 `true`로 평가되는 경우에는 오른쪽 피연산자를 평가하지 않습니다.
 
-정수 형식 피연산자의 경우 `|` 연산자는 해당 피연산자의 [비트 논리 OR](bitwise-and-shift-operators.md#logical-or-operator-)을 컴퓨팅합니다.
+[정수 숫자 형식](../builtin-types/integral-numeric-types.md) 피연산자의 경우 `|` 연산자는 해당 피연산자의 [비트 논리 OR](bitwise-and-shift-operators.md#logical-or-operator-)을 컴퓨팅합니다.
 
 ## <a name="conditional-logical-and-operator-"></a> 조건부 논리 AND 연산자 &amp;&amp;
 
@@ -129,7 +129,7 @@ C# 8.0부터 단항 후위 `!` 연산자는 [null 허용 연산자](null-forgivi
 |null|false|false|null|  
 |null|null|null|null|  
 
-해당 연산자의 동작은 Nullable 값 형식을 사용하는 일반 연산자 동작과 다릅니다. 일반적으로 값 형식의 피연산자에 대해 정의된 연산자도 해당 Nullable 값 형식의 피연산자와 함께 사용할 수 있습니다. 피연산자가 `null`인 경우 해당 연산자는 `null`을 생성합니다. 그러나 피연산자 중 하나가 `null`인 경우에도 `&` 및 `|` 연산자는 Null이 아닌 값을 생성합니다. Nullable 값 형식을 사용한 연산자 동작에 대한 자세한 내용은 [nullable 형식 사용](../../programming-guide/nullable-types/using-nullable-types.md) 문서의 [연산자](../../programming-guide/nullable-types/using-nullable-types.md#operators) 섹션을 참조하세요.
+해당 연산자의 동작은 Nullable 값 형식을 사용하는 일반 연산자 동작과 다릅니다. 일반적으로 값 형식의 피연산자에 대해 정의된 연산자도 해당 Nullable 값 형식의 피연산자와 함께 사용할 수 있습니다. 피연산자가 `null`로 평가되는 경우 해당 연산자는 `null`을 생성합니다. 그러나 피연산자 중 하나가 `null`로 평가되는 경우에도 `&` 및 `|` 연산자는 Null이 아닌 값을 생성합니다. Nullable 값 형식을 사용한 연산자 동작에 대한 자세한 내용은 [nullable 형식 사용](../../programming-guide/nullable-types/using-nullable-types.md) 문서의 [연산자](../../programming-guide/nullable-types/using-nullable-types.md#operators) 섹션을 참조하세요.
 
 다음 예제와 같이 `!` 및 `^` 연산자를 `bool?` 피연산자와 함께 사용할 수도 있습니다.
 
@@ -174,7 +174,7 @@ x = x op y
 
 [!code-csharp-interactive[operator precedence](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#Precedence)]
 
-우선 순위 수준에 따라 정렬된 전체 연산자 목록은 [C# 연산자](index.md)를 참조하세요.
+우선 순위 수준에 따라 정렬된 전체 연산자 목록은 [C# 연산자](index.md#operator-precedence) 문서의 [연산자 우선 순위](index.md) 섹션을 참조하세요.
 
 ## <a name="operator-overloadability"></a>연산자 오버로드 가능성
 

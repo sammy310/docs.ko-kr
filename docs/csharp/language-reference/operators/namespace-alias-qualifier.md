@@ -11,19 +11,19 @@ helpviewer_keywords:
 - namespace [C#]
 - global keyword [C#]
 ms.assetid: 698b5a73-85cf-4e0e-9e8e-6496887f8527
-ms.openlocfilehash: 2aceb51747708b12fb3059b097b72206c78a9d5d
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 97ed24b050f79cf44ffd1c03c213ffcf91758260
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971235"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73038987"
 ---
 # <a name="-operator-c-reference"></a>:: 연산자(C# 참조)
 
-네임스페이스 별칭 한정자(`::`)를 사용하여 별칭이 지정된 네임스페이스의 구성원에 액세스합니다. 두 식별자 사이에 `::` 한정사를 사용합니다. 왼쪽 식별자는 다음 별칭 중 하나를 사용할 수 있습니다.
+네임스페이스 별칭 한정자(`::`)를 사용하여 별칭이 지정된 네임스페이스의 구성원에 액세스합니다. 두 식별자 사이에 `::` 한정사만 사용할 수 있습니다. 왼쪽 식별자는 다음 별칭 중 하나를 사용할 수 있습니다.
 
 - [별칭 지시문을 사용](../keywords/using-directive.md)하여 만든 네임스페이스 별칭:
-  
+
   ```csharp
   using forwinforms = System.Drawing;
   using forwpf = System.Windows;
@@ -36,7 +36,7 @@ ms.locfileid: "68971235"
 
 - [extern 별칭](../keywords/extern-alias.md)
 - 전역 네임스페이스 별칭인 `global` 별칭. 전역 네임스페이스는 명명된 네임스페이스 내에 선언되지 않은 네임스페이스와 형식을 포함하는 네임스페이스입니다. `::` 한정자와 함께 사용하는 경우 `global` 별칭은 사용자 정의 `global` 네임 스페이스 별칭이 있더라도 항상 전역 네임 스페이스를 참조합니다.
-  
+
   다음 예제에서는 `global` 별칭을 사용하여 전역 네임스페이스의 구성원인 .NET <xref:System> 네임 스페이스에 액세스합니다. `global` 별칭을 사용하지 않으면 `MyCompany.MyProduct` 네임스페이스의 구성원인 사용자 정의 `System` 네임스페이스에 액세스할 수 있습니다.
 
   ```csharp
@@ -46,14 +46,14 @@ ms.locfileid: "68971235"
       {
           static void Main() => global::System.Console.WriteLine("Using global alias");
       }
-  
+
       class Console
       {
           string Suggestion => "Consider renaming this class";
       }
   }
   ```
-  
+
   > [!NOTE]
   > `global` 키워드는 `::` 한정자의 왼쪽 식별자인 경우에만 전역 네임 스페이스 별칭입니다.
 

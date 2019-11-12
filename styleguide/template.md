@@ -14,12 +14,12 @@ ms.prod:
 - PRODUCT VALUE
 helpviewer_keywords:
 - OFFLINE BOOK INDEX ENTRIES
-ms.openlocfilehash: 4f50d4d446896e12b5beb86fc649ea4fa7c82718
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 20f581f1684d99766b19390daa9ff7a076d44ac3
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72775539"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423759"
 ---
 # <a name="metadata-and-markdown-template"></a>메타데이터 및 Markdown 템플릿
 
@@ -38,7 +38,7 @@ Markdown 파일을 만들 때는 이 템플릿을 새 파일로 복사하고, �
 - **설명**: 문서의 내용을 요약합니다. 일반적으로 검색 결과 페이지에 표시되지만 검색 순위에는 사용되지 않습니다. 길이는 공백을 포함하여 115~145자여야 합니다.
 - **author** 및 **ms.author**: author 필드는 작성자의 별칭이 아닌 **GitHub 사용자 이름**을 포함해야 합니다.  반면 **ms.author** 필드에서는 Microsoft 별칭을 포함해야 하며, 문서 유지 관리를 담당하는 개인을 표시합니다.
 - **ms.topic**: 토픽 유형입니다. 가장 일반적인 값은 `conceptual`이고 전역 수준에서 설정됩니다. 기타 일반적으로 사용되는 값은 `tutorial`, `overview` 및 `reference`입니다.
-- **ms.devlang**에서는 토픽에 대해 표시된 언어 필터를 정의합니다. 지원되는 값 목록은 [지원되는 언어](#supported-languages) 섹션에서 확인할 수 있습니다. 토픽에 포함된 프로그래밍 언어가 둘 이상 있는 경우에만 설정해야 합니다. 일반적으로 당사의 콘텐츠에서는 이 값으로 `csharp`, `vb`, `fsharp` 및 `cpp`만 사용합니다.
+- **dev_langs**에서는 토픽에 대해 표시된 언어 필터를 정의합니다. 지원되는 값 목록은 [지원되는 언어](#supported-languages) 섹션에서 확인할 수 있습니다. 토픽에 포함된 프로그래밍 언어가 둘 이상 있는 경우에만 설정해야 합니다. 일반적으로 당사의 콘텐츠에서는 이 값으로 `csharp`, `vb`, `fsharp` 및 `cpp`만 사용합니다.
 - **ms.prod**: BI 용도로 사용되는 제품 ID입니다. 이 ID는 일반적으로 전역 수준에서 설정되므로 대개 각 문서의 메타데이터 블록에 표시되지 않습니다.
 - **ms.technology**: 추가 BI 분류. 지원되는 일부 값은 C# 토픽의 경우 `devlang-csharp`이고, F# 토픽의 경우 `devlang-fsharp`이며, VB 토픽의 경우 `devlang-visual-basic`입니다. 다른 가이드의 경우 값이 다를 수 있으므로 팀 멤버에게 문의하여 지침을 확인하세요.
 - **ms.date**: YYYY/MM/DD 형식의 날짜입니다. 게시된 페이지에 표시되어 마지막으로 문서가 대폭 편집되었거나 확실히 “새로 고침”(즉, 문서가 검토되었고 최신 상태라고 간주됨)된 시간을 나타냅니다.
@@ -54,7 +54,7 @@ Markdown 파일을 만들 때는 이 템플릿을 새 파일로 복사하고, �
 
 Markdown은 서식 지정을 위해 \*, \`, \# 등의 특수 문자를 사용합니다. 이러한 문자 중 하나를 내용에 포함하려는 경우에는 다음 두 작업 중 하나를 수행해야 합니다.
 
-- 특수 문자 앞에 백슬래시를 넣어 특수 문자를 "이스케이프"합니다(예: \*의 경우 `\*`)
+- 특수 문자 앞에 백슬래시를 넣어 특수 문자를 "이스케이프"합니다(예: \*의 경우 `\*`).
 - 문자의 [HTML 엔터티 코드](https://www.ascii.cl/htmlcodes.htm)를 사용합니다(예: &#42;의 경우 `&#42;`).
 
 ## <a name="file-name"></a>파일 이름
@@ -70,7 +70,9 @@ Markdown은 서식 지정을 위해 \*, \`, \# 등의 특수 문자를 사용합
 
 ## <a name="headings"></a>제목
 
-문장 스타일 대/소문자를 사용합니다. 항상 제목의 첫 번째 단어를 대문자로 표시하고, 제목에서 콜론 뒤에 오는 단어(예: "방법: 배열 정렬")는 대문자로 표시하지 않습니다.
+문장 스타일 대/소문자를 사용합니다. 제목의 첫 번째 단어, 고유 명사 및 콜론 다음의 첫 글자를 대문자로 지정합니다(예: "Tutorial: Predict prices using regression with ML.NET").
+
+“방법” 뒤에 콜론을 추가하지 않는 형식(예: 배열을 정렬하는 방법, 사용 금지 - “방법: 배열 정렬”)입니다.
 
 제목은 atx 스타일로 작성해야 합니다. 즉, 줄 시작 부분에서 HTML 제목 수준 H1~H6에 해당하는 1~6개의 해시 문자(#)를 사용하여 제목을 나타냅니다. 위에서는 수준 1/수준 2 헤더의 예가 사용되었습니다.
 
@@ -305,6 +307,7 @@ UID에 특수 문자 \`, \# 또는 \*가 포함된 경우 UID 값은 각각 `%60
 |Objective-C|objc|
 |OData|odata|
 |PHP|php|
+|protobuf|protobuf|
 |PowerApps(점 소수 구분 기호)|powerapps-dot|
 |PowerApps(쉼표 소수 구분 기호)|powerapps-comma|
 |PowerShell|powershell|
@@ -324,7 +327,7 @@ UID에 특수 문자 \`, \# 또는 \*가 포함된 경우 UID 값은 각각 `%60
 
 다음은 C#(\`\`\`csharp), Python(\`\`\`python) 및 PowerShell(\`\`\`powershell)의 언어 ID를 사용하는 코드 블록의 예입니다.
 
-##### <a name="c9839"></a>C&#9839;
+##### <a name="c"></a>C\#
 
 ```csharp
 using System;

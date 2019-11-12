@@ -4,12 +4,12 @@ description: ASP.NET Core 및 Azure를 사용하여 현대식 웹 애플리케�
 author: ardalis
 ms.author: wiwagn
 ms.date: 02/16/2019
-ms.openlocfilehash: 91bb3be207c9919eb7eb0119e96e76aae94858be
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 656c92c417283366e4bb757489c189ecbc0ea815
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373762"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73416695"
 ---
 # <a name="architectural-principles"></a>아키텍처 원칙
 
@@ -75,7 +75,7 @@ ms.locfileid: "70373762"
 
 ### <a name="persistence-ignorance"></a>지속성 무시
 
-**PI(지속성 무시)** 는 지속되어야 하는 형식을 참조하지만, 그 코드는 선택하는 지속성 기술의 영향을 받지 않습니다. .NET에서는 이러한 형식을 POCO(Plain Old CLR Object)라고 부르기도 합니다. 특정 기본 클래스에서 상속하거나 특정 인터페이스를 구현할 필요가 없기 때문입니다. 지속성 무시는 동일한 비즈니스 모델을 여러 가지 방식으로 지속할 수 있도록 허용하여 애플리케이션의 유연성을 향상하므로 유용합니다. 지속성 선택은 시간에 따라 한 데이터베이스 기술에서 다른 데이터베이스 기술로 달라질 수 있으며, 애플리케이션이 시작된 형식(예를 들어 관계형 데이터베이스 외에도 Redis 캐시 또는 Azure DocumentDb 사용) 외에도 추가적인 지속성 형식이 필요할 수 있습니다.
+**PI(지속성 무시)** 는 지속되어야 하는 형식을 참조하지만, 그 코드는 선택하는 지속성 기술의 영향을 받지 않습니다. .NET에서는 이러한 형식을 POCO(Plain Old CLR Object)라고 부르기도 합니다. 특정 기본 클래스에서 상속하거나 특정 인터페이스를 구현할 필요가 없기 때문입니다. 지속성 무시는 동일한 비즈니스 모델을 여러 가지 방식으로 지속할 수 있도록 허용하여 애플리케이션의 유연성을 향상하므로 유용합니다. 지속성 선택은 시간에 따라 한 데이터베이스 기술에서 다른 데이터베이스 기술로 달라질 수 있으며, 애플리케이션이 시작된 형식(예를 들어 관계형 데이터베이스 외에도 Redis 캐시 또는 Azure Cosmos DB 사용) 외에도 추가적인 지속성 형식이 필요할 수 있습니다.
 
 다음은 이 원칙에 위배되는 몇 가지 예입니다.
 
@@ -99,7 +99,7 @@ ms.locfileid: "70373762"
 
 적어도 개별 웹 애플리케이션은 다른 애플리케이션과 데이터베이스를 공유하지 않고 자신의 비즈니스 모델에 대한 자체 지속성 저장소를 통해 자체 바인딩된 컨텍스트가 되기 위해 노력해야 합니다. 바인딩된 컨텍스트 간의 통신은 공유 데이터베이스가 아닌 프로그래밍 방식 인터페이스를 통해 발생하며, 발생하는 변경 내용에 대응하여 비즈니스 논리 및 이벤트가 발생하는 것을 허용합니다. 바인딩된 컨텍스트는 마이크로 서비스와 긴밀하게 매핑되며, 또한 자체적인 개별 바인딩된 컨텍스트로 이상적으로 구현됩니다.
 
-## <a name="additional-resources"></a>추가 자료
+## <a name="additional-resources"></a>추가 리소스
 
 - [JAVA 디자인 패턴: 원칙](https://java-design-patterns.com/principles/)
 - [바인딩된 컨텍스트](https://martinfowler.com/bliki/BoundedContext.html)

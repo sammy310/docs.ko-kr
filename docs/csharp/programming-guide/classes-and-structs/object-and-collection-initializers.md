@@ -6,12 +6,12 @@ helpviewer_keywords:
 - object initializers [C#]
 - collection initializers [C#]
 ms.assetid: c58f3db5-d7d4-4651-bd2d-5a3a97357f61
-ms.openlocfilehash: f6977fa6c5a8909d6108a5ccfc140b89a4fdd5a4
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 837be04208d438f15b4cc7c7124a47ef6c038cb2
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596568"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73455448"
 ---
 # <a name="object-and-collection-initializers-c-programming-guide"></a>개체 및 컬렉션 이니셜라이저(C# 프로그래밍 가이드)
 
@@ -103,13 +103,13 @@ List<int> digits2 = new List<int> { 0 + 1, 12 % 3, MakeInt() };
   
 [!code-csharp[DictionaryInitializer](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#DictionaryIndexerInitializer)]  
 
-이전 샘플에서는 <xref:System.Collections.Generic.Dictionary%602.Item(%600)>을 호출하여 값을 설정하는 코드를 생성합니다. C# 6부터 다음 구문을 사용하여 사전 및 다른 연관 컨테이너를 초기화할 수 있습니다. 괄호와 할당이 있는 인덱서 구문 대신 여러 값이 있는 개체를 사용합니다.
+이전 샘플에서는 <xref:System.Collections.Generic.Dictionary%602.Item(%600)>을 호출하여 값을 설정하는 코드를 생성합니다. C# 6 이전에는 다음 구문을 사용하여 사전 및 다른 연관 컨테이너를 초기화할 수 있었습니다. 괄호와 할당이 있는 인덱서 구문 대신 여러 값이 있는 개체를 사용합니다.
 
 [!code-csharp[DictionaryAddInitializer](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#DictionaryAddInitializer)]  
 
 이 이니셜라이저 예제에서는 <xref:System.Collections.Generic.Dictionary%602.Add(%600,%601)>를 호출하여 사전에 세 가지 항목을 추가합니다. 연관 컬렉션을 초기화하는 이러한 두 가지 방법은 컴파일러가 생성하는 메서드 호출 때문에 약간 다르게 작동합니다. 두 가지 방법 모두 `Dictionary` 클래스와 함께 작동합니다. 다른 형식은 공용 API에 따라 어느 한 쪽만 지원할 수 있습니다.
 
-## <a name="examples"></a>예제
+## <a name="examples"></a>예
 
 다음 예제에서는 개체 및 컬렉션 이니셜라이저의 개념을 결합합니다.
 
@@ -126,5 +126,5 @@ List<int> digits2 = new List<int> { 0 + 1, 12 % 3, MakeInt() };
 ## <a name="see-also"></a>참고 항목
 
 - [C# 프로그래밍 가이드](../index.md)
-- [LINQ 쿼리 식](../linq-query-expressions/index.md)
+- [C#의 LINQ](../../linq/index.md)
 - [익명 형식](anonymous-types.md)

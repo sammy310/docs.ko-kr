@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 10/08/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: a851bf3c405d15243bc1457b8c3dff815d072ebe
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: f5010f944dba007e24d3c0e22d4e339f9ed0522a
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72180280"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459192"
 ---
 # <a name="tutorial-predict-prices-using-regression-with-model-builder"></a>자습서: 모델 작성기와 함께 회귀를 사용하여 가격 예측
 
@@ -83,8 +83,8 @@ ML.NET 모델 작성기 빌드를 사용하여 가격을 예측하기 위한 회
 
 1. 모델 작성기 도구의 데이터 단계의 데이터 원본 드롭다운에서 *파일*을 선택합니다.
 1. *파일 선택* 텍스트 상자 옆의 있는 단추를 선택하고 파일 탐색기를 사용하여 *Data* 디렉터리에서 *taxi-fare-test.csv*를 찾아서 선택합니다.
-1. *예측할 열(레이블)* 드롭다운에서 *fare_amount*를 선택하고 모델 작성기 도구의 학습 단계로 이동합니다.
-1. *입력 열(기능)*  드롭다운을 확장하고 *trip_time_in_secs* 열을 선택 취소하여 학습 동안 기능으로서 제외합니다.
+1. *예측할 열(레이블)* 드롭다운에서 *fare_amount*를 선택합니다.
+1. *입력 열(기능)*  드롭다운을 확장하고 *trip_time_in_secs* 열을 선택 취소하여 학습 동안 기능으로서 제외합니다.  모델 작성기 도구의 학습 단계로 이동합니다.
 
 ## <a name="train-the-model"></a>모델 학습
 
@@ -180,4 +180,4 @@ ML.NET 모델 작성기 빌드를 사용하여 가격을 예측하기 위한 회
 - [모델 작성기 시나리오](../automate-training-with-model-builder.md#scenarios)
 - [재발](../resources/glossary.md#regression)
 - [회귀 모델 메트릭](../resources/metrics.md#metrics-for-regression)
-- [NYC TLC 택시 여행 데이터 세트](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)
+- [NYC TLC 택시 여행 데이터 세트](https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page)

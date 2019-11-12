@@ -4,12 +4,12 @@ description: 플러그 인을 지원하는 .NET Core 애플리케이션을 만�
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 10/16/2019
-ms.openlocfilehash: 5267a56d0742d8e1cae4a81c058bc4ee05e83b4e
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 16fc9d3c721ddd0618c980c7dc406b7ad7864ff5
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72579498"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739706"
 ---
 # <a name="create-a-net-core-application-with-plugins"></a>플러그 인을 사용하여 .NET Core 애플리케이션 만들기
 
@@ -285,3 +285,7 @@ static Assembly LoadPlugin(string relativePath)
 ## <a name="plugin-target-framework-recommendations"></a>플러그 인 대상 프레임워크 권장 사항
 
 로드 중인 플러그 인 종속성이 *.deps.json* 파일을 사용하기 때문에 플러그 인의 대상 프레임워크와 관련된 알려진 과제가 발생합니다. 특히, 사용자의 플러그 인은 .NET Standard 버전이 아닌 .NET Core 3.0과 같은 런타임을 대상으로 해야 합니다. *.deps.json* 파일은 해당 프로젝트가 대상으로 하는 프레임워크를 기반으로 생성됩니다. 다수의 .NET Standard 호환 패키지가 .NET Standard에 빌드하는 참조 어셈블리 및 특정 런타임에 대한 구현 어셈블리를 제공하므로 *.deps.json*은 구현 어셈블리를 잘못 확인하거나 원하는 .NET Core 버전이 아닌 어셈블리의 .NET Standard 버전을 대상으로 할 수도 있습니다.
+
+## <a name="plugin-framework-references"></a>플러그 인 프레임워크 참조
+
+현재 플러그 인은 프로세스에 새 프레임워크를 도입할 수 없습니다. 예를 들어 `Microsoft.AspNetCore.App` 프레임워크를 사용하는 플러그 인을 루트 `Microsoft.NETCore.App` 프레임워크만 사용하는 애플리케이션으로 로드할 수 없습니다. 호스트 애플리케이션은 플러그 인에 필요한 모든 프레임워크에 대한 참조를 선언해야 합니다.

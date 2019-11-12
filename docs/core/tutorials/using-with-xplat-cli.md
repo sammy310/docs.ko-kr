@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 08/07/2019
 ms.technology: dotnet-cli
 ms.custom: seodec18
-ms.openlocfilehash: b5ef70967c8404dc5ce5b816bb9a1c3b1d7e4230
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: c7e314e9712c3b569ecc813a72670942651feda1
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117357"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454746"
 ---
 # <a name="get-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>명령줄을 사용하여 Windows/Linux/macOS에서 .NET Core 시작
 
@@ -39,18 +39,18 @@ dotnet run
 
 1. `dotnet new console`
 
-   [`dotnet new`](../tools/dotnet-new.md)는 콘솔 앱을 빌드하는 데 필요한 종속성이 있는 최신 `Hello.csproj` 프로젝트 파일입니다.  애플리케이션에 대한 진입점을 포함하는 기본 파일인 `Program.cs`도 만듭니다.
+   [`dotnet new`](../tools/dotnet-new.md)는 콘솔 앱을 빌드하는 데 필요한 종속성이 있는 최신 *Hello.csproj* 프로젝트 파일입니다. 애플리케이션에 대한 진입점을 포함하는 기본 파일인 *Program.cs*도 만듭니다.
 
-   `Hello.csproj`:
+   *Hello.csproj*:
 
-   [!code[Hello.csproj](../../../samples/core/console-apps/HelloMsBuild/Hello.csproj)]
+   [!code-xml[Hello.csproj](../../../samples/core/console-apps/HelloMsBuild/Hello.csproj)]
 
    프로젝트 파일은 종속성을 복원하고 프로그램을 빌드하는 데 필요한 모든 항목을 지정합니다.
 
    - `OutputType` 태그에서는 실행 파일, 즉 콘솔 애플리케이션을 빌드하고 있음을 지정합니다.
    - `TargetFramework` 태그에서는 대상으로 하는 .NET 구현을 지정합니다. 고급 시나리오에서는 여러 대상 프레임워크를 지정하고 이 모든 프레임워크를 단일 작업으로 빌드할 수 있습니다. 이 자습서에서는 .NET Core 2.1에 대해서만 빌드합니다.
 
-   `Program.cs`:
+   *Program.cs*:
 
    [!code-csharp[Program.cs](../../../samples/core/console-apps/HelloMsBuild/Program.cs)]
 

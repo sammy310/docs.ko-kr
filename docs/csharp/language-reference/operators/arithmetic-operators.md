@@ -27,16 +27,16 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: 9760be0fcfe29d2c11cbb1f4d4d81c5a79261a0d
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: ca2513a0f865fd7da728f7d3247bdb7b50a2f48a
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771729"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73036423"
 ---
 # <a name="arithmetic-operators-c-reference"></a>산술 연산자(C# 참조)
 
-다음 연산자는 숫자 형식을 포함한 산술 작업을 수행합니다.
+다음 연산자는 숫자 형식 피연산자를 포함한 산술 작업을 수행합니다.
 
 - 단항 [`++`(증분)](#increment-operator-), [`--`(감소)](#decrement-operator---), [`+`(더하기)](#unary-plus-and-minus-operators), [`-`(빼기)](#unary-plus-and-minus-operators) 연산자
 - 이진 [`*`(곱하기)](#multiplication-operator-), [`/`(나누기)](#division-operator-), [`%`(나머지)](#remainder-operator-), [`+`(더하기)](#addition-operator-) 및 [`-`(빼기)](#subtraction-operator--) 연산자
@@ -122,7 +122,7 @@ ms.locfileid: "72771729"
 나머지 연산자 `%`는 왼쪽 피연산자를 오른쪽 피연산자로 나눈 후 나머지를 계산합니다.
 
 ### <a name="integer-remainder"></a>정수 나머지
-  
+
 정수 형식의 피연산자의 경우 `a % b`의 결과가 `a - (a / b) * b`에서 생성된 값입니다. 다음 예와 같이 0이 아닌 나머지의 부호는 왼쪽 피연산자와 동일합니다.
 
 [!code-csharp-interactive[integer remainder](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#IntegerRemainder)]
@@ -137,7 +137,7 @@ ms.locfileid: "72771729"
 - `z`의 절대 값은 `|x| - n * |y|`에서 생성된 값입니다. 여기서 `n`은 `|x| / |y|`보다 작거나 같은 가능한 최대 정수이고 `|x|` 및 `|y|`는 각각 `x` 및 `y`의 절대 값입니다.
 
 > [!NOTE]
-> 나머지 계산 방법은 정수 피연산자에 사용되는 것과 유사하지만 IEEE 754와는 다릅니다. IEEE 754를 준수하는 나머지 작업이 필요한 경우 <xref:System.Math.IEEERemainder%2A?displayProperty=nameWithType> 메서드를 사용합니다.
+> 나머지 계산 방법은 정수 피연산자에 사용되는 것과 유사하지만 IEEE 754 사양과는 다릅니다. IEEE 754 사양을 준수하는 나머지 작업이 필요한 경우 <xref:System.Math.IEEERemainder%2A?displayProperty=nameWithType> 메서드를 사용합니다.
 
 무한 피연산자가 있는 `%` 연산자의 동작에 대한 자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [나머지 연산자](~/_csharplang/spec/expressions.md#remainder-operator) 섹션을 참조하세요.
 
@@ -161,7 +161,7 @@ ms.locfileid: "72771729"
 
 [!code-csharp-interactive[subtraction operator](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#Subtraction)]
 
-대리자 제거의 경우 `-` 연산자를 사용할 수도 있습니다. 자세한 내용은 [`-` 연산자](subtraction-operator.md) 문서를 참조하세요.
+대리자 제거의 경우 `-` 연산자를 사용할 수도 있습니다. 자세한 내용은 참조는 [`-` 및 `-=`연산자](subtraction-operator.md) 문서를 참조하세요.
 
 ## <a name="compound-assignment"></a>복합 할당
 
@@ -187,7 +187,7 @@ x = x op y
 
 [!code-csharp-interactive[compound assignment with cast](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#CompoundAssignmentWithCast)]
 
-`+=` 및 `-=` 연산자를 사용하여 [이벤트](../keywords/event.md)에서 구독하거나 구독을 취소할 수도 있습니다. 자세한 내용은 [방법: 이벤트 구독 및 구독 취소](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)를 참조하세요.
+각각 `+=` 및 `-=` 연산자를 사용하여 [이벤트](../keywords/event.md)에서 구독하거나 구독을 취소할 수도 있습니다. 자세한 내용은 [방법: 이벤트 구독 및 구독 취소](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)를 참조하세요.
 
 ## <a name="operator-precedence-and-associativity"></a>연산자 우선 순위 및 결합성
 
@@ -204,7 +204,7 @@ x = x op y
 
 [!code-csharp-interactive[precedence and associativity](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#PrecedenceAndAssociativity)]
 
-우선 순위 수준에 따라 정렬된 전체 연산자 목록은 [C# 연산자](index.md)를 참조하세요.
+우선 순위 수준에 따라 정렬된 전체 연산자 목록은 [C# 연산자](index.md#operator-precedence) 문서의 [연산자 우선 순위](index.md) 섹션을 참조하세요.
 
 ## <a name="arithmetic-overflow-and-division-by-zero"></a>산술 오버플로 및 0으로 나누기
 

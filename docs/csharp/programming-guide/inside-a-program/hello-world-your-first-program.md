@@ -9,16 +9,16 @@ helpviewer_keywords:
 - examples [C#], Hello World
 - Hello World example [C#]
 ms.assetid: 6493182a-b0b6-4539-a719-518a168cb730
-ms.openlocfilehash: 0807e46d36a4cf031bc44ae0dc4efab79dd51d03
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: edab64bf02a2b60cce21af536d2da98193dea9a1
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991336"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73196221"
 ---
 # <a name="hello-world----your-first-program"></a>Hello World -- 프로그램 처음 만들기
 
-이 문서에서는 Visual Studio를 사용하여 전통적인 "Hello World!" 프로그램을 만듭니다. Visual Studio는 .NET 개발용으로 설계된 다양한 기능을 갖춘 전문적인 IDE(통합 개발 환경)입니다. 이 프로그램은 Visual Studio의 일부 기능만 사용하여 만듭니다. Visual Studio에 대해 자세히 알아보려면 [Visual C# 및 Visual Basic 시작](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)을 참조하세요.
+이 문서에서는 Visual Studio를 사용하여 전통적인 "Hello World!" 프로그램을 만듭니다. Visual Studio는 .NET 개발용으로 설계된 다양한 기능을 갖춘 전문적인 IDE(통합 개발 환경)입니다. 이 프로그램은 Visual Studio의 일부 기능만 사용하여 만듭니다. Visual Studio에 대해 자세히 알아보려면 [Visual C# 시작](/visualstudio/ide/quickstart-csharp-console)을 참조하세요.
 
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]
 
@@ -128,4 +128,4 @@ C# 콘솔 애플리케이션에는 시작 및 끝을 제어하는 `Main` 메서�
 - [C# 프로그래밍 가이드](../index.md)
 - [샘플 및 자습서](../../../samples-and-tutorials/index.md)
 - [Main()과 명령줄 인수](../main-and-command-args/index.md)
-- [Visual C# 및 Visual Basic 시작](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
+- [Visual C# 시작](/visualstudio/ide/quickstart-csharp-console)

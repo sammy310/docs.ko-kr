@@ -4,12 +4,12 @@ description: .NET 코드를 작성하는 곳이라면 어디서나 Spark를 사�
 author: mamccrea
 ms.topic: overview
 ms.date: 10/15/2019
-ms.openlocfilehash: c31b50a20ac08bcde077e1e85ee915435a99fc28
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 12fccd478cedaccf455043feb3afa7b12221bf0e
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395864"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458194"
 ---
 # <a name="what-is-net-for-apache-spark"></a>Apache Spark용 .NET이란?
 
@@ -19,10 +19,10 @@ ms.locfileid: "72395864"
 
 .NET for Apache Spark에서는 개발자가 .NET 환경 또는 코드 기반을 가진 빅 데이터 분석 환경에 참여할 수 있도록 합니다. .NET for Apache Spark에서는 C# 및 F#의 Spark를 사용하기 위한 고성능 API를 제공합니다. C# 및 F#에서 다음에 액세스할 수 있습니다.
 
-* 구조적 데이터 작업을 위한 DataFrame 및 SparkSQL
-* 스트리밍 데이터 작업을 위한 Spark 구조적 스트리밍
-* SQL 구문으로 쿼리 작성을 위한 Spark SQL
-* 더 빠른 학습 및 예측을 위한 기계 학습 통합(예: [ML.NET](http://dot.net/ml)과 함께 Apache Spark에 .NET 사용)
+* 구조적 데이터 작업을 위한 DataFrame 및 SparkSQL.
+* 스트리밍 데이터 작업을 위한 Spark 구조적 스트리밍.
+* SQL 구문으로 쿼리 작성을 위한 Spark SQL.
+* 더 빠른 학습 및 예측을 위한 기계 학습 통합(즉, [ML.NET](https://dot.net/ml)과 함께 Apache Spark에 .NET 사용).
 
 .NET for Apache Spark는 .NET 구현에서 공통적인 .NET API의 공식 사양인 .NET Standard를 준수합니다. 따라서 .NET 코드를 작성하는 곳이라면 어디서나 .NET for Apache Spark를 사용할 수 있으므로 이미 .NET 개발자로 보유하고 있는 모든 지식, 기술, 코드 및 라이브러리를 다시 사용할 수 있습니다.
 
@@ -39,7 +39,7 @@ Spark에 대한 C#/F# 언어 바인딩은 더 쉬운 확장성을 제공하는 �
 
 ## <a name="net-for-apache-spark-performance"></a>.NET for Apache Spark 성능
 
-[TPC-H 벤치마크](http://www.tpc.org/tpch/)를 사용하여 Python 및 Scala와 비교했을 때 .NET for Apache Spark는 대부분의 경우 잘 작동하며, 사용자 정의 함수 성능이 중요할 경우 Python보다 2배 더 빠릅니다. 벤치마크 성능 개선을 위해 지속적으로 노력하고 있습니다. 
+[TPC-H 벤치마크](http://www.tpc.org/tpch/)를 사용하여 Python 및 Scala와 비교했을 때 .NET for Apache Spark는 대부분의 경우 잘 작동하며, 사용자 정의 함수 성능이 중요할 경우 Python보다 2배 더 빠릅니다. 벤치마크 성능 개선을 위해 지속적으로 노력하고 있습니다.
 
 사용자 고유의 벤치마킹을 수행하려면 [.NET for Apache Spark GitHub](https://github.com/dotnet/spark/tree/master/benchmark)에서 사용 가능한 벤치마크를 참조하세요.
 

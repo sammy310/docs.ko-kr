@@ -6,12 +6,12 @@ f1_keywords:
 - stackalloc_CSharpKeyword
 helpviewer_keywords:
 - stackalloc operator [C#]
-ms.openlocfilehash: 9ef5f98f2b4973c5873417ecc9a71c187e7299b9
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 82fc1649bac66c0e934db13c50390b977432c34c
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182423"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73036139"
 ---
 # <a name="stackalloc-operator-c-reference"></a>stackalloc 연산자(C# 참조)
 
@@ -21,7 +21,7 @@ ms.locfileid: "71182423"
 
 `stackalloc` 연산자의 결과를 다음 형식 중 하나의 변수에 할당할 수 있습니다.
 
-- C# 7.2부터 <xref:System.Span%601?displayProperty=nameWithType> 또는 <xref:System.ReadOnlySpan%601?displayProperty=nameWithType>(다음 예제 참조)
+- C# 7.2부터 <xref:System.Span%601?displayProperty=nameWithType> 또는 <xref:System.ReadOnlySpan%601?displayProperty=nameWithType>(다음 예제 참조):
 
   [!code-csharp[stackalloc span](~/samples/csharp/language-reference/operators/StackallocOperator.cs#AssignToSpan)]
 

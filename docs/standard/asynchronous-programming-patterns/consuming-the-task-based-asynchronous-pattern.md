@@ -9,14 +9,12 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET Framework support for
 - .NET Framework, asynchronous design patterns
 ms.assetid: 033cf871-ae24-433d-8939-7a3793e547bf
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e89545b5fa29f6e5bf99bb9b85322d7ee14422a4
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: f80e6ae520ab03c0f5f4edc30c0b7102193ee6c5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929018"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139822"
 ---
 # <a name="consuming-the-task-based-asynchronous-pattern"></a>작업 기반 비동기 패턴 사용
 
@@ -255,7 +253,7 @@ catch(Exception exc)
 
 - 초기 재귀 한도 초과:  예를 들어, 작업 t1으로 표시되는 작업은 다른 작업 t2를 사용하여 <xref:System.Threading.Tasks.Task.WhenAny%2A> 작업에서 그룹화할 수 있으며 <xref:System.Threading.Tasks.Task.WhenAny%2A> 작업에서 대기할 수 있습니다. 작업 t2는 시간 제한 또는 취소를 나타내거나 t1이 완료되기 전에 <xref:System.Threading.Tasks.Task.WhenAny%2A> 작업이 완료되도록 하는 일부 다른 신호를 나타낼 수 있습니다.
 
-#### <a name="redundancy"></a>중복성
+#### <a name="redundancy"></a>중복
  주식 구매 여부를 결정하려는 경우를 고려해 봅니다.  신뢰할 수 있는 일부 주식 권장 웹 서비스가 있지만 매일의 부하에 따라 각 서비스가 서로 다른 시간에 느려질 수 있습니다.  다음과 같이 <xref:System.Threading.Tasks.Task.WhenAny%2A> 메서드를 사용하면 작업이 완료될 때 알림을 받을 수 있습니다.
 
 ```csharp
@@ -381,7 +379,7 @@ while(imageTasks.Count > 0)
 }
 ```
 
-#### <a name="throttling"></a>스로틀
+#### <a name="throttling"></a>제한
  사용자가 너무 많은 이미지를 다운로드하여 다운로드를 조절해야 하는 경우를 제외하고, 인터리브 예제를 고려해 보세요. 예를 들어 특정 횟수의 다운로드만 동시에 발생하도록 할 수 있습니다. 이를 위해 비동기 작업 일부를 시작할 수 있습니다.  작업이 완료되면 추가 작업을 추가해서 시작되도록 할 수 있습니다.
 
 ```csharp
@@ -633,7 +631,7 @@ double currentPrice = await NeedOnlyOne(
 ```
 
 ### <a name="interleaved-operations"></a>인터리브 작업
- 매우 큰 작업 집합을 사용할 때 <xref:System.Threading.Tasks.Task.WhenAny%2A> 메서드를 사용하여 인터리브 시나리오를 지원할 경우 성능 문제가 발생할 수 있습니다.  <xref:System.Threading.Tasks.Task.WhenAny%2A>에 대한 모든 호출로 각 작업에 연속이 등록되게 됩니다. 작업 수가 N이면 인터리브 작업의 수명 동안 O(N2) 연속이 만들어집니다.  큰 작업을 하는 경우에는 성능 문제를 해결하기 위해 (다음 예의 `Interleaved`와 같은) 조합기를 사용할 수 있습니다.
+ 매우 큰 작업 집합을 사용할 때 <xref:System.Threading.Tasks.Task.WhenAny%2A> 메서드를 사용하여 인터리브 시나리오를 지원할 경우 성능 문제가 발생할 수 있습니다. <xref:System.Threading.Tasks.Task.WhenAny%2A>에 대한 모든 호출로 각 작업에 연속이 등록되게 됩니다. 작업 수가 N이면 인터리브 작업의 수명 동안 O(N<sup>2</sup>) 연속이 만들어집니다. 큰 작업을 하는 경우에는 성능 문제를 해결하기 위해 (다음 예의 `Interleaved`와 같은) 조합기를 사용할 수 있습니다.
 
 ```csharp
 static IEnumerable<Task<T>> Interleaved<T>(IEnumerable<Task<T>> tasks)

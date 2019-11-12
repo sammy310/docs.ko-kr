@@ -4,12 +4,12 @@ description: .NET 라이브러리에 강력한 이름을 지정하는 모범 사
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/16/2018
-ms.openlocfilehash: 3a623f65d95d776e45af245a1fe241cc5ee25b93
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 3e7cc9a3a1be05d8fcb02b34f7027126697d15d0
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70968979"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73196976"
 ---
 # <a name="strong-naming"></a>강력한 이름 지정
 
@@ -53,7 +53,7 @@ ms.locfileid: "70968979"
 
 > 공개적으로 사용 가능한 키를 통해 개발자는 라이브러리 소스 코드를 수정하고 동일한 키로 다시 컴파일할 수 있습니다.
 > 
-> [부분 신뢰 시나리오](/dotnet/framework/misc/using-libraries-from-partially-trusted-code)에서 특별한 사용 권한을 제공하기 위해 이전에 사용된 경우에는 강력한 이름 지정 키를 공개해서는 안 됩니다. 공개하면 기존 환경이 손상될 수 있습니다.
+> [부분 신뢰 시나리오](../../framework/misc/using-libraries-from-partially-trusted-code.md)에서 특별한 사용 권한을 제공하기 위해 이전에 사용된 경우에는 강력한 이름 지정 키를 공개해서는 안 됩니다. 공개하면 기존 환경이 손상될 수 있습니다.
 
 > [!IMPORTANT]
 > 코드 게시자 ID를 원하는 경우 [Authenticode](/windows-hardware/drivers/install/authenticode) 및 [NuGet 패키지 서명](/nuget/create-packages/sign-a-package)을 사용하는 것이 좋습니다. CAS(코드 액세스 보안)를 보안 완화로 사용해서는 안 됩니다.
@@ -66,7 +66,7 @@ ms.locfileid: "70968979"
 
 > 어셈블리의 강력한 이름 지정 키를 수정하면 어셈블리 ID가 변경되고, 어셈블리 ID를 사용하는 컴파일된 코드가 중단됩니다. 자세한 내용은 [호환성이 손상되는 이진 변경](./breaking-changes.md#binary-breaking-change)을 참조하세요.
 
-**❌ 금지** 강력한 이름이 지정되고 강력하지 않은 이름이 지정된 버전의 라이브러리를 게시합니다. 예를 들어 `Contoso.Api` 및 `Contoso.Api.StrongNamed`를 지정합니다.
+**❌** 강력한 이름 및 강력하지 않은 이름이 지정된 버전의 라이브러리를 게시하지 않습니다. 예를 들어 `Contoso.Api` 또는 `Contoso.Api.StrongNamed`입니다.
 
 > 두 패키지를 게시하면 개발자 에코시스템이 포크됩니다. 또한 애플리케이션이 두 패키지에 모두 종속하게 되면 개발자가 형식 이름 충돌을 발견할 수 있습니다. 적어도 .NET의 경우 어셈블리마다 형식이 다릅니다.
 

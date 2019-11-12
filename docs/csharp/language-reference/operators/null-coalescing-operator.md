@@ -11,12 +11,12 @@ helpviewer_keywords:
 - null-coalescing assignment [C#]
 - ??= operator [C#]
 ms.assetid: 088b1f0d-c1af-4fe1-b4b8-196fd5ea9132
-ms.openlocfilehash: 1e94038a41a6a6cc19be6c67bff2891397793fb3
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 5262aa70bb5ec2f03dda9425194b89ec1e809d76
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70924690"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73038956"
 ---
 # <a name="-and--operators-c-reference"></a>?? 및 ??= 연산자(C# 참조)
 
@@ -26,9 +26,9 @@ C# 8.0 이상에서 사용할 수 있는 null 병합 할당 연산자 `??=`는 �
 
 [!code-csharp[null-coalescing assignment](~/samples/csharp/language-reference/operators/NullCoalescingOperator.cs#Assignment)]
 
-`??=` 연산자의 왼쪽 피연산자는 변수, [속성](../../programming-guide/classes-and-structs/properties.md) 또는 [인덱서](../../programming-guide/indexers/index.md) 요소여야 합니다. null 병합 할당에 대한 자세한 내용은 [기능 제안 노트](~/_csharplang/proposals/csharp-8.0/null-coalescing-assignment.md)를 참조하세요.
+`??=` 연산자의 왼쪽 피연산자는 변수, [속성](../../programming-guide/classes-and-structs/properties.md) 또는 [인덱서](../../programming-guide/indexers/index.md) 요소여야 합니다.
 
-C# 7.3 이전 버전에서 `??` 연산자의 왼쪽 피연산자 형식은 참조 형식 또는 [null 허용 값 형식](../../programming-guide/nullable-types/index.md)이어야 합니다. C# 8.0부터 이 요구 사항이 다음과 같이 바뀝니다. `??` 및 `??=` 연산자의 왼쪽 피연산자 형식은 null을 허용하지 않는 값 형식일 수 없습니다. 특히 C# 8.0 이상에서 비제한 형식 매개 변수와 함께 null 병합 연산자를 사용할 수 있습니다.
+C# 7.3 이전 버전에서 `??` 연산자의 왼쪽 피연산자 형식은 참조 형식 또는 [null 허용 값 형식](../../programming-guide/nullable-types/index.md)이어야 합니다. C# 8.0부터 이 요구 사항이 다음과 같이 바뀝니다. `??` 및 `??=` 연산자의 왼쪽 피연산자 형식은 null을 허용하지 않는 값 형식일 수 없습니다. 특히 C# 8.0부터 비제한 형식 매개 변수와 함께 null 병합 연산자를 사용할 수 있습니다.
 
 [!code-csharp[unconstrained type parameter](~/samples/csharp/language-reference/operators/NullCoalescingOperator.cs#UnconstrainedType)]
 
@@ -46,21 +46,21 @@ a ?? (b ?? c)
 d ??= (e ??= f)
 ```
 
-## <a name="examples"></a>예제
+## <a name="examples"></a>예
 
 `??` 및 `??=` 연산자는 다음과 같은 시나리오에서 유용할 수 있습니다.
 
-- [null 병합 연산자 ?. 및 ?[]](member-access-operators.md#null-conditional-operators--and-)가 있는 식에서 null 병합 연산자를 사용하여 null 조건부 연산을 사용한 식의 결과가 `null`인 경우 평가하는 대체 식을 제공할 수 있습니다.
+- [null 병합 연산자 ?. 및 ?[]](member-access-operators.md#null-conditional-operators--and-)가 있는 식에서 `??` 연산자를 사용하여 null 조건부 연산을 사용한 식의 결과가 `null`인 경우 평가하는 대체 식을 제공할 수 있습니다.
 
   [!code-csharp-interactive[with null-conditional](~/samples/csharp/language-reference/operators/NullCoalescingOperator.cs#WithNullConditional)]
 
-- [nullable 값 형식](../../programming-guide/nullable-types/index.md)을 사용하고 기본값 유형의 값을 제공해야 할 때 null 병합 연산자를 사용하여 nullable 값이 `null`인 경우 제공할 값을 지정합니다.
+- [nullable 값 형식](../../programming-guide/nullable-types/index.md)을 사용하고 기본값 유형의 값을 제공해야 할 때 `??` 연산자를 사용하여 nullable 값이 `null`인 경우 제공할 값을 지정합니다.
 
   [!code-csharp-interactive[with nullable types](~/samples/csharp/language-reference/operators/NullCoalescingOperator.cs#WithNullableTypes)]
 
   nullable 형식 값이 `null`일 때 사용될 값이 기본 값 형식의 기본 값이어야 하는 경우 <xref:System.Nullable%601.GetValueOrDefault?displayProperty=nameWithType> 메서드를 사용합니다.
 
-- C# 7.0부터 null 병합 연산자의 오른쪽 피연산자로 [`throw` 식](../keywords/throw.md#the-throw-expression)을 사용하여 인수 확인 코드를 보다 간결하게 만들 수 있습니다.
+- C# 7.0부터 `??` 연산자의 오른쪽 피연산자로 [`throw` 식](../keywords/throw.md#the-throw-expression)을 사용하여 인수 확인 코드를 보다 간결하게 만들 수 있습니다.
 
   [!code-csharp[with throw expression](~/samples/csharp/language-reference/operators/NullCoalescingOperator.cs#WithThrowExpression)]
 
@@ -88,6 +88,8 @@ d ??= (e ??= f)
 ## <a name="c-language-specification"></a>C# 언어 사양
 
 `??` 연산자에 대한 자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [null 병합 연산자](~/_csharplang/spec/expressions.md#the-null-coalescing-operator) 섹션을 참조하세요.
+
+`??=` 연산자에 대한 자세한 내용은 [기능 제안 노트](~/_csharplang/proposals/csharp-8.0/null-coalescing-assignment.md)를 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
 

@@ -3,12 +3,12 @@ title: Docker 소개
 description: 이 문서에서는 .NET Core 애플리케이션 컨텍스트에서 Docker를 소개하고 간략하게 설명합니다.
 ms.date: 03/20/2019
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 3f40d2723feb5a31066115ae11cafba11981f1b4
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 7f19b12d84543e8ae69c2f8728872bf94ef0536f
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523006"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73416635"
 ---
 # <a name="introduction-to-net-and-docker"></a>.NET 및 Docker 소개
 
@@ -72,7 +72,7 @@ Windows Server 컨테이너를 사용하여 .NET 애플리케이션 및 마이�
 
 ## <a name="next-steps"></a>다음 단계
 
-- [.NET Core 애플리케이션을 컨테이너화하는 방법 알아보기](build-docker-netcore-container.md)
+- [.NET Core 애플리케이션을 컨테이너화하는 방법 알아보기](build-container.md)
 - [ASP.NET Core 애플리케이션을 컨테이너화하는 방법을 알아봅니다.](/aspnet/core/host-and-deploy/docker/building-net-docker-images)
 - [ASP.NET Core 마이크로 서비스 알아보기 자습서 확인해 보기](https://dotnet.microsoft.com/learn/web/aspnet-microservice-tutorial/intro)
 - [Visual Studio의 컨테이너 도구에 대해 알아보기](/visualstudio/containers/overview)

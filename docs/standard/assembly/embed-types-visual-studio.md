@@ -5,12 +5,12 @@ ms.assetid: 55ed13c9-c5bb-4bc2-bcd8-0587eb568864
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 1a37a3bcc3b1bc352d6a2f59691819e0b2403d3d
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 648aaaa86cf2d6bd2de989739694ba188c4bbc04
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523902"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73041026"
 ---
 # <a name="walkthrough-embed-types-from-managed-assemblies-in-visual-studio"></a>연습: Visual Studio에 관리되는 어셈블리의 형식 포함
 
@@ -18,7 +18,7 @@ ms.locfileid: "72523902"
 
 형식 포함은 Microsoft Office의 자동화 개체를 사용하는 애플리케이션과 같은 COM interop에서 자주 사용됩니다. 형식 정보를 포함하면 서로 다른 컴퓨터의 서로 다른 Microsoft Office 버전에서 동일한 빌드의 프로그램을 작동할 수 있습니다. 그러나 완전 관리형 솔루션에서도 형식 포함을 사용할 수 있습니다.
 
-포함할 수 있는 공용 인터페이스를 지정한 후 이러한 인터페이스를 구현하는 런타임 클래스를 만듭니다. 클라이언트 프로그램은 공용 인터페이스가 포함된 어셈블리를 참조하고 참조의 `Embed Interop Types` 속성을 `True`로 설정하여 디자인 타임에 해당 인터페이스의 형식 정보를 포함할 수 있습니다. 그러면 클라이언트 프로그램은 해당 인터페이스로 형식이 지정된 런타임 개체의 인스턴스를 로드할 수 있습니다. 이는 명령줄 컴파일러를 사용하고 `/link` 컴파일러 옵션을 사용하여 어셈블리를 참조하는 것과 같습니다. 
+포함할 수 있는 공용 인터페이스를 지정한 후 이러한 인터페이스를 구현하는 런타임 클래스를 만듭니다. 클라이언트 프로그램은 공용 인터페이스가 포함된 어셈블리를 참조하고 참조의 `Embed Interop Types` 속성을 `True`로 설정하여 디자인 타임에 해당 인터페이스의 형식 정보를 포함할 수 있습니다. 그러면 클라이언트 프로그램은 해당 인터페이스로 형식이 지정된 런타임 개체의 인스턴스를 로드할 수 있습니다. 이는 명령줄 컴파일러를 사용하고 [-link 컴파일러 옵션](../../csharp/language-reference/compiler-options/link-compiler-option.md)을 사용하여 어셈블리를 참조하는 것과 같습니다.
 
 강력한 이름의 런타임 어셈블리의 새 버전을 만들면 클라이언트 프로그램을 다시 컴파일할 필요가 없습니다. 클라이언트 프로그램은 공용 인터페이스의 포함된 형식 정보를 통해 사용 가능한 런타임 어셈블리 버전을 계속 사용합니다.
 
@@ -49,30 +49,30 @@ ms.locfileid: "72523902"
 
 ## <a name="create-an-interface"></a>인터페이스 만들기
 
-첫 번째 단계는 형식 동등 인터페이스 프로젝트를 만드는 것입니다. 
+첫 번째 단계는 형식 동등 인터페이스 프로젝트를 만드는 것입니다.
 
 1. Visual Studio에서 **파일** > **새로 만들기** > **프로젝트**를 선택합니다.
-   
-1. **새 프로젝트 만들기** 대화 상자에서 **템플릿 검색** 상자에 *class library*를 입력합니다. 목록에서 C# 또는 VB **클래스 라이브러리(.NET Framework)** 템플릿을 선택한 후 **다음**을 선택합니다. 
-   
+
+1. **새 프로젝트 만들기** 대화 상자에서 **템플릿 검색** 상자에 *class library*를 입력합니다. 목록에서 C# 또는 VB **클래스 라이브러리(.NET Framework)** 템플릿을 선택한 후 **다음**을 선택합니다.
+
 1. **새 프로젝트 구성** 대화 상자에서 **프로젝트 이름**에 *TypeEquivalenceInterface*를 입력한 다음 **만들기**를 선택합니다. 새 프로젝트가 만들어집니다.
-   
+
 1. **솔루션 탐색기**에서 *Class1.cs* 또는 *Class1.vb* 파일을 마우스 오른쪽 단추로 클릭하고 **이름 바꾸기**를 선택하여 파일 이름을 *Class1*에서 *ISampleInterface*로 바꿉니다. 클래스의 이름도 `ISampleInterface`로 바꿀지 묻는 메시지가 표시되면 **예**라고 답합니다. 이 클래스는 클래스의 공용 인터페이스를 나타냅니다.
-   
-1. **솔루션 탐색기**에서 **TypeEquivalenceInterface** 프로젝트를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 선택합니다. 
-   
-1. **속성** 화면의 왼쪽 창에서 **빌드**를 선택하고 **출력 경로**를 *C:\TypeEquivalenceSample* 같은 컴퓨터의 위치로 설정합니다. 이 연습 전체에서 동일한 위치를 사용합니다. 
-   
-1. **속성** 화면의 왼쪽 창에서 **서명**을 선택한 다음 **어셈블리에 서명** 확인란을 선택합니다. **강력한 이름 키 파일 선택** 드롭다운 목록에서 **새로 만들기**를 선택합니다. 
-   
+
+1. **솔루션 탐색기**에서 **TypeEquivalenceInterface** 프로젝트를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 선택합니다.
+
+1. **속성** 화면의 왼쪽 창에서 **빌드**를 선택하고 **출력 경로**를 *C:\TypeEquivalenceSample* 같은 컴퓨터의 위치로 설정합니다. 이 연습 전체에서 동일한 위치를 사용합니다.
+
+1. **속성** 화면의 왼쪽 창에서 **서명**을 선택한 다음 **어셈블리에 서명** 확인란을 선택합니다. **강력한 이름 키 파일 선택** 드롭다운 목록에서 **새로 만들기**를 선택합니다.
+
 1. **강력한 이름 키 만들기** 대화 상자의 **키 파일 이름**에 *key.snk*를 입력합니다. **암호로 내 키 파일 보호** 확인란의 선택을 취소한 다음 **확인**을 선택합니다.
-   
+
 1. 코드 편집기에서 *ISampleInterface* 클래스를 열고 콘텐츠를 다음 코드로 바꾸어 `ISampleInterface` 인터페이스를 만듭니다.
-   
+
    ```csharp
    using System;
    using System.Runtime.InteropServices;
-   
+
    namespace TypeEquivalenceInterface
    {
        [ComImport]
@@ -84,10 +84,10 @@ ms.locfileid: "72523902"
        }
    }
    ```
-   
+
    ```vb
    Imports System.Runtime.InteropServices
-   
+
    <ComImport()>
    <Guid("8DA56996-A151-4136-B474-32784559F6DF")>
    Public Interface ISampleInterface
@@ -95,23 +95,23 @@ ms.locfileid: "72523902"
        ReadOnly Property UserInput As String
    End Interface
    ```
-   
+
 1. **도구** 메뉴에서 **GUID 만들기**를 선택하고 **GUID 만들기** 대화 상자에서 **레지스트리 형식**을 선택합니다. **복사**를 선택한 다음 **끝내기**를 선택합니다.
-   
+
 1. 코드의 `Guid` 특성에서 샘플 GUID를 복사한 GUID로 바꾸고 중괄호( **{ }** )를 제거합니다.
-   
+
 1. **솔루션 탐색기**에서 **속성** 폴더를 펼치고 *AssemblyInfo.cs* 또는 *AssemblyInfo.vb* 파일을 선택합니다. 코드 편집기에서 파일에 다음 특성을 추가합니다.
-   
+
    ```csharp
    [assembly: ImportedFromTypeLib("")]
    ```
-   
+
    ```vb
    <Assembly: ImportedFromTypeLib("")>
    ```
-   
+
 1. **파일** > **모두 저장**을 선택하거나 **Ctrl**+**Shift**+**S**를 눌러 파일과 프로젝트를 저장합니다.
-   
+
 1. **솔루션 탐색기**에서 **TypeEquivalenceInterface** 프로젝트를 마우스 오른쪽 단추로 클릭하고 **빌드**를 선택합니다. 클래스 라이브러리 DLL 파일이 컴파일되고 지정된 빌드 출력 경로에 저장됩니다(예: *C:\TypeEquivalenceSample*).
 
 ## <a name="create-a-runtime-class"></a>런타임 클래스 만들기
@@ -119,43 +119,40 @@ ms.locfileid: "72523902"
 다음으로 동등한 형식의 런타임 프로젝트를 만듭니다.
 
 1. Visual Studio에서 **파일** > **새로 만들기** > **프로젝트**를 선택합니다.
-   
-1. **새 프로젝트 만들기** 대화 상자에서 **템플릿 검색** 상자에 *class library*를 입력합니다. 목록에서 C# 또는 VB **클래스 라이브러리(.NET Framework)** 템플릿을 선택한 후 **다음**을 선택합니다. 
-   
+
+1. **새 프로젝트 만들기** 대화 상자에서 **템플릿 검색** 상자에 *class library*를 입력합니다. 목록에서 C# 또는 VB **클래스 라이브러리(.NET Framework)** 템플릿을 선택한 후 **다음**을 선택합니다.
+
 1. **새 프로젝트 구성** 대화 상자에서 **프로젝트 이름**에 *TypeEquivalenceRuntime*을 입력한 다음 **만들기**를 선택합니다. 새 프로젝트가 만들어집니다.
-   
+
 1. **솔루션 탐색기**에서 *Class1.cs* 또는 *Class1.vb* 파일을 마우스 오른쪽 단추로 클릭하고 **이름 바꾸기**를 선택하여 파일 이름을 *Class1*에서 *SampleClass*로 바꿉니다. 클래스의 이름도 `SampleClass`로 바꿀지 묻는 메시지가 표시되면 **예**라고 답합니다. 이 클래스는 `ISampleInterface` 인터페이스를 구현합니다.
-   
-1. **솔루션 탐색기**에서 **TypeEquivalenceInterface** 프로젝트를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다. 
-   
+
+1. **솔루션 탐색기**에서 **TypeEquivalenceInterface** 프로젝트를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.
+
 1. **속성** 화면 왼쪽 창에서 **빌드**를 선택한 다음 **출력 경로**를 TypeEquivalenceInterface 프로젝트에 사용한 것과 동일한 위치로 설정합니다(예: *C:\TypeEquivalenceSample*).
-   
-1. **속성** 화면의 왼쪽 창에서 **서명**을 선택한 다음 **어셈블리에 서명** 확인란을 선택합니다. **강력한 이름 키 파일 선택** 드롭다운 목록에서 **새로 만들기**를 선택합니다. 
-   
+
+1. **속성** 화면의 왼쪽 창에서 **서명**을 선택한 다음 **어셈블리에 서명** 확인란을 선택합니다. **강력한 이름 키 파일 선택** 드롭다운 목록에서 **새로 만들기**를 선택합니다.
+
 1. **강력한 이름 키 만들기** 대화 상자의 **키 파일 이름**에 *key.snk*를 입력합니다. **암호로 내 키 파일 보호** 확인란의 선택을 취소한 다음 **확인**을 선택합니다.
-   
-1. **솔루션 탐색기**에서 **TypeEquivalenceRuntime** 프로젝트를 마우스 오른쪽 단추로 클릭하고 **추가** > **참조**를 선택합니다. 
-   
+
+1. **솔루션 탐색기**에서 **TypeEquivalenceRuntime** 프로젝트를 마우스 오른쪽 단추로 클릭하고 **추가** > **참조**를 선택합니다.
+
 1. **참조 관리자** 대화 상자에서 **찾아보기**를 선택하고 출력 경로 폴더를 찾습니다. *TypeEquivalenceInterface.dll* 파일을 선택하고 **추가**를 선택한 다음 **확인**을 선택합니다.
-   
+
 1. **솔루션 탐색기**에서 **참조** 폴더를 펼치고 **TypeEquivalenceInterface** 참조를 선택합니다. **속성** 창에서 아직 설정하지 않았다면 **특정 버전**을 **False**로 설정합니다.
-   
+
 1. 코드 편집기에서 *SampleClass* 클래스 파일을 열고 콘텐츠를 다음 코드로 바꾸어 `SampleClass` 클래스를 만듭니다.
-   
+
    ```csharp
    using System;
-   using System.Collections.Generic;
-   using System.Linq;
-   using System.Text;
    using TypeEquivalenceInterface;
-   
+
    namespace TypeEquivalenceRuntime
    {
        public class SampleClass : ISampleInterface
        {
            private string p_UserInput;
            public string UserInput { get { return p_UserInput; } }
-   
+
            public void GetUserInput()
            {
                Console.WriteLine("Please enter a value:");
@@ -164,29 +161,29 @@ ms.locfileid: "72523902"
        }
    }
    ```
-   
+
    ```vb
    Imports TypeEquivalenceInterface
-   
+
    Public Class SampleClass
        Implements ISampleInterface
-   
+
        Private p_UserInput As String
        Public ReadOnly Property UserInput() As String Implements ISampleInterface.UserInput
            Get
                Return p_UserInput
            End Get
        End Property
-   
+
        Public Sub GetUserInput() Implements ISampleInterface.GetUserInput
            Console.WriteLine("Please enter a value:")
            p_UserInput = Console.ReadLine()
        End Sub
    End Class
    ```
-   
+
 1. **파일** > **모두 저장**을 선택하거나 **Ctrl**+**Shift**+**S**를 눌러 파일과 프로젝트를 저장합니다.
-   
+
 1. **솔루션 탐색기**에서 **TypeEquivalenceRuntime** 프로젝트를 마우스 오른쪽 단추로 클릭하고 **빌드**를 선택합니다. 클래스 라이브러리 DLL 파일이 컴파일되고 지정된 빌드 출력 경로에 저장됩니다.
 
 ## <a name="create-a-client-project"></a>클라이언트 프로젝트 만들기
@@ -194,31 +191,28 @@ ms.locfileid: "72523902"
 마지막으로 인터페이스 어셈블리를 참조하는 형식 동등 클라이언트 프로그램을 만듭니다.
 
 1. Visual Studio에서 **파일** > **새로 만들기** > **프로젝트**를 선택합니다.
-   
-1. **새 프로젝트 만들기** 대화 상자에서 **템플릿 검색** 상자에 *console*을 입력합니다. 목록에서 C# 또는 VB **콘솔 앱(.NET Framework)** 템플릿을 선택한 후 **다음**을 선택합니다. 
-   
+
+1. **새 프로젝트 만들기** 대화 상자에서 **템플릿 검색** 상자에 *console*을 입력합니다. 목록에서 C# 또는 VB **콘솔 앱(.NET Framework)** 템플릿을 선택한 후 **다음**을 선택합니다.
+
 1. **새 프로젝트 구성** 대화 상자에서 **프로젝트 이름**에 *TypeEquivalenceClient*를 입력한 다음 **만들기**를 선택합니다. 새 프로젝트가 만들어집니다.
-   
-1. **솔루션 탐색기**에서 **TypeEquivalenceClient** 프로젝트를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다. 
-   
+
+1. **솔루션 탐색기**에서 **TypeEquivalenceClient** 프로젝트를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.
+
 1. **속성** 화면 왼쪽 창에서 **빌드**를 선택한 다음 **출력 경로**를 TypeEquivalenceInterface 프로젝트에 사용한 것과 동일한 위치로 설정합니다(예: *C:\TypeEquivalenceSample*).
-   
-1. **솔루션 탐색기**에서 **TypeEquivalenceClient** 프로젝트를 마우스 오른쪽 단추로 클릭하고 **추가** > **참조**를 선택합니다. 
-   
+
+1. **솔루션 탐색기**에서 **TypeEquivalenceClient** 프로젝트를 마우스 오른쪽 단추로 클릭하고 **추가** > **참조**를 선택합니다.
+
 1. **참조 관리자** 대화 상자에서 **TypeEquivalenceInterface.dll** 파일이 이미 나열되어 있다면 선택합니다. 그렇지 않다면 **찾아보기**를 선택해 출력 경로 폴더를 찾고, *TypeEquivalenceInterface.dll* 파일( *TypeEquivalenceRuntime.dll*이 아님)을 선택하고 **추가**를 선택합니다. **확인**을 선택합니다.
-   
+
 1. **솔루션 탐색기**에서 **참조** 폴더를 펼치고 **TypeEquivalenceInterface** 참조를 선택합니다. **속성** 창에서 **Interop 형식 포함**을 **True**로 설정합니다.
-   
+
 1. 코드 편집기에서 *Program.cs* 또는 *Module1.vb* 파일을 열고 콘텐츠를 다음 코드로 바꾸어 클라이언트 프로그램을 만듭니다.
-   
+
    ```csharp
    using System;
-   using System.Collections.Generic;
-   using System.Linq;
-   using System.Text;
-   using TypeEquivalenceInterface;
    using System.Reflection;
-   
+   using TypeEquivalenceInterface;
+
    namespace TypeEquivalenceClient
    {
        class Program
@@ -236,13 +230,13 @@ ms.locfileid: "72523902"
        }
    }
    ```
-   
+
    ```vb
-   Imports TypeEquivalenceInterface
    Imports System.Reflection
-   
+   Imports TypeEquivalenceInterface
+
    Module Module1
-   
+
        Sub Main()
            Dim sampleAssembly = Assembly.Load("TypeEquivalenceRuntime")
            Dim sampleClass As ISampleInterface = CType( _
@@ -252,72 +246,72 @@ ms.locfileid: "72523902"
            Console.WriteLine(sampleAssembly.GetName().Version)
            Console.ReadLine()
        End Sub
-   
+
    End Module
    ```
-   
+
 1. **파일** > **모두 저장**을 선택하거나 **Ctrl**+**Shift**+**S**를 눌러 파일과 프로젝트를 저장합니다.
-   
-1. **Ctrl**+**F5**를 눌러 프로그램을 빌드하고 실행합니다. 콘솔 출력은 어셈블리 버전 **1.0.0.0**을 반환합니다. 
-   
+
+1. **Ctrl**+**F5**를 눌러 프로그램을 빌드하고 실행합니다. 콘솔 출력은 어셈블리 버전 **1.0.0.0**을 반환합니다.
+
 ## <a name="modify-the-interface"></a>인터페이스 수정
 
-이제 인터페이스 어셈블리를 수정하고 해당 버전을 변경합니다. 
+이제 인터페이스 어셈블리를 수정하고 해당 버전을 변경합니다.
 
 1. Visual Studio에서 **파일** > **열기** > **프로젝트/솔루션**을 선택하고 **TypeEquivalenceInterface** 프로젝트를 엽니다.
-   
-1. **솔루션 탐색기**에서 **TypeEquivalenceInterface** 프로젝트를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다. 
-   
-1. **속성** 화면의 왼쪽 창에서 **애플리케이션**을 선택한 다음 **어셈블리 정보**를 선택합니다. 
-   
+
+1. **솔루션 탐색기**에서 **TypeEquivalenceInterface** 프로젝트를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.
+
+1. **속성** 화면의 왼쪽 창에서 **애플리케이션**을 선택한 다음 **어셈블리 정보**를 선택합니다.
+
 1. **어셈블리 정보** 대화 상자에서 **어셈블리 버전** 및 **파일 버전** 값을 *2.0.0.0*으로 변경한 다음 **확인**을 선택합니다.
-   
+
 1. *SampleInterface.cs* 또는 *SampleInterface.vb* 파일을 열고 다음 코드 줄을 `ISampleInterface` 인터페이스에 추가합니다.
-   
+
    ```csharp
    DateTime GetDate();
    ```
-   
+
    ```vb
    Function GetDate() As Date
    ```
-   
+
 1. **파일** > **모두 저장**을 선택하거나 **Ctrl**+**Shift**+**S**를 눌러 파일과 프로젝트를 저장합니다.
-   
+
 1. **솔루션 탐색기**에서 **TypeEquivalenceInterface** 프로젝트를 마우스 오른쪽 단추로 클릭하고 **빌드**를 선택합니다. 새 버전의 클래스 라이브러리 DLL 파일이 컴파일되고 빌드 출력 경로에 저장됩니다.
 
 ## <a name="modify-the-runtime-class"></a>런타임 클래스 수정
 
-또한 런타임 클래스를 수정하고 해당 버전을 업데이트합니다. 
+또한 런타임 클래스를 수정하고 해당 버전을 업데이트합니다.
 
 1. Visual Studio에서 **파일** > **열기** > **프로젝트/솔루션**을 선택하고 **TypeEquivalenceRuntime** 프로젝트를 엽니다.
-   
-1. **솔루션 탐색기**에서 **TypeEquivalenceRuntime** 프로젝트를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다. 
-   
-1. **속성** 화면의 왼쪽 창에서 **애플리케이션**을 선택한 다음 **어셈블리 정보**를 선택합니다. 
-   
+
+1. **솔루션 탐색기**에서 **TypeEquivalenceRuntime** 프로젝트를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.
+
+1. **속성** 화면의 왼쪽 창에서 **애플리케이션**을 선택한 다음 **어셈블리 정보**를 선택합니다.
+
 1. **어셈블리 정보** 대화 상자에서 **어셈블리 버전** 및 **파일 버전** 값을 *2.0.0.0*으로 변경한 다음 **확인**을 선택합니다.
-   
+
 1. *SampleClass.cs* 또는 *SampleClass.vb* 파일을 열고 다음 코드를 `SampleClass` 클래스에 추가합니다.
-   
+
    ```csharp
     public DateTime GetDate()
     {
         return DateTime.Now;
     }
    ```
-   
+
    ```vb
    Public Function GetDate() As DateTime Implements ISampleInterface.GetDate
        Return Now
    End Function
    ```
-   
+
 1. **파일** > **모두 저장**을 선택하거나 **Ctrl**+**Shift**+**S**를 눌러 파일과 프로젝트를 저장합니다.
-   
+
 1. **솔루션 탐색기**에서 **TypeEquivalenceRuntime** 프로젝트를 마우스 오른쪽 단추로 클릭하고 **빌드**를 선택합니다. 새 버전의 클래스 라이브러리 DLL 파일이 컴파일되고 빌드 출력 경로에 저장됩니다.
 
-## <a name="run-the-updated-client-program"></a>업데이트된 클라이언트 프로그램 실행 
+## <a name="run-the-updated-client-program"></a>업데이트된 클라이언트 프로그램 실행
 
 빌드 출력 폴더 위치로 이동하여 *TypeEquivalenceClient.exe*를 실행합니다. 이제 프로그램을 다시 컴파일하지 않고도 콘솔 출력에 `TypeEquivalenceRuntime` 어셈블리의 새 버전 *2.0.0.0*이 반영됩니다.
 

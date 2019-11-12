@@ -2,14 +2,12 @@
 title: '완화: X509CertificateClaimSet.FindClaims 메서드'
 ms.date: 03/30/2017
 ms.assetid: ee356e3b-f932-48f5-875a-5e42340bee63
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ffc03e6c88a2aabb967587d8b1ee7d0b784b4e7d
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e75b1cae599b153012b8525a0e1e36ed116e695f
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70778941"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457761"
 ---
 # <a name="mitigation-x509certificateclaimsetfindclaims-method"></a>완화: X509CertificateClaimSet.FindClaims 메서드
 .NET Framework 4.6.1을 대상으로 하는 앱부터 <xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=nameWithType> 메서드는 `claimType` 인수를 해당 SAN 필드의 모든 DNS 항목과 일치시키려 합니다.  
@@ -38,4 +36,4 @@ ms.locfileid: "70778941"
   
 ## <a name="see-also"></a>참고 항목
 
-- [대상 다시 지정 변경 내용](retargeting-changes-in-the-net-framework-4-6-1.md)
+- [애플리케이션 호환성](application-compatibility.md)

@@ -13,22 +13,22 @@ helpviewer_keywords:
 - event unsubscription [C#]
 - -= operator [C#]
 ms.assetid: 4de7a4fa-c69d-48e6-aff1-3130af970b2d
-ms.openlocfilehash: 80603107beb708e76a2c7446f300d71ede411570
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: cf642fcac7233d27f2ed9052829c145038e93419
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67609849"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73038883"
 ---
 # <a name="--and---operators-c-reference"></a>- 및 -= 연산자(C# 참조)
 
-`-` 연산자는 기본 제공 숫자 형식 및 [대리자](../keywords/delegate.md) 형식에서 지원됩니다.
+`-` 및 `-=` 연산자에는 기본 제공 [정수](../builtin-types/integral-numeric-types.md) 및 [부동 소수점](../builtin-types/floating-point-numeric-types.md) 숫자 형식, [대리자](../builtin-types/reference-types.md#the-delegate-type) 형식이 지원됩니다.
 
 산술 `-` 연산자에 대한 자세한 내용은 [산술 연산자](arithmetic-operators.md) 문서의 [단항 더하기 및 빼기 연산자](arithmetic-operators.md#unary-plus-and-minus-operators) 및 [빼기 연산자 -](arithmetic-operators.md#subtraction-operator--) 섹션을 참조하세요.
 
 ## <a name="delegate-removal"></a>대리자 제거
 
-동일한 [대리자](../keywords/delegate.md) 형식의 피연산자에 대해 `-` 연산자는 다음과 같이 계산되는 대리자 인스턴스를 반환합니다.
+동일한 [대리자](../builtin-types/reference-types.md#the-delegate-type) 형식의 피연산자에 대해 `-` 연산자는 다음과 같이 계산되는 대리자 인스턴스를 반환합니다.
 
 - 두 피연산자가 모두 null이 아니고 오른쪽 피연산자의 호출 목록이 왼쪽 피연산자의 호출 목록에 적절한 연속 하위 목록인 경우, 이 연산의 결과는 왼쪽 피연산자의 호출 목록에서 오른쪽 피연산자의 항목을 제거하여 얻은 새로운 호출 목록입니다. 오른쪽 피연산자의 목록이 왼쪽 피연산자 목록의 여러 개의 연속 하위 목록과 일치하는 경우 가장 오른쪽의 일치하는 하위 목록만 제거됩니다. 제거로 인해 빈 목록이 생성되면 결과는 `null`입니다.
 
@@ -38,7 +38,7 @@ ms.locfileid: "67609849"
 
   [!code-csharp-interactive[delegate removal with no effect](~/samples/csharp/language-reference/operators/SubtractionOperator.cs#DelegateRemovalNoChange)]
 
-  또한 앞의 예제에서는 대리자 제거 중 대리자 인스턴스를 비교하는 것을 보여줍니다. 예를 들어 동일한 [람다 식](../../programming-guide/statements-expressions-operators/lambda-expressions.md)의 평가에서 생성된 대리자는 동일하지 않습니다. 대리자 같음에 대한 자세한 내용은 [C# 언어 사양](../language-specification/index.md)의 [대리자 같음 연산자](~/_csharplang/spec/expressions.md#delegate-equality-operators) 섹션을 참조하세요.
+  또한 앞의 예제에서는 대리자 제거 중 대리자 인스턴스를 비교하는 것을 보여줍니다. 예를 들어 동일한 [람다 식](../../programming-guide/statements-expressions-operators/lambda-expressions.md)의 평가에서 생성된 대리자는 동일하지 않습니다. 대리자 같음에 대한 자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [대리자 같음 연산자](~/_csharplang/spec/expressions.md#delegate-equality-operators) 섹션을 참조하세요.
 
 - 왼쪽 피연산자가 `null`이면, 연산 결과는 `null`입니다. 오른쪽 피연산자가 `null`이면, 연산 결과는 왼쪽 피연산자입니다.
 
@@ -63,7 +63,7 @@ x = x - y
 ```
 
 단, `x`가 한 번만 계산됩니다.
-  
+
 다음 예제에서는 `-=` 연산자의 사용법을 보여 줍니다.
 
 [!code-csharp-interactive[-= examples](~/samples/csharp/language-reference/operators/SubtractionOperator.cs#SubtractAndAssign)]
@@ -82,7 +82,6 @@ x = x - y
 
 - [C# 참조](../index.md)
 - [C# 연산자](index.md)
-- [대리자](../../programming-guide/delegates/index.md)
 - [이벤트](../../programming-guide/events/index.md)
 - [산술 연산자](arithmetic-operators.md)
 - [+ 및 += 연산자](addition-operator.md)

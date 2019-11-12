@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: f5630f7947125dd5eb8a5b58e79add1aec4c689b
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 1efcee0ac3bdba1b7e1379a0ac072ea714add756
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774913"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423912"
 ---
 # <a name="whats-new-for-visual-basic"></a>Visual Basic의 새로운 기능
 
@@ -206,13 +206,13 @@ C# 7.0부터 C#에서 참조 반환 값을 지원합니다. 즉, 호출하는 �
 
 ## <a name="visual-basic-14"></a>Visual Basic 14
 
-[Nameof](../../csharp/language-reference/operators/nameof.md)
+[NameOf](../language-reference/operators/nameof.md)
 
 문자열을 하드 코드하지 않고 오류 메시지에서 사용하기 위해 형식이나 멤버의 정규화되지 않은 문자열 이름을 가져올 수 있습니다.  이 기능을 사용하면 리팩터링할 때 코드를 올바르게 유지할 수 있습니다.  이 기능은 MVC(Model-View-Controller) 링크를 연결하고 속성 변경 이벤트를 발생시키는 데도 유용합니다.
 
 [문자열 보간](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)
 
-문자열 보간 식을 사용하여 문자열을 생성할 수 있습니다.  보간된 문자열 식은 식이 포함된 템플릿 문자열과 유사합니다.  보간된 문자열은 인수 측면에서 [Composite Formatting](../../standard/base-types/composite-format.md)보다 이해하기 쉽습니다.
+문자열 보간 식을 사용하여 문자열을 생성할 수 있습니다.  보간된 문자열 식은 식이 포함된 템플릿 문자열과 유사합니다.  보간된 문자열은 인수 측면에서 [Composite Formatting](../../standard/base-types/composite-formatting.md)보다 이해하기 쉽습니다.
 
 [Null 조건부 멤버 액세스 및 인덱싱](../language-reference/operators/null-conditional-operators.md)
 
@@ -291,4 +291,4 @@ End Interface
 
 ## <a name="see-also"></a>참고 항목
 
-- [Visual Studio 2017의 새로운 기능](/visualstudio/ide/whats-new-in-visual-studio)
+- [Visual Studio 2017의 새로운 기능](/visualstudio/ide/whats-new-visual-studio-2017)

@@ -4,12 +4,12 @@ description: ASP.NET Core 및 Azure를 사용하여 현대식 웹 애플리케�
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 9d9e75767f5ed5010f618d5dbe1e58fe79454597
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: ff517aef93acf8c3a241c8fd8f240f7018467793
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117297"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419977"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>ASP.NET Core 앱에서 데이터 작업
 
@@ -342,20 +342,20 @@ NoSQL 데이터베이스에서는 개체의 여러 버전을 저장할 수 있�
 
 NoSQL 데이터베이스는 일반적으로 [ACID](https://en.wikipedia.org/wiki/ACID)를 적용하지 않습니다. 즉, 관계형 데이터베이스보다 성능과 확장성이 더 좋습니다. 정규화된 테이블 구조의 스토리지에 적합하지 않은 매우 거대한 데이터 세트 및 개체에 적합합니다. 각 데이터베이스를 적합하게 사용한다면 단일 애플리케이션으로 관계형 데이터베이스와 NoSQL 데이터베이스의 장점을 모두 취하지 못할 이유가 없습니다.
 
-## <a name="azure-documentdb"></a>Azure DocumentDB
+## <a name="azure-cosmos-db"></a>Azure Cosmos DB
 
-Azure DocumentDB는 완전히 관리되는 NoSQL 데이터베이스 서비스로 스키마 없는 클라우드 기반 데이터 스토리지를 제공합니다. DocumentDB는 신속하고 예측 가능한 성능, 고가용성, 탄력적인 크기 조정, 글로벌 배포를 위해 설계되었습니다. NoSQL 데이터베이스임에도 불구하고, 개발자가 풍부하고 친숙한 SQL 쿼리 기능을 JSON 데이터에 사용할 수 있습니다. DocumentDB의 모든 리소스는 JSON 문서로 저장됩니다. 리소스는 메타데이터를 포함하고 있는 _항목_ 및 항목 컬렉션인 _피드_로 관리됩니다. 그림 8-2는 여러 DocumentDB 리소스 간의 관계를 보여줍니다.
+Azure Cosmos DB는 완전히 관리되는 NoSQL 데이터베이스 서비스로 스키마 없는 클라우드 기반 데이터 스토리지를 제공합니다. Azure Cosmos DB는 신속하고 예측 가능한 성능, 고가용성, 탄력적인 크기 조정, 글로벌 배포를 위해 설계되었습니다. NoSQL 데이터베이스임에도 불구하고, 개발자가 풍부하고 친숙한 SQL 쿼리 기능을 JSON 데이터에 사용할 수 있습니다. Azure Cosmos DB의 모든 리소스는 JSON 문서로 저장됩니다. 리소스는 메타데이터를 포함하고 있는 _항목_ 및 항목 컬렉션인 _피드_로 관리됩니다. 그림 8-2는 여러 Azure Cosmos DB 리소스 간의 관계를 보여줍니다.
 
-![JSON NoSQL 데이터베이스인 DocumentDB의 리소스 간 계층 관계](./media/image8-2.png)
+![NoSQL JSON 데이터베이스인 Azure Cosmos DB의 리소스 간 계층 관계](./media/image8-2.png)
 
-**그림 8-2.** DocumentDB 리소스 조직.
+**그림 8-2.** Azure Cosmos DB 리소스 조직입니다.
 
-DocumentDB 쿼리 언어는 JSON 문서를 쿼리하는 데 사용되는 단순하면서도 강력한 인터페이스입니다. 이 언어는 ANSI SQL 문법의 하위 집합을 지원하고 JavaScript 개체, 배열, 개체 생성 및 함수 호출을 긴밀하게 통합합니다.
+Azure Cosmos DB 쿼리 언어는 JSON 문서를 쿼리하는 단순하지만 강력한 인터페이스입니다. 이 언어는 ANSI SQL 문법의 하위 집합을 지원하며 JavaScript 개체, 배열, 개체 생성 및 함수 호출의 전체 통합을 추가합니다.
 
-**참조 – DocumentDB**
+**참조 – Azure Cosmos DB**
 
-- DocumentDB 소개  
-  <https://docs.microsoft.com/azure/documentdb/documentdb-introduction>
+- Azure Cosmos DB 소개  
+  <https://docs.microsoft.com/azure/cosmos-db/introduction>
 
 ## <a name="other-persistence-options"></a>다른 지속성 옵션
 
@@ -439,7 +439,6 @@ public class CachedCatalogService : ICatalogService
     private readonly CatalogService _catalogService;
     private static readonly string _brandsKey = "brands";
     private static readonly string _typesKey = "types";
-    private static readonly string _itemsKeyTemplate = "items-{0}-{1}-{2}-{3}";
     private static readonly TimeSpan _defaultCacheDuration = TimeSpan.FromSeconds(30);
     public CachedCatalogService(IMemoryCache cache,
     CatalogService catalogService)
@@ -459,7 +458,7 @@ public class CachedCatalogService : ICatalogService
 
     public async Task<Catalog> GetCatalogItems(int pageIndex, int itemsPage, int? brandID, int? typeId)
     {
-        string cacheKey = String.Format(_itemsKeyTemplate, pageIndex, itemsPage, brandID, typeId);
+        string cacheKey = $"items-{pageIndex}-{itemsPage}-{brandID}-{typeId}";
         return await _cache.GetOrCreateAsync(cacheKey, async entry =>
         {
             entry.SlidingExpiration = _defaultCacheDuration;

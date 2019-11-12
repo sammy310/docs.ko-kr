@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 08/27/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 6d13e7e4788dfd2bad6fd26015d76342b38f1142
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 1364b6a1cf6d424975828185a50175b2763c6516
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774446"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420054"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>자습서: ML.NET에서 ONNX를 사용하여 개체 검색
 
@@ -45,7 +45,7 @@ ML.NET에서 미리 학습된 ONNX 모델을 사용하여 이미지에서 개체
 
 개체 검색은 컴퓨터 비전 문제입니다. 개체 검색은 이미지 분류와 밀접하게 관련된 반면, 보다 세부적인 규모에서 이미지 분류를 수행합니다. 개체 검색에서는 이미지에서 엔터티 찾기 _및_ 분류를 둘 다 수행합니다. 이미지에 서로 다른 유형의 개체가 여러 개 포함되어 있는 경우 개체 검색을 사용합니다.
 
-![왼쪽에는 한 강아지의 이미지 분류를 표시하고, 오른쪽에는 한 강아지의 그룹 개체 분류를 보여 주는 병렬 이미지](./media/object-detection-onnx/img-classification-obj-detection.PNG)
+![이미지 분류 및 개체 분류를 보여 주는 스크린샷](./media/object-detection-onnx/img-classification-obj-detection.png)
 
 개체 검색의 몇 가지 사용 사례는 다음과 같습니다.
 
@@ -66,7 +66,7 @@ ML.NET에서 미리 학습된 ONNX 모델을 사용하여 이미지에서 개체
 
 개체 검색은 이미지 처리 작업입니다. 따라서 이 문제를 해결하도록 학습된 대부분의 딥 러닝 모델은 CNN입니다. 이 자습서에서 사용되는 모델은 백서에 설명된 YOLOv2 모델의 축소 버전인 Tiny YOLOv2 모델입니다. [“YOLO9000: Better, Faster, Stronger” by Redmon and Fadhari](https://arxiv.org/pdf/1612.08242.pdf). Tiny YOLOv2는 Pascal VOC 데이터 세트에서 학습되며 20개의 서로 다른 개체 클래스를 예측할 수 있는 15개의 계층으로 구성됩니다. Tiny YOLOv2는 소스 YOLOv2 모델의 축소된 버전이며, 속도와 정확도가 서로 절충됩니다. Netron과 같은 도구를 사용하여 모델을 구성하는 다양한 계층을 시각화할 수 있습니다. 모델을 검사하면 신경망을 구성하는 모든 계층 간에 연결 매핑이 일시 중단됩니다. 여기서 각 계층에는 각 입력/출력의 차원과 함께 계층 이름이 포함됩니다. 모델의 입력 및 출력을 설명하는 데 사용하는 데이터 구조를 텐서(tensor)라고 합니다. 텐서는 N 차원에 데이터를 저장하는 컨테이너로 간주할 수 있습니다. Tiny YOLOv2의 경우 입력 계층의 이름은 `image`이고 `3 x 416 x 416` 차원의 텐서가 있어야 합니다. 출력 계층의 이름은 `grid`이고 `125 x 13 x 13` 차원의 출력 텐서를 생성합니다.
 
-![숨겨진 레이어로 분할되는 입력 계층을 표시한 후 출력 계층 표시](./media/object-detection-onnx/netron-model-map.png)
+![숨겨진 레이어로 분할되는 입력 계층을 표시한 후 출력 계층 표시](./media/object-detection-onnx/netron-model-map-layers.png)
 
 YOLO 모델에서는 `3(RGB) x 416px x 416px` 이미지를 사용합니다. 이 모델에서는 출력을 생성하기 위해 이 입력을 받아 다양한 계층에 전달합니다. 출력은 입력 이미지를 `13 x 13` 그리드로 나누며, 그리드의 각 셀은 `125` 값으로 구성됩니다.
 
@@ -74,11 +74,11 @@ YOLO 모델에서는 `3(RGB) x 416px x 416px` 이미지를 사용합니다. 이 
 
 ONNX(Open Neural Network Exchange)는 AI 모델의 오픈 소스 형식입니다. ONNX에서는 프레임워크 간의 상호 운용성을 지원합니다. 즉, PyTorch와 같이 널리 사용되는 여러 기계 학습 프레임워크 중 하나에서 모델을 학습시키고, ONNX 형식으로 변환하며, ML.NET과 같은 다른 프레임워크에서 ONNX 모델을 사용할 수 있습니다. 자세히 알아보려면 [ONNX 웹 사이트](https://onnx.ai/)를 방문하세요.
 
-![ONNX 지원 형식을 ONNX로 가져온 다음, 다른 ONNX 지원 형식에서 사용](./media/object-detection-onnx/onnx-frameworks.png)
+![사용되는 ONNX 지원 형식 다이어그램입니다.](./media/object-detection-onnx/onyx-supported-formats.png)
 
 미리 학습된 Tiny YOLOv2 모델은 계층과 해당 계층의 학습된 패턴을 직렬화하여 표시하는 ONNX 형식으로 저장됩니다. ML.NET에서 ONNX와의 상호 운용성은 [`ImageAnalytics`](xref:Microsoft.ML.Transforms.Image) 및 [`OnnxTransformer`](xref:Microsoft.ML.Transforms.Onnx.OnnxTransformer) NuGet 패키지를 통해 달성합니다. [`ImageAnalytics`](xref:Microsoft.ML.Transforms.Image) 패키지에는 이미지를 받아 예측이나 학습 파이프라인의 입력으로 사용할 수 있는 숫자 값으로 인코딩하는 일련의 변환이 포함되어 있습니다. [`OnnxTransformer`](xref:Microsoft.ML.Transforms.Onnx.OnnxTransformer) 패키지에서는 ONNX Runtime을 사용하여 ONNX 모델을 로드하고 제공된 입력을 기반으로 예측하는 데 사용합니다.
 
-![ONNX 파일에서 ONNX 런타임으로, 마지막으로 C# 애플리케이션으로의 데이터 흐름 표시](./media/object-detection-onnx/onnx-ml-net-integration.png)
+![ONNX 런타임에 대한 ONNX 파일의 데이터 흐름입니다.](./media/object-detection-onnx/onnx-ml-net-integration.png)
 
 ## <a name="set-up-the-net-core-project"></a>.NET Core 프로젝트 설정
 
@@ -703,7 +703,7 @@ person and its Confidence score: 0.5551759
 
 경계 상자가 있는 이미지를 보려면 `assets/images/output/` 디렉터리로 이동합니다. 다음은 처리된 이미지 중 하나의 샘플입니다.
 
-![처리된 거실 이미지 샘플](./media/object-detection-onnx/image3.jpg)
+![처리된 거실 이미지 샘플](./media/object-detection-onnx/dinning-room-table-chairs.png)
 
 지금까지 이제 ML.NET에서 미리 학습된 `ONNX` 모델을 다시 사용하여 개체 검색을 위한 기계 학습 모델을 성공적으로 빌드했습니다.
 

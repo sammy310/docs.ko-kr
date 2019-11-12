@@ -2,13 +2,14 @@
 title: 인덱서
 description: 하나 이상의 인수를 사용하여 참조된 속성인 인덱싱된 속성을 구현하는 방법 및 C# 인덱서에 대해 알아봅니다.
 ms.date: 06/20/2016
+ms.technology: csharp-fundamentals
 ms.assetid: 0e9496da-e766-45a9-b92b-91820d4a350e
-ms.openlocfilehash: a13163cb6bd835dfdd16c83c905c134eb8a86e7d
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 86e646b341cf098d8621f095d4bfc9ea2191940d
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197602"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039114"
 ---
 # <a name="indexers"></a>인덱서
 
@@ -326,4 +327,4 @@ using CityDataMeasurements = System.Collections.Generic.Dictionary<string, Syste
 ## <a name="summing-up"></a>요약
 
 해당 속성이 단일 값이 아니라 각 개별 항목이 인수 집합으로 식별되는 값 컬렉션을 나타내는, 속성과 유사한 요소가 클래스에 있을 경우 항상 인덱서를 만들어야 합니다. 이러한 인수는 참조해야 하는 컬렉션의 항목을 고유하게 식별할 수 있습니다.
-인덱서는 [속성](properties.md) 개념을 확장하며, 이 경우 멤버가 클래스 외부의 데이터 항목처럼 처리되지만 부가적으로 메서드처럼 처리됩니다. 인덱서를 사용하면 인수가 항목 집합을 나타내는 속성에서 단일 항목을 찾을 수 있습니다.
+인덱서는 [속성](properties.md) 개념을 확장하며, 이 경우 멤버가 클래스 외부의 데이터 항목처럼 처리되지만 부가적으로 내부의 메서드처럼 처리됩니다. 인덱서를 사용하면 인수가 항목 집합을 나타내는 속성에서 단일 항목을 찾을 수 있습니다.

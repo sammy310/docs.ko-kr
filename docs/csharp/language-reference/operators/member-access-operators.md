@@ -32,12 +32,12 @@ helpviewer_keywords:
 - hat operator [C#]
 - .. operator [C#]
 - range operator [C#]
-ms.openlocfilehash: 45af31d10d77f4c63b27b34595b97fdd11ef95a1
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: ba2a8cd4995b9baab2071d3fb3c7980e45565692
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71116133"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039005"
 ---
 # <a name="member-access-operators-c-reference"></a>멤버 액세스 연산자(C# 참조)
 
@@ -92,7 +92,7 @@ ms.locfileid: "71116133"
 
 [!code-csharp-interactive[indexer access](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#Indexers)]
 
-인덱서를 사용하면 배열 인덱싱과 비슷한 방법으로 사용자 정의 형식의 인스턴스를 인덱싱할 수 있습니다. 정수여야 하는 배열 인덱스와 달리, 인덱서 인수는 임의 형식으로 선언할 수 있습니다.
+인덱서를 사용하면 배열 인덱싱과 비슷한 방법으로 사용자 정의 형식의 인스턴스를 인덱싱할 수 있습니다. 정수여야 하는 배열 인덱스와 달리, 인덱서 매개 변수는 임의 형식으로 선언할 수 있습니다.
 
 인덱서에 대한 자세한 내용은 [인덱서](../../programming-guide/indexers/index.md)를 참조하세요.
 
@@ -122,7 +122,7 @@ A?.B?[C];
 
 [!code-csharp-interactive[null-conditional operators](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#NullConditional)]
 
-위의 예제에서는 [null 병합 연산자](null-coalescing-operator.md)의 사용법도 보여 줍니다. null 병합 연산자를 사용하여 null 조건부 연산 결과가 `null`인 경우 평가하는 대체 식을 제공할 수 있습니다.
+또한 앞의 예제에서는 [null 병합 연산자 `??`](null-coalescing-operator.md)를 사용하여 null 조건부 연산 결과가 `null`인 경우 평가할 대체 식을 지정합니다.
 
 ### <a name="thread-safe-delegate-invocation"></a>스레드로부터 안전한 대리자 호출
 
@@ -198,6 +198,8 @@ C# 8.0 이상에서 사용 가능한 연산자 `..`은 인덱스 범위의 시�
 - [요소 액세스](~/_csharplang/spec/expressions.md#element-access)
 - [Null 조건부 연산자](~/_csharplang/spec/expressions.md#null-conditional-operator)
 - [호출 식](~/_csharplang/spec/expressions.md#invocation-expressions)
+
+인덱스 및 범위에 대한 자세한 내용은 [기능 제안 노트](~/_csharplang/proposals/csharp-8.0/ranges.md)를 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
 

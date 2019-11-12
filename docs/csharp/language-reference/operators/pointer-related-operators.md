@@ -20,12 +20,12 @@ helpviewer_keywords:
 - pointer increment [C#]
 - pointer decrement [C#]
 - pointer comparison [C#]
-ms.openlocfilehash: 830aef8546191df3df4a70e350ba561367a9e474
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: 9851fcd056eeee33b8f3d7e9d541f9fa43b36d29
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68512348"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73036160"
 ---
 # <a name="pointer-related-operators-c-reference"></a>포인터 관련 연산자(C# 참조)
 
@@ -48,7 +48,7 @@ ms.locfileid: "68512348"
 
 [!code-csharp[address of local](~/samples/csharp/language-reference/operators/PointerOperators.cs#AddressOf)]
 
-`&` 연산자의 피연산자는 고정 변수여야 합니다. *고정* 변수는 [가비지 수집기](../../../standard/garbage-collection/index.md)의 작동에 영향을 받지 않는 스토리지 위치에 있는 변수입니다. 앞의 예제에서 로컬 변수 `number`는 스택에 있으므로 고정 변수입니다. 가비지 수집기에 의해 영향을 받을 수 있는 스토리지 위치에 상주하는 변수(예: 재배치됨)를 *이동 가능한* 변수라고 합니다. 개체 필드 및 배열 요소는 이동 가능한 변수의 예입니다. [고정](../keywords/fixed-statement.md) 문으로 "fix" 또는 "pin"으로 할 경우 이동 가능한 변수의 주소를 가져올 수 있습니다. 가져온 주소는 `fixed` 문 블록의 기간 동안에만 유효합니다. 다음 예제에서는 `fixed` 문과 `&` 연산자를 사용하는 방법을 보여줍니다.
+`&` 연산자의 피연산자는 고정 변수여야 합니다. *고정* 변수는 [가비지 수집기](../../../standard/garbage-collection/index.md)의 작동에 영향을 받지 않는 스토리지 위치에 있는 변수입니다. 앞의 예제에서 로컬 변수 `number`는 스택에 있으므로 고정 변수입니다. 가비지 수집기에 의해 영향을 받을 수 있는 스토리지 위치에 상주하는 변수(예: 재배치됨)를 *이동 가능한* 변수라고 합니다. 개체 필드 및 배열 요소는 이동 가능한 변수의 예입니다. [`fixed` 문](../keywords/fixed-statement.md)으로 "fix" 또는 "pin"으로 할 경우 이동 가능한 변수의 주소를 가져올 수 있습니다. 가져온 주소는 `fixed` 문 블록 내에서만 유효합니다. 다음 예제에서는 `fixed` 문과 `&` 연산자를 사용하는 방법을 보여줍니다.
 
 [!code-csharp[address of fixed](~/samples/csharp/language-reference/operators/PointerOperators.cs#AddressOfFixed)]
 
@@ -166,7 +166,7 @@ x->y
 
 괄호(`()`)를 사용하여 연산자 우선순위에 따라 주어진 평가 순서를 변경합니다.
 
-우선 순위 수준에 따라 정렬된 전체 연산자 목록은 [C# 연산자](index.md)를 참조하세요.
+우선 순위 수준에 따라 정렬된 전체 연산자 목록은 [C# 연산자](index.md#operator-precedence) 문서의 [연산자 우선 순위](index.md) 섹션을 참조하세요.
 
 ## <a name="operator-overloadability"></a>연산자 오버로드 가능성
 

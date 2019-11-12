@@ -10,14 +10,12 @@ helpviewer_keywords:
 - dataflow blocks, canceling in TPL
 - TPL dataflow library,canceling dataflow blocks
 ms.assetid: fbddda0d-da3b-4ec8-a1d6-67ab8573fcd7
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b95f0a3535716c4a01dae52abe38eb850f080cf0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: aa175d95f27fcbf28c3f3da3eaa7b8f7988681e1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59345198"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140084"
 ---
 # <a name="how-to-cancel-a-dataflow-block"></a>방법: 데이터 흐름 블록 취소
 이 문서에서는 애플리케이션에서 취소를 사용하도록 설정하는 방법을 보여 줍니다. 이 예제에서는 Windows Forms를 사용하여 데이터 흐름 파이프라인에서 작업 항목이 활성 상태인 위치뿐만 아니라 취소의 효과도 보여 줍니다.  
@@ -86,7 +84,7 @@ ms.locfileid: "59345198"
      [!code-csharp[TPLDataflow_CancellationWinForms#6](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_cancellationwinforms/cs/cancellationwinforms/form1.cs#6)]
      [!code-vb[TPLDataflow_CancellationWinForms#6](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_cancellationwinforms/vb/cancellationwinforms/form1.vb#6)]  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 Form1.cs(Visual Basic에서는 Form1.vb)의 전체 코드를 보여 줍니다.  
   
  [!code-csharp[TPLDataflow_CancellationWinForms#100](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_cancellationwinforms/cs/cancellationwinforms/form1.cs#100)]

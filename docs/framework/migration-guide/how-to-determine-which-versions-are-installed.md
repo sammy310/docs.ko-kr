@@ -9,18 +9,16 @@ helpviewer_keywords:
 - versions, determining for .NET Framework
 - .NET Framework, determining version
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: abfa42be4b8c759da3fb34a2204058143e39689c
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: 748b5ea2b14abe2da0b84430461eb68a70ae268d
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71956662"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73195227"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>방법: 설치된 .NET Framework 버전 확인
 
-사용자는 자신의 컴퓨터에 여러 버전의 .NET Framework를 [설치](https://docs.microsoft.com/dotnet/framework/install)하여 실행할 수 있습니다. 따라서 앱을 개발하거나 배포할 때는 사용자의 컴퓨터에 어떤 .NET Framework 버전이 설치되었는지 알아야 합니다.
+사용자는 자신의 컴퓨터에 여러 버전의 .NET Framework를 [설치](../install/index.md)하여 실행할 수 있습니다. 따라서 앱을 개발하거나 배포할 때는 사용자의 컴퓨터에 어떤 .NET Framework 버전이 설치되었는지 알아야 합니다.
 
 .NET Framework는 각 버전으로 식별되는 다음과 같은 2개의 주요 구성 요소로 구성됩니다.
 
@@ -34,7 +32,7 @@ ms.locfileid: "71956662"
 > .NET Framework 버전과 CLR 버전은 다릅니다.
 >
 > - .NET Framework의 버전은 .NET Framework 클래스 라이브러리를 구성하는 어셈블리 세트를 기반으로 정해집니다. 예를 들어, .NET Framework 버전에는 4.5, 4.6.1, 4.7.2가 있습니다.
->- CLR의 버전은 .NET Framework 애플리케이션이 실행되는 런타임을 기반으로 정해집니다. 하나의 CLR 버전이 여러 개의.NET Framework 버전을 지원합니다. 예를들어, CLR 버전 4.0.30319.*xxxxx*는 .NET Framework 버전 4~4.5.2를 지원하고, *xxxxx*는 42000보다 작으며, CLR버전 4.0.30319.42000은 .NET Framework 4.6.에서 시작하는 .NET Framework 버전을 지원합니다.
+> - CLR의 버전은 .NET Framework 애플리케이션이 실행되는 런타임을 기반으로 정해집니다. 하나의 CLR 버전이 여러 개의.NET Framework 버전을 지원합니다. 예를들어, CLR 버전 4.0.30319.*xxxxx*는 .NET Framework 버전 4~4.5.2를 지원하고, *xxxxx*는 42000보다 작으며, CLR버전 4.0.30319.42000은 .NET Framework 4.6.에서 시작하는 .NET Framework 버전을 지원합니다.
 >
 > 자세한 내용은 [.NET Framework 버전 및 종속성](versions-and-dependencies.md)을 참조하십시오.
 
@@ -72,7 +70,7 @@ ms.locfileid: "71956662"
 
 3. **릴리스**라는 DWORD 항목을 확인합니다. 릴리스 DWORD가 있으면 컴퓨터에 .NET Framework 4.5 이상이 설치된 것입니다. 그 값은 특정 버전의 .NET Framework에 대응되는 릴리스 키입니다. 예를 들어, 다음 그림에서 **릴리스**항목은 *378389*로, 이것은 .NET Framework 4.5.의 릴리스 키입니다.
 
-     ![.NET Framework 4.5에 대한 레지스트리 항목](./media/clr-installdir.png ".NET Framework 4.5에 대한 레지스트리 항목")
+     ![.NET Framework 4.5.에 대한 레지스트리 항목](./media/clr-installdir.png ".NET Framework 4.5.에 대한 레지스트리 항목")
 
 다음 표에는 .NET Framework 4.5 이상 버전의 각 운영 체제상의 **릴리스** DWORD가 나와 있습니다.
 
@@ -91,13 +89,13 @@ ms.locfileid: "71956662"
 |.NET Framework 4.7|Windows 10 Creators Update: 460798<br />다른 모든 Windows 운영 체제(다른 Windows 10 운영 체제 포함): 460805|
 |.NET Framework 4.7.1|Windows 10 Fall Creators Update 및 Windows Server, 버전 1709: 461308<br/>다른 모든 Windows 운영 체제(다른 Windows 10 운영 체제 포함): 461310|
 |.NET Framework 4.7.2|Windows 10 2018년 4월 업데이트 및 Windows Server, 버전 1803: 461808<br/>Windows 10 2018년 4월 업데이트 및 Windows Server, 버전 1803 이외의 모든 Windows 운영 체제: 461814|
-|.NET Framework 4.8|Windows 10 2019년 5월 업데이트: 528040<br/>다른 모든 Windows 운영 체제(다른 Windows 10 운영 체제 포함): 528049|
+|.NET Framework 4.8|Windows 10 2019년 5월 업데이트 및 Windows 10 2019년 11월 업데이트: 528040<br/>다른 모든 Windows 운영 체제(다른 Windows 10 운영 체제 포함): 528049|
 
 이 값은 다음과 같이 사용할 수 있습니다.
 
 - 특정 버전의 .NET Framework가 특정 버전의 Windows 운영 체제에 설치되어 있는지 여부를 확인하려면 **릴리스** DWORD 값이 표에 나열된 값과 ‘동일한지’ 테스트하세요.  예를 들어 .NET Framework 4.6이 Windows 10 시스템에 있는지 확인하려면 **릴리스** 값이 393295와 ‘같은지’ 테스트합니다. 
 
-- 최하 버전의 .NET Framework가 있는지 확인하려면 해당 버전에 대해 더 작은 **릴리스** DWORD 값을 사용하세요. 예를 들어 애플리케이션이 .NET Framework 4.6 이상 버전에서 실행되는 경우 393295과 ‘같거나 이보다 큰’ **릴리스** DWORD 값을 테스트합니다.  각 .NET Framework 버전에 대한 최소 **릴리스** DWORD 값만 나열하는 표를 보려면 [.NET Framework 4.5 이상 버전에서 릴리스 DWORD의 최솟값](minimum-release-dword.md)을 참조하세요.
+- 최하 버전의 .NET Framework가 있는지 확인하려면 해당 버전에 대해 더 작은 **릴리스** DWORD 값을 사용하세요. 예를 들어 애플리케이션이 .NET Framework 4.8 이상 버전에서 실행되는 경우 528040과 *같거나 이보다 큰* **릴리스** DWORD 값을 테스트합니다. 각 .NET Framework 버전에 대한 최소 **릴리스** DWORD 값만 나열하는 표를 보려면 [.NET Framework 4.5 이상 버전에서 릴리스 DWORD의 최솟값](minimum-release-dword.md)을 참조하세요.
 
 - 여러 버전을 테스트하려면 최신 .NET Framework 버전의 더 작은 DWORD 값과 ‘같거나 이보다 큰’ 값을 테스트한 후 연속적인 각 이전 버전에 대해 더 작은 DWORD 값과 비교하세요.  예를 들어 애플리케이션에 .NET Framework 4.7 이상이 필요하고 특정 버전의 .NET Framework를 확인하려는 경우 461808(또는 .NET Framework 4.7.2의 경우는 더 작은 DWORD 값)과 ‘같거나 이보다 큰’ **릴리스** DWORD 값을 테스트하여 시작합니다.  그런 다음, 이 **릴리스** DWORD 값을 이후의 각 .NET Framework 버전에 대한 더 작은 값과 비교합니다. 각 .NET Framework 버전에 대한 최소 **릴리스** DWORD 값만 나열하는 표를 보려면 [.NET Framework 4.5 이상 버전에서 릴리스 DWORD의 최솟값](minimum-release-dword.md)을 참조하세요.
 
@@ -157,7 +155,7 @@ ms.locfileid: "71956662"
 
     다음 그림은 .NET Framework 3.5의 하위 키와 **Version** 항목을 보여줍니다.
 
-    ![.NET Framework 3.5의 레지스트리 항목.](./media/net-4-and-earlier.png ".NET Framework 3.5 및 이전 버전")
+    ![.NET Framework 3.5에 대한 레지스트리 항목](./media/net-4-and-earlier.png ".NET Framework 3.5 및 이전 버전")
 
 <a name="net_c"></a>
 
@@ -178,7 +176,7 @@ ms.locfileid: "71956662"
 
 [CLR 버전 도구(Clrver.exe)](../tools/clrver-exe-clr-version-tool.md)를 사용하여 컴퓨터에 설치된 공용 언어 런타임의 버전을 확인합니다.
 
-- [Visual Studio용 개발자 명령 프롬프트](https://docs.microsoft.com/dotnet/framework/tools/developer-command-prompt-for-vs)을 입력 `clrver` 합니다.
+- [Visual Studio용 개발자 명령 프롬프트](../tools/developer-command-prompt-for-vs.md)을 입력 `clrver` 합니다.
 
     샘플 출력:
 

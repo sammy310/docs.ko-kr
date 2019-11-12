@@ -4,16 +4,16 @@ description: ML.NET에서 지원되는 다양한 기계 학습 작업 및 관련
 ms.custom: seodec18
 ms.date: 04/23/2019
 author: natke
-ms.openlocfilehash: bcd967c11156ca9b837631560e78722b13fc7ae0
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: d19593358361c9c8d3657053e766ec4a2c1ec163
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630060"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424225"
 ---
 # <a name="machine-learning-tasks-in-mlnet"></a>ML.NET의 기계 학습 작업
 
-기계 학습 모델을 빌드할 때 먼저 데이터로 무엇을 달성하려고 하는지 정의해야 합니다. 그러면 상황에 맞는 올바른 기계 학습 작업을 선택할 수 있습니다. 다음 목록은 사용자가 선택할 수 있는 다양한 기계 학습 작업과 몇 가지 일반적인 사용 사례에 대해 설명합니다.
+기계 학습 모델을 빌드할 때 먼저 데이터로 무엇을 달성하려고 하는지 정의해야 합니다. 그러면 상황에 맞는 올바른 기계 학습 작업을 선택할 수 있습니다. 다음 목록은 사용자가 선택할 수 있는 다양한 기계 학습 작업과 몇 가지 일반적인 사용 사례에 대해 설명합니다. 시나리오에 적합한 작업을 선택하는 방법에 대한 자세한 내용은 [알고리즘](../how-to-choose-an-ml-net-algorithm.md)을 참조하세요.
 
 시나리오에 적합한 작업을 선택했으면 모델을 학습할 최상의 알고리즘을 선택해야 합니다. 사용 가능한 알고리즘은 각 작업의 섹션에 나열됩니다.
 
@@ -24,7 +24,7 @@ ms.locfileid: "68630060"
 * “긍정적” 또는 “부정적”으로 [Twitter 댓글의 감정 이해](../tutorials/sentiment-analysis.md).
 * 환자에게 특정 질병이 있는지 여부 진단.
 * 전자 메일을 “스팸”으로 표시할지 여부 결정.
-* 사진에 개 또는 과일이 포함되어 있는지 확인.
+* 사진이 특정 항목을 포함하는지 여부 확인(예: 개 또는 과일).
 
 자세한 내용은 Wikipedia에서 [Binary classification](https://en.wikipedia.org/wiki/Binary_classification)(이진 분류) 문서를 참조하세요.
 
@@ -128,7 +128,7 @@ ms.locfileid: "68630060"
 | -- | -- | -- |
 | `Score` | <xref:System.Single> | 모델에서 예측된 원시 점수 |
 
-## <a name="clustering"></a>클러스터링
+## <a name="clustering"></a>Clustering
 
 데이터 인스턴스를 비슷한 특성을 포함하는 클러스터로 그룹화하는 데 사용되는 [감독되지 않는 기계 학습](glossary.md#unsupervised-machine-learning) 작업입니다. 클러스터링을 사용하여 검색 또는 단순 관찰을 통해 논리적으로 파생될 수 없는 데이터 세트의 관계를 식별할 수도 있습니다. 클러스터링 알고리즘의 입력 및 출력은 선택한 방법에 따라 다릅니다. 분산, 중심, 연결 또는 밀도 기반 방법을 사용할 수 있습니다. 현재 ML.NET은 K-평균 클러스터링을 사용하는 중심 기반 방법을 지원합니다. 클러스터링 시나리오의 예는 다음과 같습니다.
 
@@ -207,7 +207,7 @@ ms.locfileid: "68630060"
 | -- | -- | -- |
 | `Score` | <xref:System.Single> | 모델이 예측을 판단하기 위해 계산한 바인딩되지 않은 점수 |
 
-## <a name="recommendation"></a>권장 사항
+## <a name="recommendation"></a>권장
 
 권장 사항 작업을 통해 권장 제품 또는 서비스 목록을 생성할 수 있습니다. ML.NET은 카탈로그에 기록 제품 등급 데이터가 있는 경우 [공동 작업 필터링](https://en.wikipedia.org/wiki/Collaborative_filtering) 알고리즘인 [MF(행렬 인수)](https://en.wikipedia.org/wiki/Matrix_factorization_%28recommender_systems%29)를 권장 사항에 사용합니다. 예를 들어 사용자에 대한 기록 영화 등급 데이터가 있고, 사용자가 다음에 시청할 가능성이 큰 다른 영화를 추천하려고 합니다.
 

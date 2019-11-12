@@ -2,12 +2,12 @@
 title: HttpClientFactory를 사용하여 복원력 있는 HTTP 요청 구현
 description: 애플리케이션에서 사용하기 쉽도록 .NET Core 2.1부터 제공되는 HttpClientFactory를 사용하여 `HttpClient` 인스턴스를 만드는 방법을 알아봅니다.
 ms.date: 08/08/2019
-ms.openlocfilehash: 3f9b3b18cede07e4c5c56600634ae230c0e251bb
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: e32ffdd43ce8968ef9a0694873870b61510d7300
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72578906"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73093996"
 ---
 # <a name="use-httpclientfactory-to-implement-resilient-http-requests"></a>HttpClientFactory를 사용하여 복원력 있는 HTTP 요청 구현
 
@@ -21,7 +21,7 @@ ms.locfileid: "72578906"
 
 따라서 `HttpClient`는 한 번 인스턴스화되어 애플리케이션의 수명 동안 다시 사용됩니다. 모든 요청에 대해 `HttpClient` 클래스를 인스턴스화하면 과도한 부하에서 사용할 수 있는 소켓 수가 소진됩니다. 이 문제로 인해 `SocketException` 오류가 발생합니다. 이 문제를 해결하는 데 가능한 방법은 [HttpClient 사용에 관한 Microsoft 문서](../../../csharp/tutorials/console-webapiclient.md)에서 설명한 대로 `HttpClient` 개체를 싱글톤 또는 정적으로 만드는 것을 기반으로 합니다.
 
-하지만 `HttpClient`에는 싱글톤 또는 정적 개체로 사용할 때 발생할 수 있는 두 번째 문제가 있습니다. 이 경우 dotnet/corefx GitHub 리포지토리에서 이 [문제](https://github.com/dotnet/corefx/issues/11224)에 대해 설명한 대로 싱글톤 또는 정적 `HttpClient`는 DNS 변경 내용을 따르지 않습니다. 
+하지만 `HttpClient`에는 싱글톤 또는 정적 개체로 사용할 때 발생할 수 있는 두 번째 문제가 있습니다. 이 경우 dotnet/corefx GitHub 리포지토리에서 이 [문제](https://github.com/dotnet/corefx/issues/11224)에 대해 설명한 대로 싱글톤 또는 정적 `HttpClient`는 DNS 변경 내용을 따르지 않습니다.
 
 언급한 문제를 해결하고 `HttpClient` 인스턴스를 쉽게 관리하기 위해 .NET Core 2.1에는 Polly를 통합하여 복원력 있는 HTTP 호출을 구현하는 데 사용할 수도 있는 새로운 `HttpClientFactory`가 도입되었습니다.
 
@@ -35,6 +35,9 @@ ms.locfileid: "72578906"
 - `HttpClient`에서 처리기를 위임하고 Polly 기반 미들웨어를 구현하여 나가는 미들웨어에 대한 개념을 체계화하여 Polly의 복원력 정책을 활용합니다.
 - `HttpClient`에는 나가는 HTTP 요청을 위해 함께 연결될 수 있는 처리기 위임이라는 개념이 이미 있습니다. HTTP 클라이언트를 팩터리에 등록하고, Polly 처리기를 사용하여 Polly 정책을 다시 시도, 회로 차단기 등에 사용할 수 있습니다.
 - `HttpClientMessageHandlers`의 수명을 관리하여 `HttpClient` 수명을 직접 관리할 때 발생할 수 있는 언급된 문제를 방지합니다.
+
+> [!NOTE]
+> `HttpClientFactory`는 `Microsoft.Extensions.DependencyInjection` NuGet 패키지의 DI(종속성 주입) 구현과 깊은 관계가 있습니다. 다른 종속성 주입 컨테이너를 사용하는 방법에 대한 자세한 내용은 이 [GitHub 토론](https://github.com/aspnet/Extensions/issues/1345)을 참조하세요.
 
 ## <a name="multiple-ways-to-use-httpclientfactory"></a>HttpClientFactory를 사용하는 여러 가지 방법
 
@@ -63,7 +66,7 @@ ms.locfileid: "72578906"
 
 ```csharp
 // Startup.cs
-//Add http client services at ConfigureServices(IServiceCollection services) 
+//Add http client services at ConfigureServices(IServiceCollection services)
 services.AddHttpClient<ICatalogService, CatalogService>();
 services.AddHttpClient<IBasketService, BasketService>();
 services.AddHttpClient<IOrderingService, OrderingService>();
@@ -105,7 +108,7 @@ static IAsyncPolicy<HttpResponseMessage> GetRetryPolicy()
 풀의 `HttpMessageHandler` 개체에는 수명이 있으며, 이 수명은 풀의 `HttpMessageHandler` 인스턴스를 다시 사용할 수 있는 기간입니다. 기본값은 2분이지만, 형식화된 클라이언트별로 재정의할 수 있습니다. 재정의하려면 다음 코드와 같이 클라이언트를 만들 때 반환되는 `IHttpClientBuilder`에서 `SetHandlerLifetime()`을 호출합니다.
 
 ```csharp
-//Set 5 min as the lifetime for the HttpMessageHandler objects in the pool used for the Catalog Typed Client 
+//Set 5 min as the lifetime for the HttpMessageHandler objects in the pool used for the Catalog Typed Client
 services.AddHttpClient<ICatalogService, CatalogService>()
     .SetHandlerLifetime(TimeSpan.FromMinutes(5));
 ```
@@ -127,10 +130,10 @@ public class CatalogService : ICatalogService
         _httpClient = httpClient;
     }
 
-    public async Task<Catalog> GetCatalogItems(int page, int take, 
+    public async Task<Catalog> GetCatalogItems(int page, int take,
                                                int? brand, int? type)
     {
-        var uri = API.Catalog.GetAllCatalogItems(_remoteServiceBaseUrl, 
+        var uri = API.Catalog.GetAllCatalogItems(_remoteServiceBaseUrl,
                                                  page, take, brand, type);
 
         var responseString = await _httpClient.GetStringAsync(uri);
@@ -178,16 +181,19 @@ namespace Microsoft.eShopOnContainers.WebMVC.Controllers
 
 이 시점까지 보여 준 코드는 정기적인 HTTP 요청만 수행하는 것이지만, 다음 섹션에서는 정책을 추가하고, 등록된 형식화된 클라이언트에 처리기를 위임하여 `HttpClient`에서 수행할 모든 HTTP 요청을 처리하는 ‘마법 같은 일’이 펼쳐집니다. 이 과정에서 지수 백오프를 사용하는 다시 시도, 회로 차단기 또는 다른 사용자 지정 위임 처리기와 같은 복원력 정책을 고려하여 인증 토큰 사용, 기타 사용자 지정 기능 등의 추가 보안 기능을 구현합니다.
 
-## <a name="additional-resources"></a>추가 자료
+## <a name="additional-resources"></a>추가 리소스
 
-- **.NET Core에서 HttpClientFactory 사용** \
+- **.NET Core에서 HttpClientFactory 사용**  
   [https://docs.microsoft.com/aspnet/core/fundamentals/http-requests](/aspnet/core/fundamentals/http-requests)
 
-- **HttpClientFactory GitHub 리포지토리** \
+- **`aspnet/Extensions` GitHub 리포지토리의 HttpClientFactory 소스 코드**  
   <https://github.com/aspnet/Extensions/tree/master/src/HttpClientFactory>
 
-- **Polly(.NET 복원력 및 transient-fault-handling 라이브러리)**  \
+- **Polly(.NET 복원력 및 transient-fault-handling 라이브러리)**  
   <http://www.thepollyproject.org/>
+  
+- **종속성 주입 없이 HttpClientFactory 사용(GitHub 문제)**  
+  <https://github.com/aspnet/Extensions/issues/1345>
 
 >[!div class="step-by-step"]
 >[이전](explore-custom-http-call-retries-exponential-backoff.md)

@@ -14,22 +14,22 @@ helpviewer_keywords:
 - event subscription [C#]
 - += operator [C#]
 ms.assetid: 93e56486-bb42-43c1-bd43-60af11e64e67
-ms.openlocfilehash: 41355dbadd566648b45d825cdd6515bfc6d411aa
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 709994632d704c6a9c6c7f4fc7180ae08cb901d7
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610034"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039090"
 ---
 # <a name="-and--operators-c-reference"></a>+ 및 += 연산자(C# 참조)
 
-`+` 연산자는 기본 제공 숫자 형식, [문자열](../keywords/string.md) 및 [대리자](../keywords/delegate.md) 형식에서 지원됩니다.
+`+` 및 `+=` 연산자에는 기본 제공 [정수](../builtin-types/integral-numeric-types.md) 및 [부동 소수점](../builtin-types/floating-point-numeric-types.md) 숫자 형식, [문자열](../builtin-types/reference-types.md#the-string-type) 형식 및 [대리자](../builtin-types/reference-types.md#the-delegate-type) 형식이 지원됩니다.
 
 산술 `+` 연산자에 대한 자세한 내용은 [산술 연산자](arithmetic-operators.md) 문서의 [단항 더하기 및 빼기 연산자](arithmetic-operators.md#unary-plus-and-minus-operators) 및 [더하기 연산자 +](arithmetic-operators.md#addition-operator-) 섹션을 참조하세요.
 
 ## <a name="string-concatenation"></a>문자열 연결
 
-피연산자 중 하나 또는 둘 다가 [문자열](../keywords/string.md) 형식이면 `+` 연산자는 피연산자의 문자열 표현을 연결합니다.
+피연산자 중 하나 또는 둘 다가 [문자열](../builtin-types/reference-types.md#the-string-type) 형식이면 `+` 연산자는 피연산자의 문자열 표현을 연결합니다.
 
 [!code-csharp-interactive[string concatenation](~/samples/csharp/language-reference/operators/AdditionOperator.cs#AddStrings)]
 
@@ -39,7 +39,7 @@ C# 6부터 [문자열 보간](../tokens/interpolated.md)은 문자열 형식을 
 
 ## <a name="delegate-combination"></a>대리자 조합
 
-동일한 [대리자](../keywords/delegate.md) 형식의 피연산자의 경우 `+` 연산자는 호출될 때 왼쪽 피연산자를 호출한 다음, 오른쪽 피연산자를 호출하는 새 대리자 인스턴스를 반환합니다. 피연산자 중 하나라도 `null`이면 `+` 연산자는 다른 피연산자(`null`일 수도 있음)의 값을 반환합니다. 다음 예제는 `+` 연산자를 사용하여 대리자를 결합하는 방법을 보여 줍니다.
+동일한 [대리자](../builtin-types/reference-types.md#the-delegate-type) 형식의 피연산자의 경우 `+` 연산자는 호출될 때 왼쪽 피연산자를 호출한 다음, 오른쪽 피연산자를 호출하는 새 대리자 인스턴스를 반환합니다. 피연산자 중 하나라도 `null`이면 `+` 연산자는 다른 피연산자(`null`일 수도 있음)의 값을 반환합니다. 다음 예제는 `+` 연산자를 사용하여 대리자를 결합하는 방법을 보여 줍니다.
 
 [!code-csharp-interactive[delegate combination](~/samples/csharp/language-reference/operators/AdditionOperator.cs#AddDelegates)]
 
@@ -62,7 +62,7 @@ x = x + y
 ```
 
 단, `x`가 한 번만 계산됩니다.
-  
+
 다음 예제에서는 `+=` 연산자의 사용법을 보여 줍니다.
 
 [!code-csharp-interactive[+= examples](~/samples/csharp/language-reference/operators/AdditionOperator.cs#AddAndAssign)]
@@ -81,9 +81,7 @@ x = x + y
 
 - [C# 참조](../index.md)
 - [C# 연산자](index.md)
-- [문자열 보간](../tokens/interpolated.md)
 - [방법: 여러 문자열 연결](../../how-to/concatenate-multiple-strings.md)
-- [대리자](../../programming-guide/delegates/index.md)
 - [이벤트](../../programming-guide/events/index.md)
 - [산술 연산자](arithmetic-operators.md)
 - [- 및 -= 연산자](subtraction-operator.md)

@@ -2,12 +2,12 @@
 title: .NET Core 정보
 description: .NET Core에 대한 자세히 알아봅니다.
 ms.date: 09/17/2019
-ms.openlocfilehash: 8b96e1e8f882ee69bcf7db58ca7a5eeab89fb4fd
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: a1127a39d67b6c24994a2957298c62d87703950d
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395179"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73416742"
 ---
 # <a name="about-net-core"></a>.NET Core 정보
 
@@ -16,7 +16,7 @@ ms.locfileid: "72395179"
 - **플랫폼 간:** Windows, macOS 및 Linux [운영 체제](https://github.com/dotnet/core/blob/master/os-lifecycle-policy.md)에서 실행됩니다.
 - **아키텍처 간에 일관됨:** x64, x86 및 ARM을 비롯한 여러 아키텍처에서 동일한 동작을 사용하여 코드를 실행합니다.
 - **명령줄 도구:**  로컬 개발 및 연속 통합 시나리오에서 사용할 수 있는 편리한 명령줄 도구를 포함합니다.
-- **유연한 배포:** 앱이나 설치된 side-by-side(사용자 또는 시스템 수준 설치)에 포함할 수 있습니다. [Docker 컨테이너](docker/index.md)에서 사용될 수 있습니다.
+- **유연한 배포:** 앱이나 설치된 side-by-side(사용자 또는 시스템 수준 설치)에 포함할 수 있습니다. [Docker 컨테이너](docker/introduction.md)에서 사용될 수 있습니다.
 - **호환 가능:** .NET Core는 [.NET Standard](../standard/net-standard.md)를 통해 .NET Framework, Xamarin 및 Mono와 호환됩니다.
 - **오픈 소스:** .NET Core 플랫폼은 MIT 및 Apache 2 라이선스를 사용하는 오픈 소스입니다. .NET Core는 [.NET Foundation](https://dotnetfoundation.org/) 프로젝트입니다.
 - **Microsoft에서 지원됨:** .NET Core는 [.NET Core 지원](https://dotnet.microsoft.com/platform/support/policy)에 따라 Microsoft에서 지원됩니다.
@@ -113,7 +113,7 @@ Windows 및 Unix 구현은 크기가 비슷합니다. CoreFX에서 [Microsoft.Wi
 
 ### <a name="comparison-with-mono"></a>Mono와 비교
 
-[Mono](https://www.mono-project.com/)는 원본 플랫폼 간 .NET입니다. .NET Framework의 [오픈 소스](https://github.com/mono/mono)) 대안으로 시작되었으며, iOS 및 Android 디바이스가 보편화되면서 모바일 디바이스 대상 프로그램으로 전환되었습니다. .NET Framework의 커뮤니티 복제본으로 생각할 수 있습니다. Mono 프로젝트 팀은 호환되는 구현을 제공하기 위해 Microsoft에서 게시한 오픈 [.NET 표준](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md)(특히 ECMA 335)을 사용했습니다.
+[Mono](https://www.mono-project.com/)는 원본 플랫폼 간 .NET 구현입니다. .NET Framework의 [오픈 소스](https://github.com/mono/mono) 대안으로 시작되었으며, iOS 및 Android 디바이스가 보편화되면서 모바일 디바이스 대상 프로그램으로 전환되었습니다. .NET Framework의 커뮤니티 복제본으로 생각할 수 있습니다. Mono 프로젝트 팀은 호환되는 구현을 제공하기 위해 Microsoft에서 게시한 오픈 [.NET 표준](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md)(특히 ECMA 335)을 사용했습니다.
 
 .NET Core와 Mono 간의 주요 차이점은 다음과 같습니다.
 

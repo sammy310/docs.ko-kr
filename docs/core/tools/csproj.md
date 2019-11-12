@@ -2,12 +2,12 @@
 title: .NET Core용 csproj 형식에 대한 추가 사항
 description: 기존 및 .NET Core csproj 파일 간의 차이점에 대해 알아보기
 ms.date: 04/08/2019
-ms.openlocfilehash: d7fca40caaeb83152b8ae5260bf918981362d2c3
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 4ce9227839a610308071c36185b63db8b1ee86ed
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72522793"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739301"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core용 csproj 형식에 대한 추가 사항
 
@@ -222,6 +222,31 @@ RID를 통해 자체 포함 배포를 게시할 수 있습니다.
     $(PackageTargetFallback);portable-net45+win8+wpa81+wp8
 </PackageTargetFallback >
 ```
+
+## <a name="build-events"></a>빌드 이벤트
+
+빌드 전 및 빌드 후 이벤트가 프로젝트 파일에 지정되는 방법이 변경되었습니다. $(ProjectDir) 같은 매크로가 확인되지 않으므로 SDK 스타일 프로젝트 형식에는 PreBuildEvent 및 PostBuildEvent 속성을 사용하지 않는 것이 좋습니다. 예를 들어 다음 코드는 더 이상 지원되지 않습니다.
+
+```xml
+<PropertyGroup>
+    <PreBuildEvent>"$(ProjectDir)PreBuildEvent.bat" "$(ProjectDir)..\" "$(ProjectDir)" "$(TargetDir)" />
+</PropertyGroup>
+```
+
+SDK 스타일 프로젝트에서 `PreBuild` 또는 `PostBuild`라는 MSBuild 대상을 사용하고 `PreBuild`에 대해 `BeforeTargets` 속성을 설정하거나 `PostBuild`에 대해 `AfterTargets` 속성을 설정합니다. 앞의 예제에는 다음 코드를 사용합니다.
+
+```xml
+<Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <Exec Command="&quot;$(ProjectDir)PreBuildEvent.bat&quot; &quot;$(ProjectDir)..\&quot; &quot;$(ProjectDir)&quot; &quot;$(TargetDir)&quot;" />
+</Target>
+
+<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+   <Exec Command="echo Output written to $(TargetDir)" />
+</Target>
+```
+
+> [!NOTE]
+>MSBuild 대상에는 아무 이름이나 사용할 수 있지만, Visual Studio IDE는 `PreBuild` 및 `PostBuild` 대상을 인식하므로 Visual Studio IDE에서 명령을 편집할 수 있도록 해당 이름을 사용하는 것이 좋습니다. 
 
 ## <a name="nuget-metadata-properties"></a>NuGet 메타데이터 속성
 

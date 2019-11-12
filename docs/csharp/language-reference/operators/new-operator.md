@@ -5,12 +5,12 @@ ms.date: 06/25/2019
 helpviewer_keywords:
 - new operator keyword [C#]
 ms.assetid: a212b697-a79b-4105-9923-1f7b108036e8
-ms.openlocfilehash: 3d64c4805abe38c80301748ffa6b35fc87563b60
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: c21132a6622ce697fe3c52a461a33f548e0c8f31
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67403971"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73036384"
 ---
 # <a name="new-operator-c-reference"></a>new 연산자(C# 참조)
 
@@ -50,7 +50,7 @@ ms.locfileid: "67403971"
 
 앞서 만든 형식 인스턴스를 제거할 필요가 없습니다. 참조 형식과 값 형식 모두의 인스턴스는 자동으로 제거됩니다. 값 형식의 인스턴스는 포함된 컨텍스트가 제거되는 즉시 제거됩니다. 참조 유형의 인스턴스는 마지막 참조가 제거된 후 지정되지 않은 시간에 [가비지 수집기](../../../standard/garbage-collection/index.md)에 의해 제거됩니다.
 
-파일 핸들과 같이 관리되지 않은 리소스를 포함하는 유형의 경우에는 결정적 정리를 사용하여 포함된 리소스가 가능한 빨리 릴리스되도록 하는 것이 좋습니다. 자세한 내용은 <xref:System.IDisposable?displayProperty=nameWithType> API 참조 및 [명령문 사용](../keywords/using-statement.md) 문서를 참조하세요.
+파일 핸들과 같이 관리되지 않은 리소스를 포함하는 형식 인스턴스의 경우에는 결정적 정리를 사용하여 포함된 리소스가 가능한 빨리 릴리스되도록 하는 것이 좋습니다. 자세한 내용은 <xref:System.IDisposable?displayProperty=nameWithType> API 참조 및 [명령문 사용](../keywords/using-statement.md) 문서를 참조하세요.
 
 ## <a name="operator-overloadability"></a>연산자 오버로드 가능성
 

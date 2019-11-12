@@ -10,16 +10,16 @@ helpviewer_keywords:
 - '?: operator [C#]'
 - conditional operator (?:) [C#]
 ms.assetid: e83a17f1-7500-48ba-8bee-2fbc4c847af4
-ms.openlocfilehash: 923591634599a6bbac74d43b105f4e46b492fa1a
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: 7397c5b2b2278f487a98b029b00924d3151913db
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796471"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73036298"
 ---
 # <a name="-operator-c-reference"></a>?: 연산자(C# 참조)
 
-일반적으로 3개로 구성된 조건부 연산자라고 하는 조건부 연산자 `?:`은 부울 식을 계산하고 부울 식이 `true` 또는 `false`으로 계산되는지에 따라 두 식 중 하나의 계산 결과를 반환합니다. C# 7.2부터 [조건부 ref 식](#conditional-ref-expression)은 두 식 중 하나의 결과에 대한 참조를 반환합니다.
+3개로 구성된 조건부 연산자라고도 하는 조건부 연산자 `?:`은 부울 식을 계산하고 부울 식이 `true` 또는 `false`으로 계산되는지에 따라 두 식 중 하나의 계산 결과를 반환합니다. C# 7.2부터 [조건부 ref 식](#conditional-ref-expression)은 두 식 중 하나의 결과에 대한 참조를 반환합니다.
 
 조건 연산자의 구문은 다음과 같습니다.
 
@@ -72,8 +72,6 @@ condition ? ref consequent : ref alternative
 
 [!code-csharp-interactive[conditional ref](~/samples/csharp/language-reference/operators/ConditionalOperator.cs#ConditionalRef)]
 
-자세한 내용은 [기능 제안 노트](~/_csharplang/proposals/csharp-7.2/conditional-ref.md)를 참조하세요.
-
 ## <a name="conditional-operator-and-an-ifelse-statement"></a>조건부 연산자 및 `if..else` 문
 
 [if-else](../keywords/if-else.md) 문보다 조건부 연산자를 사용하면 조건부로 값을 컴퓨팅해야 하는 경우 코드가 보다 간결해질 수 있습니다. 다음 예제에서는 정수를 음수 또는 음수가 아닌 값으로 분류하는 두 가지 방법을 보여 줍니다.
@@ -82,11 +80,13 @@ condition ? ref consequent : ref alternative
 
 ## <a name="operator-overloadability"></a>연산자 오버로드 가능성
 
-조건 연산자는 오버로드할 수 없습니다.
+사용자 정의 형식으로 조건부 연산자를 오버로드할 수 없습니다.
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 
 자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [조건부 연산자](~/_csharplang/spec/expressions.md#conditional-operator) 섹션을 참조하세요.
+
+조건부 ref 식에 대한 자세한 내용은 [기능 제안 노트](~/_csharplang/proposals/csharp-7.2/conditional-ref.md)를 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
 
@@ -94,5 +94,5 @@ condition ? ref consequent : ref alternative
 - [C# 연산자](index.md)
 - [if-else 문](../keywords/if-else.md)
 - [?. 및 ?[] 연산자](member-access-operators.md#null-conditional-operators--and-)
-- [?? 연산자](null-coalescing-operator.md)
+- [및 ??= 연산자](null-coalescing-operator.md)
 - [ref 키워드](../keywords/ref.md)
