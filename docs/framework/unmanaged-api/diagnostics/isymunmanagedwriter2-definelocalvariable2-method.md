@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e774eefe-858c-4362-8d2d-28ebf2ba1a24
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8fa385805d3e2dca8fef3e1490b2c67dd0583373
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 73f536b4ab98aa596c2395810cb8b616ffd309e9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755059"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74438297"
 ---
 # <a name="isymunmanagedwriter2definelocalvariable2-method"></a>ISymUnmanagedWriter2::DefineLocalVariable2 메서드
-현재 어휘 범위에 단일 변수를 정의합니다. 이 메서드는 다중 홈을 범위에 걸쳐 있는 동일한 이름의 변수에 대 한 여러 번 호출할 수 있습니다. 그러나이 경우,:의 값을 `startOffset` 및 `endOffset` 매개 변수는 겹치지 않아야 합니다.  
+Defines a single variable in the current lexical scope. This method can be called multiple times for a variable of the same name that has multiple homes throughout a scope. In this case, however, the values of the `startOffset` and `endOffset` parameters must not overlap.  
   
 ## <a name="syntax"></a>구문  
   
@@ -44,39 +42,39 @@ HRESULT DefineLocalVariable2(
   
 ## <a name="parameters"></a>매개 변수  
  `name`  
- [in] 로컬 변수 이름입니다.  
+ [in] The local variable name.  
   
  `attributes`  
- [in] 로컬 변수 특성입니다.  
+ [in] The local variable attributes.  
   
  `sigToken`  
- [in] 서명의 메타 데이터 토큰입니다.  
+ [in] The metadata token of the signature.  
   
  `addrKind`  
- [in] 주소 유형입니다.  
+ [in] The address type.  
   
  `addr1`  
- [in] 매개 변수 사양에 대 한 첫 번째 주소입니다.  
+ [in] The first address for the parameter specification.  
   
  `addr2`  
- [in] 매개 변수 사양에 대 한 두 번째 주소입니다.  
+ [in] The second address for the parameter specification.  
   
  `addr3`  
- [in] 매개 변수 사양의 세 번째 주소입니다.  
+ [in] The third address for the parameter specification.  
   
  `startOffset`  
- [in] 변수의 시작 오프셋입니다. 이 매개 변수는 선택 사항입니다. 0 인 경우이 매개 변수가 무시 되 고 변수가 전체 범위에서 정의 됩니다. 0이 아닌 값 이면 현재 범위의 오프셋 내에 변수가 포함 됩니다.  
+ [in] The start offset for the variable. 이 매개 변수는 선택적 요소입니다. If it is 0, this parameter is ignored and the variable is defined throughout the entire scope. If it is a nonzero value, the variable falls within the offsets of the current scope.  
   
  `endOffset`  
- [in] 변수의 끝 오프셋입니다. 이 매개 변수는 선택 사항입니다. 0 인 경우이 매개 변수가 무시 되 고 변수가 전체 범위에서 정의 됩니다. 0이 아닌 값 이면 현재 범위의 오프셋 내에 변수가 포함 됩니다.  
+ [in] The end offset for the variable. 이 매개 변수는 선택적 요소입니다. If it is 0, this parameter is ignored and the variable is defined throughout the entire scope. If it is a nonzero value, the variable falls within the offsets of the current scope.  
   
 ## <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>요구 사항  
- **헤더:** CorSym.idl  
+ **Header:** CorSym.idl  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ISymUnmanagedWriter2 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-interface.md)
 - [DefineLocalVariable 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-definelocalvariable-method.md)

@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: ab894dc4-f7b6-4afc-bfcb-582a4b7e53a2
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2060a70e2a3ce355f43ade67e6d6843670e00ad3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 205f48fb417365565695c72095187d349127e536
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778843"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436856"
 ---
 # <a name="imetadataimportgetsigfromtoken-method"></a>IMetaDataImport::GetSigFromToken 메서드
 지정한 토큰과 연결된 이진 메타데이터 서명을 가져옵니다.  
@@ -39,24 +37,24 @@ HRESULT GetSigFromToken (
   
 ## <a name="parameters"></a>매개 변수  
  `mdSig`  
- [in] 토큰에 대 한 이진 메타 데이터 서명을 반환입니다.  
+ [in] The token to return the binary metadata signature for.  
   
  `ppvSig`  
- [out] 반환 된 메타 데이터 서명에 대 한 포인터입니다.  
+ [out] A pointer to the returned metadata signature.  
   
  `pcbSig`  
- [out] 이진 메타 데이터 서명의 바이트 크기입니다.  
+ [out] The size in bytes of the binary metadata signature.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** Cor.h  
+ **Header:** Cor.h  
   
- **라이브러리:** MsCorEE.dll에 리소스로 포함  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [IMetaDataImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 05c78aaf-5bbd-497e-9ae2-55f4fae0c5fb
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 84ccbd7a8be7d90a541fb2d54baa3d7f66d3d31e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0731053fb37c775d25052a5fd99a479a44ff5862
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746118"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74434874"
 ---
 # <a name="iceegengetsectionblock-method"></a>ICeeGen::GetSectionBlock 메서드
-코드 베이스의 섹션에서는 블록을 가져옵니다.  
+Gets a section block of the code base.  
   
- 이 메서드는 사용 되지 않습니다 및 사용할 수 없습니다.  
+ This method is obsolete and should not be used.  
   
 ## <a name="syntax"></a>구문  
   
@@ -42,29 +40,29 @@ HRESULT GetSectionBlock (
   
 ## <a name="parameters"></a>매개 변수  
  `section`  
- [in] 블록의 코드 베이스를 검색할 섹션입니다.  
+ [in] The section from which to retrieve a block of the code base.  
   
  `len`  
- [in] 검색할 블록의 길이입니다.  
+ [in] The length of the block to be retrieved.  
   
  `align`  
- [in] 블록의 첫 번째 바이트에 맞출 수 있는 섹션의 시작을 기준으로 바이트입니다. 이 섹션에서 블록의 위치입니다.  
+ [in] The byte, relative to the beginning of the section, with which to align the first byte of the block. This is the position of the block within the section.  
   
  `ppBytes`  
- [out] 검색 된 블록의 주소를 수신 하는 위치에 대 한 포인터입니다.  
+ [out] A pointer to a location that receives the address of the retrieved block.  
   
-## <a name="remarks"></a>설명  
- 호출 `GetSectionBlock` 다른 메서드에서 처리 되지 않는 특수 섹션 요구 사항이 있는 경우에 합니다.  
+## <a name="remarks"></a>주의  
+ Call `GetSectionBlock` only if you have special section requirements that are not handled by other methods.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** Cor.h  
+ **Header:** Cor.h  
   
- **라이브러리:** MsCorEE.dll에서 리소스로 사용  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ICeeGen 인터페이스](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

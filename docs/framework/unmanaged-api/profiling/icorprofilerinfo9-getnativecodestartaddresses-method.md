@@ -11,16 +11,16 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 80571933bc8d91c074dbee62aad50cece6277d51
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 7593e8873c2714df85146903c0052a9909a95ccd
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69665501"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74444722"
 ---
-# <a name="icorprofilerinfo9getnativecodestartaddresses-method"></a>ICorProfilerInfo9:: GetNativeCodeStartAddresses 메서드
+# <a name="icorprofilerinfo9getnativecodestartaddresses-method"></a>ICorProfilerInfo9::GetNativeCodeStartAddresses Method
 
-FunctionId 및 rejitId가 지정 된 경우 현재 존재 하는이 코드의 모든 jit 컴파일된 버전의 네이티브 코드 시작 주소를 열거 합니다.
+Given a functionId and rejitId, enumerates the native code start address of all jitted versions of this code that currently exist.
 
 ## <a name="syntax"></a>구문
 
@@ -35,7 +35,7 @@ HRESULT GetNativeCodeStartAddresses( [in]  FunctionID functionID,
 #### <a name="parameters"></a>매개 변수
 
 `functionId` \
-진행 네이티브 코드 시작 주소가 반환 되어야 하는 함수의 ID입니다.
+[in] The ID of the function whose native code start addresses should be returned.
 
 `reJitId` \
 [in] JIT 다시 컴파일된 함수의 ID입니다.
@@ -44,25 +44,25 @@ HRESULT GetNativeCodeStartAddresses( [in]  FunctionID functionID,
 [in] `codeStartAddresses` 배열의 최대 크기입니다.
 
 `pcCodeStartAddresses` \
-제한이 사용 가능한 주소 수입니다.
+[out] The number of available addresses.
 
 `codeStartAddresses` \
-제한이 의 배열로 `UINT_PTR`, 각는 지정 된 함수에 대 한 네이티브 본문의 시작 주소입니다.
+[out] An array of `UINT_PTR`, each one of which is the start address for a native body for the specified function.
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
-계층화 된 컴파일을 사용 하는 경우 함수에 둘 이상의 네이티브 코드 본문이 있을 수 있습니다.
+When tiered compilation is enabled, a function may have more than one native code body.
 
 ## <a name="requirements"></a>요구 사항
 
-**플랫폼** [.Net Core 지원 운영 체제](../../../core/windows-prerequisites.md#net-core-supported-operating-systems)를 참조 하세요.
+**Platforms:** See [.NET Core supported operating systems](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).
 
 **헤더:** CorProf.idl, CorProf.h
 
-**라이브러리** CorGuids.lib
+**라이브러리:** CorGuids.lib
 
-**.Net 버전:** [!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
+**.NET Versions:** [!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
-- [ICorProfilerInfo9 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo9-interface.md)
+- [ICorProfilerInfo9 Interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo9-interface.md)

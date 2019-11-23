@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 46ff70f4-13e9-40a0-802a-0a40abcfc6a0
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8c133338ec0edac19f49d435df41e3081c486f51
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5153a25ef87d9c06bb46b74945c8eb68eb041682
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948461"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74443149"
 ---
 # <a name="icorprofilerinfo4getfunctionfromip2-method"></a>ICorProfilerInfo4::GetFunctionFromIP2 메서드
-관리 되는 코드 명령 포인터를 함수의 JIT 다시 컴파일된 버전에 매핑합니다.  
+Maps a managed code instruction pointer to the JIT-recompiled version of a function.  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,29 +36,29 @@ HRESULT GetFunctionFromIP2(
   
 ## <a name="parameters"></a>매개 변수  
  `ip`  
- 진행 관리 코드의 명령 포인터입니다.  
+ [in] The instruction pointer in managed code.  
   
  `pFunctionId`  
- 제한이 함수 ID입니다.  
+ [out] The function ID.  
   
  `pReJitId`  
- 제한이 함수의 JIT 다시 컴파일된 버전 id입니다.  
+ [out] The identity of the JIT-recompiled version of the function.  
   
-## <a name="remarks"></a>설명  
- `GetFunctionFromIP2`는 지정 된 `GetFunctionFromIP`IP 주소를 포함 하는 함수의 함수 ID 대신 JIT 다시 컴파일된 ID를 가져오는 점을 제외 하 고와 비슷합니다.  
+## <a name="remarks"></a>주의  
+ `GetFunctionFromIP2` is similar to `GetFunctionFromIP`, except that it gets the JIT-recompiled ID instead of the function ID of the function that contains the specified IP address.  
   
 > [!NOTE]
-> `GetFunctionFromIP2`는 가비지 수집 `GetFunctionFromIP` 을 트리거할 수 있지만는 그렇지 않습니다.  자세한 내용은 [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md)를 참조 하세요.  
+> `GetFunctionFromIP2` can trigger a garbage collection, whereas `GetFunctionFromIP` will not.  For more information, see [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md).  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
   
- **라이브러리** CorGuids.lib  
+ **라이브러리:** CorGuids.lib  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ICorProfilerInfo 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

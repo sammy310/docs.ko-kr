@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 64d9b80e-b883-4539-89c7-03573185a1eb
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4450c262b75a73114cb7de7de98567f053bbf564
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 8a4d205586921b377147eeab80754e1a0d9e52b0
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894468"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74427848"
 ---
 # <a name="isymunmanagedwritersetsymattribute-method"></a>ISymUnmanagedWriter::SetSymAttribute 메서드
-이름에 따라 사용자 지정 특성을 정의 합니다. 이러한 특성은 메타 데이터 사용자 지정 특성과 달리 기호 저장소에 저장 됩니다.  
+Defines a custom attribute based upon its name. These attributes are held in the symbol store, unlike metadata custom attributes.  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,23 +37,23 @@ HRESULT SetSymAttribute(
   
 ## <a name="parameters"></a>매개 변수  
  `parent`  
- 진행 특성이 정의 되는 메타 데이터 토큰입니다.  
+ [in] The metadata token for which the attribute is being defined.  
   
  `name`  
- 진행 특성 이름을 포함 `WCHAR` 하는에 대 한 포인터입니다.  
+ [in] A pointer to a `WCHAR` that contains the attribute name.  
   
  `cData`  
- 진행 배열의크기`data` 를 나타내는입니다. `ULONG32`  
+ [in] A `ULONG32` that indicates the size of the `data` array.  
   
  `data`  
- 진행 특성 값입니다.  
+ [in] The attribute value.  
   
 ## <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 S_OK이 고, 그렇지 않으면입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>요구 사항  
- **헤더:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ISymUnmanagedWriter 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

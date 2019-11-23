@@ -5,16 +5,16 @@ helpviewer_keywords:
 - controls, UI Automation support for
 - UI Automation, support for standard controls
 ms.assetid: 3770ea8a-2655-4add-9c59-fe0610ad5084
-ms.openlocfilehash: 6cbf31c8a1cdf6e853e56445d22f4a7513bd1859
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: c59352f908c5f4a1fd2ca6dd631d26bb5d69f09a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71042004"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74441217"
 ---
 # <a name="ui-automation-support-for-standard-controls"></a>표준 컨트롤에 대한 UI 자동화 지원
 > [!NOTE]
-> 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. 에 대 한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [최신 정보는 Windows Automation API: UI 자동화](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조하세요.  
   
  이 항목에는 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] , [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]및 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]프레임워크용으로 개발된 애플리케이션에서 표준 컨트롤에 대한 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] 지원 정보가 들어 있습니다.  
   
@@ -44,8 +44,8 @@ ms.locfileid: "71042004"
 |편집|문서|  
 |편집|편집|  
 |SysLink|하이퍼링크|  
-|정적|텍스트|  
-|정적|이미지|  
+|Static|Text|  
+|Static|이미지|  
 |SysIPAddress32|사용자 지정|  
 |SysHeader32|Header/HeaderItem|  
 |SysListView32|DataGrid|  
@@ -73,15 +73,15 @@ ms.locfileid: "71042004"
 |ToolbarWindow32|구분 기호|  
 |tooltips_class32|도구 설명|  
 |#32774|도구 설명|  
-|ReBarWindow32|Toolbar|  
+|ReBarWindow32|ToolBar|  
 |SysTreeView32|Tree|  
 |SysTreeView32|TreeItem|  
   
- **참고** RichEdit 컨트롤은 [!INCLUDE[TLA#tla_winvista](../../../includes/tlasharptla-winvista-md.md)] 와 함께 제공된 버전에서만 지원됩니다(RichEd20.dll 버전 3.1 이상 및 MsftEdit.dll 버전 4.1 이상).  
+ **Note** The RichEdit control is supported only for versions shipped with Windows Vista (in RichEd20.dll version 3.1 and later, and MsftEdit.dll version 4.1 and later).  
   
  다음 컨트롤은 지원되지 않습니다.  
   
-|클래스 이름|컨트롤 종류|  
+|클래스 이름|컨트롤 형식|  
 |----------------|------------------|  
 |SysAnimate32|이미지|  
 |SysPager|Spinner|  
@@ -94,9 +94,9 @@ ms.locfileid: "71042004"
   
 <a name="Windows_Forms_Controls"></a>   
 ## <a name="windows-forms-controls"></a>Windows Forms 컨트롤  
- Windows Forms 컨트롤은 uiautomationclientsideproviders.dll의 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 클라이언트 쪽 공급자를 통해에 노출 됩니다. 이 어셈블리는 UI 자동화 클라이언트 애플리케이션과 함께 사용할 수 있도록 자동으로 등록됩니다.  
+ Windows Forms controls are exposed to [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] through client-side providers in UIAutomationClientsideProviders.dll. 이 어셈블리는 UI 자동화 클라이언트 애플리케이션과 함께 사용할 수 있도록 자동으로 등록됩니다.  
   
- 일반적으로 공용 컨트롤에 대해 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 관리 되는 래퍼로 Windows Forms 컨트롤은에서 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]지원 됩니다. 다음과 같은 컨트롤이 지원됩니다.  
+ Typically, Windows Forms controls that are managed wrappers for [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] common controls are supported by [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. 다음과 같은 컨트롤이 지원됩니다.  
   
 |클래스 이름|  
 |----------------|  
@@ -136,7 +136,7 @@ ms.locfileid: "71042004"
 |VscrollBar|  
 |웹 브라우저|  
   
- 다음 컨트롤은 Microsoft Active Accessibility에 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 대 한 지원을 통해서만에 노출 됩니다. 일부 기능은 사용하지 못할 수도 있습니다.  
+ The following controls are exposed to [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] only through their support for Microsoft Active Accessibility. 일부 기능은 사용하지 못할 수도 있습니다.  
   
 |컨트롤 이름|  
 |------------------|  
@@ -167,6 +167,6 @@ ms.locfileid: "71042004"
 |RaftingContainer|  
 |StatusStrip|  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
-- [UI Automation Control Types](ui-automation-control-types.md)
+- [UI 자동화 컨트롤 형식](ui-automation-control-types.md)

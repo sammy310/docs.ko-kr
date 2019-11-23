@@ -14,16 +14,14 @@ helpviewer_keywords:
 ms.assetid: cced5298-277f-4a5a-8ecf-a0050c1096ea
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: fdfbb22d231d16be7757ff5df26a5a010928af54
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 646952d5cd55b74081a0ba6171a6eee6b0138512
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767052"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74443968"
 ---
-# <a name="corfieldoffset-structure"></a>COR_FIELD_OFFSET 구조체
+# <a name="cor_field_offset-structure"></a>COR_FIELD_OFFSET 구조체
 클래스 내에서 지정된 필드의 오프셋을 저장합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -39,20 +37,20 @@ typedef struct COR_FIELD_OFFSET {
   
 |멤버|설명|  
 |------------|-----------------|  
-|`ridOfField`|`mdFieldDef` 필드를 나타내는 메타 데이터 토큰입니다.|  
-|`ulOffset`|클래스 내의 필드 오프셋입니다.|  
+|`ridOfField`|An `mdFieldDef` metadata token that represents the field.|  
+|`ulOffset`|The field's offset within its class.|  
   
-## <a name="remarks"></a>설명  
- [Imetadataimport:: Getclasslayout](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getclasslayout-method.md) 하 고 [imetadataemit:: Setclasslayout](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setclasslayout-method.md) 형식의 매개 변수를 사용 하는 메서드 `COR_FIELD_OFFSET`합니다.  
+## <a name="remarks"></a>주의  
+ [IMetaDataImport::GetClassLayout](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getclasslayout-method.md) and [IMetaDataEmit::SetClassLayout](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setclasslayout-method.md) methods take a parameter of type `COR_FIELD_OFFSET`.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** CorHdr.h, CorProf.idl  
+ **Header:** CorHdr.h, CorProf.idl  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [메타데이터 구조체](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)
 - [IMetaDataEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)

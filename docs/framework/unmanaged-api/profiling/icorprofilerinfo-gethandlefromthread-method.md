@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 36cdc9f5-7579-4cd2-aa36-fc05c741584c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: be8f4e396171f3e56b5b93969d3960b7aaea142e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e508ccd81d25aa3d303456fa88554903ec71d633
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780644"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74439058"
 ---
 # <a name="icorprofilerinfogethandlefromthread-method"></a>ICorProfilerInfo::GetHandleFromThread 메서드
-Win32 스레드 핸들을 스레드 ID를 매핑합니다.  
+Maps the ID of a thread to a Win32 thread handle.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,16 +35,16 @@ HRESULT GetHandleFromThread(
   
 ## <a name="parameters"></a>매개 변수  
  `threadId`  
- [in] 매핑할 스레드 ID입니다.  
+ [in] The thread ID to be mapped.  
   
  `phThread`  
- [out] Win32 스레드 핸들에 대 한 포인터입니다.  
+ [out] A pointer to a Win32 thread handle.  
   
-## <a name="remarks"></a>설명  
- 프로파일러는 Win32를 호출 해야 `DuplicateHandle` 함수 사용 하기 전에 핸들입니다.  
+## <a name="remarks"></a>주의  
+ The profiler must call the Win32 `DuplicateHandle` function on the handle before using it.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
   
@@ -54,6 +52,6 @@ HRESULT GetHandleFromThread(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ICorProfilerInfo 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

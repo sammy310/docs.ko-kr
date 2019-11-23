@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 47915d33-b7bf-409e-b484-4ee1df15de22
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c571e37d87ffd136687452dc80a823b8ddbe3359
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cea84f47a5289df4bc9c50381e18d7077b3b8dad
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782054"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440483"
 ---
 # <a name="imetadataemittranslatesigwithscope-method"></a>IMetaDataEmit::TranslateSigWithScope 메서드
-현재 범위에 어셈블리를 가져오고 병합 된 범위에 대 한 새 메타 데이터 서명을 가져옵니다.  
+Imports an assembly into the current scope and gets a new metadata signature for the merged scope.  
   
 ## <a name="syntax"></a>구문  
   
@@ -47,48 +45,48 @@ HRESULT TranslateSigWithScope (
   
 ## <a name="parameters"></a>매개 변수  
  `pAssemImport`  
- [in] \(서명을 정의 됨) 가져오기 어셈블리에 대 한 인터페이스입니다.  
+ [in] The interface for import assembly (where the signature is defined).  
   
  `pbHashValue`  
- [in] 어셈블리에 대 한 해시 blob입니다.  
+ [in] The hash blob for the assembly.  
   
  `cbHashValue`  
- [in] 바이트 수가 `pbHashValue`합니다.  
+ [in] The count of bytes in `pbHashValue`.  
   
  `import`  
- [in] 가져오기 메타 데이터 범위에 대 한 인터페이스입니다.  
+ [in] The interface for import metadata scope.  
   
  `pbSigBlob`  
- [in] 가져올 서명입니다.  
+ [in] The signature to be imported.  
   
  `cbSigBlob`  
- [in] 크기 (바이트)의 `pbSigBlob`합니다.  
+ [in] The size, in bytes, of `pbSigBlob`.  
   
  `pAssemEmit`  
- [in] 내보내기 어셈블리에 대 한 인터페이스입니다.  
+ [in] The interface for export assembly.  
   
  `emit`  
- [in] 내보내기 메타 데이터 범위에 대 한 인터페이스입니다.  
+ [in] The interface for export metadata scope.  
   
  `pvTranslatedSig`  
- [out] 번역 된 시그니처 blob을 저장할 버퍼입니다.  
+ [out] The buffer to hold the translated signature blob.  
   
  `cbTranslatedSigMax`  
- [in] 용량 (바이트)에서의 `pvTranslatedSig`합니다.  
+ [in] The capacity, in bytes, of `pvTranslatedSig`.  
   
  `pcbTranslatedSig`  
- [out] 번역 된 서명의 실제 바이트 수입니다.  
+ [out] The number of actual bytes in the translated signature.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** Cor.h  
+ **Header:** Cor.h  
   
- **라이브러리:** MSCorEE.dll에서 리소스로 사용  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [IMetaDataAssemblyEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
 - [IMetaDataAssemblyImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

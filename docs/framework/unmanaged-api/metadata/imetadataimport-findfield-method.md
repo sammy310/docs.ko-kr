@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 38cd4e16-fbb2-471c-aa73-ac51a1931ad2
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 1baee71b5b8575f51eb54fbc8a037a5dddd24500
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 842d6c0deb90bc45cb59454fb30fcc3544d742f1
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782533"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437943"
 ---
 # <a name="imetadataimportfindfield-method"></a>IMetaDataImport::FindField 메서드
-에 포인터를 가져옵니다 FieldDef 토큰 포함 되는 필드에 대 한 지정 된 <xref:System.Type> 지정 된 이름 및 메타 데이터 서명을 하 고 있습니다.  
+Gets a pointer to the FieldDef token for the field that is enclosed by the specified <xref:System.Type> and that has the specified name and metadata signature.  
   
 ## <a name="syntax"></a>구문  
   
@@ -41,37 +39,37 @@ HRESULT FindField (
   
 ## <a name="parameters"></a>매개 변수  
  `td`  
- [in] 클래스 또는 검색할 필드를 포함 하는 인터페이스에 대 한 TypeDef 토큰입니다. 이 값이 `mdTokenNil`, 전역 변수에 대 한 조회가 수행 됩니다.  
+ [in] The TypeDef token for the class or interface that encloses the field to search for. If this value is `mdTokenNil`, the lookup is done for a global variable.  
   
  `szName`  
- [in] 검색할 필드의 이름입니다.  
+ [in] The name of the field to search for.  
   
  `pvSigBlob`  
- [in] 필드의 이진 메타 데이터 서명에 대 한 포인터입니다.  
+ [in] A pointer to the binary metadata signature of the field.  
   
  `cbSigBlob`  
- [in] 크기 (바이트) `pvSigBlob`합니다.  
+ [in] The size in bytes of `pvSigBlob`.  
   
  `pmb`  
- [out] 일치 하는 FieldDef 토큰에 대 한 포인터입니다.  
+ [out] A pointer to the matching FieldDef token.  
   
-## <a name="remarks"></a>설명  
- 바깥쪽 클래스 또는 인터페이스를 사용 하 여 필드를 지정 했습니다 (`td`), 해당 이름 (`szName`), 및 해당 서명 필요에 따라 (`pvSigBlob`).  
+## <a name="remarks"></a>주의  
+ You specify the field using its enclosing class or interface (`td`), its name (`szName`), and optionally its signature (`pvSigBlob`).  
   
- 에 전달 된 서명을 `FindField` 시그니처는 특정 범위에 바인딩되므로 현재 범위에서 생성 해야 합니다. 시그니처는 바깥쪽 클래스 또는 값 형식을 식별 하는 토큰을 포함할 수 있습니다. (토큰은 로컬 TypeDef 테이블에 인덱스). 현재 범위의 컨텍스트 외부 런타임 시그니처를 한에 대 한 입력으로 사용할 수는 없습니다 `FindField`합니다.  
+ The signature passed to `FindField` must have been generated in the current scope, because signatures are bound to a particular scope. A signature can embed a token that identifies the enclosing class or value type. (The token is an index into the local TypeDef table). You cannot build a run-time signature outside the context of the current scope and use that signature as input to `FindField`.  
   
- `FindField` 클래스 또는 인터페이스에서 직접 정의 된 필드만을 찾습니다. 상속 된 필드는 찾지 않습니다.  
+ `FindField` finds only fields that were defined directly in the class or interface; it does not find inherited fields.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** Cor.h  
+ **Header:** Cor.h  
   
- **라이브러리:** MsCorEE.dll에 리소스로 포함  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [IMetaDataImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

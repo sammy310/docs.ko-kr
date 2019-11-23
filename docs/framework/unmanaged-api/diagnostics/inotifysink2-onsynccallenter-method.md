@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e33265be-c25d-4145-ad02-c3e89d6f26c1
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e5fc8b3e6432475468f1012313c95ddd2e22e026
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 69c7e6c465de5b8185a86b3de6e5c29f902a1d1f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736264"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440876"
 ---
 # <a name="inotifysink2onsynccallenter-method"></a>INotifySink2::OnSyncCallEnter 메서드
-호출을 시작 하면 호출 됩니다.  
+Gets invoked when entering a call.  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,21 +38,21 @@ HRESULT OnSyncCallEnter
   
 ## <a name="parameters"></a>매개 변수  
  `in_CallID`  
- [in] 입력 한 호출의 ID입니다. 참조 [CALL_ID 구조체](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md)합니다.  
+ [in] ID of the call being entered. See [CALL_ID Structure](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md).  
   
  `in_pBuffer`  
- [in] 버퍼를 호출 합니다.  
+ [in] Call buffer.  
   
  `in_BufferSize`  
- [in] 호출 버퍼 바이트의 크기입니다.  
+ [in] Size of the call buffer, in bytes.  
   
 ## <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 S_OK입니다.  
+ S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>요구 사항  
- **헤더:** ProtocolNotify2.idl  
+ **Header:** ProtocolNotify2.idl  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [INotifySink2 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
 - [INotifySource2 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)

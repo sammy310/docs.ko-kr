@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 69156fbf-7219-43bf-b4b8-b13f1a2fcb86
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 576fb8632818a6b8ffc3e2c0acc50eaafd074de3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9d4690cb6adedc77717e577d409cb52b18b1b5ca
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766973"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74443840"
 ---
 # <a name="corcallingconvention-enumeration"></a>CorCallingConvention 열거형
 관리 코드에서 수행된 호출 규칙의 형식을 설명하는 값을 포함합니다.  
@@ -54,27 +52,27 @@ typedef enum CorCallingConvention
   
 |멤버|설명|  
 |------------|-----------------|  
-|`IMAGE_CEE_CS_CALLCONV_DEFAULT`|기본 호출 규칙을 나타냅니다.|  
-|`IMAGE_CEE_CS_CALLCONV_VARARG`|메서드는 가변 개수의 매개 변수를 나타냅니다.|  
-|`IMAGE_CEE_CS_CALLCONV_FIELD`|필드에 호출 임을 나타냅니다.|  
-|`IMAGE_CEE_CS_CALLCONV_LOCAL_SIG`|로컬 메서드 호출 임을 나타냅니다.|  
-|`IMAGE_CEE_CS_CALLCONV_PROPERTY`|속성 호출 임을 나타냅니다.|  
-|`IMAGE_CEE_CS_CALLCONV_UNMGD`|관리 되지 않는 호출을 나타냅니다.|  
-|`IMAGE_CEE_CS_CALLCONV_GENERICINST`|제네릭 메서드 인스턴스를 나타냅니다.|  
-|`IMAGE_CEE_CS_CALLCONV_NATIVEVARARG`|64 비트 PInvoke 호출에 가변 개수의 매개 변수를 사용 하는 메서드를 나타냅니다.|  
-|`IMAGE_CEE_CS_CALLCONV_MAX`|잘못 된 4 비트 값을 설명합니다.|  
-|`IMAGE_CEE_CS_CALLCONV_MASK`|호출 규칙 하위 4 비트에서 설명한 있는지를 나타냅니다.|  
-|`IMAGE_CEE_CS_CALLCONV_HASTHIS`|최상위 비트 설명 나타냅니다는 `this` 매개 변수입니다.|  
-|`IMAGE_CEE_CS_CALLCONV_EXPLICITTHIS`|나타내는 `this` 매개 변수는 서명에서 명시적으로 설명 합니다.|  
-|`IMAGE_CEE_CS_CALLCONV_GENERIC`|명시적 개수의 형식 인수를 사용 하 여 제네릭 메서드 시그니처를 나타냅니다. 이 일반 매개 변수 개수를 앞에 옵니다.|  
+|`IMAGE_CEE_CS_CALLCONV_DEFAULT`|Indicates a default calling convention.|  
+|`IMAGE_CEE_CS_CALLCONV_VARARG`|Indicates that the method takes a variable number of parameters.|  
+|`IMAGE_CEE_CS_CALLCONV_FIELD`|Indicates that the call is to a field.|  
+|`IMAGE_CEE_CS_CALLCONV_LOCAL_SIG`|Indicates that the call is to a local method.|  
+|`IMAGE_CEE_CS_CALLCONV_PROPERTY`|Indicates that the call is to a property.|  
+|`IMAGE_CEE_CS_CALLCONV_UNMGD`|Indicates that the call is unmanaged.|  
+|`IMAGE_CEE_CS_CALLCONV_GENERICINST`|Indicates a generic method instantiation.|  
+|`IMAGE_CEE_CS_CALLCONV_NATIVEVARARG`|Indicates a 64-bit PInvoke call to a method that takes a variable number of parameters.|  
+|`IMAGE_CEE_CS_CALLCONV_MAX`|Describes an invalid 4-bit value.|  
+|`IMAGE_CEE_CS_CALLCONV_MASK`|Indicates that the calling convention is described by the bottom four bits.|  
+|`IMAGE_CEE_CS_CALLCONV_HASTHIS`|Indicates that the top bit describes a `this` parameter.|  
+|`IMAGE_CEE_CS_CALLCONV_EXPLICITTHIS`|Indicates that a `this` parameter is explicitly described in the signature.|  
+|`IMAGE_CEE_CS_CALLCONV_GENERIC`|Indicates a generic method signature with an explicit number of type arguments. This precedes an ordinary parameter count.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** CorHdr.h  
+ **Header:** CorHdr.h  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [메타데이터 열거형](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

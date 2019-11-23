@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7f230961-23a6-4d56-ad2d-7a876d65705f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5e00e7f39bc2f8c14db0676102a52089c7710bd6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 57515ac4670b9b7e25bb496851347a62e1b246df
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772260"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74438719"
 ---
 # <a name="icorprofilerinfoisarrayclass-method"></a>ICorProfilerInfo::IsArrayClass 메서드
-지정된 된 클래스 배열 클래스 인지 확인 합니다.  
+Determines whether the specified class is an array class.  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,22 +37,22 @@ HRESULT IsArrayClass(
   
 ## <a name="parameters"></a>매개 변수  
  `classId`  
- [in] 검사할 클래스의 ID입니다.  
+ [in] The ID of the class to be examined.  
   
  `pBaseElemType`  
- [out] 배열 요소의 형식을 나타내는 CorElementType 열거형의 값에 대 한 포인터입니다.  
+ [out] A pointer to a value of the CorElementType enumeration that indicates the type of the array elements.  
   
  `pBaseClassId`  
- [out] 사용 가능한 경우 배열 요소의 클래스 ID에 대 한 포인터입니다.  
+ [out] A pointer to the class ID of the array elements, when available.  
   
  `pcRank`  
- [out] 배열의 순위 (차원의 수)를 나타내는 정수에 대 한 포인터입니다.  
+ [out] A pointer to an integer that indicates the rank (that is, number of dimensions) of the array.  
   
-## <a name="remarks"></a>설명  
- 지정된 된 클래스는 배열 클래스 경우의 `IsArrayClass` 메서드는 S_OK HRESULT 및 null이 아닌 출력 매개 변수 값을 반환 합니다. 그렇지 않으면 S_FALSE를 반환 합니다.  
+## <a name="remarks"></a>주의  
+ If the specified class is an array class, the `IsArrayClass` method returns an S_OK HRESULT and values for any non-null output parameters. Otherwise, it returns S_FALSE.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
   
@@ -62,6 +60,6 @@ HRESULT IsArrayClass(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ICorProfilerInfo 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

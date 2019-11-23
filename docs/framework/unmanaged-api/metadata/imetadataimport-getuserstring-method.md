@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0fd3bb47-58b5-4083-b241-b9719df7a285
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: edeaefd0792a5cc03ae6d4385ff669a343ffdfc9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 690abec6104f6eed1ad5a0eae9a6b6bb18d35b0d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778813"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436681"
 ---
 # <a name="imetadataimportgetuserstring-method"></a>IMetaDataImport::GetUserString 메서드
 지정한 메타데이터 토큰이 나타내는 리터럴 문자열을 가져옵니다.  
@@ -40,27 +38,27 @@ HRESULT GetUserString (
   
 ## <a name="parameters"></a>매개 변수  
  `stk`  
- [in] 에 대 한 연결된 문자열을 반환할 문자열 토큰입니다.  
+ [in] The String token to return the associated string for.  
   
  `szString`  
- [out] 요청된 된 문자열의 복사본입니다.  
+ [out] A copy of the requested string.  
   
  `cchString`  
- [in] 최대 요청 된 와이드 문자 크기 `szString`합니다.  
+ [in] The maximum size in wide characters of the requested `szString`.  
   
  `pchString`  
- [out] 반환 된 와이드 문자 크기 `szString`합니다.  
+ [out] The size in wide characters of the returned `szString`.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** Cor.h  
+ **Header:** Cor.h  
   
- **라이브러리:** MsCorEE.dll에 리소스로 포함  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [IMetaDataImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

@@ -14,18 +14,16 @@ helpviewer_keywords:
 ms.assetid: c3809c8f-1737-4f0f-9442-0c01ee689871
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6057bd48ff4fe3f852f82de2bab972d95fef138c
-ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
+ms.openlocfilehash: 0ce84e1545523302cd47e60b9f047bc470e6bf0f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68868562"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74443621"
 ---
 # <a name="corelementtype-enumeration"></a>CorElementType 열거형
 
-메타 데이터 형식 시그니처의 형식 <xref:System.Type>에 대 한 공용 언어 런타임, 형식 한정자 또는 정보를 지정 합니다.
+Specifies a common language runtime <xref:System.Type>, a type modifier, or information about a type in a metadata type signature.
 
 ## <a name="syntax"></a>구문
 
@@ -81,73 +79,73 @@ typedef enum CorElementType {
 
 |멤버|설명|
 |------------|-----------------|
-|`ELEMENT_TYPE_END`|내부적으로 사용됩니다.|
-|`ELEMENT_TYPE_VOID`|Void 형식입니다.|
-|`ELEMENT_TYPE_BOOLEAN`|부울 형식|
+|`ELEMENT_TYPE_END`|Used internally.|
+|`ELEMENT_TYPE_VOID`|A void type.|
+|`ELEMENT_TYPE_BOOLEAN`|A Boolean type|
 |`ELEMENT_TYPE_CHAR`|문자 형식입니다.|
-|`ELEMENT_TYPE_I1`|부호 있는 1 바이트 정수입니다.|
+|`ELEMENT_TYPE_I1`|A signed 1-byte integer.|
 |`ELEMENT_TYPE_U1`|부호 없는 1바이트 정수입니다.|
-|`ELEMENT_TYPE_I2`|부호 있는 2 바이트 정수입니다.|
-|`ELEMENT_TYPE_U2`|부호 없는 2 바이트 정수입니다.|
-|`ELEMENT_TYPE_I4`|부호 있는 4 바이트 정수입니다.|
-|`ELEMENT_TYPE_U4`|부호 없는 4 바이트 정수입니다.|
-|`ELEMENT_TYPE_I8`|부호 있는 8 바이트 정수입니다.|
-|`ELEMENT_TYPE_U8`|부호 없는 8 바이트 정수입니다.|
-|`ELEMENT_TYPE_R4`|4 바이트 부동 소수점입니다.|
-|`ELEMENT_TYPE_R8`|8 바이트 부동 소수점입니다.|
-|`ELEMENT_TYPE_STRING`|System.string 형식입니다.|
-|`ELEMENT_TYPE_PTR`|포인터 형식 한정자입니다.|
-|`ELEMENT_TYPE_BYREF`|참조 형식 한정자입니다.|
-|`ELEMENT_TYPE_VALUETYPE`|값 형식 한정자입니다.|
-|`ELEMENT_TYPE_CLASS`|클래스 형식 한정자입니다.|
-|`ELEMENT_TYPE_VAR`|클래스 변수 형식 한정자입니다.|
-|`ELEMENT_TYPE_ARRAY`|다차원 배열 형식 한정자입니다.|
-|`ELEMENT_TYPE_GENERICINST`|제네릭 형식에 대 한 형식 한정자입니다.|
+|`ELEMENT_TYPE_I2`|A signed 2-byte integer.|
+|`ELEMENT_TYPE_U2`|An unsigned 2-byte integer.|
+|`ELEMENT_TYPE_I4`|A signed 4-byte integer.|
+|`ELEMENT_TYPE_U4`|An unsigned 4-byte integer.|
+|`ELEMENT_TYPE_I8`|A signed 8-byte integer.|
+|`ELEMENT_TYPE_U8`|An unsigned 8-byte integer.|
+|`ELEMENT_TYPE_R4`|A 4-byte floating point.|
+|`ELEMENT_TYPE_R8`|An 8-byte floating point.|
+|`ELEMENT_TYPE_STRING`|A System.String type.|
+|`ELEMENT_TYPE_PTR`|A pointer type modifier.|
+|`ELEMENT_TYPE_BYREF`|A reference type modifier.|
+|`ELEMENT_TYPE_VALUETYPE`|A value type modifier.|
+|`ELEMENT_TYPE_CLASS`|A class type modifier.|
+|`ELEMENT_TYPE_VAR`|A class variable type modifier.|
+|`ELEMENT_TYPE_ARRAY`|A multi-dimensional array type modifier.|
+|`ELEMENT_TYPE_GENERICINST`|A type modifier for generic types.|
 |`ELEMENT_TYPE_TYPEDBYREF`|형식화된 참조입니다.|
-|`ELEMENT_TYPE_I`|네이티브 정수의 크기입니다.|
-|`ELEMENT_TYPE_U`|부호 없는 네이티브 정수의 크기입니다.|
-|`ELEMENT_TYPE_FNPTR`|함수에 대 한 포인터입니다.|
-|`ELEMENT_TYPE_OBJECT`|System.object 형식입니다.|
-|`ELEMENT_TYPE_SZARRAY`|0이 아닌 1 차원 배열 형식 한정자입니다.|
-|`ELEMENT_TYPE_MVAR`|메서드 변수 형식 한정자입니다.|
-|`ELEMENT_TYPE_CMOD_REQD`|C 언어 필수 한정자입니다.|
-|`ELEMENT_TYPE_CMOD_OPT`|C 언어 선택적 한정자입니다.|
-|`ELEMENT_TYPE_INTERNAL`|내부적으로 사용됩니다.|
+|`ELEMENT_TYPE_I`|Size of a native integer.|
+|`ELEMENT_TYPE_U`|Size of an unsigned native integer.|
+|`ELEMENT_TYPE_FNPTR`|A pointer to a function.|
+|`ELEMENT_TYPE_OBJECT`|A System.Object type.|
+|`ELEMENT_TYPE_SZARRAY`|A single-dimensional, zero lower-bound array type modifier.|
+|`ELEMENT_TYPE_MVAR`|A method variable type modifier.|
+|`ELEMENT_TYPE_CMOD_REQD`|A C language required modifier.|
+|`ELEMENT_TYPE_CMOD_OPT`|A C language optional modifier.|
+|`ELEMENT_TYPE_INTERNAL`|Used internally.|
 |`ELEMENT_TYPE_MAX`|잘못된 형식입니다.|
-|`ELEMENT_TYPE_MODIFIER`|내부적으로 사용됩니다.|
-|`ELEMENT_TYPE_SENTINEL`|변수 수의 변수 목록에 대 한 센티널 인 형식 한정자입니다.|
-|`ELEMENT_TYPE_PINNED`|내부적으로 사용됩니다.|
+|`ELEMENT_TYPE_MODIFIER`|Used internally.|
+|`ELEMENT_TYPE_SENTINEL`|A type modifier that is a sentinel for a list of a variable number of parameters.|
+|`ELEMENT_TYPE_PINNED`|Used internally.|
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
-형식 한정자는 보다 복잡 한 형식을 나타내는 기본을 형성 합니다. `CorElementType` 형식 한정자 값은 형식 시그니처에서 바로 다음에 오는 값에 적용 됩니다. 다음 표에 지정 된 것 `CorElementType` 처럼 형식 한정자 값 다음에 `CorElementType` 오는 값은 단순 형식 값, 메타 데이터 토큰 또는 다른 값일 수 있습니다.
+The type modifiers form the basis for representing more complex types. A `CorElementType` type modifier value is applied to the value that immediately follows it in the type signature. The value that follows the `CorElementType` type modifier value can be a `CorElementType` simple type value, a metadata token, or other value, as specified in the following table.
 
 > [!NOTE]
-> 모든 숫자 (*숫자*, *인수 개수*, *메타 데이터 토큰*, *순위*, *개수*및 *바운드*)는 압축 된 정수로 저장 됩니다. 자세한 내용은 ECMA 웹 사이트의 [표준 ECMA-335-CLI (공용 언어 인프라)](https://go.microsoft.com/fwlink/?LinkID=116487) 를 참조 하세요.
+> All numbers (*number*, *argument Count*, *metadata token*, *rank*, *count*, and *bound*) are stored as compressed integers. See [Standard ECMA-335 - Common Language Infrastructure (CLI)](https://go.microsoft.com/fwlink/?LinkID=116487) on the ECMA Web site for details.
 
-|형식 한정자|형식|
+|Type modifier|서식|
 |-------------------|------------|
-|`ELEMENT_TYPE_PTR`|ELEMENT_TYPE_PTR \<값> `CorElementType`|
-|`ELEMENT_TYPE_BYREF`|ELEMENT_TYPE_BYREF \<값> `CorElementType`|
-|`ELEMENT_TYPE_VALUETYPE`|메타 \<데이터 `mdTypeDef` 토큰을 ELEMENT_TYPE_VALUETYPE >|
-|`ELEMENT_TYPE_CLASS`|메타 \<데이터 `mdTypeDef` 토큰을 ELEMENT_TYPE_CLASS >|
-|`ELEMENT_TYPE_VAR`|ELEMENT_TYPE_VAR \<number >|
-|`ELEMENT_TYPE_ARRAY`|ELEMENT_TYPE_ARRAY \< \<> `CorElementType` count1>\<> 순위 값을 bound1 > ... \< countn > \<boundN> \<|
-|`ELEMENT_TYPE_GENERICINST`|ELEMENT_TYPE_GENERICINST \<> `mdTypeDef` \<arg1 >>메타데이터토큰을계산하는동안...\< \<argn >|
-|`ELEMENT_TYPE_FNPTR`|호출 \<규칙을 포함 하 여 함수에 대 한 전체 시그니처를 ELEMENT_TYPE_FNPTR >|
-|`ELEMENT_TYPE_SZARRAY`|ELEMENT_TYPE_SZARRAY \<값> `CorElementType`|
-|`ELEMENT_TYPE_MVAR`|ELEMENT_TYPE_MVAR \<number >|
-|`ELEMENT_TYPE_CMOD_REQD`|ELEMENT_TYPE_\<또는 메타`mdTypeDef` 데이터 토큰 `mdTypeRef` >|
-|`ELEMENT_TYPE_CMOD_OPT`|E_T_CMOD_OPT \<또는 메타`mdTypeDef` 데이터 토큰 `mdTypeRef` >|
+|`ELEMENT_TYPE_PTR`|ELEMENT_TYPE_PTR \<a `CorElementType` value>|
+|`ELEMENT_TYPE_BYREF`|ELEMENT_TYPE_BYREF \<a `CorElementType` value>|
+|`ELEMENT_TYPE_VALUETYPE`|ELEMENT_TYPE_VALUETYPE \<an `mdTypeDef` metadata token>|
+|`ELEMENT_TYPE_CLASS`|ELEMENT_TYPE_CLASS \<an `mdTypeDef` metadata token>|
+|`ELEMENT_TYPE_VAR`|ELEMENT_TYPE_VAR \<number>|
+|`ELEMENT_TYPE_ARRAY`|ELEMENT_TYPE_ARRAY \<a `CorElementType` value> \<rank> \<count1> \<bound1> ... \<countN> \<boundN>|
+|`ELEMENT_TYPE_GENERICINST`|ELEMENT_TYPE_GENERICINST \<an `mdTypeDef` metadata token> \<argument Count> \<arg1> ... \<argN>|
+|`ELEMENT_TYPE_FNPTR`|ELEMENT_TYPE_FNPTR \<complete signature for the function, including calling convention>|
+|`ELEMENT_TYPE_SZARRAY`|ELEMENT_TYPE_SZARRAY \<a `CorElementType` value>|
+|`ELEMENT_TYPE_MVAR`|ELEMENT_TYPE_MVAR \<number>|
+|`ELEMENT_TYPE_CMOD_REQD`|ELEMENT_TYPE_\<a `mdTypeRef` or `mdTypeDef` metadata token>|
+|`ELEMENT_TYPE_CMOD_OPT`|E_T_CMOD_OPT \<a `mdTypeRef` or `mdTypeDef` metadata token>|
 
 ## <a name="requirements"></a>요구 사항
 
-**플랫폼** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.
+**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.
 
-**헤더:** CorHdr.h
+**Header:** CorHdr.h
 
 **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [메타데이터 열거형](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

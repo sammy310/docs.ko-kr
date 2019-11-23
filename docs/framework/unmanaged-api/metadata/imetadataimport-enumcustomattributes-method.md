@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 798513a0-68b1-4d04-bc5b-782a4445ea68
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c38b7f060c34f7408195484dec2c49305db422fe
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a43c1883038e41cac1b58c78bc26f20d436ebbd1
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781316"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440244"
 ---
 # <a name="imetadataimportenumcustomattributes-method"></a>IMetaDataImport::EnumCustomAttributes 메서드
-지정 된 형식 또는 멤버와 연결 된 사용자 지정 특성 정의 토큰을 열거 합니다.  
+Enumerates custom attribute-definition tokens associated with the specified type or member.  
   
 ## <a name="syntax"></a>구문  
   
@@ -42,40 +40,40 @@ HRESULT EnumCustomAttributes (
   
 ## <a name="parameters"></a>매개 변수  
  `phEnum`  
- [out에서] 반환 된 열거자에 대 한 포인터입니다.  
+ [in, out] A pointer to the returned enumerator.  
   
  `tk`  
- [in] 모든 사용자 지정 특성에 대해 0 또는 열거형의 범위에 대 한 토큰입니다.  
+ [in] A token for the scope of the enumeration, or zero for all custom attributes.  
   
  `tkType`  
- [in] 특성을 열거할 수 형식의 생성자에 대 한 토큰 또는 `null` 모든 형식에 대 한 합니다.  
+ [in] A token for the constructor of the type of the attributes to be enumerated, or `null` for all types.  
   
  `rCustomAttributes`  
- [out] 토큰 사용자 지정 특성의 배열입니다.  
+ [out] An array of custom attribute tokens.  
   
  `cMax`  
  [in] `rCustomAttributes` 배열의 최대 크기입니다.  
   
  `pcCustomAttributes`  
- [out, optional] 반환 된 토큰 값의 실제 수 `rCustomAttributes`입니다.  
+ [out, optional] The actual number of token values returned in `rCustomAttributes`.  
   
 ## <a name="return-value"></a>반환 값  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
-|`S_OK`|`EnumCustomAttributes` 성공적으로 반환 합니다.|  
-|`S_FALSE`|열거를 사용자 지정 특성이 없는 합니다. 이런 경우 `pcCustomAttributes` 0입니다.|  
+|`S_OK`|`EnumCustomAttributes` returned successfully.|  
+|`S_FALSE`|There are no custom attributes to enumerate. In that case, `pcCustomAttributes` is zero.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** Cor.h  
+ **Header:** Cor.h  
   
- **라이브러리:** MsCorEE.dll에 리소스로 포함  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [IMetaDataImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

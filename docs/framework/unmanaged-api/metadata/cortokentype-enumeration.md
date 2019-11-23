@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 93c9a369-225f-4eff-9b78-3fbee4902cf1
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b4f34340c18fddc46695fe64946c3afd90ed7454
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 74807a678b5c0c2738f33fe552f6462af93ca1f9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772299"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436459"
 ---
 # <a name="cortokentype-enumeration"></a>CorTokenType 열거형
-메타 데이터 토큰의 유형을 나타냅니다.  
+Indicates the type of a metadata token.  
   
 ## <a name="syntax"></a>구문  
   
@@ -63,45 +61,45 @@ typedef enum CorTokenType {
   
 ## <a name="members"></a>멤버  
   
-|멤버|Description|  
+|멤버|설명|  
 |------------|-----------------|  
-|`mdtModule`|`mdModule` 토큰입니다.|  
-|`mdtTypeRef`|`mdTypeRef` 토큰입니다.|  
-|`mdtTypeDef`|`mdTypeDef` 토큰입니다.|  
-|`mdtFieldDef`|`mdFieldDef` 토큰입니다.|  
-|`mdtMethodDef`|`mdMethodDef` 토큰입니다.|  
-|`mdtParamDef`|`mdParamDef` 토큰입니다.|  
-|`mdtInterfaceImpl`|`mdInterfaceImpl` 토큰입니다.|  
-|`mdtMemberRef`|`mdMemberRef` 토큰입니다.|  
-|`mdtCustomAttribute`|`mdCustomAttribute` 토큰입니다.|  
-|`mdtPermission`|`mdPermission` 토큰입니다.|  
-|`mdtSignature`|`mdSignature` 토큰입니다.|  
-|`mdtEvent`|`mdEvent` 토큰입니다.|  
-|`mdtProperty`|`mdProperty` 토큰입니다.|  
-|`mdtModuleRef`|`mdModuleRef` 토큰입니다.|  
-|`mdtTypeSpec`|`mdTypeSpec` 토큰입니다.|  
-|`mdtAssembly`|`mdAssembly` 토큰입니다.|  
-|`mdtAssemblyRef`|`mdAssemblyRef` 토큰입니다.|  
-|`mdtFile`|`mdFile` 토큰입니다.|  
-|`mdtExportedType`|`mdExportedType` 토큰입니다.|  
-|`mdtManifestResource`|`mdManifestResource` 토큰입니다.|  
-|`mdtGenericParam`|`mdGenericParam` 토큰입니다.|  
-|`mdtMethodSpec`|`mdMethodSpec` 토큰입니다.|  
-|`mdtGenericParamConstraint`|`mdGenericParamConstraint` 토큰입니다.|  
-|`mdtString`|`mdString` 토큰입니다.|  
-|`mdtName`|`mdName` 토큰입니다.|  
+|`mdtModule`|An `mdModule` token.|  
+|`mdtTypeRef`|An `mdTypeRef` token.|  
+|`mdtTypeDef`|An `mdTypeDef` token.|  
+|`mdtFieldDef`|An `mdFieldDef` token.|  
+|`mdtMethodDef`|An `mdMethodDef` token.|  
+|`mdtParamDef`|An `mdParamDef` token.|  
+|`mdtInterfaceImpl`|An `mdInterfaceImpl` token.|  
+|`mdtMemberRef`|An `mdMemberRef` token.|  
+|`mdtCustomAttribute`|An `mdCustomAttribute` token.|  
+|`mdtPermission`|An `mdPermission` token.|  
+|`mdtSignature`|An `mdSignature` token.|  
+|`mdtEvent`|An `mdEvent` token.|  
+|`mdtProperty`|An `mdProperty` token.|  
+|`mdtModuleRef`|An `mdModuleRef` token.|  
+|`mdtTypeSpec`|An `mdTypeSpec` token.|  
+|`mdtAssembly`|An `mdAssembly` token.|  
+|`mdtAssemblyRef`|An `mdAssemblyRef` token.|  
+|`mdtFile`|An `mdFile` token.|  
+|`mdtExportedType`|An `mdExportedType` token.|  
+|`mdtManifestResource`|An `mdManifestResource` token.|  
+|`mdtGenericParam`|An `mdGenericParam` token.|  
+|`mdtMethodSpec`|An `mdMethodSpec` token.|  
+|`mdtGenericParamConstraint`|An `mdGenericParamConstraint` token.|  
+|`mdtString`|An `mdString` token.|  
+|`mdtName`|An `mdName` token.|  
 |`mdtBaseType`|사용되지 않습니다.|  
   
-## <a name="remarks"></a>설명  
- 각 값은 최상위 바이트의 값에 해당 메타 데이터 토큰에서.  
+## <a name="remarks"></a>주의  
+ Each value is equal to the value of the top byte in the corresponding metadata token.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** CorHdr.h  
+ **Header:** CorHdr.h  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [메타데이터 열거형](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

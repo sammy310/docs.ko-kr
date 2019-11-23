@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 91a7ce63-f5b8-4f16-b2c4-e1d0baa88944
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 455f71c5b576d1b57db591dab2a3e59f8a5eed67
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 84c41e467c57afd2562e7aa8dd72ce4796249667
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70777292"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74438575"
 ---
 # <a name="exporttype-method"></a>ExportType 메서드
-형식을 내보낼 수 있도록 지정 합니다.  
+Specifies that a type is exportable.  
   
 ## <a name="syntax"></a>구문  
   
@@ -41,30 +39,30 @@ HRESULT ExportType(
   
 ## <a name="parameters"></a>매개 변수  
  `AssemblyID`  
- 내보낼 어셈블리의 ID입니다.  
+ ID of the assembly to export from.  
   
  `FileToken`  
- 내보낼 수 있는 형식을 정의 하는 파일의 파일 토큰 또는 어셈블리 ID입니다.  
+ File token or assembly ID of file that defines the exportable type.  
   
  `TypeToken`  
- 내보낼 수 있도록 설정할 형식의 토큰입니다.  
+ Token of type to be made exportable.  
   
  `pszTypename`  
- 내보낼 수 있는 정규화 된 형식 이름입니다.  
+ Fully qualified type name to be made exportable.  
   
  `dwFlags`  
- `ComType``tdPublic` 또는`tdNested`와 같은 플래그입니다. 이 매개 변수는 [DefineExportedType 메서드에](../metadata/imetadataassemblyemit-defineexportedtype-method.md)전달 될 수 있습니다.  
+ `ComType` flags such as `tdPublic` or `tdNested`. This parameter may be passed to [DefineExportedType Method](../metadata/imetadataassemblyemit-defineexportedtype-method.md).  
   
  `pType`  
- 내보낸 형식에 대 한 토큰을 받습니다.  
+ Receives token for exported type.  
   
 ## <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 S_OK를 반환 합니다.  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>요구 사항  
- Alink 필요  
+ Requires alink.h  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [IALink 인터페이스](ialink-interface.md)
 - [IALink2 인터페이스](ialink2-interface.md)

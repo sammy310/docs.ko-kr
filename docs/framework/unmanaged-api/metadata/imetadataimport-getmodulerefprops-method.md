@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: b558e766-4c11-4628-ae47-b4e0a1800168
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: be4408758db1cbf7839c12cb66ff395625925f69
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: dce9b9c20cbc73c6a70a34afa6c348c23164ed9e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779019"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437324"
 ---
 # <a name="imetadataimportgetmodulerefprops-method"></a>IMetaDataImport::GetModuleRefProps 메서드
 지정한 메타데이터 토큰에서 참조된 모듈의 이름을 가져옵니다.  
@@ -40,27 +38,27 @@ HRESULT GetModuleRefProps (
   
 ## <a name="parameters"></a>매개 변수  
  `mur`  
- [in] ModuleRef 메타 데이터 토큰에 대 한 메타 데이터 정보를 가져오려는 모듈 참조입니다.  
+ [in] The ModuleRef metadata token that references the module to get metadata information for.  
   
  `szName`  
- [out] 모듈 이름을 저장할 버퍼입니다.  
+ [out] A buffer to hold the module name.  
   
  `cchName`  
- [in] 요청된 된 크기의 `szName` 와이드 문자에서.  
+ [in] The requested size of `szName` in wide characters.  
   
  `pchName`  
- [out] 반환 되는 크기의 `szName` 와이드 문자에서.  
+ [out] The returned size of `szName` in wide characters.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** Cor.h  
+ **Header:** Cor.h  
   
- **라이브러리:** MsCorEE.dll에 리소스로 포함  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [IMetaDataImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

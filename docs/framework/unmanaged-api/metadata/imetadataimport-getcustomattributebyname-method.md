@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 909aa530-2e3b-4d0a-a38a-a2750e535d7d
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7bebf254110d9970ff3a99f948ff2e831ffb6b35
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bd7ba7ff10918e5953ea8ae89a60af3115af48a3
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782441"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437691"
 ---
 # <a name="imetadataimportgetcustomattributebyname-method"></a>IMetaDataImport::GetCustomAttributeByName 메서드
-지정 된 이름과 소유자를 사용자 지정 특성을 가져옵니다.  
+Gets the custom attribute, given its name and owner.  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,30 +38,30 @@ HRESULT GetCustomAttributeByName (
   
 ## <a name="parameters"></a>매개 변수  
  `tkObj`  
- [in] 사용자 지정 특성을 소유 하는 개체를 나타내는 메타 데이터 토큰입니다.  
+ [in] A metadata token representing the object that owns the custom attribute.  
   
  `szName`  
- [in] 사용자 지정 특성의 이름입니다.  
+ [in] The name of the custom attribute.  
   
  `ppData`  
- [out] 사용자 지정 특성의 값인 데이터 배열에 대 한 포인터입니다.  
+ [out] A pointer to an array of data that is the value of the custom attribute.  
   
  `pcbData`  
- [out] 반환 되는 데이터의 바이트 크기 *`ppData`합니다.  
+ [out] The size in bytes of the data returned in *`ppData`.  
   
-## <a name="remarks"></a>설명  
- 동일한 소유자;에 대 한 여러 사용자 지정 특성을 정의 하는 것이 유효 이름이 포함 될 수 있습니다. 그러나 `GetCustomAttributeByName` 인스턴스 하나만 반환 합니다. (`GetCustomAttributeByName` 발견 되는 첫 번째 인스턴스를 반환 합니다.) 사용자 지정 특성의 모든 인스턴스를 찾으려고 호출을 [imetadataimport:: Enumcustomattributes](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumcustomattributes-method.md) 메서드.  
+## <a name="remarks"></a>주의  
+ It is legal to define multiple custom attributes for the same owner; they may even have the same name. However, `GetCustomAttributeByName` returns only one instance. (`GetCustomAttributeByName` returns the first instance that it encounters.) To find all instances of a custom attribute, call the [IMetaDataImport::EnumCustomAttributes](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumcustomattributes-method.md) method.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** Cor.h  
+ **Header:** Cor.h  
   
- **라이브러리:** MsCorEE.dll에 리소스로 포함  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [IMetaDataImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

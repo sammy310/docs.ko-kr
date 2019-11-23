@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9855f0e4-12c0-4d3d-ab5d-d6bc52d25eae
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 48cd62f89f1112a1007a5661dc55fe2977dace2b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a020a0343eecceb4a85ebbddffe323c7f7bdca3d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778910"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437117"
 ---
 # <a name="imetadataimportgetpermissionsetprops-method"></a>IMetaDataImport::GetPermissionSetProps 메서드
-연관 된 메타 데이터를 가져옵니다는 <xref:System.Security.PermissionSet?displayProperty=nameWithType> 지정한 권한 토큰이 나타내는입니다.  
+Gets the metadata associated with the <xref:System.Security.PermissionSet?displayProperty=nameWithType> represented by the specified Permission token.  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,27 +38,27 @@ HRESULT GetPermissionSetProps (
   
 ## <a name="parameters"></a>매개 변수  
  `pm`  
- [in] 권한 집합에 대 한 메타 데이터 속성을 get을 나타내는 권한 메타 데이터 토큰입니다.  
+ [in] The Permission metadata token that represents the permission set to get the metadata properties for.  
   
  `pdwAction`  
- [out] 사용 권한 집합에 대 한 포인터입니다.  
+ [out] A pointer to the permission set.  
   
  `ppvPermission`  
- [out] 권한 집합의 이진 메타 데이터 서명에 대 한 포인터입니다.  
+ [out] A pointer to the binary metadata signature of the permission set.  
   
  `pcbPermission`  
- [out] 크기 (바이트) `ppvPermission`합니다.  
+ [out] The size in bytes of `ppvPermission`.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** Cor.h  
+ **Header:** Cor.h  
   
- **라이브러리:** MsCorEE.dll에 리소스로 포함  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Security.PermissionSet>
 - [IMetaDataImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

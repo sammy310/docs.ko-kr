@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3c24e552-fc69-4971-b65a-a3e4b5f7f1e8
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a4185ec41fc9f7d1d919a79b57c02625210ad72a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7547d7557169b1279125141afb5b05e22341942a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777186"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74432746"
 ---
 # <a name="imetadataemit2definemethodspec-method"></a>IMetaDataEmit2::DefineMethodSpec 메서드
-메서드의 제네릭 인스턴스를 만들고 정의 하는 토큰을 가져옵니다.  
+Creates a generic instance of a method, and gets a token to the definition.  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,27 +38,27 @@ HRESULT DefineMethodSpec (
   
 ## <a name="parameters"></a>매개 변수  
  `tkParent`  
- [in] 제네릭 인스턴스를 만들려고 하는 방법에 대 한 토큰입니다. 토큰 형식 이어야 합니다 `mdMethodDef` 또는 `mdMemberRef`합니다.  
+ [in] A token for the method of which to create the generic instance. The token must be of type `mdMethodDef` or `mdMemberRef`.  
   
  `pvSigBlob`  
- [in] 메서드의 이진 COM + 서명에 대 한 포인터입니다.  
+ [in] A pointer to the binary COM+ signature of the method.  
   
  `cbSibBlob`  
- [in] 크기 (바이트)의 `pvSigBlob`합니다.  
+ [in] The size, in bytes, of `pvSigBlob`.  
   
  `pmi`  
- [out] 메서드의 메타 데이터 서명 정의 하는 토큰입니다.  
+ [out] A token to the metadata signature definition of the method.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** Cor.h  
+ **Header:** Cor.h  
   
- **라이브러리:** MsCorEE.dll에서 리소스로 사용  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [IMetaDataEmit2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
 - [IMetaDataEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)

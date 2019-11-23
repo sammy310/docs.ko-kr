@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1c090153-fd5f-46c7-9cff-39a78d992c8f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e4be840760782789aa91e5519f60374aca2e3941
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ae682c354a7a5188611b103008a3e18f8d821260
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775257"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431935"
 ---
 # <a name="imetadataassemblyemitsetexportedtypeprops-method"></a>IMetaDataAssemblyEmit::SetExportedTypeProps 메서드
 지정된 `ExportedType` 메타데이터 구조를 수정합니다.  
@@ -40,29 +38,29 @@ HRESULT SetExportedTypeProps (
   
 ## <a name="parameters"></a>매개 변수  
  `ct`  
- [in] 지정 된 메타 데이터 토큰을 `ExportedType` 수정할 메타 데이터 구조입니다.  
+ [in] The metadata token that specifies the `ExportedType` metadata structure to be modified.  
   
  `tkImplementation`  
- [in] 형식의 토큰 `File`, `AssemblyRef`, 또는 `ExportedType`,이 형식을 구현 하는 방법을 지정 하는 합니다.  
+ [in] The token, of type `File`, `AssemblyRef`, or `ExportedType`, that specifies how this type is implemented.  
   
  `tkTypeDef`  
- [in] `TypeDef` 코드 파일에서 참조 하는 토큰입니다.  
+ [in] The `TypeDef` token referenced in the code file.  
   
  `dwExportedTypeFlags`  
- [in] 형식의 특성을 지정 하는 값의 비트 조합입니다.  
+ [in] A bitwise combination of values that specify attributes of the type.  
   
-## <a name="remarks"></a>설명  
- 만들려는 `ExportedType` 메타 데이터 구조를 사용 합니다 [imetadataassemblyemit:: Defineexportedtype](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md) 메서드.  
+## <a name="remarks"></a>주의  
+ To create an `ExportedType` metadata structure, use the [IMetaDataAssemblyEmit::DefineExportedType](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md) method.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** Cor.h  
+ **Header:** Cor.h  
   
- **라이브러리:** MsCorEE.dll에서 리소스로 사용  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [IMetaDataAssemblyEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

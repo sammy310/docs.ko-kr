@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: d8ec8d3c-70f7-4cc6-9957-68068fd8f49c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a82ce9709e008e092c5f31372a89bf9a16e1f88b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6b551743227dc1c6069796038782a515e6dbe8c4
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767020"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74443779"
 ---
 # <a name="corcheckduplicatesfor-enumeration"></a>CorCheckDuplicatesFor 열거형
-중복 확인 되는 메타 데이터 토큰을 지정 합니다.  
+Specifies the metadata tokens that will be checked for duplicates.  
   
 ## <a name="syntax"></a>구문  
   
@@ -68,43 +66,43 @@ typedef enum CorCheckDuplicatesFor {
   
 ## <a name="members"></a>멤버  
   
-|멤버|Description|  
+|멤버|설명|  
 |------------|-----------------|  
-|`MDDupAll`|중복 항목에 대 한 모든 메타 데이터 토큰을 확인 합니다.|  
+|`MDDupAll`|Check all metadata tokens for duplicates.|  
 |`MDDupENC`|사용되지 않습니다.|  
-|`MDNoDupChecks`|중복 항목에 대 한 메타 데이터 토큰을 검사 하지 않습니다.|  
-|`MDDupTypeDef`|중복 확인 `mdTypeDef` 토큰입니다.|  
-|`MDDupInterfaceImpl`|중복 확인 `mdInterfaceImpl` 토큰입니다.|  
-|`MDDupMethodDef`|중복 확인 `mdMethodDef` 토큰입니다.|  
-|`MDDupTypeRef`|중복 확인 `mdTypeRef` 토큰입니다.|  
-|`MDDupMemberRef`|중복 확인 `mdMemberRef` 토큰입니다.|  
-|`MDDupCustomAttribute`|중복 확인 `mdCustomAttribute` 토큰입니다.|  
-|`MDDupParamDef`|중복 확인 `mdParamDef` 토큰입니다.|  
-|`MDDupPermission`|중복 확인 `mdPermission` 토큰입니다.|  
-|`MDDupProperty`|중복 확인 `mdProperty` 토큰입니다.|  
-|`MDDupEvent`|중복 확인 `mdEvent` 토큰입니다.|  
-|`MDDupFieldDef`|중복 확인 `mdFieldDef` 토큰입니다.|  
-|`MDDupSignature`|중복 확인 `mdSignature` 토큰입니다.|  
-|`MDDupModuleRef`|중복 확인 `mdModuleRef` 토큰입니다.|  
-|`MDDupTypeSpec`|중복 확인 `mdTypeSpec` 토큰입니다.|  
-|`MDDupImplMap`|중복 확인 `mdImplMap` 토큰입니다.|  
-|`MDDupAssemblyRef`|중복 확인 `mdAssemblyRef` 토큰입니다.|  
-|`MDDupFile`|중복 확인 `mdFile` 토큰입니다.|  
-|`MDDupExportedType`|중복 확인 `mdExportedType` 토큰입니다.|  
-|`MDDupManifestResource`|중복 확인 `mdManifestResource` 토큰입니다.|  
-|`MDDupGenericParam`|중복 확인 `mdGenericParam` 토큰입니다.|  
-|`MDDupMethodSpec`|중복 확인 `mdMethodSpec` 토큰입니다.|  
-|`MDDupGenericParamConstraint`|중복 확인 `mdGenericParamConstraint` 토큰입니다.|  
-|`MDDupAssembly`|중복 확인 `mdAssembly` 토큰입니다.|  
-|`MDDupDefault`|중복 여부를 확인 `mdMemberRef`, `mdTypeRef`, `mdSignature`합니다 `mdTypeSpec`, 및 `mdMethodSpec` 토큰입니다.|  
+|`MDNoDupChecks`|Do not check metadata tokens for duplicates.|  
+|`MDDupTypeDef`|Check for duplicates of `mdTypeDef` tokens.|  
+|`MDDupInterfaceImpl`|Check for duplicates of `mdInterfaceImpl` tokens.|  
+|`MDDupMethodDef`|Check for duplicates of `mdMethodDef` tokens.|  
+|`MDDupTypeRef`|Check for duplicates of `mdTypeRef` tokens.|  
+|`MDDupMemberRef`|Check for duplicates of `mdMemberRef` tokens.|  
+|`MDDupCustomAttribute`|Check for duplicates of `mdCustomAttribute` tokens.|  
+|`MDDupParamDef`|Check for duplicates of `mdParamDef` tokens.|  
+|`MDDupPermission`|Check for duplicates of `mdPermission` tokens.|  
+|`MDDupProperty`|Check for duplicates of `mdProperty` tokens.|  
+|`MDDupEvent`|Check for duplicates of `mdEvent` tokens.|  
+|`MDDupFieldDef`|Check for duplicates of `mdFieldDef` tokens.|  
+|`MDDupSignature`|Check for duplicates of `mdSignature` tokens.|  
+|`MDDupModuleRef`|Check for duplicates of `mdModuleRef` tokens.|  
+|`MDDupTypeSpec`|Check for duplicates of `mdTypeSpec` tokens.|  
+|`MDDupImplMap`|Check for duplicates of `mdImplMap` tokens.|  
+|`MDDupAssemblyRef`|Check for duplicates of `mdAssemblyRef` tokens.|  
+|`MDDupFile`|Check for duplicates of `mdFile` tokens.|  
+|`MDDupExportedType`|Check for duplicates of `mdExportedType` tokens.|  
+|`MDDupManifestResource`|Check for duplicates of `mdManifestResource` tokens.|  
+|`MDDupGenericParam`|Check for duplicates of `mdGenericParam` tokens.|  
+|`MDDupMethodSpec`|Check for duplicates of `mdMethodSpec` tokens.|  
+|`MDDupGenericParamConstraint`|Check for duplicates of `mdGenericParamConstraint` tokens.|  
+|`MDDupAssembly`|Check for duplicates of `mdAssembly` tokens.|  
+|`MDDupDefault`|Check for duplicates of `mdMemberRef`, `mdTypeRef`, `mdSignature`, `mdTypeSpec`, and `mdMethodSpec` tokens.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** CorHdr.h  
+ **Header:** CorHdr.h  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [메타데이터 열거형](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

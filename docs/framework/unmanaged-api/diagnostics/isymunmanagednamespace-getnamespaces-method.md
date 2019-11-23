@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0ea9d9af-8709-4a46-872b-f54d9e840088
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2e11886917964134a2530ae8484dba3cde5e7b61
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: da2906187c02bbc7a35c937663e3fc7db1ebda13
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759377"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74433892"
 ---
 # <a name="isymunmanagednamespacegetnamespaces-method"></a>ISymUnmanagedNamespace::GetNamespaces 메서드
-이 네임 스페이스의 자식을 가져옵니다.  
+Gets the children of this namespace.  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,20 +37,20 @@ HRESULT GetNamespaces(
   
 ## <a name="parameters"></a>매개 변수  
  `cNameSpaces`  
- [in] A `ULONG32` 의 크기를 나타내는 `namespaces` 배열입니다.  
+ [in] A `ULONG32` that indicates the size of the `namespaces` array.  
   
  `pcNameSpaces`  
- [out] 에 대 한 포인터를 `ULONG32` 문자 네임 스페이스를 포함 하는 데 필요한 버퍼의 크기를 받는 합니다.  
+ [out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the namespaces.  
   
  `namespaces`  
- [out] 네임 스페이스를 포함 하는 버퍼에 대 한 포인터입니다.  
+ [out] A pointer to the buffer that contains the namespaces.  
   
 ## <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>요구 사항  
- **헤더:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ISymUnmanagedNamespace 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md)

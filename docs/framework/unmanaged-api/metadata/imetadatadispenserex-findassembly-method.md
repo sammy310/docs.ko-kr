@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3afe7252-5f28-48d9-a74d-1927566c404c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 85ebddf4ef96be2a583e54082e4d4405b30adf46
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2d974b7368dd01062d2d310d076dce05e102eb81
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777773"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74442288"
 ---
 # <a name="imetadatadispenserexfindassembly-method"></a>IMetaDataDispenserEx::FindAssembly 메서드
-이 메서드가 구현되지 않았습니다. 를 호출 하는 경우 E_NOTIMPL을 반환 합니다.  
+This method is not implemented. If called, it returns E_NOTIMPL.  
   
 ## <a name="syntax"></a>구문  
   
@@ -43,36 +41,36 @@ HRESULT FindAssembly(
   
 ## <a name="parameters"></a>매개 변수  
  `szAppBase`  
- [in] 사용 되지 않습니다.  
+ [in] Not used.  
   
  `szPrivateBin`  
- [in] 사용 되지 않습니다.  
+ [in] Not used.  
   
  `szGlobalBin`  
- [in] 사용 되지 않습니다.  
+ [in] Not used.  
   
  `szAssemblyName`  
- [in] 어셈블리를 찾을 수입니다.  
+ [in] The assembly to be found.  
   
  `szName`  
- [out] 어셈블리의 단순한 이름입니다.  
+ [out] The simple name of the assembly.  
   
  `cchName`  
- [in] 크기 (바이트)의 `szName`합니다.  
+ [in] The size, in bytes, of `szName`.  
   
  `pcName`  
- [out] 에 실제로 반환 된 문자 수가 `szName`합니다.  
+ [out] The number of characters actually returned in `szName`.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **헤더:** Cor.h  
+ **Header:** Cor.h  
   
- **라이브러리:** MsCorEE.dll에서 리소스로 사용  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [IMetaDataDispenserEx 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
 - [IMetaDataDispenser 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)

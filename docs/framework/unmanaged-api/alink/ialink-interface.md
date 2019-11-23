@@ -6,22 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - IALink interface
 ms.assetid: 50abd02d-6488-4815-999b-4fb89af4d568
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7324ddb63f000f55a16c4963c808f658aa9098a7
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 73b6bb9eac3f706df5cb1fd63b2f67c9791c8ed2
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70787324"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74441825"
 ---
 # <a name="ialink-interface"></a>IALink 인터페이스
-.NET Framework 어셈블리를 생성 하는 데 도움이 됩니다. 무엇 보다도 인터페이스에는 다중 모듈 어셈블리에 대 한 어셈블리 매니페스트 작성, 강력한 이름으로 어셈블리 서명, .netmodules 만들기를 지 원하는 메서드가 포함 되어 있습니다.  
+Helps in constructing .NET Framework assemblies. Among other things, the interface contains methods that assist in writing assembly manifests for multi-module assemblies, signing assemblies with strong names, and creating netmodules.  
   
-## <a name="in-this-section"></a>섹션 내용  
- [AddFile 메서드](addfile-method.md)  
+## <a name="in-this-section"></a>단원 내용  
+ [AddFile Method](addfile-method.md)  
   
- [AddImport 메서드](addimport-method.md)  
+ [AddImport Method](addimport-method.md)  
   
  [CloseAssembly 메서드](closeassembly-method.md)  
   
@@ -53,7 +51,7 @@ ms.locfileid: "70787324"
   
  [GetResolutionScope 메서드](getresolutionscope-method.md)  
   
- [GetScope 메서드](getscope-method.md)  
+ [GetScope Method](getscope-method.md)  
   
  [GetWin32ResBlob 메서드](getwin32resblob-method.md)  
   
@@ -63,7 +61,7 @@ ms.locfileid: "70787324"
   
  [ImportTypes 메서드](importtypes-method.md)  
   
- "Init 메서드"  
+ "Init Method"  
   
  [LinkResource 메서드](linkresource-method.md)  
   
@@ -75,7 +73,7 @@ ms.locfileid: "70787324"
   
  [SetNonAssemblyFlags 메서드](setnonassemblyflags-method.md)  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ALink API](index.md)
 - [IALink2 인터페이스](ialink2-interface.md)

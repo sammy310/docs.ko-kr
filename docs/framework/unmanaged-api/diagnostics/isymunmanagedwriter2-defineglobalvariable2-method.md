@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 04d569d6-a151-4957-9872-f3f694c3e4a9
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a54d3cb1bb9abf740c2c9b5a9a8312a9612ae658
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 12475b1ac8a1a81e565aa689eac2ae1a9b55e73a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894460"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74438280"
 ---
 # <a name="isymunmanagedwriter2defineglobalvariable2-method"></a>ISymUnmanagedWriter2::DefineGlobalVariable2 메서드
-단일 전역 변수를 정의합니다.  
+Defines a single global variable.  
   
 ## <a name="syntax"></a>구문  
   
@@ -42,33 +40,33 @@ HRESULT DefineGlobalVariable2(
   
 ## <a name="parameters"></a>매개 변수  
  `name`  
- 진행 전역 변수 이름입니다.  
+ [in] The global variable name.  
   
  `attributes`  
- 진행 전역 변수 특성입니다.  
+ [in] The global variable attributes.  
   
  `sigToken`  
- 진행 시그니처의 메타 데이터 토큰입니다.  
+ [in] The metadata token of the signature.  
   
  `addrKind`  
- 진행 주소 유형입니다.  
+ [in] The address type.  
   
  `addr1`  
- 진행 매개 변수 사양의 첫 번째 주소입니다.  
+ [in] The first address for the parameter specification.  
   
  `addr2`  
- 진행 매개 변수 사양의 두 번째 주소입니다.  
+ [in] The second address for the parameter specification.  
   
  `addr3`  
- 진행 매개 변수 사양의 세 번째 주소입니다.  
+ [in] The third address for the parameter specification.  
   
 ## <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 S_OK이 고, 그렇지 않으면입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>요구 사항  
- **헤더:** CorSym.idl  
+ **Header:** CorSym.idl  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ISymUnmanagedWriter2 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-interface.md)
 - [DefineGlobalVariable 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-defineglobalvariable-method.md)

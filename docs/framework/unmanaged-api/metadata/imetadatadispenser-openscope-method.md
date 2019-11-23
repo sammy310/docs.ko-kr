@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 65063ad5-e0d9-4c01-8f8b-9a5950109fa6
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6e157c758b472ea89e21c1ed1ba8c17693c20a3d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5ce1af82631531f8f7105fbf92ba78db3cca437b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777801"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74442321"
 ---
 # <a name="imetadatadispenseropenscope-method"></a>IMetaDataDispenser::OpenScope 메서드
-기존의 디스크에 파일을 열고 해당 메타 데이터를 메모리에 매핑합니다.  
+Opens an existing, on-disk file and maps its metadata into memory.  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,38 +38,38 @@ HRESULT OpenScope (
   
 ## <a name="parameters"></a>매개 변수  
  `szScope`  
- [in] 열려는 파일의 이름입니다. 파일에는 공용 언어 런타임 (CLR) 메타 데이터가 있어야 합니다.  
+ [in] The name of the file to be opened. The file must contain common language runtime (CLR) metadata.  
   
  `dwOpenFlags`  
- [in] 값을 [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) 열기 위한 모드 (읽기, 쓰기 및 등)를 지정 하는 열거형입니다.  
+ [in] A value of the [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) enumeration to specify the mode (read, write, and so on) for opening.  
   
  `riid`  
- [in] 반환 될 원하는 메타 데이터 인터페이스의 IID 호출자에 게 가져오기 (읽기) 또는 (쓰기) 메타 데이터 내보내기 인터페이스를 사용 합니다.  
+ [in] The IID of the desired metadata interface to be returned; the caller will use the interface to import (read) or emit (write) metadata.  
   
- 변수의 `riid` "가져오기" 또는 "내보내기" 인터페이스 중 하나를 지정 해야 합니다. 유효한 값은 IID_IMetaDataEmit, IID_IMetaDataImport, IID_IMetaDataAssemblyEmit, IID_IMetaDataAssemblyImport, IID_IMetaDataEmit2, 또는 IID_IMetaDataImport2입니다.  
+ The value of `riid` must specify one of the "import" or "emit" interfaces. Valid values are IID_IMetaDataEmit, IID_IMetaDataImport, IID_IMetaDataAssemblyEmit, IID_IMetaDataAssemblyImport, IID_IMetaDataEmit2, or IID_IMetaDataImport2.  
   
  `ppIUnk`  
- [out] 반환 되는 인터페이스에 대 한 포인터입니다.  
+ [out] The pointer to the returned interface.  
   
-## <a name="remarks"></a>설명  
- "가져오기" 인터페이스 중 하나에서 메서드를 사용 하거나 "내보내기" 인터페이스 중 하나에서 메서드를 사용 하 여 추가할 메타 데이터의 메모리 내 복사본을 쿼리할 수 있습니다.  
+## <a name="remarks"></a>주의  
+ The in-memory copy of the metadata can be queried using methods from one of the "import" interfaces, or added to using methods from the one of the "emit" interfaces.  
   
- CLR 메타 데이터를 대상 파일에 없으면는 `OpenScope` 메서드가 실패 합니다.  
+ If the target file does not contain CLR metadata, the `OpenScope` method will fail.  
   
- .NET Framework 버전 1.0 및 1.1 경우 범위는으로 열고 `dwOpenFlags` ofRead로 설정한 것이 공유에 적합 합니다. 즉, 후속 경우 호출 `OpenScope` 이전에 연 파일의 이름을 전달, 기존 범위를 다시 사용 되 고 새 데이터 구조 집합이 만들어지지 않습니다. 그러나 이러한 공유로 인해 문제가 발생할 수 있습니다.  
+ In the .NET Framework version 1.0 and version 1.1, if a scope is opened with `dwOpenFlags` set to ofRead, it is eligible for sharing. That is, if subsequent calls to `OpenScope` pass in the name of a file that was previously opened, the existing scope is reused and a new set of data structures is not created. However, problems can arise due to this sharing.  
   
- .NET framework 버전 2.0에서 범위 사용 하 여 연 `dwOpenFlags` ofRead로 더 이상 공유 됩니다. 범위를 공유할 수 있도록 ofReadOnly 값을 사용 합니다. 범위를 공유 하면 "읽기/쓰기" 메타 데이터 인터페이스를 사용 하는 쿼리가 실패 합니다.  
+ In the .NET Framework version 2.0, scopes opened with `dwOpenFlags` set to ofRead are no longer shared. Use the ofReadOnly value to allow the scope to be shared. When a scope is shared, queries that use "read/write" metadata interfaces will fail.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** Cor.h  
+ **Header:** Cor.h  
   
- **라이브러리:** MsCorEE.dll에서 리소스로 사용  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [IMetaDataDispenser 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)
 - [IMetaDataDispenserEx 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)

@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: ee518bda-3296-482e-a7b7-e9d51dd1a181
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e7e060d2f72609b470dbd5060746a1458f5eed9d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3ab24ab869e1f2cff9beafe50e6982ba2e7cf0aa
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782307"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436699"
 ---
 # <a name="imetadataimportgettypespecfromtoken-method"></a>IMetaDataImport::GetTypeSpecFromToken 메서드
 지정한 토큰이 나타내는 형식 사양의 이진 메타데이터 서명을 가져옵니다.  
@@ -39,27 +37,27 @@ HRESULT GetTypeSpecFromToken (
   
 ## <a name="parameters"></a>매개 변수  
  `typespec`  
- [in] 요청 된 메타 데이터 서명과 연결 된 TypeSpec 토큰입니다.  
+ [in] The TypeSpec token associated with the requested metadata signature.  
   
  `ppvSig`  
- [out] 이진 메타 데이터 서명에 대 한 포인터입니다.  
+ [out] A pointer to the binary metadata signature.  
   
  `pcbSig`  
- [out] 메타 데이터 서명의 바이트 크기입니다.  
+ [out] The size, in bytes, of the metadata signature.  
   
 ## <a name="return-value"></a>반환 값  
- 성공 또는 실패를 나타내는 HRESULT입니다. FAILED 매크로 사용 하 여 오류를 테스트할 수 있습니다.  
+ An HRESULT that indicates success or failure. Failures can be tested with the FAILED macro.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** Cor.h  
+ **Header:** Cor.h  
   
- **라이브러리:** MsCorEE.dll에 리소스로 포함  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [IMetaDataImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

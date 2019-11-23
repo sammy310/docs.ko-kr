@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 94667c1c-6d58-4aa7-b74e-530b11e2a276
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 83f8ae068552ba83a016b5484e3ac6641417fa99
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f5a736d80f36afb8d0a643d4a4e36c9abff01995
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781562"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445435"
 ---
 # <a name="imetadatatablesgetblob-method"></a>IMetaDataTables::GetBlob 메서드
-Binary large object (BLOB)를 지정 된 열 인덱스에 대 한 포인터를 가져옵니다.  
+Gets a pointer to the binary large object (BLOB) at the specified column index.  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,24 +37,24 @@ HRESULT GetBlob (
   
 ## <a name="parameters"></a>매개 변수  
  `ixBlob`  
- [in] 메모리 주소를 가져올 `ppData`합니다.  
+ [in] The memory address from which to get `ppData`.  
   
  `pcbData`  
- [out] 크기 (바이트)에 대 한 포인터의 `ppData`합니다.  
+ [out] A pointer to the size, in bytes, of `ppData`.  
   
  `ppData`  
- [out] 이진 데이터에 대 한 포인터에 대 한 포인터를 검색 합니다.  
+ [out] A pointer to a pointer to the binary data retrieved.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** Cor.h  
+ **Header:** Cor.h  
   
- **라이브러리:** MsCorEE.dll에서 리소스로 사용  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [IMetaDataTables 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
 - [IMetaDataTables2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

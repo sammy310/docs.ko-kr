@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0ea73055-ece0-4151-a094-414c88ef8941
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: fadc54d74ce6027bd021e148a14cb0c432eb41fe
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1d6d66ea62cbf679f722f830b3638455001aedd6
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782350"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437496"
 ---
 # <a name="imetadataimportgetmemberrefprops-method"></a>IMetaDataImport::GetMemberRefProps 메서드
 지정한 토큰이 참조하는 멤버와 연결된 메타데이터를 가져옵니다.  
@@ -43,36 +41,36 @@ HRESULT GetMemberRefProps (
   
 ## <a name="parameters"></a>매개 변수  
  `mr`  
- [in] 에 대 한 연결 된 메타 데이터를 반환할 MemberRef 토큰입니다.  
+ [in] The MemberRef token to return associated metadata for.  
   
  `ptk`  
- [out] 멤버 또는 멤버 또는 멤버를 나타내는 MethodDef 선언 하는 모듈 클래스를 나타내는 ModuleRef 토큰을 선언 하는 클래스를 나타내는 TypeDef 또는 TypeRef, TypeSpec 토큰입니다.  
+ [out] A TypeDef or TypeRef, or TypeSpec token that represents the class that declares the member, or a ModuleRef token that represents the module class that declares the member, or a MethodDef that represents the member.  
   
  `szMember`  
- [out] 멤버의 이름에 대 한 문자열 버퍼입니다.  
+ [out] A string buffer for the member's name.  
   
  `cchMember`  
- [in] 요청된 된 크기의 와이드 문자에서 `szMember`합니다.  
+ [in] The requested size in wide characters of `szMember`.  
   
  `pchMember`  
- [out] 반환 되는 크기의 와이드 문자에서 `szMember`합니다.  
+ [out] The returned size in wide characters of `szMember`.  
   
  `ppvSibBlob`  
- [out] 멤버에 대 한 이진 메타 데이터 서명에 대 한 포인터입니다.  
+ [out] A pointer to the binary metadata signature for the member.  
   
  `pbSig`  
- [out] 크기 (바이트) `ppvSigBlob`합니다.  
+ [out] The size in bytes of `ppvSigBlob`.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** Cor.h  
+ **Header:** Cor.h  
   
- **라이브러리:** MsCorEE.dll에 리소스로 포함  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [IMetaDataImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

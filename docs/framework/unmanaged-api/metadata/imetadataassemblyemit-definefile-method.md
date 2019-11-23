@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: c065aadf-c1ca-4981-bde6-597042cb29c4
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 54d5a233da2bf033d960fd02961ac89eb57151d2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0b7ca6f9878ed2fa2d90ea93e5101f0a66ec2d5e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776291"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440212"
 ---
 # <a name="imetadataassemblyemitdefinefile-method"></a>IMetaDataAssemblyEmit::DefineFile 메서드
 이 어셈블리가 참조하는 어셈블리에 대한 메타데이터를 포함하는 `File` 메타데이터 구조를 만들고 연결된 메타데이터 토큰을 반환합니다.  
@@ -41,32 +39,32 @@ HRESULT DefineFile (
   
 ## <a name="parameters"></a>매개 변수  
  `szName`  
- [in] 사용할 파일의 이름입니다.  
+ [in] The name of the file to be consumed.  
   
  `pbHashValue`  
- [in] 어셈블리와 연결 된 데이터 해시에 대 한 포인터입니다.  
+ [in] A pointer to the hash data associated with the assembly.  
   
  `cbHashValue`  
- [in] 크기 (바이트) `pbHashValue`합니다.  
+ [in] The size in bytes of `pbHashValue`.  
   
  `dwFileFlags`  
- [in] 비트 조합 `FileFlags` 속성 설정을 지정 하는 값입니다.  
+ [in] A bitwise combination of `FileFlags` values that specify property settings.  
   
  `pmdf`  
- [out] 반환 된 포인터 `File` 토큰입니다.  
+ [out] A pointer to the returned `File` token.  
   
-## <a name="remarks"></a>설명  
- 하나의 `File` 이 어셈블리는 메타 데이터가 포함 된 파일 제외 하 고 작성 된 당시에이 어셈블리의 일부인 각 파일에 대 한 메타 데이터 구조를 정의 해야 합니다.  
+## <a name="remarks"></a>주의  
+ One `File` metadata structure must be defined for each file that was part of this assembly at the time that this assembly was built, excluding the file that contains the metadata.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **헤더:** Cor.h  
+ **Header:** Cor.h  
   
- **라이브러리:** MsCorEE.dll에서 리소스로 사용  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [IMetaDataAssemblyEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

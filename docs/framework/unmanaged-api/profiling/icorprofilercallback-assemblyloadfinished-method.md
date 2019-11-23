@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 86d98f39-52e6-4c61-a625-9760f695ff12
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 174e71fca8c59dbd4842d0fc0b84bb9a3d7b10df
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 33b72c8d089e5b335069fe465987086dfa1243bc
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763037"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445178"
 ---
 # <a name="icorprofilercallbackassemblyloadfinished-method"></a>ICorProfilerCallback::AssemblyLoadFinished 메서드
-어셈블리 로드 되었음을 프로파일러에 알립니다.  
+Notifies the profiler that an assembly has finished loading.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,18 +35,18 @@ HRESULT AssemblyLoadFinished(
   
 ## <a name="parameters"></a>매개 변수  
  `assemblyId`  
- [in] 로드 된 어셈블리를 식별 합니다.  
+ [in] Identifies the assembly that was loaded.  
   
  `hrStatus`  
- [in] 어셈블리 로딩을 성공적으로 완료 여부를 나타내는 HRESULT입니다.  
+ [in] An HRESULT that indicates whether the assembly finished loading successfully.  
   
-## <a name="remarks"></a>설명  
- 값 `assemblyId` 될 때까지 정보 요청에 적합 하지 않습니다는 `AssemblyLoadFinished` 메서드가 호출 됩니다.  
+## <a name="remarks"></a>주의  
+ The value of `assemblyId` is not valid for an information request until the `AssemblyLoadFinished` method is called.  
   
- 일부 어셈블리를 로드 한 후 계속 사용할 수는 `AssemblyLoadFinished` 콜백 합니다. 오류 HRESULT에서 `hrStatus` 오류가 발생 했음을 나타냅니다. 그러나 성공 HRESULT에서 `hrStatus` 어셈블리 로드에 대 한 첫 번째 부분 성공 했다는 것만 나타냅니다.  
+ Some parts of loading the assembly might continue after the `AssemblyLoadFinished` callback. A failure HRESULT in `hrStatus` indicates a failure. However, a success HRESULT in `hrStatus` indicates only that the first part of loading the assembly has succeeded.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
   
@@ -56,6 +54,6 @@ HRESULT AssemblyLoadFinished(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ICorProfilerCallback 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

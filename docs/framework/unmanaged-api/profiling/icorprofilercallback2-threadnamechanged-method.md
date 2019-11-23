@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c8bbd76d-a9ff-44f2-87a6-be052819da36
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6ffe25cae7122e65bed6aece7b0f6b2abe82c1eb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1149298b4c5e521b37aae6ec48d463f395f18ae3
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779287"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74439562"
 ---
 # <a name="icorprofilercallback2threadnamechanged-method"></a>ICorProfilerCallback2::ThreadNameChanged 메서드
-스레드의 이름 변경 된 코드 프로파일러에 알립니다.  
+Notifies the code profiler that the name of a thread has changed.  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,16 +36,16 @@ HRESULT ThreadNameChanged(
   
 ## <a name="parameters"></a>매개 변수  
  `threadId`  
- [in] 스레드 ID입니다.  
+ [in] The ID of the thread.  
   
  `cchName`  
- [in] 스레드의 새 이름의 길이입니다.  
+ [in] The length of the new name of the thread.  
   
  `name`  
- [in] 스레드의 새 이름입니다. 이름은 null로 종결 되지 합니다.  
+ [in] The new name of the thread. The name is not null-terminated.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
   
@@ -55,7 +53,7 @@ HRESULT ThreadNameChanged(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ICorProfilerCallback 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
 - [ICorProfilerCallback2 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)

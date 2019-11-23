@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 694c0fa0-7011-41a9-9dfd-f0e16ea574b5
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9fb1dff80fccc920540d370797441b3a019d766c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5f83cb96e39b257a1d35786130cd5ed31d071de7
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780919"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74443875"
 ---
 # <a name="corattributetargets-enumeration"></a>CorAttributeTargets 열거형
 특성을 적용하는 데 유효한 애플리케이션 요소를 지정합니다.  
@@ -64,35 +62,35 @@ typedef enum CorAttributeTargets
   
 |멤버|설명|  
 |------------|-----------------|  
-|`catAssembly`|어셈블리에 특성을 적용할 수 있습니다.|  
-|`catModule`|이식 가능한 실행 파일 (.dll 또는.exe) 모듈에 특성을 적용할 수 있습니다.|  
-|`catClass`|특성은 클래스에 적용할 수 있습니다.|  
-|`catStruct`|특성은 구조에 적용할 수 있습니다. 즉, 값을 입력 합니다.|  
-|`catEnum`|특성을 열거형에 적용할 수 있습니다.|  
-|`catConstructor`|특성은 생성자에 적용할 수 있습니다.|  
-|`catMethod`|메서드에 특성을 적용할 수 있습니다.|  
-|`catProperty`|특성 속성에 적용할 수 있습니다.|  
-|`catField`|특성 필드에 적용할 수 있습니다.|  
-|`catEvent`|이벤트에 특성을 적용할 수 있습니다.|  
-|`catInterface`|특성을 인터페이스에 적용할 수 있습니다.|  
-|`catParameter`|특성 매개 변수에 적용할 수 있습니다.|  
-|`catDelegate`|대리자에 특성을 적용할 수 있습니다.|  
-|`catGenericParameter`|제네릭 매개 변수 특성을 적용할 수 있습니다.|  
+|`catAssembly`|Attribute can be applied to an assembly.|  
+|`catModule`|Attribute can be applied to a portable executable (.dll or .exe) module.|  
+|`catClass`|Attribute can be applied to a class.|  
+|`catStruct`|Attribute can be applied to a structure; that is, a value type.|  
+|`catEnum`|Attribute can be applied to an enumeration.|  
+|`catConstructor`|Attribute can be applied to a constructor.|  
+|`catMethod`|Attribute can be applied to a method.|  
+|`catProperty`|Attribute can be applied to a property.|  
+|`catField`|Attribute can be applied to a field.|  
+|`catEvent`|Attribute can be applied to an event.|  
+|`catInterface`|Attribute can be applied to an interface.|  
+|`catParameter`|Attribute can be applied to a parameter.|  
+|`catDelegate`|Attribute can be applied to a delegate.|  
+|`catGenericParameter`|Attribute can be applied to a generic parameter.|  
 |`catAll`|특성은 모든 애플리케이션 요소에 적용할 수 있습니다.|  
-|`catClassMembers`|특성은 클래스의 멤버에 적용할 수 있습니다.|  
+|`catClassMembers`|Attribute can be applied to a member of a class.|  
   
-## <a name="remarks"></a>설명  
- `CorAttributeTargets` 열거형 값은 기본 결합을 가져오도록 비트 OR 연산을 함께 사용할 수 있습니다.  
+## <a name="remarks"></a>주의  
+ The `CorAttributeTargets` enumeration values can be combined with a bitwise OR operation to get the preferred combination.  
   
- 합니다 `CorAttributeTargets` 관리 되는 <xref:System.AttributeTargets?displayProperty=nameWithType> 열거형입니다.  
+ The `CorAttributeTargets` parallels the managed <xref:System.AttributeTargets?displayProperty=nameWithType> enumeration.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** CorHdr.h  
+ **Header:** CorHdr.h  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [메타데이터 열거형](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: dae07d9b-df51-488c-b17e-52d6e48217bd
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d71d2a5b3007d4e877900443af426a9643b29125
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 93dd8c56176890d04d792f3c336492e4f232825b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62045229"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74442475"
 ---
 # <a name="corthreadsafetyoptions-enumeration"></a>CorThreadSafetyOptions 열거형
 
@@ -41,18 +39,18 @@ typedef enum CorThreadSafetyOptions {
 
 |멤버|설명|
 |------------|-----------------|
-|`MDThreadSafetyDefault`|기본 값입니다. `MDThreadSafetyOff`와 동일합니다.|
-|`MDThreadSafetyOff`|판독기/기록기 잠금을 설정할 수 없습니다 나타냅니다.|
-|`MDThreadSafetyOn`|판독기/기록기 잠금을 설정할 수 있도록 나타냅니다.|
+|`MDThreadSafetyDefault`|Default value. `MDThreadSafetyOff`와 동일합니다.|
+|`MDThreadSafetyOff`|Indicates that a reader/writer lock cannot be set.|
+|`MDThreadSafetyOn`|Indicates that a reader/writer lock can be set.|
 
 ## <a name="requirements"></a>요구 사항
 
-**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.
+**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.
 
-**헤더:** CorHdr.h
+**Header:** CorHdr.h
 
 **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [메타데이터 열거형](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
