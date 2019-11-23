@@ -1,5 +1,5 @@
 ---
-title: Select 절(Visual Basic)
+title: Select 절
 ms.date: 07/20/2015
 f1_keywords:
 - vb.QuerySelect
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - Select clause [Visual Basic]
 - queries [Visual Basic], Select
 ms.assetid: 27a3f61c-5960-4692-9b91-4d0c4b6178fe
-ms.openlocfilehash: 087472c51d203be083fea0d39ade6f12066cfcb4
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
-ms.translationtype: HT
+ms.openlocfilehash: 5ebb813229d5d517b369036c69b2d23c8ee1c9f5
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72004742"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350403"
 ---
-# <a name="select-clause-visual-basic"></a>Select 절(Visual Basic)
-쿼리 결과를 정의 합니다.  
+# <a name="select-clause-visual-basic"></a>Select Clause (Visual Basic)
+Defines the result of a query.  
   
 ## <a name="syntax"></a>구문  
   
@@ -26,32 +26,32 @@ Select [ var1 = ] fieldName1 [, [ var2 = ] fieldName2 [...] ]
   
 ## <a name="parts"></a>요소  
  `var1`  
- (선택 사항) 열 식의 결과를 참조 하는 데 사용할 수 있는 별칭입니다.  
+ (선택 사항) An alias that can be used to reference the results of the column expression.  
   
  `fieldName1`  
- 필수 쿼리 결과에 반환할 필드의 이름입니다.  
+ 필수 요소. The name of the field to return in the query result.  
   
 ## <a name="remarks"></a>주의  
- `Select` 절을 사용 하 여 쿼리에서 반환할 결과를 정의할 수 있습니다. 이렇게 하면 쿼리로 생성 된 새 익명 형식의 멤버를 정의 하거나 쿼리에서 반환 되는 명명 된 형식의 멤버를 대상으로 지정할 수 있습니다. 쿼리에는 `Select` 절이 필요 하지 않습니다. `Select` 절을 지정 하지 않으면 쿼리는 현재 범위에 대해 식별 된 범위 변수의 모든 멤버를 기반으로 하는 형식을 반환 합니다. 자세한 내용은 [무명 형식](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)을 참조하세요. 쿼리가 명명 된 형식을 만들 때 <xref:System.Collections.Generic.IEnumerable%601> 형식의 결과를 반환 합니다. 여기서 `T`는 생성 된 형식입니다.  
+ You can use the `Select` clause to define the results to return from a query. This enables you to either define the members of a new anonymous type that is created by a query, or to target the members of a named type that is returned by a query. The `Select` clause is not required for a query. If no `Select` clause is specified, the query will return a type based on all members of the range variables identified for the current scope. 자세한 내용은 [무명 형식](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)을 참조하세요. When a query creates a named type, it will return a result of type <xref:System.Collections.Generic.IEnumerable%601> where `T` is the created type.  
   
- `Select` 절은 현재 범위에 있는 모든 변수를 참조할 수 있습니다. 여기에는 `From` 절에서 식별 된 범위 변수 또는 `From` 절이 포함 됩니다. 또한 `Aggregate`, `Let`, `Group By`또는 `Group Join` 절에 의해 별칭이 생성 된 새 변수 또는 쿼리 식에 있는 이전 `Select` 절의 변수를 포함 합니다. `Select` 절에는 정적 값이 포함 될 수도 있습니다. 예를 들어 다음 코드 예제에서는 `Select` 절이 쿼리 결과를 `ProductName`, `Price`, `Discount`및 `DiscountedPrice`의 네 가지 멤버로 정의 된 새 무명 형식으로 정의 하는 쿼리 식을 보여 줍니다. `ProductName` 및 `Price` 멤버 값은 `From` 절에 정의 된 product range 변수에서 가져옵니다. `DiscountedPrice` 멤버 값은 `Let` 절에서 계산 됩니다. `Discount` 멤버가 정적 값입니다.  
+ The `Select` clause can reference any variables in the current scope. This includes range variables identified in the `From` clause (or `From` clauses). It also includes any new variables created with an alias by the `Aggregate`, `Let`, `Group By`, or `Group Join` clauses, or variables from a previous `Select` clause in the query expression. The `Select` clause can also include static values. For example, the following code example shows a query expression in which the `Select` clause defines the query result as a new anonymous type with four members: `ProductName`, `Price`, `Discount`, and `DiscountedPrice`. The `ProductName` and `Price` member values are taken from the product range variable that is defined in the `From` clause. The `DiscountedPrice` member value is calculated in the `Let` clause. The `Discount` member is a static value.  
   
  [!code-vb[VbSimpleQuerySamples#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#27)]  
   
- `Select` 절은 후속 쿼리 절에 대해 새로운 범위 변수 집합을 도입 하 고 이전 범위 변수는 더 이상 범위에 있지 않습니다. 쿼리 식의 마지막 `Select` 절은 쿼리의 반환 값을 결정 합니다. 예를 들어 다음 쿼리는 합계가 500를 초과 하는 모든 고객 주문에 대 한 회사 이름 및 주문 ID를 반환 합니다. 첫 번째 `Select` 절은 `Where` 절과 두 번째 `Select` 절의 범위 변수를 식별 합니다. 두 번째 `Select` 절은 쿼리에서 반환 되는 값을 새 익명 형식으로 식별 합니다.  
+ The `Select` clause introduces a new set of range variables for subsequent query clauses, and previous range variables are no longer in scope. The last `Select` clause in a query expression determines the return value of the query. For example, the following query returns the company name and order ID for every customer order for which the total exceeds 500. The first `Select` clause identifies the range variables for the `Where` clause and the second `Select` clause. The second `Select` clause identifies the values returned by the query as a new anonymous type.  
   
  [!code-vb[VbSimpleQuerySamples#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#28)]  
   
- `Select` 절이 반환할 단일 항목을 식별 하는 경우 쿼리 식은 해당 단일 항목 형식의 컬렉션을 반환 합니다. `Select` 절에서 반환할 여러 항목을 식별 하는 경우 쿼리 식은 선택한 항목을 기반으로 새 익명 형식의 컬렉션을 반환 합니다. 예를 들어 다음 두 쿼리는 `Select` 절을 기반으로 하는 두 가지 형식의 컬렉션을 반환 합니다. 첫 번째 쿼리는 회사 이름 컬렉션을 문자열로 반환 합니다. 두 번째 쿼리는 회사 이름 및 주소 정보를 사용 하 여 채워진 `Customer` 개체의 컬렉션을 반환 합니다.  
+ If the `Select` clause identifies a single item to return, the query expression returns a collection of the type of that single item. If the `Select` clause identifies multiple items to return, the query expression returns a collection of a new anonymous type, based on the selected items. For example, the following two queries return collections of two different types based on the `Select` clause. The first query returns a collection of company names as strings. The second query returns a collection of `Customer` objects populated with the company names and address information.  
   
  [!code-vb[VbSimpleQuerySamples#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#29)]  
   
 ## <a name="example"></a>예제  
- 다음 쿼리 식은 `From` 절을 사용 하 여 `customers` 컬렉션에 대해 `cust` 범위 변수를 선언 합니다. `Select` 절은 고객 이름 및 ID 값을 선택 하 고 새 범위 변수의 `CompanyName` 및 `CustomerID` 열을 채웁니다. `For Each` 문은 반환 된 각 개체를 반복 하 고 각 레코드의 `CompanyName` 및 `CustomerID` 열을 표시 합니다.  
+ The following query expression uses a `From` clause to declare a range variable `cust` for the `customers` collection. The `Select` clause selects the customer name and ID value and populates the `CompanyName` and `CustomerID` columns of the new range variable. The `For Each` statement loops over each returned object and displays the `CompanyName` and `CustomerID` columns for each record.  
   
  [!code-vb[VbSimpleQuerySamples#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#30)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Visual Basic의 LINQ 소개](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [쿼리](../../../visual-basic/language-reference/queries/index.md)

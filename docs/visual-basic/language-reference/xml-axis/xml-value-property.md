@@ -1,5 +1,5 @@
 ---
-title: XML Value 속성(Visual Basic)
+title: XML 값 속성
 ms.date: 07/20/2015
 f1_keywords:
 - vb.XmlPropertyExtensionValue
@@ -9,16 +9,16 @@ helpviewer_keywords:
 - XML axis [Visual Basic], Value
 - XML Value property [Visual Basic]
 ms.assetid: 7ddd057a-a195-4e9b-ad8b-2ee0e615a20f
-ms.openlocfilehash: 46f81e39686da30270cd67edeb4c9f2d43e048b3
-ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
-ms.translationtype: HT
+ms.openlocfilehash: 571d9130ef69df580bbba5d90bc8758b4b627196
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/28/2019
-ms.locfileid: "71592010"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349414"
 ---
 # <a name="xml-value-property-visual-basic"></a>XML Value 속성(Visual Basic)
 
-<xref:System.Xml.Linq.XElement> 개체 컬렉션의 첫 번째 요소 값에 대 한 액세스를 제공 합니다.
+Provides access to the value of the first element of a collection of <xref:System.Xml.Linq.XElement> objects.
 
 ## <a name="syntax"></a>구문
 
@@ -30,30 +30,30 @@ object.Value
 
 |용어|정의|  
 |---|---|  
-|`object`|필수 <xref:System.Xml.Linq.XElement> 개체의 컬렉션입니다.|  
+|`object`|필수 요소. <xref:System.Xml.Linq.XElement> 개체의 컬렉션입니다.|  
 
 ## <a name="return-value"></a>반환 값
 
- 컬렉션의 첫 번째 요소 값을 포함 하는 `String` 이거나, 컬렉션이 비어 있는 경우 `Nothing`입니다.
+ A `String` that contains the value of the first element of the collection, or `Nothing` if the collection is empty.
 
 ## <a name="remarks"></a>주의
 
- <xref:System.Xml.Linq.XElement.Value%2A> 속성을 사용 하면 <xref:System.Xml.Linq.XElement> 개체 컬렉션의 첫 번째 요소 값에 쉽게 액세스할 수 있습니다. 이 속성은 먼저 컬렉션에 하나 이상의 개체가 포함 되어 있는지 여부를 확인 합니다. 컬렉션이 비어 있는 경우이 속성은 `Nothing`반환 합니다. 그렇지 않으면이 속성은 컬렉션에 있는 첫 번째 요소의 <xref:System.Xml.Linq.XElement.Value%2A> 속성 값을 반환 합니다.
+ The <xref:System.Xml.Linq.XElement.Value%2A> property makes it easy to access the value of the first element in a collection of <xref:System.Xml.Linq.XElement> objects. This property first checks whether the collection contains at least one object. If the collection is empty, this property returns `Nothing`. Otherwise, this property returns the value of the <xref:System.Xml.Linq.XElement.Value%2A> property of the first element in the collection.
 
 > [!NOTE]
-> '\@' 식별자를 사용 하 여 XML 특성의 값에 액세스 하는 경우 특성 값이 `String` 반환 되며 <xref:System.Xml.Linq.XAttribute.Value%2A> 속성을 명시적으로 지정할 필요가 없습니다.
+> When you access the value of an XML attribute using the '\@' identifier, the attribute value is returned as a `String` and you do not need to explicitly specify the <xref:System.Xml.Linq.XAttribute.Value%2A> property.
 
- 컬렉션의 다른 요소에 액세스 하려면 XML 확장 인덱서 속성을 사용 하면 됩니다. 자세한 내용은 [확장 인덱서 속성](extension-indexer-property.md)을 참조 하세요.
+ To access other elements in a collection, you can use the XML extension indexer property. For more information, see [Extension Indexer Property](extension-indexer-property.md).
 
 ## <a name="inheritance"></a>상속
 
- 대부분의 사용자는 <xref:System.Collections.Generic.IEnumerable%601>를 구현할 필요가 없으므로이 섹션을 무시할 수 있습니다.
+ Most users will not have to implement <xref:System.Collections.Generic.IEnumerable%601>, and can therefore ignore this section.
 
- <xref:System.Xml.Linq.XElement.Value%2A> 속성은 `IEnumerable(Of XElement)`을 구현 하는 형식에 대 한 확장 속성입니다. 이 확장 속성의 바인딩은 확장 메서드의 바인딩과 유사 합니다. 형식이 인터페이스 중 하나를 구현 하 고 이름이 "Value" 인 속성을 정의 하는 경우 해당 속성은 확장 속성 보다 우선 합니다. 즉, `IEnumerable(Of XElement)`를 구현 하는 클래스에서 새 속성을 정의 하 여이 <xref:System.Xml.Linq.XElement.Value%2A> 속성을 재정의할 수 있습니다.
+ The <xref:System.Xml.Linq.XElement.Value%2A> property is an extension property for types that implement `IEnumerable(Of XElement)`. The binding of this extension property is like the binding of extension methods: if a type implements one of the interfaces and defines a property that has the name "Value", that property has precedence over the extension property. In other words, this <xref:System.Xml.Linq.XElement.Value%2A> property can be overridden by defining a new property in a class that implements `IEnumerable(Of XElement)`.
 
 ## <a name="example"></a>예제
 
- 다음 예제에서는 <xref:System.Xml.Linq.XElement.Value%2A> 속성을 사용 하 여 <xref:System.Xml.Linq.XElement> 개체 컬렉션의 첫 번째 노드에 액세스 하는 방법을 보여 줍니다. 이 예제에서는 자식 축 속성을 사용 하 여 `contact` 개체에 있는 `phone` 이라는 모든 자식 노드의 컬렉션을 가져옵니다.
+ The following example shows how to use the <xref:System.Xml.Linq.XElement.Value%2A> property to access the first node in a collection of <xref:System.Xml.Linq.XElement> objects. The example uses the child axis property to get the collection of all child nodes named `phone` that are in the `contact` object.
 
  [!code-vb[VbXMLSamples#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples7.vb#15)]
 
@@ -63,7 +63,7 @@ object.Value
 
 ## <a name="example"></a>예제
 
- 다음 예제에서는 <xref:System.Xml.Linq.XAttribute> 개체의 컬렉션에서 XML 특성의 값을 가져오는 방법을 보여 줍니다. 이 예에서는 특성 축 속성을 사용 하 여 모든 `phone` 요소에 대 한 `type` 특성의 값을 표시 합니다.
+ The following example shows how to get the value of an XML attribute from a collection of <xref:System.Xml.Linq.XAttribute> objects. The example uses the attribute axis property to display the value of the `type` attribute for all of the `phone` elements.
 
  [!code-vb[VbXMLSamples#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples7.vb#16)]
 
@@ -74,7 +74,7 @@ object.Value
  work
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Xml.Linq.XElement>
 - <xref:System.Collections.Generic.IEnumerable%601>

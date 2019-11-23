@@ -1,5 +1,5 @@
 ---
-title: Aggregate 절(Visual Basic)
+title: Aggregate Clause
 ms.date: 08/28/2018
 f1_keywords:
 - vb.QueryAggregateIn
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Aggregate statement [Visual Basic]
 - queries [Visual Basic], Aggregate
 ms.assetid: 1315a814-5db6-4077-b34b-b141e11cc0eb
-ms.openlocfilehash: 50a53cd45cc428541c90fbf82089518be2212fae
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
-ms.translationtype: HT
+ms.openlocfilehash: 5aa4b9afea4b6b26b853d4f4f6d4c8db08554e19
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72004812"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350881"
 ---
-# <a name="aggregate-clause-visual-basic"></a>Aggregate 절(Visual Basic)
-하나 이상의 집계 함수를 컬렉션에 적용 합니다.  
+# <a name="aggregate-clause-visual-basic"></a>Aggregate Clause (Visual Basic)
+Applies one or more aggregate functions to a collection.  
   
 ## <a name="syntax"></a>구문  
   
@@ -33,92 +33,92 @@ Aggregate element [As type] In collection _
   
 |용어|정의|  
 |---|---|  
-|`element`|필수 컬렉션의 요소를 반복 하는 데 사용 되는 변수입니다.|  
-|`type`|(선택 사항) `element`의 형식입니다. 형식을 지정 하지 않으면 `collection`에서 `element` 형식이 유추 됩니다.|  
-|`collection`|필수 작업할 컬렉션을 참조 합니다.|  
-|`clause`|(선택 사항) 집계 절 또는 절을에 적용 하는 쿼리 결과를 구체화 하는 `Where` 절과 같은 하나 이상의 쿼리 절입니다.|  
-|`expressionList`|필수 컬렉션에 적용할 집계 함수를 식별 하는 쉼표로 구분 된 하나 이상의 식입니다. 집계 함수에 별칭을 적용 하 여 쿼리 결과의 멤버 이름을 지정할 수 있습니다. 별칭을 제공 하지 않으면 집계 함수의 이름이 사용 됩니다. 예제는이 항목의 뒷부분에 나오는 집계 함수에 대 한 섹션을 참조 하세요.|  
+|`element`|필수 요소. Variable used to iterate through the elements of the collection.|  
+|`type`|(선택 사항) `element`의 형식입니다. If no type is specified, the type of `element` is inferred from `collection`.|  
+|`collection`|필수 요소. Refers to the collection to operate on.|  
+|`clause`|(선택 사항) One or more query clauses, such as a `Where` clause, to refine the query result to apply the aggregate clause or clauses to.|  
+|`expressionList`|필수 요소. One or more comma-delimited expressions that identify an aggregate function to apply to the collection. You can apply an alias to an aggregate function to specify a member name for the query result. If no alias is supplied, the name of the aggregate function is used. For examples, see the section about aggregate functions later in this topic.|  
   
 ## <a name="remarks"></a>주의  
- `Aggregate` 절은 쿼리에 집계 함수를 포함 하는 데 사용할 수 있습니다. 집계 함수는 값 집합에 대 한 검사 및 계산을 수행 하 고 단일 값을 반환 합니다. 쿼리 결과 형식의 멤버를 사용 하 여 계산 된 값에 액세스할 수 있습니다. 사용할 수 있는 표준 집계 함수는 `All`, `Any`, `Average`, `Count`, `LongCount`, `Max`, `Min`및 `Sum` 함수입니다. 이러한 함수는 SQL의 집계에 대해 잘 알고 있는 개발자에 게 친숙 합니다. 이러한 내용은이 항목의 다음 섹션에 설명 되어 있습니다.  
+ The `Aggregate` clause can be used to include aggregate functions in your queries. Aggregate functions perform checks and computations over a set of values and return a single value. You can access the computed value by using a member of the query result type. The standard aggregate functions that you can use are the `All`, `Any`, `Average`, `Count`, `LongCount`, `Max`, `Min`, and `Sum` functions. These functions are familiar to developers who are familiar with aggregates in SQL. They are described in the following section of this topic.  
   
- 집계 함수의 결과는 쿼리 결과 형식의 필드로 쿼리 결과에 포함 됩니다. 집계 함수 결과에 대 한 별칭을 제공 하 여 집계 값을 포함 하는 쿼리 결과 형식의 멤버 이름을 지정할 수 있습니다. 별칭을 제공 하지 않으면 집계 함수의 이름이 사용 됩니다.  
+ The result of an aggregate function is included in the query result as a field of the query result type. You can supply an alias for the aggregate function result to specify the name of the member of the query result type that will hold the aggregate value. If no alias is supplied, the name of the aggregate function is used.  
   
- `Aggregate` 절은 쿼리를 시작 하거나 쿼리에 추가 절로 포함 될 수 있습니다. `Aggregate` 절이 쿼리를 시작 하는 경우 결과는 `Into` 절에 지정 된 집계 함수의 결과인 단일 값입니다. `Into` 절에 둘 이상의 집계 함수가 지정 된 경우 쿼리는 개별 속성이 있는 단일 형식을 반환 하 여 `Into` 절에서 각 집계 함수의 결과를 참조 합니다. `Aggregate` 절이 쿼리에 추가 절로 포함 된 경우 쿼리 컬렉션에서 반환 되는 형식에는 `Into` 절의 각 집계 함수에 대 한 결과를 참조 하는 별도의 속성이 포함 됩니다.  
+ The `Aggregate` clause can begin a query, or it can be included as an additional clause in a query. If the `Aggregate` clause begins a query, the result is a single value that is the result of the aggregate function specified in the `Into` clause. If more than one aggregate function is specified in the `Into` clause, the query returns a single type with a separate property to reference the result of each aggregate function in the `Into` clause. If the `Aggregate` clause is included as an additional clause in a query, the type returned in the query collection will have a separate property to reference the result of each aggregate function in the `Into` clause.  
   
 ## <a name="aggregate-functions"></a>집계 함수
 
-다음은 `Aggregate` 절에서 사용할 수 있는 표준 집계 함수입니다.  
+The following are the standard aggregate functions that can be used with the `Aggregate` clause.  
   
 ### <a name="all"></a>모두
 
-컬렉션의 모든 요소가 지정 된 조건을 만족 하는 경우 `true`를 반환 합니다. 그렇지 않으면 `false`을 반환 합니다. 예를 들면 다음과 같습니다.
+Returns `true` if all elements in the collection satisfy a specified condition; otherwise returns `false`. 예를 들면 다음과 같습니다.
 
  [!code-vb[VbSimpleQuerySamples#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#5)]
 
-### <a name="any"></a>Any
+### <a name="any"></a>임의의 값
 
-컬렉션의 요소가 지정 된 조건을 만족 하는 경우 `true`를 반환 합니다. 그렇지 않으면 `false`을 반환 합니다. 예를 들면 다음과 같습니다.
+Returns `true` if any element in the collection satisfies a specified condition; otherwise returns `false`. 예를 들면 다음과 같습니다.
 
  [!code-vb[VbSimpleQuerySamples#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#6)]
 
 ### <a name="average"></a>평균
 
-컬렉션의 모든 요소에 대 한 평균을 계산 하거나 컬렉션의 모든 요소에 대해 제공 된 식을 계산 합니다. 예를 들면 다음과 같습니다.
+Computes the average of all elements in the collection, or computes a supplied expression for all elements in the collection. 예를 들면 다음과 같습니다.
 
  [!code-vb[VbSimpleQuerySamples#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#7)]
 
 ### <a name="count"></a>개수
 
-컬렉션의 요소 수를 셉니다. 컬렉션에서 조건에 맞는 요소 수만 계산 하는 선택적 `Boolean` 식을 제공할 수 있습니다. 예를 들면 다음과 같습니다.
+Counts the number of elements in the collection. You can supply an optional `Boolean` expression to count only the number of elements in the collection that satisfy a condition. 예를 들면 다음과 같습니다.
 
  [!code-vb[VbSimpleQuerySamples#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#8)]
 
-### <a name="group"></a>그룹
+### <a name="group"></a>그룹화
 
-`Group By` 또는 `Group Join` 절의 결과로 그룹화 되는 쿼리 결과를 나타냅니다. `Group` 함수는 `Group By` 또는 `Group Join` 절의 `Into` 절 에서만 사용할 수 있습니다. 자세한 내용 및 예제는 [Group By 절](../../../visual-basic/language-reference/queries/group-by-clause.md) 및 [group Join 절](../../../visual-basic/language-reference/queries/group-join-clause.md)을 참조 하세요.
+Refers to query results that are grouped as a result of a `Group By` or `Group Join` clause. The `Group` function is valid only in the `Into` clause of a `Group By` or `Group Join` clause. For more information and examples, see [Group By Clause](../../../visual-basic/language-reference/queries/group-by-clause.md) and [Group Join Clause](../../../visual-basic/language-reference/queries/group-join-clause.md).
 
 ### <a name="longcount"></a>LongCount
 
-컬렉션의 요소 수를 셉니다. 컬렉션에서 조건에 맞는 요소 수만 계산 하는 선택적 `Boolean` 식을 제공할 수 있습니다. 결과를 `Long`반환 합니다. 예는 `Count` 집계 함수를 참조 하세요.
+Counts the number of elements in the collection. You can supply an optional `Boolean` expression to count only the number of elements in the collection that satisfy a condition. Returns the result as a `Long`. For an example, see the `Count` aggregate function.
 
 ### <a name="max"></a>최대
 
-컬렉션에서 최 댓 값을 계산 하거나 컬렉션의 모든 요소에 대해 제공 된 식을 계산 합니다. 예를 들면 다음과 같습니다.
+Computes the maximum value from the collection, or computes a supplied expression for all elements in the collection. 예를 들면 다음과 같습니다.
 
  [!code-vb[VbSimpleQuerySamples#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#9)]
 
 ### <a name="min"></a>최소
 
-컬렉션의 최소값을 계산 하거나 컬렉션의 모든 요소에 대해 제공 된 식을 계산 합니다. 예를 들면 다음과 같습니다.
+Computes the minimum value from the collection, or computes a supplied expression for all elements in the collection. 예를 들면 다음과 같습니다.
 
  [!code-vb[VbSimpleQuerySamples#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#10)]
 
 ### <a name="sum"></a>Sum
 
-컬렉션에 있는 모든 요소의 합계를 계산 하거나 컬렉션의 모든 요소에 대해 제공 된 식을 계산 합니다. 예를 들면 다음과 같습니다.
+Computes the sum of all elements in the collection, or computes a supplied expression for all elements in the collection. 예를 들면 다음과 같습니다.
 
  [!code-vb[VbSimpleQuerySamples#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#15)]
 
 ## <a name="example"></a>예제  
 
-다음 예에서는 `Aggregate` 절을 사용 하 여 쿼리 결과에 집계 함수를 적용 하는 방법을 보여 줍니다.  
+The following example shows how to use the `Aggregate` clause to apply aggregate functions to a query result.  
   
  [!code-vb[VbSimpleQuerySamples#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#4)]  
   
-## <a name="creating-user-defined-aggregate-functions"></a>사용자 정의 집계 함수 만들기
+## <a name="creating-user-defined-aggregate-functions"></a>Creating User-Defined Aggregate Functions
 
- <xref:System.Collections.Generic.IEnumerable%601> 형식에 확장 메서드를 추가 하 여 쿼리 식에 사용자 지정 집계 함수를 포함할 수 있습니다. 그런 다음 사용자 지정 메서드는 집계 함수를 참조 하는 열거 가능한 컬렉션에 대해 계산 또는 연산을 수행할 수 있습니다. 확장 메서드에 대한 자세한 내용은 [확장 메서드](../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)를 참조하세요.  
+ You can include your own custom aggregate functions in a query expression by adding extension methods to the <xref:System.Collections.Generic.IEnumerable%601> type. Your custom method can then perform a calculation or operation on the enumerable collection that has referenced your aggregate function. 확장 메서드에 대한 자세한 내용은 [확장 메서드](../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)를 참조하세요.  
   
- 예를 들어 다음 예제에서는 숫자 컬렉션의 중앙값을 계산 하는 사용자 지정 집계 함수를 보여 줍니다. `Median` 확장 메서드에는 두 개의 오버 로드가 있습니다. 첫 번째 오버 로드는 `IEnumerable(Of Double)`형식의 컬렉션을 입력으로 받아들입니다. `Double`형식의 쿼리 필드에 대해 `Median` 집계 함수를 호출 하면이 메서드가 호출 됩니다. `Median` 메서드의 두 번째 오버 로드는 모든 제네릭 형식으로 전달 될 수 있습니다. `Median` 메서드의 제네릭 오버 로드는 `Func(Of T, Double)` 람다 식을 참조 하는 두 번째 매개 변수를 사용 하 여 컬렉션에서 형식의 값을 `Double`형식의 해당 값으로 프로젝션 합니다. 그런 다음 중앙값 값의 계산을 `Median` 메서드의 다른 오버 로드에 위임 합니다. 람다 식에 대한 자세한 내용은 [람다 식](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)을 참조하세요.  
+ For example, the following example shows a custom aggregate function that calculates the median value of a collection of numbers. There are two overloads of the `Median` extension method. The first overload accepts, as input, a collection of type `IEnumerable(Of Double)`. If the `Median` aggregate function is called for a query field of type `Double`, this method will be called. The second overload of the `Median` method can be passed any generic type. The generic overload of the `Median` method takes a second parameter that references the `Func(Of T, Double)` lambda expression to project a value for a type (from a collection) as the corresponding value of type `Double`. It then delegates the calculation of the median value to the other overload of the `Median` method. 람다 식에 대한 자세한 내용은 [람다 식](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)을 참조하세요.  
   
  [!code-vb[VbSimpleQuerySamples#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/UserDefinedAggregates.vb#18)]  
   
- 다음 예제에서는 `Integer`형식의 컬렉션에서 `Median` 집계 함수를 호출 하는 예제 쿼리와 `Double`형식의 컬렉션을 보여 줍니다. `Double` 형식의 컬렉션에 대 한 `Median` 집계 함수를 호출 하는 쿼리는 입력으로 `Double`형식의 컬렉션을 허용 하는 `Median` 메서드의 오버 로드를 호출 합니다. `Integer` 형식의 컬렉션에서 `Median` 집계 함수를 호출 하는 쿼리는 `Median` 메서드의 제네릭 오버 로드를 호출 합니다.  
+ The following example shows sample queries that call the `Median` aggregate function on a collection of type `Integer`, and a collection of type `Double`. The query that calls the `Median` aggregate function on the collection of type `Double` calls the overload of the `Median` method that accepts, as input, a collection of type `Double`. The query that calls the `Median` aggregate function on the collection of type `Integer` calls the generic overload of the `Median` method.  
   
  [!code-vb[VbSimpleQuerySamples#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/UserDefinedAggregates.vb#19)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Visual Basic의 LINQ 소개](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [쿼리](../../../visual-basic/language-reference/queries/index.md)
