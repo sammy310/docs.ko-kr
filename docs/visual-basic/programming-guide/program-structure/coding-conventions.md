@@ -8,7 +8,7 @@ helpviewer_keywords:
 ms.assetid: c1df130b-fec6-49a5-becf-0a7e494a1d0f
 ms.openlocfilehash: 18c309e22cccfa5d835394996fc6974d95825b65
 ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "72003113"
@@ -67,7 +67,7 @@ Microsoft는 이 항목의 지침에 따라 예제와 설명서를 개발합니�
   
 ## <a name="program-structure"></a>프로그램 구조  
   
-- @No__t-0 메서드를 사용 하는 경우 새 콘솔 응용 프로그램에 대 한 기본 구문을 사용 하 고 명령줄 인수에 대해 `My`을 사용 합니다.  
+- `Main` 메서드를 사용 하는 경우 새 콘솔 응용 프로그램에 대 한 기본 구문을 사용 하 고 명령줄 인수에 `My`를 사용 합니다.  
   
      [!code-vb[VbVbalrGuidelines#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#3)]  
   
@@ -92,7 +92,7 @@ Microsoft는 이 항목의 지침에 따라 예제와 설명서를 개발합니�
   
 ### <a name="unsigned-data-type"></a>부호 없는 데이터 형식  
   
-- 필요한 경우를 제외 하 고는 부호 없는 형식 대신 `Integer`을 사용 합니다.  
+- 필요한 경우를 제외 하 고는 부호 없는 형식 대신 `Integer`를 사용 합니다.  
   
 ### <a name="arrays"></a>배열  
   
@@ -126,10 +126,10 @@ Microsoft는 이 항목의 지침에 따라 예제와 설명서를 개발합니�
  [!code-vb[VbVbalrGuidelines#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#15)]  
   
 ### <a name="use-the-trycatch-and-using-statements-when-you-use-exception-handling"></a>Try ...를 사용 합니다. 예외 처리를 사용 하는 경우 문 Catch 및 사용  
- `On Error Goto`를 사용하지 마세요.  
+ `On Error Goto`는 사용하지 마세요.  
   
 ### <a name="use-the-isnot-keyword"></a>IsNot 키워드 사용  
- -1 @no__t 대신 `IsNot` 키워드를 사용 합니다.  
+ `Not...Is Nothing`대신 `IsNot` 키워드를 사용 합니다.  
   
 ### <a name="new-keyword"></a>New 키워드  
   
@@ -147,11 +147,11 @@ Microsoft는 이 항목의 지침에 따라 예제와 설명서를 개발합니�
   
 ### <a name="event-handling"></a>이벤트 처리  
   
-- @No__t-1이 아닌 `Handles`을 사용 합니다.  
+- `AddHandler`대신 `Handles`를 사용 합니다.  
   
      [!code-vb[VbVbalrGuidelines#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#24)]  
   
-- @No__t-0을 사용 하 고 대리자를 명시적으로 인스턴스화하지 않습니다.  
+- `AddressOf`를 사용 하 고 대리자를 명시적으로 인스턴스화하지 않습니다.  
   
      [!code-vb[VbVbalrGuidelines#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#25)]  
   
@@ -159,7 +159,7 @@ Microsoft는 이 항목의 지침에 따라 예제와 설명서를 개발합니�
   
      [!code-vb[VbVbalrGuidelines#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#26)]  
   
-- @No__t-1 메서드를 호출 하기 전에 이벤트가 @no__t 있는지 여부를 확인 하지 않습니다 (null). `RaiseEvent`은 이벤트를 발생 시키기 전에 `Nothing` 인지 확인 합니다.  
+- `RaiseEvent` 메서드를 호출 하기 전에 이벤트가 `Nothing` 있는지 여부를 확인 하지 않습니다 (null). `RaiseEvent`는 이벤트를 발생 시키기 전에 `Nothing`를 확인 합니다.  
   
 ### <a name="using-shared-members"></a>공유 멤버 사용  
  인스턴스 변수가 아닌 클래스 이름을 사용 하 여 `Shared` 멤버를 호출 합니다.  
@@ -173,7 +173,7 @@ Microsoft는 이 항목의 지침에 따라 예제와 설명서를 개발합니�
   
 - Xml 축 속성을 사용 하 여 XML 문서의 요소 및 특성에 액세스 합니다.  
   
-- @No__t-0 메서드와 같은 API 호출을 사용 하는 대신 포함 식을 사용 하 여 값을 포함 하 고 기존 값에서 XML을 만듭니다.  
+- `Add` 메서드와 같은 API 호출을 사용 하는 대신 포함 식을 사용 하 여 값을 포함 하 고 기존 값에서 XML을 만듭니다.  
   
      [!code-vb[VbVbalrGuidelines#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#27)]  
   
@@ -187,7 +187,7 @@ Microsoft는 이 항목의 지침에 따라 예제와 설명서를 개발합니�
   
      [!code-vb[VbVbalrGuidelines#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#29)]  
   
-- 결과의 속성 이름이 모호하면 속성 이름을 바꿉니다. 예를 들어 쿼리에서 고객 이름과 주문 ID를 반환 하는 경우 결과에서-0 @no__t으로 유지 하 고-1을 @no__t 하지 않고 이름을 바꿉니다.  
+- 결과의 속성 이름이 모호하면 속성 이름을 바꿉니다. 예를 들어 쿼리에서 고객 이름과 주문 ID를 반환 하는 경우 `Name`로 유지 하는 대신 이름을 바꾸고 결과에서 `ID` 합니다.  
   
      [!code-vb[VbVbalrGuidelines#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#30)]  
   
@@ -195,7 +195,7 @@ Microsoft는 이 항목의 지침에 따라 예제와 설명서를 개발합니�
   
      [!code-vb[VbVbalrGuidelines#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#31)]  
   
-- @No__t-0 문 아래의 쿼리 절을 정렬 합니다.  
+- 쿼리 절을 `From` 문 아래에 정렬 합니다.  
   
      [!code-vb[VbVbalrGuidelines#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#32)]  
   
@@ -203,10 +203,10 @@ Microsoft는 이 항목의 지침에 따라 예제와 설명서를 개발합니�
   
      [!code-vb[VbVbalrGuidelines#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#33)]  
   
-- @No__t-1 절을 사용 하 여 조인 작업을 암시적으로 정의 하는 대신 `Join` 절을 사용 하 여 조인 작업을 명시적으로 정의 합니다.  
+- `Where` 절을 사용 하 여 조인 작업을 암시적으로 정의 하는 대신 `Join` 절을 사용 하 여 조인 작업을 명시적으로 정의 합니다.  
   
      [!code-vb[VbVbalrGuidelines#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#34)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [보안 코딩 지침](../../../standard/security/secure-coding-guidelines.md)

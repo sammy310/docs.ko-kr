@@ -19,7 +19,7 @@ ms.locfileid: "71697500"
 .NET Framework의 네트워크 연결 방법을 지정하는 설정을 포함합니다.  
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1 **@no__t -3system >**  
+&nbsp;&nbsp; **\<.net >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -32,7 +32,7 @@ ms.locfileid: "71697500"
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
- 없음  
+ None.  
   
 ### <a name="child-elements"></a>자식 요소  
   
@@ -43,7 +43,7 @@ ms.locfileid: "71697500"
 |[defaultProxy](defaultproxy-element-network-settings.md)|HTTP(Hypertext Transfer Protocol) 프록시 서버를 구성합니다.|  
 |[mailSettings](mailsettings-element-network-settings.md)|SMTP (Simple Mail Transport Protocol) 메일 전송 옵션을 구성 합니다.|  
 |[requestCaching](requestcaching-element-network-settings.md)|네트워크 요청에 대 한 캐싱 메커니즘을 제어 합니다.|  
-|[settings](settings-element-network-settings.md)|@No__t-0 및 관련 된 하위 네임 스페이스의 클래스에 대 한 기본 네트워크 옵션을 구성 합니다.|  
+|[settings](settings-element-network-settings.md)|<xref:System.Net> 및 관련 자식 네임 스페이스의 클래스에 대 한 기본 네트워크 옵션을 구성 합니다.|  
 |[webRequestModules](webrequestmodules-element-network-settings.md)|인터넷 호스트의 정보를 요청 하는 데 사용할 모듈을 지정 합니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
@@ -52,8 +52,8 @@ ms.locfileid: "71697500"
 |-----------------|---------------------|  
 |[configuration](../configuration-element.md)|모든 네임 스페이스에 대 한 설정을 포함 합니다.|  
   
-## <a name="remarks"></a>설명  
- [@No__t -1system >](system-net-element-network-settings.md) 요소에는 <xref:System.Net> 및 관련 자식 네임 스페이스의 클래스에 대 한 설정이 포함 되어 있습니다. 설정은 인터넷 호스트에서 정보를 수신 하기 위한 인증 모듈, 연결 관리, 메일 설정, 프록시 서버 및 인터넷 요청 모듈을 구성 합니다.  
+## <a name="remarks"></a>주의  
+ [\<net.tcp >](system-net-element-network-settings.md) 요소에는 <xref:System.Net> 및 관련 자식 네임 스페이스의 클래스에 대 한 설정이 포함 되어 있습니다. 설정은 인터넷 호스트에서 정보를 수신 하기 위한 인증 모듈, 연결 관리, 메일 설정, 프록시 서버 및 인터넷 요청 모듈을 구성 합니다.  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 <xref:System.Net> 클래스에서 사용 하는 일반적인 구성을 보여 줍니다.  
@@ -92,6 +92,6 @@ ms.locfileid: "71697500"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [네트워크 설정 스키마](index.md)

@@ -20,7 +20,7 @@ ms.locfileid: "73118843"
 \<section > 요소에 의해 정의 되 고 <xref:System.Configuration.SingleTagSectionHandler> 클래스를 사용 하는 사용자 지정 구성 섹션의 설정을 정의 합니다.
 
 [ **\<configuration>** ](configuration-element.md)   
-&nbsp;&nbsp; *\<섹션 이름 >*
+&nbsp;&nbsp; *\<sectionName>*
 
 ## <a name="syntax"></a>구문
 
@@ -34,7 +34,7 @@ ms.locfileid: "73118843"
 
 ## <a name="parent-element"></a>부모 요소
 
-|     | 설명 |
+|     | Description |
 | --- | ----------- |
 | [ **\<configuration>** ](configuration-element.md) | 공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다. |
 
@@ -66,6 +66,6 @@ ms.locfileid: "73118843"
 
 이 요소는 응용 프로그램 구성 파일 *, 컴퓨터 구성 파일 (machine.config*) 및 응용 프로그램 디렉터리 수준에 없는 *web.config 파일* 에서 사용할 수 있습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [.NET Framework에 대 한 구성 파일 스키마](index.md)

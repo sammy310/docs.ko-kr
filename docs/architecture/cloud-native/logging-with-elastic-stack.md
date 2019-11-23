@@ -96,7 +96,7 @@ Logstash 태에서 로그를 수집한 후에는 해당 로그를 저장 해야 
 
 또 다른 옵션은 [최근에 발표 한 ELK as a service 제품](https://devops.com/logz-io-unveils-azure-open-source-elk-monitoring-solution/)입니다.
 
-## <a name="references"></a>참조 항목
+## <a name="references"></a>참조
 
 - [Azure에 탄력적 스택 설치](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-elasticsearch)
 

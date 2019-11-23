@@ -13,8 +13,8 @@ ms.locfileid: "71697763"
 특정 체계에 대해 <xref:System.Uri>가 구문 분석되는 방법을 지정합니다.  
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t[ **\<uri >** ](uri-element-uri-settings.md)  
-&nbsp; @ no__t-1 @ no__t @ no__t **\<schemeSettings >**  
+&nbsp;&nbsp;[ **\<uri >** ](uri-element-uri-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp; **\<schemeSettings >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -43,7 +43,7 @@ ms.locfileid: "71697763"
 |-----------------|---------------------|  
 |[uri](uri-element-uri-settings.md)|.NET Framework Uri (uniform resource identifier)를 사용 하 여 표현 된 웹 주소를 처리 하는 방법을 지정 하는 설정을 포함 합니다.|  
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
  기본적으로 <xref:System.Uri?displayProperty=nameWithType> 클래스 이스케이프 해제 백분율로 인코딩된 경로 압축을 실행 하기 전에 경로 구분 기호입니다. 다음과 같은 공격에 대 한 보안 메커니즘으로 구현 되었습니다.  
   
  `http://www.contoso.com/..%2F..%2F/Windows/System32/cmd.exe?/c+dir+c:\`  
@@ -83,7 +83,7 @@ ms.locfileid: "71697763"
 |유효성 검사 파일||  
 |비워 둘 수 있음||  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Configuration.SchemeSettingElement?displayProperty=nameWithType>
 - <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=nameWithType>

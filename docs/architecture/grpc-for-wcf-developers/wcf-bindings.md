@@ -1,14 +1,13 @@
 ---
 title: Wcf 바인딩 및 전송-WCF 개발자를 위한 gRPC
 description: 다양 한 WCF 바인딩 및 전송에서 gRPC와 비교 하는 방법에 대해 알아봅니다.
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 34321395ddd7059ac7e3c268e313a03251662911
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 233e3d030bc1f4450bd5cd6a7d7770486ca9e95a
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "73841320"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966908"
 ---
 # <a name="wcf-bindings-and-transports"></a>WCF 바인딩 및 전송
 

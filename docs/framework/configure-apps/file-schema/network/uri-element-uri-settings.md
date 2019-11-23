@@ -13,7 +13,7 @@ ms.locfileid: "71697433"
 .NET Framework Uri (uniform resource identifier)를 사용 하 여 표현 된 웹 주소를 처리 하는 방법을 지정 하는 설정을 포함 합니다.  
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t **\<uri >**  
+&nbsp;&nbsp; **\<uri >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -26,14 +26,14 @@ ms.locfileid: "71697433"
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
- 없음  
+ None.  
   
 ### <a name="child-elements"></a>자식 요소  
   
 |**요소**|**설명**|  
 |-----------------|---------------------|  
 |[idn](idn-element-uri-settings.md)|IDN(Internationalized Domain Name) 구문 분석이 도메인 이름에 적용되는지 지정합니다.|  
-|[iriParsing](iriparsing-element-uri-settings.md)|IRI (국가별 리소스 식별자) 구문 분석이 <xref:System.Uri>에 적용 되는지 여부와 IRI 구문 분석 규칙을 적용할지 여부를 지정 합니다.|  
+|[iriParsing](iriparsing-element-uri-settings.md)|IRI (국가별 리소스 식별자) 구문 분석이 <xref:System.Uri>에 적용 되는지 여부와 IRI 구문 분석 규칙을 적용 해야 하는지 여부를 지정 합니다.|  
 |[schemeSettings](schemesettings-element-uri-settings.md)|특정 체계에 대해 <xref:System.Uri>가 구문 분석되는 방법을 지정합니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
@@ -42,13 +42,13 @@ ms.locfileid: "71697433"
 |-----------------|---------------------|  
 |[configuration](../configuration-element.md)|모든 네임 스페이스에 대 한 설정을 포함 합니다.|  
   
-## <a name="remarks"></a>설명  
- @No__t-0 요소는 <xref:System.Net> 네임 스페이스의 클래스에서 사용 하는 @no__t 1 클래스의 멤버에 대 한 설정을 포함 합니다. 설정은 IRI 및 IDN에 대 한 지원을 구성 합니다.  
+## <a name="remarks"></a>주의  
+ `uri` 요소에는 <xref:System.Net> 네임 스페이스의 클래스에서 사용 하는 <xref:System.Uri> 클래스의 멤버에 대 한 설정이 포함 되어 있습니다. 설정은 IRI 및 IDN에 대 한 지원을 구성 합니다.  
   
 ## <a name="example"></a>예제  
   
-### <a name="description"></a>설명  
- 다음 예제에서는 <xref:System.Uri> 클래스에서 IRI 구문 분석 및 IDN 이름을 지원 하기 위해 사용 하는 구성을 보여 줍니다. 또한이 예제에서는 모든 구성표 설정을 지운 다음 http 체계의 백분율 인코딩된 경로 구분 기호를 이스케이프 하지 않는 지원을 추가 합니다.  
+### <a name="description"></a>Description  
+ 다음 예제에서는 IRI 구문 분석 및 IDN 이름을 지원 하기 위해 <xref:System.Uri> 클래스에서 사용 하는 구성을 보여 줍니다. 또한이 예제에서는 모든 구성표 설정을 지운 다음 http 체계의 백분율 인코딩된 경로 구분 기호를 이스케이프 하지 않는 지원을 추가 합니다.  
   
 ### <a name="code"></a>코드  
   
@@ -65,6 +65,6 @@ ms.locfileid: "71697433"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [네트워크 설정 스키마](index.md)

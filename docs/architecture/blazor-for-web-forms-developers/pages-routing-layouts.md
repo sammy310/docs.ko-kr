@@ -145,7 +145,7 @@ Blazor의 라우팅은 `Router` 구성 요소에 의해 처리 됩니다. `Route
 
 ## <a name="navigation"></a>탐색
 
-ASP.NET Web Forms에서는 브라우저에 리디렉션 응답을 반환 하 여 다른 페이지로의 탐색을 트리거합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
+ASP.NET Web Forms에서는 브라우저에 리디렉션 응답을 반환 하 여 다른 페이지로의 탐색을 트리거합니다. 예:
 
 ```csharp
 protected void NavigateButton_Click(object sender, EventArgs e)

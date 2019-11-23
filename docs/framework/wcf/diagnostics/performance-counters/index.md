@@ -29,7 +29,7 @@ WCF (Windows Communication Foundation)는 응용 프로그램의 성능을 측�
   
 - All: 모든 범주 카운터(ServiceModelService, ServiceModelEndpoint, ServiceModelOperation)가 활성화됩니다.  
   
-- ServiceOnly: ServiceModelService 범주 카운터만 활성화됩니다. 이 설정은 기본값입니다.  
+- ServiceOnly: ServiceModelService 범주 카운터만 활성화됩니다. 기본값입니다.  
   
 - Off: ServiceModel* 성능 카운터가 비활성화됩니다.  
   
@@ -74,7 +74,7 @@ config.Save();
 ## <a name="types-of-performance-counters"></a>성능 카운터 형식  
  성능 카운터의 범위는 서비스, 엔드포인트 및 작업의 세 가지 수준입니다.  
   
- WMI를 사용하여 성능 카운터 인스턴스의 이름을 검색할 수 있습니다. 예를 들어 개체에 적용된  
+ WMI를 사용하여 성능 카운터 인스턴스의 이름을 검색할 수 있습니다. 예를 들면 다음과 같습니다.  
   
 - 서비스 카운터 인스턴스 이름은 WMI [서비스](../wmi/service.md) 인스턴스의 "counterinstancename" 속성을 통해 가져올 수 있습니다.  
   
@@ -121,14 +121,14 @@ config.Save();
 
 WCF 성능 카운터에 프로그래밍 방식으로 액세스할 수 있도록 여러 파일이 SDK 설치 폴더에 설치 됩니다. 이러한 파일은 다음과 같이 나열 됩니다.
   
-- *@no__t -1ServiceModelEndpointPerfCounters vrg*
-- *@no__t -1ServiceModelOperationPerfCounters vrg*
-- *@no__t -1ServiceModelServicePerfCounters vrg*  
-- *@no__t -1SMSvcHostPerfCounters vrg*
-- *@no__t -1TransactionBridgePerfCounters vrg*
+- *\_ServiceModelEndpointPerfCounters vrg*
+- *\_ServiceModelOperationPerfCounters vrg*
+- *\_ServiceModelServicePerfCounters vrg*  
+- *\_SMSvcHostPerfCounters vrg*
+- *\_TransactionBridgePerfCounters vrg*
   
 프로그래밍 방식으로 카운터에 액세스 하는 방법에 대 한 자세한 내용은 [성능 카운터 프로그래밍 아키텍처](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/5f9bkxzf(v=vs.90))를 참조 하세요.
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [관리 및 진단](../index.md)

@@ -1,14 +1,13 @@
 ---
 title: Protobuf 열거형-WCF 개발자를 위한 gRPC
 description: Protobuf에서 열거형을 선언 하 고 사용 하는 방법에 대해 알아봅니다.
-author: markrendle
 ms.date: 09/09/2019
-ms.openlocfilehash: f18196f54caba824d7101782a88cf3bf699560d5
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 4ea4d03bede2a9ebfd1f2c3ee56f299e918800e9
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "73841416"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971571"
 ---
 # <a name="protobuf-enumerations"></a>Protobuf 열거형
 

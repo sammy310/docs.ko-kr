@@ -21,8 +21,8 @@ ms.locfileid: "71699177"
 추적 메시지를 수집하고 저장하고 라우팅하는 수신기가 포함되어 있습니다.  
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t[ **\< >** ](system-diagnostics-element.md)  
-&nbsp; @ no__t-1 @ no__t @ no__t **\<trace >**  
+&nbsp;[ **\<&nbsp;진단 >** ](system-diagnostics-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp; **\<추적 >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,7 +37,7 @@ ms.locfileid: "71699177"
   
 ### <a name="attributes"></a>특성  
   
-|특성|설명|  
+|특성|Description|  
 |---------------|-----------------|  
 |`autoflush`|선택적 특성입니다.<br /><br /> 모든 쓰기 작업 후 추적 수신기가 출력 버퍼를 자동으로 플러시하지 여부를 지정 합니다.|  
 |`indentsize`|선택적 특성입니다.<br /><br /> 들여쓸 공백의 수를 지정 합니다.|  
@@ -45,33 +45,33 @@ ms.locfileid: "71699177"
   
 ## <a name="autoflush-attribute"></a>autoflush 특성  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |`false`|는 출력 버퍼를 자동으로 플러시하지 않습니다. 이 값이 기본값입니다.|  
 |`true`|출력 버퍼를 자동으로 플러시합니다.|  
   
 ## <a name="usegloballock-attribute"></a>useGlobalLock 특성  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |`false`|수신기가 스레드로부터 안전 하 게 보호 되는 경우 전역 잠금을 사용 하지 않습니다. 그렇지 않으면 전역 잠금을 사용 합니다.|  
 |`true`|수신기가 스레드로부터 안전한 지 여부에 관계 없이 전역 잠금을 사용 합니다. 이 값이 기본값입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
 |[\<listeners>](listeners-element-for-trace.md)|메시지를 수집, 저장 및 라우팅하는 수신기를 지정 합니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
 |`configuration`|공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.|  
 |`system.diagnostics`|메시지를 수집하고 저장하고 라우팅하는 추적 수신기를 지정하며, 추적 스위치가 설정되는 수준을 지정합니다.|  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 `<trace>` 요소를 사용 하 여 수신기 `MyListener`을 `Listeners` 컬렉션에 추가 하는 방법을 보여 줍니다. `MyListener`은 `MyListener.log` 이라는 파일을 만들고 출력을 파일에 씁니다. @No__t-0 특성은 `false`로 설정 되어 있으며,이로 인해 추적 수신기가 스레드로부터 안전 하 게 보호 되는 경우 전역 잠금이 사용 되지 않습니다. @No__t-0 특성은 <xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType> 메서드가 호출 되었는지 여부에 관계 없이 추적 수신기가 파일에 쓰도록 하는 `true`로 설정 됩니다. @No__t-0 특성은 0 (영)으로 설정 되며,이는 <xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType> 메서드를 호출할 때 수신기가 0 공백을 들여씁니다.  
+ 다음 예제에서는 `<trace>` 요소를 사용 하 여 수신기 `MyListener`를 `Listeners` 컬렉션에 추가 하는 방법을 보여 줍니다. `MyListener` `MyListener.log` 라는 파일을 만들고 출력을 파일에 씁니다. `useGlobalLock` 특성이 `false`로 설정 되었으므로 추적 수신기가 스레드로부터 안전 하 게 보호 되는 경우 전역 잠금이 사용 되지 않습니다. `autoflush` 특성은 `true`로 설정 되며,이로 인해 <xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType> 메서드가 호출 되었는지 여부에 관계 없이 추적 수신기가 파일에 쓸 수 있습니다. `indentsize` 특성을 0으로 설정 하면 <xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType> 메서드가 호출 될 때 수신기가 공백을 0으로 들여씁니다.  
   
 ```xml  
 <configuration>  
@@ -85,7 +85,7 @@ ms.locfileid: "71699177"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Diagnostics.TraceListener>
 - <xref:System.Diagnostics.DefaultTraceListener>

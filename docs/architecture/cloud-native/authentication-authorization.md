@@ -21,7 +21,7 @@ ms.locfileid: "73840750"
 - 대부분의 조직에서는 Azure AD를 어느 정도까지 이미 의존 하 고 있습니다.
 - NTLM 해시를 이중으로 해시 하면 손상으로 인해 로컬 Active Directory에서 작동 하는 자격 증명이 허용 되지 않습니다.
 
-## <a name="references"></a>참조 항목
+## <a name="references"></a>참조
 
 - [인증 기본 사항](https://docs.microsoft.com/azure/active-directory/develop/authentication-scenarios)
 - [액세스 토큰 및 클레임](https://docs.microsoft.com/azure/active-directory/develop/access-tokens)

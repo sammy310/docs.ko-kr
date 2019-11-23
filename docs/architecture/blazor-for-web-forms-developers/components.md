@@ -77,7 +77,7 @@ Razor 지시문은 `@` 문자로 시작 하 고 일반적으로 파일의 시작
 
 다음 표에서는 Blazor에서 사용 되는 다양 한 Razor 지시문과 해당 ASP.NET Web Forms 해당 하는 경우에 대해 요약 합니다.
 
-|지시문    |설명|예제|Web Forms 동일|
+|Directive    |Description|예제|Web Forms 동일|
 |-------------|-----------|-------|--------------------|
 |`@attribute` |구성 요소에 클래스 수준 특성을 추가 합니다.|`@attribute [Authorize]`|없음|
 |`@code`      |구성 요소에 클래스 멤버를 추가 합니다.|`@code { ... }`|`<script runat="server">...</script>`|
@@ -98,7 +98,7 @@ Razor 지시문은 `@` 문자로 시작 하 고 일반적으로 파일의 시작
 
 다음 표에서는 Blazor에 사용 되는 Razor 지시문에 대 한 다양 한 특성을 요약 합니다.
 
-|특성    |설명|예제|
+|특성    |Description|예제|
 |-------------|-----------|-------|
 |`@attributes`|특성 사전을 렌더링 합니다.|`<input @attributes="ExtraAttributes" />`|
 |`@bind`      |양방향 데이터 바인딩을 만듭니다.    |`<input @bind="username" @bind:event="oninput" />`|
@@ -114,8 +114,8 @@ Blazor (`@onclick`, `@bind`, `@ref`등)에서 사용 하는 다양 한 지시문
 |-----------------------------|--------------------|---------------------|--------------|-------|
 |지시문                   |`<%@ [directive] %>`|`<%@ Page %>`        |`@[directive]`|`@page`|
 |코드 블록                  |`<% %>`             |`<% int x = 123; %>` |`@{ }`        |`@{ int x = 123; }`|
-|표현식<br>(HTML 인코딩)|`<%: %>`            |`<%:DateTime.Now %>` |암시적: `@`<br>명시적: `@()`|`@DateTime.Now`<br>`@(DateTime.Now)`|
-|주석                     |`<%-- --%>`         |`<%-- Commented --%>`|`@* *@`       |`@* Commented *@`|
+|식<br>(HTML 인코딩)|`<%: %>`            |`<%:DateTime.Now %>` |암시적: `@`<br>명시적: `@()`|`@DateTime.Now`<br>`@(DateTime.Now)`|
+|설명                     |`<%-- --%>`         |`<%-- Commented --%>`|`@* *@`       |`@* Commented *@`|
 |데이터 바인딩                 |`<%# %>`            |`<%# Bind("Name") %>`|`@bind`       |`<input @bind="username" />`|
 
 Razor 구성 요소 클래스에 멤버를 추가 하려면 `@code` 지시문을 사용 합니다. 이 기법은 ASP.NET Web Forms 사용자 정의 컨트롤 또는 페이지에서 `<script runat="server">...</script>` 블록을 사용 하는 것과 비슷합니다.
@@ -639,7 +639,7 @@ public class CounterBase : ComponentBase
 
 기본 클래스에서 구성 요소의 멤버에 대 한 표시 여부를 `protected` 하거나 구성 요소 클래스에 표시 되도록 `public` 해야 합니다.
 
-## <a name="additional-resources"></a>추가 자료
+## <a name="additional-resources"></a>추가 리소스
 
 위의 Blazor 구성 요소에 대 한 모든 측면을 철저 하 게 처리 하지는 않습니다. [Razor 구성 요소 ASP.NET Core 만들고 사용](/aspnet/core/blazor/components)하는 방법에 대 한 자세한 내용은 Blazor 설명서를 참조 하세요.
 

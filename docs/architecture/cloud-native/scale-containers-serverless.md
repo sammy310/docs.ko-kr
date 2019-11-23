@@ -21,9 +21,9 @@ ms.locfileid: "73841014"
 
 클라우드 네이티브 앱은 노드를 추가 하거나 서비스 요청에 pod를 추가 하 여 확장을 지원 합니다. 이는 앱에 대 한 구성 설정 (예: [노드 풀 크기 조정](https://docs.microsoft.com/azure/aks/use-multiple-node-pools#scale-a-node-pool-manually))을 조정 하거나 자동 크기 *조정을*통해 수동으로 수행할 수 있습니다. 자동 크기 조정은 자동 온도 조절기에서 추가 열 또는 냉각을 호출 하 여 온도에 응답 하는 방법과 비슷하게 요청에 응답 하기 위해 앱에서 사용 하는 리소스를 조정 합니다. 자동 크기 조정을 사용 하는 경우 수동 크기 조정을 사용할 수 없습니다.
 
-AKS 클러스터는 다음 두 가지 방법 중 하나로 확장할 수 있습니다.
+AKS 클러스터는 다음 두 가지 방법 중 하나로 크기를 조정할 수 있습니다.
 
-- [클러스터 autoscaler](https://docs.microsoft.com/azure/aks/cluster-autoscaler) 는 리소스 제약으로 인해 노드에 대해 예약할 수 없는 pod을 감시 합니다. 필요에 따라 추가 노드를 추가 합니다.
+- [클러스터 자동 크기 조정기](https://docs.microsoft.com/azure/aks/cluster-autoscaler)는 리소스 제약 조건으로 인해 노드에서 예약할 수 없는 Pod를 확인합니다. 필요에 따라 추가 노드를 추가 합니다.
 - **수평 pod autoscaler** 는 Kubernetes 클러스터에서 메트릭 서버를 사용 하 여 pod의 리소스 요구 사항을 모니터링 합니다. 서비스가 더 많은 리소스를 필요로 하는 경우 autoscaler는 pod의 수를 늘립니다.
 
 그림 3-13에서는 이러한 두 크기 조정 서비스 간의 관계를 보여 줍니다.
@@ -32,13 +32,13 @@ AKS 클러스터는 다음 두 가지 방법 중 하나로 확장할 수 있습�
 
 **그림 3-13**. App Service 계획을 확장 합니다.
 
-이러한 서비스는 필요에 따라 pod 또는 노드 수를 줄일 수도 있습니다. 이러한 두 서비스는 함께 작동 하 고 종종 클러스터에 함께 배포 됩니다. 결합 된 수평 pod autoscaler는 응용 프로그램 수요를 충족 하는 데 필요한 pod 수를 실행 하는 데 초점을 맞춥니다. 클러스터 autoscaler는 예약 된 pod을 지 원하는 데 필요한 노드 수를 실행 하는 데 초점을 맞추고 있습니다.
+이러한 서비스는 필요에 따라 pod 또는 노드 수를 줄일 수도 있습니다. 이러한 두 서비스는 함께 작동 하 고 종종 클러스터에 함께 배포 됩니다. 결합된 경우 Horizontal Pod Autoscaler는 애플리케이션 수요를 충족하는 데 필요한 개수의 Pod를 실행하는 데 중점을 둡니다. 클러스터 자동 크기 조정기는 예약된 Pod를 지원하는 데 필요한 개수의 노드를 실행하는 데 중점을 둡니다.
 
 ### <a name="scaling-azure-functions"></a>크기 조정 Azure Functions
 
 Azure Functions 자동 확장을 지원 합니다. 기본 소비 계획은 들어오는 이벤트의 수에 따라 동적으로 리소스를 추가 (및 제거) 합니다. 실행 횟수, 실행 시간 및 사용 된 메모리에 따라 함수가 실행 중일 때 사용 되는 계산 리소스에 대해서만 요금이 청구 됩니다. 프리미엄 요금제를 사용 하면 이러한 같은 기능을 사용할 수 있지만, 사용 되는 인스턴스 크기를 제어 하 고, 인스턴스를 이미 준비 (콜드 시작 지연 방지) 하 고, 함수를 실행할 전용 Vm을 구성할 수도 있습니다. 기본 구성은 대부분의 앱에서 경제적이 고 확장 가능한 솔루션을 제공 해야 하지만, premium 옵션을 사용 하면 개발자는 사용자 지정 Azure Functions 요구 사항에 유연 하 게 사용할 수 있습니다.
 
-## <a name="references"></a>참조 항목
+## <a name="references"></a>참조
 
 - [여러 노드 풀 AKS](https://docs.microsoft.com/azure/aks/use-multiple-node-pools)
 - [AKS Cluster Autoscaler](https://docs.microsoft.com/azure/aks/cluster-autoscaler)

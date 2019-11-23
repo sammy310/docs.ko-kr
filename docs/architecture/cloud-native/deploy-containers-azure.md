@@ -67,8 +67,8 @@ Azure의 대부분 리소스와 마찬가지로 포털을 사용 하거나 명�
 
 이 정보는 시작 하기에 충분 합니다. Azure Portal에서 생성 프로세스의 일부로 클러스터의 다음 기능에 대 한 옵션을 구성할 수도 있습니다.
 
-- 배율을
-- Authentication
+- 소수 자릿수
+- 인증
 - 네트워킹
 - 모니터링
 - Tags
@@ -103,7 +103,7 @@ az aks use-dev-spaces -g my-aks-resource-group -n MyAKSCluster
 **그림 3-12**](./media/azure-dev-spaces-visual-studio-launchsettings.png)
 Visual Studio에서 Azure Dev Spaces에 연결 ![합니다. Visual Studio에서 Azure Dev Spaces에 연결
 
-## <a name="references"></a>참조 항목
+## <a name="references"></a>참조
 
 - [카나리아 릴리스](https://martinfowler.com/bliki/CanaryRelease.html)
 - [VS Code Azure Dev Spaces](https://docs.microsoft.com/azure/dev-spaces/quickstart-netcore)

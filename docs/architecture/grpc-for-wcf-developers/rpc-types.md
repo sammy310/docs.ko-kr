@@ -1,14 +1,13 @@
 ---
 title: WCF 개발자를 위한 RPC gRPC의 유형
 description: WCF에서 지원 되는 원격 프로시저 호출의 유형 및 gRPC의 해당 항목에 대 한 검토
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: ce5bf03b01dff3f7bb201ff08c9065abc2e58360
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 64375236da17c0aedbafe1cb441e72a144203358
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "73841380"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73967264"
 ---
 # <a name="types-of-rpc"></a>RPC 형식
 

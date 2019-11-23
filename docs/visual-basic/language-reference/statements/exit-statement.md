@@ -1,5 +1,5 @@
 ---
-title: Exit 문(Visual Basic)
+title: Exit 문
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Exit
@@ -12,16 +12,16 @@ helpviewer_keywords:
 - program termination
 - execution [Visual Basic], stopping
 ms.assetid: 760bfb32-5c3f-4bdb-a432-9a6001c92db7
-ms.openlocfilehash: 9c25653809c51662ea5b606ab97be6a9b50d5986
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: 1bfe81428fd3c50663fd8978e05c6a945cd47df8
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71956939"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345934"
 ---
-# <a name="exit-statement-visual-basic"></a>Exit 문(Visual Basic)
+# <a name="exit-statement-visual-basic"></a>Exit Statement (Visual Basic)
 
-프로시저 또는 블록을 종료 하 고 프로시저 호출 또는 블록 정의 다음에 오는 문으로 제어를 즉시 전달 합니다.
+Exits a procedure or block and transfers control immediately to the statement following the procedure call or the block definition.
 
 ## <a name="syntax"></a>구문
 
@@ -32,56 +32,56 @@ Exit { Do | For | Function | Property | Select | Sub | Try | While }
 ## <a name="statements"></a>문
 
  `Exit Do`  
- 이 표시 되는 `Do` 루프가 즉시 종료 됩니다. @No__t-0 문 다음에 오는 문을 사용 하 여 실행이 계속 됩니다. `Exit Do`은 `Do` 루프 내 에서만 사용할 수 있습니다. 중첩 된 `Do` 루프 내에서 사용 하는 경우 `Exit Do`은 가장 안쪽의 루프를 종료 하 고 다음으로 높은 중첩 수준으로 제어를 전달 합니다.
+ Immediately exits the `Do` loop in which it appears. Execution continues with the statement following the `Loop` statement. `Exit Do` can be used only inside a `Do` loop. When used within nested `Do` loops, `Exit Do` exits the innermost loop and transfers control to the next higher level of nesting.
 
  `Exit For`  
- 이 표시 되는 `For` 루프가 즉시 종료 됩니다. @No__t-0 문 다음에 오는 문을 사용 하 여 실행이 계속 됩니다. `For` @no__t `Next` 또는 `For Each` ... @no__t 루프 내 에서만 사용할 수 있습니다. 중첩 된 `For` 루프 내에서 사용 하는 경우 `Exit For`은 가장 안쪽의 루프를 종료 하 고 다음으로 높은 중첩 수준으로 제어를 전달 합니다.
+ Immediately exits the `For` loop in which it appears. Execution continues with the statement following the `Next` statement. `Exit For` can be used only inside a `For`...`Next` or `For Each`...`Next` loop. When used within nested `For` loops, `Exit For` exits the innermost loop and transfers control to the next higher level of nesting.
 
  `Exit Function`  
- 는 표시 되는 `Function` 프로시저를 즉시 종료 합니다. @No__t-0 프로시저를 호출한 문 뒤에 오는 문에서 실행이 계속 됩니다. `Exit Function`은 `Function` 프로시저 내 에서만 사용할 수 있습니다.
+ Immediately exits the `Function` procedure in which it appears. Execution continues with the statement following the statement that called the `Function` procedure. `Exit Function` can be used only inside a `Function` procedure.
 
- 반환 값을 지정 하려면 `Exit Function` 문 앞의 줄에서 함수 이름에 값을 할당할 수 있습니다. 반환 값을 할당 하 고 한 문에서 함수를 종료 하려면 [Return 문을](return-statement.md)대신 사용할 수 있습니다.
+ To specify a return value, you can assign the value to the function name on a line before the `Exit Function` statement. To assign the return value and exit the function in one statement, you can instead use the [Return Statement](return-statement.md).
 
  `Exit Property`  
- 는 표시 되는 `Property` 프로시저를 즉시 종료 합니다. @No__t-0 프로시저를 호출한 문 즉, 속성의 값을 요청 하거나 설정 하는 문을 사용 하 여 실행이 계속 됩니다. `Exit Property`은 속성의 `Get` 또는 `Set` 프로시저 내 에서만 사용할 수 있습니다.
+ Immediately exits the `Property` procedure in which it appears. Execution continues with the statement that called the `Property` procedure, that is, with the statement requesting or setting the property's value. `Exit Property` can be used only inside a property's `Get` or `Set` procedure.
 
- @No__t-0 프로시저에서 반환 값을 지정 하려면 `Exit Property` 문 앞의 줄에서 함수 이름에 값을 할당할 수 있습니다. 반환 값을 할당 하 고 한 문에서 `Get` 프로시저를 종료 하려면 `Return` 문을 대신 사용할 수 있습니다.
+ To specify a return value in a `Get` procedure, you can assign the value to the function name on a line before the `Exit Property` statement. To assign the return value and exit the `Get` procedure in one statement, you can instead use the `Return` statement.
 
- @No__t-0 프로시저에서 `Exit Property` 문은 `Return` 문과 동일 합니다.
+ In a `Set` procedure, the `Exit Property` statement is equivalent to the `Return` statement.
 
  `Exit Select`  
- 는 표시 되는 `Select Case` 블록을 즉시 종료 합니다. @No__t-0 문 다음에 오는 문을 사용 하 여 실행이 계속 됩니다. `Exit Select`은 `Select Case` 문 내 에서만 사용할 수 있습니다.
+ Immediately exits the `Select Case` block in which it appears. Execution continues with the statement following the `End Select` statement. `Exit Select` can be used only inside a `Select Case` statement.
 
  `Exit Sub`  
- 는 표시 되는 `Sub` 프로시저를 즉시 종료 합니다. @No__t-0 프로시저를 호출한 문 뒤에 오는 문에서 실행이 계속 됩니다. `Exit Sub`은 `Sub` 프로시저 내 에서만 사용할 수 있습니다.
+ Immediately exits the `Sub` procedure in which it appears. Execution continues with the statement following the statement that called the `Sub` procedure. `Exit Sub` can be used only inside a `Sub` procedure.
 
- @No__t-0 프로시저에서 `Exit Sub` 문은 `Return` 문과 동일 합니다.
+ In a `Sub` procedure, the `Exit Sub` statement is equivalent to the `Return` statement.
 
  `Exit Try`  
- @No__t-0 또는 `Catch` 블록이 표시 되는 즉시 종료 합니다. @No__t-0 블록 (있는 경우)을 사용 하 여 실행을 계속 하거나, `End Try` 문 뒤에 문을 사용 합니다. `Exit Try`은 `Finally` 블록 내부가 아닌 `Try` 또는 `Catch` 블록 내 에서만 사용할 수 있습니다.
+ Immediately exits the `Try` or `Catch` block in which it appears. Execution continues with the `Finally` block if there is one, or with the statement following the `End Try` statement otherwise. `Exit Try` can be used only inside a `Try` or `Catch` block, and not inside a `Finally` block.
 
  `Exit While`  
- 이 표시 되는 `While` 루프가 즉시 종료 됩니다. @No__t-0 문 다음에 오는 문을 사용 하 여 실행이 계속 됩니다. `Exit While`은 `While` 루프 내 에서만 사용할 수 있습니다. 중첩 된 `While` 루프 내에서 사용 되는 경우 `Exit While`은 `Exit While`가 발생 하는 루프 위에 중첩 된 한 수준으로 제어를 전달 합니다.
+ Immediately exits the `While` loop in which it appears. Execution continues with the statement following the `End While` statement. `Exit While` can be used only inside a `While` loop. When used within nested `While` loops, `Exit While` transfers control to the loop that is one nested level above the loop where `Exit While` occurs.
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
-@No__t-0 문을 `End` 문과 혼동 하지 마십시오. `Exit`은 문의 끝을 정의 하지 않습니다.
+Do not confuse `Exit` statements with `End` statements. `Exit` does not define the end of a statement.
 
 ## <a name="example"></a>예제
 
-다음 예제에서는 `index` 변수가 100 보다 큰 경우 루프 조건이 루프를 중지 합니다. 그러나 루프의 `If` 문은 인덱스 변수가 10 보다 클 때 `Exit Do` 문이 루프를 중지 합니다.
+In the following example, the loop condition stops the loop when the `index` variable is greater than 100. The `If` statement in the loop, however, causes the `Exit Do` statement to stop the loop when the index variable is greater than 10.
 
 [!code-vb[VbVbalrStatements#133](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class10.vb#133)]
 
 ## <a name="example"></a>예제
 
-다음 예에서는-0 @no__t 함수 이름에 반환 값을 할당 한 다음 `Exit Function`을 사용 하 여 함수에서 반환 합니다.
+The following example assigns the return value to the function name `myFunction`, and then uses `Exit Function` to return from the function:
 
 [!code-vb[VbVbalrStatements#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#23)]
 
 ## <a name="example"></a>예제
 
-다음 예에서는 [Return 문을](return-statement.md) 사용 하 여 반환 값을 할당 하 고 함수를 종료 합니다.
+The following example uses the [Return Statement](return-statement.md) to assign the return value and exit the function:
 
 [!code-vb[VbVbalrStatements#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#24)]
 

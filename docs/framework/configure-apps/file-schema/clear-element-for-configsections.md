@@ -1,5 +1,5 @@
 ---
-title: <configSections>에 대한 <clear> 요소
+title: <clear>에 대한 <configSections> 요소
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/configSections/clear
@@ -16,13 +16,13 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73119079"
 ---
-# <a name="clear-element-for-configsections"></a>\<configSections에 대 한 clear > 요소를 \<
+# <a name="clear-element-for-configsections"></a>\<configSections에 대 한 clear > 요소를 \<>
 
 이전에 정의 된 모든 섹션과 섹션 그룹을 지웁니다.
 
 [ **\<configuration>** ](configuration-element.md)   
-[**configSections >\<** ](configsections-element-for-configuration.md) &nbsp;&nbsp;   
-&nbsp;&nbsp;&nbsp;&nbsp; **\<clear >**
+&nbsp;&nbsp;[ **\<configSections>** ](configsections-element-for-configuration.md)   
+&nbsp;&nbsp;&nbsp;&nbsp; **\<clear>**
 
 ## <a name="syntax"></a>구문
 
@@ -32,15 +32,15 @@ ms.locfileid: "73119079"
 
 ## <a name="attribute"></a>특성
 
-|           | 설명 |
+|           | Description |
 | --------- | ----------- |
 | **name**  | 필수 특성입니다.<br><br>제거할 섹션 또는 섹션 그룹의 이름을 지정 합니다. |
 
 ## <a name="parent-element"></a>부모 요소
 
-|     | 설명 |
+|     | Description |
 | --- | ----------- |
-| [**configSections을\<** 요소인](configsections-element-for-configuration.md) | 구성 섹션과 네임 스페이스 선언을 포함 합니다. |
+| [**configSections을\<>** 요소인](configsections-element-for-configuration.md) | 구성 섹션과 네임 스페이스 선언을 포함 합니다. |
 
 ## <a name="child-elements"></a>자식 요소
 
@@ -91,6 +91,6 @@ ms.locfileid: "73119079"
 
 이 요소는 응용 프로그램 구성 파일 *, 컴퓨터 구성 파일 (machine.config*) 및 응용 프로그램 디렉터리 수준에 없는 *web.config 파일* 에서 사용할 수 있습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [.NET Framework에 대 한 구성 파일 스키마](index.md)

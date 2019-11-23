@@ -1,14 +1,13 @@
 ---
 title: WCF 개발자를 위한 프로덕션 gRPC의 gRPC
 description: 프로덕션 환경에서 ASP.NET Core gRPC 응용 프로그램 실행
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 2baef7071ab47616a58346cebf131cf0ba89537a
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: f30252b9937353b8670f509a245694f89512ba30
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "73841596"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73967798"
 ---
 # <a name="grpc-in-production"></a>프로덕션 환경의 gRPC
 

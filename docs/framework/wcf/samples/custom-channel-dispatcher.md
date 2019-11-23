@@ -13,7 +13,7 @@ ms.locfileid: "72291547"
 이 샘플에서는 <xref:System.ServiceModel.ServiceHostBase>를 직접 구현하여 사용자 지정 방식으로 채널 스택을 빌드하는 방법과 웹 호스트 환경에서 사용자 지정 채널 디스패처를 만드는 방법을 보여 줍니다. 채널 디스패처에서는 <xref:System.ServiceModel.Channels.IChannelListener>와 상호 작용하여 채널을 수락하고 채널 스택에서 메시지를 검색합니다. 또한 이 샘플에서는 <xref:System.ServiceModel.Activation.VirtualPathExtension>을 사용하여 웹 호스트 환경에서 채널 스택을 빌드하는 방법을 보여 주는 기본 샘플을 제공합니다.  
   
 ## <a name="custom-servicehostbase"></a>사용자 지정 ServiceHostBase  
- 이 샘플에서는 Windows Communication Foundation (WCF) 스택 구현을 채널 스택 맨 위에 있는 사용자 지정 메시지 처리 계층으로 바꾸는 방법을 보여 주기 위해 @no__t 대신-1 @no__t 기본 형식을 구현 합니다. 가상 메서드 <xref:System.ServiceModel.ServiceHostBase.InitializeRuntime%2A>을 재정의하여 채널 수신기 및 채널 디스패처를 빌드합니다.  
+ 이 샘플은 Windows Communication Foundation (WCF) 스택 구현을 채널 스택 맨 위에 있는 사용자 지정 메시지 처리 계층으로 바꾸는 방법을 보여 주기 위해 <xref:System.ServiceModel.ServiceHost> 대신 <xref:System.ServiceModel.ServiceHostBase> 기본 형식을 구현 합니다. 가상 메서드 <xref:System.ServiceModel.ServiceHostBase.InitializeRuntime%2A>을 재정의하여 채널 수신기 및 채널 디스패처를 빌드합니다.  
   
  웹 호스트 서비스를 구현하려면 전송 계층에서 호스트 환경 설정, 즉 IIS(인터넷 정보 서비스)/WAS(Windows Process Activation Service) 설정을 기반으로 채널 수신기를 구성하는 방법을 알 수 있도록 <xref:System.ServiceModel.Activation.VirtualPathExtension> 컬렉션에서 서비스 확장명 <xref:System.ServiceModel.ServiceHostBase.Extensions%2A>을 가져와 <xref:System.ServiceModel.Channels.BindingParameterCollection>에 추가합니다.  
   
@@ -29,7 +29,7 @@ ms.locfileid: "72291547"
   
  이 경우 브라우저에서 서비스를 찾아 올바르게 컴파일되었는지 확인할 수 있도록 사용자 지정 HTML 메시지를 반환하여 HTTP-GET 동사를 특별하게 처리했습니다. SOAP 동작이 일치하지 않는 경우에는 요청이 지원되지 않음을 나타내는 오류 메시지를 다시 보냅니다.  
   
- 이 샘플의 클라이언트는 서비스에서 어떤 것도 가정 하지 않는 일반적인 WCF 클라이언트입니다. 따라서 서비스는 일반적인 WCF @ no__t-0 구현에서 가져온 것과 일치 하도록 특별 하 게 설계 되었습니다. 결과적으로 클라이언트에는 서비스 계약만 필요합니다.  
+ 이 샘플의 클라이언트는 서비스에서 어떤 것도 가정 하지 않는 일반적인 WCF 클라이언트입니다. 따라서 서비스는 일반적인 WCF<xref:System.ServiceModel.ServiceHost> 구현에서 가져온 것과 일치 하도록 특별 하 게 설계 되었습니다. 결과적으로 클라이언트에는 서비스 계약만 필요합니다.  
   
 ## <a name="using-the-sample"></a>샘플 사용  
  클라이언트 애플리케이션을 직접 실행하면 다음과 같이 출력됩니다.  

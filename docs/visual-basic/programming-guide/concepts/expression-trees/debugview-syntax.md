@@ -1,5 +1,5 @@
 ---
-title: DebugView 속성 (Visual Basic)으로 사용 되는 구문
+title: Syntax used by DebugView property
 description: 식 트리의 문자열 표현을 생성하기 위해 DebugView 속성이 사용하는 특수 구문을 설명합니다.
 author: zspitz
 ms.author: wiwagn
@@ -8,18 +8,18 @@ ms.topic: reference
 helpviewer_keywords:
 - expression trees
 - debugview
-ms.openlocfilehash: ae2c75607f7b9cdc40fc5c163ce533f0472ab454
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 98ceba37aa226fab68ae1c1028e2a1139b3b8e7e
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66689543"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346875"
 ---
 # <a name="debugview-syntax"></a>`DebugView` 구문
 
 `DebugView` 속성(디버깅할 때만 사용 가능)은 식 트리의 문자열 렌더링을 제공합니다. 대부분의 구문은 이해하기 쉽습니다. 특별한 경우는 다음 섹션에서 설명합니다.
 
-각 예제는 포함 하는 주석 블록 뒤에 `DebugView`합니다.
+Each example is followed by a comment block containing the `DebugView`.
 
 ## <a name="parameterexpression"></a>ParameterExpression
 
@@ -45,14 +45,14 @@ Dim numParam As ParameterExpression = Expression.Parameter(GetType(Integer))
 
 정수 값, 문자열 및 `null`을 나타내는 <xref:System.Linq.Expressions.ConstantExpression?displayProperty=nameWithType> 개체의 경우 상수 값이 표시됩니다.
 
-일부 숫자 형식의 경우 접미사가 값에 추가 됩니다.
+For some numeric types, a suffix is added to the value:
 
-| 형식 | 키워드 | 접미사 |
+| Type | 키워드 | 접미사 |
 |--|--|--|
 | <xref:System.UInt32> | [UInteger](../../../language-reference/data-types/uinteger-data-type.md) | U |
 | <xref:System.Int64> | [Long](../../../language-reference/data-types/long-data-type.md) | L |
 | <xref:System.UInt64> | [ULong](../../../language-reference/data-types/ulong-data-type.md) | UL |
-| <xref:System.Double> | [Double](../../../language-reference/data-types/double-data-type.md) | D |
+| <xref:System.Double> | [double](../../../language-reference/data-types/double-data-type.md) | D |
 | <xref:System.Single> | [Single](../../../language-reference/data-types/single-data-type.md) | F |
 | <xref:System.Decimal> | [Decimal](../../../language-reference/data-types/decimal-data-type.md) | M |
 

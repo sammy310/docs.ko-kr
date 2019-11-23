@@ -161,7 +161,7 @@ End Class
 
 자세한 내용은 [멀티미디어 개요](multimedia-overview.md)를 참조하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Media>
 - <xref:System.Windows.Media.Animation>

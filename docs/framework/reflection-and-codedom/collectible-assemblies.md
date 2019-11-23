@@ -29,20 +29,20 @@ ms.locfileid: "73130286"
  
 - 형식 인수 중 하나로 `T`를 가진 제네릭 형식의 인스턴스입니다. 해당 컬렉션이 비어 있는 경우에도 `T`의 제네릭 컬렉션을 포함합니다.
 
-- `T`를 나타내는 <xref:System.Type> 또는 <xref:System.Reflection.Emit.TypeBuilder>의 인스턴스입니다. 
+- <xref:System.Type>를 나타내는 <xref:System.Reflection.Emit.TypeBuilder> 또는 `T`의 인스턴스입니다. 
 
    > [!IMPORTANT]
-   > 어셈블리의 부분을 나타내는 모든 개체를 릴리스해야 합니다. `T`를 정의하는 <xref:System.Reflection.Emit.ModuleBuilder>는 <xref:System.Reflection.Emit.TypeBuilder>에 대한 참조를 유지하고, <xref:System.Reflection.Emit.AssemblyBuilder> 개체는 <xref:System.Reflection.Emit.ModuleBuilder>에 대한 참조를 유지하므로 이러한 개체에 대한 참조를 릴리스해야 합니다. `T`의 생성에 사용되는 <xref:System.Reflection.Emit.LocalBuilder> 또는 <xref:System.Reflection.Emit.ILGenerator>의 존재는 언로드를 방지합니다.
+   > 어셈블리의 부분을 나타내는 모든 개체를 릴리스해야 합니다. <xref:System.Reflection.Emit.ModuleBuilder>를 정의하는 `T`는 <xref:System.Reflection.Emit.TypeBuilder>에 대한 참조를 유지하고, <xref:System.Reflection.Emit.AssemblyBuilder> 개체는 <xref:System.Reflection.Emit.ModuleBuilder>에 대한 참조를 유지하므로 이러한 개체에 대한 참조를 릴리스해야 합니다. <xref:System.Reflection.Emit.LocalBuilder>의 생성에 사용되는 <xref:System.Reflection.Emit.ILGenerator> 또는 `T`의 존재는 언로드를 방지합니다.
 
-- 코드를 실행하여 계속 연결할 수 있는 다른 동적으로 정의된 유형 `T1`별 `T`에 대한 정적 참조입니다. 예를 들어 `T1`은 `T`에서 파생될 수 있거나 `T`는 `T1`의 메서드에서 매개 변수의 형식이 될 수 있습니다.
+- 코드를 실행하여 계속 연결할 수 있는 다른 동적으로 정의된 유형 `T`별 `T1`에 대한 정적 참조입니다. 예를 들어 `T1`은 `T`에서 파생될 수 있거나 `T`는 `T1`의 메서드에서 매개 변수의 형식이 될 수 있습니다.
  
-- `T`에 속해 있는 정적 필드에 대한 **ByRef**입니다.
+- **에 속해 있는 정적 필드에 대한** ByRef`T`입니다.
 
-- `T`를 참조하는 <xref:System.RuntimeTypeHandle>, <xref:System.RuntimeFieldHandle> 또는 <xref:System.RuntimeMethodHandle>, 또는 `T`의 구성 요소에 대한 것입니다.
+- <xref:System.RuntimeTypeHandle>를 참조하는 <xref:System.RuntimeFieldHandle>, <xref:System.RuntimeMethodHandle> 또는 `T`, 또는 `T`의 구성 요소에 대한 것입니다.
 
-- `T`를 나타내는 <xref:System.Type> 개체에 대한 액세스에 간접적 또는 직접적으로 사용될 수 있는 모든 리플렉션 개체의 인스턴스입니다. 예를 들어 `T`에 대한 <xref:System.Type> 개체는 요소 형식이 `T`인 배열 형식에서 또는 형식 인수로 `T`를 가진 제네릭 형식에서 얻을 수 있습니다. 
+- <xref:System.Type>를 나타내는 `T` 개체에 대한 액세스에 간접적 또는 직접적으로 사용될 수 있는 모든 리플렉션 개체의 인스턴스입니다. 예를 들어 <xref:System.Type>에 대한 `T` 개체는 요소 형식이 `T`인 배열 형식에서 또는 형식 인수로 `T`를 가진 제네릭 형식에서 얻을 수 있습니다. 
 
-- `M`이 `T`의 메서드이거나 어셈블리에 정의된 모듈 수준 메서드인 모든 스레드의 호출 스택에 있는 메서드 `M`입니다.
+- `M`이 `M`의 메서드이거나 어셈블리에 정의된 모듈 수준 메서드인 모든 스레드의 호출 스택에 있는 메서드 `T`입니다.
 
 - 어셈블리의 모듈에 정의된 정적 메서드에 대한 대리자입니다.
 
@@ -78,6 +78,6 @@ ms.locfileid: "73130286"
 - **스레드 정적 데이터**       
    스레드 정적 변수는 지원되지 않습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [동적 메서드 및 어셈블리 내보내기](emitting-dynamic-methods-and-assemblies.md)

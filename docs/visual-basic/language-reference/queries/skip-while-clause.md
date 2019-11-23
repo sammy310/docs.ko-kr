@@ -1,5 +1,5 @@
 ---
-title: Skip While 절(Visual Basic)
+title: Skip While 절
 ms.date: 07/20/2015
 f1_keywords:
 - vb.QuerySkipWhile
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - Skip While clause [Visual Basic]
 - queries [Visual Basic], Skip While
 ms.assetid: 5dee8350-7520-4f1a-b00d-590cacd572d6
-ms.openlocfilehash: 7f37a6fa1c9ba7fdf7978ac6853e4c2985bf72e7
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 47703e445865435f5bf5312c3fe41833ac21aa3f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72004702"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74333148"
 ---
-# <a name="skip-while-clause-visual-basic"></a>Skip While 절(Visual Basic)
+# <a name="skip-while-clause-visual-basic"></a>Skip While Clause (Visual Basic)
 지정된 조건이 `true`이면 컬렉션에 있는 요소를 무시하고 나머지 요소를 반환합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -28,17 +28,17 @@ Skip While expression
   
 |용어|정의|  
 |---|---|  
-|`expression`|필수. 요소를 테스트할 조건을 나타내는 식입니다. 식은 `Boolean` 값 또는 같은 기능을 반환 해야 합니다. 예를 들어 `Integer`은 `Boolean`로 계산 됩니다.|  
+|`expression`|필수 요소. An expression that represents a condition to test elements for. The expression must return a `Boolean` value or a functional equivalent, such as an `Integer` to be evaluated as a `Boolean`.|  
   
-## <a name="remarks"></a>설명  
- @No__t-0 절은 제공 된 `expression` `false`가 반환 될 때까지 쿼리 결과의 시작 부분에서 요소를 무시 합니다. @No__t-0 `false`을 반환 하면 쿼리는 나머지 요소를 모두 반환 합니다. 나머지 결과에 대해서는 0 @no__t 무시 됩니다.  
+## <a name="remarks"></a>주의  
+ The `Skip While` clause bypasses elements from the beginning of a query result until the supplied `expression` returns `false`. After `expression` returns `false`, the query returns all the remaining elements. The `expression` is ignored for the remaining results.  
   
- @No__t-0 절은 `Where` 절을 사용 하 여 특정 조건을 충족 하지 않는 쿼리에서 모든 요소를 제외할 수 있다는 점에서 `Where` 절과 다릅니다. @No__t-0 절은 조건이 충족 되지 않을 때까지 요소만 제외 합니다. @No__t-0 절은 순서가 지정 된 쿼리 결과를 작업할 때 가장 유용 합니다.  
+ The `Skip While` clause differs from the `Where` clause in that the `Where` clause can be used to exclude all elements from a query that do not meet a particular condition. The `Skip While` clause excludes elements only until the first time that the condition is not satisfied. The `Skip While` clause is most useful when you are working with an ordered query result.  
   
- @No__t-0 절을 사용 하 여 쿼리 결과의 시작 부분에서 특정 개수의 결과를 무시할 수 있습니다.  
+ You can bypass a specific number of results from the beginning of a query result by using the `Skip` clause.  
   
 ## <a name="example"></a>예제  
- 다음 코드 예제에서는 미국의 첫 번째 고객이 발견 될 때까지 `Skip While` 절을 사용 하 여 결과를 무시 합니다.  
+ The following code example uses the `Skip While` clause to bypass results until the first customer from the United States is found.  
   
  [!code-vb[VbSimpleQuerySamples#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#3)]  
   

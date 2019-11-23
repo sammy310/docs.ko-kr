@@ -24,22 +24,22 @@ ms.locfileid: "72004980"
   
 ## <a name="arguments"></a>인수  
  `+` &#124; `-`  
- (선택 사항) @No__t-0을 지정 하는 것은 `-verbose+`을 지정 하는 것과 같으며,이로 인해 컴파일러가 자세한 정보 메시지를 내보냅니다. 이 옵션의 기본값은 `-verbose-`입니다.  
+ (선택 사항) `-verbose` 지정은 `-verbose+`를 지정 하는 것과 동일 하며,이로 인해 컴파일러가 자세한 정보 메시지를 내보냅니다. 이 옵션의 기본값은 `-verbose-`입니다.  
   
-## <a name="remarks"></a>설명  
- @No__t-0 옵션은 컴파일러에서 실행 된 총 오류 수에 대 한 정보를 표시 하 고, 모듈에서 로드 되는 어셈블리를 보고 하 고, 현재 컴파일되는 파일을 표시 합니다.  
+## <a name="remarks"></a>주의  
+ `-verbose` 옵션은 컴파일러에서 실행 된 총 오류 수에 대 한 정보를 표시 하 고, 모듈에서 로드 되는 어셈블리를 보고 하 고, 현재 컴파일되는 파일을 표시 합니다.  
   
 > [!NOTE]
-> @No__t-0 옵션은 Visual Studio 개발 환경에서 사용할 수 없습니다. 명령줄에서 컴파일하는 경우에만 사용할 수 있습니다.  
+> `-verbose` 옵션은 Visual Studio 개발 환경에서 사용할 수 없습니다. 명령줄에서 컴파일하는 경우에만 사용할 수 있습니다.  
   
 ## <a name="example"></a>예제  
- 다음 코드는-0 @no__t 컴파일하고 자세한 상태 정보를 표시 하도록 컴파일러에 지시 합니다.  
+ 다음 코드는 `In.vb` 컴파일하고 자세한 상태 정보를 표시 하도록 컴파일러에 지시 합니다.  
   
 ```console  
 vbc -verbose in.vb  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Visual Basic 명령줄 컴파일러](../../../visual-basic/reference/command-line-compiler/index.md)
 - [샘플 컴파일 명령줄](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

@@ -1,14 +1,13 @@
 ---
 title: Wcf 개발자를 위한 gRPC gRPC로 WCF 요청-회신 서비스 마이그레이션
 description: WCF에서 gRPC로 간단한 요청-응답 서비스를 마이그레이션하는 방법에 대해 알아봅니다.
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 12e042e8e7e3683cc4da1fedce2482e7199b04a7
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: f0b20e7b374438f90d83aebc6035a4e4dd94ae18
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "73841506"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971780"
 ---
 # <a name="migrate-a-wcf-request-reply-service-to-a-grpc-unary-rpc"></a>WCF 요청-회신 서비스를 gRPC 단항 RPC로 마이그레이션
 

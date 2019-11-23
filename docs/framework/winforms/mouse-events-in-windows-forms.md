@@ -28,13 +28,13 @@ ms.locfileid: "71834605"
 
 ## <a name="mouse-information"></a>마우스 정보
 
-<xref:System.Windows.Forms.MouseEventArgs>는 마우스 단추 클릭 및 마우스 움직임 추적과 관련된 마우스 이벤트 처리기로 전송됩니다. <xref:System.Windows.Forms.MouseEventArgs>는 클라이언트 좌표에서 마우스 포인터의 위치, 누른 마우스 단추, 마우스 휠의 스크롤 여부를 포함하여 마우스의 현재 상태에 대한 정보를 제공합니다. 마우스 포인터가 컨트롤의 범위로 들어오거나 나갈 때 단순히 알리는 이벤트와 같은 여러 마우스 이벤트가 추가 정보 없이 <xref:System.EventArgs>를 이벤트 처리기로 전송합니다.
+<xref:System.Windows.Forms.MouseEventArgs>는 마우스 단추 클릭 및 마우스 움직임 추적과 관련된 마우스 이벤트 처리기로 전송됩니다. <xref:System.Windows.Forms.MouseEventArgs>은 클라이언트 좌표에서 마우스 포인터의 위치, 누른 마우스 단추 및 마우스 휠이 스크롤 되었는지 여부를 포함 하 여 마우스의 현재 상태에 대 한 정보를 제공 합니다. 마우스 포인터가 컨트롤의 범위로 들어오거나 나갈 때 단순히 알리는 이벤트와 같은 여러 마우스 이벤트가 추가 정보 없이 <xref:System.EventArgs>를 이벤트 처리기로 전송합니다.
 
-마우스 이벤트를 처리하지 않고 마우스 단추의 현재 상태나 마우스 포인터의 위치를 확인하려는 경우 <xref:System.Windows.Forms.Control> 클래스의 <xref:System.Windows.Forms.Control.MouseButtons%2A> 및 <xref:System.Windows.Forms.Control.MousePosition%2A> 속성을 사용할 수도 있습니다. <xref:System.Windows.Forms.Control.MouseButtons%2A>는 현재 누른 마우스 단추에 대한 정보를 반환합니다. <xref:System.Windows.Forms.Control.MousePosition%2A>은 마우스 포인터의 화면 좌표를 반환하며 <xref:System.Windows.Forms.Cursor.Position%2A>에서 반환되는 값과 같습니다.
+마우스 이벤트를 처리하지 않고 마우스 단추의 현재 상태나 마우스 포인터의 위치를 확인하려는 경우 <xref:System.Windows.Forms.Control.MouseButtons%2A> 클래스의 <xref:System.Windows.Forms.Control.MousePosition%2A> 및 <xref:System.Windows.Forms.Control> 속성을 사용할 수도 있습니다. <xref:System.Windows.Forms.Control.MouseButtons%2A> 현재 눌러져 있는 마우스 단추에 대 한 정보를 반환 합니다. <xref:System.Windows.Forms.Control.MousePosition%2A>은 마우스 포인터의 화면 좌표를 반환하며 <xref:System.Windows.Forms.Cursor.Position%2A>에서 반환되는 값과 같습니다.
 
 ## <a name="converting-between-screen-and-client-coordinates"></a>화면 좌표와 클라이언트 좌표 간의 변환
 
-일부 마우스 위치 정보는 클라이언트 좌표로 표시되고 일부 정보는 화면 좌표로 표시되므로 좌표계 간에 지점을 변환해야 할 수도 있습니다. <xref:System.Windows.Forms.Control> 클래스에서 사용할 수 있는 <xref:System.Windows.Forms.Control.PointToClient%2A> 및 <xref:System.Windows.Forms.Control.PointToScreen%2A> 메서드를 사용하면 이 작업을 쉽게 수행할 수 있습니다.
+일부 마우스 위치 정보는 클라이언트 좌표로 표시되고 일부 정보는 화면 좌표로 표시되므로 좌표계 간에 지점을 변환해야 할 수도 있습니다. <xref:System.Windows.Forms.Control.PointToClient%2A> 클래스에서 사용할 수 있는 <xref:System.Windows.Forms.Control.PointToScreen%2A> 및 <xref:System.Windows.Forms.Control> 메서드를 사용하면 이 작업을 쉽게 수행할 수 있습니다.
 
 ## <a name="standard-click-event-behavior"></a>표준 클릭 이벤트 동작
 
@@ -66,7 +66,7 @@ ms.locfileid: "71834605"
 
 8. <xref:System.Windows.Forms.Control.MouseUp> 이벤트
 
-마우스 클릭 이벤트의 순서를 보여 주는 코드 예제를 보려면 [How to: Windows Forms 컨트롤 @ no__t에서 사용자 입력 이벤트를 처리 합니다.
+마우스 클릭 이벤트의 순서를 보여 주는 코드 예제는 [방법: Windows Forms 컨트롤에서 사용자 입력 이벤트 처리](how-to-handle-user-input-events-in-windows-forms-controls.md)를 참조 하세요.
 
 ### <a name="individual-controls"></a>개별 컨트롤
 
@@ -82,11 +82,11 @@ ms.locfileid: "71834605"
 
   - 마우스 왼쪽 단추 클릭: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>
 
-  - 마우스 오른쪽 단추를 클릭 합니다. Click 이벤트가 발생 하지 않음
+  - 마우스 오른쪽 단추 클릭: 클릭 이벤트가 발생하지 않음
 
   - 마우스 왼쪽 단추 두 번 클릭: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>, <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>
 
-  - 마우스 오른쪽 단추를 두 번 클릭 합니다. Click 이벤트가 발생 하지 않음
+  - 마우스 오른쪽 단추 두 번 클릭: 클릭 이벤트가 발생하지 않음
 
 - <xref:System.Windows.Forms.TextBox>, <xref:System.Windows.Forms.RichTextBox>, <xref:System.Windows.Forms.ListBox>, <xref:System.Windows.Forms.MaskedTextBox>및 <xref:System.Windows.Forms.CheckedListBox> 컨트롤
 
@@ -95,16 +95,16 @@ ms.locfileid: "71834605"
 
   - 마우스 왼쪽 단추 클릭: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>
 
-  - 마우스 오른쪽 단추를 클릭 합니다. Click 이벤트가 발생 하지 않음
+  - 마우스 오른쪽 단추 클릭: 클릭 이벤트가 발생하지 않음
 
   - 마우스 왼쪽 단추 두 번 클릭: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>, <xref:System.Windows.Forms.Control.DoubleClick>, <xref:System.Windows.Forms.Control.MouseDoubleClick>
 
-  - 마우스 오른쪽 단추를 두 번 클릭 합니다. Click 이벤트가 발생 하지 않음
+  - 마우스 오른쪽 단추 두 번 클릭: 클릭 이벤트가 발생하지 않음
 
 - <xref:System.Windows.Forms.ListView> 컨트롤
 
   > [!NOTE]
-  > 사용자가 <xref:System.Windows.Forms.ListView> 컨트롤의 항목을 클릭하는 경우에만 나중에 자세히 설명하는 이벤트 동작이 발생합니다. 컨트롤의 다른 곳을 클릭하면 이벤트가 발생하지 않습니다. 나중에 설명하는 이벤트 외에도 <xref:System.Windows.Forms.ListView> 컨트롤에 유효성 검사를 사용하려는 경우 중요할 수 있는 <xref:System.Windows.Forms.ListView.BeforeLabelEdit> 및 <xref:System.Windows.Forms.ListView.AfterLabelEdit> 이벤트가 있습니다.
+  > 사용자가 <xref:System.Windows.Forms.ListView> 컨트롤의 항목을 클릭하는 경우에만 나중에 자세히 설명하는 이벤트 동작이 발생합니다. 컨트롤의 다른 곳을 클릭하면 이벤트가 발생하지 않습니다. 나중에 설명하는 이벤트 외에도 <xref:System.Windows.Forms.ListView.BeforeLabelEdit> 컨트롤에 유효성 검사를 사용하려는 경우 중요할 수 있는 <xref:System.Windows.Forms.ListView.AfterLabelEdit> 및 <xref:System.Windows.Forms.ListView> 이벤트가 있습니다.
 
   - 마우스 왼쪽 단추 클릭: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>
 
@@ -117,7 +117,7 @@ ms.locfileid: "71834605"
 - <xref:System.Windows.Forms.TreeView> 컨트롤
 
   > [!NOTE]
-  > 사용자가 <xref:System.Windows.Forms.TreeView> 컨트롤에서 항목 자체나 항목 오른쪽을 클릭하는 경우에만 나중에 자세히 설명하는 이벤트 동작이 발생합니다. 컨트롤의 다른 곳을 클릭하면 이벤트가 발생하지 않습니다. 나중에 설명하는 이벤트 외에도 <xref:System.Windows.Forms.TreeView> 컨트롤에 유효성 검사를 사용하려는 경우 중요할 수 있는 <xref:System.Windows.Forms.TreeView.BeforeCheck>, <xref:System.Windows.Forms.TreeView.BeforeSelect>, <xref:System.Windows.Forms.TreeView.BeforeLabelEdit>, <xref:System.Windows.Forms.TreeView.AfterSelect>, <xref:System.Windows.Forms.TreeView.AfterCheck> 및 <xref:System.Windows.Forms.TreeView.AfterLabelEdit> 이벤트가 있습니다.
+  > 사용자가 <xref:System.Windows.Forms.TreeView> 컨트롤에서 항목 자체나 항목 오른쪽을 클릭하는 경우에만 나중에 자세히 설명하는 이벤트 동작이 발생합니다. 컨트롤의 다른 곳을 클릭하면 이벤트가 발생하지 않습니다. 나중에 설명하는 이벤트 외에도 <xref:System.Windows.Forms.TreeView.BeforeCheck> 컨트롤에 유효성 검사를 사용하려는 경우 중요할 수 있는 <xref:System.Windows.Forms.TreeView.BeforeSelect>, <xref:System.Windows.Forms.TreeView.BeforeLabelEdit>, <xref:System.Windows.Forms.TreeView.AfterSelect>, <xref:System.Windows.Forms.TreeView.AfterCheck>, <xref:System.Windows.Forms.TreeView.AfterLabelEdit> 및 <xref:System.Windows.Forms.TreeView> 이벤트가 있습니다.
 
   - 마우스 왼쪽 단추 클릭: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>
 
@@ -150,6 +150,6 @@ ms.locfileid: "71834605"
     > [!NOTE]
     > 사용자가 마우스 단추를 누른 동안 토글 컨트롤에서 포인터를 이동하는 경우(예: 누른 동안 <xref:System.Windows.Forms.Button> 컨트롤에서 마우스 이동) 토글 컨트롤이 올려진 상태로 그려지고 <xref:System.Windows.Forms.Control.MouseUp> 이벤트만 발생합니다. 이런 상황에서는 <xref:System.Windows.Forms.Control.Click> 또는 <xref:System.Windows.Forms.Control.MouseClick> 이벤트가 발생하지 않습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Windows Forms 애플리케이션의 마우스 입력](mouse-input-in-a-windows-forms-application.md)

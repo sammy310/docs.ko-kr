@@ -1,14 +1,13 @@
 ---
 title: Protobuf 예약 필드-WCF 개발자를 위한 gRPC
 description: 버전 간 호환성을 위해 예약 된 필드에 대해 알아봅니다.
-author: markrendle
 ms.date: 09/09/2019
-ms.openlocfilehash: 34697371299bdc5d9a58c0696c1ce7d19816ca87
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: e589cd38a712ce014fa2c4d847fbde359d538dd0
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "73841392"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73967308"
 ---
 # <a name="protobuf-reserved-fields"></a>Protobuf 예약된 필드
 

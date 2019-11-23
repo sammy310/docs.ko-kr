@@ -1,5 +1,5 @@
 ---
-title: <configuration>에 대한 <configSections> 요소
+title: <configSections>에 대한 <configuration> 요소
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/configSections
@@ -16,12 +16,12 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73119023"
 ---
-# <a name="configsections-element-for-configuration"></a>\<구성에 대 한 configSections > 요소를 \<
+# <a name="configsections-element-for-configuration"></a>\<구성에 대 한 configSections > 요소를 \<>
 
 구성 섹션과 네임 스페이스 선언을 포함 합니다.
 
 [ **\<configuration>** ](configuration-element.md)   
-**configSections을\<** &nbsp;&nbsp;
+&nbsp;&nbsp; **\<configSections>**
 
 ## <a name="attributes"></a>특성
 
@@ -29,16 +29,16 @@ ms.locfileid: "73119023"
 
 ## <a name="parent-element"></a>부모 요소
 
-|     | 설명 |
+|     | Description |
 | --- | ----------- |
 | [ **\<configuration>** ](configuration-element.md) | 공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다. |
 
 ## <a name="child-elements"></a>자식 요소
 
-|     | 설명 |
+|     | Description |
 | --- | ----------- |
-| [ **\<섹션 >** ](section-element.md) | 구성 섹션 선언을 포함 합니다. |
-| [ **\<sectionGroup >** ](sectiongroup-element-for-configsections.md) | 구성 섹션에 대 한 네임 스페이스를 정의 합니다. |
+| [ **\<section>** ](section-element.md) | 구성 섹션 선언을 포함 합니다. |
+| [ **\<sectionGroup>** ](sectiongroup-element-for-configsections.md) | 구성 섹션에 대 한 네임 스페이스를 정의 합니다. |
 | [ **\<remove>** ](remove-element-for-configsections.md) | 미리 정의 된 섹션 또는 섹션 그룹을 제거 합니다. |
 | [ **\<clear>** ](clear-element-for-configsections.md) | 이전에 정의 된 모든 섹션과 섹션 그룹을 지웁니다. |
 
@@ -66,6 +66,6 @@ ms.locfileid: "73119023"
 
 이 요소는 응용 프로그램 구성 파일 *, 컴퓨터 구성 파일 (machine.config*) 및 응용 프로그램 디렉터리 수준에 없는 *web.config 파일* 에서 사용할 수 있습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [.NET Framework에 대 한 구성 파일 스키마](index.md)

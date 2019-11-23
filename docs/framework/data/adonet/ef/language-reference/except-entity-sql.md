@@ -25,7 +25,7 @@ expression EXCEPT expression
 ## <a name="return-value"></a>반환 값  
  형식이 같거나 기본 형식 또는 파생 형식이 `expression`인 컬렉션입니다.  
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
  EXCEPT는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 집합 연산자 중 하나입니다. 모든 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 집합 연산자는 왼쪽에서 오른쪽으로 계산됩니다. 다음 표에서는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 집합 연산자의 우선 순위를 보여 줍니다.  
   
 |우선 순위|연산자|  
@@ -38,12 +38,12 @@ expression EXCEPT expression
 ## <a name="example"></a>예제  
  다음 Entity SQL 쿼리에서는 EXCEPT 연산자를 사용하여 두 쿼리 식에서 모든 고유한 값의 컬렉션을 반환합니다. 쿼리는 AdventureWorks Sales 모델을 기반으로 합니다. 이 쿼리를 컴파일하고 실행하려면 다음 단계를 수행하세요.  
   
-1. @No__t-0How to: StructuralType 결과 @ no__t-0을 반환 하는 쿼리를 실행 합니다.  
+1. [방법: StructuralType 결과를 반환하는 쿼리 실행](../how-to-execute-a-query-that-returns-structuraltype-results.md)의 절차를 따릅니다.  
   
 2. 다음 쿼리를 `ExecuteStructuralTypeQuery` 메서드에 인수로 전달합니다.  
   
  [!code-sql[DP EntityServices Concepts#EXCEPT](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#except)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [엔터티 SQL 참조](entity-sql-reference.md)

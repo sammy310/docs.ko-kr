@@ -56,7 +56,7 @@ JIT 컴파일에 성공 했는지 여부를 나타내는 값입니다.
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [DynamicMethodJITCompilationStarted 메서드](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md)
 - [ICorProfilerCallback8 인터페이스](icorprofilercallback8-interface.md)

@@ -22,8 +22,8 @@ ms.locfileid: "71833787"
  `aliasedExpression`  
  그룹화가 수행되는 유효한 쿼리 식입니다. `expression` 은 속성일 수도 있고 FROM 절을 통해 반환되는 속성을 참조하는 비집계 식일 수도 있습니다. GROUP BY 절의 모든 식은 같지 않음을 비교할 수 있는 형식으로 계산되어야 합니다. 이런 형식은 일반적으로 숫자, 문자열, 날짜와 같은 스칼라 기본 형식입니다. 컬렉션을 기준으로 그룹화할 수 없습니다.  
   
-## <a name="remarks"></a>설명  
- SELECT 절에 집계 함수가 포함 된 경우 \<select 목록 >에서 GROUP BY는 각 그룹에 대 한 요약 값을 계산 합니다. GROUP BY가 지정된 경우, 선택 목록 내의 집계가 아닌 식에 있는 모든 속성 이름이 GROUP BY 목록에 포함되어야 하거나 아니면 GROUP BY 식이 선택 목록 식과 정확히 일치해야 합니다.  
+## <a name="remarks"></a>주의  
+ SELECT 절에 집계 함수가 포함 된 경우 목록 > \<선택 하 고 GROUP BY는 각 그룹에 대 한 요약 값을 계산 합니다. GROUP BY가 지정된 경우, 선택 목록 내의 집계가 아닌 식에 있는 모든 속성 이름이 GROUP BY 목록에 포함되어야 하거나 아니면 GROUP BY 식이 선택 목록 식과 정확히 일치해야 합니다.  
   
 > [!NOTE]
 > ORDER BY 절이 지정되지 않은 경우에는 GROUP BY 절에 의해 반환되는 그룹에 특정 순서가 없습니다. 데이터에 특정 정렬 순서를 지정하려면 항상 ORDER BY 절을 사용하는 것이 좋습니다.  
@@ -62,13 +62,13 @@ GROUP BY 1   -- BAD, a constant is not allowed
 ## <a name="example"></a>예제  
  다음 Entity SQL 쿼리에서는 GROUP BY 연산자를 사용하여 쿼리를 통해 반환되는 개체가 배치될 그룹을 지정합니다. 쿼리는 AdventureWorks Sales 모델을 기반으로 합니다. 이 쿼리를 컴파일하고 실행하려면 다음 단계를 수행하세요.  
   
-1. @No__t-0How to: PrimitiveType 결과 @ no__t-0을 반환 하는 쿼리를 실행 합니다.  
+1. [방법: PrimitiveType 결과를 반환 하는 쿼리 실행](../how-to-execute-a-query-that-returns-primitivetype-results.md)의 절차를 따릅니다.  
   
 2. 다음 쿼리를 `ExecutePrimitiveTypeQuery` 메서드에 인수로 전달합니다.  
   
  [!code-sql[DP EntityServices Concepts#GROUPBY](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#groupby)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [엔터티 SQL 참조](entity-sql-reference.md)
 - [쿼리 식](query-expressions-entity-sql.md)

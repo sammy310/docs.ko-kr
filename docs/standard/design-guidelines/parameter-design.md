@@ -22,7 +22,7 @@ ms.locfileid: "71353734"
   
  **✓ DO** 멤버에 필요한 기능을 제공 하는 최소 파생 된 매개 변수 형식을 사용 합니다.  
   
- 예를 들어 컬렉션을 열거 하 고 각 항목을 콘솔에 출력 하는 메서드를 디자인 하려는 경우를 가정해 보겠습니다. 이러한 메서드는 <xref:System.Collections.ArrayList> 또는 <xref:System.Collections.IList>가 아닌 <xref:System.Collections.IEnumerable>을 매개 변수로 사용 해야 합니다.  
+ 예를 들어 컬렉션을 열거 하 고 각 항목을 콘솔에 출력 하는 메서드를 디자인 하려는 경우를 가정해 보겠습니다. 이러한 메서드는 <xref:System.Collections.ArrayList> 또는 <xref:System.Collections.IList>가 아닌 <xref:System.Collections.IEnumerable> 매개 변수로 사용 해야 합니다.  
   
  **X DO NOT** 예약 된 매개 변수를 사용 합니다.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "71353734"
   
  **✓ DO** 모든 배치 `out` 다음 값으로의 모든 매개 변수 및 `ref` 매개 변수 (매개 변수 배열 제외) 매개 변수 오버 로드 간의 순서 지정에 불일치가 발생 하는 경우에 (참조 [멤버 오버 로드](../../../docs/standard/design-guidelines/member-overloading.md)).  
   
- @No__t-0 매개 변수는 추가 반환 값으로 표시 될 수 있으며,이를 함께 그룹화 하면 메서드 서명을 보다 쉽게 이해할 수 있습니다.  
+ `out` 매개 변수를 추가 반환 값으로 볼 수 있으며, 이러한 매개 변수를 함께 그룹화 하면 메서드 시그니처를 더 쉽게 이해할 수 있습니다.  
   
  **✓ DO** 멤버를 재정의 하는 경우 매개 변수를 명명 또는 인터페이스 멤버 구현 일관 되 게 합니다.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "71353734"
  **✓ CONSIDER** 부울 값이 실제로 두 가지 상태는 부울 속성을 초기화 하는 생성자 매개 변수를 사용 하 여 합니다.  
   
 ### <a name="validating-arguments"></a>인수 유효성 검사  
- **✓ DO** public, protected 또는 명시적으로 구현 된 멤버에 전달 되는 인수의 유효성을 검사 합니다. 유효성 검사가 실패 하는 경우 <xref:System.ArgumentException?displayProperty=nameWithType> 또는 해당 하위 클래스 중 하나를 Throw 합니다.  
+ **✓ DO** public, protected 또는 명시적으로 구현 된 멤버에 전달 되는 인수의 유효성을 검사 합니다. 유효성 검사가 실패 하는 경우 <xref:System.ArgumentException?displayProperty=nameWithType>또는 해당 하위 클래스 중 하나를 Throw 합니다.  
   
  실제 유효성 검사가 public 또는 protected 멤버 자체에서 발생할 필요는 없습니다. 일부 전용 또는 내부 루틴에서 하위 수준으로 발생할 수 있습니다. 주된 점은 최종 사용자에 게 노출 되는 전체 노출 영역에서 인수를 확인 하는 것입니다.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "71353734"
   
  **X AVOID** 를 사용 하 여 `out` 또는 `ref` 매개 변수입니다.  
   
- @No__t-0 또는 `ref` 매개 변수를 사용 하려면 포인터를 사용 하 고, 값 형식과 참조 형식이 어떻게 다른 지 이해 하 고, 여러 개의 반환 값이 있는 메서드를 처리 해야 합니다. 또한 `out` 와`ref` 매개 변수의 차이는 널리 이해 되지 않습니다. 일반 사용자를 위해 설계 된 프레임 워크 설계자는 `out` 또는 `ref` 매개 변수를 사용 하 여 작업할 수 없습니다.  
+ `out` 또는 `ref` 매개 변수를 사용 하려면 포인터에 대 한 경험을 사용 하 고, 값 형식과 참조 형식이 어떻게 다른 지, 반환 값이 여러 개인 메서드를 처리 해야 합니다. 또한 `out`와 `ref` 매개 변수의 차이는 널리 이해 되지 않습니다. 일반 사용자를 위해 디자인 하는 프레임 워크 설계자는 사용자가 `out` 또는 `ref` 매개 변수로 작업 하는 것을 예측할 수 없습니다.  
   
  **X DO NOT** 참조 형식을 참조로 전달 합니다.  
   
@@ -92,7 +92,7 @@ public class String {
 }  
 ```  
   
- 사용자는 다음과 같이 <xref:System.String.Format%2A?displayProperty=nameWithType> 메서드를 호출할 수 있습니다.  
+ 그러면 사용자가 다음과 같이 <xref:System.String.Format%2A?displayProperty=nameWithType> 메서드를 호출할 수 있습니다.  
   
  `String.Format("File {0} not found in {1}",new object[]{filename,directory});`  
   
@@ -151,11 +151,11 @@ public class String {
   
  예를 들어 단순한 포인터 산술 연산을 사용 하 여 동일한 결과를 얻을 수 있으므로 시작 인덱스를 전달할 필요가 없습니다.  
   
- *Portions © 2005, 2009 Microsoft Corporation. 모든 권리 보유.*  
+ *2005, 2009 Microsoft Corporation © 부분입니다. All rights reserved.*  
   
- @no__t-[Framework 디자인 지침에서 피어슨 교육부, Inc.의 권한으로 0Reprinted. 다시 사용할 수 있는 .NET 라이브러리에 대 한 규칙, 관용구 및 패턴, Microsoft Windows 개발 @no__t 시리즈의 일부로 Addison-Wesley Professional에서 2008 no__t, Krzysztof Cwalina 및 Brad Abrams 성  
+ *Pearson Education, Inc의 동의로 재인쇄. 출처: [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 작성자: Krzysztof Cwalina 및 Brad Abrams, 출판 정보: Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [멤버 디자인 지침](../../../docs/standard/design-guidelines/member.md)
 - [프레임워크 디자인 지침](../../../docs/standard/design-guidelines/index.md)

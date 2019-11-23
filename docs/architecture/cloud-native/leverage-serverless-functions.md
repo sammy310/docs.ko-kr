@@ -56,7 +56,7 @@ ms.locfileid: "73841746"
 
 마지막으로 응용 프로그램 내의 특정 작업에 대해 서버 리스를 활용 하면 복잡성이 증가 합니다. 먼저 모듈화 된 느슨하게 연결 된 방식으로 응용 프로그램을 설계 하는 것이 가장 좋습니다. 그런 다음 서버를 사용 하지 않는 이점이 있으면 추가 복잡성을 제공 하는지 확인 하는 것이 좋습니다. 서버를 사용 하지 않는 컴퓨팅에는 분산 응용 프로그램 아키텍처를 사용 하지 않고도 단일 모놀리식 배포에서 더 작은 응용 프로그램을 완벽 하 게 실행할 수 있습니다.
 
-## <a name="references"></a>참조 항목
+## <a name="references"></a>참조
 
 - [서버 리스 콜드 시작 이해](https://azure.microsoft.com/blog/understanding-serverless-cold-start/)
 - [사전 준비 Azure Functions 인스턴스](https://docs.microsoft.com/azure/azure-functions/functions-premium-plan#pre-warmed-instances)

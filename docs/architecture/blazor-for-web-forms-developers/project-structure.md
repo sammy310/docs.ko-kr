@@ -98,7 +98,7 @@ Blazor apps에는 응용 프로그램의 시작 논리를 정의 *하는 global.
 
 ASP.NET Web Forms 프로젝트와 달리 Blazor 프로젝트의 일부 파일은 정적 파일로 요청할 수 없습니다. *Wwwroot* 폴더의 파일만 웹 주소 지정할 수 있습니다. 이 폴더는 앱의 "웹 루트" 라고 합니다. 앱의 웹 루트 외부에 있는 모든 항목은 웹 주소 지정이 가능 *하지 않습니다* . 이 설치 프로그램은 웹을 통해 프로젝트 파일이 실수로 노출 되는 것을 방지 하는 추가 보안 수준을 제공 합니다.
 
-## <a name="configuration"></a>Configuration
+## <a name="configuration"></a>구성
 
 ASP.NET Web Forms apps의 구성은 일반적으로 하나 이상의 *web.config* 파일을 사용 하 여 처리 됩니다. Blazor apps는 일반적으로 *web.config* 파일을 포함 하지 않습니다. 이 경우 IIS에서 호스팅되는 경우에만 파일이 IIS 관련 설정을 구성 하는 데 사용 됩니다. 대신 Blazor 서버 앱은 ASP.NET Core 구성 추상화를 사용 합니다 (Blazor Weasembomapps는 현재 동일한 구성 추상화를 지원 하지만이 기능은 나중에 추가 될 수 있음). 예를 들어 기본 Blazor Server 앱은 *appsettings*에 일부 설정을 저장 합니다.
 
@@ -164,7 +164,7 @@ Blazor를 부트스트랩 하려면 앱에서 다음을 수행 해야 합니다.
 
 Blazor 서버 앱에서 루트 구성 요소의 호스트 페이지는 *_Host. cshtml* 파일에 정의 되어 있습니다. 이 파일은 구성 요소가 아닌 Razor 페이지를 정의 합니다. Razor Pages Razor 구문를 사용 하 여 .aspx 페이지와 매우 유사한 서버 주소 지정 가능 페이지를 정의 합니다 *.* `Html.RenderComponentAsync<TComponent>(RenderMode)` 메서드는 루트 수준 구성 요소를 렌더링 해야 하는 위치를 정의 하는 데 사용 됩니다. `RenderMode` 옵션은 구성 요소가 렌더링 되는 방식을 나타냅니다. 다음 표에서는 지원 되는 `RenderMode` 옵션을 간략하게 설명 합니다.
 
-|옵션                        |설명       |
+|옵션                        |Description       |
 |------------------------------|------------------|
 |`RenderMode.Server`           |브라우저와의 연결이 설정 되 면 대화형으로 렌더링 됨|
 |`RenderMode.ServerPrerendered`|첫 번째 미리 렌더링 된 대화형으로 렌더링|

@@ -1,14 +1,13 @@
 ---
 title: Wcf 개발자를 위한 gRPC gRPC로 WCF 이중 서비스 마이그레이션
 description: 다양 한 형태의 WCF 이중 서비스를 gRPC 스트리밍 서비스로 마이그레이션하는 방법에 대해 알아봅니다.
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 1702c9f7659f056af9009e81847f28c6e65b277c
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: e2248df20e5c2d8f96055d42ba684749251154bd
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "73841482"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971875"
 ---
 # <a name="migrate-wcf-duplex-services-to-grpc"></a>gRPC로 WCF 이중 서비스 마이그레이션
 

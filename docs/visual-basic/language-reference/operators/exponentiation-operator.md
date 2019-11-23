@@ -1,5 +1,5 @@
 ---
-title: ^ 연산자(Visual Basic)
+title: ^ 연산자
 ms.date: 07/20/2015
 f1_keywords:
 - vb.^
@@ -14,16 +14,16 @@ helpviewer_keywords:
 - powers
 - arithmetic operators [Visual Basic], exponentiation
 ms.assetid: d89a1ca8-83da-4784-a87b-a9d7dceb3f62
-ms.openlocfilehash: 8cdfbec917608211e19c39eb37bd12dbc7c4d33f
-ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
+ms.openlocfilehash: b9860b7b6e076fc9c0288818aa9e4f2c0fc4c356
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/28/2019
-ms.locfileid: "71592217"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74331103"
 ---
-# <a name="-operator-visual-basic"></a>^ 연산자(Visual Basic)
+# <a name="-operator-visual-basic"></a>^ Operator (Visual Basic)
 
-숫자를 다른 숫자의 승수로 거듭제곱 합니다.
+Raises a number to the power of another number.
 
 ## <a name="syntax"></a>구문
 
@@ -37,52 +37,52 @@ number ^ exponent
 필수 요소. 임의의 숫자 식입니다.
 
 `exponent`\
-필수. 임의의 숫자 식입니다.
+필수 요소. 임의의 숫자 식입니다.
 
 ## <a name="result"></a>결과
 
-결과는 항상 `Double` 값으로 `exponent`의 거듭제곱으로 발생 @no__t 됩니다.
+The result is `number` raised to the power of `exponent`, always as a `Double` value.
 
 ## <a name="supported-types"></a>지원 형식
 
-`Double`. 다른 형식의 피연산자는 `Double`으로 변환 됩니다.
+`Double` Operands of any different type are converted to `Double`.
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
-Visual Basic는 [Double 데이터 형식](../../../visual-basic/language-reference/data-types/double-data-type.md)에서 항상 지 각 연산을 수행 합니다.
+Visual Basic always performs exponentiation in the [Double Data Type](../../../visual-basic/language-reference/data-types/double-data-type.md).
 
-@No__t-0의 값은 소수 자릿수, 음수 또는 둘 다 일 수 있습니다.
+The value of `exponent` can be fractional, negative, or both.
 
-단일 식에서 두 개 이상의 지 수를 수행 하는 경우 `^` 연산자는 왼쪽에서 오른쪽으로 발견 될 때 계산 됩니다.
+When more than one exponentiation is performed in a single expression, the `^` operator is evaluated as it is encountered from left to right.
 
 > [!NOTE]
-> 연산자를 오버 로드할 수 있습니다. 즉, 피연산자가 해당 클래스 또는 구조체의 형식일 때 클래스 또는 구조체의 동작을 다시 정의할 수 있습니다. `^` 코드가 이러한 클래스 또는 구조체에서이 연산자를 사용 하는 경우 다시 정의 된 동작을 이해 해야 합니다. 자세한 내용은 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)을 참조하세요.
+> The `^` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure. If your code uses this operator on such a class or structure, be sure you understand its redefined behavior. 자세한 내용은 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)을 참조하세요.
 
 ## <a name="example"></a>예제
 
-다음 예에서는 `^` 연산자를 사용 하 여 숫자를 지 수의 거듭제곱으로 거듭제곱 합니다. 결과는 첫 번째 피연산자가 두 번째 피연산자의 거듭제곱으로 발생 합니다.
+The following example uses the `^` operator to raise a number to the power of an exponent. The result is the first operand raised to the power of the second.
 
 [!code-vb[VbVbalrOperators#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#20)]
 
-앞의 예제에서는 다음과 같은 결과를 생성 합니다.
+The preceding example produces the following results:
 
-`exp1`은 4 (4 제곱)로 설정 됩니다.
+`exp1` is set to 4 (2 squared).
 
-`exp2`이 19683 (3 제곱으로 설정 된 후 해당 값이 3 제곱)로 설정 됩니다.
+`exp2` is set to 19683 (3 cubed, then that value cubed).
 
-`exp3`은-125 (-5의 3 제곱)로 설정 됩니다.
+`exp3` is set to -125 (-5 cubed).
 
-`exp4`은 625 (-5에서 4 제곱으로)로 설정 됩니다.
+`exp4` is set to 625 (-5 to the fourth power).
 
-`exp5`은 2 (큐브 루트 8)로 설정 됩니다.
+`exp5` is set to 2 (cube root of 8).
 
-`exp6`은 0.5 (1.0을 8의 큐브 루트로 나눈 값)으로 설정 됩니다.
+`exp6` is set to 0.5 (1.0 divided by the cube root of 8).
 
-앞의 예제에서 식의 괄호의 중요도를 확인 합니다. *연산자 우선 순위로*인해 Visual Basic은 일반적으로 단항 `–` 연산자를 포함 하 여 다른 모든 이전에 `^` 연산자를 수행 합니다. @No__t-0과 `exp6`이 괄호 없이 계산 된 경우 다음과 같은 결과가 생성 됩니다.
+Note the importance of the parentheses in the expressions in the preceding example. Because of *operator precedence*, Visual Basic normally performs the `^` operator before any others, even the unary `–` operator. If `exp4` and `exp6` had been calculated without parentheses, they would have produced the following results:
 
-`exp4 = -5 ^ 4`은 – (5에서 4 제곱)로 계산 되므로-625이 발생 합니다.
+`exp4 = -5 ^ 4` would be calculated as –(5 to the fourth power), which would result in -625.
 
-`exp6 = 8 ^ -1.0 / 3.0`은 (8에서 – 1 제곱 또는 0.125)로 구분 되어 3.0로 구분 됩니다. 그러면 0.041666666666666666666666666666667이 발생 합니다.
+`exp6 = 8 ^ -1.0 / 3.0` would be calculated as (8 to the –1 power, or 0.125) divided by 3.0, which would result in 0.041666666666666666666666666666667.
 
 ## <a name="see-also"></a>참조
 
@@ -90,4 +90,4 @@ Visual Basic는 [Double 데이터 형식](../../../visual-basic/language-referen
 - [산술 연산자](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
 - [Visual Basic에서의 연산자 우선 순위](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [기능별 연산자 목록](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [Visual Basic의 산술 연산자](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [Arithmetic Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

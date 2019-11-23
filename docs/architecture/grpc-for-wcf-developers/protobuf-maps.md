@@ -1,14 +1,13 @@
 ---
 title: 사전에 대 한 Protobuf 지도-WCF 개발자를 위한 gRPC
 description: Protobuf maps를 사용 하 여를 나타내는 방법을 알아봅니다. NET의 사전 형식입니다.
-author: markrendle
 ms.date: 09/09/2019
-ms.openlocfilehash: aef6b0f378e7a63f362ec42642cae15b32d49a08
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 8b4f29daa263f329dc533d3ddc596d0f47c1b6e0
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "73841452"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73967420"
 ---
 # <a name="protobuf-maps-for-dictionaries"></a>사전용 Protobuf 맵
 

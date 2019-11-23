@@ -206,7 +206,7 @@ Docker 지원 외에도 그림 3-8에 표시 된 컨테이너 오케스트레이
 
 **그림 3-9**. Visual Studio Orchestrator 지원 추가
 
-## <a name="references"></a>참조 항목
+## <a name="references"></a>참조
 
 - [Kubernetes 란?](https://blog.newrelic.com/engineering/what-is-kubernetes/)
 - [Minikube를 사용 하 여 Kubernetes 설치](https://kubernetes.io/docs/setup/learning-environment/minikube/)

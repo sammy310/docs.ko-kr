@@ -1,5 +1,5 @@
 ---
-title: Using 문(Visual Basic)
+title: Using 문
 ms.date: 07/20/2015
 f1_keywords:
 - vb.using
@@ -9,16 +9,16 @@ helpviewer_keywords:
 - resources [Visual Basic], disposing
 - Using statement [Visual Basic]
 ms.assetid: 665d1580-dd54-4e96-a9a9-6be2a68948f1
-ms.openlocfilehash: 819af63acb6a1f038300bcb999dcfb904eb8a457
-ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
+ms.openlocfilehash: 6ec0e228b3898f66f27e322b5db2dd7f3bf3d7d6
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/28/2019
-ms.locfileid: "71592084"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352765"
 ---
 # <a name="using-statement-visual-basic"></a>Using 문(Visual Basic)
 
-@No__t-0 블록의 시작을 선언 하 고, 블록에서 제어 하는 시스템 리소스를 선택적으로 가져옵니다.
+Declares the beginning of a `Using` block and optionally acquires the system resources that the block controls.
 
 ## <a name="syntax"></a>구문
 
@@ -32,12 +32,12 @@ End Using
 
 |용어|정의|  
 |---|---|  
-|`resourcelist`|@No__t-0을 제공 하지 않는 경우 필요 합니다. 이 `Using` 블록에서 제어 하는 하나 이상의 시스템 리소스 목록으로, 쉼표로 구분 합니다.|  
-|`resourceexpression`|@No__t-0을 제공 하지 않는 경우 필요 합니다. 이 `Using` 블록에 의해 제어 되는 시스템 리소스를 참조 하는 변수 또는 식입니다.|  
-|`statements`|(선택 사항) @No__t-0 블록이 실행 하는 문 블록입니다.|  
-|`End Using`|필수. @No__t-0 블록의 정의를 종료 하 고 제어 하는 모든 리소스를 삭제 합니다.|  
+|`resourcelist`|Required if you do not supply `resourceexpression`. List of one or more system resources that this `Using` block controls, separated by commas.|  
+|`resourceexpression`|Required if you do not supply `resourcelist`. Reference variable or expression referring to a system resource to be controlled by this `Using` block.|  
+|`statements`|(선택 사항) Block of statements that the `Using` block runs.|  
+|`End Using`|필수 요소. Terminates the definition of the `Using` block and disposes of all the resources that it controls.|  
 
- @No__t-0 부분의 각 리소스에는 다음과 같은 구문과 파트가 있습니다.
+ Each resource in the `resourcelist` part has the following syntax and parts:
 
  `resourcename As New resourcetype [ ( [ arglist ] ) ]`
 
@@ -45,47 +45,47 @@ End Using
 
  `resourcename As resourcetype = resourceexpression`
 
-## <a name="resourcelist-parts"></a>resourcelist 파트
+## <a name="resourcelist-parts"></a>resourcelist Parts
 
 |용어|정의|  
 |---|---|  
-|`resourcename`|필수. @No__t-0 블록에서 제어 하는 시스템 리소스를 참조 하는 참조 변수입니다.|  
-|`New`|@No__t-0 문이 리소스를 획득 하는 경우에 필요 합니다. 이미 리소스를 취득 한 경우 두 번째 구문 대체 방법을 사용 합니다.|  
-|`resourcetype`|필수. 리소스의 클래스입니다. 클래스는 <xref:System.IDisposable> 인터페이스를 구현 해야 합니다.|  
-|`arglist`|(선택 사항) @No__t-0의 인스턴스를 만들기 위해 생성자에 전달 하는 인수 목록입니다. [매개 변수 목록](parameter-list.md)을 참조 하세요.|  
-|`resourceexpression`|필수. @No__t-0의 요구 사항을 충족 하는 시스템 리소스를 참조 하는 변수 또는 식입니다. 두 번째 구문 대체를 사용 하는 경우 `Using` 문으로 제어를 전달 하기 전에 리소스를 가져와야 합니다.|  
+|`resourcename`|필수 요소. Reference variable that refers to a system resource that the `Using` block controls.|  
+|`New`|Required if the `Using` statement acquires the resource. If you have already acquired the resource, use the second syntax alternative.|  
+|`resourcetype`|필수 요소. The class of the resource. The class must implement the <xref:System.IDisposable> interface.|  
+|`arglist`|(선택 사항) List of arguments you are passing to the constructor to create an instance of `resourcetype`. See [Parameter List](parameter-list.md).|  
+|`resourceexpression`|필수 요소. Variable or expression referring to a system resource satisfying the requirements of `resourcetype`. If you use the second syntax alternative, you must acquire the resource before passing control to the `Using` statement.|  
   
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
- 코드에 파일 핸들, COM 래퍼 또는 SQL 연결과 같은 관리 되지 않는 리소스가 필요한 경우도 있습니다. @No__t-0 블록은 코드가 완료 될 때 이러한 리소스를 하나 이상 삭제 하는 것을 보장 합니다. 이렇게 하면 다른 코드에서 사용할 수 있습니다.
+ Sometimes your code requires an unmanaged resource, such as a file handle, a COM wrapper, or a SQL connection. A `Using` block guarantees the disposal of one or more such resources when your code is finished with them. This makes them available for other code to use.
 
- 관리 되는 리소스는 추가 코딩 없이 GC (.NET Framework 가비지 수집기)에 의해 삭제 됩니다. 관리 되는 리소스에 대 한 `Using` 블록은 필요 하지 않습니다. 그러나 계속 해 서 `Using` 블록을 사용 하 여 가비지 수집기를 대기 하지 않고 관리 되는 리소스를 강제로 삭제할 수 있습니다.
+ Managed resources are disposed of by the .NET Framework garbage collector (GC) without any extra coding on your part. You do not need a `Using` block for managed resources. However, you can still use a `Using` block to force the disposal of a managed resource instead of waiting for the garbage collector.
 
- @No__t-0 블록은 획득, 사용 및 삭제의 세 부분으로 구성 됩니다.
+ A `Using` block has three parts: acquisition, usage, and disposal.
 
-- *취득* 은 변수를 만들고 초기화 하 여 시스템 리소스를 참조 하는 것을 의미 합니다. @No__t-0 문은 하나 이상의 리소스를 얻거나, 블록을 입력 하기 전에 리소스를 하나만 가져와 `Using` 문에 제공할 수 있습니다. @No__t를 제공 하는 경우 `Using` 문에 제어를 전달 하기 전에 리소스를 얻어야 합니다.
+- *Acquisition* means creating a variable and initializing it to refer to the system resource. The `Using` statement can acquire one or more resources, or you can acquire exactly one resource before entering the block and supply it to the `Using` statement. If you supply `resourceexpression`, you must acquire the resource before passing control to the `Using` statement.
 
-- *사용* 은 리소스에 액세스 하 고 작업을 수행 하는 것을 의미 합니다. @No__t-0과 `End Using` 사이의 문은 리소스 사용을 나타냅니다.
+- *Usage* means accessing the resources and performing actions with them. The statements between `Using` and `End Using` represent the usage of the resources.
 
-- *삭제* 는 @no__t에서 개체에 대 한 <xref:System.IDisposable.Dispose%2A> 메서드를 호출 하는 것을 의미 합니다. 이렇게 하면 개체가 리소스를 완전히 종료할 수 있습니다. @No__t-0 문은 `Using` 블록의 컨트롤에 있는 리소스를 삭제 합니다.
+- *Disposal* means calling the <xref:System.IDisposable.Dispose%2A> method on the object in `resourcename`. This allows the object to cleanly terminate its resources. The `End Using` statement disposes of the resources under the `Using` block's control.
 
 ## <a name="behavior"></a>동작
 
- @No__t-0 블록은 `Try` 블록이 리소스를 사용 하 고 `Finally` 블록이 해당 리소스를 삭제 하는 `Try` ... `Finally` 생성 처럼 동작 합니다. 이로 인해 `Using` 블록은 블록을 종료 하는 방법에 관계 없이 리소스 삭제를 보장 합니다. 이는 <xref:System.StackOverflowException>을 제외 하 고 처리 되지 않은 예외의 경우에도 마찬가지입니다.
+ A `Using` block behaves like a `Try`...`Finally` construction in which the `Try` block uses the resources and the `Finally` block disposes of them. Because of this, the `Using` block guarantees disposal of the resources, no matter how you exit the block. This is true even in the case of an unhandled exception, except for a <xref:System.StackOverflowException>.
 
- @No__t-0 문이 획득 한 모든 리소스 변수의 범위는 `Using` 블록으로 제한 됩니다.
+ The scope of every resource variable acquired by the `Using` statement is limited to the `Using` block.
 
- @No__t-0 문에서 둘 이상의 시스템 리소스를 지정 하는 경우에는-1이 다른 블록 내에서 블록을 @no__t 중첩 한 것과 같은 효과를 가집니다.
+ If you specify more than one system resource in the `Using` statement, the effect is the same as if you nested `Using` blocks one within another.
 
- @No__t-0 `Nothing` 이면 <xref:System.IDisposable.Dispose%2A>에 대 한 호출이 수행 되지 않고 예외가 throw 되지 않습니다.
+ If `resourcename` is `Nothing`, no call to <xref:System.IDisposable.Dispose%2A> is made, and no exception is thrown.
 
-## <a name="structured-exception-handling-within-a-using-block"></a>Using 블록 내에서 구조적 예외 처리
+## <a name="structured-exception-handling-within-a-using-block"></a>Structured Exception Handling Within a Using Block
 
- @No__t-0 블록에서 발생할 수 있는 예외를 처리 해야 하는 경우 전체 `Try` ... `Finally` 생성을 추가할 수 있습니다. @No__t-0 문이 리소스를 획득할 수 없는 경우를 처리 해야 하는 경우를 테스트 하 여 `resourcename`이 `Nothing` 인지 확인할 수 있습니다.
+ If you need to handle an exception that might occur within the `Using` block, you can add a complete `Try`...`Finally` construction to it. If you need to handle the case where the `Using` statement is not successful in acquiring a resource, you can test to see if `resourcename` is `Nothing`.
 
-## <a name="structured-exception-handling-instead-of-a-using-block"></a>Using 블록 대신 구조적 예외 처리
+## <a name="structured-exception-handling-instead-of-a-using-block"></a>Structured Exception Handling Instead of a Using Block
 
- 리소스 획득을 보다 세부적으로 제어 해야 하거나 `Finally` 블록에 추가 코드가 필요한 경우 `Using` 블록을 `Try` ... `Finally` 생성으로 다시 작성할 수 있습니다. 다음 예제에서는 `resource`의 획득 및 삭제에 해당 하는 기본 `Try` 및 `Using` 구문을 보여 줍니다.
+ If you need finer control over the acquisition of the resources, or you need additional code in the `Finally` block, you can rewrite the `Using` block as a `Try`...`Finally` construction. The following example shows skeleton `Try` and `Using` constructions that are equivalent in the acquisition and disposal of `resource`.
 
 ```vb
 Using resource As New resourceType
@@ -105,13 +105,13 @@ End Try
 ```
 
 > [!NOTE]
-> @No__t-0 블록 내의 코드는 `resourcename`의 개체를 다른 변수에 할당 하면 안 됩니다. @No__t-0 블록을 종료 하면 리소스가 삭제 되 고 다른 변수는 가리키는 리소스에 액세스할 수 없습니다.
+> The code inside the `Using` block should not assign the object in `resourcename` to another variable. When you exit the `Using` block, the resource is disposed, and the other variable cannot access the resource to which it points.
 
 ## <a name="example"></a>예제
 
- 다음 예에서는 .log 라는 파일을 만들고 두 줄의 텍스트를 파일에 씁니다. 또한이 예제에서는 동일한 파일을 읽고 텍스트 줄을 표시 합니다.
+ The following example creates a file that is named log.txt and writes two lines of text to the file. The example also reads that same file and displays the lines of text:
 
- @No__t-0 및 <xref:System.IO.TextReader> 클래스는 <xref:System.IDisposable> 인터페이스를 구현 하기 때문에 코드는 `Using` 문을 사용 하 여 쓰기 및 읽기 작업 후에 파일이 올바르게 닫혀 있는지 확인할 수 있습니다.
+ Because the <xref:System.IO.TextWriter> and <xref:System.IO.TextReader> classes implement the <xref:System.IDisposable> interface, the code can use `Using` statements to ensure that the file is correctly closed after the write and read operations.
 
  [!code-vb[VbVbalrStatements#50](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#50)]
 
@@ -119,4 +119,4 @@ End Try
 
 - <xref:System.IDisposable>
 - [Try...Catch...Finally 문](try-catch-finally-statement.md)
-- [방법: 시스템 리소스 삭제 @ no__t-0
+- [방법: 시스템 리소스 해제](../../programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md)

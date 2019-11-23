@@ -50,7 +50,7 @@ Azure Dev Spaces를 사용 하 여 팀은 변경 내용을 독립적으로 변�
 
 EShopOnContainers 샘플에는 온라인 마케팅 캠페인을 추적 하는 기능이 포함 되어 있습니다. Azure Function은 지정 된 캠페인 ID에 대 한 마케팅 캠페인 세부 정보를 가져오는 데 사용 됩니다. 이 목적을 위해 완전 한 ASP.NET Core 응용 프로그램을 만드는 대신 단일 Azure 함수 끝점은 더 간단 하 고 충분 합니다. 특히 Kubernetes에서 실행 되도록 구성 된 경우 전체 ASP.NET Core 응용 프로그램 보다 훨씬 간단한 빌드 및 배포 모델을 Azure Functions. 함수 배포는 ARM (Azure Resource Manager) 템플릿 및 Azure CLI를 사용 하 여 스크립팅됩니다. 이 캠페인 세부 정보는 고객이 마이크로 서비스 것이 아니며 온라인 스토어와 동일한 요구 사항이 없으므로 Azure Functions 하는 것이 좋습니다. 함수를 사용 하려면 데이터베이스 연결 문자열 데이터 및 이미지 기본 URI 설정과 같은 일부 구성이 제대로 작동 해야 합니다. Azure Portal에서 Azure Functions를 구성 합니다.
 
-## <a name="references"></a>참조 항목
+## <a name="references"></a>참조
 
 - [eShopOnContainers: AKS에서 Kubernetes 클러스터 만들기](https://github.com/dotnet-architecture/eShopOnContainers/wiki/Deploy-to-Azure-Kubernetes-Service-(AKS)#create-kubernetes-cluster-in-aks)
 - [eShopOnContainers: Azure Dev Spaces](https://github.com/dotnet-architecture/eShopOnContainers/wiki/Azure-Dev-Spaces)

@@ -2,12 +2,12 @@
 title: Azure Monitor
 description: Azure Monitor를 사용 하 여 시스템에 대 한 가시성을 확보 합니다.
 ms.date: 09/23/2019
-ms.openlocfilehash: fa7b4e103f4d1245710f88319271a9e8b7a24b04
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 27503627217c71e4090674945830f6332b202a5b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73841866"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74281644"
 ---
 # <a name="azure-monitor"></a>Azure Monitor
 
@@ -34,7 +34,7 @@ ms.locfileid: "73841866"
 
 Application Insights는 레코드를 찾고 요약 하 고 차트를 그리는 데 사용할 수 있는 Kusto 라는 강력한 쿼리 언어를 제공 합니다. 예를 들어이 쿼리는 11 월 2007 월의 모든 레코드를 찾고, 상태별로 그룹화 하 고, 상위 10 개를 원형 차트로 플롯 합니다.
 
-```
+```kusto
 StormEvents
 | where StartTime >= datetime(2007-11-01) and StartTime < datetime(2007-12-01)
 | summarize count() by State

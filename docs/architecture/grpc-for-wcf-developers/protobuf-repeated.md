@@ -1,14 +1,13 @@
 ---
 title: 목록 및 배열에 대 한 반복 되는 필드-WCF 개발자를 위한 gRPC
 description: Protobuf에서 수집을 처리 하는 방법 및 이러한 컬렉션이 .NET 컬렉션과 어떻게 관련 되는지를 이해 합니다.
-author: markrendle
 ms.date: 09/09/2019
-ms.openlocfilehash: 740af8af39af9bf31be17ad831f481176e30d81f
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 17c579bc98ba62ea74b9452bdb28efd96fc51406
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "73841398"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73967360"
 ---
 # <a name="repeated-fields-for-lists-and-arrays"></a>목록 및 배열을 위한 반복 필드
 

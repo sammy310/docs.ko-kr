@@ -30,7 +30,7 @@ ms.locfileid: "71700051"
 
 [!code-sql[DP EntityServices Concepts#SQLSERVER_AVG](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_avg)]
 
-## <a name="checksum_aggcollection"></a>CHECKSUM_AGG (collection)
+## <a name="checksum_aggcollection"></a>CHECKSUM_AGG (컬렉션)
  
  컬렉션에 있는 값의 체크섬을 반환합니다. Null 값은 무시됩니다.
  
@@ -52,7 +52,7 @@ ms.locfileid: "71700051"
 
 **인수**
 
-컬렉션 @ no__t-0T >입니다. 여기서 T는 다음 형식 중 하나입니다.
+T >\<컬렉션입니다. 여기서 T는 다음 형식 중 하나입니다.
 
 |   |   |   |   |
 |---|---|---|---|
@@ -168,7 +168,7 @@ ms.locfileid: "71700051"
 
 **인수**
 
-컬렉션 (T) 이며, 여기서 T는 `Int32`, `Int64`, `Double` `Decimal` 형식 중 하나입니다.
+컬렉션 (T) 이며, 여기서 T는 `Int32`, `Int64`, `Double`, `Decimal`형식 중 하나입니다.
 
 **반환 값**
 
@@ -210,7 +210,7 @@ ms.locfileid: "71700051"
 
 [!code-sql[DP EntityServices Concepts#SQLSERVER_VARP](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_varp)] 
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [집계 함수 (Transact-sql)](/sql/t-sql/functions/aggregate-functions-transact-sql)
 - [Entity SQL 언어](./language-reference/entity-sql-language.md)

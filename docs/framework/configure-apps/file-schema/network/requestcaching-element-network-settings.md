@@ -19,8 +19,8 @@ ms.locfileid: "71697834"
 네트워크 요청에 대 한 캐싱 메커니즘을 제어 합니다.  
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4c.net >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t @ no__t **\<requestCaching >**  
+&nbsp;&nbsp;[ **\<.net >** ](system-net-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp; **\<requestCaching >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,16 +40,16 @@ ms.locfileid: "71697834"
   
 ### <a name="attributes"></a>특성  
   
-|특성|설명|  
+|특성|Description|  
 |---------------|-----------------|  
-|`isPrivateCache`|캐시에서 다른 사용자의 정보를 격리 하는지 여부를 지정 합니다. 기본값은 `true`입니다. 중간 계층 응용 프로그램의 경우이 값은 0 @no__t 이어야 합니다.|  
+|`isPrivateCache`|캐시에서 다른 사용자의 정보를 격리 하는지 여부를 지정 합니다. 기본값은 `true`입니다. 이 값은 중간 계층 응용 프로그램에 `false` 해야 합니다.|  
 |`disableAllCaching`|모든 웹 응답에 대해 캐싱이 사용 되지 않도록 지정 하 고 프로그래밍 방식으로 재정의할 수 없도록 지정 합니다.|  
 |`defaultPolicyLevel`|<xref:System.Net.Cache.RequestCacheLevel> 열거형에 값 중 하나입니다. 기본값은 `BypassCache`입니다.|  
 |`unspecifiedMaximumAge`|콘텐츠가 만료 된 것으로 표시 되는 기본 시간을 지정 합니다.|  
   
 ## <a name="policylevel-attribute"></a>policyLevel 특성  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |`Default`|리소스 새로 고침, 콘텐츠 길이 정확 하 고, 이며 만료, 수정 및 콘텐츠 길이 특성이 있는 경우 캐시 된 리소스를 반환 합니다.|  
 |`BypassCache`|서버에서 리소스를 반환합니다.|  
@@ -62,14 +62,14 @@ ms.locfileid: "71697834"
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
 |[defaultHttpCachePolicy](defaulthttpcachepolicy-element-network-settings.md)|선택적 요소입니다.<br /><br /> HTTP 캐싱이 활성 상태 인지 여부를 설명 하 고 기본 캐싱 정책을 설명 합니다.|  
 |[\<defaultFtpCachePolicy > 요소 (네트워크 설정)](defaultftpcachepolicy-element-network-settings.md)|선택적 요소입니다.<br /><br /> FTP 캐싱이 활성 상태 인지 여부를 설명 하 고 기본 캐싱 정책을 설명 합니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
 |[system.net](system-net-element-network-settings.md)|.NET Framework의 네트워크 연결 방법을 지정하는 설정을 포함합니다.|  
   
@@ -86,7 +86,7 @@ ms.locfileid: "71697834"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Net.Cache?displayProperty=nameWithType>
 - [네트워크 설정 스키마](index.md)

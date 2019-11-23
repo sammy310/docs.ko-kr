@@ -1,14 +1,13 @@
 ---
 title: Wcf 개발자를 위한 gRPC를 wcf 개발자에 게 권장 하는 이유
 description: 최신 아키텍처 및 플랫폼으로 마이그레이션하기 위해 gRPC가 WCF 개발자에 게 적합 한 이유에 대 한 설명입니다.
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: f96e9a059dc9f12a13c9eb5bb7184ee75d602458
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: da712e1ceee92f0a1a2661252dcda602f5dde9a0
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "73841308"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966940"
 ---
 # <a name="why-grpc-is-recommended-for-wcf-developers"></a>gRPC가 WCF 개발자에게 권장되는 이유
 

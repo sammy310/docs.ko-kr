@@ -17,15 +17,15 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71697903"
 ---
-# <a name="remove-element-for-bypasslist-network-settings"></a>\<remove > 요소 bypasslist (네트워크 설정)
+# <a name="remove-element-for-bypasslist-network-settings"></a>bypasslist에 대 한 > 요소 제거 \<(네트워크 설정)
 
 프록시 바이패스 목록에서 IP 주소 또는 DNS 이름을 제거 합니다.
 
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4c.net >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t @ no__t[ **\<defaultProxy >** ](defaultproxy-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t @ no__t @ @ no__t-4 @ no__t-5[ **\<bypasslist >** ](bypasslist-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t @ no__t @ @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 **\<remove >**  
+&nbsp;&nbsp;[ **\<.net >** ](system-net-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;[ **defaultproxy\<** ](defaultproxy-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<bypasslist >** ](bypasslist-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<제거 >**  
 
 ## <a name="syntax"></a>구문
 
@@ -47,7 +47,7 @@ ms.locfileid: "71697903"
 
 ### <a name="child-elements"></a>자식 요소
 
-없음
+None.
 
 ### <a name="parent-elements"></a>부모 요소
 
@@ -55,11 +55,11 @@ ms.locfileid: "71697903"
 |-----------------|---------------------|
 |[bypasslist](bypasslist-element-network-settings.md)|프록시를 사용 하지 않는 주소를 설명 하는 정규식 집합을 제공 합니다.|
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
-@No__t-0 요소는 프록시 서버를 우회 하는 주소 목록에서 IP 주소 또는 DNS 서버 이름을 설명 하는 정규식을 제거 합니다. 주소가 구성 파일에서 이전에 정의 되었거나 구성 계층 구조의 상위 수준에 정의 되어 있습니다.
+`remove` 요소는 프록시 서버를 우회 하는 주소 목록에서 IP 주소 또는 DNS 서버 이름을 설명 하는 정규식을 제거 합니다. 주소가 구성 파일에서 이전에 정의 되었거나 구성 계층 구조의 상위 수준에 정의 되어 있습니다.
 
-@No__t-0 특성의 값은 IP 주소 또는 호스트 이름 집합을 설명 하는 정규식 이어야 합니다.
+`address` 특성의 값은 IP 주소 또는 호스트 이름 집합을 설명 하는 정규식 이어야 합니다.
 
 정규식에 대 한 자세한 내용은을 참조 하십시오. [정규식을 .NET Framework](../../../../standard/base-types/regular-expressions.md)합니다.
 
@@ -84,7 +84,7 @@ ms.locfileid: "71697903"
 </configuration>
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
 - [네트워크 설정 스키마](index.md)

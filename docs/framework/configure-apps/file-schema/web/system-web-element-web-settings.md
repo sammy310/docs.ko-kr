@@ -19,7 +19,7 @@ ms.locfileid: "71699099"
 ASP.NET 호스팅 계층이 프로세스 전체 동작을 관리 하는 방법에 대 한 정보를 포함 합니다.  
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1 **@no__t -3-system.web >**  
+&nbsp;&nbsp; **\<system.web >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -34,23 +34,23 @@ ASP.NET 호스팅 계층이 프로세스 전체 동작을 관리 하는 방법�
   
 ### <a name="attributes"></a>특성  
 
-없음  
+None.  
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
 |[\<applicationPool>](applicationpool-element-web-settings.md)|Aspnet .config 파일의 IIS 응용 프로그램 풀에 대 한 구성 설정을 지정 합니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
 |[\<구성>](../configuration-element.md)|공용 언어 런타임 및 .NET Framework 응용 프로그램에서 사용 하는 모든 구성 파일의 루트 요소를 지정 합니다.|  
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
 
-@No__t-0 요소와 자식 `applicationPool` 요소가 .NET Framework 3.5 s p 1의 .NET Framework에 추가 되었습니다. 통합 모드에서 IIS 7.0 이상 버전을 실행 하는 경우이 요소 조합을 사용 하면 ASP.NET에서 스레드를 관리 하는 방법 및 ASP.NET가 IIS 응용 프로그램 풀에서 호스팅되는 경우 요청을 큐에 대기 하는 방법을 구성할 수 있습니다. 클래식 또는 ISAPI 모드에서 IIS 7.0 이상 버전을 실행 하는 경우 이러한 설정은 무시 됩니다.  
+`system.web` 요소와 해당 자식 `applicationPool` 요소가 .NET Framework 3.5 s p 1의 .NET Framework에 추가 되었습니다. 통합 모드에서 IIS 7.0 이상 버전을 실행 하는 경우이 요소 조합을 사용 하면 ASP.NET에서 스레드를 관리 하는 방법 및 ASP.NET가 IIS 응용 프로그램 풀에서 호스팅되는 경우 요청을 큐에 대기 하는 방법을 구성할 수 있습니다. 클래식 또는 ISAPI 모드에서 IIS 7.0 이상 버전을 실행 하는 경우 이러한 설정은 무시 됩니다.  
   
 ## <a name="example"></a>예제  
 
@@ -76,6 +76,6 @@ ASP.NET 호스팅 계층이 프로세스 전체 동작을 관리 하는 방법�
 |유효성 검사 파일||  
 |비워 둘 수 있음||  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [\<applicationPool> 요소(웹 설정)](applicationpool-element-web-settings.md)

@@ -61,8 +61,8 @@ API 게이트웨이를 간단 하 고 신속 하 게 유지 하기 위해 주의
 
 |Ocelot 기능  | |
 | :-------- | :-------- |
-| 라우팅 | Authentication |
-| 요청 집계 | 권한 부여 |
+| 라우팅 | 인증 |
+| 요청 집계 | Authorization |
 | 서비스 검색 (Consul 및 Eureka 포함) | 스로틀 |
 | 부하 분산 | 로깅, 추적 |
 | 캐싱 | 헤더/쿼리 문자열 변환 |
@@ -117,7 +117,7 @@ Azure API Management는 클라우드 또는 데이터 센터의 어디에서 나
 
 Azure API Management는 다음과 같은 [네 가지 계층](https://azure.microsoft.com/pricing/details/api-management/)에서 제공 됩니다.
 
-- 개발자
+- Developer
 - Basic
 - 표준
 - 할증

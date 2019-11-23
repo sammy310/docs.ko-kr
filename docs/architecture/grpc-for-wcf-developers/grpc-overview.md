@@ -1,14 +1,13 @@
 ---
 title: WCF 개발자를 위한 gRPC gRPC 개요
 description: GRPC 개발을 안내 하는 원칙 집합에 대해 알아봅니다.
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 6980b473a6f9852a4e4f396355e98e2d3300cabe
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: a92fe7ca2f8e17126025362fcc3c190024ebf7d3
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "73841590"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73967759"
 ---
 # <a name="grpc-overview"></a>gRPC 개요
 

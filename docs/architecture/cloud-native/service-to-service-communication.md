@@ -3,12 +3,12 @@ title: 서비스 간 통신
 description: 백 엔드 클라우드 네이티브 마이크로 서비스가 다른 백 엔드 마이크로 서비스와 통신 하는 방법에 대해 알아봅니다.
 author: robvet
 ms.date: 09/09/2019
-ms.openlocfilehash: 6a7e72491cb56d925e684b94109b1aaa98e24df3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a5124b8b83f62ff17b1230ead63db26e0c1f2a5b
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73842016"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74087603"
 ---
 # <a name="service-to-service-communication"></a>서비스 간 통신
 
@@ -78,7 +78,7 @@ ms.locfileid: "73842016"
 
 여기에서 메시지 생산자는 고유한 상관 관계 ID를 포함 하는 쿼리 기반 메시지를 만들어 요청 큐에 배치 합니다. 소비 하는 서비스는 메시지를 큐에서 제거 하 고 처리 한 다음 응답을 동일한 상관 관계 ID를 사용 하 여 응답 큐에 배치 합니다. 생산자 서비스는 메시지를 큐에 대기 시키고 상관 관계 ID와 일치 시키고 처리를 계속 합니다. 다음 섹션에서 큐를 자세히 다룹니다.
 
-## <a name="commands"></a>명령
+## <a name="commands"></a>Commands
 
 또 다른 유형의 통신 상호 작용은 *명령*입니다. 마이크로 서비스는 작업을 수행 하는 다른 마이크로 서비스 필요할 수 있습니다. 주문 마이크로 서비스에서 승인 된 주문에 대 한 배송을 만들기 위해 배송 마이크로 서비스 필요할 수 있습니다. 그림 4-12에서 생산자 라는 하나의 마이크로 서비스는 다른 마이크로 서비스, 소비자에 게 메시지를 보냅니다.
 
@@ -208,7 +208,7 @@ Event Grid는 완전히 관리 되는 서버 리스 클라우드 서비스입니
 
 ### <a name="streaming-messages-in-the-azure-cloud"></a>Azure 클라우드에서 메시지 스트리밍
 
-Azure Service Bus 및 Event Grid는 새 문서를 Cosmos DB에 삽입 하는 것과 같은 단일 불연속 이벤트를 노출 하는 응용 프로그램에 대 한 뛰어난 지원을 제공 합니다. 그러나 클라우드 네이티브 시스템에서 *관련 이벤트 스트림을*처리 해야 하는 경우는 어떻게 되나요? [이벤트 스트림은](https://msdn.microsoft.com/magazine/dn904671) 더 복잡 합니다. 일반적으로 시간 순서를 지정 하 고 상호 관련 되며 그룹으로 처리 되어야 합니다.
+Azure Service Bus 및 Event Grid는 새 문서를 Cosmos DB에 삽입 하는 것과 같은 단일 불연속 이벤트를 노출 하는 응용 프로그램에 대 한 뛰어난 지원을 제공 합니다. 그러나 클라우드 네이티브 시스템에서 *관련 이벤트 스트림을*처리 해야 하는 경우는 어떻게 되나요? [이벤트 스트림은](https://docs.microsoft.com/archive/msdn-magazine/2015/february/microsoft-azure-the-rise-of-event-stream-oriented-systems) 더 복잡 합니다. 일반적으로 시간 순서를 지정 하 고 상호 관련 되며 그룹으로 처리 되어야 합니다.
 
 [Azure Event Hub](https://azure.microsoft.com/services/event-hubs/) 는 이벤트를 수집, 변환 및 저장 하는 데이터 스트리밍 플랫폼 및 이벤트 수집 서비스입니다. 원격 분석 컨텍스트에서 내보낸 연속 이벤트 알림과 같은 스트리밍 데이터를 캡처하기 위해 미세 하 게 조정 됩니다. 서비스는 확장성이 뛰어나고 [초당 수백만 개의 이벤트](https://docs.microsoft.com/azure/event-hubs/event-hubs-about)를 저장 하 고 처리할 수 있습니다. 그림 4-18에 표시 된 것 처럼 이벤트 파이프라인에 대 한 전방 도어 이며 수집 스트림을 이벤트 사용에서 분리 하는 경우가 많습니다.
 
@@ -220,7 +220,7 @@ Azure Service Bus 및 Event Grid는 새 문서를 Cosmos DB에 삽입 하는 것
 
 이벤트 허브는 HTTPS 및 AMQP를 비롯 한 일반적인 이벤트 게시 프로토콜을 지원 합니다. Kafka 1.0도 지원 합니다. [기존 kafka 응용 프로그램](https://docs.microsoft.com/azure/event-hubs/event-hubs-for-kafka-ecosystem-overview) 은 대량 kafka 클러스터 관리에 대 한 대안을 제공 하는 kafka 프로토콜을 사용 하 여 이벤트 허브와 통신할 수 있습니다. 많은 오픈 소스 클라우드 네이티브 시스템은 Kafka을 수용 합니다.
 
-Event Hubs는 각 소비자가 메시지 스트림의 특정 하위 집합 또는 파티션만 읽는 [분할 된 소비자 모델](https://docs.microsoft.com/azure/event-hubs/event-hubs-features) 을 통해 메시지 스트리밍을 구현 합니다. 이 패턴은 이벤트 처리를 위한 다양 한 수평 확장을 가능 하 게 하며 큐 및 토픽에서 사용할 수 없는 기타 스트림 중심 기능을 제공 합니다. 파티션은 이벤트 허브에 저장 되는 순서가 지정 된 이벤트 시퀀스입니다. 최신 이벤트가 도착 하면이 시퀀스의 끝에 추가 됩니다. 그림 4-19에서는 이벤트 허브의 분할을 보여 줍니다.
+Event Hubs는 각 소비자가 메시지 스트림의 특정 하위 집합 또는 파티션만 읽는 [분할 된 소비자 모델](https://docs.microsoft.com/azure/event-hubs/event-hubs-features) 을 통해 메시지 스트리밍을 구현 합니다. 이 패턴에서는 이벤트 처리를 위해 매우 폭넓은 수평 확장이 가능하며, 큐와 항목에서는 사용할 수 없는 기타 스트림 중심 기능이 제공됩니다. 파티션은 이벤트 허브에 저장 되는 순서가 지정 된 이벤트 시퀀스입니다. 최신 이벤트가 도착 하면이 시퀀스의 끝에 추가 됩니다. 그림 4-19에서는 이벤트 허브의 분할을 보여 줍니다.
 
 ![이벤트 허브 분할](./media/event-hub-partitioning.png)
 

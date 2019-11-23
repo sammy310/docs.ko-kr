@@ -14,14 +14,14 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71698575"
 ---
-# <a name="expression-recursively-calls-the-containing-property-propertyname"></a>식이 포함 하는 ' \<propertyname > ' 속성을 재귀적으로 호출 합니다.
+# <a name="expression-recursively-calls-the-containing-property-propertyname"></a>식이 포함 하는 '\<propertyname > ' 속성을 재귀적으로 호출 합니다.
 속성 정의의 `Set` 프로시저에 있는 문은 속성 이름에 값을 저장 합니다.  
   
- 속성의 값을 유지 하는 권장 방법은 속성의 컨테이너에 `Private` 변수를 정의 하 고 `Get` 및 `Set` 프로시저에서 사용 하는 것입니다. 그런 다음 `Set` 프로시저는이 `Private` 변수에 들어오는 값을 저장 해야 합니다.  
+ 속성의 값을 유지 하는 권장 방법은 속성의 컨테이너에 `Private` 변수를 정의 하 고 `Get` 및 `Set` 프로시저에서 사용 하는 것입니다. 그런 다음 `Set` 프로시저는 들어오는 값을이 `Private` 변수에 저장 해야 합니다.  
   
- @No__t-0 프로시저는 @no__t 1 프로시저 처럼 동작 하므로 `End Get` 문을 발생 시켜 속성 이름에 값을 할당 하 고 컨트롤을 반환할 수 있습니다. 그러나 권장 되는 방법은 `Private` 변수를 [Return 문의](../../../visual-basic/language-reference/statements/return-statement.md)값으로 포함 하는 것입니다.  
+ `Get` 프로시저는 `Function` 프로시저 처럼 동작 하므로 `End Get` 문을 발생 시켜 속성 이름에 값을 할당 하 고 컨트롤을 반환할 수 있습니다. 그러나 권장 되는 방법은 [Return 문의](../../../visual-basic/language-reference/statements/return-statement.md)값으로 `Private` 변수를 포함 하는 것입니다.  
   
- @No__t-0 프로시저는 값을 반환 하지 않는 @no__t 1 프로시저 처럼 동작 합니다. 따라서 프로시저 또는 속성 이름은 `Set` 프로시저 내에서 특별 한 의미가 없으며 값을 저장할 수 없습니다.  
+ `Set` 프로시저는 값을 반환 하지 않는 `Sub` 프로시저 처럼 동작 합니다. 따라서 프로시저 또는 속성 이름은 `Set` 프로시저 내에서 특별 한 의미가 없으며 값을 저장할 수 없습니다.  
   
  다음 예제에서는이 오류를 발생 시킬 수 있는 방법 및 권장 되는 방법을 보여 줍니다.  
   
@@ -63,7 +63,7 @@ End Class
   
 - 앞의 예제에서 설명한 것 처럼 권장 된 방법을 사용 하도록 속성 정의를 다시 작성 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [속성 프로시저](../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)
 - [Property 문](../../../visual-basic/language-reference/statements/property-statement.md)

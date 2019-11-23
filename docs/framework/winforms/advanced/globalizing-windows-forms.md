@@ -41,12 +41,12 @@ Windows Form이나 컨트롤이 수락하는 입력 형식을 제어하는 데 �
 
 - [연습: ClickOnce 배포 API에서 요청 시 위성 어셈블리 다운로드](/visualstudio/deployment/walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api)
 
-- [방법: Windows Forms 세계화 @ no__t에 대 한 문화권 및 UI 문화권 설정-0
+- [방법: Windows Forms 세계화를 위한 문화권 및 UI 문화권 설정](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/b28bx3bh(v=vs.100))
 
-- [방법: 미러된 Windows Forms 및 컨트롤 만들기 @ no__t-0
+- [방법: 미러된 Windows Forms 및 컨트롤 만들기](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/xwbz5ws0(v=vs.100))
 
-- [방법: AutoSize 및 TableLayoutPanel 컨트롤 @ no__t를 사용 하 여 Windows Forms에 대 한 지역화 지원
+- [방법: AutoSize 속성과 TableLayoutPanel 컨트롤을 사용하여 Windows Forms 지역화 지원](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1zkt8b33(v=vs.100))
 
-- [연습: Windows Forms @ no__t 지역화-0
+- [연습: Windows Forms 지역화](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/y99d1cd3(v=vs.100))
 
-- [연습: 지역화 @ no__t에 대 한 비율을 조정 하는 레이아웃 만들기-0
+- [연습: 지역화를 위해 비율을 조정 하는 레이아웃 만들기](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/7k9fa71y(v=vs.100))

@@ -35,7 +35,7 @@ ms.locfileid: "71353713"
   
  **✓ CONSIDER** 기본 클래스의 이름으로 클래스를 파생 종료 이름입니다.  
   
- 이는 매우 읽기 쉬우며 관계를 명확 하 게 설명 합니다. 코드에서이에 대 한 몇 가지 예는 다음과 같습니다. `Exception`은 @no__t, `SerializableAttribute`는 `Attribute`의 종류입니다. 그러나이 지침을 적용할 때 적절 한 판단을 사용 하는 것이 중요 합니다. 예를 들어 `Button` 클래스의 종류는 `Control` 이벤트 이지만 `Control`는 이름에 표시 되지 않습니다.  
+ 이는 매우 읽기 쉬우며 관계를 명확 하 게 설명 합니다. 코드에서이에 대 한 몇 가지 예는 `ArgumentOutOfRangeException``Exception`, 일종의 `Attribute`인 `SerializableAttribute`입니다. 그러나이 지침을 적용할 때 적절 한 판단을 사용 하는 것이 중요 합니다. 예를 들어 `Button` 클래스는 `Control` 이름에 표시 되지 않지만 `Control` 이벤트의 일종입니다.  
   
  **✓ DO** 문자로 접두사 인터페이스 이름을 I, 유형을 인터페이스 임을 나타냅니다.  
   
@@ -66,7 +66,7 @@ public interface ISessionChannel<TSession> where TSession : ISession {
   
  **✓ CONSIDER** 제약 조건을 나타내는 매개 변수 이름의 형식 매개 변수에 적용 합니다.  
   
- 예를 들어 `ISession`으로 제한 된 매개 변수는-1 @no__t 호출 될 수 있습니다.  
+ 예를 들어 `ISession` 제한 된 매개 변수는 `TSession`호출 될 수 있습니다.  
   
 ## <a name="names-of-common-types"></a>공용 형식의 이름  
  **✓ DO** 또는 특정.NET Framework 형식이 구현에서 파생 된 형식의 이름을 지정할 때 다음 표에 설명 된 지침을 따르십시오.  
@@ -78,7 +78,7 @@ public interface ISessionChannel<TSession> where TSession : ISession {
 |`System.EventArgs`|**✓ DO** "EventArgs입니다." 접미사 추가|  
 |`System.Enum`|**X DO NOT** 대신 해당 언어에서 지 원하는 키워드를 사용 하 여; 예를 들어 C#에서 사용 하 여이 클래스에서 파생 된 `enum` 키워드입니다.<br /><br /> **X DO NOT** "열거형" 또는 "Flag" 접미사 추가|  
 |`System.Exception`|**✓ DO** "예외" 접미사 추가|  
-|`IDictionary` <br /> `IDictionary<TKey,TValue>`|**✓ DO** "사전입니다." 접미사 추가 @No__t-0은 특정 유형의 컬렉션 이지만이 지침은 다음과 같은 보다 일반적인 컬렉션 지침 보다 우선적으로 적용 됩니다.|  
+|`IDictionary` <br /> `IDictionary<TKey,TValue>`|**✓ DO** "사전입니다." 접미사 추가 `IDictionary`은 특정 유형의 컬렉션 이지만이 지침은 다음과 같은 보다 일반적인 컬렉션 지침 보다 우선 합니다.|  
 |`IEnumerable` <br /> `ICollection` <br /> `IList` <br /> `IEnumerable<T>` <br /> `ICollection<T>` <br /> `IList<T>`|**✓ DO** "Collection" 접미사 추가|  
 |`System.IO.Stream`|**✓ DO** "스트림입니다." 접미사 추가|  
 |`CodeAccessPermission IPermission`|**✓ DO** "권한" 접미사 추가|  
@@ -96,11 +96,11 @@ public interface ISessionChannel<TSession> where TSession : ISession {
   
  **X DO NOT** 서식 있는 텍스트 열거형 등에 대 한 열거형 값 이름 (예: "ad" 열거형의 ADO.), "rtf"에 접두사를 사용 합니다.  
   
- *Portions © 2005, 2009 Microsoft Corporation. 모든 권리 보유.*  
+ *2005, 2009 Microsoft Corporation © 부분입니다. All rights reserved.*  
   
- @no__t-[Framework 디자인 지침에서 피어슨 교육부, Inc.의 권한으로 0Reprinted. 다시 사용할 수 있는 .NET 라이브러리에 대 한 규칙, 관용구 및 패턴, Microsoft Windows 개발 @no__t 시리즈의 일부로 Addison-Wesley Professional에서 2008 no__t, Krzysztof Cwalina 및 Brad Abrams 성  
+ *Pearson Education, Inc의 동의로 재인쇄. 출처: [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 작성자: Krzysztof Cwalina 및 Brad Abrams, 출판 정보: Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [프레임워크 디자인 지침](../../../docs/standard/design-guidelines/index.md)
 - [명명 지침](../../../docs/standard/design-guidelines/naming-guidelines.md)

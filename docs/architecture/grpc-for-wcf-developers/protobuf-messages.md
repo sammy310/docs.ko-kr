@@ -1,14 +1,13 @@
 ---
 title: Protobuf 메시지-WCF 개발자를 위한 gRPC
 description: Protobuf 메시지가 IDL에 정의 되 고에서 C#생성 되는 방법에 대해 알아봅니다.
-author: markrendle
 ms.date: 09/09/2019
-ms.openlocfilehash: 9943478698acfbb54b3e1dd0e6a856d11b9266c3
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 4d543fe88c21999cd820a0bb98073d58a229913a
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "73841470"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73967430"
 ---
 # <a name="protobuf-messages"></a>Protobuf 메시지
 
@@ -65,7 +64,7 @@ message Stock {
 
 이진 형식에서 필드 번호는 형식 식별자와 결합 됩니다. 1에서 15 사이의 필드 번호는 해당 형식을 단일 바이트로 인코딩할 수 있습니다. 16에서 2047 사이의 숫자는 2 바이트를 차지 합니다. 어떤 이유로 든 메시지에서 필드가 2047 개를 초과 해야 하는 경우 더 높은 수준으로 이동할 수 있습니다. 필드 번호 1에서 15 까지의 단일 바이트 식별자가 더 나은 성능을 제공 하므로 가장 기본적인 자주 사용 되는 필드에 사용 해야 합니다.
 
-## <a name="types"></a>유형
+## <a name="types"></a>형식
 
 형식 선언은 Protobuf의 네이티브 스칼라 데이터 형식을 사용 하며, [다음 섹션](protobuf-data-types.md)에서 자세히 설명 합니다. 이 장의 나머지 부분에서는 Protobuf의 기본 제공 형식에 대해 설명 하 고 일반적인 .NET 형식과의 관계를 보여 줍니다.
 

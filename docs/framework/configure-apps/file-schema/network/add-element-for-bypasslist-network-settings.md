@@ -17,14 +17,14 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71699607"
 ---
-# <a name="add-element-for-bypasslist-network-settings"></a>bypasslist에 대 한 \<add > 요소 (네트워크 설정)
+# <a name="add-element-for-bypasslist-network-settings"></a>bypasslist에 대 한 > 요소 \<추가 (네트워크 설정)
 프록시 무시 목록에 IP 주소 또는 DNS 이름을 추가 합니다.  
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4c.net >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t @ no__t[ **\<defaultProxy >** ](defaultproxy-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t @ no__t @ @ no__t-4 @ no__t-5[ **\<bypasslist >** ](bypasslist-element-network-settings.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> 추가**  
+&nbsp;&nbsp;[ **\<.net >** ](system-net-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;[ **defaultproxy\<** ](defaultproxy-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<bypasslist >** ](bypasslist-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**추가** >  
   
 ## <a name="syntax"></a>구문  
   
@@ -44,7 +44,7 @@ ms.locfileid: "71699607"
 |**address**|IP 주소 또는 DNS 이름을 설명 하는 정규식입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
- 없음  
+ None.  
   
 ### <a name="parent-elements"></a>부모 요소  
   
@@ -52,12 +52,12 @@ ms.locfileid: "71699607"
 |-----------------|---------------------|  
 |[bypasslist](bypasslist-element-network-settings.md)|프록시를 사용 하지 않는 주소를 설명 하는 정규식 집합을 제공 합니다.|  
   
-## <a name="remarks"></a>설명  
- @No__t-0 요소는 IP 주소 또는 DNS 서버 이름을 설명 하는 정규식을 프록시 서버를 우회 하는 주소 목록에 삽입 합니다.  
+## <a name="remarks"></a>주의  
+ `add` 요소는 IP 주소 또는 DNS 서버 이름을 설명 하는 정규식을 프록시 서버를 우회 하는 주소 목록에 삽입 합니다.  
   
- @No__t-0 특성의 값은 IP 주소 또는 호스트 이름 집합을 설명 하는 정규식 이어야 합니다.  
+ `address` 특성의 값은 IP 주소 또는 호스트 이름 집합을 설명 하는 정규식 이어야 합니다.  
   
- 이 요소에 대 한 정규식을 지정할 때는 주의 해야 합니다. 정규식 "[a-z] + @no__t -0.contoso\\.com"는 contoso.com 도메인에 있는 모든 호스트와 일치 하지만 contoso.com.cpandl.com 도메인의 모든 호스트와 일치 합니다. Contoso.com 도메인의 호스트만 일치 시키려면 앵커 ("$"): "[a-z] + @no__t -0.contoso\\.com $"를 사용 합니다.  
+ 이 요소에 대 한 정규식을 지정할 때는 주의 해야 합니다. 정규식 "[a-z] +\\. c o m\\는 contoso.com 도메인에 있는 모든 호스트와 일치 하지만 contoso.com.cpandl.com 도메인의 모든 호스트와 일치 합니다. Contoso.com 도메인의 호스트만 일치 시키려면 앵커 ("$"): "[a-z] +\\. contoso\\$"를 사용 합니다.  
   
  정규식에 대 한 자세한 내용은을 참조 하십시오. [정규식을 .NET Framework](../../../../standard/base-types/regular-expressions.md)합니다.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "71699607"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
 - [네트워크 설정 스키마](index.md)

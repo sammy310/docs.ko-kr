@@ -1,14 +1,13 @@
 ---
 title: 소개-WCF 개발자를 위한 gRPC
 description: 소개
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 9eb12d5060ddf4f345ebe095738c98238c6caab7
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 3fb7ae440f65cc2daa2a2c984d01d0c0c1eac0aa
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "73841572"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73967614"
 ---
 # <a name="introduction"></a>소개
 
@@ -52,7 +51,7 @@ Windows Communication Foundation은 서비스를 빌드하기 위한 프레임 �
 
 이 환경에는 Microsoft에서 Microsoft가 처음 출시 한 후 10 년 후에 gRPC가 출시 되었습니다. Google의 내부 인프라 RPC (Stubby)에서 직접 진화 하는 gRPC는 이전의 많은 Rpc의 매개 변수에 대해 알고 있던 동일한 표준 및 프로토콜을 기반으로 하지 않았습니다. 또한 gRPC는 h t t p/2를 기반으로 하기 때문에 고급 전송 프로토콜에서 제공 하는 새로운 기능을 그릴 수 있었습니다. 특히 양방향 스트리밍, 이진 메시징 및 멀티플렉싱.
 
-## <a name="about-this-guide"></a>이 가이드의 내용
+## <a name="about-this-guide"></a>이 가이드 정보
 
 이 가이드에서는 gRPC의 주요 기능에 대해 설명 합니다. 초기 장에서는 WCF의 주요 기능에 대 한 개략적인 내용을 살펴보고 gRPC와 비교 합니다. 이는가 WCF 및 gRPC 간의 직접적인 상관 관계를 식별 하 고 gRPC가 이점을 제공 하는 경우를 식별 합니다. WCF 및 gRPC 간의 상관 관계가 없거나 gRPC가 WCF에 동일한 솔루션을 제공할 수 없는 경우이 가이드에서 추가 정보를 확인할 수 있는 대안과 위치를 제안 합니다.
 
@@ -62,7 +61,7 @@ Windows Communication Foundation은 서비스를 빌드하기 위한 프레임 �
 
 ## <a name="whom-this-guide-is-for"></a>이 가이드의 대상
 
-이 가이드는 이전에 WCF를 사용 했으며 .NET Core 3.0 이상 버전에 대 한 최신 RPC 환경으로 응용 프로그램을 마이그레이션하려는 .NET Core .NET Framework 또는 .NET Core에서 작업 하는 개발자를 위해 작성 되었습니다. 이 가이드는 기본 제공 gRPC 도구를 사용 하고자 하는 .NET Core 3.0로 업그레이드 하거나 업그레이드를 고려 하는 개발자에 게 보다 일반적으로 사용 될 수도 있습니다.
+이 가이드는 이전에 WCF를 사용했으며 .NET Core 3.0 이상 버전용 최신 RPC 환경으로 애플리케이션을 마이그레이션하려는 .NET Framework 또는 .NET Core에서 작업하는 개발자를 위해 작성되었습니다. 이 가이드는 기본 제공 gRPC 도구를 사용하기 위해 .NET Core 3.0로 업그레이드하거나 업그레이드를 고려하는 개발자에게 더 일반적으로 사용될 수도 있습니다.
 
 >[!div class="step-by-step"]
 >[이전](index.md)

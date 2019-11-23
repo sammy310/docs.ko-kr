@@ -30,7 +30,7 @@ ms.locfileid: "72291479"
   
  끌어서 놓기 작업 중 수행되는 특정 작업은 애플리케이션과 관련이 있으며 컨텍스트에 의해 결정되는 경우가 많습니다.  예를 들어 동일한 저장 장치의 한 폴더에서 다른 폴더로 선택 된 파일을 끌어서 놓으면 기본적으로 파일이 이동 하는 반면, UNC (범용 명명 규칙) 공유에서 로컬 폴더로 파일을 끌어서 놓으면 기본적으로 파일이 복사 됩니다.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 제공하는 끌어서 놓기 기능은 다양한 끌어서 놓기 시나리오를 지원하도록 매우 유연하고 사용자 지정 가능하도록 설계되었습니다.  끌어서 놓기는 단일 응용 프로그램 내에서 또는 서로 다른 응용 프로그램 간에 개체 조작을 지원합니다. @No__t-0 응용 프로그램과 다른 Windows 응용 프로그램 간의 끌어서 놓기도 완전히 지원 됩니다.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 제공하는 끌어서 놓기 기능은 다양한 끌어서 놓기 시나리오를 지원하도록 매우 유연하고 사용자 지정 가능하도록 설계되었습니다.  끌어서 놓기는 단일 애플리케이션 내에서 또는 서로 다른 애플리케이션 간에 개체 조작을 지원합니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램과 다른 Windows 응용 프로그램 간의 끌어서 놓기도 완전히 지원 됩니다.  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서는 모든 <xref:System.Windows.UIElement> 또는 <xref:System.Windows.ContentElement>가 끌어서 놓기에 참여할 수 있습니다. 끌어서 놓기 작업에 필요한 이벤트와 메서드는 <xref:System.Windows.DragDrop> 클래스에서 정의됩니다. <xref:System.Windows.UIElement> 또는 <xref:System.Windows.ContentElement>가 기본 요소로 상속될 때 이벤트가 클래스 멤버에 표시되도록 <xref:System.Windows.DragDrop> 및 <xref:System.Windows.UIElement> 클래스에는 <xref:System.Windows.ContentElement> 연결된 이벤트에 대한 별칭이 포함됩니다. 이러한 이벤트에 연결된 이벤트 처리기는 내부 <xref:System.Windows.DragDrop> 연결된 이벤트에 연결되며 동일한 이벤트 데이터 인스턴스를 받습니다. 자세한 내용은 <xref:System.Windows.UIElement.Drop?displayProperty=nameWithType> 이벤트를 참조하세요.  
   
@@ -49,12 +49,12 @@ ms.locfileid: "72291479"
   
  복사 및 붙여넣기 작업에서는 시스템 클립보드를 사용하여 전송된 데이터를 일시적으로 저장하고, 끌어서 놓기 작업에서는 <xref:System.Windows.DataObject>를 사용하여 데이터를 저장합니다. 개념적으로, 데이터 개체는 실제 데이터를 포함하는 하나 이상의 <xref:System.Object> 쌍과 해당 데이터 형식 식별자로 구성됩니다.  
   
- 끌기 소스는 정적 <xref:System.Windows.DragDrop.DoDragDrop%2A?displayProperty=nameWithType> 메서드를 호출하고 전송된 데이터를 전달하여 끌어서 놓기 작업을 시작합니다. <xref:System.Windows.DragDrop.DoDragDrop%2A> 메서드는 필요한 경우 데이터를 자동으로 <xref:System.Windows.DataObject>에 래핑합니다. 데이터 형식을 보다 효율적으로 제어하기 위해 데이터를 <xref:System.Windows.DragDrop.DoDragDrop%2A> 메서드에 전달하기 전에 <xref:System.Windows.DataObject>에 래핑할 수 있습니다. 놓기 대상은 <xref:System.Windows.DataObject>에서 데이터를 추출해야 합니다. 데이터 개체 작업에 대한 자세한 내용은 [데이터 및 데이터 개체](data-and-data-objects.md)를 참조하세요.  
+ 끌기 소스는 정적 <xref:System.Windows.DragDrop.DoDragDrop%2A?displayProperty=nameWithType> 메서드를 호출하고 전송된 데이터를 전달하여 끌어서 놓기 작업을 시작합니다. <xref:System.Windows.DragDrop.DoDragDrop%2A> 메서드는 필요한 경우 데이터를 자동으로 <xref:System.Windows.DataObject>에 래핑합니다. 데이터 형식을 보다 효율적으로 제어하기 위해 데이터를 <xref:System.Windows.DataObject> 메서드에 전달하기 전에 <xref:System.Windows.DragDrop.DoDragDrop%2A>에 래핑할 수 있습니다. 놓기 대상은 <xref:System.Windows.DataObject>에서 데이터를 추출해야 합니다. 데이터 개체 작업에 대한 자세한 내용은 [데이터 및 데이터 개체](data-and-data-objects.md)를 참조하세요.  
   
  끌어서 놓기 작업의 소스 및 대상은 UI 요소입니다. 그러나 실제로 전송되는 데이터는 일반적으로 시각적 표현이 없습니다. Windows 탐색기에서 파일을 끌 때 발생하는 것과 같이 끌어온 데이터의 시각적 표현을 제공하는 코드를 작성할 수 있습니다. 기본적으로 커서를 변경하여 끌어서 놓기 작업이 데이터에 주는 효과(예: 데이터가 이동 또는 복사되는지 여부)를 나타내 사용자에게 피드백을 제공합니다.  
   
 ### <a name="drag-and-drop-effects"></a>끌어서 놓기 효과  
- 끌어서 놓기 작업은 전송된 데이터에 여러 가지 효과를 줄 수 있습니다. 예를 들어 데이터를 복사하거나 데이터를 이동할 수 있습니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서는 끌어서 놓기 작업의 효과를 지정하는 데 사용할 수 있는 <xref:System.Windows.DragDropEffects> 열거형을 정의합니다. 끌기 소스의 <xref:System.Windows.DragDrop.DoDragDrop%2A> 메서드에서 소스가 허용하는 효과를 지정할 수 있습니다. 놓기 대상에서 <xref:System.Windows.DragEventArgs.Effects%2A> 클래스의 <xref:System.Windows.DragEventArgs> 속성에 대상의 의도한 효과를 지정할 수 있습니다. <xref:System.Windows.DragDrop.DragOver> 이벤트에 놓기 대상의 의도한 효과를 지정하는 경우 해당 정보가 <xref:System.Windows.DragDrop.GiveFeedback> 이벤트에서 끌기 소스로 다시 전달됩니다. 끌기 소스는 이 정보를 사용하여 놓기 대상이 데이터에 주려는 효과를 사용자에게 알립니다. 데이터를 놓을 때 놓기 대상은 <xref:System.Windows.DragDrop.Drop> 이벤트에 실제 효과를 지정합니다. 해당 정보는 <xref:System.Windows.DragDrop.DoDragDrop%2A> 메서드의 반환 값으로 끌기 소스에 다시 전달됩니다. 놓기 대상이 `allowedEffects`의 끌기 소스 목록에 없는 효과를 반환하는 경우 데이터 전송 없이 끌어서 놓기 작업이 취소됩니다.  
+ 끌어서 놓기 작업은 전송된 데이터에 여러 가지 효과를 줄 수 있습니다. 예를 들어 데이터를 복사하거나 데이터를 이동할 수 있습니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]는 끌어서 놓기 작업의 효과를 지정 하는 데 사용할 수 있는 <xref:System.Windows.DragDropEffects> 열거형을 정의 합니다. 끌기 소스의 <xref:System.Windows.DragDrop.DoDragDrop%2A> 메서드에서 소스가 허용하는 효과를 지정할 수 있습니다. 놓기 대상에서 <xref:System.Windows.DragEventArgs.Effects%2A> 클래스의 <xref:System.Windows.DragEventArgs> 속성에 대상의 의도한 효과를 지정할 수 있습니다. <xref:System.Windows.DragDrop.DragOver> 이벤트에 놓기 대상의 의도한 효과를 지정하는 경우 해당 정보가 <xref:System.Windows.DragDrop.GiveFeedback> 이벤트에서 끌기 소스로 다시 전달됩니다. 끌기 소스는 이 정보를 사용하여 놓기 대상이 데이터에 주려는 효과를 사용자에게 알립니다. 데이터를 놓을 때 놓기 대상은 <xref:System.Windows.DragDrop.Drop> 이벤트에 실제 효과를 지정합니다. 해당 정보는 <xref:System.Windows.DragDrop.DoDragDrop%2A> 메서드의 반환 값으로 끌기 소스에 다시 전달됩니다. 놓기 대상이 `allowedEffects`의 끌기 소스 목록에 없는 효과를 반환하는 경우 데이터 전송 없이 끌어서 놓기 작업이 취소됩니다.  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 <xref:System.Windows.DragDropEffects> 값은 끌어서 놓기 작업의 효과와 관련해서 끌기 소스와 놓기 대상 간에 통신을 제공하는 데만 사용됩니다. 끌어서 놓기 작업의 실제 효과는 애플리케이션에서 적절한 코드를 작성하는지에 따라 달라집니다.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "72291479"
   
 <a name="Drag_And_Drop_Example"></a>   
 ## <a name="drag-and-drop-example"></a>끌어서 놓기 예제  
- 이 섹션에서는 <xref:System.Windows.Shapes.Ellipse> 요소에 대해 끌어서 놓기를 구현하는 방법을 설명합니다. <xref:System.Windows.Shapes.Ellipse>는 끌기 소스인 동시에 놓기 대상입니다. 전송된 데이터는 타원의 <xref:System.Windows.Shapes.Shape.Fill%2A> 속성에 대한 문자열 표현입니다. 다음 XAML은 <xref:System.Windows.Shapes.Ellipse> 요소 및 이 요소가 처리하는 끌어서 놓기 관련 이벤트를 보여 줍니다. 끌어서 놓기를 구현 하는 방법에 대 한 전체 단계는 [ 연습: 사용자 정의 컨트롤에서 끌어서 놓기를 사용 하도록 설정 @ no__t-0.  
+ 이 섹션에서는 <xref:System.Windows.Shapes.Ellipse> 요소에 대해 끌어서 놓기를 구현하는 방법을 설명합니다. <xref:System.Windows.Shapes.Ellipse>는 끌기 소스인 동시에 놓기 대상입니다. 전송된 데이터는 타원의 <xref:System.Windows.Shapes.Shape.Fill%2A> 속성에 대한 문자열 표현입니다. 다음 XAML은 <xref:System.Windows.Shapes.Ellipse> 요소 및 이 요소가 처리하는 끌어서 놓기 관련 이벤트를 보여 줍니다. 끌어서 놓기를 구현하는 방법에 대한 전체 단계는 [연습: 사용자 정의 컨트롤에서 끌어서 놓기 사용](walkthrough-enabling-drag-and-drop-on-a-user-control.md)을 참조하세요.  
   
  [!code-xaml[DragDropSnippets#EllipseXaml](~/samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml#ellipsexaml)]  
   
@@ -139,18 +139,18 @@ ms.locfileid: "72291479"
   
  끌기 소스는 허용되는 작업(이동, 복사, 없음)과 관련된 피드백을 사용자에게 제공할 수도 있으며, 끌기 중 Esc 키를 누르는 것과 같은 추가 사용자 입력에 따라 끌어서 놓기 작업을 취소할 수 있습니다.  
   
- 애플리케이션은 끌기가 발생하는 시기를 확인한 다음 <xref:System.Windows.DragDrop.DoDragDrop%2A> 메서드를 호출하여 끌어서 놓기 작업을 시작해야 합니다. 일반적으로 이 시기는 마우스 단추를 누르고 있는 동안 끄는 요소에서 <xref:System.Windows.UIElement.MouseMove> 이벤트가 발생할 때입니다. 다음 예제에서는 <xref:System.Windows.Shapes.Ellipse> 요소의 <xref:System.Windows.UIElement.MouseMove> 이벤트 처리기에서 끌어서 놓기 작업을 시작하여 끌기 소스로 만드는 방법을 보여 줍니다. 전송된 데이터는 타원의 <xref:System.Windows.Shapes.Shape.Fill%2A> 속성에 대한 문자열 표현입니다.  
+ 애플리케이션은 끌기가 발생하는 시기를 확인한 다음 <xref:System.Windows.DragDrop.DoDragDrop%2A> 메서드를 호출하여 끌어서 놓기 작업을 시작해야 합니다. 일반적으로 이 시기는 마우스 단추를 누르고 있는 동안 끄는 요소에서 <xref:System.Windows.UIElement.MouseMove> 이벤트가 발생할 때입니다. 다음 예제에서는 <xref:System.Windows.UIElement.MouseMove> 요소의 <xref:System.Windows.Shapes.Ellipse> 이벤트 처리기에서 끌어서 놓기 작업을 시작하여 끌기 소스로 만드는 방법을 보여 줍니다. 전송된 데이터는 타원의 <xref:System.Windows.Shapes.Shape.Fill%2A> 속성에 대한 문자열 표현입니다.  
   
  [!code-csharp[DragDropSnippets#DoDragDrop](~/samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#dodragdrop)]
  [!code-vb[DragDropSnippets#DoDragDrop](~/samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#dodragdrop)]  
   
  <xref:System.Windows.UIElement.MouseMove> 이벤트 처리기 내에서 <xref:System.Windows.DragDrop.DoDragDrop%2A> 메서드를 호출하여 끌어서 놓기 작업을 시작합니다. <xref:System.Windows.DragDrop.DoDragDrop%2A> 메서드는 다음 세 개의 매개 변수를 사용합니다.  
   
-- `dragSource` - 전송된 데이터의 소스인 종속성 개체에 대한 참조입니다. 일반적으로 <xref:System.Windows.UIElement.MouseMove> 이벤트의 소스입니다.  
+- `dragSource`-전송 된 데이터의 소스인 종속성 개체에 대 한 참조입니다. 이는 일반적으로 <xref:System.Windows.UIElement.MouseMove> 이벤트의 소스입니다.  
   
-- `data` - <xref:System.Windows.DataObject>에 래핑되고 전송된 데이터를 포함하는 개체입니다.  
+- `data`-<xref:System.Windows.DataObject>에 래핑된 전송 된 데이터를 포함 하는 개체입니다.  
   
-- `allowedEffects` - 끌어서 놓기 작업의 허용되는 효과를 지정하는 <xref:System.Windows.DragDropEffects> 열거형 값 중 하나입니다.  
+- `allowedEffects`-끌어서 놓기 작업의 허용 되는 효과를 지정 하는 <xref:System.Windows.DragDropEffects> 열거형 값 중 하나입니다.  
   
  `data` 매개 변수를 통해 직렬화 가능한 개체를 전달할 수 있습니다. 데이터가 아직 <xref:System.Windows.DataObject>에 래핑되지 않은 경우 자동으로 새 <xref:System.Windows.DataObject>에 래핑됩니다. 여러 데이터 항목을 전달하려면 직접 <xref:System.Windows.DataObject>를 만들어 <xref:System.Windows.DragDrop.DoDragDrop%2A> 메서드에 전달해야 합니다. 자세한 내용은 [데이터 및 데이터 개체](data-and-data-objects.md)를 참조하세요.  
   
@@ -187,37 +187,37 @@ ms.locfileid: "72291479"
   
 3. <xref:System.Windows.DragDrop.DragLeave> 또는 <xref:System.Windows.DragDrop.Drop>  
   
- <xref:System.Windows.DragDrop.DragEnter> 이벤트는 데이터를 놓기 대상의 경계로 끌 때 발생합니다. 응용 프로그램에 적절한 경우 일반적으로 이 이벤트를 처리하여 끌어서 놓기 작업의 효과 미리 보기를 제공합니다. <xref:System.Windows.DragDrop.DragEnter> 이벤트에서 <xref:System.Windows.DragEventArgs.Effects%2A?displayProperty=nameWithType> 속성을 설정하지 마세요. <xref:System.Windows.DragDrop.DragOver> 이벤트를 덮어쓰게 됩니다.  
+ <xref:System.Windows.DragDrop.DragEnter> 이벤트는 데이터를 놓기 대상의 경계로 끌 때 발생합니다. 애플리케이션에 적절한 경우 일반적으로 이 이벤트를 처리하여 끌어서 놓기 작업의 효과 미리 보기를 제공합니다. <xref:System.Windows.DragEventArgs.Effects%2A?displayProperty=nameWithType> 이벤트에서 <xref:System.Windows.DragDrop.DragEnter> 속성을 설정하지 마세요. <xref:System.Windows.DragDrop.DragOver> 이벤트를 덮어쓰게 됩니다.  
   
- 다음 예제에서는 <xref:System.Windows.Shapes.Ellipse> 요소에 대한 <xref:System.Windows.DragDrop.DragEnter> 이벤트 처리기를 보여 줍니다. 이 코드는 현재 <xref:System.Windows.Shapes.Shape.Fill%2A> 브러시를 저장하여 끌어서 놓기 작업의 효과를 미리 봅니다. 그런 다음 <xref:System.Windows.DataObject.GetDataPresent%2A> 메서드를 사용하여 타원 위로 끄는 <xref:System.Windows.DataObject>에 <xref:System.Windows.Media.Brush>로 변환될 수 있는 문자열 데이터가 포함되어 있는지 여부를 확인합니다. 포함되어 있는 경우 <xref:System.Windows.DataObject.GetData%2A> 메서드를 사용하여 데이터가 추출됩니다. 그런 다음 <xref:System.Windows.Media.Brush>로 변환되어 타원에 적용됩니다. 변경 내용이 <xref:System.Windows.DragDrop.DragLeave> 이벤트 처리기에서 취소됩니다. 데이터를 <xref:System.Windows.Media.Brush>로 변환할 수 없는 경우 아무 작업도 수행되지 않습니다.  
+ 다음 예제에서는 <xref:System.Windows.DragDrop.DragEnter> 요소에 대한 <xref:System.Windows.Shapes.Ellipse> 이벤트 처리기를 보여 줍니다. 이 코드는 현재 <xref:System.Windows.Shapes.Shape.Fill%2A> 브러시를 저장하여 끌어서 놓기 작업의 효과를 미리 봅니다. 그런 다음 <xref:System.Windows.DataObject.GetDataPresent%2A> 메서드를 사용하여 타원 위로 끄는 <xref:System.Windows.DataObject>에 <xref:System.Windows.Media.Brush>로 변환될 수 있는 문자열 데이터가 포함되어 있는지 여부를 확인합니다. 포함되어 있는 경우 <xref:System.Windows.DataObject.GetData%2A> 메서드를 사용하여 데이터가 추출됩니다. 그런 다음 <xref:System.Windows.Media.Brush>로 변환되어 타원에 적용됩니다. 변경 내용이 <xref:System.Windows.DragDrop.DragLeave> 이벤트 처리기에서 취소됩니다. 데이터를 <xref:System.Windows.Media.Brush>로 변환할 수 없는 경우 아무 작업도 수행되지 않습니다.  
   
  [!code-csharp[DragDropSnippets#DragEnter](~/samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#dragenter)]
  [!code-vb[DragDropSnippets#DragEnter](~/samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#dragenter)]  
   
  <xref:System.Windows.DragDrop.DragOver> 이벤트는 데이터를 놓기 대상 위로 끄는 동안 지속적으로 발생합니다. 이 이벤트는 끌기 소스의 <xref:System.Windows.DragDrop.GiveFeedback> 이벤트와 쌍을 이룹니다. <xref:System.Windows.DragDrop.DragOver> 이벤트 처리기에서 일반적으로 <xref:System.Windows.DataObject.GetDataPresent%2A> 및 <xref:System.Windows.DataObject.GetData%2A> 메서드를 사용하여 전송된 데이터가 놓기 대상에서 처리할 수 있는 형식인지 여부를 확인합니다. 보조키를 눌렀는지 여부를 확인할 수도 있습니다. 이는 일반적으로 사용자가 이동 또는 복사 작업을 의도하는지를 나타냅니다. 이러한 검사가 수행된 후 <xref:System.Windows.DragEventArgs.Effects%2A?displayProperty=nameWithType> 속성을 설정하여 끌기 소스에 데이터를 놓을 때의 효과를 알립니다. 끌기 소스는 <xref:System.Windows.DragDrop.GiveFeedback> 이벤트 인수를 통해 이 정보를 받으며, 적절한 커서를 설정하여 사용자에게 피드백을 제공할 수 있습니다.  
   
- 다음 예제에서는 <xref:System.Windows.Shapes.Ellipse> 요소에 대한 <xref:System.Windows.DragDrop.DragOver> 이벤트 처리기를 보여 줍니다. 이 코드는 타원 위로 끄는 <xref:System.Windows.DataObject>에 <xref:System.Windows.Media.Brush>로 변환될 수 있는 문자열 데이터가 포함되어 있는지 여부를 확인합니다. 포함되어 있는 경우 <xref:System.Windows.DragEventArgs.Effects%2A?displayProperty=nameWithType> 속성을 <xref:System.Windows.DragDropEffects.Copy>로 설정합니다. 이는 데이터를 타원에 복사할 수 있음을 끌기 소스에 나타냅니다. 데이터를 <xref:System.Windows.Media.Brush>로 변환할 수 없는 경우 <xref:System.Windows.DragEventArgs.Effects%2A?displayProperty=nameWithType> 속성이 <xref:System.Windows.DragDropEffects.None>으로 설정됩니다. 이는 타원이 데이터에 유효한 놓기 대상이 아님을 끌기 소스에 나타냅니다.  
+ 다음 예제에서는 <xref:System.Windows.DragDrop.DragOver> 요소에 대한 <xref:System.Windows.Shapes.Ellipse> 이벤트 처리기를 보여 줍니다. 이 코드는 타원 위로 끄는 <xref:System.Windows.DataObject>에 <xref:System.Windows.Media.Brush>로 변환될 수 있는 문자열 데이터가 포함되어 있는지 여부를 확인합니다. 포함되어 있는 경우 <xref:System.Windows.DragEventArgs.Effects%2A?displayProperty=nameWithType> 속성을 <xref:System.Windows.DragDropEffects.Copy>로 설정합니다. 이는 데이터를 타원에 복사할 수 있음을 끌기 소스에 나타냅니다. 데이터를 <xref:System.Windows.Media.Brush>로 변환할 수 없는 경우 <xref:System.Windows.DragEventArgs.Effects%2A?displayProperty=nameWithType> 속성이 <xref:System.Windows.DragDropEffects.None>으로 설정됩니다. 이는 타원이 데이터에 유효한 놓기 대상이 아님을 끌기 소스에 나타냅니다.  
   
  [!code-csharp[DragDropSnippets#DragOver](~/samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#dragover)]
  [!code-vb[DragDropSnippets#DragOver](~/samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#dragover)]  
   
  <xref:System.Windows.DragDrop.DragLeave> 이벤트는 데이터를 놓지 않고 대상의 경계에서 끌 때 발생합니다. 이 이벤트를 처리하여 <xref:System.Windows.DragDrop.DragEnter> 이벤트 처리기에서 수행한 작업을 모두 실행 취소합니다.  
   
- 다음 예제에서는 <xref:System.Windows.Shapes.Ellipse> 요소에 대한 <xref:System.Windows.DragDrop.DragLeave> 이벤트 처리기를 보여 줍니다. 이 코드는 저장된 <xref:System.Windows.Media.Brush>를 타원에 적용하여 <xref:System.Windows.DragDrop.DragEnter> 이벤트 처리기에서 수행된 미리 보기를 실행 취소합니다.  
+ 다음 예제에서는 <xref:System.Windows.DragDrop.DragLeave> 요소에 대한 <xref:System.Windows.Shapes.Ellipse> 이벤트 처리기를 보여 줍니다. 이 코드는 저장된 <xref:System.Windows.DragDrop.DragEnter>를 타원에 적용하여 <xref:System.Windows.Media.Brush> 이벤트 처리기에서 수행된 미리 보기를 실행 취소합니다.  
   
  [!code-csharp[DragDropSnippets#DragLeave](~/samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#dragleave)]
  [!code-vb[DragDropSnippets#DragLeave](~/samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#dragleave)]  
   
  <xref:System.Windows.DragDrop.Drop> 이벤트는 놓기 대상 위에 데이터를 놓을 때 발생합니다. 기본적으로 이 이벤트는 마우스 단추를 놓을 때 발생합니다. <xref:System.Windows.DragDrop.Drop> 이벤트 처리기에서 <xref:System.Windows.DataObject.GetData%2A> 메서드를 사용하여 <xref:System.Windows.DataObject>에서 전송된 데이터를 추출하고 애플리케이션에 필요한 데이터 처리를 모두 수행합니다. <xref:System.Windows.DragDrop.Drop> 이벤트는 끌어서 놓기 작업을 종료합니다.  
   
- 다음 예제에서는 <xref:System.Windows.Shapes.Ellipse> 요소에 대한 <xref:System.Windows.DragDrop.Drop> 이벤트 처리기를 보여 줍니다. 이 코드는 끌어서 놓기 작업의 효과를 적용하며 <xref:System.Windows.DragDrop.DragEnter> 이벤트 처리기의 코드와 비슷합니다. 타원 위로 끄는 <xref:System.Windows.DataObject>에 <xref:System.Windows.Media.Brush>로 변환될 수 있는 문자열 데이터가 포함되어 있는지 여부를 확인합니다. 포함되어 있는 경우 <xref:System.Windows.Media.Brush>가 타원에 적용됩니다. 데이터를 <xref:System.Windows.Media.Brush>로 변환할 수 없는 경우 아무 작업도 수행되지 않습니다.  
+ 다음 예제에서는 <xref:System.Windows.DragDrop.Drop> 요소에 대한 <xref:System.Windows.Shapes.Ellipse> 이벤트 처리기를 보여 줍니다. 이 코드는 끌어서 놓기 작업의 효과를 적용하며 <xref:System.Windows.DragDrop.DragEnter> 이벤트 처리기의 코드와 비슷합니다. 타원 위로 끄는 <xref:System.Windows.DataObject>에 <xref:System.Windows.Media.Brush>로 변환될 수 있는 문자열 데이터가 포함되어 있는지 여부를 확인합니다. 포함되어 있는 경우 <xref:System.Windows.Media.Brush>가 타원에 적용됩니다. 데이터를 <xref:System.Windows.Media.Brush>로 변환할 수 없는 경우 아무 작업도 수행되지 않습니다.  
   
  [!code-csharp[DragDropSnippets#Drop](~/samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#drop)]
  [!code-vb[DragDropSnippets#Drop](~/samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#drop)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Clipboard>
-- [연습: 사용자 정의 컨트롤에서 끌어서 놓기 사용 @ no__t-0
+- [연습: 사용자 정의 컨트롤에서 끌어서 놓기 사용](walkthrough-enabling-drag-and-drop-on-a-user-control.md)
 - [방법 항목](drag-and-drop-how-to-topics.md)
 - [끌어서 놓기](drag-and-drop.md)

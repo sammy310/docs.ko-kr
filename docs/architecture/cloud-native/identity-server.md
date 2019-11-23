@@ -45,7 +45,7 @@ IdentityServer는 ASP.NET Core 응용 프로그램 내에서 실행 되 고 Open
 
 IdentityServer4은 오픈 소스 이며 무료로 사용할 수 있습니다. NuGet 패키지를 사용 하 여 응용 프로그램에 추가할 수 있습니다. 주 패키지는 400만 번 이상 다운로드 된 [IdentityServer4](https://www.nuget.org/packages/IdentityServer4/) 입니다. 기본 패키지는 사용자 인터페이스 코드를 포함 하지 않고 메모리 구성 에서만 지원 합니다. 데이터베이스와 함께 사용 하려면 Entity Framework Core을 사용 하 여 IdentityServer에 대 한 구성 및 운영 데이터를 저장 하는 [IdentityServer4](https://www.nuget.org/packages/IdentityServer4.EntityFramework) 와 같은 데이터 공급자를 사용 하려고 합니다. 사용자 인터페이스의 경우 IdentityServer 미들웨어를 사용 하 여 로그인 및 로그 아웃에 대 한 지원을 추가 하기 위해 [빠른 시작 UI 리포지토리에서](https://github.com/IdentityServer/IdentityServer4.Quickstart.UI) 파일을 ASP.NET Core MVC 응용 프로그램으로 복사할 수 있습니다.
 
-## <a name="configuration"></a>Configuration
+## <a name="configuration"></a>구성
 
 IdentityServer는 각 사용자 지정 설치의 일부로 구성할 수 있는 다양 한 종류의 프로토콜과 소셜 인증 공급자를 지원 합니다. 이는 일반적으로 `ConfigureServices` 메서드의 ASP.NET Core 응용 프로그램 `Startup` 클래스에서 수행 됩니다. 구성에는 지원 되는 프로토콜과 사용할 서버 및 끝점의 경로를 지정 하는 작업이 포함 됩니다. 그림 8-2에서는 IdentityServer4 빠른 시작 UI 프로젝트에서 가져온 구성 예제를 보여 줍니다.
 
@@ -92,13 +92,13 @@ public class Startup
 
 **그림 8-2**. IdentityServer 구성.
 
-또한 IdentityServer는 다양 한 프로토콜 및 구성을 테스트 하는 데 사용할 수 있는 공개 데모 사이트를 호스팅합니다. [https://demo.identityserver.io/](https://demo.identityserver.io/) 에 있으며 제공 된 `client_id` 에 따라 동작을 구성 하는 방법에 대 한 정보를 포함 합니다.
+또한 IdentityServer는 다양 한 프로토콜 및 구성을 테스트 하는 데 사용할 수 있는 공개 데모 사이트를 호스팅합니다. [https://demo.identityserver.io/](https://demo.identityserver.io/) 에 있으며 제공 된 `client_id`에 따라 동작을 구성 하는 방법에 대 한 정보를 포함 합니다.
 
 ## <a name="javascript-clients"></a>JavaScript 클라이언트
 
 많은 클라우드 네이티브 응용 프로그램은 프런트 엔드에서 서버 쪽 Api 및 리치 클라이언트 SPAs (단일 페이지 응용 프로그램)를 활용 합니다. IdentityServer는 NPM를 통해 웹 Api의 로그인, 로그 아웃 및 토큰 기반 인증에 IdentityServer를 사용할 수 있도록 하는를 통해 [JavaScript 클라이언트](http://docs.identityserver.io/en/latest/quickstarts/6_javascript_client.html) (`oidc-client.js`)를 제공 합니다.
 
-## <a name="references"></a>참조 항목
+## <a name="references"></a>참조
 
 - [IdentityServer 설명서](http://docs.identityserver.io/en/latest/)
 - [응용 프로그램 종류](https://docs.microsoft.com/azure/active-directory/develop/app-types)

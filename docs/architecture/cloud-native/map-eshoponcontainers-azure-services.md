@@ -44,7 +44,7 @@ APIM을 사용 하 여 응용 프로그램은 각각 특정 프런트 엔드 클
 
 응용 프로그램이 AKS를 사용 하는 경우 또 다른 옵션은 AKS 클러스터 내에서 pod로 Azure 게이트웨이 수신 컨트롤러를 배포 하는 것입니다. 이렇게 하면 클러스터가 Azure 애플리케이션 게이트웨이와 통합 되어 게이트웨이가 AKS pod에 대 한 트래픽 부하를 분산할 수 있습니다. [AKS에 대 한 Azure 게이트웨이 수신 컨트롤러에 대해 자세히 알아보세요](https://github.com/Azure/application-gateway-kubernetes-ingress).
 
-## <a name="data"></a>데이터
+## <a name="data"></a>data
 
 EShopOnContainers에서 사용 하는 다양 한 백 엔드 서비스에는 저장소 요구 사항이 다릅니다. 여러 마이크로 서비스는 SQL Server 데이터베이스를 사용 합니다. 바구니 마이크로 서비스는 지 속성에 대 한 Redis 캐시를 활용 합니다. 마이크로 서비스 위치에는 해당 데이터에 대 한 MongoDB API가 필요 합니다. Azure는 이러한 각 데이터 형식을 지원 합니다.
 
@@ -60,11 +60,11 @@ EShopOnContainers 응용 프로그램은 요청 사이에 사용자의 현재 �
 
 응용 프로그램은 이벤트를 사용 하 여 서로 다른 서비스 간의 변경 내용을 전달 합니다. 이 기능은 다양 한 구현을 사용 하 여 구현할 수 있으며 로컬 eShopOnContainers 응용 프로그램은 [RabbitMQ](https://www.rabbitmq.com/)를 사용 합니다. Azure에서 호스트 되는 경우 응용 프로그램은 메시징에 대 한 [Azure Service Bus](https://docs.microsoft.com/azure/service-bus/) 활용 합니다. Azure Service Bus는 완전히 관리 되는 통합 메시지 브로커로, 응용 프로그램과 서비스가 분리 되 고 신뢰할 수 있는 비동기 방식으로 서로 통신할 수 있습니다. Azure Service Bus는 개별 큐를 지원 하며 게시자-구독자 시나리오를 지원 하기 위한 별도의 *항목* 을 지원 합니다. EShopOnContainers 응용 프로그램은 Azure Service Bus와 함께 항목을 활용 하 여 지정 된 메시지에 대응 하는 데 필요한 다른 마이크로 서비스로 메시지를 분산 하는 기능을 지원 합니다.
 
-## <a name="resiliency"></a>복구
+## <a name="resiliency"></a>복원력
 
 EShopOnContainers 응용 프로그램은 프로덕션에 배포 된 후에는 여러 Azure 서비스를 활용 하 여 복원 력을 향상 시킬 수 있습니다. 응용 프로그램은 Application Insights와 통합 되어 앱의 가용성을 기반으로 보고 및 경고를 제공할 수 있는 상태 검사를 게시 합니다. 또한 Azure 리소스는 버그 및 성능 문제를 식별 하 고 수정 하는 데 사용할 수 있는 진단 로그를 제공 합니다. 리소스 로그는 응용 프로그램에서 다양 한 Azure 리소스를 사용 하는 시기 및 방법에 대 한 자세한 정보를 제공 합니다. [6 장](resiliency.md)에서 클라우드 기본 복원 기능에 대해 자세히 알아보세요.
 
-## <a name="references"></a>참조 항목
+## <a name="references"></a>참조
 
 - [EShopOnContainers 아키텍처](https://github.com/dotnet-architecture/eShopOnContainers/wiki/Architecture)
 - [높은 확장성 및 가용성을 위해 마이크로 서비스 및 다중 컨테이너 애플리케이션 오케스트레이션](https://docs.microsoft.com/dotnet/architecture/microservices/architect-microservice-container-applications/scalable-available-multi-container-microservice-applications)

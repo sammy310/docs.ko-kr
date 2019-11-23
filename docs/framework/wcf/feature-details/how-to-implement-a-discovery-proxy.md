@@ -11,7 +11,7 @@ ms.locfileid: "71351567"
 ---
 # <a name="how-to-implement-a-discovery-proxy"></a>방법: 검색 프록시 구현
 
-이 항목에서는 검색 프록시를 구현하는 방법을 설명합니다. WCF (Windows Communication Foundation)의 검색 기능에 대 한 자세한 내용은 [Wcf 검색 개요](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)를 참조 하세요. 검색 프록시는 <xref:System.ServiceModel.Discovery.DiscoveryProxy> 추상 클래스를 확장하는 클래스를 만들어 구현할 수 있습니다. 이 샘플에서는 많은 다른 지원 클래스가 정의되고 사용됩니다. `OnResolveAsyncResult`, `OnFindAsyncResult` 및 `AsyncResult` 이러한 클래스는 <xref:System.IAsyncResult> 인터페이스를 구현합니다. @No__t에 대 한 자세한 내용은 [system.web 인터페이스](xref:System.IAsyncResult)를 참조 하세요.
+이 항목에서는 검색 프록시를 구현하는 방법을 설명합니다. WCF (Windows Communication Foundation)의 검색 기능에 대 한 자세한 내용은 [Wcf 검색 개요](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)를 참조 하세요. 검색 프록시는 <xref:System.ServiceModel.Discovery.DiscoveryProxy> 추상 클래스를 확장하는 클래스를 만들어 구현할 수 있습니다. 이 샘플에서는 많은 다른 지원 클래스가 정의되고 사용됩니다. `OnResolveAsyncResult`, `OnFindAsyncResult` 및 `AsyncResult` 이러한 클래스는 <xref:System.IAsyncResult> 인터페이스를 구현합니다. <xref:System.IAsyncResult>에 대 한 자세한 내용은 [system.web 인터페이스](xref:System.IAsyncResult)를 참조 하세요.
 
  이 항목에서는 검색 프록시 구현을 크게 다음 세 부분으로 나누어서 설명합니다.
 
@@ -546,7 +546,7 @@ OnBegin. / OnEnd. 메서드는 후속 검색 작업에 대한 논리를 제공�
     }
     ```
 
-검색 프록시의 구현을 완료했습니다. @No__t을 계속 진행 합니다. 검색 프록시 @ no__t-0에 등록 하는 검색 가능한 서비스를 구현 합니다.
+검색 프록시의 구현을 완료했습니다. [방법: 검색 프록시에 등록 하는 검색 가능한 서비스 구현](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)을 계속 진행 합니다.
 
 ## <a name="example"></a>예제
 
@@ -973,9 +973,9 @@ namespace Microsoft.Samples.Discovery
 }
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [WCF 검색 개요](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
-- [방법: 검색 프록시 @ no__t-0에 등록 하는 검색 가능한 서비스를 구현 합니다.
-- [방법: 검색 프록시를 사용 하 여 서비스를 찾는 클라이언트 응용 프로그램 구현 @ no__t-0
-- [방법: 검색 프록시 @ no__t-0 테스트
+- [방법: 검색 프록시에 등록할 검색 가능한 서비스 구현](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
+- [방법: 검색 프록시를 사용하여 서비스를 찾는 클라이언트 애플리케이션 구현](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)
+- [방법: 검색 프록시 테스트](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)

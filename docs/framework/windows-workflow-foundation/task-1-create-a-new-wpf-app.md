@@ -37,9 +37,9 @@ ms.locfileid: "72031887"
     - System.Activities.Presentation
     - System.Activities.Core.Presentation
 
-10. @No__t-0Task 2를 참조 하세요. 워크플로 디자이너 @ no__t를 호스트 하 여 Workflow Designer 디자인 캔버스를 호스트 하는 방법을 알아보세요.
+10. Workflow Designer 디자인 캔버스를 호스트 하는 방법에 대 한 자세한 내용은 [작업 2: 호스트 워크플로 디자이너](task-2-host-the-workflow-designer.md) 를 참조 하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [워크플로 디자이너 재호스트](rehosting-the-workflow-designer.md)
-- [Task 2: 워크플로 디자이너 @ no__t를 호스팅합니다.-0
+- [작업 2: 워크플로 디자이너 호스트](task-2-host-the-workflow-designer.md)

@@ -21,7 +21,7 @@ Azure 가상 컴퓨터를 프로 비전 하 고 선택한 데이터베이스를 
 
 다음으로 Azure에서 제공 되는 DBaaS 옵션을 살펴보겠습니다. Microsoft가 계속 해 서 Azure를 "오픈 플랫폼"으로 유지 하 고, 다양 한 오픈 소스 관계형 및 NoSQL 데이터베이스에 대 한 관리 되는 지원을 제공 하 고, 다양 한 오픈 소스에 대 한 주요 기여를 활성 멤버로 유지 하는 것을 확인할 수 있습니다.
 
-## <a name="azure-sql-database"></a>Azure SQL Database
+## <a name="azure-sql-database"></a>Azure SQL 데이터베이스
 
 [Azure SQL Database](https://docs.microsoft.com/azure/sql-database/) 은 Microsoft SQL Server 데이터베이스 엔진을 기반으로 하는 기능을 갖춘 범용 관계형 dbaas (데이터베이스)입니다. Microsoft에서 완벽 하 게 관리 되 고 있으며, 안정적인 고성능의 안전한 클라우드 데이터베이스입니다. 서비스는 SQL Server의 온-프레미스 버전에 있는 다양 한 기능을 공유 합니다.
 

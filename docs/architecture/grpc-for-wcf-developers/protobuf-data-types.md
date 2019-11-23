@@ -1,20 +1,19 @@
 ---
 title: Protobuf 스칼라 데이터 형식-WCF 개발자를 위한 gRPC
 description: .NET Core에서 Protobuf 및 gRPC가 지 원하는 기본 및 잘 알려진 데이터 형식에 대해 알아봅니다.
-author: markrendle
 ms.date: 09/09/2019
-ms.openlocfilehash: cae9cc483ffb791a9b53e6a2d9d7c0924d725a67
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: ae7f5f48099000dff0eefb36e23cb9b9f2ac517c
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "73841458"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971548"
 ---
 # <a name="protobuf-scalar-data-types"></a>Protobuf 스칼라 데이터 형식
 
 Protobuf는 네이티브 스칼라 값 형식의 범위를 지원 합니다. 다음 표에서는 모두 해당 C# 하는 형식을 보여 줍니다.
 
-| Protobuf 형식 | C# 형식      | 노트 |
+| Protobuf 형식 | C# 형식      | 참고 |
 | ------------- | ------------ | ----- |
 | `double`      | `double`     |       |
 | `float`       | `float`      |       |
@@ -32,7 +31,7 @@ Protobuf는 네이티브 스칼라 값 형식의 범위를 지원 합니다. 다
 | `string`      | `string`     | 3     |
 | `bytes`       | `ByteString` | 4     |
 
-## <a name="notes"></a>노트
+## <a name="notes"></a>참고
 
 1. `int32` 및 `int64`에 대 한 표준 인코딩은 서명 된 값으로 작업할 때 비효율적입니다. 필드에 음수가 포함 될 가능성이 있는 경우 대신 `sint32` 또는 `sint64`를 사용 합니다. 두 형식은 각각 C# `int` 및 `long` 형식에 매핑됩니다.
 2. `fixed` 필드는 값에 관계 없이 항상 동일한 바이트 수를 사용 합니다. 이 동작을 사용 하면 더 큰 값에 대해 serialization 및 deserialization 속도가 더 빨라집니다.
@@ -120,7 +119,7 @@ Protobuf는 생성 된 메시지 속성에 단순 `T?` (예: `int?`)를 사용 �
 
 잘 알려진 형식 `Timestamp` 및 `Duration`은 .NET에서 클래스로 표현 되므로 nullable 버전이 필요 하지 않지만 `DateTimeOffset` 또는 `TimeSpan`변환할 때 이러한 형식의 속성에서 null을 확인 하는 것이 중요 합니다.
 
-## <a name="decimals"></a>자릿수로
+## <a name="decimals"></a>소수 자릿수
 
 Protobuf는 기본적으로 .NET `decimal` 형식을 지원 하지 않고 `double` 및 `float`합니다. Protobuf 프로젝트에는 표준 `Decimal` 형식을 잘 알려진 형식에 추가 하는 경우를 지 원하는 언어 및 프레임 워크에 대 한 플랫폼 지원을 제공 하지만 아직 구현 되지 않은 것을 확인할 수 있습니다.
 

@@ -125,7 +125,7 @@ public class Starship
 
 양식 전송 후 모델 바인딩 데이터는 데이터베이스와 같은 모든 데이터 저장소에 저장 되지 않습니다. Blazor Weasembomapp에서 데이터는 서버로 전송 되어야 합니다. 예를 들어 HTTP POST 요청을 사용 합니다. Blazor 서버 앱에서 데이터는 이미 서버에 있지만 지속 되어야 합니다. Blazor apps에서 데이터 액세스를 처리 하는 것은 [데이터](data.md) 처리 섹션의 제목입니다.
 
-## <a name="additional-resources"></a>추가 자료
+## <a name="additional-resources"></a>추가 리소스
 
 Blazor apps의 [폼 및 유효성 검사](/aspnet/core/blazor/forms-validation) 에 대 한 자세한 내용은 Blazor 설명서를 참조 하세요.
 

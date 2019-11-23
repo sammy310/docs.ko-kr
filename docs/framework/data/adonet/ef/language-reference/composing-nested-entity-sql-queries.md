@@ -10,10 +10,10 @@ ms.lasthandoff: 10/16/2019
 ms.locfileid: "72395552"
 ---
 # <a name="composing-nested-entity-sql-queries"></a>중첩 Entity SQL 쿼리 작성
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)]은 다양한 기능을 가진 언어입니다. @No__t-0의 빌딩 블록은 식입니다. 기존 SQL과 달리 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]은 테이블 형식 결과 집합으로 제한 되지 않습니다. [!INCLUDE[esql](../../../../../../includes/esql-md.md)]은 리터럴, 매개 변수 또는 중첩 된 식을 포함할 수 있는 복잡 한 식을 작성할 수 있도록 지원 합니다. 식의 값은 매개 변수화 되거나 다른 식으로 구성 될 수 있습니다.  
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)]은 풍부한 기능 언어입니다. [!INCLUDE[esql](../../../../../../includes/esql-md.md)]의 빌딩 블록은 식입니다. 기존 SQL과 달리 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]은 테이블 형식 결과 집합으로 제한 되지 않습니다. [!INCLUDE[esql](../../../../../../includes/esql-md.md)]는 리터럴, 매개 변수 또는 중첩 된 식을 포함할 수 있는 복잡 한 식을 작성 하는 것을 지원 합니다. 식의 값은 매개 변수화 되거나 다른 식으로 구성 될 수 있습니다.  
   
 ## <a name="nested-expressions"></a>중첩된 식  
- 중첩된 식은 자신이 반환한 형식의 값이 허용되는 임의의 위치에 놓일 수 있습니다. 예를 들면,  
+ 중첩된 식은 자신이 반환한 형식의 값이 허용되는 임의의 위치에 놓일 수 있습니다. 예:  
   
 ```sql  
 -- Returns a hierarchical collection of three elements at top-level.   
@@ -25,7 +25,7 @@ ROW(@x, {@x}, {@x, 4, 5}, {@x, 7, 8, 9})
 {{{@x}}};  
 ```  
   
- 중첩 쿼리는 프로젝션 절에 위치할 수 있습니다. 예를 들면,  
+ 중첩 쿼리는 프로젝션 절에 위치할 수 있습니다. 예:  
   
 ```sql  
 -- Returns a collection of rows where each row contains an Address entity.  
@@ -46,7 +46,7 @@ UNION ALL
 FROM … );  
 ```  
   
- 다음 예제에서는 @no__t에서 식을 올바르게 중첩 하는 방법을 보여 줍니다. [방법: 두 쿼리의 합집합 순서를 정렬](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896299(v=vs.100))합니다.  
+ 다음 예제에서는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]에서 식을 올바르게 중첩 하는 방법을 보여 줍니다. [방법: 두 쿼리를 Union 순서로 정렬](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896299(v=vs.100))합니다.  
   
 ## <a name="nested-queries-in-projection"></a>프로젝션의 중첩 쿼리  
  프로젝션 절의 중첩 쿼리는 서버의 Cartesian 제품 쿼리로 변환될 수 있습니다. SQL Server를 포함 한 일부 백엔드 서버에서는 TempDB 테이블이 매우 커질 수 있으므로 서버 성능에 부정적인 영향을 줄 수 있습니다.  
@@ -75,6 +75,6 @@ SELECT C2.FirstName, C2.LastName
         ORDER BY C1.LastName) as C2  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Entity SQL 개요](entity-sql-overview.md)

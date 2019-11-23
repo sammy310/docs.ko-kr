@@ -19,7 +19,7 @@ Azure AD는 클라우드 용으로 작성 되었습니다. LDAP를 사용 하는
 
 Azure AD는 온-프레미스에서 호스트 되는 응용 프로그램에 대 한 SSO를 제공 하는 데 사용 되는 회사 브랜드 로그인 화면, 다중 팩터리 인증 및 클라우드 기반 응용 프로그램 프록시를 지원 합니다. 다양 한 종류의 보안 보고 및 경고 기능을 제공 합니다.
 
-## <a name="references"></a>참조 항목
+## <a name="references"></a>참조
 
 - [Microsoft id 플랫폼](https://docs.microsoft.com/azure/active-directory/develop/)
 

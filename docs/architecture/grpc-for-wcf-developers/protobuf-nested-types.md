@@ -1,14 +1,13 @@
 ---
 title: Protobuf 중첩 형식-WCF 개발자를 위한 gRPC
 description: Protobuf 및 gRPC의 중첩 된 메시지 유형과 이러한 유형이에서 C#생성 되는 방법에 대해 알아봅니다.
-author: markrendle
 ms.date: 09/09/2019
-ms.openlocfilehash: ec9fc522619230c1201bfef1e8128f7356936212
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: bbc7ed41516d29f867bbc9da5b258f6a3c9ff261
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "73841404"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73967393"
 ---
 # <a name="protobuf-nested-types"></a>Protobuf 중첩 형식
 

@@ -36,7 +36,7 @@ ms.locfileid: "73130243"
   
 메타데이터 및 MSIL 작업을 위한 다른 유용한 리소스는 CLI(공용 언어 인프라) 설명서, 특히 "Partition II: Metadata Definition and Semantics" 및 "Partition III: CIL Instruction Set"입니다. 이 설명서는 [MSDN](https://go.microsoft.com/fwlink/?LinkID=65555) 및 [Ecma 웹 사이트](https://go.microsoft.com/fwlink/?LinkId=116487)에서 온라인으로 제공됩니다.  
   
-## <a name="in-this-section"></a>단원 내용
+## <a name="in-this-section"></a>섹션 내용
   
 [리플렉션 내보내기의 보안 문제점](security-issues-in-reflection-emit.md)  
 리플렉션 내보내기를 사용하여 동적 어셈블리를 만드는 경우와 관련된 보안 문제를 설명합니다.  
@@ -53,7 +53,7 @@ ms.locfileid: "73130243"
 [동적 형식 생성을 위해 수집 가능한 어셈블리](collectible-assemblies.md)   
 만들어진 애플리케이션 도메인을 언로드하지 않고 언로드할 수 있는 동적 어셈블리인 수집 가능한 어셈블리를 소개합니다.
   
-## <a name="reference"></a>참고  
+## <a name="reference"></a>참조  
 
 <xref:System.Reflection.Emit.OpCodes>  
 메서드 본문을 작성하는 데 사용할 수 있는 MSIL 명령 코드의 카탈로그를 작성합니다.  
@@ -67,7 +67,7 @@ ms.locfileid: "73130243"
 <xref:System.Reflection>  
 메타데이터와 관리 코드를 탐색하는 데 사용되는 관리되는 클래스를 포함합니다.  
   
-## <a name="related-sections"></a>관련 단원  
+## <a name="related-sections"></a>관련 섹션  
 
 [리플렉션](reflection.md)  
 메타데이터와 관리 코드를 탐색하는 방법을 설명합니다.  

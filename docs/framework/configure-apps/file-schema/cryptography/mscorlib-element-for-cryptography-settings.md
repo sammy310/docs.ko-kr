@@ -15,11 +15,11 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71699741"
 ---
-# <a name="mscorlib-element-for-cryptography-settings"></a>암호화 설정에 대 한 \<mscorlib > 요소
-[@No__t-1cryptographySettings > 요소](cryptographysettings-element.md)를 포함 합니다.  
+# <a name="mscorlib-element-for-cryptography-settings"></a>암호화 설정에 대 한 mscorlib > 요소 \<
+[\<cryptographySettings > 요소](cryptographysettings-element.md)를 포함 합니다.  
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t **\<mscorlib >**  
+**mscorlib >\<** &nbsp;&nbsp;  
   
 ## <a name="syntax"></a>구문  
   
@@ -32,22 +32,22 @@ ms.locfileid: "71699741"
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
- 없음  
+ None.  
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
 |`cryptographySettings`|암호화 설정이 포함되어 있습니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
 |`configuration`|공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.|  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 **\<mscorlib >** 요소를 사용 하 여 암호화 클래스를 참조 하 고 런타임을 구성 하는 방법을 보여 줍니다. 그런 다음 <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> 메서드에 "RSA" 문자열을 전달 하 고 <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> 메서드를 사용 하 여 `MyCryptoRSAClass` 개체를 반환할 수 있습니다.  
+ 다음 예제에서는 **\<mscorlib >** 요소를 사용 하 여 암호화 클래스를 참조 하 고 런타임을 구성 하는 방법을 보여 줍니다. 그런 다음 문자열 "RSA"를 <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> 메서드에 전달 하 고 <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> 메서드를 사용 하 여 `MyCryptoRSAClass` 개체를 반환할 수 있습니다.  
   
 ```xml  
 <configuration>  
@@ -68,7 +68,7 @@ ms.locfileid: "71699741"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A>
 - <xref:System.Security.Cryptography>

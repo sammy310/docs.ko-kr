@@ -15,7 +15,7 @@ ms.locfileid: "72003275"
 # <a name="how-to-use-stored-procedures-mapped-for-multiple-result-shapes"></a>방법: 여러 결과 도형에 매핑된 저장 프로시저 사용
 저장 프로시저에서 여러 결과 도형을 반환할 수 있는 경우 반환 형식은 단일 프로젝션 도형에 대해 강력하게 형식화될 수 없습니다. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 모든 가능한 프로젝션 형식을 생성할 수 있더라도 해당 형식들이 반환되는 순서는 알 수는 없습니다.  
   
- 이 시나리오와 달리 순차적으로 여러 결과 도형을 생성하는 저장 프로시저에 대한 자세한 내용은 [방법: 순차 결과 도형에 매핑된 저장 프로시저 @ no__t-0을 사용 합니다.  
+ 이 시나리오와 달리 순차적으로 여러 결과 도형을 생성하는 저장 프로시저에 대한 자세한 내용은 [방법: 순차적 결과 도형에 매핑된 저장 프로시저 사용](how-to-use-stored-procedures-mapped-for-sequential-result-shapes.md)을 참조 하세요.  
   
  <xref:System.Data.Linq.Mapping.ResultTypeAttribute> 특성을 여러 결과 형식을 반환하는 저장 프로시저에 적용하여 프로시저에서 반환할 수 있는 형식 집합을 지정합니다.  
   
@@ -43,6 +43,6 @@ else if(@shape = 2)
  [!code-csharp[DLinqSprox#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSprox/cs/Program.cs#5)]
  [!code-vb[DLinqSprox#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSprox/vb/Module1.vb#5)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [저장된 프로시저](stored-procedures.md)

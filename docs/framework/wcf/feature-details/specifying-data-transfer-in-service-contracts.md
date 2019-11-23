@@ -87,7 +87,7 @@ Public Interface IAirfareQuoteService
 End Interface  
 ```  
   
- `DataContractSerializer`는 사용자의 형식을 serialize하기에 적합하지 않은 경우도 있습니다. WCF는 매개 변수를 serialize 하는 데 사용할 수 있는 <xref:System.Xml.Serialization.XmlSerializer> 인 대체 serialization 엔진을 지원 합니다. <xref:System.Xml.Serialization.XmlSerializer>를 통해 `XmlAttributeAttribute`와 같은 특성을 사용하여 결과 XML을 보다 효과적으로 제어할 수 있습니다. 특정 연산이나 전체 서비스에 <xref:System.Xml.Serialization.XmlSerializer>를 사용하려면 <xref:System.ServiceModel.XmlSerializerFormatAttribute> 특성을 연산이나 서비스에 적용합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.  
+ `DataContractSerializer`는 사용자의 형식을 serialize하기에 적합하지 않은 경우도 있습니다. WCF는 매개 변수를 serialize 하는 데 사용할 수 있는 대체 serialization 엔진 인 <xref:System.Xml.Serialization.XmlSerializer>지원 합니다. <xref:System.Xml.Serialization.XmlSerializer>를 통해 `XmlAttributeAttribute`와 같은 특성을 사용하여 결과 XML을 보다 효과적으로 제어할 수 있습니다. 특정 연산이나 전체 서비스에 <xref:System.Xml.Serialization.XmlSerializer>를 사용하려면 <xref:System.ServiceModel.XmlSerializerFormatAttribute> 특성을 연산이나 서비스에 적용합니다. 예:  
   
 ```csharp  
 [ServiceContract]  
@@ -432,7 +432,7 @@ End Class
 ## <a name="specifying-the-use-and-style"></a>사용 및 스타일 지정  
  WSDL(웹 서비스 기술 언어)을 사용하여 서비스를 설명하는 경우 문서 스타일과 RPC(원격 프로시저 호출) 스타일이 일반적으로 사용됩니다. 문서 스타일에서 전체 메시지 본문은 스키마를 사용하여 설명되고 WSDL은 해당 스키마 내의 요소를 참조하여 여러 메시지 본문 부분을 설명합니다. RPC 스타일에서 WSDL은 요소가 아닌 각 메시지 부분의 스키마 형식을 참조합니다. 이 두 스타일 중 하나를 수동으로 선택해야 하는 경우도 있습니다. 둘 중 하나만 수동으로 설정하려면 <xref:System.ServiceModel.DataContractFormatAttribute>가 사용 중인 경우에는 `Style` 특성을 적용한 다음 <xref:System.Runtime.Serialization.DataContractSerializer> 속성을 설정하고, `Style`를 사용하는 경우에는 <xref:System.ServiceModel.XmlSerializerFormatAttribute> 특성에 <xref:System.Xml.Serialization.XmlSerializer>을 설정합니다.  
   
- 또한 <xref:System.Xml.Serialization.XmlSerializer>는 serialize된 두 가지 형식의 XML `Literal` 및 `Encoded`를 지원합니다. `Literal`은 가장 일반적으로 허용되는 폼이며 <xref:System.Runtime.Serialization.DataContractSerializer>에서 유일하게 지원하는 폼입니다. `Encoded`는 SOAP 사양의 5단원에 설명된 레거시 폼이며 새 서비스에는 사용하지 않는 것이 좋습니다. `Encoded` 모드로 전환하려면 `Use` 특성에서 <xref:System.ServiceModel.XmlSerializerFormatAttribute> 속성을 `Encoded`로 설정합니다.  
+ 또한 <xref:System.Xml.Serialization.XmlSerializer>는 serialize된 두 가지 형식의 XML `Literal` 및 `Encoded`를 지원합니다. `Literal`은 가장 일반적으로 허용 되는 형식이 며 <xref:System.Runtime.Serialization.DataContractSerializer>에서 지 원하는 유일한 형식입니다. `Encoded`는 SOAP 사양의 5 단원에 설명 된 레거시 형식이 며 새 서비스에는 권장 되지 않습니다. `Encoded` 모드로 전환하려면 `Use` 특성에서 <xref:System.ServiceModel.XmlSerializerFormatAttribute> 속성을 `Encoded`로 설정합니다.  
   
  대부분의 경우 `Style` 및 `Use` 속성에 대한 기본 설정을 변경하면 안 됩니다.  
   
@@ -440,7 +440,7 @@ End Class
  여러 가지 방법으로 데이터를 serialize하는 방법을 사용자 지정할 수 있습니다.  
   
 ### <a name="changing-server-serialization-settings"></a>서버 Serialization 설정 변경  
- 기본 <xref:System.Runtime.Serialization.DataContractSerializer>가 사용 중인 경우 <xref:System.ServiceModel.ServiceBehaviorAttribute> 특성을 서비스에 적용하여 서비스에서 serialization 프로세스의 몇 가지 특성을 제어할 수 있습니다. 특히 `MaxItemsInObjectGraph` 속성을 사용하여 <xref:System.Runtime.Serialization.DataContractSerializer>가 deserialize하는 개체의 최대 개수를 제한하는 할당량을 설정할 수도 있습니다. `IgnoreExtensionDataObject` 속성을 사용하여 라운드트립 버전 관리 기능을 해제할 수 있습니다. 할당량에 대한 자세한 내용은 [데이터에 대한 보안 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)을 참조하세요. 라운드트립에 대 한 자세한 내용은 [전방 호환 데이터 계약](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)을 참조 하세요.  
+ 기본 <xref:System.Runtime.Serialization.DataContractSerializer>가 사용 중인 경우 <xref:System.ServiceModel.ServiceBehaviorAttribute> 특성을 서비스에 적용하여 서비스에서 serialization 프로세스의 몇 가지 특성을 제어할 수 있습니다. 특히 `MaxItemsInObjectGraph` 속성을 사용하여 <xref:System.Runtime.Serialization.DataContractSerializer>가 역직렬화하는 개체의 최대 개수를 제한하는 할당량을 설정할 수도 있습니다. `IgnoreExtensionDataObject` 속성을 사용하여 라운드트립 버전 관리 기능을 해제할 수 있습니다. 할당량에 대한 자세한 내용은 [데이터에 대한 보안 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)을 참조하세요. 라운드트립에 대 한 자세한 내용은 [전방 호환 데이터 계약](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)을 참조 하세요.  
   
 ```csharp  
 [ServiceBehavior(MaxItemsInObjectGraph=100000)]  
@@ -464,7 +464,7 @@ End Interface
 ```  
   
 ### <a name="serialization-behaviors"></a>Serialization 동작  
- WCF에서 두 동작을 사용할 수 있습니다. <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> 및 특정 작업에 사용 중인 serializer에 따라 자동으로 연결 되는 <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior>입니다. 이러한 동작은 자동으로 적용되므로 일반적으로 사용자가 알아야 할 필요는 없습니다.  
+ WCF, <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> 및 특정 작업에 사용 되는 serializer에 따라 자동으로 연결 되는 <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior> 두 가지 동작을 사용할 수 있습니다. 이러한 동작은 자동으로 적용되므로 일반적으로 사용자가 알아야 할 필요는 없습니다.  
   
  그러나 `DataContractSerializerOperationBehavior`에는 serialization 프로세스를 사용자 지정하는 데 사용할 수 있는 `MaxItemsInObjectGraph`, `IgnoreExtensionDataObject` 및 `DataContractSurrogate` 속성이 있습니다. 처음 두 속성은 앞 단원에서 설명한 것과 의미가 같습니다. `DataContractSurrogate` 속성을 사용하여 serialization 프로세스를 사용자 지정하고 확장하는 데 필요한 강력한 메커니즘인 데이터 계약 서로게이트를 사용하도록 설정할 수 있습니다. 자세한 내용은 [데이터 계약 서로게이트](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)를 참조 하세요.  
   
@@ -533,7 +533,7 @@ Dim serviceHost As ServiceHost = New ServiceHost(GetType(IDataService))
  웹 호스팅의 경우 새 `ServiceHost` 파생 클래스를 만들고 서비스 호스트 팩터리를 사용하여 연결해야 합니다.  
   
 ### <a name="controlling-serialization-settings-in-configuration"></a>구성에서 Serialization 설정 제어  
- `MaxItemsInObjectGraph` 및 `IgnoreExtensionDataObject`는 다음 예제에서처럼 `dataContractSerializer` 엔드포인트 또는 서비스 동작을 사용하여 구성을 통해 제어될 수 있습니다.  
+ ph x="1" /&gt; 및 `MaxItemsInObjectGraph`는 다음 예제에서처럼 `IgnoreExtensionDataObject` 엔드포인트 또는 서비스 동작을 사용하여 구성을 통해 제어될 수 있습니다.  
   
 ```xml  
 <configuration>  
@@ -574,8 +574,8 @@ Dim serviceHost As ServiceHost = New ServiceHost(GetType(IDataService))
   
  고급 직렬화 개념에 대 한 자세한 내용은 [serialization 및 Deserialization](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)을 참조 하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [XmlSerializer 클래스 사용](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)
 - [방법: 스트리밍 사용](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)
-- [방법: 클래스 또는 구조체에 대 한 기본 데이터 계약 만들기 @ no__t-0
+- [방법: 클래스 또는 구조체에 대한 기본 데이터 계약 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-data-contract-for-a-class-or-structure.md)

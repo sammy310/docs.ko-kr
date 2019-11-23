@@ -18,7 +18,7 @@ ms.locfileid: "72291352"
 ---
 # <a name="use-the-automationid-property"></a>AutomationID 속성 사용
 > [!NOTE]
-> 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. @No__t-0에 대 한 최신 정보는 [Windows Automation API를 참조 하세요. UI 자동화 @ no__t-0.  
+> 이 설명서는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 네임스페이스에 정의된 관리되는 <xref:System.Windows.Automation> 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](https://go.microsoft.com/fwlink/?LinkID=156746)를 참조하세요.  
   
  이 항목에는 <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> 를 사용하여 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 내에서 요소를 찾는 방법과 시기를 보여주는 시나리오와 샘플 코드가 있습니다.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "72291352"
   
 #### <a name="use-a-unique-and-discoverable-automationid-to-locate-a-specific-element-in-the-ui-automation-tree"></a>검색 가능하고 고유한 AutomationID를 사용하여 UI 자동화 트리에서 특정 요소를 찾습니다.  
   
-- UI Spy와 같은 도구를 사용 하 여 관심 있는 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 요소의 <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>을 보고 합니다. 그런 다음 이 값을 복사하여 클라이언트 애플리케이션에 붙여넣을 수 있습니다(예: 이후의 자동 테스트를 위한 테스트 스크립트). 이 방법은 런타임 시에 요소를 식별하고 찾는 데 필요한 코드의 수를 줄이고 간소화합니다.  
+- UI Spy와 같은 도구를 사용 하 여 관심 있는 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 요소의 <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>를 보고 합니다. 그런 다음 이 값을 복사하여 클라이언트 애플리케이션에 붙여넣을 수 있습니다(예: 이후의 자동 테스트를 위한 테스트 스크립트). 이 방법은 런타임 시에 요소를 식별하고 찾는 데 필요한 코드의 수를 줄이고 간소화합니다.  
   
 > [!CAUTION]
 > 일반적으로 <xref:System.Windows.Automation.AutomationElement.RootElement%2A>의 직계 자식 항목만 가져와야 합니다. 하위 항목 검색은 수 많은 요소에서 반복될 수 있기 때문에 스택 오버플로가 발생할 수 있습니다. 낮은 수준의 특정 요소를 가져오려고 시도하는 경우, 낮은 수준의 컨테이너 또는 애플리케이션 창에서 검색을 시작해야 합니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "72291352"
   
 - 특정 상황에서는 AutomationID가 형제 항목 간에서만 고유하기 때문에 UI 자동화 트리에서 여러 요소의 AutomationID 속성 값이 동일할 수 있습니다. 이러한 상황에서는 필요에 따라 최상위 항목을 기준으로 요소를 고유하게 식별할 수 있습니다. 예를 들어, 개발자가 자식 항목이 "Item1", "Item2" 등과 같은 순차적 AutomationID로 식별되는 여러 개의 자식 메뉴 항목과 함께 다수의 메뉴 항목이 있는 메뉴 모음을 제공할 수 있습니다. 이 경우, 필요에 따라 상위 항목 및 최상위 항목(필요한 경우)의 AutomationID와 함께 각 메뉴 항목의 AutomationID로 고유하게 식별할 수 있습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>
 - [UI 자동화 트리 개요](ui-automation-tree-overview.md)

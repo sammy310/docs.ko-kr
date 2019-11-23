@@ -1,14 +1,13 @@
 ---
 title: WCF 개발자를 위한 Docker gRPC
 description: ASP.NET Core gRPC 응용 프로그램에 대 한 Docker 이미지 만들기
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: cc369da9494ade532187dfc8d19a94a3a037ebab
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: a5aceb4b5270cb828965e990a62db4147012adff
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "73841656"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73967835"
 ---
 # <a name="docker"></a>Docker
 
@@ -18,14 +17,14 @@ ms.locfileid: "73841656"
 
 Microsoft는 .NET Core 응용 프로그램 빌드 및 실행을 위한 다양 한 기본 이미지를 제공 합니다. ASP.NET Core 3.0 이미지를 만들기 위해 응용 프로그램을 빌드 및 게시 하기 위한 SDK 이미지와 배포용 런타임 이미지 라는 두 개의 기본 이미지가 사용 됩니다.
 
-| 이미지 | 설명 |
+| 이미지 | Description |
 | ----- | ----------- |
 | [mcr.microsoft.com/dotnet/core/sdk](https://hub.docker.com/_/microsoft-dotnet-core-sdk/) | `docker build`를 사용 하 여 응용 프로그램을 빌드하는 데 사용 됩니다. 프로덕션에서는 사용 하지 않습니다. |
 | [mcr.microsoft.com/dotnet/core/aspnet](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) | 런타임 및 ASP.NET Core 종속성을 포함 합니다. 프로덕션의 경우. |
 
 각 이미지에는 다른 Linux 배포판을 기반으로 하는 네 가지 변형이 있습니다 (태그로 구분).
 
-| 이미지 태그 | Linux | 노트 |
+| 이미지 태그 | Linux | 참고 |
 | --------- | ----- | ----- |
 | 3.0-buster, 3.0 | Debian 10 | OS 변형이 지정 되지 않은 경우 기본 이미지입니다. |
 | 3.0-알파인 | 알파인 3.9 | 알파인 기본 이미지는 Debian 또는 Ubuntu 1 보다 훨씬 작습니다. |
@@ -70,7 +69,7 @@ Dockerfile에는 두 부분이 있습니다. 첫 번째는 `sdk` 기본 이미�
 
 ### <a name="the-build-steps"></a>빌드 단계
 
-| 단계 | 설명 |
+| 단계 | Description |
 | ---- | ----------- |
 | `FROM ...` | 기본 이미지를 선언 하 고 `builder` 별칭을 할당 합니다 (설명에 대해서는 다음 섹션 참조). |
 | `WORKDIR /src` | `/src` 디렉터리를 만들고 현재 작업 디렉터리로 설정 합니다. |
@@ -80,7 +79,7 @@ Dockerfile에는 두 부분이 있습니다. 첫 번째는 `sdk` 기본 이미�
 
 ### <a name="the-runtime-image-steps"></a>런타임 이미지 단계
 
-| 단계 | 설명 |
+| 단계 | Description |
 | ---- | ----------- |
 | `FROM ...` | 새 기본 이미지를 선언 합니다. |
 | `WORKDIR /app` | `/app` 디렉터리를 만들고 현재 작업 디렉터리로 설정 합니다. |

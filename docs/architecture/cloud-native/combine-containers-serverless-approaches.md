@@ -34,7 +34,7 @@ func init ProjectName --docker
 다음 옵션 중에서 원하는 작업자 런타임을 선택 합니다.
 
 - `dotnet`(C#)
-- `node`(JavaScript)
+- `node` (JavaScript)
 - `python`
 
 프로젝트를 만들 때 Dockerfile이 포함 됩니다. 이제 함수를 로컬에서 만들고 테스트할 수 있습니다. `docker build` 및 `docker run` 명령을 사용 하 여 빌드하고 실행 합니다. Docker 지원을 사용 하 여 Azure Functions 빌드를 시작 하는 자세한 단계는 [사용자 지정 이미지를 사용 하 여 Linux에서 함수 만들기](https://docs.microsoft.com/azure/azure-functions/functions-create-function-linux-custom-image) 자습서를 참조 하세요.
@@ -43,7 +43,7 @@ func init ProjectName --docker
 
 Azure 함수는 지정 된 함수를 대상으로 하는 이벤트 비율에 따라 수요를 충족 하도록 자동으로 확장 됩니다. 또한 Kubernetes를 활용 하 여 함수를 호스팅하고 Kubernetes 기반 이벤트 기반 자동 크기 조정 또는 KEDA를 사용할 수 있습니다. 이벤트가 발생 하지 않을 때 KEDA는 0 개의 인스턴스로 확장 될 수 있으며, 이벤트에 대 한 응답으로 수평 pod autoscaler를 사용 하 여 요청에 맞게 컨테이너 수를 확장할 수 있습니다. [KEDA를 사용 하 여 Azure 함수 크기 조정에 대해 자세히 알아보세요](https://docs.microsoft.com/azure/azure-functions/functions-kubernetes-keda).
 
-## <a name="references"></a>참조 항목
+## <a name="references"></a>참조
 
 - [Docker 컨테이너에서 Azure Functions 실행](https://markheath.net/post/azure-functions-docker)
 - [사용자 지정 이미지를 사용 하 여 Linux에서 함수 만들기](https://docs.microsoft.com/azure/azure-functions/functions-create-function-linux-custom-image)

@@ -61,7 +61,7 @@ ms.locfileid: "73459451"
   
  매우 일반적인 컨트롤인 <xref:System.Windows.Controls.Button>을 고려 합니다.  <xref:System.Windows.Controls.Button>의 기본 동작은 사용자가 클릭할 때 응용 프로그램이 작업을 수행할 수 있도록 하는 것입니다.  기본적으로 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]의 <xref:System.Windows.Controls.Button>는 볼록 사각형으로 나타납니다.  응용 프로그램을 개발 하는 동안 단추의 click 이벤트를 처리 하 여 <xref:System.Windows.Controls.Button>동작을 활용할 수 있지만 단추의 속성을 변경 하 여 수행할 수 있는 작업 이상으로 단추의 모양을 변경할 수 있습니다.  이 경우 새 <xref:System.Windows.Controls.ControlTemplate>을 만들 수 있습니다.  
   
- 다음 예에서는 <xref:System.Windows.Controls.Button>에 대 한 <xref:System.Windows.Controls.ControlTemplate>를 만듭니다.  <xref:System.Windows.Controls.ControlTemplate> 모퉁이가 둥근 모퉁이와 그라데이션 배경을 사용 하 여 <xref:System.Windows.Controls.Button>를 만듭니다.  <xref:System.Windows.Controls.ControlTemplate>에는 <xref:System.Windows.Controls.Border.Background%2A>가 두 개의 <xref:System.Windows.Media.GradientStop> 개체와 <xref:System.Windows.Media.LinearGradientBrush> 인 <xref:System.Windows.Controls.Border> 포함 되어 있습니다.  첫 번째 <xref:System.Windows.Media.GradientStop>는 데이터 바인딩을 사용 하 여 <xref:System.Windows.Media.GradientStop>의 <xref:System.Windows.Media.GradientStop.Color%2A> 속성을 단추의 배경 색에 바인딩합니다.  <xref:System.Windows.Controls.Button>의 <xref:System.Windows.Controls.Control.Background%2A> 속성을 설정 하면 해당 값의 색이 첫 번째 <xref:System.Windows.Media.GradientStop>사용 됩니다. 데이터 바인딩에 대한 자세한 내용은 [데이터 바인딩 개요](../../../desktop-wpf/data/data-binding-overview.md)를 참조하세요. 또한이 예제에서는 <xref:System.Windows.Controls.Primitives.ButtonBase.IsPressed%2A> `true`때 <xref:System.Windows.Controls.Button>의 모양을 변경 하는 <xref:System.Windows.Trigger>을 만듭니다.  
+ 다음 예제는 <xref:System.Windows.Controls.ControlTemplate> 에 대 한는 <xref:System.Windows.Controls.Button>합니다.  <xref:System.Windows.Controls.ControlTemplate> 모퉁이가 둥근 모퉁이와 그라데이션 배경을 사용 하 여 <xref:System.Windows.Controls.Button>를 만듭니다.  <xref:System.Windows.Controls.ControlTemplate>에는 <xref:System.Windows.Controls.Border.Background%2A>가 두 개의 <xref:System.Windows.Media.GradientStop> 개체와 <xref:System.Windows.Media.LinearGradientBrush> 인 <xref:System.Windows.Controls.Border> 포함 되어 있습니다.  첫 번째 <xref:System.Windows.Media.GradientStop>는 데이터 바인딩을 사용 하 여 <xref:System.Windows.Media.GradientStop>의 <xref:System.Windows.Media.GradientStop.Color%2A> 속성을 단추의 배경 색에 바인딩합니다.  <xref:System.Windows.Controls.Button>의 <xref:System.Windows.Controls.Control.Background%2A> 속성을 설정 하면 해당 값의 색이 첫 번째 <xref:System.Windows.Media.GradientStop>사용 됩니다. 데이터 바인딩에 대한 자세한 내용은 [데이터 바인딩 개요](../../../desktop-wpf/data/data-binding-overview.md)를 참조하세요. 또한이 예제에서는 <xref:System.Windows.Controls.Primitives.ButtonBase.IsPressed%2A> `true`때 <xref:System.Windows.Controls.Button>의 모양을 변경 하는 <xref:System.Windows.Trigger>을 만듭니다.  
   
  [!code-xaml[ControlsOverview#6](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/Window1.xaml#6)]  
 [!code-xaml[ControlsOverview#7](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/AppInCode.xaml#7)]  
@@ -97,7 +97,7 @@ ms.locfileid: "73459451"
 
  이러한 기본 클래스에 대 한 자세한 내용은 [WPF 콘텐츠 모델](wpf-content-model.md)을 참조 하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [스타일 지정 및 템플릿](styling-and-templating.md)
 - [범주별 컨트롤](controls-by-category.md)

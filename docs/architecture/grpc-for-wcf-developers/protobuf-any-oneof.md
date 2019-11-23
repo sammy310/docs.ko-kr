@@ -1,14 +1,13 @@
 ---
 title: Variant 형식의 Protobuf Any 및 중 필드-WCF 개발자를 위한 gRPC
 description: 모든 형식 및 중 키워드를 사용 하 여 메시지에서 variant 개체 형식을 나타내는 방법에 대해 알아봅니다.
-author: markrendle
 ms.date: 09/09/2019
-ms.openlocfilehash: 10f55288eb4a6aa603228da5b4850317d6bde614
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: af3ba22c238aa80a8c6119f62d5d8914770cad68
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "73841476"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971610"
 ---
 # <a name="protobuf-any-and-oneof-fields-for-variant-types"></a>Variant 형식에 대 한 Protobuf Any 및 중 필드
 
@@ -16,7 +15,7 @@ WCF에서 동적 속성 형식 (즉, `object`형식의 속성)을 처리 하는 
 
 Protobuf는 둘 이상의 형식이 될 수 있는 값을 처리 하는 두 가지 간단한 옵션을 제공 합니다. `Any` 형식은 알려진 Protobuf 메시지 유형을 나타낼 수 있지만 `oneof` 키워드를 사용 하면 지정 된 메시지에서 필드 범위 중 하나만 설정할 수 있도록 지정할 수 있습니다.
 
-## <a name="any"></a>임의의 값
+## <a name="any"></a>Any
 
 `Any`는 Protobuf의 "잘 알려진 형식" 중 하나 이며, 지원 되는 모든 언어의 구현이 포함 된 유용한 재사용 가능 메시지 유형을 수집 합니다. `Any` 형식을 사용 하려면 `google/protobuf/any.proto` 정의를 가져와야 합니다.
 

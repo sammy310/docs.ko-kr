@@ -1,14 +1,13 @@
 ---
 title: 채널 자격 증명-WCF 개발자를 위한 gRPC
 description: ASP.NET Core 3.0에서 gRPC 채널 자격 증명을 구현 하 고 사용 하는 방법입니다.
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 61141dc4143f36f9ac511c3369c3fde668c9d703
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: b424db49337a2dc6e3d0245d36349e3f408cdf6c
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "73841668"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73967957"
 ---
 # <a name="channel-credentials"></a>채널 자격 증명
 

@@ -1,5 +1,5 @@
 ---
-title: 클레임
+title: ID
 description: Azure 용 클라우드 네이티브 .NET 앱 설계 | 신분을
 ms.date: 09/23/2019
 ms.openlocfilehash: 4cc7c04bf323d2589777df466321f6801f511b6f
@@ -9,7 +9,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 09/23/2019
 ms.locfileid: "73840348"
 ---
-# <a name="identity"></a>클레임
+# <a name="identity"></a>ID
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
@@ -27,7 +27,7 @@ ms.locfileid: "73840348"
 
 일반적으로 STS는 주 서버 인증을 담당 합니다. 리소스에 대 한 액세스 수준을 결정 하는 것은 응용 프로그램의 다른 부분에 남아 있습니다.
 
-## <a name="references"></a>참조 항목
+## <a name="references"></a>참조
 
 - [Microsoft id 플랫폼](https://docs.microsoft.com/azure/active-directory/develop/)
 

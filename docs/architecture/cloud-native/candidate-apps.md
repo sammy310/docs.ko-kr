@@ -3,18 +3,18 @@ title: 클라우드 네이티브 용 후보 앱
 description: 클라우드 기본 방법의 이점을 활용 하는 응용 프로그램의 유형 알아보기
 author: robvet
 ms.date: 08/20/2019
-ms.openlocfilehash: 127dca45ce8a5e025ca7511e6513afffe64e592d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 328af4081d830cf1a7959a37c2155090ec4da3ff
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73841860"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73968290"
 ---
 # <a name="candidate-apps-for-cloud-native"></a>클라우드 네이티브 용 후보 앱
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-포트폴리오에서 앱을 확인 합니다. 클라우드 기본 아키텍처에 대해 얼마나 많은 자격이 있나요? 다? 무엇 인가요?
+포트폴리오에서 앱을 확인 합니다. 클라우드 기본 아키텍처에 대해 얼마나 많은 자격이 있나요? 위 운영 체제 모두 무엇 인가요?
 
 비용/혜택 분석을 적용 하는 경우 클라우드 네이티브로 필요한 hefty price 태그를 지원 하지 않는 것이 좋습니다. 클라우드 기본이 되는 비용은 응용 프로그램의 비즈니스 가치를 초과할 것입니다.
 
@@ -70,7 +70,7 @@ Cloud native의 후보가 될 수 있는 응용 프로그램의 유형은 무엇
 
 소개를 통해 이제 클라우드 네이티브에 대해 훨씬 더 자세히 살펴보겠습니다.
 
-### <a name="references"></a>참조 항목
+### <a name="references"></a>참조
 
 - [클라우드 기본 컴퓨팅 기반](https://www.cncf.io/)
 
@@ -89,8 +89,6 @@ Cloud native의 후보가 될 수 있는 응용 프로그램의 유형은 무엇
 - [Netflix에서 코드를 배포 하는 방법](https://www.infoq.com/news/2013/06/netflix/)
 
 - [WeChat 마이크로 서비스 크기 조정에 대 한 오버 로드 컨트롤](https://www.cs.columbia.edu/~ruigu/papers/socc18-final100.pdf)
-
-- [RayGun-사례 연구](https://raygun.com/case-study/ovation)
 
 >[!div class="step-by-step"]
 >[이전](definition.md)

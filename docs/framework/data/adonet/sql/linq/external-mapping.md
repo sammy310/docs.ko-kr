@@ -19,15 +19,15 @@ ms.locfileid: "72003050"
 ## <a name="requirements"></a>요구 사항  
  매핑 파일은 XML 파일이어야 하며 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 스키마 정의 파일(.xsd)에 대해 유효성이 검사되어야 합니다.  
   
- 다음 규칙이 적용됩니다.  
+ 이 때 적용되는 규칙은 다음과 같습니다.  
   
 - 매핑 파일은 XML 파일이어야 합니다.  
   
-- XML 매핑 파일은 XML 스키마 정의 파일에 대해 유효해야 합니다. 자세한 내용은 [방법: DBML 및 외부 매핑 파일의 유효성을 검사 합니다 @ no__t-0.  
+- XML 매핑 파일은 XML 스키마 정의 파일에 대해 유효해야 합니다. 자세한 내용은 [방법: DBML 및 외부 매핑 파일 유효성 검사](how-to-validate-dbml-and-external-mapping-files.md)를 참조 하세요.  
   
 - 외부 매핑은 특성 기반 매핑을 재정의합니다. 즉, 외부 매핑 소스를 사용하여 <xref:System.Data.Linq.DataContext>를 만들면 <xref:System.Data.Linq.DataContext>에서는 사용자가 클래스에 만든 모든 매핑 특성을 무시합니다. 이 동작은 외부 매핑 파일에 클래스가 포함되었는지 여부에 관계없이 항상 적용됩니다.  
   
-- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 특성 기반 매핑과 외부 매핑의 혼합 사용을 지원하지 않습니다.  
+- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]는 두 매핑 방법 (특성 기반 및 외부)의 하이브리드 사용을 지원 하지 않습니다.  
   
 ## <a name="xml-schema-definition-file"></a>XML 스키마 정의 파일  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 외부 매핑은 다음 XML 스키마 정의에 대해 유효해야 합니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "72003050"
  이 스키마 정의 파일은 DBML 파일의 유효성을 검사하는 데 사용하는 스키마 정의 파일과 다릅니다. 자세한 내용은 [LINQ to SQL의 코드 생성](code-generation-in-linq-to-sql.md))을 참조 하세요.  
   
 > [!NOTE]
-> 또한 Visual Studio 사용자는 XML 스키마 대화 상자에서이 XSD 파일을 "Linqtosqlmapping.xsd"으로 찾을 수 있습니다. 외부 매핑 파일의 유효성을 검사 하는 데이 파일을 제대로 사용 하려면 [How to: DBML 및 외부 매핑 파일의 유효성을 검사 합니다 @ no__t-0.  
+> 또한 Visual Studio 사용자는 XML 스키마 대화 상자에서이 XSD 파일을 "Linqtosqlmapping.xsd"으로 찾을 수 있습니다. 외부 매핑 파일의 유효성을 검사 하는 데이 파일을 제대로 사용 하려면 [방법: DBML 및 외부 매핑 파일 유효성 검사](how-to-validate-dbml-and-external-mapping-files.md)를 참조 하세요.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-16"?>  
@@ -141,8 +141,8 @@ elementFormDefault="qualified" >
 </xs:schema>  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [LINQ to SQL에서 코드 생성](code-generation-in-linq-to-sql.md)
 - [참조](reference.md)
-- [방법: 개체 모델을 외부 파일로 생성 @ no__t-0
+- [방법: 외부 파일로 개체 모델 생성](how-to-generate-the-object-model-as-an-external-file.md)

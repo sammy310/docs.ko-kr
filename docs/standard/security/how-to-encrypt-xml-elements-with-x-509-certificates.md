@@ -24,13 +24,13 @@ ms.lasthandoff: 09/27/2019
 ms.locfileid: "71353853"
 ---
 # <a name="how-to-encrypt-xml-elements-with-x509-certificates"></a>방법: X.509 인증서로 XML 요소 암호화
-<xref:System.Security.Cryptography.Xml> 네임스페이스의 클래스를 사용하여 XML 문서 내의 요소를 암호화할 수 있습니다.  XML 암호화는 데이터가 쉽게 읽혀질 염려 없이 암호화된 XML 데이터를 교환하거나 저장하는 표준 방법입니다.  XML 암호화 표준에 대 한 자세한 내용은 <https://www.w3.org/TR/xmldsig-core/>에 있는 XML 암호화에 대 한 World Wide Web 컨소시엄 (W3C) 사양을 참조 하세요.  
+<xref:System.Security.Cryptography.Xml> 네임스페이스의 클래스를 사용하여 XML 문서 내의 요소를 암호화할 수 있습니다.  XML 암호화는 데이터가 쉽게 읽혀질 염려 없이 암호화된 XML 데이터를 교환하거나 저장하는 표준 방법입니다.  XML 암호화 표준에 대 한 자세한 내용은 <https://www.w3.org/TR/xmldsig-core/>에 있는 XML 암호화에 대 한 W3C (World Wide Web 컨소시엄) 사양을 참조 하세요.  
   
  XML 암호화를 사용하여 암호화된 XML 데이터가 포함된 <`EncryptedData`> 요소의 문서나 XML 요소를 대체할 수 있습니다. <`EncryptedData`> 요소는 암호화 중에 사용된 키와 프로세스에 대한 정보가 들어 있는 하위 요소를 포함할 수 있습니다.  XML 암호화를 사용하면 문서에 암호화된 여러 요소가 포함될 수 있고 한 요소가 여러 번 암호화될 수 있습니다.  이 절차의 코드 예제에서는 나중에 암호 해독 과정에서 사용할 수 있는 다른 여러 하위 요소와 함께 <`EncryptedData`> 요소를 생성하는 방법을 보여 줍니다.  
   
  이 예제에서는 두 키를 사용하여 XML 요소를 암호화합니다. [인증서 생성 도구(Makecert.exe)](/windows/desktop/SecCrypto/makecert)를 사용하여 테스트 X.509 인증서를 생성하고 인증서 저장소에 인증서를 저장합니다. 그런 다음 예제에서는 프로그래밍 방식으로 인증서를 검색하고 <xref:System.Security.Cryptography.Xml.EncryptedXml.Encrypt%2A> 메서드를 통해 XML 요소를 암호화하는 데 사용합니다. 내부적으로 <xref:System.Security.Cryptography.Xml.EncryptedXml.Encrypt%2A> 메서드는 별도의 세션 키를 만들고 XML 문서를 암호화하는 데 사용합니다. 이 메서드는 세션 키를 암호화하고 이를 암호화된 XML과 함께 새 <`EncryptedData`> 요소 내부에 저장합니다.  
   
- XML 요소를 암호 해독하려면 <xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A> 메서드를 호출하기만 하면 됩니다. 메서드가 자동으로 저장소에서 X.509 인증서를 검색하고 필요한 암호 해독을 수행합니다.  이 절차를 사용 하 여 암호화 된 XML 요소의 암호를 해독 하는 방법에 대 한 자세한 내용은 [How to: X.509 Certificate @ no__t-0을 사용 하 여 XML 요소 암호를 해독 합니다.  
+ XML 요소를 암호 해독하려면 <xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A> 메서드를 호출하기만 하면 됩니다. 메서드가 자동으로 저장소에서 X.509 인증서를 검색하고 필요한 암호 해독을 수행합니다.  이 절차를 사용하여 암호화된 XML 요소를 암호 해독하는 방법에 대한 자세한 내용은 [방법: X.509 인증서로 XML 요소 암호 해독](../../../docs/standard/security/how-to-decrypt-xml-elements-with-x-509-certificates.md)을 참조하세요.  
   
  이 예제는 여러 애플리케이션이 암호화된 데이터를 공유해야 하거나 애플리케이션이 실행되는 시간 사이에 암호화된 데이터를 저장해야 경우에 적합합니다.  
   
@@ -116,7 +116,7 @@ ms.locfileid: "71353853"
 ## <a name="net-framework-security"></a>.NET Framework 보안  
  이 예제에서 사용된 X.509 인증서는 테스트 전용입니다.  애플리케이션은 신뢰할 수 있는 인증 기관에서 생성된 X.509 인증서를 사용하거나 Microsoft Windows 인증서 서버에서 생성된 인증서를 사용해야 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Security.Cryptography.Xml>
-- [방법: X.509 Certificate를 사용 하 여 XML 요소 암호 해독 @ no__t-0
+- [방법: X.509 인증서로 XML 요소 해독](../../../docs/standard/security/how-to-decrypt-xml-elements-with-x-509-certificates.md)

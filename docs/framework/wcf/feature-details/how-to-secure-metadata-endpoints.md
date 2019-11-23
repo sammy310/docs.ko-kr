@@ -1,5 +1,5 @@
 ---
-title: '방법: 메타데이터 엔드포인트 보안'
+title: '방법: 메타데이터 엔드포인트 보안 설정'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,7 +12,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/03/2019
 ms.locfileid: "71834686"
 ---
-# <a name="how-to-secure-metadata-endpoints"></a>방법: 메타데이터 엔드포인트 보안
+# <a name="how-to-secure-metadata-endpoints"></a>방법: 메타데이터 엔드포인트 보안 설정
 
 서비스의 메타데이터에는 악의적인 사용자가 활용할 수 있는 애플리케이션에 대한 중요한 정보가 들어 있습니다. 또한 서비스의 소비자는 서비스의 메타데이터를 가져오기 위한 보안 메커니즘이 필요할 수도 있습니다. 따라서 보안 엔드포인트를 사용하여 메타데이터를 게시해야 하는 경우가 있습니다.
 
@@ -22,7 +22,7 @@ ms.locfileid: "71834686"
 
 ### <a name="to-create-a-secure-https-get-metadata-endpoint-in-code"></a>코드에 보안 HTTPS GET 메타데이터 엔드포인트를 만들려면
 
-1. 적절한 X.509 인증서를 사용하여 포트를 구성합니다. 인증서는 신뢰할 수 있는 기관에서 가져와야 하며 "서비스 인증"의 용도로 사용해야 합니다. HttpCfg.exe 도구를 사용하여 인증서를 포트에 첨부해야 합니다. [방법: SSL 인증서를 사용 하 여 포트 구성 @ no__t-0.
+1. 적절한 X.509 인증서를 사용하여 포트를 구성합니다. 인증서는 신뢰할 수 있는 기관에서 가져와야 하며 "서비스 인증"의 용도로 사용해야 합니다. HttpCfg.exe 도구를 사용하여 인증서를 포트에 첨부해야 합니다. [방법: SSL 인증서로 포트 구성](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)을 참조 하세요.
 
     > [!IMPORTANT]
     > 인증서의 주체 또는 인증서의 DNS(Domain Name System)는 컴퓨터의 이름과 일치해야 합니다. 이는 HTTPS 메커니즘에서 수행하는 첫 번째 단계 중 하나로서 인증서가 호출된 주소와 동일한 URI(Uniform Resource Identifier)에 발급되었는지 확인하는 단계이므로 중요합니다.
@@ -40,21 +40,21 @@ ms.locfileid: "71834686"
 
 ### <a name="to-create-a-secure-https-get-metadata-endpoint-in-configuration"></a>구성에 보안 HTTPS GET 메타데이터 엔드포인트를 만들려면
 
-1. 서비스에 대 한 구성 파일의 [\<System >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) 요소에 [\<behaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) 요소를 추가 합니다.
+1. 서비스에 대 한 구성 파일의 [\<system.servicemodel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) 요소에 [\<동작 >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) 요소를 추가 합니다.
 
-2. [@No__t-1serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) 요소를 [\<behaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) 요소에 추가 합니다.
+2. [\<servicebehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) 요소를 [\<동작 >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) 요소에 추가 합니다.
 
-3. [@No__t-1behavior >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) 요소를 `<serviceBehaviors>` 요소에 추가 합니다.
+3. `<serviceBehaviors>` 요소에 [\<동작 >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) 요소를 추가 합니다.
 
 4. `name` 요소의 `<behavior>` 특성을 적절한 값으로 설정합니다. `name` 특성은 필수입니다. 아래 예제에서는 `mySvcBehavior` 값을 사용합니다.
 
-5. @No__t-2 요소에 [\<serviceMetadata >](../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md) 를 추가 합니다.
+5. `<behavior>` 요소에 [\<serviceMetadata >](../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md) 를 추가 합니다.
 
 6. `httpsGetEnabled` 요소의 `<serviceMetadata>` 특성을 `true`로 설정합니다.
 
 7. `httpsGetUrl` 요소의 `<serviceMetadata>` 특성을 적절한 값으로 설정합니다. 절대 주소를 지정하는 경우 URL은 "https://" 스키마로 시작해야 합니다. 상대 주소를 지정하는 경우 서비스 호스트의 HTTPS 기본 주소를 입력해야 합니다. 이 속성을 설정하지 않으면 기본 주소는 ""이거나 바로 서비스의 HTTPS 기본 주소로 설정됩니다.
 
-8. 서비스에서 동작을 사용 하려면 [\<service >](../../../../docs/framework/configure-apps/file-schema/wcf/service.md) 요소의 `behaviorConfiguration` 특성을 behavior 요소의 name 특성 값으로 설정 합니다. 다음 구성 코드에서는 자세한 예제를 보여 줍니다.
+8. 서비스에서 동작을 사용 하려면 [\<서비스 >](../../../../docs/framework/configure-apps/file-schema/wcf/service.md) 요소의 `behaviorConfiguration` 특성을 behavior 요소의 name 특성 값으로 설정 합니다. 다음 구성 코드에서는 자세한 예제를 보여 줍니다.
 
     ```xml
     <?xml version="1.0" encoding="utf-8" ?>
@@ -95,12 +95,12 @@ ms.locfileid: "71834686"
 
 - <xref:System.ServiceModel.Description?displayProperty=nameWithType>
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A>
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior>
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A>
-- [방법: SSL 인증서를 사용 하 여 포트 구성 @ no__t-0
+- [방법: SSL 인증서로 포트 구성](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
 - [인증서 작업](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
 - [메타데이터 관련 보안 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)
 - [서비스 및 클라이언트에 보안 설정](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

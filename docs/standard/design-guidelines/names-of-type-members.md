@@ -50,7 +50,7 @@ public class String {
   
  **✓ DO**는 뒤에 "List" 또는 "Collection"이 붙은 단일 구를 사용하는 대신 컬렉션에서 항목을 설명하는 복수 구를 사용하여 컬렉션 속성의 이름을 지정합니다.  
   
- **✓ DO**는 긍정 구문(`CantSeek` 대신 `CanSeek`)을 사용하여 부울 속성의 이름을 지정합니다. 또한 필요에 따라 부울 속성에 "Is," "Can," 또는 "Has"를 전치사로 지정할 수 있지만 여기에 값을 추가해야 합니다.  
+ **✓ DO**는 긍정 구문(`CanSeek` 대신 `CantSeek`)을 사용하여 부울 속성의 이름을 지정합니다. 또한 필요에 따라 부울 속성에 "Is," "Can," 또는 "Has"를 전치사로 지정할 수 있지만 여기에 값을 추가해야 합니다.  
   
  **✓ CONSIDER**는 속성에 해당 형식으로 동일한 이름을 지정합니다.  
   
@@ -97,11 +97,11 @@ public class Control {
   
  예를 들어 "g_" 또는 "s_"를 사용하여 고정 필드를 나타내지 마십시오.  
   
- *Portions © 2005, 2009 Microsoft Corporation. 모든 권리 보유.*  
+ *2005, 2009 Microsoft Corporation © 부분입니다. All rights reserved.*  
   
- @no__t-[Framework 디자인 지침에서 피어슨 교육부, Inc.의 권한으로 0Reprinted. 다시 사용할 수 있는 .NET 라이브러리에 대 한 규칙, 관용구 및 패턴, Microsoft Windows 개발 @no__t 시리즈의 일부로 Addison-Wesley Professional에서 2008 no__t, Krzysztof Cwalina 및 Brad Abrams 성  
+ *Pearson Education, Inc의 동의로 재인쇄. 출처: [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 작성자: Krzysztof Cwalina 및 Brad Abrams, 출판 정보: Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [프레임워크 디자인 지침](../../../docs/standard/design-guidelines/index.md)
 - [명명 지침](../../../docs/standard/design-guidelines/naming-guidelines.md)

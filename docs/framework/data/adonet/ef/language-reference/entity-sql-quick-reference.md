@@ -14,8 +14,8 @@ ms.locfileid: "71833870"
   
 ## <a name="literals"></a>리터럴  
   
-### <a name="string"></a>문자열  
- 유니코드 문자열 리터럴과 유니코드가 아닌 문자열 리터럴이 있습니다. 유니코드 문자열 앞에 N이 붙습니다. 예를 들어 `N'hello'`입니다.  
+### <a name="string"></a>String  
+ 유니코드 문자열 리터럴과 유니코드가 아닌 문자열 리터럴이 있습니다. 유니코드 문자열 앞에 N이 붙습니다. 예를 들어 `N'hello'`합니다.  
   
  다음은 비유니코드 문자열 리터럴의 예제입니다.  
   
@@ -48,7 +48,7 @@ DATETIME '2006-12-25 01:01'
 |-----------|  
 |12/25/2006 1:01:00 AM|  
   
-### <a name="integer"></a>Integer  
+### <a name="integer"></a>정수  
  Integer 리터럴은 Int32(123), UInt32(123U), Int64(123L) 및 UInt64(123UL) 형식일 수 있습니다.  
   
  예:  
@@ -72,7 +72,7 @@ DATETIME '2006-12-25 01:01'
 ## <a name="type-constructors"></a>형식 생성자  
   
 ### <a name="row"></a>ROW  
- [ROW](row-entity-sql.md) 는 다음과 같이 구조적으로 형식화 된 익명 (레코드) 값을 생성 `ROW(1 AS myNumber, ‘Name’ AS myName).`입니다.  
+ [행](row-entity-sql.md) 은 다음과 같이 구조적으로 형식화 된 익명 (레코드) 값을 생성 `ROW(1 AS myNumber, ‘Name’ AS myName).`  
   
  예:  
   
@@ -107,8 +107,8 @@ SELECT VALUE product FROM AdventureWorksEntities.Product AS product WHERE produc
 |---------------|----------|-------------------|-------|  
 |842|Touring-Panniers, Large|PA-T100|…|  
   
-### <a name="object"></a>Object  
- [명명 된 형식 생성자](named-type-constructor-entity-sql.md) `person("abc", 12)`과 같은 사용자 정의 개체를 생성 합니다.  
+### <a name="object"></a>개체  
+ [명명 된 형식 생성자](named-type-constructor-entity-sql.md) `person("abc", 12)`와 같은 사용자 정의 개체를 생성 합니다.  
   
  예:  
   
@@ -204,7 +204,7 @@ SELECT VALUE Key(CreateRef(AdventureWorksEntities.Product, row(p.ProductID)))
 ## <a name="functions"></a>함수  
   
 ### <a name="canonical"></a>정식  
- [정식 함수](canonical-functions.md) 에 대 한 네임 스페이스는 `Edm.Length("string")`과 같이 Edm입니다. 정식 함수와 이름이 같은 함수가 포함된 다른 네임스페이스를 가져오지 않는 한, 네임스페이스를 지정할 필요가 없습니다. 두 네임스페이스의 함수가 동일한 경우 사용자는 전체 이름을 지정해야 합니다.  
+ [정식 함수](canonical-functions.md) 에 대 한 네임 스페이스는 `Edm.Length("string")`와 마찬가지로 Edm입니다. 정식 함수와 이름이 같은 함수가 포함된 다른 네임스페이스를 가져오지 않는 한, 네임스페이스를 지정할 필요가 없습니다. 두 네임스페이스의 함수가 동일한 경우 사용자는 전체 이름을 지정해야 합니다.  
   
  예:  
   
@@ -268,7 +268,7 @@ SELECT c.ContactID as ID, c.LastName AS Name FROM
   
  출력:  
   
-|id|이름|  
+|ID|이름|  
 |--------|----------|  
 |10|Adina|  
 |11|Agcaoili|  
@@ -294,7 +294,7 @@ SELECT VALUE name FROM AdventureWorksEntities.Product AS P
 |...|  
   
 ## <a name="navigation"></a>탐색  
- 관계 탐색 연산자를 사용하여 엔터티 간의(시작 End에서 끝 End) 관계를 탐색할 수 있습니다. [NAVIGATE](navigate-entity-sql.md) 는 \<namespace >으로 한정 된 관계 유형을 사용 합니다. \<relationship 유형 이름 >. Navigate는 to end의 카디널리티가 1 인 경우 Ref @ no__t-0T > 반환 합니다. 끝 end의 카디널리티가 n 인 경우 < Ref @ no__t-0T > > 컬렉션이 반환 됩니다.  
+ 관계 탐색 연산자를 사용하여 엔터티 간의(시작 End에서 끝 End) 관계를 탐색할 수 있습니다. [NAVIGATE](navigate-entity-sql.md) 는 \<네임 스페이스 > 정규화 된 관계 유형을 사용 합니다.\<관계 유형 이름 >입니다. To end의 카디널리티가 1 인 경우 Navigate는 Ref\<T >를 반환 합니다. 끝 end의 카디널리티가 n 인 경우 < Ref\<T > > 컬렉션을 반환 합니다.  
   
  예:  
   
@@ -316,7 +316,7 @@ SELECT a.AddressID, (SELECT VALUE DEREF(v) FROM
 ## <a name="select-value-and-select"></a>SELECT VALUE 및 SELECT  
   
 ### <a name="select-value"></a>SELECT VALUE  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]에서는 암시적 행 생성을 건너뛰도록 SELECT VALUE 절을 제공합니다. SELECT VALUE 절에는 하나의 항목만 지정할 수 있습니다. 이러한 절을 사용 하면 SELECT 절의 항목 주위에 행 래퍼가 생성 되지 않고 원하는 모양의 컬렉션이 생성 될 수 있습니다. 예를 들어 `SELECT VALUE a`입니다.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]은 SELECT VALUE 절을 제공 하 여 암시적 행 생성을 건너뜁니다. SELECT VALUE 절에는 하나의 항목만 지정할 수 있습니다. 이러한 절을 사용 하면 SELECT 절의 항목 주위에 행 래퍼가 생성 되지 않으며 원하는 모양의 컬렉션이 생성 될 수 있습니다 (예: `SELECT VALUE a`).  
   
  예:  
   
@@ -360,9 +360,9 @@ CASE WHEN AVG({25,12,11}) < 100 THEN TRUE ELSE FALSE END
   
 |값|  
 |-----------|  
-|true|  
+|TRUE|  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [엔터티 SQL 참조](entity-sql-reference.md)
 - [Entity SQL 개요](entity-sql-overview.md)

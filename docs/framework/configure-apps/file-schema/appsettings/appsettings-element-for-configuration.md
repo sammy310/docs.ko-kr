@@ -1,5 +1,5 @@
 ---
-title: <configuration>에 대한 <appSettings> 요소
+title: <appSettings>에 대한 <configuration> 요소
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/appSettings
@@ -21,7 +21,7 @@ ms.locfileid: "73119278"
 사용자 지정 응용 프로그램 설정을 포함 합니다. .NET Framework에서 제공 하는 미리 정의 된 구성 섹션입니다.
 
 [ **\<configuration>** ](../configuration-element.md)   
-&nbsp;&nbsp; **\<appSettings >**
+&nbsp;&nbsp; **\<appSettings>**
 
 ## <a name="syntax"></a>구문
 
@@ -33,19 +33,19 @@ ms.locfileid: "73119278"
 
 ## <a name="attribute"></a>특성
 
-|           | 설명 |
+|           | Description |
 | --------- | ----------- |
-| **file**  | 선택적 특성입니다.<br><br>사용자 지정 응용 프로그램 구성 설정이 포함 된 외부 파일에 대 한 상대 경로를 지정 합니다. 지정 된 파일에는 **> 추가\<** 에 지정 된 것과 동일한 종류의 설정이 포함 되어 있습니다. **\<제거**하 고 **\<요소를 삭제 하 고 해당** 요소와 동일한 키/값 쌍 형식을 사용 합니다.<br><br>지정 된 경로는 기본 구성 파일을 기준으로 합니다. Windows Forms 응용 프로그램의 경우이 폴더는 응용 프로그램 구성 파일의 위치가 아니라 */so/debug*와 같은 이진 폴더입니다. Web Forms 응용 프로그램의 경우 경로는 *web.config* 파일이 있는 응용 프로그램 루트를 기준으로 합니다.<br><br>지정 된 파일을 찾을 수 없는 경우 런타임은 특성을 무시 합니다. |
+| **file**  | 선택적 특성입니다.<br><br>사용자 지정 응용 프로그램 구성 설정이 포함 된 외부 파일에 대 한 상대 경로를 지정 합니다. 지정 된 파일에는 **> 추가\<** 에 지정 된 것과 동일한 종류의 설정이 포함 되어 있습니다. **>\<제거**하 고 **\<요소를 삭제 하 고 해당** 요소와 동일한 키/값 쌍 형식을 사용 합니다.<br><br>지정 된 경로는 기본 구성 파일을 기준으로 합니다. Windows Forms 응용 프로그램의 경우이 폴더는 응용 프로그램 구성 파일의 위치가 아니라 */so/debug*와 같은 이진 폴더입니다. Web Forms 응용 프로그램의 경우 경로는 *web.config* 파일이 있는 응용 프로그램 루트를 기준으로 합니다.<br><br>지정 된 파일을 찾을 수 없는 경우 런타임은 특성을 무시 합니다. |
 
 ## <a name="parent-element"></a>부모 요소
 
-|     | 설명 |
+|     | Description |
 | --- | ----------- |
 | [ **\<구성 >** 요소인](../configuration-element.md) | 공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다. |
 
 ## <a name="child-elements"></a>자식 요소
 
-|     | 설명 |
+|     | Description |
 | --- | ----------- |
 | [ **\<add>** ](add-element-for-appsettings.md) | 사용자 지정 응용 프로그램 설정을 추가 합니다. |
 | [ **\<clear>** ](clear-element-for-appsettings.md) | 이전에 정의 된 모든 응용 프로그램 설정을 지웁니다. |
@@ -84,6 +84,6 @@ ms.locfileid: "73119278"
 
 이 요소는 응용 프로그램 구성 파일 *, 컴퓨터 구성 파일 (machine.config*) 및 응용 프로그램 디렉터리 수준에 없는 *web.config 파일* 에서 사용할 수 있습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [.NET Framework에 대 한 구성 파일 스키마](../index.md)

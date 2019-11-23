@@ -52,7 +52,7 @@ ms.locfileid: "73841284"
 
 이제 클라우드 네이티브 시스템에서 분산 된 데이터로 이동 하 고 그에 따른 이점과 과제가 제공 됩니다.
 
-### <a name="references"></a>참조 항목
+### <a name="references"></a>참조
 
 - [.NET 마이크로 서비스: 컨테이너 화 된 .NET 응용 프로그램에 대 한 아키텍처](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook)
 

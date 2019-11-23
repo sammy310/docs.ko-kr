@@ -1,14 +1,13 @@
 ---
 title: 인터페이스 정의 언어-WCF 개발자를 위한 gRPC
 description: 프로토콜 버퍼 IDL을 소개 합니다.
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 00c73619c5c27003e200385d5f67d8b8b7546f9e
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 1f304502bd0091f753a3d2f7854298f4bbf983f1
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "73841566"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73967637"
 ---
 # <a name="interface-definition-language"></a>IDL(Interface Definition Language)
 

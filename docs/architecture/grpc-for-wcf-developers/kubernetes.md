@@ -1,14 +1,13 @@
 ---
 title: WCF 개발자를 위한 Kubernetes (gRPC)
 description: Kubernetes 클러스터에서 ASP.NET Core gRPC 서비스를 실행 하 고 있습니다.
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 819c761a7a55485612b7fb0c8b392971751d8724
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 503b582ae9fdcf8c72c87558de3a8ddd898489aa
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "73841578"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73967565"
 ---
 # <a name="kubernetes"></a>Kubernetes
 
@@ -43,7 +42,7 @@ metadata:
 
 대부분의 Kubernetes YAML 파일에는 개체를 만드는 데 필요한 리소스와 구성을 설명 하는 `spec` 섹션이 있습니다.
 
-### <a name="pods"></a>pod
+### <a name="pods"></a>Pod
 
 Pod는 Kubernetes의 기본 실행 단위입니다. 여러 컨테이너를 실행할 수 있지만 단일 컨테이너를 실행 하는 데도 사용 됩니다. Pod에는 컨테이너에 필요한 저장소 리소스와 네트워크 IP 주소도 포함 됩니다.
 

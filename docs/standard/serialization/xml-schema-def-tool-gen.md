@@ -1,5 +1,5 @@
 ---
-title: '방법: XML 스키마 정의 도구를 사용하여 클래스 및 XML 스키마 문서 생성'
+title: 'How to: Use the XML Schema Definition Tool to Generate Classes and XML Schema Documents'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - generating XML classes using XML Schema Definition tool
@@ -14,7 +14,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 09/27/2019
 ms.locfileid: "71392855"
 ---
-# <a name="how-to-use-the-xml-schema-definition-tool-to-generate-classes-and-xml-schema-documents"></a>방법: XML 스키마 정의 도구를 사용하여 클래스 및 XML 스키마 문서 생성
+# <a name="how-to-use-the-xml-schema-definition-tool-to-generate-classes-and-xml-schema-documents"></a>How to: Use the XML Schema Definition Tool to Generate Classes and XML Schema Documents
 XML 스키마 정의 도구(Xsd.exe)를 사용하면 클래스를 설명하는 XML 스키마를 생성하거나 XML 스키마로 정의된 클래스를 생성할 수 있습니다. 다음 절차에서는 이러한 작업을 수행하는 방법을 보여 줍니다.  
   
 ### <a name="to-generate-classes-that-conform-to-a-specific-schema"></a>특정 스키마를 따르는 클래스를 생성하려면  
@@ -52,12 +52,12 @@ XML 스키마 정의 도구(Xsd.exe)를 사용하면 클래스를 설명하는 X
   
      스키마가 이름 "schema0.xsd"로 시작하여 기록됩니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Data.DataSet>
 - [XML 스키마 정의 도구 및 XML serialization](../../../docs/standard/serialization/the-xml-schema-definition-tool-and-xml-serialization.md)
 - [XML serialization 소개](../../../docs/standard/serialization/introducing-xml-serialization.md)
 - [XML 스키마 정의 도구(Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)
 - <xref:System.Xml.Serialization.XmlSerializer>
-- [방법: 개체 직렬화 @ no__t-0
-- [방법: 개체 Deserialize @ no__t-0
+- [방법: 개체 직렬화](../../../docs/standard/serialization/how-to-serialize-an-object.md)
+- [방법: 개체 역직렬화](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

@@ -41,7 +41,7 @@ FUNCTION function-name
  `data_type`  
  지원되는 형식의 이름입니다.  
   
- COLLECTION (< type_definition @ no__t-0)  
+ 컬렉션 (< type_definition`>`)  
  지원되는 형식, 행 또는 참조 컬렉션을 반환하는 식입니다.  
   
  REF **(** `data_type` **)**  
@@ -50,7 +50,7 @@ FUNCTION function-name
  ROW **(** `row_expression` **)**  
  하나 이상의 값에서 구조적으로 형식화된 익명 레코드를 반환하는 식입니다. 자세한 내용은 [ROW](row-entity-sql.md)을 참조하십시오.  
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
  함수 시그니처가 다르면 이름이 같은 여러 함수를 인라인으로 선언할 수 있습니다. 자세한 내용은 [Function Overload Resolution](function-overload-resolution-entity-sql.md)을 참조하세요.  
   
  인라인 함수는 Entity SQL 명령에서 정의된 이후에야 해당 명령에서 호출될 수 있습니다. 그러나 인라인 함수는 호출된 함수가 정의되기 이전 또는 이후에 다른 인라인 함수 내에서 호출될 수 있습니다. 다음 예제에서는 함수 B가 정의되기 전에 함수 A에서 함수 B를 호출합니다.  
@@ -61,7 +61,7 @@ FUNCTION function-name
   
  `A()`  
   
- 자세한 내용은 [방법: 사용자 정의 함수 @ no__t-0을 호출 합니다.  
+ 자세한 내용은 [방법: 사용자 정의 함수 호출](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd490951(v=vs.100))을 참조하세요.  
   
  함수는 모델 자체에서도 선언할 수 있습니다. 모델에서 선언된 함수는 명령에서 인라인으로 선언된 함수와 동일한 방식으로 실행됩니다. 자세한 내용은 [사용자 정의 함수](user-defined-functions-entity-sql.md)를 참조 하세요.  
   
@@ -75,7 +75,7 @@ FUNCTION function-name
   
  [!code-sql[DP EntityServices Concepts#FUNCTION2](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#function2)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [엔터티 SQL 참조](entity-sql-reference.md)
 - [Entity SQL 언어](entity-sql-language.md)

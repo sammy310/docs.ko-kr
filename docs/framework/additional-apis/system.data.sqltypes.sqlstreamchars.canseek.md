@@ -31,12 +31,12 @@ public abstract bool CanSeek { get; }
 ## <a name="property-value"></a>속성 값
 
 <xref:System.Boolean>\
-현재 스트림 검색 작업을 지원 하면 `true`입니다. 그렇지 않으면-1을 @no__t 합니다.
+현재 스트림 검색 작업을 지원 하면이 고, 그렇지 않으면 `true`입니다. 그렇지 않으면 `false`합니다.
 
 ## <a name="remarks"></a>주의
 
 > [!WARNING]
-> @No__t-0 속성은 private 이며 코드에서 직접 사용할 수 없습니다.
+> `SqlStreamChars.CanSeek` 속성은 private 이며 코드에서 직접 사용할 수 없습니다.
 >
 > Microsoft는 어떤 경우에도 프로덕션 응용 프로그램에서이 속성을 사용 하는 것을 지원 하지 않습니다.
 

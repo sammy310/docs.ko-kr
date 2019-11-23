@@ -21,7 +21,7 @@ ASP.NET Core 앱은 일련의 미들웨어를 기반으로 빌드됩니다. 미�
 
 ASP.NET Core 요청 파이프라인은 하나씩 차례로 호출되는 요청 대리자 시퀀스로 구성됩니다. 다음 다이어그램은 그 개념을 보여줍니다. 실행 스레드는 검은색 화살표를 따릅니다.
 
-![보유](media/middleware/request-delegate-pipeline.png)
+![pipeline(파이프라인)](media/middleware/request-delegate-pipeline.png)
 
 이전 다이어그램에는 수명 주기 이벤트 개념이 없습니다. 이 개념은 ASP.NET Web Forms 요청이 처리 되는 방식에 기초 합니다. 이 시스템을 사용 하면 발생 하는 프로세스를 보다 쉽게 파악할 수 있으며 미들웨어를 언제 든 지 삽입할 수 있습니다. 미들웨어는 요청 파이프라인에 추가 된 순서 대로 실행 됩니다. 일반적으로 *Startup.cs*에서 구성 파일 대신 코드에 추가 됩니다.
 
@@ -35,7 +35,7 @@ ASP.NET 4.x에는 많은 모듈이 포함 되어 있습니다. 마찬가지로 A
 
 다음 표에서는 ASP.NET Core의 대체 미들웨어 및 구성 요소를 보여 줍니다.
 
-|Module                 |ASP.NET 4.x 모듈           |ASP.NET Core 옵션|
+|모듈                 |ASP.NET 4.x 모듈           |ASP.NET Core 옵션|
 |-----------------------|-----------------------------|-------------------|
 |HTTP 오류            |`CustomErrorModule`          |[상태 코드 페이지 미들웨어](/aspnet/core/fundamentals/error-handling#usestatuscodepages)|
 |기본 문서       |`DefaultDocumentModule`      |[기본 파일 미들웨어](/aspnet/core/fundamentals/static-files#serve-a-default-document)|

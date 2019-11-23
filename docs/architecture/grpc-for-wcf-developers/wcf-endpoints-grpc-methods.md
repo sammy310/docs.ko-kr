@@ -1,14 +1,13 @@
 ---
 title: Wcf 끝점 및 gRPC 메서드-WCF 개발자를 위한 gRPC
 description: ServiceContract 및 OperationContract 특성을 사용 하 여 선언 된 WCF 끝점과 Protobuf에 선언 된 gRPC 메서드 비교
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 1cb7fedf1fbb632438134375306801f356d7b921
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 763862a363afc6aab72335050cf4822754816c7a
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "73841302"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966922"
 ---
 # <a name="wcf-endpoints-and-grpc-methods"></a>WCF 끝점 및 gRPC 메서드
 

@@ -213,11 +213,11 @@ ms.locfileid: "73039182"
 
   이러한 애니메이션이 가장 사용하기 쉬우므로 이 개요의 예제에서도 사용됩니다. From/to/by 애니메이션은 From/To/By 애니메이션 개요에 자세히 설명 되어 있습니다.
 
-- \<*형식*> AnimationUsingKeyFrames
+- \<*Type*>AnimationUsingKeyFrames
 
   키 프레임 애니메이션은 원하는 수의 대상 값을 지정하고 보간 방법을 제어할 수 있으므로 From/To/By 애니메이션보다 훨씬 더 강력합니다. 일부 형식은 키 프레임 애니메이션으로만 애니메이션 효과를 줄 수 있습니다. 키 프레임 애니메이션은 [키 프레임 애니메이션 개요](key-frame-animations-overview.md)에 자세히 설명 되어 있습니다.
 
-- \<*형식*> AnimationUsingPath
+- \<*Type*>AnimationUsingPath
 
   경로 애니메이션에서는 기하학적 경로를 사용하여 애니메이션 사용 값을 생성할 수 있습니다.
 
@@ -333,7 +333,7 @@ ms.locfileid: "73039182"
 
 대부분의 애니메이션 속성은 데이터에 바인딩하거나 애니메이션 효과를 적용할 수 있습니다. 예를 들어 <xref:System.Windows.Media.Animation.DoubleAnimation>의 <xref:System.Windows.Media.Animation.Timeline.Duration%2A> 속성에 애니메이션 효과를 적용할 수 있습니다. 그러나 타이밍 시스템이 작동하는 방식 때문에 데이터 바인딩 또는 애니메이션 효과 주기가 다른 데이터 바인딩 또는 애니메이션 개체와 다르게 동작합니다. 해당 동작을 이해하기 위해 속성에 애니메이션을 적용하는 것이 어떤 의미를 갖는지 이해하면 도움이 됩니다.
 
-사각형의 <xref:System.Windows.UIElement.Opacity%2A>에 애니메이션 효과를 주는 방법을 보여 주는 이전 섹션의 예제를 참조 하세요. 이전 예제의 사각형이 로드 되 면 해당 이벤트 트리거에서 <xref:System.Windows.Media.Animation.Storyboard>적용 됩니다. 타이밍 시스템은 <xref:System.Windows.Media.Animation.Storyboard> 및 해당 애니메이션의 복사본을 만듭니다. 이러한 복사본은 고정 (읽기 전용으로 설정) 되며 <xref:System.Windows.Media.Animation.Clock> 개체가 생성 됩니다. 이러한 클록은 대상 속성에 애니메이션 효과를 주는 실제 작업을 수행합니다.
+사각형의 <xref:System.Windows.UIElement.Opacity%2A>에 애니메이션 효과를 주는 방법을 보여 주는 이전 섹션의 예제를 참조 하세요. 이전 예제의 사각형이 로드 되 면 해당 이벤트 트리거에서 <xref:System.Windows.Media.Animation.Storyboard>적용 됩니다. 타이밍 시스템은 <xref:System.Windows.Media.Animation.Storyboard> 및 해당 애니메이션의 복사본을 만듭니다. 이러한 복사본은 고정 (읽기 전용 됨) 및 <xref:System.Windows.Media.Animation.Clock> 개체에서 생성 됩니다. 이러한 클록은 대상 속성에 애니메이션 효과를 주는 실제 작업을 수행합니다.
 
 타이밍 시스템은 <xref:System.Windows.Media.Animation.DoubleAnimation>에 대 한 clock을 만들고 <xref:System.Windows.Media.Animation.DoubleAnimation>의 <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> 및 <xref:System.Windows.Media.Animation.Storyboard.TargetProperty>에 지정 된 개체 및 속성에 적용 합니다. 이 경우 타이밍 시스템은 "MyRectangle" 이라는 개체의 <xref:System.Windows.UIElement.Opacity%2A> 속성에 clock을 적용 합니다.
 
@@ -367,7 +367,7 @@ ms.locfileid: "73039182"
 
 ## <a name="related-topics"></a>관련 항목
 
-|제목|설명|
+|제목|Description|
 |-----------|-----------------|
 |[애니메이션 및 타이밍 시스템 개요](animation-and-timing-system-overview.md)|타이밍 시스템에서 <xref:System.Windows.Media.Animation.Timeline>를 사용 하 고 <xref:System.Windows.Media.Animation.Clock> 클래스를 사용 하 여 애니메이션을 만들 수 있는 방법을 설명 합니다.|
 |[애니메이션에 대한 유용한 정보](animation-tips-and-tricks.md)|성능 같은 애니메이션 문제 해결에 도움이 되는 유용한 정보를 나열합니다.|
@@ -387,7 +387,7 @@ ms.locfileid: "73039182"
 
 <a name="reference"></a>
 
-## <a name="reference"></a>참고
+## <a name="reference"></a>참조
 
 - <xref:System.Windows.Media.Animation.Timeline>
 
