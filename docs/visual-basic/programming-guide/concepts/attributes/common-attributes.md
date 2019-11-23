@@ -1,17 +1,17 @@
 ---
-title: 공통 특성 (Visual Basic)
+title: 공통 특성
 ms.date: 07/20/2015
 ms.assetid: 11fe4894-1bf9-4525-a36b-cddcd3a5d22b
-ms.openlocfilehash: 5bc568279a6952fdc5e0a000b1208cd7f9cfd6e7
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 2889411779a275baa8c91862d4cac2f820d660d0
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524285"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353523"
 ---
-# <a name="common-attributes-visual-basic"></a>공통 특성 (Visual Basic)
+# <a name="common-attributes-visual-basic"></a>Common Attributes (Visual Basic)
 
-이 항목에서는 Visual Basic 프로그램에서 가장 일반적으로 사용 되는 특성에 대해 설명 합니다.
+This topic describes the attributes that are most commonly used in Visual Basic programs.
 
 - [전역 특성](#Global)
 
@@ -21,7 +21,7 @@ ms.locfileid: "72524285"
 
 - [호출자 정보 특성](#CallerInfo)
 
-- [Visual Basic 특성](#VB)
+- [Visual Basic Attributes](#VB)
 
 ## <a name="Global"></a> 전역 특성
 
@@ -31,7 +31,7 @@ ms.locfileid: "72524285"
 <Assembly: AssemblyVersion("1.0.0.0")>
 ```
 
-전역 특성은 소스 코드에서 최상위 `Imports` 문과 모든 형식, 모듈 또는 네임 스페이스 선언 앞에 표시 됩니다. 전역 특성은 여러 소스 파일에 나타날 수 있지만 파일은 하나의 컴파일 패스에서 컴파일되어야 합니다. Visual Basic 프로젝트의 경우 일반적으로 전역 특성은 AssemblyInfo 파일에 저장 됩니다 .이 파일은 Visual Studio에서 프로젝트를 만들 때 자동으로 만들어집니다.
+Global attributes appear in the source code after any top-level `Imports` statements and before any type, module, or namespace declarations. 전역 특성은 여러 소스 파일에 나타날 수 있지만 파일은 하나의 컴파일 패스에서 컴파일되어야 합니다. For Visual Basic projects, global attributes are generally put in the AssemblyInfo.vb file (the file is created automatically when you create a project in Visual Studio).
 
 어셈블리 특성은 어셈블리에 대한 정보를 제공하는 값입니다. 어셈블리 특성은 다음 범주로 구분됩니다.
 
@@ -81,7 +81,7 @@ name, version 및 culture의 세 가지 특성(해당하는 경우 강력한 이
 
 ## <a name="Obsolete"></a> 사용되지 않는 특성
 
-`Obsolete` 특성은 프로그램 엔터티를 더 이상 사용이 권장되지 않는 항목으로 표시합니다. 나중에 사용되지 않음으로 표시된 엔터티를 사용할 때마다 특성 구성 방법에 따라 경고나 오류가 생성됩니다. 예를 들면,
+`Obsolete` 특성은 프로그램 엔터티를 더 이상 사용이 권장되지 않는 항목으로 표시합니다. 나중에 사용되지 않음으로 표시된 엔터티를 사용할 때마다 특성 구성 방법에 따라 경고나 오류가 생성됩니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
 
 ```vb
 <System.Obsolete("use class B")>
@@ -130,8 +130,8 @@ b.NewMethod()
 
 ```vb
 #Const TRACE_ON = True
-Imports System
 Imports System.Diagnostics
+
 Module TestConditionalAttribute
     Public Class Trace
         <Conditional("TRACE_ON")>
@@ -228,32 +228,32 @@ End Class
 |---|---|---|
 |<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|호출자를 포함한 소스 파일의 전체 경로입니다. 컴파일 시간의 경로입니다.|`String`|
 |<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|메서드가 호출되는 소스 파일의 줄 번호입니다.|`Integer`|
-|<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|호출자의 메서드 이름 또는 속성 이름입니다. 자세한 내용은 [호출자 정보 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md)를 참조 하세요.|`String`|
+|<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|호출자의 메서드 이름 또는 속성 이름입니다. For more information, see [Caller Information (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md).|`String`|
 
-호출자 정보 특성에 대 한 자세한 내용은 [호출자 정보 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md)를 참조 하세요.
+For more information about the Caller Info attributes, see [Caller Information (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md).
 
-## <a name="VB"></a>Visual Basic 특성
+## <a name="VB"></a> Visual Basic Attributes
 
-다음 표에서는 Visual Basic 관련 된 특성을 나열 합니다.
+The following table lists the attributes that are specific to Visual Basic.
 
 |특성|용도|
 |---------------|-------------|
-|<xref:Microsoft.VisualBasic.ComClassAttribute>|클래스가 COM 개체로 노출 되어야 함을 컴파일러에 나타냅니다.|
-|<xref:Microsoft.VisualBasic.HideModuleNameAttribute>|모듈에 필요한 한정자만 사용 하 여 모듈 멤버에 액세스할 수 있습니다.|
-|<xref:Microsoft.VisualBasic.VBFixedStringAttribute>|파일 입력 및 출력 함수에 사용할 구조체의 고정 길이 문자열 크기를 지정 합니다.|
-|<xref:Microsoft.VisualBasic.VBFixedArrayAttribute>|파일 입력 및 출력 함수에 사용할 구조체의 고정 배열 크기를 지정 합니다.|
+|<xref:Microsoft.VisualBasic.ComClassAttribute>|Indicates to the compiler that the class should be exposed as a COM object.|
+|<xref:Microsoft.VisualBasic.HideModuleNameAttribute>|Allows module members to be accessed using only the qualification needed for the module.|
+|<xref:Microsoft.VisualBasic.VBFixedStringAttribute>|Specifies the size of a fixed-length string in a structure for use with file input and output functions.|
+|<xref:Microsoft.VisualBasic.VBFixedArrayAttribute>|Specifies the size of a fixed array in a structure for use with file input and output functions.|
 
-### <a name="comclassattribute"></a>M
+### <a name="comclassattribute"></a>COMClassAttribute
 
-@No__t_0를 사용 하 여 Visual Basic에서 COM 구성 요소를 만드는 프로세스를 간소화할 수 있습니다. COM 개체는 .NET Framework 어셈블리와 상당히 다르며 `COMClassAttribute` 없이 Visual Basic에서 COM 개체를 생성 하려면 여러 단계를 수행 해야 합니다. @No__t_0 표시 된 클래스의 경우 컴파일러는 이러한 단계를 자동으로 수행 합니다.
+Use `COMClassAttribute` to simplify the process of creating COM components from Visual Basic. COM objects are considerably different from .NET Framework assemblies, and without `COMClassAttribute`, you need to follow a number of steps to generate a COM object from Visual Basic. For classes marked with `COMClassAttribute`, the compiler performs many of these steps automatically.
 
 ### <a name="hidemodulenameattribute"></a>HideModuleNameAttribute
 
-모듈에 필요한 한정자만 사용 하 여 모듈 멤버에 액세스할 수 있도록 하려면 `HideModuleNameAttribute`을 사용 합니다.
+Use `HideModuleNameAttribute` to allow module members to be accessed by using only the qualification needed for the module.
 
 ### <a name="vbfixedstringattribute"></a>VBFixedStringAttribute
 
-@No__t_0를 사용 하 여 Visual Basic 고정 길이 문자열을 만들도록 강제 합니다. 문자열은 기본적으로 가변 길이 이며이 특성은 파일에 문자열을 저장할 때 유용 합니다. 다음 코드에서는이를 보여 줍니다.
+Use `VBFixedStringAttribute` to force Visual Basic to create a fixed-length string. Strings are of variable length by default, and this attribute is useful when storing strings to files. The following code demonstrates this:
 
 ```vb
 Structure Worker
@@ -267,7 +267,7 @@ End Structure
 
 ### <a name="vbfixedarrayattribute"></a>VBFixedArrayAttribute
 
-크기가 고정 된 배열을 선언 하려면 `VBFixedArrayAttribute`을 사용 합니다. Visual Basic 문자열과 마찬가지로 배열은 기본적으로 가변 길이입니다. 이 특성은 파일에 데이터를 직렬화 하거나 쓸 때 유용 합니다.
+Use `VBFixedArrayAttribute` to declare arrays that are fixed in size. Like Visual Basic strings, arrays are of variable length by default. This attribute is useful when serializing or writing data to files.
 
 ## <a name="see-also"></a>참조
 

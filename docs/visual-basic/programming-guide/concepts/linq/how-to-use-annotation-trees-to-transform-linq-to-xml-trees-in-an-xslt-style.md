@@ -1,15 +1,15 @@
 ---
-title: '방법: XSLT 스타일에서 주석을 사용 하 여 LINQ to XML 트리 변환 (Visual Basic)'
+title: '방법: XSLT 스타일에서 주석을 사용하여 LINQ to XML 트리 변환'
 ms.date: 07/20/2015
 ms.assetid: 08e91fa2-dac2-4463-9ef1-87b1ac3fa890
-ms.openlocfilehash: b8f15c4dc6016e48619d26e7cc8717a2a3c5acd5
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: d9cb32462535f099107343bd9069b4da3508c5b0
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72581983"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348351"
 ---
-# <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-visual-basic"></a>방법: XSLT 스타일에서 주석을 사용 하 여 LINQ to XML 트리 변환 (Visual Basic)
+# <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-visual-basic"></a>How to: Use Annotations to Transform LINQ to XML Trees in an XSLT Style (Visual Basic)
 
 주석을 사용하여 XML 트리를 쉽게 변환할 수 있습니다.
 
@@ -19,7 +19,7 @@ ms.locfileid: "72581983"
 <text>A phrase with <b>bold</b> and <i>italic</i> text.</text>
 ```
 
-지정된 텍스트 노드에는 자식 `<b>` 및 `<i>` 요소가 임의의 개수만큼 있을 수 있습니다. 이 방법은 다양 한 상황 (예: 일반 단락, 글머리 기호 단락 및 비트맵과 같은 다양 한 자식 요소를 포함할 수 있는 페이지)으로 확장 됩니다. 표의 셀에는 텍스트, 드롭다운 목록 또는 비트맵이 포함될 수 있습니다. 문서 중심 XML의 기본 특징 중 하나는 특정 요소에 포함될 자식 요소에 대해 알 수 없다는 것입니다.
+지정된 텍스트 노드에는 자식 `<b>` 및 `<i>` 요소가 임의의 개수만큼 있을 수 있습니다. This approach extends to a number of other situations: such as, pages that can contain a variety of child elements, such as regular paragraphs, bulleted paragraphs, and bitmaps. 표의 셀에는 텍스트, 드롭다운 목록 또는 비트맵이 포함될 수 있습니다. 문서 중심 XML의 기본 특징 중 하나는 특정 요소에 포함될 자식 요소에 대해 알 수 없다는 것입니다.
 
 변환할 요소의 자식에 대해 반드시 자세히 알아야 할 필요가 없는 트리에서 요소를 변환하려면 주석을 사용하는 이 방법이 효과적인 방법입니다.
 
@@ -43,7 +43,7 @@ ms.locfileid: "72581983"
 
 ## <a name="transforming-a-tree"></a>트리 변환
 
-이 첫 번째 예제에서는 모든 `Paragraph` 노드의 이름을 `para`로 바꿉니다.
+This first example renames all `Paragraph` nodes to `para`:
 
 ```vb
 Imports <xmlns:xf="http://www.microsoft.com/LinqToXmlTransform/2007">
@@ -83,7 +83,7 @@ End Module
 </Root>
 ```
 
-## <a name="a-more-complicated-transform"></a>더 복잡 한 변환
+## <a name="a-more-complicated-transform"></a>A more complicated transform
 
 다음 예제에서는 트리를 쿼리하고 `Data` 요소의 평균과 합계를 계산한 다음 계산 결과를 새 요소로 트리에 추가합니다.
 
@@ -158,29 +158,29 @@ After Transform
 </Root>
 ```
 
-## <a name="effecting-the-transform"></a>변환 주는
+## <a name="effecting-the-transform"></a>Effecting the transform
 
 작은 함수인 `XForm`은 주석이 달린 원래 트리에서 변환된 새 트리를 만듭니다.
 
 이 함수의 의사(pseudo) 코드는 매우 간단합니다.
 
-> 함수는 XElement를 인수로 사용 하 여 XElement를 반환 합니다.
+> The function takes an XElement as an argument and returns an XElement.
 >
-> 요소에 XElement 주석이 있으면 새 XElement을 반환 합니다.
+> If an element has an XElement annotation, then return a new XElement:
 >
-> - 새 XElement의 이름은 주석 요소의 이름입니다.
-> - 모든 특성이 주석에서 새 노드로 복사 됩니다.
-> - 특수 노드 xf: ApplyTransforms이 인식 되 고 원본 요소의 자식 노드가 반복 되는 예외를 제외 하 고 모든 자식 노드가 주석에 복사 됩니다. 원본 자식 노드가 XElement이 아닌 경우 새 트리로 복사 됩니다. 소스 자식이 XElement 인 경우이 함수를 재귀적으로 호출 하 여 변환 됩니다.
+> - The name of the new XElement is the annotation element's name.
+> - All attributes are copied from the annotation to the new node.
+> - All child nodes are copied from the annotation, with the exception that the special node xf:ApplyTransforms is recognized, and the source element's child nodes are iterated. If the source child node is not an XElement, it is copied to the new tree. If the source child is an XElement, then it is transformed by calling this function recursively.
 >
-> 요소에 주석이 추가 되지 않은 경우:
+> If an element is not annotated:
 >
-> - 새 XElement 반환
->   - 새 XElement의 이름은 원본 요소의 이름입니다.
->   - 모든 특성이 소스 요소에서 대상의 요소로 복사 됩니다.
->   - 모든 자식 노드가 원본 요소에서 복사 됩니다.
->   - 원본 자식 노드가 XElement이 아닌 경우 새 트리로 복사 됩니다. 소스 자식이 XElement 인 경우이 함수를 재귀적으로 호출 하 여 변환 됩니다.
+> - Return a new XElement
+>   - The name of the new XElement is the source element's name.
+>   - All attributes are copied from the source element to the destination's element.
+>   - All child nodes are copied from the source element.
+>   - If the source child node is not an XElement, it is copied to the new tree. If the source child is an XElement, then it is transformed by calling this function recursively.
 
-다음 코드는이 함수의 구현입니다.
+The following code is the implementation of this function:
 
 ```vb
 ' Build a transformed XML tree per the annotations.
@@ -227,7 +227,6 @@ End Function
 다음 코드는 `XForm` 함수가 포함된 전체 예제입니다. 이 코드에는 이러한 유형의 변환에 대한 몇 가지 일반적인 사용이 포함되어 있습니다.
 
 ```vb
-Imports System
 Imports System.Collections.Generic
 Imports System.Linq
 Imports System.Text
@@ -377,4 +376,4 @@ After Transform
 
 ## <a name="see-also"></a>참조
 
-- [Visual Basic (Advanced LINQ to XML 프로그래밍)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [Advanced LINQ to XML Programming (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

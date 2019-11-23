@@ -13,12 +13,12 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: eec46337-9696-435b-a375-dc5effae6992
-ms.openlocfilehash: c206faf81868d6e871327a73ef0680936b132918
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 17ad1b4b5eae38a4f1dc90e154841b1315dea1b2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459257"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349771"
 ---
 # <a name="examples-of-xml-serialization"></a>XML Serialization 예제
 
@@ -74,7 +74,7 @@ private void SerializeDataSet(string filename){
 
 ## <a name="serializing-an-xmlelement-and-xmlnode"></a>XmlElement 및 XmlNode serialize
 
-다음 코드 예제와 같이 <xref:System.Xml.XmlElement> 또는 <xref:System.Xml.XmlNode> 클래스의 인스턴스를 serialize 할 수도 있습니다.
+You can also serialize instances of an <xref:System.Xml.XmlElement> or <xref:System.Xml.XmlNode> class, as shown in the following code example.
 
 ```vb
 private Sub SerializeElement(filename As String)
@@ -123,7 +123,7 @@ private void SerializeNode(string filename){
 
 ## <a name="serializing-a-class-that-contains-a-field-returning-a-complex-object"></a>복잡한 개체를 반환하는 필드가 포함된 클래스 serialize
 
-속성이 나 필드가 복합 개체 (예: 배열 또는 클래스 인스턴스)를 반환 하는 경우 <xref:System.Xml.Serialization.XmlSerializer>는이 개체를 주 XML 문서 내에 중첩 된 요소로 변환 합니다. 예를 들어, 다음 코드 예제의 첫째 클래스는 둘째 클래스의 인스턴스를 반환합니다.
+If a property or field returns a complex object (such as an array or a class instance), the <xref:System.Xml.Serialization.XmlSerializer> converts it to an element nested within the main XML document. 예를 들어, 다음 코드 예제의 첫째 클래스는 둘째 클래스의 인스턴스를 반환합니다.
 
 ```vb
 Public Class PurchaseOrder
@@ -206,9 +206,8 @@ public class Item
 <xref:System.Collections.ICollection> 인터페이스를 구현하여 컬렉션 클래스를 직접 만들고 <xref:System.Xml.Serialization.XmlSerializer>를 사용하여 이러한 클래스의 인스턴스를 serialize할 수 있습니다. 클래스가 <xref:System.Collections.ICollection> 인터페이스를 구현할 때 클래스에 의해 포함된 컬렉션만 serialize됩니다. 클래스에 추가된 모든 공용 속성이나 필드는 serialize되지 않습니다. 클래스에는 직렬화될 **Add** 메서드 및 **Item** 속성(C# 인덱서)이 포함되어야 합니다.
 
 ```vb
-Imports System
-Imports System.IO
 Imports System.Collections
+Imports System.IO
 Imports System.Xml.Serialization
 
 Public Class Test
@@ -298,8 +297,8 @@ End Class
 
 ```csharp
 using System;
-using System.IO;
 using System.Collections;
+using System.IO;
 using System.Xml.Serialization;
 
 public class Test {
@@ -366,17 +365,16 @@ public class Employee {
 
 이 예제에서는 간단한 시나리오를 사용하여 개체 인스턴스를 만들고 <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> 메서드를 사용하여 파일 스트림으로 serialize하는 방법을 보여 줍니다. XML 스트림은 파일에 저장되고 <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> 메서드를 사용하여 동일한 파일을 읽어서 원본 개체의 복사본으로 재생성합니다.
 
-이 예제에서는 `PurchaseOrder`라는 클래스를 serialize한 다음 deserialize합니다. `Address`라는 public 필드를 `ShipTo`로 설정해야 하기 때문에 `Address`라는 두 번째 클래스도 포함해야 합니다. 마찬가지로 `OrderedItem` 개체의 배열을 `OrderedItem` 필드로 설정해야 하기 때문에 `OrderedItems` 클래스도 포함했습니다. 마지막으로 `Test`라는 클래스에는 클래스를 serialize하고 deserialize하는 코드가 포함됩니다.
+이 예제에서는 `PurchaseOrder`라는 클래스를 직렬화한 다음 역직렬화합니다. `Address`라는 public 필드를 `ShipTo`로 설정해야 하기 때문에 `Address`라는 두 번째 클래스도 포함해야 합니다. 마찬가지로 `OrderedItem` 개체의 배열을 `OrderedItem` 필드로 설정해야 하기 때문에 `OrderedItems` 클래스도 포함했습니다. 마지막으로 `Test`라는 클래스에는 클래스를 직렬화하고 역직렬화하는 코드가 포함됩니다.
 
-`CreatePO` 메서드는 `PurchaseOrder`, `Address` 및 `OrderedItem` 클래스 개체를 만들고 public 필드 값을 설정합니다. 메서드는 <xref:System.Xml.Serialization.XmlSerializer>를 serialize하고 deserialize하는 데 사용되는 `PurchaseOrder` 클래스의 인스턴스도 생성합니다. 코드는 serialize될 클래스 형식을 생성자에 전달합니다. 또한 코드는 XML 스트림을 XML 문서에 쓰는 데 사용되는 `FileStream`도 만듭니다.
+`CreatePO` 메서드는 `PurchaseOrder`, `Address` 및 `OrderedItem` 클래스 개체를 만들고 public 필드 값을 설정합니다. 메서드는 <xref:System.Xml.Serialization.XmlSerializer>를 직렬화하고 역직렬화하는 데 사용되는 `PurchaseOrder` 클래스의 인스턴스도 생성합니다. 코드는 serialize될 클래스 형식을 생성자에 전달합니다. 또한 코드는 XML 스트림을 XML 문서에 쓰는 데 사용되는 `FileStream`도 만듭니다.
 
-`ReadPo` 메서드는 조금 더 간단합니다. 역직렬화할 개체를 만들고 그 값을 읽습니다. `CreatePo` 메서드와 마찬가지로 deserialize 할 클래스의 형식을 생성자에 전달 하 여 <xref:System.Xml.Serialization.XmlSerializer>를 먼저 생성 해야 합니다. 또한 XML 문서를 읽기 위해 <xref:System.IO.FileStream>이 필요합니다. 개체를 deserialize하기 위해 <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A>을 인수로 사용하여 <xref:System.IO.FileStream> 메서드를 호출합니다. deserialize된 개체는 `PurchaseOrder` 형식의 개체 변수로 캐스팅되어야 합니다. 그런 다음 코드는 deserialize된 `PurchaseOrder`의 값을 읽습니다. 작성된 PO.xml 파일을 읽어 실제 XML 출력을 볼 수 있습니다.
+`ReadPo` 메서드는 조금 더 간단합니다. 역직렬화할 개체를 만들고 그 값을 읽습니다. As with the `CreatePo` method, you must first construct an <xref:System.Xml.Serialization.XmlSerializer>, passing the type of the class to be deserialized to the constructor. 또한 XML 문서를 읽기 위해 <xref:System.IO.FileStream>이 필요합니다. 개체를 역직렬화하기 위해 <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A>을 인수로 사용하여 <xref:System.IO.FileStream> 메서드를 호출합니다. 역직렬화된 개체는 `PurchaseOrder` 형식의 개체 변수로 캐스팅되어야 합니다. 그런 다음 코드는 역직렬화된 `PurchaseOrder`의 값을 읽습니다. 작성된 PO.xml 파일을 읽어 실제 XML 출력을 볼 수 있습니다.
 
 ```vb
-Imports System
+Imports System.IO
 Imports System.Xml
 Imports System.Xml.Serialization
-Imports System.IO
 Imports Microsoft.VisualBasic
 
 ' The XmlRoot attribute allows you to set an alternate name
@@ -553,9 +551,9 @@ End Class 'Test
 
 ```csharp
 using System;
+using System.IO;
 using System.Xml;
 using System.Xml.Serialization;
-using System.IO;
 
 // The XmlRoot attribute allows you to set an alternate name
 // (PurchaseOrder) for the XML element and its namespace. By
@@ -774,6 +772,6 @@ XML 출력은 다음과 같을 수 있습니다.
 - [XML serialization 소개](introducing-xml-serialization.md)
 - [특성을 사용하여 XML serialization 제어](controlling-xml-serialization-using-attributes.md)
 - [XML serialization을 제어하는 특성](attributes-that-control-xml-serialization.md)
-- [XmlSerializer 클래스](xref:System.Xml.Serialization.XmlSerializer)
+- [XmlSerializer Class](xref:System.Xml.Serialization.XmlSerializer)
 - [방법: 개체 직렬화](how-to-serialize-an-object.md)
-- [방법: 개체 deserialize](how-to-deserialize-an-object.md)
+- [방법: 개체 역직렬화](how-to-deserialize-an-object.md)

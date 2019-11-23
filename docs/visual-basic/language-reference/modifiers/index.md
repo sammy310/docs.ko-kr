@@ -1,18 +1,18 @@
 ---
-title: 한정자(Visual Basic)
+title: 한정자
 ms.date: 07/20/2015
 ms.assetid: a49a0e51-d700-4705-9196-3e0eb582dda6
-ms.openlocfilehash: 466d69ec966037ae3a980bba381fc61be52f30e6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0379a0d0571a66bda4df06f5c2d3282d80034cae
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051184"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351537"
 ---
 # <a name="modifiers-visual-basic"></a>한정자(Visual Basic)
 이 단원의 항목에서는 Visual Basic 런타임 한정자를 설명합니다.  
   
-## <a name="in-this-section"></a>섹션 내용  
+## <a name="in-this-section"></a>단원 내용  
  [ANSI](../../../visual-basic/language-reference/modifiers/ansi.md)  
   
  [어셈블리](../../../visual-basic/language-reference/modifiers/assembly.md)  
@@ -39,7 +39,7 @@ ms.locfileid: "62051184"
   
  [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)  
   
- [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)  
+ [New](../../../visual-basic/language-reference/modifiers/mustoverride.md)  
   
  [Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md)  
   
@@ -47,7 +47,7 @@ ms.locfileid: "62051184"
   
  [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)  
   
- [선택 사항](../../../visual-basic/language-reference/modifiers/optional.md)  
+ [Optional](../../../visual-basic/language-reference/modifiers/optional.md)  
   
  [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)  
   
@@ -69,7 +69,7 @@ ms.locfileid: "62051184"
 
  [Protected Friend](../../../visual-basic/language-reference/modifiers/protected-friend.md)  
   
- [공용](../../../visual-basic/language-reference/modifiers/public.md)  
+ [Public](../../../visual-basic/language-reference/modifiers/public.md)  
   
  [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)  
   
@@ -77,7 +77,7 @@ ms.locfileid: "62051184"
   
  [공유](../../../visual-basic/language-reference/modifiers/shared.md)  
   
- [정적](../../../visual-basic/language-reference/modifiers/static.md)  
+ [Static](../../../visual-basic/language-reference/modifiers/static.md)  
   
  [유니코드](../../../visual-basic/language-reference/modifiers/unicode.md)  
   

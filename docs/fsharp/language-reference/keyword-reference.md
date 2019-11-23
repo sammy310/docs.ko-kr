@@ -1,13 +1,13 @@
 ---
 title: 키워드 참조
 description: 모든 F# 언어 키워드에 대 한 정보 링크를 찾습니다.
-ms.date: 05/16/2016
-ms.openlocfilehash: 2be6d078653a4595cbdfe97be7aab8e3b3c10ea9
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.date: 11/04/2019
+ms.openlocfilehash: 64bb680a0861f4b8287f887ea67edb6fcf4f88a6
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425079"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976614"
 ---
 # <a name="keyword-reference"></a>키워드 참조
 
@@ -87,7 +87,7 @@ ms.locfileid: "73425079"
 |`when`|[제약 조건](./generics/constraints.md)|패턴 일치에 대 한 부울 조건 (*가드*)에 사용 되며 제네릭 형식 매개 변수에 대 한 제약 조건 절을 도입 하는 데 사용 됩니다.|
 |`while`|[루프: `while...do` 식](loops-while-do-expression.md)|루핑 구문을 소개 합니다.|
 |`with`|[일치 식](match-expressions.md)<br /><br />[개체 식](object-expressions.md)<br /><br />[레코드 식 복사 및 업데이트](copy-and-update-record-expressions.md)<br /><br />[형식 확장명](type-extensions.md)<br /><br />[예외: `try...with` 식](./exception-handling/the-try-with-expression.md)|패턴 일치 식에서 `match` 키워드와 함께 사용 됩니다. 또한 개체 식에 사용 되 고, 레코드 복사 식 및 형식 확장을 사용 하 여 멤버 정의를 소개 하 고, 예외 처리기를 도입 합니다.|
-|`yield`|[시퀀스](sequences.md)|시퀀스에 대 한 값을 생성 하기 위해 시퀀스 식에 사용 됩니다.|
+|`yield`|[목록](lists.md), [배열](arrays.md), [시퀀스](sequences.md)|시퀀스에 대 한 값을 생성 하기 위해 목록, 배열 또는 시퀀스 식에 사용 됩니다. 일반적으로 대부분의 상황에서 암시적 이므로 생략할 수 있습니다.|
 |`yield!`|[계산 식](computation-expressions.md)<br /><br />[비동기 워크플로](asynchronous-workflows.md)|지정 된 계산 식의 결과를 포함 하는 계산 식의 결과 컬렉션에 추가 하기 위해 계산 식에 사용 됩니다.|
 
 다음 토큰은 OCaml 언어의 F# 키워드인 때문에에 예약 되어 있습니다.

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - collection-type properties [WPF]
 ms.assetid: 99f96a42-3ab7-4f64-a16b-2e10d654e97c
-ms.openlocfilehash: f7f8c25844f41dd8915c0f4404d6714b4c81233c
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 039ae0cb314eba2f1bb3e5b39f2127a5e694f334
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458469"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974152"
 ---
 # <a name="collection-type-dependency-properties"></a>컬렉션 형식 종속성 속성
 이 항목에서는 속성 형식이 컬렉션 형식인 종속성 속성을 구현하는 방법에 대한 지침과 제안된 패턴을 제공합니다.  
@@ -28,8 +28,11 @@ ms.locfileid: "73458469"
 ## <a name="initializing-the-collection-beyond-the-default-value"></a>기본값 이외의 컬렉션 초기화  
  종속성 속성을 만들 때는 속성 기본값을 초기 필드 값으로 지정하지 않습니다. 대신 종속성 속성 메타데이터를 통해 기본값을 지정합니다. 속성이 참조 형식인 경우 종속성 속성 메타데이터에 지정된 기본값은 인스턴스별 기본값이 아니라 해당 형식의 모든 인스턴스에 적용되는 기본값입니다. 따라서 컬렉션 속성 메타데이터로 정의된 단일 정적 컬렉션을 형식에 대해 새로 만든 인스턴스의 작업 기본값으로 사용하지 않도록 주의해야 합니다. 대신 클래스 생성자 논리의 일부로서 의도적으로 컬렉션 값을 고유한(인스턴스) 컬렉션으로 설정해야 합니다. 그렇지 않으면 의도하지 않은 Singleton 클래스가 만들어집니다.  
   
- 다음 예제를 살펴보십시오. 예제의 다음 섹션에서는 `Aquarium` 클래스에 대한 정의를 보여 줍니다. 클래스는 `AquariumObjects`컬렉션 형식 종속성 속성을 정의 합니다 .이 속성은 <xref:System.Windows.FrameworkElement> 형식 제약 조건이 있는 제네릭 <xref:System.Collections.Generic.List%601> 형식을 사용 합니다. 종속성 속성에 대 한 <xref:System.Windows.DependencyProperty.Register%28System.String%2CSystem.Type%2CSystem.Type%2CSystem.Windows.PropertyMetadata%29> 호출에서 메타 데이터는 새 제네릭 <xref:System.Collections.Generic.List%601>이 되도록 기본값을 설정 합니다.  
-  
+ 다음 예제를 살펴보십시오. 예제의 다음 섹션에서는 기본값을 사용 하는 결함을 포함 하는 클래스 `Aquarium`에 대 한 정의를 보여 줍니다. 클래스는 `AquariumObjects`컬렉션 형식 종속성 속성을 정의 합니다 .이 속성은 <xref:System.Windows.FrameworkElement> 형식 제약 조건이 있는 제네릭 <xref:System.Collections.Generic.List%601> 형식을 사용 합니다. 종속성 속성에 대 한 <xref:System.Windows.DependencyProperty.Register%28System.String%2CSystem.Type%2CSystem.Type%2CSystem.Windows.PropertyMetadata%29> 호출에서 메타 데이터는 새 제네릭 <xref:System.Collections.Generic.List%601>이 되도록 기본값을 설정 합니다.
+
+> [!WARNING]
+> 다음 코드는 올바르게 동작 하지 않습니다.
+
  [!code-csharp[PropertiesOvwSupport2#CollectionProblemDefinition](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport2/CSharp/page.xaml.cs#collectionproblemdefinition)]
  [!code-vb[PropertiesOvwSupport2#CollectionProblemDefinition](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport2/visualbasic/page.xaml.vb#collectionproblemdefinition)]  
   

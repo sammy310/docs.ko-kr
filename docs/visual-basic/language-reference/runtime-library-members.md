@@ -1,5 +1,5 @@
 ---
-title: Visual Basic 런타임 라이브러리 멤버
+title: Runtime Library Members
 ms.date: 07/20/2015
 f1_keywords:
 - VisualBasic
@@ -9,30 +9,31 @@ helpviewer_keywords:
 - Microsoft.VisualBasic namespace
 - members [Visual Basic], Visual Basic run-time library
 ms.assetid: f5e82c6e-3500-452b-bdb8-78f0d5477604
-ms.openlocfilehash: 061782dbd0ac54286a6c0da74fe769d98848f118
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a73589c4b0d0faeac321090e6030f1f8392a5342
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945186"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349612"
 ---
 # <a name="visual-basic-runtime-library-members"></a>Visual Basic 런타임 라이브러리 멤버
-`Microsoft.VisualBasic` 클래스, 모듈, 상수 및 열거형 Visual Basic 런타임 라이브러리를 구성 하는 네임 스페이스를 포함 합니다. 이러한 라이브러리 멤버 프로시저, 속성 및 코드에서 사용할 수 있는 상수 값을 제공 합니다. 각 모듈 및 클래스 기능의 특정 범주를 나타냅니다.  
+
+The `Microsoft.VisualBasic` namespace contains the classes, modules, constants, and enumerations that constitute the Visual Basic runtime library. These library members provide procedures, properties, and constant values you can use in your code. Each module and class represents a particular category of functionality.  
   
-## <a name="microsoftvisualbasiccollection-class"></a>Microsoft.VisualBasic.Collection 클래스  
+## <a name="microsoftvisualbasiccollection-class"></a>Microsoft.VisualBasic.Collection Class  
   
 |||||  
 |---|---|---|---|  
 |<xref:Microsoft.VisualBasic.Collection.Add%2A>|<xref:Microsoft.VisualBasic.Collection.Clear%2A>|<xref:Microsoft.VisualBasic.Collection.Contains%2A>|<xref:Microsoft.VisualBasic.Collection.Count%2A>|  
 |<xref:Microsoft.VisualBasic.Collection.GetEnumerator%2A>|<xref:Microsoft.VisualBasic.Collection.Item%2A>|<xref:Microsoft.VisualBasic.Collection.Remove%2A>||  
   
-## <a name="microsoftvisualbasiccomclassattribute-class"></a>Microsoft.VisualBasic.ComClassAttribute 클래스  
+## <a name="microsoftvisualbasiccomclassattribute-class"></a>Microsoft.VisualBasic.ComClassAttribute Class  
   
 |||||  
 |---|---|---|---|  
 |<xref:Microsoft.VisualBasic.ComClassAttribute.ClassID%2A>|<xref:Microsoft.VisualBasic.ComClassAttribute.EventID%2A>|<xref:Microsoft.VisualBasic.ComClassAttribute.InterfaceID%2A>|<xref:Microsoft.VisualBasic.ComClassAttribute.InterfaceShadows%2A>|  
   
-## <a name="microsoftvisualbasiccontrolchars-class"></a>Microsoft.VisualBasic.ControlChars 클래스  
+## <a name="microsoftvisualbasiccontrolchars-class"></a>Microsoft.VisualBasic.ControlChars Class  
   
 |||||  
 |---|---|---|---|  
@@ -40,7 +41,7 @@ ms.locfileid: "61945186"
 |<xref:Microsoft.VisualBasic.ControlChars.Lf>|<xref:Microsoft.VisualBasic.ControlChars.NewLine>|<xref:Microsoft.VisualBasic.ControlChars.NullChar>|<xref:Microsoft.VisualBasic.ControlChars.Quote>|  
 |<xref:Microsoft.VisualBasic.ControlChars.Tab>|<xref:Microsoft.VisualBasic.ControlChars.VerticalTab>|||  
   
-## <a name="microsoftvisualbasicconstants-class"></a>Microsoft.VisualBasic.Constants 클래스  
+## <a name="microsoftvisualbasicconstants-class"></a>Microsoft.VisualBasic.Constants Class  
   
 |||||  
 |---|---|---|---|  
@@ -89,7 +90,7 @@ ms.locfileid: "61945186"
 |<xref:Microsoft.VisualBasic.DateAndTime.TimeString%2A>|<xref:Microsoft.VisualBasic.DateAndTime.TimeValue%2A>|<xref:Microsoft.VisualBasic.DateAndTime.Today%2A>|<xref:Microsoft.VisualBasic.DateAndTime.Weekday%2A>|  
 |<xref:Microsoft.VisualBasic.DateAndTime.WeekdayName%2A>|<xref:Microsoft.VisualBasic.DateAndTime.Year%2A>|||  
   
-## <a name="microsoftvisualbasicerrobject-class"></a>Microsoft.VisualBasic.ErrObject 클래스  
+## <a name="microsoftvisualbasicerrobject-class"></a>Microsoft.VisualBasic.ErrObject Class  
   
 |||||  
 |---|---|---|---|  
@@ -127,7 +128,7 @@ ms.locfileid: "61945186"
 |---|---|---|---|  
 |<xref:Microsoft.VisualBasic.Globals.ScriptEngine%2A>|<xref:Microsoft.VisualBasic.Globals.ScriptEngineBuildVersion%2A>|<xref:Microsoft.VisualBasic.Globals.ScriptEngineMajorVersion%2A>|<xref:Microsoft.VisualBasic.Globals.ScriptEngineMinorVersion%2A>|  
   
-## <a name="microsoftvisualbasichidemodulenameattribute-class"></a>Microsoft.VisualBasic.HideModuleNameAttribute 클래스  
+## <a name="microsoftvisualbasichidemodulenameattribute-class"></a>Microsoft.VisualBasic.HideModuleNameAttribute Class  
   
 |||||  
 |---|---|---|---|  
@@ -172,13 +173,13 @@ ms.locfileid: "61945186"
 |<xref:Microsoft.VisualBasic.Strings.Space%2A>|<xref:Microsoft.VisualBasic.Strings.Split%2A>|<xref:Microsoft.VisualBasic.Strings.StrComp%2A>|<xref:Microsoft.VisualBasic.Strings.StrConv%2A>|  
 |<xref:Microsoft.VisualBasic.Strings.StrDup%2A>|<xref:Microsoft.VisualBasic.Strings.StrReverse%2A>|<xref:Microsoft.VisualBasic.Strings.Trim%2A>|<xref:Microsoft.VisualBasic.Strings.UCase%2A>|  
   
-## <a name="microsoftvisualbasicvbfixedarrayattribute-class"></a>Microsoft.VisualBasic.VBFixedArrayAttribute 클래스  
+## <a name="microsoftvisualbasicvbfixedarrayattribute-class"></a>Microsoft.VisualBasic.VBFixedArrayAttribute Class  
   
 |||||  
 |---|---|---|---|  
 |<xref:Microsoft.VisualBasic.VBFixedArrayAttribute.Bounds%2A>|<xref:Microsoft.VisualBasic.VBFixedArrayAttribute.Length%2A>|||  
   
-## <a name="microsoftvisualbasicvbfixedstringattribute-class"></a>Microsoft.VisualBasic.VBFixedStringAttribute 클래스  
+## <a name="microsoftvisualbasicvbfixedstringattribute-class"></a>Microsoft.VisualBasic.VBFixedStringAttribute Class  
   
 |||||  
 |---|---|---|---|  
@@ -190,10 +191,11 @@ ms.locfileid: "61945186"
 |---|---|---|---|  
 |<xref:Microsoft.VisualBasic.VBMath.Randomize%2A>|<xref:Microsoft.VisualBasic.VBMath.Rnd%2A>|||  
   
-## <a name="microsoftvisualbasic-constants-and-enumerations"></a>Microsoft.VisualBasic 상수 및 열거형  
- `Microsoft.VisualBasic` 네임 스페이스는 Visual Basic 런타임 라이브러리의 일부로 상수 및 열거형을 제공 합니다. 코드에서 이러한 상수 값을 사용할 수 있습니다. 각 열거 기능의 특정 범주를 나타냅니다. 자세한 내용은 [상수 및 열거형](../../visual-basic/language-reference/constants-and-enumerations.md)합니다.  
+## <a name="microsoftvisualbasic-constants-and-enumerations"></a>Microsoft.VisualBasic Constants and Enumerations  
+
+ The `Microsoft.VisualBasic` namespace provides constants and enumerations as part of the Visual Basic run-time library. You can use these constant values in your code. Each enumeration represents a particular category of functionality. For more information, see [Constants and Enumerations](../../visual-basic/language-reference/constants-and-enumerations.md).  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [상수 및 열거형](../../visual-basic/language-reference/constants-and-enumerations.md)
 - [C++ 키워드](../../visual-basic/language-reference/keywords/index.md)

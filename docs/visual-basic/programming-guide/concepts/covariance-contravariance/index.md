@@ -1,13 +1,13 @@
 ---
-title: 공변성(Covariance) 및 반공변성(Contravariance)(Visual Basic)
+title: 공 분산 및 반공 분산
 ms.date: 07/20/2015
 ms.assetid: 59224c46-9931-466b-8c6e-3648c3e609c6
-ms.openlocfilehash: 8315a272aca891820f7349d854a16375abdae900
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: a75970d98890cb1fb363d4672bd90d376bccf89c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524258"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352155"
 ---
 # <a name="covariance-and-contravariance-visual-basic"></a>공변성(Covariance) 및 반공변성(Contravariance)(Visual Basic)
 
@@ -79,7 +79,7 @@ Shared Sub Test()
 End Sub
 ```
 
-.NET Framework 4 Visual Basic 이상에서는 제네릭 인터페이스 및 대리자에서 공 분산 및 반공 분산을 지원 하 고 제네릭 형식 매개 변수를 암시적으로 변환할 수 있습니다. 자세한 내용은 참조 [제네릭 인터페이스의 가변성(Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md) 및 [대리자의 가변성(Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)을 참조하세요.
+In .NET Framework 4 or later, Visual Basic supports covariance and contravariance in generic interfaces and delegates and allows for implicit conversion of generic type parameters. 자세한 내용은 참조 [제네릭 인터페이스의 가변성(Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md) 및 [대리자의 가변성(Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)을 참조하세요.
 
 다음 코드 예제에서는 제네릭 인터페이스에 대한 암시적 참조 변환을 보여 줍니다.
 

@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: ce2df341-a1a4-4e97-8e1b-cd45b8e3e71e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 272c224c8a1c5061392856685f374237f8a10579
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: 9b456dc407f634e7f40f69bbac9b6d932f1f4420
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71956869"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350705"
 ---
 # <a name="accessing-attributes-in-the-dom"></a>DOM에서 특성 액세스
 
@@ -28,7 +28,6 @@ ms.locfileid: "71956869"
 다음 코드 예제에서는 특성 컬렉션을 검색하는 방법과 반복 인덱스에 **Count** 메서드를 사용하여 해당 특성 컬렉션 전체를 반복하는 예를 보여줍니다. 그런 다음 컬렉션에서 단일 특성을 검색한 후 해당 값을 표시하는 방법을 보여 줍니다.
 
 ```vb
-Imports System
 Imports System.IO
 Imports System.Xml
 
@@ -118,7 +117,7 @@ public class Sample
 
 이 예제의 결과는 다음과 같습니다.
 
-**출력**
+**Output**
 
 컬렉션의 모든 특성을 표시합니다.
 
@@ -147,7 +146,6 @@ sale item
 Option Explicit On
 Option Strict On
 
-Imports System
 Imports System.IO
 Imports System.Xml
 
@@ -197,7 +195,6 @@ public class Sample
 요소에서 단일 특성 노드를 검색하려면 <xref:System.Xml.XmlElement.GetAttributeNode%2A?displayProperty=nameWithType> 메서드를 사용합니다. 이 메서드는 **XmlAttribute** 형식의 개체를 반환합니다. **XmlAttribute**가 있는 경우 <xref:System.Xml.XmlAttribute?displayProperty=nameWithType> 클래스에서 사용할 수 있는 모든 메서드 및 속성은 **OwnerElement** 찾기 등과 같이 해당 개체에서 사용할 수 있습니다.
 
 ```vb
-Imports System
 Imports System.IO
 Imports System.Xml
 

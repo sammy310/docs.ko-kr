@@ -1,5 +1,5 @@
 ---
-title: If...Then...Else 문(Visual Basic)
+title: If...Then...Else 문
 ms.date: 04/16/2018
 f1_keywords:
 - vb.ElseIf
@@ -21,12 +21,12 @@ helpviewer_keywords:
 - If function [Visual Basic], and If...Then...Else statements
 - Else statement [Visual Basic]
 ms.assetid: 790068a2-1307-4e28-8a72-be5ebda099e9
-ms.openlocfilehash: db81a1c41809b563d5f9d0777c3feb064c5e540b
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: f505755caeb9cc3cfeeb1ba83b6de15f48314103
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70400708"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351158"
 ---
 # <a name="ifthenelse-statement-visual-basic"></a>If...Then...Else 문(Visual Basic)
 
@@ -48,83 +48,83 @@ End If
 If condition Then [ statements ] [ Else [ elsestatements ] ]
 ```
 
-## <a name="quick-links-to-example-code"></a>예제 코드에 대 한 빠른 링크
+## <a name="quick-links-to-example-code"></a>Quick links to example code
 
-이 문서에는 `If`다음을 사용 하는 방법을 보여 주는 몇 가지 예가 포함 되어 있습니다. `Then`... `Else` 문:
+This article includes several examples that illustrate uses of the `If`...`Then`...`Else` statement:
 
-- [여러 줄 구문 예제](#multi-line)
-- [중첩 구문 예제](#nested)
-- [한 줄 구문 예제](#single-line)
+- [Multiline syntax example](#multi-line)
+- [Nested syntax example](#nested)
+- [Single-line syntax example](#single-line)
 
 ## <a name="parts"></a>요소
 
 `condition` \
-필수 요소. 식. 는 `True` `Boolean`또는 `False`로 계산 하거나 암시적으로로 변환할 수 있는 데이터 형식으로 계산 되어야 합니다.
+필수 요소. Expression. Must evaluate to `True` or `False`, or to a data type that is implicitly convertible to `Boolean`.
 
-식이 [Nothing](../../../visual-basic/language-reference/nothing.md)으로 계산 되 `False`는 null을 [허용](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md) `Boolean` 하는 변수인 경우 조건은 식이 인 것 처럼 처리 되 고 `ElseIf` 블록이 있는 경우에는 블록을 평가 하 고 `Else` 블록은 다음과 같이 처리 됩니다. 존재 하는 경우 실행 됩니다.
+If the expression is a [Nullable](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md) `Boolean` variable that evaluates to [Nothing](../../../visual-basic/language-reference/nothing.md), the condition is treated as if the expression is `False`, and the `ElseIf` blocks are evaluated if they exist, or the `Else` block is executed if it exists.
 
 `Then` \
-한 줄 구문에 필요 합니다. 여러 줄 구문에서 선택 사항입니다.
+Required in the single-line syntax; optional in the multiline syntax.
 
 `statements` \
-선택 사항입니다. 뒤 `If`에 하나 이상의 문이 있습니다. `Then` 가 `condition` 로 평가`True`되는 경우 실행 되는입니다.
+(선택 사항) One or more statements following `If`...`Then` that are executed if `condition` evaluates to `True`.
 
 `elseifcondition` \
-가 있는 `ElseIf` 경우 필수입니다. 식. 는 `True` `Boolean`또는 `False`로 계산 하거나 암시적으로로 변환할 수 있는 데이터 형식으로 계산 되어야 합니다.
+Required if `ElseIf` is present. Expression. Must evaluate to `True` or `False`, or to a data type that is implicitly convertible to `Boolean`.
 
 `elseifstatements` \
-선택 사항입니다. 뒤 `ElseIf`에 하나 이상의 문이 있습니다. `Then` 가 `elseifcondition` 로 평가`True`되는 경우 실행 되는입니다.
+(선택 사항) One or more statements following `ElseIf`...`Then` that are executed if `elseifcondition` evaluates to `True`.
 
 `elsestatements` \
-선택 사항입니다. 이전 `condition` 또는 `elseifcondition` 식이 로`True`계산 되지 않는 경우 실행 되는 하나 이상의 문입니다.
+(선택 사항) One or more statements that are executed if no previous `condition` or `elseifcondition` expression evaluates to `True`.
 
 `End If` \
-여러 줄 버전의 `If`를 종료 합니다. `Then`... `Else` 블록.
+Terminates the multiline version of `If`...`Then`...`Else` block.
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
-### <a name="multiline-syntax"></a>여러 줄 구문
+### <a name="multiline-syntax"></a>Multiline syntax
 
-`If`... `Then`... 문이 발견 되 면가 테스트 됩니다. `condition` `Else` `condition` 가 이면`True`다음 문이`Then` 실행 됩니다. `condition` 가 이면`False`각 문(있는`ElseIf` 경우)이 순서 대로 평가 됩니다. 가 발견 되 면 연결 `ElseIf` 된 바로 다음에 오는 문이 실행 됩니다. `True` `elseifcondition` 가로 `elseifcondition` `True`계산 되지 `Else` 않거나 문이 없으면 다음 문이 실행 됩니다. `ElseIf` `Then`, 또는 `ElseIf` `End If`다음에 오는 문을 실행 한 후에는 다음 문을 사용 하 여 실행이 계속 됩니다. `Else`
+When an `If`...`Then`...`Else` statement is encountered, `condition` is tested. If `condition` is `True`, the statements following `Then` are executed. If `condition` is `False`, each `ElseIf` statement (if there are any) is evaluated in order. When a `True` `elseifcondition` is found, the statements immediately following the associated `ElseIf` are executed. If no `elseifcondition` evaluates to `True`, or if there are no `ElseIf` statements, the statements following `Else` are executed. After executing the statements following `Then`, `ElseIf`, or `Else`, execution continues with the statement following `End If`.
 
-`ElseIf` And`Else` 절은 모두 선택 사항입니다. 원하는 수 `ElseIf` `If`의 절을 원하는 개수 만큼 포함할 수 있습니다. `Then`... 문 이지만 절 뒤 `Else` 에는 절이 나타나지 않습니다 `ElseIf`. `Else` `If`... `Then`... `Else` 문은 서로 중첩 될 수 있습니다.
+The `ElseIf` and `Else` clauses are both optional. You can have as many `ElseIf` clauses as you want in an `If`...`Then`...`Else` statement, but no `ElseIf` clause can appear after an `Else` clause. `If`...`Then`...`Else` statements can be nested within each other.
 
-여러 줄 구문 `If` 에서 문은 첫째 줄에서 유일한 문 이어야 합니다. `ElseIf`, 및문은`End If` 줄 레이블 앞에만 올 수 있습니다. `Else` `If`... `Then`... 블록은 `End If` 문으로 끝나야 합니다. `Else`
+In the multiline syntax, the `If` statement must be the only statement on the first line. The `ElseIf`, `Else`, and `End If` statements can be preceded only by a line label. The `If`...`Then`...`Else` block must end with an `End If` statement.
 
 > [!TIP]
-> [Select ... Case 문은](../../../visual-basic/language-reference/statements/select-case-statement.md) 가능한 값이 여러 개 있는 단일 식을 평가할 때 더 유용할 수 있습니다.
+> The [Select...Case Statement](../../../visual-basic/language-reference/statements/select-case-statement.md) might be more useful when you evaluate a single expression that has several possible values.
 
-### <a name="single-line-syntax"></a>한 줄 구문
+### <a name="single-line-syntax"></a>Single-Line syntax
 
-True 인 경우 코드를 실행 하는 단일 조건에 대해 한 줄 구문을 사용할 수 있습니다. 그러나 여러 줄로 구성 된 구문은 더 많은 구조와 유연성을 제공 하며 읽기, 유지 관리 및 디버깅 하기가 더 쉽습니다.
+You can use the single-line syntax for a single condition with code to execute if it's true. However, the multiple-line syntax provides more structure and flexibility and is easier to read, maintain, and debug.
 
-`Then` 키워드 다음에 나오는 항목을 검사 하 여 문이 한 줄 `If`인지 여부를 확인 합니다. 주석이 아닌 다른 항목이 같은 줄 `Then` 에 표시 되는 경우이 문은 한 줄 `If` 로 된 문으로 처리 됩니다. 가 없으면 여러 줄 `If`의 시작 이어야 합니다. `Then` `Then`... `Else`.
+What follows the `Then` keyword is examined to determine whether a statement is a single-line `If`. If anything other than a comment appears after `Then` on the same line, the statement is treated as a single-line `If` statement. If `Then` is absent, it must be the start of a multiple-line `If`...`Then`...`Else`.
 
-한 줄 구문에서 다음의 `If`결과로 실행 되는 문이 여러 개 있을 수 있습니다. `Then` 결정. 모든 문은 같은 줄에 있고 콜론으로 구분 해야 합니다.
+In the single-line syntax, you can have multiple statements executed as the result of an `If`...`Then` decision. All statements must be on the same line and be separated by colons.
 
-## <a name="multiline-syntax-example"></a>여러 줄 구문 예제
+## <a name="multiline-syntax-example"></a>Multiline syntax example
 
 <a name="multi-line"></a>
 
-다음 예제에서는 ...의 여러 줄로 된 `If`구문을 사용 하는 방법을 보여 줍니다. `Then`... `Else` 문.
+The following example illustrates the use of the multiline syntax of the `If`...`Then`...`Else` statement.
 
 [!code-vb[VbVbalrStatements#101](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class6.vb#101)]
 
-## <a name="nested-syntax-example"></a>중첩 구문 예제
+## <a name="nested-syntax-example"></a>Nested syntax example
 
 <a name="nested"></a>
 
-다음 예제에는 중첩 `If`된 ... `Then`... `Else` 문.
+The following example contains nested `If`...`Then`...`Else` statements.
 
 [!code-vb[VbVbalrStatements#102](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class6.vb#102)]
 
-## <a name="single-line-syntax-example"></a>한 줄 구문 예제
+## <a name="single-line-syntax-example"></a>Single-Line syntax example
 
-<a name="single-line"></a>다음 예제에서는 한 줄의 구문을 사용 하는 방법을 보여 줍니다.
+<a name="single-line"></a> The following example illustrates the use of the single-line syntax.
 
 [!code-vb[VbVbalrStatements#103](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class6.vb#103)]
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:Microsoft.VisualBasic.Interaction.Choose%2A>
 - <xref:Microsoft.VisualBasic.Interaction.Switch%2A>
@@ -132,5 +132,5 @@ True 인 경우 코드를 실행 하는 단일 조건에 대해 한 줄 구문�
 - [Select...Case 문](../../../visual-basic/language-reference/statements/select-case-statement.md)
 - [중첩 제어 구조](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)
 - [판단 구조](../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)
-- [Visual Basic 논리 및 비트 연산자](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+- [Logical and Bitwise Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
 - [If 연산자](../../../visual-basic/language-reference/operators/if-operator.md)

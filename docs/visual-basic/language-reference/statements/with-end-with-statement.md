@@ -1,5 +1,5 @@
 ---
-title: With...End With 문(Visual Basic)
+title: With...End With 문
 ms.date: 07/20/2015
 f1_keywords:
 - vb.With
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - With block
 - End keyword [Visual Basic], With...End With statements
 ms.assetid: 340d5fbb-4f43-48ec-a024-80843c137817
-ms.openlocfilehash: 3da04b85865389a2b4466b78091ff28529346269
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: eb8790d0d8f82232a4b10e4e0e30165745c065c0
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582252"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352729"
 ---
 # <a name="withend-with-statement-visual-basic"></a>With...End With 문(Visual Basic)
 
@@ -64,10 +64,10 @@ End With
 
 블록 외부에서 `With` 문 블록으로 분기할 수 없습니다.
 
-블록에 루프가 없으면 문이 한 번만 실행됩니다. 다른 종류의 제어 구조를 중첩할 수 있습니다. 자세한 내용은 [중첩 컨트롤 구조](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)를 참조 하세요.
+블록에 루프가 없으면 문이 한 번만 실행됩니다. 다른 종류의 제어 구조를 중첩할 수 있습니다. For more information, see [Nested Control Structures](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md).
 
 > [!NOTE]
-> 개체 이니셜라이저에서도 `With` 키워드를 사용할 수 있습니다. 자세한 내용 및 예제는 [개체 이니셜라이저: 명명 된 형식과 익명 형식](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md) 및 [익명 형식](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)을 참조 하세요.
+> 개체 이니셜라이저에서도 `With` 키워드를 사용할 수 있습니다. For more information and examples, see [Object Initializers: Named and Anonymous Types](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md) and [Anonymous Types](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).
 >
 > 인스턴스화한 개체의 필드 또는 속성을 초기화하기 위해서만 `With` 블록을 사용하는 경우 대신 개체 이니셜라이저를 사용할 것을 고려하십시오.
 

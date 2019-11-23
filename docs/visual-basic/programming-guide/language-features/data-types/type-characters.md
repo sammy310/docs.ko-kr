@@ -1,5 +1,5 @@
 ---
-title: 형식 문자(Visual Basic)
+title: 형식 문자
 ms.date: 01/31/2018
 helpviewer_keywords:
 - '&H prefix for hexadecimal values'
@@ -36,24 +36,24 @@ helpviewer_keywords:
 - UL literal type characters [Visual Basic]
 - literal types [Visual Basic], default
 ms.assetid: 6353cb9b-6ee4-4af6-a5a8-88ce39f90cc5
-ms.openlocfilehash: a469a08ebadd77d5abbfa95b270784c9ef534691
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 628461c8136946dd902c0a52048eee7c516c52cd
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906752"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352936"
 ---
-# <a name="type-characters-visual-basic"></a>입력 문자 (Visual Basic)
+# <a name="type-characters-visual-basic"></a>Type characters (Visual Basic)
 
-를 선언 문의 데이터 형식을 지정 하는 것 외에도 일부 프로그래밍 요소와 데이터 형식의 할 수 있습니다는 *문자 입력*합니다. 형식 문자는 모든 종류의 중간 문자가 없는 요소를 즉시 따라야 합니다.
+In addition to specifying a data type in a declaration statement, you can force the data type of some programming elements with a *type character*. The type character must immediately follow the element, with no intervening characters of any kind.
 
-형식 문자 요소 이름의 일부가 아닙니다. 형식 문자를 제외한 형식 문자를 사용 하 여 정의 된 요소를 참조할 수 있습니다.
+The type character is not part of the name of the element. An element defined with a type character can be referenced without the type character.
 
-## <a name="identifier-type-characters"></a>식별자 형식 문자
+## <a name="identifier-type-characters"></a>Identifier type characters
 
-Visual Basic의 집합을 제공 *식별자 형식 문자* 데이터 형식의 변수 또는 상수를 지정 하는 선언에서 사용할 수 있습니다. 다음 표에서 사용 예제를 사용할 수 있는 식별자 형식 문자를 보여 줍니다.
+Visual Basic supplies a set of *identifier type characters* that you can use in a declaration to specify the data type of a variable or constant. The following table shows the available identifier type characters with examples of usage.
   
-|식별자 형식 문자|데이터 형식|예제|  
+|Identifier type character|데이터 형식|예제|  
 |-------------------------------|---------------|-------------|  
 |`%`|`Integer`|`Dim L%`|  
 |`&`|`Long`|`Dim M&`|  
@@ -62,33 +62,33 @@ Visual Basic의 집합을 제공 *식별자 형식 문자* 데이터 형식의 �
 |`#`|`Double`|`Dim X#`|  
 |`$`|`String`|`Dim V$ = "Secret"`|  
   
- 식별자 형식 문자가 없습니다 합니다 `Boolean`, `Byte`, `Char`, `Date`, `Object`를 `SByte`, `Short`, `UInteger`, `ULong`, 또는 `UShort` 데이터 형식 또는 배열 또는 구조체와 같은 복합 데이터 형식입니다.
+ No identifier type characters exist for the `Boolean`, `Byte`, `Char`, `Date`, `Object`, `SByte`, `Short`, `UInteger`, `ULong`, or `UShort` data types, or for any composite data types such as arrays or structures.
 
-경우에 따라 추가할 수 있습니다 합니다 `$` Visual Basic 함수 예를 들어 문자 `Left$` 대신 `Left`형식의 반환된 값을 얻기 위해 `String`합니다.
+In some cases, you can append the `$` character to a Visual Basic function, for example `Left$` instead of `Left`, to obtain a returned value of type `String`.
 
-모든 경우 식별자 형식 문자를 사용 하 여 식별자 이름을 즉시 따라야 합니다.
+In all cases, the identifier type character must immediately follow the identifier name.
 
-## <a name="literal-type-characters"></a>리터럴 형식 문자
+## <a name="literal-type-characters"></a>Literal type characters
 
-A *리터럴* 데이터 형식의 특정 값의 텍스트 표현입니다.  
+A *literal* is a textual representation of a particular value of a data type.  
 
-### <a name="default-literal-types"></a>기본 리터럴 형식
+### <a name="default-literal-types"></a>Default literal types
 
-리터럴 형식의 일반적으로 코드에 표시 된 대로 해당 데이터 형식을 결정 합니다. 다음 표에서 이러한 기본 유형을 보여 줍니다.  
+The form of a literal as it appears in your code ordinarily determines its data type. The following table shows these default types.  
   
-|텍스트 형식의 리터럴|기본 데이터 형식|예제|  
+|Textual form of literal|Default data type|예제|  
 |-----------------------------|-----------------------|-------------|  
-|숫자, 아니요 소수 부분|`Integer`|`2147483647`|  
-|너무 커서 숫자, 아니요 소수 부분 `Integer`|`Long`|`2147483648`|  
-|숫자에서 소수 부분|`Double`|`1.2`|  
-|큰따옴표로 묶인|`String`|`"A"`|  
-|숫자 기호 안에 포함|`Date`|`#5/17/1993 9:32 AM#`|  
+|Numeric, no fractional part|`Integer`|`2147483647`|  
+|Numeric, no fractional part, too large for `Integer`|`Long`|`2147483648`|  
+|Numeric, fractional part|`Double`|`1.2`|  
+|Enclosed in double quotation marks|`String`|`"A"`|  
+|Enclosed within number signs|`Date`|`#5/17/1993 9:32 AM#`|  
 
-### <a name="forced-literal-types"></a>리터럴 형식 강제
+### <a name="forced-literal-types"></a>Forced literal types
 
-Visual Basic의 집합을 제공 *리터럴 형식 문자*, 리터럴을 것 이외의 데이터 형식 형태로 가정에 적용할 수 있는 나타냅니다. 리터럴의 끝에 문자를 추가 하 여이 작업을 수행 합니다. 다음 표에서 사용 예제를 사용할 수 있는 리터럴 형식 문자를 보여 줍니다.
+Visual Basic supplies a set of *literal type characters*, which you can use to force a literal to assume a data type other than the one its form indicates. You do this by appending the character to the end of the literal. The following table shows the available literal type characters with examples of usage.
   
-|리터럴 형식 문자|데이터 형식|예제|  
+|Literal type character|데이터 형식|예제|  
 |----------------------------|---------------|-------------|  
 |`S`|`Short`|`I = 347S`|
 |`I`|`Integer`|`J = 347I`|
@@ -101,38 +101,38 @@ Visual Basic의 집합을 제공 *리터럴 형식 문자*, 리터럴을 것 이
 |`UL`|`ULong`|`N = 347UL`|
 |`C`|`Char`|`Q = "."C`|
 
-리터럴 형식 문자가 없습니다 합니다 `Boolean`, `Byte`, `Date`, `Object`를 `SByte`, 또는 `String` 데이터 형식 또는 배열 또는 구조체와 같은 복합 데이터 형식에 대 한 합니다.
+No literal type characters exist for the `Boolean`, `Byte`, `Date`, `Object`, `SByte`, or `String` data types, or for any composite data types such as arrays or structures.
 
-리터럴 식별자 형식 문자를 사용할 수도 있습니다 (`%`, `&`를 `@`, `!`를 `#`, `$`), 변수, 상수 및 식입니다. 그러나 리터럴 형식 문자 (`S`, `I`를 `L`를 `D`를 `F`를 `R`, `C`) 리터럴 에서만 사용할 수 있습니다.
+Literals can also use the identifier type characters (`%`, `&`, `@`, `!`, `#`, `$`), as can variables, constants, and expressions. However, the literal type characters (`S`, `I`, `L`, `D`, `F`, `R`, `C`) can be used only with literals.
 
-모든 경우 리터럴 형식 문자 리터럴 값을 즉시 따라야 합니다.
+In all cases, the literal type character must immediately follow the literal value.
 
-## <a name="hexadecimal-binary-and-octal-literals"></a>16 진수, 8 진수 및 이진 리터럴
+## <a name="hexadecimal-binary-and-octal-literals"></a>Hexadecimal, binary, and octal literals
 
-컴파일러는 일반적으로 정수 리터럴 10 진수 (밑수 10) 수 시스템을 해석 합니다. 16 진수 (기 수 16) 숫자로 정수 리터럴을 정의할 수도 있습니다는 `&H` (밑 2) 이진 숫자로 접두사는 `&B` 접두사는 8 진수 (기 수 8)으로 숫자를 `&O` 접두사. 접두사 뒤의 숫자는 숫자 체계에 적합 해야 합니다. 다음 표에서이 설명 합니다.  
+The compiler normally interprets an integer literal to be in the decimal (base 10) number system. You can also define an integer literal as a hexadecimal (base 16) number with the `&H` prefix, as a binary (base 2) number with the `&B` prefix, and as an octal (base 8) number with the `&O` prefix. The digits that follow the prefix must be appropriate for the number system. The following table illustrates this.  
   
-|기 수|접두사|유효한 숫자 값|예제|
+|Number base|접두사|Valid digit values|예제|
 |-----------------|------------|------------------------|-------------|
-|16진수|`&H`|0-9와 A-f|`&HFFFF`|
-|이진 (밑 2)|`&B`|0-1|`&B01111100`|
+|16진수|`&H`|0-9 and A-F|`&HFFFF`|
+|Binary (base 2)|`&B`|0-1|`&B01111100`|
 |8진수|`&O`|0-7|`&O77`|
 
-Visual Basic 2017부터 밑줄 문자를 사용할 수 있습니다 (`_`) 정수 계열 리터럴의 가독성을 향상 시키기 위해 그룹 구분 기호로 합니다. 다음 예제에서는 `_` 이진 리터럴을 8 비트 그룹으로 그룹화 하는 문자:
+Starting in Visual Basic 2017, you can use the underscore character (`_`) as a group separator to enhance the readability of an integral literal. The following example uses the `_` character to group a binary literal into 8-bit groups:
 
 ```vb
 Dim number As Integer = &B00100010_11000101_11001111_11001101
 ```
 
-접두사가 붙은 리터럴을 리터럴 형식 문자를 사용 하 여 수행할 수 있습니다. 다음 예제에서는이 보여 줍니다.
+You can follow a prefixed literal with a literal type character. The following example shows this.
 
 ```vb
 Dim counter As Short = &H8000S
 Dim flags As UShort = &H8000US
 ```
 
-이전 예에서 `counter` -32768 10 진수 값 및 `flags` 10 진수 값 + 32768을 갖습니다.
+In the previous example, `counter` has the decimal value of -32768, and `flags` has the decimal value of +32768.
 
-Visual Basic 15.5부터 사용할 수도 있습니다는 밑줄 문자 (`_`) 접두사 및 16 진수, 이진 또는 8 진수 숫자 사이의 선행 구분 기호로 합니다. 예를 들어:
+Starting with Visual Basic 15.5, you can also use the underscore character (`_`) as a leading separator between the prefix and the hexadecimal, binary, or octal digits. 예를 들어 다음과 같은 가치를 제공해야 합니다.
 
 ```vb
 Dim number As Integer = &H_C305_F860
@@ -140,12 +140,12 @@ Dim number As Integer = &H_C305_F860
 
 [!INCLUDE [supporting-underscores](../../../../../includes/vb-separator-langversion.md)]
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [데이터 형식](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [기본 데이터 형식](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
-- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
-- [Visual Basic의 형식 변환](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [값 형식과 참조 형식](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Type Conversions in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [데이터 형식 문제 해결](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
 - [변수 선언](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
 - [데이터 형식](../../../../visual-basic/language-reference/data-types/index.md)

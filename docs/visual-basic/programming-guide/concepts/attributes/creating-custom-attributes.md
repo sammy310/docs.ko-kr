@@ -1,15 +1,15 @@
 ---
-title: 사용자 지정 특성 만들기 (Visual Basic)
+title: 사용자 지정 특성 만들기
 ms.date: 07/20/2015
 ms.assetid: 5c9ef584-6c7c-496b-92a9-6e42f8d9ca28
-ms.openlocfilehash: 3b1b03f69229bd4d824d6fff734b83400c2aab44
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 773a3e8e974f37a1554892dd3441c115681c5bae
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524293"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350152"
 ---
-# <a name="creating-custom-attributes-visual-basic"></a>사용자 지정 특성 만들기 (Visual Basic)
+# <a name="creating-custom-attributes-visual-basic"></a>Creating Custom Attributes (Visual Basic)
 
 메타데이터를 통해 특성의 정의를 빠르고 쉽게 식별할 수 있도록 해주는 <xref:System.Attribute>로부터 직접적으로 또는 간접적으로 상속한 특성 클래스를 정의하여 사용자 지정 특성을 만들 수 있습니다. 형식을 작성한 프로그래머의 이름을 형식에 태그로 지정한다고 가정해봅시다. 사용자 지정 `Author` 특성 클래스를 아래와 같이 정의할 수 있습니다.
 

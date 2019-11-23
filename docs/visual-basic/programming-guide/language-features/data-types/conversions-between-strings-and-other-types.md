@@ -1,5 +1,5 @@
 ---
-title: 문자열과 다른 형식 사이의 변환(Visual Basic)
+title: 문자열과 다른 형식 사이의 변환
 ms.date: 07/20/2015
 helpviewer_keywords:
 - data type conversion [Visual Basic], string
@@ -9,43 +9,43 @@ helpviewer_keywords:
 - type conversion [Visual Basic], string
 - regional options
 ms.assetid: c3a99596-f09a-44a5-81dd-1b89a094f1df
-ms.openlocfilehash: 06dabbb5d5dfbfb545f01afb157fd532ca0551df
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: ac2e8ce912080c284d8ba0228830dd6b3ddf5f6e
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197341"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350131"
 ---
 # <a name="conversions-between-strings-and-other-types-visual-basic"></a>문자열과 다른 형식 사이의 변환(Visual Basic)
-숫자, `Boolean` 또는 날짜/시간 값을 `String`로 변환할 수 있습니다. 문자열의 내용이 대상 데이터 형식의 유효한 값으로 해석 될 수 있는 경우 문자열 값에서 숫자, `Boolean` 또는 `Date`으로 반대 방향으로 변환할 수도 있습니다. 사용할 수 없는 경우 런타임 오류가 발생 합니다.  
+You can convert a numeric, `Boolean`, or date/time value to a `String`. You can also convert in the reverse direction — from a string value to numeric, `Boolean`, or `Date` — provided the contents of the string can be interpreted as a valid value of the destination data type. If they cannot, a run-time error occurs.  
   
- 어느 방향에서 든 이러한 모든 할당에 대 한 변환은 축소 변환입니다. 형식 변환 키워드 (`CBool`, `CByte`, `CDate`, `CDbl`, `CDec`, `CInt`, `CLng`, `CSByte`, `CShort`, `CSng`, 0, 1를 사용 해야 2 , 3 및 4). <xref:Microsoft.VisualBasic.Strings.Format%2A> 및 <xref:Microsoft.VisualBasic.Conversion.Val%2A> 함수를 통해 문자열과 숫자 간의 변환을 추가로 제어할 수 있습니다.  
+ The conversions for all these assignments, in either direction, are narrowing conversions. You should use the type conversion keywords (`CBool`, `CByte`, `CDate`, `CDbl`, `CDec`, `CInt`, `CLng`, `CSByte`, `CShort`, `CSng`, `CStr`, `CUInt`, `CULng`, `CUShort`, and `CType`). The <xref:Microsoft.VisualBasic.Strings.Format%2A> and <xref:Microsoft.VisualBasic.Conversion.Val%2A> functions give you additional control over conversions between strings and numbers.  
   
- 클래스 또는 구조체를 정의한 경우 `String`와 클래스 또는 구조체의 형식 간에 형식 변환 연산자를 정의할 수 있습니다. 자세한 내용은 [How to: Define a Conversion Operator](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)을 참조하세요.  
+ If you have defined a class or structure, you can define type conversion operators between `String` and the type of your class or structure. 자세한 내용은 [How to: Define a Conversion Operator](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)을 참조하세요.  
   
-## <a name="conversion-of-numbers-to-strings"></a>숫자를 문자열로 변환  
- `Format` 함수를 사용 하 여 숫자를 서식이 지정 된 문자열로 변환할 수 있습니다. 여기에는 해당 숫자 뿐만 아니라 통화 기호 (예: `$`), 천 단위 구분 기호 또는 *자릿수 구분 기호* (예:)와 같은 기호 서식 지정도 포함 될 수 있습니다. `,`)와 소수 구분 기호 (예: `.`). `Format`은 Windows **제어판**에 지정 된 **국가별 옵션** 설정에 따라 적절 한 기호를 자동으로 사용 합니다.  
+## <a name="conversion-of-numbers-to-strings"></a>Conversion of Numbers to Strings  
+ You can use the `Format` function to convert a number to a formatted string, which can include not only the appropriate digits but also formatting symbols such as a currency sign (such as `$`), thousands separators or *digit grouping symbols* (such as `,`), and a decimal separator (such as `.`). `Format` automatically uses the appropriate symbols according to the **Regional Options** settings specified in the Windows **Control Panel**.  
   
- 다음 예제에 나와 있는 것 처럼 연결 (`&`) 연산자는 숫자를 문자열로 암시적으로 변환할 수 있습니다.  
+ Note that the concatenation (`&`) operator can convert a number to a string implicitly, as the following example shows.  
   
 ```vb  
 ' The following statement converts count to a String value.  
 Str = "The total count is " & count  
 ```  
   
-## <a name="conversion-of-strings-to-numbers"></a>문자열을 숫자로 변환  
- `Val` 함수를 사용 하 여 문자열의 숫자를 숫자로 명시적으로 변환할 수 있습니다. `Val` 숫자, 공백, 탭, 줄 바꿈 또는 마침표 이외의 문자를 발견할 때까지 문자열을 읽습니다. "& O" 및 "& H" 시퀀스는 번호 시스템의 밑수를 변경 하 고 검색을 종료 합니다. 읽기를 중지할 때까지 `Val`는 모든 적절 한 문자를 숫자 값으로 변환 합니다. 예를 들어 다음 문은 `141.825` 값을 반환 합니다.  
+## <a name="conversion-of-strings-to-numbers"></a>Conversion of Strings to Numbers  
+ You can use the `Val` function to explicitly convert the digits in a string to a number. `Val` reads the string until it encounters a character other than a digit, space, tab, line feed, or period. The sequences "&O" and "&H" alter the base of the number system and terminate the scanning. Until it stops reading, `Val` converts all appropriate characters to a numeric value. For example, the following statement returns the value `141.825`.  
   
  `Val("   14   1.825 miles")`  
   
- Visual Basic 문자열을 숫자 값으로 변환 하는 경우 Windows **제어판** 에 지정 된 **국가별 옵션** 설정을 사용 하 여 천 단위 구분 기호, 소수 구분 기호 및 통화 기호를 해석 합니다. 즉, 한 설정에서는 변환이 성공 하지만 다른 설정에는 성공 하지 못할 수 있습니다. 예를 들어 `"$14.20"`은 영어 (미국) 로캘에서는 허용 되지만 프랑스어 로캘에서는 허용 되지 않습니다.  
+ When Visual Basic converts a string to a numeric value, it uses the **Regional Options** settings specified in the Windows **Control Panel** to interpret the thousands separator, decimal separator, and currency symbol. This means that a conversion might succeed under one setting but not another. For example, `"$14.20"` is acceptable in the English (United States) locale but not in any French locale.  
   
 ## <a name="see-also"></a>참조
 
-- [Visual Basic 형식 변환](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Type Conversions in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [확대 변환과 축소 변환](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
 - [암시적 변환과 명시적 변환](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
-- [방법: Visual Basic에서 개체를 다른 형식으로 변환](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)
+- [How to: Convert an Object to Another Type in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)
 - [배열 규칙](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)
 - [데이터 형식](../../../../visual-basic/language-reference/data-types/index.md)
 - [형식 변환 함수](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)

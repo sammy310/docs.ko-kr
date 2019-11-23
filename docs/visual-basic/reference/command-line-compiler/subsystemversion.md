@@ -1,17 +1,17 @@
 ---
-title: -subsystemversion (Visual Basic)
+title: -subsystemversion
 ms.date: 03/13/2018
 helpviewer_keywords:
 - /subsystemversion compiler option [Visual Basic]
 - -subsystemversion compiler option [Visual Basic]
 - subsystemversion compiler option [Visual Basic]
 ms.assetid: 08be22b2-f447-4cd3-8203-120b1b920b54
-ms.openlocfilehash: e42501a002d808f31dc3d599dc030e96c573a22f
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: a977bc4cff822de551bf82d0f31707e9b2b6ea41
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66380315"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348530"
 ---
 # <a name="-subsystemversion-visual-basic"></a>-subsystemversion (Visual Basic)
 
@@ -34,7 +34,7 @@ ms.locfileid: "66380315"
 
 `minor` 버전에서 선행 0은 버전을 변경하지 않지만 후행 0은 버전을 변경합니다. 예를 들어 6.1과 6.01은 동일한 버전을 가리키지만 6.10은 다른 버전을 가리킵니다. 혼동을 피하기 위해 부 버전을 두 자리로 표현하는 것이 좋습니다.
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 다음 표에는 Windows의 일반적인 하위 시스템 버전이 나와 있습니다.
 
@@ -60,15 +60,15 @@ ms.locfileid: "66380315"
 
   - [-platform:arm](../../../visual-basic/reference/command-line-compiler/platform.md)
 
-- MSBuild를 사용 하는.NET Framework 4.5를 대상으로 하는,이 목록의 앞부분에서 지정 된 컴파일러 옵션 중 하나를 설정 하지 않은 경우 기본값은 6.00입니다.
+- MSBuild를 사용하고 .NET Framework 4.5를 대상으로 하며, 이 목록의 앞에서 지정된 컴파일러 옵션 중 하나를 설정하지 않은 경우 기본값은 6.00입니다.
 
 - 앞의 조건이 하나도 true가 아닌 경우 기본값은 4.00입니다.
 
 ## <a name="setting-this-option"></a>이 옵션 설정
 
-설정 하는 **-subsystemversion** 컴파일러 옵션 Visual Studio에서.vbproj 파일을 열 및 값을 지정 해야 합니다는 `SubsystemVersion` MSBuild XML에서 속성입니다. Visual Studio IDE에서는 이 옵션을 설정할 수 없습니다. 자세한 내용은 이 항목의 앞부분에 나오는 "기본값"이나 [일반적인 MSBuild 프로젝트 속성](/visualstudio/msbuild/common-msbuild-project-properties)을 참조하세요.
+To set the **-subsystemversion** compiler option in Visual Studio, you must open the .vbproj file and specify a value for the `SubsystemVersion` property in the MSBuild XML. Visual Studio IDE에서는 이 옵션을 설정할 수 없습니다. 자세한 내용은 이 항목의 앞부분에 나오는 "기본값"이나 [일반적인 MSBuild 프로젝트 속성](/visualstudio/msbuild/common-msbuild-project-properties)을 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [Visual Basic 명령줄 컴파일러](../../../visual-basic/reference/command-line-compiler/index.md)
 

@@ -10,37 +10,36 @@ helpviewer_keywords:
 - threading [Windows Forms], custom controls
 - custom controls [Windows Forms], samples
 ms.assetid: 7fe3956f-5b8f-4f78-8aae-c9eb0b28f13a
-ms.openlocfilehash: 5dcb990266b94916bec715520a61f6a102c1e6ef
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: db9be1f57e15baac4820d33f6f245d69bd1ab430
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015745"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351960"
 ---
 # <a name="how-to-use-a-background-thread-to-search-for-files"></a>방법: 백그라운드 스레드를 사용하여 파일 검색
-구성 <xref:System.ComponentModel.BackgroundWorker> 요소는 기능을 대체 하 고 <xref:System.Threading> 네임 스페이스에 기능을 <xref:System.Threading> 추가 합니다. 그러나 선택 하는 경우 네임 스페이스는 이전 버전과의 호환성 및 향후 사용을 위해 유지 됩니다. 자세한 내용은 [BackgroundWorker 구성 요소 개요](backgroundworker-component-overview.md)를 참조 하세요.
+The <xref:System.ComponentModel.BackgroundWorker> component replaces and adds functionality to the <xref:System.Threading> namespace; however, the <xref:System.Threading> namespace is retained for both backward compatibility and future use, if you choose. For more information, see [BackgroundWorker Component Overview](backgroundworker-component-overview.md).
 
- Windows Forms은 기본적으로 아파트 스레드된 네이티브 Win32 창을 기반으로 하기 때문에 STA (단일 스레드 아파트) 모델을 사용 Windows Forms 합니다. STA 모델은 모든 스레드에서 창을 만들 수 있지만 생성 된 스레드를 전환할 수 없으며, 해당 생성 스레드에서 모든 함수 호출이 발생 해야 함을 의미 합니다. Windows Forms 외부에서 .NET Framework 클래스는 자유 스레딩 모델을 사용 합니다. .NET Framework 스레딩에 대 한 자세한 내용은 [스레딩](../../../standard/threading/index.md)을 참조 하세요.
+ Windows Forms uses the single-threaded apartment (STA) model because Windows Forms is based on native Win32 windows that are inherently apartment-threaded. The STA model implies that a window can be created on any thread, but it cannot switch threads once created, and all function calls to it must occur on its creation thread. Outside Windows Forms, classes in the .NET Framework use the free threading model. For information about threading in the .NET Framework, see [Threading](../../../standard/threading/index.md).
 
- STA 모델을 사용 하려면 컨트롤의 생성 스레드 외부에서 호출 되어야 하는 컨트롤의 모든 메서드를 컨트롤의 생성 스레드 (에서 실행)로 마샬링해야 합니다. 기본 클래스 <xref:System.Windows.Forms.Control> 는이 목적을 위해 여러 <xref:System.Windows.Forms.Control.BeginInvoke%2A>메서드 ( <xref:System.Windows.Forms.Control.EndInvoke%2A><xref:System.Windows.Forms.Control.Invoke%2A>, 및)를 제공 합니다. <xref:System.Windows.Forms.Control.Invoke%2A>동기 메서드 호출을 수행 합니다. <xref:System.Windows.Forms.Control.BeginInvoke%2A> 비동기 메서드 호출을 수행 합니다.
+ The STA model requires that any methods on a control that need to be called from outside the control's creation thread must be marshaled to (executed on) the control's creation thread. The base class <xref:System.Windows.Forms.Control> provides several methods (<xref:System.Windows.Forms.Control.Invoke%2A>, <xref:System.Windows.Forms.Control.BeginInvoke%2A>, and <xref:System.Windows.Forms.Control.EndInvoke%2A>) for this purpose. <xref:System.Windows.Forms.Control.Invoke%2A> makes synchronous method calls; <xref:System.Windows.Forms.Control.BeginInvoke%2A> makes asynchronous method calls.
 
- 리소스를 많이 사용 하는 작업을 위해 컨트롤에서 다중 스레딩을 사용 하는 경우 리소스를 많이 사용 하는 계산이 백그라운드 스레드에서 실행 되는 동안 사용자 인터페이스가 응답성을 유지할 수 있습니다.
+ If you use multithreading in your control for resource-intensive tasks, the user interface can remain responsive while a resource-intensive computation executes on a background thread.
 
- 다음 샘플 (`DirectorySearcher`)에서는 백그라운드 스레드를 사용 하 여 지정 된 검색 문자열과 일치 하는 파일의 디렉터리를 재귀적으로 검색 한 다음 목록 상자를 검색 결과로 채우는 다중 스레드 Windows Forms 컨트롤을 보여 줍니다. 샘플에서 설명 하는 주요 개념은 다음과 같습니다.
+ The following sample (`DirectorySearcher`) shows a multithreaded Windows Forms control that uses a background thread to recursively search a directory for files matching a specified search string and then populates a list box with the search result. The key concepts illustrated by the sample are as follows:
 
-- `DirectorySearcher`검색을 수행 하기 위해 새 스레드를 시작 합니다. 스레드는 메서드를 `ThreadProcedure` 실행 하 여 실제 검색을 수행 `RecurseDirectory` 하 고 목록 상자를 채우기 위해 도우미 메서드를 호출 합니다. 그러나 목록 상자를 채우는 데는 다음 두 가지 글머리 기호 항목에 설명 된 대로 스레드 간 호출이 필요 합니다.
+- `DirectorySearcher` starts a new thread to perform the search. The thread executes the `ThreadProcedure` method that in turn calls the helper `RecurseDirectory` method to do the actual search and to populate the list box. However, populating the list box requires a cross-thread call, as explained in the next two bulleted items.
 
-- `DirectorySearcher``AddFiles` `RecurseDirectory` `AddFiles` 는 목록 상자에 파일을 추가 하는 `DirectorySearcher` 메서드를정의합니다.그러나가만든STA스레드에서만를실행할수있기때문에를직접호출할수없습니다.`AddFiles`
+- `DirectorySearcher` defines the `AddFiles` method to add files to a list box; however, `RecurseDirectory` cannot directly invoke `AddFiles` because `AddFiles` can execute only in the STA thread that created `DirectorySearcher`.
 
-- <xref:System.Windows.Forms.Control.BeginInvoke%2A> <xref:System.Windows.Forms.Control.Invoke%2A> `AddFiles` `AddFiles` 는 스레드 간 호출을 통해 호출할 `DirectorySearcher`수 있습니다. 즉, 또는를 호출 하 여의 생성 스레드로 마샬링하는 것입니다. `RecurseDirectory` `RecurseDirectory`는 <xref:System.Windows.Forms.Control.BeginInvoke%2A> 를 사용 하 여 비동기적으로 호출을 수행할 수 있도록 합니다.
+- The only way `RecurseDirectory` can call `AddFiles` is through a cross-thread call — that is, by calling <xref:System.Windows.Forms.Control.Invoke%2A> or <xref:System.Windows.Forms.Control.BeginInvoke%2A> to marshal `AddFiles` to the creation thread of `DirectorySearcher`. `RecurseDirectory` uses <xref:System.Windows.Forms.Control.BeginInvoke%2A> so that the call can be made asynchronously.
 
-- 메서드를 마샬링하면 함수 포인터나 콜백과 동일 해야 합니다. 이는 .NET Framework의 대리자를 사용 하 여 수행 됩니다. <xref:System.Windows.Forms.Control.BeginInvoke%2A>는 대리자를 인수로 사용 합니다. `DirectorySearcher`따라서`FileListDelegate`는 대리자 ()를 정의 하 고, 해당 생성자에서의 `FileListDelegate` 인스턴스에 바인딩하고 `AddFiles` ,이 대리자 인스턴스를에 <xref:System.Windows.Forms.Control.BeginInvoke%2A>전달 합니다. `DirectorySearcher`또한 검색을 완료할 때 마샬링되는 이벤트 대리자를 정의 합니다.
+- Marshaling a method requires the equivalent of a function pointer or callback. This is accomplished using delegates in the .NET Framework. <xref:System.Windows.Forms.Control.BeginInvoke%2A> takes a delegate as an argument. `DirectorySearcher` therefore defines a delegate (`FileListDelegate`), binds `AddFiles` to an instance of `FileListDelegate` in its constructor, and passes this delegate instance to <xref:System.Windows.Forms.Control.BeginInvoke%2A>. `DirectorySearcher` also defines an event delegate that is marshaled when the search is completed.
 
 ```vb
 Option Strict
 Option Explicit
 
-Imports System
 Imports System.IO
 Imports System.Threading
 Imports System.Windows.Forms
@@ -569,20 +568,19 @@ namespace Microsoft.Samples.DirectorySearcher
 }
 ```
 
-## <a name="using-the-multithreaded-control-on-a-form"></a>폼에서 다중 스레드 컨트롤 사용
- 다음 예제에서는 폼에서 다중 스레드 `DirectorySearcher` 컨트롤을 사용할 수 있는 방법을 보여 줍니다.
+## <a name="using-the-multithreaded-control-on-a-form"></a>Using the Multithreaded Control on a Form
+ The following example shows how the multithreaded `DirectorySearcher` control can be used on a form.
 
 ```vb
 Option Explicit
 Option Strict
 
-Imports Microsoft.Samples.DirectorySearcher
-Imports System
-Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel
-Imports System.Windows.Forms
 Imports System.Data
+Imports System.Drawing
+Imports System.Windows.Forms
+Imports Microsoft.Samples.DirectorySearcher
 
 Namespace SampleUsage
 
@@ -664,14 +662,14 @@ End Namespace
 ```csharp
 namespace SampleUsage
 {
-   using Microsoft.Samples.DirectorySearcher;
    using System;
-   using System.Drawing;
    using System.Collections;
    using System.ComponentModel;
-   using System.Windows.Forms;
    using System.Data;
-
+   using System.Drawing;
+   using System.Windows.Forms;
+   using Microsoft.Samples.DirectorySearcher;
+   
    /// <summary>
    ///      Summary description for Form1.
    /// </summary>
@@ -762,7 +760,7 @@ namespace SampleUsage
 }
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.ComponentModel.BackgroundWorker>
 - [.NET Framework에서 사용자 지정 Windows Forms 컨트롤 개발](developing-custom-windows-forms-controls.md)

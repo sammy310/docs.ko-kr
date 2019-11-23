@@ -1,5 +1,5 @@
 ---
-title: Overridable(Visual Basic)
+title: Overrides
 ms.date: 07/20/2015
 f1_keywords:
 - Overridable
@@ -16,35 +16,35 @@ helpviewer_keywords:
 - Overridable keyword [Visual Basic]
 - properties [Visual Basic], overriding
 ms.assetid: 612581e7-8a4c-4a5d-beff-3402fffa6f35
-ms.openlocfilehash: 91a1cedc66fd66e336b6e7976ad87ad638cb43c3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9c639665fd92a56de6fb6e5147cda873ef457b45
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053901"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351395"
 ---
 # <a name="overridable-visual-basic"></a>Overridable(Visual Basic)
-속성 또는 프로시저를 동일 하 게 명명 된 속성 또는 프로시저가 파생된 클래스에서 재정의할 수 있음을 지정 합니다.  
+Specifies that a property or procedure can be overridden by an identically named property or procedure in a derived class.  
   
-## <a name="remarks"></a>설명  
- `Overridable` 한정자 파생된 클래스에서 재정의 될 수 클래스에서 속성 또는 메서드를 허용 합니다. 합니다 [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md) 파생된 클래스에서 재정의 되는 속성 또는 메서드를 방지 하는 한정자입니다.  자세한 내용은 [상속 기본 사항](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)을 참조하세요.  
+## <a name="remarks"></a>주의  
+ The `Overridable` modifier allows a property or method in a class to be overridden in a derived class. The [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md) modifier prevents a property or method from being overridden in a derived class.  자세한 내용은 [상속 기본 사항](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)을 참조하세요.  
   
- 경우는 `Overridable` 또는 `NotOverridable` 한정자를 지정 하지 않으면 기본 설정 속성 또는 메서드의 기본 클래스 속성 또는 메서드를 재정의 하는 여부에 따라 달라 집니다. 속성 또는 메서드의 기본 클래스 속성 또는 메서드를 재정의 하는 경우 기본 설정은입니다 `Overridable`이 고, 그렇지 않으면 것 `NotOverridable`입니다.  
+ If the `Overridable` or `NotOverridable` modifier is not specified, the default setting depends on whether the property or method overrides a base class property or method. If the property or method overrides a base class property or method, the default setting is `Overridable`; otherwise, it is `NotOverridable`.  
   
- 섀도 하거나 상속된 된 요소를 다시 정의 하기 위해 재정의할 수 있지만 두 가지 방법 간에 중요 한 차이가 있습니다. 자세한 내용은 [Visual Basic의 숨김 기능](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)합니다.  
+ You can shadow or override to redefine an inherited element, but there are significant differences between the two approaches. For more information, see [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
   
- 재정의할 수 있는 요소는 때때로 이라고 하는 *가상* 요소입니다. 수도 라고를 재정의할 수 있습니다 수 없는 경우에 *구체적인* 요소입니다.  
+ An element that can be overridden is sometimes referred to as a *virtual* element. If it can be overridden, but does not have to be, it is sometimes also called a *concrete* element.  
   
- 속성 또는 프로시저 선언문에서만 `Overridable`를 사용할 수 있습니다.  
+ You can use `Overridable` only in a property or procedure declaration statement.  
   
-## <a name="combined-modifiers"></a>결합 된 한정자  
- 지정할 수 없습니다 `Overridable` 나 `NotOverridable` 에 대 한는 `Private` 메서드.  
+## <a name="combined-modifiers"></a>Combined Modifiers  
+ You cannot specify `Overridable` or `NotOverridable` for a `Private` method.  
   
- 지정할 수 없습니다 `Overridable` 와 함께 `MustOverride`를 `NotOverridable`, 또는 `Shared` 같은 선언에 있습니다.  
+ You cannot specify `Overridable` together with `MustOverride`, `NotOverridable`, or `Shared` in the same declaration.  
   
  재정의 요소는 암시적으로 재정의할 수 있으므로 `Overridable`과 `Overrides`를 결합할 수 없습니다.  
   
-## <a name="usage"></a>사용  
+## <a name="usage"></a>사용 현황  
  `Overridable` 한정자는 다음 컨텍스트에서 사용할 수 있습니다.  
   
  [Function 문](../../../visual-basic/language-reference/statements/function-statement.md)  
@@ -53,12 +53,12 @@ ms.locfileid: "62053901"
   
  [Sub 문](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [한정자](../../../visual-basic/language-reference/modifiers/index.md)
 - [상속 기본 사항](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
-- [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)
+- [New](../../../visual-basic/language-reference/modifiers/mustoverride.md)
 - [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)
 - [재정의](../../../visual-basic/language-reference/modifiers/overrides.md)
 - [C++ 키워드](../../../visual-basic/language-reference/keywords/index.md)
-- [Visual Basic의 숨김 기능](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
