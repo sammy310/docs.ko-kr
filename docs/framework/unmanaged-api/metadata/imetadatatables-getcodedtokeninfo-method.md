@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 31214d3a-715e-49af-92b3-0fd11e4f218a
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b89409a08ed2dff0111b3b6e552960ac78a5882e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 577a4f6bb8315cfb1cb462703dd0cb9b23b60704
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781526"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74434060"
 ---
-# <a name="imetadatatablesgetcodedtokeninfo-method"></a><span data-ttu-id="54a6f-102">IMetaDataTables::GetCodedTokenInfo 메서드</span><span class="sxs-lookup"><span data-stu-id="54a6f-102">IMetaDataTables::GetCodedTokenInfo Method</span></span>
-<span data-ttu-id="54a6f-103">지정된 된 행 인덱스와 연결 된 토큰의 배열에 대 한 포인터를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="54a6f-103">Gets a pointer to an array of tokens associated with the specified row index.</span></span>  
+# <a name="imetadatatablesgetcodedtokeninfo-method"></a><span data-ttu-id="b37ca-102">IMetaDataTables::GetCodedTokenInfo 메서드</span><span class="sxs-lookup"><span data-stu-id="b37ca-102">IMetaDataTables::GetCodedTokenInfo Method</span></span>
+<span data-ttu-id="b37ca-103">Gets a pointer to an array of tokens associated with the specified row index.</span><span class="sxs-lookup"><span data-stu-id="b37ca-103">Gets a pointer to an array of tokens associated with the specified row index.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="54a6f-104">구문</span><span class="sxs-lookup"><span data-stu-id="54a6f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b37ca-104">구문</span><span class="sxs-lookup"><span data-stu-id="b37ca-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetCodedTokenInfo (   
@@ -38,29 +36,29 @@ HRESULT GetCodedTokenInfo (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="54a6f-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="54a6f-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b37ca-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="b37ca-105">Parameters</span></span>  
  `ixCdTkn`  
- <span data-ttu-id="54a6f-106">[in] 반환할 코딩 된 토큰의 종류입니다.</span><span class="sxs-lookup"><span data-stu-id="54a6f-106">[in] The kind of coded token to return.</span></span>  
+ <span data-ttu-id="b37ca-106">[in] The kind of coded token to return.</span><span class="sxs-lookup"><span data-stu-id="b37ca-106">[in] The kind of coded token to return.</span></span>  
   
  `pcTokens`  
- <span data-ttu-id="54a6f-107">[out] 길이에 대 한 포인터 `ppTokens`합니다.</span><span class="sxs-lookup"><span data-stu-id="54a6f-107">[out] A pointer to the length of `ppTokens`.</span></span>  
+ <span data-ttu-id="b37ca-107">[out] A pointer to the length of `ppTokens`.</span><span class="sxs-lookup"><span data-stu-id="b37ca-107">[out] A pointer to the length of `ppTokens`.</span></span>  
   
  `ppTokens`  
- <span data-ttu-id="54a6f-108">[out] 반환 된 토큰의 목록을 포함 하는 배열에 대 한 포인터에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="54a6f-108">[out] A pointer to a pointer to an array that contains the list of returned tokens.</span></span>  
+ <span data-ttu-id="b37ca-108">[out] A pointer to a pointer to an array that contains the list of returned tokens.</span><span class="sxs-lookup"><span data-stu-id="b37ca-108">[out] A pointer to a pointer to an array that contains the list of returned tokens.</span></span>  
   
  `ppName`  
- <span data-ttu-id="54a6f-109">[out] 토큰의 이름에 대 한 포인터에 대 한 포인터 `ixCdTkn`합니다.</span><span class="sxs-lookup"><span data-stu-id="54a6f-109">[out] A pointer to a pointer to the name of the token at `ixCdTkn`.</span></span>  
+ <span data-ttu-id="b37ca-109">[out] A pointer to a pointer to the name of the token at `ixCdTkn`.</span><span class="sxs-lookup"><span data-stu-id="b37ca-109">[out] A pointer to a pointer to the name of the token at `ixCdTkn`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="54a6f-110">요구 사항</span><span class="sxs-lookup"><span data-stu-id="54a6f-110">Requirements</span></span>  
- <span data-ttu-id="54a6f-111">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="54a6f-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b37ca-110">요구 사항</span><span class="sxs-lookup"><span data-stu-id="b37ca-110">Requirements</span></span>  
+ <span data-ttu-id="b37ca-111">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="b37ca-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="54a6f-112">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="54a6f-112">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="b37ca-112">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="b37ca-112">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="54a6f-113">**라이브러리:** MsCorEE.dll에서 리소스로 사용</span><span class="sxs-lookup"><span data-stu-id="54a6f-113">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="b37ca-113">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="b37ca-113">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="54a6f-114">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="54a6f-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="b37ca-114">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b37ca-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="54a6f-115">참고자료</span><span class="sxs-lookup"><span data-stu-id="54a6f-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b37ca-115">참조</span><span class="sxs-lookup"><span data-stu-id="b37ca-115">See also</span></span>
 
-- [<span data-ttu-id="54a6f-116">IMetaDataTables 인터페이스</span><span class="sxs-lookup"><span data-stu-id="54a6f-116">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
-- [<span data-ttu-id="54a6f-117">IMetaDataTables2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="54a6f-117">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+- [<span data-ttu-id="b37ca-116">IMetaDataTables 인터페이스</span><span class="sxs-lookup"><span data-stu-id="b37ca-116">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [<span data-ttu-id="b37ca-117">IMetaDataTables2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="b37ca-117">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

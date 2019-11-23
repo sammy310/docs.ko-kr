@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 91b633d7-9e75-43c3-a8d2-2144984e5f9e
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 34335321207e98a518ff3e0fdb5ea1dc3ac68b75
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f79320d5b7d2ad4ad44a79fae063ce6718490a70
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776256"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431955"
 ---
-# <a name="imetadataassemblyemitsetassemblyprops-method"></a><span data-ttu-id="25208-102">IMetaDataAssemblyEmit::SetAssemblyProps 메서드</span><span class="sxs-lookup"><span data-stu-id="25208-102">IMetaDataAssemblyEmit::SetAssemblyProps Method</span></span>
-<span data-ttu-id="25208-103">지정된 `Assembly` 메타데이터 구조를 수정합니다.</span><span class="sxs-lookup"><span data-stu-id="25208-103">Modifies the specified `Assembly` metadata structure.</span></span>  
+# <a name="imetadataassemblyemitsetassemblyprops-method"></a><span data-ttu-id="5d583-102">IMetaDataAssemblyEmit::SetAssemblyProps 메서드</span><span class="sxs-lookup"><span data-stu-id="5d583-102">IMetaDataAssemblyEmit::SetAssemblyProps Method</span></span>
+<span data-ttu-id="5d583-103">지정된 `Assembly` 메타데이터 구조를 수정합니다.</span><span class="sxs-lookup"><span data-stu-id="5d583-103">Modifies the specified `Assembly` metadata structure.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="25208-104">구문</span><span class="sxs-lookup"><span data-stu-id="25208-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5d583-104">구문</span><span class="sxs-lookup"><span data-stu-id="5d583-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetAssemblyProps (  
@@ -41,40 +39,40 @@ HRESULT SetAssemblyProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="25208-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="25208-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="5d583-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="5d583-105">Parameters</span></span>  
  `pma`  
- <span data-ttu-id="25208-106">[in] 지정 된 메타 데이터 토큰을 `Assembly` 수정할 메타 데이터 구조입니다.</span><span class="sxs-lookup"><span data-stu-id="25208-106">[in] The metadata token that specifies the `Assembly` metadata structure to be modified.</span></span>  
+ <span data-ttu-id="5d583-106">[in] The metadata token that specifies the `Assembly` metadata structure to be modified.</span><span class="sxs-lookup"><span data-stu-id="5d583-106">[in] The metadata token that specifies the `Assembly` metadata structure to be modified.</span></span>  
   
  `pbPublicKey`  
- <span data-ttu-id="25208-107">[in] 어셈블리의 게시자의 공개 키에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="25208-107">[in] A pointer to the public key of the publisher of the assembly.</span></span>  
+ <span data-ttu-id="5d583-107">[in] A pointer to the public key of the publisher of the assembly.</span><span class="sxs-lookup"><span data-stu-id="5d583-107">[in] A pointer to the public key of the publisher of the assembly.</span></span>  
   
  `cbPublicKey`  
- <span data-ttu-id="25208-108">[in] 크기 (바이트) `pbPublicKey`합니다.</span><span class="sxs-lookup"><span data-stu-id="25208-108">[in] The size in bytes of `pbPublicKey`.</span></span>  
+ <span data-ttu-id="5d583-108">[in] The size in bytes of `pbPublicKey`.</span><span class="sxs-lookup"><span data-stu-id="5d583-108">[in] The size in bytes of `pbPublicKey`.</span></span>  
   
  `ulHashAlgId`  
- <span data-ttu-id="25208-109">[in] 어셈블리 파일을 해시 하는 데 사용 하는 해시 알고리즘의 식별자입니다.</span><span class="sxs-lookup"><span data-stu-id="25208-109">[in] The identifier for the hash algorithm used to hash the assembly files.</span></span>  
+ <span data-ttu-id="5d583-109">[in] The identifier for the hash algorithm used to hash the assembly files.</span><span class="sxs-lookup"><span data-stu-id="5d583-109">[in] The identifier for the hash algorithm used to hash the assembly files.</span></span>  
   
  `szName`  
- <span data-ttu-id="25208-110">[in] 어셈블리의 사람이 읽을 수 있는 텍스트 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="25208-110">[in] The human-readable text name of the assembly.</span></span>  
+ <span data-ttu-id="5d583-110">[in] The human-readable text name of the assembly.</span><span class="sxs-lookup"><span data-stu-id="5d583-110">[in] The human-readable text name of the assembly.</span></span>  
   
  `pMetaData`  
- <span data-ttu-id="25208-111">[in] ASSEMBLYMETADATA 어셈블리의 버전, 플랫폼 및 로캘 정보를 포함 하는 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="25208-111">[in] A pointer to the ASSEMBLYMETADATA that contains version, platform, and locale information for the assembly.</span></span>  
+ <span data-ttu-id="5d583-111">[in] A pointer to the ASSEMBLYMETADATA that contains version, platform, and locale information for the assembly.</span><span class="sxs-lookup"><span data-stu-id="5d583-111">[in] A pointer to the ASSEMBLYMETADATA that contains version, platform, and locale information for the assembly.</span></span>  
   
  `dwAssemblyFlags`  
- <span data-ttu-id="25208-112">[in] 비트 조합 [AssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyflags-enumeration.md) 어셈블리의 다양 한 특성을 지정 하는 값입니다.</span><span class="sxs-lookup"><span data-stu-id="25208-112">[in] A bitwise combination of [AssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyflags-enumeration.md) values that specify various attributes of the assembly.</span></span>  
+ <span data-ttu-id="5d583-112">[in] A bitwise combination of [AssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyflags-enumeration.md) values that specify various attributes of the assembly.</span><span class="sxs-lookup"><span data-stu-id="5d583-112">[in] A bitwise combination of [AssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyflags-enumeration.md) values that specify various attributes of the assembly.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="25208-113">설명</span><span class="sxs-lookup"><span data-stu-id="25208-113">Remarks</span></span>  
- <span data-ttu-id="25208-114">만들려는 `Assembly` 메타 데이터 구조를 사용 합니다 [imetadataassemblyemit:: Defineassembly](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassembly-method.md) 메서드.</span><span class="sxs-lookup"><span data-stu-id="25208-114">To create an `Assembly` metadata structure, use the [IMetaDataAssemblyEmit::DefineAssembly](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassembly-method.md) method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="5d583-113">주의</span><span class="sxs-lookup"><span data-stu-id="5d583-113">Remarks</span></span>  
+ <span data-ttu-id="5d583-114">To create an `Assembly` metadata structure, use the [IMetaDataAssemblyEmit::DefineAssembly](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassembly-method.md) method.</span><span class="sxs-lookup"><span data-stu-id="5d583-114">To create an `Assembly` metadata structure, use the [IMetaDataAssemblyEmit::DefineAssembly](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassembly-method.md) method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="25208-115">요구 사항</span><span class="sxs-lookup"><span data-stu-id="25208-115">Requirements</span></span>  
- <span data-ttu-id="25208-116">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="25208-116">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5d583-115">요구 사항</span><span class="sxs-lookup"><span data-stu-id="5d583-115">Requirements</span></span>  
+ <span data-ttu-id="5d583-116">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5d583-116">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="25208-117">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="25208-117">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="5d583-117">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="5d583-117">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="25208-118">**라이브러리:** MsCorEE.dll에서 리소스로 사용</span><span class="sxs-lookup"><span data-stu-id="25208-118">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="5d583-118">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="5d583-118">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="25208-119">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="25208-119">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="5d583-119">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5d583-119">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="25208-120">참고자료</span><span class="sxs-lookup"><span data-stu-id="25208-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5d583-120">참조</span><span class="sxs-lookup"><span data-stu-id="5d583-120">See also</span></span>
 
-- [<span data-ttu-id="25208-121">IMetaDataAssemblyEmit 인터페이스</span><span class="sxs-lookup"><span data-stu-id="25208-121">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [<span data-ttu-id="5d583-121">IMetaDataAssemblyEmit 인터페이스</span><span class="sxs-lookup"><span data-stu-id="5d583-121">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 50e04026-4d4a-47d9-96c1-f4677d6d938b
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 44b5dfb31cfe0364a745b729018be536f6be9aac
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 06ff6a1885a5e9bb819c2897aaf85e5c2b9b1147
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778960"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437244"
 ---
-# <a name="imetadataimportgetnativecallconvfromsig-method"></a><span data-ttu-id="6f366-102">IMetaDataImport::GetNativeCallConvFromSig 메서드</span><span class="sxs-lookup"><span data-stu-id="6f366-102">IMetaDataImport::GetNativeCallConvFromSig Method</span></span>
-<span data-ttu-id="6f366-103">지정한 서명 포인터가 나타내는 메서드에 대한 기본 호출 규칙을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="6f366-103">Gets the native calling convention for the method that is represented by the specified signature pointer.</span></span>  
+# <a name="imetadataimportgetnativecallconvfromsig-method"></a><span data-ttu-id="86193-102">IMetaDataImport::GetNativeCallConvFromSig 메서드</span><span class="sxs-lookup"><span data-stu-id="86193-102">IMetaDataImport::GetNativeCallConvFromSig Method</span></span>
+<span data-ttu-id="86193-103">지정한 서명 포인터가 나타내는 메서드에 대한 기본 호출 규칙을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="86193-103">Gets the native calling convention for the method that is represented by the specified signature pointer.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6f366-104">구문</span><span class="sxs-lookup"><span data-stu-id="6f366-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="86193-104">구문</span><span class="sxs-lookup"><span data-stu-id="86193-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetNativeCallConvFromSig (  
@@ -37,27 +35,27 @@ HRESULT GetNativeCallConvFromSig (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="6f366-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="6f366-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="86193-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="86193-105">Parameters</span></span>  
  `pvSig`  
- <span data-ttu-id="6f366-106">[in] 에 대 한 호출 규칙을 반환 하는 메서드의 메타 데이터 서명에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="6f366-106">[in] A pointer to the metadata signature of the method to return the calling convention for.</span></span>  
+ <span data-ttu-id="86193-106">[in] A pointer to the metadata signature of the method to return the calling convention for.</span><span class="sxs-lookup"><span data-stu-id="86193-106">[in] A pointer to the metadata signature of the method to return the calling convention for.</span></span>  
   
  `cbSig`  
- <span data-ttu-id="6f366-107">[in] 크기 (바이트) `pvSig`합니다.</span><span class="sxs-lookup"><span data-stu-id="6f366-107">[in] The size in bytes of `pvSig`.</span></span>  
+ <span data-ttu-id="86193-107">[in] The size in bytes of `pvSig`.</span><span class="sxs-lookup"><span data-stu-id="86193-107">[in] The size in bytes of `pvSig`.</span></span>  
   
  `pCallConv`  
- <span data-ttu-id="6f366-108">[out] 네이티브 호출 규칙에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="6f366-108">[out] A pointer to the native calling convention.</span></span>  
+ <span data-ttu-id="86193-108">[out] A pointer to the native calling convention.</span><span class="sxs-lookup"><span data-stu-id="86193-108">[out] A pointer to the native calling convention.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6f366-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="6f366-109">Requirements</span></span>  
- <span data-ttu-id="6f366-110">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="6f366-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="86193-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="86193-109">Requirements</span></span>  
+ <span data-ttu-id="86193-110">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="86193-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6f366-111">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="6f366-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="86193-111">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="86193-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="6f366-112">**라이브러리:** MsCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="6f366-112">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="86193-112">**Library:** Included as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="86193-112">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="6f366-113">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6f366-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="86193-113">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="86193-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6f366-114">참고자료</span><span class="sxs-lookup"><span data-stu-id="6f366-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="86193-114">참조</span><span class="sxs-lookup"><span data-stu-id="86193-114">See also</span></span>
 
 - <xref:System.Runtime.InteropServices.CallingConvention>
-- [<span data-ttu-id="6f366-115">IMetaDataImport 인터페이스</span><span class="sxs-lookup"><span data-stu-id="6f366-115">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="6f366-116">IMetaDataImport2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="6f366-116">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="86193-115">IMetaDataImport 인터페이스</span><span class="sxs-lookup"><span data-stu-id="86193-115">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="86193-116">IMetaDataImport2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="86193-116">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

@@ -15,42 +15,40 @@ helpviewer_keywords:
 ms.assetid: 6e47b7e5-0335-4dd3-8c42-d3c07d62b102
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: cfcf2c74a2a44bd0539bf78e237e42553696b16c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3abf944df3619256791882bf61dfc4072b642c54
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67762983"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445135"
 ---
-# <a name="icorprofilercallbackassemblyunloadstarted-method"></a><span data-ttu-id="46b56-102">ICorProfilerCallback::AssemblyUnloadStarted 메서드</span><span class="sxs-lookup"><span data-stu-id="46b56-102">ICorProfilerCallback::AssemblyUnloadStarted Method</span></span>
-<span data-ttu-id="46b56-103">어셈블리를 언로드되고 있음을 프로파일러에 알립니다.</span><span class="sxs-lookup"><span data-stu-id="46b56-103">Notifies the profiler that an assembly is being unloaded.</span></span>  
+# <a name="icorprofilercallbackassemblyunloadstarted-method"></a><span data-ttu-id="5980e-102">ICorProfilerCallback::AssemblyUnloadStarted 메서드</span><span class="sxs-lookup"><span data-stu-id="5980e-102">ICorProfilerCallback::AssemblyUnloadStarted Method</span></span>
+<span data-ttu-id="5980e-103">Notifies the profiler that an assembly is being unloaded.</span><span class="sxs-lookup"><span data-stu-id="5980e-103">Notifies the profiler that an assembly is being unloaded.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="46b56-104">구문</span><span class="sxs-lookup"><span data-stu-id="46b56-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5980e-104">구문</span><span class="sxs-lookup"><span data-stu-id="5980e-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT AssemblyUnloadStarted(  
     [in] AssemblyID assemblyId);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="46b56-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="46b56-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="5980e-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="5980e-105">Parameters</span></span>  
  `assemblyId`  
- <span data-ttu-id="46b56-106">[in] 언로드되고 하는 어셈블리를 식별 합니다.</span><span class="sxs-lookup"><span data-stu-id="46b56-106">[in] Identifies the assembly that is being unloaded.</span></span>  
+ <span data-ttu-id="5980e-106">[in] Identifies the assembly that is being unloaded.</span><span class="sxs-lookup"><span data-stu-id="5980e-106">[in] Identifies the assembly that is being unloaded.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="46b56-107">설명</span><span class="sxs-lookup"><span data-stu-id="46b56-107">Remarks</span></span>  
- <span data-ttu-id="46b56-108">변수의 `assemblyId` 후 정보 요청에 적합 하지 않습니다는 `AssemblyUnloadStarted` 메서드가 반환 되는-프로파일러의이 어셈블리에 대 한 정보를 얻을 수 있는 마지막 기회입니다.</span><span class="sxs-lookup"><span data-stu-id="46b56-108">The value of `assemblyId` is not valid for an information request after the `AssemblyUnloadStarted` method returns — this is the profiler's last chance to get information about this assembly.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="5980e-107">주의</span><span class="sxs-lookup"><span data-stu-id="5980e-107">Remarks</span></span>  
+ <span data-ttu-id="5980e-108">The value of `assemblyId` is not valid for an information request after the `AssemblyUnloadStarted` method returns — this is the profiler's last chance to get information about this assembly.</span><span class="sxs-lookup"><span data-stu-id="5980e-108">The value of `assemblyId` is not valid for an information request after the `AssemblyUnloadStarted` method returns — this is the profiler's last chance to get information about this assembly.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="46b56-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="46b56-109">Requirements</span></span>  
- <span data-ttu-id="46b56-110">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="46b56-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5980e-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="5980e-109">Requirements</span></span>  
+ <span data-ttu-id="5980e-110">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="5980e-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="46b56-111">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="46b56-111">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="5980e-111">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="5980e-111">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="46b56-112">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="46b56-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="5980e-112">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5980e-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="46b56-113">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="46b56-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="5980e-113">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5980e-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="46b56-114">참고자료</span><span class="sxs-lookup"><span data-stu-id="46b56-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5980e-114">참조</span><span class="sxs-lookup"><span data-stu-id="5980e-114">See also</span></span>
 
-- [<span data-ttu-id="46b56-115">ICorProfilerCallback 인터페이스</span><span class="sxs-lookup"><span data-stu-id="46b56-115">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [<span data-ttu-id="46b56-116">AssemblyUnloadFinished 메서드</span><span class="sxs-lookup"><span data-stu-id="46b56-116">AssemblyUnloadFinished Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-assemblyunloadfinished-method.md)
+- [<span data-ttu-id="5980e-115">ICorProfilerCallback 인터페이스</span><span class="sxs-lookup"><span data-stu-id="5980e-115">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="5980e-116">AssemblyUnloadFinished 메서드</span><span class="sxs-lookup"><span data-stu-id="5980e-116">AssemblyUnloadFinished Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-assemblyunloadfinished-method.md)

@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: f2833594-d90b-4a71-9a53-34b12470c64a
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 19f1839aa2c4ca810e76c1745103a00c6f5ea5a3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c736eccfd5d05ec9b65e6ed26187e7c7b4387c5d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777569"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431734"
 ---
-# <a name="imetadataemitdefinemoduleref-method"></a><span data-ttu-id="68306-102">IMetaDataEmit::DefineModuleRef 메서드</span><span class="sxs-lookup"><span data-stu-id="68306-102">IMetaDataEmit::DefineModuleRef Method</span></span>
-<span data-ttu-id="68306-103">지정 된 이름의 모듈에 대 한 메타 데이터 서명을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="68306-103">Creates the metadata signature for a module with the specified name.</span></span>  
+# <a name="imetadataemitdefinemoduleref-method"></a><span data-ttu-id="4ae77-102">IMetaDataEmit::DefineModuleRef 메서드</span><span class="sxs-lookup"><span data-stu-id="4ae77-102">IMetaDataEmit::DefineModuleRef Method</span></span>
+<span data-ttu-id="4ae77-103">Creates the metadata signature for a module with the specified name.</span><span class="sxs-lookup"><span data-stu-id="4ae77-103">Creates the metadata signature for a module with the specified name.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="68306-104">구문</span><span class="sxs-lookup"><span data-stu-id="68306-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4ae77-104">구문</span><span class="sxs-lookup"><span data-stu-id="4ae77-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT DefineModuleRef (     
@@ -36,23 +34,23 @@ HRESULT DefineModuleRef (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="68306-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="68306-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="4ae77-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="4ae77-105">Parameters</span></span>  
  `szName`  
- <span data-ttu-id="68306-106">[in] 다른 메타 데이터 파일을 일반적으로 DLL의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="68306-106">[in] The name of the other metadata file, typically a DLL.</span></span> <span data-ttu-id="68306-107">이것이 파일 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="68306-107">This is the file name only.</span></span> <span data-ttu-id="68306-108">전체 경로 이름을 사용 하지 마십시오.</span><span class="sxs-lookup"><span data-stu-id="68306-108">Do not use a full path name.</span></span>  
+ <span data-ttu-id="4ae77-106">[in] The name of the other metadata file, typically a DLL.</span><span class="sxs-lookup"><span data-stu-id="4ae77-106">[in] The name of the other metadata file, typically a DLL.</span></span> <span data-ttu-id="4ae77-107">This is the file name only.</span><span class="sxs-lookup"><span data-stu-id="4ae77-107">This is the file name only.</span></span> <span data-ttu-id="4ae77-108">Do not use a full path name.</span><span class="sxs-lookup"><span data-stu-id="4ae77-108">Do not use a full path name.</span></span>  
   
  `pmur`  
- <span data-ttu-id="68306-109">[out] 할당 된 `mdModuleRef` 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="68306-109">[out] The assigned `mdModuleRef` token.</span></span>  
+ <span data-ttu-id="4ae77-109">[out] The assigned `mdModuleRef` token.</span><span class="sxs-lookup"><span data-stu-id="4ae77-109">[out] The assigned `mdModuleRef` token.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="68306-110">요구 사항</span><span class="sxs-lookup"><span data-stu-id="68306-110">Requirements</span></span>  
- <span data-ttu-id="68306-111">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="68306-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4ae77-110">요구 사항</span><span class="sxs-lookup"><span data-stu-id="4ae77-110">Requirements</span></span>  
+ <span data-ttu-id="4ae77-111">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="4ae77-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="68306-112">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="68306-112">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="4ae77-112">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="4ae77-112">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="68306-113">**라이브러리:** MSCorEE.dll에서 리소스로 사용</span><span class="sxs-lookup"><span data-stu-id="68306-113">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="4ae77-113">**Library:** Used as a resource in MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="4ae77-113">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="68306-114">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="68306-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="4ae77-114">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4ae77-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="68306-115">참고자료</span><span class="sxs-lookup"><span data-stu-id="68306-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4ae77-115">참조</span><span class="sxs-lookup"><span data-stu-id="4ae77-115">See also</span></span>
 
-- [<span data-ttu-id="68306-116">IMetaDataEmit 인터페이스</span><span class="sxs-lookup"><span data-stu-id="68306-116">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="68306-117">IMetaDataEmit2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="68306-117">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="4ae77-116">IMetaDataEmit 인터페이스</span><span class="sxs-lookup"><span data-stu-id="4ae77-116">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="4ae77-117">IMetaDataEmit2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="4ae77-117">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

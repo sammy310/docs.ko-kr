@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 93c9a369-225f-4eff-9b78-3fbee4902cf1
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b4f34340c18fddc46695fe64946c3afd90ed7454
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 74807a678b5c0c2738f33fe552f6462af93ca1f9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772299"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436459"
 ---
-# <a name="cortokentype-enumeration"></a><span data-ttu-id="b3ebe-102">CorTokenType 열거형</span><span class="sxs-lookup"><span data-stu-id="b3ebe-102">CorTokenType Enumeration</span></span>
-<span data-ttu-id="b3ebe-103">메타 데이터 토큰의 유형을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="b3ebe-103">Indicates the type of a metadata token.</span></span>  
+# <a name="cortokentype-enumeration"></a><span data-ttu-id="e8871-102">CorTokenType 열거형</span><span class="sxs-lookup"><span data-stu-id="e8871-102">CorTokenType Enumeration</span></span>
+<span data-ttu-id="e8871-103">Indicates the type of a metadata token.</span><span class="sxs-lookup"><span data-stu-id="e8871-103">Indicates the type of a metadata token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b3ebe-104">구문</span><span class="sxs-lookup"><span data-stu-id="b3ebe-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e8871-104">구문</span><span class="sxs-lookup"><span data-stu-id="e8871-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum CorTokenType {  
@@ -61,47 +59,47 @@ typedef enum CorTokenType {
 } CorTokenType;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="b3ebe-105">멤버</span><span class="sxs-lookup"><span data-stu-id="b3ebe-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="e8871-105">멤버</span><span class="sxs-lookup"><span data-stu-id="e8871-105">Members</span></span>  
   
-|<span data-ttu-id="b3ebe-106">멤버</span><span class="sxs-lookup"><span data-stu-id="b3ebe-106">Member</span></span>|<span data-ttu-id="b3ebe-107">Description</span><span class="sxs-lookup"><span data-stu-id="b3ebe-107">Description</span></span>|  
+|<span data-ttu-id="e8871-106">멤버</span><span class="sxs-lookup"><span data-stu-id="e8871-106">Member</span></span>|<span data-ttu-id="e8871-107">설명</span><span class="sxs-lookup"><span data-stu-id="e8871-107">Description</span></span>|  
 |------------|-----------------|  
-|`mdtModule`|<span data-ttu-id="b3ebe-108">`mdModule` 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="b3ebe-108">An `mdModule` token.</span></span>|  
-|`mdtTypeRef`|<span data-ttu-id="b3ebe-109">`mdTypeRef` 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="b3ebe-109">An `mdTypeRef` token.</span></span>|  
-|`mdtTypeDef`|<span data-ttu-id="b3ebe-110">`mdTypeDef` 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="b3ebe-110">An `mdTypeDef` token.</span></span>|  
-|`mdtFieldDef`|<span data-ttu-id="b3ebe-111">`mdFieldDef` 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="b3ebe-111">An `mdFieldDef` token.</span></span>|  
-|`mdtMethodDef`|<span data-ttu-id="b3ebe-112">`mdMethodDef` 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="b3ebe-112">An `mdMethodDef` token.</span></span>|  
-|`mdtParamDef`|<span data-ttu-id="b3ebe-113">`mdParamDef` 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="b3ebe-113">An `mdParamDef` token.</span></span>|  
-|`mdtInterfaceImpl`|<span data-ttu-id="b3ebe-114">`mdInterfaceImpl` 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="b3ebe-114">An `mdInterfaceImpl` token.</span></span>|  
-|`mdtMemberRef`|<span data-ttu-id="b3ebe-115">`mdMemberRef` 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="b3ebe-115">An `mdMemberRef` token.</span></span>|  
-|`mdtCustomAttribute`|<span data-ttu-id="b3ebe-116">`mdCustomAttribute` 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="b3ebe-116">An `mdCustomAttribute` token.</span></span>|  
-|`mdtPermission`|<span data-ttu-id="b3ebe-117">`mdPermission` 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="b3ebe-117">An `mdPermission` token.</span></span>|  
-|`mdtSignature`|<span data-ttu-id="b3ebe-118">`mdSignature` 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="b3ebe-118">An `mdSignature` token.</span></span>|  
-|`mdtEvent`|<span data-ttu-id="b3ebe-119">`mdEvent` 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="b3ebe-119">An `mdEvent` token.</span></span>|  
-|`mdtProperty`|<span data-ttu-id="b3ebe-120">`mdProperty` 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="b3ebe-120">An `mdProperty` token.</span></span>|  
-|`mdtModuleRef`|<span data-ttu-id="b3ebe-121">`mdModuleRef` 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="b3ebe-121">An `mdModuleRef` token.</span></span>|  
-|`mdtTypeSpec`|<span data-ttu-id="b3ebe-122">`mdTypeSpec` 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="b3ebe-122">An `mdTypeSpec` token.</span></span>|  
-|`mdtAssembly`|<span data-ttu-id="b3ebe-123">`mdAssembly` 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="b3ebe-123">An `mdAssembly` token.</span></span>|  
-|`mdtAssemblyRef`|<span data-ttu-id="b3ebe-124">`mdAssemblyRef` 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="b3ebe-124">An `mdAssemblyRef` token.</span></span>|  
-|`mdtFile`|<span data-ttu-id="b3ebe-125">`mdFile` 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="b3ebe-125">An `mdFile` token.</span></span>|  
-|`mdtExportedType`|<span data-ttu-id="b3ebe-126">`mdExportedType` 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="b3ebe-126">An `mdExportedType` token.</span></span>|  
-|`mdtManifestResource`|<span data-ttu-id="b3ebe-127">`mdManifestResource` 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="b3ebe-127">An `mdManifestResource` token.</span></span>|  
-|`mdtGenericParam`|<span data-ttu-id="b3ebe-128">`mdGenericParam` 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="b3ebe-128">An `mdGenericParam` token.</span></span>|  
-|`mdtMethodSpec`|<span data-ttu-id="b3ebe-129">`mdMethodSpec` 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="b3ebe-129">An `mdMethodSpec` token.</span></span>|  
-|`mdtGenericParamConstraint`|<span data-ttu-id="b3ebe-130">`mdGenericParamConstraint` 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="b3ebe-130">An `mdGenericParamConstraint` token.</span></span>|  
-|`mdtString`|<span data-ttu-id="b3ebe-131">`mdString` 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="b3ebe-131">An `mdString` token.</span></span>|  
-|`mdtName`|<span data-ttu-id="b3ebe-132">`mdName` 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="b3ebe-132">An `mdName` token.</span></span>|  
-|`mdtBaseType`|<span data-ttu-id="b3ebe-133">사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="b3ebe-133">Not used.</span></span>|  
+|`mdtModule`|<span data-ttu-id="e8871-108">An `mdModule` token.</span><span class="sxs-lookup"><span data-stu-id="e8871-108">An `mdModule` token.</span></span>|  
+|`mdtTypeRef`|<span data-ttu-id="e8871-109">An `mdTypeRef` token.</span><span class="sxs-lookup"><span data-stu-id="e8871-109">An `mdTypeRef` token.</span></span>|  
+|`mdtTypeDef`|<span data-ttu-id="e8871-110">An `mdTypeDef` token.</span><span class="sxs-lookup"><span data-stu-id="e8871-110">An `mdTypeDef` token.</span></span>|  
+|`mdtFieldDef`|<span data-ttu-id="e8871-111">An `mdFieldDef` token.</span><span class="sxs-lookup"><span data-stu-id="e8871-111">An `mdFieldDef` token.</span></span>|  
+|`mdtMethodDef`|<span data-ttu-id="e8871-112">An `mdMethodDef` token.</span><span class="sxs-lookup"><span data-stu-id="e8871-112">An `mdMethodDef` token.</span></span>|  
+|`mdtParamDef`|<span data-ttu-id="e8871-113">An `mdParamDef` token.</span><span class="sxs-lookup"><span data-stu-id="e8871-113">An `mdParamDef` token.</span></span>|  
+|`mdtInterfaceImpl`|<span data-ttu-id="e8871-114">An `mdInterfaceImpl` token.</span><span class="sxs-lookup"><span data-stu-id="e8871-114">An `mdInterfaceImpl` token.</span></span>|  
+|`mdtMemberRef`|<span data-ttu-id="e8871-115">An `mdMemberRef` token.</span><span class="sxs-lookup"><span data-stu-id="e8871-115">An `mdMemberRef` token.</span></span>|  
+|`mdtCustomAttribute`|<span data-ttu-id="e8871-116">An `mdCustomAttribute` token.</span><span class="sxs-lookup"><span data-stu-id="e8871-116">An `mdCustomAttribute` token.</span></span>|  
+|`mdtPermission`|<span data-ttu-id="e8871-117">An `mdPermission` token.</span><span class="sxs-lookup"><span data-stu-id="e8871-117">An `mdPermission` token.</span></span>|  
+|`mdtSignature`|<span data-ttu-id="e8871-118">An `mdSignature` token.</span><span class="sxs-lookup"><span data-stu-id="e8871-118">An `mdSignature` token.</span></span>|  
+|`mdtEvent`|<span data-ttu-id="e8871-119">An `mdEvent` token.</span><span class="sxs-lookup"><span data-stu-id="e8871-119">An `mdEvent` token.</span></span>|  
+|`mdtProperty`|<span data-ttu-id="e8871-120">An `mdProperty` token.</span><span class="sxs-lookup"><span data-stu-id="e8871-120">An `mdProperty` token.</span></span>|  
+|`mdtModuleRef`|<span data-ttu-id="e8871-121">An `mdModuleRef` token.</span><span class="sxs-lookup"><span data-stu-id="e8871-121">An `mdModuleRef` token.</span></span>|  
+|`mdtTypeSpec`|<span data-ttu-id="e8871-122">An `mdTypeSpec` token.</span><span class="sxs-lookup"><span data-stu-id="e8871-122">An `mdTypeSpec` token.</span></span>|  
+|`mdtAssembly`|<span data-ttu-id="e8871-123">An `mdAssembly` token.</span><span class="sxs-lookup"><span data-stu-id="e8871-123">An `mdAssembly` token.</span></span>|  
+|`mdtAssemblyRef`|<span data-ttu-id="e8871-124">An `mdAssemblyRef` token.</span><span class="sxs-lookup"><span data-stu-id="e8871-124">An `mdAssemblyRef` token.</span></span>|  
+|`mdtFile`|<span data-ttu-id="e8871-125">An `mdFile` token.</span><span class="sxs-lookup"><span data-stu-id="e8871-125">An `mdFile` token.</span></span>|  
+|`mdtExportedType`|<span data-ttu-id="e8871-126">An `mdExportedType` token.</span><span class="sxs-lookup"><span data-stu-id="e8871-126">An `mdExportedType` token.</span></span>|  
+|`mdtManifestResource`|<span data-ttu-id="e8871-127">An `mdManifestResource` token.</span><span class="sxs-lookup"><span data-stu-id="e8871-127">An `mdManifestResource` token.</span></span>|  
+|`mdtGenericParam`|<span data-ttu-id="e8871-128">An `mdGenericParam` token.</span><span class="sxs-lookup"><span data-stu-id="e8871-128">An `mdGenericParam` token.</span></span>|  
+|`mdtMethodSpec`|<span data-ttu-id="e8871-129">An `mdMethodSpec` token.</span><span class="sxs-lookup"><span data-stu-id="e8871-129">An `mdMethodSpec` token.</span></span>|  
+|`mdtGenericParamConstraint`|<span data-ttu-id="e8871-130">An `mdGenericParamConstraint` token.</span><span class="sxs-lookup"><span data-stu-id="e8871-130">An `mdGenericParamConstraint` token.</span></span>|  
+|`mdtString`|<span data-ttu-id="e8871-131">An `mdString` token.</span><span class="sxs-lookup"><span data-stu-id="e8871-131">An `mdString` token.</span></span>|  
+|`mdtName`|<span data-ttu-id="e8871-132">An `mdName` token.</span><span class="sxs-lookup"><span data-stu-id="e8871-132">An `mdName` token.</span></span>|  
+|`mdtBaseType`|<span data-ttu-id="e8871-133">사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="e8871-133">Not used.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="b3ebe-134">설명</span><span class="sxs-lookup"><span data-stu-id="b3ebe-134">Remarks</span></span>  
- <span data-ttu-id="b3ebe-135">각 값은 최상위 바이트의 값에 해당 메타 데이터 토큰에서.</span><span class="sxs-lookup"><span data-stu-id="b3ebe-135">Each value is equal to the value of the top byte in the corresponding metadata token.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e8871-134">주의</span><span class="sxs-lookup"><span data-stu-id="e8871-134">Remarks</span></span>  
+ <span data-ttu-id="e8871-135">Each value is equal to the value of the top byte in the corresponding metadata token.</span><span class="sxs-lookup"><span data-stu-id="e8871-135">Each value is equal to the value of the top byte in the corresponding metadata token.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b3ebe-136">요구 사항</span><span class="sxs-lookup"><span data-stu-id="b3ebe-136">Requirements</span></span>  
- <span data-ttu-id="b3ebe-137">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="b3ebe-137">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e8871-136">요구 사항</span><span class="sxs-lookup"><span data-stu-id="e8871-136">Requirements</span></span>  
+ <span data-ttu-id="e8871-137">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="e8871-137">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b3ebe-138">**헤더:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="b3ebe-138">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="e8871-138">**Header:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="e8871-138">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="b3ebe-139">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b3ebe-139">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="e8871-139">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e8871-139">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b3ebe-140">참고자료</span><span class="sxs-lookup"><span data-stu-id="b3ebe-140">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e8871-140">참조</span><span class="sxs-lookup"><span data-stu-id="e8871-140">See also</span></span>
 
-- [<span data-ttu-id="b3ebe-141">메타데이터 열거형</span><span class="sxs-lookup"><span data-stu-id="b3ebe-141">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="e8871-141">메타데이터 열거형</span><span class="sxs-lookup"><span data-stu-id="e8871-141">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

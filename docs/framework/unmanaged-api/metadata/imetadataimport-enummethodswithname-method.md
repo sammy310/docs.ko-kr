@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: a8624913-2e23-46ad-a0c1-bb8eccbbf20f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e5de55d74741e9deb33be2f9adf15a970561664b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b0817288040550b5f4c3c4ec063f6a7fdb004137
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779729"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450066"
 ---
-# <a name="imetadataimportenummethodswithname-method"></a><span data-ttu-id="06c79-102">IMetaDataImport::EnumMethodsWithName 메서드</span><span class="sxs-lookup"><span data-stu-id="06c79-102">IMetaDataImport::EnumMethodsWithName Method</span></span>
-<span data-ttu-id="06c79-103">지정한 TypeDef 토큰이 참조하는 형식으로 정의되고 지정한 이름을 가진 메서드를 열거합니다.</span><span class="sxs-lookup"><span data-stu-id="06c79-103">Enumerates methods that have the specified name and that are defined by the type referenced by the specified TypeDef token.</span></span>  
+# <a name="imetadataimportenummethodswithname-method"></a><span data-ttu-id="2f520-102">IMetaDataImport::EnumMethodsWithName 메서드</span><span class="sxs-lookup"><span data-stu-id="2f520-102">IMetaDataImport::EnumMethodsWithName Method</span></span>
+<span data-ttu-id="2f520-103">지정한 TypeDef 토큰이 참조하는 형식으로 정의되고 지정한 이름을 가진 메서드를 열거합니다.</span><span class="sxs-lookup"><span data-stu-id="2f520-103">Enumerates methods that have the specified name and that are defined by the type referenced by the specified TypeDef token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="06c79-104">구문</span><span class="sxs-lookup"><span data-stu-id="06c79-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2f520-104">구문</span><span class="sxs-lookup"><span data-stu-id="2f520-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT EnumMethodsWithName (  
@@ -40,45 +38,45 @@ HRESULT EnumMethodsWithName (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="06c79-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="06c79-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="2f520-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="2f520-105">Parameters</span></span>  
  `phEnum`  
- <span data-ttu-id="06c79-106">[out에서] 열거자에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="06c79-106">[in, out] A pointer to the enumerator.</span></span> <span data-ttu-id="06c79-107">이 메서드의 첫 번째 호출에 대 한 NULL 이어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="06c79-107">This must be NULL for the first call of this method.</span></span>  
+ <span data-ttu-id="2f520-106">[in, out] A pointer to the enumerator.</span><span class="sxs-lookup"><span data-stu-id="2f520-106">[in, out] A pointer to the enumerator.</span></span> <span data-ttu-id="2f520-107">This must be NULL for the first call of this method.</span><span class="sxs-lookup"><span data-stu-id="2f520-107">This must be NULL for the first call of this method.</span></span>  
   
  `cl`  
- <span data-ttu-id="06c79-108">[in] 해당 메서드를 열거 하는 형식을 나타내는 TypeDef 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="06c79-108">[in] A TypeDef token representing the type whose methods to enumerate.</span></span>  
+ <span data-ttu-id="2f520-108">[in] A TypeDef token representing the type whose methods to enumerate.</span><span class="sxs-lookup"><span data-stu-id="2f520-108">[in] A TypeDef token representing the type whose methods to enumerate.</span></span>  
   
  `szName`  
- <span data-ttu-id="06c79-109">[in] 열거형의 범위를 제한 하는 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="06c79-109">[in] The name that limits the scope of the enumeration.</span></span>  
+ <span data-ttu-id="2f520-109">[in] The name that limits the scope of the enumeration.</span><span class="sxs-lookup"><span data-stu-id="2f520-109">[in] The name that limits the scope of the enumeration.</span></span>  
   
  `rMethods`  
- <span data-ttu-id="06c79-110">[out] MethodDef 토큰을 저장 하는 데 사용 되는 배열입니다.</span><span class="sxs-lookup"><span data-stu-id="06c79-110">[out] The array used to store the MethodDef tokens.</span></span>  
+ <span data-ttu-id="2f520-110">[out] The array used to store the MethodDef tokens.</span><span class="sxs-lookup"><span data-stu-id="2f520-110">[out] The array used to store the MethodDef tokens.</span></span>  
   
  `cMax`  
- <span data-ttu-id="06c79-111">[in] `rMethods` 배열의 최대 크기입니다.</span><span class="sxs-lookup"><span data-stu-id="06c79-111">[in] The maximum size of the `rMethods` array.</span></span>  
+ <span data-ttu-id="2f520-111">[in] `rMethods` 배열의 최대 크기입니다.</span><span class="sxs-lookup"><span data-stu-id="2f520-111">[in] The maximum size of the `rMethods` array.</span></span>  
   
  `pcTokens`  
- <span data-ttu-id="06c79-112">[out] MethodDef 토큰에서 반환 된 수가 `rMethods`합니다.</span><span class="sxs-lookup"><span data-stu-id="06c79-112">[out] The number of MethodDef tokens returned in `rMethods`.</span></span>  
+ <span data-ttu-id="2f520-112">[out] The number of MethodDef tokens returned in `rMethods`.</span><span class="sxs-lookup"><span data-stu-id="2f520-112">[out] The number of MethodDef tokens returned in `rMethods`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="06c79-113">설명</span><span class="sxs-lookup"><span data-stu-id="06c79-113">Remarks</span></span>  
- <span data-ttu-id="06c79-114">이 메서드는 필드 및 메서드 하지만 하지 속성 또는 이벤트를 열거합니다.</span><span class="sxs-lookup"><span data-stu-id="06c79-114">This method enumerates fields and methods, but not properties or events.</span></span> <span data-ttu-id="06c79-115">와 달리 [imetadataimport:: Enummethods](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enummethods-method.md), `EnumMethodsWithName` 지정 된 이름이 없는 모든 메서드 토큰을 삭제 합니다.</span><span class="sxs-lookup"><span data-stu-id="06c79-115">Unlike [IMetaDataImport::EnumMethods](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enummethods-method.md), `EnumMethodsWithName` discards all method tokens that do not have the specified name.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2f520-113">주의</span><span class="sxs-lookup"><span data-stu-id="2f520-113">Remarks</span></span>  
+ <span data-ttu-id="2f520-114">This method enumerates fields and methods, but not properties or events.</span><span class="sxs-lookup"><span data-stu-id="2f520-114">This method enumerates fields and methods, but not properties or events.</span></span> <span data-ttu-id="2f520-115">Unlike [IMetaDataImport::EnumMethods](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enummethods-method.md), `EnumMethodsWithName` discards all method tokens that do not have the specified name.</span><span class="sxs-lookup"><span data-stu-id="2f520-115">Unlike [IMetaDataImport::EnumMethods](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enummethods-method.md), `EnumMethodsWithName` discards all method tokens that do not have the specified name.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="06c79-116">반환 값</span><span class="sxs-lookup"><span data-stu-id="06c79-116">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="2f520-116">반환 값</span><span class="sxs-lookup"><span data-stu-id="2f520-116">Return Value</span></span>  
   
-|<span data-ttu-id="06c79-117">HRESULT</span><span class="sxs-lookup"><span data-stu-id="06c79-117">HRESULT</span></span>|<span data-ttu-id="06c79-118">설명</span><span class="sxs-lookup"><span data-stu-id="06c79-118">Description</span></span>|  
+|<span data-ttu-id="2f520-117">HRESULT</span><span class="sxs-lookup"><span data-stu-id="2f520-117">HRESULT</span></span>|<span data-ttu-id="2f520-118">설명</span><span class="sxs-lookup"><span data-stu-id="2f520-118">Description</span></span>|  
 |-------------|-----------------|  
-|`S_OK`|<span data-ttu-id="06c79-119">`EnumMethodsWithName` 성공적으로 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="06c79-119">`EnumMethodsWithName` returned successfully.</span></span>|  
-|`S_FALSE`|<span data-ttu-id="06c79-120">열거할 토큰이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="06c79-120">There are no tokens to enumerate.</span></span> <span data-ttu-id="06c79-121">이런 경우 `pcTokens` 0입니다.</span><span class="sxs-lookup"><span data-stu-id="06c79-121">In that case, `pcTokens` is zero.</span></span>|  
+|`S_OK`|<span data-ttu-id="2f520-119">`EnumMethodsWithName` returned successfully.</span><span class="sxs-lookup"><span data-stu-id="2f520-119">`EnumMethodsWithName` returned successfully.</span></span>|  
+|`S_FALSE`|<span data-ttu-id="2f520-120">There are no tokens to enumerate.</span><span class="sxs-lookup"><span data-stu-id="2f520-120">There are no tokens to enumerate.</span></span> <span data-ttu-id="2f520-121">In that case, `pcTokens` is zero.</span><span class="sxs-lookup"><span data-stu-id="2f520-121">In that case, `pcTokens` is zero.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="06c79-122">요구 사항</span><span class="sxs-lookup"><span data-stu-id="06c79-122">Requirements</span></span>  
- <span data-ttu-id="06c79-123">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="06c79-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2f520-122">요구 사항</span><span class="sxs-lookup"><span data-stu-id="2f520-122">Requirements</span></span>  
+ <span data-ttu-id="2f520-123">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="2f520-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="06c79-124">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="06c79-124">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="2f520-124">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="2f520-124">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="06c79-125">**라이브러리:** MsCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="06c79-125">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="2f520-125">**Library:** Included as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="2f520-125">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="06c79-126">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="06c79-126">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="2f520-126">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2f520-126">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="06c79-127">참고자료</span><span class="sxs-lookup"><span data-stu-id="06c79-127">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2f520-127">참조</span><span class="sxs-lookup"><span data-stu-id="2f520-127">See also</span></span>
 
-- [<span data-ttu-id="06c79-128">IMetaDataImport 인터페이스</span><span class="sxs-lookup"><span data-stu-id="06c79-128">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="06c79-129">IMetaDataImport2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="06c79-129">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="2f520-128">IMetaDataImport 인터페이스</span><span class="sxs-lookup"><span data-stu-id="2f520-128">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="2f520-129">IMetaDataImport2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="2f520-129">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

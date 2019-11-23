@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: f0d721e2-b946-426d-8e20-9124bd04e4cb
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b32c402b20f9d7f0d370cfa6ec8376603efa8c3f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e4549789ea1af584c0850a535d9f6bb54f844ce0
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777993"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74443549"
 ---
-# <a name="imetadataassemblyimportenumfiles-method"></a><span data-ttu-id="fef31-102">IMetaDataAssemblyImport::EnumFiles 메서드</span><span class="sxs-lookup"><span data-stu-id="fef31-102">IMetaDataAssemblyImport::EnumFiles Method</span></span>
-<span data-ttu-id="fef31-103">현재 어셈블리 매니페스트에서 참조 하는 파일을 열거 합니다.</span><span class="sxs-lookup"><span data-stu-id="fef31-103">Enumerates the files referenced in the current assembly manifest.</span></span>  
+# <a name="imetadataassemblyimportenumfiles-method"></a><span data-ttu-id="bc18b-102">IMetaDataAssemblyImport::EnumFiles 메서드</span><span class="sxs-lookup"><span data-stu-id="bc18b-102">IMetaDataAssemblyImport::EnumFiles Method</span></span>
+<span data-ttu-id="bc18b-103">Enumerates the files referenced in the current assembly manifest.</span><span class="sxs-lookup"><span data-stu-id="bc18b-103">Enumerates the files referenced in the current assembly manifest.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fef31-104">구문</span><span class="sxs-lookup"><span data-stu-id="fef31-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="bc18b-104">구문</span><span class="sxs-lookup"><span data-stu-id="bc18b-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT EnumFiles (  
@@ -38,35 +36,35 @@ HRESULT EnumFiles (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="fef31-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="fef31-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="bc18b-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="bc18b-105">Parameters</span></span>  
  `phEnum`  
- <span data-ttu-id="fef31-106">[out에서] 열거자에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="fef31-106">[in, out] A pointer to the enumerator.</span></span> <span data-ttu-id="fef31-107">이 메서드의 첫 번째 호출에 대 한 null 값 이어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="fef31-107">This must be a null value for the first call of this method.</span></span>  
+ <span data-ttu-id="bc18b-106">[in, out] A pointer to the enumerator.</span><span class="sxs-lookup"><span data-stu-id="bc18b-106">[in, out] A pointer to the enumerator.</span></span> <span data-ttu-id="bc18b-107">This must be a null value for the first call of this method.</span><span class="sxs-lookup"><span data-stu-id="bc18b-107">This must be a null value for the first call of this method.</span></span>  
   
  `rFiles`  
- <span data-ttu-id="fef31-108">[out] 배열을 저장 하는 데는 `mdFile` 메타 데이터 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="fef31-108">[out] The array used to store the `mdFile` metadata tokens.</span></span>  
+ <span data-ttu-id="bc18b-108">[out] The array used to store the `mdFile` metadata tokens.</span><span class="sxs-lookup"><span data-stu-id="bc18b-108">[out] The array used to store the `mdFile` metadata tokens.</span></span>  
   
  `cMax`  
- <span data-ttu-id="fef31-109">[in] 최대 `mdFile` 에 배치할 수 있는 토큰 `rFiles`합니다.</span><span class="sxs-lookup"><span data-stu-id="fef31-109">[in] The maximum number of `mdFile` tokens that can be placed in `rFiles`.</span></span>  
+ <span data-ttu-id="bc18b-109">[in] The maximum number of `mdFile` tokens that can be placed in `rFiles`.</span><span class="sxs-lookup"><span data-stu-id="bc18b-109">[in] The maximum number of `mdFile` tokens that can be placed in `rFiles`.</span></span>  
   
  `pcTokens`  
- <span data-ttu-id="fef31-110">[out] 수가 `mdFile` 토큰에 실제로 배치 `rFiles`합니다.</span><span class="sxs-lookup"><span data-stu-id="fef31-110">[out] The number of `mdFile` tokens actually placed in `rFiles`.</span></span>  
+ <span data-ttu-id="bc18b-110">[out] The number of `mdFile` tokens actually placed in `rFiles`.</span><span class="sxs-lookup"><span data-stu-id="bc18b-110">[out] The number of `mdFile` tokens actually placed in `rFiles`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="fef31-111">반환 값</span><span class="sxs-lookup"><span data-stu-id="fef31-111">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="bc18b-111">반환 값</span><span class="sxs-lookup"><span data-stu-id="bc18b-111">Return Value</span></span>  
   
-|<span data-ttu-id="fef31-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="fef31-112">HRESULT</span></span>|<span data-ttu-id="fef31-113">Description</span><span class="sxs-lookup"><span data-stu-id="fef31-113">Description</span></span>|  
+|<span data-ttu-id="bc18b-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="bc18b-112">HRESULT</span></span>|<span data-ttu-id="bc18b-113">설명</span><span class="sxs-lookup"><span data-stu-id="bc18b-113">Description</span></span>|  
 |-------------|-----------------|  
-|`S_OK`|<span data-ttu-id="fef31-114">`EnumFiles` 성공적으로 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="fef31-114">`EnumFiles` returned successfully.</span></span>|  
-|`S_FALSE`|<span data-ttu-id="fef31-115">열거할 토큰이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fef31-115">There are no tokens to enumerate.</span></span> <span data-ttu-id="fef31-116">이 경우 `pcTokens` 0으로 설정 됩니다.</span><span class="sxs-lookup"><span data-stu-id="fef31-116">In this case, `pcTokens` is set to zero.</span></span>|  
+|`S_OK`|<span data-ttu-id="bc18b-114">`EnumFiles` returned successfully.</span><span class="sxs-lookup"><span data-stu-id="bc18b-114">`EnumFiles` returned successfully.</span></span>|  
+|`S_FALSE`|<span data-ttu-id="bc18b-115">There are no tokens to enumerate.</span><span class="sxs-lookup"><span data-stu-id="bc18b-115">There are no tokens to enumerate.</span></span> <span data-ttu-id="bc18b-116">In this case, `pcTokens` is set to zero.</span><span class="sxs-lookup"><span data-stu-id="bc18b-116">In this case, `pcTokens` is set to zero.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="fef31-117">요구 사항</span><span class="sxs-lookup"><span data-stu-id="fef31-117">Requirements</span></span>  
- <span data-ttu-id="fef31-118">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="fef31-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="bc18b-117">요구 사항</span><span class="sxs-lookup"><span data-stu-id="bc18b-117">Requirements</span></span>  
+ <span data-ttu-id="bc18b-118">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="bc18b-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="fef31-119">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="fef31-119">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="bc18b-119">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="bc18b-119">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="fef31-120">**라이브러리:** MsCorEE.dll에서 리소스로 사용</span><span class="sxs-lookup"><span data-stu-id="fef31-120">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="bc18b-120">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="bc18b-120">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="fef31-121">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fef31-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="bc18b-121">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bc18b-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fef31-122">참고자료</span><span class="sxs-lookup"><span data-stu-id="fef31-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bc18b-122">참조</span><span class="sxs-lookup"><span data-stu-id="bc18b-122">See also</span></span>
 
-- [<span data-ttu-id="fef31-123">IMetaDataAssemblyImport 인터페이스</span><span class="sxs-lookup"><span data-stu-id="fef31-123">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [<span data-ttu-id="bc18b-123">IMetaDataAssemblyImport 인터페이스</span><span class="sxs-lookup"><span data-stu-id="bc18b-123">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

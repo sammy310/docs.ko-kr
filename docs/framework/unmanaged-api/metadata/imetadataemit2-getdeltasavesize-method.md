@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 036db5e7-8211-4645-9a34-03d1a89be955
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0b0a190ce57091434006421e6d8551c78cbe66b8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 219d3196e3b2125033a23623b7e77e31c6f1ff03
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777176"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440490"
 ---
-# <a name="imetadataemit2getdeltasavesize-method"></a><span data-ttu-id="07ca5-102">IMetaDataEmit2::GetDeltaSaveSize 메서드</span><span class="sxs-lookup"><span data-stu-id="07ca5-102">IMetaDataEmit2::GetDeltaSaveSize Method</span></span>
-<span data-ttu-id="07ca5-103">편집 하며 계속 하기는 현재 세션에서 발생 하는 메타 데이터 크기의 변화를 나타내는 값을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="07ca5-103">Gets a value indicating any change in metadata size that results from the current edit-and-continue session.</span></span>  
+# <a name="imetadataemit2getdeltasavesize-method"></a><span data-ttu-id="021e3-102">IMetaDataEmit2::GetDeltaSaveSize 메서드</span><span class="sxs-lookup"><span data-stu-id="021e3-102">IMetaDataEmit2::GetDeltaSaveSize Method</span></span>
+<span data-ttu-id="021e3-103">Gets a value indicating any change in metadata size that results from the current edit-and-continue session.</span><span class="sxs-lookup"><span data-stu-id="021e3-103">Gets a value indicating any change in metadata size that results from the current edit-and-continue session.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="07ca5-104">구문</span><span class="sxs-lookup"><span data-stu-id="07ca5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="021e3-104">구문</span><span class="sxs-lookup"><span data-stu-id="021e3-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetDeltaSaveSize (  
@@ -36,23 +34,23 @@ HRESULT GetDeltaSaveSize (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="07ca5-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="07ca5-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="021e3-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="021e3-105">Parameters</span></span>  
  `fSave`  
- <span data-ttu-id="07ca5-106">[in] 중 하나는 [CorSaveSize](../../../../docs/framework/unmanaged-api/metadata/corsavesize-enumeration.md) 필요한 전체 자릿수 수준을 나타내는 값입니다.</span><span class="sxs-lookup"><span data-stu-id="07ca5-106">[in] One of the [CorSaveSize](../../../../docs/framework/unmanaged-api/metadata/corsavesize-enumeration.md) values, indicating the level of precision desired.</span></span> <span data-ttu-id="07ca5-107">.NET Framework 버전 2.0에서이 매개 변수는 무시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="07ca5-107">For the .NET Framework version 2.0, this parameter is ignored.</span></span>  
+ <span data-ttu-id="021e3-106">[in] One of the [CorSaveSize](../../../../docs/framework/unmanaged-api/metadata/corsavesize-enumeration.md) values, indicating the level of precision desired.</span><span class="sxs-lookup"><span data-stu-id="021e3-106">[in] One of the [CorSaveSize](../../../../docs/framework/unmanaged-api/metadata/corsavesize-enumeration.md) values, indicating the level of precision desired.</span></span> <span data-ttu-id="021e3-107">For the .NET Framework version 2.0, this parameter is ignored.</span><span class="sxs-lookup"><span data-stu-id="021e3-107">For the .NET Framework version 2.0, this parameter is ignored.</span></span>  
   
  `pdwSaveSize`  
- <span data-ttu-id="07ca5-108">[out] 메타 데이터의 크기를 변경 합니다.</span><span class="sxs-lookup"><span data-stu-id="07ca5-108">[out] The change in the size of the metadata.</span></span>  
+ <span data-ttu-id="021e3-108">[out] The change in the size of the metadata.</span><span class="sxs-lookup"><span data-stu-id="021e3-108">[out] The change in the size of the metadata.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="07ca5-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="07ca5-109">Requirements</span></span>  
- <span data-ttu-id="07ca5-110">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="07ca5-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="021e3-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="021e3-109">Requirements</span></span>  
+ <span data-ttu-id="021e3-110">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="021e3-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="07ca5-111">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="07ca5-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="021e3-111">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="021e3-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="07ca5-112">**라이브러리:** MsCorEE.dll에서 리소스로 사용</span><span class="sxs-lookup"><span data-stu-id="07ca5-112">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="021e3-112">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="021e3-112">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="07ca5-113">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="07ca5-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="021e3-113">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="021e3-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="07ca5-114">참고자료</span><span class="sxs-lookup"><span data-stu-id="07ca5-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="021e3-114">참조</span><span class="sxs-lookup"><span data-stu-id="021e3-114">See also</span></span>
 
-- [<span data-ttu-id="07ca5-115">IMetaDataEmit2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="07ca5-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
-- [<span data-ttu-id="07ca5-116">IMetaDataEmit 인터페이스</span><span class="sxs-lookup"><span data-stu-id="07ca5-116">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="021e3-115">IMetaDataEmit2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="021e3-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="021e3-116">IMetaDataEmit 인터페이스</span><span class="sxs-lookup"><span data-stu-id="021e3-116">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)

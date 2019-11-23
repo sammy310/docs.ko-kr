@@ -8,24 +8,24 @@ helpviewer_keywords:
 - UI Automation, custom user interface (UI) elements
 - providers, UI Automation
 ms.assetid: 88bc4212-3f4e-4bac-bae0-faef31944b71
-ms.openlocfilehash: d5f2651c6a74a7f9ac275a55a4e37baebf653305
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 66c9a372aa3010393dabaf737f30daeef78a1d9d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71042079"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74441273"
 ---
-# <a name="ui-automation-providers-for-managed-code-how-to-topics"></a><span data-ttu-id="e07cf-102">관리 코드 방법 항목의 UI 자동화 공급자</span><span class="sxs-lookup"><span data-stu-id="e07cf-102">UI Automation Providers for Managed Code How-to Topics</span></span>
+# <a name="ui-automation-providers-for-managed-code-how-to-topics"></a><span data-ttu-id="a35f8-102">관리 코드 방법 항목의 UI 자동화 공급자</span><span class="sxs-lookup"><span data-stu-id="a35f8-102">UI Automation Providers for Managed Code How-to Topics</span></span>
 > [!NOTE]
-> <span data-ttu-id="e07cf-103">이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다.</span><span class="sxs-lookup"><span data-stu-id="e07cf-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="e07cf-104">에 대 한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [최신 정보는 Windows Automation API: UI 자동화](https://go.microsoft.com/fwlink/?LinkID=156746).</span><span class="sxs-lookup"><span data-stu-id="e07cf-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
+> <span data-ttu-id="a35f8-103">이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다.</span><span class="sxs-lookup"><span data-stu-id="a35f8-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="a35f8-104">[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="a35f8-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32).</span></span>  
   
- <span data-ttu-id="e07cf-105">이 섹션에는 요소에 대 한 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 공급자를 작성 하는 작업을 보여 주는 코드 예제가 포함 되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e07cf-105">This section contains code examples that demonstrate tasks in writing [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] providers for [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] elements.</span></span>  
+ <span data-ttu-id="a35f8-105">This section contains code examples that demonstrate tasks in writing [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] providers for [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] elements.</span><span class="sxs-lookup"><span data-stu-id="a35f8-105">This section contains code examples that demonstrate tasks in writing [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] providers for [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] elements.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="e07cf-106">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="e07cf-106">In This Section</span></span>  
- [<span data-ttu-id="e07cf-107">서버 쪽 UI 자동화 공급자 노출</span><span class="sxs-lookup"><span data-stu-id="e07cf-107">Expose a Server-side UI Automation Provider</span></span>](expose-a-server-side-ui-automation-provider.md)  
- [<span data-ttu-id="e07cf-108">UI 자동화 공급자에서 속성 반환</span><span class="sxs-lookup"><span data-stu-id="e07cf-108">Return Properties from a UI Automation Provider</span></span>](return-properties-from-a-ui-automation-provider.md)  
- [<span data-ttu-id="e07cf-109">UI 자동화 공급자에서 이벤트 발생</span><span class="sxs-lookup"><span data-stu-id="e07cf-109">Raise Events from a UI Automation Provider</span></span>](raise-events-from-a-ui-automation-provider.md)  
- [<span data-ttu-id="e07cf-110">UI 자동화 조각 공급자에서 탐색 사용</span><span class="sxs-lookup"><span data-stu-id="e07cf-110">Enable Navigation in a UI Automation Fragment Provider</span></span>](enable-navigation-in-a-ui-automation-fragment-provider.md)  
- [<span data-ttu-id="e07cf-111">UI 자동화 공급자의 컨트롤 패턴 지원</span><span class="sxs-lookup"><span data-stu-id="e07cf-111">Support Control Patterns in a UI Automation Provider</span></span>](support-control-patterns-in-a-ui-automation-provider.md)  
- [<span data-ttu-id="e07cf-112">클라이언트 쪽 UI 자동화 공급자 만들기</span><span class="sxs-lookup"><span data-stu-id="e07cf-112">Create a Client-Side UI Automation Provider</span></span>](create-a-client-side-ui-automation-provider.md)  
- [<span data-ttu-id="e07cf-113">클라이언트 응용 프로그램에서 UI 자동화 공급자 구현</span><span class="sxs-lookup"><span data-stu-id="e07cf-113">Implement UI Automation Providers in a Client Application</span></span>](implement-ui-automation-providers-in-a-client-application.md)
+## <a name="in-this-section"></a><span data-ttu-id="a35f8-106">단원 내용</span><span class="sxs-lookup"><span data-stu-id="a35f8-106">In This Section</span></span>  
+ [<span data-ttu-id="a35f8-107">서버 쪽 UI 자동화 공급자 노출</span><span class="sxs-lookup"><span data-stu-id="a35f8-107">Expose a Server-side UI Automation Provider</span></span>](expose-a-server-side-ui-automation-provider.md)  
+ [<span data-ttu-id="a35f8-108">UI 자동화 공급자에서 속성 반환</span><span class="sxs-lookup"><span data-stu-id="a35f8-108">Return Properties from a UI Automation Provider</span></span>](return-properties-from-a-ui-automation-provider.md)  
+ [<span data-ttu-id="a35f8-109">UI 자동화 공급자에서 이벤트 발생</span><span class="sxs-lookup"><span data-stu-id="a35f8-109">Raise Events from a UI Automation Provider</span></span>](raise-events-from-a-ui-automation-provider.md)  
+ [<span data-ttu-id="a35f8-110">UI 자동화 조각 공급자에서 탐색 사용</span><span class="sxs-lookup"><span data-stu-id="a35f8-110">Enable Navigation in a UI Automation Fragment Provider</span></span>](enable-navigation-in-a-ui-automation-fragment-provider.md)  
+ [<span data-ttu-id="a35f8-111">UI 자동화 공급자의 컨트롤 패턴 지원</span><span class="sxs-lookup"><span data-stu-id="a35f8-111">Support Control Patterns in a UI Automation Provider</span></span>](support-control-patterns-in-a-ui-automation-provider.md)  
+ [<span data-ttu-id="a35f8-112">클라이언트 쪽 UI 자동화 공급자 만들기</span><span class="sxs-lookup"><span data-stu-id="a35f8-112">Create a Client-Side UI Automation Provider</span></span>](create-a-client-side-ui-automation-provider.md)  
+ [<span data-ttu-id="a35f8-113">클라이언트 애플리케이션에서 UI 자동화 공급자 구현</span><span class="sxs-lookup"><span data-stu-id="a35f8-113">Implement UI Automation Providers in a Client Application</span></span>](implement-ui-automation-providers-in-a-client-application.md)

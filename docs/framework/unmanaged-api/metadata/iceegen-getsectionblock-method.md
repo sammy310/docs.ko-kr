@@ -15,21 +15,19 @@ helpviewer_keywords:
 ms.assetid: 05c78aaf-5bbd-497e-9ae2-55f4fae0c5fb
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 84ccbd7a8be7d90a541fb2d54baa3d7f66d3d31e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0731053fb37c775d25052a5fd99a479a44ff5862
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746118"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74434874"
 ---
-# <a name="iceegengetsectionblock-method"></a><span data-ttu-id="5c1df-102">ICeeGen::GetSectionBlock 메서드</span><span class="sxs-lookup"><span data-stu-id="5c1df-102">ICeeGen::GetSectionBlock Method</span></span>
-<span data-ttu-id="5c1df-103">코드 베이스의 섹션에서는 블록을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="5c1df-103">Gets a section block of the code base.</span></span>  
+# <a name="iceegengetsectionblock-method"></a><span data-ttu-id="10608-102">ICeeGen::GetSectionBlock 메서드</span><span class="sxs-lookup"><span data-stu-id="10608-102">ICeeGen::GetSectionBlock Method</span></span>
+<span data-ttu-id="10608-103">Gets a section block of the code base.</span><span class="sxs-lookup"><span data-stu-id="10608-103">Gets a section block of the code base.</span></span>  
   
- <span data-ttu-id="5c1df-104">이 메서드는 사용 되지 않습니다 및 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="5c1df-104">This method is obsolete and should not be used.</span></span>  
+ <span data-ttu-id="10608-104">This method is obsolete and should not be used.</span><span class="sxs-lookup"><span data-stu-id="10608-104">This method is obsolete and should not be used.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5c1df-105">구문</span><span class="sxs-lookup"><span data-stu-id="5c1df-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="10608-105">구문</span><span class="sxs-lookup"><span data-stu-id="10608-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetSectionBlock (  
@@ -40,31 +38,31 @@ HRESULT GetSectionBlock (
 );   
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="5c1df-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="5c1df-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="10608-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="10608-106">Parameters</span></span>  
  `section`  
- <span data-ttu-id="5c1df-107">[in] 블록의 코드 베이스를 검색할 섹션입니다.</span><span class="sxs-lookup"><span data-stu-id="5c1df-107">[in] The section from which to retrieve a block of the code base.</span></span>  
+ <span data-ttu-id="10608-107">[in] The section from which to retrieve a block of the code base.</span><span class="sxs-lookup"><span data-stu-id="10608-107">[in] The section from which to retrieve a block of the code base.</span></span>  
   
  `len`  
- <span data-ttu-id="5c1df-108">[in] 검색할 블록의 길이입니다.</span><span class="sxs-lookup"><span data-stu-id="5c1df-108">[in] The length of the block to be retrieved.</span></span>  
+ <span data-ttu-id="10608-108">[in] The length of the block to be retrieved.</span><span class="sxs-lookup"><span data-stu-id="10608-108">[in] The length of the block to be retrieved.</span></span>  
   
  `align`  
- <span data-ttu-id="5c1df-109">[in] 블록의 첫 번째 바이트에 맞출 수 있는 섹션의 시작을 기준으로 바이트입니다.</span><span class="sxs-lookup"><span data-stu-id="5c1df-109">[in] The byte, relative to the beginning of the section, with which to align the first byte of the block.</span></span> <span data-ttu-id="5c1df-110">이 섹션에서 블록의 위치입니다.</span><span class="sxs-lookup"><span data-stu-id="5c1df-110">This is the position of the block within the section.</span></span>  
+ <span data-ttu-id="10608-109">[in] The byte, relative to the beginning of the section, with which to align the first byte of the block.</span><span class="sxs-lookup"><span data-stu-id="10608-109">[in] The byte, relative to the beginning of the section, with which to align the first byte of the block.</span></span> <span data-ttu-id="10608-110">This is the position of the block within the section.</span><span class="sxs-lookup"><span data-stu-id="10608-110">This is the position of the block within the section.</span></span>  
   
  `ppBytes`  
- <span data-ttu-id="5c1df-111">[out] 검색 된 블록의 주소를 수신 하는 위치에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="5c1df-111">[out] A pointer to a location that receives the address of the retrieved block.</span></span>  
+ <span data-ttu-id="10608-111">[out] A pointer to a location that receives the address of the retrieved block.</span><span class="sxs-lookup"><span data-stu-id="10608-111">[out] A pointer to a location that receives the address of the retrieved block.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="5c1df-112">설명</span><span class="sxs-lookup"><span data-stu-id="5c1df-112">Remarks</span></span>  
- <span data-ttu-id="5c1df-113">호출 `GetSectionBlock` 다른 메서드에서 처리 되지 않는 특수 섹션 요구 사항이 있는 경우에 합니다.</span><span class="sxs-lookup"><span data-stu-id="5c1df-113">Call `GetSectionBlock` only if you have special section requirements that are not handled by other methods.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="10608-112">주의</span><span class="sxs-lookup"><span data-stu-id="10608-112">Remarks</span></span>  
+ <span data-ttu-id="10608-113">Call `GetSectionBlock` only if you have special section requirements that are not handled by other methods.</span><span class="sxs-lookup"><span data-stu-id="10608-113">Call `GetSectionBlock` only if you have special section requirements that are not handled by other methods.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5c1df-114">요구 사항</span><span class="sxs-lookup"><span data-stu-id="5c1df-114">Requirements</span></span>  
- <span data-ttu-id="5c1df-115">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="5c1df-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="10608-114">요구 사항</span><span class="sxs-lookup"><span data-stu-id="10608-114">Requirements</span></span>  
+ <span data-ttu-id="10608-115">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="10608-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5c1df-116">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="5c1df-116">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="10608-116">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="10608-116">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="5c1df-117">**라이브러리:** MsCorEE.dll에서 리소스로 사용</span><span class="sxs-lookup"><span data-stu-id="5c1df-117">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="10608-117">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="10608-117">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="5c1df-118">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5c1df-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="10608-118">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="10608-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5c1df-119">참고자료</span><span class="sxs-lookup"><span data-stu-id="5c1df-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="10608-119">참조</span><span class="sxs-lookup"><span data-stu-id="10608-119">See also</span></span>
 
-- [<span data-ttu-id="5c1df-120">ICeeGen 인터페이스</span><span class="sxs-lookup"><span data-stu-id="5c1df-120">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+- [<span data-ttu-id="10608-120">ICeeGen 인터페이스</span><span class="sxs-lookup"><span data-stu-id="10608-120">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

@@ -14,34 +14,32 @@ helpviewer_keywords:
 ms.assetid: 137cb264-64de-46ac-bc6e-2a7db97e8abe
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c691c403155d6e10db70c05894fe6a0fd381f036
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: be08e27bd98eccdffca654972eca775e2ecd0a95
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62042455"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74442104"
 ---
-# <a name="imetadatainfo-interface"></a><span data-ttu-id="556e5-102">IMetaDataInfo 인터페이스</span><span class="sxs-lookup"><span data-stu-id="556e5-102">IMetaDataInfo Interface</span></span>
-<span data-ttu-id="556e5-103">디스크에 있는 파일에서 메모리로의 메타데이터 매핑에 대한 정보를 가져오는 메서드를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="556e5-103">Provides a method that gets information about the mapping of metadata from an on-disk file into memory.</span></span>  
+# <a name="imetadatainfo-interface"></a><span data-ttu-id="f4e69-102">IMetaDataInfo 인터페이스</span><span class="sxs-lookup"><span data-stu-id="f4e69-102">IMetaDataInfo Interface</span></span>
+<span data-ttu-id="f4e69-103">디스크에 있는 파일에서 메모리로의 메타데이터 매핑에 대한 정보를 가져오는 메서드를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="f4e69-103">Provides a method that gets information about the mapping of metadata from an on-disk file into memory.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="556e5-104">메서드</span><span class="sxs-lookup"><span data-stu-id="556e5-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="f4e69-104">메서드</span><span class="sxs-lookup"><span data-stu-id="f4e69-104">Methods</span></span>  
   
-|<span data-ttu-id="556e5-105">메서드</span><span class="sxs-lookup"><span data-stu-id="556e5-105">Method</span></span>|<span data-ttu-id="556e5-106">설명</span><span class="sxs-lookup"><span data-stu-id="556e5-106">Description</span></span>|  
+|<span data-ttu-id="f4e69-105">메서드</span><span class="sxs-lookup"><span data-stu-id="f4e69-105">Method</span></span>|<span data-ttu-id="f4e69-106">설명</span><span class="sxs-lookup"><span data-stu-id="f4e69-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="556e5-107">GetFileMapping 메서드</span><span class="sxs-lookup"><span data-stu-id="556e5-107">GetFileMapping Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-getfilemapping-method.md)|<span data-ttu-id="556e5-108">매핑된 파일과 매핑의 종류의 메모리 영역을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="556e5-108">Gets the memory region of the mapped file, and the kind of mapping.</span></span>|  
+|[<span data-ttu-id="f4e69-107">GetFileMapping 메서드</span><span class="sxs-lookup"><span data-stu-id="f4e69-107">GetFileMapping Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-getfilemapping-method.md)|<span data-ttu-id="f4e69-108">Gets the memory region of the mapped file, and the kind of mapping.</span><span class="sxs-lookup"><span data-stu-id="f4e69-108">Gets the memory region of the mapped file, and the kind of mapping.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="556e5-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="556e5-109">Requirements</span></span>  
- <span data-ttu-id="556e5-110">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="556e5-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f4e69-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="f4e69-109">Requirements</span></span>  
+ <span data-ttu-id="f4e69-110">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="f4e69-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="556e5-111">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="556e5-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="f4e69-111">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="f4e69-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="556e5-112">**라이브러리:** MsCorEE.dll에서 리소스로 사용</span><span class="sxs-lookup"><span data-stu-id="556e5-112">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="f4e69-112">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="f4e69-112">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="556e5-113">**.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="556e5-113">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="f4e69-113">**.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f4e69-113">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="556e5-114">참고자료</span><span class="sxs-lookup"><span data-stu-id="556e5-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f4e69-114">참조</span><span class="sxs-lookup"><span data-stu-id="f4e69-114">See also</span></span>
 
-- [<span data-ttu-id="556e5-115">메타데이터 인터페이스</span><span class="sxs-lookup"><span data-stu-id="556e5-115">Metadata Interfaces</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
-- [<span data-ttu-id="556e5-116">CorFileMapping 열거형</span><span class="sxs-lookup"><span data-stu-id="556e5-116">CorFileMapping Enumeration</span></span>](../../../../docs/framework/unmanaged-api/metadata/corfilemapping-enumeration.md)
+- [<span data-ttu-id="f4e69-115">메타데이터 인터페이스</span><span class="sxs-lookup"><span data-stu-id="f4e69-115">Metadata Interfaces</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
+- [<span data-ttu-id="f4e69-116">CorFileMapping 열거형</span><span class="sxs-lookup"><span data-stu-id="f4e69-116">CorFileMapping Enumeration</span></span>](../../../../docs/framework/unmanaged-api/metadata/corfilemapping-enumeration.md)
