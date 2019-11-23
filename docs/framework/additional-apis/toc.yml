@@ -9,7 +9,7 @@
               href: microsoft.sqlserver.server.smiorderproperty.item.md
     - name: 시스템
       items:
-        - name: 예외 클래스
+        - name: Exception 클래스
           items:
             - name: Exception.PrepForRemoting 메서드
               href: system.exception.prepforremoting.md
@@ -43,17 +43,23 @@
               href: system.data.sqltypes.sqlstreamchars.setlength.md
             - name: Write 메서드
               href: system.data.sqltypes.sqlstreamchars.write.md
+    - name: System.IO
+      items:
+        - name: MemoryStream 클래스
+          items:
+            - name: InternalGetOriginAndLength 메서드
+              href: system.io.memorystream.internalgetoriginandlength.md
     - name: System.Net
       items:
         - name: Connection 클래스
           href: connection.md
           items:
-            - name: m_WriteList 필드
+            - name: m_WriteList 필드(_W)
               href: m_writelist.md
         - name: ConnectionGroup 클래스
           href: connectiongroup.md
           items:
-            - name: m_ConnectionList 필드
+            - name: m_ConnectionList 필드(_C)
               href: m_connectionlist.md
         - name: ConnectStream 클래스
           items:
@@ -62,17 +68,17 @@
         - name: CoreResponseData 클래스
           href: coreresponsedata.md
           items:
-            - name: m_ResponseHeaders 필드
+            - name: m_ResponseHeaders 필드(_R)
               href: coreresponsedata_m_responseheaders.md
-            - name: m_StatusCode 필드
+            - name: m_StatusCode 필드(_S)
               href: coreresponsedata_m_statuscode.md
         - name: HttpWebRequest 클래스
           items:
-            - name: _AutoRedirects 필드
+            - name: _AutoRedirects 필드(_A)
               href: _autoredirects.md
-            - name: _CoreResponse 필드
+            - name: _CoreResponse 필드(_C)
               href: httpwebrequest__coreresponse.md
-            - name: _HttpResponse 필드
+            - name: _HttpResponse 필드(_H)
               href: _httpresponse.md
         - name: PooledStream 클래스
           items:
@@ -80,13 +86,13 @@
               href: system.net.pooledstream.networkstream.md
         - name: ServicePoint 클래스
           items:
-            - name: m_ConnectionGroupList 필드
+            - name: m_ConnectionGroupList 필드(_C)
               href: m_connectiongrouplist.md
-            - name: s_ServicePointTable 필드
+            - name: s_ServicePointTable 필드(_S)
               href: s_servicepointtable.md
         - name: TlsStream 클래스
           items:
-            - name: m_Worker 필드
+            - name: m_Worker 필드(_W)
               href: system.net.tlsstream.m_worker.md
     - name: System.Net.Security
       items:
