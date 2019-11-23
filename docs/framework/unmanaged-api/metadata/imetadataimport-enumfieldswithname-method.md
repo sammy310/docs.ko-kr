@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 42145e8d-000f-4d0b-ae43-c08201190fa2
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 71a2c7a61d573c1e17d0e8fefcd34d60e05ed3c5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b240be3e5b0127de42cea43dd8e89a2cc656b28e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780479"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449519"
 ---
 # <a name="imetadataimportenumfieldswithname-method"></a>IMetaDataImport::EnumFieldsWithName 메서드
 지정한 이름을 가진 지정한 형식의 FieldDef 토큰을 열거합니다.  
@@ -42,43 +40,43 @@ HRESULT EnumFieldsWithName (
   
 ## <a name="parameters"></a>매개 변수  
  `phEnum`  
- [out에서] 열거자에 대 한 포인터입니다.  
+ [in, out] A pointer to the enumerator.  
   
  `cl`  
- [in] 토큰 필드가 포함 된 열거 형식입니다.  
+ [in] The token of the type whose fields are to be enumerated.  
   
  `szName`  
- [in] 열거형의 범위를 제한 하는 필드 이름입니다.  
+ [in] The field name that limits the scope of the enumeration.  
   
  `rFields`  
- [out] FieldDef 토큰을 저장 하는 데 사용 하는 배열입니다.  
+ [out] Array used to store the FieldDef tokens.  
   
  `cMax`  
  [in] `rFields` 배열의 최대 크기입니다.  
   
  `pcTokens`  
- [out] 실제 FieldDef 토큰에서 반환 된 수가 `rFields`합니다.  
+ [out] The actual number of FieldDef tokens returned in `rFields`.  
   
-## <a name="remarks"></a>설명  
- 와 달리 [imetadataimport:: Enumfields](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumfields-method.md), `EnumFieldsWithName` 지정 된 이름이 없는 모든 필드 토큰을 삭제 합니다.  
+## <a name="remarks"></a>주의  
+ Unlike [IMetaDataImport::EnumFields](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumfields-method.md), `EnumFieldsWithName` discards all field tokens that do not have the specified name.  
   
 ## <a name="return-value"></a>반환 값  
   
-|HRESULT|Description|  
+|HRESULT|설명|  
 |-------------|-----------------|  
-|`S_OK`|`EnumFieldsWithName` 성공적으로 반환 합니다.|  
-|`S_FALSE`|열거 하는 필드가 있습니다. 이런 경우 `pcTokens` 0입니다.|  
+|`S_OK`|`EnumFieldsWithName` returned successfully.|  
+|`S_FALSE`|There are no fields to enumerate. In that case, `pcTokens` is zero.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** Cor.h  
+ **Header:** Cor.h  
   
- **라이브러리:** MsCorEE.dll에 리소스로 포함  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [IMetaDataImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

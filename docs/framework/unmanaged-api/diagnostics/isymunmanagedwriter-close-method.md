@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4cce59e1-80b9-4fc4-b3aa-126f1c5876bc
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: fd7131c55f9c06a8fcfc0cad859c18e410169c78
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cd601ac6041ca22d59d7467bafc7c1d87b21371f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778201"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428119"
 ---
 # <a name="isymunmanagedwriterclose-method"></a>ISymUnmanagedWriter::Close 메서드
-기호를 기호 저장소에 커밋한 후 기호 작성기를 닫습니다.  
+Closes the symbol writer after committing the symbols to the symbol store.  
   
 ## <a name="syntax"></a>구문  
   
@@ -34,14 +32,14 @@ HRESULT Close();
 ```  
   
 ## <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
-## <a name="remarks"></a>설명  
- 이 호출 후 기호 작성기를 추가로 업데이트할 무효화 됩니다. 기호를 커밋하지 않고 기호 작성기를 닫으려면 다음을 사용 합니다 [isymunmanagedwriter:: Abort](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-abort-method.md) 메서드 대신 합니다.  
+## <a name="remarks"></a>주의  
+ After this call, the symbol writer becomes invalid for further updates. To close the symbol writer without committing the symbols, use the [ISymUnmanagedWriter::Abort](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-abort-method.md) method instead.  
   
 ## <a name="requirements"></a>요구 사항  
- **헤더:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ISymUnmanagedWriter 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

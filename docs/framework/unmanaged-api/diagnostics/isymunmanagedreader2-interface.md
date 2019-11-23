@@ -14,30 +14,28 @@ helpviewer_keywords:
 ms.assetid: a01a881b-82a3-4b3e-a3a9-9dc305c2e5f7
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 890053e1bf2e0648a41cca718e94edcf21c7e612
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a07c75e14244fb5bdf72ff2b0d344ae27672ef89
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61986221"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448273"
 ---
 # <a name="isymunmanagedreader2-interface"></a>ISymUnmanagedReader2 인터페이스
-문서, 메서드 및 기호 저장소 내의 변수에 대 한 액세스를 제공 하는 기호 판독기를 나타냅니다. 이 인터페이스를 확장 합니다 [ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md) 인터페이스입니다.  
+Represents a symbol reader that provides access to documents, methods, and variables within a symbol store. This interface extends the [ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md) interface.  
   
 ## <a name="methods"></a>메서드  
   
 |메서드|설명|  
 |------------|-----------------|  
-|[GetMethodByVersionPreRemap 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-getmethodbyversionpreremap-method.md)|지정 된 메서드 토큰 및 편집 하며 계속 하기 버전 번호를 기호 판독기 메서드를 가져옵니다.|  
-|[GetMethodsInDocument 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-getmethodsindocument-method.md)|제공 된 문서의 줄 정보가 있는 모든 메서드를 가져옵니다.|  
-|[GetSymAttributePreRemap 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-getsymattributepreremap-method.md)|해당 이름을 기준으로 사용자 지정 특성을 가져옵니다.|  
+|[GetMethodByVersionPreRemap 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-getmethodbyversionpreremap-method.md)|Get a symbol reader method, given a method token and an edit-and-continue version number.|  
+|[GetMethodsInDocument 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-getmethodsindocument-method.md)|Gets every method that has line information in the provided document.|  
+|[GetSymAttributePreRemap 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-getsymattributepreremap-method.md)|Gets a custom attribute based upon its name.|  
   
 ## <a name="requirements"></a>요구 사항  
- **헤더:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [진단 기호 저장소 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
 - [ISymUnmanagedReader 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

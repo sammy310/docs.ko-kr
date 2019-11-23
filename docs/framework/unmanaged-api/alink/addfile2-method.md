@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 03bc49bf-a89b-4fb6-a88d-97482e061195
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c3a6892dbed172c0be3b036014d393657dbc8593
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 8dadf9ec8f896b03e4918b21f5153c1b747010fd
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70777525"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446670"
 ---
 # <a name="addfile2-method"></a>AddFile2 메서드
-어셈블리에 파일을 추가 합니다. 바인딩되지 않은 모듈을 만드는 데 사용할 수도 있습니다.  
+Adds files to the assembly. Can also be used to create unbound modules.  
   
 ## <a name="syntax"></a>구문  
   
@@ -41,27 +39,27 @@ HRESULT AddFile2(
   
 ## <a name="parameters"></a>매개 변수  
  `AssemblyID`  
- 파일이 추가 된 어셈블리의 ID입니다.  
+ ID for the assembly to which the file is added.  
   
  `pszFilename`  
- 추가할 파일의 이름입니다.  
+ Name of the file to be added.  
   
  `dwFlags`  
- 및 `FileDef` 와`ffWriteable`같은 com + 플래그입니다. `ffContainsNoMetaData` `dwFlags`[DefineFile 메서드에](../metadata/imetadataassemblyemit-definefile-method.md)전달 됩니다.  
+ COM+ `FileDef` flags such as `ffContainsNoMetaData` and `ffWriteable`. `dwFlags` is passed to [DefineFile Method](../metadata/imetadataassemblyemit-definefile-method.md).  
   
  `pEmitter`  
- [IMetaDataEmit2 인터페이스](../metadata/imetadataemit2-interface.md) 인터페이스에 대 한 인터페이스입니다.  
+ Interface to [IMetaDataEmit2 Interface](../metadata/imetadataemit2-interface.md) interface.  
   
  `pFileToken`  
- 추가 되는 파일에 대 한 ID를 받습니다.  
+ Receives ID for the file being added.  
   
 ## <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 S_OK를 반환 합니다.  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>요구 사항  
- Alink가 필요 합니다.  
+ Requires alink.h.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [IALink2 인터페이스](ialink2-interface.md)
 - [IALink 인터페이스](ialink-interface.md)

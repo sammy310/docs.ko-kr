@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5854bfb2-c568-4f19-904a-7c9d41e7b995
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e5fcc9d19a400e23d98a997d051c26af1c1084a3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fe204bbe6154bf3d512a998818cf053d1e96ab3d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67783019"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74433538"
 ---
 # <a name="icorprofilercallbackruntimeresumestarted-method"></a>ICorProfilerCallback::RuntimeResumeStarted 메서드
-런타임은 모든 런타임 스레드가 다시 시작 하는 프로파일러에 알립니다.  
+Notifies the profiler that the runtime is resuming all run-time threads.  
   
 ## <a name="syntax"></a>구문  
   
@@ -34,7 +32,7 @@ HRESULT RuntimeResumeStarted();
 ```  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
   
@@ -42,7 +40,7 @@ HRESULT RuntimeResumeStarted();
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ICorProfilerCallback 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
 - [RuntimeResumeFinished 메서드](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimeresumefinished-method.md)

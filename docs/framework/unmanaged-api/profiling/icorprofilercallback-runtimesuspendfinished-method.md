@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b7723f58-c55c-4399-9972-1bbf3b866694
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6412f31417ead963e987e0c50ad46c78a77d367f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8bad09ddb2b821d0e02d43c1e3d1585b3473ec98
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750861"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446966"
 ---
 # <a name="icorprofilercallbackruntimesuspendfinished-method"></a>ICorProfilerCallback::RuntimeSuspendFinished 메서드
-런타임에 모든 런타임 스레드 일시 중단 완료 되었음을 프로파일러에 알립니다.  
+Notifies the profiler that the runtime has completed suspension of all runtime threads.  
   
 ## <a name="syntax"></a>구문  
   
@@ -33,13 +31,13 @@ ms.locfileid: "67750861"
 HRESULT RuntimeSuspendFinished();  
 ```  
   
-## <a name="remarks"></a>설명  
- 비관리 코드에 있는 모든 런타임 스레드 런타임을 다시 입력 하려고 할 때까지 계속 실행 될 수 있습니다. 이때 이러한도 일시 중단 됩니다 런타임을 다시 시작 될 때까지. 이 런타임에 입력 하는 새 스레드에도 적용 됩니다. 런타임의 모든 스레드는 즉시 일시 중단 되거나 인터럽트 가능한 코드에 포함 되어 있습니다 하거나 중단할 코드에 도달할 때 일시 중단 하 라는 메시지가 표시 됩니다.  
+## <a name="remarks"></a>주의  
+ All runtime threads that are in unmanaged code are allowed to continue running until they try to re-enter the runtime. At that point they will also be suspended until the runtime resumes. This also applies to new threads that enter the runtime. All threads in the runtime are either suspended immediately if they are already in interruptible code, or they are asked to suspend when they reach interruptible code.  
   
- 합니다 `RuntimeSuspendFinished` callback은 동일한 스레드에서 발생 합니다 [icorprofilercallback:: Runtimesuspendstarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendstarted-method.md) 콜백 합니다.  
+ The `RuntimeSuspendFinished` callback is guaranteed to occur on the same thread as the [ICorProfilerCallback::RuntimeSuspendStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendstarted-method.md) callback.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
   
@@ -47,7 +45,7 @@ HRESULT RuntimeSuspendFinished();
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ICorProfilerCallback 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
 - [RuntimeSuspendAborted 메서드](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendaborted-method.md)

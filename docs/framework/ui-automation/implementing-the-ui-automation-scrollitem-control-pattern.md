@@ -6,16 +6,16 @@ helpviewer_keywords:
 - UI Automation, Scroll Item control pattern
 - Scroll Item control pattern
 ms.assetid: 903bab5c-80c1-44d7-bdc2-0a418893b987
-ms.openlocfilehash: e8f9373c840b00c8089f01a562f768f27f2cd945
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 1e33a64e66bc084e8cc5f75ece2ac2a4d7ea85aa
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71043296"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447130"
 ---
 # <a name="implementing-the-ui-automation-scrollitem-control-pattern"></a>UI 자동화 ScrollItem 컨트롤 패턴 구현
 > [!NOTE]
-> 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. 에 대 한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [최신 정보는 Windows Automation API: UI 자동화](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조하세요.  
   
  이 항목에서는 속성, 메서드 및 이벤트에 대한 정보를 포함하여 <xref:System.Windows.Automation.Provider.IScrollItemProvider>를 구현하기 위한 지침 및 규칙을 제공합니다. 추가 참조에 대한 링크는 항목 끝에 나열되어 있습니다.  
   
@@ -31,9 +31,9 @@ ms.locfileid: "71043296"
 ## <a name="required-members-for-iscrollitemprovider"></a>IScrollItemProvider에 필요한 멤버  
  다음 메서드는 IScrollProvider 인터페이스를 구현하는 데 필요합니다.  
   
-|필요한 멤버|멤버 형식|참고|  
+|필요한 멤버|멤버 형식|노트|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IScrollItemProvider.ScrollIntoView%2A>|-메서드|없음|  
+|<xref:System.Windows.Automation.Provider.IScrollItemProvider.ScrollIntoView%2A>|-   Method|없음|  
   
  이 컨트롤 패턴에는 연결된 속성 또는 이벤트가 없습니다.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "71043296"
 |--------------------|---------------|  
 |<xref:System.InvalidOperationException>|항목을 스크롤하여 볼 수 없는 경우:<br /><br /> -   <xref:System.Windows.Automation.ScrollItemPattern.ScrollIntoView%2A>|  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [UI 자동화 컨트롤 패턴 개요](ui-automation-control-patterns-overview.md)
 - [UI 자동화 공급자의 컨트롤 패턴 지원](support-control-patterns-in-a-ui-automation-provider.md)

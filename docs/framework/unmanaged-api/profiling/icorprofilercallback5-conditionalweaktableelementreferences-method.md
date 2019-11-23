@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 532c7a02-a9de-4cea-bb2b-7f470da594de
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 08b35dd1744dbbb64d202718b61a9db5684d3bc3
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: ad721d28f6a7dc6ae0370ce10178990cb02fb9f9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66380358"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74430056"
 ---
 # <a name="icorprofilercallback5conditionalweaktableelementreferences-method"></a>ICorProfilerCallback5::ConditionalWeakTableElementReferences 메서드
 
@@ -48,7 +46,7 @@ HRESULT ConditionalWeakTableElementReferences(
 [in] 각각 종속 핸들 쌍의 주 요소에 대한 `ObjectID`를 포함하는 개체 ID의 배열입니다.
 
 `valueRefIds`\
-[in] 각각 종속 핸들 쌍의 보조 요소에 대한 `ObjectID`를 포함하는 개체 ID의 배열입니다. (`keyRefIds[i]` 유지 `valueRefIds[i]` 유지 합니다.)
+[in] 각각 종속 핸들 쌍의 보조 요소에 대한 `ObjectID`를 포함하는 개체 ID의 배열입니다. (`keyRefIds[i]` keeps `valueRefIds[i]` alive.)
 
 `rootIds`\
 [in] 가비지 컬렉션 루트에 대한 추가 정보를 포함하는 정수를 가리키는 `GCHandleID` 값의 배열입니다.
@@ -57,7 +55,7 @@ HRESULT ConditionalWeakTableElementReferences(
 
 ## <a name="example"></a>예제
 
-다음 코드 예제에서는 구현 방법을 보여 줍니다 [ICorProfilerCallback5](icorprofilercallback5-interface.md) 이 메서드를 사용 합니다.
+The following code example demonstrates how to implement [ICorProfilerCallback5](icorprofilercallback5-interface.md) and use this method.
 
 ```cpp
 HRESULT Callback5Impl::ConditionalWeakTableElementReferences(
@@ -80,18 +78,18 @@ HRESULT Callback5Impl::ConditionalWeakTableElementReferences(
 }
 ```
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
-.NET Framework 4.5 또는 이후 버전 구현에 대 한 프로파일러를 [ICorProfilerCallback5](icorprofilercallback5-interface.md) 인터페이스와 지정 된 종속성을 기록 합니다 `ConditionalWeakTableElementReferences` 메서드. `ICorProfilerCallback5` 표시 되는 라이브 개체 간의 종속성의 전체 집합을 제공 `ConditionalWeakTable` 항목입니다. 이러한 종속성과 멤버 필드 참조 하 여 지정 된 [icorprofilercallback:: Objectreferences](icorprofilercallback-objectreferences-method.md) 메서드 사용을 관리 되는 프로파일러가 라이브 개체의 전체 개체 그래프를 생성 합니다.
+A profiler for the .NET Framework 4.5 or later versions implements the [ICorProfilerCallback5](icorprofilercallback5-interface.md) interface and records the dependencies specified by the `ConditionalWeakTableElementReferences` method. `ICorProfilerCallback5` provides the complete set of dependencies among live objects represented by `ConditionalWeakTable` entries. These dependencies and the member field references specified by the [ICorProfilerCallback::ObjectReferences](icorprofilercallback-objectreferences-method.md) method enable a managed profiler to generate the full object graph of live objects.
 
 ## <a name="requirements"></a>요구 사항
 
-**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.
+**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.
 
 **헤더:** CorProf.idl, CorProf.h
 
 **.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ICorProfilerCallback5 인터페이스](icorprofilercallback5-interface.md)

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5604d21f-e6b7-490e-b469-42122a7568e1
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2bc3e48185c3bc289a4f7bfd865f69d9c06a720c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2c2eb7d0dc04d813b1ce91fb1acf4b171f244592
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750506"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445752"
 ---
 # <a name="icorprofilercallbackremotingserverreceivingmessage-method"></a>ICorProfilerCallback::RemotingServerReceivingMessage 메서드
-프로세스가 원격 메서드 호출 또는 정품 인증 요청을 받았는지 프로파일러에 알립니다.  
+Notifies the profiler that the process has received a remote method invocation or activation request.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,24 +35,24 @@ HRESULT RemotingClientSendingMessage(
   
 ## <a name="parameters"></a>매개 변수  
  `pCookie`  
- [in] 에 제공 된 값을 사용 하 여 해당 하는 값 [icorprofilercallback:: Remotingclientsendingmessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientsendingmessage-method.md) 이러한 조건에서:  
+ [in] A value that will correspond with the value provided in [ICorProfilerCallback::RemotingClientSendingMessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientsendingmessage-method.md) under these conditions:  
   
-- 원격 GUID 쿠키 활성화 됩니다.  
+- Remoting GUID cookies are active.  
   
-- 채널은 메시지 전송에 성공 합니다.  
+- The channel succeeds in transmitting the message.  
   
-- GUID 쿠키는 클라이언트 쪽 프로세스에서 활성 상태입니다.  
+- GUID cookies are active on the client-side process.  
   
- 따라서 쉽게 페어링 원격 호출 및 논리 호출 스택 생성 합니다.  
+ This allows easy pairing of remoting calls and the creation of a logical call stack.  
   
  `fIsAsync`  
- [in] 값을 `true` 호출이 고, 그렇지 않으면 비동기 이면 `false`합니다.  
+ [in] A value that is `true` if the call is asynchronous; otherwise, `false`.  
   
-## <a name="remarks"></a>설명  
- 메시지 요청 비동기 인 경우 임의의 스레드에서 요청을 처리할 수 있습니다.  
+## <a name="remarks"></a>주의  
+ If the message request is asynchronous, the request can be serviced by any arbitrary thread.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
   
@@ -62,6 +60,6 @@ HRESULT RemotingClientSendingMessage(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ICorProfilerCallback 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

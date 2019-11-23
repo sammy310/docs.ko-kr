@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8027df7c-cfad-4724-bda0-7538d9519070
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6be71878ba354ebe53b4b8b9b40db3222ec828f3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1362efbf518310240ce665badc93810d1c0b9b89
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781732"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450194"
 ---
 # <a name="cornativelinkflags-enumeration"></a>CorNativeLinkFlags 열거형
 네이티브 코드를 연결할 때 링커에서 사용하는 플래그 값을 제공합니다.  
@@ -40,22 +38,22 @@ typedef enum
   
 ## <a name="members"></a>멤버  
   
-|멤버|Description|  
+|멤버|설명|  
 |------------|-----------------|  
-|`nlfNone`|플래그가 없음을 나타냅니다.|  
-|`nlfLastError`|나타냅니다는 `setLastError` 키워드입니다.|  
-|`nlfNoMangle`|나타냅니다는 `nomangle` 키워드입니다.|  
+|`nlfNone`|Indicates no flags.|  
+|`nlfLastError`|Indicates a `setLastError` keyword.|  
+|`nlfNoMangle`|Indicates a `nomangle` keyword.|  
 |`nlfMaxValue`|사용되지 않습니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** Cor.h  
+ **Header:** Cor.h  
   
- **라이브러리:** MsCorEE.dll에 리소스로 포함  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [메타데이터 열거형](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

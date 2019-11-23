@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8cdac941-8b94-4497-b874-4e571785f3fe
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 124921f2f99ca4d8da88cc3713624383e225a26f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e40687f7f843dc563801bb01b503d2ae94a094fc
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781262"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446022"
 ---
 # <a name="functionleave2-function"></a>FunctionLeave2 함수
-함수에 대 한 호출자에 게 반환 하는 것을 스택 프레임 및 함수 반환 값에 대 한 정보를 제공 프로파일러에 알립니다.  
+Notifies the profiler that a function is about to return to the caller and provides information about the stack frame and function return value.  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,46 +37,46 @@ void __stdcall FunctionLeave2 (
   
 ## <a name="parameters"></a>매개 변수  
  `funcId`  
- [in] 식별자를 반환 하는 함수입니다.  
+ [in] The identifier of the function that is returning.  
   
  `clientData`  
- [in] 프로파일러를 통해 이전에 지정 하는 매핑된 함수 식별자를 [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md) 함수입니다.  
+ [in] The remapped function identifier, which the profiler previously specified via the [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md) function.  
   
  `func`  
- [in] `COR_PRF_FRAME_INFO` 스택 프레임에 대 한 정보를 가리키는 값입니다.  
+ [in] A `COR_PRF_FRAME_INFO` value that points to information about the stack frame.  
   
- 프로파일러에 실행 엔진으로 다시 전달할 수 있는 불투명 핸들로이 처리 해야 합니다 [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) 메서드.  
+ The profiler should treat this as an opaque handle that can be passed back to the execution engine in the [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) method.  
   
  `retvalRange`  
- [in] 에 대 한 포인터를 [COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) 함수의 반환 값의 메모리 위치를 지정 하는 구조입니다.  
+ [in] A pointer to a [COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) structure that specifies the memory location of the function's return value.  
   
- 반환 값 정보에 액세스 하기 위해는 `COR_PRF_ENABLE_FUNCTION_RETVAL` 플래그를 설정 해야 합니다. 프로파일러를 사용 하 여 수를 [icorprofilerinfo:: Seteventmask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) 이벤트 플래그를 설정 하는 방법입니다.  
+ In order to access return value information, the `COR_PRF_ENABLE_FUNCTION_RETVAL` flag must be set. The profiler can use the [ICorProfilerInfo::SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) method to set the event flags.  
   
-## <a name="remarks"></a>설명  
- 값을 `func` 및 `retvalRange` 매개 변수가 후 올바르면는 `FunctionLeave2` 함수 반환 값이 변경 될 수 있습니다 또는 제거 하기 때문에 합니다.  
+## <a name="remarks"></a>주의  
+ The values of the `func` and `retvalRange` parameters are not valid after the `FunctionLeave2` function returns because the values may change or be destroyed.  
   
- `FunctionLeave2` 함수 콜백을 구현 해야 합니다. 구현을 사용 해야 합니다 `__declspec`(`naked`) 저장소 클래스 특성입니다.  
+ The `FunctionLeave2` function is a callback; you must implement it. The implementation must use the `__declspec`(`naked`) storage-class attribute.  
   
- 실행 엔진은이 함수를 호출 하기 전에 모든 레지스터를 저장 하지 않습니다.  
+ The execution engine does not save any registers before calling this function.  
   
-- 항목에는 부동 소수점 FPU (단위)에 포함 하 여 사용 하는 모든 레지스터를 저장 해야 합니다.  
+- On entry, you must save all registers that you use, including those in the floating-point unit (FPU).  
   
-- 종료 시 스택의 호출자에 의해 푸시된 모든 매개 변수에 팝 하 여 복원 해야 합니다.  
+- On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.  
   
- 구현의 `FunctionLeave2` 가비지 수집 지연 될 수 있으므로 차단 하지 않아야 합니다. 구현 해야 스택의 가비지 컬렉션에 게 친숙 한 상태의 수 없을 수도 가비지 수집을 시도 하지 않습니다. 런타임이 될 때까지 차단 됩니다 가비지 수집을 시도 하는 경우 `FunctionLeave2` 반환 합니다.  
+ The implementation of `FunctionLeave2` should not block because it will delay garbage collection. The implementation should not attempt a garbage collection because the stack may not be in a garbage collection-friendly state. If a garbage collection is attempted, the runtime will block until `FunctionLeave2` returns.  
   
- 또한는 `FunctionLeave2` 함수를 호출 해서는 안 관리 코드로 또는는 관리 되는 메모리를 할당 합니다.  
+ Also, the `FunctionLeave2` function must not call into managed code or in any way cause a managed memory allocation.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** CorProf.idl  
+ **Header:** CorProf.idl  
   
  **라이브러리:** CorGuids.lib  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [FunctionEnter2 함수](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)
 - [FunctionTailcall2 함수](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)

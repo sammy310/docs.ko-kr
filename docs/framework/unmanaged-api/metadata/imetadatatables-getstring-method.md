@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 895c35cf-b95d-4e3b-93b5-cfc1cf9044fc
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3f817fa3f24bebf3303c656bd02c4d93d1d1431b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 055499230f500cb7249746e1acbf46b4548d25bc
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781392"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74426803"
 ---
 # <a name="imetadatatablesgetstring-method"></a>IMetaDataTables::GetString 메서드
-현재 참조 범위에 있는 테이블 열에서 지정된 된 인덱스에 문자열을 가져옵니다.  
+Gets the string at the specified index from the table column in the current reference scope.  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,21 +36,21 @@ HRESULT GetString (
   
 ## <a name="parameters"></a>매개 변수  
  `ixString`  
- [in] 다음 값에 대 한 검색을 시작 하는 인덱스입니다.  
+ [in] The index at which to start to search for the next value.  
   
  `ppString`  
- [out] 반환 되는 문자열 값에 대 한 포인터에 대 한 포인터입니다.  
+ [out] A pointer to a pointer to the returned string value.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** Cor.h  
+ **Header:** Cor.h  
   
- **라이브러리:** MsCorEE.dll에서 리소스로 사용  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [IMetaDataTables 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
 - [IMetaDataTables2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

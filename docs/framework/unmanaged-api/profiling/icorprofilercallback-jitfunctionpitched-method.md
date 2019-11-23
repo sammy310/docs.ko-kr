@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 116085df-7a77-404a-afac-d0557a12b986
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 71df3bc707099cbad06742d964881ee629216b69
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9bb3934be4a2f4de4a3a235a00522c801331e1eb
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782812"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448423"
 ---
 # <a name="icorprofilercallbackjitfunctionpitched-method"></a>ICorProfilerCallback::JITFunctionPitched 메서드
-프로파일러에 알립니다 하는 시간 (JIT) 된 함수-컴파일된 메모리에서 제거 되었습니다.  
+Notifies the profiler that a function that has been just-in-time (JIT)-compiled has been removed from memory.  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,15 +34,15 @@ HRESULT JITFunctionPitched(
   
 ## <a name="parameters"></a>매개 변수  
  `functionId`  
- [in] 제거 된 함수의 ID입니다.  
+ [in] The ID of the function that was removed.  
   
-## <a name="remarks"></a>설명  
- 제거 함수를 호출 하는 경우 프로파일러는 함수를 다시 컴파일할 때 새 JIT 컴파일 이벤트를 받게 됩니다. 현재는 공용 언어 런타임 (CLR) JIT 컴파일러가 함수를 제거 하지 메모리에서이 콜백은 현재 사용 되지 않습니다 하 고 프로파일러에 의해 수신 되지 않습니다.  
+## <a name="remarks"></a>주의  
+ If the removed function is called, the profiler will receive new JIT-compilation events when the function is recompiled. Currently, the common language runtime (CLR) JIT compiler does not remove functions from memory, so this callback is currently not used and will not be received by the profiler.  
   
- 변수의 `functionId` 함수가 다시 컴파일될 때까지 올바르지 않습니다. 함수를 다시 컴파일할 때 동일한 `functionId` 값이 사용 됩니다.  
+ The value of `functionId` is not valid until the function is recompiled. When the function is recompiled, the same `functionId` value will be used.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
   
@@ -52,6 +50,6 @@ HRESULT JITFunctionPitched(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ICorProfilerCallback 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

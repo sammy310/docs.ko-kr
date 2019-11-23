@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 1b33de4c-19cb-4a36-a93f-8675b2a36d58
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b293c30060107d18c6b609efc82c4128a73cc1c7
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: df97f4c37d8f335ce183685debd7c0933be910ed
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70787200"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445568"
 ---
 # <a name="setmanifestfile-method"></a>SetManifestFile 메서드
-링커가 어셈블리를 만들 때 사용 하는 매니페스트 파일을 지정 하거나 다시 설정할 수 있습니다.  
+Enables you to specify or reset the manifest file that the linker uses when it creates the assembly.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,18 +35,18 @@ HRESULT SetManifestFile(
 ## <a name="parameters"></a>매개 변수  
  `pszFile`  
   
- Win32 리소스 blob에 콘텐츠를 포함 하는 매니페스트 파일의 이름입니다.  
+ The name of the manifest file whose contents are put into the Win32 resources blob.  
   
 ## <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 S_OK를 반환 합니다.  
+ Returns S_OK if the method succeeds.  
   
-## <a name="remarks"></a>설명  
- Win32ResBlob를 요청 하기 전에이를 호출 합니다. `pszFile` 매개 변수 값은 콘텐츠를 읽고 Win32 리소스에서 ID가 RT_MANIFEST 인 매니페스트 파일의 이름입니다. NULL의 매개 변수를 사용 하 여 호출 하면 이전에 읽은 모든 매니페스트가 지워집니다. 이렇게 하면 링커가 초기화 시간의 상태를 다시 설정할 수 있습니다.  
+## <a name="remarks"></a>주의  
+ Call this before asking for the Win32ResBlob. The value of the `pszFile` parameter is the name of the manifest file whose contents are read and put in the Win32 resources with ID of RT_MANIFEST. When called by using a parameter of NULL, any previously read manifest is cleared. This enables one to reset the state of the linker to that of initialization time.  
   
 ## <a name="requirements"></a>요구 사항  
- ALink 필요  
+ Requires aLink.h  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [IALink3 인터페이스](ialink3-interface.md)
 - [ALink API](index.md)

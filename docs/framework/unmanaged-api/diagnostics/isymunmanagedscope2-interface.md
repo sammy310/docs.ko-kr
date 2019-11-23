@@ -14,29 +14,27 @@ helpviewer_keywords:
 ms.assetid: 2ed6a387-ba45-483e-9a1e-b0c69f67998b
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0109b25b1cdc42204fc4873577e495641c4ec4fd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3374097c8d343fed6badf046742ca556d2a92f3e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61761574"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446222"
 ---
 # <a name="isymunmanagedscope2-interface"></a>ISymUnmanagedScope2 인터페이스
-메서드 내에서 어휘 범위를 나타냅니다. 이 인터페이스를 확장 합니다 [ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md) 범위 내에서 정의 된 상수에 대 한 정보를 가져오는 메서드를 사용 하 여 인터페이스입니다.  
+Represents a lexical scope within a method. This interface extends the [ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md) interface with methods that get information about constants defined within the scope.  
   
 ## <a name="methods"></a>메서드  
   
 |메서드|설명|  
 |------------|-----------------|  
-|[GetConstantCount 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope2-getconstantcount-method.md)|이 범위 내에 정의 된 상수의 수를 가져옵니다.|  
-|[GetConstants 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope2-getconstants-method.md)|이 범위 내에 정의 된 지역 상수를 가져옵니다.|  
+|[GetConstantCount 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope2-getconstantcount-method.md)|Gets a count of the constants defined within this scope.|  
+|[GetConstants 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope2-getconstants-method.md)|Gets the local constants defined within this scope.|  
   
 ## <a name="requirements"></a>요구 사항  
- **헤더:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [진단 기호 저장소 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
 - [ISymUnmanagedScope 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - metadata, emit interfaces
 - reflection emit, overview
 - assemblies [.NET Framework], emitting dynamic assemblies
-ms.openlocfilehash: 4578b708b10e93a7f5def5b9dc040eeb646bdc8f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 578851bed188921324e3c25e533b3466068dee3d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130243"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446789"
 ---
 # <a name="emitting-dynamic-methods-and-assemblies"></a>동적 메서드 및 어셈블리 생성
 
@@ -34,9 +34,9 @@ ms.locfileid: "73130243"
   
 <xref:System.Reflection.Emit> 네임스페이스의 관리되는 형식 외에도 [메타데이터 인터페이스](../unmanaged-api/metadata/metadata-interfaces.md) 참조 설명서에서 설명하는 관리되지 않는 메타데이터 인터페이스가 있습니다. 관리되는 리플렉션 내보내기는 관리되지 않는 메타데이터 인터페이스 보다 강력한 의미 체계 오류 검사 및 높은 수준의 메타데이터 추상화를 제공합니다.  
   
-메타데이터 및 MSIL 작업을 위한 다른 유용한 리소스는 CLI(공용 언어 인프라) 설명서, 특히 "Partition II: Metadata Definition and Semantics" 및 "Partition III: CIL Instruction Set"입니다. 이 설명서는 [MSDN](https://go.microsoft.com/fwlink/?LinkID=65555) 및 [Ecma 웹 사이트](https://go.microsoft.com/fwlink/?LinkId=116487)에서 온라인으로 제공됩니다.  
+메타데이터 및 MSIL 작업을 위한 다른 유용한 리소스는 CLI(공용 언어 인프라) 설명서, 특히 "Partition II: Metadata Definition and Semantics" 및 "Partition III: CIL Instruction Set"입니다. The documentation is available online at the [Ecma Web site](https://www.ecma-international.org/publications/standards/Ecma-335.htm).  
   
-## <a name="in-this-section"></a>섹션 내용
+## <a name="in-this-section"></a>단원 내용
   
 [리플렉션 내보내기의 보안 문제점](security-issues-in-reflection-emit.md)  
 리플렉션 내보내기를 사용하여 동적 어셈블리를 만드는 경우와 관련된 보안 문제를 설명합니다.  
@@ -53,7 +53,7 @@ ms.locfileid: "73130243"
 [동적 형식 생성을 위해 수집 가능한 어셈블리](collectible-assemblies.md)   
 만들어진 애플리케이션 도메인을 언로드하지 않고 언로드할 수 있는 동적 어셈블리인 수집 가능한 어셈블리를 소개합니다.
   
-## <a name="reference"></a>참조  
+## <a name="reference"></a>참고  
 
 <xref:System.Reflection.Emit.OpCodes>  
 메서드 본문을 작성하는 데 사용할 수 있는 MSIL 명령 코드의 카탈로그를 작성합니다.  
@@ -67,7 +67,7 @@ ms.locfileid: "73130243"
 <xref:System.Reflection>  
 메타데이터와 관리 코드를 탐색하는 데 사용되는 관리되는 클래스를 포함합니다.  
   
-## <a name="related-sections"></a>관련 섹션  
+## <a name="related-sections"></a>관련 단원  
 
 [리플렉션](reflection.md)  
 메타데이터와 관리 코드를 탐색하는 방법을 설명합니다.  

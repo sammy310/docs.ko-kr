@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 86051a11-ad8e-4ace-9a11-ff0f982a5e11
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 710a33583e45b27cec66278f4e20152acfae97dc
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ccb970fb2eb387f1be795f9322d5bf9650593a35
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782873"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445772"
 ---
 # <a name="icorprofilercallbackremotingserverinvocationstarted-method"></a>ICorProfilerCallback::RemotingServerInvocationStarted 메서드
-프로세스에서 원격 메서드 호출 요청에 대 한 응답에서 메서드를 호출 하는 프로파일러에 알립니다.  
+Notifies the profiler that the process is invoking a method in response to a remote method invocation request.  
   
 ## <a name="syntax"></a>구문  
   
@@ -34,7 +32,7 @@ HRESULT RemotingServerInvocationStarted();
 ```  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
   
@@ -42,6 +40,6 @@ HRESULT RemotingServerInvocationStarted();
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ICorProfilerCallback 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

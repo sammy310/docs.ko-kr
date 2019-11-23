@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5c8840be-ffea-447f-9c8d-178f1eaf8d06
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 48e359f8ed4d52de1cff7ca46a523f4eb80ec4c6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b5fc8b6807a4c8eb700ab3fa181a216e48a732ff
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776897"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449039"
 ---
 # <a name="isymunmanagedencupdategetlocalvariables-method"></a>ISymUnmanagedENCUpdate::GetLocalVariables 메서드
-지역 변수를 가져옵니다.  
+Gets the local variables.  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,23 +38,23 @@ HRESULT GetLocalVariables(
   
 ## <a name="parameters"></a>매개 변수  
  `mdMethodToken`  
- [in] 메서드의 메타 데이터 토큰입니다.  
+ [in] The metadata token of the method.  
   
  `cLocals`  
- [in] A `ULONG` 의 크기를 나타내는 `rgLocals` 매개 변수입니다.  
+ [in] A `ULONG` that indicates the size of the `rgLocals` parameter.  
   
  `rgLocals`  
- [out] 반환된 된 배열 [ISymUnmanagedVariable](isymunmanagedvariable-interface.md) 인스턴스.  
+ [out] The returned array of [ISymUnmanagedVariable](isymunmanagedvariable-interface.md) instances.  
   
  `pceltFetched`  
- [out] 에 대 한 포인터를 `ULONG` 의 크기를 받는 `rgLocals` 지역 변수를 포함 하는 데 필요한 버퍼입니다.  
+ [out] A pointer to a `ULONG` that receives the size of the `rgLocals` buffer required to contain the locals.  
   
 ## <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>요구 사항  
- **헤더:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ISymUnmanagedENCUpdate 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)

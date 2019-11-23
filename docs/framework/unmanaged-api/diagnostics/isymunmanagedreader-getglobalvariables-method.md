@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: a2dd5098-3e58-4be5-b7a2-e4160b3b505a
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3de246c8b9c4387ea782b77f16edfbe792bb4427
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b6cf7293f1d65db1f60301f49ce655c74df3daca
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777020"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448324"
 ---
 # <a name="isymunmanagedreadergetglobalvariables-method"></a>ISymUnmanagedReader::GetGlobalVariables 메서드
-모든 전역 변수를 반환합니다.  
+Returns all global variables.  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,20 +37,20 @@ HRESULT GetGlobalVariables(
   
 ## <a name="parameters"></a>매개 변수  
  `cVars`  
- [in] 가리키는 버퍼의 길이 `pcVars`입니다.  
+ [in] The length of the buffer pointed to by `pcVars`.  
   
  `pcVars`  
- [out] 에 대 한 포인터를 `ULONG32` 변수를 포함 하는 데 필요한 버퍼의 크기를 받는 합니다.  
+ [out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the variables.  
   
  `pVars`  
- [out] 변수를 포함 하는 버퍼입니다.  
+ [out] A buffer that contains the variables.  
   
 ## <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>요구 사항  
- **헤더:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ISymUnmanagedReader 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

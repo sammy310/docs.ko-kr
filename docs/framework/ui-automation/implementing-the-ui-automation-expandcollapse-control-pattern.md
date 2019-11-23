@@ -6,17 +6,17 @@ helpviewer_keywords:
 - ExpandCollapse control pattern
 - control patterns, ExpandCollapse
 ms.assetid: 1dbabb8c-0d68-47c1-a35e-1c01cb01af26
-ms.openlocfilehash: 232bceba8286c2566a7df03b9001a5c43b348b20
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 073ff0727fc6aab1189f73a254aa95da60820cc3
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71043456"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447144"
 ---
 # <a name="implementing-the-ui-automation-expandcollapse-control-pattern"></a>UI 자동화 ExpandCollapse 컨트롤 패턴 구현
 
 > [!NOTE]
-> 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. 에 대 한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [최신 정보는 Windows Automation API: UI 자동화](https://go.microsoft.com/fwlink/?LinkID=156746).
+> 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조하세요.
 
 이 항목에서는 속성, 메서드 및 이벤트에 대한 정보를 포함하여 <xref:System.Windows.Automation.Provider.IExpandCollapseProvider>를 구현하기 위한 지침 및 규칙을 제공합니다. 추가 참조에 대한 링크는 개요의 끝에 나열되어 있습니다.
 
@@ -35,7 +35,7 @@ ExpandCollapse 컨트롤 패턴을 구현할 때는 다음 지침 및 규칙에 
 
 - 컨트롤의 <xref:System.Windows.Automation.ExpandCollapseState> 가 <xref:System.Windows.Automation.ExpandCollapseState.LeafNode>로 설정되어 있으면 모든 <xref:System.Windows.Automation.ExpandCollapsePattern> 기능이 컨트롤에 대해 비활성화되고 이 컨트롤 패턴을 사용하여 가져올 수 있는 유일한 정보는 <xref:System.Windows.Automation.ExpandCollapseState>입니다. 나중에 자식 개체를 추가하면 <xref:System.Windows.Automation.ExpandCollapseState> 가 변경되고 <xref:System.Windows.Automation.ExpandCollapsePattern> 기능이 활성화됩니다.
 
-- <xref:System.Windows.Automation.ExpandCollapseState> 는 직계 자식 개체의 표시 유형을 나타내며, 모든 하위 개체의 표시 유형을 나타내지는 않습니다.
+- <xref:System.Windows.Automation.ExpandCollapseState>는 직계 자식 개체의 표시 유형을 나타내며, 모든 하위 개체의 표시 유형을 나타내지는 않습니다.
 
 - 확장 및 축소는 컨트롤 관련 기능입니다. 다음은 이 동작의 예입니다.
 
@@ -58,7 +58,7 @@ ExpandCollapse 컨트롤 패턴을 구현할 때는 다음 지침 및 규칙에 
 |<xref:System.Windows.Automation.Provider.IExpandCollapseProvider.ExpandCollapseState%2A>|속성|없음|
 |<xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A>|메서드|없음|
 |<xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A>|메서드|없음|
-|<xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>|이벤트|이 컨트롤에는 연결된 이벤트가 없습니다. 이 제네릭 대리자를 사용합니다.|
+|<xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>|이벤트(event)|이 컨트롤에는 연결된 이벤트가 없습니다. 이 제네릭 대리자를 사용합니다.|
 
 <a name="Exceptions"></a>
 
@@ -68,9 +68,9 @@ ExpandCollapse 컨트롤 패턴을 구현할 때는 다음 지침 및 규칙에 
 
 |예외 형식|조건|
 |--------------------|---------------|
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> 또는 이<xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> 호출 될 때 <xref:System.Windows.Automation.ExpandCollapseState>  =  가<xref:System.Windows.Automation.ExpandCollapseState.LeafNode>호출 됩니다.|
+|<xref:System.InvalidOperationException>|Either <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> or <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> is called when the <xref:System.Windows.Automation.ExpandCollapseState> = <xref:System.Windows.Automation.ExpandCollapseState.LeafNode>.|
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [UI 자동화 컨트롤 패턴 개요](ui-automation-control-patterns-overview.md)
 - [UI 자동화 공급자의 컨트롤 패턴 지원](support-control-patterns-in-a-ui-automation-provider.md)

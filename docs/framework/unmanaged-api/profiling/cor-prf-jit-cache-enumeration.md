@@ -14,20 +14,18 @@ helpviewer_keywords:
 ms.assetid: e7b8f6b4-95bc-4ba5-b9eb-f5590a7326a4
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 30500e8ea55f8298b9a980e34dc611b58a51bdcc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 57d6ba77081536eb2bce0bf62d43ac080b2f5554
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916395"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447346"
 ---
 # <a name="cor_prf_jit_cache-enumeration"></a>COR_PRF_JIT_CACHE 열거형
 캐시된 함수 검색의 결과를 나타냅니다.  
   
 > [!NOTE]
-> `COR_PRF_CACHED_FUNCTION_FOUND`의 값이 0 이므로 `COR_PRF_JIT_CACHE` 부울 서로게이트로 사용할 수 없습니다.  
+> `COR_PRF_CACHED_FUNCTION_FOUND` has a value of zero, so `COR_PRF_JIT_CACHE` cannot be used as a Boolean surrogate.  
   
 ## <a name="syntax"></a>구문  
   
@@ -42,18 +40,18 @@ typedef enum {
   
 |멤버|설명|  
 |------------|-----------------|  
-|`COR_PRF_FUNCTION_FOUND`|검색에서 함수를 찾았습니다.|  
-|`COR_PRF_FUNCTION_NOT_FOUND`|검색에서 함수를 찾지 못했습니다.|  
+|`COR_PRF_FUNCTION_FOUND`|The search found the function.|  
+|`COR_PRF_FUNCTION_NOT_FOUND`|The search did not find the function.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
   
- **라이브러리** CorGuids.lib  
+ **라이브러리:** CorGuids.lib  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [프로파일링 열거형](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

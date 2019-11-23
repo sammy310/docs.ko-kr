@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4d69fb6d-ee35-4318-8224-5eea2bd16818
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 02331bb3b0c70b946eaa28c9cd316f109ac927b6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0a1d244a4bf077970d2031c3c3b2bc56a0dd3d79
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777243"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74426816"
 ---
 # <a name="imetadataemitsetrva-method"></a>IMetaDataEmit::SetRVA 메서드
-지정 된 메서드의 상대 가상 주소를 설정합니다.  
+Sets the relative virtual address of the specified method.  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,21 +36,21 @@ HRESULT SetRVA (
   
 ## <a name="parameters"></a>매개 변수  
  `md`  
- [in] 대상 메서드 또는 메서드 구현에 대 한 토큰입니다.  
+ [in] The token for the target method or method implementation.  
   
  `ulRVA`  
- [in] 주소는 코드 또는 데이터 영역입니다.  
+ [in] The address of the code or data area.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** Cor.h  
+ **Header:** Cor.h  
   
- **라이브러리:** MSCorEE.dll에서 리소스로 사용  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [IMetaDataEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

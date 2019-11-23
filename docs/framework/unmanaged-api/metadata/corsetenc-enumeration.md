@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: fe4150e8-071d-43fb-8e06-c3c616dbeed2
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2796be32154275387da891683cc5053095f534af
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 39f72e670ddc700c257f50f6bad6fab702ec21b6
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772319"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74432767"
 ---
 # <a name="corsetenc-enumeration"></a>CorSetENC 열거형
 메타데이터 생성 중의 동작에 영향을 주는 데 사용되는 값을 포함합니다.  
@@ -46,24 +44,24 @@ typedef enum CorSetENC {
   
 ## <a name="members"></a>멤버  
   
-|멤버|Description|  
+|멤버|설명|  
 |------------|-----------------|  
-|`MDSetENCOn`|더 이상 사용되지 않습니다.|  
-|`MDSetENCOff`|더 이상 사용되지 않습니다.|  
-|`MDUpdateENC`|메타 데이터를 업데이트할 수 있지만 토큰은 이동할 수 없음을 나타냅니다.|  
-|`MDUpdateFull`|업데이트 하는 동안 토큰을 이동할 수 있는지를 나타냅니다.|  
-|`MDUpdateExtension`|업데이트 추가 이루어진 수를 나타냅니다. 토큰을 이동할 수 없습니다.|  
-|`MDUpdateIncremental`|증분 컴파일을 나타냅니다.|  
-|`MDUpdateDelta`|해당만 변경 된 메타 데이터를 저장할 것을 나타냅니다.|  
-|`MDUpdateMask`|포함 `MDUpdateENC`하십시오 `MDUpdateFull` 및 `MDUpdateIncremental`합니다.|  
+|`MDSetENCOn`|사용되지 않습니다.|  
+|`MDSetENCOff`|사용되지 않습니다.|  
+|`MDUpdateENC`|Indicates that whereas metadata can be updated, tokens cannot be moved.|  
+|`MDUpdateFull`|Indicates that tokens can be moved during updates.|  
+|`MDUpdateExtension`|Indicates that updates can consist only of additions. Tokens cannot be moved.|  
+|`MDUpdateIncremental`|Indicates that compilation is incremental.|  
+|`MDUpdateDelta`|Indicates that only changed metadata should be saved.|  
+|`MDUpdateMask`|Includes `MDUpdateENC`, `MDUpdateFull` and `MDUpdateIncremental`.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** CorHdr.h  
+ **Header:** CorHdr.h  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [메타데이터 열거형](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

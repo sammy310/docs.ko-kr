@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c9df4087-12b3-46d9-b075-9067dd7805df
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2b46d1f5fb797b74726070ae3cd9814dc46c8f03
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c037b9dce4b7530c952c75122f86335da82e1b27
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778327"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446037"
 ---
 # <a name="imetadataassemblyimportcloseenum-method"></a>IMetaDataAssemblyImport::CloseEnum 메서드
-지정 된 열거형 인스턴스에 대 한 참조를 해제합니다.  
+Releases a reference to the specified enumeration instance.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,17 +35,17 @@ void CloseEnum (
   
 ## <a name="parameters"></a>매개 변수  
  `hEnum`  
- [in] 닫아야 열거형 인스턴스입니다.  
+ [in] The enumeration instance to be closed.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** Cor.h  
+ **Header:** Cor.h  
   
- **라이브러리:** MsCorEE.dll에서 리소스로 사용  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [IMetaDataAssemblyImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

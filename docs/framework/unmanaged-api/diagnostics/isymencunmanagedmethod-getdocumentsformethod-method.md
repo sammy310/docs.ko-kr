@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: bd6ccde5-d578-48d8-abed-b474fbd48d13
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8b329d096a23df673de038036fa5ea196cbe0eac
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 49023424c21fced1c49b16ecdbea93c654b5e883
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736065"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448388"
 ---
 # <a name="isymencunmanagedmethodgetdocumentsformethod-method"></a>ISymENCUnmanagedMethod::GetDocumentsForMethod 메서드
-줄에는이 메서드는 문서를 가져옵니다.  
+Gets the documents that this method has lines in.  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,20 +36,20 @@ HRESULT GetDocumentsForMethod(
   
 ## <a name="parameters"></a>매개 변수  
  `cDocs`  
- [in] 가리키는 버퍼의 길이 `pcDocs`입니다.  
+ [in] The length of the buffer pointed to by `pcDocs`.  
   
  `pcDocs`  
- [out] 에 대 한 포인터를 `ULONG32` 문자 문서를 포함 하는 데 필요한 버퍼의 크기를 받는 합니다.  
+ [out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the documents.  
   
  `documents`  
- [in] 문서를 포함 하는 버퍼입니다.  
+ [in] The buffer that contains the documents.  
   
 ## <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 s_ok이 고 그렇지 않으면 오류 코드입니다.  
+ S_OK if the method succeeds; otherwise, an error code.  
   
 ## <a name="requirements"></a>요구 사항  
- **헤더:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ISymENCUnmanagedMethod 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)

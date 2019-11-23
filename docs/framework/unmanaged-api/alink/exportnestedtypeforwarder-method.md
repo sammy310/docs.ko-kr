@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 886ea6c5-6b26-4b88-8bf6-448d6d191950
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: eb8112d6d2b5c2cbb257db2f20ff4be5a84e827b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: cc81ccd1c754e3d34c54737f4560b4f81d5cc916
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70787476"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74438419"
 ---
 # <a name="exportnestedtypeforwarder-method"></a>ExportNestedTypeForwarder 메서드
-중첩 된 형식의 형식 전달자를 지정 된 어셈블리의 형식 테이블에 추가 합니다.  
+Adds a type forwarder for a nested type to the type table of the given assembly.  
   
 ## <a name="syntax"></a>구문  
   
@@ -42,33 +40,33 @@ HRESULT ExportNestedTypeForwarder(
   
 ## <a name="parameters"></a>매개 변수  
  `AssemblyID`  
- 내보낼 어셈블리의 ID입니다.  
+ ID of the assembly to export from.  
   
  `FileToken`  
- 형식을 정의 하는 파일의 파일 토큰 또는 어셈블리 ID입니다.  
+ File token or assembly ID of file that defines the type.  
   
  `TypeToken`  
- 형식에 대 한 토큰입니다.  
+ Token for the type.  
   
  `ParentType`  
- 부모 형식의 토큰입니다.  
+ Token of parent type.  
   
  `pszTypename`  
- 내보낼 정규화 된 형식 이름입니다.  
+ Fully qualified type name to export.  
   
  `dwFlags`  
- `ComType``tdPublic` 또는`tdNested`와 같은 플래그입니다.  
+ `ComType` flags such as `tdPublic` or `tdNested`.  
   
  `pType`  
- 내보내기 유형의 토큰을 받습니다. 중첩 된 형식을 내보내는 경우에만 필요 합니다.  
+ Receives token of export type. This is necessary only for emitting nested types.  
   
 ## <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 S_OK를 반환 합니다.  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>요구 사항  
- Alink 필요  
+ Requires alink.h  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [IALink 인터페이스](ialink-interface.md)
 - [IALink2 인터페이스](ialink2-interface.md)

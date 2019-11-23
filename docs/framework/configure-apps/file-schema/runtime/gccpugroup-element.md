@@ -5,20 +5,20 @@ helpviewer_keywords:
 - GCCpuGroup element
 - <GCCpuGroup> element
 ms.assetid: c1fc7d6c-7220-475c-a312-5b8b201f66e0
-ms.openlocfilehash: 352890519c1a227d664d877c3123866e5e4e1657
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ae9c96c9d49cf3f6be94da3f77b91423cab12e0b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73116841"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74430486"
 ---
-# <a name="gccpugroup-element"></a>\<GCCpuGroup > 요소
+# <a name="gccpugroup-element"></a>\<GCCpuGroup> Element
 
 가비지 수집에서 여러 CPU 그룹을 지원할지를 지정합니다.
 
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
-&nbsp;&nbsp;&nbsp;&nbsp; **\<GCCpuGroup >**  
+&nbsp;&nbsp;[ **\<runtime>** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<GCCpuGroup>**
 
 ## <a name="syntax"></a>구문
 
@@ -41,8 +41,8 @@ ms.locfileid: "73116841"
 
 |값|설명|
 |-----------|-----------------|
-|`false`|가비지 수집은 여러 CPU 그룹을 지원 하지 않습니다. 기본값입니다.|
-|`true`|서버 가비지 수집을 사용 하는 경우 가비지 수집은 여러 CPU 그룹을 지원 합니다.|
+|`false`|Garbage collection does not support multiple CPU groups. 기본값입니다.|
+|`true`|Garbage collection supports multiple CPU groups, if server garbage collection is enabled.|
 
 ### <a name="child-elements"></a>자식 요소
 
@@ -57,14 +57,14 @@ ms.locfileid: "73116841"
 
 ## <a name="remarks"></a>주의
 
-컴퓨터에 여러 CPU 그룹이 있고 서버 가비지 수집이 사용 되는 경우 ( [\<gcServer >](gcserver-element.md) 요소 참조)이 요소를 사용 하면 모든 CPU 그룹에서 가비지 수집을 확장 하 고를 만들 때 모든 코어를 고려 합니다. 힙 분산.
+When a computer has multiple CPU groups and server garbage collection is enabled (see the [\<gcServer>](gcserver-element.md) element), enabling this element extends garbage collection across all CPU groups and takes all cores into account when creating and balancing heaps.
 
 > [!NOTE]
-> 이 요소는 가비지 수집 스레드에만 적용 됩니다. 런타임이 모든 CPU 그룹에 사용자 스레드를 배포할 수 있도록 하려면 [\<Thread_UseAllCpuGroups >](thread-useallcpugroups-element.md) 요소도 사용 하도록 설정 해야 합니다.
+> This element applies only to garbage collection threads. To enable the runtime to distribute user threads across all CPU groups, you must also enable the [\<Thread_UseAllCpuGroups>](thread-useallcpugroups-element.md) element.
 
 ## <a name="example"></a>예제
 
-다음 예제에서는 여러 CPU 그룹에 대해 가비지 수집을 사용 하도록 설정 하는 방법을 보여 줍니다.
+The following example shows how to enable garbage collection for multiple CPU groups.
 
 ```xml
 <configuration>
@@ -79,5 +79,5 @@ ms.locfileid: "73116841"
 
 - [런타임 설정 스키마](index.md)
 - [구성 파일 스키마](../index.md)
-- [동시 가비지 수집을 사용 하지 않도록 설정 하려면](gcconcurrent-element.md#to-disable-background-garbage-collection)
-- [워크스테이션 및 서버 가비지 수집](../../../../standard/garbage-collection/fundamentals.md#workstation_and_server_garbage_collection)
+- [To disable concurrent garbage collection](gcconcurrent-element.md#to-disable-background-garbage-collection)
+- [워크스테이션 및 서버 가비지 수집](../../../../standard/garbage-collection/fundamentals.md#workstation-and-server-garbage-collection)

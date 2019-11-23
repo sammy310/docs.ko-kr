@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8d746e0a-d158-4983-88da-db0a0856bc0b
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0076b70c85c21f0c4b1fb140b15000f99dbff742
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cb0af78092822875204f45ec3dca1484e5b5fc90
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755140"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74427463"
 ---
 # <a name="isymunmanagedwriterusingnamespace-method"></a>ISymUnmanagedWriter::UsingNamespace 메서드
-지정된 된 정규화 된 네임 스페이스 이름이 열린 어휘 범위 내에서 되는 것을 지정 합니다. 네임 스페이스는 현재 열려 있는 범위에서 상속 되는 모든 범위 내에서 사용 됩니다. 현재 범위를 닫으면 네임 스페이스의 사용도 중지 됩니다.  
+Specifies that the given fully qualified namespace name is being used within the currently open lexical scope. The namespace will be used within all scopes that inherit from the currently open scope. Closing the current scope will also stop the use of the namespace.  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,14 +34,14 @@ HRESULT UsingNamespace(
   
 ## <a name="parameters"></a>매개 변수  
  `fullName`  
- [in] 네임 스페이스의 정규화 된 이름에 대 한 포인터입니다.  
+ [in] A pointer to the fully qualified name of the namespace.  
   
 ## <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>요구 사항  
- **헤더:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ISymUnmanagedWriter 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

@@ -6,16 +6,16 @@ helpviewer_keywords:
 - List control type
 - UI Automation, List control type
 ms.assetid: 0e959fcb-50f2-413b-948d-7167d279bc11
-ms.openlocfilehash: ed358947fc1dc1d29010a1a31c6c6603567f8734
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: c5ea011651537aa5836eeebe217239234fec40ae
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71041451"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446739"
 ---
 # <a name="ui-automation-support-for-the-list-control-type"></a>List 컨트롤 형식에 대한 UI 자동화 지원
 > [!NOTE]
-> 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. 에 대 한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [최신 정보는 Windows Automation API: UI 자동화](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조하세요.  
   
  이 항목에서는 List 컨트롤 형식에 대한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 지원 정보를 제공합니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에서, 컨트롤 형식은 <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> 속성을 사용하기 위해 컨트롤이 충족해야 하는 조건 집합입니다. 이 조건에는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 구조, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성 값, 컨트롤 패턴에 대한 특정 지침이 포함됩니다.  
   
@@ -25,26 +25,26 @@ ms.locfileid: "71041451"
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
 ## <a name="required-ui-automation-tree-structure"></a>필요한 UI 자동화 트리 구조  
- 다음 표는 목록 컨트롤과 관련된 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리의 두 뷰를 보여주고 각 뷰에 포함될 수 있는 내용에 대해 설명합니다. 컨트롤 뷰에는 컨트롤인 요소만 포함되며, 콘텐츠 뷰에서는 트리와 중복되는 정보가 제거됩니다. 예를 들어, 콤보 상자에 레이블을 지정하는 데 사용되는 텍스트 컨트롤은 `ComboBox NameProperty`로 노출됩니다. 하지만 텍스트 컨트롤이 컨트롤 뷰에서 이 방법으로 이미 노출되므로 두 번 노출시킬 필요는 없습니다. 따라서 콘텐츠 보기에서 제거됩니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리에 대 한 자세한 내용은 [UI 자동화 트리 개요](ui-automation-tree-overview.md)를 참조 하세요.  
+ 다음 표는 목록 컨트롤과 관련된 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리의 두 뷰를 보여주고 각 뷰에 포함될 수 있는 내용에 대해 설명합니다. 컨트롤 뷰에는 컨트롤인 요소만 포함되며, 콘텐츠 뷰에서는 트리와 중복되는 정보가 제거됩니다. 예를 들어, 콤보 상자에 레이블을 지정하는 데 사용되는 텍스트 컨트롤은 `ComboBox NameProperty`로 노출됩니다. 하지만 텍스트 컨트롤이 컨트롤 뷰에서 이 방법으로 이미 노출되므로 두 번 노출시킬 필요는 없습니다. 따라서 콘텐츠 보기에서 제거됩니다. For more information on the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree, see [UI Automation Tree Overview](ui-automation-tree-overview.md).  
   
 |컨트롤 뷰|콘텐츠 뷰|  
 |------------------|------------------|  
 |컨트롤에 해당하는 요소를 포함합니다.|최종 사용자에게 의미 있는 가장 작은 정보 집합에서 보조 기술이 작동되도록 트리에서 중복되는 정보를 제거합니다.|  
-|목록<br /><br /> -DataItem (0 개 이상)<br />-ListItem (0 개 이상)<br />-Group (0 개 이상)<br />-ScrollBar (0, 1 또는 2)|목록<br /><br /> -DataItem (0 개 이상)<br />-ListItem (0 개 이상)<br />-Group (0 개 이상)|  
+|목록<br /><br /> -   DataItem (0 or more)<br />-   ListItem (0 or more)<br />-   Group (0 or more)<br />-   ScrollBar (0, 1 or 2)|목록<br /><br /> -   DataItem (0 or more)<br />-   ListItem (0 or more)<br />-   Group (0 or more)|  
   
  List 컨트롤 형식(예: 목록 컨트롤)을 구현하는 컨트롤의 컨트롤 뷰는 다음과 같이 구성되어 있습니다.  
   
-- 목록 컨트롤 내에 있는 0 개 이상의 항목 (항목은 List Item 또는 Data Item 컨트롤 형식에 따라 달라 집니다.)
+- Zero or more items within the list control (items can be based on the List Item or Data Item control types).
   
-- 목록 컨트롤 내에서 0 개 이상의 그룹 컨트롤
+- Zero or more group controls within a list control.
   
-- 0, 1 또는 2 개의 스크롤 막대 컨트롤입니다.
+- Zero, one, or two scroll bar controls.
   
 List 컨트롤 형식(예: 목록 컨트롤)을 구현하는 컨트롤의 콘텐츠 뷰는 다음과 같이 구성되어 있습니다.  
   
-- 목록 컨트롤 내에 있는 0 개 이상의 항목 (항목은 List Item 또는 Data Item 컨트롤 형식에 따라 달라 집니다.)
+- Zero or more items within the list control (items can be based on the List Item or Data Item control types).
   
-- 목록 컨트롤 내에서 0 개 이상의 그룹
+- Zero or more groups within the list control.
 
 함께 그룹화된 항목 외에 계층 관계가 있는 항목은 목록 컨트롤 항목에 포함되지 않아야 합니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리에 항목의 자식이 있는 경우 목록 컨테이너는 Tree 컨트롤 형식을 기반으로 해야 합니다.  
   
@@ -52,13 +52,13 @@ List 컨트롤 형식(예: 목록 컨트롤)을 구현하는 컨트롤의 콘텐
   
 <a name="Required_UI_Automation_Properties"></a>   
 ## <a name="required-ui-automation-properties"></a>필요한 UI 자동화 속성  
- 다음 표에서는 값 또는 정의가 목록 컨트롤과 특별히 관련된 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성을 나열하여 보여 줍니다. 속성에 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 대 한 자세한 내용은 [클라이언트에 대 한 UI 자동화 속성](ui-automation-properties-for-clients.md)을 참조 하세요.  
+ 다음 표에서는 값 또는 정의가 목록 컨트롤과 특별히 관련된 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성을 나열하여 보여 줍니다. For more information on [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] properties, see [UI Automation Properties for Clients](ui-automation-properties-for-clients.md).  
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성|값|노트|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|메모를 참조하세요.|이 속성의 값은 애플리케이션의 모든 컨트롤에서 고유해야 합니다.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|메모를 참조하세요.|전체 컨트롤이 포함된 가장 바깥쪽 사각형입니다.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|메모를 참조하세요.|목록 컨트롤에 클릭 가능한 지점(클릭하여 목록에서 포커스를 받을 수 있도록 하는 지점)이 있는 경우, 해당 지점은 이 속성을 통해 노출되어야 합니다.<br /><br /> `IsOffScreen` 속성의 값이 true <xref:System.Windows.Automation.NoClickablePointException> 이면이 발생 합니다.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|메모를 참조하세요.|목록 컨트롤에 클릭 가능한 지점(클릭하여 목록에서 포커스를 받을 수 있도록 하는 지점)이 있는 경우, 해당 지점은 이 속성을 통해 노출되어야 합니다.<br /><br /> If the value of the `IsOffScreen` property is true, then the <xref:System.Windows.Automation.NoClickablePointException> will be raised.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|메모를 참조하세요.|컨트롤이 키보드 포커스를 받을 수 있으면 해당 컨트롤은 이 속성을 지원해야 합니다.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|메모를 참조하세요.|목록 컨트롤의 Name 속성 값은 사용자에게 선택하라고 요청하는 옵션의 범주를 전달해야 합니다. 이 속성은 일반적으로 정적 텍스트 레이블에서 이름을 가져옵니다. 정적 텍스트 레이블이 없는 경우 애플리케이션 개발자 Name 속성의 값을 노출해야 합니다.<br /><br /> 컨트롤이 다른 컨트롤의 하위 트리 내에 사용되는 경우에만 이 속성이 목록 컨트롤에 필요하지 않습니다.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|메모를 참조하세요.|정적 텍스트 레이블이 있는 경우 이 속성은 해당 컨트롤에 대한 참조를 노출해야 합니다.|  
@@ -75,7 +75,7 @@ List 컨트롤 형식(예: 목록 컨트롤)을 구현하는 컨트롤의 콘텐
   
 |컨트롤 패턴/패턴 속성|지원/값|노트|  
 |---------------------------------------|--------------------|-----------|  
-|<xref:System.Windows.Automation.Provider.ISelectionProvider>|필수|컨트롤에 포함된 항목 간에 선택 상태가 유지되면 List 컨트롤 형식을 지원하는 모든 컨트롤은 `ISelectionProvider` 를 구현해야 합니다. 항목을 컨테이너 내에서 선택할 수 없는 경우 Group 컨트롤 형식을 사용해야 합니다.|  
+|<xref:System.Windows.Automation.Provider.ISelectionProvider>|필요한 공간|컨트롤에 포함된 항목 간에 선택 상태가 유지되면 List 컨트롤 형식을 지원하는 모든 컨트롤은 `ISelectionProvider` 를 구현해야 합니다. 항목을 컨테이너 내에서 선택할 수 없는 경우 Group 컨트롤 형식을 사용해야 합니다.|  
 |<xref:System.Windows.Automation.Provider.ISelectionProvider.IsSelectionRequired%2A>|종속|목록 컨트롤에서 항상 항목을 선택할 필요는 없습니다.|  
 |<xref:System.Windows.Automation.Provider.ISelectionProvider.CanSelectMultiple%2A>|종속|목록 컨트롤은 단일 또는 다중 선택 컨테이너입니다.|  
 |<xref:System.Windows.Automation.Provider.IScrollProvider>|종속|컨테이너의 항목을 스크롤할 수 있는 경우에 이 컨트롤 패턴을 구현합니다.|  
@@ -91,9 +91,9 @@ List 컨트롤 형식(예: 목록 컨트롤)을 구현하는 컨트롤의 콘텐
 |---------------------------------------------------------------------------------|--------------------|-----------|  
 |<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|종속|없음|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LayoutInvalidatedEvent>|종속|없음|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 속성 변경 이벤트.|필수|없음|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> 속성 변경 이벤트.|필수|없음|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 속성 변경 이벤트.|필수|없음|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 속성 변경 이벤트.|필요한 공간|없음|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> 속성 변경 이벤트.|필요한 공간|없음|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 속성 변경 이벤트.|필요한 공간|없음|  
 |<xref:System.Windows.Automation.MultipleViewPatternIdentifiers.CurrentViewProperty> 속성 변경 이벤트.|종속|없음|  
 |<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> 속성 변경 이벤트.|종속|없음|  
 |<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalScrollPercentProperty> 속성 변경 이벤트.|종속|없음|  
@@ -101,10 +101,10 @@ List 컨트롤 형식(예: 목록 컨트롤)을 구현하는 컨트롤의 콘텐
 |<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalScrollPercentProperty> 속성 변경 이벤트.|종속|없음|  
 |<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> 속성 변경 이벤트.|종속|없음|  
 |<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty> 속성 변경 이벤트.|종속|없음|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|필수|없음|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|필수|없음|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|필요한 공간|없음|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|필요한 공간|없음|  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Windows.Automation.ControlType.List>
 - [UI 자동화 컨트롤 형식 개요](ui-automation-control-types-overview.md)

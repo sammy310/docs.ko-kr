@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 34fb03cc-2285-4a45-ac48-ad993b7a921a
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3a66ef090a205019493e099919739867e3936873
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6b36d63101c1e9550a979d858764e9052cf45792
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61905231"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447924"
 ---
 # <a name="imetadataassemblyemit-interface"></a>IMetaDataAssemblyEmit 인터페이스
 공용 언어 런타임에서 리소스를 확인하고 소비하는 데 사용되는 자체 설명 모델을 지원하는 메서드를 제공합니다.  
@@ -41,18 +39,18 @@ ms.locfileid: "61905231"
 |[SetFileProps 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-setfileprops-method.md)|지정된 `File` 메타데이터 구조를 수정합니다.|  
 |[SetManifestResourceProps 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-setmanifestresourceprops-method.md)|지정된 `ManifestResource` 메타데이터 구조를 수정합니다.|  
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** Cor.h  
+ **Header:** Cor.h  
   
- **라이브러리:** MsCorEE.dll에서 리소스로 사용  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [메타데이터 인터페이스](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
 - [IMetaDataAssemblyImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

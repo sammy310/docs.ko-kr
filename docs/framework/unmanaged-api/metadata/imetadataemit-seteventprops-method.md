@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3b039e50-63ec-4730-99ff-2327408de477
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 271ecd7e757340becccb7bf52362487a2b277299
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 506e13ad956a01b16e36d8c71737fe0efce4c01b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737187"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450326"
 ---
 # <a name="imetadataemitseteventprops-method"></a>IMetaDataEmit::SetEventProps 메서드
-설정 하거나 지정된 된 기능에 대 한 이전 호출에서 정의 된 이벤트의 업데이트 [imetadataemit:: Defineevent](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineevent-method.md)합니다.  
+Sets or updates the specified feature of an event defined by a prior call to [IMetaDataEmit::DefineEvent](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineevent-method.md).  
   
 ## <a name="syntax"></a>구문  
   
@@ -43,36 +41,36 @@ HRESULT SetEventProps (
   
 ## <a name="parameters"></a>매개 변수  
  `ev`  
- [in] 이벤트 토큰입니다.  
+ [in] The event token.  
   
  `dwEventFlags`  
- [in] 이벤트 플래그입니다. 이 비트 마스크의 `CorEventAttr` 값입니다.  
+ [in] Event flags. This is a bitmask of `CorEventAttr` values.  
   
  `tkEventType`  
- [in] 이벤트 클래스에 대 한 토큰입니다. 이 값은 `mdTypeDef` 또는 `mdTypeRef` 토큰입니다.  
+ [in] The token for the event class. This is either a `mdTypeDef` or a `mdTypeRef` token.  
   
  `mdAddOn`  
- [in] 이벤트 또는 null을 구독 하는 데 사용 된 메서드.  
+ [in] The method used to subscribe to the event, or null.  
   
  `mdRemoveOn`  
- [in] 이벤트 또는 null로 구독을 취소 하는 데 사용 된 메서드.  
+ [in] The method used to unsubscribe to the event, or null.  
   
  `mdFire`  
- [in] 이벤트를 발생 시킬 (파생된 클래스)에 의해 사용 되는 방법  
+ [in] The method used (by a derived class) to raise the event.  
   
  `rmdOtherMethods[]`  
- [in] 이벤트에 연결 된 다른 방법에 대 한 토큰의 배열입니다. 배열의 마지막 요소 여야 합니다 `mdMethodDefNil`합니다.  
+ [in] An array of tokens for other methods associated with the event. The last element of the array must be `mdMethodDefNil`.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** Cor.h  
+ **Header:** Cor.h  
   
- **라이브러리:** MSCorEE.dll에서 리소스로 사용  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [IMetaDataEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

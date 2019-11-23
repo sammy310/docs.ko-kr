@@ -6,20 +6,20 @@ helpviewer_keywords:
 - UI Automation, Window control pattern
 - Window control pattern
 ms.assetid: a28cb286-296e-4a62-b4cb-55ad636ebccc
-ms.openlocfilehash: ad2f84fbde512bb99b213bf3b97f2190091d8576
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: d8afaa13bd4eca9f9fcd4c8ed26c09c62ad74931
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71042984"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447027"
 ---
 # <a name="implementing-the-ui-automation-window-control-pattern"></a>UI 자동화 Window 컨트롤 패턴 구현
 > [!NOTE]
-> 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. 에 대 한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [최신 정보는 Windows Automation API: UI 자동화](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조하세요.  
   
  이 항목에서는 <xref:System.Windows.Automation.Provider.IWindowProvider>속성, 메서드 및 이벤트에 대한 정보를 포함하여 <xref:System.Windows.Automation.WindowPattern> 를 구현하기 위한 지침 및 규칙을 제공합니다. 추가 참조에 대한 링크는 항목 끝에 나열되어 있습니다.  
   
- <xref:System.Windows.Automation.WindowPattern> 컨트롤 패턴은 기존 GUI (그래픽 사용자 인터페이스) 내에서 기본적인 창 기반 기능을 제공 하는 컨트롤을 지 원하는 데 사용 됩니다. 이 컨트롤 패턴을 구현 해야 하는 컨트롤의 예로는 최상위 응용 프로그램 창, MDI (다중 문서 인터페이스) 자식 창, 크기 조정 가능한 분할 창 컨트롤, 모달 대화 상자 및 풍선 도움말 창이 있습니다.  
+ The <xref:System.Windows.Automation.WindowPattern> control pattern is used to support controls that provide fundamental window-based functionality within a traditional graphical user interface (GUI). Examples of controls that must implement this control pattern include top-level application windows, multiple-document interface (MDI) child windows, resizable split pane controls, modal dialogs and balloon help windows.  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
 ## <a name="implementation-guidelines-and-conventions"></a>구현 지침 및 규칙  
@@ -60,10 +60,10 @@ ms.locfileid: "71042984"
   
 |예외 형식|조건|  
 |--------------------|---------------|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A><br /><br /> -컨트롤에서 요청 된 동작을 지원 하지 않는 경우|  
-|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A><br /><br /> -매개 변수가 유효한 숫자가 아닌 경우|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A><br /><br /> -   When a control does not support a requested behavior.|  
+|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A><br /><br /> -   When the parameter is not a valid number.|  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [UI 자동화 컨트롤 패턴 개요](ui-automation-control-patterns-overview.md)
 - [UI 자동화 공급자의 컨트롤 패턴 지원](support-control-patterns-in-a-ui-automation-provider.md)

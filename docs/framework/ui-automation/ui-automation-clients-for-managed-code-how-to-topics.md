@@ -7,20 +7,20 @@ helpviewer_keywords:
 - UI Automation, clients for managed code
 - managed code, UI Automation clients
 ms.assetid: 665b01b5-25f5-47a1-ab11-cffe8ebbf2a7
-ms.openlocfilehash: 9a419f8ac8b94d4f33c7e771c68f230c80a24cbf
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 4bec3ec2777c06865390a8776895b1ceb72c8719
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71042528"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446807"
 ---
 # <a name="ui-automation-clients-for-managed-code-how-to-topics"></a>관리 코드 방법 항목의 UI 자동화 클라이언트
 > [!NOTE]
-> 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. 에 대 한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [최신 정보는 Windows Automation API: UI 자동화](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조하세요.  
   
- 이 섹션에서는 클라이언트 응용 프로그램에서의 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 기능 구현에 대 한 자세한 정보를 제공 합니다.  
+ This section provides detailed information about implementing features of [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] in a client application.  
   
-## <a name="in-this-section"></a>섹션 내용  
+## <a name="in-this-section"></a>단원 내용  
  [속성 조건을 기반으로 UI 자동화 요소 찾기](find-a-ui-automation-element-based-on-a-property-condition.md)  
  [TreeWalker를 사용하여 UI 자동화 요소 간 탐색](navigate-among-ui-automation-elements-with-treewalker.md)  
  [목록 항목의 UI 자동화 요소 찾기](find-a-ui-automation-element-for-a-list-item.md)  

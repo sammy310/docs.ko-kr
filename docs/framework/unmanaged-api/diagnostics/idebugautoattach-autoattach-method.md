@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3cf3bd9c-7d88-4afa-a476-94cdc7609aa6
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e04a447c8562ff797ac98885bded150a3a167136
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 766aeb31436101babeab31b615a1c633578bfcc5
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775789"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445529"
 ---
 # <a name="idebugautoattachautoattach-method"></a>IDebugAutoAttach::AutoAttach 메서드
-서버에서 호출한 디버거 자동 수행 연결 합니다.  
+Performs server-invoked debugger auto attach.  
   
 ## <a name="syntax"></a>구문  
   
@@ -42,26 +40,26 @@ HRESULT AutoAttach
   
 ## <a name="parameters"></a>매개 변수  
  `guidPort`  
- [in] 항상로 `GUID_NULL`합니다.  
+ [in] Always set to `GUID_NULL`.  
   
  `dwPid`  
- [in] 프로세스 ID, 일반적으로 사용 하 여 검색 된 `GetCurrentProcessId` 함수입니다.  
+ [in] Process ID, normally retrieved with the `GetCurrentProcessId` function.  
   
  `dwProgramType`  
- [in] 프로그램 형식: `AUTOATTACH_PROGRAM_WIN32`하십시오 `AUTOATTACH_PROGRAM_COMPLUS`, 또는 `AUTOATTACH_PROGRAM_UNKNOWN`합니다.  
+ [in] Program type: `AUTOATTACH_PROGRAM_WIN32`, `AUTOATTACH_PROGRAM_COMPLUS`, or `AUTOATTACH_PROGRAM_UNKNOWN`.  
   
  `dwProgramId`  
- [in] 프로그램 id입니다.  
+ [in] Program ID.  
   
  `pszSessionId`  
- [in] Debug 동사를 전달한 문자열입니다.  
+ [in] String passed by the debug verb.  
   
 ## <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 S_OK입니다.  
+ S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>요구 사항  
- **헤더:** DbgAutoAttach.h  
+ **Header:** DbgAutoAttach.h  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [IDebugAutoAttach 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-interface.md)

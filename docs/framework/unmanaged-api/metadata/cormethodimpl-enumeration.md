@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: ffbb3caf-20da-4a4b-8983-77376e72b990
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0c88c12646a13e5a24f2475bd2db04c8c831141c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a76a7a2d4ad68e367e38e175377aff40ce399346
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781762"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450200"
 ---
 # <a name="cormethodimpl-enumeration"></a>CorMethodImpl 열거형
 메서드 구현 기능을 설명하는 값을 포함합니다.  
@@ -58,30 +56,30 @@ typedef enum CorMethodImpl {
   
 |멤버|설명|  
 |------------|-----------------|  
-|`miCodeTypeMask`|코드 형식을 설명 하는 플래그입니다.|  
-|`miIL`|메서드 구현이 MSIL (Microsoft intermediate language) 임을 지정 합니다.|  
+|`miCodeTypeMask`|Flags that describe code type.|  
+|`miIL`|Specifies that the method implementation is Microsoft intermediate language (MSIL).|  
 |`miNative`|메서드 구현이 네이티브임을 지정합니다.|  
-|`miOPTIL`|메서드 구현이 OPTIL 임을 지정 합니다.|  
-|`miRuntime`|공용 언어 런타임에 의해 메서드 구현이 제공 되도록 지정 합니다.|  
-|`miManagedMask`|코드의 관리 되지 않는 관리 되는 여부를 나타내는 플래그입니다.|  
-|`miUnmanaged`|메서드 구현이 관리 되지 않도록 지정 합니다.|  
-|`miManaged`|메서드 구현이 해당 관리를 지정 합니다.|  
-|`miForwardRef`|메서드가 정의 된 지정 합니다. 이 플래그는 병합 시나리오에 주로 사용 됩니다.|  
-|`miPreserveSig`|HRESULT 변환에 대 한 메서드 시그니처를 손상 될 수 없습니다 지정 합니다.|  
-|`miInternalCall`|공용 언어 런타임에서 내부 용도로 예약 되어 있습니다.|  
-|`miSynchronized`|메서드 본문을 통해 단일 스레드 임을 지정 합니다.|  
+|`miOPTIL`|Specifies that the method implementation is OPTIL.|  
+|`miRuntime`|Specifies that the method implementation is provided by the common language runtime.|  
+|`miManagedMask`|Flags that indicate whether the code is managed or unmanaged.|  
+|`miUnmanaged`|Specifies that the method implementation is unmanaged.|  
+|`miManaged`|Specifies that the method implementation is managed.|  
+|`miForwardRef`|Specifies that the method is defined. This flag is used primarily in merge scenarios.|  
+|`miPreserveSig`|Specifies that the method signature cannot be mangled for an HRESULT conversion.|  
+|`miInternalCall`|Reserved for internal use by the common language runtime.|  
+|`miSynchronized`|Specifies that the method is single-threaded through its body.|  
 |`miNoInlining`|메서드를 인라인될 수 없도록 지정합니다.|  
-|`miAggressiveInlining`|메서드는 인라인 되어야 합니다 가능 하면를 지정 합니다.|  
-|`miNoOptimization`|메서드를 최적화 되지 않도록 지정 합니다.|  
-|`miMaxMethodImplVal`|에 대 한 최대 유효 값을 `CorMethodImpl`입니다.|  
+|`miAggressiveInlining`|Specifies that the method should be inlined if possible.|  
+|`miNoOptimization`|Specifies that the method should not be optimized.|  
+|`miMaxMethodImplVal`|The maximum valid value for a `CorMethodImpl`.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** CorHdr.h  
+ **Header:** CorHdr.h  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [메타데이터 열거형](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

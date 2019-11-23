@@ -11,16 +11,16 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: ac193b6b78434245b8f11a4f627b4e1992feb8a7
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: d6518612c213d21c2dc7d80878121ccd3b7e2abb
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69661282"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449857"
 ---
-# <a name="icorprofilerinfo10enumerateobjectreferences-method"></a>ICorProfilerInfo10:: EnumerateObjectReferences 메서드
+# <a name="icorprofilerinfo10enumerateobjectreferences-method"></a>ICorProfilerInfo10::EnumerateObjectReferences Method
 
-ObjectID, callback 및 clientData가 지정 된 경우 각 개체 참조를 열거 합니다 (있는 경우).
+Given an ObjectID, callback and clientData, enumerates each object reference (if any).
 
 ## <a name="syntax"></a>구문
 
@@ -33,28 +33,28 @@ HRESULT EnumerateObjectReferences( [in] ObjectID objectId,
 #### <a name="parameters"></a>매개 변수
 
 `objectId` \
-진행 참조를 열거할 개체입니다.
+[in] The object to enumerate references on.
 
 `callback` \
-진행 개체에 대 한 참조를 사용 하 여 호출 되는 함수입니다.
+[in] The function that will be called with the references for the object.
 
 `clientData` \
-진행 프로파일러에서 `callback` 함수에 전달할 데이터를 제공 합니다.
+[in] Profiler-provided data to pass to the `callback` function.
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
-메서드 `EnumerateObjectReferences` 는 참조를 저장 하는 배열을 미리 할당 하는 대신 프로파일러의 요청 시 참조를 [ObjectReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md)한다는 점을 제외 하 고는와 유사 합니다.
+The `EnumerateObjectReferences` method is similar to [ObjectReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md), except that it walks the references on demand for the profiler instead of pre-allocating an array to store the references.
 
 ## <a name="requirements"></a>요구 사항
 
-**플랫폼** [.Net Core 지원 운영 체제](../../../core/windows-prerequisites.md#net-core-supported-operating-systems)를 참조 하세요.
+**Platforms:** See [.NET Core supported operating systems](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).
 
 **헤더:** CorProf.idl, CorProf.h
 
-**라이브러리** CorGuids.lib
+**라이브러리:** CorGuids.lib
 
-**.Net 버전:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
+**.NET Versions:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
-- [ICorProfilerInfo10 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)
+- [ICorProfilerInfo10 Interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)

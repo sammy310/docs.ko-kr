@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d4d98676-444b-46ca-bfe6-0d827385cd22
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c13eb7ca16cdb7c70f3fef0dd4efcb9362cd3d87
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b404a187d8628a04d2aa51df15f86fcc9d0b14f8
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776588"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74427851"
 ---
 # <a name="isymunmanagedwritersetscoperange-method"></a>ISymUnmanagedWriter::SetScopeRange 메서드
-지정된 어휘 범위에 대한 오프셋 범위를 정의합니다. 범위는 현재 범위가 새 하 고 범위 스택에 푸시됩니다. 범위 계층 구조를 형성 해야 합니다. 형제 겹칠 수 없습니다.  
+Defines the offset range for the specified lexical scope. The scope becomes the new current scope and is pushed onto a stack of scopes. Scopes must form a hierarchy. Siblings are not allowed to overlap.  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,23 +36,23 @@ HRESULT OpenScope(
   
 ## <a name="parameters"></a>매개 변수  
  `scopeId`  
- [in] 범위에 대 한 범위 식별자입니다.  
+ [in] The scope identifier for the scope.  
   
  `startOffset`  
- [in] 메서드의 시작 부분에서 어휘 범위에서 첫 번째 명령의 바이트 오프셋입니다.  
+ [in] The offset, in bytes, of the first instruction in the lexical scope from the beginning of the method.  
   
  `endOffset`  
- [in] 메서드의 시작 부분에서 어휘 범위에서 마지막 명령의 바이트 오프셋입니다.  
+ [in] The offset, in bytes, of the last instruction in the lexical scope from the beginning of the method.  
   
 ## <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
-## <a name="remarks"></a>설명  
- [Isymunmanagedwriter:: Openscope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openscope-method.md) 사용 하 여 사용할 수 있는 불투명 한 범위 식별자를 반환 합니다 `ISymUnmanagedWriter::SetScopeRange` 범위를 정의 하의 시작과 끝 이후에 오프셋입니다. 이 경우에 전달 된 오프셋 `ISymUnmanagedWriter::OpenScope` 하 고 [isymunmanagedwriter:: Closescope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closescope-method.md) 무시 됩니다. 범위 식별자 현재 메서드에서만에서 유효합니다.  
+## <a name="remarks"></a>주의  
+ [ISymUnmanagedWriter::OpenScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openscope-method.md) returns an opaque scope identifier that can be used with `ISymUnmanagedWriter::SetScopeRange` to define a scope's starting and ending offset at a later time. In this case, the offsets passed to `ISymUnmanagedWriter::OpenScope` and [ISymUnmanagedWriter::CloseScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closescope-method.md) are ignored. Scope identifiers are only valid in the current method.  
   
 ## <a name="requirements"></a>요구 사항  
- **헤더:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ISymUnmanagedWriter 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

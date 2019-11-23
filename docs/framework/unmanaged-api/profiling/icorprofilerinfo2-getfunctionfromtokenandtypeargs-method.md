@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ce8f6aa6-4ebf-4a86-b429-4bbc8af41a8f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 31fad9e82d0b93360f92676f6357c136ae60634a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 41021a524142afe34727584265aee578e31a64b3
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771123"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74433217"
 ---
 # <a name="icorprofilerinfo2getfunctionfromtokenandtypeargs-method"></a>ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs 메서드
-가져옵니다 합니다 `FunctionID` 클래스를 포함 하는 지정 된 메타 데이터 토큰을 사용 하 여 함수 및 `ClassID` 값의 형식 인수입니다.  
+Gets the `FunctionID` of a function by using the specified metadata token, containing class, and `ClassID` values of any type arguments.  
   
 ## <a name="syntax"></a>구문  
   
@@ -41,32 +39,32 @@ HRESULT GetFunctionFromTokenAndTypeArgs(
   
 ## <a name="parameters"></a>매개 변수  
  `moduleID`  
- [in] 함수가 상주 하는 모듈의 ID입니다.  
+ [in] The ID of the module in which the function resides.  
   
  `funcDef`  
- [in] `mdMethodDef` 함수를 참조 하는 메타 데이터 토큰입니다.  
+ [in] An `mdMethodDef` metadata token that references the function.  
   
  `classId`  
- [in] 함수의 포함 하는 클래스의 ID입니다.  
+ [in] The ID of the function's containing class.  
   
  `cTypeArgs`  
- [in] 지정된 된 함수에 대 한 형식 매개 변수의 수입니다. 이 값에는 제네릭이 아닌 함수에 대 한 0 이어야 합니다.  
+ [in] The number of type parameters for the given function. This value must be zero for non-generic functions.  
   
  `typeArgs`  
- [in] 배열을 `ClassID` 각각는 함수의 인수 값입니다. 변수의 `typeArgs` NULL 일 수 `cTypeArgs` 0으로 설정 됩니다.  
+ [in] An array of `ClassID` values, each of which is an argument of the function. The value of `typeArgs` can be NULL if `cTypeArgs` is set to zero.  
   
  `pFunctionID`  
- [out] 에 대 한 포인터를 `FunctionID` 지정 된 함수입니다.  
+ [out] A pointer to the `FunctionID` of the specified function.  
   
-## <a name="remarks"></a>설명  
- 호출 된 `GetFunctionFromTokenAndTypeArgs` 메서드는 `mdMethodRef` 대신 메타 데이터는 `mdMethodDef` 메타 데이터 토큰에 예기치 않은 결과가 있을 수 있습니다. 호출자가 해결 해야 합니다 `mdMethodRef` 에 `mdMethodDef` 전달 되는 경우.  
+## <a name="remarks"></a>주의  
+ Calling the `GetFunctionFromTokenAndTypeArgs` method with an `mdMethodRef` metadata instead of an `mdMethodDef` metadata token can have unpredictable results. Callers should resolve the `mdMethodRef` to an `mdMethodDef` when passing it.  
   
- 함수가 이미 로드 되어 있지 않으면 호출 `GetFunctionFromTokenAndTypeArgs` 발생 하는 여러 상황에서 위험한 작업 인 로드 하면 됩니다. 예를 들어 모듈이 나 형식을 로드 하는 동안이 메서드를 호출 하면 런타임에 순환 로드를 시도할 때 무한 루프 발생할 수 있습니다.  
+ If the function is not already loaded, calling `GetFunctionFromTokenAndTypeArgs` will cause loading to occur, which is a dangerous operation in many contexts. For example, calling this method during loading of modules or types could lead to an infinite loop as the runtime attempts to circularly load things.  
   
- 일반적으로 사용 `GetFunctionFromTokenAndTypeArgs` 것이 좋습니다. 저장 해야 프로파일러 특정 함수에 대 한 이벤트에 관심이 있는 경우는 `ModuleID` 및 `mdMethodDef` 사용 하 여 해당 함수 [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) 검사할 여부를 지정 된 `FunctionID` 는 원하는 함수입니다.  
+ In general, use of `GetFunctionFromTokenAndTypeArgs` is discouraged. If profilers are interested in events for a particular function, they should store the `ModuleID` and `mdMethodDef` of that function, and use [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) to check whether a given `FunctionID` is that of the desired function.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
   
@@ -74,7 +72,7 @@ HRESULT GetFunctionFromTokenAndTypeArgs(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ICorProfilerInfo 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
 - [ICorProfilerInfo2 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

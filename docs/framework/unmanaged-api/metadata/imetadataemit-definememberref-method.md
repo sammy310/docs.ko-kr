@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 21b5bcb8-ea75-4962-8acc-ad17584061e5
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 38e4928ad0f3560698cbecab81a11630d67e4db2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 696389b51328e167212fb2292a873c34b9263811
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777618"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431825"
 ---
 # <a name="imetadataemitdefinememberref-method"></a>IMetaDataEmit::DefineMemberRef 메서드
-현재 범위를 벗어난 모듈의 멤버에 대 한 참조를 정의 하 고 해당 참조 정의에 토큰을 가져옵니다.  
+Defines a reference to a member of a module outside the current scope, and gets a token to that reference definition.  
   
 ## <a name="syntax"></a>구문  
   
@@ -41,30 +39,30 @@ HRESULT DefineMemberRef (
   
 ## <a name="parameters"></a>매개 변수  
  `tkImport`  
- [in] 멤버가 전역; 이면 대상 멤버의 클래스 또는 인터페이스에 대 한 토큰 멤버가 전역,이 경우에 `mdModuleRef` 다른 파일에 대 한 토큰입니다.  
+ [in] Token for the target member's class or interface, if the member is not global; if the member is global, the `mdModuleRef` token for that other file.  
   
  `szName`  
- [in] 대상 멤버의 이름입니다.  
+ [in] The name of the target member.  
   
  `pvSigBlob`  
- [in] 대상 멤버의 서명입니다.  
+ [in] The signature of the target member.  
   
  `cbSigBlob`  
- [in] 바이트 수가 `pvSigBlob`합니다.  
+ [in] The count of bytes in `pvSigBlob`.  
   
  `pmr`  
- [out] `mdMemberRef` 할당 된 토큰입니다.  
+ [out] The `mdMemberRef` token assigned.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** Cor.h  
+ **Header:** Cor.h  
   
- **라이브러리:** MSCorEE.dll에서 리소스로 사용  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [IMetaDataEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

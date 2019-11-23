@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d9e0f3b6-e106-4820-bada-5bfba34ce360
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f03a2dfa60f2fbdce317d96a9e5b23c6f017dc3d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: da9a13a3dea34f6681f47e95c5b352a710d7458b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777750"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431205"
 ---
 # <a name="imetadatadispenserexgetcorsystemdirectory-method"></a>IMetaDataDispenserEx::GetCORSystemDirectory 메서드
-현재 CLR (공용 언어 런타임) 저장 하는 디렉터리를 가져옵니다. 이 메서드는 out-of-process-디버거에서 사용에 대해서만 지원 됩니다. 다른 구성 요소에서 호출 하는 경우 E_NOTIMPL이 반환 됩니다.  
+Gets the directory that holds the current common language runtime (CLR). This method is supported only for use by out-of-process debuggers. If called from another component, it will return E_NOTIMPL.  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,24 +37,24 @@ HRESULT GetCORSystemDirectory (
   
 ## <a name="parameters"></a>매개 변수  
  `szBuffer`  
- [out] 디렉터리 이름을 받기 위한 버퍼입니다.  
+ [out] The buffer to receive the directory name.  
   
  `cchBuffer`  
- [in] 크기 (바이트)의 `szBuffer`합니다.  
+ [in] The size, in bytes, of `szBuffer`.  
   
  `pchBuffer`  
- [out] 에 실제로 반환 된 바이트 수가 `szBuffer`합니다.  
+ [out] The number of bytes actually returned in `szBuffer`.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **헤더:** Cor.h  
+ **Header:** Cor.h  
   
- **라이브러리:** MsCorEE.dll에서 리소스로 사용  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [IMetaDataDispenserEx 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
 - [IMetaDataDispenser 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)

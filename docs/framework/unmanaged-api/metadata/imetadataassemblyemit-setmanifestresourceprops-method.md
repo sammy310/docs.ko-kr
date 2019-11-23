@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: ef77efd1-849c-4e51-ba92-7ee3d2bf0339
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d080a3077df2cb4ad57ef463b5e02a3a28d8429d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f6b5e12df60663b75e10b04eaa008a75d720d753
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779405"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74434434"
 ---
 # <a name="imetadataassemblyemitsetmanifestresourceprops-method"></a>IMetaDataAssemblyEmit::SetManifestResourceProps 메서드
 지정된 `ManifestResource` 메타데이터 구조를 수정합니다.  
@@ -40,29 +38,29 @@ HRESULT SetManifestResourceProps (
   
 ## <a name="parameters"></a>매개 변수  
  `mr`  
- [in] 지정 하는 토큰을 `ManifestResource` 수정할 메타 데이터 구조입니다.  
+ [in] The token that specifies the `ManifestResource` metadata structure to be modified.  
   
  `tkImplementation`  
- [in] 형식의 토큰 `File` 또는 `AssemblyRef`, 리소스 공급자에 매핑되는 합니다.  
+ [in] The token, of type `File` or `AssemblyRef`, that maps to the resource provider.  
   
  `dwOffset`  
- [in] 파일 내에서 리소스의 시작 오프셋입니다.  
+ [in] The offset to the beginning of the resource within the file.  
   
  `dwResourceFlags`  
- [in] 리소스의 특성을 지정 하는 플래그 값의 비트 조합입니다.  
+ [in] A bitwise combination of flag values that specify the attributes of the resource.  
   
-## <a name="remarks"></a>설명  
- 만들려는 `ManifestResource` 메타 데이터 구조를 사용 합니다 [imetadataassemblyemit:: Definemanifestresource](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definemanifestresource-method.md) 메서드.  
+## <a name="remarks"></a>주의  
+ To create a `ManifestResource` metadata structure, use the [IMetaDataAssemblyEmit::DefineManifestResource](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definemanifestresource-method.md) method.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** Cor.h  
+ **Header:** Cor.h  
   
- **라이브러리:** MsCorEE.dll에서 리소스로 사용  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [IMetaDataAssemblyEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

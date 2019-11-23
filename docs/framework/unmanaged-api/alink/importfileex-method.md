@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: ad276f3f-b303-46ac-97e0-66a377adaa4f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: bd138d0418bb9667a86419d719bf0b95a4bb1b12
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: bee7db61beb9ed8c00cf584924be690a67d92eac
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70777123"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446957"
 ---
 # <a name="importfileex-method"></a>ImportFileEx 메서드
-표시 된 어셈블리 또는 바인딩되지 않은 모듈을 가져옵니다.  
+Imports indicated assembly or unbound module.  
   
 ## <a name="syntax"></a>구문  
   
@@ -42,33 +40,33 @@ HRESULT ImportFileEx(
   
 ## <a name="parameters"></a>매개 변수  
  `pszFilename`  
- 가져올 파일의 정규화 된 이름입니다.  
+ Fully qualified name of file from which to import.  
   
  `pszTargetName`  
- 대상 파일의 선택적 이름입니다.  
+ Optional name of target file.  
   
  `fSmartImport`  
- TRUE 이면 ImportTypes를 사용 합니다. 그렇지 않으면 가져오기는 수동으로 수행 해야 합니다.  
+ If TRUE, ImportTypes is used, otherwise importing must be performed manually.  
   
  `dwOpenFlags`  
- [Openscope 메서드에](../metadata/imetadatadispenser-openscope-method.md)따라 전달할 플래그입니다.  
+ Flags to be passed along to [OpenScope Method](../metadata/imetadatadispenser-openscope-method.md).  
   
  `pImportToken`  
- 가져올 파일의 ID를 받습니다.  
+ Receives ID of the file being imported.  
   
  `ppAssemblyScope`  
- 어셈블리 가져오기 범위 [IMetaDataAssemblyImport interface](../metadata/imetadataassemblyimport-interface.md) 인터페이스를 수신 합니다. 파일이 어셈블리가 아닌 경우 NULL로 설정 됩니다.  
+ Receives assembly import scope [IMetaDataAssemblyImport Interface](../metadata/imetadataassemblyimport-interface.md) interface. Is set to NULL if file is not an assembly.  
   
  `pdwCountOfScopes`  
- 가져온 파일 및/또는 범위의 수를 수신 합니다.  
+ Receives count of imported files and/or scopes.  
   
 ## <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 S_OK를 반환 합니다.  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>요구 사항  
- Alink가 필요 합니다.  
+ Requires alink.h.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [IALink2 인터페이스](ialink2-interface.md)
 - [IALink 인터페이스](ialink-interface.md)

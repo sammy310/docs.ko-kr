@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: eb412622-77cc-4abd-a2cd-c910fe8edd54
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 10a000fd98ad12dc39f8f8338485d6bb4093ee07
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 66643bbb8dbc914b2e0e48a7f0c87630fe95e5d3
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782977"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445845"
 ---
 # <a name="icorprofilercallbackobjectallocated-method"></a>ICorProfilerCallback::ObjectAllocated 메서드
-개체에 대 한 할당 된 힙에 메모리 프로파일러에 알립니다.  
+Notifies the profiler that memory within the heap has been allocated for an object.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,16 +35,16 @@ HRESULT ObjectAllocated(
   
 ## <a name="parameters"></a>매개 변수  
  `objectId`  
- [in] 메모리가 할당 된 개체의 ID입니다.  
+ [in] The ID of the object for which memory was allocated.  
   
  `classId`  
- [in] 개체 인스턴스 클래스의 ID입니다.  
+ [in] The ID of the class of which the object is an instance.  
   
-## <a name="remarks"></a>설명  
- `ObjectedAllocated` 스택 또는 관리 되지 않는 메모리 할당에 대 한 메서드가 호출 되지 않습니다. `classId` 매개 변수는 아직 로드 되지 않은 관리 코드의 클래스를 참조할 수 있습니다. 프로파일러는 해당 클래스에 대 한 클래스 부하 콜백의 받을 직후는 `ObjectAllocated` 콜백 합니다.  
+## <a name="remarks"></a>주의  
+ The `ObjectedAllocated` method is not called for allocations from either the stack or unmanaged memory. The `classId` parameter can refer to a class in managed code that has not been loaded yet. The profiler will receive a class load callback for that class immediately after the `ObjectAllocated` callback.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
   
@@ -54,7 +52,7 @@ HRESULT ObjectAllocated(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ICorProfilerCallback 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
 - [ClassLoadStarted 메서드](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadstarted-method.md)

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f909ac48-3d8f-49fb-a369-e3d9959151cd
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 1d8cfde8f0eb14919c12d261c3f9f7209365829c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 75d477af7395a9b7d3328b2a5787f810733f3749
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759452"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448882"
 ---
 # <a name="isymunmanagedmethodgetsequencepoints-method"></a>ISymUnmanagedMethod::GetSequencePoints 메서드
-이 메서드 내에서 모든 시퀀스 위치를 가져옵니다.  
+Gets all the sequence points within this method.  
   
 ## <a name="syntax"></a>구문  
   
@@ -43,35 +41,35 @@ HRESULT GetSequencePoints(
   
 ## <a name="parameters"></a>매개 변수  
  `cPoints`  
- [in] `ULONG32` 의 크기를 받는 합니다 `offsets`, `documents`, `lines`, `columns`를 `endLines`, 및 `endColumns` 배열입니다.  
+ [in] A `ULONG32` that receives the size of the `offsets`, `documents`, `lines`, `columns`, `endLines`, and `endColumns` arrays.  
   
  `pcPoints`  
- [out] 에 대 한 포인터를 `ULONG32` 시퀀스 위치를 포함 하는 데 필요한 버퍼의 길이 받는입니다.  
+ [out] A pointer to a `ULONG32` that receives the length of the buffer required to contain the sequence points.  
   
  `offsets`  
- [in] 저장할 Microsoft 중간 언어 (MSIL) 시퀀스 위치에 대 한 메서드 시작 부분 으로부터의 오프셋 배열입니다.  
+ [in] An array in which to store the Microsoft intermediate language (MSIL) offsets from the beginning of the method for the sequence points.  
   
  `documents`  
- [in] 시퀀스 위치가 있는 문서를 저장 하는 배열입니다.  
+ [in] An array in which to store the documents in which the sequence points are located.  
   
  `lines`  
- [in] 시퀀스 위치가 있는 문서의 줄을 저장할 배열입니다.  
+ [in] An array in which to store the lines in the documents at which the sequence points are located.  
   
  `columns`  
- [in] 시퀀스 위치가 있는 문서의 열을 저장 하는 배열입니다.  
+ [in] An array in which to store the columns in the documents at which the sequence points are located.  
   
  `endLines`  
- [in] 시퀀스 위치가 끝나는 문서의 줄 배열입니다.  
+ [in] The array of lines in the documents at which the sequence points end.  
   
  `endColumns`  
- [in] 시퀀스 위치가 끝나는 문서의 열 배열입니다.  
+ [in] The array of columns in the documents at which the sequence points end.  
   
 ## <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>요구 사항  
- **헤더:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ISymUnmanagedMethod 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

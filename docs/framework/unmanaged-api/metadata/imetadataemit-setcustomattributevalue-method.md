@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f721c863-9642-4e64-917a-65f9e55c25b9
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2a1f248cf800e9c2bf17d7849e449287cfc493f5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fd5e71071de9e6afebc8f1848e0af8835f22c9bf
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737207"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448128"
 ---
 # <a name="imetadataemitsetcustomattributevalue-method"></a>IMetaDataEmit::SetCustomAttributeValue 메서드
-설정에 대 한 이전 호출에서 정의한 사용자 지정 특성의 값을 업데이트 하거나 [imetadataemit:: Definecustomattribute](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definecustomattribute-method.md)합니다.  
+Sets or updates the value of a custom attribute defined by a prior call to [IMetaDataEmit::DefineCustomAttribute](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definecustomattribute-method.md).  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,24 +37,24 @@ HRESULT SetCustomAttributeValue (
   
 ## <a name="parameters"></a>매개 변수  
  `pcv`  
- [in] 대상 사용자 지정 특성의 토큰입니다.  
+ [in] The token of the target custom attribute.  
   
  `pCustomAttribute`  
- [in] 사용자 지정 특성을 포함 하는 배열에 대 한 포인터입니다.  
+ [in] A pointer to the array that contains the custom attribute.  
   
  `cbCustomAttribute`  
- [in] 사용자 지정 특성의 바이트 크기입니다.  
+ [in] The size, in bytes, of the custom attribute.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** Cor.h  
+ **Header:** Cor.h  
   
- **라이브러리:** MSCorEE.dll에서 리소스로 사용  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [IMetaDataEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

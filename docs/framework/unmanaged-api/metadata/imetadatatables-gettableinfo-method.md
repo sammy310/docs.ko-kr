@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 50cbe557-2322-41aa-8e0d-f967602eaa0f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4844834232e34ab5dacfa34e7aa5d204ee344612
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 662b628f3cc6d2d7138f56820beaccee9c5d9e81
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781355"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74426663"
 ---
 # <a name="imetadatatablesgettableinfo-method"></a>IMetaDataTables::GetTableInfo 메서드
-이름, 행 크기, 행의 수, 열 수 및 지정된 된 테이블의 키 열 인덱스를 가져옵니다.  
+Gets the name, row size, number of rows, number of columns, and key column index of the specified table.  
   
 ## <a name="syntax"></a>구문  
   
@@ -42,33 +40,33 @@ HRESULT GetTableInfo (
   
 ## <a name="parameters"></a>매개 변수  
  `ixTbl`  
- [in] 테이블의 식별자를 반환할 속성입니다.  
+ [in] The identifier of the table whose properties to return.  
   
  `pcbRow`  
- [out] 테이블 행의 바이트 크기에 대 한 포인터입니다.  
+ [out] A pointer to the size, in bytes, of a table row.  
   
  `pcRows`  
- [out] 테이블의 행 수에 대 한 포인터입니다.  
+ [out] A pointer to the number of rows in the table.  
   
  `pcCols`  
- [out] 테이블의 열 개수에 대 한 포인터입니다.  
+ [out] A pointer to the number of columns in the table.  
   
  `piKey`  
- [out] 키 열 또는 테이블에 키 열이 없는 경우-1의 인덱스에 대 한 포인터입니다.  
+ [out] A pointer to the index of the key column, or -1 if the table has no key column.  
   
  `ppName`  
- [out] 테이블 이름에 대 한 포인터에 대 한 포인터입니다.  
+ [out] A pointer to a pointer to the table name.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** Cor.h  
+ **Header:** Cor.h  
   
- **라이브러리:** MsCorEE.dll에서 리소스로 사용  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [IMetaDataTables 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
 - [IMetaDataTables2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

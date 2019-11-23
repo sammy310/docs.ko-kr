@@ -11,16 +11,16 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: d212c06c7ddc9f22095c0b95f19fd1083482435c
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 250021c9eb475d0cbcb1bd14c8515b969fc9d30b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69661229"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449831"
 ---
-# <a name="icorprofilerinfo10isfrozenobject-method"></a>ICorProfilerInfo10:: IsFrozenObject 메서드
+# <a name="icorprofilerinfo10isfrozenobject-method"></a>ICorProfilerInfo10::IsFrozenObject Method
 
-ObjectID가 지정 된 경우 개체가 읽기 전용 세그먼트에 있는지 여부를 확인 합니다.
+Given an ObjectID, determines whether the object is in a read-only segment.
 
 ## <a name="syntax"></a>구문
 
@@ -32,21 +32,21 @@ HRESULT IsFrozenObject( [in]  ObjectID objectId,
 #### <a name="parameters"></a>매개 변수
 
 `objectId` \
-진행 검사할 개체입니다.
+[in] The object to examine.
 
 `pbFrozen` \
-제한이 개체가 `BOOL` 읽기 전용 세그먼트에 있는지 여부를 나타내는입니다.
+[out] A `BOOL` indicating if the object is in a read-only segment.
 
 ## <a name="requirements"></a>요구 사항
 
-**플랫폼** [.Net Core 지원 운영 체제](../../../core/windows-prerequisites.md#net-core-supported-operating-systems)를 참조 하세요.
+**Platforms:** See [.NET Core supported operating systems](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).
 
 **헤더:** CorProf.idl, CorProf.h
 
-**라이브러리** CorGuids.lib
+**라이브러리:** CorGuids.lib
 
-**.Net 버전:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
+**.NET Versions:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
-- [ICorProfilerInfo10 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)
+- [ICorProfilerInfo10 Interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)

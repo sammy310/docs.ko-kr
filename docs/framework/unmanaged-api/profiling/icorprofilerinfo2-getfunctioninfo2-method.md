@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0aa60f24-8bbd-4c83-83c5-86ad191b1d82
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d6c45e44f68621708d05ca43857cf1e100113166
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 11f9a186f5ec5e3b9e718a3ccd43b35b66d28078
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771080"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74433182"
 ---
 # <a name="icorprofilerinfo2getfunctioninfo2-method"></a>ICorProfilerInfo2::GetFunctionInfo2 메서드
 함수의 부모 클래스, 메타데이터 토큰 및 각 형식 인수 `ClassID`(있는 경우)를 가져옵니다.  
@@ -66,8 +64,8 @@ HRESULT GetFunctionInfo2(
  `typeArgs`  
  [out] 각각 함수의 형식 인수 ID인 `ClassID` 값의 배열입니다. 메서드가 반환되면 `typeArgs`에 `ClassID` 값이 일부 또는 모두 포함됩니다.  
   
-## <a name="remarks"></a>설명  
- 프로파일러 코드를 호출할 수 있습니다 [icorprofilerinfo:: Getmodulemetadata](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmodulemetadata-method.md) 가져오려고를 [메타 데이터](../../../../docs/framework/unmanaged-api/metadata/index.md) 지정 된 모듈에 대 한 인터페이스입니다. `pToken`에서 참조하는 위치로 반환되는 메타데이터 토큰을 사용하여 함수에 대한 메타데이터에 액세스할 수 있습니다.  
+## <a name="remarks"></a>주의  
+ The profiler code can call [ICorProfilerInfo::GetModuleMetaData](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmodulemetadata-method.md) to obtain a [metadata](../../../../docs/framework/unmanaged-api/metadata/index.md) interface for a given module. `pToken`에서 참조하는 위치로 반환되는 메타데이터 토큰을 사용하여 함수에 대한 메타데이터에 액세스할 수 있습니다.  
   
  `pClassId` 및 `typeArgs` 매개 변수를 통해 반환되는 클래스 ID 및 형식 인수는 다음 표와 같이 `frameInfo` 매개 변수에 전달되는 값에 따라 달라집니다.  
   
@@ -82,7 +80,7 @@ HRESULT GetFunctionInfo2(
  또는 길이가 0인 `pcTypeArgs` 버퍼로 `GetFunctionInfo2`를 먼저 호출하여 올바른 버퍼 크기를 구합니다. 그런 다음 버퍼 크기를 `pcTypeArgs`에서 반환된 값을 `ClassID` 값의 크기로 나눈 값으로 설정하고 `GetFunctionInfo2`를 다시 호출합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
   
@@ -90,7 +88,7 @@ HRESULT GetFunctionInfo2(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ICorProfilerInfo 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
 - [ICorProfilerInfo2 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

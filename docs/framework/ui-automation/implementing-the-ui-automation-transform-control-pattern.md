@@ -6,16 +6,16 @@ helpviewer_keywords:
 - Transform control pattern
 - UI Automation, Transform control pattern
 ms.assetid: 5f49d843-5845-4800-9d9c-56ce0d146844
-ms.openlocfilehash: fbcb7b274144281d88d8fb36b9cb55043658a6a9
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: c0a46580ad2673b56fefe7228f2549a2e19d2c14
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71043103"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447064"
 ---
 # <a name="implementing-the-ui-automation-transform-control-pattern"></a>UI 자동화 Transform 컨트롤 패턴 구현
 > [!NOTE]
-> 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. 에 대 한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [최신 정보는 Windows Automation API: UI 자동화](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조하세요.  
   
  이 항목에서는 속성, 메서드 및 이벤트에 대한 정보를 포함하여 <xref:System.Windows.Automation.Provider.ITransformProvider>를 구현하기 위한 지침 및 규칙을 제공합니다. 추가 참조에 대한 링크는 항목 끝에 나열되어 있습니다.  
   
@@ -54,11 +54,11 @@ ms.locfileid: "71043103"
   
 |예외 형식|조건|  
 |--------------------|---------------|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Move%2A><br /><br /> - <xref:System.Windows.Automation.TransformPatternIdentifiers.CanMoveProperty> 이 false 인 경우|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Resize%2A><br /><br /> - <xref:System.Windows.Automation.TransformPatternIdentifiers.CanResizeProperty> 이 false 인 경우|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Rotate%2A><br /><br /> - <xref:System.Windows.Automation.TransformPatternIdentifiers.CanRotateProperty> 이 false 인 경우|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Move%2A><br /><br /> -   If the <xref:System.Windows.Automation.TransformPatternIdentifiers.CanMoveProperty> is false.|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Resize%2A><br /><br /> -   If the <xref:System.Windows.Automation.TransformPatternIdentifiers.CanResizeProperty> is false.|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Rotate%2A><br /><br /> -   If the <xref:System.Windows.Automation.TransformPatternIdentifiers.CanRotateProperty> is false.|  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [UI 자동화 컨트롤 패턴 개요](ui-automation-control-patterns-overview.md)
 - [UI 자동화 공급자의 컨트롤 패턴 지원](support-control-patterns-in-a-ui-automation-provider.md)

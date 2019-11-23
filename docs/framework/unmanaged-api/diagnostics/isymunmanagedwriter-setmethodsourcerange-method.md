@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c698b86e-ace7-4b21-9549-f52d6a034959
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6e06695f5ba348315523c7414822ce87d594bdbc
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 85e65f6a3ec13c2acc31b8f87dbe4b4476ffc2a5
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776595"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74427872"
 ---
 # <a name="isymunmanagedwritersetmethodsourcerange-method"></a>ISymUnmanagedWriter::SetMethodSourceRange 메서드
-True 이면 시작 및 끝 소스 파일 내의 메서드를 지정합니다. 이 메서드를 사용 하 여 메서드 내에 있는 시퀀스 위치의 독립적으로 메서드의 범위를 지정 합니다.  
+Specifies the true start and end of a method within a source file. Use this method to specify the extent of a method independently of the sequence points that exist within the method.  
   
 ## <a name="syntax"></a>구문  
   
@@ -41,29 +39,29 @@ HRESULT SetMethodSourceRange(
   
 ## <a name="parameters"></a>매개 변수  
  `startDoc`  
- [in] 시작 위치를 포함 하는 문서에 대 한 포인터입니다.  
+ [in] A pointer to the document containing the starting position.  
   
  `startLine`  
- [in] 시작 줄 번호입니다.  
+ [in] The starting line number.  
   
  `startColumn`  
- [in] 시작 열입니다.  
+ [in] The starting column.  
   
  `endDoc`  
- [in] 끝 위치를 포함 하는 문서에 대 한 포인터입니다.  
+ [in] A pointer to the document containing the ending position.  
   
  `endLine`  
- [in] 끝 줄 번호입니다.  
+ [in] The ending line number.  
   
  `endColumn`  
- [in] 끝 열 번호입니다.  
+ [in] The ending column number.  
   
 ## <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>요구 사항  
- **헤더:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ISymUnmanagedWriter 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

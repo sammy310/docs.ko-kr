@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 20bdf8ff-2d15-4c64-8950-6888f642d6c0
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 22321dc8f8c4b8d9c2ae50b061a2ba105f92ebb7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f25150d037a2f6fabb700f2c4bf2191e8e402a8e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746089"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446213"
 ---
 # <a name="isymunmanagedsourceservermodulegetsourceserverdata-method"></a>ISymUnmanagedSourceServerModule::GetSourceServerData 메서드
-모듈에 대 한 원본 서버 데이터를 반환합니다. 호출자에 게 사용 하 여 리소스를 해제 해야 `CoTaskMemFree`합니다.  
+Returns the source server data for the module. The caller must free resources by using `CoTaskMemFree`.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,17 +35,17 @@ HRESULT GetSourceServerData(
   
 ## <a name="parameters"></a>매개 변수  
  `pDataByteCount`  
- [out] 에 대 한 포인터를 `ULONG32` 원본 서버 데이터를 바이트 단위로 크기를 받는 합니다.  
+ [out] A pointer to a `ULONG32` that receives the size, in bytes, of the source server data.  
   
  `ppData`  
- [out] 반환 된 포인터 `pDataByteCount` 값입니다.  
+ [out] A pointer to the returned `pDataByteCount` value.  
   
 ## <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>요구 사항  
- **헤더:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ISymUnmanagedSourceServerModule 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsourceservermodule-interface.md)

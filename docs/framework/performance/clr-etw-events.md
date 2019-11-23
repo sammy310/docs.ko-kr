@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: ef2b31c3-7426-43e7-9924-92339b96556d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6798a83973f94f07a2a215d5208aa55f0f9ae929
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 951941af2568e72fe093860801bd2595b3037e41
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046742"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428174"
 ---
 # <a name="clr-etw-events"></a>CLR ETW 이벤트
 이 섹션의 항목은 ETW(Windows용 이벤트 추적) 이벤트를 설명합니다. 각 이벤트에는 연결된 키워드 및 수준이 있으며, [CLR ETW 키워드 및 수준](clr-etw-keywords-and-levels.md) 항목에서 설명합니다. CLR에는 이벤트에 대한 두 개의 공급자가 있습니다.  
@@ -24,7 +24,7 @@ ms.locfileid: "71046742"
   
  공급자에 대한 자세한 내용은 [CLR ETW 공급자](clr-etw-providers.md)를 참조하세요.  
   
-## <a name="in-this-section"></a>섹션 내용  
+## <a name="in-this-section"></a>단원 내용  
  [런타임 정보 이벤트](runtime-information-etw-events.md)  
  SKU, 버전 번호, 런타임이 활성화된 방법, 시작하는 데 사용된 명령줄 매개 변수, GUID(해당되는 경우) 및 다른 관련 정보를 비롯한 런타임 관련 정보를 캡처합니다.  
   
@@ -61,10 +61,10 @@ ms.locfileid: "71046742"
  [스택 이벤트](stack-etw-event.md)  
  이벤트가 발생한 이후 스택 추적을 생성하기 위해 다른 이벤트와 함께 사용되는 정보를 캡처합니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
-- [ETW를 사용한 디버깅 및 성능 조정 개선](https://go.microsoft.com/fwlink/?LinkId=179696)
-- [Windows 성능 블로그](https://go.microsoft.com/fwlink/?LinkId=179509)
+- [Improve Debugging And Performance Tuning With ETW](https://docs.microsoft.com/archive/msdn-magazine/2007/april/event-tracing-improve-debugging-and-performance-tuning-with-etw)
+- [Windows Performance Blog](https://blogs.msdn.microsoft.com/pigscanfly/tag/xperf/)
 - [.NET Framework 로깅 제어](controlling-logging.md)
 - [CLR ETW 공급자](clr-etw-providers.md)
 - [CLR ETW 키워드 및 수준](clr-etw-keywords-and-levels.md)

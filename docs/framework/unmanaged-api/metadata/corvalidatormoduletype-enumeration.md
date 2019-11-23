@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 748f1ab2-fbcb-4f55-89ec-8d23d81ebc80
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 04bed418d96658e29328cf2ce6bba445639b437f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a8dc09ee9f0f0fd79060bb86c599ab40a285153b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750752"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448764"
 ---
 # <a name="corvalidatormoduletype-enumeration"></a>CorValidatorModuleType 열거형
-모듈의 형식을 지정합니다.  
+Specifies the type of a module.  
   
 ## <a name="syntax"></a>구문  
   
@@ -43,25 +41,25 @@ typedef enum
   
 ## <a name="members"></a>멤버  
   
-|멤버|Description|  
+|멤버|설명|  
 |------------|-----------------|  
-|`ValidatorModuleTypeInvalid`|모듈에는 잘못 된 형식입니다.|  
-|`ValidatorModuleTypeMin`|최소값을 `CorValidatorModuleType` 열거형입니다.|  
-|`ValidatorModuleTypePE`|모듈에는 pe (이식 가능) 파일입니다.|  
-|`ValidatorModuleTypeObj`|모듈에는.obj 파일입니다.|  
-|`ValidatorModuleTypeEnc`|모듈은 편집 및 계속 디버거 세션을 합니다.|  
-|`ValidatorModuleTypeIncr`|모듈은 증분 방식으로 빌드된입니다.|  
-|`ValidatorModuleTypeMax`|최대값을 `CorValidatorModuleType` 열거형입니다.|  
+|`ValidatorModuleTypeInvalid`|The module is an invalid type.|  
+|`ValidatorModuleTypeMin`|The minimum value of the `CorValidatorModuleType` enum.|  
+|`ValidatorModuleTypePE`|The module is a portable executable (PE) file.|  
+|`ValidatorModuleTypeObj`|The module is a .obj file.|  
+|`ValidatorModuleTypeEnc`|The module is an edit-and-continue debugger session.|  
+|`ValidatorModuleTypeIncr`|The module is one that has been incrementally built.|  
+|`ValidatorModuleTypeMax`|The maximum value of the `CorValidatorModuleType` enum.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** Cor.h  
+ **Header:** Cor.h  
   
- **라이브러리:** MsCorEE.dll에 리소스로 포함  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [메타데이터 열거형](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

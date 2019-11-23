@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8196f2a3-bbf2-45d3-a6cd-74502c356644
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: bb26a96c46b01a2981afba0ac6b405c0b50f6d9a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ab864b251a989056bc34b2c7c6658964556f9ac1
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781427"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449502"
 ---
 # <a name="imetadatatablesgetnumtables-method"></a>IMetaDataTables::GetNumTables 메서드
-현재 범위에서 테이블의 수를 가져옵니다 `IMetaDataTables` 인스턴스.  
+Gets the number of tables in the scope of the current `IMetaDataTables` instance.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,18 +35,18 @@ HRESULT GetNumTables (
   
 ## <a name="parameters"></a>매개 변수  
  `pcTables`  
- [out] 현재 인스턴스 범위에 있는 테이블의 수에 대 한 포인터입니다.  
+ [out] A pointer to the number of tables in the current instance scope.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** Cor.h  
+ **Header:** Cor.h  
   
- **라이브러리:** MsCorEE.dll에서 리소스로 사용  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [IMetaDataTables 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
 - [IMetaDataTables2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

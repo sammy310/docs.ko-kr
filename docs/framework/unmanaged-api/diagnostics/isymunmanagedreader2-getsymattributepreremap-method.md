@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7580d546-a709-40c5-ad02-aa70d774fd0b
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 46c608a644619c28709de135d7c062175b012d80
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4009f8988c90ed090c0cc3d86164af347055722f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777386"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446426"
 ---
 # <a name="isymunmanagedreader2getsymattributepreremap-method"></a>ISymUnmanagedReader2::GetSymAttributePreRemap 메서드
-해당 이름을 기준으로 사용자 지정 특성을 가져옵니다. 이러한 특성은 메타 데이터 사용자 지정 특성을 달리 기호 저장소에 보관 됩니다.  
+Gets a custom attribute based upon its name. Unlike metadata custom attributes, these attributes are held in the symbol store.  
   
 ## <a name="syntax"></a>구문  
   
@@ -41,26 +39,26 @@ HRESULT GetSymAttributePreRemap(
   
 ## <a name="parameters"></a>매개 변수  
  `parent`  
- [in] 부모 메타 데이터 토큰입니다.  
+ [in] The metadata token of the parent.  
   
  `name`  
- [in] 에 대 한 포인터를 `WCHAR` 이름을 포함 하는 합니다.  
+ [in] A pointer to a `WCHAR` that contains the name.  
   
  `cBuffer`  
- [in] A `ULONG32` 의 크기를 나타내는 `buffer` 배열입니다.  
+ [in] A `ULONG32` that indicates the size of the `buffer` array.  
   
  `pcBuffer`  
- [out] 에 대 한 포인터를 `ULONG32` 특성 바이트를 포함 하는 데 필요한 버퍼의 크기를 받는 합니다.  
+ [out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the attribute bytes.  
   
  `buffer`  
- [out] 특성 바이트를 받는 버퍼에 대 한 포인터입니다.  
+ [out] A pointer to the buffer that receives the attribute bytes.  
   
 ## <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>요구 사항  
- **헤더:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ISymUnmanagedReader2 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-interface.md)

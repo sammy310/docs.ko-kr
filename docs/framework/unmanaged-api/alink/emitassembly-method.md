@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 605ff39e-e5cc-4bff-8196-e8d68a9715b9
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a2adf53d1e29fda077cdcf7b79891f6271993109
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6bbe5db75ded15f32a6ff3564e1116d40a745a65
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70787588"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446528"
 ---
 # <a name="emitassembly-method"></a>EmitAssembly 메서드
-어셈블리를 만듭니다. 어셈블리 파일을 제외 하 고 다른 모든 파일을 닫은 후이 메서드를 호출 합니다. 바인딩되지 않은 모듈을 생성할 때이 메서드를 호출 하지 마십시오.  
+Creates the assembly. Call this method after all other files are closed except for the assembly file. Do not call this method when producing unbound modules.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,15 +35,15 @@ HRESULT EmitAssembly(
   
 ## <a name="parameters"></a>매개 변수  
  `AssemblyID`  
- 어셈블리의 ID입니다.  
+ ID of the assembly.  
   
 ## <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 S_OK를 반환 합니다.  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>요구 사항  
- Alink 필요  
+ Requires alink.h  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [IALink 인터페이스](ialink-interface.md)
 - [IALink2 인터페이스](ialink2-interface.md)

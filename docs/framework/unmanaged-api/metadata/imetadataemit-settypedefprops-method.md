@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 480d596a-759f-4d29-ac1a-3dbff8f3544d
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: baee8566e923f9cb31868f8aa0e379ff1dfa42fc
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3ab29fc8c983b354ad5088d26c547868940ec70a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777218"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447721"
 ---
 # <a name="imetadataemitsettypedefprops-method"></a>IMetaDataEmit::SetTypeDefProps 메서드
-설정에 대 한 이전 호출에서 정의 된 형식 기능의 [imetadataemit:: Definetypedef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md)합니다.  
+Sets features of a type defined by a prior call to [IMetaDataEmit::DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,27 +38,27 @@ HRESULT SetTypeDefProps (
   
 ## <a name="parameters"></a>매개 변수  
  `td`  
- [in] `mdTypeDef` 토큰에 대 한 원래 호출에서 얻은 [imetadataemit:: Definetypedef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md)합니다.  
+ [in] An `mdTypeDef` token obtained from original call to [IMetaDataEmit::DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).  
   
  `dwTypeDefFlags`  
- [in] `TypeDef` 특성입니다. 이 비트 마스크의 `CorTypeAttr` 값입니다.  
+ [in] `TypeDef` attributes. This is a bitmask of `CorTypeAttr` values.  
   
  `tkExtends`  
- [in] `mdToken` 기본 클래스입니다. 에 대 한 이전 호출에서 가져온 [imetadataemit:: Defineimporttype](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md), 또는 `null`합니다.  
+ [in] The `mdToken` of the base class. Obtained from a previous call to [IMetaDataEmit::DefineImportType](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md), or `null`.  
   
  `rtkImplements[]`  
- [in] 이 형식이 구현 하는 인터페이스에 대 한 토큰의 배열입니다. 이러한 `mdTypeRef` 를 사용 하 여 토큰을 가져오는 [imetadataemit:: Defineimporttype](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md)합니다. 배열의 마지막 요소 여야 합니다 `mdTokenNil`합니다.  
+ [in] An array of tokens for the interfaces that this type implements. These `mdTypeRef` tokens are obtained using [IMetaDataEmit::DefineImportType](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md). The last element of the array is must be `mdTokenNil`.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** Cor.h  
+ **Header:** Cor.h  
   
- **라이브러리:** MSCorEE.dll에서 리소스로 사용  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [IMetaDataEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

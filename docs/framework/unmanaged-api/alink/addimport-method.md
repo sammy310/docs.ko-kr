@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4fedf8a0-08c8-43d0-aa00-20f2a521c991
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: aed70a78e2513f4d63fbf8ca8868f26efbac9ae8
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 52e52ac62e2dcfeb182da3014a863409f640274e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70787660"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446649"
 ---
 # <a name="addimport-method"></a>AddImport 메서드
-어셈블리에 가져오기를 추가 합니다.  
+Adds imports to the assembly.  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,24 +38,24 @@ HRESULT AddImport(
   
 ## <a name="parameters"></a>매개 변수  
  `AssemblyID`  
- 확대할 어셈블리의 고유 ID입니다.  
+ Unique ID of assembly to be augmented.  
   
  `ImportToken`  
- 가져올 파일의 [Importfile 메서드에서](importfile-method.md)검색 된 고유 ID입니다.  
+ Unique ID, retrieved from [ImportFile Method](importfile-method.md), of file to be imported.  
   
  `dwFlags`  
- `ffContainsNoMetaData` 및`ffWriteable`와 같은 com + filedef 플래그입니다. `dwFlags`[DefineFile 메서드에](../metadata/imetadataassemblyemit-definefile-method.md)전달 됩니다.  
+ COM+ FileDef flags such as `ffContainsNoMetaData` and `ffWriteable`. `dwFlags` is passed to [DefineFile Method](../metadata/imetadataassemblyemit-definefile-method.md).  
   
  `pFileToken`  
- 결과 파일에 대 한 ID를 받는 토큰에 대 한 포인터입니다.  
+ Pointer to token that receives the ID for the resulting file.  
   
 ## <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 S_OK를 반환 합니다.  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>요구 사항  
- Alink 필요  
+ Requires alink.h  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [IALink 인터페이스](ialink-interface.md)
 - [IALink2 인터페이스](ialink2-interface.md)

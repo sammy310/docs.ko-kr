@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 050e77ee-3014-45c0-9e29-2ebe29347b0d
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9a48dbd38d357b668c2794ae6305ceb9cad3dcf4
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: dfbc10bdbe633450dee2e27524c29ead21fb739e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70787197"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445538"
 ---
 # <a name="setpekind-method"></a>SetPEKind 메서드
-이식 가능한 실행 파일 유형 (컴퓨터 특정 컴퓨터 또는 컴퓨터 관계 없음)을 결정 합니다.  
+Determines the portable executable type, either machine-specific or machine-agnostic.  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,24 +37,24 @@ HRESULT SetPEKind(
   
 ## <a name="parameters"></a>매개 변수  
  `AssemblyID`  
- 어셈블리의 ID입니다.  
+ ID of the assembly.  
   
  `FileToken`  
- PE 형식을 설정할 파일의 토큰입니다. 가 바인딩되지 않은 .netmodule `AssemblyID` 을 나타내지 않는 경우 NULL 일 수 있습니다.  
+ Token of file for which the PE type is to be set. Can be NULL if `AssemblyID` does not indicate an unbound netmodule.  
   
  `dwPEKind`  
- [CorPEKind 열거](../metadata/corpekind-enumeration.md)에 표시 되는 PE의 형식입니다.  
+ The type of PE, as indicated by the [CorPEKind Enumeration](../metadata/corpekind-enumeration.md).  
   
  `dwMachine`  
- NT 헤더에 표시 된 대상 컴퓨터 아키텍처입니다.  
+ The target machine architecture, as indicated in the NT header.  
   
 ## <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 S_OK를 반환 합니다.  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>요구 사항  
- Alink가 필요 합니다.  
+ Requires alink.h.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [GetPEKind 메서드](../metadata/imetadataimport2-getpekind-method.md)
 - [IALink2 인터페이스](ialink2-interface.md)

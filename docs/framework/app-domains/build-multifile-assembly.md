@@ -1,5 +1,5 @@
 ---
-title: '방법: 다중 파일 어셈블리 빌드'
+title: 'How to: Build a multifile assembly'
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assemblies [.NET Framework], multifile
@@ -17,14 +17,14 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 261c5583-8a76-412d-bda7-9b8ee3b131e5
-ms.openlocfilehash: 150c0f63d52590ea9cf80a3e991375f10ce1a124
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0f8c6d57425657e321d80f9edffa20f27bc28770
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119930"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74429563"
 ---
-# <a name="how-to-build-a-multifile-assembly"></a>방법: 다중 파일 어셈블리 빌드
+# <a name="how-to-build-a-multifile-assembly"></a>How to: Build a multifile assembly
 
 이 문서는 다중 파일 어셈블리를 만드는 방법을 설명하고 프로시저의 각 단계를 보여 주는 코드를 제공합니다.
 
@@ -72,8 +72,6 @@ ms.locfileid: "73119930"
 
    ```vb
    ' Assembly building example in the .NET Framework.
-   Imports System
-
    Namespace myStringer
        Public Class Stringer
            Public Sub StringerMethod()
@@ -144,7 +142,6 @@ ms.locfileid: "73119930"
    ```
 
    ```vb
-   Imports System
    Imports myStringer
 
    Class MainClientApp
@@ -227,6 +224,6 @@ ms.locfileid: "73119930"
 ## <a name="see-also"></a>참조
 
 - [어셈블리 만들기](../../standard/assembly/create.md)
-- [방법: 어셈블리 내용 보기](../../standard/assembly/view-contents.md)
+- [How to: View assembly contents](../../standard/assembly/view-contents.md)
 - [런타임에서 어셈블리를 찾는 방법](../deployment/how-the-runtime-locates-assemblies.md)
 - [다중 파일 어셈블리](multifile-assemblies.md)

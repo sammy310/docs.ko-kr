@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5c4c1dc2-d40d-4173-bbe6-7058fb21c98f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 69b398fa003abc0dba00ee89a9bb911a8c2dd6df
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f11b374ed0ecbfc137c43fb641ae691237604691
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777508"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431528"
 ---
 # <a name="imetadataemitdefineproperty-method"></a>IMetaDataEmit::DefineProperty 메서드
-지정 된 지정된 된 형식에 대 한 속성 정의 만듭니다 `get` 및 `set` 메서드 접근자는 속성 정의에 대 한 토큰을 가져옵니다.  
+Creates a property definition for the specified type, with the specified `get` and `set` method accessors, and gets a token to that property definition.  
   
 ## <a name="syntax"></a>구문  
   
@@ -48,51 +46,51 @@ HRESULT DefineProperty (
   
 ## <a name="parameters"></a>매개 변수  
  `td`  
- [in] 클래스 또는 속성이 정의 되는 인터페이스에 대 한 토큰입니다.  
+ [in] The token for class or interface on which the property is being defined.  
   
  `szProperty`  
- [in] 속성의 이름입니다.  
+ [in] The name of the property.  
   
  `dwPropFlags`  
- [in] 속성 플래그입니다.  
+ [in] The property flags.  
   
  `pvSig`  
- [in] 속성 서명입니다.  
+ [in] The property signature.  
   
  `cbSig`  
- [in] 바이트 수가 `pvSig`합니다.  
+ [in] The count of bytes in `pvSig`.  
   
  `dwCPlusTypeFlag`  
- [in] 형식 속성의 기본값입니다.  
+ [in] The type of the property's default value.  
   
  `pValue`  
- [in] 속성에 대 한 기본 값입니다.  
+ [in] The default value for the property.  
   
  `cchValue`  
- [in] \(유니코드) 수의 문자 `pValue`합니다.  
+ [in] The count of (Unicode) characters in `pValue`.  
   
  `mdSetter`  
- [in] 속성 값을 설정 하는 메서드.  
+ [in] The method that sets the property value.  
   
  `mdGetter`  
- [in] 속성 값을 가져오는 메서드.  
+ [in] The method that gets the property value.  
   
  `rmdOtherMethods[]`  
- [in] 속성과 연결 된 다른 메서드는 배열입니다. 배열 종료는 `mdTokenNil`합니다.  
+ [in] An array of other methods associated with the property. Terminate the array with an `mdTokenNil`.  
   
  `pmdProp`  
- [out] `mdProperty` 할당 된 토큰입니다.  
+ [out] The `mdProperty` token assigned.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** Cor.h  
+ **Header:** Cor.h  
   
- **라이브러리:** MSCorEE.dll에서 리소스로 사용  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [IMetaDataEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

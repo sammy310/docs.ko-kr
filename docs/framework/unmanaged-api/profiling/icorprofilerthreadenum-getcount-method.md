@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: d6dbdc4a-6115-455d-a3f3-704a81d3646b
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: fbdb9f6fc8376e080455957367dc79f4dfed8843
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 695b720119854de4645b2f14dd55811f2465504a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781207"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447643"
 ---
 # <a name="icorprofilerthreadenumgetcount-method"></a>ICorProfilerThreadEnum::GetCount 메서드
 애플리케이션에서 사용하는 스레드 수를 가져옵니다.  
@@ -36,10 +34,10 @@ HRESULT GetCount (    [out] ULONG * pcelt
   
 ## <a name="parameters"></a>매개 변수  
  `celt`  
- [out] 응용 프로그램에서 사용 되는 스레드 수입니다.  
+ [out] The number of threads used by the application.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
   
@@ -47,7 +45,7 @@ HRESULT GetCount (    [out] ULONG * pcelt
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ICorProfilerThreadEnum 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md)
 - [프로파일링 인터페이스](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

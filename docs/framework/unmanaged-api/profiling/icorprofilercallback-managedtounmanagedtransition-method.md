@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ef3cd619-912d-40c5-a449-03ba02a39ee7
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 277e035ab542f895ca700ecd5f3205cc757c9ddd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f4f5871bdd7adf11fcc811fd40c62e3027b8e607
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769302"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74426180"
 ---
 # <a name="icorprofilercallbackmanagedtounmanagedtransition-method"></a>ICorProfilerCallback::ManagedToUnmanagedTransition 메서드
-관리 코드에서 비관리 코드로 전환 되었음을 프로파일러에 알립니다.  
+Notifies the profiler that a transition from managed code to unmanaged code has occurred.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,16 +35,16 @@ HRESULT ManagedToUnmanagedTransition(
   
 ## <a name="parameters"></a>매개 변수  
  `functionId`  
- [in] 호출 되는 함수의 ID입니다.  
+ [in] The ID of the function that is being called.  
   
  `reason`  
- [in] 값을 [COR_PRF_TRANSITION_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-transition-reason-enumeration.md) 전환 또는 관리 되는 함수에 의해 관리 되지 않는 호출에서 반환 된 관리 코드에서 비관리 코드 호출으로 인해 발생 했는지 여부를 나타내는 열거형입니다.  
+ [in] A value of the [COR_PRF_TRANSITION_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-transition-reason-enumeration.md) enumeration that indicates whether the transition occurred because of a call into unmanaged code from managed code, or because of a return from a managed function called by an unmanaged one.  
   
-## <a name="remarks"></a>설명  
- 경우 변수의 `reason` COR_PRF_TRANSITION_CALL, 함수는 관리 되지 않는 함수는 되지 컴파일된-just-in-time 컴파일러를 사용 하 여 ID가 됩니다. 이름, 일부 메타 데이터 등, 관련 기본 정보를 포함 하는 관리 되지 않는 함수입니다. 암시적 플랫폼을 사용 하 여 관리 되지 않는 함수를 호출한 경우 호출 (PInvoke), 런타임에서 호출의 대상 및의 값을 확인할 수 없습니다 `functionId` null이 됩니다. 암시적 PInvoke에 대 한 자세한 내용은 참조 하세요. [사용 C++ (암시적 PInvoke) Interop](/cpp/dotnet/using-cpp-interop-implicit-pinvoke)합니다.  
+## <a name="remarks"></a>주의  
+ If the value of `reason` is COR_PRF_TRANSITION_CALL, the function ID is that of the unmanaged function, which will never have been compiled using the just-in-time compiler. Unmanaged functions have basic information associated with them, such as a name and some metadata. If the unmanaged function was called by using implicit platform invoke (PInvoke), the runtime cannot determine the destination of the call and the value of `functionId` will be null. For more information on implicit PInvoke, see [Using C++ Interop (Implicit PInvoke)](/cpp/dotnet/using-cpp-interop-implicit-pinvoke).  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
   
@@ -54,7 +52,7 @@ HRESULT ManagedToUnmanagedTransition(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ICorProfilerCallback 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
 - [UnmanagedToManagedTransition 메서드](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-unmanagedtomanagedtransition-method.md)

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 275ef87b-0b53-49f9-af6b-58506335dc06
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 54789003f7454a65449e55ea4d990edd672d9c1b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9aace77c4b3549c033433d4c305b07daa1f7a8c1
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774688"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449001"
 ---
 # <a name="isymunmanagedencupdateupdatemethodlines-method"></a>ISymUnmanagedENCUpdate::UpdateMethodLines 메서드
-컴파일되지 않은, 하지만 해당 줄 독립적으로 이동 하는 방법에 대 한 줄 정보를 업데이트할 수 있습니다. 각 문에 대 한 델타 허용 됩니다.  
+Allows updating the line information for a method that has not been recompiled, but whose lines have moved independently. A delta for each statement is allowed.  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,20 +36,20 @@ HRESULT UpdateMethodLines(
   
 ## <a name="parameters"></a>매개 변수  
  `mdMethodToken`  
- [in] 메타 데이터 메서드 토큰입니다.  
+ [in] The metadata of the method token.  
   
  `pDeltas`  
- [in] 배열을 `INT32` 메서드에서 각 시퀀스 요소에 대 한 델타를 나타내는 값입니다.  
+ [in] An array of `INT32` values that indicates deltas for each sequence point in the method.  
   
  `cDeltas`  
- [in] A `ULONG` 크기를 포함 하는 `pDeltas` 매개 변수입니다.  
+ [in] A `ULONG` containing the size of the `pDeltas` parameter.  
   
 ## <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>요구 사항  
- **헤더:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ISymUnmanagedENCUpdate 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)

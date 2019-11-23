@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 84f83921-64cb-49e3-ac8b-22a0b77b18a8
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 49e7b73559e8def890f8df8f596fbe8ad5bb5d3b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: ed45e06297b77ea60304cdcfe1b08e97f9e4c085
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70777484"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446595"
 ---
 # <a name="assemblyoptions-enumeration"></a>AssemblyOptions 열거형
-어셈블리 옵션을 열거 합니다.  
+Enumerates the assembly options.  
   
 ## <a name="syntax"></a>구문  
   
@@ -56,34 +54,34 @@ typedef enum _AssemblyOptions {
   
 ## <a name="fields"></a>필드  
   
-|필드|Description|  
+|필드|설명|  
 |-----------|-----------------|  
-|optAssemTitle|String-어셈블리 제목을 나타냅니다.|  
-|optAssemDescription|String-어셈블리 설명을 포함 합니다.|  
-|optAssemConfig|String-어셈블리 구성을 포함 합니다.|  
-|optAssemOS|문자열 인코딩: "dwOSPlatformId. DwosdwOSMinorVersion".|  
+|optAssemTitle|String - Represents the assembly title.|  
+|optAssemDescription|String - Contains the assembly description.|  
+|optAssemConfig|String - Contains the assembly configuration.|  
+|optAssemOS|String - Encoded as: "dwOSPlatformId.dwOSMajorVersion.dwOSMinorVersion".|  
 |optAssemProcessor|ULONG|  
-|optAssemLocale|String-어셈블리 로캘을 포함 합니다.|  
-|optAssemVersion|문자열 인코딩: "Major.Minor.Build.Revision".|  
-|optAssemCompany|String-회사를 포함 합니다.|  
-|optAssemProduct|String-제품 이름을 포함 합니다.|  
-|optAssemProductVersion|문자열 (InformationalVersion이 라고도 함)|  
-|optAssemCopyright|String-저작권 정보를 포함 합니다.|  
-|optAssemTrademark|String-상표 정보를 포함 합니다.|  
-|optAssemKeyFile|문자열 (파일 이름)입니다.|  
-|optAssemKeyName|문자열 (키 이름)입니다.|  
+|optAssemLocale|String - Contains the assembly locale.|  
+|optAssemVersion|String - Encoded as: "Major.Minor.Build.Revision".|  
+|optAssemCompany|String - Contains the company.|  
+|optAssemProduct|String - Contains the product name.|  
+|optAssemProductVersion|String (also known as InformationalVersion).|  
+|optAssemCopyright|String - Contains the copyright information.|  
+|optAssemTrademark|String - Contains the trademark information.|  
+|optAssemKeyFile|String (file name).|  
+|optAssemKeyName|String (The key name).|  
 |optAssemAlgID|ULONG|  
 |optAssemFlags|ULONG|  
-|optAssemHalfSign|Bool (DelaySign 라고도 함).|  
-|optAssemFileVersion|"Major. ProductVersion"로 인코딩된 문자열입니다.|  
-|optAssemSatelliteVer|"Major. 부. 빌드. 수정 버전"으로 문자열 인코딩됩니다.|  
-|optLastAssemOption|요소 수의 카운터입니다.|  
+|optAssemHalfSign|Bool (Also known as DelaySign).|  
+|optAssemFileVersion|String - Encoded as "Major.Minor.Build.Revision"--same as ProductVersion.|  
+|optAssemSatelliteVer|String - Encoded as "Major.Minor.Build.Revision".|  
+|optLastAssemOption|A counter of the number of elements.|  
   
 ## <a name="requirements"></a>요구 사항  
- **헤더:** alink. h  
+ **Header:** alink.h  
   
- **라이브러리**: alink .dll  
+ **Library**: alink.dll  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [Al.exe(어셈블리 링커)](../../tools/al-exe-assembly-linker.md)

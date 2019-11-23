@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ba6e178f-128b-4e47-a13c-b4be73eb106c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0d0f94949cdc82cdecd52f003f3400c43014fabf
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4c819bff50e6644a733374e9863d670d3323ee68
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780457"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449527"
 ---
 # <a name="imetadataimportenuminterfaceimpls-method"></a>IMetaDataImport::EnumInterfaceImpls 메서드
-지정 된 구현 하는 모든 인터페이스를 열거 `TypeDef`합니다. 
+Enumerates all interfaces implemented by the specified `TypeDef`. 
   
 ## <a name="syntax"></a>구문  
   
@@ -41,41 +39,41 @@ HRESULT EnumInterfaceImpls (
   
 ## <a name="parameters"></a>매개 변수  
  `phEnum`  
- [out에서] 열거자에 대 한 포인터입니다.  
+ [in, out] A pointer to the enumerator.  
   
  `td`  
- [in] 토큰 인터페이스 구현을 나타내는 MethodDef 토큰 인 열거할는 TypeDef입니다.  
+ [in] The token of the TypeDef whose MethodDef tokens representing interface implementations are to be enumerated.  
   
  `rImpls`  
- [out] MethodDef 토큰을 저장 하는 데 사용 되는 배열입니다.  
+ [out] The array used to store the MethodDef tokens.  
   
  `cMax`  
  [in] `rImpls` 배열의 최대 크기입니다.  
   
  `pcImpls`  
- [out] 반환 된 토큰의 실제 수 `rImpls`입니다.  
+ [out] The actual number of tokens returned in `rImpls`.  
   
 ## <a name="return-value"></a>반환 값  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
-|`S_OK`|`EnumInterfaceImpls` 성공적으로 반환 합니다.|  
-|`S_FALSE`|열거할 MethodDef 토큰이 있습니다. 이런 경우 `pcImpls` 0으로 설정 됩니다.|  
+|`S_OK`|`EnumInterfaceImpls` returned successfully.|  
+|`S_FALSE`|There are no MethodDef tokens to enumerate. In that case, `pcImpls` is set to zero.|  
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
-컬렉션을 반환 하는 열거형 `mdInterfaceImpl` 지정 된 구현 되는 각 인터페이스에 대 한 토큰 `TypeDef`합니다. 인터페이스 토큰 인터페이스를 지정 된 순서 대로 반환 됩니다 (통해 `DefineTypeDef` 또는 `SetTypeDefProps`). 반환 된 속성 `mdInterfaceImpl` 토큰을 사용 하 여 쿼리할 수 있습니다 [GetInterfaceImplProps](imetadataimport-getinterfaceimplprops-method.md)합니다.
+The enumeration returns a collection of `mdInterfaceImpl` tokens for each interface implemented by the specified `TypeDef`. Interface tokens are returned in the order the interfaces were specified (through `DefineTypeDef` or `SetTypeDefProps`). Properties of the returned `mdInterfaceImpl` tokens can be queried using [GetInterfaceImplProps](imetadataimport-getinterfaceimplprops-method.md).
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** Cor.h  
+ **Header:** Cor.h  
   
- **라이브러리:** MsCorEE.dll에 리소스로 포함  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [IMetaDataImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

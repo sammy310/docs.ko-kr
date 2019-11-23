@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: be3f5985-b1e4-4036-8602-c16e8508d4af
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2a4305b94d785a764671a2d73f43facefd0da0e6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e5eb735acac73d694a0719c206bd22711a8c0333
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782368"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437545"
 ---
 # <a name="imetadataimportgetinterfaceimplprops-method"></a>IMetaDataImport::GetInterfaceImplProps 메서드
-에 대 한 메타 데이터 토큰에 대 한 포인터를 가져옵니다는 <xref:System.Type> 지정된 된 메서드를 구현 하 고 해당 메서드를 선언 하는 인터페이스입니다.
+Gets a pointer to the metadata tokens for the <xref:System.Type> that implements the specified method, and for the interface that declares that method.
   
 ## <a name="syntax"></a>구문  
   
@@ -39,27 +37,27 @@ HRESULT GetInterfaceImplProps (
   
 ## <a name="parameters"></a>매개 변수  
  `iiImpl`  
- [in] 에 대 한 클래스 및 인터페이스 토큰을 반환 하는 메서드를 나타내는 메타 데이터 토큰입니다.  
+ [in] The metadata token representing the method to return the class and interface tokens for.  
   
  `pClass`  
- [out] 메서드를 구현 하는 클래스를 나타내는 메타 데이터 토큰입니다.  
+ [out] The metadata token representing the class that implements the method.  
   
  `ptkIface`  
- [out] 구현 된 메서드를 정의 하는 인터페이스를 나타내는 메타 데이터 토큰입니다.  
+ [out] The metadata token representing the interface that defines the implemented method.  
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
- 값을 가져옵니다 `iImpl` 를 호출 하 여 합니다 [EnumInterfaceImpls](imetadataimport-enuminterfaceimpls-method.md) 메서드.
+ You obtain the value for `iImpl` by calling the [EnumInterfaceImpls](imetadataimport-enuminterfaceimpls-method.md) method.
  
- 예를 들어, 클래스에는 `mdTypeDef` 이 0x02000007 값 및 해당 형식 토큰에는 세 가지 인터페이스를 구현 함을 토큰: 
+ For example, suppose that a class has an `mdTypeDef` token value of 0x02000007 and that it implements three interfaces whose types have tokens: 
 
 - 0x02000003 (TypeDef)
 - 0x0100000A (TypeRef)
 - 0x0200001C (TypeDef)
 
-개념적으로이 정보는으로 인터페이스 구현 테이블에 저장 됩니다.
+Conceptually, this information is stored into an interface implementation table as:
 
-| 행 번호 | 토큰 클래스 | 토큰 인터페이스 |
+| Row number | Class token | Interface token |
 |------------|-------------|-----------------|
 | 4          |             |                 |
 | 5          | 02000007    | 02000003        |
@@ -67,23 +65,23 @@ HRESULT GetInterfaceImplProps (
 | 7          |             |                 |
 | 8          | 02000007    | 0200001C        |
 
-회수 토큰은 4 바이트 값:
+Recall, the token is a 4-byte value:
 
-- 하위 3 바이트 행 수를 보유 하거나 제거 합니다.
-- 토큰 유형이 – 0x09를 보유 하는 상위 바이트 `mdtInterfaceImpl`합니다.
+- The lower 3 bytes hold the row number, or RID.
+- The upper byte holds the token type – 0x09 for `mdtInterfaceImpl`.
 
-`GetInterfaceImplProps` 행에 제공한 토큰이에 저장 된 정보를 반환 합니다 `iImpl` 인수입니다. 
+`GetInterfaceImplProps` returns the information held in the row whose token you provide in the `iImpl` argument. 
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** Cor.h  
+ **Header:** Cor.h  
   
- **라이브러리:** MsCorEE.dll에 리소스로 포함  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [IMetaDataImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9bc881b3-e2ce-48a7-ad69-17eaaa304120
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b34f985f199542612bcdb9b30ebae28649438e1b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 52e1fc20fbe1d8709c21cacde926cf8bebb49425
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776774"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449208"
 ---
 # <a name="isymunmanageddocumentgetchecksum-method"></a>ISymUnmanagedDocument::GetCheckSum 메서드
-체크섬을 가져옵니다.  
+Gets the checksum.  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,17 +36,17 @@ HRESULT GetCheckSum(
   
 ## <a name="parameters"></a>매개 변수  
  `cData`  
- [in] 제공 하는 버퍼의 길이 `data` 매개 변수  
+ [in] The length of the buffer provided by the `data` parameter  
   
  `pcData`  
- [out] 크기와 체크섬, 바이트의 길이입니다.  
+ [out] The size and length of the checksum, in bytes.  
   
  `data`  
- [out] 체크섬을 수신 하는 버퍼입니다.  
+ [out] The buffer that receives the checksum.  
   
 ## <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 s_ok이 고 그렇지 않으면 오류 코드입니다.  
+ S_OK if the method succeeds; otherwise, an error code.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ISymUnmanagedDocument 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

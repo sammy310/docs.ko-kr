@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e508711-da92-4381-aaf8-6803075cdaa2
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 621582536c07b269dd723c9014e23c50e561957a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3854cb4aa3d229c87466c0a35a72447ceb235624
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774605"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449999"
 ---
 # <a name="imetadataimportenumtypedefs-method"></a>IMetaDataImport::EnumTypeDefs 메서드
 현재 범위 내의 모든 형식을 나타내는 TypeDef 토큰을 열거합니다.  
@@ -40,37 +38,37 @@ HRESULT EnumTypeDefs (
   
 ## <a name="parameters"></a>매개 변수  
  `phEnum`  
- [out] 새 열거자에 대 한 포인터입니다. 이 메서드의 첫 번째 호출에 대 한 NULL 이어야 합니다.  
+ [out] A pointer to the new enumerator. This must be NULL for the first call of this method.  
   
  `rTypeDefs`  
- [in] TypeDef 토큰을 저장 하는 데 사용 되는 배열입니다.  
+ [in] The array used to store the TypeDef tokens.  
   
  `cMax`  
  [in] `rTypeDefs` 배열의 최대 크기입니다.  
   
  `pcTypeDefs`  
- [out] TypeDef 토큰에서 반환 된 수가 `rTypeDefs`합니다.  
+ [out] The number of TypeDef tokens returned in `rTypeDefs`.  
   
 ## <a name="return-value"></a>반환 값  
   
-|HRESULT|Description|  
+|HRESULT|설명|  
 |-------------|-----------------|  
-|`S_OK`|`EnumTypeDefs` 성공적으로 반환 합니다.|  
-|`S_FALSE`|열거할 토큰이 있습니다. 이런 경우 `pcTypeDefs` 0입니다.|  
+|`S_OK`|`EnumTypeDefs` returned successfully.|  
+|`S_FALSE`|There are no tokens to enumerate. In that case, `pcTypeDefs` is zero.|  
   
-## <a name="remarks"></a>설명  
- TypeDef 토큰에는 확장성 메커니즘을 통해 추가 된 모든 형식 뿐만 아니라 클래스 또는 인터페이스를 같은 형식을 나타냅니다.  
+## <a name="remarks"></a>주의  
+ The TypeDef token represents a type such as a class or an interface, as well as any type added via an extensibility mechanism.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** Cor.h  
+ **Header:** Cor.h  
   
- **라이브러리:** MsCorEE.dll에 리소스로 포함  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [IMetaDataImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

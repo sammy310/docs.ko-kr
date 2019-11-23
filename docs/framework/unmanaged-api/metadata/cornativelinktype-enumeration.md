@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4f86ff37-2dab-4e64-819a-76b3bfe828ff
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 944c641c39ddef7add0e9f382dc7d35068668455
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 718e41e16c07265d8a36b8f6124d99cd3490f7be
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781722"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436621"
 ---
 # <a name="cornativelinktype-enumeration"></a>CorNativeLinkType 열거형
 네이티브 코드에서 연결된 형식을 나타내는 값을 제공합니다.  
@@ -44,22 +42,22 @@ typedef enum
   
 |멤버|설명|  
 |------------|-----------------|  
-|`nltNone`|키워드 하나도 지정 되어 있는지를 나타냅니다.|  
-|`nltAnsi`|ANSI 키워드가 지정 되어 있는지를 나타냅니다.|  
-|`nltUnicode`|Unicode 키워드 지정 되어 있는지 나타냅니다.|  
-|`nltAuto`|Auto 키워드는 지정 되어 있는지를 나타냅니다.|  
-|`nltOle`|OLE 키워드가 지정 되어 있는지를 나타냅니다.|  
+|`nltNone`|Indicates that none of the keywords are specified.|  
+|`nltAnsi`|Indicates that an ANSI keyword is specified.|  
+|`nltUnicode`|Indicates that a Unicode keyword is specified|  
+|`nltAuto`|Indicates that an auto keyword is specified.|  
+|`nltOle`|Indicates that an OLE keyword is specified.|  
 |`nltMaxValue`|사용되지 않습니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** Cor.h  
+ **Header:** Cor.h  
   
- **라이브러리:** MsCorEE.dll에 리소스로 포함  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [메타데이터 열거형](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

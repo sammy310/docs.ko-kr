@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 55773dbc-9053-46e3-8a3c-86caa9d91fb4
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a1935b831902e975616557f512789c339baf49c5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5afd48b36355835647ab8d06691f2bd2058b00cb
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776982"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74426744"
 ---
 # <a name="isymunmanagedreadergetmethodfromdocumentposition-method"></a>ISymUnmanagedReader::GetMethodFromDocumentPosition 메서드
-문서에서 지정된 된 위치에 중단점을 포함 하는 메서드를 반환 합니다.  
+Returns the method that contains the breakpoint at the given position in a document.  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,23 +37,23 @@ HRESULT GetMethodFromDocumentPosition (
   
 ## <a name="parameters"></a>매개 변수  
  `document`  
- [in] 지정 된 문서입니다.  
+ [in] The specified document.  
   
  `line`  
- [in] 지정 된 문서 줄입니다.  
+ [in] The line of the specified document.  
   
  `column`  
- [in] 지정 된 문서 열입니다.  
+ [in] The column of the specified document.  
   
  `pRetVal`  
- [out] 주소에 대 한 포인터를 [ISymUnmanagedMethod 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) 중단점을 포함 하는 메서드를 나타내는 개체입니다.  
+ [out] A pointer to the address of a [ISymUnmanagedMethod Interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) object that represents the method containing the breakpoint.  
   
 ## <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>요구 사항  
- **헤더:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ISymUnmanagedReader 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

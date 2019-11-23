@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6ddb0631-4569-41b3-93e4-50fdfaa486dc
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f3210f0186401729a5bc95369e88b290ae49a634
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d5f42e5ed3ce7829cfcf921f3002c238985710a9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776985"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74426753"
 ---
 # <a name="isymunmanagedreadergetmethodbyversion-method"></a>ISymUnmanagedReader::GetMethodByVersion 메서드
-지정 된 메서드 토큰 및 편집 복사 버전 번호를 기호 판독기 메서드를 가져옵니다. 버전 번호는 1부터 시작 하 고 메서드를 편집 하 고 복사 작업의 결과로 변경 될 때마다 증가 합니다.  
+Gets a symbol reader method, given a method token and an edit-and-copy version number. Version numbers start at 1 and are incremented each time the method is changed as a result of an edit-and-copy operation.  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,20 +36,20 @@ HRESULT GetMethodByVersion (
   
 ## <a name="parameters"></a>매개 변수  
  `token`  
- [in] 메서드 토큰입니다.  
+ [in] The method token.  
   
  `version`  
- [in] 메서드 버전입니다.  
+ [in] The method version.  
   
  `pRetVal`  
- [out] 반환 되는 인터페이스 포인터입니다.  
+ [out] A pointer to the returned interface.  
   
 ## <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>요구 사항  
- **헤더:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ISymUnmanagedReader 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

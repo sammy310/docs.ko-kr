@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 35bc1188-9767-4141-8038-60ea015b99ac
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f7365deb11bf620fcda43e7f04347cfe4685b5a3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 09b1b81bde486db67acede99e0d67ff85cb01bae
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780238"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447762"
 ---
 # <a name="icorprofilerinfoendinprocdebugging-method"></a>ICorProfilerInfo::EndInprocDebugging 메서드
-프로세스의 디버깅 세션을 종료 합니다. 이 메서드는.NET Framework 버전 2.0에서에서 사용 되지 않습니다.  
+Shuts down an in-process debugging session. This method is obsolete in the .NET Framework version 2.0.  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,22 +34,22 @@ HRESULT EndInprocDebugging(
   
 ## <a name="parameters"></a>매개 변수  
  `dwProfilerContext`  
- [in] 디버깅 세션을 식별 하는 값입니다. 이 값에서 수신 하는 것과 동일 해야 합니다 [icorprofilerinfo:: Begininprocdebugging](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-begininprocdebugging-method.md) 메서드.  
+ [in] A value that identifies the debugging session. This value must be the same as that received in the [ICorProfilerInfo::BeginInprocDebugging](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-begininprocdebugging-method.md) method.  
   
-## <a name="remarks"></a>설명  
- 호출 해야 합니다 [icorprofilerinfo:: Begininprocdebugging](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-begininprocdebugging-method.md) 고 `EndInprocDebugging` 동일한 콜백 메서드 내에서.  
+## <a name="remarks"></a>주의  
+ You must call [ICorProfilerInfo::BeginInprocDebugging](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-begininprocdebugging-method.md) and `EndInprocDebugging` within the same callback method.  
   
- CLR 디버깅 서비스.NET Framework 버전 1.0 및 1.1에서에서 제한 된 프로세스에서 디버깅을 지원 합니다. 디버깅 프로세스에 프로파일러를 사용 하 여 디버깅 API의 검사 부분을 사용할 수 있습니다. 그러나 고객 의견 때문에 프로세스의 디버깅 버전 2.0에서에서.NET Framework에서 제거 되어 프로 파일링 API에 따라 더 기능 집합으로 대체 합니다.  
+ The CLR debugging services supported limited in-process debugging in the .NET Framework versions 1.0 and 1.1. In-process debugging enabled a profiler to use the inspection portions of the debugging API. However, due to customer feedback, in-process debugging has been removed from the .NET Framework in version 2.0, and replaced with a set of functionality that is more in line with the profiling API.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET framework 버전:** 1.0  
+ **.NET Framework Version:** 1.0  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ICorProfilerInfo 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 35449514-333f-4918-9c60-7aa198d655d2
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6c52f96ad9458dfd5cdedc5cc73154aa570c6759
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 26948261c571dbe963811e8e9631551685a63bdb
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67751970"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450377"
 ---
-# <a name="corprfruntimetype-enumeration"></a>COR_PRF_RUNTIME_TYPE 열거형
-CLR (공용 언어 런타임)의 버전을 나타내는 값을 포함 합니다: 데스크톱 또는 silverlight에서는 CoreCLR 합니다.  
+# <a name="cor_prf_runtime_type-enumeration"></a>COR_PRF_RUNTIME_TYPE 열거형
+Contains values that indicate the version of the common language runtime (CLR): desktop or CoreCLR, which is used in Silverlight.  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,15 +36,15 @@ typedef enum
   
 ## <a name="members"></a>멤버  
   
-|멤버|Description|  
+|멤버|설명|  
 |------------|-----------------|  
-|`COR_PRF_DESKTOP_CLR`|CLR의 데스크톱 버전입니다.|  
-|`COR_PRF_CORE_CLR`|Silverlight에서 사용 되는 CLR의 core 버전입니다.|  
+|`COR_PRF_DESKTOP_CLR`|The desktop version of the CLR.|  
+|`COR_PRF_CORE_CLR`|The core version of the CLR, used in Silverlight.|  
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
   
@@ -54,6 +52,6 @@ typedef enum
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [프로파일링 열거형](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

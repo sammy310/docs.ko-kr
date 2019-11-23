@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2debcaab-6005-4245-afdb-4268bb7e74bd
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c99ddc66cca0a0d0083cfa19cfca34a1e557d4e5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f0000e9b063022e828e52b9b940ec6f4e0ce4165
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769155"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445896"
 ---
 # <a name="icorprofilercallbackmoduleunloadstarted-method"></a>ICorProfilerCallback::ModuleUnloadStarted 메서드
-모듈은 언로드됩니다 프로파일러에 알립니다.  
+Notifies the profiler that a module is being unloaded.  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,13 +34,13 @@ HRESULT ModuleUnloadStarted(
   
 ## <a name="parameters"></a>매개 변수  
  `moduleId`  
- [in] 언로드되고 된 모듈의 ID입니다.  
+ [in] The ID of the module that is being unloaded.  
   
-## <a name="remarks"></a>설명  
- 변수의 `moduleId` 후 정보 요청에 적합 하지 않습니다는 `ModuleUnloadStarted` 메서드가 반환 되는-프로파일러의이 모듈에 대 한 정보를 얻을 수 있는 마지막 기회입니다.  
+## <a name="remarks"></a>주의  
+ The value of `moduleId` is not valid for an information request after the `ModuleUnloadStarted` method returns — this is the profiler's last chance to get information about this module.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
   
@@ -50,7 +48,7 @@ HRESULT ModuleUnloadStarted(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ICorProfilerCallback 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
 - [ModuleUnloadFinished 메서드](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleunloadfinished-method.md)

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e29b46bc-5fdc-4894-b0c2-619df4b65ded
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 484fb5b8398e3ebd61d1c300afec1536ee1dc0c5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a7ec50c91ce02958d0d44643d4f79da1680532aa
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780608"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450364"
 ---
 # <a name="icorprofilerinfogetilfunctionbody-method"></a>ICorProfilerInfo::GetILFunctionBody 메서드
-헤더부터 Microsoft MSIL (intermediate language) 코드에서 메서드 본문에 대 한 포인터를 가져옵니다.  
+Gets a pointer to the body of a method in Microsoft intermediate language (MSIL) code, starting at its header.  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,24 +37,24 @@ HRESULT GetILFunctionBody(
   
 ## <a name="parameters"></a>매개 변수  
  `moduleId`  
- [in] 함수가 상주 하는 모듈의 ID입니다.  
+ [in] The ID of the module in which the function resides.  
   
  `methodId`  
- [in] 메서드에 대 한 메타 데이터 토큰입니다.  
+ [in] The metadata token for the method.  
   
  `ppMethodHeader`  
- [out] 메서드 헤더에 대 한 포인터입니다.  
+ [out] A pointer to the method's header.  
   
  `pcbMethodSize`  
- [out] 메서드의 크기를 지정하는 정수입니다.  
+ [out] An integer that specifies the size of the method.  
   
-## <a name="remarks"></a>설명  
- 메서드는 거주 하는 모듈에 의해 범위가 지정 됩니다. 때문에 `GetILFunctionBody` 메서드는 CLR (공용 언어 런타임)에서 로드 하기 전에 MSIL 코드로 도구 액세스를 제공 하도록 설계 되었습니다, 메서드의 메타 데이터 토큰을 사용 하 여 원하는 인스턴스를 찾습니다.  
+## <a name="remarks"></a>주의  
+ A method is scoped by the module in which it lives. Because the `GetILFunctionBody` method is designed to give a tool access to the MSIL code before it has been loaded by the common language runtime (CLR), it uses the metadata token of the method to find the desired instance.  
   
- `GetILFunctionBody` 경우에 CORPROF_E_FUNCTION_NOT_IL HRESULT를 반환할 수 있습니다는 `methodId` 모든 MSIL 코드 (예: 추상 메서드 또는 플랫폼 호출 (PInvoke) 메서드) 없이 메서드를 가리킵니다.  
+ `GetILFunctionBody` can return a CORPROF_E_FUNCTION_NOT_IL HRESULT if the `methodId` points to a method without any MSIL code (such as an abstract method, or a platform invoke (PInvoke) method).  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
   
@@ -64,6 +62,6 @@ HRESULT GetILFunctionBody(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ICorProfilerInfo 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

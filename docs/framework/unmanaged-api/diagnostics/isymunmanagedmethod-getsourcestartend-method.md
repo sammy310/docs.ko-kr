@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2a420900-01f1-4461-8777-3a34a6dc1426
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a75fed4c46ea7e31177ac0446c8fae7805535323
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 01ab69b73a7bc4929e2ebd49b3847f8d7c4646a2
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759432"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448871"
 ---
 # <a name="isymunmanagedmethodgetsourcestartend-method"></a>ISymUnmanagedMethod::GetSourceStartEnd 메서드
-이 메서드의 원본에 대 한 시작 및 끝 문서 위치를 가져옵니다. 첫 번째 배열 위치 시작 이며 두 번째 배열 위치 끝입니다.  
+Gets the start and end document positions for the source of this method. The first array position is the start, and the second array position is the end.  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,23 +37,23 @@ HRESULT GetSourceStartEnd(
   
 ## <a name="parameters"></a>매개 변수  
  `docs`  
- [in] 시작 및 종료 소스 문서입니다.  
+ [in] The starting and ending source documents.  
   
  `lines`  
- [in] 소스 문서의 시작 및 해당 줄을 종료 합니다.  
+ [in] The starting and ending lines in the corresponding source documents.  
   
  `columns`  
- [in] 소스 문서의 시작 및 해당 열을 종료 합니다.  
+ [in] The starting and ending columns in the corresponding source documents.  
   
  `pRetVal`  
- [out] `true` 위치 고, 그렇지 않으면 정의 된 경우 `false`합니다.  
+ [out] `true` if positions were defined; otherwise, `false`.  
   
 ## <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>요구 사항  
- **헤더:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ISymUnmanagedMethod 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

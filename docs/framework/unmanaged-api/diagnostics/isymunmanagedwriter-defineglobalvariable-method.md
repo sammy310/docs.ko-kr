@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 843c904a-8176-4d8f-bd47-b4d4c29f4c5c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5bc14c36563badb73ac9f9d955ea0c00f5330b4a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 94d1aa5bba87e8ca11b58bdf89a697e1ccf500b1
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777355"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428030"
 ---
 # <a name="isymunmanagedwriterdefineglobalvariable-method"></a>ISymUnmanagedWriter::DefineGlobalVariable 메서드
-단일 전역 변수를 정의합니다.  
+Defines a single global variable.  
   
 ## <a name="syntax"></a>구문  
   
@@ -43,36 +41,36 @@ HRESULT DefineGlobalVariable(
   
 ## <a name="parameters"></a>매개 변수  
  `name`  
- [in] 에 대 한 포인터를 `WCHAR` 전역 변수 이름을 정의 하는 합니다.  
+ [in] A pointer to a `WCHAR` that defines the global variable name.  
   
  `attributes`  
- [in] 전역 변수 특성입니다.  
+ [in] The global variable attributes.  
   
  `cSig`  
- [in] A `ULONG32` 의 크기를 문자 단위로 나타내는 `signature` 버퍼입니다.  
+ [in] A `ULONG32` that indicates the size, in characters, of the `signature` buffer.  
   
  `signature`  
- [in] 전역 변수 시그니처입니다.  
+ [in] The global variable signature.  
   
  `addrKind`  
- [in] 주소 유형입니다.  
+ [in] The address type.  
   
  `addr1`  
- [in] 매개 변수 사양에 대 한 첫 번째 주소입니다.  
+ [in] The first address for the parameter specification.  
   
  `addr2`  
- [in] 매개 변수 사양에 대 한 두 번째 주소입니다.  
+ [in] The second address for the parameter specification.  
   
  `addr3`  
- [in] 매개 변수 사양의 세 번째 주소입니다.  
+ [in] The third address for the parameter specification.  
   
 ## <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>요구 사항  
- **헤더:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ISymUnmanagedWriter 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
 - [DefineLocalVariable 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-definelocalvariable-method.md)

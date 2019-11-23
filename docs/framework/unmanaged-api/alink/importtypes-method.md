@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 351d4b4c-c939-486d-9471-51914a55f471
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f19dd114925ed1fd12bcc0056411c3e3d4181215
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 76d2b163f959111923bffb1348890f6fbb29828e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70777090"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445685"
 ---
 # <a name="importtypes-method"></a>ImportTypes 메서드
-[Importfile 메서드](importfile-method.md)를 통해 가져온 각 범위에서 형식의 가져오기를 시작 합니다.  
+Initiates the importing of types from each scope imported via [ImportFile Method](importfile-method.md).  
   
 ## <a name="syntax"></a>구문  
   
@@ -41,30 +39,30 @@ HRESULT ImportTypes(
   
 ## <a name="parameters"></a>매개 변수  
  `AssemblyID`  
- 가져올 어셈블리의 ID입니다.  
+ ID of the assembly to import to.  
   
  `FileToken`  
- 가져올 파일의 ID입니다.  
+ ID of the file to import from.  
   
  `dwScope`  
- 가져올 범위 (0부터 시작)입니다.  
+ Zero-based scope to import.  
   
  `phEnum`  
- 이 범위에 있는 형식에 대 한 열거자 핸들을 받습니다.  
+ Receives enumerator handle for the types in this scope.  
   
  `ppImportScope`  
- 선택적으로 [IMetaDataImport 인터페이스](../metadata/imetadataimport-interface.md) 인터페이스를 수신 합니다.  
+ Optionally receives [IMetaDataImport Interface](../metadata/imetadataimport-interface.md) interface.  
   
  `pdwCountOfTypes`  
- 지정 된 범위에서 필요에 따라 형식의 수를 받습니다.  
+ Optionally receives count of types in the indicated scope.  
   
 ## <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 S_OK를 반환 합니다.  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>요구 사항  
- Alink 필요  
+ Requires alink.h  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [IALink 인터페이스](ialink-interface.md)
 - [IALink2 인터페이스](ialink2-interface.md)

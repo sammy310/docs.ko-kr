@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0afc1197-2a5b-424f-8b82-9cb59a7e00db
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 335c25316b34f79b8d02eea5a7dd4ed7994fc754
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6999821412b3cdd614cb30858a0616c9f27a6baa
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780171"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448116"
 ---
 # <a name="icorprofilerinfogetclassfromtoken-method"></a>ICorProfilerInfo::GetClassFromToken 메서드
-메타 데이터 토큰을 지정 하는 클래스의 ID를 가져옵니다. 이 메서드는.NET Framework 버전 2.0에서에서 사용 되지 않습니다. 사용 하 여 [ICorProfilerInfo2::GetClassFromTokenAndTypeArgs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassfromtokenandtypeargs-method.md) 대신 합니다.  
+Gets the ID of the class, given the metadata token. This method is obsolete in the .NET Framework version 2.0. Use [ICorProfilerInfo2::GetClassFromTokenAndTypeArgs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassfromtokenandtypeargs-method.md) instead.  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,26 +36,26 @@ HRESULT GetClassFromToken(
   
 ## <a name="parameters"></a>매개 변수  
  `moduleID`  
- [in] 클래스를 포함 하는 모듈의 ID입니다.  
+ [in] The ID of the module that contains the class.  
   
  `typeDef`  
- [in] `mdTypeDef` 클래스를 참조 하는 메타 데이터 토큰입니다.  
+ [in] An `mdTypeDef` metadata token that references the class.  
   
  `cTypeArgs`  
- [out] 클래스 ID에 대 한 포인터  
+ [out] A pointer to the class ID.  
   
-## <a name="remarks"></a>설명  
- 이 메서드는 사용 되지 않습니다. 대신 `ICorProfilerInfo2::GetClassFromTokenAndTypeArgs` 모든 형식에 대 한 합니다.  
+## <a name="remarks"></a>주의  
+ This method is obsolete; instead, use `ICorProfilerInfo2::GetClassFromTokenAndTypeArgs` for all types.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET framework 버전:** 1.0, 1.1  
+ **.NET Framework Versions:** 1.0, 1.1  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ICorProfilerInfo 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

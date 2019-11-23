@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4effbe95-c36e-4a45-8b2a-ee21339415fb
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 1bb9a444d8e8b674d1f173214d8bac427f24e408
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 048d784a55fd7c29c837a54fbd5adcdcf62a7a2c
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759398"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448853"
 ---
 # <a name="isymunmanagedmethodgettoken-method"></a>ISymUnmanagedMethod::GetToken 메서드
-이 메서드에 대 한 메타 데이터 토큰을 반환합니다.  
+Returns the metadata token for this method.  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,14 +34,14 @@ HRESULT GetToken(
   
 ## <a name="parameters"></a>매개 변수  
  `pToken`  
- [out] 에 대 한 포인터를 `mdMethodDef` 문자 메타 데이터를 포함 하는 데 필요한 버퍼의 크기를 받는 합니다.  
+ [out] A pointer to a `mdMethodDef` that receives the size, in characters, of the buffer required to contain the metadata.  
   
 ## <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>요구 사항  
- **헤더:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ISymUnmanagedMethod 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

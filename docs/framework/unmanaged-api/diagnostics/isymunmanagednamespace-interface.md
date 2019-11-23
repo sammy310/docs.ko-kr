@@ -14,29 +14,27 @@ helpviewer_keywords:
 ms.assetid: d42bea4e-5848-4e43-a883-69af7a313ce9
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 87dd6db9624c2216ab13e77b04cfa63f95aee7e2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 26f76f94d9b2d82240150a852d2bfc3ae10b97c2
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61939453"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448355"
 ---
 # <a name="isymunmanagednamespace-interface"></a>ISymUnmanagedNamespace 인터페이스
-네임 스페이스를 나타냅니다.  
+Represents a namespace.  
   
 ## <a name="methods"></a>메서드  
   
 |메서드|설명|  
 |------------|-----------------|  
-|[GetName 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-getname-method.md)|이 네임 스페이스의 이름을 가져옵니다.|  
-|[GetNamespaces 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-getnamespaces-method.md)|이 네임 스페이스의 자식을 가져옵니다.|  
-|[GetVariables 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-getvariables-method.md)|이 네임 스페이스 내에서 전역 범위에서 정의 된 모든 변수를 반환 합니다.|  
+|[GetName 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-getname-method.md)|Gets the name of this namespace.|  
+|[GetNamespaces 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-getnamespaces-method.md)|Gets the children of this namespace.|  
+|[GetVariables 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-getvariables-method.md)|Returns all variables defined at global scope within this namespace.|  
   
 ## <a name="requirements"></a>요구 사항  
- **헤더:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [진단 기호 저장소 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

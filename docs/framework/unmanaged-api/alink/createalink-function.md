@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: fc73bcb9-6af6-44d8-bc39-2f4400325dae
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 24f7e2d5a547b78ceb4808feaf581c6f49807cf7
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 9165a4db7e65fb0f409a902b06d32e9c2988aa69
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70787623"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446550"
 ---
 # <a name="createalink-function"></a>CreateALink 함수
-어셈블리 링커의 인스턴스를 만들고 지정 된 인터페이스에 대 한 포인터를 설정 합니다.  
+Creates an instance of the Assembly Linker and sets a pointer to the specified interface.  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,14 +36,14 @@ HRESULT CreateALink (
   
 ## <a name="parameters"></a>매개 변수  
   
-|매개 변수|Description|  
+|매개 변수|설명|  
 |---------------|-----------------|  
-|`riid`|어셈블리 링커 인터페이스 중 하나의 물리적 이름입니다.|  
-|`ppInterface`|성공적으로 완료 되 면 `riid` 인터페이스에 대 한 포인터를 포함 하는 위치입니다.|  
+|`riid`|The physical name of one of the Assembly Linker interfaces.|  
+|`ppInterface`|The location that on successful completion contains a pointer to the `riid` interface.|  
   
 ## <a name="requirements"></a>요구 사항  
- **라이브러리**: alink .dll  
+ **Library**: alink.dll  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [Al.exe(어셈블리 링커)](../../tools/al-exe-assembly-linker.md)

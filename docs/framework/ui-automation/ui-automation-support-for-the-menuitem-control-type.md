@@ -6,21 +6,21 @@ helpviewer_keywords:
 - Menu Item control type
 - UI Automation, Menu Item control type
 ms.assetid: 54bce311-3d23-40b9-ba90-1bdbdaf8fbba
-ms.openlocfilehash: 5b9983dda790fbf501b055ea8e592851e61e1e89
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: c65e30ffea64a9b577cfee7535fd92e489bc7632
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039425"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446709"
 ---
 # <a name="ui-automation-support-for-the-menuitem-control-type"></a>MenuItem 컨트롤 형식에 대한 UI 자동화 지원
 
 > [!NOTE]
-> 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](https://go.microsoft.com/fwlink/?LinkID=156746)를 참조하세요.
+> 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조하세요.
 
 이 항목에서는 MenuItem 컨트롤 형식에 대한 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 지원 정보를 제공합니다. 컨트롤의 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 트리 구조에 대해 설명하고 MenuItem 컨트롤 형식에 필요한 속성 및 컨트롤 패턴을 제공합니다.
 
-메뉴 컨트롤을 사용하면 명령 및 이벤트 처리기와 연관된 요소를 계층적으로 구성할 수 있습니다. 일반적인 Microsoft Windows 응용 프로그램에서 메뉴 모음에는 몇 가지 메뉴 항목 (예: **파일**, **편집**, **창**)이 있고 각 메뉴 항목에 메뉴가 표시 됩니다. 메뉴 하나에 메뉴 항목 컬렉션(예: **새로 만들기**, **열기**, **닫기**)이 들어 있으며, 클릭하면 확장되어 추가 메뉴 항목이 표시되거나 특정 작업을 수행할 수 있습니다. 메뉴 항목은 메뉴, 메뉴 모음 또는 도구 모음에서 호스트될 수 있습니다.
+메뉴 컨트롤을 사용하면 명령 및 이벤트 처리기와 연관된 요소를 계층적으로 구성할 수 있습니다. In a typical Microsoft Windows application, a menu bar contains several menu items (such as **File**, **Edit**, and **Window**), and each menu item displays a menu. 메뉴 하나에 메뉴 항목 컬렉션(예: **새로 만들기**, **열기**, **닫기**)이 들어 있으며, 클릭하면 확장되어 추가 메뉴 항목이 표시되거나 특정 작업을 수행할 수 있습니다. 메뉴 항목은 메뉴, 메뉴 모음 또는 도구 모음에서 호스트될 수 있습니다.
 
 다음 섹션에서는 MenuItem 컨트롤 형식에 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 구조, 속성, 컨트롤 패턴, 이벤트를 정의합니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 요구 사항은 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]또는 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]의 모든 목록 컨트롤에 적용됩니다.
 
@@ -28,13 +28,13 @@ ms.locfileid: "73039425"
 
 ## <a name="required-ui-automation-tree-structure"></a>필요한 UI 자동화 트리 구조
 
-다음 표는 메뉴 항목 컨트롤과 관련된 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리의 컨트롤 뷰 및 콘텐츠 뷰를 보여주고 각 뷰에 포함될 수 있는 내용에 대해 설명합니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리에 대 한 자세한 내용은 [UI 자동화 트리 개요](ui-automation-tree-overview.md)를 참조 하세요.
+다음 표는 메뉴 항목 컨트롤과 관련된 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리의 컨트롤 뷰 및 콘텐츠 뷰를 보여주고 각 뷰에 포함될 수 있는 내용에 대해 설명합니다. For more information on the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree, see [UI Automation Tree Overview](ui-automation-tree-overview.md).
 
 |컨트롤 뷰|콘텐츠 뷰|
 |------------------|------------------|
-|MenuItem "도움말"<br /><br /> <ul><li>Menu(도움말 메뉴 항목의 하위 메뉴)<br /><br /> <ul><li>MenuItem "도움말 항목"</li><li>MenuItem "메모장 정보"</li></ul></li></ul>|MenuItem "도움말"<br /><br /> -MenuItem "도움말 항목"<br />-MenuItem "메모장 정보"|
+|MenuItem "도움말"<br /><br /> <ul><li>Menu(도움말 메뉴 항목의 하위 메뉴)<br /><br /> <ul><li>MenuItem "도움말 항목"</li><li>MenuItem "메모장 정보"</li></ul></li></ul>|MenuItem "도움말"<br /><br /> -   MenuItem "Help Topics"<br />-   MenuItem "About Notepad"|
 
-메뉴 항목 컨트롤의 컨트롤 보기에는 위에 표시된 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 구조가 있습니다. **도움말** 메뉴 항목이 포함 되어 일반 메뉴의 하위 메뉴 계층 구조를 보다 잘 보여 줍니다.
+메뉴 항목 컨트롤의 컨트롤 보기에는 위에 표시된 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 구조가 있습니다. Note that the **Help** menu item is included to better illustrate the structure in a typical menu to submenu hierarchy.
 
 콘텐츠 뷰의 경우, 최종 사용자에게 의미 있는 정보를 전달하지 않기 때문에 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리에 메뉴가 없습니다.
 
@@ -42,7 +42,7 @@ ms.locfileid: "73039425"
 
 ## <a name="required-ui-automation-properties"></a>필요한 UI 자동화 속성
 
-다음 표에서는 값 또는 정의가 메뉴 항목 컨트롤과 특별히 관련된 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성을 나열하여 보여줍니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성에 대 한 자세한 내용은 [클라이언트에 대 한 UI 자동화 속성](ui-automation-properties-for-clients.md)을 참조 하세요.
+다음 표에서는 값 또는 정의가 메뉴 항목 컨트롤과 특별히 관련된 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성을 나열하여 보여줍니다. For more information on [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] properties, see [UI Automation Properties for Clients](ui-automation-properties-for-clients.md).
 
 |속성|값|설명|
 |--------------|-----------|-----------------|

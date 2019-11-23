@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: e0ebd793-3764-4df0-8f12-0e95f60b9eae
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c1ea9424c000ad3ae4918181084c89038c2ec8d1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6e9ab623d5fe9fcfda2305df078e988a561afdc5
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777293"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74427968"
 ---
 # <a name="isymunmanagedwriterinitialize-method"></a>ISymUnmanagedWriter::Initialize 메서드
-이 작성기가 연결 될 하는 메타 데이터 내보내기 인터페이스를 설정 하 고 디버깅 기호를 쓸 출력 파일 이름을 설정 합니다.  
+Sets the metadata emitter interface with which this writer will be associated, and sets the output file name to which the debugging symbols will be written.  
   
- 이 메서드를 한 번만 호출할 수 있습니다 하 고 다른 기록기 메서드보다 먼저 호출 해야 합니다. 일부 작성기에는 파일 이름이 필요할 수 있습니다. 그러나이 메서드에 파일 이름을 사용 하지 않는 작성기에 부정적인 영향을 주지 않고 항상 파일 이름을 전달할 수 있습니다.  
+ This method can be called only once, and it must be called before any other writer methods. Some writers may require a file name. However, you can always pass a file name to this method without any negative effect on writers that do not use the file name.  
   
 ## <a name="syntax"></a>구문  
   
@@ -41,24 +39,24 @@ HRESULT Initialize(
   
 ## <a name="parameters"></a>매개 변수  
  `emitter`  
- [in] 메타 데이터 내보내기 인터페이스 포인터입니다.  
+ [in] A pointer to the metadata emitter interface.  
   
  `filename`  
- [in] 디버깅 기호가 쓰여진 파일 이름입니다. 파일 이름을 사용하지 않는 작성기에 대해 파일 이름이 지정되면 이 매개 변수는 무시됩니다.  
+ [in] The file name to which the debugging symbols are written. If a file name is specified for a writer that does not use file names, this parameter is ignored.  
   
  `pIStream`  
- [in] 기호 작성기를 지정 하는 경우에 기호를 내보냅니다를 지정 <xref:System.Runtime.InteropServices.ComTypes.IStream> 에 지정 된 파일 대신는 `filename` 매개 변수입니다. `pIStream` 매개 변수는 선택적 요소입니다.  
+ [in] If specified, the symbol writer will emit the symbols into the given <xref:System.Runtime.InteropServices.ComTypes.IStream> rather than to the file specified in the `filename` parameter. `pIStream` 매개 변수는 선택적 요소입니다.  
   
  `fFullBuild`  
- [in] `true` 전체를 다시 빌드해야 합니다;이 경우 `false` 는 증분 컴파일을 경우.  
+ [in] `true` if this is a full rebuild; `false` if this is an incremental compilation.  
   
 ## <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>요구 사항  
- **헤더:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ISymUnmanagedWriter 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
 - [Initialize2 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-initialize2-method.md)

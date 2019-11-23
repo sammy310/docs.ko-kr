@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 1b0306b7-622b-4b57-8edc-3c713bb147ae
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 08f997e133fa6cc8769efe18e7ca06c0153f15a4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 35966e25d02bd6f1a9bdd21ad4e9cc44b7bb480e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781805"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450250"
 ---
 # <a name="cormanifestresourceflags-enumeration"></a>CorManifestResourceFlags 열거형
-어셈블리 매니페스트에 인코딩된 리소스의 표시 여부를 나타냅니다.  
+Indicates the visibility of resources encoded in an assembly manifest.  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,19 +38,19 @@ typedef enum CorManifestResourceFlags {
   
 ## <a name="members"></a>멤버  
   
-|멤버|Description|  
+|멤버|설명|  
 |------------|-----------------|  
-|`mrVisibilityMask`|예약되어 있습니다.|  
-|`mrPublic`|리소스는 공용입니다.|  
-|`mrPrivate`|리소스는 private입니다.|  
+|`mrVisibilityMask`|예약됨.|  
+|`mrPublic`|The resources are public.|  
+|`mrPrivate`|The resources are private.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** CorHdr.h  
+ **Header:** CorHdr.h  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [메타데이터 열거형](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

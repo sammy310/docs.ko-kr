@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 996c71ae-0676-4616-a085-84ebf507649d
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f86c4388fd633c72e846c227d45eff09bb66cf44
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d78e7e863ab953182ea7c1ff342593b4bdf3215d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69951118"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445879"
 ---
 # <a name="icorprofilercallbackmovedreferences-method"></a>ICorProfilerCallback::MovedReferences 메서드
 압축 가비지 수집의 결과로 힙에 있는 개체의 새 레이아웃을 보고하려고 호출됩니다.  
@@ -54,10 +52,10 @@ HRESULT MovedReferences(
   
  크기는 `oldObjectIDRangeStart` 및 `newObjectIDRangeStart` 배열에서 참조된 각 블록에 대해 지정됩니다.  
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
   
 > [!IMPORTANT]
-> 이 메서드는 64비트 플랫폼에서 4GB보다 큰 개체의 크기를 `MAX_ULONG`으로 보고합니다. 4gb 보다 큰 개체의 크기를 가져오려면 대신 [ICorProfilerCallback4:: MovedReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-movedreferences2-method.md) 메서드를 사용 합니다.  
+> 이 메서드는 64비트 플랫폼에서 4GB보다 큰 개체의 크기를 `MAX_ULONG`으로 보고합니다. To get the size of objects that are larger than 4 GB, use the [ICorProfilerCallback4::MovedReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-movedreferences2-method.md) method instead.  
   
  압축 가비지 수집기는 데드 개체가 사용한 메모리를 회수하고 확보된 공간을 압축합니다. 따라서 라이브 개체가 힙 내에서 이동될 수 있고 이전 알림으로 분산된 `ObjectID` 값이 변경될 수 있습니다.  
   
@@ -77,18 +75,18 @@ HRESULT MovedReferences(
   
  `newObjectID` = `newObjectIDRangeStart[i]` + (`oldObjectID` – `oldObjectIDRangeStart[i]`)  
   
- 콜백 자체가 진행되는 동안 `MovedReferences`를 통해 전달된 `ObjectID` 값은 유효하지 않습니다. 가비지 수집이 이전 위치에서 새 위치로 개체를 이동하는 중일 수 있기 때문입니다. 그러므로 프로파일러는 `MovedReferences` 호출 중에 개체 검사를 시도하지 않아야 합니다. [ICorProfilerCallback2:: GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) callback은 모든 개체가 새 위치로 이동 되었으며 검사를 수행할 수 있음을 나타냅니다.  
+ 콜백 자체가 진행되는 동안 `MovedReferences`를 통해 전달된 `ObjectID` 값은 유효하지 않습니다. 가비지 수집이 이전 위치에서 새 위치로 개체를 이동하는 중일 수 있기 때문입니다. 그러므로 프로파일러는 `MovedReferences` 호출 중에 개체 검사를 시도하지 않아야 합니다. A [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) callback indicates that all objects have been moved to their new locations and inspection can be performed.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
   
- **라이브러리** CorGuids.lib  
+ **라이브러리:** CorGuids.lib  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ICorProfilerCallback 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
 - [MovedReferences2 메서드](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-movedreferences2-method.md)

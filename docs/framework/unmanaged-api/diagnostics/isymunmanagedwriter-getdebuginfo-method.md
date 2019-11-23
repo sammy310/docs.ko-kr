@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: dd31c210-6829-45eb-927e-cc53932638b7
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8737885015055994bff3f6066bccb551f19f74f4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2b901a3dac499f1ce3f843c59122dd8fd5022147
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777314"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74427957"
 ---
 # <a name="isymunmanagedwritergetdebuginfo-method"></a>ISymUnmanagedWriter::GetDebugInfo 메서드
-컴파일러가 이식 가능한 실행 파일 (PE) 파일 헤더의 디버그 디렉터리 항목을 작성 하는 데 필요한 정보를 반환 합니다. 기호 작성기를 제외한 모든 필드를 채워 `TimeDateStamp` 고 `PointerToRawData`입니다. (컴파일러는 이러한 두 필드를 적절 하 게 설정 하는 일을 담당 합니다.)  
+Returns the information necessary for a compiler to write the debug directory entry in the portable executable (PE) file header. The symbol writer fills out all fields except for `TimeDateStamp` and `PointerToRawData`. (The compiler is responsible for setting these two fields appropriately.)  
   
- 컴파일러는이 메서드를 호출, PE 파일에 데이터 blob을 내보낼, 설정 된 `PointerToRawData` 내보낸 데이터를 가리키고는 IMAGE_DEBUG_DIRECTORY PE 파일에 쓸 IMAGE_DEBUG_DIRECTORY 필드입니다. 컴파일러 설정 해야 합니다 `TimeDateStamp` 과 동일 하 게 필드는 `TimeDateStamp` 생성 되는 PE 파일의 합니다.  
+ A compiler should call this method, emit the data blob to the PE file, set the `PointerToRawData` field in the IMAGE_DEBUG_DIRECTORY to point to the emitted data, and write the IMAGE_DEBUG_DIRECTORY to the PE file. The compiler should also set the `TimeDateStamp` field to equal the `TimeDateStamp` of the PE file being generated.  
   
 ## <a name="syntax"></a>구문  
   
@@ -42,23 +40,23 @@ HRESULT GetDebugInfo(
   
 ## <a name="parameters"></a>매개 변수  
  `pIDD`  
- [out에서] 기호 작성기가 데이터를 입력 하는 IMAGE_DEBUG_DIRECTORY 포인터입니다.  
+ [in, out] A pointer to an IMAGE_DEBUG_DIRECTORY that the symbol writer will fill out.  
   
  `cData`  
- [in] `DWORD` 디버그 데이터의 크기를 포함 하는 합니다.  
+ [in] A `DWORD` that contains the size of the debug data.  
   
  `pcData`  
- [out] 에 대 한 포인터를 `DWORD` 디버그 데이터를 포함 하는 데 필요한 버퍼의 크기를 받는 합니다.  
+ [out] A pointer to a `DWORD` that receives the size of the buffer required to contain the debug data.  
   
  `data`  
- [out] 기호 저장소에 대 한 디버그 데이터를 저장할 수 있도록 충분히 큰 버퍼에 대 한 포인터입니다.  
+ [out] A pointer to a buffer that is large enough to hold the debug data for the symbol store.  
   
 ## <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>요구 사항  
- **헤더:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ISymUnmanagedWriter 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

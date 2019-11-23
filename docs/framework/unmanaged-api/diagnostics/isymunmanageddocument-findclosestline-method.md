@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 628f2a04-e529-407d-841e-3b3da219a9cb
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8d6be64137b59c84dfadbd7f0e4895eac2fb27e4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0e95255479792c7056bee7ee4f6c507e0f41eb6a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776789"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449220"
 ---
 # <a name="isymunmanageddocumentfindclosestline-method"></a>ISymUnmanagedDocument::FindClosestLine 메서드
-줄 시퀀스 위치가 될 수 있고이 문서에 지정 된 시퀀스 위치가 되는 가장 가까운 줄을 반환 합니다.  
+Returns the closest line that is a sequence point, given a line in this document that may or may not be a sequence point.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,14 +35,14 @@ HRESULT FindClosestLine(
   
 ## <a name="parameters"></a>매개 변수  
  `line`  
- [in] 이 문서의 줄입니다.  
+ [in] A line in this document.  
   
  `pRetVal`  
- [out] 줄을 수신 하는 변수에 대 한 포인터입니다.  
+ [out] A pointer to a variable that receives the line.  
   
 ## <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 s_ok이 고 그렇지 않으면 오류 코드입니다.  
+ S_OK if the method succeeds; otherwise, an error code.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ISymUnmanagedDocument 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

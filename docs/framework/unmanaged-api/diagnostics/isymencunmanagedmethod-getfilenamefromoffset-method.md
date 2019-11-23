@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 00e2e194-12f5-436e-a997-2b9d3e844d4f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 80bfdc9d58a86bb4cf945f0c8106bcfc00f3743e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 74002ce9c76eebaa3ea5860b09cd3e7c9a884f8d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760307"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448659"
 ---
 # <a name="isymencunmanagedmethodgetfilenamefromoffset-method"></a>ISymENCUnmanagedMethod::GetFileNameFromOffset 메서드
-줄 오프셋을 사용 하 여 연결에 대 한 파일 이름을 가져옵니다.  
+Gets the file name for the line associated with an offset.  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,23 +38,23 @@ HRESULT GetFileNameFromOffset(
   
 ## <a name="parameters"></a>매개 변수  
  `dwOffset`  
- [in] `ULONG32` 오프셋을 포함 하는 합니다.  
+ [in] A `ULONG32` that contains the offset.  
   
  `cchName`  
- [in] A `ULONG32` 의 크기를 나타내는 `szName` 버퍼입니다.  
+ [in] A `ULONG32` that indicates the size of the `szName` buffer.  
   
  `pcchName`  
- [out] 에 대 한 포인터를 `ULONG32` 문자의 파일 이름을 포함 하는 데 필요한 버퍼의 크기를 받는 합니다.  
+ [out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the file names.  
   
  `szName`  
- [out] 파일 이름을 포함 하는 버퍼입니다.  
+ [out] The buffer that contains the file names.  
   
 ## <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>요구 사항  
- **헤더:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ISymENCUnmanagedMethod 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)

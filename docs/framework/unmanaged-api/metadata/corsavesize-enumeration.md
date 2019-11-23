@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: eb95ce39-5688-43c1-a34d-578794b32faa
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c1e7bbac17d9a9ae191a5ad6d69b52a806383562
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0f870d9d7d1bc292b213d690df508a6c28bac2ab
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781610"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450104"
 ---
 # <a name="corsavesize-enumeration"></a>CorSaveSize 열거형
 저장 작업의 크기를 쿼리할 때 필요한 전체 자릿수 수준을 나타내는 값을 포함합니다.  
@@ -40,19 +38,19 @@ typedef enum CorSaveSize {
   
 |멤버|설명|  
 |------------|-----------------|  
-|`cssAccurate`|반환 값을 정확 하 게 되도록 지정 합니다.|  
-|`cssQuick`|반환 값을 예상 해야를 지정 합니다.|  
-|`cssDiscardTransientCAs`|삭제 가능한 형식 제거 해야 한다는 것을 지정 합니다.|  
+|`cssAccurate`|Specifies that the return value should be exact.|  
+|`cssQuick`|Specifies that the return value should be estimated.|  
+|`cssDiscardTransientCAs`|Specifies that discardable types should be removed.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** CorHdr.h  
+ **Header:** CorHdr.h  
   
- **라이브러리:** MsCorEE.dll에서 리소스로 사용  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [메타데이터 열거형](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

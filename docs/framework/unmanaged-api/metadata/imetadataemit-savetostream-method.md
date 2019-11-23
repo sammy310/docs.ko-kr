@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e0290a49-3818-4a43-ad46-3014faa34f97
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 96b3b270fb12aa451d9026435dd3d2c4c196b09c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 23f6186b2561cbcd52db767616d986084f33860b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782021"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74435933"
 ---
 # <a name="imetadataemitsavetostream-method"></a>IMetaDataEmit::SaveToStream 메서드
-지정 된 현재 범위에서 모든 메타 데이터를 저장 `IStream`합니다.  
+Saves all metadata in the current scope to the specified `IStream`.  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,21 +36,21 @@ HRESULT SaveToStream (
   
 ## <a name="parameters"></a>매개 변수  
  `pIStream`  
- [in] 에 저장 하는 쓰기 가능한 스트림.  
+ [in] The writable stream to save to.  
   
  `dwSaveFlags`  
- [in] 예약되어 있습니다. 0 이어야 합니다.  
+ [in] 예약되어 있습니다. Must be zero.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** Cor.h  
+ **Header:** Cor.h  
   
- **라이브러리:** MSCorEE.dll에서 리소스로 사용  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [IMetaDataEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d7888aa9-dfaa-420f-9f99-e06ab35ca482
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6b01f38fbcf1cb0439b82a933b37971515b06ac4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6ea9dee6e83870d1f2e0fdccffa53f16e6f18dba
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758154"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74430101"
 ---
 # <a name="icorprofilercallback4rejiterror-method"></a>ICorProfilerCallback4::ReJITError 메서드
-Just-in-time (JIT) 컴파일러 오류가 발생 했음을 다시 컴파일 프로세스에 프로파일러에 알립니다.  
+Notifies the profiler that the just-in-time (JIT) compiler encountered an error in the recompilation process.  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,16 +37,16 @@ HRESULT ReJITError(
   
 ## <a name="parameters"></a>매개 변수  
  `moduleID`  
- [in] `ModuleID` 에서 실패 한 다시 컴파일을 시도 수행 되었습니다.  
+ [in] The `ModuleID` in which the failed recompilation attempt was made.  
   
  `methodId`  
- [in] `MethodDef` 메서드 다시 컴파일이 실패 한 시도 했습니다.  
+ [in] The `MethodDef` of the method on which the failed recompilation attempt was made.  
   
  `functionId`  
- [in] 에 대 한 표시 되거나 다시 컴파일된 다시 컴파일 중인 함수 인스턴스. 이 값 `NULL` 경우 오류가 발생 한 인스턴스화 별로 대신 메서드 별 기준 (예를 들어 경우 다시 컴파일하지 않아도 메서드에 대 한 잘못 된 메타 데이터 토큰을 지정 하는 프로파일러).  
+ [in] The function instance that is being recompiled or marked for recompilation. This value may be `NULL` if the failure occurred on a per-method basis instead of a per-instantiation basis (for example, if the profiler specified an invalid metadata token for the method to be recompiled).  
   
  `hrStatus`  
- [in] 오류의 특징을 나타내는 HRESULT입니다. 값의 목록 상태 HRESULTS 섹션을 참조 하세요.  
+ [in] An HRESULT that indicates the nature of the failure. See the Status HRESULTS section for a list of values.  
   
 ## <a name="return-value"></a>반환 값  
  이 콜백의 반환 값은 무시됩니다.  
@@ -57,15 +55,15 @@ HRESULT ReJITError(
   
 |상태 배열 HRESULT|설명|  
 |--------------------------|-----------------|  
-|E_INVALIDARG|합니다 `moduleID` 나 `methodDef` 토큰이 `NULL`합니다.|  
+|E_INVALIDARG|The `moduleID` or `methodDef` token is `NULL`.|  
 |CORPROF_E_DATAINCOMPLETE|모듈은 아직 완전히 로드되지 않았거나 언로드되는 중입니다.|  
-|CORPROF_E_MODULE_IS_DYNAMIC|지정된 된 모듈을 동적으로 생성 되었습니다 (예를 들어 여 `Reflection.Emit`),이 메서드에서 하므로 지원 되지 않습니다.|  
-|CORPROF_E_FUNCTION_IS_COLLECTIBLE|메서드는 수집 가능한 어셈블리에 인스턴스화되고 따라서 수 없으면 다시 컴파일되지 않아도 됩니다. 형식 및 비 리플렉션 컨텍스트에 정의 된 함수 (예를 들어 `List<MyCollectibleStruct>`) 수집 가능한 어셈블리를 인스턴스화할 수 있습니다.|  
-|E_OUTOFMEMORY|CLR은 JIT 다시 컴파일을 위해 지정된 된 메서드를 표시 하는 동안 메모리가 부족 합니다.|  
-|기타|운영 체제가 CLR의 제어 범위를 벗어난 오류를 반환했습니다. 예를 들어 메모리 페이지의 액세스 보호를 변경 하려는 시스템 호출이 실패 하면 운영 체제 오류가 표시 됩니다.|  
+|CORPROF_E_MODULE_IS_DYNAMIC|The specified module was dynamically generated (for example, by `Reflection.Emit`), and is thus not supported by this method.|  
+|CORPROF_E_FUNCTION_IS_COLLECTIBLE|The method is instantiated into a collectible assembly, and is therefore not able to be recompiled. Note that types and functions defined in a non-reflection context (for example, `List<MyCollectibleStruct>`) can be instantiated into a collectible assembly.|  
+|E_OUTOFMEMORY|The CLR ran out of memory while trying to mark the specified method for JIT recompilation.|  
+|기타|운영 체제가 CLR의 제어 범위를 벗어난 오류를 반환했습니다. For example, if a system call to change the access protection of a page of memory fails, the operating system error is displayed.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
   
@@ -73,7 +71,7 @@ HRESULT ReJITError(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ICorProfilerCallback 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
 - [ICorProfilerCallback4 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)

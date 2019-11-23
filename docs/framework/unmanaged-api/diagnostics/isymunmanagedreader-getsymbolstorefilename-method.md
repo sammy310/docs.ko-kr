@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c84f4846-9bc8-44a4-9a76-e39106d6d8b2
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 50cd6d1e3666dd1f15c1e6a6b4f7dcb931b79d8d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b3674c4058dba2f6185418b55b35eefb14c312f6
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777074"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431233"
 ---
 # <a name="isymunmanagedreadergetsymbolstorefilename-method"></a>ISymUnmanagedReader::GetSymbolStoreFileName 메서드
-기호 저장소의 디스크에 파일 이름을 제공합니다.  
+Provides the on-disk file name of the symbol store.  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,20 +37,20 @@ HRESULT GetSymbolStoreFileName (
   
 ## <a name="parameters"></a>매개 변수  
  `cchName`  
- [in] 크기는 `szName` 버퍼입니다.  
+ [in] The size of the `szName` buffer.  
   
  `pcchName`  
- [out] 반환 된 이름의 길이 받는 변수의에 대 한 포인터 `szName`, null 종결을 포함 합니다.  
+ [out] A pointer to the variable that receives the length of the name returned in `szName`, including the null termination.  
   
  `szName`  
- [out] 기호 저장소의 파일 이름을 받는 변수의 포인터입니다.  
+ [out] A pointer to the variable that receives the file name of the symbol store.  
   
 ## <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>요구 사항  
- **헤더:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ISymUnmanagedReader 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

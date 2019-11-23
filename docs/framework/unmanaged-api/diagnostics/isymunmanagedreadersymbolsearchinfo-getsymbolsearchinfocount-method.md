@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4068b6ec-525f-4446-8818-0296178cbd19
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c1a72f76f1cd6f6571eaebff3a8046de8dcd3d74
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a193c4e9e87616217efc90286032944d05d766c0
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67751462"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446391"
 ---
 # <a name="isymunmanagedreadersymbolsearchinfogetsymbolsearchinfocount-method"></a>ISymUnmanagedReaderSymbolSearchInfo::GetSymbolSearchInfoCount 메서드
-정보를 검색 하는 기호 수를 가져옵니다.  
+Gets a count of symbol search information.  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,14 +34,14 @@ HRESULT GetSymbolSearchInfoCount(
   
 ## <a name="parameters"></a>매개 변수  
  `pcSearchInfo`  
- out]]에 대 한 포인터를 `ULONG32` 검색 정보를 포함 하는 데 필요한 버퍼의 크기를 받는 합니다.  
+ ]out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the search information.  
   
 ## <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>요구 사항  
- **헤더:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ISymUnmanagedReaderSymbolSearchInfo 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreadersymbolsearchinfo-interface.md)

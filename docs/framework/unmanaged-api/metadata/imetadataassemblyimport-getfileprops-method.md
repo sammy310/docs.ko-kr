@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c5e6216f-ae3d-4697-9688-66b69c1251ec
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4f3883b0cd1b7aca6265b738eace483c81eb37b9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: beb697d80417b937876a0887e4376341185a47d9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760143"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447216"
 ---
 # <a name="imetadataassemblyimportgetfileprops-method"></a>IMetaDataAssemblyImport::GetFileProps 메서드
-지정 된 메타 데이터 서명 사용 하 여 파일의 속성을 가져옵니다.  
+Gets the properties of the file with the specified metadata signature.  
   
 ## <a name="syntax"></a>구문  
   
@@ -43,35 +41,35 @@ HRESULT GetFileProps (
   
 ## <a name="parameters"></a>매개 변수  
  `mdf`  
- [in] `mdFile` 속성을 가져올 파일을 나타내는 메타 데이터 토큰입니다.  
+ [in] The `mdFile` metadata token that represents the file for which to get the properties.  
   
  `szName`  
- [out] 파일의 단순한 이름입니다.  
+ [out] The simple name of the file.  
   
  `cchName`  
- [in] 와이드 문자에서 크기의 `szName`합니다.  
+ [in] The size, in wide chars, of `szName`.  
   
  `pchName`  
- [out] 와이드 문자에 실제로 반환 된 수가 `szName`합니다.  
+ [out] The number of wide chars actually returned in `szName`.  
   
  `ppbHashValue`  
- [out] 해시 값에 대 한 포인터입니다. 파일의 sha-1 알고리즘을 사용 하는 해시입니다.  
+ [out] A pointer to the hash value. This is the hash, using the SHA-1 algorithm, of the file.  
   
  `pcbHashValue`  
- [out] 반환 된 해시 값에 와이드 문자 수입니다.  
+ [out] The number of wide chars in the returned hash value.  
   
  `pdwFileFlags`  
- [out] 파일에 적용 하는 메타 데이터를 설명 하는 플래그에 대 한 포인터입니다. 플래그 값은 하나 이상의 조합 [CorFileFlags](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md) 값입니다.  
+ [out] A pointer to the flags that describe the metadata applied to a file. The flags value is a combination of one or more [CorFileFlags](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md) values.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **헤더:** Cor.h  
+ **Header:** Cor.h  
   
- **라이브러리:** MsCorEE.dll에서 리소스로 사용  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [IMetaDataAssemblyImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

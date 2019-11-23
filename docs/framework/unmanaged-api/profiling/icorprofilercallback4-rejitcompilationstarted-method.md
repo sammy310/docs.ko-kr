@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 512fdd00-262a-4456-a075-365ef4133c4d
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 58293929b576493d3751f9ce30ba00cec92e180c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 074b0b11a822d2b8bcb9588484557e3e5eba69dd
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758171"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74430201"
 ---
 # <a name="icorprofilercallback4rejitcompilationstarted-method"></a>ICorProfilerCallback4::ReJITCompilationStarted 메서드
-함수를 다시 컴파일 (JIT)-just-in-time 컴파일러가 시작 했음을 프로파일러에 알립니다.  
+Notifies the profiler that the just-in-time (JIT) compiler has started to recompile a function.  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,21 +36,21 @@ HRESULT ReJITCompilationStarted(
   
 ## <a name="parameters"></a>매개 변수  
  `functionId`  
- [in] JIT 컴파일러는 recompile을 시작 했음을 함수의 ID입니다.  
+ [in] The ID of the function that the JIT compiler has started to recompile.  
   
  `rejitId`  
- [in] 함수의 새 버전의 다시 컴파일 ID입니다.  
+ [in] The recompilation ID of the new version of the function.  
   
  `fIsSafeToBlock`  
- [in] `true` 차단 호출 스레드가이 콜백에서; 반환 될 때까지 대기할 런타임 시를 나타내려면 `false` 는 차단 영향을 주지 것입니다 런타임의 작업을 나타냅니다. 값 `true` 런타임에 영향을 주지 않으며 하지만 프로 파일링 결과 영향을 줄 수 있습니다.  
+ [in] `true` to indicate that blocking may cause the runtime to wait for the calling thread to return from this callback; `false` to indicate that blocking will not affect the operation of the runtime. A value of `true` does not harm the runtime, but can affect the profiling results.  
   
-## <a name="remarks"></a>설명  
- 둘 이상의 쌍을 받을 수 있기 `ReJITCompilationStarted` 하 고 [ReJITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationfinished-method.md) 메서드 호출 각 함수에 대 한 방식으로 인해 런타임 핸들 클래스 생성자입니다. 예를 들어 메서드는, 다시 컴파일 런타임이 시작 있지만 클래스 B에 대 한 클래스 생성자를 실행 해야 합니다. 따라서 런타임 클래스 B에 대 한 생성자를 다시 컴파일 및 실행 합니다. 생성자는 실행 되는 동안 메서드 A 다시 컴파일해야 하는 메서드를 호출을 하면 합니다. 이 시나리오에서는 첫 번째 메서드는 다시 중단 됩니다. 그러나 둘 다 JIT 다시 컴파일 이벤트를 사용 하 여이 보고 하는 메서드를 다시 컴파일할 하려고 합니다.  
+## <a name="remarks"></a>주의  
+ It is possible to receive more than one pair of `ReJITCompilationStarted` and [ReJITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationfinished-method.md) method calls for each function because of the way the runtime handles class constructors. For example, the runtime starts to recompile method A, but the class constructor for class B needs to be run. Therefore, the runtime recompiles the constructor for class B and runs it. While the constructor is running, it makes a call to method A, which causes method A to be recompiled again. In this scenario, the first recompilation of method A is halted. However, both attempts to recompile method A are reported with JIT recompilation events.  
   
- 프로파일러는 두 스레드가 동시에 중인 콜백 하는 경우 JIT 다시 컴파일 콜백 시퀀스를 지원 해야 합니다. 그러나 예를 들어 스레드는 호출 `ReJITCompilationStarted`; 스레드는 호출 전에 [ReJITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationfinished-method.md), 스레드 B 호출 [icorprofilercallback:: Exceptionsearchfunctionenter](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfunctionenter-method.md) 함수 ID를 사용 하 여 `ReJITCompilationStarted` A. 스레드에 대 한 콜백 함수 ID는 아직 유효 하지 않은 것으로 보일 수 때문에 대 한 호출 [ReJITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationfinished-method.md) 프로파일러에 의해 아직 받지 했습니다. 그러나이 경우 함수 ID는 유효 합니다.  
+ Profilers must support the sequence of JIT recompilation callbacks in cases where two threads are simultaneously making callbacks. For example, thread A calls `ReJITCompilationStarted`; however, before thread A calls [ReJITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationfinished-method.md), thread B calls [ICorProfilerCallback::ExceptionSearchFunctionEnter](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfunctionenter-method.md) with the function ID from the `ReJITCompilationStarted` callback for thread A. It might appear that the function ID should not yet be valid because a call to [ReJITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationfinished-method.md) had not yet been received by the profiler. However, in this case, the function ID is valid.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
   
@@ -60,7 +58,7 @@ HRESULT ReJITCompilationStarted(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ICorProfilerCallback 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
 - [ICorProfilerCallback4 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9c5566ab-4ec7-4b61-9753-839bb90ae78c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e4948a853434b14845983addb0e6fa4012279084
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b8e72745eff09c6707afe5a5f20a1ddf38b239ae
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776877"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448623"
 ---
 # <a name="isymencunmanagedmethodgetsourceextentindocument-method"></a>ISymENCUnmanagedMethod::GetSourceExtentInDocument 메서드
-최소 가져옵니다 특정 문서에서 줄 및 메서드에 대 한 가장 큰 끝 줄을 시작합니다.  
+Gets the smallest start line and largest end line for the method in a specific document.  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,20 +36,20 @@ HRESULT GetSourceExtentInDocument(
   
 ## <a name="parameters"></a>매개 변수  
  `document`  
- [in] 문서에 대 한 포인터입니다.  
+ [in] A pointer to the document.  
   
  `pstartLine`  
- [out] 에 대 한 포인터를 `ULONG32` 시작 줄을 받는입니다.  
+ [out] A pointer to a `ULONG32` that receives the start line.  
   
  `pendLine`  
- [out] 에 대 한 포인터를 `ULONG32` 줄 끝을 받는입니다.  
+ [out] A pointer to a `ULONG32` that receives the end line.  
   
 ## <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>요구 사항  
- **헤더:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ISymENCUnmanagedMethod 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)

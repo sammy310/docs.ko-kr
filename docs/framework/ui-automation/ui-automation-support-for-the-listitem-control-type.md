@@ -6,16 +6,16 @@ helpviewer_keywords:
 - List Item control type
 - UI Automation, List Item control type
 ms.assetid: 34f533bf-fc14-4e78-8fee-fb7107345fab
-ms.openlocfilehash: c2b1406519c80368cd00a888c541ec9abfce7faa
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4b7c3b6bbdc38227871ea020047bc21987b18ee9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123075"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446723"
 ---
 # <a name="ui-automation-support-for-the-listitem-control-type"></a>ListItem 컨트롤 형식에 대한 UI 자동화 지원
 > [!NOTE]
-> 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](https://go.microsoft.com/fwlink/?LinkID=156746)를 참조하세요.  
+> 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조하세요.  
   
  이 항목에서는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 컨트롤 형식에 대한 <xref:System.Windows.Automation.ControlType.ListItem> 지원 정보를 제공합니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에서, 컨트롤 형식은 <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> 속성을 사용하기 위해 컨트롤이 충족해야 하는 조건 집합입니다. 이 조건에는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 구조, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성 값, 컨트롤 패턴에 대한 특정 지침이 포함됩니다.  
   
@@ -25,17 +25,17 @@ ms.locfileid: "73123075"
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
 ## <a name="required-ui-automation-tree-structure"></a>필요한 UI 자동화 트리 구조  
- 다음 표는 목록 항목 컨트롤과 관련된 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리의 컨트롤 뷰 및 콘텐츠 뷰를 보여주고 각 뷰에 포함될 수 있는 내용에 대해 설명합니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리에 대 한 자세한 내용은 [UI 자동화 트리 개요](ui-automation-tree-overview.md)를 참조 하세요.  
+ 다음 표는 목록 항목 컨트롤과 관련된 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리의 컨트롤 뷰 및 콘텐츠 뷰를 보여주고 각 뷰에 포함될 수 있는 내용에 대해 설명합니다. For more information on the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree, see [UI Automation Tree Overview](ui-automation-tree-overview.md).  
   
 |컨트롤 뷰|콘텐츠 뷰|  
 |------------------|------------------|  
-|ListItem<br /><br /> -Image (0 개 이상)<br />-Text (0 개 이상)<br />-Edit (0 개 이상)|ListItem|  
+|ListItem<br /><br /> -   Image (0 or more)<br />-   Text (0 or more)<br />-   Edit (0 or more)|ListItem|  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리의 콘텐츠 보기 내에서 목록 항목 컨트롤의 자식은 항상 "0" 이어야 합니다. 컨트롤의 구조가 목록 항목 아래에 다른 항목이 포함 되는 경우에는 [TreeItem 컨트롤 형식 컨트롤 형식에 대 한 UI 자동화 지원](ui-automation-support-for-the-treeitem-control-type.md) 에 대 한 요구 사항을 따라야 합니다.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리의 콘텐츠 보기 내에서 목록 항목 컨트롤의 자식은 항상 "0" 이어야 합니다. If the structure of the control is such that other items are contained underneath the list item then it should follow the requirements for the [UI Automation Support for the TreeItem Control Type](ui-automation-support-for-the-treeitem-control-type.md) control type.  
   
 <a name="Required_UI_Automation_Properties"></a>   
 ## <a name="required-ui-automation-properties"></a>필요한 UI 자동화 속성  
- 다음 표에서는 값 또는 정의가 목록 항목 컨트롤과 특별히 관련된 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성을 나열하여 보여 줍니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성에 대 한 자세한 내용은 [클라이언트에 대 한 UI 자동화 속성](ui-automation-properties-for-clients.md)을 참조 하세요.  
+ 다음 표에서는 값 또는 정의가 목록 항목 컨트롤과 특별히 관련된 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성을 나열하여 보여 줍니다. For more information on [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] properties, see [UI Automation Properties for Clients](ui-automation-properties-for-clients.md).  
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성|값|노트|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
@@ -65,7 +65,7 @@ ms.locfileid: "73123075"
 |<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|종속|정보를 표시하거나 숨기도록 항목을 조작할 수 있는 경우 이 컨트롤 패턴을 구현해야 합니다.|  
 |<xref:System.Windows.Automation.Provider.IValueProvider>|종속|항목을 편집할 수 있는 경우 이 컨트롤 패턴을 구현해야 합니다. 목록 항목 컨트롤이 변경되면 <xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>및 <xref:System.Windows.Automation.Provider.IValueProvider.Value%2A>의 값이 변경됩니다.|  
 |<xref:System.Windows.Automation.Provider.IGridItemProvider>|종속|목록 컨테이너 내에서 항목 간 공간 탐색이 지원되고 컨테이너가 행 및 열로 정렬된 경우 Grid Item 컨트롤 패턴을 구현해야 합니다.|  
-|<xref:System.Windows.Automation.Provider.IInvokeProvider>|종속|선택된 항목과 별개로, 항목에서 수행할 수 있는 명령이 있는 경우 이 패턴을 구현해야 합니다. 이는 일반적으로 목록 항목 컨트롤을 두 번 클릭하는 것과 연관된 동작입니다. Microsoft Windows 탐색기에서 문서를 시작 하거나 Microsoft Windows Media Player에서 음악 파일을 재생 하는 경우를 예로 들 수 있습니다.|  
+|<xref:System.Windows.Automation.Provider.IInvokeProvider>|종속|선택된 항목과 별개로, 항목에서 수행할 수 있는 명령이 있는 경우 이 패턴을 구현해야 합니다. 이는 일반적으로 목록 항목 컨트롤을 두 번 클릭하는 것과 연관된 동작입니다. Examples would be launching a document from Microsoft Windows Explorer, or playing a music file in Microsoft Windows Media Player.|  
   
 <a name="Required_UI_Automation_Events"></a>   
 ## <a name="required-ui-automation-events"></a>필요한 UI 자동화 이벤트  

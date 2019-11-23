@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ea7c1617-f3ce-4220-8288-f2b50eaf0f0f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 813f57377c1885b09190ada3c73f4391a3f2d931
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 98ed5556020b93fb1f31d1dde84690fc33092627
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895055"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448367"
 ---
 # <a name="isymunmanagednamespacegetvariables-method"></a>ISymUnmanagedNamespace::GetVariables 메서드
-이 네임 스페이스의 전역 범위에 정의 된 모든 변수를 반환 합니다.  
+Returns all variables defined at global scope within this namespace.  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,20 +37,20 @@ HRESULT GetVariables(
   
 ## <a name="parameters"></a>매개 변수  
  `cVars`  
- 진행 배열의크기`pVars` 를 나타내는입니다. `ULONG32`  
+ [in] A `ULONG32` that indicates the size of the `pVars` array.  
   
  `pcVars`  
- 제한이 네임 스페이스를 포함 `ULONG32` 하는 데 필요한 버퍼의 크기를 수신 하는에 대 한 포인터입니다.  
+ [out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the namespaces.  
   
  `pVars`  
- 제한이 네임 스페이스를 포함 하는 버퍼에 대 한 포인터입니다.  
+ [out] A pointer to a buffer that contains the namespaces.  
   
 ## <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 S_OK이 고, 그렇지 않으면입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>요구 사항  
- **헤더:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ISymUnmanagedNamespace 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md)

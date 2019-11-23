@@ -14,29 +14,27 @@ helpviewer_keywords:
 ms.assetid: e11c9baa-4cf1-4bb4-a95f-b1908893b46c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ea8acab4b8a45fe089a871fb5ada5e24aa98bb84
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ca5afa8c0cf0198dbc8ab65824605f18c22dcdbb
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61939960"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449249"
 ---
 # <a name="isymunmanagedconstant-interface"></a>ISymUnmanagedConstant 인터페이스
-관리 되지 않는 상수에 대 한 액세스를 제공합니다.  
+Provides access to unmanaged constants.  
   
 ## <a name="methods"></a>메서드  
   
 |메서드|설명|  
 |------------|-----------------|  
-|[GetName 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getname-method.md)|상수의 이름을 가져옵니다.|  
-|[GetSignature 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getsignature-method.md)|상수의 서명을 가져옵니다.|  
-|[GetValue 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getvalue-method.md)|상수 값을 가져옵니다.|  
+|[GetName 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getname-method.md)|Gets the name of the constant.|  
+|[GetSignature 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getsignature-method.md)|Gets the signature of the constant.|  
+|[GetValue 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getvalue-method.md)|Gets the value of the constant.|  
   
 ## <a name="requirements"></a>요구 사항  
- **헤더:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [진단 기호 저장소 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

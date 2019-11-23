@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6ae2c4be-212c-4e74-9288-40a11dc26522
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e909680428c7957da2283d13f5676329d953bf22
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d28a0c8b7ee85f023026dde6f3cc8f3a8406aa64
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781886"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450309"
 ---
 # <a name="corfieldattr-enumeration"></a>CorFieldAttr 열거형
 필드에 대한 메타데이터를 설명하는 값을 포함합니다.  
@@ -60,35 +58,35 @@ typedef enum CorFieldAttr {
   
 ## <a name="members"></a>멤버  
   
-|멤버|Description|  
+|멤버|설명|  
 |------------|-----------------|  
-|`fdFieldAccessMask`|내게 필요한 옵션 정보를 지정합니다.|  
-|`fdPrivateScope`|필드는 참조할 수 없음을 지정 합니다.|  
-|`fdPrivate`|필드에 해당 부모 형식에 의해서만 액세스할 수 있는지를 지정 합니다.|  
-|`fdFamANDAssem`|필드에 해당 어셈블리의 파생된 클래스에서 액세스할 수 있는지를 지정 합니다.|  
-|`fdAssembly`|필드에 해당 어셈블리의 모든 형식에서 액세스할 수 있는지를 지정 합니다.|  
-|`fdFamily`|필드는 해당 형식에 의해서만 액세스할 수 있습니다 하 고 파생 클래스를 지정 합니다.|  
-|`fdFamORAssem`|필드에 해당 어셈블리의 모든 형식 및 파생된 클래스에서 액세스할 수 있는지를 지정 합니다.|  
-|`fdPublic`|필드에이 범위의 표시 여부를 사용 하 여 모든 형식에서 액세스할 수 있는지를 지정 합니다.|  
-|`fdStatic`|해당 형식의 멤버 대신 인스턴스 멤버가 필드 임을 지정 합니다.|  
-|`fdInitOnly`|초기화 한 후 필드를 변경할 수 없습니다 지정 합니다.|  
-|`fdLiteral`|필드 값은 컴파일 타임 상수 임을 지정 합니다.|  
-|`fdNotSerialized`|해당 형식이 원격 필드가 직렬화 되지 않습니다 지정 합니다.|  
-|`fdSpecialName`|필드가 특별 하 고 이름과 설명 하는지 지정 하는 방법입니다.|  
-|`fdPinvokeImpl`|필드 구현이 PInvoke를 통해 전달 되는 것을 지정 합니다.|  
-|`fdReservedMask`|공용 언어 런타임에서 내부 용도로 예약 되어 있습니다.|  
-|`fdRTSpecialName`|공용 언어 런타임 메타 데이터 내부 Api 인코딩을 확인 하도록 이름을 지정 합니다.|  
-|`fdHasFieldMarshal`|필드에 마샬링 정보가 포함 되도록 지정 합니다.|  
-|`fdHasDefault`|필드 기본값을 갖도록 지정 합니다.|  
-|`fdHasFieldRVA`|필드의 상대 가상 주소를 지정 합니다.|  
+|`fdFieldAccessMask`|Specifies accessibility information.|  
+|`fdPrivateScope`|Specifies that the field cannot be referenced.|  
+|`fdPrivate`|Specifies that the field is accessible only by its parent type.|  
+|`fdFamANDAssem`|Specifies that the field is accessible by derived classes in its assembly.|  
+|`fdAssembly`|Specifies that the field is accessible by all types in its assembly.|  
+|`fdFamily`|Specifies that the field is accessible only by its type and derived classes.|  
+|`fdFamORAssem`|Specifies that the field is accessible by derived classes and by all types in its assembly.|  
+|`fdPublic`|Specifies that the field is accessible by all types with visibility of this scope.|  
+|`fdStatic`|Specifies that the field is a member of its type rather than an instance member.|  
+|`fdInitOnly`|Specifies that the field cannot be changed after it is initialized.|  
+|`fdLiteral`|Specifies that the field value is a compile-time constant.|  
+|`fdNotSerialized`|Specifies that the field is not serialized when its type is remoted.|  
+|`fdSpecialName`|Specifies that the field is special, and that its name describes how.|  
+|`fdPinvokeImpl`|Specifies that the field implementation is forwarded through PInvoke.|  
+|`fdReservedMask`|Reserved for internal use by the common language runtime.|  
+|`fdRTSpecialName`|Specifies that the common language runtime metadata internal APIs should check the encoding of the name.|  
+|`fdHasFieldMarshal`|Specifies that the field contains marshaling information.|  
+|`fdHasDefault`|Specifies that the field has a default value.|  
+|`fdHasFieldRVA`|Specifies that the field has a relative virtual address.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** CorHdr.h  
+ **Header:** CorHdr.h  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [메타데이터 열거형](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

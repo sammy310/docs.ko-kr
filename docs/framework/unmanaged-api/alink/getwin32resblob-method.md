@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 36997e04-f9f6-4254-a041-6767ac6c51d9
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b26f08548ac964fae2f4d64db50167add327eb2d
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: ff3103a46390c880a56ff443bfe20744f2ba0bfd
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70777362"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74430695"
 ---
 # <a name="getwin32resblob-method"></a>GetWin32ResBlob 메서드
-Win32 리소스 blob을 검색 합니다. 어셈블리 옵션을 설정한 후이 메서드를 호출 합니다.  
+Retrieves Win32 resource blob. Call this method after setting assembly options.  
   
 ## <a name="syntax"></a>구문  
   
@@ -41,30 +39,30 @@ HRESULT GetWin32ResBlob(
   
 ## <a name="parameters"></a>매개 변수  
  `AssemblyID`  
- 어셈블리의 ID입니다.  
+ ID of the assembly.  
   
  `FileToken`  
- Win32 버전 리소스를 생성할 때 사용할 파일 이름을 검색 하는 데 사용 되는 파일 토큰입니다.  
+ File token used to retrieve the filename to be used when constructing the Win32 Version resource  
   
  `fDll`  
- 파일이 DLL 이면 TRUE이 고, EXE의 경우 false입니다.  
+ TRUE if file is a DLL, false for an EXE.  
   
  `pszIconFile`  
- 리소스 blob에 삽입할 선택적 아이콘입니다.  
+ Optional icon to insert into the resource blob.  
   
  `ppResBlob`  
- 리소스 blob을 받습니다.  
+ Receives the resource blob.  
   
  `pcbResBlob`  
- Blob의 크기를 수신 합니다.  
+ Receives the size of the blob.  
   
 ## <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 S_OK를 반환 합니다.  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>요구 사항  
- Alink 필요  
+ Requires alink.h  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [IALink 인터페이스](ialink-interface.md)
 - [IALink2 인터페이스](ialink2-interface.md)

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 43189651-a535-4803-a1d1-f1c427ace2ca
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 63ad2532240c9f18a00421281fae0d111dbfaec5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 71e2bc1d60e050d817429db5bc6926b3b16c637c
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963800"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431412"
 ---
 # <a name="icorprofilerinfo2getstringlayout-method"></a>ICorProfilerInfo2::GetStringLayout 메서드
-문자열 개체의 레이아웃 정보를 가져옵니다. 이 메서드는 .NET Framework 4에서 더 이상 사용 되지 않으며 [ICorProfilerInfo3:: GetStringLayout2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getstringlayout2-method.md) 메서드로 대체 됩니다.  
+문자열 개체의 레이아웃 정보를 가져옵니다. This method is deprecated in the .NET Framework 4, and is superseded by the [ICorProfilerInfo3::GetStringLayout2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getstringlayout2-method.md) method.  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,38 +36,38 @@ HRESULT GetStringLayout(
   
 ## <a name="parameters"></a>매개 변수  
  `pBufferLengthOffset`  
- 제한이 문자열의 길이를 저장 하는 `ObjectID` 포인터를 기준으로 하는 위치의 오프셋에 대 한 포인터입니다. 길이는로 `DWORD`저장 됩니다.  
+ [out] A pointer to the offset of the location, relative to the `ObjectID` pointer, that stores the length of the string. The length is stored as a `DWORD`.  
   
 > [!NOTE]
-> 이 매개 변수는 버퍼의 길이가 아니라 문자열 자체의 길이를 반환 합니다. 버퍼의 길이는 더 이상 사용할 수 없습니다.  
+> This parameter returns the length of the string itself, not the length of the buffer. The length of the buffer is no longer available.  
   
  `PStringLengthOffset`  
- 제한이 문자열 자체의 길이를 저장 하는 `ObjectID` 포인터를 기준으로 하는 위치의 오프셋에 대 한 포인터입니다. 길이는로 `DWORD`저장 됩니다.  
+ [out] A pointer to the offset of the location, relative to the `ObjectID` pointer, that stores the length of the string itself. The length is stored as a `DWORD`.  
   
  `pBufferOffset`  
- 제한이 와이드 문자 문자열을 저장 하는 `ObjectID` 포인터를 기준으로 하는 버퍼의 오프셋에 대 한 포인터입니다.  
+ [out] A pointer to the offset of the buffer, relative to the `ObjectID` pointer, that stores the string of wide characters.  
   
-## <a name="remarks"></a>설명  
- 메서드 `GetStringLayout` 는 다음이 저장 된 위치에 대 `ObjectID` 한 포인터에 상대적인 오프셋을 가져옵니다.  
+## <a name="remarks"></a>주의  
+ The `GetStringLayout` method gets the offsets, relative to the `ObjectID` pointer, of the locations in which the following are stored:  
   
-- 문자열 버퍼의 길이입니다.  
+- The length of the string's buffer.  
   
-- 문자열 자체의 길이입니다.  
+- The length of the string itself.  
   
-- 와이드 문자의 실제 문자열을 포함 하는 버퍼입니다.  
+- The buffer that contains the actual string of wide characters.  
   
- 문자열이 null로 종료 될 수 있습니다.  
+ Strings may be null-terminated.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
   
- **라이브러리** CorGuids.lib  
+ **라이브러리:** CorGuids.lib  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ICorProfilerInfo 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
 - [ICorProfilerInfo2 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

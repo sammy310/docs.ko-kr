@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d6a5fa8b-09c6-47a5-b60e-6cf2e355df30
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b6dd7792fe298aa1950b23053a7c5cd576b62e7b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f57a3ed70267de65daed85305ad7d623b4ca0337
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755885"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448023"
 ---
 # <a name="icorprofilercallbackfunctionunloadstarted-method"></a>ICorProfilerCallback::FunctionUnloadStarted 메서드
-런타임 함수를 언로드할 시작한는 프로파일러에 알립니다.  
+Notifies the profiler that the runtime has started to unload a function.  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,13 +34,13 @@ HRESULT FunctionUnloadStarted(
   
 ## <a name="parameters"></a>매개 변수  
  `functionId`  
- [in] 언로드되고 함수의 ID입니다.  
+ [in] The ID of the function that is being unloaded.  
   
-## <a name="remarks"></a>설명  
- 값을 `functionId` 호출자에 게이 메서드가 반환 된 후 매개 변수는 더 이상 유효 합니다.  
+## <a name="remarks"></a>주의  
+ The value of the `functionId` parameter is no longer valid after this method returns to the caller.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
   
@@ -50,6 +48,6 @@ HRESULT FunctionUnloadStarted(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ICorProfilerCallback 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

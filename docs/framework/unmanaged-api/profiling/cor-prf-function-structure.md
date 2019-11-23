@@ -14,16 +14,14 @@ helpviewer_keywords:
 ms.assetid: 8bb5acf5-cf4b-4ccb-93f1-46db1f3f8bf3
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 57520b4a67eb164c8f8631dc4d63d32c655dafa2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 40698a49ac7012c4f67eb88b1ead04c80f3dea77
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67753827"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428319"
 ---
-# <a name="corprffunction-structure"></a>COR_PRF_FUNCTION 구조체
+# <a name="cor_prf_function-structure"></a>COR_PRF_FUNCTION 구조체
 함수의 ID와 다시 컴파일된 함수 버전의 ID를 결합하여 함수의 고유한 표현을 제공합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -34,22 +32,22 @@ typedef struct _COR_PRF_FUNCTION {    FunctionID functionId;    ReJITID    reJit
   
 ## <a name="members"></a>멤버  
   
-|멤버|Description|  
+|멤버|설명|  
 |------------|-----------------|  
-|`functionId`|ID 함수입니다.|  
-|`reJitId`|다시 컴파일된 함수의 ID입니다. 값이 0 (영) 함수의 원래 버전을 나타냅니다.|  
+|`functionId`|The ID of the function.|  
+|`reJitId`|The ID of the recompiled function. A value of 0 (zero) represents the original version of the function.|  
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** CorProf.idl  
+ **Header:** CorProf.idl  
   
  **라이브러리:** CorGuids.lib  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [프로파일링 구조체](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)

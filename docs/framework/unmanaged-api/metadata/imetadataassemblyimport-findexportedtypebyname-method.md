@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 46264b2c-574d-4dde-aafc-77187a104fdd
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8a70c041bc17f58a5e17877dd2e1f2aa2944e689
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3e470250fa0e86610fcc9a6d6e2ca03569d62b54
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777927"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449453"
 ---
 # <a name="imetadataassemblyimportfindexportedtypebyname-method"></a>IMetaDataAssemblyImport::FindExportedTypeByName 메서드
-지정 된 이름과 바깥쪽 형식 내보낸된 형식에 대 한 포인터를 가져옵니다.  
+Gets a pointer to an exported type, given its name and enclosing type.  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,27 +37,27 @@ HRESULT FindExportedTypeByName (
   
 ## <a name="parameters"></a>매개 변수  
  `szName`  
- [in] 내보낸 형식 이름입니다.  
+ [in] The name of the exported type.  
   
  `mdtExportedType`  
- [in] 내보낸 형식의 바깥쪽 클래스에 대 한 메타 데이터 토큰입니다. 이 값은 `mdExportedTypeNil` 요청한 내보낸 경우 형식이 중첩된 형식이 아닙니다.  
+ [in] The metadata token for the enclosing class of the exported type. This value is `mdExportedTypeNil` if the requested exported type is not a nested type.  
   
  `ptkExportedType`  
- [out] 에 대 한 포인터를 `mdExportedType` 내보낸된 형식을 나타내는 토큰입니다.  
+ [out] A pointer to the `mdExportedType` token that represents the exported type.  
   
-## <a name="remarks"></a>설명  
- `FindExportedTypeByName` 메서드 참조를 확인 하는 것에 대 한 공용 언어 런타임에서 표준 규칙을 사용 합니다.  
+## <a name="remarks"></a>주의  
+ The `FindExportedTypeByName` method uses the standard rules employed by the common language runtime for resolving references.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** Cor.h  
+ **Header:** Cor.h  
   
- **라이브러리:** MsCorEE.dll에서 리소스로 사용  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [IMetaDataAssemblyImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
 - [런타임에서 어셈블리를 찾는 방법](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)

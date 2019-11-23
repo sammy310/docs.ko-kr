@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c1e744b8-a6fb-4d9c-a971-8babc875d8f0
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 42cc0896dce713daed310f07d39a02bfb7386030
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f10c55abcc044b5bbdbb940001a25f530a4688e4
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777097"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431228"
 ---
 # <a name="imetadataerroronerror-method"></a>IMetaDataError::OnError 메서드
-메타 데이터를 병합 하는 동안 발생 하는 오류에 대 한 알림을 제공 합니다.  
+Provides notification of errors that occur during the metadata merge.  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,20 +36,20 @@ HRESULT OnError (
   
 ## <a name="parameters"></a>매개 변수  
  `hrError`  
- [in] HRESULT 오류 값을 호출 하는 메서드로 반환 합니다.  
+ [in] The HRESULT error value returned to the calling method.  
   
  `token`  
- [in] 오류가 발생 했을 때를 병합 하는 코드 개체의 메타 데이터 토큰입니다.  
+ [in] The metadata token of the code object that was being merged when the error occurred.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** Cor.h  
+ **Header:** Cor.h  
   
- **라이브러리:** MsCorEE.dll에서 리소스로 사용  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [IMetaDataError 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-interface.md)

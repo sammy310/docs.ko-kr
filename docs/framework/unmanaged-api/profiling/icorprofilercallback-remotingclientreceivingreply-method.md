@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 15cfc300-8231-4ecb-9a04-19851c3eb484
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ff18d52091ca75152c20667d1ec1b024f44d6129
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e25cbfabc10da0c7b1095a956583bb5c7450dba9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782914"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445813"
 ---
 # <a name="icorprofilercallbackremotingclientreceivingreply-method"></a>ICorProfilerCallback::RemotingClientReceivingReply 메서드
-원격 호출의 서버 쪽 부분을 완료 하 고 클라이언트는 수신 하는 프로파일러에 알립니다 회신을 처리 하려고 하 고 있습니다.  
+Notifies the profiler that the server-side portion of a remoting call has completed and the client is now receiving and about to process the reply.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,21 +35,21 @@ HRESULT RemotingClientReceivingReply(
   
 ## <a name="parameters"></a>매개 변수  
  `pCookie`  
- [in] 에 제공 된 값을 사용 하 여 해당 하는 값 [icorprofilercallback:: Remotingserversendingreply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserversendingreply-method.md) 이러한 조건에서:  
+ [in] A value that will correspond with the value provided in [ICorProfilerCallback::RemotingServerSendingReply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserversendingreply-method.md) under these conditions:  
   
-- 원격 GUID 쿠키 활성화 됩니다.  
+- Remoting GUID cookies are active.  
   
-- 채널은 메시지 전송에 성공 합니다.  
+- The channel succeeds in transmitting the message.  
   
-- GUID 쿠키는 서버 쪽 프로세스에서 활성 상태입니다.  
+- GUID cookies are active on the server-side process.  
   
- 이렇게 하면 쉽게 원격 호출 쌍을 수 있습니다.  
+ This allows easy pairing of remoting calls.  
   
  `fIsAsync`  
- [in] 값을 `true` 호출이 고, 그렇지 않으면 비동기 이면 `false`합니다.  
+ [in] A value that is `true` if the call is asynchronous; otherwise, `false`.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
   
@@ -59,6 +57,6 @@ HRESULT RemotingClientReceivingReply(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ICorProfilerCallback 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 31782b36-d311-4518-8f45-25f65385af5b
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a5ba90ce4523fcc55fca3f84a78fa4cfeb6a93f0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 96ab77a36c0a0bddda0fca342433666dd19082d3
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782823"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74426188"
 ---
 # <a name="icorprofilercallbackjitcompilationstarted-method"></a>ICorProfilerCallback::JITCompilationStarted 메서드
-Just-in-time (JIT) 컴파일러에서 함수 컴파일을 시작 했다는 프로파일러에 알립니다.  
+Notifies the profiler that the just-in-time (JIT) compiler has started to compile a function.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,20 +35,20 @@ HRESULT JITCompilationStarted(
   
 ## <a name="parameters"></a>매개 변수  
  `functionId`  
- [in] 컴파일이 시작 되는 함수의 ID입니다.  
+ [in] The ID of the function for which the compilation is starting.  
   
  `fIsSafeToBlock`  
- [in] 프로파일러 차단 여부를 나타내는 값을 런타임 작업에 영향을 줍니다. 값이 `true` 런타임에서이 콜백에서; 반환할 호출 스레드에 대 한 대기를 차단 않을 경우이 고, 그렇지 `false`합니다.  
+ [in] A value indicating to the profiler whether blocking will affect the operation of the runtime. The value is `true` if blocking may cause the runtime to wait for the calling thread to return from this callback; otherwise, `false`.  
   
- 하지만 값 `true` 런타임 나쁜 영향을 주지, 프로 파일링 결과 기울일 수 있습니다.  
+ Although a value of `true` will not harm the runtime, it can skew the profiling results.  
   
-## <a name="remarks"></a>설명  
- 둘 이상의 쌍을 받을 수 있기 `JITCompilationStarted` 하 고 [icorprofilercallback:: Jitcompilationfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationfinished-method.md) 생성자를 호출 각 함수에 대 한 방식으로 인해 런타임 핸들 클래스입니다. 예를 들어, JIT 컴파일되나요 메서드 A는 런타임이 시작 하지만 클래스 B에 대 한 클래스 생성자를 실행 해야 합니다. 따라서 런타임에서 JIT 컴파일을 클래스 B에 대 한 생성자를 실행 합니다. 생성자는 실행 되는 동안 메서드 A 다시 JIT 컴파일할 수 하는 메서드를 호출을 하면 합니다. 이 시나리오에서는 첫 번째 메서드는 JIT 컴파일을 중단 됩니다. 그러나 두 하려고 JIT 컴파일되나요 메서드는 JIT 컴파일 이벤트를 사용 하 여 보고 됩니다. 프로파일러는 메서드에 대 한 Microsoft MSIL (intermediate language) 코드를 호출 하 여 대체 하려는 경우는 [icorprofilerinfo:: Setilfunctionbody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md) 메서드를 둘 다에 대해 이렇게 해야 `JITCompilationStarted` 이벤트 하지만 동일한 MSIL 블록을 사용할 수 있습니다 보십시오.  
+## <a name="remarks"></a>주의  
+ It is possible to receive more than one pair of `JITCompilationStarted` and [ICorProfilerCallback::JITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationfinished-method.md) calls for each function because of the way the runtime handles class constructors. For example, the runtime starts to JIT-compile method A, but the class constructor for class B needs to be run. Therefore, the runtime JIT-compiles the constructor for class B and runs it. While the constructor is running, it makes a call to method A, which causes method A to be JIT-compiled again. In this scenario, the first JIT compilation of method A is halted. However, both attempts to JIT-compile method A are reported with JIT-compilation events. If the profiler is going to replace Microsoft intermediate language (MSIL) code for method A by calling the [ICorProfilerInfo::SetILFunctionBody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md) method, it must do so for both `JITCompilationStarted` events, but it may use the same MSIL block for both.  
   
- 프로파일러는 두 스레드가 동시에 중인 콜백 하는 경우 JIT 콜백 시퀀스를 지원 해야 합니다. 예를 들어, 호출 스레드는 `JITCompilationStarted`합니다. 그러나 스레드는 호출 전에 `JITCompilationFinished`, 스레드 B 호출 [icorprofilercallback:: Exceptionsearchfunctionenter](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfunctionenter-method.md) 스레드 A의에서 함수 ID를 가진 `JITCompilationStarted` 콜백 합니다. 함수 ID는 아직 유효 하지 않은 것으로 보일 수 때문에 대 한 호출 `JITCompilationFinished` 프로파일러에 의해 아직 받지 했습니다. 그러나 이와 같은 경우 함수 ID가 잘못 되었습니다.  
+ Profilers must support the sequence of JIT callbacks in cases where two threads are simultaneously making callbacks. For example, thread A calls `JITCompilationStarted`. However, before thread A calls `JITCompilationFinished`, thread B calls [ICorProfilerCallback::ExceptionSearchFunctionEnter](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfunctionenter-method.md) with the function ID from thread A's `JITCompilationStarted` callback. It might appear that the function ID should not yet be valid because a call to `JITCompilationFinished` had not yet been received by the profiler. However, in a case like this one, the function ID is valid.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
   
@@ -58,7 +56,7 @@ HRESULT JITCompilationStarted(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ICorProfilerCallback 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
 - [JITCompilationFinished 메서드](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationfinished-method.md)

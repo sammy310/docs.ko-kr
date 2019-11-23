@@ -5,18 +5,18 @@ helpviewer_keywords:
 - best practices for accessibility
 - accessibility, best practices for
 ms.assetid: e6d5cd98-21a3-4b01-999c-fb953556d0e6
-ms.openlocfilehash: 92bad8b5ad556d79480a5b4da489d070545701da
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: e4478e0136d16623a9176691cbddc4215cc1b877
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291396"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447296"
 ---
 # <a name="accessibility-best-practices"></a>액세스 가능성에 대한 유용한 정보
 > [!NOTE]
-> 이 설명서는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 네임스페이스에 정의된 관리되는 <xref:System.Windows.Automation> 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](https://go.microsoft.com/fwlink/?LinkID=156746)를 참조하세요.  
+> 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조하세요.  
   
- 컨트롤이 나 응용 프로그램에서 다음 모범 사례를 구현 하면 보조 기술 장치를 사용 하는 사용자에 대 한 접근성이 향상 됩니다. 이들 모범 사례는 대부분 효율적인 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 디자인에 초점을 맞춥니다. 각 모범 사례에는 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 컨트롤 또는 애플리케이션에 대한 구현 정보가 포함됩니다. 대부분 경우에 이들 모범 사례에 맞는 작업이 이미 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 컨트롤에 포함되어 있습니다.  
+ Implementing the following best practices in controls or applications will improve their accessibility for people who use assistive technology devices. 이들 모범 사례는 대부분 효율적인 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 디자인에 초점을 맞춥니다. 각 모범 사례에는 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 컨트롤 또는 애플리케이션에 대한 구현 정보가 포함됩니다. 대부분 경우에 이들 모범 사례에 맞는 작업이 이미 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 컨트롤에 포함되어 있습니다.  
   
 <a name="Programmatic_Access"></a>   
 ## <a name="programmatic-access"></a>프로그래밍 방식 액세스  
@@ -24,19 +24,19 @@ ms.locfileid: "72291396"
   
 <a name="Enable_Programmatic_Access_to_all_UI_Elements_and_Text"></a>   
 ### <a name="enable-programmatic-access-to-all-ui-elements-and-text"></a>모든 UI 요소 및 텍스트에 대해 프로그래밍 방식 액세스 사용  
- UI (사용자 인터페이스) 요소는 프로그래밍 방식 액세스를 사용 하도록 설정 해야 합니다. [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 가 표준 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 컨트롤이면 프로그래밍 방식 액세스 지원이 컨트롤에 포함됩니다. 공용 컨트롤에서 서브클래싱된 컨트롤이나 컨트롤에서 서브클래싱된 컨트롤과 같은 사용자 지정 컨트롤이면 <xref:System.Windows.Automation.Peers.AutomationPeer> 구현에서 수정해야 할 수 있는 영역이 있는지 확인해야 합니다.  
+ User interface (UI) elements should enable programmatic access. [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 가 표준 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 컨트롤이면 프로그래밍 방식 액세스 지원이 컨트롤에 포함됩니다. 공용 컨트롤에서 서브클래싱된 컨트롤이나 컨트롤에서 서브클래싱된 컨트롤과 같은 사용자 지정 컨트롤이면 <xref:System.Windows.Automation.Peers.AutomationPeer> 구현에서 수정해야 할 수 있는 영역이 있는지 확인해야 합니다.  
   
- 이 모범 사례를 따라 보조 기술 공급 업체에서 제품 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]의 요소를 식별 하 고 조작할 수 있습니다.  
+ Following this best practice allows assistive technology vendors to identify and manipulate elements of your product's [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)].  
   
 <a name="Place_Names__Titles_and_Descriptions_on_UI_Objects_"></a>   
 ### <a name="place-names-titles-and-descriptions-on-ui-objects-frames-and-pages"></a>UI 개체, 프레임 및 페이지에 대한 위치 이름, 제목 및 설명  
- 보조 기술, 특히 화면 읽기 프로그램에서는 제목을 사용하여 탐색 체계에서 프레임, 개체 또는 페이지의 위치를 인식합니다. 따라서 제목은 구체적인 설명을 포함해야 합니다. 예를 들어 사용자가 특정 영역을 자세히 탐색한 경우에는 웹 페이지 제목이 "Microsoft 웹 페이지"인 것은 도움이 되지 않습니다. 시각 장애가 있고 화면 읽기 프로그램에 의존하는 사용자에게는 구체적인 설명이 포함된 제목이 중요합니다. 마찬가지로 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 컨트롤의 경우 <xref:System.Windows.Automation.AutomationProperties.NameProperty> 및 <xref:System.Windows.Automation.AutomationProperties.HelpTextProperty> 보조 기술 장치에 중요 합니다.  
+ 보조 기술, 특히 화면 읽기 프로그램에서는 제목을 사용하여 탐색 체계에서 프레임, 개체 또는 페이지의 위치를 인식합니다. 따라서 제목은 구체적인 설명을 포함해야 합니다. 예를 들어 사용자가 특정 영역을 자세히 탐색한 경우에는 웹 페이지 제목이 "Microsoft 웹 페이지"인 것은 도움이 되지 않습니다. 시각 장애가 있고 화면 읽기 프로그램에 의존하는 사용자에게는 구체적인 설명이 포함된 제목이 중요합니다. Similarly, for [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] controls, <xref:System.Windows.Automation.AutomationProperties.NameProperty> and <xref:System.Windows.Automation.AutomationProperties.HelpTextProperty> are important for assistive technology devices.  
   
- 이 모범 사례를 따라 보조 technologys 샘플 컨트롤 및 응용 프로그램에서 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]를 식별 하 고 조작할 수 있습니다.  
+ Following this best practice allows assistive technologys to identify and manipulate [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] in sample controls and applications.  
   
 <a name="Ensure_Programmatic_Events_are_Triggered_by_all_UI"></a>   
 ### <a name="ensure-programmatic-events-are-triggered-by-all-ui-activities"></a>프로그래밍 방식 이벤트가 모든 UI 작업에서 트리거되는지 확인  
- 이 모범 사례를 따라 보조 technologys는 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 변경 내용을 수신 대기 하 고 이러한 변경 내용을 사용자에 게 알릴 수 있습니다.  
+ Following this best practice allows assistive technologys to listen for changes in the [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] and notify the user about these changes.  
   
 <a name="User_Settings"></a>   
 ## <a name="user-settings"></a>사용자 설정  
@@ -50,7 +50,7 @@ ms.locfileid: "72291396"
   
 <a name="Visual_UI_Design"></a>   
 ## <a name="visual-ui-design"></a>시각적 UI 디자인  
- 이 섹션의 모범 사례는 컨트롤이 나 응용 프로그램에서 색 및 이미지를 효과적으로 사용 하 고 보조 기술에서 사용할 수 있도록 합니다.  
+ Best Practices in this section ensure that controls or applications use color and images effectively and are able to be used by Assistive technologies.  
   
 <a name="Don_t_Hard_Code_Colors"></a>   
 ### <a name="dont-hard-code-colors"></a>색 하드 코드 안 함  
@@ -66,7 +66,7 @@ ms.locfileid: "72291396"
   
 <a name="Ensure_all_UI_Correctly_Scales_by_any_DPI_Setting"></a>   
 ### <a name="ensure-all-ui-correctly-scales-by-any-dpi-setting"></a>DPI 설정으로 모든 UI가 올바르게 크기 조정되는지 확인  
- 모든 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] dpi (인치당 도트 수) 설정에 따라 올바르게 크기를 조정할 수 있는지 확인 합니다. 또한 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 요소가 120 dpi (인치당 도트 수)를 1024 x 768 화면에 맞게 조정 해야 합니다.  
+ Ensure that all [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] can correctly scale by any dots per inch (dpi) setting. Also, ensure that [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] elements fit in a screen of 1024 x 768 with 120 dots per inch (dpi).  
   
 <a name="Navigation"></a>   
 ## <a name="navigation"></a>탐색  
@@ -128,10 +128,10 @@ ms.locfileid: "72291396"
   
 <a name="Use_Standard_Input_APIs_with_Devices_Independent"></a>   
 ### <a name="use-standard-input-apis-with-device-independent-calls"></a>디바이스 독립적 호출을 통해 표준 입력 API 사용  
- 장치 독립적 호출을 사용 하면 키보드 기능과 마우스 기능이 동일 하 게 유지 되 고, [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]에 대 한 필요한 정보와 함께 보조 기술을 제공 합니다.  
+ Device-independent calls ensure keyboard and mouse feature equality, while providing assistive technology with needed information about the [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)].  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Windows.Automation.Peers>
-- [테마 및 UI 자동화 지원 샘플이 있는 NumericUpDown 사용자 지정 컨트롤](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771573(v=vs.90))
+- [NumericUpDown Custom Control with Theme and UI Automation Support Sample](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771573(v=vs.90))
 - [키보드 사용자 인터페이스 디자인에 대한 지침](https://docs.microsoft.com/previous-versions/windows/desktop/dnacc/guidelines-for-keyboard-user-interface-design)

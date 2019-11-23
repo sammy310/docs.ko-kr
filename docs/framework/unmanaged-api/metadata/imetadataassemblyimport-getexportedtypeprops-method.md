@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 25ca7623-5a55-4f09-b44a-36b03d142278
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f8dd1daf3528bbc642033e254a809c18c3662ff1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 82302124828a2dab73b445128d7d847e112edd36
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779190"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448210"
 ---
 # <a name="imetadataassemblyimportgetexportedtypeprops-method"></a>IMetaDataAssemblyImport::GetExportedTypeProps 메서드
-지정 된 메타 데이터 서명 사용 하 여 내보낸 형식의 속성 집합을 가져옵니다.  
+Gets the set of properties of the exported type with the specified metadata signature.  
   
 ## <a name="syntax"></a>구문  
   
@@ -43,35 +41,35 @@ HRESULT GetExportedTypeProps (
   
 ## <a name="parameters"></a>매개 변수  
  `mdct`  
- [in] `mdExportedType` 내보낸된 형식을 나타내는 메타 데이터 토큰입니다.  
+ [in] An `mdExportedType` metadata token that represents the exported type.  
   
  `szName`  
- [out] 내보낸 형식 이름입니다.  
+ [out] The name of the exported type.  
   
  `cchName`  
- [in] 와이드 문자에서 크기의 `szName`합니다.  
+ [in] The size, in wide characters, of `szName`.  
   
  `pchName`  
- [out] 에 실제로 반환 된 와이드 문자 수 `szName`  
+ [out] The number of wide characters actually returned in `szName`  
   
  `ptkImplementation`  
- [out] `mdFile`, `mdAssemblyRef`, 또는 `mdExportedType` 내보낸 형식의 속성에 대 한 액세스를 허용 또는 포함 된 메타 데이터 토큰입니다.  
+ [out] An `mdFile`, `mdAssemblyRef`, or `mdExportedType` metadata token that contains or allows access to the properties of the exported type.  
   
  `ptkTypeDef`  
- [out] 에 대 한 포인터를 `mdTypeDef` 파일의 형식을 나타내는 토큰입니다.  
+ [out] A pointer to an `mdTypeDef` token that represents a type in the file.  
   
  `pdwExportedTypeFlags`  
- [out] 내보낸된 형식에 적용 하는 메타 데이터를 설명 하는 플래그에 대 한 포인터입니다. 하나 이상의 플래그 값이 될 수 있습니다 [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) 값입니다.  
+ [out] A pointer to the flags that describe the metadata applied to the exported type. The flags value can be one or more [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) values.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** Cor.h  
+ **Header:** Cor.h  
   
- **라이브러리:** MsCorEE.dll에서 리소스로 사용  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [IMetaDataAssemblyImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: bb203853-6a6d-4027-b9e9-603a7f28b9d3
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 32b7505a9e512f3c3e3e7a9fcbff40276e98ecf4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1fcb885b6e19457065c2ca9971f068b42f97147d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759355"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448351"
 ---
 # <a name="isymunmanagedreadergetdocument-method"></a>ISymUnmanagedReader::GetDocument 메서드
-문서를 찾습니다. 문서 언어, 공급 업체 및 형식에 대해서는 선택적입니다.  
+Finds a document. The document language, vendor, and type are optional.  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,26 +38,26 @@ HRESULT GetDocument (
   
 ## <a name="parameters"></a>매개 변수  
  `url`  
- [in] 문서를 식별 하는 URL입니다.  
+ [in] The URL that identifies the document.  
   
  `language`  
- [in] 문서 언어입니다. 이 매개 변수는 선택 사항입니다.  
+ [in] The document language. 이 매개 변수는 선택적 요소입니다.  
   
  `languageVendor`  
- [in] 문서 언어에 대 한 공급 업체의 id입니다. 이 매개 변수는 선택 사항입니다.  
+ [in] The identity of the vendor for the document language. 이 매개 변수는 선택적 요소입니다.  
   
  `documentType`  
- [in] 문서의 형식입니다. 이 매개 변수는 선택 사항입니다.  
+ [in] The type of the document. 이 매개 변수는 선택적 요소입니다.  
   
  `pRetVal`  
- [out] 반환 되는 인터페이스 포인터입니다.  
+ [out] A pointer to the returned interface.  
   
 ## <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>요구 사항  
- **헤더:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ISymUnmanagedReader 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

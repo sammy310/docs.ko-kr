@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 78c1ba28-a410-4360-805c-23a95408964a
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: abd4bb00f5c1e703740462f1709407616ac8a8e8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2939d9cf3991a9e0b8f93bb301925b1092eca50e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778233"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446038"
 ---
 # <a name="isymunmanagedvariablegetsignature-method"></a>ISymUnmanagedVariable::GetSignature 메서드
-이 변수 시그니처를 가져옵니다.  
+Gets the signature of this variable.  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,20 +37,20 @@ HRESULT GetSignature(
   
 ## <a name="parameters"></a>매개 변수  
  `cSig`  
- [in] 가리키는 버퍼의 길이 `sig` 매개 변수입니다.  
+ [in] The length of the buffer pointed to by the `sig` parameter.  
   
  `pcSig`  
- [out] 에 대 한 포인터를 `ULONG32` 문자 시그니처를 포함 하는 데 필요한 버퍼의 크기를 받는 합니다.  
+ [out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the signature.  
   
  `sig`  
- [out] 서명을 저장 하는 버퍼입니다.  
+ [out] The buffer that stores the signature.  
   
 ## <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>요구 사항  
- **헤더:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ISymUnmanagedVariable 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)

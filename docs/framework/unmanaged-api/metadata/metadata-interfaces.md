@@ -6,19 +6,17 @@ helpviewer_keywords:
 - metadata interfaces [.NET Framework]
 - interfaces (.NET Framework metadata]
 ms.assetid: f5cdac93-a28c-48ef-8a19-5773376e9e7c
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8a704d531b1c49ffe653009e0e90f33b7a126e91
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4672cb813cec4a127f7888a2273eb26c3f34c3d9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049819"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431594"
 ---
 # <a name="metadata-interfaces"></a>메타데이터 인터페이스
 이 섹션에서는 .NET Framework 형식, 메서드, 필드 등이 노출하는 메타데이터에 대한 액세스를 제공하는 관리되지 않는 인터페이스를 설명합니다.  
   
-## <a name="in-this-section"></a>섹션 내용  
+## <a name="in-this-section"></a>단원 내용  
  [ICeeGen 인터페이스](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)  
  동적 코드 컴파일에 대한 메서드를 제공합니다.  
   
@@ -38,7 +36,7 @@ ms.locfileid: "62049819"
  형식 라이브러리를 메타데이터 서명에 매핑하고 서로 변환하는 메서드를 제공합니다.  
   
  [IMetaDataDispenser 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)  
- `IMetaDataDispenser`는 사용되지 않습니다. 대신 `IMetaDataDispenserEx`를 사용하세요.  
+ `IMetaDataDispenser`는 사용되지 않습니다. 대신 `IMetaDataDispenserEx` 를 사용하세요.  
   
  [IMetaDataDispenserEx 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)  
  메타데이터를 만들거나 수정할 메모리 영역을 매핑하는 메서드를 제공합니다.  

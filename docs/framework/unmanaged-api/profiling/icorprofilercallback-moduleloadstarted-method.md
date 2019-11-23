@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9cd2fe75-408a-400f-a6b1-9979624a2fe2
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5b847cbbdf1bfccd91ca212dadd1fcd82cc12c82
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 55927167f8b61ade4ef479b30b85ad8d82be8025
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768206"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445931"
 ---
 # <a name="icorprofilercallbackmoduleloadstarted-method"></a>ICorProfilerCallback::ModuleLoadStarted 메서드
-모듈 로드 되는 프로파일러에 알립니다.  
+Notifies the profiler that a module is being loaded.  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,13 +34,13 @@ HRESULT ModuleLoadStarted(
   
 ## <a name="parameters"></a>매개 변수  
  `moduleId`  
- [in] 로드 되는 모듈의 ID입니다.  
+ [in] The ID of the module that is being loaded.  
   
-## <a name="remarks"></a>설명  
- 값 `moduleId` 될 때까지 정보 요청에 대해 올바르지 않습니다 합니다 [icorprofilercallback:: Moduleloadfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) 메서드가 호출 됩니다.  
+## <a name="remarks"></a>주의  
+ The value of `moduleId` is not valid for an information request until the [ICorProfilerCallback::ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) method is called.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
   
@@ -50,6 +48,6 @@ HRESULT ModuleLoadStarted(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ICorProfilerCallback 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

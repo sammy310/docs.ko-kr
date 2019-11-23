@@ -6,22 +6,22 @@ helpviewer_keywords:
 - MultipleView control pattern
 - control patterns, MultipleView
 ms.assetid: 5bf1b248-ffee-48c8-9613-0b134bbe9f6a
-ms.openlocfilehash: 62f0ba1dc8b7836a3b4699699b91b567eb8051f3
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: c9199e0ea1971c22bfc1f6334b9d2d9d73bb048c
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458186"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74435062"
 ---
 # <a name="implementing-the-ui-automation-multipleview-control-pattern"></a>UI 자동화 MultipleView 컨트롤 패턴 구현
 > [!NOTE]
-> 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](https://go.microsoft.com/fwlink/?LinkID=156746)를 참조하세요.  
+> 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조하세요.  
   
  이 항목에서는 이벤트 및 속성에 대한 정보를 포함하여 <xref:System.Windows.Automation.Provider.IMultipleViewProvider>를 구현하기 위한 지침 및 규칙을 제공합니다. 추가 참조에 대한 링크는 항목 끝에 나열되어 있습니다.  
   
  <xref:System.Windows.Automation.MultipleViewPattern> 컨트롤 패턴은 동일한 정보 또는 자식 컨트롤 집합의 여러 표현 간을 전환할 수 있는 컨트롤을 지원하는 데 사용됩니다.  
   
- 여러 보기를 표시할 수 있는 컨트롤의 예로는 목록 보기 (콘텐츠를 축소판 그림, 타일, 아이콘 또는 세부 정보로 표시할 수 있음), Microsoft Excel 차트 (원형, 꺾은선형, 가로 막대형, 수식이 있는 셀 값), Microsoft Word 문서 (보통, 웹 레이아웃, 인쇄) 등이 있습니다. 레이아웃, 읽기 레이아웃, 개요), Microsoft Outlook 일정 (연도, 월, 주, 일) 및 Microsoft Windows Media Player 스킨이 있습니다. 지원되는 뷰는 컨트롤 개발자가 결정하며 컨트롤마다 다릅니다.  
+ Examples of controls that can present multiple views include the list view (which can show its contents as thumbnails, tiles, icons, or details), Microsoft Excel charts (pie, line, bar, cell value with a formula), Microsoft Word documents (normal, Web layout, print layout, reading layout, outline), Microsoft Outlook calendar (year, month, week, day), and Microsoft Windows Media Player skins. 지원되는 뷰는 컨트롤 개발자가 결정하며 컨트롤마다 다릅니다.  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
 ## <a name="implementation-guidelines-and-conventions"></a>구현 지침 및 규칙  

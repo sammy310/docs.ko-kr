@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 347d7e5c-c90f-45ad-bd1e-2c7912b0b19c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a7d9874d4a609c353ae772b75a48af632bf4e85d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9d0f443b5b7d2d358534e888c3fc84ad3f554119
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756535"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450051"
 ---
 # <a name="imetadataimportenumpermissionsets-method"></a>IMetaDataImport::EnumPermissionSets 메서드
 지정한 메타데이터 범위의 개체에 대한 권한을 열거합니다.  
@@ -42,40 +40,40 @@ HRESULT EnumPermissionSets
   
 ## <a name="parameters"></a>매개 변수  
  `phEnum`  
- [out에서] 열거자에 대 한 포인터입니다. 이 메서드의 첫 번째 호출에 대 한 NULL 이어야 합니다.  
+ [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
   
  `tk`  
- [in] 가능한 가장 넓은 범위를 검색 하려면 NULL 검색의 범위를 제한 하는 메타 데이터 토큰입니다.  
+ [in] A metadata token that limits the scope of the search, or NULL to search the widest scope possible.  
   
  `dwActions`  
- [in] 나타내는 플래그를 <xref:System.Security.Permissions.SecurityAction> 에 포함할 값 `rPermission`, 또는 모든 작업을 반환 하는 0입니다.  
+ [in] Flags representing the <xref:System.Security.Permissions.SecurityAction> values to include in `rPermission`, or zero to return all actions.  
   
  `rPermission`  
- [out] 권한 토큰을 저장 하는 데 사용 되는 배열입니다.  
+ [out] The array used to store the Permission tokens.  
   
  `cMax`  
  [in] `rPermission` 배열의 최대 크기입니다.  
   
  `pcTokens`  
- [out] 권한이 토큰에서 반환 된 수가 `rPermission`합니다.  
+ [out] The number of Permission tokens returned in `rPermission`.  
   
 ## <a name="return-value"></a>반환 값  
   
-|HRESULT|Description|  
+|HRESULT|설명|  
 |-------------|-----------------|  
-|`S_OK`|`EnumPermissionSets` 성공적으로 반환 합니다.|  
-|`S_FALSE`|열거할 토큰이 있습니다. 이런 경우 `pcTokens` 0입니다.|  
+|`S_OK`|`EnumPermissionSets` returned successfully.|  
+|`S_FALSE`|There are no tokens to enumerate. In that case, `pcTokens` is zero.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** Cor.h  
+ **Header:** Cor.h  
   
- **라이브러리:** MsCorEE.dll에 리소스로 포함  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [IMetaDataImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

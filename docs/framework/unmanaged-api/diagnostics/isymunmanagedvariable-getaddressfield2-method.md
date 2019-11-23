@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1f25b294-72b6-4882-a49b-6c9d364b6008
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 463416165d2dbd7724d5cf0d29e40d8243ade34b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 794615994cd11ee00c2a381b9ba883cebb8233a0
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778310"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446116"
 ---
 # <a name="isymunmanagedvariablegetaddressfield2-method"></a>ISymUnmanagedVariable::GetAddressField2 메서드
-이 변수에 대 한 두 번째 주소 필드를 가져옵니다. 해당 의미는 주소에 따라 달라 집니다.  
+Gets the second address field for this variable. Its meaning depends on the kind of address.  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,15 +34,15 @@ HRESULT GetAddressField2(
   
 ## <a name="parameters"></a>매개 변수  
  `pRetVal`  
- [out] 에 대 한 포인터를 `ULONG32` 를 받는 두 번째 주소 필드입니다.  
+ [out] A pointer to a `ULONG32` that receives the second address field.  
   
 ## <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>요구 사항  
- **헤더:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ISymUnmanagedVariable 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)
 - [GetAddressField1 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getaddressfield1-method.md)

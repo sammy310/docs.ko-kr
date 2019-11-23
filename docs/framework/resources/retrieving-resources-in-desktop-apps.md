@@ -18,15 +18,16 @@ helpviewer_keywords:
 - translating resources into languages
 - localizing resources
 ms.assetid: eca16922-1c46-4f68-aefe-e7a12283641f
-ms.openlocfilehash: 3c14e251b6ca88fb864952c3411b5ea0c46da302
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 39bb518306b6e76aea1ae4a791fca79fbbb1b6c8
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129933"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445749"
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>데스크톱 응용 프로그램의 리소스 검색
-.NET Framework 데스크톱 앱의 지역화된 리소스로 작업할 경우에는 기본 또는 중립 문화권의 리소스를 주 어셈블리와 패키지하여 앱이 지원하는 각 언어 또는 문화권에 대해 별도의 위성 어셈블리를 만드는 것이 가장 바람직합니다. 그런 다음 <xref:System.Resources.ResourceManager> 클래스를 다음 섹션에 설명한 대로 사용하여 명명된 리소스에 액세스할 수 있습니다. 주 어셈블리와 위성 어셈블리에 리소스를 포함하지 않으려는 경우 이 문서의 뒷부분에 나오는 [.resources 파일에서 리소스 검색](#from_file) 섹션에서 설명한 것처럼, 이진 .resources 파일에 직접 액세스할 수도 있습니다.  [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 앱의 리소스 검색에 대한 자세한 내용은 Windows 개발자 센터의 [Windows 스토어 앱에서 리소스 만들기 및 검색](https://go.microsoft.com/fwlink/p/?LinkID=241674) 을 참조하세요.  
+
+.NET Framework 데스크톱 앱의 지역화된 리소스로 작업할 경우에는 기본 또는 중립 문화권의 리소스를 주 어셈블리와 패키지하여 앱이 지원하는 각 언어 또는 문화권에 대해 별도의 위성 어셈블리를 만드는 것이 가장 바람직합니다. 그런 다음 <xref:System.Resources.ResourceManager> 클래스를 다음 섹션에 설명한 대로 사용하여 명명된 리소스에 액세스할 수 있습니다. 주 어셈블리와 위성 어셈블리에 리소스를 포함하지 않으려는 경우 이 문서의 뒷부분에 나오는 [.resources 파일에서 리소스 검색](#from_file) 섹션에서 설명한 것처럼, 이진 .resources 파일에 직접 액세스할 수도 있습니다.  To retrieve resources in Windows 8.x Store apps, see [Creating and retrieving resources in Windows Store apps](https://docs.microsoft.com/previous-versions/windows/apps/hh694557(v=vs.140)).  
   
 <a name="from_assembly"></a>   
 ## <a name="retrieving-resources-from-assemblies"></a>어셈블리에서 리소스 검색  
@@ -103,7 +104,7 @@ resgen AppResources.resx
 csc GetStream.cs -resource:AppResources.resources  
 ```  
   
- 다음 예제에서는 <xref:System.Resources.ResourceManager.GetObject%28System.String%29?displayProperty=nameWithType> 메서드를 사용하여 사용자 지정 개체를 deserialize합니다. 예제에는 `PersonTable`이라는 다음 구조를 정의하는 UIElements.cs(Visual Basic의 경우 UIElements.vb)라는 소스 코드 파일이 포함되어 있습니다. 이 구조는 테이블 열의 지역화된 이름을 표시하는 일반 테이블 표시 루틴에서 사용하기 위한 것입니다. `PersonTable` 구조체는 <xref:System.SerializableAttribute> 특성으로 표시됩니다.  
+ 다음 예제에서는 <xref:System.Resources.ResourceManager.GetObject%28System.String%29?displayProperty=nameWithType> 메서드를 사용하여 사용자 지정 개체를 역직렬화합니다. 예제에는 `PersonTable`이라는 다음 구조를 정의하는 UIElements.cs(Visual Basic의 경우 UIElements.vb)라는 소스 코드 파일이 포함되어 있습니다. 이 구조는 테이블 열의 지역화된 이름을 표시하는 일반 테이블 표시 루틴에서 사용하기 위한 것입니다. `PersonTable` 구조체는 <xref:System.SerializableAttribute> 특성으로 표시됩니다.  
   
  [!code-csharp[Conceptual.Resources.Retrieving#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.retrieving/cs/example.cs#6)]
  [!code-vb[Conceptual.Resources.Retrieving#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.retrieving/vb/example.vb#6)]  
@@ -205,4 +206,4 @@ csc Example.cs
 - [데스크톱 앱의 리소스](index.md)
 - [리소스 패키징 및 배포](packaging-and-deploying-resources-in-desktop-apps.md)
 - [런타임에서 어셈블리를 찾는 방법](../deployment/how-the-runtime-locates-assemblies.md)
-- [Windows 스토어 앱에서 리소스 만들기 및 검색](https://go.microsoft.com/fwlink/p/?LinkID=241674)
+- [Windows 스토어 앱에서 리소스 만들기 및 검색](https://docs.microsoft.com/previous-versions/windows/apps/hh694557(v=vs.140))

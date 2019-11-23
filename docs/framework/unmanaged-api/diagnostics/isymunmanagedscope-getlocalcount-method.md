@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3ede8fb5-f655-4088-8e19-9c53812588a8
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4c41c05d40187aaed8a4f3cce181c84460503d1f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3b5dbe875b47f48c24c5e955abddb2c6f778bcdd
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67751279"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446343"
 ---
 # <a name="isymunmanagedscopegetlocalcount-method"></a>ISymUnmanagedScope::GetLocalCount 메서드
-이 범위 내에 정의 된 로컬 변수 수를 가져옵니다.  
+Gets a count of the local variables defined within this scope.  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,14 +34,14 @@ HRESULT GetLocalCount(
   
 ## <a name="parameters"></a>매개 변수  
  `pRetVal`  
- [out] 에 대 한 포인터를 `ULONG32` 로컬 변수 수를 받는입니다.  
+ [out] A pointer to a `ULONG32` that receives the count of local variables.  
   
 ## <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>요구 사항  
- **헤더:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ISymUnmanagedScope 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)

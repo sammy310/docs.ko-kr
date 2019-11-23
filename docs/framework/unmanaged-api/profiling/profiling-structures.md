@@ -6,19 +6,17 @@ helpviewer_keywords:
 - unmanaged structures [.NET Framework], profiling
 - structures [.NET Framework profiling]
 ms.assetid: 750385f2-f365-41b1-939f-ca2f2ff9b466
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 229218cb15963846da91f688b0d2faacb20031c8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2f3e8cedcc498230311c0b52f7ecc1c2c4fc8ff1
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62000443"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447701"
 ---
 # <a name="profiling-structures"></a>프로파일링 구조체
 이 섹션에서는 프로파일링 API에서 사용하는 관리되지 않는 구조체에 대해 설명합니다.  
   
-## <a name="in-this-section"></a>섹션 내용  
+## <a name="in-this-section"></a>단원 내용  
  [COR_PRF_ASSEMBLY_REFERENCE_INFO 구조체](../../../../docs/framework/unmanaged-api/profiling/cor-prf-assembly-reference-info-structure.md)  
  어셈블리 참조 closure 워커를 수행할 때 고려해야 하는 참조 어셈블리에 대한 정보를 공용 언어 런타임에 제공합니다.  
   

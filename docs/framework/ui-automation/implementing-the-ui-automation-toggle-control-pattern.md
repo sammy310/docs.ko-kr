@@ -6,16 +6,16 @@ helpviewer_keywords:
 - control patterns, Toggle
 - UI Automation, Toggle control pattern
 ms.assetid: 3cfe875f-b0c0-413d-9703-5f14e6a1a30e
-ms.openlocfilehash: a9b03fbffc4e922cb3d00738e8df00fc0393b799
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: c25f2d3b73e90adb3299ff8c4ff7c8a77fc5fc5e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71043131"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447067"
 ---
 # <a name="implementing-the-ui-automation-toggle-control-pattern"></a>UI 자동화 Toggle 컨트롤 패턴 구현
 > [!NOTE]
-> 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. 에 대 한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [최신 정보는 Windows Automation API: UI 자동화](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조하세요.  
   
  이 항목에서는 메서드 및 속성에 대한 정보를 비롯하여 <xref:System.Windows.Automation.Provider.IToggleProvider>구현을 위한 지침 및 규칙을 제공합니다. 추가 참조에 대한 링크는 항목 끝에 나열되어 있습니다.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "71043131"
 ## <a name="required-members-for-itoggleprovider"></a>IToggleProvider에 필요한 멤버  
  <xref:System.Windows.Automation.Provider.IToggleProvider>를 구현하려면 다음과 같은 속성 및 메서드가 필요합니다.  
   
-|필요한 멤버|멤버 형식|참고|  
+|필요한 멤버|멤버 형식|노트|  
 |---------------------|-----------------|-----------|  
 |<xref:System.Windows.Automation.TogglePattern.Toggle%2A>|메서드|없음|  
 |<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty>|속성|없음|  
@@ -48,7 +48,7 @@ ms.locfileid: "71043131"
 ## <a name="exceptions"></a>예외  
  이 컨트롤 패턴에 연결된 예외가 없습니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [UI 자동화 컨트롤 패턴 개요](ui-automation-control-patterns-overview.md)
 - [UI 자동화 공급자의 컨트롤 패턴 지원](support-control-patterns-in-a-ui-automation-provider.md)

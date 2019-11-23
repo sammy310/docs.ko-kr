@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ecd786e8-f9a4-4190-a6ef-af18e8c6d654
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 270fdecb6afbf252b7d0531cab0f18dded44298d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b5da781f148c23efcc909ad65e198e4f3c6fe5b5
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777126"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447876"
 ---
 # <a name="imetadataemit2savedeltatostream-method"></a>IMetaDataEmit2::SaveDeltaToStream 메서드
-편집 하며 계속 하기는 현재 세션에서 지정 된 스트림에 변경 내용을 저장 합니다.  
+Saves changes from the current edit-and-continue session to the specified stream.  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,21 +36,21 @@ HRESULT SaveDeltaToStream (
   
 ## <a name="parameters"></a>매개 변수  
  `pIStream`  
- [in] 변경 내용을 저장 하는 쓰기 가능한 스트림에 대 한 인터페이스 포인터입니다.  
+ [in] An interface pointer to the writable stream to which to save changes.  
   
  `dwSaveFlags`  
- [in] 예약되어 있습니다. 이 값은 0 이어야 합니다.  
+ [in] 예약되어 있습니다. This value must be zero.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** Cor.h  
+ **Header:** Cor.h  
   
- **라이브러리:** MsCorEE.dll에서 리소스로 사용  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [IMetaDataEmit2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
 - [IMetaDataEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)

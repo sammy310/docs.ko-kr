@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e2847a36-f460-45e2-9b6c-b33b008f40d9
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5ceb1d22500f73a29ffdfa6f16907478628358c3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d21a793a88cd7561da9acb7daab2dc3bfecf0fc7
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69969386"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449764"
 ---
 # <a name="icorprofilerinfo3enumjitedfunctions-method"></a>ICorProfilerInfo3::EnumJITedFunctions 메서드
-이전에 JIT 컴파일된 모든 함수에 대 한 열거자를 반환 합니다.  
+Returns an enumerator for all functions that were previously JIT-compiled.  
   
 ## <a name="syntax"></a>구문  
   
@@ -35,24 +33,24 @@ HRESULT EnumJITedFunctions([out] ICorProfilerFunctionEnum** ppEnum);
   
 ## <a name="parameters"></a>매개 변수  
  `ppEnum`  
- 제한이 [ICorProfilerFunctionEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md) 열거자에 대 한 포인터입니다.  
+ [out] A pointer to the [ICorProfilerFunctionEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md) enumerator.  
   
-## <a name="remarks"></a>설명  
- 이 메서드는 `JITCompilation` [ICorProfilerCallback:: JITCompilationStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md) 메서드와 같은 콜백과 겹칠 수 있습니다. 이 메서드에서 반환 되는 열거자에는 Ngen.exe를 사용 하 여 생성 된 네이티브 이미지에서 로드 된 함수가 포함 되지 않습니다.  
+## <a name="remarks"></a>주의  
+ This method may overlap with `JITCompilation` callbacks such as the [ICorProfilerCallback::JITCompilationStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md) method. The enumerator returned by this method does not include functions that are loaded from native images generated with Ngen.exe.  
   
 > [!NOTE]
-> 반환 된 열거형에는 `COR_PRF_FUNCTION::reJitId` 필드 값에 대해 "0"만 포함 됩니다.  유효한 `COR_PRF_FUNCTION::reJitId` 값이 필요한 경우 [ICorProfilerInfo4:: EnumJITedFunctions2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-enumjitedfunctions2-method.md) 메서드를 사용 합니다.  
+> The returned enumeration includes only "0" for the value of the `COR_PRF_FUNCTION::reJitId` field.  If you require valid `COR_PRF_FUNCTION::reJitId` values, use the [ICorProfilerInfo4::EnumJITedFunctions2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-enumjitedfunctions2-method.md) method.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
   
- **라이브러리** CorGuids.lib  
+ **라이브러리:** CorGuids.lib  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ICorProfilerInfo3 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
 - [프로파일링 인터페이스](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: e1555328-2c71-4ece-b357-9eb6d3a8efc4
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b3a0e42e9ffb99896bdd09dbbab65eafb40cafff
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 078168ae8860f18ff6f811dcc972e3eb3c857e1d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70777214"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447195"
 ---
 # <a name="getscope-method"></a>GetScope 메서드
-가져오기 범위를 가져옵니다.  
+Gets an import scope.  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,24 +37,24 @@ HRESULT GetScope(
   
 ## <a name="parameters"></a>매개 변수  
  `AssemblyID`  
- 가져올 어셈블리의 고유 ID입니다.  
+ Unique ID of assembly to import to.  
   
  `FileToken`  
- 가져올 파일의 고유 ID입니다.  
+ Unique ID of the file to import from.  
   
  `dwScope`  
- 가져올 범위 (0부터 시작)입니다.  
+ Zero-based scope to import.  
   
  `ppImportScope`  
- 범위에 대 한 [IMetaDataImport 인터페이스](../metadata/imetadataimport-interface.md) 인터페이스를 수신 합니다.  
+ Receives [IMetaDataImport Interface](../metadata/imetadataimport-interface.md) interface for the scope.  
   
 ## <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 S_OK를 반환 합니다.  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>요구 사항  
- Alink 필요  
+ Requires alink.h  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [IALink 인터페이스](ialink-interface.md)
 - [IALink2 인터페이스](ialink2-interface.md)

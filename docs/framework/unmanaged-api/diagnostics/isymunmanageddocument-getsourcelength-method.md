@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e087dbbb-f4fb-4fbe-8292-e4f1a14d0df2
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: bf79c05b3b16bb61ac59534dd83cb8eb2bb1f823
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0551e8b4f381f76e7bbac06ca7b5f6aea5bbb61f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776707"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449156"
 ---
 # <a name="isymunmanageddocumentgetsourcelength-method"></a>ISymUnmanagedDocument::GetSourceLength 메서드
-포함 소스의 길이(바이트)를 가져옵니다.  
+Gets the length, in bytes, of the embedded source.  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,11 +34,11 @@ HRESULT GetSourceLength(
   
 ## <a name="parameters"></a>매개 변수  
  `pRetVal`  
- [out] 포함 소스의 길이 (바이트)를 지정 하는 변수에 대 한 포인터입니다.  
+ [out] A pointer to a variable that indicates the length, in bytes, of the embedded source.  
   
 ## <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 S_OK입니다.  
+ S_OK if the method succeeds.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ISymUnmanagedDocument 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

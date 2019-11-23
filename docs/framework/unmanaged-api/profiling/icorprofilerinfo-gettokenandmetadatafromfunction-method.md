@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e525aa16-c923-4b16-833b-36f1f0dd70fc
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b608b8818890bdb27a956a90c7987cf7c421304d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b3e14230888e9bf846879d5728c2b20883fb8d53
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772276"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74438732"
 ---
 # <a name="icorprofilerinfogettokenandmetadatafromfunction-method"></a>ICorProfilerInfo::GetTokenAndMetadataFromFunction 메서드
-메타 데이터 토큰 및 지정된 된 함수에 대 한 토큰을 기준으로 사용할 수 있는 메타 데이터 인터페이스 인스턴스를 가져옵니다.  
+Gets the metadata token and a metadata interface instance that can be used against the token for the specified function.  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,19 +37,19 @@ HRESULT GetTokenAndMetaDataFromFunction(
   
 ## <a name="parameters"></a>매개 변수  
  `functionId`  
- [in] 메타 데이터 토큰 및 메타 데이터 인터페이스를 가져올 함수의 ID입니다.  
+ [in] The ID of the function for which to get the metadata token and metadata interface.  
   
  `riid`  
- [in] 인스턴스를 가져올 메타 데이터 인터페이스의 참조 ID입니다.  
+ [in] The reference ID of the metadata interface to get the instance of.  
   
  `ppImport`  
- [out] 지정된 된 함수에 대 한 토큰을 기준으로 사용할 수 있는 메타 데이터 인터페이스 인스턴스 주소에 대 한 포인터입니다.  
+ [out] A pointer to the address of the metadata interface instance that can be used against the token for the specified function.  
   
  `pToken`  
- [out] 지정된 된 함수에 대 한 메타 데이터 토큰에 대 한 포인터입니다.  
+ [out] A pointer to the metadata token for the specified function.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
   
@@ -59,6 +57,6 @@ HRESULT GetTokenAndMetaDataFromFunction(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ICorProfilerInfo 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

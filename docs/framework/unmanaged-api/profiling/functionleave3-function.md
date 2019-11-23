@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 5d798088-7992-48a0-ae55-d2a7ee31913f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 27b2241f7eb0e1ce8b0728a54028f9b4a6112e36
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 104a6c3c42c310513040cb45db7f51ffe729c19d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781258"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74427441"
 ---
 # <a name="functionleave3-function"></a>FunctionLeave3 함수
-제어 함수에서 반환 되는 프로파일러에 알립니다.  
+Notifies the profiler that control is being returned from a function.  
   
 ## <a name="syntax"></a>구문  
   
@@ -34,33 +32,33 @@ void __stdcall FunctionLeave3(FunctionOrRemappedID functionOrRemappedID);
   
 ## <a name="parameters"></a>매개 변수  
  `functionOrRemappedID`  
- [in] 컨트롤이 반환 된 함수의 식별자입니다.  
+ [in] The identifier of the function from which control is returned.  
   
-## <a name="remarks"></a>설명  
- `FunctionLeave3` 함수를 호출 하지만 반환 값 검사를 지원 하지 않습니다 콜백 함수가 프로파일러에 알립니다. 사용 하 여는 [ICorProfilerInfo3::SetEnterLeaveFunctionHooks3 메서드](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3-method.md) 구현의이 함수를 등록 합니다.  
+## <a name="remarks"></a>주의  
+ The `FunctionLeave3` callback function notifies the profiler as functions are being called, but does not support return value inspection. Use the [ICorProfilerInfo3::SetEnterLeaveFunctionHooks3 method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3-method.md) to register your implementation of this function.  
   
- `FunctionLeave3` 함수 콜백을 구현 해야 합니다. 구현을 사용 해야 합니다는 `__declspec(naked)` 저장소 클래스 특성입니다.  
+ The `FunctionLeave3` function is a callback; you must implement it. The implementation must use the `__declspec(naked)` storage-class attribute.  
   
- 실행 엔진은이 함수를 호출 하기 전에 모든 레지스터를 저장 하지 않습니다.  
+ The execution engine does not save any registers before calling this function.  
   
-- 항목에는 부동 소수점 FPU (단위)에 포함 하 여 사용 하는 모든 레지스터를 저장 해야 합니다.  
+- On entry, you must save all registers that you use, including those in the floating-point unit (FPU).  
   
-- 종료 시 스택의 호출자에 의해 푸시된 모든 매개 변수에 팝 하 여 복원 해야 합니다.  
+- On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.  
   
- 구현의 `FunctionLeave3` 가비지 수집 지연 될 수 있으므로 차단 하지 않아야 합니다. 구현을 스택 가비지 컬렉션에 게 친숙 한 상태의 수 없을 수도 가비지 수집을 않아야 합니다. 런타임이 될 때까지 차단 됩니다 가비지 수집을 시도 하는 경우 `FunctionLeave3` 반환 합니다.  
+ The implementation of `FunctionLeave3` should not block, because it will delay garbage collection. The implementation should not attempt a garbage collection, because the stack may not be in a garbage collection-friendly state. If a garbage collection is attempted, the runtime will block until `FunctionLeave3` returns.  
   
- `FunctionLeave3` 함수 관리 코드를 호출 하거나 어떤 방식으로 관리 되는 메모리를 할당 하면 안 됩니다.  
+ The `FunctionLeave3` function must not call into managed code or cause a managed memory allocation in any way.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** CorProf.idl  
+ **Header:** CorProf.idl  
   
  **라이브러리:** CorGuids.lib  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [FunctionEnter3](../../../../docs/framework/unmanaged-api/profiling/functionenter3-function.md)
 - [FunctionTailcall3](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3-function.md)

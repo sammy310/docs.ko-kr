@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b3fc1e6c-bcb6-4915-baf8-7dc0a31b8724
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b8cd086a86d104fdfebf1a8298a22b795cb2389b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4a1de144163ec2b4952bd16b59fb1c92b706631b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782642"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428304"
 ---
 # <a name="imetadataimport2enummethodspecs-method"></a>IMetaDataImport2::EnumMethodSpecs 메서드
-지정한 MethodDef 또는 MemberRef 연관 MethodSpec 토큰 배열의 토큰 열거자를 가져옵니다.  
+Gets an enumerator for an array of MethodSpec tokens associated with the specified MethodDef or MemberRef token.  
   
 ## <a name="syntax"></a>구문  
   
@@ -41,37 +39,37 @@ HRESULT EnumMethodSpecs (
   
 ## <a name="parameters"></a>매개 변수  
  `phEnum`  
- [out에서] 에 대 한 열거자에 대 한 포인터 `rMethodSpecs`합니다.  
+ [in, out] A pointer to the enumerator for `rMethodSpecs`.  
   
  `tk`  
- [in] 열거할 인 MethodSpec 토큰은 메서드를 나타내는 MemberRef 또는 MethodDef 토큰입니다. 경우 변수의 `tk` 0 (영) 이면 범위에서 모든 MethodSpec 토큰 열거 됩니다.  
+ [in] The MemberRef or MethodDef token that represents the method whose MethodSpec tokens are to be enumerated. If the value of `tk` is 0 (zero), all MethodSpec tokens in the scope will be enumerated.  
   
  `rMethodSpecs`  
- [out] 배열 열거할 MethodSpec 토큰입니다.  
+ [out] The array of MethodSpec tokens to enumerate.  
   
  `cMax`  
- [in] 에 배치 하는 토큰의 요청 된 최대 `rMethodSpecs`합니다.  
+ [in] The requested maximum number of tokens to place in `rMethodSpecs`.  
   
  `pcMethodSpecs`  
- [out] 반환 된 토큰 수 있는 `rMethodSpecs`합니다.  
+ [out] The returned number of tokens placed in `rMethodSpecs`.  
   
 ## <a name="return-value"></a>반환 값  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethodSpecs` 성공적으로 반환 합니다.|  
-|`S_FALSE`|`phEnum` 멤버 요소가 없습니다. 이 경우 `pcMethodSpecs` 0 (영)으로 설정 됩니다.|  
+|`S_OK`|`EnumMethodSpecs` returned successfully.|  
+|`S_FALSE`|`phEnum` has no member elements. In this case, `pcMethodSpecs` is set to 0 (zero).|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** Cor.h  
+ **Header:** Cor.h  
   
- **라이브러리:** MsCorEE.dll에서 리소스로 사용  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [IMetaDataImport2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
 - [IMetaDataImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 091a18bd-e901-46f6-b999-74d71c8a7c41
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d19eebaa3aa0ebb6f9807f0cf277b7ed6183c148
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: c68f43ce2f79ee6e4ec44ce4b2f0dbfb1c1185fa
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70777200"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74433880"
 ---
 # <a name="getassemblyrefhash-method"></a>GetAssemblyRefHash 메서드
-지정 된 어셈블리에 대 한 해시 blob를 검색 합니다.  
+Retrieves a hash blob for a given assembly.  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,21 +36,21 @@ HRESULT GetAssemblyRefHash(
   
 ## <a name="parameters"></a>매개 변수  
  `FileToken`  
- 해시가 참조할 어셈블리의 ID입니다.  
+ ID of assembly to which the hash will refer.  
   
  `ppvHash`  
- 결과 해시 blob을 받습니다.  
+ Receives the resulting hash blob.  
   
  `pcbHash`  
- 해시 blob의 크기 (바이트)를 수신 합니다.  
+ Receives size, in bytes, of hash blob.  
   
 ## <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 S_OK를 반환 합니다.  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>요구 사항  
- Alink 필요  
+ Requires alink.h  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [IALink 인터페이스](ialink-interface.md)
 - [IALink2 인터페이스](ialink2-interface.md)

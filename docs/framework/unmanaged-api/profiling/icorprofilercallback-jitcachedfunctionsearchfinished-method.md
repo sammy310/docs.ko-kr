@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3c325c82-cddd-4b00-b3da-e450c36abf62
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 882d3b3c359724688c0fb8fe5e2b567f1d575e76
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bea857f65081432eb3f5501c75af6d13805c76d7
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782867"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74426243"
 ---
 # <a name="icorprofilercallbackjitcachedfunctionsearchfinished-method"></a>ICorProfilerCallback::JITCachedFunctionSearchFinished 메서드
-네이티브 이미지 생성기 (NGen.exe)를 사용 하 여 이전에 컴파일된 함수에 대 한 검색 되었음을 프로파일러에 알립니다.  
+Notifies the profiler that a search has finished for a function that was compiled previously using the Native Image Generator (NGen.exe).  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,16 +35,16 @@ HRESULT JITCachedFunctionSearchFinished(
   
 ## <a name="parameters"></a>매개 변수  
  `functionId`  
- [in] 검색이 수행 되었음을 함수의 ID입니다.  
+ [in] The ID of the function for which the search was performed.  
   
  `result`  
- [in] 값을 [COR_PRF_JIT_CACHE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-jit-cache-enumeration.md) 검색의 결과 나타내는 열거형입니다.  
+ [in] A value of the [COR_PRF_JIT_CACHE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-jit-cache-enumeration.md) enumeration that indicates the result of the search.  
   
-## <a name="remarks"></a>설명  
- .NET Framework 버전 2.0에에서는 [icorprofilercallback:: Jitcachedfunctionsearchstarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcachedfunctionsearchstarted-method.md) 및 `JITCachedFunctionSearchFinished` 콜백을 일반 NGen 이미지의 모든 함수에 대 한 걸 수 없습니다. 만 NGen 이미지의 프로파일러에 대 한 액세스에 최적화 된 이미지의 모든 함수에 대 한 콜백을 생성 됩니다. 그러나 추가 오버 헤드로 인해 프로파일러 요청 해야 프로파일러에 최적화 된 NGen 이미지를 컴파일된-just-in-time (JIT) 함수를 적용할 이러한 콜백을 사용 하려는 경우에 합니다. 그렇지 않은 경우 프로파일러 함수 정보를 수집 지연 전략을 사용 해야 합니다.  
+## <a name="remarks"></a>주의  
+ In the .NET Framework version 2.0, the [ICorProfilerCallback::JITCachedFunctionSearchStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcachedfunctionsearchstarted-method.md) and `JITCachedFunctionSearchFinished` callbacks will not be made for all functions in regular NGen images. Only NGen images optimized for a profiler will generate callbacks for all functions in the image. However, due to the additional overhead, a profiler should request profiler-optimized NGen images only if it intends to use these callbacks to force a function to be compiled just-in-time (JIT). Otherwise, the profiler should use a lazy strategy for gathering function information.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
   
@@ -54,6 +52,6 @@ HRESULT JITCachedFunctionSearchFinished(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ICorProfilerCallback 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

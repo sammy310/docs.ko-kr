@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c3bf15b0-3250-4bbe-b9b5-c5d695289b6f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b9a36e094689696b746fcf7f10c282a1b0d9c570
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 02b270677131d0960db67b0ac8db38cba2b5e2df
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777830"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428049"
 ---
 # <a name="isymunmanagedwriterdefinedocument-method"></a>ISymUnmanagedWriter::DefineDocument 메서드
-소스 문서를 정의합니다. 알려진된 언어, 공급 업체 및 문서 형식에 대 한 guid가 제공 됩니다.  
+Defines a source document. GUIDs are provided for known languages, vendors, and document types.  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,26 +38,26 @@ HRESULT DefineDocument(
   
 ## <a name="parameters"></a>매개 변수  
  `url`  
- [in] 에 대 한 포인터를 `WCHAR` 문서를 식별 하는 uniform resource locator (URL)를 정의 하는 합니다.  
+ [in] A pointer to a `WCHAR` that defines the uniform resource locator (URL) that identifies the document.  
   
  `language`  
- [in] 문서 언어를 정의 하는 GUID에 대 한 포인터입니다.  
+ [in] A pointer to a GUID that defines the document language.  
   
  `languageVendor`  
- [in] 문서 언어에 대 한 공급 업체의 id를 정의 하는 GUID에 대 한 포인터입니다.  
+ [in] A pointer to a GUID that defines the identity of the vendor for the document language.  
   
  `documentType`  
- [in] 문서 형식을 정의 하는 GUID에 대 한 포인터입니다.  
+ [in] A pointer to a GUID that defines the type of the document.  
   
  `pRetVal`  
- [out] 반환 된 포인터 [ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md) 인터페이스입니다.  
+ [out] A pointer to the returned [ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md) interface.  
   
 ## <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>요구 사항  
- **헤더:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ISymUnmanagedWriter 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

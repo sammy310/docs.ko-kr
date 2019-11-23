@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9543b111-5705-40c9-935c-a3ffc7a581aa
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 717682bdcb2409a5f58f040a3ac2eafd73f01f7e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2748460826deb422a3851713db11343209fe449a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777946"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449549"
 ---
 # <a name="imetadataassemblyimportenummanifestresources-method"></a>IMetaDataAssemblyImport::EnumManifestResources 메서드
-현재 어셈블리 매니페스트에서 참조 하는 리소스에 대 한 열거자에 대 한 포인터를 가져옵니다.  
+Gets a pointer to an enumerator for the resources referenced in the current assembly manifest.  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,33 +38,33 @@ HRESULT EnumManifestResources (
   
 ## <a name="parameters"></a>매개 변수  
  `phEnum`  
- [out에서] 열거자에 대 한 포인터입니다. Null 이어야 합니다 경우이 값은 `EnumManifestResources` 처음으로 호출 됩니다.  
+ [in, out] A pointer to the enumerator. This must be a null value when the `EnumManifestResources` method is called for the first time.  
   
  `rManifestResources`  
- [out] 배열을 저장 하는 데는 `mdManifestResource` 메타 데이터 토큰입니다.  
+ [out] The array used to store the `mdManifestResource` metadata tokens.  
   
  `cMax`  
- [in] 최대 `mdManifestResource` 에 배치할 수 있는 토큰 `rManifestResources`합니다.  
+ [in] The maximum number of `mdManifestResource` tokens that can be placed in `rManifestResources`.  
   
  `pcTokens`  
- [out] 수가 `mdManifestResource` 토큰에 실제로 배치 `rManifestResources`합니다.  
+ [out] The number of `mdManifestResource` tokens actually placed in `rManifestResources`.  
   
 ## <a name="return-value"></a>반환 값  
   
-|HRESULT|Description|  
+|HRESULT|설명|  
 |-------------|-----------------|  
-|`S_OK`|`EnumManifestResources` 성공적으로 반환 합니다.|  
-|`S_FALSE`|열거할 토큰이 있습니다. 이 경우 `pcTokens` 0으로 설정 됩니다.|  
+|`S_OK`|`EnumManifestResources` returned successfully.|  
+|`S_FALSE`|There are no tokens to enumerate. In this case, `pcTokens` is set to zero.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** Cor.h  
+ **Header:** Cor.h  
   
- **라이브러리:** MsCorEE.dll에서 리소스로 사용  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [IMetaDataAssemblyImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

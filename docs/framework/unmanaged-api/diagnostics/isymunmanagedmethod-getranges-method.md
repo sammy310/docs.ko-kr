@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: a85283d8-379c-417a-9736-ddeeef9bcf50
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ef5a98d510eee8942a2cad0525b6902e3e4eaa52
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1f1bd9c33f24847eae4ff7d26c5b996cd34afb72
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769382"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448932"
 ---
 # <a name="isymunmanagedmethodgetranges-method"></a>ISymUnmanagedMethod::GetRanges 메서드
-문서의 위치를 지정 된 MSIL (Microsoft intermediate language)이이 메서드 내에서 위치를 포함 하는 범위에 해당 하는 시작 및 종료 오프셋된 쌍의 배열을 반환 합니다. 정수 배열이 배열과 [시작, 종료, 시작, 종료] 형식은입니다. 범위 쌍의 개수는 2로 나눈 결과 배열의 길이입니다.  
+Given a position in a document, returns an array of start and end offset pairs that correspond to the ranges of Microsoft intermediate language (MSIL) that the position covers within this method. The array is an array of integers and has the format [start, end, start, end]. The number of range pairs is the length of the array divided by 2.  
   
 ## <a name="syntax"></a>구문  
   
@@ -42,29 +40,29 @@ HRESULT GetRanges(
   
 ## <a name="parameters"></a>매개 변수  
  `document`  
- [in] 오프셋이 요청 된 문서입니다.  
+ [in] The document for which the offset is requested.  
   
  `line`  
- [in] 범위에 해당 하는 문서 줄.  
+ [in] The document line corresponding to the ranges.  
   
  `column`  
- [in] 범위에 해당 하는 문서 열입니다.  
+ [in] The document column corresponding to the ranges.  
   
  `cRanges`  
  [in] `ranges` 배열의 크기입니다.  
   
  `pcRanges`  
- [out] 에 대 한 포인터를 `ULONG32` 범위를 포함 하는 데 필요한 버퍼의 크기를 받는 합니다.  
+ [out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the ranges.  
   
  `ranges`  
- [out] 범위를 받는 버퍼에 대 한 포인터입니다.  
+ [out] A pointer to the buffer that receives the ranges.  
   
 ## <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>요구 사항  
- **헤더:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ISymUnmanagedMethod 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

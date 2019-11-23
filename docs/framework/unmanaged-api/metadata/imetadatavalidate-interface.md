@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: db98608a-e85c-4f50-9d7b-5f57a426ddb6
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 804c8c9434983b12b0647395c49197bf5026239b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8bf48abda63fb3a4f8abe7c54e443d01d8faf96c
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61645125"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74426126"
 ---
 # <a name="imetadatavalidate-interface"></a>IMetaDataValidate 인터페이스
 메타데이터 서명의 유효성을 검사할 메서드를 제공합니다.  
@@ -34,14 +32,14 @@ ms.locfileid: "61645125"
 |[ValidatorInit 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadatavalidate-validatorinit-method.md)|현재 메타데이터 범위에서 모듈 형식을 지정하는 플래그를 설정하고 유효성 검사 오류에 대한 지정된 콜백 메서드를 등록합니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** Cor.h  
+ **Header:** Cor.h  
   
- **라이브러리:** MsCorEE.dll에서 리소스로 사용  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [메타데이터 인터페이스](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)

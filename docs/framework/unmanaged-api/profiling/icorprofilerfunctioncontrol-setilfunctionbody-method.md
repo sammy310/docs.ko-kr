@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2c33f0f7-75b2-4c19-b2c7-c94b54997576
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d831dd7a63c06327bb0f373b3be254401c6e2ee9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f6e2cfe47bdd212e39549544b06bf5b11033a956
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780361"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74429891"
 ---
 # <a name="icorprofilerfunctioncontrolsetilfunctionbody-method"></a>ICorProfilerFunctionControl::SetILFunctionBody 메서드
 메서드의 공용 중간 언어(CIL) 본문을 바꿉니다.  
@@ -45,15 +43,15 @@ HRESULT SetILFunctionBody(
 ## <a name="return-value"></a>반환 값  
  이 메서드는 다음과 같은 특정 HRESULT를 반환합니다.  
   
-|HRESULT|Description|  
+|HRESULT|설명|  
 |-------------|-----------------|  
 |S_OK|바꾸기에 성공했습니다.|  
   
-## <a name="remarks"></a>설명  
- 달리 합니다 [icorprofilerinfo:: Setilfunctionbody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md) 메서드를 `SetILFunctionBody` 메서드는 새 CIL 본문에 필요한 메모리를 관리 합니다. 즉, 프로파일러에서 제공 하는 CIL 본문에 없는지를 사용 하 여 할당 되는 [IMethodMalloc](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-interface.md) 인터페이스 또는 특정 범위 내에 할당 합니다. 어떤 힙에든 할당할 수 있습니다. 프로파일러 후 CIL 본문에 사용 된 메모리를 확보할 수 `SetILFunctionBody` 반환 합니다.  
+## <a name="remarks"></a>주의  
+ Unlike the [ICorProfilerInfo::SetILFunctionBody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md) method, the `SetILFunctionBody` method manages the memory required for the new CIL body. This means that the CIL body provided by the profiler does not have to be allocated by using the [IMethodMalloc](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-interface.md) interface or allocated within a particular range. 어떤 힙에든 할당할 수 있습니다. The profiler can free the memory used for its CIL body after `SetILFunctionBody` returns.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
   
@@ -61,6 +59,6 @@ HRESULT SetILFunctionBody(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ICorProfilerFunctionControl 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-interface.md)
