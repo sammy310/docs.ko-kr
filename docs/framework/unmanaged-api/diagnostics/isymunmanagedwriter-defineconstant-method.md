@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 9e986986-2223-4d5f-b040-85d716146924
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a04bf93a2b2809198673d15f29714f52c9435b68
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c8d0145b9dffe1c0ff6ed3281c90f3bcec082ab8
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767833"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428068"
 ---
-# <a name="isymunmanagedwriterdefineconstant-method"></a><span data-ttu-id="4bb7c-102">ISymUnmanagedWriter::DefineConstant 메서드</span><span class="sxs-lookup"><span data-stu-id="4bb7c-102">ISymUnmanagedWriter::DefineConstant Method</span></span>
-<span data-ttu-id="4bb7c-103">상수 값에 대 한 이름을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="4bb7c-103">Defines a name for a constant value.</span></span>  
+# <a name="isymunmanagedwriterdefineconstant-method"></a><span data-ttu-id="bc2ac-102">ISymUnmanagedWriter::DefineConstant 메서드</span><span class="sxs-lookup"><span data-stu-id="bc2ac-102">ISymUnmanagedWriter::DefineConstant Method</span></span>
+<span data-ttu-id="bc2ac-103">Defines a name for a constant value.</span><span class="sxs-lookup"><span data-stu-id="bc2ac-103">Defines a name for a constant value.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4bb7c-104">구문</span><span class="sxs-lookup"><span data-stu-id="4bb7c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="bc2ac-104">구문</span><span class="sxs-lookup"><span data-stu-id="bc2ac-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT DefineConstant(  
@@ -37,26 +35,26 @@ HRESULT DefineConstant(
     [in, size_is(cSig)] unsigned char signature[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="4bb7c-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="4bb7c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="bc2ac-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="bc2ac-105">Parameters</span></span>  
  `name`  
- <span data-ttu-id="4bb7c-106">[in] 에 대 한 포인터를 `WCHAR` 상수 이름을 정의 하는 합니다.</span><span class="sxs-lookup"><span data-stu-id="4bb7c-106">[in] A pointer to a `WCHAR` that defines the constant name.</span></span>  
+ <span data-ttu-id="bc2ac-106">[in] A pointer to a `WCHAR` that defines the constant name.</span><span class="sxs-lookup"><span data-stu-id="bc2ac-106">[in] A pointer to a `WCHAR` that defines the constant name.</span></span>  
   
  `value`  
- <span data-ttu-id="4bb7c-107">[in] 상수의 값입니다.</span><span class="sxs-lookup"><span data-stu-id="4bb7c-107">[in] The value of the constant.</span></span>  
+ <span data-ttu-id="bc2ac-107">[in] The value of the constant.</span><span class="sxs-lookup"><span data-stu-id="bc2ac-107">[in] The value of the constant.</span></span>  
   
  `cSig`  
- <span data-ttu-id="4bb7c-108">[in] `signature` 배열의 크기입니다.</span><span class="sxs-lookup"><span data-stu-id="4bb7c-108">[in] The size of the `signature` array.</span></span>  
+ <span data-ttu-id="bc2ac-108">[in] `signature` 배열의 크기입니다.</span><span class="sxs-lookup"><span data-stu-id="bc2ac-108">[in] The size of the `signature` array.</span></span>  
   
  `signature`  
- <span data-ttu-id="4bb7c-109">[in] 상수에 대 한 형식 서명입니다.</span><span class="sxs-lookup"><span data-stu-id="4bb7c-109">[in] The type signature for the constant.</span></span>  
+ <span data-ttu-id="bc2ac-109">[in] The type signature for the constant.</span><span class="sxs-lookup"><span data-stu-id="bc2ac-109">[in] The type signature for the constant.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="4bb7c-110">반환 값</span><span class="sxs-lookup"><span data-stu-id="4bb7c-110">Return Value</span></span>  
- <span data-ttu-id="4bb7c-111">메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="4bb7c-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="bc2ac-110">반환 값</span><span class="sxs-lookup"><span data-stu-id="bc2ac-110">Return Value</span></span>  
+ <span data-ttu-id="bc2ac-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="bc2ac-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4bb7c-112">요구 사항</span><span class="sxs-lookup"><span data-stu-id="4bb7c-112">Requirements</span></span>  
- <span data-ttu-id="4bb7c-113">**헤더:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="4bb7c-113">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="bc2ac-112">요구 사항</span><span class="sxs-lookup"><span data-stu-id="bc2ac-112">Requirements</span></span>  
+ <span data-ttu-id="bc2ac-113">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="bc2ac-113">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4bb7c-114">참고자료</span><span class="sxs-lookup"><span data-stu-id="4bb7c-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bc2ac-114">참조</span><span class="sxs-lookup"><span data-stu-id="bc2ac-114">See also</span></span>
 
-- [<span data-ttu-id="4bb7c-115">ISymUnmanagedWriter 인터페이스</span><span class="sxs-lookup"><span data-stu-id="4bb7c-115">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
-- [<span data-ttu-id="4bb7c-116">DefineConstant2 메서드</span><span class="sxs-lookup"><span data-stu-id="4bb7c-116">DefineConstant2 Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-defineconstant2-method.md)
+- [<span data-ttu-id="bc2ac-115">ISymUnmanagedWriter 인터페이스</span><span class="sxs-lookup"><span data-stu-id="bc2ac-115">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [<span data-ttu-id="bc2ac-116">DefineConstant2 메서드</span><span class="sxs-lookup"><span data-stu-id="bc2ac-116">DefineConstant2 Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-defineconstant2-method.md)

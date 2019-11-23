@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: df7083d2-fd43-44c7-9ce5-912c25cef0ff
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6470bd04e3661e7d27798747abc4ef0757bf4f1e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bacb50520df9f1553226ec6bf1e878238b64bb17
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782146"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449713"
 ---
-# <a name="icorprofilerinfo3getfunctionleave3info-method"></a><span data-ttu-id="50e33-102">ICorProfilerInfo3::GetFunctionLeave3Info 메서드</span><span class="sxs-lookup"><span data-stu-id="50e33-102">ICorProfilerInfo3::GetFunctionLeave3Info Method</span></span>
-<span data-ttu-id="50e33-103">스택 프레임 및 프로파일러에 보고 되는 함수의 반환 값을 제공 합니다 [FunctionLeave3WithInfo 함수](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md) 함수입니다.</span><span class="sxs-lookup"><span data-stu-id="50e33-103">Provides the stack frame and return value of the function that is being reported to the profiler by the [FunctionLeave3WithInfo function](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md) function.</span></span> <span data-ttu-id="50e33-104">이 함수는 `FunctionLeave3WithInfo` 콜백 중에만 호출할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="50e33-104">This method can be called only during the `FunctionLeave3WithInfo` callback.</span></span>  
+# <a name="icorprofilerinfo3getfunctionleave3info-method"></a><span data-ttu-id="655de-102">ICorProfilerInfo3::GetFunctionLeave3Info 메서드</span><span class="sxs-lookup"><span data-stu-id="655de-102">ICorProfilerInfo3::GetFunctionLeave3Info Method</span></span>
+<span data-ttu-id="655de-103">Provides the stack frame and return value of the function that is being reported to the profiler by the [FunctionLeave3WithInfo function](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md) function.</span><span class="sxs-lookup"><span data-stu-id="655de-103">Provides the stack frame and return value of the function that is being reported to the profiler by the [FunctionLeave3WithInfo function](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md) function.</span></span> <span data-ttu-id="655de-104">이 함수는 `FunctionLeave3WithInfo` 콜백 중에만 호출할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="655de-104">This method can be called only during the `FunctionLeave3WithInfo` callback.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="50e33-105">구문</span><span class="sxs-lookup"><span data-stu-id="50e33-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="655de-105">구문</span><span class="sxs-lookup"><span data-stu-id="655de-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetFunctionLeave3Info(  
@@ -37,35 +35,35 @@ HRESULT GetFunctionLeave3Info(
             [out] COR_PRF_FUNCTION_ARGUMENT_RANGE *pRetvalRange);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="50e33-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="50e33-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="655de-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="655de-106">Parameters</span></span>  
  `functionId`  
- <span data-ttu-id="50e33-107">[in] `FunctionID` 를 반환 하는 함수입니다.</span><span class="sxs-lookup"><span data-stu-id="50e33-107">[in] The `FunctionID` of the function that is returning.</span></span>  
+ <span data-ttu-id="655de-107">[in] The `FunctionID` of the function that is returning.</span><span class="sxs-lookup"><span data-stu-id="655de-107">[in] The `FunctionID` of the function that is returning.</span></span>  
   
  `eltInfo`  
- <span data-ttu-id="50e33-108">[in] 지정된 스택 프레임에 대한 정보를 나타내는 불투명 핸들입니다.</span><span class="sxs-lookup"><span data-stu-id="50e33-108">[in] An opaque handle that represents information about a given stack frame.</span></span> <span data-ttu-id="50e33-109">프로파일러는 동일한 제공 해야 `eltInfo` 프로파일러는 지정 된 된 [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md) 함수입니다.</span><span class="sxs-lookup"><span data-stu-id="50e33-109">The profiler should provide the same `eltInfo` that was given to the profiler by the [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md) function.</span></span>  
+ <span data-ttu-id="655de-108">[in] 지정된 스택 프레임에 대한 정보를 나타내는 불투명 핸들입니다.</span><span class="sxs-lookup"><span data-stu-id="655de-108">[in] An opaque handle that represents information about a given stack frame.</span></span> <span data-ttu-id="655de-109">The profiler should provide the same `eltInfo` that was given to the profiler by the [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md) function.</span><span class="sxs-lookup"><span data-stu-id="655de-109">The profiler should provide the same `eltInfo` that was given to the profiler by the [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md) function.</span></span>  
   
  `pFrameInfo`  
- <span data-ttu-id="50e33-110">[out] 지정된 스택 프레임에 대한 일반 정보를 나타내는 불투명 핸들입니다.</span><span class="sxs-lookup"><span data-stu-id="50e33-110">[out] An opaque handle that represents generics information about a given stack frame.</span></span> <span data-ttu-id="50e33-111">이 핸들은 프로파일러가 `GetFunctionLeave3Info` 메서드를 호출한 `FunctionLeave3WithInfo` 콜백 중에만 유효합니다.</span><span class="sxs-lookup"><span data-stu-id="50e33-111">This handle is valid only during the `FunctionLeave3WithInfo` callback in which the profiler called the `GetFunctionLeave3Info` method.</span></span>  
+ <span data-ttu-id="655de-110">[out] 지정된 스택 프레임에 대한 일반 정보를 나타내는 불투명 핸들입니다.</span><span class="sxs-lookup"><span data-stu-id="655de-110">[out] An opaque handle that represents generics information about a given stack frame.</span></span> <span data-ttu-id="655de-111">이 핸들은 프로파일러가 `GetFunctionLeave3Info` 메서드를 호출한 `FunctionLeave3WithInfo` 콜백 중에만 유효합니다.</span><span class="sxs-lookup"><span data-stu-id="655de-111">This handle is valid only during the `FunctionLeave3WithInfo` callback in which the profiler called the `GetFunctionLeave3Info` method.</span></span>  
   
  `pRetvalRange`  
- <span data-ttu-id="50e33-112">[out] 에 대 한 포인터를 [COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) 함수에서 반환 되는 값이 포함 된 구조입니다.</span><span class="sxs-lookup"><span data-stu-id="50e33-112">[out] A pointer to a [COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) structure that contains the value that is returned from the function.</span></span> <span data-ttu-id="50e33-113">반환 값 정보에 액세스할 수는 `COR_PRF_ENABLE_FUNCTION_RETVAL` 플래그를 설정 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="50e33-113">To access return value information, the `COR_PRF_ENABLE_FUNCTION_RETVAL` flag must be set.</span></span> <span data-ttu-id="50e33-114">프로파일러를 사용 하 여 수를 [icorprofilerinfo:: Seteventmask 메서드](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) 이벤트 플래그를 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="50e33-114">The profiler can use the [ICorProfilerInfo::SetEventMask method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) to set the event flags.</span></span>  
+ <span data-ttu-id="655de-112">[out] A pointer to a [COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) structure that contains the value that is returned from the function.</span><span class="sxs-lookup"><span data-stu-id="655de-112">[out] A pointer to a [COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) structure that contains the value that is returned from the function.</span></span> <span data-ttu-id="655de-113">To access return value information, the `COR_PRF_ENABLE_FUNCTION_RETVAL` flag must be set.</span><span class="sxs-lookup"><span data-stu-id="655de-113">To access return value information, the `COR_PRF_ENABLE_FUNCTION_RETVAL` flag must be set.</span></span> <span data-ttu-id="655de-114">The profiler can use the [ICorProfilerInfo::SetEventMask method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) to set the event flags.</span><span class="sxs-lookup"><span data-stu-id="655de-114">The profiler can use the [ICorProfilerInfo::SetEventMask method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) to set the event flags.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="50e33-115">설명</span><span class="sxs-lookup"><span data-stu-id="50e33-115">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="655de-115">주의</span><span class="sxs-lookup"><span data-stu-id="655de-115">Remarks</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="50e33-116">요구 사항</span><span class="sxs-lookup"><span data-stu-id="50e33-116">Requirements</span></span>  
- <span data-ttu-id="50e33-117">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="50e33-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="655de-116">요구 사항</span><span class="sxs-lookup"><span data-stu-id="655de-116">Requirements</span></span>  
+ <span data-ttu-id="655de-117">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="655de-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="50e33-118">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="50e33-118">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="655de-118">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="655de-118">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="50e33-119">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="50e33-119">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="655de-119">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="655de-119">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="50e33-120">**.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="50e33-120">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="655de-120">**.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="655de-120">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="50e33-121">참고자료</span><span class="sxs-lookup"><span data-stu-id="50e33-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="655de-121">참조</span><span class="sxs-lookup"><span data-stu-id="655de-121">See also</span></span>
 
-- [<span data-ttu-id="50e33-122">FunctionEnter3WithInfo</span><span class="sxs-lookup"><span data-stu-id="50e33-122">FunctionEnter3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md)
-- [<span data-ttu-id="50e33-123">FunctionLeave3WithInfo</span><span class="sxs-lookup"><span data-stu-id="50e33-123">FunctionLeave3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md)
-- [<span data-ttu-id="50e33-124">FunctionTailcall3WithInfo</span><span class="sxs-lookup"><span data-stu-id="50e33-124">FunctionTailcall3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md)
-- [<span data-ttu-id="50e33-125">ICorProfilerInfo3 인터페이스</span><span class="sxs-lookup"><span data-stu-id="50e33-125">ICorProfilerInfo3 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
-- [<span data-ttu-id="50e33-126">프로파일링 인터페이스</span><span class="sxs-lookup"><span data-stu-id="50e33-126">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [<span data-ttu-id="50e33-127">프로파일링</span><span class="sxs-lookup"><span data-stu-id="50e33-127">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [<span data-ttu-id="655de-122">FunctionEnter3WithInfo</span><span class="sxs-lookup"><span data-stu-id="655de-122">FunctionEnter3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md)
+- [<span data-ttu-id="655de-123">FunctionLeave3WithInfo</span><span class="sxs-lookup"><span data-stu-id="655de-123">FunctionLeave3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md)
+- [<span data-ttu-id="655de-124">FunctionTailcall3WithInfo</span><span class="sxs-lookup"><span data-stu-id="655de-124">FunctionTailcall3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md)
+- [<span data-ttu-id="655de-125">ICorProfilerInfo3 인터페이스</span><span class="sxs-lookup"><span data-stu-id="655de-125">ICorProfilerInfo3 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
+- [<span data-ttu-id="655de-126">프로파일링 인터페이스</span><span class="sxs-lookup"><span data-stu-id="655de-126">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [<span data-ttu-id="655de-127">프로파일링</span><span class="sxs-lookup"><span data-stu-id="655de-127">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)

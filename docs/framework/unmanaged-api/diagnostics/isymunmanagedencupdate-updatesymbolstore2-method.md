@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 35588317-6184-485c-ab41-4b15fc1765d9
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9d2c641f011c55ee726e319cb581705e334c840d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 393984241412f543b6ac082484cf5e23edb2d9f4
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774682"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448988"
 ---
-# <a name="isymunmanagedencupdateupdatesymbolstore2-method"></a><span data-ttu-id="6d1f5-102">ISymUnmanagedENCUpdate::UpdateSymbolStore2 메서드</span><span class="sxs-lookup"><span data-stu-id="6d1f5-102">ISymUnmanagedENCUpdate::UpdateSymbolStore2 Method</span></span>
-<span data-ttu-id="6d1f5-103">컴파일러가 줄 정보를 요구 사항을 충족 하는 제공 된 프로그램 데이터베이스 (PDB) 스트림, 수정 되지 않은 함수를 생략할 수 있도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="6d1f5-103">Allows a compiler to omit functions that have not been modified from the program database (PDB) stream, provided the line information meets the requirements.</span></span> <span data-ttu-id="6d1f5-104">이전 PDB 줄 정보를 및 모든 줄은 함수에 대 한 델타를 사용 하 여 올바른 줄 정보를 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6d1f5-104">The correct line information can be determined with the old PDB line information and one delta for all lines in the function.</span></span>  
+# <a name="isymunmanagedencupdateupdatesymbolstore2-method"></a><span data-ttu-id="86c3c-102">ISymUnmanagedENCUpdate::UpdateSymbolStore2 메서드</span><span class="sxs-lookup"><span data-stu-id="86c3c-102">ISymUnmanagedENCUpdate::UpdateSymbolStore2 Method</span></span>
+<span data-ttu-id="86c3c-103">Allows a compiler to omit functions that have not been modified from the program database (PDB) stream, provided the line information meets the requirements.</span><span class="sxs-lookup"><span data-stu-id="86c3c-103">Allows a compiler to omit functions that have not been modified from the program database (PDB) stream, provided the line information meets the requirements.</span></span> <span data-ttu-id="86c3c-104">The correct line information can be determined with the old PDB line information and one delta for all lines in the function.</span><span class="sxs-lookup"><span data-stu-id="86c3c-104">The correct line information can be determined with the old PDB line information and one delta for all lines in the function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6d1f5-105">구문</span><span class="sxs-lookup"><span data-stu-id="6d1f5-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="86c3c-105">구문</span><span class="sxs-lookup"><span data-stu-id="86c3c-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT UpdateSymbolStore2(  
@@ -36,22 +34,22 @@ HRESULT UpdateSymbolStore2(
     [in]  ULONG         cDeltaLines);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="6d1f5-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="6d1f5-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="86c3c-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="86c3c-106">Parameters</span></span>  
  `pIStream`  
- <span data-ttu-id="6d1f5-107">[in] 에 대 한 포인터를 [IStream](/windows/desktop/api/objidl/nn-objidl-istream) 줄 정보를 포함 하는 합니다.</span><span class="sxs-lookup"><span data-stu-id="6d1f5-107">[in] A pointer to an [IStream](/windows/desktop/api/objidl/nn-objidl-istream) that contains the line information.</span></span>  
+ <span data-ttu-id="86c3c-107">[in] A pointer to an [IStream](/windows/desktop/api/objidl/nn-objidl-istream) that contains the line information.</span><span class="sxs-lookup"><span data-stu-id="86c3c-107">[in] A pointer to an [IStream](/windows/desktop/api/objidl/nn-objidl-istream) that contains the line information.</span></span>  
   
  `pDeltaLines`  
- <span data-ttu-id="6d1f5-108">[in] 에 대 한 포인터를 [SYMLINEDELTA](../../../../docs/framework/unmanaged-api/diagnostics/symlinedelta-structure.md) 변경 된 줄을 포함 하는 구조입니다.</span><span class="sxs-lookup"><span data-stu-id="6d1f5-108">[in] A pointer to a [SYMLINEDELTA](../../../../docs/framework/unmanaged-api/diagnostics/symlinedelta-structure.md) structure that contains the lines that have changed.</span></span>  
+ <span data-ttu-id="86c3c-108">[in] A pointer to a [SYMLINEDELTA](../../../../docs/framework/unmanaged-api/diagnostics/symlinedelta-structure.md) structure that contains the lines that have changed.</span><span class="sxs-lookup"><span data-stu-id="86c3c-108">[in] A pointer to a [SYMLINEDELTA](../../../../docs/framework/unmanaged-api/diagnostics/symlinedelta-structure.md) structure that contains the lines that have changed.</span></span>  
   
  `cDeltaLines`  
- <span data-ttu-id="6d1f5-109">[in] `ULONG` 변경 된 줄 수를 나타내는입니다.</span><span class="sxs-lookup"><span data-stu-id="6d1f5-109">[in] A `ULONG` that represents the number of lines that have changed.</span></span>  
+ <span data-ttu-id="86c3c-109">[in] A `ULONG` that represents the number of lines that have changed.</span><span class="sxs-lookup"><span data-stu-id="86c3c-109">[in] A `ULONG` that represents the number of lines that have changed.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="6d1f5-110">반환 값</span><span class="sxs-lookup"><span data-stu-id="6d1f5-110">Return Value</span></span>  
- <span data-ttu-id="6d1f5-111">메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="6d1f5-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="86c3c-110">반환 값</span><span class="sxs-lookup"><span data-stu-id="86c3c-110">Return Value</span></span>  
+ <span data-ttu-id="86c3c-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="86c3c-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6d1f5-112">요구 사항</span><span class="sxs-lookup"><span data-stu-id="6d1f5-112">Requirements</span></span>  
- <span data-ttu-id="6d1f5-113">**헤더:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="6d1f5-113">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="86c3c-112">요구 사항</span><span class="sxs-lookup"><span data-stu-id="86c3c-112">Requirements</span></span>  
+ <span data-ttu-id="86c3c-113">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="86c3c-113">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6d1f5-114">참고자료</span><span class="sxs-lookup"><span data-stu-id="6d1f5-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="86c3c-114">참조</span><span class="sxs-lookup"><span data-stu-id="86c3c-114">See also</span></span>
 
-- [<span data-ttu-id="6d1f5-115">ISymUnmanagedENCUpdate 인터페이스</span><span class="sxs-lookup"><span data-stu-id="6d1f5-115">ISymUnmanagedENCUpdate Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)
+- [<span data-ttu-id="86c3c-115">ISymUnmanagedENCUpdate 인터페이스</span><span class="sxs-lookup"><span data-stu-id="86c3c-115">ISymUnmanagedENCUpdate Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)

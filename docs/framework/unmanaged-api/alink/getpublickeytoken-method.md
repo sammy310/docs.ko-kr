@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 4a16374c-94b0-47b0-9fed-88c2b0cdccd4
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 158ecc036d56e2ad9a3fa650677c04ebcbfd7696
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 2e7ed4e1529104db30b0b06665f74342d9ca9a01
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70777216"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447236"
 ---
-# <a name="getpublickeytoken-method"></a><span data-ttu-id="36c40-102">GetPublicKeyToken 메서드</span><span class="sxs-lookup"><span data-stu-id="36c40-102">GetPublicKeyToken Method</span></span>
-<span data-ttu-id="36c40-103">지정 된 keyfile 또는 키 컨테이너에 대 한 공개 키 토큰을 검색 합니다.</span><span class="sxs-lookup"><span data-stu-id="36c40-103">Retrieves the public key token for a given keyfile or key container.</span></span>  
+# <a name="getpublickeytoken-method"></a><span data-ttu-id="5b7f7-102">GetPublicKeyToken 메서드</span><span class="sxs-lookup"><span data-stu-id="5b7f7-102">GetPublicKeyToken Method</span></span>
+<span data-ttu-id="5b7f7-103">Retrieves the public key token for a given keyfile or key container.</span><span class="sxs-lookup"><span data-stu-id="5b7f7-103">Retrieves the public key token for a given keyfile or key container.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="36c40-104">구문</span><span class="sxs-lookup"><span data-stu-id="36c40-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5b7f7-104">구문</span><span class="sxs-lookup"><span data-stu-id="5b7f7-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetPublicKeyToken(  
@@ -37,27 +35,27 @@ HRESULT GetPublicKeyToken(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="36c40-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="36c40-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="5b7f7-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="5b7f7-105">Parameters</span></span>  
  `pszKeyFile`  
- <span data-ttu-id="36c40-106">키의 파일 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="36c40-106">Filename of the key.</span></span>  
+ <span data-ttu-id="5b7f7-106">Filename of the key.</span><span class="sxs-lookup"><span data-stu-id="5b7f7-106">Filename of the key.</span></span>  
   
  `pszKeyContainer`  
- <span data-ttu-id="36c40-107">키 컨테이너의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="36c40-107">Name of the key container.</span></span>  
+ <span data-ttu-id="5b7f7-107">Name of the key container.</span><span class="sxs-lookup"><span data-stu-id="5b7f7-107">Name of the key container.</span></span>  
   
  `pvPublicKeyToken`  
- <span data-ttu-id="36c40-108">키 토큰을 저장할 주소입니다.</span><span class="sxs-lookup"><span data-stu-id="36c40-108">Address where key token is to be stored.</span></span>  
+ <span data-ttu-id="5b7f7-108">Address where key token is to be stored.</span><span class="sxs-lookup"><span data-stu-id="5b7f7-108">Address where key token is to be stored.</span></span>  
   
  `pcbPublicKeyToken`  
- <span data-ttu-id="36c40-109">로 `pvPublicKeyToken`표시 되는 버퍼의 크기 (바이트)를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="36c40-109">Specifies the size, in bytes, of the buffer indicated by `pvPublicKeyToken`.</span></span> <span data-ttu-id="36c40-110">반환 시 실제 사용 된 바이트 수를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="36c40-110">Upon return, contains actual number of bytes used.</span></span>  
+ <span data-ttu-id="5b7f7-109">Specifies the size, in bytes, of the buffer indicated by `pvPublicKeyToken`.</span><span class="sxs-lookup"><span data-stu-id="5b7f7-109">Specifies the size, in bytes, of the buffer indicated by `pvPublicKeyToken`.</span></span> <span data-ttu-id="5b7f7-110">Upon return, contains actual number of bytes used.</span><span class="sxs-lookup"><span data-stu-id="5b7f7-110">Upon return, contains actual number of bytes used.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="36c40-111">반환 값</span><span class="sxs-lookup"><span data-stu-id="36c40-111">Return Value</span></span>  
- <span data-ttu-id="36c40-112">메서드가 성공 하면 S_OK를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="36c40-112">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="5b7f7-111">반환 값</span><span class="sxs-lookup"><span data-stu-id="5b7f7-111">Return Value</span></span>  
+ <span data-ttu-id="5b7f7-112">Returns S_OK if the method succeeds.</span><span class="sxs-lookup"><span data-stu-id="5b7f7-112">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="36c40-113">요구 사항</span><span class="sxs-lookup"><span data-stu-id="36c40-113">Requirements</span></span>  
- <span data-ttu-id="36c40-114">Alink가 필요 합니다.</span><span class="sxs-lookup"><span data-stu-id="36c40-114">Requires alink.h.</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5b7f7-113">요구 사항</span><span class="sxs-lookup"><span data-stu-id="5b7f7-113">Requirements</span></span>  
+ <span data-ttu-id="5b7f7-114">Requires alink.h.</span><span class="sxs-lookup"><span data-stu-id="5b7f7-114">Requires alink.h.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="36c40-115">참고자료</span><span class="sxs-lookup"><span data-stu-id="36c40-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5b7f7-115">참조</span><span class="sxs-lookup"><span data-stu-id="5b7f7-115">See also</span></span>
 
-- [<span data-ttu-id="36c40-116">IALink2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="36c40-116">IALink2 Interface</span></span>](ialink2-interface.md)
-- [<span data-ttu-id="36c40-117">IALink 인터페이스</span><span class="sxs-lookup"><span data-stu-id="36c40-117">IALink Interface</span></span>](ialink-interface.md)
-- [<span data-ttu-id="36c40-118">ALink API</span><span class="sxs-lookup"><span data-stu-id="36c40-118">ALink API</span></span>](index.md)
+- [<span data-ttu-id="5b7f7-116">IALink2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="5b7f7-116">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="5b7f7-117">IALink 인터페이스</span><span class="sxs-lookup"><span data-stu-id="5b7f7-117">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="5b7f7-118">ALink API</span><span class="sxs-lookup"><span data-stu-id="5b7f7-118">ALink API</span></span>](index.md)

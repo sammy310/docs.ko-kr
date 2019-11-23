@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 44cf6908-f555-4ae8-b2cf-24bd974bf2fe
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 13f8a50f3fcbe9d6e7602ca3bbeb36587ecff32c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8a5dda5861343865a139f6b6b9e2794179b0727a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778794"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74434721"
 ---
-# <a name="imetadataimportisglobal-method"></a><span data-ttu-id="4fdb3-102">IMetaDataImport::IsGlobal 메서드</span><span class="sxs-lookup"><span data-stu-id="4fdb3-102">IMetaDataImport::IsGlobal Method</span></span>
-<span data-ttu-id="4fdb3-103">지정한 메타데이터 토큰이 나타내는 필드, 메서드 또는 형식에 전역 범위가 있는지 여부를 나타내는 값을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="4fdb3-103">Gets a value indicating whether the field, method, or type represented by the specified metadata token has global scope.</span></span>  
+# <a name="imetadataimportisglobal-method"></a><span data-ttu-id="56573-102">IMetaDataImport::IsGlobal 메서드</span><span class="sxs-lookup"><span data-stu-id="56573-102">IMetaDataImport::IsGlobal Method</span></span>
+<span data-ttu-id="56573-103">지정한 메타데이터 토큰이 나타내는 필드, 메서드 또는 형식에 전역 범위가 있는지 여부를 나타내는 값을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="56573-103">Gets a value indicating whether the field, method, or type represented by the specified metadata token has global scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4fdb3-104">구문</span><span class="sxs-lookup"><span data-stu-id="4fdb3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="56573-104">구문</span><span class="sxs-lookup"><span data-stu-id="56573-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT IsGlobal (  
@@ -36,23 +34,23 @@ HRESULT IsGlobal (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="4fdb3-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="4fdb3-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="56573-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="56573-105">Parameters</span></span>  
  `pd`  
- <span data-ttu-id="4fdb3-106">[in] 형식, 필드 또는 메서드를 나타내는 메타 데이터 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="4fdb3-106">[in] A metadata token that represents a type, field, or method.</span></span>  
+ <span data-ttu-id="56573-106">[in] A metadata token that represents a type, field, or method.</span><span class="sxs-lookup"><span data-stu-id="56573-106">[in] A metadata token that represents a type, field, or method.</span></span>  
   
  `pbGlobal`  
- <span data-ttu-id="4fdb3-107">[out] 이면 1 개체에 전역 범위가 지정 됩니다. 그렇지 않을 경우 0 (영)입니다.</span><span class="sxs-lookup"><span data-stu-id="4fdb3-107">[out] 1 if the object has global scope; otherwise, 0 (zero).</span></span>  
+ <span data-ttu-id="56573-107">[out] 1 if the object has global scope; otherwise, 0 (zero).</span><span class="sxs-lookup"><span data-stu-id="56573-107">[out] 1 if the object has global scope; otherwise, 0 (zero).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4fdb3-108">요구 사항</span><span class="sxs-lookup"><span data-stu-id="4fdb3-108">Requirements</span></span>  
- <span data-ttu-id="4fdb3-109">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="4fdb3-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="56573-108">요구 사항</span><span class="sxs-lookup"><span data-stu-id="56573-108">Requirements</span></span>  
+ <span data-ttu-id="56573-109">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="56573-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4fdb3-110">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="4fdb3-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="56573-110">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="56573-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="4fdb3-111">**라이브러리:** MsCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="4fdb3-111">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="56573-111">**Library:** Included as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="56573-111">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="4fdb3-112">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4fdb3-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="56573-112">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="56573-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4fdb3-113">참고자료</span><span class="sxs-lookup"><span data-stu-id="4fdb3-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="56573-113">참조</span><span class="sxs-lookup"><span data-stu-id="56573-113">See also</span></span>
 
-- [<span data-ttu-id="4fdb3-114">IMetaDataImport 인터페이스</span><span class="sxs-lookup"><span data-stu-id="4fdb3-114">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="4fdb3-115">IMetaDataImport2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="4fdb3-115">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="56573-114">IMetaDataImport 인터페이스</span><span class="sxs-lookup"><span data-stu-id="56573-114">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="56573-115">IMetaDataImport2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="56573-115">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

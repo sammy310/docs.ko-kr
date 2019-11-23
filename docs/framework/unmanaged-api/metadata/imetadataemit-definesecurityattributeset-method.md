@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 27064ca2-4186-4433-90a7-3b297785e891
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0f7c5378490dce93599086819ee6fc806c707aa2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b98fab6c6127c3f78151d3b84160d4ca0434b6cd
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777499"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428252"
 ---
-# <a name="imetadataemitdefinesecurityattributeset-method"></a><span data-ttu-id="4cd33-102">IMetaDataEmit::DefineSecurityAttributeSet 메서드</span><span class="sxs-lookup"><span data-stu-id="4cd33-102">IMetaDataEmit::DefineSecurityAttributeSet Method</span></span>
-<span data-ttu-id="4cd33-103">지정한 토큰이 참조 하는 개체에 연결할 보안 권한 집합을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="4cd33-103">Creates a set of security permissions to attach to the object referenced by the specified token.</span></span>  
+# <a name="imetadataemitdefinesecurityattributeset-method"></a><span data-ttu-id="85fe7-102">IMetaDataEmit::DefineSecurityAttributeSet 메서드</span><span class="sxs-lookup"><span data-stu-id="85fe7-102">IMetaDataEmit::DefineSecurityAttributeSet Method</span></span>
+<span data-ttu-id="85fe7-103">Creates a set of security permissions to attach to the object referenced by the specified token.</span><span class="sxs-lookup"><span data-stu-id="85fe7-103">Creates a set of security permissions to attach to the object referenced by the specified token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4cd33-104">구문</span><span class="sxs-lookup"><span data-stu-id="4cd33-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="85fe7-104">구문</span><span class="sxs-lookup"><span data-stu-id="85fe7-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT DefineSecurityAttributeSet (   
@@ -38,29 +36,29 @@ HRESULT DefineSecurityAttributeSet (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="4cd33-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="4cd33-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="85fe7-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="85fe7-105">Parameters</span></span>  
  `tkObj`  
- <span data-ttu-id="4cd33-106">[in] 보안 정보가 연결 되는 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="4cd33-106">[in] The token to which the security information is attached.</span></span>  
+ <span data-ttu-id="85fe7-106">[in] The token to which the security information is attached.</span><span class="sxs-lookup"><span data-stu-id="85fe7-106">[in] The token to which the security information is attached.</span></span>  
   
  `rSecAttrs`  
- <span data-ttu-id="4cd33-107">[in] 배열을 `COR_SECATTR` 구조입니다.</span><span class="sxs-lookup"><span data-stu-id="4cd33-107">[in] An array of `COR_SECATTR` structures.</span></span>  
+ <span data-ttu-id="85fe7-107">[in] An array of `COR_SECATTR` structures.</span><span class="sxs-lookup"><span data-stu-id="85fe7-107">[in] An array of `COR_SECATTR` structures.</span></span>  
   
  `cSecAttrs`  
- <span data-ttu-id="4cd33-108">[in] 요소 수가 `rSecAttrs`합니다.</span><span class="sxs-lookup"><span data-stu-id="4cd33-108">[in] The number of elements in `rSecAttrs`.</span></span>  
+ <span data-ttu-id="85fe7-108">[in] The number of elements in `rSecAttrs`.</span><span class="sxs-lookup"><span data-stu-id="85fe7-108">[in] The number of elements in `rSecAttrs`.</span></span>  
   
  `pulErrorAttr`  
- <span data-ttu-id="4cd33-109">[out] 메서드가 실패 하는 경우 지정 된 인덱스에 `rSecAttrs` 문제를 발생 시킨 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="4cd33-109">[out] If the method fails, specifies the index in `rSecAttrs` of the element that caused the problem.</span></span>  
+ <span data-ttu-id="85fe7-109">[out] If the method fails, specifies the index in `rSecAttrs` of the element that caused the problem.</span><span class="sxs-lookup"><span data-stu-id="85fe7-109">[out] If the method fails, specifies the index in `rSecAttrs` of the element that caused the problem.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4cd33-110">요구 사항</span><span class="sxs-lookup"><span data-stu-id="4cd33-110">Requirements</span></span>  
- <span data-ttu-id="4cd33-111">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="4cd33-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="85fe7-110">요구 사항</span><span class="sxs-lookup"><span data-stu-id="85fe7-110">Requirements</span></span>  
+ <span data-ttu-id="85fe7-111">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="85fe7-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4cd33-112">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="4cd33-112">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="85fe7-112">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="85fe7-112">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="4cd33-113">**라이브러리:** MSCorEE.dll에서 리소스로 사용</span><span class="sxs-lookup"><span data-stu-id="4cd33-113">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="85fe7-113">**Library:** Used as a resource in MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="85fe7-113">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="4cd33-114">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4cd33-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="85fe7-114">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="85fe7-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4cd33-115">참고자료</span><span class="sxs-lookup"><span data-stu-id="4cd33-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="85fe7-115">참조</span><span class="sxs-lookup"><span data-stu-id="85fe7-115">See also</span></span>
 
-- [<span data-ttu-id="4cd33-116">IMetaDataEmit 인터페이스</span><span class="sxs-lookup"><span data-stu-id="4cd33-116">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="4cd33-117">IMetaDataEmit2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="4cd33-117">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="85fe7-116">IMetaDataEmit 인터페이스</span><span class="sxs-lookup"><span data-stu-id="85fe7-116">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="85fe7-117">IMetaDataEmit2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="85fe7-117">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

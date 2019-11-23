@@ -15,35 +15,33 @@ helpviewer_keywords:
 ms.assetid: 836133e8-6108-4b9b-b0a9-bce4e08dccda
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 22c45ff77c030dcbe87e5aa53284b2cace9849ab
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 889fd4ec3332cbe80a035e13a5145421dc0ed5a9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759485"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448887"
 ---
-# <a name="isymunmanagedmethodgetsequencepointcount-method"></a><span data-ttu-id="f4328-102">ISymUnmanagedMethod::GetSequencePointCount 메서드</span><span class="sxs-lookup"><span data-stu-id="f4328-102">ISymUnmanagedMethod::GetSequencePointCount Method</span></span>
-<span data-ttu-id="f4328-103">이 메서드 내에서 시퀀스 위치의 수를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="f4328-103">Gets the count of sequence points within this method.</span></span>  
+# <a name="isymunmanagedmethodgetsequencepointcount-method"></a><span data-ttu-id="4ed3b-102">ISymUnmanagedMethod::GetSequencePointCount 메서드</span><span class="sxs-lookup"><span data-stu-id="4ed3b-102">ISymUnmanagedMethod::GetSequencePointCount Method</span></span>
+<span data-ttu-id="4ed3b-103">Gets the count of sequence points within this method.</span><span class="sxs-lookup"><span data-stu-id="4ed3b-103">Gets the count of sequence points within this method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f4328-104">구문</span><span class="sxs-lookup"><span data-stu-id="f4328-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4ed3b-104">구문</span><span class="sxs-lookup"><span data-stu-id="4ed3b-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetSequencePointCount(  
     [out, retval] ULONG32* pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f4328-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="f4328-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="4ed3b-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="4ed3b-105">Parameters</span></span>  
  `pRetVal`  
- <span data-ttu-id="f4328-106">[out] 에 대 한 포인터를 `ULONG32` 시퀀스 위치를 포함 하는 데 필요한 버퍼의 크기를 받는 합니다.</span><span class="sxs-lookup"><span data-stu-id="f4328-106">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the sequence points.</span></span>  
+ <span data-ttu-id="4ed3b-106">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the sequence points.</span><span class="sxs-lookup"><span data-stu-id="4ed3b-106">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the sequence points.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="f4328-107">반환 값</span><span class="sxs-lookup"><span data-stu-id="f4328-107">Return Value</span></span>  
- <span data-ttu-id="f4328-108">메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="f4328-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="4ed3b-107">반환 값</span><span class="sxs-lookup"><span data-stu-id="4ed3b-107">Return Value</span></span>  
+ <span data-ttu-id="4ed3b-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="4ed3b-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f4328-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="f4328-109">Requirements</span></span>  
- <span data-ttu-id="f4328-110">**헤더:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="f4328-110">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4ed3b-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="4ed3b-109">Requirements</span></span>  
+ <span data-ttu-id="4ed3b-110">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="4ed3b-110">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f4328-111">참고자료</span><span class="sxs-lookup"><span data-stu-id="f4328-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4ed3b-111">참조</span><span class="sxs-lookup"><span data-stu-id="4ed3b-111">See also</span></span>
 
-- [<span data-ttu-id="f4328-112">ISymUnmanagedMethod 인터페이스</span><span class="sxs-lookup"><span data-stu-id="f4328-112">ISymUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+- [<span data-ttu-id="4ed3b-112">ISymUnmanagedMethod 인터페이스</span><span class="sxs-lookup"><span data-stu-id="4ed3b-112">ISymUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

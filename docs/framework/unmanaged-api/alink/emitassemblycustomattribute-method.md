@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: b72f5409-79af-4fa7-90a7-7630eec170f1
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 77d54f6c8f67dda5132518d1fbd579a91ce82071
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: ec0a86e3396ad42152bc0a244f74ad13deba16e4
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70777446"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446511"
 ---
-# <a name="emitassemblycustomattribute-method"></a><span data-ttu-id="52046-102">EmitAssemblyCustomAttribute 메서드</span><span class="sxs-lookup"><span data-stu-id="52046-102">EmitAssemblyCustomAttribute Method</span></span>
-<span data-ttu-id="52046-103">을 호출 하 여 어셈블리 수준 사용자 지정 특성을 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="52046-103">Call to set assembly-level custom attributes.</span></span>  
+# <a name="emitassemblycustomattribute-method"></a><span data-ttu-id="24dcc-102">EmitAssemblyCustomAttribute 메서드</span><span class="sxs-lookup"><span data-stu-id="24dcc-102">EmitAssemblyCustomAttribute Method</span></span>
+<span data-ttu-id="24dcc-103">Call to set assembly-level custom attributes.</span><span class="sxs-lookup"><span data-stu-id="24dcc-103">Call to set assembly-level custom attributes.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="52046-104">구문</span><span class="sxs-lookup"><span data-stu-id="52046-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="24dcc-104">구문</span><span class="sxs-lookup"><span data-stu-id="24dcc-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT EmitAssemblyCustomAttribute(  
@@ -41,36 +39,36 @@ HRESULT EmitAssemblyCustomAttribute(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="52046-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="52046-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="24dcc-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="24dcc-105">Parameters</span></span>  
  `AssemblyID`  
- <span data-ttu-id="52046-106">어셈블리의 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="52046-106">ID of the assembly.</span></span>  
+ <span data-ttu-id="24dcc-106">ID of the assembly.</span><span class="sxs-lookup"><span data-stu-id="24dcc-106">ID of the assembly.</span></span>  
   
  `FileToken`  
- <span data-ttu-id="52046-107">특성의 파일을 제거 하는 파일입니다.</span><span class="sxs-lookup"><span data-stu-id="52046-107">File that defiles the attribute.</span></span> <span data-ttu-id="52046-108">가 바인딩되지 않은 .netmodule `AssemblyID` 을 나타내지 않는 경우 NULL 일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="52046-108">Can be NULL if `AssemblyID` does not indicate an unbound netmodule.</span></span>  
+ <span data-ttu-id="24dcc-107">File that defiles the attribute.</span><span class="sxs-lookup"><span data-stu-id="24dcc-107">File that defiles the attribute.</span></span> <span data-ttu-id="24dcc-108">Can be NULL if `AssemblyID` does not indicate an unbound netmodule.</span><span class="sxs-lookup"><span data-stu-id="24dcc-108">Can be NULL if `AssemblyID` does not indicate an unbound netmodule.</span></span>  
   
  `tkType`  
- <span data-ttu-id="52046-109">사용자 지정 특성의 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="52046-109">Type of the custom attribute.</span></span>  
+ <span data-ttu-id="24dcc-109">Type of the custom attribute.</span><span class="sxs-lookup"><span data-stu-id="24dcc-109">Type of the custom attribute.</span></span>  
   
  `pCustomValue`  
- <span data-ttu-id="52046-110">사용자 지정 값 데이터입니다.</span><span class="sxs-lookup"><span data-stu-id="52046-110">Custom value data.</span></span>  
+ <span data-ttu-id="24dcc-110">Custom value data.</span><span class="sxs-lookup"><span data-stu-id="24dcc-110">Custom value data.</span></span>  
   
  `cbCustomValue`  
- <span data-ttu-id="52046-111">사용자 지정 값 데이터의 길이입니다.</span><span class="sxs-lookup"><span data-stu-id="52046-111">Length of custom value data.</span></span>  
+ <span data-ttu-id="24dcc-111">Length of custom value data.</span><span class="sxs-lookup"><span data-stu-id="24dcc-111">Length of custom value data.</span></span>  
   
  `bSecurity`  
- <span data-ttu-id="52046-112">사용자 지정 특성이 어셈블리 서명과 관련 되어 있으면 TRUE입니다.</span><span class="sxs-lookup"><span data-stu-id="52046-112">TRUE if the custom attribute is related to assembly signing.</span></span>  
+ <span data-ttu-id="24dcc-112">TRUE if the custom attribute is related to assembly signing.</span><span class="sxs-lookup"><span data-stu-id="24dcc-112">TRUE if the custom attribute is related to assembly signing.</span></span>  
   
  `bAllowMulti`  
- <span data-ttu-id="52046-113">여러 특성을 내보내야 하는 경우 TRUE입니다.</span><span class="sxs-lookup"><span data-stu-id="52046-113">TRUE if multiple attributes are to be emitted.</span></span>  
+ <span data-ttu-id="24dcc-113">TRUE if multiple attributes are to be emitted.</span><span class="sxs-lookup"><span data-stu-id="24dcc-113">TRUE if multiple attributes are to be emitted.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="52046-114">반환 값</span><span class="sxs-lookup"><span data-stu-id="52046-114">Return Value</span></span>  
- <span data-ttu-id="52046-115">메서드가 성공 하면 S_OK를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="52046-115">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="24dcc-114">반환 값</span><span class="sxs-lookup"><span data-stu-id="24dcc-114">Return Value</span></span>  
+ <span data-ttu-id="24dcc-115">Returns S_OK if the method succeeds.</span><span class="sxs-lookup"><span data-stu-id="24dcc-115">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="52046-116">요구 사항</span><span class="sxs-lookup"><span data-stu-id="52046-116">Requirements</span></span>  
- <span data-ttu-id="52046-117">Alink 필요</span><span class="sxs-lookup"><span data-stu-id="52046-117">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="24dcc-116">요구 사항</span><span class="sxs-lookup"><span data-stu-id="24dcc-116">Requirements</span></span>  
+ <span data-ttu-id="24dcc-117">Requires alink.h</span><span class="sxs-lookup"><span data-stu-id="24dcc-117">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="52046-118">참고자료</span><span class="sxs-lookup"><span data-stu-id="52046-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="24dcc-118">참조</span><span class="sxs-lookup"><span data-stu-id="24dcc-118">See also</span></span>
 
-- [<span data-ttu-id="52046-119">IALink 인터페이스</span><span class="sxs-lookup"><span data-stu-id="52046-119">IALink Interface</span></span>](ialink-interface.md)
-- [<span data-ttu-id="52046-120">IALink2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="52046-120">IALink2 Interface</span></span>](ialink2-interface.md)
-- [<span data-ttu-id="52046-121">ALink API</span><span class="sxs-lookup"><span data-stu-id="52046-121">ALink API</span></span>](index.md)
+- [<span data-ttu-id="24dcc-119">IALink 인터페이스</span><span class="sxs-lookup"><span data-stu-id="24dcc-119">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="24dcc-120">IALink2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="24dcc-120">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="24dcc-121">ALink API</span><span class="sxs-lookup"><span data-stu-id="24dcc-121">ALink API</span></span>](index.md)

@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: c3bf15b0-3250-4bbe-b9b5-c5d695289b6f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b9a36e094689696b746fcf7f10c282a1b0d9c570
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 02b270677131d0960db67b0ac8db38cba2b5e2df
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777830"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428049"
 ---
-# <a name="isymunmanagedwriterdefinedocument-method"></a><span data-ttu-id="ce24a-102">ISymUnmanagedWriter::DefineDocument 메서드</span><span class="sxs-lookup"><span data-stu-id="ce24a-102">ISymUnmanagedWriter::DefineDocument Method</span></span>
-<span data-ttu-id="ce24a-103">소스 문서를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="ce24a-103">Defines a source document.</span></span> <span data-ttu-id="ce24a-104">알려진된 언어, 공급 업체 및 문서 형식에 대 한 guid가 제공 됩니다.</span><span class="sxs-lookup"><span data-stu-id="ce24a-104">GUIDs are provided for known languages, vendors, and document types.</span></span>  
+# <a name="isymunmanagedwriterdefinedocument-method"></a><span data-ttu-id="acdd1-102">ISymUnmanagedWriter::DefineDocument 메서드</span><span class="sxs-lookup"><span data-stu-id="acdd1-102">ISymUnmanagedWriter::DefineDocument Method</span></span>
+<span data-ttu-id="acdd1-103">Defines a source document.</span><span class="sxs-lookup"><span data-stu-id="acdd1-103">Defines a source document.</span></span> <span data-ttu-id="acdd1-104">GUIDs are provided for known languages, vendors, and document types.</span><span class="sxs-lookup"><span data-stu-id="acdd1-104">GUIDs are provided for known languages, vendors, and document types.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ce24a-105">구문</span><span class="sxs-lookup"><span data-stu-id="ce24a-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="acdd1-105">구문</span><span class="sxs-lookup"><span data-stu-id="acdd1-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT DefineDocument(  
@@ -38,28 +36,28 @@ HRESULT DefineDocument(
     [out, retval] ISymUnmanagedDocumentWriter**  pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ce24a-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="ce24a-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="acdd1-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="acdd1-106">Parameters</span></span>  
  `url`  
- <span data-ttu-id="ce24a-107">[in] 에 대 한 포인터를 `WCHAR` 문서를 식별 하는 uniform resource locator (URL)를 정의 하는 합니다.</span><span class="sxs-lookup"><span data-stu-id="ce24a-107">[in] A pointer to a `WCHAR` that defines the uniform resource locator (URL) that identifies the document.</span></span>  
+ <span data-ttu-id="acdd1-107">[in] A pointer to a `WCHAR` that defines the uniform resource locator (URL) that identifies the document.</span><span class="sxs-lookup"><span data-stu-id="acdd1-107">[in] A pointer to a `WCHAR` that defines the uniform resource locator (URL) that identifies the document.</span></span>  
   
  `language`  
- <span data-ttu-id="ce24a-108">[in] 문서 언어를 정의 하는 GUID에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="ce24a-108">[in] A pointer to a GUID that defines the document language.</span></span>  
+ <span data-ttu-id="acdd1-108">[in] A pointer to a GUID that defines the document language.</span><span class="sxs-lookup"><span data-stu-id="acdd1-108">[in] A pointer to a GUID that defines the document language.</span></span>  
   
  `languageVendor`  
- <span data-ttu-id="ce24a-109">[in] 문서 언어에 대 한 공급 업체의 id를 정의 하는 GUID에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="ce24a-109">[in] A pointer to a GUID that defines the identity of the vendor for the document language.</span></span>  
+ <span data-ttu-id="acdd1-109">[in] A pointer to a GUID that defines the identity of the vendor for the document language.</span><span class="sxs-lookup"><span data-stu-id="acdd1-109">[in] A pointer to a GUID that defines the identity of the vendor for the document language.</span></span>  
   
  `documentType`  
- <span data-ttu-id="ce24a-110">[in] 문서 형식을 정의 하는 GUID에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="ce24a-110">[in] A pointer to a GUID that defines the type of the document.</span></span>  
+ <span data-ttu-id="acdd1-110">[in] A pointer to a GUID that defines the type of the document.</span><span class="sxs-lookup"><span data-stu-id="acdd1-110">[in] A pointer to a GUID that defines the type of the document.</span></span>  
   
  `pRetVal`  
- <span data-ttu-id="ce24a-111">[out] 반환 된 포인터 [ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md) 인터페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="ce24a-111">[out] A pointer to the returned [ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md) interface.</span></span>  
+ <span data-ttu-id="acdd1-111">[out] A pointer to the returned [ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md) interface.</span><span class="sxs-lookup"><span data-stu-id="acdd1-111">[out] A pointer to the returned [ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md) interface.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="ce24a-112">반환 값</span><span class="sxs-lookup"><span data-stu-id="ce24a-112">Return Value</span></span>  
- <span data-ttu-id="ce24a-113">메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="ce24a-113">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="acdd1-112">반환 값</span><span class="sxs-lookup"><span data-stu-id="acdd1-112">Return Value</span></span>  
+ <span data-ttu-id="acdd1-113">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="acdd1-113">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ce24a-114">요구 사항</span><span class="sxs-lookup"><span data-stu-id="ce24a-114">Requirements</span></span>  
- <span data-ttu-id="ce24a-115">**헤더:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="ce24a-115">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="acdd1-114">요구 사항</span><span class="sxs-lookup"><span data-stu-id="acdd1-114">Requirements</span></span>  
+ <span data-ttu-id="acdd1-115">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="acdd1-115">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ce24a-116">참고자료</span><span class="sxs-lookup"><span data-stu-id="ce24a-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="acdd1-116">참조</span><span class="sxs-lookup"><span data-stu-id="acdd1-116">See also</span></span>
 
-- [<span data-ttu-id="ce24a-117">ISymUnmanagedWriter 인터페이스</span><span class="sxs-lookup"><span data-stu-id="ce24a-117">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [<span data-ttu-id="acdd1-117">ISymUnmanagedWriter 인터페이스</span><span class="sxs-lookup"><span data-stu-id="acdd1-117">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

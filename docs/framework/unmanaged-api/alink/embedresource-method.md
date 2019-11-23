@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 667bd954-6dc6-4020-a3cb-0e8224179993
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5f6140e5f85a7ee21773c96a5abdccadaddab92e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 24279870e7406de649df56e8aad31252513e95c7
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70777453"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446541"
 ---
-# <a name="embedresource-method"></a><span data-ttu-id="a5a45-102">EmbedResource 메서드</span><span class="sxs-lookup"><span data-stu-id="a5a45-102">EmbedResource Method</span></span>
-<span data-ttu-id="a5a45-103">포함 리소스를 선언 합니다.</span><span class="sxs-lookup"><span data-stu-id="a5a45-103">Declares an embedded resource.</span></span> <span data-ttu-id="a5a45-104">이 메서드는 실제로 리소스를 포함 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="a5a45-104">This method does not actually embed the resource.</span></span>  
+# <a name="embedresource-method"></a><span data-ttu-id="19db7-102">EmbedResource 메서드</span><span class="sxs-lookup"><span data-stu-id="19db7-102">EmbedResource Method</span></span>
+<span data-ttu-id="19db7-103">Declares an embedded resource.</span><span class="sxs-lookup"><span data-stu-id="19db7-103">Declares an embedded resource.</span></span> <span data-ttu-id="19db7-104">This method does not actually embed the resource.</span><span class="sxs-lookup"><span data-stu-id="19db7-104">This method does not actually embed the resource.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a5a45-105">구문</span><span class="sxs-lookup"><span data-stu-id="a5a45-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="19db7-105">구문</span><span class="sxs-lookup"><span data-stu-id="19db7-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT EmbedResource(  
@@ -39,30 +37,30 @@ HRESULT EmbedResource(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a5a45-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="a5a45-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="19db7-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="19db7-106">Parameters</span></span>  
  `AssemblyID`  
- <span data-ttu-id="a5a45-107">어셈블리의 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="a5a45-107">ID of the assembly.</span></span>  
+ <span data-ttu-id="19db7-107">ID of the assembly.</span><span class="sxs-lookup"><span data-stu-id="19db7-107">ID of the assembly.</span></span>  
   
  `FileToken`  
- <span data-ttu-id="a5a45-108">리소스를 포함 하는 파일의 파일 토큰 또는 어셈블리 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="a5a45-108">File token or assembly ID of file that contains the resource.</span></span>  
+ <span data-ttu-id="19db7-108">File token or assembly ID of file that contains the resource.</span><span class="sxs-lookup"><span data-stu-id="19db7-108">File token or assembly ID of file that contains the resource.</span></span>  
   
  `pszResourceName`  
- <span data-ttu-id="a5a45-109">리소스의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="a5a45-109">Name of the resource.</span></span>  
+ <span data-ttu-id="19db7-109">Name of the resource.</span><span class="sxs-lookup"><span data-stu-id="19db7-109">Name of the resource.</span></span>  
   
  `dwOffset`  
- <span data-ttu-id="a5a45-110">RVA에서 리소스의 오프셋입니다.</span><span class="sxs-lookup"><span data-stu-id="a5a45-110">Offset of resource from RVA.</span></span>  
+ <span data-ttu-id="19db7-110">Offset of resource from RVA.</span><span class="sxs-lookup"><span data-stu-id="19db7-110">Offset of resource from RVA.</span></span>  
   
  `dwFlags`  
- <span data-ttu-id="a5a45-111">`mrPublic` 및`mrPrivate`와 같은 내게 필요한 옵션 플래그입니다.</span><span class="sxs-lookup"><span data-stu-id="a5a45-111">Accessibility flags such as `mrPublic` and `mrPrivate`.</span></span> <span data-ttu-id="a5a45-112">이러한 플래그는 [DefineExportedType 메서드에](../metadata/imetadataassemblyemit-defineexportedtype-method.md)전달 될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a5a45-112">These flags may be passed to [DefineExportedType Method](../metadata/imetadataassemblyemit-defineexportedtype-method.md).</span></span>  
+ <span data-ttu-id="19db7-111">Accessibility flags such as `mrPublic` and `mrPrivate`.</span><span class="sxs-lookup"><span data-stu-id="19db7-111">Accessibility flags such as `mrPublic` and `mrPrivate`.</span></span> <span data-ttu-id="19db7-112">These flags may be passed to [DefineExportedType Method](../metadata/imetadataassemblyemit-defineexportedtype-method.md).</span><span class="sxs-lookup"><span data-stu-id="19db7-112">These flags may be passed to [DefineExportedType Method](../metadata/imetadataassemblyemit-defineexportedtype-method.md).</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="a5a45-113">반환 값</span><span class="sxs-lookup"><span data-stu-id="a5a45-113">Return Value</span></span>  
- <span data-ttu-id="a5a45-114">메서드가 성공 하면 S_OK를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="a5a45-114">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="19db7-113">반환 값</span><span class="sxs-lookup"><span data-stu-id="19db7-113">Return Value</span></span>  
+ <span data-ttu-id="19db7-114">Returns S_OK if the method succeeds.</span><span class="sxs-lookup"><span data-stu-id="19db7-114">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a5a45-115">요구 사항</span><span class="sxs-lookup"><span data-stu-id="a5a45-115">Requirements</span></span>  
- <span data-ttu-id="a5a45-116">Alink가 필요 합니다.</span><span class="sxs-lookup"><span data-stu-id="a5a45-116">Requires alink.h.</span></span>  
+## <a name="requirements"></a><span data-ttu-id="19db7-115">요구 사항</span><span class="sxs-lookup"><span data-stu-id="19db7-115">Requirements</span></span>  
+ <span data-ttu-id="19db7-116">Requires alink.h.</span><span class="sxs-lookup"><span data-stu-id="19db7-116">Requires alink.h.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a5a45-117">참고자료</span><span class="sxs-lookup"><span data-stu-id="a5a45-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="19db7-117">참조</span><span class="sxs-lookup"><span data-stu-id="19db7-117">See also</span></span>
 
-- [<span data-ttu-id="a5a45-118">IALink 인터페이스</span><span class="sxs-lookup"><span data-stu-id="a5a45-118">IALink Interface</span></span>](ialink-interface.md)
-- [<span data-ttu-id="a5a45-119">IALink2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="a5a45-119">IALink2 Interface</span></span>](ialink2-interface.md)
-- [<span data-ttu-id="a5a45-120">ALink API</span><span class="sxs-lookup"><span data-stu-id="a5a45-120">ALink API</span></span>](index.md)
+- [<span data-ttu-id="19db7-118">IALink 인터페이스</span><span class="sxs-lookup"><span data-stu-id="19db7-118">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="19db7-119">IALink2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="19db7-119">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="19db7-120">ALink API</span><span class="sxs-lookup"><span data-stu-id="19db7-120">ALink API</span></span>](index.md)

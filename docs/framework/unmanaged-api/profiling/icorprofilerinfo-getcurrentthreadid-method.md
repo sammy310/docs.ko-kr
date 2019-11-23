@@ -15,41 +15,39 @@ helpviewer_keywords:
 ms.assetid: 39bbdb30-6a7a-4202-8da3-67ae9a0ab3a8
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: db5ed871734205d59c602cc8b5c0cc9e8ac4682a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fc5356f097f869403212cd234a508f1f29c5ec94
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67762877"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450391"
 ---
-# <a name="icorprofilerinfogetcurrentthreadid-method"></a><span data-ttu-id="82f8c-102">ICorProfilerInfo::GetCurrentThreadID 메서드</span><span class="sxs-lookup"><span data-stu-id="82f8c-102">ICorProfilerInfo::GetCurrentThreadID Method</span></span>
-<span data-ttu-id="82f8c-103">관리 되는 스레드 이면 현재 스레드의 ID를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="82f8c-103">Gets the ID of the current thread, if it is a managed thread.</span></span>  
+# <a name="icorprofilerinfogetcurrentthreadid-method"></a><span data-ttu-id="89c1f-102">ICorProfilerInfo::GetCurrentThreadID 메서드</span><span class="sxs-lookup"><span data-stu-id="89c1f-102">ICorProfilerInfo::GetCurrentThreadID Method</span></span>
+<span data-ttu-id="89c1f-103">Gets the ID of the current thread, if it is a managed thread.</span><span class="sxs-lookup"><span data-stu-id="89c1f-103">Gets the ID of the current thread, if it is a managed thread.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="82f8c-104">구문</span><span class="sxs-lookup"><span data-stu-id="82f8c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="89c1f-104">구문</span><span class="sxs-lookup"><span data-stu-id="89c1f-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetCurrentThreadID(  
     [out] ThreadID *pThreadId);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="82f8c-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="82f8c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="89c1f-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="89c1f-105">Parameters</span></span>  
  `pThreadId`  
- <span data-ttu-id="82f8c-106">[out] 관리 되는 스레드의 반환된 된 ID에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="82f8c-106">[out] A pointer to the returned ID of the managed thread.</span></span>  
+ <span data-ttu-id="89c1f-106">[out] A pointer to the returned ID of the managed thread.</span><span class="sxs-lookup"><span data-stu-id="89c1f-106">[out] A pointer to the returned ID of the managed thread.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="82f8c-107">설명</span><span class="sxs-lookup"><span data-stu-id="82f8c-107">Remarks</span></span>  
- <span data-ttu-id="82f8c-108">현재 스레드에 내부 런타임 스레드 또는 다른 관리 되지 않는 스레드 이면 `GetCurrentThreadID` CORPROF_E_NOT_MANAGED_THREAD HRESULT를 반환 된 값으로 반환 합니다 `pThreadId` 매개 변수는 null이 됩니다.</span><span class="sxs-lookup"><span data-stu-id="82f8c-108">If the current thread is an internal runtime thread or other unmanaged thread, `GetCurrentThreadID` returns CORPROF_E_NOT_MANAGED_THREAD as the HRESULT, and the returned value of the `pThreadId` parameter will be null.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="89c1f-107">주의</span><span class="sxs-lookup"><span data-stu-id="89c1f-107">Remarks</span></span>  
+ <span data-ttu-id="89c1f-108">If the current thread is an internal runtime thread or other unmanaged thread, `GetCurrentThreadID` returns CORPROF_E_NOT_MANAGED_THREAD as the HRESULT, and the returned value of the `pThreadId` parameter will be null.</span><span class="sxs-lookup"><span data-stu-id="89c1f-108">If the current thread is an internal runtime thread or other unmanaged thread, `GetCurrentThreadID` returns CORPROF_E_NOT_MANAGED_THREAD as the HRESULT, and the returned value of the `pThreadId` parameter will be null.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="82f8c-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="82f8c-109">Requirements</span></span>  
- <span data-ttu-id="82f8c-110">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="82f8c-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="89c1f-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="89c1f-109">Requirements</span></span>  
+ <span data-ttu-id="89c1f-110">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="89c1f-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="82f8c-111">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="82f8c-111">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="89c1f-111">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="89c1f-111">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="82f8c-112">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="82f8c-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="89c1f-112">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="89c1f-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="82f8c-113">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="82f8c-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="89c1f-113">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="89c1f-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="82f8c-114">참고자료</span><span class="sxs-lookup"><span data-stu-id="82f8c-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="89c1f-114">참조</span><span class="sxs-lookup"><span data-stu-id="89c1f-114">See also</span></span>
 
-- [<span data-ttu-id="82f8c-115">ICorProfilerInfo 인터페이스</span><span class="sxs-lookup"><span data-stu-id="82f8c-115">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="89c1f-115">ICorProfilerInfo 인터페이스</span><span class="sxs-lookup"><span data-stu-id="89c1f-115">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

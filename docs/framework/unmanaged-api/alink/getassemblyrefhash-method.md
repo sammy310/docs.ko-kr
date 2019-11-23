@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 091a18bd-e901-46f6-b999-74d71c8a7c41
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d19eebaa3aa0ebb6f9807f0cf277b7ed6183c148
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: c68f43ce2f79ee6e4ec44ce4b2f0dbfb1c1185fa
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70777200"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74433880"
 ---
-# <a name="getassemblyrefhash-method"></a><span data-ttu-id="60171-102">GetAssemblyRefHash 메서드</span><span class="sxs-lookup"><span data-stu-id="60171-102">GetAssemblyRefHash Method</span></span>
-<span data-ttu-id="60171-103">지정 된 어셈블리에 대 한 해시 blob를 검색 합니다.</span><span class="sxs-lookup"><span data-stu-id="60171-103">Retrieves a hash blob for a given assembly.</span></span>  
+# <a name="getassemblyrefhash-method"></a><span data-ttu-id="bf3e0-102">GetAssemblyRefHash 메서드</span><span class="sxs-lookup"><span data-stu-id="bf3e0-102">GetAssemblyRefHash Method</span></span>
+<span data-ttu-id="bf3e0-103">Retrieves a hash blob for a given assembly.</span><span class="sxs-lookup"><span data-stu-id="bf3e0-103">Retrieves a hash blob for a given assembly.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="60171-104">구문</span><span class="sxs-lookup"><span data-stu-id="60171-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="bf3e0-104">구문</span><span class="sxs-lookup"><span data-stu-id="bf3e0-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetAssemblyRefHash(  
@@ -36,24 +34,24 @@ HRESULT GetAssemblyRefHash(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="60171-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="60171-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="bf3e0-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="bf3e0-105">Parameters</span></span>  
  `FileToken`  
- <span data-ttu-id="60171-106">해시가 참조할 어셈블리의 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="60171-106">ID of assembly to which the hash will refer.</span></span>  
+ <span data-ttu-id="bf3e0-106">ID of assembly to which the hash will refer.</span><span class="sxs-lookup"><span data-stu-id="bf3e0-106">ID of assembly to which the hash will refer.</span></span>  
   
  `ppvHash`  
- <span data-ttu-id="60171-107">결과 해시 blob을 받습니다.</span><span class="sxs-lookup"><span data-stu-id="60171-107">Receives the resulting hash blob.</span></span>  
+ <span data-ttu-id="bf3e0-107">Receives the resulting hash blob.</span><span class="sxs-lookup"><span data-stu-id="bf3e0-107">Receives the resulting hash blob.</span></span>  
   
  `pcbHash`  
- <span data-ttu-id="60171-108">해시 blob의 크기 (바이트)를 수신 합니다.</span><span class="sxs-lookup"><span data-stu-id="60171-108">Receives size, in bytes, of hash blob.</span></span>  
+ <span data-ttu-id="bf3e0-108">Receives size, in bytes, of hash blob.</span><span class="sxs-lookup"><span data-stu-id="bf3e0-108">Receives size, in bytes, of hash blob.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="60171-109">반환 값</span><span class="sxs-lookup"><span data-stu-id="60171-109">Return Value</span></span>  
- <span data-ttu-id="60171-110">메서드가 성공 하면 S_OK를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="60171-110">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="bf3e0-109">반환 값</span><span class="sxs-lookup"><span data-stu-id="bf3e0-109">Return Value</span></span>  
+ <span data-ttu-id="bf3e0-110">Returns S_OK if the method succeeds.</span><span class="sxs-lookup"><span data-stu-id="bf3e0-110">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="60171-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="60171-111">Requirements</span></span>  
- <span data-ttu-id="60171-112">Alink 필요</span><span class="sxs-lookup"><span data-stu-id="60171-112">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="bf3e0-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="bf3e0-111">Requirements</span></span>  
+ <span data-ttu-id="bf3e0-112">Requires alink.h</span><span class="sxs-lookup"><span data-stu-id="bf3e0-112">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="60171-113">참고자료</span><span class="sxs-lookup"><span data-stu-id="60171-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bf3e0-113">참조</span><span class="sxs-lookup"><span data-stu-id="bf3e0-113">See also</span></span>
 
-- [<span data-ttu-id="60171-114">IALink 인터페이스</span><span class="sxs-lookup"><span data-stu-id="60171-114">IALink Interface</span></span>](ialink-interface.md)
-- [<span data-ttu-id="60171-115">IALink2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="60171-115">IALink2 Interface</span></span>](ialink2-interface.md)
-- [<span data-ttu-id="60171-116">ALink API</span><span class="sxs-lookup"><span data-stu-id="60171-116">ALink API</span></span>](index.md)
+- [<span data-ttu-id="bf3e0-114">IALink 인터페이스</span><span class="sxs-lookup"><span data-stu-id="bf3e0-114">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="bf3e0-115">IALink2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="bf3e0-115">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="bf3e0-116">ALink API</span><span class="sxs-lookup"><span data-stu-id="bf3e0-116">ALink API</span></span>](index.md)

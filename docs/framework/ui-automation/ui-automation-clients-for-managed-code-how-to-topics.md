@@ -7,25 +7,25 @@ helpviewer_keywords:
 - UI Automation, clients for managed code
 - managed code, UI Automation clients
 ms.assetid: 665b01b5-25f5-47a1-ab11-cffe8ebbf2a7
-ms.openlocfilehash: 9a419f8ac8b94d4f33c7e771c68f230c80a24cbf
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 4bec3ec2777c06865390a8776895b1ceb72c8719
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71042528"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446807"
 ---
-# <a name="ui-automation-clients-for-managed-code-how-to-topics"></a><span data-ttu-id="882b6-102">관리 코드 방법 항목의 UI 자동화 클라이언트</span><span class="sxs-lookup"><span data-stu-id="882b6-102">UI Automation Clients for Managed Code How-to Topics</span></span>
+# <a name="ui-automation-clients-for-managed-code-how-to-topics"></a><span data-ttu-id="95314-102">관리 코드 방법 항목의 UI 자동화 클라이언트</span><span class="sxs-lookup"><span data-stu-id="95314-102">UI Automation Clients for Managed Code How-to Topics</span></span>
 > [!NOTE]
-> <span data-ttu-id="882b6-103">이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다.</span><span class="sxs-lookup"><span data-stu-id="882b6-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="882b6-104">에 대 한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [최신 정보는 Windows Automation API: UI 자동화](https://go.microsoft.com/fwlink/?LinkID=156746).</span><span class="sxs-lookup"><span data-stu-id="882b6-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
+> <span data-ttu-id="95314-103">이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다.</span><span class="sxs-lookup"><span data-stu-id="95314-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="95314-104">[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="95314-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32).</span></span>  
   
- <span data-ttu-id="882b6-105">이 섹션에서는 클라이언트 응용 프로그램에서의 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 기능 구현에 대 한 자세한 정보를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="882b6-105">This section provides detailed information about implementing features of [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] in a client application.</span></span>  
+ <span data-ttu-id="95314-105">This section provides detailed information about implementing features of [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] in a client application.</span><span class="sxs-lookup"><span data-stu-id="95314-105">This section provides detailed information about implementing features of [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] in a client application.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="882b6-106">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="882b6-106">In This Section</span></span>  
- [<span data-ttu-id="882b6-107">속성 조건을 기반으로 UI 자동화 요소 찾기</span><span class="sxs-lookup"><span data-stu-id="882b6-107">Find a UI Automation Element Based on a Property Condition</span></span>](find-a-ui-automation-element-based-on-a-property-condition.md)  
- [<span data-ttu-id="882b6-108">TreeWalker를 사용하여 UI 자동화 요소 간 탐색</span><span class="sxs-lookup"><span data-stu-id="882b6-108">Navigate Among UI Automation Elements with TreeWalker</span></span>](navigate-among-ui-automation-elements-with-treewalker.md)  
- [<span data-ttu-id="882b6-109">목록 항목의 UI 자동화 요소 찾기</span><span class="sxs-lookup"><span data-stu-id="882b6-109">Find a UI Automation Element for a List Item</span></span>](find-a-ui-automation-element-for-a-list-item.md)  
- [<span data-ttu-id="882b6-110">UI 자동화 요소 속성 가져오기</span><span class="sxs-lookup"><span data-stu-id="882b6-110">Get UI Automation Element Properties</span></span>](get-ui-automation-element-properties.md)  
- [<span data-ttu-id="882b6-111">UI 자동화의 캐싱 사용</span><span class="sxs-lookup"><span data-stu-id="882b6-111">Use Caching in UI Automation</span></span>](use-caching-in-ui-automation.md)  
- [<span data-ttu-id="882b6-112">UI 자동화 이벤트 구독</span><span class="sxs-lookup"><span data-stu-id="882b6-112">Subscribe to UI Automation Events</span></span>](subscribe-to-ui-automation-events.md)  
- [<span data-ttu-id="882b6-113">클라이언트 쪽 공급자 어셈블리 등록</span><span class="sxs-lookup"><span data-stu-id="882b6-113">Register a Client-Side Provider Assembly</span></span>](register-a-client-side-provider-assembly.md)  
- [<span data-ttu-id="882b6-114">AutomationID 속성 사용</span><span class="sxs-lookup"><span data-stu-id="882b6-114">Use the AutomationID Property</span></span>](use-the-automationid-property.md)
+## <a name="in-this-section"></a><span data-ttu-id="95314-106">단원 내용</span><span class="sxs-lookup"><span data-stu-id="95314-106">In This Section</span></span>  
+ [<span data-ttu-id="95314-107">속성 조건을 기반으로 UI 자동화 요소 찾기</span><span class="sxs-lookup"><span data-stu-id="95314-107">Find a UI Automation Element Based on a Property Condition</span></span>](find-a-ui-automation-element-based-on-a-property-condition.md)  
+ [<span data-ttu-id="95314-108">TreeWalker를 사용하여 UI 자동화 요소 간 탐색</span><span class="sxs-lookup"><span data-stu-id="95314-108">Navigate Among UI Automation Elements with TreeWalker</span></span>](navigate-among-ui-automation-elements-with-treewalker.md)  
+ [<span data-ttu-id="95314-109">목록 항목의 UI 자동화 요소 찾기</span><span class="sxs-lookup"><span data-stu-id="95314-109">Find a UI Automation Element for a List Item</span></span>](find-a-ui-automation-element-for-a-list-item.md)  
+ [<span data-ttu-id="95314-110">UI 자동화 요소 속성 가져오기</span><span class="sxs-lookup"><span data-stu-id="95314-110">Get UI Automation Element Properties</span></span>](get-ui-automation-element-properties.md)  
+ [<span data-ttu-id="95314-111">UI 자동화의 캐싱 사용</span><span class="sxs-lookup"><span data-stu-id="95314-111">Use Caching in UI Automation</span></span>](use-caching-in-ui-automation.md)  
+ [<span data-ttu-id="95314-112">UI 자동화 이벤트 구독</span><span class="sxs-lookup"><span data-stu-id="95314-112">Subscribe to UI Automation Events</span></span>](subscribe-to-ui-automation-events.md)  
+ [<span data-ttu-id="95314-113">클라이언트 쪽 공급자 어셈블리 등록</span><span class="sxs-lookup"><span data-stu-id="95314-113">Register a Client-Side Provider Assembly</span></span>](register-a-client-side-provider-assembly.md)  
+ [<span data-ttu-id="95314-114">AutomationID 속성 사용</span><span class="sxs-lookup"><span data-stu-id="95314-114">Use the AutomationID Property</span></span>](use-the-automationid-property.md)

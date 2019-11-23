@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 3eb41151-a228-43e3-ba8f-e6dd3ceb8542
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5d479e9f55cf7d7a13fef99f302bfd8d9d89d47f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 401dfbea0da309db24f3052f462daa66e8bbef4a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776951"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449274"
 ---
-# <a name="isymunmanagedconstantgetsignature-method"></a><span data-ttu-id="472d9-102">ISymUnmanagedConstant::GetSignature 메서드</span><span class="sxs-lookup"><span data-stu-id="472d9-102">ISymUnmanagedConstant::GetSignature Method</span></span>
-<span data-ttu-id="472d9-103">상수의 서명을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="472d9-103">Gets the signature of the constant.</span></span>  
+# <a name="isymunmanagedconstantgetsignature-method"></a><span data-ttu-id="2cf09-102">ISymUnmanagedConstant::GetSignature 메서드</span><span class="sxs-lookup"><span data-stu-id="2cf09-102">ISymUnmanagedConstant::GetSignature Method</span></span>
+<span data-ttu-id="2cf09-103">Gets the signature of the constant.</span><span class="sxs-lookup"><span data-stu-id="2cf09-103">Gets the signature of the constant.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="472d9-104">구문</span><span class="sxs-lookup"><span data-stu-id="472d9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2cf09-104">구문</span><span class="sxs-lookup"><span data-stu-id="2cf09-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetSignature(  
@@ -37,24 +35,24 @@ HRESULT GetSignature(
         length_is(*pcSig)] BYTE sig[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="472d9-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="472d9-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="2cf09-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="2cf09-105">Parameters</span></span>  
  `cSig`  
- <span data-ttu-id="472d9-106">[in] 버퍼의 길이는 `pcSig` 매개 변수를 가리킵니다.</span><span class="sxs-lookup"><span data-stu-id="472d9-106">[in] The length of the buffer that the `pcSig` parameter points to.</span></span>  
+ <span data-ttu-id="2cf09-106">[in] The length of the buffer that the `pcSig` parameter points to.</span><span class="sxs-lookup"><span data-stu-id="2cf09-106">[in] The length of the buffer that the `pcSig` parameter points to.</span></span>  
   
  `pcSig`  
- <span data-ttu-id="472d9-107">[out] 에 대 한 포인터를 `ULONG32` 문자 시그니처를 포함 하는 데 필요한 버퍼의 크기를 받는 합니다.</span><span class="sxs-lookup"><span data-stu-id="472d9-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the signature.</span></span>  
+ <span data-ttu-id="2cf09-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the signature.</span><span class="sxs-lookup"><span data-stu-id="2cf09-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the signature.</span></span>  
   
  `sig`  
- <span data-ttu-id="472d9-108">[out] 서명을 저장 하는 버퍼입니다.</span><span class="sxs-lookup"><span data-stu-id="472d9-108">[out] The buffer that stores the signature.</span></span>  
+ <span data-ttu-id="2cf09-108">[out] The buffer that stores the signature.</span><span class="sxs-lookup"><span data-stu-id="2cf09-108">[out] The buffer that stores the signature.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="472d9-109">반환 값</span><span class="sxs-lookup"><span data-stu-id="472d9-109">Return Value</span></span>  
- <span data-ttu-id="472d9-110">메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="472d9-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="2cf09-109">반환 값</span><span class="sxs-lookup"><span data-stu-id="2cf09-109">Return Value</span></span>  
+ <span data-ttu-id="2cf09-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="2cf09-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="472d9-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="472d9-111">Requirements</span></span>  
- <span data-ttu-id="472d9-112">**헤더:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="472d9-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2cf09-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="2cf09-111">Requirements</span></span>  
+ <span data-ttu-id="2cf09-112">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="2cf09-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="472d9-113">참고자료</span><span class="sxs-lookup"><span data-stu-id="472d9-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2cf09-113">참조</span><span class="sxs-lookup"><span data-stu-id="2cf09-113">See also</span></span>
 
-- [<span data-ttu-id="472d9-114">ISymUnmanagedConstant 인터페이스</span><span class="sxs-lookup"><span data-stu-id="472d9-114">ISymUnmanagedConstant Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-interface.md)
-- [<span data-ttu-id="472d9-115">GetName 메서드</span><span class="sxs-lookup"><span data-stu-id="472d9-115">GetName Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getname-method.md)
-- [<span data-ttu-id="472d9-116">GetValue 메서드</span><span class="sxs-lookup"><span data-stu-id="472d9-116">GetValue Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getvalue-method.md)
+- [<span data-ttu-id="2cf09-114">ISymUnmanagedConstant 인터페이스</span><span class="sxs-lookup"><span data-stu-id="2cf09-114">ISymUnmanagedConstant Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-interface.md)
+- [<span data-ttu-id="2cf09-115">GetName 메서드</span><span class="sxs-lookup"><span data-stu-id="2cf09-115">GetName Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getname-method.md)
+- [<span data-ttu-id="2cf09-116">GetValue 메서드</span><span class="sxs-lookup"><span data-stu-id="2cf09-116">GetValue Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getvalue-method.md)

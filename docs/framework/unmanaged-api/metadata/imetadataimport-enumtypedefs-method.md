@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 4e508711-da92-4381-aaf8-6803075cdaa2
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 621582536c07b269dd723c9014e23c50e561957a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3854cb4aa3d229c87466c0a35a72447ceb235624
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774605"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449999"
 ---
-# <a name="imetadataimportenumtypedefs-method"></a><span data-ttu-id="3a778-102">IMetaDataImport::EnumTypeDefs 메서드</span><span class="sxs-lookup"><span data-stu-id="3a778-102">IMetaDataImport::EnumTypeDefs Method</span></span>
-<span data-ttu-id="3a778-103">현재 범위 내의 모든 형식을 나타내는 TypeDef 토큰을 열거합니다.</span><span class="sxs-lookup"><span data-stu-id="3a778-103">Enumerates TypeDef tokens representing all types within the current scope.</span></span>  
+# <a name="imetadataimportenumtypedefs-method"></a><span data-ttu-id="81e3d-102">IMetaDataImport::EnumTypeDefs 메서드</span><span class="sxs-lookup"><span data-stu-id="81e3d-102">IMetaDataImport::EnumTypeDefs Method</span></span>
+<span data-ttu-id="81e3d-103">현재 범위 내의 모든 형식을 나타내는 TypeDef 토큰을 열거합니다.</span><span class="sxs-lookup"><span data-stu-id="81e3d-103">Enumerates TypeDef tokens representing all types within the current scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3a778-104">구문</span><span class="sxs-lookup"><span data-stu-id="3a778-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="81e3d-104">구문</span><span class="sxs-lookup"><span data-stu-id="81e3d-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT EnumTypeDefs (  
@@ -38,39 +36,39 @@ HRESULT EnumTypeDefs (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="3a778-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="3a778-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="81e3d-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="81e3d-105">Parameters</span></span>  
  `phEnum`  
- <span data-ttu-id="3a778-106">[out] 새 열거자에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="3a778-106">[out] A pointer to the new enumerator.</span></span> <span data-ttu-id="3a778-107">이 메서드의 첫 번째 호출에 대 한 NULL 이어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="3a778-107">This must be NULL for the first call of this method.</span></span>  
+ <span data-ttu-id="81e3d-106">[out] A pointer to the new enumerator.</span><span class="sxs-lookup"><span data-stu-id="81e3d-106">[out] A pointer to the new enumerator.</span></span> <span data-ttu-id="81e3d-107">This must be NULL for the first call of this method.</span><span class="sxs-lookup"><span data-stu-id="81e3d-107">This must be NULL for the first call of this method.</span></span>  
   
  `rTypeDefs`  
- <span data-ttu-id="3a778-108">[in] TypeDef 토큰을 저장 하는 데 사용 되는 배열입니다.</span><span class="sxs-lookup"><span data-stu-id="3a778-108">[in] The array used to store the TypeDef tokens.</span></span>  
+ <span data-ttu-id="81e3d-108">[in] The array used to store the TypeDef tokens.</span><span class="sxs-lookup"><span data-stu-id="81e3d-108">[in] The array used to store the TypeDef tokens.</span></span>  
   
  `cMax`  
- <span data-ttu-id="3a778-109">[in] `rTypeDefs` 배열의 최대 크기입니다.</span><span class="sxs-lookup"><span data-stu-id="3a778-109">[in] The maximum size of the `rTypeDefs` array.</span></span>  
+ <span data-ttu-id="81e3d-109">[in] `rTypeDefs` 배열의 최대 크기입니다.</span><span class="sxs-lookup"><span data-stu-id="81e3d-109">[in] The maximum size of the `rTypeDefs` array.</span></span>  
   
  `pcTypeDefs`  
- <span data-ttu-id="3a778-110">[out] TypeDef 토큰에서 반환 된 수가 `rTypeDefs`합니다.</span><span class="sxs-lookup"><span data-stu-id="3a778-110">[out] The number of TypeDef tokens returned in `rTypeDefs`.</span></span>  
+ <span data-ttu-id="81e3d-110">[out] The number of TypeDef tokens returned in `rTypeDefs`.</span><span class="sxs-lookup"><span data-stu-id="81e3d-110">[out] The number of TypeDef tokens returned in `rTypeDefs`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="3a778-111">반환 값</span><span class="sxs-lookup"><span data-stu-id="3a778-111">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="81e3d-111">반환 값</span><span class="sxs-lookup"><span data-stu-id="81e3d-111">Return Value</span></span>  
   
-|<span data-ttu-id="3a778-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="3a778-112">HRESULT</span></span>|<span data-ttu-id="3a778-113">Description</span><span class="sxs-lookup"><span data-stu-id="3a778-113">Description</span></span>|  
+|<span data-ttu-id="81e3d-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="81e3d-112">HRESULT</span></span>|<span data-ttu-id="81e3d-113">설명</span><span class="sxs-lookup"><span data-stu-id="81e3d-113">Description</span></span>|  
 |-------------|-----------------|  
-|`S_OK`|<span data-ttu-id="3a778-114">`EnumTypeDefs` 성공적으로 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="3a778-114">`EnumTypeDefs` returned successfully.</span></span>|  
-|`S_FALSE`|<span data-ttu-id="3a778-115">열거할 토큰이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3a778-115">There are no tokens to enumerate.</span></span> <span data-ttu-id="3a778-116">이런 경우 `pcTypeDefs` 0입니다.</span><span class="sxs-lookup"><span data-stu-id="3a778-116">In that case, `pcTypeDefs` is zero.</span></span>|  
+|`S_OK`|<span data-ttu-id="81e3d-114">`EnumTypeDefs` returned successfully.</span><span class="sxs-lookup"><span data-stu-id="81e3d-114">`EnumTypeDefs` returned successfully.</span></span>|  
+|`S_FALSE`|<span data-ttu-id="81e3d-115">There are no tokens to enumerate.</span><span class="sxs-lookup"><span data-stu-id="81e3d-115">There are no tokens to enumerate.</span></span> <span data-ttu-id="81e3d-116">In that case, `pcTypeDefs` is zero.</span><span class="sxs-lookup"><span data-stu-id="81e3d-116">In that case, `pcTypeDefs` is zero.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="3a778-117">설명</span><span class="sxs-lookup"><span data-stu-id="3a778-117">Remarks</span></span>  
- <span data-ttu-id="3a778-118">TypeDef 토큰에는 확장성 메커니즘을 통해 추가 된 모든 형식 뿐만 아니라 클래스 또는 인터페이스를 같은 형식을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="3a778-118">The TypeDef token represents a type such as a class or an interface, as well as any type added via an extensibility mechanism.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="81e3d-117">주의</span><span class="sxs-lookup"><span data-stu-id="81e3d-117">Remarks</span></span>  
+ <span data-ttu-id="81e3d-118">The TypeDef token represents a type such as a class or an interface, as well as any type added via an extensibility mechanism.</span><span class="sxs-lookup"><span data-stu-id="81e3d-118">The TypeDef token represents a type such as a class or an interface, as well as any type added via an extensibility mechanism.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3a778-119">요구 사항</span><span class="sxs-lookup"><span data-stu-id="3a778-119">Requirements</span></span>  
- <span data-ttu-id="3a778-120">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="3a778-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="81e3d-119">요구 사항</span><span class="sxs-lookup"><span data-stu-id="81e3d-119">Requirements</span></span>  
+ <span data-ttu-id="81e3d-120">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="81e3d-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3a778-121">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="3a778-121">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="81e3d-121">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="81e3d-121">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="3a778-122">**라이브러리:** MsCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="3a778-122">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="81e3d-122">**Library:** Included as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="81e3d-122">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="3a778-123">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3a778-123">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="81e3d-123">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="81e3d-123">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3a778-124">참고자료</span><span class="sxs-lookup"><span data-stu-id="3a778-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="81e3d-124">참조</span><span class="sxs-lookup"><span data-stu-id="81e3d-124">See also</span></span>
 
-- [<span data-ttu-id="3a778-125">IMetaDataImport 인터페이스</span><span class="sxs-lookup"><span data-stu-id="3a778-125">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="3a778-126">IMetaDataImport2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="3a778-126">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="81e3d-125">IMetaDataImport 인터페이스</span><span class="sxs-lookup"><span data-stu-id="81e3d-125">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="81e3d-126">IMetaDataImport2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="81e3d-126">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 1d03bb15-a2c8-4a04-8fc6-b126c89c3778
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 88f594117fffedb6acafef26a9e834dd951ea5bb
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: cacf7eab1e53f590ad46fd98ed2f5dcbd14cd30a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70787533"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74434412"
 ---
-# <a name="endmerge-method"></a><span data-ttu-id="a3393-102">EndMerge 메서드</span><span class="sxs-lookup"><span data-stu-id="a3393-102">EndMerge Method</span></span>
-<span data-ttu-id="a3393-103">모든 사용자 지정 특성이 내보내기 범위에 병합 되었음을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="a3393-103">Indicates that all custom attributes have been merged into the emit scope.</span></span>  
+# <a name="endmerge-method"></a><span data-ttu-id="89c57-102">EndMerge 메서드</span><span class="sxs-lookup"><span data-stu-id="89c57-102">EndMerge Method</span></span>
+<span data-ttu-id="89c57-103">Indicates that all custom attributes have been merged into the emit scope.</span><span class="sxs-lookup"><span data-stu-id="89c57-103">Indicates that all custom attributes have been merged into the emit scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a3393-104">구문</span><span class="sxs-lookup"><span data-stu-id="a3393-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="89c57-104">구문</span><span class="sxs-lookup"><span data-stu-id="89c57-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT EndMerge(  
@@ -35,18 +33,18 @@ HRESULT EndMerge(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a3393-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="a3393-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="89c57-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="89c57-105">Parameters</span></span>  
  `AssemblyID`  
- <span data-ttu-id="a3393-106">어셈블리의 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="a3393-106">ID of the assembly.</span></span>  
+ <span data-ttu-id="89c57-106">ID of the assembly.</span><span class="sxs-lookup"><span data-stu-id="89c57-106">ID of the assembly.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="a3393-107">반환 값</span><span class="sxs-lookup"><span data-stu-id="a3393-107">Return Value</span></span>  
- <span data-ttu-id="a3393-108">메서드가 성공 하면 S_OK를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="a3393-108">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="89c57-107">반환 값</span><span class="sxs-lookup"><span data-stu-id="89c57-107">Return Value</span></span>  
+ <span data-ttu-id="89c57-108">Returns S_OK if the method succeeds.</span><span class="sxs-lookup"><span data-stu-id="89c57-108">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a3393-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="a3393-109">Requirements</span></span>  
- <span data-ttu-id="a3393-110">Alink 필요</span><span class="sxs-lookup"><span data-stu-id="a3393-110">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="89c57-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="89c57-109">Requirements</span></span>  
+ <span data-ttu-id="89c57-110">Requires alink.h</span><span class="sxs-lookup"><span data-stu-id="89c57-110">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a3393-111">참고자료</span><span class="sxs-lookup"><span data-stu-id="a3393-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="89c57-111">참조</span><span class="sxs-lookup"><span data-stu-id="89c57-111">See also</span></span>
 
-- [<span data-ttu-id="a3393-112">IALink 인터페이스</span><span class="sxs-lookup"><span data-stu-id="a3393-112">IALink Interface</span></span>](ialink-interface.md)
-- [<span data-ttu-id="a3393-113">IALink2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="a3393-113">IALink2 Interface</span></span>](ialink2-interface.md)
-- [<span data-ttu-id="a3393-114">ALink API</span><span class="sxs-lookup"><span data-stu-id="a3393-114">ALink API</span></span>](index.md)
+- [<span data-ttu-id="89c57-112">IALink 인터페이스</span><span class="sxs-lookup"><span data-stu-id="89c57-112">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="89c57-113">IALink2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="89c57-113">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="89c57-114">ALink API</span><span class="sxs-lookup"><span data-stu-id="89c57-114">ALink API</span></span>](index.md)

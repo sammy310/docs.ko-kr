@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 4e3fbe6c-b82a-4181-ab17-7faa1263f5b3
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5db205993bc1a0665dc0003948ce805813251f48
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6a561205602920123176bd421ca2ef1b601166c1
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70787457"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74426053"
 ---
-# <a name="getfiledef-method"></a><span data-ttu-id="ac86d-102">GetFileDef 메서드</span><span class="sxs-lookup"><span data-stu-id="ac86d-102">GetFileDef Method</span></span>
-<span data-ttu-id="ac86d-103">ALink에서 할당 된 토큰과는 반대로 메타 데이터에 사용 되는 실제 FileDef 토큰을 검색 합니다.</span><span class="sxs-lookup"><span data-stu-id="ac86d-103">Retrieves the actual FileDef token used in metadata (as opposed to the token assigned by ALink).</span></span>  
+# <a name="getfiledef-method"></a><span data-ttu-id="04543-102">GetFileDef 메서드</span><span class="sxs-lookup"><span data-stu-id="04543-102">GetFileDef Method</span></span>
+<span data-ttu-id="04543-103">Retrieves the actual FileDef token used in metadata (as opposed to the token assigned by ALink).</span><span class="sxs-lookup"><span data-stu-id="04543-103">Retrieves the actual FileDef token used in metadata (as opposed to the token assigned by ALink).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ac86d-104">구문</span><span class="sxs-lookup"><span data-stu-id="ac86d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="04543-104">구문</span><span class="sxs-lookup"><span data-stu-id="04543-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetFileDef(  
@@ -36,24 +34,24 @@ HRESULT GetFileDef(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ac86d-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="ac86d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="04543-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="04543-105">Parameters</span></span>  
  `AssemblyID`  
- <span data-ttu-id="ac86d-106">어셈블리의 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="ac86d-106">ID of the assembly.</span></span>  
+ <span data-ttu-id="04543-106">ID of the assembly.</span><span class="sxs-lookup"><span data-stu-id="04543-106">ID of the assembly.</span></span>  
   
  `TargetFile`  
- <span data-ttu-id="ac86d-107">AddFile Method 또는 AddImport 메서드에서 검색 된 추가 된 파일의 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="ac86d-107">Token of the added file as retrieved from AddFile Method or AddImport Method.</span></span>  
+ <span data-ttu-id="04543-107">Token of the added file as retrieved from AddFile Method or AddImport Method.</span><span class="sxs-lookup"><span data-stu-id="04543-107">Token of the added file as retrieved from AddFile Method or AddImport Method.</span></span>  
   
  `pScope`  
- <span data-ttu-id="ac86d-108">FileDef 토큰을 받습니다.</span><span class="sxs-lookup"><span data-stu-id="ac86d-108">Receives the FileDef token.</span></span>  
+ <span data-ttu-id="04543-108">Receives the FileDef token.</span><span class="sxs-lookup"><span data-stu-id="04543-108">Receives the FileDef token.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="ac86d-109">반환 값</span><span class="sxs-lookup"><span data-stu-id="ac86d-109">Return Value</span></span>  
- <span data-ttu-id="ac86d-110">메서드가 성공 하면 S_OK를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="ac86d-110">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="04543-109">반환 값</span><span class="sxs-lookup"><span data-stu-id="04543-109">Return Value</span></span>  
+ <span data-ttu-id="04543-110">Returns S_OK if the method succeeds.</span><span class="sxs-lookup"><span data-stu-id="04543-110">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ac86d-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="ac86d-111">Requirements</span></span>  
- <span data-ttu-id="ac86d-112">Alink 필요</span><span class="sxs-lookup"><span data-stu-id="ac86d-112">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="04543-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="04543-111">Requirements</span></span>  
+ <span data-ttu-id="04543-112">Requires alink.h</span><span class="sxs-lookup"><span data-stu-id="04543-112">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ac86d-113">참고자료</span><span class="sxs-lookup"><span data-stu-id="ac86d-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="04543-113">참조</span><span class="sxs-lookup"><span data-stu-id="04543-113">See also</span></span>
 
-- [<span data-ttu-id="ac86d-114">IALink2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="ac86d-114">IALink2 Interface</span></span>](ialink2-interface.md)
-- [<span data-ttu-id="ac86d-115">IALink 인터페이스</span><span class="sxs-lookup"><span data-stu-id="ac86d-115">IALink Interface</span></span>](ialink-interface.md)
-- [<span data-ttu-id="ac86d-116">ALink API</span><span class="sxs-lookup"><span data-stu-id="ac86d-116">ALink API</span></span>](index.md)
+- [<span data-ttu-id="04543-114">IALink2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="04543-114">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="04543-115">IALink 인터페이스</span><span class="sxs-lookup"><span data-stu-id="04543-115">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="04543-116">ALink API</span><span class="sxs-lookup"><span data-stu-id="04543-116">ALink API</span></span>](index.md)

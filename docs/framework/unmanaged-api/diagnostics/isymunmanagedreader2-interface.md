@@ -14,30 +14,28 @@ helpviewer_keywords:
 ms.assetid: a01a881b-82a3-4b3e-a3a9-9dc305c2e5f7
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 890053e1bf2e0648a41cca718e94edcf21c7e612
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a07c75e14244fb5bdf72ff2b0d344ae27672ef89
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61986221"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448273"
 ---
-# <a name="isymunmanagedreader2-interface"></a><span data-ttu-id="1b580-102">ISymUnmanagedReader2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="1b580-102">ISymUnmanagedReader2 Interface</span></span>
-<span data-ttu-id="1b580-103">문서, 메서드 및 기호 저장소 내의 변수에 대 한 액세스를 제공 하는 기호 판독기를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="1b580-103">Represents a symbol reader that provides access to documents, methods, and variables within a symbol store.</span></span> <span data-ttu-id="1b580-104">이 인터페이스를 확장 합니다 [ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md) 인터페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="1b580-104">This interface extends the [ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md) interface.</span></span>  
+# <a name="isymunmanagedreader2-interface"></a><span data-ttu-id="3a4c9-102">ISymUnmanagedReader2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="3a4c9-102">ISymUnmanagedReader2 Interface</span></span>
+<span data-ttu-id="3a4c9-103">Represents a symbol reader that provides access to documents, methods, and variables within a symbol store.</span><span class="sxs-lookup"><span data-stu-id="3a4c9-103">Represents a symbol reader that provides access to documents, methods, and variables within a symbol store.</span></span> <span data-ttu-id="3a4c9-104">This interface extends the [ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md) interface.</span><span class="sxs-lookup"><span data-stu-id="3a4c9-104">This interface extends the [ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md) interface.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="1b580-105">메서드</span><span class="sxs-lookup"><span data-stu-id="1b580-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="3a4c9-105">메서드</span><span class="sxs-lookup"><span data-stu-id="3a4c9-105">Methods</span></span>  
   
-|<span data-ttu-id="1b580-106">메서드</span><span class="sxs-lookup"><span data-stu-id="1b580-106">Method</span></span>|<span data-ttu-id="1b580-107">설명</span><span class="sxs-lookup"><span data-stu-id="1b580-107">Description</span></span>|  
+|<span data-ttu-id="3a4c9-106">메서드</span><span class="sxs-lookup"><span data-stu-id="3a4c9-106">Method</span></span>|<span data-ttu-id="3a4c9-107">설명</span><span class="sxs-lookup"><span data-stu-id="3a4c9-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="1b580-108">GetMethodByVersionPreRemap 메서드</span><span class="sxs-lookup"><span data-stu-id="1b580-108">GetMethodByVersionPreRemap Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-getmethodbyversionpreremap-method.md)|<span data-ttu-id="1b580-109">지정 된 메서드 토큰 및 편집 하며 계속 하기 버전 번호를 기호 판독기 메서드를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="1b580-109">Get a symbol reader method, given a method token and an edit-and-continue version number.</span></span>|  
-|[<span data-ttu-id="1b580-110">GetMethodsInDocument 메서드</span><span class="sxs-lookup"><span data-stu-id="1b580-110">GetMethodsInDocument Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-getmethodsindocument-method.md)|<span data-ttu-id="1b580-111">제공 된 문서의 줄 정보가 있는 모든 메서드를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="1b580-111">Gets every method that has line information in the provided document.</span></span>|  
-|[<span data-ttu-id="1b580-112">GetSymAttributePreRemap 메서드</span><span class="sxs-lookup"><span data-stu-id="1b580-112">GetSymAttributePreRemap Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-getsymattributepreremap-method.md)|<span data-ttu-id="1b580-113">해당 이름을 기준으로 사용자 지정 특성을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="1b580-113">Gets a custom attribute based upon its name.</span></span>|  
+|[<span data-ttu-id="3a4c9-108">GetMethodByVersionPreRemap 메서드</span><span class="sxs-lookup"><span data-stu-id="3a4c9-108">GetMethodByVersionPreRemap Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-getmethodbyversionpreremap-method.md)|<span data-ttu-id="3a4c9-109">Get a symbol reader method, given a method token and an edit-and-continue version number.</span><span class="sxs-lookup"><span data-stu-id="3a4c9-109">Get a symbol reader method, given a method token and an edit-and-continue version number.</span></span>|  
+|[<span data-ttu-id="3a4c9-110">GetMethodsInDocument 메서드</span><span class="sxs-lookup"><span data-stu-id="3a4c9-110">GetMethodsInDocument Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-getmethodsindocument-method.md)|<span data-ttu-id="3a4c9-111">Gets every method that has line information in the provided document.</span><span class="sxs-lookup"><span data-stu-id="3a4c9-111">Gets every method that has line information in the provided document.</span></span>|  
+|[<span data-ttu-id="3a4c9-112">GetSymAttributePreRemap 메서드</span><span class="sxs-lookup"><span data-stu-id="3a4c9-112">GetSymAttributePreRemap Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-getsymattributepreremap-method.md)|<span data-ttu-id="3a4c9-113">Gets a custom attribute based upon its name.</span><span class="sxs-lookup"><span data-stu-id="3a4c9-113">Gets a custom attribute based upon its name.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="1b580-114">요구 사항</span><span class="sxs-lookup"><span data-stu-id="1b580-114">Requirements</span></span>  
- <span data-ttu-id="1b580-115">**헤더:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="1b580-115">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3a4c9-114">요구 사항</span><span class="sxs-lookup"><span data-stu-id="3a4c9-114">Requirements</span></span>  
+ <span data-ttu-id="3a4c9-115">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="3a4c9-115">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1b580-116">참고자료</span><span class="sxs-lookup"><span data-stu-id="1b580-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3a4c9-116">참조</span><span class="sxs-lookup"><span data-stu-id="3a4c9-116">See also</span></span>
 
-- [<span data-ttu-id="1b580-117">진단 기호 저장소 인터페이스</span><span class="sxs-lookup"><span data-stu-id="1b580-117">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
-- [<span data-ttu-id="1b580-118">ISymUnmanagedReader 인터페이스</span><span class="sxs-lookup"><span data-stu-id="1b580-118">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [<span data-ttu-id="3a4c9-117">진단 기호 저장소 인터페이스</span><span class="sxs-lookup"><span data-stu-id="3a4c9-117">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+- [<span data-ttu-id="3a4c9-118">ISymUnmanagedReader 인터페이스</span><span class="sxs-lookup"><span data-stu-id="3a4c9-118">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

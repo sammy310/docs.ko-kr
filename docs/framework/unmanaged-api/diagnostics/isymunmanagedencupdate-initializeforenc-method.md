@@ -15,30 +15,28 @@ helpviewer_keywords:
 ms.assetid: 796b2154-b53c-4d07-9e67-80fd6064725a
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9b6ca8482de1eaf021d65f63a349f37cff15f8ce
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 220788a38cd0ff90fed3b681a161c579206cf805
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774701"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449023"
 ---
-# <a name="isymunmanagedencupdateinitializeforenc-method"></a><span data-ttu-id="41edd-102">ISymUnmanagedENCUpdate::InitializeForEnc 메서드</span><span class="sxs-lookup"><span data-stu-id="41edd-102">ISymUnmanagedENCUpdate::InitializeForEnc Method</span></span>
-<span data-ttu-id="41edd-103">첫 번째 호출 하기 전에 계산 메서드 경계를 허용 합니다 [ISymUnmanagedENCUpdate::UpdateSymbolStore2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-updatesymbolstore2-method.md) 메서드.</span><span class="sxs-lookup"><span data-stu-id="41edd-103">Allows method boundaries to be computed before the first call to the [ISymUnmanagedENCUpdate::UpdateSymbolStore2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-updatesymbolstore2-method.md) method.</span></span>  
+# <a name="isymunmanagedencupdateinitializeforenc-method"></a><span data-ttu-id="ac658-102">ISymUnmanagedENCUpdate::InitializeForEnc 메서드</span><span class="sxs-lookup"><span data-stu-id="ac658-102">ISymUnmanagedENCUpdate::InitializeForEnc Method</span></span>
+<span data-ttu-id="ac658-103">Allows method boundaries to be computed before the first call to the [ISymUnmanagedENCUpdate::UpdateSymbolStore2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-updatesymbolstore2-method.md) method.</span><span class="sxs-lookup"><span data-stu-id="ac658-103">Allows method boundaries to be computed before the first call to the [ISymUnmanagedENCUpdate::UpdateSymbolStore2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-updatesymbolstore2-method.md) method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="41edd-104">구문</span><span class="sxs-lookup"><span data-stu-id="41edd-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ac658-104">구문</span><span class="sxs-lookup"><span data-stu-id="ac658-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT InitializeForEnc();  
 ```  
   
-## <a name="return-value"></a><span data-ttu-id="41edd-105">반환 값</span><span class="sxs-lookup"><span data-stu-id="41edd-105">Return Value</span></span>  
- <span data-ttu-id="41edd-106">메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="41edd-106">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="ac658-105">반환 값</span><span class="sxs-lookup"><span data-stu-id="ac658-105">Return Value</span></span>  
+ <span data-ttu-id="ac658-106">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="ac658-106">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="41edd-107">요구 사항</span><span class="sxs-lookup"><span data-stu-id="41edd-107">Requirements</span></span>  
- <span data-ttu-id="41edd-108">**헤더:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="41edd-108">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ac658-107">요구 사항</span><span class="sxs-lookup"><span data-stu-id="ac658-107">Requirements</span></span>  
+ <span data-ttu-id="ac658-108">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="ac658-108">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="41edd-109">참고자료</span><span class="sxs-lookup"><span data-stu-id="41edd-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ac658-109">참조</span><span class="sxs-lookup"><span data-stu-id="ac658-109">See also</span></span>
 
-- [<span data-ttu-id="41edd-110">ISymUnmanagedENCUpdate 인터페이스</span><span class="sxs-lookup"><span data-stu-id="41edd-110">ISymUnmanagedENCUpdate Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)
+- [<span data-ttu-id="ac658-110">ISymUnmanagedENCUpdate 인터페이스</span><span class="sxs-lookup"><span data-stu-id="ac658-110">ISymUnmanagedENCUpdate Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)

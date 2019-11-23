@@ -15,50 +15,48 @@ helpviewer_keywords:
 ms.assetid: 796b63f3-c809-47f1-89cc-b23ad8eb5e79
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a1f73b36fc1e3a464155f390c25e956f9d706a73
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5de291774f1e20b4c399c416f9f52657fa8a9a84
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782930"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445817"
 ---
-# <a name="icorprofilercallbackremotingclientinvocationstarted-method"></a><span data-ttu-id="8c7ee-102">ICorProfilerCallback::RemotingClientInvocationStarted 메서드</span><span class="sxs-lookup"><span data-stu-id="8c7ee-102">ICorProfilerCallback::RemotingClientInvocationStarted Method</span></span>
-<span data-ttu-id="8c7ee-103">원격 호출을 시작한 프로파일러에 알립니다.</span><span class="sxs-lookup"><span data-stu-id="8c7ee-103">Notifies the profiler that a remoting call has started.</span></span>  
+# <a name="icorprofilercallbackremotingclientinvocationstarted-method"></a><span data-ttu-id="e7d33-102">ICorProfilerCallback::RemotingClientInvocationStarted 메서드</span><span class="sxs-lookup"><span data-stu-id="e7d33-102">ICorProfilerCallback::RemotingClientInvocationStarted Method</span></span>
+<span data-ttu-id="e7d33-103">Notifies the profiler that a remoting call has started.</span><span class="sxs-lookup"><span data-stu-id="e7d33-103">Notifies the profiler that a remoting call has started.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8c7ee-104">구문</span><span class="sxs-lookup"><span data-stu-id="8c7ee-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e7d33-104">구문</span><span class="sxs-lookup"><span data-stu-id="e7d33-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT RemotingClientInvocationStarted();  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="8c7ee-105">설명</span><span class="sxs-lookup"><span data-stu-id="8c7ee-105">Remarks</span></span>  
- <span data-ttu-id="8c7ee-106">이 이벤트는 동기 및 비동기 호출에 대해 동일 합니다.</span><span class="sxs-lookup"><span data-stu-id="8c7ee-106">This event is the same for synchronous and asynchronous calls.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e7d33-105">주의</span><span class="sxs-lookup"><span data-stu-id="e7d33-105">Remarks</span></span>  
+ <span data-ttu-id="e7d33-106">This event is the same for synchronous and asynchronous calls.</span><span class="sxs-lookup"><span data-stu-id="e7d33-106">This event is the same for synchronous and asynchronous calls.</span></span>  
   
- <span data-ttu-id="8c7ee-107">각 콜백의 다음 쌍 동일한 스레드에서 발생 합니다.</span><span class="sxs-lookup"><span data-stu-id="8c7ee-107">Each of the following pairs of callbacks will occur on the same thread:</span></span>  
+ <span data-ttu-id="e7d33-107">Each of the following pairs of callbacks will occur on the same thread:</span><span class="sxs-lookup"><span data-stu-id="e7d33-107">Each of the following pairs of callbacks will occur on the same thread:</span></span>  
   
-- <span data-ttu-id="8c7ee-108">`RemotingClientInvocationStarted` and [ICorProfilerCallback::RemotingClientSendingMessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientsendingmessage-method.md)</span><span class="sxs-lookup"><span data-stu-id="8c7ee-108">`RemotingClientInvocationStarted` and [ICorProfilerCallback::RemotingClientSendingMessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientsendingmessage-method.md)</span></span>  
+- <span data-ttu-id="e7d33-108">`RemotingClientInvocationStarted` and [ICorProfilerCallback::RemotingClientSendingMessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientsendingmessage-method.md)</span><span class="sxs-lookup"><span data-stu-id="e7d33-108">`RemotingClientInvocationStarted` and [ICorProfilerCallback::RemotingClientSendingMessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientsendingmessage-method.md)</span></span>  
   
-- <span data-ttu-id="8c7ee-109">[Icorprofilercallback:: Remotingclientreceivingreply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientreceivingreply-method.md) 고 [icorprofilercallback:: Remotingclientinvocationfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientinvocationfinished-method.md)</span><span class="sxs-lookup"><span data-stu-id="8c7ee-109">[ICorProfilerCallback::RemotingClientReceivingReply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientreceivingreply-method.md) and [ICorProfilerCallback::RemotingClientInvocationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientinvocationfinished-method.md)</span></span>  
+- <span data-ttu-id="e7d33-109">[ICorProfilerCallback::RemotingClientReceivingReply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientreceivingreply-method.md) and [ICorProfilerCallback::RemotingClientInvocationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientinvocationfinished-method.md)</span><span class="sxs-lookup"><span data-stu-id="e7d33-109">[ICorProfilerCallback::RemotingClientReceivingReply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientreceivingreply-method.md) and [ICorProfilerCallback::RemotingClientInvocationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientinvocationfinished-method.md)</span></span>  
   
-- <span data-ttu-id="8c7ee-110">[Icorprofilercallback:: Remotingserverinvocationreturned](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserverinvocationreturned-method.md) 고 [icorprofilercallback:: Remotingserversendingreply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserversendingreply-method.md)</span><span class="sxs-lookup"><span data-stu-id="8c7ee-110">[ICorProfilerCallback::RemotingServerInvocationReturned](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserverinvocationreturned-method.md) and [ICorProfilerCallback::RemotingServerSendingReply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserversendingreply-method.md)</span></span>  
+- <span data-ttu-id="e7d33-110">[ICorProfilerCallback::RemotingServerInvocationReturned](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserverinvocationreturned-method.md) and [ICorProfilerCallback::RemotingServerSendingReply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserversendingreply-method.md)</span><span class="sxs-lookup"><span data-stu-id="e7d33-110">[ICorProfilerCallback::RemotingServerInvocationReturned](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserverinvocationreturned-method.md) and [ICorProfilerCallback::RemotingServerSendingReply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserversendingreply-method.md)</span></span>  
   
- <span data-ttu-id="8c7ee-111">원격 콜백 사용 하 여 다음 문제를 파악 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="8c7ee-111">You should be aware of the following issues with the remoting callbacks:</span></span>  
+ <span data-ttu-id="e7d33-111">You should be aware of the following issues with the remoting callbacks:</span><span class="sxs-lookup"><span data-stu-id="e7d33-111">You should be aware of the following issues with the remoting callbacks:</span></span>  
   
-- <span data-ttu-id="8c7ee-112">클라이언트에서 호출 되 고 서버에서 실행 되는 함수에 대 한 알림을 올바르게 수신 되지 않습니다 있도록 remoting 함수 실행 API 프로파일러에 의해 반영 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="8c7ee-112">Execution of a remoting function is not reflected by the profiler API, so notifications for functions that are called from the client and executed on the server are not properly received.</span></span> <span data-ttu-id="8c7ee-113">프록시 개체를 통해 발생 하는 실제 호출 프로파일러, 특정 함수는 JIT 컴파일 되었지만 사용 되지는 않습니다 나타납니다.</span><span class="sxs-lookup"><span data-stu-id="8c7ee-113">The actual invocation happens via a proxy object; to the profiler, it appears that certain functions are JIT-compiled but never used.</span></span>  
+- <span data-ttu-id="e7d33-112">Execution of a remoting function is not reflected by the profiler API, so notifications for functions that are called from the client and executed on the server are not properly received.</span><span class="sxs-lookup"><span data-stu-id="e7d33-112">Execution of a remoting function is not reflected by the profiler API, so notifications for functions that are called from the client and executed on the server are not properly received.</span></span> <span data-ttu-id="e7d33-113">The actual invocation happens via a proxy object; to the profiler, it appears that certain functions are JIT-compiled but never used.</span><span class="sxs-lookup"><span data-stu-id="e7d33-113">The actual invocation happens via a proxy object; to the profiler, it appears that certain functions are JIT-compiled but never used.</span></span>  
   
-- <span data-ttu-id="8c7ee-114">프로파일러는 비동기 원격 서비스 이벤트에 대 한 정확한 알림을 받지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="8c7ee-114">The profiler does not receive accurate notifications for asynchronous remoting events.</span></span>  
+- <span data-ttu-id="e7d33-114">The profiler does not receive accurate notifications for asynchronous remoting events.</span><span class="sxs-lookup"><span data-stu-id="e7d33-114">The profiler does not receive accurate notifications for asynchronous remoting events.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8c7ee-115">요구 사항</span><span class="sxs-lookup"><span data-stu-id="8c7ee-115">Requirements</span></span>  
- <span data-ttu-id="8c7ee-116">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="8c7ee-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e7d33-115">요구 사항</span><span class="sxs-lookup"><span data-stu-id="e7d33-115">Requirements</span></span>  
+ <span data-ttu-id="e7d33-116">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="e7d33-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8c7ee-117">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="8c7ee-117">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="e7d33-117">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="e7d33-117">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="8c7ee-118">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8c7ee-118">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="e7d33-118">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e7d33-118">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="8c7ee-119">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8c7ee-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="e7d33-119">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e7d33-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8c7ee-120">참고자료</span><span class="sxs-lookup"><span data-stu-id="8c7ee-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e7d33-120">참조</span><span class="sxs-lookup"><span data-stu-id="e7d33-120">See also</span></span>
 
-- [<span data-ttu-id="8c7ee-121">ICorProfilerCallback 인터페이스</span><span class="sxs-lookup"><span data-stu-id="8c7ee-121">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="e7d33-121">ICorProfilerCallback 인터페이스</span><span class="sxs-lookup"><span data-stu-id="e7d33-121">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
