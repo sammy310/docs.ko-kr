@@ -11,11 +11,11 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 09/23/2019
 ms.locfileid: "73840786"
 ---
-# <a name="state-management"></a><span data-ttu-id="95d1f-103">상태 관리</span><span class="sxs-lookup"><span data-stu-id="95d1f-103">State management</span></span>
+# <a name="state-management"></a><span data-ttu-id="6cc57-103">상태 관리</span><span class="sxs-lookup"><span data-stu-id="6cc57-103">State management</span></span>
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-<span data-ttu-id="95d1f-104">*이 콘텐츠는 곧 제공 될 예정입니다.*</span><span class="sxs-lookup"><span data-stu-id="95d1f-104">*This content is coming soon.*</span></span>
+<span data-ttu-id="6cc57-104">*이 콘텐츠는 곧 제공 될 예정입니다.*</span><span class="sxs-lookup"><span data-stu-id="6cc57-104">*This content is coming soon.*</span></span>
 
 <!--
 - View state
@@ -25,6 +25,6 @@ ms.locfileid: "73840786"
 -->
 
 >[!div class="step-by-step"]
-><span data-ttu-id="95d1f-105">[이전](pages-routing-layouts.md)
->[다음](forms-validation.md)</span><span class="sxs-lookup"><span data-stu-id="95d1f-105">[Previous](pages-routing-layouts.md)
+><span data-ttu-id="6cc57-105">[이전](pages-routing-layouts.md)
+>[다음](forms-validation.md)</span><span class="sxs-lookup"><span data-stu-id="6cc57-105">[Previous](pages-routing-layouts.md)
 [Next](forms-validation.md)</span></span>

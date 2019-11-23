@@ -11,13 +11,13 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 09/23/2019
 ms.locfileid: "73840846"
 ---
-# <a name="app-startup"></a><span data-ttu-id="7b6c4-103">앱 시작</span><span class="sxs-lookup"><span data-stu-id="7b6c4-103">App startup</span></span>
+# <a name="app-startup"></a><span data-ttu-id="d88d8-103">앱 시작</span><span class="sxs-lookup"><span data-stu-id="d88d8-103">App startup</span></span>
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-<span data-ttu-id="7b6c4-104">*이 콘텐츠는 곧 제공 될 예정입니다.*</span><span class="sxs-lookup"><span data-stu-id="7b6c4-104">*This content is coming soon.*</span></span>
+<span data-ttu-id="d88d8-104">*이 콘텐츠는 곧 제공 될 예정입니다.*</span><span class="sxs-lookup"><span data-stu-id="d88d8-104">*This content is coming soon.*</span></span>
 
 >[!div class="step-by-step"]
-><span data-ttu-id="7b6c4-105">[이전](project-structure.md)
->[다음](components.md)</span><span class="sxs-lookup"><span data-stu-id="7b6c4-105">[Previous](project-structure.md)
+><span data-ttu-id="d88d8-105">[이전](project-structure.md)
+>[다음](components.md)</span><span class="sxs-lookup"><span data-stu-id="d88d8-105">[Previous](project-structure.md)
 [Next](components.md)</span></span>

@@ -9,19 +9,19 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/11/2019
 ms.locfileid: "72275869"
 ---
-# <a name="task-3-create-the-toolbox-and-propertygrid-panes"></a><span data-ttu-id="76952-102">작업 3: 도구 상자 및 PropertyGrid 창 만들기</span><span class="sxs-lookup"><span data-stu-id="76952-102">Task 3: Create the Toolbox and PropertyGrid Panes</span></span>
+# <a name="task-3-create-the-toolbox-and-propertygrid-panes"></a><span data-ttu-id="d2db7-102">작업 3: 도구 상자 및 PropertyGrid 창 만들기</span><span class="sxs-lookup"><span data-stu-id="d2db7-102">Task 3: Create the Toolbox and PropertyGrid Panes</span></span>
 
-<span data-ttu-id="76952-103">이 작업에서는 **도구 상자** 및 **PropertyGrid** 창을 만든 후 다시 호스트 된 [!INCLUDE[wfd1](../../../includes/wfd1-md.md)]에 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="76952-103">In this task, you will create the **Toolbox** and **PropertyGrid** panes and add them to the rehosted [!INCLUDE[wfd1](../../../includes/wfd1-md.md)].</span></span>
+<span data-ttu-id="d2db7-103">이 작업에서는 **도구 상자** 및 **PropertyGrid** 창을 만든 후 다시 호스트 되는 [!INCLUDE[wfd1](../../../includes/wfd1-md.md)]에 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="d2db7-103">In this task, you will create the **Toolbox** and **PropertyGrid** panes and add them to the rehosted [!INCLUDE[wfd1](../../../includes/wfd1-md.md)].</span></span>
 
-<span data-ttu-id="76952-104">참조를 위해 MainWindow.xaml.cs 파일에 있어야 하는 코드는 [워크플로 디자이너 재호스팅](rehosting-the-workflow-designer.md) 의 3 가지 작업을 완료 한 후이 항목의 끝에 제공 됩니다.</span><span class="sxs-lookup"><span data-stu-id="76952-104">For reference, the code that should be in the MainWindow.xaml.cs file after completing the three tasks in the [Rehosting the Workflow Designer](rehosting-the-workflow-designer.md) series of topics is provided at the end of this topic.</span></span>
+<span data-ttu-id="d2db7-104">참조를 위해 MainWindow.xaml.cs 파일에 있어야 하는 코드는 [워크플로 디자이너 재호스팅](rehosting-the-workflow-designer.md) 의 3 가지 작업을 완료 한 후이 항목의 끝에 제공 됩니다.</span><span class="sxs-lookup"><span data-stu-id="d2db7-104">For reference, the code that should be in the MainWindow.xaml.cs file after completing the three tasks in the [Rehosting the Workflow Designer](rehosting-the-workflow-designer.md) series of topics is provided at the end of this topic.</span></span>
 
-## <a name="to-create-the-toolbox-and-add-it-to-the-grid"></a><span data-ttu-id="76952-105">도구 상자를 만들어 표에 추가하려면</span><span class="sxs-lookup"><span data-stu-id="76952-105">To create the Toolbox and add it to the grid</span></span>
+## <a name="to-create-the-toolbox-and-add-it-to-the-grid"></a><span data-ttu-id="d2db7-105">도구 상자를 만들어 표에 추가하려면</span><span class="sxs-lookup"><span data-stu-id="d2db7-105">To create the Toolbox and add it to the grid</span></span>
 
-1. <span data-ttu-id="76952-106">@No__t-0Task 2에 설명 된 절차에 따라 얻은 HostingApplication 프로젝트를 엽니다. 워크플로 디자이너 @ no__t-0을 호스팅합니다.</span><span class="sxs-lookup"><span data-stu-id="76952-106">Open the HostingApplication project you obtained by following the procedure described in [Task 2: Host the Workflow Designer](task-2-host-the-workflow-designer.md).</span></span>
+1. <span data-ttu-id="d2db7-106">[작업 2: 호스트 워크플로 디자이너](task-2-host-the-workflow-designer.md)에 설명 된 절차에 따라 가져온 HostingApplication 프로젝트를 엽니다.</span><span class="sxs-lookup"><span data-stu-id="d2db7-106">Open the HostingApplication project you obtained by following the procedure described in [Task 2: Host the Workflow Designer](task-2-host-the-workflow-designer.md).</span></span>
 
-2. <span data-ttu-id="76952-107">**솔루션 탐색기** 창에서 *mainwindow.xaml* 파일을 마우스 오른쪽 단추로 클릭 하 고 **코드 보기**를 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="76952-107">In the **Solution Explorer** pane, right-click the *MainWindow.xaml* file and select **View Code**.</span></span>
+2. <span data-ttu-id="d2db7-107">**솔루션 탐색기** 창에서 *mainwindow.xaml* 파일을 마우스 오른쪽 단추로 클릭 하 고 **코드 보기**를 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="d2db7-107">In the **Solution Explorer** pane, right-click the *MainWindow.xaml* file and select **View Code**.</span></span>
 
-3. <span data-ttu-id="76952-108">@No__t-2를 만들고 **도구 상자**에 새 **도구 상자** 범주를 추가 하 고 <xref:System.Activities.Statements.Assign> 및 @no__t 활동 유형을 해당 범주에 할당 하는 `GetToolboxControl` 메서드를 @no__t 1 클래스에 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="76952-108">Add a `GetToolboxControl` method to the `MainWindow` class that creates a <xref:System.Activities.Presentation.Toolbox.ToolboxControl>, adds a new **Toolbox** category to the **Toolbox**, and assigns the <xref:System.Activities.Statements.Assign> and <xref:System.Activities.Statements.Sequence> activity types to that category.</span></span>
+3. <span data-ttu-id="d2db7-108"><xref:System.Activities.Presentation.Toolbox.ToolboxControl>를 만들고 **도구 상자**에 새 **도구 상자** 범주를 추가 하 고 <xref:System.Activities.Statements.Assign> 및 <xref:System.Activities.Statements.Sequence> 활동 유형을 해당 범주에 할당 하는 `GetToolboxControl` 메서드를 `MainWindow` 클래스에 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="d2db7-108">Add a `GetToolboxControl` method to the `MainWindow` class that creates a <xref:System.Activities.Presentation.Toolbox.ToolboxControl>, adds a new **Toolbox** category to the **Toolbox**, and assigns the <xref:System.Activities.Statements.Assign> and <xref:System.Activities.Statements.Sequence> activity types to that category.</span></span>
 
     ```csharp
     private ToolboxControl GetToolboxControl()
@@ -50,7 +50,7 @@ ms.locfileid: "72275869"
     }
     ```
 
-4. <span data-ttu-id="76952-109">표 형태 창의 왼쪽 열에 **도구 상자** 를 배치 하는 `MainWindow` 클래스에 private `AddToolbox` 메서드를 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="76952-109">Add a private `AddToolbox` method to the `MainWindow` class that places the **Toolbox** in the left column on the grid.</span></span>
+4. <span data-ttu-id="d2db7-109">모눈의 왼쪽 열에 **도구 상자** 를 배치 하는 private `AddToolbox` 메서드를 `MainWindow` 클래스에 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="d2db7-109">Add a private `AddToolbox` method to the `MainWindow` class that places the **Toolbox** in the left column on the grid.</span></span>
 
     ```csharp
     private void AddToolBox()
@@ -61,7 +61,7 @@ ms.locfileid: "72275869"
     }
     ```
 
-5. <span data-ttu-id="76952-110">다음 코드와 같이 `MainWindow()` 클래스 생성자에서 `AddToolBox` 메서드에 대 한 호출을 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="76952-110">Add a call to the `AddToolBox` method in the `MainWindow()` class constructor as shown in the following code:</span></span>
+5. <span data-ttu-id="d2db7-110">다음 코드와 같이 `MainWindow()` 클래스 생성자에서 `AddToolBox` 메서드에 대 한 호출을 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="d2db7-110">Add a call to the `AddToolBox` method in the `MainWindow()` class constructor as shown in the following code:</span></span>
 
     ```csharp
     public MainWindow()
@@ -74,13 +74,13 @@ ms.locfileid: "72275869"
     }
     ```
 
-6. <span data-ttu-id="76952-111"><kbd>F5</kbd> 키를 눌러 솔루션을 빌드하고 실행 합니다.</span><span class="sxs-lookup"><span data-stu-id="76952-111">Press <kbd>F5</kbd> to build and run your solution.</span></span> <span data-ttu-id="76952-112">@No__t-1 및 <xref:System.Activities.Statements.Sequence> 작업을 포함 하는 **도구 상자가** 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="76952-112">The **Toolbox** containing the <xref:System.Activities.Statements.Assign> and <xref:System.Activities.Statements.Sequence> activities should be displayed.</span></span>
+6. <span data-ttu-id="d2db7-111"><kbd>F5</kbd> 키를 눌러 솔루션을 빌드하고 실행 합니다.</span><span class="sxs-lookup"><span data-stu-id="d2db7-111">Press <kbd>F5</kbd> to build and run your solution.</span></span> <span data-ttu-id="d2db7-112"><xref:System.Activities.Statements.Assign> 및 <xref:System.Activities.Statements.Sequence> 활동을 포함 하는 **도구 상자가** 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="d2db7-112">The **Toolbox** containing the <xref:System.Activities.Statements.Assign> and <xref:System.Activities.Statements.Sequence> activities should be displayed.</span></span>
 
-## <a name="to-create-the-propertygrid"></a><span data-ttu-id="76952-113">PropertyGrid를 만들려면</span><span class="sxs-lookup"><span data-stu-id="76952-113">To create the PropertyGrid</span></span>
+## <a name="to-create-the-propertygrid"></a><span data-ttu-id="d2db7-113">PropertyGrid를 만들려면</span><span class="sxs-lookup"><span data-stu-id="d2db7-113">To create the PropertyGrid</span></span>
 
-1. <span data-ttu-id="76952-114">**솔루션 탐색기** 창에서 *mainwindow.xaml* 파일을 마우스 오른쪽 단추로 클릭 하 고 **코드 보기**를 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="76952-114">In the **Solution Explorer** pane, right-click the *MainWindow.xaml* file and select **View Code**.</span></span>
+1. <span data-ttu-id="d2db7-114">**솔루션 탐색기** 창에서 *mainwindow.xaml* 파일을 마우스 오른쪽 단추로 클릭 하 고 **코드 보기**를 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="d2db7-114">In the **Solution Explorer** pane, right-click the *MainWindow.xaml* file and select **View Code**.</span></span>
 
-2. <span data-ttu-id="76952-115">@No__t-0 메서드를 `MainWindow` 클래스에 추가 하 여 표의 맨 오른쪽 열에 **PropertyGrid** 창을 놓습니다.</span><span class="sxs-lookup"><span data-stu-id="76952-115">Add the `AddPropertyInspector` method to the `MainWindow` class to place the **PropertyGrid** pane in the rightmost column on the grid:</span></span>
+2. <span data-ttu-id="d2db7-115">`MainWindow` 클래스에 `AddPropertyInspector` 메서드를 추가 하 여 **PropertyGrid** 창을 표의 맨 오른쪽 열에 놓습니다.</span><span class="sxs-lookup"><span data-stu-id="d2db7-115">Add the `AddPropertyInspector` method to the `MainWindow` class to place the **PropertyGrid** pane in the rightmost column on the grid:</span></span>
 
     ```csharp
     private void AddPropertyInspector()
@@ -90,7 +90,7 @@ ms.locfileid: "72275869"
     }
     ```
 
-3. <span data-ttu-id="76952-116">다음 코드와 같이 `MainWindow()` 클래스 생성자에서 `AddPropertyInspector` 메서드에 대 한 호출을 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="76952-116">Add a call to the `AddPropertyInspector` method in the `MainWindow()` class constructor as shown in the following code:</span></span>
+3. <span data-ttu-id="d2db7-116">다음 코드와 같이 `MainWindow()` 클래스 생성자에서 `AddPropertyInspector` 메서드에 대 한 호출을 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="d2db7-116">Add a call to the `AddPropertyInspector` method in the `MainWindow()` class constructor as shown in the following code:</span></span>
 
     ```csharp
     public MainWindow()
@@ -104,11 +104,11 @@ ms.locfileid: "72275869"
     }
     ```
 
-4. <span data-ttu-id="76952-117"><kbd>F5</kbd> 키를 눌러 솔루션을 빌드하고 실행 합니다.</span><span class="sxs-lookup"><span data-stu-id="76952-117">Press <kbd>F5</kbd> to build and run the solution.</span></span> <span data-ttu-id="76952-118">**도구 상자**, 워크플로 디자인 캔버스 및 **PropertyGrid** 창이 모두 표시 되어야 하며, <xref:System.Activities.Statements.Assign> 작업 또는 <xref:System.Activities.Statements.Sequence> 작업을 디자인 캔버스로 끌면 속성 표가 강조 표시 된 작업에 따라 업데이트 됩니다.</span><span class="sxs-lookup"><span data-stu-id="76952-118">The **Toolbox**, workflow design canvas, and **PropertyGrid** panes should all be displayed, and when you drag an <xref:System.Activities.Statements.Assign> activity or a <xref:System.Activities.Statements.Sequence> activity onto the design canvas, the property grid should update depending on the highlighted activity.</span></span>
+4. <span data-ttu-id="d2db7-117"><kbd>F5</kbd> 키를 눌러 솔루션을 빌드하고 실행 합니다.</span><span class="sxs-lookup"><span data-stu-id="d2db7-117">Press <kbd>F5</kbd> to build and run the solution.</span></span> <span data-ttu-id="d2db7-118">**도구 상자**, 워크플로 디자인 캔버스 및 **PropertyGrid** 창이 모두 표시 되어야 하며, <xref:System.Activities.Statements.Assign> 활동 또는 <xref:System.Activities.Statements.Sequence> 활동을 디자인 캔버스로 끌어다 놓으면 강조 표시 된 활동에 따라 속성 표가 업데이트 됩니다.</span><span class="sxs-lookup"><span data-stu-id="d2db7-118">The **Toolbox**, workflow design canvas, and **PropertyGrid** panes should all be displayed, and when you drag an <xref:System.Activities.Statements.Assign> activity or a <xref:System.Activities.Statements.Sequence> activity onto the design canvas, the property grid should update depending on the highlighted activity.</span></span>
 
-## <a name="example"></a><span data-ttu-id="76952-119">예제</span><span class="sxs-lookup"><span data-stu-id="76952-119">Example</span></span>
+## <a name="example"></a><span data-ttu-id="d2db7-119">예제</span><span class="sxs-lookup"><span data-stu-id="d2db7-119">Example</span></span>
 
-<span data-ttu-id="76952-120">*MainWindow.xaml.cs* 파일에는 이제 다음 코드가 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="76952-120">The *MainWindow.xaml.cs* file should now contain the following code:</span></span>
+<span data-ttu-id="d2db7-120">*MainWindow.xaml.cs* 파일에는 이제 다음 코드가 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="d2db7-120">The *MainWindow.xaml.cs* file should now contain the following code:</span></span>
 
 ```csharp
 using System;
@@ -214,8 +214,8 @@ namespace HostingApplication
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="76952-121">참조</span><span class="sxs-lookup"><span data-stu-id="76952-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d2db7-121">참고 항목</span><span class="sxs-lookup"><span data-stu-id="d2db7-121">See also</span></span>
 
-- [<span data-ttu-id="76952-122">워크플로 디자이너 재호스트</span><span class="sxs-lookup"><span data-stu-id="76952-122">Rehosting the Workflow Designer</span></span>](rehosting-the-workflow-designer.md)
-- <span data-ttu-id="76952-123">[ 작업 1: 새 Windows Presentation Foundation 응용 프로그램 만들기 @ no__t-0</span><span class="sxs-lookup"><span data-stu-id="76952-123">[Task 1: Create a New Windows Presentation Foundation Application](task-1-create-a-new-wpf-app.md)</span></span>
-- <span data-ttu-id="76952-124">[Task 2: 워크플로 디자이너 @ no__t를 호스팅합니다.-0</span><span class="sxs-lookup"><span data-stu-id="76952-124">[Task 2: Host the Workflow Designer](task-2-host-the-workflow-designer.md)</span></span>
+- [<span data-ttu-id="d2db7-122">워크플로 디자이너 재호스트</span><span class="sxs-lookup"><span data-stu-id="d2db7-122">Rehosting the Workflow Designer</span></span>](rehosting-the-workflow-designer.md)
+- [<span data-ttu-id="d2db7-123">작업 1: 새 Windows Presentation Foundation 애플리케이션 만들기</span><span class="sxs-lookup"><span data-stu-id="d2db7-123">Task 1: Create a New Windows Presentation Foundation Application</span></span>](task-1-create-a-new-wpf-app.md)
+- [<span data-ttu-id="d2db7-124">작업 2: 워크플로 디자이너 호스트</span><span class="sxs-lookup"><span data-stu-id="d2db7-124">Task 2: Host the Workflow Designer</span></span>](task-2-host-the-workflow-designer.md)

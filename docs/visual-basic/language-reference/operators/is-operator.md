@@ -1,5 +1,5 @@
 ---
-title: Is 연산자(Visual Basic)
+title: Is 연산자
 ms.date: 07/20/2015
 f1_keywords:
 - vb.is
@@ -9,52 +9,52 @@ helpviewer_keywords:
 - TypeOf...Is expression
 - Is operator [Visual Basic]
 ms.assetid: 8045a6c8-2a83-45b6-ad47-d09a704c656d
-ms.openlocfilehash: 0351d224d9bf08a8f3ca74090de7b9c51c2c61bf
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 52fbb39ab0a36c8b947b78f464fad26be05ce204
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71701359"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349541"
 ---
-# <a name="is-operator-visual-basic"></a><span data-ttu-id="737d5-102">Is 연산자(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="737d5-102">Is Operator (Visual Basic)</span></span>
-<span data-ttu-id="737d5-103">두 개체 참조 변수를 비교 합니다.</span><span class="sxs-lookup"><span data-stu-id="737d5-103">Compares two object reference variables.</span></span>  
+# <a name="is-operator-visual-basic"></a><span data-ttu-id="3bae5-102">Is 연산자(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3bae5-102">Is Operator (Visual Basic)</span></span>
+<span data-ttu-id="3bae5-103">Compares two object reference variables.</span><span class="sxs-lookup"><span data-stu-id="3bae5-103">Compares two object reference variables.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="737d5-104">구문</span><span class="sxs-lookup"><span data-stu-id="737d5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3bae5-104">구문</span><span class="sxs-lookup"><span data-stu-id="3bae5-104">Syntax</span></span>  
   
 ```vb  
 result = object1 Is object2  
 ```  
   
-## <a name="parts"></a><span data-ttu-id="737d5-105">요소</span><span class="sxs-lookup"><span data-stu-id="737d5-105">Parts</span></span>  
+## <a name="parts"></a><span data-ttu-id="3bae5-105">요소</span><span class="sxs-lookup"><span data-stu-id="3bae5-105">Parts</span></span>  
  `result`  
- <span data-ttu-id="737d5-106">필수.</span><span class="sxs-lookup"><span data-stu-id="737d5-106">Required.</span></span> <span data-ttu-id="737d5-107">모든 `Boolean` 값입니다.</span><span class="sxs-lookup"><span data-stu-id="737d5-107">Any `Boolean` value.</span></span>  
+ <span data-ttu-id="3bae5-106">필수 요소.</span><span class="sxs-lookup"><span data-stu-id="3bae5-106">Required.</span></span> <span data-ttu-id="3bae5-107">Any `Boolean` value.</span><span class="sxs-lookup"><span data-stu-id="3bae5-107">Any `Boolean` value.</span></span>  
   
  `object1`  
- <span data-ttu-id="737d5-108">필수.</span><span class="sxs-lookup"><span data-stu-id="737d5-108">Required.</span></span> <span data-ttu-id="737d5-109">@No__t-0 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="737d5-109">Any `Object` name.</span></span>  
+ <span data-ttu-id="3bae5-108">필수 요소.</span><span class="sxs-lookup"><span data-stu-id="3bae5-108">Required.</span></span> <span data-ttu-id="3bae5-109">Any `Object` name.</span><span class="sxs-lookup"><span data-stu-id="3bae5-109">Any `Object` name.</span></span>  
   
  `object2`  
- <span data-ttu-id="737d5-110">필수.</span><span class="sxs-lookup"><span data-stu-id="737d5-110">Required.</span></span> <span data-ttu-id="737d5-111">@No__t-0 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="737d5-111">Any `Object` name.</span></span>  
+ <span data-ttu-id="3bae5-110">필수 요소.</span><span class="sxs-lookup"><span data-stu-id="3bae5-110">Required.</span></span> <span data-ttu-id="3bae5-111">Any `Object` name.</span><span class="sxs-lookup"><span data-stu-id="3bae5-111">Any `Object` name.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="737d5-112">설명</span><span class="sxs-lookup"><span data-stu-id="737d5-112">Remarks</span></span>  
- <span data-ttu-id="737d5-113">@No__t-0 연산자는 두 개체 참조가 동일한 개체를 참조 하는지 여부를 결정 합니다.</span><span class="sxs-lookup"><span data-stu-id="737d5-113">The `Is` operator determines if two object references refer to the same object.</span></span> <span data-ttu-id="737d5-114">그러나 값 비교를 수행 하지는 않습니다.</span><span class="sxs-lookup"><span data-stu-id="737d5-114">However, it does not perform value comparisons.</span></span> <span data-ttu-id="737d5-115">@No__t-0 및 `object2`이 모두 정확히 동일한 개체 인스턴스를 참조 하는 경우에는 `result`가 `True`입니다. 그렇지 않은 경우-4는-5 @no__t @no__t.</span><span class="sxs-lookup"><span data-stu-id="737d5-115">If `object1` and `object2` both refer to the exact same object instance, `result` is `True`; if they do not, `result` is `False`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="3bae5-112">주의</span><span class="sxs-lookup"><span data-stu-id="3bae5-112">Remarks</span></span>  
+ <span data-ttu-id="3bae5-113">The `Is` operator determines if two object references refer to the same object.</span><span class="sxs-lookup"><span data-stu-id="3bae5-113">The `Is` operator determines if two object references refer to the same object.</span></span> <span data-ttu-id="3bae5-114">However, it does not perform value comparisons.</span><span class="sxs-lookup"><span data-stu-id="3bae5-114">However, it does not perform value comparisons.</span></span> <span data-ttu-id="3bae5-115">If `object1` and `object2` both refer to the exact same object instance, `result` is `True`; if they do not, `result` is `False`.</span><span class="sxs-lookup"><span data-stu-id="3bae5-115">If `object1` and `object2` both refer to the exact same object instance, `result` is `True`; if they do not, `result` is `False`.</span></span>  
   
- <span data-ttu-id="737d5-116">`Is`은 `TypeOf` 키워드와 함께 사용 하 여 개체 변수가 데이터 형식과 호환 되는지 여부를 테스트 하는 `TypeOf` ... `Is` 식을 만들 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="737d5-116">`Is` can also be used with the `TypeOf` keyword to make a `TypeOf`...`Is` expression, which tests whether an object variable is compatible with a data type.</span></span>  
+ <span data-ttu-id="3bae5-116">`Is` can also be used with the `TypeOf` keyword to make a `TypeOf`...`Is` expression, which tests whether an object variable is compatible with a data type.</span><span class="sxs-lookup"><span data-stu-id="3bae5-116">`Is` can also be used with the `TypeOf` keyword to make a `TypeOf`...`Is` expression, which tests whether an object variable is compatible with a data type.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="737d5-117">@No__t-0 키워드는 [Select ... Case 문](../../../visual-basic/language-reference/statements/select-case-statement.md).</span><span class="sxs-lookup"><span data-stu-id="737d5-117">The `Is` keyword is also used in the [Select...Case Statement](../../../visual-basic/language-reference/statements/select-case-statement.md).</span></span>  
+> <span data-ttu-id="3bae5-117">The `Is` keyword is also used in the [Select...Case Statement](../../../visual-basic/language-reference/statements/select-case-statement.md).</span><span class="sxs-lookup"><span data-stu-id="3bae5-117">The `Is` keyword is also used in the [Select...Case Statement](../../../visual-basic/language-reference/statements/select-case-statement.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="737d5-118">예제</span><span class="sxs-lookup"><span data-stu-id="737d5-118">Example</span></span>  
- <span data-ttu-id="737d5-119">다음 예제에서는 `Is` 연산자를 사용 하 여 개체 참조 쌍을 비교 합니다.</span><span class="sxs-lookup"><span data-stu-id="737d5-119">The following example uses the `Is` operator to compare pairs of object references.</span></span> <span data-ttu-id="737d5-120">두 개체가 동일한 지 여부를 나타내는 0 @no__t 값에 결과가 할당 됩니다.</span><span class="sxs-lookup"><span data-stu-id="737d5-120">The results are assigned to a `Boolean` value representing whether the two objects are identical.</span></span>  
+## <a name="example"></a><span data-ttu-id="3bae5-118">예제</span><span class="sxs-lookup"><span data-stu-id="3bae5-118">Example</span></span>  
+ <span data-ttu-id="3bae5-119">The following example uses the `Is` operator to compare pairs of object references.</span><span class="sxs-lookup"><span data-stu-id="3bae5-119">The following example uses the `Is` operator to compare pairs of object references.</span></span> <span data-ttu-id="3bae5-120">The results are assigned to a `Boolean` value representing whether the two objects are identical.</span><span class="sxs-lookup"><span data-stu-id="3bae5-120">The results are assigned to a `Boolean` value representing whether the two objects are identical.</span></span>  
   
  [!code-vb[VbVbalrOperators#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#27)]  
   
- <span data-ttu-id="737d5-121">앞의 예제에서 보여 주는 것 처럼 `Is` 연산자를 사용 하 여 초기 바인딩과 런타임에 바인딩된 개체를 모두 테스트할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="737d5-121">As the preceding example demonstrates, you can use the `Is` operator to test both early bound and late bound objects.</span></span>  
+ <span data-ttu-id="3bae5-121">As the preceding example demonstrates, you can use the `Is` operator to test both early bound and late bound objects.</span><span class="sxs-lookup"><span data-stu-id="3bae5-121">As the preceding example demonstrates, you can use the `Is` operator to test both early bound and late bound objects.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="737d5-122">참조</span><span class="sxs-lookup"><span data-stu-id="737d5-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3bae5-122">참조</span><span class="sxs-lookup"><span data-stu-id="3bae5-122">See also</span></span>
 
-- [<span data-ttu-id="737d5-123">TypeOf 연산자</span><span class="sxs-lookup"><span data-stu-id="737d5-123">TypeOf Operator</span></span>](../../../visual-basic/language-reference/operators/typeof-operator.md)
-- [<span data-ttu-id="737d5-124">IsNot 연산자</span><span class="sxs-lookup"><span data-stu-id="737d5-124">IsNot Operator</span></span>](../../../visual-basic/language-reference/operators/isnot-operator.md)
-- [<span data-ttu-id="737d5-125">Visual Basic의 비교 연산자</span><span class="sxs-lookup"><span data-stu-id="737d5-125">Comparison Operators in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
-- [<span data-ttu-id="737d5-126">Visual Basic에서의 연산자 우선 순위</span><span class="sxs-lookup"><span data-stu-id="737d5-126">Operator Precedence in Visual Basic</span></span>](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [<span data-ttu-id="737d5-127">기능별 연산자 목록</span><span class="sxs-lookup"><span data-stu-id="737d5-127">Operators Listed by Functionality</span></span>](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [<span data-ttu-id="737d5-128">연산자 및 식</span><span class="sxs-lookup"><span data-stu-id="737d5-128">Operators and Expressions</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+- [<span data-ttu-id="3bae5-123">TypeOf 연산자</span><span class="sxs-lookup"><span data-stu-id="3bae5-123">TypeOf Operator</span></span>](../../../visual-basic/language-reference/operators/typeof-operator.md)
+- [<span data-ttu-id="3bae5-124">IsNot 연산자</span><span class="sxs-lookup"><span data-stu-id="3bae5-124">IsNot Operator</span></span>](../../../visual-basic/language-reference/operators/isnot-operator.md)
+- [<span data-ttu-id="3bae5-125">Comparison Operators in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="3bae5-125">Comparison Operators in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [<span data-ttu-id="3bae5-126">Visual Basic에서의 연산자 우선 순위</span><span class="sxs-lookup"><span data-stu-id="3bae5-126">Operator Precedence in Visual Basic</span></span>](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [<span data-ttu-id="3bae5-127">기능별 연산자 목록</span><span class="sxs-lookup"><span data-stu-id="3bae5-127">Operators Listed by Functionality</span></span>](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [<span data-ttu-id="3bae5-128">연산자 및 식</span><span class="sxs-lookup"><span data-stu-id="3bae5-128">Operators and Expressions</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)

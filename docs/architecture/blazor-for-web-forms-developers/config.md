@@ -11,13 +11,13 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 09/23/2019
 ms.locfileid: "73840828"
 ---
-# <a name="app-configuration"></a><span data-ttu-id="0f116-103">앱 구성</span><span class="sxs-lookup"><span data-stu-id="0f116-103">App configuration</span></span>
+# <a name="app-configuration"></a><span data-ttu-id="ba68d-103">앱 구성</span><span class="sxs-lookup"><span data-stu-id="ba68d-103">App configuration</span></span>
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-<span data-ttu-id="0f116-104">*이 콘텐츠는 곧 제공 될 예정입니다.*</span><span class="sxs-lookup"><span data-stu-id="0f116-104">*This content is coming soon.*</span></span>
+<span data-ttu-id="ba68d-104">*이 콘텐츠는 곧 제공 될 예정입니다.*</span><span class="sxs-lookup"><span data-stu-id="ba68d-104">*This content is coming soon.*</span></span>
 
 >[!div class="step-by-step"]
-><span data-ttu-id="0f116-105">[이전](middleware.md)
->[다음](security-authentication-authorization.md)</span><span class="sxs-lookup"><span data-stu-id="0f116-105">[Previous](middleware.md)
+><span data-ttu-id="ba68d-105">[이전](middleware.md)
+>[다음](security-authentication-authorization.md)</span><span class="sxs-lookup"><span data-stu-id="ba68d-105">[Previous](middleware.md)
 [Next](security-authentication-authorization.md)</span></span>

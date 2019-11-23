@@ -11,11 +11,11 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 09/23/2019
 ms.locfileid: "73840822"
 ---
-# <a name="data-access-and-management"></a><span data-ttu-id="496c7-103">데이터 액세스 및 관리</span><span class="sxs-lookup"><span data-stu-id="496c7-103">Data access and management</span></span>
+# <a name="data-access-and-management"></a><span data-ttu-id="84f23-103">데이터 액세스 및 관리</span><span class="sxs-lookup"><span data-stu-id="84f23-103">Data access and management</span></span>
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-<span data-ttu-id="496c7-104">*이 콘텐츠는 곧 제공 될 예정입니다.*</span><span class="sxs-lookup"><span data-stu-id="496c7-104">*This content is coming soon.*</span></span>
+<span data-ttu-id="84f23-104">*이 콘텐츠는 곧 제공 될 예정입니다.*</span><span class="sxs-lookup"><span data-stu-id="84f23-104">*This content is coming soon.*</span></span>
 
 <!--
 - Entity Framework
@@ -25,6 +25,6 @@ ms.locfileid: "73840822"
 -->
 
 >[!div class="step-by-step"]
-><span data-ttu-id="496c7-105">[이전](forms-validation.md)
->[다음](middleware.md)</span><span class="sxs-lookup"><span data-stu-id="496c7-105">[Previous](forms-validation.md)
+><span data-ttu-id="84f23-105">[이전](forms-validation.md)
+>[다음](middleware.md)</span><span class="sxs-lookup"><span data-stu-id="84f23-105">[Previous](forms-validation.md)
 [Next](middleware.md)</span></span>
