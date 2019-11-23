@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9dcc8b3d-33ee-4c7c-8d6f-322c57b94a0f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b64275def01d7b62f9a461de69a286769094305e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 99f529a151a42cf4a9ee1f74bd3a76a5b6b1b35f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777590"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445269"
 ---
 # <a name="imetadataemitdefinemethodimpl-method"></a>IMetaDataEmit::DefineMethodImpl 메서드
-인터페이스에서 상속 된 메서드 구현에 대 한 정의 만들고 해당 메서드 구현을 정의에 토큰을 반환 합니다.  
+Creates a definition for implementation of a method inherited from an interface, and returns a token to that method-implementation definition.  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,24 +37,24 @@ HRESULT DefineMethodImpl (
   
 ## <a name="parameters"></a>매개 변수  
  `td`  
- [in] `mdTypedef` 토큰 구현 하는 클래스입니다.  
+ [in] The `mdTypedef` token of the implementing class.  
   
  `tkBody`  
- [in] 합니다 `mdMethodDef` 또는 `mdMemberRef` 코드 본문의 토큰입니다.  
+ [in] The `mdMethodDef` or `mdMemberRef` token of the code body.  
   
  `tkDecl`  
- [in] 합니다 `mdMethodDef` 또는 `mdMemberRef` 구현 되는 인터페이스 메서드의 토큰입니다.  
+ [in] The `mdMethodDef` or `mdMemberRef` token of the interface method being implemented.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** Cor.h  
+ **Header:** Cor.h  
   
- **라이브러리:** MSCorEE.dll에서 리소스로 사용  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [IMetaDataEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

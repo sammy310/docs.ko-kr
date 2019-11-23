@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 845ab77e-9639-47f5-99fb-f3b619e3e779
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 080c16d3a7baceaa277b3418ac2e17391090f00c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 34636f1ca8e42c452aa41f6145d439a26f01b0a7
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750602"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436399"
 ---
 # <a name="iceegenallocatemethodbuffer-method"></a>ICeeGen::AllocateMethodBuffer 메서드
-메서드의 경우 지정된 된 크기의 버퍼를 만들고 메서드의 상대 가상 주소를 가져옵니다.  
+Creates a buffer of the specified size for a method, and gets the relative virtual address of the method.  
   
- 이 메서드는 사용 되지 않습니다 및 사용할 수 없습니다.  
+ This method is obsolete and should not be used.  
   
 ## <a name="syntax"></a>구문  
   
@@ -41,23 +39,23 @@ HRESULT AllocateMethodBuffer (
   
 ## <a name="parameters"></a>매개 변수  
  `cchBuffer`  
- [in] 만들 버퍼의 길이입니다.  
+ [in] The length of the buffer to create.  
   
  `lpBuffer`  
- [out] 반환 된 버퍼입니다.  
+ [out] The returned buffer.  
   
  `RVA`  
- [out] 메서드의 상대 가상 주소입니다.  
+ [out] The relative virtual address of the method.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** Cor.h  
+ **Header:** Cor.h  
   
- **라이브러리:** MsCorEE.dll에서 리소스로 사용  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ICeeGen 인터페이스](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

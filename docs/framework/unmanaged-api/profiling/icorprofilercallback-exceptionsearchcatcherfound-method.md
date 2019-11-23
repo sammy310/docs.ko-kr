@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 190f424d-5e37-4163-a191-0895686e9476
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 12f16b9bc87ea65e2699ec902d717b08d3155b95
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 080777b656e1c3df1cc4170fe1dff6de6ddb41fc
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756174"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445398"
 ---
 # <a name="icorprofilercallbackexceptionsearchcatcherfound-method"></a>ICorProfilerCallback::ExceptionSearchCatcherFound 메서드
-예외 처리의 검색 단계에서 throw 된 예외에 대 한 처리기가 있는 프로파일러에 알립니다.  
+Notifies the profiler that the search phase of exception handling has located a handler for the exception that was thrown.  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,10 +34,10 @@ RESULT ExceptionSearchCatcherFound(
   
 ## <a name="parameters"></a>매개 변수  
  `functionId`  
- [in] 예외 처리기가 포함 된 함수의 ID입니다.  
+ [in] The ID of the function that contains the exception handler.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
   
@@ -47,6 +45,6 @@ RESULT ExceptionSearchCatcherFound(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ICorProfilerCallback 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

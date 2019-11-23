@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6351fc92-b126-4af6-9bf3-0a8ce92845fc
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: abe1c8881330ebba5f7b68452cf3db0666ac20c3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 554756bdda6e7167b013e7114e647f952cd1069d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736238"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74435957"
 ---
 # <a name="inotifysource2setnotifyfilter-method"></a>INotifySource2::SetNotifyFilter 메서드
-이 원본 사용에 대 한 알림 필터를 할당합니다.  
+Assigns a notification filter for use with this source.  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,18 +37,18 @@ HRESULT SetNotifyFilter
   
 ## <a name="parameters"></a>매개 변수  
  `in_NotifyFilter`  
- [in] 비트 조합 합니다 [NOTIFY_FILTER](../../../../docs/framework/unmanaged-api/diagnostics/notify-filter-enumeration.md) 디버거 API에 대 한 콜백을 식별 하는 열거형 값입니다.  
+ [in] A bitwise combination of the [NOTIFY_FILTER](../../../../docs/framework/unmanaged-api/diagnostics/notify-filter-enumeration.md) enumeration values that identify callbacks for the debugger API.  
   
  `in_pUserThreadFilter`  
- [in] 에 대 한 포인터를 [USER_THREAD](../../../../docs/framework/unmanaged-api/diagnostics/user-thread-structure.md) 디버거 API에 대 한 스레드를 식별 하는 구조입니다.  
+ [in] A pointer to a [USER_THREAD](../../../../docs/framework/unmanaged-api/diagnostics/user-thread-structure.md) structure that identifies threads for the debugger API.  
   
 ## <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 S_OK입니다.  
+ S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>요구 사항  
- **헤더:** ProtocolNotify2.idl  
+ **Header:** ProtocolNotify2.idl  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [INotifySource2 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
 - [INotifyConnection2 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)

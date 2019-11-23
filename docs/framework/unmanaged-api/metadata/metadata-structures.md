@@ -6,19 +6,17 @@ helpviewer_keywords:
 - unmanaged structures [.NET Framework], metadata
 - metadata structures [.NET Framework]
 ms.assetid: 3eeaec36-5e1a-4a62-9de3-ea3942f67d04
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2095b6e490612cff5af193b1c1dfcbb6757fc23e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 663abfdad79b8e4878ee598587a1f3484f5afccc
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049832"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74444614"
 ---
 # <a name="metadata-structures"></a>메타데이터 구조체
 이 섹션에서는 메타데이터 API에서 사용하는 관리되지 않는 구조체에 대해 설명합니다.  
   
-## <a name="in-this-section"></a>섹션 내용  
+## <a name="in-this-section"></a>단원 내용  
  ASSEMBLYMETADATA  
  나중에 사용할 어셈블리 메타데이터를 저장합니다.  
   

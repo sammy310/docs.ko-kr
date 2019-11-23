@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 624672b5-1189-488a-85d2-3e12b49617c1
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0d00c28862036c21c44f46c23fb09e947628dcf3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5f98c35f77fdb200be2e96364c9ac06c386faa62
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67783045"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436025"
 ---
 # <a name="icorprofilerinfo2getboxclasslayout-method"></a>ICorProfilerInfo2::GetBoxClassLayout 메서드
-지정 된 값 형식 위치한 boxed 형식이 됩니다 하는 경우에 대 한 정보를 가져옵니다.  
+Gets information about where the specified value type is located when it is boxed.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,16 +35,16 @@ HRESULT GetBoxClassLayout(
   
 ## <a name="parameters"></a>매개 변수  
  `classId`  
- [in] Boxed 값 형식을 설명 하는 클래스의 ID입니다.  
+ [in] The ID of the class that describes the value type that is boxed.  
   
  `pBufferOffset`  
- [out] 값 형식의 boxed 개체 ID 포인터에 상대적인 오프셋을 나타내는 정수입니다.  
+ [out] An integer that is the offset, relative to the boxed object ID pointer, of the value type.  
   
-## <a name="remarks"></a>설명  
- `pBufferOffset` 값 상자 내에서 값 형식의 위치입니다. 후 `pBufferOffset` 적용 되는 boxed 개체에 값 형식의 클래스 레이아웃에 사용할 수 개체의 값을 해석 합니다.  
+## <a name="remarks"></a>주의  
+ The `pBufferOffset` value is the location of the value type within a box. After `pBufferOffset` is applied to a boxed object, the value type's class layout can be used to interpret the object's value.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
   
@@ -54,7 +52,7 @@ HRESULT GetBoxClassLayout(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ICorProfilerInfo 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
 - [ICorProfilerInfo2 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

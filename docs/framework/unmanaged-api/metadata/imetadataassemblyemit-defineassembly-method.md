@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: a0637d66-74bf-4f2d-8137-9ff838bccece
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d53409e0be43dbf5d0cf7ba0fcbc170e2117f6a1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 20628e708261076c6e172ff30c366a0d69c2e0f2
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745818"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74432126"
 ---
 # <a name="imetadataassemblyemitdefineassembly-method"></a>IMetaDataAssemblyEmit::DefineAssembly 메서드
-만듭니다는 `Assembly` 지정된 된 어셈블리의 포함 된 메타 데이터 구조 및 관련된 메타 데이터 토큰을 반환 합니다.  
+Creates an `Assembly` structure containing metadata for the specified assembly and returns the associated metadata token.  
   
 ## <a name="syntax"></a>구문  
   
@@ -43,38 +41,38 @@ HRESULT DefineAssembly (
   
 ## <a name="parameters"></a>매개 변수  
  `pbPublicKey`  
- [in] 어셈블리가 강력한 이름이 어셈블리 또는 NULL의 게시자를 식별 하는 공개 키입니다.  
+ [in] The public key that identifies the publisher of the assembly, or NULL if the assembly is not strongly named.  
   
  `cbPublicKey`  
- [in] 크기 (바이트) `pbPublicKey`합니다.  
+ [in] The size in bytes of `pbPublicKey`.  
   
  `uHashAlgId`  
- [in] Sha-1 알고리즘을 지정 하려면 어셈블리 또는 NULL의 파일을 암호화 하기 위해 사용할 해시 알고리즘의 식별자입니다.  
+ [in] The identifier of the hashing algorithm to use to encrypt the files in the assembly, or NULL to specify the SHA-1 algorithm.  
   
  `szName`  
- [in] 어셈블리의 사람이 읽을 수 있는 텍스트 이름입니다. 이 값은 1024 자를 초과할 수 없습니다.  
+ [in] The human-readable text name of the assembly. This value must not exceed 1024 characters.  
   
  `pMetaData`  
- [in] 어셈블리의 버전, 플랫폼 및 로캘 정보를 포함 하는 ASSEMBLYMETADATA 인스턴스에 대 한 포인터입니다.  
+ [in] A pointer to an ASSEMBLYMETADATA instance that contains the version, platform, and locale information for the assembly.  
   
  `dwAssemblyFlags`  
- [in] 조합을 [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) 어셈블리의 기능을 설명 하는 값입니다.  
+ [in] A combination of [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) values that describe features of the assembly.  
   
  `pmda`  
- [out] 메타 데이터 토큰에 대 한 포인터입니다.  
+ [out] A pointer to the metadata token.  
   
-## <a name="remarks"></a>설명  
- 하나의 `Assembly` 매니페스트 내에서 메타 데이터 구조를 정의할 수 있습니다.  
+## <a name="remarks"></a>주의  
+ Only one `Assembly` metadata structure can be defined within a manifest.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** Cor.h  
+ **Header:** Cor.h  
   
- **라이브러리:** MsCorEE.dll에 리소스로 포함  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [IMetaDataAssemblyEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
