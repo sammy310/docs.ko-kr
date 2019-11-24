@@ -5,12 +5,12 @@ author: billwagner
 ms.author: wiwagn
 ms.date: 09/01/2017
 ms.custom: seodec18
-ms.openlocfilehash: 0b9dee45c980ae9288637967af20caf375f03fd1
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: c52fc7393718f6af44bd85dd23353f3e32f29f79
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117039"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428719"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-mstest"></a>dotnet test 및 MSTest를 사용하여 Visual Basic .NET Core 라이브러리 단위 테스트
 
@@ -33,8 +33,6 @@ ms.locfileid: "71117039"
 *PrimeService*를 현재 디렉터리로 만들고 [`dotnet new classlib -lang VB`](../tools/dotnet-new.md)를 실행하여 소스 프로젝트를 만듭니다. *Class1.VB*의 이름을 *PrimeService.VB*로 바꿉니다. 다음과 같이 `PrimeService` 클래스의 실패 구현을 만듭니다.
 
 ```vb
-Imports System
-
 Namespace Prime.Services
     Public Class PrimeService
         Public Function IsPrime(candidate As Integer) As Boolean

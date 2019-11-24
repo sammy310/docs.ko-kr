@@ -3,12 +3,12 @@ title: .NET Core 도구 사용 문제 해결
 description: .NET Core 도구를 실행할 때 발생하는 일반적인 문제와 가능한 해결 방법을 검색합니다.
 author: kdollard
 ms.date: 09/23/2019
-ms.openlocfilehash: fc6c520ab57235c78148a6b77717cbd80a989451
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: df896405a122050acba220923eee58e87e0b75b6
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318292"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74282507"
 ---
 # <a name="troubleshoot-net-core-tool-usage-issues"></a>.NET Core 도구 사용 문제 해결
 
@@ -25,7 +25,7 @@ ms.locfileid: "72318292"
 
 실행 파일을 찾을 수 없는 경우 다음과 유사한 메시지가 표시됩니다.
 
-```
+```console
 Could not execute because the specified command or file was not found.
 Possible reasons for this include:
   * You misspelled a built-in dotnet command.
@@ -101,7 +101,7 @@ dotnet --info
 
 .NET Core 전역 또는 로컬 도구의 설치에 실패할 수 있는 원인에는 여러 가지가 있습니다. 도구 설치에 실패하면 다음과 유사한 메시지가 표시됩니다.
 
-```
+```console
 Tool '{0}' failed to install. This failure may have been caused by:
 
 * You are attempting to install a preview release and did not use the --version option to specify the version.

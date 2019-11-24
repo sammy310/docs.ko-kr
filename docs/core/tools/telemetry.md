@@ -4,12 +4,12 @@ description: 어떤 데이터가 수집되고 수집 기능을 사용하지 않�
 author: KathleenDollard
 ms.date: 08/27/2019
 ms.custom: seodec18
-ms.openlocfilehash: 253f69392f034e330a75ed387d9346e8a5ae2a08
-ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
+ms.openlocfilehash: ecb8dbed036a04726867d004dbadf6205c1fa09f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70133689"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74281770"
 ---
 # <a name="net-core-sdk-telemetry"></a>.NET Core SDK 원격 분석
 
@@ -65,10 +65,10 @@ Read more about .NET Core CLI Tools telemetry: https://aka.ms/dotnet-cli-telemet
 | 모두          | .NET Core SDK 버전 |
 | 모두          | 원격 분석 프로필: 명시적 사용자 옵트인과 함께 사용되고 Microsoft에서 내부적으로만 사용되는 선택적 값 |
 | 2\.0 이상        | 명령 인수 및 옵션: 알려진 인수 및 옵션만 수집됩니다(임의 문자열이 아님). [수집된 옵션](#collected-options)을 참조하세요. 2\.1.300 이후에 해시됩니다. |
-| 2\.0 이상         | SDK가 컨테이너에서 실행 중인지 여부 |
+| 2\.0 이상         | SDK가 컨테이너에서 실행 중인지 여부. |
 | 2\.0 이상         | 2\.1부터 해시된 `TargetFramework` 이벤트의 대상 프레임워크 |
 | 2\.0 이상         | 해시된 MAC(미디어 액세스 제어) 주소: 머신의 암호화된(SHA256) 익명 및 고유 ID |
-| 2\.0 이상         | 해시된 현재 작업 디렉터리 |
+| 2\.0 이상         | 해시된 현재 작업 디렉터리. |
 | 2\.0 이상         | 해시된 설치 관리자 exe 파일 이름을 사용하는 설치 성공 보고서 |
 | 2\.1.300 이상     | 커널 버전 |
 | 2\.1.300 이상     | Libc 릴리스/버전 |
@@ -114,7 +114,7 @@ Read more about .NET Core CLI Tools telemetry: https://aka.ms/dotnet-cli-telemet
 
 다음 예제는 수집되는 데이터의 종류를 보여 줍니다.
 
-```
+```console
 System.IO.IOException
 at System.ConsolePal.WindowsConsoleStream.Write(Byte[] buffer, Int32 offset, Int32 count)
 at System.IO.StreamWriter.Flush(Boolean flushStream, Boolean flushEncoder)

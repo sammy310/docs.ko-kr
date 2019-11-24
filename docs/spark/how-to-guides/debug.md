@@ -4,12 +4,12 @@ description: Windows에서 .NET for Apache Spark 애플리케이션을 디버그
 ms.date: 08/15/2019
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: dcaca96f6eb871c15a37adc18190b073c63c8e93
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 098c7519fe99ef04773c5e4b81685ca0f06f1272
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70206146"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74281522"
 ---
 # <a name="debug-a-net-for-apache-spark-application"></a>.NET for Apache Spark 애플리케이션 디버그
 
@@ -29,7 +29,7 @@ spark-submit \
 
 이 명령을 실행하면 다음 출력이 표시됩니다.
 
-```
+```console
 ***********************************************************************
 * .NET Backend running debug mode. Press enter to exit *
 ***********************************************************************
