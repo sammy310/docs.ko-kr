@@ -468,13 +468,15 @@
             - name: EnumerateObjectReferences 메서드
               href: icorprofilerinfo10-enumerateobjectreferences-method.md
             - name: IsFrozenObject 메서드
-            - name: GetLOHObjectSizeThreshold 메서드
               href: icorprofilerinfo10-isfrozenobject-method.md
+            - name: GetLOHObjectSizeThreshold 메서드
+              href: icorprofilerinfo10-getlohobjectsizethreshold-method.md
             - name: RequestReJITWithInliners 메서드
-              href: icorprofilerinfo10-suspendruntime-method.md
+              href: icorprofilerinfo10-requestrejitwithinliners-method.md
             - name: ResumeRuntime 메서드
-            - name: SuspendRuntime 메서드
               href: icorprofilerinfo10-resumeruntime-method.md
+            - name: SuspendRuntime 메서드
+              href: icorprofilerinfo10-suspendruntime-method.md
         - name: ICorProfilerModuleEnum 인터페이스
           href: icorprofilermoduleenum-interface.md
           items:
