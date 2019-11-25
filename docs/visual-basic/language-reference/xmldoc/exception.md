@@ -1,19 +1,19 @@
 ---
-title: <exception>(Visual Basic)
+title: <exception>
 ms.date: 07/20/2015
 helpviewer_keywords:
 - <exception> XML tag
 - exception XML tag
 ms.assetid: c0517549-171e-4dae-ab88-a9c1700b6eee
-ms.openlocfilehash: 16ffb4f6b57dabb3650376c913a7d7608a00646d
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: e1e7f2d0fb06599f83ba224ed52a10429d9b11fe
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523927"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346966"
 ---
-# <a name="exception-visual-basic"></a>\<exception > (Visual Basic)
-Throw 할 수 있는 예외를 지정 합니다.  
+# <a name="exception-visual-basic"></a>\<exception> (Visual Basic)
+Specifies which exceptions can be thrown.  
   
 ## <a name="syntax"></a>구문  
   
@@ -29,12 +29,12 @@ Throw 할 수 있는 예외를 지정 합니다.
  설명.  
   
 ## <a name="remarks"></a>주의  
- @No__t_0 태그를 사용 하 여 throw 할 수 있는 예외를 지정 합니다. 이 태그는 메서드 정의에 적용됩니다.  
+ Use the `<exception>` tag to specify which exceptions can be thrown. 이 태그는 메서드 정의에 적용됩니다.  
   
  [-doc](../../../visual-basic/reference/command-line-compiler/doc.md)로 컴파일하여 문서 주석을 파일로 처리합니다.  
   
 ## <a name="example"></a>예제  
- 이 예제에서는 `<exception>` 태그를 사용 하 여 `IntDivide` 함수가 throw 할 수 있는 예외를 설명 합니다.  
+ This example uses the `<exception>` tag to describe an exception that the `IntDivide` function can throw.  
   
  [!code-vb[VbVbcnXmlDocComments#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#3)]  
   

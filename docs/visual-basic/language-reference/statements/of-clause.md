@@ -1,5 +1,5 @@
 ---
-title: Of 절(Visual Basic)
+title: Of 절
 ms.date: 07/20/2015
 f1_keywords:
 - Of
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - type parameters
 - data type arguments
 ms.assetid: 0db8f65c-65af-4089-ab7f-6fcfecb60444
-ms.openlocfilehash: c0cfbb5109d5b49f995028944e735c96440c9ab2
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: d88c43efe858d6b81b7d8d2470b234ff5d40632a
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583503"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353835"
 ---
 # <a name="of-clause-visual-basic"></a>Of 절(Visual Basic)
-*제네릭* 클래스, 구조체, 인터페이스, 대리자 또는 프로시저에서 *형식 매개 변수* 를 식별 하는 `Of` 절을 소개 합니다. 제네릭 형식에 대 한 자세한 내용은 [Visual Basic의 제네릭 형식](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)을 참조 하세요.  
+Introduces an `Of` clause, which identifies a *type parameter* on a *generic* class, structure, interface, delegate, or procedure. For information on generic types, see [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md).  
   
-## <a name="using-the-of-keyword"></a>Of 키워드 사용  
- 다음 코드 예제에서는 `Of` 키워드를 사용 하 여 두 개의 형식 매개 변수를 사용 하는 클래스의 개요를 정의 합니다. @No__t_2 인터페이스를 사용 하 여 `keyType` 매개 변수를 *제한* 합니다. 즉, 사용 하는 코드에서 <xref:System.IComparable>를 구현 하는 형식 인수를 제공 해야 합니다. @No__t_0 프로시저가 <xref:System.IComparable.CompareTo%2A?displayProperty=nameWithType> 메서드를 호출할 수 있도록이 작업이 필요 합니다. 제약 조건에 대한 자세한 내용은 [Type List](../../../visual-basic/language-reference/statements/type-list.md)을 참조하세요.  
+## <a name="using-the-of-keyword"></a>Using the Of Keyword  
+ The following code example uses the `Of` keyword to define the outline of a class that takes two type parameters. It *constrains* the `keyType` parameter by the <xref:System.IComparable> interface, which means the consuming code must supply a type argument that implements <xref:System.IComparable>. This is necessary so that the `add` procedure can call the <xref:System.IComparable.CompareTo%2A?displayProperty=nameWithType> method. 제약 조건에 대한 자세한 내용은 [Type List](../../../visual-basic/language-reference/statements/type-list.md)을 참조하세요.  
   
 ```vb  
 Public Class Dictionary(Of entryType, keyType As IComparable)  
@@ -42,9 +42,9 @@ Public Class Dictionary(Of entryType, keyType As IComparable)
 End Class  
 ```  
   
- 위의 클래스 정의를 완료 하는 경우 여기에서 다양 한 `dictionary` 클래스를 생성할 수 있습니다. @No__t_0 및 `keyType`에 제공 하는 형식은 클래스에서 보유 하는 항목의 형식과 각 항목에 연결 하는 키 형식을 결정 합니다. 제약 조건 때문에 <xref:System.IComparable>를 구현 하는 형식을 `keyType`를 제공 해야 합니다.  
+ If you complete the preceding class definition, you can construct a variety of `dictionary` classes from it. The types you supply to `entryType` and `keyType` determine what type of entry the class holds and what type of key it associates with each entry. Because of the constraint, you must supply to `keyType` a type that implements <xref:System.IComparable>.  
   
- 다음 코드 예제에서는 `String` 항목을 보유 하는 개체를 만들고 `Integer` 키를 각각 연결 합니다. `Integer`는 <xref:System.IComparable>를 구현 하므로 `keyType`의 제약 조건을 충족 합니다.  
+ The following code example creates an object that holds `String` entries and associates an `Integer` key with each one. `Integer` implements <xref:System.IComparable> and therefore satisfies the constraint on `keyType`.  
   
 ```vb  
 Dim d As New dictionary(Of String, Integer)  

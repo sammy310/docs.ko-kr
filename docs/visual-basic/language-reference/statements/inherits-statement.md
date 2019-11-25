@@ -1,5 +1,5 @@
 ---
-title: Inherits 문 (Visual Basic)
+title: Inherits Statement
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Inherits
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - Inherits statement [Visual Basic]
 - Inherits statement [Visual Basic], syntax
 ms.assetid: 9e6fe042-9af3-4341-8093-fc3537770cf2
-ms.openlocfilehash: e92e12908c89bb7a0bf385a2122b0c8f1eb8a6f7
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 6e6e9cc9210232059210862f2bda691c57b372d6
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72581748"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353235"
 ---
 # <a name="inherits-statement"></a>Inherits Statement
-현재 클래스 또는 인터페이스가 다른 클래스나 인터페이스 집합에서 특성, 변수, 속성, 프로시저 및 이벤트를 상속 하도록 합니다.  
+Causes the current class or interface to inherit the attributes, variables, properties, procedures, and events from another class or set of interfaces.  
   
 ## <a name="syntax"></a>구문  
   
@@ -28,40 +28,40 @@ Inherits basetypenames
   
 |용어|정의|  
 |---|---|  
-|`basetypenames`|필수 요소. 이 클래스가 파생 되는 클래스의 이름입니다.<br /><br /> 또는<br /><br /> 이 인터페이스가 파생 되는 인터페이스의 이름입니다. 여러 이름을 구분 하려면 쉼표를 사용 합니다.|  
+|`basetypenames`|필수 요소. The name of the class from which this class derives.<br /><br /> 또는<br /><br /> The names of the interfaces from which this interface derives. Use commas to separate multiple names.|  
   
 ## <a name="remarks"></a>주의  
- 사용 되는 경우 `Inherits` 문은 클래스 또는 인터페이스 정의에서 공백이 아닌 첫 번째 줄 이어야 합니다. @No__t_0 또는 `Interface` 문 바로 뒤에와 야 합니다.  
+ If used, the `Inherits` statement must be the first non-blank, non-comment line in a class or interface definition. It should immediately follow the `Class` or `Interface` statement.  
   
- @No__t_0는 클래스 또는 인터페이스 에서만 사용할 수 있습니다. 즉, 상속의 선언 컨텍스트는 소스 파일, 네임 스페이스, 구조체, 모듈, 프로시저 또는 블록이 될 수 없습니다.  
+ You can use `Inherits` only in a class or interface. This means the declaration context for an inheritance cannot be a source file, namespace, structure, module, procedure, or block.  
   
 ## <a name="rules"></a>규칙  
   
-- **클래스 상속.** 클래스가 `Inherits` 문을 사용 하는 경우 하나의 기본 클래스만 지정할 수 있습니다.  
+- **Class Inheritance.** If a class uses the `Inherits` statement, you can specify only one base class.  
   
-     클래스는 그 안에 중첩 된 클래스에서 상속할 수 없습니다.  
+     A class cannot inherit from a class nested within it.  
   
-- **인터페이스 상속.** 인터페이스에서 `Inherits` 문을 사용 하는 경우 하나 이상의 기본 인터페이스를 지정할 수 있습니다. 두 인터페이스가 동일한 이름의 멤버를 정의 하는 경우에도 두 인터페이스에서 상속할 수 있습니다. 이렇게 하려면 구현 하는 코드에서 구현 중인 멤버를 지정 하는 데 이름 한정을 사용 해야 합니다.  
+- **Interface Inheritance.** If an interface uses the `Inherits` statement, you can specify one or more base interfaces. You can inherit from two interfaces even if they each define a member with the same name. If you do so, the implementing code must use name qualification to specify which member it is implementing.  
   
-     인터페이스는 더 제한적인 액세스 수준으로 다른 인터페이스에서 상속할 수 없습니다. 예를 들어 `Public` 인터페이스는 `Friend` 인터페이스에서 상속할 수 없습니다.  
+     An interface cannot inherit from another interface with a more restrictive access level. For example, a `Public` interface cannot inherit from a `Friend` interface.  
   
-     인터페이스는 그 안에 중첩 된 인터페이스에서 상속할 수 없습니다.  
+     An interface cannot inherit from an interface nested within it.  
   
- .NET Framework의 클래스 상속 예제는 <xref:System.SystemException> 클래스에서 상속 되는 <xref:System.ArgumentException> 클래스입니다. 이를 통해 <xref:System.Exception.Message%2A> 속성 및 <xref:System.Exception.ToString%2A> 메서드와 같이 시스템 예외에 필요한 미리 정의 된 모든 속성 및 프로시저를 <xref:System.ArgumentException> 수 있습니다.  
+ An example of class inheritance in the .NET Framework is the <xref:System.ArgumentException> class, which inherits from the <xref:System.SystemException> class. This provides to <xref:System.ArgumentException> all the predefined properties and procedures required by system exceptions, such as the <xref:System.Exception.Message%2A> property and the <xref:System.Exception.ToString%2A> method.  
   
- .NET Framework의 인터페이스 상속 예는 <xref:System.Collections.IEnumerable> 인터페이스에서 상속 하는 <xref:System.Collections.ICollection> 인터페이스입니다. 이로 인해 <xref:System.Collections.ICollection>는 컬렉션을 트래버스하는 데 필요한 열거자의 정의를 상속 합니다.  
+ An example of interface inheritance in the .NET Framework is the <xref:System.Collections.ICollection> interface, which inherits from the <xref:System.Collections.IEnumerable> interface. This causes <xref:System.Collections.ICollection> to inherit the definition of the enumerator required to traverse a collection.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 `Inherits` 문을 사용 하 `thisClass` 클래스 `anotherClass` 기본 클래스의 모든 멤버를 상속할 수 있는 방법을 보여 줍니다.  
+ The following example uses the `Inherits` statement to show how a class named `thisClass` can inherit all the members of a base class named `anotherClass`.  
   
  [!code-vb[VbVbalrStatements#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#37)]  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 여러 인터페이스의 상속을 보여 줍니다.  
+ The following example shows inheritance of multiple interfaces.  
   
  [!code-vb[VbVbalrStatements#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#38)]  
   
- 이제 `thisInterface` 이라는 인터페이스에는 상속 된 멤버가 두 개체의 유형별 비교를 위해 각각 제공 하는 <xref:System.IComparable>, <xref:System.IDisposable> 및 <xref:System.IFormattable> 인터페이스의 모든 정의와 할당 된 리소스를 해제 하 고 값이 포함 됩니다. `String` 개체입니다. @No__t_0를 구현 하는 클래스는 모든 기본 인터페이스의 모든 멤버를 구현 해야 합니다.  
+ The interface named `thisInterface` now includes all the definitions in the <xref:System.IComparable>, <xref:System.IDisposable>, and <xref:System.IFormattable> interfaces The inherited members provide respectively for type-specific comparison of two objects, releasing allocated resources, and expressing the value of an object as a `String`. A class that implements `thisInterface` must implement every member of every base interface.  
   
 ## <a name="see-also"></a>참조
 

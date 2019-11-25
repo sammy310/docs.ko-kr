@@ -1,15 +1,15 @@
 ---
-title: '방법: 파일에서 XML 로드 (Visual Basic)'
+title: '방법: 파일에서 XML 로드'
 ms.date: 07/20/2015
 ms.assetid: e2d337ad-8ac8-4671-b694-30e5ca1413b7
-ms.openlocfilehash: 985c011d78b8386996ff4803194c8510e7ea0048
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 72a5adb8c7165f8113584f27bea64efde4ec58fb
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582066"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74336103"
 ---
-# <a name="how-to-load-xml-from-a-file-visual-basic"></a>방법: 파일에서 XML 로드 (Visual Basic)
+# <a name="how-to-load-xml-from-a-file-visual-basic"></a>How to: Load XML from a File (Visual Basic)
 
 이 항목에서는 <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType> 메서드를 사용하여 URI에서 XML을 로드하는 방법을 보여 줍니다.
 
@@ -52,4 +52,4 @@ Console.WriteLine(booksFromFile)
 
 ## <a name="see-also"></a>참조
 
-- [XML 구문 분석 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)
+- [Parsing XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)

@@ -1,15 +1,15 @@
 ---
-title: '방법: 선행 형제 찾기(XPath 및 LINQ to XML)(C#)'
+title: 선행 형제를 찾는 방법(XPath 및 LINQ to XML)(C#)
 ms.date: 07/20/2015
 ms.assetid: b281ff99-d08a-43d0-bea1-eff831b2f8ae
-ms.openlocfilehash: 2af2e08fa692142d2932a427f48ba5d323d7a848
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 08fc2073f76f37bd0381a05a7969d1c7748d6252
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253655"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141051"
 ---
-# <a name="how-to-find-preceding-siblings-xpath-linq-to-xml-c"></a>방법: 선행 형제 찾기(XPath 및 LINQ to XML)(C#)
+# <a name="how-to-find-preceding-siblings-xpath-linq-to-xml-c"></a>선행 형제를 찾는 방법(XPath 및 LINQ to XML)(C#)
 이 항목에서는 XPath `preceding-sibling` 축과 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 자식 <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType> 축을 비교합니다.  
   
  XPath 식은 다음과 같습니다.  
@@ -21,7 +21,7 @@ ms.locfileid: "70253655"
 ## <a name="example"></a>예  
  다음 예제에서는 `FullAddress` 요소를 찾은 다음 `preceding-sibling` 축을 사용하여 이전 요소를 검색합니다.  
   
- 이 예제에서는 XML 문서로을 사용합니다. [샘플 XML 파일: Customers 및 Orders(LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
+ 이 예제에서는 다음 XML 문서를 사용합니다. [샘플 XML 파일: Customers 및 Orders(LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
   
 ```csharp  
 XElement co = XElement.Load("CustomersOrders.xml");  

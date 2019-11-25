@@ -1,68 +1,68 @@
 ---
-title: '방법: 새 변수 만들기 (Visual Basic)'
+title: '방법: 새 변수 만들기'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Dim statement [Visual Basic]
 - variables [Visual Basic], creating
 ms.assetid: 35300be3-77b0-4bef-a156-034d3cdedde0
-ms.openlocfilehash: a6cb7225ea203f0b38b731795684bfb0cfdfd2d1
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 2a2b5b8bef3b66f9727f0e65b61882186c007e94
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630905"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353626"
 ---
-# <a name="how-to-create-a-new-variable-visual-basic"></a>방법: 새 변수 만들기 (Visual Basic)
+# <a name="how-to-create-a-new-variable-visual-basic"></a>방법: 새 변수 만들기(Visual Basic)
 
-[Dim 문을](../../../../visual-basic/language-reference/statements/dim-statement.md)사용 하 여 변수를 만듭니다.
+You create a variable with a [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md).
 
 ### <a name="to-create-a-new-variable"></a>새 변수를 만들려면
 
-1. `Dim` 문에서 변수를 선언 합니다.
+1. Declare the variable in a `Dim` statement.
 
     ```vb
     Dim newCustomer
     ```
 
-2. [Private](../../../../visual-basic/language-reference/modifiers/private.md), [Static](../../../../visual-basic/language-reference/modifiers/static.md), [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)또는 [WithEvents](../../../../visual-basic/language-reference/modifiers/withevents.md)와 같은 변수의 특징에 대 한 사양을 포함 합니다. 자세한 내용은 [선언 된 요소 특성](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)을 참조 하세요.
+2. Include specifications for the variable's characteristics, such as [Private](../../../../visual-basic/language-reference/modifiers/private.md), [Static](../../../../visual-basic/language-reference/modifiers/static.md), [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md), or [WithEvents](../../../../visual-basic/language-reference/modifiers/withevents.md). For more information, see [Declared Element Characteristics](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md).
 
     ```vb
     Public Static newCustomer
     ```
 
-    선언에서 다른 키워드를 `Dim` 사용 하는 경우 키워드가 필요 하지 않습니다.
+    You do not need the `Dim` keyword if you use other keywords in the declaration.
 
-3. 규칙 및 규칙 Visual Basic 따라야 하는 변수의 이름을 사용 하 여 사양을 따릅니다. 자세한 내용은 [선언 된 요소 이름](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)을 참조 하세요.
+3. Follow the specifications with the variable's name, which must follow Visual Basic rules and conventions. For more information, see [Declared Element Names](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).
 
     ```vb
     Public Static newCustomer
     ```
 
-4. 이름 뒤에 [As](../../../../visual-basic/language-reference/statements/as-clause.md) 절을 추가 하 여 변수의 데이터 형식을 지정 합니다.
+4. Follow the name with the [As](../../../../visual-basic/language-reference/statements/as-clause.md) clause to specify the variable's data type.
 
     ```vb
     Public Static newCustomer As Customer
     ```
 
-    데이터 형식을 지정 하지 않으면 기본적 `Object`으로가 사용 됩니다.
+    If you do not specify the data type, it uses the default: `Object`.
 
-5. 등호(`=`)를 사용 하 여 절을따르고변수의초기값을사용하여등호를따릅니다.`As`
+5. Follow the `As` clause with an equal sign (`=`) and follow the equal sign with the variable's initial value.
 
-    Visual Basic는 `Dim` 문을 실행할 때마다 변수에 지정 된 값을 할당 합니다. 초기 값을 지정 하지 않는 경우 Visual Basic는 먼저 `Dim` 문이 포함 된 코드를 입력할 때 변수의 데이터 형식에 대 한 기본 초기 값을 할당 합니다.
+    Visual Basic assigns the specified value to the variable every time it runs the `Dim` statement. If you do not specify an initial value, Visual Basic assigns the default initial value for the variable's data type when it first enters the code that contains the `Dim` statement.
 
-    변수가 참조 형식이 면 `As` 절에 [New Operator](../../../../visual-basic/language-reference/operators/new-operator.md) 키워드를 포함 하 여 해당 클래스의 인스턴스를 만들 수 있습니다. 을 사용 `New`하지 않는 경우 변수의 초기 값은 [Nothing](../../../../visual-basic/language-reference/nothing.md)입니다.
+    If the variable is a reference type, you can create an instance of its class by including the [New Operator](../../../../visual-basic/language-reference/operators/new-operator.md) keyword in the `As` clause. If you do not use `New`, the initial value of the variable is [Nothing](../../../../visual-basic/language-reference/nothing.md).
 
     ```vb
     Public Static newCustomer As New Customer
     ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [변수](../../../../visual-basic/programming-guide/language-features/variables/index.md)
 - [변수 선언](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
 - [선언 요소 이름](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
 - [선언 요소의 특징](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)
-- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
-- [문(C++)](../../../../visual-basic/language-reference/statements/index.md)
+- [값 형식과 참조 형식](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [문](../../../../visual-basic/language-reference/statements/index.md)
 - [지역 형식 유추](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
 - [Option Infer 문](../../../../visual-basic/language-reference/statements/option-infer-statement.md)

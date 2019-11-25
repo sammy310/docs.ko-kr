@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: c1676cca-3f1a-41ec-b469-9029566074fc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e58c7b3ce134139950de54d98b590ec2e6b0f3de
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 041fc89ba319edb63af3aeea43dc581f59323906
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046448"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204659"
 ---
 # <a name="net-framework-performance"></a>.NET Framework 성능
 성능이 우수한 앱을 만들려면 앱의 다른 모든 기능을 디자인하는 것처럼 성능을 디자인하고 계획해야 합니다. 앱의 성능을 측정할 수 있도록 Microsoft에서 제공하는 도구를 사용하고 필요한 경우 메모리 사용, 코드 처리량 및 응답성을 향상시킬 수 있습니다. 이 항목에는 Microsoft에서 제공하는 성능 분석 도구가 나열되어 있으며, 앱 개발의 특정 영역에 대한 성능을 설명하는 다른 항목의 링크가 제공되어 있습니다.  
@@ -30,10 +30,10 @@ ms.locfileid: "71046448"
 ### <a name="performance-tools"></a>성능 도구  
  다음은 .NET Framework 앱에 사용할 수 있는 몇 가지 성능 도구입니다.  
   
-|도구|Description|  
+|도구|설명|  
 |----------|-----------------|  
-|Visual Studio 성능 분석|Windows 운영 체제를 실행하는 컴퓨터에 배포할 .NET Framework 앱의 CPU 사용률을 분석하는 데 사용합니다.<br /><br /> 이 도구는 Visual Studio에서 프로젝트를 연 후 **디버그** 메뉴에서 사용할 수 있습니다. 자세한 내용은 [성능 탐색기](/visualstudio/profiling/performance-explorer)을 비롯한 다양한 도구를 사용할 수 있습니다. **참고:**  Windows Phone을 대상으로 할 경우 Windows Phone 응용 프로그램 분석(다음 행 참조)을 사용하세요.|  
-|Windows Phone 애플리케이션 분석|Windows Phone 앱의 CPU 및 메모리, 네트워크 데이터 전송 속도, 앱 응답성 및 배터리 소비를 분석하는 데 사용합니다.<br /><br /> 이 도구는 [Windows Phone SDK](https://go.microsoft.com/fwlink/?LinkId=265773)를 설치한 후 Visual Studio에서 Windows Phone 프로젝트의 **디버그** 메뉴에서 사용할 수 있습니다. 자세한 내용은 [Windows Phone 8의 앱 프로 파일링](https://docs.microsoft.com/previous-versions/windows/apps/jj215908(v=vs.105))을 참조 하세요.|  
+|Visual Studio 성능 분석|Windows 운영 체제를 실행하는 컴퓨터에 배포할 .NET Framework 앱의 CPU 사용률을 분석하는 데 사용합니다.<br /><br /> 이 도구는 Visual Studio에서 프로젝트를 연 후 **디버그** 메뉴에서 사용할 수 있습니다. 자세한 내용은 [성능 탐색기](/visualstudio/profiling/performance-explorer)를 참조하세요. **참고:** Windows Phone을 대상으로 할 경우 Windows Phone 애플리케이션 분석(다음 행 참조)을 사용하세요.|  
+|Windows Phone 애플리케이션 분석|Windows Phone 앱의 CPU 및 메모리, 네트워크 데이터 전송 속도, 앱 응답성 및 배터리 소비를 분석하는 데 사용합니다.<br /><br /> 이 도구는 [Windows Phone SDK](https://go.microsoft.com/fwlink/?LinkId=265773)를 설치한 후 Visual Studio에서 Windows Phone 프로젝트의 **디버그** 메뉴에서 사용할 수 있습니다. For more information, see [App profiling for Windows Phone 8](https://docs.microsoft.com/previous-versions/windows/apps/jj215908(v=vs.105)).|  
 |[PerfView](https://www.microsoft.com/download/details.aspx?id=28567)|CPU 및 메모리 관련 성능 문제를 식별하는 데 사용합니다. 이 도구는 ETW(Windows용 이벤트 추적) 및 CLR 프로파일링 API를 사용하여 가비지 수집 및 JIT 컴파일에 대한 정보와 고급 메모리 및 CPU 확인 기능을 제공합니다. PerfView 사용 방법에 대한 자세한 내용은 앱에 포함된 자습서 및 도움말 파일, [Channel 9 비디오 자습서](https://channel9.msdn.com/Series/PerfView-Tutorial) 및 [블로그 게시물](https://blogs.msdn.microsoft.com/vancem/tag/perfview/)을 참조하세요.<br /><br /> 메모리 관련 문제는 [Using PerfView for Memory Investigations](https://channel9.msdn.com/Series/PerfView-Tutorial/PerfView-Tutorial-9-NET-Memory-Investigation-Basics-of-GC-Heap-Snapshots)(메모리 확인에 PerfView 사용)를 참조하세요.|  
 |[Windows Performance Analyzer](https://www.microsoft.com/download/details.aspx?id=30652)|동일한 컴퓨터에서 여러 앱이 실행되고 있는 경우 앱의 메모리 및 스토리지 사용과 같은 전체 시스템 성능을 확인하는 데 사용합니다. 이 도구는 다운로드 센터에서 [!INCLUDE[win8](../../../includes/win8-md.md)]용 Windows ADK(평가 및 배포 키트)의 일부로 사용할 수 있습니다. 자세한 내용은 [Windows Performance Analyzer](/windows-hardware/test/wpt/windows-performance-analyzer)를 참조하세요.|  
   
@@ -46,13 +46,13 @@ ms.locfileid: "71046448"
 |앱 형식|참조 항목|  
 |--------------|---------|  
 |모든 플랫폼용 .NET Framework 앱|[가비지 수집 및 성능](../../standard/garbage-collection/performance.md)<br /><br /> [성능 팁](performance-tips.md)|  
-|C++, C# 및 Visual Basic으로 작성된 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 앱|[C++, C# 및 Visual Basic을 사용하는 Windows 스토어 앱의 성능 모범 사례](https://docs.microsoft.com/previous-versions/windows/apps/hh750313%28v=win.10%29)|  
+|Windows 8.x Store apps written in C++, C#, and Visual Basic|[C++, C# 및 Visual Basic을 사용하는 Windows 스토어 앱의 성능 모범 사례](https://docs.microsoft.com/previous-versions/windows/apps/hh750313%28v=win.10%29)|  
 |WPF(Windows Presentation Foundation)|[WPF 성능 제품군](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100))|  
 |ASP.NET|[ASP.NET 성능 개요](https://docs.microsoft.com/previous-versions/aspnet/cc668225(v=vs.100))|  
   
 ## <a name="related-topics"></a>관련 항목  
   
-|제목|Description|  
+|제목|설명|  
 |-----------|-----------------|  
 |[.NET Framework 애플리케이션에서 캐시](caching-in-net-framework-applications.md)|데이터를 캐시하여 앱 성능을 향상시키는 방법을 설명합니다.|  
 |[초기화 지연](lazy-initialization.md)|필요한 대로 개체를 초기화하여 성능을 향상시키는 방법을 설명합니다(특히, 앱 시작 시).|  

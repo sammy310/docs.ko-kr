@@ -1,5 +1,5 @@
 ---
-title: '방법: 변수의 범위 제어(Visual Basic)'
+title: '방법: 변수의 범위 제어'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - variables [Visual Basic], scope
@@ -12,53 +12,53 @@ helpviewer_keywords:
 - declared elements [Visual Basic], visibility
 - visibility [Visual Basic], variables
 ms.assetid: 44b7f62a-cb5c-4d50-bce9-60ae68f87072
-ms.openlocfilehash: 23a10bd2d6c0c9f3a13bff864559460c48927e01
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 0ee6ce183310aa836ecdbbc0bc819e0e83d1872d
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582609"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345371"
 ---
 # <a name="how-to-control-the-scope-of-a-variable-visual-basic"></a>방법: 변수의 범위 제어(Visual Basic)
-일반적으로 변수는 *범위*내에 있거나 선언 하는 지역 전체에서 참조로 표시 됩니다. 경우에 따라 변수의 *액세스 수준이* 범위에 영향을 줄 수 있습니다.  
+Normally, a variable is in *scope*, or visible for reference, throughout the region in which you declare it. In some cases, the variable's *access level* can influence its scope.  
   
  자세한 내용은 [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)을 참조하세요.  
   
-## <a name="scope-at-block-or-procedure-level"></a>블록 또는 프로시저 수준에서의 범위  
+## <a name="scope-at-block-or-procedure-level"></a>Scope at Block or Procedure Level  
   
-#### <a name="to-make-a-variable-visible-only-within-a-block"></a>블록 내 에서만 변수를 표시 하려면  
+#### <a name="to-make-a-variable-visible-only-within-a-block"></a>To make a variable visible only within a block  
   
-- 해당 블록의 시작 및 종료 선언문 사이에 있는 변수에 대 한 [Dim 문을](../../../../visual-basic/language-reference/statements/dim-statement.md) 저장 합니다 (예: `For` 루프의 `For` 문과 `Next` 문 사이).  
+- Place the [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md) for the variable between the initiating and terminating declaration statements of that block, for example between the `For` and `Next` statements of a `For` loop.  
   
-     변수는 블록 내 에서만 참조할 수 있습니다.  
+     You can refer to the variable only from within the block.  
   
-#### <a name="to-make-a-variable-visible-only-within-a-procedure"></a>프로시저 내 에서만 변수를 표시 하려면  
+#### <a name="to-make-a-variable-visible-only-within-a-procedure"></a>To make a variable visible only within a procedure  
   
-- 프로시저 내의 변수에 대 한 `Dim` 문을 저장 합니다 (예: `With` ... `End With` 블록).  
+- Place the `Dim` statement for the variable inside the procedure but outside any block (such as a `With`...`End With` block).  
   
-     프로시저 내에서 프로시저 내에 포함 된 모든 블록을 포함 하 여 변수만 참조할 수 있습니다.  
+     You can refer to the variable only from within the procedure, including inside any block contained in the procedure.  
   
-## <a name="scope-at-module-or-namespace-level"></a>모듈 또는 네임 스페이스 수준에서의 범위  
- 편의를 위해 모듈, 클래스 및 구조에는 단일 용어 *모듈 수준이* 동일 하 게 적용 됩니다. 모듈 수준 변수의 액세스 수준에 따라 해당 범위가 결정 됩니다. 모듈, 클래스 또는 구조가 포함 된 네임 스페이스도 범위에 영향을 미칩니다.  
+## <a name="scope-at-module-or-namespace-level"></a>Scope at Module or Namespace Level  
+ For convenience, the single term *module level* applies equally to modules, classes, and structures. The access level of a module level variable determines its scope. The namespace that contains the module, class, or structure also influences the scope.  
   
-#### <a name="to-make-a-variable-visible-throughout-a-module-class-or-structure"></a>모듈, 클래스 또는 구조 전체에서 변수를 표시 하도록 설정 하려면  
+#### <a name="to-make-a-variable-visible-throughout-a-module-class-or-structure"></a>To make a variable visible throughout a module, class, or structure  
   
-1. 모듈, 클래스 또는 구조체 내의 변수에 대 한 `Dim` 문을 프로시저 외부에 저장 합니다.  
+1. Place the `Dim` statement for the variable inside the module, class, or structure, but outside any procedure.  
   
-2. [Private](../../../../visual-basic/language-reference/modifiers/private.md) 키워드를 `Dim` 문에 포함 합니다.  
+2. Include the [Private](../../../../visual-basic/language-reference/modifiers/private.md) keyword in the `Dim` statement.  
   
-3. 모듈, 클래스 또는 구조체 내의 어디에서 나 변수를 참조할 수 있지만 외부에서는 참조할 수 없습니다.  
+3. You can refer to the variable from anywhere within the module, class, or structure, but not from outside it.  
   
-#### <a name="to-make-a-variable-visible-throughout-a-namespace"></a>네임 스페이스 전체에서 변수를 표시 하려면  
+#### <a name="to-make-a-variable-visible-throughout-a-namespace"></a>To make a variable visible throughout a namespace  
   
-1. 모듈, 클래스 또는 구조체 내의 변수에 대 한 `Dim` 문을 프로시저 외부에 저장 합니다.  
+1. Place the `Dim` statement for the variable inside the module, class, or structure, but outside any procedure.  
   
-2. [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) 또는 [Public](../../../../visual-basic/language-reference/modifiers/public.md) 키워드를 `Dim` 문에 포함 합니다.  
+2. Include the [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) or [Public](../../../../visual-basic/language-reference/modifiers/public.md) keyword in the `Dim` statement.  
   
-3. 모듈, 클래스 또는 구조체를 포함 하는 네임 스페이스 내의 어디에서 나 변수를 참조할 수 있습니다.  
+3. You can refer to the variable from anywhere within the namespace containing the module, class, or structure.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 모듈 수준에서 변수를 선언 하 고 모듈 내의 코드에 대 한 표시 여부를 제한 합니다.  
+ The following example declares a variable at module level and limits its visibility to code within the module.  
   
 ```vb  
 Module demonstrateScope  
@@ -72,25 +72,25 @@ Module demonstrateScope
 End Module  
 ```  
   
- 위의 예제에서 모듈 `demonstrateScope`에 정의 된 모든 프로시저는 `strMsg` `String` 변수를 참조할 수 있습니다. @No__t_0 프로시저가 호출 되 면 대화 상자에 `strMsg` 문자열 변수의 내용이 표시 됩니다.  
+ In the preceding example, all the procedures defined in module `demonstrateScope` can refer to the `String` variable `strMsg`. When the `usePrivateVariable` procedure is called, it displays the contents of the string variable `strMsg` in a dialog box.  
   
- 앞의 예제를 다음과 같이 변경 하 여 문자열 변수 `strMsg` 선언 네임 스페이스의 모든 위치에서 코드로 참조할 수 있습니다.  
+ With the following alteration to the preceding example, the string variable `strMsg` can be referred to by code anywhere in the namespace of its declaration.  
   
 ```vb  
 Public strMsg As String  
 ```  
   
 ## <a name="robust-programming"></a>강력한 프로그래밍  
- 변수의 범위가 작을수록 동일한 이름의 다른 변수 대신 실수로 참조 하는 기회를 줄일 수 있습니다. 참조 일치 문제를 최소화할 수도 있습니다.  
+ The narrower the scope of a variable, the fewer opportunities you have for accidentally referring to it in place of another variable with the same name. You can also minimize problems of reference matching.  
   
 ## <a name="net-framework-security"></a>.NET Framework 보안  
- 변수의 범위가 작을수록 악의적인 코드가이를 부적절 하 게 사용할 수 있는 기회가 줄어듭니다.  
+ The narrower the scope of a variable, the smaller the chances that malicious code can make improper use of it.  
   
 ## <a name="see-also"></a>참조
 
-- [Visual Basic 범위](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
-- [Visual Basic 수명](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
-- [Visual Basic의 액세스 수준](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Lifetime in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
+- [Access levels in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [변수](../../../../visual-basic/programming-guide/language-features/variables/index.md)
 - [변수 선언](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
 - [Dim 문](../../../../visual-basic/language-reference/statements/dim-statement.md)

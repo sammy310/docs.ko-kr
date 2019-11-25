@@ -1,15 +1,15 @@
 ---
-title: 비동기 앱에서 재진입 처리 (Visual Basic)
+title: 비동기 응용 프로그램에서 재진입 처리
 ms.date: 07/20/2015
 ms.assetid: ef3dc73d-13fb-4c5f-a686-6b84148bbffe
-ms.openlocfilehash: 466ff3ba4cdb627143b3ffc988ae4a16348e6ca6
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: cd8b43aa9b2373b5ce038e5007678778201f0746
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72775531"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74354275"
 ---
-# <a name="handling-reentrancy-in-async-apps-visual-basic"></a>비동기 앱에서 재진입 처리 (Visual Basic)
+# <a name="handling-reentrancy-in-async-apps-visual-basic"></a>Handling Reentrancy in Async Apps (Visual Basic)
 
 앱에 비동기 코드가 사용될 때, 비동기 작업이 완료되기 전에 동일한 비동기 작업을 다시 수행하는 재진입을 파악하고 방지할 수 있어야 합니다. 재진입 가능성을 식별하고 처리하지 못하면 예기치 않은 결과가 생길 수 있습니다.
 
@@ -17,7 +17,7 @@ ms.locfileid: "72775531"
 > 예제를 실행하려면 Visual Studio 2012 이상 및 .NET Framework 4.5 이상이 컴퓨터에 설치되어 있어야 합니다.
 
 > [!NOTE]
-> TLS (전송 계층 보안) 버전 1.2은 이제 앱 개발에 사용할 최소 버전입니다. 앱이 4.7 이전 버전의 .NET framework를 대상으로 하는 경우 [TLS (Transport Layer Security) 모범 사례](../../../../framework/network-programming/tls.md) 에 대 한 다음 문서를 참조 하십시오 .NET Framework 
+> 현재 앱 개발에 사용할 최소 버전은 TLS(전송 계층 보안) 버전 1.2입니다. 앱이 .NET Framework 4.7 이전 버전을 대상으로 하는 경우, [.NET Framework를 사용한 TLS(전송 계층 보안) 모범 사례](../../../../framework/network-programming/tls.md)는 다음 문서를 참조하세요. 
 
 ## <a name="BKMK_RecognizingReentrancy"></a> 재진입 인식
 
@@ -126,7 +126,7 @@ End Sub
 
 **시작** 버튼을 사용하지 않도록 설정하는 대신 버튼을 활성 상태로 유지하지만 사용자가 버튼을 다시 클릭하는 경우 이미 실행되고 있는 작업을 취소하고 가장 최근에 시작한 작업이 계속되도록 합니다.
 
-취소에 대 한 자세한 내용은 [비동기 응용 프로그램 미세 조정 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)을 참조 하세요.
+For more information about cancellation, see [Fine-Tuning Your Async Application (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md).
 
 이 시나리오를 설정하려면 [예제 앱 검토 및 실행](#BKMD_SettingUpTheExample)에서 제공하는 기본 코드를 다음과 같이 변경합니다. [Async Samples: Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)(비동기 샘플: .NET 데스크톱 앱의 재입력)에서 완성된 앱을 다운로드할 수도 있습니다. 이 프로젝트의 이름은 CancelAndRestart입니다.
 
@@ -139,7 +139,7 @@ End Sub
         Dim cts As CancellationTokenSource
     ```
 
-2. `StartButton_Click`에서 작업이 이미 진행 중인지 확인합니다. @No__t_0 값이 `Nothing` 이면 이미 활성화 된 작업이 없습니다. 값이 `Nothing` 되지 않은 경우 이미 실행 중인 작업이 취소 됩니다.
+2. `StartButton_Click`에서 작업이 이미 진행 중인지 확인합니다. If the value of `cts` is `Nothing`, no operation is already active. If the value isn't `Nothing`, the operation that is already running is canceled.
 
     ```vb
     ' *** If a download process is already underway, cancel it.
@@ -156,7 +156,7 @@ End Sub
     cts = newCTS
     ```
 
-4. @No__t_0 끝나면 현재 프로세스가 완료 되므로 `cts` 값을 다시 `Nothing`으로 설정 합니다.
+4. At the end of `StartButton_Click`, the current process is complete, so set the value of `cts` back to `Nothing`.
 
     ```vb
     ' *** When the process completes, signal that another process can proceed.
@@ -248,7 +248,7 @@ Private Async Function AccessTheWebAsync(ct As CancellationToken) As Task
 End Function
 ```
 
-이 앱이 실행 되는 동안 **시작** 단추를 여러 번 선택 하면 다음 출력과 유사한 결과가 생성 됩니다.
+If you choose the **Start** button several times while this app is running, it should produce results that resemble the following output:
 
 ```console
 1. msdn.microsoft.com/library/hh191443.aspx                83732
@@ -516,7 +516,7 @@ End Function
   TOTAL bytes returned:  915908
   ```
 
-- @No__t_0 작업은 먼저 시작 된 그룹 A에 대해서만 `FinishOneGroupAsync` 시작 `Nothing` 됩니다. 그룹 A는 `FinishOneGroupAsync`에 도달할 때 await 식을 아직 완료하지 않았습니다. 따라서 컨트롤이 `AccessTheWebAsync`로 반환되지 않았으며 `pendingWork`에 대한 첫 번째 할당이 발생되지 않았습니다.
+- The `pendingWork` task is `Nothing` at the start of `FinishOneGroupAsync` only for group A, which started first. 그룹 A는 `FinishOneGroupAsync`에 도달할 때 await 식을 아직 완료하지 않았습니다. 따라서 컨트롤이 `AccessTheWebAsync`로 반환되지 않았으며 `pendingWork`에 대한 첫 번째 할당이 발생되지 않았습니다.
 
 - 다음 두 줄은 항상 출력에 함께 나타납니다. 코드는 `StartButton_Click`의 그룹 작업 시작과 `pendingWork`에 그룹에 대한 작업 할당 사이에서 중단되지 않습니다.
 
@@ -560,11 +560,11 @@ End Function
 
      **새 프로젝트** 대화 상자가 열립니다.
 
-3. **설치 된 템플릿** 창에서 **Visual Basic**을 확장 한 다음 **Windows**를 확장 합니다.
+3. In the **Installed Templates** pane, expand **Visual Basic**, and then expand **Windows**.
 
 4. 프로젝트 형식 목록에서 **WPF 애플리케이션**을 선택합니다.
 
-5. 프로젝트 이름을 `WebsiteDownloadWPF`로 .NET Framework 버전 4.6 이상을 선택한 다음 **확인** 단추를 클릭 합니다.
+5. 프로젝트 이름을 `WebsiteDownloadWPF`로 지정하고 .NET Framework 버전 4.6 이상을 선택한 다음, **확인** 단추를 클릭합니다.
 
      **솔루션 탐색기**에 새 프로젝트가 표시됩니다.
 
@@ -592,13 +592,13 @@ End Function
 
      텍스트 상자와 버튼이 포함된 간단한 창이 MainWindow.xaml의 **디자인** 보기에 나타납니다.
 
-8. **솔루션 탐색기**에서 **참조** 를 마우스 오른쪽 단추로 클릭 하 고 **참조 추가**를 선택 합니다.
+8. **솔루션 탐색기**에서 **참조**를 마우스 오른쪽 단추로 클릭하고 **참조 추가**를 선택합니다.
 
-     @No__t_0에 대 한 참조를 추가 합니다 (아직 선택 하지 않은 경우).
+     아직 선택하지 않은 경우 <xref:System.Net.Http>에 대한 참조를 추가합니다.
 
-9. **솔루션 탐색기**에서 mainwindow.xaml의 바로 가기 메뉴를 열고 **코드 보기**를 선택 합니다.
+9. In **Solution Explorer**, open the shortcut menu for MainWindow.xaml.vb, and then choose **View Code**.
 
-10. Mainwindow.xaml에서 코드를 다음 코드로 바꿉니다.
+10. In MainWindow.xaml.vb , replace the code with the following code.
 
     ```vb
     ' Add the following Imports statements, and add a reference for System.Net.Http.

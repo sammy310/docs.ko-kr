@@ -1,5 +1,5 @@
 ---
-title: '방법: 개체의 현재 인스턴스 (Visual Basic)를 참조 하세요.'
+title: '방법: 개체의 현재 인스턴스 참조'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - variables [Visual Basic], object
@@ -8,28 +8,28 @@ helpviewer_keywords:
 - current instance
 - object variables [Visual Basic]
 ms.assetid: 7f9b2c77-03cd-428f-adc2-b18070226e7c
-ms.openlocfilehash: 6c216dbc59bcad7a9f24bb01f856c3d29c288dbb
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 62b22a54904a45380052d3d81d9415517d4f8d3b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005660"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346890"
 ---
-# <a name="how-to-refer-to-the-current-instance-of-an-object-visual-basic"></a>방법: 개체의 현재 인스턴스 (Visual Basic)를 참조 하세요.
-개체의 *현재 인스턴스* 는 코드가 현재 실행 중인 인스턴스입니다.  
+# <a name="how-to-refer-to-the-current-instance-of-an-object-visual-basic"></a>방법: 개체의 현재 인스턴스 참조(Visual Basic)
+The *current instance* of an object is the instance in which the code is currently executing.  
   
- @No__t-0 키워드를 사용 하 여 현재 인스턴스를 참조 합니다.  
+ You use the `Me` keyword to refer to the current instance.  
   
-### <a name="to-refer-to-the-current-instance"></a>현재 인스턴스를 참조 하려면  
+### <a name="to-refer-to-the-current-instance"></a>To refer to the current instance  
   
-- 일반적으로 개체 변수 이름을 사용 하는 `Me` 키워드를 사용 합니다.  
+- Use the `Me` keyword where you would normally use the name of an object variable.  
   
     ```vb  
     Me.ForeColor = System.Drawing.Color.Crimson  
     Me.Close()  
     ```  
   
-     @No__t-0은 개체 변수 처럼 동작 하지만이를 선언 하거나 할당할 수는 없습니다. `Me`은 항상 현재 인스턴스를 참조 합니다.  
+     Although `Me` behaves like an object variable, you cannot declare it or assign anything to it. `Me` always refers to the current instance.  
   
 ## <a name="see-also"></a>참조
 

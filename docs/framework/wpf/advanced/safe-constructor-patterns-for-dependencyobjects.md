@@ -6,21 +6,21 @@ helpviewer_keywords:
 - dependency objects [WPF], constructor patterns
 - FXCop tool [WPF]
 ms.assetid: f704b81c-449a-47a4-ace1-9332e3cc6d60
-ms.openlocfilehash: fce17979fbd43df0496f972cac525fd79dcbfe32
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 66e380a9428395c772d0dcfe45a995374774aec6
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991812"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283822"
 ---
 # <a name="safe-constructor-patterns-for-dependencyobjects"></a>DependencyObject의 안전한 생성자 패턴
-일반적으로 클래스 생성자는 가상 메서드나 대리자와 같은 콜백을 호출하면 안 됩니다. 이는 생성자는 파생 클래스에 대한 생성자의 기본 초기화로 호출될 수 있기 때문입니다. 특정 개체의 불완전한 초기화 상태에서 가상 항목이 입력될 수 있습니다. 하지만 속성 시스템 자체는 내부적으로 콜백을 종속성 속성 시스템의 일부로 호출하고 표시합니다. 호출을 사용 하 여 <xref:System.Windows.DependencyObject.SetValue%2A> 종속성 속성 값을 설정 하는 간단한 작업으로 결정의 어딘가에 콜백이 포함 될 수 있습니다. 이런 이유로 생성자 본문에서 종속성 속성 값을 설정할 때 주의해야 합니다. 형식이 기본 클래스로 사용될 경우 문제가 발생할 수 있습니다. 종속성 속성 상태와 관련 된 특정 <xref:System.Windows.DependencyObject> 문제를 방지 하는 생성자를 구현 하기 위한 특정 패턴과 여기에 설명 된 고유 콜백이 있습니다.  
+일반적으로 클래스 생성자는 가상 메서드나 대리자와 같은 콜백을 호출하면 안 됩니다. 이는 생성자는 파생 클래스에 대한 생성자의 기본 초기화로 호출될 수 있기 때문입니다. 특정 개체의 불완전한 초기화 상태에서 가상 항목이 입력될 수 있습니다. 하지만 속성 시스템 자체는 내부적으로 콜백을 종속성 속성 시스템의 일부로 호출하고 표시합니다. <xref:System.Windows.DependencyObject.SetValue%2A> 호출을 사용 하 여 종속성 속성 값을 설정 하는 작업은 잠재적으로 결정의 어딘가에 콜백을 포함할 수 있습니다. 이런 이유로 생성자 본문에서 종속성 속성 값을 설정할 때 주의해야 합니다. 형식이 기본 클래스로 사용될 경우 문제가 발생할 수 있습니다. 종속성 속성 상태와 관련 된 특정 문제를 방지 하는 <xref:System.Windows.DependencyObject> 생성자와 여기에 설명 된 고유 콜백을 구현 하기 위한 특정 패턴이 있습니다.  
 
 <a name="Property_System_Virtual_Methods"></a>   
 ## <a name="property-system-virtual-methods"></a>속성 시스템 가상 메서드  
- 다음 가상 메서드 또는 콜백은 <xref:System.Windows.DependencyObject.SetValue%2A> 종속성 속성 <xref:System.Windows.ValidateValueCallback>값을 설정 하는 호출을 계산 하는 동안, <xref:System.Windows.PropertyChangedCallback> <xref:System.Windows.CoerceValueCallback>,, <xref:System.Windows.DependencyObject.OnPropertyChanged%2A>등의 호출을 받을 수 있습니다. 이러한 각 가상 메서드 또는 콜백은 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 속성 시스템 및 종속성 속성의 다양성을 확장하기 위한 특정 목적으로 사용됩니다. 이러한 가상 항목을 사용하여 속성 값 확인을 사용자 지정하는 방법에 대한 자세한 내용은 [종속성 속성 콜백 및 유효성 검사](dependency-property-callbacks-and-validation.md)를 참조하세요.  
+ <xref:System.Windows.ValidateValueCallback>, <xref:System.Windows.PropertyChangedCallback>, <xref:System.Windows.CoerceValueCallback>, <xref:System.Windows.DependencyObject.OnPropertyChanged%2A>종속성 속성 값을 설정 하는 <xref:System.Windows.DependencyObject.SetValue%2A> 호출을 계산 하는 동안 다음과 같은 가상 메서드 또는 콜백이 호출 될 수 있습니다. 이러한 각 가상 메서드 또는 콜백은 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 속성 시스템 및 종속성 속성의 다양성을 확장하기 위한 특정 목적으로 사용됩니다. 이러한 가상 항목을 사용하여 속성 값 확인을 사용자 지정하는 방법에 대한 자세한 내용은 [종속성 속성 콜백 및 유효성 검사](dependency-property-callbacks-and-validation.md)를 참조하세요.  
   
-### <a name="fxcop-rule-enforcement-vs-property-system-virtuals"></a>FXCop 규칙 적용 및 속성 시스템 가상 항목  
+### <a name="fxcop-rule-enforcement-vs-property-system-virtuals"></a>FXCop 규칙 적용 및 속성 시스템 가상 컴퓨터  
  Microsoft 도구 FXCop를 빌드 프로세스에 사용하고 기본 생성자를 호출하는 특정 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 프레임워크 클래스에서 파생시키거나 파생 클래스에서 자체 종속성 속성을 구현할 경우 특정 FXCop 규칙 위반이 발생할 수 있습니다. 이 위반에 대한 이름 문자열은 다음과 같습니다.  
   
  `DoNotCallOverridableMethodsInConstructors`  
@@ -60,7 +60,7 @@ public class MyClass : DependencyObject
 }  
 ```  
   
- 응용 프로그램 코드가를 `new MyClass(objectvalue)`호출 하면이는 매개 변수가 없는 생성자와 기본 클래스 생성자를 호출 합니다. 그런 다음를 `Property1 = object1`설정 합니다 .이 메서드는 `OnPropertyChanged` 소유 `MyClass` <xref:System.Windows.DependencyObject>하는의 가상 메서드를 호출 합니다.  재정의는 아직 초기화되지 않은 `_myList`를 참조합니다.  
+ 응용 프로그램 코드는 `new MyClass(objectvalue)`를 호출할 때 매개 변수가 없는 생성자와 기본 클래스 생성자를 호출 합니다. 그런 다음 소유 하는 `MyClass` <xref:System.Windows.DependencyObject>에서 가상 메서드 `OnPropertyChanged`를 호출 하 `Property1 = object1`를 설정 합니다.  재정의는 아직 초기화되지 않은 `_myList`를 참조합니다.  
   
  이러한 문제를 피하는 한 가지 방법은 콜백이 기타 종속성 속성만 사용하고 각 종속성 속성에 설정된 기본값을 등록된 메타데이터로 포함하는지 확인하는 것입니다.  
   
@@ -96,7 +96,7 @@ public MyClass : SomeBaseClass {
 #### <a name="non-default-convenience-constructors-which-do-match-base-signatures"></a>기본 시그니처와 일치하는 기본값이 아닌(편의) 생성자  
  동일한 매개 변수화를 사용 하 여 기본 생성자를 호출 하는 대신, 고유한 클래스의 매개 변수 없는 생성자를 다시 호출 합니다. 기본 이니셜라이저를 호출하지 마세요. 대신에 `this()`를 호출해야 합니다. 그 다음에 전달된 매개 변수를 관련 속성을 설정하기 위한 값으로 사용하여 원래 생성자 동작을 재현합니다. 특정 매개 변수가 설정해야 하는 속성을 결정하는 과정의 지침으로 원래 기본 생성자 문서를 사용합니다.  
   
-```  
+```csharp  
 public MyClass : SomeBaseClass {  
     public MyClass(object toSetProperty1) : this() {  
         // Class initialization NOT done by default.  
@@ -110,9 +110,9 @@ public MyClass : SomeBaseClass {
  기본 형식에 여러 개의 시그니처가 있는 경우에는 추가로 설정 하기 전에 매개 변수 없는 생성자 클래스를 호출 하는 것이 좋습니다. 정보의.  
   
 #### <a name="setting-dependency-properties-with-setvalue"></a>SetValue를 사용하여 종속성 속성 설정  
- 이러한 동일한 패턴은 속성 설정 편의를 위한 래퍼가 없는 속성을 설정 하 고를 사용 하 여 <xref:System.Windows.DependencyObject.SetValue%2A>값을 설정 하는 경우에 적용 됩니다. 생성자 매개 변수 <xref:System.Windows.DependencyObject.SetValue%2A> 를 통과 하는에 대 한 호출은 초기화를 위해 클래스의 매개 변수가 없는 생성자도 호출 해야 합니다.  
+ 이러한 동일한 패턴은 속성 설정 편의를 위한 래퍼가 없는 속성을 설정 하 고 <xref:System.Windows.DependencyObject.SetValue%2A>를 사용 하 여 값을 설정 하는 경우에 적용 됩니다. 생성자 매개 변수를 통과 하는 <xref:System.Windows.DependencyObject.SetValue%2A>에 대 한 호출은 초기화를 위해 클래스의 매개 변수가 없는 생성자도 호출 해야 합니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - [사용자 지정 종속성 속성](custom-dependency-properties.md)
 - [종속성 속성 개요](dependency-properties-overview.md)

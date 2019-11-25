@@ -1,5 +1,5 @@
 ---
-title: /debug(Visual Basic)
+title: /debug
 ms.date: 03/10/2018
 helpviewer_keywords:
 - debug compiler switches
@@ -7,16 +7,16 @@ helpviewer_keywords:
 - -debug compiler option [Visual Basic]
 - debug compiler option [Visual Basic]
 ms.assetid: c2b0bea5-1d5e-499f-9bd5-4f6c6b715ea2
-ms.openlocfilehash: 27485cda9bb2af980b300180134fd7e99ffceeba
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 3beb9ad3829c2f55120a9136e6e54185551bd20b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72775682"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344784"
 ---
 # <a name="-debug-visual-basic"></a>-debug (Visual Basic)
 
-컴파일러가 디버깅 정보를 생성 하 여 출력 파일에 넣습니다.
+Causes the compiler to generate debugging information and place it in the output file(s).
 
 ## <a name="syntax"></a>구문
 
@@ -34,24 +34,24 @@ or
 
 |용어|정의|
 |---|---|
-|`+` &#124; `-`|(선택 사항) @No__t_0 또는 `/debug`를 지정 하면 컴파일러에서 디버깅 정보를 생성 하 여 .pdb 파일에 저장 합니다. @No__t_0 지정 하면 `/debug`를 지정 하지 않는 것과 동일한 효과가 있습니다.|
-|`full` &#124; `pdbonly`|(선택 사항) 컴파일러에서 생성되는 디버깅 정보 형식을 지정합니다. @No__t_0 지정 하지 않으면 기본값은 `full` 이며이를 통해 실행 중인 프로그램에 디버거를 연결할 수 있습니다. @No__t_0 인수를 사용 하면 디버거에서 프로그램이 시작 되는 경우 소스 코드 디버깅이 가능 하지만, 실행 중인 프로그램이 디버거에 연결 되어 있는 경우에만 어셈블리 언어 코드가 표시 됩니다.|
+|`+` &#124; `-`|(선택 사항) Specifying `+` or `/debug` causes the compiler to generate debugging information and place it in a .pdb file. Specifying `-` has the same effect as not specifying `/debug`.|
+|`full` &#124; `pdbonly`|(선택 사항) 컴파일러에서 생성되는 디버깅 정보 형식을 지정합니다. If you do not specify `/debug:pdbonly`, the default is `full`, which enables you to attach a debugger to the running program. The `pdbonly` argument allows source-code debugging when the program is started in the debugger, but it displays assembly-language code only when the running program is attached to the debugger.|
 
 ## <a name="remarks"></a>주의
 
-디버그 빌드를 만들려면 이 옵션을 사용합니다. @No__t_0, `/debug+` 또는 `/debug:full` 지정 하지 않으면 프로그램의 출력 파일을 디버그할 수 없습니다.
+디버그 빌드를 만들려면 이 옵션을 사용합니다. If you do not specify `/debug`, `/debug+`, or `/debug:full`, you will be unable to debug the output file of your program.
 
-기본적으로 디버깅 정보는 내보내지 않습니다 (`/debug-`). 디버깅 정보를 내보내려면 `/debug` 또는 `/debug+`를 지정 합니다.
+By default, debugging information is not emitted (`/debug-`). To emit debugging information, specify `/debug` or `/debug+`.
 
 애플리케이션의 디버그 성능을 구성하는 방법에 대한 자세한 내용은 [쉽게 디버깅할 수 있도록 이미지 만들기](../../../framework/debug-trace-profile/making-an-image-easier-to-debug.md)를 참조하세요.
 
-|Visual Studio 통합 개발 환경에서-debug를 설정 하려면|
+|To set -debug in the Visual Studio integrated development environment|
 |---|
-|1. **솔루션 탐색기**에서 프로젝트를 선택한 상태에서 **프로젝트** 메뉴에서 **속성**을 클릭 합니다. <br />2. **컴파일** 탭을 클릭 합니다.<br />3. **고급 컴파일 옵션**을 클릭 합니다.<br />4. **디버그 정보 생성** 상자에서 값을 수정 합니다.|
+|1.  With a project selected in **Solution Explorer**, on the **Project** menu, click **Properties**. <br />2.  Click the **Compile** tab.<br />3.  Click **Advanced Compile Options**.<br />4.  Modify the value in the **Generate Debug Info** box.|
 
 ## <a name="example"></a>예제
 
-다음 예제에서는 출력 파일 `App.exe`에 디버깅 정보를 저장 합니다.
+The following example puts debugging information in output file `App.exe`.
 
 ```console
 vbc -debug -out:app.exe test.vb

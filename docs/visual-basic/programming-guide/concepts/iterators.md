@@ -1,21 +1,21 @@
 ---
-title: 반복기 (Visual Basic)
+title: Iterators
 ms.date: 07/20/2015
 ms.assetid: f26b5c1e-fe9d-4004-b287-da7919d717ae
-ms.openlocfilehash: f9d5a976badc80c5ce00258f46e1d347f20be2f3
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 465a8e6650c3d015520164030a146c9502ebe603
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583357"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353734"
 ---
-# <a name="iterators-visual-basic"></a>반복기 (Visual Basic)
+# <a name="iterators-visual-basic"></a>Iterators (Visual Basic)
 
 *반복기*는 목록 및 배열과 같은 컬렉션을 단계별로 실행하는 데 사용할 수 있습니다.
 
-반복기 메서드 또는 `get` 접근자는 컬렉션에 대해 사용자 지정 반복을 수행합니다. 반복기 메서드는 [Yield](../../../visual-basic/language-reference/statements/yield-statement.md) 문을 사용 하 여 각 요소를 한 번에 하나씩 반환 합니다. `Yield` 문에 도달하면 코드의 현재 위치가 기억됩니다. 다음에 반복기 함수가 호출되면 해당 위치에서 실행이 다시 시작됩니다.
+반복기 메서드 또는 `get` 접근자는 컬렉션에 대해 사용자 지정 반복을 수행합니다. An iterator method uses the [Yield](../../../visual-basic/language-reference/statements/yield-statement.md) statement to return each element one at a time. `Yield` 문에 도달하면 코드의 현재 위치가 기억됩니다. 다음에 반복기 함수가 호출되면 해당 위치에서 실행이 다시 시작됩니다.
 
-For Each ...를 사용 하 여 클라이언트 코드에서 반복기를 사용 합니다. [ 다음](../../../visual-basic/language-reference/statements/for-each-next-statement.md) 문 또는 LINQ 쿼리 사용.
+You consume an iterator from client code by using a [For Each…Next](../../../visual-basic/language-reference/statements/for-each-next-statement.md) statement, or by using a LINQ query.
 
 다음 예제에서 `For Each` 루프의 첫 번째 반복은 첫 번째 `Yield` 문에 도달할 때까지 `SomeNumbers` 반복기 메서드에서 실행이 계속되도록 합니다. 이 반복은 3 값을 반환하며 반복기 메서드에서 현재 위치는 유지됩니다. 루프의 다음 반복에서는 반복기 메서드의 실행이 중지되었던 위치에서 계속되고 `Yield` 문에 도달하면 다시 중지됩니다. 이 반복은 값 5를 반환하며 반복기 메서드에서 현재 위치는 다시 유지됩니다. 루프는 반복기 메서드의 끝에 도달하면 완료됩니다.
 
@@ -37,11 +37,11 @@ End Function
 
 반복기 메서드 또는 `get` 접근자의 반환 형식은 <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator> 또는 <xref:System.Collections.Generic.IEnumerator%601>일 수 있습니다.
 
-@No__t_0 또는 `Return` 문을 사용 하 여 반복을 종료할 수 있습니다.
+You can use an `Exit Function` or `Return` statement to end the iteration.
 
-Visual Basic iterator 함수 또는 `get` 접근자 선언에 [반복기](../../../visual-basic/language-reference/modifiers/iterator.md) 한정자가 포함 되어 있습니다.
+A Visual Basic iterator function or `get` accessor declaration includes an [Iterator](../../../visual-basic/language-reference/modifiers/iterator.md) modifier.
 
-반복기는 Visual Studio 2012의 Visual Basic에서 도입 되었습니다.
+Iterators were introduced in Visual Basic in Visual Studio 2012.
 
 **항목 내용**
 
@@ -49,7 +49,7 @@ Visual Basic iterator 함수 또는 `get` 접근자 선언에 [반복기](../../
 
 - [컬렉션 클래스 만들기](#BKMK_CollectionClass)
 
-- [Try 블록](#BKMK_TryBlocks)
+- [Try Blocks](#BKMK_TryBlocks)
 
 - [무명 메서드](#BKMK_AnonymousMethods)
 
@@ -62,11 +62,11 @@ Visual Basic iterator 함수 또는 `get` 접근자 선언에 [반복기](../../
 - [반복기 사용](#BKMK_UseOfIterators)
 
 > [!NOTE]
-> 간단한 반복기 예를 제외 하 고 항목의 모든 예제에 대해 `System.Collections` 및 `System.Collections.Generic` 네임 스페이스에 대 한 [Imports](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) 문을 포함 합니다.
+> For all examples in the topic except the Simple Iterator example, include [Imports](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) statements for the `System.Collections` and `System.Collections.Generic` namespaces.
 
 ## <a name="BKMK_SimpleIterator"></a> 단순 반복기
 
-다음 예제에는 [에 대 한 단일 `Yield` 문이 있습니다 ... Next](../../../visual-basic/language-reference/statements/for-next-statement.md) 루프. `Main`에서 `For Each` 문 본문을 반복할 때마다 다음 `Yield` 문으로 진행하는 반복기 함수에 대한 호출이 생성됩니다.
+The following example has a single `Yield` statement that is inside a [For…Next](../../../visual-basic/language-reference/statements/for-next-statement.md) loop. `Main`에서 `For Each` 문 본문을 반복할 때마다 다음 `Yield` 문으로 진행하는 반복기 함수에 대한 호출이 생성됩니다.
 
 ```vb
 Sub Main()
@@ -94,7 +94,7 @@ End Function
 
 다음 예제에서 `DaysOfTheWeek` 클래스는 <xref:System.Collections.IEnumerable> 인터페이스를 구현하며, <xref:System.Collections.IEnumerable.GetEnumerator%2A> 메서드가 필요합니다. 컴파일러는 `GetEnumerator` 메서드를 암시적으로 호출하며, <xref:System.Collections.IEnumerator>가 반환됩니다.
 
-@No__t_0 메서드는 `Yield` 문을 사용 하 여 각 문자열을 한 번에 하나씩 반환 하 고, `Iterator` 한정자는 함수 선언에 있습니다.
+The `GetEnumerator` method returns each string one at a time by using the `Yield` statement, and  an `Iterator` modifier is in the function declaration.
 
 ```vb
 Sub Main()
@@ -216,11 +216,11 @@ Public Class Zoo
 End Class
 ```
 
-## <a name="BKMK_TryBlocks"></a>Try 블록
+## <a name="BKMK_TryBlocks"></a> Try Blocks
 
-Try ...의 `Try` 블록에서 `Yield` 문을 허용 Visual Basic. [ Catch ... Finally 문](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md). @No__t_1 문을 포함 하는 `Try` 블록은 `Catch` 블록을 포함할 수 있으며 `Finally` 블록을 포함할 수 있습니다.
+Visual Basic allows a `Yield` statement in the `Try` block of a [Try...Catch...Finally Statement](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md). A `Try` block that has a `Yield` statement can have `Catch` blocks, and can have a `Finally` block.
 
-다음 예제에서는 반복기 함수에 `Try`, `Catch` 및 `Finally` 블록을 포함 합니다. 반복기 함수의 `Finally` 블록은 `For Each` 반복이 완료 되기 전에 실행 됩니다.
+The following example includes `Try`, `Catch`, and `Finally` blocks in an iterator function. The `Finally` block in the iterator function executes before the `For Each` iteration finishes.
 
 ```vb
 Sub Main()
@@ -253,13 +253,13 @@ Private Iterator Function Test() As IEnumerable(Of Integer)
 End Function
 ```
 
-@No__t_0 문은 `Catch` 블록 또는 `Finally` 블록 안에 있을 수 없습니다.
+A `Yield` statement cannot be inside a `Catch` block or a `Finally` block.
 
-반복기 메서드 대신 `For Each` 본문에서 예외를 throw 하는 경우 반복기 함수의 `Catch` 블록이 실행 되지 않지만 반복기 함수의 `Finally` 블록이 실행 됩니다. 반복기 함수 내의 `Catch` 블록은 반복기 함수 내에서 발생 하는 예외만 catch 합니다.
+If the `For Each` body (instead of the iterator method) throws an exception, a `Catch` block in the iterator function is not executed, but a `Finally` block in the iterator function is executed. A `Catch` block inside an iterator function catches only exceptions that occur inside the iterator function.
 
-## <a name="BKMK_AnonymousMethods"></a>무명 메서드
+## <a name="BKMK_AnonymousMethods"></a> Anonymous Methods
 
-Visual Basic에서 익명 함수는 반복기 함수 일 수 있습니다. 다음은 이에 대한 예입니다.
+In Visual Basic, an anonymous function can be an iterator function. 다음은 이에 대한 예입니다.
 
 ```vb
 Dim iterateSequence = Iterator Function() _
@@ -275,7 +275,7 @@ Next
 Console.ReadKey()
 ```
 
-다음 예제에는 인수의 유효성을 검사 하는 비 반복기 메서드가 있습니다. 메서드는 컬렉션 요소를 설명 하는 익명 반복기의 결과를 반환 합니다.
+The following example has a non-iterator method that validates the arguments. The method returns the result of an anonymous iterator that describes the collection elements.
 
 ```vb
 Sub Main()
@@ -306,7 +306,7 @@ As IEnumerable
 End Function
 ```
 
-유효성 검사가 반복기 함수 내에 있는 경우 `For Each` 본문의 첫 번째 반복이 시작 될 때까지 유효성 검사를 수행할 수 없습니다.
+If validation is instead inside the iterator function, the validation cannot be performed until the start of the first iteration of the `For Each` body.
 
 ## <a name="BKMK_GenericList"></a> 제네릭 목록과 함께 반복기 사용
 
@@ -316,7 +316,7 @@ End Function
 
 예제에서는 명명된 반복기를 사용하여 동일한 데이터 컬렉션을 반복하는 다양한 방법을 지원합니다. 이러한 명명된 반복기는 `TopToBottom` 및 `BottomToTop` 속성과 `TopN` 메서드입니다.
 
-@No__t_0 속성 선언에는 `Iterator` 키워드가 포함 됩니다.
+The `BottomToTop` property declaration includes the `Iterator` keyword.
 
 ```vb
 Sub Main()
@@ -425,9 +425,9 @@ End Class
 
 `Yield` 문의 식 형식에서 반복기의 반환 형식으로 암시적 변환이 있어야 합니다.
 
-Visual Basic 반복기 메서드에는 `ByRef` 매개 변수를 사용할 수 없습니다.
+In Visual Basic, an iterator method cannot have any `ByRef` parameters.
 
-Visual Basic에서 "Yield"는 예약 된 단어가 아니므로 `Iterator` 메서드나 `get` 접근자에서 사용 되는 경우에만 특별 한 의미가 있습니다.
+In Visual Basic, "Yield" is not a reserved word and has special meaning only when it is used in an `Iterator` method or `get` accessor.
 
 ## <a name="BKMK_Technical"></a> 기술 구현
 
@@ -435,13 +435,13 @@ Visual Basic에서 "Yield"는 예약 된 단어가 아니므로 `Iterator` 메�
 
 컴파일러의 용도를 확인하려면 Ildasm.exe 도구를 사용하여 반복기 메서드에 대해 생성되는 Microsoft Intermediate Language 코드를 확인할 수 있습니다.
 
-[클래스](../../../csharp/language-reference/keywords/class.md) 또는 [구조체](../../../csharp/language-reference/keywords/struct.md)에 대 한 반복기를 만들 때 전체 <xref:System.Collections.IEnumerator> 인터페이스를 구현할 필요가 없습니다. 컴파일러는 반복기를 검색할 경우 <xref:System.Collections.IEnumerator> 또는 <xref:System.Collections.Generic.IEnumerator%601> 인터페이스의 `Current`, `MoveNext` 및 `Dispose` 메서드를 자동으로 생성합니다.
+When you create an iterator for a [class](../../../csharp/language-reference/keywords/class.md) or [struct](../../../csharp/language-reference/keywords/struct.md), you do not have to implement the whole <xref:System.Collections.IEnumerator> interface. 컴파일러는 반복기를 검색할 경우 <xref:System.Collections.IEnumerator> 또는 <xref:System.Collections.Generic.IEnumerator%601> 인터페이스의 `Current`, `MoveNext` 및 `Dispose` 메서드를 자동으로 생성합니다.
 
-`For Each…Next` 루프를 연속 반복하거나 `IEnumerator.MoveNext`를 직접 호출하면 다음 반복기 코드 본문이 이전 `Yield` 문 다음에 다시 시작됩니다. 그런 다음 반복기 본문의 끝에 도달 하거나 `Exit Function` 또는 `Return` 문이 발생할 때까지 다음 `Yield` 문으로 계속 합니다.
+`For Each…Next` 루프를 연속 반복하거나 `IEnumerator.MoveNext`를 직접 호출하면 다음 반복기 코드 본문이 이전 `Yield` 문 다음에 다시 시작됩니다. It then continues to the next `Yield` statement until the end of the iterator body is reached, or until an `Exit Function` or `Return` statement is encountered.
 
-반복기는 <xref:System.Collections.IEnumerator.Reset%2A?displayProperty=nameWithType> 메서드를 지원 하지 않습니다. 처음부터 다시 반복하려면 새 반복기를 가져와야 합니다.
+Iterators do not support the <xref:System.Collections.IEnumerator.Reset%2A?displayProperty=nameWithType> method. 처음부터 다시 반복하려면 새 반복기를 가져와야 합니다.
 
-자세한 내용은 [Visual Basic 언어 사양](../../../visual-basic/reference/language-specification/index.md)을 참조 하세요.
+For additional information, see the [Visual Basic Language Specification](../../../visual-basic/reference/language-specification/index.md).
 
 ## <a name="BKMK_UseOfIterators"></a> 반복기 사용
 

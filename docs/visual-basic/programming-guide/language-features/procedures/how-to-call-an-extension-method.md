@@ -1,22 +1,22 @@
 ---
-title: '방법: 확장 메서드 (Visual Basic)를 호출 합니다.'
+title: '방법: 확장 메서드 호출'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - calling extension methods [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: df07750f-40f4-4c07-a79e-1113a27cfbea
-ms.openlocfilehash: f2058162ab939d2619d7255c884d88c35ee63715
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: a19705a8f90833d48869df26a18d19b0ad1488e0
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68512667"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74340401"
 ---
-# <a name="how-to-call-an-extension-method-visual-basic"></a>방법: 확장 메서드 (Visual Basic)를 호출 합니다.
+# <a name="how-to-call-an-extension-method-visual-basic"></a>방법: 확장명 메서드 호출(Visual Basic)
 
-확장 메서드를 사용 하 여 기존 클래스에 메서드를 추가할 수 있습니다. 확장 메서드를 선언 하 고 범위로 가져온 후에는 확장 하는 형식의 인스턴스 메서드와 같이 호출할 수 있습니다. 확장 메서드 [를 작성 하는 방법에 대 한 자세한 내용은 방법: 확장 메서드](./how-to-write-an-extension-method.md)를 작성 합니다.
+Extension methods enable you to add methods to an existing class. After an extension method is declared and brought into scope, you can call it like an instance method of the type that it extends. For more information about how to write an extension method, see [How to: Write an Extension Method](./how-to-write-an-extension-method.md).
 
- 다음 지침은 확장 메서드를 참조 합니다 `PrintAndPunctuate` `punc`.이 메서드는이 메서드를 호출 하는 문자열 인스턴스를 표시 하 고 두 번째 매개 변수에 대해에서 전송 된 값을 표시 합니다.
+ The following instructions refer to extension method `PrintAndPunctuate`, which will display the string instance that invokes it, followed by whatever value is sent in for the second parameter, `punc`.
 
 ```vb
 Imports System.Runtime.CompilerServices
@@ -31,40 +31,40 @@ Module StringExtensions
 End Module
 ```
 
-메서드는 호출 될 때 범위 내에 있어야 합니다.
+The method must be in scope when it is called.
 
-### <a name="to-call-an-extension-method"></a>확장 메서드를 호출 하려면
+### <a name="to-call-an-extension-method"></a>To call an extension method
 
-1. 확장 메서드의 첫 번째 매개 변수 데이터 형식이 있는 변수를 선언 합니다. 의 `PrintAndPunctuate`경우 변수가 필요 합니다 <xref:System.String> .
+1. Declare a variable that has the data type of the first parameter of the extension method. For `PrintAndPunctuate`, you need a <xref:System.String> variable:
 
     ```vb
     Dim example = "Ready"
     ```
 
-2. 해당 변수는 확장 메서드를 호출 하 고, `aString`해당 값은 첫 번째 매개 변수에 바인딩됩니다. 다음 호출 문이 표시 `Ready?`됩니다.
+2. That variable will invoke the extension method, and its value is bound to the first parameter, `aString`. The following calling statement will display `Ready?`.
 
     ```vb
     example.PrintAndPunctuate("?")
     ```
 
-     이 확장 메서드에 대 한 호출은 하나의 매개 변수를 필요로 하는 <xref:System.String> 인스턴스 메서드 중 하나를 호출 하는 것과 같습니다.
+     Notice that the call to this extension method looks just like a call to any one of the <xref:System.String> instance methods that require one parameter:
 
     ```vb
     example.EndsWith("dy")
     example.IndexOf("R")
     ```
 
-3. 다른 문자열 변수를 선언 하 고 메서드를 다시 호출 하 여 문자열에서 작동 하는지 확인 합니다.
+3. Declare another string variable and call the method again to see that it works with any string.
 
     ```vb
     Dim example2 = " or not"
     example2.PrintAndPunctuate("!!!")
     ```
 
-     이 시간 `or not!!!`에 대 한 결과입니다.
+     The result this time is: `or not!!!`.
 
 ## <a name="example"></a>예제
- 다음 코드는 간단한 확장 메서드를 만들고 사용 하는 전체 예제입니다.
+ The following code is a complete example of the creation and use of a simple extension method.
 
 ```vb
 Imports System.Runtime.CompilerServices
@@ -95,8 +95,8 @@ End Module
 ' Goodbye?
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
-- [방법: 확장 메서드 작성](./how-to-write-an-extension-method.md)
+- [방법: 확장명 메서드 작성](./how-to-write-an-extension-method.md)
 - [확장명 메서드](./extension-methods.md)
-- [Visual Basic 범위](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)

@@ -9,15 +9,15 @@ helpviewer_keywords:
 - parts [WPF], ListBox
 - ListBox [WPF], styles and templates
 ms.assetid: fc5764cb-c27b-495b-88d4-d969a8213ccb
-ms.openlocfilehash: 279683752e6767bbf3e5bc359ec1e72193602c00
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: cb7043a21020193a4b2a2569ec610f311834a698
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459285"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283748"
 ---
 # <a name="listbox-styles-and-templates"></a>ListBox 스타일 및 템플릿
-이 항목에서는 <xref:System.Windows.Controls.ListBox> 컨트롤의 스타일 및 템플릿에 대해 설명 합니다. 기본 <xref:System.Windows.Controls.ControlTemplate>를 수정 하 여 컨트롤에 고유한 모양을 제공할 수 있습니다. 자세한 내용은 [ControlTemplate을 만들어 기존 컨트롤의 모양 사용자 지정](customizing-the-appearance-of-an-existing-control.md)을 참조하세요.  
+이 항목에서는 <xref:System.Windows.Controls.ListBox> 컨트롤의 스타일 및 템플릿에 대해 설명 합니다. 기본값을 수정할 수 있습니다 <xref:System.Windows.Controls.ControlTemplate> 고유한 모양을 제어할 수 있습니다. 자세한 내용은 [컨트롤에 대 한 템플릿 만들기](../../../desktop-wpf/themes/how-to-create-apply-template.md)를 참조 하세요.  
   
 ## <a name="listbox-parts"></a>ListBox 파트  
  <xref:System.Windows.Controls.ListBox> 컨트롤에는 명명 된 파트가 없습니다.  
@@ -43,11 +43,11 @@ ms.locfileid: "73459285"
 |-|-|-|  
 |보통|CommonStates|기본 상태입니다.|  
 |MouseOver|CommonStates|마우스 포인터가 컨트롤 위에 있습니다.|  
-|Disabled|CommonStates|항목을 사용할 수 없습니다.|  
+|사용 안 함|CommonStates|항목을 사용할 수 없습니다.|  
 |포커스 있음|FocusStates|항목에 포커스가 있습니다.|  
 |포커스 없음|FocusStates|항목에 포커스가 없습니다.|  
 |선택 취소|SelectionStates|항목이 선택되어 있지 않습니다.|  
-|선택함|SelectionStates|항목이 선택된 currentlyplate입니다.|  
+|선택|SelectionStates|항목이 선택된 currentlyplate입니다.|  
 |SelectedUnfocused|SelectionStates|항목이 선택되었지만 항목에 포커스가 없습니다.|  
 |유효|ValidationStates|컨트롤은 <xref:System.Windows.Controls.Validation> 클래스를 사용 하 고 연결 된 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 속성은 `false`됩니다.|  
 |InvalidFocused|ValidationStates|연결 된 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 속성 `true` 컨트롤에 포커스가 있습니다.|  
@@ -64,11 +64,11 @@ ms.locfileid: "73459285"
   
  전체 샘플을 보려면 [Styling with ControlTemplates Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating)(ControlTemplate으로 스타일 지정 샘플)을 참조하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Control 스타일 및 템플릿](control-styles-and-templates.md)
 - [컨트롤 사용자 지정](control-customization.md)
 - [스타일 지정 및 템플릿](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [ControlTemplate을 만들어 기존 컨트롤의 모양 사용자 지정](customizing-the-appearance-of-an-existing-control.md)
+- [컨트롤에 대 한 템플릿 만들기](../../../desktop-wpf/themes/how-to-create-apply-template.md)

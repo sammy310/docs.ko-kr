@@ -1,5 +1,5 @@
 ---
-title: XML 문서 리터럴(Visual Basic)
+title: XML 문서 리터럴
 ms.date: 07/20/2015
 f1_keywords:
 - vb.XmlLiteralDocument
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - XML documents [Visual Basic], creating
 - document literal [Visual Basic]
 ms.assetid: f7bbee56-0911-41de-b907-96f20450137b
-ms.openlocfilehash: 8a489be46295c213b7a8b355eb3c9786d49dd8f1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: db77cccd26c87e271d6db45ce514ab6dabbc53e3
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69958510"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349377"
 ---
 # <a name="xml-document-literal-visual-basic"></a>XML 문서 리터럴(Visual Basic)
-<xref:System.Xml.Linq.XDocument> 개체를 나타내는 리터럴입니다.  
+A literal representing an <xref:System.Xml.Linq.XDocument> object.  
   
 ## <a name="syntax"></a>구문  
   
@@ -32,30 +32,30 @@ rootElement
   
 |용어|정의|  
 |---|---|  
-|`encoding`|선택 사항입니다. 문서에서 사용 하는 인코딩을 선언 하는 리터럴 텍스트입니다.|  
-|`standalone`|선택 사항입니다. 리터럴 텍스트입니다. "Yes" 또는 "no" 여야 합니다.|  
-|`piCommentList`|선택 사항입니다. XML 처리 명령 및 XML 주석 목록입니다. 는 다음과 같은 형식을 사용 합니다.<br /><br /> `piComment [` `piComment` `... ]`<br /><br /> 각 `piComment` 항목은 다음 중 하나일 수 있습니다.<br /><br /> -   [XML 처리 명령 리터럴입니다](../../../visual-basic/language-reference/xml-literals/xml-processing-instruction-literal.md).<br />-   [XML 주석 리터럴입니다](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md).|  
-|`rootElement`|필수 요소. 문서의 루트 요소입니다. 형식은 다음 중 하나입니다.<br /><br /> <ul><li>[XML 요소 리터럴입니다](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).</li><li>형식의 `<%=` 포함된식`%>`입니다. `elementExp` 는 `elementExp` 다음 중 하나를 반환 합니다.<br /><br /> <ul><li><xref:System.Xml.Linq.XElement> 개체입니다.</li><li>하나의 <xref:System.Xml.Linq.XElement> 개체와 임의의 수의 <xref:System.Xml.Linq.XProcessingInstruction> 및 <xref:System.Xml.Linq.XComment> 개체가 포함 된 컬렉션입니다.</li></ul></li></ul><br /> 자세한 내용은 [XML의 포함 식](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)을 참조 하세요.|  
+|`encoding`|(선택 사항) Literal text declaring which encoding the document uses.|  
+|`standalone`|(선택 사항) Literal text. Must be "yes" or "no".|  
+|`piCommentList`|(선택 사항) List of XML processing instructions and XML comments. Takes the following format:<br /><br /> `piComment [` `piComment` `... ]`<br /><br /> Each `piComment` can be one of the following:<br /><br /> -   [XML Processing Instruction Literal](../../../visual-basic/language-reference/xml-literals/xml-processing-instruction-literal.md).<br />-   [XML Comment Literal](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md).|  
+|`rootElement`|필수 요소. Root element of the document. The format is one of the following:<br /><br /> <ul><li>[XML Element Literal](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).</li><li>Embedded expression of the form `<%=` `elementExp` `%>`. The `elementExp` returns one of the following:<br /><br /> <ul><li><xref:System.Xml.Linq.XElement> 개체입니다.</li><li>A collection that contains one <xref:System.Xml.Linq.XElement> object and any number of <xref:System.Xml.Linq.XProcessingInstruction> and <xref:System.Xml.Linq.XComment> objects.</li></ul></li></ul><br /> For more information, see [Embedded Expressions in XML](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).|  
   
 ## <a name="return-value"></a>반환 값  
  <xref:System.Xml.Linq.XDocument> 개체입니다.  
   
-## <a name="remarks"></a>설명  
- XML 문서 리터럴은 리터럴의 시작 부분에 있는 XML 선언으로 식별 됩니다. 각 XML 문서 리터럴에는 정확히 하나의 루트 XML 요소가 있어야 하지만 xml 처리 명령과 XML 주석이 있을 수 있습니다.  
+## <a name="remarks"></a>주의  
+ An XML document literal is identified by the XML declaration at the start of the literal. Although each XML document literal must have exactly one root XML element, it can have any number of XML processing instructions and XML comments.  
   
- Xml 문서 리터럴은 XML 요소에 나타날 수 없습니다.  
+ An XML document literal cannot appear in an XML element.  
   
 > [!NOTE]
-> XML 리터럴은 줄 연속 문자를 사용 하지 않고 여러 줄에 걸쳐 있을 수 있습니다. 이렇게 하면 XML 문서에서 콘텐츠를 복사 하 여 Visual Basic 프로그램에 직접 붙여넣을 수 있습니다.  
+> An XML literal can span multiple lines without using line continuation characters. This enables you to copy content from an XML document and paste it directly into a Visual Basic program.  
   
- Visual Basic 컴파일러는 XML 문서 리터럴을 <xref:System.Xml.Linq.XDocument.%23ctor%2A> 및 <xref:System.Xml.Linq.XDeclaration.%23ctor%2A> 생성자에 대 한 호출로 변환 합니다.  
+ The Visual Basic compiler converts the XML document literal into calls to the <xref:System.Xml.Linq.XDocument.%23ctor%2A> and <xref:System.Xml.Linq.XDeclaration.%23ctor%2A> constructors.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 XML 선언, 처리 명령, 주석 및 다른 요소를 포함 하는 요소가 포함 된 XML 문서를 만듭니다.  
+ The following example creates an XML document that has an XML declaration, a processing instruction, a comment, and an element that contains another element.  
   
  [!code-vb[VbXMLSamples#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#30)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Xml.Linq.XElement>
 - <xref:System.Xml.Linq.XProcessingInstruction>

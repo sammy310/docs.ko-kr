@@ -1,5 +1,5 @@
 ---
-title: Return 문(Visual Basic)
+title: Return 문
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Return
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - Return statement [Visual Basic]
 - expressions [Visual Basic], returning control to
 ms.assetid: ac86e7f0-5a67-42c3-9834-0e0381efa3ec
-ms.openlocfilehash: edaaf09f5a984344f7e89c9da988c529774934e9
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: efc85a3a844898345aa2d16926ba0e35d7346d1b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583266"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74333010"
 ---
 # <a name="return-statement-visual-basic"></a>Return 문(Visual Basic)
-@No__t_0, `Sub`, `Get`, `Set` 또는 `Operator` 프로시저를 호출한 코드에 대 한 제어를 반환 합니다.  
+Returns control to the code that called a `Function`, `Sub`, `Get`, `Set`, or `Operator` procedure.  
   
 ## <a name="syntax"></a>구문  
   
@@ -29,20 +29,20 @@ Return expression
   
 ## <a name="part"></a>파트  
  `expression`  
- @No__t_0, `Get` 또는 `Operator` 프로시저에 필요 합니다. 호출 코드에 반환 될 값을 나타내는 식입니다.  
+ Required in a `Function`, `Get`, or `Operator` procedure. Expression that represents the value to be returned to the calling code.  
   
 ## <a name="remarks"></a>주의  
- @No__t_0 또는 `Set` 프로시저에서 `Return` 문은 `Exit Sub` 또는 `Exit Property` 문과 같으며 `expression`를 제공 하지 않아야 합니다.  
+ In a `Sub` or `Set` procedure, the `Return` statement is equivalent to an `Exit Sub` or `Exit Property` statement, and `expression` must not be supplied.  
   
- @No__t_0, `Get` 또는 `Operator` 프로시저에서 `Return` 문은 `expression`을 포함 해야 하며 `expression`는 프로시저의 반환 형식으로 변환할 수 있는 데이터 형식으로 계산 되어야 합니다. @No__t_0 또는 `Get` 프로시저에서는 프로시저 이름에 식을 할당 하 여 반환 값으로 사용 하 고 `Exit Function` 또는 `Exit Property` 문을 실행 하는 방법도 사용할 수 있습니다. @No__t_0 프로시저에서는 `Return expression`를 사용 해야 합니다.  
+ In a `Function`, `Get`, or `Operator` procedure, the `Return` statement must include `expression`, and `expression` must evaluate to a data type that is convertible to the return type of the procedure. In a `Function` or `Get` procedure, you also have the alternative of assigning an expression to the procedure name to serve as the return value, and then executing an `Exit Function` or `Exit Property` statement. In an `Operator` procedure, you must use `Return expression`.  
   
- 동일한 프로시저에 필요한 만큼 `Return` 문을 포함할 수 있습니다.  
+ You can include as many `Return` statements as appropriate in the same procedure.  
   
 > [!NOTE]
-> @No__t_0 블록의 코드는 `Try` 또는 `Catch` 블록에서 `Return` 문이 발생 한 후에 실행 되지만 해당 `Return` 문이 실행 되기 전에 실행 됩니다. @No__t_1 블록에는 `Return` 문을 포함할 수 없습니다.  
+> The code in a `Finally` block runs after a `Return` statement in a `Try` or `Catch` block is encountered, but before that `Return` statement executes. A `Return` statement cannot be included in a `Finally` block.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 프로시저에서 다른 작업을 수행할 필요가 없을 때 `Return` 문을 여러 번 사용 하 여 호출 코드로 돌아갑니다.  
+ The following example uses the `Return` statement several times to return to the calling code when the procedure does not have to do anything else.  
   
  [!code-vb[VbVbalrStatements#53](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#53)]  
   

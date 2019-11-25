@@ -1,5 +1,5 @@
 ---
-title: 데이터 형식 문제 해결(Visual Basic)
+title: 데이터 형식 문제 해결
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Char data type [Visual Basic], converting
@@ -19,116 +19,116 @@ helpviewer_keywords:
 - floating-point numbers [Visual Basic], comparison
 - floating-point numbers
 ms.assetid: 90040d67-b630-4125-a6ae-37195b079042
-ms.openlocfilehash: 2bef3069c2788f435831dceab227f4ab9f422e73
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 63b2513e420320742bf7e25314743f08404f46a7
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583086"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350508"
 ---
 # <a name="troubleshooting-data-types-visual-basic"></a>데이터 형식 문제 해결(Visual Basic)
 
-이 페이지에는 내장 데이터 형식에 대 한 작업을 수행할 때 발생할 수 있는 몇 가지 일반적인 문제가 나열 되어 있습니다.
+This page lists some common problems that can occur when you perform operations on intrinsic data types.
 
-## <a name="floating-point-expressions-do-not-compare-as-equal"></a>부동 소수점 식이 동일 하 게 비교 되지 않습니다.
+## <a name="floating-point-expressions-do-not-compare-as-equal"></a>Floating-Point Expressions Do Not Compare as Equal
 
-부동 소수점 숫자 ([단일 데이터 형식](../../../../visual-basic/language-reference/data-types/single-data-type.md) 및 [Double 데이터 형식](../../../../visual-basic/language-reference/data-types/double-data-type.md))를 사용 하는 경우 이진 분수로 저장 된다는 점에 주의 해야 합니다. 즉, 이진 분수가 아닌 수량을 정확 하 게 표현할 수 없습니다 (k 및 n은 정수). 여기서 k 및 n은 정수입니다. 예를 들어 0.5 (= 1/2) 및 0.3125 (= 5/16)는 정확한 값으로 보유할 수 있지만 0.2 (= 1/5) 및 0.3 (= 3/10)만 근사치 수 있습니다.
+When you work with floating-point numbers ([Single Data Type](../../../../visual-basic/language-reference/data-types/single-data-type.md) and [Double Data Type](../../../../visual-basic/language-reference/data-types/double-data-type.md)), remember that they are stored as binary fractions. This means they cannot hold an exact representation of any quantity that is not a binary fraction (of the form k / (2 ^ n) where k and n are integers). For example, 0.5 (= 1/2) and 0.3125 (= 5/16) can be held as precise values, whereas 0.2 (= 1/5) and 0.3 (= 3/10) can be only approximations.
 
-이 부정확 인해 부동 소수점 값에 대해 작업을 수행 하는 경우 정확한 결과를 사용할 수 없습니다. 특히 이론적으로 동일한 두 값의 표현은 약간 다를 수 있습니다.
+Because of this imprecision, you cannot rely on exact results when you operate on floating-point values. In particular, two values that are theoretically equal might have slightly different representations.
 
-| 부동 소수점 수량을 비교 하려면 |
+| To compare floating-point quantities |
 |---|
-|1. <xref:System> 네임 스페이스에서 <xref:System.Math> 클래스의 <xref:System.Math.Abs%2A> 메서드를 사용 하 여 해당 차이의 절대값을 계산 합니다.<br />2. 허용 되는 최대 차이를 결정 합니다. 즉, 차이가 더 크지 않은 경우 두 수량이 동일한 것으로 간주할 수 있습니다.<br />3. 차이의 절대값을 허용 가능한 차이와 비교 합니다.|
+|1.  Calculate the absolute value of their difference by using the <xref:System.Math.Abs%2A> method of the <xref:System.Math> class in the <xref:System> namespace.<br />2.  Determine an acceptable maximum difference, such that you can consider the two quantities to be equal for practical purposes if their difference is no larger.<br />3.  Compare the absolute value of the difference to the acceptable difference.|
 
-다음 예에서는 두 `Double` 값의 잘못 된 비교와 정확한 비교를 모두 보여 줍니다.
+The following example demonstrates both incorrect and correct comparison of two `Double` values.
 
 [!code-vb[VbVbalrDataTypes#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#10)]
 
-이전 예제에서는 <xref:System.Double> 구조의 <xref:System.Double.ToString%2A> 메서드를 사용 하 여 `CStr` 키워드에서 사용 하는 것 보다 더 높은 정밀도를 지정할 수 있도록 합니다. 기본값은 15 자리 이지만 "G17" 형식은 17 자리로 확장 합니다.
+The previous example uses the <xref:System.Double.ToString%2A> method of the <xref:System.Double> structure so that it can specify better  precision than the `CStr` keyword uses. The default is 15 digits, but the "G17" format extends it to 17 digits.
 
-## <a name="mod-operator-does-not-return-accurate-result"></a>Mod 연산자가 정확한 결과를 반환 하지 않습니다.
+## <a name="mod-operator-does-not-return-accurate-result"></a>Mod Operator Does Not Return Accurate Result
 
-부동 소수점 저장소의 부정확 때문에 피연산자 중 하나 이상이 부동 소수점 이면 [Mod 연산자](../../../../visual-basic/language-reference/operators/mod-operator.md) 는 예기치 않은 결과를 반환할 수 있습니다.
+Because of the imprecision of floating-point storage, the [Mod Operator](../../../../visual-basic/language-reference/operators/mod-operator.md) can return an unexpected result when at least one of the operands is floating-point.
 
-[Decimal 데이터 형식은](../../../../visual-basic/language-reference/data-types/decimal-data-type.md) 부동 소수점 표현을 사용 하지 않습니다. @No__t_0 및 `Double` 부정확 한에 있는 많은 숫자는 `Decimal`에서 정확 하 게 사용할 수 있습니다 (예: 0.2 및 0.3). 산술은 부동 소수점 에서보다 `Decimal` 속도가 느리므로 더 나은 정밀도를 얻기 위해 성능이 저하 될 수 있습니다.
+The [Decimal Data Type](../../../../visual-basic/language-reference/data-types/decimal-data-type.md) does not use floating-point representation. Many numbers that are inexact in `Single` and `Double` are exact in `Decimal` (for example 0.2 and 0.3). Although arithmetic is slower in `Decimal` than in floating-point, it might be worth the performance decrease to achieve better precision.
 
-|부동 소수점 수량의 정수 나머지를 찾으려면|
+|To find the integer remainder of floating-point quantities|
 |---|
-|1. 변수를 `Decimal`으로 선언 합니다.<br />2. 리터럴 형식 문자 `D`를 사용 하 여 `Long` 데이터 형식에 대 한 값이 너무 클 경우 리터럴을 강제로 `Decimal` 합니다.|
+|1.  Declare variables as `Decimal`.<br />2.  Use the literal type character `D` to force literals to `Decimal`, in case their values are too large for the `Long` data type.|
 
-다음 예제에서는 부동 소수점 피연산자의 잠재적 부정확을 보여 줍니다.
+The following example demonstrates the potential imprecision of floating-point operands.
 
 [!code-vb[VbVbalrDataTypes#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#11)]
 
-이전 예제에서는 <xref:System.Double> 구조의 <xref:System.Double.ToString%2A> 메서드를 사용 하 여 `CStr` 키워드에서 사용 하는 것 보다 더 높은 정밀도를 지정할 수 있도록 합니다. 기본값은 15 자리 이지만 "G17" 형식은 17 자리로 확장 합니다.
+The previous example uses the <xref:System.Double.ToString%2A> method of the <xref:System.Double> structure so that it can specify better precision than the `CStr` keyword uses. The default is 15 digits, but the "G17" format extends it to 17 digits.
 
-@No__t_0 `Double` 이므로 0.2에 대 한 값은 저장 된 값이 0.20000000000000001 인 무한 반복 이진 분수입니다. 이 수량으로 2.0을 나누면 0.19999999999999991의 나머지가 9.9999999999999995 생성 됩니다.
+Because `zeroPointTwo` is `Double`, its value for 0.2 is an infinitely repeating binary fraction with a stored value of 0.20000000000000001. Dividing 2.0 by this quantity yields 9.9999999999999995 with a remainder of 0.19999999999999991.
 
-@No__t_0에 대 한 식에서 리터럴 형식 문자 `D` 피연산자는 모두 `Decimal` 하 고 0.2에는 정확한 표현이 있습니다. 따라서 `Mod` 연산자는 예상 나머지가 0.0을 생성 합니다.
+In the expression for `decimalRemainder`, the literal type character `D` forces both operands to `Decimal`, and 0.2 has a precise representation. Therefore the `Mod` operator yields the expected remainder of 0.0.
 
-@No__t_0를 `Decimal`으로 선언 하는 것 만으로는 충분 하지 않습니다. 또한 리터럴을 강제로 `Decimal` 하도록 하거나 기본적으로 `Double`를 사용 하 고 `decimalRemainder` `doubleRemainder`와 동일한 부정확 한 값을 수신 해야 합니다.
+Note that it is not sufficient to declare `decimalRemainder` as `Decimal`. You must also force the literals to `Decimal`, or they use `Double` by default and `decimalRemainder` receives the same inaccurate value as `doubleRemainder`.
 
-## <a name="boolean-type-does-not-convert-to-numeric-type-accurately"></a>부울 형식이 숫자 형식으로 정확 하 게 변환 되지 않습니다.
+## <a name="boolean-type-does-not-convert-to-numeric-type-accurately"></a>Boolean Type Does Not Convert to Numeric Type Accurately
 
-[부울 데이터 형식](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) 값은 숫자로 저장 되지 않으며 저장 된 값은 숫자와 동일 하지 않습니다. 이전 버전과의 호환성을 위해 Visual Basic는 변환 키워드 ([CType 함수](../../../../visual-basic/language-reference/functions/ctype-function.md), `CBool`, `CInt` 등)를 제공 하 여 `Boolean` 및 숫자 형식 간에 변환 합니다. 그러나 다른 언어에서는 .NET Framework 메서드와 같이 이러한 변환을 다르게 수행 하기도 합니다.
+[Boolean Data Type](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) values are not stored as numbers, and the stored values are not intended to be equivalent to numbers. For compatibility with earlier versions, Visual Basic provides conversion keywords ([CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md), `CBool`, `CInt`, and so on) to convert between `Boolean` and numeric types. However, other languages sometimes perform these conversions differently, as do the .NET Framework methods.
 
-@No__t_0 및 `False`에 대해 동일한 숫자 값을 사용 하는 코드를 작성 하면 안 됩니다. 가능 하면 `Boolean` 변수의 사용을 디자인 된 논리 값으로 제한 해야 합니다. @No__t_0 및 숫자 값을 혼합 해야 하는 경우에는 선택한 변환 방법을 이해 해야 합니다.
+You should never write code that relies on equivalent numeric values for `True` and `False`. Whenever possible, you should restrict usage of `Boolean` variables to the logical values for which they are designed. If you must mix `Boolean` and numeric values, make sure that you understand the conversion method that you select.
 
-### <a name="conversion-in-visual-basic"></a>Visual Basic 변환
+### <a name="conversion-in-visual-basic"></a>Conversion in Visual Basic
 
-@No__t_0 또는 `CBool` 변환 키워드를 사용 하 여 숫자 데이터 형식을 `Boolean`로 변환 하면 0이 `False` 되 고 다른 모든 값은 `True` 됩니다. 변환 키워드를 사용 하 여 `Boolean` 값을 숫자 형식으로 변환 하는 경우 `False`은 0이 되 고 `True`는-1이 됩니다.
+When you use the `CType` or `CBool` conversion keywords to convert numeric data types to `Boolean`, 0 becomes `False` and all other values become `True`. When you convert `Boolean` values to numeric types by using the conversion keywords, `False` becomes 0 and `True` becomes -1.
 
-### <a name="conversion-in-the-framework"></a>프레임 워크의 변환
+### <a name="conversion-in-the-framework"></a>Conversion in the Framework
 
-@No__t_2 네임 스페이스에 있는 <xref:System.Convert> 클래스의 <xref:System.Convert.ToInt32%2A> 메서드는 `True`를 + 1로 변환 합니다.
+The <xref:System.Convert.ToInt32%2A> method of the <xref:System.Convert> class in the <xref:System> namespace converts `True` to +1.
 
-@No__t_0 값을 숫자 데이터 형식으로 변환 해야 하는 경우 사용 하는 변환 방법에 주의 해야 합니다.
+If you must convert a `Boolean` value to a numeric data type, be careful about which conversion method you use.
 
-## <a name="character-literal-generates-compiler-error"></a>문자 리터럴이 컴파일러 오류를 생성 합니다.
+## <a name="character-literal-generates-compiler-error"></a>Character Literal Generates Compiler Error
 
-형식 문자가 없으면 Visual Basic는 리터럴에 대 한 기본 데이터 형식을 가정 합니다. 문자 리터럴의 기본 형식 (따옴표 (`" "`))은 `String`입니다.
+In the absence of any type characters, Visual Basic assumes default data types for literals. The default type for a character literal — enclosed in quotation marks (`" "`) — is `String`.
 
-@No__t_0 데이터 형식은 [Char 데이터 형식](../../../../visual-basic/language-reference/data-types/char-data-type.md)으로 확장 되지 않습니다. 즉, `Char` 변수에 리터럴을 할당 하려는 경우 축소 변환을 수행 하거나 리터럴을 `Char` 형식으로 강제 해야 합니다.
+The `String` data type does not widen to the [Char Data Type](../../../../visual-basic/language-reference/data-types/char-data-type.md). This means that if you want to assign a literal to a `Char` variable, you must either make a narrowing conversion or force the literal to the `Char` type.
 
-|변수 또는 상수에 할당할 Char 리터럴을 만들려면|
+|To create a Char literal to assign to a variable or constant|
 |---|
-|1. 변수 또는 상수를 `Char`으로 선언 합니다.<br />2. 문자 값을 따옴표로 묶습니다 (`" "`).<br />3. 리터럴 형식 문자 `C`를 사용 하 여 닫는 큰따옴표를 따라 리터럴을 강제로 `Char` 합니다. 형식 검사 스위치 ([Option Strict 문](../../../../visual-basic/language-reference/statements/option-strict-statement.md))를 `On` 하는 경우 필요 합니다.|
+|1.  Declare the variable or constant as `Char`.<br />2.  Enclose the character value in quotation marks (`" "`).<br />3.  Follow the closing double quotation mark with the literal type character `C` to force the literal to `Char`. This is necessary if the type checking switch ([Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) is `On`, and it is desirable in any case.|
 
-다음 예에서는 `Char` 변수에 대 한 리터럴의 성공 및 성공 여부를 모두 보여 줍니다.
+The following example demonstrates both unsuccessful and successful assignments of a literal to a `Char` variable.
 
 [!code-vb[VbVbalrDataTypes#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#12)]
 
-런타임에 실패할 수 있으므로 축소 변환을 사용할 경우 항상 위험이 있습니다. 예를 들어 `String` 값이 둘 이상의 문자를 포함 하는 경우 `String`에서 `Char`로의 변환이 실패할 수 있습니다. 따라서 `C` 형식 문자를 사용 하는 것이 더 효율적입니다.
+There is always a risk in using narrowing conversions, because they can fail at run time. For example, a conversion from `String` to `Char` can fail if the `String` value contains more than one character. Therefore, it is better programming to use the `C` type character.
 
-## <a name="string-conversion-fails-at-run-time"></a>런타임에 문자열 변환이 실패 함
+## <a name="string-conversion-fails-at-run-time"></a>String Conversion Fails at Run Time
 
-[문자열 데이터 형식은](../../../../visual-basic/language-reference/data-types/string-data-type.md) 매우 적은 확대 변환에 참여 합니다. `String`는 자신과 `Object`만 확대 되 고, `Char` 및 `Char()` (`Char` 배열)만 확대 `String`으로 확대 됩니다. 이는 `String` 변수와 상수에 다른 데이터 형식에 포함 될 수 없는 값이 포함 될 수 있기 때문입니다.
+The [String Data Type](../../../../visual-basic/language-reference/data-types/string-data-type.md) participates in very few widening conversions. `String` widens only to itself and `Object`, and only `Char` and `Char()` (a `Char` array) widen to `String`. This is because `String` variables and constants can contain values that other data types cannot contain.
 
-형식 검사 스위치 ([Option Strict 문](../../../../visual-basic/language-reference/statements/option-strict-statement.md))가 `On` 되 면 컴파일러는 모든 암시적 축소 변환을 허용 하지 않습니다. 여기에는 `String` 관련 된 내용이 포함 됩니다. 코드는 `CStr` 및 [CType 함수와](../../../../visual-basic/language-reference/functions/ctype-function.md)같은 변환 키워드를 계속 사용할 수 있습니다 .이 함수는 .NET Framework를 통해 변환을 시도 합니다.
+When the type checking switch ([Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) is `On`, the compiler disallows all implicit narrowing conversions. This includes those involving `String`. Your code can still use conversion keywords such as `CStr` and [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md), which direct the .NET Framework to attempt the conversion.
 
 > [!NOTE]
-> @No__t_0 컬렉션의 요소에서 loop 제어 변수로의 변환에 대해 축소 변환 오류가 표시 되지 않습니다. 자세한 내용 및 예제는 각 항목에 대 한 "축소 변환" 섹션을 참조 하세요. [ 다음 문](../../../../visual-basic/language-reference/statements/for-each-next-statement.md).
+> The narrowing-conversion error is suppressed for conversions from the elements in a `For Each…Next` collection to the loop control variable. For more information and examples, see the "Narrowing Conversions" section in [For Each...Next Statement](../../../../visual-basic/language-reference/statements/for-each-next-statement.md).
 
-### <a name="narrowing-conversion-protection"></a>축소 변환 보호
+### <a name="narrowing-conversion-protection"></a>Narrowing Conversion Protection
 
-축소 변환의 단점은 런타임에 실패할 수 있다는 것입니다. 예를 들어, `String` 변수가 "True" 또는 "False" 이외의 값을 포함 하는 경우 `Boolean`로 변환할 수 없습니다. 문장 부호 문자를 포함 하는 경우 숫자 형식으로 변환 되지 않습니다. @No__t_0 변수는 항상 대상 형식에서 허용할 수 있는 값을 보유 하 고 있지 않은 경우에는 변환을 시도 하지 않아야 합니다.
+The disadvantage of narrowing conversions is that they can fail at run time. For example, if a `String` variable contains anything other than "True" or "False," it cannot be converted to `Boolean`. If it contains punctuation characters, conversion to any numeric type fails. Unless you know that your `String` variable always holds values that the destination type can accept, you should not try a conversion.
 
-@No__t_0에서 다른 데이터 형식으로 변환 해야 하는 경우 가장 안전한 절차는 [Try ... Catch ... Finally 문](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md). 이렇게 하면 런타임 오류를 처리할 수 있습니다.
+If you must convert from `String` to another data type, the safest procedure is to enclose the attempted conversion in the [Try...Catch...Finally Statement](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md). This lets you deal with a run-time failure.
 
-### <a name="character-arrays"></a>문자 배열
+### <a name="character-arrays"></a>Character Arrays
 
-단일 `Char` 및 `Char` 요소 배열이 모두 `String`으로 확장 됩니다. 그러나 `String`는 `Char()`으로 확장 되지 않습니다. @No__t_0 값을 `Char` 배열로 변환 하려면 <xref:System.String?displayProperty=nameWithType> 클래스의 <xref:System.String.ToCharArray%2A> 메서드를 사용할 수 있습니다.
+A single `Char` and an array of `Char` elements both widen to `String`. However, `String` does not widen to `Char()`. To convert a `String` value to a `Char` array, you can use the <xref:System.String.ToCharArray%2A> method of the <xref:System.String?displayProperty=nameWithType> class.
 
-### <a name="meaningless-values"></a>의미 없는 값
+### <a name="meaningless-values"></a>Meaningless Values
 
-일반적으로 `String` 값은 다른 데이터 형식에서 의미가 없으며 변환은 매우 인공이 고 위험할 수 있습니다. 가능 하면 `String` 변수의 사용을 디자인 된 문자 시퀀스로 제한 해야 합니다. 다른 형식의 동일한 값에 의존 하는 코드를 작성 하면 안 됩니다.
+In general, `String` values are not meaningful in other data types, and conversion is highly artificial and dangerous. Whenever possible, you should restrict usage of `String` variables to the character sequences for which they are designed. You should never write code that relies on equivalent values in other types.
 
 ## <a name="see-also"></a>참조
 
 - [데이터 형식](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [형식 문자](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
 - [값 형식과 참조 형식](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
-- [Visual Basic 형식 변환](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Type Conversions in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [데이터 형식](../../../../visual-basic/language-reference/data-types/index.md)
 - [형식 변환 함수](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)
 - [데이터 형식의 효율적 사용](../../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

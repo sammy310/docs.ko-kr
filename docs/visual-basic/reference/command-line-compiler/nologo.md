@@ -1,5 +1,5 @@
 ---
-title: -nologo (Visual Basic)
+title: -nologo
 ms.date: 03/13/2018
 helpviewer_keywords:
 - -nologo compiler option [Visual Basic]
@@ -7,15 +7,15 @@ helpviewer_keywords:
 - nologo compiler option [Visual Basic]
 - /nologo compiler option [Visual Basic]
 ms.assetid: 25ef54b6-d676-4639-a2d2-a747a158bc07
-ms.openlocfilehash: bb64a468f67745b80b47b42c4fac18852279035d
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 03dc98c45a894304a67765c3e49cd19bbb089c8c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005431"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74335430"
 ---
 # <a name="-nologo-visual-basic"></a>-nologo (Visual Basic)
-컴파일하는 동안 저작권 배너 및 정보 메시지를 표시 하지 않습니다.  
+Suppresses display of the copyright banner and informational messages during compilation.  
   
 ## <a name="syntax"></a>구문  
   
@@ -23,14 +23,14 @@ ms.locfileid: "72005431"
 -nologo  
 ```  
   
-## <a name="remarks"></a>설명  
- @No__t-0을 지정 하는 경우 컴파일러는 저작권 배너를 표시 하지 않습니다. 기본적으로 `-nologo`은 적용되지 않습니다.  
+## <a name="remarks"></a>주의  
+ If you specify `-nologo`, the compiler does not display a copyright banner. 기본적으로 `-nologo`은 적용되지 않습니다.  
   
 > [!NOTE]
-> @No__t-0 옵션은 Visual Studio 개발 환경에서 사용할 수 없습니다. 명령줄에서 컴파일하는 경우에만 사용할 수 있습니다.  
+> The `-nologo` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.  
   
 ## <a name="example"></a>예제  
- 다음 코드는 `T2.vb`을 컴파일하고 저작권 배너를 표시 하지 않습니다.  
+ The following code compiles `T2.vb` and does not display a copyright banner.  
   
 ```console
 vbc -nologo t2.vb  

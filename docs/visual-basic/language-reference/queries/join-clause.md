@@ -1,5 +1,5 @@
 ---
-title: Join 절 (Visual Basic)
+title: Join 절
 ms.date: 07/20/2015
 f1_keywords:
 - vb.QueryJoinIn
@@ -10,16 +10,16 @@ helpviewer_keywords:
 - Join statement [Visual Basic]
 - Join clause [Visual Basic]
 ms.assetid: 6dd37936-b27c-4e00-98ad-154b23f4de64
-ms.openlocfilehash: b5211d0ed3f618013dc9fe764a6d7b2db8177c26
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: b0baca9f897a00b3c6c67699629477ff385d6ef7
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582289"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353272"
 ---
-# <a name="join-clause-visual-basic"></a>Join 절 (Visual Basic)
+# <a name="join-clause-visual-basic"></a>Join Clause (Visual Basic)
 
-두 컬렉션을 단일 컬렉션으로 결합합니다. 조인 작업은 일치 하는 키를 기반으로 하며 `Equals` 연산자를 사용 합니다.
+두 컬렉션을 단일 컬렉션으로 결합합니다. The join operation is based on matching keys and uses the `Equals` operator.
 
 ## <a name="syntax"></a>구문
 
@@ -32,45 +32,45 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
 
 ## <a name="parts"></a>요소
 
-`element` 필수입니다. 조인 되는 컬렉션에 대 한 제어 변수입니다.
+`element` 필수입니다. The control variable for the collection being joined.
 
 `collection`  
-필수 요소. @No__t_0 연산자의 왼쪽에서 식별 된 컬렉션과 결합할 컬렉션입니다. @No__t_0 절은 다른 `Join` 절 또는 `Group Join` 절에 중첩 될 수 있습니다.
+필수 요소. The collection to combine with the collection identified on the left side of the `Join` operator. A `Join` clause can be nested in another `Join` clause, or in a `Group Join` clause.
 
 `joinClause`  
-(선택 사항) 쿼리를 보다 구체화 하는 하나 이상의 추가 `Join` 절입니다.
+(선택 사항) One or more additional `Join` clauses to further refine the query.
 
 `groupJoinClause`  
-(선택 사항) 쿼리를 보다 구체화 하는 하나 이상의 추가 `Group Join` 절입니다.
+(선택 사항) One or more additional `Group Join` clauses to further refine the query.
 
 `key1` `Equals` `key2`  
-필수 요소. 조인 되는 컬렉션의 키를 식별 합니다. 조인 되는 컬렉션의 키를 비교 하려면 `Equals` 연산자를 사용 해야 합니다. @No__t_0 연산자를 사용 하 여 여러 키를 식별 하 여 조인 조건을 결합할 수 있습니다. `key1`은 `Join` 연산자의 왼쪽에 있는 컬렉션에서 가져와야 합니다. `key2`은 `Join` 연산자의 오른쪽에 있는 컬렉션에서 가져와야 합니다.
+필수 요소. Identifies keys for the collections being joined. You must use the `Equals` operator to compare keys from the collections being joined. You can combine join conditions by using the `And` operator to identify multiple keys. `key1` must be from the collection on the left side of the `Join` operator. `key2` must be from the collection on the right side of the `Join` operator.
 
-조인 조건에 사용 되는 키는 컬렉션에서 두 개 이상의 항목을 포함 하는 식일 수 있습니다. 그러나 각 키 식에는 해당 컬렉션의 항목만 포함할 수 있습니다.
+The keys used in the join condition can be expressions that include more than one item from the collection. However, each key expression can contain only items from its respective collection.
 
 ## <a name="remarks"></a>주의
 
-@No__t_0 절은 조인 중인 컬렉션에서 일치 하는 키 값을 기준으로 두 개의 컬렉션을 결합 합니다. 결과 컬렉션에는 `Join` 연산자의 왼쪽에서 식별 된 컬렉션의 값 조합 및 `Join` 절에서 식별 된 컬렉션이 포함 될 수 있습니다. 이 쿼리는 `Equals` 연산자에 지정 된 조건이 충족 되는 결과만 반환 합니다. 이는 SQL의 `INNER JOIN`와 동일 합니다.
+The `Join` clause combines two collections based on matching key values from the collections being joined. The resulting collection can contain any combination of values from the collection identified on the left side of the `Join` operator and the collection identified in the `Join` clause. The query will return only results for which the condition specified by the `Equals` operator is met. This is equivalent to an `INNER JOIN` in SQL.
 
-쿼리에서 여러 개의 `Join` 절을 사용 하 여 둘 이상의 컬렉션을 단일 컬렉션으로 조인할 수 있습니다.
+You can use multiple `Join` clauses in a query to join two or more collections into a single collection.
 
-@No__t_0 절이 없으면 암시적 조인을 수행 하 여 컬렉션을 결합할 수 있습니다. 이렇게 하려면 `From` 절에 여러 `In` 절을 포함 하 고 조인에 사용할 키를 식별 하는 `Where` 절을 지정 합니다.
+You can perform an implicit join to combine collections without the `Join` clause. To do this, include multiple `In` clauses in your `From` clause and specify a `Where` clause that identifies the keys that you want to use for the join.
 
-@No__t_0 절을 사용 하 여 컬렉션을 단일 계층 구조 컬렉션으로 결합할 수 있습니다. 이는 SQL의 `LEFT OUTER JOIN`와 비슷합니다.
+You can use the `Group Join` clause to combine collections into a single hierarchical collection. This is like a `LEFT OUTER JOIN` in SQL.
 
 ## <a name="example"></a>예제
 
-다음 코드 예제에서는 암시적 조인을 수행 하 여 고객 목록을 주문과 결합 합니다.
+The following code example performs an implicit join to combine a list of customers with their orders.
 
 [!code-vb[VbSimpleQuerySamples#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#13)]
 
 ## <a name="example"></a>예제
 
-다음 코드 예제에서는 `Join` 절을 사용 하 여 두 컬렉션을 조인 합니다.
+The following code example joins two collections by using the `Join` clause.
 
 [!code-vb[VbSimpleQuerySamples#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples2.vb#12)]
 
-이 예제는 다음과 유사한 출력을 생성 합니다.
+This example will produce output similar to the following:
 
 `winlogon (968), Windows Logon`
 
@@ -80,11 +80,11 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
 
 ## <a name="example"></a>예제
 
-다음 코드 예제에서는 두 개의 키 열이 있는 `Join` 절을 사용 하 여 두 컬렉션을 조인 합니다.
+The following code example joins two collections by using the `Join` clause with two key columns.
 
 [!code-vb[VbSimpleQuerySamples#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples3.vb#17)]
 
-예제는 다음과 유사한 출력을 생성 합니다.
+The example will produce output similar to the following:
 
 `winlogon (968), Windows Logon, Priority = 13`
 

@@ -1,5 +1,5 @@
 ---
-title: Imports 문-XML 네임 스페이스 (Visual Basic)
+title: Imports Statement - XML Namespace
 ms.date: 07/20/2015
 f1_keywords:
 - vb.ImportsXmlns
@@ -9,16 +9,16 @@ helpviewer_keywords:
 - Imports statement [Visual Basic]
 - namespaces [Visual Basic], importing
 ms.assetid: 1f4d50a6-08c7-4c2e-8206-ccae35fcd1b4
-ms.openlocfilehash: 0fca0caecfd69580510a539317856209108e5a32
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 52864e4d1c8183b6243025e72368d23627049c84
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72581761"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351056"
 ---
 # <a name="imports-statement-xml-namespace"></a>Imports 문(XML 네임스페이스)
 
-Xml 리터럴 및 XML 축 속성에 사용할 XML 네임 스페이스 접두사를 가져옵니다.
+Imports XML namespace prefixes for use in XML literals and XML axis properties.
 
 ## <a name="syntax"></a>구문
 
@@ -29,28 +29,28 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
 ## <a name="parts"></a>요소
 
 `xmlNamespacePrefix`  
-(선택 사항) XML 요소와 특성이 `xmlNamespaceName`를 참조할 수 있는 문자열입니다. @No__t_0 제공 되지 않으면 가져온 XML 네임 스페이스가 기본 XML 네임 스페이스입니다. 유효한 XML 식별자 여야 합니다. 자세한 내용은 [선언 된 XML 요소 및 특성의 이름](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)을 참조 하세요.
+(선택 사항) The string by which XML elements and attributes can refer to `xmlNamespaceName`. If no `xmlNamespacePrefix` is supplied, the imported XML namespace is the default XML namespace. Must be a valid XML identifier. For more information, see [Names of Declared XML Elements and Attributes](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).
 
 `xmlNamespaceName`  
-필수 요소. 가져올 XML 네임 스페이스를 식별 하는 문자열입니다.
+필수 요소. The string identifying the XML namespace being imported.
 
 ## <a name="remarks"></a>주의
 
-@No__t_0 문을 사용 하 여 XML 리터럴 및 XML 축 속성에 사용할 수 있는 전역 XML 네임 스페이스를 정의 하거나 `GetXmlNamespace` 연산자에 전달 되는 매개 변수로 사용할 수 있습니다. @No__t_0 문을 사용 하 여 코드에서 형식 이름을 사용 하는 데 사용할 수 있는 별칭을 가져오는 방법에 대 한 자세한 내용은 [Imports 문 (.Net 네임 스페이스 및 형식)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)을 참조 하세요. @No__t_2 문을 사용 하 여 XML 네임 스페이스를 선언 하는 구문은 XML에서 사용 되는 구문과 동일 합니다. 따라서 XML 파일에서 네임 스페이스 선언을 복사 하 여 `Imports` 문에서 사용할 수 있습니다.
+You can use the `Imports` statement to define global XML namespaces that you can use with XML literals and XML axis properties, or as parameters passed to the `GetXmlNamespace` operator. (For information about using the `Imports` statement to import an alias that can be used where type names are used in your code, see [Imports Statement (.NET Namespace and Type)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).) The syntax for declaring an XML namespace by using the `Imports` statement is identical to the syntax used in XML. Therefore, you can copy a namespace declaration from an XML file and use it in an `Imports` statement.
 
-XML 네임 스페이스 접두사는 동일한 네임 스페이스에 있는 XML 요소를 반복 해 서 만들려는 경우에 유용 합니다. @No__t_0 문으로 선언 된 XML 네임 스페이스 접두사는 파일의 모든 코드에서 사용할 수 있다는 점에서 전역적입니다. Xml 요소 리터럴을 만들 때와 XML 축 속성에 액세스할 때이를 사용할 수 있습니다. 자세한 내용은 [Xml 요소 리터럴](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md) 및 [xml 축 속성](../../../visual-basic/language-reference/xml-axis/index.md)을 참조 하세요.
+XML namespace prefixes are useful when you want to repeatedly create XML elements that are from the same namespace. The XML namespace prefix declared with the `Imports` statement is global in the sense that it is available to all code in the file. You can use it when you create XML element literals and when you access XML axis properties. For more information, see [XML Element Literal](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md) and [XML Axis Properties](../../../visual-basic/language-reference/xml-axis/index.md).
 
-네임 스페이스 접두사 없이 전역 XML 네임 스페이스를 정의 하는 경우 (예: `Imports <xmlns="http://SomeNameSpace>"`) 해당 네임 스페이스는 기본 XML 네임 스페이스로 간주 됩니다. 기본 XML 네임 스페이스는 네임 스페이스를 명시적으로 지정 하지 않는 모든 XML 요소 리터럴 또는 XML 특성 축 속성에 사용 됩니다. 기본 네임 스페이스는 지정 된 네임 스페이스가 빈 네임 스페이스 (즉, `xmlns=""`) 인 경우에도 사용 됩니다. 기본 XML 네임 스페이스는 xml 리터럴의 XML 특성이 나 네임 스페이스를 포함 하지 않는 XML 특성 축 속성에는 적용 되지 않습니다.
+If you define a global XML namespace without a namespace prefix (for example, `Imports <xmlns="http://SomeNameSpace>"`), that namespace is considered the default XML namespace. The default XML namespace is used for any XML element literals or XML attribute axis properties that do not explicitly specify a namespace. The default namespace is also used if the specified namespace is the empty namespace (that is, `xmlns=""`). The default XML namespace does not apply to XML attributes in XML literals or to XML attribute axis properties that do not have a namespace.
 
-*로컬 xml 네임 스페이스*라고 하는 xml 리터럴에 정의 된 xml 네임 스페이스는 `Imports` 문에서 전역으로 정의 된 xml 네임 스페이스 보다 우선적으로 적용 됩니다. @No__t_0 문으로 정의 된 XML 네임 스페이스는 Visual Basic 프로젝트에 대해 가져온 XML 네임 스페이스 보다 우선적으로 적용 됩니다. Xml 리터럴이 XML 네임 스페이스를 정의 하는 경우 해당 로컬 네임 스페이스는 포함 식에 적용 되지 않습니다.
+XML namespaces that are defined in an XML literal, which are called *local XML namespaces*, take precedence over XML namespaces that are defined by the `Imports` statement as global. XML namespaces that are defined by the `Imports` statement take precedence over XML namespaces imported for a Visual Basic project. If an XML literal defines an XML namespace, that local namespace does not apply to embedded expressions.
 
-전역 XML 네임 스페이스는 .NET Framework 네임 스페이스와 동일한 범위 지정 및 정의 규칙을 따릅니다. 따라서 `Imports` 문을 포함 하 여 .NET Framework 네임 스페이스를 가져올 수 있는 위치에 전역 XML 네임 스페이스를 정의할 수 있습니다. 여기에는 코드 파일과 프로젝트 수준 가져온 네임 스페이스가 모두 포함 됩니다. 프로젝트 수준에서 가져온 네임 스페이스에 대 한 자세한 내용은 [참조 페이지, 프로젝트 디자이너 (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic)를 참조 하세요.
+Global XML namespaces follow the same scoping and definition rules as .NET Framework namespaces. As a result, you can include an `Imports` statement to define a global XML namespace anywhere you can import a .NET Framework namespace. This includes both code files and project-level imported namespaces. For information about project-level imported namespaces, see [References Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic).
 
-각 소스 파일에는 개수에 관계 없이 `Imports` 문이 모두 포함 될 수 있습니다. 이는 `Option Strict` 문과 같은 옵션 선언을 따라야 하며 `Module` 또는 `Class` 문과 같은 프로그래밍 요소 선언 앞에와 야 합니다.
+Each source file can contain any number of `Imports` statements. These must follow option declarations, such as the `Option Strict` statement, and they must precede programming element declarations, such as `Module` or `Class` statements.
 
 ## <a name="example"></a>예제
 
-다음 예에서는 `ns` 접두사를 사용 하 여 식별 되는 기본 XML 네임 스페이스와 XML 네임 스페이스를 가져옵니다. 그런 다음 두 네임 스페이스를 모두 사용 하는 XML 리터럴을 만듭니다.
+The following example imports a default XML namespace and an XML namespace identified with the prefix `ns`. It then creates XML literals that use both namespaces.
 
 [!code-vb[VbXMLSamples#45](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/Module1.vb#45)]
 
@@ -67,7 +67,7 @@ XML 네임 스페이스 접두사는 동일한 네임 스페이스에 있는 XML
 
 ## <a name="example"></a>예제
 
-다음 예에서는 `ns` XML 네임 스페이스 접두사를 가져옵니다. 그런 다음 네임 스페이스 접두사를 사용 하 고 요소의 최종 형식을 표시 하는 XML 리터럴을 만듭니다.
+The following example imports the XML namespace prefix `ns`. It then creates an XML literal that uses the namespace prefix and displays the element's final form.
 
 [!code-vb[VbXMLSamples#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples10.vb#22)]
 
@@ -82,11 +82,11 @@ XML 네임 스페이스 접두사는 동일한 네임 스페이스에 있는 XML
 </ns:outer>
 ```
 
-컴파일러는 XML 네임 스페이스 접두사를 전역 접두사에서 로컬 접두사 정의로 변환 했습니다.
+Notice that the compiler converted the XML namespace prefix from a global prefix to a local prefix definition.
 
 ## <a name="example"></a>예제
 
-다음 예에서는 `ns` XML 네임 스페이스 접두사를 가져옵니다. 네임스페이스의 접두사를 사용하여 XML 리터럴을 만들고 정규화된 이름 `ns:name`을 가진 첫 번째 자식 노드에 액세스합니다.
+The following example imports the XML namespace prefix `ns`. 네임스페이스의 접두사를 사용하여 XML 리터럴을 만들고 정규화된 이름 `ns:name`을 가진 첫 번째 자식 노드에 액세스합니다.
 
 [!code-vb[VbXMLSamples#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples8.vb#19)]
 

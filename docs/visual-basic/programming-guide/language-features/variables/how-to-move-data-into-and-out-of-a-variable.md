@@ -1,57 +1,57 @@
 ---
-title: '방법: 변수 외부/외부로 데이터 이동 (Visual Basic)'
+title: '방법: 변수 값 저장 및 검색'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - variables [Visual Basic], retrieving values
 - variables [Visual Basic], storing data
 ms.assetid: 93744f46-bf78-4fa0-9640-1de01bc38d9a
-ms.openlocfilehash: df55f122c4ea029a383196f8d9684295ac8926aa
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: bc5a7377a5e2e4c7ebe7291fd5f0093c4d6e996d
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68631115"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346898"
 ---
-# <a name="how-to-move-data-into-and-out-of-a-variable-visual-basic"></a>방법: 변수 외부/외부로 데이터 이동 (Visual Basic)
+# <a name="how-to-move-data-into-and-out-of-a-variable-visual-basic"></a>방법: 변수 값 저장 및 검색(Visual Basic)
 
-변수 이름을 대입문의 왼쪽에 배치 하 여 변수에 값을 저장 합니다.
+You store a value in a variable by putting the variable name on the left side of an assignment statement.
 
-## <a name="putting-data-in-a-variable"></a>변수에 데이터 배치
+## <a name="putting-data-in-a-variable"></a>Putting Data in a Variable
 
-#### <a name="to-store-a-value-in-a-variable"></a>변수에 값을 저장 하려면
+#### <a name="to-store-a-value-in-a-variable"></a>To store a value in a variable
 
-- 대입문의 왼쪽에 변수 이름을 사용 합니다.
+- Use the variable name on the left side of an assignment statement.
 
-    다음 예에서는 변수의 `alpha`값을 설정 합니다.
+    The following example sets the value of the variable `alpha`.
 
     ```vb
     alpha = (beta * 6.27) / (gamma + 2.1)
     ```
 
-    대입문의 오른쪽에 생성 된 값은 변수에 저장 됩니다.
+    The value generated on the right side of the assignment statement is stored in the variable.
 
-## <a name="getting-data-from-a-variable"></a>변수에서 데이터 가져오기
+## <a name="getting-data-from-a-variable"></a>Getting Data from a Variable
 
-식에 변수 이름을 포함 하 여 변수의 값을 검색 합니다.
+You retrieve a variable's value by including the variable name in an expression.
 
-#### <a name="to-retrieve-a-value-from-a-variable"></a>변수에서 값을 검색 하려면
+#### <a name="to-retrieve-a-value-from-a-variable"></a>To retrieve a value from a variable
 
-- 식에서 변수 이름을 사용 합니다. 상수 값을 정의 하는 식을 제외 하 고 상수 또는 리터럴을 사용할 수 있는 모든 위치에서 변수를 사용할 수 있습니다.
+- Use the variable name in an expression. You can use a variable anywhere you can use a constant or a literal, except in an expression that defines the value of a constant.
 
   \-또는-
 
-- 대입문에서 등호 (`=`) 뒤에 변수 이름을 사용 합니다.
+- Use the variable name following the equal (`=`) sign in an assignment statement.
 
-  다음 예에서는 변수의 `startValue` 값을 읽은 다음 식의 변수 `counter` 값을 사용 합니다.
+  The following example reads the value of the variable `startValue` and then uses the value of the variable `counter` in an expression.
 
   ```vb
   counter = startValue
   cellValue = (counter + 5) ^ 2
   ```
 
-  변수 값은 상수와 마찬가지로 식에도 관여 하 고 대입문의 왼쪽에 있는 변수나 속성에 저장 됩니다.
+  The value of the variable participates in the expression just as a constant would, and then it is stored in the variable or property on the left side of the assignment statement.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [변수](../../../../visual-basic/programming-guide/language-features/variables/index.md)
 - [변수 선언](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)

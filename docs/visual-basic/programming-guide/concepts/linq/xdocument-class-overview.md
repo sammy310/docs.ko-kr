@@ -1,15 +1,15 @@
 ---
-title: XDocument 클래스 개요 (Visual Basic)
+title: XDocument 클래스 개요
 ms.date: 07/20/2015
 ms.assetid: 45cb7e71-196a-47da-bfe9-7a5589db1eed
-ms.openlocfilehash: 135d775a914bc6a440c639628281aa313cb85636
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cbc1ccca53978da07f31c0ba7e54eca9f06b0e72
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64639179"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349286"
 ---
-# <a name="xdocument-class-overview-visual-basic"></a>XDocument 클래스 개요 (Visual Basic)
+# <a name="xdocument-class-overview-visual-basic"></a>XDocument Class Overview (Visual Basic)
 이 항목에서는 <xref:System.Xml.Linq.XDocument> 클래스에 대해 소개합니다.  
   
 ## <a name="overview-of-the-xdocument-class"></a>XDocument 클래스 개요  
@@ -81,6 +81,6 @@ doc.Save("test.xml")
 <!--This is another comment.-->  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
-- [LINQ to XML 프로그래밍 개요 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+- [LINQ to XML Programming Overview (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)

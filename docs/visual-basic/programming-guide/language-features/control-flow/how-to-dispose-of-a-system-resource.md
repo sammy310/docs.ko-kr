@@ -1,5 +1,5 @@
 ---
-title: '방법: 시스템 리소스 해제(Visual Basic)'
+title: '방법: 시스템 리소스 해제'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Using statement [Visual Basic], disposing of system resources
@@ -10,23 +10,23 @@ helpviewer_keywords:
 - Using statement [Visual Basic], Using...End Using
 - Using block
 ms.assetid: 8be2b239-8090-419b-8e7e-bcaa75b0ecc8
-ms.openlocfilehash: c780ee1a174ad044593960bc30a3ee2e1f929390
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: c493051050442597196ba484fb9ce8e99249dbb7
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583139"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353940"
 ---
 # <a name="how-to-dispose-of-a-system-resource-visual-basic"></a>방법: 시스템 리소스 해제(Visual Basic)
-@No__t_0 블록을 사용 하 여 코드가 블록을 종료할 때 시스템이 리소스를 삭제 하도록 할 수 있습니다. 이는 많은 양의 메모리를 사용 하는 시스템 리소스를 사용 하는 경우 나 다른 구성 요소 에서도를 사용 하려는 경우에 유용 합니다.  
+You can use a `Using` block to guarantee that the system disposes of a resource when your code exits the block. This is useful if you are using a system resource that consumes a large amount of memory, or that other components also want to use.  
   
-### <a name="to-dispose-of-a-database-connection-when-your-code-is-finished-with-it"></a>코드가 완료 될 때 데이터베이스 연결을 삭제 하려면  
+### <a name="to-dispose-of-a-database-connection-when-your-code-is-finished-with-it"></a>To dispose of a database connection when your code is finished with it  
   
-1. 소스 파일의 시작 부분에 데이터베이스 연결에 대 한 적절 한 [Imports 문 (.Net 네임 스페이스 및 형식)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) 이 포함 되어 있는지 확인 합니다 (이 경우에는 <xref:System.Data.SqlClient>).  
+1. Make sure you include the appropriate [Imports Statement (.NET Namespace and Type)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) for the database connection at the beginning of your source file (in this case, <xref:System.Data.SqlClient>).  
   
-2. @No__t_1 및 `End Using` 문을 사용 하 여 `Using` 블록을 만듭니다. 블록 내에서 데이터베이스 연결을 처리 하는 코드를 배치 합니다.  
+2. Create a `Using` block with the `Using` and `End Using` statements. Inside the block, put the code that deals with the database connection.  
   
-3. 연결을 선언 하 고 `Using` 문의 일부로이의 인스턴스를 만듭니다.  
+3. Declare the connection and create an instance of it as part of the `Using` statement.  
   
     ```vb  
     ' Insert the following line at the beginning of your source file.  
@@ -38,11 +38,11 @@ ms.locfileid: "72583139"
     End Sub  
     ```  
   
-     처리 되지 않은 예외의 경우를 비롯 하 여 블록을 종료 하는 방법에 관계 없이 시스템에서 리소스를 삭제 합니다.  
+     The system disposes of the resource no matter how you exit the block, including the case of an unhandled exception.  
   
-     범위는 블록으로 제한 되기 때문에 `Using` 블록 외부에서 `sqc`에 액세스할 수 없습니다.  
+     Note that you cannot access `sqc` from outside the `Using` block, because its scope is limited to the block.  
   
-     이 동일한 기술을 파일 핸들, COM 래퍼 등의 시스템 리소스에서 사용할 수 있습니다. @No__t_1 블록을 종료 한 후에 다른 구성 요소에서 리소스를 사용할 수 있도록 하려는 경우 `Using` 블록을 사용 합니다.  
+     You can use this same technique on a system resource such as a file handle or a COM wrapper. You use a `Using` block when you want to be sure to leave the resource available for other components after you have exited the `Using` block.  
   
 ## <a name="see-also"></a>참조
 

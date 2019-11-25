@@ -9,20 +9,20 @@ helpviewer_keywords:
 - parts [WPF], DocumentViewer
 - styles [WPF], DocumentViewer
 ms.assetid: 6bd4ff8f-ea6a-4084-ac58-e7a67446ce1c
-ms.openlocfilehash: 7a812ff913703e3aa8408da8a11d28ee5adfa7fd
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: ac1dc4f74a8e8f3ad2e84c6d50239ec827306c28
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460341"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283526"
 ---
 # <a name="documentviewer-styles-and-templates"></a>DocumentViewer 스타일 및 템플릿
-이 항목에서는 <xref:System.Windows.Controls.DocumentViewer> 컨트롤의 스타일 및 템플릿에 대해 설명 합니다. 기본 <xref:System.Windows.Controls.ControlTemplate>를 수정 하 여 컨트롤에 고유한 모양을 제공할 수 있습니다. 자세한 내용은 [ControlTemplate을 만들어 기존 컨트롤의 모양 사용자 지정](customizing-the-appearance-of-an-existing-control.md)을 참조하세요.  
+이 항목에서는 <xref:System.Windows.Controls.DocumentViewer> 컨트롤의 스타일 및 템플릿에 대해 설명 합니다. 기본값을 수정할 수 있습니다 <xref:System.Windows.Controls.ControlTemplate> 고유한 모양을 제어할 수 있습니다. 자세한 내용은 [컨트롤에 대 한 템플릿 만들기](../../../desktop-wpf/themes/how-to-create-apply-template.md)를 참조 하세요.  
   
 ## <a name="documentviewer-parts"></a>DocumentViewer 파트  
  다음 표에서는 <xref:System.Windows.Controls.DocumentViewer> 컨트롤의 명명 된 파트를 나열 합니다.  
   
-|파트|Type|설명|  
+|부분|형식|설명|  
 |-|-|-|  
 |PART_ContentHost|<xref:System.Windows.Controls.ScrollViewer>|콘텐츠 및 스크롤 영역입니다.|  
 |PART_FindToolBarHost|<xref:System.Windows.Controls.ContentControl>|기본적으로 아래쪽에 있는 검색 상자입니다.|  
@@ -47,11 +47,11 @@ ms.locfileid: "73460341"
   
  전체 샘플을 보려면 [Styling with ControlTemplates Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating)(ControlTemplate으로 스타일 지정 샘플)을 참조하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Control 스타일 및 템플릿](control-styles-and-templates.md)
 - [컨트롤 사용자 지정](control-customization.md)
 - [스타일 지정 및 템플릿](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [ControlTemplate을 만들어 기존 컨트롤의 모양 사용자 지정](customizing-the-appearance-of-an-existing-control.md)
+- [컨트롤에 대 한 템플릿 만들기](../../../desktop-wpf/themes/how-to-create-apply-template.md)

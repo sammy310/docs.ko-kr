@@ -1,5 +1,5 @@
 ---
-title: Shared(Visual Basic)
+title: Shared
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Shared
@@ -11,44 +11,44 @@ helpviewer_keywords:
 - shared [elements VB]
 - elements [Visual Basic], shared
 ms.assetid: 2bf7cf2c-b0dd-485e-8749-b5d674dab4cd
-ms.openlocfilehash: fd43ef7cb5c16995fff87a65fc0f0974d8f4a47d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 98fa25d2283408dfb80e82fbc620a1b284e5c530
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647698"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349123"
 ---
 # <a name="shared-visual-basic"></a>Shared(Visual Basic)
-선언 된 프로그래밍 요소를 하나 이상의 클래스 또는 구조체의 특정 인스턴스에 없습니다 클래스 또는 구조체와 연결 되도록 지정 합니다.  
+Specifies that one or more declared programming elements are associated with a class or structure at large, and not with a specific instance of the class or structure.  
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
   
-## <a name="when-to-use-shared"></a>공유 사용 하는 경우  
- 모든 인스턴스를 사용할 수 있도록 클래스 또는 구조체의 멤버를 공유 하지 않고 *비공유*각 인스턴스는 자체 복사본이 유지 합니다. 이 예를 들어, 전체 응용 프로그램에 적용 되는 변수의 값 경우 유용 합니다. 해당 변수를 선언 하는 경우 `Shared`, 모든 인스턴스에서 동일한 저장소 위치에 액세스 하 고 모든 인스턴스가 업데이트 된 값에 액세스 하나의 인스턴스만 변수의 값을 변경 해도 됩니다.  
+## <a name="when-to-use-shared"></a>When to Use Shared  
+ Sharing a member of a class or structure makes it available to every instance, rather than *nonshared*, where each instance keeps its own copy. This is useful, for example, if the value of a variable applies to the entire application. If you declare that variable to be `Shared`, then all instances access the same storage location, and if one instance changes the variable's value, all instances access the updated value.  
   
- 공유 하는 경우에 멤버의 액세스 수준을 변경 하지 않습니다. 예를 들어, 클래스 멤버를 공유할 수 있습니다 및 개인 (내 에서만 액세스할 수는 클래스) 또는 비공유 및 공용입니다. 자세한 내용은 [액세스 수준을 Visual Basic의](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)합니다.  
+ Sharing does not alter the access level of a member. For example, a class member can be shared and private (accessible only from within the class), or nonshared and public. For more information, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
 ## <a name="rules"></a>규칙  
   
-- **선언 컨텍스트입니다.** `Shared`는 모듈 수준에서만 사용할 수 있습니다. 즉, 선언 컨텍스트는 `Shared` 요소는 클래스 또는 구조체 여야 하며 소스 파일, 네임 스페이스 또는 프로시저 수는 없습니다.  
+- **Declaration Context.** `Shared`는 모듈 수준에서만 사용할 수 있습니다. This means the declaration context for a `Shared` element must be a class or structure, and cannot be a source file, namespace, or procedure.  
   
-- **결합 된 한정자입니다.** 지정할 수 없습니다 `Shared` 와 함께 [재정의](../../../visual-basic/language-reference/modifiers/overrides.md)를 [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)를 [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)를 [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md), 또는 [ 정적](../../../visual-basic/language-reference/modifiers/static.md) 같은 선언에 있습니다.  
+- **Combined Modifiers.** You cannot specify `Shared` together with [Overrides](../../../visual-basic/language-reference/modifiers/overrides.md), [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md), [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md), [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md), or [Static](../../../visual-basic/language-reference/modifiers/static.md) in the same declaration.  
   
-- **에 액세스합니다.** 클래스 또는 구조체 이름으로, 해당 클래스 또는 구조체의 특정 인스턴스 변수 이름의 하지 정규화 하 여 공유 요소에 액세스 합니다. 도 클래스 또는 해당 공유 멤버에 액세스 하는 구조체의 인스턴스를 만들 필요가 없습니다.  
+- **Accessing.** You access a shared element by qualifying it with its class or structure name, not with the variable name of a specific instance of its class or structure. You do not even have to create an instance of a class or structure to access its shared members.  
   
-     다음 예제에서는 공유 프로시저를 호출 <xref:System.Double.IsNaN%2A> 에 의해 노출 된 <xref:System.Double> 구조입니다.  
+     The following example calls the shared procedure <xref:System.Double.IsNaN%2A> exposed by the <xref:System.Double> structure.  
   
      `If Double.IsNaN(result) Then MsgBox("Result is mathematically undefined.")`  
   
-- **암시적 공유 합니다.** 사용할 수 없습니다는 `Shared` 한정자를 [Const 문](../../../visual-basic/language-reference/statements/const-statement.md)를 암시적으로 상수는 공유 합니다. 마찬가지로, 되도록 모듈 또는 인터페이스의 멤버를 선언할 수 없습니다 `Shared`, 없어도 암시적으로 공유 합니다.  
+- **Implicit Sharing.** You cannot use the `Shared` modifier in a [Const Statement](../../../visual-basic/language-reference/statements/const-statement.md), but constants are implicitly shared. Similarly, you cannot declare a member of a module or an interface to be `Shared`, but they are implicitly shared.  
   
 ## <a name="behavior"></a>동작  
   
-- **스토리지** 해당 클래스 또는 구조체의 만든 인스턴스의 수에 관계 없이 한 번만 공유 변수 또는 이벤트 메모리에 저장 됩니다. 마찬가지로, 공유 프로시저 또는 속성을 로컬 변수 집합을 하나만 보유합니다.  
+- **Storage.** A shared variable or event is stored in memory only once, no matter how many or few instances you create of its class or structure. Similarly, a shared procedure or property holds only one set of local variables.  
   
-- **인스턴스 변수를 통해 액세스 합니다.** 해당 클래스 또는 구조체의 특정 인스턴스를 포함 하는 변수 이름으로 정규화 하 여 공유 요소에 액세스 하는 것이 가능 합니다. 이 문제는 일반적으로 예상 대로 작동, 있지만 컴파일러 경고 메시지를 생성 하 고 변수 대신 클래스 또는 구조체 이름을 통해 액세스 합니다.  
+- **Accessing through an Instance Variable.** It is possible to access a shared element by qualifying it with the name of a variable that contains a specific instance of its class or structure. Although this usually works as expected, the compiler generates a warning message and makes the access through the class or structure name instead of the variable.  
   
-- **인스턴스 식을 통해 액세스 합니다.** 해당 클래스 또는 구조체의 인스턴스를 반환 하는 식을 통해 공유 요소를 액세스 하는 경우 컴파일러에서 식을 평가 하는 대신 클래스 또는 구조체 이름을 통해 액세스 합니다. 이 인스턴스를 반환 합니다. 뿐만 아니라 다른 작업을 수행 하는 식 했다면 예기치 않은 결과가 생성 됩니다. 다음은 이에 대한 예입니다.  
+- **Accessing through an Instance Expression.** If you access a shared element through an expression that returns an instance of its class or structure, the compiler makes the access through the class or structure name instead of evaluating the expression. This produces unexpected results if you intended the expression to perform other actions as well as returning the instance. 다음은 이에 대한 예입니다.  
   
     ```vb
     Sub main()  
@@ -76,7 +76,7 @@ ms.locfileid: "64647698"
     End Class  
     ```  
   
-     앞의 예제에서 컴파일러 경고 메시지를 생성 코드를 공유 변수에 액세스할 때마다 `total` 인스턴스를 통해. 클래스를 통해 직접 액세스는 각각의 경우에서 `shareTotal` 해도 및 모든 인스턴스를 사용 합니다. 의도 한 프로시저 호출의 경우 `returnClass`, 즉,에 대 한 호출도 생성 하지 않습니다 `returnClass`이므로 "이라는 함수 returnClass()"를 표시 하는 추가 동작이 수행 되지 않습니다.  
+     In the preceding example, the compiler generates a warning message both times the code accesses the shared variable `total` through an instance. In each case it makes the access directly through the class `shareTotal` and does not make use of any instance. In the case of the intended call to the procedure `returnClass`, this means it does not even generate a call to `returnClass`, so the additional action of displaying "Function returnClass() called" is not performed.  
   
  `Shared` 한정자는 다음 컨텍스트에서 사용할 수 있습니다.  
   
@@ -92,11 +92,11 @@ ms.locfileid: "64647698"
   
  [Sub 문](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)
-- [정적](../../../visual-basic/language-reference/modifiers/static.md)
-- [Visual Basic의 수명](../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
+- [Static](../../../visual-basic/language-reference/modifiers/static.md)
+- [Lifetime in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
 - [절차](../../../visual-basic/programming-guide/language-features/procedures/index.md)
 - [구조체](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [개체 및 클래스](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

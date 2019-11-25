@@ -1,5 +1,5 @@
 ---
-title: 숫자 데이터 형식(Visual Basic)
+title: 숫자 데이터 형식
 ms.date: 07/20/2015
 helpviewer_keywords:
 - integral types [Visual Basic], Visual Basic
@@ -23,62 +23,62 @@ helpviewer_keywords:
 - Single data type [Visual Basic], numeric types
 - Decimal data type [Visual Basic], numeric data types
 ms.assetid: a27bd4d0-7e14-43eb-9cc4-b42eaab323c9
-ms.openlocfilehash: 75e60cb2a3a934956099ce6fc7d81bf6ecea4d11
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dc8b630eebc48e5733344a00664b453360769c0b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663377"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346319"
 ---
 # <a name="numeric-data-types-visual-basic"></a>숫자 데이터 형식(Visual Basic)
-Visual Basic 제공 여러 *숫자 데이터 형식* 숫자 다양 한 표현으로 처리할 수 있도록 합니다. *정수 계열* 형식을 나타내는 정수만 (양수, 음수 및 0) 및 *비정 수 계열* 형식은 정수와 소수 부분을 사용 하 여 숫자를 나타냅니다.  
+Visual Basic supplies several *numeric data types* for handling numbers in various representations. *Integral* types represent only whole numbers (positive, negative, and zero), and *nonintegral* types represent numbers with both integer and fractional parts.  
   
- Side-by-side-Visual Basic 데이터 형식 비교를 보여 주는 표를 참조 하세요 [데이터 형식](../../../../visual-basic/language-reference/data-types/index.md)합니다.  
+ For a table showing a side-by-side comparison of the Visual Basic data types, see [Data Types](../../../../visual-basic/language-reference/data-types/index.md).  
   
-## <a name="integral-numeric-types"></a>정수 계열 숫자 형식  
- *정수 데이터 형식* 는 소수 부분 없이 숫자를 나타냅니다.  
+## <a name="integral-numeric-types"></a>Integral Numeric Types  
+ *Integral data types* are those that represent only numbers without fractional parts.  
   
- 합니다 *서명* 정수 데이터 형식은 [SByte 데이터 형식](../../../../visual-basic/language-reference/data-types/sbyte-data-type.md) (8 비트), [Short 데이터 형식](../../../../visual-basic/language-reference/data-types/short-data-type.md) (16 비트), [정수 데이터 형식](../../../../visual-basic/language-reference/data-types/integer-data-type.md) (32 비트) 및 [ Long 데이터 형식이](../../../../visual-basic/language-reference/data-types/long-data-type.md) (64 비트). 변수는 항상 소수 보다 정수를 저장, 경우에 이러한 형식 중 하나로 선언.  
+ The *signed* integral data types are [SByte Data Type](../../../../visual-basic/language-reference/data-types/sbyte-data-type.md) (8-bit), [Short Data Type](../../../../visual-basic/language-reference/data-types/short-data-type.md) (16-bit), [Integer Data Type](../../../../visual-basic/language-reference/data-types/integer-data-type.md) (32-bit), and [Long Data Type](../../../../visual-basic/language-reference/data-types/long-data-type.md) (64-bit). If a variable always stores integers rather than fractional numbers, declare it as one of these types.  
   
- 합니다 *부호 없는* 정수 계열 형식은 [Byte 데이터 형식](../../../../visual-basic/language-reference/data-types/byte-data-type.md) (8 비트), [UShort 데이터 형식](../../../../visual-basic/language-reference/data-types/ushort-data-type.md) (16 비트), [UInteger 데이터 형식](../../../../visual-basic/language-reference/data-types/uinteger-data-type.md) (32 비트) 및 [ ULong 데이터 형식](../../../../visual-basic/language-reference/data-types/ulong-data-type.md) (64 비트). 변수는 이진 데이터 나 알 수 없는 특성의 데이터를 포함 하는 경우에 이러한 형식 중 하나로 선언 합니다.  
-  
-### <a name="performance"></a>성능  
- 산술 연산에는 다른 데이터 형식과 정수 계열 형식 보다 빠릅니다. 사용 하 여 가장 빠른 합니다 `Integer` 및 `UInteger` Visual Basic의 형식입니다.  
-  
-### <a name="large-integers"></a>큰 정수  
- 보다 큰 정수를 포함 하는 경우는 `Integer` 데이터 형식을 포함할 수 있습니다, 사용할 수는 `Long` 데이터 형식 대신 합니다. `Long` 변수-9223372036854775808 9223372036854775807 사이의 숫자를 보유할 수 있습니다. 작업과 `Long` 사용 하 여 보다 약간 더 느려집니다 `Integer`합니다.  
-  
- 더 큰 값을 해야 하는 경우 사용할 수 있습니다 합니다 [Decimal 데이터 형식](../../../../visual-basic/language-reference/data-types/decimal-data-type.md)합니다. 79228162514264337593543950335 79228162514264337593543950335 ~에서 숫자를 보유할 수는 `Decimal` 변수 소수 자릿수를 사용 하지 않는 경우. 그러나 작업과 `Decimal` 번호는 다른 숫자 데이터 형식을 사용 하 여 보다 상당히 느립니다.  
-  
-### <a name="small-integers"></a>Small 정수가  
- 전체 범위를 필요 하지 않은 경우는 `Integer` 데이터 형식을 사용할 수는 `Short` -32,768부터 32,767 까지의 정수를 포함할 수 있는 데이터 형식입니다. 가장 작은 정수 범위를 `SByte` 데이터 형식은-128에서 127 사이의 정수를 갖습니다. 공용 언어 런타임 저장할 수 있습니다 작은 정수를 포함 하는 변수가 매우 많은 경우에 `Short` 및 `SByte` 변수 보다 효율적이 고 메모리 소비를 저장 합니다. 그러나 작업과 `Short` 하 고 `SByte` 사용 하 여 보다 약간 느린 `Integer`합니다.  
-  
-### <a name="unsigned-integers"></a>부호 없는 정수  
- 변수는 음수를 포함할 필요가 사용할 수를 알고 있는 경우는 *부호 없는 형식*`Byte`, `UShort`를 `UInteger`, 및 `ULong`합니다. 양의 정수를 부호 있는 형식의 해당 하는 대로 큰 두 번 포함할 수 있습니다 이러한 각 유형의 데이터 (`SByte`, `Short`를 `Integer`, 및 `Long`). 성능 측면에서 각 부호 없는 유형은 해당 부호 있는 형식으로 정확 하 게 효율적입니다. 특히 `UInteger` 사용 하 여 공유 `Integer` 되는 모든 기본 숫자 데이터 형식 중 가장 효율적인의 차이입니다.  
-  
-## <a name="nonintegral-numeric-types"></a>비정 수 숫자 형식  
- *비정 수 데이터 형식* 은 정수와 소수 부분을 사용 하 여 숫자를 나타냅니다.  
-  
- 비정 수 숫자 데이터 형식은 `Decimal` (128 비트 고정된 소수점) [단일 데이터 형식](../../../../visual-basic/language-reference/data-types/single-data-type.md) (32 비트 부동 소수점) 및 [Double 데이터 형식](../../../../visual-basic/language-reference/data-types/double-data-type.md) (64 비트 부동 소수점). 이들은 모두 부호 있는 형식입니다. 변수 부분을 포함할 수 있는 경우에 이러한 형식 중 하나로 선언 합니다.  
-  
- `Decimal` 부동 소수점 데이터 형식이 아닙니다. `Decimal` 숫자에 이진 정수 값을 있고 소수 부분 값의 부분을 지정 하는 정수 배율 인수입니다.  
-  
- 사용할 수 있습니다 `Decimal` money 값에 대 한 변수입니다. 장점은 값의 전체 자릿수입니다. `Double` 데이터 형식 빠릅니다 및 메모리를 적게 이지만 반올림 오류가 발생 합니다. `Decimal` 데이터 형식은 28 자리로 전체 정확도 유지 합니다.  
-  
- 부동 소수점 (`Single` 하 고 `Double`) 보다 더 큰 범위를 포함 하는 숫자 `Decimal` 숫자 있지만 반올림 오류가 발생할 수 있습니다. 부동 소수점 형식 지원 보다 유효 자릿수가 적어 짐 `Decimal` 하지만 더 큰 값을 나타낼 수 있습니다.  
-  
- 비정 수 숫자 값으로 나타낼 수 있습니다 mmmEeee에서 mmm 되는 *가* (유효 자릿수가)은 합니다 *지 수* (10의 거듭제곱). 비정 수 형식의 가장 큰 양수 값은 7.9228162514264337593543950335 e + 28 `Decimal`, 3.4028235E + 38 `Single`, 및에 대 한 1.79769313486231570 + 308 `Double`합니다.  
+ The *unsigned* integral types are [Byte Data Type](../../../../visual-basic/language-reference/data-types/byte-data-type.md) (8-bit), [UShort Data Type](../../../../visual-basic/language-reference/data-types/ushort-data-type.md) (16-bit), [UInteger Data Type](../../../../visual-basic/language-reference/data-types/uinteger-data-type.md) (32-bit), and [ULong Data Type](../../../../visual-basic/language-reference/data-types/ulong-data-type.md) (64-bit). If a variable contains binary data, or data of unknown nature, declare it as one of these types.  
   
 ### <a name="performance"></a>성능  
- `Double` 소수 데이터 형식 중 가장 효율적인 되므로 현재 플랫폼의 프로세서에서 배정밀도 부동 소수점 작업을 수행 합니다. 그러나 작업과 `Double` 와 같은 정수 계열 형식과 마찬가지로 빠르지 않습니다 `Integer`합니다.  
+ Arithmetic operations are faster with integral types than with other data types. They are fastest with the `Integer` and `UInteger` types in Visual Basic.  
   
-### <a name="small-magnitudes"></a>작은 크기  
- 숫자 (0에 가장 가까운), 가능한 가장 작은 크기를 사용 하 여 `Double` 변수-4.94065645841246544E 만큼 작은 숫자를 보유할 수 있습니다-324 음수 값 및 4.94065645841246544E-324 양수 값에 대 한 합니다.  
+### <a name="large-integers"></a>Large Integers  
+ If you need to hold an integer larger than the `Integer` data type can hold, you can use the `Long` data type instead. `Long` variables can hold numbers from -9,223,372,036,854,775,808 through 9,223,372,036,854,775,807. Operations with `Long` are slightly slower than with `Integer`.  
   
-### <a name="small-fractional-numbers"></a>작은 소수  
- 전체 범위를 필요 하지 않은 경우는 `Double` 데이터 형식을 사용할 수는 `Single` -3.4028235E + 38에서 3.4028235E + 38 까지의 부동 소수점 숫자를 사용할 수 있는 데이터 형식입니다. 사용할 수 있는 가장 작은 크기 `Single` 변수가-1.401298E-45 음수 값 및 1.401298E-45 양수 값입니다. 공용 언어 런타임 저장할 수 있습니다 작은 부동 소수점 숫자를 보유할 변수를 매우 많은 경우에 `Single` 변수 보다 효율적이 고 메모리 소비를 저장 합니다.  
+ If you need even larger values, you can use the [Decimal Data Type](../../../../visual-basic/language-reference/data-types/decimal-data-type.md). You can hold numbers from -79,228,162,514,264,337,593,543,950,335 through 79,228,162,514,264,337,593,543,950,335 in a `Decimal` variable if you do not use any decimal places. However, operations with `Decimal` numbers are considerably slower than with any other numeric data type.  
   
-## <a name="see-also"></a>참고자료
+### <a name="small-integers"></a>Small Integers  
+ If you do not need the full range of the `Integer` data type, you can use the `Short` data type, which can hold integers from -32,768 through 32,767. For the smallest integer range, the `SByte` data type holds integers from -128 through 127. If you have a very large number of variables that hold small integers, the common language runtime can sometimes store your `Short` and `SByte` variables more efficiently and save memory consumption. However, operations with `Short` and `SByte` are somewhat slower than with `Integer`.  
+  
+### <a name="unsigned-integers"></a>Unsigned Integers  
+ If you know that your variable never needs to hold a negative number, you can use the *unsigned types*`Byte`, `UShort`, `UInteger`, and `ULong`. Each of these data types can hold a positive integer twice as large as its corresponding signed type (`SByte`, `Short`, `Integer`, and `Long`). In terms of performance, each unsigned type is exactly as efficient as its corresponding signed type. In particular, `UInteger` shares with `Integer` the distinction of being the most efficient of all the elementary numeric data types.  
+  
+## <a name="nonintegral-numeric-types"></a>Nonintegral Numeric Types  
+ *Nonintegral data types* are those that represent numbers with both integer and fractional parts.  
+  
+ The nonintegral numeric data types are `Decimal` (128-bit fixed point), [Single Data Type](../../../../visual-basic/language-reference/data-types/single-data-type.md) (32-bit floating point), and [Double Data Type](../../../../visual-basic/language-reference/data-types/double-data-type.md) (64-bit floating point). They are all signed types. If a variable can contain a fraction, declare it as one of these types.  
+  
+ `Decimal` is not a floating-point data type. `Decimal` numbers have a binary integer value and an integer scaling factor that specifies what portion of the value is a decimal fraction.  
+  
+ You can use `Decimal` variables for money values. The advantage is the precision of the values. The `Double` data type is faster and requires less memory, but it is subject to rounding errors. The `Decimal` data type retains complete accuracy to 28 decimal places.  
+  
+ Floating-point (`Single` and `Double`) numbers have larger ranges than `Decimal` numbers but can be subject to rounding errors. Floating-point types support fewer significant digits than `Decimal` but can represent values of greater magnitude.  
+  
+ Nonintegral number values can be expressed as mmmEeee, in which mmm is the *mantissa* (the significant digits) and eee is the *exponent* (a power of 10). The highest positive values of the nonintegral types are 7.9228162514264337593543950335E+28 for `Decimal`, 3.4028235E+38 for `Single`, and 1.79769313486231570E+308 for `Double`.  
+  
+### <a name="performance"></a>성능  
+ `Double` is the most efficient of the fractional data types, because the processors on current platforms perform floating-point operations in double precision. However, operations with `Double` are not as fast as with the integral types such as `Integer`.  
+  
+### <a name="small-magnitudes"></a>Small Magnitudes  
+ For numbers with the smallest possible magnitude (closest to 0), `Double` variables can hold numbers as small as -4.94065645841246544E-324 for negative values and 4.94065645841246544E-324 for positive values.  
+  
+### <a name="small-fractional-numbers"></a>Small Fractional Numbers  
+ If you do not need the full range of the `Double` data type, you can use the `Single` data type, which can hold floating-point numbers from -3.4028235E+38 through 3.4028235E+38. The smallest magnitudes for `Single` variables are -1.401298E-45 for negative values and 1.401298E-45 for positive values. If you have a very large number of variables that hold small floating-point numbers, the common language runtime can sometimes store your `Single` variables more efficiently and save memory consumption.  
+  
+## <a name="see-also"></a>참조
 
 - [기본 데이터 형식](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
 - [문자 데이터 형식](../../../../visual-basic/programming-guide/language-features/data-types/character-data-types.md)

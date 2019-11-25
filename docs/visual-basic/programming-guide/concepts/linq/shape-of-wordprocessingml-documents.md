@@ -1,15 +1,15 @@
 ---
-title: (Visual Basic) WordprocessingML 문서의 모양
+title: WordprocessingML 문서의 모양
 ms.date: 07/20/2015
 ms.assetid: 2dfb446b-5a07-4c00-9ab3-a74ba734ff3a
-ms.openlocfilehash: 265da66329128e610c491c3ff50cec1bca434f6d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 64e9ca280c000ba488bfc72248bd83e37474f043
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61786427"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350600"
 ---
-# <a name="shape-of-wordprocessingml-documents-visual-basic"></a>(Visual Basic) WordprocessingML 문서의 모양
+# <a name="shape-of-wordprocessingml-documents-visual-basic"></a>Shape of WordprocessingML Documents (Visual Basic)
 이 항목에서는 WordprocessingML 문서의 XML 모양에 대해 소개합니다.  
   
 ## <a name="microsoft-office-formats"></a>Microsoft Office 형식  
@@ -94,6 +94,6 @@ End Module
   
  [Office 2003: XML 참조 스키마 다운로드 페이지](https://go.microsoft.com/fwlink/?LinkId=98095)  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
-- [자습서: (Visual Basic) WordprocessingML 문서에서 내용 조작](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

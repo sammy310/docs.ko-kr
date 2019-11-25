@@ -1,16 +1,16 @@
 ---
-title: Visual Basic 시작
+title: 시작
 ms.date: 09/10/2018
 helpviewer_keywords:
 - get started, Visual Basic
 - Visual Basic, get started
 ms.assetid: 6685467b-28fa-4cde-9516-f0e00ad08911
-ms.openlocfilehash: c5cd4ab82fde1604dea14718b3cdd1a104fdf922
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 386f7aa74efbcb69e1a2fc0e528c88f25b1d5e2b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425143"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344818"
 ---
 # <a name="get-started-with-visual-basic"></a>Visual Basic 시작
 
@@ -53,7 +53,7 @@ Visual Basic 언어의 여러 측면을 보여 주는 도움말 페이지 목록
 - [Visual Studio](/visualstudio/)\
 Visual Studio 설명서에 대한 링크를 제공합니다.
 
-- [C#](../../csharp/index.md)\
+- [C#](../../csharp/index.yml)\
 Visual C#을 사용하여 애플리케이션 개발 관련 설명서에 대한 링크를 제공합니다.
 
 - [Visual C++](/cpp/)\

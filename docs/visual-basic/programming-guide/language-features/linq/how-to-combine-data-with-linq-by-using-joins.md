@@ -1,5 +1,5 @@
 ---
-title: '방법: 조인 (Visual Basic)를 사용 하 여 데이터와 LINQ 결합'
+title: 'How to: Combine Data with LINQ by Using Joins'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - queries [LINQ in Visual Basic], joins
@@ -9,77 +9,77 @@ helpviewer_keywords:
 - joining [LINQ in Visual Basic]
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: 5b00a478-035b-41c6-8918-be1a97728396
-ms.openlocfilehash: 127e1afa7707f31584e93f3d4b08e865d7fcedf6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7279908c5d262b65f4c4da9cd9b6c1b4117bc402
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775884"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344998"
 ---
-# <a name="how-to-combine-data-with-linq-by-using-joins-visual-basic"></a>방법: 조인 (Visual Basic)를 사용 하 여 데이터와 LINQ 결합
-Visual Basic에서 제공 합니다 `Join` 고 `Group Join` 쿼리 절을 사용 하면 컬렉션 간의 공통 값을 기반으로 하는 여러 컬렉션의 콘텐츠를 결합할 수 있습니다. 이러한 값 이라고 *키* 값입니다. 관계형 데이터베이스 개념에 익숙한 개발자는 `Join` INNER JOIN으로 절 및 `Group Join` 으로 효과적으로 LEFT OUTER JOIN 절.  
+# <a name="how-to-combine-data-with-linq-by-using-joins-visual-basic"></a>방법: 조인을 사용하여 데이터와 LINQ 결합(Visual Basic)
+Visual Basic provides the `Join` and `Group Join` query clauses to enable you to combine the contents of multiple collections based on common values between the collections. These values are known as *key* values. Developers familiar with relational database concepts will recognize the `Join` clause as an INNER JOIN and the `Group Join` clause as, effectively, a LEFT OUTER JOIN.  
   
- 이 항목의 예제를 사용 하 여 데이터를 결합 하는 몇 가지 방법을 설명 합니다 `Join` 및 `Group Join` 쿼리 절.  
+ The examples in this topic demonstrate a few ways to combine data by using the `Join` and `Group Join` query clauses.  
   
-## <a name="create-a-project-and-add-sample-data"></a>프로젝트를 만들고 샘플 데이터 추가  
+## <a name="create-a-project-and-add-sample-data"></a>Create a Project and Add Sample Data  
   
-#### <a name="to-create-a-project-that-contains-sample-data-and-types"></a>샘플 데이터 및 유형을 포함 하는 프로젝트를 만들려면  
+#### <a name="to-create-a-project-that-contains-sample-data-and-types"></a>To create a project that contains sample data and types  
   
-1. 이 항목의 샘플을 실행 하려면 Visual Studio를 열고 새 Visual Basic 콘솔 응용 프로그램 프로젝트를 추가 합니다. Visual Basic에서 생성 된 Module1.vb 파일을 두 번 클릭 합니다.  
+1. To run the samples in this topic, open Visual Studio and add a new Visual Basic Console Application project. Double-click the Module1.vb file created by Visual Basic.  
   
-2. 이 항목에서는 사용 샘플은 `Person` 및 `Pet` 유형 및 다음 코드 예제에서 데이터입니다. 이 코드는 기본 복사 `Module1` Visual Basic에서 생성 하는 모듈입니다.  
+2. The samples in this topic use the `Person` and `Pet` types and data from the following code example. Copy this code into the default `Module1` module created by Visual Basic.  
   
      [!code-vb[VbLINQHowTos#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#1)]  
     [!code-vb[VbLINQHowTos#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#2)]  
   
-## <a name="perform-an-inner-join-by-using-the-join-clause"></a>Join 절을 사용 하 여 내부 조인 수행  
- INNER JOIN 두 컬렉션에서 데이터를 결합합니다. 지정된 된 키 값과 일치 하는 항목이 포함 됩니다. 다른 컬렉션에 일치 하는 항목이 없는 두 컬렉션에서 모든 항목은 제외 됩니다.  
+## <a name="perform-an-inner-join-by-using-the-join-clause"></a>Perform an Inner Join by Using the Join Clause  
+ An INNER JOIN combines data from two collections. Items for which the specified key values match are included. Any items from either collection that do not have a matching item in the other collection are excluded.  
   
- Visual Basic의 LINQ 내부 조인을 수행 하는 것에 대 한 두 가지 옵션을 제공 합니다: 암시적 조인 및 명시적 조인을 합니다.  
+ In Visual Basic, LINQ provides two options for performing an INNER JOIN: an implicit join and an explicit join.  
   
- 암시적 조인을 지정 조인할 컬렉션을 `From` 절에서 일치 하는 키 필드를 식별 하 고는 `Where` 절. Visual Basic에는 암시적으로 지정 된 키 필드를 기반으로 두 컬렉션 조인 합니다.  
+ An implicit join specifies the collections to be joined in a `From` clause and identifies the matching key fields in a `Where` clause. Visual Basic implicitly joins the two collections based on the specified key fields.  
   
- 명시적 조인을 사용 하 여 지정할 수 있습니다는 `Join` 절에 조인에 사용 하는 키 필드에 대 한 정확 하 게 하려는 경우. 이 경우에 `Where` 절을 사용 하 여 쿼리 결과 필터링 할 수 있습니다.  
+ You can specify an explicit join by using the `Join` clause when you want to be specific about which key fields to use in the join. In this case, a `Where` clause can still be used to filter the query results.  
   
-#### <a name="to-perform-an-inner-join-by-using-the-join-clause"></a>Join 절을 사용 하 여 Inner Join을 수행 하려면  
+#### <a name="to-perform-an-inner-join-by-using-the-join-clause"></a>To perform an Inner Join by using the Join clause  
   
-1. 다음 코드를 추가 합니다 `Module1` 모두 암시적 및 명시적 내부 조인 예제를 볼 프로젝트에서 모듈입니다.  
+1. Add the following code to the `Module1` module in your project to see examples of both an implicit and explicit inner join.  
   
      [!code-vb[VbLINQHowTos#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#4)]  
   
-## <a name="perform-a-left-outer-join-by-using-the-group-join-clause"></a>Group Join 절을 사용 하 여 왼쪽된 우선 외부 조인 수행  
- LEFT OUTER JOIN 조인 및 값 조인의 오른쪽에 있는 컬렉션에서 일치 하는 왼쪽 컬렉션에서 모든 항목을 포함 합니다. 왼쪽 컬렉션의 일치 하는 항목이 없는 조인의 오른쪽에 있는 컬렉션에서 모든 항목은 쿼리 결과에서 제외 됩니다.  
+## <a name="perform-a-left-outer-join-by-using-the-group-join-clause"></a>Perform a Left Outer Join by Using the Group Join Clause  
+ A LEFT OUTER JOIN includes all the items from the left-side collection of the join and only matching values from the right-side collection of the join. Any items from the right-side collection of the join that do not have a matching item in the left-side collection are excluded from the query result.  
   
- `Group Join` 절 수행, 실제로 LEFT OUTER JOIN입니다. 일반적으로 라고 LEFT OUTER JOIN 및 간의 차이 `Group Join` 절은 반환는 `Group Join` 왼쪽 컬렉션의 각 항목에 대 한 조인의 오른쪽에 있는 컬렉션에서 절 그룹 결과. 관계형 데이터베이스, LEFT OUTER JOIN 조인에 두 컬렉션에서 일치 하는 항목을 포함 하는 쿼리의 각 항목에는 결과 그룹화 되지 않은 결과 반환 합니다. 이 경우 조인 왼쪽 컬렉션의 항목 오른쪽에 있는 컬렉션에서 일치 하는 각 항목에 대해 반복 됩니다. 이 내용을 다음 절차를 완료 하는 것이 나타납니다.  
+ The `Group Join` clause performs, in effect, a LEFT OUTER JOIN. The difference between what is typically known as a LEFT OUTER JOIN and what the `Group Join` clause returns is that the `Group Join` clause groups results from the right-side collection of the join for each item in the left-side collection. In a relational database, a LEFT OUTER JOIN returns an ungrouped result in which each item in the query result contains matching items from both collections in the join. In this case, the items from the left-side collection of the join are repeated for each matching item from the right-side collection. You will see what this looks like when you complete the next procedure.  
   
- 결과 검색할 수는 `Group Join` 각 그룹화 된 쿼리 결과 대 한 항목을 반환 하려면 쿼리를 확장 하 여 그룹화 되지 않은 결과 쿼리 합니다. 이렇게 하려면에서 쿼리를 확인 해야 합니다 `DefaultIfEmpty` 그룹화 된 컬렉션의 메서드. 이렇게 하면 있다면 오른쪽 컬렉션에서 일치 하는 아무 것도 조인의 왼쪽 컬렉션의 항목이 쿼리 결과에 포함 계속 됩니다. 조인의 오른쪽에 있는 컬렉션에서 일치 하는 값이 없을 때 기본 결과 값을 제공 하 여 쿼리 코드를 추가할 수 있습니다.  
+ You can retrieve the results of a `Group Join` query as an ungrouped result by extending your query to return an item for each grouped query result. To accomplish this, you have to ensure that you query on the `DefaultIfEmpty` method of the grouped collection. This ensures that items from the left-side collection of the join are still included in the query result even if they have no matching results from the right-side collection. You can add code to your query to provide a default result value when there is no matching value from the right-side collection of the join.  
   
-#### <a name="to-perform-a-left-outer-join-by-using-the-group-join-clause"></a>Group Join 절을 사용 하 여 Left Outer Join을 수행 하려면  
+#### <a name="to-perform-a-left-outer-join-by-using-the-group-join-clause"></a>To perform a Left Outer Join by using the Group Join clause  
   
-1. 다음 코드를 추가 합니다 `Module1` 그룹화 된 왼쪽된 외부 조인 및 그룹화 되지 않은 왼쪽된 외부 조인을 둘 다의 예제를 보려면 프로젝트에서 모듈입니다.  
+1. Add the following code to the `Module1` module in your project to see examples of both a grouped left outer join and an ungrouped left outer join.  
   
      [!code-vb[VbLINQHowTos#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#3)]  
   
-## <a name="perform-a-join-by-using-a-composite-key"></a>복합 키를 사용 하 여 조인 수행  
- 사용할 수는 `And` 키워드를 `Join` 또는 `Group Join` 조인 중인 컬렉션에서 일치 시킬 때 사용 하는 여러 키 필드를 식별 하는 절 값입니다. `And` 키워드 지정는 모든 조인할 수는 항목에 대 한 키 필드와 일치 해야 합니다.  
+## <a name="perform-a-join-by-using-a-composite-key"></a>Perform a Join by Using a Composite Key  
+ You can use the `And` keyword in a `Join` or `Group Join` clause to identify multiple key fields to use when matching values from the collections being joined. The `And` keyword specifies that all specified key fields must match for items to be joined.  
   
-#### <a name="to-perform-a-join-by-using-a-composite-key"></a>복합 키를 사용 하 여 조인 수행  
+#### <a name="to-perform-a-join-by-using-a-composite-key"></a>To perform a Join by using a composite key  
   
-1. 다음 코드를 추가 합니다 `Module1` 의 복합 키를 사용 하는 조인 예제를 보려면 프로젝트에서 모듈입니다.  
+1. Add the following code to the `Module1` module in your project to see examples of a join that uses a composite key.  
   
      [!code-vb[VbLINQHowTos#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#5)]  
   
-## <a name="run-the-code"></a>코드를 실행 합니다.  
+## <a name="run-the-code"></a>Run the Code  
   
-#### <a name="to-add-code-to-run-the-examples"></a>예제를 실행 하는 코드를 추가 하려면  
+#### <a name="to-add-code-to-run-the-examples"></a>To add code to run the examples  
   
-1. 대체는 `Sub Main` 에 `Module1` 이 항목의 예제를 실행 하려면 다음 코드를 사용 하 여 프로젝트에서 모듈입니다.  
+1. Replace the `Sub Main` in the `Module1` module in your project with the following code to run the examples in this topic.  
   
      [!code-vb[VbLINQHowTos#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#6)]  
   
-2. F5 키를 눌러 예제를 실행 합니다.  
+2. Press F5 to run the examples.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
 - [Visual Basic의 LINQ 소개](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

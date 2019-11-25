@@ -1,5 +1,5 @@
 ---
-title: Visual Basic의 연결 연산자
+title: 연결 연산자
 ms.date: 07/20/2015
 helpviewer_keywords:
 - '& operator [Visual Basic], concatenation'
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - + operator [Visual Basic], concatenation
 - concatenation operators [Visual Basic]
 ms.assetid: e59908c3-89e0-41ae-933d-3e8826c16a04
-ms.openlocfilehash: 789478cafc4ed7506d34fb4198531d437683075d
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: f86245c649647be4e040a61083d8b93eee4d7422
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583302"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353683"
 ---
 # <a name="concatenation-operators-in-visual-basic"></a>Visual Basic의 연결 연산자
 
@@ -32,9 +32,9 @@ Dim y As String = "Mic" + "ro" + "soft"
 
 ## <a name="differences-between-the-two-concatenation-operators"></a>두 연결 연산자의 차이점
 
-[+ 연산자](../../../../visual-basic/language-reference/operators/addition-operator.md) 에는 두 개의 숫자를 더하는 기본 목적이 있습니다. 그러나 숫자 피연산자와 문자열 피연산자를 연결할 수도 있습니다. `+` 연산자에는 수행할 작업(덧셈, 연결, 컴파일러 오류 생성, 런타임 <xref:System.InvalidCastException> throw)을 결정하는 복잡한 규칙 집합이 있습니다.
+The [+ Operator](../../../../visual-basic/language-reference/operators/addition-operator.md) has the primary purpose of adding two numbers. 그러나 숫자 피연산자와 문자열 피연산자를 연결할 수도 있습니다. `+` 연산자에는 수행할 작업(덧셈, 연결, 컴파일러 오류 생성, 런타임 <xref:System.InvalidCastException> throw)을 결정하는 복잡한 규칙 집합이 있습니다.
 
-[& 연산자](../../../../visual-basic/language-reference/operators/concatenation-operator.md) 는 `String` 피연산자에 대해서만 정의 되며 `Option Strict`의 설정에 관계 없이 항상 `String`에 대 한 피연산자를 확대 합니다. `&` 연산자는 문자열에 대해서만 정의되며 의도하지 않은 변환을 생성할 가능성을 줄이므로 문자열 연결에 사용하는 것이 좋습니다.
+The [& Operator](../../../../visual-basic/language-reference/operators/concatenation-operator.md) is defined only for `String` operands, and it always widens its operands to `String`, regardless of the setting of `Option Strict`. `&` 연산자는 문자열에 대해서만 정의되며 의도하지 않은 변환을 생성할 가능성을 줄이므로 문자열 연결에 사용하는 것이 좋습니다.
 
 ## <a name="performance-string-and-stringbuilder"></a>성능: String 및 StringBuilder
 
@@ -43,7 +43,7 @@ Dim y As String = "Mic" + "ro" + "soft"
 ## <a name="see-also"></a>참조
 
 - [Option Strict 문](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
-- [Visual Basic의 문자열 조작 메서드 유형](../../../../visual-basic/programming-guide/language-features/strings/types-of-string-manipulation-methods.md)
-- [Visual Basic의 산술 연산자](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
-- [Visual Basic의 비교 연산자](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
-- [Visual Basic 논리 및 비트 연산자](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+- [Types of String Manipulation Methods in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/types-of-string-manipulation-methods.md)
+- [Arithmetic Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Logical and Bitwise Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)

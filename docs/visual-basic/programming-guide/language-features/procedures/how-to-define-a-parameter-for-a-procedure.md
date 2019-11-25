@@ -1,5 +1,5 @@
 ---
-title: '방법: 프로시저 (Visual Basic)에 대 한 매개 변수를 정의 합니다.'
+title: '방법: 프로시저의 매개 변수 정의'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedure parameters [Visual Basic], defining data types for
@@ -8,51 +8,51 @@ helpviewer_keywords:
 - Visual Basic code, procedures
 - procedure parameters [Visual Basic], defining
 ms.assetid: 7962808d-407e-4e84-984e-43e9857c53c9
-ms.openlocfilehash: bf57d4dbd7e8596396fb2e9099d5984759d6e90d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 411959a7be92ea49a59558b508e992bfba8eff95
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665375"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344878"
 ---
-# <a name="how-to-define-a-parameter-for-a-procedure-visual-basic"></a>방법: 프로시저 (Visual Basic)에 대 한 매개 변수를 정의 합니다.
-A *매개 변수* 호출 코드를 호출할 때 프로시저에 값을 전달할 수 있습니다. 동일한 방식으로 변수를 선언 하면 해당 이름 및 데이터 형식을 지정 하는 프로시저에 대 한 각 매개 변수를 선언 합니다. 전달 메커니즘을 지정할 수도 있습니다 및 선택적 매개 변수 인지 합니다.  
+# <a name="how-to-define-a-parameter-for-a-procedure-visual-basic"></a>방법: 프로시저의 매개 변수 정의(Visual Basic)
+A *parameter* allows the calling code to pass a value to the procedure when it calls it. You declare each parameter for a procedure the same way you declare a variable, specifying its name and data type. You also specify the passing mechanism, and whether the parameter is optional.  
   
- 자세한 내용은 [프로시저 매개 변수 및 인수](./procedure-parameters-and-arguments.md)합니다.  
+ For more information, see [Procedure Parameters and Arguments](./procedure-parameters-and-arguments.md).  
   
-### <a name="to-define-a-procedure-parameter"></a>프로시저 매개 변수를 정의 하려면  
+### <a name="to-define-a-procedure-parameter"></a>To define a procedure parameter  
   
-1. 프로시저 선언에서 매개 변수 이름이 다른 매개 변수에서 쉼표로 구분 되는 프로시저의 매개 변수 목록에 추가 합니다.  
+1. In the procedure declaration, add the parameter name to the procedure's parameter list, separating it from other parameters by commas.  
   
-2. 매개 변수의 데이터 형식을 결정 합니다.  
+2. Decide the data type of the parameter.  
   
-3. 매개 변수 이름 뒤에 `As` 절 데이터 형식을 지정 합니다.  
+3. Follow the parameter name with an `As` clause to specify the data type.  
   
-4. 매개 변수에 대해 원하는 전달 메커니즘을 결정 합니다. 일반적으로 호출 코드에서 해당 값을 변경할 수 하는 절차를 하려는 경우가 아니면 값으로 매개 변수를 전달 합니다.  
+4. Decide the passing mechanism you want for the parameter. Normally you pass a parameter by value, unless you want the procedure to be able to change its value in the calling code.  
   
-5. 매개 변수 이름 앞에 야 [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) 하거나 [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) 전달 메커니즘을 지정 합니다. 자세한 내용은 [차이점 간의 값과 By Reference 인수를 전달](./differences-between-passing-an-argument-by-value-and-by-reference.md)합니다.  
+5. Precede the parameter name with [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) or [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) to specify the passing mechanism. For more information, see [Differences Between Passing an Argument By Value and By Reference](./differences-between-passing-an-argument-by-value-and-by-reference.md).  
   
-6. 매개 변수가 선택적 이면 전달 메커니즘을 앞에 야 [선택 사항](../../../../visual-basic/language-reference/modifiers/optional.md) 등호를 사용 하 여 매개 변수 데이터 형식에 따라 (`=`) 및 기본 값입니다.  
+6. If the parameter is optional, precede the passing mechanism with [Optional](../../../../visual-basic/language-reference/modifiers/optional.md) and follow the parameter data type with an equal sign (`=`) and a default value.  
   
-     개요를 정의 하는 다음 예제는 `Sub` 세 개의 매개 변수를 사용 하 여 프로시저입니다. 처음 두 개는 필수 되며 세 번째 옵션입니다. 매개 변수 선언 매개 변수 목록에 쉼표로 구분 됩니다.  
+     The following example defines the outline of a `Sub` procedure with three parameters. The first two are required and the third is optional. The parameter declarations are separated in the parameter list by commas.  
   
      [!code-vb[VbVbcnProcedures#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#33)]  
   
-     첫 번째 매개 변수가 허용을 `customer` 개체 및 `updateCustomer` 전달 되는 변수를 직접 업데이트할 수 있습니다 `c` 인수가 전달 되기 때문에 [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)합니다. 프로시저 전달 되므로 마지막 두 인수의 값을 변경할 수 없습니다 [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)합니다.  
+     The first parameter accepts a `customer` object, and `updateCustomer` can directly update the variable passed to `c` because the argument is passed [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md). The procedure cannot change the values of the last two arguments because they are passed [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md).  
   
-     호출 코드에 대 한 값을 제공 하지 않는 경우는 `level` 매개 변수를 Visual Basic 설정의 기본값은 0입니다.  
+     If the calling code does not supply a value for the `level` parameter, Visual Basic sets it to the default value of 0.  
   
-     형식 검사 스위치 하는 경우 ([Option Strict 문](../../../../visual-basic/language-reference/statements/option-strict-statement.md))은 `Off`는 `As` 매개 변수를 정의 하는 경우이 절은 선택 사항입니다. 그러나 하나의 매개 변수를 사용 하는 경우는 `As` 절을 모두 사용 해야 합니다. 형식 검사 스위치 이면 `On`, `As` 절은 모든 매개 변수 정의에 필요 합니다.  
+     If the type checking switch ([Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) is `Off`, the `As` clause is optional when you define a parameter. However, if any one parameter uses an `As` clause, all of them must use it. If the type checking switch is `On`, the `As` clause is required for every parameter definition.  
   
-     모든 프로그래밍 요소에 대 한 데이터 형식을 지정 하는 이라고 *강력한 형식화*합니다. 설정한 경우 `Option Strict On`, Visual Basic 강력한 형식 지정을 적용 합니다. 이 것이 좋습니다 다음과 같은 이유로:  
+     Specifying data types for all your programming elements is known as *strong typing*. When you set `Option Strict On`, Visual Basic enforces strong typing. This is strongly recommended, for the following reasons:  
   
-    - 프로그램 변수 및 매개 변수에 대 한 IntelliSense 지원도를 수 있습니다. 이렇게 하면 코드에서 입력할 때 해당 속성 및 기타 멤버를 볼 수 있습니다.  
+    - It enables IntelliSense support for your variables and parameters. This allows you to see their properties and other members as you type in your code.  
   
-    - 컴파일러를에 형식 검사를 수행할 수 있습니다. 이렇게 하면 런타임에 오버플로 같은 오류로 인해 실패할 수 있는 문을 catch 합니다. 또한 지원 하지 않는 개체에 메서드 호출을 catch 합니다.  
+    - It allows the compiler to perform type checking. This helps catch statements that can fail at run time due to errors such as overflow. It also catches calls to methods on objects that do not support them.  
   
-    - 코드의 더 빠른 실행에서 발생합니다. 그 이유 중 하나는 프로그래밍 요소에 대 한 데이터 형식을 지정 하지 않으면, Visual Basic 컴파일러를 할당 하는 `Object` 형식입니다. 컴파일된 코드 사이 변환 해야 할 수 `Object` 및 다른 데이터 형식을 사용 하면 성능이 저하 됩니다.  
+    - It results in faster execution of your code. One reason for this is that if you do not specify a data type for a programming element, the Visual Basic compiler assigns it the `Object` type. Your compiled code might have to convert back and forth between `Object` and other data types, which reduces performance.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [절차](./index.md)
 - [Sub 프로시저](./sub-procedures.md)

@@ -1,5 +1,5 @@
 ---
-title: Property 프로시저(Visual Basic)
+title: Property 프로시저
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Set statement [Visual Basic], Property procedures
@@ -13,35 +13,35 @@ helpviewer_keywords:
 - property procedures
 - Get statement [Visual Basic], property procedures
 ms.assetid: 46a98379-e1a2-45dd-a48c-b51213f5ab07
-ms.openlocfilehash: 118c9e776813f303ed921946f4cf6f1236ac02e3
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: a4b8ac3e27348764f537ee9502ce1fbb165bb3ef
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040969"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352570"
 ---
 # <a name="property-procedures-visual-basic"></a>Property 프로시저(Visual Basic)
 
-속성 프로시저는 모듈, 클래스 또는 구조체의 사용자 지정 속성을 조작 하는 일련의 Visual Basic 문입니다. 속성 프로시저를 *속성 접근자*라고도 합니다.
+A property procedure is a series of Visual Basic statements that manipulate a custom property on a module, class, or structure. Property procedures are also known as *property accessors*.
 
-Visual Basic는 다음 속성 프로시저를 제공 합니다.
+Visual Basic provides for the following property procedures:
 
-- `Get` 프로시저는 속성의 값을 반환 합니다. 식의 속성에 액세스할 때 호출 됩니다.
-- `Set` 프로시저는 개체 참조를 포함 하 여 속성을 값으로 설정 합니다. 속성에 값을 할당할 때 호출 됩니다.
+- A `Get` procedure returns the value of a property. It is called when you access the property in an expression.
+- A `Set` procedure sets a property to a value, including an object reference. It is called when you assign a value to the property.
 
-일반적으로 `Get` 및 `Set` 문을 사용 하 여 속성 프로시저를 쌍으로 정의 하지만 속성이 읽기 전용 ([Get 문](../../../../visual-basic/language-reference/statements/get-statement.md)) 또는 쓰기 전용 ([Set 문](../../../../visual-basic/language-reference/statements/set-statement.md)) 인 경우에만 프로시저를 정의할 수 있습니다.
+You usually define property procedures in pairs, using the `Get` and `Set` statements, but you can define either procedure alone if the property is read-only ([Get Statement](../../../../visual-basic/language-reference/statements/get-statement.md)) or write-only ([Set Statement](../../../../visual-basic/language-reference/statements/set-statement.md)).
 
-자동 구현 속성을 사용 하는 경우 `Get` 및 `Set` 프로시저를 생략할 수 있습니다. 자세한 내용은 [자동으로 구현된 속성](./auto-implemented-properties.md)을 참조하세요.
+You can omit the `Get` and `Set` procedure when using an auto-implemented property. 자세한 내용은 [자동으로 구현된 속성](./auto-implemented-properties.md)을 참조하세요.
 
-클래스, 구조체 및 모듈에서 속성을 정의할 수 있습니다. 속성은 기본적으로 `Public` 됩니다. 즉, 속성의 컨테이너에 액세스할 수 있는 응용 프로그램의 어디에서 나 호출할 수 있습니다.
+You can define properties in classes, structures, and modules. Properties are `Public` by default, which means you can call them from anywhere in your application that can access the property's container.
 
-속성과 변수를 비교 하는 방법에 대 한 자세한 내용은 [Visual Basic의 속성과 변수 간의 차이점](differences-between-properties-and-variables.md)을 참조 하세요.
+For a comparison of properties and variables, see [Differences Between Properties and Variables in Visual Basic](differences-between-properties-and-variables.md).
 
-## <a name="declaration-syntax"></a>선언 구문
+## <a name="declaration-syntax"></a>Declaration syntax
 
-속성 자체는 [속성 문과](../../../../visual-basic/language-reference/statements/property-statement.md) `End Property` 문 내에 포함 된 코드 블록으로 정의 됩니다. 이 블록 내에서 각 속성 프로시저는 선언 문 (`Get` 또는 `Set`) 및 일치 하는 `End` 선언에 포함 된 내부 블록으로 나타납니다.
+A property itself is defined by a block of code enclosed within the [Property Statement](../../../../visual-basic/language-reference/statements/property-statement.md) and the `End Property` statement. Inside this block, each property procedure appears as an internal block enclosed within a declaration statement (`Get` or `Set`) and the matching `End` declaration.
 
-속성 및 해당 프로시저를 선언 하는 구문은 다음과 같습니다.
+The syntax for declaring a property and its procedures is as follows:
 
 ```vb
 [Default] [Modifiers] Property PropertyName[(ParameterList)] [As DataType]
@@ -60,62 +60,62 @@ End Property
 [Default] [Modifiers] Property PropertyName [(ParameterList)] [As DataType]
 ```
 
-`Modifiers`는 액세스 수준 및 오버 로드, 재정의, 공유 및 숨김과 관련 된 정보 뿐만 아니라 속성이 읽기 전용 이거나 쓰기 전용인 지 여부에 대 한 정보를 지정할 수 있습니다. `Get` 또는 `Set` 프로시저에 대 한 `AccessLevel`는 속성 자체에 대해 지정 된 액세스 수준 보다 더 제한적인 수준이 될 수 있습니다. 자세한 내용은 [Property 문](../../../../visual-basic/language-reference/statements/property-statement.md)을 참조 하세요.
+The `Modifiers` can specify access level and information regarding overloading, overriding, sharing, and shadowing, as well as whether the property is read-only or write-only. The `AccessLevel` on the `Get` or `Set` procedure can be any level that is more restrictive than the access level specified for the property itself. For more information, see [Property Statement](../../../../visual-basic/language-reference/statements/property-statement.md).
 
 ### <a name="data-type"></a>데이터 형식
 
-속성의 데이터 형식 및 보안 주체 액세스 수준은 속성 프로시저가 아닌 `Property` 문에 정의 됩니다. 속성에는 데이터 형식이 하나만 있을 수 있습니다. 예를 들어 `Decimal` 값을 저장 하 고 `Double` 값을 검색 하는 속성을 정의할 수 없습니다.
+A property's data type and principal access level are defined in the `Property` statement, not in the property procedures. A property can have only one data type. For example, you cannot define a property to store a `Decimal` value but retrieve a `Double` value.
 
-### <a name="access-level"></a>액세스 수준
+### <a name="access-level"></a>Access Level
 
-그러나 속성의 보안 주체 액세스 수준을 정의 하 고 속성 프로시저 중 하나에서 액세스 수준을 추가로 제한할 수 있습니다. 예를 들어 `Public` 속성을 정의한 다음 `Private Set` 프로시저를 정의할 수 있습니다. `Get` 프로시저는 `Public`남아 있습니다. 속성의 프로시저 중 하나 에서만 액세스 수준을 변경할 수 있으며, 보안 주체 액세스 수준 보다 제한적 으로만 설정할 수 있습니다. 자세한 내용은 [방법: 액세스 수준이 혼합 된 속성 선언](how-to-declare-a-property-with-mixed-access-levels.md)을 참조 하세요.
+However, you can define a principal access level for a property and further restrict the access level in one of its property procedures. For example, you can define a `Public` property and then define a `Private Set` procedure. The `Get` procedure remains `Public`. You can change the access level in only one of a property's procedures, and you can only make it more restrictive than the principal access level. For more information, see [How to: Declare a Property with Mixed Access Levels](how-to-declare-a-property-with-mixed-access-levels.md).
 
-## <a name="parameter-declaration"></a>매개 변수 선언
+## <a name="parameter-declaration"></a>Parameter declaration
 
-전달 메커니즘을 `ByVal`해야 한다는 점을 제외 하 고 [하위 프로시저](sub-procedures.md)와 동일한 방식으로 각 매개 변수를 선언 합니다.
+You declare each parameter the same way you do for [Sub Procedures](sub-procedures.md), except that the passing mechanism must be `ByVal`.
 
-매개 변수 목록의 각 매개 변수에 대 한 구문은 다음과 같습니다.
+The syntax for each parameter in the parameter list is as follows:
 
 ```vb
 [Optional] ByVal [ParamArray] parametername As datatype
 ```
 
-매개 변수가 선택 사항인 경우에는 해당 선언의 일부로도 기본값을 제공 해야 합니다. 기본값을 지정 하는 구문은 다음과 같습니다.
+If the parameter is optional, you must also supply a default value as part of its declaration. The syntax for specifying a default value is as follows:
 
 ```vb
 Optional ByVal parametername As datatype = defaultvalue
 ```
 
-## <a name="property-value"></a>속성 값
+## <a name="property-value"></a>Property value
 
-`Get` 프로시저에서 반환 값은 호출 식에 속성 값으로 제공 됩니다.
+In a `Get` procedure, the return value is supplied to the calling expression as the value of the property.
 
-`Set` 프로시저에서는 새 속성 값이 `Set` 문의 매개 변수로 전달 됩니다. 매개 변수를 명시적으로 선언 하는 경우에는 속성과 동일한 데이터 형식을 사용 하 여 선언 해야 합니다. 매개 변수를 선언 하지 않으면 컴파일러는 `Value` 암시적 매개 변수를 사용 하 여 속성에 할당 되는 새 값을 나타냅니다.
+In a `Set` procedure, the new property value is passed to the parameter of the `Set` statement. If you explicitly declare a parameter, you must declare it with the same data type as the property. If you do not declare a parameter, the compiler uses the implicit parameter `Value` to represent the new value to be assigned to the property.
 
-## <a name="calling-syntax"></a>호출 구문
+## <a name="calling-syntax"></a>Calling syntax
 
-속성을 참조 하 여 암시적으로 속성 프로시저를 호출 합니다. 변수 이름을 사용 하는 것과 동일한 방식으로 속성의 이름을 사용 합니다. 단, 선택 사항이 아닌 모든 인수에 대 한 값을 제공 해야 하 고 인수 목록을 괄호로 묶어야 합니다. 인수를 제공 하지 않으면 필요에 따라 괄호를 생략할 수 있습니다.
+You invoke a property procedure implicitly by making reference to the property. You use the name of the property the same way you would use the name of a variable, except that you must provide values for all arguments that are not optional, and you must enclose the argument list in parentheses. If no arguments are supplied, you can optionally omit the parentheses.
 
-`Set` 프로시저에 대 한 암시적 호출 구문은 다음과 같습니다.
+The syntax for an implicit call to a `Set` procedure is as follows:
 
 ```vb
 propertyname[(argumentlist)] = expression
 ```
 
-`Get` 프로시저에 대 한 암시적 호출 구문은 다음과 같습니다.
+The syntax for an implicit call to a `Get` procedure is as follows:
 
 ```vb
 lvalue = propertyname[(argumentlist)]
 Do While (propertyname[(argumentlist)] > expression)
 ```
 
-### <a name="illustration-of-declaration-and-call"></a>선언 및 호출에 대 한 그림
+### <a name="illustration-of-declaration-and-call"></a>Illustration of declaration and call
 
-다음 속성은 이름, 이름 및 성 이라는 두 가지 구성 이름으로 전체 이름을 저장 합니다. 호출 코드가 `fullName`를 읽을 때 `Get` 프로시저는 두 가지 구성 이름을 결합 하 고 전체 이름을 반환 합니다. 호출 코드에서 새 전체 이름을 할당 하면 `Set` 프로시저는 두 개의 구성 된 이름으로 코드를 분리 하려고 시도 합니다. 공백을 찾지 못하면 모두 이름으로 저장 합니다.
+The following property stores a full name as two constituent names, the first name and the last name. When the calling code reads `fullName`, the `Get` procedure combines the two constituent names and returns the full name. When the calling code assigns a new full name, the `Set` procedure attempts to break it into two constituent names. If it does not find a space, it stores it all as the first name.
 
 [!code-vb[VbVbcnProcedures#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#8)]
 
-다음 예에서는 `fullName`의 속성 프로시저에 대 한 일반적인 호출을 보여 줍니다.
+The following example shows typical calls to the property procedures of `fullName`:
 
 [!code-vb[VbVbcnProcedures#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#9)]
 
@@ -125,9 +125,9 @@ Do While (propertyname[(argumentlist)] > expression)
 - [Function 프로시저](function-procedures.md)
 - [연산자 프로시저](operator-procedures.md)
 - [프로시저 매개 변수 및 인수](procedure-parameters-and-arguments.md)
-- [Visual Basic에서 속성과 변수의 차이점](differences-between-properties-and-variables.md)
+- [Differences Between Properties and Variables in Visual Basic](differences-between-properties-and-variables.md)
 - [방법: 속성 만들기](how-to-create-a-property.md)
 - [방법: 속성 프로시저 호출](how-to-call-a-property-procedure.md)
-- [방법: Visual Basic에서 기본 속성 선언 및 호출](how-to-declare-and-call-a-default-property.md)
+- [How to: Declare and Call a Default Property in Visual Basic](how-to-declare-and-call-a-default-property.md)
 - [방법: 속성 값 입력](how-to-put-a-value-in-a-property.md)
 - [방법: 속성에서 값 가져오기](how-to-get-a-value-from-a-property.md)

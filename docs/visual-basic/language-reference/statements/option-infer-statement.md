@@ -1,5 +1,5 @@
 ---
-title: Option 유추 문 (Visual Basic)
+title: Option Infer 문
 ms.date: 07/20/2015
 f1_keywords:
 - vb.OptionInfer
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - declaring variables [Visual Basic], inferred
 - inferred variable declaration
 ms.assetid: 4ad3e6e9-8f5b-4209-a248-de22ef6e4652
-ms.openlocfilehash: 4dcca0f0ed9989577ded27bab7cf3b16f3036964
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 53bc9d41f28f63061db2012395480aa6be7515dd
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72775450"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346492"
 ---
 # <a name="option-infer-statement"></a>Option Infer 문
 
@@ -43,26 +43,26 @@ Option Infer { On | Off }
 
 다음 그림에서는 `Option Infer`가 설정되어 있습니다. `Dim someVar = 2` 선언의 변수는 형식 유추에 의해 정수로 선언됩니다.
 
-다음 스크린샷은 추론 옵션이 설정 된 경우 IntelliSense를 보여 줍니다.
+The following screenshot shows IntelliSense when Option Infer is on:
 
-![옵션 추론을 on으로 설정 하는 경우 IntelliSense 보기를 보여 주는 스크린샷](./media/option-infer-statement/option-infer-as-integer-on.png)
+![Screenshot showing IntelliSense view when Option Infer is on.](./media/option-infer-statement/option-infer-as-integer-on.png)
 
-다음 그림에서는 `Option Infer`가 해제되어 있습니다. `Dim someVar = 2` 선언의 변수는 형식 유추에 의해 `Object`로 선언됩니다. 이 예제에서 **Option Strict** 설정은 [컴파일 페이지, 프로젝트 디자이너 (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)에서 **Off** 로 설정 됩니다.
+다음 그림에서는 `Option Infer`가 해제되어 있습니다. `Dim someVar = 2` 선언의 변수는 형식 유추에 의해 `Object`로 선언됩니다. In this example, the **Option Strict** setting is set to **Off** on the [Compile Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic).
 
-다음 스크린샷은 추론 옵션이 해제 된 경우 IntelliSense를 보여 줍니다.
+The following screenshot shows IntelliSense when Option Infer is off:
 
-![옵션 추론을 해제 한 경우 IntelliSense 보기를 보여 주는 스크린샷](./media/option-infer-statement/option-infer-as-object-off.png)
+![Screenshot showing IntelliSense view when Option Infer is off.](./media/option-infer-statement/option-infer-as-object-off.png)
 
 > [!NOTE]
-> 변수가 `Object`로 선언되면 프로그램을 실행하는 동안 런타임 형식이 변경될 수 있습니다. Visual Basic은 *boxing* 및 *unboxing* 이라는 작업을 수행 하 여 `Object`와 값 형식 간에 변환 하 여 실행 속도를 느리게 합니다. Boxing 및 unboxing에 대 한 자세한 내용은 [Visual Basic 언어 사양](~/_vblang/spec/conversions.md#value-type-conversions)을 참조 하세요.
+> 변수가 `Object`로 선언되면 프로그램을 실행하는 동안 런타임 형식이 변경될 수 있습니다. Visual Basic performs operations called *boxing* and *unboxing* to convert between an `Object` and a value type, which makes execution slower. For information about boxing and unboxing, see the [Visual Basic Language Specification](~/_vblang/spec/conversions.md#value-type-conversions).
 
 형식 유추는 프로시저 수준에서 적용되며 클래스, 구조체, 모듈 또는 인터페이스의 프로시저 외부에는 적용되지 않습니다.
 
-자세한 내용은 [지역 형식 유추](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)를 참조 하세요.
+For additional information, see [Local Type Inference](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).
 
 ## <a name="when-an-option-infer-statement-is-not-present"></a>Option Infer 문이 없는 경우
 
-소스 코드에 `Option Infer` 문이 포함 되어 있지 않은 경우 [컴파일 페이지, 프로젝트 디자이너 (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) 에 대 한 **옵션 유추 옵션이** 사용 됩니다. 명령줄 컴파일러를 사용 하는 경우 [-옵션 추론](../../../visual-basic/reference/command-line-compiler/optioninfer.md) 컴파일러 옵션이 사용 됩니다.
+If the source code does not contain an `Option Infer` statement, the **Option Infer** setting on the [Compile Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) is used. If the command-line compiler is used, the [-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md) compiler option is used.
 
 #### <a name="to-set-option-infer-in-the-ide"></a>IDE에서 Option Infer를 설정하려면
 
@@ -70,13 +70,13 @@ Option Infer { On | Off }
 
 2. **컴파일** 탭을 클릭합니다.
 
-3. **유추 옵션** 상자에서 값을 설정 합니다.
+3. Set the value in the **Option infer** box.
 
-새 프로젝트를 만들 때 **컴파일** 탭의 **유추 설정 옵션이** **VB 기본값** 대화 상자의 **유추 옵션** 으로 설정 됩니다. **VB 기본값** 대화 상자에 액세스 하려면 **도구** 메뉴에서 **옵션**을 클릭 합니다. **옵션** 대화 상자에서 **프로젝트 및 솔루션**을 확장하고 **VB 기본값**을 클릭합니다. **VB 기본값** 의 초기 기본 설정은 `On`입니다.
+When you create a new project, the **Option Infer** setting on the **Compile** tab is set to the **Option Infer** setting in the **VB Defaults** dialog box. To access the **VB Defaults** dialog box, on the **Tools** menu, click **Options**. **옵션** 대화 상자에서 **프로젝트 및 솔루션**을 확장하고 **VB 기본값**을 클릭합니다. The initial default setting in **VB Defaults** is `On`.
 
 #### <a name="to-set-option-infer-on-the-command-line"></a>명령줄에서 Option Infer를 설정하려면
 
-**Vbc** 명령에 [-옵션 추론](../../../visual-basic/reference/command-line-compiler/optioninfer.md) 컴파일러 옵션을 포함 합니다.
+Include the [-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md) compiler option in the **vbc** command.
 
 ## <a name="default-data-types-and-values"></a>기본 데이터 형식 및 값
 
@@ -85,8 +85,8 @@ Option Infer { On | Off }
 |데이터 형식 지정 여부|이니셜라이저 지정 여부|예제|결과|
 |---|---|---|---|
 |아니요|아니요|`Dim qty`|`Option Strict`가 off(기본값)이면 변수는 `Nothing`으로 설정됩니다.<br /><br /> `Option Strict`가 on이면 컴파일 시간 오류가 발생합니다.|
-|아니요|예|`Dim qty = 5`|`Option Infer`가 on(기본값)이면 변수가 이니셜라이저의 데이터 형식을 사용합니다. [지역 형식 유추](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)를 참조 하세요.<br /><br /> `Option Infer`가 off이고 `Option Strict`고 off이면 변수가 `Object`의 데이터 형식을 사용합니다.<br /><br /> `Option Infer`가 off이고 `Option Strict`는 on이면 컴파일 시간 오류가 발생합니다.|
-|예|아니요|`Dim qty As Integer`|변수는 데이터 형식의 기본값으로 초기화됩니다. 자세한 내용은 [Dim 문](../../../visual-basic/language-reference/statements/dim-statement.md)을 참조 하세요.|
+|아니요|예|`Dim qty = 5`|`Option Infer`가 on(기본값)이면 변수가 이니셜라이저의 데이터 형식을 사용합니다. See [Local Type Inference](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).<br /><br /> `Option Infer`가 off이고 `Option Strict`고 off이면 변수가 `Object`의 데이터 형식을 사용합니다.<br /><br /> `Option Infer`가 off이고 `Option Strict`는 on이면 컴파일 시간 오류가 발생합니다.|
+|예|아니요|`Dim qty As Integer`|변수는 데이터 형식의 기본값으로 초기화됩니다. For more information, see [Dim Statement](../../../visual-basic/language-reference/statements/dim-statement.md).|
 |예|예|`Dim qty  As Integer = 5`|이니셜라이저의 데이터 형식을 지정한 데이터 형식으로 변환할 수 없으면 컴파일 시간 오류가 발생합니다.|
 
 ## <a name="example"></a>예제

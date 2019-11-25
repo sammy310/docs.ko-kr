@@ -1,19 +1,19 @@
 ---
-title: -highentropyva (Visual Basic)
+title: -highentropyva
 ms.date: 03/10/2018
 helpviewer_keywords:
 - highentropyva compiler option (Visual Basic)
 - /highentropyva compiler option (Visual Basic)
 ms.assetid: ff25f20a-6ca2-467b-9e52-5cf439f5028e
-ms.openlocfilehash: 203380bbe2b2828e159ee36d795b6cd4a24e2917
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 7934dcaada4675bf687624bef5ed1ea25e842832
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72775651"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344248"
 ---
 # <a name="-highentropyva-visual-basic"></a>-highentropyva (Visual Basic)
-[-Platform: anycpu](../../../visual-basic/reference/command-line-compiler/platform.md) 컴파일러 옵션으로 표시 된 실행 파일이 나 64 비트 실행 파일이 높은 엔트로피의 ASLR (주소 공간 레이아웃 임의 지정)을 지원 하는지 여부를 나타냅니다.  
+Indicates whether a 64-bit executable or an executable that's marked by the [-platform:anycpu](../../../visual-basic/reference/command-line-compiler/platform.md) compiler option supports high entropy Address Space Layout Randomization (ASLR).  
   
 ## <a name="syntax"></a>구문  
   
@@ -23,12 +23,12 @@ ms.locfileid: "72775651"
   
 ## <a name="arguments"></a>인수  
  `+` &#124; `-`  
- (선택 사항) 옵션은 기본적으로 off 이거나 `-highentropyva-` 지정 하는 경우입니다. @No__t_0 또는 `-highentropyva+`를 지정 하는 경우 옵션은 on입니다.  
+ (선택 사항) The option is off by default or if you specify `-highentropyva-`. The option is on if you specify `-highentropyva` or `-highentropyva+`.  
   
 ## <a name="remarks"></a>주의  
- 이 옵션을 지정 하는 경우 커널에서 ASLR의 일부로 프로세스의 주소 공간 레이아웃을 임의화 하는 경우 호환 되는 버전의 Windows 커널에서 더 높은 수준의 엔트로피를 사용할 수 있습니다. 커널이 높은 수준의 엔트로피를 사용 하는 경우 스택 및 힙과 같은 메모리 영역에 더 많은 주소를 할당할 수 있습니다. 따라서 특정 메모리 영역의 위치를 추측하기 어려워집니다.  
+ If you specify this option, compatible versions of the Windows kernel can use higher degrees of entropy when the kernel randomizes the address space layout of a process as part of ASLR. If the kernel uses higher degrees of entropy, a larger number of addresses can be allocated to memory regions such as stacks and heaps. 따라서 특정 메모리 영역의 위치를 추측하기 어려워집니다.  
   
- 옵션을 on으로 설정 하면 대상 실행 파일과이 실행 파일이 종속 된 모든 모듈이 64 비트 프로세스로 실행 될 때 4gb 보다 큰 포인터 값을 처리할 수 있어야 합니다.  
+ When the option is on, the target executable and any modules on which it depends must be able to handle pointer values that are larger than 4 gigabytes (GB) when those modules are running as 64-bit processes.  
   
 ## <a name="see-also"></a>참조
 
