@@ -2,12 +2,12 @@
 title: LINQ to Objects(C#)
 ms.date: 07/20/2015
 ms.assetid: c5c2c178-3529-4f6c-b3df-2d5267af7f22
-ms.openlocfilehash: 8c0eb71fffdd29d9599d74c789a66ec7caf1faeb
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: b0cc47604b65a5883643d61b44b1e9878ec4b1bf
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73418171"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74140882"
 ---
 # <a name="linq-to-objects-c"></a>LINQ to Objects(C#)
 “LINQ to Objects”라는 용어는 중간 LINQ 공급자 또는 [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md), [LINQ to XML](./linq-to-xml-overview.md) 등의 API를 사용하지 않고 모든 <xref:System.Collections.IEnumerable> 또는 <xref:System.Collections.Generic.IEnumerable%601> 컬렉션에 대해 LINQ 쿼리를 직접 사용하는 것입니다. LINQ를 사용하면 <xref:System.Collections.Generic.List%601>, <xref:System.Array>, <xref:System.Collections.Generic.Dictionary%602> 등의 모든 열거 가능 컬렉션을 쿼리할 수 있습니다. 컬렉션은 사용자가 정의할 수도 있고 .NET Framework API에서 반환할 수도 있습니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "73418171"
  [방법: LINQ를 사용하여 ArrayList 쿼리(C#)](./how-to-query-an-arraylist-with-linq.md)  
  C#에서 ArrayList를 쿼리하는 방법을 보여 줍니다.  
   
- [방법: LINQ 쿼리용 사용자 지정 메서드 추가(C#)](./how-to-add-custom-methods-for-linq-queries.md)  
+ [LINQ 쿼리용 사용자 지정 메서드를 추가하는 방법(C#)](./how-to-add-custom-methods-for-linq-queries.md)  
  <xref:System.Collections.Generic.IEnumerable%601> 인터페이스에 확장 메서드를 추가하여 LINQ 쿼리에 대해 사용할 수 있는 메서드 집합 확장 방법을 설명합니다.  
   
  [LINQ(Language-Integrated Query)(C#)](./index.md)  

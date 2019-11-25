@@ -1,15 +1,15 @@
 ---
-title: '방법: 관련 요소 찾기(XPath 및 LINQ to XML)(C#)'
+title: 관련 요소를 찾는 방법(XPath 및 LINQ to XML)(C#)
 ms.date: 07/20/2015
 ms.assetid: 41b386ee-562d-4841-bd6b-e44a7eb69f26
-ms.openlocfilehash: 2aa3f6c6c2c2ac327ff2dffc206cdd294e12d7a2
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: cdc281d0b08ee7b7f93ac28b14e82fa113a3379d
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253638"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141024"
 ---
-# <a name="how-to-find-related-elements-xpath-linq-to-xml-c"></a>방법: 관련 요소 찾기(XPath 및 LINQ to XML)(C#)
+# <a name="how-to-find-related-elements-xpath-linq-to-xml-c"></a>관련 요소를 찾는 방법(XPath 및 LINQ to XML)(C#)
 이 항목에서는 다른 요소의 값에 의해 참조되는 특성을 기준으로 선택하여 요소를 가져오는 방법을 비교합니다.  
   
  XPath 식은 다음과 같습니다.  
@@ -21,7 +21,7 @@ ms.locfileid: "70253638"
   
  .NET에서 목록의 인덱싱은 ‘0’부터 시작하고 XPath 조건자에서 노드 컬렉션의 인덱싱은 1부터 시작합니다. 이 예제에서는 이 차이를 반영합니다.  
   
- 이 예제에서는 XML 문서로을 사용합니다. [샘플 XML 파일: Customers 및 Orders(LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
+ 이 예제에서는 다음 XML 문서를 사용합니다. [샘플 XML 파일: Customers 및 Orders(LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
   
 ```csharp  
 XDocument co = XDocument.Load("CustomersOrders.xml");  

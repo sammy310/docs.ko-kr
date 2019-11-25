@@ -394,8 +394,8 @@
       items:
         - name: 스타일 지정 및 템플릿
           href: styling-and-templating.md
-        - name: ControlTemplate을 만들어 기존 컨트롤의 모양 사용자 지정
-          href: customizing-the-appearance-of-an-existing-control.md
+        - name: ControlTemplate을 사용하여 기존 컨트롤 사용자 지정
+          href: ../../../desktop-wpf/themes/how-to-create-apply-template.md
         - name: '방법: ControlTemplate에서 생성된 요소 찾기'
           href: how-to-find-controltemplate-generated-elements.md
     - name: 컨트롤 사용자 지정

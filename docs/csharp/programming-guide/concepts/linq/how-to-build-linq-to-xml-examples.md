@@ -1,15 +1,15 @@
 ---
-title: '방법: LINQ to XML 예제 빌드(C#)'
+title: LINQ to XML 예제를 빌드하는 방법(C#)
 ms.date: 07/20/2015
 ms.assetid: e5d18fa1-2704-48fe-a44b-1564f97c9e9c
-ms.openlocfilehash: 9bbd04731854d67b9276f339a15f2c7f2193f9b4
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 289a13daed7e3c871156bf50c6fa04c113c0cd13
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594122"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141460"
 ---
-# <a name="how-to-build-linq-to-xml-examples-c"></a>방법: LINQ to XML 예제 빌드(C#)
+# <a name="how-to-build-linq-to-xml-examples-c"></a>LINQ to XML 예제를 빌드하는 방법(C#)
 이 설명서의 다양한 코드 조각과 예제에서는 여러 가지 네임스페이스의 클래스와 형식을 사용합니다. C# 코드를 컴파일하는 경우 적절한 `using` 지시문을 제공해야 하고,  
   
 ## <a name="example"></a>예  

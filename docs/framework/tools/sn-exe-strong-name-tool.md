@@ -10,12 +10,12 @@ helpviewer_keywords:
 - strong-named assemblies, signing files
 - key pairs for signing files
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
-ms.openlocfilehash: dc9b8beafe1b174543afaf9da7e7180638d561ff
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 90cad6529b3ac2a8afedaca0c43d5c7561dcf9e6
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73104349"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74138969"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe(강력한 이름 도구)
 강력한 이름 도구(Sn.exe)를 사용하면 [강력한 이름](../../standard/assembly/strong-named.md)으로 어셈블리에 서명할 수 있습니다. Sn.exe를 실행하면 키 관리, 서명 생성 및 서명 확인을 위한 옵션이 제공됩니다.  
@@ -55,7 +55,7 @@ sn [-quiet][option [parameter(s)]]
 |`-o infile [outfile]`|*infile*에서 공개 키를 추출하여 .csv 파일에 저장합니다. 공개 키의 각 바이트는 쉼표로 구분됩니다. 이 형식은 키에 대한 참조를 소스 코드의 초기화된 배열로 하드 코드하는 데 유용합니다. *outfile*을 지정하지 않으면 출력 파일은 클립보드에 넣어집니다. **참고:**  이 옵션은 입력 파일에 공개 키만 있는지는 확인하지 않습니다. `infile`에 프라이빗 키를 포함한 키 쌍이 들어 있으면 프라이빗 키도 추출됩니다.|  
 |`-p infile outfile [hashalg]`|*infile*의 키 쌍에서 공개 키를 추출하며 *outfile*에 저장하며, 이 경우 *hashalg*에서 지정된 RSA 알고리즘을 선택적으로 사용합니다. 이 공개 키는 [어셈블리 링커(Al.exe)](al-exe-assembly-linker.md)의 **/delaysign+** 및 **/keyfile** 옵션을 사용하여 어셈블리 서명을 연기하는 데 사용될 수 있습니다. 어셈블리 서명이 연기되면 컴파일 타임에 퍼블릭 키만 설정되고, 나중에 프라이빗 키가 알려질 때 서명을 추가할 공간이 파일에 예약됩니다.|  
 |`-pc container outfile [hashalg]`|*container*의 키 쌍에서 공개 키를 추출하여 *outfile*에 저장합니다. *hashalg* 옵션을 사용할 경우 RSA 알고리즘은 공개 키를 추출하는 데 사용됩니다.|  
-|`-Pb [y &#124; n]`|강력한 이름 건너뛰기 정책을 적용할지 여부를 지정합니다. *y*를 지정하면 완전 신뢰 <xref:System.AppDomain>에 완전 신뢰 어셈블리가 로드될 때 강력한 이름의 유효성이 검사되지 않습니다. *n*을 지정하면 강력한 이름이 올바른지 검사되지만 특정 강력한 이름은 검사되지 않습니다. 완전 신뢰 어셈블리에는 <xref:System.Security.Permissions.StrongNameIdentityPermission>이 적용되지 않으므로 강력한 이름이 일치하는지 여부는 직접 검사해야 합니다.<br /><br /> `y`나 `n`을 모두 지정하지 않으면 현재 설정이 표시됩니다. 기본값은 `y`입니다. **참고:**  64비트 컴퓨터에서는 Sn.exe의 32비트 및 64비트 인스턴스 모두에 이 매개 변수를 설정해야 합니다.|  
+|`-Pb [y|n]`|강력한 이름 건너뛰기 정책을 적용할지 여부를 지정합니다. *y*를 지정하면 완전 신뢰 <xref:System.AppDomain>에 완전 신뢰 어셈블리가 로드될 때 강력한 이름의 유효성이 검사되지 않습니다. *n*을 지정하면 강력한 이름이 올바른지 검사되지만 특정 강력한 이름은 검사되지 않습니다. 완전 신뢰 어셈블리에는 <xref:System.Security.Permissions.StrongNameIdentityPermission>이 적용되지 않으므로 강력한 이름이 일치하는지 여부는 직접 검사해야 합니다.<br /><br /> `y`나 `n`을 모두 지정하지 않으면 현재 설정이 표시됩니다. 기본값은 `y`입니다. **참고:**  64비트 컴퓨터에서는 Sn.exe의 32비트 및 64비트 인스턴스 모두에 이 매개 변수를 설정해야 합니다.|  
 |`-q[uiet]`|자동 모드를 지정합니다. 즉, 성공 메시지가 표시되지 않도록 합니다.|  
 |`-R[a] assembly infile`|*infile*에 있는 키 쌍을 사용하여 이전에 서명했거나 서명을 연기한 어셈블리에 다시 서명합니다.<br /><br /> **-Ra**를 사용하는 경우 어셈블리에 있는 모든 파일에 대해 해시가 다시 계산됩니다.|  
 |`-Rc[a] assembly container`|*container*에 있는 키 쌍을 사용하여 이전에 서명했거나 서명이 연기된 어셈블리에 다시 서명합니다.<br /><br /> **-Rca**를 사용하는 경우 어셈블리에 있는 모든 파일에 대해 해시가 다시 계산됩니다.|  

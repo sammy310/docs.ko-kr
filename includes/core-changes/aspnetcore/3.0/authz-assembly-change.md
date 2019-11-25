@@ -1,21 +1,20 @@
 ---
-ms.openlocfilehash: 65bac44c84589fb55d2b04c39088c2825c451a6b
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: b91cdc7a0d2e4258662155a840500ce21ab35760
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394267"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74101235"
 ---
 ### <a name="authorization-addauthorization-overload-moved-to-different-assembly"></a>권한 부여: AddAuthorization 오버로드가 다른 어셈블리로 이동됨
 
-`Microsoft.AspNetCore.Authorization`에 상주하는 데 사용되는 핵심 `AddAuthorization` 메서드가 `AddAuthorizationCore`로 이름이 변경되었습니다. 이전 `AddAuthorization` 메서드는 여전히 존재하지만 대신 `Microsoft.AspNetCore.Authorization.Policy` 패키지에 있습니다. 두 방법을 모두 사용하는 앱은 영향을 받지 않아야 합니다. 정책 패키지를 사용하지 않는 앱은 `AddAuthorizationCore`를 사용하도록 전환해야 합니다.
+`Microsoft.AspNetCore.Authorization`에 상주하는 데 사용되는 핵심 `AddAuthorization` 메서드가 `AddAuthorizationCore`로 이름이 변경되었습니다. 이전 `AddAuthorization` 메서드는 여전히 존재하지만, 대신 `Microsoft.AspNetCore.Authorization.Policy` 어셈블리에 있습니다. 두 방법을 모두 사용하는 앱은 영향을 받지 않아야 합니다. [공유 프레임워크에서 설명한 대로 `Microsoft.AspNetCore.Authorization.Policy`은(는) 독립 실행형 패키지가 아닌 공유 프레임워크에 제공됩니다. Microsoft.AspNetCore.App](#shared-framework-assemblies-removed-from-microsoftaspnetcoreapp)에서 제거된 어셈블리.
 
 #### <a name="version-introduced"></a>도입된 버전
 
 3.0
 
 #### <a name="old-behavior"></a>이전 동작
-
 `AddAuthorization` 메서드가 `Microsoft.AspNetCore.Authorization`에 있었습니다.
 
 #### <a name="new-behavior"></a>새 동작

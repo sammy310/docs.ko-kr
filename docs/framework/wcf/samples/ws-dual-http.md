@@ -2,12 +2,12 @@
 title: WS 다중 Http
 ms.date: 03/30/2017
 ms.assetid: 9997eba5-29ec-48db-86f3-fa77b241fb1a
-ms.openlocfilehash: bc8958ab092f97e94a75bc366d576441c1a5bbbd
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 44fdf6f0b27e15c486afa32f67668e9fd6eeac10
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424550"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74138681"
 ---
 # <a name="ws-dual-http"></a>WS 다중 Http
 
@@ -88,7 +88,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 4. 단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)의 지침을 따르세요.
 
     > [!IMPORTANT]
-    > 다중 컴퓨터 구성에서 클라이언트를 실행 하는 경우 [\<client > 요소 >\<끝점](../../configure-apps/file-schema/wcf/endpoint-of-client.md) 의 `address` 특성 및 [`clientBaseAddress` 바인딩의](../../../../docs/framework/misc/binding.md)\<특성 둘 다에서 localhost를 대체 해야 > [\<wsDualHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md) 요소의 요소로, 다음과 같이 적절 한 컴퓨터의 이름을 사용 합니다.
+    > 다중 컴퓨터 구성에서 클라이언트를 실행 하는 경우 [\<client > 요소 >\<끝점](../../configure-apps/file-schema/wcf/endpoint-of-client.md) 의 `address` 특성 및 [`clientBaseAddress` 바인딩의](../../configure-apps/file-schema/wcf/bindings.md)\<특성 둘 다에서 localhost를 대체 해야 > [\<wsDualHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md) 요소의 요소로, 다음과 같이 적절 한 컴퓨터의 이름을 사용 합니다.
 
     ```xml
     <client>

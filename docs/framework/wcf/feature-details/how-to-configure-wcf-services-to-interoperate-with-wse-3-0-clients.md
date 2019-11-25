@@ -2,12 +2,12 @@
 title: '방법: WSE 3.0 클라이언트와 상호 운용하도록 WCF 서비스 구성'
 ms.date: 03/30/2017
 ms.assetid: 0f38c4a0-49a6-437c-bdde-ad1d138d3c4a
-ms.openlocfilehash: 0349c9ba76b3f240bf98daa0e095b415bc98a87c
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: bd9f2bec94ca45f76590f64366428a00edd5d6ea
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045933"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141749"
 ---
 # <a name="how-to-configure-wcf-services-to-interoperate-with-wse-30-clients"></a>방법: WSE 3.0 클라이언트와 상호 운용하도록 WCF 서비스 구성
 
@@ -19,13 +19,13 @@ Wcf (Windows Communication Foundation) 서비스는 WCF 서비스가 WS-ADDRESSI
 
     2004년 8월 버전의 WS-Addressing 사양을 메시지 인코딩에 사용하도록 지정하려면 사용자 지정 바인딩을 만들어야 합니다.
 
-    1. 서비스 구성 파일의 [ \<바인딩에 >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) 자식 [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) 를 추가 합니다.
+    1. 서비스의 구성 파일 [\<바인딩에](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) 자식 [\<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) 를 추가 합니다.
 
-    2. CustomBinding >에 [ \<> 바인딩을](../../../../docs/framework/misc/binding.md) 추가 하 고 `name` 특성을 설정 하 여 바인딩의 이름을 지정 합니다. [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+    2. [\<바인딩 >](../../configure-apps/file-schema/wcf/bindings.md) 를 [\<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) 에 추가 하 고 `name` 특성을 설정 하 여 바인딩의 이름을 지정 합니다.
 
-    3. 바인딩 >에 자식 [ \<보안](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) [>을 추가 하 여 WSE 3.0와 호환 되는 메시지를 보호 하는 데 사용 되는 ws-security 사양의 버전 및 인증 모드를 지정 합니다. \<](../../../../docs/framework/misc/binding.md)
+    3. 자식 [\<보안 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) 를 [\<바인딩 >](../../configure-apps/file-schema/wcf/bindings.md)에 추가 하 여 WSE 3.0와 호환 되는 메시지를 보호 하는 데 사용 되는 ws-security 사양의 버전 및 인증 모드를 지정 합니다.
 
-        인증 모드를 설정 하려면 [ \<보안 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)의 `authenticationMode` 특성을 설정 합니다. 인증 모드는 대체로 WSE 3.0의 턴키 보안 어설션에 해당합니다. 다음 표에서는 WCF의 인증 모드를 WSE 3.0의 턴키 보안 어설션에 매핑합니다.
+        인증 모드를 설정 하려면 [\<보안 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)의 `authenticationMode` 특성을 설정 합니다. 인증 모드는 대체로 WSE 3.0의 턴키 보안 어설션에 해당합니다. 다음 표에서는 WCF의 인증 모드를 WSE 3.0의 턴키 보안 어설션에 매핑합니다.
 
         |WCF 인증 모드|WSE 3.0 턴키 보안 어설션|
         |-----------------------------|----------------------------------------|
@@ -36,20 +36,20 @@ Wcf (Windows Communication Foundation) 서비스는 WCF 서비스가 WS-ADDRESSI
         |<xref:System.ServiceModel.Configuration.AuthenticationMode.UserNameOverTransport>|`usernameOverTransportSecurity`|
         |<xref:System.ServiceModel.Configuration.AuthenticationMode.UserNameForCertificate>|`usernameForCertificateSecurity`|
 
-        \*`mutualCertificate10Security` 및`mutualCertificate11Security` 턴키 보안 어설션 간의 주요 차이점 중 하나는 WSE에서 SOAP 메시지를 보호 하는 데 사용 하는 ws-security 사양의 버전입니다. `mutualCertificate10Security`에는 WS-Security 1.0이 사용되는 반면, `mutualCertificate11Security`에는 WS-Security 1.1이 사용됩니다. WCF의 경우 ws-security 사양의 버전은 `messageSecurityVersion` [ \<보안 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)의 특성에 지정 됩니다.
+        \* `mutualCertificate10Security`와 `mutualCertificate11Security` 턴키 보안 어설션 간의 주요 차이점 중 하나는 WSE에서 SOAP 메시지 보안을 위해 사용 하는 WS-SECURITY 사양의 버전입니다. `mutualCertificate10Security`에는 WS-Security 1.0이 사용되는 반면, `mutualCertificate11Security`에는 WS-Security 1.1이 사용됩니다. WCF의 경우 WS-SECURITY 사양의 버전은 [\<Security >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)의 `messageSecurityVersion` 특성에 지정 됩니다.
 
-        SOAP 메시지를 보호 하는 데 사용 되는 ws-security 사양의 버전을 설정 하려면 `messageSecurityVersion` [ \<보안 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)의 특성을 설정 합니다. WSE 3.0과 상호 운용하려면 `messageSecurityVersion` 특성의 값을 <xref:System.ServiceModel.MessageSecurityVersion.WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10%2A>으로 설정합니다.
+        SOAP 메시지를 보호 하는 데 사용 되는 WS-SECURITY 사양의 버전을 설정 하려면 [\<Security >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)의 `messageSecurityVersion` 특성을 설정 합니다. WSE 3.0과 상호 운용하려면 `messageSecurityVersion` 특성의 값을 <xref:System.ServiceModel.MessageSecurityVersion.WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10%2A>으로 설정합니다.
 
-    4. [ \<> Textmessageencoding](../../../../docs/framework/configure-apps/file-schema/wcf/textmessageencoding.md) 을 추가 하 고를 해당 값 `messageVersion` <xref:System.ServiceModel.Channels.MessageVersion.Soap11WSAddressingAugust2004%2A>으로 설정 하 여 WCF에서 ws-addressing 사양의 8 월 2004 버전을 사용 하도록 지정 합니다.
+    4. [\<textMessageEncoding >](../../../../docs/framework/configure-apps/file-schema/wcf/textmessageencoding.md) 를 추가 하 고 `messageVersion` 값을 <xref:System.ServiceModel.Channels.MessageVersion.Soap11WSAddressingAugust2004%2A>로 설정 하 여 WCF에서 Ws-addressing 사양의 8 월 2004 버전을 사용 하도록 지정 합니다.
 
         > [!NOTE]
         > SOAP 1.2를 사용할 경우에는 `messageVersion` 특성을 <xref:System.ServiceModel.Channels.MessageVersion.Soap12WSAddressingAugust2004%2A>로 변경합니다.
 
 2. 서비스에서 사용자 지정 바인딩이 사용되도록 지정합니다.
 
-    1. 끝점 > 요소의 `binding` 특성 `customBinding` [을로 설정 합니다. \<](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md)
+    1. [\<끝점 >](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) 요소의 `binding` 특성을 `customBinding`로 설정 합니다.
 
-    2. [ \<](../../../../docs/framework/misc/binding.md) 끝점>`name` 요소의 `bindingConfiguration` 특성 [을 사용자 지정 바인딩에 대 한 바인딩 >의 특성에 지정 된 값 \<](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) 으로 설정 합니다.
+    2. [\<끝점 >](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) 요소의 `bindingConfiguration` 특성을 사용자 지정 바인딩에 대 한 [\<바인딩 >](../../configure-apps/file-schema/wcf/bindings.md) 의 `name` 특성에 지정 된 값으로 설정 합니다.
 
 ## <a name="example"></a>예제
 
@@ -92,6 +92,6 @@ Wcf (Windows Communication Foundation) 서비스는 WCF 서비스가 WS-ADDRESSI
 </configuration>
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [방법: 시스템 제공 바인딩 사용자 지정](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)

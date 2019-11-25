@@ -2,12 +2,12 @@
 title: 워크플로 서비스 등록 도구(WFServicesReg.exe)
 ms.date: 03/30/2017
 ms.assetid: 9e92c87b-99c5-4e8d-9d53-7944cc2b47d3
-ms.openlocfilehash: bb0989fb8747a5065ce3d7332311cdefba95b80d
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 6b1a0b990b1657e724f527b5beccce0e8a6391a6
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425297"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74281665"
 ---
 # <a name="workflow-service-registration-tool-wfservicesregexe"></a>워크플로 서비스 등록 도구(WFServicesReg.exe)
 워크플로 서비스 등록 도구(WFServicesReg.exe)는 Windows WF(Workflow Foundation) 서비스의 구성 요소를 추가, 제거 또는 복구하는 데 사용할 수 있는 독립 실행형 도구입니다.  
@@ -18,8 +18,8 @@ ms.locfileid: "73425297"
 WFServicesReg.exe [-c | -r | -v | -m | -i]  
 ```  
   
-## <a name="remarks"></a>주의  
- 이 도구는 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 설치 위치(특히 %windir%\Microsoft.NET\Framework\v3.5) 또는 %windir%\Microsoft.NET\Framework64\v3.5(64비트 시스템의 경우)에 있습니다.  
+## <a name="remarks"></a>설명  
+ 이 도구는 .NET Framework 3.5 설치 위치, 특히%windir%\Microsoft.NET\Framework\v3.5 또는 64 비트 컴퓨터 의%windir%\Microsoft.NET\Framework64\v3.5에서 찾을 수 있습니다.  
   
  다음 표에서는 워크플로 서비스 등록 도구(WFServicesReg.exe)에서 사용할 수 있는 옵션에 대해 설명합니다.  
   
@@ -34,7 +34,7 @@ WFServicesReg.exe [-c | -r | -v | -m | -i]
 ## <a name="registration"></a>등록  
  이 도구는 Web.config 파일을 검사하고 다음을 등록합니다.  
   
-- [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 참조 어셈블리  
+- .NET Framework 3.5 참조 어셈블리  
   
 - .xoml 파일의 빌드 공급자  
   
@@ -70,7 +70,7 @@ WFServicesReg.exe [-c | -r | -v | -m | -i]
 ## <a name="usage-scenarios"></a>사용 시나리오  
   
 ### <a name="installing-iis-after-net-framework-35-is-installed"></a>.NET Framework 3.5 설치 후 IIS 설치  
- [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] 시스템에서는 IIS 설치 전에 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]가 설치됩니다. IIS를 사용할 수 없으므로 .xoml 및 .rules 스크립트 맵을 설치하지 않아도 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]가 설치됩니다.  
+ [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] 컴퓨터에서 IIS를 설치 하기 전에 .NET Framework 3.5가 설치 됩니다. IIS 메타 베이스를 사용할 수 없기 때문에 .NET Framework 3.5의 설치는 xoml 및. 규칙 스크립트 맵을 설치 하지 않고 성공 합니다.  
   
  IIS가 설치된 후에는 `/c` 스위치와 함께 WFServicesReg.exe 도구를 사용하여 이러한 특정 스크립트 맵을 설치할 수 있습니다.  
   
@@ -85,4 +85,4 @@ WFServicesReg.exe [-c | -r | -v | -m | -i]
  특정 웹 사이트에 대 한 삭제 된 처리기를 복구 하려면 "Wfservicesreg.exe/r"을 실행 하 여 모든 웹 사이트에서 처리기를 제거한 다음 "Wfservicesreg.exe/c"를 실행 하 여 모든 웹 사이트에 대 한 적절 한 처리기를 만들어야 합니다.  
   
 ### <a name="configuring-handlers-after-switching-iis-mode"></a>IIS 모드 전환 후 처리기 구성  
- IIS가 공유 구성 모드에 있는 경우 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]를 설치하면 IIS 메타베이스가 공유 위치에 구성됩니다. IIS를 비공유 구성 모드로 전환하면 로컬 메타베이스에 필요한 처리기가 포함되지 않습니다. 로컬 메타 베이스를 제대로 구성 하려면 공유 메타 베이스를 local로 가져오거나 로컬 메타 베이스를 구성 하는 "Wfservicesreg.exe/c"를 실행 하면 됩니다.
+ IIS가 공유 구성 모드에 있고 .NET Framework 3.5가 설치 된 경우 IIS 메타 베이스는 공유 위치 아래에 구성 됩니다. IIS를 비공유 구성 모드로 전환하면 로컬 메타베이스에 필요한 처리기가 포함되지 않습니다. 로컬 메타 베이스를 제대로 구성 하려면 공유 메타 베이스를 local로 가져오거나 로컬 메타 베이스를 구성 하는 "Wfservicesreg.exe/c"를 실행 하면 됩니다.

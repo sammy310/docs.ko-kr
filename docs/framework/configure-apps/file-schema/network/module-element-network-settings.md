@@ -8,21 +8,21 @@ helpviewer_keywords:
 - module element
 - <module> element
 ms.assetid: 10318725-9666-4d65-ab61-b94c64e59f13
-ms.openlocfilehash: 15f4d10a70dc3c6abd32869f5b7b0006a799b4bf
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 78f6418160b80096214c6e37268a5a90498d6d4d
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698039"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74089248"
 ---
 # <a name="module-element-network-settings"></a>\<module > 요소 (네트워크 설정)
 애플리케이션에 새 프록시 모듈을 추가합니다.  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4c.net >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t @ no__t[ **\<defaultProxy >** ](defaultproxy-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t @ no__t @ @ no__t-4 @ no__t-5 **\<module >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;[ **\<.net >를**](system-net-element-network-settings.md) &nbsp;\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<defaultProxy >** ](defaultproxy-element-network-settings.md)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<모듈 >**
+
 ## <a name="syntax"></a>구문  
   
 ```xml  
@@ -38,10 +38,10 @@ ms.locfileid: "71698039"
   
 |**특성**|**설명**|  
 |-------------------|---------------------|  
-|`type`|@No__t-0 속성으로 표시 된 정규화 된 형식 이름 및 프록시를 구현 하는 쉼표로 구분 된 어셈블리 이름 (<xref:System.Reflection.Assembly.FullName%2A> 속성으로 표시)입니다.|  
+|`type`|<xref:System.Type.FullName%2A> 속성이 나타내는 정규화 된 형식 이름 및 프록시를 구현 하는 쉼표로 구분 된 어셈블리 이름 (<xref:System.Reflection.Assembly.FullName%2A> 속성으로 표시 됨)입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
- 없음  
+ 없음.  
   
 ### <a name="parent-elements"></a>부모 요소  
   
@@ -49,10 +49,10 @@ ms.locfileid: "71698039"
 |-----------------|---------------------|  
 |[defaultProxy](defaultproxy-element-network-settings.md)|HTTP(Hypertext Transfer Protocol) 프록시 서버를 구성합니다.|  
   
-## <a name="remarks"></a>설명  
- @No__t-0 요소는 <xref:System.Net.IWebProxy> 인터페이스를 구현 하는 프록시 클래스를 등록 합니다. 프록시 클래스를 등록한 다음에는 `module`을 사용하여 지원 프록시를 통해 정보를 요청할 수 있습니다.  
+## <a name="remarks"></a>주의  
+ `module` 요소는 <xref:System.Net.IWebProxy> 인터페이스를 구현 하는 프록시 클래스를 등록 합니다. 프록시 클래스를 등록한 다음에는 `module`을 사용하여 지원 프록시를 통해 정보를 요청할 수 있습니다.  
   
- @No__t-0 특성의 값은 모듈의 클래스 이름과 해당 DLL (동적 연결 라이브러리)의 이름 이어야 합니다.  
+ `type` 특성의 값은 모듈의 클래스 이름과 해당 DLL (동적 연결 라이브러리)의 이름 이어야 합니다.  
   
 ## <a name="configuration-files"></a>구성 파일  
  이 요소는 애플리케이션 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.  

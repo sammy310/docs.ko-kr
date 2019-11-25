@@ -1,12 +1,12 @@
 ---
 title: 특성(C#)
 ms.date: 04/26/2018
-ms.openlocfilehash: 7b78d5832c15d3d1142b80d2ccb96a72e4e20390
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 2a07035ea97bb0ff1a8f4793fe8a30d3a42c34a7
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374377"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141558"
 ---
 # <a name="attributes-c"></a>특성(C#)
 
@@ -25,7 +25,7 @@ ms.locfileid: "70374377"
 
 이 예제에서 <xref:System.SerializableAttribute> 특성은 클래스에 특정 특성을 적용하는 데 사용됩니다.
 
-[!code-csharp[Using the serializable attribute](../../../../../samples/snippets/csharp/attributes/AttributesOverview.cs#1)]
+[!code-csharp[Using the serializable attribute](~/samples/snippets/csharp/attributes/AttributesOverview.cs#1)]
 
 <xref:System.Runtime.InteropServices.DllImportAttribute> 특성을 사용하는 메서드는 다음 예제와 같이 선언됩니다.
 
@@ -33,12 +33,12 @@ ms.locfileid: "70374377"
 
 다음 예제와 같이 둘 이상의 특성을 하나의 선언에 추가할 수 있습니다.
 
-[!code-csharp[Including the interop namespace](../../../../../samples/snippets/csharp/attributes/AttributesOverview.cs#3)]
-[!code-csharp[Declaring two way marshaling for arguments](../../../../../samples/snippets/csharp/attributes/AttributesOverview.cs#4)]
+[!code-csharp[Including the interop namespace](~/samples/snippets/csharp/attributes/AttributesOverview.cs#3)]
+[!code-csharp[Declaring two way marshaling for arguments](~/samples/snippets/csharp/attributes/AttributesOverview.cs#4)]
 
 지정된 엔터티에 대해 일부 특성을 두 번 이상 지정할 수 있습니다. 이러한 다용도 특성의 예로 <xref:System.Diagnostics.ConditionalAttribute>가 있습니다.
 
-[!code-csharp[Using the conditional attribute](../../../../../samples/snippets/csharp/attributes/AttributesOverview.cs#5)]
+[!code-csharp[Using the conditional attribute](~/samples/snippets/csharp/attributes/AttributesOverview.cs#5)]
 
 > [!NOTE]
 > 규칙에 따라 모든 특성 이름은 .NET 라이브러리의 다른 항목과 구분하기 위해 "Attribute" 단어로 끝납니다. 그러나 코드에서 특성을 사용하는 경우 특성 접미사를 지정할 필요가 없습니다. 예를 들어 `[DllImport]`는 `[DllImportAttribute]`와 같지만 `DllImportAttribute`는 .NET Framework 클래스 라이브러리에서 특성의 실제 이름입니다.
@@ -119,7 +119,7 @@ using System.Reflection;
 
 - [사용자 지정 특성 만들기(C#)](creating-custom-attributes.md)  
 - [리플렉션을 사용하여 특성 액세스(C#)](accessing-attributes-by-using-reflection.md)  
-- [방법: 특성을 사용하여 C/C++ 공용 구조체 만들기(C#)](how-to-create-a-c-cpp-union-by-using-attributes.md)  
+- [특성(C#)을 사용하여 C/C++ 공용 구조체를 만드는 방법](how-to-create-a-c-cpp-union-by-using-attributes.md)  
 - [공통 특성(C#)](common-attributes.md)  
 - [호출자 정보(C#)](../caller-information.md)  
 

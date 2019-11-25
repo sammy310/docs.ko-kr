@@ -6,12 +6,12 @@ helpviewer_keywords:
 - implicitly-typed local variables [C#]
 - var [C#]
 ms.assetid: b9218fb2-ef5d-4814-8a8e-2bc29b0bbc9b
-ms.openlocfilehash: 7010c38797ab64e5106c96c06cd814c143ca9c24
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: dab708bfbc33458bc2664c0d04757f0badcc2575
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73419382"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141596"
 ---
 # <a name="implicitly-typed-local-variables-c-programming-guide"></a>암시적 형식 지역 변수(C# 프로그래밍 가이드)
 
@@ -30,13 +30,13 @@ ms.locfileid: "73419382"
 - [for](../../language-reference/keywords/for.md) 초기화 문에서 사용
 
     ```csharp
-    for(var x = 1; x < 10; x++)
+    for (var x = 1; x < 10; x++)
     ```
 
 - [foreach](../../language-reference/keywords/foreach-in.md) 초기화 문에서 사용
 
     ```csharp
-    foreach(var item in list){...}
+    foreach (var item in list) {...}
     ```
 
 - [using](../../language-reference/keywords/using-statement.md) 문에서 사용
@@ -45,7 +45,7 @@ ms.locfileid: "73419382"
     using (var file = new StreamReader("C:\\myfile.txt")) {...}
     ```
 
-자세한 내용은 [방법: 쿼리 식에서 암시적 형식 지역 변수 및 배열 사용](how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md)을 참조하세요.
+자세한 내용은 [쿼리 식에서 암시적 형식 지역 변수 및 배열을 사용하는 방법](how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md)을 참조하세요.
 
 ## <a name="var-and-anonymous-types"></a>var 및 무명 형식
 
@@ -63,7 +63,7 @@ ms.locfileid: "73419382"
 
 - 클래스 범위의 필드에는 `var`을 사용할 수 없습니다.
 
-- `var`을 사용하여 선언된 변수는 초기화 식에 사용할 수 없습니다. 즉, `: int i = (i = 20);` 식은 유효하지만 `var i = (i = 20);` 식은 컴파일 시간 오류를 생성합니다.
+- `var`을 사용하여 선언된 변수는 초기화 식에 사용할 수 없습니다. 즉, 이 식(`int i = (i = 20);`)은 유효하지만, 이 식(`var i = (i = 20);`)은 컴파일 시간 오류를 생성합니다.
 
 - 동일한 문에서 여러 개의 암시적 형식 변수를 초기화할 수 없습니다.
 
@@ -95,7 +95,7 @@ private var bookTitles = new List<string>();
 
 - [C# 참조](../../language-reference/index.md)
 - [암시적으로 형식화된 배열](../arrays/implicitly-typed-arrays.md)
-- [방법: 쿼리 식에서 암시적 형식 지역 변수 및 배열 사용](how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md)
+- [쿼리 식에서 암시적으로 형식화된 지역 변수 및 배열 사용 방법](how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md)
 - [익명 형식](anonymous-types.md)
 - [개체 이니셜라이저 및 컬렉션 이니셜라이저](object-and-collection-initializers.md)
 - [var](../../language-reference/keywords/var.md)

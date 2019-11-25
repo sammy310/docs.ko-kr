@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - attached properties [WPF Designer]
 ms.assetid: 75928354-dc01-47e8-a018-8409aec1f32d
-ms.openlocfilehash: 403c4e76e302536513b9de0694ab7b0de621d5d2
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: f4e8ea9fb0643a4a434bf20fa719c3fd2d01435b
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73455527"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74089326"
 ---
 # <a name="attached-properties-overview"></a>연결된 속성 개요
 
@@ -60,7 +60,7 @@ WPF에서 연결 된 속성을 정의 하는 가장 일반적인 시나리오는
 
 ## 코드의 연결 된 속성<a name="attached_properties_code"></a>
 
-WPF의 연결 된 속성에는 간편한 get/set 액세스를 위한 일반적인 CLR "래퍼" 메서드가 없습니다. 이는 연결 된 속성이 속성이 설정 된 인스턴스의 CLR 네임 스페이스에 포함 될 필요가 없기 때문입니다. 그러나 XAML 프로세서는 XAML을 구문 분석할 때 이러한 값을 설정할 수 있어야 합니다. 효과적인 연결 된 속성 사용을 지원 하려면 연결 된 속성의 소유자 형식이 **Get_PropertyName_** 및 **Set_PropertyName_** 형식의 전용 접근자 메서드를 구현 해야 합니다. 이 전용 접근자 메서드는 코드로 연결된 속성을 가져오거나 설정하는 데도 유용합니다. 코드의 관점에서 연결된 속성은 속성 접근자 대신 메서드 접근자가 있는 지원 필드와 유사하며, 지원 필드는 구체적으로 정의될 필요 없이 모든 개체에 있을 수 있습니다.
+WPF의 연결 된 속성에는 간편한 get/set 액세스를 위한 일반적인 CLR "래퍼" 메서드가 없습니다. 이는 연결 된 속성이 속성이 설정 된 인스턴스의 CLR 네임 스페이스에 포함 될 필요가 없기 때문입니다. 그러나 XAML 프로세서는 XAML을 구문 분석할 때 이러한 값을 설정할 수 있어야 합니다. 효과적인 연결 된 속성 사용을 지원 하려면 연결 된 속성의 소유자 형식이 **Get_PropertyName_** 형식으로 전용 접근자 메서드를 구현 하 고 **Set_PropertyName_** 해야 합니다. 이 전용 접근자 메서드는 코드로 연결된 속성을 가져오거나 설정하는 데도 유용합니다. 코드의 관점에서 연결된 속성은 속성 접근자 대신 메서드 접근자가 있는 지원 필드와 유사하며, 지원 필드는 구체적으로 정의될 필요 없이 모든 개체에 있을 수 있습니다.
 
 다음 예제에서는 코드에서 연결된 속성을 설정하는 방법을 보여 줍니다. 이 예제에서 `myCheckBox`은 <xref:System.Windows.Controls.CheckBox> 클래스의 인스턴스입니다.
 
@@ -91,7 +91,7 @@ XAML 사례와 마찬가지로 `myCheckBox` 코드의 세 번째 줄에서 `myDo
 
 클래스가 다른 형식에서 사용 하기 위해 연결 된 속성을 엄격 하 게 정의 하는 경우 클래스는 <xref:System.Windows.DependencyObject>에서 파생 될 필요가 없습니다. 하지만 연결 된 속성이 종속성 속성인 경우에도 전체 WPF 모델을 따르는 경우 <xref:System.Windows.DependencyObject>에서 파생 해야 합니다.
 
-<xref:System.Windows.DependencyProperty>형식의 `public static readonly` 필드를 선언 하 여 연결 된 속성을 종속성 속성으로 정의 합니다. <xref:System.Windows.DependencyProperty.RegisterAttached%2A> 메서드의 반환 값을 사용 하 여이 필드를 정의 합니다. 필드 이름은 문자열 `Property`와 함께 추가 된 연결 된 속성 이름과 일치 해야 합니다. 표시 되는 속성 및 식별 하는 속성의 이름을 지정 하는 WPF 패턴을 따라야 합니다. 연결 된 속성 공급자는 또한 연결 된 속성에 대 한 접근자로 정적 **Get_PropertyName_** 및 **Set_PropertyName_** 메서드를 제공 해야 합니다. 이 작업을 수행 하지 못하면 속성 시스템이 연결 된 속성을 사용할 수 없게 됩니다.
+<xref:System.Windows.DependencyProperty>형식의 `public static readonly` 필드를 선언 하 여 연결 된 속성을 종속성 속성으로 정의 합니다. <xref:System.Windows.DependencyProperty.RegisterAttached%2A> 메서드의 반환 값을 사용 하 여이 필드를 정의 합니다. 필드 이름은 문자열 `Property`와 함께 추가 된 연결 된 속성 이름과 일치 해야 합니다. 표시 되는 속성 및 식별 하는 속성의 이름을 지정 하는 WPF 패턴을 따라야 합니다. 또한 연결 된 속성 공급자는 정적 **Get_PropertyName_** 및 **Set_PropertyName_** 메서드를 연결 된 속성의 접근자로 제공 해야 합니다. 이 작업을 수행 하지 못하면 속성 시스템이 연결 된 속성을 사용할 수 없게 됩니다.
 
 > [!NOTE]
 > 연결 된 속성의 get 접근자를 생략 하면 속성에 대 한 데이터 바인딩이 Visual Studio 및 Blend for Visual Studio와 같은 디자인 도구에서 작동 하지 않습니다.
@@ -116,14 +116,14 @@ XAML 사례와 마찬가지로 `myCheckBox` 코드의 세 번째 줄에서 `myDo
 
 - 구현에서 보다 구체적인 형식으로 `value` 개체를 지정할 수 있습니다. 예를 들어 <xref:System.Windows.Controls.DockPanel.SetDock%2A> 메서드는 값을 해당 열거형 으로만 설정할 수 있으므로이 값을 <xref:System.Windows.Controls.Dock>으로 입력 합니다. 태그의 연결된 속성 사용에서 연결된 속성에 있는 경우, 이 메서드의 값은 XAML 로더에서 오는 입력값임을 기억하십시오. 해당 입력값은 태그에는 XAML 특성 값으로 지정된 값입니다. 따라서 형식 변환, 값 직렬 변환기 또는 사용하는 형식에 대한 태그 확장 지원이 있어야, 적절한 형식이 특성 값(궁극적으로 문자열만)에서 생성될 수 있습니다.
 
-다음 예제에서는 **Get_PropertyName_** 및 **Set_PropertyName_** 접근자 뿐만 아니라 <xref:System.Windows.DependencyProperty.RegisterAttached%2A> 메서드를 사용 하 여 종속성 속성 등록을 보여 줍니다. 예제에서 연결된 속성 이름은 `IsBubbleSource`입니다. 따라서 접근자의 이름은 `GetIsBubbleSource` 및 `SetIsBubbleSource`입니다.
+다음 예제에서는 **Get_PropertyName_** 및 **Set_PropertyName_** 접근자 뿐만 아니라 <xref:System.Windows.DependencyProperty.RegisterAttached%2A> 메서드를 사용 하 여 종속성 속성을 등록 하는 방법을 보여 줍니다. 예제에서 연결된 속성 이름은 `IsBubbleSource`입니다. 따라서 접근자의 이름은 `GetIsBubbleSource` 및 `SetIsBubbleSource`입니다.
 
 [!code-csharp[WPFAquariumSln#RegisterAttachedBubbler](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#registerattachedbubbler)]
 [!code-vb[WPFAquariumSln#RegisterAttachedBubbler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#registerattachedbubbler)]
 
 #### <a name="attached-property-attributes"></a>연결된 속성 특성
 
-WPF는 리플렉션 프로세스에 연결 된 속성에 대 한 정보를 제공 하 고 리플렉션 및 디자이너와 같은 속성 정보에 대 한 일반적인 사용자에 게 제공 되는 여러 [!INCLUDE[TLA2#tla_netframewkattr#plural](../../../../includes/tla2sharptla-netframewkattrsharpplural-md.md)]를 정의 합니다. 연결된 속성에 제한이 없는 범위의 형식이 있기 때문에 디자이너는 XAML을 사용하는 특정 기술 구현에 정의된 모든 연결된 속성의 전역 목록을 사용하여 사용자의 과부하를 피할 수 있는 방법이 필요합니다. 연결 된 속성에 대해 WPF가 정의 하는 [!INCLUDE[TLA2#tla_netframewkattr#plural](../../../../includes/tla2sharptla-netframewkattrsharpplural-md.md)]을 사용 하 여 지정 된 연결 된 속성이 속성 창에 표시 되는 상황을 범위를 지정할 수 있습니다. 또한 사용자 고유의 사용자 지정 연결된 속성에 대한 이러한 특성을 적용하는 것이 좋습니다. [!INCLUDE[TLA2#tla_netframewkattr#plural](../../../../includes/tla2sharptla-netframewkattrsharpplural-md.md)]의 용도 및 구문은 해당 참조 페이지에 설명되어 있습니다.
+WPF는 리플렉션 프로세스에 연결 된 속성에 대 한 정보를 제공 하기 위한 여러 가지 .NET 특성과 디자이너와 같은 리플렉션 및 속성 정보에 대 한 일반적인 사용자를 정의 합니다. 연결된 속성에 제한이 없는 범위의 형식이 있기 때문에 디자이너는 XAML을 사용하는 특정 기술 구현에 정의된 모든 연결된 속성의 전역 목록을 사용하여 사용자의 과부하를 피할 수 있는 방법이 필요합니다. WPF에서 연결 된 속성에 대해 정의 하는 .NET 특성을 사용 하 여 지정 된 연결 된 속성이 속성 창에 표시 되는 상황을 범위를 지정할 수 있습니다. 또한 사용자 고유의 사용자 지정 연결된 속성에 대한 이러한 특성을 적용하는 것이 좋습니다. .NET 특성의 목적과 구문은 적절 한 참조 페이지에 설명 되어 있습니다.
 
 - <xref:System.Windows.AttachedPropertyBrowsableAttribute>
 

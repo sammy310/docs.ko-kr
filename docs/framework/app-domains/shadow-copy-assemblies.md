@@ -6,19 +6,19 @@ helpviewer_keywords:
 - application domains, shadow copying assemblies
 - shadow copying assemblies
 ms.assetid: de8b8759-fca7-4260-896b-5a4973157672
-ms.openlocfilehash: 40a1b5062d45b7b540af7058b82b77c664070d2e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9fc8a4aeeeca40f71ed9114a9db40b9a56e5fe6b
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119774"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204565"
 ---
 # <a name="shadow-copying-assemblies"></a>어셈블리 섀도 복사
 
 섀도 복사를 사용하면 애플리케이션 도메인을 언로드하지 않고 애플리케이션 도메인에서 사용되는 어셈블리를 업데이트할 수 있습니다. 특히 이 기능은 ASP.NET 사이트와 같이 지속적으로 제공되어야 하는 애플리케이션에 유용합니다.
 
 > [!IMPORTANT]
-> 섀도 복사는 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램에서 지원되지 않습니다.
+> Shadow copying is not supported in Windows 8.x Store apps.
 
 어셈블리가 로드될 때 공용 언어 런타임은 어셈블리 파일을 잠그므로 어셈블리가 언로드될 때까지 파일을 업데이트할 수 없습니다. 애플리케이션 도메인에서 어셈블리를 언로드하는 유일한 방법은 애플리케이션 도메인을 언로드하는 것이므로 일반적인 환경에서는 어셈블리를 사용 중인 모든 애플리케이션 도메인이 언로드될 때까지 디스크에서 어셈블리를 업데이트할 수 없습니다.
 

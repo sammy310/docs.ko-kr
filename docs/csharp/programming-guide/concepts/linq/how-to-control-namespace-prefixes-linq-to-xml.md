@@ -1,15 +1,15 @@
 ---
-title: '방법: 네임스페이스 접두사 제어(C#)(LINQ to XML)'
+title: 네임스페이스 접두사 제어 방법(C#)(LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 64de5186-b81a-4ddd-8327-8693df59a01b
-ms.openlocfilehash: 5b836be46001b660547532311b1b507ff234975f
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 9f43c0804d8c830fa75f1e1390cb578c5f5d5106
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710158"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141386"
 ---
-# <a name="how-to-control-namespace-prefixes-c-linq-to-xml"></a>방법: 네임스페이스 접두사 제어(C#)(LINQ to XML)
+# <a name="how-to-control-namespace-prefixes-c-linq-to-xml"></a>네임스페이스 접두사 제어 방법(C#)(LINQ to XML)
 이 항목에서는 XML 트리를 serialize할 때 네임스페이스 접두사를 제어하는 방법에 대해 설명합니다.  
   
  대부분의 경우에는 네임스페이스 접두사를 제어할 필요가 없습니다.  

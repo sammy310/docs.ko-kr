@@ -1,15 +1,15 @@
 ---
-title: '방법: CSV 텍스트 파일의 열 값 컴퓨팅(LINQ)(C#)'
+title: CSV 텍스트 파일의 열 값을 컴퓨팅하는 방법(LINQ)(C#)
 ms.date: 07/20/2015
 ms.assetid: 4747f37a-a198-4df2-8efe-5b0731e0ea27
-ms.openlocfilehash: 08b4f936532b3ba3744ec31dc691b166e7ba7109
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: a48850e8f6229b80ebd9207bb1b7353f8b0c9e02
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594013"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141364"
 ---
-# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-c"></a>방법: CSV 텍스트 파일의 열 값 컴퓨팅(LINQ)(C#)
+# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-c"></a>CSV 텍스트 파일의 열 값을 컴퓨팅하는 방법(LINQ)(C#)
 이 예제에서는 .csv 파일의 열에 대해 Sum, Average, Min 및 Max 등의 집계 계산을 수행하는 방법을 보여 줍니다. 여기 표시된 예제 원칙은 다른 형식의 구조화된 텍스트에 적용할 수 있습니다.  
   
 ## <a name="to-create-the-source-file"></a>소스 파일을 만들려면  

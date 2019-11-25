@@ -1,14 +1,14 @@
 ---
-title: $ (Visual Basic 참조)
+title: $
 ms.date: 10/31/2017
-ms.openlocfilehash: f9de6f0d8289b4f37ced347eda0683a4db331369
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 007f64e3bee9ba7fa310d500eb8938d7e1633d58
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423656"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349595"
 ---
-# <a name="-visual-basic-reference"></a>$ (Visual Basic 참조)
+# <a name="-visual-basic-reference"></a>$ (Visual Basic Reference)
 
 문자열 리터럴을 [보간된 문자열](../../programming-guide/language-features/strings/interpolated-strings.md)로 식별합니다. 보간된 문자열은 *보간된 식*과 함께 리터럴 텍스트를 포함하는 템플릿과 유사한 문자열입니다. 예를 들어 대입문이나 메서드 호출에서 보간된 문자열이 확인되면 보간된 식이 결과 문자열의 해당 문자열 표현으로 바뀝니다. 보간된 문자열은 .NET Framework에서 지원되는 [복합 형식 문자열](../../../standard/base-types/composite-formatting.md)을 대체합니다.
 
@@ -21,4 +21,4 @@ ms.locfileid: "73423656"
 ## <a name="see-also"></a>참조
 
 - [Visual Basic 참조](../index.md)
-- [특수 문자 Visual Basic](index.md)
+- [Visual Basic Special Characters](index.md)

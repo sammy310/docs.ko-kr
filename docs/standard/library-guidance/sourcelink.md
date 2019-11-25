@@ -4,12 +4,12 @@ description: 소스 링크를 사용하여 .NET 라이브러리의 디버깅을 
 author: jamesnk
 ms.author: mairaw
 ms.date: 01/15/2019
-ms.openlocfilehash: 7530c984ce4bbe9e40362bd550bec57ac585a550
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 89f9e3b1fd70003c528465f29a143b157468d539
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928980"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74089292"
 ---
 # <a name="source-link"></a>소스 링크
 

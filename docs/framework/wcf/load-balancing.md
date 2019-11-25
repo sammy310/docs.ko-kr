@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - load balancing [WCF]
 ms.assetid: 148e0168-c08d-4886-8769-776d0953b80f
-ms.openlocfilehash: 572537826074dd51b56f1cae9edb767708bc1c3d
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: c9a1e889ab5adcb8f0eb5ea851c81a4f9ee56e95
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321028"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74138549"
 ---
 # <a name="load-balancing"></a>부하 분산
 WCF (Windows Communication Foundation) 응용 프로그램의 용량을 높이는 한 가지 방법은 부하 분산 된 서버 팜에 배포 하 여 확장 하는 것입니다. WCF 응용 프로그램은 Windows 네트워크 부하 분산과 같은 소프트웨어 부하 분산 장치 및 하드웨어 기반 부하 분산 어플라이언스를 비롯 한 표준 부하 분산 기술을 사용 하 여 부하를 분산할 수 있습니다.  
@@ -56,7 +56,7 @@ WCF (Windows Communication Foundation) 응용 프로그램의 용량을 높이�
 </configuration>  
 ```  
   
- [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]에 도입된 다음과 같은 단순화된 구성을 사용하면 동일한 동작을 수행할 수 있습니다.  
+ .NET Framework 4에서 도입 된 단순화 된 구성을 사용 하 여 다음과 같은 간소화 된 구성을 사용 하 여 동일한 동작을 수행할 수 있습니다.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  

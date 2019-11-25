@@ -1,15 +1,15 @@
 ---
-title: '방법: 특정 요소 이름으로 하위 항목 찾기(C#)'
+title: 특정 요소 이름으로 하위 항목을 찾는 방법(C#)
 ms.date: 07/20/2015
 ms.assetid: f684da20-bee9-47f5-9607-7e3fd7e67470
-ms.openlocfilehash: 8c859c555109a6f68a6b4290c536b10114620f3d
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: b3200a2fdf75dbf52079a2b3d27aa1a88d313406
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253693"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141085"
 ---
-# <a name="how-to-find-descendants-with-a-specific-element-name-c"></a>방법: 특정 요소 이름으로 하위 항목 찾기(C#)
+# <a name="how-to-find-descendants-with-a-specific-element-name-c"></a>특정 요소 이름으로 하위 항목을 찾는 방법(C#)
 특정 이름을 가진 모든 하위 요소를 찾으려는 경우가 있습니다. 모든 하위 요소를 반복하는 코드를 작성할 수 있지만 <xref:System.Xml.Linq.XContainer.Descendants%2A> 축을 사용하는 것이 더 쉽습니다.  
   
 ## <a name="example"></a>예  

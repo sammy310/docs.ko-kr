@@ -2,18 +2,18 @@
 title: '방법: HTTPS를 사용하여 신뢰할 수 있는 사용자 지정 세션 바인딩 만들기'
 ms.date: 03/30/2017
 ms.assetid: fa772232-da1f-4c66-8c94-e36c0584b549
-ms.openlocfilehash: 7f22eeaae39b4d9a83c77c7f3e9db1d7d3f04e8e
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 26466a97ae44e6852c189d0b72bdba1b93d86141
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895192"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141728"
 ---
 # <a name="how-to-create-a-custom-reliable-session-binding-with-https"></a>방법: HTTPS를 사용하여 신뢰할 수 있는 사용자 지정 세션 바인딩 만들기
 
 이 항목에서는 신뢰할 수 있는 세션에 SSL(Secure Sockets Layer) 전송 보안을 사용하는 방법을 보여 줍니다. HTTPS를 통해 신뢰할 수 있는 세션을 사용하려면 신뢰할 수 있는 세션 및 HTTPS 전송을 사용하는 사용자 지정 바인딩을 만들어야 합니다. 코드를 사용 하 여 명령적으로 또는 구성 파일에서 선언적으로 신뢰할 수 있는 세션을 사용 하도록 설정 합니다. 이 절차에서는 클라이언트 및 서비스 구성 파일을 사용 하 여 신뢰할 수 있는 세션과 [ **\<httpsTransport >** ](../../../../docs/framework/configure-apps/file-schema/wcf/httpstransport.md) 요소를 사용 하도록 설정 합니다.
 
-이 절차의 핵심 부분은  **\<끝점 >** `bindingConfiguration` 구성 요소에 라는 `reliableSessionOverHttps`사용자 지정 바인딩 구성을 참조 하는 특성이 포함 되어 있다는 것입니다. [ **\<바인딩 >** ](../../../../docs/framework/misc/binding.md) 구성 요소는이 이름을 참조 하 여  **\<reliableSession >** 및 **\<httpsTransport를 포함 하 여 신뢰할 수 있는 세션 및 HTTPS 전송을 사용 하도록 지정 >** 요소.
+이 절차의 핵심 부분은 **\<끝점 >** 구성 요소에 `reliableSessionOverHttps`이라는 사용자 지정 바인딩 구성을 참조 하는 `bindingConfiguration` 특성이 포함 되어 있다는 것입니다. [ **\<binding >** ](../../configure-apps/file-schema/wcf/bindings.md) 구성 요소는 **\<reliableSession >** 및 **\<httpsTransport >** 요소를 포함 하 여 신뢰할 수 있는 세션 및 HTTPS 전송을 사용 하도록 지정 하기 위해이 이름을 참조 합니다.
 
 이 예제의 소스 복사에 대해서는 HTTPS를 [통한 사용자 지정 바인딩 신뢰할 수 있는 세션](../../../../docs/framework/wcf/samples/custom-binding-reliable-session-over-https.md)을 참조 하세요.
 
@@ -27,7 +27,7 @@ ms.locfileid: "70895192"
 
    [!code-csharp[c_HowTo_CreateReliableSessionHTTPS#1122](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_createreliablesessionhttps/cs/service.cs#1122)]
 
-1. 신뢰할 수 있는 세션 및 HTTPS 전송을 사용 하는 라는 `reliableSessionOverHttps` 사용자 `CalculatorService` 지정 바인딩을 사용 하 여에 대 한 끝점을 구성 하는 *web.config* 파일을 만듭니다.
+1. 신뢰할 수 있는 세션 및 HTTPS 전송을 사용 하는 `reliableSessionOverHttps` 이라는 사용자 지정 바인딩을 사용 하 여 `CalculatorService`에 대 한 끝점을 구성 *하는 web.config 파일을* 만듭니다.
 
    [!code-xml[c_HowTo_CreateReliableSessionHTTPS#2111](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_createreliablesessionhttps/common/web.config#2111)]
 
@@ -45,7 +45,7 @@ ms.locfileid: "70895192"
    Svcutil.exe <Metadata Exchange (MEX) address or HTTP GET address>
    ```
 
-1. 생성 된 클라이언트에는 클라이언트 구현 `ICalculator` 에서 충족 해야 하는 서비스 계약을 정의 하는 인터페이스가 포함 되어 있습니다.
+1. 생성 된 클라이언트에는 클라이언트 구현에서 충족 해야 하는 서비스 계약을 정의 하는 `ICalculator` 인터페이스가 포함 되어 있습니다.
 
    [!code-csharp[C_HowTo_CreateReliableSessionHTTPS#1221](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_createreliablesessionhttps/cs/client.cs#1221)]
 
@@ -53,7 +53,7 @@ ms.locfileid: "70895192"
 
    [!code-csharp[C_HowTo_CreateReliableSessionHTTPS#1222](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_createreliablesessionhttps/cs/client.cs#1222)]
 
-1. HTTPS 전송 및 신뢰할 수 `reliableSessionOverHttps` 있는 세션을 사용 하도록 라는 사용자 지정 바인딩을 구성 합니다.
+1. HTTPS 전송 및 신뢰할 수 있는 세션을 사용 하도록 `reliableSessionOverHttps` 이라는 사용자 지정 바인딩을 구성 합니다.
 
    [!code-xml[C_HowTo_CreateReliableSessionHTTPS#2211](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_createreliablesessionhttps/common/app.config#2211)]
 
@@ -65,8 +65,8 @@ ms.locfileid: "70895192"
 
 ## <a name="net-framework-security"></a>.NET Framework 보안
 
-이 샘플에 사용 된 인증서는 *makecert.exe*를 사용 하 여 만든 테스트 인증서 이므로 브라우저에서와 `https://localhost/servicemodelsamples/service.svc`같은 HTTPS 주소에 액세스 하려고 하면 보안 경고가 나타납니다.
+이 샘플에 사용 된 인증서는 Makecert.exe를 사용 하 여 만든 테스트 인증서 이므로 브라우저에서 `https://localhost/servicemodelsamples/service.svc`와 같은 HTTPS 주소에 액세스 하려고 하면 보안 경고가 나타납니다 *.*
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [신뢰할 수 있는 세션](../../../../docs/framework/wcf/feature-details/reliable-sessions.md)

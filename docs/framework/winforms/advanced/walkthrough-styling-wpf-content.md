@@ -9,12 +9,12 @@ ms.assetid: e574aac7-7ea4-4cdb-8034-bab541f000df
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 581fcbfdfd7806b8f0f70347ac96f1bf09fa9098
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: d0aa2c54f05cea658c95dc2c23b7ba4bb78835c9
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460942"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74138920"
 ---
 # <a name="walkthrough-style-wpf-content"></a>연습: WPF 콘텐츠 스타일
 
@@ -61,7 +61,7 @@ WPF 컨트롤에 다른 스타일을 적용하여 모양과 동작을 변경할 
 
    `UserControl1` WPF 디자이너에서 열립니다.
 
-1. XAML 뷰에서 `<UserControl>` 여는 태그 뒤에 다음 XAML을 삽입합니다. 이 XAML은 대비되는 그라데이션 테두리가 있는 그라데이션을 만듭니다. 컨트롤을 클릭하면 그라데이션이 변경되어 눌린 단추 모양을 생성합니다. 자세한 내용은 [스타일 지정 및 템플릿](../../wpf/controls/styling-and-templating.md)을 참조하세요.
+1. XAML 뷰에서 `<UserControl>` 여는 태그 뒤에 다음 XAML을 삽입합니다. 이 XAML은 대비되는 그라데이션 테두리가 있는 그라데이션을 만듭니다. 컨트롤을 클릭하면 그라데이션이 변경되어 눌린 단추 모양을 생성합니다. 자세한 내용은 [스타일 지정 및 템플릿](../../../desktop-wpf/fundamentals/styles-templates-overview.md)을 참조하세요.
 
    ```xaml
    <UserControl.Resources>
@@ -142,4 +142,4 @@ WPF 컨트롤에 다른 스타일을 적용하여 모양과 동작을 변경할 
 - [WPF 컨트롤 사용](using-wpf-controls.md)
 - [Visual Studio에서 XAML 디자인](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)
 - [XAML 개요(WPF)](../../wpf/advanced/xaml-overview-wpf.md)
-- [스타일 지정 및 템플릿](../../wpf/controls/styling-and-templating.md)
+- [스타일 지정 및 템플릿](../../../desktop-wpf/fundamentals/styles-templates-overview.md)

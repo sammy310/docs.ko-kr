@@ -2,12 +2,12 @@
 title: '서비스: Security Validation and Authentication Failures'
 ms.date: 03/30/2017
 ms.assetid: 55c98268-b1ad-459d-851b-25ef52248187
-ms.openlocfilehash: 5843d25eb26bdd9facc324a2af50c6b02c5ad7c8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 399249926bcb1383fd33f60510c2c212c6f4261c
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613597"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204576"
 ---
 # <a name="service-security-validation-and-authentication-failures"></a>서비스: Security Validation and Authentication Failures
 카운터 이름: Security Validation and Authentication Failures  

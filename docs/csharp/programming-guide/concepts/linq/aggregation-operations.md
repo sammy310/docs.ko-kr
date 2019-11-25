@@ -2,12 +2,12 @@
 title: 집계 작업(C#)
 ms.date: 07/20/2015
 ms.assetid: 6fc035e5-7639-48b8-bc7f-b093dd31b039
-ms.openlocfilehash: 04415c430059057cef26b3750faa03b925cfa994
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: aebefcad8a741a97a51e73bfade9d4a16d343100
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594976"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141538"
 ---
 # <a name="aggregation-operations-c"></a>집계 작업(C#)
 집계 작업에서는 값의 컬렉션에서 하나의 값을 계산합니다. 예를 들어 1달 동안의 일일 온도 값에서 평균 일일 온도를 계산하는 것이 집계 작업입니다.  
@@ -34,6 +34,6 @@ ms.locfileid: "69594976"
 
 - <xref:System.Linq>
 - [표준 쿼리 연산자 개요(C#)](./standard-query-operators-overview.md)
-- [방법: CSV 텍스트 파일의 열 값 컴퓨팅(LINQ)(C#)](./how-to-compute-column-values-in-a-csv-text-file-linq.md)
+- [CSV 텍스트 파일의 열 값을 컴퓨팅하는 방법(LINQ)(C#)](./how-to-compute-column-values-in-a-csv-text-file-linq.md)
 - [방법: 디렉터리 트리에서 가장 큰 파일을 하나 이상 쿼리(LINQ)(C#)](./how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq.md)
 - [방법: 폴더 집합의 전체 바이트 수 쿼리(LINQ)(C#)](./how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq.md)

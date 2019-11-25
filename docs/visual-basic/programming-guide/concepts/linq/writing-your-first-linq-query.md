@@ -1,38 +1,38 @@
 ---
-title: LINQ 쿼리 처음 작성(Visual Basic)
+title: LINQ 쿼리 처음 작성
 ms.date: 07/20/2015
 helpviewer_keywords:
 - queries [LINQ in Visual Basic], writing
 - LINQ queries [Visual Basic]
 - LINQ [Visual Basic], writing queries
 ms.assetid: 4affb732-3e9b-4479-aa31-1f9bd8183cbe
-ms.openlocfilehash: 5c83d888f65ce5c216327e94c5d4d1267fb93c29
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a9fe4241972815a04ec9c6a51a45760d72a8bbb2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952006"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349342"
 ---
 # <a name="writing-your-first-linq-query-visual-basic"></a>LINQ 쿼리 처음 작성(Visual Basic)
-*쿼리*는 데이터 소스에서 데이터를 검색하는 식입니다. 쿼리는 전용 쿼리 언어로 표현 됩니다. 시간이 지남에 따라 다양 한 유형의 데이터 원본에 대해 다양 한 언어 (예: 관계형 데이터베이스의 경우 SQL, XML 용 XQuery)가 개발 되었습니다. 이를 통해 응용 프로그램 개발자는 지원 되는 데이터 원본 또는 데이터 형식에 따라 새로운 쿼리 언어를 배워야 합니다.  
+*쿼리*는 데이터 소스에서 데이터를 검색하는 식입니다. Queries are expressed in a dedicated query language. Over time, different languages have been developed for different types of data sources, for example, SQL for relational databases and XQuery for XML. This makes it necessary for the application developer to learn a new query language for each type of data source or data format that is supported.  
   
- [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]에서는 다양 한 종류의 데이터 원본 및 형식에서 데이터를 사용 하기 위한 일관 된 모델을 제공 하 여 상황을 단순화 합니다. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리에서는 항상 개체를 사용하고 있습니다. 동일한 기본 코딩 패턴을 사용 하 여 XML 문서, SQL 데이터베이스, ADO.NET 데이터 집합 및 엔터티, .NET Framework 컬렉션 및 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 공급자를 사용할 수 있는 다른 모든 원본 또는 형식에서 데이터를 쿼리하고 변환 합니다. 이 문서에서는 기본 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리를 만들고 사용 하는 세 단계에 대해 설명 합니다.  
+ [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] simplifies the situation by offering a consistent model for working with data across various kinds of data sources and formats. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리에서는 항상 개체를 사용하고 있습니다. You use the same basic coding patterns to query and transform data in XML documents, SQL databases, ADO.NET datasets and entities, .NET Framework collections, and any other source or format for which a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] provider is available. This document describes the three phases of the creation and use of basic [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] queries.  
   
-## <a name="three-stages-of-a-query-operation"></a>쿼리 작업의 세 단계  
- [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]쿼리 작업은 다음과 같은 세 가지 작업으로 구성 됩니다.  
+## <a name="three-stages-of-a-query-operation"></a>Three Stages of a Query Operation  
+ [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query operations consist of three actions:  
   
-1. 데이터 소스를 가져옵니다.  
+1. Obtain the data source or sources.  
   
 2. 쿼리 만들기.  
   
 3. 쿼리 실행.  
   
- 에서 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]쿼리 실행은 쿼리를 만드는 것과는 다릅니다. 쿼리를 만들어 데이터를 검색 하지 않습니다. 이 내용에 대해서는 이 항목의 뒷부분에서 자세히 설명합니다.  
+ In [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], the execution of a query is distinct from the creation of the query. You do not retrieve any data just by creating a query. 이 내용에 대해서는 이 항목의 뒷부분에서 자세히 설명합니다.  
   
- 다음 예에서는 쿼리 작업의 세 부분을 보여 줍니다. 예제에서는 데모를 위해 정수 배열을 편리한 데이터 소스로 사용 합니다. 그러나 다른 데이터 소스에도 동일한 개념이 적용 됩니다.  
+ The following example illustrates the three parts of a query operation. The example uses an array of integers as a convenient data source for demonstration purposes. However, the same concepts also apply to other data sources.  
   
 > [!NOTE]
-> [컴파일 페이지, 프로젝트 디자이너 (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)에서 **옵션 유추** 가 **On**으로 설정 되어 있는지 확인 합니다.  
+> On the [Compile Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic), ensure that **Option infer** is set to **On**.  
   
  [!code-vb[VbLINQFirstQuery#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#1)]  
   
@@ -41,15 +41,15 @@ ms.locfileid: "69952006"
  `0 2 4 6`  
   
 ## <a name="the-data-source"></a>데이터 소스  
- 이전 예제의 데이터 소스는 배열 이기 때문에 제네릭 <xref:System.Collections.Generic.IEnumerable%601> 인터페이스를 암시적으로 지원 합니다. 이 사실은 배열을 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리의 데이터 원본으로 사용할 수 있도록 하는 것입니다. <xref:System.Collections.Generic.IEnumerable%601> 또는 제네릭 <xref:System.Linq.IQueryable%601> 같은 파생된 인터페이스를 지원하는 형식을 *쿼리 가능 형식*이라고 합니다.  
+ Because the data source in the previous example is an array, it implicitly supports the generic <xref:System.Collections.Generic.IEnumerable%601> interface. It is this fact that enables you to use an array as a data source for a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query. <xref:System.Collections.Generic.IEnumerable%601> 또는 제네릭 <xref:System.Linq.IQueryable%601> 같은 파생된 인터페이스를 지원하는 형식을 *쿼리 가능 형식*이라고 합니다.  
   
- 암시적으로 쿼리 가능한 형식으로 배열에는 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 데이터 원본으로 사용할 수정 또는 특별 한 처리가 필요 하지 않습니다. .NET Framework 클래스 라이브러리의 제네릭 <xref:System.Collections.Generic.IEnumerable%601> <xref:System.Collections.Generic.List%601>, <xref:System.Collections.Generic.Dictionary%602>및 기타 클래스를 포함 하 여를 지 원하는 모든 컬렉션 형식의 경우에도 마찬가지입니다.  
+ As an implicitly queryable type, the array requires no modification or special treatment to serve as a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] data source. The same is true for any collection type that supports <xref:System.Collections.Generic.IEnumerable%601>, including the generic <xref:System.Collections.Generic.List%601>, <xref:System.Collections.Generic.Dictionary%602>, and other classes in the .NET Framework class library.  
   
- 원본 데이터가 아직 구현 <xref:System.Collections.Generic.IEnumerable%601>되지 않은 경우 공급자는 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 해당 데이터 원본에 대 한 *표준 쿼리 연산자* 의 기능을 구현 해야 합니다. 예 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 를 들어은 다음 예제와 같이 쿼리 <xref:System.Xml.Linq.XElement> 가능한 형식으로 XML 문서를 로드 하는 작업을 처리 합니다. 표준 쿼리 연산자에 대 한 자세한 내용은 [표준 쿼리 연산자 개요 (Visual Basic)](standard-query-operators-overview.md)를 참조 하세요.  
+ If the source data does not already implement <xref:System.Collections.Generic.IEnumerable%601>, a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] provider is needed to implement the functionality of the *standard query operators* for that data source. For example, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] handles the work of loading an XML document into a queryable <xref:System.Xml.Linq.XElement> type, as shown in the following example. For more information about standard query operators, see [Standard Query Operators Overview (Visual Basic)](standard-query-operators-overview.md).  
   
  [!code-vb[VbLINQFirstQuery#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#2)]  
   
- 를 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]사용 하면 디자인 타임에 수동으로 또는 visual studio의 [visual studio에서 LINQ to SQL 도구](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2) 를 사용 하 여 개체 관계형 매핑을 만들 수 있습니다. 개체에 대해 쿼리를 작성하면 런타임에 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]에서 데이터베이스와의 통신을 처리합니다. 다음 예에서는가 `customers` 데이터베이스 <xref:System.Data.Linq.Table%601> 의 특정 테이블을 나타내며 제네릭을 <xref:System.Linq.IQueryable%601>지원 합니다.  
+ With [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], you first create an object-relational mapping at design time, either manually or by using the [LINQ to SQL Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2) in Visual Studio. 개체에 대해 쿼리를 작성하면 런타임에 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]에서 데이터베이스와의 통신을 처리합니다. In the following example, `customers` represents a specific table in the database, and <xref:System.Data.Linq.Table%601> supports generic <xref:System.Linq.IQueryable%601>.  
   
 ```vb  
 ' Create a data source from a SQL table.  
@@ -57,33 +57,33 @@ Dim db As New DataContext("C:\Northwind\Northwnd.mdf")
 Dim customers As Table(Of Customer) = db.GetTable(Of Customer)  
 ```  
   
- 특정 형식의 데이터 소스를 만드는 방법에 대한 자세한 내용은 다양한 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 공급자에 대한 설명서를 참조하세요. 이러한 공급자 목록은 [LINQ (통합 언어 쿼리)](../../../../visual-basic/programming-guide/concepts/linq/index.md)를 참조 하세요. 기본 규칙은 단순 합니다. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 즉, 데이터 소스는 제네릭 <xref:System.Collections.Generic.IEnumerable%601> 인터페이스 또는이 인터페이스에서 상속 된 인터페이스를 지 원하는 개체입니다.  
+ 특정 형식의 데이터 소스를 만드는 방법에 대한 자세한 내용은 다양한 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 공급자에 대한 설명서를 참조하세요. (For a list of these providers, see [LINQ (Language-Integrated Query)](../../../../visual-basic/programming-guide/concepts/linq/index.md).) The basic rule is simple: a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] data source is any object that supports the generic <xref:System.Collections.Generic.IEnumerable%601> interface, or an interface that inherits from it.  
   
 > [!NOTE]
-> 제네릭이 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] <xref:System.Collections.ArrayList> 아닌인터페이스를지원하는등의형식을데이터소스로사용할수도있습니다.<xref:System.Collections.IEnumerable> 을 사용 <xref:System.Collections.ArrayList>하는 예제를 보려면 [방법: LINQ (Visual Basic)](how-to-query-an-arraylist-with-linq.md)를 사용 하 여 ArrayList를 쿼리 합니다.  
+> Types such as <xref:System.Collections.ArrayList> that support the non-generic <xref:System.Collections.IEnumerable> interface can also be used as [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] data sources. For an example that uses an <xref:System.Collections.ArrayList>, see [How to: Query an ArrayList with LINQ (Visual Basic)](how-to-query-an-arraylist-with-linq.md).  
   
-## <a name="the-query"></a>쿼리  
- 쿼리에서 데이터 원본에서 검색 하려는 정보를 지정 합니다. 또한 정보를 반환 하기 전에 정보를 정렬 하거나 그룹화 하거나 구조화 하는 방법을 지정할 수 있습니다. 쿼리 생성을 사용 하도록 설정 하기 위해 Visual Basic 새 쿼리 구문을 언어로 통합 했습니다.  
+## <a name="the-query"></a>The Query  
+ In the query, you specify what information you want to retrieve from the data source or sources. You also have the option of specifying how that information should be sorted, grouped, or structured before it is returned. To enable query creation, Visual Basic has incorporated new query syntax into the language.  
   
- 실행 될 때 다음 예제의 쿼리는 정수 배열에서 모든 짝수를 `numbers`반환 합니다.  
+ When it is executed, the query in the following example returns all the even numbers from an integer array, `numbers`.  
   
  [!code-vb[VbLINQFirstQuery#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#1)]  
   
- 쿼리 식에는 `From`, 및 `Select`라는 세 `Where`개의 절이 포함 되어 있습니다. 각 쿼리 식 절의 특정 함수 및 용도는 [기본 쿼리 작업 (Visual Basic)](basic-query-operations.md)에서 설명 합니다. 자세한 내용은 [쿼리](../../../../visual-basic/language-reference/queries/index.md)를 참조 하세요. 에서 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]쿼리 정의는 종종 변수에 저장 되 고 나중에 실행 됩니다. 이전 예제와 `evensQuery` 같은 쿼리 변수는 쿼리 가능한 형식 이어야 합니다. `evensQuery` 의`IEnumerable(Of Integer)`형식은 로컬 형식 유추를 사용 하 여 컴파일러에서 할당 된입니다.  
+ The query expression contains three clauses: `From`, `Where`, and `Select`. The specific function and purpose of each query expression clause is discussed in [Basic Query Operations (Visual Basic)](basic-query-operations.md). For more information, see [Queries](../../../../visual-basic/language-reference/queries/index.md). Note that in [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], a query definition often is stored in a variable and executed later. The query variable, such as `evensQuery` in the previous example, must be a queryable type. The type of `evensQuery` is `IEnumerable(Of Integer)`, assigned by the compiler using local type inference.  
   
- 쿼리 변수 자체는 아무 작업도 수행 하지 않으며 데이터를 반환 하지 않는다는 점을 기억해 야 합니다. 쿼리 정의만 저장 합니다. 이전 예제 `For Each` 에서는 쿼리를 실행 하는 루프입니다.  
+ It is important to remember that the query variable itself takes no action and returns no data. It only stores the query definition. In the previous example, it is the `For Each` loop that executes the query.  
   
 ## <a name="query-execution"></a>쿼리 실행  
- 쿼리 실행은 쿼리 생성과는 별개입니다. 쿼리를 만들 때 쿼리를 정의 하지만 실행은 다른 메커니즘에 의해 트리거됩니다. 쿼리를 정의 하는 즉시 실행 하거나 (*즉시 실행*) 정의를 저장 하 고 나중에 쿼리를 실행할 수 있습니다 (*지연 된 실행*).  
+ Query execution is separate from query creation. Query creation defines the query, but execution is triggered by a different mechanism. A query can be executed as soon as it is defined (*immediate execution*), or the definition can be stored and the query can be executed later (*deferred execution*).  
   
 ### <a name="deferred-execution"></a>지연된 실행  
- 일반적인 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리는 `evensQuery` 가 정의 된 이전 예제와 유사 합니다. 쿼리를 만들지만 즉시 실행 하지는 않습니다. 대신 쿼리 정의는 쿼리 변수에 `evensQuery`저장 됩니다. 나중에 쿼리를 실행 합니다. 일반적으로는 `For Each` 루프를 사용 하 여 값의 시퀀스를 반환 하거나 또는 `Max`와 `Count` 같은 표준 쿼리 연산자를 적용 하 여 쿼리를 실행 합니다. 이 프로세스를 *지연 된 실행*이라고 합니다.  
+ A typical [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query resembles the one in the previous example, in which `evensQuery` is defined. It creates the query but does not execute it immediately. Instead, the query definition is stored in the query variable `evensQuery`. You execute the query later, typically by using a `For Each` loop, which returns a sequence of values, or by applying a standard query operator, such as `Count` or `Max`. This process is referred to as *deferred execution*.  
   
  [!code-vb[VbLINQFirstQuery#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#7)]  
   
- 값 시퀀스의 경우 `For Each` 루프의 반복 변수 (`number` 이전 예제에서는)를 사용 하 여 검색 된 데이터에 액세스 합니다. 쿼리 변수 `evensQuery`는 쿼리 결과가 아닌 쿼리 정의를 포함 하기 때문에 쿼리 변수를 두 번 이상 사용 하 여 쿼리 변수를 원하는 만큼 자주 실행할 수 있습니다. 예를 들어 응용 프로그램에 별도의 응용 프로그램에서 지속적으로 업데이트 되는 데이터베이스가 있을 수 있습니다. 해당 데이터베이스에서 데이터를 검색 하는 쿼리를 만든 후 `For Each` 루프를 사용 하 여 쿼리를 반복적으로 실행 하 여 매번 최신 데이터를 검색할 수 있습니다.  
+ For a sequence of values, you access the retrieved data by using the iteration variable in the `For Each` loop (`number` in the previous example). Because the query variable, `evensQuery`, holds the query definition rather than the query results, you can execute a query as often as you want by using the query variable more than one time. For example, you might have a database in your application that is being updated continually by a separate application. After you have created a query that retrieves data from that database, you can use a `For Each` loop to execute the query repeatedly, retrieving the most recent data every time.  
   
- 다음 예에서는 지연 된 실행이 작동 하는 방법을 보여 줍니다. 이전 `evensQuery2` 예제와 같이가 정의 되 `For Each` 고 루프를 사용 하 여 실행 된 후에는 데이터 원본의 `numbers` 일부 요소가 변경 됩니다. 그런 다음 두 `For Each` 번째 루프가 `evensQuery2` 다시 실행 됩니다. 루프는 `For Each` 의 `numbers`새 값을 사용 하 여 쿼리를 다시 실행 하기 때문에 결과는 두 번째 시간 마다 다릅니다.  
+ The following example demonstrates how deferred execution works. After `evensQuery2` is defined and executed with a `For Each` loop, as in the previous examples, some elements in the data source `numbers` are changed. Then a second `For Each` loop runs `evensQuery2` again. The results are different the second time, because the `For Each` loop executes the query again, using the new values in `numbers`.  
   
  [!code-vb[VbLINQFirstQuery#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#3)]  
   
@@ -98,27 +98,27 @@ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)
  `0  10  2  22  8`  
   
 ### <a name="immediate-execution"></a>즉시 실행  
- 쿼리의 지연 된 실행에서 쿼리 정의는 나중에 실행 하기 위해 쿼리 변수에 저장 됩니다. 즉시 실행 시 쿼리는 정의 시 실행 됩니다. 쿼리 결과의 개별 요소에 액세스 해야 하는 메서드를 적용 하는 경우 실행이 트리거됩니다. 즉시 실행은 단일 값을 반환 하는 표준 쿼리 연산자 중 하나를 사용 하 여 강제로 적용 됩니다. `Count`예 를들면`Max`, ,및`First`입니다. `Average` 이러한 표준 쿼리 연산자는 단일 결과를 계산 하 고 반환 하기 위해 적용 되는 즉시 쿼리를 실행 합니다. 단일 값을 반환 하는 표준 쿼리 연산자에 대 한 자세한 내용은 [집계 작업](aggregation-operations.md), [요소 작업](element-operations.md)및 [수량자 작업](quantifier-operations.md)을 참조 하세요.  
+ In deferred execution of queries, the query definition is stored in a query variable for later execution. In immediate execution, the query is executed at the time of its definition. Execution is triggered when you apply a method that requires access to individual elements of the query result. Immediate execution often is forced by using one of the standard query operators that return single values. Examples are `Count`, `Max`, `Average`, and `First`. These standard query operators execute the query as soon as they are applied in order to calculate and return a singleton result. For more information about standard query operators that return single values, see [Aggregation Operations](aggregation-operations.md), [Element Operations](element-operations.md), and [Quantifier Operations](quantifier-operations.md).  
   
- 다음 쿼리는 정수 배열에서 짝수의 수를 반환 합니다. 쿼리 정의는 저장 `numEvens` 되지 않으며 단순 `Integer`합니다.  
+ The following query returns a count of the even numbers in an array of integers. The query definition is not saved, and `numEvens` is a simple `Integer`.  
   
  [!code-vb[VbLINQFirstQuery#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#4)]  
   
- 메서드를 `Aggregate` 사용 하 여 동일한 결과를 얻을 수 있습니다.  
+ You can achieve the same result by using the `Aggregate` method.  
   
  [!code-vb[VbLINQFirstQuery#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#5)]  
   
- 다음 코드에 표시 된 것 처럼 쿼리 (즉시) `ToList` 또는 `ToArray` 쿼리 변수 (지연)에 대해 또는 메서드를 호출 하 여 쿼리를 강제로 실행할 수도 있습니다.  
+ You can also force execution of a query by calling the `ToList` or `ToArray` method on a query (immediate) or query variable (deferred), as shown in the following code.  
   
  [!code-vb[VbLINQFirstQuery#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#6)]  
   
- 앞의 예제 `evensQuery3` 에서는 쿼리 변수 이지만 `evensList` 은 목록이 고 `evensArray` 는 배열입니다.  
+ In the previous examples, `evensQuery3` is a query variable, but `evensList` is a list and `evensArray` is an array.  
   
- 즉시 `ToList` 실행 `ToArray` 을 강제 실행 하려면 또는를 사용 하 여 쿼리를 즉시 실행 하 고 결과를 단일 컬렉션 개체에 캐시 하려는 시나리오에서 특히 유용 합니다. 이러한 메서드에 대 한 자세한 내용은 [데이터 형식 변환](converting-data-types.md)을 참조 하세요.  
+ Using `ToList` or `ToArray` to force immediate execution is especially useful in scenarios in which you want to execute the query immediately and cache the results in a single collection object. For more information about these methods, see [Converting Data Types](converting-data-types.md).  
   
- 메서드와<xref:Microsoft.VisualBasic.Collection.System%23Collections%23IEnumerable%23GetEnumerator%2A> 같은 `IEnumerable` 메서드를 사용 하 여 쿼리를 실행할 수도 있습니다.  
+ You can also cause a query to be executed by using an `IEnumerable` method such as the <xref:Microsoft.VisualBasic.Collection.System%23Collections%23IEnumerable%23GetEnumerator%2A> method.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [Visual Basic에서 LINQ 시작](getting-started-with-linq.md)
 - [지역 형식 유추](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)

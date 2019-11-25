@@ -14,16 +14,16 @@ ms.prod:
 - PRODUCT VALUE
 helpviewer_keywords:
 - OFFLINE BOOK INDEX ENTRIES
-ms.openlocfilehash: 20f581f1684d99766b19390daa9ff7a076d44ac3
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: ed9fd55fd84606d2083e0576581391331769a1e6
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423759"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74089278"
 ---
 # <a name="metadata-and-markdown-template"></a>메타데이터 및 Markdown 템플릿
 
-이 dotnet/docs 템플릿에는 Markdown 구문의 예제와 메타데이터 설정 지침이 포함되어 있습니다. 이 템플릿을 최대한 활용하려면 [원시 Markdown](https://raw.githubusercontent.com/dotnet/docs/master/styleguide/template.md) 및 [렌더링된 보기](https://github.com/dotnet/docs/blob/master/styleguide/template.md)를 모두 확인해야 합니다. 예를 들어 원시 Markdown에는 메타데이터 블록이 표시되는 반면 렌더링된 보기에는 표시되지 않습니다.
+이 dotnet/docs 템플릿에는 Markdown 구문의 예제와 메타데이터 설정 지침이 포함되어 있습니다. 이를 최대한 활용하려면 [raw Markdown](https://raw.githubusercontent.com/dotnet/docs/master/styleguide/template.md) 및 [렌더링된 보기](https://github.com/dotnet/docs/blob/master/styleguide/template.md)를 모두 확인해야 합니다.
 
 Markdown 파일을 만들 때는 이 템플릿을 새 파일로 복사하고, 아래에 지정되어 있는 것처럼 메타데이터를 입력하고, 위의 H1 제목을 문서 제목으로 설정한 다음 내용을 삭제해야 합니다.
 
@@ -142,9 +142,9 @@ UID는 정규화된 형식 및 멤버 이름과 동일합니다.
 
 UID 뒤에 \*(또는 %2A)를 추가하는 경우 링크는 특정 API가 아니라 오버로드 페이지를 나타냅니다. 예를 들어 [List\<T>.BinarySearch(T, IComparer\<T>)](https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1.binarysearch#System_Collections_Generic_List_1_BinarySearch__0_)와 같은 특정 오버로드 대신 일반적인 방식으로 [List\<T>.BinarySearch Method](https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1.binarysearch) 페이지를 연결하려고 할 때 사용할 수 있습니다. 멤버가 오버로드되지 않은 경우 멤버 페이지에 연결하는 데 \*도 사용할 수 있습니다. 그러면 UID에 매개 변수 목록을 포함할 필요가 없습니다.
 
-특정 메서드 오버로드에 연결하려면 메서드의 매개 변수마다 정규화된 형식 이름을 포함해야 합니다. 예를 들어, \<xref:System.DateTime.ToString>을 통해서는 매개 변수가 없는 [DateTime.ToString](https://docs.microsoft.com/dotnet/api/system.datetime.tostring#System_DateTime_ToString) 메서드에 연결하는 반면, \<xref:System.DateTime.ToString(System.String,System.IFormatProvider)>를 통해서는 [DateTime.ToString(String,IFormatProvider)](https://docs.microsoft.com/dotnet/api/system.datetime.tostring#System_DateTime_ToString_System_String_System_IFormatProvider_) 메서드에 연결합니다. `https://xref.docs.microsoft.com/autocomplete`에서 오버로드된 특정 멤버의 UID를 찾을 수 있습니다. 쿼리 문자열 “?text= *\<type-member-name>* ”을 통해서는 확인할 UID가 있는 멤버 또는 형식을 식별합니다. 예를 들어, `https://xref.docs.microsoft.com/autocomplete?text=string.format`에서는 [String.Format](https://docs.microsoft.com/dotnet/api/system.string.format) 오버로드를 검색합니다.
+특정 메서드 오버로드에 연결하려면 메서드의 매개 변수마다 정규화된 형식 이름을 포함해야 합니다. 예를 들어, \<xref:System.DateTime.ToString>을 통해서는 매개 변수가 없는 [DateTime.ToString](https://docs.microsoft.com/dotnet/api/system.datetime.tostring#System_DateTime_ToString) 메서드에 연결하는 반면, \<xref:System.DateTime.ToString(System.String,System.IFormatProvider)>를 통해서는 [DateTime.ToString(String,IFormatProvider)](https://docs.microsoft.com/dotnet/api/system.datetime.tostring#System_DateTime_ToString_System_String_System_IFormatProvider_) 메서드에 연결합니다. <https://xref.docs.microsoft.com/autocomplete>에서 오버로드된 특정 멤버의 UID를 찾을 수 있습니다. 쿼리 문자열 “?text= *\<type-member-name>* ”을 통해서는 확인할 UID가 있는 멤버 또는 형식을 식별합니다. 예를 들어, <https://xref.docs.microsoft.com/autocomplete?text=string.format>에서는 [String.Format](https://docs.microsoft.com/dotnet/api/system.string.format) 오버로드를 검색합니다.
 
-[System.Collections.Generic.List\<T>](https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1)와 같은 제네릭 형식에 연결하려면 ` (%60) 문자 다음에 제네릭 형식 매개 변수의 수를 사용합니다. 예를 들어, \<xref:System.Nullable%601>에서는 [System.Nullable\<T>](https://docs.microsoft.com/dotnet/api/system.nullable-1) 형식에 연결하는 반면 \<xref:System.Func%602>에서는 [System.Func\<T,TResult>](https://docs.microsoft.com/dotnet/api/system.func-2) 대리자에 연결합니다.
+[System.Collections.Generic.List\<T>](https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1)와 같은 제네릭 형식에 연결하려면 \`(%60) 문자 다음에 제네릭 형식 매개 변수의 수를 사용합니다. 예를 들어, \<xref:System.Nullable%601>에서는 [System.Nullable\<T>](https://docs.microsoft.com/dotnet/api/system.nullable-1) 형식에 연결하는 반면 \<xref:System.Func%602>에서는 [System.Func\<T,TResult>](https://docs.microsoft.com/dotnet/api/system.func-2) 대리자에 연결합니다.
 
 다음 구문 중 하나를 사용할 수 있습니다.
 
@@ -167,7 +167,7 @@ UID 뒤에 \*(또는 %2A)를 추가하는 경우 링크는 특정 API가 아니�
 UID를 찾는 방법에는 두 가지가 있습니다.
 
 - 연결하려는 API 페이지의 소스를 확인하고 assetid 값을 찾습니다. 개별 오버로드 값은 소스에 표시되지 않습니다.
-- 다음 도구를 사용하여 UID 검색 https://xref.docs.microsoft.com/autocomplete?text=tostring (tostring을 사용자가 찾으려는 API 이름의 일부로 대체). 이 도구를 통해서는 UID 부분에서 제공된 `text` 쿼리 매개 변수를 검색합니다. 예를 들어, 멤버 이름(ToString), 부분 멤버 이름(ToStri), 형식 및 멤버 이름(Double.ToString) 등을 검색할 수 있습니다.
+- 다음 도구를 사용하여 UID 검색 <https://xref.docs.microsoft.com/autocomplete?text=tostring>(tostring을 사용자가 찾으려는 API 이름의 일부로 대체). 이 도구를 통해서는 UID 부분에서 제공된 `text` 쿼리 매개 변수를 검색합니다. 예를 들어, 멤버 이름(ToString), 부분 멤버 이름(ToStri), 형식 및 멤버 이름(Double.ToString) 등을 검색할 수 있습니다.
 
 UID에 특수 문자 \`, \# 또는 \*가 포함된 경우 UID 값은 각각 `%60`, `%23` 및 `%2A`로 인코딩된 HTML이어야 합니다. 때때로 괄호가 인코딩된 것을 볼 수 있지만, 요구 사항은 아닙니다.
 
@@ -322,6 +322,7 @@ UID에 특수 문자 \`, \# 또는 \*가 포함된 경우 UID 값은 각각 `%60
 |VBScript|vbscript|
 |XAML|xaml|
 |XML|Xml|
+|yml|yml|
 
 `csharp-interactive` 이름은 C# 언어를 지정하고 브라우저에서 샘플을 실행하는 기능을 지정합니다. 해당 코드 조각은 Docker 컨테이너에서 컴파일되고 실행되며, 해당 프로그램의 실행 결과는 사용자의 브라우저 창에 표시됩니다.
 

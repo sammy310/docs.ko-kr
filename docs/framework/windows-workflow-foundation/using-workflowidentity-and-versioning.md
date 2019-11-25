@@ -2,12 +2,12 @@
 title: WorkflowIdentity 및 버전 관리 사용
 ms.date: 03/30/2017
 ms.assetid: b8451735-8046-478f-912b-40870a6c0c3a
-ms.openlocfilehash: 6b769224edcd9dfc51879c2c99e061a0e3f77e8d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 66ef4fed682554d9fab2a7b0f85bb9cfaf8e8a29
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69958385"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74142039"
 ---
 # <a name="using-workflowidentity-and-versioning"></a>WorkflowIdentity 및 버전 관리 사용
 
@@ -89,9 +89,9 @@ The WorkflowIdentity ('MortgageWorkflow v1; Version=1.0.0.0') of the loaded inst
 지속형 워크플로 인스턴스의 <xref:System.Activities.WorkflowIdentity>를 검색하려면 <xref:System.Activities.WorkflowApplication.GetInstance%2A> 메서드를 사용합니다. <xref:System.Activities.WorkflowApplication.GetInstance%2A> 메서드는 지속형 워크플로 인스턴스의 <xref:System.Activities.WorkflowApplication.Id%2A>와 지속형 인스턴스가 포함된 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>를 매개 변수로 받아 <xref:System.Activities.WorkflowApplicationInstance>를 반환합니다. <xref:System.Activities.WorkflowApplicationInstance>에는 지속형 워크플로 인스턴스에 연결된 <xref:System.Activities.WorkflowIdentity>를 포함하여 지속형 워크플로 인스턴스에 대한 정보가 들어 있습니다. 이 연결된 <xref:System.Activities.WorkflowIdentity>는 호스트에서 워크플로 인스턴스를 로드하고 다시 시작할 때 올바른 워크플로 정의를 제공하는 데 사용될 수 있습니다.
 
 > [!NOTE]
-> <xref:System.Activities.WorkflowIdentity>는 null일 수 있으며, 이 값은 호스트에서 적절한 워크플로 정의에 <xref:System.Activities.WorkflowIdentity>가 연결되지 않은 상태에서 유지된 인스턴스를 매핑하는 데 사용될 수 있습니다. 이는 워크플로 애플리케이션이 원래 워크플로 버전 관리를 사용하여 작성되지 않은 경우나 애플리케이션이 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]에서 업그레이드된 경우에 해당될 수 있습니다. 자세한 내용은 [워크플로 버전 관리를 지원 하도록 .NET Framework 4 지 속성 데이터베이스 업그레이드](using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases)를 참조 하세요.
+> <xref:System.Activities.WorkflowIdentity>는 null일 수 있으며, 이 값은 호스트에서 적절한 워크플로 정의에 <xref:System.Activities.WorkflowIdentity>가 연결되지 않은 상태에서 유지된 인스턴스를 매핑하는 데 사용될 수 있습니다. 이 시나리오는 워크플로 응용 프로그램이 처음에 워크플로 버전 관리로 작성 되지 않았거나 응용 프로그램이 .NET Framework 4에서 업그레이드 된 경우에 발생할 수 있습니다. 자세한 내용은 [워크플로 버전 관리를 지원 하도록 .NET Framework 4 지 속성 데이터베이스 업그레이드](using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases)를 참조 하세요.
 
-`Dictionary<WorkflowIdentity, Activity>` 다음 예제에서는를 사용 하 여 인스턴스를 일치 하는 워크플로 정의에 연결 <xref:System.Activities.WorkflowIdentity> 하 고 워크플로 정의를 사용 하 `MortgageWorkflow` 여 워크플로를 시작 합니다. `identityV1` <xref:System.Activities.WorkflowIdentity>.
+다음 예에서는 `Dictionary<WorkflowIdentity, Activity>`를 사용 하 여 <xref:System.Activities.WorkflowIdentity> 인스턴스와 일치 하는 워크플로 정의를 연결 하 고, `identityV1` <xref:System.Activities.WorkflowIdentity>와 연결 된 `MortgageWorkflow` 워크플로 정의를 사용 하 여 워크플로를 시작 합니다.
 
 ```csharp
 WorkflowIdentity identityV1 = new WorkflowIdentity
@@ -146,9 +146,9 @@ wfApp.Load(instance);
 
 ## <a name="UpdatingWF4PersistenceDatabases"></a>워크플로 버전 관리를 지원 하도록 .NET Framework 4 지 속성 데이터베이스 업그레이드
 
-[!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 데이터베이스 스크립트를 사용하여 만들어진 지속성 데이터베이스를 업그레이드하기 위해 SqlWorkflowInstanceStoreSchemaUpgrade.sql 데이터베이스 스크립트가 제공됩니다. 이 스크립트는 .NET Framework 4.5에 도입 된 새로운 버전 관리 기능을 지원 하도록 데이터베이스를 업데이트 합니다. 데이터베이스의 지속형 워크플로 인스턴스는 기본 버전 관리 값이 제공 받으며, side-by-side 실행 및 동적 업데이트에 참여할 수 있습니다.
+.NET Framework 4 데이터베이스 스크립트를 사용 하 여 만든 지 속성 데이터베이스를 업그레이드 하는 Sqlworkflowinstancestoreschemaupgrade.sql 데이터베이스 스크립트가 제공 됩니다. 이 스크립트는 .NET Framework 4.5에 도입 된 새로운 버전 관리 기능을 지원 하도록 데이터베이스를 업데이트 합니다. 데이터베이스의 지속형 워크플로 인스턴스는 기본 버전 관리 값이 제공 받으며, side-by-side 실행 및 동적 업데이트에 참여할 수 있습니다.
 
-.NET Framework 4.5 워크플로 응용 프로그램이 제공 된 스크립트 <xref:System.Runtime.DurableInstancing.InstancePersistenceCommandException> 를 사용 하 여 업그레이드 되지 않은 지 속성 데이터베이스에서 새 버전 관리 기능을 사용 하는 지 속성 작업을 시도 하면 다음과 유사한 메시지와 함께이 throw 됩니다. 다음 메시지가 있습니다.
+.NET Framework 4.5 워크플로 응용 프로그램이 제공 된 스크립트를 사용 하 여 업그레이드 되지 않은 지 속성 데이터베이스에서 새 버전 관리 기능을 사용 하는 지 속성 작업을 시도 하면 다음 메시지와 비슷한 메시지가 포함 된 <xref:System.Runtime.DurableInstancing.InstancePersistenceCommandException> throw 됩니다.
 
 ```
 The SqlWorkflowInstanceStore has a database version of '4.0.0.0'. InstancePersistenceCommand 'System.Activities.DurableInstancing.CreateWorkflowOwnerWithIdentityCommand' cannot be run against this database version.  Please upgrade the database to '4.5.0.0'.
@@ -166,4 +166,4 @@ The SqlWorkflowInstanceStore has a database version of '4.0.0.0'. InstancePersis
 
 5. **쿼리** 메뉴에서 **실행** 을 선택 합니다.
 
-쿼리가 완료되면 데이터베이스 스키마가 업그레이드되고 지속형 워크플로 인스턴스에 할당된 기본 워크플로 ID를 볼 수 있습니다. **개체 탐색기**의 **데이터베이스** 노드에서 지 속성 데이터베이스를 확장 한 다음 **뷰** 노드를 확장 합니다. **DurableInstancing** 를 마우스 오른쪽 단추로 클릭 하 고 **상위 1000 행 선택**을 선택 합니다. 열 끝으로 스크롤하고 다음 6 개의 추가 열이 뷰에 추가 되어 있는지 확인 합니다. **IdentityName**, **IdentityPackage**, **Build**, **Major**, **Minor**및 **Revision**이 있습니다. 지속형 워크플로는 이러한 필드에 null 값 을 가지 며 null 워크플로 id를 나타냅니다.
+쿼리가 완료되면 데이터베이스 스키마가 업그레이드되고 지속형 워크플로 인스턴스에 할당된 기본 워크플로 ID를 볼 수 있습니다. **개체 탐색기**의 **데이터베이스** 노드에서 지 속성 데이터베이스를 확장 한 다음 **뷰** 노드를 확장 합니다. **DurableInstancing** 를 마우스 오른쪽 단추로 클릭 하 고 **상위 1000 행 선택**을 선택 합니다. 열 끝으로 스크롤하고 **IdentityName**, **IdentityPackage**, **Build**, **Major**, **Minor**및 **Revision**의 추가 열이 6 개 추가 되어 있는지 확인 합니다. 지속형 워크플로는 이러한 필드에 null 값을 가지 **며 null 워크플로** id를 나타냅니다.

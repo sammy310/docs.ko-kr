@@ -24,8 +24,6 @@
               href: fault-handling-in-a-flowchart-activity-using-trycatch.md
             - name: Load From XAML
               href: load-from-xaml.md
-            - name: InvokeMethod 작업 사용
-              href: using-the-invokemethod-activity.md
             - name: Pick 활동 사용
               href: using-the-pick-activity.md
         - name: 사용자 지정 활동
@@ -96,7 +94,7 @@
               href: non-generic-parallelforeach.md
             - name: WorkflowInstanceId 가져오기
               href: get-workflowinstanceid.md
-        - name: 서비스
+        - name: Services
           items:
             - name: OperationContext 액세스
               href: accessing-operationcontext.md

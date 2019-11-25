@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: ac69b38df3439932be7f65d871c64700585538cb
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 65990c699bafa8eec1ba7dcbce624c88316cbb72
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774295"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283280"
 ---
 # <a name="working-with-certificates"></a>인증서 사용
 
@@ -72,7 +72,7 @@ WCF(Windows Communication Foundation) 보안을 프로그래밍하려면 일반�
 
 새 서비스를 만들 때 신뢰할 수 있는 루트 인증서를 통해 발급되지 않은 인증서를 사용하거나 발급하는 인증서 자체가 신뢰할 수 있는 루트 인증 기관 저장소에 없을 수도 있습니다. 개발 용도로만 인증서에 대한 신뢰 체인을 검사하는 메커니즘을 일시적으로 사용하지 않도록 설정할 수 있습니다. 이 작업을 수행하려면 `CertificateValidationMode` 속성을 `PeerTrust` 또는 `PeerOrChainTrust`로 설정합니다. 두 모드는 인증서가 자체 발급되거나(신뢰 피어) 신뢰 체인의 일부일 수 있음을 지정합니다. 다음 클래스에 대한 속성을 설정할 수 있습니다.
 
-|인스턴스|속성|
+|클래스|속성|
 |-----------|--------------|
 |<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication>|<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.CertificateValidationMode%2A?displayProperty=nameWithType>|
 |<xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>|<xref:System.ServiceModel.Security.X509PeerCertificateAuthentication.CertificateValidationMode%2A?displayProperty=nameWithType>|
@@ -113,7 +113,7 @@ PowerShell New-selfsignedcertificate cmdlet은 x.509 인증서와 개인 키/공
 
 ### <a name="service-certificates"></a>서비스 인증서
 
-서비스 인증서의 주요 작업은 클라이언트에 서버를 인증하는 것입니다. 클라이언트에서 서버를 인증할 때 초기 검사 중 하나는 **주체** 필드의 값을 서비스를 연결하는 데 사용된 URI(Uniform Resource Identifier)와 비교하는 것입니다. 두 항목의 DNS가 일치해야 합니다. 예를 들어 서비스의 URI가 `http://www.contoso.com/endpoint/` 되는 경우에는 **제목** 필드에도 `www.contoso.com` 값이 포함 되어야 합니다.
+서비스 인증서의 주요 작업은 클라이언트에 서버를 인증하는 것입니다. 클라이언트에서 서버를 인증할 때 초기 검사 중 하나는 **주체** 필드의 값을 서비스를 연결하는 데 사용된 URI(Uniform Resource Identifier)와 비교하는 것입니다. 두 항목의 DNS가 일치해야 합니다. 예를 들어 서비스의 URI가 `http://www.contoso.com/endpoint/` 되는 경우에는 **제목** 필드에도 `www.contoso.com`값이 포함 되어야 합니다.
 
 필드는 값을 나타내는 이니셜 접두사가 붙은 여러 값을 포함할 수 있습니다. 가장 일반적으로 초기화는 일반적인 이름에 대 한 "CN"입니다 (예: `CN = www.contoso.com`). **주체** 필드를 비워둘 수도 있습니다. 이 경우 **주체 대체 이름** 필드는 **DNS 이름** 값을 포함할 수 있습니다.
 
@@ -135,13 +135,13 @@ PowerShell New-selfsignedcertificate cmdlet은 x.509 인증서와 개인 키/공
 
 인증서를 해지하면 해지된 인증서 아래의 모든 체인도 유효하지 않으므로 인증 절차 중에 신뢰되지 않습니다. 해지되는 인증서를 확인하기 위해 각 발급자는 타임스탬프 및 날짜 스탬프가 기록된 CRL(*인증서 해지 목록*)을 게시합니다. 이 목록은 `RevocationMode`, `DefaultRevocationMode`, <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode> 및 <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication> 클래스의 <xref:System.ServiceModel.Security.X509PeerCertificateAuthentication> 또는 <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication> 속성을 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> 열거형 값 중 하나로 설정하여 온라인 해지 또는 오프라인 해지를 통해 확인할 수 있습니다. 모든 속성의 기본값은 `Online`입니다.
 
-[\<authentication>](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)([\<serviceBehaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)의) 및 [\<authentication>](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)([\<endpointBehaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md)의)의 `revocationMode` 특성을 사용하여 구성에서 모드를 설정할 수도 있습니다.
+`revocationMode`[authentication>\<(](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)[serviceBehaviors>\<의) 및 ](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)[authentication>\<(](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)[endpointBehaviors>\<의)의 ](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) 특성을 사용하여 구성에서 모드를 설정할 수도 있습니다.
 
 ## <a name="the-setcertificate-method"></a>SetCertificate 메서드
 
 WCF에서는 서비스 또는 클라이언트에서 메시지를 인증, 암호화 또는 디지털 서명하는 데 사용할 인증서 또는 인증서 집합을 지정해야 할 수 있습니다. 이 작업은 X.509 인증서를 나타내는 다양한 클래스의 `SetCertificate` 메서드를 사용하여 프로그래밍 방식으로 수행할 수 있습니다. 다음 클래스에서는 `SetCertificate` 메서드를 사용하여 인증서를 지정합니다.
 
-|인스턴스|메서드|
+|클래스|메서드|
 |-----------|------------|
 |<xref:System.ServiceModel.Security.PeerCredential>|<xref:System.ServiceModel.Security.PeerCredential.SetCertificate%2A>|
 |<xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential>|<xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A>|
@@ -168,7 +168,7 @@ IIS 및 Active Directory에는 Windows 사용자 계정에 인증서를 매핑�
 
 Active Directory 매핑 사용에 대한 자세한 내용은 [디렉터리 서비스 매핑을 사용하여 클라이언트 인증서 매핑](https://go.microsoft.com/fwlink/?LinkId=88918)을 참조하세요.
 
-이 기능을 사용하여 <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.MapClientCertificateToWindowsAccount%2A> 클래스의 <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication> 속성을 `true`로 설정할 수 있습니다. 다음 코드에 표시된 것처럼 구성에서 [\<authentication>](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md) 요소의 `mapClientCertificateToWindowsAccount` 특성을 `true`로 설정할 수 있습니다.
+이 기능을 사용하여 <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.MapClientCertificateToWindowsAccount%2A> 클래스의 <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication> 속성을 `true`로 설정할 수 있습니다. 다음 코드에 표시된 것처럼 구성에서 `mapClientCertificateToWindowsAccount`[authentication>\< 요소의 ](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md) 특성을 `true`로 설정할 수 있습니다.
 
 ```xml
 <serviceBehaviors>
@@ -184,11 +184,11 @@ Active Directory 매핑 사용에 대한 자세한 내용은 [디렉터리 서�
 
 Windows 사용자 계정을 나타내는 토큰에 X.509 인증서를 매핑하면 매핑된 Windows 토큰을 사용하여 보호된 리소스에 액세스할 수 있기 때문에 권한 상승으로 간주됩니다. 따라서 도메인 정책에서는 매핑 전에 X.509 인증서가 해당 정책을 준수하도록 요구합니다. *SChannel* 보안 패키지는 이러한 요구 사항을 적용합니다.
 
-[!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] 이상을 사용하는 경우 WCF는 인증서를 Windows 계정에 매핑하기 전에 해당 인증서가 도메인 정책을 준수하는지 확인합니다.
+.NET Framework 3.5 이상 버전을 사용 하는 경우 WCF는 인증서가 Windows 계정에 매핑되도록 도메인 정책을 준수 하는지 확인 합니다.
 
 WCF의 첫 번째 릴리스에서는 도메인 정책을 참조하지 않고 매핑을 수행했습니다. 따라서 매핑을 실행할 때 X.509 인증서가 도메인 정책에 맞지 않을 경우 첫 번째 릴리스에서 작동했던 이전 애플리케이션이 실패할 수 있습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.ServiceModel.Channels>
 - <xref:System.ServiceModel.Security>
