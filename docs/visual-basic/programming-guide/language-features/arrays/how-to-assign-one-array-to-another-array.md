@@ -1,27 +1,27 @@
 ---
-title: '방법: 한 배열을 다른 배열 (Visual Basic) 할당'
+title: '방법: 한 배열에 다른 배열 할당'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - covariance, arrays
 - arrays [Visual Basic], assigning
 - arrays [Visual Basic], covariance
 ms.assetid: 1ae89ea5-f292-4282-bcfc-e9b06b37fbd5
-ms.openlocfilehash: a39888f19e5033a5c6622313fb7451d6463b2f7c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: be5337e36c2cc7ad9f9b32182b8575ac66bb4a50
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64858877"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351885"
 ---
-# <a name="how-to-assign-one-array-to-another-array-visual-basic"></a>방법: 한 배열을 다른 배열 (Visual Basic) 할당
+# <a name="how-to-assign-one-array-to-another-array-visual-basic"></a>방법: 한 배열에 다른 배열 할당(Visual Basic)
 
-배열 개체 이기 때문에 다른 개체 형식 처럼 대입 문에서 사용할 수 있습니다. 배열 변수 배열 요소 및 차수 및 길이 정보를 구성 하는 데이터 포인터를 보유 하 고 할당만이 포인터를 복사 합니다.
+Because arrays are objects, you can use them in assignment statements like other object types. An array variable holds a pointer to the data constituting the array elements and the rank and length information, and an assignment copies only this pointer.
 
-### <a name="to-assign-one-array-to-another-array"></a>한 배열을 다른 배열에 할당 하려면
+### <a name="to-assign-one-array-to-another-array"></a>To assign one array to another array
 
-1. 두 배열의 동일한 차수 (차원 수)과 호환 되는 요소 데이터 형식을 확인 합니다.
+1. Ensure that the two arrays have the same rank (number of dimensions) and compatible element data types.
 
-2. 소스 배열에서 대상 배열에 할당할 표준 대입문을 사용 합니다. 괄호를 사용 하 여 배열 이름 중 하나를 수행 하지 마세요.
+2. Use a standard assignment statement to assign the source array to the destination array. Do not follow either array name with parentheses.
 
     ```vb
     Dim formArray() As System.Windows.Forms.Form
@@ -29,21 +29,21 @@ ms.locfileid: "64858877"
     controlArray = formArray
     ```
 
-다른 배열에 할당 하는 경우 다음 규칙이 적용 됩니다.
+When you assign one array to another, the following rules apply:
 
-- **같은 순위가 결정 됩니다.** 대상 배열의 차수 (차원 수)는 원본 배열의과 같아야 합니다.
+- **Equal Ranks.** The rank (number of dimensions) of the destination array must be the same as that of the source array.
 
-  두 배열의 순위 값이 같으면 제공 차원 필요가 없습니다 같아야 합니다. 지정 된 차원의 요소 수가 할당 하는 동안 변경할 수 있습니다.
+  Provided the ranks of the two arrays are equal, the dimensions do not need to be equal. The number of elements in a given dimension can change during assignment.
 
-- **요소 형식입니다.** 두 배열 중 하나 있어야 *참조 형식* 요소 또는 두 배열 있어야 *값 형식* 요소입니다. 자세한 내용은 [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)을 참조하세요.
+- **Element Types.** Either both arrays must have *reference type* elements or both arrays must have *value type* elements. 자세한 내용은 [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)을 참조하세요.
 
-  - 두 배열의 값 형식 요소의 경우 요소 데이터 형식을 정확 하 게 동일 해야 합니다. 유일한 예외는 배열을 할당할 수 있는 `Enum` 요소를 사용 하는 기본 형식의 배열 `Enum`합니다.
+  - If both arrays have value type elements, the element data types must be exactly the same. The only exception to this is that you can assign an array of `Enum` elements to an array of the base type of that `Enum`.
 
-  - 두 배열은 참조 형식 요소에 있으면 원본 요소 형식이 대상 요소 형식에서 파생 되어야 합니다. 이 경우 두 배열의 경우 해당 요소와 동일한 상속 관계 이 이라고 *배열 공변성 (covariance)* 합니다.
+  - If both arrays have reference type elements, the source element type must derive from the destination element type. When this is the case, the two arrays have the same inheritance relationship as their elements. This is called *array covariance*.
 
-컴파일러 오류 위의 규칙 위반 하면 예를 들어 데이터 형식이 호환 되지 않는 경우 또는 순위 같지 보고 합니다. 오류 처리를 할당 하기 전에 배열 호환 되는지 확인 하기 위해 코드에 추가할 수 있습니다. 사용할 수도 있습니다는 [TryCast 연산자](../../../../visual-basic/language-reference/operators/trycast-operator.md) 키워드 예외가 throw 되지 않게 하려는 경우.
+The compiler reports an error if the above rules are violated, for example if the data types are not compatible or the ranks are unequal. You can add error handling to your code to make sure that the arrays are compatible before attempting an assignment. You can also use the [TryCast Operator](../../../../visual-basic/language-reference/operators/trycast-operator.md) keyword if you want to avoid throwing an exception.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [배열](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
 - [배열 문제 해결](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)

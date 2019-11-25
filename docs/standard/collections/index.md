@@ -12,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: 60cc581f-1db5-445b-ba04-a173396bf872
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5b25d35f9c356b6d55806611a3ce39d193b42586
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: bb231df9ed33b89fa15cde998379b2964cf32ff9
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66491032"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204765"
 ---
 # <a name="collections-and-data-structures"></a>컬렉션 및 데이터 구조
 비슷한 데이터는 컬렉션으로 저장 및 조작하면 보다 효율적으로 처리할 수 있는 경우가 많습니다. <xref:System.Array?displayProperty=nameWithType> 클래스 또는 <xref:System.Collections>, <xref:System.Collections.Generic> 및 <xref:System.Collections.Concurrent>, System.Collections.Immutable 네임스페이스의 클래스를 사용하여 컬렉션의 개별 요소 또는 일정 범위의 요소를 추가, 제거 및 수정할 수 있습니다.  
   
- 컬렉션에는 제네릭 컬렉션과 제네릭이 아닌 컬렉션의 두 가지 기본 유형이 있습니다. .NET Framework 2.0에서 추가된 제네릭 컬렉션은 컴파일 타임에 형식이 안전한 컬렉션을 제공합니다. 이로 인해 제네릭 컬렉션은 일반적으로 성능이 더 뛰어납니다. 제네릭 컬렉션은 생성 시 형식 매개 변수를 허용하며, 컬렉션에서 항목을 추가하거나 제거할 때 <xref:System.Object> 형식과의 캐스팅을 수행하지 않아도 됩니다.  또한 대부분의 제네릭 컬렉션은 [!INCLUDE[win8_appstore_long](../../../includes/win8-appstore-long-md.md)] 앱에서 지원됩니다. 제네릭이 아닌 컬렉션은 항목을 <xref:System.Object>로 저장하며, 캐스팅을 수행해야 합니다. 또한 이러한 컬렉션은 대부분 [!INCLUDE[win8_appstore_long](../../../includes/win8-appstore-long-md.md)] 앱 개발용으로 지원되지 않습니다. 그러나 이전 코드에는 제네릭이 아닌 컬렉션이 포함되어 있는 경우도 있습니다.  
+ 컬렉션에는 제네릭 컬렉션과 제네릭이 아닌 컬렉션의 두 가지 기본 유형이 있습니다. .NET Framework 2.0에서 추가된 제네릭 컬렉션은 컴파일 타임에 형식이 안전한 컬렉션을 제공합니다. 이로 인해 제네릭 컬렉션은 일반적으로 성능이 더 뛰어납니다. 제네릭 컬렉션은 생성 시 형식 매개 변수를 허용하며, 컬렉션에서 항목을 추가하거나 제거할 때 <xref:System.Object> 형식과의 캐스팅을 수행하지 않아도 됩니다.  또한 대부분의 제네릭 컬렉션은 Windows 스토어 앱에서 지원됩니다. 제네릭이 아닌 컬렉션은 항목을 <xref:System.Object>로 저장하며, 캐스팅을 수행해야 합니다. 또한 이러한 컬렉션은 대부분 Windows 스토어 앱 개발용으로 지원되지 않습니다. 그러나 이전 코드에는 제네릭이 아닌 컬렉션이 포함되어 있는 경우도 있습니다.  
   
  .NET Framework 4부터 <xref:System.Collections.Concurrent> 네임스페이스의 컬렉션은 여러 스레드에서 컬렉션 항목에 액세스하기 위한 효율적이고 스레드로부터 안전한 작업을 제공합니다. System.Collections.Immutable 네임스페이스에서 사용되는 변경할 수 없는 컬렉션 클래스([NuGet 패키지](https://www.nuget.org/packages/System.Collections.Immutable))는 기본적으로 스레드로부터 안전합니다. 작업이 원본 컬렉션의 복사본에 대해 수행되며 원본 컬렉션은 수정할 수 없기 때문입니다.  
 

@@ -1,5 +1,5 @@
 ---
-title: 쿼리 작업의 형식 관계(Visual Basic)
+title: 쿼리 작업의 형식 관계
 ms.date: 07/20/2015
 helpviewer_keywords:
 - variable relationships [LINQ in Visual Basic]
@@ -11,55 +11,55 @@ helpviewer_keywords:
 - inferring type information [LINQ in Visual Basic]
 - relationships [LINQ in Visual Basic]
 ms.assetid: b5ff4da5-f3fd-4a8e-aaac-1cbf52fa16f6
-ms.openlocfilehash: 6d5d13064cceba10d27901ee95aa8b6731620dbb
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 8c201abef924766d52b1adb084970a24ebea2b50
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524117"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350562"
 ---
 # <a name="type-relationships-in-query-operations-visual-basic"></a>쿼리 작업의 형식 관계(Visual Basic)
 
-@No__t_0 쿼리 작업에서 사용 되는 변수는 강력 하 게 형식화 되며 서로 호환 되어야 합니다. 강력한 형식 지정은 데이터 소스, 쿼리 자체 및 쿼리 실행에서 사용 됩니다. 다음 그림은 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리를 설명 하는 데 사용 되는 용어를 나타냅니다. 쿼리 파트에 대 한 자세한 내용은 [기본 쿼리 작업 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md)을 참조 하세요.
+Variables used in [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] query operations are strongly typed and must be compatible with each other. Strong typing is used in the data source, in the query itself, and in the query execution. The following illustration identifies terms used to describe a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query. For more information about the parts of a query, see [Basic Query Operations (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).
 
-![요소가 강조 표시 된 의사 코드 쿼리를 보여 주는 스크린샷](./media/type-relationships-in-query-operations/linq-query-description-terms.png)
+![Screenshot showing a pseudocode query with elements highlighted.](./media/type-relationships-in-query-operations/linq-query-description-terms.png)
 
-쿼리의 범위 변수 형식은 데이터 소스에 있는 요소의 형식과 호환 되어야 합니다. 쿼리 변수의 형식은 `Select` 절에 정의 된 sequence 요소와 호환 되어야 합니다. 마지막으로 시퀀스 요소의 형식은 쿼리를 실행 하는 `For Each` 문에 사용 되는 loop 제어 변수의 형식과도 호환 되어야 합니다. 이 강력한 형식화는 컴파일 시간에 형식 오류의 식별을 용이 하 게 합니다.
+The type of the range variable in the query must be compatible with the type of the elements in the data source. The type of the query variable must be compatible with the sequence element defined in the `Select` clause. Finally, the type of the sequence elements also must be compatible with the type of the loop control variable that is used in the `For Each` statement that executes the query. This strong typing facilitates identification of type errors at compile time.
 
-Visual Basic는 *암시적*형식이 라고도 하는 로컬 형식 유추를 구현 하 여 강력한 형식화를 편리 하 게 만듭니다. 이전 예제에서이 기능을 사용 하 고 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 샘플 및 설명서 전체에서이 기능을 사용 하는 것을 볼 수 있습니다. Visual Basic에서 로컬 형식 유추는 단순히 `As` 절 없이 `Dim` 문을 사용 하 여 수행 됩니다. 다음 예제에서 `city`은 문자열로 강력 하 게 형식화 됩니다.
+Visual Basic makes strong typing convenient by implementing local type inference, also known as *implicit typing*. That feature is used in the previous example, and you will see it used throughout the [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] samples and documentation. In Visual Basic, local type inference is accomplished simply by using a `Dim` statement without an `As` clause. In the following example, `city` is strongly typed as a string.
 
 [!code-vb[VbLINQTypeRels#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQTypeRels/VB/Class1.vb#1)]
 
 > [!NOTE]
-> 로컬 형식 유추는 `Option Infer`이 `On`으로 설정 된 경우에만 작동 합니다. 자세한 내용은 [Option 유추 문](../../../../visual-basic/language-reference/statements/option-infer-statement.md)을 참조 하세요.
+> Local type inference works only when `Option Infer` is set to `On`. For more information, see [Option Infer Statement](../../../../visual-basic/language-reference/statements/option-infer-statement.md).
 
-그러나 쿼리에서 로컬 형식 유추를 사용 하는 경우에도 데이터 원본의 변수, 쿼리 변수 및 쿼리 실행 루프 사이에 동일한 형식 관계가 있습니다. @No__t_0 쿼리를 작성 하거나 설명서의 샘플 및 코드 예제를 사용 하는 경우 이러한 형식 관계를 기본적으로 이해 하는 것이 유용 합니다.
+However, even if you use local type inference in a query, the same type relationships are present among the variables in the data source, the query variable, and the query execution loop. It is useful to have a basic understanding of these type relationships when you are writing [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] queries, or working with the samples and code examples in the documentation.
 
-데이터 원본에서 반환 되는 형식과 일치 하지 않는 범위 변수에 대 한 명시적 형식을 지정 해야 할 수도 있습니다. @No__t_0 절을 사용 하 여 범위 변수의 형식을 지정할 수 있습니다. 그러나 변환이 [축소 변환](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md) 이 고 `Option Strict` `On`으로 설정 된 경우 오류가 발생 합니다. 따라서 데이터 원본에서 검색 된 값에 대해 변환을 수행 하는 것이 좋습니다. @No__t_0 메서드를 사용 하 여 데이터 소스의 값을 명시적 범위 변수 형식으로 변환할 수 있습니다. @No__t_0 절에서 선택한 값을 범위 변수의 형식과 다른 명시적 형식으로 캐스팅할 수도 있습니다. 이러한 요소는 다음 코드에 나와 있습니다.
+You may need to specify an explicit type for a range variable that does not match the type returned from the data source. You can specify the type of the range variable by using an `As` clause. However, this results in an error if the conversion is a [narrowing conversion](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md) and `Option Strict` is set to `On`. Therefore, we recommend that you perform the conversion on the values retrieved from the data source. You can convert the values from the data source to the explicit range variable type by using the <xref:System.Linq.Enumerable.Cast%2A> method. You can also cast the values selected in the `Select` clause to an explicit type that is different from the type of the range variable. These points are illustrated in the following code.
 
 [!code-vb[VbLINQTypeRels#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQTypeRels/VB/Class1.vb#4)]
 
-## <a name="queries-that-return-entire-elements-of-the-source-data"></a>원본 데이터의 전체 요소를 반환 하는 쿼리
+## <a name="queries-that-return-entire-elements-of-the-source-data"></a>Queries That Return Entire Elements of the Source Data
 
-다음 예에서는 원본 데이터에서 선택한 요소의 시퀀스를 반환 하는 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리 작업을 보여 줍니다. 원본 `names`는 문자열 배열을 포함 하 고 쿼리 출력은 문자 M으로 시작 하는 문자열을 포함 하는 시퀀스입니다.
+The following example shows a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query operation that returns a sequence of elements selected from the source data. The source, `names`, contains an array of strings, and the query output is a sequence containing strings that start with the letter M.
 
 [!code-vb[VbLINQTypeRels#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQTypeRels/VB/Class1.vb#2)]
 
-이는 다음 코드와 동일 하지만 훨씬 짧고 더 쉽게 작성할 수 있습니다. 쿼리에서의 로컬 형식 유추에 의존 하는 것은 Visual Basic에서 선호 되는 스타일입니다.
+This is equivalent to the following code, but is much shorter and easier to write. Reliance on local type inference in queries is the preferred style in Visual Basic.
 
 [!code-vb[VbLINQTypeRels#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQTypeRels/VB/Class1.vb#3)]
 
-형식이 암시적 또는 명시적으로 결정 되는지에 관계 없이 앞의 코드 예제에는 다음 관계가 모두 있습니다.
+The following relationships exist in both of the previous code examples, whether the types are determined implicitly or explicitly.
 
-1. 데이터 소스에 있는 요소의 형식 `names`은 (는) 쿼리의 범위 변수 `name` 형식입니다.
+1. The type of the elements in the data source, `names`, is the type of the range variable, `name`, in the query.
 
-2. 선택 된 개체의 형식 `name` `mNames`는 쿼리 변수의 형식을 결정 합니다. 여기서 `name`는 문자열 이므로 쿼리 변수는 Visual Basic의 IEnumerable (문자열)입니다.
+2. The type of the object that is selected, `name`, determines the type of the query variable, `mNames`. Here `name` is a string, so the query variable is IEnumerable(Of String) in Visual Basic.
 
-3. @No__t_0에 정의 된 쿼리는 `For Each` 루프에서 실행 됩니다. 루프는 쿼리를 실행 한 결과를 반복 합니다. @No__t_0 실행 될 때는 문자열 시퀀스를 반환 하 고 루프 반복 변수 `nm`도 문자열입니다.
+3. The query defined in `mNames` is executed in the `For Each` loop. The loop iterates over the result of executing the query. Because `mNames`, when it is executed, will return a sequence of strings, the loop iteration variable, `nm`, also is a string.
 
-## <a name="queries-that-return-one-field-from-selected-elements"></a>선택한 요소에서 한 필드를 반환 하는 쿼리
+## <a name="queries-that-return-one-field-from-selected-elements"></a>Queries That Return One Field from Selected Elements
 
-다음 예에서는 데이터 소스에서 선택한 각 요소의 한 부분만 포함 된 시퀀스를 반환 하는 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 쿼리 작업을 보여 줍니다. 이 쿼리는 `Customer` 개체의 컬렉션을 데이터 원본으로 사용 하 고 결과의 `Name` 속성만 프로젝션 합니다. 고객 이름이 문자열 이기 때문에 쿼리는 문자열 시퀀스를 출력으로 생성 합니다.
+The following example shows a [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] query operation that returns a sequence containing only one part of each element selected from the data source. The query takes a collection of `Customer` objects as its data source and projects only the `Name` property in the result. Because the customer name is a string, the query produces a sequence of strings as output.
 
 ```vb
 ' Method GetTable returns a table of Customer objects.
@@ -73,15 +73,15 @@ For Each custName In custNames
 Next
 ```
 
-변수 간의 관계는 간단한 예제와 유사 합니다.
+The relationships between variables are like those in the simpler example.
 
-1. 데이터 소스에 있는 요소의 형식 `customers`은 (는) 쿼리의 범위 변수 `cust` 형식입니다. 이 예제에서는 해당 형식이 `Customer`.
+1. The type of the elements in the data source, `customers`, is the type of the range variable, `cust`, in the query. In this example, that type is `Customer`.
 
-2. @No__t_0 문은 전체 개체 대신 각 `Customer` 개체의 `Name` 속성을 반환 합니다. @No__t_0는 문자열 이기 때문에 쿼리 변수 `custNames`은 `Customer`가 아닌 IEnumerable (문자열)입니다.
+2. The `Select` statement returns the `Name` property of each `Customer` object instead of the whole object. Because `Name` is a string, the query variable, `custNames`, will again be IEnumerable(Of String), not of `Customer`.
 
-3. @No__t_0는 문자열 시퀀스를 나타내므로 `For Each` 루프의 반복 변수 `custName`는 문자열 이어야 합니다.
+3. Because `custNames` represents a sequence of strings, the `For Each` loop's iteration variable, `custName`, must be a string.
 
-로컬 형식 유추가 없으면 다음 예제와 같이 앞의 예제를 작성 하 고 이해 하기가 더 복잡 합니다.
+Without local type inference, the previous example would be more cumbersome to write and to understand, as the following example shows.
 
 ```vb
 ' Method GetTable returns a table of Customer objects.
@@ -96,9 +96,9 @@ Next
  Next
 ```
 
-## <a name="queries-that-require-anonymous-types"></a>익명 형식이 필요한 쿼리
+## <a name="queries-that-require-anonymous-types"></a>Queries That Require Anonymous Types
 
-다음 예제에서는 좀 더 복잡 한 상황을 보여 줍니다. 이전 예제에서는 모든 변수에 대해 명시적으로 형식을 지정 하는 것이 불편할 수 있었습니다. 이 예에서는 불가능 합니다. 이 쿼리의 `Select` 절은 데이터 소스에서 전체 `Customer` 요소를 선택 하거나 각 요소의 단일 필드를 선택 하는 대신 `Name` 및 `City` 원래 `Customer` 개체의 두 속성을 반환 합니다. @No__t_0 절에 대 한 응답으로 컴파일러는 이러한 두 속성을 포함 하는 익명 형식을 정의 합니다. @No__t_1 루프에서 `nameCityQuery`를 실행 한 결과는 새 익명 형식의 인스턴스 컬렉션입니다. 익명 형식에는 사용할 수 있는 이름이 없기 때문에 `nameCityQuery` 형식을 지정 하거나 명시적으로 `custInfo` 수 없습니다. 즉, 익명 형식을 사용 하면 `IEnumerable(Of String)` `String` 대신 사용할 형식 이름이 없습니다. 자세한 내용은 [무명 형식](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)을 참조하세요.
+The following example shows a more complex situation. In the previous example, it was inconvenient to specify types for all the variables explicitly. In this example, it is impossible. Instead of selecting entire `Customer` elements from the data source, or a single field from each element, the `Select` clause in this query returns two properties of the original `Customer` object: `Name` and `City`. In response to the `Select` clause, the compiler defines an anonymous type that contains those two properties. The result of executing `nameCityQuery` in the `For Each` loop is a collection of instances of the new anonymous type. Because the anonymous type has no usable name, you cannot specify the type of `nameCityQuery` or `custInfo` explicitly. That is, with an anonymous type, you have no type name to use in place of `String` in `IEnumerable(Of String)`. 자세한 내용은 [무명 형식](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)을 참조하세요.
 
 ```vb
 ' Method GetTable returns a table of Customer objects.
@@ -112,13 +112,13 @@ For Each custInfo In nameCityQuery
 Next
 ```
 
-이전 예제의 모든 변수에 대해 형식을 지정할 수는 없지만 관계는 동일 하 게 유지 됩니다.
+Although it is not possible to specify types for all the variables in the previous example, the relationships remain the same.
 
-1. 데이터 소스에 있는 요소의 형식이 다시 쿼리의 범위 변수 형식입니다. 이 예제에서 `cust`은 `Customer`의 인스턴스입니다.
+1. The type of the elements in the data source is again the type of the range variable in the query. In this example, `cust` is an instance of `Customer`.
 
-2. @No__t_0 문은 무명 형식을 생성 하므로 쿼리 변수 `nameCityQuery`은 암시적으로 익명 형식으로 형식화 되어야 합니다. 익명 형식에는 사용할 수 있는 이름이 없으므로 명시적으로 지정할 수 없습니다.
+2. Because the `Select` statement produces an anonymous type, the query variable, `nameCityQuery`, must be implicitly typed as an anonymous type. An anonymous type has no usable name, and therefore cannot be specified explicitly.
 
-3. @No__t_0 루프의 반복 변수 형식은 2 단계에서 만든 익명 형식입니다. 형식에 사용할 수 있는 이름이 없으므로 루프 반복 변수의 형식은 암시적으로 결정 되어야 합니다.
+3. The type of the iteration variable in the `For Each` loop is the anonymous type created in step 2. Because the type has no usable name, the type of the loop iteration variable must be determined implicitly.
 
 ## <a name="see-also"></a>참조
 

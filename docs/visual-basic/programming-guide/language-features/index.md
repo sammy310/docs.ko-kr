@@ -1,25 +1,25 @@
 ---
-title: Visual Basic 언어 기능
+title: 언어 기능
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic code, elements of
 - Visual Basic code
 ms.assetid: b0b21730-298c-47e6-9a2f-cc81f628067b
-ms.openlocfilehash: 975bec73235b3b8f82088325e0d4abc50ce6b1dd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8cb0b017410e991628bad59a6986ba37426c913f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053784"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345060"
 ---
 # <a name="visual-basic-language-features"></a>Visual Basic 언어 기능
-다음 항목 소개 하 고 Visual Basic의 경우 개체 지향 프로그래밍 언어의 필수 구성 요소에 설명 합니다. 폼 및 컨트롤을 사용하여 자신의 애플리케이션에 사용할 사용자 인터페이스를 만든 다음에는 애플리케이션의 동작을 정의하는 코드를 작성해야 합니다. 모든 최신 프로그래밍 언어와 마찬가지로 Visual Basic에서는 다양 한 일반적인 프로그래밍 구문과 언어 요소를 지원 합니다.  
+The following topics introduce and discuss the essential components of Visual Basic, an object-oriented programming language. 폼 및 컨트롤을 사용하여 자신의 애플리케이션에 사용할 사용자 인터페이스를 만든 다음에는 애플리케이션의 동작을 정의하는 코드를 작성해야 합니다. As with any modern programming language, Visual Basic supports a number of common programming constructs and language elements.  
   
- 다른 언어로 프로그래밍해본 경우 이 섹션에서 다루는 내용의 상당 부분이 익숙할 것입니다. 대부분의 구문이 유사한 다른 언어의 이지만, Visual Basic의 이벤트 구동 특성 약간의 차이점을 소개 합니다.  
+ 다른 언어로 프로그래밍해본 경우 이 섹션에서 다루는 내용의 상당 부분이 익숙할 것입니다. While most of the constructs are similar to those in other languages, the event-driven nature of Visual Basic introduces some subtle differences.  
   
- 프로그래밍을 처음 접하는 경우 이 섹션의 자료가 코드 작성을 위한 기본 구성 요소에 대한 소개 문서가 될 것입니다. 기본을 이해 하면 Visual Basic을 사용 하 여 강력한 응용 프로그램을 만들 수 있습니다.  
+ 프로그래밍을 처음 접하는 경우 이 섹션의 자료가 코드 작성을 위한 기본 구성 요소에 대한 소개 문서가 될 것입니다. Once you understand the basics, you can create powerful applications using Visual Basic.  
   
-## <a name="in-this-section"></a>섹션 내용  
+## <a name="in-this-section"></a>단원 내용  
  [배열](../../../visual-basic/programming-guide/language-features/arrays/index.md)  
  여러 관련 값을 포함하는 배열을 선언하고 사용하여 더 간단하면서 강력한 코드를 만드는 방법을 설명합니다.  
   
@@ -83,4 +83,4 @@ ms.locfileid: "62053784"
  .NET Framework에서 제공되는 컬렉션의 형식 중 일부에 대해 설명 합니다. 간단한 컬렉션 및 키/값 쌍의 컬렉션을 사용하는 방법을 보여 줍니다.  
   
  [Visual Basic 언어 참조](../../../visual-basic/language-reference/index.md)  
- Visual Basic 프로그래밍의 다양 한 측면에 대 한 참조 정보를 제공합니다.
+ Provides reference information on various aspects of Visual Basic programming.

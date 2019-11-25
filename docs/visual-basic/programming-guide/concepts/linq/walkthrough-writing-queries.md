@@ -1,5 +1,5 @@
 ---
-title: Visual Basic에서 쿼리 작성
+title: 쿼리 작성
 ms.date: 07/20/2015
 helpviewer_keywords:
 - queries [LINQ in Visual Basic], writing
@@ -7,139 +7,139 @@ helpviewer_keywords:
 - LINQ [Visual Basic], writing queries
 - writing LINQ queries [Visual Basic]
 ms.assetid: f0045808-b9fe-4d31-88d1-473d9957211e
-ms.openlocfilehash: ac654701a459b57e7121cb82f4cf53941bcf15e0
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 6a9f229697ce3d6328c6fb09d18d4cc2627eab10
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72578938"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351025"
 ---
 # <a name="walkthrough-writing-queries-in-visual-basic"></a>연습: Visual Basic에서 쿼리 작성
 
-이 연습에서는 Visual Basic 언어 기능을 사용 하 여 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 쿼리 식을 작성 하는 방법을 보여 줍니다. 이 연습에서는 학생 개체 목록에 대 한 쿼리를 만드는 방법, 쿼리를 실행 하는 방법 및 수정 하는 방법을 보여 줍니다. 이 쿼리는 개체 이니셜라이저, 로컬 형식 유추 및 익명 형식을 비롯 한 여러 기능을 통합 합니다.
+This walkthrough demonstrates how you can use Visual Basic language features to write [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] query expressions. The walkthrough demonstrates how to create queries on a list of Student objects, how to run the queries, and how to modify them. The queries incorporate several features including object initializers, local type inference, and anonymous types.
 
-이 연습을 완료 한 후 관심 있는 특정 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 공급자의 샘플과 설명서로 이동할 준비가 됩니다. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 공급자는 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], LINQ to DataSet 및 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]를 포함 합니다.
+After completing this walkthrough, you will be ready to move on to the samples and documentation for the specific [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] provider you are interested in. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] providers include [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], LINQ to DataSet, and [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].
 
 ## <a name="create-a-project"></a>프로젝트 만들기
 
-### <a name="to-create-a-console-application-project"></a>콘솔 응용 프로그램 프로젝트를 만들려면
+### <a name="to-create-a-console-application-project"></a>To create a console application project
 
 1. Visual Studio를 시작합니다.
 
 2. **파일** 메뉴에서 **새로 만들기**를 가리킨 다음 **프로젝트**를 클릭합니다.
 
-3. **설치 된 템플릿** 목록에서 **Visual Basic**을 클릭 합니다.
+3. In the **Installed Templates** list, click **Visual Basic**.
 
-4. 프로젝트 형식 목록에서 **콘솔 응용 프로그램**을 클릭 합니다. **이름** 상자에 프로젝트의 이름을 입력 하 고 **확인**을 클릭 합니다.
+4. In the list of project types, click **Console Application**. In the **Name** box, type a name for the project, and then click **OK**.
 
-    프로젝트가 생성 됩니다. 기본적으로이 파일에는 System.object에 대 한 참조가 포함 되어 있습니다. 또한 [프로젝트 디자이너 (Visual Basic)의 참조 페이지](/visualstudio/ide/reference/references-page-project-designer-visual-basic) 에서 **가져온 네임 스페이스** 목록에는 <xref:System.Linq?displayProperty=nameWithType> 네임 스페이스가 포함 됩니다.
+    A project is created. By default, it contains a reference to System.Core.dll. Also, the **Imported namespaces** list on the [References Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic) includes the <xref:System.Linq?displayProperty=nameWithType> namespace.
 
-5. [컴파일 페이지, 프로젝트 디자이너 (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)에서 **옵션 유추** 가 **On**으로 설정 되어 있는지 확인 합니다.
+5. On the [Compile Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic), ensure that **Option infer** is set to **On**.
 
-## <a name="add-an-in-memory-data-source"></a>메모리 내 데이터 원본 추가
+## <a name="add-an-in-memory-data-source"></a>Add an In-Memory Data Source
 
-이 연습에서 쿼리에 대 한 데이터 소스는 `Student` 개체의 목록입니다. 각 `Student` 개체에는 학생 본문의 이름, 성, 클래스 연도 및 교육 등급이 포함 되어 있습니다.
+The data source for the queries in this walkthrough is a list of `Student` objects. Each `Student` object contains a first name, a last name, a class year, and an academic rank in the student body.
 
 ### <a name="to-add-the-data-source"></a>데이터 소스를 추가하려면
 
-- @No__t_0 클래스를 정의 하 고 클래스의 인스턴스 목록을 만듭니다.
+- Define a `Student` class, and create a list of instances of the class.
 
   > [!IMPORTANT]
-  > @No__t_0 클래스를 정의 하 고 연습 예제에 사용 된 목록을 만드는 데 필요한 코드는 [방법: 항목 목록 만들기](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)에서 제공 됩니다. 여기에서 복사 하 여 프로젝트에 붙여 넣을 수 있습니다. 새 코드는 프로젝트를 만들 때 표시 된 코드를 대체 합니다.
+  > The code needed to define the `Student` class and create the list used in the walkthrough examples is provided in [How to: Create a List of Items](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md). You can copy it from there and paste it into your project. The new code replaces the code that appeared when you created the project.
 
-### <a name="to-add-a-new-student-to-the-students-list"></a>학생 목록에 새 학생을 추가 하려면
+### <a name="to-add-a-new-student-to-the-students-list"></a>To add a new student to the students list
 
-- @No__t_0 메서드의 패턴에 따라 `Student` 클래스의 다른 인스턴스를 목록에 추가 합니다. 학생을 추가 하면 개체 이니셜라이저를 소개 합니다. 자세한 내용은 [개체 이니셜라이저: 명명 된 형식과 익명 형식](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)을 참조 하세요.
+- Follow the pattern in the `getStudents` method to add another instance of the `Student` class to the list. Adding the student will introduce you to object initializers. For more information, see [Object Initializers: Named and Anonymous Types](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md).
 
 ## <a name="create-a-query"></a>쿼리 만들기
 
-이 섹션에 추가 된 쿼리는 실행 될 때 교육 등급이 상위 10 개에 배치 하는 학생의 목록을 생성 합니다. 쿼리가 매번 전체 `Student` 개체를 선택 하기 때문에 쿼리 결과의 형식이 `IEnumerable(Of Student)` 됩니다. 그러나 일반적으로 쿼리 형식은 쿼리 정의에 지정 되지 않습니다. 대신 컴파일러는 로컬 형식 유추를 사용 하 여 형식을 결정 합니다. 자세한 내용은 [지역 형식 유추](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)를 참조 하세요. 쿼리의 범위 변수 `currentStudent`는 소스의 각 `Student` 인스턴스에 대 한 참조 역할을 하며, `students`는 `students`에서 각 개체의 속성에 대 한 액세스를 제공 합니다.
+When executed, the query added in this section produces a list of the students whose academic rank puts them in the top ten. Because the query selects the complete `Student` object each time, the type of the query result is `IEnumerable(Of Student)`. However, the type of the query typically is not specified in query definitions. Instead, the compiler uses local type inference to determine the type. For more information, see [Local Type Inference](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md). The query's range variable, `currentStudent`, serves as a reference to each `Student` instance in the source, `students`, providing access to the properties of each object in `students`.
 
 ### <a name="to-create-a-simple-query"></a>단순 쿼리를 작성하려면
 
-1. 프로젝트의 `Main` 메서드에서 다음과 같이 표시 되는 위치를 찾습니다.
+1. Find the place in the `Main` method of the project that is marked as follows:
 
     [!code-vb[VbLINQWalkthrough#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#1)]
 
-    다음 코드를 복사 하 여에 붙여넣습니다.
+    Copy the following code and paste it in.
 
     [!code-vb[VbLINQWalkthrough#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#2)]
 
-2. 코드의 `studentQuery` 위로 마우스 포인터를 가져가면 컴파일러 할당 형식이 `IEnumerable(Of Student)` 되었는지 확인 합니다.
+2. Rest the mouse pointer over `studentQuery` in your code to verify that the compiler-assigned type is `IEnumerable(Of Student)`.
 
-## <a name="run-the-query"></a>쿼리 실행
+## <a name="run-the-query"></a>Run the Query
 
-쿼리 실행 결과가 아닌 쿼리 정의를 포함 하 `studentQuery` 변수입니다. 쿼리를 실행 하는 일반적인 메커니즘은 `For Each` 루프입니다. 반환 된 시퀀스의 각 요소는 루프 반복 변수를 통해 액세스 됩니다. 쿼리 실행에 대 한 자세한 내용은 [첫 번째 LINQ 쿼리 작성](../../../../visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query.md)을 참조 하세요.
+The variable `studentQuery` contains the definition of the query, not the results of running the query. A typical mechanism for running a query is a `For Each` loop. Each element in the returned sequence is accessed through the loop iteration variable. For more information about query execution, see [Writing Your First LINQ Query](../../../../visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query.md).
 
-### <a name="to-run-the-query"></a>쿼리를 실행 하려면
+### <a name="to-run-the-query"></a>To run the query
 
-1. 프로젝트의 쿼리 아래에 다음 `For Each` 루프를 추가 합니다.
+1. Add the following `For Each` loop below the query in your project.
 
     [!code-vb[VbLINQWalkthrough#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#3)]
 
-2. 루프 제어 변수 위에 마우스 포인터를 올려 `studentRecord` 데이터 형식을 확인 합니다. @No__t_2 `Student` 인스턴스의 컬렉션을 반환 하기 때문에 `studentRecord` 형식은 `Student` 유추 됩니다.
+2. Rest the mouse pointer over the loop control variable `studentRecord` to see its data type. The type of `studentRecord` is inferred to be `Student`, because `studentQuery` returns a collection of `Student` instances.
 
-3. CTRL + F5 키를 눌러 응용 프로그램을 빌드하고 실행 합니다. 콘솔 창에서 결과를 확인 합니다.
+3. Build and run the application by pressing CTRL+F5. Note the results in the console window.
 
 ## <a name="modify-the-query"></a>쿼리 수정
 
-쿼리 결과가 지정 된 순서로 검색 되는 것이 더 쉽습니다. 사용 가능한 필드에 따라 반환 된 시퀀스를 정렬할 수 있습니다.
+It is easier to scan query results if they are in a specified order. You can sort the returned sequence based on any available field.
 
 ### <a name="to-order-the-results"></a>결과를 정렬하려면
 
-1. 쿼리의 `Where` 문과 `Select` 문 사이에 다음 `Order By` 절을 추가 합니다. @No__t_0 절은 각 학생의 성에 따라 오름차순으로 결과를 정렬 합니다.
+1. Add the following `Order By` clause between the `Where` statement and the `Select` statement of the query. The `Order By` clause will order the results alphabetically from A to Z, according to the last name of each student.
 
     ```vb
     Order By currentStudent.Last Ascending
     ```
 
-2. 성을 기준으로 정렬 한 다음 이름을 기준으로 정렬 하려면 두 필드를 모두 쿼리에 추가 합니다.
+2. To order by last name and then first name, add both fields to the query:
 
     ```vb
     Order By currentStudent.Last Ascending, currentStudent.First Ascending
     ```
 
-    @No__t_0를 Z에서 A로 정렬 하도록 지정할 수도 있습니다.
+    You can also specify `Descending` to order from Z to A.
 
-3. CTRL + F5 키를 눌러 응용 프로그램을 빌드하고 실행 합니다. 콘솔 창에서 결과를 확인 합니다.
+3. Build and run the application by pressing CTRL+F5. Note the results in the console window.
 
-### <a name="to-introduce-a-local-identifier"></a>로컬 식별자를 도입 하려면
+### <a name="to-introduce-a-local-identifier"></a>To introduce a local identifier
 
-1. 이 섹션의 코드를 추가 하 여 쿼리 식의 로컬 식별자를 소개 합니다. 로컬 식별자에는 중간 결과가 포함 됩니다. 다음 예제에서 `name`는 학생의 성과 이름에 대 한 연결을 포함 하는 식별자입니다. 로컬 식별자를 편리 하 게 사용 하거나 여러 번 계산 되는 식의 결과를 저장 하 여 성능을 향상 시킬 수 있습니다.
+1. Add the code in this section to introduce a local identifier in the query expression. The local identifier will hold an intermediate result. In the following example, `name` is an identifier that holds a concatenation of the student's first and last names. A local identifier can be used for convenience, or it can enhance performance by storing the results of an expression that would otherwise be calculated multiple times.
 
     [!code-vb[VbLINQWalkthrough#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#4)]
 
-2. CTRL + F5 키를 눌러 응용 프로그램을 빌드하고 실행 합니다. 콘솔 창에서 결과를 확인 합니다.
+2. Build and run the application by pressing CTRL+F5. Note the results in the console window.
 
-### <a name="to-project-one-field-in-the-select-clause"></a>Select 절에서 하나의 필드를 프로젝션 하려면
+### <a name="to-project-one-field-in-the-select-clause"></a>To project one field in the Select clause
 
-1. 이 섹션에서 쿼리 및 `For Each` 루프를 추가 하 여 요소가 소스의 요소와 다른 시퀀스를 생성 하는 쿼리를 만듭니다. 다음 예제에서 원본은 `Student` 개체의 컬렉션 이지만 각 개체의 한 멤버만 반환 됩니다. 성이 가르시아 섬 인 학생의 첫 번째 이름입니다. @No__t_0는 문자열 이기 때문에 `studentQuery3`에서 반환 된 시퀀스의 데이터 형식은 문자열 시퀀스인 `IEnumerable(Of String)` 됩니다. 이전 예제에서와 같이 `studentQuery3`에 대 한 데이터 형식의 할당은 컴파일러가 지역 형식 유추를 사용 하 여 확인할 수 있도록 남아 있습니다.
+1. Add the query and `For Each` loop from this section to create a query that produces a sequence whose elements differ from the elements in the source. In the following example, the source is a collection of `Student` objects, but only one member of each object is returned: the first name of students whose last name is Garcia. Because `currentStudent.First` is a string, the data type of the sequence returned by `studentQuery3` is `IEnumerable(Of String)`, a sequence of strings. As in earlier examples, the assignment of a data type for `studentQuery3` is left for the compiler to determine by using local type inference.
 
     [!code-vb[VbLINQWalkthrough#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#5)]
 
-2. 코드의 `studentQuery3` 위로 마우스 포인터를 가져가면 할당 된 형식이 `IEnumerable(Of String)` 되었는지 확인 합니다.
+2. Rest the mouse pointer over `studentQuery3` in your code to verify that the assigned type is `IEnumerable(Of String)`.
 
-3. CTRL + F5 키를 눌러 응용 프로그램을 빌드하고 실행 합니다. 콘솔 창에서 결과를 확인 합니다.
+3. Build and run the application by pressing CTRL+F5. Note the results in the console window.
 
-### <a name="to-create-an-anonymous-type-in-the-select-clause"></a>Select 절에서 익명 형식을 만들려면
+### <a name="to-create-an-anonymous-type-in-the-select-clause"></a>To create an anonymous type in the Select clause
 
-1. 쿼리에서 익명 형식이 사용 되는 방법을 보려면이 섹션의 코드를 추가 합니다. 전체 레코드 (이전 예제에서는 `currentStudent` 레코드) 또는 단일 필드 (이전 섹션의 `First`)가 아니라 데이터 원본에서 여러 필드를 반환 하려는 경우 쿼리에서이를 사용 합니다. 결과에 포함할 필드를 포함 하는 새 명명 된 형식을 정의 하는 대신 `Select` 절에서 필드를 지정 하면 컴파일러에서 해당 필드를 속성으로 사용 하 여 익명 형식을 만듭니다. 자세한 내용은 [무명 형식](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)을 참조하세요.
+1. Add the code from this section to see how anonymous types are used in queries. You use them in queries when you want to return several fields from the data source rather than complete records (`currentStudent` records in previous examples) or single fields (`First` in the preceding section). Instead of defining a new named type that contains the fields you want to include in the result, you specify the fields in the `Select` clause and the compiler creates an anonymous type with those fields as its properties. 자세한 내용은 [무명 형식](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)을 참조하세요.
 
-    다음 예에서는 교육용 순위를 1에서 10 사이에 있는 seniors의 이름과 순위를 반환 하는 쿼리를 만듭니다. 이 예제에서는 `Select` 절이 무명 형식의 인스턴스를 반환 하 고 익명 형식에 사용할 수 있는 이름이 없기 때문에 `studentQuery4` 형식을 유추 해야 합니다.
+    The following example creates a query that returns the name and rank of seniors whose academic rank is between 1 and 10, in order of academic rank. In this example, the type of `studentQuery4` must be inferred because the `Select` clause returns an instance of an anonymous type, and an anonymous type has no usable name.
 
     [!code-vb[VbLINQWalkthrough#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#6)]
 
-2. CTRL + F5 키를 눌러 응용 프로그램을 빌드하고 실행 합니다. 콘솔 창에서 결과를 확인 합니다.
+2. Build and run the application by pressing CTRL+F5. Note the results in the console window.
 
-## <a name="additional-examples"></a>추가 예제
+## <a name="additional-examples"></a>Additional Examples
 
-기본 사항을 이해 했으므로 다음은 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리의 유연성과 성능을 보여 주는 추가 예제 목록입니다. 각 예제 앞에는 수행 되는 작업에 대 한 간략 한 설명이 나와 있습니다. 각 쿼리에 대 한 쿼리 결과 변수 위로 마우스 포인터를 가져가면 유추 된 형식을 볼 수 있습니다. @No__t_0 루프를 사용 하 여 결과를 생성 합니다.
+Now that you understand the basics, the following is a list of additional examples to illustrate the flexibility and power of [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] queries. Each example is preceded by a brief description of what it does. Rest the mouse pointer over the query result variable for each query to see the inferred type. Use a `For Each` loop to produce the results.
 
 [!code-vb[VbLINQWalkthrough#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#7)]
 
 ## <a name="additional-information"></a>추가 정보
 
-쿼리 작업의 기본 개념을 잘 알고 있으면 관심 있는 특정 형식의 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 공급자에 대 한 설명서와 예제를 읽을 준비가 된 것입니다.
+After you are familiar with the basic concepts of working with queries, you are ready to read the documentation and samples for the specific type of [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] provider that you are interested in:
 
 - [LINQ to Objects](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
 

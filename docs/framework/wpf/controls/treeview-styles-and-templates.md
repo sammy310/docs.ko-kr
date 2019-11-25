@@ -9,15 +9,15 @@ helpviewer_keywords:
 - styles [WPF], TreeView
 - TreeView [WPF], styles and templates
 ms.assetid: a49adb77-0202-4caa-b94a-8bb110d7fa9a
-ms.openlocfilehash: f6dbe54324a5ad5e2f85719d819c035abfd644b1
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 45276d23380fe956fc3d59b90d5baae23ee8a7e2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460191"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283629"
 ---
 # <a name="treeview-styles-and-templates"></a>TreeView 스타일 및 템플릿
-이 항목에서는 <xref:System.Windows.Controls.TreeView> 컨트롤의 스타일 및 템플릿에 대해 설명 합니다. 기본 <xref:System.Windows.Controls.ControlTemplate>를 수정 하 여 컨트롤에 고유한 모양을 제공할 수 있습니다. 자세한 내용은 [ControlTemplate을 만들어 기존 컨트롤의 모양 사용자 지정](customizing-the-appearance-of-an-existing-control.md)을 참조하세요.  
+이 항목에서는 <xref:System.Windows.Controls.TreeView> 컨트롤의 스타일 및 템플릿에 대해 설명 합니다. 기본값을 수정할 수 있습니다 <xref:System.Windows.Controls.ControlTemplate> 고유한 모양을 제어할 수 있습니다. 자세한 내용은 [컨트롤에 대 한 템플릿 만들기](../../../desktop-wpf/themes/how-to-create-apply-template.md)를 참조 하세요.  
   
 ## <a name="treeview-parts"></a>TreeView 파트  
  <xref:System.Windows.Controls.TreeView> 컨트롤에는 명명 된 파트가 없습니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "73460191"
 ## <a name="treeviewitem-parts"></a>TreeViewItem 파트  
  다음 표에서는 <xref:System.Windows.Controls.TreeViewItem> 컨트롤의 명명 된 파트를 나열 합니다.  
   
-|파트|Type|설명|  
+|부분|형식|설명|  
 |----------|----------|-----------------|  
 |PART_Header|<xref:System.Windows.FrameworkElement>|<xref:System.Windows.Controls.TreeView> 컨트롤의 머리글 내용을 포함 하는 시각적 요소입니다.|  
   
@@ -47,16 +47,16 @@ ms.locfileid: "73460191"
 |----------------------|---------------------------|-----------------|  
 |보통|CommonStates|기본 상태입니다.|  
 |MouseOver|CommonStates|마우스 포인터가 <xref:System.Windows.Controls.TreeViewItem>위에 배치 됩니다.|  
-|Disabled|CommonStates|<xref:System.Windows.Controls.TreeViewItem> 사용 하지 않도록 설정 되었습니다.|  
+|사용 안 함|CommonStates|<xref:System.Windows.Controls.TreeViewItem> 사용 하지 않도록 설정 되었습니다.|  
 |포커스 있음|FocusStates|<xref:System.Windows.Controls.TreeViewItem>에 포커스가 있습니다.|  
 |포커스 없음|FocusStates|<xref:System.Windows.Controls.TreeViewItem>에 포커스가 없습니다.|  
 |넓게|ExpansionStates|<xref:System.Windows.Controls.TreeViewItem> 컨트롤이 확장 됩니다.|  
 |Collapsed|ExpansionStates|<xref:System.Windows.Controls.TreeViewItem> 컨트롤이 축소 됩니다.|  
-|HasItems|Hasstates 상태|<xref:System.Windows.Controls.TreeViewItem>에 항목이 있습니다.|  
-|NoItems|Hasstates 상태|<xref:System.Windows.Controls.TreeViewItem>에 항목이 없습니다.|  
-|선택함|SelectionStates|<xref:System.Windows.Controls.TreeViewItem> 선택 됩니다.|  
+|HasItems|HasItemsStates|<xref:System.Windows.Controls.TreeViewItem>에 항목이 있습니다.|  
+|NoItems|HasItemsStates|<xref:System.Windows.Controls.TreeViewItem>에 항목이 없습니다.|  
+|선택|SelectionStates|<xref:System.Windows.Controls.TreeViewItem> 을 선택 합니다.|  
 |SelectedInactive|SelectionStates|<xref:System.Windows.Controls.TreeViewItem> 선택 되어 있지만 활성화 되어 있지 않습니다.|  
-|선택 취소|SelectionStates|<xref:System.Windows.Controls.TreeViewItem> 선택 되지 않았습니다.|  
+|선택 취소|SelectionStates|<xref:System.Windows.Controls.TreeViewItem> 선택 하지 않으면.|  
 |유효|ValidationStates|컨트롤은 <xref:System.Windows.Controls.Validation> 클래스를 사용 하 고 연결 된 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 속성은 `false`됩니다.|  
 |InvalidFocused|ValidationStates|연결 된 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 속성 `true` 컨트롤에 포커스가 있습니다.|  
 |InvalidUnfocused|ValidationStates|연결 된 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 속성이 `true` 컨트롤에 포커스가 없는 경우|  
@@ -72,11 +72,11 @@ ms.locfileid: "73460191"
   
  전체 샘플을 보려면 [Styling with ControlTemplates Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating)(ControlTemplate으로 스타일 지정 샘플)을 참조하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Control 스타일 및 템플릿](control-styles-and-templates.md)
 - [컨트롤 사용자 지정](control-customization.md)
 - [스타일 지정 및 템플릿](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [ControlTemplate을 만들어 기존 컨트롤의 모양 사용자 지정](customizing-the-appearance-of-an-existing-control.md)
+- [컨트롤에 대 한 템플릿 만들기](../../../desktop-wpf/themes/how-to-create-apply-template.md)

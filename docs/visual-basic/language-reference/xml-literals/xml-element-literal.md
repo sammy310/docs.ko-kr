@@ -1,5 +1,5 @@
 ---
-title: XML 요소 리터럴(Visual Basic)
+title: XML 요소 리터럴
 ms.date: 07/20/2015
 f1_keywords:
 - vb.XmlLiteralElement
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - element literal [Visual Basic]
 - XML literals [Visual Basic], element
 ms.assetid: 95039642-7893-48b7-b23f-45a6c55d8f67
-ms.openlocfilehash: 3431ad32809e1f15eb8473d5af7660367cca04de
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d6d900ca6868cfffe6b0e5b349321a79c5716c46
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751958"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347022"
 ---
 # <a name="xml-element-literal-visual-basic"></a>XML 요소 리터럴(Visual Basic)
 
-나타내는 리터럴입니다는 <xref:System.Xml.Linq.XElement> 개체입니다.
+A literal that represents an <xref:System.Xml.Linq.XElement> object.
 
 ## <a name="syntax"></a>구문
 
@@ -31,101 +31,101 @@ ms.locfileid: "64751958"
 
 - `<`
 
-  필수 요소. 시작 요소 태그를 엽니다.
+  필수 요소. Opens the starting element tag.
 
 - `name`
 
-  필수 요소. 요소 이름입니다. 형식에는 다음 중 하나입니다.
+  필수 요소. 요소 이름입니다. The format is one of the following:
 
-  - 폼의 요소 이름에 대 한 리터럴 텍스트 `[ePrefix:]eName`여기서:
+  - Literal text for the element name, of the form `[ePrefix:]eName`, where:
 
     |파트|설명|
     |---|---|
-    |`ePrefix`|선택 사항입니다. 요소에 대 한 XML 네임 스페이스 접두사입니다. 전역으로 정의 된 XML 네임 스페이스에 있어야는 `Imports` 파일 또는 프로젝트 수준 또는 로컬이 요소 또는 부모 요소에 정의 된 XML 네임 스페이스 문입니다.|
-    |`eName`|필수 요소. 요소 이름입니다. 형식에는 다음 중 하나입니다.<br /><br /> -리터럴 텍스트입니다. 참조 [선언 된 XML 요소 및 특성의 이름을](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)입니다.<br />포함 형식의 식을 `<%= eNameExp %>`합니다. 유형의 `eNameExp` 있어야 `String` 이거나 암시적으로 변환할 수 있는 유형 <xref:System.Xml.Linq.XName>합니다.|
+    |`ePrefix`|(선택 사항) XML namespace prefix for the element. Must be a global XML namespace that is defined with an `Imports` statement in the file or at the project level, or a local XML namespace that is defined in this element or a parent element.|
+    |`eName`|필수 요소. 요소 이름입니다. The format is one of the following:<br /><br /> - Literal text. See [Names of Declared XML Elements and Attributes](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).<br />- Embedded expression of the form `<%= eNameExp %>`. The type of `eNameExp` must be `String` or a type that is implicitly convertible to <xref:System.Xml.Linq.XName>.|
 
-  - 포함 식 형식의 `<%= nameExp %>`합니다. 유형의 `nameExp` 있어야 `String` 또는 형식으로 암시적으로 변환할 <xref:System.Xml.Linq.XName>합니다. 포함된 식은 요소의 닫는 태그에 허용 되지 않습니다.
+  - Embedded expression of the form `<%= nameExp %>`. The type of `nameExp` must be `String` or a type implicitly convertible to <xref:System.Xml.Linq.XName>. An embedded expression is not allowed in a closing tag of an element.
 
 - `attributeList`
 
-  선택 사항입니다. 리터럴에서 특성 목록을 선언 합니다.
+  (선택 사항) List of attributes declared in the literal.
 
   `attribute [ attribute ... ]`
 
-  각 `attribute` 다음 구문 중 하나:
+  Each `attribute` has one of the following syntaxes:
 
-  - 특성 형식의 할당이 `[aPrefix:]aName=aValue`여기서:
+  - Attribute assignment, of the form `[aPrefix:]aName=aValue`, where:
 
     |파트|설명|
     |---|---|
-    |`aPrefix`|선택 사항입니다. 특성에 대 한 XML 네임 스페이스 접두사입니다. 전역으로 정의 된 XML 네임 스페이스에 있어야는 `Imports` 문이나이 요소 또는 부모 요소에 정의 된 로컬 XML 네임 스페이스입니다.|
-    |`aName`|필수 요소. 특성의 이름입니다. 형식에는 다음 중 하나입니다.<br /><br /> -리터럴 텍스트입니다. 참조 [선언 된 XML 요소 및 특성의 이름을](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)입니다.<br />포함 형식의 식을 `<%= aNameExp %>`합니다. 유형의 `aNameExp` 있어야 `String` 이거나 암시적으로 변환할 수 있는 유형 <xref:System.Xml.Linq.XName>합니다.|
-    |`aValue`|선택 사항입니다. 특성의 값입니다. 형식에는 다음 중 하나입니다.<br /><br /> -리터럴 텍스트를 따옴표로 묶어야 합니다.<br />포함 형식의 식을 `<%= aValueExp %>`합니다. 모든 형식이 허용 됩니다.|
+    |`aPrefix`|(선택 사항) XML namespace prefix for the attribute. Must be a global XML namespace that is defined with an `Imports` statement, or a local XML namespace that is defined in this element or a parent element.|
+    |`aName`|필수 요소. 특성의 이름입니다. The format is one of the following:<br /><br /> - Literal text. See [Names of Declared XML Elements and Attributes](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).<br />- Embedded expression of the form `<%= aNameExp %>`. The type of `aNameExp` must be `String` or a type that is implicitly convertible to <xref:System.Xml.Linq.XName>.|
+    |`aValue`|(선택 사항) Value of the attribute. The format is one of the following:<br /><br /> - Literal text, enclosed in quotation marks.<br />- Embedded expression of the form `<%= aValueExp %>`. Any type is allowed.|
 
-  - 포함 식 형식의 `<%= aExp %>`합니다.
+  - Embedded expression of the form `<%= aExp %>`.
 
 - `/>`
 
-  선택 사항입니다. 요소 콘텐츠가 없는 빈 요소를 나타냅니다.
+  (선택 사항) Indicates that the element is an empty element, without content.
 
 - `>`
 
-  필수 요소. 이상 버전 또는 빈 요소 태그를 종료합니다.
+  필수 요소. Ends the beginning or empty element tag.
 
 - `elementContents`
 
-  선택 사항입니다. 콘텐츠 요소입니다.
+  (선택 사항) Content of the element.
 
   `content [ content ... ]`
 
-  각 `content` 다음 중 하나일 수 있습니다.
+  Each `content` can be one of the following:
 
-  - 리터럴 텍스트입니다. 모든 공백을 `elementContents` 리터럴 텍스트 경우 의미를 갖습니다.
+  - Literal text. All the white space in `elementContents` becomes significant if there is any literal text.
 
-  - 포함 식 형식의 `<%= contentExp %>`합니다.
+  - Embedded expression of the form `<%= contentExp %>`.
 
-  - XML 요소 리터럴입니다.
+  - XML element literal.
 
-  - XML 주석 리터럴입니다. 참조 [XML 주석 리터럴](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md)합니다.
+  - XML comment literal. See [XML Comment Literal](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md).
 
-  - XML 처리 명령 리터럴입니다. 참조 [XML 처리 명령 리터럴](../../../visual-basic/language-reference/xml-literals/xml-processing-instruction-literal.md)합니다.
+  - XML processing instruction literal. See [XML Processing Instruction Literal](../../../visual-basic/language-reference/xml-literals/xml-processing-instruction-literal.md).
 
-  - XML CDATA 리터럴입니다. 참조 [XML CDATA 리터럴](../../../visual-basic/language-reference/xml-literals/xml-cdata-literal.md)합니다.
+  - XML CDATA literal. See [XML CDATA Literal](../../../visual-basic/language-reference/xml-literals/xml-cdata-literal.md).
 
 - `</[name]>`
 
-  선택 사항입니다. 요소의 닫는 태그를 나타냅니다. 선택적 `name` 포함 된 식의 결과 매개 변수가 잘못 되었습니다.
+  (선택 사항) Represents the closing tag for the element. The optional `name` parameter is not allowed when it is the result of an embedded expression.
 
 ## <a name="return-value"></a>반환 값
 
 <xref:System.Xml.Linq.XElement> 개체입니다.
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
-XML 요소 리터럴 구문을 사용 하 여 만들려는 <xref:System.Xml.Linq.XElement> 코드에서 개체입니다.
+You can use the XML element literal syntax to create <xref:System.Xml.Linq.XElement> objects in your code.
 
 > [!NOTE]
-> XML 리터럴을 줄 연속 문자를 사용 하지 않고 여러 줄을 확장할 수 있습니다. 이 기능을 사용 하면 XML 문서에서 콘텐츠를 복사 하 고 Visual Basic 프로그램에 직접 붙여넣을 수 있습니다.
+> An XML literal can span multiple lines without using line continuation characters. This feature enables you to copy content from an XML document and paste it directly into a Visual Basic program.
 
-포함 형식의 식이 `<%= exp %>` XML 요소 리터럴에에 동적 정보를 추가할 수 있습니다. 자세한 내용은 [XML의 포함 식](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)합니다.
+Embedded expressions of the form `<%= exp %>` enable you to add dynamic information to an XML element literal. For more information, see [Embedded Expressions in XML](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).
 
-Visual Basic 컴파일러는 XML 요소 리터럴에 호출으로 변환 합니다 <xref:System.Xml.Linq.XElement.%23ctor%2A> 생성자 및 필요한 경우는 <xref:System.Xml.Linq.XAttribute.%23ctor%2A> 생성자입니다.
+The Visual Basic compiler converts the XML element literal into calls to the <xref:System.Xml.Linq.XElement.%23ctor%2A> constructor and, if it is required, the <xref:System.Xml.Linq.XAttribute.%23ctor%2A> constructor.
 
 ## <a name="xml-namespaces"></a>XML 네임스페이스
 
-XML 네임 스페이스 접두사는 코드에서 여러 번 동일한 네임 스페이스에서 요소를 사용 하 여 XML 리터럴을 만들 수 있는 경우에 유용 합니다. 사용 하 여 정의 하는 전역 XML 네임 스페이스 접두사를 사용할 수는 `Imports` 문 또는 로컬 접두사를 사용 하 여 정의 하는 `xmlns:xmlPrefix="xmlNamespace"` 특성 구문입니다. 자세한 내용은 [Imports 문 (XML Namespace)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)합니다.
+XML namespace prefixes are useful when you have to create XML literals with elements from the same namespace many times in code. You can use global XML namespace prefixes, which you define by using the `Imports` statement, or local prefixes, which you define by using the `xmlns:xmlPrefix="xmlNamespace"` attribute syntax. For more information, see [Imports Statement (XML Namespace)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md).
 
-XML 네임 스페이스에 대 한 범위 지정 규칙에 따라 로컬 접두사 전역 접두사 보다 우선합니다. 그러나 XML 리터럴의 XML 네임 스페이스를 정의 하는 경우 해당 네임 스페이스가 아닙니다 포함된 식에 표시 되는 식에 사용할 수 있습니다. 포함된 된 식에는 전역 XML 네임 스페이스만 액세스할 수 있습니다.
+In accordance with the scoping rules for XML namespaces, local prefixes take precedence over global prefixes. However, if an XML literal defines an XML namespace, that namespace is not available to expressions that appear in an embedded expression. The embedded expression can access only the global XML namespace.
 
-Visual Basic 컴파일러는 XML 리터럴이 생성된 된 코드에서 하나의 로컬 네임 스페이스 정의로 사용 되는 각 전역 XML 네임 스페이스를 변환 합니다. 사용 되지 않는 전역 XML 네임 스페이스는 생성된 된 코드에 표시 되지 않습니다.
+The Visual Basic compiler converts each global XML namespace that is used by an XML literal into a one local namespace definition in the generated code. Global XML namespaces that are not used do not appear in the generated code.
 
 ## <a name="example"></a>예제
 
-다음 예제에서는 두 중첩 된 빈 요소가 포함 된 간단한 XML 요소를 만드는 방법을 보여 줍니다.
+The following example shows how to create a simple XML element that has two nested empty elements.
 
 [!code-vb[VbXMLSamples#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples9.vb#20)]
 
-다음 텍스트를 표시합니다. 리터럴 빈 요소의 구조를 유지 됨을 알 수 있습니다.
+The example displays the following text. Notice that the literal preserves the structure of the empty elements.
 
 ```xml
 <outer>
@@ -136,7 +136,7 @@ Visual Basic 컴파일러는 XML 리터럴이 생성된 된 코드에서 하나�
 
 ## <a name="example"></a>예제
 
-다음 예제에서는 포함 된 식을 사용 하 여 요소 이름과 특성을 만드는 방법을 보여 줍니다.
+The following example shows how to use embedded expressions to name an element and create attributes.
 
 [!code-vb[VbXMLSamples#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples9.vb#21)]
 
@@ -148,7 +148,7 @@ Visual Basic 컴파일러는 XML 리터럴이 생성된 된 코드에서 하나�
 
 ## <a name="example"></a>예제
 
-다음 예제에서는 `ns`를 XML 네임스페이스 접두사로 선언한 다음 XML 리터럴 만들려는 네임 스페이스의 접두사를 사용 하 고 요소의 마지막 폼을 표시 합니다.
+다음 예제에서는 `ns`를 XML 네임스페이스 접두사로 선언한 다음 It then uses the prefix of the namespace to create an XML literal and displays the element's final form.
 
 [!code-vb[VbXMLSamples#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples10.vb#22)]
 
@@ -163,9 +163,9 @@ Visual Basic 컴파일러는 XML 리터럴이 생성된 된 코드에서 하나�
 </ns:outer>
 ```
 
-컴파일러가 XML 네임 스페이스에 대 한 접두사 정의에 전역 XML 네임 스페이스의 접두사를 변환 하는 주의 하십시오. 합니다 \<ns:middle >에 대 한 XML 네임 스페이스 접두사를 재정의 하는 요소는 \<ns:inner1 > 요소입니다. 그러나 합니다 \<ns:inner2 > 정의한 네임 스페이스를 사용 하는 요소는 `Imports` 문입니다.
+Notice that the compiler converted the prefix of the global XML namespace into a prefix definition for the XML namespace. The \<ns:middle> element redefines the XML namespace prefix for the \<ns:inner1> element. However, the \<ns:inner2> element uses the namespace defined by the `Imports` statement.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Xml.Linq.XElement>
 - [선언된 XML 요소 및 특성의 이름](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)

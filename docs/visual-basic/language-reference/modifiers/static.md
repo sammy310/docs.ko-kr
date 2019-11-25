@@ -1,5 +1,5 @@
 ---
-title: Static(Visual Basic)
+title: Static
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Static
@@ -7,50 +7,50 @@ helpviewer_keywords:
 - static modifier
 - Static keyword [Visual Basic]
 ms.assetid: 19013910-4658-47b6-a22e-1744b527979e
-ms.openlocfilehash: f1031fe005a2fc264b50116b8ea3311dc7065dbc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f020756466888f51298abb423997906ddc7caff7
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647636"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350756"
 ---
 # <a name="static-visual-basic"></a>Static(Visual Basic)
-계속 존재 하 고 선언 된 프로시저가 종료 된 후 최신 값을 보유 하는 하나 이상의 선언 된 지역 변수를 지정 합니다.  
+Specifies that one or more declared local variables are to continue to exist and retain their latest values after termination of the procedure in which they are declared.  
   
-## <a name="remarks"></a>설명  
- 일반적으로 프로시저에서 지역 변수 소멸 프로시저를 중지 하는 즉시 합니다. 정적 변수는 계속 존재 하 고 최신 값을 유지 합니다. 프로시저를 호출 하는 코드 다음에 변수가 다시 초기화 되지 않습니다 및에 할당 되는 최신 값을 계속 유지 합니다. 정적 변수 계속에 정의 된 클래스 또는 모듈의 수명 동안 존재 합니다.  
+## <a name="remarks"></a>주의  
+ Normally, a local variable in a procedure ceases to exist as soon as the procedure stops. A static variable continues to exist and retains its most recent value. The next time your code calls the procedure, the variable is not reinitialized, and it still holds the latest value that you assigned to it. A static variable continues to exist for the lifetime of the class or module that it is defined in.  
   
 ## <a name="rules"></a>규칙  
   
-- **선언 컨텍스트입니다.** 사용할 수 있습니다 `Static` 로컬 변수 에서만. 즉, 선언 컨텍스트는 `Static` 변수는 프로시저 또는 프로시저에서 블록 이어야 합니다 하 고 소스 파일, 네임 스페이스, 클래스, 구조체 또는 모듈 수 없습니다.  
+- **Declaration Context.** You can use `Static` only on local variables. This means the declaration context for a `Static` variable must be a procedure or a block in a procedure, and it cannot be a source file, namespace, class, structure, or module.  
   
-     사용할 수 없습니다 `Static` 구조 프로시저 내에서.  
+     You cannot use `Static` inside a structure procedure.  
   
-- 데이터 형식의 `Static` 로컬 변수를 유추할 수 없습니다. 자세한 내용은 [로컬 형식 유추](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)합니다.  
+- The data types of `Static` local variables cannot be inferred. For more information, see [Local Type Inference](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).  
   
-- **결합 된 한정자입니다.** 지정할 수 없습니다 `Static` 와 함께 `ReadOnly`를 `Shadows`, 또는 `Shared` 같은 선언에 있습니다.  
+- **Combined Modifiers.** You cannot specify `Static` together with `ReadOnly`, `Shadows`, or `Shared` in the same declaration.  
   
 ## <a name="behavior"></a>동작  
- 정적 변수를 선언 하는 경우는 `Shared` 절차, 정적 변수 복사본 하나만 전체 응용 프로그램에서 사용할 수 있습니다. 호출을 `Shared` 클래스를 사용 하 여 프로시저 이름, 클래스의 인스턴스를 가리키는 변수 없습니다.  
+ When you declare a static variable in a `Shared` procedure, only one copy of the static variable is available for the whole application. You call a `Shared` procedure by using the class name, not a variable that points to an instance of the class.  
   
- 되지 않는 프로시저에서 정적 변수를 선언 하는 경우 `Shared`만 변수의 복사본 하나를 클래스의 각 인스턴스에 대해 사용할 수 있습니다. 클래스의 특정 인스턴스를 가리키는 변수를 사용 하는 비공유 프로시저를 호출 합니다.  
+ When you declare a static variable in a procedure that isn't `Shared`, only one copy of the variable is available for each instance of the class. You call a non-shared procedure by using a variable that points to a specific instance of the class.  
   
 ## <a name="example"></a>예제  
  다음 예에서는 `Static`의 사용법을 보여줍니다.  
   
  [!code-vb[VbVbalrKeywords#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class1.vb#5)]  
   
- 합니다 `Static` 변수 `totalSales` 한 번만 0으로 초기화 됩니다. 입력할 때마다 `updateSales`, `totalSales` 아직 최신 값에 대 한 계산입니다.  
+ The `Static` variable `totalSales` is initialized to 0 only one time. Each time that you enter `updateSales`, `totalSales` still has the most recent value that you calculated for it.  
   
- `Static` 한정자는이 컨텍스트에서 사용할 수 있습니다.  
+ The `Static` modifier can be used in this context:  
   
  [Dim 문](../../../visual-basic/language-reference/statements/dim-statement.md)  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)
 - [공유](../../../visual-basic/language-reference/modifiers/shared.md)
-- [Visual Basic의 수명](../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
+- [Lifetime in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
 - [변수 선언](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
 - [구조체](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [지역 형식 유추](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)

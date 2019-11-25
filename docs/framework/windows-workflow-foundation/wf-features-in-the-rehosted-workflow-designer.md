@@ -2,12 +2,12 @@
 title: 재호스팅된 워크플로 디자이너에서 새 Workflow Foundation 4.5 기능에 대한 지원
 ms.date: 03/30/2017
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
-ms.openlocfilehash: 20623c8d2f6bf66d2668fd07b0acae67865a3235
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 2b893fede30606789c82a64a19fa368e3fd74c4d
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69987237"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74142072"
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>재호스팅된 워크플로 디자이너에서 새 Workflow Foundation 4.5 기능에 대한 지원
 .NET Framework 4.5의 WF (Windows Workflow Foundation)에는 여러 가지 새로운 기능이 도입 되었습니다. 여기에는 Workflow designer 환경의 몇 가지 향상 된 기능이 포함 되어 있습니다. 이 항목에서는 이러한 기능 중 재호스트된 디자이너에서 지원되는 기능과 현재 지원되지 않는 기능을 자세히 설명합니다.
@@ -33,14 +33,14 @@ ms.locfileid: "69987237"
 > [빠른 찾기](whats-new-in-wf-in-dotnet.md#BKMK_QuickFind) 및 [파일에서 찾기](whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles) 는 재 호스트 된 디자이너에서 지원 되지 않습니다.
 
 ### <a name="delete-context-menu-item-in-variable-and-argument-designer"></a>변수 및 인수 디자이너에서 상황에 맞는 메뉴에 표시되는 삭제 항목
- [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]에서는 디자이너에서 키보드로만 변수 및 인수를 삭제할 수 있었습니다. .NET Framework 4.5부터 변수 및 인수는 상황에 맞는 메뉴를 사용 하 여 삭제할 수 있습니다. 이 기능은 재호스트된 디자이너에서 지원됩니다.
+ .NET Framework 4에서는 키보드를 사용 하 여 디자이너에서 변수와 인수를 삭제할 수 있었습니다. .NET Framework 4.5부터 변수 및 인수는 상황에 맞는 메뉴를 사용 하 여 삭제할 수 있습니다. 이 기능은 재호스트된 디자이너에서 지원됩니다.
 
  다음 스크린 샷에서는 변수 및 인수 디자이너의 상황에 맞는 메뉴를 보여 줍니다.
 
  ![변수 및 인수 디자이너 상황에 맞는 메뉴](./media/wf-features-in-the-rehosted-workflow-designer/designer-context-menu.png)
 
 ### <a name="auto-surround-with-sequence"></a>시퀀스로 자동 감싸기
- 워크플로 또는 특정 컨테이너 활동(예: <xref:System.Activities.Statements.NoPersistScope>)에는 단일 본문 활동만 포함할 수 있으므로 두 번째 활동을 추가하려면 개발자가 첫 번째 활동을 삭제하고 <xref:System.Activities.Statements.Sequence> 활동을 추가한 후 두 활동을 모두 시퀀스 활동에 추가해야 했습니다. .NET Framework 4.5부터 디자이너 화면에 두 번째 활동을 추가할 때 두 활동을 래핑하 `Sequence` 는 활동이 자동으로 생성 됩니다. 이 기능은 재호스트된 디자이너에서 지원됩니다.
+ 워크플로 또는 특정 컨테이너 활동(예: <xref:System.Activities.Statements.NoPersistScope>)에는 단일 본문 활동만 포함할 수 있으므로 두 번째 활동을 추가하려면 개발자가 첫 번째 활동을 삭제하고 <xref:System.Activities.Statements.Sequence> 활동을 추가한 후 두 활동을 모두 시퀀스 활동에 추가해야 했습니다. .NET Framework 4.5부터 디자이너 화면에 두 번째 활동을 추가 하는 경우 두 활동을 래핑하는 `Sequence` 활동이 자동으로 생성 됩니다. 이 기능은 재호스트된 디자이너에서 지원됩니다.
 
  다음 스크린 샷에서는 `WriteLine`의 `Body`에 있는 `NoPersistScope` 활동을 보여 줍니다.
 
@@ -72,10 +72,10 @@ ms.locfileid: "69987237"
  ![Visual Studio에서 순차 워크플로를 사용 하는 개요 보기의 스크린샷](./media/wf-features-in-the-rehosted-workflow-designer/outline-view-in-workflow-designer.jpg)
 
 ### <a name="more-control-of-visibility-of-shell-bar-and-header-items"></a>셸 표시줄 및 헤더 항목의 표시 방식 제어 향상
- 재호스트된 디자이너에서 특정 워크플로에 대해 의미가 없는 일부 표준 UI 컨트롤은 해제할 수 있습니다. [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]에서는 디자이너의 맨 아래에 있는 셸 표시줄을 통해서만 이를 사용자 지정할 수 있었습니다. .NET Framework 4.5에서를 적절 한 <xref:System.Activities.Presentation.View.DesignerView.WorkflowShellHeaderItemsVisibility%2A> <xref:System.Activities.Presentation.View.ShellHeaderItemsVisibility> 값으로 설정 하 여 디자이너 맨 위에 있는 셸 헤더 항목의 표시 유형을 조정할 수 있습니다.
+ 재호스트된 디자이너에서 특정 워크플로에 대해 의미가 없는 일부 표준 UI 컨트롤은 해제할 수 있습니다. .NET Framework 4에서이 사용자 지정은 디자이너 하단의 셸 표시줄 에서만 지원 됩니다. .NET Framework 4.5에서는 적절 한 <xref:System.Activities.Presentation.View.ShellHeaderItemsVisibility> 값을 사용 하 여 <xref:System.Activities.Presentation.View.DesignerView.WorkflowShellHeaderItemsVisibility%2A>을 설정 하 여 디자이너 맨 위에 있는 셸 헤더 항목의 표시 유형을 조정할 수 있습니다.
 
 ### <a name="auto-connect-and-auto-insert-in-flowchart-and-state-machine-workflows"></a>순서도 및 상태 시스템 워크플로의 자동 연결 및 자동 삽입
- [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]에서는 순서도 워크플로의 노드 간 연결을 수동으로 추가해야 했습니다. .NET Framework 4.5에서 순서도 및 상태 시스템 노드에는 활동을 도구 상자에서 디자이너 화면으로 끌 때 표시 되는 자동 연결 지점이 있습니다. 이러한 지점 중 하나에 활동을 놓으면 필요한 연결과 함께 활동이 자동으로 추가됩니다.
+ .NET Framework 4에서는 순서도 워크플로의 노드 간 연결을 수동으로 추가 해야 했습니다. .NET Framework 4.5에서 순서도 및 상태 시스템 노드에는 활동을 도구 상자에서 디자이너 화면으로 끌 때 표시 되는 자동 연결 지점이 있습니다. 이러한 지점 중 하나에 활동을 놓으면 필요한 연결과 함께 활동이 자동으로 추가됩니다.
 
  다음 스크린 샷에서는 도구 상자에서 디자이너 화면으로 활동을 끌어 올 때 표시되는 연결 지점을 보여 줍니다.
 
@@ -95,23 +95,23 @@ ms.locfileid: "69987237"
  디자이너 주석은 재호스트된 디자이너에서 지원됩니다.
 
 ### <a name="define-and-consume-activitydelegate-objects-in-the-designer"></a>디자이너에서 ActivityDelegate 개체 정의 및 사용
- [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]의 활동은 <xref:System.Activities.ActivityDelegate> 개체를 사용하여 워크플로의 다른 부분이 워크플로의 실행과 상호 작용할 수 있는 실행 지점을 노출했지만, 이러한 실행 지점을 사용하려면 일반적으로 많은 양의 코드가 필요했습니다. 이 릴리스에서는 개발자가 워크플로 디자이너를 사용하여 활동 대리자를 정의하고 사용할 수 있습니다. 자세한 내용은 [방법: 워크플로 디자이너](/visualstudio/workflow-designer/how-to-define-and-consume-activity-delegates-in-the-workflow-designer)에서 작업 대리자를 정의 하 고 사용 합니다.
+ .NET Framework 4의 활동은 <xref:System.Activities.ActivityDelegate> 개체를 사용 하 여 워크플로의 다른 부분이 워크플로의 실행과 상호 작용할 수 있는 실행 지점을 노출 하지만, 이러한 실행 지점을 사용 하려면 일반적으로 상당한 양의 코드가 필요 합니다. 이 릴리스에서는 개발자가 워크플로 디자이너를 사용하여 활동 대리자를 정의하고 사용할 수 있습니다. 자세한 내용은 [방법: 워크플로 디자이너에서 작업 대리자 정의 및 사용](/visualstudio/workflow-designer/how-to-define-and-consume-activity-delegates-in-the-workflow-designer)을 참조 하세요.
 
  활동 대리자는 재호스트된 디자이너에서 지원됩니다.
 
 ### <a name="build-time-validation"></a>빌드 타임 유효성 검사
- [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]에서는 워크플로 프로젝트를 빌드하는 동안 워크플로 유효성 검사 오류가 빌드 오류로 간주되지 않았습니다. 따라서 워크플로 유효성 검사 오류가 있더라도 워크플로 프로젝트를 성공적으로 빌드할 수 있었습니다. .NET Framework 4.5에서 워크플로 유효성 검사 오류로 인해 빌드가 실패 합니다.
+ .NET Framework 4에서는 워크플로 프로젝트를 빌드하는 동안 워크플로 유효성 검사 오류가 빌드 오류로 계산 되지 않았습니다. 따라서 워크플로 유효성 검사 오류가 있더라도 워크플로 프로젝트를 성공적으로 빌드할 수 있었습니다. .NET Framework 4.5에서 워크플로 유효성 검사 오류로 인해 빌드가 실패 합니다.
 
 > [!WARNING]
 > 빌드 타임 유효성 검사는 재호스트된 디자이너에서 지원되지 않습니다.  
   
 ### <a name="design-time-background-validation"></a>디자인 타임 백그라운드 유효성 검사  
- 에서 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]워크플로는 포그라운드 프로세스로 유효성을 검사 했기 때문에 복잡 하거나 시간이 많이 걸리는 유효성 검사 프로세스 중에 UI를 차단할 수도 있습니다. 이제는 백그라운드 스레드에서 워크플로 유효성 검사를 수행하므로 UI가 차단되지 않습니다.  
+ .NET Framework 4에서 워크플로는 포그라운드 프로세스로 유효성이 검사 되어 복잡 하거나 시간이 많이 걸리는 유효성 검사 프로세스 중에 UI를 차단할 수 있습니다. 이제는 백그라운드 스레드에서 워크플로 유효성 검사를 수행하므로 UI가 차단되지 않습니다.  
   
  디자인 타임 백그라운드 유효성 검사는 재호스트된 디자이너에서 지원됩니다.  
   
 ### <a name="view-state-located-in-a-separate-location-in-xaml-files"></a>XAML 파일의 별도 위치에 있는 뷰 상태  
- [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]에서는 워크플로의 뷰 상태 정보가 XAML 파일을 통해 여러 다른 위치에 저장되었습니다. 따라서 개발자가 XAML을 직접 읽거나 뷰 상태 정보를 제거하는 코드를 작성하기에 불편했습니다. .NET Framework 4.5에서 XAML 파일의 뷰 상태 정보는 XAML 파일에서 별도의 요소로 serialize 됩니다.  개발자는 활동의 뷰 상태 정보를 쉽게 찾아 편집 하거나 뷰 상태를 완전히 제거할 수 있습니다.  
+ .NET Framework 4에서 워크플로의 뷰 상태 정보는 다양 한 위치에 있는 XAML 파일을 통해 저장 됩니다. 따라서 개발자가 XAML을 직접 읽거나 뷰 상태 정보를 제거하는 코드를 작성하기에 불편했습니다. .NET Framework 4.5에서 XAML 파일의 뷰 상태 정보는 XAML 파일에서 별도의 요소로 serialize 됩니다.  개발자는 활동의 뷰 상태 정보를 쉽게 찾아 편집 하거나 뷰 상태를 완전히 제거할 수 있습니다.  
   
  이 기능은 재호스트된 Workflow Designer에서 지원됩니다.  
   
@@ -132,14 +132,14 @@ ms.locfileid: "69987237"
   
 4. <xref:System.Activities.Statements.StateMachine>, <xref:System.Activities.Statements.State> 및 <xref:System.Activities.Statements.Transition>을 포함하여 상태 시스템 워크플로를 만드는 데 사용되는 활동  
   
- 다음 스크린샷에서는 [시작 자습서](getting-started-tutorial.md) 단계 [에서 완료 된 상태 시스템 워크플로를 보여 줍니다. 상태 시스템 워크플로](how-to-create-a-state-machine-workflow.md)를 만듭니다.  
+ 다음 스크린샷에서는 [시작 자습서](getting-started-tutorial.md) 단계 [방법: 상태 시스템 워크플로 만들기](how-to-create-a-state-machine-workflow.md)의 완료 된 상태 시스템 워크플로를 보여 줍니다.  
   
  ![완료 된 상태 시스템 워크플로를 보여 주는 그림입니다.](./media/wf-features-in-the-rehosted-workflow-designer/complete-state-machine-workflow.jpg)  
   
  상태 시스템 워크플로를 만드는 방법에 대 한 자세한 내용은 [상태 시스템 워크플로](state-machine-workflows.md)를 참조 하세요. 상태 시스템 워크플로는 재호스트된 디자이너에서 지원됩니다.  
   
 ### <a name="contract-first-workflow-development"></a>계약 중심 워크플로 개발  
- 개발자는 계약 중심 워크플로 개발 도구를 사용 하 여 코드에서 계약을 먼저 디자인 한 다음 Visual Studio에서 몇 번의 클릭으로 각 작업을 나타내는 도구 상자에 활동 템플릿을 자동으로 생성할 수 있습니다. 그런 다음 이러한 활동은 계약에서 정의한 작업을 구현하는 워크플로를 만드는 데 사용됩니다. 워크플로 디자이너는 워크플로 서비스의 유효성을 검사하여 이러한 작업을 구현하고 워크플로의 서명이 계약 서명과 일치하도록 합니다. 개발자는 워크플로 서비스와 구현된 계약 컬렉션을 연결할 수도 있습니다. 계약 중심 워크플로 서비스 개발 [에 대 한 자세한 내용은 방법: 기존 서비스 계약](how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)을 사용 하는 워크플로 서비스를 만듭니다.  
+ 개발자는 계약 중심 워크플로 개발 도구를 사용 하 여 코드에서 계약을 먼저 디자인 한 다음 Visual Studio에서 몇 번의 클릭으로 각 작업을 나타내는 도구 상자에 활동 템플릿을 자동으로 생성할 수 있습니다. 그런 다음 이러한 활동은 계약에서 정의한 작업을 구현하는 워크플로를 만드는 데 사용됩니다. 워크플로 디자이너는 워크플로 서비스의 유효성을 검사하여 이러한 작업을 구현하고 워크플로의 서명이 계약 서명과 일치하도록 합니다. 개발자는 워크플로 서비스와 구현된 계약 컬렉션을 연결할 수도 있습니다. 계약 중심 워크플로 서비스 개발에 대 한 자세한 내용은 [방법: 기존 서비스 계약을 사용 하는 워크플로 서비스 만들기](how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)를 참조 하세요.  
   
 > [!WARNING]
 > 계약 중심 워크플로 개발은 워크플로 디자이너에서 지원되지 않습니다.

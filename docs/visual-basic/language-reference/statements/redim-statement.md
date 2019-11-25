@@ -1,5 +1,5 @@
 ---
-title: ReDim 문 (Visual Basic)
+title: ReDim 문
 ms.date: 07/20/2015
 f1_keywords:
 - vb.ReDim
@@ -26,14 +26,14 @@ helpviewer_keywords:
 - declaration statements [Visual Basic]
 - scalar variables [Visual Basic]
 ms.assetid: ad1c5e07-dcd7-4ae1-a79e-ad3f2dcc2083
-ms.openlocfilehash: a9384ba118df2a84fbd2581e6a8bacb58e41ddcc
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: fabfd9a45d47cc1b881b3743181a03e89158f939
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582078"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346748"
 ---
-# <a name="redim-statement-visual-basic"></a>ReDim 문 (Visual Basic)
+# <a name="redim-statement-visual-basic"></a>ReDim Statement (Visual Basic)
 배열 변수의 스토리지 공간을 다시 할당합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -59,31 +59,31 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
 ## <a name="rules"></a>규칙  
   
-- **여러 변수.** 동일한 선언문에서 여러 배열 변수의 크기를 조정 하 고 각 변수에 대 한 `name` 및 `boundlist` 부분을 지정할 수 있습니다. 여러 변수는 쉼표로 구분됩니다.  
+- **Multiple Variables.** You can resize several array variables in the same declaration statement and specify the `name` and `boundlist` parts for each variable. 여러 변수는 쉼표로 구분됩니다.  
   
-- **배열 범위입니다.** @No__t_0의 각 항목은 해당 차원의 하 한과 상한을 지정할 수 있습니다. 하한은 항상 0(영)입니다. 상한은 해당 차원에 가능한 최대 인덱스 값이며 차원의 길이(상한에 1을 더한 값)는 아닙니다. 각 차원의 인덱스는 0부터 상한 값까지 다양할 수 있습니다.  
+- **Array Bounds.** Each entry in `boundlist` can specify the lower and upper bounds of that dimension. 하한은 항상 0(영)입니다. 상한은 해당 차원에 가능한 최대 인덱스 값이며 차원의 길이(상한에 1을 더한 값)는 아닙니다. 각 차원의 인덱스는 0부터 상한 값까지 다양할 수 있습니다.  
   
      `boundlist`의 차원 수는 배열의 원래 차원 수(차수)와 일치해야 합니다.  
   
-- **데이터 형식.** @No__t_0 문은 배열 변수 또는 해당 요소의 데이터 형식을 변경할 수 없습니다.  
+- **Data Types.** The `ReDim` statement cannot change the data type of an array variable or its elements.  
   
-- **초기.** @No__t_0 문은 배열 요소에 대해 새 초기화 값을 제공할 수 없습니다.  
+- **Initialization.** The `ReDim` statement cannot provide new initialization values for the array elements.  
   
-- **배열.** @No__t_0 문은 배열의 차수 (차원 수)를 변경할 수 없습니다.  
+- **Rank.** The `ReDim` statement cannot change the rank (the number of dimensions) of the array.  
   
-- **Preserve를 사용 하 여 크기 조정.** @No__t_0 사용 하는 경우 배열의 마지막 차원만 크기를 조정할 수 있습니다. 다른 모든 차원의 경우에는 기존 배열의 범위를 지정해야 합니다.  
+- **Resizing with Preserve.** If you use `Preserve`, you can resize only the last dimension of the array. 다른 모든 차원의 경우에는 기존 배열의 범위를 지정해야 합니다.  
   
      예를 들어 배열에 차원이 하나만 있는 경우 해당 차원의 크기를 조정해도 배열의 모든 내용을 보존할 수 있습니다. 마지막이자 유일한 차원을 변경하기 때문입니다. 그러나 배열에 둘 이상의 차원이 있는 경우에는 `Preserve`를 사용하여 마지막 차원의 크기만 변경할 수 있습니다.  
   
-- **정보의.** 값의 배열을 포함 하는 속성에 `ReDim`를 사용할 수 있습니다.  
+- **Properties.** You can use `ReDim` on a property that holds an array of values.  
   
 ## <a name="behavior"></a>동작  
   
-- **배열 바꾸기.** `ReDim` 기존 배열을 해제 하 고 동일한 순위로 새 배열을 만듭니다. 새 배열은 배열 변수에서 해제된 배열을 대체합니다.  
+- **Array Replacement.** `ReDim` releases the existing array and creates a new array with the same rank. 새 배열은 배열 변수에서 해제된 배열을 대체합니다.  
   
-- **을 유지 하지 않고 초기화 합니다.** @No__t_0 지정 하지 않으면 해당 데이터 형식에 대 한 기본값을 사용 하 여 새 배열의 요소를 초기화 `ReDim`.  
+- **Initialization without Preserve.** If you do not specify `Preserve`, `ReDim` initializes the elements of the new array by using the default value for their data type.  
   
-- **Preserve를 사용 하 여 초기화 합니다.** @No__t_0 지정 하는 경우 Visual Basic 기존 배열의 요소를 새 배열에 복사 합니다.  
+- **Initialization with Preserve.** If you specify `Preserve`, Visual Basic copies the elements from the existing array to the new array.  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 배열의 기존 데이터를 손실하지 않고 동적 배열의 마지막 차원 크기를 늘린 다음 데이터를 부분적으로 손실하며 크기를 줄입니다. 마지막으로 크기를 원래 값으로 다시 줄이고 모든 배열 요소를 다시 초기화합니다.  
@@ -98,7 +98,7 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
  세 번째 `ReDim`은 새 배열을 하나 더 만들고 각 계층에 있는 각 행의 끝에서 5개의 열을 제거합니다. 이번에는 기존 요소를 복사하지 않습니다. 이 문은 배열을 원래 크기로 되돌립니다. 이 문은 `Preserve` 한정자를 포함하지 않기 때문에 모든 배열 요소를 원래 기본값으로 설정합니다.  
   
- 추가 예제는 [배열](../../../visual-basic/programming-guide/language-features/arrays/index.md)을 참조 하세요.  
+ For additional examples, see [Arrays](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
   
 ## <a name="see-also"></a>참조
 

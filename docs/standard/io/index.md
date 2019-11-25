@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d3b3dcc3b96e12f89508f4d2708c5ab083516dba
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 889271ca41fb84b44757adfffc61ffbfbc0a03a8
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025506"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204789"
 ---
 # <a name="file-and-stream-io"></a>파일 및 스트림 I/O
 
@@ -99,7 +99,7 @@ Visual Basic 사용자는 이러한 클래스를 사용하는 것 외에도, 파
 
 ## <a name="asynchronous-io-operations"></a>비동기 I/O 작업
 
-많은 양의 데이터를 읽거나 쓸 때 리소스가 많이 사용될 수 있습니다. 이러한 작업은 애플리케이션 사용자에게 응답을 유지해야 하는 경우 비동기적으로 수행해야 합니다. 동기 I/O 작업에서 UI 스레드는 리소스 집약적인 작업이 완료될 때까지 차단됩니다.  [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램을 개발할 때 비동기 I/O 작업을 사용하여 응용 프로그램이 작동을 멈춘 것처럼 보이지 않게 해줍니다.
+많은 양의 데이터를 읽거나 쓸 때 리소스가 많이 사용될 수 있습니다. 이러한 작업은 애플리케이션 사용자에게 응답을 유지해야 하는 경우 비동기적으로 수행해야 합니다. 동기 I/O 작업에서 UI 스레드는 리소스 집약적인 작업이 완료될 때까지 차단됩니다.  Windows 8.x 스토어 앱을 개발할 때 비동기 I/O 작업을 사용하여 앱이 작동을 멈춘 것처럼 보이지 않게 해줍니다.
 
 비동기 멤버의 이름에는 `Async`가 포함됩니다(예: <xref:System.IO.Stream.CopyToAsync%2A>, <xref:System.IO.Stream.FlushAsync%2A>, <xref:System.IO.Stream.ReadAsync%2A> 및 <xref:System.IO.Stream.WriteAsync%2A> 메서드). 이러한 메서드는 `async` 및 `await` 키워드와 함께 사용합니다.
 
@@ -129,7 +129,7 @@ Visual Basic 사용자는 이러한 클래스를 사용하는 것 외에도, 파
 
 격리된 스토리지는 코드와 저장된 데이터를 연결하는 표준화된 방법을 정의하여 격리와 안전을 제공하는 데이터 스토리지 메커니즘입니다. 스토리지는 사용자, 어셈블리 및 도메인(옵션)에 의해 격리된 가상 파일 시스템을 제공합니다. 격리된 스토리지는 애플리케이션에 사용자 파일을 액세스할 수 있는 권한이 없는 경우 특히 유용합니다. 컴퓨터의 보안 정책에 의해 제어되는 방식으로 애플리케이션에 대한 설정이나 파일을 저장할 수 있습니다.
 
-격리된 스토리지는 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]앱에 사용할 수 없습니다. 대신 <xref:Windows.Storage?displayProperty=nameWithType>네임스페이스의 애플리케이션 데이터 클래스를 사용합니다. 자세한 내용은 [애플리케이션 데이터](https://docs.microsoft.com/previous-versions/windows/apps/hh464917%28v=win.10%29)를 참조하세요.
+격리된 스토리지는 Windows 8.x 스토어 앱에 사용할 수 없습니다. 대신 <xref:Windows.Storage?displayProperty=nameWithType> 네임스페이스의 애플리케이션 데이터 클래스를 사용합니다. 자세한 내용은 [애플리케이션 데이터](https://docs.microsoft.com/previous-versions/windows/apps/hh464917%28v=win.10%29)를 참조하세요.
 
 다음의 클래스는 격리된 스토리지를 구현할 때 자주 사용됩니다.
 
@@ -145,7 +145,7 @@ Visual Basic 사용자는 이러한 클래스를 사용하는 것 외에도, 파
 
 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]에는 스트림에서 읽고 스트림에 쓰기 위한 다양한 형식이 포함됩니다. 하지만, 이 세트에 모든 .NET Framework I/O 형식이 포함되는 것은 아닙니다.
 
-다음은 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램에서 I/O 작업을 사용할 때 알아야 할 몇 가지 중요한 차이점입니다.
+다음은 Windows 8.x 스토어 앱에서 I/O 작업을 사용할 때 알아야 할 몇 가지 중요한 차이점입니다.
 
 - 특히 파일 작업에 관련된 형식(예: <xref:System.IO.File>, <xref:System.IO.FileInfo>, <xref:System.IO.Directory> 및 <xref:System.IO.DirectoryInfo>)은 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]에 포함되지 않습니다. 대신 <xref:Windows.Storage.StorageFile> 및 <xref:Windows.Storage.StorageFolder> 등 Windows 런타임의 <xref:Windows.Storage?displayProperty=nameWithType> 네임스페이스에 있는 유형을 사용합니다.
 
@@ -157,13 +157,13 @@ Visual Basic 사용자는 이러한 클래스를 사용하는 것 외에도, 파
 
 필요하다면 .NET Framework 스트림과 Windows 런타임 스트림 간에 변환할 수 있습니다. 자세한 내용은 [방법: .NET Framework 스트림과 Windows 런타임 스트림 간 변환](how-to-convert-between-dotnet-streams-and-winrt-streams.md) 또는 <xref:System.IO.WindowsRuntimeStreamExtensions>을 참조하세요.
 
-[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 앱에서 I/O 작업에 대한 자세한 내용은 [빠른 시작: 파일 읽기 및 쓰기](https://docs.microsoft.com/previous-versions/windows/apps/hh758325(v=win.10))를 참조하세요.
+Windows 8.x 스토어 앱에서의 I/O 작업에 대한 자세한 내용은 [빠른 시작: 파일 읽기 및 쓰기](https://docs.microsoft.com/previous-versions/windows/apps/hh758325(v=win.10))를 참조하세요.
 
 ## <a name="io-and-security"></a>I/O 및 보안
 
 <xref:System.IO?displayProperty=nameWithType> 네임스페이스에서 클래스를 사용할 때, 파일 및 디렉터리에 대한 액세스를 제어하기 위해 액세스 제어 목록(ACL)과 같은 운영 체제 보안 요구 사항을 따라야 합니다. <xref:System.Security.Permissions.FileIOPermission> 요구 사항에 이 요구 사항이 추가됩니다. ACL은 프로그래밍 방식으로 관리할 수 있습니다. 자세한 내용은 [방법: 액세스 제어 목록 항목 추가 또는 제거](how-to-add-or-remove-access-control-list-entries.md)를 참조하세요.
 
-기본 보안 정책은 인터넷 또는 인트라넷 애플리케이션에서 사용자의 컴퓨터에 있는 파일의 액세스를 방지합니다. 따라서 실제 파일의 경로를 인터넷이나 인트라넷을 통해 다운로드되는 코드를 작성할 때 필요한 I/O 클래스를 사용하지 마세요. 대신에 기존의 .NET Framework 애플리케이션의 경우 [격리된 스토리지](isolated-storage.md)를 사용하거나 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 애플리케이션의 경우 [애플리케이션 데이터](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10))를 사용합니다.
+기본 보안 정책은 인터넷 또는 인트라넷 애플리케이션에서 사용자의 컴퓨터에 있는 파일의 액세스를 방지합니다. 따라서 실제 파일의 경로를 인터넷이나 인트라넷을 통해 다운로드되는 코드를 작성할 때 필요한 I/O 클래스를 사용하지 마세요. 대신에 기존의 .NET Framework 애플리케이션의 경우 [격리된 스토리지](isolated-storage.md)를 사용하거나 Windows 8.x 스토어 앱의 경우 [애플리케이션 데이터](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10))를 사용합니다.
 
 스트림이 생성될 때만 보안 검사가 수행됩니다. 따라서 스트림을 열지 말고, 이것을 신뢰할 수 없는 코드 또는 애플리케이션 도메인으로 전달합니다.
 
