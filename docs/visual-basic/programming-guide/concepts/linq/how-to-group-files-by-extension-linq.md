@@ -1,19 +1,19 @@
 ---
-title: '방법: 그룹 파일 확장명 (LINQ) (Visual Basic)'
+title: '방법: 확장명에 따라 파일 그룹화(LINQ)'
 ms.date: 07/20/2015
 ms.assetid: 904dc6d7-7162-4655-a7f4-5785d669bc5a
-ms.openlocfilehash: f36be784641d45aaae447097ae2bebb5fd650034
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 9e0b5bc29cbfc454cc8031bcd62ed723b8995095
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593482"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344543"
 ---
-# <a name="how-to-group-files-by-extension-linq-visual-basic"></a><span data-ttu-id="06789-102">방법: 그룹 파일 확장명 (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="06789-102">How to: Group Files by Extension (LINQ) (Visual Basic)</span></span>
-<span data-ttu-id="06789-103">이 예제에서는 LINQ를 사용하여 파일 또는 폴더 목록에 대해 고급 그룹화 및 정렬 작업을 수행하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="06789-103">This example shows how LINQ can be used to perform advanced grouping and sorting operations on lists of files or folders.</span></span> <span data-ttu-id="06789-104">또한 <xref:System.Linq.Enumerable.Skip%2A> 및 <xref:System.Linq.Enumerable.Take%2A> 메서드를 사용하여 콘솔 창에서 출력을 페이징하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="06789-104">It also shows how to page output in the console window by using the <xref:System.Linq.Enumerable.Skip%2A> and <xref:System.Linq.Enumerable.Take%2A> methods.</span></span>  
+# <a name="how-to-group-files-by-extension-linq-visual-basic"></a><span data-ttu-id="0da7f-102">How to: Group Files by Extension (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0da7f-102">How to: Group Files by Extension (LINQ) (Visual Basic)</span></span>
+<span data-ttu-id="0da7f-103">이 예제에서는 LINQ를 사용하여 파일 또는 폴더 목록에 대해 고급 그룹화 및 정렬 작업을 수행하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="0da7f-103">This example shows how LINQ can be used to perform advanced grouping and sorting operations on lists of files or folders.</span></span> <span data-ttu-id="0da7f-104">또한 <xref:System.Linq.Enumerable.Skip%2A> 및 <xref:System.Linq.Enumerable.Take%2A> 메서드를 사용하여 콘솔 창에서 출력을 페이징하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="0da7f-104">It also shows how to page output in the console window by using the <xref:System.Linq.Enumerable.Skip%2A> and <xref:System.Linq.Enumerable.Take%2A> methods.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="06789-105">예제</span><span class="sxs-lookup"><span data-stu-id="06789-105">Example</span></span>  
- <span data-ttu-id="06789-106">다음 쿼리는 지정된 디렉터리 트리의 내용을 파일 이름 확장명으로 그룹화하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="06789-106">The following query shows how to group the contents of a specified directory tree by the file name extension.</span></span>  
+## <a name="example"></a><span data-ttu-id="0da7f-105">예제</span><span class="sxs-lookup"><span data-stu-id="0da7f-105">Example</span></span>  
+ <span data-ttu-id="0da7f-106">다음 쿼리는 지정된 디렉터리 트리의 내용을 파일 이름 확장명으로 그룹화하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="0da7f-106">The following query shows how to group the contents of a specified directory tree by the file name extension.</span></span>  
   
 ```vb  
 Module GroupByExtension  
@@ -91,12 +91,12 @@ Module GroupByExtension
 End Module  
 ```  
   
- <span data-ttu-id="06789-107">이 프로그램의 출력은 로컬 파일 시스템의 세부 정보 및 `startFolder`의 설정에 따라 길어질 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="06789-107">The output from this program can be long, depending on the details of the local file system and what the `startFolder` is set to.</span></span> <span data-ttu-id="06789-108">모든 결과를 볼 수 있도록, 이 예제에서는 결과를 페이징하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="06789-108">To enable viewing of all results, this example shows how to page through results.</span></span> <span data-ttu-id="06789-109">Windows 및 웹 애플리케이션에 동일한 기법을 적용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="06789-109">The same techniques can be applied to Windows and Web applications.</span></span> <span data-ttu-id="06789-110">코드에서 그룹의 항목을 페이징하기 때문에 중첩된 `For Each` 루프가 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="06789-110">Notice that because the code pages the items in a group, a nested `For Each` loop is required.</span></span> <span data-ttu-id="06789-111">목록에서 현재 위치를 컴퓨팅하며 사용자가 페이징을 중지하고 프로그램을 종료할 수 있도록 하는 몇 가지 추가 논리도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="06789-111">There is also some additional logic to compute the current position in the list, and to enable the user to stop paging and exit the program.</span></span> <span data-ttu-id="06789-112">이 특정 사례에서는 페이징 쿼리가 원래 쿼리에서 캐시된 결과에 대해 실행됩니다.</span><span class="sxs-lookup"><span data-stu-id="06789-112">In this particular case, the paging query is run against the cached results from the original query.</span></span> <span data-ttu-id="06789-113">LINQ to SQL 등의 다른 컨텍스트에서는 이러한 캐싱이 필요하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="06789-113">In other contexts, such as LINQ to SQL, such caching is not required.</span></span>  
+ <span data-ttu-id="0da7f-107">이 프로그램의 출력은 로컬 파일 시스템의 세부 정보 및 `startFolder`의 설정에 따라 길어질 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0da7f-107">The output from this program can be long, depending on the details of the local file system and what the `startFolder` is set to.</span></span> <span data-ttu-id="0da7f-108">모든 결과를 볼 수 있도록, 이 예제에서는 결과를 페이징하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="0da7f-108">To enable viewing of all results, this example shows how to page through results.</span></span> <span data-ttu-id="0da7f-109">Windows 및 웹 애플리케이션에 동일한 기법을 적용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0da7f-109">The same techniques can be applied to Windows and Web applications.</span></span> <span data-ttu-id="0da7f-110">코드에서 그룹의 항목을 페이징하기 때문에 중첩된 `For Each` 루프가 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="0da7f-110">Notice that because the code pages the items in a group, a nested `For Each` loop is required.</span></span> <span data-ttu-id="0da7f-111">목록에서 현재 위치를 컴퓨팅하며 사용자가 페이징을 중지하고 프로그램을 종료할 수 있도록 하는 몇 가지 추가 논리도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0da7f-111">There is also some additional logic to compute the current position in the list, and to enable the user to stop paging and exit the program.</span></span> <span data-ttu-id="0da7f-112">이 특정 사례에서는 페이징 쿼리가 원래 쿼리에서 캐시된 결과에 대해 실행됩니다.</span><span class="sxs-lookup"><span data-stu-id="0da7f-112">In this particular case, the paging query is run against the cached results from the original query.</span></span> <span data-ttu-id="0da7f-113">LINQ to SQL 등의 다른 컨텍스트에서는 이러한 캐싱이 필요하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="0da7f-113">In other contexts, such as LINQ to SQL, such caching is not required.</span></span>  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="06789-114">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="06789-114">Compiling the Code</span></span>  
-<span data-ttu-id="06789-115">VB.NET 콘솔 응용 프로그램 프로젝트를 만듭니다는 `Imports` System.Linq 네임 스페이스에 대 한 문입니다.</span><span class="sxs-lookup"><span data-stu-id="06789-115">Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
+## <a name="compiling-the-code"></a><span data-ttu-id="0da7f-114">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="0da7f-114">Compiling the Code</span></span>  
+<span data-ttu-id="0da7f-115">Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.</span><span class="sxs-lookup"><span data-stu-id="0da7f-115">Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
   
-## <a name="see-also"></a><span data-ttu-id="06789-116">참고자료</span><span class="sxs-lookup"><span data-stu-id="06789-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0da7f-116">참조</span><span class="sxs-lookup"><span data-stu-id="0da7f-116">See also</span></span>
 
-- [<span data-ttu-id="06789-117">LINQ to Objects(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="06789-117">LINQ to Objects (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
-- [<span data-ttu-id="06789-118">LINQ 및 파일 디렉터리(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="06789-118">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [<span data-ttu-id="0da7f-117">LINQ to Objects(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0da7f-117">LINQ to Objects (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
+- [<span data-ttu-id="0da7f-118">LINQ 및 파일 디렉터리(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0da7f-118">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
