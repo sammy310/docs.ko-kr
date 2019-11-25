@@ -3,6 +3,8 @@
   items:
     - name: 주요 보안 개념
       href: key-security-concepts.md
+    - name: .NET Core FIPS 규정 준수
+      href: fips-compliance.md
     - name: 역할 기반 보안
       href: role-based-security.md
       items:

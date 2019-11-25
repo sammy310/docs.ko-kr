@@ -1,64 +1,64 @@
 ---
-title: 쿼리(Visual Basic)
+title: 쿼리
 ms.date: 07/20/2015
 helpviewer_keywords:
 - queries [Visual Basic]
 - LINQ, queries
 ms.assetid: 8edc717c-4a24-4cbc-9c16-11f479c935db
-ms.openlocfilehash: 1ea49b16f70c0af87bbd3a8978fb10fe08d5ce6b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a4a926d089a8bec1abaa47404f6c9112687e6df2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052146"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350447"
 ---
-# <a name="queries-visual-basic"></a><span data-ttu-id="1c0b9-102">쿼리(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1c0b9-102">Queries (Visual Basic)</span></span>
-<span data-ttu-id="1c0b9-103">Visual Basic을 사용 하면 만들 수 있습니다 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 코드 식입니다.</span><span class="sxs-lookup"><span data-stu-id="1c0b9-103">Visual Basic enables you to create [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] expressions in your code.</span></span>  
+# <a name="queries-visual-basic"></a><span data-ttu-id="73b91-102">쿼리(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="73b91-102">Queries (Visual Basic)</span></span>
+<span data-ttu-id="73b91-103">Visual Basic enables you to create [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] expressions in your code.</span><span class="sxs-lookup"><span data-stu-id="73b91-103">Visual Basic enables you to create [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] expressions in your code.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="1c0b9-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="1c0b9-104">In This Section</span></span>  
- [<span data-ttu-id="1c0b9-105">Aggregate 절</span><span class="sxs-lookup"><span data-stu-id="1c0b9-105">Aggregate Clause</span></span>](../../../visual-basic/language-reference/queries/aggregate-clause.md)  
- <span data-ttu-id="1c0b9-106">에 대해 설명 합니다 `Aggregate` 컬렉션에 하나 이상의 집계 함수를 적용 하는 절.</span><span class="sxs-lookup"><span data-stu-id="1c0b9-106">Describes the `Aggregate` clause, which applies one or more aggregate functions to a collection.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="73b91-104">단원 내용</span><span class="sxs-lookup"><span data-stu-id="73b91-104">In This Section</span></span>  
+ [<span data-ttu-id="73b91-105">Aggregate 절</span><span class="sxs-lookup"><span data-stu-id="73b91-105">Aggregate Clause</span></span>](../../../visual-basic/language-reference/queries/aggregate-clause.md)  
+ <span data-ttu-id="73b91-106">Describes the `Aggregate` clause, which applies one or more aggregate functions to a collection.</span><span class="sxs-lookup"><span data-stu-id="73b91-106">Describes the `Aggregate` clause, which applies one or more aggregate functions to a collection.</span></span>  
   
- [<span data-ttu-id="1c0b9-107">Distinct 절</span><span class="sxs-lookup"><span data-stu-id="1c0b9-107">Distinct Clause</span></span>](../../../visual-basic/language-reference/queries/distinct-clause.md)  
- <span data-ttu-id="1c0b9-108">에 대해 설명 합니다 `Distinct` 쿼리 결과에서 중복 값을 제거 하려면 현재 범위 변수 값을 제한 하는 절.</span><span class="sxs-lookup"><span data-stu-id="1c0b9-108">Describes the `Distinct` clause, which restricts the values of the current range variable to eliminate duplicate values in query results.</span></span>  
+ [<span data-ttu-id="73b91-107">Distinct 절</span><span class="sxs-lookup"><span data-stu-id="73b91-107">Distinct Clause</span></span>](../../../visual-basic/language-reference/queries/distinct-clause.md)  
+ <span data-ttu-id="73b91-108">Describes the `Distinct` clause, which restricts the values of the current range variable to eliminate duplicate values in query results.</span><span class="sxs-lookup"><span data-stu-id="73b91-108">Describes the `Distinct` clause, which restricts the values of the current range variable to eliminate duplicate values in query results.</span></span>  
   
- [<span data-ttu-id="1c0b9-109">From 절</span><span class="sxs-lookup"><span data-stu-id="1c0b9-109">From Clause</span></span>](../../../visual-basic/language-reference/queries/from-clause.md)  
- <span data-ttu-id="1c0b9-110">에 대해 설명 합니다 `From` 컬렉션과 쿼리에 대 한 범위 변수를 지정 하는 절.</span><span class="sxs-lookup"><span data-stu-id="1c0b9-110">Describes the `From` clause, which specifies a collection and a range variable for a query.</span></span>  
+ [<span data-ttu-id="73b91-109">From 절</span><span class="sxs-lookup"><span data-stu-id="73b91-109">From Clause</span></span>](../../../visual-basic/language-reference/queries/from-clause.md)  
+ <span data-ttu-id="73b91-110">Describes the `From` clause, which specifies a collection and a range variable for a query.</span><span class="sxs-lookup"><span data-stu-id="73b91-110">Describes the `From` clause, which specifies a collection and a range variable for a query.</span></span>  
   
- [<span data-ttu-id="1c0b9-111">Group By 절</span><span class="sxs-lookup"><span data-stu-id="1c0b9-111">Group By Clause</span></span>](../../../visual-basic/language-reference/queries/group-by-clause.md)  
- <span data-ttu-id="1c0b9-112">에 대해 설명 합니다 `Group By` 절, 쿼리 결과의 요소를 그룹화 하 고 각 그룹에 집계 함수를 적용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1c0b9-112">Describes the `Group By` clause, which groups the elements of a query result and can be used to apply aggregate functions to each group.</span></span>  
+ [<span data-ttu-id="73b91-111">Group By 절</span><span class="sxs-lookup"><span data-stu-id="73b91-111">Group By Clause</span></span>](../../../visual-basic/language-reference/queries/group-by-clause.md)  
+ <span data-ttu-id="73b91-112">Describes the `Group By` clause, which groups the elements of a query result and can be used to apply aggregate functions to each group.</span><span class="sxs-lookup"><span data-stu-id="73b91-112">Describes the `Group By` clause, which groups the elements of a query result and can be used to apply aggregate functions to each group.</span></span>  
   
- [<span data-ttu-id="1c0b9-113">Group Join 절</span><span class="sxs-lookup"><span data-stu-id="1c0b9-113">Group Join Clause</span></span>](../../../visual-basic/language-reference/queries/group-join-clause.md)  
- <span data-ttu-id="1c0b9-114">에 대해 설명 합니다 `Group Join` 두 컬렉션을 단일 계층 구조 컬렉션으로 결합 하는 절.</span><span class="sxs-lookup"><span data-stu-id="1c0b9-114">Describes the `Group Join` clause, which combines two collections into a single hierarchical collection.</span></span>  
+ [<span data-ttu-id="73b91-113">Group Join 절</span><span class="sxs-lookup"><span data-stu-id="73b91-113">Group Join Clause</span></span>](../../../visual-basic/language-reference/queries/group-join-clause.md)  
+ <span data-ttu-id="73b91-114">Describes the `Group Join` clause, which combines two collections into a single hierarchical collection.</span><span class="sxs-lookup"><span data-stu-id="73b91-114">Describes the `Group Join` clause, which combines two collections into a single hierarchical collection.</span></span>  
   
- [<span data-ttu-id="1c0b9-115">Join 절</span><span class="sxs-lookup"><span data-stu-id="1c0b9-115">Join Clause</span></span>](../../../visual-basic/language-reference/queries/join-clause.md)  
- <span data-ttu-id="1c0b9-116">에 대해 설명 합니다 `Join` 두 컬렉션을 단일 컬렉션으로 결합 하는 절.</span><span class="sxs-lookup"><span data-stu-id="1c0b9-116">Describes the `Join` clause, which combines two collections into a single collection.</span></span>  
+ [<span data-ttu-id="73b91-115">Join 절</span><span class="sxs-lookup"><span data-stu-id="73b91-115">Join Clause</span></span>](../../../visual-basic/language-reference/queries/join-clause.md)  
+ <span data-ttu-id="73b91-116">Describes the `Join` clause, which combines two collections into a single collection.</span><span class="sxs-lookup"><span data-stu-id="73b91-116">Describes the `Join` clause, which combines two collections into a single collection.</span></span>  
   
- [<span data-ttu-id="1c0b9-117">Let 절</span><span class="sxs-lookup"><span data-stu-id="1c0b9-117">Let Clause</span></span>](../../../visual-basic/language-reference/queries/let-clause.md)  
- <span data-ttu-id="1c0b9-118">에 대해 설명 합니다 `Let` 절 값을 계산 하 고 쿼리의 새 변수에 할당 합니다.</span><span class="sxs-lookup"><span data-stu-id="1c0b9-118">Describes the `Let` clause, which computes a value and assigns it to a new variable in the query.</span></span>  
+ [<span data-ttu-id="73b91-117">Let 절</span><span class="sxs-lookup"><span data-stu-id="73b91-117">Let Clause</span></span>](../../../visual-basic/language-reference/queries/let-clause.md)  
+ <span data-ttu-id="73b91-118">Describes the `Let` clause, which computes a value and assigns it to a new variable in the query.</span><span class="sxs-lookup"><span data-stu-id="73b91-118">Describes the `Let` clause, which computes a value and assigns it to a new variable in the query.</span></span>  
   
- [<span data-ttu-id="1c0b9-119">Order By 절</span><span class="sxs-lookup"><span data-stu-id="1c0b9-119">Order By Clause</span></span>](../../../visual-basic/language-reference/queries/order-by-clause.md)  
- <span data-ttu-id="1c0b9-120">에 대해 설명 합니다 `Order By` 쿼리에서 열에 대 한 정렬 순서를 지정 하는 절.</span><span class="sxs-lookup"><span data-stu-id="1c0b9-120">Describes the `Order By` clause, which specifies the sort order for columns in a query.</span></span>  
+ [<span data-ttu-id="73b91-119">Order By 절</span><span class="sxs-lookup"><span data-stu-id="73b91-119">Order By Clause</span></span>](../../../visual-basic/language-reference/queries/order-by-clause.md)  
+ <span data-ttu-id="73b91-120">Describes the `Order By` clause, which specifies the sort order for columns in a query.</span><span class="sxs-lookup"><span data-stu-id="73b91-120">Describes the `Order By` clause, which specifies the sort order for columns in a query.</span></span>  
   
- [<span data-ttu-id="1c0b9-121">Select 절</span><span class="sxs-lookup"><span data-stu-id="1c0b9-121">Select Clause</span></span>](../../../visual-basic/language-reference/queries/select-clause.md)  
- <span data-ttu-id="1c0b9-122">에 대해 설명 합니다 `Select` 쿼리의 범위 변수 집합을 선언 하는 절.</span><span class="sxs-lookup"><span data-stu-id="1c0b9-122">Describes the `Select` clause, which declares a set of range variables for a query.</span></span>  
+ [<span data-ttu-id="73b91-121">Select 절</span><span class="sxs-lookup"><span data-stu-id="73b91-121">Select Clause</span></span>](../../../visual-basic/language-reference/queries/select-clause.md)  
+ <span data-ttu-id="73b91-122">Describes the `Select` clause, which declares a set of range variables for a query.</span><span class="sxs-lookup"><span data-stu-id="73b91-122">Describes the `Select` clause, which declares a set of range variables for a query.</span></span>  
   
- [<span data-ttu-id="1c0b9-123">Skip 절</span><span class="sxs-lookup"><span data-stu-id="1c0b9-123">Skip Clause</span></span>](../../../visual-basic/language-reference/queries/skip-clause.md)  
- <span data-ttu-id="1c0b9-124">에 대해 설명 합니다 `Skip` 절을 지정 된 컬렉션의 요소 수를 무시 하 고 나머지 요소를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="1c0b9-124">Describes the `Skip` clause, which bypasses a specified number of elements in a collection and then returns the remaining elements.</span></span>  
+ [<span data-ttu-id="73b91-123">Skip 절</span><span class="sxs-lookup"><span data-stu-id="73b91-123">Skip Clause</span></span>](../../../visual-basic/language-reference/queries/skip-clause.md)  
+ <span data-ttu-id="73b91-124">Describes the `Skip` clause, which bypasses a specified number of elements in a collection and then returns the remaining elements.</span><span class="sxs-lookup"><span data-stu-id="73b91-124">Describes the `Skip` clause, which bypasses a specified number of elements in a collection and then returns the remaining elements.</span></span>  
   
- [<span data-ttu-id="1c0b9-125">Skip While 절</span><span class="sxs-lookup"><span data-stu-id="1c0b9-125">Skip While Clause</span></span>](../../../visual-basic/language-reference/queries/skip-while-clause.md)  
- <span data-ttu-id="1c0b9-126">에 대해 설명 합니다 `Skip While` 절을 지정 된 조건이으로 컬렉션의 요소를 무시 하는 `true` 다음 나머지 요소를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="1c0b9-126">Describes the `Skip While` clause, which bypasses elements in a collection as long as a specified condition is `true` and then returns the remaining elements.</span></span>  
+ [<span data-ttu-id="73b91-125">Skip While 절</span><span class="sxs-lookup"><span data-stu-id="73b91-125">Skip While Clause</span></span>](../../../visual-basic/language-reference/queries/skip-while-clause.md)  
+ <span data-ttu-id="73b91-126">Describes the `Skip While` clause, which bypasses elements in a collection as long as a specified condition is `true` and then returns the remaining elements.</span><span class="sxs-lookup"><span data-stu-id="73b91-126">Describes the `Skip While` clause, which bypasses elements in a collection as long as a specified condition is `true` and then returns the remaining elements.</span></span>  
   
- [<span data-ttu-id="1c0b9-127">Take 절</span><span class="sxs-lookup"><span data-stu-id="1c0b9-127">Take Clause</span></span>](../../../visual-basic/language-reference/queries/take-clause.md)  
- <span data-ttu-id="1c0b9-128">에 대해 설명 합니다 `Take` 컬렉션의 시작 부분에서 지정 된 개수의 연속 요소를 반환 하는 절.</span><span class="sxs-lookup"><span data-stu-id="1c0b9-128">Describes the `Take` clause, which returns a specified number of contiguous elements from the start of a collection.</span></span>  
+ [<span data-ttu-id="73b91-127">Take 절</span><span class="sxs-lookup"><span data-stu-id="73b91-127">Take Clause</span></span>](../../../visual-basic/language-reference/queries/take-clause.md)  
+ <span data-ttu-id="73b91-128">Describes the `Take` clause, which returns a specified number of contiguous elements from the start of a collection.</span><span class="sxs-lookup"><span data-stu-id="73b91-128">Describes the `Take` clause, which returns a specified number of contiguous elements from the start of a collection.</span></span>  
   
- [<span data-ttu-id="1c0b9-129">Take While 절</span><span class="sxs-lookup"><span data-stu-id="1c0b9-129">Take While Clause</span></span>](../../../visual-basic/language-reference/queries/take-while-clause.md)  
- <span data-ttu-id="1c0b9-130">에 대해 설명 합니다는 `Take While` 지정 된 조건이 컬렉션의 요소를 포함 하는 절 `true` 나머지 요소를 무시 합니다.</span><span class="sxs-lookup"><span data-stu-id="1c0b9-130">Describes the `Take While` clause, which includes elements in a collection as long as a specified condition is `true` and bypasses the remaining elements.</span></span>  
+ [<span data-ttu-id="73b91-129">Take While 절</span><span class="sxs-lookup"><span data-stu-id="73b91-129">Take While Clause</span></span>](../../../visual-basic/language-reference/queries/take-while-clause.md)  
+ <span data-ttu-id="73b91-130">Describes the `Take While` clause, which includes elements in a collection as long as a specified condition is `true` and bypasses the remaining elements.</span><span class="sxs-lookup"><span data-stu-id="73b91-130">Describes the `Take While` clause, which includes elements in a collection as long as a specified condition is `true` and bypasses the remaining elements.</span></span>  
   
- [<span data-ttu-id="1c0b9-131">Where 절</span><span class="sxs-lookup"><span data-stu-id="1c0b9-131">Where Clause</span></span>](../../../visual-basic/language-reference/queries/where-clause.md)  
- <span data-ttu-id="1c0b9-132">에 대해 설명 합니다 `Where` 쿼리에 대 한 필터링 조건을 지정 하는 절.</span><span class="sxs-lookup"><span data-stu-id="1c0b9-132">Describes the `Where` clause, which specifies a filtering condition for a query.</span></span>  
+ [<span data-ttu-id="73b91-131">Where 절</span><span class="sxs-lookup"><span data-stu-id="73b91-131">Where Clause</span></span>](../../../visual-basic/language-reference/queries/where-clause.md)  
+ <span data-ttu-id="73b91-132">Describes the `Where` clause, which specifies a filtering condition for a query.</span><span class="sxs-lookup"><span data-stu-id="73b91-132">Describes the `Where` clause, which specifies a filtering condition for a query.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1c0b9-133">참고자료</span><span class="sxs-lookup"><span data-stu-id="1c0b9-133">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="73b91-133">참조</span><span class="sxs-lookup"><span data-stu-id="73b91-133">See also</span></span>
 
-- [<span data-ttu-id="1c0b9-134">LINQ</span><span class="sxs-lookup"><span data-stu-id="1c0b9-134">LINQ</span></span>](../../../visual-basic/programming-guide/language-features/linq/index.md)
-- [<span data-ttu-id="1c0b9-135">Visual Basic의 LINQ 소개</span><span class="sxs-lookup"><span data-stu-id="1c0b9-135">Introduction to LINQ in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [<span data-ttu-id="73b91-134">LINQ</span><span class="sxs-lookup"><span data-stu-id="73b91-134">LINQ</span></span>](../../../visual-basic/programming-guide/language-features/linq/index.md)
+- [<span data-ttu-id="73b91-135">Visual Basic의 LINQ 소개</span><span class="sxs-lookup"><span data-stu-id="73b91-135">Introduction to LINQ in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
