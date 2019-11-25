@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 10/08/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: f5010f944dba007e24d3c0e22d4e339f9ed0522a
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: bd6acd83df4d2d5f19d30da847212d60b1576199
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459192"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977350"
 ---
 # <a name="tutorial-predict-prices-using-regression-with-model-builder"></a>자습서: 모델 작성기와 함께 회귀를 사용하여 가격 예측
 
@@ -126,7 +126,7 @@ ML.NET 모델 작성기 빌드를 사용하여 가격을 예측하기 위한 회
     using TaxiFarePredictionML.Model;
     ```
 
-1. 모델을 사용하여 새 데이터에 대해 예측을 수행하려면 `Main` 메서드 내부에 `ModelInput` 클래스의 새 인스턴스를 만듭니다. 요금 금액은 입력에 포함되지 않습니다. 모델에서 해당 금액을 예측하기 때문입니다. 
+1. 모델을 사용하여 새 데이터에 대해 예측을 수행하려면 `Main` 메서드 내부에 `ModelInput` 클래스의 새 인스턴스를 만듭니다. 요금 금액은 입력에 포함되지 않습니다. 모델에서 해당 금액을 예측하기 때문입니다.
 
     ```csharp
     // Create sample data
@@ -140,7 +140,7 @@ ML.NET 모델 작성기 빌드를 사용하여 가격을 예측하기 위한 회
     };
     ```
 
-1. `ConsumeModel` 클래스의 `Predict` 메서드를 사용합니다. `Predict` 메서드는 학습된 모델을 로드하고 모델에 대한 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)을 만든 후 새 데이터에 대해 예측하는 데 사용합니다. 
+1. `ConsumeModel` 클래스의 `Predict` 메서드를 사용합니다. `Predict` 메서드는 학습된 모델을 로드하고 모델에 대한 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)을 만든 후 새 데이터에 대해 예측하는 데 사용합니다.
 
     ```csharp
     // Make prediction

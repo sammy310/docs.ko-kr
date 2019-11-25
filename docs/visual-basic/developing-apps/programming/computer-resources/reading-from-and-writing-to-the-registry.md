@@ -1,24 +1,26 @@
 ---
-title: 레지스트리 읽기 및 쓰기(Visual Basic)
+title: 레지스트리 읽기 및 쓰기
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Computer.Registry object, tasks
 - registry [Visual Basic], writing to
 - registry [Visual Basic], reading
 ms.assetid: a13da106-185b-41d7-b23c-416da65e21e4
-ms.openlocfilehash: fcc13d82a2b27221c13f9277585c21196b47003d
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 89db9ef9db4235c069d6239d32e4f8679fbabf0b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591471"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349757"
 ---
 # <a name="reading-from-and-writing-to-the-registry-visual-basic"></a>레지스트리 읽기 및 쓰기(Visual Basic)
+
 이 항목에서는 레지스트리와 관련된 작업 및 개념 항목에 대해 설명합니다.  
   
  Visual Basic에서 프로그래밍할 때 Visual Basic에서 제공하는 기능 또는 .NET Framework의 레지스트리 클래스를 사용하여 레지스트리에 액세스하도록 선택할 수 있습니다. 레지스트리는 운영 체제의 정보는 물론 컴퓨터에 호스트된 애플리케이션의 정보도 호스트합니다. 레지스트리로 작업하면 시스템 리소스나 보호된 정보에 부적절하게 액세스하여 보안이 손상될 수 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [방법: 레지스트리 키 만들기 및 값 설정](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-create-a-registry-key-and-set-its-value.md)  
  `My.Computer.Registry` 개체의 `CreateSubKey` 및 `SetValue` 메서드를 사용하여 레지스트리 키를 만들고 값을 설정하는 방법을 설명합니다.  
   
@@ -35,6 +37,7 @@ ms.locfileid: "65591471"
  레지스트리 관련 보안 문제를 설명합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
+
  <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>  
  `My.Computer.Registry` 개체의 멤버를 나열하고 설명합니다.  
   

@@ -4,12 +4,12 @@ description: ML.NET에서 사용자 지정 모델을 빌드할 때 유용한 중
 ms.custom: seodec18
 ms.topic: reference
 ms.date: 07/31/2019
-ms.openlocfilehash: cb5681f1f72776ec9a8cbcfe45519befe02b8caf
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: bd4f2db701f537d5c87529115a6bd44035432534
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72180180"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977294"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>중요한 용어가 포함된 기계 학습 용어집
 
@@ -29,9 +29,9 @@ ms.locfileid: "72180180"
 
 ## <a name="calibration"></a>보정
 
-보정은 이진 및 다중 클래스 분류를 위해 클래스 멤버 자격에 원시 점수를 매핑하는 프로세스입니다. 일부 ML.NET 트레이너에는 `NonCalibrated` 접미사가 있습니다. 이러한 알고리즘은 클래스 확률에 매핑되어야 하는 원시 점수를 생성합니다. 
+보정은 이진 및 다중 클래스 분류를 위해 클래스 멤버 자격에 원시 점수를 매핑하는 프로세스입니다. 일부 ML.NET 트레이너에는 `NonCalibrated` 접미사가 있습니다. 이러한 알고리즘은 클래스 확률에 매핑되어야 하는 원시 점수를 생성합니다.
 
-## <a name="catalog"></a>Catalog 
+## <a name="catalog"></a>Catalog
 
 ML.NET에서 카탈로그는 공통 목적에 따라 그룹화된 확장 함수의 컬렉션입니다.
 
@@ -170,7 +170,7 @@ ML.NET에서 카탈로그는 공통 목적에 따라 그룹화된 확장 함수�
 
 <xref:Microsoft.ML.ITransformer> 인터페이스를 구현하는 ML.NET 클래스
 
-변환기는 한 <xref:Microsoft.ML.IDataView>를 다른 항목으로 변환합니다. 변환기는 [추정기](#estimator) 또는 추정기 파이프라인 학습을 통해 만들어집니다. 
+변환기는 한 <xref:Microsoft.ML.IDataView>를 다른 항목으로 변환합니다. 변환기는 [추정기](#estimator) 또는 추정기 파이프라인 학습을 통해 만들어집니다.
 
 ## <a name="unsupervised-machine-learning"></a>감독되지 않는 기계 학습
 

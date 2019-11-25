@@ -3,12 +3,12 @@ title: ML.NET CLI(명령줄 인터페이스) 도구를 설치하는 방법
 description: ML.NET CLI(명령줄 인터페이스) 도구 개요 및 설치
 ms.date: 04/16/2019
 ms.custom: ''
-ms.openlocfilehash: baced9bbcc72153458d42d4b6d8206921bf187b8
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: feeb4832b5bbd39f28ac2c6f6caa40d60b4f3aa9
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117998"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977079"
 ---
 # <a name="how-to-install-the-mlnet-command-line-interface-cli-tool"></a>ML.NET CLI(명령줄 인터페이스) 도구를 설치하는 방법
 
@@ -29,7 +29,7 @@ ms.locfileid: "71117998"
 
 ## <a name="install"></a>설치
 
-ML.NET CLI는 다른 DotNet Global Tool처럼 설치됩니다. `dotnet tool install` .NET Core CLI 명령을 사용합니다. 
+ML.NET CLI는 다른 DotNet Global Tool처럼 설치됩니다. `dotnet tool install` .NET Core CLI 명령을 사용합니다.
 
 다음 예제에서는 기본 NuGet 피드 위치에 ML.NET CLI를 설치하는 방법을 보여 줍니다.
 
@@ -112,7 +112,7 @@ ML.NET CLI는 `System.CommandLine`을 기반으로 하므로 탭 완성을 기�
 
     ```console
     echo $profile
-    ``` 
+    ```
 
 (다른 셸의 경우 [검색](https://github.com/dotnet/System.CommandLine/issues?q=is%3Aissue+is%3Aopen+label%3A%22shell+suggestion%22) 또는 [문제](https://github.com/dotnet/System.CommandLine/issues) 열기)
 
@@ -136,5 +136,5 @@ Global Tool을 특정 디렉터리에 설치할 수도 있습니다. 특정 디�
 
 - [‘ML.NET CLI 도구 시작' 자습서](../tutorials/mlnet-cli.md)
 - [ML.NET CLI 도구를 사용하여 자동으로 모델을 학습하는 방법](../automate-training-with-cli.md)
-- [ML.NET CLI auto-train 명령 참조 가이드](../reference/ml-net-cli-reference.md) 
+- [ML.NET CLI auto-train 명령 참조 가이드](../reference/ml-net-cli-reference.md)
 - [ML.NET CLI의 원격 분석](../resources/ml-net-cli-telemetry.md)

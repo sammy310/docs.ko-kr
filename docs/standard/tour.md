@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: 8a2904d02b34058a87a77bbedbed3ccba4c80c58
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: e0e35562e2351f9b985c74b60d8769577c3e3f56
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73421582"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283890"
 ---
 # <a name="tour-of-net"></a>.NET 둘러보기
 
@@ -29,7 +29,7 @@ ms.locfileid: "73421582"
 
 Microsoft에서는 C#과 F#, VB(Visual Basic) 이 세 가지 .NET 언어를 적극적으로 개발하고 지원합니다. 
 
-* C#은 C 스타일 언어의 표현력과 우아함은 그대로 유지하면서 간단하고 형식이 안전한 개체 지향 언어입니다. C나 이와 비슷한 언어에 익숙한 사용자라면 누구나 거의 문제 없이 C#을 사용할 수 있을 것입니다. C#에 대한 자세한 내용은 [C# 가이드](../csharp/index.md)를 참조하세요.
+* C#은 C 스타일 언어의 표현력과 우아함은 그대로 유지하면서 간단하고 형식이 안전한 개체 지향 언어입니다. C나 이와 비슷한 언어에 익숙한 사용자라면 누구나 거의 문제 없이 C#을 사용할 수 있을 것입니다. C#에 대한 자세한 내용은 [C# 가이드](../csharp/index.yml)를 참조하세요.
 
 * F#은 일반적인 개체 지향 프로그래밍과 명령형 프로그래밍을 지원하며 다양한 플랫폼에서 사용할 수 있는 함수 우선 프로그래밍 언어입니다. F#에 대한 자세한 내용을 보려면 [F# 가이드](../fsharp/index.md)를 참조하세요.
 

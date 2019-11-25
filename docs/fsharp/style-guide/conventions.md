@@ -1,13 +1,13 @@
 ---
 title: F# 코딩 규칙
 description: 코드를 작성할 F# 때 일반적인 지침과 관용구에 대해 알아봅니다.
-ms.date: 10/22/2019
-ms.openlocfilehash: 6700f64aa61308cbfc0b7a38724d69a281a088db
-ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
+ms.date: 11/04/2019
+ms.openlocfilehash: 60eff6392d71caa54eeb438f2f6ba9db910f1bc1
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72799107"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73978221"
 ---
 # <a name="f-coding-conventions"></a>F# 코딩 규칙
 
@@ -172,8 +172,8 @@ module MyApi =
 
 ```fsharp
 type MyParametricApi(dep1, dep2, dep3) =
-    member __.Function1 arg1 = doStuffWith dep1 dep2 dep3 arg1
-    member __.Function2 arg2 = doStuffWith dep1 dep2 dep3 arg2
+    member _.Function1 arg1 = doStuffWith dep1 dep2 dep3 arg1
+    member _.Function2 arg2 = doStuffWith dep1 dep2 dep3 arg2
 ```
 
 이렇게 하면 다음을 수행할 수 있습니다.
@@ -189,7 +189,7 @@ type MyParametricApi(dep1, dep2, dep3) =
 
 ### <a name="represent-error-cases-and-illegal-state-in-types-intrinsic-to-your-domain"></a>도메인의 내장 형식에서 오류 사례 및 잘못 된 상태를 나타냅니다.
 
-[구별 된 공용 구조체](../language-reference/discriminated-unions.md)를 F# 사용 하면 형식 시스템에서 잘못 된 프로그램 상태를 나타내는 기능을 제공 합니다. 예를 들면,
+[구별 된 공용 구조체](../language-reference/discriminated-unions.md)를 F# 사용 하면 형식 시스템에서 잘못 된 프로그램 상태를 나타내는 기능을 제공 합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
 
 ```fsharp
 type MoneyWithdrawalResult =
@@ -373,7 +373,7 @@ module Transactions =
         ...
 
 type Transactor(ctx, currentBalance) =
-    member __.ExecuteTransaction(txnType) =
+    member _.ExecuteTransaction(txnType) =
         Transactions.doTransaction ctx txtType currentBalance
         ...
 ```
@@ -401,8 +401,8 @@ open TransactionsTestingUtil.TransactionsTestable
 
 let testableContext =
     { new ITransactionContext with
-        member __.TheFirstMember() = ...
-        member __.TheSecondMember() = ... }
+        member _.TheFirstMember() = ...
+        member _.TheSecondMember() = ... }
 
 let transactionRoutine = getTestableTransactionRoutine testableContext
 
@@ -437,7 +437,7 @@ F#에는 .NET 런타임에서 사용할 수 있는 것으로 상속 되는 [Acce
 
 * 제네릭 형식 매개 변수의 이름을 지정 하는 것이 좋습니다.
 
-    이것은 .NET에서 작업을 수행 하는 일반적인 방법 이므로 snake_case 또는 camelCase 보다는를 사용 하는 것이 좋습니다.
+    이것은 .NET에서 작업을 수행 하는 일반적인 방법 이므로 snake_case 또는 camelCase이 아닌 다른 사용자를 사용 하는 것이 좋습니다.
 
 마지막으로, 자동 일반화는 항상 또는 규모가 많은 코드 베이스를 처음 접하는 F# 사용자에 게는 유용 하지 않습니다. 일반적으로 사용 되는 구성 요소를 사용 하는 경우 인지 오버 헤드가 발생 합니다. 또한 자동으로 일반화 된 함수를 다른 입력 형식으로 사용 하지 않는 경우 (예를 들어 사용 하려는 경우에만) 해당 시점에서 제네릭이 될 수 있습니다. 작성 하는 코드의 경우에는 항상 제네릭을 활용 하는 것이 좋습니다.
 
@@ -495,15 +495,15 @@ open System.Collections.Generic
 type Closure1Table() =
     let t = Dictionary<Item0, HashSet<TerminalIndex>>()
 
-    member __.Add(key, value) =
+    member _.Add(key, value) =
         if not (t.ContainsKey(key)) then
             t.Add(key, value)
         else
             t.[key] <- value
 
-    member __.Count = t.Count
+    member _.Count = t.Count
 
-    member __.Contains(key, value) =
+    member _.Contains(key, value) =
         match t.TryGetValue(key) with
         | (true, v) -> v.Equals(value)
         | (false, _) -> false

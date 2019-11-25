@@ -1,5 +1,5 @@
 ---
-title: Visual Basic을 사용한 파일 액세스
+title: 파일 액세스
 ms.date: 07/20/2015
 helpviewer_keywords:
 - file access
@@ -14,17 +14,19 @@ helpviewer_keywords:
 - I/O [Visual Basic]
 - sequential access
 ms.assetid: 231533bf-d049-4345-befa-3fb78fe6517d
-ms.openlocfilehash: f9cbb255dea8c6915951b5099f40bfd0ba66c8aa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 22bcd0f1f3acb0c0ad899b83ad2d879ead948f12
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583307"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348906"
 ---
 # <a name="file-access-with-visual-basic"></a>Visual Basic을 사용한 파일 액세스
+
 `My.Computer.FileSystem` 개체는 파일 및 폴더로 작업하기 위한 도구를 제공합니다. 해당 속성, 메서드 및 이벤트를 사용하여 파일 및 폴더를 만들고 복사, 이동, 조사 및 삭제할 수 있습니다. `My.Computer.FileSystem`은 이전 버전과의 호환성을 위해 Visual Basic에서 제공하는 레거시 함수(`FileOpen`, `FileClose`, `Input`, `InputString`, `LineInput` 등)보다 뛰어난 성능을 제공합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [파일 읽기](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
  `My.Computer.FileSystem` 개체를 사용하여 파일에서 읽기에 대한 항목을 나열합니다.  
   

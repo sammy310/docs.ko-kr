@@ -5,12 +5,12 @@ helpviewer_keywords:
 - walkthroughs [WPF]
 - WPF walkthroughs [WPF]
 ms.assetid: c29bde96-0389-4aff-a9fb-cd678f66b7f7
-ms.openlocfilehash: 34cd7e96442a570a3951e6303d2ac90ce5da6239
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: fbd5006611a0a8e0d90b589df7b2cb6a34101457
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920404"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977025"
 ---
 # <a name="wpf-walkthroughs"></a>WPF 연습
 연습에서는 일반적인 시나리오에 대 한 단계별 지침을 제공 합니다. 제품 또는 특정 기능 영역 파악을 효율적으로 시작할 수 있습니다.
@@ -21,11 +21,11 @@ ms.locfileid: "72920404"
 
 |제목|설명|
 |-----------|-----------------|
-|[연습: WPF Designer를 사용 하 여 간단한 WPF 응용 프로그램 빌드](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb546972(v=vs.100))|[!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]를 사용 하 여 간단한 WPF 응용 프로그램을 빌드하는 방법을 보여 줍니다.|
+|[연습: WPF Designer를 사용 하 여 간단한 WPF 응용 프로그램 빌드](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb546972(v=vs.100))|WPF Designer를 사용 하 여 간단한 WPF 응용 프로그램을 빌드하는 방법을 보여 줍니다.|
 |[연습: 동적 레이아웃 생성](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514519(v=vs.100))|<xref:System.Windows.Controls.Grid> panel 컨트롤을 사용 하 여 동적 레이아웃을 만드는 방법을 보여 줍니다.|
 |[연습: WPF Designer를 사용 하 여 크기 조정 가능한 응용 프로그램 만들기](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb546954(v=vs.100))|런타임에 사용자가 크기를 조정할 수 있는 창 레이아웃을 만드는 방법을 보여 줍니다.|
-|[연습: WPF Designer를 사용 하 여 데이터 바인딩 만들기](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dd434207(v=vs.100))|[!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]를 사용 하 여 데이터를 컨트롤에 연결 하는 데이터 바인딩을 만드는 방법을 보여 줍니다.|
-|[연습: DesignInstance를 사용 하 여 디자이너에서 데이터에 바인딩](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dd490796(v=vs.100))|[!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]를 사용 하 여 런타임에 할당 된 데이터 컨텍스트에 대해 디자인 타임에 데이터 바인딩을 만드는 방법을 보여 줍니다.|
+|[연습: WPF Designer를 사용 하 여 데이터 바인딩 만들기](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dd434207(v=vs.100))|WPF 디자이너를 사용 하 여 데이터를 컨트롤에 연결 하는 데이터 바인딩을 만드는 방법을 보여 줍니다.|
+|[연습: DesignInstance를 사용 하 여 디자이너에서 데이터에 바인딩](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dd490796(v=vs.100))|WPF 디자이너를 사용 하 여 런타임에 할당 된 데이터 컨텍스트에 대해 디자인 타임에 데이터 바인딩을 만드는 방법을 보여 줍니다.|
 
 ## <a name="wpf-walkthroughs"></a>WPF 연습
 

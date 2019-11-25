@@ -1,19 +1,20 @@
 ---
-title: '문제 해결: 로그 수신기(Visual Basic)'
+title: '문제 해결: 로그 수신기'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - event logs, troubleshooting
 - troubleshooting Visual Basic, event logs
 - troubleshooting event logs
 ms.assetid: ac6eb760-3d5d-461e-aedd-40599ee22e49
-ms.openlocfilehash: 12282df50bc42d2a153a9aa8db01f2654acd91ce
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: dd139935dae7fe4d1334b861e6590df29bab7202
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59299529"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346863"
 ---
 # <a name="troubleshooting-log-listeners-visual-basic"></a>문제 해결: 로그 수신기(Visual Basic)
+
 `My.Application.Log` 및 `My.Log` 개체를 사용하여 애플리케이션에서 발생하는 이벤트에 대한 정보를 기록할 수 있습니다.  
   
  해당 메시지를 수신하는 로그 수신기를 확인하려면 [연습: My.Application.Log가 정보를 기록하는 위치 확인](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)을 참조하세요.  

@@ -1,18 +1,19 @@
 ---
-title: '방법: Visual Basic에서 디렉터리의 파일 컬렉션 가져오기'
+title: '방법: 디렉터리의 파일 컬렉션 가져오기'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - folders, working with
 - files [Visual Basic], accessing
 ms.assetid: 6c8ba7e8-dd37-4853-92bf-762b67c98160
-ms.openlocfilehash: 546fbe4a340cceed29c9350754ffc50096e7d37a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bb07ae25b413334f94456b378f0a2339402ac668
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623342"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74335332"
 ---
 # <a name="how-to-get-the-collection-of-files-in-a-directory-in-visual-basic"></a>방법: Visual Basic에서 디렉터리의 파일 컬렉션 가져오기
+
 <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles%2A?displayProperty=nameWithType> 메서드의 오버로드는 디렉터리 내의 파일 이름을 나타내는 문자열의 읽기 전용 컬렉션을 반환합니다.  
   
 - 하위 디렉터리를 검색하지 않고 지정된 디렉터리에서 단순 파일 검색을 수행하려면 <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles%28System.String%29> 오버로드를 사용합니다.  
@@ -28,6 +29,7 @@ ms.locfileid: "64623342"
      [!code-vb[VbVbcnMyFileSystem#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#32)]  
   
 ## <a name="robust-programming"></a>강력한 프로그래밍  
+
  다음 조건에서 예외가 발생합니다.  
   
 - 길이가 0인 문자열이거나, 공백만 포함하거나, 잘못된 문자를 포함하거나, 경로가 디바이스 경로인 경우(\\\\.\\로 시작됨)와 같은 여러 가지 이유 중 하나로 경로가 올바르지 않은 경우(<xref:System.ArgumentException>)  

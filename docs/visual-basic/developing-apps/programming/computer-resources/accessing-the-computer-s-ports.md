@@ -1,21 +1,23 @@
 ---
-title: 컴퓨터 포트에 액세스(Visual Basic)
+title: 컴퓨터 포트에 액세스
 ms.date: 07/20/2015
 helpviewer_keywords:
 - serial ports
 - My.Computer.Ports object [Visual Basic], tasks
 ms.assetid: b04a2f76-992a-4585-ab41-8bbbdbd554a1
-ms.openlocfilehash: 7788e08c1257ff900b08ef6b8d26d3fe42ad9116
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: e790a41fc945a395feebc63f8d26efdc51dc4fa9
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65589335"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74329592"
 ---
 # <a name="accessing-the-computers-ports-visual-basic"></a>컴퓨터 포트에 액세스(Visual Basic)
+
 `My.Computer.Ports` 개체는 컴퓨터의 직렬 포트에 액세스하기 위한 속성 및 메서드를 제공합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [방법: 사용 가능한 직렬 포트 표시](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)  
  사용할 수 있는 직렬 포트를 표시하는 방법을 보여 줍니다.  
   
@@ -32,6 +34,7 @@ ms.locfileid: "65589335"
  포트 작업을 수행할 때 .NET Framework를 사용하는 방법을 설명합니다.  
   
 ## <a name="reference"></a>참조  
+
  <xref:Microsoft.VisualBasic.Devices.Ports>  
  `My.Computer.Ports` 개체와 해당 멤버를 설명합니다.  
   
@@ -42,5 +45,6 @@ ms.locfileid: "65589335"
  <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType> 개체를 만들고 여는 `OpenSerialPort` 메서드를 설명합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
+
  <xref:System.IO.Ports.SerialPort>  
  .NET Framework <xref:System.IO.Ports.SerialPort> 클래스를 설명합니다.

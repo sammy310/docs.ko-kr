@@ -10,21 +10,21 @@ helpviewer_keywords:
 - webRequestModules, clear element
 - clear element, webRequestModules
 ms.assetid: 48f38bcb-f30c-4b74-a8f0-1a3caf1aa96f
-ms.openlocfilehash: 95a190dac3a9512b404a054c60c48de9c4574790
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 5832d120824df75d374fc94cb0aa4e08189cb965
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698337"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088494"
 ---
 # <a name="clear-element-for-webrequestmodules-network-settings"></a>webRequestModules의 \<clear > 요소 (네트워크 설정)
 응용 프로그램에서 등록 된 모든 웹 요청 모듈을 제거 합니다.  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4c.net >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t @ no__t[ **\<webRequestModules >** ](webrequestmodules-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t @ no__t @ @ no__t-4 @ no__t-5 **\<clear >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;[ **\<.net >를**](system-net-element-network-settings.md) &nbsp;\
+&nbsp;&nbsp;&nbsp;&nbsp;\<[**webRequestModules**](webrequestmodules-element-network-settings.md) >
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<clear >**
+
 ## <a name="syntax"></a>구문  
   
 ```xml  
@@ -35,10 +35,10 @@ ms.locfileid: "71698337"
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
- 없음  
+ 없음.  
   
 ### <a name="child-elements"></a>자식 요소  
- 없음  
+ 없음.  
   
 ### <a name="parent-elements"></a>부모 요소  
   
@@ -46,8 +46,8 @@ ms.locfileid: "71698337"
 |-----------------|---------------------|  
 |[webRequestModules](webrequestmodules-element-network-settings.md)|네트워크 호스트의 정보를 요청 하는 데 사용할 모듈을 지정 합니다.|  
   
-## <a name="remarks"></a>설명  
- @No__t-0 요소는 구성 파일에서 이전에 정의 되었거나 구성 계층 구조에서 상위 수준에 정의 된 등록 된 모든 웹 요청 모듈을 제거 합니다.  
+## <a name="remarks"></a>주의  
+ `clear` 요소는 구성 파일 또는 구성 계층 구조에서 상위 수준에 정의 된 등록 된 모든 웹 요청 모듈을 제거 합니다.  
   
 ## <a name="configuration-files"></a>구성 파일  
  이 요소는 애플리케이션 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.  

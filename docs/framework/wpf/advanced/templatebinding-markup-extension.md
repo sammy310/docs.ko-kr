@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XAML [WPF], TemplateBinding markup extension
 - TemplateBinding markup extensions [WPF]
 ms.assetid: 1d25bbfc-dbc2-499d-9f12-419d23d4ac6a
-ms.openlocfilehash: 399e4ac223d2fcb728ece2c92d25a087990992f2
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 6d89978b907c8f124b5162c97de5edc034cf1e95
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458662"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976665"
 ---
 # <a name="templatebinding-markup-extension"></a>TemplateBinding 태그 확장
 컨트롤 템플릿의 속성 값을 템플릿 기반 컨트롤의 다른 속성 값에 연결합니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "73458662"
 |`sourceProperty`|템플릿을 기반으로 만들 형식에 존재하는 또 다른 종속성 속성이며 해당 <xref:System.Windows.DependencyProperty.Name%2A?displayProperty=nameWithType>으로 지정됩니다.<br /><br /> 또는<br /><br /> 템플릿을 기반으로 만들 대상 형식과는 다른 형식으로 정의되는 "점으로 구분된" 속성 이름이며 실제로는 <xref:System.Windows.PropertyPath>입니다. [PROPERTYPATH XAML 구문](propertypath-xaml-syntax.md)을 참조 하세요.|  
   
 ## <a name="remarks"></a>주의  
- `TemplateBinding`은 템플릿 시나리오에 대 한 [바인딩의](binding-markup-extension.md) 최적화 된 형태 이며 `{Binding RelativeSource={RelativeSource TemplatedParent}}`생성 된 `Binding`와 유사 합니다. `TemplateBinding`은 속성이 기본적으로 양방향 바인딩과 관련되었더라도 항상 단방향 바인딩입니다. 관련된 두 속성은 모두 종속성 속성이어야 합니다. 템플릿 부모에 대 한 양방향 바인딩을 구현 하려면 다음 바인딩 문을 대신 사용 `{Binding RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay, Path=MyDependencyProperty}`합니다. 
+ `TemplateBinding`은 템플릿 시나리오에 대 한 [바인딩의](binding-markup-extension.md) 최적화 된 형태 이며 `{Binding RelativeSource={RelativeSource TemplatedParent}, Mode=OneWay}`생성 된 `Binding`와 유사 합니다. `TemplateBinding`은 속성이 기본적으로 양방향 바인딩과 관련되었더라도 항상 단방향 바인딩입니다. 관련된 두 속성은 모두 종속성 속성이어야 합니다. 템플릿 부모에 대 한 양방향 바인딩을 구현 하려면 다음 바인딩 문을 대신 사용 `{Binding RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay, Path=MyDependencyProperty}`합니다. 
   
  [RelativeSource](relativesource-markupextension.md) 는 템플릿 내에서 상대적 속성 바인딩을 수행 하기 위해 `TemplateBinding` 대신 또는와 함께 사용 되는 또 다른 태그 확장입니다.  
   

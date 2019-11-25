@@ -5,12 +5,12 @@ ms.date: 08/29/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: 8090e4565a7e55aaa9cc9939e61eb728a169de8d
-ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
+ms.openlocfilehash: 4bad8b0ed17a34ba290bf9c00d65cc3f000a2acf
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71736868"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976683"
 ---
 # <a name="explain-model-predictions-using-permutation-feature-importance"></a>순열 기능 중요도를 사용하여 예측 모델 설명
 
@@ -18,15 +18,15 @@ PFI(순열 기능 중요도)를 사용한 예측에서 기능이 갖는 기여�
 
 기계 학습 모델은 종종 입력을 받아 출력을 생성하는 블랙 박스처럼 여겨지곤 합니다. 출력에 영향을 미치는 중간 단계 또는 기능 간 상호 작용은 거의 해석되지 않습니다. 의료 등, 다양한 일상에서 기계 학습의 도입이 증가하면서 기계 학습 모델이 그러한 의사 결정을 내리게 되는 이유를 해석하는 것이 매우 중요해졌습니다. 예를 들어, 기계 학습 모델에서 진단을 수행할 경우 의료 전문가가 해당 진단에 반영된 요소를 살펴볼 방법이 필요합니다. 올바른 진단을 제공하면 환자의 빠른 회복 여부에 큰 차이를 낼 수 있습니다. 따라서 모델의 설명 가능한 수준이 높을수록 의료 전문가는 더 자신 있게 모델의 의사 결정을 수락 또는 거부할 수 있습니다.
 
-다양한 기법을 사용하여 모델을 설명하며, 그 방법 중 하나가 PFI입니다. PFI는 [Breiman의 *랜덤 포리스트* 논문](https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf)(섹션 10 참조)에서 착안한 분류 및 회귀 모델을 설명하는 데 사용되는 기법입니다. 높은 수준에서는, 전체 데이터 세트에 대해 한 번에 한 기능씩 임의로 데이터를 섞고 해당 성능 메트릭이 얼마나 감소하는지를 산출하는 방식으로 작동합니다. 변화가 클수록 해당 기능이 중요한 것입니다. 
+다양한 기법을 사용하여 모델을 설명하며, 그 방법 중 하나가 PFI입니다. PFI는 [Breiman의 *랜덤 포리스트* 논문](https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf)(섹션 10 참조)에서 착안한 분류 및 회귀 모델을 설명하는 데 사용되는 기법입니다. 높은 수준에서는, 전체 데이터 세트에 대해 한 번에 한 기능씩 임의로 데이터를 섞고 해당 성능 메트릭이 얼마나 감소하는지를 산출하는 방식으로 작동합니다. 변화가 클수록 해당 기능이 중요한 것입니다.
 
 또한 가장 중요한 기능을 강조 표시하므로 모델을 빌드하는 사람이 노이즈 및 학습 시간을 줄일 수 있는 더 의미 있는 기능의 하위 집합에 주력할 수 있습니다.
 
 ## <a name="load-the-data"></a>데이터 로드
 
-이 샘플에 사용되는 데이터 세트의 기능은 1-12열에 있습니다. 목표는 `Price` 예측입니다. 
+이 샘플에 사용되는 데이터 세트의 기능은 1-12열에 있습니다. 목표는 `Price` 예측입니다.
 
-| Column | 기능 | 설명 
+| Column | 기능 | 설명
 | --- | --- | --- |
 | 1 | CrimeRate | 인당 범죄율
 | 2 | ResidentialZones | 도시 내 주거지
@@ -103,7 +103,7 @@ class HousingPriceData
 
 ```csharp
 // 1. Get the column name of input features.
-string[] featureColumnNames = 
+string[] featureColumnNames =
     data.Schema
         .Select(column => column.Name)
         .Where(columnName => columnName != "Label").ToArray();
@@ -131,7 +131,7 @@ var sdcaModel = sdcaEstimator.Fit(preprocessedTrainData);
 ML.NET에서는 해당 작업에 [`PermutationFeatureImportance`](xref:Microsoft.ML.PermutationFeatureImportanceExtensions) 메서드를 사용합니다.
 
 ```csharp
-ImmutableArray<RegressionMetricsStatistics> permutationFeatureImportance = 
+ImmutableArray<RegressionMetricsStatistics> permutationFeatureImportance =
     mlContext
         .Regression
         .PermutationFeatureImportance(sdcaModel, preprocessedTrainData, permutationCount:3);
@@ -139,7 +139,7 @@ ImmutableArray<RegressionMetricsStatistics> permutationFeatureImportance =
 
 학습 데이터 세트에 [`PermutationFeatureImportance`](xref:Microsoft.ML.PermutationFeatureImportanceExtensions)를 사용한 결과는 [`RegressionMetricsStatistics`](xref:Microsoft.ML.Data.RegressionMetricsStatistics) 개체의 [`ImmutableArray`](xref:System.Collections.Immutable.ImmutableArray)입니다. [`RegressionMetricsStatistics`](xref:Microsoft.ML.Data.RegressionMetricsStatistics)는 `permutationCount` 매개 변수에서 지정한 순열 수에 해당하는 여러 [`RegressionMetrics`](xref:Microsoft.ML.Data.RegressionMetrics) 관찰에 대해 평균, 표준 편차 같은 요약 통계를 제공합니다.
 
-중요도, 이 경우 [`PermutationFeatureImportance`](xref:Microsoft.ML.PermutationFeatureImportanceExtensions)에서 계산한 R 제곱 메트릭의 절대 평균 감소를 가장 중요함에서 가장 중요하지 않음의 순서로 지정할 수 있습니다.  
+중요도, 이 경우 [`PermutationFeatureImportance`](xref:Microsoft.ML.PermutationFeatureImportanceExtensions)에서 계산한 R 제곱 메트릭의 절대 평균 감소를 가장 중요함에서 가장 중요하지 않음의 순서로 지정할 수 있습니다.
 
 ```csharp
 // Order features by importance
@@ -156,7 +156,7 @@ foreach (var feature in featureImportanceMetrics)
 }
 ```
 
-`featureImportanceMetrics`에서 각 기능에 대한 값을 출력하면 다음과 유사한 출력이 생성됩니다. 이 값은 제공된 데이터에 따라 달라지므로 결과가 다르게 보일 수 있습니다.  
+`featureImportanceMetrics`에서 각 기능에 대한 값을 출력하면 다음과 유사한 출력이 생성됩니다. 이 값은 제공된 데이터에 따라 달라지므로 결과가 다르게 보일 수 있습니다.
 
 | 기능 | R 제곱으로 변경 |
 |:--|:--:|

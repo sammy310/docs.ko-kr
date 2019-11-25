@@ -10,22 +10,22 @@ helpviewer_keywords:
 - <bypasslist>, clear element
 - bypasslist, clear element
 ms.assetid: 301584ca-a914-4100-b180-3b288d3b099e
-ms.openlocfilehash: 4d078dac14103560423bfccdd4a1717031e7a60f
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 2ad6b16370f600299439d2e810dfefa1b5fa3c06
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699505"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74087534"
 ---
 # <a name="clear-element-for-bypasslist-network-settings"></a>bypasslist에 대 한 \<clear > 요소 (네트워크 설정)
 프록시 무시 목록을 지웁니다.  
   
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4c.net >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t @ no__t[ **\<defaultProxy >** ](defaultproxy-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t @ no__t @ @ no__t-4 @ no__t-5[ **\<bypasslist >** ](bypasslist-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t @ no__t @ @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 **\<clear >**  
-  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;[ **\<.net >를**](system-net-element-network-settings.md) &nbsp;\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<defaultProxy >** ](defaultproxy-element-network-settings.md)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<bypasslist >** ](bypasslist-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<clear >**
+
 ## <a name="syntax"></a>구문  
   
 ```xml  
@@ -36,10 +36,10 @@ ms.locfileid: "71699505"
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
- 없음  
+ 없음.  
   
 ### <a name="child-elements"></a>자식 요소  
- 없음  
+ 없음.  
   
 ### <a name="parent-elements"></a>부모 요소  
   
@@ -47,8 +47,8 @@ ms.locfileid: "71699505"
 |-----------------|---------------------|  
 |[bypasslist](bypasslist-element-network-settings.md)|프록시를 사용 하지 않는 주소를 설명 하는 정규식 집합을 제공 합니다.|  
   
-## <a name="remarks"></a>설명  
- @No__t-0 요소는 바이패스 목록에서 모든 항목을 지웁니다.  
+## <a name="remarks"></a>주의  
+ `clear` 요소는 바이패스 목록에서 모든 항목을 지웁니다.  
   
 ## <a name="configuration-files"></a>구성 파일  
  이 요소는 애플리케이션 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.  

@@ -8,20 +8,20 @@ helpviewer_keywords:
 - authenticationModules element
 - <authenticationModules> element
 ms.assetid: 10fcfaad-82ef-4692-871a-0aec9dfbe75e
-ms.openlocfilehash: 4fe44deba951e5302518ed855589ad1b0ca75343
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: bacaaf92464a355804a9ea8307f6e6f1caac1f05
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699527"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74087606"
 ---
 # <a name="authenticationmodules-element-network-settings"></a>\<authenticationModules > 요소 (네트워크 설정)
 네트워크 요청을 인증 하는 데 사용 되는 모듈을 지정 합니다.  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4c.net >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t @ no__t **\<authenticationModules >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;[ **\<.net >를**](system-net-element-network-settings.md) &nbsp;\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<authenticationModules >**
+
 ## <a name="syntax"></a>구문  
   
 ```xml  
@@ -33,7 +33,7 @@ ms.locfileid: "71699527"
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
- 없음  
+ 없음.  
   
 ### <a name="child-elements"></a>자식 요소  
   
@@ -49,8 +49,8 @@ ms.locfileid: "71699527"
 |-----------------|---------------------|  
 |[system.net](system-net-element-network-settings.md)|.NET Framework의 네트워크 연결 방법을 지정하는 설정을 포함합니다.|  
   
-## <a name="remarks"></a>설명  
- @No__t-0 요소는 서버에서 인증 프로세스를 수행 하는 인증 모듈을 지정 합니다. 인증 모듈은 <xref:System.Net.IAuthenticationModule> 인터페이스를 구현 해야 합니다.  
+## <a name="remarks"></a>주의  
+ `authenticationModule` 요소는 서버를 사용 하 여 인증 프로세스를 수행 하는 인증 모듈을 지정 합니다. 인증 모듈은 <xref:System.Net.IAuthenticationModule> 인터페이스를 구현 해야 합니다.  
   
 ## <a name="configuration-files"></a>구성 파일  
  이 요소는 애플리케이션 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.  

@@ -9,16 +9,16 @@ helpviewer_keywords:
 - group keyword [C#]
 - group clause [C#]
 ms.assetid: c817242e-b12c-4baa-a57e-73ee138f34d1
-ms.openlocfilehash: 806bc3de138ebae682d2e248593230c753eb7ba2
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: dd14a4baf9967f41690e7978b8b6cf57c9275e36
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422761"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428509"
 ---
 # <a name="group-clause-c-reference"></a>group 절(C# 참조)
 
-`group` 절은 그룹의 키 값과 일치하는 0개 이상의 항목이 포함된 <xref:System.Linq.IGrouping%602> 개체 시퀀스를 반환합니다. 예를 들어 각 문자열의 첫 번째 문자에 따라 문자열 시퀀스를 그룹화할 수 있습니다. 이 경우 첫 번째 문자는 키로, [char](char.md) 형식이며 각 <xref:System.Linq.IGrouping%602> 개체의 `Key` 속성에 저장됩니다. 컴파일러는 키의 형식을 유추합니다.
+`group` 절은 그룹의 키 값과 일치하는 0개 이상의 항목이 포함된 <xref:System.Linq.IGrouping%602> 개체 시퀀스를 반환합니다. 예를 들어 각 문자열의 첫 번째 문자에 따라 문자열 시퀀스를 그룹화할 수 있습니다. 이 경우 첫 번째 문자는 키로, [char](../builtin-types/char.md) 형식이며 각 <xref:System.Linq.IGrouping%602> 개체의 `Key` 속성에 저장됩니다. 컴파일러는 키의 형식을 유추합니다.
 
 다음 예제와 같이 쿼리 식을 `group` 절로 끝낼 수 있습니다.
 
@@ -66,7 +66,7 @@ ms.locfileid: "73422761"
 group person by new {name = person.surname, city = person.city};
 ```
 
-쿼리 변수를 다른 메서드에 전달해야 하는 경우 명명된 형식을 사용합니다. 키에 대해 자동 구현 속성을 사용하여 특수 클래스를 만든 다음 <xref:System.Object.Equals%2A> 및 <xref:System.Object.GetHashCode%2A> 메서드를 재정의합니다. 구조체를 사용할 수도 있으며, 이 경우 이러한 메서드를 엄격하게 재정의하지 않아도 됩니다. 자세한 내용은 [방법: 자동으로 구현된 속성을 사용하여 간단한 클래스 구현](../../programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md) 및 [방법: 디렉터리 트리의 중복 파일 쿼리](../../programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md)를 참조하세요. 두 번째 문서에는 명명된 형식과 함께 복합 키를 사용하는 방법을 보여 주는 코드 예제가 있습니다.
+쿼리 변수를 다른 메서드에 전달해야 하는 경우 명명된 형식을 사용합니다. 키에 대해 자동 구현 속성을 사용하여 특수 클래스를 만든 다음 <xref:System.Object.Equals%2A> 및 <xref:System.Object.GetHashCode%2A> 메서드를 재정의합니다. 구조체를 사용할 수도 있으며, 이 경우 이러한 메서드를 엄격하게 재정의하지 않아도 됩니다. 자세한 내용은 [자동으로 구현된 속성을 사용하여 간단한 클래스를 구현하는 방법](../../programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md) 및 [방법: 디렉터리 트리의 중복 파일 쿼리](../../programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md)를 참조하세요. 두 번째 문서에는 명명된 형식과 함께 복합 키를 사용하는 방법을 보여 주는 코드 예제가 있습니다.
 
 ## <a name="example"></a>예
 

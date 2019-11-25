@@ -10,26 +10,26 @@ helpviewer_keywords:
 - configuration sections [.NET Framework]
 - configuration settings [.NET Framework], cryptography
 ms.assetid: 1f55050a-b2a3-4868-a3c0-da20826150f3
-ms.openlocfilehash: 474c3274bfba6803ebb17289f138251d755250e4
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: c632a15552c8ba5743aac1309098b7d7ef949bbd
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699811"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088000"
 ---
 # <a name="cryptography-settings-schema"></a>암호화 설정 스키마
 암호 설정 스키마에는 암호화 알고리즘을 구현하는 클래스에 알고리즘 이름을 매핑하는 방법을 지정하는 요소가 포함되어 있습니다.  
   
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)  
-&nbsp; @ no__t-1 @ no__t @ no__t[ **\<cryptographySettings >** ](cryptographysettings-element.md)  
-&nbsp; @ no__t-1 @ no__t @ no__t @ @ no__t-4 @ no__t-5[ **\<cryptoNameMapping >** ](cryptonamemapping-element.md)  
-&nbsp; @ no__t-1 @ no__t @ no__t @ @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7[ **&nbsp;0cryptoclasses >** ](cryptoclasses-element.md)  
-&nbsp; @ no__t-1 @ no__t @ no__t @ @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 @ no__t-8 @ no__t-9[ **&nbsp;2 cryptoclass >** ](cryptoclass-element.md)  
-&nbsp; @ no__t-1 @ no__t @ no__t @ @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7[ **&nbsp;0nameEntry >** ](nameentry-element.md)  
-&nbsp; @ no__t-1 @ no__t @ no__t @ @ no__t-4 @ no__t-5[ **\<oidMap >** ](oidmap-element.md)  
-&nbsp; @ no__t-1 @ no__t @ no__t @ @ no__t-4 @ no__t-5 @ no__t-6[ **\<oidEntry >** ](oidentry-element.md)  
-  
+[ **\<configuration>** ](../configuration-element.md)\
+[**mscorlib >\<** ](mscorlib-element-for-cryptography-settings.md) &nbsp;&nbsp;\
+&nbsp;&nbsp;&nbsp;&nbsp;\<[**cryptographySettings**](cryptographysettings-element.md) >
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<cryptoNameMapping >** ](cryptonamemapping-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**cryptoClasses\<** ](cryptoclasses-element.md) >
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**cryptoClass >** ](cryptoclass-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<nameEntry**](nameentry-element.md) >
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<oidMap >** ](oidmap-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<y >** ](oidentry-element.md)
+
 |요소|설명|  
 |-------------|-----------------|  
 |[ **\<cryptoClasses**>](cryptoclasses-element.md)|**\<nameEntry>** 요소에 있는 이름에 매핑되는 암호화 클래스의 목록이 포함되어 있습니다.|  
@@ -44,4 +44,4 @@ ms.locfileid: "71699811"
 ## <a name="see-also"></a>참조
 
 - [구성 파일 스키마](../index.md)
-- [Cryptographic Services](../../../../standard/security/cryptographic-services.md)
+- [암호화 서비스](../../../../standard/security/cryptographic-services.md)

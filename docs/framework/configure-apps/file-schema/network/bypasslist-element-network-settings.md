@@ -8,21 +8,21 @@ helpviewer_keywords:
 - bypasslist element
 - <bypasslist> element
 ms.assetid: 124446b7-abb1-4e5e-a492-b64398f268f1
-ms.openlocfilehash: 1dda43be8c0e0c94bdf7b57b67aa4d403b547f97
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 7a6c1282c9ca8381d2dbb21ffdc82f95732c42b3
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699550"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74087518"
 ---
 # <a name="bypasslist-element-network-settings"></a>\<bypasslist > 요소 (네트워크 설정)
 프록시를 사용 하지 않는 주소를 설명 하는 정규식 집합을 제공 합니다.  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4c.net >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t @ no__t[ **\<defaultProxy >** ](defaultproxy-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t @ no__t @ @ no__t-4 @ no__t-5 **\<bypasslist >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;[ **\<.net >를**](system-net-element-network-settings.md) &nbsp;\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<defaultProxy >** ](defaultproxy-element-network-settings.md)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<bypasslist >**
+
 ## <a name="syntax"></a>구문  
   
 ```xml  
@@ -34,7 +34,7 @@ ms.locfileid: "71699550"
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
- 없음  
+ 없음.  
   
 ### <a name="child-elements"></a>자식 요소  
   
@@ -50,10 +50,10 @@ ms.locfileid: "71699550"
 |-----------------|---------------------|  
 |[defaultProxy](defaultproxy-element-network-settings.md)|HTTP(Hypertext Transfer Protocol) 프록시 서버를 구성합니다.|  
   
-## <a name="remarks"></a>설명  
- 바이패스 목록에는 프록시 서버를 통하지 않고 직접 액세스 @no__t는 Uri를 설명 하는 정규식이 포함 되어 있습니다.  
+## <a name="remarks"></a>주의  
+ 바이패스 목록에는 인스턴스를 프록시 서버를 통하지 않고 직접 액세스 <xref:System.Net.WebRequest> 하는 Uri를 설명 하는 정규식이 포함 되어 있습니다.  
   
- 이 요소에 대 한 정규식을 지정할 때는 주의 해야 합니다. 정규식 "[a-z] + @no__t -0.contoso\\.com"는 contoso.com 도메인에 있는 모든 호스트와 일치 하지만 contoso.com.cpandl.com 도메인의 모든 호스트와 일치 합니다. Contoso.com 도메인의 호스트만 일치 시키려면 앵커 ("$"): "[a-z] + @no__t -0.contoso\\.com $"를 사용 합니다.  
+ 이 요소에 대 한 정규식을 지정할 때는 주의 해야 합니다. 정규식 "[a-z] +\\. c o m\\는 contoso.com 도메인에 있는 모든 호스트와 일치 하지만 contoso.com.cpandl.com 도메인의 모든 호스트와 일치 합니다. Contoso.com 도메인의 호스트만 일치 시키려면 앵커 ("$"): "[a-z] +\\. contoso\\$"를 사용 합니다.  
   
  정규식에 대 한 자세한 내용은을 참조 하십시오. [정규식을 .NET Framework](../../../../standard/base-types/regular-expressions.md)합니다.  
   

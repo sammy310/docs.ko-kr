@@ -1,21 +1,25 @@
 ---
 title: ML.NET은 무엇이며 어떻게 작동하나요?
 description: ML.NET은 온라인 또는 오프라인 시나리오에서 .NET 애플리케이션에 기계 학습을 추가할 수 있는 기능을 제공합니다. 이 기능을 사용하면 ML.NET을 사용하기 위해 네트워크에 연결할 필요 없이 애플리케이션에 사용 가능한 데이터를 사용하여 자동 예측할 수 있습니다. 이 문서에서는 ML.NET에서 기계 학습의 기본 사항을 설명합니다.
-ms.date: 09/27/2019
+ms.date: 11/5/2019
 ms.topic: overview
 ms.custom: mvc
 ms.author: nakersha
 author: natke
-ms.openlocfilehash: 1ae6b82ada841ad172cbe6a59b667aaaf619e714
-ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
+ms.openlocfilehash: 5d8093c77799a55f4bc13e82c06c856dbb8d85cd
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/28/2019
-ms.locfileid: "71592042"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976733"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>ML.NET은 무엇이며 어떻게 작동하나요?
 
-ML.NET은 온라인 또는 오프라인 시나리오에서 .NET 애플리케이션에 기계 학습을 추가할 수 있는 기능을 제공합니다. 이 기능을 사용하면 네트워크에 연결할 필요 없이 애플리케이션에 사용 가능한 데이터를 사용하여 자동 예측할 수 있습니다. 이 문서에서는 ML.NET에서 기계 학습의 기본 사항을 설명합니다.
+ML.NET은 온라인 또는 오프라인 시나리오에서 .NET 애플리케이션에 기계 학습을 추가할 수 있는 기능을 제공합니다. 이 기능을 사용하여 애플리케이션에 사용 가능한 데이터를 사용하여 자동 예측할 수 있습니다.
+
+ML.NET의 핵심은 기계 학습 **모델**입니다. 모델은 입력 데이터를 예측으로 변환하는 데 필요한 단계를 지정합니다. ML.NET를 사용하면 알고리즘을 지정하여 사용자 지정 모델을 학습하거나 미리 학습된 TensorFlow 및 ONNX 모델을 가져올 수 있습니다.
+
+모델이 있는 경우, 애플리케이션에 이를 추가하여 예측할 수 있습니다.
 
 ML.NET은 .NET Core를 사용하여 Windows, Linux 및 macOS에서 실행되거나 .NET Framework를 사용하여 Windows를 실행됩니다. 64비트는 모든 플랫폼에서 지원됩니다. 32비트는 TensorFlow, LightGBM 및 ONNX 관련 기능을 제외하고 Windows에서 지원됩니다.
 
@@ -27,16 +31,18 @@ ML.NET을 사용하여 수행할 수 있는 예측 유형은 다음과 같습니
 |재발/연속 값 예측|크기 및 위치에 따라 주택 가격 예측|
 |변칙 검색|사기성 은행 거래 검색 |
 |권장 사항|이전 구매 내역에 기반하여 온라인 구매자가 구매하려는 제품 제안|
+|시계열/순차 데이터|날씨/제품 판매 예측|
+|이미지 분류|의료 이미지에서 병리학 분류|
 
 ## <a name="hello-mlnet-world"></a>Hello ML.NET World
 
-다음 코드 조각의 코드는 가장 단순한 ML.NET 애플리케이션을 보여줍니다. 이 예제에서는 집 크기 및 가격 데이터를 사용하여 주택 가격을 예측하도록 선형 회귀 모델을 구성합니다. 실제 애플리케이션에서 사용자의 데이터와 모델은 훨씬 더 복잡할 것입니다.
+다음 코드 조각의 코드는 가장 단순한 ML.NET 애플리케이션을 보여줍니다. 이 예제에서는 집 크기 및 가격 데이터를 사용하여 주택 가격을 예측하도록 선형 회귀 모델을 구성합니다. 
 
  ```csharp
     using System;
     using Microsoft.ML;
     using Microsoft.ML.Data;
-    
+
     class Program
     {
         public class HouseData
@@ -44,17 +50,17 @@ ML.NET을 사용하여 수행할 수 있는 예측 유형은 다음과 같습니
             public float Size { get; set; }
             public float Price { get; set; }
         }
-    
+
         public class Prediction
         {
             [ColumnName("Score")]
             public float Price { get; set; }
         }
-    
+
         static void Main(string[] args)
         {
             MLContext mlContext = new MLContext();
-    
+
             // 1. Import or create training data
             HouseData[] houseData = {
                 new HouseData() { Size = 1.1F, Price = 1.2F },
@@ -66,10 +72,10 @@ ML.NET을 사용하여 수행할 수 있는 예측 유형은 다음과 같습니
             // 2. Specify data preparation and model training pipeline
             var pipeline = mlContext.Transforms.Concatenate("Features", new[] { "Size" })
                 .Append(mlContext.Regression.Trainers.Sdca(labelColumnName: "Price", maximumNumberOfIterations: 100));
-    
+
             // 3. Train model
             var model = pipeline.Fit(trainingData);
-    
+
             // 4. Make a prediction
             var size = new HouseData() { Size = 2.5F };
             var price = mlContext.Model.CreatePredictionEngine<HouseData, Prediction>(model).Predict(size);
@@ -78,7 +84,7 @@ ML.NET을 사용하여 수행할 수 있는 예측 유형은 다음과 같습니
 
             // Predicted price for size: 2500 sq ft= $261.98k
         }
-    } 
+    }
 ```
 
 ## <a name="code-workflow"></a>코드 워크플로
@@ -93,7 +99,7 @@ ML.NET을 사용하여 수행할 수 있는 예측 유형은 다음과 같습니
 - 모델을 **ITransformer** 개체로 다시 로드
 - **CreatePredictionEngine.Predict()** 를 호출하여 예측
 
-![데이터 생성, 파이프라인 개발, 모델 학습, 모델 평가 및 모델 사용에 대한 구성 요소를 포함한 ML.NET 애플리케이션 개발 흐름](./media/mldotnet-annotated-workflow.png) 
+![데이터 생성, 파이프라인 개발, 모델 학습, 모델 평가 및 모델 사용에 대한 구성 요소를 포함한 ML.NET 애플리케이션 개발 흐름](./media/mldotnet-annotated-workflow.png)
 
 이러한 개념을 좀 더 깊이 살펴 보겠습니다.
 
@@ -103,7 +109,7 @@ ML.NET 모델은 예측된 출력에 도달하기 위해 입력 데이터에서 
 
 ### <a name="basic"></a>Basic
 
-가장 기본적인 모델은 위의 주택 가격 예에서와 같이 하나의 지속적인 수량이 다른 것과 비례하는 2차원 선형 회귀입니다. 
+가장 기본적인 모델은 위의 주택 가격 예에서와 같이 하나의 지속적인 수량이 다른 것과 비례하는 2차원 선형 회귀입니다.
 
 ![편차와 가중치 매개 변수가 포함된 선형 회귀 모델](./media/linear-regression-model.svg)
 
@@ -113,7 +119,7 @@ ML.NET 모델은 예측된 출력에 도달하기 위해 입력 데이터에서 
 
 더 복잡한 모델은 거래 텍스트 설명을 사용하여 금융 거래를 범주로 분류합니다.
 
-각 거래 설명은 중복되는 단어와 문자를 제거하고 단어와 문자 조합을 계산하여 일련의 기능으로 세분화됩니다. 기능 집합은 학습 데이터에서 범주 집합에 기반하여 선형 모델을 학습하는 데 사용됩니다. 새로운 설명이 학습 집합의 설명과 유사할수록 동일한 범주에 할당될 가능성이 커집니다. 
+각 거래 설명은 중복되는 단어와 문자를 제거하고 단어와 문자 조합을 계산하여 일련의 기능으로 세분화됩니다. 기능 집합은 학습 데이터에서 범주 집합에 기반하여 선형 모델을 학습하는 데 사용됩니다. 새로운 설명이 학습 집합의 설명과 유사할수록 동일한 범주에 할당될 가능성이 커집니다.
 
 ![텍스트 분류 모델](./media/text-classification-model.svg)
 
@@ -131,7 +137,7 @@ ML.NET 모델은 예측된 출력에 도달하기 위해 입력 데이터에서 
 
 ## <a name="model-evaluation"></a>모델 평가
 
-모델을 학습한 후에는 미래의 예측을 얼마나 잘 할지 어떻게 알까요? ML.NET를 사용하여 새로운 테스트 데이터를 기준으로 모델을 평가할 수 있습니다. 
+모델을 학습한 후에는 미래의 예측을 얼마나 잘 할지 어떻게 알까요? ML.NET를 사용하여 새로운 테스트 데이터를 기준으로 모델을 평가할 수 있습니다.
 
 기계 학습 작업의 각 유형에는 테스트 데이터 세트를 기준으로 모델의 정확성 및 정밀도를 평가하는 데 사용하는 메트릭이 있습니다.
 
@@ -148,7 +154,7 @@ ML.NET 모델은 예측된 출력에 도달하기 위해 입력 데이터에서 
 
         var testHouseDataView = mlContext.Data.LoadFromEnumerable(testHouseData);
         var testPriceDataView = model.Transform(testHouseDataView);
-                
+
         var metrics = mlContext.Regression.Evaluate(testPriceDataView, labelColumnName: "Price");
 
         Console.WriteLine($"R^2: {metrics.RSquared:0.##}");
@@ -177,7 +183,7 @@ ML.NET 애플리케이션은 <xref:Microsoft.ML.MLContext> 개체로 시작합�
 ||예측|<xref:Microsoft.ML.ForecastingCatalog>||
 ||순위 지정|<xref:Microsoft.ML.RankingCatalog>||
 ||재발|<xref:Microsoft.ML.RegressionCatalog>||
-||권장 사항|<xref:Microsoft.ML.RecommendationCatalog>|`Microsoft.ML.Recommender` NuGet 패키지 추가|
+||권장|<xref:Microsoft.ML.RecommendationCatalog>|`Microsoft.ML.Recommender` NuGet 패키지 추가|
 ||TimeSeries|<xref:Microsoft.ML.TimeSeriesCatalog>|`Microsoft.ML.TimeSeries` NuGet 패키지 추가|
 |모델 사용 ||<xref:Microsoft.ML.ModelOperationsCatalog>||
 
@@ -225,7 +231,7 @@ ML.NET 애플리케이션은 <xref:Microsoft.ML.MLContext> 개체로 시작합�
     var predEngine = mlContext.CreatePredictionEngine<HouseData, Prediction>(model);
     var price = predEngine.Predict(size);
 ```
- 
+
 `CreatePredictionEngine()` 메서드는 입력 클래스 및 출력 클래스를 사용합니다. 필드 이름 및/또는 코드 특성은 모델 학습 및 예측 중 사용된 데이터 열의 이름을 결정합니다. 방법 섹션에서 [단일 예측하는 방법](./how-to-guides/single-predict-model-ml-net.md)에 대해 읽을 수 있습니다.
 
 ### <a name="data-models-and-schema"></a>데이터 모델 및 스키마
@@ -254,7 +260,7 @@ ML.NET 기계 학습 파이프라인의 핵심에는 [DataView](xref:Microsoft.M
         [ColumnName("Score")]
         public float Price { get; set; }
     }
-```    
+```
 
 [Machine Learning 작업](resources/tasks.md) 가이드에서 다른 기계 학습 작업의 출력 열에 대해 더 자세히 알아볼 수 있습니다.
 
@@ -270,14 +276,14 @@ DataView의 중요한 속성은 이들이 **느리게** 평가된다는 점입�
 
 실제 애플리케이션에서 모델 학습과 평가 코드는 예측과 구분됩니다. 사실,이 두 가지 활동은 별도의 팀에서 수행하는 경우가 많습니다. 모델 개발 팀은 예측 애플리케이션에서 사용하기 위해 이 모델을 저장할 수 있습니다.
 
-```csharp   
+```csharp
    mlContext.Model.Save(model, trainingData.Schema,"model.zip");
 ```
 
-## <a name="where-to-now"></a>현재 위치
+## <a name="next-steps"></a>다음 단계
 
-[자습서](./tutorials/index.md)에서 보다 현실적인 데이터 세트로 다른 기계 학습 작업을 사용하여 애플리케이션을 빌드하는 방법을 학습하거나
+* [자습서](./tutorials/index.md)에서 보다 현실적인 데이터 세트로 다른 기계 학습 작업을 사용하여 애플리케이션을 빌드하는 방법에 대해 알아봅니다.
 
-[방법 가이드](./how-to-guides/index.md)에서 더 자세히 특정 항목에 대해 학습할 수 있습니다.
+* [방법 가이드](./how-to-guides/index.md)에서 더 자세히 특정 항목에 대해 알아봅니다.
 
-만일 관심이 아주 많다면 [API 참조 문서](https://docs.microsoft.com/dotnet/api/?view=ml-dotnet)를 바로 참조할 수 있습니다!
+* 만일 관심이 아주 많다면 [API 참조 문서](https://docs.microsoft.com/dotnet/api/?view=ml-dotnet)를 바로 참조할 수 있습니다.

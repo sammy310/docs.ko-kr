@@ -1,19 +1,20 @@
 ---
-title: '방법: Visual Basic에서 직렬 포트의 문자열 받기'
+title: '방법: 직렬 포트에서 문자열 받기'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - serial ports, retrieving strings
 - strings [Visual Basic], retrieving from serial ports
 - My.Resources object
 ms.assetid: 8371ce2c-e1c7-476b-a86d-9afc2614b6b7
-ms.openlocfilehash: 6c832cd9ef5df904850261f4de2d769bfc28c3cb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: afd19877d053cb414f08761cda4e461d88f9e21c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296722"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345594"
 ---
 # <a name="how-to-receive-strings-from-serial-ports-in-visual-basic"></a>방법: Visual Basic에서 직렬 포트의 문자열 받기
+
 이 항목에서는 Visual Basic에서 `My.Computer.Ports`를 사용하여 컴퓨터의 직렬 포트에서 문자열을 받는 방법을 설명합니다.  
   
 ### <a name="to-receive-strings-from-the-serial-port"></a>직렬 포트에서 문자열을 받으려면  
@@ -50,15 +51,18 @@ ms.locfileid: "59296722"
   
      [!code-vb[VbVbalrMyComputer#44](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#44)]  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
+
  [!code-vb[VbVbalrMyComputer#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#37)]  
   
  이 코드 예제는 IntelliSense 코드 조각으로 사용할 수도 있습니다. 코드 조각 선택에서는 **연결 및 네트워킹**에 있습니다. 자세한 내용은 [코드 조각](/visualstudio/ide/code-snippets)을 참조하세요.  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
+
  이 예제에서는 컴퓨터가 `COM1`을 사용 중이라고 가정합니다.  
   
 ## <a name="robust-programming"></a>강력한 프로그래밍  
+
  이 예제에서는 컴퓨터가 `COM1`을 사용 중이라고 가정합니다. 유연성 향상을 위해 코드에서 사용자가 사용 가능한 포트 목록에서 원하는 직렬 포트를 선택할 수 있도록 해야 합니다. 자세한 내용은 [방법: 사용 가능한 직렬 포트 표시](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)를 참조하세요.  
   
  이 예제에서는 `Try...Catch...Finally` 블록을 사용하여 애플리케이션이 포트를 닫도록 하고 시간 초과 예외를 catch합니다. 자세한 내용은 [Try...Catch...Finally 문](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)을 참조하세요.  

@@ -10,24 +10,24 @@ helpviewer_keywords:
 ms.assetid: ec7d4110-2403-47ac-8218-499bfe9d5ddb
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a7147173dc9f132fa2dd14d20526d59927a183bd
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8c1675540df6844f98572c11cfb140bff23b31a8
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73115262"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74089027"
 ---
 # <a name="section-element"></a>\<section > 요소
 
 구성 섹션 선언을 포함 합니다.
 
-[ **\<configuration>** ](configuration-element.md)   
-[**configSections >\<** ](configsections-element-for-configuration.md) &nbsp;&nbsp;   
+[ **\<configuration>** ](configuration-element.md)\
+[**configSections >\<** ](configsections-element-for-configuration.md) &nbsp;&nbsp;\
 &nbsp;&nbsp;&nbsp;&nbsp; **\<섹션 >**
 
-[ **\<configuration>** ](configuration-element.md)   
-[**configSections >\<** ](configsections-element-for-configuration.md) &nbsp;&nbsp;   
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<sectionGroup >** ](sectiongroup-element-for-configsections.md)   
+[ **\<configuration>** ](configuration-element.md)\
+[**configSections >\<** ](configsections-element-for-configuration.md) &nbsp;&nbsp;\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<sectionGroup >** ](sectiongroup-element-for-configsections.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<섹션 >**
 
 ## <a name="syntax"></a>구문

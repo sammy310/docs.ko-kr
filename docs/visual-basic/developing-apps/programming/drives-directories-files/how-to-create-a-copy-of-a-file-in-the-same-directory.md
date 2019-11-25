@@ -1,5 +1,5 @@
 ---
-title: '방법: Visual Basic에서 동일한 디렉터리에 파일의 복사본 만들기'
+title: '방법: 동일한 디렉터리에 파일의 복사본 만들기'
 ms.date: 07/20/2015
 f1_keywords:
 - File.Copy
@@ -9,14 +9,15 @@ helpviewer_keywords:
 - CopyFile method [Visual Basic], copying files in Visual Basic
 - I/O [Visual Basic], copying files
 ms.assetid: b2fdda86-e666-42c2-9706-9527e9fa68ff
-ms.openlocfilehash: 747d985cbd9e2f2cc7f9b07f5723455a63a87b8f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 33a4f5424ac50de7b5dc988034ca15127dc1ed02
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64629089"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348820"
 ---
 # <a name="how-to-create-a-copy-of-a-file-in-the-same-directory-in-visual-basic"></a>방법: Visual Basic에서 동일한 디렉터리에 파일의 복사본 만들기
+
 `My.Computer.FileSystem.CopyFile` 메서드를 사용하여 파일을 복사합니다. 매개 변수를 통해 기존 파일을 덮어쓰고, 파일 이름을 바꾸고, 작업의 진행률을 표시하고, 사용자가 작업을 취소할 수 있습니다.  
   
 ### <a name="to-create-a-copy-of-a-file-in-the-same-folder"></a>동일한 폴더에 파일의 복사본을 만들려면  
@@ -32,6 +33,7 @@ ms.locfileid: "64629089"
      [!code-vb[VbVbcnMyFileSystem#52](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#52)]  
   
 ## <a name="robust-programming"></a>강력한 프로그래밍  
+
  다음 조건에서는 예외가 throw될 수 있습니다.  
   
 - 길이가 0인 문자열이거나, 공백만 포함하거나, 잘못된 문자를 포함하거나, 경로가 디바이스 경로인 경우(\\\\.\\로 시작됨)와 같은 여러 가지 이유 중 하나로 경로가 올바르지 않은 경우(<xref:System.ArgumentException>)  

@@ -2,12 +2,12 @@
 title: '연습: async 및 await를 사용하여 웹에 액세스(C#)'
 ms.date: 07/20/2015
 ms.assetid: c95d8d71-5a98-4bf0-aaf4-45fed2ebbacd
-ms.openlocfilehash: 30677be2299dfa4411263dc5c61093fc0ca0f442
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 42b09dab26fd514e184163eaf41aff117d3a463f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73195646"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74281787"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-c"></a>연습: async 및 await를 사용하여 웹에 액세스(C#)
 
@@ -254,7 +254,7 @@ Control returned to startButton_Click.
 
      `webReq.GetResponseAsync`를 호출하면 `Task(Of WebResponse)` 또는 `Task<WebResponse>`가 반환됩니다. 그러면 await 연산자가 작업에 적용되어 `WebResponse` 값을 검색합니다.
 
-     비동기 메서드가 작업의 완료에 따라 달라지지 않는 작업을 수행해야 하는 경우 메서드는 비동기 메서드를 호출한 후와 `await` 연산자가 적용되기 전의 두 문 사이에서 해당 작업을 계속할 수 있습니다. 예제는 [방법: async 및 await를 사용하여 병렬로 여러 웹 요청 만들기(C#)](./how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md) 및 [방법: Task.WhenAll을 사용하여 비동기 연습 확장(C#)](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md)을 참조하세요.
+     비동기 메서드가 작업의 완료에 따라 달라지지 않는 작업을 수행해야 하는 경우 메서드는 비동기 메서드를 호출한 후와 `await` 연산자가 적용되기 전의 두 문 사이에서 해당 작업을 계속할 수 있습니다. 예를 들어, [async 및 await를 사용하여 병렬로 여러 웹 요청을 만드는 방법(C#)](./how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md) 및 [Task.WhenAll을 사용하여 비동기 연습을 확장하는 방법(C#)](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md)을 참조하세요.
 
 3. 이전 단계에서 `await` 연산자를 추가했으므로 컴파일러 오류가 발생합니다. 이 연산자는 [async](../../../language-reference/keywords/async.md) 한정자로 표시되는 메서드에서만 사용할 수 있습니다. `CopyTo` 호출을 `CopyToAsync` 호출로 바꾸는 변환 단계를 반복하는 동안에는 오류를 무시합니다.
 
@@ -690,11 +690,11 @@ namespace AsyncExampleWPF
 
 ## <a name="see-also"></a>참고 항목
 
-- [비동기 샘플: 웹 연습에 액세스(C# 및 Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)
+- [비동기 샘플: 웹 연습에 액세스(C# 및 Visual Basic)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hh300224(v=vs.110))
 - [async](../../../language-reference/keywords/async.md)
 - [await](../../../language-reference/operators/await.md)
 - [async 및 await를 사용한 비동기 프로그래밍(C#)](./index.md)
 - [비동기 반환 형식(C#)](./async-return-types.md)
 - [TAP(작업 기반 비동기 프로그래밍)](https://www.microsoft.com/download/details.aspx?id=19957)
-- [방법: Task.WhenAll을 사용하여 비동기 연습 확장(C#)](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
-- [방법: async 및 await를 사용하여 병렬로 여러 웹 요청 만들기(C#)](./how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)
+- [Task.WhenAll을 사용하여 비동기 연습을 확장하는 방법(C#)](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
+- [async 및 await를 사용하여 병렬로 여러 웹 요청을 만드는 방법(C#)](./how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)

@@ -1,15 +1,15 @@
 ---
-title: '방법: 로그 메시지 쓰기(Visual Basic)'
+title: '방법: 로그 메시지 쓰기'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Application.Log object, writing log messages
 ms.assetid: 972a3e0c-2996-4623-a7a9-d7ebc4d207f8
-ms.openlocfilehash: 007d08917ed5ecae6889d03d820d48e4695c9344
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 38570047db48e009aea2af376304430db1ec29f4
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676124"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352065"
 ---
 # <a name="how-to-write-log-messages-visual-basic"></a>방법: 로그 메시지 쓰기(Visual Basic)
 
@@ -17,7 +17,7 @@ ms.locfileid: "57676124"
 
 예외 정보를 기록하려면 `My.Application.Log.WriteException` 메서드를 사용합니다. [방법: 로그 예외](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)를 참조하세요.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 이 예제에서는 `My.Application.Log.WriteEntry` 메서드를 사용하여 추적 정보를 기록합니다.
 

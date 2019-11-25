@@ -2,12 +2,12 @@
 title: 피어 이름 확인 프로토콜
 ms.date: 03/30/2017
 ms.assetid: 11940511-c124-4d91-ae31-d4ed6e81ee58
-ms.openlocfilehash: 5e301620008f1aaf64e1c1467d6db8bcdcb8f6be
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: c8b7b2190349323bf212d816a77f5f7810f6ca2c
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71047511"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428214"
 ---
 # <a name="peer-name-resolution-protocol"></a>피어 이름 확인 프로토콜
 피어 투 피어 환경에서 각 피어는 이름 또는 기타 유형의 식별자로 서로의 네트워크 위치(주소, 프로토콜 및 포트)를 확인하기 위해 고유한 이름 확인 시스템을 사용합니다. 과거에는 기본적으로 일시적이었던 연결과 DNS(Domain Name System)의 다른 단점으로 인해 피어 이름 확인이 복잡했습니다.  
@@ -51,4 +51,7 @@ ms.locfileid: "71047511"
 - <xref:System.ServiceModel.PeerResolvers>
 - <xref:System.Net.PeerToPeer>
 - [네트워크 프로그래밍 샘플](network-programming-samples.md)
-- [PeerToPeer 기술 샘플](https://go.microsoft.com/fwlink/?LinkID=179571)
+
+<!-- to-do: review sample links
+- [PeerToPeer Technology Sample](https://go.microsoft.com/fwlink/?LinkID=179571)
+-->

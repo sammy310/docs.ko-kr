@@ -1,18 +1,19 @@
 ---
-title: '방법: Visual Basic에서 예외 기록'
+title: '방법: 예외 기록'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - exceptions, logging
 - exceptions, tracking
 ms.assetid: a26c60e2-ae39-444a-aebb-33eccadc0eeb
-ms.openlocfilehash: 53bf93a326123ddb1e26ef5964fa057148505116
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: fe6949d727fae0c230ce7421b32fdaf2a498edbc
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307225"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352083"
 ---
 # <a name="how-to-log-exceptions-in-visual-basic"></a>방법: Visual Basic에서 예외 기록
+
 `My.Application.Log` 및 `My.Log` 개체를 사용하여 애플리케이션에서 발생하는 예외에 대한 정보를 기록할 수 있습니다. 이 예제에서는 `My.Application.Log.WriteException` 메서드를 사용하여 명시적으로 catch하는 예외 및 처리되지 않은 예외를 기록하는 방법을 보여 줍니다.  
   
  추적 정보를 기록하려면 `My.Application.Log.WriteEntry` 메서드를 사용합니다. 자세한 내용은 <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>을 참조하세요.  

@@ -9,21 +9,21 @@ helpviewer_keywords:
 ms.assetid: 99347d62-3ea5-40b6-bfec-c31431011422
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3b931b76aa09b3f62fbd799990975268af4f7293
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 609ddba9cd4d58f9c388cf669039ee128e87efd0
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119214"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088075"
 ---
 # <a name="app-settings-schema"></a>앱 설정 스키마
 
 파일 경로, XML Web services URL 또는 애플리케이션의 기타 사용자 지정 구성 정보와 같은 사용자 지정 애플리케이션 설정이 포함되어 있습니다.
 
-[ **\<configuration>** ](../configuration-element.md)   
-&nbsp;&nbsp;[ **\<appSettings>** ](appsettings-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<add>** ](add-element-for-appsettings.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<clear>** ](clear-element-for-appsettings.md)   
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<appSettings>** ](appsettings-element-for-configuration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<add>** ](add-element-for-appsettings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<clear>** ](clear-element-for-appsettings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;[ **\<remove>** ](remove-element-for-appsettings.md)
 
 | 요소 | 설명 |

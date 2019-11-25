@@ -1,5 +1,5 @@
 ---
-title: '방법: Visual Basic에서 레지스트리 키 삭제'
+title: '방법: 레지스트리 키 삭제'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.DeleteSetting
@@ -11,14 +11,15 @@ helpviewer_keywords:
 - registry [Visual Basic], deleting keys
 - examples [Visual Basic], registry
 ms.assetid: ab9aca0e-42b0-4ff7-8ff9-845a4bfdf9f2
-ms.openlocfilehash: 2e0c8990fcc55bc4208b1c23690ff748b7167002
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f38301a3a717a35b98e55804d6435d046bbbbab4
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662764"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345649"
 ---
 # <a name="how-to-delete-a-registry-key-in-visual-basic"></a>방법: Visual Basic에서 레지스트리 키 삭제
+
 <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%29> 및 <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%2CSystem.Boolean%29> 메서드를 사용하여 레지스트리 키를 삭제할 수 있습니다.  
   
 ## <a name="procedure"></a>프로시저  
@@ -30,6 +31,7 @@ ms.locfileid: "64662764"
      [!code-vb[VbResourceTasks#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#19)]  
   
 ## <a name="robust-programming"></a>강력한 프로그래밍  
+
  키/값 쌍이 존재하지 않는 경우 `DeleteSubKey` 메서드는 빈 문자열을 반환합니다.  
   
  다음 조건에서 예외가 발생합니다.  
@@ -43,6 +45,7 @@ ms.locfileid: "64662764"
 - 레지스트리 키가 읽기 전용인 경우(<xref:System.UnauthorizedAccessException>)  
   
 ## <a name="net-framework-security"></a>.NET Framework 보안  
+
  충분한 런타임 권한이 부여되지 않았거나(<xref:System.Security.Permissions.RegistryPermission>) 사용자에게 설정을 만들거나 쓰기 위한 올바른 액세스 권한(ACL에 따라 결정됨)이 없는 경우 레지스트리 호출에 실패합니다. 예를 들어 코드 액세스 보안 권한이 있는 로컬 애플리케이션에는 운영 체제 권한이 없을 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목

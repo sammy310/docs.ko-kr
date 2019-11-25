@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - enum keyword [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: 417f02ce9e8ee88edeb2a4dab88111cae39a8a4b
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 639a3a01c9c4da13e0212bd0230acbd2af170b25
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771861"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428515"
 ---
 # <a name="enum-c-reference"></a>enum(C# 참조)
 
@@ -35,7 +35,7 @@ enum Day {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
 
 이 열거형에서 요소의 순서는 `1` 대신 `0`부터 시작합니다. 그러나 값이 0인 상수를 포함하는 것이 좋습니다. 자세한 내용은 [열거형 형식](../../programming-guide/enumeration-types.md)을 참조하세요.
 
-모든 열거형 형식에는 기본 형식이 있으며, 해당 형식은 [정수 숫자 형식](../builtin-types/integral-numeric-types.md)일 수 있습니다. [char](char.md) 형식은 열거형의 기본 형식일 수 없습니다. 열거형 요소의 기본적인 기본 형식은 i [int](../builtin-types/integral-numeric-types.md)입니다. [바이트](../builtin-types/integral-numeric-types.md)와 같은 다른 정수 형식의 열거형을 선언하려면 다음 예제에서와 같이 콜론을 사용하여 identifier 다음에 형식을 사용합니다.
+모든 열거형 형식에는 기본 형식이 있으며, 해당 형식은 [정수 숫자 형식](../builtin-types/integral-numeric-types.md)일 수 있습니다. [char](../builtin-types/char.md) 형식은 열거형의 기본 형식일 수 없습니다. 열거형 요소의 기본적인 기본 형식은 i [int](../builtin-types/integral-numeric-types.md)입니다. [바이트](../builtin-types/integral-numeric-types.md)와 같은 다른 정수 형식의 열거형을 선언하려면 다음 예제에서와 같이 콜론을 사용하여 identifier 다음에 형식을 사용합니다.
 
 ```csharp
 enum Day : byte {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};

@@ -1,5 +1,5 @@
 ---
-title: Visual Basic에서 파일에 쓰기
+title: 파일에 쓰기
 ms.date: 07/20/2015
 helpviewer_keywords:
 - I/O [Visual Basic], writing to files
@@ -8,17 +8,19 @@ helpviewer_keywords:
 - writing to files [Visual Basic]
 - Visual Basic, writing to files
 ms.assetid: ac6fb453-0d6c-4ce4-93b4-1bbcd06de83e
-ms.openlocfilehash: 92e9d717eb52fa393d9215068d8fe70c84f613ae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8511a96c7abcc28997c293a09ef10bad543dc261
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33588121"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352133"
 ---
 # <a name="writing-to-files-in-visual-basic"></a>Visual Basic에서 파일에 쓰기
+
 이 섹션에서는 파일에 쓰기와 관련된 작업을 수행하는 방법을 설명합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [방법: 파일에 텍스트 쓰기](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files.md)  
  텍스트 파일에 쓰는 방법을 보여 줍니다.  
   
@@ -35,6 +37,7 @@ ms.locfileid: "33588121"
  <xref:System.IO.StreamWriter?displayProperty=nameWithType> 개체를 사용하여 파일에 쓰는 방법을 보여 줍니다.  
   
 ## <a name="reference"></a>참조  
+
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
  `My.Computer.FileSystem` 개체와 해당 메서드 및 속성을 설명합니다.  
   
@@ -48,6 +51,7 @@ ms.locfileid: "33588121"
  `WriteAllText` 메서드를 설명합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
+
  [파일 읽기](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
  파일 읽기와 관련된 작업을 수행하는 방법을 설명합니다.  
   

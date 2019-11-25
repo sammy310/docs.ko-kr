@@ -1,5 +1,5 @@
 ---
-title: '방법: Visual Basic에서 사용자 설정의 속성 표 만들기'
+title: '방법: 사용자 설정의 속성 그리드 만들기'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Settings object [Visual Basic], creating property grids for user settings
@@ -7,14 +7,15 @@ helpviewer_keywords:
 - property grids [Visual Basic], creating for user settings
 - property grids
 ms.assetid: b0bc737e-50d1-43d1-a6df-268db6e6f91c
-ms.openlocfilehash: 4a31b44cca61caea5fdf725405646f628b5430b7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: bed4e8a2b50f0115c3b8d9d6abf427df5f216388
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968388"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74329608"
 ---
 # <a name="how-to-create-property-grids-for-user-settings-in-visual-basic"></a>방법: Visual Basic에서 사용자 설정의 속성 표 만들기
+
 <xref:System.Windows.Forms.PropertyGrid> 컨트롤을 `My.Settings` 개체의 사용자 설정 속성으로 채워 사용자 설정에 대한 속성 표를 만들 수 있습니다.  
   
 > [!NOTE]
@@ -47,6 +48,7 @@ ms.locfileid: "69968388"
     > 애플리케이션 범위 설정만 표시하려면 <xref:System.Configuration.UserScopedSettingAttribute> 대신 <xref:System.Configuration.ApplicationScopedSettingAttribute> 특성을 사용합니다.  
   
 ## <a name="robust-programming"></a>강력한 프로그래밍  
+
  애플리케이션이 종료될 때 사용자 설정이 저장됩니다. 설정을 즉시 저장하려면 `My.Settings.Save` 메서드를 호출합니다. 자세한 내용은 [방법: Visual Basic에서 사용자 설정 유지](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목

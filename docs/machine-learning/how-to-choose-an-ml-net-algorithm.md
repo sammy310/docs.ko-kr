@@ -4,12 +4,12 @@ description: 기계 학습 모델에 사용할 ML.NET 알고리즘을 선택하�
 author: natke
 ms.topic: overview
 ms.date: 06/05/2019
-ms.openlocfilehash: dfea21908258e6eb0b696de7affe1b03cff5cb3b
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 0721418d8b0b3c9ab645eb9885b0f4951c37762e
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972082"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976692"
 ---
 # <a name="how-to-choose-an-mlnet-algorithm"></a>ML.NET 알고리즘을 선택하는 방법
 
@@ -19,9 +19,9 @@ ms.locfileid: "68972082"
 
 ## <a name="trainer--algorithm--task"></a>트레이너 = 알고리즘 + 작업
 
-알고리즘은 **모델**을 생성하기 위해 실행하는 수학입니다. 다른 알고리즘은 다른 특징의 모델을 생성합니다. 
+알고리즘은 **모델**을 생성하기 위해 실행하는 수학입니다. 다른 알고리즘은 다른 특징의 모델을 생성합니다.
 
-ML.NET을 사용하여 동일한 알고리즘을 다른 작업에 적용할 수 있습니다. 예를 들어 확률적 이중 좌표 상승법(Stochastic Descent Coordinated Ascent)을 이진 분류, 다중 클래스 분류 및 회귀에 사용할 수 있습니다. 차이점은 작업에 맞추기 위해 알고리즘의 출력이 해석되는 방식에 있습니다. 
+ML.NET을 사용하여 동일한 알고리즘을 다른 작업에 적용할 수 있습니다. 예를 들어 확률적 이중 좌표 상승법(Stochastic Descent Coordinated Ascent)을 이진 분류, 다중 클래스 분류 및 회귀에 사용할 수 있습니다. 차이점은 작업에 맞추기 위해 알고리즘의 출력이 해석되는 방식에 있습니다.
 
 각 알고리즘/작업 조합에 대해 ML.NET은 학습 알고리즘을 실행하고 해석을 수행하는 구성 요소를 제공합니다. 이러한 구성 요소를 트레이너라고 합니다. 예를 들어 <xref:Microsoft.ML.Trainers.SdcaRegressionTrainer>는 **회귀** 작업에 적용된 **StochasticDualCoordinatedAscent** 알고리즘을 사용합니다.
 

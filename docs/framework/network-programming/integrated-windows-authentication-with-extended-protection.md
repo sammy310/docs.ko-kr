@@ -2,12 +2,12 @@
 title: 확장된 보호를 사용하는 Windows 통합 인증
 ms.date: 03/30/2017
 ms.assetid: 81731998-d5e7-49e4-ad38-c8e6d01689d0
-ms.openlocfilehash: 672737471c7c73e7ddd03d26d00d30cff3e23ec4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c4afc008f600c9be0040f8d7623f5e20623dfd7d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647401"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74444236"
 ---
 # <a name="integrated-windows-authentication-with-extended-protection"></a>확장된 보호를 사용하는 Windows 통합 인증
 <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpListener>, <xref:System.Net.Mail.SmtpClient>, <xref:System.Net.Security.SslStream>, <xref:System.Net.Security.NegotiateStream>, 그리고 <xref:System.Net> 및 관련 네임스페이스의 관련 클래스에 의해 Windows 통합 인증이 처리되는 방식에 영향을 미치는 기능이 향상되었습니다. 보안을 강화하기 위한 확장된 보호에 대한 지원이 추가되었습니다.  
@@ -128,7 +128,7 @@ ms.locfileid: "64647401"
   
 3. 클라이언트는 올바른 채널 바인딩을 지정하거나, 서버에 대한 확장된 보호 정책이 <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported>를 사용하여 구성되므로 채널 바인딩을 지정하지 않고 연결할 수 있습니다. 요청은 처리를 위해 애플리케이션에 반환됩니다. 서비스 이름 확인은 자동으로 수행되지 않습니다. 애플리케이션은 <xref:System.Net.HttpListenerRequest.ServiceName%2A> 속성을 사용하여 자체 서비스 이름 유효성 검사를 수행할 수 있지만 이러한 상황에서는 작업이 중복됩니다.  
   
- 애플리케이션이 HTTP 요청 본문 내에서 앞뒤로 전달되는 Blob을 기반으로 인증을 수행하도록 자체 SSPI를 호출하고 채널 바인딩을 지원하려고 할 경우 애플리케이션은 <xref:System.Net.HttpListener>를 통해 외부 보안 채널에서 예상 채널 바인딩을 검색하여 네이티브 Win32 [AcceptSecurityContext](https://go.microsoft.com/fwlink/?LinkId=147021) 함수에 전달해야 합니다. 이렇게 하려면 <xref:System.Net.HttpListenerRequest.TransportContext%2A> 속성을 사용하여 <xref:System.Net.TransportContext.GetChannelBinding%2A> 메서드를 호출하여 CBT를 검색합니다. 엔드포인트 바인딩만 지원됩니다. <xref:System.Security.Authentication.ExtendedProtection.ChannelBindingKind.Endpoint> 이외의 다른 항목이 지정되면 <xref:System.NotSupportedException>이 throw됩니다. 기본 운영 체제가 채널 바인딩을 지원하면 <xref:System.Net.TransportContext.GetChannelBinding%2A> 메서드는 `pInput` 매개 변수에 전달되는 SecBuffer 구조체의 pvBuffer 멤버로 [AcceptSecurityContext](https://go.microsoft.com/fwlink/?LinkId=147021) 함수에 전달하기에 적합한 채널 바인딩에 대한 포인터를 래핑하는 <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding><xref:System.Runtime.InteropServices.SafeHandle>을 반환합니다. <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding.Size%2A> 속성에는 채널 바인딩의 길이(바이트)가 포함됩니다. 기본 운영 체제가 채널 바인딩을 지원하지 않으면 이 함수는 `null`을 반환합니다.  
+ 애플리케이션이 HTTP 요청 본문 내에서 앞뒤로 전달되는 Blob을 기반으로 인증을 수행하도록 자체 SSPI를 호출하고 채널 바인딩을 지원하려고 할 경우 애플리케이션은 <xref:System.Net.HttpListener>를 통해 외부 보안 채널에서 예상 채널 바인딩을 검색하여 네이티브 Win32 [AcceptSecurityContext](/windows/win32/api/sspi/nf-sspi-acceptsecuritycontext) 함수에 전달해야 합니다. 이렇게 하려면 <xref:System.Net.HttpListenerRequest.TransportContext%2A> 속성을 사용하여 <xref:System.Net.TransportContext.GetChannelBinding%2A> 메서드를 호출하여 CBT를 검색합니다. 엔드포인트 바인딩만 지원됩니다. <xref:System.Security.Authentication.ExtendedProtection.ChannelBindingKind.Endpoint> 이외의 다른 항목이 지정되면 <xref:System.NotSupportedException>이 throw됩니다. 기본 운영 체제가 채널 바인딩을 지원하면 <xref:System.Net.TransportContext.GetChannelBinding%2A> 메서드는 `pInput` 매개 변수에 전달되는 SecBuffer 구조체의 pvBuffer 멤버로 [AcceptSecurityContext](/windows/win32/api/sspi/nf-sspi-acceptsecuritycontext) 함수에 전달하기에 적합한 채널 바인딩에 대한 포인터를 래핑하는 <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding><xref:System.Runtime.InteropServices.SafeHandle>을 반환합니다. <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding.Size%2A> 속성에는 채널 바인딩의 길이(바이트)가 포함됩니다. 기본 운영 체제가 채널 바인딩을 지원하지 않으면 이 함수는 `null`을 반환합니다.  
   
  또 다른 가능한 시나리오는 프록시가 사용되지 않을 경우 HTTP:// 접두사에 대한 확장된 보호를 사용하는 것입니다. 이 경우 <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement>를 <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> 또는 <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always>로 설정하고 <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario>를 <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario.TransportSelected>로 설정하여 <xref:System.Net.HttpListener.ExtendedProtectionPolicy%2A?displayProperty=nameWithType>를 <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy>로 설정합니다. <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> 값은 <xref:System.Net.HttpListener>를 부분 강화 모드로 전환하지만 <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always>는 완전 강화 모드에 해당합니다.  
   

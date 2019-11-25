@@ -2,12 +2,12 @@
 title: 강력한 형식 확장 샘플
 ms.date: 03/30/2017
 ms.assetid: 02220f11-1a83-441c-9e5a-85f9a9367572
-ms.openlocfilehash: 5ee2f13df9d3c0841b3e8b62b1633ea4520d3860
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 8dc6bca87989b1ee8e1ee440b0d64e2c196cc28f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73421521"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73978233"
 ---
 # <a name="strongly-typed-extensions-sample"></a>강력한 형식 확장 샘플
 이 샘플에서는 예를 들기 위해 <xref:System.ServiceModel.Syndication.SyndicationFeed> 클래스를 사용하지만 이 샘플에 나온 패턴은 확장 데이터를 지원하는 모든 배포 클래스에서 사용할 수 있습니다.  
@@ -90,7 +90,7 @@ public class InReplyToElement : IXmlSerializable
   
  `InReplyToElement` 클래스는 XML에서 개체 인스턴스를 읽고 쓰는 방법을 직접 제어하는 <xref:System.Xml.Serialization.IXmlSerializable> 인터페이스를 구현합니다. `ReadXml` 메서드는 먼저 자신에게 전달된 `Ref`에서 `HRef`, `Source`, `MediaType` 및 <xref:System.Xml.XmlReader> 속성의 값을 읽습니다. 알 수 없는 특성은 모두 <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> 컬렉션에 저장됩니다. 모든 특성을 읽으면 <xref:System.Xml.XmlReader.ReadStartElement>가 호출되어 판독기가 다음 요소로 진행합니다. 이 클래스에서 모델링된 요소에는 필수 자식이 없으므로 다음 코드에 나온 것처럼 자식 요소는 `XElement` 인스턴스로 버퍼링되고 <xref:System.ServiceModel.Syndication.SyndicationFeed.ElementExtensions%2A> 컬렉션에 저장됩니다.  
   
-```csharp  
+```csharp
 public void ReadXml(System.Xml.XmlReader reader)  
 {  
     bool isEmpty = reader.IsEmptyElement;  
@@ -146,7 +146,7 @@ public void ReadXml(System.Xml.XmlReader reader)
   
  `WriteXml`에서 `InReplyToElement` 메서드는 먼저 `Ref`, `HRef`, `Source` 및 `MediaType` 속성의 값을 XML 특성으로 씁니다. `WriteXml`은 `WriteXml`의 호출자가 수행한 실제 외부 요소는 쓰지 않습니다. 다음 코드에 나온 것처럼 이 메서드는 또한 <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> 및 <xref:System.ServiceModel.Syndication.SyndicationFeed.ElementExtensions%2A>의 내용을 작성기에 씁니다.  
   
-```csharp  
+```csharp
 public void WriteXml(System.Xml.XmlWriter writer)  
 {  
     if (this.Ref != null)  
@@ -189,7 +189,7 @@ public void WriteXml(System.Xml.XmlWriter writer)
   
  `ThreadedFeed` 클래스는 `SyndicationFeed`에서 상속되고 `OnCreateItem`을 재정의하여 `ThreadedItem`을 반환합니다. 다음 코드에 나온 것처럼 이 클래스는 또한 `Items` 컬렉션에 액세스하기 위한 메서드를 `ThreadedItems`로 구현합니다.  
   
-```csharp  
+```csharp
 public class ThreadedFeed : SyndicationFeed  
 {  
     public ThreadedFeed()  
@@ -213,7 +213,7 @@ public class ThreadedFeed : SyndicationFeed
   
  `ThreadedItem` 클래스는 `SyndicationItem`에서 상속되고 `InReplyToElement`를 강력한 형식의 속성으로 만듭니다. 이 클래스는 `InReplyTo` 확장 데이터에 대한 편리한 프로그래밍 액세스를 제공하며, 다음 코드에 나온 것처럼 이 클래스는 또한 확장 데이터를 읽고 쓰기 위한 `TryParseElement` 및 `WriteElementExtensions`를 구현합니다.  
   
-```csharp  
+```csharp
 public class ThreadedItem : SyndicationItem  
 {  
     private InReplyToElement inReplyTo;  

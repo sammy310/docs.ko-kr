@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - MageUI.exe
 ms.assetid: f9e130a6-8117-49c4-839c-c988f641dc14
-ms.openlocfilehash: 2502d542513ace1173b6c33a2399ce010620b888
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 99f522181232d16b9913ba3c55f34274b75d8966
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044464"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449406"
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe (매니페스트 생성 및 편집 도구, 그래픽 클라이언트)
 
@@ -66,7 +66,7 @@ MageUI.exe는 명령줄 도구인 Mage.exe와 동일한 기능을 지원하지�
 |**새로 만들기**|CA(인증 기관)를 통해 확인할 수 없는 새 .pfx를 생성합니다. ClickOnce 배포에 서명하는 데 사용되는 인증서의 형식에 대한 자세한 설명은 [신뢰할 수 있는 애플리케이션 배포 개요](/visualstudio/deployment/trusted-application-deployment-overview)를 참조하세요.|  
 |**암호**|이 인증서로 서명하는 데 사용되는 암호를 입력할 수 있는 영역을 제공합니다. 암호를 사용하지 않는 경우에는 이 영역을 비워 둡니다.|  
 |**저장된 인증서로 서명**|컴퓨터의 인증서 저장소에 저장된 디지털 인증서의 목록을 표시하여 디지털 인증서를 선택할 수 있게 합니다.|  
-|**타임스탬프 URI**|디지털 타임스탬프 서비스의 URI(Uniform Resource Locator)를 표시합니다. 매니페스트에 타임스탬프를 적용하면 애플리케이션의 다음 버전을 배포하기 전에 디지털 인증서가 만료되어도 매니페스트에 다시 서명할 필요가 없습니다. 자세한 내용은 [Windows 루트 인증서 프로그램 구성원](https://go.microsoft.com/fwlink/?LinkId=159000) 및 [ClickOnce 및 Authenticode](/visualstudio/deployment/clickonce-and-authenticode)를 참조하세요.|  
+|**타임스탬프 URI**|디지털 타임스탬프 서비스의 URI(Uniform Resource Locator)를 표시합니다. 매니페스트에 타임스탬프를 적용하면 애플리케이션의 다음 버전을 배포하기 전에 디지털 인증서가 만료되어도 매니페스트에 다시 서명할 필요가 없습니다. 자세한 내용은 [Windows 루트 인증서 프로그램 구성원](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265983(v=ws.11)) 및 [ClickOnce 및 Authenticode](/visualstudio/deployment/clickonce-and-authenticode)를 참조하세요.|  
 |**서명 안 함**|디지털 인증서의 서명을 추가하지 않고 매니페스트를 저장할 수 있습니다.|  
   
 ## <a name="tab-and-panel-descriptions"></a>탭 및 패널 설명  

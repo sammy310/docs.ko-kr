@@ -1,19 +1,20 @@
 ---
-title: '방법: Visual Basic에서 특정 패턴의 파일 찾기'
+title: '방법: 특정 패턴의 파일 찾기'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - files [Visual Basic], finding
 - pattern matching
 - patterns, matching
 ms.assetid: 25e3b71d-b844-4293-9e4e-f06c5836b5cc
-ms.openlocfilehash: f35222d958f8b02f83c6575d940d24e359c3ae00
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5faaa16615f52714db3de6853786990265716501
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69914724"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348752"
 ---
 # <a name="how-to-find-files-with-a-specific-pattern-in-visual-basic"></a>방법: Visual Basic에서 특정 패턴의 파일 찾기
+
 <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A> 메서드는 파일의 경로 이름을 나타내는 읽기 전용 문자열 컬렉션을 반환합니다. `wildCards` 매개 변수를 사용하여 특정 패턴을 지정할 수 있습니다. 하위 디렉터리를 검색에 포함하려면 `searchType` 매개 변수를 `SearchOption.SearchAllSubDirectories`로 설정합니다.  
   
  지정한 패턴과 일치하는 파일이 없으면 빈 컬렉션이 반환됩니다.  
@@ -28,6 +29,7 @@ ms.locfileid: "69914724"
      [!code-vb[VbFileIOMisc#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOMisc/VB/Class1.vb#4)]  
   
 ## <a name="net-framework-security"></a>.NET Framework 보안  
+
  다음 조건에서 예외가 발생합니다.  
   
 - 길이가 0인 문자열이거나, 공백만 포함하거나, 잘못된 문자를 포함하거나, 경로가 디바이스 경로인 경우(\\\\.\\로 시작됨)와 같은 여러 가지 이유 중 하나로 경로가 올바르지 않은 경우(<xref:System.ArgumentException>)  

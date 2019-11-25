@@ -3,12 +3,12 @@ title: dotnet nuget locals 명령
 description: dotnet nuget locals 명령은 http-request 캐시, 임시 캐시 또는 컴퓨터 전체의 글로벌 패키지 폴더와 같은 로컬 NuGet 리소스를 지우거나 목록에 포함합니다.
 author: karann-msft
 ms.date: 06/26/2019
-ms.openlocfilehash: 482e841d3b402084eb8c7f2456779f1600a5dd19
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: cb5747636aa9d04f1ef6a6ff9309ba29c0630dd6
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117619"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74087399"
 ---
 # <a name="dotnet-nuget-locals"></a>dotnet nuget locals
 
@@ -67,31 +67,31 @@ dotnet nuget locals [-h|--help]
 * 모든 로컬 캐시 디렉터리(http-cache 디렉터리, 전역 패키지 캐시 디렉터리 및 임시 캐시 디렉터리)의 경로를 표시합니다.
 
   ```dotnetcli
-  dotnet nuget locals –l all
+  dotnet nuget locals all –l
   ```
 
 * 로컬 http-cache 디렉터리의 경로를 표시합니다.
 
   ```dotnetcli
-  dotnet nuget locals --list http-cache
+  dotnet nuget locals http-cache --list
   ```
 
 * 모든 로컬 캐시 디렉터리(http-cache 디렉터리, 전역 패키지 캐시 디렉터리 및 임시 캐시 디렉터리)에서 모든 파일을 지웁니다.
 
   ```dotnetcli
-  dotnet nuget locals --clear all
+  dotnet nuget locals all --clear
   ```
 
 * 로컬 글로벌 패키지 캐시 디렉터리에 있는 모든 파일을 지웁니다.
 
   ```dotnetcli
-  dotnet nuget locals -c global-packages
+  dotnet nuget locals global-packages -c
   ```
 
 * 로컬 임시 캐시 디렉터리에 있는 모든 파일을 지웁니다.
 
   ```dotnetcli
-  dotnet nuget locals -c temp
+  dotnet nuget locals temp -c
   ```
 
 ## <a name="troubleshooting"></a>문제 해결

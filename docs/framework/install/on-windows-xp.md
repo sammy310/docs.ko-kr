@@ -5,12 +5,12 @@ ms.custom: updateeachrelease
 author: rlander
 ms.author: mairaw
 ms.date: 04/18/2019
-ms.openlocfilehash: 17354c8aaf9131bbcf5e2274eff44d9af611582c
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 7d7ad0f86ff327c3273664fc1c7395c88d38a5bf
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70853859"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204722"
 ---
 # <a name="install-the-net-framework-on-windows-xp-and-windows-server-2003"></a>Windows XP 및 Windows Server 2003에 .NET Framework 설치
 
@@ -25,15 +25,15 @@ Windows에서 많은 애플리케이션을 실행하는 데 .NET Framework가 �
 
 ## <a name="net-framework-403"></a>.NET Framework 4.0.3
 
-[.NET Framework 4.0.3](https://go.microsoft.com/fwlink/?LinkID=213834)은 Windows XP 및 Windows Server 2003에서 지원되는 최신 .NET Framework 버전입니다. .NET Framework 4.0.3을 사용하려면 먼저 [.NET Framework 4](https://go.microsoft.com/fwlink/?LinkID=213834)를 설치해야 합니다. 이러한 .NET Framework 버전은 둘 다 Microsoft에서 더 이상 지원되지 않습니다.
+[.NET Framework 4.0.3](https://www.microsoft.com/download/details.aspx?id=29053)은 Windows XP 및 Windows Server 2003에서 지원되는 최신 .NET Framework 버전입니다. .NET Framework 4.0.3을 사용하려면 먼저 [.NET Framework 4](https://dotnet.microsoft.com/download/dotnet-framework/net40)를 설치해야 합니다. 이러한 .NET Framework 버전은 둘 다 Microsoft에서 더 이상 지원되지 않습니다.
 
 ## <a name="net-framework-4"></a>.NET Framework 4
 
-Windows XP에는 [.NET Framework 4](https://go.microsoft.com/fwlink/?LinkID=213834&dotnetdocs)를 설치할 수 있습니다. Microsoft에서 더 이상 지원되지 않습니다.
+Windows XP에는 [.NET Framework 4](https://dotnet.microsoft.com/download/dotnet-framework/net40)를 설치할 수 있습니다. Microsoft에서 더 이상 지원되지 않습니다.
 
 ## <a name="net-framework-35"></a>.NET Framework 3.5
 
-Windows XP에는 [.NET Framework 3.5](https://go.microsoft.com/fwlink/?LinkID=213834&dotnetdocs)를 설치할 수 있습니다.
+Windows XP에는 [.NET Framework 3.5](https://dotnet.microsoft.com/download/dotnet-framework/net35-sp1)를 설치할 수 있습니다.
 
 .NET Framework 3.5는 .NET Framework 1.0~3.5용으로 빌드된 애플리케이션을 실행하는 데 사용될 수 있습니다.
 

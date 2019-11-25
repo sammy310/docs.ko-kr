@@ -9,12 +9,12 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - message loops [WPF]
 ms.assetid: f440c23f-fa5d-4d5a-852f-ba61150e6405
-ms.openlocfilehash: 541d71efa66d14855704797892cac68799215159
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: f3cddcd6cd90e7e43ea6af67725e709673f7650f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72919753"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73978346"
 ---
 # <a name="troubleshooting-hybrid-applications"></a>혼합 애플리케이션 문제 해결
 <a name="introduction"></a> 이 항목에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 및 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 기술을 둘 다 사용하는 혼합 애플리케이션을 작성할 때 발생할 수 있는 몇 가지 일반적인 문제에 대해 설명합니다.  
@@ -96,7 +96,7 @@ ms.locfileid: "72919753"
   
 <a name="wpf_designer"></a>   
 ## <a name="wpf-designer"></a>WPF Designer  
- [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)]를 사용하여 WPF 콘텐츠를 디자인할 수 있습니다. 다음 섹션에서는 [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]를 사용하여 혼합 애플리케이션을 작성할 때 발생할 수 있는 몇 가지 일반적인 문제에 대해 설명합니다.  
+ Visual Studio 용 WPF 디자이너를 사용 하 여 WPF 콘텐츠를 디자인할 수 있습니다. 다음 섹션에서는 WPF Designer를 사용 하 여 하이브리드 응용 프로그램을 작성할 때 발생할 수 있는 몇 가지 일반적인 문제를 나열 합니다.  
   
 ### <a name="backcolortransparent-is-ignored-at-design-time"></a>BackColorTransparent가 디자인 타임에 무시됨  
  디자인 타임에 <xref:System.Windows.Forms.Integration.ElementHost.BackColorTransparent%2A> 속성이 예상 대로 작동 하지 않을 수 있습니다.  

@@ -29,16 +29,16 @@ helpviewer_keywords:
 - ^ operator [C#]
 - bitwise logical OR operator [C#]
 - '| operator [C#]'
-ms.openlocfilehash: 9336ff57722e575d3ecfdb3db2b99bf7bbb6b433
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 27f7cf46bd3e344503f74527df34506d38ad4545
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039111"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428442"
 ---
 # <a name="bitwise-and-shift-operators-c-reference"></a>비트 및 시프트 연산자(C# 참조)
 
-다음 연산자는 [정수 형식](../builtin-types/integral-numeric-types.md) 또는 [char](../keywords/char.md) 형식의 피연산자를 사용하여 비트 논리 또는 시프트 연산을 수행합니다.
+다음 연산자는 [정수 형식](../builtin-types/integral-numeric-types.md) 또는 [char](../builtin-types/char.md) 형식의 피연산자를 사용하여 비트 논리 또는 시프트 연산을 수행합니다.
 
 - 단항 [`~`(비트 보수)](#bitwise-complement-operator-) 연산자
 - 이진 [`<<`(왼쪽 시프트)](#left-shift-operator-) 및 [`>>`(오른쪽 시프트)](#right-shift-operator-) 시프트 연산자

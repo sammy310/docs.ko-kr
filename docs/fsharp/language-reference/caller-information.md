@@ -1,13 +1,13 @@
 ---
 title: 호출자 정보
 description: 호출자 정보 인수 특성을 사용 하 여 메서드에서 호출자 정보를 가져오는 방법을 설명 합니다.
-ms.date: 04/25/2017
-ms.openlocfilehash: e7bbc3830a95bd25cfc2fb369b204d367b775815
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.date: 11/04/2019
+ms.openlocfilehash: d995b37149277b7c7d1b6217ee484d3c90a7f8b3
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106589"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976807"
 ---
 # <a name="caller-information"></a>호출자 정보
 
@@ -15,7 +15,7 @@ ms.locfileid: "70106589"
 
 이 정보를 얻으려면 각각 기본값이 있는 선택적 매개 변수에 적용되는 특성을 사용합니다. 다음 표에서는 [system.runtime.compilerservices](/dotnet/api/system.runtime.compilerservices) 네임 스페이스에 정의 된 호출자 정보 특성을 보여 줍니다.
 
-|특성|설명|형식|
+|특성|설명|Type|
 |---------|-----------|----|
 |[CallerFilePath](/dotnet/api/system.runtime.compilerservices.callerfilepathattribute)|호출자를 포함한 소스 파일의 전체 경로입니다. 컴파일 시간의 파일 경로입니다.|`String`
 |[CallerLineNumber](/dotnet/api/system.runtime.compilerservices.callerlinenumberattribute)|메서드가 호출되는 소스 파일의 줄 번호입니다.|`Integer`|
@@ -31,7 +31,7 @@ open System.Runtime.CompilerServices
 open System.Runtime.InteropServices
 
 type Tracer() =
-    member __.DoTrace(message: string,
+    member _.DoTrace(message: string,
                       [<CallerMemberName; Optional; DefaultParameterValue("")>] memberName: string,
                       [<CallerFilePath; Optional; DefaultParameterValue("")>] path: string,
                       [<CallerLineNumber; Optional; DefaultParameterValue(0)>] line: int) =
@@ -41,7 +41,7 @@ type Tracer() =
         Trace.WriteLine(sprintf "Source line number: %d" line)
 ```
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 호출자 정보 특성은 선택적 매개 변수에만 적용할 수 있습니다. 호출자 정보 특성을 사용 하면 컴파일러에서 호출자 정보 특성을 사용 하 여 데코레이팅된 각 선택적 매개 변수에 대 한 적절 한 값을 기록 합니다.
 
@@ -51,7 +51,7 @@ type Tracer() =
 
 ## <a name="member-names"></a>멤버 이름
 
-[`CallerMemberName`](/dotnet/api/system.runtime.compilerservices.callermembernameattribute) 특성을 사용 하 여 멤버 이름을 `String` 호출 된 메서드에 대 한 인수로 지정 하지 않을 수 있습니다. 이 기술을 사용 하 여 이름 바꾸기 리팩터링에서 값을 `String` 변경 하지 않는 문제를 방지할 수 있습니다. 이 이점은 다음 작업에 특히 유용합니다.
+[`CallerMemberName`](/dotnet/api/system.runtime.compilerservices.callermembernameattribute) 특성을 사용 하 여 멤버 이름을 호출 된 메서드에 대 한 `String` 인수로 지정 하지 않을 수 있습니다. 이 기술을 사용 하 여 이름 바꾸기 리팩터링으로 `String` 값이 변경 되지 않는 문제를 방지할 수 있습니다. 이 이점은 다음 작업에 특히 유용합니다.
 
 - 추적 및 진단 루틴 사용.
 - 데이터를 바인딩할 때 [INotifyPropertyChanged](/dotnet/api/system.componentmodel.inotifypropertychanged) 인터페이스를 구현 합니다. 이 인터페이스에서는 컨트롤에서 업데이트된 정보를 표시할 수 있도록 바운드 컨트롤의 속성이 변경되었음을 알리는 개체의 속성을 사용할 수 있습니다. [`CallerMemberName`](/dotnet/api/system.runtime.compilerservices.callermembernameattribute) 특성이 없으면 속성 이름을 리터럴로 지정 해야 합니다.
@@ -68,7 +68,7 @@ type Tracer() =
 |특성 생성자|특성이 적용되는 멤버의 이름입니다. 특성이 멤버 내에 있는 어떤 요소인 경우(예: 매개 변수, 반환 값 또는 제네릭 형식 매개 변수) 이 결과는 그 요소와 관련된 멤버의 이름입니다.|
 |포함하는 멤버가 없음(예: 어셈블리 수준 또는 형식에 적용되는 특성)|선택적 매개 변수의 기본값입니다.|
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [특성](attributes.md)
 - [명명 된 인수](parameters-and-arguments.md#named-arguments)

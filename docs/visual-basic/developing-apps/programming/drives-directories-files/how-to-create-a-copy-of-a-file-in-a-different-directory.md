@@ -1,5 +1,5 @@
 ---
-title: '방법: Visual Basic에서 다른 디렉터리에 파일의 복사본 만들기'
+title: '방법: 다른 디렉터리에 파일의 복사본 만들기'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Computer.FileSystem.CopyFile method, copying files [Visual Basic]
@@ -7,14 +7,15 @@ helpviewer_keywords:
 - CopyFile method [Visual Basic], copying files in Visual Basic
 - I/O [Visual Basic], copying files
 ms.assetid: 88e2145c-d414-45a5-ad03-6f5d58ecca26
-ms.openlocfilehash: fa4289f33a8c9498648dc71cb92d6403ece30524
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e9a14e1f3743979548b92a3db653d09a470a1875
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64628819"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348836"
 ---
 # <a name="how-to-create-a-copy-of-a-file-in-a-different-directory-in-visual-basic"></a>방법: Visual Basic에서 다른 디렉터리에 파일의 복사본 만들기
+
 `My.Computer.FileSystem.CopyFile` 메서드를 사용하면 파일을 복사할 수 있습니다. 해당 매개 변수를 통해 기존 파일을 덮어쓰고, 파일 이름을 바꾸고, 작업의 진행률을 표시하고, 사용자가 작업을 취소할 수 있습니다.  
   
 ### <a name="to-copy-a-text-file-to-another-folder"></a>텍스트 파일을 다른 폴더로 복사하려면  
@@ -24,6 +25,7 @@ ms.locfileid: "64628819"
      [!code-vb[VbFileIOMisc#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOMisc/VB/Class1.vb#24)]  
   
 ## <a name="robust-programming"></a>강력한 프로그래밍  
+
  다음 조건에서는 예외가 throw될 수 있습니다.  
   
 - 길이가 0인 문자열이거나, 공백만 포함하거나, 잘못된 문자를 포함하거나, 경로가 디바이스 경로인 경우(\\\\.\\로 시작됨)와 같은 여러 가지 이유 중 하나로 경로가 올바르지 않은 경우(<xref:System.ArgumentException>)  

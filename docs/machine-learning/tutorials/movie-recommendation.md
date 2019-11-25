@@ -5,12 +5,12 @@ author: briacht
 ms.date: 09/30/2019
 ms.custom: mvc, title-hack-0516
 ms.topic: tutorial
-ms.openlocfilehash: 2d960a43f7934e262fa0e19abfea0209aa4e9ff0
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 5b4541b527559ee05c9b97d84324e9e70599a014
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425224"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977375"
 ---
 # <a name="tutorial-build-a-movie-recommender-using-matrix-factorizaton-with-mlnet"></a>자습서: ML.NET에서 행렬 인수분해를 사용하여 영화 추천기 빌드
 
@@ -102,7 +102,7 @@ ML.NET 프로세스의 첫 번째 단계는 모델 학습 및 테스트 데이�
 | `movieId`      |               |
 | `timestamp`     |               |
 
-`Label`을 예측하는 데 사용되는 `Features`를 결정하는 것은 사용자에게 달려 있습니다. 또한 [Feature Permutation 중요도](../how-to-guides/determine-global-feature-importance-in-model.md)와 같은 방법을 사용하여 최상의 `Features`를 선택할 수 있습니다.
+`Label`을 예측하는 데 사용되는 `Features`를 결정하는 것은 사용자에게 달려 있습니다. 또한 [Feature Permutation 중요도](../how-to-guides/explain-machine-learning-model-permutation-feature-importance-ml-net.md)와 같은 방법을 사용하여 최상의 `Features`을(를) 선택할 수 있습니다.
 
 이 경우, 타임스탬프는 사용자가 특정 영화를 평가하는 방식에 실제로 영향을 주지 않고 더 정확한 예측에 기여하지 않기 때문에 `timestamp` 열을 `Feature`로 제거해야 합니다.
 
@@ -373,7 +373,7 @@ public static void SaveModel(MLContext mlContext, DataViewSchema trainingDataVie
 
 ### <a name="use-your-saved-model"></a>저장된 모델 사용
 
-학습된 모델을 저장한 후에는 다양한 환경에서 모델을 사용할 수 있습니다(앱에서 학습된 기계 학습 모델을 작동하는 방법에 대한 자세한 내용은 ["방법 가이드"](../how-to-guides/consuming-model-ml-net.md) 참조).
+학습된 모델을 저장한 후에는 다양한 환경에서 모델을 이용할 수 있습니다. 앱에서 학습된 기계 학습 모델을 운영하는 방법에 대한 자세한 내용을 알아보려면 [학습된 모델 저장 및 로드](../how-to-guides/save-load-machine-learning-models-ml-net.md)를 참조하세요.
 
 ## <a name="results"></a>결과
 
@@ -420,7 +420,7 @@ Movie 10 is recommended for user 6
 
 각 사용자 및 영화 id에 대한 충분한 샘플이 있는 학습 데이터를 추가하면 권장 모델의 품질을 개선하는 데 도움이 될 수 있습니다.
 
-[교차 유효성 검사](../how-to-guides/train-cross-validation-ml-net.md)는 임의로 데이터를 하위 집합으로 분할하여(이 자습서에서처럼 테스트 데이터 세트를 추출하는 대신) 그룹 중 일부는 학습 데이터로, 일부는 테스트 데이터로 가져오는 모델을 평가하는 기법입니다. 이 메서드는 모델 품질 면에서 학습-테스트 분할을 수행하는 것보다 뛰어난 성능을 냅니다.
+[교차 유효성 검사](../how-to-guides/train-machine-learning-model-cross-validation-ml-net.md)는 임의로 데이터를 하위 집합으로 분할하여(이 자습서에서처럼 테스트 데이터 세트를 추출하는 대신) 그룹 중 일부는 학습 데이터로, 일부는 테스트 데이터로 가져오는 모델을 평가하는 기법입니다. 이 메서드는 모델 품질 면에서 학습-테스트 분할을 수행하는 것보다 뛰어난 성능을 냅니다.
 
 ### <a name="features"></a>기능
 
@@ -428,7 +428,7 @@ Movie 10 is recommended for user 6
 
 시작은 좋지만 실제로는 데이터 세트에 포함된 다른 특성 또는 `Features`(예: 나이, 성별, 지리적 위치 등)를 추가할 수 있습니다. 관련성이 높은 `Features`를 추가하면 권장 모델의 성능을 향상시킬 수 있습니다.
 
-`Features`가 기계 학습 작업에 가장 관련이 있는지 확실하지 않은 경우, ML.NET에서 가장 영향력 있는 `Features`를 검색하기 위해 제공되는 FCC(Feature Contribution Calculation) 및 [Feature Permutation 중요도](../how-to-guides/determine-global-feature-importance-in-model.md)를 사용할 수도 있습니다.
+`Features`가 기계 학습 작업에 가장 관련이 있는지 확실하지 않은 경우, ML.NET에서 가장 영향력 있는 `Features`를 검색하기 위해 제공되는 FCC(Feature Contribution Calculation) 및 [순열 기능 중요도](../how-to-guides/explain-machine-learning-model-permutation-feature-importance-ml-net.md)를 사용할 수도 있습니다.
 
 ### <a name="algorithm-hyperparameters"></a>알고리즘 하이퍼 매개 변수
 

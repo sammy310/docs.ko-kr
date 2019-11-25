@@ -1,5 +1,5 @@
 ---
-title: '방법: Visual Basic의 이진 파일에서 읽기'
+title: '방법: 이진 파일에서 읽기'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - binary files [Visual Basic], reading from
@@ -7,14 +7,15 @@ helpviewer_keywords:
 - ReadAllBytes method [Visual Basic], reading from binary files
 - My.Computer.FileSystem object, reading from binary files
 ms.assetid: d2b1269e-24b6-42e0-9414-ae708db282d8
-ms.openlocfilehash: 72e9361193a5b099841d989e842ff36662cf690d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c33bc72a5c79901e3715ed6a587ffdb8e3565e48
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623716"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74335290"
 ---
 # <a name="how-to-read-from-binary-files-in-visual-basic"></a>방법: Visual Basic의 이진 파일에서 읽기
+
 `My.Computer.FileSystem` 개체는 이진 파일을 읽기 위한 `ReadAllBytes` 메서드를 제공합니다.  
   
 ### <a name="to-read-from-a-binary-file"></a>이진 파일을 읽으려면  
@@ -28,6 +29,7 @@ ms.locfileid: "64623716"
      [!code-vb[VbVbcnMyFileSystem#91](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#91)]  
   
 ## <a name="robust-programming"></a>강력한 프로그래밍  
+
  다음 조건에서는 예외가 throw될 수 있습니다.  
   
 - 길이가 0인 문자열이거나, 공백만 포함하거나, 잘못된 문자를 포함하거나, 경로가 디바이스 경로인 경우와 같은 여러 가지 이유 중 하나로 경로가 올바르지 않은 경우(<xref:System.ArgumentException>)  

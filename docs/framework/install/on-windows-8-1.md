@@ -5,12 +5,12 @@ description: Windows 8.1에 .NET Framework를 설치하는 방법 알아보기
 author: rlander
 ms.author: mairaw
 ms.date: 04/18/2019
-ms.openlocfilehash: 3959e6c9f45897b799b3305893580ec881b02f8d
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: a7dd68c8e47fa004ec3861cefe1afd56f14e7068
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70853896"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283046"
 ---
 # <a name="install-the-net-framework-on-windows-81-and-windows-server-2012-r2"></a>Windows 8.1 및 Windows Server 2012 R2에 .NET Framework 설치
 
@@ -20,7 +20,7 @@ Windows에서 많은 애플리케이션을 실행하는 데 .NET Framework가 �
 
 이러한 지침은 필요한 .NET Framework 버전을 설치하는 데 도움이 됩니다. [.NET Framework 4.8](https://github.com/Microsoft/dotnet/tree/master/releases/net48)은 최신 버전입니다. Windows 8.1 및 Windows Server 2012 R2에서 지원되고 [Windows 10 2019년 5월 업데이트](https://support.microsoft.com/help/4028685/windows-10-get-the-update)와 함께 포함됩니다.
 
-## <a name="net-framework-8"></a>.NET Framework 8
+## <a name="net-framework-48"></a>.NET Framework 4.8
 
 > [!div class="button"]
 > [.NET Framework 4.8 다운로드](https://dotnet.microsoft.com/download/dotnet-framework/net48)

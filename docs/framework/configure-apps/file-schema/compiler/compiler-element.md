@@ -10,21 +10,21 @@ helpviewer_keywords:
 - compiler configuration attributes
 - compiler element
 ms.assetid: 7a151659-b803-4c27-b5ce-1c4aa0d5a823
-ms.openlocfilehash: a19cf8182cdb338fd8596ef38311916de0daae37
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: 46676f25597f85596598d6f67c98930971cb0447
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168937"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088051"
 ---
 # <a name="compiler-element"></a>\<컴파일러 > 요소
 
 언어 공급자에 대한 컴파일러 구성 특성을 지정합니다.
 
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp;&nbsp;[ **\<시스템 codedom >** ](system-codedom-element.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<컴파일러 >** ](compilers-element.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<컴파일러 >**  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<** ](system-codedom-element.md)\
+&nbsp;&nbsp;&nbsp;\<[**컴파일러**](compilers-element.md) > &nbsp;\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<컴파일러 >**
 
 ## <a name="syntax"></a>구문
 
@@ -46,11 +46,11 @@ ms.locfileid: "70168937"
 
 |특성|설명|
 |---------------|-----------------|
-|`compilerOptions`|선택적 특성입니다.<br /><br /> 컴파일에 사용할 추가 컴파일러 관련 인수를 지정 합니다. `compilerOptions` 특성 값은 일반적으로 컴파일러에 대 한 컴파일러 옵션 항목에 나열 됩니다.|
-|`extension`|필수 특성입니다.<br /><br /> 언어 공급자의 소스 파일에 사용 되는 파일 이름 확장명을 세미콜론으로 구분한 목록을 제공 합니다. 예를 들어, ".cs"입니다.|
-|`language`|필수 특성입니다.<br /><br /> 언어 공급자에서 지 원하는 언어 이름의 세미콜론으로 구분 된 목록을 제공 합니다. 예를 들어, "C#;cs;csharp"입니다.|
-|`type`|필수 특성입니다.<br /><br /> 공급자 구현이 들어 있는 어셈블리의 이름을 포함 한 언어 공급자의 형식 이름을 지정 합니다. 형식 이름은 정규화 된 [형식 이름 지정](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md)에 정의 된 요구 사항을 충족 해야 합니다.|
-|`warningLevel`|선택적 특성입니다.<br /><br /> 기본 컴파일러 경고 수준을;를 지정합니다. 컴파일 경고를 오류로 언어 공급자는 처리 수준을 결정 합니다.|
+|`compilerOptions`|선택적 특성입니다.<br /><br /> 컴파일에 사용할 추가 컴파일러 관련 인수를 지정 합니다. `compilerOptions` 특성에 대 한 값은 일반적으로 컴파일러에 대 한 컴파일러 옵션 항목에 나열 됩니다.|
+|`extension`|필수 특성입니다.<br /><br /> 언어 공급자의 소스 파일에 사용 되는 파일 이름 확장명을 세미콜론으로 구분한 목록을 제공 합니다. 예를 들면 ".cs"입니다.|
+|`language`|필수 특성입니다.<br /><br /> 언어 공급자에서 지 원하는 언어 이름에 대 한 세미콜론으로 구분 된 목록을 제공 합니다. 예를 들어 "c #; cs; csharp"입니다.|
+|`type`|필수 특성입니다.<br /><br /> 공급자 구현을 포함 하는 어셈블리의 이름을 포함 하 여 언어 공급자의 형식 이름을 지정 합니다. 형식 이름은 정규화 된 [형식 이름 지정](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md)에 정의 된 요구 사항을 충족 해야 합니다.|
+|`warningLevel`|선택적 특성입니다.<br /><br /> 기본 컴파일러 경고 수준을 지정 합니다. 언어 공급자가 컴파일 경고를 오류로 처리 하는 수준을 결정 합니다.|
 
 ### <a name="child-elements"></a>자식 요소
 
@@ -64,11 +64,11 @@ ms.locfileid: "70168937"
 |-------------|-----------------|
 |[\<configuration> 요소](../configuration-element.md)|공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.|
 |[\<system.object > 요소](system-codedom-element.md)|사용 가능한 언어 공급자에 대한 컴파일러 구성 설정을 지정합니다.|
-|[\<컴파일러 > 요소](compilers-element.md)|컴파일러 구성 요소에 대 한 컨테이너입니다. 0 개 이상의 `<compiler>` 요소를 포함 합니다.|
+|[\<컴파일러 > 요소](compilers-element.md)|컴파일러 구성 요소에 대 한 컨테이너입니다. `<compiler>` 요소를 0 개 이상 포함 합니다.|
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
-각 `<compiler>` 요소는 특정 언어 공급자에 대 한 컴파일러 구성 특성을 지정 합니다. 공급자는 특정 언어 <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> 에 대 한 클래스를 확장 합니다 `<compiler>` . 요소는 언어 공급자에 대 한 컴파일러 및 코드 생성기 설정을 정의 합니다.
+각 `<compiler>` 요소는 특정 언어 공급자에 대 한 컴파일러 구성 특성을 지정 합니다. 공급자는 특정 언어에 대 한 <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> 클래스를 확장 합니다. `<compiler>` 요소는 언어 공급자에 대 한 컴파일러 및 코드 생성기 설정을 정의 합니다.
 
 .NET Framework는 컴퓨터 구성 파일(Machine.config)의 초기 컴파일러 설정을 정의합니다. 개발자 및 컴파일러 공급업체는 새로운 <xref:System.CodeDom.Compiler.CodeDomProvider> 구현에 대한 구성 설정을 추가할 수 있습니다. <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> 메서드를 사용하여 컴퓨터에서 언어 공급자 및 컴파일러 구성 설정을 프로그래밍 방식으로 열거할 수 있습니다.
 
@@ -100,7 +100,7 @@ ms.locfileid: "70168937"
 </configuration>
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.CodeDom.Compiler.CompilerInfo>
 - <xref:System.CodeDom.Compiler.CodeDomProvider>

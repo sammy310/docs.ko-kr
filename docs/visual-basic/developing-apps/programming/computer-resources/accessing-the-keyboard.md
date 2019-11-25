@@ -1,5 +1,5 @@
 ---
-title: 키보드에 액세스(Visual Basic)
+title: 키보드에 액세스
 ms.date: 07/20/2015
 helpviewer_keywords:
 - keyboards [Visual Basic], accessing [Visual Basic]
@@ -7,20 +7,22 @@ helpviewer_keywords:
 - keystrokes
 - CapsLock property
 ms.assetid: aa37d54c-5c98-4b44-b98a-c26d2a03c038
-ms.openlocfilehash: 00cdf18d057ca8a5c59cde02759b5c8c572a8bba
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 4e4a6aa3567094ca87e41367e82d5fa6c61fe100
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58823573"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74329547"
 ---
 # <a name="accessing-the-keyboard-visual-basic"></a>키보드에 액세스(Visual Basic)
+
 `My.Computer.Keyboard` 개체는 현재 누른 키 등 키보드의 현재 상태에 액세스하기 위한 속성을 제공하고, 활성 창에 키 입력을 보내기 위한 메서드를 제공합니다.  
   
 ## <a name="tasks"></a>작업  
+
  이 표에서는 `My.Computer.Keyboard` 개체와 관련된 작업을 나열하고, 각 작업을 수행하는 방법을 보여 주는 항목을 가리킵니다.  
   
-|대상|참조|  
+|대상|참조 항목|  
 |--------|---------|  
 |CAPS LOCK이 켜져 있는지 여부를 확인합니다.|<xref:Microsoft.VisualBasic.Devices.Keyboard.CapsLock%2A>|  
 |Shift 키가 눌러져 있는지 여부를 확인합니다.|<xref:Microsoft.VisualBasic.Devices.Keyboard.ShiftKeyDown%2A>|  

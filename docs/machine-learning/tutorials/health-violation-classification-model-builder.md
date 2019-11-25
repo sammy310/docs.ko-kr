@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 10/30/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 53f446d4aad8517d758e936d2d2881071f319423
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: cbe20183d317ac6fe39a937e1cfa8a5e3df81b74
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73142166"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977217"
 ---
 # <a name="tutorial-classify-the-severity-of-restaurant-health-violations-with-model-builder"></a>자습서: 모델 작성기를 사용하여 식당 위생 위반의 심각도 분류
 
@@ -35,7 +35,7 @@ ms.locfileid: "73142166"
 
 필수 구성 요소 및 설치 지침 목록을 보려면 [모델 작성기 설치 가이드](../how-to-guides/install-model-builder.md)를 방문하세요.
 
-## <a name="model-builder-multiclass-classification-overview"></a>모델 작성기 다중 클래스 분류 개요 
+## <a name="model-builder-multiclass-classification-overview"></a>모델 작성기 다중 클래스 분류 개요
 
 이 샘플은 모델 작성기로 빌드된 기계 학습 모델을 사용하여 위생 위반 위험을 범주화하는 C# .NET Core 콘솔 애플리케이션을 만듭니다. [dotnet/samples](https://github.com/dotnet/machinelearning-samples/tree/master/samples/modelbuilder/MulticlassClassification_RestaurantViolations) GitHub 리포지토리에서 이 자습서의 소스 코드를 찾을 수 있습니다.
 
@@ -58,7 +58,7 @@ ms.locfileid: "73142166"
 | 루틴 - 예정되지 않음 | 행주가 깨끗하지 않거나 제대로 보관되지 않았거나 살균제가 부적절함 | 위험 수준 낮음 |
 
 - **InspectionType**: 검사 유형입니다. 새로운 시설에 대한 최초 점검, 정기 점검, 불만 사항 점검 및 기타 여러 유형이 될 수 있습니다.
-- **ViolationDescription**: 점검 중 발견된 위반에 대한 설명입니다. 
+- **ViolationDescription**: 점검 중 발견된 위반에 대한 설명입니다.
 - **RiskCategory**: 위반이 공중 보건 및 안전에 미치는 위험의 심각도입니다.
 
 `label`은 예측할 열입니다. 분류 작업을 수행하는 경우 목표는 범주(텍스트 또는 숫자)를 할당하는 것입니다. 이 분류 시나리오에서 위반의 심각도에는 낮음, 보통 또는 높음 위험 값이 할당됩니다. 따라서 **RiskCategory**는 레이블입니다. `features`는 `label` 예측을 위해 모델에 제공하는 입력입니다. 이 경우 **InspectionType** 및 **ViolationDescription**은 **RiskCategory**를 예측하기 위한 기능 또는 입력으로 사용됩니다.
@@ -78,7 +78,7 @@ ms.locfileid: "73142166"
 
 1. 모델 작성기 도구의 데이터 단계의 데이터 원본 드롭다운에서 **SQL Server**를 선택합니다.
 1. **SQL Server 데이터베이스에 연결** 텍스트 상자 옆에 있는 단추를 선택합니다.
-    1. **데이터 선택** 대화 상자에서 **Microsoft SQL Server 데이터베이스 파일**을 선택합니다. 
+    1. **데이터 선택** 대화 상자에서 **Microsoft SQL Server 데이터베이스 파일**을 선택합니다.
     1. **항상 이 선택 사용** 확인란의 선택을 취소하고 **계속**을 선택합니다.
     1. **연결 속성** 대화 상자에서 **찾아보기**를 선택하고 다운로드한 *RestaurantScores.mdf* 파일을 선택합니다.
     1. **확인**을 선택합니다.
@@ -124,11 +124,11 @@ ms.locfileid: "73142166"
 
     [!code-csharp [ProgramUsings](~/machinelearning-samples/samples/modelbuilder/MulticlassClassification_RestaurantViolations/RestaurantViolations/Program.cs#L2)]
 
-1. 모델을 사용하여 새 데이터에 대해 예측을 수행하려면 `Main` 메서드 내부에 `ModelInput` 클래스의 새 인스턴스를 만듭니다. 위험 범주는 입력에 포함되지 않습니다. 모델에서 해당 범주를 예측하기 때문입니다. 
+1. 모델을 사용하여 새 데이터에 대해 예측을 수행하려면 `Main` 메서드 내부에 `ModelInput` 클래스의 새 인스턴스를 만듭니다. 위험 범주는 입력에 포함되지 않습니다. 모델에서 해당 범주를 예측하기 때문입니다.
 
     [!code-csharp [TestData](~/machinelearning-samples/samples/modelbuilder/MulticlassClassification_RestaurantViolations/RestaurantViolations/Program.cs#L11-L15)]
 
-1. `ConsumeModel` 클래스의 `Predict` 메서드를 사용합니다. `Predict` 메서드는 학습된 모델을 로드하고 모델에 대한 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)을 만든 후 새 데이터에 대해 예측하는 데 사용합니다. 
+1. `ConsumeModel` 클래스의 `Predict` 메서드를 사용합니다. `Predict` 메서드는 학습된 모델을 로드하고 모델에 대한 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)을 만든 후 새 데이터에 대해 예측하는 데 사용합니다.
 
     [!code-csharp [Prediction](~/machinelearning-samples/samples/modelbuilder/MulticlassClassification_RestaurantViolations/RestaurantViolations/Program.cs#L17-L24)]
 

@@ -1,22 +1,24 @@
 ---
-title: .NET Framework 파일 I/O 및 파일 시스템에 사용되는 클래스(Visual Basic)
+title: .NET Framework 파일 I/O 및 파일 시스템에 사용되는 클래스
 ms.date: 07/20/2015
 helpviewer_keywords:
 - file I/O classes
 ms.assetid: 4a5ca924-eea8-4a95-a5f0-6ac10de276a3
-ms.openlocfilehash: f9d898756b6b17ae69d1af7dd747c20a26d88417
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: fe70f8fb655579049bb36fc324d04530259d25f2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347996"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348923"
 ---
 # <a name="classes-used-in-net-framework-file-io-and-the-file-system-visual-basic"></a>.NET Framework 파일 I/O 및 파일 시스템에 사용되는 클래스(Visual Basic)
+
 다음 표에는 .NET Framework 파일 I/O에 공통적으로 사용되고 파일 I/O 클래스로 범주화되는 클래스, 스트림을 만드는 데 사용되는 클래스 및 스트림을 읽고 스트림에 쓰는 데 사용되는 클래스가 나와 있습니다.  
   
 더 포괄적인 목록은 [클래스 라이브러리 개요](../../../../standard/class-library-overview.md)를 참조하세요.  
   
 ## <a name="basic-io-classes-for-files-drives-and-directories"></a>파일, 드라이브 및 디렉터리의 기본 I/O 클래스  
+
  다음 표에서는 파일 I/O에 사용되는 기본 클래스를 나열하고 설명합니다.  
   
 |클래스|설명|  
@@ -34,6 +36,7 @@ ms.locfileid: "67347996"
 |<xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType>|<xref:System.Security.Permissions.FileIOPermissionAttribute.Read%2A>, <xref:System.Security.Permissions.FileIOPermissionAttribute.Write%2A>, <xref:System.Security.Permissions.FileIOPermissionAttribute.Append%2A> 및 <xref:System.Security.Permissions.FileIOPermissionAttribute.PathDiscovery%2A> 권한을 정의하여 파일 및 폴더 액세스를 제어합니다.|  
   
 ## <a name="classes-used-to-create-streams"></a>스트림을 만드는 데 사용되는 클래스  
+
  다음 표에서는 스트림을 만드는 데 사용되는 기본 클래스를 나열하고 설명합니다.  
   
 |클래스|설명|  
@@ -45,6 +48,7 @@ ms.locfileid: "67347996"
 |<xref:System.Security.Cryptography.CryptoStream?displayProperty=nameWithType>|데이터 스트림을 암호화 변환에 연결하는 스트림을 정의합니다.|  
   
 ## <a name="classes-used-to-read-from-and-write-to-streams"></a>스트림에서 읽고 스트림에 쓰는 데 사용되는 클래스  
+
  다음 표에는 스트림을 통해 파일에서 읽고 파일에 쓰는 데 사용되는 특정 클래스를 보여 줍니다.  
   
 |**클래스**|**설명**|  

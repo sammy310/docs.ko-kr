@@ -12,12 +12,12 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 6a49c070bd7d2e3819044c6bb653671a2fc8199f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: edd398cd3e42e23301dcc992093d14d087754e76
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73106992"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347249"
 ---
 # <a name="resolve-assembly-loads"></a>어셈블리 로드 해결
 .NET에서는 어셈블리 로드를 보다 효율적으로 제어해야 하는 애플리케이션에 대해 <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 이벤트를 제공합니다. 이 이벤트를 처리하면 애플리케이션이 정상적인 검색 경로 외부에서 로드 컨텍스트에 어셈블리를 로드하고, 여러 어셈블리 버전 중에서 로드할 버전을 선택하고, 동적 어셈블리를 내보내 반환하는 작업 등을 수행할 수 있습니다. 이 항목에서는 <xref:System.AppDomain.AssemblyResolve> 이벤트 처리 지침을 제공합니다.  
@@ -160,7 +160,6 @@ Process is terminated due to StackOverflowException.
 ```
 
 ```vb
-Imports System
 Imports System.Reflection
 
 Class BadExample

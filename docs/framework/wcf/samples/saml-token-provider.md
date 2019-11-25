@@ -2,12 +2,12 @@
 title: SAML Token Provider
 ms.date: 03/30/2017
 ms.assetid: eb16e5e2-4c8d-4f61-a479-9c965fcec80c
-ms.openlocfilehash: 87aef572c2179034d295361c62942cea2ad6ed7a
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: d599992949b87f0ac3f178d8f79f244781eda6fa
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424232"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976706"
 ---
 # <a name="saml-token-provider"></a>SAML Token Provider
 이 샘플에서는 사용자 지정 클라이언트 SAML 토큰 공급자를 구현하는 방법을 보여 줍니다. WCF (Windows Communication Foundation)의 토큰 공급자는 보안 인프라에 자격 증명을 제공 하는 데 사용 됩니다. 일반적으로 토큰 공급자는 대상을 검사하고 적절한 자격 증명을 발급하여 보안 인프라에서 메시지의 보안을 유지할 수 있도록 합니다. WCF는 기본 자격 증명 관리자 토큰 공급자와 함께 제공 됩니다. WCF는 또한 CardSpace 토큰 공급자와 함께 제공 됩니다. 사용자 지정 토큰 공급자는 다음과 같은 경우에 유용합니다.
@@ -161,8 +161,7 @@ ms.locfileid: "73424232"
      <xref:System.IdentityModel.Selectors.SecurityTokenManager> 클래스는 <xref:System.IdentityModel.Selectors.SecurityTokenProvider> 메서드에서 전달되는 특정 <xref:System.IdentityModel.Selectors.SecurityTokenRequirement>에 대한 `CreateSecurityTokenProvider`를 만드는 데 사용됩니다. 또한 보안 토큰 관리자는 토큰 인증자와 토큰 serializer를 만드는 데 사용되지만 이 샘플에서는 설명하지 않습니다. 이 샘플에서 사용자 지정 보안 토큰 관리자는 <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> 클래스에서 상속되며 `CreateSecurityTokenProvider` 메서드를 재정의하여 전달된 토큰 요구 사항에서 SAML 토큰이 요청됨을 나타낼 때 사용자 지정 SAML 토큰 공급자를 반환합니다. 클라이언트 자격 증명 클래스(3단계 참조)에서 어설션을 지정하지 않은 경우에는 보안 토큰 관리자에서 적절한 인스턴스를 만듭니다.
 
     ```csharp
-    public class SamlSecurityTokenManager :
-     ClientCredentialsSecurityTokenManager
+    public class SamlSecurityTokenManager : ClientCredentialsSecurityTokenManager
     {
      SamlClientCredentials samlClientCredentials;
 

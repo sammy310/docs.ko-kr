@@ -1,13 +1,13 @@
 ---
 title: 계산 식
 description: 제어 흐름 구문 및 바인딩을 사용 하 여 시퀀싱 하 F# 고 결합할 수 있는 계산을 작성 하기 위한 편리한 구문을 만드는 방법에 대해 알아봅니다.
-ms.date: 03/15/2019
-ms.openlocfilehash: 2f0eb7686378766f6b379f0401589490f01a1963
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.date: 11/04/2019
+ms.openlocfilehash: c9ac0454221782a7ccb3d41850ca6aba4e20a72a
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424750"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976784"
 ---
 # <a name="computation-expressions"></a>계산 식
 
@@ -112,6 +112,34 @@ for sq in squares do
     printfn "%d" sq
 ```
 
+대부분의 경우 호출자는이를 생략할 수 있습니다. `yield`를 생략 하는 가장 일반적인 방법은 `->` 연산자를 사용 하는 것입니다.
+
+```fsharp
+let squares =
+    seq {
+        for i in 1..10 -> i * i
+    }
+
+for sq in squares do
+    printfn "%d" sq
+```
+
+매우 다양 한 값을 생성할 수 있는 보다 복잡 한 식 및 조건부로 말하면 키워드를 생략 하면 됩니다.
+
+```fsharp
+let weekdays includeWeekend =
+    seq {
+        "Monday"
+        "Tuesday"
+        "Wednesday"
+        "Thursday"
+        "Friday"
+        if includeWeekend then
+            "Saturday"
+            "Sunday"
+    }
+```
+
 [ C#에서 yield 키워드 ](../../csharp/language-reference/keywords/yield.md)와 마찬가지로 계산 식의 각 요소는 반복 될 때 다시 생성 됩니다.
 
 `yield`는 작성기 형식의 `Yield(x)` 멤버에 의해 정의 됩니다. 여기서 `x`는 다시 생성할 항목입니다.
@@ -143,6 +171,8 @@ printfn "%A" squaresAndCubes // Prints - 1; 4; 9; 1; 8; 27
 계산 식이 계산 되 면 `yield!`에서 호출한 계산 식의 항목이 하나씩 다시 생성 되 고 결과가 평면화 됩니다.
 
 `yield!`는 작성기 형식의 `YieldFrom(x)` 멤버에 의해 정의 됩니다. 여기서 `x`는 값의 컬렉션입니다.
+
+`yield`와 달리 `yield!`는 명시적으로 지정 해야 합니다. 해당 동작은 계산 식에서 암시적이 아닙니다.
 
 ### `return`
 
@@ -394,7 +424,7 @@ comp |> step |> step |> step |> step
 type Microsoft.FSharp.Linq.QueryBuilder with
 
     [<CustomOperation("existsNot")>]
-    member __.ExistsNot (source: QuerySource<'T, 'Q>, predicate) =
+    member _.ExistsNot (source: QuerySource<'T, 'Q>, predicate) =
         Enumerable.Any (source.Source, Func<_,_>(predicate)) |> not
 ```
 

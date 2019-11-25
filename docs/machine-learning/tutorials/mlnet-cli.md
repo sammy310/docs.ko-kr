@@ -6,12 +6,12 @@ ms.author: cesardl
 ms.date: 04/24/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: 5b3b0af5b46774beff9fb7a2a86c37e5399c0dd2
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: bea5cd1b42773e62601edbc113b2155ff78cf884
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71957397"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977407"
 ---
 # <a name="analyze-sentiment-using-the-mlnet-cli"></a>ML.NET CLI를 사용하여 감정 분석
 
@@ -105,7 +105,7 @@ Visual Studio 또는 `dotnet run`(.NET Core CLI)으로 생성된 C# 코드를 �
 
     ![PowerShell에서의 ML.NET CLI auto-train](./media/mlnet-cli/mlnet-auto-train-binary-classification-bash.gif)
 
-    이 특정 사례에서는 단 10초만에, 그리고 제공된 소규모의 데이터 세트를 사용하여 CLI 도구는 아주 적은 반복을 실행할 수 있었습니다. 즉, 다른 내부 데이터 변형과 알고리즘의 하이퍼 매개 변수로 다른 조합의 알고리즘/구성에 기반하여 여러 차례 학습했음을 의미합니다. 
+    이 특정 사례에서는 단 10초만에, 그리고 제공된 소규모의 데이터 세트를 사용하여 CLI 도구는 아주 적은 반복을 실행할 수 있었습니다. 즉, 다른 내부 데이터 변형과 알고리즘의 하이퍼 매개 변수로 다른 조합의 알고리즘/구성에 기반하여 여러 차례 학습했음을 의미합니다.
 
     마지막으로, 10초만에 발견된 “최적 품질” 모델은 어떠한 특정 구성으로 특별한 트레이너/알고리즘을 사용하는 모델입니다. 검색 시간에 따라 명령은 다른 결과를 생성할 수 있습니다. 선택은 표시된 다중 메트릭(예: `Accuracy`)에 기반합니다.
 
@@ -118,16 +118,16 @@ Visual Studio 또는 `dotnet run`(.NET Core CLI)으로 생성된 C# 코드를 �
     다른 모델을 평가하는 데 사용하는 정확도, AUC, AUCPR, F1-점수 등의 **메트릭에 대한 보다 자세한 정보**와 추가 메트릭은 [ML.NET 메트릭 이해](../resources/metrics.md)를 참조하세요.
 
     > [!NOTE]
-    > 이 매우 동일한 데이터 세트를 사용해 보고 `--max-exploration-time`에 몇 분을 지정하여(예를 들어, 3분은 180초) 이 데이터 세트에 대한 다른 학습 파이프라인 구성(매우 작음, 1000개 행)에 더 나은 “최적 모델”을 찾게 됩니다. 
-        
-    더 큰 데이터 세트를 목표로 하는 “프로덕션 준비 모델”인 “최적/좋은 품질”의 모델을 찾기 위해서는 데이터 세트의 크기에 따라 일반적으로 훨씬 더 많은 검색 시간을 지정하는 CLI로 실험해 봐야 합니다. 사실 대부분의 경우, 특히 데이터 세트의 행과 열이 큰 경우에는 몇 시간의 검색 시간이 필요할 수 있습니다. 
+    > 이 매우 동일한 데이터 세트를 사용해 보고 `--max-exploration-time`에 몇 분을 지정하여(예를 들어, 3분은 180초) 이 데이터 세트에 대한 다른 학습 파이프라인 구성(매우 작음, 1000개 행)에 더 나은 “최적 모델”을 찾게 됩니다.
+
+    더 큰 데이터 세트를 목표로 하는 “프로덕션 준비 모델”인 “최적/좋은 품질”의 모델을 찾기 위해서는 데이터 세트의 크기에 따라 일반적으로 훨씬 더 많은 검색 시간을 지정하는 CLI로 실험해 봐야 합니다. 사실 대부분의 경우, 특히 데이터 세트의 행과 열이 큰 경우에는 몇 시간의 검색 시간이 필요할 수 있습니다.
 
 1. 이전 명령 실행으로 다음 자산을 생성했습니다.
 
-    - 사용 준비가 된 Serialize된 모델 .zip("최적 모델") 
+    - 사용 준비가 된 Serialize된 모델 .zip("최적 모델")
     - 해당 생성된 모델을 실행/채점할 C# 코드(해당 모델으로 최종 사용자 앱에서 예측하기 위한)
     - 이 모델을 생성하는 데 사용한 C# 학습 코드(학습 목적)
-    - 하이퍼 매개 변수 및 데이터 변형 조합으로 시도한 각 알고리즘에 대한 구체적인 세부 정보가 있는 검색된 모든 반복이 있는 로그 파일 
+    - 하이퍼 매개 변수 및 데이터 변형 조합으로 시도한 각 알고리즘에 대한 구체적인 세부 정보가 있는 검색된 모든 반복이 있는 로그 파일
 
     처음 두 자산(.ZIP 파일 모델과 해당 모델을 실행하기 위한 C# 코드)은 생성된 ML 모델로 예측을 수행하기 위해 최종 사용자 앱(ASP.NET Core 웹앱, 서비스, 데스크톱 앱 등)에서 직접 사용할 수 있습니다.
 
@@ -145,10 +145,10 @@ Visual Studio 또는 `dotnet run`(.NET Core CLI)으로 생성된 C# 코드를 �
     ![CLI로 생성된 VS 솔루션](./media/mlnet-cli/generated-csharp-solution-detailed.png)
 
     - Serialize된 ML 모델(.zip 파일)과 데이터 클래스(데이터 모델)를 포함한 생성된 **클래스 라이브러리**는 클래스 라이브러리를 직접 참조하거나(원한다면 코드를 이동하여) 최종 사용자 애플리케이션에서 직접 사용할 수 있습니다.
-    - 생성된 **콘솔 앱**에는 사용자가 검토해야 하는 실행 코드가 있습니다. 그런 다음, 사용자가 예측하려는 최종 사용자 애플리케이션으로 해당 단순 코드(단 몇 개의 줄)를 이동하여 ‘채점 코드’(예측하기 위해 ML 모델을 실행하는 코드)를 재사용합니다. 
+    - 생성된 **콘솔 앱**에는 사용자가 검토해야 하는 실행 코드가 있습니다. 그런 다음, 사용자가 예측하려는 최종 사용자 애플리케이션으로 해당 단순 코드(단 몇 개의 줄)를 이동하여 ‘채점 코드’(예측하기 위해 ML 모델을 실행하는 코드)를 재사용합니다.
 
-1. 클래스 라이브러리 프로젝트에서 **ModelInput.cs** 및 **ModelOutput.cs** 클래스 파일을 엽니다. 이러한 클래스는 데이터를 보유하기 위해 사용하는 ‘데이터 클래스’ 또는 POCO 클래스임을 알게 됩니다. '상용구 코드’지만 데이터 세트에 수십 또는 수백 개의 열이 있는 경우 생성하는 것이 유용합니다. 
-    - `ModelInput` 클래스는 데이터 세트에서 데이터를 읽을 때 사용됩니다. 
+1. 클래스 라이브러리 프로젝트에서 **ModelInput.cs** 및 **ModelOutput.cs** 클래스 파일을 엽니다. 이러한 클래스는 데이터를 보유하기 위해 사용하는 ‘데이터 클래스’ 또는 POCO 클래스임을 알게 됩니다. '상용구 코드’지만 데이터 세트에 수십 또는 수백 개의 열이 있는 경우 생성하는 것이 유용합니다.
+    - `ModelInput` 클래스는 데이터 세트에서 데이터를 읽을 때 사용됩니다.
     - `ModelOutput` 클래스는 예측 결과(예측 데이터)를 가져오는 데 사용됩니다.
 
 1. Program.cs 파일을 열고 코드를 검색합니다. 단 몇 개의 줄로 모델을 실행하고 단순 예측을 수행할 수 있습니다.
@@ -164,7 +164,7 @@ Visual Studio 또는 `dotnet run`(.NET Core CLI)으로 생성된 C# 코드를 �
         ITransformer mlModel = mlContext.Model.Load(MODEL_FILEPATH, out DataViewSchema inputSchema);
         var predEngine = mlContext.Model.CreatePredictionEngine<ModelInput, ModelOutput>(mlModel);
 
-        // Create sample data to do a single prediction with it 
+        // Create sample data to do a single prediction with it
         ModelInput sampleData = CreateSingleDataSample(mlContext, DATA_FILEPATH);
 
         // Try a single prediction
@@ -174,7 +174,7 @@ Visual Studio 또는 `dotnet run`(.NET Core CLI)으로 생성된 C# 코드를 �
     }
     ```
 
-- 코드의 첫 번째 줄은 ML.NET 코드를 실행할 때마다 필요한 `MLContext` 개체를 만듭니다. 
+- 코드의 첫 번째 줄은 ML.NET 코드를 실행할 때마다 필요한 `MLContext` 개체를 만듭니다.
 
 - 코드의 두 번째 줄은 CLI 도구를 통해 사용자를 위해 이미 학습되어 모델의 Serialize된 .ZIP 파일에 저장되었으므로 모델을 학습할 필요가 없어 주석 처리되었습니다. 하지만 CLI를 통해 *"모델이 학습된 방식"* 을 보고 싶다면 이 줄의 주석 처리를 해제하고 특정 ML 모델에 사용된 학습 코드를 실행/디버깅할 수 있습니다.
 
@@ -215,11 +215,11 @@ Visual Studio 또는 `dotnet run`(.NET Core CLI)으로 생성된 C# 코드를 �
 
     ---
 
-1. 하드 코드된 샘플 데이터를 다른 감정의 다른 문장으로 변경해 보고 모델이 긍정 또는 부정적인 감정을 예측하는 방식을 살펴 봅니다. 
+1. 하드 코드된 샘플 데이터를 다른 감정의 다른 문장으로 변경해 보고 모델이 긍정 또는 부정적인 감정을 예측하는 방식을 살펴 봅니다.
 
 ## <a name="infuse-your-end-user-applications-with-ml-model-predictions"></a>최종 사용자 애플리케이션에 ML 모델 예측 입력
 
-유사한 ‘ML 모델 채점 코드’를 사용하여 최종 사용자 애플리케이션에서 모델을 실행하고 예측을 수행할 수 있습니다. 
+유사한 ‘ML 모델 채점 코드’를 사용하여 최종 사용자 애플리케이션에서 모델을 실행하고 예측을 수행할 수 있습니다.
 
 예를 들어 이 코드를 **WPF** 및 **WinForms** 등의 Windows 데스크톱 애플리케이션으로 직접 이동하고 콘솔 앱에서 실행된 것과 동일한 방식으로 모델을 실행할 수 있습니다.
 
@@ -229,14 +229,14 @@ Visual Studio 또는 `dotnet run`(.NET Core CLI)으로 생성된 C# 코드를 �
 
 모델 개체(모델의 .zip 파일에서 로드한 `ITransformer`) 및 `PredictionEngine` 개체 만들기는 특히 확장 가능한 웹앱과 분산 서비스에서 실행할 경우 최적화되어야 합니다. 첫 번째 경우, 모델 개체(`ITransformer`)에서 최적화는 간단합니다. `ITransformer` 개체는 스레드로부터 안전하므로, 한 번에 모델을 로드할 수 있도록 싱글톤 또는 정적 개체로 해당 개체를 캐싱할 수 있습니다.
 
-두 번째 개체, `PredictionEngine` 개체의 경우 `PredictionEngine` 개체가 스레드로부터 안전하지 않아 이 개체를 ASP.NET Core 앱에서 싱글톤 또는 정적 개체로 인스턴스화할 수 없으므로 쉽지 않습니다. 이 스레드로부터 안전한, 그리고 확장성 문제는 [블로그 게시물](https://devblogs.microsoft.com/cesardelatorre/how-to-optimize-and-run-ml-net-models-on-scalable-asp-net-core-webapis-or-web-apps/)에서 자세히 다루고 있습니다. 
+두 번째 개체, `PredictionEngine` 개체의 경우 `PredictionEngine` 개체가 스레드로부터 안전하지 않아 이 개체를 ASP.NET Core 앱에서 싱글톤 또는 정적 개체로 인스턴스화할 수 없으므로 쉽지 않습니다. 이 스레드로부터 안전한, 그리고 확장성 문제는 [블로그 게시물](https://devblogs.microsoft.com/cesardelatorre/how-to-optimize-and-run-ml-net-models-on-scalable-asp-net-core-webapis-or-web-apps/)에서 자세히 다루고 있습니다.
 
 그러나 블로그 게시물에 설명된 것보다 훨씬 쉽습니다. 사용자를 위해 보다 단순한 접근법에 노력을 기울였으며 애플리케이션 DI 서비스(종속성 주입 서비스)에서 등록하여 ASP.NET Core 앱 및 서비스에서 쉽게 사용한 다음, 사용자 코드에서 직접 사용할 수 있는 괜찮은 **'.NET Core 통합 패키지'** 를 만들었습니다. 다음 자습서와 수행 예제를 확인하세요.
 
 - [자습서: ASP.NET Core 웹앱 및 WebAPI에서 ML.NET 모델 실행](https://aka.ms/mlnet-tutorial-netcoreintegrationpkg)
 - [샘플: ASP.NET Core WebAPI의 확장 가능한 ML.NET 모델](https://aka.ms/mlnet-sample-netcoreintegrationpkg)
 
-## <a name="explore-the-generated-c-code-that-was-used-to-train-the-best-quality-model"></a>“최적 품질” 모델을 학습하기 위해 사용한 생성된 C# 코드 검색 
+## <a name="explore-the-generated-c-code-that-was-used-to-train-the-best-quality-model"></a>“최적 품질” 모델을 학습하기 위해 사용한 생성된 C# 코드 검색
 
 보다 고급의 학습 목적을 위해 생성된 모델을 학습하기 위해 CLI 도구에서 사용한 생성된 C# 코드를 검색할 수도 있습니다.
 
@@ -253,7 +253,7 @@ CLI 도구를 통해 생성된 코드와 자습서에서 선택된 알고리즘 
 - [ML.NET CLI로 모델 학습 자동화](../automate-training-with-cli.md)
 - [자습서: ASP.NET Core 웹앱 및 WebAPI에서 ML.NET 모델 실행](https://aka.ms/mlnet-tutorial-netcoreintegrationpkg)
 - [샘플: ASP.NET Core WebAPI의 확장 가능한 ML.NET 모델](https://aka.ms/mlnet-sample-netcoreintegrationpkg)
-- [ML.NET CLI auto-train 명령 참조 가이드](../reference/ml-net-cli-reference.md) 
+- [ML.NET CLI auto-train 명령 참조 가이드](../reference/ml-net-cli-reference.md)
 - [ML.NET CLI(명령줄 인터페이스) 도구를 설치하는 방법](../how-to-guides/install-ml-net-cli.md)
 - [ML.NET CLI의 원격 분석](../resources/ml-net-cli-telemetry.md)
 

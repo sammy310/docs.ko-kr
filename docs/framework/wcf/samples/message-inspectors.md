@@ -2,12 +2,12 @@
 title: 메시지 검사자
 ms.date: 03/30/2017
 ms.assetid: 9bd1f305-ad03-4dd7-971f-fa1014b97c9b
-ms.openlocfilehash: 01553084aa049688cd05fa36e46fb6f67983fb21
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 7b8cc0f8e8aa0544c531566a8fe35f54a3914896
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424147"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977302"
 ---
 # <a name="message-inspectors"></a>메시지 검사자
 이 샘플에서는 클라이언트 및 서비스 메시지 검사자를 구현하고 구성하는 방법을 보여 줍니다.  
@@ -19,7 +19,7 @@ ms.locfileid: "73424147"
 ## <a name="message-inspector"></a>메시지 검사자  
  클라이언트 메시지 검사자는 <xref:System.ServiceModel.Dispatcher.IClientMessageInspector> 인터페이스를 구현하고 서비스 메시지 검사자는 <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector> 인터페이스를 구현합니다. 이러한 구현을 단일 클래스로 결합하여 양쪽에서 작동하는 메시지 검사자를 구성할 수 있습니다. 이 샘플에서는 이렇게 결합된 메시지 검사자를 구현합니다. 검사자는 들어오는 메시지와 나가는 메시지의 유효성을 검사하는 스키마 집합에 전달되어 구성되며, 이 검사자를 통해 개발자는 들어오는 메시지나 나가는 메시지의 유효성을 검사할지 여부와 검사자가 디스패치 모드에 있는지 클라이언트 모드에 있는지를 지정합니다. 이는 이 항목의 뒷부분에서 설명하는 오류 처리에 영향을 줄 수 있습니다.  
   
-```csharp  
+```csharp
 public class SchemaValidationMessageInspector : IClientMessageInspector, IDispatchMessageInspector  
 {  
     XmlSchemaSet schemaSet;  
@@ -206,7 +206,7 @@ void ValidateMessageBody(ref System.ServiceModel.Channels.Message message, bool 
   
  다음 `SchemaValidationBehavior` 클래스는 클라이언트 런타임이나 디스패치 런타임에 이 샘플의 메시지 검사자를 추가하는 데 사용된 동작입니다. 두 경우 모두 기본 구현에 해당됩니다. <xref:System.ServiceModel.Description.IEndpointBehavior.ApplyClientBehavior%2A> 및 <xref:System.ServiceModel.Description.IEndpointBehavior.ApplyDispatchBehavior%2A>에서는 메시지 검사자를 만들어 해당 런타임의 <xref:System.ServiceModel.Dispatcher.ClientRuntime.MessageInspectors%2A> 컬렉션에 추가합니다.  
   
-```csharp  
+```csharp
 public class SchemaValidationBehavior : IEndpointBehavior  
 {  
     XmlSchemaSet schemaSet;   
@@ -299,7 +299,7 @@ public class SchemaValidationBehavior : IEndpointBehavior
   
  재정의된 `CreateBehavior` 메서드는 런타임에서 클라이언트나 엔드포인트를 빌드할 때 구성 데이터를 확인하여 동작 개체로 바꿉니다.  
   
-```csharp  
+```csharp
 public class SchemaValidationBehaviorExtensionElement : BehaviorExtensionElement  
 {  
     public SchemaValidationBehaviorExtensionElement()  

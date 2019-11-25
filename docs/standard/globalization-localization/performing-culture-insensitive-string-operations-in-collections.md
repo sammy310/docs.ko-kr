@@ -15,12 +15,12 @@ helpviewer_keywords:
 - SortedList class, culture-insensitive string operations
 - culture parameter
 ms.assetid: 5cdc9396-a64b-4615-a1cd-b605db4c5983
-ms.openlocfilehash: 5bd6e49f23ca5b694664393f3eb18cc72ada7bdd
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 13a9f4896a37be4297f2a1a11435b85ade381c66
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120823"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353667"
 ---
 # <a name="performing-culture-insensitive-string-operations-in-collections"></a>컬렉션에서 Culture를 구분하지 않는 문자열 작업 수행
 
@@ -78,7 +78,6 @@ internalHashtable = new Hashtable(new CaseInsensitiveHashCodeProvider
 `SortedList`는 키를 기준으로 정렬되고 키와 인덱스로 액세스할 수 있는 키/값 쌍의 컬렉션을 나타냅니다. 문자열이 키인 경우에 `SortedList`를 사용하면 정렬 및 조회가 `Thread.CurrentCulture` 속성의 영향을 받을 수 있습니다. `SortedList`에서 문화권을 구분하지 않는 동작을 가져오려면 `comparer` 매개 변수를 수락하는 생성자 중 하나를 사용하여 `SortedList`를 만듭니다. `comparer` 매개 변수는 키를 비교할 때 사용할 <xref:System.Collections.IComparer> 구현을 지정합니다. 매개 변수의 경우 `CultureInfo.InvariantCulture`를 사용하는 사용자 지정 비교자 클래스를 지정하여 키를 비교합니다. 다음 예제에서는 `SortedList` 생성자에 대한 `comparer` 매개 변수로 지정할 수 있는 사용자 지정 문화권 비구분 비교자 클래스를 보여 줍니다.
 
 ```vb
-Imports System
 Imports System.Collections
 Imports System.Globalization
 

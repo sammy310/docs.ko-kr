@@ -1,5 +1,5 @@
 ---
-title: .NET Framework 파일 I/O 및 파일 시스템의 기본 사항(Visual Basic)
+title: .NET Framework 파일 I/O 및 파일 시스템의 기본 사항
 ms.date: 07/20/2015
 helpviewer_keywords:
 - file access, file I/O in Visual Basic
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - streams
 - streams, definition
 ms.assetid: 49d837c0-cf28-416f-8606-4d83d7b479ef
-ms.openlocfilehash: 3ff305a6b22918681561ed7262a7377dbdf7aadc
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 5d60d0089d042c0be343c741c26de0b4b7778d6d
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591521"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348940"
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a>.NET Framework 파일 I/O 및 파일 시스템의 기본 사항(Visual Basic)
 
@@ -59,7 +59,7 @@ ms.locfileid: "65591521"
 
 다음 표에서는 스트림을 사용하여 일반적으로 수행되는 작업을 보여 줍니다.
 
-|대상|참조|
+|대상|참조 항목|
 |---|---|
 |데이터 파일 읽기 및 쓰기|[방법: 새로 만든 데이터 파일 읽기 및 쓰기](../../../../standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|
 |파일에서 텍스트 읽기|[방법: 파일에서 텍스트 읽기](../../../../standard/io/how-to-read-text-from-a-file.md)|
@@ -77,7 +77,7 @@ ms.locfileid: "65591521"
 
 다음 표에서는 파일 액세스 및 파일 특성과 관련된 작업을 보여 줍니다.
 
-|대상|참조|
+|대상|참조 항목|
 |---|---|
 |로그 파일 열기 및 텍스트 추가|[방법: 로그 파일 열기 및 추가](../../../../standard/io/how-to-open-and-append-to-a-log-file.md)|
 |파일의 특성 확인|<xref:System.IO.FileAttributes>|
@@ -92,7 +92,7 @@ ms.locfileid: "65591521"
 
 다음 표에서는 격리된 파일 스토리지와 일반적으로 관련된 작업을 보여 줍니다.
 
-|대상|참조|
+|대상|참조 항목|
 |---|---|
 |격리된 저장소 만들기|[방법: 격리된 스토리지의 저장소 가져오기](../../../../standard/io/how-to-obtain-stores-for-isolated-storage.md)|
 |격리된 저장소 열거|[방법: 격리된 스토리지의 저장소 열거](../../../../standard/io/how-to-enumerate-stores-for-isolated-storage.md)|

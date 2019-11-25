@@ -4,20 +4,20 @@ description: 어떤 데이터가 수집되고 수집 기능을 사용하지 않�
 ms.topic: conceptual
 ms.date: 09/03/2019
 ms.custom: ''
-ms.openlocfilehash: 77a24416a8008d36006c293cb174b5a8c2f516b7
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: edd74b6f3d3c50d5eff012629f0b1db6b62d9021
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929276"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977259"
 ---
 # <a name="telemetry-collection-by-the-mlnet-cli"></a>ML.NET CLI의 원격 분석 수집
 
-[ML.NET CLI](https://aka.ms/mlnet-cli)는 Microsoft에서 사용하기 위해 집계한 익명 사용 데이터를 수집하는 원격 분석 기능을 포함합니다.
+[ML.NET CLI](https://aka.ms/mlnet-cli)는 Microsoft에서 사용하기 위해 집계한 익명 사용량 현황 데이터를 수집하는 원격 분석 기능을 포함합니다.
 
 ## <a name="how-microsoft-uses-the-data"></a>Microsoft가 데이터를 사용하는 방법
 
-제품 팀에서는 ML.NET CLI 원격 분석 데이터를 사용하여 도구의 개선 방법을 이해할 수 있습니다. 예를 들어, 고객이 드물게 특정 기계 학습 작업을 사용할 경우 제품 팀은 그 원인을 조사하고 결과에 따라 기능 개발의 우선 순위를 정할 수 있습니다. ML.NET CLI 원격 분석 분석은 충돌, 코드 예외 같은 문제의 디버깅에도 도움이 됩니다. 
+제품 팀에서는 ML.NET CLI 원격 분석 데이터를 사용하여 도구의 개선 방법을 이해할 수 있습니다. 예를 들어, 고객이 드물게 특정 기계 학습 작업을 사용할 경우 제품 팀은 그 원인을 조사하고 결과에 따라 기능 개발의 우선 순위를 정할 수 있습니다. ML.NET CLI 원격 분석 분석은 충돌, 코드 예외 같은 문제의 디버깅에도 도움이 됩니다.
 
 제품 팀은 이 인사이트가 중요하지만 모두가 이런 데이터를 보내고자 하는 것은 아닙니다. [원격 분석을 사용하지 않도록 설정하는 방법을 살펴봅니다.](#opt-out-of-data-collection)
 
@@ -57,6 +57,7 @@ ML.NET CLI 원격 분석 기능은 기본적으로 사용됩니다.
 데이터는 [Azure Application Insights](https://azure.microsoft.com/services/application-insights/) 기술을 사용하여 Microsoft 서버로 안전하게 전송되고, 제한된 액세스를 기준으로 보관되고, 안전한 [Azure Storage](https://azure.microsoft.com/services/storage/) 시스템에서 엄격한 보안 제어에 따라 사용됩니다.
 
 ### <a name="data-points-not-collected"></a>데이터 포인트 수집 안 함
+
 원격 분석 기능은 다음을 *수집하지 않습니다*.
 
 - 사용자 이름 등의 개인 데이터

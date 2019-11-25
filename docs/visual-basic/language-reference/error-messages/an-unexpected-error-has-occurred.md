@@ -4,14 +4,15 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrAppModel_CantGetMemoryMappedFile
 ms.assetid: 0d9f2a30-ff72-4355-8060-744f22339359
-ms.openlocfilehash: 9643d14b3e94e814c492b362b9db3e37cff4ce9f
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 640e32dc7f748ecd0a999a8432512103f46862c2
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197381"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976171"
 ---
 # <a name="an-unexpected-error-has-occurred-because-an-operating-system-resource-required-for-single-instance-startup-cannot-be-acquired"></a>단일 인스턴스 시작에 필요한 운영 체제 리소스를 가져올 수 없기 때문에 예기치 않은 오류가 발생했습니다.
+
 애플리케이션이 필요한 운영 체제 리소스를 가져올 수 없습니다. 이 문제가 발생할 수 있는 몇 가지 원인은 다음과 같습니다.  
   
 - 애플리케이션에 명명된 운영 체제 개체를 만들 수 있는 권한이 없습니다.  

@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: 6c27f9e2-809c-4bc9-aca9-72f90360e7a3
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9113811557ded3a580a0bbacb24f2fe7e8d05ccf
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 746a997e162b0fd370a249b8d039be623b57d77f
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73114781"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74089013"
 ---
 # <a name="sectiongroup-element-for-configsections"></a>\<configSections에 대 한 \<sectionGroup > 요소 >
 
 구성 섹션에 대 한 네임 스페이스를 정의 합니다.
 
-[ **\<configuration>** ](configuration-element.md)   
-[**configSections >\<** ](configsections-element-for-configuration.md) &nbsp;&nbsp;   
+[ **\<configuration>** ](configuration-element.md)\
+[**configSections >\<** ](configsections-element-for-configuration.md) &nbsp;&nbsp;\
 &nbsp;&nbsp;&nbsp;&nbsp; **\<sectionGroup >**
 
 ## <a name="syntax"></a>구문

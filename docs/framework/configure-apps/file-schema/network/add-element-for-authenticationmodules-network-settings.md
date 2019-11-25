@@ -10,21 +10,21 @@ helpviewer_keywords:
 - <authenticationModules>, add element
 - <add> element, authenticationModules
 ms.assetid: 333c5fb0-a2ab-4db8-8531-a7fe37bb9b5b
-ms.openlocfilehash: a68434aaa118db60a502c2bcc0bb188b83b0f463
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 9c011cf1216b98fa20e330e185e4cf2c331b31d4
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698426"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74087948"
 ---
-# <a name="add-element-for-authenticationmodules-network-settings"></a>@no__t authenticationModules (네트워크 설정)에 대 한 > 요소 추가
+# <a name="add-element-for-authenticationmodules-network-settings"></a>authenticationModules (네트워크 설정)에 대 한 > 요소 \<추가
 응용 프로그램에 인증 모듈을 추가 합니다.  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4c.net >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t @ no__t[ **\<authenticationModules >** ](authenticationmodules-element-network-settings.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> 추가**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;[ **\<.net >를**](system-net-element-network-settings.md) &nbsp;\
+&nbsp;&nbsp;&nbsp;&nbsp;\<[**authenticationModules**](authenticationmodules-element-network-settings.md) >
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**추가** >
+
 ## <a name="syntax"></a>구문  
   
 ```xml  
@@ -40,21 +40,21 @@ ms.locfileid: "71698426"
   
 |**특성**|**설명**|  
 |-------------------|---------------------|  
-|`type`|@No__t-0 속성으로 표시 되는 정규화 된 형식 이름 및 쉼표로 구분 된 <xref:System.Reflection.Assembly.FullName%2A> 속성으로 표시 되는 어셈블리 이름입니다.|  
+|`type`|<xref:System.Type.FullName%2A> 속성이 나타내는 정규화 된 형식 이름 및 쉼표로 구분 된 어셈블리 이름 (<xref:System.Reflection.Assembly.FullName%2A> 속성으로 표시 됨)입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
- 없음  
+ 없음.  
   
 ### <a name="parent-elements"></a>부모 요소  
   
 |**요소**|**설명**|  
 |-----------------|---------------------|  
-|[authenticationModules](authenticationmodules-element-network-settings.md)|네트워크 요청을 인증 하는 데 사용 되는 모듈을 지정 합니다.|  
+|[Authenticationmodules>](authenticationmodules-element-network-settings.md)|네트워크 요청을 인증 하는 데 사용 되는 모듈을 지정 합니다.|  
   
-## <a name="remarks"></a>설명  
- `add` 요소는 등록된 인증 모듈 목록의 끝에 인증 모듈을 추가합니다. 인증 모듈 목록에 추가 된 순서 대로 호출 됩니다.  
+## <a name="remarks"></a>주의  
+ `add` 요소는 등록된 인증 모듈 목록의 끝에 인증 모듈을 추가합니다. 인증 모듈은 목록에 추가 된 순서 대로 호출 됩니다.  
   
- @No__t-0 특성의 값은 쉼표로 구분 된 올바른 형식 이름 및 해당 어셈블리 이름 이어야 합니다.  
+ `type` 특성의 값은 쉼표로 구분 된 올바른 형식 이름 및 해당 어셈블리 이름 이어야 합니다.  
   
 ## <a name="configuration-files"></a>구성 파일  
  이 요소는 애플리케이션 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.  

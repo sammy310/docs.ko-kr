@@ -9,20 +9,20 @@ helpviewer_keywords:
 - <compilers> element
 - compilers element
 ms.assetid: d40fba59-98f9-4783-ae0c-2ebea27ce77b
-ms.openlocfilehash: 5232c5bd2d4fad8104d156bfa86141ceb7f0dd93
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: b09c2a1f67974a67a3f9d58af7cb8cf66a197026
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70167696"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088694"
 ---
 # <a name="compilers-element"></a>\<컴파일러 > 요소
 컴파일러 구성 요소용 컨테이너입니다. 0개 이상의 [\<compiler>](compiler-element.md) 요소가 포함되어 있습니다.  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp;&nbsp;[ **\<시스템 codedom >** ](system-codedom-element.md)  
-&nbsp;&nbsp;&nbsp;&nbsp; **\<컴파일러 >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<** ](system-codedom-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<컴파일러 >**
+
 ## <a name="syntax"></a>구문  
   
 ```xml  
@@ -35,7 +35,7 @@ ms.locfileid: "70167696"
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
- 없음  
+ 없음.  
   
 ### <a name="child-elements"></a>자식 요소  
   
@@ -50,8 +50,8 @@ ms.locfileid: "70167696"
 |[\<configuration> 요소](../configuration-element.md)|공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.|  
 |[\<system.object > 요소](system-codedom-element.md)|사용 가능한 언어 공급자에 대한 컴파일러 구성 설정을 지정합니다.|  
   
-## <a name="remarks"></a>설명  
- 컴파일러 > 요소에는 컴퓨터의 언어 공급자에 대 한 컴파일러 구성 설정이 포함 되어 있습니다. [ \<](compilers-element.md) [ 각\<컴파일러 >](compiler-element.md) 요소는 특정 언어 공급자에 대 한 컴파일러 구성 특성을 지정 합니다.  
+## <a name="remarks"></a>주의  
+ [\<컴파일러 >](compilers-element.md) 요소에는 컴퓨터의 언어 공급자에 대 한 컴파일러 구성 설정이 포함 되어 있습니다. 각 [\<컴파일러 >](compiler-element.md) 요소는 특정 언어 공급자에 대 한 컴파일러 구성 특성을 지정 합니다.  
   
  .NET Framework은 컴퓨터 구성 파일 (machine.config)에서 초기 컴파일러 및 언어 공급자 설정을 정의 합니다. 개발자 및 컴파일러 공급업체는 새로운 <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> 구현에 대한 구성 설정을 추가할 수 있습니다. <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> 메서드를 사용하여 컴퓨터에서 언어 공급자 및 컴파일러 구성 설정을 프로그래밍 방식으로 열거할 수 있습니다.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "70167696"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.CodeDom.Compiler.CompilerInfo>
 - <xref:System.CodeDom.Compiler.CodeDomProvider>

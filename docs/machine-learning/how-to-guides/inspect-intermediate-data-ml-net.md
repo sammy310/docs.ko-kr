@@ -5,19 +5,19 @@ ms.date: 06/25/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to, title-hack-0625
-ms.openlocfilehash: d6ddeb523fb229eb0ebc9c2f22809312060e4266
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 11df1d5caaa7b7974360d863f85afbff18985e47
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402386"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977096"
 ---
 # <a name="inspect-intermediate-data-during-processing"></a>처리하는 동안 중간 데이터 검사
 
 ML.NET에서 로딩, 처리 및 모델 학습 단계 중에 중간 데이터를 검사하는 방법을 알아봅니다. 중간 데이터는 기계 학습 파이프라인에 있는 각 스테이지의 출력입니다.
 
 아래에 표시된 것과 같이 [`IDataView`](xref:Microsoft.ML.IDataView)에 로드되는 중간 데이터는 ML.NET에서 여러 가지 방법으로 검사할 수 있습니다.
- 
+
 ```csharp
 HousingData[] housingData = new HousingData[]
 {
@@ -62,7 +62,7 @@ HousingData[] housingData = new HousingData[]
 
 ## <a name="convert-idataview-to-ienumerable"></a>IDataView를 IEnumerable로 변환
 
-[`IDataView`](xref:Microsoft.ML.IDataView)를 검사하는 가장 빠른 방법 중 하나는 [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601)로 변환하는 것입니다. [`IDataView`](xref:Microsoft.ML.IDataView)를 [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601)로 변환하려면 [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*) 메서드를 사용합니다. 
+[`IDataView`](xref:Microsoft.ML.IDataView)를 검사하는 가장 빠른 방법 중 하나는 [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601)로 변환하는 것입니다. [`IDataView`](xref:Microsoft.ML.IDataView)를 [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601)로 변환하려면 [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*) 메서드를 사용합니다.
 
 성능을 최적화하려면 `reuseRowObject`를 `true`로 설정합니다. 이렇게 하면 데이터 세트에서 각각의 행에 대해 새 개체를 만드는 것과는 반대로 평가되고 있는 현재 행의 데이터로 같은 개체를 지연 입력합니다.
 
@@ -100,7 +100,7 @@ HousingData firstRow = housingDataArray[0];
 HousingData secondRow = housingDataArray[1];
 HousingData thirdRow = housingDataArray[2];
 float averageCurrentPrice = (firstRow.CurrentPrice + secondRow.CurrentPrice + thirdRow.CurrentPrice) / 3;
-``` 
+```
 
 ## <a name="inspect-values-in-a-single-column"></a>단일 열의 값 검사
 
@@ -115,7 +115,7 @@ IEnumerable<float> sizeColumn = data.GetColumn<float>("Size").ToList();
 [`IDataView`](xref:Microsoft.ML.IDataView)는 지연 계산됩니다. 이 문서의 이전 섹션에서 설명한 대로 [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601)로 변환하지 않고 [`IDataView`](xref:Microsoft.ML.IDataView) 행에 대해 반복하려면 [`GetRowCursor`](xref:Microsoft.ML.IDataView.GetRowCursor*) 메서드를 사용하여 [`DataViewRowCursor`](xref:Microsoft.ML.DataViewRowCursor)를 만들고 [`IDataView`](xref:Microsoft.ML.IDataView)의 [DataViewSchema](xref:Microsoft.ML.DataViewSchema)를 매개 변수로 전달합니다. 그런 다음, 행에 대해 반복하기 위해 [`MoveNext`](xref:Microsoft.ML.DataViewRowCursor.MoveNext*) 커서 메서드를 [`ValueGetter`](xref:Microsoft.ML.ValueGetter%601) 대리자와 함께 사용하여 각 열에서 해당 값을 추출합니다.
 
 > [!IMPORTANT]
-> 성능을 위해 ML.NET에서 사용하는 벡터는 네이티브 컬렉션 형식(즉 `Vector`,`float[]`)이 아닌 [`VBuffer`](xref:Microsoft.ML.Data.VBuffer%601)입니다. 
+> 성능을 위해 ML.NET에서 사용하는 벡터는 네이티브 컬렉션 형식(즉 `Vector`,`float[]`)이 아닌 [`VBuffer`](xref:Microsoft.ML.Data.VBuffer%601)입니다.
 
 ```csharp
 // Get DataViewSchema of IDataView
@@ -133,7 +133,7 @@ using (DataViewRowCursor cursor = data.GetRowCursor(columns))
     ValueGetter<float> sizeDelegate = cursor.GetGetter<float>(columns[0]);
     ValueGetter<VBuffer<float>> historicalPriceDelegate = cursor.GetGetter<VBuffer<float>>(columns[1]);
     ValueGetter<float> currentPriceDelegate = cursor.GetGetter<float>(columns[2]);
-    
+
     // Iterate over each row
     while (cursor.MoveNext())
     {

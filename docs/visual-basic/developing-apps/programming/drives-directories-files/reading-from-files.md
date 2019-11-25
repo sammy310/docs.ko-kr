@@ -1,5 +1,5 @@
 ---
-title: Visual Basic에서 파일 읽기
+title: 파일 읽기
 ms.date: 07/20/2015
 helpviewer_keywords:
 - data [Visual Basic], reading from files
@@ -8,17 +8,19 @@ helpviewer_keywords:
 - files [Visual Basic], reading
 - reading files [Visual Basic]
 ms.assetid: ad831a1b-7d01-4f07-a47b-799f3037df19
-ms.openlocfilehash: f81ee980d861ac0eb41df9c41b3966512589af12
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: afba0df89aabad7ddf8b641fbab421800718deb3
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593375"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74333817"
 ---
 # <a name="reading-from-files-in-visual-basic"></a>Visual Basic에서 파일 읽기
+
 이 섹션에서는 파일 읽기와 관련된 작업을 수행하는 방법을 설명합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [방법: 텍스트 파일에서 읽기](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files.md)  
  텍스트 파일에서 읽는 방법을 보여 줍니다.  
   
@@ -38,6 +40,7 @@ ms.locfileid: "65593375"
  <xref:System.IO.StreamReader>를 사용하여 파일에서 읽는 방법을 보여 줍니다.  
   
 ## <a name="reference"></a>참조  
+
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
  `My.Computer.FileSystem` 개체와 해당 멤버를 설명합니다.  
   
@@ -54,6 +57,7 @@ ms.locfileid: "65593375"
  `OpenTextFileReader` 메서드를 설명합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
+
  [데이터를 클립보드에 저장하고 클립보드에서 읽기](../../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md)  
  클립보드에서 데이터를 읽거나 쓰는 것과 같이 `My.Computer.Clipboard`와 관련된 작업을 수행하는 방법을 설명합니다.  
   

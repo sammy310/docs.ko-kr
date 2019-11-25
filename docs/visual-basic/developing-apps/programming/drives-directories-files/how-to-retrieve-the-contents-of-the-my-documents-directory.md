@@ -1,17 +1,18 @@
 ---
-title: '방법: Visual Basic에서 내 문서 디렉터리의 내용 검색'
+title: '방법: 내 문서 디렉터리의 내용 검색'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My Documents directory
 ms.assetid: 26560d01-7dda-4457-8e95-21db23d71aea
-ms.openlocfilehash: f03dbe1811dd5367dab2d32d94ba35ff05fad198
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cf4470020507c581999b9d72602ddb6e3e76ed74
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623145"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74334531"
 ---
 # <a name="how-to-retrieve-the-contents-of-the-my-documents-directory-in-visual-basic"></a>방법: Visual Basic에서 내 문서 디렉터리의 내용 검색
+
 <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories> 개체를 사용하여 **내 문서**, **바탕 화면** 등의 많은 **모든 사용자** 디렉터리에서 읽을 수 있습니다.  
   
 ### <a name="to-read-from-the-my-documents-folder"></a>내 문서 폴더에서 읽으려면  

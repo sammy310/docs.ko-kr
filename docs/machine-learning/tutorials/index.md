@@ -3,20 +3,20 @@ title: ML.NET 자습서
 description: 사용자 지정 AI 솔루션을 빌드하고 .NET 애플리케이션에 통합하는 방법을 알아보기 위해 ML.NET 자습서를 탐색합니다.
 ms.custom: seodec18
 ms.date: 07/08/2019
-ms.openlocfilehash: 6d5b622194cbaa20ed4e7283e6f1ea66f16a7b47
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: bf59efb4118d9d4fac24413d7568df412a0e9475
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71054009"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977168"
 ---
-# <a name="mlnet-tutorials"></a>ML.NET 자습서 
+# <a name="mlnet-tutorials"></a>ML.NET 자습서
 
 다음 자습서를 사용하면 [ML.NET](../index.yml)을 사용하여 사용자 지정 기계 학습 솔루션을 빌드하고 .NET 애플리케이션에 통합하는 방법을 이해할 수 있습니다.
 
 - [감정 분석](sentiment-analysis.md): ML.NET을 사용하여 **이진 분류** 작업을 적용하는 방법을 보여줍니다.
 - [GitHub 문제 분류](github-issue-classification.md): ML.NET을 사용하여 **다중 클래스 분류** 작업을 적용하는 방법을 보여 줍니다.
-- [가격 예측기](taxi-fare.md): ML.NET을 사용하여 **회귀** 작업을 적용하는 방법을 보여줍니다.
+- [가격 예측기](predict-prices.md): ML.NET을 사용하여 **회귀** 작업을 적용하는 방법을 보여줍니다.
 - [아이리스 클러스터링](iris-clustering.md): ML.NET을 사용하여 **클러스터링** 작업을 적용하는 방법을 설명합니다.
 - [추천](movie-recommendation.md): 이전 사용자 평가를 기준으로 영화 **추천**을 생성합니다.
 - [이미지 분류](image-classification.md): ML.NET을 사용하여 사용자 지정 이미지 분류자를 만들기 위해 기존 TensorFlow 모델을 재학습하는 방법을 보여 줍니다.

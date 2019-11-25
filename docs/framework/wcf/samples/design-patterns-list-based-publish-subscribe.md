@@ -2,12 +2,12 @@
 title: '디자인 패턴: 목록 기반 게시-구독'
 ms.date: 03/30/2017
 ms.assetid: f4257abc-12df-4736-a03b-0731becf0fd4
-ms.openlocfilehash: 3c05e66affad8e517b0b1b5001f726abeae7b100
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: cd7cc6f68362c7a69256f0488e2fa00caffdabc7
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928834"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73978216"
 ---
 # <a name="design-patterns-list-based-publish-subscribe"></a>디자인 패턴: 목록 기반 게시-구독
 이 샘플에서는 WCF (Windows Communication Foundation) 프로그램으로 구현 된 목록 기반 게시-구독 패턴을 보여 줍니다.  
@@ -48,7 +48,7 @@ public interface ISampleClientContract
   
  서비스는 모든 구독자에게 새 정보에 대해 알리는 메커니즘으로 .NET Framework 이벤트를 사용합니다. 클라이언트에서 Subscribe를 호출하여 서비스에 가입하면 이벤트 처리기가 제공됩니다. 클라이언트가 해제되면 이벤트에서 이벤트 처리기가 구독 취소됩니다. 데이터 소스에서 서비스를 호출하여 가격 변경을 보고하면 서비스에서 이벤트가 발생합니다. 그러면 구독한 각 클라이언트에 대해 하나씩 서비스 인스턴스가 각각 호출되고 해당 이벤트 처리기가 실행됩니다. 각 이벤트 처리기에서는 콜백 함수를 통해 해당 클라이언트로 정보를 전달합니다.  
   
-```csharp  
+```csharp
 public class PriceChangeEventArgs : EventArgs  
     {  
         public string Item;  
@@ -118,7 +118,7 @@ public class PriceChangeEventArgs : EventArgs
   
 ### <a name="to-run-the-sample-on-the-same-machine"></a>단일 컴퓨터 구성에서 샘플을 실행하려면  
   
-1. 다음 주소 `http://localhost/servicemodelsamples/service.svc`를 입력 하 여 브라우저를 사용 하 여 서비스에 액세스할 수 있는지 테스트 합니다. 확인 페이지가 응답으로 표시됩니다.  
+1. 다음 주소를 입력 하 여 브라우저를 사용 하 여 서비스에 액세스할 수 있는지 테스트 합니다. `http://localhost/servicemodelsamples/service.svc`. 확인 페이지가 응답으로 표시됩니다.  
   
 2. 언어별 폴더의 \client\bin\\에서 setup.exe를 실행 합니다. 클라이언트 콘솔 창에 클라이언트 동작이 표시됩니다. 여러 클라이언트가 시작됩니다.  
   
@@ -157,6 +157,6 @@ public class PriceChangeEventArgs : EventArgs
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DesignPatterns/ListBasedPublishSubscribe`  

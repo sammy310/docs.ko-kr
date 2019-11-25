@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - Mage.exe
 ms.assetid: 77dfe576-2962-407e-af13-82255df725a1
-ms.openlocfilehash: 13a22cd15da3d4cf7eb26359c692389d27d377c0
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: aa2ad9222460f8732397f8b1c72e36085bbe4a21
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044514"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449427"
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe(매니페스트 생성 및 편집 도구)
 
@@ -65,7 +65,7 @@ Mage [commands] [commandOptions]
 |**-pu,** **-ProviderURL** `url`||배포 매니페스트|ClickOnce에서 애플리케이션 업데이트를 확인할 URL을 지정합니다.|
 |**-pub, -Publisher** `publisherName`||애플리케이션 매니페스트<br /><br /> 배포 매니페스트|배포 또는 애플리케이션 매니페스트의 설명 요소에 게시자 이름을 추가합니다. 애플리케이션 매니페스트에서 사용하는 경우에는 "true" 또는 "t" 값을 갖는 **-UseManifestForTrust** 를 함께 지정해야 합니다. 이렇게 하지 않으면 이 매개 변수에서 오류가 발생합니다.|
 |**-s, -SupportURL**  `url`||애플리케이션 매니페스트<br /><br /> 배포 매니페스트|프로그램 추가/제거에서 ClickOnce 애플리케이션에 대해 표시되는 링크를 지정합니다.|
-|**-ti, -TimestampUri** `uri`||애플리케이션 매니페스트<br /><br /> 배포 매니페스트|디지털 타임스탬프 서비스의 URL입니다. 매니페스트에 타임스탬프를 적용하면 애플리케이션의 다음 버전을 배포하기 전에 디지털 인증서가 만료되어도 매니페스트에 다시 서명할 필요가 없습니다. 자세한 내용은 [Windows 루트 인증서 프로그램 구성원](https://go.microsoft.com/fwlink/?LinkId=159000)을 참조하세요.|
+|**-ti, -TimestampUri** `uri`||애플리케이션 매니페스트<br /><br /> 배포 매니페스트|디지털 타임스탬프 서비스의 URL입니다. 매니페스트에 타임스탬프를 적용하면 애플리케이션의 다음 버전을 배포하기 전에 디지털 인증서가 만료되어도 매니페스트에 다시 서명할 필요가 없습니다. 자세한 내용은 [Windows 루트 인증서 프로그램 구성원](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265983(v=ws.11))을 참조하세요.|
 |**-t, -ToFile** `filePath`|- 새로 만들기:<br />- 배포: deploy.application<br />- 애플리케이션: application.exe.manifest<br />- 업데이트:<br />- 입력 파일|모든 파일 형식|생성 또는 수정된 파일의 출력 경로를 지정합니다.<br /><br /> **-New** 를 사용할 때 **-ToFile**을 제공하지 않으면 출력이 현재 작업 디렉터리에 기록됩니다. **-Update**를 사용할 때 **-ToFile**을 제공하지 않으면 *Mage.exe*에서 파일을 입력 파일에 다시 기록합니다.|
 |**-tr, -TrustLevel** `level`|애플리케이션 URL이 있는 영역을 기반으로 합니다.|애플리케이션 매니페스트|클라이언트 컴퓨터의 애플리케이션에 부여할 신뢰 수준입니다. 유효한 값은 "Internet", "Intranet" 및 "FullTrust" 등입니다.|
 |**-um, -UseManifestForTrust** `willUseForTrust`|False|애플리케이션 매니페스트|클라이언트에서 애플리케이션이 실행될 때 애플리케이션 매니페스트의 디지털 서명을 사용하여 신뢰 관련 결정을 내릴지 여부를 지정합니다. "true" 또는 "t"를 지정하면 애플리케이션 매니페스트를 사용하여 신뢰 관련 결정을 내립니다. "false" 또는 "f"를 지정하면 배포 매니페스트의 서명이 사용됩니다.|

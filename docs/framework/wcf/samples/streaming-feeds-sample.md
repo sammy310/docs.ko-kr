@@ -2,12 +2,12 @@
 title: 스트리밍 피드 샘플
 ms.date: 03/30/2017
 ms.assetid: 1f1228c0-daaa-45f0-b93e-c4a158113744
-ms.openlocfilehash: 1eb9f2194b2c7e4879cf9e443fea337c73986361
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: ede1dbb4f5c682b8182dda4888a9cbd373b95dd8
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425354"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976370"
 ---
 # <a name="streaming-feeds-sample"></a>스트리밍 피드 샘플
 이 샘플에서는 많은 수의 항목이 포함된 배포 피드를 관리하는 방법을 보여 줍니다. 서버에서 이 샘플은 항목을 네트워크 스트림에 쓰기 바로 전까지 피드 내에 개별 <xref:System.ServiceModel.Syndication.SyndicationItem> 개체를 만드는 동작을 지연시키는 방법을 보여 줍니다.  
@@ -33,7 +33,7 @@ interface IStreamingFeedService
   
  이 서비스는 다음 코드에서와 같이 `ItemGenerator` 클래스에서 반복기를 사용하여 <xref:System.ServiceModel.Syndication.SyndicationItem> 인스턴스의 무한 스트림을 만드는 방식으로 이 계약을 구현합니다.  
   
-```csharp  
+```csharp
 class ItemGenerator  
 {  
     public IEnumerable<SyndicationItem> GenerateItems()  
@@ -51,7 +51,7 @@ class ItemGenerator
   
  서비스 구현에서 피드를 만들면 버퍼링된 항목 컬렉션 대신 `ItemGenerator.GenerateItems()`의 출력이 사용됩니다.  
   
-```csharp  
+```csharp
 public Atom10FeedFormatter StreamedFeed()  
 {  
     SyndicationFeed feed = new SyndicationFeed("Streamed feed", "Feed to test streaming", null);  

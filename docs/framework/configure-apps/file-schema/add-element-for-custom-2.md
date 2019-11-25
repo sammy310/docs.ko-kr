@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: 0d4ddb53-eb2b-49c0-9c33-a8dec5c39b46
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a9e7d68530ae1f0666fc4940ffe7605c3bf8dfe3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ac07fc9ba6f030209a5e0d0160689fab95bc1b4a
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119605"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088760"
 ---
 # <a name="add-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>NameValueSectionHandler 및 DictionarySectionHandler에 대 한 > 요소 \<추가
 
 사용자 지정 응용 프로그램 설정을 추가 합니다. 각 **\<추가 >** 태그에는 키/값 쌍이 포함 됩니다.
 
-[ **\<configuration>** ](configuration-element.md)   
-&nbsp;&nbsp;[ **\<섹션 이름 >** ](custom-element-2.md)   
+[ **\<configuration>** ](configuration-element.md)\
+&nbsp;&nbsp;[ **\<섹션 이름 >** ](custom-element-2.md)\
 &nbsp;&nbsp;&nbsp;&nbsp; **\<추가**
 
 ## <a name="syntax"></a>구문

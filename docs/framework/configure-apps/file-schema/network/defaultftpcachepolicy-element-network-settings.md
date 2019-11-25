@@ -8,21 +8,21 @@ helpviewer_keywords:
 - <defaultFtpCachePolicy> element
 - defaultFtpCachePolicy element
 ms.assetid: 0eb0c5cb-dd97-484d-8614-785e88877abb
-ms.openlocfilehash: fd1649edbf7a2c8546992019df667f27df68e02c
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 9261a430642cb4d5ac4507835bd0fd3561bd8c02
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698324"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088435"
 ---
 # <a name="defaultftpcachepolicy-element-network-settings"></a>\<defaultFtpCachePolicy > 요소 (네트워크 설정)
 FTP 캐싱이 활성 상태 인지 여부를 설명 하 고 기본 캐싱 정책을 설명 합니다.  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4c.net >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t @ no__t[ **\<requestCaching >** ](requestcaching-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t @ no__t @ @ no__t-4 @ no__t-5 **\<defaultFtpCachePolicy >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;[ **\<.net >를**](system-net-element-network-settings.md) &nbsp;\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<requestCaching >** ](requestcaching-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<defaultFtpCachePolicy >**
+
 ## <a name="syntax"></a>구문  
   
 ```xml  
@@ -38,34 +38,34 @@ FTP 캐싱이 활성 상태 인지 여부를 설명 하 고 기본 캐싱 정책
   
 |특성|설명|  
 |---------------|-----------------|  
-|`policyLevel`|FTP 캐싱 정책을 지정 합니다. 기본값은 `Default`입니다.|  
+|`policyLevel`|FTP 캐싱 정책을 지정 합니다. 기본값은 `Default`여야 합니다.|  
   
 ## <a name="policylevel-attribute"></a>policyLevel 특성  
   
 |값|설명|  
 |-----------|-----------------|  
-|`Default`|리소스 새로 고침, 콘텐츠 길이 정확 하 고, 이며 만료, 수정 및 콘텐츠 길이 특성이 있는 경우 캐시 된 리소스를 반환 합니다.|  
-|`BypassCache`|서버에서 리소스를 반환합니다.|  
+|`Default`|리소스가 최신이 고, 콘텐츠 길이가 정확 하며, 만료, 수정 및 콘텐츠 길이 특성이 있는 경우 캐시 된 리소스를 반환 합니다.|  
+|`BypassCache`|서버에서 리소스를 반환 합니다.|  
 |`CacheOnly`|콘텐츠 길이가 있고 항목 크기와 일치 하는 경우 캐시 된 리소스를 반환 합니다.|  
-|`CacheIfAvailable`|콘텐츠 길이 제공 하는 크기와 일치 항목; 경우 캐시 된 리소스를 반환 합니다. 그렇지 않은 경우 리소스 서버에서 다운로드 되 고 호출자에 게 반환 됩니다.|  
+|`CacheIfAvailable`|콘텐츠 길이가 제공 되 고 항목 크기와 일치 하는 경우 캐시 된 리소스를 반환 합니다. 그렇지 않으면 리소스가 서버에서 다운로드 되 고 호출자에 게 반환 됩니다.|  
 |`Revalidate`|캐시 된 리소스의 타임 스탬프가 서버에 있는 리소스의 타임 스탬프와 동일한 경우 캐시 된 리소스를 반환 합니다. 그렇지 않으면 리소스가 서버에서 다운로드 되어 캐시에 저장 되 고 호출자에 게 반환 됩니다.|  
-|`Reload`|서버에서 리소스를 다운로드, 캐시에 저장 하 고 호출자에 게 리소스를 반환 합니다.|  
-|`NoCacheNoStore`|캐시 된 리소스가 있는 경우 삭제 됩니다. 리소스는 서버에서 다운로드 되 고 호출자에 게 반환 됩니다.|  
-|`Revalidate`|타임 스탬프 서버에서 리소스의 타임 스탬프와 동일한 경우 리소스의 캐시 된 복사본을 사용 하 여 요청을 만족 시킵니다. 이 고, 그렇지 리소스는 서버에서 다운로드, 호출자에 게 표시 되 고 캐시에 저장 합니다.|  
+|`Reload`|서버에서 리소스를 다운로드 하 여 캐시에 저장 한 다음 호출자에 게 리소스를 반환 합니다.|  
+|`NoCacheNoStore`|캐시 된 리소스가 있으면 삭제 됩니다. 리소스가 서버에서 다운로드 되 고 호출자에 게 반환 됩니다.|  
+|`Revalidate`|타임 스탬프가 서버의 리소스 타임 스탬프와 동일한 경우 캐시 된 리소스 복사본을 사용 하 여 요청을 만족 시킵니다. 그렇지 않으면 리소스가 서버에서 다운로드 되 고 호출자에 게 표시 되며 캐시에 저장 됩니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
- 없음  
+ 없음.  
   
 ### <a name="parent-elements"></a>부모 요소  
   
 |요소|설명|  
 |-------------|-----------------|  
-|[requestCaching](requestcaching-element-network-settings.md)|네트워크 요청에 대 한 캐싱 메커니즘을 제어 합니다.|  
+|[Requestcaching>](requestcaching-element-network-settings.md)|네트워크 요청에 대 한 캐싱 메커니즘을 제어 합니다.|  
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 `NoCacheNoStore`의 FTP 캐싱 정책을 지정 하는 방법을 보여 줍니다.  
+ 다음 예에서는 `NoCacheNoStore`FTP 캐싱 정책을 지정 하는 방법을 보여 줍니다.  
   
 ```xml  
 <configuration>  

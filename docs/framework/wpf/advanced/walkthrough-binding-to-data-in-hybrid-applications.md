@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - data binding [WPF interoperability]
 ms.assetid: 18997e71-745a-4425-9c69-2cbce1d8669e
-ms.openlocfilehash: 99f0e621c7dd56c0a26b51b4725f9fb96ab3cbf9
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 92d267ee9e87e9d204fe76172ca7e0fe33cf1a1b
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197909"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976575"
 ---
 # <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>연습: 혼합 애플리케이션에서 데이터 바인딩
 
@@ -59,7 +59,7 @@ ms.locfileid: "73197909"
 
     - System.Windows.Forms
 
-3. [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]에서 Mainwindow.xaml을 엽니다.
+3. WPF 디자이너에서 Mainwindow.xaml를 엽니다.
 
 4. <xref:System.Windows.Window> 요소에서 다음 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 네임 스페이스 매핑을 추가 합니다.
 

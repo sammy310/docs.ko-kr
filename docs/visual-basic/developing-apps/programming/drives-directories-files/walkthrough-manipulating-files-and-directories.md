@@ -1,5 +1,5 @@
 ---
-title: Visual Basic에서 파일과 디렉터리 조작
+title: 파일 및 디렉터리 조작
 ms.date: 07/20/2015
 helpviewer_keywords:
 - files [Visual Basic], reading text
@@ -15,14 +15,15 @@ helpviewer_keywords:
 - writing to files [Visual Basic], walkthroughs
 - I/O [Visual Basic], reading text from files
 ms.assetid: cae77565-9f78-4e46-8e42-eb2f9f8e1ffd
-ms.openlocfilehash: 4d0aac533759f8cc20ac4f19d7f0e49fef17bf56
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 83dc6ce0d29c1c368c36b51fc84ecad34d72e01f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314687"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74333801"
 ---
 # <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a>연습: Visual Basic에서 파일과 디렉터리 조작
+
 이 연습에서는 Visual Basic에서 파일 I/O의 기본 개념을 소개합니다. 디렉터리에 텍스트 파일을 나열하고 검사하는 작은 애플리케이션을 만드는 방법을 설명합니다. 선택한 각 텍스트 파일에 대해 애플리케이션은 파일 특성 및 내용의 첫 줄을 제공합니다. 로그 파일에 정보를 기록하는 옵션이 있습니다.  
   
  이 연습에서는 Visual Basic에서 사용 가능한 `My.Computer.FileSystem Object`의 멤버를 사용합니다. 자세한 내용은 <xref:Microsoft.VisualBasic.FileIO.FileSystem>를 참조하세요. 연습의 끝 부분에서 <xref:System.IO> 네임스페이스의 클래스를 사용하는 동등한 예제가 제공됩니다.  
@@ -150,11 +151,13 @@ ms.locfileid: "59314687"
 6. 애플리케이션을 실행합니다. `ListBox`에서 항목을 선택하지 않으면 **결과 저장** 확인란 및 **검사** 단추가 활성화되지 않습니다.  
   
 ## <a name="full-example-using-mycomputerfilesystem"></a>My.Computer.FileSystem을 사용하는 전체 예제  
+
  다음은 전체 예제입니다.  
   
  [!code-vb[VbVbcnMyFileSystem#101](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#101)]  
   
 ## <a name="full-example-using-systemio"></a>System.IO를 사용하는 전체 예제  
+
  동등한 다음 예제에서는 `My.Computer.FileSystem` 개체를 사용하는 대신 <xref:System.IO> 네임스페이스의 클래스를 사용합니다.  
   
  [!code-vb[VbVbcnMyFileSystem#111](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class3.vb#111)]  

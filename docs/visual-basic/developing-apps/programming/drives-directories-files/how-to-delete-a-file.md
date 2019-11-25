@@ -1,5 +1,5 @@
 ---
-title: '방법: Visual Basic에서 파일 삭제'
+title: '방법: 파일 삭제'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Delete method [Visual Basic]
@@ -7,14 +7,15 @@ helpviewer_keywords:
 - files [Visual Basic], manipulating
 - File object
 ms.assetid: 4b721769-3e45-4be7-b7fe-b08dc4141b44
-ms.openlocfilehash: dcaf74a6ff99113903f066740ebf143dfad95f74
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 57182f1a1d92b7fe954fd26b32c5e4b1107823ee
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64629146"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348788"
 ---
 # <a name="how-to-delete-a-file-in-visual-basic"></a>방법: Visual Basic에서 파일 삭제
+
 `My.Computer.FileSystem` 개체의 `DeleteFile` 메서드를 사용하면 파일을 삭제할 수 있습니다. 삭제된 파일을 **휴지통**으로 보낼지 여부, 사용자에게 파일 삭제를 확인하는 메시지를 표시할지 여부, 사용자가 작업을 취소할 때 수행할 작업 등의 옵션이 제공됩니다.  
   
 ### <a name="to-delete-a-text-file"></a>텍스트 파일을 삭제하려면  
@@ -36,6 +37,7 @@ ms.locfileid: "64629146"
      [!code-vb[VbFileIOMisc#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOMisc/VB/Class1.vb#10)]  
   
 ## <a name="robust-programming"></a>강력한 프로그래밍  
+
  다음 조건에서 예외가 발생합니다.  
   
 - 길이가 0인 문자열이거나, 공백만 포함하거나, 잘못된 문자를 포함하거나, 경로가 디바이스 경로인 경우(\\\\.\\로 시작됨)와 같은 여러 가지 이유 중 하나로 경로가 올바르지 않은 경우(<xref:System.ArgumentException>)  

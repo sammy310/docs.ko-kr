@@ -14,12 +14,12 @@ helpviewer_keywords:
 - classes [WPF], mapping namespaces to
 - namespaces [WPF]
 ms.assetid: 5c0854e3-7470-435d-9fe2-93eec9d3634e
-ms.openlocfilehash: 8f381a06aa916be378052d00f0d65f37ef910433
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 5cce8ff04dbf163aba95346447f0557da14197da
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740657"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976773"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping-for-wpf-xaml"></a>WPF XAML을 위한 XAML 네임스페이스 및 네임스페이스 매핑
 이 항목에서는 WPF XAML 파일의 루트 태그에서 주로 찾을 수 있는 두 XAML 네임스페이스 매핑과 그 용도에 대해 자세하게 설명합니다. 또한 고유한 코드나 별도의 어셈블리에 정의된 요소에 사용할 수 있도록 유사한 매핑을 생성하는 방법에 대해서도 설명합니다.  
@@ -112,7 +112,7 @@ End Namespace
 ## <a name="designer-namespaces-and-other-prefixes-from-xaml-templates"></a>XAML 템플릿의 디자이너 네임스페이스 및 기타 접두사  
  여러 가지 WPF XAML 개발 환경 및/또는 디자인 도구를 사용하는 경우 XAML 태그 내에 다른 XAML 네임스페이스 및 접두사가 정의되어 있을 수 있습니다.  
   
- [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)]에서는 일반적으로 접두사 `d:`에 매핑되는 디자이너 네임스페이스를 사용합니다. 최신 WPF용 프로젝트 템플릿의 경우 [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)]와 다른 디자인 환경 간의 XAML 교환을 지원하기 위해 이 XAML 네임스페이스가 미리 매핑되어 있을 수 있습니다. 이 디자인 XAML 네임스페이스는 디자이너에서 XAML 기반 UI를 왕복하는 동안 디자인 상태를 계속 유지하는 데 사용됩니다. 또한 디자이너에서 런타임 데이터 소스를 사용할 수 있게 하는 `d:IsDataSource` 등의 기능에도 사용됩니다.  
+ Visual Studio 용 WPF 디자이너는 일반적으로 `d:`접두사에 매핑되는 디자이너 네임 스페이스를 사용 합니다. WPF 용 최신 프로젝트 템플릿은 Visual Studio 용 WPF 디자이너와 기타 디자인 환경의 XAML 교환을 지원 하기 위해이 XAML 네임 스페이스를 미리 매핑할 수 있습니다. 이 디자인 XAML 네임스페이스는 디자이너에서 XAML 기반 UI를 왕복하는 동안 디자인 상태를 계속 유지하는 데 사용됩니다. 또한 디자이너에서 런타임 데이터 소스를 사용할 수 있게 하는 `d:IsDataSource` 등의 기능에도 사용됩니다.  
   
  매핑되는 또 다른 접두사로 `mc:`이 있을 수 있습니다. `mc:`은 태그 호환성을 위해 사용되며, XAML에 반드시 필요하지는 않은 태그 호환성 패턴을 활용합니다. 일정 범위 내에서 태그 호환성 기능은 프레임워크 간 또는 지원 구현의 여러 경계를 넘어 XAML을 교환하는 데 사용될 수 있으며, XAML 스키마 컨텍스트 간에 작업하고 디자이너에서 제한된 모드에 대해 호환성을 제공하는 데 사용될 수 있습니다. 태그 호환성 개념 및 이 개념과 WPF의 관련성에 대한 자세한 내용은 [태그 호환성(mc:) 언어 기능](markup-compatibility-mc-language-features.md)을 참조하세요.  
   

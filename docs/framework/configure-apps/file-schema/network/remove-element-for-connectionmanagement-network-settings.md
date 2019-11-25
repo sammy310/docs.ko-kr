@@ -10,21 +10,21 @@ helpviewer_keywords:
 - <connectionManagement>, remove element
 - remove element, connectionManagement
 ms.assetid: 94b81775-5a22-4975-8c47-8620c40c3f35
-ms.openlocfilehash: cbafd29be6855cbb95d17388791ba152230295cc
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 287e36dce65be7a002499d2cd22481018a1f4742
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71697836"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74089163"
 ---
-# <a name="remove-element-for-connectionmanagement-network-settings"></a>@no__t-connectionManagement (네트워크 설정)에 대 한 > 요소 제거
+# <a name="remove-element-for-connectionmanagement-network-settings"></a>connectionManagement (네트워크 설정)에 대 한 > 요소 \<제거
 연결 관리 목록에서 IP 주소 또는 DNS 이름을 제거 합니다.  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4c.net >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t @ no__t[ **\<connectionManagement >** ](connectionmanagement-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t @ no__t @ @ no__t-4 @ no__t-5 **\<remove >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;[ **\<.net >를**](system-net-element-network-settings.md) &nbsp;\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<connectionManagement >** ](connectionmanagement-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<제거 >**
+
 ## <a name="syntax"></a>구문  
   
 ```xml  
@@ -43,7 +43,7 @@ ms.locfileid: "71697836"
 |`address`|IP 주소 또는 DNS 이름입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
- 없음  
+ 없음.  
   
 ### <a name="parent-elements"></a>부모 요소  
   
@@ -51,16 +51,16 @@ ms.locfileid: "71697836"
 |-----------------|---------------------|  
 |[connectionManagement](connectionmanagement-element-network-settings.md)|네트워크 호스트에 대한 최대 연결 수를 지정합니다.|  
   
-## <a name="remarks"></a>설명  
- @No__t-0 요소는 지정 된 서버에 대 한 연결 관리 목록 항목을 제거 합니다.  
+## <a name="remarks"></a>주의  
+ `remove` 요소는 지정 된 서버에 대 한 연결 관리 목록 항목을 제거 합니다.  
   
- @No__t-0 특성의 값은 올바른 IP 주소 또는 호스트 이름 이어야 합니다.  
+ `address` 특성의 값은 올바른 IP 주소 또는 호스트 이름 이어야 합니다.  
   
 ## <a name="configuration-files"></a>구성 파일  
  이 요소는 애플리케이션 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.  
   
 ## <a name="example"></a>예제  
- 다음 예에서는-0 @no__t 서버에 대 한 연결 관리 목록 항목을 제거한 다음 @no__t 서버에 대 한 4 개의 연결을 사용 하도록 응용 프로그램을 구성 합니다.  
+ 다음 예에서는 서버 `www.adventure-works.com`에 대 한 연결 관리 목록 항목을 제거한 다음 서버 `www.contoso.com`에 대 한 4 개의 연결과 다른 모든 서버에 대 한 두 개의 연결을 사용 하도록 응용 프로그램을 구성 합니다.  
   
 ```xml  
 <configuration>  

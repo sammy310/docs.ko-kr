@@ -4,12 +4,12 @@ description: ML.NET에서 지원되는 기능 엔지니어링 구성 요소를 �
 author: natke
 ms.author: nakersha
 ms.date: 04/02/2019
-ms.openlocfilehash: 25da3cceb3c9090661b34254ed240207aaf3b9d7
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: cb191b1688dce8f703bdabcd220eb39efe68fd48
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929251"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977241"
 ---
 # <a name="data-transformations"></a>데이터 변환
 
@@ -21,7 +21,7 @@ ms.locfileid: "70929251"
 
 이 가이드의 변환은 [IEstimator](xref:Microsoft.ML.IEstimator%601) 인터페이스를 구현하는 클래스를 반환합니다. 데이터 변환은 함께 연결될 수 있습니다. 두 변환은 각각 연결된 참조 설명서에 지정된 특정 형식 및 형태의 데이터를 예측하고 생성합니다.
 
-일부 데이터 변환의 경우 해당 매개 변수를 계산하려면 학습 데이터가 필요합니다. 예를 들어 <xref:Microsoft.ML.NormalizationCatalog.NormalizeMeanVariance%2A> 변환기는 `Fit()` 작업 중에 학습 데이터의 평균 및 분산을 계산하고 해당 매개 변수를 `Transform()` 작업에서 사용합니다. 
+일부 데이터 변환의 경우 해당 매개 변수를 계산하려면 학습 데이터가 필요합니다. 예를 들어 <xref:Microsoft.ML.NormalizationCatalog.NormalizeMeanVariance%2A> 변환기는 `Fit()` 작업 중에 학습 데이터의 평균 및 분산을 계산하고 해당 매개 변수를 `Transform()` 작업에서 사용합니다.
 
 다른 데이터 변환에는 학습 데이터가 필요하지 않습니다. 예를 들어 <xref:Microsoft.ML.ImageEstimatorsCatalog.ConvertToGrayscale*> 변환은 `Fit()` 작업 중에 학습 데이터를 확인하지 않고 `Transform()` 작업을 수행할 수 있습니다.
 
@@ -62,7 +62,7 @@ ms.locfileid: "70929251"
 
 | 변형 | 정의 |
 | --- | --- |
-| <xref:Microsoft.ML.TextCatalog.FeaturizeText*> | 텍스트 열을 정규화된 ngrams 및 char-grams 수의 float 배열로 변환 | 
+| <xref:Microsoft.ML.TextCatalog.FeaturizeText*> | 텍스트 열을 정규화된 ngrams 및 char-grams 수의 float 배열로 변환 |
 | <xref:Microsoft.ML.TextCatalog.TokenizeIntoWords*> | 하나 이상의 텍스트 열을 개별 단어로 분할 |
 | <xref:Microsoft.ML.TextCatalog.TokenizeIntoCharactersAsKeys*> | 토픽 세트에서 하나 이상의 텍스트 열을 개별 문자 float로 분할 |
 | <xref:Microsoft.ML.TextCatalog.NormalizeText*> | 대/소문자 변경, 분음 부호, 문장 부호 및 숫자 제거 |

@@ -5,12 +5,12 @@ author: richlander
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 7b77b6c1-8367-4602-bff3-91e4c05ac643
-ms.openlocfilehash: 9c0b5a07277de6e87e2692ebb7c4f73c03702801
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: ba3d5209571019f8ac38702939332fd953307202
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424966"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447990"
 ---
 # <a name="framework-libraries"></a>프레임워크 라이브러리
 
@@ -33,7 +33,7 @@ BCL은 가장 기본적인 형식과 유틸리티 기능을 제공하며 다른 
 * <xref:System.Decimal?displayProperty=nameWithType>([decimal](../csharp/language-reference/builtin-types/floating-point-numeric-types.md)) - 128비트 10진수 형식입니다.
 * <xref:System.Byte?displayProperty=nameWithType>([byte](../csharp/language-reference/builtin-types/integral-numeric-types.md)) - 1바이트의 메모리를 나타내는 부호 없는 8비트 정수입니다.
 * <xref:System.Boolean?displayProperty=nameWithType>([bool](../csharp/language-reference/keywords/bool.md)) - `true` 또는 `false`를 나타내는 부울 형식입니다.
-* <xref:System.Char?displayProperty=nameWithType>([char](../csharp/language-reference/keywords/char.md)) - 유니코드 문자를 나타내는 16비트 숫자 형식입니다.
+* <xref:System.Char?displayProperty=nameWithType>([char](../csharp/language-reference/builtin-types/char.md)) - 유니코드 문자를 나타내는 16비트 숫자 형식입니다.
 * <xref:System.String?displayProperty=nameWithType>([string](../csharp/language-reference/builtin-types/reference-types.md#the-string-type)) - 일련의 문자를 나타냅니다. `char[]`와 다르지만 `string`의 각 개별 `char`를 인덱싱할 수 있습니다.
 
 ## <a name="data-structures"></a>데이터 구조

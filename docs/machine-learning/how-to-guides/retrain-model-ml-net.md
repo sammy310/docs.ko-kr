@@ -5,18 +5,18 @@ ms.date: 05/03/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: 1628d0669d8a9e677ff39b5869d3802d89d96410
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 735782a4a0877a917b6e1885f009aa49d834170f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397710"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976960"
 ---
 # <a name="re-train-a-model"></a>모델 다시 학습
 
 ML.NET에서 기계 학습 모델을 다시 학습하는 방법을 알아봅니다.
 
-세계 및 관련 데이터는 지속적으로 변화합니다. 이 때문에 모델도 변화와 업데이트가 필요합니다. ML.NET은 매번 처음부터 다시 시작하는 것이 아니라 이전의 경험을 바탕으로 학습된 모델 매개 변수를 시작점으로 사용하여 모델을 다시 학습하는 기능을 제공합니다.  
+세계 및 관련 데이터는 지속적으로 변화합니다. 이 때문에 모델도 변화와 업데이트가 필요합니다. ML.NET은 매번 처음부터 다시 시작하는 것이 아니라 이전의 경험을 바탕으로 학습된 모델 매개 변수를 시작점으로 사용하여 모델을 다시 학습하는 기능을 제공합니다.
 
 다음 알고리즘은 ML.NET에서 다시 학습 가능합니다.
 
@@ -33,7 +33,7 @@ ML.NET에서 기계 학습 모델을 다시 학습하는 방법을 알아봅니�
 
 ## <a name="load-pre-trained-model"></a>미리 학습된 모델 로드
 
-먼저, 미리 학습된 모델을 애플리케이션에 로드합니다. 학습 파이프라인 및 모델 로드에 대한 자세한 정보는 관련 [방법 문서](./consuming-model-ml-net.md)를 참조하세요.
+먼저, 미리 학습된 모델을 애플리케이션에 로드합니다. 학습 파이프라인 및 모델 로드에 대한 자세한 정보는 [학습된 모델 저장 및 로드](save-load-machine-learning-models-ml-net.md)를 참조하세요.
 
 ```csharp
 // Create MLContext
@@ -55,13 +55,13 @@ ITransformer trainedModel = mlContext.Model.Load("ogd_model.zip", out modelSchem
 
 ```csharp
 // Extract trained model parameters
-LinearRegressionModelParameters originalModelParameters = 
+LinearRegressionModelParameters originalModelParameters =
     ((ISingleFeaturePredictionTransformer<object>)trainedModel).Model as LinearRegressionModelParameters;
 ```
 
 ## <a name="re-train-model"></a>모델 다시 학습
 
-모델을 다시 학습하는 프로세스는 모델 학습과 차이가 없습니다. 유일한 차이점은 데이터와 함께 [`Fit`](xref:Microsoft.ML.Trainers.OnlineLinearTrainer`2.Fit*) 메서드도 원래 학습한 모델 매개 변수를 입력을 취하고 이를 다시 학습 프로세스의 시작점으로 사용한다는 점입니다.  
+모델을 다시 학습하는 프로세스는 모델 학습과 차이가 없습니다. 유일한 차이점은 데이터와 함께 [`Fit`](xref:Microsoft.ML.Trainers.OnlineLinearTrainer`2.Fit*) 메서드도 원래 학습한 모델 매개 변수를 입력을 취하고 이를 다시 학습 프로세스의 시작점으로 사용한다는 점입니다.
 
 ```csharp
 // New Data
@@ -94,7 +94,7 @@ IDataView newData = mlContext.Data.LoadFromEnumerable<HousingData>(housingData);
 IDataView transformedNewData = dataPrepPipeline.Transform(newData);
 
 // Retrain model
-RegressionPredictionTransformer<LinearRegressionModelParameters> retrainedModel = 
+RegressionPredictionTransformer<LinearRegressionModelParameters> retrainedModel =
     mlContext.Regression.Trainers.OnlineGradientDescent()
         .Fit(transformedNewData, originalModelParameters);
 ```
@@ -108,7 +108,7 @@ RegressionPredictionTransformer<LinearRegressionModelParameters> retrainedModel 
 LinearRegressionModelParameters retrainedModelParameters = retrainedModel.Model as LinearRegressionModelParameters;
 
 // Inspect Change in Weights
-var weightDiffs = 
+var weightDiffs =
     originalModelParameters.Weights.Zip(
         retrainedModelParameters.Weights, (original, retrained) => original - retrained).ToArray();
 
@@ -119,9 +119,9 @@ for(int i=0;i < weightDiffs.Count();i++)
 }
 ```
 
-아래 표는 출력의 모습을 보여 줍니다. 
+아래 표는 출력의 모습을 보여 줍니다.
 
-|원래 색 | 다시 학습 | 차이 |
+|원래 이름 | 다시 학습 | 차이 |
 |---|---|---|
 | 33039.86 | 56293.76 | -23253.9 |
 | 29099.14 | 49586.03 | -20486.89 |

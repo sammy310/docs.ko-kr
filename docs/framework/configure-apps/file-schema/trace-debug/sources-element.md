@@ -9,20 +9,20 @@ helpviewer_keywords:
 - trace sources
 - <sources> element
 ms.assetid: c727b2e2-423a-4463-a223-013f40ff16a3
-ms.openlocfilehash: 0ca35d9be5e1eaf36a2c9cae99efc2736ef3403d
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: a903d009f2056e65414c1792494fbbd20e224413
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699201"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088811"
 ---
 # <a name="sources-element"></a>\<sources > 요소
 추적 메시지를 시작 하는 추적 소스를 지정 합니다.  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t[ **\< >** ](system-diagnostics-element.md)  
-&nbsp; @ no__t-1 @ no__t @ no__t **\<sources >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;[ **\<&nbsp;진단 >** ](system-diagnostics-element.md)\
+&nbsp;&nbsp;&nbsp; **\<원본 &nbsp;**
+
 ## <a name="syntax"></a>구문  
   
 ```xml  
@@ -35,7 +35,7 @@ ms.locfileid: "71699201"
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
- 없음  
+ 없음.  
   
 ### <a name="child-elements"></a>자식 요소  
   
@@ -50,11 +50,11 @@ ms.locfileid: "71699201"
 |`configuration`|공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.|  
 |`system.diagnostics`|메시지를 수집하고 저장하고 라우팅하는 추적 수신기를 지정하며, 추적 스위치가 설정되는 수준을 지정합니다.|  
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
  이 요소는 컴퓨터 구성 파일 (machine.config) 및 응용 프로그램 구성 파일에서 사용할 수 있습니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 `<sources>` 요소를 사용 하 여 추적 소스 `mySource`을 추가 하 고 `sourceSwitch` 라는 원본 스위치의 수준을 설정 하는 방법을 보여 줍니다. 콘솔에 추적 정보를 기록 하는 콘솔 추적 수신기가 추가 됩니다.  
+ 다음 예제에서는 `<sources>` 요소를 사용 하 여 추적 소스 `mySource`를 추가 하 고 `sourceSwitch`라는 원본 스위치의 수준을 설정 하는 방법을 보여 줍니다. 콘솔에 추적 정보를 기록 하는 콘솔 추적 수신기가 추가 됩니다.  
   
 ```xml  
 <configuration>  

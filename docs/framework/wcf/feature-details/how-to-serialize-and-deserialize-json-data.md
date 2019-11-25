@@ -2,23 +2,23 @@
 title: '방법: DataContractJsonSerializer 사용'
 ms.date: 03/25/2019
 ms.assetid: 88abc1fb-8196-4ee3-a23b-c6934144d1dd
-ms.openlocfilehash: ad126616e0665c6de3aa7a64969c83b23be9f830
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 354f0c58a83e07ff3180977311adf85ae306dd21
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72396003"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976868"
 ---
-# <a name="how-to-use-datacontractjsonserializer"></a>방법: DataContractJsonSerializer 사용
-
-JSON(JavaScript Object Notation)은 클라이언트 브라우저 및 AJAX 사용 웹 서비스 간에 소량의 데이터를 신속하게 교환할 수 있는 효율적인 데이터 인코딩 형식입니다.
-
-이 문서에서는 .NET 형식 개체를 JSON으로 인코딩된 데이터로 serialize 한 다음 JSON 형식의 데이터를 다시 .NET 형식의 인스턴스로 deserialize 하는 방법을 보여 줍니다. 이 예제에서는 데이터 계약을 사용 하 여 사용자 정의 @no__t 0 형식의 serialization 및 deserialization을 보여 주고 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>을 사용 합니다.
-
-일반적으로 JSON serialization 및 deserialization은 AJAX 사용 끝점을 통해 노출 되는 서비스 작업의 데이터 계약 형식을 사용할 때 WCF (Windows Communication Foundation)에 의해 자동으로 처리 됩니다. 그러나 경우에 따라 JSON 데이터를 직접 사용 해야 할 수도 있습니다.
+# <a name="how-to-use-datacontractjsonserializer"></a>DataContractJsonSerializer 사용 방법
 
 > [!NOTE]
 > 이 문서는 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>입니다. JSON 직렬화 및 역직렬화를 포함 하는 대부분의 시나리오에서는 system.xml [네임 스페이스](../../../standard/serialization/system-text-json-overview.md)의 도구를 권장 합니다.
+
+JSON(JavaScript Object Notation)은 클라이언트 브라우저 및 AJAX 사용 웹 서비스 간에 소량의 데이터를 신속하게 교환할 수 있는 효율적인 데이터 인코딩 형식입니다.
+
+이 문서에서는 .NET 형식 개체를 JSON으로 인코딩된 데이터로 serialize 한 다음 JSON 형식의 데이터를 다시 .NET 형식의 인스턴스로 deserialize 하는 방법을 보여 줍니다. 이 예제에서는 데이터 계약을 사용 하 여 사용자 정의 `Person` 형식의 serialization 및 deserialization을 보여 주고 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>를 사용 합니다.
+
+일반적으로 JSON serialization 및 deserialization은 AJAX 사용 끝점을 통해 노출 되는 서비스 작업의 데이터 계약 형식을 사용할 때 WCF (Windows Communication Foundation)에 의해 자동으로 처리 됩니다. 그러나 경우에 따라 JSON 데이터를 직접 사용 해야 할 수도 있습니다.
 
 이 문서는 [DataContractJsonSerializer 샘플](../samples/json-serialization.md)을 기반으로 합니다.
 
@@ -51,7 +51,7 @@ JSON(JavaScript Object Notation)은 클라이언트 브라우저 및 AJAX 사용
     p.age = 42;
     ```
 
-2. @No__t-1을 사용 하 여 `Person` 개체를 메모리 스트림으로 Serialize 합니다.
+2. <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>를 사용 하 여 `Person` 개체를 메모리 스트림으로 Serialize 합니다.
 
     ```csharp
     var stream1 = new MemoryStream();

@@ -5,17 +5,17 @@ helpviewer_keywords:
 - SecAnnotate.exe
 - Security Annotator tool
 ms.assetid: 8104d208-7813-4a1d-8a75-58f9a7bcb8c9
-ms.openlocfilehash: 7c9fad9b420044cce2c9d75cca66ecdb5b0558cd
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: cc57bd01c5626c889b5d94eac1e7358cafa4ab10
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73104675"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447316"
 ---
 # <a name="secannotateexe-net-security-annotator-tool"></a>SecAnnotate.exe(.NET Security Annotator 도구)
 .NET Security Annotator 도구(SecAnnotate.exe)는 하나 이상의 어셈블리의 `SecurityCritical` 및 `SecuritySafeCritical` 부분을 식별하는 명령줄 애플리케이션입니다.  
   
- Visual Studio 확장인 [Security Annotator](https://go.microsoft.com/fwlink/?LinkId=198007)는 SecAnnotate.exe에 대한 그래픽 사용자 인터페이스를 제공하며 Visual Studio에서 도구를 실행할 수 있습니다.  
+ Visual Studio 확장인 [Security Annotator](https://marketplace.visualstudio.com/items?itemName=sheldonb.SecurityAnnotator)는 SecAnnotate.exe에 대한 그래픽 사용자 인터페이스를 제공하며 Visual Studio에서 도구를 실행할 수 있습니다.  
   
  이 도구는 자동으로 Visual Studio와 함께 설치됩니다. 이 도구를 실행하려면 Visual Studio용 개발자 명령 프롬프트(또는 Windows 7의 Visual Studio 명령 프롬프트)를 사용합니다. 자세한 내용은 [명령 프롬프트](developer-command-prompt-for-vs.md)를 참조하세요.  
   
@@ -50,6 +50,6 @@ SecAnnotate.exe [parameters] [assemblies]
 ## <a name="remarks"></a>설명  
  매개 변수 및 어셈블리는 명령줄에 지정되고 (@) 기호에 접두사가 있는 응답 파일에 제공될 수도 있습니다. 응답 파일의 각 줄은 단일 매개 변수 또는 어셈블리 이름을 포함해야 합니다.  
   
- .NET Security Annotator에 대한 자세한 내용은 .NET Security 블로그의 [SecAnnotate를 사용하여 어셈블리의 투명도 위반 분석](https://go.microsoft.com/fwlink/?LinkId=187648) 항목을 참조하세요.  
+ .NET Security Annotator에 대한 자세한 내용은 .NET Security 블로그의 [SecAnnotate를 사용하여 어셈블리의 투명도 위반 분석](https://blogs.msdn.microsoft.com/shawnfa/2009/11/18/using-secannotate-to-analyze-your-assemblies-for-transparency-violations-an-example/) 항목을 참조하세요.  
   
 ## <a name="examples"></a>예

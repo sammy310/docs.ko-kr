@@ -8,20 +8,20 @@ helpviewer_keywords:
 - mailSettings element
 - <mailSettings> element
 ms.assetid: 54f0f153-17e5-4f49-afdc-deadb940c9c1
-ms.openlocfilehash: fb4c8844ed3eb13af483c214d659090c0c563c33
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 4e8bf23ce39edadf80f019315c690b597b3d7361
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698071"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74089228"
 ---
 # <a name="mailsettings-element-network-settings"></a>\<mailSettings > 요소 (네트워크 설정)
 메일 전송 옵션을 구성 합니다.  
 
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4c.net >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 **\<mailSettings >**  
-  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;[ **\<.net >를**](system-net-element-network-settings.md) &nbsp;\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<mailSettings >**
+
 ## <a name="syntax"></a>구문  
   
 ```xml  
@@ -34,7 +34,7 @@ ms.locfileid: "71698071"
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
- 없음  
+ 없음.  
   
 ### <a name="child-elements"></a>자식 요소  
   

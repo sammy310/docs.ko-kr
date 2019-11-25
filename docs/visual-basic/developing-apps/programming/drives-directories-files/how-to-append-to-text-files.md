@@ -1,19 +1,20 @@
 ---
-title: '방법: Visual Basic에서 텍스트 파일에 추가'
+title: '방법: 텍스트 파일에 추가'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - I/O [Visual Basic], appending to files
 - I/O [Visual Basic], My.Computer.FileSystem.WriteAllText method
 - I/O [Visual Basic], WriteAllText method
 ms.assetid: bbbd7fb5-f169-41a9-b53f-520ea9613913
-ms.openlocfilehash: e855293ac3636049520a85abdf685091d437bb60
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 97bcb5c511452e418df010f12d4b63f04251d021
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64628900"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348878"
 ---
 # <a name="how-to-append-to-text-files-in-visual-basic"></a>방법: Visual Basic에서 텍스트 파일에 추가
+
 <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> 메서드는 `append` 매개 변수가 `True`로 설정되도록 지정하여 텍스트 파일에 추가하는 데 사용될 수 있습니다.  
   
 ### <a name="to-append-to-a-text-file"></a>텍스트 파일에 추가하려면  
@@ -25,6 +26,7 @@ ms.locfileid: "64628900"
      [!code-vb[VbFileIOWrite#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOWrite/VB/Class1.vb#6)]  
   
 ## <a name="robust-programming"></a>강력한 프로그래밍  
+
  다음 조건에서 예외가 발생합니다.  
   
 - 길이가 0인 문자열이거나, 공백만 포함하거나, 잘못된 문자를 포함하거나, 경로가 디바이스 경로인 경우(\\\\.\\로 시작됨)와 같은 여러 가지 이유 중 하나로 경로가 올바르지 않은 경우(<xref:System.ArgumentException>)  

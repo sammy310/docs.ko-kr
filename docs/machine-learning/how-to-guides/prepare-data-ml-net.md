@@ -5,22 +5,22 @@ author: luisquintanilla
 ms.author: luquinta
 ms.date: 09/11/2019
 ms.custom: mvc, how-to, title-hack-0625
-ms.openlocfilehash: 4452aef351f33df532f3c673307dedbbf71631b8
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: e9bfad4724b353b0f3bfc615a40f1d72b80a2cd4
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929368"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976975"
 ---
 # <a name="prepare-data-for-building-a-model"></a>모델 구축에 사용할 데이터 준비
 
 ML.NET을 사용하여 추가 처리 또는 모델 빌드를 위해 데이터를 준비하는 방법을 알아봅니다.
 
-데이터는 정리되어 있지 않고 흩어져 있는 경우가 많습니다. ML.NET 기계 학습 알고리즘에서는 단일 숫자 벡터 형식의 입력 또는 기능을 예상합니다. 마찬가지로 예측할 값(레이블), 특히 범주 데이터의 경우에는 인코딩해야 합니다. 따라서 데이터를 준비하는 목적 중 하나가 ML.NET 알고리즘에서 예상하는 형식으로 데이터를 가져오는 것입니다. 
+데이터는 정리되어 있지 않고 흩어져 있는 경우가 많습니다. ML.NET 기계 학습 알고리즘에서는 단일 숫자 벡터 형식의 입력 또는 기능을 예상합니다. 마찬가지로 예측할 값(레이블), 특히 범주 데이터의 경우에는 인코딩해야 합니다. 따라서 데이터를 준비하는 목적 중 하나가 ML.NET 알고리즘에서 예상하는 형식으로 데이터를 가져오는 것입니다.
 
 ## <a name="filter-data"></a>데이터 필터링
 
-데이터 세트의 일부 데이터는 분석하기에 관련성이 없는 경우가 있습니다. 관련 없는 데이터를 제거하는 접근법이 필터링입니다. [`DataOperationsCatalog`](xref:Microsoft.ML.DataOperationsCatalog)에는 모든 데이터를 포함하는 [`IDataView`](xref:Microsoft.ML.IDataView)에서 수행하여 관심 있는 데이터 요소만 포함하는 [IDataView](xref:Microsoft.ML.IDataView)를 반환하는 일련의 필터 작업 세트가 있습니다. 필터 작업이 [`TransformsCatalog`](xref:Microsoft.ML.TransformsCatalog)의 것과 같은 [`IEstimator`](xref:Microsoft.ML.IEstimator%601) 또는 [`ITransformer`](xref:Microsoft.ML.ITransformer)가 아니므로, [`EstimatorChain`](xref:Microsoft.ML.Data.EstimatorChain%601) 또는 [`TransformerChain`](xref:Microsoft.ML.Data.TransformerChain%601) 데이터 준비 파이프라인으로 포함할 수는 없습니다. 
+데이터 세트의 일부 데이터는 분석하기에 관련성이 없는 경우가 있습니다. 관련 없는 데이터를 제거하는 접근법이 필터링입니다. [`DataOperationsCatalog`](xref:Microsoft.ML.DataOperationsCatalog)에는 모든 데이터를 포함하는 [`IDataView`](xref:Microsoft.ML.IDataView)에서 수행하여 관심 있는 데이터 요소만 포함하는 [IDataView](xref:Microsoft.ML.IDataView)를 반환하는 일련의 필터 작업 세트가 있습니다. 필터 작업이 [`TransformsCatalog`](xref:Microsoft.ML.TransformsCatalog)의 것과 같은 [`IEstimator`](xref:Microsoft.ML.IEstimator%601) 또는 [`ITransformer`](xref:Microsoft.ML.ITransformer)가 아니므로, [`EstimatorChain`](xref:Microsoft.ML.Data.EstimatorChain%601) 또는 [`TransformerChain`](xref:Microsoft.ML.Data.TransformerChain%601) 데이터 준비 파이프라인으로 포함할 수는 없습니다.
 
 [`IDataView`](xref:Microsoft.ML.IDataView)로 로드되는 다음 입력 데이터 사용:
 
@@ -56,7 +56,7 @@ IDataView filteredData = mlContext.Data.FilterRowsByColumn(data, "Price", lowerB
 
 ## <a name="replace-missing-values"></a>누락된 값 대체
 
-데이터 세트에서 값이 누락되는 경우는 일반적입니다. 누락된 값을 다루는 접근법 중 하나는 데이터에서 평균 값 등 다른 의미 있는 값인 경우 지정된 유형에 대한 기본 값으로 대체하는 것입니다. 
+데이터 세트에서 값이 누락되는 경우는 일반적입니다. 누락된 값을 다루는 접근법 중 하나는 데이터에서 평균 값 등 다른 의미 있는 값인 경우 지정된 유형에 대한 기본 값으로 대체하는 것입니다.
 
 [`IDataView`](xref:Microsoft.ML.IDataView)로 로드되는 다음 입력 데이터 사용:
 
@@ -98,11 +98,11 @@ ITransformer replacementTransformer = replacementEstimator.Fit(data);
 IDataView transformedData = replacementTransformer.Transform(data);
 ```
 
-ML.NET은 다양한 [대체 모드](xref:Microsoft.ML.Transforms.MissingValueReplacingEstimator.ReplacementMode) 지원합니다. 위의 샘플에서는 해당 열의 평균 값으로 누락된 값을 채울 `Mean` 대체 모드를 사용합니다. 대체하면 데이터에서 100,000과 300,000의 평균인 200,000으로 마지막 요소에 대한 `Price` 속성을 채웁니다. 
+ML.NET은 다양한 [대체 모드](xref:Microsoft.ML.Transforms.MissingValueReplacingEstimator.ReplacementMode) 지원합니다. 위의 샘플에서는 해당 열의 평균 값으로 누락된 값을 채울 `Mean` 대체 모드를 사용합니다. 대체하면 데이터에서 100,000과 300,000의 평균인 200,000으로 마지막 요소에 대한 `Price` 속성을 채웁니다.
 
 ## <a name="use-normalizers"></a>노멀라이저 사용
 
-[정규화](https://en.wikipedia.org/wiki/Feature_scaling)는 알고리즘이 보다 빠르게 수렴할 수 있도록 동일한 척도가 아닌 기능을 표준화하는 데 사용하는 데이터 사전 처리 기법입니다. 예를 들어, 나이와 수입과 같은 값의 범위는 나이가 일반적으로 0-100 범위, 수입이 0에서 수천 범위로 상당히 다양합니다. 정규화 변형에 대한 보다 자세한 목록과 설명은 [변형 페이지](../resources/transforms.md)를 참조하세요. 
+[정규화](https://en.wikipedia.org/wiki/Feature_scaling)는 알고리즘이 보다 빠르게 수렴할 수 있도록 동일한 척도가 아닌 기능을 표준화하는 데 사용하는 데이터 사전 처리 기법입니다. 예를 들어, 나이와 수입과 같은 값의 범위는 나이가 일반적으로 0-100 범위, 수입이 0에서 수천 범위로 상당히 다양합니다. 정규화 변형에 대한 보다 자세한 목록과 설명은 [변형 페이지](../resources/transforms.md)를 참조하세요.
 
 ### <a name="min-max-normalization"></a>최소-최대 정규화
 
@@ -142,7 +142,7 @@ IDataView transformedData = minMaxTransformer.Transform(data);
 
 ### <a name="binning"></a>범주화
 
-[범주화](https://en.wikipedia.org/wiki/Data_binning)는 연속적인 값을 별도의 값 표현으로 변환합니다. 예를 들어, 기능 중 하나가 나이라고 가정하면 범주화는 실제 나이 값 대신, 해당 값의 범위를 만듭니다. 0-18, 19-35 등이 각 범주가 될 수 있습니다. 
+[범주화](https://en.wikipedia.org/wiki/Data_binning)는 연속적인 값을 별도의 값 표현으로 변환합니다. 예를 들어, 기능 중 하나가 나이라고 가정하면 범주화는 실제 나이 값 대신, 해당 값의 범위를 만듭니다. 0-18, 19-35 등이 각 범주가 될 수 있습니다.
 
 [`IDataView`](xref:Microsoft.ML.IDataView)로 로드되는 다음 입력 데이터 사용:
 
@@ -167,7 +167,7 @@ HomeData[] homeDataList = new HomeData[]
 };
 ```
 
-[`NormalizeBinning`](xref:Microsoft.ML.NormalizationCatalog.NormalizeBinning*) 메서드를 사용하여 데이터를 bin으로 정규합니다. `maximumBinCount` 매개 변수를 사용하면 데이터를 분류하는 데 필요한 bin 수를 지정할 수 있습니다. 이 예에서는 데이터가 2개의 bin으로 분류됩니다.  
+[`NormalizeBinning`](xref:Microsoft.ML.NormalizationCatalog.NormalizeBinning*) 메서드를 사용하여 데이터를 bin으로 정규합니다. `maximumBinCount` 매개 변수를 사용하면 데이터를 분류하는 데 필요한 bin 수를 지정할 수 있습니다. 이 예에서는 데이터가 2개의 bin으로 분류됩니다.
 
 ```csharp
 // Define binning estimator
@@ -185,12 +185,12 @@ IDataView transformedData = binningTransformer.Transform(data);
 
 ## <a name="work-with-categorical-data"></a>범주 데이터 작업
 
-숫자 이외의 범주 데이터는 기계 학습 모델을 빌드하는 데 사용하려면 숫자로 변환되어야 합니다. 
+숫자 이외의 범주 데이터는 기계 학습 모델을 빌드하는 데 사용하려면 숫자로 변환되어야 합니다.
 
 [`IDataView`](xref:Microsoft.ML.IDataView)로 로드되는 다음 입력 데이터 사용:
 
 ```csharp
-CarData[] cars = new CarData[] 
+CarData[] cars = new CarData[]
 {
     new CarData
     {
@@ -210,7 +210,7 @@ CarData[] cars = new CarData[]
 };
 ```
 
-범주 `VehicleType` 속성은 [`OneHotEncoding`](xref:Microsoft.ML.CategoricalCatalog.OneHotEncoding*) 메서드를 사용해 숫자로 변환할 수 있습니다. 
+범주 `VehicleType` 속성은 [`OneHotEncoding`](xref:Microsoft.ML.CategoricalCatalog.OneHotEncoding*) 메서드를 사용해 숫자로 변환할 수 있습니다.
 
 ```csharp
 // Define categorical transform estimator
@@ -224,7 +224,7 @@ ITransformer categoricalTransformer = categoricalEstimator.Fit(data);
 IDataView transformedData = categoricalTransformer.Transform(data);
 ```
 
-결과로 만들어지는 변형은 `VehicleType`의 텍스트 값을 숫자로 변환합니다. `VehicleType` 열의 항목은 변형이 적용되면 다음이 됩니다. 
+결과로 만들어지는 변형은 `VehicleType`의 텍스트 값을 숫자로 변환합니다. `VehicleType` 열의 항목은 변형이 적용되면 다음이 됩니다.
 
 ```text
 [
@@ -256,7 +256,7 @@ ReviewData[] reviews = new ReviewData[]
 };
 ```
 
-텍스트를 숫자 벡터 표현으로 변형하는 최소 단계는 [`FeaturizeText`](xref:Microsoft.ML.TextCatalog.FeaturizeText*) 메서드를 사용하는 것입니다. [`FeaturizeText`](xref:Microsoft.ML.TextCatalog.FeaturizeText*) 변형을 사용하여, 입력 텍스트 열에 일련의 변형이 적용되면 lg 정규화된 단어 및 문자 n그램을 나타내는 숫자 벡터가 만들어집니다. 
+텍스트를 숫자 벡터 표현으로 변형하는 최소 단계는 [`FeaturizeText`](xref:Microsoft.ML.TextCatalog.FeaturizeText*) 메서드를 사용하는 것입니다. [`FeaturizeText`](xref:Microsoft.ML.TextCatalog.FeaturizeText*) 변형을 사용하여, 입력 텍스트 열에 일련의 변형이 적용되면 lg 정규화된 단어 및 문자 n그램을 나타내는 숫자 벡터가 만들어집니다.
 
 ```csharp
 // Define text transform estimator
@@ -288,7 +288,7 @@ var textEstimator = mlContext.Transforms.Text.NormalizeText("Description")
     .Append(mlContext.Transforms.NormalizeLpNorm("Description"));
 ```
 
-`textEstimator`에는 [`FeaturizeText`](xref:Microsoft.ML.TextCatalog.FeaturizeText*) 메서드에서 수행하는 작업의 하위 세트가 있습니다. 보다 복잡한 파이프라인의 이점은 데이터에 적용되는 변형에 대한 제어와 가시성입니다. 
+`textEstimator`에는 [`FeaturizeText`](xref:Microsoft.ML.TextCatalog.FeaturizeText*) 메서드에서 수행하는 작업의 하위 세트가 있습니다. 보다 복잡한 파이프라인의 이점은 데이터에 적용되는 변형에 대한 제어와 가시성입니다.
 
 다음은 예로 첫 번째 항목을 사용하여 `textEstimator`에서 정의하는 변형 단계에서 생성되는 결과에 대한 자세한 설명입니다.
 

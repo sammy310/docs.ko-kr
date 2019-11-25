@@ -6,12 +6,12 @@ helpviewer_keywords:
 - fixed size buffers [C#]
 - unsafe buffers [C#]
 - unsafe code [C#], fixed size buffers
-ms.openlocfilehash: 5bfd9f3f559e4780b910a2e5a3430b08a2183ee3
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 33af43a69587ffaadd7fcb42fa1d30ee9fc41989
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833500"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74429408"
 ---
 # <a name="fixed-size-buffers-c-programming-guide"></a>고정 크기 버퍼(C# 프로그래밍 가이드)
 
@@ -33,7 +33,7 @@ private fixed char name[30];
 
 [!code-csharp[Struct with embedded inline array](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#7)]
 
-128개 요소 `char` 배열의 크기는 256바이트입니다. 고정 크기 [char](../../language-reference/keywords/char.md) 버퍼는 인코딩에 관계없이 항상 문자당 2바이트를 사용합니다. 이는 char 버퍼가 `CharSet = CharSet.Auto` 또는 `CharSet = CharSet.Ansi`를 사용하는 API 메서드 또는 구조체로 마샬링되는 경우에도 마찬가지입니다. 자세한 내용은 <xref:System.Runtime.InteropServices.CharSet>을 참조하세요.
+128개 요소 `char` 배열의 크기는 256바이트입니다. 고정 크기 [char](../../language-reference/builtin-types/char.md) 버퍼는 인코딩에 관계없이 항상 문자당 2바이트를 사용합니다. 이는 char 버퍼가 `CharSet = CharSet.Auto` 또는 `CharSet = CharSet.Ansi`를 사용하는 API 메서드 또는 구조체로 마샬링되는 경우에도 마찬가지입니다. 자세한 내용은 <xref:System.Runtime.InteropServices.CharSet>을 참조하세요.
 
 앞의 예제에서는 C# 7.3부터 사용할 수 있으며 고정하지 않은 `fixed` 필드에 액세스하는 방법을 보여 줍니다.
 

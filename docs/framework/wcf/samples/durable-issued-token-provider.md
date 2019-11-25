@@ -2,12 +2,12 @@
 title: 영속 제공된 토큰 공급자
 ms.date: 03/30/2017
 ms.assetid: 76fb27f5-8787-4b6a-bf4c-99b4be1d2e8b
-ms.openlocfilehash: f1bb95ba676b47d29d5b527b5b93eddcf48f4bde
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 52c4e99f8b2a834d7200c2d2c2383fbdb21bdd1a
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989949"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73978335"
 ---
 # <a name="durable-issued-token-provider"></a>영속 제공된 토큰 공급자
 이 샘플에서는 사용자 지정 클라이언트가 발급한 토큰 공급자를 구현하는 방법을 보여 줍니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "70989949"
 > [!NOTE]
 > 이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.  
   
- 이 샘플에서는 [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)를 사용 하 여 ICalculator 계약을 노출 합니다. 다음 코드에서는 클라이언트에서의 바인딩 구성을 보여 줍니다.  
+ 이 샘플은 [\<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)를 사용 하 여 ICalculator 계약을 노출 합니다. 다음 코드에서는 클라이언트에서의 바인딩 구성을 보여 줍니다.  
   
 ```xml  
 <bindings>
@@ -137,7 +137,7 @@ ms.locfileid: "70989949"
   
      <xref:System.IdentityModel.Selectors.SecurityTokenManager>는 <xref:System.IdentityModel.Selectors.SecurityTokenProvider> 메서드에서 전달되는 특정 <xref:System.IdentityModel.Selectors.SecurityTokenRequirement>에 대한 `CreateSecurityTokenProvider`를 만드는 데 사용됩니다. 또한 보안 토큰 관리자는 토큰 인증자와 토큰 serializer를 만드는 데 사용되지만 이 샘플에서는 설명하지 않습니다. 이 샘플에서 사용자 지정 보안 토큰 관리자는 <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> 클래스를 상속하며, 전달된 토큰 요구 사항에서 발급된 토큰이 필요함을 나타낼 때 사용자 지정 토큰 공급자를 반환하도록 `CreateSecurityTokenProvider` 메서드를 재정의합니다.  
   
-    ```csharp  
+    ```csharp
     class DurableIssuedTokenClientCredentialsTokenManager :  
      ClientCredentialsSecurityTokenManager  
     {  
@@ -154,7 +154,7 @@ ms.locfileid: "70989949"
         {  
           return new DurableIssuedSecurityTokenProvider ((IssuedSecurityTokenProvider)base.CreateSecurityTokenProvider( tokenRequirement), this.cache);  
         }  
-        else  
+        else
         {  
           return base.CreateSecurityTokenProvider(tokenRequirement);  
         }  
@@ -166,7 +166,7 @@ ms.locfileid: "70989949"
   
      클라이언트 자격 증명 클래스는 클라이언트 프록시에 대해 구성된 자격 증명을 나타내는 데 사용되며 토큰 인증자, 토큰 공급자 및 토큰 serializer를 가져오는 데 사용되는 보안 토큰 관리자를 만듭니다.  
   
-    ```csharp  
+    ```csharp
     public class DurableIssuedTokenClientCredentials : ClientCredentials  
     {  
       IssuedTokenCache cache;  
@@ -206,7 +206,7 @@ ms.locfileid: "70989949"
   
 4. 토큰 캐시를 구현합니다. 이 샘플 구현에서는 특정 토큰 캐시의 소비자가 캐시와 상호 작용할 때 이용하는 추상 기본 클래스를 사용합니다.  
   
-    ```csharp  
+    ```csharp
     public abstract class IssuedTokenCache  
     {  
       public abstract void AddToken ( GenericXmlSecurityToken token, EndpointAddress target, EndpointAddress issuer);  
@@ -217,7 +217,7 @@ ms.locfileid: "70989949"
   
      클라이언트가 사용자 지정 클라이언트 자격 증명을 사용할 수 있도록 이 샘플에서는 기본 클라이언트 자격 증명 클래스를 삭제하고 새 클라이언트 자격 증명 클래스를 제공합니다.  
   
-    ```csharp  
+    ```csharp
     clientFactory.Endpoint.Behaviors.Remove<ClientCredentials>();  
     DurableIssuedTokenClientCredentials durableCreds = new DurableIssuedTokenClientCredentials();  
     durableCreds.IssuedTokenCache = cache;  
@@ -250,6 +250,6 @@ ms.locfileid: "70989949"
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Security\DurableIssuedTokenProvider`  

@@ -1,17 +1,18 @@
 ---
-title: '방법: Visual Basic에서 파일 이동'
+title: '방법: 파일 이동'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - files [Visual Basic], moving
 ms.assetid: 53a7457b-5815-41ad-b37d-28537c1fb77a
-ms.openlocfilehash: e529e263353b08778eba338b20aef34762e66824
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 29c64a7a81028d47bf489212e6d8faec5e8dda75
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64628861"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74335366"
 ---
 # <a name="how-to-move-a-file-in-visual-basic"></a>방법: Visual Basic에서 파일 이동
+
 `My.Computer.FileSystem.MoveFile` 메서드를 사용하여 파일을 다른 폴더로 이동할 수 있습니다. 대상 구조체가 없는 경우 새로 만듭니다.  
   
 ### <a name="to-move-a-file"></a>파일을 이동하려면  
@@ -27,6 +28,7 @@ ms.locfileid: "64628861"
      [!code-vb[VbVbcnMyFileSystem#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#25)]  
   
 ## <a name="robust-programming"></a>강력한 프로그래밍  
+
  다음 조건에서 예외가 발생합니다.  
   
 - 길이가 0인 문자열이거나, 공백만 포함하거나, 잘못된 문자를 포함하거나, 경로가 디바이스 경로인 경우(\\\\.\\로 시작됨)와 같은 여러 가지 이유 중 하나로 경로가 올바르지 않은 경우(<xref:System.ArgumentException>)  

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5c5450ea-6af1-4b75-a267-613d0ac54707
-ms.openlocfilehash: 087aaf5ebc69046d5404765114cfaecd28798915
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: ffa2f906ac2ff4630de83938ce365c1b9d5d4d64
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321381"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976628"
 ---
 # <a name="specifying-service-run-time-behavior"></a>서비스 런타임 동작 지정
 서비스 계약을 디자인([Designing Service Contracts](designing-service-contracts.md)) 서비스 계약을 구현([Implementing Service Contracts](implementing-service-contracts.md))했으면 서비스 런타임의 작업 동작을 구성할 수 있습니다. 이 항목에서는 시스템 제공 서비스와 작업 동작에 대해 설명하고, 새 동작을 만들기 위해 추가 정보를 찾을 수 있는 위치에 대해 설명합니다. 일부 동작은 특성으로 적용되지만 대부분은 애플리케이션 구성 파일을 사용하여 적용되거나 프로그래밍 방식으로 적용됩니다. 서비스 응용 프로그램을 구성 하는 방법에 대 한 자세한 내용은 [서비스 구성](configuring-services.md)을 참조 하세요.  
@@ -59,7 +59,7 @@ ms.locfileid: "72321381"
   
  그러나 서비스 개체를 직접 만들고, 해당 개체를 사용하여 서비스 호스트를 만들 수도 있습니다. 이렇게 하려면 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> 속성도 <xref:System.ServiceModel.InstanceContextMode.Single> 로 설정해야 하며, 그렇지 않으면 서비스 호스트를 열 때 예외가 throw됩니다.  
   
- <xref:System.ServiceModel.ServiceHost.%23ctor%28System.Object%2CSystem.Uri%5B%5D%29?displayProperty=nameWithType> 생성자를 사용하여 이러한 서비스를 만듭니다. singleton 서비스에서 사용할 특정 개체 인스턴스를 제공하려면 사용자 지정 <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer?displayProperty=nameWithType> 를 구현하는 대신 제공합니다. 예를 들어 매개 변수가 없는 기본 public 생성자를 구현하지 않는 경우와 같이 서비스 구현 형식을 생성하기 어려운 경우 이 오버로드를 사용할 수 있습니다.  
+ <xref:System.ServiceModel.ServiceHost.%23ctor%28System.Object%2CSystem.Uri%5B%5D%29?displayProperty=nameWithType> 생성자를 사용하여 이러한 서비스를 만듭니다. singleton 서비스에서 사용할 특정 개체 인스턴스를 제공하려면 사용자 지정 <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer?displayProperty=nameWithType> 를 구현하는 대신 제공합니다. 서비스 구현 형식을 생성 하기 어려운 경우이 오버 로드를 사용할 수 있습니다 (예: 매개 변수가 없는 public 생성자를 구현 하지 않는 경우).
   
  이 생성자에 개체가 제공 되 면 WCF (Windows Communication Foundation) 인스턴스 동작과 관련 된 일부 기능이 다르게 작동 합니다. 예를 들어 잘 알려진 개체 인스턴스를 제공하는 경우 <xref:System.ServiceModel.InstanceContext.ReleaseServiceInstance%2A?displayProperty=nameWithType> 호출은 아무런 효과가 없습니다. 마찬가지로 다른 인스턴스 해제 메커니즘도 무시됩니다. <xref:System.ServiceModel.ServiceHost> 클래스는 항상 모든 작업에 대해 <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> 속성이 <xref:System.ServiceModel.ReleaseInstanceMode.None?displayProperty=nameWithType> 으로 설정된 것처럼 동작합니다.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "72321381"
   
 - <xref:System.ServiceModel.Description.ClientViaBehavior> 전송 채널을 만들어야 하는 URI(Uniform Resource Identifier)를 지정하기 위해 클라이언트에서 사용합니다.  
   
-- <xref:System.ServiceModel.Description.MustUnderstandBehavior> @No__t_0 처리를 사용 하지 않도록 WCF에 지시 합니다.  
+- <xref:System.ServiceModel.Description.MustUnderstandBehavior> `MustUnderstand` 처리를 사용 하지 않도록 WCF에 지시 합니다.  
   
 - <xref:System.ServiceModel.Description.SynchronousReceiveBehavior> 런타임에 채널에 대한 동기 수신 프로세스를 사용하도록 지시합니다.  
   
