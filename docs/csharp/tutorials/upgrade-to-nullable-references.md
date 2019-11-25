@@ -4,12 +4,12 @@ description: 이 고급 자습서에서는 nullable 참조 형식을 소개합�
 ms.date: 02/19/2019
 ms.technology: csharp-null-safety
 ms.custom: mvc
-ms.openlocfilehash: 9cb9ac1b292e61d6a8a5f84be29a6a6c323725fc
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: d0faea19ac1c7c7f28d9775fc3b69c71a752fbcb
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039680"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73969343"
 ---
 # <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>자습서: nullable 참조 형식이 있는 기존 코드 마이그레이션
 
@@ -32,7 +32,7 @@ C# 8.0 컴파일러를 포함하여 .NET Core를 실행하도록 머신을 설�
 
 ## <a name="explore-the-sample-application"></a>샘플 애플리케이션 살펴보기
 
-여기서 마이그레이션할 샘플 애플리케이션은 RSS 피드 리더기 웹앱입니다. 이 애플리케이션은 하나의 RSS 피드를 읽고 가장 최근 기사의 요약을 표시합니다. 표시되는 기사를 클릭하여 사이트를 방문할 수 있습니다. 이 애플리케이션은 비교적 최근에 작성되었지만, nullable 참조 형식을 사용할 수 있기 전에 작성되었습니다. 이 애플리케이션에는 바람직한 설계 원칙이 적용되었지만, 이 중요한 언어 기능을 남용하지는 마시기 바랍니다.
+여기서 마이그레이션할 샘플 애플리케이션은 RSS 피드 리더기 웹앱입니다. 이 애플리케이션은 하나의 RSS 피드를 읽고 가장 최근 기사의 요약을 표시합니다. 표시되는 기사를 선택하여 사이트를 방문할 수 있습니다. 이 애플리케이션은 비교적 최근에 작성되었지만, nullable 참조 형식을 사용할 수 있기 전에 작성되었습니다. 이 애플리케이션에는 바람직한 설계 원칙이 적용되었지만, 이 중요한 언어 기능을 남용하지는 마시기 바랍니다.
 
 샘플 애플리케이션에는 앱의 주요 기능의 유효성을 검사하는 단위 테스트 라이브러리가 포함되어 있습니다. 생성되는 경고에 따라 구현을 조금이라도 변경하는 경우, 이 프로젝트를 사용하여 안전하게 업그레이드할 수 있습니다. 시작 코드는 [dotnet/samples](https://github.com/dotnet/samples/tree/master/csharp/tutorials/nullable-reference-migration/start) GitHub 리포지토리에서 다운로드할 수 있습니다.
 

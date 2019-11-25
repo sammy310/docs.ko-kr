@@ -5,14 +5,14 @@ author: Thraka
 ms.author: adegeo
 ms.date: 03/01/2019
 ms.custom: ''
-ms.openlocfilehash: 7480c86af1acd482adff5e3e24dc229f24af0e5b
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 64920f1d226fcc8265d0be252d4751f2ba278cc1
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216323"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973286"
 ---
-# <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>방법: .NET Core에 Windows Forms 데스크톱 앱 포팅
+# <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>.NET Core에 Windows Forms 데스크톱 앱을 포팅하는 방법
 
 이 문서에서는 .NET Framework에서 .NET Core 3.0으로 Windows Forms 기반 데스크톱 앱을 포팅하는 방법을 설명합니다. .NET Core 3.0 SDK는 Windows Forms 애플리케이션을 지원합니다. Windows Forms는 Windows 전용 프레임워크이고 Windows에서만 실행됩니다. 이 예제에서는 .NET Core SDK CLI를 사용하여 프로젝트를 만들고 관리합니다.
 

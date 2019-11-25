@@ -1,5 +1,5 @@
 ---
-title: 쿼리 프로젝션(WCF Data Services)
+title: 쿼리 프로젝션 (WCF Data Services)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,22 +10,22 @@ helpviewer_keywords:
 - query projection [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: a09f4985-9f0d-48c8-b183-83d67a3dfe5f
-ms.openlocfilehash: 8128fd3cab0ca20da87a1a98c2657aefab96beaf
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 17475cccf461371a909660bfe3f8db29bf1fa2fe
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70779822"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975182"
 ---
-# <a name="query-projections-wcf-data-services"></a>쿼리 프로젝션(WCF Data Services)
+# <a name="query-projections-wcf-data-services"></a>쿼리 프로젝션 (WCF Data Services)
 
-프로젝션은 엔터티의 특정 속성만 응답 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 에서 반환 되도록 지정 하 여 쿼리에서 반환 되는 피드의 데이터 양을 줄이기 위해의 메커니즘을 제공 합니다. 자세한 내용은 [OData: 시스템 쿼리 옵션 ($select)](https://go.microsoft.com/fwlink/?LinkId=186076)을 선택 합니다.
+프로젝션은 엔터티의 특정 속성만 응답에서 반환 되도록 지정 하 여 쿼리에서 반환 되는 피드의 데이터 양을 줄이도록 OData (Open Data Protocol)의 메커니즘을 제공 합니다. 자세한 내용은 [OData: Select 시스템 쿼리 옵션 ($select)](https://go.microsoft.com/fwlink/?LinkId=186076)을 참조 하세요.
 
 이 항목에서는 쿼리 프로젝션을 정의하는 방법, 엔터티 및 비 엔터티 형식에 대한 요구 사항, 프로젝션된 결과 업데이트 및 프로젝션된 형식 만들기에 대해 설명하고 몇 가지 프로젝션 고려 사항을 제시합니다.
 
 ## <a name="defining-a-query-projection"></a>쿼리 프로젝션 정의
 
-URI에서 `$select` 쿼리 옵션을 사용 하거나 LINQ 쿼리에서 [select](../../../csharp/language-reference/keywords/select-clause.md) 절 (Visual Basic에서[선택](../../../visual-basic/language-reference/queries/select-clause.md) )을 사용 하 여 쿼리에 프로젝션 절을 추가할 수 있습니다. 반환된 엔터티 데이터는 클라이언트에서 엔터티 형식이나 비 엔터티 형식으로 프로젝션될 수 있습니다. 이 항목의 예제에서는 LINQ 쿼리에서 `select` 절을 사용하는 방법을 보여 줍니다.
+URI에서 `$select` 쿼리 옵션을 사용 하거나 LINQ 쿼리에서 [select](../../../csharp/language-reference/keywords/select-clause.md) 절 (Visual Basic에서[선택](../../../visual-basic/language-reference/queries/select-clause.md) )을 사용 하 여 프로젝션 절을 쿼리에 추가할 수 있습니다. 반환된 엔터티 데이터는 클라이언트에서 엔터티 형식이나 비 엔터티 형식으로 프로젝션될 수 있습니다. 이 항목의 예제에서는 LINQ 쿼리에서 `select` 절을 사용하는 방법을 보여 줍니다.
 
 > [!IMPORTANT]
 > 프로젝션된 형식을 업데이트한 내용을 저장할 때 데이터 서비스에서 데이터가 손실될 수 있습니다. 자세한 내용은 [프로젝션 고려 사항](#considerations)을 참조 하세요.
@@ -38,7 +38,7 @@ URI에서 `$select` 쿼리 옵션을 사용 하거나 LINQ 쿼리에서 [select]
 
 - 형식에 `ID`라는 속성이 있는 경우
 
-- 형식에 *형식이*`ID`인 속성이 있는 경우. 여기서 *type* 은 형식의 이름입니다.
+- *형식에 형식`ID`라는* 속성이 있는 경우 여기서 *type* 은 형식의 이름입니다.
 
 기본적으로 쿼리 결과를 클라이언트에서 정의된 형식으로 프로젝션하는 경우 프로젝션에서 요청된 속성이 클라이언트 형식에 있어야 합니다. 그러나 `true`의 <xref:System.Data.Services.Client.DataServiceContext.IgnoreMissingProperties%2A> 속성에 <xref:System.Data.Services.Client.DataServiceContext> 값을 지정하는 경우에는 프로젝션에 지정된 속성이 클라이언트 형식에 있을 필요가 없습니다.
 
@@ -70,9 +70,9 @@ URI에서 `$select` 쿼리 옵션을 사용 하거나 LINQ 쿼리에서 [select]
    [!code-csharp[Astoria Northwind Client#ProjectWithInitializer](~/samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#projectwithinitializer)]
    [!code-vb[Astoria Northwind Client#ProjectWithInitializer](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#projectwithinitializer)]
 
-- 엔터티 형식: 지원됨
+- 엔터티 형식: 지원 됨
 
-- 비 엔터티 형식: 지원됨
+- 비 엔터티 형식: 지원 됨
 
 **생성자를 사용 하 여 새 프로젝션 인스턴스 만들기**
 
@@ -81,9 +81,9 @@ URI에서 `$select` 쿼리 옵션을 사용 하거나 LINQ 쿼리에서 [select]
    [!code-csharp[Astoria Northwind Client#ProjectWithConstructor](~/samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#projectwithconstructor)]
    [!code-vb[Astoria Northwind Client#ProjectWithConstructor](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#projectwithconstructor)]
 
-- 엔터티 형식: <xref:System.NotSupportedException>이 발생함
+- 엔터티 형식: <xref:System.NotSupportedException> 발생 합니다.
 
-- 비 엔터티 형식: 지원됨
+- 비 엔터티 형식: 지원 됨
 
 **프로젝션을 사용 하 여 속성 값 변환**
 
@@ -92,9 +92,9 @@ URI에서 `$select` 쿼리 옵션을 사용 하거나 LINQ 쿼리에서 [select]
    [!code-csharp[Astoria Northwind Client#ProjectWithTransform](~/samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#projectwithtransform)]
    [!code-vb[Astoria Northwind Client#ProjectWithTransform](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#projectwithtransform)]
 
-- 엔터티 형식: 이 변형은 혼동을 일으킬 수 있고 다른 엔터티에 속한 데이터 소스의 데이터를 덮어쓸 가능성이 있으므로 엔터티 형식에는 지원되지 않습니다. <xref:System.NotSupportedException>이 발생함
+- 엔터티 형식: 혼동을 야기 하 고 잠재적으로 다른 엔터티에 속한 데이터 소스의 데이터를 덮어쓸 수 있기 때문에이 변환은 엔터티 형식에 대해 지원 되지 않습니다. <xref:System.NotSupportedException>이 발생함
 
-- 비 엔터티 형식: 지원됨
+- 비 엔터티 형식: 지원 됨
 
 <a name="considerations"></a>
 
@@ -102,7 +102,7 @@ URI에서 `$select` 쿼리 옵션을 사용 하거나 LINQ 쿼리에서 [select]
 
 쿼리 프로젝션을 정의할 때 다음 사항을 추가로 고려해야 합니다.
 
-- Atom 형식에 대한 사용자 지정 피드를 정의하는 경우 사용자 지정 매핑이 정의되어 있는 모든 엔터티 속성이 프로젝션에 포함되도록 해야 합니다. 매핑된 엔터티 속성이 프로젝션에 포함되지 않는 경우 데이터가 손실될 수 있습니다. 자세한 내용은 [사용자 지정 피드](feed-customization-wcf-data-services.md)합니다.
+- Atom 형식에 대한 사용자 지정 피드를 정의하는 경우 사용자 지정 매핑이 정의되어 있는 모든 엔터티 속성이 프로젝션에 포함되도록 해야 합니다. 매핑된 엔터티 속성이 프로젝션에 포함되지 않는 경우 데이터가 손실될 수 있습니다. 자세한 내용은 [피드 사용자 지정](feed-customization-wcf-data-services.md)을 참조 하세요.
 
 - 데이터 서비스의 데이터 모델에서 엔터티의 모든 속성을 포함하지 않는 프로젝션된 형식에 삽입이 수행되는 경우 클라이언트에서 프로젝션에 포함되지 않은 속성이 기본값으로 설정됩니다.
 
@@ -112,10 +112,10 @@ URI에서 `$select` 쿼리 옵션을 사용 하거나 LINQ 쿼리에서 [select]
 
 - 프로젝션에 탐색 속성이 포함된 경우 <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> 메서드를 호출하지 않고도 관련 개체가 암시적으로 로드됩니다. <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> 메서드는 프로젝션된 쿼리에서 사용할 수 없습니다.
 
-- 클라이언트의 쿼리 프로젝션 쿼리는 요청 URI에서 `$select` 쿼리 옵션을 사용하도록 변환됩니다. 프로젝션을 사용하는 쿼리가 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 쿼리 옵션을 지원하지 않는 이전 버전의 `$select`에 대해 실행되는 경우 오류가 반환됩니다. 이러한 문제는 데이터 서비스에 대한 <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A>의 <xref:System.Data.Services.DataServiceBehavior>이 <xref:System.Data.Services.Common.DataServiceProtocolVersion.V1> 값으로 설정된 경우에도 발생할 수 있습니다. 자세한 내용은 [데이터 서비스 버전 관리](data-service-versioning-wcf-data-services.md)합니다.
+- 클라이언트의 쿼리 프로젝션 쿼리는 요청 URI에서 `$select` 쿼리 옵션을 사용하도록 변환됩니다. 프로젝션을 사용하는 쿼리가 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 쿼리 옵션을 지원하지 않는 이전 버전의 `$select`에 대해 실행되는 경우 오류가 반환됩니다. 이러한 문제는 데이터 서비스에 대한 <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A>의 <xref:System.Data.Services.DataServiceBehavior>이 <xref:System.Data.Services.Common.DataServiceProtocolVersion.V1> 값으로 설정된 경우에도 발생할 수 있습니다. 자세한 내용은 [데이터 서비스 버전 관리](data-service-versioning-wcf-data-services.md)를 참조 하세요.
 
-자세한 내용은 [방법: 프로젝트 쿼리 결과](how-to-project-query-results-wcf-data-services.md)
+자세한 내용은 [방법: 쿼리 결과 프로젝트](how-to-project-query-results-wcf-data-services.md)를 참조 하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [데이터 서비스 쿼리](querying-the-data-service-wcf-data-services.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - common language runtime, about
 - common language runtime, overview
 ms.assetid: 29848c96-fc36-462d-8072-ba223a40b697
-ms.openlocfilehash: b5dacad4511df0476dded6ac3784014665234077
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 397a78514dc5878e83708882ceeb4d92160d9a78
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123242"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975651"
 ---
 # <a name="overview-of-the-net-framework"></a>.NET Framework의 개요
 
@@ -96,4 +96,4 @@ Windows Forms 클래스는 Windows GUI 개발을 매우 단순하게 하는 다�
 - [개발 가이드](../development-guide.md)
 - [도구](../tools/index.md)
 - [.NET 샘플 및 자습서](../../samples-and-tutorials/index.md)
-- [.NET Framework 클래스 라이브러리](https://go.microsoft.com/fwlink/?LinkID=227195)
+- [.NET API 브라우저](../../../api/index.md)

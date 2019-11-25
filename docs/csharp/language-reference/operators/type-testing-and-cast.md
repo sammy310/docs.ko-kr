@@ -18,12 +18,12 @@ helpviewer_keywords:
 - cast expression [C#]
 - () operator [C#]
 - typeof operator [C#]
-ms.openlocfilehash: d2fd43644949c842ff883731d3c7f00228cabfd7
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: c3550a593eafb9b50fa7e419e2f747c3e7a0e2ea
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73038863"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972646"
 ---
 # <a name="type-testing-and-cast-operators-c-reference"></a>형식 테스트 및 캐스트 연산자(C# 참조)
 
@@ -154,5 +154,5 @@ E is T ? (T)(E) : (T)null
 
 - [C# 참조](../index.md)
 - [C# 연산자](index.md)
-- [방법: 패턴 일치와 is 및 as 연산자를 사용하여 안전하게 캐스트](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md)
+- [패턴 일치와 is 및 as 연산자를 사용하여 안전하게 캐스트하는 방법](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md)
 - [.NET의 제네릭](../../../standard/generics/index.md)

@@ -5,30 +5,16 @@ helpviewer_keywords:
 - .NET Framework 4, migration
 - application compatibility
 ms.assetid: df478548-8c05-4de2-8ba7-adcdbe1c2a60
-ms.openlocfilehash: d3966ff15e06baf293ea02dad031bd5849b4a20f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c1c3298d87ad0f481fa30182e40cd5edcd535d6a
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126042"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975614"
 ---
 # <a name="net-framework-4-migration-issues"></a>.NET Framework 4 마이그레이션 문제
 
-이 항목에서는 수정, 표준 준수 및 보안에 대한 변경 내용, 고객 피드백 기반의 변경 내용을 포함하여 .NET Framework 버전 3.5 서비스 팩 1과 .NET Framework 버전 4 간의 마이그레이션 문제에 대해 설명합니다. 이러한 변경 내용은 대부분 애플리케이션에서 프로그래밍을 수정할 필요가 없습니다. 수정이 필요한 경우 표의 권장 변경 내용 열을 참조하세요.
-
-이 항목에서는 다음 영역의 중요한 변경 내용에 대해 설명합니다.
-
-- [ASP.NET 및 웹](#aspnet-and-web)
-
-- [코어](#core)
-
-- [Data](#data)
-
-- [WCF(Windows Communication Foundation)](#windows-communication-foundation-wcf)
-
-- [WPF(Windows Presentation Foundation)](#windows-presentation-foundation-wpf)
-
-- [XML](#xml)
+이 항목에서는 수정, 표준 준수 및 보안에 대한 변경 내용, 고객 피드백 기반의 변경 내용을 포함하여 .NET Framework 버전 3.5 서비스 팩 1과 .NET Framework 버전 4 간의 마이그레이션 문제에 대해 설명합니다. 이러한 변경 내용은 대부분 애플리케이션에서 프로그래밍을 수정할 필요가 없습니다. 수정이 필요한 경우 표의 권장 변경 내용 열을 참조하세요. 중요한 변경 내용은 ASP.NET 및 WPF(Windows Presentation Foundation)와 같이 영역별로 세분화되어 있습니다.
 
 이 항목의 문제에 대한 좀 더 간략한 개요는 [.NET Framework 4 마이그레이션 가이드](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ff657133%28v=vs.100%29)를 참조하세요.
 
@@ -56,7 +42,7 @@ ms.locfileid: "73126042"
 | **Web.config 파일의 모바일 어셈블리** | ASP.NET의 이전 버전에서는 System.Web.Mobile.dll 어셈블리에 대한 참조가 `system.web`/`compilation`의 `assemblies` 섹션에 있는 루트 Web.config 파일에 포함되었습니다. 성능 향상을 위해 이 어셈블리에 대한 참조가 제거되었습니다.<br><br>참고: System.Web.Mobile.dll 어셈블리 및 ASP.NET 모바일 컨트롤은 ASP.NET 4에 포함되지만 사용되지는 않습니다. | 이 어셈블리의 형식을 사용하려면 루트 Web.config 파일 또는 애플리케이션 Web.config 파일의 어셈블리에 대한 참조를 추가하세요. |
 | **출력 캐싱** | ASP.NET 1.0에서는 `Location="ServerAndClient"`를 출력 캐시 설정으로 지정한 캐시된 페이지가 응답에서 `Vary:*` HTTP 헤더를 내보내는 버그가 있었습니다. 이로 인해 클라이언트 브라우저가 페이지를 로컬에 캐시하지 못했습니다. ASP.NET 1.1에서는 `Vary:*` 헤더를 억제하기 위해 호출할 수 있는 <xref:System.Web.HttpCachePolicy.SetOmitVaryStar%2A> 메서드가 추가되었습니다. 그러나 버그 보고서에 따르면 개발자는 기존의 `SetOmitVaryStar` 동작을 인식하지 못합니다.<br><br>ASP.NET 4에서는 다음 지시문을 지정하는 응답에서 더 이상 `Vary:*` HTTP 헤더를 내보내지 않습니다.<br><br>`<%@ OutputCache Location="ServerAndClient" %>`<br><br>결과적으로 `Vary:*` 헤더를 억제하기 위해 <xref:System.Web.HttpCachePolicy.SetOmitVaryStar%2A> 메서드가 더 이상 필요하지 않습니다. `Location` 특성에 대해 “ServerAndClient”를 지정하는 애플리케이션에서는 <xref:System.Web.HttpCachePolicy.SetOmitVaryStar%2A>를 호출할 필요 없이 브라우저에서 페이지를 캐시할 수 있습니다. | 애플리케이션의 페이지가 `Vary:*`을 내보내야 하는 경우 다음 예제와 같이 <xref:System.Web.HttpResponse.AppendHeader%2A> 메서드를 호출합니다.<br><br>`System.Web.HttpResponse.AppendHeader("Vary","*");`<br><br>또는 출력 캐싱 `Location` 특성의 값을 “Server”로 변경할 수 있습니다. |
 | **페이지 구문 분석** | ASP.NET 웹 페이지(.aspx 파일) 및 사용자 컨트롤(.ascx 파일)의 페이지 파서는 이전 버전의 ASP.NET보다 ASP.NET 4에서 더 엄격하며, 이전 버전보다 더 많은 태그를 잘못된 것으로 표시합니다. | 페이지가 실행될 때 생성되는 오류 메시지를 검사하고 잘못된 태그에서 발생하는 오류를 수정하세요. |
-| **Passport 형식** | ASP.NET 2.0에 내장된 Passport 지원은 사용되지 않으며 Passport(이제 Live ID SDK)의 변경으로 인해 지원되지 않습니다. 그 결과 <xref:System.Web.Security>의 Passport와 관련된 형식이 이제 `ObsoleteAttribute` 특성으로 표시됩니다. | <xref:System.Web.Security> 네임스페이스(예: <xref:System.Web.Security.PassportIdentity>)에서 Passport 형식을 사용하는 코드를 [SDK](https://go.microsoft.com/fwlink/?LinkId=106346)를 사용하도록 변경하세요. |
+| **Passport 형식** | ASP.NET 2.0에 내장된 Passport 지원은 사용되지 않으며 Passport(이제 Live ID SDK)의 변경으로 인해 지원되지 않습니다. 그 결과 <xref:System.Web.Security>의 Passport와 관련된 형식이 이제 `ObsoleteAttribute` 특성으로 표시됩니다. | <xref:System.Web.Security> 네임스페이스(예: <xref:System.Web.Security.PassportIdentity>)에서 Passport 형식을 사용하는 코드를 Windows Live ID SDK를 사용하도록 변경하세요. |
 | **FilePath 속성의 PathInfo 정보** | ASP.NET 4는 <xref:System.Web.HttpRequest.FilePath>, <xref:System.Web.HttpRequest.AppRelativeCurrentExecutionFilePath>, <xref:System.Web.HttpRequest.CurrentExecutionFilePath>와 같은 속성의 반환 값에 더 이상 `PathInfo` 값을 포함하지 않습니다. 대신, `PathInfo` 정보를 <xref:System.Web.HttpRequest.PathInfo>에서 사용할 수 있습니다. 예를 들어 다음과 같은 URL 조각을 가정해 보겠습니다.<br><br>`/testapp/Action.mvc/SomeAction`<br><br>이전 버전의 ASP.NET에서 <xref:System.Web.HttpRequest> 속성은 다음과 같은 값을 갖습니다.<br><br>* <xref:System.Web.HttpRequest.FilePath>: `/testapp/Action.mvc/SomeAction`<br>* <xref:System.Web.HttpRequest.PathInfo>: (empty)<br><br>ASP.NET 4에서 <xref:System.Web.HttpRequest> 속성은 대신 다음과 같은 값을 갖습니다.<br><br>* <xref:System.Web.HttpRequest.FilePath>: `/testapp/Action.mvc`<br>* <xref:System.Web.HttpRequest.PathInfo>: `SomeAction` | 경로 정보를 반환하기 위해 <xref:System.Web.HttpRequest> 클래스의 속성에 의존하는 위치에 대한 코드를 검사하세요. 경로 정보가 반환되는 방식의 변화를 반영하도록 코드를 변경하세요. |
 | **요청 유효성 검사** | 요청 유효성 검사를 향상하기 위해, 요청 수명 주기의 초기에 ASP.NET 요청 유효성 검사가 호출됩니다. 따라서 웹 서비스 호출 및 사용자 지정 처리기 등 .aspx 파일 이외의 요청에 대해서는 요청 유효성 검사가 실행됩니다. 또한 요청 처리 파이프라인에서 사용자 지정 HTTP 모듈이 실행 중일 때 요청 유효성 검사가 활성화됩니다.<br><br>이러한 변경 결과로 .aspx 파일 이외의 리소스에 대한 요청은 요청 유효성 검사 오류를 throw할 수 있습니다. 요청 파이프라인(예: 사용자 지정 HTTP 모듈)에서 실행되는 사용자 지정 코드는 요청 유효성 검사 오류를 throw할 수 있습니다. | 필요한 경우 웹 구성 파일에서 다음 설정을 사용하여 요청 유효성 검사를 트리거하는 .aspx 페이지만 이전 동작으로 되돌릴 수 있습니다.<br><br>`<httpRuntime requestValidationMode="2.0" />`<br><br>경고: 이전 동작으로 되돌리는 경우 기존 처리기, 모듈 및 기타 사용자 지정 코드의 모든 코드가 XSS 공격 벡터일 수 있는, 잠재적으로 안전하지 않은 HTTP 입력에 대한 검사를 수행해야 합니다. |
 | **라우팅** | Visual Studio 2010에서 파일 시스템 웹 사이트를 만든 경우 이름에 점(.)이 포함된 폴더에 웹 사이트가 있으면 URL 라우팅이 안정적으로 작동하지 않습니다. 일부 가상 경로에서 HTTP 404 오류가 반환됩니다. 이 오류는 Visual Studio 2010이 루트 가상 디렉터리의 잘못된 경로를 사용하여 Visual Studio 개발 서버를 시작하기 때문에 발생합니다. | * 파일 기반 웹 사이트의 **속성** 페이지에서 **가상 경로** 특성을 “/”로 변경하세요.<br><br>또는<br><br>* 웹 사이트 프로젝트를 대신 웹 애플리케이션 프로젝트를 만드세요. 웹 애플리케이션 프로젝트에는 이 문제가 없으며, 프로젝트 폴더의 이름에 점이 있는 경우에도 URL 라우팅이 작동합니다.<br><br>또는<br><br>* IIS에서 호스트되는 HTTP 기반 웹 사이트를 만드세요. IIS에서 호스트하는 웹 사이트는 가상 경로는 물론 프로젝트 파일 폴더에도 점을 포함할 수 있습니다. |
@@ -104,7 +90,7 @@ ms.locfileid: "73126042"
 
 | 기능 | 3\.5 SP1과의 차이점 | 권장 변경 내용 |
 | ------- | ------------------------ | ------------------- |
-| **손상된 프로세스 상태에 대한 예외** | CLR은 더 이상 손상된 프로세스 상태에 대한 예외를 관리 코드의 예외 처리기로 전달하지 않습니다. | 이러한 예외는 프로세스의 상태가 손상되었음을 나타냅니다. 이 상태에서는 애플리케이션을 실행하는 것이 좋지 않습니다.<br><br>자세한 내용은 CLR 자세히 보기 블로그의 <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute> 및 [손상된 상태 예외 처리](https://go.microsoft.com/fwlink/?LinkID=179681) 항목을 참조하세요. |
+| **손상된 프로세스 상태에 대한 예외** | CLR은 더 이상 손상된 프로세스 상태에 대한 예외를 관리 코드의 예외 처리기로 전달하지 않습니다. | 이러한 예외는 프로세스의 상태가 손상되었음을 나타냅니다. 이 상태에서는 애플리케이션을 실행하는 것이 좋지 않습니다.<br><br>자세한 내용은 MSDN Magazine의 <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute> 및 [손상된 상태 예외 처리](https://docs.microsoft.com/archive/msdn-magazine/2009/february/clr-inside-out-handling-corrupted-state-exceptions) 항목을 참조하세요. |
 | **실행 엔진 예외** | catchable 예외로 인해 불안정한 프로세스가 계속 실행될 수 있으므로 <xref:System.ExecutionEngineException>은 이제는 사용되지 않습니다. 이러한 변경 덕분에 예측 가능성 및 런타임 시 안정성이 향상됩니다. | <xref:System.InvalidOperationException>을 사용하여 조건을 알리세요. |
 
 ### <a name="reflection"></a>반사
@@ -291,7 +277,7 @@ ms.locfileid: "73126042"
 | **네임스페이스 특성** | 데이터 손상을 방지하기 위해 이제 <xref:System.Xml.XPath.XPathNavigator> 개체가 `x:xmlns` 특성의 로컬 이름을 올바르게 반환합니다. |
 | **네임스페이스 선언** | 하위 트리의 <xref:System.Xml.XmlReader> 개체는 더 이상 하나의 XML 요소 내에 중복된 네임스페이스 선언을 만들지 않습니다. |
 | **스키마 유효성 검사** | 잘못된 스키마 유효성 검사를 방지하기 위해, <xref:System.Xml.Schema.XmlSchemaSet> 클래스는 XSD 스키마가 일관성 있고 정확하게 컴파일되도록 합니다. 이러한 스키마는 다른 스키마를 포함할 수 있습니다. 예를 들어 `A.xsd`는 `C.xsd`를 포함할 수 있는 `B.xsd`를 포함할 수 있습니다. 이들 중 하나를 컴파일하면 이 의존성 그래프가 트래버스됩니다. |
-| **스크립트 함수** | 함수가 실제로 사용 가능할 때 [function-available 함수](https://msdn.microsoft.com/library/ms256124(v=vs.110).aspx)는 더 이상 올바르지 않게 `false`를 반환하지 않습니다. |
+| **스크립트 함수** | 함수가 실제로 사용 가능할 때 [function-available 함수](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256124(v=vs.100))는 더 이상 올바르지 않게 `false`를 반환하지 않습니다. |
 | **URI** | <xref:System.Xml.Linq.XElement.Load%2A> 메서드는 이제 LINQ 쿼리에서 올바른 BaseURI를 반환합니다. |
 
 ### <a name="validation"></a>유효성 검사

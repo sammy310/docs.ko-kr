@@ -2,12 +2,12 @@
 title: .NET 컨테이너에서 대상으로 지정할 OS
 description: 컨테이너화된 .NET 애플리케이션을 위한 .NET 마이크로 서비스 아키텍처 | .NET 컨테이너에서 대상으로 지정할 OS
 ms.date: 01/07/2019
-ms.openlocfilehash: 8bcfa0212f84c575a63f76e05edec1e511cadc36
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: dcf91f5ab808a8704201979f6bab1140c3343bce
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72772011"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736916"
 ---
 # <a name="what-os-to-target-with-net-containers"></a>.NET 컨테이너에서 대상으로 지정할 OS
 
@@ -19,9 +19,11 @@ Linux의 경우 공식 .NET Docker 이미지(예: Debian)에서 여러 배포판
 
 그림 3-1에서는 사용하는 .NET 프레임워크에 따라 가능한 OS 버전을 확인할 수 있습니다.
 
-![레거시 .NET Framework 애플리케이션을 배포할 때는 레거시 앱 및 IIS와 호환되고 더 큰 이미지를 가지는 Windows Server Core를 대상으로 해야 합니다. .NET Core 애플리케이션을 배포할 때는 클라우드에 최적화되고 Kestrel을 사용하며 더 규모가 작으면서 더 빠르게 시작하는 Windows Nano Server를 대상으로 할 수 있습니다. 또한 Debian, Alpine 등을 지원하는 Linux를 대상으로 할 수도 있습니다. Kestrel을 사용하고 더 규모가 작고 더 빠르게 시작됩니다.](./media/image1.png)
+![.NET 컨테이너에 사용할 OS를 보여 주는 다이어그램](./media/net-container-os-targets/targeting-operating-systems.png)
 
 **그림 3-1.** .NET framework의 버전에 따라 대상으로 하는 운영 체제
+
+레거시 .NET Framework 애플리케이션을 배포할 때는 레거시 앱 및 IIS와 호환되지만 더 큰 이미지를 가지는 Windows Server Core를 대상으로 해야 합니다. .NET Core 애플리케이션을 배포할 때는 클라우드에 최적화되고 Kestrel을 사용하며 더 규모가 작으면서 더 빠르게 시작하는 Windows Nano Server를 대상으로 할 수 있습니다. 또한 Debian, Alpine 등을 지원하는 Linux를 대상으로 할 수도 있습니다. Kestrel을 사용하고 더 규모가 작으며 더 빠르게 시작됩니다.
 
 다른 Linux 배포판을 사용하려 하거나 Microsoft에서 제공하지 않는 버전 이미지가 필요한 경우 자체 Docker 이미지를 만들 수도 있습니다. 예를 들어 .NET Framework 및Windows Server Core에서 실행되는 기존 ASP.NET Core를 통해 이미지를 만들 수 있으나 Docker에는 그렇게 일반적인 시나리오가 아닙니다.
 

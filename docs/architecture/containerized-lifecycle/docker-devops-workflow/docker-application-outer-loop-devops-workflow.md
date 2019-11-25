@@ -2,18 +2,18 @@
 title: Docker 애플리케이션에 대한 외부 루프 DevOps 워크플로의 단계
 description: DevOps 워크플로의 "외부 루프"에 대한 단계 알아보기
 ms.date: 02/15/2019
-ms.openlocfilehash: 5687caff0c635e7add135654a8f564b2c509cbf8
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 7c465ab380770441005f7365f53bc585236c31bd
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834567"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738285"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Docker 애플리케이션에 대한 외부 루프 DevOps 워크플로의 단계
 
-그림 5-1은 DevOps 외부 루프 워크플로를 구성하는 단계를 아주 자세히 묘사하여 보여줍니다.
+그림 5-1은 DevOps 외부 루프 워크플로를 구성하는 단계를 아주 자세히 묘사하여 보여줍니다. 이 그림은 DevOps의 "외부 루프"를 보여줍니다. 코드가 리포지토리에 푸시되면 CI 파이프라인이 시작된 후 CD 파이프라인을 시작하고 해당 파이프라인에서 애플리케이션이 배포됩니다. 배포된 애플리케이션에서 수집된 메트릭은 개발 워크로드에 피드백되며, 여기서 "내부 루프"가 발생하므로 개발 팀은 사용자 및 비즈니스 요구에 응답하는 실질적인 데이터를 갖게 됩니다.
 
-![이 다이어그램은 DevOps의 "외부 루프"를 보여줍니다. 코드가 리포지토리에 푸시되면 CI 파이프라인이 시작된 후 CD 파이프라인을 시작하고 해당 파이프라인에서 애플리케이션이 배포됩니다. 배포된 애플리케이션에서 수집된 메트릭은 개발 워크로드에 피드백되며, 여기서 "내부 루프"가 발생하므로 개발 팀은 사용자 및 비즈니스 요구에 응답하는 실질적인 데이터를 갖게 됩니다.](./media/image1.png)
+![DevOps 외부 루프 워크플로의 6개 단계를 보여 주는 다이어그램](./media/docker-application-outer-loop-devops-workflow/overview-dev-ops-outter-loop-workflow.png)
 
 **그림 5-1**. Microsoft 도구를 사용하는 Docker 애플리케이션에 대한 DevOps 외부 루프 워크플로
 
@@ -45,9 +45,9 @@ CI는 최신 소프트웨어 테스트 및 제공을 위한 표준으로 부상 
 
 배포를 위해 Docker를 사용하는 경우 배포할 "최종 아티팩트"는 애플리케이션 또는 해당 애플리케이션에 포함된 서비스를 포함하는 Docker 이미지입니다. 해당 이미지는 *Docker 레지스트리*(Azure Container Registry와 같은 프라이빗 리포지토리 또는 공식 기본 이미지에 널리 사용되는 Docker Hub 레지스트리와 같은 공용 리포지토리)에 푸시되거나 게시됩니다.
 
-다음은 기본 개념입니다. CI 파이프라인은 Git와 같은 SCC 리포지토리에 대한 커밋에 의해 시작됩니다. 이 커밋은 그림 5-2와 같이 Azure DevOps Services가 Docker 컨테이너 내에서 빌드 작업을 실행하고 해당 작업이 성공적으로 완료되면 Docker 이미지를 Docker 레지스트리에 푸시하게 합니다.
+다음은 기본 개념입니다. CI 파이프라인은 Git와 같은 SCC 리포지토리에 대한 커밋에 의해 시작됩니다. 이 커밋은 그림 5-2와 같이 Azure DevOps Services가 Docker 컨테이너 내에서 빌드 작업을 실행하고 해당 작업이 성공적으로 완료되면 Docker 이미지를 Docker 레지스트리에 푸시하게 합니다. 외부 루프의 첫 번째 부분은 코드에서 실행, 디버그 및 유효성 검사 후 빌드 및 테스트 CI 단계까지의 코드 리포지토리에 이르는 1~3단계를 포함합니다.
 
-![외부 루프의 첫 번째 부분은 코드에서 실행, 디버그 및 유효성 검사 후 빌드 및 테스트 CI 단계까지의 코드 리포지토리에 이르는 1단계 ~ 3단계를 포함합니다.](./media/image2.png)
+![CI 워크플로와 관련된 세 단계를 보여 주는 다이어그램](./media/docker-application-outer-loop-devops-workflow/continuous-integration-steps.png)
 
 **그림 5-2**. CI에 포함되는 단계
 
@@ -69,7 +69,7 @@ CI는 최신 소프트웨어 테스트 및 제공을 위한 표준으로 부상 
 
 Visual Studio Azure DevOps Services는 CI/CD 파이프라인에 사용하여 Docker 이미지 빌드, 인증된 Docker 레지스트리에 Docker 이미지 푸시, Docker 이미지 실행, Docker CLI가 제공하는 다른 작업 실행을 수행할 수 있는 빌드 및 릴리스 템플릿을 포함합니다. 또한 다중 컨테이너 Docker 애플리케이션을 빌드, 푸시 또는 실행하는 데 사용할 수 있는 Docker Compose 작업을 추가하거나 그림 5-3과 같이 Docker Compose CLI가 제공하는 다른 작업을 실행할 수 있습니다.
 
-![Azure DevOps의 Docker CI 파이프라인 브라우저 보기](./media/image3.png)
+![Azure DevOps의 Docker CI 파이프라인의 스크린샷](./media/docker-application-outer-loop-devops-workflow/docker-ci-pipeline-azure-devops.png)
 
 **그림 5-3**. 빌드 및 릴리스 템플릿과 관련 작업을 포함하는 Azure DevOps Services의 Docker CI 파이프라인
 
@@ -124,15 +124,15 @@ SCC 레지스트리(예: Git)에 저장된 애플리케이션 코드가 "신뢰�
 
 일반적으로 Azure Container Registry의 프라이빗 리포지토리 또는 Docker Trusted Registry와 같은 온-프레미스 레지스트리 또는 제한된 액세스 권한을 가진 공용 클라우드 레지스트리(예: Docker Hub)에 사용자 지정 이미지에 대한 프라이빗 리포지토리가 있는 것이 좋습니다. 단, 마지막 레지스트리의 경우 코드가 오픈 소스가 아니더라도 공급업체의 보안을 신뢰해야 합니다. 어느 방법이든 사용하는 방법은 유사하며 그림 5-4와 같이 `docker push` 명령을 기반으로 합니다.
 
-![3단계에서 통합 및 테스트(CI)를 빌드하는 경우 결과로 얻은 Docker 이미지를 프라이빗 또는 공용 레지스트리에 게시할 수 있습니다.](./media/image4.png)
+![컨테이너 레지스트리에 대한 사용자 지정 이미지 푸시를 보여 주는 다이어그램](./media/docker-application-outer-loop-devops-workflow/docker-push-custom-images.png)
 
 **그림 5-4**. Docker 레지스트리에 사용자 지정 이미지 게시
 
-Azure Container Registry, Amazon Web Services Container Registry, Google Container Registry, Quay Registry 등 클라우드 공급업체의 Docker 레지스트리 제품이 많이 있습니다.
+3단계에서 통합 및 테스트(CI)를 빌드하는 경우 결과로 얻은 Docker 이미지를 프라이빗 또는 공용 레지스트리에 게시할 수 있습니다. Azure Container Registry, Amazon Web Services Container Registry, Google Container Registry, Quay Registry 등 클라우드 공급업체의 Docker 레지스트리 제품이 많이 있습니다.
 
 Docker 작업을 사용하면 그림 5-5와 같이 다중 태그를 통해 `docker-compose.yml` 파일에 의해 정의되고 다중 태그를 포함하는 서비스 이미지 세트를 인증된 Docker 레지스트리(예: Azure Container Registry)에 푸시할 수 있습니다.
 
-![Azure DevOps에서 이미지를 레지스트리에 푸시하기 위한 단계의 브라우저 보기](./media/image5.png)
+![레지스트리에 이미지를 게시하는 단계를 보여 주는 스크린샷](./media/docker-application-outer-loop-devops-workflow/publish-custom-image-to-docker-registry.png)
 
 **그림 5-5**. Azure DevOps Services를 사용하여 Docker 레지스트리에 사용자 이미지 푸시
 
@@ -148,13 +148,13 @@ Docker 이미지의 불변성 덕분에 CI를 통해 개발하고 테스트하�
 
 먼저 단일 환경 또는 다중 환경(QA, 준비 및 프로덕션)에서 간단한 Docker 호스트(VM 또는 서버)를 배포하는 덜 복잡한 시나리오를 살펴보겠습니다. 이 시나리오에서는 그림 5-6과 같이 내부적으로 CD 파이프라인이 Docker-Compose를 사용하여(Azure DevOps Services 배포 작업에서) Docker 애플리케이션을 관련 컨테이너 세트와 함께 배포할 수 있습니다.
 
-![CD 배포 단계(#4)에서는 Q&A, 준비 및 프로덕션 등 서로 다른 환경에 게시할 수 있습니다.](./media/image6.png)
+![3개 환경에 배포하는 CD 배포 단계를 보여 주는 다이어그램](./media/docker-application-outer-loop-devops-workflow/deploy-app-containers-to-docker-host-environments.png)
 
 **그림 5-6**. 간단한 Docker 호스트 환경 레지스트리에 애플리케이션 컨테이너 배포
 
 그림 5-7은 작업 추가 대화 상자에서 Docker Compose를 클릭하여 Azure DevOps Services를 통해 빌드 CI를 QA/테스트 환경에 연결할 수 있는 방법을 강조합니다. 그러나 준비 또는 프로덕션 환경에 배포하는 경우 일반적으로 다중 환경(QA, 준비 및 프로덕션 등)을 처리하는 Release Management 기능을 사용합니다. 단일 Docker 호스트에 배포하는 경우 Azure DevOps Services "Docker Compose" 작업(후드 아래에서 `docker-compose up` 명령을 호출하는)을 사용합니다. AKS(Azure Kubernetes Service)에 배포하는 경우 다음 섹션에서 설명하듯이 Docker 배포 작업을 사용합니다.
 
-![Docker Compose 작업 추가 브라우저 보기](./media/image7.png)
+![Docker Compose 작업의 작업 추가 대화 상자를 보여 주는 스크린샷](./media/docker-application-outer-loop-devops-workflow/add-tasks-docker-compose.png)
 
 **그림 5-7**. Azure DevOps Services 파이프라인에서 Docker Compose 작업 추가
 
@@ -166,7 +166,7 @@ Azure DevOps Services 템플릿을 사용하면 특정 레지스트리 이미지
 
 Azure DevOps Services 템플릿을 통해 새 이미지를 빌드하고, Docker 레지스트리에 게시하고, Linux 또는 Windows 호스트에서 실행하고, `docker-compose`와 같은 명령을 사용하여 여러 컨테이너를 전체 애플리케이션으로 배포할 수 있습니다. 이러한 작업은 모두 그림 5-8과 같은 여러 환경에 사용하기 위한 Azure DevOps Services Release Management 기능을 통해 수행됩니다.
 
-![Docker Compose 릴리스를 구성하는 Azure DevOps의 브라우저 보기](./media/image8.png)
+![Docker Compose 릴리스의 구성을 보여 주는 스크린샷](./media/docker-application-outer-loop-devops-workflow/configure-docker-compose-release.png)
 
 **그림 5-8**. Azure DevOps Services Release Management에서 Azure DevOps Services Docker Compose 작업 구성
 
@@ -180,19 +180,19 @@ CLI 도구 또는 웹 UI에서 수동으로 컨테이너를 해당 클러스터�
 
 CD 관점 및 구체적으로 Azure DevOps Services 관점에서 보면 그림 5-9와 같이 컨테이너화된 애플리케이션을 컨테이너 서비스의 배포된 클러스터에 배포하는 Azure DevOps Services Release Management 환경에서 명시적으로 만들어진 배포 작업을 실행할 수 있습니다.
 
-![또한 CD 배포 단계(#4)에서는 오케스트레이터를 통해 클러스터에 배포할 수 있습니다.](./media/image9.png)
+![오케스트레이터에 배포하는 CD 배포 단계를 보여 주는 다이어그램](./media/docker-application-outer-loop-devops-workflow/cd-deploy-to-orchestrators.png)
 
 **그림 5-9**. 컨테이너 서비스에 분산 애플리케이션 배포
 
 처음에 특정 클러스터 또는 오케스트레이터에 배포하는 경우 전통적으로 `docker-compose.yml` 정의 파일을 기반으로 더 간단하고 사용하기 쉬운 `docker-compose` 도구 대신에 각 오케스트레이터마다 고유한 배포 스크립트 및 메커니즘을 사용할 것입니다(즉, Kubernetes와 Service Fabric의 배포 메커니즘이 서로 다름). 그러나 그림 5-10과 같은 Azure DevOps Services Docker 배포 작업 덕분에 `docker-compose.yml` 파일에서 오케스트레이터에 필요한 형식으로의 “변환”을 도구에서 수행해주므로 이제 친숙한 `docker-compose.yml` 파일만 사용하여 지원되는 오케스트레이터에 배포할 수도 있습니다.
 
-![Kubernetes에 배포 작업을 보여주는 Azure DevOps의 작업 카탈로그 브라우저 보기](./media/add-deploy-to-kubernetes-task.png)
+![Kubernetes에 배포 작업을 보여 주는 스크린샷](./media/docker-application-outer-loop-devops-workflow/add-deploy-to-kubernetes-task.png)
 
 **그림 5-10**. 환경에 Kubernetes에 배포 작업 추가
 
 그림 5-11은 구성에 사용할 수 있는 섹션을 사용하여 Kubernetes에 배포 작업을 편집할 수 있는 방법을 보여줍니다. 이는 클러스터에 컨테이너로 배포할 즉시 사용 가능한 사용자 지정 Docker 이미지를 검색하는 작업입니다.
 
-![Azure DevOps의 브라우저 보기, Kubernetes에 배포 작업 정의](./media/edit-deploy-to-kubernetes-task.png)
+![Kubernetes에 배포 작업 구성을 보여 주는 스크린샷](./media/docker-application-outer-loop-devops-workflow/edit-deploy-to-kubernetes-task.png)
 
 **그림 5-11**. ACS DC/OS에 배포하는 Docker 배포 작업 정의
 

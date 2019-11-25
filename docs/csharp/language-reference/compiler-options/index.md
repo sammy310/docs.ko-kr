@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Visual C# compiler
 - Visual C#, compiler options
 ms.assetid: d3403556-1816-4546-a782-e8223a772e44
-ms.openlocfilehash: dab91ddd1f2b9c91560329eeb1c51ca7f6f175bd
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 787f9c5fff79eb67e2d74043782532c1fc4034b5
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73455252"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972755"
 ---
 # <a name="c-compiler-options"></a>C# 컴파일러 옵션
 
@@ -29,7 +29,7 @@ Visual Studio에서는 *web.config* 파일에서 컴파일러 옵션을 설정�
 
 - [csc.exe를 사용한 명령줄 빌드](command-line-building-with-csc-exe.md) 명령줄에서 Visual C# 애플리케이션을 빌드하는 방법에 대한 정보를 제공합니다.
 
-- [방법: Visual Studio 명령줄에 대한 환경 변수 설정](how-to-set-environment-variables-for-the-visual-studio-command-line.md) *vsvars32.bat*를 실행하여 명령줄 빌드를 사용하도록 설정하는 단계를 제공합니다.
+- [Visual Studio 명령줄에 대한 환경 변수 설정 방법](how-to-set-environment-variables-for-the-visual-studio-command-line.md) *vsvars32.bat*를 실행하여 명령줄 빌드를 사용하도록 설정하는 단계를 제공합니다.
 
 - [C# 컴파일러 옵션 범주별 목록](listed-by-category.md) 컴파일러 옵션의 범주별 목록입니다.
 

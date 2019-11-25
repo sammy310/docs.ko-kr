@@ -2,12 +2,12 @@
 title: NoSQL 데이터베이스를 지속성 인프라로 사용
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | 일반적으로 NoSql 데이터베이스를 사용하고, 특히 Azure Cosmos DB를 지속성을 구현하는 옵션으로 사용하는 것을 이해합니다.
 ms.date: 10/08/2018
-ms.openlocfilehash: b184586dede6331e0babfa976c6fd641933d018e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 44fc2fa01e2d19efed7314f421a682c0a635a9f6
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73089864"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737414"
 ---
 # <a name="use-nosql-databases-as-a-persistence-infrastructure"></a>NoSQL 데이터베이스를 지속성 인프라로 사용
 
@@ -52,11 +52,11 @@ NoSQL 데이터베이스를 사용하는 경우 이점은 엔터티가 더욱 �
 
 ## <a name="introduction-to-azure-cosmos-db-and-the-native-cosmos-db-api"></a>Azure Cosmos DB 및 네이티브 Cosmos DB API 소개
 
-[Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/introduction)는 중요 애플리케이션에 대한 Microsoft의 전 세계적으로 분산된 데이터베이스 서비스입니다. Azure Cosmos DB는 [업계 최고의 SLA](https://azure.microsoft.com/support/legal/sla/cosmos-db/)로 지원되는 [턴키 방식으로 글로벌 배포](https://docs.microsoft.com/azure/cosmos-db/distribute-data-globally), 전 세계적인 [처리량 및 스토리지의 탄력적인 확장](https://docs.microsoft.com/azure/cosmos-db/partition-data), 한 자릿수 밀리초 대기 시간(99번째 백분위수), [5개의 잘 정의된 일관성 수준](https://docs.microsoft.com/azure/cosmos-db/consistency-levels) 및 보장되는 높은 가용성을 제공합니다. Azure Cosmos DB는 사용자가 스키마 및 인덱스 관리를 처리하지 않아도 되도록 [데이터를 자동으로 인덱싱](https://www.vldb.org/pvldb/vol8/p1668-shukla.pdf)합니다. 또한 다중 모델 방식이며, 문서, 키-값, 그래프 및 열 형식 데이터 모델을 지원합니다.
+[Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/introduction)는 중요 애플리케이션에 대한 Microsoft의 전 세계적으로 분산된 데이터베이스 서비스입니다. Azure Cosmos DB는 [업계 최고의 SLA](https://azure.microsoft.com/support/legal/sla/cosmos-db/)로 지원되는 [턴키 방식으로 글로벌 배포](https://docs.microsoft.com/azure/cosmos-db/distribute-data-globally), 전 세계적인 [처리량 및 스토리지의 탄력적인 확장](https://docs.microsoft.com/azure/cosmos-db/partition-data), 한 자릿수 밀리초 대기 시간(99번째 백분위수), [5개의 잘 정의된 일관성 수준](https://docs.microsoft.com/azure/cosmos-db/consistency-levels) 및 보장되는 높은 가용성을 제공합니다. Azure Cosmos DB는 스키마 및 인덱스 관리를 처리할 필요 없이 [데이터를 자동으로 인덱싱합니다](https://www.vldb.org/pvldb/vol8/p1668-shukla.pdf). 다중 모델이며 문서, 키-값, 그래프 및 열 형식 데이터 모델을 지원합니다.
 
-![Azure Cosmos DB는 4개의 API 프로토콜로 액세스할 수 있는 전역적으로 분산된 낮은 대기 시간이 보장된 데이터베이스입니다. ](./media/image19.1.png)
+![Azure Cosmos DB 전역 배포를 보여 주는 다이어그램](./media/nosql-database-persistence-infrastructure/azure-cosmos-db-global-distribution.png)
 
-**그림 7-19**. Azure Cosmos DB 글로벌 배포
+**그림 7-19**. Azure Cosmos DB 전역 배포
 
 C\# 모델을 사용하여 Azure Cosmos DB API에서 사용될 집계를 구현하는 경우 집계는 EF Core와 함께 사용되는 C\# POCO 클래스와 유사할 수 있습니다. 차이점은 다음 코드에서처럼 애플리케이션 및 인프라 계층에서 사용하는 방법에 있습니다.
 
@@ -132,7 +132,7 @@ Docker에서 이 에뮬레이터를 실행할 가능성도 있지만 Linux 컨�
 
 Cosmos DB 데이터베이스는 .NET용 MongoDB API뿐만 아니라 네이티브 MongoDB 유선 프로토콜도 지원합니다. 즉, 기존 드라이버를 사용하여 MongoDB용으로 작성된 애플리케이션은 이제 그림 7-20에 나와 있는 것처럼 Cosmos DB와 통신하고 MongoDB 데이터베이스 대신 Cosmos DB 데이터베이스를 사용할 수 있습니다.
 
-![Cosmos DB는 .NET용 MongoDB API 및 MongoDB 유선 프로토콜을 지원하므로 MongoDb에서 Cosmos DB로 쉽게 전환할 수 있습니다.](./media/image19.2.png)
+![Cosmos DB에서 .NET 및 MongoDB 유선 프로토콜을 지원함을 보여 주는 다이어그램](./media/nosql-database-persistence-infrastructure/mongodb-api-wire-protocol.png)
 
 **그림 7-20**. MongoDB API 및 프로토콜을 사용하여 Azure Cosmos DB에 액세스
 
@@ -140,7 +140,7 @@ Cosmos DB 데이터베이스는 .NET용 MongoDB API뿐만 아니라 네이티브
 
 다음 이미지와 같이 MongoDB API를 사용하여 eShopOnContainers는 로컬 개발 환경에 대해 MongoDB Linux 및 Windows 컨테이너를 지원하지만 [MongoDB 연결 문자열을 Azure Cosmos DB를 가리키도록](https://docs.microsoft.com/azure/cosmos-db/connect-mongodb-account) 단순히 변경하여 Azure Cosmos DB로 확장 가능한 PaaS 클라우드 솔루션으로 이동할 수 있습니다.
 
-![eShopOnContainers의 위치 마이크로 서비스는 MongoDB를 사용하여 구현되지만, 연결 문자열만 변경하여 Cosmos DB로 전환할 수 있습니다.](./media/image20-bis.png)
+![EShopOnContainers의 위치 마이크로 서비스에서 Cosmos DB 또는 Mongo DB 중 하나를 사용할 수 있음을 보여 주는 다이어그램](./media/nosql-database-persistence-infrastructure/eshoponcontainers-mongodb-containers.png)
 
 **그림 7-21**. 개발 환경 또는 프로덕션용 Azure Cosmos DB에 대해 MongoDB 컨테이너를 사용하는 eShopOnContainers
 
@@ -166,7 +166,7 @@ eShopOnContainers에서 우선 순위는 근본적으로 Azure Cosmos DB를 함�
 
 .NET용 MongoDB API는 다음 그림과 같은 Locations.API 프로젝트에서처럼 프로젝트에 추가해야 하는 NuGet 패키지를 기반으로 합니다.
 
-![솔루션 탐색기 보기는 MongoDB NuGet 패키지의 종속성을 표시합니다.](./media/image21-bis.png)
+![MongoDB NuGet 패키지 내 종속성의 스크린샷](./media/nosql-database-persistence-infrastructure/mongodb-api-nuget-packages.png)
 
 **그림 7-22**. .NET Core 프로젝트에서 MongoDB API NuGet 패키지 참조
 
@@ -312,7 +312,7 @@ services:
     image: mongo
 ```
 
-#### <a name="additional-resources"></a>추가 리소스
+#### <a name="additional-resources"></a>추가 자료
 
 - **NoSQL 데이터베이스용 문서 데이터 모델링** \
   <https://docs.microsoft.com/azure/cosmos-db/modeling-data>

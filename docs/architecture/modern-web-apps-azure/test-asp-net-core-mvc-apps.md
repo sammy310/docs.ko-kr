@@ -4,12 +4,12 @@ description: ASP.NET Core 및 Azure를 사용하여 최신 웹 애플리케이�
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 9bc97efdda44ca4dfa4a583c32e9e55c9502d975
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6096bd3aa35a27c97862089d09d537bdc5b1fff0
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73089688"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971535"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>ASP.NET Core MVC 앱 테스트
 
@@ -285,12 +285,16 @@ namespace Microsoft.eShopWeb.FunctionalTests.WebRazorPages
 
 > ### <a name="references--test-aspnet-core-mvc-apps"></a>참조 - ASP.NET Core MVC 앱 테스트
 >
-> - **ASP.NET Core에서 테스트**  
+> - **ASP.NET Core에서 테스트** \
 >   <https://docs.microsoft.com/aspnet/core/testing/>
-> - **단위 테스트 명명 규칙**  
+> - **단위 테스트 명명 규칙** \
 >   <https://ardalis.com/unit-test-naming-convention>
-> - **EF Core 테스트**  
+> - **EF Core 테스트** \
 >   <https://docs.microsoft.com/ef/core/miscellaneous/testing/>
+> - **ASP.NET Core의 통합 테스트** \
+>   <https://docs.microsoft.com/aspnet/core/test/integration-tests>
+> - **ASP.NET 커뮤니티 스탠드업 - 2018년 5월 15일 - Javier C. Nelson과 MVC 테스트** - YouTube 동영상 \
+>   <https://www.youtube.com/watch?v=wtOE-xmFJkw&list=PL1rZQsJPBU2StolNg0aqvQswETPcYnNKL&index=5>
 
 >[!div class="step-by-step"]
 >[이전](work-with-data-in-asp-net-core-apps.md)

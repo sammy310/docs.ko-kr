@@ -2,12 +2,12 @@
 title: HttpClientFactory를 사용하여 복원력 있는 HTTP 요청 구현
 description: 애플리케이션에서 사용하기 쉽도록 .NET Core 2.1부터 제공되는 HttpClientFactory를 사용하여 `HttpClient` 인스턴스를 만드는 방법을 알아봅니다.
 ms.date: 08/08/2019
-ms.openlocfilehash: e32ffdd43ce8968ef9a0694873870b61510d7300
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9eff4a01361b3dc6f7471bc012c945d048b9a276
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73093996"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737752"
 ---
 # <a name="use-httpclientfactory-to-implement-resilient-http-requests"></a>HttpClientFactory를 사용하여 복원력 있는 HTTP 요청 구현
 
@@ -56,11 +56,13 @@ ms.locfileid: "73093996"
 
 다음 다이어그램은 `HttpClientFactory`와 함께 형식화된 클라이언트를 사용하는 방법을 보여 줍니다.
 
-![ClientService(컨트롤러 또는 클라이언트 코드에서 사용됨)는 등록된 IHttpClientFactory에서 만든 HttpClient를 사용합니다. 이 팩터리는 관리하는 풀의 HttpMessageHandler를 HttpClient에 할당합니다. 확장 메서드 AddHttpClient를 사용하여 DI 컨테이너에 IHttpClientFactory를 등록할 때 Polly의 정책을 사용하여 HttpClient를 구성할 수 있습니다.](./media/image3.5.png)
+![형식화된 클라이언트를 HttpClientFactory와 함께 사용하는 방법을 보여 주는 다이어그램입니다.](./media/use-httpclientfactory-to-implement-resilient-http-requests/client-application-code.png)
 
 **그림 8-4**. 형식화된 클라이언트 클래스와 함께 HttpClientFactory 사용
 
-먼저 `IServiceCollection`용 `AddHttpClient()` 확장 메서드를 포함하는 `Microsoft.Extensions.Http` NuGet 패키지를 설치하여 애플리케이션에서 `HttpClientFactory`를 설정합니다. 이 확장 메서드는 `IHttpClientFactory` 인터페이스에 대한 싱글톤으로 사용할 `DefaultHttpClientFactory`를 등록하고, `HttpMessageHandlerBuilder`에 대한 일시적인 구성을 정의합니다. 풀에서 가져온 이 메시지 처리기(`HttpMessageHandler` 개체)는 팩터리에서 반환된 `HttpClient`에서 사용합니다.
+위 이미지의 ClientService(컨트롤러 또는 클라이언트 코드에서 사용됨)는 등록된 `IHttpClientFactory`에서 만든 `HttpClient`를 사용합니다. 이 팩터리는 관리하는 풀의 `HttpMessageHandler`를 `HttpClient`에 할당합니다. 확장 메서드 `AddHttpClient`를 사용하여 DI 컨테이너에 `IHttpClientFactory`를 등록할 때 Polly의 정책을 사용하여 `HttpClient`를 구성할 수 있습니다.
+
+위의 구조를 구성하려면 `IServiceCollection`용 `AddHttpClient()` 확장 메서드를 포함하는 `Microsoft.Extensions.Http` NuGet 패키지를 설치하여 애플리케이션에서 `HttpClientFactory`를 추가합니다. 이 확장 메서드는 `IHttpClientFactory` 인터페이스에 대한 싱글톤으로 사용할 `DefaultHttpClientFactory`를 등록하고, `HttpMessageHandlerBuilder`에 대한 일시적인 구성을 정의합니다. 풀에서 가져온 이 메시지 처리기(`HttpMessageHandler` 개체)는 팩터리에서 반환된 `HttpClient`에서 사용합니다.
 
 다음 코드에서는 `AddHttpClient()`를 사용하여 `HttpClient`를 사용해야 하는 형식화된 클라이언트(서비스 에이전트)를 등록하는 방법을 확인할 수 있습니다.
 
@@ -181,7 +183,7 @@ namespace Microsoft.eShopOnContainers.WebMVC.Controllers
 
 이 시점까지 보여 준 코드는 정기적인 HTTP 요청만 수행하는 것이지만, 다음 섹션에서는 정책을 추가하고, 등록된 형식화된 클라이언트에 처리기를 위임하여 `HttpClient`에서 수행할 모든 HTTP 요청을 처리하는 ‘마법 같은 일’이 펼쳐집니다. 이 과정에서 지수 백오프를 사용하는 다시 시도, 회로 차단기 또는 다른 사용자 지정 위임 처리기와 같은 복원력 정책을 고려하여 인증 토큰 사용, 기타 사용자 지정 기능 등의 추가 보안 기능을 구현합니다.
 
-## <a name="additional-resources"></a>추가 리소스
+## <a name="additional-resources"></a>추가 자료
 
 - **.NET Core에서 HttpClientFactory 사용**  
   [https://docs.microsoft.com/aspnet/core/fundamentals/http-requests](/aspnet/core/fundamentals/http-requests)

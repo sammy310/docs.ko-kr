@@ -5,12 +5,12 @@ helpviewer_keywords:
 - builds [C#]
 - command line [C#]
 ms.assetid: 66e70056-dd20-453c-a9b3-507e0478b015
-ms.openlocfilehash: 9dcc1837ca9c5c1fae3cd6a2a9d03b7e80423627
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: dfd494ceb631a8f86cc3a249e5168c1f413e7e4f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040376"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972908"
 ---
 # <a name="command-line-build-with-cscexe"></a>csc.exe를 사용한 명령줄 빌드
 
@@ -18,7 +18,7 @@ ms.locfileid: "70040376"
 
 **Visual Studio용 개발자 명령 프롬프트** 창을 사용하는 경우 필요한 환경 변수가 모두 설정됩니다. 이 도구에 액세스하는 방법에 대한 자세한 내용은 [Visual Studio용 개발자 명령 프롬프트](../../../framework/tools/developer-command-prompt-for-vs.md) 항목을 참조하세요.
 
-표준 명령 프롬프트 창을 사용하는 경우 컴퓨터의 하위 디렉터리에서 *csc.exe*를 호출하려면 먼저 경로를 조정해야 합니다. 또한 *vsvars32.bat*를 실행하여 명령줄 빌드를 지원하도록 적절한 환경 변수를 설정해야 합니다. *vsvars32.bat*를 찾아서 실행하는 방법에 대한 지침을 비롯한 자세한 내용은 [방법: Visual Studio 명령줄에 필요한 환경 변수 설정](./how-to-set-environment-variables-for-the-visual-studio-command-line.md)을 참조하세요.
+표준 명령 프롬프트 창을 사용하는 경우 컴퓨터의 하위 디렉터리에서 *csc.exe*를 호출하려면 먼저 경로를 조정해야 합니다. 또한 *vsvars32.bat*를 실행하여 명령줄 빌드를 지원하도록 적절한 환경 변수를 설정해야 합니다. *vsvars32.bat*를 찾아서 실행하는 방법에 대한 지침을 포함하여 vsvars32.bat에 대한 자세한 내용은 [Visual Studio 명령줄에 필요한 환경 변수 설정 방법](./how-to-set-environment-variables-for-the-visual-studio-command-line.md)을 참조하세요.
 
 Windows SDK(소프트웨어 개발 키트)만 있는 컴퓨터에서 작업하는 경우, **Microsoft .NET Framework SDK** 메뉴 옵션을 통해 여는 **SDK 명령 프롬프트**에서 C# 컴파일러를 사용할 수 있습니다.
 

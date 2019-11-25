@@ -19,12 +19,12 @@ helpviewer_keywords:
 - strings [.NET Framework],comparing
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
 ms.custom: seodec18
-ms.openlocfilehash: b427c579b4190acaf715147908b38ea57ab7aea3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: cd6b24a6dd893f0c522573a0e19914164c15141f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120632"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973941"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>.NET에서 문자열 사용에 대한 모범 사례
 
@@ -200,7 +200,7 @@ LATIN SMALL LETTER A 문자 “a”(\u0061)는 COMBINING RING ABOVE 문자 “+ 
 
 다음 표에서는 의미 체계 문자열 컨텍스트에서 <xref:System.StringComparison> 열거형 멤버로의 매핑을 간략하게 설명합니다.
 
-|Data|동작|해당 System.StringComparison<br /><br /> 값|
+|데이터|동작|해당 System.StringComparison<br /><br /> 값|
 |----------|--------------|-----------------------------------------------------|
 |대/소문자 구분 내부 식별자.<br /><br /> XML 및 HTTP와 같은 표준의 대/소문자 구분 식별자.<br /><br /> 대/소문자 구분 보안 관련 설정.|바이트가 정확히 일치하는 비언어적 식별자.|<xref:System.StringComparison.Ordinal>|
 |대/소문자를 구분하지 않는 내부 식별자.<br /><br /> XML 및 HTTP와 같은 표준의 대/소문자를 구분하지 않는 식별자.<br /><br /> 파일 경로.<br /><br /> 레지스트리 키 및 값.<br /><br /> 환경 변수.<br /><br /> 리소스 식별자(예: 핸들 이름).<br /><br /> 대/소문자를 구분하지 않는 보안 관련 설정.|대/소문자가 불규칙한 비언어적 식별자, 특히 대부분 Windows 시스템 서비스에 저장된 데이터.|<xref:System.StringComparison.OrdinalIgnoreCase>|
@@ -340,7 +340,7 @@ LATIN SMALL LETTER A 문자 “a”(\u0061)는 COMBINING RING ABOVE 문자 “+ 
 다음 예제에서는 문화권 구분 형식 지정을 사용하여 데이터를 유지함으로 인해 제한된 이식성을 보여 줍니다. 예제에서는 날짜 및 시간 값 배열을 파일에 저장합니다. 이들 값은 영어(미국) 문화권의 규칙을 사용하여 형식이 지정됩니다. 애플리케이션이 현재 스레드 문화권을 프랑스어(스위스)로 변경하고 나면 현재 문화권의 형식 지정 규칙을 사용하여 저장된 값을 읽으려고 합니다. 두 데이터 항목을 읽으려는 시도로 인해 <xref:System.FormatException> 예외가 throw되고 날짜 배열에는 <xref:System.DateTime.MinValue>와 같은 잘못된 두 가지 요소가 포함됩니다.
 
 [!code-csharp[Conceptual.Strings.BestPractices#21](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/persistence.cs#21)]
- [!code-vb[Conceptual.Strings.BestPractices#21](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/persistence.vb#21)]
+[!code-vb[Conceptual.Strings.BestPractices#21](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/persistence.vb#21)]
 
 그러나 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> 및 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> 에 대한 호출에서 <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> 속성을 <xref:System.DateTime.Parse%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>로 바꾸면 다음 출력과 같이 영구 날짜 및 시간 데이터가 성공적으로 복원됩니다.
 

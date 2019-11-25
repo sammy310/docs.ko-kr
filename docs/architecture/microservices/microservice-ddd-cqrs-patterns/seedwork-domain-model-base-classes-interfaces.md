@@ -2,12 +2,12 @@
 title: Seedwork(도메인 모델에 대해 재사용이 가능한 기본 클래스 및 인터페이스)
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | DDD 지향 도메인 모델의 구현을 시작하려면 시드워크 개념을 시작점으로 사용합니다.
 ms.date: 10/08/2018
-ms.openlocfilehash: 87cbc5ce96b66a9ac3e1c2bfc8c863d1b20714db
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f53988b92a05fb54f3f05d9f463450d1a11a0843
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73093797"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737224"
 ---
 # <a name="seedwork-reusable-base-classes-and-interfaces-for-your-domain-model"></a>Seedwork(도메인 모델에 대해 재사용이 가능한 기본 클래스 및 인터페이스)
 
@@ -15,7 +15,9 @@ ms.locfileid: "73093797"
 
 그림 7-12는 정렬 마이크로 서비스에서 도메인 모델의 시드워크를 구성하는 클래스를 보여줍니다. 시드워크에는 엔터티와 ValueObject, 열거형을 포함한 몇 가지 인터페이스처럼 사용자 지정 기본 클래스가 있습니다. 이러한 인터페이스(IRepository 및 IUnitOfWork)는 인프라 계층에게 구현되어야 할 사항에 대해 알려줍니다. 이러한 인터페이스는 또한 애플리케이션 계층에서 종속성 주입을 통해 사용됩니다.
 
-![기본 클래스 및 인터페이스를 포함하는 SeedWork 폴더의 자세한 내용: Entity.cs, Enumeration.cs, IAggregateRoot.cs, IRepository.cs, IUnitOfWork.cs 및 ValueObject.cs](./media/image13.PNG)
+:::image type="complex" source="./media/seedwork-domain-model-base-classes-interfaces/vs-solution-seedwork-classes.png" alt-text="SeedWork 폴더에 포함된 클래스의 스크린샷":::
+기본 클래스 및 인터페이스를 포함하는 SeedWork 폴더의 자세한 내용: Entity.cs, Enumeration.cs, IAggregateRoot.cs, IRepository.cs, IUnitOfWork.cs 및 ValueObject.cs.
+:::image-end:::
 
 **그림 7-12**. 도메인 모델인 "시드워크" 기본 클래스 및 인터페이스의 샘플 집합
 
@@ -135,7 +137,7 @@ public interface IRepository<T> where T : IAggregateRoot
 }
 ```
 
-## <a name="additional-resources"></a>추가 리소스
+## <a name="additional-resources"></a>추가 자료
 
 - **Martin Fowler. 분리된 인터페이스.** \
   <https://www.martinfowler.com/eaaCatalog/separatedInterface.html>

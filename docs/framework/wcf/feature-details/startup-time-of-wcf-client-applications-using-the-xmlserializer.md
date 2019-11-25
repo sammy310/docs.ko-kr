@@ -1,19 +1,19 @@
 ---
-title: '방법: XmlSerializer를 사용하여 WCF 클라이언트 애플리케이션의 시작 시간 향상'
+title: '방법: XmlSerializer를 사용하여 WCF 클라이언트 애플리케이션의 시작 시간 개선'
 ms.date: 03/30/2017
 ms.assetid: 21093451-0bc3-4b1a-9a9d-05f7f71fa7d0
-ms.openlocfilehash: f8766a5dfa2bcfc715a0f0e21274f7c6ac04ad15
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ca15d710a30586135f0d030e155b09b63a22ee45
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69944888"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976057"
 ---
-# <a name="how-to-improve-the-startup-time-of-wcf-client-applications-using-the-xmlserializer"></a>방법: XmlSerializer를 사용하여 WCF 클라이언트 애플리케이션의 시작 시간 향상
-<xref:System.Xml.Serialization.XmlSerializer>를 사용하여 serialize할 수 있는 데이터 형식을 사용하는 서비스 및 클라이언트 응용 프로그램은 런타임에 해당 데이터 형식에 대한 serialization 코드를 생성하고 컴파일합니다. 이로 인해 시작 시 성능이 저하될 수 있습니다.  
+# <a name="how-to-improve-the-startup-time-of-wcf-client-applications-using-the-xmlserializer"></a>방법: XmlSerializer를 사용하여 WCF 클라이언트 애플리케이션의 시작 시간 개선
+<xref:System.Xml.Serialization.XmlSerializer>를 사용하여 serialize할 수 있는 데이터 형식을 사용하는 서비스 및 클라이언트 애플리케이션은 런타임에 해당 데이터 형식에 대한 serialization 코드를 생성하고 컴파일합니다. 이로 인해 시작 시 성능이 저하될 수 있습니다.  
   
 > [!NOTE]
-> 미리 생성된 serialization 코드는 서비스가 아닌 클라이언트 응용 프로그램에서만 사용할 수 있습니다.  
+> 미리 생성된 serialization 코드는 서비스가 아닌 클라이언트 애플리케이션에서만 사용할 수 있습니다.  
   
  [ServiceModel Metadata 유틸리티 도구 (svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 는 응용 프로그램에 대해 컴파일된 어셈블리에서 필요한 serialization 코드를 생성 하 여 이러한 응용 프로그램의 시작 성능을 향상 시킬 수 있습니다. Svcutil.exe는 <xref:System.Xml.Serialization.XmlSerializer>를 사용하여 serialize될 수 있는 컴파일된 애플리케이션 어셈블리에서 서비스 계약에 사용하는 모든 데이터 형식에 대한 serialization 코드를 생성합니다. <xref:System.Xml.Serialization.XmlSerializer>를 사용하는 서비스 및 작업 계약은 <xref:System.ServiceModel.XmlSerializerFormatAttribute>와 함께 표시됩니다.  
   
@@ -25,7 +25,7 @@ ms.locfileid: "69944888"
   
 3. 명령 프롬프트에서 다음 형식을 사용하여 Svcutil.exe 도구를 실행합니다.  
   
-    ```  
+    ```console  
     svcutil.exe /t:xmlSerializer  <assemblyPath>*  
     ```  
   
@@ -47,13 +47,13 @@ ms.locfileid: "69944888"
   
 1. Visual Studio에서 WCF 서비스 및 클라이언트 프로젝트를 만듭니다. 그런 다음 서비스 참조를 클라이언트 프로젝트에 추가 합니다.  
   
-2.  -> 클라이언트앱프로젝트의 *reference.cs* 파일에서 **serviceReference** **참조**의 서비스 계약에 를추가합니다.<xref:System.ServiceModel.XmlSerializerFormatAttribute> 이러한 파일을 보려면 **솔루션 탐색기** 의 모든 파일을 표시 해야 합니다.  
+2. **ServiceReference** -> *reference.cs* 에서 클라이언트 앱 프로젝트의 파일에 있는 서비스 계약에 <xref:System.ServiceModel.XmlSerializerFormatAttribute>를 **추가 합니다.** 이러한 파일을 보려면 **솔루션 탐색기** 의 모든 파일을 표시 해야 합니다.  
   
 3. 클라이언트 앱을 빌드합니다.  
   
 4. [ServiceModel Metadata 유틸리티 도구 (svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 를 사용 하 여 명령을 사용 하 여 미리 생성 된 serializer *.cs* 파일을 만듭니다.  
   
-    ```  
+    ```console  
     svcutil.exe /t:xmlSerializer  <assemblyPath>*  
     ```  
   
@@ -61,7 +61,7 @@ ms.locfileid: "69944888"
   
      예:  
   
-    ```  
+    ```console  
     svcutil.exe /t:xmlSerializer wcfclient.exe  
     ```  
   
@@ -71,7 +71,7 @@ ms.locfileid: "69944888"
   
      이전 단계의 예제에 따라 compile 명령은 다음과 같습니다.  
   
-    ```  
+    ```console  
     csc /r:wcfclient.exe /out:WCFClient.XmlSerializers.dll /t:library WCFClient.XmlSerializers.dll.cs  
     ```  
   
@@ -82,10 +82,10 @@ ms.locfileid: "69944888"
 ## <a name="example"></a>예제  
  다음 명령은 어셈블리의 모든 서비스 계약이 사용하는 `XmlSerializer` 형식에 대해 serialization 형식을 생성합니다.  
   
-```  
+```console  
 svcutil /t:xmlserializer myContractLibrary.exe  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ServiceModel Metadata 유틸리티 도구(Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

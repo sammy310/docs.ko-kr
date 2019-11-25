@@ -12,29 +12,29 @@ helpviewer_keywords:
 - inline option constructs
 - options parameter
 ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
-ms.openlocfilehash: 4cc62696cb6589151e3abc59bbea64b693e8b3a2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a53d7517485d2a0b02b6f11928f478a7da3f9503
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121726"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972109"
 ---
 # <a name="regular-expression-options"></a>정규식 옵션
 
-<a name="Top"></a> 기본적으로 입력 문자열을 정규식 패턴의 리터럴 문자와 비교할 때는 대/소문자를 구분하고, 정규식 패턴의 공백은 리터럴 공백 문자로 해석되며, 정규식의 캡처링 그룹은 명시적 및 암시적으로 명명됩니다. 정규식 옵션을 지정하여 기본 정규식 동작의 이러한 측면과 몇 가지 다른 측면을 수정할 수 있습니다. 다음 테이블에 나열되어 있는 이러한 옵션은 정규식 패턴의 일부로 인라인으로 포함되거나, <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> 클래스 생성자 또는 정적 패턴 일치 메서드에 <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> 열거형 값으로 제공될 수 있습니다.
+기본적으로 입력 문자열을 정규식 패턴의 리터럴 문자와 비교할 때는 대/소문자를 구분하고, 정규식 패턴의 공백은 리터럴 공백 문자로 해석되며, 정규식의 캡처링 그룹은 명시적 및 암시적으로 명명됩니다. 정규식 옵션을 지정하여 기본 정규식 동작의 이러한 측면과 몇 가지 다른 측면을 수정할 수 있습니다. 다음 테이블에 나열되어 있는 이러한 옵션은 정규식 패턴의 일부로 인라인으로 포함되거나, <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> 클래스 생성자 또는 정적 패턴 일치 메서드에 <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> 열거형 값으로 제공될 수 있습니다.
 
-|RegexOptions 멤버|인라인 문자|결과|
+|RegexOptions 멤버|인라인 문자|효과|
 |-------------------------|----------------------|------------|
-|<xref:System.Text.RegularExpressions.RegexOptions.None>|사용할 수 없음|기본 동작을 사용합니다. 자세한 내용은 [기본 옵션](#Default)을 참조하세요.|
-|<xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase>|`i`|대/소문자를 구분하지 않는 일치를 사용합니다. 자세한 내용은 [대/소문자를 구분하지 않는 일치](#Case)를 참조하세요.|
-|<xref:System.Text.RegularExpressions.RegexOptions.Multiline>|`m`|여러 줄 모드를 사용합니다. 여기서 `^` 및 `$`는 각 줄의 시작 부분 및 끝 부분과 일치합니다(입력 문자열의 시작 부분 및 끝 부분 대신). 자세한 내용은 [여러 줄 모드](#Multiline)를 참조하세요.|
-|<xref:System.Text.RegularExpressions.RegexOptions.Singleline>|`s`|한 줄 모드를 사용합니다. 여기서 마침표(.)는 모든 문자와 일치합니다(`\n`을 제외한 모든 문자 대신). 자세한 내용은 [한 줄 모드](#Singleline)를 참조하세요.|
-|<xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture>|`n`|명명되지 않은 그룹을 캡처하지 않습니다. 유효한 캡처는 `(?<`*name*`>` *subexpression*`)` 형식의 명시적으로 명명되거나 번호가 매겨진 그룹 뿐입니다. 자세한 내용은 [명시적 캡처만 해당](#Explicit)을 참조하세요.|
-|<xref:System.Text.RegularExpressions.RegexOptions.Compiled>|사용할 수 없음|정규식을 어셈블리로 컴파일합니다. 자세한 내용은 [컴파일된 정규식](#Compiled)을 참조하세요.|
-|<xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace>|`x`|이스케이프되지 않은 공백을 패턴에서 제외하고 숫자 기호(`#`) 뒤에 주석을 사용하도록 설정합니다. 자세한 내용은 [공백 무시](#Whitespace)를 참조하세요.|
-|<xref:System.Text.RegularExpressions.RegexOptions.RightToLeft>|사용할 수 없음|검색 방향을 변경합니다. 검색이 왼쪽에서 오른쪽으로 대신 오른쪽에서 왼쪽으로 이동합니다. 자세한 내용은 [오른쪽에서 왼쪽 모드](#RightToLeft)를 참조하세요.|
-|<xref:System.Text.RegularExpressions.RegexOptions.ECMAScript>|사용할 수 없음|식에 대해 ECMAScript와 호환되는 동작을 사용하도록 설정합니다. 자세한 내용은 [ECMAScript 일치 동작](#ECMAScript)을 참조하세요.|
-|<xref:System.Text.RegularExpressions.RegexOptions.CultureInvariant>|사용할 수 없음|언어의 문화권 차이를 무시합니다. 자세한 내용은 [고정 문화권을 사용한 비교](#Invariant)를 참조하세요.|
+|<xref:System.Text.RegularExpressions.RegexOptions.None>|사용할 수 없음|기본 동작을 사용합니다. 자세한 내용은 [기본 옵션](#default-options)을 참조하세요.|
+|<xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase>|`i`|대/소문자를 구분하지 않는 일치를 사용합니다. 자세한 내용은 [대/소문자를 구분하지 않는 일치](#case-insensitive-matching)를 참조하세요.|
+|<xref:System.Text.RegularExpressions.RegexOptions.Multiline>|`m`|여러 줄 모드를 사용합니다. 여기서 `^` 및 `$`는 각 줄의 시작 부분 및 끝 부분과 일치합니다(입력 문자열의 시작 부분 및 끝 부분 대신). 자세한 내용은 [여러 줄 모드](#multiline-mode)를 참조하세요.|
+|<xref:System.Text.RegularExpressions.RegexOptions.Singleline>|`s`|한 줄 모드를 사용합니다. 여기서 마침표(.)는 모든 문자와 일치합니다(`\n`을 제외한 모든 문자 대신). 자세한 내용은 [한 줄 모드](#single-line-mode)를 참조하세요.|
+|<xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture>|`n`|명명되지 않은 그룹을 캡처하지 않습니다. 유효한 캡처는 `(?<`*name*`>` *subexpression*`)` 형식의 명시적으로 명명되거나 번호가 매겨진 그룹 뿐입니다. 자세한 내용은 [명시적 캡처만 해당](#explicit-captures-only)을 참조하세요.|
+|<xref:System.Text.RegularExpressions.RegexOptions.Compiled>|사용할 수 없음|정규식을 어셈블리로 컴파일합니다. 자세한 내용은 [컴파일된 정규식](#compiled-regular-expressions)을 참조하세요.|
+|<xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace>|`x`|이스케이프되지 않은 공백을 패턴에서 제외하고 숫자 기호(`#`) 뒤에 주석을 사용하도록 설정합니다. 자세한 내용은 [공백 무시](#ignore-white-space)를 참조하세요.|
+|<xref:System.Text.RegularExpressions.RegexOptions.RightToLeft>|사용할 수 없음|검색 방향을 변경합니다. 검색이 왼쪽에서 오른쪽으로 대신 오른쪽에서 왼쪽으로 이동합니다. 자세한 내용은 [오른쪽에서 왼쪽 모드](#right-to-left-mode)를 참조하세요.|
+|<xref:System.Text.RegularExpressions.RegexOptions.ECMAScript>|사용할 수 없음|식에 대해 ECMAScript와 호환되는 동작을 사용하도록 설정합니다. 자세한 내용은 [ECMAScript 일치 동작](#ecmascript-matching-behavior)을 참조하세요.|
+|<xref:System.Text.RegularExpressions.RegexOptions.CultureInvariant>|사용할 수 없음|언어의 문화권 차이를 무시합니다. 자세한 내용은 [고정 문화권을 사용한 비교](#comparison-using-the-invariant-culture)를 참조하세요.|
 
 ## <a name="specifying-the-options"></a>옵션 지정
 
@@ -108,11 +108,9 @@ ms.locfileid: "73121726"
 
 다음 섹션에는 .NET의 정규식에서 지원하는 옵션이 나열되어 있습니다.
 
-<a name="Default"></a>
-
 ## <a name="default-options"></a>기본 옵션
 
-<xref:System.Text.RegularExpressions.RegexOptions.None?displayProperty=nameWithType> 옵션은 지정된 옵션이 없고 정규식 엔진에서 해당 기본 동작을 사용함을 나타냅니다. 이 제품에는 다음이 포함됩니다.
+<xref:System.Text.RegularExpressions.RegexOptions.None?displayProperty=nameWithType> 옵션은 지정된 옵션이 없고 정규식 엔진에서 해당 기본 동작을 사용함을 나타냅니다. 여기에는 다음과 같은 사항이 포함됩니다.
 
 - 패턴이 ECMAScript 정규식이 아니라 정식으로 해석됩니다.
 
@@ -135,10 +133,6 @@ ms.locfileid: "73121726"
 
 <xref:System.Text.RegularExpressions.RegexOptions.None?displayProperty=nameWithType> 옵션은 정규식 엔진의 기본 동작을 나타내므로 메서드 호출에 명시적으로 지정되는 경우가 드뭅니다. 대신 생성자 또는 정적 패턴 일치 메서드가 `options` 매개 변수 없이 호출됩니다.
 
-[맨 위로 이동](#Top)
-
-<a name="Case"></a>
-
 ## <a name="case-insensitive-matching"></a>대/소문자를 구분하지 않는 일치
 
 <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase> 옵션 또는 `i` 인라인 옵션은 대/소문자를 구분하지 않는 일치를 제공합니다. 기본적으로 현재 문화권의 대/소문자 사용 규칙이 사용됩니다.
@@ -153,10 +147,6 @@ ms.locfileid: "73121726"
 [!code-csharp[Conceptual.Regex.Language.Options#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/case2.cs#2)]
 [!code-vb[Conceptual.Regex.Language.Options#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/case2.vb#2)]
 
-[맨 위로 이동](#Top)
-
-<a name="Multiline"></a>
-
 ## <a name="multiline-mode"></a>여러 줄 모드
 
 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 옵션 또는 `m` 인라인 옵션은 정규식 엔진이 여러 줄로 구성된 입력 문자열을 처리할 수 있게 해줍니다. 이 옵션은 `^` 및 `$` 언어 요소가 입력 문자열의 시작 부분 및 끝 부분 대신 줄의 시작 부분 및 끝 부분과 일치하도록 해당 언어 요소의 해석을 변경합니다.
@@ -170,7 +160,7 @@ ms.locfileid: "73121726"
 
 정규식 패턴 `^(\w+)\s(\d+)\r*$`는 다음 테이블과 같이 정의됩니다.
 
-|패턴|설명|
+|무늬|설명|
 |-------------|-----------------|
 |`^`|줄의 시작 부분에서 시작합니다.|
 |`(\w+)`|하나 이상의 단어 문자를 찾습니다. 이 그룹은 첫 번째 캡처링 그룹입니다.|
@@ -183,10 +173,6 @@ ms.locfileid: "73121726"
 
 [!code-csharp[Conceptual.Regex.Language.Options#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/multiline2.cs#4)]
 [!code-vb[Conceptual.Regex.Language.Options#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/multiline2.vb#4)]
-
-[맨 위로 이동](#Top)
-
-<a name="Singleline"></a>
 
 ## <a name="single-line-mode"></a>한 줄 모드
 
@@ -201,10 +187,6 @@ ms.locfileid: "73121726"
 
 [!code-csharp[Conceptual.Regex.Language.Options#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/singleline1.cs#5)]
 [!code-vb[Conceptual.Regex.Language.Options#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/singleline1.vb#5)]
-
-[맨 위로 이동](#Top)
-
-<a name="Explicit"></a>
 
 ## <a name="explicit-captures-only"></a>명시적 캡처만 해당
 
@@ -225,7 +207,7 @@ ms.locfileid: "73121726"
 
 정규식 패턴 `\b\(?((?>\w+),?\s?)+[\.!?]\)?`는 다음 표와 같이 정의됩니다.
 
-|패턴|설명|
+|무늬|설명|
 |-------------|-----------------|
 |`\b`|단어 경계에서 시작합니다.|
 |`\(?`|0개 또는 1개의 여는 괄호("(")를 찾습니다.|
@@ -243,10 +225,6 @@ ms.locfileid: "73121726"
 
 [!code-csharp[Conceptual.Regex.Language.Options#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/explicit3.cs#11)]
 [!code-vb[Conceptual.Regex.Language.Options#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/explicit3.vb#11)]
-
-[맨 위로 이동](#Top)
-
-<a name="Compiled"></a>
 
 ## <a name="compiled-regular-expressions"></a>컴파일된 정규식
 
@@ -269,10 +247,6 @@ ms.locfileid: "73121726"
 
 > [!NOTE]
 > <xref:System.Text.RegularExpressions.RegexOptions.Compiled?displayProperty=nameWithType> 옵션은 미리 정의된 컴파일된 정규식을 포함하는 특수 목적 어셈블리를 만드는 <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A?displayProperty=nameWithType> 메서드와는 관련이 없습니다.
-
-[맨 위로 이동](#Top)
-
-<a name="Whitespace"></a>
 
 ## <a name="ignore-white-space"></a>공백 무시
 
@@ -302,7 +276,7 @@ ms.locfileid: "73121726"
 
 `\b \(? ( (?>\w+) ,?\s? )+  [\.!?] \)? # Matches an entire sentence.`
 
-이 패턴은 <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> 옵션을 사용하여 패턴 공백을 무시하는 점을 제외하고는 [명시적 캡처만 해당](#Explicit) 섹션에 정의된 패턴과 유사합니다.
+이 패턴은 <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> 옵션을 사용하여 패턴 공백을 무시하는 점을 제외하고는 [명시적 캡처만 해당](#explicit-captures-only) 섹션에 정의된 패턴과 유사합니다.
 
 [!code-csharp[Conceptual.Regex.Language.Options#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/whitespace1.cs#12)]
 [!code-vb[Conceptual.Regex.Language.Options#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/whitespace1.vb#12)]
@@ -311,10 +285,6 @@ ms.locfileid: "73121726"
 
 [!code-csharp[Conceptual.Regex.Language.Options#13](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/whitespace2.cs#13)]
 [!code-vb[Conceptual.Regex.Language.Options#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/whitespace2.vb#13)]
-
-[맨 위로 이동](#Top)
-
-<a name="RightToLeft"></a>
 
 ## <a name="right-to-left-mode"></a>오른쪽에서 왼쪽 모드
 
@@ -335,17 +305,13 @@ lookahead 어설션(`(?=`*subexpression*`)` 언어 요소) 및 lookbehind 어설
 
 이 정규식 패턴은 다음 테이블과 같이 정의됩니다.
 
-|패턴|설명|
+|무늬|설명|
 |-------------|-----------------|
 |`(?<=\d{1,2}\s)`|일치 항목의 시작 부분 앞에는 한 개 또는 두 개의 10진수와 그 뒤에 공백이 하나 있어야 합니다.|
 |`\w+`|하나 이상의 단어 문자를 찾습니다.|
 |`,?`|0개 또는 1개의 쉼표 문자를 찾습니다.|
 |`\s`|공백 문자를 찾습니다.|
 |`\d{4}`|네 개의 10진수를 찾습니다.|
-
-[맨 위로 이동](#Top)
-
-<a name="ECMAScript"></a>
 
 ## <a name="ecmascript-matching-behavior"></a>ECMAScript 일치 동작
 
@@ -372,7 +338,7 @@ ECMAScript의 동작과 정식 정규식의 동작은 문자 클래스 구문, �
 
   정규식은 다음 테이블과 같이 정의됩니다.
 
-  |패턴|설명|
+  |무늬|설명|
   |-------------|-----------------|
   |(a+)|문자 "a"를 1개 이상 찾습니다. 이 그룹은 두 번째 캡처링 그룹입니다.|
   |(\1)|첫 번째 캡처링 그룹에 의해 캡처된 부분 문자열을 찾습니다. 이 그룹은 세 번째 캡처링 그룹입니다.|
@@ -386,10 +352,6 @@ ECMAScript의 동작과 정식 정규식의 동작은 문자 클래스 구문, �
   |`\0` 뒤에 0-2자리의 8진수|8진수로 해석됩니다. 예를 들어, `\044`는 항상 8진수 값으로 해석되며 "$"를 의미합니다.|동일한 동작입니다.|
   |`\` 뒤에 1-9의 숫자 한 개, 그 뒤에 추가 10진수가 없음|역참조로 해석됩니다. 예를 들어, `\9`는 9번째 캡처링 그룹이 없더라도 항상 역참조 9를 의미합니다. 캡처링 그룹이 없는 경우 정규식 파서는 <xref:System.ArgumentException>을 throw합니다.|한 자리 10진수 캡처링 그룹이 있는 경우 해당 숫자를 역참조합니다. 그러지 않으면 값이 리터럴로 해석됩니다.|
   |`\` 뒤에 1-9의 숫자 한 개, 그 뒤에 추가 10진수가 있음|숫자가 10진수 값으로 해석됩니다. 해당 캡처링 그룹이 있는 경우 식이 역참조로 해석됩니다.<br /><br /> 그러지 않으면 최대 8진수 377까지 선행 8진수가 해석됩니다. 즉, 값의 낮은 8비트만 고려합니다. 나머지 숫자는 리터럴로 해석됩니다. 예를 들어, `\3000` 식에서 캡처링 그룹 300이 있는 경우 역참조 300으로 해석됩니다. 캡처링 그룹 300이 없는 경우 8진수 300 뒤에 0이 있는 것으로 해석됩니다.|가능한 한 많은 숫자를 캡처를 참조할 수 있는 10진수 값으로 변환하여 역참조로 해석됩니다. 숫자를 변환할 수 없는 경우 최대 8진수 377까지 선행 8진수를 사용하여 8진수로 해석됩니다. 나머지 숫자는 리터럴로 해석됩니다.|
-
-[맨 위로 이동](#Top)
-
-<a name="Invariant"></a>
 
 ## <a name="comparison-using-the-invariant-culture"></a>고정 문화권을 사용한 비교
 

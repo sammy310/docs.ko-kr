@@ -2,12 +2,12 @@
 title: CQRS 마이크로 서비스에서 읽기/쿼리 구현
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | Dapper를 사용하여 eShopOnContainers의 주문 마이크로 서비스에서 CQRS 쿼리 측면의 구현을 이해합니다.
 ms.date: 10/08/2018
-ms.openlocfilehash: 6541a0cb7ce8ac3946e119483308d91158bdb522
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 235b0e471a17e2a37a883a111cf499b7837f3ea1
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73094060"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972082"
 ---
 # <a name="implement-readsqueries-in-a-cqrs-microservice"></a>CQRS 마이크로 서비스에서 읽기/쿼리 구현
 
@@ -15,15 +15,15 @@ ms.locfileid: "73094060"
 
 이 접근 방식은 그림 7-3과 같이 간단합니다. API 인터페이스는 마이크로 ORM(Object Relational Mapper)(예: Dapper)과 같은 인프라를 사용하는 웹 API 컨트롤러에서 구현되며, UI 애플리케이션의 필요에 따라 동적 ViewModel을 반환합니다.
 
-![간소화된 CQRS 접근 방식에서 쿼리 측면에 대한 가장 간단한 방법은 데이터베이스를 Dapper 같은 Micro-ORM으로 쿼리하고 동적 ViewModels를 반환함으로써 구현될 수 있습니다.](./media/image3.png)
+![단순화된 CQRS에서 상위 수준 쿼리 쪽을 보여 주는 다이어그램](./media/cqrs-microservice-reads/simple-approach-cqrs-queries.png)
 
 **그림 7-3**. CQRS 마이크로 서비스에서 가장 간단한 쿼리 방법
 
-가능한 가장 간단한 쿼리 방법입니다. 쿼리 정의는 데이터베이스를 쿼리하고 각 쿼리에 대해 즉시 작성된 동적 ViewModel을 반환합니다. 쿼리는 idempotent이므로 쿼리 실행 횟수와 관계없이 데이터를 변경하지 않습니다. 따라서 집계 및 다른 패턴과 같은 트랜잭션 측면에서 사용되는 DDD 패턴으로 제한할 필요가 없으므로 쿼리가 트랜잭션 영역과 분리됩니다. 데이터베이스에 대해 UI에 필요한 데이터를 쿼리하기만 하면, SQL 문 자체를 제외하고 어디서든 정적으로 정의할 필요가 없는 동적 ViewModel(ViewModel에 대한 클래스 없음)을 반환합니다.
+간소화된 CQRS 접근 방식에서 쿼리 측면에 대한 가장 간단한 방법은 데이터베이스를 Dapper 같은 Micro-ORM으로 쿼리하고 동적 ViewModels를 반환함으로써 구현될 수 있습니다. 쿼리 정의는 데이터베이스를 쿼리하고 각 쿼리에 대해 즉시 작성된 동적 ViewModel을 반환합니다. 쿼리는 idempotent이므로 쿼리 실행 횟수와 관계없이 데이터를 변경하지 않습니다. 따라서 집계 및 다른 패턴과 같은 트랜잭션 측면에서 사용되는 DDD 패턴으로 제한할 필요가 없으므로 쿼리가 트랜잭션 영역과 분리됩니다. 데이터베이스에 대해 UI에 필요한 데이터를 쿼리하기만 하면, SQL 문 자체를 제외하고 어디서든 정적으로 정의할 필요가 없는 동적 ViewModel(ViewModel에 대한 클래스 없음)을 반환합니다.
 
 간단한 방법이므로 쿼리 측면(예: [Dapper](https://github.com/StackExchange/Dapper)와 같은 마이크로 ORM을 사용하는 코드)에 필요한 코드는 [동일한 웹 API 프로젝트 내에서](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/Queries/OrderQueries.cs) 구현할 수 있습니다. 그림 7-4에서 이를 보여줍니다. 쿼리는 eShopOnContainers 솔루션 내의 **Ordering.API** 마이크로 서비스 프로젝트에서 정의됩니다.
 
-![애플리케이션 > 쿼리 폴더를 표시하는 Ordering.API 프로젝트의 솔루션 탐색기 보기.](./media/image4.png)
+![Ordering.API 프로젝트의 Queries 폴더를 보여 주는 스크린샷](./media/cqrs-microservice-reads/ordering-api-queries-folder.png)
 
 **그림 7-4**. eShopOnContainers에서 주문 마이크로 서비스의 쿼리
 
@@ -41,7 +41,7 @@ ViewModel은 클래스에 정의된 정적 형식이 될 수 있습니다. 또�
 
 Dapper는 오픈 소스 프로젝트(원래 Sam Saffron이 만듦)이며 [Stack Overflow](https://stackoverflow.com/)에서 사용되는 구성 요소의 일부입니다. Dapper를 사용하려면 다음 그림과 같이 [Dapper NuGet 패키지](https://www.nuget.org/packages/Dapper)를 통해 이를 설치해야 합니다.
 
-![VS에서 NuGet 패키지 관리 보기에 표시되는 Dapper 패키지.](./media/image4.1.png)
+![NuGet 패키지 뷰의 Dapper 패키지를 보여 주는 스크린샷](./media/cqrs-microservice-reads/drapper-package-nuget.png)
 
 또한 코드에서 Dapper 확장 메서드에 액세스할 수 있도록 using 문도 추가해야 합니다.
 
@@ -177,19 +177,19 @@ public class OrderSummary
 
 다음 이미지에서 Swagger UI에서 ResponseType 정보를 표시하는 방법을 확인할 수 있습니다.
 
-![Ordering API에 대한 Swagger UI 페이지의 브라우저 보기.](./media/image5.png)
+![Ordering API의 Swagger UI 페이지를 보여 주는 스크린샷](./media/cqrs-microservice-reads/swagger-ordering-http-api.png)
 
 **그림 7-5**. 웹 API에서 응답 형식 및 가능한 HTTP 상태 코드를 보여 주는 Swagger UI
 
 위의 이미지에서는 ViewModel 형식 및 반환될 수 있는 가능한 HTTP 상태 코드에 기반한 몇 가지 예제 값을 확인할 수 있습니다.
 
-## <a name="additional-resources"></a>추가 리소스
+## <a name="additional-resources"></a>추가 자료
 
 - **Dapper**  
  <https://github.com/StackExchange/dapper-dot-net>
 
 - **Julie Lerman. 데이터 요소 - Dapper, Entity Framework 및 하이브리드 앱(MSDN 매거진 문서)**  
-  <https://msdn.microsoft.com/magazine/mt703432>
+  <https://docs.microsoft.com/archive/msdn-magazine/2016/may/data-points-dapper-entity-framework-and-hybrid-apps>
 
 - **Swagger를 사용한 ASP.NET Core Web API 도움말 페이지**  
   <https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger?tabs=visual-studio>

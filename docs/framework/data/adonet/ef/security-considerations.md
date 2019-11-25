@@ -2,12 +2,12 @@
 title: 보안 고려 사항(Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: d9adf4ed9e340ff589117f160e370c7d1595a207
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 9a560db5dbcb7a87a1c933febfb8bf676cc8816b
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039863"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73968411"
 ---
 # <a name="security-considerations-entity-framework"></a>보안 고려 사항(Entity Framework)
 이 항목에서는 Entity Framework 응용 프로그램 개발, 배포 및 실행과 관련 된 보안 고려 사항에 대해 설명 합니다. 또한 보안 .NET Framework 응용 프로그램을 만들기 위한 권장 사항을 따라야 합니다. 자세한 내용은 [보안 개요](../security-overview.md)를 참조 하세요.  
@@ -119,11 +119,11 @@ ms.locfileid: "73039863"
  다음과 같은 이유로 신뢰할 수 없는 호출자에 노출되는 메서드에서 <xref:System.Linq.IQueryable%601> 형식을 반환하지 않도록 해야 합니다.  
   
 - <xref:System.Linq.IQueryable%601> 형식을 노출하는 쿼리의 사용자가 보안 데이터를 노출하거나 결과 집합의 크기를 늘리는 메서드를 결과에 대해 호출할 수 있습니다. 예를 들어 다음과 같은 메서드 시그니처가 있다고 가정합니다.  
-  
-    ```csharp  
-    public IQueryable<Customer> GetCustomer(int customerId)  
-    ```  
-  
+
+    ```csharp
+    public IQueryable<Customer> GetCustomer(int customerId)
+    ```
+
     이 쿼리의 사용자는 반환된 `.Include("Orders")` 에 대해 `IQueryable<Customer>` 를 호출하여 쿼리에서 노출하도록 의도되지 않은 데이터를 검색할 수 있습니다. 메서드의 반환 형식을 <xref:System.Collections.Generic.IEnumerable%601>로 변경하고 `.ToList()`와 같이 결과를 구체화하는 메서드를 호출하면 이 문제를 방지할 수 있습니다.  
   
 - <xref:System.Linq.IQueryable%601> 쿼리는 결과가 반복될 때 실행되므로 <xref:System.Linq.IQueryable%601> 형식을 노출하는 쿼리의 사용자가 throw된 예외를 catch할 수 있습니다. 예외에는 사용자에게 허용되지 않는 정보가 포함될 수 있습니다.  

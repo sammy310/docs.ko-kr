@@ -6,12 +6,12 @@ helpviewer_keywords:
 - documents [WPF], storage
 - documents [WPF], serialization
 ms.assetid: 4839cd87-e206-4571-803f-0200098ad37b
-ms.openlocfilehash: d56968ad390d4681b3c1bb1580a864f9a9f0e10c
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: ff0555105f219db5ed891c02400b0587c825718e
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424299"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974657"
 ---
 # <a name="document-serialization-and-storage"></a>문서 serialization 및 스토리지
 
@@ -43,7 +43,7 @@ Microsoft .NET 프레임 워크는 고품질 문서를 만들고 표시 하기 �
 
 ### <a name="xps-print-path"></a>XPS 인쇄 경로
 
-또한 Microsoft .NET Framework XPS 인쇄 경로는 인쇄 출력을 통해 문서를 작성 하는 확장 가능한 메커니즘을 제공 합니다.  XPS는 문서 파일 형식으로 사용 되며 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)]의 기본 인쇄 스풀 형식입니다.  중간 형식으로 변환 하지 않아도 xps 문서를 XPS 호환 프린터로 직접 보낼 수 있습니다.  인쇄 경로 출력 옵션과 기능에 대한 추가 정보는 [인쇄 개요](printing-overview.md)를 참조하세요.
+또한 Microsoft .NET Framework XPS 인쇄 경로는 인쇄 출력을 통해 문서를 작성 하는 확장 가능한 메커니즘을 제공 합니다.  XPS는 문서 파일 형식으로 사용 되며 Windows Vista의 기본 인쇄 스풀 형식입니다.  중간 형식으로 변환 하지 않아도 xps 문서를 XPS 호환 프린터로 직접 보낼 수 있습니다.  인쇄 경로 출력 옵션과 기능에 대한 추가 정보는 [인쇄 개요](printing-overview.md)를 참조하세요.
 
 <a name="PluginSerializers"></a>
 
@@ -55,7 +55,7 @@ Microsoft .NET 프레임 워크는 고품질 문서를 만들고 표시 하기 �
 
 ### <a name="using-a-plug-in-serializer"></a>플러그 인 Serializer 사용
 
-플러그 인 serializer는 사용하기가 쉽습니다.  <xref:System.Windows.Documents.Serialization.SerializerProvider> 클래스는 시스템에 설치 된 각 플러그 인에 대 한 <xref:System.Windows.Documents.Serialization.SerializerDescriptor> 개체를 열거 합니다.  <xref:System.Windows.Documents.Serialization.SerializerDescriptor.IsLoadable%2A> 속성은 현재 구성에 따라 설치 된 플러그 인을 필터링 하 고 직렬 변환기를 로드 하 여 응용 프로그램에서 사용할 수 있는지 확인 합니다.  또한 <xref:System.Windows.Documents.Serialization.SerializerDescriptor> <xref:System.Windows.Documents.Serialization.SerializerDescriptor.DisplayName%2A> 및 <xref:System.Windows.Documents.Serialization.SerializerDescriptor.DefaultFileExtension%2A>와 같은 다른 속성을 제공 합니다 .이 속성은 응용 프로그램에서 사용자에 게 사용 가능한 출력 형식에 대 한 serializer를 선택 하 라는 메시지를 표시 하는 데 사용할 수 있습니다.  XPS의 기본 플러그 인 serializer는 .NET Framework 제공 되며 항상 열거 됩니다.  사용자가 출력 형식을 선택 하면 <xref:System.Windows.Documents.Serialization.SerializerProvider.CreateSerializerWriter%2A> 메서드를 사용 하 여 특정 형식에 대 한 <xref:System.Windows.Documents.Serialization.SerializerWriter>를 만듭니다.  <xref:System.Windows.Documents.Serialization.SerializerWriter>.<xref:System.Windows.Documents.Serialization.SerializerWriter.Write%2A> 그런 다음 메서드를 호출 하 여 문서 스트림을 데이터 저장소에 출력할 수 있습니다.
+플러그 인 serializer는 사용하기가 쉽습니다.  <xref:System.Windows.Documents.Serialization.SerializerProvider> 클래스는 시스템에 설치 된 각 플러그 인에 대 한 <xref:System.Windows.Documents.Serialization.SerializerDescriptor> 개체를 열거 합니다.  <xref:System.Windows.Documents.Serialization.SerializerDescriptor.IsLoadable%2A> 속성은 현재 구성에 따라 설치 된 플러그 인을 필터링 하 고 직렬 변환기를 로드 하 여 응용 프로그램에서 사용할 수 있는지 확인 합니다.  또한 <xref:System.Windows.Documents.Serialization.SerializerDescriptor> <xref:System.Windows.Documents.Serialization.SerializerDescriptor.DisplayName%2A> 및 <xref:System.Windows.Documents.Serialization.SerializerDescriptor.DefaultFileExtension%2A>와 같은 다른 속성을 제공 합니다 .이 속성은 응용 프로그램에서 사용자에 게 사용 가능한 출력 형식에 대 한 serializer를 선택 하 라는 메시지를 표시 하는 데 사용할 수 있습니다.  XPS의 기본 플러그 인 serializer는 .NET Framework 제공 되며 항상 열거 됩니다.  사용자가 출력 형식을 선택 하면 <xref:System.Windows.Documents.Serialization.SerializerProvider.CreateSerializerWriter%2A> 메서드를 사용 하 여 특정 형식에 대 한 <xref:System.Windows.Documents.Serialization.SerializerWriter>를 만듭니다.  그런 다음 <xref:System.Windows.Documents.Serialization.SerializerWriter.Write%2A?displayProperty=nameWithType> 메서드를 호출 하 여 문서 스트림을 데이터 저장소에 출력할 수 있습니다.
 
 다음 예제에서는 "PlugInFileFilter" 속성에서 <xref:System.Windows.Documents.Serialization.SerializerProvider> 메서드를 사용 하는 응용 프로그램을 보여 줍니다.  PlugInFileFilter는 설치 된 플러그 인을 열거 하 고 <xref:Microsoft.Win32.SaveFileDialog>사용할 수 있는 파일 옵션을 사용 하 여 필터 문자열을 작성 합니다.
 

@@ -2,12 +2,12 @@
 title: IHostedService 및 BackgroundService 클래스를 사용하여 마이크로 서비스에서 백그라운드 작업 구현
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | IHostedService 및 BackgroundService를 사용하여 마이크로 서비스 .NET Core에서 백그라운드 작업을 구현하는 새 옵션을 이해합니다.
 ms.date: 01/07/2019
-ms.openlocfilehash: 2d0b41bc7853dc616284c46462efe96ca1a9d296
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: d289d8ccc737fa9fc13b95da44e4b617b431f96a
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72770116"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737169"
 ---
 # <a name="implement-background-tasks-in-microservices-with-ihostedservice-and-the-backgroundservice-class"></a>IHostedService 및 BackgroundService 클래스를 사용하여 마이크로 서비스에서 백그라운드 작업 구현
 
@@ -17,11 +17,11 @@ ms.locfileid: "72770116"
 
 .NET Core 2.0부터 프레임워크는 호스팅 서비스를 쉽게 구현할 수 있도록 돕는 <xref:Microsoft.Extensions.Hosting.IHostedService>라는 새 인터페이스를 제공합니다. 기본적인 개념은 그림 6-26과 같이 웹 호스트 또는 호스트를 실행하는 동안 백그라운드에서 실행되는 여러 개의 백그라운드 작업(호스티드 서비스)을 등록할 수 있다는 것입니다.
 
-![ASP.NET Core 1.x 및 2.x는 웹앱의 백그라운드 프로세스용 IWebHost를 지원하며, .NET Core 2.1은 일반 콘솔 앱으로 백그라운드 프로세스용 IHost를 지원합니다.](./media/image26.png)
+![ASP.NET Core IWebHost와 .NET Core IHost를 비교하는 다이어그램](./media/background-tasks-with-ihostedservice/ihosted-service-webhost-vs-host.png)
 
 **그림 6-26**. WebHost 및 Host에서 IHostedService 사용 비교
 
-`WebHost`와 `Host` 사이에서 만들어진 차이점입니다.
+ASP.NET Core 1.x 및 2.x는 웹앱의 백그라운드 프로세스에 대해 IWebHost를 지원합니다. .NET Core 2.1은 일반 콘솔 앱을 사용하는 백그라운드 프로세스에 대해 IHost를 지원합니다. `WebHost`와 `Host` 사이에서 만들어진 차이점입니다.
 
 ASP.NET Core 2.0의 `WebHost`(`IWebHost`를 구현하는 기본 클래스)는 MVC 웹앱 또는 Web API 서비스를 구현하는 경우와 같이 프로세스에 HTTP 서버 기능을 제공하는 데 사용하는 인프라 아티팩트입니다. 종속성 주입을 사용하고 요청 파이프라인 등에 미들웨어를 넣고 백그라운드 작업에 대해 이러한 `IHostedServices`를 정확하게 사용할 수 있도록 하는 ASP.NET Core의 새로운 모든 인프라 장점을 제공합니다.
 
@@ -224,9 +224,11 @@ WebHost.CreateDefaultBuilder(args)
 
 다음 이미지는 IHostedServices를 구현할 때 관련되는 클래스 및 인터페이스의 시각적 개체 요약을 보여줍니다.
 
-![클래스 다이어그램: IWebHost와 IHost는 IHostedService를 구현하는 BackgroundService에서 상속되는 많은 서비스를 호스트할 수 있습니다.](./media/image27.png)
+![IWebHost 및 IHost에서 많은 서비스를 호스트할 수 있음을 보여 주는 다이어그램](./media/background-tasks-with-ihostedservice/class-diagram-custom-ihostedservice.png)
 
 **그림 6-27**. IHostedService와 관련된 다중 클래스 및 인터페이스를 보여 주는 클래스 다이어그램
+
+클래스 다이어그램: IWebHost와 IHost는 IHostedService를 구현하는 BackgroundService에서 상속되는 많은 서비스를 호스트할 수 있습니다.
 
 ### <a name="deployment-considerations-and-takeaways"></a>배포 고려 사항 및 요점
 

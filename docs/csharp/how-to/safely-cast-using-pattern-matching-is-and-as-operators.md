@@ -1,19 +1,19 @@
 ---
-title: '방법: 패턴 일치와 is 및 as 연산자를 사용하여 안전하게 캐스트'
+title: 패턴 일치와 is 및 as 연산자를 사용하여 안전하게 캐스트하는 방법
 description: 패턴 일치 기법을 사용하여 변수를 다른 형식으로 안전하게 캐스팅하는 방법을 알아봅니다. 패턴 일치뿐만 아니라 is 및 as 연산자를 사용하여 형식을 안전하게 변환할 수 있습니다.
 ms.date: 09/05/2018
 helpviewer_keywords:
 - cast operators [C#], as and is operators
 - as operator [C#]
 - is operator [C#]
-ms.openlocfilehash: 8d090df1338c535b11a7fd3ec32f6d1cb00b338f
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 762f8135063f7256ce7a167c65013703d9249039
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739688"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973086"
 ---
-# <a name="how-to-safely-cast-by-using-pattern-matching-and-the-is-and-as-operators"></a>방법: 패턴 일치와 is 및 as 연산자를 사용하여 안전하게 캐스트
+# <a name="how-to-safely-cast-by-using-pattern-matching-and-the-is-and-as-operators"></a>패턴 일치와 is 및 as 연산자를 사용하여 안전하게 캐스트하는 방법
 
 개체는 다형성이기 때문에 기본 클래스 형식의 변수에 파생 [형식](../programming-guide/types/index.md)이 포함될 수 있습니다. 파생 형식의 인스턴스 멤버에 액세스하려면 값을 파생 형식으로 다시 [캐스팅](../programming-guide/types/casting-and-type-conversions.md)해야 합니다. 그러나 캐스트는 <xref:System.InvalidCastException>이 throw될 위험을 생성합니다. C#은 성공하는 경우에만 조건부로 캐스트를 수행하는 [패턴 일치](../pattern-matching.md) 문을 제공합니다. C#은 또한 값이 특정 형식인지 테스트하기 위해 [is](../language-reference/operators/type-testing-and-cast.md#is-operator) 및 [as](../language-reference/operators/type-testing-and-cast.md#as-operator) 연산자를 제공합니다.
 

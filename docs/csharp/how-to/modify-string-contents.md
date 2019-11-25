@@ -1,16 +1,16 @@
 ---
-title: '방법: 문자열 내용 수정 - C# 가이드'
+title: 문자열 내용 수정 방법 - C# 가이드
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
-ms.openlocfilehash: 2cc1166d98a6cc07e0827a138cecb09c0530b899
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: 539e313173d46c2c92399cefe94207c8beed03b4
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67267765"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973261"
 ---
-# <a name="how-to-modify-string-contents-in-c"></a>방법: C에서 문자열 내용 수정\#
+# <a name="how-to-modify-string-contents-in-c"></a>C\#에서 문자열 내용을 수정하는 방법
 
 이 문서에서는 기존 `string`을 수정하여 `string`을 생성하는 다양한 기술을 보여 줍니다. 설명된 모든 기술은 새 `string` 개체로 수정의 결과를 반환합니다. 이를 명확하게 보여 주기 위해 모든 예제는 새 변수에 결과를 저장합니다. 그런 다음, 기존 `string` 및 각 예제를 실행할 때 수정의 결과인 `string`을 검사할 수 있습니다.
 
@@ -48,7 +48,7 @@ ms.locfileid: "67267765"
 
 [정규식](../../standard/base-types/regular-expressions.md)을 사용하여 패턴에 의해 정의된 새 텍스트로 텍스트 일치 패턴을 바꿀 수 있습니다. 다음 예제에서는 <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> 클래스를 사용하여 원본 문자열의 패턴을 찾고 적절한 대/소문자로 대체합니다. <xref:System.Text.RegularExpressions.Regex.Replace(System.String,System.String,System.Text.RegularExpressions.MatchEvaluator,System.Text.RegularExpressions.RegexOptions)?displayProperty=nameWithType> 메서드는 해당 인수 중 하나로 대체 논리를 제공하는 함수를 사용합니다. 이 예제에서 해당 함수, `LocalReplaceMatchCase`는 샘플 메서드 내에서 선언된 **로컬 함수**입니다. `LocalReplaceMatchCase`는 <xref:System.Text.StringBuilder?displayProperty=nameWithType> 클래스를 사용하여 적절한 대/소문자로 대체 문자열을 작성합니다.
 
-정규식은 알려진 텍스트가 아닌 패턴을 따르는 텍스트를 검색하고 대체하는 데 가장 유용합니다. 자세한 내용은 [방법: 문자열 검색](search-strings.md)을 참조하세요. 검색 패턴, "the\s"는 공백 문자가 뒤에 오는 문자 "the"를 검색합니다. 패턴의 해당 부분을 사용하면 원본 문자열의 "there"와 일치하지 않습니다. 정규식 언어 요소에 대한 자세한 내용은 [정규식 언어 - 빠른 참조](../../standard/base-types/regular-expression-language-quick-reference.md)를 참조하세요.
+정규식은 알려진 텍스트가 아닌 패턴을 따르는 텍스트를 검색하고 대체하는 데 가장 유용합니다. 자세한 내용은 [문자열 검색 방법](search-strings.md)을 참조하세요. 검색 패턴, "the\s"는 공백 문자가 뒤에 오는 문자 "the"를 검색합니다. 패턴의 해당 부분을 사용하면 원본 문자열의 "there"와 일치하지 않습니다. 정규식 언어 요소에 대한 자세한 내용은 [정규식 언어 - 빠른 참조](../../standard/base-types/regular-expression-language-quick-reference.md)를 참조하세요.
 
 [!code-csharp-interactive[replace creates a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#5)]
 

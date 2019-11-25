@@ -1,5 +1,5 @@
 ---
-title: '방법: 여러 문자열 연결(C# 가이드)'
+title: 여러 문자열 연결 방법(C# 가이드)
 description: C#에서 문자열을 연결하는 데는 여러 방법이 있습니다. 서로 다른 선택의 옵션과 이유에 대해 알아보세요.
 ms.date: 02/20/2018
 helpviewer_keywords:
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - concatenating strings [C#]
 - strings [C#], concatenation
 ms.assetid: 8e16736f-4096-4f3f-be0f-9d4c3ff63520
-ms.openlocfilehash: da83a79f58c236692e284a7920c7b98c3520e5d6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2e443030445d2817c8f53a044a261edd22eeb26e
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710419"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973270"
 ---
-# <a name="how-to-concatenate-multiple-strings-c-guide"></a>방법: 여러 문자열 연결(C# 가이드)
+# <a name="how-to-concatenate-multiple-strings-c-guide"></a>여러 문자열 연결 방법(C# 가이드)
 
 *연결*은 한 문자열을 다른 문자열의 끝에 추가하는 프로세스입니다. `+` 연산자를 사용하여 문자열을 연결합니다. 문자열 리터럴 및 문자열 상수의 경우 연결 시 컴파일이 발생하며, 런타임 연결은 발생하지 않습니다. 문자열 변수의 경우 연결은 런타임에서만 발생합니다.
 

@@ -10,22 +10,22 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: 4d51011fddb856cf1ebd00943e9b79776d9181d0
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: da575c65902ec8751c12482d0c8d0abd523623e4
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854115"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975127"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>스트리밍 공급자(WCF Data Services)
 
-데이터 서비스에서 BLOB(Binary Large Object) 데이터를 노출할 수 있습니다. 이 이진 데이터는 비디오 및 오디오 스트림, 이미지, 문서 파일 또는 다른 형식의 이진 미디어를 나타낼 수 있습니다. 데이터 모델의 엔터티에 이진 속성이 하나 이상 포함되어 있는 경우 데이터 서비스가 이 이진 데이터를 응답 피드의 항목 안에 base-64로 인코딩하여 반환합니다. 이러한 방식으로 많은 이진 데이터를 로드 하 고 serialize 하면 성능에 영향 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 을 줄 수 있기 때문에는 자신이 속한 엔터티와 독립적으로 이진 데이터를 검색 하기 위한 메커니즘을 정의 합니다. 이 작업은 엔터티의 이진 데이터를 하나 이상의 데이터 스트림으로 구분하여 수행됩니다.
+데이터 서비스에서 BLOB(Binary Large Object) 데이터를 노출할 수 있습니다. 이 이진 데이터는 비디오 및 오디오 스트림, 이미지, 문서 파일 또는 다른 형식의 이진 미디어를 나타낼 수 있습니다. 데이터 모델의 엔터티에 이진 속성이 하나 이상 포함되어 있는 경우 데이터 서비스가 이 이진 데이터를 응답 피드의 항목 안에 base-64로 인코딩하여 반환합니다. 이러한 방식으로 많은 이진 데이터를 로드 하 고 serialize 하면 성능에 영향을 줄 수 있으므로 OData (Open Data Protocol)는 자신이 속한 엔터티와 독립적으로 이진 데이터를 검색 하기 위한 메커니즘을 정의 합니다. 이 작업은 엔터티의 이진 데이터를 하나 이상의 데이터 스트림으로 구분하여 수행됩니다.
 
 - 미디어 리소스 - 비디오, 오디오, 이미지 또는 다른 형식의 미디어 리소스 스트림과 같은 엔터티에 속하는 이진 데이터입니다.
 
 - 미디어 링크 항목 - 관련 미디어 리소스 스트림에 대한 참조가 있는 엔터티입니다.
 
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]에서 스트리밍 데이터 공급자를 이진 리소스 스트림을 정의합니다. 스트리밍 공급자 구현에서는 특정 엔터티와 <xref:System.IO.Stream> 연결 된 미디어 리소스 스트림과 함께 데이터 서비스를 개체로 제공 합니다. 이 구현을 사용하면 데이터 서비스가 HTTP를 통해 미디어 리소스를 받아들이고 지정된 MIME 형식의 이진 데이터 스트림으로 반환합니다.
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]에서 스트리밍 데이터 공급자를 이진 리소스 스트림을 정의합니다. 스트리밍 공급자 구현은 데이터 서비스에 특정 엔터티와 연결 된 미디어 리소스 스트림을 <xref:System.IO.Stream> 개체로 제공 합니다. 이 구현을 사용하면 데이터 서비스가 HTTP를 통해 미디어 리소스를 받아들이고 지정된 MIME 형식의 이진 데이터 스트림으로 반환합니다.
 
 이진 데이터의 스트리밍을 지원하도록 데이터 서비스를 구성하려면 다음 단계를 수행해야 합니다.
 
@@ -39,7 +39,7 @@ ms.locfileid: "70854115"
 
 5. 서버나 데이터 소스의 이진 리소스에 대한 액세스를 사용하도록 설정합니다.
 
-이 항목의 예제는 샘플 스트리밍 사진 서비스를 기반으로 하며, post [Data Services streaming Provider 시리즈에서 자세히 설명 합니다. 스트리밍 공급자 구현 (1 부)](https://go.microsoft.com/fwlink/?LinkID=198989) 이 샘플 서비스의 소스 코드는 MSDN 코드 갤러리의 [스트리밍 사진 데이터 서비스 샘플 페이지](https://go.microsoft.com/fwlink/?LinkID=198988) 에서 사용할 수 있습니다.
+이 항목의 예제는 스트리밍 공급자 [시리즈: 스트리밍 공급자 구현 (1 부) 게시물 Data Services](https://go.microsoft.com/fwlink/?LinkID=198989)에서 자세히 설명 하는 샘플 스트리밍 사진 서비스를 기반으로 합니다. 이 샘플 서비스의 소스 코드는 MSDN 코드 갤러리의 [스트리밍 사진 데이터 서비스 샘플 페이지](https://go.microsoft.com/fwlink/?LinkID=198988) 에서 사용할 수 있습니다.
 
 ## <a name="defining-a-media-link-entry-in-the-data-model"></a>데이터 모델에서 미디어 링크 항목 정의
 
@@ -53,7 +53,7 @@ ms.locfileid: "70854115"
 
 또한 데이터 모델을 정의하는 .edmx 또는 .csdl 파일의 루트나 엔터티에 `xmlns:m=http://schemas.microsoft.com/ado/2007/08/dataservices/metadata` 네임스페이스를 추가해야 합니다.
 
-Entity Framework 공급자를 사용 하 고 미디어 리소스를 노출 하는 데이터 서비스에 대 한 예제는 post [Data Services Streaming provider 시리즈를 참조 하세요. 스트리밍 공급자 구현 (1 부)](https://go.microsoft.com/fwlink/?LinkID=198989)
+Entity Framework 공급자를 사용 하 고 미디어 리소스를 노출 하는 데이터 서비스의 예제는 스트리밍 [공급자 시리즈: 스트리밍 공급자 구현 (1 부) Data Services](https://go.microsoft.com/fwlink/?LinkID=198989)게시를 참조 하십시오.
 
 **리플렉션 공급자**
 
@@ -75,7 +75,7 @@ Entity Framework 공급자를 사용 하 고 미디어 리소스를 노출 하�
 |<xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetStreamContentType%2A>|이 메서드는 지정된 미디어 링크 항목과 연결된 미디어 리소스의 Content-Type 값을 반환하기 위해 데이터 서비스에서 호출됩니다.|
 |<xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetStreamETag%2A>|이 메서드는 지정된 엔터티와 연결된 데이터 스트림의 eTag를 반환하기 위해 데이터 서비스에서 호출됩니다. 이 메서드는 이진 데이터의 동시성을 관리할 때 사용됩니다. 이 메서드가 null을 반환하는 경우 데이터 서비스는 동시성을 추적하지 않습니다.|
 |<xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A>|이 메서드는 클라이언트에서 전송된 스트림을 받을 때 사용되는 스트림을 가져오기 위해 데이터 서비스에서 호출됩니다. <xref:System.Data.Services.Providers.IDataServiceStreamProvider>를 구현하는 경우 데이터 서비스가 수신된 스트림 데이터를 쓰는 쓰기 가능한 스트림을 반환해야 합니다.|
-|<xref:System.Data.Services.Providers.IDataServiceStreamProvider.ResolveType%2A>|삽입될 미디어 리소스의 데이터 스트림과 연결된 미디어 링크 항목에 대해 데이터 서비스 런타임이 만들어야 하는 형식을 나타내는 네임스페이스로 한정된 형식 이름을 반환합니다.|
+|<xref:System.Data.Services.Providers.IDataServiceStreamProvider.ResolveType%2A>|삽입 되는 미디어 리소스의 데이터 스트림과 연결 된 미디어 링크 항목에 대해 데이터 서비스 런타임이 만들어야 하는 형식을 나타내는 네임 스페이스로 한정 된 형식 이름을 반환 합니다.|
 
 ## <a name="creating-the-streaming-data-service"></a>스트리밍 데이터 서비스 만들기
 
@@ -91,11 +91,11 @@ Entity Framework 공급자를 사용 하 고 미디어 리소스를 노출 하�
 ASP.NET 웹 응용 프로그램에서 데이터 서비스를 만들 때 WCF (Windows Communication Foundation)를 사용 하 여 HTTP 프로토콜 구현을 제공 합니다. 기본적으로 WCF는 HTTP 메시지의 크기를 65K바이트로 제한합니다. 데이터 서비스에서 보내고 받는 큰 이진 데이터를 스트리밍할 수 있으려면 큰 이진 파일을 사용할 수 있고 전송에 스트림을 사용하도록 웹 애플리케이션도 구성해야 합니다. 이렇게 하려면 애플리케이션의 Web.config 파일에 있는 `<configuration />` 요소에 다음을 추가합니다.
 
 > [!NOTE]
-> <xref:System.ServiceModel.TransferMode.Streamed?displayProperty=nameWithType> 전송 모드를 사용 하 여 요청 및 응답 메시지의 이진 데이터를 스트리밍하 고 WCF에 의해 버퍼링 되지 않았는지 확인 해야 합니다.
+> 요청 및 응답 메시지의 이진 데이터를 스트리밍하 고 WCF에 의해 버퍼링 되지 않도록 <xref:System.ServiceModel.TransferMode.Streamed?displayProperty=nameWithType> 전송 모드를 사용 해야 합니다.
 
 자세한 내용은 [스트리밍 메시지 전송](../../wcf/feature-details/streaming-message-transfer.md) 및 [전송 할당량](../../wcf/feature-details/transport-quotas.md)을 참조 하세요.
 
-기본적으로 인터넷 정보 서비스(IIS)는 요청 크기를 4MB로 제한합니다. 데이터 서비스에서 IIS를 실행할 때 4mb 보다 큰 스트림을 받을 수 있도록 하려면 다음과 같이 `maxRequestLength` `<system.web />` 구성 섹션에서 [httpRuntime 요소 (ASP.NET Settings 스키마)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e1f13641(v=vs.100)) 의 특성도 설정 해야 합니다. 예 들어
+기본적으로 인터넷 정보 서비스(IIS)는 요청 크기를 4MB로 제한합니다. IIS에서 실행 될 때 데이터 서비스에서 4MB 보다 큰 스트림을 받을 수 있도록 하려면 다음 예제와 같이 `<system.web />` 구성 섹션에서 HttpRuntime 요소의 `maxRequestLength` 특성도 설정 해야 합니다 [(ASP.NET Settings 스키마)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e1f13641(v=vs.100)) .
 
 ## <a name="using-data-streams-in-a-client-application"></a>클라이언트 애플리케이션에서 데이터 스트림 사용
 
@@ -131,13 +131,13 @@ ASP.NET 웹 응용 프로그램에서 데이터 서비스를 만들 때 WCF (Win
 
 ## <a name="versioning-requirements"></a>버전 관리 요구 사항
 
-스트리밍 공급자에 대한 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 프로토콜 버전 관리 요구 사항은 다음과 같습니다.
+스트리밍 공급자의 OData 프로토콜 버전 요구 사항은 다음과 같습니다.
 
-- 스트리밍 공급자의 경우 데이터 서비스가 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 프로토콜 버전 2.0 이상을 지원해야 합니다.
+- 스트리밍 공급자는 데이터 서비스에서 OData 프로토콜 버전 2.0 이상 버전을 지원 해야 합니다.
 
-자세한 내용은 [데이터 서비스 버전 관리](data-service-versioning-wcf-data-services.md)합니다.
+자세한 내용은 [데이터 서비스 버전 관리](data-service-versioning-wcf-data-services.md)를 참조 하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [Data Services 공급자](data-services-providers-wcf-data-services.md)
 - [사용자 지정 데이터 서비스 공급자](custom-data-service-providers-wcf-data-services.md)

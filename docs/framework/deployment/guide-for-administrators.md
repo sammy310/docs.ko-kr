@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 91099b9b4d230839bc14c5fe4d5eafd05ac95541
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: dc842713a16df8e5ada5ad6c71ca19f91ecbc405
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052153"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975562"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>관리자를 위한 .NET Framework 배포 가이드
 
@@ -21,7 +21,7 @@ ms.locfileid: "71052153"
 > [!NOTE]
 > .NET Framework 4.5, System Center Configuration Manager 및 Active Directory를 비롯하여 이 문서에서 언급된 소프트웨어에는 각각 사용권 계약 내용이 적용됩니다. 이 지침에서는 적절한 소프트웨어 라이선스로 이러한 사용권 계약 내용을 검토하고 이에 동의했다고 가정합니다. 이 지침에서는 이러한 사용권 계약의 어떠한 내용도 배제하지 않습니다.
 >
-> .NET Framework 지원에 대한 자세한 내용은 Microsoft 지원 웹 사이트의 [Microsoft .NET Framework 지원 기간 정책](https://go.microsoft.com/fwlink/?LinkId=196607)을 참조하십시오.
+> .NET Framework 지원의 자세한 내용은 Microsoft 지원 웹 사이트에서 [.NET Framework 공식 지원 정책](https://dotnet.microsoft.com/platform/support/policy/dotnet-framework)을 참조하세요.
 
 이 항목에는 다음과 같은 단원이 포함되어 있습니다.
 
@@ -135,9 +135,9 @@ System Center 2012 Configuration Manager를 사용하여 .NET Framework 4.5의 �
 |------------|-----------------|
 |**/q**|자동 모드를 설정합니다. 사용자 입력이 필요하지 않으며 아무런 출력도 표시되지 않습니다.|
 |**/norestart**|설치 프로그램이 자동으로 재부팅하지 않도록 합니다. 이 옵션을 사용하는 경우 Configuration Manager는 컴퓨터 다시 시작을 처리해야 합니다.|
-|**/chainingpackage** *PackageName*|연결을 수행하는 패키지의 이름을 지정합니다. 이 정보는 [Microsoft CEIP(사용자 환경 개선 프로그램)](https://go.microsoft.com/fwlink/p/?LinkId=248244)에 등록한 사용자에 대한 다른 설치 세션 정보와 함께 보고됩니다. 패키지 이름에 공백이 포함되어 있으면 **/chainingpackage "Chaining Product"** 와 같이 큰따옴표를 구분 기호로 사용합니다.|
+|**/chainingpackage** *PackageName*|연결을 수행하는 패키지의 이름을 지정합니다. 이 정보는 Microsoft CEIP(사용자 환경 개선 프로그램)에 등록한 사용자에 대한 다른 설치 세션 정보와 함께 보고됩니다. 패키지 이름에 공백이 포함되어 있으면 **/chainingpackage "Chaining Product"** 와 같이 큰따옴표를 구분 기호로 사용합니다.|
 
-위 단계를 통해 .NET Framework 4.5라는 이름의 패키지가 만들어집니다. 이 프로그램은 .NET Framework 4.5 자동 설치 프로그램을 배포합니다. 자동 설치에서 사용자는 설치 프로세스와 상호 작용하지 않으며 연결 애플리케이션은 반환 코드를 캡처하고 재부팅을 처리해야 합니다. [설치 패키지에서 프로세스 진행 정보 가져오기](https://go.microsoft.com/fwlink/?LinkId=179606)를 참조하세요.
+위 단계를 통해 .NET Framework 4.5라는 이름의 패키지가 만들어집니다. 이 프로그램은 .NET Framework 4.5 자동 설치 프로그램을 배포합니다. 자동 설치에서 사용자는 설치 프로세스와 상호 작용하지 않으며 연결 애플리케이션은 반환 코드를 캡처하고 재부팅을 처리해야 합니다. [설치 패키지에서 프로세스 진행 정보 가져오기](https://docs.microsoft.com/previous-versions/cc825975(v=vs.100))를 참조하세요.
 
 <a name="select_dist_point"></a>
 

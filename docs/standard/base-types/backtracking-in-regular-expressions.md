@@ -18,30 +18,19 @@ helpviewer_keywords:
 - parsing text with regular expressions, backtracking
 ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
 ms.custom: seodec18
-ms.openlocfilehash: 06f1094d872c84f2f277c7695a8858edc285449f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6504430f94f800bb9f41761ad64c65fefecb68d6
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140522"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73968255"
 ---
 # <a name="backtracking-in-regular-expressions"></a>정규식의 역행 검사
-<a name="top"></a> 역추적은 정규식 패턴에 선택적인 [수량자](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) 또는 [교체 구문](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)이 포함되어 있고 정규식 엔진이 일치 항목을 계속 검색하기 위해 이전에 저장된 상태로 되돌아갈 때 발생합니다. 역추적은 정규식 성능의 핵심입니다. 역추적을 사용하면 식의 성능과 유연성을 높일 수 있으며 매우 복잡한 패턴도 검색할 수 있습니다. 하지만 이러한 장점에는 단점이 수반됩니다. 역추적은 종종 정규식 엔진의 성능에 영향을 주는 가장 중요한 단일 요소입니다. 다행히도 개발자는 정규식 엔진의 동작과 역추적 사용 방식을 제어할 수 있습니다. 이 항목에서는 역추적의 작동 방식 및 역추적을 제어할 수 있는 방법에 대해 설명합니다.  
+역추적은 정규식 패턴에 선택적인 [수량자](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) 또는 [교체 구문](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)이 포함되어 있고 정규식 엔진이 일치 항목을 계속 검색하기 위해 이전에 저장한 상태로 되돌아갈 때 발생합니다. 역추적은 정규식 성능의 핵심입니다. 역추적을 사용하면 식의 성능과 유연성을 높일 수 있으며 매우 복잡한 패턴도 검색할 수 있습니다. 하지만 이러한 장점에는 단점이 수반됩니다. 역추적은 종종 정규식 엔진의 성능에 영향을 주는 가장 중요한 단일 요소입니다. 다행히도 개발자는 정규식 엔진의 동작과 역추적 사용 방식을 제어할 수 있습니다. 이 항목에서는 역추적의 작동 방식 및 역추적을 제어할 수 있는 방법에 대해 설명합니다.  
   
 > [!NOTE]
 > 일반적으로 .NET 정규식 엔진과 같은 NFA(Nondeterministic Finite Automaton) 엔진에서는 개발자가 효율적이고 속도가 빠른 정규식을 작성하도록 노력해야 합니다.  
-  
- 이 항목에는 다음과 같은 단원이 포함되어 있습니다.  
-  
-- [역추적을 사용하지 않는 선형 비교](#linear_comparison_without_backtracking)  
-  
-- [선택적인 수량자 또는 교체 구문을 사용한 역추적](#backtracking_with_optional_quantifiers_or_alternation_constructs)  
-  
-- [선택적인 중첩된 수량자를 사용한 역추적](#backtracking_with_nested_optional_quantifiers)  
-  
-- [역추적 제어](#controlling_backtracking)  
-  
-<a name="linear_comparison_without_backtracking"></a>   
+
 ## <a name="linear-comparison-without-backtracking"></a>역추적을 사용하지 않는 선형 비교  
  정규식 패턴에 선택적인 수량자 또는 교체 구문이 없으면 정규식 엔진이 선형 시간으로 실행됩니다. 즉, 정규식 엔진은 패턴에서 입력 문자열의 텍스트와 일치하는 첫 번째 언어 요소를 검색한 후 다시 패턴에서 입력 문자열의 다음 문자 또는 문자 그룹과 일치하는 다음 언어 요소를 찾습니다. 이 작업은 검색이 성공할 때까지 계속되고, 그렇지 않으면 검색이 실패합니다. 어느 경우에든 정규식 엔진은 입력 문자열에서 한 번에 한 글자씩 검색을 진행합니다.  
   
@@ -52,7 +41,7 @@ ms.locfileid: "73140522"
   
  이 정규식은 수량자 `{2}`가 있더라도 선형 방식으로 평가됩니다. `{2}` 는 선택적인 수량자가 아니기 때문에 정규식 엔진이 역추적을 수행하지 않습니다. 이 수량자는 정확한 숫자를 지정하며 이전 하위 식이 검색해야 하는 가변 횟수가 아닙니다. 따라서 정규식 엔진은 다음 표에서와 같이 입력 문자열에서 정규식 패턴과 일치하는 항목을 검색하려고 시도합니다.  
   
-|작업(Operation)|패턴 내 위치|문자열 내 위치|결과|  
+|연산|패턴 내 위치|문자열 내 위치|결과|  
 |---------------|-------------------------|------------------------|------------|  
 |1|e|"needing a reed"(인덱스 0)|일치하는 항목이 없습니다.|  
 |2|e|"eeding a reed"(인덱스 1)|일치 가능|  
@@ -74,11 +63,8 @@ ms.locfileid: "73140522"
 |18|\w|"d"(인덱스 13)|일치 가능|  
 |19|\b|""(인덱스 14)|일치|  
   
- 정규식 엔진에 선택적인 수량자가 없거나 교체 구문이 없는 경우 입력 문자열에서 정규식 패턴과 일치하는 항목을 찾기 위해 필요한 최대 비교 수는 입력 문자열에 있는 문자 수와 거의 동일합니다. 이 경우 정규식 엔진은 이 13자 길이의 문자열에서 가능한 일치 항목을 식별하기 위해 19가지를 비교합니다.  즉, 선택적인 수량자 또는 대체 생성 구문이 없는 경우 정규식 엔진이 선형에 가까운 시간으로 실행됩니다.  
-  
- [맨 위로 이동](#top)  
-  
-<a name="backtracking_with_optional_quantifiers_or_alternation_constructs"></a>   
+ 정규식 엔진에 선택적인 수량자가 없거나 교체 구문이 없는 경우 입력 문자열에서 정규식 패턴과 일치하는 항목을 찾기 위해 필요한 최대 비교 수는 입력 문자열에 있는 문자 수와 거의 동일합니다. 이 경우 정규식 엔진은 이 13자 길이의 문자열에서 가능한 일치 항목을 식별하기 위해 19가지를 비교합니다.  즉, 선택적인 수량자 또는 대체 생성 구문이 없는 경우 정규식 엔진이 선형에 가까운 시간으로 실행됩니다.   
+
 ## <a name="backtracking-with-optional-quantifiers-or-alternation-constructs"></a>선택적인 수량자 또는 교체 구문을 사용한 역추적  
  정규식에 선택적인 수량자 또는 교체 구문이 포함된 경우 입력 문자열에 대한 평가는 더 이상 선형으로 수행되지 않습니다. NFA 엔진에서 패턴 일치는 입력 문자열에 있는 검색할 문자가 아니라 정규식의 언어 요소에 의해 영향을 받습니다. 따라서 정규식 엔진은 선택적인 하위 식 또는 교체 하위 식에 대해 전체 검색을 수행합니다. 하위 식의 다음 언어 요소로 진행할 때 검색이 실패하면 정규식 엔진이 성공한 일치 부분을 버리고 입력 문자열 전체에 대한 정규식 검색을 수행하기 위해 이전에 저장된 상태로 돌아갈 수 있습니다. 일치하는 항목을 찾기 위해 이전에 저장된 상태로 돌아가는 프로세스를 역추적이라고 부릅니다.  
   
@@ -99,11 +85,8 @@ ms.locfileid: "73140522"
   
 - 패턴에 있는 "s"와 일치한 "e" 문자 다음의 "s"("expressions"의 첫 번째 "s")를 비교합니다. 그러면 검색이 성공합니다.  
   
- 역추적을 사용할 경우 길이가 55자인 입력 문자열에서 정규식 패턴과 일치하는 항목을 검색하려면 67번의 비교 작업이 필요합니다. 일반적으로 정규식 엔진에 단일 교체 구문이 포함되었거나 선택적인 단일 수량자가 포함된 경우 패턴을 검색하는 데 필요한 비교 작업 수는 입력 문자열에 있는 문자 수의 두 배 이상입니다.  
-  
- [맨 위로 이동](#top)  
-  
-<a name="backtracking_with_nested_optional_quantifiers"></a>   
+ 역추적을 사용할 경우 길이가 55자인 입력 문자열에서 정규식 패턴과 일치하는 항목을 검색하려면 67번의 비교 작업이 필요합니다. 일반적으로 정규식 엔진에 단일 교체 구문이 포함되었거나 선택적인 단일 수량자가 포함된 경우 패턴을 검색하는 데 필요한 비교 작업 수는 입력 문자열에 있는 문자 수의 두 배 이상입니다.   
+
 ## <a name="backtracking-with-nested-optional-quantifiers"></a>선택적인 중첩된 수량자를 사용한 역추적  
  패턴에 교체 구문이 많이 포함되었거나 중첩된 교체 구문이 포함되었거나, 선택적인 중첩된 수량자가 포함된 경우(가장 일반적인 경우) 정규식 패턴과 일치하는 항목을 찾기 위해 필요한 비교 작업 수가 기하급수적으로 증가할 수 있습니다. 예를 들어 정규식 패턴 `^(a+)+$` 는 하나 이상의 "a" 문자가 포함된 전체 문자열을 검색하도록 디자인되었습니다. 예제에는 동일한 길이의 두 입력 문자열이 제공되지만 첫 번째 문자열만 패턴과 일치합니다. <xref:System.Diagnostics.Stopwatch?displayProperty=nameWithType> 클래스는 일치 항목을 검색하는 작업이 수행되는 시간을 확인하는 데 사용됩니다.  
   
@@ -118,15 +101,11 @@ ms.locfileid: "73140522"
   
 - 정규식 엔진이 이전에 저장된 매치 3으로 돌아갑니다. 추가 캡처 그룹에 할당할 수 있도록 두 개의 추가 "a" 문자가 있는지 확인합니다. 하지만 문자열 끝 테스트가 실패합니다. 그런 다음 매치 3으로 돌아가서 두 개의 추가 캡처 그룹에서 두 개의 추가 "a" 문자를 검색하려고 시도합니다. 그래도 문자열 끝 테스트가 실패합니다. 이렇게 실패한 검색 작업에는 12번의 비교 작업이 필요합니다. 지금까지 총 25번의 비교 작업이 수행되었습니다.  
   
- 입력 문자열을 정규식 엔진에서 비교하는 작업은 정규식이 검색 작업의 모든 가능한 조합을 시도하고 일치 항목이 없다는 결론을 내릴 때까지 이러한 방식으로 계속해서 수행됩니다. 중첩된 수량자로 인해 이러한 비교는 O(2<sup>n</sup>) 또는 지수 연산으로 수행되며, 여기서 *n*은 입력 문자열에 있는 문자 수입니다. 즉, 문자 수가 30개인 입력 문자열에서는 최악의 경우 약 1,073,741,824번의 비교 작업이 필요하고, 입력 문자열의 문자 수가 40개이면 약 1,099,511,627,776번의 비교 작업이 필요합니다. 이정도 또는 심지어 더 긴 문자열을 사용하면 정규식 메서드가 정규식 패턴과 일치하지 않는 입력을 처리할 때 완료 시간이 극단적으로 길어질 수 있습니다.  
-  
- [맨 위로 이동](#top)  
-  
-<a name="controlling_backtracking"></a>   
+ 입력 문자열을 정규식 엔진에서 비교하는 작업은 정규식이 검색 작업의 모든 가능한 조합을 시도하고 일치 항목이 없다는 결론을 내릴 때까지 이러한 방식으로 계속해서 수행됩니다. 중첩된 수량자로 인해 이러한 비교는 O(2<sup>n</sup>) 또는 지수 연산으로 수행되며, 여기서 *n*은 입력 문자열에 있는 문자 수입니다. 즉, 문자 수가 30개인 입력 문자열에서는 최악의 경우 약 1,073,741,824번의 비교 작업이 필요하고, 입력 문자열의 문자 수가 40개이면 약 1,099,511,627,776번의 비교 작업이 필요합니다. 이정도 또는 심지어 더 긴 문자열을 사용하면 정규식 메서드가 정규식 패턴과 일치하지 않는 입력을 처리할 때 완료 시간이 극단적으로 길어질 수 있습니다. 
+
 ## <a name="controlling-backtracking"></a>역추적 제어  
- 역추적을 사용하면 강력하고 유연한 정규식을 만들 수 있습니다. 하지만 이전 단원에 설명한 것처럼 이러한 장점 외에도 성능이 매우 크게 저하될 수 있음에 유의해야 합니다. 과도한 역추적을 방지하려면 <xref:System.Text.RegularExpressions.Regex> 개체를 인스턴스화하거나 정적 정규식 일치 메서드를 호출할 때 시간 제한 간격을 정의해야 합니다. 이에 대해서는 다음 섹션에서 설명합니다. 그 밖에도, .NET에서는 역추적을 제한하거나 억제하고, 성능 상의 제약이 거의 없거나 전혀 없이 복잡한 정규식을 지원하는 세 가지 정규식 언어 요소인 [역추적하지 않는 하위 식](#Nonbacktracking), [lookbehind 어설션](#Lookbehind) 및 [lookahead 어설션](#Lookahead)을 지원합니다. 각 언어 요소에 대한 자세한 내용은 [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)을 참조하세요.  
-  
-<a name="Timeout"></a>   
+ 역추적을 사용하면 강력하고 유연한 정규식을 만들 수 있습니다. 하지만 이전 단원에 설명한 것처럼 이러한 장점 외에도 성능이 매우 크게 저하될 수 있음에 유의해야 합니다. 과도한 역추적을 방지하려면 <xref:System.Text.RegularExpressions.Regex> 개체를 인스턴스화하거나 정적 정규식 일치 메서드를 호출할 때 시간 제한 간격을 정의해야 합니다. 이에 대해서는 다음 섹션에서 설명합니다. 그 밖에도, .NET에서는 역추적을 제한하거나 억제하고, 성능 상의 제약이 거의 없거나 전혀 없이 복잡한 정규식을 지원하는 세 가지 정규식 언어 요소인 [역추적하지 않는 하위 식](#nonbacktracking-subexpression), [lookbehind 어설션](#lookbehind-assertions) 및 [lookahead 어설션](#lookahead-assertions)을 지원합니다. 각 언어 요소에 대한 자세한 내용은 [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)을 참조하세요.  
+
 ### <a name="defining-a-time-out-interval"></a>시간 제한 간격 정의  
  .NET Framework 4.5부터는 정규식 엔진이 시도를 포기하고 <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> 예외를 throw하기 전에 단일 일치 항목을 검색할 가장 긴 간격을 나타내는 시간 제한 값을 설정할 수 있습니다. <xref:System.TimeSpan> 값을 인스턴스 정규식을 위한 <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType> 생성자에 제공하여 시간 제한 간격을 지정합니다. 또한, 각각의 정적 패턴 일치 메서드에 시간 제한 값을 지정할 수 있게 해주는 <xref:System.TimeSpan> 매개 변수의 오버로드가 있습니다. 기본적으로, 시간 제한 간격은 <xref:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout?displayProperty=nameWithType> 으로 설정되고, 정규식 엔진의 시간이 초과되지 않습니다.  
   
@@ -139,8 +118,7 @@ ms.locfileid: "73140522"
   
  [!code-csharp[System.Text.RegularExpressions.Regex.ctor#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.text.regularexpressions.regex.ctor/cs/ctor1.cs#1)]
  [!code-vb[System.Text.RegularExpressions.Regex.ctor#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.text.regularexpressions.regex.ctor/vb/ctor1.vb#1)]  
-  
-<a name="Nonbacktracking"></a>   
+
 ### <a name="nonbacktracking-subexpression"></a>역추적하지 않는 하위 식  
  `(?>` *subexpression*`)` 언어 요소는 하위 식에서 역추적을 억제합니다. 실패한 검색과 연관된 성능 문제를 방지하는 데 유용합니다.  
   
@@ -148,8 +126,7 @@ ms.locfileid: "73140522"
   
  [!code-csharp[Conceptual.RegularExpressions.Backtracking#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.backtracking/cs/backtracking4.cs#4)]
  [!code-vb[Conceptual.RegularExpressions.Backtracking#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.backtracking/vb/backtracking4.vb#4)]  
-  
-<a name="Lookbehind"></a>   
+
 ### <a name="lookbehind-assertions"></a>lookbehind 어설션  
  .NET에는 입력 문자열에서 이전 문자와 일치하는 두 가지 언어 요소인 `(?<=`*subexpression*`)` 및 `(?<!`*subexpression*`)`이 포함되어 있습니다. 두 언어 요소 모두 너비가 0인 어설션입니다. 즉, 진행 또는 역추적 없이 현재 문자 바로 앞에 있는 문자를 *subexpression*과 일치시킬 수 있는지 여부를 확인합니다.  
   
@@ -162,7 +139,7 @@ ms.locfileid: "73140522"
   
  첫 번째 정규식 패턴 `^[0-9A-Z]([-.\w]*[0-9A-Z])*@`은(는) 다음 표와 같이 정의됩니다.  
   
-|패턴|설명|  
+|무늬|설명|  
 |-------------|-----------------|  
 |`^`|문자열의 시작 부분에서 검색을 시작합니다.|  
 |`[0-9A-Z]`|일치하는 영숫자 문자를 찾습니다. <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> 메서드가 <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> 옵션으로 호출되므로 이 비교는 대/소문자를 구분하지 않습니다.|  
@@ -173,15 +150,14 @@ ms.locfileid: "73140522"
   
  두 번째 정규식 패턴 `^[0-9A-Z][-.\w]*(?<=[0-9A-Z])@`은 긍정 lookbehind 어설션을 사용합니다. 이 패턴은 다음 표에서와 같이 정의됩니다.  
   
-|패턴|설명|  
+|무늬|설명|  
 |-------------|-----------------|  
 |`^`|문자열의 시작 부분에서 검색을 시작합니다.|  
 |`[0-9A-Z]`|일치하는 영숫자 문자를 찾습니다. <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> 메서드가 <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> 옵션으로 호출되므로 이 비교는 대/소문자를 구분하지 않습니다.|  
 |`[-.\w]*`|하이픈, 마침표 또는 단어 문자가 0개 이상 포함된 일치하는 항목을 찾습니다.|  
 |`(?<=[0-9A-Z])`|마지막으로 일치한 문자를 다시 확인하고 영숫자인 경우 검색을 계속합니다. 영숫자 문자는 마침표, 하이픈 및 모든 단어 문자로 구성되는 집합의 하위 집합입니다.|  
 |`@`|"\@" 기호를 찾습니다.|  
-  
-<a name="Lookahead"></a>   
+
 ### <a name="lookahead-assertions"></a>lookahead 어설션  
  .NET에는 입력 문자열에서 다음 문자와 일치하는 두 가지 언어 요소인 `(?=`*subexpression*`)` 및 `(?!`*subexpression*`)`이 포함되어 있습니다. 두 언어 요소 모두 너비가 0인 어설션입니다. 즉, 진행 또는 역추적 없이 현재 문자 바로 뒤에 있는 문자를 *subexpression*과 일치시킬 수 있는지 여부를 확인합니다.  
   
@@ -194,7 +170,7 @@ ms.locfileid: "73140522"
   
  첫 번째 정규식 패턴 `^(([A-Z]\w*)+\.)*[A-Z]\w*$`은(는) 다음 표와 같이 정의됩니다.  
   
-|패턴|설명|  
+|무늬|설명|  
 |-------------|-----------------|  
 |`^`|문자열의 시작 부분에서 검색을 시작합니다.|  
 |`([A-Z]\w*)+\.`|0개 이상의 단어 문자와 마침표가 이어지는 영문자(A-Z)를 찾습니다. <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> 메서드가 <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> 옵션으로 호출되므로 이 비교는 대/소문자를 구분하지 않습니다.|  
@@ -204,7 +180,7 @@ ms.locfileid: "73140522"
   
  두 번째 정규식 패턴 `^((?=[A-Z])\w+\.)*[A-Z]\w*$`에는 긍정 lookahead 어설션이 사용됩니다. 이 패턴은 다음 표에서와 같이 정의됩니다.  
   
-|패턴|설명|  
+|무늬|설명|  
 |-------------|-----------------|  
 |`^`|문자열의 시작 부분에서 검색을 시작합니다.|  
 |`(?=[A-Z])`|첫 번째 문자를 검색하고 영문자(A-Z)인 경우 검색을 계속합니다. <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> 메서드가 <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> 옵션으로 호출되므로 이 비교는 대/소문자를 구분하지 않습니다.|  
@@ -212,8 +188,6 @@ ms.locfileid: "73140522"
 |`((?=[A-Z])\w+\.)*`|마침표가 0번 이상 이어지는 하나 이상의 단어 문자의 패턴을 검색합니다. 초기 단어 문자는 영문자여야 합니다.|  
 |`[A-Z]\w*`|0개 이상의 단어 문자로 이어지는 영문자를 찾습니다.|  
 |`$`|입력 문자열의 끝 부분에서 검색을 종료합니다.|  
-  
- [맨 위로 이동](#top)  
   
 ## <a name="see-also"></a>참고 항목
 

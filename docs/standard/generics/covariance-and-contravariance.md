@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 08e6458f0a14b78c6d05f706afa710931d60094a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ee8cc1b677ad6f6c2718c155edbba632df38dbd3
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948794"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974690"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>제네릭의 공 분산과 반공 분산
-<a name="top"></a> 공변성(Covariance)과 반공변성(Contravariance)은 원래 지정된 것보다 더 많이 파생되거나(더 구체적인) 더 적게 파생된 형식(덜 구체적인)을 사용할 수 있는 능력을 지칭하는 용어입니다. 제네릭 형식 매개 변수는 더욱 유연하게 제네릭 형식을 할당하고 사용할 수 있도록 공변성과 반공변성을 지원합니다. 형식 시스템을 참조할 때 공변성, 반공변성 및 불변성의 정의는 다음과 같습니다. 이 예제에서는 `Base` 라는 기본 클래스와 `Derived`라는 파생 클래스가 있는 것으로 가정합니다.  
+공변성(Covariance)과 반공변성(Contravariance)은 원래 지정된 것보다 더 많이 파생되거나(더 구체적인) 더 적게 파생된 형식(덜 구체적인)을 사용할 수 있는 능력을 지칭하는 용어입니다. 제네릭 형식 매개 변수는 더욱 유연하게 제네릭 형식을 할당하고 사용할 수 있도록 공변성과 반공변성을 지원합니다. 형식 시스템을 참조할 때 공변성, 반공변성 및 불변성의 정의는 다음과 같습니다. 이 예제에서는 `Base` 라는 기본 클래스와 `Derived`라는 파생 클래스가 있는 것으로 가정합니다.  
   
 - `Covariance`  
   
@@ -65,21 +65,9 @@ ms.locfileid: "69948794"
   
 - 가변성은 참조 형식에만 적용되므로 variant 형식 매개 변수에 대한 값 형식을 지정하면 이 형식 매개 변수는 결과로 생성되는 형식에 대해 invariant가 됩니다.  
   
-- 대리자 결합에는 가변성이 적용되지 않습니다. 즉, 두 대리자의 형식이 `Action<Derived>` 및 `Action<Base>` (Visual Basic의 경우`Action(Of Derived)` 및 `Action(Of Base)` )라고 할 때 결과의 형식이 안전하더라도 둘째 대리자를 첫째 대리자와 결합할 수 없습니다. 가변성을 통해 둘째 대리자를 `Action<Derived>`형식의 변수에 할당할 수 있지만, 대리자를 결합하기 위해서는 해당 형식이 정확하게 일치해야 합니다.  
-  
- 다음 하위 단원에서는 공변 및 반공변 형식 매개 변수에 대해 자세히 설명합니다.  
-  
-- [공변 형식 매개 변수가 있는 제네릭 인터페이스](#InterfaceCovariantTypeParameters)  
-  
-- [반공변 제네릭 형식 매개 변수가 있는 제네릭 인터페이스](#InterfaceCovariantTypeParameters)  
-  
-- [variant 형식 매개 변수가 있는 제네릭 대리자](#DelegateVariantTypeParameters)  
-  
-- [variant 제네릭 인터페이스 및 대리자 정의](#DefiningVariantTypeParameters)  
-  
-- [variant 제네릭 인터페이스 및 대리자 형식의 목록](#VariantList)  
-  
-<a name="InterfaceCovariantTypeParameters"></a>   
+- 대리자 결합에는 가변성이 적용되지 않습니다. 즉, 두 대리자의 형식이 `Action<Derived>` 및 `Action<Base>` (Visual Basic의 경우`Action(Of Derived)` 및 `Action(Of Base)` )라고 할 때 결과의 형식이 안전하더라도 둘째 대리자를 첫째 대리자와 결합할 수 없습니다. 가변성을 통해 둘째 대리자를 `Action<Derived>`형식의 변수에 할당할 수 있지만, 대리자를 결합하기 위해서는 해당 형식이 정확하게 일치해야 합니다.
+
+<a name="InterfaceCovariantTypeParameters"></a>
 ## <a name="generic-interfaces-with-covariant-type-parameters"></a>공변 형식 매개 변수가 있는 제네릭 인터페이스  
  .NET Framework 4부터는 여러 제네릭 인터페이스에 공변 형식 매개 변수가 있습니다(예: <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.Generic.IEnumerator%601>, <xref:System.Linq.IQueryable%601>및 <xref:System.Linq.IGrouping%602>). 이러한 인터페이스의 모든 형식 매개 변수는 공변성이므로, 형식 매개 변수는 멤버의 반환 형식에만 사용됩니다.  
   
@@ -88,9 +76,6 @@ ms.locfileid: "69948794"
  [!code-csharp[CoContravarianceInClrGenericI#1](../../../samples/snippets/csharp/VS_Snippets_CLR/cocontravarianceinclrgenerici/cs/example.cs#1)]
  [!code-vb[CoContravarianceInClrGenericI#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/cocontravarianceinclrgenerici/vb/example.vb#1)]  
   
- [맨 위로 이동](#top)  
-  
-<a name="InterfaceContravariantTypeParameters"></a>   
 ## <a name="generic-interfaces-with-contravariant-generic-type-parameters"></a>반공변 제네릭 형식 매개 변수가 있는 제네릭 인터페이스  
  .NET Framework 4부터는 여러 제네릭 인터페이스에 반공변 형식 매개 변수가 있습니다(예: <xref:System.Collections.Generic.IComparer%601>, <xref:System.IComparable%601> 및 <xref:System.Collections.Generic.IEqualityComparer%601>). 이러한 인터페이스에는 반공변 형식 매개 변수만 있으므로 형식 매개 변수가 인터페이스 멤버의 매개 변수 형식으로만 사용됩니다.  
   
@@ -102,10 +87,7 @@ ms.locfileid: "69948794"
   
  [!code-csharp[CoContravarianceInClrGenericI2#1](../../../samples/snippets/csharp/VS_Snippets_CLR/cocontravarianceinclrgenerici2/cs/example.cs#1)]
  [!code-vb[CoContravarianceInClrGenericI2#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/cocontravarianceinclrgenerici2/vb/example.vb#1)]  
-  
- [맨 위로 이동](#top)  
-  
-<a name="DelegateVariantTypeParameters"></a>   
+
 ## <a name="generic-delegates-with-variant-type-parameters"></a>variant 형식 매개 변수가 있는 제네릭 대리자  
  .NET Framework 4에서는 <xref:System.Func%602> 같은 `Func` 제네릭 대리자가 공변 반환 형식과 반공변 매개 변수 형식을 사용합니다. `Action` 같은 <xref:System.Action%602>제네릭 대리자는 반공변 매개 변수 형식을 사용합니다. 즉, 더 많이 파생된 매개 변수 형식과 더 적게 파생된 반환 형식( `Func` 제네릭 대리자의 경우)이 있는 변수에 대리자를 할당할 수 있습니다.  
   
@@ -141,11 +123,8 @@ ms.locfileid: "69948794"
   
  [!code-csharp[CoContravarianceDelegatesGenRelaxed#1](../../../samples/snippets/csharp/VS_Snippets_CLR/cocontravariancedelegatesgenrelaxed/cs/example.cs#1)]
  [!code-vb[CoContravarianceDelegatesGenRelaxed#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/cocontravariancedelegatesgenrelaxed/vb/example.vb#1)]  
-  
- [맨 위로 이동](#top)  
-  
-<a name="DefiningVariantTypeParameters"></a>   
-## <a name="defining-variant-generic-interfaces-and-delegates"></a>variant 제네릭 인터페이스 및 대리자 정의  
+
+## <a name="defining-variant-generic-interfaces-and-delegates"></a>variant 제네릭 인터페이스 및 대리자 정의
  .NET Framework 4부터는 Visual Basic과 C#에서 인터페이스와 대리자의 제네릭 형식 매개 변수를 공변 또는 반공변으로 표시하는 데 사용할 수 있는 키워드를 제공합니다.  
   
 > [!NOTE]
@@ -163,11 +142,8 @@ ms.locfileid: "69948794"
  Visual Basic과 C#에서는 공변 및 반공변 형식 매개 변수의 사용 규칙을 위반하거나 인터페이스와 대리자가 아닌 다른 형식의 형식 매개 변수에 공 분산 및 반공 분산 주석을 추가할 수 없습니다. [MSIL 어셈블러](../../../docs/framework/tools/ilasm-exe-il-assembler.md) 에서는 이러한 검사를 수행하지 않지만 규칙을 위반하는 형식을 로드하려고 하면 <xref:System.TypeLoadException> 이 throw됩니다.  
   
  자세한 내용과 예제 코드는 [제네릭 인터페이스의 가변성(C#)](../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md) 및 [제네릭 인터페이스의 가변성(Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)을 참조하세요.  
-  
- [맨 위로 이동](#top)  
-  
-<a name="VariantList"></a>   
-## <a name="list-of-variant-generic-interface-and-delegate-types"></a>variant 제네릭 인터페이스 및 대리자 형식의 목록  
+
+## <a name="list-of-variant-generic-interface-and-delegate-types"></a>variant 제네릭 인터페이스 및 대리자 형식의 목록
  .NET Framework 4에서는 다음 인터페이스 및 대리자 형식에서 공변 및/또는 반공변 형식 매개 변수를 사용합니다.  
   
 |형식|공변 형식 매개 변수|반공변 형식 매개 변수|  

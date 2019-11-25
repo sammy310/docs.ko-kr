@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], authoring overview
 - authoring overview for controls [WPF]
 ms.assetid: 3d864748-cff0-4e63-9b23-d8e5a635b28f
-ms.openlocfilehash: fe7704b9366bf46f0c9965f78ce441000ead6334
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 1ac8964f915206205d5c9e6ab782fcaa59bf2a99
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460787"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975728"
 ---
 # <a name="control-authoring-overview"></a>컨트롤 제작 개요
 
@@ -36,7 +36,7 @@ ms.locfileid: "73460787"
   > [!NOTE]
   > <xref:System.Windows.Controls.RadioButton>에서 <xref:System.Windows.DataTemplate>를 사용할 수 있지만이 예제에서는 <xref:System.Windows.DataTemplate> 충분 하지 않습니다.  <xref:System.Windows.DataTemplate>는 컨트롤 내용의 모양을 정의 합니다. <xref:System.Windows.Controls.RadioButton>의 경우 <xref:System.Windows.Controls.RadioButton> 선택 되었는지 여부를 나타내는 원의 오른쪽에 내용이 표시 됩니다.  신호등의 예제에서 라디오 버튼은 "불을 켤 수 있는" 원이어야 합니다. 신호등의 모양 요구 사항은 <xref:System.Windows.Controls.RadioButton>의 기본 모양과 다르기 때문에 <xref:System.Windows.Controls.ControlTemplate>를 다시 정의 해야 합니다.  일반적으로 <xref:System.Windows.DataTemplate>는 컨트롤의 콘텐츠 (또는 데이터)를 정의 하는 데 사용 되 고 <xref:System.Windows.Controls.ControlTemplate>는 컨트롤의 구성 방법을 정의 하는 데 사용 됩니다.
 
-- **트리거.** <xref:System.Windows.Trigger>를 사용 하면 새 컨트롤을 만들지 않고도 컨트롤의 모양과 동작을 동적으로 변경할 수 있습니다. 예를 들어 응용 프로그램에 여러 개의 <xref:System.Windows.Controls.ListBox> 컨트롤이 있고 각 <xref:System.Windows.Controls.ListBox>의 항목이 선택 될 때 굵게 표시 되 고 빨간색으로 표시 되는 경우가 있습니다. 첫 번째 이러한는 <xref:System.Windows.Controls.ListBox>에서 상속 하는 클래스를 만들고 <xref:System.Windows.Controls.Primitives.Selector.OnSelectionChanged%2A> 메서드를 재정의 하 여 선택한 항목의 모양을 변경 하는 것이 고, 선택 된 항목의 모양을 변경 하는 <xref:System.Windows.Controls.ListBoxItem> 스타일에 트리거를 추가 하는 것이 더 나은 방법입니다. . 트리거를 사용하면 속성 값을 변경하거나 속성 값을 기반으로 작업을 수행할 수 있습니다. <xref:System.Windows.EventTrigger>를 사용 하면 이벤트가 발생할 때 작업을 수행할 수 있습니다.
+- **트리거.** <xref:System.Windows.Trigger>를 사용 하면 새 컨트롤을 만들지 않고도 컨트롤의 모양과 동작을 동적으로 변경할 수 있습니다. 예를 들어 응용 프로그램에 여러 개의 <xref:System.Windows.Controls.ListBox> 컨트롤이 있고 각 <xref:System.Windows.Controls.ListBox>의 항목이 선택 될 때 굵게 표시 되 고 빨간색으로 표시 되는 경우가 있습니다. 첫 번째 이러한는 <xref:System.Windows.Controls.ListBox>에서 상속 하는 클래스를 만들고 <xref:System.Windows.Controls.Primitives.Selector.OnSelectionChanged%2A> 메서드를 재정의 하 여 선택한 항목의 모양을 변경 하는 것이 고, 선택 된 항목의 모양을 변경 하는 <xref:System.Windows.Controls.ListBoxItem> 스타일에 트리거를 추가 하는 것이 더 나은 방법입니다. 트리거를 사용하면 속성 값을 변경하거나 속성 값을 기반으로 작업을 수행할 수 있습니다. <xref:System.Windows.EventTrigger>를 사용 하면 이벤트가 발생할 때 작업을 수행할 수 있습니다.
 
 스타일, 템플릿 및 트리거에 대한 자세한 내용은 [스타일 지정 및 템플릿](styling-and-templating.md)을 참조하세요.
 
@@ -187,7 +187,7 @@ ms.locfileid: "73460787"
 
 ### <a name="design-for-designers"></a>디자이너를 위한 디자인
 
-[!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)]에서 사용자 지정 WPF 컨트롤에 대한 지원을 받으려면(예:속성 창에서 속성 편집) 다음 지침을 따릅니다.  [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]개발에 대 한 자세한 내용은 [Visual Studio에서 XAML 디자인](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)을 참조 하세요.
+Visual Studio 용 WPF 디자이너에서 사용자 지정 WPF 컨트롤에 대 한 지원을 받으려면 (예: 속성 창을 사용한 속성 편집) 다음 지침을 따르세요.  WPF 디자이너를 위한 개발에 대 한 자세한 내용은 [Visual Studio에서 XAML 디자인](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)을 참조 하세요.
 
 #### <a name="dependency-properties"></a>종속성 속성
 

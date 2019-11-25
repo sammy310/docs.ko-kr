@@ -1,16 +1,16 @@
 ---
-title: '방법: 문자열 비교 - C# 가이드'
+title: 문자열 비교 방법 - C# 가이드
 description: 문화권별 순서 지정 여부나 대/소문자와 상관없이 문자열 값을 비교하고 정렬하는 방법에 대해 알아봅니다.
 ms.date: 10/03/2018
 helpviewer_keywords:
 - strings [C#], comparison
 - comparing strings [C#]
-ms.openlocfilehash: a3e5f8dd9cfac809aafc2533463390cd5a64e0d6
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: dda3ec8cb6a0131867e6ea3bb0cf7199d86058ff
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395449"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973329"
 ---
 # <a name="how-to-compare-strings-in-c"></a>C\#에서 문자열을 비교하는 방법
 

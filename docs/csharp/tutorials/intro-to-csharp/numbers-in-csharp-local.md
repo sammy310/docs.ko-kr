@@ -3,12 +3,12 @@ title: C#의 숫자 - C# 소개 자습서
 description: 숫자 형식, 해당 속성 및 메서드를 살펴보면서 C#을 학습합니다.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: b392682a245101e37a182cb92d36ccb1dd34b13e
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: a06bc57e5c979b62e19407747cb2c8a2447ca114
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039697"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739144"
 ---
 # <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>C\#에서 정수 및 부동 소수점 수 조작
 
@@ -18,7 +18,11 @@ ms.locfileid: "73039697"
 
 ## <a name="explore-integer-math"></a>정수 계산 살펴보기
 
-*numbers-quickstart*라는 디렉터리를 만듭니다. 현재 디렉터리로 지정하고 `dotnet new console -n NumbersInCSharp -o .`을 실행합니다.
+*numbers-quickstart*라는 디렉터리를 만듭니다. 현재 디렉터리로 만들고 다음 명령을 실행합니다.
+
+```dotnetcli
+dotnet new console -n NumbersInCSharp -o .
+```
 
 원하는 편집기에서 *Program.cs*를 열고 `Console.WriteLine("Hello World!");` 줄을 다음으로 바꿉니다.
 

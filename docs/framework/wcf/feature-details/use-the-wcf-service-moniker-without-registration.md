@@ -1,17 +1,17 @@
 ---
-title: '방법: 등록하지 않고 Windows Communication Foundation 서비스 모니커 사용'
+title: '방법: 등록 없이 Windows Communication Foundation 서비스 모니커 사용'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM [WCF], service monikers without registration
 ms.assetid: ee3cf5c0-24f0-4ae7-81da-73a60de4a1a8
-ms.openlocfilehash: 16f428b614fe331faffabab477c6584fb682801d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c08fc362694469560eb7368eb5e536c08ec19bdf
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69955239"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975993"
 ---
-# <a name="how-to-use-the-windows-communication-foundation-service-moniker-without-registration"></a>방법: 등록하지 않고 Windows Communication Foundation 서비스 모니커 사용
+# <a name="how-to-use-the-windows-communication-foundation-service-moniker-without-registration"></a>방법: 등록 없이 Windows Communication Foundation 서비스 모니커 사용
 Wcf (Windows Communication Foundation) 서비스에 연결 하 고 통신 하려면 WCF 클라이언트 응용 프로그램에 서비스 주소, 바인딩 구성 및 서비스 계약에 대 한 세부 정보가 있어야 합니다.  
   
  WCF 서비스 모니커는 일반적으로 필수 특성 형식의 이전 등록을 통해 필요한 계약을 가져오지만이 방법이 적합 하지 않은 경우도 있습니다. 등록 대신 모니커는 `wsdl` 매개 변수 사용, 메타데이터 교환 또는 `mexAddress` 매개 변수 사용을 통해 계약 정의를 WSDL(웹 서비스 기술 언어) 문서의 형태로 가져올 수 있습니다.  
@@ -24,10 +24,10 @@ Wcf (Windows Communication Foundation) 서비스에 연결 하 고 통신 하려
 ## <a name="example"></a>예제  
  이 예제에서는 MEX 계약에서 서비스 모니커를 사용하는 방법을 보여 줍니다. 다음 계약에서 서비스는 wsHttpBinding을 통해 노출됩니다.  
   
-```  
+```csharp
 using System.ServiceModel;  
   
-...  
+// ...
   
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Demo")]  
 public interface IAffiliate  
@@ -45,7 +45,7 @@ public interface IAffiliate
   
  원격 서비스에 대 한 WCF 클라이언트를 구성 하려면 다음 예제 모니커 문자열을 사용할 수 있습니다.  
   
-```  
+```
 service4:mexAddress="http://servername/Affiliates/service.svc/mex",  
 address="http://servername/Affiliates/service.svc",  
 contract=IAffiliate, contractNamespace=http://Microsoft.ServiceModel.Demo,  
@@ -57,6 +57,6 @@ binding=WSHttpBinding_IAffiliate, bindingNamespace=http://tempuri.org/
 > [!NOTE]
 > 모니커 형식이 잘못되었거나 서비스를 사용할 수 없는 경우 `GetObject`를 호출하면 "구문이 잘못되었습니다."라는 오류가 반환됩니다. 이 오류가 발생하면 사용하고 있는 모니커가 올바르고 서비스를 사용할 수 있는지 확인하세요.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [방법: 서비스 모니커 등록 및 구성](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, structs
 - structs [C#]
 ms.assetid: b7cf4ff2-0eb7-4e5c-93d5-b2196b4f5d89
-ms.openlocfilehash: 945d4b060dd9d08f6f16013b27980f66e804ad45
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 35b39da0b15c41b7b2c7a6567bea5dca3fb430e7
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739238"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73970312"
 ---
 # <a name="structs-c-programming-guide"></a>구조체(C# 프로그래밍 가이드)
 
@@ -39,4 +39,4 @@ ms.locfileid: "73739238"
 - [Nullable 값 형식](../../language-reference/builtin-types/nullable-value-types.md)
 - [식별자 이름](../inside-a-program/identifier-names.md)
 - [구조체 사용](using-structs.md)
-- [방법: 메서드에 구조체를 전달하는 것과 클래스 참조를 전달하는 것의 차이점 이해](how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md)
+- [메서드에 대한 구조체 전달과 클래스 참조 전달 간의 차이점을 이해하는 방법](how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md)

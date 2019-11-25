@@ -6,12 +6,12 @@ helpviewer_keywords:
 - compiler options [C#], listed by category
 - Visual C#, compiler options listed by category
 ms.assetid: 96437ecc-6502-4cd3-b070-e9386a298e83
-ms.openlocfilehash: 7319d424b84d5edd41fc255e3aea763da55961a9
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 5cd5607c25dabd8f56ebb58366116666e8e649ea
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69606736"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972710"
 ---
 # <a name="c-compiler-options-listed-by-category"></a>C# 컴파일러 옵션 범주별 목록
 
@@ -76,7 +76,7 @@ ms.locfileid: "69606736"
 |------------|-------------|
 |[-define](define-compiler-option.md)|전처리기 기호를 정의합니다.|
 
-## <a name="resources"></a>자료
+## <a name="resources"></a>리소스
 
 |옵션|용도|
 |------------|-------------|
@@ -117,4 +117,4 @@ ms.locfileid: "69606736"
 
 - [C# 컴파일러 옵션](index.md)
 - [사전순 C# 컴파일러 옵션 목록](listed-alphabetically.md)
-- [방법: Visual Studio 명령줄에 필요한 환경 변수 설정](how-to-set-environment-variables-for-the-visual-studio-command-line.md)
+- [Visual Studio 명령줄에 필요한 환경 변수를 설정하는 방법](how-to-set-environment-variables-for-the-visual-studio-command-line.md)

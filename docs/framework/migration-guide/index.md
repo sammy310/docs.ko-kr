@@ -6,12 +6,12 @@ helpviewer_keywords:
 - .NET Framework, migrating applications to
 - migration, .NET Framework
 ms.assetid: 02d55147-9b3a-4557-a45f-fa936fadae3b
-ms.openlocfilehash: 350d5400b4e1df7238702ce925c974eecb2a0d7a
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 2fa992e1c0897d360f322581888c51dca8d8a734
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73457957"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974982"
 ---
 # <a name="migration-guide-to-the-net-framework-48-47-46-and-45"></a>.NET Framework 4.8, 4.7, 4.6 및 4.5 마이그레이션 가이드
 
@@ -40,6 +40,5 @@ ms.locfileid: "73457957"
 - [방법: .NET Framework 4 이상 버전을 지원하도록 앱 구성](how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
 - [새로운 기능](../whats-new/index.md)
 - [클래스 라이브러리의 사용되지 않는 기능](../whats-new/whats-obsolete.md)
-- [.NET Framework 버전 및 어셈블리 정보](https://go.microsoft.com/fwlink/?LinkId=201701)
-- [Microsoft .NET Framework 지원 수명 주기 정책](https://go.microsoft.com/fwlink/?LinkId=196607)
+- [.NET Framework 공식 지원 정책](https://dotnet.microsoft.com/platform/support/policy/dotnet-framework)
 - [.NET Framework 4 마이그레이션 문제](net-framework-4-migration-issues.md)

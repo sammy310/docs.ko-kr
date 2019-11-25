@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: 7aa8cb72-dee9-4716-ac54-b17b9ae8218f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9da78fb161a906f6ef266f98a9f13633da91b61c
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: e2b030508897f13cce1fc6439809b98bbae17813
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052035"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975668"
 ---
 # <a name="reducing-system-restarts-during-net-framework-45-installations"></a>.NET Framework 4.5를 설치하는 동안 시스템 다시 시작 줄이기
-.NET Framework 4.5 설치 관리자는 설치 과정에서 가능할 때마다 시스템이 다시 시작되지 않도록 [다시 시작 관리자](https://go.microsoft.com/fwlink/?LinkId=231425)를 사용합니다. 앱 설치 프로그램이 .NET Framework를 설치하는 경우 이 기능을 활용하기 위해 다시 시작 관리자와 인터페이스할 수 있습니다. 자세한 내용은 [방법: .NET Framework 4.5 설치 관리자에서 진행률 가져오기](how-to-get-progress-from-the-dotnet-installer.md)를 참조하세요.  
+.NET Framework 4.5 설치 관리자는 설치 과정에서 가능할 때마다 시스템이 다시 시작되지 않도록 [다시 시작 관리자](/windows/win32/rstmgr/about-restart-manager)를 사용합니다. 앱 설치 프로그램이 .NET Framework를 설치하는 경우 이 기능을 활용하기 위해 다시 시작 관리자와 인터페이스할 수 있습니다. 자세한 내용은 [방법: .NET Framework 4.5 설치 관리자에서 진행률 가져오기](how-to-get-progress-from-the-dotnet-installer.md)를 참조하세요.  
   
 ## <a name="reasons-for-a-restart"></a>다시 시작하는 이유  
  .NET Framework 4.5를 설치하려면 설치 과정에서 .NET Framework 4 앱이 사용 중일 경우 시스템을 다시 시작해야 합니다. 이는 .NET Framework 4.5가 .NET Framework 4 파일을 대체하며, 설치 과정에서 해당 파일을 사용할 수 있어야 하기 때문입니다. 대부분의 경우 사용 중인 .NET Framework 4 앱을 미리 검색하고 닫으면 다시 시작을 방지할 수 있습니다. 그러나 일부 시스템 앱은 닫으면 안 됩니다. 이러한 경우 다시 시작을 피할 수 없습니다.  

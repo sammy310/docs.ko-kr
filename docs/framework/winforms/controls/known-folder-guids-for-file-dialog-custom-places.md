@@ -6,21 +6,21 @@ helpviewer_keywords:
 - Custom Places [Windows Forms], Known Folder GUIDs
 - Windows Vista Known Folder GUIDs [Windows Forms], Custom Places
 ms.assetid: d8d8b544-8b4d-4da5-ba3a-b05e93244778
-ms.openlocfilehash: ae4b89eb45a82299b6f35827eb576968f6cc5bae
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0ae9c406e91bc947ec73bb2393bb05962ca41177
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962590"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974362"
 ---
 # <a name="known-folder-guids-for-file-dialog-custom-places"></a>파일 대화 상자의 사용자 지정 위치에 대한 알려진 폴더 GUID
-를 <xref:System.Guid> 사용 하 여 폴더를 [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> 컬렉션에 추가할 때 알려진 폴더를 지정 합니다. 알려진 폴더 Guid는 대/소문자를 구분 하지 않으며 Windows SDK의 KnownFolders .h 파일에 정의 됩니다.  
+<xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> 컬렉션에 폴더를 추가할 때 <xref:System.Guid>를 사용 하 여 Windows Vista의 알려진 폴더를 지정 합니다. 알려진 폴더 Guid는 대/소문자를 구분 하지 않으며 Windows SDK의 KnownFolders .h 파일에 정의 됩니다.  
   
 > [!NOTE]
-> 일부 경우에는 <xref:System.Windows.Forms.FileDialogCustomPlacesCollection> 에 추가 된 알려진 폴더가 **즐겨 찾는 링크** 영역에 표시 되지 않습니다. 예를 들어, 응용 프로그램을 실행 하는 컴퓨터에 지정 된 알려진 폴더가 없으면 알려진 폴더가 표시 되지 않습니다.  
+> 경우에 따라 <xref:System.Windows.Forms.FileDialogCustomPlacesCollection>에 추가 된 알려진 폴더가 **즐겨 찾는 링크** 영역에 표시 되지 않습니다. 예를 들어, 응용 프로그램을 실행 하는 컴퓨터에 지정 된 알려진 폴더가 없으면 알려진 폴더가 표시 되지 않습니다.  
   
 ## <a name="list-of-guids"></a>Guid 목록  
- 다음 표에서는 알려진 [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] 폴더와 해당 폴더에 <xref:System.Guid>대 한 연결을 보여 줍니다.  
+ 다음 표에는 Windows Vista에서 알려진 폴더와 관련 <xref:System.Guid>나와 있습니다.  
   
  AddNewPrograms  
  DE61D971-5EBC-4F02-A3A9-6C82895E5C04  
@@ -56,19 +56,19 @@ ms.locfileid: "69962590"
  82A5EA35-D9CD-47C5-9629-E15D2F714E6E  
   
  CommonTemplates  
- B94237E7-57AC-4347-9151-B08C6C32D1F7  
+ B94237E7-4347-9151-B08C6C32D1F7  
   
- Computer  
+ 컴퓨터  
  0AC0837C-BBF8-452A-850D-79D08E667CA7  
   
  약속  
  4BFEFB45-347D-4006-A5BE-AC0CB0567192  
   
- Connections  
+ 연결  
  6F0CD92B-2E97-45D1-88FF-B0D186B8DEDD  
   
  연락처  
- 56784854-C6CB-462B-8169-88E350ACB882  
+ 56784854-C6CB-42B-8169-88E350ACB882  
   
  제어판  
  82A74AEB-AEB4-465C-A014-D097EE346D63  
@@ -104,7 +104,7 @@ ms.locfileid: "69962590"
  4D9F7874-4E0C-4904-967B-40B0D20C3E4B  
   
  InternetCache  
- 352481E8-33BE-4251-BA85-6007CAEDCF9D  
+ 352481E8-4251-BA85-6007CCEDCF9D  
   
  링크  
  BFB9D5E0-C6A9-404C-B2B2-AE6DB6AF4968  
@@ -118,7 +118,7 @@ ms.locfileid: "69962590"
  음악  
  4BD8D571-6D19-48D3-BE97-422220080E43  
   
- NetHood  
+ Ne와 Od  
  C5ABBF53-E17F-4121-8900-86626FC2C973  
   
  네트워크  
@@ -130,14 +130,14 @@ ms.locfileid: "69962590"
  사진 앨범  
  69D2CF90-FC33-4FB7-9A0C-EBB0F0FCB43C  
   
- 사진  
+ 사진만  
  33E28130-4E1E-4676-835A-98395C3BC3BB  
   
  목록과  
  DE92C1C7-837F-4F69-A3BB-86E631204A23  
   
  프린터  
- 76FC4E2D-D6AD-4519-A663-37BD56068185  
+ 76FC4E2D-4519-A663-37BD56068185  
   
  PrintHood  
  9274BD8D-CFD1-41C3-B35E-B13F55A758F4  
@@ -193,7 +193,7 @@ ms.locfileid: "69962590"
  PublicVideos  
  2400183A-6185-49FB-A2D8-4A392A602BA3  
   
- QuickLaunch  
+ 빠른 실행  
  52A4F021-7B75-48A9-9F6B-4B87A210BC8F  
   
  최근 항목  
@@ -236,12 +236,12 @@ ms.locfileid: "69962590"
  98EC0E18-2098-4D44-8644-66979315A281  
   
  SearchHome  
- 190337D1-B8CA-4121-A639-6D472D16972A  
+ 190337D1-4121-A639-6D472D16972A  
   
- SendTo  
+ 보낼  
  8983036C-27C0-404B-8F08-102D10DCFD74  
   
- SidebarDefaultParts  
+ 외부 바 Defaultparts  
  7B396E54-9EC5-4300-BE0A-2482EBAE1A26  
   
  구성 요소 구성 요소  
@@ -250,7 +250,7 @@ ms.locfileid: "69962590"
  StartMenu  
  625B53C3-AB48-4EC1-BA1F-A1EF4146FC19  
   
- 시작  
+ Startup 클래스  
  B97D20BB-F46A-4C97-BA10-5E3608430854  
   
  SyncManager  
@@ -277,16 +277,16 @@ ms.locfileid: "69962590"
  UserProfiles  
  0762D272-C50A-4BB0-A382-697DCD729B80  
   
- UsersFiles  
+ 모든 파일  
  F3CE0F7C-4901-4ACC-8648-D5D44B04EF8F  
   
  비디오  
  18989B1D-99B5-455B-841C-AB7C74E4DDFC  
   
- Windows  
+ 창  
  F38BF404-1D43-42F2-9305-67DE0B28FC23  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Windows.Forms.FileDialogCustomPlace>
-- [방법: 파일에 사용자 지정 장소 추가 대화 상자](how-to-add-a-custom-place-to-a-file-dialog-box.md)
+- [방법: 파일 대화 상자에 사용자 지정 위치 추가](how-to-add-a-custom-place-to-a-file-dialog-box.md)

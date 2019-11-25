@@ -2,12 +2,12 @@
 title: ASP.NET Core 서비스 및 웹앱 테스트
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | 컨테이너에서 ASP.NET Core 서비스 및 웹앱을 테스트하기 위한 아키텍처를 탐색합니다.
 ms.date: 10/02/2018
-ms.openlocfilehash: 278d12b8215195351673a41149db5af6fcecddfb
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 324b71d830bca43be71e8847fe2dd1b8b1593556
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72772023"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739484"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>ASP.NET Core 서비스 및 웹앱 테스트
 
@@ -144,7 +144,7 @@ public class PrimeWebDefaultRequestShould
 
 마이크로 서비스별 단위 및 통합 테스트는 각 마이크로 서비스 테스트 폴더에 포함되어 있으며, 애플리케이션 부하 테스트는 그림 6-25와 같이 솔루션 폴더의 테스트 폴더 아래에 포함되어 있습니다.
 
-![eShopOnContainers의 테스트 구조: 각 서비스에는 단위 테스트 및 기능 테스트를 포함하는 “test” 폴더가 있습니다. 솔루션 "테스트" 폴더 아래에는 애플리케이션 전체 기능 테스트 및 부하 테스트가 있습니다.](./media/image42.png)
+![솔루션의 테스트 프로젝트 중 일부를 가리키는 VS의 스크린샷](./media/test-aspnet-core-services-web-apps/eshoponcontainers-test-folder-structure.png)
 
 **그림 6-25**. eShopOnContainers의 폴더 구조 테스트
 

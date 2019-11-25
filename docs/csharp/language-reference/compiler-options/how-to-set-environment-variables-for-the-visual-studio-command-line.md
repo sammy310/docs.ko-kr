@@ -1,5 +1,5 @@
 ---
-title: '방법: Visual Studio 명령줄에 필요한 환경 변수 설정'
+title: Visual Studio 명령줄에 필요한 환경 변수를 설정하는 방법
 ms.date: 09/29/2017
 f1_keywords:
 - cs.build.commandline
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - Visual C# compiler, enabling
 - compiling source code, from command line
 ms.assetid: 7ec09480-5612-4f6a-8d00-ad90ea9bca5d
-ms.openlocfilehash: 9b26f6b80488ad4043054cd23f0f351773e8d6d1
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 3b69a92d28663bbbd34245435a69aea80d20fdc9
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69602861"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972835"
 ---
-# <a name="how-to-set-environment-variables-for-the-visual-studio-command-line"></a>방법: Visual Studio 명령줄에 필요한 환경 변수 설정
+# <a name="how-to-set-environment-variables-for-the-visual-studio-command-line"></a>Visual Studio 명령줄에 필요한 환경 변수를 설정하는 방법
 
 VsDevCmd.bat 파일은 명령줄 빌드를 사용하도록 적절한 환경 변수를 설정합니다.
 

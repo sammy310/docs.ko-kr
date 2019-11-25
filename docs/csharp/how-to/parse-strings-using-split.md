@@ -1,5 +1,5 @@
 ---
-title: '방법: String.Split(C# Guide)를 사용하여 문자열 구문 분석'
+title: String.Split(C# 가이드)를 사용하여 문자열을 구문 분석하는 방법
 description: String.Split은 구분 기호 집합에서 분리된 문자열 배열을 반환합니다. 문자열을 구문 분석하는 쉬운 방법입니다.
 ms.date: 01/03/2018
 helpviewer_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - parse strings
 ms.assetid: 729c2923-4169-41c6-9c90-ef176c1e2953
 ms.custom: mvc
-ms.openlocfilehash: a8cb3a62497379f60e9cc6dec3d342192361f865
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b46429f3b55658e1f2a7d21eed714c1d02236c57
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603723"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973230"
 ---
-# <a name="how-to-parse-strings-using-stringsplit-c-guide"></a>방법: String.Split(C# Guide)를 사용하여 문자열 구문 분석
+# <a name="how-to-parse-strings-using-stringsplit-c-guide"></a>String.Split(C# 가이드)를 사용하여 문자열을 구문 분석하는 방법
 
 <xref:System.String.Split%2A?displayProperty=nameWithType> 메서드는 하나 이상의 구분 기호를 기준으로 입력 문자열을 분할하여 부분 문자열 배열을 만듭니다. 종종 단어 경계에서 문자열을 분리하는 가장 쉬운 방법입니다. 다른 특정 문자 또는 문자열에서 문자열을 분할하는 데도 사용됩니다.
 

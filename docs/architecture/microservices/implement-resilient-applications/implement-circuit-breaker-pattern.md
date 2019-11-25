@@ -2,12 +2,12 @@
 title: 회로 차단기 패턴 구현
 description: HTTP 다시 시도에 대한 보완 시스템으로 회로 차단기 패턴을 구현하는 방법을 알아봅니다.
 ms.date: 10/16/2018
-ms.openlocfilehash: a1a24094ae98d8c767ccf692fe8ded6e28d47854
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 00ca39b4b6fac37ff60adf128c3f4e22c5fc14e2
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73094111"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73732832"
 ---
 # <a name="implement-the-circuit-breaker-pattern"></a>회로 차단기 패턴 구현
 
@@ -15,7 +15,7 @@ ms.locfileid: "73094111"
 
 분산된 환경에서는 느린 네트워크 연결 및 시간 초과 등과 같은 일시적 오류 때문에, 또는 리소스가 느리게 응답하거나 일시적으로 사용할 수 없어 원격 리소스 및 서비스에 대한 호출이 실패할 수 있습니다. 이러한 오류는 일반적으로 짧은 시간 안에 자체적으로 해결되며, "다시 시도 패턴"과 같은 전략을 사용하여 이러한 오류를 처리할 수 있는 강력한 클라우드 애플리케이션을 준비해야 합니다.
 
-그러나 해결에 더 오랜 시간이 필요한 예기치 않은 이벤트로 인한 오류 상황도 있을 수 있습니다. 이러한 오류는 심각도의 범위가 연결의 부분적인 손실에서 서비스의 전체 오류까지 퍼질 수 있습니다. 이러한 상황에서 애플리케이션이 성공할 가능성이 없는 작업을 계속 다시 시도하는 것은 무의미할 수 있습니다.
+그러나 해결에 더 오랜 시간이 필요한 예기치 않은 이벤트로 인한 오류 상황도 있을 수 있습니다. 이러한 오류의 심각도는 부분적 연결 손실에서부터 전체 서비스 오류에까지 이를 수 있습니다. 이러한 상황에서 애플리케이션이 성공할 가능성이 없는 작업을 계속 다시 시도하는 것은 무의미할 수 있습니다.
 
 이보다는 작업에 실패했음을 받아들이고 그에 따라 오류를 처리하도록 애플리케이션을 코딩해야 합니다.
 
@@ -94,7 +94,7 @@ eShopOnContainers를 사용하여 회로를 차단하거나 열고, 테스트할
 
 그런 다음, 그림 8-5와 같이 URI `http://localhost:5103/failing`을 사용하여 상태를 확인할 수 있습니다.
 
-![오류가 발생하는 미들웨어 시뮬레이션 상태 확인 결과의 브라우저 보기](./media/image4.png)
+![실패한 미들웨어 시뮬레이션 상태 확인의 스크린샷](./media/implement-circuit-breaker-pattern/failing-middleware-simulation.png)
 
 **그림 8-5**. "실패" ASP.NET 미들웨어의 상태 확인. 이 경우 사용하지 않습니다.
 
@@ -134,7 +134,7 @@ public class CartController : Controller
 
 요약하면 다음과 같습니다. 재시도 정책이 HTTP 요청을 수행하기 위해 몇 차례 시도했고 HTTP 오류를 받았습니다. 회로 차단기 정책에 설정된 최대 다시 시도 횟수(이 경우 5)에 도달하면 애플리케이션에서 BrokenCircuitException을 throw합니다. 그 결과 그림 8-6처럼 사용자에게 친숙한 메시지가 표시됩니다.
 
-![회로 차단기 정책에 의해 트리거된 “basket service inoperative” 메시지를 표시하는 MVC 웹앱의 브라우저 보기](./media/image5.png)
+![장바구니 서비스가 작동하지 않음 오류가 발생한 MVC 웹앱의 스크린샷](./media/implement-circuit-breaker-pattern/basket-service-inoperative.png)
 
 **그림 8-6**. UI에 오류를 반환한 회로 차단기
 
@@ -142,7 +142,7 @@ public class CartController : Controller
 
 마지막으로, `CircuitBreakerPolicy`에 대한 또 다른 가능성은 `Isolate`(회로를 강제로 열고 열려 있는 상태로 유지) 및 `Reset`(회로를 다시 닫음)을 사용하는 것입니다. 이를 사용하여 정책에서 직접 분리 및 재설정을 호출하는 유틸리티 HTTP 엔드포인트를 구성할 수 있습니다.  이러한 HTTP 엔드포인트는 업그레이드 등의 상황에서 다운스트림을 임시 분리하기 위해 프로덕션에서 적절히 안전하게 사용할 수도 있습니다. 또는 오류가 있다고 의심되는 다운스트림 시스템을 보호하기 위해 회로를 수동으로 이동할 수 있습니다.
 
-## <a name="additional-resources"></a>추가 리소스
+## <a name="additional-resources"></a>추가 자료
 
 - **회로 차단기 패턴**\
   [https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker](/azure/architecture/patterns/circuit-breaker)

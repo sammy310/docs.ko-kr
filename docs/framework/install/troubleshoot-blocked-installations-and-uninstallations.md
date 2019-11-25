@@ -6,12 +6,12 @@ helpviewer_keywords:
 - .NET Framework, troubleshooting blocked installations
 - blocked .NET Framework installations, troubleshooting
 ms.assetid: c3fdfbc1-ed99-4202-a2b0-8c4f1646385d
-ms.openlocfilehash: e602e0f0603637659b7d18d75e66547dcd946c54
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d0f3d857a90aca763121595151a2193125b47c6c
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123754"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975636"
 ---
 # <a name="troubleshoot-blocked-net-framework-installations-and-uninstallations"></a>차단된 .NET Framework 설치 및 제거 문제 해결
 
@@ -41,14 +41,14 @@ Windows 8 이상에서 .NET Framework는 운영 체제 구성 요소이며 독�
 |이전에 실행한 설치 작업을 사용하려면 컴퓨터를 다시 시작해야 하므로 설치 프로그램을 계속할 수 없습니다. 컴퓨터를 다시 시작하고 설치 프로그램을 다시 실행하십시오.|설치를 완료하려면 컴퓨터를 다시 시작해야 할 수도 있습니다. 지침에 따라 컴퓨터를 다시 시작하고 설치 프로그램을 다시 실행하세요.<br /><br /> 드문 경우지만 Windows가 누락된 업데이트 횟수를 감지하고 다음 순서의 업데이트를 설치하기 위해 다시 시작하는 경우 두 번 이상 시스템을 다시 시작하라는 메시지가 나타날 수 있습니다.|  
 |.NET Framework 설치 프로그램은 프로그램 호환성 모드로 실행할 수 없습니다.|이 문서 뒷부분에 있는 [프로그램 호환성 문제](#compat) 섹션을 참조하십시오.|  
 |구성 요소 저장소가 손상되었으므로 .NET Framework 4.5.x/4.6.x/4.7.x/4.8이 설치되지 않았습니다.|자세한 내용은 [DISM 또는 시스템 업데이트 준비 도구를 사용하여 Windows 업데이트 오류 해결](https://support.microsoft.com/kb/947821)을 참조하십시오.|  
-|이 컴퓨터에서 Windows Installer 서비스를 사용할 수 없으므로 설치 프로그램을 실행할 수 없습니다.|Microsoft 지원 웹 사이트의 [프로그램을 설치하거나 업데이트할 때의 Windows Installer 서비스 오류](https://go.microsoft.com/fwlink/p/?LinkId=248684)를 참조하십시오.|  
-|이 컴퓨터에서 Windows 업데이트 서비스를 사용할 수 없으므로 설치 프로그램이 올바르게 실행되지 않을 수 있습니다.|컴퓨터가 Microsoft Windows 업데이트 대신 WSUS(Windows Server Update Services)를 사용하도록 구성되었을 수 있습니다. 자세한 내용은 [Windows 8 또는 Windows Server 2012에서 .NET Framework 3.5를 설치하려고 할 때의 오류 코드](https://support.microsoft.com/kb/2734782)에서 오류 코드 0x800F0906 섹션을 참조하십시오.<br /><br /> Microsoft 지원 웹 사이트의 [컴퓨터 업데이트 관리에 도움이 되는 최신 버전의 Windows 업데이트 에이전트를 구하는 방법](https://go.microsoft.com/fwlink/p/?LinkId=248437)을 참조할 수도 있습니다.|  
-|이 컴퓨터에서 BITS(Background Intelligent Transfer Service)를 사용할 수 없으므로 설치 프로그램이 올바르게 실행되지 않을 수 있습니다.|Microsoft 지원 웹 사이트에서 [Windows Vista 기반 컴퓨터에서 BITS(Background Intelligent Transfer Service) 충돌을 방지하기 위한 업데이트](https://go.microsoft.com/fwlink/p/?LinkId=248680)를 참조하십시오.|  
+|이 컴퓨터에서 Windows Installer 서비스를 사용할 수 없으므로 설치 프로그램을 실행할 수 없습니다.|Microsoft 지원 웹 사이트에서 [Windows 7 또는 Windows Vista에서 프로그램을 설치하는 경우 "Windows Installer 서비스에 액세스할 수 없음" 오류 발생](https://support.microsoft.com/help/2642495/the-windows-installer-service-could-not-be-accessed-error-when-you-try)을 참조하세요.|  
+|이 컴퓨터에서 Windows 업데이트 서비스를 사용할 수 없으므로 설치 프로그램이 올바르게 실행되지 않을 수 있습니다.|컴퓨터가 Microsoft Windows 업데이트 대신 WSUS(Windows Server Update Services)를 사용하도록 구성되었을 수 있습니다. 자세한 내용은 [.NET Framework 3.5 설치 오류: 0x800F0906, 0x800F081F, 0x800F0907](https://support.microsoft.com/help/2734782/net-framework-3-5-installation-error-0x800f0906-0x800f081f-0x800f0907)의 오류 코드 0x800F0906에 대한 섹션을 참조하세요.<br /><br /> 또한 Microsoft 지원 웹 사이트에서 [Windows Update Agent를 최신 버전으로 업데이트하는 방법](https://support.microsoft.com/help/949104/how-to-update-the-windows-update-agent-to-the-latest-version)을 참조하세요.|  
+|이 컴퓨터에서 BITS(Background Intelligent Transfer Service)를 사용할 수 없으므로 설치 프로그램이 올바르게 실행되지 않을 수 있습니다.|Microsoft 지원 웹 사이트에서 [Windows Vista 기반 컴퓨터에서 BITS(Background Intelligent Transfer Service) 충돌을 해결하기 위한 업데이트 사용 가능](https://support.microsoft.com/help/940520/an-update-is-available-to-fix-a-background-intelligent-transfer-servic)을 참조하세요.|  
 |Windows 업데이트에 오류가 발생하고 오류 코드 “0x80070643” 또는 “0x643”이 표시되었기 때문에 설치 프로그램이 올바르게 실행되지 않을 수 있습니다.|Microsoft 지원 웹 사이트에서 [.NET Framework 업데이트 설치 오류: "0x80070643" 또는 "0x643"](https://support.microsoft.com/kb/976982)을 참조하세요.|  
 |.NET Framework 4.5.x/4.6.x/4.7.x/4.8은 이 운영 체제에 이미 포함되어 있습니다. .NET Framework 4.5.x/4.6.x/4.7.x/4.8 재배포 가능 패키지를 설치할 필요가 없습니다.|작업이 필요 없습니다.<br /><br /> 시스템에 설치된 .NET Framework의 버전을 확인하려면 [방법: 설치된 .NET Framework 버전 확인](../migration-guide/how-to-determine-which-versions-are-installed.md)을 참조하세요. 지원되는 운영 체제는 [시스템 요구 사항](../get-started/system-requirements.md)을 참조하십시오.|  
 |.NET Framework 4.5.x/4.6.x/4.7.x/4.8은 이 운영 체제에서 지원되지 않습니다.|지원되는 운영 체제는 [시스템 요구 사항](../get-started/system-requirements.md)을 참조하십시오.<br /><br /> Windows 7에서 .NET Framework의 설치가 실패하는 경우 이 메시지는 일반적으로 Windows 7 SP1이 설치되어 있지 않는 것을 나타냅니다. Windows 7 시스템에서 .NET Framework를 사용하려면 Windows 7 SP1이 필요합니다. Windows 7을 사용하며 서비스 팩 1을 아직 설치하지 않은 경우 .NET Framework를 설치하기 전에 먼저 설치해야 합니다. Windows 7 SP1의 설치에 대한 정보는 [Windows 7 서비스 팩 1(SP1) 설치 방법 알아보기](https://windows.microsoft.com/windows7/install-windows-7-service-pack-1)를 참조하십시오.|  
 |컴퓨터에서 현재 Windows Server 2008 운영 체제의 Server Core 설치를 실행하고 있습니다. .NET Framework 4.5.x를 실행하려면 정식 버전의 운영 체제 또는 Server Core 2008 R2 SP1이 필요합니다. Windows Server 2008 SP2 또는 Windows Server 2008 R2 SP1 또는 Server Core 2008 R2 SP1의 정식 버전을 설치하고 .NET Framework 4.5.x 설치 프로그램을 다시 실행하세요.|.NET Framework는 Windows Server 2008 R2 SP1 이상의 Server Core 역할에서 지원됩니다. [시스템 요구 사항](../get-started/system-requirements.md)을 참조하십시오.|  
-|.NET Framework 4.5.x는 이 운영 체제에 이미 포함되어 있지만 현재 해제되어 있습니다([!INCLUDE[winserver8](../../../includes/winserver8-md.md)] 전용).|Windows 웹 사이트의 [Windows 기능 사용/사용 안 함](https://go.microsoft.com/fwlink/p/?LinkId=248438)을 참조하십시오.|  
+|.NET Framework 4.5.x는 이 운영 체제에 이미 포함되어 있지만 현재 해제되어 있습니다([!INCLUDE[winserver8](../../../includes/winserver8-md.md)] 전용).| **제어판**에서 **Windows 기능 사용/사용 안 함**을 사용하여 .NET Framework 4.5.x를 켭니다. |  
 |이 설치 프로그램을 사용하려면 x86 컴퓨터가 필요합니다. x64 또는 IA64 컴퓨터에는 설치할 수 없습니다.|[시스템 요구 사항](../get-started/system-requirements.md)을 참조하십시오.|  
 |이 설치 프로그램을 사용하려면 x64 또는 x86 컴퓨터가 필요합니다. IA64 컴퓨터에는 설치할 수 없습니다.|[시스템 요구 사항](../get-started/system-requirements.md)을 참조하십시오.|  
 

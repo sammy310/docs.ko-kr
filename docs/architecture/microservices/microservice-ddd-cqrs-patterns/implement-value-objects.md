@@ -2,12 +2,12 @@
 title: 값 개체 구현
 description: 컨테이너화된 .NET 애플리케이션의 .NET 마이크로 서비스 아키텍처 | 새로운 Entity Framework 기능을 사용하여 값 개체를 구현하는 세부 정보 및 옵션을 가져옵니다.
 ms.date: 10/08/2018
-ms.openlocfilehash: b2f7b0f36fea25c25edd47731d9387810bd2b44d
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 2608517c4006f5e8da1d31b2c337d8ddd3ddd542
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674150"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739851"
 ---
 # <a name="implement-value-objects"></a>값 개체 구현
 
@@ -17,7 +17,7 @@ ms.locfileid: "68674150"
 
 그림 7-13은 순서 집계 내의 주소 값 개체를 보여줍니다.
 
-![순서 집계 내의 주소 값 개체](./media/image14.png)
+![순서 집계 내의 주소 값 개체를 보여주는 다이어그램입니다.](./media/implement-value-objects/value-object-within-aggregate.png)
 
 **그림 7-13** 순서 집계 내부의 주소 값 개체
 

@@ -2,12 +2,12 @@
 title: DDD 중심 마이크로 서비스 설계
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | DDD 지향 주문 마이크로 서비스 및 해당 애플리케이션 계층의 디자인을 이해합니다.
 ms.date: 10/08/2018
-ms.openlocfilehash: 303f8909d12dddef93b20604a00b9ea8e8493ee5
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: c5ac55978ca979a3ae055d9b0cd2d3c6b3187b4e
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674350"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739959"
 ---
 # <a name="design-a-ddd-oriented-microservice"></a>DDD 지향 마이크로 서비스 디자인
 
@@ -37,13 +37,13 @@ DDD(도메인 기반 설계)는 사용 사례와 관련하여 현실의 비즈�
 
 그림 7-5는 eShopOnContainers 애플리케이션에서 계층화된 디자인을 구현하는 방법을 보여줍니다.
 
-![Ordering과 같은 DDD 마이크로 서비스의 세 계층. 각 계층은 VS 프로젝트입니다. 애플리케이션 계층은 Ordering.API, 도메인 계층은 Ordering.Domain, 인프라 계층은 Ordering.Infrastructure입니다.](./media/image6.png)
+![도메인 기반 디자인 마이크로 서비스의 레이어를 보여 주는 다이어그램](./media/ddd-oriented-microservice/domain-driven-design-microservice.png)
 
 **그림 7-5**. eShopOnContainers 주문 마이크로 서비스의 DDD 계층
 
-각 계층이 특정 다른 계층과만 통신하도록 시스템을 설계하려 합니다. 계층이 다른 클래스 라이브러리로 구현된다면 라이브러리 간에 어떠한 종속성이 있는지 분명히 식별할 수 있기 때문에 시행이 더 쉬울 것입니다. 예를 들어, 도메인 모델 계층은 다른 계층에 대해 종속성이 있어서는 안됩니다(도메인 모델 클래스는 일반 기존 CLR 개체이거나 [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object), 클래스여야 함). 그림 7-6에서 보듯이 **Ordering.Domain** 계층 라이브러리에는 .NET Core 라이브러리 또는 NuGet 패키지에 대한 종속성만 있고 데이터 라이브러리나 지속 라이브러리 같은 다른 사용자 지정 라이브러리에는 종속성이 없습니다.
+Ordering과 같은 DDD 마이크로 서비스의 세 계층. 각 계층은 VS 프로젝트입니다. 애플리케이션 계층은 Ordering.API, 도메인 계층은 Ordering.Domain, 인프라 계층은 Ordering.Infrastructure입니다. 각 계층이 특정 다른 계층과만 통신하도록 시스템을 설계하려 합니다. 계층이 다른 클래스 라이브러리로 구현된다면 라이브러리 간에 어떠한 종속성이 있는지 분명히 식별할 수 있기 때문에 시행이 더 쉬울 것입니다. 예를 들어, 도메인 모델 계층은 다른 계층에 대해 종속성이 있어서는 안됩니다(도메인 모델 클래스는 일반 기존 CLR 개체이거나 [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object), 클래스여야 함). 그림 7-6에서 보듯이 **Ordering.Domain** 계층 라이브러리에는 .NET Core 라이브러리 또는 NuGet 패키지에 대한 종속성만 있고 데이터 라이브러리나 지속 라이브러리 같은 다른 사용자 지정 라이브러리에는 종속성이 없습니다.
 
-![Ordering.Domain 종속성의 솔루션 탐색기 보기는 .NET Core 라이브러리에 따라 다릅니다.](./media/image7.png)
+![Ordering.Domain 종속성의 스크린샷](./media/ddd-oriented-microservice/ordering-domain-dependencies.png)
 
 **그림 7-6**. 라이브러리로 구현되는 계층은 레이어 간의 종속성을 더 잘 제어할 수 있습니다.
 
@@ -85,11 +85,11 @@ Entity Framework Core와 같은 대부분의 최신 ORM 프레임워크에서는
 
 따라서 그림 7-7에서와 같이 계층 또는 클래스 라이브러리와 프로젝트는 결과적으로 도메인 모델 계층(라이브러리)에 종속되어야 하며 그 반대의 경우는 아닙니다.
 
-![DDD 서비스의 종속성, 애플리케이션 계층은 도메인 및 인프라에 따라 다르며 인프라는 도메인에 종속되지만 도메인은 모든 계층에 종속되지 않습니다.](./media/image8.png)
+![DDD 서비스 레이어 사이에 존재하는 종속성을 보여 주는 다이어그램](./media/ddd-oriented-microservice/ddd-service-layer-dependencies.png)
 
 **그림 7-7**. DDD의 계층 간 종속성
 
-이 계층 설계는 각각의 마이크로 서비스마다 독립적입니다. 앞서 언급한 것처럼 DDD 패턴에 따라 가장 복잡한 마이크로 서비스를 구현할 수 있고 더 간단한 데이터 중심 마이크로 서비스(단일 계층의 간단한 CRUD)는 더 간단한 방법으로 구현합니다.
+DDD 서비스의 종속성, 애플리케이션 계층은 도메인 및 인프라에 따라 다르며 인프라는 도메인에 종속되지만 도메인은 모든 계층에 종속되지 않습니다. 이 계층 설계는 각각의 마이크로 서비스마다 독립적입니다. 앞서 언급한 것처럼 DDD 패턴에 따라 가장 복잡한 마이크로 서비스를 구현할 수 있고 더 간단한 데이터 중심 마이크로 서비스(단일 계층의 간단한 CRUD)는 더 간단한 방법으로 구현합니다.
 
 #### <a name="additional-resources"></a>추가 자료
 

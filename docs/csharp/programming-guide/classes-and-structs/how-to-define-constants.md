@@ -1,18 +1,18 @@
 ---
-title: '방법: C#에서 상수 정의'
+title: C#에서 상수 정의 방법
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, constants
 - constants [C#]
 ms.assetid: 43f511be-346c-4b8a-995e-aded94542ece
-ms.openlocfilehash: ba5bc3d03dcaf5c8be94936a453a439670e8dc1f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6681b1987ec9b5bce40b3abffb9b7d11d4a82bcc
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924483"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73970954"
 ---
-# <a name="how-to-define-constants-in-c"></a>방법: C\#에서 상수 정의
+# <a name="how-to-define-constants-in-c"></a>C\#에서 상수 정의 방법
 상수는 해당 값이 컴파일 시간에 설정되며 변경할 수 없는 필드입니다. 상수를 사용하여 특수 값에 대해 숫자 리터럴(“매직 넘버”) 대신 의미 있는 이름을 제공할 수 있습니다.  
   
 > [!NOTE]

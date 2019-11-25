@@ -11,12 +11,12 @@ helpviewer_keywords:
 - null-coalescing assignment [C#]
 - ??= operator [C#]
 ms.assetid: 088b1f0d-c1af-4fe1-b4b8-196fd5ea9132
-ms.openlocfilehash: 5262aa70bb5ec2f03dda9425194b89ec1e809d76
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 2bd6fe3d2d283e64eebc2251416fa5234e30bdad
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73038956"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739664"
 ---
 # <a name="-and--operators-c-reference"></a>?? 및 ??= 연산자(C# 참조)
 
@@ -28,7 +28,7 @@ C# 8.0 이상에서 사용할 수 있는 null 병합 할당 연산자 `??=`는 �
 
 `??=` 연산자의 왼쪽 피연산자는 변수, [속성](../../programming-guide/classes-and-structs/properties.md) 또는 [인덱서](../../programming-guide/indexers/index.md) 요소여야 합니다.
 
-C# 7.3 이전 버전에서 `??` 연산자의 왼쪽 피연산자 형식은 참조 형식 또는 [null 허용 값 형식](../../programming-guide/nullable-types/index.md)이어야 합니다. C# 8.0부터 이 요구 사항이 다음과 같이 바뀝니다. `??` 및 `??=` 연산자의 왼쪽 피연산자 형식은 null을 허용하지 않는 값 형식일 수 없습니다. 특히 C# 8.0부터 비제한 형식 매개 변수와 함께 null 병합 연산자를 사용할 수 있습니다.
+C# 7.3 이전 버전에서 `??` 연산자의 왼쪽 피연산자 형식은 [참조 형식](../keywords/reference-types.md) 또는 [Nullable 값 형식](../builtin-types/nullable-value-types.md)이어야 합니다. C# 8.0부터 이 요구 사항이 다음과 같이 바뀝니다. `??` 및 `??=` 연산자의 왼쪽 피연산자 형식은 null을 허용하지 않는 값 형식일 수 없습니다. 특히 C# 8.0부터 비제한 형식 매개 변수와 함께 null 병합 연산자를 사용할 수 있습니다.
 
 [!code-csharp[unconstrained type parameter](~/samples/csharp/language-reference/operators/NullCoalescingOperator.cs#UnconstrainedType)]
 
@@ -54,7 +54,7 @@ d ??= (e ??= f)
 
   [!code-csharp-interactive[with null-conditional](~/samples/csharp/language-reference/operators/NullCoalescingOperator.cs#WithNullConditional)]
 
-- [nullable 값 형식](../../programming-guide/nullable-types/index.md)을 사용하고 기본값 유형의 값을 제공해야 할 때 `??` 연산자를 사용하여 nullable 값이 `null`인 경우 제공할 값을 지정합니다.
+- [nullable 값 형식](../builtin-types/nullable-value-types.md)을 사용하고 기본값 유형의 값을 제공해야 할 때 `??` 연산자를 사용하여 nullable 값이 `null`인 경우 제공할 값을 지정합니다.
 
   [!code-csharp-interactive[with nullable types](~/samples/csharp/language-reference/operators/NullCoalescingOperator.cs#WithNullableTypes)]
 

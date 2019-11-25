@@ -2,12 +2,12 @@
 title: 모놀리식 애플리케이션 컨테이너화
 description: 모놀리식 애플리케이션을 컨테이너화하는 것은 마이크로 서비스 아키텍처에서 모든 이점을 가져올 수 없지만, 즉시 제공할 수 있는 중요한 배포 이점을 가지고 있습니다.
 ms.date: 09/20/2018
-ms.openlocfilehash: 5b38ba1c2954f4fd4064723b1316afbf09d25bf2
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: e02aa4ff644fc26b7f15721866f8862f6a175cf2
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771473"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737963"
 ---
 # <a name="containerizing-monolithic-applications"></a>모놀리식 애플리케이션 컨테이너화
 
@@ -15,11 +15,11 @@ ms.locfileid: "72771473"
 
 이 모델을 관리하려면 애플리케이션을 나타내는 단일 컨테이너를 배포합니다. 용량을 늘리려면 규모 확장, 즉 먼저 부하 분산 장치를 사용하여 복사본을 더 추가하면 됩니다. 단일 컨테이너 또는 VM에서 단일 배포를 관리하면 단순성을 제공합니다.
 
-![컨테이너화된 모놀리식 애플리케이션은 내부 레이어 또는 라이브러리가 있는 단일 컨테이너 내에서 대부분의 기능을 갖추고 있으며, 여러 서버/VM에서 컨테이너 복제를 통해 확장됩니다.](./media/image1.png)
+![컨테이너화된 모놀리식 애플리케이션의 구성 요소를 보여 주는 다이어그램](./media/containerize-monolithic-applications/monolithic-containerized-application.png)
 
 **그림 4-1** 컨테이너화된 모놀리식 애플리케이션의 아키텍처 예제
 
-그림 4-1에서 보여준 대로 각 컨테이너에 여러 구성 요소, 라이브러리 또는 내부 계층이 포함될 수 있습니다. 하지만 이 모놀리식 패턴은 "컨테이너는 한 가지 작업을 하나의 프로세스에서 수행합니다."라는 컨테이너 원칙과 충돌할 수 있지만 어떤 경우에는 문제가 발생하지 않습니다.
+그림 4-1에서 보여준 대로 각 컨테이너에 여러 구성 요소, 라이브러리 또는 내부 계층이 포함될 수 있습니다. 컨테이너화된 모놀리식 애플리케이션은 내부 레이어 또는 라이브러리가 있는 단일 컨테이너 내에서 대부분의 기능을 갖추고 있으며, 여러 서버/VM에서 컨테이너 복제를 통해 확장됩니다. 하지만 이 모놀리식 패턴은 "컨테이너는 한 가지 작업을 하나의 프로세스에서 수행합니다."라는 컨테이너 원칙과 충돌할 수 있지만 어떤 경우에는 문제가 발생하지 않습니다.
 
 이 방법의 단점은 애플리케이션이 증가하면 분명히 크기를 조정해야 한다는 것입니다. 전체 애플리케이션의 크기를 조정하는 경우 문제가 되지 않습니다. 그러나 대부분의 경우에 다른 구성 요소를 적게 사용하는 반면 일부 애플리케이션은 크기 조정이 요구되는 문제 지점(choke points)에 있습니다.
 
@@ -31,7 +31,7 @@ ms.locfileid: "72771473"
 
 인프라 측면에서 볼 때 각 서버는 동일한 호스트 내에서 많은 애플리케이션을 실행하고 그림 4-2에 표시된 대로 리소스 사용량에서 효율성의 허용 가능한 비율을 사용할 수 있습니다.
 
-![호스트는 여러 개의 모놀리식 앱을 각각 별도의 컨테이너에서 실행할 수 있습니다.](./media/image2.png)
+![컨테이너에서 많은 앱을 실행하는 한 호스트를 보여 주는 다이어그램](./media/containerize-monolithic-applications/host-multiple-apps-containers.png)
 
 **그림 4-2** 모놀리식 방법: 호스트에서 실행 중인 여러 앱, 컨테이너로 실행되는 각 앱
 
@@ -39,7 +39,7 @@ Microsoft Azure의 모놀리식 애플리케이션은 각 인스턴스에 전용
 
 그림 4-3에 표시된 대로 QA 환경 또는 제한된 프로덕션 환경으로 여러 Docker 호스트 VM을 배포하고 Azure 분산 장치를 사용하여 균형을 조정할 수 있습니다. 그러면 전체 애플리케이션이 단일 컨테이너 내에 위치하기 때문에 조립(coarse-grain) 방법으로 크기를 조정하도록 관리할 수 있습니다.
 
-![여러 호스트은 각각 모놀리식 애플리케이션을 사용하여 컨테이너를 실행합니다.](./media/image3.png)
+![모놀리식 앱 컨테이너를 실행하는 여러 호스트를 보여 주는 다이어그램](./media/containerize-monolithic-applications/docker-infrastructure-monolithic-application.png)
 
 **그림 4-3** 단일 컨테이너 애플리케이션의 크기를 조정하는 여러 호스트 예제
 
@@ -59,7 +59,7 @@ Docker 이미지로 업데이트를 배포하는 것이 훨씬 더 빠르고 네
 
 Azure에 배포된 컨테이너의 유효성 검사를 수행하거나 애플리케이션이 단일 컨테이너 애플리케이션인 경우 Azure App Service를 사용하여 확장성 있는 단일 컨테이너 기반 서비스를 제공하는 것이 좋습니다. Azure App Service를 사용하는 방법은 간단합니다. 를 통해 Git와 통합하여 코드를 사용하고, Visual Studio에서 빌드하고, Azure에 직접 배포하는 작업이 용이해집니다.
 
-![Visual Studio에서 Azure App Service에 단일 컨테이너 애플리케이션 게시 마법사](./media/image4.png)
+![Container Registry를 표시하는 App Service 만들기 대화 상자 스크린샷](./media/containerize-monolithic-applications/publish-azure-app-service-container.png)
 
 **그림 4-4** Visual Studio에서 Azure App Service에 단일 컨테이너 애플리케이션 게시
 

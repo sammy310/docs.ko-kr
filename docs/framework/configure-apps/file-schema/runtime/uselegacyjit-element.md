@@ -2,12 +2,12 @@
 title: <useLegacyJit> 요소
 ms.date: 04/26/2017
 ms.assetid: c2cf97f0-9262-4f1f-a754-5568b51110ad
-ms.openlocfilehash: 47aacb629dc234d9aeaab1ef6e6844fbbe5dbfdb
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a126b8c0050a8d1fd96a3d090f9b018a9faa07a7
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73115103"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73968847"
 ---
 # <a name="uselegacyjit-element"></a>\<useLegacyJit> 요소
 
@@ -66,7 +66,7 @@ ms.locfileid: "73115103"
 
   `COMPLUS_useLegacyJit` 환경 변수를 `0` (새 64 비트 JIT 컴파일러 사용) 또는 `1` (이전 64 비트 JIT 컴파일러 사용)로 설정 합니다.
   
-  ```  
+  ```env  
   COMPLUS_useLegacyJit=0|1  
   ```  
   

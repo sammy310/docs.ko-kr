@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <CompatSortNLSVersion> element
 - CompatSortNLSVersion element
 ms.assetid: 782cc82e-83f7-404a-80b7-6d3061a8b6e3
-ms.openlocfilehash: f13265e2056c8eca62cd510154dd7c096eeabb00
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5de760fe07283ddee36b3475fa0975c8d46776e5
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73117675"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73969260"
 ---
 # <a name="compatsortnlsversion-element"></a>\<CompatSortNLSVersion > 요소
 문자열 비교를 수행할 때 런타임에서 레거시 정렬 순서를 사용하도록 지정합니다.  
@@ -55,7 +55,7 @@ ms.locfileid: "73117675"
 |`runtime`|런타임 초기화 옵션에 대한 정보를 포함합니다.|  
   
 ## <a name="remarks"></a>주의  
- .NET Framework 4의 <xref:System.Globalization.CompareInfo?displayProperty=nameWithType> 클래스에서 수행 하는 문자열 비교, 정렬 및 대/소문자 구분 연산은 유니코드 5.1 표준을 따르기 때문에 <xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType> 및 <xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType>와 같은 문자열 비교 메서드의 결과는 이전 버전의와 다를 수 있습니다. .NET Framework. 응용 프로그램이 레거시 동작에 의존 하는 경우 응용 프로그램의 구성 파일에 `<CompatSortNLSVersion>` 요소를 포함 하 여 .NET Framework 3.5 이전 버전에서 사용 되는 문자열 비교 및 정렬 규칙을 복원할 수 있습니다.  
+ .NET Framework 4의 <xref:System.Globalization.CompareInfo?displayProperty=nameWithType> 클래스에서 수행 하는 문자열 비교, 정렬 및 대/소문자 구분 연산은 유니코드 5.1 표준을 따르기 때문에 <xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType> 및 <xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType>와 같은 문자열 비교 메서드의 결과는 이전 버전의 .NET Framework와 다를 수 있습니다. 응용 프로그램이 레거시 동작에 의존 하는 경우 응용 프로그램의 구성 파일에 `<CompatSortNLSVersion>` 요소를 포함 하 여 .NET Framework 3.5 이전 버전에서 사용 되는 문자열 비교 및 정렬 규칙을 복원할 수 있습니다.  
   
 > [!IMPORTANT]
 > 레거시 문자열 비교 복원 및 정렬 규칙을 실행하려면 로컬 시스템에서 sort00001000.dll 동적 링크 라이브러리를 사용할 수 있어야 합니다.  
@@ -68,15 +68,15 @@ ms.locfileid: "73117675"
  [!code-csharp[String.BreakingChanges#1](../../../../../samples/snippets/csharp/VS_Snippets_CLR/string.breakingchanges/cs/example1.cs#1)]
  [!code-vb[String.BreakingChanges#1](../../../../../samples/snippets/visualbasic/VS_Snippets_CLR/string.breakingchanges/vb/example1.vb#1)]  
   
- .NET Framework 4에서 예제를 실행 하면 다음과 같은 출력이 표시 됩니다.  
+ .NET Framework 4에서 예제를 실행 하면 다음과 같은 출력이 표시 됩니다.
   
-```  
+```console
 sta follows a in the sort order.  
 ```  
   
- 이는 .NET Framework 3.5에서 예제를 실행할 때 표시 되는 출력과 완전히 다릅니다.  
+ 이는 .NET Framework 3.5에서 예제를 실행할 때 표시 되는 출력과 완전히 다릅니다.
   
-```  
+```console
 sta equals a in the sort order.  
 ```  
   

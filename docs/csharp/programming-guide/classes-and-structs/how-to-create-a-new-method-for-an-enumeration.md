@@ -1,5 +1,5 @@
 ---
-title: '방법: 새 열거형 메서드 만들기 - C# 프로그래밍 가이드'
+title: 새 열거형 메서드를 만드는 방법 - C# 프로그래밍 가이드
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - extension methods [C#], for enums
 - enum extensibility [C#]
 ms.assetid: 100106f9-1e54-462c-8ebe-3892fe23b6eb
-ms.openlocfilehash: 99a2005e1a64fa214776145a903341fb162f0633
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 02af55c851392ce5dde4c83fd32d18b927950a3f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69597052"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971024"
 ---
-# <a name="how-to-create-a-new-method-for-an-enumeration-c-programming-guide"></a>방법: 새 열거형 메서드 만들기(C# 프로그래밍 가이드)
+# <a name="how-to-create-a-new-method-for-an-enumeration-c-programming-guide"></a>새 열거형 메서드를 만드는 방법(C# 프로그래밍 가이드)
 확장 메서드를 사용하여 특정 열거형 형식과 관련된 기능을 추가할 수 있습니다.  
   
 ## <a name="example"></a>예  

@@ -4,12 +4,12 @@ description: 웹 애플리케이션을 구축하는 경우 기존 웹 앱과 SPA
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: d68c167dce791a31eeb5ca5729b50ec22c64f9b0
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 9ede64249705aba3f22a9663b8a258e41f030aca
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675480"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739450"
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>기존 웹앱 및 SPA(단일 페이지 앱) 중에서 선택
 
@@ -40,7 +40,7 @@ SPA 모델 덕분에 향상된 사용자 경험을 이러한 고려 사항과 �
 
 ## <a name="blazor"></a>Blazor
 
-ASP.NET Core 3.0에서는 Blazor라는 풍부하고 구성 가능한 대화형 UI를 빌드하는 새 모델을 제공합니다. 서버 측 Blazor를 사용하면 개발자가 서버에서 Razor를 사용하여 UI를 빌드하고, 이 코드를 브라우저에 전달하여 WebAssembly라는 JavaScript 라이브러리를 사용하여 클라이언트 쪽에서 실행되게 할 수 있습니다. ASP.NET Core 3.0은 아직 개발 중이지만 이 eBook의 3.0 업데이트에서 이 기술에 대해 자세히 확인해야 합니다. Blazor에 대한 자세한 내용은 [Blazor 시작](https://blazor.net/docs/get-started.html)을 참조하세요.
+ASP.NET Core 3.0에서는 Blazor라는 풍부하고 구성 가능한 대화형 UI를 빌드하는 새 모델을 제공합니다. 서버 측 Blazor를 사용하면 개발자가 서버에서 Razor를 사용하여 UI를 빌드하고, 이 코드를 브라우저에 전달하여 [WebAssembly](https://webassembly.org/)를 사용하여 클라이언트 쪽에서 실행되게 할 수 있습니다. ASP.NET Core 3.0은 아직 개발 중이지만 이 eBook의 3.0 업데이트에서 이 기술에 대해 자세히 확인해야 합니다. Blazor에 대한 자세한 내용은 [Blazor 시작](https://blazor.net/docs/get-started.html)을 참조하세요.
 
 ## <a name="when-to-choose-traditional-web-apps"></a>기존 웹앱을 선택하는 경우
 

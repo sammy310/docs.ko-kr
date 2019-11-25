@@ -1,24 +1,24 @@
 ---
-title: 개체 구체화(WCF Data Services)
+title: 개체 구체화 (WCF Data Services)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, querying
 ms.assetid: f0dbf7b0-0292-4e31-9ae4-b98288336dc1
-ms.openlocfilehash: 89357b1d05526438c939a73663c5b7b6273df4ac
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 68b04ac59d1b73d6e66a5a7836ce1bfe30d9c681
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790396"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975187"
 ---
-# <a name="object-materialization-wcf-data-services"></a>개체 구체화(WCF Data Services)
+# <a name="object-materialization-wcf-data-services"></a>개체 구체화 (WCF Data Services)
 
-**서비스 참조 추가** 대화 상자를 사용 하 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 여 .NET Framework 기반 클라이언트 응용 프로그램에서 피드를 사용 하는 경우 피드에서 노출 하는 데이터 모델의 각 엔터티 형식에 대해 해당 하는 데이터 클래스가 생성 됩니다. 자세한 내용은 [데이터 서비스 클라이언트 라이브러리 생성](generating-the-data-service-client-library-wcf-data-services.md)을 참조 하십시오. 쿼리에서 반환되는 엔터티 데이터는 이러한 생성된 클라이언트 데이터 서비스 클래스 중 하나의 인스턴스로 구체화됩니다. 추적 되는 개체에 대 한 병합 옵션 및 id 확인에 대 한 자세한 내용은 [데이터 서비스 컨텍스트 관리](managing-the-data-service-context-wcf-data-services.md)를 참조 하세요.
+**서비스 참조 추가** 대화 상자를 사용 하 여 .NET Framework 기반 클라이언트 응용 프로그램에서 OData (Open Data Protocol) 피드를 사용 하는 경우 해당 피드에서 노출 하는 데이터 모델의 각 엔터티 형식에 대해 해당 하는 데이터 클래스가 생성 됩니다. 자세한 내용은 [데이터 서비스 클라이언트 라이브러리 생성](generating-the-data-service-client-library-wcf-data-services.md)을 참조 하십시오. 쿼리에서 반환되는 엔터티 데이터는 이러한 생성된 클라이언트 데이터 서비스 클래스 중 하나의 인스턴스로 구체화됩니다. 추적 되는 개체에 대 한 병합 옵션 및 id 확인에 대 한 자세한 내용은 [데이터 서비스 컨텍스트 관리](managing-the-data-service-context-wcf-data-services.md)를 참조 하세요.
 
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]를 사용하면 도구에서 생성된 데이터 클래스를 사용하지 않고 고유한 클라이언트 데이터 서비스 클래스를 정의할 수도 있습니다. 이에 따라 POCO(Plain Old CLR Object) 데이터 클래스라고도 하는 고유 데이터 클래스를 사용할 수 있습니다. 이러한 유형의 사용자 지정 데이터 클래스를 사용 하는 경우 또는 <xref:System.Data.Services.Common.DataServiceKeyAttribute> <xref:System.Data.Services.Common.DataServiceEntityAttribute> 중 하나를 사용 하 여 데이터 클래스의 특성을 지정 하 고 클라이언트의 형식 이름이 데이터 서비스의 데이터 모델에 있는 형식 이름과 일치 하는지 확인 해야 합니다.
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]를 사용하면 도구에서 생성된 데이터 클래스를 사용하지 않고 고유한 클라이언트 데이터 서비스 클래스를 정의할 수도 있습니다. 이에 따라 POCO(Plain Old CLR Object) 데이터 클래스라고도 하는 고유 데이터 클래스를 사용할 수 있습니다. 이러한 유형의 사용자 지정 데이터 클래스를 사용 하는 경우 <xref:System.Data.Services.Common.DataServiceKeyAttribute> 또는 <xref:System.Data.Services.Common.DataServiceEntityAttribute>를 사용 하 여 데이터 클래스의 특성을 지정 하 고 클라이언트의 형식 이름이 데이터 서비스의 데이터 모델에 있는 형식 이름과 일치 하는지 확인 해야 합니다.
 
-라이브러리는 쿼리 응답 메시지를 받은 후 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 피드의 반환 된 데이터를 쿼리 형식의 클라이언트 데이터 서비스 클래스의 인스턴스로 구체화 합니다. 이러한 개체를 구체화하는 일반적인 프로세스는 다음과 같습니다.
+라이브러리는 쿼리 응답 메시지를 받은 후 반환 된 데이터를 OData 피드의 쿼리 형식에 해당 하는 클라이언트 데이터 서비스 클래스의 인스턴스로 구체화 합니다. 이러한 개체를 구체화하는 일반적인 프로세스는 다음과 같습니다.
 
 1. 클라이언트 라이브러리는 다음 중 한 가지 방법으로 응답 메시지 피드의 `entry` 요소에서 serialize된 형식을 읽고 올바른 형식의 새 인스턴스를 만들려고 시도합니다.
 
@@ -41,13 +41,13 @@ ms.locfileid: "70790396"
     - 관련 엔터티의 컬렉션을 반환하는 탐색 속성은 <xref:System.Collections.Generic.ICollection%601>의 새 인스턴스나 기존 인스턴스로 설정됩니다. 여기서 `T`는 관련 엔터티의 형식입니다. 이 컬렉션은 관련 개체가 <xref:System.Data.Services.Client.DataServiceContext>로 로드되지 않은 경우 비어 있습니다. 자세한 내용은 [지연 된 콘텐츠 로드](loading-deferred-content-wcf-data-services.md)를 참조 하세요.
 
       > [!NOTE]
-      > 생성된 클라이언트 데이터 클래스가 데이터 바인딩을 지원하는 경우 탐색 속성은 <xref:System.Data.Services.Client.DataServiceCollection%601> 클래스의 인스턴스를 대신 반환합니다. 자세한 내용은 [컨트롤에 데이터 바인딩](binding-data-to-controls-wcf-data-services.md)합니다.
+      > 생성된 클라이언트 데이터 클래스가 데이터 바인딩을 지원하는 경우 탐색 속성은 <xref:System.Data.Services.Client.DataServiceCollection%601> 클래스의 인스턴스를 대신 반환합니다. 자세한 내용은 [컨트롤에 데이터 바인딩](binding-data-to-controls-wcf-data-services.md)을 참조 하세요.
 
 4. <xref:System.Data.Services.Client.DataServiceContext.ReadingEntity> 이벤트가 발생합니다.
 
 5. 클라이언트 라이브러리는 개체를 <xref:System.Data.Services.Client.DataServiceContext>에 연결합니다. <xref:System.Data.Services.Client.MergeOption>이 <xref:System.Data.Services.Client.MergeOption.NoTracking>인 경우에는 개체가 연결되지 않습니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [데이터 서비스 쿼리](querying-the-data-service-wcf-data-services.md)
 - [프로젝트 쿼리](query-projections-wcf-data-services.md)

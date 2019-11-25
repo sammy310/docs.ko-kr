@@ -1,25 +1,25 @@
 ---
-title: '방법: 개체 이니셜라이저를 사용하여 개체 초기화 - C# 프로그래밍 가이드'
+title: 개체 이니셜라이저를 사용하여 개체를 초기화하는 방법 - C# 프로그래밍 가이드
 ms.custom: seodec18
 ms.date: 12/20/2018
 helpviewer_keywords:
 - object initializers [C#], how to use
 - objects [C#], initializing
 ms.assetid: 4b75ebb2-2e29-43de-929c-d736a8f27ce6
-ms.openlocfilehash: 7b31e28c23a70e9f0794c82feb2a984c40ee9d0f
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: be555688a645c7689e76b5b4499c44255c18dbc8
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67267575"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73970875"
 ---
-# <a name="how-to-initialize-objects-by-using-an-object-initializer-c-programming-guide"></a>방법: 개체 이니셜라이저를 사용하여 개체 초기화(C# 프로그래밍 가이드)
+# <a name="how-to-initialize-objects-by-using-an-object-initializer-c-programming-guide"></a>개체 이니셜라이저를 사용하여 개체를 초기화하는 방법(C# 프로그래밍 가이드)
 
 개체 이니셜라이저를 사용하여 형식에 대한 생성자를 명시적으로 호출하지 않고 선언적 방식으로 형식 개체를 초기화할 수 있습니다.  
   
 다음 예제에서는 명명된 개체와 함께 개체 이니셜라이저를 사용하는 방법을 보여 줍니다. 컴파일러는 먼저 기본 인스턴스 생성자에 액세스한 다음 멤버 초기화를 처리하여 개체 이니셜라이저를 처리합니다. 따라서 클래스에서 매개 변수가 없는 생성자가 `private`으로 선언된 경우 공용 액세스가 필요한 개체 이니셜라이저는 실패합니다.
   
-무명 형식을 정의하는 경우 개체 이니셜라이저를 사용해야 합니다. 자세한 내용은 [방법: 쿼리에서 요소 속성의 하위 집합 반환](how-to-return-subsets-of-element-properties-in-a-query.md)을 참조하세요.  
+무명 형식을 정의하는 경우 개체 이니셜라이저를 사용해야 합니다. 자세한 내용은 [쿼리에서 요소 속성의 하위 집합을 반환하는 방법](how-to-return-subsets-of-element-properties-in-a-query.md)을 참조하세요.  
   
 ## <a name="example"></a>예  
 

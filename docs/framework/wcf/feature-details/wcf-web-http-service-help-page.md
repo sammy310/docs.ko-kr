@@ -2,26 +2,26 @@
 title: WCF 웹 HTTP 서비스 도움말 페이지
 ms.date: 03/30/2017
 ms.assetid: 63c7c695-44b6-4f31-bb9c-00f2763f525e
-ms.openlocfilehash: 60fd909d6e7d3ba0e0c0254024ef7eb40263b59e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8d798c8080bf1afee87305cd00a27db2ece7e970
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050415"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975933"
 ---
 # <a name="wcf-web-http-service-help-page"></a>WCF 웹 HTTP 서비스 도움말 페이지
-[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]에서는 WCF WEB HTTP 서비스에 대한 자동 도움말 페이지를 제공합니다. 이 도움말 페이지에는 각 작업에 대한 설명, 요청 및 응답 형식, 스키마 등이 표시됩니다. 이 기능은 기본적으로 사용하지 않도록 설정되어 있습니다. 때 사용자가 탐색 하는 WCF 웹 HTTP 서비스 및 추가 "/help" 예를 들어 URL의 끝에 `http://localhost:8000/Customers/Help`을 다음 표시 되는 같은 도움말 페이지입니다.  
+[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]에서는 WCF WEB HTTP 서비스에 대한 자동 도움말 페이지를 제공합니다. 이 도움말 페이지에는 각 작업에 대한 설명, 요청 및 응답 형식, 스키마 등이 표시됩니다. 이 기능은 기본적으로 사용하지 않도록 설정되어 있습니다. 사용자가 WCF 웹 HTTP 서비스를 탐색 하 고 URL의 끝에 "/Help"를 추가 하는 경우 (예: `http://localhost:8000/Customers/Help`) 다음과 같은 도움말 페이지가 표시 됩니다.  
   
- ![WCF REST 도움말 페이지를 사용 하 여 브라우저를 엽니다.](./media/wcf-web-http-service-help-page/windows-communication-foundation-rest-help-page.gif)  
+ ![WCF REST 도움말 페이지가 열려 있는 브라우저입니다.](./media/wcf-web-http-service-help-page/windows-communication-foundation-rest-help-page.gif)  
   
  사용자가 이 도움말 페이지에 나열된 메서드를 클릭하면 메시지 형식과 예제 응답 등 메서드에 대한 자세한 내용을 보여 주는 해당 작업에 대한 상세 페이지가 표시됩니다. 다음 그림은 메서드에 대한 도움말 페이지의 예제입니다.  
   
- ![WCF REST 도움말 페이지 자세한 GetCustomers 메서드를 사용 하 여 브라우저를 엽니다.](./media/wcf-web-http-service-help-page/windows-communication-foundation-rest-help-page-detail.gif)  
+ ![GetCustomers 메서드에 대 한 WCF REST 도움말 페이지 세부 정보를 포함 하는 브라우저가 열립니다.](./media/wcf-web-http-service-help-page/windows-communication-foundation-rest-help-page-detail.gif)  
   
 ## <a name="using-the-wcf-web-http-help-page"></a>WCF 웹 HTTP 도움말 페이지 사용  
  WCF 웹 HTTP 도움말 페이지에는 <xref:System.ComponentModel.DescriptionAttribute>를 사용하여 지정한 작업에 대한 간략한 설명이 표시됩니다. 이 특성은 해당 특성이 적용되는 작업에 대한 간략한 설명이 포함된 문자열을 제공합니다. 예를 들어 다음 코드에서는 <xref:System.ComponentModel.DescriptionAttribute>를 사용하여 간략한 설명을 제공하는 방법을 보여 줍니다.  
   
-```  
+```csharp
 [OperationContract]  
 [WebGet(UriTemplate="/template1", BodyStyle = WebMessageBodyStyle.Bare)]  
 [Description("Description for GET /template1")]  
@@ -47,7 +47,7 @@ SyndicationFeedFormatter GetTemplate1();
   
  코드에서 WCF 웹 HTTP 도움말 페이지를 사용하도록 설정하려면 서비스 엔드포인트를 추가하고 <xref:System.ServiceModel.Description.WebHttpBehavior>를 <xref:System.ServiceModel.Description.WebHttpBehavior.HelpEnabled%2A>로 설정한 다음 서비스 엔드포인트에 `true`를 추가합니다. 다음 코드에서는 이 작업을 수행하는 방법을 보여 줍니다.  
   
-```  
+```csharp
 using (WebServiceHost host = new WebServiceHost(typeof(Service), new Uri("http://localhost:8000/Customers")))  
 {  
    host.AddServiceEndpoint(typeof(ICustomerCollection), new WebHttpBinding(), "");
@@ -240,4 +240,4 @@ using (WebServiceHost host = new WebServiceHost(typeof(Service), new Uri("http:/
 </xs:schema>  
 ```  
   
- 데이터 계약 serialization 스키마에 대 한 자세한 내용은 참조 하세요. [데이터 계약 스키마 참조](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)합니다.
+ 데이터 계약 serialization 스키마에 대 한 자세한 내용은 [데이터 계약 스키마 참조](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)를 참조 하세요.

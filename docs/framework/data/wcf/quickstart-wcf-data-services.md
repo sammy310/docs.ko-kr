@@ -5,22 +5,22 @@ helpviewer_keywords:
 - WCF Data Services, quick-start example
 - WCF Data Services, Entity Data Model (EDM) service
 ms.assetid: 7b18ca1e-d4d6-4c7a-afb9-ce3cebb98a8d
-ms.openlocfilehash: df6806cd77e7ff109d79f7ba61866763de4c7fc1
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: d0002182c5ae519c36348acdd2587bca499fe72e
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790370"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975134"
 ---
 # <a name="quickstart-wcf-data-services"></a>빠른 시작(WCF Data Services)
 
-이 빠른 시작을 사용 하면 [시작](getting-started-with-wcf-data-services.md)의 항목을 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 지 원하는 일련의 작업을 통해 WCF Data Services 및에 익숙해질 수 있습니다.
+이 빠른 시작을 사용 하면 [시작](getting-started-with-wcf-data-services.md)의 항목을 지 원하는 일련의 작업을 통해 WCF Data Services 및 Open Data Protocol (OData)에 익숙해질 수 있습니다.
 
 ## <a name="what-youll-learn"></a>학습 내용
 
 이 빠른 시작의 첫 번째 작업에서는 Northwind 샘플 데이터베이스에서 OData 피드를 노출 하는 데이터 서비스를 만드는 방법을 보여 줍니다. 이후 항목에서는 웹 브라우저를 사용 하 여 OData 피드에 액세스 하 고 클라이언트 라이브러리를 사용 하 여 OData 피드를 사용 하는 Windows Presentation Foundation (WPF) 클라이언트 응용 프로그램도 만듭니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>Prerequisites
 
 이 퀵 스타트를 수행하려면 다음 구성 요소를 설치해야 합니다.
 
@@ -52,6 +52,6 @@ ms.locfileid: "70790370"
 > [!div class="nextstepaction"]
 > [빠른 시작 시작](creating-the-data-service.md)
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ADO.NET Entity Framework](../adonet/ef/index.md)

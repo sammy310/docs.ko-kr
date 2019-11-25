@@ -2,22 +2,22 @@
 title: Docker란?
 description: Docker에 대해 좀 더 깊이 생각해 보세요. 여기서 간단한 비유가 도움이 될 수 있습니다.
 ms.date: 02/15/2019
-ms.openlocfilehash: 7fd3c599afda2d59e0d56756bd61495f2d0370a0
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 8636ae3b1ad32158e10ce2aa58423f9c9824d8c0
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72770712"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738133"
 ---
 # <a name="what-is-docker"></a>Docker란?
 
 [Docker](https://www.docker.com/)는 클라우드 또는 온-프레미스로 실행될 수 있는 이식 가능하고 문제를 스스로 해결할 수 있는 컨테이너로서 애플리케이션 배포를 자동화하기 위한 [오픈 소스 프로젝트](https://github.com/docker/docker)입니다. Docker는 Microsoft를 비롯한 클라우드, Linux 및 Windows 공급 업체와 협업하여 이 기술을 장려하고 발전시키는 [회사](https://www.docker.com/)이기도 합니다.
 
-![Docker 컨테이너는 고객 데이터 센터의 온-프레미스, 외부 서비스 공급자 또는 Azure의 클라우드에서, 어디서나 실행할 수 있습니다.](./media/image2.png)
+![Docker 컨테이너를 실행할 수 있는 위치를 보여 주는 다이어그램](./media/what-is-docker/docker-containers-run-anywhere.png)
 
 **그림 1-2**. Docker는 하이브리드 클라우드의 모든 계층에서 컨테이너를 배포
 
-Docker 이미지 컨테이너는 Linux 및 Windows에서 기본적으로 실행할 수 있습니다. 그러나 Windows 이미지는 Windows 호스트에서만 실행할 수 있고 Linux 이미지는 Linux 호스트 및 Windows 호스트(지금까지 Hyper-V Linux VM 사용)에서 실행할 수 있습니다. 여기서 호스트는 서버 또는 VM을 의미합니다.
+위 다이어그램에 나와 있듯이 Docker 컨테이너는 고객 데이터 센터의 온-프레미스, 외부 서비스 공급자 또는 Azure의 클라우드에서, 어디서나 실행할 수 있습니다. 또한 Docker 이미지 컨테이너는 Linux 및 Windows에서 기본적으로 실행할 수 있습니다. 그러나 Windows 이미지는 Windows 호스트에서만 실행할 수 있고 Linux 이미지는 Linux 호스트 및 Windows 호스트(지금까지 Hyper-V Linux VM 사용)에서 실행할 수 있습니다. 여기서 호스트는 서버 또는 VM을 의미합니다.
 
 개발자는 Windows, Linux 또는 macOS에서 개발 환경을 사용할 수 있습니다. 개발자는 개발 컴퓨터에서 앱 및 해당 종속성을 비롯하여 Docker 이미지가 배포된 Docker 호스트를 실행합니다. Linux 또는 Mac에서 작업하는 개발자는 Linux 기반의 Docker 호스트를 사용하고 Linux 컨테이너용 이미지만 만들 수 있습니다. (Mac에서 작업하는 개발자는 macOS에서 코드를 편집하거나 Docker CLI(명령줄 인터페이스)를 실행할 수 있지만, 이 작성 시 컨테이너가 macOS에서 직접 실행되지 않습니다.) Windows에서 작업하는 개발자는 Linux 또는 Windows 컨테이너용 이미지를 만들 수 있습니다.
 
@@ -35,9 +35,11 @@ Docker 이미지 컨테이너는 Linux 및 Windows에서 기본적으로 실행�
 
 그림 1-3은 VM과 Docker 컨테이너 비교를 보여 줍니다.
 
-![VM의 경우 기본적으로 호스트 서버에 세 가지 기본 계층인 인프라, 호스트 운영 체제 및 하이퍼바이저가 있고, 이들 계층 위에서 각 VM에는 고유한 OS 및 모든 필요한 라이브러리가 포함됩니다. 반면에 Docker의 경우 호스트 서버에는 인프라와 OS만 있고, 그 위에 컨테이너를 격리 상태로 유지하지만, 기본 OS 서비스를 공유하는 컨테이너 엔진이 있습니다.](./media/image3.png)
+![VM 및 컨테이너 환경을 비교하는 다이어그램](./media/what-is-docker/comparison-vms-docker-conatiners.png)
 
 **그림 1-3**. 기존의 가상 머신과 Docker 컨테이너 비교
+
+위 다이어그램에 나와 있듯이 VM에는 호스트 서버에 3개의 기본 레이어가 있습니다. 아래부터 위로 순서대로 인프라, 호스트 운영 체제 및 하이퍼바이저입니다. 그 위로 각 VM에 고유 OS와 모든 필요한 라이브러리가 있습니다. 반면, Docker의 경우 호스트 서버에는 인프라와 OS만 있습니다. 그 위에서 컨테이너 엔진은 컨테이너를 격리된 상태로 유지하지만 단일 기본 OS 서비스를 공유할 수 있게 합니다.
 
 컨테이너는 훨씬 적은 리소스를 필요로 하므로(예: 전체 OS가 필요하지 않음) 보다 쉽고 빠르게 배포할 수 있습니다. 따라서 밀도가 높아지고, 이는 동일한 하드웨어 장치에서 더 많은 서비스를 실행할 수 있어 비용을 절감할 수 있음을 의미합니다.
 

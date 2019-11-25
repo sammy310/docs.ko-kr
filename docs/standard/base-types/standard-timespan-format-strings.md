@@ -17,15 +17,16 @@ helpviewer_keywords:
 - standard TimeSpan format strings
 - formatting [.NET Framework], time intervals
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
-ms.openlocfilehash: 5284eb52d7b50307e51945fc0b4a9deb8818f2e2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c699ed68606293b1a49a540e00636cf7f56bdf2f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121690"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972100"
 ---
 # <a name="standard-timespan-format-strings"></a>표준 TimeSpan 서식 문자열
-<a name="Top"></a> 표준 <xref:System.TimeSpan> 형식 문자열은 단일 형식 지정자를 사용하여 서식 지정 작업으로 생성되는 <xref:System.TimeSpan> 값의 텍스트 표현을 정의합니다. 공백을 포함하여 문자가 두 개 이상 포함된 형식 문자열은 사용자 지정 <xref:System.TimeSpan> 형식 문자열로 해석됩니다. 자세한 내용은 [사용자 지정 TimeSpan 서식 문자열](../../../docs/standard/base-types/custom-timespan-format-strings.md)을 참조하세요.  
+
+표준 <xref:System.TimeSpan> 형식 문자열은 단일 형식 지정자를 사용하여 서식 지정 작업으로 생성되는 <xref:System.TimeSpan> 값의 텍스트 표현을 정의합니다. 공백을 포함하여 문자가 두 개 이상 포함된 형식 문자열은 사용자 지정 <xref:System.TimeSpan> 형식 문자열로 해석됩니다. 자세한 내용은 [사용자 지정 TimeSpan 서식 문자열](../../../docs/standard/base-types/custom-timespan-format-strings.md)을 참조하세요.  
   
  <xref:System.TimeSpan> 값의 문자열 표현은 <xref:System.TimeSpan.ToString%2A?displayProperty=nameWithType>과 같이 복합 서식 지정을 지원하는 메서드 및 <xref:System.String.Format%2A?displayProperty=nameWithType> 메서드의 오버로드 호출을 통해 생성됩니다. 자세한 내용은 [서식 지정 형식](../../../docs/standard/base-types/formatting-types.md) 및 [복합 서식 지정](../../../docs/standard/base-types/composite-formatting.md)을 참조하세요. 다음 예제에서는 서식 지정 작업에 표준 형식 문자열을 사용하는 방법을 보여 줍니다.  
   
@@ -37,15 +38,14 @@ ms.locfileid: "73121690"
  [!code-csharp[Conceptual.TimeSpan.Standard#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.standard/cs/parseexample1.cs#3)]
  [!code-vb[Conceptual.TimeSpan.Standard#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/parseexample1.vb#3)]  
   
-<a name="top"></a> 다음 표에는 표준 시간 간격 형식 지정자가 나와 있습니다.  
+다음 표에는 표준 시간 간격 형식 지정자가 나와 있습니다.  
   
-|서식 지정자|name|설명|예|  
+|형식 지정자|name|설명|예|  
 |----------------------|----------|-----------------|--------------|  
-|"c"|상수(고정) 형식|이 지정자는 문화권을 구분하지 않으며 형식은 `[-][d'.']hh':'mm':'ss['.'fffffff]`입니다.<br /><br /> "t" 및 "T" 형식 문자열은 같은 결과를 생성합니다.<br /><br /> 추가 정보: [상수("c") 형식 지정자](#Constant).|`TimeSpan.Zero` -> 00:00:00<br /><br /> `New TimeSpan(0, 0, 30, 0)` -> 00:30:00<br /><br /> `New TimeSpan(3, 17, 25, 30, 500)` -> 3.17:25:30.5000000|  
-|"g"|일반 약식|이 지정자는 필요한 내용만 출력하고 문화권을 구분하며 형식은 `[-][d':']h':'mm':'ss[.FFFFFFF]`입니다.<br /><br /> 추가 정보: [일반 약식("g") 형식 지정자](#GeneralShort).|`New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50.5(en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50,5(fr-FR)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50.599(en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50,599(fr-FR)|  
-|"G"|일반 긴 형식|이 지정자는 항상 일 수와 7자리 소수 자릿수를 출력하고 문화권을 구분하며 형식은 `[-]d':'hh':'mm':'ss.fffffff`입니다.<br /><br /> 추가 정보: [일반 긴("G") 형식 지정자](#GeneralLong).|`New TimeSpan(18, 30, 0)` -> 0:18:30:00.0000000(en-US)<br /><br /> `New TimeSpan(18, 30, 0)` -> 0:18:30:00,0000000(fr-FR)|  
-  
-<a name="Constant"></a>   
+|"c"|상수(고정) 형식|이 지정자는 문화권을 구분하지 않으며 형식은 `[-][d'.']hh':'mm':'ss['.'fffffff]`입니다.<br /><br /> "t" 및 "T" 형식 문자열은 같은 결과를 생성합니다.<br /><br /> 추가 정보: [상수("c") 형식 지정자](#the-constant-c-format-specifier).|`TimeSpan.Zero` -> 00:00:00<br /><br /> `New TimeSpan(0, 0, 30, 0)` -> 00:30:00<br /><br /> `New TimeSpan(3, 17, 25, 30, 500)` -> 3.17:25:30.5000000|  
+|"g"|일반 약식|이 지정자는 필요한 내용만 출력하고 문화권을 구분하며 형식은 `[-][d':']h':'mm':'ss[.FFFFFFF]`입니다.<br /><br /> 추가 정보: [일반 약식("g") 형식 지정자](#the-general-short-g-format-specifier).|`New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50.5(en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50,5(fr-FR)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50.599(en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50,599(fr-FR)|  
+|"G"|일반 긴 형식|이 지정자는 항상 일 수와 7자리 소수 자릿수를 출력하고 문화권을 구분하며 형식은 `[-]d':'hh':'mm':'ss.fffffff`입니다.<br /><br /> 추가 정보: [일반 긴("G") 형식 지정자](#the-general-long-g-format-specifier).|`New TimeSpan(18, 30, 0)` -> 0:18:30:00.0000000(en-US)<br /><br /> `New TimeSpan(18, 30, 0)` -> 0:18:30:00,0000000(fr-FR)|  
+
 ## <a name="the-constant-c-format-specifier"></a>상수("c") 형식 지정자  
  "c" 형식 지정자는 <xref:System.TimeSpan> 값의 문자열 표현을 다음 형식으로 반환합니다.  
   
@@ -71,12 +71,9 @@ ms.locfileid: "73121690"
   
  [!code-csharp[Conceptual.TimeSpan.Standard#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.standard/cs/standardc1.cs#1)]
  [!code-vb[Conceptual.TimeSpan.Standard#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/standardc1.vb#1)]  
-  
- [표로 이동](#Top)  
-  
-<a name="GeneralShort"></a>   
+
 ## <a name="the-general-short-g-format-specifier"></a>일반 약식("g") 형식 지정자  
- "g" <xref:System.TimeSpan> 형식 지정자는 필요한 요소만 포함하여 <xref:System.TimeSpan> 값의 문자열 표현을 압축 형식으로 반환합니다. 다음과 같은 형식입니다.  
+ "g" <xref:System.TimeSpan> 형식 지정자는 필요한 요소만 포함하여 <xref:System.TimeSpan> 값의 문자열 표현을 압축 형식으로 반환합니다. 이 형식 지정자의 형식은 다음과 같습니다.  
   
  [-][*d*:]*h*:*mm*:*ss*[.*FFFFFFF*]  
   
@@ -98,10 +95,7 @@ ms.locfileid: "73121690"
   
  [!code-csharp[Conceptual.TimeSpan.Standard#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.standard/cs/standardshort1.cs#4)]
  [!code-vb[Conceptual.TimeSpan.Standard#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/standardshort1.vb#4)]  
-  
- [표로 이동](#Top)  
-  
-<a name="GeneralLong"></a>   
+
 ## <a name="the-general-long-g-format-specifier"></a>일반 긴("G") 형식 지정자  
  "G" <xref:System.TimeSpan> 형식 지정자는 항상 일 수와 초의 소수 부분을 모두 포함하는 긴 형식으로 <xref:System.TimeSpan> 값의 문자열 표현을 반환합니다. "G" 표준 형식 지정자에서 생성 되는 문자열의 형식은 다음과 같습니다.  
   
@@ -124,9 +118,7 @@ ms.locfileid: "73121690"
  다음 예제에서는 두 <xref:System.TimeSpan> 개체를 인스턴스화한 다음 해당 개체를 사용하여 산술 연산을 수행하고 결과를 표시합니다. 각 경우에서는 복합 서식을 사용하여 "G" 형식 지정자를 통해 <xref:System.TimeSpan> 값을 표시합니다. 또한 현재 시스템 문화권(여기서는 영어 - 미국 또는 en-US) 및 프랑스어 - 프랑스(fr-FR) 문화권의 서식 규칙을 사용하여 <xref:System.TimeSpan> 값의 서식을 지정합니다.  
   
  [!code-csharp[Conceptual.TimeSpan.Standard#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.standard/cs/standardlong1.cs#5)]
- [!code-vb[Conceptual.TimeSpan.Standard#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/standardlong1.vb#5)]  
-  
- [표로 이동](#Top)  
+ [!code-vb[Conceptual.TimeSpan.Standard#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/standardlong1.vb#5)]
   
 ## <a name="see-also"></a>참고 항목
 

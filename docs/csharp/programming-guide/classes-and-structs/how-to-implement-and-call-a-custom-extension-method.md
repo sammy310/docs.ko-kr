@@ -1,18 +1,18 @@
 ---
-title: '방법: 사용자 지정 확장 메서드 구현 및 호출 - C# 프로그래밍 가이드'
+title: 사용자 지정 확장명 메서드 구현 및 호출 방법 - C# 프로그래밍 가이드
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - extension methods [C#], implementing and calling
 ms.assetid: 7dab2a56-cf8e-4a47-a444-fe610a02772a
-ms.openlocfilehash: 26ad1d2251388237e186d1ba0e885fd7def66467
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: f3d96c033380698ade37c49ecbfeed14f05d3e11
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596872"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73970887"
 ---
-# <a name="how-to-implement-and-call-a-custom-extension-method-c-programming-guide"></a>방법: 사용자 지정 확장 메서드 구현 및 호출(C# 프로그래밍 가이드)
+# <a name="how-to-implement-and-call-a-custom-extension-method-c-programming-guide"></a>사용자 지정 확장명 메서드 구현 및 호출 방법(C# 프로그래밍 가이드)
 이 항목에서는 모든 .NET 형식에 대한 사용자 고유의 확장 메서드를 구현하는 방법을 보여 줍니다. 클라이언트 코드는 확장 메서드를 포함하는 DLL에 대한 참조를 추가하고 확장 메서드가 정의된 네임스페이스를 지정하는 [using](../../language-reference/keywords/using-directive.md) 지시문을 추가하여 확장 메서드를 사용할 수 있습니다.  
   
 ## <a name="to-define-and-call-the-extension-method"></a>확장 메서드를 정의하고 호출하려면  

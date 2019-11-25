@@ -6,48 +6,30 @@ helpviewer_keywords:
 - garbage collection, troubleshooting
 - garbage collection, performance
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
-ms.openlocfilehash: 833bf46b973988196fea37da18bac9923ecd6dcc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8d40091420c29c86f2ebb25f14c17ae4f7a1c44a
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141375"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974756"
 ---
 # <a name="garbage-collection-and-performance"></a>가비지 컬렉션 및 성능
 
-<a name="top"></a> 이 항목에서는 가비지 컬렉션 및 메모리 사용과 관련된 문제를 설명합니다. 관리되는 힙과 관련된 문제를 해결하고 애플리케이션에 미치는 가비지 컬렉션의 영향을 최소화하는 방법을 설명합니다. 각 문제에는 문제를 조사하는 데 사용할 수 있는 절차 링크가 있습니다.
-
-이 항목에는 다음과 같은 단원이 포함되어 있습니다.
-
-- [성능 분석 도구](#performance_analysis_tools)
-
-- [성능 문제 해결](#troubleshooting_performance_issues)
-
-- [문제 해결 지침](#troubleshooting_guidelines)
-
-- [성능 검사 절차](#performance_check_procedures)
-
-<a name="performance_analysis_tools"></a>
+이 항목에서는 가비지 수집 및 메모리 사용과 관련된 문제를 설명합니다. 관리되는 힙과 관련된 문제를 해결하고 애플리케이션에 미치는 가비지 컬렉션의 영향을 최소화하는 방법을 설명합니다. 각 문제에는 문제를 조사하는 데 사용할 수 있는 절차 링크가 있습니다.
 
 ## <a name="performance-analysis-tools"></a>성능 분석 도구
 
-다음 섹션에서는 메모리 사용 및 가비지 컬렉션 문제를 조사하는 데 사용할 수 있는 도구를 설명합니다. 이 항목의 뒷부분에 제공된 [절차](#performance_check_procedures)에서는 이러한 도구를 참조합니다.
-
-<a name="perf_counters"></a>
+다음 섹션에서는 메모리 사용 및 가비지 컬렉션 문제를 조사하는 데 사용할 수 있는 도구를 설명합니다. 이 항목의 뒷부분에 제공된 [절차](#performance-check-procedures)에서는 이러한 도구를 참조합니다.
 
 ### <a name="memory-performance-counters"></a>메모리 성능 카운터
 
 성능 카운터를 사용하여 성능 데이터를 수집할 수 있습니다. 자세한 내용은 [런타임 프로파일링](../../../docs/framework/debug-trace-profile/runtime-profiling.md)을 참조하세요. [.NET Framework의 성능 카운터](../../../docs/framework/debug-trace-profile/performance-counters.md)에 설명된 대로 성능 카운터의 .NET CLR 메모리 범주는 가비지 수집기에 대한 정보를 제공합니다.
-
-<a name="sos"></a>
 
 ### <a name="debugging-with-sos"></a>SOS를 사용한 디버깅
 
 [Windows 디버거(WinDbg)](/windows-hardware/drivers/debugger/index)를 사용하여 관리되는 힙의 개체를 검사할 수 있습니다.
 
 WinDbg를 설치하려면 [Debugging Tools for Windows 다운로드](/windows-hardware/drivers/debugger/debugger-download-tools) 페이지에서 Debugging Tools for Windows를 설치합니다.
-
-<a name="etw"></a>
 
 ### <a name="garbage-collection-etw-events"></a>가비지 컬렉션 ETW 이벤트
 
@@ -61,8 +43,6 @@ ETW(Windows용 이벤트 추적)는 .NET Framework에서 제공하는 프로파�
 
 ETW 이벤트 로깅은 효율적이며 가비지 수집과 관련된 성능 문제를 숨기지 않습니다. 프로세스에서 ETW 이벤트와 함께 고유한 이벤트를 제공할 수 있습니다. 기록된 경우 애플리케이션 이벤트와 가비지 수집 이벤트를 서로 연결하여 힙 문제가 발생하는 방법 및 시기를 확인할 수 있습니다. 예를 들어 서버 애플리케이션은 클라이언트 요청이 시작되고 끝날 때 이벤트를 제공할 수 있습니다.
 
-<a name="profiling_api"></a>
-
 ### <a name="the-profiling-api"></a>프로파일링 API
 
 CLR(공용 언어 런타임) 프로파일링 인터페이스는 가비지 수집 중에 영향을 받은 개체에 대한 자세한 정보를 제공합니다. 가비지 수집이 시작되고 끝날 때 프로파일러에 알릴 수 있습니다. 각 세대의 개체 ID를 포함하여 관리되는 힙의 개체에 대한 보고서를 제공할 수 있습니다. 자세한 내용은 [프로파일링 개요](../../../docs/framework/unmanaged-api/profiling/profiling-overview.md)를 참조하세요.
@@ -72,10 +52,6 @@ CLR(공용 언어 런타임) 프로파일링 인터페이스는 가비지 수집
 ### <a name="application-domain-resource-monitoring"></a>애플리케이션 도메인 리소스 모니터링
 
 .NET Framework 4부터 ARM(애플리케이션 도메인 리소스 모니터링)을 통해 호스트가 애플리케이션 도메인별로 CPU 및 메모리 사용량을 모니터링할 수 있습니다. 자세한 내용은 [애플리케이션 도메인 리소스 모니터링](../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md)을 참조하세요.
-
-[맨 위로 이동](#top)
-
-<a name="troubleshooting_performance_issues"></a>
 
 ## <a name="troubleshooting-performance-issues"></a>성능 문제 해결
 
@@ -213,10 +189,6 @@ CLR(공용 언어 런타임) 프로파일링 인터페이스는 가비지 수집
 |------------------------|
 |[높은 CPU 사용량이 가비지 컬렉션에 의해 발생한 것인지 여부를 확인합니다.](#HighCPU)<br /><br /> [가비지 컬렉션의 끝에 중단점을 설정합니다.](#GenBreak)|
 
-[맨 위로 이동](#top)
-
-<a name="troubleshooting_guidelines"></a>
-
 ## <a name="troubleshooting-guidelines"></a>문제 해결 지침
 
 이 섹션에서는 조사를 시작할 때 고려해야 할 지침을 설명합니다.
@@ -258,10 +230,6 @@ CLR(공용 언어 런타임) 프로파일링 인터페이스는 가비지 수집
   이 명령은 가비지 컬렉션을 위해 2세대 개체가 회수된 후 **RestartEE**가 실행되는 경우 강제로 중단합니다.
 
   서버 가비지 컬렉션에서는 하나의 스레드만 **RestartEE**를 호출하므로 2세대 가비지 컬렉션 중 한 번만 중단점이 발생합니다.
-
-[맨 위로 이동](#top)
-
-<a name="performance_check_procedures"></a>
 
 ## <a name="performance-check-procedures"></a>성능 검사 절차
 

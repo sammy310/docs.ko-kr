@@ -5,18 +5,18 @@ helpviewer_keywords:
 - Astoria
 - WCF Data Services, getting started
 ms.assetid: 73d2bec3-7c92-4110-b905-11bb0462357a
-ms.openlocfilehash: 017fe2177cf824d461b4c51ea805f75b6ddbe064
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1ce152b84f17a35982a75f54b5418623ba39210f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70779997"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975227"
 ---
 # <a name="wcf-data-services-45"></a>WCF Data Services 4.5
 
-WCF Data Services (이전의 "ADO.NET Data Services")는 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] [representational 상태의 의미 체계를 사용 하 여 웹 또는 인트라넷을 통해 데이터를 노출 하 고 사용 하기 위해을 사용 하는 서비스를 만들 수 있는 .NET Framework의 구성 요소입니다. 전송 (REST)](https://go.microsoft.com/fwlink/?LinkId=113919). OData는 URI로 주소를 지정할 수 있는 리소스로 데이터를 노출합니다. 데이터는 표준 HTTP 동사인 GET, PUT, POST 및 DELETE를 사용하여 액세스되고 변경됩니다. OData는 [엔터티 데이터 모델](../adonet/entity-data-model.md) 의 엔터티-관계 규칙을 사용 하 여 리소스를 연결로 관련 된 엔터티 집합으로 노출 합니다.
+WCF Data Services (이전의 "ADO.NET Data Services")는 [Representational State Transfer (REST)](https://go.microsoft.com/fwlink/?LinkId=113919)의 의미 체계를 사용 하 여 웹 또는 인트라넷을 통해 데이터를 노출 하 고 사용 하기 위해 Open Data Protocol (OData)를 사용 하는 서비스를 만들 수 있는 .NET Framework의 구성 요소입니다. OData는 URI로 주소를 지정할 수 있는 리소스로 데이터를 노출합니다. 데이터는 표준 HTTP 동사인 GET, PUT, POST 및 DELETE를 사용하여 액세스되고 변경됩니다. OData는 [엔터티 데이터 모델](../adonet/entity-data-model.md) 의 엔터티-관계 규칙을 사용 하 여 리소스를 연결로 관련 된 엔터티 집합으로 노출 합니다.
 
-WCF Data Services는 OData 프로토콜을 사용 하 여 리소스의 주소를 지정 하 고 업데이트 합니다. 이러한 방식으로 OData를 지 원하는 모든 클라이언트에서 이러한 서비스에 액세스할 수 있습니다. OData를 사용 하면 잘 알려진 전송 형식을 사용 하 여 리소스를 요청 하 고 리소스에 데이터를 쓸 수 있습니다. 데이터를 XML로 교환 및 업데이트 하기 위한 표준 집합인 Atom, AJAX 응용 프로그램에서 광범위 하 게 사용 되는 텍스트 기반 데이터 교환 형식인 JSON (JavaScript Object Notation)입니다.
+WCF Data Services는 OData 프로토콜을 사용 하 여 리소스의 주소를 지정 하 고 업데이트 합니다. 이러한 방식으로 OData를 지 원하는 모든 클라이언트에서 이러한 서비스에 액세스할 수 있습니다. OData를 사용 하면 데이터를 XML로 교환 및 업데이트 하기 위한 표준 집합인 Atom, AJAX에서 광범위 하 게 사용 되는 텍스트 기반 데이터 교환 형식인 JavaScript Object Notation (JSON)와 같이 잘 알려진 전송 형식을 사용 하 여 리소스를 요청 하 고 리소스에 데이터를 쓸 수 있습니다. 프로그램도.
 
 WCF Data Services는 다양 한 원본에서 가져온 데이터를 OData 피드로 노출할 수 있습니다. Visual Studio 도구를 사용 하면 ADO.NET Entity Framework 데이터 모델을 사용 하 여 OData 기반 서비스를 쉽게 만들 수 있습니다. CLR (공용 언어 런타임) 클래스와 런타임에 바인딩된 데이터 나 형식화 되지 않은 데이터를 기반으로 하 여 OData 피드를 만들 수도 있습니다.
 
@@ -46,7 +46,7 @@ WCF Data Services는 다양 한 원본에서 가져온 데이터를 OData 피드
 
 OData에 대 한 자세한 내용을 확인 하려면 ...
 
-- [백서 OData 소개](https://go.microsoft.com/fwlink/?LinkId=220867)
+- [백서: OData 소개](https://go.microsoft.com/fwlink/?LinkId=220867)
 
 - [Open Data Protocol 웹 사이트](https://go.microsoft.com/fwlink/?LinkID=184554)
 
@@ -82,7 +82,7 @@ Visual Studio와의 통합 방식
 
 - [개요](wcf-data-services-overview.md)
 
-- [백서 OData 소개](https://go.microsoft.com/fwlink/?LinkId=220867)
+- [백서: OData 소개](https://go.microsoft.com/fwlink/?LinkId=220867)
 
 - [애플리케이션 시나리오](application-scenarios-wcf-data-services.md)
 
@@ -112,7 +112,7 @@ LINQ를 사용 하려고 합니다.
 
 - [Open Data Protocol 웹 사이트](https://go.microsoft.com/fwlink/?LinkID=184554)
 
-## <a name="in-this-section"></a>섹션 내용
+## <a name="in-this-section"></a>단원 내용
 
 [개요](wcf-data-services-overview.md)
 
@@ -134,6 +134,6 @@ OData 피드를 노출 하는 데이터 서비스를 만들고 구성 하는 방
 
 클라이언트 라이브러리를 사용 하 여 .NET Framework 클라이언트 응용 프로그램에서 OData 피드를 사용 하는 방법을 설명 합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [REST(Representational State Transfer)](https://go.microsoft.com/fwlink/?LinkId=113919)

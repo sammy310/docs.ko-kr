@@ -28,33 +28,18 @@ helpviewer_keywords:
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5c9f15a7ff30d5647338bf1954aca441b47281b5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0eb88b8f46d425ae840c2bf8ed8eb479971d1cbc
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948737"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974673"
 ---
 # <a name="generics-in-net"></a>.NET의 제네릭
 
-<a name="top"></a> 제네릭을 사용하면 메서드, 클래스, 구조체 또는 인터페이스를 사용 대상인 정확한 데이터 형식에 맞게 조정할 수 있습니다. 예를 들어 모든 형식의 키와 값을 허용하는 <xref:System.Collections.Hashtable> 클래스를 사용하는 대신 <xref:System.Collections.Generic.Dictionary%602> 제네릭 클래스를 사용하고 키에 허용되는 형식과 값에 허용되는 형식을 지정할 수 있습니다. 제네릭의 이점으로는 향상된 코드 다시 사용 가능성과 형식 안전성 등이 있습니다.  
-  
- 이 항목에서는 .NET 제네릭에 대해 간략하게 설명하고 제네릭 형식이나 메서드의 요약을 제공합니다. 여기에는 다음 단원이 포함되어 있습니다.  
-  
-- [제네릭 정의 및 사용](#defining_and_using_generics)  
-  
-- [제네릭 관련 용어](#generics_terminology)  
-  
-- [클래스 라이브러리 및 언어 지원](#class_library_and_language_support)  
-  
-- [중첩 형식 및 제네릭](#nested_types_and_generics)  
-  
-- [관련 항목](#related_topics)  
-  
-- [참조](#reference)  
-  
-<a name="defining_and_using_generics"></a>   
-## <a name="defining-and-using-generics"></a>제네릭 정의 및 사용  
+제네릭을 사용하면 메서드, 클래스, 구조체 또는 인터페이스를 사용 대상인 정확한 데이터 형식에 맞게 조정할 수 있습니다. 예를 들어 모든 형식의 키와 값을 허용하는 <xref:System.Collections.Hashtable> 클래스를 사용하는 대신 <xref:System.Collections.Generic.Dictionary%602> 제네릭 클래스를 사용하고 키에 허용되는 형식과 값에 허용되는 형식을 지정할 수 있습니다. 제네릭의 이점으로는 향상된 코드 다시 사용 가능성과 형식 안전성 등이 있습니다.  
+
+## <a name="defining-and-using-generics"></a>제네릭 정의 및 사용
  제네릭은 저장하거나 사용하는 하나 이상의 형식에 대한 자리 표시자(형식 매개 변수)를 포함하는 클래스, 구조체, 인터페이스 및 메서드입니다. 제네릭 컬렉션 클래스는 저장하는 개체 형식에 대해 형식 매개 변수를 자리 표시자로 사용할 수 있습니다. 형식 매개 변수는 필드의 형식과 메서드의 매개 변수 형식으로 표시됩니다. 제네릭 메서드는 형식 매개 변수를 반환 값의 형식 또는 정식 매개 변수 중 하나의 형식으로 사용할 수 있습니다. 다음 코드에서는 간단한 제네릭 클래스 정의를 보여 줍니다.  
   
  [!code-cpp[Conceptual.Generics.Overview#2](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source.cpp#2)]
@@ -66,8 +51,7 @@ ms.locfileid: "69948737"
  [!code-cpp[Conceptual.Generics.Overview#3](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source.cpp#3)]
  [!code-csharp[Conceptual.Generics.Overview#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source.cs#3)]
  [!code-vb[Conceptual.Generics.Overview#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.generics.overview/vb/source.vb#3)]  
-  
-<a name="generics_terminology"></a>   
+
 ### <a name="generics-terminology"></a>제네릭 관련 용어  
  .NET에서 제네릭을 설명하는 데 사용되는 용어는 다음과 같습니다.  
   
@@ -97,10 +81,7 @@ ms.locfileid: "69948737"
  [!code-csharp[Conceptual.Generics.Overview#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source.cs#5)]
  [!code-vb[Conceptual.Generics.Overview#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.generics.overview/vb/source.vb#5)]  
   
- [맨 위로 이동](#top)  
-  
-<a name="advantages_limitations"></a>   
-## <a name="advantages-and-disadvantages-of-generics"></a>제네릭의 장점 및 단점  
+## <a name="advantages-and-disadvantages-of-generics"></a>제네릭의 장점 및 단점
  제네릭 컬렉션과 대리자를 사용하는 경우의 장점은 다음과 같습니다.  
   
 - 형식 안전성. 제네릭을 사용하면 컴파일러에서 형식 안전성을 보장해야 하는 부담이 없어집니다. 컴파일 타임에 올바른 데이터 형식이 적용되므로 코드를 작성하여 데이터 형식을 테스트할 필요가 없습니다. 형식 캐스팅의 필요성과 런타임 오류 발생 가능성도 감소합니다.  
@@ -131,10 +112,7 @@ ms.locfileid: "69948737"
     > 동적 어셈블리에서 코드를 내보내거나 [Ilasm.exe(IL 어셈블러)](../../../docs/framework/tools/ilasm-exe-il-assembler.md)를 사용하여 정의되는 중첩 형식은 바깥쪽 형식의 형식 매개 변수를 포함하지 않아도 됩니다. 그러나 형식 매개 변수를 포함하지 않는 경우에는 중첩 클래스의 범위 내에 형식 매개 변수가 포함되지 않습니다.  
   
      자세한 내용은 <xref:System.Type.MakeGenericType%2A>의 "중첩 형식"을 참조하세요.  
-  
- [맨 위로 이동](#top)  
-  
-<a name="class_library_and_language_support"></a>   
+
 ## <a name="class-library-and-language-support"></a>클래스 라이브러리 및 언어 지원  
  .NET에서는 다음 네임스페이스에서 다양한 제네릭 컬렉션 클래스를 제공합니다.  
   
@@ -148,17 +126,11 @@ ms.locfileid: "69948737"
   
  공용 언어 런타임에서는 <xref:System.Reflection.Emit.OpCodes.Stelem>, <xref:System.Reflection.Emit.OpCodes.Ldelem>, <xref:System.Reflection.Emit.OpCodes.Unbox_Any>, <xref:System.Reflection.Emit.OpCodes.Constrained>, <xref:System.Reflection.Emit.OpCodes.Readonly>등의 MSIL(Microsoft Intermediate Language)에서 제네릭 형식을 지원하기 위한 새로운 opcode 및 접두사를 제공합니다.  
   
- Visual C++, C# 및 Visual Basic은 모두 제네릭 정의 및 사용을 위한 모든 지원을 제공합니다. 언어 지원에 대한 자세한 내용은 [Visual Basic의 제네릭 형식](../../visual-basic/programming-guide/language-features/data-types/generic-types.md), [제네릭 소개](../../csharp/programming-guide/generics/index.md) 및 [Visual C++의 제네릭 개요](/cpp/windows/overview-of-generics-in-visual-cpp)를 참조하세요.  
-  
- [맨 위로 이동](#top)  
-  
-<a name="nested_types_and_generics"></a>   
+ Visual C++, C# 및 Visual Basic은 모두 제네릭 정의 및 사용을 위한 모든 지원을 제공합니다. 언어 지원에 대한 자세한 내용은 [Visual Basic의 제네릭 형식](../../visual-basic/programming-guide/language-features/data-types/generic-types.md), [제네릭 소개](../../csharp/programming-guide/generics/index.md) 및 [Visual C++의 제네릭 개요](/cpp/windows/overview-of-generics-in-visual-cpp)를 참조하세요. 
+
 ## <a name="nested-types-and-generics"></a>중첩 형식 및 제네릭  
  제네릭 형식에 중첩된 형식은 바깥쪽 제네릭 형식의 형식 매개 변수에 따라 달라질 수 있습니다. 공용 언어 런타임은 고유한 제네릭 형식 매개 변수를 포함하지 않는 중첩 형식도 제네릭으로 간주합니다. 중첩 형식의 인스턴스를 만들 때는 모든 바깥쪽 제네릭 형식에 대해 형식 인수를 지정해야 합니다.  
-  
- [맨 위로 이동](#top)  
-  
-<a name="related_topics"></a>   
+
 ## <a name="related-topics"></a>관련 항목  
   
 |제목|설명|  
@@ -173,13 +145,10 @@ ms.locfileid: "69948737"
 |[Visual Basic의 제네릭 형식](../../visual-basic/programming-guide/language-features/data-types/generic-types.md)|제네릭 형식 사용 및 정의에 대한 방법 항목을 포함하여 Visual Basic 사용자를 위한 제네릭 기능에 대해 설명합니다.|  
 |[제네릭 소개](../../csharp/programming-guide/generics/index.md)|C# 사용자를 위한 제네릭 형식 사용 및 정의 방법을 간략하게 설명합니다.|  
 |[Visual C++의 제네릭 개요](/cpp/windows/overview-of-generics-in-visual-cpp)|제네릭과 템플릿 간의 차이점을 비롯하여 C++ 사용자를 위한 제네릭 기능에 대해 설명합니다.|  
-  
-<a name="reference"></a>   
+
 ## <a name="reference"></a>참조  
  <xref:System.Collections.Generic>  
   
  <xref:System.Collections.ObjectModel>  
   
  <xref:System.Reflection.Emit.OpCodes?displayProperty=nameWithType>  
-  
- [맨 위로 이동](#top)

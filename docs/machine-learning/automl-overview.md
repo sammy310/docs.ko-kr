@@ -6,12 +6,12 @@ ms.date: 05/01/2019
 ms.topic: overview
 ms.custom: mvc
 ms.author: nakersha
-ms.openlocfilehash: da2d764e678debc78a25faeb8e48facb44fc4021
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 263004e67bf88af4182788e8c74cb410460e9201
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929416"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971410"
 ---
 # <a name="automated-machine-learning-with-mlnet"></a>ML.NET을 통해 자동화된 기계 학습
 
@@ -22,7 +22,7 @@ ms.locfileid: "70929416"
 - 기능 선택 및 모델 학습(모델 이해를 위해)에 사용되는 소스 코드
 
 > [!NOTE]
-> 이 기능은 현재 미리 보기로 제공되며, 자료는 변경될 수 있습니다. 
+> 이 기능은 현재 미리 보기로 제공되며, 자료는 변경될 수 있습니다.
 
 자동화된 ML은 현재 이진 분류, 다중 클래스 분류, 회귀의 기게 학습 [작업](resources/tasks.md)으로 제한됩니다. 다른 기계 학습 작업은 향후 릴리스에서 지원될 것입니다.
 

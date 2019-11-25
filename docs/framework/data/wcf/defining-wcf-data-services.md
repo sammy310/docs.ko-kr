@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 05006ff3-02dc-410e-831e-54ec3e7e24ef
-ms.openlocfilehash: b9280936a16d50283c01120c9dc046e65a0a79ae
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 26cfee95f7cd3b956ff263d90b713e9d70b98202
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790876"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975328"
 ---
 # <a name="defining-wcf-data-services"></a>WCF Data Services 정의
 
-이 섹션에서는 데이터를 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 피드로 노출 하는 WCF Data Services을 만들고 구성 하는 방법을 설명 합니다. 데이터 서비스를 만드는 데 필요한 기본 단계에 대 한 자세한 내용은 데이터를 [서비스로 노출](exposing-your-data-as-a-service-wcf-data-services.md)을 참조 하세요.
+이 섹션에서는 WCF Data Services을 만들고 구성 하 여 OData (Open Data Protocol) 피드로 데이터를 노출 하는 방법을 설명 합니다. 데이터 서비스를 만드는 데 필요한 기본 단계에 대 한 자세한 내용은 데이터를 [서비스로 노출](exposing-your-data-as-a-service-wcf-data-services.md)을 참조 하세요.
 
-## <a name="in-this-section"></a>섹션 내용
+## <a name="in-this-section"></a>단원 내용
 
  [데이터 서비스 구성](configuring-the-data-service-wcf-data-services.md)
 
@@ -57,7 +57,7 @@ ms.locfileid: "70790876"
 
  WCF Data Services에서 현재 구현 하지 않는 OData 프로토콜의 선택적 기능에 대해 설명 합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [WCF Data Services 클라이언트 라이브러리](wcf-data-services-client-library.md)
 - [데이터 서비스 리소스에 액세스](accessing-data-service-resources-wcf-data-services.md)

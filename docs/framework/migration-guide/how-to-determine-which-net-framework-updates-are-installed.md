@@ -1,5 +1,5 @@
 ---
-title: '방법: 설치된 .NET Framework 보안 업데이트 및 핫픽스 확인'
+title: 설치된 .NET Framework 보안 업데이트 및 핫픽스
 description: 컴퓨터에 설치된 .NET Framework 보안 업데이트 및 핫픽스를 확인하는 방법을 알아봅니다.
 ms.date: 11/27/2017
 dev_langs:
@@ -11,21 +11,21 @@ helpviewer_keywords:
 ms.assetid: 53c7b5f7-d47a-402a-b194-7244a696a88b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1c69d4bb370087dddafbfed41cbfb1fef229677c
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: aad202e7c9df01c2893e74a39744f2c32783f1f0
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318966"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73735207"
 ---
-# <a name="how-to-determine-which-net-framework-security-updates-and-hotfixes-are-installed"></a>방법: 설치된 .NET Framework 보안 업데이트 및 핫픽스 확인
+# <a name="how-to-determine-which-net-framework-security-updates-and-hotfixes-are-installed"></a>설치된 .NET Framework 보안 업데이트 및 핫픽스를 확인하는 방법
 
 이 문서에서는 컴퓨터에 설치된 .NET Framework 보안 업데이트 및 핫픽스를 확인하는 방법을 보여 줍니다.
 
 > [!NOTE]
 > 이 문서에 표시된 모든 방법을 사용하려면 관리자 권한이 있는 계정이 필요합니다.
 
-## <a name="to-find-installed-updates-using-the-registry"></a>레지스트리를 사용하여 설치된 업데이트를 찾으려면
+## <a name="use-registry-editor"></a>레지스트리 편집기 사용
 
 컴퓨터에 설치된 각 .NET Framework 버전에 대해 설치된 보안 업데이트 및 핫픽스는 Windows 레지스트리에 나열됩니다. 레지스트리 편집기(*regedit.exe*)를 사용하여 이 정보를 볼 수 있습니다.
 
@@ -33,13 +33,13 @@ ms.locfileid: "72318966"
 
 2. 레지스트리 편집기에서 다음 하위 키를 엽니다.
 
-     `HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Updates`
+     **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Updates**
 
      설치된 업데이트가 적용되는 .NET Framework 버전을 식별하는 하위 키 아래에 나열됩니다. 각 업데이트는 KB(기술 자료) 번호로 식별됩니다.
 
 레지스트리 편집기에서 .NET Framework 버전과 각 버전에 대해 설치된 업데이트는 서로 다른 하위 키에 저장되어 있습니다. 설치된 버전 번호를 검색하는 방법에 대한 내용은 [방법: 설치된 .NET Framework 버전 확인](how-to-determine-which-versions-are-installed.md)을 참조하세요.
 
-## <a name="to-find-installed-updates-by-querying-the-registry-in-code"></a>코드에서 레지스트리를 쿼리하여 설치된 업데이트를 찾으려면
+## <a name="query-the-registry-using-code"></a>코드를 사용하여 레지스트리를 쿼리
 
 다음 예제에서는 컴퓨터에 설치된 .NET Framework 보안 업데이트 및 핫픽스를 프로그래밍 방식으로 확인합니다.
 
@@ -67,7 +67,7 @@ Microsoft .NET Framework 4 Extended
   KB2600217
 ```
 
-## <a name="to-find-installed-updates-by-querying-the-registry-in-powershell"></a>PowerShell에서 레지스트리를 쿼리하여 설치된 업데이트를 찾으려면
+## <a name="use-powershell-to-query-the-registry"></a>PowerShell을 사용하여 레지스트리를 쿼리
 
 다음 예제에서는 PowerShell을 사용하여 컴퓨터에 설치된 .NET Framework 보안 업데이트 및 핫픽스를 확인하는 방법을 보여 줍니다.
 

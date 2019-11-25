@@ -1,20 +1,20 @@
 ---
 title: 시퀀스
 description: 순서가 지정 된 데이터 F# 컬렉션이 크고 모든 요소를 반드시 사용할 필요는 없는 경우 시퀀스를 사용 하는 방법을 알아봅니다.
-ms.date: 02/19/2019
-ms.openlocfilehash: 76aeeb8b89ed8146ee1b7f909af6bf0764fcc55d
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.date: 11/04/2019
+ms.openlocfilehash: 34e03f1cead0a9f678f637afcb6c8397ef7572bc
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424976"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971438"
 ---
 # <a name="sequences"></a>시퀀스
 
 > [!NOTE]
 > 이 문서의 API 참조 링크를 통해 MSDN으로 이동됩니다.  docs.microsoft.com API 참조가 완전하지 않습니다.
 
-*시퀀스* 는 단일 형식의 논리적 일련의 요소입니다. 시퀀스는 광범위 하 고 정렬 된 데이터 컬렉션이 있지만 모든 요소를 반드시 사용할 필요는 없는 경우에 특히 유용 합니다. 개별 시퀀스 요소는 필요에 따라 계산 되므로 모든 요소가 사용 되지 않는 상황에서 시퀀스는 목록 보다 더 나은 성능을 제공할 수 있습니다. 시퀀스는 `System.Collections.Generic.IEnumerable`에 대 한 별칭인 `seq<'T>` 형식으로 표시 됩니다. 따라서 `System.IEnumerable`를 구현 하는 모든 .NET Framework 형식을 시퀀스로 사용할 수 있습니다. [Seq 모듈](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684) 은 시퀀스와 관련 된 조작을 지원 합니다.
+*시퀀스* 는 단일 형식의 논리적 일련의 요소입니다. 시퀀스는 광범위 하 고 정렬 된 데이터 컬렉션이 있지만 모든 요소를 반드시 사용할 필요는 없는 경우에 특히 유용 합니다. 개별 시퀀스 요소는 필요에 따라 계산 되므로 모든 요소가 사용 되지 않는 상황에서 시퀀스는 목록 보다 더 나은 성능을 제공할 수 있습니다. 시퀀스는 <xref:System.Collections.Generic.IEnumerable%601>에 대 한 별칭인 `seq<'T>` 형식으로 표시 됩니다. 따라서 <xref:System.Collections.Generic.IEnumerable%601> 인터페이스를 구현 하는 모든 .NET 형식을 시퀀스로 사용할 수 있습니다. [Seq 모듈](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684) 은 시퀀스와 관련 된 조작을 지원 합니다.
 
 ## <a name="sequence-expressions"></a>시퀀스 식
 
@@ -22,17 +22,17 @@ ms.locfileid: "73424976"
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1502.fs)]
 
-시퀀스 식은 시퀀스의 값을 F# 생성 하는 식으로 구성 됩니다. `yield` 키워드를 사용 하 여 시퀀스의 일부가 될 값을 생성할 수 있습니다.
-
-예를 들면 다음과 같습니다.
+시퀀스 식은 시퀀스의 값을 F# 생성 하는 식으로 구성 됩니다. 값을 프로그래밍 방식으로 생성할 수도 있습니다.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1503.fs)]
 
-`yield`대신 `->` 연산자를 사용할 수 있습니다 .이 경우에는 다음 예제와 같이 `do` 키워드를 생략할 수 있습니다.
+앞의 예제에서는 `->` 연산자를 사용 하 여 해당 값이 시퀀스의 일부가 될 식을 지정할 수 있습니다. 뒤에 오는 코드의 모든 부분에서 값을 반환 하는 경우에만 `->`을 사용할 수 있습니다.
+
+또는 다음과 같은 선택적 `yield`를 사용 하 여 `do` 키워드를 지정할 수 있습니다.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1504.fs)]
 
-다음 코드에서는 표를 나타내는 배열에 대 한 인덱스와 함께 좌표 쌍의 목록을 생성 합니다.
+다음 코드에서는 표를 나타내는 배열에 대 한 인덱스와 함께 좌표 쌍의 목록을 생성 합니다. 첫 번째 `for` 식에는 `do`를 지정 해야 합니다.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1505.fs)]
 
@@ -40,9 +40,34 @@ ms.locfileid: "73424976"
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1506.fs)]
 
-반복에서 `yield` 또는 `->`를 사용 하는 경우 각 반복은 시퀀스의 단일 요소를 생성 해야 합니다. 각 반복이 요소 시퀀스를 생성 하는 경우 `yield!`를 사용 합니다. 이 경우 각 반복에서 생성 되는 요소가 연결 되어 최종 시퀀스를 생성 합니다.
+앞에서 설명한 것 처럼 `if`와 함께 `else` 분기가 없으므로 여기에 `do` 필요 합니다. `->`를 사용 하려고 하면 모든 분기에서 값을 반환 하지 않는다는 오류가 표시 됩니다.
 
-시퀀스 식에서 여러 식을 함께 결합할 수 있습니다. 각 식에서 생성 된 요소는 함께 연결 됩니다. 예를 보려면이 항목의 "예" 섹션을 참조 하십시오.
+## <a name="the-yield-keyword"></a>`yield!` 키워드
+
+경우에 따라 요소의 시퀀스를 다른 시퀀스에 포함할 수 있습니다. 다른 시퀀스 내에 시퀀스를 포함 하려면 `yield!` 키워드를 사용 해야 합니다.
+
+```fsharp
+// Repeats '1 2 3 4 5' ten times
+seq {
+    for _ in 1..10 do
+        yield! seq { 1; 2; 3; 4; 5}
+}
+```
+
+`yield!`를 고려 하는 또 다른 방법은 내부 시퀀스를 평면화 한 다음 포함 하는 시퀀스에이를 포함 하는 것입니다.
+
+식에 `yield!`를 사용 하는 경우 다른 모든 단일 값은 `yield` 키워드를 사용 해야 합니다.
+
+```fsharp
+// Combine repeated values with their values
+seq {
+    for x in 1..10 do
+        yield x
+        yield! seq { for i in 1..x -> i}
+}
+```
+
+이전 예제에서 `x`만 지정 하면 시퀀스에서 값을 생성 하지 않습니다.
 
 ## <a name="examples"></a>예제
 
@@ -50,7 +75,7 @@ ms.locfileid: "73424976"
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1507.fs)]
 
-다음 코드는 `yield`를 사용 하 여 각각 두 요소와 제품으로 구성 된 세 개의 요소로 구성 된 튜플로 구성 된 곱하기 테이블을 만듭니다.
+다음 예에서는 두 개의 요소로 구성 된 튜플로 구성 된 곱하기 테이블을 만듭니다. 각 요소는 두 개의 요소와 제품으로 구성 됩니다.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1508.fs)]
 
@@ -62,7 +87,7 @@ ms.locfileid: "73424976"
 
 시퀀스는 [목록과](lists.md)동일한 많은 기능을 지원 합니다. 시퀀스는 키 생성 함수를 사용 하 여 그룹화 및 계산 등의 작업도 지원 합니다. 시퀀스는 버킷이라고을 추출 하는 더 다양 한 함수도 지원 합니다.
 
-목록, 배열, 집합 및 맵과 같은 많은 데이터 형식은 열거 가능한 컬렉션 이므로 암시적으로 시퀀스 됩니다. 시퀀스를 인수로 사용 하는 함수는 `System.Collections.Generic.IEnumerable<'T>`를 구현 하는 .NET Framework 데이터 F# 형식 외에도 모든 공통 데이터 형식에서 사용할 수 있습니다. 목록을 인수로 사용 하는 함수와 대조 하 여 목록만 사용할 수 있습니다. `seq<'T>` 형식은 `IEnumerable<'T>`의 형식 약어입니다. 즉, 배열, 목록, 집합 및 맵을 F#포함 하는 제네릭 `System.Collections.Generic.IEnumerable<'T>`를 구현 하는 모든 형식 및 대부분의 .NET Framework 컬렉션 형식은 `seq` 형식과 호환 되며 시퀀스가 필요한 모든 곳에서 사용할 수 있습니다.
+목록, 배열, 집합 및 맵과 같은 많은 데이터 형식은 열거 가능한 컬렉션 이므로 암시적으로 시퀀스 됩니다. 시퀀스를 인수로 사용 하는 함수는 `System.Collections.Generic.IEnumerable<'T>`을 구현 하는 .NET 데이터 F# 형식 외에도 모든 공통 데이터 형식에서 작동 합니다. 목록을 인수로 사용 하는 함수와 대조 하 여 목록만 사용할 수 있습니다. `seq<'T>` 형식은 `IEnumerable<'T>`의 형식 약어입니다. 즉, 배열, 목록, 집합 및 맵을 F#포함 하는 제네릭 `System.Collections.Generic.IEnumerable<'T>`를 구현 하는 모든 형식 및 대부분의 .net 컬렉션 형식은 `seq` 형식과 호환 되며 시퀀스가 필요한 모든 위치에서 사용할 수 있습니다.
 
 ## <a name="module-functions"></a>모듈 함수
 

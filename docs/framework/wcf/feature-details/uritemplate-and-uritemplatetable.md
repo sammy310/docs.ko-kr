@@ -2,20 +2,20 @@
 title: UriTemplate 및 UriTemplateTable
 ms.date: 03/30/2017
 ms.assetid: 5cbbe03f-4a9e-4d44-9e02-c5773239cf52
-ms.openlocfilehash: f51d6fa5c78d97cf11a3c0005be7656013b30e90
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: da34753867db17fd8ea1bd36bc705b3518d6d650
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69955275"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976002"
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate 및 UriTemplateTable
-웹 개발자는 서비스가 응답하는 URI의 셰이프 및 레이아웃을 설명할 수 있어야 합니다. WCF (Windows Communication Foundation)에는 개발자가 Uri를 제어할 수 있도록 두 개의 새로운 클래스가 추가 되었습니다. <xref:System.UriTemplate>및 <xref:System.UriTemplateTable> 는 WCF에서 URI 기반 디스패치 엔진의 기본을 형성 합니다. 이러한 클래스를 자체적으로 사용할 수도 있으므로 개발자는 WCF 서비스를 구현 하지 않고도 템플릿 및 URI 매핑 메커니즘을 활용할 수 있습니다.  
+웹 개발자는 서비스가 응답하는 URI의 셰이프 및 레이아웃을 설명할 수 있어야 합니다. WCF (Windows Communication Foundation)에는 개발자가 Uri를 제어할 수 있도록 두 개의 새로운 클래스가 추가 되었습니다. <xref:System.UriTemplate> 및 <xref:System.UriTemplateTable>는 WCF에서 URI 기반 디스패치 엔진의 기반을 형성 합니다. 이러한 클래스를 자체적으로 사용할 수도 있으므로 개발자는 WCF 서비스를 구현 하지 않고도 템플릿 및 URI 매핑 메커니즘을 활용할 수 있습니다.  
   
 ## <a name="templates"></a>템플릿  
  템플릿을 사용하면 상대 URI 집합을 설명할 수 있습니다. 다음 표의 URI 템플릿 집합은 다양한 날씨 정보를 검색하는 시스템을 정의하는 방법을 보여 줍니다.  
   
-|보기|템플릿|  
+|데이터|템플릿|  
 |----------|--------------|  
 |전국 예보|weather/national|  
 |시/도 예보|weather/{state}|  
@@ -57,9 +57,7 @@ ms.locfileid: "69955275"
 ### <a name="template-string-syntax"></a>템플릿 문자열 구문  
  템플릿에는 경로, 선택적 쿼리 및 선택적 조각의 세 부분이 있습니다. 예제를 보려면 다음 템플릿을 참조하십시오.  
   
-```  
-"/weather/{state}/{city}?forecast={length)#frag1  
-```  
+`"/weather/{state}/{city}?forecast={length)#frag1`  
   
  경로는 "/weather/{state}/{city}"로 구성되고, 쿼리는 "?forecast={length}"로 구성되며, 조각은 "#frag1"로 구성됩니다.  
   
@@ -81,21 +79,21 @@ ms.locfileid: "69955275"
   
 - "{shoe}/boat"  
   
-- "{shoe}/{boat}/bed/{quilt}"  
+- "{신발}/{boat}/bed/{quilt}"  
   
 - "신발/{보트}"  
   
 - "신발/{보트}/\*"  
   
-- "shoe/boat?x=2"  
+- "신발/보트? x = 2"  
   
-- "shoe/{boat}?x={bed}"  
+- "신발/{보트}? x = {침대}"  
   
 - "신발/{보트}? x = {침대} & y = 대역"  
   
-- "?x={shoe}"  
+- "? x = {신발}"  
   
-- "shoe?x=3&y={var}  
+- "신발? x = 3 & y = {var}  
   
  잘못된 템플릿 문자열의 예:  
   
@@ -124,19 +122,17 @@ ms.locfileid: "69955275"
   
  다음은 잘못된 경로 세그먼트의 예입니다.  
   
-- /{} -변수의 이름을 지정 해야 합니다.  
+- /{}-변수 이름을 지정 해야 합니다.  
   
 - /{shoe}{boat} - 변수를 리터럴로 구분해야 합니다.  
   
 ### <a name="matching-and-compound-path-segments"></a>복합 및 일치하는 경로 세그먼트  
- 복합 경로 세그먼트를 사용하면 단일 경로 세그먼트 내에 여러 변수가 포함된 UriTemplate을 정의할 수 있습니다. 예를 들어, 다음 템플릿 문자열에 있습니다. "Addresses/{state}. {city} "두 변수 (주 및 도시)는 동일한 세그먼트 내에서 정의 됩니다. 이 템플릿은와 `http://example.com/Washington.Redmond` 같은 url과 일치 하지만와 같은 `http://example.com/Washington.Redmond.Microsoft`url도 일치 합니다. 후자의 경우 상태 변수는 "워싱턴"을 포함 하 고 city 변수에는 "Redmond. Microsoft"가 포함 됩니다. 이 경우 모든 텍스트(‘/’ 제외)가 {city} 변수와 일치합니다. "추가" 텍스트와 일치 하지 않는 템플릿을 원하는 경우 다음과 같이 별도의 템플릿 세그먼트에 변수를 추가 합니다. "Addresses/{state}/{city}.  
+ 복합 경로 세그먼트를 사용하면 단일 경로 세그먼트 내에 여러 변수가 포함된 UriTemplate을 정의할 수 있습니다. 예를 들어 "Addresses/{state} 템플릿 문자열에 있습니다. {city} "두 변수 (주 및 도시)는 동일한 세그먼트 내에서 정의 됩니다. 이 템플릿은 `http://example.com/Washington.Redmond` 같은 URL과 일치 하지만 `http://example.com/Washington.Redmond.Microsoft`와 같은 URL도 일치 합니다. 후자의 경우 상태 변수는 "워싱턴"을 포함 하 고 city 변수에는 "Redmond. Microsoft"가 포함 됩니다. 이 경우 모든 텍스트(‘/’ 제외)가 {city} 변수와 일치합니다. "추가" 텍스트와 일치 하지 않는 템플릿을 원하는 경우 "Addresses/{state}/{city}와 같이 별도의 템플릿 세그먼트에 변수를 추가 합니다.  
   
 ### <a name="named-wildcard-segments"></a>명명된 와일드카드 세그먼트  
  명명 된 와일드 카드 세그먼트는 해당 변수 이름이 와일드 카드 문자 '\*'로 시작 하는 경로 변수 세그먼트입니다. 다음 템플릿 문자열에는 이름이 “shoe”인 명명된 와일드카드 세그먼트가 포함되어 있습니다.  
   
-```  
-"literal/{*shoe}"  
-```  
+`"literal/{*shoe}"`  
   
  와일드카드 세그먼트는 다음 규칙을 따라야 합니다.  
   
@@ -192,7 +188,7 @@ foreach (string key in m1.BoundVariables.AllKeys)
 ```  
   
 > [!NOTE]
-> 과 `http://localhost:8000///` 같은 uri는 앞의 코드에 나열 된 템플릿과 일치 하지 않지만와 `http://localhost:8000/` 같은 uri는 일치 하지 않습니다.  
+> `http://localhost:8000///`와 같은 URI는 위의 코드에 나열 된 템플릿과 일치 하지 않지만 `http://localhost:8000/`와 같은 URI는 일치 하지 않습니다.  
   
  다음 코드에서는 템플릿을 사용하여 URI를 만들 때 기본 변수 값을 처리하는 방법을 보여 줍니다.  
   
@@ -230,7 +226,7 @@ Console.WriteLine("Bound URI: {0}", boundUri);
   
 - `UriTemplate t = new UriTemplate("{shoe=1}/{boat=null}");`
 
- 다음은 기본값이 인 잘못 된 템플릿 문자열입니다 `null`.  
+ 다음은 `null`기본값을 사용 하는 잘못 된 템플릿 문자열입니다.  
   
 - `UriTemplate t = new UriTemplate("{shoe=null}/boat"); // null default must be in the right most path segment`
   
@@ -242,11 +238,11 @@ Console.WriteLine("Bound URI: {0}", boundUri);
 ### <a name="template-equivalence"></a>템플릿 동등성  
  모든 템플릿의 리터럴이 일치 하 고 동일한 세그먼트에 변수가 있는 경우 두 템플릿이 *구조적으로 동일한* 것으로 간주 됩니다. 예를 들어 다음 템플릿은 구조적으로 동등합니다.  
   
-- /a/{var1}/b b/{var2}?x=1&y=2  
+- /a/{var1}/b b/{var2}? x = 1 & y = 2  
   
-- a/{x}/b%20b/{var1}?y=2&x=1  
+- a/{x}/b% 20b/{var1}? y = 2 & x = 1  
   
-- a/{y}/B%20B/{z}/?y=2&x=1  
+- a/{y}/B% 20B/{z}/? y = 2 & x = 1  
   
  다음 몇 가지 사항에 주의해야 합니다.  
   
@@ -279,9 +275,9 @@ Console.WriteLine("Bound URI: {0}", boundUri);
   
 - ?x=3  
   
-- ?x=1&y={var}  
+- ? x = 1 & y = {var}  
   
-- ?x=2&z={var}  
+- ? x = 2 & z = {var}  
   
 - ?x=3  
   
@@ -293,13 +289,13 @@ Console.WriteLine("Bound URI: {0}", boundUri);
   
 - ?  
   
-- ?m=get&c=rss  
+- ? m = get & c = rss  
   
-- ?m=put&c=rss  
+- ? m = put & c = rss  
   
-- ?m=get&c=atom  
+- ? m = get & c = atom  
   
-- ?m=put&c=atom  
+- ? m = put & c = atom  
   
  다음 쿼리 문자열 템플릿 집합은 모호합니다.  
   
@@ -317,18 +313,18 @@ Console.WriteLine("Bound URI: {0}", boundUri);
   
 - ?x=1  
   
-- ?x=1&y={var}  
+- ? x = 1 & y = {var}  
   
  "x = 1 & y = 3"은 두 템플릿과 모두 일치 합니다.  
   
-- ?x=3&y=4  
+- ? x = 3 & y = 4  
   
-- ?x=3&z=5  
+- ? x = 3 & z = 5  
   
 > [!NOTE]
 > 문자 á와 Á는 URI 경로 또는 <xref:System.UriTemplate> 경로 세그먼트 리터럴에 표시될 경우 서로 다른 문자로 간주됩니다. 그러나 문자 a와 A는 동일한 문자로 간주됩니다. 문자 á와 Á는 <xref:System.UriTemplate> {variableName} 또는 쿼리 문자열에 표시될 경우 동일한 문자로 간주됩니다. a와 A도 동일한 문자로 간주됩니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [WCF 웹 HTTP 프로그래밍 모델 개요](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)
 - [WCF 웹 HTTP 프로그래밍 개체 모델](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)

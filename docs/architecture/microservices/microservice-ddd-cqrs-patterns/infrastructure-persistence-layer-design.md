@@ -2,12 +2,12 @@
 title: 인프라 지속성 계층 디자인
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | 인프라 지속성 계층 디자인에서 리포지토리 패턴을 탐색합니다.
 ms.date: 10/08/2018
-ms.openlocfilehash: 76f545403a1b595ce7a541a96d212b9406d89c10
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: f1c5df1cc5672760374610a416ae22b45cd76c25
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674120"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737934"
 ---
 # <a name="design-the-infrastructure-persistence-layer"></a>인프라 지속성 계층 디자인
 
@@ -33,9 +33,11 @@ ms.locfileid: "68674120"
 
 그림 7-17과 같이 각 집계 루트에 대해 하나의 리포지토리만 정의해야 함을 다시 강조하는 것이 중요합니다. 집계 내 모든 개체 간의 트랜잭션 일관성을 유지하기 위한 집계 루트의 목표를 달성하려면 데이터베이스에 각 테이블에 대한 리포지토리를 결코 만들어서는 안 됩니다.
 
-![도메인과 인프라 계층 간의 관계: 구매자 집계는 IBuyerRepository에 종속되고, 주문 집계는 IOrderRepository 인터페이스에 따라 달라집니다. 이러한 인터페이스는 데이터 계층의 테이블에 액세스하는 UnitOfWork(여기에서도 구현됨)에 의존하는 해당 리포지토리에 의해 인프라 계층에서 구현됩니다.](./media/image18.png)
+![도메인과 기타 인프라의 관계를 보여 주는 다이어그램](./media/infrastructure-persistence-layer-design/repository-aggregate-database-table-relationships.png)
 
 **그림 7-17**. 리포지토리, 집계, 데이터베이스 테이블 간의 관계
+
+위 다이어그램에서는 도메인 레이어와 인프라 레이어 간의 관계를 보여 줍니다. 구매자 집계는 IBuyerRepository에 종속되고, 주문 집계는 IOrderRepository 인터페이스에 따라 달라집니다. 이러한 인터페이스는 데이터 계층의 테이블에 액세스하는 UnitOfWork(여기에서도 구현됨)에 의존하는 해당 리포지토리에 의해 인프라 계층에서 구현됩니다.
 
 ### <a name="enforce-one-aggregate-root-per-repository"></a>리포지토리당 하나의 집계 루트 적용
 

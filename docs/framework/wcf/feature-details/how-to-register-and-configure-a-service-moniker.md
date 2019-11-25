@@ -5,12 +5,12 @@ helpviewer_keywords:
 - COM [WCF], configure service monikers
 - COM [WCF], register service monikers
 ms.assetid: e5e16c80-8a8e-4eef-af53-564933b651ef
-ms.openlocfilehash: 547e507b4a1115de81532263c34964cd20f15d4e
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 47e11ff2bc5b1c3eca152ba1fa429b5785c2f01b
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972141"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976121"
 ---
 # <a name="how-to-register-and-configure-a-service-moniker"></a>방법: 서비스 모니커 등록 및 구성
 형식화 된 계약을 사용 하 여 COM 응용 프로그램 내에서 WCF (Windows Communication Foundation) 서비스 모니커를 사용 하려면 먼저 필요한 특성을 사용 하는 형식을 COM에 등록 하 고 필요한 바인딩을 사용 하 여 COM 응용 프로그램 및 모니커를 구성 해야 합니다. 구성.  
@@ -67,7 +67,7 @@ ms.locfileid: "70972141"
   
      다음 샘플 코드와 같이 `IMathService` 형식을 포함하는 어셈블리에 대한 참조를 추가한 후 Visual Basic 6.0 애플리케이션 내에서 이러한 모니커 문자열 중 하나를 사용할 수 있습니다.  
   
-    ```vb  
+    ```vb
     Dim MathProxy As IMathService  
     Dim result As Integer  
   
@@ -85,7 +85,7 @@ ms.locfileid: "70972141"
     > C#, C++ 또는 다른 모든 .NET 언어 애플리케이션으로 유사한 코드를 사용할 수 있습니다.  
   
     > [!NOTE]
-    > : 모니커의 형식이 잘못 되었거나 서비스를 사용할 수 없는 경우를 `GetObject` 호출 하면 "구문이 잘못 되었습니다" 라는 오류가 반환 됩니다. 이 오류가 발생하면 사용하고 있는 모니커가 올바르고 서비스를 사용할 수 있는지 확인하세요.  
+    > 모니커가 잘못 작동하거나 서비스를 사용할 수 없는 경우 `GetObject`를 호출하면 "구문이 잘못되었습니다"라는 오류가 반환됩니다. 이 오류가 발생하면 사용하고 있는 모니커가 올바르고 서비스를 사용할 수 있는지 확인하세요.  
   
      이 항목에서는 VB 6.0 코드의 서비스 모니커 사용에 중점을 두지만 다른 언어에서 서비스 모니커를 사용할 수 있습니다. C++ 코드에서 모니커를 사용하는 경우 다음 코드와 같이 "no_namespace named_guids raw_interfaces_only"를 사용하여 Svcutil.exe에서 생성된 어셈블리를  가져와야 합니다.  
   
@@ -95,6 +95,6 @@ ms.locfileid: "70972141"
   
      모든 메서드에서 `HResult`를 반환하도록 가져온 인터페이스 정의를 수정합니다. 다른 모든 반환 값은 출력 매개 변수로 변환됩니다. 전체 메서드 실행은 동일하게 유지됩니다. 이 경우 프록시에서 메서드를 호출할 때 예외의 원인을 확인할 수 있습니다. 이 기능은 C++ 코드에서만 사용할 수 있습니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ServiceModel Metadata 유틸리티 도구(Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

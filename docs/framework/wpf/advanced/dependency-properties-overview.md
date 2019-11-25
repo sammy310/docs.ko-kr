@@ -14,12 +14,12 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-ms.openlocfilehash: 663dd7a785200ddbc78cc0cd1fb5b43531982f42
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 5803d656d765f3f4fe3039e28b9c06202218fcfc
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458950"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973984"
 ---
 # <a name="dependency-properties-overview"></a>종속성 속성 개요
 
@@ -168,7 +168,7 @@ XAML은 속성을 설정하는 다양한 구문 형식 지원 특정 속성에 �
 자세한 내용은 [속성 값 상속](property-value-inheritance.md)을 참조하세요.
 
 ### <a name="wpf-designer-integration"></a>WPF Designer 통합
-종속성 속성으로 구현되는 속성이 있는 사용자 지정 컨트롤은 적절한 [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] 지원을 받습니다. 한 가지 예는 **속성** 창을 사용하여 직접 및 연결된 종속성 속성을 편집하는 기능입니다. 자세한 내용은 [컨트롤 제작 개요](../controls/control-authoring-overview.md)를 참조하세요.
+종속성 속성으로 구현 되는 속성이 있는 사용자 지정 컨트롤은 Visual Studio 지원에 대 한 적절 한 WPF Designer를 받습니다. 한 가지 예는 **속성** 창을 사용하여 직접 및 연결된 종속성 속성을 편집하는 기능입니다. 자세한 내용은 [컨트롤 제작 개요](../controls/control-authoring-overview.md)를 참조하세요.
 
 ## <a name="dependency-property-value-precedence"></a>종속성 속성 값 우선 순위
 종속성 속성의 값을 가져오면 WPF 속성 시스템에 참여하는 다른 속성 기반 입력 중 하나를 통해 해당 속성에 설정된 값을 가져오는 것입니다. 종속성 속성 값 우선 순위는 속성이 해당 값을 가져오는 방법에 대한 다양한 시나리오가 예측 가능한 방식으로 상호 작용할 수 있도록 존재합니다.

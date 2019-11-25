@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C# Language, enums
 - bit flags [C#]
 ms.assetid: 64a9b731-9e3c-4336-8a09-018db2aa10b7
-ms.openlocfilehash: fea12a32d39f98ddc575e2d538e7501d2ff49768
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 3573959a1e10b475a9867631767de5d10a08b9ea
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590550"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73969772"
 ---
 # <a name="enumeration-types-c-programming-guide"></a>열거형 형식(C# 프로그래밍 가이드)
 
@@ -86,7 +86,7 @@ Console.WriteLine("{0} is month number #{1}.", thisMonth, monthNumber);
 
 자세한 내용은 <xref:System.Enum?displayProperty=nameWithType>을 참조하세요.
 
-또한 확장 메서드를 사용하여 열거형에 대한 새 메서드를 만들 수 있습니다. 자세한 내용은 [방법: 새 열거형 메서드 만들기](./classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md)를 참조하세요.
+또한 확장 메서드를 사용하여 열거형에 대한 새 메서드를 만들 수 있습니다. 자세한 내용은 [새 열거형 메서드를 만드는 방법](./classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md)을 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
 

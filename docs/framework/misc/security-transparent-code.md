@@ -7,16 +7,14 @@ helpviewer_keywords:
 ms.assetid: 4f3dd841-82f7-4659-aab0-6d2db2166c65
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4e4e472185b3b2ba39393c029bca3966fb5ec4b3
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: f90b64b5e9ab5a167333a594ace7f247b1b2b7e7
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70206059"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975524"
 ---
 # <a name="security-transparent-code"></a>보안 투명 코드
-
-<a name="top"></a>
 
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]
 
@@ -24,16 +22,6 @@ ms.locfileid: "70206059"
 
 > [!IMPORTANT]
 > 보안 정책은 이전 .NET Framework 버전의 핵심 요소였습니다. .NET Framework 4부터 보안 정책은 사용 되지 않습니다. 보안 정책 제거는 보안 투명도와 관련이 없습니다. 이러한 변경의 영향에 대 한 자세한 내용은 [코드 액세스 보안 정책 호환성 및 마이그레이션](code-access-security-policy-compatibility-and-migration.md)을 참조 하세요.
-
-이 항목에서는 투명도 모델에 대해 자세히 설명합니다. 여기에는 다음 단원이 포함되어 있습니다.
-
-- [투명도 모델의 용도](#purpose)
-
-- [투명도 수준 지정](#level)
-
-- [투명도 적용](#enforcement)
-
-<a name="purpose"></a>
 
 ## <a name="purpose-of-the-transparency-model"></a>투명도 모델의 목적
 
@@ -47,11 +35,7 @@ ms.locfileid: "70206059"
 투명도는 .NET Framework 버전 2.0에서 새로 추가되었고 보안 모델을 단순화하고 이를 통해 보안 라이브러리 및 애플리케이션을 더 쉽게 배포할 수 있습니다. 투명 코드는 Microsoft Silverlight에서 부분적으로 신뢰할 수 있는 애플리케이션의 배포를 단순화하는 데도 사용됩니다.
 
 > [!NOTE]
-> 부분적으로 신뢰할 수 있는 애플리케이션을 개발할 때 대상 호스트에 대한 권한 요구 사항을 알고 있어야 합니다. 일부 호스트에서 허용되지 않는 리소스를 사용하는 애플리케이션을 개발할 수 있습니다. 이 애플리케이션은 오류 없이 컴파일되지만 호스트된 환경으로 로드될 경우 실패합니다. Visual Studio를 사용하여 애플리케이션을 개발한 경우 개발 환경에서 부분 신뢰 또는 제한된 권한 집합으로 디버깅을 사용할 수 있습니다. 자세한 내용은 [방법: 제한된 권한으로 ClickOnce 애플리케이션 디버그](/visualstudio/deployment/how-to-debug-a-clickonce-application-with-restricted-permissions)를 참조하세요. ClickOnce 애플리케이션에 제공된 권한 계산 기능은 부분적으로 신뢰할 수 있는 애플리케이션에도 사용할 수 있습니다.
-
-[맨 위로 이동](#top)
-
-<a name="level"></a>
+> 부분적으로 신뢰할 수 있는 애플리케이션을 개발할 때 대상 호스트에 대한 권한 요구 사항을 알고 있어야 합니다. 일부 호스트에서 허용되지 않는 리소스를 사용하는 애플리케이션을 개발할 수 있습니다. 이 애플리케이션은 오류 없이 컴파일되지만 호스트된 환경으로 로드될 경우 실패합니다. Visual Studio를 사용하여 애플리케이션을 개발한 경우 개발 환경에서 부분 신뢰 또는 제한된 권한 집합으로 디버깅을 사용할 수 있습니다. 자세한 내용은 [방법: 제한된 사용 권한으로 ClickOnce 애플리케이션 디버그](/visualstudio/deployment/how-to-debug-a-clickonce-application-with-restricted-permissions)을 참조하세요. ClickOnce 애플리케이션에 제공된 권한 계산 기능은 부분적으로 신뢰할 수 있는 애플리케이션에도 사용할 수 있습니다.
 
 ## <a name="specifying-the-transparency-level"></a>투명도 수준 지정
 
@@ -108,15 +92,11 @@ ms.locfileid: "70206059"
 
 - 투명 코드가 완전 신뢰에서 실행될 경우 유해한 작업을 수행할 가능성이 있습니다.
 
-[맨 위로 이동](#top)
-
-<a name="enforcement"></a>
-
 ## <a name="transparency-enforcement"></a>투명도 적용
 
 투명도 규칙은 투명도가 계산될 때까지 적용되지 않습니다. 적용 시 투명도 규칙에 위반되면 <xref:System.InvalidOperationException>이 throw됩니다. 투명도 계산 시간은 여러 요소에 따라 다르고 예측할 수 없습니다. 가능한 한 늦게 계산됩니다. .NET Framework 4에서 어셈블리 수준 투명도 계산은 .NET Framework 2.0에서 수행 하는 것 보다 더 빨리 발생 합니다. 투명도 계산은 필요한 시간 이내에 수행됩니다. 이는 메서드가 컴파일되고 해당 메서드에서 오류가 감지되는 시점을 JIT(Just-In-Time ) 컴파일러가 변경하는 방법과 비슷합니다. 코드에 투명도 오류가 없으면 투명도 계산이 표시되지 않습니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [보안 투명 코드, 수준 1](security-transparent-code-level-1.md)
 - [보안 투명 코드, 수준 2](security-transparent-code-level-2.md)

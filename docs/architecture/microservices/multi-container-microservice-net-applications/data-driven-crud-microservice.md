@@ -2,12 +2,12 @@
 title: 단순 데이터 기반 CRUD 마이크로 서비스 만들기
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | 마이크로 서비스 애플리케이션의 컨텍스트 내에서 단순 CRUD(데이터 기반) 마이크로 서비스의 생성을 이해합니다.
 ms.date: 01/07/2019
-ms.openlocfilehash: db179d9d7d5be5b03f8409b823ee87e71e1c7135
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 56cec488c22b0f3b45b9c1dae9d2f4fd7ef7beaa
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771199"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737283"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>단순 데이터 기반 CRUD 마이크로 서비스 만들기
 
@@ -17,17 +17,17 @@ ms.locfileid: "72771199"
 
 설계의 관점에서 보면 이런 종류의 컨테이너화된 마이크로 서비스는 매우 간단합니다. 아마도 풀어야 할 문제가 간단하거나 구현이 개념 증명 수준에 불과할 것입니다.
 
-![단순 CRUD 마이크로 서비스는 내부 설계 패턴입니다.](./media/image4.png)
+![단순 CRUD 마이크로 서비스 내부 디자인 패턴을 보여 주는 다이어그램](./media/data-driven-crud-microservice/internal-design-simple-crud-microservices.png)
 
 **그림 6-4** 간단한 CRUD 마이크로 서비스를 위한 내부 설계
 
 이러한 종류의 단순 데이터 중심 서비스 예로 eShopOnContainers 애플리케이션 샘플의 카탈로그 마이크로 서비스가 있습니다. 이런 종류의 서비스는 모든 기능을 데이터 모델, 비즈니스 논리, 데이터 액세스 코드에 대한 클래스를 포함한 단일 ASP.NET Core Web API 프로젝트에서 구현합니다. 또한 관련 데이터를 SQL Server를 실행하는 데이터베이스에 개발/테스트용 다른 컨테이너로 저장하지만 그림 6-5에서처럼 일반 SQL Server 호스트가 될 수도 있습니다.
 
-![논리 카탈로그 마이크로 서비스에는 카탈로그 데이터베이스가 포함되어 있으며 동일한 Docker 호스트에 위치하거나 위치하지 않을 수 있습니다. 프로덕션이 아닌 개발의 경우에 동일한 Docker 호스트에 데이터베이스를 포함하는 것이 좋습니다.](./media/image5.png)
+![데이터 기반/CRUD 마이크로 서비스 컨테이너를 보여 주는 다이어그램](./media/data-driven-crud-microservice/simple-data-driven-crud-microservice.png)
 
 **그림 6-5** 단순 데이터 기반 CRUD 마이크로 서비스 설계
 
-이런 종류의 서비스를 개발할 때는 [ASP.NET Core](https://docs.microsoft.com/aspnet/core/) 및 데이터 액세스 API나 [Entity Framework Core](https://docs.microsoft.com/ef/core/index) 같은 ORM만 있으면 됩니다. [Swashbuckle](https://github.com/domaindrivendev/Swashbuckle.AspNetCore)을 통해 [Swagger](https://swagger.io/) 메타데이터를 자동으로 생성하여 다음 섹션에서 설명한 대로 서비스가 제공하는 항목의 설명을 제공할 수 있습니다.
+이전 다이어그램에서는 카탈로그 데이터베이스(동일한 Docker 호스트에 위치하거나 위치하지 않을 수 있음)를 포함하는 논리 카탈로그 마이크로 서비스를 보여줍니다. 프로덕션이 아닌 개발의 경우에는 동일한 Docker 호스트에 데이터베이스를 포함하는 것이 좋습니다. 이런 종류의 서비스를 개발할 때는 [ASP.NET Core](https://docs.microsoft.com/aspnet/core/) 및 데이터 액세스 API나 [Entity Framework Core](https://docs.microsoft.com/ef/core/index) 같은 ORM만 있으면 됩니다. [Swashbuckle](https://github.com/domaindrivendev/Swashbuckle.AspNetCore)을 통해 [Swagger](https://swagger.io/) 메타데이터를 자동으로 생성하여 다음 섹션에서 설명한 대로 서비스가 제공하는 항목의 설명을 제공할 수 있습니다.
 
 Docker 컨테이너 안에서 SQL Server 같은 데이터베이스 서버를 실행하면 클라우드나 온-프레미스에 데이터베이스를 프로비전하지 않고도 모든 종속성을 실행할 수 있기 때문에 개발 환경에 매우 유용합니다. 통합 테스트를 실행할 때는 매우 편리합니다. 그러나 프로덕션 환경의 경우 컨테이너에서 데이터베이스 서버를 실행하는 것은 권장되지 않습니다. 이 방법에서는 일반적으로 가용성이 높지 않기 때문입니다. Azure의 프로덕션 환경에서는 높은 가용성과 확장성을 제공할 수 있는 Azure SQL DB 또는 기타 데이터베이스 기술을 사용하는 것이 좋습니다. 예를 들어 NoSQL 방법의 경우 CosmosDB를 선택할 수 있습니다.
 
@@ -37,15 +37,17 @@ Docker 컨테이너 안에서 SQL Server 같은 데이터베이스 서버를 실
 
 .NET Core 및 Visual Studio를 사용하여 단순 CRUD 마이크로 서비스를 구현하려면 먼저 그림 6-6에서처럼 Linux Docker 호스트에서 실행될 수 있도록 .NET Core에서 실행하는 단순 ASP.NET Core Web API 프로젝트를 만듭니다.
 
-![ASP.NET Core 웹 API 프로젝트를 만들려면 먼저 ASP.NET Core 웹 애플리케이션을 선택한 다음, API 형식을 선택합니다.](./media/image6.png)
+![프로젝트의 설정을 보여 주는 Visual Studio의 스크린샷](./media/data-driven-crud-microservice/create-asp-net-core-web-api-project.png)
 
 **그림 6-6** Visual Studio에서 ASP.NET Core Web API 프로젝트 만들기
 
-프로젝트를 만든 후에는 다른 Web API 프로젝트에서와 마찬가지로 Entity Framework API 또는 타 API를 사용하여 MVC 컨트롤러를 구현할 수 있습니다. 새 Web API 프로젝트에서는 마이크로 서비스의 종속성이 ASP.NET Core 자체 밖에 없습니다. 내부적으로 *Microsoft.AspNetCore.All* 종속성 내에서는 그림 6-7에서처럼 Entity Framework 및 기타 여러 .NET Core NuGet 패키지를 참조하고 있습니다.
+ASP.NET Core 웹 API 프로젝트를 만들려면 먼저 ASP.NET Core 웹 애플리케이션을 선택한 다음, API 형식을 선택합니다. 프로젝트를 만든 후에는 다른 Web API 프로젝트에서와 마찬가지로 Entity Framework API 또는 타 API를 사용하여 MVC 컨트롤러를 구현할 수 있습니다. 새 Web API 프로젝트에서는 마이크로 서비스의 종속성이 ASP.NET Core 자체 밖에 없습니다. 내부적으로 *Microsoft.AspNetCore.All* 종속성 내에서는 그림 6-7에서처럼 Entity Framework 및 기타 여러 .NET Core NuGet 패키지를 참조하고 있습니다.
 
-![API 프로젝트에는 모든 필수 패키지에 대한 참조를 포함하는 Microsoft.AspNetCore.App NuGet 패키지 참조가 포함되어 있습니다. 여기에는 다른 패키지도 포함할 수 있습니다.](./media/image8.png)
+![Catalog.Api의 NuGet 종속성을 보여 주는 VS의 스크린샷](./media/data-driven-crud-microservice/simple-crud-web-api-microservice-dependencies.png)
 
 **그림 6-7** 간단한 CRUD Web API 마이크로 서비스의 종속성
+
+API 프로젝트에는 모든 필수 패키지에 대한 참조를 포함하는 Microsoft.AspNetCore.App NuGet 패키지에 대한 참조가 포함되어 있습니다. 여기에는 다른 패키지도 포함할 수 있습니다.
 
 ### <a name="implementing-crud-web-api-services-with-entity-framework-core"></a>Entity Framework Core를 사용한 CRUD Web API 구현
 
@@ -340,11 +342,11 @@ Swashbuckle은 API Explorer 및 Swagger 또는 [swagger-ui](https://github.com/s
 
 즉, 개발자가 API를 사용하는 데 도움이 되는 좋은 검색 UI로 API를 보완할 수 있습니다. 자동으로 생성되므로 코드와 유지 관리 작업이 매우 적기 때문에 API 구축에 전념할 수 있습니다. API Explorer의 결과는 그림 6-8과 유사합니다.
 
-![Swashbuckle 생성 Swagger UI API 설명서에는 게시된 모든 작업이 포함됩니다.](./media/image9.png)
+![eShopOContainers API가 표시된 Swagger API 탐색기의 스크린샷](./media/data-driven-crud-microservice/swagger-metadata-eshoponcontainers-catalog-microservice.png)
 
 **그림 6-8** Swagger 메타 데이터 기반 Swashbuckle API 탐색기 -eShopOnContainers 카탈로그 마이크로 서비스
 
-여기서 가장 중요한 것은 API 탐색기가 아닙니다. Swagger 메타 데이터에서 스스로를 설명할 수 있는 Web API가 있으면 여러 플랫폼을 대상으로 할 수 있는 클라이언트 프록시-클래스 코드 생성기를 포함하여 Swagger 기반 도구에서 API를 자연스럽게 사용할 수 있습니다. 예를 들어, 설명한 것처럼 [AutoRest](https://github.com/Azure/AutoRest)는 .NET 클라이언트 클래스를 자동으로 생성합니다. 그렇지만 API 클라이언트 라이브럴, 서버 스텁, 설명서의 코드 자동 생성을 지원하는 [swagger-codegen](https://github.com/swagger-api/swagger-codegen) 같은 다른 도구도 사용할 수 있습니다.
+Swashbuckle 생성 Swagger UI API 설명서에는 게시된 모든 작업이 포함됩니다. 여기서 가장 중요한 것은 API 탐색기가 아닙니다. Swagger 메타 데이터에서 스스로를 설명할 수 있는 Web API가 있으면 여러 플랫폼을 대상으로 할 수 있는 클라이언트 프록시-클래스 코드 생성기를 포함하여 Swagger 기반 도구에서 API를 자연스럽게 사용할 수 있습니다. 예를 들어, 설명한 것처럼 [AutoRest](https://github.com/Azure/AutoRest)는 .NET 클라이언트 클래스를 자동으로 생성합니다. 그렇지만 API 클라이언트 라이브럴, 서버 스텁, 설명서의 코드 자동 생성을 지원하는 [swagger-codegen](https://github.com/swagger-api/swagger-codegen) 같은 다른 도구도 사용할 수 있습니다.
 
 현재 Swashbuckle은 ASP.NET Core 애플리케이션에 대해 높은 수준의 메타패키지 [Swashbuckle.AspNetCore](https://www.nuget.org/packages/Swashbuckle.AspNetCore)에서 다섯 개의 내부 NuGet 패키지로 구성되어 있습니다.
 
@@ -401,13 +403,13 @@ public class Startup
 
 앞서 본 것처럼 URL에 대해 Swashbuckle에서 생성된 UI는 `http://<your-root-url>/swagger`와 같습니다. 그림 6-9에서는 모든 API 메서드를 테스트하는 방법을 확인할 수 있습니다.
 
-![Swagger UI API 세부 정보에서는 응답의 예제를 보여주고, 개발자 검색에 적합한 실제 API를 실행하는 데 사용될 수 있습니다.](./media/image10.png)
+![사용 가능한 테스트 도구를 보여 주는 Swagger UI의 스크린샷](./media/data-driven-crud-microservice/swashbuckle-ui-testing.png)
 
 **그림 6-9** 카탈로그/항목 API 메서드를 테스트하는 Swashbuckle UI
 
-그림 6-10은 [Postman](https://www.getpostman.com/)을 사용하여 `http://<your-root-url>/swagger/v1/swagger.json`을 요청하면 아래의 도구에서 사용한 eShopOnContainers 마이크로 서비스에서 생성된 Swagger JSON 메타데이터를 보여 줍니다.
+Swagger UI API 세부 정보에서는 응답의 예제를 보여주고, 개발자 검색에 적합한 실제 API를 실행하는 데 사용될 수 있습니다. 그림 6-10은 [Postman](https://www.getpostman.com/)을 사용하여 `http://<your-root-url>/swagger/v1/swagger.json`을 요청하면 아래의 도구에서 사용한 eShopOnContainers 마이크로 서비스에서 생성된 Swagger JSON 메타데이터를 보여 줍니다.
 
-![Swagger JSON 메타데이터를 보여주는 샘플 Postman UI](./media/image11.png)
+![Swagger JSON 메타데이터를 보여 주는 샘플 Postman UI의 스크린샷](./media/data-driven-crud-microservice/swagger-json-metadata.png)
 
 **그림 6-10** Swagger JSON 메타데이터
 

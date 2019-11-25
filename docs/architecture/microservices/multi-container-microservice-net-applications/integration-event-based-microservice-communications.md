@@ -2,20 +2,20 @@
 title: 마이크로 서비스(통합 이벤트) 간 이벤트 기반 통신 구현
 description: 컨테이너화된 .NET 애플리케이션용 .NET Microservices 아키텍처 | 마이크로 서비스 간의 이벤트 기반 통신을 구현하기 위해 통합 이벤트를 이해합니다.
 ms.date: 10/02/2018
-ms.openlocfilehash: 8a5cfa280063da742dc1693905fc44cf870c1fcc
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 70566745dc084ba9016a850ad749fefb958e89ec
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68676100"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737132"
 ---
 # <a name="implementing-event-based-communication-between-microservices-integration-events"></a>마이크로 서비스(통합 이벤트) 간 이벤트 기반 통신 구현
 
 앞서 설명한 대로 이벤트 기반 통신을 사용할 경우 마이크로 서비스는 비즈니스 엔터티를 업데이트할 때처럼 주목할 만한 무엇인가 발생할 때 이벤트를 게시합니다. 다른 마이크로 서비스는 해당 이벤트를 구독합니다. 마이크로 서비스가 이벤트를 수신하면 자체 비즈니스 엔터티를 업데이트할 수 있고 더 많은 이벤트가 게시되도록 할 수 있습니다. 이는 최종 일관성 개념의 핵심입니다. 해당 게시/구독 시스템은 일반적으로 이벤트 버스의 구현을 통해 수행됩니다. 이벤트 버스는 이벤트를 구독하고 취소하고 또 이벤트를 게시하기 위해 필요한 API를 갖춘 인터페이스로서 설계 가능합니다. 이벤트 버스는 비동기 통신을 지원하는 메시징 큐 또는 서비스 및 게시/구독 모델 같은 프로세스 간 통신 또는 메시징 서비스에 기반한 하나 이상의 구현이 가능합니다.
 
-다양한 서비스로 확장하는 비즈니스 트랜잭션을 구현할 이벤트를 사용하여 해당 서비스 간의 최종 일관성을 제공합니다. 결국 일관된 트랜잭션은 일련의 배포된 작업으로 구성돼 있습니다. 각 작업에서 마이크로 서비스는 비즈니스 엔터티를 업데이트하고 다음 작업을 트리거하는 이벤트를 게시합니다.
+다양한 서비스로 확장하는 비즈니스 트랜잭션을 구현할 이벤트를 사용하여 해당 서비스 간의 최종 일관성을 제공합니다. 결국 일관된 트랜잭션은 일련의 배포된 작업으로 구성돼 있습니다. 각 작업에서 마이크로 서비스는 비즈니스 엔터티를 업데이트하고 다음 작업을 트리거하는 이벤트를 게시합니다. 아래 그림 6-18에서는 및 이벤트 버스를 통해 게시된 PriceUpdated 이벤트를 보여줍니다. 따라서 가격 업데이트가 장바구니 및 기타 마이크로 서비스로 전파됩니다.
 
-![이벤트 버스를 통해 이벤트 기반 통신을 사용하는 카탈로그 마이크로 서비스로, 장바구니 및 추가 마이크로 서비스와의 최종 일관성을 달성합니다.](./media/image19.png)
+![이벤트 버스와의 비동기 이벤트 기반 통신을 보여 주는 다이어그램](./media/integration-event-based-microservice-communications/event-driven-communication.png)
 
 **그림 6-18**. 이벤트 버스에 기반한 이벤트 구동 통신
 
@@ -64,11 +64,11 @@ public class ProductPriceChangedIntegrationEvent : IntegrationEvent
 
 이벤트 버스는 그림 6-19에 나와 있는 것처럼 서로를 명확히 인식하기 위한 구성 요소를 요구하지 않고 마이크로 서비스 간의 게시/구독 스타일 통신을 허용합니다.
 
-![기본 pub/sub 패턴, 마이크로 서비스 A는 게시자가 구독자를 알 필요 없이, 구독하는 마이크로 서비스 B와 C에 배포되는 이벤트 버스에 게시됩니다.](./media/image20.png)
+![기본 게시/구독 패턴을 보여 주는 다이어그램](./media/integration-event-based-microservice-communications/publish-subscribe-basics.png)
 
 **그림 6-19**. 이벤트 버스를 사용한 게시/구독 기본 사항
 
-이벤트 버스는 관찰자 패턴 및 게시-구독 패턴과 관련이 있습니다.
+위 다이어그램에서는 마이크로 서비스 A는 게시자가 구독자를 알 필요 없이, 구독하는 마이크로 서비스 B와 C에 배포되는 이벤트 버스에 게시됨을 보여줍니다. 이벤트 버스는 관찰자 패턴 및 게시-구독 패턴과 관련이 있습니다.
 
 ### <a name="observer-pattern"></a>관찰자 패턴
 
@@ -92,11 +92,11 @@ public class ProductPriceChangedIntegrationEvent : IntegrationEvent
 
 그림 6-20에서는 RabbitMQ, Azure Service Bus 또는 다른 이벤트/메시지 브로커 같은 메시징 인프라 기술을 기반으로 다중 구현을 통해 이벤트 버스의 추상적 개념을 확인할 수 있습니다.
 
-![RabbitMQ Azure Service bus 등 여러 기술로 구현할 수 있도록 인터페이스를 통해 이벤트 버스를 정의하는 것이 좋습니다.](./media/image21.png)
+![이벤트 버스 추상화 레이어 추가를 보여 주는 다이어그램](./media/integration-event-based-microservice-communications/multiple-implementations-event-bus.png)
 
 **그림 6-20.** 이벤트 버스의 다중 구현
 
-그러나 전에 언급 한 것 처럼 고유한 추상적 개념(이벤트 버스 인터페이스) 사용은 추상적 개념의 지원을 받는 기본 이벤트 버스 기능이 필요한 경우에만 유용합니다. 더 풍부한 서비스 버스 기능이 필요하면 고유한 추상적 개념 대신에 선호하는 상업용 서비스 버스가 제공하는 추상적 개념과 API를 사용해야 할지도 모릅니다.
+RabbitMQ Azure Service bus 등 여러 기술로 구현할 수 있도록 인터페이스를 통해 이벤트 버스를 정의하는 것이 좋습니다. 그러나 전에 언급 한 것 처럼 고유한 추상적 개념(이벤트 버스 인터페이스) 사용은 추상적 개념의 지원을 받는 기본 이벤트 버스 기능이 필요한 경우에만 유용합니다. 더 풍부한 서비스 버스 기능이 필요하면 고유한 추상적 개념 대신에 선호하는 상업용 서비스 버스가 제공하는 추상적 개념과 API를 사용해야 할지도 모릅니다.
 
 ### <a name="defining-an-event-bus-interface"></a>이벤트 버스 인터페이스 정의
 

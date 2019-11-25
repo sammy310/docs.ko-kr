@@ -2,12 +2,12 @@
 title: 상태 모니터링
 description: 상태 모니터링을 구현하는 한 가지 방법을 살펴봅니다.
 ms.date: 01/07/2019
-ms.openlocfilehash: 2d43efa7b6cfb855a033ee4d766c64c2472ceb36
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f1d63e04bbea95fcf0a9f9d3b50aef0e7d4a830e
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73094075"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73732864"
 ---
 # <a name="health-monitoring"></a>상태 모니터링
 
@@ -123,7 +123,7 @@ eShopOnContainers의 마이크로 서비스는 여러 가지 서비스에 의존
 
 예를 들어, `Catalog.API` 마이크로 서비스에는 다음과 같은 NuGet 패키지가 추가되었습니다.
 
-![AspNetCore.Diagnostics.HealthChecks NuGet 패키지가 참조된 Catalog.API 프로젝트의 솔루션 탐색기 뷰](./media/image6.png)
+![AspNetCore.Diagnostics.HealthChecks NuGet 패키지의 스크린샷](./media/monitor-app-health/aspnet-core-diagnostics-health-checks.png)
 
 **그림 8-7**. AspNetCore.Diagnostics.HealthChecks를 사용하여 Catalog.API에 구현된 사용자 지정 상태 검사
 
@@ -191,7 +191,7 @@ app.UseHealthChecks("/hc", new HealthCheckOptions()
 
 이 문서에 설명된 대로 상태 검사를 구성했으며 Docker에서 마이크로 서비스가 실행 중인 경우 브라우저에서 정상인지 여부를 직접 확인할 수 있습니다. 그림 8-8과 같이 컨테이너 포트를 Docker 호스트에 게시해야 외부 Docker 호스트 IP 또는 `localhost`를 통해 컨테이너에 액세스할 수 있습니다.
 
-![상태 검사에서 반환된 JSON 응답의 브라우저 보기](./media/image7.png)
+![상태 검사에서 반환된 JSON 응답의 스크린샷](./media/monitor-app-health/health-check-json-response.png)
 
 **그림 8-8**. 브라우저에서 단일 서비스의 성능 상태 검사
 
@@ -199,13 +199,13 @@ app.UseHealthChecks("/hc", new HealthCheckOptions()
 
 ## <a name="use-watchdogs"></a>Watchdog 사용
 
-Watchdog는 앞에서 소개한 `HealthChecks` 라이브러리로 쿼리하여 서비스 전반의 상태와 로드를 감시하고 마이크로 서비스에 대한 상태를 보고할 수 있는 별도의 서비스입니다. 이렇게 하면 단일 서비스 보기를 기반으로 하여 감지되지 않는 오류를 방지할 수 있습니다. 또한 Watchdog은 사용자가 개입하지 않아도 알려진 조건에 대한 수정 작업을 수행할 수 있는 코드를 호스팅하기에 좋은 출발점이기도 합니다.
+Watchdog는 앞에서 소개한 `HealthChecks` 라이브러리로 쿼리하여 서비스 전반의 상태와 로드를 감시하고 마이크로 서비스에 대한 상태를 보고할 수 있는 별도의 서비스입니다. 이렇게 하면 단일 서비스의 보기를 기반으로 하여 검색되지 않는 오류를 방지할 수 있습니다. 또한 Watchdog은 사용자 개입 없이 알려진 조건에 대한 수정 작업을 수행할 수 있는 코드를 호스팅하는 데 적합한 위치입니다.
 
 eShopOnContainers 샘플에는 그림 8-9와 같이 샘플 상태 검사 보고서를 표시하는 웹 페이지가 포함되어 있습니다. 단지 eShopOnContainers의 마이크로 서비스 및 웹 애플리케이션 상태만 표시하므로 가장 간단한 Watchdog입니다. 일반적으로 비정상 상태가 검색되면 Watchdog에서 작업을 수행합니다.
 
 다행히도 [AspNetCore.Diagnostics.HealthChecks](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks)는 [AspNetCore.HealthChecks.UI](https://www.nuget.org/packages/AspNetCore.HealthChecks.UI/) NuGet 패키지도 제공합니다. 이것을 사용하여 구성된 URI의 상태 검사 결과를 표시할 수 있습니다.
 
-![eShopOnContainers에서 모든 마이크로 서비스의 상태를 보여주는 WebStatus 앱의 브라우저 보기](./media/image8.png)
+![상태 검사 UI eShopOnContainers 상태의 스크린샷](./media/monitor-app-health/health-check-status-ui.png)
 
 **그림 8-9**. eShopOnContainers의 샘플 상태 검사 보고서
 
@@ -265,13 +265,13 @@ Azure Service Fabric은 단순한 상태 검사보다 더 향상된 고급 기�
 
 ## <a name="advanced-monitoring-visualization-analysis-and-alerts"></a>고급 모니터링: 시각화, 분석 및 경고
 
-모니터링의 마지막 부분은 이벤트 스트림을 시각화하고, 서비스 성능에 대해 보고하고, 문제가 검색되면 경고하는 것입니다. 이러한 모니터링 측면에 대해 서로 다른 솔루션을 사용할 수 있습니다.
+모니터링의 마지막 부분은 이벤트 스트림을 시각화하고, 서비스 성능에 대해 보고하고, 문제가 검색되면 경고하는 것입니다. 이 모니터링 측면에 대해 서로 다른 솔루션을 사용할 수 있습니다.
 
 [AspNetCore.Diagnostics.HealthChecks](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks)에 대해 설명할 때 보여 준 사용자 지정 페이지와 같이 서비스 상태를 표시하는 간단한 사용자 지정 애플리케이션을 사용할 수 있습니다. 또는 [Azure Monitor](https://azure.microsoft.com/services/monitor/)와 같은 고급 도구를 사용하여 이벤트 스트림에 따라 경고를 발생시킬 수 있습니다.
 
 마지막으로 모든 이벤트 스트림을 저장하는 경우 Microsoft Power BI 또는 기타 솔루션(예: Kibana 또는 Splunk)을 사용하여 데이터를 시각화할 수 있습니다.
 
-## <a name="additional-resources"></a>추가 리소스
+## <a name="additional-resources"></a>추가 자료
 
 - **ASP.NET Core용 HealthChecks 및 HealthChecks UI** \
   <https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks>

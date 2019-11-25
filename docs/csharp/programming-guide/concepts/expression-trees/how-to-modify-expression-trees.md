@@ -1,15 +1,15 @@
 ---
-title: '방법: 식 트리 수정(C#)'
+title: 식 트리 수정 방법(C#)
 ms.date: 07/20/2015
 ms.assetid: 9b0cd8c2-457e-4833-9e36-31e79545f442
-ms.openlocfilehash: 7875cf1ccca8866cc87ebec80701ad77ad2bea2d
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: e921c594497d02f5eb16cc60294e947e83636d7a
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69595064"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73969899"
 ---
-# <a name="how-to-modify-expression-trees-c"></a>방법: 식 트리 수정(C#)
+# <a name="how-to-modify-expression-trees-c"></a>식 트리 수정 방법(C#)
 이 항목에서는 식 트리를 수정하는 방법을 보여 줍니다. 식 트리는 변경할 수 없으며, 직접 수정할 수 없음을 의미합니다. 식 트리를 변경하려면 기존 식 트리의 복사본을 만들고, 해당 복사본을 만들 때 필요한 사항을 변경해야 합니다. <xref:System.Linq.Expressions.ExpressionVisitor> 클래스를 사용하여 기존 식 트리를 트래버스하고 방문하는 각 노드를 복사할 수 있습니다.  
   
 ### <a name="to-modify-an-expression-tree"></a>식 트리를 수정하려면  
@@ -72,5 +72,5 @@ ms.locfileid: "69595064"
   
 ## <a name="see-also"></a>참고 항목
 
-- [방법: 식 트리 실행(C#)](./how-to-execute-expression-trees.md)
+- [식 트리 실행 방법(C#)](./how-to-execute-expression-trees.md)
 - [식 트리(C#)](./index.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - casting [C#]
 - converting types [C#]
 ms.assetid: 568df58a-d292-4b55-93ba-601578722878
-ms.openlocfilehash: fd5960f9820e90d49afe3ba748136f1a2d3ce690
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 33195ef77e2f51e52cd9ed69a11b12bed8d9ead1
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774106"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73969619"
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>캐스팅 및 형식 변환(C# 프로그래밍 가이드)
 
@@ -83,7 +83,7 @@ Giraffe g2 = (Giraffe) a;
   
  [!code-csharp[csProgGuideTypes#41](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#41)]  
   
- C#에서는 실제로 캐스트를 수행하기 전에 호환성을 테스트할 수 있도록 [is](../../language-reference/operators/type-testing-and-cast.md#is-operator) 연산자를 제공합니다. 자세한 내용은 [방법: 패턴 일치, as 및 is 연산자를 사용하여 안전하게 캐스트](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md)를 참조하세요.  
+ C#에서는 실제로 캐스트를 수행하기 전에 호환성을 테스트할 수 있도록 [is](../../language-reference/operators/type-testing-and-cast.md#is-operator) 연산자를 제공합니다. 자세한 내용은 [패턴 일치, as 및 is 연산자를 사용하여 안전하게 캐스트하는 방법](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md)을 참조하세요.  
   
 ## <a name="c-language-specification"></a>C# 언어 사양
 

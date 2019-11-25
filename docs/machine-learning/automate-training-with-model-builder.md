@@ -4,12 +4,12 @@ description: ML.NET 모델 작성기를 사용하여 기계 학습 모델을 자
 author: natke
 ms.date: 08/07/2019
 ms.custom: overview
-ms.openlocfilehash: 77b5e75fede1a4aa93eadcf7e21591d82f565cab
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 77fe56dba3532617ad9fb0c89bfaac7c8e031ce7
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929478"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971520"
 ---
 # <a name="what-is-model-builder-and-how-does-it-work"></a>모델 작성기란 무엇이며 어떻게 작동하나요?
 
@@ -60,7 +60,7 @@ ML.NET 모델 작성기는 사용자 지정 기계 학습 모델을 빌드, 학�
 
 #### <a name="predict-a-category-when-there-are-three-or-more-categories"></a>범주 예측(세 개 이상의 범주가 있는 경우)
 
-다중 클래스 분류는 데이터를 세 개 이상의 클래스로 분류하는 데 사용될 수 있습니다. 
+다중 클래스 분류는 데이터를 세 개 이상의 클래스로 분류하는 데 사용될 수 있습니다.
 
 ![문서 및 제품 분류, 지원 티켓 라우팅 및 고객 이슈 우선 순위 지정을 포함한 다중 클래스 분류의 예](media/multiclass-classification-examples.png)
 
@@ -113,7 +113,7 @@ ML.NET 모델 작성기는 사용자 지정 기계 학습 모델을 빌드, 학�
 |-|-|-|-|-|
 |가격 예측|회귀|[택시 요금 데이터](https://github.com/dotnet/machinelearning-samples/blob/master/datasets/taxi-fare-train.csv)|요금|운행 시간, 거리|
 |변칙 검색|이진 분류|[제품 판매 데이터](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv)|제품 판매|월|
-|정서 분석|이진 분류|[웹 사이트 주석 데이터](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/wikipedia-detox-250-line-data.tsv)|레이블(부정적인 감정인 경우 0, 긍정적인 감정인 경우 1)|주석, 연도|
+|감정 분석|이진 분류|[웹 사이트 주석 데이터](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/wikipedia-detox-250-line-data.tsv)|레이블(부정적인 감정인 경우 0, 긍정적인 감정인 경우 1)|주석, 연도|
 |부정 행위 감지|이진 분류|[신용 카드 데이터](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/BinaryClassification_CreditCardFraudDetection/CreditCardFraudDetection.Trainer/assets/input/creditcardfraud-dataset.zip)|클래스(사기일 경우 1, 그렇지 않으면 0)|수량, V1-V28(익명화된 기능)|
 |텍스트 분류|다중 클래스 분류|[GitHub 문제 데이터](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/end-to-end-apps/MulticlassClassification-GitHubLabeler/GitHubLabeler/Data/corefx-issues-train.tsv)|영역|제목, 설명|
 

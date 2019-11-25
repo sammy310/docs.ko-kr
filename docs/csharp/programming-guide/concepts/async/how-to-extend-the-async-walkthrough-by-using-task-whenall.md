@@ -1,15 +1,15 @@
 ---
-title: '방법: Task.WhenAll을 사용하여 비동기 연습 확장(C#)'
+title: Task.WhenAll을 사용하여 비동기 연습을 확장하는 방법(C#)
 ms.date: 07/20/2015
 ms.assetid: f6927ef2-dc6c-43f8-bc82-bbeac42de423
-ms.openlocfilehash: f44595a409113e4b7ff3ad2c6d0712e5debaad08
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: afd7dda4e876b7faa54ae4a8e62d640d2b9aaf07
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040643"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73970029"
 ---
-# <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-c"></a>방법: Task.WhenAll을 사용하여 비동기 연습 확장(C#)
+# <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-c"></a>Task.WhenAll을 사용하여 비동기 연습을 확장하는 방법(C#)
 
 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> 메서드를 사용하여 [연습: async 및 await를 사용하여 웹에 액세스(C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)에서 비동기 솔루션의 성능을 개선할 수 있습니다. 이 메서드는 작업 컬렉션으로 표시되는 여러 개의 비동기 작업을 비동기적으로 기다립니다.
 

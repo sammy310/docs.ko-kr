@@ -13,12 +13,12 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: 908c3fb0baacc7fd75dae875e9a9d49a08fe5401
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: a88159085e48d69550320ffabe3035f549c78653
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459719"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975601"
 ---
 # <a name="security-wpf"></a>보안(WPF)
 <a name="introduction"></a>Windows Presentation Foundation (WPF) 독립 실행형 및 브라우저에서 호스팅되는 응용 프로그램을 개발 하는 경우 보안 모델을 고려해 야 합니다. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 독립 실행형 응용 프로그램은 Windows Installer (.msi), XCopy 또는 ClickOnce를 사용 하 여 배포 되었는지와 상관 없이 무제한 권한 (CAS**FullTrust** 권한 집합)으로 실행 됩니다. ClickOnce를 포함한 부분 신뢰, 독립 실행형 WPF 애플리케이션 배포가 지원되지 않습니다. 그러나 완전 신뢰 호스트 응용 프로그램은 .NET Framework 추가 기능 모델을 사용 하 여 부분 신뢰 <xref:System.AppDomain>를 만들 수 있습니다. 자세한 내용은 [WPF 추가 기능 개요](./app-development/wpf-add-ins-overview.md)를 참조 하세요.  
@@ -209,7 +209,7 @@ ms.locfileid: "73459719"
   
  Windows Internet Explorer에서 WPF <xref:System.Windows.Controls.WebBrowser> 컨트롤을 포함 하는 부분 신뢰 XBAP (XAML 브라우저 응용 프로그램)를 실행 하는 경우 WPF는 Internet Explorer 프로세스의 주소 공간에서 WebBrowser ActiveX 컨트롤을 호스팅합니다. WebBrowser ActiveX 컨트롤은 Internet Explorer 프로세스에서 호스트 되므로 Internet Explorer에 대 한 모든 기능 컨트롤은 WebBrowser ActiveX 컨트롤에도 사용할 수 있습니다.  
   
- 또한 Internet Explorer에서 실행하는 XBAP는 일반 독립 실행형 애플리케이션보다 추가된 보안 수준이 제공됩니다. 이 추가 보안은 Internet Explorer와 따라서 WebBrowser ActiveX 컨트롤은 기본적으로 [!INCLUDE[TLA#tla_winvista](../../../includes/tlasharptla-winvista-md.md)] 및 [!INCLUDE[win7](../../../includes/win7-md.md)]에서 보호 모드로 실행 되기 때문입니다. 보호 된 모드에 대 한 자세한 내용은 [보호 모드 Internet Explorer 이해 및 작업](https://go.microsoft.com/fwlink/?LinkId=179393)을 참조 하세요.  
+ 또한 Internet Explorer에서 실행하는 XBAP는 일반 독립 실행형 애플리케이션보다 추가된 보안 수준이 제공됩니다. 이 추가 보안은 Internet Explorer 및 WebBrowser ActiveX 컨트롤은 기본적으로 Windows Vista 및 [!INCLUDE[win7](../../../includes/win7-md.md)]에서 보호 모드로 실행 되기 때문입니다. 보호 된 모드에 대 한 자세한 내용은 [보호 모드 Internet Explorer 이해 및 작업](https://go.microsoft.com/fwlink/?LinkId=179393)을 참조 하세요.  
   
 > [!NOTE]
 > Firefox에서 WPF <xref:System.Windows.Controls.WebBrowser> 컨트롤을 포함 하는 XBAP를 실행 하려고 하면 인터넷 영역에 <xref:System.Security.SecurityException>이 throw 됩니다. 이는 WPF 보안 정책에 의한 것입니다.  
@@ -234,7 +234,7 @@ ms.locfileid: "73459719"
   
 - 값 이름: **APTCA_FLAG**.  
   
-- 값 형식: **REG_DWORD**  
+- 값 형식: **REG_DWORD**.  
   
 - 값 데이터: 비활성화 하려면 **1** 을 사용 합니다. 설정 하려면 **0** 입니다.  
   
@@ -258,7 +258,7 @@ ms.locfileid: "73459719"
  이 설정을 통해 외부 콘텐츠가 애플리케이션을 호스팅하는 프로세스와 별개인 프로세스로 로드됩니다. 이 프로세스는 효과적으로 호스팅 애플리케이션과 클라이언트 컴퓨터에서 격리되어 기본 인터넷 영역 권한 집합으로 제한됩니다.  
   
 > [!NOTE]
-> 독립 실행형 응용 프로그램의 <xref:System.Windows.Navigation.NavigationWindow> 또는 <xref:System.Windows.Controls.Frame>에서 느슨한 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 파일을 탐색 하는 경우에도 Presentationhost.exe 프로세스와 관련 된 WPF 브라우저 호스팅 인프라를 기반으로 하 여 구현 되는 보안 수준은 다음 보다 약간 낮습니다. 콘텐츠는 [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] 및 [!INCLUDE[win7](../../../includes/win7-md.md)]에서 Internet Explorer에 직접 로드 됩니다 (계속 Presentationhost.exe). 웹 브라우저를 사용하는 독립 실행형 WPF 애플리케이션은 Internet Explorer의 추가 보호 모드 보안 기능을 제공하지 않습니다.  
+> Presentationhost.exe 프로세스와 관련 된 <xref:System.Windows.Navigation.NavigationWindow> 또는 <xref:System.Windows.Controls.Frame>에서 느슨한 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 파일을 탐색 하는 것은 WPF 브라우저 호스팅 인프라를 기반으로 구현 되는 경우에도, Windows Vista 및 [!INCLUDE[win7](../../../includes/win7-md.md)]의 Internet Explorer에서 콘텐츠가 직접 로드 되는 경우 (여전히 Presentationhost.exe를 통해) 보다 약간 낮습니다. 웹 브라우저를 사용하는 독립 실행형 WPF 애플리케이션은 Internet Explorer의 추가 보호 모드 보안 기능을 제공하지 않습니다.  
   
 <a name="BestPractices"></a>   
 ## <a name="resources-for-developing-wpf-applications-that-promote-security"></a>보안을 승격하는 WPF 애플리케이션 개발을 위한 리소스  

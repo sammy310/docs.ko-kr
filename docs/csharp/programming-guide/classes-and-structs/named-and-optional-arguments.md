@@ -14,12 +14,12 @@ helpviewer_keywords:
 - parameters [C#], optional
 - named and optional arguments [C#]
 ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
-ms.openlocfilehash: 83e465651762fce33a62009fb3add40373a33c51
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 30475b637202d3b614ac968897e467956bc78646
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72772119"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73970516"
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>명명된 인수와 선택적 인수(C# 프로그래밍 가이드)
 C# 4에서는 명명된 인수와 선택적 인수가 도입되었습니다. *명명된 인수*를 사용하면 인수를 매개 변수 목록 내의 매개 변수 위치가 아니라 매개 변수 이름과 연결하여 특정 매개 변수에 대한 인수를 지정할 수 있습니다. *선택적 인수*를 사용하면 일부 매개 변수에 대한 인수를 생략할 수 있습니다. 두 기법 모두 메서드, 인덱서, 생성자 및 대리자에 사용할 수 있습니다.  
@@ -113,7 +113,7 @@ C# 4에서는 명명된 인수와 선택적 인수가 도입되었습니다. *�
   
  [!code-csharp[csProgGuideNamedAndOptional#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/namedandoptcom.cs#13)]  
   
- 자세한 내용과 예제는 [방법: Office 프로그래밍에 명명된 인수와 선택적 인수 사용](./how-to-use-named-and-optional-arguments-in-office-programming.md) 및 [방법: Visual C# 기능을 사용하여 Office Interop 개체에 액세스](../interop/how-to-access-office-onterop-objects.md)를 참조하세요.  
+ 자세한 내용 및 예제는 [Office 프로그래밍에 명명된 인수와 선택적 인수를 사용하는 방법](./how-to-use-named-and-optional-arguments-in-office-programming.md) 및 [방법: Visual C# 기능을 사용하여 Office Interop 개체에 액세스](../interop/how-to-access-office-onterop-objects.md)를 참조하세요.  
   
 ## <a name="overload-resolution"></a>Overload Resolution  
  명명된 인수 및 선택적 인수를 사용하면 다음과 같은 방법으로 오버로드 확인에 영향을 줍니다.  
@@ -129,7 +129,7 @@ C# 4에서는 명명된 인수와 선택적 인수가 도입되었습니다. *�
   
 ## <a name="see-also"></a>참고 항목
 
-- [방법: Office 프로그래밍에서 명명된 인수 및 선택적 인수 사용](./how-to-use-named-and-optional-arguments-in-office-programming.md)
+- [방법: Office 프로그래밍에 명명된 인수와 선택적 인수 사용](./how-to-use-named-and-optional-arguments-in-office-programming.md)
 - [dynamic 형식 사용](../types/using-type-dynamic.md)
 - [생성자 사용](./using-constructors.md)
 - [인덱서 사용](../indexers/using-indexers.md)

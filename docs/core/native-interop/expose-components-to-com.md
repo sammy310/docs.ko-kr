@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 21271167-fe7f-46ba-a81f-a6812ea649d4
 author: jkoritzinsky
 ms.author: jekoritz
-ms.openlocfilehash: 8f9624414a2b423bd43e8790d11b70ae1ca6286d
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 8d9b8eb274777a0ed019a207c6e8610cc73ec390
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216234"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973305"
 ---
 # <a name="exposing-net-core-components-to-com"></a>COM에 .NET Core 구성 요소 공개
 
@@ -76,6 +76,6 @@ GitHub의 dotnet/samples 리포지토리에는 완벽하게 작동하는 [COM �
 
 ## <a name="additional-notes"></a>추가 참고 사항
 
-.NET Framework와 달리 .NET Core에서는 .NET Core 어셈블리에서 COM 형식 라이브러리(TLB)를 생성하는 기능을 지원하지 않습니다. 인터페이스의 기본 선언을 위한 IDL 파일 또는 C++ 헤더를 수동으로 작성해야 합니다.
+.NET Framework와 달리 .NET Core에서는 .NET Core 어셈블리에서 COM 형식 라이브러리(TLB)를 생성하는 기능을 지원하지 않습니다. 이 지침에서는 COM 인터페이스의 기본 선언을 위한 IDL 파일 또는 C/C++ 헤더를 수동으로 작성해야 합니다.
 
-또한 .NET Framework와 .NET Core를 동일한 프로세스에 로드하는 기능은 지원되지 않으므로, .NET Core COM 서버를 .NET Framework COM 클라이언트 프로세스에 로드하거나 그 반대로 로드할 수는 없습니다.
+또한 .NET Framework와 .NET Core를 같은 프로세스에 로드하는 경우 진단 제한 사항이 있습니다. .NET Framework와 .NET Core를 동시에 디버그할 수 없으므로 기본 제한 사항은 관리형 구성 요소를 디버그하는 것입니다. 또한 두 런타임 인스턴스는 관리형 어셈블리를 공유하지 않습니다. 즉, 두 런타임 간에 실제 .NET 형식을 공유할 수 없으며 대신 모든 상호 작용을 노출된 COM 인터페이스 계약으로 제한해야 합니다.

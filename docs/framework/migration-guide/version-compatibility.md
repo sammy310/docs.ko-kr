@@ -7,12 +7,12 @@ helpviewer_keywords:
 - .NET Framework, compatibility with earlier versions
 - .NET Framework versions, compatibility
 ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
-ms.openlocfilehash: c3e2368bc5977d7f50ae7ecea8557c5c545e82a4
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: e0de18b5a40875d1fec2633c16688111d8f4b9ee
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73455598"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974951"
 ---
 # <a name="version-compatibility-in-the-net-framework"></a>.NET Framework의 버전 호환성
 
@@ -53,9 +53,9 @@ ms.locfileid: "73455598"
 
 - .NET Framework 3.5 앱이 있는 경우 [.NET Framework 4 마이그레이션 문제](../migration-guide/net-framework-4-migration-issues.md)도 참조하세요.
 
-- .NET Framework 2.0 앱이 있는 경우 [.NET Framework 3.5 SP1의 변경 내용](https://go.microsoft.com/fwlink/?LinkId=186989)도 참조하세요.
+- .NET Framework 2.0 앱이 있는 경우 [.NET Framework 3.5 SP1의 변경 내용](https://docs.microsoft.com/previous-versions/dotnet/articles/dd310284(v=msdn.10))도 참조하세요.
 
-- .NET Framework 1.1 앱이 있는 경우 [.NET Framework 2.0의 변경 내용](https://go.microsoft.com/fwlink/?LinkID=125263)도 참조하세요.
+- .NET Framework 1.1 앱이 있는 경우 [.NET Framework 2.0의 변경 내용](https://docs.microsoft.com/previous-versions/aa570326(v=msdn.10))도 참조하세요.
 
 - .NET Framework 4.5 또는 해당 포인트 릴리스에서 실행하기 위해 기존 소스 코드를 다시 컴파일하거나 기존 소스 코드 기반의 .NET Framework 4.5 또는 해당 포인트 릴리스를 대상으로 하는 새 버전의 앱 또는 구성 요소를 개발하는 경우 [클래스 라이브러리의 사용되지 않는 기능](../whats-new/whats-obsolete.md)에서 사용되지 않는 형식과 멤버를 확인하고 설명된 해결 방법을 적용합니다. 이전에 컴파일된 코드는 사용되지 않는 것으로 표시된 형식과 멤버에 대해 계속해서 실행됩니다.
 
@@ -72,5 +72,5 @@ ms.locfileid: "73455598"
 - [새로운 기능](../whats-new/index.md)
 - [클래스 라이브러리의 사용되지 않는 기능](../whats-new/whats-obsolete.md)
 - [애플리케이션 호환성](../migration-guide/application-compatibility.md)
-- [Microsoft .NET Framework 지원 수명 주기 정책](https://go.microsoft.com/fwlink/p/?LinkId=248212)
+- [.NET Framework 공식 지원 정책](https://dotnet.microsoft.com/platform/support/policy/dotnet-framework)
 - [.NET Framework 4 마이그레이션 문제](../migration-guide/net-framework-4-migration-issues.md)

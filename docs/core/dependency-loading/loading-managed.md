@@ -4,12 +4,12 @@ description: .NET Core에서 관리 어셈블리 로드 알고리즘의 세부 �
 ms.date: 08/09/2019
 author: sdmaclea
 ms.author: stmaclea
-ms.openlocfilehash: bf95cbd0eebed064f0198ae9b0f7a4288a938f8a
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 312a320676be6eb453697e0704ab771a6707618b
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "72303631"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973504"
 ---
 # <a name="managed-assembly-loading-algorithm"></a>관리 어셈블리 로드 알고리즘
 
@@ -31,7 +31,7 @@ ms.locfileid: "72303631"
 |<xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=nameWithType>|새 <xref:System.Runtime.Loader.AssemblyLoadContext> 인스턴스의 경로에서 로드|새 <xref:System.Runtime.Loader.AssemblyLoadContext> 인스턴스입니다.|
 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>|<xref:System.Runtime.Loader.AssemblyLoadContext.Default%2A?displayProperty=nameWithType> 인스턴스의 경로에서 로드합니다.<p><xref:System.Runtime.Loader.AssemblyLoadContext.Default%2A?displayProperty=nameWithType>에 <xref:System.Runtime.Loader.AssemblyLoadContext.Resolving> 처리기를 추가합니다. 처리기는 해당 디렉터리에서 어셈블리의 종속성을 로드합니다.|<xref:System.Runtime.Loader.AssemblyLoadContext.Default%2A?displayProperty=nameWithType> 인스턴스입니다.|
 |<xref:System.Reflection.Assembly.Load(System.Reflection.AssemblyName)?displayProperty=nameWithType><p><xref:System.Reflection.Assembly.Load(System.String)?displayProperty=nameWithType><p><xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>|`Load-by-name`.|호출자에서 유추됩니다.<p><xref:System.Runtime.Loader.AssemblyLoadContext> 메서드를 선택합니다.|
-|<xref:System.Reflection.Assembly.Load(System.Byte[])?displayProperty=nameWithType><p><xref:System.Reflection.Assembly.Load(System.Byte[],System.Byte[])?displayProperty=nameWithType>|개체에서 로드합니다.|호출자에서 유추됩니다.<p><xref:System.Runtime.Loader.AssemblyLoadContext> 메서드를 선택합니다.|
+|<xref:System.Reflection.Assembly.Load(System.Byte[])?displayProperty=nameWithType><p><xref:System.Reflection.Assembly.Load(System.Byte[],System.Byte[])?displayProperty=nameWithType>|새 <xref:System.Runtime.Loader.AssemblyLoadContext> 인스턴스에서 개체를 로드합니다.|새 <xref:System.Runtime.Loader.AssemblyLoadContext> 인스턴스입니다.|
 <xref:System.Type.GetType(System.String)?displayProperty=nameWithType><p><xref:System.Type.GetType(System.String,System.Boolean)?displayProperty=nameWithType><p><xref:System.Type.GetType(System.String,System.Boolean,System.Boolean)?displayProperty=nameWithType>|`Load-by-name`.|호출자에서 유추됩니다.<p>`assemblyResolver` 인수를 사용하여 <xref:System.Type.GetType%2A?displayProperty=nameWithType> 메서드를 선택합니다.|
 <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType>|형식 `name`에서 어셈블리의 정규화된 제네릭 형식을 설명하는 경우 `Load-by-name`을 트리거합니다.|호출자에서 유추됩니다.<p>어셈블리의 정규화된 형식 이름을 사용할 때는 <xref:System.Type.GetType%2A?displayProperty=nameWithType>을 선택합니다.|
 <xref:System.Activator.CreateInstance(System.String,System.String)?displayProperty=nameWithType><p><xref:System.Activator.CreateInstance(System.String,System.String,System.Object[])?displayProperty=nameWithType><p><xref:System.Activator.CreateInstance(System.String,System.String,System.Boolean,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object[],System.Globalization.CultureInfo,System.Object[])?displayProperty=nameWithType>|`Load-by-name`.|호출자에서 유추됩니다.<p><xref:System.Type> 인수를 사용하는 <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> 메서드를 선택합니다.|

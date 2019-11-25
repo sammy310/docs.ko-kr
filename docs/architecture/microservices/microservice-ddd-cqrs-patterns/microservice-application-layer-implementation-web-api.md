@@ -2,12 +2,12 @@
 title: Web API를 사용하여 마이크로 서비스 애플리케이션 계층 구현
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | Web API 애플리케이션 계층에서 종속성 주입 및 중재자 패턴과 해당 구현 정보를 이해합니다.
 ms.date: 10/08/2018
-ms.openlocfilehash: c73823a0449fdf81ba3d886efdef540bd1aa6121
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 08cb409b06a54c6b30afa393a817e14bd64fbcbf
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73454855"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737477"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Web API를 사용하여 마이크로 서비스 에플리케이션 계층 구현
 
@@ -17,7 +17,9 @@ ms.locfileid: "73454855"
 
 예를 들어 Ordering(주문) 마이크로 서비스의 애플리케이션 계층 코드는 그림 7-23과 같이 **Ordering.API** 프로젝트(ASP.NET Core Web API 프로젝트)의 일부로 직접 구현됩니다.
 
-![Application 폴더의 하위 폴더를 보여주는 Ordering.API 마이크로 서비스의 솔루션 탐색기 보기: Behaviors, Commands, DomainEventHandlers, IntegrationEvents, Models, Queries 및 Validations.](./media/image20.png)
+:::image type="complex" source="./media/microservice-application-layer-implementation-web-api/ordering-api-microservice.png" alt-text="솔루션 탐색기에서 마이크로 서비스를 주문하는 스크린샷":::
+Application 폴더의 하위 폴더를 보여주는 Ordering.API 마이크로 서비스의 솔루션 탐색기 보기: Behaviors, Commands, DomainEventHandlers, IntegrationEvents, Models, Queries 및 Validations.
+:::image-end:::
 
 **그림 7-23**. Ordering.API ASP.NET Core Web API 프로젝트의 애플리케이션 계층
 
@@ -107,7 +109,7 @@ IoC 컨테이너에 형식을 등록할 때 가장 일반적인 패턴은 한 �
 
 .NET Core에서 DI를 사용하는 경우 어셈블리를 스캔하고 규칙에 따라 해당 형식을 자동으로 등록할 수 있도록 하는 것이 좋습니다. 이 기능은 현재 ASP.NET Core에서 사용할 수 없습니다. 하지만 [Scrutor](https://github.com/khellang/Scrutor) 라이브러리를 대신 사용할 수 있습니다. 이 방법은 IoC 컨테이너에 등록해야 하는 형식이 수십 개인 경우에 유용합니다.
 
-#### <a name="additional-resources"></a>추가 리소스
+#### <a name="additional-resources"></a>추가 자료
 
 - **Matthew King. Scrutor에 서비스 등록** \
   <https://www.mking.net/blog/registering-services-with-scrutor>
@@ -162,7 +164,7 @@ Autofac에는 [이름 규칙에 따라 어셈블리 및 등록 형식 검사](ht
 
 - IoC 컨테이너를 사용하는 모든 개체에서 공유되는 단일 인스턴스(ASP.NET Core IoC 컨테이너에 *singleton*(단일)으로 참조됨)
 
-#### <a name="additional-resources"></a>추가 리소스
+#### <a name="additional-resources"></a>추가 자료
 
 - **ASP.NET Core에서 종속성 주입 소개** \
   [https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection](/aspnet/core/fundamentals/dependency-injection)
@@ -181,9 +183,11 @@ Autofac에는 [이름 규칙에 따라 어셈블리 및 등록 형식 검사](ht
 
 그림 7-24에서 볼 수 있듯이, 패턴은 클라이언트 쪽의 명령을 수락하고, 이 명령을 도메인 모델 규칙에 따라 처리하고, 마지막으로 트랜잭션으로 상태를 유지하는 것을 기반으로 합니다.
 
-![CQRS의 쓰기 쪽에 대한 상위 수준 보기: UI 앱이 API를 통해 명령을 보내고, 이 명령은 도메인 모델 및 인프라를 사용하여 데이터베이스를 업데이트하는 CommandHandler로 전달됩니다.](./media/image21.png)
+![클라이언트에서 데이터베이스로 데이터 흐름을 개략적으로 보여 주는 다이어그램](./media/microservice-application-layer-implementation-web-api/high-level-writes-side.png)
 
 **그림 7-24**. CQRS 패턴의 명령 또는 "트랜잭션 쪽"에 대한 개괄적인 보기
+
+그림 7-24에서는 UI 앱이 도메인 모델 및 데이터베이스를 업데이트할 인프라에 따라 달라지는 `CommandHandler`를 가져오는 API를 통해 명령을 보냅니다.
 
 ### <a name="the-command-class"></a>명령 클래스
 
@@ -392,7 +396,7 @@ public class CreateOrderCommandHandler
 
 - 집계의 작업 결과가 성공적이면 트랜잭션이 완료된 후 통합 이벤트를 발생시킵니다. (리포지토리와 같은 인프라 클래스를 통해 발생시킬 수도 있습니다.)
 
-#### <a name="additional-resources"></a>추가 리소스
+#### <a name="additional-resources"></a>추가 자료
 
 - **Mark Seemann. 경계에서 애플리케이션은 개체 지향적이지 않음** \
   <https://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/>
@@ -423,9 +427,11 @@ public class CreateOrderCommandHandler
 
 그림 7-25에서 볼 수 있듯이 CQRS 방식에서는 메모리 내 버스와 유사한 지능형 중재자(mediator)를 사용하며, 수신되는 명령 또는 DTO의 형식을 기반으로 올바른 명령 처리기로 리디렉션할만큼 스마트합니다. 구성 요소 사이의 검은색 화살표는 관련 상호 작용이 있는 개체(많은 경우에 DI를 통해 주입됨) 간의 종속성을 나타냅니다.
 
-![이전 이미지에서 확대/축소: ASP.NET Core 컨트롤러는 MediatR의 명령 파이프라인에 명령을 전송하여 적절한 처리기로 보냅니다.](./media/image22.png)
+![클라이언트에서 데이터베이스로 데이터 흐름을 보다 상세하게 보여 주는 다이어그램](./media/microservice-application-layer-implementation-web-api/mediator-cqrs-microservice.png)
 
 **그림 7-25**. 단일 CQRS 마이크로 서비스의 프로세스에 중재자(Mediator) 패턴 사용
+
+위 다이어그램은 이미지 7-24를 확대한 것입니다. ASP.NET Core 컨트롤러는 MediatR의 명령 파이프라인에 명령을 전송하여 적절한 처리기로 보냅니다.
 
 중재자(Mediator) 패턴을 사용하는 것이 타당한 이유는 엔터프라이즈 애플리케이션에서 처리 요청이 복잡해질 수 있기 때문입니다. 로깅, 유효성 검사, 감사 및 보안과 같은 여러 가지 교차 편집 문제를 추가하는 것이 필요할 수 있습니다. 이런 경우 중재자(mediator) 파이프라인([중재자(Mediator) 패턴](https://en.wikipedia.org/wiki/Mediator_pattern) 참조)에 의존하여 이러한 추가 동작이나 교차 편집 문제를 위한 수단을 제공할 수 있습니다.
 
@@ -439,11 +445,11 @@ public class CreateOrderCommandHandler
 
 또 다른 옵션은 그림 7-26과 같이 broker 또는 메시지 큐를 기반으로 비동기 메시지를 사용하는 것입니다. 이 옵션은 명령 처리기 바로 전에 중재자(mediator) 구성 요소와 결합될 수도 있습니다.
 
-![명령의 파이프라인은 고가용성 메시지 큐에 의해 처리되어 명령을 해당 처리기로 전달할 수도 있습니다.](./media/image23.png)
+![HA 메시지 큐를 사용하는 데이터 흐름을 보여 주는 다이어그램](./media/microservice-application-layer-implementation-web-api/add-ha-message-queue.png)
 
 **그림 7-26**. CQRS 명령으로 메시지 큐(프로세스 외부 및 프로세스 간 통신) 사용
 
-메시지 큐를 사용하여 명령을 수락하면 명령의 파이프라인이 복잡해질 수 있습니다. 파이프라인을 외부 메시지 큐를 통해 연결된 두 개의 프로세스로 분할하는 것이 필요할 수 있기 때문입니다. 하지만 비동기 메시지를 기반으로 확장성과 성능을 향상시키려면 사용해야 합니다. 그림 7-26의 경우 컨트롤러는 명령 메시지를 큐에 게시만 하고 반환합니다. 그런 다음, 명령 처리기는 원하는 속도로 메시지를 처리합니다. 이것이 큐의 커다란 장점입니다. 주식 또는 송신 데이터가 대규모인 그 밖의 시나리오와 같이 엄청난 확장성이 필요한 경우에, 메시지 큐는 버퍼로 작동할 수 있습니다.
+명령의 파이프라인은 고가용성 메시지 큐에 의해 처리되어 명령을 해당 처리기로 전달할 수도 있습니다. 메시지 큐를 사용하여 명령을 수락하면 명령의 파이프라인이 복잡해질 수 있습니다. 파이프라인을 외부 메시지 큐를 통해 연결된 두 개의 프로세스로 분할하는 것이 필요할 수 있기 때문입니다. 하지만 비동기 메시지를 기반으로 확장성과 성능을 향상시키려면 사용해야 합니다. 그림 7-26의 경우 컨트롤러는 명령 메시지를 큐에 게시만 하고 반환합니다. 그런 다음, 명령 처리기는 원하는 속도로 메시지를 처리합니다. 이것이 큐의 커다란 장점입니다. 주식 또는 송신 데이터가 대규모인 그 밖의 시나리오와 같이 엄청난 확장성이 필요한 경우에, 메시지 큐는 버퍼로 작동할 수 있습니다.
 
 하지만 메시지 큐의 비동기적인 특성으로 인해, 명령 프로세스의 성공 또는 실패에 대해 클라이언트 애플리케이션과 통신할 방법을 알아내야 합니다. 원칙적으로 “fire and forget”명령은 절대 사용하지 말아야 합니다. 모든 비즈니스 애플리케이션은 명령이 성공적으로 처리되었는지 아니면 최소한 유효성이 검사되고 수락되었는지를 알아야 합니다.
 
@@ -793,7 +799,7 @@ public class CreateOrderCommandValidator : AbstractValidator<CreateOrderCommand>
 
 유사한 방식으로, 명령을 처리할 때 명령에 적용할 추가적인 측면이나 교차 편집 문제에 다른 동작은 구현할 수 있습니다.
 
-#### <a name="additional-resources"></a>추가 리소스
+#### <a name="additional-resources"></a>추가 자료
 
 ##### <a name="the-mediator-pattern"></a>중재자(mediator) 패턴
 

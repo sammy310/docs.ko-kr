@@ -1,5 +1,5 @@
 ---
-title: '방법: 읽기/쓰기 속성 선언 및 사용 - C# 프로그래밍 가이드'
+title: 읽기/쓰기 속성 선언 및 사용 방법 - C# 프로그래밍 가이드
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - read/write properties [C#]
 - accessors [C#], declaring properties with
 ms.assetid: a4962fef-af7e-4c4b-a929-4ae4d646ab8a
-ms.openlocfilehash: 010c3d4c1ae976091b5382f00a982400746f6436
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 2865feb74692e7075c92a9ee2b5cd2a7735a8e62
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596936"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971022"
 ---
-# <a name="how-to-declare-and-use-read-write-properties-c-programming-guide"></a>방법: 읽기/쓰기 속성 선언 및 사용(C# 프로그래밍 가이드)
+# <a name="how-to-declare-and-use-read-write-properties-c-programming-guide"></a>읽기/쓰기 속성 선언 및 사용 방법(C# 프로그래밍 가이드)
 속성은 개체 데이터에 대한 액세스가 보호, 제어, 확인되지 않을 위험 없이 공용 데이터 멤버의 편리함을 제공합니다. 이를 위해 기본 데이터 멤버의 값을 할당하고 검색하는 특수 메서드인 *접근자*가 사용됩니다. [set](../../language-reference/keywords/set.md) 접근자를 통해 데이터 멤버를 할당할 수 있으며, [get](../../language-reference/keywords/get.md) 접근자는 데이터 멤버 값을 검색합니다.  
   
  이 샘플에서는 `Name`(string) 및 `Age`(int)의 두 속성이 있는 `Person` 클래스를 보여 줍니다. 두 속성 모두 `get` 및 `set` 접근자를 제공하므로 읽기/쓰기 속성으로 간주됩니다.  

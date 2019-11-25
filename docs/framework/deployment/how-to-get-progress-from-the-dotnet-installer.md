@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bdd2832f112706cef6050774ce3f6db5a940424a
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: e07bb3443fb9461fa707d66e74350a39980c60c0
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052094"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975548"
 ---
 # <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>방법: .NET Framework 4.5 설치 관리자에서 진행률 가져오기
 
@@ -55,13 +55,13 @@ Chainer 샘플은 .NET Framework 4.5 설치 프로그램을 자동으로 시작�
 > [!WARNING]
 > 관리자 권한으로 예제를 실행해야 합니다.
 
-MSDN 샘플 갤러리에서 [.NET Framework 4.5 chainer 샘플](https://go.microsoft.com/fwlink/?LinkId=231345)에 대한 전체 Visual Studio 솔루션을 다운로드할 수 있습니다.
+MSDN 샘플 갤러리에서 [.NET Framework 4.5 chainer 샘플](https://code.msdn.microsoft.com/NET-Framework-45-Developer-e416a0ba)에 대한 전체 Visual Studio 솔루션을 다운로드할 수 있습니다.
 
 다음 섹션에서는 이 샘플의 중요한 파일을 설명합니다. MMIOChainer.h, ChainingdotNet4.cpp 및 IProgressObserver.h.
 
 #### <a name="mmiochainerh"></a>MMIOChainer.h
 
-- MMIOChainer.h 파일([전체 코드](https://go.microsoft.com/fwlink/?LinkId=231369) 참조)에는 chainer 클래스가 파생되어야 하는 데이터 구조 정의와 기본 클래스가 포함되어 있습니다. .NET Framework 4.5는 MMIO 데이터 구조를 확장하여 .NET Framework 4.5 설치 관리자에 필요한 데이터를 처리합니다. MMIO 구조에 대한 변경 내용은 이전 버전과 호환되므로 .NET Framework 4 chainer가 다시 컴파일하지 않고도 .NET Framework 4.5 설치 프로그램에서 작동할 수 있습니다. 그러나 이 시나리오에서는 시스템 다시 시작을 줄이는 기능이 지원되지 않습니다.
+- MMIOChainer.h 파일([전체 코드](https://code.msdn.microsoft.com/NET-Framework-45-Developer-e416a0ba/sourcecode?fileId=47345&pathId=663039622) 참조)에는 chainer 클래스가 파생되어야 하는 데이터 구조 정의와 기본 클래스가 포함되어 있습니다. .NET Framework 4.5는 MMIO 데이터 구조를 확장하여 .NET Framework 4.5 설치 관리자에 필요한 데이터를 처리합니다. MMIO 구조에 대한 변경 내용은 이전 버전과 호환되므로 .NET Framework 4 chainer가 다시 컴파일하지 않고도 .NET Framework 4.5 설치 프로그램에서 작동할 수 있습니다. 그러나 이 시나리오에서는 시스템 다시 시작을 줄이는 기능이 지원되지 않습니다.
 
     버전 필드를 통해 구조 및 메시지 형식에 대한 수정 버전을 식별할 수 있습니다. .NET Framework 설치 프로그램은 `VirtualQuery` 함수 호출을 통해 파일 매핑의 크기를 확인하여 chainer 인터페이스 버전을 확인합니다. 크기가 버전 필드를 수용하기에 충분히 큰 경우 .NET Framework 설치 프로그램은 지정된 값을 사용합니다. .NET Framework 4의 경우처럼 파일 매핑이 너무 작아서 버전 필드를 포함할 수 없는 경우 설치 프로세스에서 버전 0(4)을 가정합니다. chainer가 .NET Framework 설치 프로그램에서 보내려고 하는 메시지 버전을 지원하지 않는 경우 .NET Framework 설치 프로그램은 무시 응답을 가정합니다.
 
@@ -98,7 +98,7 @@ MSDN 샘플 갤러리에서 [.NET Framework 4.5 chainer 샘플](https://go.micro
 
 #### <a name="iprogressobserverh"></a>IProgressObserver.h
 
-- IProgressObserver.h 파일은 진행률 관찰자([전체 코드 참조](https://go.microsoft.com/fwlink/?LinkId=231370))를 구현합니다. 이 관찰자는 다운로드 및 설치 진행률에 대한 알림을 받습니다(부호 없는 `char` 0-255로 지정됨, 1%-100% 완료를 나타냄). chainee가 메시지를 보낼 때도 관찰자에게 알림이 전달되며, 관찰자는 응답을 보내야 합니다.
+- IProgressObserver.h 파일은 진행률 관찰자([전체 코드 참조](https://code.msdn.microsoft.com/NET-Framework-45-Developer-e416a0ba/sourcecode?fileId=47345&pathId=1263700592))를 구현합니다. 이 관찰자는 다운로드 및 설치 진행률에 대한 알림을 받습니다(부호 없는 `char` 0-255로 지정됨, 1%-100% 완료를 나타냄). chainee가 메시지를 보낼 때도 관찰자에게 알림이 전달되며, 관찰자는 응답을 보내야 합니다.
 
     ```cpp
         class IProgressObserver
@@ -112,7 +112,7 @@ MSDN 샘플 갤러리에서 [.NET Framework 4.5 chainer 샘플](https://go.micro
 
 #### <a name="chainingdotnet45cpp"></a>ChainingdotNet4.5.cpp
 
-- [ChainingdotNet4.5.cpp](https://go.microsoft.com/fwlink/?LinkId=231368) 파일은 `MmioChainer` 클래스에서 파생되는 `Server` 클래스를 구현하고 진행률 정보를 표시하기 위해 적절한 메서드를 재정의합니다. MmioChainer는 지정된 섹션 이름으로 섹션을 만들고 지정된 이벤트 이름으로 chainer를 초기화합니다. 이벤트 이름은 매핑된 데이터 구조에 저장됩니다. 섹션 및 이벤트 이름을 고유하게 설정해야 합니다. 다음 코드의 `Server` 클래스는 지정된 설치 프로그램을 시작하고 해당 진행률을 모니터링하고 종료 코드를 반환합니다.
+- [ChainingdotNet4.5.cpp](https://code.msdn.microsoft.com/NET-Framework-45-Developer-e416a0ba/sourcecode?fileId=47345&pathId=1757268882) 파일은 `MmioChainer` 클래스에서 파생되는 `Server` 클래스를 구현하고 진행률 정보를 표시하기 위해 적절한 메서드를 재정의합니다. MmioChainer는 지정된 섹션 이름으로 섹션을 만들고 지정된 이벤트 이름으로 chainer를 초기화합니다. 이벤트 이름은 매핑된 데이터 구조에 저장됩니다. 섹션 및 이벤트 이름을 고유하게 설정해야 합니다. 다음 코드의 `Server` 클래스는 지정된 설치 프로그램을 시작하고 해당 진행률을 모니터링하고 종료 코드를 반환합니다.
 
     ```cpp
     class Server : public ChainerSample::MmioChainer, public ChainerSample::IProgressObserver

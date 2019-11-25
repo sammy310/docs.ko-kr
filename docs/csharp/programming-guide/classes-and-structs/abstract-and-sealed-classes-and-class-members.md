@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C# language, abstract classes
 - C# language, sealed
 ms.assetid: 99aa52f7-b435-43f9-936e-2470af734c4e
-ms.openlocfilehash: 1c98e2979ee96d4bcc885b8cc797eaac28c8d2ed
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 97b367b5c3d09087541ee206a2899a7aefd95305
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69597300"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971358"
 ---
 # <a name="abstract-and-sealed-classes-and-class-members-c-programming-guide"></a>추상 및 봉인 클래스와 클래스 멤버(C# 프로그래밍 가이드)
 [abstract](../../language-reference/keywords/abstract.md) 키워드를 사용하면, 불완전하여 파생 클래스에서 구현해야 하는 클래스 및 [클래스](../../language-reference/keywords/class.md) 멤버를 만들 수 있습니다.  
@@ -55,4 +55,4 @@ ms.locfileid: "69597300"
 - [상속](./inheritance.md)
 - [메서드](./methods.md)
 - [필드](./fields.md)
-- [방법: 추상 속성 정의](./how-to-define-abstract-properties.md)
+- [추상 속성 정의 방법](./how-to-define-abstract-properties.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - event subscription [C#]
 - += operator [C#]
 ms.assetid: 93e56486-bb42-43c1-bd43-60af11e64e67
-ms.openlocfilehash: 709994632d704c6a9c6c7f4fc7180ae08cb901d7
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: e6a190e3d6e283f2ce3b1690ec2bfd15d50dfc6e
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039090"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972630"
 ---
 # <a name="-and--operators-c-reference"></a>+ 및 += 연산자(C# 참조)
 
@@ -81,7 +81,7 @@ x = x + y
 
 - [C# 참조](../index.md)
 - [C# 연산자](index.md)
-- [방법: 여러 문자열 연결](../../how-to/concatenate-multiple-strings.md)
+- [여러 문자열 연결 방법](../../how-to/concatenate-multiple-strings.md)
 - [이벤트](../../programming-guide/events/index.md)
 - [산술 연산자](arithmetic-operators.md)
 - [- 및 -= 연산자](subtraction-operator.md)

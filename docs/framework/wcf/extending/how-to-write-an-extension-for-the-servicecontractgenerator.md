@@ -2,12 +2,12 @@
 title: '방법: ServiceContractGenerator에 대한 확장 쓰기'
 ms.date: 03/30/2017
 ms.assetid: 876ca823-bd16-4bdf-9e0f-02092df90e51
-ms.openlocfilehash: af23babd9255c45b9fa89b5c167de6960f0f690e
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 68b380a40448f21ba770aa47c7188b818fa8f9e7
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855717"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975874"
 ---
 # <a name="how-to-write-an-extension-for-the-servicecontractgenerator"></a>방법: ServiceContractGenerator에 대한 확장 쓰기
 이 항목에서는 <xref:System.ServiceModel.Description.ServiceContractGenerator>에 대한 확장을 쓰는 방법에 대해 설명합니다. 이 작업을 수행하려면 작업 동작에 <xref:System.ServiceModel.Description.IOperationContractGenerationExtension> 인터페이스를 구현하거나 계약 동작에 <xref:System.ServiceModel.Description.IServiceContractGenerationExtension> 인터페이스를 구현합니다. 다음 항목에서는 계약 동작에서 <xref:System.ServiceModel.Description.IServiceContractGenerationExtension> 인터페이스를 구현하는 방법을 보여 줍니다.  
@@ -22,42 +22,42 @@ ms.locfileid: "70855717"
     public void GenerateContract(ServiceContractGenerationContext context)  
     {  
         Console.WriteLine("In generate contract.");  
-    context.ContractType.Comments.AddRange(Formatter.FormatComments(commentText));  
+        context.ContractType.Comments.AddRange(Formatter.FormatComments(commentText));  
     }  
     ```  
   
 2. 같은 클래스에서 <xref:System.ServiceModel.Description.IWsdlImportExtension>을 구현합니다. <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportContract%28System.ServiceModel.Description.WsdlImporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> 메서드는 가져온 <xref:System.ServiceModel.Description.ContractDescription> 인스턴스에 코드 생성 확장을 추가하여 특정 WSDL 확장(이 경우 WSDL 주석)을 처리할 수 있습니다.  
   
     ```csharp
-    public void ImportContract(WsdlImporter importer, WsdlContractConversionContext context)  
-       {  
-                // Contract documentation  
-             if (context.WsdlPortType.Documentation != null)  
-             {  
-                    context.Contract.Behaviors.Add(new WsdlDocumentationImporter(context.WsdlPortType.Documentation));  
-             }  
-             // Operation documentation  
-             foreach (Operation operation in context.WsdlPortType.Operations)  
-             {  
-                if (operation.Documentation != null)  
-                {  
-                   OperationDescription operationDescription = context.Contract.Operations.Find(operation.Name);  
-                   if (operationDescription != null)  
-                   {  
-                            operationDescription.Behaviors.Add(new WsdlDocumentationImporter(operation.Documentation));  
-                   }  
-                }  
-             }  
-          }  
-          public void BeforeImport(ServiceDescriptionCollection wsdlDocuments, XmlSchemaSet xmlSchemas, ICollection<XmlElement> policy)   
-            {  
-                Console.WriteLine("BeforeImport called.");  
-            }  
-  
-          public void ImportEndpoint(WsdlImporter importer, WsdlEndpointConversionContext context)   
-            {  
-                Console.WriteLine("ImportEndpoint called.");  
-            }  
+    public void ImportContract(WsdlImporter importer, WsdlContractConversionContext context)
+    {
+        // Contract documentation
+        if (context.WsdlPortType.Documentation != null)
+        {
+            context.Contract.Behaviors.Add(new WsdlDocumentationImporter(context.WsdlPortType.Documentation));
+        }
+        // Operation documentation
+        foreach (Operation operation in context.WsdlPortType.Operations)
+        {
+            if (operation.Documentation != null)
+            {
+                OperationDescription operationDescription = context.Contract.Operations.Find(operation.Name);
+                if (operationDescription != null)
+                {
+                    operationDescription.Behaviors.Add(new WsdlDocumentationImporter(operation.Documentation));
+                }
+            }
+        }
+    }
+    public void BeforeImport(ServiceDescriptionCollection wsdlDocuments, XmlSchemaSet xmlSchemas, ICollection<XmlElement> policy)
+    {
+        Console.WriteLine("BeforeImport called.");
+    }
+
+    public void ImportEndpoint(WsdlImporter importer, WsdlEndpointConversionContext context)
+    {
+        Console.WriteLine("ImportEndpoint called.");
+    }
     ```  
   
 3. 클라이언트 구성에 WSDL 가져오기를 추가합니다.  
@@ -72,22 +72,23 @@ ms.locfileid: "70855717"
   
 4. 클라이언트 코드에 `MetadataExchangeClient`를 만들고 `GetMetadata`를 호출합니다.  
   
-    ```csharp  
-    MetadataExchangeClient mexClient = new MetadataExchangeClient(metadataAddress);  
+    ```csharp
+    var mexClient = new MetadataExchangeClient(metadataAddress);  
     mexClient.ResolveMetadataReferences = true;  
     MetadataSet metaDocs = mexClient.GetMetadata();  
     ```  
   
 5. `WsdlImporter`를 만들고 `ImportAllContracts`를 호출합니다.  
   
-    ```csharp  
-    WsdlImporter importer = new WsdlImporter(metaDocs);            System.Collections.ObjectModel.Collection<ContractDescription> contracts = importer.ImportAllContracts();  
+    ```csharp
+    var importer = new WsdlImporter(metaDocs);
+    System.Collections.ObjectModel.Collection<ContractDescription> contracts = importer.ImportAllContracts();  
     ```  
   
 6. `ServiceContractGenerator`를 만들고 각 계약에 대한 `GenerateServiceContractType`을 호출합니다.  
   
-    ```csharp  
-    ServiceContractGenerator generator = new ServiceContractGenerator();  
+    ```csharp
+    var generator = new ServiceContractGenerator();  
     foreach (ContractDescription contract in contracts)  
     {  
        generator.GenerateServiceContractType(contract);  
@@ -98,7 +99,7 @@ ms.locfileid: "70855717"
   
 7. <xref:System.ServiceModel.Description.IServiceContractGenerationExtension.GenerateContract%28System.ServiceModel.Description.ServiceContractGenerationContext%29>는 <xref:System.ServiceModel.Description.IServiceContractGenerationExtension>을 구현하는 제공된 계약에서 각 계약 동작에 대해 자동으로 호출됩니다. 그런 다음 이 메서드는 전달된 <xref:System.ServiceModel.Description.ServiceContractGenerationContext>를 수정할 수 있습니다. 이 예제에서는 주석이 추가되었습니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [메타데이터](../feature-details/metadata.md)
 - [방법: 사용자 지정 WSDL 가져오기](how-to-import-custom-wsdl.md)

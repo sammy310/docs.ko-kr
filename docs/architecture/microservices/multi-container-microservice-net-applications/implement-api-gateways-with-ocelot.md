@@ -2,12 +2,12 @@
 title: Ocelot을 사용하여 API 게이트웨이 구현
 description: Ocelot을 사용하여 API 게이트웨이를 구현하는 방법과 컨테이너 기반 환경에서 Ocelot을 사용하는 방법을 알아봅니다.
 ms.date: 10/02/2018
-ms.openlocfilehash: cb452c330712ecf536cdf09f41fdbf828a4e9314
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 6c576a17d784777557bfb8bd99438eb111e8ec2e
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771178"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737552"
 ---
 # <a name="implement-api-gateways-with-ocelot"></a>Ocelot을 사용하여 API 게이트웨이 구현
 
@@ -22,7 +22,7 @@ ms.locfileid: "72771178"
 
 다음 아키텍처 다이어그램에서는 eShopOnContainers에서 Ocelot을 사용하여 API 게이트웨이를 구현하는 방법을 보여 줍니다.
 
-![사이에 있는 클라이언트 응용 프로그램, 마이크로 서비스 및 API 게이트웨이를 보여 주는 eShopOnContainers 아키텍처 다이어그램](./media/image28.png)
+![eShopOnContainers 아키텍처를 보여주는 다이어그램입니다.](./media/implement-api-gateways-with-ocelot/eshoponcontainers-architecture.png)
 
 **그림 6-28** API 게이트웨이가 있는 eShopOnContainers 아키텍처
 
@@ -46,7 +46,7 @@ ms.locfileid: "72771178"
 
 예를 들어 eShopOnContainers에는 다음 이미지와 같이 API 게이트웨이를 통해 게시되어야 하는 약 6개의 내부 마이크로 서비스 형식이 있습니다.
 
-![장바구니, 카탈로그, 위치, 마케팅, 주문 및 결제 마이크로 서비스는 API 게이트웨이를 통해서만 게시됩니다.](./media/image29.png)
+![하위 폴더가 표시된 서비스 폴더의 스크린샷입니다.](./media/implement-api-gateways-with-ocelot/eshoponcontainers-microservice-folders.png)
 
 **그림 6-29** Visual Studio에서 eShopOnContainers 솔루션의 마이크로 서비스 폴더
 
@@ -54,7 +54,7 @@ ID 서비스에 대한 설계에서 이 서비스는 시스템에서 유일한 �
 
 코드에서 알 수 있듯이 이러한 모든 서비스는 현재 ASP.NET Core Web API 서비스로 구현되어 있습니다. Catalog 마이크로 서비스 코드와 같은 마이크로 서비스 중 하나에 집중하여 살펴보겠습니다.
 
-![Catalog.API 프로젝트의 솔루션 탐색기 보기](./media/image30.png)
+![Catalog.API 프로젝트 콘텐츠가 표시된 솔루션 탐색기의 스크린샷입니다.](./media/implement-api-gateways-with-ocelot/catalog-api-microservice-folders.png)
 
 **그림 6-30** Web API 마이크로 서비스(Catalog 마이크로 서비스) 샘플
 
@@ -130,7 +130,7 @@ docker-compose run --service-ports catalog.api
 
 그런 다음, 카탈로그 마이크로 서비스에 직접 액세스하고 해당 "외부" 포트(이 경우 `http://localhost:5101/swagger`)를 통해 직접 액세스하는 Swagger UI를 통해 해당 메서드를 볼 수 있습니다.
 
-![Catalog.API REST API에 대한 Swagger UI 기간의 브라우저 보기.](./media/image31.png)
+![Catalog.API REST API가 표시된 Swagger UI의 스크린샷입니다.](./media/implement-api-gateways-with-ocelot/test-catalog-microservice.png)
 
 **그림 6-31** Swagger UI를 사용하여 Catalog 마이크로 서비스 테스트
 
@@ -152,7 +152,7 @@ Install-Package Ocelot
 
 eShopOnContainers에서 API 게이트웨이 구현은 간단한 ASP.NET Core WebHost 프로젝트이며, Ocelot의 미들웨어에서 다음 이미지와 같이 모든 API 게이트웨이 기능을 처리합니다.
 
-![Ocelot API 게이트웨이 프로젝트의 솔루션 탐색기 보기](./media/image32.png)
+![Ocelot API 게이트웨이 프로젝트가 표시된 솔루션 탐색기의 스크린샷입니다.](./media/implement-api-gateways-with-ocelot/ocelotapigw-base-project.png)
 
 **그림 6-32** eShopOnContainers의 OcelotApiGw 기본 프로젝트
 
@@ -280,7 +280,7 @@ UpstreamPathTemplate은 Ocelot에서 클라이언트로부터 지정된 요청�
 
 eShopOnContainers에서 Ocelot API 게이트웨이를 사용하여 단일 Docker 컨테이너 이미지를 사용하지만, 실행 시 각 서비스에 다른 PC 폴더에 액세스하기 위해 Docker 볼륨을 사용하는 다른 configuration.json 파일을 제공하여 각 형식의 API-Gateway/BFF에 대해 다른 서비스/컨테이너를 만듭니다.
 
-![Ocelot API 게이트웨이의 단일 Docker 이미지는 4개의 모든 API 게이트웨이에 사용됩니다.](./media/image33.png)
+![모든 API 게이트웨이에 대한 단일 Ocelot 게이트웨이 Docker 이미지의 다이어그램입니다.](./media/implement-api-gateways-with-ocelot/reusing-single-ocelot-docker-image.png)
 
 **그림 6-33** 여러 API 게이트웨이 형식에서 단일 Ocelot Docker 이미지 재사용
 
@@ -354,7 +354,7 @@ webmarketingapigw:
 
 앞의 코드와 아래의 Visual Studio 탐색기에서 보여 주듯이 네 개의 API 게이트웨이가 동일한 Docker 이미지를 기반으로 하므로 각 특정 비즈니스/BFF API 게이트웨이를 정의하는 데 필요한 유일한 파일은 configuration.json 파일뿐입니다.
 
-![모든 API 게이트웨이 간의 유일한 차이점은 각각의 configuration.json 파일입니다.](./media/image34.png)
+![configuration.json 파일을 사용하는 모든 API 게이트웨이를 보여주는 스크린샷입니다.](./media/implement-api-gateways-with-ocelot/ocelot-configuration-files.png)
 
 **그림 6-34** Ocelot을 사용하여 각 API 게이트웨이/BFF를 정의하는 데 필요한 유일한 구성 파일
 
@@ -364,13 +364,13 @@ API 게이트웨이를 여러 API 게이트웨이로 분할하면 마이크로 �
 
 예를 들어 webshoppingapigw API 게이트웨이에서 제공하는 업스트림 URL(`http://localhost:5202/api/v1/c/catalog/items/2/`)을 방문하면 다음 브라우저와 같이 Docker 호스트 내의 내부 다운스트림 URL(`http://catalog.api/api/v1/2`)에서 동일한 결과를 가져옵니다.
 
-![API 게이트웨이를 통해 이동하는 Catalog.api 응답의 브라우저 보기](./media/image35.png)
+![API 게이트웨이를 통해 전달되는 응답을 보여주는 브라우저의 스크린샷입니다.](./media/implement-api-gateways-with-ocelot/access-microservice-through-url.png)
 
 **그림 6-35** API 게이트웨이에서 제공하는 URL을 통해 마이크로 서비스에 액세스
 
 테스트 또는 디버깅 이유로 인해 API 게이트웨이를 통과하지 않고 Catalog Docker 컨테이너에 직접 액세스하려는 경우(개발 환경에서만), 'catalog.api'는 Docker 호스트 내부의 DNS 확인(docker-compose 서비스 이름으로 처리되는 서비스 검색)이므로 컨테이너에 직접 액세스하는 유일한 방법은 다음 브라우저의 `http://localhost:5101/api/v1/Catalog/items/1`과 같이 개발 테스트용으로만 제공되는 docker-compose.override.yml에 게시된 외부 포트를 통해 액세스하는 것입니다.
 
-![API 게이트웨이를 통한 응답과 동일한 Catalog.api에 직접 이동하는 Catalog.api 응답의 브라우저 보기](./media/image36.png)
+![Catalog.api에 대한 직접적 응답을 보여주는 브라우저의 스크린샷입니다.](./media/implement-api-gateways-with-ocelot/direct-access-microservice-testing.png)
 
 **그림 6-36** 테스트 목적으로 마이크로 서비스에 직접 액세스
 
@@ -384,13 +384,13 @@ API 게이트웨이를 여러 API 게이트웨이로 분할하면 마이크로 �
 
 다음 다이어그램에서는 집계 서비스에서 관련 API 게이트웨이를 사용하는 방식도 확인할 수 있습니다.
 
-![집계 서비스를 보여주는 eShopOnContainers 아키텍처](./media/image37.png)
+![집계 서비스를 보여주는 eShopOnContainers 아키텍처의 다이어그램입니다.](./media/implement-api-gateways-with-ocelot/eshoponcontainers-architecture-aggregator-services.png)
 
 **그림 6-37** 집계 서비스가 있는 eShopOnContainers 아키텍처
 
 더 확대하면 다음 이미지의 "쇼핑" 비즈니스 영역에서 API 게이트웨이에서 수집기 서비스를 사용하는 경우 클라이언트 앱과 마이크로 서비스 간에 전송량이 감소되었음을 확인할 수 있습니다.
 
-![최종 클라이언트에서 전송량을 줄이기 위해 여러 마이크로 서비스의 응답을 “조인”하여 응답을 “어셈블”하는 집계 서비스를 보여 주는 eShopOnContainers 아키텍처 확대](./media/image38.png)
+![eShopOnContainers 아키텍처 확대를 보여주는 다이어그램입니다.](./media/implement-api-gateways-with-ocelot/zoom-in-vision-aggregator-services.png)
 
 **그림 6-38** 집계 서비스의 비전 확대
 
@@ -404,17 +404,17 @@ Ocelot API 게이트웨이에서 권한 부여 토큰을 제공하는 [IdentityS
 
 eShopOnContainers는 BFF 및 비즈니스 영역에 따른 경계가 있는 여러 개의 API 게이트웨이를 사용하므로 다음 다이어그램에서 노란색으로 강조 표시된 대로 Identity/Auth(ID/권한 부여) 서비스는 API 게이트웨이에서 제외됩니다.
 
-![API 게이트웨이 아래의 ID 마이크로 서비스를 보여주는 eShopOnContainers 아키텍처 다이어그램](./media/image39.png)
+![API 게이트웨이 아래의 ID 마이크로 서비스를 보여주는 다이어그램입니다.](./media/implement-api-gateways-with-ocelot/eshoponcontainers-identity-service-position.png)
 
 **그림 6-39** eShopOnContainers에서 Identity 서비스의 위치
 
 그러나 Ocelot은 다른 다이어그램과 같이 API 게이트웨이 경계 내에 ID/인증 마이크로 서비스를 배치하도록 지원할 수도 있습니다.
 
-![AG(API 게이트웨이) 아래의 ID 마이크로 서비스를 사용하여 인증: 1) AG는 ID 마이크로 서비스에서 인증 토큰을 요청하고, 2) ID 마이크로 서비스는 AG에 토큰을 반환하고, 3-4) AG는 인증 토큰을 사용하여 마이크로 서비스에서 요청합니다.](./media/image40.png)
+![Ocelot API 게이트웨이의 인증을 보여주는 다이어그램입니다.](./media/implement-api-gateways-with-ocelot/ocelot-authentication.png)
 
 **그림 6-40** Ocelot에서 인증
 
-eShopOnContainers 애플리케이션에서 API 게이트웨이를 여러 BFF(프런트 엔드에 대한 백 엔드) 및 비즈니스 영역 API 게이트웨이로 분할했으므로 교차 편집 문제에 대한 추가 API 게이트웨이를 만드는 것이 또 다른 옵션이었습니다. 이 선택은 여러 교차 편집 문제 마이크로 서비스가 있는 더 복잡한 마이크로 서비스 기반 아키텍처에 적합합니다. eShopOnContainers에는 하나의 교차 편집 문제만 있으므로 간단히 하기 위해 API 게이트웨이 영역에서 보안 서비스를 처리하기로 결정했습니다.
+이전 다이어그램에 표시된 것처럼 ID 마이크로 서비스가 API 게이트웨이(AG)의 아래에 있으면 다음과 같이 됩니다. 1) AG는 ID 마이크로 서비스에서 인증 토큰을 요청하고, 2) ID 마이크로 서비스는 AG에 토큰을 반환하고, 3-4) AG는 인증 토큰을 사용하여 마이크로 서비스에서 요청합니다. eShopOnContainers 애플리케이션에서 API 게이트웨이를 여러 BFF(프런트 엔드에 대한 백 엔드) 및 비즈니스 영역 API 게이트웨이로 분할했으므로 교차 편집 문제에 대한 추가 API 게이트웨이를 만드는 것이 또 다른 옵션이었습니다. 이 선택은 여러 교차 편집 문제 마이크로 서비스가 있는 더 복잡한 마이크로 서비스 기반 아키텍처에 적합합니다. eShopOnContainers에는 하나의 교차 편집 문제만 있으므로 간단히 하기 위해 API 게이트웨이 영역에서 보안 서비스를 처리하기로 결정했습니다.
 
 어떤 경우이든 응용 프로그램이 API 게이트웨이 수준에서 보안이 설정되면 보안 마이크로 서비스를 사용하려고 할 때 Ocelot API 게이트웨이의 인증 모듈을 처음 방문합니다. 이렇게 하면 액세스 토큰을 가져오기 위해 Identity 또는 Auth 마이크로 서비스를 방문하도록 HTTP 요청을 리디렉션하므로 access_token으로 보호된 서비스를 방문할 수 있습니다.
 
@@ -540,11 +540,11 @@ API 게이트웨이는 일반적으로 서비스 범위를 벗어나는 웹 애�
 
 다음 다이어그램과 같이 Kubernetes에서 웹 애플리케이션과 여러 Ocelot API 게이트웨이/BFF 앞에 수신 Nginx 계층이 있는 것이 이상적인 아키텍처입니다.
 
-![Kubernetes 수신은 일반적으로 API 게이트웨이 범위를 벗어난 웹 애플리케이션을 비롯한 앱의 모든 트래픽에 대해 역방향 프록시로 작동합니다.](./media/image41.png)
+![수신 계층이 AKS 환경에 얼마나 적합한지 보여주는 다이어그램입니다.](./media/implement-api-gateways-with-ocelot/eshoponcontainer-ingress-tier.png)
 
 **그림 6-41** Kubernetes에 배포 시 eShopOnContainers의 수신 계층
 
-eShopOnContainers를 Kubernetes에 배포하면 _수신_을 통해 몇 가지 서비스 또는 엔드포인트만 노출되며, URL에 대한 접미사 목록은 기본적으로 다음과 같습니다.
+Kubernetes 수신은 일반적으로 API 게이트웨이 범위를 벗어난 웹 애플리케이션을 비롯한 앱의 모든 트래픽에 대해 역방향 프록시로 작동합니다. eShopOnContainers를 Kubernetes에 배포하면 _수신_을 통해 몇 가지 서비스 또는 엔드포인트만 노출되며, URL에 대한 접미사 목록은 기본적으로 다음과 같습니다.
 
 - `/`: 클라이언트 SPA 웹 애플리케이션의 경우
 - `/webmvc`: 클라이언트 MVC 웹 애플리케이션의 경우

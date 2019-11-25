@@ -2,12 +2,12 @@
 title: Async 애플리케이션 미세 조정(C#)
 ms.date: 07/20/2015
 ms.assetid: 97696eb9-81fc-4940-9655-84daa8eb4d5c
-ms.openlocfilehash: a7c730992a9bbb4853b6451323e1c49bd19bdf42
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: cff50e62ff62b70e97e7ea6e03714326d774e407
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924429"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73970235"
 ---
 # <a name="fine-tuning-your-async-application-c"></a>Async 애플리케이션 미세 조정(C#)
 <xref:System.Threading.Tasks.Task> 형식이 제공하는 메서드 및 속성을 사용하여 async 애플리케이션에 정확성 및 유연성을 추가할 수 있습니다. 이 섹션의 항목에서는 <xref:System.Threading.CancellationToken>을 사용하는 예제와 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> 및 <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>과 같은 중요한 `Task` 메서드를 보여 줍니다.  
@@ -20,7 +20,7 @@ ms.locfileid: "69924429"
   
 - `WhenAll`은 컬렉션의 모든 작업이 완료되면 완료되는 작업을 반환합니다.  
   
-     자세한 내용과 `WhenAll`을 사용하는 예제는 [방법: Task.WhenAll을 사용하여 비동기 연습 확장(C#)](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md)을 참조하세요.  
+     자세한 내용 및 `WhenAll`을 사용하는 예제는 [Task.WhenAll을 사용하여 비동기 연습을 확장하는 방법(C#)](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md)을 참조하세요.
   
  이 섹션에 포함된 예제는 다음과 같습니다.  
   

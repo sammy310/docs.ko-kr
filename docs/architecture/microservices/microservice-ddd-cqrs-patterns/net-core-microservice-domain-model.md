@@ -2,12 +2,12 @@
 title: .NET Core를 사용하여 마이크로 서비스 도메인 모델 구현
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | DDD 지향 도메인 모델의 구현 세부 정보를 가져옵니다.
 ms.date: 10/08/2018
-ms.openlocfilehash: b2ad62c2a16dd3993b9624ec14f0070e934ac2de
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: bff9cbda08e519038056268151a1721427f0ac01
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68676590"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972041"
 ---
 # <a name="implement-a-microservice-domain-model-with-net-core"></a>.NET Core를 사용하여 마이크로 서비스 도메인 모델 구현
 
@@ -17,7 +17,9 @@ ms.locfileid: "68676590"
 
 eShopOnContainers 참조 애플리케이션에 사용되는 폴더 조직에서는 애플리케이션에 대한 DDD 모델을 보여 줍니다. 다른 폴더 구조가 애플리케이션에 대해 선택한 설계와 더 분명하게 커뮤니케이션할 수도 있습니다. 그림 7-10에서 보듯 주문 도메인 모델에는 주문 집계와 구매자 집계 등의 두 가지 집계가 있습니다. 단일 도메인 개체로 구성된 집계를 가질 수도 있지만(집계 루트 또는 루트 엔터티) 각 집계는 도메인 엔터티 및 값 개체의 그룹입니다.
 
-![각 폴더에는 엔터티 클래스, 값 개체 파일 등을 포함하는 BuyerAggregate 및 OrderAggregate 폴더가 포함된 AggregatesModel 폴더를 보여주는 Ordering.Domain 프로젝트의 솔루션 탐색기 보기입니다. ](./media/image11.png)
+:::image type="complex" source="./media/net-core-microservice-domain-model/ordering-microservice-container.png" alt-text="솔루션 탐색기의 Ordering.Domain 프로젝트를 보여 주는 스크린샷":::
+각 폴더에는 엔터티 클래스, 값 개체 파일 등을 포함하는 BuyerAggregate 및 OrderAggregate 폴더가 포함된 AggregatesModel 폴더를 보여주는 Ordering.Domain 프로젝트의 솔루션 탐색기 보기입니다.
+:::image-end:::
 
 **그림 7-10**. eShopOnContainers에서 주문 마이크로 서비스의 도메인 모델
 
@@ -31,7 +33,9 @@ eShopOnContainers 참조 애플리케이션에 사용되는 폴더 조직에서�
 
 트랜잭션 일관성이란 집계가 비즈니스 동작의 마지막까지 일관되고 최신인 상태를 유지하도록 보장하는 것입니다. 예를 들어, eShopOnContainers 주문 마이크로 서비스 도메인 모델의 주문 집계는 그림 7-11처럼 구성됩니다.
 
-![OrderAggregate 폴더에 대한 자세히 보기: Address.cs는 값 개체이고, IOrderRepository는 리포지토리 인터페이스이고, Order.cs는 집계 루트이고, OrderItem.cs는 자식 엔터티이고, OrderStatus.cs는 열거형 클래스입니다.](./media/image12.png)
+:::image type="complex" source="./media/net-core-microservice-domain-model/vs-solution-explorer-order-aggregate.png" alt-text="OrderAggregate 폴더 및 해당 클래스의 스크린샷":::
+OrderAggregate 폴더에 대한 자세히 보기: Address.cs는 값 개체이고, IOrderRepository는 리포지토리 인터페이스이고, Order.cs는 집계 루트이고, OrderItem.cs는 자식 엔터티이고, OrderStatus.cs는 열거형 클래스입니다.
+:::image-end:::
 
 **그림 7-11**. Visual Studio 솔루션의 주문 집계
 
@@ -170,7 +174,7 @@ EF Core 1.1 이상의 기능을 사용하여 열을 필드에 매핑하면 속�
   <https://kalele.io/blog-posts/modeling-aggregates-with-ddd-and-entity-framework/>
 
 - **Julie Lerman. 데이터 요소 - 도메인 기반 디자인의 코딩: 데이터 중심 개발을 위한 팁** \
-  <https://msdn.microsoft.com/magazine/dn342868.aspx>
+  <https://docs.microsoft.com/archive/msdn-magazine/2013/august/data-points-coding-for-domain-driven-design-tips-for-data-focused-devs>
 
 - **Udi Dahan. 완벽하게 캡슐화된 도메인 모델을 만드는 방법** \
   <http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/>

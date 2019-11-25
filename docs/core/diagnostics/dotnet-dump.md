@@ -4,12 +4,12 @@ description: dotnet-dump 명령줄 도구를 설치하고 사용합니다.
 author: sdmaclea
 ms.author: stmaclea
 ms.date: 10/14/2019
-ms.openlocfilehash: 7eba0cba28f0575be4b374b26e9aca26a70df603
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: bb4f7827f898431c55603b070f5b7a23fe44cba5
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321545"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973451"
 ---
 # <a name="dump-collection-and-analysis-utility-dotnet-dump"></a>덤프 수집 및 분석 유틸리티(`dotnet-dump`)
 
@@ -20,7 +20,7 @@ ms.locfileid: "72321545"
 
 ## <a name="installing-dotnet-dump"></a>`dotnet-dump` 설치
 
-`dotnet-dump` [NuGet 패키지](https://www.nuget.org/packages/dotnet-dump)의 최신 릴리스 버전을 설치하려면 [dotnet tool install 설치](../tools/dotnet-tool-install.md) 명령을 사용합니다.
+`dotnet-dump` [NuGet 패키지](https://www.nuget.org/packages/dotnet-dump)의 최신 릴리스 버전을 설치하려면 [dotnet tool install](../tools/dotnet-tool-install.md) 명령을 사용합니다.
 
 ```dotnetcli
 dotnet tool install -g dotnet-dump

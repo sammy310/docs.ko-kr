@@ -1,14 +1,13 @@
 ---
 title: WCF 개발자를 위한 부록 gRPC
 description: 최신 마이크로 서비스 아키텍처에서 분산 트랜잭션 및 해당 구현에 대해 설명 합니다.
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: d181eb07dd50ed338d02edb1908626e6ca3fb56c
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 061aef016fd0e4303e1bbcbf0e73cec2b0c54f74
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "73841680"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73968212"
 ---
 # <a name="appendix-a---transactions"></a>부록 A-트랜잭션
 

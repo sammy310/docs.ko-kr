@@ -6,21 +6,21 @@ helpviewer_keywords:
 - .NET Framework, ASP.NET
 - dynamic Web applications [ASP.NET]
 ms.assetid: b7861df0-690a-4a58-bd12-f9d0123e40df
-ms.openlocfilehash: 2c659d433830a279a88fea766ceaa8efd7429b1f
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 9f939fa0f03aa00ea35405ce569d762486f4cb33
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051968"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975648"
 ---
 # <a name="developing-web-apps-with-aspnet"></a>ASP.NET을 사용하여 웹앱 개발
 
 ASP.NET은 웹 응용 프로그램을 만들기 위한 .NET Framework 기술입니다. ASP.NET에 대한 자세한 내용은 다음을 참조하세요.
 
 - [ASP.NET 설명서](/aspnet/overview)
-- [ASP.NET MVC](https://go.microsoft.com/fwlink/p/?LinkID=227227)
-- [ASP.NET 웹 페이지 2](https://go.microsoft.com/fwlink/p/?LinkId=251040)
-- [ASP.NET Web API](https://go.microsoft.com/fwlink/p/?LinkId=251041)  
+- [ASP.NET MVC](https://dotnet.microsoft.com/apps/aspnet/mvc)
+- [ASP.NET 웹 페이지 2](https://dotnet.microsoft.com/apps/aspnet/web-apps)
+- [ASP.NET Web API](https://dotnet.microsoft.com/apps/aspnet/apis)  
 - [Azure에서 ASP.NET Framework 웹앱 만들기](/azure/app-service/app-service-web-get-started-dotnet-framework)
 
 ## <a name="developing-web-apps-with-aspnet-core"></a>ASP.NET Core를 사용하여 웹앱 개발

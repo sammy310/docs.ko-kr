@@ -9,45 +9,34 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library
 ms.assetid: 643575d0-d26d-4c35-8de7-a9c403e97dd6
-ms.openlocfilehash: 7f5969bc6f73b2260ae1ffa4b0026d5b4119ff88
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6c589e85a0bbfb3f0b5858698ffb2a294ff88cf2
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134267"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973773"
 ---
 # <a name="dataflow-task-parallel-library"></a>데이터 흐름(작업 병렬 라이브러리)
-<a name="top"></a>TPL(작업 병렬 라이브러리)은 동시성 사용 애플리케이션의 견고성을 높이는 데 도움이 되는 데이터 흐름 구성 요소를 제공합니다. 이러한 데이터 흐름 구성 요소를 통칭하여 *TPL 데이터 흐름 라이브러리*라고 합니다. 이 데이터 흐름 모델은 정교하지 않은 데이터 흐름 및 파이프라인 작업을 위해 in-process 메시지 전달을 제공하여 행위자 기반 프로그래밍을 촉진합니다. 데이터 흐름 구성 요소는 TPL의 형식 및 예약 인프라를 바탕으로 빌드되며 비동기 프로그래밍에 대한 C#, Visual Basic 및 F# 언어 지원과 통합됩니다. 이러한 데이터 흐름 구성 요소는 비동기적으로 서로 통신해야 하는 여러 작업이 있는 경우나 데이터를 사용할 수 있게 될 때 해당 데이터를 처리하려는 경우에 유용합니다. 예를 들어 웹 카메라에서 이미지 데이터를 처리하는 애플리케이션의 경우, 데이터 흐름 모델을 사용함으로써 애플리케이션은 이미지 프레임을 사용할 수 있게 될 때 해당 이미지 프레임을 처리할 수 있습니다. 애플리케이션이 명도를 보정하거나 적목 현상을 줄이는 등의 작업을 수행하여 이미지 프레임을 개선하는 경우 데이터 흐름 구성 요소의 *파이프라인*을 만들 수 있습니다. 파이프라인의 각 단계에서는 TPL이 제공하는 기능과 같은 좀더 정교하지 않은 병렬 처리 기능을 사용하여 이미지를 변환할 수도 있습니다.  
+TPL(작업 병렬 라이브러리)은 동시성 사용 애플리케이션의 견고성을 높이는 데 도움이 되는 데이터 흐름 구성 요소를 제공합니다. 이러한 데이터 흐름 구성 요소를 통칭하여 *TPL 데이터 흐름 라이브러리*라고 합니다. 이 데이터 흐름 모델은 정교하지 않은 데이터 흐름 및 파이프라인 작업을 위해 in-process 메시지 전달을 제공하여 행위자 기반 프로그래밍을 촉진합니다. 데이터 흐름 구성 요소는 TPL의 형식 및 예약 인프라를 바탕으로 빌드되며 비동기 프로그래밍에 대한 C#, Visual Basic 및 F# 언어 지원과 통합됩니다. 이러한 데이터 흐름 구성 요소는 비동기적으로 서로 통신해야 하는 여러 작업이 있는 경우나 데이터를 사용할 수 있게 될 때 해당 데이터를 처리하려는 경우에 유용합니다. 예를 들어 웹 카메라에서 이미지 데이터를 처리하는 애플리케이션의 경우, 데이터 흐름 모델을 사용함으로써 애플리케이션은 이미지 프레임을 사용할 수 있게 될 때 해당 이미지 프레임을 처리할 수 있습니다. 애플리케이션이 명도를 보정하거나 적목 현상을 줄이는 등의 작업을 수행하여 이미지 프레임을 개선하는 경우 데이터 흐름 구성 요소의 *파이프라인*을 만들 수 있습니다. 파이프라인의 각 단계에서는 TPL이 제공하는 기능과 같은 좀더 정교하지 않은 병렬 처리 기능을 사용하여 이미지를 변환할 수도 있습니다.  
   
  이 문서에서는 TPL 데이터 흐름 라이브러리에 대한 개요를 제공합니다. 여기에서는 프로그래밍 모델, 미리 정의된 데이터 흐름 블록 형식 및 애플리케이션의 특정 요구 사항을 충족하도록 데이터 흐름 블록을 구성하는 방법을 설명합니다.  
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
-  
- 이 문서는 다음 섹션으로 구성됩니다.  
-  
-- [프로그래밍 모델](#model)  
-  
-- [미리 정의된 데이터 흐름 블록 형식](#predefined_types)  
-  
-- [데이터 흐름 블록 동작 구성](#behavior)  
-  
-- [사용자 지정 데이터 흐름 블록](#custom)  
-  
-<a name="model"></a>   
-## <a name="programming-model"></a>프로그래밍 모델  
+
+## <a name="programming-model"></a>프로그래밍 모델
  TPL 데이터 흐름 라이브러리는 처리량이 많고 대기 시간이 짧으며 CPU 및 I/O를 많이 사용하는 애플리케이션의 메시지 전달 및 병렬화를 위한 기반을 제공합니다. 또한 데이터가 버퍼링되고 시스템에서 이동하는 방식을 명시적으로 제어할 수 있도록 합니다. 데이터 흐름 프로그래밍 모델을 보다 정확히 이해하려면 디스크에서 이미지를 비동기적으로 로드하고 해당 이미지의 합성을 만드는 애플리케이션을 고려해 보십시오. 기존의 프로그래밍 모델에서는 대개 콜백과 동기화 개체(예: 잠금)를 사용하여 작업을 조정하고 공유 데이터에 액세스해야 합니다. 데이터 흐름 프로그래밍 모델을 사용하면 디스크에서 이미지를 읽을 때 해당 이미지를 처리하는 데이터 흐름 개체를 만들 수 있습니다. 데이터 흐름 모델에서는 데이터를 사용할 수 있게 될 때 데이터가 처리되는 방법과 데이터 간의 종속성도 선언합니다. 런타임에서 데이터 간의 종속성을 관리하기 때문에 대개 공유 데이터에 대한 액세스를 동기화할 필요가 없습니다. 또한 런타임에서 데이터의 비동기 도착을 기준으로 작업을 예약하기 때문에 데이터 흐름은 내부 스레드를 효율적으로 관리하여 응답성과 처리량을 개선할 수 있습니다. 데이터 흐름 프로그래밍 모델을 사용하여 Windows Forms 애플리케이션에서 이미지 처리를 구현하는 예제는 [연습: Windows Forms 애플리케이션에서 데이터 흐름 사용](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md)을 참조하세요.  
   
 ### <a name="sources-and-targets"></a>소스 및 대상  
  TPL 데이터 흐름 라이브러리는 데이터를 버퍼링하고 처리하는 데이터 구조인 *데이터 흐름 블록*으로 구성되어 있습니다. TPL은 세 가지 데이터 흐름 블록인 *소스 블록*, *대상 블록* 및 *전파자 블록*을 정의합니다. 소스 블록은 데이터의 소스 역할을 하며 읽을 수 있습니다. 대상 블록은 데이터의 수신자 역할을 하며 쓸 수 있습니다. 전파자 블록은 소스 블록과 대상 블록 역할을 하며 읽고 쓸 수 있습니다. TPL은 소스를 나타내는 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601?displayProperty=nameWithType> 인터페이스, 대상을 나타내는 <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601?displayProperty=nameWithType> 및 전파자를 나타내는 <xref:System.Threading.Tasks.Dataflow.IPropagatorBlock%602?displayProperty=nameWithType>을 정의합니다. <xref:System.Threading.Tasks.Dataflow.IPropagatorBlock%602>은 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601> 및 <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> 모두에서 상속합니다.  
   
- TPL 데이터 흐름 라이브러리는 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601>, <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> 및 <xref:System.Threading.Tasks.Dataflow.IPropagatorBlock%602> 인터페이스를 구현하는 몇 가지 미리 정의된 데이터 흐름 블록 형식을 제공합니다. 이러한 데이터 흐름 블록 형식은 이 문서의 [미리 정의된 데이터 흐름 블록 형식](#predefined_types) 섹션에 설명되어 있습니다.  
+ TPL 데이터 흐름 라이브러리는 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601>, <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> 및 <xref:System.Threading.Tasks.Dataflow.IPropagatorBlock%602> 인터페이스를 구현하는 몇 가지 미리 정의된 데이터 흐름 블록 형식을 제공합니다. 이러한 데이터 흐름 블록 형식은 이 문서의 [미리 정의된 데이터 흐름 블록 형식](#predefined-dataflow-block-types) 섹션에 설명되어 있습니다.  
   
 ### <a name="connecting-blocks"></a>블록 연결  
  데이터 흐름 블록의 선형 시퀀스인 *파이프라인*이나 데이터 흐름 블록의 그래프인 *네트워크*를 만들기 위해 데이터 흐름 블록을 연결할 수 있습니다. 파이프라인은 네트워크의 한 형태입니다. 파이프라인 또는 네트워크에서 소스는 데이터를 사용할 수 있게 되면 대상에 데이터를 비동기적으로 전파합니다. <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A?displayProperty=nameWithType> 메서드는 소스 데이터 흐름 블록을 대상 블록에 연결합니다. 소스는 0개 이상의 대상에 연결될 수 있으며, 대상은 0개 이상의 소스에서 연결될 수 있습니다. 파이프라인 또는 네트워크에서 데이터 흐름 블록을 동시에 추가하거나 제거할 수 있습니다. 미리 정의된 데이터 흐름 블록 형식은 연결 및 연결 해제의 모든 스레드로부터의 안전성 측면을 처리합니다.  
   
  데이터 흐름 블록을 연결하여 기본 파이프라인을 만드는 예제는 [연습: 데이터 흐름 파이프라인 만들기](../../../docs/standard/parallel-programming/walkthrough-creating-a-dataflow-pipeline.md)를 참조하세요. 데이터 흐름 블록을 연결하여 보다 복잡한 네트워크를 만드는 예제는 [연습: Windows Forms 애플리케이션에서 데이터 흐름 사용](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md)을 참조하세요. 소스가 대상에 메시지를 제공한 후 소스에서 대상의 연결을 해제하는 예제는 [방법: 데이터 흐름 블록 링크 끊기](../../../docs/standard/parallel-programming/how-to-unlink-dataflow-blocks.md)를 참조하세요.  
   
-#### <a name="filtering"></a>Filtering  
+#### <a name="filtering"></a>필터링  
  <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A?displayProperty=nameWithType> 메서드를 호출하여 소스를 대상에 연결하는 경우 대상 블록이 메시지의 값에 따라 해당 메시지를 수락할지 아니면 거부할지를 결정하는 대리자를 제공할 수 있습니다. 이 필터링 메커니즘은 데이터 흐름 블록이 특정 값만 받도록 보장하는 유용한 방법입니다. 대부분의 미리 정의된 데이터 흐름 블록 형식의 경우 소스 블록이 여러 대상 블록에 연결되어 있으면 대상 블록이 메시지를 거부할 때 소스는 그 다음 대상에 해당 메시지를 제공합니다. 소스가 대상에 메시지를 제공하는 순서는 소스에 의해 정의되며 소스의 형식에 따라 달라질 수 있습니다. 대부분의 소스 블록 형식은 한 대상이 메시지를 수락할 후 해당 메시지의 제공을 중지합니다. 이 규칙의 한 가지 예외는 일부 대상이 메시지를 거부하는 경우에도 모든 대상에 각 메시지를 제공하는 <xref:System.Threading.Tasks.Dataflow.BroadcastBlock%601> 클래스입니다. 필터링을 사용하여 특정 메시지만 처리하는 예제는 [연습: Windows Forms 애플리케이션에서 데이터 흐름 사용](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md)을 참조하세요.  
   
 > [!IMPORTANT]
@@ -78,10 +67,7 @@ ms.locfileid: "73134267"
  [!code-vb[TPLDataflow_Overview#11](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_overview/vb/program.vb#11)]  
   
  연속 작업의 본문에서 <xref:System.Threading.Tasks.Task.IsCanceled%2A>와 같은 속성을 사용하여 데이터 흐름 블록의 완료 상태에 대한 추가 정보를 확인할 수도 있습니다. 연속 작업과 연속 작업의 취소 및 오류 처리와 관련된 방법에 대한 자세한 내용은 [연속 작업을 사용하여 작업 연결](../../../docs/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks.md), [작업 취소](../../../docs/standard/parallel-programming/task-cancellation.md) 및 [예외 처리](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md)를 참조하세요.  
-  
- [[맨 위로 이동](#top)]  
-  
-<a name="predefined_types"></a>   
+
 ## <a name="predefined-dataflow-block-types"></a>미리 정의된 데이터 흐름 블록 형식  
  TPL 데이터 흐름 라이브러리는 몇 가지 미리 정의된 데이터 흐름 블록 형식을 제공합니다. 이러한 형식은 *버퍼링 블록*, *실행 블록* 및 *그룹 블록*이라는 세 가지 범주로 나뉩니다. 다음 단원에서는 이러한 범주를 구성하는 블록 형식에 대해 설명합니다.  
   
@@ -157,7 +143,7 @@ ms.locfileid: "73134267"
 #### <a name="summary-of-delegate-types"></a>대리자 형식 요약  
  다음 표에서는 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>, <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 및 <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> 개체에 제공할 수 있는 대리자 형식을 요약합니다. 또한 대리자 형식이 동기적으로 작동하는지, 아니면 비동기적으로 작동하는지를 지정합니다.  
   
-|Type|동기 대리자 형식|비동기 대리자 형식|  
+|형식|동기 대리자 형식|비동기 대리자 형식|  
 |----------|-------------------------------|--------------------------------|  
 |<xref:System.Threading.Tasks.Dataflow.ActionBlock%601>|`System.Action`|`System.Func<TInput, Task>`|  
 |<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|`System.Func<TInput, TOutput>`|`System.Func<TInput, Task<TOutput>>`|  
@@ -201,10 +187,7 @@ ms.locfileid: "73134267"
  [!code-vb[TPLDataflow_Overview#9](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_overview/vb/program.vb#9)]  
   
  <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602>을 사용하여 결과와 프로그램이 데이터베이스에서 읽는 동안 발생하는 모든 예외를 캡처하는 전체 예제는 [연습: BatchBlock 및 BatchedJoinBlock을 사용하여 효율성 향상](../../../docs/standard/parallel-programming/walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency.md)을 참조하세요.  
-  
- [[맨 위로 이동](#top)]  
-  
-<a name="behavior"></a>   
+
 ## <a name="configuring-dataflow--block-behavior"></a>데이터 흐름 블록 동작 구성  
  <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions?displayProperty=nameWithType> 개체를 데이터 흐름 블록 형식의 생성자에 제공하여 추가 옵션을 사용하도록 설정할 수 있습니다. 이러한 옵션은 기본 작업과 병렬 처리 수준을 관리하는 스케줄러와 같은 동작을 제어합니다. <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions>에는 데이터 흐름 블록 형식과 관련된 동작을 지정하는 파생 형식도 있습니다. 다음 표에서는 각 데이터 흐름 블록 형식과 관련된 옵션 형식을 요약합니다.  
   
@@ -254,16 +237,11 @@ ms.locfileid: "73134267"
   
  <xref:System.Threading.Tasks.Dataflow.JoinBlock%602>과 같은 조인 블록 형식의 경우 greedy 모드는 조인할 데이터를 아직 사용할 수 없는 경우에도 블록이 해당 데이터를 즉시 수락함을 의미합니다. non-greedy 모드는 각 대상에서 조인을 완료하기 위해 메시지를 사용할 수 있을 때까지 블록이 들어오는 모든 메시지를 연기함을 의미합니다. 연기된 메시지 중에서 하나라도 더 이상 사용할 수 없는 경우 조인 블록은 연기된 메시지를 모두 해제하고 프로세스를 다시 시작합니다. <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> 클래스의 경우, non-greedy 모드에서 <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> 개체가 개별 소스들에서 배치를 완료하는 데 충분한 메시지를 사용할 수 있을 때까지 들어오는 메시지를 모두 연기하는 점을 제외하고 greedy 및 non-greedy 동작이 유사합니다.  
   
- 데이터 흐름 블록에 대한 non-greedy 모드를 지정하려면 <xref:System.Threading.Tasks.Dataflow.GroupingDataflowBlockOptions.Greedy%2A>를 `False`로 설정합니다. non-greedy 모드를 사용하여 여러 조인 블록이 데이터 소스를 보다 효율적으로 공유할 수 있도록 하는 방법을 보여 주는 예제는 [방법: JoinBlock을 사용하여 여러 소스에서 데이터 읽기](../../../docs/standard/parallel-programming/how-to-use-joinblock-to-read-data-from-multiple-sources.md)를 참조하세요.  
-  
- [[맨 위로 이동](#top)]  
-  
-<a name="custom"></a>   
+ 데이터 흐름 블록에 대한 non-greedy 모드를 지정하려면 <xref:System.Threading.Tasks.Dataflow.GroupingDataflowBlockOptions.Greedy%2A>를 `False`로 설정합니다. non-greedy 모드를 사용하여 여러 조인 블록이 데이터 소스를 보다 효율적으로 공유할 수 있도록 하는 방법을 보여 주는 예제는 [방법: JoinBlock을 사용하여 여러 소스에서 데이터 읽기](../../../docs/standard/parallel-programming/how-to-use-joinblock-to-read-data-from-multiple-sources.md)를 참조하세요.
+
 ## <a name="custom-dataflow-blocks"></a>사용자 지정 데이터 흐름 블록  
- TPL 데이터 흐름 라이브러리가 미리 정의된 블록 형식을 다양하게 제공하지만 사용자 지정 동작을 수행하는 추가 블록 형식을 만들 수 있습니다. <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601> 또는 <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> 인터페이스를 직접 구현하거나 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Encapsulate%2A> 메서드를 사용하여 기존 블록 형식의 동작을 캡슐화하는 복합 블록을 작성합니다. 사용자 지정 데이터 흐름 블록 기능을 구현하는 방법을 보여 주는 예제는 [연습: 사용자 지정 데이터 흐름 블록 형식 만들기](../../../docs/standard/parallel-programming/walkthrough-creating-a-custom-dataflow-block-type.md)를 참조하세요.  
-  
- [[맨 위로 이동](#top)]  
-  
+ TPL 데이터 흐름 라이브러리가 미리 정의된 블록 형식을 다양하게 제공하지만 사용자 지정 동작을 수행하는 추가 블록 형식을 만들 수 있습니다. <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601> 또는 <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> 인터페이스를 직접 구현하거나 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Encapsulate%2A> 메서드를 사용하여 기존 블록 형식의 동작을 캡슐화하는 복합 블록을 작성합니다. 사용자 지정 데이터 흐름 블록 기능을 구현하는 방법을 보여 주는 예제는 [연습: 사용자 지정 데이터 흐름 블록 형식 만들기](../../../docs/standard/parallel-programming/walkthrough-creating-a-custom-dataflow-block-type.md)를 참조하세요.
+
 ## <a name="related-topics"></a>관련 항목  
   
 |제목|설명|  

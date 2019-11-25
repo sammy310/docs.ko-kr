@@ -2,12 +2,12 @@
 title: 마이크로 서비스 아키텍처의 통신
 description: 동기 및 비동기 방식의 의미를 이해하고 마이크로 서비스 간의 다양한 통신 방법을 탐색합니다.
 ms.date: 09/20/2018
-ms.openlocfilehash: 25d99d3d9b00b8c20c5ded6d8b40c77fcbe0eb46
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 7bd45e0b8f8ea3330cf8d2b613e54111cc72f14f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673300"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966985"
 ---
 # <a name="communication-in-a-microservice-architecture"></a>마이크로 서비스 아키텍처의 통신
 
@@ -51,9 +51,11 @@ ms.locfileid: "68673300"
 
 쿼리 요청과 같은 마이크로 서비스 간 동기 종속성을 추가하면 할수록 클라이언트 앱에 대한 전체 응답 시간은 악화됩니다.
 
-![동기 통신에서 클라이언트 요청을 처리하는 동안 마이크로 서비스 간에 요청의 "체인"이 생성됩니다. 이는 안티 패턴입니다. 비동기 통신 마이크로 서비스에서는 비동기 메시지 또는 http 폴링을 사용하여 다른 마이크로 서비스와 통신하지만, 클라이언트 요청은 즉시 처리됩니다.](./media/image15.png)
+![마이크로 서비스 전반의 세 가지 통신 유형을 보여주는 다이어그램입니다.](./media/communication-in-microservice-architecture/sync-vs-async-patterns-across-microservices.png)
 
 **그림 4-15**. 마이크로 서비스 간 통신의 안티 패턴 및 패턴
+
+위의 다이어그램에 표시된 것처럼, 동기 통신에서 클라이언트 요청을 처리하는 동안 마이크로 서비스 간에 요청의 "체인"이 생성됩니다. 이는 안티 패턴입니다. 비동기 통신 마이크로 서비스에서는 비동기 메시지 또는 http 폴링을 사용하여 다른 마이크로 서비스와 통신하지만, 클라이언트 요청은 즉시 처리됩니다.
 
 마이크로 서비스를 다른 마이크로 서비스의 추가 기능으로 만드는 경우, 가능하면 작업을 동기적으로, 그리고 원래 마이크로 서비스 요청 및 응답 작업의 일환으로 수행하지 마십시오. 대신, 비동기적으로 수행합니다(비동기 메시징 또는 통합 이벤트, 큐 등을 사용). 단, 되도록 원래 동기 요청 및 응답 작업의 일환으로 작업을 동기적으로 호출하지 마십시오.
 
@@ -75,7 +77,7 @@ ms.locfileid: "68673300"
 
 클라이언트가 요청/응답 통신을 사용하는 경우 요청을 서비스에 보낸 다음, 서비스가 요청을 처리하고 다시 응답을 보냅니다. 요청/응답 통신은 특히 클라이언트 앱에서 실시간 UI(라이브 사용자 인터페이스)에 대한 데이터를 쿼리하는 데 적합합니다. 따라서 그림 4-16에 표시된 것처럼 마이크로 서비스 아키텍처에서는 대부분의 쿼리에 이 통신 메커니즘을 사용하게 됩니다.
 
-![마이크로 서비스의 응답이 매우 짧은 시간 내에 도착한다는 가정 하에 클라이언트가 요청을 API 게이트웨이에 보낼 때 라이브 쿼리에 요청/응답 통신을 사용할 수 있습니다.](./media/image16.png)
+![라이브 쿼리와 업데이트에 대한 요청/응답 통신을 보여주는 다이어그램입니다.](./media/communication-in-microservice-architecture/request-response-comms-live-queries-updates.png)
 
 **그림 4-16**. HTTP 요청/응답 통신 사용(동기 또는 비동기)
 
@@ -99,11 +101,11 @@ ms.locfileid: "68673300"
 
 그림 4-17에서 볼 수 있듯이 실시간 HTTP 통신은 서버가 클라이언트에서 새 데이터를 요청하길 기다리도록 하는 대신, 서버 코드가 콘텐츠를 연결된 클라이언트로 푸시하도록 할 수 있음을 의미합니다.
 
-![SignalR은 백 엔드 서버에서 클라이언트로 콘텐츠를 푸시하기 위한 실시간 통신을 달성하는 좋은 방법입니다.](./media/image17.png)
+![SignalR 기반의 푸시 및 실시간 통신을 보여주는 다이어그램입니다.](./media/communication-in-microservice-architecture/one-to-many-communication.png)
 
 **그림 4-17**. 일대일 실시간 비동기 메시지 통신
 
-통신이 실시간이므로 클라이언트 앱은 변경 내용을 거의 즉시 표시합니다. 이는 일반적으로 많은 Websocket 연결을 사용하여(클라이언트당 하나) Websocket과 같은 프로토콜에서 처리됩니다. 일반적인 예는 서비스가 스포츠 경기 점수의 변경 내용을 여러 클라이언트 웹앱에 동시에 전달하는 경우입니다.
+SignalR은 백 엔드 서버에서 클라이언트로 콘텐츠를 푸시하기 위한 실시간 통신을 달성하는 좋은 방법입니다. 통신이 실시간이므로 클라이언트 앱은 변경 내용을 거의 즉시 표시합니다. 이는 일반적으로 많은 Websocket 연결을 사용하여(클라이언트당 하나) Websocket과 같은 프로토콜에서 처리됩니다. 일반적인 예는 서비스가 스포츠 경기 점수의 변경 내용을 여러 클라이언트 웹앱에 동시에 전달하는 경우입니다.
 
 >[!div class="step-by-step"]
 >[이전](direct-client-to-microservice-communication-versus-the-api-gateway-pattern.md)

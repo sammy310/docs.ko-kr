@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 680a7382-957f-4f6e-b178-4e866004a07e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ce022e92e8b6770c42800a04a349eff751bdb708
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 3cd881044d45a276ec361d24097b59b8ce76b7e4
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052060"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975693"
 ---
 # <a name="net-framework-initialization-errors-managing-the-user-experience"></a>.NET Framework 초기화 오류: 사용자 환경 관리
 
@@ -59,7 +59,7 @@ CLR 활성화 시스템이 애플리케이션에 필요한 올바른 버전의 �
 
 [ICLRMetaHostPolicy::GetRequestedRuntime](../unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) 메서드는 [METAHOST_POLICY_FLAGS](../unmanaged-api/hosting/metahost-policy-flags-enumeration.md) 열거형 멤버를 입력으로 허용합니다. METAHOST_POLICY_SHOW_ERROR_DIALOG 플래그를 포함하면 요청된 버전의 CLR을 찾을 수 없는 경우 오류 메시지를 요청할 수 있습니다. 기본적으로 오류 메시지는 표시되지 않습니다. [ICLRMetaHost::GetRuntime](../unmanaged-api/hosting/iclrmetahost-getruntime-method.md) 메서드는 이 플래그를 허용하지 않으며 오류 메시지를 표시하는 다른 방법도 제공하지 않습니다.
 
-Windows에서는 프로세스 내에서 실행되는 코드의 결과로 오류 메시지를 표시할지 여부를 선언하는 데 사용할 수 있는 [SetErrorMode](https://go.microsoft.com/fwlink/p/?LinkID=255242) 함수를 제공합니다. SEM_FAILCRITICALERRORS 플래그를 지정하면 오류 메시지가 표시되지 않도록 방지할 수 있습니다.
+Windows에서는 프로세스 내에서 실행되는 코드의 결과로 오류 메시지를 표시할지 여부를 선언하는 데 사용할 수 있는 [SetErrorMode](/windows/win32/api/errhandlingapi/nf-errhandlingapi-seterrormode) 함수를 제공합니다. SEM_FAILCRITICALERRORS 플래그를 지정하면 오류 메시지가 표시되지 않도록 방지할 수 있습니다.
 
 그러나 일부 시나리오에서는 애플리케이션 프로세스에서 지정한 SEM_FAILCRITICALERRORS 설정을 재정의하는 것이 중요합니다. 예를 들어 CLR을 호스트하고 SEM_FAILCRITICALERRORS가 설정되어 있는 프로세스에 호스트된 네이티브 COM 구성 요소가 있는 경우 해당 특정 애플리케이션 프로세스 내에서 오류 메시지를 표시할 경우의 영향에 따라 플래그를 재정의하는 것이 좋습니다. 이 경우 다음 플래그 중 하나를 사용하여 SEM_FAILCRITICALERRORS를 재정의할 수 있습니다.
 

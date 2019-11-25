@@ -3,12 +3,12 @@ title: 분기 및 루프 - C# 소개 자습서
 description: 분기 및 루프에 관한 이 자습서에서는 C# 코드를 작성하여 문을 반복적으로 실행하기 위한 조건부 분기 및 루프를 지원하는 언어 구문을 살펴봅니다.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: a0701a63d6c3aece6bac4263cbcf8a682a623cf7
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 44b634e3c2120116ee7fd66770398a6b66c8ed8c
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834119"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739133"
 ---
 # <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>분기 및 루프 문이 포함된 조건부 논리 알아보기
 
@@ -18,7 +18,13 @@ ms.locfileid: "71834119"
 
 ## <a name="make-decisions-using-the-if-statement"></a>`if` 문을 사용하여 결정하기
 
-*branches-tutorial*이라는 디렉터리를 만듭니다. 현재 디렉터리로 지정하고 `dotnet new console -n BranchesAndLoops -o .`을 실행합니다. 이 명령은 현재 디렉터리에 새 .NET Core 콘솔 애플리케이션을 만듭니다.
+*branches-tutorial*이라는 디렉터리를 만듭니다. 현재 디렉터리로 만들고 다음 명령을 실행합니다.
+
+```dotnetcli
+dotnet new console -n BranchesAndLoops -o .
+```
+
+이 명령은 현재 디렉터리에 새 .NET Core 콘솔 애플리케이션을 만듭니다.
 
 원하는 편집기에서 *Program.cs*를 열고 `Console.WriteLine("Hello World!");` 줄을 다음 코드로 바꿉니다.
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-ms.openlocfilehash: e37fc792f79044345d52b2bc463813c0bde22f5b
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 5cce8eb3ad36208c3d376bc8c94da484e9f9181e
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70970915"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971061"
 ---
 # <a name="extension-methods-c-programming-guide"></a>확장명 메서드(C# 프로그래밍 가이드)
 확장명 메서드를 사용하면 새 파생 형식을 만들거나 다시 컴파일하거나 원래 형식을 수정하지 않고도 기존 형식에 메서드를 "추가"할 수 있습니다. 확장 메서드는 특수한 종류의 정적 메서드이지만 확장 형식의 인스턴스 메서드인 것처럼 호출됩니다. C#, F# 및 Visual Basic에서 작성된 클라이언트 코드의 경우 확장명 메서드를 호출하는 것과 형식에 실제로 정의된 메서드를 호출하는 데는 명백한 차이가 없습니다.  
@@ -44,7 +44,7 @@ int i = s.WordCount();
   
  코드에서 인스턴스 메서드 구문을 사용하여 확장 메서드를 호출합니다. 그러나 컴파일러에서 생성된 IL(중간 언어)이 코드를 정적 메서드 호출로 변환합니다. 따라서 실제로 캡슐화의 원칙을 위반하지 않습니다. 사실상 확장명 메서드는 확장하는 형식의 private 변수에 액세스할 수 없습니다.  
   
- 자세한 내용은 [방법: 사용자 지정 확장 메서드 구현 및 호출](./how-to-implement-and-call-a-custom-extension-method.md)을 참조하세요.  
+ 자세한 내용은 [사용자 지정 확장 메서드를 구현 및 호출하는 방법](./how-to-implement-and-call-a-custom-extension-method.md)을 참조하세요.
   
  일반적으로 확장명 메서드를 직접 구현하는 것보다 호출하는 경우가 훨씬 많습니다. 확장 메서드는 인스턴스 메서드 구문을 사용하여 호출되므로 특별한 지식이 없어도 클라이언트 코드에서 확장 메서드를 사용할 수 있습니다. 특정 형식의 확장 메서드를 사용하려면 해당 메서드가 정의된 네임스페이스에 대해 `using` 지시문을 추가합니다. 예를 들어 표준 쿼리 연산자를 사용하려면 다음 `using` 지시문을 코드에 추가합니다.  
   

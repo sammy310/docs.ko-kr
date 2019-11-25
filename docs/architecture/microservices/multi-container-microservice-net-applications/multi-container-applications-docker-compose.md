@@ -2,12 +2,12 @@
 title: docker-compose.yml을 사용하여 다중 컨테이너 애플리케이션 정의
 description: docker-compose.yml을 사용하여 다중 컨테이너 애플리케이션에서 마이크로 서비스 컴퍼지션을 지정하는 방법입니다.
 ms.date: 10/02/2018
-ms.openlocfilehash: 938a9aa192f82628051bd7dc065f661f510ba544
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 02db27feb1320d8b9c6823b8f9ef51c2ddf9791c
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73416708"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737092"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>docker-compose.yml을 사용하여 다중 컨테이너 애플리케이션 정의
 
@@ -177,9 +177,15 @@ Compose를 사용하여 원격 Docker 엔진에 배포할 수도 있습니다. �
 
 기본적으로 Compose는 두 개의 파일, docker-compose.yml 및 선택적 docker-compose.override.yml 파일을 읽습니다. 그림 6-11과 같이 Visual Studio를 사용하고 Docker 지원을 활성화 하도록 설정하여, Visual Studio도 애플리케이션의 디버깅을 위한 추가 docker-compose.vs.debug.g.yml 파일을 만듭니다. 기본 솔루션 폴더에서 obj\\Docker\\ 폴더에서 이 파일을 볼 수 있습니다.
 
-![docker compose 프로젝트 파일 구조: .dockerignore, 파일 무시; docker-compose.yml, 마이크로 서비스 구성; docker-compose.override.yml, 마이크로 서비스 환경 설정.](./media/image12.png)
+![Docker Compose 프로젝트 파일의 스크린샷](./media/multi-container-applications-docker-compose/docker-compose-file-visual-studio.png)
 
 **그림 6-11**. Visual Studio 2017의 docker-compose 파일
+
+**Docker Compose** 프로젝트 파일 구조:
+
+* *.dockerignore* - 파일을 무시하는 데 사용
+* *docker-compose.yml* - 마이크로 서비스를 작성하는 데 사용
+* *docker-compose.override.yml* - 마이크로 서비스 환경을 구성하는 데 사용
 
 Visual Studio Code 또는 Sublime과 같은 편집기를 사용하여 docker-compose 파일을 편집하고 docker-compose up 명령을 사용하여 애플리케이션을 실행할 수 있습니다.
 
@@ -191,11 +197,11 @@ Visual Studio Code 또는 Sublime과 같은 편집기를 사용하여 docker-com
 
 일반적인 사용 사례는 프로덕션, 준비, CI 또는 개발과 같은 여러 환경을 대상으로 지정할 수 있도록 여러 compose 파일을 정의하는 경우입니다. 이러한 차이를 지원하기 위해 그림 6-12에 나와 있는 것처럼 Compose 구성을 여러 파일로 분할할 수 있습니다.
 
-![여러 docker-compose*.fml 파일을 결합하여 다른 환경을 처리할 수 있습니다.](./media/image13.png)
+![기본 파일을 재정의하도록 설정된 세 가지 docker-compose 파일의 다이어그램](./media/multi-container-applications-docker-compose/multiple-docker-compose-files-override-base.png)
 
 **그림 6-12**. 기본 docker-compose.yml 파일에서 값을 재정의하는 다중 docker-compose 파일
 
-기본 docker-compose.yml 파일로 시작합니다. 이 기본 파일은 환경에 따라 변경되지 않는 기본 또는 정적 구성 설정을 포함해야 합니다. 예를 들어 eShopOnContainers에는 기본 파일로 다음과 같은 docker-compose.yml(더 적은 서비스로 단순화된) 파일이 있습니다.
+여러 docker-compose*.yml 파일을 결합하여 다른 환경을 처리할 수 있습니다. 기본 docker-compose.yml 파일로 시작합니다. 이 기본 파일은 환경에 따라 변경되지 않는 기본 또는 정적 구성 설정을 포함해야 합니다. 예를 들어 eShopOnContainers에는 기본 파일로 다음과 같은 docker-compose.yml(더 적은 서비스로 단순화된) 파일이 있습니다.
 
 ```yml
 #docker-compose.yml (Base)
@@ -418,7 +424,7 @@ docker-compose는 .env 파일의 각 줄이 \<변수\>=\<값\> 형식이 되도�
 
 런타임 환경에서 설정된 값은 항상 .env 파일 내부에 정의된 값을 재정의합니다. 비슷한 방식으로 명령줄 명령 인수를 통해 전달된 값도 .env 파일에 설정된 기본값을 재정의합니다.
 
-#### <a name="additional-resources"></a>추가 리소스
+#### <a name="additional-resources"></a>추가 자료
 
 - **Docker Compose 개요** \
     <https://docs.docker.com/compose/overview/>
@@ -461,7 +467,7 @@ ENTRYPOINT ["dotnet", "run"]
 
 빠른 시작을 위해 런타임 이미지도 자동으로 aspnetcore\_urls를 포트 80으로 설정하고 Ngen을 사용하여 어셈블리의 네이티브 이미지 캐시를 만듭니다.
 
-#### <a name="additional-resources"></a>추가 리소스
+#### <a name="additional-resources"></a>추가 자료
 
 - **ASP.NET Core를 사용하여 최적화된 Docker 이미지 빌드**  
   <https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/>

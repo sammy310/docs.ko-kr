@@ -32,12 +32,12 @@ helpviewer_keywords:
 - conditional OR operator [C#]
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
-ms.openlocfilehash: 4a3e6986060b8e22d49110b8b9f275f41b743af2
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 327a2a8a95809923446107e6ba1c4b331eee82b7
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73036401"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737888"
 ---
 # <a name="boolean-logical-operators-c-reference"></a>부울 논리 연산자(C# 참조)
 
@@ -129,7 +129,7 @@ C# 8.0부터 단항 후위 `!` 연산자는 [null 허용 연산자](null-forgivi
 |null|false|false|null|  
 |null|null|null|null|  
 
-해당 연산자의 동작은 Nullable 값 형식을 사용하는 일반 연산자 동작과 다릅니다. 일반적으로 값 형식의 피연산자에 대해 정의된 연산자도 해당 Nullable 값 형식의 피연산자와 함께 사용할 수 있습니다. 피연산자가 `null`로 평가되는 경우 해당 연산자는 `null`을 생성합니다. 그러나 피연산자 중 하나가 `null`로 평가되는 경우에도 `&` 및 `|` 연산자는 Null이 아닌 값을 생성합니다. Nullable 값 형식을 사용한 연산자 동작에 대한 자세한 내용은 [nullable 형식 사용](../../programming-guide/nullable-types/using-nullable-types.md) 문서의 [연산자](../../programming-guide/nullable-types/using-nullable-types.md#operators) 섹션을 참조하세요.
+해당 연산자의 동작은 Nullable 값 형식을 사용하는 일반 연산자 동작과 다릅니다. 일반적으로 값 형식의 피연산자에 대해 정의된 연산자도 해당 Nullable 값 형식의 피연산자와 함께 사용할 수 있습니다. 피연산자가 `null`로 평가되는 경우 해당 연산자는 `null`을 생성합니다. 그러나 피연산자 중 하나가 `null`로 평가되는 경우에도 `&` 및 `|` 연산자는 Null이 아닌 값을 생성합니다. Nullable 값 형식을 사용한 연산자 동작에 대한 자세한 내용은 [Nullable 값 형식](../builtin-types/nullable-value-types.md) 문서의 [리프트된 연산자](../builtin-types/nullable-value-types.md#lifted-operators) 섹션을 참조하세요.
 
 다음 예제와 같이 `!` 및 `^` 연산자를 `bool?` 피연산자와 함께 사용할 수도 있습니다.
 

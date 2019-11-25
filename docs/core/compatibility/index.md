@@ -2,12 +2,12 @@
 title: 호환성이 손상되는 변경 평가 - .NET Core
 description: .NET Core에서 개발자를 위해 .NET 버전 간의 호환성을 유지하는 방법을 알아봅니다.
 ms.date: 06/10/2019
-ms.openlocfilehash: f4e18a17f58452c9325f36390626ae690f5ed777
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 3ad3cbe36ee09d371e26dc7da36a31207a6c1b25
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739355"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973643"
 ---
 # <a name="evaluate-breaking-changes-in-net-core"></a>.NET Core의 호환성이 손상되는 변경 평가
 
@@ -103,7 +103,7 @@ ms.locfileid: "73739355"
 
   재정의를 도입하는 경우 [base](../../csharp/language-reference/keywords/base.md)를 호출할 때 이전 소비자가 재정의를 건너뛸 수 있습니다.
 
-- **✔️ 이전에 클래스에 생성자가 없었던 경우 기본(매개 변수가 없는) 생성자와 함께 클래스에 생성자 추가**
+- **✔️ 이전에 클래스에 생성자가 없었던 경우 매개 변수가 없는 생성자와 함께 클래스에 생성자 추가**
 
    단, 매개 변수가 없는 생성자를 추가하지 ‘않고’ 이전에 생성자가 없었던 클래스에 생성자를 추가할 수는 없습니다. 
 

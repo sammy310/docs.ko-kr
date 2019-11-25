@@ -2,17 +2,17 @@
 title: 식 트리(C#)
 ms.date: 07/20/2015
 ms.assetid: 7d0ac21a-6d90-4e2e-8903-528cb78615b7
-ms.openlocfilehash: 7e63bf28f10070daa9624daa67bd5118fa67874d
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: e1ba2ac9107b5c0ab4547bd8cc5f23ca84753951
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926725"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73969853"
 ---
 # <a name="expression-trees-c"></a>식 트리(C#)
 식 트리는 `x < y` 등의 이진 연산이나 메서드 호출과 같이 각 노드가 식인 트리 형식 데이터 구조의 코드를 표시합니다.  
   
- 식 트리로 표시되는 코드를 컴파일하고 실행할 수 있습니다. 이렇게 하면 실행 가능한 코드를 동적으로 수정하고, 다양한 데이터베이스에서 LINQ 쿼리를 실행하고, 동적 쿼리를 만들 수 있습니다. LINQ의 식 트리에 대한 자세한 내용은 [방법: 식 트리를 사용하여 동적 쿼리 빌드(C#)](./how-to-use-expression-trees-to-build-dynamic-queries.md)를 참조하세요.  
+ 식 트리로 표시되는 코드를 컴파일하고 실행할 수 있습니다. 이렇게 하면 실행 가능한 코드를 동적으로 수정하고, 다양한 데이터베이스에서 LINQ 쿼리를 실행하고, 동적 쿼리를 만들 수 있습니다. LINQ의 식 트리에 대한 자세한 내용은 [식 트리를 사용하여 동적 쿼리 빌드 방법(C#)](./how-to-use-expression-trees-to-build-dynamic-queries.md)을 참조하세요.
   
  식 트리는 동적 언어와 .NET Framework 간에 상호 운용성을 제공하고 컴파일러 작성기가 MSIL(Microsoft Intermediate Language) 대신 식 트리를 내보낼 수 있도록 DLR(동적 언어 런타임)에서도 사용됩니다. DLR에 대한 자세한 내용은 [동적 언어 런타임 개요](../../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)를 참조하세요.  
   
@@ -118,7 +118,7 @@ Console.WriteLine("Decomposed expression: {0} => {1} {2} {3}",
 ```  
   
 ## <a name="immutability-of-expression-trees"></a>변경 불가능한 식 트리  
- 식 트리는 변경할 수 없어야 합니다. 즉, 식 트리를 수정하려면 기존 식 트리를 복사한 다음 트리 내의 노드를 바꾸는 방법으로 새 식 트리를 생성해야 합니다. 식 트리 방문자를 사용하면 기존 식 트리를 트래버스할 수 있습니다. 자세한 내용은 [방법: 식 트리 수정(C#)](./how-to-modify-expression-trees.md)을 참조하세요.  
+ 식 트리는 변경할 수 없어야 합니다. 즉, 식 트리를 수정하려면 기존 식 트리를 복사한 다음 트리 내의 노드를 바꾸는 방법으로 새 식 트리를 생성해야 합니다. 식 트리 방문자를 사용하면 기존 식 트리를 트래버스할 수 있습니다. 자세한 내용은 [식 트리 수정 방법(C#)](./how-to-modify-expression-trees.md)을 참조하세요.
   
 ## <a name="compiling-expression-trees"></a>식 트리 컴파일  
  <xref:System.Linq.Expressions.Expression%601> 형식은 식 트리로 표시되는 코드를 실행 가능한 대리자로 컴파일하는 <xref:System.Linq.Expressions.Expression%601.Compile%2A> 메서드를 제공합니다.  
@@ -145,13 +145,13 @@ Console.WriteLine(expr.Compile()(4));
 // Also prints True.  
 ```  
   
- 자세한 내용은 [방법: 식 트리 실행(C#)](./how-to-execute-expression-trees.md)을 참조하세요.  
+ 자세한 내용은 [식 트리 실행 방법(C#)](./how-to-execute-expression-trees.md)을 참조하세요.
   
 ## <a name="see-also"></a>참고 항목
 
 - <xref:System.Linq.Expressions>
-- [방법: 식 트리 실행(C#)](./how-to-execute-expression-trees.md)
-- [방법: 식 트리 수정(C#)](./how-to-modify-expression-trees.md)
+- [식 트리 실행 방법(C#)](./how-to-execute-expression-trees.md)
+- [식 트리 수정 방법(C#)](./how-to-modify-expression-trees.md)
 - [람다 식](../../statements-expressions-operators/lambda-expressions.md)
 - [동적 언어 런타임 개요](../../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)
 - [프로그래밍 개념(C#)](../index.md)

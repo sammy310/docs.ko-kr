@@ -2,12 +2,12 @@
 title: 공급자 매니페스트 지정
 ms.date: 03/30/2017
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
-ms.openlocfilehash: bef4868ccc52d287baaceca32c4943723be7531f
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: a9dca140588be26035b235109c48049ce01e9ce1
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040488"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973880"
 ---
 # <a name="provider-manifest-specification"></a>공급자 매니페스트 지정
 이 단원에서는 데이터 저장소 공급자가 데이터 저장소의 형식 및 함수를 지원하는 방법에 대해 설명합니다.  
@@ -68,7 +68,7 @@ ms.locfileid: "73040488"
 ### <a name="provider-manifest-token"></a>공급자 매니페스트 토큰  
  데이터 저장소 연결이 열린 경우 공급자가 올바른 매니페스트를 반환하기 위해 정보를 쿼리할 수 있습니다. 이는 연결 정보를 사용할 수 없거나 저장소에 연결할 수 없는 오프라인 시나리오에서는 가능하지 않을 수 있습니다. .ssdl 파일에서 `ProviderManifestToken` 요소의 `Schema` 특성을 사용하여 매니페스트를 식별할 수 있습니다. 이 특성에는 필수 형식이 없습니다. 공급자는 저장소에 대한 연결을 열지 않고 매니페스트를 식별하는 데 필요한 최소한의 정보를 선택합니다.  
   
- 예를 들면,  
+ 예를 들어 다음과 같은 가치를 제공해야 합니다.  
   
 ```xml  
 <Schema Namespace="Northwind" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:edm="http://schemas.microsoft.com/ado/2006/04/edm/ssdl" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">  
@@ -93,7 +93,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 #### <a name="using-a-provider-manifest-token"></a>공급자 매니페스트 토큰 사용  
  오프라인 시나리오의 경우 토큰이 SSDL 표현에서 선택됩니다. SSDL을 사용 하면 ProviderManifestToken을 지정할 수 있습니다 (자세한 내용은 [Schema 요소 (SSDL)](/ef/ef6/modeling/designer/advanced/edmx/ssdl-spec#schema-element-ssdl) 참조). 예를 들어, 연결을 열 수 없는 경우 SSDL에는 매니페스트에 대한 정보를 지정하는 공급자 매니페스트 토큰이 있습니다.  
   
-```csharp  
+```csharp
 public DbProviderManifest GetProviderManifest(string manifestToken);  
 ```  
   

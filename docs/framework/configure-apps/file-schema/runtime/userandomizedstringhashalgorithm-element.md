@@ -8,12 +8,12 @@ helpviewer_keywords:
 - UseRandomizedStringHashAlgorithm element
 - <UseRandomizedStringHashAlgorithm> element
 ms.assetid: c08125d6-56cc-4b23-b482-813ff85dc630
-ms.openlocfilehash: cc9708b8cca6520932fbf0e1975a05cad5fad485
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 3863bc1376d89ef804022fb9c87fac3a25fc910f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73115035"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73968839"
 ---
 # <a name="userandomizedstringhashalgorithm-element"></a>\<UseRandomizedStringHashAlgorithm > 요소
 공용 언어 런타임이 응용 프로그램 도메인 별로 문자열의 해시 코드를 계산할지 여부를 결정 합니다.  
@@ -70,7 +70,7 @@ ms.locfileid: "73115035"
   
  구성 파일을 제공 하지 않고 예제를 실행 하면 다음과 유사한 출력이 표시 됩니다. 문자열의 해시 코드는 두 애플리케이션 도메인에서 동일합니다.  
   
-```  
+```console
 String 'This is a string.' in domain 'PerDomain.exe': 941BCEAC  
 String 'This is a string.' in domain 'NewDomain': 941BCEAC  
 ```  
@@ -88,7 +88,7 @@ String 'This is a string.' in domain 'NewDomain': 941BCEAC
   
  구성 파일이 있는 경우 예제는 다음과 같은 출력을 표시 합니다.  
   
-```  
+```console
 String 'This is a string.' in domain 'PerDomain.exe': 5435776D  
 String 'This is a string.' in domain 'NewDomain': 75CC8236  
 ```  

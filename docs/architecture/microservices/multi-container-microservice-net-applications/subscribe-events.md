@@ -2,12 +2,12 @@
 title: 이벤트 구독
 description: 컨테이너화된 .NET 애플리케이션의.NET 마이크로 서비스 아키텍처 | 통합 이벤트에 대한 게시 및 구독의 세부 정보를 이해합니다.
 ms.date: 10/02/2018
-ms.openlocfilehash: 208b0f27aa1e6ceb6686e9e846b6e31d9f1c74df
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: c607f8b980f7dffacf3564688c6c9bb498264d96
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73035646"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737026"
 ---
 # <a name="subscribing-to-events"></a>이벤트 구독
 
@@ -139,7 +139,7 @@ CQRS 방식을 사용하는 경우와 같은 고급 마이크로 서비스의 �
 
 그림 6-22는 첫 번째 방법의 아키텍처를 보여줍니다.
 
-![이벤트를 게시할 때 원자성을 처리하는 한 가지 방법: 이벤트 로그 테이블에 이벤트를 커밋하는 하나의 트랜잭션을 만든 다음, 게시하는 다른 트랜잭션을 만듭니다(eShopOnContainers에 사용됨).](./media/image23.png)
+![작업자 마이크로 서비스를 사용하지 않고 게시할 경우의 원자성을 보여 주는 다이어그램](./media/subscribe-events/atomicity-publish-event-bus.png)
 
 **그림 6-22** 이벤트 버스로 이벤트를 게시할 경우 원자성
 
@@ -147,7 +147,7 @@ CQRS 방식을 사용하는 경우와 같은 고급 마이크로 서비스의 �
 
 두 번째 방식에서는 EventLog 테이블을 큐로 사용하고 언제나 작업자 마이크로 서비스를 사용해 메시지를 게시합니다. 이 경우에 프로세스는 그림 6-23과 유사합니다. 이 프로세스에는 추가 마이크로 서비스가 있으며 이벤트를 게시할 때 테이블은 단일 소스입니다.
 
-![원자성을 처리하는 다른 방법: 이벤트 로그 테이블에 게시한 다음, 다른 마이크로 서비스(백그라운드 작업자)가 이벤트를 게시하도록 합니다.](./media/image24.png)
+![작업자 마이크로 서비스를 사용하여 게시할 경우의 원자성을 보여 주는 다이어그램](./media/subscribe-events/atomicity-publish-worker-microservice.png)
 
 **그림 6-23** 작업자 마이크로 서비스를 사용하여 이벤트 버스로 이벤트를 게시할 경우 원자성
 
@@ -279,7 +279,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 
 이벤트 처리기는 제품이 존재하는 장바구니 인스턴스가 있는지 여부를 확인해야 합니다. 이벤트 처리기는 각각의 관련 장바구니 라인 품목의 품목 가격을 업데이트합니다. 마지막으로, 그림 6-24와 같이 사용자에게 가격 변동에 대해 표시할 알림을 만듭니다.
 
-![사용자 장바구니에서 프로세스 변경 알림의 브라우저 보기](./media/image25.png)
+![사용자 카트에 대한 가격 변경 알림을 보여 주는 브라우저의 스크린샷](./media/subscribe-events/display-item-price-change.png)
 
 **그림 6-24** 통합 이벤트에서 전달한 장바구니 내 품목 가격 변동 표시
 
@@ -320,7 +320,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 
 "재전달" 플래그가 설정된 경우에는 메시지가 이미 처리되었을 수 있으므로 수신자를 고려해야 합니다. 하지만 메시지가 처리된다는 보장은 없으며 메시지가 메시지 브로커에서 나온 이후 네트워크 문제 등의 이유로 수신자에게 도달하지 않을 수 있습니다. 반면, "재전달" 플래그가 설정되지 않은 경우 메시지는 확실히 두 번 이상 전송되지 않습니다. 따라서 수신자는 메시지에 "재배달" 플래그가 설정된 경우에만 메시지를 중복 제거하거나 멱등 방식으로 처리해야 합니다.
 
-### <a name="additional-resources"></a>추가 리소스
+### <a name="additional-resources"></a>추가 자료
 
 - **NServiceBus를 사용하여 포크된 eShopOnContainers(특정 소프트웨어)**  \
     <https://go.particular.net/eShopOnContainers>

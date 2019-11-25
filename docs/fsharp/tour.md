@@ -2,16 +2,16 @@
 title: F# 둘러보기
 description: 이 자습서에서는 예제 코드를 사용하여 F# 프로그래밍 언어의 주요 기능을 살펴봅니다.
 ms.date: 11/06/2018
-ms.openlocfilehash: eba136da3cd829dcb2b0726dd4f1c24434aeba5b
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: cfea2827dcec65f9e3606e8528179029e1f2db84
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182618"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423814"
 ---
 # <a name="tour-of-f"></a>F\# 둘러보기
 
-F#에 대해 자세히 이해하려면 F# 코드를 읽고 작성하는 방법이 가장 좋습니다. 이 문서에서는 F# 언어의 주요 기능 중 일부를 둘러보고 컴퓨터에서 실행할 수 있는 코드 조각을 제공합니다. 개발 환경 설정에 대한 자세한 내용은 [시작하기](./tutorials/getting-started/index.md)를 참조하십시오.
+F#에 대해 자세히 이해하려면 F# 코드를 읽고 작성하는 방법이 가장 좋습니다. 이 문서에서는 F# 언어의 주요 기능 중 일부를 둘러보고 컴퓨터에서 실행할 수 있는 코드 조각을 제공합니다. 개발 환경 설정에 대한 자세한 내용은 [시작하기](get-started/index.md)를 참조하십시오.
 
 F#에 함수(function)와 유형(type)이라는 두 가지 기본 개념이 있습니다.  둘러보기에서는 이 두 가지 개념에 해당하는 언어의 기능을 강조합니다.
 
@@ -25,13 +25,13 @@ F# 프로그램의 가장 기본적인 부분은 ***모듈***로 구성된 ***�
 
 [!code-fsharp[BasicFunctions](~/samples/snippets/fsharp/tour.fs#L101-L133)]
 
-`let`바인딩은 다른 언어의 변수와 유사 하 게 값을 이름에 바인딩하는 방법 이기도 합니다.  `let`바인딩은 기본적으로 ***변경할*** 수 없습니다. 즉, 값 또는 함수를 이름에 바인딩한 후에는 내부에서 변경할 수 없습니다.  이는 ***변경할***수 있는 다른 언어의 변수와 대조적입니다. 즉, 특정 시점에 해당 값을 변경할 수 있습니다.  변경할 수 있는 바인딩이 필요한 경우 구문을 사용할 `let mutable ...` 수 있습니다.
+`let` 바인딩은 다른 언어의 변수와 유사 하 게 값을 이름에 바인딩하는 방법 이기도 합니다.  `let` 바인딩은 기본적으로 ***변경할*** 수 없습니다. 즉, 값 이나 함수를 이름에 바인딩한 후에는 내부에서 변경할 수 없습니다.  이는 ***변경할***수 있는 다른 언어의 변수와 대조적입니다. 즉, 특정 시점에 해당 값을 변경할 수 있습니다.  변경할 수 있는 바인딩이 필요한 경우 `let mutable ...` 구문을 사용할 수 있습니다.
 
 [!code-fsharp[Immutability](~/samples/snippets/fsharp/tour.fs#L75-L94)]
 
 ## <a name="numbers-booleans-and-strings"></a>숫자, 부울 및 문자열
 
-.NET 언어로, F# 지원 동일한 기본 [기본 형식](./language-reference/primitive-types.md) .NET에 존재 하는 합니다.
+.NET 언어로, F# 지원 동일한 기본 [기본 형식](language-reference/basic-types.md) .NET에 존재 하는 합니다.
 
 다양 한 숫자 형식은 F#의 표현 됩니다 다음과 같습니다.
 
@@ -51,11 +51,11 @@ F# 프로그램의 가장 기본적인 부분은 ***모듈***로 구성된 ***�
 
 [!code-fsharp[Tuples](~/samples/snippets/fsharp/tour.fs#L186-L203)]
 
-F# 4.1을 기준으로 만들 수도 있습니다 `struct` 튜플.  또한 `struct` 튜플 인 c # 7/Visual Basic 15 튜플로 완전히 상호 운용 됩니다.
+F# 4.1을 기준으로 만들 수도 있습니다 `struct` 튜플.  또한 튜플도 `struct` c # 7/Visual Basic 15 튜플로 완전히 상호 운용 됩니다.
 
 [!code-fsharp[Tuples](~/samples/snippets/fsharp/tour.fs#L205-L218)]
 
-튜플을 값 형식 이므로 `struct` 참조 튜플로 암시적으로 변환 하거나 그 반대로 변환할 수 없다는 점에 유의 해야 합니다.  참조와 구조체 튜플 사이에서 명시적으로 변환 해야 합니다.
+`struct` 튜플은 값 형식 이므로 참조 튜플로 암시적으로 변환 될 수 없으며, 그 반대의 경우도 마찬가지입니다.  참조와 구조체 튜플 사이에서 명시적으로 변환 해야 합니다.
 
 ## <a name="pipelines-and-composition"></a>파이프라인 및 컴퍼지션
 
@@ -86,7 +86,7 @@ F# 4.1을 기준으로 만들 수도 있습니다 `struct` 튜플.  또한 `stru
 컬렉션 또는 요소의 시퀀스로 처리는 사용 하 여 일반적으로 수행 됩니다 [재귀](./language-reference/functions/index.md#recursive-functions) F#에 있습니다.  F#에 루프 및 명령형 프로그래밍에 대 한 지원으로 재귀는 정확성을 보장 하기 위해 더 쉽기 때문에 기본 설정 합니다.
 
 > [!NOTE]
-> 다음 예에서는 `match` 식을 통해 패턴 일치를 사용 합니다.  이 기본 구문은이 문서의 뒷부분에 설명 되어 있습니다.
+> 다음 예제에서는 `match` 식을 통해 패턴 일치를 사용 합니다.  이 기본 구문은이 문서의 뒷부분에 설명 되어 있습니다.
 
 [!code-fsharp[RecursiveFunctions](~/samples/snippets/fsharp/tour.fs#L461-L500)]
 
@@ -100,7 +100,7 @@ F# 또한가 마무리 호출 최적화에 대 한 전체 지원 있습니다 �
 
 [!code-fsharp[Records](~/samples/snippets/fsharp/tour.fs#L507-L559)]
 
-F# 4.1을 기준으로 나타낼 수도 있습니다 레코드는 `struct`s입니다.  이 작업은 `[<Struct>]` 특성을 사용 하 여 수행 됩니다.
+F# 4.1을 기준으로 나타낼 수도 있습니다 레코드는 `struct`s입니다.  `[<Struct>]` 특성을 사용 하 여 수행 됩니다.
 
 [!code-fsharp[Records](~/samples/snippets/fsharp/tour.fs#L561-L568)]
 
@@ -114,13 +114,13 @@ Du를 *단일 대/소문자 구분 된 공용 구조체*로 사용 하 여 기�
 
 위의 샘플에서 보여 주는 것 처럼, 단일 대/소문자 구분 된 공용 구조체에서 내부 값을 가져오려면 명시적으로 래핑 해제 해야 합니다.
 
-또한 Du는 재귀 정의를 지원 하 여 트리 및 본질적으로 재귀적 데이터를 쉽게 나타낼 수 있습니다.  예를 들어 및 `exists` `insert` 함수를 사용 하 여 이진 검색 트리를 나타낼 수 있는 방법은 다음과 같습니다.
+또한 Du는 재귀 정의를 지원 하 여 트리 및 본질적으로 재귀적 데이터를 쉽게 나타낼 수 있습니다.  예를 들어 `exists` 및 `insert` 함수를 사용 하 여 이진 검색 트리를 나타낼 수 있는 방법은 다음과 같습니다.
 
 [!code-fsharp[Unions](~/samples/snippets/fsharp/tour.fs#L656-L683)]
 
 Du를 사용 하면 데이터 형식에서 트리의 재귀 구조를 나타낼 수 있으므로이 재귀적 구조에서 작업 하는 것은 간단 하며 정확성을 보장 합니다.  또한 아래와 같이 패턴 일치에서 지원 됩니다.
 
-또한 `[<Struct>]` 특성을 사용 하 여 du `struct`를 s로 나타낼 수 있습니다.
+또한 `[<Struct>]` 특성을 사용 하 여 Du을 `struct`s로 나타낼 수 있습니다.
 
 [!code-fsharp[Unions](~/samples/snippets/fsharp/tour.fs#L685-L696)]
 
@@ -133,11 +133,11 @@ Du를 사용 하면 데이터 형식에서 트리의 재귀 구조를 나타낼 
 
 ## <a name="pattern-matching"></a>패턴 일치
 
-[일치 패턴](./language-reference/pattern-matching.md) 기능은 F# 언어는 F# 형식에서 작동 하는 것에 대 한 정확성을 사용 하도록 설정 합니다.  위의 샘플에서 매우 약간의 `match x with ...` 구문을 발견 했습니다.  이 구문을 사용 하면 컴파일러가 데이터 형식의 "셰이프"를 이해할 수 있으므로 전체 패턴 일치를 통해 데이터 형식을 사용 하는 경우 가능한 모든 사례를 설명할 수 있습니다.  이는 정확성을 위해 매우 강력 하며, 일반적으로 컴파일 시간에 대 한 런타임 문제를 "리프트" 하는 데 사용 되는 영리 수 있습니다.
+[일치 패턴](./language-reference/pattern-matching.md) 기능은 F# 언어는 F# 형식에서 작동 하는 것에 대 한 정확성을 사용 하도록 설정 합니다.  위의 샘플에서 상당히 많은 `match x with ...` 구문을 알게 되었을 것입니다.  이 구문을 사용 하면 컴파일러가 데이터 형식의 "셰이프"를 이해할 수 있으므로 전체 패턴 일치를 통해 데이터 형식을 사용 하는 경우 가능한 모든 사례를 설명할 수 있습니다.  이는 정확성을 위해 매우 강력 하며, 일반적으로 컴파일 시간에 대 한 런타임 문제를 "리프트" 하는 데 사용 되는 영리 수 있습니다.
 
 [!code-fsharp[PatternMatching](~/samples/snippets/fsharp/tour.fs#L705-L742)]
 
-`_` 패턴을 사용 하는 것이 무엇 인지 알 수 있습니다.  이를 [와일드 카드 패턴](./language-reference/pattern-matching.md#wildcard-pattern)이라고 하며,이 패턴은 "무엇이 무엇 인지 걱정할 필요가 없습니다." 라는 방법입니다.  매우 편리 하지만를 사용 하 `_`는 데 익숙하지 않은 경우에는 실수로 완전 한 패턴 일치를 무시 하 고 컴파일 시간 사항을 더 이상 이점을 누릴 수 없습니다.  패턴 일치의 경우 분해 된 형식의 특정 부분을 고려 하지 않거나 패턴 일치 식에 모든 의미 있는 사례를 열거 한 경우에 가장 적합 합니다.
+`_` 패턴을 사용 하는 것이 무엇 인지 알 수 있습니다.  이를 [와일드 카드 패턴](./language-reference/pattern-matching.md#wildcard-pattern)이라고 하며,이 패턴은 "무엇이 무엇 인지 걱정할 필요가 없습니다." 라는 방법입니다.  매우 편리 하지만 `_`를 사용 하는 데 익숙하지 않은 경우에는 실수로 완전 한 패턴 일치를 무시 하 고 컴파일 시간 사항을 더 이상 혜택을 받지 않을 수 있습니다.  패턴 일치의 경우 분해 된 형식의 특정 부분을 고려 하지 않거나 패턴 일치 식에 모든 의미 있는 사례를 열거 한 경우에 가장 적합 합니다.
 
 [활성 패턴](./language-reference/active-patterns.md) 은 패턴 일치에 사용할 수 있는 또 다른 강력한 구문입니다.  입력 데이터를 사용자 지정 형식으로 분할 하 여 패턴 일치 호출 사이트에서 분해 수 있습니다.  매개 변수화 될 수도 있으므로 파티션을 함수로 정의할 수 있습니다.  활성 패턴을 지원 하기 위해 이전 예제를 확장 하는 것은 다음과 같습니다.
 
@@ -147,7 +147,7 @@ Du를 사용 하면 데이터 형식에서 트리의 재귀 구조를 나타낼 
 
 구별 된 공용 구조체 유형의 특수 경우는 옵션 종류를 F# 핵심 라이브러리의 일부는 매우 유용 합니다.
 
-[옵션 형식은](./language-reference/options.md) 두 가지 사례 (값 또는 nothing) 중 하나를 나타내는 형식입니다.  특정 작업에서 값이 생성 될 수도 있고 그렇지 않을 수도 있는 모든 시나리오에서 사용 됩니다.  이렇게 하면 두 경우 모두를 고려 하 여 런타임 문제 보다는 컴파일 시간을 고려해 야 합니다.  이러한 기능은 종종 "없음"을 `null` 나타내는 데 사용 되는 api에서 사용 되므로 많은 상황 `NullReferenceException` 에서 걱정 하지 않아도 됩니다.
+[옵션 형식은](./language-reference/options.md) 두 가지 사례 (값 또는 nothing) 중 하나를 나타내는 형식입니다.  특정 작업에서 값이 생성 될 수도 있고 그렇지 않을 수도 있는 모든 시나리오에서 사용 됩니다.  이렇게 하면 두 경우 모두를 고려 하 여 런타임 문제 보다는 컴파일 시간을 고려해 야 합니다.  이러한 기능은 종종 "nothing"을 나타내는 데 사용 되는 `null` Api에서 사용 되므로 많은 상황에서 `NullReferenceException`에 대해 걱정할 필요가 없습니다.
 
 [!code-fsharp[Options](~/samples/snippets/fsharp/tour.fs#L789-L814)]
 
@@ -191,7 +191,7 @@ F#에.NET 클래스에 대 한 전체 지원을 [인터페이스](./language-ref
 
 ## <a name="next-steps"></a>다음 단계
 
-지금까지 살펴본 언어의 주요 기능 중 일부는 이제 첫 번째 F# 프로그램 작성을 준비 해야 합니다!  [시작](./tutorials/getting-started/index.md) 을 확인 하 여 개발 환경을 설정 하 고 일부 코드를 작성 하는 방법을 알아보세요.
+지금까지 살펴본 언어의 주요 기능 중 일부는 이제 첫 번째 F# 프로그램 작성을 준비 해야 합니다!  [시작](get-started/index.md) 을 확인 하 여 개발 환경을 설정 하 고 일부 코드를 작성 하는 방법을 알아보세요.
 
 자세한 정보를 얻기 위한 다음 단계는 원하는 대로 지정할 수 있지만 핵심 함수형 프로그래밍 개념에 익숙해지면 [의 F# 함수형 프로그래밍에 대해 소개](./introduction-to-functional-programming/index.md) 하는 것이 좋습니다.  이러한 강력한 프로그램 F# 빌드에 필수적인 됩니다.
 

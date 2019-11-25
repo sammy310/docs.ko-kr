@@ -2,12 +2,12 @@
 title: Entity Framework Core를 사용하여 인프라 지속성 레이어 구현
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | Entity Framework Core를 사용하여 인프라 지속성 계층에 대한 구현 세부 정보를 탐색합니다.
 ms.date: 10/08/2018
-ms.openlocfilehash: 7e3480999b115ac13f8d7ebcaed826b407aa7637
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: b70ede6b47cbf990d0435aef841416c68f6439b4
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674100"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737902"
 ---
 # <a name="implement-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Entity Framework Core를 사용하여 인프라 지속성 레이어 구현
 
@@ -174,11 +174,11 @@ Entity Framework DbContext 클래스는 작업 단위 및 리포지토리 패턴
 
 그림 7-18에서는 리포지토리를 사용하지 않을 때와(EF DbContext를 직접 사용) 리포지토리를 사용하여 좀 더 쉽게 리포지토리 모형을 만들 때의 차이를 볼 수 있습니다.
 
-![사용자 지정 리포지토리와 일반 DbContext 사용 간의 비교: 사용자 지정 리포지토리는 리포지토리를 모의하여 테스트를 쉽게 사용할 수 있는 추상화 계층을 추가합니다.](./media/image19.png)
+![두 리포지토리의 구성 요소 및 데이터 흐름을 보여 주는 다이어그램](./media/infrastructure-persistence-layer-implemenation-entity-framework-core/custom-repo-versus-db-context.png)
 
 **그림 7-18**. 사용자 지정 리포지토리와 일반 DbContext 비교
 
-모형을 만들 때 여러 가지 대안이 있습니다. 리포지토리 모형만 만들 수도 있고 작업 단위 전체의 모형을 만들 수도 있습니다. 일반적으로 리포지토리 모형만 만들면 충분하며, 복잡하게 작업 단위 전체를 추상화하고 모형을 만들 필요는 없습니다.
+그림 7-18에서는 사용자 지정 리포지토리를 사용하여 추상화 레이어를 추가하고 리포지토리를 모의하여 손쉽게 테스트하는 데 사용하는 방법을 보여줍니다. 모형을 만들 때 여러 가지 대안이 있습니다. 리포지토리 모형만 만들 수도 있고 작업 단위 전체의 모형을 만들 수도 있습니다. 일반적으로 리포지토리 모형만 만들면 충분하며, 복잡하게 작업 단위 전체를 추상화하고 모형을 만들 필요는 없습니다.
 
 뒤에서 애플리케이션 계층을 살펴볼 때, ASP.NET Core에서 종속성 주입의 작동 원리와 리포지토리를 사용할 때 구현 방식을 볼 수 있습니다.
 
