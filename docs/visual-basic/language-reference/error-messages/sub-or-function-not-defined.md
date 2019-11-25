@@ -1,38 +1,38 @@
 ---
-title: Sub 또는 Function이 정의되지 않았습니다(Visual Basic).
+title: Sub 또는 Function이 정의되지 않았습니다.
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID35
 ms.assetid: 661fdb90-ee7d-40ce-b30b-5e7267bd957a
-ms.openlocfilehash: 3a56d5596c79900bb5818a6ed7f8736859b5ea15
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8b81460eccb6be8baa2ea7bc68d0f80c9d16398e
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593195"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349571"
 ---
-# <a name="sub-or-function-not-defined-visual-basic"></a><span data-ttu-id="3f397-102">Sub 또는 Function이 정의되지 않았습니다(Visual Basic).</span><span class="sxs-lookup"><span data-stu-id="3f397-102">Sub or Function not defined (Visual Basic)</span></span>
-<span data-ttu-id="3f397-103">A `Sub` 또는 `Function` 호출 수를 정의 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="3f397-103">A `Sub` or `Function` must be defined in order to be called.</span></span> <span data-ttu-id="3f397-104">이 오류가 발생하는 원인은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="3f397-104">Possible causes of this error include:</span></span>  
+# <a name="sub-or-function-not-defined-visual-basic"></a><span data-ttu-id="4d05a-102">Sub 또는 Function이 정의되지 않았습니다(Visual Basic).</span><span class="sxs-lookup"><span data-stu-id="4d05a-102">Sub or Function not defined (Visual Basic)</span></span>
+<span data-ttu-id="4d05a-103">A `Sub` or `Function` must be defined in order to be called.</span><span class="sxs-lookup"><span data-stu-id="4d05a-103">A `Sub` or `Function` must be defined in order to be called.</span></span> <span data-ttu-id="4d05a-104">이 오류가 발생하는 원인은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="4d05a-104">Possible causes of this error include:</span></span>  
   
-- <span data-ttu-id="3f397-105">프로시저 이름의 철자가 틀린 경우입니다.</span><span class="sxs-lookup"><span data-stu-id="3f397-105">Misspelling the procedure name.</span></span>  
+- <span data-ttu-id="4d05a-105">Misspelling the procedure name.</span><span class="sxs-lookup"><span data-stu-id="4d05a-105">Misspelling the procedure name.</span></span>  
   
-- <span data-ttu-id="3f397-106">다른 프로젝트에서 명시적으로 해당 프로젝트에 대 한 참조를 추가 하지 않고 프로시저를 호출 하려고 합니다 **참조가** 대화 상자.</span><span class="sxs-lookup"><span data-stu-id="3f397-106">Trying to call a procedure from another project without explicitly adding a reference to that project in the **References** dialog box.</span></span>  
+- <span data-ttu-id="4d05a-106">Trying to call a procedure from another project without explicitly adding a reference to that project in the **References** dialog box.</span><span class="sxs-lookup"><span data-stu-id="4d05a-106">Trying to call a procedure from another project without explicitly adding a reference to that project in the **References** dialog box.</span></span>  
   
-- <span data-ttu-id="3f397-107">호출 하는 프로시저로 표시 되지 않는 프로시저를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="3f397-107">Specifying a procedure that is not visible to the calling procedure.</span></span>  
+- <span data-ttu-id="4d05a-107">Specifying a procedure that is not visible to the calling procedure.</span><span class="sxs-lookup"><span data-stu-id="4d05a-107">Specifying a procedure that is not visible to the calling procedure.</span></span>  
   
-- <span data-ttu-id="3f397-108">Windows 동적 연결 라이브러리 (DLL) 루틴 또는 지정된 된 라이브러리 또는 코드 리소스에 있지 않은 Macintosh 코드 리소스 루틴을 선언 합니다.</span><span class="sxs-lookup"><span data-stu-id="3f397-108">Declaring a Windows dynamic-link library (DLL) routine or Macintosh code-resource routine that is not in the specified library or code resource.</span></span>  
+- <span data-ttu-id="4d05a-108">Declaring a Windows dynamic-link library (DLL) routine or Macintosh code-resource routine that is not in the specified library or code resource.</span><span class="sxs-lookup"><span data-stu-id="4d05a-108">Declaring a Windows dynamic-link library (DLL) routine or Macintosh code-resource routine that is not in the specified library or code resource.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="3f397-109">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="3f397-109">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="4d05a-109">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="4d05a-109">To correct this error</span></span>  
   
-1. <span data-ttu-id="3f397-110">프로시저 이름의 철자가 올바른지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="3f397-110">Make sure that the procedure name is spelled correctly.</span></span>  
+1. <span data-ttu-id="4d05a-110">Make sure that the procedure name is spelled correctly.</span><span class="sxs-lookup"><span data-stu-id="4d05a-110">Make sure that the procedure name is spelled correctly.</span></span>  
   
-2. <span data-ttu-id="3f397-111">호출할 프로시저를 포함 하는 프로젝트의 이름을 찾으려면 합니다 **참조** 대화 상자.</span><span class="sxs-lookup"><span data-stu-id="3f397-111">Find the name of the project containing the procedure you want to call in the **References** dialog box.</span></span> <span data-ttu-id="3f397-112">표시 되지 않으면 클릭 합니다 **찾아보기** 단추에 대 한 검색 합니다.</span><span class="sxs-lookup"><span data-stu-id="3f397-112">If it does not appear, click the **Browse** button to search for it.</span></span> <span data-ttu-id="3f397-113">프로젝트 이름의 왼쪽에 있는 확인란을 선택한 다음 클릭 **확인**합니다.</span><span class="sxs-lookup"><span data-stu-id="3f397-113">Select the check box to the left of the project name, and then click **OK**.</span></span>  
+2. <span data-ttu-id="4d05a-111">Find the name of the project containing the procedure you want to call in the **References** dialog box.</span><span class="sxs-lookup"><span data-stu-id="4d05a-111">Find the name of the project containing the procedure you want to call in the **References** dialog box.</span></span> <span data-ttu-id="4d05a-112">If it does not appear, click the **Browse** button to search for it.</span><span class="sxs-lookup"><span data-stu-id="4d05a-112">If it does not appear, click the **Browse** button to search for it.</span></span> <span data-ttu-id="4d05a-113">Select the check box to the left of the project name, and then click **OK**.</span><span class="sxs-lookup"><span data-stu-id="4d05a-113">Select the check box to the left of the project name, and then click **OK**.</span></span>  
   
-3. <span data-ttu-id="3f397-114">루틴의 이름을 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="3f397-114">Check the name of the routine.</span></span>  
+3. <span data-ttu-id="4d05a-114">Check the name of the routine.</span><span class="sxs-lookup"><span data-stu-id="4d05a-114">Check the name of the routine.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3f397-115">참고자료</span><span class="sxs-lookup"><span data-stu-id="3f397-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4d05a-115">참조</span><span class="sxs-lookup"><span data-stu-id="4d05a-115">See also</span></span>
 
-- [<span data-ttu-id="3f397-116">오류 형식</span><span class="sxs-lookup"><span data-stu-id="3f397-116">Error Types</span></span>](../../../visual-basic/programming-guide/language-features/error-types.md)
-- [<span data-ttu-id="3f397-117">프로젝트의 참조 관리</span><span class="sxs-lookup"><span data-stu-id="3f397-117">Managing references in a project</span></span>](/visualstudio/ide/managing-references-in-a-project)
-- [<span data-ttu-id="3f397-118">Sub 문</span><span class="sxs-lookup"><span data-stu-id="3f397-118">Sub Statement</span></span>](../../../visual-basic/language-reference/statements/sub-statement.md)
-- [<span data-ttu-id="3f397-119">Function 문</span><span class="sxs-lookup"><span data-stu-id="3f397-119">Function Statement</span></span>](../../../visual-basic/language-reference/statements/function-statement.md)
+- [<span data-ttu-id="4d05a-116">오류 형식</span><span class="sxs-lookup"><span data-stu-id="4d05a-116">Error Types</span></span>](../../../visual-basic/programming-guide/language-features/error-types.md)
+- [<span data-ttu-id="4d05a-117">프로젝트의 참조 관리</span><span class="sxs-lookup"><span data-stu-id="4d05a-117">Managing references in a project</span></span>](/visualstudio/ide/managing-references-in-a-project)
+- [<span data-ttu-id="4d05a-118">Sub 문</span><span class="sxs-lookup"><span data-stu-id="4d05a-118">Sub Statement</span></span>](../../../visual-basic/language-reference/statements/sub-statement.md)
+- [<span data-ttu-id="4d05a-119">Function 문</span><span class="sxs-lookup"><span data-stu-id="4d05a-119">Function Statement</span></span>](../../../visual-basic/language-reference/statements/function-statement.md)

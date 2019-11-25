@@ -1,26 +1,26 @@
 ---
-title: '방법: 식 트리 실행 (Visual Basic)'
+title: '방법: 식 트리 실행'
 ms.date: 07/20/2015
 ms.assetid: 9dfb5ab3-f48f-417e-975f-f8f6f1cdc18d
-ms.openlocfilehash: 135c295070ea591f3b494734f9d236e36b9c3c5d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 82801728596449869e5124c3fc92c9c0673f5dd9
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916497"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74332993"
 ---
-# <a name="how-to-execute-expression-trees-visual-basic"></a><span data-ttu-id="99247-102">방법: 식 트리 실행 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="99247-102">How to: Execute Expression Trees (Visual Basic)</span></span>
-<span data-ttu-id="99247-103">이 항목에서는 식 트리를 실행하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="99247-103">This topic shows you how to execute an expression tree.</span></span> <span data-ttu-id="99247-104">식 트리를 실행할 때 값이 반환될 수 있거나, 메서드 호출 등의 작업만 수행할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="99247-104">Executing an expression tree may return a value, or it may just perform an action such as calling a method.</span></span>  
+# <a name="how-to-execute-expression-trees-visual-basic"></a><span data-ttu-id="ca2f0-102">How to: Execute Expression Trees (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ca2f0-102">How to: Execute Expression Trees (Visual Basic)</span></span>
+<span data-ttu-id="ca2f0-103">이 항목에서는 식 트리를 실행하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="ca2f0-103">This topic shows you how to execute an expression tree.</span></span> <span data-ttu-id="ca2f0-104">식 트리를 실행할 때 값이 반환될 수 있거나, 메서드 호출 등의 작업만 수행할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ca2f0-104">Executing an expression tree may return a value, or it may just perform an action such as calling a method.</span></span>  
   
- <span data-ttu-id="99247-105">람다 식을 나타내는 식 트리만 실행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="99247-105">Only expression trees that represent lambda expressions can be executed.</span></span> <span data-ttu-id="99247-106">람다 식을 나타내는 식 트리는 <xref:System.Linq.Expressions.LambdaExpression> 또는 <xref:System.Linq.Expressions.Expression%601> 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="99247-106">Expression trees that represent lambda expressions are of type <xref:System.Linq.Expressions.LambdaExpression> or <xref:System.Linq.Expressions.Expression%601>.</span></span> <span data-ttu-id="99247-107">이러한 식 트리를 실행하려면 <xref:System.Linq.Expressions.LambdaExpression.Compile%2A> 메서드를 호출하여 실행 가능한 대리자를 만든 후 대리자를 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="99247-107">To execute these expression trees, call the <xref:System.Linq.Expressions.LambdaExpression.Compile%2A> method to create an executable delegate, and then invoke the delegate.</span></span>  
+ <span data-ttu-id="ca2f0-105">람다 식을 나타내는 식 트리만 실행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ca2f0-105">Only expression trees that represent lambda expressions can be executed.</span></span> <span data-ttu-id="ca2f0-106">람다 식을 나타내는 식 트리는 <xref:System.Linq.Expressions.LambdaExpression> 또는 <xref:System.Linq.Expressions.Expression%601> 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="ca2f0-106">Expression trees that represent lambda expressions are of type <xref:System.Linq.Expressions.LambdaExpression> or <xref:System.Linq.Expressions.Expression%601>.</span></span> <span data-ttu-id="ca2f0-107">이러한 식 트리를 실행하려면 <xref:System.Linq.Expressions.LambdaExpression.Compile%2A> 메서드를 호출하여 실행 가능한 대리자를 만든 후 대리자를 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="ca2f0-107">To execute these expression trees, call the <xref:System.Linq.Expressions.LambdaExpression.Compile%2A> method to create an executable delegate, and then invoke the delegate.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="99247-108">대리자의 형식을 알 수 없는 경우, 즉 람다 식이 <xref:System.Linq.Expressions.Expression%601> 형식이 아니라 <xref:System.Linq.Expressions.LambdaExpression> 형식인 경우 대리자를 직접 호출하는 대신 대리자의 <xref:System.Delegate.DynamicInvoke%2A> 메서드를 호출해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="99247-108">If the type of the delegate is not known, that is, the lambda expression is of type <xref:System.Linq.Expressions.LambdaExpression> and not <xref:System.Linq.Expressions.Expression%601>, you must call the <xref:System.Delegate.DynamicInvoke%2A> method on the delegate instead of invoking it directly.</span></span>  
+> <span data-ttu-id="ca2f0-108">대리자의 형식을 알 수 없는 경우, 즉 람다 식이 <xref:System.Linq.Expressions.Expression%601> 형식이 아니라 <xref:System.Linq.Expressions.LambdaExpression> 형식인 경우 대리자를 직접 호출하는 대신 대리자의 <xref:System.Delegate.DynamicInvoke%2A> 메서드를 호출해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="ca2f0-108">If the type of the delegate is not known, that is, the lambda expression is of type <xref:System.Linq.Expressions.LambdaExpression> and not <xref:System.Linq.Expressions.Expression%601>, you must call the <xref:System.Delegate.DynamicInvoke%2A> method on the delegate instead of invoking it directly.</span></span>  
   
- <span data-ttu-id="99247-109">식 트리가 람다 식을 나타내지 않는 경우 <xref:System.Linq.Expressions.Expression.Lambda%60%601%28System.Linq.Expressions.Expression%2CSystem.Collections.Generic.IEnumerable%7BSystem.Linq.Expressions.ParameterExpression%7D%29> 메서드를 호출하여 원래 식 트리가 본문으로 포함된 새 람다 식을 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="99247-109">If an expression tree does not represent a lambda expression, you can create a new lambda expression that has the original expression tree as its body, by calling the <xref:System.Linq.Expressions.Expression.Lambda%60%601%28System.Linq.Expressions.Expression%2CSystem.Collections.Generic.IEnumerable%7BSystem.Linq.Expressions.ParameterExpression%7D%29> method.</span></span> <span data-ttu-id="99247-110">그런 다음 이 섹션의 앞부분에서 설명한 대로 람다 식을 실행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="99247-110">Then, you can execute the lambda expression as described earlier in this section.</span></span>  
+ <span data-ttu-id="ca2f0-109">식 트리가 람다 식을 나타내지 않는 경우 <xref:System.Linq.Expressions.Expression.Lambda%60%601%28System.Linq.Expressions.Expression%2CSystem.Collections.Generic.IEnumerable%7BSystem.Linq.Expressions.ParameterExpression%7D%29> 메서드를 호출하여 원래 식 트리가 본문으로 포함된 새 람다 식을 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ca2f0-109">If an expression tree does not represent a lambda expression, you can create a new lambda expression that has the original expression tree as its body, by calling the <xref:System.Linq.Expressions.Expression.Lambda%60%601%28System.Linq.Expressions.Expression%2CSystem.Collections.Generic.IEnumerable%7BSystem.Linq.Expressions.ParameterExpression%7D%29> method.</span></span> <span data-ttu-id="ca2f0-110">그런 다음 이 섹션의 앞부분에서 설명한 대로 람다 식을 실행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ca2f0-110">Then, you can execute the lambda expression as described earlier in this section.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="99247-111">예제</span><span class="sxs-lookup"><span data-stu-id="99247-111">Example</span></span>  
- <span data-ttu-id="99247-112">다음 코드 예제에서는 람다 식을 만들고 실행하여 숫자의 거듭제곱을 나타내는 식 트리를 실행하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="99247-112">The following code example demonstrates how to execute an expression tree that represents raising a number to a power by creating a lambda expression and executing it.</span></span> <span data-ttu-id="99247-113">숫자의 거듭제곱을 나타내는 결과가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="99247-113">The result, which represents the number raised to the power, is displayed.</span></span>  
+## <a name="example"></a><span data-ttu-id="ca2f0-111">예제</span><span class="sxs-lookup"><span data-stu-id="ca2f0-111">Example</span></span>  
+ <span data-ttu-id="ca2f0-112">다음 코드 예제에서는 람다 식을 만들고 실행하여 숫자의 거듭제곱을 나타내는 식 트리를 실행하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="ca2f0-112">The following code example demonstrates how to execute an expression tree that represents raising a number to a power by creating a lambda expression and executing it.</span></span> <span data-ttu-id="ca2f0-113">숫자의 거듭제곱을 나타내는 결과가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="ca2f0-113">The result, which represents the number raised to the power, is displayed.</span></span>  
   
 ```vb  
 ' The expression tree to execute.  
@@ -42,11 +42,11 @@ MsgBox(result)
 ' 8  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="99247-114">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="99247-114">Compiling the Code</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="ca2f0-114">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="ca2f0-114">Compiling the Code</span></span>  
   
-- <span data-ttu-id="99247-115">System.Linq.Expressions 네임스페이스를 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="99247-115">Include the System.Linq.Expressions namespace.</span></span>  
+- <span data-ttu-id="ca2f0-115">System.Linq.Expressions 네임스페이스를 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="ca2f0-115">Include the System.Linq.Expressions namespace.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="99247-116">참고자료</span><span class="sxs-lookup"><span data-stu-id="99247-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ca2f0-116">참조</span><span class="sxs-lookup"><span data-stu-id="ca2f0-116">See also</span></span>
 
-- [<span data-ttu-id="99247-117">식 트리(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="99247-117">Expression Trees (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)
-- [<span data-ttu-id="99247-118">방법: 식 트리 수정 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="99247-118">How to: Modify Expression Trees (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)
+- [<span data-ttu-id="ca2f0-117">식 트리(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ca2f0-117">Expression Trees (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)
+- [<span data-ttu-id="ca2f0-118">How to: Modify Expression Trees (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ca2f0-118">How to: Modify Expression Trees (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)

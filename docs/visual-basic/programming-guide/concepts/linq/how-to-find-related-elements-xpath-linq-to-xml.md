@@ -1,27 +1,27 @@
 ---
-title: '방법: 관련 요소 찾기 (XPath-LINQ to XML) (Visual Basic)'
+title: '방법: 관련 요소 찾기(XPath 및 LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 6b0ef058-d704-48a5-98cd-33f00d088af9
-ms.openlocfilehash: a430291925037f16883a27ca9deea5a4ec7a8175
-ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
+ms.openlocfilehash: e250572e7bd73e769e4ab06b7b7ff9e3b3d38c47
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72250072"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344655"
 ---
-# <a name="how-to-find-related-elements-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="176be-102">방법: 관련 요소 찾기 (XPath-LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="176be-102">How to: Find Related Elements (XPath-LINQ to XML) (Visual Basic)</span></span>
-<span data-ttu-id="176be-103">이 항목에서는 다른 요소의 값에 의해 참조되는 특성을 기준으로 선택하여 요소를 가져오는 방법을 비교합니다.</span><span class="sxs-lookup"><span data-stu-id="176be-103">This topic shows how to get an element selecting on an attribute that is referred to by the value of another element.</span></span>  
+# <a name="how-to-find-related-elements-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="9e4af-102">How to: Find Related Elements (XPath-LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9e4af-102">How to: Find Related Elements (XPath-LINQ to XML) (Visual Basic)</span></span>
+<span data-ttu-id="9e4af-103">이 항목에서는 다른 요소의 값에 의해 참조되는 특성을 기준으로 선택하여 요소를 가져오는 방법을 비교합니다.</span><span class="sxs-lookup"><span data-stu-id="9e4af-103">This topic shows how to get an element selecting on an attribute that is referred to by the value of another element.</span></span>  
   
- <span data-ttu-id="176be-104">XPath 식은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="176be-104">The XPath expression is:</span></span>  
+ <span data-ttu-id="9e4af-104">XPath 식은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="9e4af-104">The XPath expression is:</span></span>  
   
  `.//Customer[@CustomerID=/Root/Orders/Order[12]/CustomerID]`  
   
-## <a name="example"></a><span data-ttu-id="176be-105">예제</span><span class="sxs-lookup"><span data-stu-id="176be-105">Example</span></span>  
- <span data-ttu-id="176be-106">이 예제에서는 12번째 `Order` 요소를 찾은 다음 해당 주문의 고객을 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="176be-106">This example finds the 12th `Order` element, and then finds the customer for that order.</span></span>  
+## <a name="example"></a><span data-ttu-id="9e4af-105">예제</span><span class="sxs-lookup"><span data-stu-id="9e4af-105">Example</span></span>  
+ <span data-ttu-id="9e4af-106">이 예제에서는 12번째 `Order` 요소를 찾은 다음 해당 주문의 고객을 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="9e4af-106">This example finds the 12th `Order` element, and then finds the customer for that order.</span></span>  
   
- <span data-ttu-id="176be-107">.NET에서 목록의 인덱싱은 ‘0’부터 시작하고</span><span class="sxs-lookup"><span data-stu-id="176be-107">Note that indexing into a list in .NET is 'zero' based.</span></span> <span data-ttu-id="176be-108">XPath 조건자에서 노드 컬렉션의 인덱싱은 1부터 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="176be-108">Indexing into a collection of nodes in an XPath predicate is 'one' based.</span></span> <span data-ttu-id="176be-109">이 예제에서는 이 차이를 반영합니다.</span><span class="sxs-lookup"><span data-stu-id="176be-109">This example reflects this difference.</span></span>  
+ <span data-ttu-id="9e4af-107">.NET에서 목록의 인덱싱은 ‘0’부터 시작하고</span><span class="sxs-lookup"><span data-stu-id="9e4af-107">Note that indexing into a list in .NET is 'zero' based.</span></span> <span data-ttu-id="9e4af-108">XPath 조건자에서 노드 컬렉션의 인덱싱은 1부터 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="9e4af-108">Indexing into a collection of nodes in an XPath predicate is 'one' based.</span></span> <span data-ttu-id="9e4af-109">이 예제에서는 이 차이를 반영합니다.</span><span class="sxs-lookup"><span data-stu-id="9e4af-109">This example reflects this difference.</span></span>  
   
- <span data-ttu-id="176be-110">이 예제에서는 XML 문서로을 사용합니다. [샘플 XML 파일: Customers 및 Orders(LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="176be-110">This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="9e4af-110">이 예제에서는 XML 문서 [샘플 XML 파일: 고객 및 주문(LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md)을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="9e4af-110">This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).</span></span>  
   
 ```vb  
 Dim co As XDocument = XDocument.Load("CustomersOrders.xml")  
@@ -53,7 +53,7 @@ End If
 Console.WriteLine(customer1)  
 ```  
   
- <span data-ttu-id="176be-111">이 예제는 다음과 같은 출력을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="176be-111">This example produces the following output:</span></span>  
+ <span data-ttu-id="9e4af-111">이 예제는 다음과 같은 출력을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="9e4af-111">This example produces the following output:</span></span>  
   
 ```console
 Results are identical  
@@ -73,6 +73,6 @@ Results are identical
 </Customer>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="176be-112">참조</span><span class="sxs-lookup"><span data-stu-id="176be-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9e4af-112">참조</span><span class="sxs-lookup"><span data-stu-id="9e4af-112">See also</span></span>
 
-- [<span data-ttu-id="176be-113">XPath 사용자에 대 한 LINQ to XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="176be-113">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [<span data-ttu-id="9e4af-113">LINQ to XML for XPath Users (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9e4af-113">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

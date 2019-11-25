@@ -26,6 +26,8 @@
               href: fundamentals/styles-templates-overview.md
             - name: 스타일 만들기 및 적용
               href: fundamentals/styles-templates-create-apply-style.md
+            - name: 템플릿 만들기 및 적용
+              href: themes/how-to-create-apply-template.md
     - name: 데이터 작업
       items:
         - name: 데이터 바인딩 개요
