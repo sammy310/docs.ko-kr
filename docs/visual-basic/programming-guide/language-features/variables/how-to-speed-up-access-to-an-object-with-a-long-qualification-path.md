@@ -1,5 +1,5 @@
 ---
-title: '방법: Visual Basic (Long 한정 경로)를 사용 하 여 개체에 대 한 액세스 속도 향상'
+title: '방법: 정규화 경로가 긴 개체에 대한 액세스 속도 개선'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - variables [Visual Basic], accessing
@@ -8,28 +8,28 @@ helpviewer_keywords:
 - With block
 - object variables [Visual Basic], accessing
 ms.assetid: 3eb7657f-c9fe-4e05-8bc3-4bb14d5ae585
-ms.openlocfilehash: a8e50a2ed04037b48091321dc0c9ac2ea1db35f4
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 83670ae6af0904156b08398024658cf504b7663f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68631090"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346825"
 ---
-# <a name="how-to-speed-up-access-to-an-object-with-a-long-qualification-path-visual-basic"></a>방법: Visual Basic (Long 한정 경로)를 사용 하 여 개체에 대 한 액세스 속도 향상
+# <a name="how-to-speed-up-access-to-an-object-with-a-long-qualification-path-visual-basic"></a>방법: 정규화 경로가 긴 개체에 대한 액세스 속도 개선(Visual Basic)
 
-여러 메서드 및 속성의 정규화 경로를 필요로 하는 개체에 자주 액세스 하는 경우 한정 경로를 반복 하지 않고 코드 속도를 높일 수 있습니다.
+If you frequently access an object that requires a qualification path of several methods and properties, you can speed up your code by not repeating the qualification path.
 
-두 가지 방법으로 한정 경로를 반복 하지 않을 수 있습니다. 개체를 변수에 할당 하거나에서 `With`사용할 수 있습니다. `End With` 블록.
+There are two ways you can avoid repeating the qualification path. You can assign the object to a variable, or you can use it in a `With`...`End With` block.
 
-### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-assigning-it-to-a-variable"></a>변수에 할당 하 여 높은 정규화 된 개체에 대 한 액세스 속도를 높이려면
+### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-assigning-it-to-a-variable"></a>To speed up access to a heavily qualified object by assigning it to a variable
 
-1. 자주 액세스 하는 개체의 형식에 대 한 변수를 선언 합니다. 선언의 초기화 부분에서 한정 경로를 지정 합니다.
+1. Declare a variable of the type of the object that you are accessing frequently. Specify the qualification path in the initialization part of the declaration.
 
     ```vb
     Dim ctrlActv As Control = someForm.ActiveForm.ActiveControl
     ```
 
-2. 변수를 사용 하 여 개체의 멤버에 액세스 합니다.
+2. Use the variable to access the object's members.
 
     ```vb
     ctrlActv.Text = "Test"
@@ -37,15 +37,15 @@ ms.locfileid: "68631090"
     ctrlActv.Show()
     ```
 
-### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-using-a-withend-with-block"></a>을 사용 하 여 높은 정규화 된 개체에 대 한 액세스 속도를 높이려면 ... 블록으로 끝
+### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-using-a-withend-with-block"></a>To speed up access to a heavily qualified object by using a With...End With block
 
-1. `With` 문에 한정 경로를 넣습니다.
+1. Put the qualification path in a `With` statement.
 
     ```vb
     With someForm.ActiveForm.ActiveControl
     ```
 
-2. 문 앞의 `With` 블록 내에서 개체의 멤버에 액세스 합니다. `End With`
+2. Access the object's members inside the `With` block, before the `End With` statement.
 
     ```vb
         .Text = "Test"
@@ -54,7 +54,7 @@ ms.locfileid: "68631090"
     End With
     ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [개체 변수](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [With...End With 문](../../../../visual-basic/language-reference/statements/with-end-with-statement.md)

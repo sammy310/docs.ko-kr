@@ -1,21 +1,23 @@
 ---
-title: Visual Basic을 사용한 애플리케이션 개발
+title: 애플리케이션 개발
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic, developing applications
 - applications [Visual Basic]
 ms.assetid: 1e1c0c81-6d95-4167-a98b-44b1efb6d25f
-ms.openlocfilehash: a8f3b530c6205572ccf6944af1620cb54486b306
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f8eed001ed1daccdfb861b1bcc13337122133ab0
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62014429"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349245"
 ---
 # <a name="developing-applications-with-visual-basic"></a>Visual Basic을 사용한 애플리케이션 개발
+
 이 단원은 Visual Basic 언어에 대한 개념 설명서를 포함합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [Visual Basic의 프로그래밍](../../visual-basic/developing-apps/programming/index.md)  
  다양한 프로그래밍 주제를 다룹니다.  
   
@@ -35,6 +37,7 @@ ms.locfileid: "62014429"
  프로젝트 템플릿을 사용자 지정하여 추가 `My` 개체를 제공하는 방법을 설명합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
+
  [Visual Basic 프로그래밍 가이드](../../visual-basic/programming-guide/index.md)  
  Visual Basic을 사용한 프로그래밍의 필수 요소를 안내합니다.  
   

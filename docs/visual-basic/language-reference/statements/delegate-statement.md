@@ -1,5 +1,5 @@
 ---
-title: Delegate 문 (Visual Basic)
+title: Delegate 문
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Delegate
@@ -7,15 +7,15 @@ helpviewer_keywords:
 - delegate keyword [Visual Basic]
 - Delegate statement [Visual Basic]
 ms.assetid: f799c518-0817-40cc-ad0b-4da846fdba57
-ms.openlocfilehash: 4a8260da4d2224551de71fd54f734007c7fa214f
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 662d2c3c0767adfe406e0a6f1b1e6dccd704e795
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583450"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74354070"
 ---
 # <a name="delegate-statement"></a>Delegate 문
-대리자를 선언 하는 데 사용 됩니다. 대리자는 형식의 `Shared` 메서드 또는 개체의 인스턴스 메서드를 참조 하는 참조 형식입니다. 매개 변수와 반환 형식이 일치 하는 프로시저를 사용 하 여이 대리자 클래스의 인스턴스를 만들 수 있습니다. 그런 다음 나중에 대리자 인스턴스를 통해 프로시저를 호출할 수 있습니다.  
+Used to declare a delegate. A delegate is a reference type that refers to a `Shared` method of a type or to an instance method of an object. Any procedure with matching parameter and return types can be used to create an instance of this delegate class. The procedure can then later be invoked by means of the delegate instance.  
   
 ## <a name="syntax"></a>구문  
   
@@ -28,20 +28,20 @@ ms.locfileid: "72583450"
   
 |용어|정의|  
 |---|---|  
-|`attrlist`|(선택 사항) 이 대리자에 적용 되는 특성의 목록입니다. 여러 특성은 쉼표로 구분합니다. [특성 목록을](../../../visual-basic/language-reference/statements/attribute-list.md) 꺾쇠 괄호 ("`<`" 및 "`>`")로 묶어야 합니다.|  
-|`accessmodifier`|(선택 사항) 대리자에 액세스할 수 있는 코드를 지정 합니다. 다음 중 하나일 수 있습니다.<br /><br /> - [공용](../../../visual-basic/language-reference/modifiers/public.md)입니다. 대리자를 선언 하는 요소에 액세스할 수 있는 모든 코드는이 개체에 액세스할 수 있습니다.<br />-   [보호](../../../visual-basic/language-reference/modifiers/protected.md)됩니다. 대리자의 클래스 또는 파생 클래스 내의 코드만 액세스할 수 있습니다.<br />[Friend](../../../visual-basic/language-reference/modifiers/friend.md)를 -    합니다. 동일한 어셈블리 내의 코드만 대리자에 액세스할 수 있습니다.<br />- [전용](../../../visual-basic/language-reference/modifiers/private.md). 대리자를 선언 하는 요소 내의 코드만 액세스할 수 있습니다.<br /><br /> 대리자의 클래스, 파생 클래스 또는 동일한 어셈블리 내에서[보호 된 Friend](../../language-reference/modifiers/protected-friend.md) 전용 코드를 -  대리자에 액세스할 수 있습니다. <br />대리자의 클래스 내에서 또는 동일한 어셈블리의 파생 클래스 내에서[전용 보호 된](../../language-reference/modifiers/private-protected.md) 코드를 -  대리자에 액세스할 수 있습니다. |  
-|`Shadows`|(선택 사항) 이 대리자가 기본 클래스에서 동일 하 게 명명 된 프로그래밍 요소 또는 오버 로드 된 요소 집합을 요소가 하 고 숨기는 것을 나타냅니다. 모든 종류의 선언된 요소를 다른 종류로 섀도잉할 수 있습니다.<br /><br /> 섀도잉된 요소는 섀도잉 요소에 액세스할 수 없는 위치를 제외하고 해당 요소를 섀도잉하는 파생 클래스 내에서 사용할 수 없습니다. 예를 들어 `Private` 요소가 기본 클래스 요소를 숨기는 경우 `Private` 요소에 액세스할 수 있는 권한이 없는 코드는 대신 기본 클래스 요소에 액세스할 수 있습니다.|  
-|`Sub`|선택 사항 이지만 `Sub` 또는 `Function`가 표시 되어야 합니다. 는 값을 반환 하지 않는 대리자 `Sub` 프로시저로이 프로시저를 선언 합니다.|  
-|`Function`|선택 사항 이지만 `Sub` 또는 `Function`가 표시 되어야 합니다. 는 값을 반환 하는 대리자 `Function` 프로시저로이 프로시저를 선언 합니다.|  
-|`name`|필수 요소. 대리자 형식의 이름입니다. 표준 변수 명명 규칙을 따릅니다.|  
-|`typeparamlist`|(선택 사항) 이 대리자의 형식 매개 변수 목록입니다. 여러 형식 매개 변수는 쉼표로 구분 됩니다. 필요에 따라 `In` 및 `Out` 제네릭 한정자를 사용 하 여 각 형식 매개 변수를 variant로 선언할 수 있습니다. [형식 목록을](../../../visual-basic/language-reference/statements/type-list.md) 괄호로 묶고 `Of` 키워드를 사용 하 여 도입 해야 합니다.|  
-|`parameterlist`|(선택 사항) 프로시저를 호출할 때 프로시저에 전달 되는 매개 변수 목록입니다. [매개 변수 목록을](../../../visual-basic/language-reference/statements/parameter-list.md) 괄호로 묶어야 합니다.|  
-|`type`|@No__t_0 프로시저를 지정 하는 경우 필요 합니다. 반환 값의 데이터 형식입니다.|  
+|`attrlist`|(선택 사항) List of attributes that apply to this delegate. 여러 특성은 쉼표로 구분합니다. You must enclose the [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md) in angle brackets ("`<`" and "`>`").|  
+|`accessmodifier`|(선택 사항) Specifies what code can access the delegate. 다음 중 하나일 수 있습니다.<br /><br /> - [Public](../../../visual-basic/language-reference/modifiers/public.md). Any code that can access the element that declares the delegate can access it.<br />-   [Protected](../../../visual-basic/language-reference/modifiers/protected.md). Only code within the delegate's class or a derived class can access it.<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md). Only code within the same assembly can access the delegate.<br />- [Private](../../../visual-basic/language-reference/modifiers/private.md). Only code within the element that declares the delegate can access it.<br /><br /> - [Protected Friend](../../language-reference/modifiers/protected-friend.md) Only code within the delegate's class, a derived class, or the same assembly can access the delegate. <br />- [Private Protected](../../language-reference/modifiers/private-protected.md) Only code within the delegate's class or in a derived class in the same assembly can access the delegate. |  
+|`Shadows`|(선택 사항) Indicates that this delegate redeclares and hides an identically named programming element, or set of overloaded elements, in a base class. 모든 종류의 선언된 요소를 다른 종류로 섀도잉할 수 있습니다.<br /><br /> 섀도잉된 요소는 섀도잉 요소에 액세스할 수 없는 위치를 제외하고 해당 요소를 섀도잉하는 파생 클래스 내에서 사용할 수 없습니다. For example, if a `Private` element shadows a base class element, code that does not have permission to access the `Private` element accesses the base class element instead.|  
+|`Sub`|Optional, but either `Sub` or `Function` must appear. Declares this procedure as a delegate `Sub` procedure that does not return a value.|  
+|`Function`|Optional, but either `Sub` or `Function` must appear. Declares this procedure as a delegate `Function` procedure that returns a value.|  
+|`name`|필수 요소. Name of the delegate type; follows standard variable naming conventions.|  
+|`typeparamlist`|(선택 사항) List of type parameters for this delegate. Multiple type parameters are separated by commas. Optionally, each type parameter can be declared variant by using `In` and `Out` generic modifiers. You must enclose the [Type List](../../../visual-basic/language-reference/statements/type-list.md) in parentheses and introduce it with the `Of` keyword.|  
+|`parameterlist`|(선택 사항) List of parameters that are passed to the procedure when it is called. You must enclose the [Parameter List](../../../visual-basic/language-reference/statements/parameter-list.md) in parentheses.|  
+|`type`|Required if you specify a `Function` procedure. Data type of the return value.|  
   
 ## <a name="remarks"></a>주의  
- @No__t_0 문은 대리자 클래스의 매개 변수 및 반환 형식을 정의 합니다. 매개 변수와 반환 형식이 일치 하는 프로시저를 사용 하 여이 대리자 클래스의 인스턴스를 만들 수 있습니다. 그런 다음 대리자의 `Invoke` 메서드를 호출 하 여 대리자 인스턴스를 통해 나중에 프로시저를 호출할 수 있습니다.  
+ The `Delegate` statement defines the parameter and return types of a delegate class. Any procedure with matching parameters and return types can be used to create an instance of this delegate class. The procedure can then later be invoked by means of the delegate instance, by calling the delegate's `Invoke` method.  
   
- 대리자는 네임 스페이스, 모듈, 클래스 또는 구조 수준에서 선언 될 수 있지만 프로시저 내에서 선언할 수 없습니다.  
+ Delegates can be declared at the namespace, module, class, or structure level, but not within a procedure.  
   
  각 대리자 클래스는 개체 메서드의 사양이 전달되는 생성자를 정의합니다. 대리자 생성자에 대한 인수는 메서드 또는 람다 식에 대한 참조여야 합니다.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "72583450"
  대리자에 대한 자세한 내용은 [대리자](../../../visual-basic/programming-guide/language-features/delegates/index.md)를 참조하세요.  
   
 ## <a name="example"></a>예제  
- 다음 예에서는 `Delegate` 문을 사용 하 여 두 개의 숫자에서 작동 하 고 숫자를 반환 하는 대리자를 선언 합니다. @No__t_0 메서드는이 형식의 대리자 인스턴스를 사용 하 여 숫자 쌍에 대해 작동 하는 데 사용 합니다.  
+ The following example uses the `Delegate` statement to declare a delegate for operating on two numbers and returning a number. The `DelegateTest` method takes an instance of a delegate of this type and uses it to operate on pairs of numbers.  
   
  [!code-vb[VbVbalrDelegates#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#14)]  
   

@@ -1,5 +1,5 @@
 ---
-title: XML 처리 명령 리터럴(Visual Basic)
+title: XML 처리 명령 리터럴
 ms.date: 07/20/2015
 f1_keywords:
 - vb.XmlLiteralProcessingInstruction
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - XML processing instruction literal [Visual Basic]
 - processing instruction literal [Visual Basic]
 ms.assetid: cef4f7f8-0011-4f64-8602-795077ad4f15
-ms.openlocfilehash: c589d3f4ac6bbb9aa9b2b8f2535888bddbf9c934
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3602a81feae9287a77d060bb46f10eefee4fc05d
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69958475"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347042"
 ---
 # <a name="xml-processing-instruction-literal-visual-basic"></a>XML 처리 명령 리터럴(Visual Basic)
-<xref:System.Xml.Linq.XProcessingInstruction> 개체를 나타내는 리터럴입니다.  
+A literal representing an <xref:System.Xml.Linq.XProcessingInstruction> object.  
   
 ## <a name="syntax"></a>구문  
   
@@ -26,41 +26,41 @@ ms.locfileid: "69958475"
   
 ## <a name="parts"></a>요소  
  `<?`  
- 필수 요소. XML 처리 명령 리터럴의 시작을 나타냅니다.  
+ 필수 요소. Denotes the start of the XML processing instruction literal.  
   
  `piName`  
- 필수 요소. 처리 명령이 대상으로 하는 응용 프로그램을 나타내는 이름입니다. "Xml" 또는 "XML"로 시작할 수 없습니다.  
+ 필수 요소. Name indicating which application the processing instruction targets. Cannot begin with "xml" or "XML".  
   
  `piData`  
- 선택 사항입니다. 에서 대상으로 `piName` 하는 응용 프로그램이 XML 문서를 처리 하는 방법을 나타내는 문자열입니다.  
+ (선택 사항) String indicating how the application targeted by `piName` should process the XML document.  
   
  `?>`  
- 필수 요소. 처리 명령의 끝을 나타냅니다.  
+ 필수 요소. Denotes the end of the processing instruction.  
   
 ## <a name="return-value"></a>반환 값  
  <xref:System.Xml.Linq.XProcessingInstruction> 개체입니다.  
   
-## <a name="remarks"></a>설명  
- XML 처리 명령 리터럴은 응용 프로그램이 XML 문서를 처리 하는 방법을 지정 합니다. 응용 프로그램이 XML 문서를 로드할 때 응용 프로그램은 XML 처리 명령을 확인 하 여 문서 처리 방법을 결정할 수 있습니다. 응용 프로그램은 및 `piName` `piData`의 의미를 해석 합니다.  
+## <a name="remarks"></a>주의  
+ XML processing instruction literals indicate how applications should process an XML document. When an application loads an XML document, the application can check the XML processing instructions to determine how to process the document. The application interprets the meaning of `piName` and `piData`.  
   
- XML 문서 리터럴은 XML 처리 명령의 구문과 비슷한 구문을 사용 합니다. 자세한 내용은 [XML 문서 리터럴](../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)을 참조 하세요.  
-  
-> [!NOTE]
-> Xml `piName` 1.0 사양에서는 이러한 식별자를 예약 하기 때문에 요소는 문자열 "xml" 또는 "xml"로 시작할 수 없습니다.  
-  
- XML 처리 명령 리터럴을 변수에 할당 하거나 XML 문서 리터럴에 포함할 수 있습니다.  
+ The XML document literal uses syntax that is similar to that of the XML processing instruction. For more information, see [XML Document Literal](../../../visual-basic/language-reference/xml-literals/xml-document-literal.md).  
   
 > [!NOTE]
-> XML 리터럴은 줄 연속 문자 없이 여러 줄에 걸쳐 있을 수 있습니다. 이렇게 하면 XML 문서에서 콘텐츠를 복사 하 여 Visual Basic 프로그램에 직접 붙여넣을 수 있습니다.  
+> The `piName` element cannot begin with the strings "xml" or "XML", because the XML 1.0 specification reserves those identifiers.  
   
- Visual Basic 컴파일러는 XML 처리 명령 리터럴을 <xref:System.Xml.Linq.XProcessingInstruction.%23ctor%2A> 생성자에 대 한 호출로 변환 합니다.  
+ You can assign an XML processing instruction literal to a variable or include it in an XML document literal.  
+  
+> [!NOTE]
+> An XML literal can span multiple lines without needing line continuation characters. This enables you to copy content from an XML document and paste it directly into a Visual Basic program.  
+  
+ The Visual Basic compiler converts the XML processing instruction literal to a call to the <xref:System.Xml.Linq.XProcessingInstruction.%23ctor%2A> constructor.  
   
 ## <a name="example"></a>예제  
- 다음 예에서는 XML 문서에 대 한 스타일 시트를 식별 하는 처리 명령을 만듭니다.  
+ The following example creates a processing instruction identifying a style-sheet for an XML document.  
   
  [!code-vb[VbXMLSamples#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#28)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Xml.Linq.XProcessingInstruction>
 - [XML 문서 리터럴](../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)

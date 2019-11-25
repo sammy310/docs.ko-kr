@@ -1,5 +1,5 @@
 ---
-title: 배열 문제 해결(Visual Basic)
+title: 배열 문제 해결
 ms.date: 07/20/2015
 helpviewer_keywords:
 - troubleshooting arrays
@@ -9,20 +9,20 @@ helpviewer_keywords:
 - arrays [Visual Basic], declaration errors
 - arrays [Visual Basic], troubleshooting
 ms.assetid: f4e971c7-c0a4-4ed7-a77a-8d71039f266f
-ms.openlocfilehash: 69d5294eacc59718adb1b0a226594d2cf69273f5
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: 3c50c68c2a39aa04cff2dd43b5dfde709aec290f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64913459"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349073"
 ---
 # <a name="troubleshooting-arrays-visual-basic"></a>배열 문제 해결(Visual Basic)
-이 페이지는 배열에서 작업할 때 발생할 수 있는 몇 가지 일반적인 문제를 나열 합니다.  
+This page lists some common problems that can occur when working with arrays.  
   
-## <a name="compilation-errors-declaring-and-initializing-an-array"></a>컴파일 오류를 선언 하 고 배열을 초기화 하는 중  
- 컴파일 오류는 선언, 만들기 및 배열 초기화에 대 한 오해에서 발생할 수 있습니다. 오류의 가장 일반적인 원인은 다음과 같습니다.  
+## <a name="compilation-errors-declaring-and-initializing-an-array"></a>Compilation Errors Declaring and Initializing an Array  
+ Compilation errors can arise from misunderstanding of the rules for declaring, creating, and initializing arrays. The most common causes of errors are the following:  
   
-- 제공 된 [새 운영자](../../../../visual-basic/language-reference/operators/new-operator.md) 차원 길이 지정 하는 배열 변수 선언 뒤에 절. 다음 코드 줄에는이 형식의 잘못 된 선언을 보여 줍니다.  
+- Supplying a [New Operator](../../../../visual-basic/language-reference/operators/new-operator.md) clause after specifying dimension lengths in the array variable declaration. The following code lines show invalid declarations of this type.  
   
      `Dim INVALIDsingleDimByteArray(2) As Byte = New Byte()`  
   
@@ -30,15 +30,15 @@ ms.locfileid: "64913459"
   
      `Dim INVALIDjaggedByteArray(1)() As Byte = New Byte()()`  
   
-- 최상위 배열이 가변된 배열 넘게 차원 길이 지정합니다. 다음 코드 줄에는이 형식의 잘못 된 선언을 보여 줍니다.  
+- Specifying dimension lengths for more than the top-level array of a jagged array. The following code line shows an invalid declaration of this type.  
   
      `Dim INVALIDjaggedByteArray(1)(1) As Byte`  
   
-- 생략 된 `New` 키워드 요소 값을 지정 하는 경우. 다음 코드 줄에는이 형식의 잘못 된 선언을 보여 줍니다.  
+- Omitting the `New` keyword when specifying the element values. The following code line shows an invalid declaration of this type.  
   
      `Dim INVALIDoneDimShortArray() As Short = Short() {0, 1, 2, 3}`  
   
-- 제공 된 `New` 괄호 없이 절 (`{}`). 다음 코드 줄에는이 형식의 잘못 된 선언을 보여 줍니다.  
+- Supplying a `New` clause without braces (`{}`). The following code lines show invalid declarations of this type.  
   
      `Dim INVALIDsingleDimByteArray() As Byte = New Byte()`  
   
@@ -48,16 +48,16 @@ ms.locfileid: "64913459"
   
      `Dim INVALIDtwoDimShortArray(,) As Short = New Short(1, 1)`  
   
-## <a name="accessing-an-array-out-of-bounds"></a>범위를 벗어난 배열 액세스  
- 배열을 초기화 하는 프로세스 각 차원에 상한값 및 하한값을 할당 합니다. 배열의 요소에 대 한 모든 액세스는 유효한 인덱스 또는 모든 차원에 대 한 아래 첨자를 지정 해야 합니다. 인덱스의 상한값, 하한값 아래 이상 경우는 <xref:System.IndexOutOfRangeException> 예외가 발생 합니다. 컴파일러는 오류가 런타임에 발생 하므로 이러한 오류를 검색할 수 없습니다.  
+## <a name="accessing-an-array-out-of-bounds"></a>Accessing an Array Out of Bounds  
+ The process of initializing an array assigns an upper bound and a lower bound to each dimension. Every access to an element of the array must specify a valid index, or subscript, for every dimension. If any index is below its lower bound or above its upper bound, an <xref:System.IndexOutOfRangeException> exception results. The compiler cannot detect such an error, so an error occurs at run time.  
   
-### <a name="determining-bounds"></a>범위 결정  
- 다른 구성 요소 코드를 배열에 전달 하는 경우 예를 들어 프로시저 인수로 모르는 배열의 크기 또는 해당 차원의 길이입니다. 모든 요소에 액세스 하려고 하기 전에 모든 차원 배열에 대 한 상한 값은 항상 결정 합니다. 배열 Visual Basic 이외의 다른 수단으로 만들어진 경우 `New` 절 하한값 0 이외의 것 이므로 가장 안전도 해당 하한값을 확인 합니다.  
+### <a name="determining-bounds"></a>Determining Bounds  
+ If another component passes an array to your code, for example as a procedure argument, you do not know the size of that array or the lengths of its dimensions. You should always determine the upper bound for every dimension of an array before you attempt to access any elements. If the array has been created by some means other than a Visual Basic `New` clause, the lower bound might be something other than 0, and it is safest to determine that lower bound as well.  
   
-### <a name="specifying-the-dimension"></a>차원 지정  
- 다차원 배열의 범위를 결정할 때는 주의 해야 치수를 지정 하는 방법. 합니다 `dimension` 의 매개 변수를 <xref:System.Array.GetLowerBound%2A> 및 <xref:System.Array.GetUpperBound%2A> 메서드는 0부터 시작 하는 동안 합니다 `Rank` Visual Basic의 매개 변수 <xref:Microsoft.VisualBasic.Information.LBound%2A> 및 <xref:Microsoft.VisualBasic.Information.UBound%2A> 함수는 1부터 시작 합니다.  
+### <a name="specifying-the-dimension"></a>Specifying the Dimension  
+ When determining the bounds of a multidimensional array, take care how you specify the dimension. The `dimension` parameters of the <xref:System.Array.GetLowerBound%2A> and <xref:System.Array.GetUpperBound%2A> methods are 0-based, while the `Rank` parameters of the Visual Basic <xref:Microsoft.VisualBasic.Information.LBound%2A> and <xref:Microsoft.VisualBasic.Information.UBound%2A> functions are 1-based.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [배열](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
 - [방법: Visual Basic에서 배열 변수 초기화](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)

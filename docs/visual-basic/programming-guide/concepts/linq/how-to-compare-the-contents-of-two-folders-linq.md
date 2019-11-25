@@ -1,15 +1,15 @@
 ---
-title: '방법: 두 폴더의 내용 비교 (LINQ) (Visual Basic)'
+title: '방법: 두 폴더의 내용 비교(LINQ)'
 ms.date: 07/20/2015
 ms.assetid: 903c7e9a-f48d-4a07-a8a8-5450d2646efa
-ms.openlocfilehash: 36128af71bb494a48e52564befe84fa7c7ffc3c0
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: d11299e3e36f4b6a8b837af59b1c27bb1c7aaf41
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582862"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348407"
 ---
-# <a name="how-to-compare-the-contents-of-two-folders-linq-visual-basic"></a>방법: 두 폴더의 내용 비교 (LINQ) (Visual Basic)
+# <a name="how-to-compare-the-contents-of-two-folders-linq-visual-basic"></a>How to: Compare the Contents of Two Folders (LINQ) (Visual Basic)
 
 이 예제에서는 두 파일 목록을 비교하는 세 가지 방법을 보여 줍니다.
 
@@ -116,7 +116,7 @@ End Module
 
 ## <a name="compiling-the-code"></a>코드 컴파일
 
-VB.NET 콘솔 응용 프로그램 프로젝트를 만듭니다 .이 프로젝트에는 system.string 네임 스페이스에 대 한 `Imports` 문이 있습니다.
+Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.
 
 ## <a name="see-also"></a>참조
 

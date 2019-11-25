@@ -1,24 +1,24 @@
 ---
-title: 함수(Visual Basic)
+title: 함수
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic, functions
 - functions [Visual Basic]
 ms.assetid: d86fc51f-f46e-4941-8ae2-6262da3d2688
-ms.openlocfilehash: e38768e191d8b0e05e4dcc5081444737da759bf0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6a0c1d1df42b9db7cbc47ef32c88101115a62a4f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69930056"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348087"
 ---
 # <a name="functions-visual-basic"></a>함수(Visual Basic)
 이 단원의 항목에는 Visual Basic 런타임 멤버 함수의 테이블이 포함되어 있습니다.  
   
 > [!NOTE]
-> 또한 함수를 만들고 호출할 수 있습니다. 자세한 내용은 [Function 문](../../../visual-basic/language-reference/statements/function-statement.md) 및 [방법: 값](../../../visual-basic/programming-guide/language-features/procedures/how-to-create-a-procedure-that-returns-a-value.md)을 반환 하는 프로시저를 만듭니다.  
+> 또한 함수를 만들고 호출할 수 있습니다. 자세한 내용은 [함수 문](../../../visual-basic/language-reference/statements/function-statement.md) 및 [방법: 값을 반환하는 프로시저 만들기](../../../visual-basic/programming-guide/language-features/procedures/how-to-create-a-procedure-that-returns-a-value.md)를 참조하세요.  
   
-## <a name="in-this-section"></a>섹션 내용  
+## <a name="in-this-section"></a>단원 내용  
  [변환 함수](../../../visual-basic/language-reference/functions/conversion-functions.md)  
   
  [수학 함수](../../../visual-basic/language-reference/functions/math-functions.md)  

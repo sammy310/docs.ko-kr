@@ -1,15 +1,15 @@
 ---
-title: '방법: 네임 스페이스의 XML에 대 한 쿼리 작성 (Visual Basic)'
+title: '방법: 네임스페이스에서 XML로 쿼리 작성'
 ms.date: 07/20/2015
 ms.assetid: 7d4131b5-3288-414f-b77c-b2edc2a1f465
-ms.openlocfilehash: 71e66791b41e26ea13f828ef6239a8db9a9365b0
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 496cf8daf5136e8aafff000312bbd730a5152e9f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71835002"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344468"
 ---
-# <a name="how-to-write-queries-on-xml-in-namespaces-visual-basic"></a>방법: 네임 스페이스의 XML에 대 한 쿼리 작성 (Visual Basic)
+# <a name="how-to-write-queries-on-xml-in-namespaces-visual-basic"></a>How to: Write Queries on XML in Namespaces (Visual Basic)
 네임스페이스에 있는 XML에 대한 쿼리를 작성하려면 올바른 네임스페이스를 가진 <xref:System.Xml.Linq.XName> 개체를 사용해야 합니다.  
   
  Visual Basic을 사용하는 경우 가장 일반적인 방법은 전역 네임스페이스를 정의한 다음 전역 네임스페이스를 사용하는 XML 속성과 XML 리터럴을 사용하는 것입니다. XML 리터럴의 case 요소가 기본적으로 네임스페이스에 있는 전역 기본 네임스페이스를 정의할 수 있습니다. 또는 접두사를 사용하여 전역 네임스페이스를 정의한 다음 필요한 경우 XML 리터럴과 XML 속성에서 접두사를 사용할 수 있습니다. XML의 다른 형태와 마찬가지로 기본적으로 특성은 항상 네임스페이스에 없습니다.  
@@ -90,4 +90,4 @@ End Module
   
 ## <a name="see-also"></a>참조
 
-- [네임 스페이스 개요 (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)
+- [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)

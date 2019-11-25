@@ -1,13 +1,13 @@
 ---
-title: '방법: 지정된 단어 집합이 들어 있는 문장 쿼리(LINQ)(Visual Basic)'
+title: '방법: 지정된 단어 집합이 들어 있는 문장 쿼리(LINQ)'
 ms.date: 07/20/2015
 ms.assetid: a5ae8ced-61fe-4c10-bb8a-95630e50f603
-ms.openlocfilehash: 81863706afc4f09abf114d7efbaaa02b1ee56084
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 4a068f4f5500da5fd26e3dea753ec9591b6c7f5f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524136"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347684"
 ---
 # <a name="how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq-visual-basic"></a>방법: 지정된 단어 집합이 들어 있는 문장 쿼리(LINQ)(Visual Basic)
 
@@ -65,8 +65,8 @@ End Class
 
 ## <a name="compiling-the-code"></a>코드 컴파일
 
-VB.NET 콘솔 응용 프로그램 프로젝트를 만듭니다 .이 프로젝트에는 system.string 네임 스페이스에 대 한 `Imports` 문이 있습니다.
+Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.
 
 ## <a name="see-also"></a>참조
 
-- [LINQ 및 문자열 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ and Strings (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

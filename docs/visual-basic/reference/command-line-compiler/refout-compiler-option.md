@@ -1,5 +1,5 @@
 ---
-title: -refout (Visual Basic)
+title: -refout
 ms.date: 03/16/2018
 f1_keywords:
 - /refout
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - refout compiler option [Visual Basic]
 - /refout compiler option [Visual Basic]
 - -refout compiler option [Visual Basic]
-ms.openlocfilehash: 552e611f222bfcc3ce12520ecdb891fd7b8b21de
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 3649a24a52cc6a448ea7cf4d850915adf02147fb
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72775556"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348651"
 ---
 # <a name="-refout-visual-basic"></a>-refout (Visual Basic)
 
@@ -29,13 +29,13 @@ ms.locfileid: "72775556"
 ## <a name="arguments"></a>인수
 
 `filepath`  
-참조 어셈블리의 경로 및 파일 이름입니다. 일반적으로 주 어셈블리의 하위 폴더에 있어야 합니다. 권장되는 규칙(MSBuild에서 사용됨)은 주 어셈블리에 상대적으로 “ref/” sub-폴더에 참조 어셈블리를 배치하는 것입니다. @No__t_0의 모든 폴더가 존재 해야 합니다. 컴파일러는 생성 하지 않습니다.
+The path and filename of the reference assembly. It should generally be in a sub-folder of the primary assembly. 권장되는 규칙(MSBuild에서 사용됨)은 주 어셈블리에 상대적으로 “ref/” sub-폴더에 참조 어셈블리를 배치하는 것입니다. All folders in `filepath` must exist; the compiler does not create them.
 
 ## <a name="remarks"></a>주의
 
-Visual Basic 버전 15.3부터 `-refout` 스위치를 지원 합니다.
+Visual Basic supports the `-refout` switch starting with version 15.3.
 
-참조 어셈블리는 라이브러리의 공용 API 화면을 나타내는 데 필요한 최소한의 메타 데이터만 포함 하는 특수 한 형식의 어셈블리입니다. 여기에는 빌드 도구에서 어셈블리를 참조할 때 중요 한 모든 멤버에 대 한 선언이 포함 되지만, 해당 API 계약에 대 한 관찰 효과가 없는 전용 멤버의 모든 멤버 구현 및 선언은 제외 됩니다. 자세한 내용은 .NET의 [참조 어셈블리](../../../standard/assembly/reference-assemblies.md) 가이드를 참조 하세요.
+참조 어셈블리는 라이브러리의 퍼블릭 API 표면을 나타내는 데 필요한 최소한의 메타데이터만 포함하는 특수한 형식의 어셈블리입니다. 빌드 도구에서 어셈블리를 참조할 때 중요한 모든 멤버에 대한 선언을 포함하지만, 해당 API 계약에 영향을 미치지 않는 프라이빗 멤버의 선언과 모든 멤버 구현은 제외됩니다. 자세한 내용은 .NET 가이드에서 [참조 어셈블리](../../../standard/assembly/reference-assemblies.md)를 참조하세요.
 
 `-refout` 및 [`-refonly`](refonly-compiler-option.md) 옵션은 함께 사용할 수 없습니다.
 

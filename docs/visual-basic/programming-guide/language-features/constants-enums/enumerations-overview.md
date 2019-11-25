@@ -1,34 +1,34 @@
 ---
-title: 열거형 개요(Visual Basic)
+title: 열거형 개요
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic code, enumerations
 - enumerations [Visual Basic], about enumerations
 ms.assetid: b42a38ee-5e77-4f99-a037-e3a127ead89c
-ms.openlocfilehash: 1c3465a3b2d12b110096ceedf2602d6560b82f4d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 623a3db818f589fb98f2c7efb02ea2f4a3b5b0ca
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61907402"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347478"
 ---
 # <a name="enumerations-overview-visual-basic"></a>열거형 개요(Visual Basic)
-열거형에는 관련 된 상수 집합을 사용 하 여 작동 하 고 이름의 상수 값을 연결 하는 편리한 방법을 제공 합니다. 예를 들어 요일과 연결된 정수 상수에 대한 열거형을 선언한 다음, 코드에 정수 값 대신 요일 이름을 사용할 수 있습니다.  
+Enumerations provide a convenient way to work with sets of related constants and to associate constant values with names. 예를 들어 요일과 연결된 정수 상수에 대한 열거형을 선언한 다음, 코드에 정수 값 대신 요일 이름을 사용할 수 있습니다.  
   
-## <a name="tasks-involving-enumerations"></a>열거형과 관련 된 작업  
- 다음 표에서 열거형과 관련 된 일반적인 작업을 나열 합니다.  
+## <a name="tasks-involving-enumerations"></a>Tasks involving Enumerations  
+ The following table lists common tasks involving enumerations.  
   
-|수행할 작업|참조|  
+|이러한 기능은 다음과 같습니다.|참조 항목|  
 |----------------|---------|  
-|미리 정의 된 열거형을 찾기|[상수 및 열거형](../../../../visual-basic/language-reference/constants-and-enumerations.md)|  
-|열거형 선언|[방법: 열거형 선언](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)|  
-|열거형의 이름을 정규화합니다|[열거형 및 이름 한정](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)|  
-|열거형 멤버 참조|[방법: 열거형 멤버 참조](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)|  
-|열거형 반복|[방법: Visual Basic에서 열거형 반복](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-iterate-through-an-enumeration.md)|  
-|열거형을 사용 하 여 연결 문자열 확인|[방법: 열거형 값과 연결 된 문자열 확인](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-determine-the-string-associated-with-an-enumeration-value.md)|  
-|열거형을 사용 하는 경우 결정|[열거형을 사용하는 경우](../../../../visual-basic/programming-guide/language-features/constants-enums/when-to-use-an-enumeration.md)|  
+|Find a pre-defined enumeration|[상수 및 열거형](../../../../visual-basic/language-reference/constants-and-enumerations.md)|  
+|Declare an enumeration|[How to: Declare an Enumeration](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)|  
+|Fully qualify an enumeration's name|[열거형 및 이름 한정](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)|  
+|Refer to an enumeration member|[방법: 열거형 멤버 참조](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)|  
+|Iterate through an enumeration|[How to: Iterate Through An Enumeration in Visual Basic](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-iterate-through-an-enumeration.md)|  
+|Determine the string associated with an enumeration|[방법: 열거형 값과 연결된 문자열 확인](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-determine-the-string-associated-with-an-enumeration-value.md)|  
+|Decide when to use an enumeration|[열거형을 사용하는 경우](../../../../visual-basic/programming-guide/language-features/constants-enums/when-to-use-an-enumeration.md)|  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [상수 개요](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)
 - [사용자 정의 상수](../../../../visual-basic/programming-guide/language-features/constants-enums/user-defined-constants.md)

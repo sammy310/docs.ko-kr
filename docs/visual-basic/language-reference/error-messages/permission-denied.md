@@ -1,27 +1,27 @@
 ---
-title: 사용 권한이 거부되었습니다(Visual Basic).
+title: 사용 권한이 거부됨
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID70
 ms.assetid: 71f46756-f522-4814-aab4-492bf9924245
-ms.openlocfilehash: ad75c556748bf5c0f9cef55310c4ffa7b01fd458
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 410301a1e99040fc617ab1bf1e851329ab3072d2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61920837"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346998"
 ---
 # <a name="permission-denied-visual-basic"></a>사용 권한이 거부되었습니다(Visual Basic).
-쓰기 금지 되어 디스크에 쓸 수 또는 잠긴된 파일에 액세스 하도록 시도 했습니다.  
+An attempt was made to write to a write-protected disk or to access a locked file.  
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
-1. 쓰기 암호로 보호 된 파일을 열려면 파일의 쓰기 금지 특성을 변경 합니다.  
+1. To open a write-protected file, change the write-protection attribute of the file.  
   
-2. 다른 프로세스에 파일을 잠그지 있는지 확인 하 고 다른 프로세스에서 해제 될 때까지 파일을 열 때까지 기다립니다.  
+2. Make sure that another process has not locked the file, and wait to open the file until the other process releases it.  
   
-3. 레지스트리에 액세스 하려면 사용자 권한에 포함이 유형의 레지스트리 액세스를 확인 합니다.  
+3. To access the registry, check that your user permissions include this type of registry access.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [오류 형식](../../../visual-basic/programming-guide/language-features/error-types.md)

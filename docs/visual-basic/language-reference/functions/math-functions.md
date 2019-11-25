@@ -1,5 +1,5 @@
 ---
-title: 수학 함수(Visual Basic)
+title: 수학 함수
 ms.date: 07/20/2015
 helpviewer_keywords:
 - math functions, Visual Basic
@@ -7,56 +7,56 @@ helpviewer_keywords:
 - math routines
 - Atn function
 ms.assetid: 4d2d82e7-6924-42fe-a4a7-b4dd5bebbd0c
-ms.openlocfilehash: e5f87a8e367e8c9df65b979fea3781b42ee3ce83
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b1cd6a846a7dc1dddcf6bdb5eb99ebc1c57a012c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61801350"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348070"
 ---
 # <a name="math-functions-visual-basic"></a>수학 함수(Visual Basic)
-메서드는 <xref:System.Math?displayProperty=nameWithType> 클래스 삼각, 로그 및 기타 일반 수학 함수를 제공 합니다.  
+The methods of the <xref:System.Math?displayProperty=nameWithType> class provide trigonometric, logarithmic, and other common mathematical functions.  
   
-## <a name="remarks"></a>설명  
- 다음 표에서 메서드는 <xref:System.Math?displayProperty=nameWithType> 클래스입니다. Visual Basic 프로그램에서 사용할 수 있습니다.  
+## <a name="remarks"></a>주의  
+ The following table lists methods of the <xref:System.Math?displayProperty=nameWithType> class. You can use these in a Visual Basic program.  
   
-|.NET 메서드|설명|  
+|.NET method|설명|  
 |---------------------------|-----------------|  
 |<xref:System.Math.Abs%2A>|숫자의 절대값을 반환합니다.|  
 |<xref:System.Math.Acos%2A>|코사인을 적용했을 때 지정된 숫자가 나오는 각도를 반환합니다.|  
 |<xref:System.Math.Asin%2A>|사인을 적용했을 때 지정된 숫자가 나오는 각도를 반환합니다.|  
 |<xref:System.Math.Atan%2A>|탄젠트를 적용했을 때 지정된 숫자가 나오는 각도를 반환합니다.|  
 |<xref:System.Math.Atan2%2A>|탄젠트를 적용했을 때 지정된 두 숫자의 몫이 나오는 각도를 반환합니다.|  
-|<xref:System.Math.BigMul%2A>|두 개의 32 비트 숫자의 전체 곱을 반환합니다.|  
-|<xref:System.Math.Ceiling%2A>|보다 크거나 같은 지정 된 된 가장 작은 정수 값을 반환 `Decimal` 또는 `Double`합니다.|  
+|<xref:System.Math.BigMul%2A>|Returns the full product of two 32-bit numbers.|  
+|<xref:System.Math.Ceiling%2A>|Returns the smallest integral value that's greater than or equal to the specified `Decimal` or `Double`.|  
 |<xref:System.Math.Cos%2A>|지정된 각도의 코사인을 반환합니다.|  
 |<xref:System.Math.Cosh%2A>|지정된 각도의 하이퍼볼릭 코사인을 반환합니다.|  
-|<xref:System.Math.DivRem%2A>|두 32 비트 또는 64 비트 부호 있는 정수의 몫을 반환 하 고도 출력 매개 변수에 나머지를 반환 합니다.|  
-|<xref:System.Math.Exp%2A>|E (자연 로그의 밑) 거듭제곱 거듭제곱을 반환 합니다.|  
-|<xref:System.Math.Floor%2A>|지정 된 보다 작거나 같은 최대 정수를 반환 `Decimal` 또는 `Double` 수입니다.|  
-|<xref:System.Math.IEEERemainder%2A>|다른 지정된 된 숫자의 나누기 결과로 생성 되는 나머지 부분에서는 지정 된 번호를 반환 합니다.|  
-|<xref:System.Math.Log%2A>|지정 된 기수로 지정된 된 숫자의 자연 (밑 e) 로그 또는 지정 된 숫자의 로그를 반환합니다.|  
+|<xref:System.Math.DivRem%2A>|Returns the quotient of two 32-bit or 64-bit signed integers, and also returns the remainder in an output parameter.|  
+|<xref:System.Math.Exp%2A>|Returns e (the base of natural logarithms) raised to the specified power.|  
+|<xref:System.Math.Floor%2A>|Returns the largest integer that's less than or equal to the specified `Decimal` or `Double` number.|  
+|<xref:System.Math.IEEERemainder%2A>|Returns the remainder that results from the division of a specified number by another specified number.|  
+|<xref:System.Math.Log%2A>|Returns the natural (base e) logarithm of a specified number or the logarithm of a specified number in a specified base.|  
 |<xref:System.Math.Log10%2A>|밑을 10으로 사용하여 지정된 숫자의 로그를 반환합니다.|  
-|<xref:System.Math.Max%2A>|두 숫자 중 더 큰 숫자를 반환합니다.|  
+|<xref:System.Math.Max%2A>|Returns the larger of two numbers.|  
 |<xref:System.Math.Min%2A>|두 개의 숫자 중 더 작은 숫자를 반환합니다.|  
 |<xref:System.Math.Pow%2A>|지정된 숫자의 지정된 거듭제곱을 반환합니다.|  
-|<xref:System.Math.Round%2A>|반환 된 `Decimal` 또는 `Double` 가장 가까운 정수 값 또는 지정된 된 개수의 소수 자릿수 값이 반올림 합니다.|  
-|<xref:System.Math.Sign%2A>|반환 된 `Integer` 숫자의 부호를 나타내는 값입니다.|  
+|<xref:System.Math.Round%2A>|Returns a `Decimal` or `Double` value rounded to the nearest integral value or to a specified number of fractional digits.|  
+|<xref:System.Math.Sign%2A>|Returns an `Integer` value indicating the sign of a number.|  
 |<xref:System.Math.Sin%2A>|지정된 각도의 사인을 반환합니다.|  
 |<xref:System.Math.Sinh%2A>|지정된 각도의 하이퍼볼릭 사인을 반환합니다.|  
 |<xref:System.Math.Sqrt%2A>|지정된 숫자의 제곱근을 반환합니다.|  
 |<xref:System.Math.Tan%2A>|지정된 각도의 탄젠트를 반환합니다.|  
 |<xref:System.Math.Tanh%2A>|지정된 각도의 하이퍼볼릭 탄젠트를 반환합니다.|  
-|<xref:System.Math.Truncate%2A>|지정 된 정수 부분을 계산 `Decimal` 또는 `Double` 수입니다.|  
+|<xref:System.Math.Truncate%2A>|Calculates the integral part of a specified `Decimal` or `Double` number.|  
   
- 한정자 없이 이러한 함수를 사용 하려면 가져오기는 <xref:System.Math?displayProperty=nameWithType> 소스 파일의 맨 위에 다음 코드를 추가 하 여 프로젝트에 네임 스페이스:  
+ To use these functions without qualification, import the <xref:System.Math?displayProperty=nameWithType> namespace into your project by adding the following code to the top of your source file:  
   
 ```vb
 Imports System.Math  
 ```  
   
 ## <a name="example"></a>예제  
- 이 예제에서는 합니다 <xref:System.Math.Abs%2A> 메서드는 <xref:System.Math> 숫자의 절대값을 계산 하는 클래스입니다.  
+ This example uses the <xref:System.Math.Abs%2A> method of the <xref:System.Math> class to compute the absolute value of a number.  
   
 ```vb
 ' Returns 50.3.  
@@ -66,7 +66,7 @@ Dim MyNumber2 As Double = Math.Abs(-50.3)
 ```  
   
 ## <a name="example"></a>예제  
- 이 예제에서는 합니다 <xref:System.Math.Atan%2A> 메서드는 <xref:System.Math> pi의 값을 계산 하는 클래스입니다.  
+ This example uses the <xref:System.Math.Atan%2A> method of the <xref:System.Math> class to calculate the value of pi.  
   
 ```vb
 Public Function GetPi() As Double  
@@ -76,7 +76,7 @@ End Function
 ```  
   
 ## <a name="example"></a>예제  
- 이 예제에서는 합니다 <xref:System.Math.Cos%2A> 메서드는 <xref:System.Math> 각도의 코사인을 반환 하는 클래스입니다.  
+ This example uses the <xref:System.Math.Cos%2A> method of the <xref:System.Math> class to return the cosine of an angle.  
   
 ```vb
 Public Function Sec(ByVal angle As Double) As Double  
@@ -86,7 +86,7 @@ End Function
 ```  
   
 ## <a name="example"></a>예제  
- 이 예제에서는 합니다 <xref:System.Math.Exp%2A> 메서드를 <xref:System.Math> e의 거듭제곱을 반환 하는 클래스입니다.  
+ This example uses the <xref:System.Math.Exp%2A> method of the <xref:System.Math> class to return e raised to a power.  
   
 ```vb
 Public Function Sinh(ByVal angle As Double) As Double  
@@ -96,7 +96,7 @@ End Function
 ```  
   
 ## <a name="example"></a>예제  
- 이 예제에서는 합니다 <xref:System.Math.Log%2A> 메서드는 <xref:System.Math> 숫자의 자연 로그를 반환 하는 클래스입니다.  
+ This example uses the <xref:System.Math.Log%2A> method of the <xref:System.Math> class to return the natural logarithm of a number.  
   
 ```vb
 Public Function Asinh(ByVal value As Double) As Double  
@@ -106,7 +106,7 @@ End Function
 ```  
   
 ## <a name="example"></a>예제  
- 이 예제에서는 합니다 <xref:System.Math.Round%2A> 메서드는 <xref:System.Math> 숫자를 가장 가까운 정수로 반올림 하는 클래스입니다.  
+ This example uses the <xref:System.Math.Round%2A> method of the <xref:System.Math> class to round a number to the nearest integer.  
   
 ```vb
 ' Returns 3.  
@@ -114,7 +114,7 @@ Dim MyVar2 As Double = Math.Round(2.8)
 ```  
   
 ## <a name="example"></a>예제  
- 이 예제에서는 합니다 <xref:System.Math.Sign%2A> 메서드는 <xref:System.Math> 숫자의 부호를 확인 하는 클래스입니다.  
+ This example uses the <xref:System.Math.Sign%2A> method of the <xref:System.Math> class to determine the sign of a number.  
   
 ```vb
 ' Returns 1.  
@@ -126,7 +126,7 @@ Dim MySign3 As Integer = Math.Sign(0)
 ```  
   
 ## <a name="example"></a>예제  
- 이 예제에서는 합니다 <xref:System.Math.Sin%2A> 메서드는 <xref:System.Math> 각도의 사인을 반환 하는 클래스입니다.  
+ This example uses the <xref:System.Math.Sin%2A> method of the <xref:System.Math> class to return the sine of an angle.  
   
 ```vb
 Public Function Csc(ByVal angle As Double) As Double  
@@ -136,7 +136,7 @@ End Function
 ```  
   
 ## <a name="example"></a>예제  
- 이 예제에서는 합니다 <xref:System.Math.Sqrt%2A> 메서드는 <xref:System.Math> 숫자의 제곱근을 계산 하는 클래스입니다.  
+ This example uses the <xref:System.Math.Sqrt%2A> method of the <xref:System.Math> class to calculate the square root of a number.  
   
 ```vb
 ' Returns 2.  
@@ -150,7 +150,7 @@ Dim MySqr4 As Double = Math.Sqrt(-4)
 ```  
   
 ## <a name="example"></a>예제  
- 이 예제에서는 합니다 <xref:System.Math.Tan%2A> 메서드는 <xref:System.Math> 각도의 탄젠트를 반환 하는 클래스입니다.  
+ This example uses the <xref:System.Math.Tan%2A> method of the <xref:System.Math> class to return the tangent of an angle.  
   
 ```vb
 Public Function Ctan(ByVal angle As Double) As Double  
@@ -164,9 +164,9 @@ End Function
   
  **네임스페이스:** <xref:System>  
   
- **어셈블리:** mscorlib (mscorlib.dll)  
+ **Assembly:** mscorlib (in mscorlib.dll)  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:Microsoft.VisualBasic.VBMath.Rnd%2A>
 - <xref:Microsoft.VisualBasic.VBMath.Randomize%2A>

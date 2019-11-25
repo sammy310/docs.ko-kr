@@ -1,15 +1,15 @@
 ---
-title: 개체(Visual Basic)
+title: 개체
 ms.date: 07/20/2015
 helpviewer_keywords:
 - objects [Visual Basic]
 ms.assetid: 651c73e4-dca8-402b-9c6b-e3902b3a3f4b
-ms.openlocfilehash: 8852a3daa3cd3891d5053cc1fffe19fa310125de
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 8956d8dd8f46b4235d71802ccc743dfebcb051be
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65880716"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344151"
 ---
 # <a name="objects-visual-basic"></a>개체(Visual Basic)
 이 항목에서는 Visual Basic 런타임 개체를 설명하고 멤버 프로시저, 속성 및 이벤트 테이블을 포함하는 기타 항목의 링크를 제공합니다.  
@@ -20,7 +20,7 @@ ms.locfileid: "65880716"
 |---|---|  
 |<xref:Microsoft.VisualBasic.Collection>|항목의 관련 그룹을 단일 개체로 표시하는 편리한 방법을 제공합니다.|  
 |<xref:Microsoft.VisualBasic.Information.Err%2A>|런타임 오류에 대한 정보를 포함합니다.|  
-|`My.Application` 개체는 다음 클래스로 구성됩니다.<br /><br /> <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>는 모든 프로젝트에서 사용 가능한 멤버를 제공합니다.<br /><br /> <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>는 Windows Forms 응용 프로그램에서 사용 가능한 멤버를 제공합니다.<br /><br /> <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase>는 콘솔 응용 프로그램에서 사용 가능한 멤버를 제공합니다.|현재 애플리케이션 또는 DLL과 연결된 데이터만 제공합니다. 시스템 수준 정보는 `My.Application`을 사용하여 변경할 수 없습니다.<br /><br /> 일부 멤버는 Windows Forms 또는 콘솔 애플리케이션에만 사용할 수 있습니다.|  
+|`My.Application` 개체는 다음 클래스로 구성됩니다.<br /><br /> <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>는 모든 프로젝트에서 사용 가능한 멤버를 제공합니다.<br /><br /> <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>는 Windows Forms 애플리케이션에서 사용 가능한 멤버를 제공합니다.<br /><br /> <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase>는 콘솔 애플리케이션에서 사용 가능한 멤버를 제공합니다.|현재 애플리케이션 또는 DLL과 연결된 데이터만 제공합니다. 시스템 수준 정보는 `My.Application`을 사용하여 변경할 수 없습니다.<br /><br /> 일부 멤버는 Windows Forms 또는 콘솔 애플리케이션에만 사용할 수 있습니다.|  
 |`My.Application.Info` (<xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Info%2A>)|버전 번호, 설명, 로드된 어셈블리와 같은 애플리케이션에 대한 정보를 가져오기 위한 속성을 제공합니다.|  
 |`My.Application.Log` (<xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log%2A>)|애플리케이션의 로그 수신기에 이벤트 및 예외 정보를 쓸 수 있는 속성 및 메서드를 제공합니다.|  
 |`My.Computer` (<xref:Microsoft.VisualBasic.Devices.Computer>)|오디오, 시계, 키보드, 파일 시스템과 같은 컴퓨터 구성 요소를 조작하기 위한 속성을 제공합니다.|  
@@ -45,7 +45,7 @@ ms.locfileid: "65880716"
 |[My.WebServices 개체](../../../visual-basic/language-reference/objects/my-webservices-object.md)|현재 프로젝트에서 참조하는 각 웹 서비스의 단일 인스턴스를 만들고 액세스하기 위한 속성을 제공합니다.|  
 |<xref:Microsoft.VisualBasic.FileIO.TextFieldParser>|구조화된 텍스트 파일을 구문 분석하기 위한 메서드와 속성을 제공합니다.|  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [Visual Basic 언어 참조](../../../visual-basic/language-reference/index.md)
 - [Visual Basic](../../../visual-basic/index.md)

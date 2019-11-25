@@ -1,34 +1,34 @@
 ---
-title: XML 리터럴 및 XML 1.0 사양(Visual Basic)
+title: XML 리터럴 및 XML 1.0 사양
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML literals [Visual Basic], XML 1.0 specification
 ms.assetid: 46f046e5-293c-41a3-b893-4e5f6e32e78a
-ms.openlocfilehash: e00812ccf463342502eef96c91d62ba63223424f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d5dd90899c8a3c4fb4670258e7ff636822c479da
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64639859"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346177"
 ---
 # <a name="xml-literals-and-the-xml-10-specification-visual-basic"></a>XML 리터럴 및 XML 1.0 사양(Visual Basic)
-Visual Basic의 XML 리터럴 구문을 대부분의 태그 XML (Extensible Language) 1.0 사양 지원합니다. XML 1.0 사양에 대 한 자세한 내용은 참조 하세요. [Extensible Markup Language (XML) 1.0](https://www.w3.org/TR/xml) W3C 웹 사이트입니다.  
+The XML literal syntax in Visual Basic supports most of the Extensible Markup Language (XML) 1.0 specification. For details about the XML 1.0 specification, see [Extensible Markup Language (XML) 1.0](https://www.w3.org/TR/xml) on the W3C Web site.  
   
-## <a name="what-visual-basic-does-not-support"></a>Visual Basic 지원 하지 않는 내용  
+## <a name="what-visual-basic-does-not-support"></a>What Visual Basic Does Not Support  
   
-- 리터럴 XML 문서 형식 정의 (DTD)를 포함할 수 없습니다.  
+- An XML literal cannot contain a document type definition (DTD).  
   
-- XML 문서 리터럴에 XML 문서 선언으로 시작 해야 합니다.  
+- An XML document literal must start with an XML document declaration.  
   
-- XML 리터럴을 한 줄에서 65,535 개 문자를 포함할 수 없습니다.  
+- An XML literal cannot contain more than 65,535 characters on one line.  
   
-- XML 네임 스페이스 접두사, 요소 이름 및 특성 이름에 1,024 개 문자를 포함할 수 없습니다.  
+- XML namespace prefixes, element names, and attribute names cannot contain more than 1,024 characters.  
   
-## <a name="extra-features-that-visual-basic-supports"></a>Visual Basic에서 지 원하는 추가 기능  
+## <a name="extra-features-that-visual-basic-supports"></a>Extra Features That Visual Basic Supports  
   
-- 유효한 XML 문서 및 요소의 리터럴에서 허용 포함 된 식 구문이 아닙니다.  
+- The embedded expression syntax allowed in document and element literals is not valid XML.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [Visual Basic에서 XML 만들기](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
 - [XML 문서 리터럴](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)

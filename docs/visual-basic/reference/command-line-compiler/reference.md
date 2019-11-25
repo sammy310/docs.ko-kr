@@ -1,5 +1,5 @@
 ---
-title: -reference (Visual Basic)
+title: -reference
 ms.date: 03/13/2018
 helpviewer_keywords:
 - /reference compiler option [Visual Basic]
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - reference compiler option [Visual Basic]
 - -r compiler option [Visual Basic]
 ms.assetid: 66bdfced-bbf6-43d1-a554-bc0990315737
-ms.openlocfilehash: 8f144dbd9376f15ac92e283472dac786a6972045
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 8b57affa05c77d8ed20bfead7de767a8dd994241
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72775600"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348594"
 ---
 # <a name="-reference-visual-basic"></a>-reference (Visual Basic)
-컴파일러가 지정 된 어셈블리의 형식 정보를 현재 컴파일하고 있는 프로젝트에 사용할 수 있도록 합니다.  
+Causes the compiler to make type information in the specified assemblies available to the project you are currently compiling.  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,24 +38,24 @@ or
 |`fileList`|필수 요소. 쉼표로 구분된 어셈블리 파일 이름 목록입니다. 파일 이름에 공백이 있으면 이름을 따옴표로 묶습니다.|  
   
 ## <a name="remarks"></a>주의  
- 가져오는 파일에는 어셈블리 메타 데이터가 포함 되어야 합니다. Public 형식만 어셈블리 외부에서 볼 수 있습니다. [-Addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md) 옵션은 모듈에서 메타 데이터를 가져옵니다.  
+ The file(s) you import must contain assembly metadata. Only public types are visible outside the assembly. The [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md) option imports metadata from a module.  
   
- 다른 어셈블리 (어셈블리 B)를 참조 하는 어셈블리 (어셈블리 A)를 참조 하는 경우에는 어셈블리 B를 참조 해야 합니다.  
+ If you reference an assembly (Assembly A) which itself references another assembly (Assembly B), you need to reference Assembly B if:  
   
 - 어셈블리 A의 형식은 형식에서 상속되거나 어셈블리 B의 인터페이스를 구현합니다.  
   
 - 어셈블리 B의 반환 형식이나 매개 변수 형식을 사용하는 필드, 속성, 이벤트 또는 메서드가 호출됩니다.  
   
- 하나 이상의 어셈블리 참조가 있는 디렉터리를 지정 하려면 [-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md) 을 사용 합니다.  
+ Use [-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md) to specify the directory in which one or more of your assembly references is located.  
   
- 컴파일러가 모듈이 아니라 어셈블리의 형식을 인식할 수 있도록 하려면 강제로 형식을 확인 해야 합니다. 이 작업을 수행 하는 방법에 대 한 한 가지 예는 형식의 인스턴스를 정의 하는 것입니다. 컴파일러에 대 한 어셈블리의 형식 이름을 확인 하는 데 사용할 수 있는 다른 방법이 있습니다. 예를 들어, 어셈블리의 형식에서 상속 하는 경우 형식 이름이 컴파일러에 인식 됩니다.  
+ For the compiler to recognize a type in an assembly (not a module), it must be forced to resolve the type. One example of how you can do this is to define an instance of the type. Other ways are available to resolve type names in an assembly for the compiler. For example, if you inherit from a type in an assembly, the type name then becomes known to the compiler.  
   
- 일반적으로 사용 되는 .NET Framework 어셈블리를 참조 하는 Vbc.exe 지시 파일은 기본적으로 사용 됩니다. 컴파일러가 Vbc.rsp를 사용 하지 않도록 하려면 `-noconfig`을 사용 합니다.  
+ The Vbc.rsp response file, which references commonly used .NET Framework assemblies, is used by default. Use `-noconfig` if you do not want the compiler to use Vbc.rsp.  
   
  `-reference`의 약식은 `/r`입니다.  
   
 ## <a name="example"></a>예제  
- 다음 명령은 `Metad1.dll` 및 `Metad2.dll`에서 소스 파일 `Input.vb` 및 참조 어셈블리를 컴파일하여 `Out.exe`를 생성 합니다.  
+ The following command compiles source file `Input.vb` and reference assemblies from `Metad1.dll` and `Metad2.dll` to produce `Out.exe`.  
   
 ```console
 vbc -reference:metad1.dll,metad2.dll -out:out.exe input.vb  
