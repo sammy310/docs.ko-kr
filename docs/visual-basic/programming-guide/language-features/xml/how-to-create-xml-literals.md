@@ -1,28 +1,28 @@
 ---
-title: '방법: XML 리터럴 (Visual Basic) 만들기'
+title: '방법: XML 리터럴 만들기'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML literals [Visual Basic], creating
 ms.assetid: 573a6db5-b14d-4e42-b356-8cc7e2d77745
-ms.openlocfilehash: 991f10b00082bb4eb2b54f10c1b85cdc2c9009d2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e3af5185d2c2106e6a696a6569ef59897d0f1fe1
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64598538"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74332996"
 ---
-# <a name="how-to-create-xml-literals-visual-basic"></a><span data-ttu-id="1f3d2-102">방법: XML 리터럴 (Visual Basic) 만들기</span><span class="sxs-lookup"><span data-stu-id="1f3d2-102">How to: Create XML Literals (Visual Basic)</span></span>
-<span data-ttu-id="1f3d2-103">코드에서 직접 XML 리터럴을 사용 하 여 XML 문서, 조각 또는 요소를 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1f3d2-103">You can create an XML document, fragment, or element directly in code by using an XML literal.</span></span> <span data-ttu-id="1f3d2-104">이 항목의 예제에는 세 개의 자식 요소가 있는 XML 요소를 만드는 방법 및 XML 문서를 만드는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="1f3d2-104">The examples in this topic demonstrate how to create an XML element that has three child elements, and how to create an XML document.</span></span>  
+# <a name="how-to-create-xml-literals-visual-basic"></a><span data-ttu-id="c95e0-102">방법: XML 리터럴 만들기(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c95e0-102">How to: Create XML Literals (Visual Basic)</span></span>
+<span data-ttu-id="c95e0-103">You can create an XML document, fragment, or element directly in code by using an XML literal.</span><span class="sxs-lookup"><span data-stu-id="c95e0-103">You can create an XML document, fragment, or element directly in code by using an XML literal.</span></span> <span data-ttu-id="c95e0-104">The examples in this topic demonstrate how to create an XML element that has three child elements, and how to create an XML document.</span><span class="sxs-lookup"><span data-stu-id="c95e0-104">The examples in this topic demonstrate how to create an XML element that has three child elements, and how to create an XML document.</span></span>  
   
- <span data-ttu-id="1f3d2-105">사용할 수도 있습니다는 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] Api를 만드는 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="1f3d2-105">You can also use the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] APIs to create [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] objects.</span></span> <span data-ttu-id="1f3d2-106">자세한 내용은 <xref:System.Xml.Linq.XElement>을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="1f3d2-106">For more information, see <xref:System.Xml.Linq.XElement>.</span></span>  
+ <span data-ttu-id="c95e0-105">You can also use the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] APIs to create [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] objects.</span><span class="sxs-lookup"><span data-stu-id="c95e0-105">You can also use the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] APIs to create [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] objects.</span></span> <span data-ttu-id="c95e0-106">자세한 내용은 <xref:System.Xml.Linq.XElement>를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="c95e0-106">For more information, see <xref:System.Xml.Linq.XElement>.</span></span>  
   
-### <a name="to-create-an-xml-element"></a><span data-ttu-id="1f3d2-107">XML 요소를 만들려면</span><span class="sxs-lookup"><span data-stu-id="1f3d2-107">To create an XML element</span></span>  
+### <a name="to-create-an-xml-element"></a><span data-ttu-id="c95e0-107">To create an XML element</span><span class="sxs-lookup"><span data-stu-id="c95e0-107">To create an XML element</span></span>  
   
-- <span data-ttu-id="1f3d2-108">실제 XML 구문으로 동일한 XML 리터럴 구문을 사용 하 여 XML 인라인을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="1f3d2-108">Create the XML inline by using the XML literal syntax, which is the same as the actual XML syntax.</span></span>  
+- <span data-ttu-id="c95e0-108">Create the XML inline by using the XML literal syntax, which is the same as the actual XML syntax.</span><span class="sxs-lookup"><span data-stu-id="c95e0-108">Create the XML inline by using the XML literal syntax, which is the same as the actual XML syntax.</span></span>  
   
      [!code-vb[VbXMLSamples#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples2.vb#5)]  
   
-     <span data-ttu-id="1f3d2-109">코드를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="1f3d2-109">Run the code.</span></span> <span data-ttu-id="1f3d2-110">이 코드의 출력이 됩니다.</span><span class="sxs-lookup"><span data-stu-id="1f3d2-110">The output of this code is:</span></span>  
+     <span data-ttu-id="c95e0-109">코드를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="c95e0-109">Run the code.</span></span> <span data-ttu-id="c95e0-110">The output of this code is:</span><span class="sxs-lookup"><span data-stu-id="c95e0-110">The output of this code is:</span></span>  
   
      `<contact>`  
   
@@ -34,13 +34,13 @@ ms.locfileid: "64598538"
   
      `</contact>`  
   
-### <a name="to-create-an-xml-document"></a><span data-ttu-id="1f3d2-111">XML 문서를 만들려면</span><span class="sxs-lookup"><span data-stu-id="1f3d2-111">To create an XML document</span></span>  
+### <a name="to-create-an-xml-document"></a><span data-ttu-id="c95e0-111">To create an XML document</span><span class="sxs-lookup"><span data-stu-id="c95e0-111">To create an XML document</span></span>  
   
-- <span data-ttu-id="1f3d2-112">XML 문서 인라인을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="1f3d2-112">Create the XML document inline.</span></span> <span data-ttu-id="1f3d2-113">다음 코드는 리터럴 구문, XML 선언, 처리 명령, 주석 및 다른 요소를 포함 하는 요소에는 XML 문서를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="1f3d2-113">The following code creates an XML document that has literal syntax, an XML declaration, a processing instruction, a comment, and an element that contains another element.</span></span>  
+- <span data-ttu-id="c95e0-112">Create the XML document inline.</span><span class="sxs-lookup"><span data-stu-id="c95e0-112">Create the XML document inline.</span></span> <span data-ttu-id="c95e0-113">The following code creates an XML document that has literal syntax, an XML declaration, a processing instruction, a comment, and an element that contains another element.</span><span class="sxs-lookup"><span data-stu-id="c95e0-113">The following code creates an XML document that has literal syntax, an XML declaration, a processing instruction, a comment, and an element that contains another element.</span></span>  
   
      [!code-vb[VbXMLSamples#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#30)]  
   
-     <span data-ttu-id="1f3d2-114">코드를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="1f3d2-114">Run the code.</span></span> <span data-ttu-id="1f3d2-115">이 코드의 출력이 됩니다.</span><span class="sxs-lookup"><span data-stu-id="1f3d2-115">The output of this code is:</span></span>  
+     <span data-ttu-id="c95e0-114">코드를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="c95e0-114">Run the code.</span></span> <span data-ttu-id="c95e0-115">The output of this code is:</span><span class="sxs-lookup"><span data-stu-id="c95e0-115">The output of this code is:</span></span>  
   
      `<?xml-stylesheet type="text/xsl" href="show_book.xsl"?>`  
   
@@ -52,9 +52,9 @@ ms.locfileid: "64598538"
   
      `</books>`  
   
-## <a name="see-also"></a><span data-ttu-id="1f3d2-116">참고자료</span><span class="sxs-lookup"><span data-stu-id="1f3d2-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c95e0-116">참조</span><span class="sxs-lookup"><span data-stu-id="c95e0-116">See also</span></span>
 
-- [<span data-ttu-id="1f3d2-117">XML</span><span class="sxs-lookup"><span data-stu-id="1f3d2-117">XML</span></span>](../../../../visual-basic/programming-guide/language-features/xml/index.md)
-- [<span data-ttu-id="1f3d2-118">Visual Basic에서 XML 만들기</span><span class="sxs-lookup"><span data-stu-id="1f3d2-118">Creating XML in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
-- [<span data-ttu-id="1f3d2-119">XML 요소 리터럴</span><span class="sxs-lookup"><span data-stu-id="1f3d2-119">XML Element Literal</span></span>](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)
-- [<span data-ttu-id="1f3d2-120">XML 문서 리터럴</span><span class="sxs-lookup"><span data-stu-id="1f3d2-120">XML Document Literal</span></span>](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)
+- [<span data-ttu-id="c95e0-117">XML</span><span class="sxs-lookup"><span data-stu-id="c95e0-117">XML</span></span>](../../../../visual-basic/programming-guide/language-features/xml/index.md)
+- [<span data-ttu-id="c95e0-118">Visual Basic에서 XML 만들기</span><span class="sxs-lookup"><span data-stu-id="c95e0-118">Creating XML in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [<span data-ttu-id="c95e0-119">XML 요소 리터럴</span><span class="sxs-lookup"><span data-stu-id="c95e0-119">XML Element Literal</span></span>](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)
+- [<span data-ttu-id="c95e0-120">XML 문서 리터럴</span><span class="sxs-lookup"><span data-stu-id="c95e0-120">XML Document Literal</span></span>](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)
