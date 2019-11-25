@@ -1,5 +1,5 @@
 ---
-title: 인수를 값으로 전달할 때와 참조로 전달할 때의 차이점(Visual Basic)
+title: 인수를 값으로 전달할 때와 참조로 전달할 때의 차이점
 ms.date: 07/20/2015
 helpviewer_keywords:
 - ByRef keyword [Visual Basic], passing arguments by reference
@@ -8,38 +8,38 @@ helpviewer_keywords:
 - ByVal keyword [Visual Basic], passing arguments by value
 - arguments [Visual Basic], passing by value or by reference
 ms.assetid: 5f5c38fe-3e2d-494c-8fff-f4025b55ec93
-ms.openlocfilehash: 1b85941c14721280a5025db442c4793930244ec8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 84ec3bac2532b2cef72ddda347251bc987801c3b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61864548"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74341225"
 ---
 # <a name="differences-between-passing-an-argument-by-value-and-by-reference-visual-basic"></a>인수를 값으로 전달할 때와 참조로 전달할 때의 차이점(Visual Basic)
-프로시저에 하나 이상의 인수를 전달 하는 경우 각 인수는 호출 코드에서 기본 프로그래밍 요소에 해당 합니다. 이 기본 요소의 값 또는 참조를 전달할 수 있습니다. 이 *전달 메커니즘*합니다.  
+When you pass one or more arguments to a procedure, each argument corresponds to an underlying programming element in the calling code. You can pass either the value of this underlying element, or a reference to it. This is known as the *passing mechanism*.  
   
 ## <a name="passing-by-value"></a>값으로 전달  
- 인수를 전달 하면 *값별로* 지정 하 여 합니다 [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) 프로시저 정의에서 해당 매개 변수에 키워드입니다. 이 전달 메커니즘을 사용 하면 Visual Basic 프로시저의 지역 변수에 기본 프로그래밍 요소의 값을 복사 합니다. 호출 코드에서 프로시저 코드 내부 요소에 대 한 액세스가 없습니다.  
+ You pass an argument *by value* by specifying the [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) keyword for the corresponding parameter in the procedure definition. When you use this passing mechanism, Visual Basic copies the value of the underlying programming element into a local variable in the procedure. The procedure code does not have any access to the underlying element in the calling code.  
   
-## <a name="passing-by-reference"></a>참조로 전달  
- 인수를 전달 하면 *참조별* 지정 하 여 합니다 [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) 프로시저 정의에서 해당 매개 변수에 키워드. 이 전달 메커니즘을 사용 하면 Visual Basic에서는 호출 코드에서 기본 프로그래밍 요소에 대 한 직접 참조가 프로시저에 제공 합니다.  
+## <a name="passing-by-reference"></a>Passing by Reference  
+ You pass an argument *by reference* by specifying the [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) keyword for the corresponding parameter in the procedure definition. When you use this passing mechanism, Visual Basic gives the procedure a direct reference to the underlying programming element in the calling code.  
   
-## <a name="passing-mechanism-and-element-type"></a>전달 메커니즘 및 요소 형식  
- 전달 메커니즘의 선택은 기본 요소 형식의 분류와 동일 합니다. 값별 또는 참조별 전달 프로시저 코드를 Visual Basic 제공 하는 새로운 참조입니다. 값 형식 또는 참조 형식 프로그래밍 요소는 메모리에 저장 하는 방법을 가리킵니다.  
+## <a name="passing-mechanism-and-element-type"></a>Passing Mechanism and Element Type  
+ The choice of passing mechanism is not the same as the classification of the underlying element type. Passing by value or by reference refers to what Visual Basic supplies to the procedure code. A value type or reference type refers to how a programming element is stored in memory.  
   
- 그러나 전달 메커니즘 및 요소 형식이 사용 하는 서로 관련 되어 있습니다. 참조 형식의 값은 메모리의 다른 곳에서 데이터에 대 한 포인터입니다. 따라서 참조 형식을 값을 전달 하면 프로시저 코드에 기본 요소의 데이터에 대 한 포인터도 내부 요소에 액세스할 수 없습니다. 예를 들어, 요소 배열 변수 이면 프로시저 코드 자체는 변수에 액세스할 수 없지만 배열 멤버에 액세스할 수 있습니다.  
+ However, the passing mechanism and element type are interrelated. The value of a reference type is a pointer to the data elsewhere in memory. This means that when you pass a reference type by value, the procedure code has a pointer to the underlying element's data, even though it cannot access the underlying element itself. For example, if the element is an array variable, the procedure code does not have access to the variable itself, but it can access the array members.  
   
-## <a name="ability-to-modify"></a>수정 하는 기능  
- 인수로 서 수정할 수 없는 요소를 통과 한 경우 프로시저를 수정할 수 것 호출 코드에서 전달 되 고 있는지 여부를 `ByVal` 또는 `ByRef`합니다.  
+## <a name="ability-to-modify"></a>Ability to Modify  
+ When you pass a nonmodifiable element as an argument, the procedure can never modify it in the calling code, whether it is passed `ByVal` or `ByRef`.  
   
- 다음 표에서 수정할 수 있는 요소에 대 한 요소 형식 및 전달 메커니즘 간의 상호 작용 요약 되어 있습니다.  
+ For a modifiable element, the following table summarizes the interaction between the element type and the passing mechanism.  
   
-|요소 형식|전달 `ByVal`|전달 `ByRef`|  
+|요소 형식|Passed `ByVal`|Passed `ByRef`|  
 |------------------|--------------------|--------------------|  
-|값 형식 (값만 포함)|프로시저 변수 또는 해당 멤버를 변경할 수 없습니다.|프로시저가 변수 및 해당 멤버를 변경할 수 있습니다.|  
-|참조 형식 (클래스 또는 구조체 인스턴스에 대 한 포인터 포함)|프로시저 변수를 변경할 수 없습니다 있지만 가리키는 인스턴스 멤버를 변경할 수 있습니다.|프로시저 변수 및 가리키는 인스턴스 멤버를 변경할 수 있습니다.|  
+|Value type (contains only a value)|The procedure cannot change the variable or any of its members.|The procedure can change the variable and its members.|  
+|Reference type (contains a pointer to a class or structure instance)|The procedure cannot change the variable but can change members of the instance to which it points.|The procedure can change the variable and members of the instance to which it points.|  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [절차](./index.md)
 - [프로시저 매개 변수 및 인수](./procedure-parameters-and-arguments.md)
@@ -48,6 +48,6 @@ ms.locfileid: "61864548"
 - [수정할 수 있는 인수와 수정할 수 없는 인수 사이의 차이점](./differences-between-modifiable-and-nonmodifiable-arguments.md)
 - [방법: 프로시저 인수의 값 변경](./how-to-change-the-value-of-a-procedure-argument.md)
 - [방법: 값 변경에 대해 프로시저 인수 보호](./how-to-protect-a-procedure-argument-against-value-changes.md)
-- [방법: 인수가 값으로 전달 되도록 설정](./how-to-force-an-argument-to-be-passed-by-value.md)
+- [방법: 인수가 값으로 전달되도록 설정](./how-to-force-an-argument-to-be-passed-by-value.md)
 - [위치 및 이름으로 인수 전달](./passing-arguments-by-position-and-by-name.md)
-- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [값 형식과 참조 형식](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)

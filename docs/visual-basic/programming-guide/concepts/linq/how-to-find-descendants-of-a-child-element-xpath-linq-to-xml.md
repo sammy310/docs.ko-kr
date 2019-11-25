@@ -1,15 +1,15 @@
 ---
-title: '방법: 자식 요소의 하위 항목 찾기 (XPath-LINQ to XML) (Visual Basic)'
+title: '방법: 자식 요소의 하위 항목 찾기(XPath 및 LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: a958af40-f754-4409-85f9-7746978d4cb3
-ms.openlocfilehash: e5f92e645a06a93cee95d439fc858d82ebb6b240
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: beb949be521bfde70fbcdbcf18cebf49d7cc5a58
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291677"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344681"
 ---
-# <a name="how-to-find-descendants-of-a-child-element-xpath-linq-to-xml-visual-basic"></a>방법: 자식 요소의 하위 항목 찾기 (XPath-LINQ to XML) (Visual Basic)
+# <a name="how-to-find-descendants-of-a-child-element-xpath-linq-to-xml-visual-basic"></a>How to: Find Descendants of a Child Element (XPath-LINQ to XML) (Visual Basic)
 이 항목에서는 특정 이름을 가진 자식 요소의 하위 요소를 가져오는 방법을 보여 줍니다.  
   
  XPath 식은 다음과 같습니다.  
@@ -71,4 +71,4 @@ This is the start of a sentence.  This is a second sentence.
   
 ## <a name="see-also"></a>참조
 
-- [XPath 사용자에 대 한 LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [LINQ to XML for XPath Users (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

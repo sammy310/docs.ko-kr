@@ -1,35 +1,36 @@
 ---
-title: 속성(Visual Basic)
+title: 데이터 액세스
 ms.date: 07/20/2015
 helpviewer_keywords:
 - properties [Visual Basic]
 ms.assetid: c995caf9-8d0e-4fb8-ae02-e9e6087d7651
-ms.openlocfilehash: b7c0040a45da34d6b7c7123b585b0d6e5463278c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d3801b0bf1e2350326613d4ef447d73501386ccc
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663533"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74335419"
 ---
 # <a name="properties-visual-basic"></a>속성(Visual Basic)
-이 페이지는 Visual Basic 모듈의 멤버는 속성을 나열 합니다. 특정 Visual Basic 개체의 구성원 인 다른 속성은 나열 [개체](../../visual-basic/language-reference/objects/index.md)합니다.  
+
+This page lists the properties that are members of Visual Basic modules. Other properties that are members of specific Visual Basic objects are listed in [Objects](../../visual-basic/language-reference/objects/index.md).  
   
-## <a name="visual-basic-properties"></a>Visual Basic 속성  
+## <a name="visual-basic-properties"></a>Visual Basic Properties  
   
 |||  
 |---|---|  
-|<xref:Microsoft.VisualBasic.DateAndTime.DateString%2A>|설정 하거나 반환을 `String` 시스템의 현재 날짜를 나타내는 값입니다.|  
-|<xref:Microsoft.VisualBasic.DateAndTime.Now%2A>|반환 된 `Date` 시스템에 따라 시간과 현재 날짜를 포함 하는 값입니다.|  
-|<xref:Microsoft.VisualBasic.Globals.ScriptEngine%2A>|반환 된 `String` 에서 현재 사용 중인 런타임을 나타내는입니다.|  
-|<xref:Microsoft.VisualBasic.Globals.ScriptEngineBuildVersion%2A>|반환을 `Integer` 에서 현재 사용 중인 런타임의 빌드 버전 번호를 포함 합니다.|  
-|<xref:Microsoft.VisualBasic.Globals.ScriptEngineMajorVersion%2A>|반환을 `Integer` 에서 현재 사용 중인 런타임의 주 버전 번호를 포함 합니다.|  
-|<xref:Microsoft.VisualBasic.Globals.ScriptEngineMinorVersion%2A>|반환을 `Integer` 에서 현재 사용 중인 런타임의 부 버전 번호를 포함 합니다.|  
-|<xref:Microsoft.VisualBasic.DateAndTime.TimeOfDay%2A>|설정 하거나 반환을 `Date` 시스템의 현재 시간을 포함 하는 값입니다.|  
-|<xref:Microsoft.VisualBasic.DateAndTime.Timer%2A>|반환 된 `Double` 자정 이후 경과 된 시간 (초) 수를 나타내는 값입니다.|  
-|<xref:Microsoft.VisualBasic.DateAndTime.TimeString%2A>|설정 하거나 반환을 `String` 시스템의 현재 시간을 나타내는 값입니다.|  
-|<xref:Microsoft.VisualBasic.DateAndTime.Today%2A>|설정 하거나 반환을 `Date` 시스템의 현재 날짜를 포함 하는 값입니다.|  
+|<xref:Microsoft.VisualBasic.DateAndTime.DateString%2A>|Returns or sets a `String` value representing the current date according to your system.|  
+|<xref:Microsoft.VisualBasic.DateAndTime.Now%2A>|Returns a `Date` value containing the current date and time according to your system.|  
+|<xref:Microsoft.VisualBasic.Globals.ScriptEngine%2A>|Returns a `String` representing the runtime currently in use.|  
+|<xref:Microsoft.VisualBasic.Globals.ScriptEngineBuildVersion%2A>|Returns an `Integer` containing the build version number of the runtime currently in use.|  
+|<xref:Microsoft.VisualBasic.Globals.ScriptEngineMajorVersion%2A>|Returns an `Integer` containing the major version number of the runtime currently in use.|  
+|<xref:Microsoft.VisualBasic.Globals.ScriptEngineMinorVersion%2A>|Returns an `Integer` containing the minor version number of the runtime currently in use.|  
+|<xref:Microsoft.VisualBasic.DateAndTime.TimeOfDay%2A>|Returns or sets a `Date` value containing the current time of day according to your system.|  
+|<xref:Microsoft.VisualBasic.DateAndTime.Timer%2A>|Returns a `Double` value representing the number of seconds elapsed since midnight.|  
+|<xref:Microsoft.VisualBasic.DateAndTime.TimeString%2A>|Returns or sets a `String` value representing the current time of day according to your system.|  
+|<xref:Microsoft.VisualBasic.DateAndTime.Today%2A>|Returns or sets a `Date` value containing the current date according to your system.|  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [Visual Basic 언어 참조](../../visual-basic/language-reference/index.md)
 - [Visual Basic](../../visual-basic/index.md)

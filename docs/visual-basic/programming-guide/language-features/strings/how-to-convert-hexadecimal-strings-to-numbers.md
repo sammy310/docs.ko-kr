@@ -1,5 +1,5 @@
 ---
-title: '방법: 숫자 (Visual Basic)를 16 진수 문자열 변환'
+title: 'How to: Convert Hexadecimal Strings to Numbers'
 ms.date: 01/31/2018
 helpviewer_keywords:
 - numbers [Visual Basic], hexadecimals
@@ -8,33 +8,33 @@ helpviewer_keywords:
 - decimals [Visual Basic], hexadecimals
 - string conversion [Visual Basic], hexadecimal to numbers
 ms.assetid: 76675807-eadb-4c08-bd50-e6c6ff4b8ced
-ms.openlocfilehash: ddb7b39f7a47234c003ca16e1d7ea013e113c108
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f0a97a0c212a64bfa4db4606ee526b666f07877a
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62054044"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347168"
 ---
-# <a name="how-to-convert-hexadecimal-strings-to-numbers-visual-basic"></a>방법: 숫자 (Visual Basic)를 16 진수 문자열 변환
+# <a name="how-to-convert-hexadecimal-strings-to-numbers-visual-basic"></a>방법: 16진수 문자열을 숫자로 변환(Visual Basic)
 
-사용 하는 정수를 16 진수 문자열로 변환 하는이 예제는 <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType> 메서드.
+This example converts a hexadecimal string to an integer using the <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType> method.
 
-## <a name="to-convert-a-hexadecimal-string-to-a-number"></a>16 진수 문자열을 숫자로 변환 하려면
+## <a name="to-convert-a-hexadecimal-string-to-a-number"></a>To convert a hexadecimal string to a number
 
-- 사용 된 <xref:System.Convert.ToInt32(System.String,System.Int32)> 정수를 16 진수로 표시 된 숫자를 변환 하는 방법입니다.
+- Use the <xref:System.Convert.ToInt32(System.String,System.Int32)> method to convert the number expressed in base-16 to an integer.
 
-  첫 번째 인수는 <xref:System.Convert.ToInt32(System.String,System.Int32)> 메서드는 변환할 문자열입니다. 두 번째 인수는 숫자에서 기 수를 나타냅니다. 16 진수는 16입니다.
+  The first argument of the <xref:System.Convert.ToInt32(System.String,System.Int32)> method is the string to convert. The second argument describes what base the number is expressed in; hexadecimal is base 16.
 
   [!code-vb[VbVbalrStrings#62](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#62)]
 
-- 16 진수 문자열 제한이 다음 note:
+- Note that the hexadecimal string has the following restrictions:
 
-  - 포함할 수 없습니다는 `&h` 접두사입니다.
-  - 포함할 수 없습니다는 `_` 숫자 구분 기호입니다.
+  - It cannot include the `&h` prefix.
+  - It cannot include the `_` digit separator.
 
-  접두사 또는 숫자 구분 기호 있는 경우에 대 한 호출을 <xref:System.Convert.ToInt32(System.String,System.Int32)> 메서드가 throw를 <xref:System.FormatException>입니다.
+  If the prefix or a digit separator is present, the call to the <xref:System.Convert.ToInt32(System.String,System.Int32)> method throws a <xref:System.FormatException>.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:Microsoft.VisualBasic.Conversion.Hex%2A>
 - <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType>
