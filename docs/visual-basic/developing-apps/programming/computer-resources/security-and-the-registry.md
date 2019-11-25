@@ -1,44 +1,47 @@
 ---
-title: 보안 및 레지스트리(Visual Basic)
+title: 보안 및 레지스트리
 ms.date: 07/20/2015
 helpviewer_keywords:
 - security [Visual Basic], registry
 - registry [Visual Basic], security issues
 ms.assetid: 9980aff7-2f69-492b-8f66-29a9a76d3df5
-ms.openlocfilehash: 2fdb8003365841a4eef298eb853765dd3bc4587d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 454180207d6432e80d87941d1f329f2a4ea7a801
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916525"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345476"
 ---
-# <a name="security-and-the-registry-visual-basic"></a><span data-ttu-id="536ec-102">보안 및 레지스트리(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="536ec-102">Security and the Registry (Visual Basic)</span></span>
-<span data-ttu-id="536ec-103">이 페이지에서는 레지스트리에 데이터를 저장할 경우 보안에 미치는 영향을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="536ec-103">This page discusses the security implications of storing data in the registry.</span></span>  
+# <a name="security-and-the-registry-visual-basic"></a><span data-ttu-id="f2a5a-102">보안 및 레지스트리(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f2a5a-102">Security and the Registry (Visual Basic)</span></span>
+
+<span data-ttu-id="f2a5a-103">이 페이지에서는 레지스트리에 데이터를 저장할 경우 보안에 미치는 영향을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="f2a5a-103">This page discusses the security implications of storing data in the registry.</span></span>  
   
-## <a name="permissions"></a><span data-ttu-id="536ec-104">사용 권한</span><span class="sxs-lookup"><span data-stu-id="536ec-104">Permissions</span></span>  
- <span data-ttu-id="536ec-105">레지스트리 키가 ACL(액세스 제어 목록)로 보호된 경우에도 비밀(예: 암호)을 레지스트리에 일반 텍스트로 저장하는 것은 안전하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="536ec-105">It is not secure to store secrets, such as passwords, in the registry as plain text, even if the registry key is protected by ACLs (access control lists).</span></span>  
+## <a name="permissions"></a><span data-ttu-id="f2a5a-104">사용 권한</span><span class="sxs-lookup"><span data-stu-id="f2a5a-104">Permissions</span></span>  
+
+ <span data-ttu-id="f2a5a-105">레지스트리 키가 ACL(액세스 제어 목록)로 보호된 경우에도 비밀(예: 암호)을 레지스트리에 일반 텍스트로 저장하는 것은 안전하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="f2a5a-105">It is not secure to store secrets, such as passwords, in the registry as plain text, even if the registry key is protected by ACLs (access control lists).</span></span>  
   
- <span data-ttu-id="536ec-106">레지스트리로 작업하면 시스템 리소스나 보호된 정보에 부적절하게 액세스하여 보안이 손상될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="536ec-106">Working with the registry may compromise security by allowing inappropriate access to system resources or protected information.</span></span> <span data-ttu-id="536ec-107">이러한 속성을 사용하려면 레지스트리 변수에 대한 액세스를 제어하는 <xref:System.Security.Permissions.RegistryPermissionAccess> 열거형의 읽기 및 쓰기 권한이 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="536ec-107">To use these properties, you must have read and write permissions from the <xref:System.Security.Permissions.RegistryPermissionAccess> enumeration, which controls access to registry variables.</span></span> <span data-ttu-id="536ec-108">완전 신뢰로 실행되는 코드(기본 보안 정책에서 사용자의 로컬 하드 디스크에 설치된 모든 코드)에는 레지스트리에 액세스하는 데 필요한 권한이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="536ec-108">Any code running with full trust (under the default security policy, this is any code installed on the user's local hard disk) has the necessary permissions to access the registry.</span></span> <span data-ttu-id="536ec-109">자세한 내용은 <xref:System.Security.Permissions.RegistryPermission> 클래스를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="536ec-109">For more information, see <xref:System.Security.Permissions.RegistryPermission> class.</span></span>  
+ <span data-ttu-id="f2a5a-106">레지스트리로 작업하면 시스템 리소스나 보호된 정보에 부적절하게 액세스하여 보안이 손상될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f2a5a-106">Working with the registry may compromise security by allowing inappropriate access to system resources or protected information.</span></span> <span data-ttu-id="f2a5a-107">이러한 속성을 사용하려면 레지스트리 변수에 대한 액세스를 제어하는 <xref:System.Security.Permissions.RegistryPermissionAccess> 열거형의 읽기 및 쓰기 권한이 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="f2a5a-107">To use these properties, you must have read and write permissions from the <xref:System.Security.Permissions.RegistryPermissionAccess> enumeration, which controls access to registry variables.</span></span> <span data-ttu-id="f2a5a-108">완전 신뢰로 실행되는 코드(기본 보안 정책에서 사용자의 로컬 하드 디스크에 설치된 모든 코드)에는 레지스트리에 액세스하는 데 필요한 권한이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f2a5a-108">Any code running with full trust (under the default security policy, this is any code installed on the user's local hard disk) has the necessary permissions to access the registry.</span></span> <span data-ttu-id="f2a5a-109">자세한 내용은 <xref:System.Security.Permissions.RegistryPermission> 클래스를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="f2a5a-109">For more information, see <xref:System.Security.Permissions.RegistryPermission> class.</span></span>  
   
- <span data-ttu-id="536ec-110"><xref:System.Security.Permissions.RegistryPermission> 없이 코드에서 액세스할 수 있는 메모리 위치에 레지스트리 변수를 저장하면 안 됩니다.</span><span class="sxs-lookup"><span data-stu-id="536ec-110">Registry variables should not be stored in memory locations where code without <xref:System.Security.Permissions.RegistryPermission> can access them.</span></span> <span data-ttu-id="536ec-111">마찬가지로, 사용 권한을 부여하는 경우 작업을 완료하는 데 필요한 최소 권한을 부여합니다.</span><span class="sxs-lookup"><span data-stu-id="536ec-111">Similarly, when granting permissions, grant the minimum privileges necessary to get the job done.</span></span>  
+ <span data-ttu-id="f2a5a-110"><xref:System.Security.Permissions.RegistryPermission> 없이 코드에서 액세스할 수 있는 메모리 위치에 레지스트리 변수를 저장하면 안 됩니다.</span><span class="sxs-lookup"><span data-stu-id="f2a5a-110">Registry variables should not be stored in memory locations where code without <xref:System.Security.Permissions.RegistryPermission> can access them.</span></span> <span data-ttu-id="f2a5a-111">마찬가지로, 사용 권한을 부여하는 경우 작업을 완료하는 데 필요한 최소 권한을 부여합니다.</span><span class="sxs-lookup"><span data-stu-id="f2a5a-111">Similarly, when granting permissions, grant the minimum privileges necessary to get the job done.</span></span>  
   
- <span data-ttu-id="536ec-112">레지스트리 권한 액세스 값은 <xref:System.Security.Permissions.RegistryPermissionAccess> 열거형에 의해 정의됩니다.</span><span class="sxs-lookup"><span data-stu-id="536ec-112">Registry permission access values are defined by the <xref:System.Security.Permissions.RegistryPermissionAccess> enumeration.</span></span> <span data-ttu-id="536ec-113">다음 표에서는 해당 멤버를 자세히 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="536ec-113">The following table details its members.</span></span>  
+ <span data-ttu-id="f2a5a-112">레지스트리 권한 액세스 값은 <xref:System.Security.Permissions.RegistryPermissionAccess> 열거형에 의해 정의됩니다.</span><span class="sxs-lookup"><span data-stu-id="f2a5a-112">Registry permission access values are defined by the <xref:System.Security.Permissions.RegistryPermissionAccess> enumeration.</span></span> <span data-ttu-id="f2a5a-113">다음 표에서는 해당 멤버를 자세히 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="f2a5a-113">The following table details its members.</span></span>  
   
-|<span data-ttu-id="536ec-114">값</span><span class="sxs-lookup"><span data-stu-id="536ec-114">Value</span></span>|<span data-ttu-id="536ec-115">레지스트리 변수에 대한 액세스 권한</span><span class="sxs-lookup"><span data-stu-id="536ec-115">Access to Registry Variables</span></span>|  
+|<span data-ttu-id="f2a5a-114">값</span><span class="sxs-lookup"><span data-stu-id="f2a5a-114">Value</span></span>|<span data-ttu-id="f2a5a-115">레지스트리 변수에 대한 액세스 권한</span><span class="sxs-lookup"><span data-stu-id="f2a5a-115">Access to Registry Variables</span></span>|  
 |-----------|----------------------------------|  
-|`AllAccess`|<span data-ttu-id="536ec-116">만들기, 읽기, 쓰기</span><span class="sxs-lookup"><span data-stu-id="536ec-116">Create, read, and write</span></span>|  
-|`Create`|<span data-ttu-id="536ec-117">만들기</span><span class="sxs-lookup"><span data-stu-id="536ec-117">Create</span></span>|  
-|`NoAccess`|<span data-ttu-id="536ec-118">액세스 권한 없음</span><span class="sxs-lookup"><span data-stu-id="536ec-118">No access</span></span>|  
-|`Read`|<span data-ttu-id="536ec-119">읽기</span><span class="sxs-lookup"><span data-stu-id="536ec-119">Read</span></span>|  
-|`Write`|<span data-ttu-id="536ec-120">Write</span><span class="sxs-lookup"><span data-stu-id="536ec-120">Write</span></span>|  
+|`AllAccess`|<span data-ttu-id="f2a5a-116">만들기, 읽기, 쓰기</span><span class="sxs-lookup"><span data-stu-id="f2a5a-116">Create, read, and write</span></span>|  
+|`Create`|<span data-ttu-id="f2a5a-117">만들기</span><span class="sxs-lookup"><span data-stu-id="f2a5a-117">Create</span></span>|  
+|`NoAccess`|<span data-ttu-id="f2a5a-118">액세스 권한 없음</span><span class="sxs-lookup"><span data-stu-id="f2a5a-118">No access</span></span>|  
+|`Read`|<span data-ttu-id="f2a5a-119">Read</span><span class="sxs-lookup"><span data-stu-id="f2a5a-119">Read</span></span>|  
+|`Write`|<span data-ttu-id="f2a5a-120">Write</span><span class="sxs-lookup"><span data-stu-id="f2a5a-120">Write</span></span>|  
   
-## <a name="checking-values-in-registry-keys"></a><span data-ttu-id="536ec-121">레지스트리 키의 값 검사</span><span class="sxs-lookup"><span data-stu-id="536ec-121">Checking Values in Registry Keys</span></span>  
- <span data-ttu-id="536ec-122">레지스트리 값을 만들 때 해당 값이 이미 있는 경우 수행할 작업을 결정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="536ec-122">When you create a registry value, you need to decide what to do if that value already exists.</span></span> <span data-ttu-id="536ec-123">다른 악성 프로세스에서 값을 이미 만들고 액세스했을 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="536ec-123">Another process, perhaps a malicious one, may have already created the value and have access to it.</span></span> <span data-ttu-id="536ec-124">레지스트리 값에 데이터를 넣으면 다른 프로세스에서 해당 데이터를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="536ec-124">When you put data in the registry value, the data is available to the other process.</span></span> <span data-ttu-id="536ec-125">이를 방지하려면 `GetValue` 메서드를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="536ec-125">To prevent this, use the `GetValue` method.</span></span> <span data-ttu-id="536ec-126">키가 아직 없는 경우 `Nothing`이 반환됩니다.</span><span class="sxs-lookup"><span data-stu-id="536ec-126">It returns `Nothing` if the key does not already exist.</span></span>  
+## <a name="checking-values-in-registry-keys"></a><span data-ttu-id="f2a5a-121">레지스트리 키의 값 검사</span><span class="sxs-lookup"><span data-stu-id="f2a5a-121">Checking Values in Registry Keys</span></span>  
+
+ <span data-ttu-id="f2a5a-122">레지스트리 값을 만들 때 해당 값이 이미 있는 경우 수행할 작업을 결정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="f2a5a-122">When you create a registry value, you need to decide what to do if that value already exists.</span></span> <span data-ttu-id="f2a5a-123">다른 악성 프로세스에서 값을 이미 만들고 액세스했을 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f2a5a-123">Another process, perhaps a malicious one, may have already created the value and have access to it.</span></span> <span data-ttu-id="f2a5a-124">레지스트리 값에 데이터를 넣으면 다른 프로세스에서 해당 데이터를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f2a5a-124">When you put data in the registry value, the data is available to the other process.</span></span> <span data-ttu-id="f2a5a-125">이를 방지하려면 `GetValue` 메서드를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="f2a5a-125">To prevent this, use the `GetValue` method.</span></span> <span data-ttu-id="f2a5a-126">키가 아직 없는 경우 `Nothing`이 반환됩니다.</span><span class="sxs-lookup"><span data-stu-id="f2a5a-126">It returns `Nothing` if the key does not already exist.</span></span>  
   
 > [!IMPORTANT]
-> <span data-ttu-id="536ec-127">웹 애플리케이션에서 레지스트리를 읽는 경우 현재 사용자의 ID는 웹 애플리케이션에 구현된 인증 및 가장에 따라 결정됩니다.</span><span class="sxs-lookup"><span data-stu-id="536ec-127">When reading the registry from a Web application, the identity of current user depends on the authentication and impersonation implemented in the Web application.</span></span>  
+> <span data-ttu-id="f2a5a-127">웹 애플리케이션에서 레지스트리를 읽는 경우 현재 사용자의 ID는 웹 애플리케이션에 구현된 인증 및 가장에 따라 결정됩니다.</span><span class="sxs-lookup"><span data-stu-id="f2a5a-127">When reading the registry from a Web application, the identity of current user depends on the authentication and impersonation implemented in the Web application.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="536ec-128">참고 항목</span><span class="sxs-lookup"><span data-stu-id="536ec-128">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f2a5a-128">참고 항목</span><span class="sxs-lookup"><span data-stu-id="f2a5a-128">See also</span></span>
 
 - <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>
-- [<span data-ttu-id="536ec-129">레지스트리 읽기 및 쓰기</span><span class="sxs-lookup"><span data-stu-id="536ec-129">Reading from and Writing to the Registry</span></span>](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)
+- [<span data-ttu-id="f2a5a-129">레지스트리 읽기 및 쓰기</span><span class="sxs-lookup"><span data-stu-id="f2a5a-129">Reading from and Writing to the Registry</span></span>](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)

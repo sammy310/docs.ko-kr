@@ -2,22 +2,22 @@
 title: DataContract 서로게이트
 ms.date: 03/30/2017
 ms.assetid: b0188f3c-00a9-4cf0-a887-a2284c8fb014
-ms.openlocfilehash: 32ac0b82a637e2fb1a62b81555648942d31c30de
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: f08226d3d871caea2dea3eeaf1cd411557853e45
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928598"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976724"
 ---
-# <a name="datacontract-surrogate"></a><span data-ttu-id="04572-102">DataContract 서로게이트</span><span class="sxs-lookup"><span data-stu-id="04572-102">DataContract Surrogate</span></span>
-<span data-ttu-id="04572-103">이 샘플에서는 데이터 계약 서로게이트 클래스를 사용하여 serialization, deserialization, 스키마 내보내기 및 스키마 가져오기와 같은 프로세스를 사용자 지정할 수 있는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="04572-103">This sample demonstrates how processes like serialization, deserialization, schema export, and schema import can be customized using a data contract surrogate class.</span></span> <span data-ttu-id="04572-104">이 샘플에서는 클라이언트 및 서버 시나리오에서 데이터를 serialize 하 고 Windows Communication Foundation (WCF) 클라이언트와 서비스 간에 전송 하는 서로게이트를 사용 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="04572-104">This sample shows how to use a surrogate in a client and server scenario where data is serialized and transmitted between a Windows Communication Foundation (WCF) client and service.</span></span>  
+# <a name="datacontract-surrogate"></a><span data-ttu-id="4c1b9-102">DataContract 서로게이트</span><span class="sxs-lookup"><span data-stu-id="4c1b9-102">DataContract Surrogate</span></span>
+<span data-ttu-id="4c1b9-103">이 샘플에서는 데이터 계약 서로게이트 클래스를 사용하여 serialization, deserialization, 스키마 내보내기 및 스키마 가져오기와 같은 프로세스를 사용자 지정할 수 있는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="4c1b9-103">This sample demonstrates how processes like serialization, deserialization, schema export, and schema import can be customized using a data contract surrogate class.</span></span> <span data-ttu-id="4c1b9-104">이 샘플에서는 클라이언트 및 서버 시나리오에서 데이터를 serialize 하 고 Windows Communication Foundation (WCF) 클라이언트와 서비스 간에 전송 하는 서로게이트를 사용 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="4c1b9-104">This sample shows how to use a surrogate in a client and server scenario where data is serialized and transmitted between a Windows Communication Foundation (WCF) client and service.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="04572-105">이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.</span><span class="sxs-lookup"><span data-stu-id="04572-105">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
+> <span data-ttu-id="4c1b9-105">이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4c1b9-105">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- <span data-ttu-id="04572-106">이 샘플에는 다음 서비스 계약이 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="04572-106">The sample uses the following service contract:</span></span>  
+ <span data-ttu-id="4c1b9-106">이 샘플에는 다음 서비스 계약이 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="4c1b9-106">The sample uses the following service contract:</span></span>  
   
-```csharp  
+```csharp
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]  
 [AllowNonSerializableTypes]  
 public interface IPersonnelDataService  
@@ -30,11 +30,11 @@ public interface IPersonnelDataService
 }  
 ```  
   
- <span data-ttu-id="04572-107">`AddEmployee` 작업을 통해 사용자는 새 직원에 대한 데이터를 추가할 수 있으며 `GetEmployee` 작업은 이름을 기준으로 한 직원 검색을 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="04572-107">The `AddEmployee` operation allows users to add data about new employees and the `GetEmployee` operation supports search for employees based on name.</span></span>  
+ <span data-ttu-id="4c1b9-107">`AddEmployee` 작업을 통해 사용자는 새 직원에 대한 데이터를 추가할 수 있으며 `GetEmployee` 작업은 이름을 기준으로 한 직원 검색을 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="4c1b9-107">The `AddEmployee` operation allows users to add data about new employees and the `GetEmployee` operation supports search for employees based on name.</span></span>  
   
- <span data-ttu-id="04572-108">이러한 작업에는 다음 데이터 형식이 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="04572-108">These operations use the following data type:</span></span>  
+ <span data-ttu-id="4c1b9-108">이러한 작업에는 다음 데이터 형식이 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="4c1b9-108">These operations use the following data type:</span></span>  
   
-```csharp  
+```csharp
 [DataContract(Namespace = "http://Microsoft.ServiceModel.Samples")]  
 class Employee  
 {  
@@ -49,9 +49,9 @@ class Employee
 }  
 ```  
   
- <span data-ttu-id="04572-109">`Employee` 형식에서는 다음 샘플 코드의 `Person` 클래스가 유효한 데이터 계약 클래스가 아니므로 <xref:System.Runtime.Serialization.DataContractSerializer>에 의해 serialize될 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="04572-109">In the `Employee` type, the `Person` class (shown in the following sample code) cannot be serialized by the <xref:System.Runtime.Serialization.DataContractSerializer> because it is not a valid data contract class.</span></span>  
+ <span data-ttu-id="4c1b9-109">`Employee` 형식에서는 다음 샘플 코드의 `Person` 클래스가 유효한 데이터 계약 클래스가 아니므로 <xref:System.Runtime.Serialization.DataContractSerializer>에 의해 serialize될 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="4c1b9-109">In the `Employee` type, the `Person` class (shown in the following sample code) cannot be serialized by the <xref:System.Runtime.Serialization.DataContractSerializer> because it is not a valid data contract class.</span></span>  
   
-```csharp  
+```csharp
 public class Person  
 {  
     public string firstName;  
@@ -64,13 +64,13 @@ public class Person
 }  
 ```  
   
- <span data-ttu-id="04572-110"><xref:System.Runtime.Serialization.DataContractAttribute> 특성을 `Person` 클래스에 적용할 수 있지만 항상 가능한 것은 아닙니다.</span><span class="sxs-lookup"><span data-stu-id="04572-110">You can apply the <xref:System.Runtime.Serialization.DataContractAttribute> attribute to the `Person` class, but this is not always possible.</span></span> <span data-ttu-id="04572-111">예를 들어, `Person` 클래스는 제어할 수 없는 별개의 어셈블리에 정의할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="04572-111">For example, the `Person` class can be defined in a separate assembly over which you have no control.</span></span>  
+ <span data-ttu-id="4c1b9-110"><xref:System.Runtime.Serialization.DataContractAttribute> 특성을 `Person` 클래스에 적용할 수 있지만 항상 가능한 것은 아닙니다.</span><span class="sxs-lookup"><span data-stu-id="4c1b9-110">You can apply the <xref:System.Runtime.Serialization.DataContractAttribute> attribute to the `Person` class, but this is not always possible.</span></span> <span data-ttu-id="4c1b9-111">예를 들어, `Person` 클래스는 제어할 수 없는 별개의 어셈블리에 정의할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4c1b9-111">For example, the `Person` class can be defined in a separate assembly over which you have no control.</span></span>  
   
- <span data-ttu-id="04572-112">이 제한 사항이 있을 경우 `Person` 클래스를 serialize하는 한 가지 방법은 <xref:System.Runtime.Serialization.DataContractAttribute>로 표시된 다른 클래스로 대체하고 필요한 데이터를 새 클래스에 복사하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="04572-112">Given this restriction, one way to serialize the `Person` class is to substitute it with another class that is marked with <xref:System.Runtime.Serialization.DataContractAttribute> and copy over necessary data to the new class.</span></span> <span data-ttu-id="04572-113">이렇게 하는 것은 `Person` 클래스를 <xref:System.Runtime.Serialization.DataContractSerializer>에 대해 DataContract로 표시하기 위해서입니다.</span><span class="sxs-lookup"><span data-stu-id="04572-113">The objective is to make the `Person` class appear as a DataContract to the <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span> <span data-ttu-id="04572-114">이것은 데이터 계약 클래스가 아닌 클래스를 serialize하는 한 방법이라는 것에 주의하십시오.</span><span class="sxs-lookup"><span data-stu-id="04572-114">Note that this is one way to serialize non-data contract classes.</span></span>  
+ <span data-ttu-id="4c1b9-112">이 제한 사항이 있을 경우 `Person` 클래스를 serialize하는 한 가지 방법은 <xref:System.Runtime.Serialization.DataContractAttribute>로 표시된 다른 클래스로 대체하고 필요한 데이터를 새 클래스에 복사하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="4c1b9-112">Given this restriction, one way to serialize the `Person` class is to substitute it with another class that is marked with <xref:System.Runtime.Serialization.DataContractAttribute> and copy over necessary data to the new class.</span></span> <span data-ttu-id="4c1b9-113">이렇게 하는 것은 `Person` 클래스를 <xref:System.Runtime.Serialization.DataContractSerializer>에 대해 DataContract로 표시하기 위해서입니다.</span><span class="sxs-lookup"><span data-stu-id="4c1b9-113">The objective is to make the `Person` class appear as a DataContract to the <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span> <span data-ttu-id="4c1b9-114">이것은 데이터 계약 클래스가 아닌 클래스를 serialize하는 한 방법이라는 것에 주의하십시오.</span><span class="sxs-lookup"><span data-stu-id="4c1b9-114">Note that this is one way to serialize non-data contract classes.</span></span>  
   
- <span data-ttu-id="04572-115">이 샘플에서는 `Person` 클래스를 `PersonSurrogated`라는 다른 클래스로 논리적으로 대체합니다.</span><span class="sxs-lookup"><span data-stu-id="04572-115">The sample logically replaces the `Person` class with a different class named `PersonSurrogated`.</span></span>  
+ <span data-ttu-id="4c1b9-115">이 샘플에서는 `Person` 클래스를 `PersonSurrogated`라는 다른 클래스로 논리적으로 대체합니다.</span><span class="sxs-lookup"><span data-stu-id="4c1b9-115">The sample logically replaces the `Person` class with a different class named `PersonSurrogated`.</span></span>  
   
-```csharp  
+```csharp
 [DataContract(Name="Person", Namespace = "http://Microsoft.ServiceModel.Samples")]  
 public class PersonSurrogated  
 {  
@@ -85,11 +85,11 @@ public class PersonSurrogated
 }  
 ```  
   
- <span data-ttu-id="04572-116">데이터 계약 서로게이트는 이 대체를 수행하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="04572-116">The data contract surrogate is used to achieve this replacement.</span></span> <span data-ttu-id="04572-117">데이터 계약 서로게이트는 <xref:System.Runtime.Serialization.IDataContractSurrogate>를 구현하는 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="04572-117">A data contract surrogate is a class that implements <xref:System.Runtime.Serialization.IDataContractSurrogate>.</span></span> <span data-ttu-id="04572-118">이 샘플에서는 `AllowNonSerializableTypesSurrogate` 클래스가 이 인터페이스를 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="04572-118">In this sample, the `AllowNonSerializableTypesSurrogate` class implements this interface.</span></span>  
+ <span data-ttu-id="4c1b9-116">데이터 계약 서로게이트는 이 대체를 수행하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="4c1b9-116">The data contract surrogate is used to achieve this replacement.</span></span> <span data-ttu-id="4c1b9-117">데이터 계약 서로게이트는 <xref:System.Runtime.Serialization.IDataContractSurrogate>를 구현하는 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="4c1b9-117">A data contract surrogate is a class that implements <xref:System.Runtime.Serialization.IDataContractSurrogate>.</span></span> <span data-ttu-id="4c1b9-118">이 샘플에서는 `AllowNonSerializableTypesSurrogate` 클래스가 이 인터페이스를 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="4c1b9-118">In this sample, the `AllowNonSerializableTypesSurrogate` class implements this interface.</span></span>  
   
- <span data-ttu-id="04572-119">인터페이스 구현에서 첫 번째 작업은 `Person`에서 `PersonSurrogated`로의 형식 매핑을 설정하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="04572-119">In the interface implementation, the first task is to establish a type mapping from `Person` to `PersonSurrogated`.</span></span> <span data-ttu-id="04572-120">이 매핑은 serialization이 발생할 때 뿐만 아니라 스키마 내보내기를 수행할 때 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="04572-120">This is used both at serialization time as well as at schema export time.</span></span> <span data-ttu-id="04572-121">이 매핑은 <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDataContractType%28System.Type%29> 메서드를 구현하여 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="04572-121">This mapping is achieved by implementing the <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDataContractType%28System.Type%29> method.</span></span>  
+ <span data-ttu-id="4c1b9-119">인터페이스 구현에서 첫 번째 작업은 `Person`에서 `PersonSurrogated`로의 형식 매핑을 설정하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="4c1b9-119">In the interface implementation, the first task is to establish a type mapping from `Person` to `PersonSurrogated`.</span></span> <span data-ttu-id="4c1b9-120">이 매핑은 serialization이 발생할 때 뿐만 아니라 스키마 내보내기를 수행할 때 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="4c1b9-120">This is used both at serialization time as well as at schema export time.</span></span> <span data-ttu-id="4c1b9-121">이 매핑은 <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDataContractType%28System.Type%29> 메서드를 구현하여 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4c1b9-121">This mapping is achieved by implementing the <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDataContractType%28System.Type%29> method.</span></span>  
   
-```csharp  
+```csharp
 public Type GetDataContractType(Type type)  
 {  
     if (typeof(Person).IsAssignableFrom(type))  
@@ -100,9 +100,9 @@ public Type GetDataContractType(Type type)
 }  
 ```  
   
- <span data-ttu-id="04572-122">다음 샘플 코드와 같이 <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%28System.Object%2CSystem.Type%29> 메서드는 serialization 도중에 `Person` 인스턴스를 `PersonSurrogated` 인스턴스에 매핑합니다.</span><span class="sxs-lookup"><span data-stu-id="04572-122">The <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%28System.Object%2CSystem.Type%29> method maps a `Person` instance to a `PersonSurrogated` instance during serialization, as shown in the following sample code.</span></span>  
+ <span data-ttu-id="4c1b9-122">다음 샘플 코드와 같이 <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%28System.Object%2CSystem.Type%29> 메서드는 serialization 도중에 `Person` 인스턴스를 `PersonSurrogated` 인스턴스에 매핑합니다.</span><span class="sxs-lookup"><span data-stu-id="4c1b9-122">The <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%28System.Object%2CSystem.Type%29> method maps a `Person` instance to a `PersonSurrogated` instance during serialization, as shown in the following sample code.</span></span>  
   
-```csharp  
+```csharp
 public object GetObjectToSerialize(object obj, Type targetType)  
 {  
     if (obj is Person)  
@@ -118,9 +118,9 @@ public object GetObjectToSerialize(object obj, Type targetType)
 }  
 ```  
   
- <span data-ttu-id="04572-123">다음 샘플 코드와 같이 <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDeserializedObject%28System.Object%2CSystem.Type%29> 메서드는 deserialization을 위한 역방향 매핑을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="04572-123">The <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDeserializedObject%28System.Object%2CSystem.Type%29> method provides the reverse mapping for deserialization, as shown in the following sample code.</span></span>  
+ <span data-ttu-id="4c1b9-123">다음 샘플 코드와 같이 <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDeserializedObject%28System.Object%2CSystem.Type%29> 메서드는 deserialization을 위한 역방향 매핑을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="4c1b9-123">The <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDeserializedObject%28System.Object%2CSystem.Type%29> method provides the reverse mapping for deserialization, as shown in the following sample code.</span></span>  
   
-```csharp  
+```csharp
 public object GetDeserializedObject(object obj,   
 Type targetType)  
 {  
@@ -137,9 +137,9 @@ Type targetType)
 }  
 ```  
   
- <span data-ttu-id="04572-124">스키마 가져오기 도중에 `PersonSurrogated` 데이터 계약을 기존 `Person` 클래스에 매핑하기 위해 이 샘플에서는 다음 샘플 코드와 같이 <xref:System.Runtime.Serialization.IDataContractSurrogate.GetReferencedTypeOnImport%28System.String%2CSystem.String%2CSystem.Object%29> 메서드를 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="04572-124">To map the `PersonSurrogated` data contract to the existing `Person` class during schema import, the sample implements the <xref:System.Runtime.Serialization.IDataContractSurrogate.GetReferencedTypeOnImport%28System.String%2CSystem.String%2CSystem.Object%29> method, as shown in the following sample code.</span></span>  
+ <span data-ttu-id="4c1b9-124">스키마 가져오기 도중에 `PersonSurrogated` 데이터 계약을 기존 `Person` 클래스에 매핑하기 위해 이 샘플에서는 다음 샘플 코드와 같이 <xref:System.Runtime.Serialization.IDataContractSurrogate.GetReferencedTypeOnImport%28System.String%2CSystem.String%2CSystem.Object%29> 메서드를 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="4c1b9-124">To map the `PersonSurrogated` data contract to the existing `Person` class during schema import, the sample implements the <xref:System.Runtime.Serialization.IDataContractSurrogate.GetReferencedTypeOnImport%28System.String%2CSystem.String%2CSystem.Object%29> method, as shown in the following sample code.</span></span>  
   
-```csharp  
+```csharp
 public Type GetReferencedTypeOnImport(string typeName,   
                string typeNamespace, object customData)  
 {  
@@ -156,9 +156,9 @@ typeNamespace.Equals("http://schemas.datacontract.org/2004/07/DCSurrogateSample"
 }  
 ```  
   
- <span data-ttu-id="04572-125">다음 샘플 코드에서는 <xref:System.Runtime.Serialization.IDataContractSurrogate> 인터페이스의 구현을 완료합니다.</span><span class="sxs-lookup"><span data-stu-id="04572-125">The following sample code completes the implementation of the <xref:System.Runtime.Serialization.IDataContractSurrogate> interface.</span></span>  
+ <span data-ttu-id="4c1b9-125">다음 샘플 코드에서는 <xref:System.Runtime.Serialization.IDataContractSurrogate> 인터페이스의 구현을 완료합니다.</span><span class="sxs-lookup"><span data-stu-id="4c1b9-125">The following sample code completes the implementation of the <xref:System.Runtime.Serialization.IDataContractSurrogate> interface.</span></span>  
   
-```csharp  
+```csharp
 public System.CodeDom.CodeTypeDeclaration ProcessImportedType(  
           System.CodeDom.CodeTypeDeclaration typeDeclaration,   
           System.CodeDom.CodeCompileUnit compileUnit)  
@@ -184,13 +184,13 @@ public void GetKnownCustomDataTypes(
 }  
 ```  
   
- <span data-ttu-id="04572-126">이 샘플에서는 `AllowNonSerializableTypesAttribute`라는 특성에 의해 ServiceModel에서 서로게이트가 사용하도록 설정됩니다.</span><span class="sxs-lookup"><span data-stu-id="04572-126">In this sample, the surrogate is enabled in ServiceModel by an attribute called `AllowNonSerializableTypesAttribute`.</span></span> <span data-ttu-id="04572-127">개발자는 위의 `IPersonnelDataService` 서비스 계약과 같이 해당 서비스 계약에서 이 특성을 적용해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="04572-127">Developers would need to apply this attribute on their service contract as shown on the `IPersonnelDataService` service contract above.</span></span> <span data-ttu-id="04572-128">이 특성은 `IContractBehavior`를 구현하고 해당 `ApplyClientBehavior` 및 `ApplyDispatchBehavior` 메서드의 작업에서 서로게이트를 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="04572-128">This attribute implements `IContractBehavior` and sets up the surrogate on operations in its `ApplyClientBehavior` and `ApplyDispatchBehavior` methods.</span></span>  
+ <span data-ttu-id="4c1b9-126">이 샘플에서는 `AllowNonSerializableTypesAttribute`라는 특성에 의해 ServiceModel에서 서로게이트가 사용하도록 설정됩니다.</span><span class="sxs-lookup"><span data-stu-id="4c1b9-126">In this sample, the surrogate is enabled in ServiceModel by an attribute called `AllowNonSerializableTypesAttribute`.</span></span> <span data-ttu-id="4c1b9-127">개발자는 위의 `IPersonnelDataService` 서비스 계약과 같이 해당 서비스 계약에서 이 특성을 적용해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="4c1b9-127">Developers would need to apply this attribute on their service contract as shown on the `IPersonnelDataService` service contract above.</span></span> <span data-ttu-id="4c1b9-128">이 특성은 `IContractBehavior`를 구현하고 해당 `ApplyClientBehavior` 및 `ApplyDispatchBehavior` 메서드의 작업에서 서로게이트를 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="4c1b9-128">This attribute implements `IContractBehavior` and sets up the surrogate on operations in its `ApplyClientBehavior` and `ApplyDispatchBehavior` methods.</span></span>  
   
- <span data-ttu-id="04572-129">이 경우에 이 특성이 필요하지 않지만 이 샘플에서는 이해를 돕기 위해 사용되었습니다.</span><span class="sxs-lookup"><span data-stu-id="04572-129">The attribute is not necessary in this case - it is used for demonstration purposes in this sample.</span></span> <span data-ttu-id="04572-130">사용자는 코드나 구성을 사용해 비슷한 `IContractBehavior``IEndpointBehavior` 또는 `IOperationBehavior`를 추가하여 수동으로 서로게이트를 사용하도록 설정할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="04572-130">Users can alternatively enable a surrogate by manually adding a similar `IContractBehavior`, `IEndpointBehavior` or `IOperationBehavior` using code or using configuration.</span></span>  
+ <span data-ttu-id="4c1b9-129">이 경우에 이 특성이 필요하지 않지만 이 샘플에서는 이해를 돕기 위해 사용되었습니다.</span><span class="sxs-lookup"><span data-stu-id="4c1b9-129">The attribute is not necessary in this case - it is used for demonstration purposes in this sample.</span></span> <span data-ttu-id="4c1b9-130">사용자는 코드나 구성을 사용해 비슷한 `IContractBehavior``IEndpointBehavior` 또는 `IOperationBehavior`를 추가하여 수동으로 서로게이트를 사용하도록 설정할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4c1b9-130">Users can alternatively enable a surrogate by manually adding a similar `IContractBehavior`, `IEndpointBehavior` or `IOperationBehavior` using code or using configuration.</span></span>  
   
- <span data-ttu-id="04572-131">`IContractBehavior` 구현은 등록된 `DataContractSerializerOperationBehavior`가 있는지 확인하여 DataContract를 사용하는 작업을 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="04572-131">The `IContractBehavior` implementation looks for operations that use DataContract by checking if they have a `DataContractSerializerOperationBehavior` registered.</span></span> <span data-ttu-id="04572-132">작업에 이 동작이 있는 경우 해당 동작에서 `DataContractSurrogate` 속성이 설정됩니다.</span><span class="sxs-lookup"><span data-stu-id="04572-132">If they do, it sets the `DataContractSurrogate` property on that behavior.</span></span> <span data-ttu-id="04572-133">다음 샘플 코드에서는 이를 수행하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="04572-133">The following sample code shows how this is done.</span></span> <span data-ttu-id="04572-134">이 작업 동작에서 서로게이트를 설정하면 serialization 및 deserialization에 대해 사용할 수 있도록 설정됩니다.</span><span class="sxs-lookup"><span data-stu-id="04572-134">Setting the surrogate on this operation behavior enables it for serialization and deserialization.</span></span>  
+ <span data-ttu-id="4c1b9-131">`IContractBehavior` 구현은 등록된 `DataContractSerializerOperationBehavior`가 있는지 확인하여 DataContract를 사용하는 작업을 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="4c1b9-131">The `IContractBehavior` implementation looks for operations that use DataContract by checking if they have a `DataContractSerializerOperationBehavior` registered.</span></span> <span data-ttu-id="4c1b9-132">작업에 이 동작이 있는 경우 해당 동작에서 `DataContractSurrogate` 속성이 설정됩니다.</span><span class="sxs-lookup"><span data-stu-id="4c1b9-132">If they do, it sets the `DataContractSurrogate` property on that behavior.</span></span> <span data-ttu-id="4c1b9-133">다음 샘플 코드에서는 이를 수행하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="4c1b9-133">The following sample code shows how this is done.</span></span> <span data-ttu-id="4c1b9-134">이 작업 동작에서 서로게이트를 설정하면 serialization 및 deserialization에 대해 사용할 수 있도록 설정됩니다.</span><span class="sxs-lookup"><span data-stu-id="4c1b9-134">Setting the surrogate on this operation behavior enables it for serialization and deserialization.</span></span>  
   
-```csharp  
+```csharp
 public void ApplyClientBehavior(ContractDescription description, ServiceEndpoint endpoint, System.ServiceModel.Dispatcher.ClientRuntime proxy)  
 {  
     foreach (OperationDescription opDesc in description.Operations)  
@@ -218,11 +218,11 @@ private static void ApplyDataContractSurrogate(OperationDescription description)
 }  
 ```  
   
- <span data-ttu-id="04572-135">메타데이터 생성 도중 사용할 서로게이트를 플러그 인하기 위해 추가 단계를 수행해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="04572-135">Additional steps need to be taken to plug in the surrogate for use during metadata generation.</span></span> <span data-ttu-id="04572-136">이를 수행하는 한 가지 메커니즘은 이 샘플에서 보여 주는 `IWsdlExportExtension`을 제공하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="04572-136">One mechanism to do this is to provide an `IWsdlExportExtension` which is what this sample demonstrates.</span></span> <span data-ttu-id="04572-137">또 다른 방법은 `WsdlExporter`를 직접 수정하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="04572-137">Another way is to modify the `WsdlExporter` directly.</span></span>  
+ <span data-ttu-id="4c1b9-135">메타데이터 생성 도중 사용할 서로게이트를 플러그 인하기 위해 추가 단계를 수행해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="4c1b9-135">Additional steps need to be taken to plug in the surrogate for use during metadata generation.</span></span> <span data-ttu-id="4c1b9-136">이를 수행하는 한 가지 메커니즘은 이 샘플에서 보여 주는 `IWsdlExportExtension`을 제공하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="4c1b9-136">One mechanism to do this is to provide an `IWsdlExportExtension` which is what this sample demonstrates.</span></span> <span data-ttu-id="4c1b9-137">또 다른 방법은 `WsdlExporter`를 직접 수정하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="4c1b9-137">Another way is to modify the `WsdlExporter` directly.</span></span>  
   
- <span data-ttu-id="04572-138">특성 `AllowNonSerializableTypesAttribute` 은 및 `IWsdlExportExtension`를구현합니다 `IContractBehavior`.</span><span class="sxs-lookup"><span data-stu-id="04572-138">The `AllowNonSerializableTypesAttribute` attribute implements `IWsdlExportExtension` and `IContractBehavior`.</span></span> <span data-ttu-id="04572-139">이 경우 확장은 `IContractBehavior` 또는 `IEndpointBehavior` 중 하나일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="04572-139">The extension can be either an `IContractBehavior` or `IEndpointBehavior` in this case.</span></span> <span data-ttu-id="04572-140">해당 `IWsdlExportExtension.ExportContract` 메서드 구현은 DataContract에 대한 스키마 생성 도중 사용되는 `XsdDataContractExporter`에 추가하여 서로게이트를 사용하도록 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="04572-140">Its `IWsdlExportExtension.ExportContract` method implementation enables the surrogate by adding it to the `XsdDataContractExporter` used during schema generation for DataContract.</span></span> <span data-ttu-id="04572-141">다음 코드 조각에서는 이를 수행하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="04572-141">The following code snippet shows how to do this.</span></span>  
+ <span data-ttu-id="4c1b9-138">`AllowNonSerializableTypesAttribute` 특성은 `IWsdlExportExtension` 및 `IContractBehavior`를 구현 합니다.</span><span class="sxs-lookup"><span data-stu-id="4c1b9-138">The `AllowNonSerializableTypesAttribute` attribute implements `IWsdlExportExtension` and `IContractBehavior`.</span></span> <span data-ttu-id="4c1b9-139">이 경우 확장은 `IContractBehavior` 또는 `IEndpointBehavior` 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4c1b9-139">The extension can be either an `IContractBehavior` or `IEndpointBehavior` in this case.</span></span> <span data-ttu-id="4c1b9-140">해당 `IWsdlExportExtension.ExportContract` 메서드 구현은 DataContract에 대한 스키마 생성 도중 사용되는 `XsdDataContractExporter`에 추가하여 서로게이트를 사용하도록 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="4c1b9-140">Its `IWsdlExportExtension.ExportContract` method implementation enables the surrogate by adding it to the `XsdDataContractExporter` used during schema generation for DataContract.</span></span> <span data-ttu-id="4c1b9-141">다음 코드 조각에서는 이를 수행하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="4c1b9-141">The following code snippet shows how to do this.</span></span>  
   
-```csharp  
+```csharp
 public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext context)  
 {  
     if (exporter == null)  
@@ -247,24 +247,24 @@ public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext 
 }  
 ```  
   
- <span data-ttu-id="04572-142">샘플을 실행하려면 클라이언트는 AddEmployee를 호출한 다음 GetEmployee를 호출하여 첫 번째 호출이 성공했는지 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="04572-142">When you run the sample, the client calls AddEmployee followed by a GetEmployee call to check if the first call was successful.</span></span> <span data-ttu-id="04572-143">GetEmployee 작업 요청의 결과는 클라이언트 콘솔 창에 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="04572-143">The result of the GetEmployee operation request is displayed in the client console window.</span></span> <span data-ttu-id="04572-144">GetEmployee 작업은 직원을 찾고 "found"를 인쇄 하는 데 성공 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="04572-144">The GetEmployee operation must succeed in finding the employee and print "found".</span></span>  
+ <span data-ttu-id="4c1b9-142">샘플을 실행하려면 클라이언트는 AddEmployee를 호출한 다음 GetEmployee를 호출하여 첫 번째 호출이 성공했는지 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="4c1b9-142">When you run the sample, the client calls AddEmployee followed by a GetEmployee call to check if the first call was successful.</span></span> <span data-ttu-id="4c1b9-143">GetEmployee 작업 요청의 결과는 클라이언트 콘솔 창에 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="4c1b9-143">The result of the GetEmployee operation request is displayed in the client console window.</span></span> <span data-ttu-id="4c1b9-144">GetEmployee 작업은 직원을 찾고 "found"를 인쇄 하는 데 성공 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="4c1b9-144">The GetEmployee operation must succeed in finding the employee and print "found".</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="04572-145">이 샘플에서는 serialize, deserialize 및 메타데이터 생성을 위해 서로게이트를 플러그 인하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="04572-145">This sample shows how to plug in a surrogate for serialize, deserialize and metadata generation.</span></span> <span data-ttu-id="04572-146">메타데이터에서의 코드 생성을 위해 서로게이트를 플러그 인하는 방법을 제공되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="04572-146">It does not show how to plug in a surrogate for code generation from metadata.</span></span> <span data-ttu-id="04572-147">서로게이트를 사용 하 여 클라이언트 코드 생성을 연결 하는 방법에 대 한 샘플을 보려면 [사용자 지정 WSDL 게시](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md) 샘플을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="04572-147">To see a sample of how a surrogate can be used to plug into client code generation, see the [Custom WSDL Publication](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md) sample.</span></span>  
+> <span data-ttu-id="4c1b9-145">이 샘플에서는 직렬화, 역직렬화 및 메타데이터 생성을 위해 서로게이트를 플러그 인하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="4c1b9-145">This sample shows how to plug in a surrogate for serialize, deserialize and metadata generation.</span></span> <span data-ttu-id="4c1b9-146">메타데이터에서의 코드 생성을 위해 서로게이트를 플러그 인하는 방법을 제공되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="4c1b9-146">It does not show how to plug in a surrogate for code generation from metadata.</span></span> <span data-ttu-id="4c1b9-147">서로게이트를 사용 하 여 클라이언트 코드 생성을 연결 하는 방법에 대 한 샘플을 보려면 [사용자 지정 WSDL 게시](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md) 샘플을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="4c1b9-147">To see a sample of how a surrogate can be used to plug into client code generation, see the [Custom WSDL Publication](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md) sample.</span></span>  
   
-### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="04572-148">샘플을 설치, 빌드 및 실행하려면</span><span class="sxs-lookup"><span data-stu-id="04572-148">To set up, build, and run the sample</span></span>  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="4c1b9-148">샘플을 설치, 빌드 및 실행하려면</span><span class="sxs-lookup"><span data-stu-id="4c1b9-148">To set up, build, and run the sample</span></span>  
   
-1. <span data-ttu-id="04572-149">[Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)를 수행 했는지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="04572-149">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
+1. <span data-ttu-id="4c1b9-149">[Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)를 수행 했는지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="4c1b9-149">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2. <span data-ttu-id="04572-150">솔루션 C# 버전을 빌드하려면 [Windows Communication Foundation 샘플 빌드](../../../../docs/framework/wcf/samples/building-the-samples.md)의 지침을 따릅니다.</span><span class="sxs-lookup"><span data-stu-id="04572-150">To build the C# edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
+2. <span data-ttu-id="4c1b9-150">솔루션 C# 버전을 빌드하려면 [Windows Communication Foundation 샘플 빌드](../../../../docs/framework/wcf/samples/building-the-samples.md)의 지침을 따릅니다.</span><span class="sxs-lookup"><span data-stu-id="4c1b9-150">To build the C# edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-3. <span data-ttu-id="04572-151">단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)의 지침을 따르세요.</span><span class="sxs-lookup"><span data-stu-id="04572-151">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
+3. <span data-ttu-id="4c1b9-151">단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)의 지침을 따르세요.</span><span class="sxs-lookup"><span data-stu-id="4c1b9-151">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
 > [!IMPORTANT]
-> <span data-ttu-id="04572-152">컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="04572-152">The samples may already be installed on your machine.</span></span> <span data-ttu-id="04572-153">계속하기 전에 다음(기본) 디렉터리를 확인하세요.</span><span class="sxs-lookup"><span data-stu-id="04572-153">Check for the following (default) directory before continuing.</span></span>  
+> <span data-ttu-id="4c1b9-152">컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4c1b9-152">The samples may already be installed on your machine.</span></span> <span data-ttu-id="4c1b9-153">계속하기 전에 다음(기본) 디렉터리를 확인하세요.</span><span class="sxs-lookup"><span data-stu-id="4c1b9-153">Check for the following (default) directory before continuing.</span></span>  
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> <span data-ttu-id="04572-154">이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다.</span><span class="sxs-lookup"><span data-stu-id="04572-154">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="04572-155">이 샘플은 다음 디렉터리에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="04572-155">This sample is located in the following directory.</span></span>  
+> <span data-ttu-id="4c1b9-154">이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다.</span><span class="sxs-lookup"><span data-stu-id="4c1b9-154">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="4c1b9-155">이 샘플은 다음 디렉터리에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4c1b9-155">This sample is located in the following directory.</span></span>  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\DataContract`  
