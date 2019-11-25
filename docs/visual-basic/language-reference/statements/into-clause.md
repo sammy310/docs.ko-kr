@@ -1,28 +1,28 @@
 ---
-title: Into 절(Visual Basic)
+title: Into 절
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Into keyword [Visual Basic]
 ms.assetid: e1534550-8f4b-4978-b043-fad7b8fd79ac
-ms.openlocfilehash: 8a94309b27ae3ad0c4fb6b13ae4824e4d5dece73
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 038cf9b812d3fbdb54afaca072694bbde4bfb600
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61784178"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348046"
 ---
-# <a name="into-clause-visual-basic"></a><span data-ttu-id="cb19e-102">Into 절(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cb19e-102">Into Clause (Visual Basic)</span></span>
-<span data-ttu-id="cb19e-103">집계 함수 또는 컬렉션에 적용할 그룹화를 식별 합니다.</span><span class="sxs-lookup"><span data-stu-id="cb19e-103">Identifies aggregate functions or groupings to apply to a collection.</span></span>  
+# <a name="into-clause-visual-basic"></a><span data-ttu-id="891aa-102">Into 절(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="891aa-102">Into Clause (Visual Basic)</span></span>
+<span data-ttu-id="891aa-103">Identifies aggregate functions or groupings to apply to a collection.</span><span class="sxs-lookup"><span data-stu-id="891aa-103">Identifies aggregate functions or groupings to apply to a collection.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="cb19e-104">설명</span><span class="sxs-lookup"><span data-stu-id="cb19e-104">Remarks</span></span>  
- <span data-ttu-id="cb19e-105">`Each` 키워드는 다음 경우에 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="cb19e-105">The `Each` keyword is used in the following contexts:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="891aa-104">주의</span><span class="sxs-lookup"><span data-stu-id="891aa-104">Remarks</span></span>  
+ <span data-ttu-id="891aa-105">The `Each` keyword is used in the following contexts:</span><span class="sxs-lookup"><span data-stu-id="891aa-105">The `Each` keyword is used in the following contexts:</span></span>  
   
- [<span data-ttu-id="cb19e-106">Aggregate 절</span><span class="sxs-lookup"><span data-stu-id="cb19e-106">Aggregate Clause</span></span>](../../../visual-basic/language-reference/queries/aggregate-clause.md)  
+ [<span data-ttu-id="891aa-106">Aggregate 절</span><span class="sxs-lookup"><span data-stu-id="891aa-106">Aggregate Clause</span></span>](../../../visual-basic/language-reference/queries/aggregate-clause.md)  
   
- [<span data-ttu-id="cb19e-107">Group By 절</span><span class="sxs-lookup"><span data-stu-id="cb19e-107">Group By Clause</span></span>](../../../visual-basic/language-reference/queries/group-by-clause.md)  
+ [<span data-ttu-id="891aa-107">Group By 절</span><span class="sxs-lookup"><span data-stu-id="891aa-107">Group By Clause</span></span>](../../../visual-basic/language-reference/queries/group-by-clause.md)  
   
- [<span data-ttu-id="cb19e-108">Group Join 절</span><span class="sxs-lookup"><span data-stu-id="cb19e-108">Group Join Clause</span></span>](../../../visual-basic/language-reference/queries/group-join-clause.md)  
+ [<span data-ttu-id="891aa-108">Group Join 절</span><span class="sxs-lookup"><span data-stu-id="891aa-108">Group Join Clause</span></span>](../../../visual-basic/language-reference/queries/group-join-clause.md)  
   
-## <a name="see-also"></a><span data-ttu-id="cb19e-109">참고자료</span><span class="sxs-lookup"><span data-stu-id="cb19e-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="891aa-109">참조</span><span class="sxs-lookup"><span data-stu-id="891aa-109">See also</span></span>
 
-- [<span data-ttu-id="cb19e-110">C++ 키워드</span><span class="sxs-lookup"><span data-stu-id="cb19e-110">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)
+- [<span data-ttu-id="891aa-110">C++ 키워드</span><span class="sxs-lookup"><span data-stu-id="891aa-110">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)

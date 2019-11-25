@@ -1,25 +1,25 @@
 ---
-title: (Visual Basic)을 다른 모양으로 XML 프로젝션
+title: 여러 모양으로 XML 프로젝션
 ms.date: 07/20/2015
 ms.assetid: 2da7ec97-34f7-443d-9a48-b162ac58236b
-ms.openlocfilehash: e5639948cbc264a4b17cffe80de70b011e4d2a70
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: dd8b95ca442c9f2f17940423dde22f627669cd0b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64666118"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347140"
 ---
-# <a name="projecting-xml-in-a-different-shape-visual-basic"></a><span data-ttu-id="bf4bf-102">(Visual Basic)을 다른 모양으로 XML 프로젝션</span><span class="sxs-lookup"><span data-stu-id="bf4bf-102">Projecting XML in a Different Shape (Visual Basic)</span></span>
-<span data-ttu-id="bf4bf-103">이 항목에서는 소스 XML과 다른 모양으로 XML을 프로젝션하는 예제를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="bf4bf-103">This topic shows an example of projecting XML that is in a different shape than the source XML.</span></span>  
+# <a name="projecting-xml-in-a-different-shape-visual-basic"></a><span data-ttu-id="0575b-102">Projecting XML in a Different Shape (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0575b-102">Projecting XML in a Different Shape (Visual Basic)</span></span>
+<span data-ttu-id="0575b-103">이 항목에서는 소스 XML과 다른 모양으로 XML을 프로젝션하는 예제를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="0575b-103">This topic shows an example of projecting XML that is in a different shape than the source XML.</span></span>  
   
- <span data-ttu-id="bf4bf-104">많은 일반적인 XML 변환은 이 예제의 경우와 마찬가지로 연결된 쿼리로 구성되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="bf4bf-104">Many typical XML transformations consist of chained queries, as in this example.</span></span> <span data-ttu-id="bf4bf-105">특정 형태의 XML에서 시작하여 중간 결과를 익명 형식이나 명명된 형식의 컬렉션으로 프로젝션한 다음 마지막으로 소스 XML과 완전히 다른 모양의 XML로 결과를 다시 프로젝션하는 것이 일반적입니다.</span><span class="sxs-lookup"><span data-stu-id="bf4bf-105">It is common to start with some form of XML, project intermediate results as collections of anonymous types or named types, and then finally to project the results back into XML that is in an entirely different shape than the source XML.</span></span>  
+ <span data-ttu-id="0575b-104">많은 일반적인 XML 변환은 이 예제의 경우와 마찬가지로 연결된 쿼리로 구성되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0575b-104">Many typical XML transformations consist of chained queries, as in this example.</span></span> <span data-ttu-id="0575b-105">특정 형태의 XML에서 시작하여 중간 결과를 익명 형식이나 명명된 형식의 컬렉션으로 프로젝션한 다음 마지막으로 소스 XML과 완전히 다른 모양의 XML로 결과를 다시 프로젝션하는 것이 일반적입니다.</span><span class="sxs-lookup"><span data-stu-id="0575b-105">It is common to start with some form of XML, project intermediate results as collections of anonymous types or named types, and then finally to project the results back into XML that is in an entirely different shape than the source XML.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="bf4bf-106">예제</span><span class="sxs-lookup"><span data-stu-id="bf4bf-106">Example</span></span>  
- <span data-ttu-id="bf4bf-107">이 예제에서는 WordprocessingML 문서를 처리하여 WordprocessingML 문서에서 단락 노드를 검색합니다.</span><span class="sxs-lookup"><span data-stu-id="bf4bf-107">This example processes a WordprocessingML document, retrieving the paragraph nodes from a WordprocessingML document.</span></span> <span data-ttu-id="bf4bf-108">또한 각 단락의 스타일과 텍스트도 식별하고</span><span class="sxs-lookup"><span data-stu-id="bf4bf-108">It also identifies the style and text of each paragraph.</span></span> <span data-ttu-id="bf4bf-109">마지막으로 다른 모양으로 XML을 프로젝션합니다.</span><span class="sxs-lookup"><span data-stu-id="bf4bf-109">Finally, the example projects XML with a different shape.</span></span> <span data-ttu-id="bf4bf-110">이 예제는 이 자습서의 이전 예제를 기반으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="bf4bf-110">This example builds on the previous examples in this tutorial.</span></span> <span data-ttu-id="bf4bf-111">프로젝션을 수행하는 새 문은 아래에 있는 코드의 주석에서 호출됩니다.</span><span class="sxs-lookup"><span data-stu-id="bf4bf-111">The new statement that does the projection is called out in comments in the code below.</span></span>  
+## <a name="example"></a><span data-ttu-id="0575b-106">예제</span><span class="sxs-lookup"><span data-stu-id="0575b-106">Example</span></span>  
+ <span data-ttu-id="0575b-107">이 예제에서는 WordprocessingML 문서를 처리하여 WordprocessingML 문서에서 단락 노드를 검색합니다.</span><span class="sxs-lookup"><span data-stu-id="0575b-107">This example processes a WordprocessingML document, retrieving the paragraph nodes from a WordprocessingML document.</span></span> <span data-ttu-id="0575b-108">또한 각 단락의 스타일과 텍스트도 식별하고</span><span class="sxs-lookup"><span data-stu-id="0575b-108">It also identifies the style and text of each paragraph.</span></span> <span data-ttu-id="0575b-109">마지막으로 다른 모양으로 XML을 프로젝션합니다.</span><span class="sxs-lookup"><span data-stu-id="0575b-109">Finally, the example projects XML with a different shape.</span></span> <span data-ttu-id="0575b-110">이 예제는 이 자습서의 이전 예제를 기반으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="0575b-110">This example builds on the previous examples in this tutorial.</span></span> <span data-ttu-id="0575b-111">프로젝션을 수행하는 새 문은 아래에 있는 코드의 주석에서 호출됩니다.</span><span class="sxs-lookup"><span data-stu-id="0575b-111">The new statement that does the projection is called out in comments in the code below.</span></span>  
   
- <span data-ttu-id="bf4bf-112">이 예제의 소스 문서 만들기에 대 한 지침은 [는 원본 Office Open XML 문서 만들기 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="bf4bf-112">For instructions for creating the source document for this example, see [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span></span>  
+ <span data-ttu-id="0575b-112">For instructions for creating the source document for this example, see [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span><span class="sxs-lookup"><span data-stu-id="0575b-112">For instructions for creating the source document for this example, see [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span></span>  
   
- <span data-ttu-id="bf4bf-113">이 예제에서는 WindowsBase 어셈블리의 클래스를 사용하고</span><span class="sxs-lookup"><span data-stu-id="bf4bf-113">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="bf4bf-114"><xref:System.IO.Packaging?displayProperty=nameWithType> 네임스페이스의 형식을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="bf4bf-114">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
+ <span data-ttu-id="0575b-113">이 예제에서는 WindowsBase 어셈블리의 클래스를 사용하고</span><span class="sxs-lookup"><span data-stu-id="0575b-113">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="0575b-114"><xref:System.IO.Packaging?displayProperty=nameWithType> 네임스페이스의 형식을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="0575b-114">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
   
 ```vb  
 Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">  
@@ -160,7 +160,7 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="bf4bf-115">이 예제는 다음과 같은 출력을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="bf4bf-115">This example produces the following output:</span></span>  
+ <span data-ttu-id="0575b-115">이 예제는 다음과 같은 출력을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="0575b-115">This example produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -227,11 +227,11 @@ End Module
 </Root>  
 ```  
   
-## <a name="next-steps"></a><span data-ttu-id="bf4bf-116">다음 단계</span><span class="sxs-lookup"><span data-stu-id="bf4bf-116">Next Steps</span></span>  
- <span data-ttu-id="bf4bf-117">다음 예제에서는 Word 문서에서 텍스트를 모두 찾기 위해 쿼리합니다.</span><span class="sxs-lookup"><span data-stu-id="bf4bf-117">In the next example, you'll query to find all the text in a Word document:</span></span>  
+## <a name="next-steps"></a><span data-ttu-id="0575b-116">다음 단계</span><span class="sxs-lookup"><span data-stu-id="0575b-116">Next Steps</span></span>  
+ <span data-ttu-id="0575b-117">다음 예제에서는 Word 문서에서 텍스트를 모두 찾기 위해 쿼리합니다.</span><span class="sxs-lookup"><span data-stu-id="0575b-117">In the next example, you'll query to find all the text in a Word document:</span></span>  
   
-- [<span data-ttu-id="bf4bf-118">Word 문서 (Visual Basic)에서 텍스트 찾기</span><span class="sxs-lookup"><span data-stu-id="bf4bf-118">Finding Text in Word Documents (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
+- [<span data-ttu-id="0575b-118">Finding Text in Word Documents (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0575b-118">Finding Text in Word Documents (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
   
-## <a name="see-also"></a><span data-ttu-id="bf4bf-119">참고자료</span><span class="sxs-lookup"><span data-stu-id="bf4bf-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0575b-119">참조</span><span class="sxs-lookup"><span data-stu-id="0575b-119">See also</span></span>
 
-- [<span data-ttu-id="bf4bf-120">자습서: (Visual Basic) WordprocessingML 문서에서 내용 조작</span><span class="sxs-lookup"><span data-stu-id="bf4bf-120">Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [<span data-ttu-id="0575b-120">Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0575b-120">Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

@@ -1,5 +1,5 @@
 ---
-title: 수학 요약(Visual Basic)
+title: 수학 요약
 ms.date: 07/20/2015
 helpviewer_keywords:
 - math functions, summary
@@ -7,27 +7,27 @@ helpviewer_keywords:
 - math functions, Visual Basic
 - math functions
 ms.assetid: 6abf2dd7-92d2-488a-8e2b-819be9b30c3f
-ms.openlocfilehash: d7447a3155c9727a9c55ea86826d1ef15ac21243
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 21c6d35b4e6aa17bb29be1c1e4b5e88a5fb389d8
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61802956"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348501"
 ---
-# <a name="math-summary-visual-basic"></a><span data-ttu-id="33c65-102">수학 요약(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="33c65-102">Math Summary (Visual Basic)</span></span>
-<span data-ttu-id="33c65-103">Visual Basic 언어 키워드 및 런타임 라이브러리 멤버 용도 따라 구성 됩니다 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="33c65-103">Visual Basic language keywords and run-time library members are organized by purpose and use.</span></span>  
+# <a name="math-summary-visual-basic"></a><span data-ttu-id="92a16-102">수학 요약(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="92a16-102">Math Summary (Visual Basic)</span></span>
+<span data-ttu-id="92a16-103">Visual Basic language keywords and run-time library members are organized by purpose and use.</span><span class="sxs-lookup"><span data-stu-id="92a16-103">Visual Basic language keywords and run-time library members are organized by purpose and use.</span></span>  
   
-|<span data-ttu-id="33c65-104">작업</span><span class="sxs-lookup"><span data-stu-id="33c65-104">Action</span></span>|<span data-ttu-id="33c65-105">언어 요소</span><span class="sxs-lookup"><span data-stu-id="33c65-105">Language element</span></span>|  
+|<span data-ttu-id="92a16-104">작업</span><span class="sxs-lookup"><span data-stu-id="92a16-104">Action</span></span>|<span data-ttu-id="92a16-105">언어 요소</span><span class="sxs-lookup"><span data-stu-id="92a16-105">Language element</span></span>|  
 |------------|----------------------|  
-|<span data-ttu-id="33c65-106">삼각 함수를 파생 합니다.</span><span class="sxs-lookup"><span data-stu-id="33c65-106">Derive trigonometric functions.</span></span>|<span data-ttu-id="33c65-107"><xref:System.Math.Atan%2A>, <xref:System.Math.Cos%2A>, <xref:System.Math.Sin%2A>, <xref:System.Math.Tan%2A></span><span class="sxs-lookup"><span data-stu-id="33c65-107"><xref:System.Math.Atan%2A>, <xref:System.Math.Cos%2A>, <xref:System.Math.Sin%2A>, <xref:System.Math.Tan%2A></span></span>|  
-|<span data-ttu-id="33c65-108">일반 계산 합니다.</span><span class="sxs-lookup"><span data-stu-id="33c65-108">General calculations.</span></span>|<span data-ttu-id="33c65-109"><xref:System.Math.Exp%2A>, <xref:System.Math.Log%2A>, <xref:System.Math.Sqrt%2A></span><span class="sxs-lookup"><span data-stu-id="33c65-109"><xref:System.Math.Exp%2A>, <xref:System.Math.Log%2A>, <xref:System.Math.Sqrt%2A></span></span>|  
-|<span data-ttu-id="33c65-110">난수를 생성 합니다.</span><span class="sxs-lookup"><span data-stu-id="33c65-110">Generate random numbers.</span></span>|<span data-ttu-id="33c65-111"><xref:Microsoft.VisualBasic.VBMath.Randomize%2A>, <xref:Microsoft.VisualBasic.VBMath.Rnd%2A></span><span class="sxs-lookup"><span data-stu-id="33c65-111"><xref:Microsoft.VisualBasic.VBMath.Randomize%2A>, <xref:Microsoft.VisualBasic.VBMath.Rnd%2A></span></span>|  
-|<span data-ttu-id="33c65-112">절대 값을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="33c65-112">Get absolute value.</span></span>|<xref:System.Math.Abs%2A>|  
-|<span data-ttu-id="33c65-113">식의 부호를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="33c65-113">Get the sign of an expression.</span></span>|<xref:System.Math.Sign%2A>|  
-|<span data-ttu-id="33c65-114">숫자 변환을 수행 합니다.</span><span class="sxs-lookup"><span data-stu-id="33c65-114">Perform numeric conversions.</span></span>|<span data-ttu-id="33c65-115"><xref:Microsoft.VisualBasic.Conversion.Fix%2A>, <xref:Microsoft.VisualBasic.Conversion.Int%2A></span><span class="sxs-lookup"><span data-stu-id="33c65-115"><xref:Microsoft.VisualBasic.Conversion.Fix%2A>, <xref:Microsoft.VisualBasic.Conversion.Int%2A></span></span>|  
+|<span data-ttu-id="92a16-106">Derive trigonometric functions.</span><span class="sxs-lookup"><span data-stu-id="92a16-106">Derive trigonometric functions.</span></span>|<span data-ttu-id="92a16-107"><xref:System.Math.Atan%2A>, <xref:System.Math.Cos%2A>, <xref:System.Math.Sin%2A>, <xref:System.Math.Tan%2A></span><span class="sxs-lookup"><span data-stu-id="92a16-107"><xref:System.Math.Atan%2A>, <xref:System.Math.Cos%2A>, <xref:System.Math.Sin%2A>, <xref:System.Math.Tan%2A></span></span>|  
+|<span data-ttu-id="92a16-108">General calculations.</span><span class="sxs-lookup"><span data-stu-id="92a16-108">General calculations.</span></span>|<span data-ttu-id="92a16-109"><xref:System.Math.Exp%2A>에서 <xref:System.Math.Log%2A>에서 <xref:System.Math.Sqrt%2A></span><span class="sxs-lookup"><span data-stu-id="92a16-109"><xref:System.Math.Exp%2A>, <xref:System.Math.Log%2A>, <xref:System.Math.Sqrt%2A></span></span>|  
+|<span data-ttu-id="92a16-110">Generate random numbers.</span><span class="sxs-lookup"><span data-stu-id="92a16-110">Generate random numbers.</span></span>|<span data-ttu-id="92a16-111"><xref:Microsoft.VisualBasic.VBMath.Randomize%2A>, <xref:Microsoft.VisualBasic.VBMath.Rnd%2A></span><span class="sxs-lookup"><span data-stu-id="92a16-111"><xref:Microsoft.VisualBasic.VBMath.Randomize%2A>, <xref:Microsoft.VisualBasic.VBMath.Rnd%2A></span></span>|  
+|<span data-ttu-id="92a16-112">Get absolute value.</span><span class="sxs-lookup"><span data-stu-id="92a16-112">Get absolute value.</span></span>|<xref:System.Math.Abs%2A>|  
+|<span data-ttu-id="92a16-113">Get the sign of an expression.</span><span class="sxs-lookup"><span data-stu-id="92a16-113">Get the sign of an expression.</span></span>|<xref:System.Math.Sign%2A>|  
+|<span data-ttu-id="92a16-114">Perform numeric conversions.</span><span class="sxs-lookup"><span data-stu-id="92a16-114">Perform numeric conversions.</span></span>|<span data-ttu-id="92a16-115"><xref:Microsoft.VisualBasic.Conversion.Fix%2A>, <xref:Microsoft.VisualBasic.Conversion.Int%2A></span><span class="sxs-lookup"><span data-stu-id="92a16-115"><xref:Microsoft.VisualBasic.Conversion.Fix%2A>, <xref:Microsoft.VisualBasic.Conversion.Int%2A></span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="33c65-116">참고자료</span><span class="sxs-lookup"><span data-stu-id="33c65-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="92a16-116">참조</span><span class="sxs-lookup"><span data-stu-id="92a16-116">See also</span></span>
 
-- [<span data-ttu-id="33c65-117">파생된 수학 함수</span><span class="sxs-lookup"><span data-stu-id="33c65-117">Derived Math Functions</span></span>](../../../visual-basic/language-reference/keywords/derived-math-functions.md)
-- [<span data-ttu-id="33c65-118">C++ 키워드</span><span class="sxs-lookup"><span data-stu-id="33c65-118">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)
-- [<span data-ttu-id="33c65-119">Visual Basic 런타임 라이브러리 멤버</span><span class="sxs-lookup"><span data-stu-id="33c65-119">Visual Basic Runtime Library Members</span></span>](../../../visual-basic/language-reference/runtime-library-members.md)
+- [<span data-ttu-id="92a16-117">파생된 수학 함수</span><span class="sxs-lookup"><span data-stu-id="92a16-117">Derived Math Functions</span></span>](../../../visual-basic/language-reference/keywords/derived-math-functions.md)
+- [<span data-ttu-id="92a16-118">C++ 키워드</span><span class="sxs-lookup"><span data-stu-id="92a16-118">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)
+- [<span data-ttu-id="92a16-119">Visual Basic 런타임 라이브러리 멤버</span><span class="sxs-lookup"><span data-stu-id="92a16-119">Visual Basic Runtime Library Members</span></span>](../../../visual-basic/language-reference/runtime-library-members.md)

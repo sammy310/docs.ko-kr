@@ -1,50 +1,50 @@
 ---
-title: '방법: 값 (Visual Basic)에서 변경 되지 않는 변수 만들기'
+title: '방법: 값이 변경되지 않는 변수 만들기'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - variables [Visual Basic], read-only
 - variables [Visual Basic], constant value
 ms.assetid: 86b59266-25df-4635-ae15-9b59c411d036
-ms.openlocfilehash: d201e95463dd0431825fee03ebfd340ac80cc552
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: d5d8a6b066ae7e8795afd2f788b60823d8efdafa
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630890"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348638"
 ---
-# <a name="how-to-create-a-variable-that-does-not-change-in-value-visual-basic"></a><span data-ttu-id="502f1-102">방법: 값 (Visual Basic)에서 변경 되지 않는 변수 만들기</span><span class="sxs-lookup"><span data-stu-id="502f1-102">How to: Create a Variable that Does Not Change in Value (Visual Basic)</span></span>
+# <a name="how-to-create-a-variable-that-does-not-change-in-value-visual-basic"></a><span data-ttu-id="af936-102">방법: 값이 변경되지 않는 변수 만들기(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="af936-102">How to: Create a Variable that Does Not Change in Value (Visual Basic)</span></span>
 
-<span data-ttu-id="502f1-103">해당 값을 변경 하지 않는 변수의 개념은 모순 되는 것 처럼 보일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="502f1-103">The notion of a variable that does not change its value might appear to be contradictory.</span></span> <span data-ttu-id="502f1-104">그러나 상수가 적절 하지 않으며 고정 값이 있는 변수를 사용 하는 것이 유용한 경우가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="502f1-104">But there are situations when a constant is not feasible and it is useful to have a variable with a fixed value.</span></span> <span data-ttu-id="502f1-105">이 경우 [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md) 키워드를 사용 하 여 멤버 변수를 정의할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="502f1-105">In such a case you can define a member variable with the [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md) keyword.</span></span>
+<span data-ttu-id="af936-103">The notion of a variable that does not change its value might appear to be contradictory.</span><span class="sxs-lookup"><span data-stu-id="af936-103">The notion of a variable that does not change its value might appear to be contradictory.</span></span> <span data-ttu-id="af936-104">But there are situations when a constant is not feasible and it is useful to have a variable with a fixed value.</span><span class="sxs-lookup"><span data-stu-id="af936-104">But there are situations when a constant is not feasible and it is useful to have a variable with a fixed value.</span></span> <span data-ttu-id="af936-105">In such a case you can define a member variable with the [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md) keyword.</span><span class="sxs-lookup"><span data-stu-id="af936-105">In such a case you can define a member variable with the [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md) keyword.</span></span>
 
-<span data-ttu-id="502f1-106">다음과 같은 경우에는 [Const 문을](../../../../visual-basic/language-reference/statements/const-statement.md) 사용 하 여 상수 값을 선언 하 고 할당할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="502f1-106">You cannot use the [Const Statement](../../../../visual-basic/language-reference/statements/const-statement.md) to declare and assign a constant value in the following circumstances:</span></span>
+<span data-ttu-id="af936-106">You cannot use the [Const Statement](../../../../visual-basic/language-reference/statements/const-statement.md) to declare and assign a constant value in the following circumstances:</span><span class="sxs-lookup"><span data-stu-id="af936-106">You cannot use the [Const Statement](../../../../visual-basic/language-reference/statements/const-statement.md) to declare and assign a constant value in the following circumstances:</span></span>
 
-- <span data-ttu-id="502f1-107">`Const` 문이 사용 하려는 데이터 형식을 허용 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="502f1-107">The `Const` statement does not accept the data type you want to use</span></span>
+- <span data-ttu-id="af936-107">The `Const` statement does not accept the data type you want to use</span><span class="sxs-lookup"><span data-stu-id="af936-107">The `Const` statement does not accept the data type you want to use</span></span>
 
-- <span data-ttu-id="502f1-108">컴파일 시간에 값을 알 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="502f1-108">You do not know the value at compile time</span></span>
+- <span data-ttu-id="af936-108">You do not know the value at compile time</span><span class="sxs-lookup"><span data-stu-id="af936-108">You do not know the value at compile time</span></span>
 
-- <span data-ttu-id="502f1-109">컴파일 시간에 상수 값을 계산할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="502f1-109">You are unable to compute the constant value at compile time</span></span>
+- <span data-ttu-id="af936-109">You are unable to compute the constant value at compile time</span><span class="sxs-lookup"><span data-stu-id="af936-109">You are unable to compute the constant value at compile time</span></span>
 
-### <a name="to-create-a-variable-that-does-not-change-in-value"></a><span data-ttu-id="502f1-110">값이 변경 되지 않는 변수를 만들려면</span><span class="sxs-lookup"><span data-stu-id="502f1-110">To create a variable that does not change in value</span></span>
+### <a name="to-create-a-variable-that-does-not-change-in-value"></a><span data-ttu-id="af936-110">To create a variable that does not change in value</span><span class="sxs-lookup"><span data-stu-id="af936-110">To create a variable that does not change in value</span></span>
 
-1. <span data-ttu-id="502f1-111">모듈 수준에서 [Dim 문을](../../../../visual-basic/language-reference/statements/dim-statement.md)사용 하 여 멤버 변수를 선언 하 고 [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md) 키워드를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="502f1-111">At module level, declare a member variable with the [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md), and include the [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md) keyword.</span></span>
+1. <span data-ttu-id="af936-111">At module level, declare a member variable with the [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md), and include the [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md) keyword.</span><span class="sxs-lookup"><span data-stu-id="af936-111">At module level, declare a member variable with the [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md), and include the [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md) keyword.</span></span>
 
     ```vb
     Dim ReadOnly timeStarted
     ```
 
-    <span data-ttu-id="502f1-112">멤버 변수에만 `ReadOnly` 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="502f1-112">You can specify `ReadOnly` only on a member variable.</span></span> <span data-ttu-id="502f1-113">즉, 프로시저 외부의 모듈 수준에서 변수를 정의 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="502f1-113">This means you must define the variable at module level, outside of any procedure.</span></span>
+    <span data-ttu-id="af936-112">You can specify `ReadOnly` only on a member variable.</span><span class="sxs-lookup"><span data-stu-id="af936-112">You can specify `ReadOnly` only on a member variable.</span></span> <span data-ttu-id="af936-113">This means you must define the variable at module level, outside of any procedure.</span><span class="sxs-lookup"><span data-stu-id="af936-113">This means you must define the variable at module level, outside of any procedure.</span></span>
 
-2. <span data-ttu-id="502f1-114">컴파일 시간에 단일 문에서 값을 계산할 수 있는 경우 `Dim` 문에 초기화 절을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="502f1-114">If you can compute the value in a single statement at compile time, use an initialization clause in the `Dim` statement.</span></span> <span data-ttu-id="502f1-115">[As](../../../../visual-basic/language-reference/statements/as-clause.md) 절 뒤에 등호 (`=`)를 추가 하 고 그 뒤에 식을 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="502f1-115">Follow the [As](../../../../visual-basic/language-reference/statements/as-clause.md) clause with an equal sign (`=`), followed by an expression.</span></span> <span data-ttu-id="502f1-116">컴파일러가이 식을 상수 값으로 계산할 수 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="502f1-116">Be sure the compiler can evaluate this expression to a constant value.</span></span>
+2. <span data-ttu-id="af936-114">If you can compute the value in a single statement at compile time, use an initialization clause in the `Dim` statement.</span><span class="sxs-lookup"><span data-stu-id="af936-114">If you can compute the value in a single statement at compile time, use an initialization clause in the `Dim` statement.</span></span> <span data-ttu-id="af936-115">Follow the [As](../../../../visual-basic/language-reference/statements/as-clause.md) clause with an equal sign (`=`), followed by an expression.</span><span class="sxs-lookup"><span data-stu-id="af936-115">Follow the [As](../../../../visual-basic/language-reference/statements/as-clause.md) clause with an equal sign (`=`), followed by an expression.</span></span> <span data-ttu-id="af936-116">Be sure the compiler can evaluate this expression to a constant value.</span><span class="sxs-lookup"><span data-stu-id="af936-116">Be sure the compiler can evaluate this expression to a constant value.</span></span>
 
     ```vb
     Dim ReadOnly timeStarted As Date = Now
     ```
 
-    <span data-ttu-id="502f1-117">`ReadOnly` 변수에 값을 한 번만 할당할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="502f1-117">You can assign a value to a `ReadOnly` variable only once.</span></span> <span data-ttu-id="502f1-118">이렇게 하면 코드에서 해당 값을 변경할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="502f1-118">Once you do so, no code can ever change its value.</span></span>
+    <span data-ttu-id="af936-117">You can assign a value to a `ReadOnly` variable only once.</span><span class="sxs-lookup"><span data-stu-id="af936-117">You can assign a value to a `ReadOnly` variable only once.</span></span> <span data-ttu-id="af936-118">Once you do so, no code can ever change its value.</span><span class="sxs-lookup"><span data-stu-id="af936-118">Once you do so, no code can ever change its value.</span></span>
 
-    <span data-ttu-id="502f1-119">컴파일 시간에 값을 알 수 없거나 컴파일 타임에 단일 문에서이 값을 계산할 수 없는 경우 생성자에서 런타임에 해당 값을 할당할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="502f1-119">If you do not know the value at compile time, or cannot compute it at compile time in a single statement, you can still assign it at run time in a constructor.</span></span> <span data-ttu-id="502f1-120">이렇게 하려면 클래스 또는 구조체 수준에서 변수 `ReadOnly` 를 선언 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="502f1-120">To do this, you must declare the `ReadOnly` variable at class or structure level.</span></span> <span data-ttu-id="502f1-121">해당 클래스 또는 구조체에 대 한 생성자에서 변수의 고정 값을 계산 하 고 생성자에서 반환 하기 전에 변수에 할당 합니다.</span><span class="sxs-lookup"><span data-stu-id="502f1-121">In the constructor for that class or structure, compute the variable's fixed value, and assign it to the variable before returning from the constructor.</span></span>
+    <span data-ttu-id="af936-119">If you do not know the value at compile time, or cannot compute it at compile time in a single statement, you can still assign it at run time in a constructor.</span><span class="sxs-lookup"><span data-stu-id="af936-119">If you do not know the value at compile time, or cannot compute it at compile time in a single statement, you can still assign it at run time in a constructor.</span></span> <span data-ttu-id="af936-120">To do this, you must declare the `ReadOnly` variable at class or structure level.</span><span class="sxs-lookup"><span data-stu-id="af936-120">To do this, you must declare the `ReadOnly` variable at class or structure level.</span></span> <span data-ttu-id="af936-121">In the constructor for that class or structure, compute the variable's fixed value, and assign it to the variable before returning from the constructor.</span><span class="sxs-lookup"><span data-stu-id="af936-121">In the constructor for that class or structure, compute the variable's fixed value, and assign it to the variable before returning from the constructor.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="502f1-122">참고자료</span><span class="sxs-lookup"><span data-stu-id="502f1-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="af936-122">참조</span><span class="sxs-lookup"><span data-stu-id="af936-122">See also</span></span>
 
-- [<span data-ttu-id="502f1-123">WriteOnly</span><span class="sxs-lookup"><span data-stu-id="502f1-123">WriteOnly</span></span>](../../../../visual-basic/language-reference/modifiers/writeonly.md)
-- [<span data-ttu-id="502f1-124">Const 문</span><span class="sxs-lookup"><span data-stu-id="502f1-124">Const Statement</span></span>](../../../../visual-basic/language-reference/statements/const-statement.md)
+- [<span data-ttu-id="af936-123">WriteOnly</span><span class="sxs-lookup"><span data-stu-id="af936-123">WriteOnly</span></span>](../../../../visual-basic/language-reference/modifiers/writeonly.md)
+- [<span data-ttu-id="af936-124">Const 문</span><span class="sxs-lookup"><span data-stu-id="af936-124">Const Statement</span></span>](../../../../visual-basic/language-reference/statements/const-statement.md)

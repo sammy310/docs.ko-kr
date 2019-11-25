@@ -1,61 +1,61 @@
 ---
-title: '방법: 두 개체가 동일한 (Visual Basic) 여부를 확인합니다'
+title: '방법: 두 개체가 동일한지 확인'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - testing [Visual Basic], objects
 - objects [Visual Basic], comparing
 - object variables [Visual Basic], determining identity
 ms.assetid: 7829f817-0d1f-4749-a707-de0b95e0cf5c
-ms.openlocfilehash: aae053ae0473ed6ced0f28da3d5e5afc0be629df
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5deebd4ffc5b277c94f5ae36c00fd6e5010a1551
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769085"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348604"
 ---
-# <a name="how-to-determine-whether-two-objects-are-identical-visual-basic"></a><span data-ttu-id="73eb8-102">방법: 두 개체가 동일한 (Visual Basic) 여부를 확인합니다</span><span class="sxs-lookup"><span data-stu-id="73eb8-102">How to: Determine Whether Two Objects Are Identical (Visual Basic)</span></span>
-<span data-ttu-id="73eb8-103">Visual basic의 경우 두 변수가 메모리에서 동일한 클래스 인스턴스를 가리키는 두 개의 변수 참조의 포인터가 동일한 경우, 즉, 동일한 간주 됩니다.</span><span class="sxs-lookup"><span data-stu-id="73eb8-103">In Visual Basic, two variable references are considered identical if their pointers are the same, that is, if both variables point to the same class instance in memory.</span></span> <span data-ttu-id="73eb8-104">예를 들어, Windows Forms 응용 프로그램에서는 하려는 비교를 확인 하는지 여부를 현재 인스턴스 (`Me`) 동일 특정 인스턴스를 같은 `Form2`합니다.</span><span class="sxs-lookup"><span data-stu-id="73eb8-104">For example, in a Windows Forms application, you might want to make a comparison to determine whether the current instance (`Me`) is the same as a particular instance, such as `Form2`.</span></span>  
+# <a name="how-to-determine-whether-two-objects-are-identical-visual-basic"></a><span data-ttu-id="76dee-102">방법: 두 개체가 동일한지 확인(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="76dee-102">How to: Determine Whether Two Objects Are Identical (Visual Basic)</span></span>
+<span data-ttu-id="76dee-103">In Visual Basic, two variable references are considered identical if their pointers are the same, that is, if both variables point to the same class instance in memory.</span><span class="sxs-lookup"><span data-stu-id="76dee-103">In Visual Basic, two variable references are considered identical if their pointers are the same, that is, if both variables point to the same class instance in memory.</span></span> <span data-ttu-id="76dee-104">For example, in a Windows Forms application, you might want to make a comparison to determine whether the current instance (`Me`) is the same as a particular instance, such as `Form2`.</span><span class="sxs-lookup"><span data-stu-id="76dee-104">For example, in a Windows Forms application, you might want to make a comparison to determine whether the current instance (`Me`) is the same as a particular instance, such as `Form2`.</span></span>  
   
- <span data-ttu-id="73eb8-105">Visual Basic에서는 포인터를 비교할 두 연산자를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="73eb8-105">Visual Basic provides two operators to compare pointers.</span></span> <span data-ttu-id="73eb8-106">[Is 연산자](../../../../visual-basic/language-reference/operators/is-operator.md) 반환 `True` 개체가 동일 하면 하며 [IsNot 연산자](../../../../visual-basic/language-reference/operators/isnot-operator.md) 반환 `True` 하지 않은 경우.</span><span class="sxs-lookup"><span data-stu-id="73eb8-106">The [Is Operator](../../../../visual-basic/language-reference/operators/is-operator.md) returns `True` if the objects are identical, and the [IsNot Operator](../../../../visual-basic/language-reference/operators/isnot-operator.md) returns `True` if they are not.</span></span>  
+ <span data-ttu-id="76dee-105">Visual Basic provides two operators to compare pointers.</span><span class="sxs-lookup"><span data-stu-id="76dee-105">Visual Basic provides two operators to compare pointers.</span></span> <span data-ttu-id="76dee-106">The [Is Operator](../../../../visual-basic/language-reference/operators/is-operator.md) returns `True` if the objects are identical, and the [IsNot Operator](../../../../visual-basic/language-reference/operators/isnot-operator.md) returns `True` if they are not.</span><span class="sxs-lookup"><span data-stu-id="76dee-106">The [Is Operator](../../../../visual-basic/language-reference/operators/is-operator.md) returns `True` if the objects are identical, and the [IsNot Operator](../../../../visual-basic/language-reference/operators/isnot-operator.md) returns `True` if they are not.</span></span>  
   
-## <a name="determining-if-two-objects-are-identical"></a><span data-ttu-id="73eb8-107">두 개체가 동일한 지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="73eb8-107">Determining if Two Objects Are Identical</span></span>  
+## <a name="determining-if-two-objects-are-identical"></a><span data-ttu-id="76dee-107">Determining if Two Objects Are Identical</span><span class="sxs-lookup"><span data-stu-id="76dee-107">Determining if Two Objects Are Identical</span></span>  
   
-#### <a name="to-determine-if-two-objects-are-identical"></a><span data-ttu-id="73eb8-108">두 개체가 동일한 지 확인 하려면</span><span class="sxs-lookup"><span data-stu-id="73eb8-108">To determine if two objects are identical</span></span>  
+#### <a name="to-determine-if-two-objects-are-identical"></a><span data-ttu-id="76dee-108">To determine if two objects are identical</span><span class="sxs-lookup"><span data-stu-id="76dee-108">To determine if two objects are identical</span></span>  
   
-1. <span data-ttu-id="73eb8-109">설정 된 `Boolean` 두 개체를 테스트할 식입니다.</span><span class="sxs-lookup"><span data-stu-id="73eb8-109">Set up a `Boolean` expression to test the two objects.</span></span>  
+1. <span data-ttu-id="76dee-109">Set up a `Boolean` expression to test the two objects.</span><span class="sxs-lookup"><span data-stu-id="76dee-109">Set up a `Boolean` expression to test the two objects.</span></span>  
   
-2. <span data-ttu-id="73eb8-110">테스트 식에서 사용 된 `Is` 피연산자로 두 개체를 사용 하 여 연산자입니다.</span><span class="sxs-lookup"><span data-stu-id="73eb8-110">In your testing expression, use the `Is` operator with the two objects as operands.</span></span>  
+2. <span data-ttu-id="76dee-110">In your testing expression, use the `Is` operator with the two objects as operands.</span><span class="sxs-lookup"><span data-stu-id="76dee-110">In your testing expression, use the `Is` operator with the two objects as operands.</span></span>  
   
-     <span data-ttu-id="73eb8-111">`Is` 반환 `True` 개체 동일한 클래스 인스턴스를 가리키는 경우.</span><span class="sxs-lookup"><span data-stu-id="73eb8-111">`Is` returns `True` if the objects point to the same class instance.</span></span>  
+     <span data-ttu-id="76dee-111">`Is` returns `True` if the objects point to the same class instance.</span><span class="sxs-lookup"><span data-stu-id="76dee-111">`Is` returns `True` if the objects point to the same class instance.</span></span>  
   
-## <a name="determining-if-two-objects-are-not-identical"></a><span data-ttu-id="73eb8-112">두 개체가 동일 하지 않은지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="73eb8-112">Determining if Two Objects Are Not Identical</span></span>  
- <span data-ttu-id="73eb8-113">두 개체가 같지 및 결합 하기에 비효율적인 수 하는 경우 작업을 수행 하려는 경우에 따라 `Not` 하 고 `Is`예를 들어 `If Not obj1 Is obj2`합니다.</span><span class="sxs-lookup"><span data-stu-id="73eb8-113">Sometimes you want to perform an action if the two objects are not identical, and it can be awkward to combine `Not` and `Is`, for example `If Not obj1 Is obj2`.</span></span> <span data-ttu-id="73eb8-114">이런 경우에서 사용할 수는 `IsNot` 연산자입니다.</span><span class="sxs-lookup"><span data-stu-id="73eb8-114">In such a case you can use the `IsNot` operator.</span></span>  
+## <a name="determining-if-two-objects-are-not-identical"></a><span data-ttu-id="76dee-112">Determining if Two Objects Are Not Identical</span><span class="sxs-lookup"><span data-stu-id="76dee-112">Determining if Two Objects Are Not Identical</span></span>  
+ <span data-ttu-id="76dee-113">Sometimes you want to perform an action if the two objects are not identical, and it can be awkward to combine `Not` and `Is`, for example `If Not obj1 Is obj2`.</span><span class="sxs-lookup"><span data-stu-id="76dee-113">Sometimes you want to perform an action if the two objects are not identical, and it can be awkward to combine `Not` and `Is`, for example `If Not obj1 Is obj2`.</span></span> <span data-ttu-id="76dee-114">In such a case you can use the `IsNot` operator.</span><span class="sxs-lookup"><span data-stu-id="76dee-114">In such a case you can use the `IsNot` operator.</span></span>  
   
-#### <a name="to-determine-if-two-objects-are-not-identical"></a><span data-ttu-id="73eb8-115">두 개체가 동일한 지 확인 하려면</span><span class="sxs-lookup"><span data-stu-id="73eb8-115">To determine if two objects are not identical</span></span>  
+#### <a name="to-determine-if-two-objects-are-not-identical"></a><span data-ttu-id="76dee-115">To determine if two objects are not identical</span><span class="sxs-lookup"><span data-stu-id="76dee-115">To determine if two objects are not identical</span></span>  
   
-1. <span data-ttu-id="73eb8-116">설정 된 `Boolean` 두 개체를 테스트할 식입니다.</span><span class="sxs-lookup"><span data-stu-id="73eb8-116">Set up a `Boolean` expression to test the two objects.</span></span>  
+1. <span data-ttu-id="76dee-116">Set up a `Boolean` expression to test the two objects.</span><span class="sxs-lookup"><span data-stu-id="76dee-116">Set up a `Boolean` expression to test the two objects.</span></span>  
   
-2. <span data-ttu-id="73eb8-117">테스트 식에서 사용 된 `IsNot` 피연산자로 두 개체를 사용 하 여 연산자입니다.</span><span class="sxs-lookup"><span data-stu-id="73eb8-117">In your testing expression, use the `IsNot` operator with the two objects as operands.</span></span>  
+2. <span data-ttu-id="76dee-117">In your testing expression, use the `IsNot` operator with the two objects as operands.</span><span class="sxs-lookup"><span data-stu-id="76dee-117">In your testing expression, use the `IsNot` operator with the two objects as operands.</span></span>  
   
-     <span data-ttu-id="73eb8-118">`IsNot` 반환 `True` 경우 개체는 동일한 클래스 인스턴스를 가리키지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="73eb8-118">`IsNot` returns `True` if the objects do not point to the same class instance.</span></span>  
+     <span data-ttu-id="76dee-118">`IsNot` returns `True` if the objects do not point to the same class instance.</span><span class="sxs-lookup"><span data-stu-id="76dee-118">`IsNot` returns `True` if the objects do not point to the same class instance.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="73eb8-119">예제</span><span class="sxs-lookup"><span data-stu-id="73eb8-119">Example</span></span>  
- <span data-ttu-id="73eb8-120">다음 예에서는 쌍을 테스트 `Object` 변수를 같은 클래스 인스턴스를 가리키는지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="73eb8-120">The following example tests pairs of `Object` variables to see if they point to the same class instance.</span></span>  
+## <a name="example"></a><span data-ttu-id="76dee-119">예제</span><span class="sxs-lookup"><span data-stu-id="76dee-119">Example</span></span>  
+ <span data-ttu-id="76dee-120">The following example tests pairs of `Object` variables to see if they point to the same class instance.</span><span class="sxs-lookup"><span data-stu-id="76dee-120">The following example tests pairs of `Object` variables to see if they point to the same class instance.</span></span>  
   
  [!code-vb[VbVbalrKeywords#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/class7.vb#14)]  
   
- <span data-ttu-id="73eb8-121">앞의 예제에는 다음과 같은 출력이 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="73eb8-121">The preceding example displays the following output.</span></span>  
+ <span data-ttu-id="76dee-121">The preceding example displays the following output.</span><span class="sxs-lookup"><span data-stu-id="76dee-121">The preceding example displays the following output.</span></span>  
   
  `objA different from objB? True`  
   
  `objA identical to objC? True`  
   
-## <a name="see-also"></a><span data-ttu-id="73eb8-122">참고자료</span><span class="sxs-lookup"><span data-stu-id="73eb8-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="76dee-122">참조</span><span class="sxs-lookup"><span data-stu-id="76dee-122">See also</span></span>
 
-- [<span data-ttu-id="73eb8-123">Object 데이터 형식</span><span class="sxs-lookup"><span data-stu-id="73eb8-123">Object Data Type</span></span>](../../../../visual-basic/language-reference/data-types/object-data-type.md)
-- [<span data-ttu-id="73eb8-124">개체 변수</span><span class="sxs-lookup"><span data-stu-id="73eb8-124">Object Variables</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
-- [<span data-ttu-id="73eb8-125">개체 변수 값</span><span class="sxs-lookup"><span data-stu-id="73eb8-125">Object Variable Values</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)
-- [<span data-ttu-id="73eb8-126">Is 연산자</span><span class="sxs-lookup"><span data-stu-id="73eb8-126">Is Operator</span></span>](../../../../visual-basic/language-reference/operators/is-operator.md)
-- [<span data-ttu-id="73eb8-127">IsNot 연산자</span><span class="sxs-lookup"><span data-stu-id="73eb8-127">IsNot Operator</span></span>](../../../../visual-basic/language-reference/operators/isnot-operator.md)
-- [<span data-ttu-id="73eb8-128">방법: 두 개체가 관련이 있는지 여부를 결정 합니다.</span><span class="sxs-lookup"><span data-stu-id="73eb8-128">How to: Determine Whether Two Objects Are Related</span></span>](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-related.md)
-- [<span data-ttu-id="73eb8-129">Me, My, MyBase 및 MyClass</span><span class="sxs-lookup"><span data-stu-id="73eb8-129">Me, My, MyBase, and MyClass</span></span>](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
+- [<span data-ttu-id="76dee-123">Object 데이터 형식</span><span class="sxs-lookup"><span data-stu-id="76dee-123">Object Data Type</span></span>](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [<span data-ttu-id="76dee-124">개체 변수</span><span class="sxs-lookup"><span data-stu-id="76dee-124">Object Variables</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
+- [<span data-ttu-id="76dee-125">개체 변수 값</span><span class="sxs-lookup"><span data-stu-id="76dee-125">Object Variable Values</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)
+- [<span data-ttu-id="76dee-126">Is 연산자</span><span class="sxs-lookup"><span data-stu-id="76dee-126">Is Operator</span></span>](../../../../visual-basic/language-reference/operators/is-operator.md)
+- [<span data-ttu-id="76dee-127">IsNot 연산자</span><span class="sxs-lookup"><span data-stu-id="76dee-127">IsNot Operator</span></span>](../../../../visual-basic/language-reference/operators/isnot-operator.md)
+- [<span data-ttu-id="76dee-128">방법: 두 개체가 관련이 있는지 확인</span><span class="sxs-lookup"><span data-stu-id="76dee-128">How to: Determine Whether Two Objects Are Related</span></span>](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-related.md)
+- [<span data-ttu-id="76dee-129">Me, My, MyBase 및 MyClass</span><span class="sxs-lookup"><span data-stu-id="76dee-129">Me, My, MyBase, and MyClass</span></span>](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)

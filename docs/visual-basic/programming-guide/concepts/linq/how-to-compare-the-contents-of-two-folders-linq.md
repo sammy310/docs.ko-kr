@@ -1,30 +1,30 @@
 ---
-title: '방법: 두 폴더의 내용 비교 (LINQ) (Visual Basic)'
+title: '방법: 두 폴더의 내용 비교(LINQ)'
 ms.date: 07/20/2015
 ms.assetid: 903c7e9a-f48d-4a07-a8a8-5450d2646efa
-ms.openlocfilehash: 36128af71bb494a48e52564befe84fa7c7ffc3c0
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: d11299e3e36f4b6a8b837af59b1c27bb1c7aaf41
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582862"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348407"
 ---
-# <a name="how-to-compare-the-contents-of-two-folders-linq-visual-basic"></a><span data-ttu-id="82e6f-102">방법: 두 폴더의 내용 비교 (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="82e6f-102">How to: Compare the Contents of Two Folders (LINQ) (Visual Basic)</span></span>
+# <a name="how-to-compare-the-contents-of-two-folders-linq-visual-basic"></a><span data-ttu-id="ec1ba-102">How to: Compare the Contents of Two Folders (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ec1ba-102">How to: Compare the Contents of Two Folders (LINQ) (Visual Basic)</span></span>
 
-<span data-ttu-id="82e6f-103">이 예제에서는 두 파일 목록을 비교하는 세 가지 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="82e6f-103">This example demonstrates three ways to compare two file listings:</span></span>
+<span data-ttu-id="ec1ba-103">이 예제에서는 두 파일 목록을 비교하는 세 가지 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="ec1ba-103">This example demonstrates three ways to compare two file listings:</span></span>
 
-- <span data-ttu-id="82e6f-104">두 파일 목록이 똑같은지 여부를 지정하는 부울 값 쿼리.</span><span class="sxs-lookup"><span data-stu-id="82e6f-104">By querying for a Boolean value that specifies whether the two file lists are identical.</span></span>
+- <span data-ttu-id="ec1ba-104">두 파일 목록이 똑같은지 여부를 지정하는 부울 값 쿼리.</span><span class="sxs-lookup"><span data-stu-id="ec1ba-104">By querying for a Boolean value that specifies whether the two file lists are identical.</span></span>
 
-- <span data-ttu-id="82e6f-105">양쪽 폴더에 있는 파일을 검색하기 위해 교집합 쿼리.</span><span class="sxs-lookup"><span data-stu-id="82e6f-105">By querying for the intersection to retrieve the files that are in both folders.</span></span>
+- <span data-ttu-id="ec1ba-105">양쪽 폴더에 있는 파일을 검색하기 위해 교집합 쿼리.</span><span class="sxs-lookup"><span data-stu-id="ec1ba-105">By querying for the intersection to retrieve the files that are in both folders.</span></span>
 
-- <span data-ttu-id="82e6f-106">두 개 중 한 폴더에만 있는 파일을 검색하기 위해 차집합 쿼리.</span><span class="sxs-lookup"><span data-stu-id="82e6f-106">By querying for the set difference to retrieve the files that are in one folder but not the other.</span></span>
+- <span data-ttu-id="ec1ba-106">두 개 중 한 폴더에만 있는 파일을 검색하기 위해 차집합 쿼리.</span><span class="sxs-lookup"><span data-stu-id="ec1ba-106">By querying for the set difference to retrieve the files that are in one folder but not the other.</span></span>
 
     > [!NOTE]
-    > <span data-ttu-id="82e6f-107">여기 표시된 방법은 형식에 관계없이 개체의 시퀀스를 비교하도록 조정될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="82e6f-107">The techniques shown here can be adapted to compare sequences of objects of any type.</span></span>
+    > <span data-ttu-id="ec1ba-107">여기 표시된 방법은 형식에 관계없이 개체의 시퀀스를 비교하도록 조정될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ec1ba-107">The techniques shown here can be adapted to compare sequences of objects of any type.</span></span>
 
-<span data-ttu-id="82e6f-108">여기 표시된 `FileComparer` 클래스는 표준 쿼리 연산자와 함께 사용자 지정 비교자 클래스를 사용하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="82e6f-108">The `FileComparer` class shown here demonstrates how to use a custom comparer class together with the Standard Query Operators.</span></span> <span data-ttu-id="82e6f-109">이 클래스는 실제 시나리오에서 사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="82e6f-109">The class is not intended for use in real-world scenarios.</span></span> <span data-ttu-id="82e6f-110">단지 각 파일의 이름 및 길이(바이트)를 사용하여 각 폴더의 내용이 똑같은지 여부를 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="82e6f-110">It just uses the name and length in bytes of each file to determine whether the contents of each folder are identical or not.</span></span> <span data-ttu-id="82e6f-111">실제 시나리오에서는 더 엄격한 일치 검사를 수행하도록 이 비교자를 수정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="82e6f-111">In a real-world scenario, you should modify this comparer to perform a more rigorous equality check.</span></span>
+<span data-ttu-id="ec1ba-108">여기 표시된 `FileComparer` 클래스는 표준 쿼리 연산자와 함께 사용자 지정 비교자 클래스를 사용하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="ec1ba-108">The `FileComparer` class shown here demonstrates how to use a custom comparer class together with the Standard Query Operators.</span></span> <span data-ttu-id="ec1ba-109">이 클래스는 실제 시나리오에서 사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="ec1ba-109">The class is not intended for use in real-world scenarios.</span></span> <span data-ttu-id="ec1ba-110">단지 각 파일의 이름 및 길이(바이트)를 사용하여 각 폴더의 내용이 똑같은지 여부를 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="ec1ba-110">It just uses the name and length in bytes of each file to determine whether the contents of each folder are identical or not.</span></span> <span data-ttu-id="ec1ba-111">실제 시나리오에서는 더 엄격한 일치 검사를 수행하도록 이 비교자를 수정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="ec1ba-111">In a real-world scenario, you should modify this comparer to perform a more rigorous equality check.</span></span>
 
-## <a name="example"></a><span data-ttu-id="82e6f-112">예제</span><span class="sxs-lookup"><span data-stu-id="82e6f-112">Example</span></span>
+## <a name="example"></a><span data-ttu-id="ec1ba-112">예제</span><span class="sxs-lookup"><span data-stu-id="ec1ba-112">Example</span></span>
 
 ```vb
 Module CompareDirs
@@ -114,11 +114,11 @@ Module CompareDirs
 End Module
 ```
 
-## <a name="compiling-the-code"></a><span data-ttu-id="82e6f-113">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="82e6f-113">Compiling the Code</span></span>
+## <a name="compiling-the-code"></a><span data-ttu-id="ec1ba-113">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="ec1ba-113">Compiling the Code</span></span>
 
-<span data-ttu-id="82e6f-114">VB.NET 콘솔 응용 프로그램 프로젝트를 만듭니다 .이 프로젝트에는 system.string 네임 스페이스에 대 한 `Imports` 문이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="82e6f-114">Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
+<span data-ttu-id="ec1ba-114">Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.</span><span class="sxs-lookup"><span data-stu-id="ec1ba-114">Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="82e6f-115">참조</span><span class="sxs-lookup"><span data-stu-id="82e6f-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ec1ba-115">참조</span><span class="sxs-lookup"><span data-stu-id="ec1ba-115">See also</span></span>
 
-- [<span data-ttu-id="82e6f-116">LINQ to Objects(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="82e6f-116">LINQ to Objects (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
-- [<span data-ttu-id="82e6f-117">LINQ 및 파일 디렉터리(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="82e6f-117">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [<span data-ttu-id="ec1ba-116">LINQ to Objects(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ec1ba-116">LINQ to Objects (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
+- [<span data-ttu-id="ec1ba-117">LINQ 및 파일 디렉터리(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ec1ba-117">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
