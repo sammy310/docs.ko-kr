@@ -1,15 +1,15 @@
 ---
-title: LINQ to XML 보안 (Visual Basic)
+title: LINQ to XML 보안
 ms.date: 07/20/2015
 ms.assetid: d99b4af2-d447-4a3b-991b-6da0231a8637
-ms.openlocfilehash: 63997d2c7d47effac9c87fec80c69a68815a4ee9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 01b03dc5792981d41d16cc7b551892bd6fe2bcde
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64639891"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74331737"
 ---
-# <a name="linq-to-xml-security-visual-basic"></a>LINQ to XML 보안 (Visual Basic)
+# <a name="linq-to-xml-security-visual-basic"></a>LINQ to XML Security (Visual Basic)
 이 항목에서는 LINQ to XML과 관련된 보안 문제에 대해 설명합니다. 또한 보안 노출을 경감하는 몇 가지 지침을 제공합니다.  
   
 ## <a name="linq-to-xml-security-overview"></a>LINQ to XML 보안 개요  
@@ -99,6 +99,6 @@ ms.locfileid: "64639891"
   
  일부 보안은 CLR(공용 언어 런타임)을 통해 제공됩니다. 예를 들어, private 클래스가 포함되지 않은 구성 요소는 해당 클래스에서 입력한 주석에 액세스할 수 없습니다. 그러나 주석을 읽을 수 없는 구성 요소에서 주석을 삭제할 수 있으며, 이것이 변조 공격으로 사용될 수 있습니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
-- [프로그래밍 가이드 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+- [Programming Guide (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

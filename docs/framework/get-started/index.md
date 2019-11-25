@@ -6,12 +6,12 @@ helpviewer_keywords:
 - .NET Framework, getting started
 - getting started [.NET Framework]
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
-ms.openlocfilehash: cb56097d49b194234031aba3ee9811b961ae6c64
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ca2a4e6c44a26889a2fffa5cc5fa2cbba3eab782
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73107720"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74281826"
 ---
 # <a name="get-started-with-the-net-framework"></a>.NET Framework 시작
 
@@ -65,7 +65,7 @@ Windows 8 이전 버전에서 .NET Framework를 제거하려는 경우에는 항
 
 1. 운영 체제에 사전 설치되지 않은 경우, 앱의 대상이 되는 .NET Framework 버전을 설치합니다. 최신 프로덕션 버전은 .NET Framework 4.8입니다. Windows 10 2019년 5월 업데이트에 사전 설치되어 있으며, 이전 버전의 Windows 운영 체제에서 다운로드할 수 있습니다. .NET Framework 시스템 요구 사항은 [시스템 요구 사항](system-requirements.md)을 참조하십시오. 다른 버전의 .NET Framework 설치에 대한 자세한 내용은 [설치 가이드](../install/guide-for-developers.md)를 참조하십시오. 추가 .NET Framework 패키지는 대역 외로 릴리스됩니다. 즉, 모든 일반 또는 예약된 릴리스 주기를 벗어난 롤링 방식으로 릴리스됩니다. 이러한 패키지에 대한 자세한 내용은 [.NET Framework 및 번외 릴리스](the-net-framework-and-out-of-band-releases.md)를 참조하십시오.
 
-2. 앱을 개발하는 데 사용하는 .NET Framework에서 지원하는 언어를 선택합니다. Microsoft의 [Visual Basic](../../visual-basic/index.md), [C#](../../csharp/index.md), [F#](../../fsharp/index.md) 및 [C++/CLI](/cpp/dotnet/dotnet-programming-with-cpp-cli-visual-cpp)를 포함한 많은 언어를 사용할 수 있습니다. (.NET Framework용 앱을 개발할 수 있는 프로그래밍 언어는 [CLI(공용 언어 인프라) 사양](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/)을 준수합니다.)
+2. 앱을 개발하는 데 사용하는 .NET Framework에서 지원하는 언어를 선택합니다. Microsoft의 [Visual Basic](../../visual-basic/index.md), [C#](../../csharp/index.yml), [F#](../../fsharp/index.md) 및 [C++/CLI](/cpp/dotnet/dotnet-programming-with-cpp-cli-visual-cpp)를 포함한 많은 언어를 사용할 수 있습니다. (.NET Framework용 앱을 개발할 수 있는 프로그래밍 언어는 [CLI(공용 언어 인프라) 사양](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/)을 준수합니다.)
 
 3. 앱을 만드는 데 사용되며 선택된 프로그래밍 언어를 지원하는 개발 환경을 선택하고 설치합니다. .NET Framework 앱의 Microsoft IDE(통합 개발 환경)은 [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)입니다. 많은 버전을 사용 가능합니다.
 

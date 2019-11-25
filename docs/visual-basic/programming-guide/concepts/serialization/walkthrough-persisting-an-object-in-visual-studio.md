@@ -1,15 +1,15 @@
 ---
-title: Visual Studio에서 개체 유지 (Visual Basic)
+title: Visual Studio에서 개체 유지
 ms.date: 07/20/2015
 ms.assetid: f1d0b562-e349-4dce-ab5f-c05108467030
-ms.openlocfilehash: 6f25c2a6f06b56dcbb5ba7e63165d06ff77d9ca8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fbd342c929e8519571c0f6bb76d4091efcfe4476
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937372"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350392"
 ---
-# <a name="walkthrough-persisting-an-object-in-visual-studio-visual-basic"></a>연습: Visual Studio에서 개체 유지 (Visual Basic)
+# <a name="walkthrough-persisting-an-object-in-visual-studio-visual-basic"></a>연습: Visual Studio에서 개체 유지(Visual Basic)
 디자인 타임에 개체의 속성을 기본값으로 설정할 수 있지만, 런타임에 입력한 값은 개체가 소멸될 때 손실됩니다. serialization을 사용하면 인스턴스 간에 개체의 데이터를 유지할 수 있으므로, 다음에 개체를 인스턴스화할 때 값을 저장하고 검색할 수 있습니다.  
   
 > [!NOTE]
@@ -33,7 +33,7 @@ ms.locfileid: "69937372"
   
 1. 새 클래스 라이브러리 프로젝트를 만들고 "LoanClass"라는 이름을 지정합니다. 자세한 내용은 [솔루션 및 프로젝트 만들기](https://docs.microsoft.com/visualstudio/ide/creating-solutions-and-projects)를 참조하세요.  
   
-2. **솔루션 탐색기**에서 Class1 파일에 대한 바로 가기 메뉴를 열고 **이름 바꾸기**를 선택합니다. 파일 이름을 `Loan`으로 바꾸고 ENTER 키를 누릅니다. 파일 이름을 바꾸면 클래스 이름도 `Loan`으로 바뀝니다.  
+2. **솔루션 탐색기**에서 Class1 파일에 대한 바로 가기 메뉴를 열고 **이름 바꾸기**를 선택합니다. 파일 이름을 `Loan`로 바꾸고 ENTER 키를 누릅니다. 파일 이름을 바꾸면 클래스 이름도 `Loan`로 바뀝니다.  
   
 3. 클래스에 다음 공용 멤버를 추가합니다.  
   
@@ -73,13 +73,13 @@ ms.locfileid: "69937372"
     End Class  
     ```  
   
- `Loan` 클래스를 사용하는 간단한 응용 프로그램도 만들어야 합니다.  
+ `Loan` 클래스를 사용하는 간단한 애플리케이션도 만들어야 합니다.  
   
 ### <a name="to-create-a-test-application"></a>테스트 애플리케이션을 만들려면  
   
 1. Windows Forms 애플리케이션 프로젝트를 솔루션에 추가하려면 **파일** 메뉴에서 **추가**, **새 프로젝트**를 차례로 선택합니다.  
   
-2. **새 프로젝트 추가** 대화 상자에서 **Windows Forms 응용 프로그램**을 선택하고, 프로젝트 이름으로 `LoanApp`를 입력한 다음, **확인**을 클릭하여 대화 상자를 닫습니다.  
+2. **새 프로젝트 추가** 대화 상자에서 **Windows Forms 애플리케이션**을 선택하고, 프로젝트 이름으로 `LoanApp`를 입력한 다음, **확인**을 클릭하여 대화 상자를 닫습니다.  
   
 3. **솔루션 탐색기**에서 LoanApp 프로젝트를 선택합니다.  
   
@@ -159,9 +159,9 @@ ms.locfileid: "69937372"
   
      이 경우 이진 포맷터를 사용하여 개체를 이진 형식으로 저장합니다.  
   
- 다음 단계는 개체를 만들 때 파일에서 개체를 deserialize할 코드를 추가하는 것입니다.  
+ 다음 단계는 개체를 만들 때 파일에서 개체를 역직렬화할 코드를 추가하는 것입니다.  
   
-### <a name="to-deserialize-an-object"></a>개체를 deserialize하려면  
+### <a name="to-deserialize-an-object"></a>개체를 역직렬화하려면  
   
 1. Serialize된 데이터의 파일 이름에 대해 클래스에 상수를 추가합니다.  
   
@@ -215,7 +215,7 @@ ms.locfileid: "69937372"
   
  이 시점에서 다시 애플리케이션을 빌드 및 실행할 수 있습니다. 처음에는 텍스트 상자에 기본값이 나타납니다. 값을 변경하고 네 번째 텍스트 상자에 이름을 입력합니다. 애플리케이션을 닫았다가 다시 엽니다. 이제 새 값이 텍스트 상자에 나타납니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [Serialization(Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/index.md)
 - [Visual Basic 프로그래밍 가이드](../../../../visual-basic/programming-guide/index.md)

@@ -1,37 +1,37 @@
 ---
-title: DLL을 로드하는 동안 오류가 발생했습니다(Visual Basic).
+title: DLL을 로드하는 동안 오류가 발생했습니다.
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID48
 ms.assetid: 4226cd1f-028c-477d-88a5-cb57f7e0cdc8
-ms.openlocfilehash: 5a26443a49b0b853f2f2188fb58d7ed907d671b4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 36452cc6ff03042939cd4066aef76129b5bb8f0a
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64659611"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74329553"
 ---
 # <a name="error-in-loading-dll-visual-basic"></a>DLL을 로드하는 동안 오류가 발생했습니다(Visual Basic).
-동적 연결 라이브러리 (DLL)는에 지정 된 라이브러리는 `Lib` 절을 `Declare` 문입니다. 이 오류의 가능한 원인은 다음과 같습니다.  
+A dynamic-link library (DLL) is a library specified in the `Lib` clause of a `Declare` statement. Possible causes for this error include:  
   
-- 파일을 실행 하는 DLL 아닙니다.  
+- The file is not DLL executable.  
   
-- Microsoft Windows DLL 파일이 아닙니다.  
+- The file is not a Microsoft Windows DLL.  
   
-- DLL에 들어 있지 않은 다른 DLL 참조 합니다.  
+- The DLL references another DLL that is not present.  
   
-- DLL 또는 참조 된 DLL의 경로에 지정 된 디렉터리 아닙니다.  
+- The DLL or referenced DLL is not in a directory specified in the path.  
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
-- 파일 소스 텍스트 파일 및 따라서 이면 컴파일 및 DLL 실행 폼에 연결 수 해야 합니다.  
+- If the file is a source-text file and therefore not DLL executable, it must be compiled and linked to a DLL-executable form.  
   
-- Microsoft Windows DLL 파일이 없는 경우 해당 하는 Microsoft Windows를 가져옵니다.  
+- If the file is not a Microsoft Windows DLL, obtain the Microsoft Windows equivalent.  
   
-- DLL이 존재 하지 않는 다른 DLL을 참조 하는 경우 참조 된 DLL 가져오고 사용할 수 있도록 합니다.  
+- If the DLL references another DLL that is not present, obtain the referenced DLL and make it available.  
   
-- DLL 또는 참조 된 DLL의 경로 지정 된 디렉터리에 없으면 DLL 참조 된 디렉터리로 이동 합니다.  
+- If the DLL or referenced DLL is not in a directory specified by the path, move the DLL to a referenced directory.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [Declare 문](../../../visual-basic/language-reference/statements/declare-statement.md)

@@ -1,5 +1,5 @@
 ---
-title: '방법: 프로시저 만들기 (Visual Basic)'
+title: '방법: 프로시저 만들기'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedures [Visual Basic], defining
@@ -8,54 +8,54 @@ helpviewer_keywords:
 - procedure declarations
 - procedures [Visual Basic], about procedures
 ms.assetid: 4f779247-0b50-47e8-9e5c-ab5cf39ac0d2
-ms.openlocfilehash: 2cf4c788ec421c1e74ef7198496a92149e049752
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: a831814c18f97991fca8067f1c9c8e491da1b665
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216728"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344903"
 ---
-# <a name="how-to-create-a-procedure-visual-basic"></a>방법: 프로시저 만들기 (Visual Basic)
+# <a name="how-to-create-a-procedure-visual-basic"></a>방법: 프로시저 만들기(Visual Basic)
 
-시작 선언 문`Sub` (또는 `Function`)과 끝 선언 문 (`End Sub` 또는 `End Function`) 사이에 프로시저를 묶습니다. 프로시저의 모든 코드는 이러한 문 사이에 있습니다.
+You enclose a procedure between a starting declaration statement (`Sub` or `Function`) and an ending declaration statement (`End Sub` or `End Function`). All the procedure's code lies between these statements.
 
- 프로시저는 다른 프로시저를 포함할 수 없으므로 시작 문과 종료 문은 다른 프로시저 외부에 있어야 합니다.
+ A procedure cannot contain another procedure, so its starting and ending statements must be outside any other procedure.
 
- 다른 위치에서 동일한 작업을 수행 하는 코드가 있는 경우 작업을 한 번에 한 번 작성 한 다음 코드의 다른 위치에서 호출할 수 있습니다.
+ If you have code that performs the same task in different places, you can write the task once as a procedure and then call it from different places in your code.
 
-### <a name="to-create-a-procedure-that-does-not-return-a-value"></a>값을 반환 하지 않는 프로시저를 만들려면
+### <a name="to-create-a-procedure-that-does-not-return-a-value"></a>To create a procedure that does not return a value
 
-1. 다른 프로시저 외부에서는 문을 사용 하 `Sub` 고 `End Sub` 문을 사용 합니다.
+1. Outside any other procedure, use a `Sub` statement, followed by an `End Sub` statement.
 
-2. `Sub` 문에서 `Sub` 키워드를 프로시저 이름으로 따르고 매개 변수 목록을 괄호로 묶습니다.
+2. In the `Sub` statement, follow the `Sub` keyword with the name of the procedure, then the parameter list in parentheses.
 
-3. 프로시저의 코드 문을 문과 `Sub` `End Sub` 문 사이에 놓습니다.
+3. Place the procedure's code statements between the `Sub` and `End Sub` statements.
 
-### <a name="to-create-a-procedure-that-returns-a-value"></a>값을 반환 하는 프로시저를 만들려면
+### <a name="to-create-a-procedure-that-returns-a-value"></a>To create a procedure that returns a value
 
-1. 다른 프로시저 외부에서는 문을 사용 하 `Function` 고 `End Function` 문을 사용 합니다.
+1. Outside any other procedure, use a `Function` statement, followed by an `End Function` statement.
 
-2. 문에서 키워드를 프로시저 이름으로 `As` 따르고 매개 변수 목록을 괄호로 묶은 다음 반환 값의 데이터 형식을 지정 하는 절을 사용 합니다. `Function` `Function`
+2. In the `Function` statement, follow the `Function` keyword with the name of the procedure, then the parameter list in parentheses, and then an `As` clause specifying the data type of the return value.
 
-3. 프로시저의 코드 문을 문과 `Function` `End Function` 문 사이에 놓습니다.
+3. Place the procedure's code statements between the `Function` and `End Function` statements.
 
-4. `Return` 문을 사용 하 여 호출 코드에 값을 반환 합니다.
+4. Use a `Return` statement to return the value to the calling code.
 
-### <a name="to-connect-your-new-procedure-with-the-old-repetitive-blocks-of-code"></a>새 프로시저를 반복적인 코드 블록에 연결 하려면
+### <a name="to-connect-your-new-procedure-with-the-old-repetitive-blocks-of-code"></a>To connect your new procedure with the old, repetitive blocks of code
 
-1. 이전 코드에서 액세스할 수 있는 위치에 새 프로시저를 정의 해야 합니다.
+1. Make sure you define the new procedure in a place where the old code has access to it.
 
-2. 이전 반복적인 코드 블록에서 반복 작업을 수행 하는 문을 또는 `Sub` `Function` 프로시저를 호출 하는 단일 문으로 바꿉니다.
+2. In your old, repetitive code block, replace the statements that perform the repetitive task with a single statement that calls the `Sub` or `Function` procedure.
 
-3. 프로시저에서 값을 반환 `Function` 하는 인 경우 호출 문이 반환 된 값을 사용 하 여 작업을 변수에 저장 하는 등의 작업을 수행 해야 합니다. 그렇지 않으면 값이 손실 됩니다.
+3. If your procedure is a `Function` that returns a value, ensure that your calling statement performs an action with the returned value, such as storing it in a variable, or else the value will be lost.
 
 ## <a name="example"></a>예제
 
- 다음 `Function` 프로시저는 다른 두 변의 값을 지정 하 여 오른쪽 삼각형의 가장 긴 쪽 또는 빗변을 계산 합니다.
+ The following `Function` procedure calculates the longest side, or hypotenuse, of a right triangle, given the values for the other two sides:
 
  [!code-vb[VbVbcnProcedures#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#1)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [절차](index.md)
 - [Sub 프로시저](sub-procedures.md)

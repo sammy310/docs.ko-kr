@@ -1,5 +1,5 @@
 ---
-title: Group By 절(Visual Basic)
+title: Group By 절
 ms.date: 07/20/2015
 f1_keywords:
 - vb.QueryGroupByInto
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Group By statement [Visual Basic]
 - Group By clause [Visual Basic]
 ms.assetid: b1b5dcea-6654-473b-a2db-01f7e4c265d7
-ms.openlocfilehash: 8b3a480c226debc529c268e83437d15192592bd3
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 87080254ad5d237a593f0c35e7c3fdaef3a8ad59
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72004758"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350472"
 ---
-# <a name="group-by-clause-visual-basic"></a>Group By 절(Visual Basic)
+# <a name="group-by-clause-visual-basic"></a>Group By Clause (Visual Basic)
 쿼리 결과의 요소를 그룹화합니다. 각 그룹에 집계 함수를 적용하는 데 사용할 수도 있습니다. 그룹화 작업은 하나 이상의 키를 기반으로 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -37,7 +37,7 @@ Group [ listField1 [, listField2 [...] ] By keyExp1 [, keyExp2 [...] ]
   
 - `keyExp1`  
   
-     필수. 요소 그룹을 결정하는 데 사용할 키를 식별하는 식입니다. 둘 이상의 키를 지정하여 복합 키를 지정할 수 있습니다.  
+     필수 요소. 요소 그룹을 결정하는 데 사용할 키를 식별하는 식입니다. 둘 이상의 키를 지정하여 복합 키를 지정할 수 있습니다.  
   
 - `keyExp2`  
   
@@ -45,7 +45,7 @@ Group [ listField1 [, listField2 [...] ] By keyExp1 [, keyExp2 [...] ]
   
 - `aggregateList`  
   
-     필수. 그룹의 집계 방법을 식별하는 하나 이상의 식입니다. 그룹화된 결과의 멤버 이름을 식별하려면 다음 형식 중 하나일 수 있는 `Group` 키워드를 사용합니다.  
+     필수 요소. 그룹의 집계 방법을 식별하는 하나 이상의 식입니다. 그룹화된 결과의 멤버 이름을 식별하려면 다음 형식 중 하나일 수 있는 `Group` 키워드를 사용합니다.  
   
     ```vb  
     Into Group  
@@ -59,13 +59,13 @@ Group [ listField1 [, listField2 [...] ] By keyExp1 [, keyExp2 [...] ]
   
      그룹에 적용할 집계 함수를 포함할 수도 있습니다.  
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
  `Group By` 절을 사용하여 쿼리 결과를 그룹으로 나눌 수 있습니다. 그룹화는 키 또는 여러 키로 구성된 복합 키를 기반으로 합니다. 일치하는 키 값과 연결된 요소는 동일한 그룹에 포함됩니다.  
   
  `aggregateList` 절의 `Into` 매개 변수와 `Group` 키워드를 사용하여 그룹을 참조하는 데 사용되는 멤버 이름을 식별합니다. `Into` 절에 집계 함수를 포함하여 그룹화된 요소의 값을 계산할 수도 있습니다. 표준 집계 함수 목록은 [Aggregate Clause](../../../visual-basic/language-reference/queries/aggregate-clause.md)을 참조하세요.  
   
 ## <a name="example"></a>예제  
- 다음 코드 예제에서는 해당 위치 (국가/지역)를 기준으로 고객 목록을 그룹화 하 고 각 그룹의 고객 수를 제공 합니다. 결과는 국가/지역 이름별로 정렬 됩니다. 그룹화된 결과는 도시 이름별로 정렬됩니다.  
+ The following code example groups a list of customers based on their location (country/region) and provides a count of the customers in each group. The results are ordered by country/region name. 그룹화된 결과는 도시 이름별로 정렬됩니다.  
   
  [!code-vb[VbSimpleQuerySamples#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#11)]  
   

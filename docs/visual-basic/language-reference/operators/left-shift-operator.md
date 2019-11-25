@@ -1,5 +1,5 @@
 ---
-title: < < 연산자 (Visual Basic)
+title: << 연산자
 ms.date: 07/20/2015
 f1_keywords:
 - vb.<<
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - << operator [Visual Basic]
 - operator <<, Visual Basic left shift operator
 ms.assetid: fdb93d25-81ba-417f-b808-41207bfb8440
-ms.openlocfilehash: 1300ab60e825e7910825be2c65dcab90135ba988
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 327d0e5cbd1ebcc43bd47fb068f4513940c2165a
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71701122"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350977"
 ---
-# <a name="-operator-visual-basic"></a>\<\< 연산자 (Visual Basic)
-비트 패턴에 산술 왼쪽 시프트를 수행 합니다.  
+# <a name="-operator-visual-basic"></a>\<\< Operator (Visual Basic)
+Performs an arithmetic left shift on a bit pattern.  
   
 ## <a name="syntax"></a>구문  
   
@@ -26,51 +26,51 @@ result = pattern << amount
   
 ## <a name="parts"></a>요소  
  `result`  
- 필수. 정수 숫자 값입니다. 결과 비트 패턴을 이동한입니다. 데이터 형식이 동일 `pattern`합니다.  
+ 필수 요소. Integral numeric value. The result of shifting the bit pattern. The data type is the same as that of `pattern`.  
   
  `pattern`  
- 필수. 정수 계열 숫자 식입니다. 이동할 비트 패턴입니다. 데이터 형식은 정수 계열 형식 이어야 합니다 (`SByte`, `Byte`, `Short`, `UShort`를 `Integer`를 `UInteger`를 `Long`, 또는 `ULong`).  
+ 필수 요소. Integral numeric expression. The bit pattern to be shifted. The data type must be an integral type (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, or `ULong`).  
   
  `amount`  
- 필수. 숫자 식입니다. 비트 패턴을 이동할 비트 수입니다. 데이터 형식 이어야 합니다 `Integer` 변환할 또는 `Integer`합니다.  
+ 필수 요소. Numeric expression. The number of bits to shift the bit pattern. The data type must be `Integer` or widen to `Integer`.  
   
-## <a name="remarks"></a>설명  
- 산술 시프트는 순환 하지 않습니다. 즉, 결과의 한쪽 끝에서 이동 하는 비트가 다른 쪽 끝에서는 다시 계산 되지 않습니다. 산술 왼쪽 시프트에서 결과 데이터 형식의 범위를 벗어나 이동 하는 비트는 무시 되 고 오른쪽에서 비워진 비트 위치는 0으로 설정 됩니다.  
+## <a name="remarks"></a>주의  
+ Arithmetic shifts are not circular, which means the bits shifted off one end of the result are not reintroduced at the other end. In an arithmetic left shift, the bits shifted beyond the range of the result data type are discarded, and the bit positions vacated on the right are set to zero.  
   
- 결과에 포함 될 수 있는 것 보다 더 많은 비트로 시프트를 방지 하기 위해 Visual Basic은 `pattern`의 데이터 형식에 해당 하는 크기 마스크를 사용 하 여 `amount` 값을 마스크 합니다. 이러한 값의 이진은 이동 양에 사용 됩니다. 크기 마스크는 다음과 같습니다.  
+ To prevent a shift by more bits than the result can hold, Visual Basic masks the value of `amount` with a size mask that corresponds to the data type of `pattern`. The binary AND of these values is used for the shift amount. The size masks are as follows:  
   
-|@No__t 데이터 형식-0|크기 마스크 (10 진수)|크기 마스크 (16 진수)|  
+|Data type of `pattern`|Size mask (decimal)|Size mask (hexadecimal)|  
 |----------------------------|---------------------------|-------------------------------|  
 |`SByte`, `Byte`|7|&H00000007|  
 |`Short`, `UShort`|15|&H0000000F|  
 |`Integer`, `UInteger`|31|&H0000001F|  
 |`Long`, `ULong`|63|&H0000003F|  
   
- @No__t-0이 0 인 경우 `result`의 값은 `pattern`의 값과 동일 합니다. @No__t-0이 음수 이면 부호 없는 값으로 사용 되 고 적절 한 크기 마스크로 마스크 됩니다.  
+ If `amount` is zero, the value of `result` is identical to the value of `pattern`. If `amount` is negative, it is taken as an unsigned value and masked with the appropriate size mask.  
   
- 산술 시프트는 오버플로 예외를 생성 하지 않습니다.  
+ Arithmetic shifts never generate overflow exceptions.  
   
 > [!NOTE]
-> 연산자를 오버 로드할 수 있습니다. 즉, 피연산자가 해당 클래스 또는 구조체의 형식일 때 클래스 또는 구조체의 동작을 다시 정의할 수 있습니다. `<<` 코드가 이러한 클래스 또는 구조체에서이 연산자를 사용 하는 경우 다시 정의 된 동작을 이해 해야 합니다. 자세한 내용은 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)을 참조하세요.  
+> The `<<` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure. If your code uses this operator on such a class or structure, be sure that you understand its redefined behavior. 자세한 내용은 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)을 참조하세요.  
   
 ## <a name="example"></a>예제  
- 다음 예에서는 `<<` 연산자를 사용 하 여 정수 값에 대 한 산술 왼쪽 시프트를 수행 합니다. 결과는 항상 이동 하는 식의 데이터 형식과 같습니다.  
+ The following example uses the `<<` operator to perform arithmetic left shifts on integral values. The result always has the same data type as that of the expression being shifted.  
   
  [!code-vb[VbVbalrOperators#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#12)]  
   
- 이전 예제의 결과는 다음과 같습니다.  
+ The results of the previous example are as follows:  
   
-- `result1`은 192 (0000 0000 1100 0000)입니다.  
+- `result1` is 192 (0000 0000 1100 0000).  
   
-- `result2`은 3072 (0000 1100 0000 0000)입니다.  
+- `result2` is 3072 (0000 1100 0000 0000).  
   
-- `result3`은-32768 (1000 0000 0000 0000)입니다.  
+- `result3` is -32768 (1000 0000 0000 0000).  
   
-- `result4`은 384 (0000 0001 1000 0000)입니다.  
+- `result4` is 384 (0000 0001 1000 0000).  
   
-- `result5`은 0 (왼쪽으로 15 자리 이동)입니다.  
+- `result5` is 0 (shifted 15 places to the left).  
   
- @No__t-0의 이동 금액은 17과 15로 계산 되며 1과 같습니다.  
+ The shift amount for `result4` is calculated as 17 AND 15, which equals 1.  
   
 ## <a name="see-also"></a>참조
 
@@ -79,4 +79,4 @@ result = pattern << amount
 - [<<= 연산자](../../../visual-basic/language-reference/operators/left-shift-assignment-operator.md)
 - [Visual Basic에서의 연산자 우선 순위](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [기능별 연산자 목록](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [Visual Basic의 산술 연산자](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [Arithmetic Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

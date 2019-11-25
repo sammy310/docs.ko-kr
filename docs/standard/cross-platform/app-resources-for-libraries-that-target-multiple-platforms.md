@@ -14,26 +14,26 @@ helpviewer_keywords:
 ms.assetid: 72c76f0b-7255-4576-9261-3587f949669c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e846f45b55ac09d6ce6af4f3223c3bdba1dc83ba
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: b32c2e354ea48e25ddb0aa561eb576cbfd89e3fb
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67506017"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204749"
 ---
 # <a name="app-resources-for-libraries-that-target-multiple-platforms"></a>여러 플랫폼을 대상으로 하는 라이브러리의 앱 리소스
-.NET Framework를 사용 하 여 [이식 가능한 클래스 라이브러리](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) 프로젝트 형식에 여러 플랫폼에서 클래스 라이브러리의 리소스에에서 액세스할 수 있는지 확인 합니다. 이 프로젝트 형식은 Visual Studio 2012에서 사용할 수 및.NET Framework 클래스 라이브러리의 이식 가능한 하위 집합을 대상으로 합니다. 이식 가능한 클래스 라이브러리를 사용 하 여 데스크톱 앱, Silverlight 앱, Windows Phone 앱에서 라이브러리에 액세스할 수 있는지 확인 하 고 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 앱.
+You can use the .NET Framework [Portable Class Library](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) project type to ensure that resources in your class libraries can be accessed from multiple platforms. This project type is available in Visual Studio 2012 and targets the portable subset of the .NET Framework class library. Using  a Portable Class Library ensures that your library can be accessed from desktop apps, Silverlight apps, Windows Phone apps, and Windows 8.x Store apps.
 
 [!INCLUDE[standard](../../../includes/pcl-to-standard.md)]
 
- 이식 가능한 클래스 라이브러리 프로젝트에서 형식의 매우 제한 된 하위 집합만 사용 하면 합니다 <xref:System.Resources> 응용 프로그램을 사용할 수 있는 네임 스페이스 사용 할 수는 <xref:System.Resources.ResourceManager> 리소스를 검색 하는 클래스입니다. 그러나 Visual Studio를 사용하여 응용 프로그램을 만들려면 <xref:System.Resources.ResourceManager> 클래스를 직접 사용하는 대신에 Visual Studio가 생성한 강력한 형식의 래퍼를 사용하여야 합니다.
+ The Portable Class Library project makes only a very limited subset of the types in the <xref:System.Resources> namespace available to your application, but it does allow you to use the <xref:System.Resources.ResourceManager> class to retrieve resources. 그러나 Visual Studio를 사용하여 응용 프로그램을 만들려면 <xref:System.Resources.ResourceManager> 클래스를 직접 사용하는 대신에 Visual Studio가 생성한 강력한 형식의 래퍼를 사용하여야 합니다.
 
- Visual Studio를 강력한 형식의 래퍼를 만들려면 주 리소스 파일의 설정 **액세스 한정자** Visual Studio 리소스 디자이너에서 **공용**합니다. 이를 통해 강력한 형식의 ResourceManager 래퍼를 포함하는 [resourceFileName].designer.cs 또는 [resourceFileName].designer.vb 파일을 만듭니다. 강력한 형식의 리소스 래퍼를 사용 하는 방법에 대 한 자세한 내용은의 "강력한 형식의 리소스 클래스 생성" 섹션을 참조 합니다 [Resgen.exe (리소스 파일 생성기)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) 항목입니다.
+ To create a strongly typed wrapper in Visual Studio, set the main resource file's **Access Modifier** in the Visual Studio Resource Designer to **Public**. 이를 통해 강력한 형식의 ResourceManager 래퍼를 포함하는 [resourceFileName].designer.cs 또는 [resourceFileName].designer.vb 파일을 만듭니다. For more information about using a strongly typed resource wrapper, see the "Generating a Strongly Typed Resource Class" section in the [Resgen.exe (Resource File Generator)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) topic.
 
-## <a name="resource-manager-in-the-portable-class-library"></a>이식 가능한 클래스 라이브러리의 리소스 관리자
- 이식 가능한 클래스 라이브러리 프로젝트에서 리소스에 대 한 모든 액세스에서 처리 되는 <xref:System.Resources.ResourceManager> 클래스입니다. 때문에 형식 합니다 <xref:System.Resources> 네임 스페이스와 같은 <xref:System.Resources.ResourceReader> 및 <xref:System.Resources.ResourceSet>는 액세스할 수 없는 이식 가능한 클래스 라이브러리 프로젝트에서 사용할 수 없습니다 리소스에 액세스할 수 합니다.
+## <a name="resource-manager-in-the-portable-class-library"></a>Resource Manager in the Portable Class Library
+ In a Portable Class Library project, all access to resources is handled by the <xref:System.Resources.ResourceManager> class. Because types in the <xref:System.Resources> namespace, such as <xref:System.Resources.ResourceReader> and <xref:System.Resources.ResourceSet>, are not accessible from a Portable Class Library project, they cannot be used to access resources.
 
- 이식 가능한 클래스 라이브러리 프로젝트에 네 가지 <xref:System.Resources.ResourceManager> 다음 표에 나열 된 멤버입니다. 이러한 생성자와 메서드를 사용하여 <xref:System.Resources.ResourceManager> 개체를 인스턴스화하고 문자열 리소스를 검색할 수 있습니다.
+ The Portable Class Library project includes the four <xref:System.Resources.ResourceManager> members listed in the following table. 이러한 생성자와 메서드를 사용하여 <xref:System.Resources.ResourceManager> 개체를 인스턴스화하고 문자열 리소스를 검색할 수 있습니다.
 
 |`ResourceManager` 멤버|설명|
 |------------------------------|-----------------|
@@ -42,20 +42,20 @@ ms.locfileid: "67506017"
 |<xref:System.Resources.ResourceManager.GetString%28System.String%29>|현재 문화권에 대해 명명된 리소스를 검색합니다.|
 |<xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29>|지정된 문화권에 속하는 명명된 리소스를 검색합니다.|
 
- 다른 제외 <xref:System.Resources.ResourceManager> 리소스 파일에서 이식 가능한 클래스 라이브러리는 개체, 문자열이 아닌 데이터 및 이미지를 serialize 하는 수단에서 멤버를 검색할 수 없습니다. 이식 가능한 클래스 라이브러리에서 리소스를 사용 하려면 문자열 형식의 모든 개체 데이터를 저장 해야 합니다. 예를 들어, 이를 문자열로 변환하여 리소스 파일에 숫자 값을 저장할 수 있으며 숫자 데이터 형식의 `Parse` 또는 `TryParse` 메서드를 사용하여 다시 숫자로 변환할 수 있습니다. <xref:System.Convert.ToBase64String%2A?displayProperty=nameWithType> 메서드를 호출하여 이미지 또는 기타 이진 데이터를 문자열 표현으로 변환하고 <xref:System.Convert.FromBase64String%2A?displayProperty=nameWithType> 메서드를 호출하여 바이트 배열로 복원할 수 있습니다.
+ The exclusion of other <xref:System.Resources.ResourceManager> members from the Portable Class Library means that serialized objects, non-string data, and images cannot be retrieved from a resource file. To use resources from a Portable Class Library, you should store all  object data in string form. 예를 들어, 이를 문자열로 변환하여 리소스 파일에 숫자 값을 저장할 수 있으며 숫자 데이터 형식의 `Parse` 또는 `TryParse` 메서드를 사용하여 다시 숫자로 변환할 수 있습니다. <xref:System.Convert.ToBase64String%2A?displayProperty=nameWithType> 메서드를 호출하여 이미지 또는 기타 이진 데이터를 문자열 표현으로 변환하고 <xref:System.Convert.FromBase64String%2A?displayProperty=nameWithType> 메서드를 호출하여 바이트 배열로 복원할 수 있습니다.
 
-## <a name="the-portable-class-library-and-windows-store-apps"></a>이식 가능한 클래스 라이브러리 및 Windows 스토어 앱
- 이식 가능한 클래스 라이브러리 프로젝트는 다음.resources 파일로 컴파일하고 컴파일 타임에 주 어셈블리 또는 위성 어셈블리를 포함 하는.resx 파일에 리소스를 저장 합니다. 반면에 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램은 리소스를 단일 패키지 리소스 인덱스(PRI) 파일로 컴파일되는 .resw 파일에 저장해야 합니다. 그러나 호환 되지 않는 파일 형식에도 불구 하 고 이식 가능한 클래스 라이브러리에서 작동 한 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 앱.
+## <a name="the-portable-class-library-and-windows-store-apps"></a>The Portable Class Library and Windows Store Apps
+ Portable Class Library projects store resources in .resx files, which are then compiled into .resources files and embedded in the main assembly or in satellite assemblies at compile time. Windows 8.x Store apps, on the other hand, require resources to be stored in .resw files, which are then compiled into a single package resource index (PRI) file. However, despite the incompatible file formats, your Portable Class Library will work in a Windows 8.x Store app.
 
- [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램에서 클래스 라이브러리를 사용하려면 Windows 스토어 앱 프로젝트에 이 라이브러리에 대한 참조를 추가합니다. Visual Studio.resw 파일로 어셈블리에서 리소스를 추출 하 고 Windows 런타임 리소스를 추출할 수 있는 PRI 파일을 생성 하는 데 사용할 투명 하 게 됩니다. 런타임 시 이식 가능한 클래스 라이브러리에 코드를 실행 하는 Windows 런타임 하지만 PRI 파일에서 이식 가능한 클래스 라이브러리의 리소스를 검색 합니다.
+ To consume your class library from a Windows 8.x Store app, add a reference to it in your Windows Store app project. Visual Studio will transparently extract the resources from your assembly into a .resw file and use it to generate a PRI file from which the Windows Runtime can extract resources. At run time, the Windows Runtime executes the code in your Portable Class Library, but it retrieves your Portable Class Library's resources from the PRI file.
 
- 이식 가능한 클래스 라이브러리 프로젝트에서 지역화 된 리소스를 포함 하는 경우 허브 및 스포크 모델을 사용 하 여 데스크톱 앱에서 라이브러리에 대 한 것 처럼 배포 합니다. [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램에서 주 리소스 파일과 지역화된 모든 리소스 파일을 사용하도록 주 어셈블리에 대한 참조를 추가합니다. 컴파일 타임에 Visual Studio는 주 리소스 파일 및 지역화된 리소스 파일에서 리소스를 추출하여 별도의 .resw 파일에 넣습니다. 그런 다음 실행 시 Windows 런타임에서 액세스 하는 단일 PRI 파일로.resw 파일을 컴파일합니다.
+ If your Portable Class Library project includes localized resources, you use the hub-and-spoke model to deploy them just as you would for a library in a desktop app. To consume your main resource file and any localized resource files in your Windows 8.x Store app, you add a reference to the main assembly. 컴파일 타임에 Visual Studio는 주 리소스 파일 및 지역화된 리소스 파일에서 리소스를 추출하여 별도의 .resw 파일에 넣습니다. It then compiles the .resw files into a single PRI file that the Windows Runtime accesses at run time.
 
 <a name="NonLoc"></a>
-## <a name="example-non-localized-portable-class-library"></a>예제: 지역화 되지 않은 이식 가능한 클래스 라이브러리
- 열의 이름을 저장 하 고 테이블 형식 데이터에 대 한 예약 문자 수를 확인 하려면 다음 간단 하 고 지역화 되지 않은 이식 가능한 클래스 라이브러리 예제에서는 리소스를 사용 합니다. 예제에서는 LibResources.resx라는 파일을 사용하여 다음 테이블에 나열된 문자열 리소스를 저장합니다.
+## <a name="example-non-localized-portable-class-library"></a>Example: Non-Localized Portable Class Library
+ The following simple, non-localized Portable Class Library example uses resources to store the names of columns and to determine the number of characters to reserve for tabular data. 예제에서는 LibResources.resx라는 파일을 사용하여 다음 테이블에 나열된 문자열 리소스를 저장합니다.
 
-|리소스 이름|리소스 값|
+|리소스 이름|Resource value|
 |-------------------|--------------------|
 |Born|Birthdate|
 |BornLength|12|
@@ -63,48 +63,48 @@ ms.locfileid: "67506017"
 |HiredLength|12|
 |ID|ID|
 |ID.Length|12|
-|이름|이름|
+|name|name|
 |NameLength|25|
 |제목|직원 데이터베이스|
 
- 다음 코드는 정의 `UILibrary` 라는 리소스 관리자 래퍼를 사용 하는 클래스 `resources` Visual Studio에서 생성 된 때를 **액세스 한정자** 파일에 변경 된 **공개** . UILibrary 클래스는 필요에 따라 문자열 데이터를 구문 분석합니다. . 클래스는 `MyCompany.Employees` 네임스페이스에 있습니다.
+ The following code defines a `UILibrary` class that uses the Resource Manager wrapper named `resources` generated by Visual Studio when the **Access Modifier** for the file is changed to **Public**. UILibrary 클래스는 필요에 따라 문자열 데이터를 구문 분석합니다. 이어야 합니다. 클래스는 `MyCompany.Employees` 네임스페이스에 있습니다.
 
  [!code-csharp[Conceptual.Resources.Portable#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portable/cs/uilibrary.cs#1)]
  [!code-vb[Conceptual.Resources.Portable#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portable/vb/uilibrary.vb#1)]
 
- 다음 코드는 `UILibrary` 클래스와 해당 리소스를 콘솔 모드 응용 프로그램에서 액세스하는 방법을 보여 줍니다. 콘솔 앱 프로젝트에 추가 하려면 uilibrary.dll 대 한 참조가 필요 합니다.
+ 다음 코드는 `UILibrary` 클래스와 해당 리소스를 콘솔 모드 응용 프로그램에서 액세스하는 방법을 보여 줍니다. It requires a reference to UILibrary.dll to be added to the console app project.
 
  [!code-csharp[Conceptual.Resources.Portable#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portable/cs/program.cs#2)]
  [!code-vb[Conceptual.Resources.Portable#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portable/vb/module1.vb#2)]
 
- 다음 코드는 `UILibrary` 클래스와 해당 리소스를 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램에서 액세스하는 방법을 보여줍니다. Windows 스토어 앱 프로젝트에 추가 하려면 uilibrary.dll 대 한 참조가 필요 합니다.
+ The following code illustrates how the `UILibrary` class and its resources can be accessed from a Windows 8.x Store app. It requires a reference to UILibrary.dll to be added to the Windows Store app project.
 
  [!code-csharp[Conceptual.Resources.PortableMetro#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portablemetro/cs/blankpage.xaml.cs#1)]
 
-## <a name="example-localized-portable-class-library"></a>예제: 지역화 된 이식 가능한 클래스 라이브러리
- 다음 지역화 된 이식 가능한 클래스 라이브러리 예제에서는 프랑스어 (프랑스) 및 영어 (미국) 문화권에 대 한 리소스가 포함 됩니다. 영어 (미국) 문화권은 앱의 기본 문화권; 해당 리소스의 표에 표시 됩니다는 [이전 섹션](../../../docs/standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md#NonLoc)합니다. 프랑스어(프랑스) 문화권의 리소스 이름은 LibResources.fr-FR.resx라고 하며 다음 표에 나열된 문자열 리소스로 구성됩니다. `UILibrary` 클래스의 소스 코드는 이전 단원에 나와 있는 것과 동일합니다.
+## <a name="example-localized-portable-class-library"></a>Example: Localized Portable Class Library
+ The following localized Portable Class Library example includes resources for the French (France) and English (United States) cultures. The English (United States) culture is the app's default culture; its resources are shown in the table in the [previous section](../../../docs/standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md#NonLoc). 프랑스어(프랑스) 문화권의 리소스 이름은 LibResources.fr-FR.resx라고 하며 다음 표에 나열된 문자열 리소스로 구성됩니다. `UILibrary` 클래스의 소스 코드는 이전 단원에 나와 있는 것과 동일합니다.
 
-|리소스 이름|리소스 값|
+|리소스 이름|Resource value|
 |-------------------|--------------------|
 |Born|Date de naissance|
 |BornLength|20|
 |Hired|Date embauché|
 |HiredLength|16|
 |ID|ID|
-|이름|Nom|
+|name|Nom|
 |제목|Base de données des employés|
 
- 다음 코드는 `UILibrary` 클래스와 해당 리소스를 콘솔 모드 응용 프로그램에서 액세스하는 방법을 보여 줍니다. 콘솔 앱 프로젝트에 추가 하려면 uilibrary.dll 대 한 참조가 필요 합니다.
+ 다음 코드는 `UILibrary` 클래스와 해당 리소스를 콘솔 모드 응용 프로그램에서 액세스하는 방법을 보여 줍니다. It requires a reference to UILibrary.dll to be added to the console app project.
 
  [!code-csharp[Conceptual.Resources.Portable#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portable/cs/program2.cs#3)]
  [!code-vb[Conceptual.Resources.Portable#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portable/vb/module2.vb#3)]
 
- 다음 코드는 `UILibrary` 클래스와 해당 리소스를 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램에서 액세스하는 방법을 보여줍니다. Windows 스토어 앱 프로젝트에 추가 하려면 uilibrary.dll 대 한 참조가 필요 합니다. 정적 `ApplicationLanguages.PrimaryLanguageOverride` 속성을 사용하여 응용 프로그램의 기본 설정 언어를 프랑스어로 설정합니다.
+ The following code illustrates how the `UILibrary` class and its resources can be accessed from a Windows 8.x Store app. It requires a reference to UILibrary.dll to be added to the Windows Store app project. 정적 `ApplicationLanguages.PrimaryLanguageOverride` 속성을 사용하여 응용 프로그램의 기본 설정 언어를 프랑스어로 설정합니다.
 
  [!code-csharp[Conceptual.Resources.PortableMetroLoc#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portablemetroloc/cs/blankpage.xaml.cs#1)]
  [!code-vb[Conceptual.Resources.PortableMetroLoc#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portablemetroloc/vb/blankpage.xaml.vb#1)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Resources.ResourceManager>
 - [데스크톱 앱의 리소스](../../../docs/framework/resources/index.md)

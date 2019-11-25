@@ -1,13 +1,13 @@
 ---
-title: 특성 개요(Visual Basic)
+title: Attributes overview
 ms.date: 07/20/2015
 ms.assetid: 1449f69b-c063-41de-8d89-f0bbdcf96ac6
-ms.openlocfilehash: 15ed2f1437ca23b5780f1f8974204d46d93a86c1
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 97a2a13102718b6ee8829fca678b2b49df21e5d1
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582107"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349491"
 ---
 # <a name="attributes-overview-visual-basic"></a>특성 개요(Visual Basic)
 
@@ -112,9 +112,9 @@ Module: CLSCompliant(True)>
 
 다음 목록에는 코드에서 특성이 사용되는 일반적인 경우가 나와 있습니다.
 
-- SOAP 프로토콜을 통해 메서드를 호출할 수 있음을 나타내기 위해 웹 서비스에서 `WebMethod` 특성을 사용하여 메서드에 표시. 자세한 내용은 <xref:System.Web.Services.WebMethodAttribute>을 참조하십시오.
+- SOAP 프로토콜을 통해 메서드를 호출할 수 있음을 나타내기 위해 웹 서비스에서 `WebMethod` 특성을 사용하여 메서드에 표시. 자세한 내용은 <xref:System.Web.Services.WebMethodAttribute>를 참조하세요.
 
-- 네이티브 코드와 상호 운용될 경우 메서드 매개 변수를 마샬링하는 방법 설명. 자세한 내용은 <xref:System.Runtime.InteropServices.MarshalAsAttribute>을 참조하십시오.
+- 네이티브 코드와 상호 운용될 경우 메서드 매개 변수를 마샬링하는 방법 설명. 자세한 내용은 <xref:System.Runtime.InteropServices.MarshalAsAttribute>를 참조하세요.
 
 - 클래스, 메서드 및 인터페이스에 대한 COM 속성 설명
 

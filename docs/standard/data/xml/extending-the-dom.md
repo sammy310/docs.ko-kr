@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: b5489c96-4afd-439a-a25d-fc82eb4a148d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ced76a0bb28a91824676f496b28143a921b987de
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: 3224250b08a780b87b9b7f96547830b0563daadf
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559500"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351948"
 ---
 # <a name="extending-the-dom"></a>DOM 확장
 
@@ -127,7 +127,6 @@ class LineInfoElement : XmlElement, IXmlLineInfo {
 다음 예제에서는 XML 문서의 요소 수를 계산합니다.
 
 ```vb
-Imports System
 Imports System.Xml
 Imports System.IO
 
@@ -235,7 +234,7 @@ book.xml
 </book>
 ```
 
-#### <a name="output"></a>출력
+#### <a name="output"></a>Output
 
 ```console
 Number of elements in book.xml: 3
@@ -253,6 +252,6 @@ Number of elements in book.xml: 3
 
 파생 클래스에서 <xref:System.Xml.XmlDocument.CreateElement%2A> 메서드를 재정의하면 문서를 편집하면서 새 요소를 만들 때 기본 특성이 추가되지 않습니다. 이것은 편집하는 동안에만 발생하는 문제입니다. <xref:System.Xml.XmlDocument.CreateElement%2A> 메서드는 <xref:System.Xml.XmlDocument>에 기본 특성을 추가하는 기능을 수행하므로 <xref:System.Xml.XmlDocument.CreateElement%2A> 메서드에 이 기능을 수행하는 코드를 추가해야 합니다. 기본 특성을 포함한 <xref:System.Xml.XmlDocument>를 로드하면 해당 문서는 올바르게 처리됩니다. 기본 특성에 대한 자세한 내용은 [DOM에서 요소의 새 특성 만들기](creating-new-attributes-for-elements-in-the-dom.md)를 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [XML DOM(문서 개체 모델)](xml-document-object-model-dom.md)

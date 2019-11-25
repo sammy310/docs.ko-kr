@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuration [WCF]
 ms.assetid: beac771e-f28e-4f84-9ff1-ad9251c726d3
-ms.openlocfilehash: 4fcf01c9f65f2b1bd11462a6f7d61b3551f37b86
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 332a88530010197187ca3ea787e152b0c95a5514
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320655"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141590"
 ---
 # <a name="configuring-wcf-services"></a>WCF 서비스 구성
 
@@ -19,7 +19,7 @@ ms.locfileid: "72320655"
   
 ## <a name="in-this-section"></a>단원 내용  
  [단순화된 구성](simplified-configuration.md)  
- @No__t_0부터 WCF에는 WCF 구성 요구 사항을 간소화 하는 새로운 기본 구성 모델이 함께 제공 됩니다. 특정 서비스에 대 한 WCF 구성을 제공 하지 않으면 런타임에서 기본 끝점, 바인딩 및 동작을 사용 하 여 서비스를 자동으로 구성 합니다.  
+ .NET Framework 4부터 WCF는 WCF 구성 요구 사항을 간소화 하는 새로운 기본 구성 모델과 함께 제공 됩니다. 특정 서비스에 대 한 WCF 구성을 제공 하지 않으면 런타임에서 기본 끝점, 바인딩 및 동작을 사용 하 여 서비스를 자동으로 구성 합니다.  
   
  [구성 파일을 사용하여 서비스 구성](configuring-services-using-configuration-files.md)  
  WCF (Windows Communication Foundation) 서비스는 .NET Framework 구성 기술을 사용 하 여 구성할 수 있습니다. 가장 일반적으로 XML 요소는 WCF 서비스를 호스팅하는 인터넷 정보 서비스 (IIS) 사이트의 web.config 파일에 추가 됩니다. 이 요소를 사용하여 엔드포인트 주소(서비스와의 통신에 사용되는 실제 주소) 등의 세부 사항을 컴퓨터별로 변경할 수 있습니다.  

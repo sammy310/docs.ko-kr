@@ -1,16 +1,16 @@
 ---
-title: 특수 문자 (Visual Basic 참조)
+title: 특수 문자
 ms.date: 10/31/2017
-ms.openlocfilehash: 7085c020cc21b0ca8b3fc46226c864d736ab0085
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 07522ae43c40af5be844d873159a4f54a15f90e8
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582374"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349600"
 ---
-# <a name="special-characters-visual-basic-reference"></a>특수 문자 (Visual Basic 참조)
+# <a name="special-characters-visual-basic-reference"></a>Special Characters (Visual Basic Reference)
 
-특수 문자는 앞에 있는 프로그램 요소를 수정 하는 미리 정의 된 상황별 문자입니다. Visual Basic는 다음과 같은 특수 문자를 지원 합니다.
+Special characters are predefined, contextual characters that modifies the program element to which they are prepended. Visual Basic supports the following special character:
 
 - [$](interpolated.md), 보간된 문자열 문자입니다.
 

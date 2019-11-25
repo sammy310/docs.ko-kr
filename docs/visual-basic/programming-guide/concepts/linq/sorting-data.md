@@ -1,15 +1,15 @@
 ---
-title: 데이터 정렬 (Visual Basic)
+title: 데이터 정렬
 ms.date: 07/20/2015
 ms.assetid: 6f81065c-0c89-4bf3-a6d8-442273f8810e
-ms.openlocfilehash: f8b1734597efa3134c95c9764bad7f79fd3cf1e4
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: f1d4d8afb9b6e176a7ac048ba3270ecafdce24c9
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524075"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350596"
 ---
-# <a name="sorting-data-visual-basic"></a>데이터 정렬 (Visual Basic)
+# <a name="sorting-data-visual-basic"></a>Sorting Data (Visual Basic)
 
 정렬 작업은 하나 이상의 특성을 기준으로 시퀀스의 요소를 정렬합니다. 첫 번째 정렬 기준은 요소에 대해 기본 정렬을 수행합니다. 두 번째 정렬 기준을 지정하면 각 기본 정렬 그룹 내의 요소를 정렬할 수 있습니다.
 
@@ -21,7 +21,7 @@ ms.locfileid: "72524075"
 
 ## <a name="methods"></a>메서드
 
-|메서드 이름|설명|Visual Basic 쿼리 식 구문|추가 정보|
+|메서드 이름|설명|Visual Basic Query Expression Syntax|추가 정보|
 |-----------------|-----------------|------------------------------------------|----------------------|
 |OrderBy|값을 오름차순으로 정렬합니다.|`Order By`|<xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OrderBy%2A?displayProperty=nameWithType>|
 |OrderByDescending|값을 내림차순으로 정렬합니다.|`Order By … Descending`|<xref:System.Linq.Enumerable.OrderByDescending%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OrderByDescending%2A?displayProperty=nameWithType>|
@@ -153,4 +153,4 @@ MsgBox(sb.ToString())
 - [표준 쿼리 연산자 개요(Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Order By 절](../../../../visual-basic/language-reference/queries/order-by-clause.md)
 - [방법: 쿼리 결과 정렬](../../../../visual-basic/programming-guide/language-features/linq/how-to-sort-query-results-by-using-linq.md)
-- [방법: 단어 또는 필드에 따라 텍스트 데이터 정렬 또는 필터링 (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)
+- [How to: Sort or Filter Text Data by Any Word or Field (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)

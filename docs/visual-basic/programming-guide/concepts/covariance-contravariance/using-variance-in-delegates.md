@@ -1,21 +1,21 @@
 ---
-title: 대리자의 가변성 사용 (Visual Basic)
+title: 대리자에서 가변성 사용
 ms.date: 07/20/2015
 ms.assetid: 7b5c20f1-6416-46a3-94b6-f109c31c842c
-ms.openlocfilehash: ebba7e862e1b4677d9438aa301ef2b713fba3712
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: 9c2aad0e4b9408939600938412fe5c3e73b5bf15
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70169074"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349024"
 ---
-# <a name="using-variance-in-delegates-visual-basic"></a>대리자의 가변성 사용 (Visual Basic)
+# <a name="using-variance-in-delegates-visual-basic"></a>Using Variance in Delegates (Visual Basic)
 
 메서드를 대리자에 할당하면 *공변성(covariance)* 및 *반공변성(Contravariance)* 은 대리자 형식과 메서드 시그니처의 일치를 확인하는 유연성을 제공합니다. 공변성(covariance)은 메서드가 대리자에 정의된 것보다 더 많은 수의 파생된 형식을 반환하도록 허용합니다. 반공변성(contravariance)은 메서드가 대리자 형식보다 더 적은 수의 파생된 매개 변수 형식을 갖도록 허용합니다.
 
-## <a name="example-1-covariance"></a>예제 1: 공변성
+## <a name="example-1-covariance"></a>예제 1: 공변성(Covariance)
 
-### <a name="description"></a>Description
+### <a name="description"></a>설명
 
 이 예제에서는 대리자를 대리자 시그니처의 반환 형식에서 파생된 반환 형식이 있는 메서드와 함께 사용하는 방법을 보여 줍니다. `DogsHandler`에서 반환된 데이터 형식은 `Dogs`이고, 이 형식은 대리자에 정의된 `Mammals` 형식에서 파생됩니다.
 
@@ -44,9 +44,9 @@ Class Test
 End Class
 ```
 
-## <a name="example-2-contravariance"></a>예제 2: 반공변성(contravariance)
+## <a name="example-2-contravariance"></a>예제 2: 반공변성(Contravariance)
 
-### <a name="description"></a>Description
+### <a name="description"></a>설명
 
 이 예제에서는 대리자를 대리자 시그니처 매개 변수 형식의 기본 형식을 사용하는 매개 변수를 가지고 있는 메서드와 함께 사용하는 방법을 보여 줍니다. 반공변성(contravariance)에서는 별도의 여러 처리기 대신 하나의 이벤트 처리기를 사용할 수 있습니다. 다음 예제는 두 개의 대리자를 사용합니다.
 
@@ -86,7 +86,7 @@ Private Sub Form1_Load(ByVal sender As System.Object,
 End Sub
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [대리자의 가변성(Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)
 - [Func 및 Action 제네릭 대리자에 가변성 사용(Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)

@@ -1,5 +1,5 @@
 ---
-title: 인터페이스(Visual Basic)
+title: 인터페이스
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic code, interfaces
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - interfaces
 - interfaces [Visual Basic]
 ms.assetid: 61b06674-12c9-430b-be68-cc67ecee1f5b
-ms.openlocfilehash: 968e5d9bb08f168e3c77b40ea42b16dc66e93e64
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 619aa6695db756e56a836fd76693cc8a3976f8e2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69956292"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345049"
 ---
 # <a name="interfaces-visual-basic"></a>인터페이스(Visual Basic)
 *인터페이스*는 클래스가 구현할 수 있는 속성, 메서드 및 이벤트를 정의합니다. 인터페이스를 사용하면 기능을 밀접한 관련이 있는 속성, 메서드, 이벤트 등의 작은 그룹으로 정의할 수 있습니다. 이렇게 하면 기존 코드를 그대로 사용하여 인터페이스에 대한 고급 구현을 개발할 수 있기 때문에 호환성 문제가 줄어듭니다. 추가적인 인터페이스와 구현을 개발하여 언제든지 새로운 기능을 추가할 수 있습니다.  
@@ -40,13 +40,13 @@ ms.locfileid: "69956292"
  [!code-vb[VbVbalrOOP#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#17)]  
   
 ## <a name="implementing-interfaces"></a>인터페이스 구현  
- Visual Basic 예약어 `Implements` 는 두 가지 방법으로 사용 됩니다. `Implements` 문은 클래스 또는 구조체가 인터페이스를 구현한다는 것을 나타냅니다. `Implements` 키워드는 클래스 멤버 또는 구조체 멤버가 특정 인터페이스 멤버를 구현한다는 것을 나타냅니다.  
+ The Visual Basic reserved word `Implements` is used in two ways. `Implements` 문은 클래스 또는 구조체가 인터페이스를 구현한다는 것을 나타냅니다. `Implements` 키워드는 클래스 멤버 또는 구조체 멤버가 특정 인터페이스 멤버를 구현한다는 것을 나타냅니다.  
   
 ### <a name="implements-statement"></a>Implements 문  
  하나 이상의 인터페이스를 구현하는 클래스 또는 구조체에는 `Class` 또는 `Structure` 문 바로 다음에 `Implements`문이 나와야 합니다. `Implements` 문에는 클래스에 의해 구현될 인터페이스를 나열한, 쉼표로 구분된 목록이 필요합니다. 클래스 또는 구조체는 `Implements` 키워드를 사용하여 모든 인터페이스 멤버를 구현해야 합니다.  
   
 ### <a name="implements-keyword"></a>Implements 키워드  
- `Implements` 키워드에는 구현될 인터페이스 멤버를 나열한, 쉼표로 구분된 목록이 필요합니다. 일반적으로 단일 인터페이스 멤버만 지정되지만 여러 멤버를 지정할 수도 있습니다. 인터페이스 멤버의 사양은 인터페이스 이름(클래스 내의 implements 문에서 지정해야 함)과 기간 및 구현할 멤버 함수, 속성 또는 이벤트의 이름으로 구성됩니다. 인터페이스 멤버를 구현 하는 멤버의 이름에는 유효한 식별자를 사용할 수 있으며 이전 버전의 Visual Basic에 사용 `InterfaceName_MethodName` 되는 규칙으로 제한 되지 않습니다.  
+ `Implements` 키워드에는 구현될 인터페이스 멤버를 나열한, 쉼표로 구분된 목록이 필요합니다. 일반적으로 단일 인터페이스 멤버만 지정되지만 여러 멤버를 지정할 수도 있습니다. 인터페이스 멤버의 사양은 인터페이스 이름(클래스 내의 implements 문에서 지정해야 함)과 기간 및 구현할 멤버 함수, 속성 또는 이벤트의 이름으로 구성됩니다. The name of a member that implements an interface member can use any legal identifier, and it is not limited to the `InterfaceName_MethodName` convention used in earlier versions of Visual Basic.  
   
  예를 들어 다음 코드에서는 인터페이스의 메서드를 구현하는 `Sub1`이라는 서브루틴을 선언하는 방법을 보여 줍니다.  
   

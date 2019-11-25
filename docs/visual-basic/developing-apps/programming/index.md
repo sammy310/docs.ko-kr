@@ -1,21 +1,23 @@
 ---
-title: Visual Basic의 프로그래밍
+title: 프로그래밍
 ms.date: 07/20/2015
 helpviewer_keywords:
 - programming [Visual Basic], Visual Basic
 - programming
 ms.assetid: bc45a3de-ea36-46e6-a106-309a413d7804
-ms.openlocfilehash: 68c200b3e47a0f96963e5872c854633a7c24e938
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 048bc70c2b5416d4377c5abcfdaf18a9312068db
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423982"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352111"
 ---
 # <a name="programming-in-visual-basic"></a>Visual Basic의 프로그래밍
+
 이 섹션에서는 Visual Basic 애플리케이션을 만들 때 배우면 도움이 될 수 있는 프로그래밍 작업에 대해 설명합니다.  
   
 ## <a name="in-this-section"></a>단원 내용  
+
  [컴퓨터 리소스에 액세스](../../../visual-basic/developing-apps/programming/computer-resources/index.md)  
  `My.Computer` 개체를 사용하여 애플리케이션이 실행되는 컴퓨터에 대한 정보에 액세스하는 방법과 컴퓨터를 제어하는 방법에 대한 설명서를 포함합니다.  
   

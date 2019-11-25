@@ -13,12 +13,12 @@ helpviewer_keywords:
 - managing control states [WPF], VisualStateManager
 - VisualStateManager [WPF], best practice
 ms.assetid: 9e356d3d-a3d0-4b01-a25f-2d43e4d53fe5
-ms.openlocfilehash: c98035ef0b4ea1add22b09fb9927bcd49c00cd9b
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: d9cf092cf47d4fb70b15033d039777d3279b633a
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920038"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283568"
 ---
 # <a name="creating-a-control-that-has-a-customizable-appearance"></a>사용자 지정 가능한 모양이 있는 컨트롤 만들기
 
@@ -36,9 +36,9 @@ ms.locfileid: "72920038"
 ![NumericUpDown 사용자 지정 컨트롤입니다.](./media/ndp-numericupdown.png "NDP_NumericUPDown")
 사용자 지정 NumericUpDown 컨트롤입니다.
 
-이 항목에는 다음과 같은 단원이 포함되어 있습니다.
+이 항목에는 다음과 같은 섹션이 포함되어 있습니다.
 
-- [전제 조건](#prerequisites)
+- [필수 구성 요소](#prerequisites)
 
 - [파트 및 상태 모델](#parts_and_states_model)
 
@@ -52,9 +52,9 @@ ms.locfileid: "72920038"
 
 <a name="prerequisites"></a>
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>전제 조건
 
-이 항목에서는 기존 컨트롤에 대 한 새 <xref:System.Windows.Controls.ControlTemplate>을 만드는 방법, 컨트롤 계약의 요소에 대해 잘 알고 있다고 가정 하 고, [를 만들어 기존 컨트롤의 모양 사용자 지정에 설명 된 개념을 이해 하 고 있다고 가정 합니다. ControlTemplate](customizing-the-appearance-of-an-existing-control.md).
+이 항목에서는 기존 컨트롤에 대 한 새 <xref:System.Windows.Controls.ControlTemplate>을 만드는 방법, 컨트롤 계약의 요소에 대해 잘 알고 있다고 가정 하 고, [컨트롤에 대 한 템플릿 만들기](../../../desktop-wpf/themes/how-to-create-apply-template.md)에 설명 된 개념을 이해 하 고 있다고 가정 합니다.
 
 > [!NOTE]
 > 모양을 사용자 지정 하는 컨트롤을 만들려면 <xref:System.Windows.Controls.Control> 클래스 또는 <xref:System.Windows.Controls.UserControl>이외의 하위 클래스 중 하나에서 상속 되는 컨트롤을 만들어야 합니다.  <xref:System.Windows.Controls.UserControl>에서 상속 되는 컨트롤은 빠르게 만들 수 있는 컨트롤이 며 <xref:System.Windows.Controls.ControlTemplate>를 사용 하지 않으며 모양을 사용자 지정할 수 없습니다.
@@ -77,7 +77,7 @@ ms.locfileid: "72920038"
 
 ## <a name="defining-the-visual-structure-and-visual-behavior-of-a-control-in-a-controltemplate"></a>ControlTemplate에서 컨트롤의 시각적 구조 및 시각적 동작 정의
 
-파트 및 상태 모델을 사용 하 여 사용자 지정 컨트롤을 만드는 경우 컨트롤의 시각적 구조와 시각적 동작을 논리 대신 <xref:System.Windows.Controls.ControlTemplate> 정의 합니다.  컨트롤의 시각적 구조는 컨트롤을 구성 하는 <xref:System.Windows.FrameworkElement> 개체의 복합입니다.  시각적 동작은 컨트롤이 특정 상태에 있을 때 표시 되는 방법입니다.   컨트롤의 시각적 구조 및 시각적 동작을 지정 하는 <xref:System.Windows.Controls.ControlTemplate>을 만드는 방법에 대 한 자세한 내용은 [ControlTemplate를 만들어 기존 컨트롤의 모양 사용자 지정](customizing-the-appearance-of-an-existing-control.md)을 참조 하세요.
+파트 및 상태 모델을 사용 하 여 사용자 지정 컨트롤을 만드는 경우 컨트롤의 시각적 구조와 시각적 동작을 논리 대신 <xref:System.Windows.Controls.ControlTemplate> 정의 합니다.  컨트롤의 시각적 구조는 컨트롤을 구성 하는 <xref:System.Windows.FrameworkElement> 개체의 복합입니다.  시각적 동작은 컨트롤이 특정 상태에 있을 때 표시 되는 방법입니다.   컨트롤의 시각적 구조 및 시각적 동작을 지정 하는 <xref:System.Windows.Controls.ControlTemplate>을 만드는 방법에 대 한 자세한 내용은 [컨트롤에 대 한 템플릿 만들기](../../../desktop-wpf/themes/how-to-create-apply-template.md)를 참조 하세요.
 
 `NumericUpDown` 컨트롤의 예제에서 시각적 구조는 두 개의 <xref:System.Windows.Controls.Primitives.RepeatButton> 컨트롤과 <xref:System.Windows.Controls.TextBlock>를 포함 합니다.  예를 들어 `NumericUpDown` 컨트롤의 코드에 이러한 컨트롤을 추가 하는 경우 해당 컨트롤의 위치는 변경할 수 없습니다 됩니다.  코드에서 컨트롤의 시각적 구조와 시각적 동작을 정의 하는 대신 <xref:System.Windows.Controls.ControlTemplate>에서 정의 해야 합니다.  그런 다음 응용 프로그램 개발자가 단추 및 <xref:System.Windows.Controls.TextBlock>의 위치를 사용자 지정 하 고 <xref:System.Windows.Controls.ControlTemplate>를 바꿀 수 있으므로 `Value`가 음수인 경우 발생 하는 동작을 지정 합니다.
 
@@ -85,7 +85,7 @@ ms.locfileid: "72920038"
 
 [!code-xaml[VSMCustomControl#VisualStructure](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/window1.xaml#visualstructure)]
 
-`NumericUpDown` 컨트롤의 시각적 동작은 값이 음수인 경우 빨간색 글꼴로 표시 된다는 것입니다.  `Value`가 음수인 경우 코드에서 <xref:System.Windows.Controls.TextBlock>의 <xref:System.Windows.Controls.TextBlock.Foreground%2A> 변경 하면 `NumericUpDown`는 항상 빨강 음수 값을 표시 합니다. <xref:System.Windows.Controls.ControlTemplate>에 <xref:System.Windows.VisualState> 개체를 추가 하 여 <xref:System.Windows.Controls.ControlTemplate>에서 컨트롤의 시각적 동작을 지정 합니다.  다음 예제에서는 `Positive` 및 `Negative` 상태에 대 한 <xref:System.Windows.VisualState> 개체를 보여 줍니다.  `Positive` 및 `Negative`는 함께 사용할 수 없습니다. 즉, 컨트롤이 항상 두 항목 중 하나에 있으므로이 예제에서는 <xref:System.Windows.VisualState> 개체를 단일 <xref:System.Windows.VisualStateGroup>에 배치 합니다.  컨트롤이 `Negative` 상태로 들어가면 <xref:System.Windows.Controls.TextBlock>의 <xref:System.Windows.Controls.TextBlock.Foreground%2A> 빨간색으로 바뀝니다.  컨트롤이 `Positive` 상태 이면 <xref:System.Windows.Controls.TextBlock.Foreground%2A> 원래 값으로 돌아갑니다.  [ControlTemplate를 만들어 기존 컨트롤의 모양을 사용자 지정 하는 방법에 대](customizing-the-appearance-of-an-existing-control.md)한 자세한 내용은 <xref:System.Windows.Controls.ControlTemplate> <xref:System.Windows.VisualState> 개체를 정의 합니다.
+`NumericUpDown` 컨트롤의 시각적 동작은 값이 음수인 경우 빨간색 글꼴로 표시 된다는 것입니다.  `Value`가 음수인 경우 코드에서 <xref:System.Windows.Controls.TextBlock>의 <xref:System.Windows.Controls.TextBlock.Foreground%2A> 변경 하면 `NumericUpDown`는 항상 빨강 음수 값을 표시 합니다. <xref:System.Windows.Controls.ControlTemplate>에 <xref:System.Windows.VisualState> 개체를 추가 하 여 <xref:System.Windows.Controls.ControlTemplate>에서 컨트롤의 시각적 동작을 지정 합니다.  다음 예제에서는 `Positive` 및 `Negative` 상태에 대 한 <xref:System.Windows.VisualState> 개체를 보여 줍니다.  `Positive` 및 `Negative`는 함께 사용할 수 없습니다. 즉, 컨트롤이 항상 두 항목 중 하나에 있으므로이 예제에서는 <xref:System.Windows.VisualState> 개체를 단일 <xref:System.Windows.VisualStateGroup>에 배치 합니다.  컨트롤이 `Negative` 상태로 들어가면 <xref:System.Windows.Controls.TextBlock>의 <xref:System.Windows.Controls.TextBlock.Foreground%2A> 빨간색으로 바뀝니다.  컨트롤이 `Positive` 상태 이면 <xref:System.Windows.Controls.TextBlock.Foreground%2A> 원래 값으로 돌아갑니다.  <xref:System.Windows.Controls.ControlTemplate>에서 <xref:System.Windows.VisualState> 개체 정의는 [컨트롤에 대 한 템플릿 만들기](../../../desktop-wpf/themes/how-to-create-apply-template.md)에서 자세히 설명 합니다.
 
 > [!NOTE]
 > <xref:System.Windows.Controls.ControlTemplate>의 루트 <xref:System.Windows.FrameworkElement>에 연결 된 <xref:System.Windows.VisualStateManager.VisualStateGroups%2A?displayProperty=nameWithType> 속성을 설정 해야 합니다.
@@ -143,9 +143,9 @@ ms.locfileid: "72920038"
 [!code-csharp[VSMCustomControl#ValueStateChange](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/numericupdown.cs#valuestatechange)]
 [!code-vb[VSMCustomControl#ValueStateChange](~/samples/snippets/visualbasic/VS_Snippets_Wpf/vsmcustomcontrol/visualbasic/numericupdown.vb#valuestatechange)]
 
-<xref:System.Windows.VisualStateManager.GoToState%2A> 메서드는 스토리 보드를 적절 하 게 시작 및 중지 하는 데 필요한 논리를 수행 합니다. 컨트롤에서 <xref:System.Windows.VisualStateManager.GoToState%2A>를 호출 하 여 해당 상태를 변경 하는 경우 <xref:System.Windows.VisualStateManager>는 다음을 수행 합니다.
+<xref:System.Windows.VisualStateManager.GoToState%2A> 메서드는 스토리 보드를 적절 하 게 시작 및 중지 하는 데 필요한 논리를 수행 합니다. 컨트롤을 호출 하는 경우 <xref:System.Windows.VisualStateManager.GoToState%2A> 해당 상태를 변경 하는 <xref:System.Windows.VisualStateManager> 다음을 수행 합니다.
 
-- 컨트롤에 <xref:System.Windows.Media.Animation.Storyboard>있는 <xref:System.Windows.VisualState> 있으면 storyboard가 시작 됩니다. 그런 다음 컨트롤에 포함 된 <xref:System.Windows.VisualState>에 <xref:System.Windows.Media.Animation.Storyboard>있으면 storyboard가 종료 됩니다.
+- 컨트롤에 <xref:System.Windows.Media.Animation.Storyboard>있는 <xref:System.Windows.VisualState> 있으면 storyboard가 시작 됩니다. 그런 다음 경우는 <xref:System.Windows.VisualState> 가 컨트롤에서 제공 되는 <xref:System.Windows.Media.Animation.Storyboard>, 스토리 보드 끝입니다.
 
 - 컨트롤이 이미 지정 된 상태에 있는 경우 <xref:System.Windows.VisualStateManager.GoToState%2A> 작업을 수행 하지 않고 `true`을 반환 합니다.
 
@@ -168,7 +168,7 @@ ms.locfileid: "72920038"
 
 컨트롤이 이미 해당 <xref:System.Windows.VisualStateManager.GoToState%2A> 상태에 있는 경우 상태 이름을 <xref:System.Windows.VisualStateManager.GoToState%2A>에 전달 하는 경우에는 아무 작업도 수행 하지 않으므로 컨트롤의 현재 상태를 확인할 필요가 없습니다.  예를 들어 `Value` 음수에서 다른 음수로 변경 하는 경우 `Negative` 상태의 storyboard는 중단 되지 않으며 사용자가 컨트롤의 변경 내용을 볼 수 없습니다.
 
-<xref:System.Windows.VisualStateManager>은 <xref:System.Windows.VisualStateGroup> 개체를 사용 하 여 <xref:System.Windows.VisualStateManager.GoToState%2A>를 호출할 때 종료할 상태를 결정 합니다. 컨트롤은 <xref:System.Windows.Controls.ControlTemplate>에 정의 된 각 <xref:System.Windows.VisualStateGroup>에 대해 항상 한 가지 상태 이며 동일한 <xref:System.Windows.VisualStateGroup>에서 다른 상태로 전환 되는 경우에만 상태를 유지 합니다. 예를 들어 `NumericUpDown` 컨트롤의 <xref:System.Windows.Controls.ControlTemplate>는 한<xref:System.Windows.VisualState>의 `Positive` 및 `Negative`<xref:System.Windows.VisualStateGroup> 개체를 정의 하 고 `Focused` 개체와 `Unfocused`개체를 서로<xref:System.Windows.VisualState> 합니다. (컨트롤이 `Positive` 상태에서 `Negative` 상태로 이동 하거나 그 반대로 이동 하는 경우이 항목의 [전체 예제](#complete_example) 단원에 정의 된 `Focused` 및<xref:System.Windows.VisualState> `Unfocused`를 확인할 수 있습니다. 컨트롤은 `Focused` 또는 `Unfocused`에 유지 됩니다. 상태일.
+<xref:System.Windows.VisualStateManager>은 <xref:System.Windows.VisualStateGroup> 개체를 사용 하 여 <xref:System.Windows.VisualStateManager.GoToState%2A>를 호출할 때 종료할 상태를 결정 합니다. 컨트롤은 <xref:System.Windows.Controls.ControlTemplate>에 정의 된 각 <xref:System.Windows.VisualStateGroup>에 대해 항상 한 가지 상태 이며 동일한 <xref:System.Windows.VisualStateGroup>에서 다른 상태로 전환 되는 경우에만 상태를 유지 합니다. 예를 들어 `NumericUpDown` 컨트롤의 <xref:System.Windows.Controls.ControlTemplate>는 한 <xref:System.Windows.VisualState>의 `Positive` 및 `Negative`<xref:System.Windows.VisualStateGroup> 개체를 정의 하 고 `Focused` 개체와 `Unfocused`개체를 서로 <xref:System.Windows.VisualState> 합니다. (컨트롤이 `Positive` 상태에서 `Negative` 상태로 이동 하거나 그 반대로 이동 하는 경우이 항목의 [전체 예제](#complete_example) 단원에 정의 된 `Focused` 및 <xref:System.Windows.VisualState> `Unfocused`를 확인할 수 있습니다. 컨트롤은 `Focused` 또는 `Unfocused` 상태로 유지 됩니다.
 
 컨트롤의 상태가 변경 될 수 있는 세 가지 일반적인 위치는 다음과 같습니다.
 
@@ -248,12 +248,12 @@ ms.locfileid: "72920038"
 
 [!code-xaml[VSMCustomControl#NUDTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/themes/generic.xaml#nudtemplate)]
 
-다음 예에서는 `NumericUpDown`에 대 한 논리를 보여 줍니다.
+다음 예제에 대 한 논리는 `NumericUpDown`합니다.
 
 [!code-csharp[VSMCustomControl#ControlLogic](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/numericupdown.cs#controllogic)]
 [!code-vb[VSMCustomControl#ControlLogic](~/samples/snippets/visualbasic/VS_Snippets_Wpf/vsmcustomcontrol/visualbasic/numericupdown.vb#controllogic)]
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [ControlTemplate을 만들어 기존 컨트롤의 모양 사용자 지정](customizing-the-appearance-of-an-existing-control.md)
+- [컨트롤에 대 한 템플릿 만들기](../../../desktop-wpf/themes/how-to-create-apply-template.md)
 - [컨트롤 사용자 지정](control-customization.md)

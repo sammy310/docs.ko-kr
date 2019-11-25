@@ -1,15 +1,15 @@
 ---
-title: '방법: 자식 요소의 하위 항목 찾기(XPath 및 LINQ to XML)(C#)'
+title: 자식 요소의 하위 항목을 찾는 방법(XPath 및 LINQ to XML)(C#)
 ms.date: 07/20/2015
 ms.assetid: 505b7512-bb8b-4f85-abbf-491f039c961e
-ms.openlocfilehash: f17d723aa03c45daa4e7e741ea6b14c637537ccf
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: fb3e20ce21c1f6d2a71f2f71b8acec7cecf0f3ed
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253710"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141100"
 ---
-# <a name="how-to-find-descendants-of-a-child-element-xpath-linq-to-xml-c"></a>방법: 자식 요소의 하위 항목 찾기(XPath 및 LINQ to XML)(C#)
+# <a name="how-to-find-descendants-of-a-child-element-xpath-linq-to-xml-c"></a>자식 요소의 하위 항목을 찾는 방법(XPath 및 LINQ to XML)(C#)
 이 항목에서는 특정 이름을 가진 자식 요소의 하위 요소를 가져오는 방법을 보여 줍니다.  
   
  XPath 식은 다음과 같습니다.  

@@ -1,15 +1,15 @@
 ---
-title: '방법: 특성을 사용 하 여C++ C-공용 구조체 만들기 (Visual Basic)'
+title: 'How to: Create a C-C++ Union by Using Attributes'
 ms.date: 07/20/2015
 ms.assetid: 9352a7e4-c0da-4d07-aa14-55ed43736fcb
-ms.openlocfilehash: 6595d6477d9d0838745e19eb2a44d26f6e534c70
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: acb8dc781e2872ae46e5aa058a98b3dd98f3e064
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524265"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349494"
 ---
-# <a name="how-to-create-a-cc-union-by-using-attributes-visual-basic"></a>방법: 특성을 사용 하 여C++ C/공용 구조체 만들기 (Visual Basic)
+# <a name="how-to-create-a-cc-union-by-using-attributes-visual-basic"></a>How to: Create a C/C++ Union by Using Attributes (Visual Basic)
 
 특성을 사용하면 메모리에서 구조체가 레이아웃되는 방식을 필요에 맞게 변경할 수 있습니다. 예를 들어 `StructLayout(LayoutKind.Explicit)` 및 `FieldOffset` 특성을 사용하여 C/C++에서 공용 구조체로 알려진 항목을 만들 수 있습니다.
 

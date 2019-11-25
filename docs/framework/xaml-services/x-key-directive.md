@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Key attribute in XAML [XAML Services]
 - XAML [XAML Services], x:Key attribute
 ms.assetid: 1985cd45-f197-42d5-b75e-886add64b248
-ms.openlocfilehash: b00218623add052e135bc5815d615fe7cdf002ee
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 8321a09db31c9f6d2103a252a195fcdbf8da3e66
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459950"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283852"
 ---
 # <a name="xkey-directive"></a>x:Key 지시문
 XAML 정의 사전에서 만들어지고 참조 되는 요소를 고유 하 게 식별 합니다. XAML 개체 요소에 `x:Key` 값을 추가 하는 것은 WPF <xref:System.Windows.ResourceDictionary>와 같이 리소스 사전에서 리소스를 식별 하는 가장 일반적인 방법입니다.  
@@ -47,7 +47,7 @@ XAML 정의 사전에서 만들어지고 참조 되는 요소를 고유 하 게 
 |`stringKeyValue`|키로 사용할 텍스트 문자열입니다. 텍스트 문자열은 [XamlName 문법을](xamlname-grammar.md)준수 해야 합니다.|  
 |`markupExtensionUsage`|태그 확장 구분 기호 내에서 키로 사용할 개체를 제공 하는 태그 확장 사용 {}입니다. 설명 부분을 참조하세요.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  `x:Key`는 XAML 리소스 사전 개념을 지원 합니다. 언어별 XAML은 특정 UI 프레임 워크로 남은 리소스 사전 구현을 정의 하지 않습니다. WPF에서 XAML 리소스 사전을 구현 하는 방법에 대해 자세히 알아보려면 [Xaml 리소스](../../desktop-wpf/fundamentals/xaml-resources-define.md)를 참조 하세요.  
   
  XAML 2006 및 WPF에서 `x:Key`은 특성으로 제공 되어야 합니다. 여전히 문자열이 아닌 키를 사용할 수 있지만 특성 형식에서 문자열이 아닌 값을 제공 하기 위해 태그 확장 사용이 필요 합니다. XAML 2009를 사용 하는 경우 태그 확장 중간을 요구 하지 않고 문자열 이외의 개체 형식으로 키가 지정 된 사전을 명시적으로 지원 하기 위해 `x:Key`를 요소로 지정할 수 있습니다. 이 항목의 "XAML 2009" 섹션을 참조 하세요. 설명 섹션의 나머지 부분은 XAML 2006 구현에만 적용 됩니다.  
@@ -71,7 +71,7 @@ XAML 정의 사전에서 만들어지고 참조 되는 요소를 고유 하 게 
   
  WPF XAML 구현에서 리소스 사전 키에 대 한 처리는 <xref:System.Windows.ResourceKey> 추상 클래스에 의해 정의 됩니다. 그러나 WPF XAML 프로세서는 용도에 따라 키에 대해 서로 다른 기본 확장 형식을 생성 합니다. 예를 들어 <xref:System.Windows.DataTemplate> 또는 파생 클래스의 키는 별도로 처리 되 고 고유한 <xref:System.Windows.DataTemplateKey> 개체를 생성 합니다.  
   
- 키와 이름은 기본 XAML 정의에서 다른 지시문 및 언어 요소 (`x:Key` `x:Name`)를 사용 합니다. 키와 이름은 WPF 정의 및 이러한 개념의 응용 프로그램에서 다양 한 상황에도 사용 됩니다. 자세한 내용은 [WPF XAML 이름 범위](../wpf/advanced/wpf-xaml-namescopes.md)를 참조 하세요.  
+ 키와 이름은 기본 XAML 정의에서 다른 지시문 및 언어 요소 (`x:Key` `x:Name`)를 사용 합니다. 키와 이름은 WPF 정의 및 이러한 개념의 응용 프로그램에서 다양 한 상황에도 사용 됩니다. 자세한 내용은 참조 하세요 [WPF XAML 이름 범위](../wpf/advanced/wpf-xaml-namescopes.md)합니다.  
   
  앞에서 설명한 것 처럼 키 값은 태그 확장을 통해 제공 될 수 있으며 문자열 값이 아닌 다른 값이 될 수 있습니다. 예제 WPF 시나리오는 `x:Key` 값이 [ComponentResourceKey](../wpf/advanced/componentresourcekey-markup-extension.md)수 있다는 것입니다. 특정 컨트롤은 스타일을 완전히 바꾸지 않고 해당 컨트롤의 모양과 동작의 일부에 영향을 주는 사용자 지정 스타일 리소스에 대해 해당 형식의 스타일 키를 노출 합니다. 이러한 키의 예는 <xref:System.Windows.Controls.ToolBar.ButtonStyleKey%2A>합니다.  
   
@@ -86,7 +86,7 @@ XAML 정의 사전에서 만들어지고 참조 되는 요소를 고유 하 게 
   
 ### <a name="xaml-element-usage-xaml-2009-only"></a>XAML 요소 사용 (XAML 2009에만 해당)  
   
-```  
+```xaml  
 <object>  
   <x:Key>  
 keyObject  
@@ -110,7 +110,7 @@ keyObject
 ## <a name="silverlight-usage-notes"></a>Silverlight 사용 메모  
  Silverlight에 대 한 `x:Key` 별도로 설명 되어 있습니다. 자세한 내용은 [XAML 네임 스페이스 (x:)를 참조 하세요. 언어 기능 (Silverlight)](https://go.microsoft.com/fwlink/?LinkId=199081).  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [XAML 리소스](../../desktop-wpf/fundamentals/xaml-resources-define.md)
 - [리소스 및 코드](../wpf/advanced/resources-and-code.md)

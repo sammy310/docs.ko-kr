@@ -1,5 +1,5 @@
 ---
-title: 애플리케이션의 정보 기록(Visual Basic)
+title: 응용 프로그램의 정보 기록
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Log object
@@ -9,14 +9,15 @@ helpviewer_keywords:
 - My.Application.Log object
 - examples [Visual Basic], logging application information
 ms.assetid: 8bf4f047-22d6-48d6-aec5-93b98ad5b8e8
-ms.openlocfilehash: 3202bdb2c4274e6d3127537b7cae661ba6e63a35
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dace4bac3bf7529b8c50a492a092ad478f4d9e2d
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052510"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353251"
 ---
 # <a name="logging-information-from-the-application-visual-basic"></a>애플리케이션의 정보 기록(Visual Basic)
+
 이 섹션에는 `My.Application.Log` 또는 `My.Log` 개체를 사용하여 애플리케이션의 정보를 기록하는 방법과 애플리케이션의 로깅 기능을 확장하는 방법을 설명하는 항목이 포함되어 있습니다.  
   
  `Log` 개체는 애플리케이션의 로그 수신기에 정보를 쓰기 위한 메서드를 제공하고, `Log` 개체의 고급 `TraceSource` 속성은 자세한 구성 정보를 제공합니다. `Log` 개체는 애플리케이션의 구성 파일에서 구성됩니다.  
@@ -25,7 +26,7 @@ ms.locfileid: "62052510"
   
 ## <a name="tasks"></a>작업  
   
-|대상|참조|  
+|대상|참조 항목|  
 |--------|---------|  
 |애플리케이션의 로그에 이벤트 정보를 씁니다.|[방법: 로그 메시지 쓰기](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)|  
 |애플리케이션의 로그에 예외 정보를 씁니다.|[방법: 로그 예외](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)|  

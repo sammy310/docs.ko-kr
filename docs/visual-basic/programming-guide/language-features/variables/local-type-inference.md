@@ -1,5 +1,5 @@
 ---
-title: 지역 형식 유추(Visual Basic)
+title: 지역 형식 유추
 ms.date: 07/20/2015
 f1_keywords:
 - local type inference
@@ -12,68 +12,68 @@ helpviewer_keywords:
 - inference [Visual Basic]
 - type inference [Visual Basic]
 ms.assetid: b8307f18-2e56-4ab3-a45a-826873f400f6
-ms.openlocfilehash: 2b239e17ba7fa0b6a6b08d52f4394541eaa08b28
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: f79ac70aecb5805a3a4a4fea8f7e7ccd3f8243fc
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72775717"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351842"
 ---
 # <a name="local-type-inference-visual-basic"></a>지역 형식 유추(Visual Basic)
 
-Visual Basic 컴파일러는 *형식 유추* 를 사용 하 여 `As` 절 없이 선언 된 지역 변수의 데이터 형식을 확인 합니다. 컴파일러는 초기화 식의 형식에서 변수 형식을 유추 합니다. 이렇게 하면 다음 예제와 같이 형식을 명시적으로 명시 하지 않고 변수를 선언할 수 있습니다. 선언 결과로 `num1`와 `num2`는 모두 정수로 강력 하 게 형식화 됩니다.
+The Visual Basic compiler uses *type inference* to determine the data types of local variables declared without an `As` clause. The compiler infers the type of the variable from the type of the initialization expression. This enables you to declare variables without explicitly stating a type, as shown in the following example. As a result of the declarations, both `num1` and `num2` are strongly typed as integers.
 
 [!code-vb[VbVbalrTypeInference#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#1)]
 
 > [!NOTE]
-> 이전 예제에서 `num2` `Integer`으로 형식화 하지 않으려는 경우 `Dim num3 As Object = 3` 또는 `Dim num4 As Double = 3` 같은 선언을 사용 하 여 다른 형식을 지정할 수 있습니다.
+> If you do not want `num2` in the previous example to be typed as an `Integer`, you can specify another type by using a declaration like `Dim num3 As Object = 3` or `Dim num4 As Double = 3`.
 
 > [!NOTE]
-> 형식 유추는 비정적 지역 변수에만 사용할 수 있습니다. 클래스 필드, 속성 또는 함수의 형식을 결정 하는 데 사용할 수 없습니다.
+> Type inference can be used only for non-static local variables; it cannot be used to determine the type of class fields, properties, or functions.
 
-지역 형식 유추는 프로시저 수준에서 적용 됩니다. 모듈 수준에서 변수를 선언 하는 데 사용할 수 없습니다 (클래스, 구조체, 모듈 또는 인터페이스 내에서 프로시저나 블록 내에서 제외). 이전 예제에서 `num2` 프로시저에서 지역 변수가 아닌 클래스의 필드인 경우 선언으로 인해에 `Option Strict` 오류가 발생 하 고 `Option Strict` off를 사용 하 여 `num2`를 `Object` 분류 합니다. 마찬가지로 지역 형식 유추는 `Static`로 선언 된 프로시저 수준 변수에는 적용 되지 않습니다.
+Local type inference applies at procedure level. It cannot be used to declare variables at module level (within a class, structure, module, or interface but not within a procedure or block). If `num2` in the previous example were a field of a class instead of a local variable in a procedure, the declaration would cause an error with `Option Strict` on, and would classify `num2` as an `Object` with `Option Strict` off. Similarly, local type inference does not apply to procedure level variables declared as `Static`.
 
-## <a name="type-inference-vs-late-binding"></a>형식 유추 및 런타임에 바인딩
+## <a name="type-inference-vs-late-binding"></a>Type Inference vs. Late Binding
 
-형식 유추를 사용 하는 코드는 런타임에 바인딩을 사용 하는 코드와 비슷합니다. 그러나 형식 유추는 변수를 `Object`로 유지 하는 대신 강력한 형식의 변수를 강력한 형식으로 합니다. 컴파일러는 변수의 이니셜라이저를 사용 하 여 컴파일 시간에 변수의 형식을 확인 하 여 초기 바인딩된 코드를 생성 합니다. 앞의 예제에서 `num1`와 같이 `num2`은 `Integer`으로 형식화 됩니다.
+Code that uses type inference resembles code that relies on late binding. However, type inference strongly types the variable instead of leaving it as `Object`. The compiler uses a variable's initializer to determine the variable's type at compile time to produce early-bound code. In the previous example, `num2`, like `num1`, is typed as an `Integer`.
 
-초기 바인딩된 변수의 동작은 런타임에 바인딩된 변수의 동작과 다르며이는 런타임에만 형식을 알 수 있습니다. 초기 형식을 알면 컴파일러가 실행 전에 문제를 식별 하 고, 메모리를 정확 하 게 할당 하 고, 기타 최적화를 수행할 수 있습니다. 또한 초기 바인딩을 사용 하면 Visual Basic IDE (통합 개발 환경)에서 개체의 멤버에 대 한 IntelliSense 도움말을 제공할 수 있습니다. 성능에 대 한 초기 바인딩도 선호 됩니다. 이는 런타임에 바인딩된 변수에 저장 된 모든 데이터를 `Object` 형식으로 래핑해야 하 고 런타임에 형식의 멤버에 액세스 하는 것 이기 때문입니다.
+The behavior of early-bound variables differs from that of late-bound variables, for which the type is known only at run time. Knowing the type early enables the compiler to identify problems before execution, allocate memory precisely, and perform other optimizations. Early binding also enables the Visual Basic integrated development environment (IDE) to provide IntelliSense Help about the members of an object. Early binding is also preferred for performance. This is because all data stored in a late-bound variable must be wrapped as type `Object`, and accessing members of the type at run time makes the program slower.
 
 ## <a name="examples"></a>예제
 
-형식 유추는 지역 변수가 `As` 절 없이 선언 되 고 초기화 될 때 발생 합니다. 컴파일러는 할당 된 초기 값의 형식을 변수 형식으로 사용 합니다. 예를 들어 다음 코드 줄은 모두 `String` 형식의 변수를 선언 합니다.
+Type inference occurs when a local variable is declared without an `As` clause and initialized. The compiler uses the type of the assigned initial value as the type of the variable. For example, each of the following lines of code declares a variable of type `String`.
 
 [!code-vb[VbVbalrTypeInference#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#2)]
 
-다음 코드에서는 두 가지 동일한 방법으로 정수 배열을 만드는 방법을 보여 줍니다.
+The following code demonstrates two equivalent ways to create an array of integers.
 
 [!code-vb[VbVbalrTypeInference#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#3)]
 
-형식 유추를 사용 하 여 루프 제어 변수의 형식을 결정 하는 것이 편리 합니다. 다음 코드에서 컴파일러는 이전 예제의 `someNumbers2` 정수의 배열 이기 때문에 `number` `Integer`를 유추 합니다.
+It is convenient to use type inference to determine the type of a loop control variable. In the following code, the compiler infers that `number` is an `Integer` because `someNumbers2` from the previous example is an array of integers.
 
 [!code-vb[VbVbalrTypeInference#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#4)]
 
-다음 예제가 보여 주는 것 처럼 `Using` 문에서 지역 형식 유추를 사용 하 여 리소스 이름의 형식을 설정할 수 있습니다.
+Local type inference can be used in `Using` statements to establish the type of the resource name, as the following example demonstrates.
 
 [!code-vb[VbVbalrTypeInference#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#7)]
 
-다음 예제와 같이 함수의 반환 값에서 변수의 형식을 유추할 수도 있습니다. @No__t_2 프로세스의 배열을 반환 하기 때문에 `pList1`와 `pList2`는 모두 프로세스의 배열입니다.
+The type of a variable can also be inferred from the return values of functions, as the following example demonstrates. Both `pList1` and `pList2` are arrays of processes because `Process.GetProcesses` returns an array of processes.
 
 [!code-vb[VbVbalrTypeInference#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#5)]
 
-## <a name="option-infer"></a>옵션 유추
+## <a name="option-infer"></a>Option Infer
 
-`Option Infer`를 사용 하 여 특정 파일에서 로컬 형식 유추가 허용 되는지 여부를 지정할 수 있습니다. 옵션을 사용 하도록 설정 하거나 차단 하려면 파일의 시작 부분에 다음 문 중 하나를 입력 합니다.
+`Option Infer` enables you specify whether local type inference is allowed in a particular file. To enable or to block the option, type one of the following statements at the start of the file.
 
 `Option Infer On`
 
 `Option Infer Off`
 
-코드에 `Option Infer` 값을 지정 하지 않으면 컴파일러 기본값은 `Option Infer On` 됩니다.
+If you do not specify a value for `Option Infer` in your code, the compiler default is `Option Infer On`.
 
 파일에서 `Option Infer`에 대해 설정된 값이 IDE 또는 명령줄에 설정된 값과 충돌하는 경우에는 파일의 값이 우선적으로 적용됩니다.
 
-자세한 내용은 [Option 유추 문](../../../../visual-basic/language-reference/statements/option-infer-statement.md) 및 [컴파일 페이지, 프로젝트 디자이너 (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)를 참조 하세요.
+For more information, see [Option Infer Statement](../../../../visual-basic/language-reference/statements/option-infer-statement.md) and [Compile Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic).
 
 ## <a name="see-also"></a>참조
 

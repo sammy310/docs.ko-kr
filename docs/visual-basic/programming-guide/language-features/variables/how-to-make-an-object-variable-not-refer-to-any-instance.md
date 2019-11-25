@@ -1,23 +1,23 @@
 ---
-title: '방법: 개체 변수가 인스턴스를 참조 하지 않도록 설정 (Visual Basic)'
+title: '방법: 개체 변수가 인스턴스를 참조하지 않도록 설정'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Nothing keyword [Visual Basic], variable assignment
 - object variables [Visual Basic], null reference
 ms.assetid: e6d30578-bdae-4142-a3ac-a10697bf696a
-ms.openlocfilehash: e647f2f891b06aa1767faac49b01df98ea31ec1c
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 320dadb61c12f3339c5328dcef31c41503892c56
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72004910"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352890"
 ---
-# <a name="how-to-make-an-object-variable-not-refer-to-any-instance-visual-basic"></a>방법: 개체 변수가 인스턴스를 참조 하지 않도록 설정 (Visual Basic)
-개체 변수를 [Nothing](../../../../visual-basic/language-reference/nothing.md)으로 설정 하 여 개체 인스턴스의 연관을 해제할 수 있습니다.  
+# <a name="how-to-make-an-object-variable-not-refer-to-any-instance-visual-basic"></a>방법: 개체 변수가 인스턴스를 참조하지 않도록 설정(Visual Basic)
+You can disassociate an object variable from any object instance by setting it to [Nothing](../../../../visual-basic/language-reference/nothing.md).  
   
-### <a name="to-disassociate-an-object-variable-from-any-object-instance"></a>개체 인스턴스에서 개체 변수를 분리 하려면  
+### <a name="to-disassociate-an-object-variable-from-any-object-instance"></a>To disassociate an object variable from any object instance  
   
-- 대입문에서 변수를 `Nothing`으로 설정 합니다.  
+- Set the variable to `Nothing` in an assignment statement.  
   
     ```vb  
     ' Assume account is a defined class  
@@ -26,10 +26,10 @@ ms.locfileid: "72004910"
     ```  
   
 ## <a name="robust-programming"></a>강력한 프로그래밍  
- 코드에서 `Nothing`으로 설정 된 개체 변수의 멤버에 액세스 하려고 하면 <xref:System.NullReferenceException>이 발생 합니다. 개체 변수를 `Nothing`으로 자주 설정 하거나 변수가 초기화 되지 않은 경우 `Try...Catch...Finally` 블록에 멤버 액세스를 묶는 것이 좋습니다.  
+ If your code tries to access a member of an object variable that has been set to `Nothing`, a <xref:System.NullReferenceException> occurs. If you set an object variable to `Nothing` frequently, or if it is possible the variable is not initialized, it is a good idea to enclose member accesses in a `Try...Catch...Finally` block.  
   
 ## <a name="net-framework-security"></a>.NET Framework 보안  
- 기밀 데이터 나 중요 한 데이터가 포함 된 개체에 개체 변수를 사용 하는 경우 해당 개체 중 하나를 적극적으로 처리 하지 않을 때 변수를 `Nothing`으로 설정할 수 있습니다. 이렇게 하면 악의적인 코드가 데이터에 액세스 하는 가능성을 줄일 수 있습니다.  
+ If you use an object variable for objects that contain confidential or sensitive data, you can set the variable to `Nothing` when you are not actively dealing with one of those objects. This reduces the chance of malicious code gaining access to the data.  
   
 ## <a name="see-also"></a>참조
 

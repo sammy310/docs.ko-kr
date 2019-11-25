@@ -2,12 +2,12 @@
 title: Windows Communication Foundation 샘플의 일회 설치 절차
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-ms.openlocfilehash: 90463a83b8a10085d4df90a2832886e43c51c734
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 7dbc4a1b5235c0cb6aa154379358c7761bc4ab1d
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424923"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141848"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Windows Communication Foundation 샘플의 일회 설치 절차
 
@@ -22,7 +22,7 @@ ms.locfileid: "73424923"
 
 1. ASP.NET가 설정 되어 있는지 확인 합니다. ASP.NET를 설정 하는 방법에 대 한 자세한 내용은 [인터넷 정보 서비스 호스팅 지침](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)을 참조 하세요.
 
-2. [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]이 설치되어 있는지 확인합니다. 다음 디렉터리에서 v 4.0 이상 (이상)을 검색 합니다. **\Windows\Microsoft.NET\Framework**
+2. .NET Framework 4가 설치 되어 있는지 확인 합니다. 다음 디렉터리에서 v 4.0 이상 (이상)을 검색 합니다. **\Windows\Microsoft.NET\Framework**
 
 3. Visual Studio 2012가 설치 되어 있지 않고 운영 체제가 Windows Server 2008 SP2 이상이 아닌 경우 [핫픽스 251798](https://go.microsoft.com/fwlink/?LinkId=184693)를 설치 합니다.
 
@@ -37,15 +37,15 @@ ms.locfileid: "73424923"
     ```
 
     > [!WARNING]
-    > 명령 `aspnet_regiis –i –enable`를 실행 하면 [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)]를 사용 하 여 기본 응용 프로그램 풀이 실행 되므로 동일한 컴퓨터의 다른 응용 프로그램에 대 한 비 호환성 문제가 발생할 수 있습니다.
+    > 명령 `aspnet_regiis –i –enable`를 실행 하면 .NET Framework 4를 사용 하 여 기본 응용 프로그램 풀이 실행 되므로 동일한 컴퓨터의 다른 응용 프로그램에 대 한 비 호환성 문제가 발생할 수 있습니다.
 
 5. 예제에서 사용 하는 포트를 사용 하도록 설정 하는 [방화벽 지침](../../../../docs/framework/wcf/samples/firewall-instructions.md) 을 따릅니다.
 
-6. 다음 기본 디렉터리를 확인 합니다. \<InstallDrive >: **\WF_WCF_Samples**. 샘플이 이전에 설치된 경우 이 디렉터리가 기본 디렉터리입니다.
+6. 다음 기본 디렉터리를 확인 합니다. \<InstallDrive >: **\ WF_WCF_Samples**. 샘플이 이전에 설치된 경우 이 디렉터리가 기본 디렉터리입니다.
 
 7. 예제가 설치 되어 있지 않으면에 대 한 [C#](https://go.microsoft.com/fwlink/?LinkId=190939)샘플 다운로드 위치에서 설치 합니다.
 
-8. 예제를 설치한 후: \<InstallDrive >: \WF_WCF_Samples\WCF\Setup로 이동 **\\**
+8. 샘플을 설치한 후: \<InstallDrive >: **\ WF_WCF_Samples \wcf\setup** 으로 이동\\
 
 9. **Setupvroot. .bat** 배치 파일을 실행 합니다. 다음 단계가 수행됩니다.
 
@@ -65,7 +65,7 @@ ms.locfileid: "73424923"
 
 11. 컴퓨터에 C:\logs 디렉터리를 만듭니다. 일부 샘플에 이 디렉터리가 필요할 수 있습니다. 적절한 계정에 이 폴더에 대한 쓰기 권한을 부여해야 합니다. Windows 7, [!INCLUDE[wv](../../../../includes/wv-md.md)]및 Windows Server 2008 r 2의 경우이 계정은 **Network Service**입니다. [!INCLUDE[lserver](../../../../includes/lserver-md.md)]의 경우 NT Authority\Network Service이며, [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 및 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]의 경우에는 ASPNET입니다.
 
-12. Setupcerttool.bat 파일을 실행합니다. 이 파일은 \<InstallPath > \WF_WCF_Samples\WCF\Setup\ 폴더에 있습니다.  이 스크립트는 다음 작업을 수행합니다.
+12. Setupcerttool.bat 파일을 실행합니다. 이 파일은 \<InstallPath > \ WF_WCF_Samples \WCF\Setup\ 폴더에 있습니다.  이 스크립트는 다음 작업을 수행합니다.
 
     - FindPrivateKey 도구를 빌드합니다.
 

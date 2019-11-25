@@ -1,5 +1,5 @@
 ---
-title: XML 하위 항목 축 속성(Visual Basic)
+title: XML Descendant Axis Property
 ms.date: 07/20/2015
 f1_keywords:
 - vb.XmlPropertyDescendantsAxis
@@ -10,16 +10,16 @@ helpviewer_keywords:
 - XML axis [Visual Basic], descendant
 - XML [Visual Basic], accessing
 ms.assetid: a178f85b-5d54-438f-8479-40b62af6fe76
-ms.openlocfilehash: e2c3e01808d3eeb18f6753a5fc79b8627e7f323b
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: b2bf524214fa8ecca215d50c198b23d127e3b400
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582226"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349443"
 ---
 # <a name="xml-descendant-axis-property-visual-basic"></a>XML 하위 항목 축 속성(Visual Basic)
 
-@No__t_0 개체, <xref:System.Xml.Linq.XDocument> 개체, <xref:System.Xml.Linq.XElement> 개체 컬렉션 또는 <xref:System.Xml.Linq.XDocument> 개체 컬렉션의 하위 항목에 대 한 액세스를 제공 합니다.
+Provides access to the descendants of the following: an <xref:System.Xml.Linq.XElement> object, an <xref:System.Xml.Linq.XDocument> object, a collection of <xref:System.Xml.Linq.XElement> objects, or a collection of <xref:System.Xml.Linq.XDocument> objects.
 
 ## <a name="syntax"></a>구문
 
@@ -31,16 +31,16 @@ object...<descendant>
 
 `object` 필수입니다. <xref:System.Xml.Linq.XElement> 개체, <xref:System.Xml.Linq.XDocument> 개체, <xref:System.Xml.Linq.XElement> 개체의 컬렉션 또는 <xref:System.Xml.Linq.XDocument> 개체의 컬렉션입니다.
 
-`...<` 필수입니다. 하위 축 속성의 시작을 나타냅니다.
+`...<` 필수입니다. Denotes the start of a descendant axis property.
 
-`descendant` 필수입니다. [@No__t_0 형식으로 액세스할 하위 노드의 이름입니다.
+`descendant` 필수입니다. Name of the descendant nodes to access, of the form [`prefix:]name`.
 
 |파트|설명|
 |----------|-----------------|
-|`prefix`|(선택 사항) 하위 노드에 대 한 XML 네임 스페이스 접두사입니다. 는 `Imports` 문을 사용 하 여 정의 된 전역 XML 네임 스페이스 여야 합니다.|
-|`name`|필수 요소. 하위 노드의 로컬 이름입니다. [선언 된 XML 요소 및 특성의 이름](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)을 참조 하세요.|
+|`prefix`|(선택 사항) XML namespace prefix for the descendant node. Must be a global XML namespace that is defined by using an `Imports` statement.|
+|`name`|필수 요소. Local name of the descendant node. See [Names of Declared XML Elements and Attributes](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|
 
-`>` 필수입니다. 하위 축 속성의 끝을 나타냅니다.
+`>` 필수입니다. Denotes the end of a descendant axis property.
 
 ## <a name="return-value"></a>반환 값
 
@@ -48,17 +48,17 @@ object...<descendant>
 
 ## <a name="remarks"></a>주의
 
-XML 하위 항목 축 속성을 사용 하 여 <xref:System.Xml.Linq.XElement> 또는 <xref:System.Xml.Linq.XDocument> 개체 또는 <xref:System.Xml.Linq.XElement> 또는 <xref:System.Xml.Linq.XDocument> 개체의 컬렉션에서 이름별로 하위 노드에 액세스할 수 있습니다. XML `Value` 속성을 사용 하 여 반환 된 컬렉션에서 첫 번째 하위 노드의 값에 액세스할 수 있습니다. 자세한 내용은 [XML Value 속성](../../../visual-basic/language-reference/xml-axis/xml-value-property.md)을 참조 하세요.
+You can use an XML descendant axis property to access descendant nodes by name from an <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XDocument> object, or from a collection of <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XDocument> objects. Use the XML `Value` property to access the value of the first descendant node in the returned collection. For more information, see [XML Value Property](../../../visual-basic/language-reference/xml-axis/xml-value-property.md).
 
-Visual Basic 컴파일러는 하위 항목 축 속성을 <xref:System.Xml.Linq.XContainer.Descendants%2A> 메서드에 대 한 호출로 변환 합니다.
+The Visual Basic compiler converts descendant axis properties into calls to the <xref:System.Xml.Linq.XContainer.Descendants%2A> method.
 
 ## <a name="xml-namespaces"></a>XML 네임스페이스
 
-하위 축 속성의 이름은 `Imports` 문으로 전역적으로 선언 된 XML 네임 스페이스만 사용할 수 있습니다. XML 요소 리터럴 내에서 로컬로 선언 된 XML 네임 스페이스를 사용할 수 없습니다. 자세한 내용은 [Imports 문 (XML 네임 스페이스)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)을 참조 하세요.
+The name in a descendant axis property can use only XML namespaces declared globally with the `Imports` statement. It cannot use XML namespaces declared locally within XML element literals. For more information, see [Imports Statement (XML Namespace)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md).
 
 ## <a name="example"></a>예제
 
-다음 예에서는 `name` 이라는 첫 번째 하위 노드의 값 및 `contacts` 개체에서 `phone` 이라는 모든 하위 노드의 값에 액세스 하는 방법을 보여 줍니다.
+The following example shows how to access the value of the first descendant node named `name` and the values of all descendant nodes named `phone` from the `contacts` object.
 
 [!code-vb[VbXMLSamples#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples11.vb#25)]
 
@@ -70,7 +70,7 @@ Visual Basic 컴파일러는 하위 항목 축 속성을 <xref:System.Xml.Linq.X
 
 ## <a name="example"></a>예제
 
-다음 예제에서는 `ns`를 XML 네임스페이스 접두사로 선언한 다음 그런 다음 네임 스페이스의 접두사를 사용 하 여 XML 리터럴을 만들고 `ns:name` 정규화 된 이름을 사용 하 여 첫 번째 자식 노드의 값에 액세스 합니다.
+다음 예제에서는 `ns`를 XML 네임스페이스 접두사로 선언한 다음 It then uses the prefix of the namespace to create an XML literal and access the value of the first child node with the qualified name `ns:name`.
 
 [!code-vb[VbXMLSamples#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples12.vb#26)]
 
