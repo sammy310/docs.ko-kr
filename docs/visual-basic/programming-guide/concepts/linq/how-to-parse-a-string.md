@@ -1,24 +1,24 @@
 ---
-title: '방법: 문자열 구문 분석 (Visual Basic)'
+title: '방법: 문자열 구문 분석'
 ms.date: 07/20/2015
 ms.assetid: 896e1b4b-f9bd-4975-8bc1-55b6badce1ac
-ms.openlocfilehash: b97ce93c1018ec48649ab8b259d5f1a07109b9fe
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 31bae00eb3ebf0d8e64fc657693e8c0767c4f5d4
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69956374"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344491"
 ---
-# <a name="how-to-parse-a-string-visual-basic"></a><span data-ttu-id="abfdf-102">방법: 문자열 구문 분석 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="abfdf-102">How to: Parse a String (Visual Basic)</span></span>
-<span data-ttu-id="abfdf-103">이 항목에서는에서 C#XML 트리를 만드는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="abfdf-103">This topic shows how to create an XML tree in C#.</span></span>  
+# <a name="how-to-parse-a-string-visual-basic"></a><span data-ttu-id="2dd7a-102">How to: Parse a String (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2dd7a-102">How to: Parse a String (Visual Basic)</span></span>
+<span data-ttu-id="2dd7a-103">This topic shows how to create an XML tree in C#.</span><span class="sxs-lookup"><span data-stu-id="2dd7a-103">This topic shows how to create an XML tree in C#.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="abfdf-104">예제</span><span class="sxs-lookup"><span data-stu-id="abfdf-104">Example</span></span>  
- <span data-ttu-id="abfdf-105">메서드를 `XElement.Parse` 사용 하 여 Visual Basic에서 문자열을 구문 분석할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="abfdf-105">You can parse a string in Visual Basic by using the `XElement.Parse` method.</span></span> <span data-ttu-id="abfdf-106">그러나 xml 리터럴은 문자열에서 XML을 구문 분석 하는 것과 동일한 성능 저하가 발생 하지 않기 때문에 다음 코드에 표시 된 것 처럼 XML 리터럴을 사용 하는 것이 더 효율적입니다.</span><span class="sxs-lookup"><span data-stu-id="abfdf-106">However, it is more efficient to use XML literals, as shown in following code, because XML literals do not suffer from the same performance penalties as parsing XML from a string.</span></span>  
+## <a name="example"></a><span data-ttu-id="2dd7a-104">예제</span><span class="sxs-lookup"><span data-stu-id="2dd7a-104">Example</span></span>  
+ <span data-ttu-id="2dd7a-105">You can parse a string in Visual Basic by using the `XElement.Parse` method.</span><span class="sxs-lookup"><span data-stu-id="2dd7a-105">You can parse a string in Visual Basic by using the `XElement.Parse` method.</span></span> <span data-ttu-id="2dd7a-106">However, it is more efficient to use XML literals, as shown in following code, because XML literals do not suffer from the same performance penalties as parsing XML from a string.</span><span class="sxs-lookup"><span data-stu-id="2dd7a-106">However, it is more efficient to use XML literals, as shown in following code, because XML literals do not suffer from the same performance penalties as parsing XML from a string.</span></span>  
   
- <span data-ttu-id="abfdf-107">Xml 리터럴을 사용 하면 XML을 복사 하 여 Visual Basic 프로그램에 붙여 넣을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="abfdf-107">By using XML literals, you can just copy and paste your XML into your Visual Basic program.</span></span>  
+ <span data-ttu-id="2dd7a-107">By using XML literals, you can just copy and paste your XML into your Visual Basic program.</span><span class="sxs-lookup"><span data-stu-id="2dd7a-107">By using XML literals, you can just copy and paste your XML into your Visual Basic program.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="abfdf-108">텍스트의 구문을 분석하거나 텍스트 파일에서 XML 문서를 로드하는 방법은 함수 생성보다 효율적이지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="abfdf-108">Parsing text or loading an XML document from a text file is less efficient than functional construction.</span></span> <span data-ttu-id="abfdf-109">코드에서 XML 트리를 초기화하는 경우 텍스트의 구문을 분석하는 경우보다 함수 생성을 사용하는 경우에 프로세서 시간을 적게 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="abfdf-109">If you are initializing an XML tree from code, it takes less processor time to use functional construction than to parse text.</span></span>  
+> <span data-ttu-id="2dd7a-108">텍스트의 구문을 분석하거나 텍스트 파일에서 XML 문서를 로드하는 방법은 함수 생성보다 효율적이지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="2dd7a-108">Parsing text or loading an XML document from a text file is less efficient than functional construction.</span></span> <span data-ttu-id="2dd7a-109">코드에서 XML 트리를 초기화하는 경우 텍스트의 구문을 분석하는 경우보다 함수 생성을 사용하는 경우에 프로세서 시간을 적게 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="2dd7a-109">If you are initializing an XML tree from code, it takes less processor time to use functional construction than to parse text.</span></span>  
   
 ```vb  
 Dim contacts as XElement = _  
@@ -49,6 +49,6 @@ Dim contacts as XElement = _
     </Contacts>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="abfdf-110">참고자료</span><span class="sxs-lookup"><span data-stu-id="abfdf-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2dd7a-110">참조</span><span class="sxs-lookup"><span data-stu-id="2dd7a-110">See also</span></span>
 
-- [<span data-ttu-id="abfdf-111">XML 구문 분석 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="abfdf-111">Parsing XML (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)
+- [<span data-ttu-id="2dd7a-111">Parsing XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2dd7a-111">Parsing XML (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)

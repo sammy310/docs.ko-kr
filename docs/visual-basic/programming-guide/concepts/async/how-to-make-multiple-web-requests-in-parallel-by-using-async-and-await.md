@@ -1,23 +1,23 @@
 ---
-title: '방법: Async 및 Wait (Visual Basic)를 사용 하 여 병렬로 여러 웹 요청 만들기'
+title: '방법: Async 및 Await를 사용하여 병렬로 여러 웹 요청 만들기'
 ms.date: 07/20/2015
 ms.assetid: a894b99b-7cfd-4a38-adfb-20d24f986730
-ms.openlocfilehash: 9241a54b4b0d1a8871ef496d44e1e6db5581af7b
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 616efca79312883f17ba837d17a5ee9c97d15b34
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583161"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346145"
 ---
-# <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-visual-basic"></a><span data-ttu-id="0d54f-102">방법: Async 및 Wait (Visual Basic)를 사용 하 여 병렬로 여러 웹 요청 만들기</span><span class="sxs-lookup"><span data-stu-id="0d54f-102">How to: Make Multiple Web Requests in Parallel by Using Async and Await (Visual Basic)</span></span>
+# <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-visual-basic"></a><span data-ttu-id="89e9d-102">How to: Make Multiple Web Requests in Parallel by Using Async and Await (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="89e9d-102">How to: Make Multiple Web Requests in Parallel by Using Async and Await (Visual Basic)</span></span>
 
-<span data-ttu-id="0d54f-103">비동기 메서드에서 작업은 만들어질 때 시작됩니다.</span><span class="sxs-lookup"><span data-stu-id="0d54f-103">In an async method, tasks are started when they’re created.</span></span> <span data-ttu-id="0d54f-104">[Wait](../../../../visual-basic/language-reference/operators/await-operator.md) 연산자는 작업을 완료할 때까지 처리를 계속할 수 없는 메서드의 지점에 있는 작업에 적용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="0d54f-104">The [Await](../../../../visual-basic/language-reference/operators/await-operator.md) operator is applied to the task at the point in the method where processing can’t continue until the task finishes.</span></span> <span data-ttu-id="0d54f-105">다음 예제와 같이 작업이 생성되는 즉시 대기되는 경우가 많습니다.</span><span class="sxs-lookup"><span data-stu-id="0d54f-105">Often a task is awaited as soon as it’s created, as the following example shows.</span></span>
+<span data-ttu-id="89e9d-103">비동기 메서드에서 작업은 만들어질 때 시작됩니다.</span><span class="sxs-lookup"><span data-stu-id="89e9d-103">In an async method, tasks are started when they’re created.</span></span> <span data-ttu-id="89e9d-104">The [Await](../../../../visual-basic/language-reference/operators/await-operator.md) operator is applied to the task at the point in the method where processing can’t continue until the task finishes.</span><span class="sxs-lookup"><span data-stu-id="89e9d-104">The [Await](../../../../visual-basic/language-reference/operators/await-operator.md) operator is applied to the task at the point in the method where processing can’t continue until the task finishes.</span></span> <span data-ttu-id="89e9d-105">다음 예제와 같이 작업이 생성되는 즉시 대기되는 경우가 많습니다.</span><span class="sxs-lookup"><span data-stu-id="89e9d-105">Often a task is awaited as soon as it’s created, as the following example shows.</span></span>
 
 ```vb
 Dim result = Await someWebAccessMethodAsync(url)
 ```
 
-<span data-ttu-id="0d54f-106">그러나 프로그램에서 작업 완료에 의존하지 않는 다른 작업을 수행해야 하는 경우 작업 생성과 작업 대기를 구분할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0d54f-106">However, you can separate creating the task from awaiting the task if your program has other work to accomplish that doesn’t depend on the completion of the task.</span></span>
+<span data-ttu-id="89e9d-106">그러나 프로그램에서 작업 완료에 의존하지 않는 다른 작업을 수행해야 하는 경우 작업 생성과 작업 대기를 구분할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="89e9d-106">However, you can separate creating the task from awaiting the task if your program has other work to accomplish that doesn’t depend on the completion of the task.</span></span>
 
 ```vb
 ' The following line creates and starts the task.
@@ -32,32 +32,32 @@ Dim myTask = someWebAccessMethodAsync(url)
 Dim result = Await myTask
 ```
 
-<span data-ttu-id="0d54f-107">작업 시작과 작업 대기 사이에 다른 작업을 시작할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0d54f-107">Between starting a task and awaiting it, you can start other tasks.</span></span> <span data-ttu-id="0d54f-108">추가 작업은 암시적으로 병렬로 실행되지만 추가 스레드는 생성되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="0d54f-108">The additional tasks implicitly run in parallel, but no additional threads are created.</span></span>
+<span data-ttu-id="89e9d-107">작업 시작과 작업 대기 사이에 다른 작업을 시작할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="89e9d-107">Between starting a task and awaiting it, you can start other tasks.</span></span> <span data-ttu-id="89e9d-108">추가 작업은 암시적으로 병렬로 실행되지만 추가 스레드는 생성되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="89e9d-108">The additional tasks implicitly run in parallel, but no additional threads are created.</span></span>
 
-<span data-ttu-id="0d54f-109">다음 프로그램은 세 개의 비동기 웹 다운로드를 시작한 다음 호출된 순서대로 대기합니다.</span><span class="sxs-lookup"><span data-stu-id="0d54f-109">The following program starts three asynchronous web downloads and then awaits them in the order in which they’re called.</span></span> <span data-ttu-id="0d54f-110">프로그램을 실행할 때 작업이 항상 생성 및 대기된 순서로 완료되지는 않습니다.</span><span class="sxs-lookup"><span data-stu-id="0d54f-110">Notice, when you run the program, that the tasks don’t always finish in the order in which they’re created and awaited.</span></span> <span data-ttu-id="0d54f-111">작업은 생성 시 실행을 시작하고, 메서드가 await 식에 도달하기 전에 작업 중 하나 이상이 완료될 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0d54f-111">They start to run when they’re created, and one or more of the tasks might finish before the method reaches the await expressions.</span></span>
+<span data-ttu-id="89e9d-109">다음 프로그램은 세 개의 비동기 웹 다운로드를 시작한 다음 호출된 순서대로 대기합니다.</span><span class="sxs-lookup"><span data-stu-id="89e9d-109">The following program starts three asynchronous web downloads and then awaits them in the order in which they’re called.</span></span> <span data-ttu-id="89e9d-110">프로그램을 실행할 때 작업이 항상 생성 및 대기된 순서로 완료되지는 않습니다.</span><span class="sxs-lookup"><span data-stu-id="89e9d-110">Notice, when you run the program, that the tasks don’t always finish in the order in which they’re created and awaited.</span></span> <span data-ttu-id="89e9d-111">작업은 생성 시 실행을 시작하고, 메서드가 await 식에 도달하기 전에 작업 중 하나 이상이 완료될 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="89e9d-111">They start to run when they’re created, and one or more of the tasks might finish before the method reaches the await expressions.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="0d54f-112">이 프로젝트를 완료하려면 Visual Studio 2012 이상 및 .NET Framework 4.5 이상이 컴퓨터에 설치되어 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="0d54f-112">To complete this project, you must have Visual Studio 2012 or higher and the .NET Framework 4.5 or higher installed on your computer.</span></span>
+> <span data-ttu-id="89e9d-112">이 프로젝트를 완료하려면 Visual Studio 2012 이상 및 .NET Framework 4.5 이상이 컴퓨터에 설치되어 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="89e9d-112">To complete this project, you must have Visual Studio 2012 or higher and the .NET Framework 4.5 or higher installed on your computer.</span></span>
 
-<span data-ttu-id="0d54f-113">여러 작업을 동시에 시작 하는 다른 예제 [는 방법: 작업을 사용 하 여 비동기 연습 확장 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="0d54f-113">For another example that starts multiple tasks at the same time, see [How to: Extend the Async Walkthrough by Using Task.WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).</span></span>
+<span data-ttu-id="89e9d-113">For another example that starts multiple tasks at the same time, see [How to: Extend the Async Walkthrough by Using Task.WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).</span><span class="sxs-lookup"><span data-stu-id="89e9d-113">For another example that starts multiple tasks at the same time, see [How to: Extend the Async Walkthrough by Using Task.WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).</span></span>
 
-<span data-ttu-id="0d54f-114">이 예제의 코드는 [개발자 코드 샘플](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e)에서 다운로드할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0d54f-114">You can download the code for this example from [Developer Code Samples](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e).</span></span>
+<span data-ttu-id="89e9d-114">이 예제의 코드는 [개발자 코드 샘플](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e)에서 다운로드할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="89e9d-114">You can download the code for this example from [Developer Code Samples](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e).</span></span>
 
-### <a name="to-set-up-the-project"></a><span data-ttu-id="0d54f-115">프로젝트를 설정하려면</span><span class="sxs-lookup"><span data-stu-id="0d54f-115">To set up the project</span></span>
+### <a name="to-set-up-the-project"></a><span data-ttu-id="89e9d-115">프로젝트를 설정하려면</span><span class="sxs-lookup"><span data-stu-id="89e9d-115">To set up the project</span></span>
 
-1. <span data-ttu-id="0d54f-116">WPF 애플리케이션을 설정하려면 다음 단계를 완료합니다.</span><span class="sxs-lookup"><span data-stu-id="0d54f-116">To set up a WPF application, complete the following steps.</span></span> <span data-ttu-id="0d54f-117">[연습: Async 및 wait를 사용 하 여 웹에 액세스 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)에서 이러한 단계에 대 한 자세한 지침을 찾을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0d54f-117">You can find detailed instructions for these steps in [Walkthrough: Accessing the Web by Using Async and Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).</span></span>
+1. <span data-ttu-id="89e9d-116">WPF 애플리케이션을 설정하려면 다음 단계를 완료합니다.</span><span class="sxs-lookup"><span data-stu-id="89e9d-116">To set up a WPF application, complete the following steps.</span></span> <span data-ttu-id="89e9d-117">You can find detailed instructions for these steps in [Walkthrough: Accessing the Web by Using Async and Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).</span><span class="sxs-lookup"><span data-stu-id="89e9d-117">You can find detailed instructions for these steps in [Walkthrough: Accessing the Web by Using Async and Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).</span></span>
 
-    - <span data-ttu-id="0d54f-118">텍스트 상자와 단추가 포함된 WPF 애플리케이션을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="0d54f-118">Create a WPF application that contains a text box and a button.</span></span> <span data-ttu-id="0d54f-119">단추의 이름을 `startButton`, 텍스트 상자의 이름을 `resultsTextBox`로 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="0d54f-119">Name the button `startButton`, and name the text box `resultsTextBox`.</span></span>
+    - <span data-ttu-id="89e9d-118">텍스트 상자와 단추가 포함된 WPF 애플리케이션을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="89e9d-118">Create a WPF application that contains a text box and a button.</span></span> <span data-ttu-id="89e9d-119">단추의 이름을 `startButton`, 텍스트 상자의 이름을 `resultsTextBox`로 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="89e9d-119">Name the button `startButton`, and name the text box `resultsTextBox`.</span></span>
 
-    - <span data-ttu-id="0d54f-120"><xref:System.Net.Http>에 대한 참조를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="0d54f-120">Add a reference for <xref:System.Net.Http>.</span></span>
+    - <span data-ttu-id="89e9d-120"><xref:System.Net.Http>에 대한 참조를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="89e9d-120">Add a reference for <xref:System.Net.Http>.</span></span>
 
-    - <span data-ttu-id="0d54f-121">Mainwindow.xaml 파일에서 `System.Net.Http`에 대 한 `Imports` 문을 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="0d54f-121">In the MainWindow.xaml.vb file, add an `Imports` statement for `System.Net.Http`.</span></span>
+    - <span data-ttu-id="89e9d-121">In the MainWindow.xaml.vb file, add an `Imports` statement for `System.Net.Http`.</span><span class="sxs-lookup"><span data-stu-id="89e9d-121">In the MainWindow.xaml.vb file, add an `Imports` statement for `System.Net.Http`.</span></span>
 
-### <a name="to-add-the-code"></a><span data-ttu-id="0d54f-122">코드를 추가하려면</span><span class="sxs-lookup"><span data-stu-id="0d54f-122">To add the code</span></span>
+### <a name="to-add-the-code"></a><span data-ttu-id="89e9d-122">코드를 추가하려면</span><span class="sxs-lookup"><span data-stu-id="89e9d-122">To add the code</span></span>
 
-1. <span data-ttu-id="0d54f-123">디자인 창 Mainwindow.xaml에서 단추를 두 번 클릭 하 여 Mainwindow.xaml에서 `startButton_Click` 이벤트 처리기를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="0d54f-123">In the design window, MainWindow.xaml, double-click the button to create the `startButton_Click` event handler in MainWindow.xaml.vb.</span></span>
+1. <span data-ttu-id="89e9d-123">In the design window, MainWindow.xaml, double-click the button to create the `startButton_Click` event handler in MainWindow.xaml.vb.</span><span class="sxs-lookup"><span data-stu-id="89e9d-123">In the design window, MainWindow.xaml, double-click the button to create the `startButton_Click` event handler in MainWindow.xaml.vb.</span></span>
 
-2. <span data-ttu-id="0d54f-124">다음 코드를 복사 하 여 Mainwindow.xaml의 `startButton_Click` 본문에 붙여넣습니다.</span><span class="sxs-lookup"><span data-stu-id="0d54f-124">Copy the following code, and paste it into the body of `startButton_Click` in MainWindow.xaml.vb.</span></span>
+2. <span data-ttu-id="89e9d-124">Copy the following code, and paste it into the body of `startButton_Click` in MainWindow.xaml.vb.</span><span class="sxs-lookup"><span data-stu-id="89e9d-124">Copy the following code, and paste it into the body of `startButton_Click` in MainWindow.xaml.vb.</span></span>
 
     ```vb
     resultsTextBox.Clear()
@@ -65,15 +65,15 @@ Dim result = Await myTask
     resultsTextBox.Text &= vbCrLf & "Control returned to button1_Click."
     ```
 
-     <span data-ttu-id="0d54f-125">코드는 애플리케이션을 구동하는 비동기 메서드 `CreateMultipleTasksAsync`를 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="0d54f-125">The code calls an asynchronous method, `CreateMultipleTasksAsync`, which drives the application.</span></span>
+     <span data-ttu-id="89e9d-125">코드는 애플리케이션을 구동하는 비동기 메서드 `CreateMultipleTasksAsync`를 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="89e9d-125">The code calls an asynchronous method, `CreateMultipleTasksAsync`, which drives the application.</span></span>
 
-3. <span data-ttu-id="0d54f-126">프로젝트에 다음과 같은 지원 메서드를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="0d54f-126">Add the following support methods to the project:</span></span>
+3. <span data-ttu-id="89e9d-126">프로젝트에 다음과 같은 지원 메서드를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="89e9d-126">Add the following support methods to the project:</span></span>
 
-    - <span data-ttu-id="0d54f-127">`ProcessURLAsync`는 <xref:System.Net.Http.HttpClient> 메서드를 사용하여 웹 사이트 내용을 바이트 배열로 다운로드합니다.</span><span class="sxs-lookup"><span data-stu-id="0d54f-127">`ProcessURLAsync` uses an <xref:System.Net.Http.HttpClient> method to download the contents of a website as a byte array.</span></span> <span data-ttu-id="0d54f-128">그런 다음 지원 메서드 `ProcessURLAsync`는 배열의 길이를 표시하고 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="0d54f-128">The support method, `ProcessURLAsync` then displays and returns the length of the array.</span></span>
+    - <span data-ttu-id="89e9d-127">`ProcessURLAsync`는 <xref:System.Net.Http.HttpClient> 메서드를 사용하여 웹 사이트 내용을 바이트 배열로 다운로드합니다.</span><span class="sxs-lookup"><span data-stu-id="89e9d-127">`ProcessURLAsync` uses an <xref:System.Net.Http.HttpClient> method to download the contents of a website as a byte array.</span></span> <span data-ttu-id="89e9d-128">그런 다음 지원 메서드 `ProcessURLAsync`는 배열의 길이를 표시하고 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="89e9d-128">The support method, `ProcessURLAsync` then displays and returns the length of the array.</span></span>
 
-    - <span data-ttu-id="0d54f-129">`DisplayResults`에 각 URL에 대한 바이트 배열의 바이트 수가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="0d54f-129">`DisplayResults` displays the number of bytes in the byte array for each URL.</span></span> <span data-ttu-id="0d54f-130">이 표시는 각 작업의 다운로드가 완료된 시간을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="0d54f-130">This display shows when each task has finished downloading.</span></span>
+    - <span data-ttu-id="89e9d-129">`DisplayResults`에 각 URL에 대한 바이트 배열의 바이트 수가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="89e9d-129">`DisplayResults` displays the number of bytes in the byte array for each URL.</span></span> <span data-ttu-id="89e9d-130">이 표시는 각 작업의 다운로드가 완료된 시간을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="89e9d-130">This display shows when each task has finished downloading.</span></span>
 
-     <span data-ttu-id="0d54f-131">다음 메서드를 복사 하 여 Mainwindow.xaml의 `startButton_Click` 이벤트 처리기 뒤에 붙여넣습니다.</span><span class="sxs-lookup"><span data-stu-id="0d54f-131">Copy the following methods, and paste them after the `startButton_Click` event handler in MainWindow.xaml.vb.</span></span>
+     <span data-ttu-id="89e9d-131">Copy the following methods, and paste them after the `startButton_Click` event handler in MainWindow.xaml.vb.</span><span class="sxs-lookup"><span data-stu-id="89e9d-131">Copy the following methods, and paste them after the `startButton_Click` event handler in MainWindow.xaml.vb.</span></span>
 
     ```vb
     Private Async Function ProcessURLAsync(url As String, client As HttpClient) As Task(Of Integer)
@@ -95,17 +95,17 @@ Dim result = Await myTask
     End Sub
     ```
 
-4. <span data-ttu-id="0d54f-132">마지막으로, 다음 단계를 수행하는 `CreateMultipleTasksAsync` 메서드를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="0d54f-132">Finally, define method `CreateMultipleTasksAsync`, which performs the following steps.</span></span>
+4. <span data-ttu-id="89e9d-132">마지막으로, 다음 단계를 수행하는 `CreateMultipleTasksAsync` 메서드를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="89e9d-132">Finally, define method `CreateMultipleTasksAsync`, which performs the following steps.</span></span>
 
-    - <span data-ttu-id="0d54f-133">이 메서드는 `ProcessURLAsync`의 <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> 메서드에 액세스하는 데 필요한 `HttpClient` 개체를 선언합니다.</span><span class="sxs-lookup"><span data-stu-id="0d54f-133">The method declares an `HttpClient` object,which you need  to access method <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> in `ProcessURLAsync`.</span></span>
+    - <span data-ttu-id="89e9d-133">이 메서드는 `ProcessURLAsync`의 <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> 메서드에 액세스하는 데 필요한 `HttpClient` 개체를 선언합니다.</span><span class="sxs-lookup"><span data-stu-id="89e9d-133">The method declares an `HttpClient` object,which you need  to access method <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> in `ProcessURLAsync`.</span></span>
 
-    - <span data-ttu-id="0d54f-134">메서드는 `TResult`가 정수인 <xref:System.Threading.Tasks.Task%601> 형식의 세 가지 작업을 만들고 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="0d54f-134">The method creates and starts three tasks of type <xref:System.Threading.Tasks.Task%601>, where `TResult` is an integer.</span></span> <span data-ttu-id="0d54f-135">각 작업이 완료되면 `DisplayResults`에 작업의 URL 및 다운로드한 콘텐츠의 길이가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="0d54f-135">As each task finishes, `DisplayResults` displays the task's URL and the length of the downloaded contents.</span></span> <span data-ttu-id="0d54f-136">작업이 비동기적으로 실행되므로 결과가 표시되는 순서는 선언된 순서와 다를 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0d54f-136">Because the tasks are running asynchronously, the order in which the results appear might differ from the order in which they were declared.</span></span>
+    - <span data-ttu-id="89e9d-134">메서드는 `TResult`가 정수인 <xref:System.Threading.Tasks.Task%601> 형식의 세 가지 작업을 만들고 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="89e9d-134">The method creates and starts three tasks of type <xref:System.Threading.Tasks.Task%601>, where `TResult` is an integer.</span></span> <span data-ttu-id="89e9d-135">각 작업이 완료되면 `DisplayResults`에 작업의 URL 및 다운로드한 콘텐츠의 길이가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="89e9d-135">As each task finishes, `DisplayResults` displays the task's URL and the length of the downloaded contents.</span></span> <span data-ttu-id="89e9d-136">작업이 비동기적으로 실행되므로 결과가 표시되는 순서는 선언된 순서와 다를 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="89e9d-136">Because the tasks are running asynchronously, the order in which the results appear might differ from the order in which they were declared.</span></span>
 
-    - <span data-ttu-id="0d54f-137">메서드는 각 작업이 완료될 때까지 기다립니다.</span><span class="sxs-lookup"><span data-stu-id="0d54f-137">The method awaits the completion of each task.</span></span> <span data-ttu-id="0d54f-138">각 `Await` 연산자는 대기된 작업이 완료될 때까지 `CreateMultipleTasksAsync`의 실행을 중단합니다.</span><span class="sxs-lookup"><span data-stu-id="0d54f-138">Each `Await` operator suspends execution of `CreateMultipleTasksAsync` until the awaited task is finished.</span></span> <span data-ttu-id="0d54f-139">또한 연산자는 완료된 각 작업에서 `ProcessURLAsync` 호출의 반환 값을 검색합니다.</span><span class="sxs-lookup"><span data-stu-id="0d54f-139">The operator also retrieves the return value from the call to `ProcessURLAsync` from each completed task.</span></span>
+    - <span data-ttu-id="89e9d-137">메서드는 각 작업이 완료될 때까지 기다립니다.</span><span class="sxs-lookup"><span data-stu-id="89e9d-137">The method awaits the completion of each task.</span></span> <span data-ttu-id="89e9d-138">각 `Await` 연산자는 대기된 작업이 완료될 때까지 `CreateMultipleTasksAsync`의 실행을 중단합니다.</span><span class="sxs-lookup"><span data-stu-id="89e9d-138">Each `Await` operator suspends execution of `CreateMultipleTasksAsync` until the awaited task is finished.</span></span> <span data-ttu-id="89e9d-139">또한 연산자는 완료된 각 작업에서 `ProcessURLAsync` 호출의 반환 값을 검색합니다.</span><span class="sxs-lookup"><span data-stu-id="89e9d-139">The operator also retrieves the return value from the call to `ProcessURLAsync` from each completed task.</span></span>
 
-    - <span data-ttu-id="0d54f-140">작업이 완료되고 정수 값이 검색된 경우 메서드는 웹 사이트의 길이를 합산하고 결과를 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="0d54f-140">When the tasks have been completed and the integer values have been retrieved, the method sums the lengths of the websites and displays the result.</span></span>
+    - <span data-ttu-id="89e9d-140">작업이 완료되고 정수 값이 검색된 경우 메서드는 웹 사이트의 길이를 합산하고 결과를 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="89e9d-140">When the tasks have been completed and the integer values have been retrieved, the method sums the lengths of the websites and displays the result.</span></span>
 
-     <span data-ttu-id="0d54f-141">다음 메서드를 복사하고 솔루션에 붙여넣습니다.</span><span class="sxs-lookup"><span data-stu-id="0d54f-141">Copy the following method, and paste it into your solution.</span></span>
+     <span data-ttu-id="89e9d-141">다음 메서드를 복사하고 솔루션에 붙여넣습니다.</span><span class="sxs-lookup"><span data-stu-id="89e9d-141">Copy the following method, and paste it into your solution.</span></span>
 
     ```vb
     Private Async Function CreateMultipleTasksAsync() As Task
@@ -137,13 +137,13 @@ Dim result = Await myTask
     End Function
     ```
 
-5. <span data-ttu-id="0d54f-142">F5 키를 선택하여 프로그램을 실행한 다음 **시작** 단추를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="0d54f-142">Choose the F5 key to run the program, and then choose the **Start** button.</span></span>
+5. <span data-ttu-id="89e9d-142">F5 키를 선택하여 프로그램을 실행한 다음 **시작** 단추를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="89e9d-142">Choose the F5 key to run the program, and then choose the **Start** button.</span></span>
 
-     <span data-ttu-id="0d54f-143">프로그램을 여러 번 실행하여 세 가지 작업이 항상 동일한 순서로 완료되지는 않으며, 완료되는 순서가 생성 및 대기된 순서와 다를 수도 있음을 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="0d54f-143">Run the program several times to verify that the three tasks don’t always finish in the same order and that the order in which they finish isn't necessarily the order in which they’re created and awaited.</span></span>
+     <span data-ttu-id="89e9d-143">프로그램을 여러 번 실행하여 세 가지 작업이 항상 동일한 순서로 완료되지는 않으며, 완료되는 순서가 생성 및 대기된 순서와 다를 수도 있음을 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="89e9d-143">Run the program several times to verify that the three tasks don’t always finish in the same order and that the order in which they finish isn't necessarily the order in which they’re created and awaited.</span></span>
 
-## <a name="example"></a><span data-ttu-id="0d54f-144">예제</span><span class="sxs-lookup"><span data-stu-id="0d54f-144">Example</span></span>
+## <a name="example"></a><span data-ttu-id="89e9d-144">예제</span><span class="sxs-lookup"><span data-stu-id="89e9d-144">Example</span></span>
 
-<span data-ttu-id="0d54f-145">다음 코드에는 전체 예제가 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0d54f-145">The following code contains the full example.</span></span>
+<span data-ttu-id="89e9d-145">다음 코드에는 전체 예제가 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="89e9d-145">The following code contains the full example.</span></span>
 
 ```vb
 ' Add the following Imports statements, and add a reference for System.Net.Http.
@@ -205,8 +205,8 @@ Class MainWindow
 End Class
 ```
 
-## <a name="see-also"></a><span data-ttu-id="0d54f-146">참조</span><span class="sxs-lookup"><span data-stu-id="0d54f-146">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="89e9d-146">참조</span><span class="sxs-lookup"><span data-stu-id="89e9d-146">See also</span></span>
 
-- [<span data-ttu-id="0d54f-147">연습: Async 및 Await를 사용하여 웹에 액세스(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0d54f-147">Walkthrough: Accessing the Web by Using Async and Await (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
-- [<span data-ttu-id="0d54f-148">Async 및 Await를 사용한 비동기 프로그래밍(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0d54f-148">Asynchronous Programming with Async and Await (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/async/index.md)
-- [<span data-ttu-id="0d54f-149">방법: Task.WhenAll을 사용하여 비동기 연습 확장(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0d54f-149">How to: Extend the Async Walkthrough by Using Task.WhenAll (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
+- [<span data-ttu-id="89e9d-147">연습: Async 및 Await를 사용하여 웹에 액세스(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="89e9d-147">Walkthrough: Accessing the Web by Using Async and Await (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [<span data-ttu-id="89e9d-148">Async 및 Await를 사용한 비동기 프로그래밍(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="89e9d-148">Asynchronous Programming with Async and Await (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/async/index.md)
+- [<span data-ttu-id="89e9d-149">방법: Task.WhenAll을 사용하여 비동기 연습 확장(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="89e9d-149">How to: Extend the Async Walkthrough by Using Task.WhenAll (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
