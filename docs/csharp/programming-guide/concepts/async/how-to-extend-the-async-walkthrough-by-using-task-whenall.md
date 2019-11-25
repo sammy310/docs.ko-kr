@@ -1,36 +1,36 @@
 ---
-title: '방법: Task.WhenAll을 사용하여 비동기 연습 확장(C#)'
+title: Task.WhenAll을 사용하여 비동기 연습을 확장하는 방법(C#)
 ms.date: 07/20/2015
 ms.assetid: f6927ef2-dc6c-43f8-bc82-bbeac42de423
-ms.openlocfilehash: f44595a409113e4b7ff3ad2c6d0712e5debaad08
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: afd7dda4e876b7faa54ae4a8e62d640d2b9aaf07
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040643"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73970029"
 ---
-# <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-c"></a><span data-ttu-id="f4297-102">방법: Task.WhenAll을 사용하여 비동기 연습 확장(C#)</span><span class="sxs-lookup"><span data-stu-id="f4297-102">How to: Extend the async Walkthrough by Using Task.WhenAll (C#)</span></span>
+# <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-c"></a><span data-ttu-id="e81d8-102">Task.WhenAll을 사용하여 비동기 연습을 확장하는 방법(C#)</span><span class="sxs-lookup"><span data-stu-id="e81d8-102">How to extend the async walkthrough by using Task.WhenAll (C#)</span></span>
 
-<span data-ttu-id="f4297-103"><xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> 메서드를 사용하여 [연습: async 및 await를 사용하여 웹에 액세스(C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)에서 비동기 솔루션의 성능을 개선할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f4297-103">You can improve the performance of the async solution in [Walkthrough: Accessing the Web by Using async and await (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md) by using the <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="f4297-104">이 메서드는 작업 컬렉션으로 표시되는 여러 개의 비동기 작업을 비동기적으로 기다립니다.</span><span class="sxs-lookup"><span data-stu-id="f4297-104">This method asynchronously awaits multiple asynchronous operations, which are represented as a collection of tasks.</span></span>
+<span data-ttu-id="e81d8-103"><xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> 메서드를 사용하여 [연습: async 및 await를 사용하여 웹에 액세스(C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)에서 비동기 솔루션의 성능을 개선할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e81d8-103">You can improve the performance of the async solution in [Walkthrough: Accessing the Web by Using async and await (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md) by using the <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="e81d8-104">이 메서드는 작업 컬렉션으로 표시되는 여러 개의 비동기 작업을 비동기적으로 기다립니다.</span><span class="sxs-lookup"><span data-stu-id="e81d8-104">This method asynchronously awaits multiple asynchronous operations, which are represented as a collection of tasks.</span></span>
 
-<span data-ttu-id="f4297-105">연습에서 웹 사이트 다운로드 속도가 각기 다른 것을 보셨을 것입니다.</span><span class="sxs-lookup"><span data-stu-id="f4297-105">You might have noticed in the walkthrough that the websites download at different rates.</span></span> <span data-ttu-id="f4297-106">때로는 웹 사이트 중 하나가 매우 느려 나머지 다운로드가 모두 지연됩니다.</span><span class="sxs-lookup"><span data-stu-id="f4297-106">Sometimes one of the websites is very slow, which delays all the remaining downloads.</span></span> <span data-ttu-id="f4297-107">연습에서 빌드하는 비동기 솔루션을 실행하는 경우 대기하지 않으려면 프로그램을 쉽게 종료할 수 있지만, 동시에 모든 다운로드를 시작한 후 더 빠른 다운로드는 지연되는 다운로드를 기다리지 않고 계속되도록 하는 것이 더 낫습니다.</span><span class="sxs-lookup"><span data-stu-id="f4297-107">When you run the asynchronous solutions that you build in the walkthrough, you can end the program easily if you don't want to wait, but a better option would be to start all the downloads at the same time and let faster downloads continue without waiting for the one that’s delayed.</span></span>
+<span data-ttu-id="e81d8-105">연습에서 웹 사이트 다운로드 속도가 각기 다른 것을 보셨을 것입니다.</span><span class="sxs-lookup"><span data-stu-id="e81d8-105">You might have noticed in the walkthrough that the websites download at different rates.</span></span> <span data-ttu-id="e81d8-106">때로는 웹 사이트 중 하나가 매우 느려 나머지 다운로드가 모두 지연됩니다.</span><span class="sxs-lookup"><span data-stu-id="e81d8-106">Sometimes one of the websites is very slow, which delays all the remaining downloads.</span></span> <span data-ttu-id="e81d8-107">연습에서 빌드하는 비동기 솔루션을 실행하는 경우 대기하지 않으려면 프로그램을 쉽게 종료할 수 있지만, 동시에 모든 다운로드를 시작한 후 더 빠른 다운로드는 지연되는 다운로드를 기다리지 않고 계속되도록 하는 것이 더 낫습니다.</span><span class="sxs-lookup"><span data-stu-id="e81d8-107">When you run the asynchronous solutions that you build in the walkthrough, you can end the program easily if you don't want to wait, but a better option would be to start all the downloads at the same time and let faster downloads continue without waiting for the one that’s delayed.</span></span>
 
-<span data-ttu-id="f4297-108">작업 컬렉션에 `Task.WhenAll` 메서드를 적용합니다.</span><span class="sxs-lookup"><span data-stu-id="f4297-108">You apply the `Task.WhenAll` method to a collection of tasks.</span></span> <span data-ttu-id="f4297-109">`WhenAll` 애플리케이션은 컬렉션의 모든 작업이 완료될 때까지 완료되지 않는 단일 작업을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="f4297-109">The application of `WhenAll` returns a single task that isn’t complete until every task in the collection is completed.</span></span> <span data-ttu-id="f4297-110">작업이 병렬로 실행되는 것처럼 보이지만 추가 스레드는 생성되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="f4297-110">The tasks appear to run in parallel, but no additional threads are created.</span></span> <span data-ttu-id="f4297-111">작업이 임의 순서로 완료될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f4297-111">The tasks can complete in any order.</span></span>
+<span data-ttu-id="e81d8-108">작업 컬렉션에 `Task.WhenAll` 메서드를 적용합니다.</span><span class="sxs-lookup"><span data-stu-id="e81d8-108">You apply the `Task.WhenAll` method to a collection of tasks.</span></span> <span data-ttu-id="e81d8-109">`WhenAll` 애플리케이션은 컬렉션의 모든 작업이 완료될 때까지 완료되지 않는 단일 작업을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="e81d8-109">The application of `WhenAll` returns a single task that isn’t complete until every task in the collection is completed.</span></span> <span data-ttu-id="e81d8-110">작업이 병렬로 실행되는 것처럼 보이지만 추가 스레드는 생성되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="e81d8-110">The tasks appear to run in parallel, but no additional threads are created.</span></span> <span data-ttu-id="e81d8-111">작업이 임의 순서로 완료될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e81d8-111">The tasks can complete in any order.</span></span>
 
 > [!IMPORTANT]
-> <span data-ttu-id="f4297-112">다음 절차에서는 [연습: async 및 await를 사용하여 웹에 액세스(C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)에서 개발된 비동기 애플리케이션에 대한 확장을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="f4297-112">The following procedures describe extensions to the async applications that are developed in [Walkthrough: Accessing the Web by Using async and await (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md).</span></span> <span data-ttu-id="f4297-113">연습을 완료하거나 [개발자 코드 샘플](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)에서 코드를 다운로드하여 애플리케이션을 개발할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f4297-113">You can develop the applications by either completing the walkthrough or downloading the code from [Developer Code Samples](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f).</span></span>
+> <span data-ttu-id="e81d8-112">다음 절차에서는 [연습: async 및 await를 사용하여 웹에 액세스(C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)에서 개발된 비동기 애플리케이션에 대한 확장을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="e81d8-112">The following procedures describe extensions to the async applications that are developed in [Walkthrough: Accessing the Web by Using async and await (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md).</span></span> <span data-ttu-id="e81d8-113">연습을 완료하거나 [개발자 코드 샘플](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)에서 코드를 다운로드하여 애플리케이션을 개발할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e81d8-113">You can develop the applications by either completing the walkthrough or downloading the code from [Developer Code Samples](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f).</span></span>
 >
-> <span data-ttu-id="f4297-114">예제를 실행하려면 Visual Studio 2012 이상이 컴퓨터에 설치되어 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="f4297-114">To run the example, you must have Visual Studio 2012 or later installed on your computer.</span></span>
+> <span data-ttu-id="e81d8-114">예제를 실행하려면 Visual Studio 2012 이상이 컴퓨터에 설치되어 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="e81d8-114">To run the example, you must have Visual Studio 2012 or later installed on your computer.</span></span>
 
-### <a name="to-add-taskwhenall-to-your-geturlcontentsasync-solution"></a><span data-ttu-id="f4297-115">GetURLContentsAsync 솔루션에 Task.WhenAll을 추가하려면</span><span class="sxs-lookup"><span data-stu-id="f4297-115">To add Task.WhenAll to your GetURLContentsAsync solution</span></span>
+### <a name="to-add-taskwhenall-to-your-geturlcontentsasync-solution"></a><span data-ttu-id="e81d8-115">GetURLContentsAsync 솔루션에 Task.WhenAll을 추가하려면</span><span class="sxs-lookup"><span data-stu-id="e81d8-115">To add Task.WhenAll to your GetURLContentsAsync solution</span></span>
 
-1. <span data-ttu-id="f4297-116">`ProcessURLAsync` 메서드를 [연습: async 및 await를 사용하여 웹에 액세스(C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)에서 개발된 첫 번째 애플리케이션에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="f4297-116">Add the `ProcessURLAsync` method to the first application that's developed in [Walkthrough: Accessing the Web by Using async and await (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md).</span></span>
+1. <span data-ttu-id="e81d8-116">`ProcessURLAsync` 메서드를 [연습: async 및 await를 사용하여 웹에 액세스(C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)에서 개발된 첫 번째 애플리케이션에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="e81d8-116">Add the `ProcessURLAsync` method to the first application that's developed in [Walkthrough: Accessing the Web by Using async and await (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md).</span></span>
 
-    - <span data-ttu-id="f4297-117">[개발자 코드 샘플](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)에서 코드를 다운로드한 경우 AsyncWalkthrough 프로젝트를 열고 MainWindow.xaml.cs 파일에 `ProcessURLAsync`를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="f4297-117">If you downloaded the code from  [Developer Code Samples](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f), open the AsyncWalkthrough project, and then add `ProcessURLAsync` to the MainWindow.xaml.cs file.</span></span>
+    - <span data-ttu-id="e81d8-117">[개발자 코드 샘플](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)에서 코드를 다운로드한 경우 AsyncWalkthrough 프로젝트를 열고 MainWindow.xaml.cs 파일에 `ProcessURLAsync`를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="e81d8-117">If you downloaded the code from  [Developer Code Samples](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f), open the AsyncWalkthrough project, and then add `ProcessURLAsync` to the MainWindow.xaml.cs file.</span></span>
 
-    - <span data-ttu-id="f4297-118">연습을 완료하여 코드를 개발한 경우 `GetURLContentsAsync` 메서드를 포함하는 애플리케이션에 `ProcessURLAsync`를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="f4297-118">If you developed the code by completing the walkthrough, add `ProcessURLAsync` to the application that includes the `GetURLContentsAsync` method.</span></span> <span data-ttu-id="f4297-119">이 애플리케이션에 대한 MainWindow.xaml.cs 파일은 "연습의 전체 코드 예제" 섹션에서 첫 번째 예제입니다.</span><span class="sxs-lookup"><span data-stu-id="f4297-119">The MainWindow.xaml.cs file for this application is the first example in the "Complete Code Examples from the Walkthrough" section.</span></span>
+    - <span data-ttu-id="e81d8-118">연습을 완료하여 코드를 개발한 경우 `GetURLContentsAsync` 메서드를 포함하는 애플리케이션에 `ProcessURLAsync`를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="e81d8-118">If you developed the code by completing the walkthrough, add `ProcessURLAsync` to the application that includes the `GetURLContentsAsync` method.</span></span> <span data-ttu-id="e81d8-119">이 애플리케이션에 대한 MainWindow.xaml.cs 파일은 "연습의 전체 코드 예제" 섹션에서 첫 번째 예제입니다.</span><span class="sxs-lookup"><span data-stu-id="e81d8-119">The MainWindow.xaml.cs file for this application is the first example in the "Complete Code Examples from the Walkthrough" section.</span></span>
 
-    <span data-ttu-id="f4297-120">`ProcessURLAsync` 메서드는 원래 연습의 `SumPageSizesAsync`에 `foreach` 루프 본문의 작업을 통합합니다.</span><span class="sxs-lookup"><span data-stu-id="f4297-120">The `ProcessURLAsync` method consolidates the actions in the body of the `foreach` loop in `SumPageSizesAsync` in the original walkthrough.</span></span> <span data-ttu-id="f4297-121">이 메서드는 비동기적으로 지정된 웹 사이트의 내용을 바이트 배열로 다운로드한 다음 바이트 배열의 길이를 표시하고 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="f4297-121">The method asynchronously downloads the contents of a specified website as a byte array, and then displays and returns the length of the byte array.</span></span>
+    <span data-ttu-id="e81d8-120">`ProcessURLAsync` 메서드는 원래 연습의 `SumPageSizesAsync`에 `foreach` 루프 본문의 작업을 통합합니다.</span><span class="sxs-lookup"><span data-stu-id="e81d8-120">The `ProcessURLAsync` method consolidates the actions in the body of the `foreach` loop in `SumPageSizesAsync` in the original walkthrough.</span></span> <span data-ttu-id="e81d8-121">이 메서드는 비동기적으로 지정된 웹 사이트의 내용을 바이트 배열로 다운로드한 다음 바이트 배열의 길이를 표시하고 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="e81d8-121">The method asynchronously downloads the contents of a specified website as a byte array, and then displays and returns the length of the byte array.</span></span>
 
     ```csharp
     private async Task<int> ProcessURLAsync(string url)
@@ -41,7 +41,7 @@ ms.locfileid: "70040643"
     }
     ```
 
-2. <span data-ttu-id="f4297-122">다음 코드와 같이 `SumPageSizesAsync`의 `foreach` 루프를 주석으로 처리하거나 삭제합니다.</span><span class="sxs-lookup"><span data-stu-id="f4297-122">Comment out or delete the `foreach` loop in `SumPageSizesAsync`, as the following code shows.</span></span>
+2. <span data-ttu-id="e81d8-122">다음 코드와 같이 `SumPageSizesAsync`의 `foreach` 루프를 주석으로 처리하거나 삭제합니다.</span><span class="sxs-lookup"><span data-stu-id="e81d8-122">Comment out or delete the `foreach` loop in `SumPageSizesAsync`, as the following code shows.</span></span>
 
     ```csharp
     //var total = 0;
@@ -62,9 +62,9 @@ ms.locfileid: "70040643"
     //}
     ```
 
-3. <span data-ttu-id="f4297-123">작업 컬렉션을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="f4297-123">Create a collection of tasks.</span></span> <span data-ttu-id="f4297-124">다음 코드는 <xref:System.Linq.Enumerable.ToArray%2A> 메서드가 실행할 때 각 웹 사이트의 내용을 다운로드하는 작업 컬렉션을 만드는 [쿼리](../linq/index.md)를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="f4297-124">The following code defines a [query](../linq/index.md) that, when executed by the <xref:System.Linq.Enumerable.ToArray%2A> method, creates a collection of tasks that download the contents of each website.</span></span> <span data-ttu-id="f4297-125">작업은 쿼리가 평가될 때 시작됩니다.</span><span class="sxs-lookup"><span data-stu-id="f4297-125">The tasks are started when the query is evaluated.</span></span>
+3. <span data-ttu-id="e81d8-123">작업 컬렉션을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="e81d8-123">Create a collection of tasks.</span></span> <span data-ttu-id="e81d8-124">다음 코드는 <xref:System.Linq.Enumerable.ToArray%2A> 메서드가 실행할 때 각 웹 사이트의 내용을 다운로드하는 작업 컬렉션을 만드는 [쿼리](../linq/index.md)를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="e81d8-124">The following code defines a [query](../linq/index.md) that, when executed by the <xref:System.Linq.Enumerable.ToArray%2A> method, creates a collection of tasks that download the contents of each website.</span></span> <span data-ttu-id="e81d8-125">작업은 쿼리가 평가될 때 시작됩니다.</span><span class="sxs-lookup"><span data-stu-id="e81d8-125">The tasks are started when the query is evaluated.</span></span>
 
-    <span data-ttu-id="f4297-126">`SumPageSizesAsync` 메서드의 `urlList` 선언 뒤에 다음 코드를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="f4297-126">Add the following code to method `SumPageSizesAsync` after the declaration of `urlList`.</span></span>
+    <span data-ttu-id="e81d8-126">`SumPageSizesAsync` 메서드의 `urlList` 선언 뒤에 다음 코드를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="e81d8-126">Add the following code to method `SumPageSizesAsync` after the declaration of `urlList`.</span></span>
 
     ```csharp
     // Create a query.
@@ -75,9 +75,9 @@ ms.locfileid: "70040643"
     Task<int>[] downloadTasks = downloadTasksQuery.ToArray();
     ```
 
-4. <span data-ttu-id="f4297-127">작업 컬렉션 `downloadTasks`에서 `Task.WhenAll`을 적용합니다.</span><span class="sxs-lookup"><span data-stu-id="f4297-127">Apply `Task.WhenAll` to the collection of tasks, `downloadTasks`.</span></span> <span data-ttu-id="f4297-128">`Task.WhenAll`은 작업 컬렉션의 모든 작업이 완료될 때 완료되는 단일 작업을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="f4297-128">`Task.WhenAll` returns a single task that finishes when all the tasks in the collection of tasks have completed.</span></span>
+4. <span data-ttu-id="e81d8-127">작업 컬렉션 `downloadTasks`에서 `Task.WhenAll`을 적용합니다.</span><span class="sxs-lookup"><span data-stu-id="e81d8-127">Apply `Task.WhenAll` to the collection of tasks, `downloadTasks`.</span></span> <span data-ttu-id="e81d8-128">`Task.WhenAll`은 작업 컬렉션의 모든 작업이 완료될 때 완료되는 단일 작업을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="e81d8-128">`Task.WhenAll` returns a single task that finishes when all the tasks in the collection of tasks have completed.</span></span>
 
-    <span data-ttu-id="f4297-129">다음 예제에서 `await` 식은 `WhenAll`이 반환하는 단일 작업이 완료될 때까지 기다립니다.</span><span class="sxs-lookup"><span data-stu-id="f4297-129">In the following example, the `await` expression awaits the completion of the single task that `WhenAll` returns.</span></span> <span data-ttu-id="f4297-130">식은 각 정수가 다운로드된 웹 사이트의 길이인 정수 배열로 평가됩니다.</span><span class="sxs-lookup"><span data-stu-id="f4297-130">The expression evaluates to an array of integers, where each integer is the length of a downloaded website.</span></span> <span data-ttu-id="f4297-131">이전 단계에서 추가한 코드 뒤의 `SumPageSizesAsync`에 다음 코드를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="f4297-131">Add the following code to `SumPageSizesAsync`, just after the code that you added in the previous step.</span></span>
+    <span data-ttu-id="e81d8-129">다음 예제에서 `await` 식은 `WhenAll`이 반환하는 단일 작업이 완료될 때까지 기다립니다.</span><span class="sxs-lookup"><span data-stu-id="e81d8-129">In the following example, the `await` expression awaits the completion of the single task that `WhenAll` returns.</span></span> <span data-ttu-id="e81d8-130">식은 각 정수가 다운로드된 웹 사이트의 길이인 정수 배열로 평가됩니다.</span><span class="sxs-lookup"><span data-stu-id="e81d8-130">The expression evaluates to an array of integers, where each integer is the length of a downloaded website.</span></span> <span data-ttu-id="e81d8-131">이전 단계에서 추가한 코드 뒤의 `SumPageSizesAsync`에 다음 코드를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="e81d8-131">Add the following code to `SumPageSizesAsync`, just after the code that you added in the previous step.</span></span>
 
     ```csharp
     // Await the completion of all the running tasks.
@@ -88,23 +88,23 @@ ms.locfileid: "70040643"
     //int[] lengths = await whenAllTask;
     ```
 
-5. <span data-ttu-id="f4297-132">마지막으로, <xref:System.Linq.Enumerable.Sum%2A> 메서드를 사용하여 모든 웹 사이트의 길이 합계를 계산합니다.</span><span class="sxs-lookup"><span data-stu-id="f4297-132">Finally, use the <xref:System.Linq.Enumerable.Sum%2A> method to calculate the sum of the lengths of all the websites.</span></span> <span data-ttu-id="f4297-133">`SumPageSizesAsync`에 다음 줄을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="f4297-133">Add the following line to `SumPageSizesAsync`.</span></span>
+5. <span data-ttu-id="e81d8-132">마지막으로, <xref:System.Linq.Enumerable.Sum%2A> 메서드를 사용하여 모든 웹 사이트의 길이 합계를 계산합니다.</span><span class="sxs-lookup"><span data-stu-id="e81d8-132">Finally, use the <xref:System.Linq.Enumerable.Sum%2A> method to calculate the sum of the lengths of all the websites.</span></span> <span data-ttu-id="e81d8-133">`SumPageSizesAsync`에 다음 줄을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="e81d8-133">Add the following line to `SumPageSizesAsync`.</span></span>
 
     ```csharp
     int total = lengths.Sum();
     ```
 
-### <a name="to-add-taskwhenall-to-the-httpclientgetbytearrayasync-solution"></a><span data-ttu-id="f4297-134">HttpClient.GetByteArrayAsync 솔루션에 Task.WhenAll을 추가하려면</span><span class="sxs-lookup"><span data-stu-id="f4297-134">To add Task.WhenAll to the HttpClient.GetByteArrayAsync solution</span></span>
+### <a name="to-add-taskwhenall-to-the-httpclientgetbytearrayasync-solution"></a><span data-ttu-id="e81d8-134">HttpClient.GetByteArrayAsync 솔루션에 Task.WhenAll을 추가하려면</span><span class="sxs-lookup"><span data-stu-id="e81d8-134">To add Task.WhenAll to the HttpClient.GetByteArrayAsync solution</span></span>
 
-1. <span data-ttu-id="f4297-135">`ProcessURLAsync`의 다음 버전을 [연습: async 및 await를 사용하여 웹에 액세스(C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)에서 개발된 두 번째 애플리케이션에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="f4297-135">Add the following version of `ProcessURLAsync` to the second application that's developed in [Walkthrough: Accessing the Web by Using async and await (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md).</span></span>
+1. <span data-ttu-id="e81d8-135">`ProcessURLAsync`의 다음 버전을 [연습: async 및 await를 사용하여 웹에 액세스(C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)에서 개발된 두 번째 애플리케이션에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="e81d8-135">Add the following version of `ProcessURLAsync` to the second application that's developed in [Walkthrough: Accessing the Web by Using async and await (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md).</span></span>
 
-    - <span data-ttu-id="f4297-136">[개발자 코드 샘플](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)에서 코드를 다운로드한 경우 AsyncWalkthrough_HttpClient 프로젝트를 열고 MainWindow.xaml.cs 파일에 `ProcessURLAsync`를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="f4297-136">If you downloaded the code from [Developer Code Samples](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f), open the AsyncWalkthrough_HttpClient project, and then add `ProcessURLAsync` to the MainWindow.xaml.cs file.</span></span>
+    - <span data-ttu-id="e81d8-136">[개발자 코드 샘플](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)에서 코드를 다운로드한 경우 AsyncWalkthrough_HttpClient 프로젝트를 열고 MainWindow.xaml.cs 파일에 `ProcessURLAsync`를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="e81d8-136">If you downloaded the code from [Developer Code Samples](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f), open the AsyncWalkthrough_HttpClient project, and then add `ProcessURLAsync` to the MainWindow.xaml.cs file.</span></span>
 
-    - <span data-ttu-id="f4297-137">연습을 완료하여 코드를 개발한 경우 `HttpClient.GetByteArrayAsync` 메서드를 사용하는 애플리케이션에 `ProcessURLAsync`를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="f4297-137">If you developed the code by completing the walkthrough, add `ProcessURLAsync` to the application that uses the `HttpClient.GetByteArrayAsync` method.</span></span> <span data-ttu-id="f4297-138">이 애플리케이션에 대한 MainWindow.xaml.cs 파일은 "연습의 전체 코드 예제" 섹션에서 두 번째 예제입니다.</span><span class="sxs-lookup"><span data-stu-id="f4297-138">The MainWindow.xaml.cs file for this application is the second example in the "Complete Code Examples from the Walkthrough" section.</span></span>
+    - <span data-ttu-id="e81d8-137">연습을 완료하여 코드를 개발한 경우 `HttpClient.GetByteArrayAsync` 메서드를 사용하는 애플리케이션에 `ProcessURLAsync`를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="e81d8-137">If you developed the code by completing the walkthrough, add `ProcessURLAsync` to the application that uses the `HttpClient.GetByteArrayAsync` method.</span></span> <span data-ttu-id="e81d8-138">이 애플리케이션에 대한 MainWindow.xaml.cs 파일은 "연습의 전체 코드 예제" 섹션에서 두 번째 예제입니다.</span><span class="sxs-lookup"><span data-stu-id="e81d8-138">The MainWindow.xaml.cs file for this application is the second example in the "Complete Code Examples from the Walkthrough" section.</span></span>
 
-    <span data-ttu-id="f4297-139">`ProcessURLAsync` 메서드는 원래 연습의 `SumPageSizesAsync`에 `foreach` 루프 본문의 작업을 통합합니다.</span><span class="sxs-lookup"><span data-stu-id="f4297-139">The `ProcessURLAsync` method consolidates the actions in the body of the `foreach` loop in `SumPageSizesAsync` in the original walkthrough.</span></span> <span data-ttu-id="f4297-140">이 메서드는 비동기적으로 지정된 웹 사이트의 내용을 바이트 배열로 다운로드한 다음 바이트 배열의 길이를 표시하고 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="f4297-140">The method asynchronously downloads the contents of a specified website as a byte array, and then displays and returns the length of the byte array.</span></span>
+    <span data-ttu-id="e81d8-139">`ProcessURLAsync` 메서드는 원래 연습의 `SumPageSizesAsync`에 `foreach` 루프 본문의 작업을 통합합니다.</span><span class="sxs-lookup"><span data-stu-id="e81d8-139">The `ProcessURLAsync` method consolidates the actions in the body of the `foreach` loop in `SumPageSizesAsync` in the original walkthrough.</span></span> <span data-ttu-id="e81d8-140">이 메서드는 비동기적으로 지정된 웹 사이트의 내용을 바이트 배열로 다운로드한 다음 바이트 배열의 길이를 표시하고 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="e81d8-140">The method asynchronously downloads the contents of a specified website as a byte array, and then displays and returns the length of the byte array.</span></span>
 
-    <span data-ttu-id="f4297-141">이전 절차의 `ProcessURLAsync` 메서드와 차이점은 <xref:System.Net.Http.HttpClient> 인스턴스 `client`를 사용한다는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="f4297-141">The only difference from the `ProcessURLAsync` method in the previous procedure is the use of the <xref:System.Net.Http.HttpClient> instance, `client`.</span></span>
+    <span data-ttu-id="e81d8-141">이전 절차의 `ProcessURLAsync` 메서드와 차이점은 <xref:System.Net.Http.HttpClient> 인스턴스 `client`를 사용한다는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="e81d8-141">The only difference from the `ProcessURLAsync` method in the previous procedure is the use of the <xref:System.Net.Http.HttpClient> instance, `client`.</span></span>
 
     ```csharp
     async Task<int> ProcessURLAsync(string url, HttpClient client)
@@ -115,7 +115,7 @@ ms.locfileid: "70040643"
     }
     ```
 
-2. <span data-ttu-id="f4297-142">다음 코드와 같이 `SumPageSizesAsync`의 `For Each` 또는 `foreach` 루프를 주석으로 처리하거나 삭제합니다.</span><span class="sxs-lookup"><span data-stu-id="f4297-142">Comment out or delete the `For Each` or `foreach` loop in `SumPageSizesAsync`, as the following code shows.</span></span>
+2. <span data-ttu-id="e81d8-142">다음 코드와 같이 `SumPageSizesAsync`의 `For Each` 또는 `foreach` 루프를 주석으로 처리하거나 삭제합니다.</span><span class="sxs-lookup"><span data-stu-id="e81d8-142">Comment out or delete the `For Each` or `foreach` loop in `SumPageSizesAsync`, as the following code shows.</span></span>
 
     ```csharp
     //var total = 0;
@@ -137,9 +137,9 @@ ms.locfileid: "70040643"
     //}
     ```
 
-3. <span data-ttu-id="f4297-143"><xref:System.Linq.Enumerable.ToArray%2A> 메서드에서 실행할 때 각 웹 사이트의 내용을 다운로드하는 작업 컬렉션을 만드는 [쿼리](../linq/index.md)를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="f4297-143">Define a [query](../linq/index.md) that, when executed by the <xref:System.Linq.Enumerable.ToArray%2A> method, creates a collection of tasks that download the contents of each website.</span></span> <span data-ttu-id="f4297-144">작업은 쿼리가 평가될 때 시작됩니다.</span><span class="sxs-lookup"><span data-stu-id="f4297-144">The tasks are started when the query is evaluated.</span></span>
+3. <span data-ttu-id="e81d8-143"><xref:System.Linq.Enumerable.ToArray%2A> 메서드에서 실행할 때 각 웹 사이트의 내용을 다운로드하는 작업 컬렉션을 만드는 [쿼리](../linq/index.md)를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="e81d8-143">Define a [query](../linq/index.md) that, when executed by the <xref:System.Linq.Enumerable.ToArray%2A> method, creates a collection of tasks that download the contents of each website.</span></span> <span data-ttu-id="e81d8-144">작업은 쿼리가 평가될 때 시작됩니다.</span><span class="sxs-lookup"><span data-stu-id="e81d8-144">The tasks are started when the query is evaluated.</span></span>
 
-    <span data-ttu-id="f4297-145">`SumPageSizesAsync` 메서드의 `client` 및 `urlList` 선언 뒤에 다음 코드를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="f4297-145">Add the following code to method `SumPageSizesAsync` after the declaration of `client` and `urlList`.</span></span>
+    <span data-ttu-id="e81d8-145">`SumPageSizesAsync` 메서드의 `client` 및 `urlList` 선언 뒤에 다음 코드를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="e81d8-145">Add the following code to method `SumPageSizesAsync` after the declaration of `client` and `urlList`.</span></span>
 
     ```csharp
     // Create a query.
@@ -150,9 +150,9 @@ ms.locfileid: "70040643"
     Task<int>[] downloadTasks = downloadTasksQuery.ToArray();
     ```
 
-4. <span data-ttu-id="f4297-146">작업 컬렉션 `downloadTasks`에서 `Task.WhenAll`을 적용합니다.</span><span class="sxs-lookup"><span data-stu-id="f4297-146">Next, apply `Task.WhenAll` to the collection of tasks, `downloadTasks`.</span></span> <span data-ttu-id="f4297-147">`Task.WhenAll`은 작업 컬렉션의 모든 작업이 완료될 때 완료되는 단일 작업을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="f4297-147">`Task.WhenAll` returns a single task that finishes when all the tasks in the collection of tasks have completed.</span></span>
+4. <span data-ttu-id="e81d8-146">작업 컬렉션 `downloadTasks`에서 `Task.WhenAll`을 적용합니다.</span><span class="sxs-lookup"><span data-stu-id="e81d8-146">Next, apply `Task.WhenAll` to the collection of tasks, `downloadTasks`.</span></span> <span data-ttu-id="e81d8-147">`Task.WhenAll`은 작업 컬렉션의 모든 작업이 완료될 때 완료되는 단일 작업을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="e81d8-147">`Task.WhenAll` returns a single task that finishes when all the tasks in the collection of tasks have completed.</span></span>
 
-    <span data-ttu-id="f4297-148">다음 예제에서 `await` 식은 `WhenAll`이 반환하는 단일 작업이 완료될 때까지 기다립니다.</span><span class="sxs-lookup"><span data-stu-id="f4297-148">In the following example, the `await` expression awaits the completion of the single task that `WhenAll` returns.</span></span> <span data-ttu-id="f4297-149">완료되면 `await` 식은 각 정수가 다운로드된 웹 사이트의 길이인 정수 배열로 평가됩니다.</span><span class="sxs-lookup"><span data-stu-id="f4297-149">When complete, the `await` expression evaluates to an array of integers, where each integer is the length of a downloaded website.</span></span> <span data-ttu-id="f4297-150">이전 단계에서 추가한 코드 뒤의 `SumPageSizesAsync`에 다음 코드를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="f4297-150">Add the following code to `SumPageSizesAsync`, just after the code that you added in the previous step.</span></span>
+    <span data-ttu-id="e81d8-148">다음 예제에서 `await` 식은 `WhenAll`이 반환하는 단일 작업이 완료될 때까지 기다립니다.</span><span class="sxs-lookup"><span data-stu-id="e81d8-148">In the following example, the `await` expression awaits the completion of the single task that `WhenAll` returns.</span></span> <span data-ttu-id="e81d8-149">완료되면 `await` 식은 각 정수가 다운로드된 웹 사이트의 길이인 정수 배열로 평가됩니다.</span><span class="sxs-lookup"><span data-stu-id="e81d8-149">When complete, the `await` expression evaluates to an array of integers, where each integer is the length of a downloaded website.</span></span> <span data-ttu-id="e81d8-150">이전 단계에서 추가한 코드 뒤의 `SumPageSizesAsync`에 다음 코드를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="e81d8-150">Add the following code to `SumPageSizesAsync`, just after the code that you added in the previous step.</span></span>
 
     ```csharp
     // Await the completion of all the running tasks.
@@ -163,19 +163,19 @@ ms.locfileid: "70040643"
     //int[] lengths = await whenAllTask;
     ```
 
-5. <span data-ttu-id="f4297-151">마지막으로, <xref:System.Linq.Enumerable.Sum%2A> 메서드를 사용하여 모든 웹 사이트의 길이 합계를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="f4297-151">Finally, use the <xref:System.Linq.Enumerable.Sum%2A> method to get the sum of the lengths of all the websites.</span></span> <span data-ttu-id="f4297-152">`SumPageSizesAsync`에 다음 줄을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="f4297-152">Add the following line to `SumPageSizesAsync`.</span></span>
+5. <span data-ttu-id="e81d8-151">마지막으로, <xref:System.Linq.Enumerable.Sum%2A> 메서드를 사용하여 모든 웹 사이트의 길이 합계를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="e81d8-151">Finally, use the <xref:System.Linq.Enumerable.Sum%2A> method to get the sum of the lengths of all the websites.</span></span> <span data-ttu-id="e81d8-152">`SumPageSizesAsync`에 다음 줄을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="e81d8-152">Add the following line to `SumPageSizesAsync`.</span></span>
 
     ```csharp
     int total = lengths.Sum();
     ```
 
-### <a name="to-test-the-taskwhenall-solutions"></a><span data-ttu-id="f4297-153">Task.WhenAll 솔루션을 테스트하려면</span><span class="sxs-lookup"><span data-stu-id="f4297-153">To test the Task.WhenAll solutions</span></span>
+### <a name="to-test-the-taskwhenall-solutions"></a><span data-ttu-id="e81d8-153">Task.WhenAll 솔루션을 테스트하려면</span><span class="sxs-lookup"><span data-stu-id="e81d8-153">To test the Task.WhenAll solutions</span></span>
 
-- <span data-ttu-id="f4297-154">두 솔루션 중 하나에 대해 F5 키를 선택하여 프로그램을 실행한 다음 **시작** 단추를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="f4297-154">For either solution, choose the F5 key to run the program, and then choose the **Start** button.</span></span> <span data-ttu-id="f4297-155">출력은 [연습: async 및 await를 사용하여 웹에 액세스(C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)의 비동기 솔루션 출력과 유사해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="f4297-155">The output should resemble the output from the async solutions in [Walkthrough: Accessing the Web by Using async and await (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md).</span></span> <span data-ttu-id="f4297-156">그러나 웹 사이트가 매번 다른 순서로 나타납니다.</span><span class="sxs-lookup"><span data-stu-id="f4297-156">However, notice that the websites appear in a different order each time.</span></span>
+- <span data-ttu-id="e81d8-154">두 솔루션 중 하나에 대해 F5 키를 선택하여 프로그램을 실행한 다음 **시작** 단추를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="e81d8-154">For either solution, choose the F5 key to run the program, and then choose the **Start** button.</span></span> <span data-ttu-id="e81d8-155">출력은 [연습: async 및 await를 사용하여 웹에 액세스(C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)의 비동기 솔루션 출력과 유사해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="e81d8-155">The output should resemble the output from the async solutions in [Walkthrough: Accessing the Web by Using async and await (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md).</span></span> <span data-ttu-id="e81d8-156">그러나 웹 사이트가 매번 다른 순서로 나타납니다.</span><span class="sxs-lookup"><span data-stu-id="e81d8-156">However, notice that the websites appear in a different order each time.</span></span>
 
-## <a name="example"></a><span data-ttu-id="f4297-157">예</span><span class="sxs-lookup"><span data-stu-id="f4297-157">Example</span></span>
+## <a name="example"></a><span data-ttu-id="e81d8-157">예</span><span class="sxs-lookup"><span data-stu-id="e81d8-157">Example</span></span>
 
-<span data-ttu-id="f4297-158">다음 코드에서는 `GetURLContentsAsync` 메서드를 사용하여 웹에서 콘텐츠를 다운로드하는 프로젝트에 대한 확장을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="f4297-158">The following code shows the extensions to the project that uses the `GetURLContentsAsync` method to download content from the web.</span></span>
+<span data-ttu-id="e81d8-158">다음 코드에서는 `GetURLContentsAsync` 메서드를 사용하여 웹에서 콘텐츠를 다운로드하는 프로젝트에 대한 확장을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="e81d8-158">The following code shows the extensions to the project that uses the `GetURLContentsAsync` method to download content from the web.</span></span>
 
 ```csharp
 // Add the following using directives, and add a reference for System.Net.Http.
@@ -315,9 +315,9 @@ namespace AsyncExampleWPF_WhenAll
 }
 ```
 
-## <a name="example"></a><span data-ttu-id="f4297-159">예</span><span class="sxs-lookup"><span data-stu-id="f4297-159">Example</span></span>
+## <a name="example"></a><span data-ttu-id="e81d8-159">예</span><span class="sxs-lookup"><span data-stu-id="e81d8-159">Example</span></span>
 
-<span data-ttu-id="f4297-160">다음 코드에서는 `HttpClient.GetByteArrayAsync` 메서드를 사용하여 웹에서 콘텐츠를 다운로드하는 프로젝트에 대한 확장을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="f4297-160">The following code shows the extensions to the project that uses method `HttpClient.GetByteArrayAsync` to download content from the web.</span></span>
+<span data-ttu-id="e81d8-160">다음 코드에서는 `HttpClient.GetByteArrayAsync` 메서드를 사용하여 웹에서 콘텐츠를 다운로드하는 프로젝트에 대한 확장을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="e81d8-160">The following code shows the extensions to the project that uses method `HttpClient.GetByteArrayAsync` to download content from the web.</span></span>
 
 ```csharp
 // Add the following using directives, and add a reference for System.Net.Http.
@@ -437,7 +437,7 @@ namespace AsyncExampleWPF_HttpClient_WhenAll
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="f4297-161">참고 항목</span><span class="sxs-lookup"><span data-stu-id="f4297-161">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e81d8-161">참고 항목</span><span class="sxs-lookup"><span data-stu-id="e81d8-161">See also</span></span>
 
 - <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>
-- [<span data-ttu-id="f4297-162">연습: async 및 await를 사용하여 웹에 액세스(C#)</span><span class="sxs-lookup"><span data-stu-id="f4297-162">Walkthrough: Accessing the Web by Using async and await (C#)</span></span>](./walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [<span data-ttu-id="e81d8-162">연습: async 및 await를 사용하여 웹에 액세스(C#)</span><span class="sxs-lookup"><span data-stu-id="e81d8-162">Walkthrough: Accessing the Web by Using async and await (C#)</span></span>](./walkthrough-accessing-the-web-by-using-async-and-await.md)

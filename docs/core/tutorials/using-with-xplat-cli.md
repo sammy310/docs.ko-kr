@@ -6,94 +6,94 @@ ms.author: adegeo
 ms.date: 08/07/2019
 ms.technology: dotnet-cli
 ms.custom: seodec18
-ms.openlocfilehash: c7e314e9712c3b569ecc813a72670942651feda1
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: cf8c3ae070f4c77789dc55ba4d7888c7b15c8653
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73454746"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736985"
 ---
-# <a name="get-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a><span data-ttu-id="38f6e-103">명령줄을 사용하여 Windows/Linux/macOS에서 .NET Core 시작</span><span class="sxs-lookup"><span data-stu-id="38f6e-103">Get started with .NET Core on Windows/Linux/macOS using the command line</span></span>
+# <a name="get-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a><span data-ttu-id="7d2f7-103">명령줄을 사용하여 Windows/Linux/macOS에서 .NET Core 시작</span><span class="sxs-lookup"><span data-stu-id="7d2f7-103">Get started with .NET Core on Windows/Linux/macOS using the command line</span></span>
 
-<span data-ttu-id="38f6e-104">이 항목에서는 .NET Core CLI 도구를 사용하여 컴퓨터에서 플랫폼 간 앱 개발을 시작하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="38f6e-104">This topic will show you how to start developing cross-platforms apps in your machine using the .NET Core CLI tools.</span></span>
+<span data-ttu-id="7d2f7-104">이 항목에서는 .NET Core CLI 도구를 사용하여 컴퓨터에서 플랫폼 간 앱 개발을 시작하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="7d2f7-104">This topic will show you how to start developing cross-platforms apps in your machine using the .NET Core CLI tools.</span></span>
 
-<span data-ttu-id="38f6e-105">.NET Core CLI 도구 집합에 익숙하지 않은 경우 [.NET Core SDK 개요](../tools/index.md)를 읽어 보세요.</span><span class="sxs-lookup"><span data-stu-id="38f6e-105">If you're unfamiliar with the .NET Core CLI toolset, read the [.NET Core SDK overview](../tools/index.md).</span></span>
+<span data-ttu-id="7d2f7-105">.NET Core CLI 도구 집합에 익숙하지 않은 경우 [.NET Core SDK 개요](../tools/index.md)를 읽어 보세요.</span><span class="sxs-lookup"><span data-stu-id="7d2f7-105">If you're unfamiliar with the .NET Core CLI toolset, read the [.NET Core SDK overview](../tools/index.md).</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="38f6e-106">전제 조건</span><span class="sxs-lookup"><span data-stu-id="38f6e-106">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="7d2f7-106">전제 조건</span><span class="sxs-lookup"><span data-stu-id="7d2f7-106">Prerequisites</span></span>
 
-- <span data-ttu-id="38f6e-107">[.NET Core SDK 2.1](https://dotnet.microsoft.com/download) 이상 버전.</span><span class="sxs-lookup"><span data-stu-id="38f6e-107">[.NET Core SDK 2.1](https://dotnet.microsoft.com/download) or later versions.</span></span>
-- <span data-ttu-id="38f6e-108">선택하는 텍스트 편집기 또는 코드 편집기입니다.</span><span class="sxs-lookup"><span data-stu-id="38f6e-108">A text editor or code editor of your choice.</span></span>
+- <span data-ttu-id="7d2f7-107">[.NET Core SDK 2.1](https://dotnet.microsoft.com/download) 이상 버전.</span><span class="sxs-lookup"><span data-stu-id="7d2f7-107">[.NET Core SDK 2.1](https://dotnet.microsoft.com/download) or later versions.</span></span>
+- <span data-ttu-id="7d2f7-108">선택하는 텍스트 편집기 또는 코드 편집기입니다.</span><span class="sxs-lookup"><span data-stu-id="7d2f7-108">A text editor or code editor of your choice.</span></span>
 
-## <a name="hello-console-app"></a><span data-ttu-id="38f6e-109">Hello, 콘솔 앱!</span><span class="sxs-lookup"><span data-stu-id="38f6e-109">Hello, Console App!</span></span>
+## <a name="hello-console-app"></a><span data-ttu-id="7d2f7-109">Hello, 콘솔 앱!</span><span class="sxs-lookup"><span data-stu-id="7d2f7-109">Hello, Console App!</span></span>
 
-<span data-ttu-id="38f6e-110">GitHub의 dotnet/samples 리포지토리에서 [샘플 코드를 보거나 다운로드](https://github.com/dotnet/samples/tree/master/core/console-apps/HelloMsBuild)할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="38f6e-110">You can [view or download the sample code](https://github.com/dotnet/samples/tree/master/core/console-apps/HelloMsBuild) from the dotnet/samples GitHub repository.</span></span> <span data-ttu-id="38f6e-111">다운로드 지침은 [샘플 및 자습서](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="38f6e-111">For download instructions, see [Samples and Tutorials](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).</span></span>
+<span data-ttu-id="7d2f7-110">GitHub의 dotnet/samples 리포지토리에서 [샘플 코드를 보거나 다운로드](https://github.com/dotnet/samples/tree/master/core/console-apps/HelloMsBuild)할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7d2f7-110">You can [view or download the sample code](https://github.com/dotnet/samples/tree/master/core/console-apps/HelloMsBuild) from the dotnet/samples GitHub repository.</span></span> <span data-ttu-id="7d2f7-111">다운로드 지침은 [샘플 및 자습서](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="7d2f7-111">For download instructions, see [Samples and Tutorials](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).</span></span>
 
-<span data-ttu-id="38f6e-112">명령 프롬프트를 열고 *Hello*라는 폴더를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="38f6e-112">Open a command prompt and create a folder named *Hello*.</span></span> <span data-ttu-id="38f6e-113">만든 폴더로 이동하고 다음을 입력합니다.</span><span class="sxs-lookup"><span data-stu-id="38f6e-113">Navigate to the folder you created and type the following:</span></span>
+<span data-ttu-id="7d2f7-112">명령 프롬프트를 열고 *Hello*라는 폴더를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="7d2f7-112">Open a command prompt and create a folder named *Hello*.</span></span> <span data-ttu-id="7d2f7-113">만든 폴더로 이동하고 다음을 입력합니다.</span><span class="sxs-lookup"><span data-stu-id="7d2f7-113">Navigate to the folder you created and type the following:</span></span>
 
 ```dotnetcli
 dotnet new console
 dotnet run
 ```
 
-<span data-ttu-id="38f6e-114">이제 간단한 연습을 해보겠습니다.</span><span class="sxs-lookup"><span data-stu-id="38f6e-114">Let's do a quick walkthrough:</span></span>
+<span data-ttu-id="7d2f7-114">이제 간단한 연습을 해보겠습니다.</span><span class="sxs-lookup"><span data-stu-id="7d2f7-114">Let's do a quick walkthrough:</span></span>
 
 1. `dotnet new console`
 
-   <span data-ttu-id="38f6e-115">[`dotnet new`](../tools/dotnet-new.md)는 콘솔 앱을 빌드하는 데 필요한 종속성이 있는 최신 *Hello.csproj* 프로젝트 파일입니다.</span><span class="sxs-lookup"><span data-stu-id="38f6e-115">[`dotnet new`](../tools/dotnet-new.md) creates an up-to-date *Hello.csproj* project file with the dependencies necessary to build a console app.</span></span> <span data-ttu-id="38f6e-116">애플리케이션에 대한 진입점을 포함하는 기본 파일인 *Program.cs*도 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="38f6e-116">It also creates a *Program.cs*, a basic file containing the entry point for the application.</span></span>
+   <span data-ttu-id="7d2f7-115">[`dotnet new`](../tools/dotnet-new.md)는 콘솔 앱을 빌드하는 데 필요한 종속성이 있는 최신 *Hello.csproj* 프로젝트 파일입니다.</span><span class="sxs-lookup"><span data-stu-id="7d2f7-115">[`dotnet new`](../tools/dotnet-new.md) creates an up-to-date *Hello.csproj* project file with the dependencies necessary to build a console app.</span></span> <span data-ttu-id="7d2f7-116">애플리케이션에 대한 진입점을 포함하는 기본 파일인 *Program.cs*도 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="7d2f7-116">It also creates a *Program.cs*, a basic file containing the entry point for the application.</span></span>
 
-   <span data-ttu-id="38f6e-117">*Hello.csproj*:</span><span class="sxs-lookup"><span data-stu-id="38f6e-117">*Hello.csproj*:</span></span>
+   <span data-ttu-id="7d2f7-117">*Hello.csproj*:</span><span class="sxs-lookup"><span data-stu-id="7d2f7-117">*Hello.csproj*:</span></span>
 
-   [!code-xml[Hello.csproj](../../../samples/core/console-apps/HelloMsBuild/Hello.csproj)]
+   [!code-xml[Hello.csproj](~/samples/core/console-apps/HelloMsBuild/Hello.csproj)]
 
-   <span data-ttu-id="38f6e-118">프로젝트 파일은 종속성을 복원하고 프로그램을 빌드하는 데 필요한 모든 항목을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="38f6e-118">The project file specifies everything that's needed to restore dependencies and build the program.</span></span>
+   <span data-ttu-id="7d2f7-118">프로젝트 파일은 종속성을 복원하고 프로그램을 빌드하는 데 필요한 모든 항목을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="7d2f7-118">The project file specifies everything that's needed to restore dependencies and build the program.</span></span>
 
-   - <span data-ttu-id="38f6e-119">`OutputType` 태그에서는 실행 파일, 즉 콘솔 애플리케이션을 빌드하고 있음을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="38f6e-119">The `OutputType` tag specifies that we're building an executable, in other words a console application.</span></span>
-   - <span data-ttu-id="38f6e-120">`TargetFramework` 태그에서는 대상으로 하는 .NET 구현을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="38f6e-120">The `TargetFramework` tag specifies what .NET implementation we're targeting.</span></span> <span data-ttu-id="38f6e-121">고급 시나리오에서는 여러 대상 프레임워크를 지정하고 이 모든 프레임워크를 단일 작업으로 빌드할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="38f6e-121">In an advanced scenario, you can specify multiple target frameworks and build to all those in a single operation.</span></span> <span data-ttu-id="38f6e-122">이 자습서에서는 .NET Core 2.1에 대해서만 빌드합니다.</span><span class="sxs-lookup"><span data-stu-id="38f6e-122">In this tutorial, we'll stick to building only for .NET Core 2.1.</span></span>
+   - <span data-ttu-id="7d2f7-119">`OutputType` 태그에서는 실행 파일, 즉 콘솔 애플리케이션을 빌드하고 있음을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="7d2f7-119">The `OutputType` tag specifies that we're building an executable, in other words a console application.</span></span>
+   - <span data-ttu-id="7d2f7-120">`TargetFramework` 태그에서는 대상으로 하는 .NET 구현을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="7d2f7-120">The `TargetFramework` tag specifies what .NET implementation we're targeting.</span></span> <span data-ttu-id="7d2f7-121">고급 시나리오에서는 여러 대상 프레임워크를 지정하고 이 모든 프레임워크를 단일 작업으로 빌드할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7d2f7-121">In an advanced scenario, you can specify multiple target frameworks and build to all those in a single operation.</span></span> <span data-ttu-id="7d2f7-122">이 자습서에서는 .NET Core 2.1에 대해서만 빌드합니다.</span><span class="sxs-lookup"><span data-stu-id="7d2f7-122">In this tutorial, we'll stick to building only for .NET Core 2.1.</span></span>
 
-   <span data-ttu-id="38f6e-123">*Program.cs*:</span><span class="sxs-lookup"><span data-stu-id="38f6e-123">*Program.cs*:</span></span>
+   <span data-ttu-id="7d2f7-123">*Program.cs*:</span><span class="sxs-lookup"><span data-stu-id="7d2f7-123">*Program.cs*:</span></span>
 
-   [!code-csharp[Program.cs](../../../samples/core/console-apps/HelloMsBuild/Program.cs)]
+   [!code-csharp[Program.cs](~/samples/core/console-apps/HelloMsBuild/Program.cs)]
 
-   <span data-ttu-id="38f6e-124">프로그램은 `using System`으로 시작됩니다. 즉, "`System` 네임스페이스의 모든 항목을 이 파일 범위로 가져옵니다".</span><span class="sxs-lookup"><span data-stu-id="38f6e-124">The program starts by `using System`, which means "bring everything in the `System` namespace into scope for this file".</span></span> <span data-ttu-id="38f6e-125">`System` 네임스페이스에는 `string` 또는 숫자 형식과 같은 기본 구문이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="38f6e-125">The `System` namespace includes basic constructs such as `string`, or numeric types.</span></span>
+   <span data-ttu-id="7d2f7-124">프로그램은 `using System`으로 시작됩니다. 즉, "`System` 네임스페이스의 모든 항목을 이 파일 범위로 가져옵니다".</span><span class="sxs-lookup"><span data-stu-id="7d2f7-124">The program starts by `using System`, which means "bring everything in the `System` namespace into scope for this file".</span></span> <span data-ttu-id="7d2f7-125">`System` 네임스페이스는 `Console` 클래스를 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="7d2f7-125">The `System` namespace includes the `Console` class.</span></span>
 
-   <span data-ttu-id="38f6e-126">그런 다음 `Hello`라는 네임스페이스를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="38f6e-126">We then define a namespace called `Hello`.</span></span> <span data-ttu-id="38f6e-127">이 이름은 원하는 값으로 변경할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="38f6e-127">You can change this to anything you want.</span></span> <span data-ttu-id="38f6e-128">`Program`이라는 클래스는 해당 네임스페이스 내에서 인수로 문자열 배열을 사용하는 `Main` 메서드로 정의됩니다.</span><span class="sxs-lookup"><span data-stu-id="38f6e-128">A class named `Program` is defined within that namespace, with a `Main` method that takes an array of strings as its argument.</span></span> <span data-ttu-id="38f6e-129">이 배열에는 컴파일된 프로그램을 호출할 때 전달된 인수 목록이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="38f6e-129">This array contains the list of arguments passed in when the compiled program is called.</span></span> <span data-ttu-id="38f6e-130">이 배열은 그대로 사용되지 않습니다. 프로그램은 모두 "Hello World!"를 작성합니다.</span><span class="sxs-lookup"><span data-stu-id="38f6e-130">As it is, this array is not used: all the program is doing is to write "Hello World!"</span></span> <span data-ttu-id="38f6e-131">표시합니다.</span><span class="sxs-lookup"><span data-stu-id="38f6e-131">to the console.</span></span> <span data-ttu-id="38f6e-132">나중에 이 인수를 사용하는 코드를 변경할 예정입니다.</span><span class="sxs-lookup"><span data-stu-id="38f6e-132">Later, we'll make changes to the code that will make use of this argument.</span></span>
+   <span data-ttu-id="7d2f7-126">그런 다음 `Hello`라는 네임스페이스를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="7d2f7-126">We then define a namespace called `Hello`.</span></span> <span data-ttu-id="7d2f7-127">이 이름은 원하는 값으로 변경할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7d2f7-127">You can change this to anything you want.</span></span> <span data-ttu-id="7d2f7-128">`Program`이라는 클래스는 해당 네임스페이스 내에서 인수로 문자열 배열을 사용하는 `Main` 메서드로 정의됩니다.</span><span class="sxs-lookup"><span data-stu-id="7d2f7-128">A class named `Program` is defined within that namespace, with a `Main` method that takes an array of strings as its argument.</span></span> <span data-ttu-id="7d2f7-129">이 배열에는 컴파일된 프로그램을 호출할 때 전달된 인수 목록이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7d2f7-129">This array contains the list of arguments passed in when the compiled program is called.</span></span> <span data-ttu-id="7d2f7-130">이 배열은 그대로 사용되지 않습니다. 프로그램은 모두 "Hello World!"를 작성합니다.</span><span class="sxs-lookup"><span data-stu-id="7d2f7-130">As it is, this array is not used: all the program is doing is to write "Hello World!"</span></span> <span data-ttu-id="7d2f7-131">표시합니다.</span><span class="sxs-lookup"><span data-stu-id="7d2f7-131">to the console.</span></span> <span data-ttu-id="7d2f7-132">나중에 이 인수를 사용하는 코드를 변경할 예정입니다.</span><span class="sxs-lookup"><span data-stu-id="7d2f7-132">Later, we'll make changes to the code that will make use of this argument.</span></span>
 
    [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-   <span data-ttu-id="38f6e-133">`dotnet new`는 [`dotnet restore`](../tools/dotnet-restore.md)를 암시적으로 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="38f6e-133">`dotnet new` calls [`dotnet restore`](../tools/dotnet-restore.md) implicitly.</span></span> <span data-ttu-id="38f6e-134">`dotnet restore`는 [NuGet](https://www.nuget.org/)(.NET 패키지 관리자)을 호출하여 종속성 트리를 복원합니다.</span><span class="sxs-lookup"><span data-stu-id="38f6e-134">`dotnet restore` calls into [NuGet](https://www.nuget.org/) (.NET package manager) to restore the tree of dependencies.</span></span> <span data-ttu-id="38f6e-135">NuGet은 *Hello.csproj* 파일을 분석하고, 파일에 정의된 종속성을 다운로드하고(또는 머신의 캐시에서 종속성을 가져오고), 샘플을 컴파일 및 실행하는 데 필요한 *obj/project.assets.json* 파일을 작성합니다.</span><span class="sxs-lookup"><span data-stu-id="38f6e-135">NuGet analyzes the *Hello.csproj* file, downloads the dependencies defined in the file (or grabs them from a cache on your machine), and writes the *obj/project.assets.json* file, which is necessary to compile and run the sample.</span></span>
+   <span data-ttu-id="7d2f7-133">`dotnet new`는 [`dotnet restore`](../tools/dotnet-restore.md)를 암시적으로 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="7d2f7-133">`dotnet new` calls [`dotnet restore`](../tools/dotnet-restore.md) implicitly.</span></span> <span data-ttu-id="7d2f7-134">`dotnet restore`는 [NuGet](https://www.nuget.org/)(.NET 패키지 관리자)을 호출하여 종속성 트리를 복원합니다.</span><span class="sxs-lookup"><span data-stu-id="7d2f7-134">`dotnet restore` calls into [NuGet](https://www.nuget.org/) (.NET package manager) to restore the tree of dependencies.</span></span> <span data-ttu-id="7d2f7-135">NuGet은 *Hello.csproj* 파일을 분석하고, 파일에 정의된 종속성을 다운로드하고(또는 머신의 캐시에서 종속성을 가져오고), 샘플을 컴파일 및 실행하는 데 필요한 *obj/project.assets.json* 파일을 작성합니다.</span><span class="sxs-lookup"><span data-stu-id="7d2f7-135">NuGet analyzes the *Hello.csproj* file, downloads the dependencies defined in the file (or grabs them from a cache on your machine), and writes the *obj/project.assets.json* file, which is necessary to compile and run the sample.</span></span>
 
    > [!IMPORTANT]
-   > <span data-ttu-id="38f6e-136">SDK의 .NET Core 1.x 버전을 사용하는 경우 `dotnet new`를 호출한 후 `dotnet restore`를 직접 호출해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="38f6e-136">If you're using a .NET Core 1.x version of the SDK, you'll have to call `dotnet restore` yourself after calling `dotnet new`.</span></span>
+   > <span data-ttu-id="7d2f7-136">SDK의 .NET Core 1.x 버전을 사용하는 경우 `dotnet new`를 호출한 후 `dotnet restore`를 직접 호출해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="7d2f7-136">If you're using a .NET Core 1.x version of the SDK, you'll have to call `dotnet restore` yourself after calling `dotnet new`.</span></span>
 
 2. `dotnet run`
 
-   <span data-ttu-id="38f6e-137">[`dotnet run`](../tools/dotnet-run.md)은 [`dotnet build`](../tools/dotnet-build.md)를 호출하여 빌드 대상이 빌드되었는지를 확인하고 `dotnet <assembly.dll>`을 호출하여 대상 애플리케이션을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="38f6e-137">[`dotnet run`](../tools/dotnet-run.md) calls [`dotnet build`](../tools/dotnet-build.md) to ensure that the build targets have been built, and then calls `dotnet <assembly.dll>` to run the target application.</span></span>
+   <span data-ttu-id="7d2f7-137">[`dotnet run`](../tools/dotnet-run.md)은 [`dotnet build`](../tools/dotnet-build.md)를 호출하여 빌드 대상이 빌드되었는지를 확인하고 `dotnet <assembly.dll>`을 호출하여 대상 애플리케이션을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="7d2f7-137">[`dotnet run`](../tools/dotnet-run.md) calls [`dotnet build`](../tools/dotnet-build.md) to ensure that the build targets have been built, and then calls `dotnet <assembly.dll>` to run the target application.</span></span>
 
     ```console
     $ dotnet run
     Hello World!
     ```
 
-    <span data-ttu-id="38f6e-138">또한 [`dotnet build`](../tools/dotnet-build.md)를 실행하여 빌드 콘솔 애플리케이션을 실행하지 않고 코드를 컴파일할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="38f6e-138">Alternatively, you can also execute [`dotnet build`](../tools/dotnet-build.md) to compile the code without running the build console applications.</span></span> <span data-ttu-id="38f6e-139">이로 인해 Windows에서는 `dotnet bin\Debug\netcoreapp2.1\Hello.dll`로, 다른 시스템에서는 `/`로 실행할 수 있는 컴파일된 애플리케이션이 DLL 파일로 만들어집니다.</span><span class="sxs-lookup"><span data-stu-id="38f6e-139">This results in a compiled application as a DLL file that can be run with `dotnet bin\Debug\netcoreapp2.1\Hello.dll` on Windows (use `/` for non-Windows systems).</span></span> <span data-ttu-id="38f6e-140">이 항목의 뒷부분에서 살펴보겠지만, 애플리케이션에 인수를 지정할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="38f6e-140">You may also specify arguments to the application as you'll see later on the topic.</span></span>
+    <span data-ttu-id="7d2f7-138">또한 [`dotnet build`](../tools/dotnet-build.md)를 실행하여 빌드 콘솔 애플리케이션을 실행하지 않고 코드를 컴파일할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7d2f7-138">Alternatively, you can also execute [`dotnet build`](../tools/dotnet-build.md) to compile the code without running the build console applications.</span></span> <span data-ttu-id="7d2f7-139">이로 인해 Windows에서는 `dotnet bin\Debug\netcoreapp2.1\Hello.dll`로, 다른 시스템에서는 `/`로 실행할 수 있는 컴파일된 애플리케이션이 DLL 파일로 만들어집니다.</span><span class="sxs-lookup"><span data-stu-id="7d2f7-139">This results in a compiled application as a DLL file that can be run with `dotnet bin\Debug\netcoreapp2.1\Hello.dll` on Windows (use `/` for non-Windows systems).</span></span> <span data-ttu-id="7d2f7-140">이 항목의 뒷부분에서 살펴보겠지만, 애플리케이션에 인수를 지정할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7d2f7-140">You may also specify arguments to the application as you'll see later on the topic.</span></span>
 
     ```console
     $ dotnet bin\Debug\netcoreapp2.1\Hello.dll
     Hello World!
     ```
 
-    <span data-ttu-id="38f6e-141">고급 시나리오에서는 .NET Core를 설치하지 않아도 되는 컴퓨터에 배포하고 실행할 수 있는 자체 포함된 플랫폼별 파일로 애플리케이션을 빌드할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="38f6e-141">As an advanced scenario, it's possible to build the application as a self-contained set of platform-specific files that can be deployed and run to a machine that doesn't necessarily have .NET Core installed.</span></span> <span data-ttu-id="38f6e-142">자세한 내용은 [.NET Core 애플리케이션 배포](../deploying/index.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="38f6e-142">See [.NET Core Application Deployment](../deploying/index.md) for details.</span></span>
+    <span data-ttu-id="7d2f7-141">고급 시나리오에서는 .NET Core를 설치하지 않아도 되는 컴퓨터에 배포하고 실행할 수 있는 자체 포함된 플랫폼별 파일로 애플리케이션을 빌드할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7d2f7-141">As an advanced scenario, it's possible to build the application as a self-contained set of platform-specific files that can be deployed and run to a machine that doesn't necessarily have .NET Core installed.</span></span> <span data-ttu-id="7d2f7-142">자세한 내용은 [.NET Core 애플리케이션 배포](../deploying/index.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="7d2f7-142">See [.NET Core Application Deployment](../deploying/index.md) for details.</span></span>
 
-### <a name="augmenting-the-program"></a><span data-ttu-id="38f6e-143">프로그램 보강</span><span class="sxs-lookup"><span data-stu-id="38f6e-143">Augmenting the program</span></span>
+### <a name="augmenting-the-program"></a><span data-ttu-id="7d2f7-143">프로그램 보강</span><span class="sxs-lookup"><span data-stu-id="7d2f7-143">Augmenting the program</span></span>
 
-<span data-ttu-id="38f6e-144">프로그램을 조금 변경해 봅시다.</span><span class="sxs-lookup"><span data-stu-id="38f6e-144">Let's change the program a bit.</span></span> <span data-ttu-id="38f6e-145">피보나치 숫자가 흥미로우므로, 인수 사용과 함께 피보나치 숫자를 추가하여 앱을 실행하는 사람을 맞이해 봅시다.</span><span class="sxs-lookup"><span data-stu-id="38f6e-145">Fibonacci numbers are fun, so let's add that in addition to use the argument to greet the person running the app.</span></span>
+<span data-ttu-id="7d2f7-144">프로그램을 조금 변경해 봅시다.</span><span class="sxs-lookup"><span data-stu-id="7d2f7-144">Let's change the program a bit.</span></span> <span data-ttu-id="7d2f7-145">피보나치 숫자가 흥미로우므로, 인수 사용과 함께 피보나치 숫자를 추가하여 앱을 실행하는 사람을 맞이해 봅시다.</span><span class="sxs-lookup"><span data-stu-id="7d2f7-145">Fibonacci numbers are fun, so let's add that in addition to use the argument to greet the person running the app.</span></span>
 
-1. <span data-ttu-id="38f6e-146">*Program.cs* 파일의 내용을 다음 코드로 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="38f6e-146">Replace the contents of your *Program.cs*  file with the following code:</span></span>
+1. <span data-ttu-id="7d2f7-146">*Program.cs* 파일의 내용을 다음 코드로 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="7d2f7-146">Replace the contents of your *Program.cs*  file with the following code:</span></span>
 
    [!code-csharp[Fibonacci](../../../samples/core/console-apps/fibonacci-msbuild/Program.cs)]
 
-2. <span data-ttu-id="38f6e-147">[ `dotnet build` ](../tools/dotnet-build.md)를 실행하여 변경 내용을 컴파일합니다.</span><span class="sxs-lookup"><span data-stu-id="38f6e-147">Execute [`dotnet build`](../tools/dotnet-build.md) to compile the changes.</span></span>
+2. <span data-ttu-id="7d2f7-147">[ `dotnet build` ](../tools/dotnet-build.md)를 실행하여 변경 내용을 컴파일합니다.</span><span class="sxs-lookup"><span data-stu-id="7d2f7-147">Execute [`dotnet build`](../tools/dotnet-build.md) to compile the changes.</span></span>
 
-3. <span data-ttu-id="38f6e-148">앱에 매개 변수를 전달하는 프로그램을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="38f6e-148">Run the program passing a parameter to the app:</span></span>
+3. <span data-ttu-id="7d2f7-148">앱에 매개 변수를 전달하는 프로그램을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="7d2f7-148">Run the program passing a parameter to the app:</span></span>
 
    ```console
    $ dotnet run -- John
@@ -116,24 +116,24 @@ dotnet run
    15: 377
    ```
 
-<span data-ttu-id="38f6e-149">됐습니다!</span><span class="sxs-lookup"><span data-stu-id="38f6e-149">And that's it!</span></span>  <span data-ttu-id="38f6e-150">원하는 대로 `Program.cs`를 보강할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="38f6e-150">You can augment `Program.cs` any way you like.</span></span>
+<span data-ttu-id="7d2f7-149">됐습니다!</span><span class="sxs-lookup"><span data-stu-id="7d2f7-149">And that's it!</span></span>  <span data-ttu-id="7d2f7-150">원하는 대로 *Program.cs*를 보강할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7d2f7-150">You can augment *Program.cs* any way you like.</span></span>
 
-## <a name="working-with-multiple-files"></a><span data-ttu-id="38f6e-151">여러 파일 작업</span><span class="sxs-lookup"><span data-stu-id="38f6e-151">Working with multiple files</span></span>
+## <a name="working-with-multiple-files"></a><span data-ttu-id="7d2f7-151">여러 파일 작업</span><span class="sxs-lookup"><span data-stu-id="7d2f7-151">Working with multiple files</span></span>
 
-<span data-ttu-id="38f6e-152">단일 파일은 간단한 일회용 프로그램에 적합하지만 더 복잡한 앱을 빌드하는 경우 프로젝트에 여러 소스 파일이 있을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="38f6e-152">Single files are fine for simple one-off programs, but if you're building a more complex app, you're probably going to have multiple source files on your project.</span></span>
-<span data-ttu-id="38f6e-153">일부 피보나치 값을 캐시하여 이전 피보나치 예제에서 빌드하고 몇몇 재귀 기능을 추가해보겠습니다.</span><span class="sxs-lookup"><span data-stu-id="38f6e-153">Let's build off of the previous Fibonacci example by caching some Fibonacci values and add some recursive features.</span></span>
+<span data-ttu-id="7d2f7-152">단일 파일은 간단한 일회용 프로그램에 적합하지만 더 복잡한 앱을 빌드하는 경우 프로젝트에 여러 소스 파일이 있을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7d2f7-152">Single files are fine for simple one-off programs, but if you're building a more complex app, you're probably going to have multiple source files on your project.</span></span>
+<span data-ttu-id="7d2f7-153">일부 피보나치 값을 캐시하여 이전 피보나치 예제에서 빌드하고 몇몇 재귀 기능을 추가해보겠습니다.</span><span class="sxs-lookup"><span data-stu-id="7d2f7-153">Let's build off of the previous Fibonacci example by caching some Fibonacci values and add some recursive features.</span></span>
 
-1. <span data-ttu-id="38f6e-154">다음 코드를 사용하여 *Hello* 디렉터리 내에 *FibonacciGenerator.cs*라는 새 파일을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="38f6e-154">Add a new file inside the *Hello* directory named *FibonacciGenerator.cs* with the following code:</span></span>
+1. <span data-ttu-id="7d2f7-154">다음 코드를 사용하여 *Hello* 디렉터리 내에 *FibonacciGenerator.cs*라는 새 파일을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="7d2f7-154">Add a new file inside the *Hello* directory named *FibonacciGenerator.cs* with the following code:</span></span>
 
-   [!code-csharp[Fibonacci Generator](../../../samples/core/console-apps/FibonacciBetterMsBuild/FibonacciGenerator.cs)]
+   [!code-csharp[Fibonacci Generator](~/samples/core/console-apps/FibonacciBetterMsBuild/FibonacciGenerator.cs)]
 
-2. <span data-ttu-id="38f6e-155">다음 예제에서처럼 *Program.cs* 파일의 `Main` 메서드를 변경하여 새 클래스를 인스턴스화하고 메서드를 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="38f6e-155">Change the `Main` method in your *Program.cs* file to instantiate the new class and call its method as in the following example:</span></span>
+2. <span data-ttu-id="7d2f7-155">다음 예제에서처럼 *Program.cs* 파일의 `Main` 메서드를 변경하여 새 클래스를 인스턴스화하고 메서드를 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="7d2f7-155">Change the `Main` method in your *Program.cs* file to instantiate the new class and call its method as in the following example:</span></span>
 
-   [!code-csharp[New Program.cs](../../../samples/core/console-apps/FibonacciBetterMsBuild/Program.cs)]
+   [!code-csharp[New Program.cs](~/samples/core/console-apps/FibonacciBetterMsBuild/Program.cs)]
 
-3. <span data-ttu-id="38f6e-156">[ `dotnet build` ](../tools/dotnet-build.md)를 실행하여 변경 내용을 컴파일합니다.</span><span class="sxs-lookup"><span data-stu-id="38f6e-156">Execute [`dotnet build`](../tools/dotnet-build.md) to compile the changes.</span></span>
+3. <span data-ttu-id="7d2f7-156">[ `dotnet build` ](../tools/dotnet-build.md)를 실행하여 변경 내용을 컴파일합니다.</span><span class="sxs-lookup"><span data-stu-id="7d2f7-156">Execute [`dotnet build`](../tools/dotnet-build.md) to compile the changes.</span></span>
 
-4. <span data-ttu-id="38f6e-157">[`dotnet run`](../tools/dotnet-run.md)을 실행하여 앱을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="38f6e-157">Run your app by executing [`dotnet run`](../tools/dotnet-run.md).</span></span> <span data-ttu-id="38f6e-158">다음은 프로그램 출력을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="38f6e-158">The following shows the program output:</span></span>
+4. <span data-ttu-id="7d2f7-157">[`dotnet run`](../tools/dotnet-run.md)을 실행하여 앱을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="7d2f7-157">Run your app by executing [`dotnet run`](../tools/dotnet-run.md).</span></span> <span data-ttu-id="7d2f7-158">다음은 프로그램 출력을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="7d2f7-158">The following shows the program output:</span></span>
 
    ```console
    $ dotnet run
@@ -154,23 +154,23 @@ dotnet run
    377
    ```
 
-## <a name="publish-your-app"></a><span data-ttu-id="38f6e-159">앱 게시</span><span class="sxs-lookup"><span data-stu-id="38f6e-159">Publish your app</span></span>
+## <a name="publish-your-app"></a><span data-ttu-id="7d2f7-159">앱 게시</span><span class="sxs-lookup"><span data-stu-id="7d2f7-159">Publish your app</span></span>
 
-<span data-ttu-id="38f6e-160">앱을 배포할 준비가 되면 [`dotnet publish`](../tools/dotnet-publish.md) 명령을 사용하여 _bin\\debug\\netcoreapp2.1\\publish\\_ 에 _publish_ 폴더를 생성합니다(비 Windows 시스템의 경우 `/` 사용).</span><span class="sxs-lookup"><span data-stu-id="38f6e-160">Once you're ready to distribute your app, use the [`dotnet publish`](../tools/dotnet-publish.md) command to generate the _publish_ folder at _bin\\debug\\netcoreapp2.1\\publish\\_ (use `/` for non-Windows systems).</span></span> <span data-ttu-id="38f6e-161">이미 dotnet 런타임을 설치한 경우에 _publish_ 폴더의 콘텐츠를 다른 플랫폼에 배포할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="38f6e-161">You can distribute the contents of the _publish_ folder to other platforms as long as they've already installed the dotnet runtime.</span></span>
+<span data-ttu-id="7d2f7-160">앱을 배포할 준비가 되면 [`dotnet publish`](../tools/dotnet-publish.md) 명령을 사용하여 _bin\\debug\\netcoreapp2.1\\publish\\_ 에 _publish_ 폴더를 생성합니다(비 Windows 시스템의 경우 `/` 사용).</span><span class="sxs-lookup"><span data-stu-id="7d2f7-160">Once you're ready to distribute your app, use the [`dotnet publish`](../tools/dotnet-publish.md) command to generate the _publish_ folder at _bin\\debug\\netcoreapp2.1\\publish\\_ (use `/` for non-Windows systems).</span></span> <span data-ttu-id="7d2f7-161">이미 dotnet 런타임을 설치한 경우에 _publish_ 폴더의 콘텐츠를 다른 플랫폼에 배포할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7d2f7-161">You can distribute the contents of the _publish_ folder to other platforms as long as they've already installed the dotnet runtime.</span></span>
 
-<span data-ttu-id="38f6e-162">[dotnet](../tools/dotnet.md) 명령으로 게시된 앱을 실행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="38f6e-162">You can run your published app with the [dotnet](../tools/dotnet.md) command:</span></span>
+<span data-ttu-id="7d2f7-162">[dotnet](../tools/dotnet.md) 명령으로 게시된 앱을 실행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7d2f7-162">You can run your published app with the [dotnet](../tools/dotnet.md) command:</span></span>
 
 ```console
 $ dotnet bin\Debug\netcoreapp2.1\publish\Hello.dll
 Hello World!
 ```
 
-## <a name="conclusion"></a><span data-ttu-id="38f6e-163">결론</span><span class="sxs-lookup"><span data-stu-id="38f6e-163">Conclusion</span></span>
+## <a name="conclusion"></a><span data-ttu-id="7d2f7-163">결론</span><span class="sxs-lookup"><span data-stu-id="7d2f7-163">Conclusion</span></span>
 
-<span data-ttu-id="38f6e-164">됐습니다!</span><span class="sxs-lookup"><span data-stu-id="38f6e-164">And that's it!</span></span> <span data-ttu-id="38f6e-165">이제 여기에서 배운 기본 개념을 활용하여 고유의 프로그램을 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="38f6e-165">Now, you can start using the basic concepts learned here to create your own programs.</span></span>
+<span data-ttu-id="7d2f7-164">됐습니다!</span><span class="sxs-lookup"><span data-stu-id="7d2f7-164">And that's it!</span></span> <span data-ttu-id="7d2f7-165">이제 여기에서 배운 기본 개념을 활용하여 고유의 프로그램을 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7d2f7-165">Now, you can start using the basic concepts learned here to create your own programs.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="38f6e-166">참고 항목</span><span class="sxs-lookup"><span data-stu-id="38f6e-166">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7d2f7-166">참고 항목</span><span class="sxs-lookup"><span data-stu-id="7d2f7-166">See also</span></span>
 
-- [<span data-ttu-id="38f6e-167">.NET Core CLI 도구를 사용하여 프로젝트 구성 및 테스트</span><span class="sxs-lookup"><span data-stu-id="38f6e-167">Organizing and testing projects with the .NET Core CLI tools</span></span>](testing-with-cli.md)
-- [<span data-ttu-id="38f6e-168">CLI를 사용하여 .NET Core 앱 게시</span><span class="sxs-lookup"><span data-stu-id="38f6e-168">Publish .NET Core apps with the CLI</span></span>](../deploying/deploy-with-cli.md)
-- [<span data-ttu-id="38f6e-169">앱 배포에 대한 자세한 정보</span><span class="sxs-lookup"><span data-stu-id="38f6e-169">Learn more about app deployment</span></span>](../deploying/index.md)
+- [<span data-ttu-id="7d2f7-167">.NET Core CLI 도구를 사용하여 프로젝트 구성 및 테스트</span><span class="sxs-lookup"><span data-stu-id="7d2f7-167">Organizing and testing projects with the .NET Core CLI tools</span></span>](testing-with-cli.md)
+- [<span data-ttu-id="7d2f7-168">CLI를 사용하여 .NET Core 앱 게시</span><span class="sxs-lookup"><span data-stu-id="7d2f7-168">Publish .NET Core apps with the CLI</span></span>](../deploying/deploy-with-cli.md)
+- [<span data-ttu-id="7d2f7-169">앱 배포에 대한 자세한 정보</span><span class="sxs-lookup"><span data-stu-id="7d2f7-169">Learn more about app deployment</span></span>](../deploying/index.md)

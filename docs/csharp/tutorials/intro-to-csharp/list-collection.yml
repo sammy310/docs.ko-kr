@@ -9,12 +9,12 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: fb08cef284a016dd65c99a1efb0a661624a731f1
-  ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+  ms.openlocfilehash: f7fd68120defbfcda6ac11e14bc749bf4d69c109
+  ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 10/09/2019
-  ms.locfileid: "72179003"
+  ms.lasthandoff: 11/12/2019
+  ms.locfileid: "73969385"
 items:
 - durationInMinutes: 1
   content: >
@@ -22,7 +22,7 @@ items:
 - title: 목록 만들기
   durationInMinutes: 2
   content: >
-    대화형 창에서 다음 코드를 실행합니다. 그렇게 하려면 대화형 창에 다음 코드 블록을 입력하고(`<name>`을 사용자의 이름으로 바꿈) **실행** 단추를 클릭합니다.
+    대화형 창에서 다음 코드를 실행합니다. **포커스 모드 시작** 단추를 선택합니다. 그런 다음, 대화형 창에 다음 코드 블록을 입력하고(`<name>`을 사용자 이름으로 바꿈) **실행**을 선택합니다.
 
 
     ```csharp
@@ -106,7 +106,7 @@ items:
     ```
 
 
-    **실행**을 클릭하여 결과를 다시 확인합니다. C#에서 인덱스는 0부터 시작하므로, 가장 큰 유효 인덱스는 목록의 항목 수보다 하나 작습니다.
+    **실행**을 다시 선택하여 결과를 확인합니다. C#에서 인덱스는 0부터 시작하므로, 가장 큰 유효 인덱스는 목록의 항목 수보다 하나 작습니다.
 
 
     > [!NOTE]
