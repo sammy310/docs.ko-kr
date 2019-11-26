@@ -65,7 +65,7 @@
           href: how-to-query-for-sentences-that-contain-a-specified-set-of-words.md
         - name: '방법: 문자열에서 문자 쿼리(LINQ)'
           href: how-to-query-for-characters-in-a-string-linq.md
-        - name: '방법: LINQ 쿼리와 정규식 결합'
+        - name: LINQ 쿼리와 정규식을 결합하는 방법
           href: how-to-combine-linq-queries-with-regular-expressions.md
         - name: '방법: 두 목록 간의 차집합 구하기(LINQ)'
           href: how-to-find-the-set-difference-between-two-lists-linq.md
@@ -103,7 +103,7 @@
           href: how-to-query-for-the-largest-file-or-files-in-a-directory-tree.md
         - name: '방법: 디렉터리 트리에서 중복 파일 쿼리(LINQ)'
           href: how-to-query-for-duplicate-files-in-a-directory-tree-linq.md
-        - name: '방법: 폴더에서 파일의 콘텐츠 쿼리(LINQ)'
+        - name: 폴더의 파일 내용 쿼리 방법(LINQ)
           href: how-to-query-the-contents-of-files-in-a-folder-linq.md
         - name: '방법: LINQ를 사용하여 ArrayList 쿼리'
           href: how-to-query-an-arraylist-with-linq.md

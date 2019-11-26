@@ -84,6 +84,8 @@
           items:
             - name: NetworkStream 속성
               href: system.net.pooledstream.networkstream.md
+        - name: RtcState 클래스
+          href: system.net.rtcstate.md
         - name: ServicePoint 클래스
           items:
             - name: m_ConnectionGroupList 필드(_C)
@@ -100,6 +102,14 @@
           items:
             - name: SslProtocol 속성
               href: system.net.security.sslstate.sslprotocol.md
+    - name: System.ServiceModel.Channels
+      items:
+        - name: Message 클래스
+          items:
+            - name: BodyToString 메서드
+              href: system.servicemodel.channels.message.bodytostring.md
+            - name: WriteStartHeaders 메서드
+              href: system.servicemodel.channels.message.writestartheaders.md
     - name: System.Windows.Diagnostics
       items:
         - name: VisualDiagnostics 클래스

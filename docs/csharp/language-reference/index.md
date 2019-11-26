@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C# language, reference
 - reference, C# language
 ms.assetid: 06de3167-c16c-4e1a-b3c5-c27841d4569a
-ms.openlocfilehash: 4fed33272dbed50100a37aa9fcd30befc46435f9
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 4875e53327e24c4b5983a4a3b79b5beced368725
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771833"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428611"
 ---
 # <a name="c-reference"></a>C# 참조
 
@@ -61,9 +61,6 @@ ms.locfileid: "72771833"
   
 ## <a name="related-sections"></a>관련 단원  
 
- [C# 가이드](../index.md)  
- Visual C# 설명서 포털을 제공합니다.  
-  
  [C#용 Visual Studio 개발 환경 사용](/visualstudio/get-started/csharp)  
  IDE 및 편집기를 설명하는 개념 및 작업 항목의 링크를 제공합니다.  
   

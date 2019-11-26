@@ -2,6 +2,46 @@
   href: index.md
 - name: .NET Core 정보
   href: about.md
+- name: 설치
+  items:
+    - name: 개요
+      href: install/index.md
+    - name: SDK 설치
+      href: install/sdk.md
+    - name: 런타임 설치
+      href: install/runtime.md
+    - name: 지원되는 OS 및 종속성
+      href: install/dependencies.md
+    - name: .NET Core 버전 확인 방법
+      href: install/how-to-detect-installed-versions.md
+    - name: Linux 패키지 관리자
+      items:
+        - name: RHEL 7
+          href: install/linux-package-manager-rhel7.md
+        - name: RHEL 8.1
+          href: install/linux-package-manager-rhel81.md
+        - name: Ubuntu 16.04
+          href: install/linux-package-manager-ubuntu-1604.md
+        - name: Ubuntu 18.04
+          href: install/linux-package-manager-ubuntu-1804.md
+        - name: Ubuntu 19.04
+          href: install/linux-package-manager-ubuntu-1904.md
+        - name: Debian 9
+          href: install/linux-package-manager-debian9.md
+        - name: Debian 10
+          href: install/linux-package-manager-debian10.md
+        - name: Fedora 29
+          href: install/linux-package-manager-fedora29.md
+        - name: Fedora 30
+          href: install/linux-package-manager-fedora30.md
+        - name: CentOS 7
+          href: install/linux-package-manager-centos7.md
+        - name: OpenSUSE 15
+          href: install/linux-package-manager-opensuse15.md
+        - name: SLES 12
+          href: install/linux-package-manager-sles12.md
+        - name: SLES 15
+          href: install/linux-package-manager-sles15.md
 - name: 시작
   href: get-started.md
   items:
@@ -23,12 +63,6 @@
       href: tutorials/testing-library-with-visual-studio.md
     - name: Visual Studio 2017에서 .NET Standard 라이브러리 사용
       href: tutorials/consuming-library-with-visual-studio.md
-- name: Windows 필수 구성 요소
-  href: windows-prerequisites.md
-- name: macOS 필수 구성 요소
-  href: macos-prerequisites.md
-- name: Linux 필수 구성 요소
-  href: linux-prerequisites.md
 - name: .NET Core의 새로운 기능
   items:
     - name: .NET Core 3.0의 새로운 기능
@@ -54,25 +88,31 @@
           href: tutorials/cli-templates-create-template-pack.md
     - name: macOS에서 .NET Core 시작
       href: tutorials/using-on-macos.md
-    - name: Mac용 Visual Studio를 사용하여 macOS에서 .NET Core 시작
+    - name: Mac용 Visual Studio를 사용하여 .NET Core 시작
       href: tutorials/using-on-mac-vs.md
-    - name: Visual Studio for Mac을 사용하여 macOS에서 완전한 .NET Core 솔루션 빌드
+    - name: macOS에서 완전한 .NET Core 솔루션 빌드
       href: tutorials/using-on-mac-vs-full-solution.md
     - name: CLI 도구를 사용하여 .NET Core 시작
       href: tutorials/using-with-xplat-cli.md
-    - name: .NET Core 명령줄을 사용하여 프로젝트 구성 및 테스트
+    - name: .NET Core CLI를 사용하여 프로젝트 구성 및 테스트
       href: tutorials/testing-with-cli.md
     - name: 플랫폼 간 도구로 라이브러리 개발
       href: tutorials/libraries.md
-    - name: 플러그 인을 사용하여 .NET Core 애플리케이션 만들기
+    - name: 플러그 인을 사용하여 .NET Core 앱 만들기
       href: tutorials/creating-app-with-plugin-support.md
-    - name: ASP.NET Core 응용 프로그램 개발
+    - name: ASP.NET Core 앱 개발
       href: tutorials/aspnet-core.md
     - name: 네이티브 코드에서 .NET Core 호스팅
       href: tutorials/netcore-hosting.md
+- name: 런타임 구성
+  items:
+    - name: 설정
+      href: run-time-config/index.md
+    - name: 가비지 수집기 설정
+      href: run-time-config/garbage-collector.md
 - name: 기본 상호 운용성
   items:
-    - name: .NET Core 구성 요소를 COM에 노출
+    - name: COM에 .NET Core 구성 요소 공개
       href: native-interop/expose-components-to-com.md
 - name: '패키지, 메타패키지 및 프레임워크'
   href: packages.md
