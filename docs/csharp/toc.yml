@@ -1,8 +1,8 @@
-- name: 'C# 가이드'
-  href: index.md
+- name: 'C# 설명서'
+  href: index.yml
 - name: 시작
   items:
-    - name: 이 가이드를 사용하는 방법
+    - name: 개요
       href: getting-started/index.md
     - name: 'C# 언어 및 .NET Framework 소개'
       href: getting-started/introduction-to-the-csharp-language-and-the-net-framework.md
@@ -320,9 +320,9 @@
               href: programming-guide/concepts/async/task-asynchronous-programming-model.md
             - name: '연습: Async 및 Await를 사용하여 웹에 액세스'
               href: programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md
-            - name: '방법: Task.WhenAll을 사용하여 비동기 연습 확장'
+            - name: Task.WhenAll을 사용하여 비동기 연습 확장 방법
               href: programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md
-            - name: '방법: async 및 await를 사용하여 병렬로 여러 웹 요청 만들기'
+            - name: Async 및 Await를 사용하여 병렬로 여러 웹 요청 만드는 방법
               href: programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md
             - name: 비동기 반환 형식
               href: programming-guide/concepts/async/async-return-types.md
@@ -352,9 +352,9 @@
               href: programming-guide/concepts/attributes/creating-custom-attributes.md
             - name: AttributeUsage
               href: programming-guide/concepts/attributes/attributeusage.md
-            - name: 리플렉션을 사용하여 특성에 액세스
+            - name: 리플렉션을 사용하여 특성 액세스
               href: programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md
-            - name: '방법: 특성을 사용하여 C-C++ 공용 구조체 만들기'
+            - name: 특성을 사용하여 C/C++ 공용 구조체를 만드는 방법
               href: programming-guide/concepts/attributes/how-to-create-a-c-cpp-union-by-using-attributes.md
             - name: 공통 특성
               href: programming-guide/concepts/attributes/common-attributes.md
@@ -384,11 +384,11 @@
           items:
             - name: 개요
               href: programming-guide/concepts/expression-trees/index.md
-            - name: '방법: 식 트리 실행'
+            - name: 식 트리 실행 방법
               href: programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md
-            - name: '방법: 식 트리 수정'
+            - name: 식 트리 수정 방법
               href: programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md
-            - name: '방법: 식 트리를 사용하여 동적 쿼리 빌드'
+            - name: 식 트리를 사용하여 동적 쿼리 빌드 방법
               href: programming-guide/concepts/expression-trees/how-to-use-expression-trees-to-build-dynamic-queries.md
             - name: Visual Studio에서 식 트리 디버그
               href: programming-guide/concepts/expression-trees/debugging-expression-trees-in-visual-studio.md
@@ -462,13 +462,13 @@
                   href: programming-guide/concepts/linq/linq-and-strings.md
                 - name: 방법 문서
                   items:
-                    - name: '방법: 문자열에서 단어의 발생 횟수 계산(LINQ)'
+                    - name: 문자열에서 단어가 나오는 횟수를 세는 방법(LINQ)
                       href: programming-guide/concepts/linq/how-to-count-occurrences-of-a-word-in-a-string-linq.md
                     - name: '방법: 지정된 단어 세트가 포함된 문장 쿼리(LINQ)'
                       href: programming-guide/concepts/linq/how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq.md
                     - name: '방법: 문자열에서 문자 쿼리(LINQ)'
                       href: programming-guide/concepts/linq/how-to-query-for-characters-in-a-string-linq.md
-                    - name: '방법: LINQ 쿼리와 정규식 결합'
+                    - name: LINQ 쿼리와 정규식을 결합하는 방법
                       href: programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md
                     - name: '방법: 두 목록 간의 차집합 구하기(LINQ)'
                       href: programming-guide/concepts/linq/how-to-find-the-set-difference-between-two-lists-linq.md
@@ -476,7 +476,7 @@
                       href: programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md
                     - name: '방법: 구분된 파일의 필드 다시 정렬(LINQ)'
                       href: programming-guide/concepts/linq/how-to-reorder-the-fields-of-a-delimited-file-linq.md
-                    - name: '방법: 문자열 컬렉션 결합 및 비교(LINQ)'
+                    - name: 문자열 컬렉션을 결합하고 비교하는 방법(LINQ)
                       href: programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md
                     - name: '방법: 여러 원본에서 개체 컬렉션 채우기(LINQ)'
                       href: programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md
@@ -484,7 +484,7 @@
                       href: programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md
                     - name: '방법: 서로 다른 파일의 콘텐츠 조인(LINQ)'
                       href: programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md
-                    - name: '방법: CSV 텍스트 파일에서 열 값 컴퓨팅(LINQ)'
+                    - name: CSV 텍스트 파일의 열 값을 계산하는 방법(LINQ)
                       href: programming-guide/concepts/linq/how-to-compute-column-values-in-a-csv-text-file-linq.md
                 - name: LINQ 및 리플렉션
                   href: programming-guide/concepts/linq/linq-and-reflection.md
@@ -500,7 +500,7 @@
                       href: programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md
                     - name: '방법: 폴더 세트에서 총 바이트 수 쿼리(LINQ)'
                       href: programming-guide/concepts/linq/how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq.md
-                    - name: '방법: 두 폴더의 콘텐츠 비교(LINQ)'
+                    - name: 두 폴더의 내용을 비교하는 방법(LINQ)
                       href: programming-guide/concepts/linq/how-to-compare-the-contents-of-two-folders-linq.md
                     - name: '방법: 디렉터리 트리에서 가장 큰 파일을 하나 이상 쿼리(LINQ)'
                       href: programming-guide/concepts/linq/how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq.md
@@ -510,7 +510,7 @@
                       href: programming-guide/concepts/linq/how-to-query-the-contents-of-files-in-a-folder-lin.md
                 - name: '방법: LINQ를 사용하여 ArrayList 쿼리'
                   href: programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md
-                - name: '방법: LINQ 쿼리에 대한 사용자 지정 메서드 추가'
+                - name: LINQ 쿼리용 사용자 지정 메서드를 추가하는 방법
                   href: programming-guide/concepts/linq/how-to-add-custom-methods-for-linq-queries.md
             - name: LINQ to XML
               items:
@@ -536,7 +536,7 @@
                           href: programming-guide/concepts/linq/xattribute-class-overview.md
                         - name: XDocument 클래스 개요
                           href: programming-guide/concepts/linq/xdocument-class-overview.md
-                        - name: '방법: LINQ to XML 예제 빌드'
+                        - name: LINQ to XML 예제에 빌드하는 방법
                           href: programming-guide/concepts/linq/how-to-build-linq-to-xml-examples.md
                     - name: XML 트리
                       items:
@@ -552,9 +552,9 @@
                               href: programming-guide/concepts/linq/how-to-load-xml-from-a-file.md
                             - name: XML을 로드 또는 구문 분석할 때 공백 유지
                               href: programming-guide/concepts/linq/preserving-white-space-while-loading-or-parsing-xml1.md
-                            - name: '방법: 구문 분석 오류 catch'
+                            - name: 구문 분석 오류를 catch하는 방법
                               href: programming-guide/concepts/linq/how-to-catch-parsing-errors.md
-                            - name: '방법: XmlReader에서 트리 만들기'
+                            - name: XmlReader에서 트리를 만드는 방법
                               href: programming-guide/concepts/linq/how-to-create-a-tree-from-an-xmlreader.md
                             - name: '방법: XmlReader에서 XML 조각 스트리밍'
                               href: programming-guide/concepts/linq/how-to-stream-xml-fragments-from-an-xmlreader.md
@@ -568,9 +568,9 @@
                       items:
                         - name: 네임스페이스 개요(LINQ to XML)
                           href: programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md
-                        - name: '방법: 네임스페이스를 사용하여 문서 만들기(LINQ to XML)'
+                        - name: 네임스페이스를 사용하여 문서 만드는 방법(LINQ to XML)
                           href: programming-guide/concepts/linq/how-to-create-a-document-with-namespaces-linq-to-xml.md
-                        - name: '방법: 네임스페이스 접두사 제어(LINQ to XML)'
+                        - name: 네임스페이스 접두사를 제어하는 방법(LINQ to XML)
                           href: programming-guide/concepts/linq/how-to-control-namespace-prefixes-linq-to-xml.md
                         - name: 'C#에서 기본 네임스페이스 범위'
                           href: programming-guide/concepts/linq/scope-of-default-namespaces.md
@@ -594,9 +594,9 @@
                           href: programming-guide/concepts/linq/how-to-retrieve-a-collection-of-elements-linq-to-xml.md
                         - name: '방법: 요소 값 검색(LINQ to XML)'
                           href: programming-guide/concepts/linq/how-to-retrieve-the-value-of-an-element-linq-to-xml.md
-                        - name: '방법: 요소 이름 필터링(LINQ to XML)'
+                        - name: 요소 이름으로 필터링하는 방법(LINQ to XML)
                           href: programming-guide/concepts/linq/how-to-filter-on-element-names-linq-to-xml.md
-                        - name: '방법: 축 메서드 호출 연결(LINQ to XML)'
+                        - name: 축 메서드 호출을 연결하는 방법(LINQ to XML)
                           href: programming-guide/concepts/linq/how-to-chain-axis-method-calls-linq-to-xml.md
                         - name: '방법: 단일 자식 요소 검색(LINQ to XML)'
                           href: programming-guide/concepts/linq/how-to-retrieve-a-single-child-element-linq-to-xml.md
@@ -612,31 +612,31 @@
                       items:
                         - name: 기본 쿼리(LINQ to XML)
                           items:
-                            - name: '방법: 특정 특성으로 요소 찾기'
+                            - name: 특정 특성으로 요소를 찾는 방법
                               href: programming-guide/concepts/linq/how-to-find-an-element-with-a-specific-attribute.md
-                            - name: '방법: 특정 자식 요소로 요소 찾기'
+                            - name: 특정 자식 요소로 요소를 찾는 방법
                               href: programming-guide/concepts/linq/how-to-find-an-element-with-a-specific-child-element.md
                             - name: XDocument 쿼리와 XElement 쿼리 비교
                               href: programming-guide/concepts/linq/querying-an-xdocument-vs-querying-an-xelement.md
-                            - name: '방법: 특정 요소 이름으로 하위 항목 찾기'
+                            - name: 특정 요소 이름으로 하위 항목을 찾는 방법
                               href: programming-guide/concepts/linq/how-to-find-descendants-with-a-specific-element-name.md
-                            - name: '방법: Descendants 메서드를 사용하여 단일 하위 항목 찾기'
+                            - name: Descendants 메서드를 사용하여 단일 하위 항목을 찾는 방법
                               href: programming-guide/concepts/linq/how-to-find-a-single-descendant-using-the-descendants-method.md
                             - name: '방법: 복합 필터링을 사용하여 쿼리 작성'
                               href: programming-guide/concepts/linq/how-to-write-queries-with-complex-filtering.md
-                            - name: '방법: 선택적 요소 필터링'
+                            - name: 선택적 요소로 필터링하는 방법
                               href: programming-guide/concepts/linq/how-to-filter-on-an-optional-element.md
-                            - name: '방법: 네임스페이스에서 모든 노드 찾기'
+                            - name: 네임스페이스에서 모든 노드를 찾는 방법
                               href: programming-guide/concepts/linq/how-to-find-all-nodes-in-a-namespace.md
                             - name: '방법: 요소 정렬'
                               href: programming-guide/concepts/linq/how-to-sort-elements.md
                             - name: '방법: 여러 키로 요소 정렬'
                               href: programming-guide/concepts/linq/how-to-sort-elements-on-multiple-keys.md
-                            - name: '방법: 중간 값 계산'
+                            - name: 중간 값을 계산하는 방법
                               href: programming-guide/concepts/linq/how-to-calculate-intermediate-values.md
                             - name: '방법: 컨텍스트에 따라 요소를 찾는 쿼리 작성'
                               href: programming-guide/concepts/linq/how-to-write-a-query-that-finds-elements-based-on-context.md
-                            - name: '방법: 빈 쿼리 결과 집합 디버깅'
+                            - name: 빈 쿼리 결과 집합을 디버그하는 방법
                               href: programming-guide/concepts/linq/how-to-debug-empty-query-results-sets.md
                         - name: 프로젝션 및 변환(LINQ to XML)
                           items:
@@ -644,7 +644,7 @@
                               href: programming-guide/concepts/linq/how-to-work-with-dictionaries-using-linq-to-xml.md
                             - name: '방법: XML 트리의 모양 변환'
                               href: programming-guide/concepts/linq/how-to-transform-the-shape-of-an-xml-tree.md
-                            - name: '방법: 프로젝션 형식 제어'
+                            - name: 프로젝션 유형을 제어하는 방법
                               href: programming-guide/concepts/linq/how-to-control-the-type-of-a-projection.md
                             - name: '방법: 새 형식 프로젝션(LINQ to XML)'
                               href: programming-guide/concepts/linq/how-to-project-a-new-type-linq-to-xml.md
@@ -660,7 +660,7 @@
                           items:
                             - name: '방법: 두 컬렉션 조인(LINQ to XML)'
                               href: programming-guide/concepts/linq/how-to-join-two-collections-linq-to-xml.md
-                            - name: '방법: 그룹화를 사용하여 계층 구조 만들기'
+                            - name: 그룹화를 사용하여 계층 구조를 만드는 방법
                               href: programming-guide/concepts/linq/how-to-create-hierarchy-using-grouping.md
                             - name: '방법: XPath를 사용하여 LINQ to XML 쿼리'
                               href: programming-guide/concepts/linq/how-to-query-linq-to-xml-using-xpath.md
@@ -680,39 +680,39 @@
                           items:
                             - name: XPath 및 LINQ to XML 비교
                               href: programming-guide/concepts/linq/comparison-of-xpath-and-linq-to-xml.md
-                            - name: '방법: 자식 요소 찾기(XPath-LINQ to XML)'
+                            - name: 자식 요소를 찾는 방법(XPath 및 LINQ to XML)
                               href: programming-guide/concepts/linq/how-to-find-a-child-element-xpath-linq-to-xml.md
-                            - name: '방법: 자식 요소 목록 찾기(XPath-LINQ to XML)'
+                            - name: 자식 요소 목록을 찾는 방법(XPath 및 LINQ to XML)
                               href: programming-guide/concepts/linq/how-to-find-a-list-of-child-elements-xpath-linq-to-xml.md
                             - name: '방법: 루트 요소 찾기(XPath-LINQ to XML)'
                               href: programming-guide/concepts/linq/how-to-find-the-root-element-xpath-linq-to-xml.md
-                            - name: '방법: 하위 항목 요소 찾기(XPath-LINQ to XML)'
+                            - name: 하위 요소를 찾는 방법(XPath 및 LINQ to XML)
                               href: programming-guide/concepts/linq/how-to-find-descendant-elements-xpath-linq-to-xml.md
-                            - name: '방법: 특성 필터링(XPath-LINQ to XML)'
+                            - name: 특성으로 필터링하는 방법(XPath-LINQ to XML)
                               href: programming-guide/concepts/linq/how-to-filter-on-an-attribute-xpath-linq-to-xml.md
-                            - name: '방법: 관련 요소 찾기(XPath-LINQ to XML)'
+                            - name: 관련 요소를 찾는 방법(XPath 및 LINQ to XML)
                               href: programming-guide/concepts/linq/how-to-find-related-elements-xpath-linq-to-xml.md
-                            - name: '방법: 네임스페이스에서 요소 찾기(XPath-LINQ to XML)'
+                            - name: 네임스페이스에서 요소를 찾는 방법(XPath-LINQ to XML)
                               href: programming-guide/concepts/linq/how-to-find-elements-in-a-namespace-xpath-linq-to-xml.md
-                            - name: '방법: 선행 형제 찾기(XPath-LINQ to XML)'
+                            - name: 선행 형제를 찾는 방법(XPath 및 LINQ to XML)
                               href: programming-guide/concepts/linq/how-to-find-preceding-siblings-xpath-linq-to-xml.md
-                            - name: '방법: 자식 요소의 하위 항목 찾기(XPath-LINQ to XML)'
+                            - name: 자식 요소의 하위 항목을 찾는 방법(XPath 및 LINQ to XML)
                               href: programming-guide/concepts/linq/how-to-find-descendants-of-a-child-element-xpath-linq-to-xml.md
-                            - name: '방법: 두 위치 경로의 합집합 찾기(XPath-LINQ to XML)'
+                            - name: 두 위치 경로의 공용 구조체를 찾는 방법(XPath-LINQ to XML)
                               href: programming-guide/concepts/linq/how-to-find-a-union-of-two-location-paths-xpath-linq-to-xml.md
-                            - name: '방법: 형제 노드 찾기(XPath-LINQ to XML)'
+                            - name: 형제 노드를 찾는 방법(XPath-LINQ to XML)
                               href: programming-guide/concepts/linq/how-to-find-sibling-nodes-xpath-linq-to-xml.md
-                            - name: '방법: 부모의 특성 찾기(XPath-LINQ to XML)'
+                            - name: 부모의 특성을 찾는 방법(XPath-LINQ to XML)
                               href: programming-guide/concepts/linq/how-to-find-an-attribute-of-the-parent-xpath-linq-to-xml.md
-                            - name: '방법: 특정 이름으로 형제의 특성 찾기(XPath-LINQ to XML)'
+                            - name: 특정 이름으로 형제의 특성을 찾는 방법(XPath-LINQ to XML)
                               href: programming-guide/concepts/linq/how-to-find-attributes-of-siblings-with-a-specific-name-xpath-linq-to-xml.md
-                            - name: '방법: 특정 특성으로 요소 찾기(XPath-LINQ to XML)'
+                            - name: 특정 특성으로 요소를 찾는 방법(XPath-LINQ to XML)
                               href: programming-guide/concepts/linq/how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml.md
-                            - name: '방법: 위치에 따라 자식 요소 찾기(XPath-LINQ to XML)'
+                            - name: 위치에 따라 자식 요소를 찾는 방법(XPath-LINQ to XML)
                               href: programming-guide/concepts/linq/how-to-find-child-elements-based-on-position-xpath-linq-to-xml.md
-                            - name: '방법: 직접 선행 형제 찾기(XPath-LINQ to XML)'
+                            - name: 직접 선행 형제를 찾는 방법(XPath 및 LINQ to XML)
                               href: programming-guide/concepts/linq/how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml.md
-                        - name: XML의 순수 함수 변환
+                        - name: XML의 순수 함수 변형
                           items:
                             - name: 순수 함수 변환 소개
                               href: programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md
@@ -790,7 +790,7 @@
                           href: programming-guide/concepts/linq/removing-elements-attributes-and-nodes-from-an-xml-tree.md
                         - name: 이름-값 쌍 유지 관리
                           href: programming-guide/concepts/linq/maintaining-name-value-pairs.md
-                        - name: '방법: 전체 XML 트리에 대한 네임스페이스 변경'
+                        - name: 전체 XML 트리에 대한 네임스페이스를 변경하는 방법
                           href: programming-guide/concepts/linq/how-to-change-the-namespace-for-an-entire-xml-tree.md
                     - name: 성능(LINQ to XML)
                       items:
@@ -946,9 +946,9 @@
               href: programming-guide/classes-and-structs/polymorphism.md
             - name: Override 및 New 키워드를 사용하여 버전 관리
               href: programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md
-            - name: 재정의 및 신규 키워드를 사용해야 하는 경우
+            - name: Override 및 New 키워드를 사용해야 하는 경우
               href: programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md
-            - name: '방법: ToString 메서드 재정의'
+            - name: ToString 메서드 재정의 방법
               href: programming-guide/classes-and-structs/how-to-override-the-tostring-method.md
         - name: 멤버
           items:
@@ -964,9 +964,9 @@
               href: programming-guide/classes-and-structs/fields.md
             - name: 상수
               href: programming-guide/classes-and-structs/constants.md
-            - name: '방법: 추상 속성 정의'
+            - name: 추상 속성 정의 방법
               href: programming-guide/classes-and-structs/how-to-define-abstract-properties.md
-            - name: '방법: C#에서 상수 정의'
+            - name: 'C#에서 상수 정의 방법'
               href: programming-guide/classes-and-structs/how-to-define-constants.md
         - name: 속성
           items:
@@ -976,13 +976,13 @@
               href: programming-guide/classes-and-structs/using-properties.md
             - name: 인터페이스 속성
               href: programming-guide/classes-and-structs/interface-properties.md
-            - name: 접근자 액세스 가능성 제한
+            - name: '접근자 액세스 가능성 제한[C#]'
               href: programming-guide/classes-and-structs/restricting-accessor-accessibility.md
-            - name: '방법: 읽기 쓰기 속성 선언 및 사용'
+            - name: 읽기/쓰기 속성 선언 및 사용 방법
               href: programming-guide/classes-and-structs/how-to-declare-and-use-read-write-properties.md
             - name: 자동으로 구현된 속성
               href: programming-guide/classes-and-structs/auto-implemented-properties.md
-            - name: '방법: 자동 구현 속성을 사용하여 간단한 클래스 구현'
+            - name: 자동으로 구현된 속성을 사용하여 간단한 클래스를 구현하는 방법
               href: programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md
         - name: 메서드
           items:
@@ -998,23 +998,23 @@
                   href: programming-guide/classes-and-structs/passing-parameters.md
                 - name: 값 형식 매개 변수 전달
                   href: programming-guide/classes-and-structs/passing-value-type-parameters.md
-                - name: 참조-형식 매개 변수 전달
+                - name: 참조 형식 매개 변수 전달
                   href: programming-guide/classes-and-structs/passing-reference-type-parameters.md
-                - name: '방법: 메서드에 구조체를 전달하는 것과 클래스 참조를 전달하는 것의 차이점 이해'
+                - name: 메서드에 대한 구조체 전달과 클래스 참조 전달 간의 차이점을 이해하는 방법
                   href: programming-guide/classes-and-structs/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md
             - name: 암시적으로 형식화한 지역 변수
               href: programming-guide/classes-and-structs/implicitly-typed-local-variables.md
-            - name: '방법: 쿼리 식에서 암시적 형식 지역 변수 및 배열 사용'
+            - name: 쿼리 식에서 암시적으로 형식화된 지역 변수 및 배열 사용 방법
               href: programming-guide/classes-and-structs/how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md
             - name: 확장명 메서드
               href: programming-guide/classes-and-structs/extension-methods.md
-            - name: '방법: 사용자 지정 확장 메서드 구현 및 호출'
+            - name: 사용자 지정 확장 메서드 구현 및 호출 방법
               href: programming-guide/classes-and-structs/how-to-implement-and-call-a-custom-extension-method.md
-            - name: '방법: 새 열거형 메서드 만들기'
+            - name: 새 열거형 메서드 만드는 방법
               href: programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md
             - name: 명명된 인수 및 선택적 인수
               href: programming-guide/classes-and-structs/named-and-optional-arguments.md
-            - name: '방법: Office 프로그래밍에서 명명된 인수 및 선택적 인수 사용'
+            - name: Office 프로그래밍에 명명된 인수와 선택적 인수 사용 방법
               href: programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md
         - name: 생성자
           items:
@@ -1028,13 +1028,13 @@
               href: programming-guide/classes-and-structs/private-constructors.md
             - name: 정적 생성자
               href: programming-guide/classes-and-structs/static-constructors.md
-            - name: '방법: 복사 생성자 작성'
+            - name: 복사 생성자 작성 방법
               href: programming-guide/classes-and-structs/how-to-write-a-copy-constructor.md
         - name: 종료자
           href: programming-guide/classes-and-structs/destructors.md
         - name: 개체 및 컬렉션 이니셜라이저
           href: programming-guide/classes-and-structs/object-and-collection-initializers.md
-        - name: '방법: 개체 이니셜라이저를 사용하여 개체 초기화'
+        - name: 개체 이니셜라이저를 사용하여 개체를 초기화하는 방법
           href: programming-guide/classes-and-structs/how-to-initialize-objects-by-using-an-object-initializer.md
         - name: '방법: 컬렉션 이니셜라이저를 사용하여 사전 초기화'
           href: programming-guide/classes-and-structs/how-to-initialize-a-dictionary-with-a-collection-initializer.md
@@ -1044,7 +1044,7 @@
           href: programming-guide/classes-and-structs/partial-classes-and-methods.md
         - name: 익명 형식
           href: programming-guide/classes-and-structs/anonymous-types.md
-        - name: '방법: 쿼리에서 요소 속성의 하위 세트 반환'
+        - name: 쿼리에서 요소 속성의 하위 집합을 반환하는 방법
           href: programming-guide/classes-and-structs/how-to-return-subsets-of-element-properties-in-a-query.md
     - name: 인터페이스
       items:
@@ -1301,7 +1301,7 @@
                 - name: bool
                   href: language-reference/keywords/bool.md
                 - name: char
-                  href: language-reference/keywords/char.md
+                  href: language-reference/builtin-types/char.md
                 - name: enum
                   href: language-reference/keywords/enum.md
                 - name: struct
@@ -1675,7 +1675,7 @@
           href: language-reference/compiler-options/index.md
         - name: csc.exe를 사용한 명령줄 빌드
           href: language-reference/compiler-options/command-line-building-with-csc-exe.md
-        - name: '방법: Visual Studio 명령줄에 필요한 환경 변수 설정'
+        - name: Visual Studio 명령줄에 필요한 환경 변수를 설정하는 방법
           href: language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md
         - name: 'C# 컴파일러 옵션 범주별 목록'
           href: language-reference/compiler-options/listed-by-category.md

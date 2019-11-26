@@ -115,12 +115,22 @@
           tocHref: /dotnet/core/
           topicHref: /dotnet/core/index
           items:
-            - name: 도구
-              tocHref: /dotnet/core/tools/
-              topicHref: /dotnet/core/tools/index
             - name: 호환성
               tocHref: /dotnet/core/compatibility/
               topicHref: /dotnet/core/compatibility/index
+            - name: 런타임 구성
+              tocHref: /dotnet/core/run-time-config/
+              topicHref: /dotnet/core/run-time-config/index
+            - name: 도구
+              tocHref: /dotnet/core/tools/
+              topicHref: /dotnet/core/tools/index
+            - name: 설치 가이드
+              tocHref: /dotnet/core/install/
+              topicHref: /dotnet/core/install/index
+              items:
+                - name: Linux 패키지 관리자
+                  tocHref: /dotnet/core/install/
+                  topicHref: /dotnet/core/install/index
         - name: .NET Framework
           tocHref: /dotnet/framework/
           topicHref: /dotnet/framework/index
