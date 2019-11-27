@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440364"
 ---
 # <a name="imetadataimportcountenum-method"></a>IMetaDataImport::CountEnum 메서드
-Gets the number of elements in the enumeration that was retrieved by the specified enumerator.  
+지정 된 열거자에 의해 검색 된 열거형의 요소 수를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,24 +36,24 @@ HRESULT CountEnum (
   
 ## <a name="parameters"></a>매개 변수  
  `hEnum`  
- [in] The handle for the enumerator.  
+ 진행 열거자에 대 한 핸들입니다.  
   
  `pulCount`  
- [out] The number of elements enumerated.  
+ 제한이 열거 된 요소의 수입니다.  
   
-## <a name="remarks"></a>주의  
- The handle specified by `hEnum` is obtained from a previous `Enum`*Name* call (for example, [IMetaDataImport::EnumTypeDefs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumtypedefs-method.md)).  
+## <a name="remarks"></a>설명  
+ `hEnum`로 지정 된 핸들은 이전 `Enum`*이름* 호출 (예 [: IMetaDataImport:: enumtypedefs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumtypedefs-method.md))에서 가져옵니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [IMetaDataImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

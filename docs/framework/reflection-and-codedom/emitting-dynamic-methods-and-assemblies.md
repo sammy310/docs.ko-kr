@@ -34,9 +34,9 @@ ms.locfileid: "74446789"
   
 <xref:System.Reflection.Emit> 네임스페이스의 관리되는 형식 외에도 [메타데이터 인터페이스](../unmanaged-api/metadata/metadata-interfaces.md) 참조 설명서에서 설명하는 관리되지 않는 메타데이터 인터페이스가 있습니다. 관리되는 리플렉션 내보내기는 관리되지 않는 메타데이터 인터페이스 보다 강력한 의미 체계 오류 검사 및 높은 수준의 메타데이터 추상화를 제공합니다.  
   
-메타데이터 및 MSIL 작업을 위한 다른 유용한 리소스는 CLI(공용 언어 인프라) 설명서, 특히 "Partition II: Metadata Definition and Semantics" 및 "Partition III: CIL Instruction Set"입니다. The documentation is available online at the [Ecma Web site](https://www.ecma-international.org/publications/standards/Ecma-335.htm).  
+메타데이터 및 MSIL 작업을 위한 다른 유용한 리소스는 CLI(공용 언어 인프라) 설명서, 특히 "Partition II: Metadata Definition and Semantics" 및 "Partition III: CIL Instruction Set"입니다. 설명서는 [Ecma 웹 사이트](https://www.ecma-international.org/publications/standards/Ecma-335.htm)에서 온라인으로 볼 수 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용
+## <a name="in-this-section"></a>섹션 내용
   
 [리플렉션 내보내기의 보안 문제점](security-issues-in-reflection-emit.md)  
 리플렉션 내보내기를 사용하여 동적 어셈블리를 만드는 경우와 관련된 보안 문제를 설명합니다.  
@@ -53,7 +53,7 @@ ms.locfileid: "74446789"
 [동적 형식 생성을 위해 수집 가능한 어셈블리](collectible-assemblies.md)   
 만들어진 애플리케이션 도메인을 언로드하지 않고 언로드할 수 있는 동적 어셈블리인 수집 가능한 어셈블리를 소개합니다.
   
-## <a name="reference"></a>참고  
+## <a name="reference"></a>참조  
 
 <xref:System.Reflection.Emit.OpCodes>  
 메서드 본문을 작성하는 데 사용할 수 있는 MSIL 명령 코드의 카탈로그를 작성합니다.  

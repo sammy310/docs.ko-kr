@@ -1,5 +1,5 @@
 ---
-title: ICorProfilerInfo3::GetModuleInfo2 메서드
+title: ICorProfilerInfo3::GetModuleInfo2 Method
 ms.date: 03/30/2017
 api_name:
 - ICorProfilerInfo3.GetModuleInfo2
@@ -22,7 +22,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449675"
 ---
-# <a name="icorprofilerinfo3getmoduleinfo2-method"></a>ICorProfilerInfo3::GetModuleInfo2 메서드
+# <a name="icorprofilerinfo3getmoduleinfo2-method"></a>ICorProfilerInfo3::GetModuleInfo2 Method
 모듈 ID가 지정된 경우 모듈의 파일 이름, 모듈의 부모 어셈블리 ID 및 모듈 속성을 설명하는 비트 마스크를 반환합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -59,16 +59,16 @@ HRESULT GetModuleInfo2(
  [out] 모듈의 부모 어셈블리 ID에 대한 포인터입니다.  
   
  `pdwModuleFlags`  
- [out] A bitmask of values from the [COR_PRF_MODULE_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-module-flags-enumeration.md) enumeration that specify the properties of the module.  
+ 제한이 모듈의 속성을 지정 하는 [COR_PRF_MODULE_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-module-flags-enumeration.md) 열거형의 값에 대 한 비트 마스크입니다.  
   
-## <a name="remarks"></a>주의  
- 동적 모듈의 경우 `szName` 매개 변수는 모듈의 메타데이터 이름이고 기본 주소는 0입니다. 메타데이터 이름은 메타데이터 내부에서 Module 테이블의 Name 열에 있는 값입니다. This is also exposed as the <xref:System.Reflection.Module.ScopeName%2A?displayProperty=nameWithType> property to managed code, and as the `szName` parameter of the [IMetaDataImport::GetScopeProps](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getscopeprops-method.md) method to unmanaged metadata client code.  
+## <a name="remarks"></a>설명  
+ 동적 모듈의 경우 `szName` 매개 변수는 모듈의 메타데이터 이름이고 기본 주소는 0입니다. 메타데이터 이름은 메타데이터 내부에서 Module 테이블의 Name 열에 있는 값입니다. 이는 관리 코드에 <xref:System.Reflection.Module.ScopeName%2A?displayProperty=nameWithType> 속성으로 노출 되 고, 관리 되지 않는 메타 데이터 클라이언트 코드에 대 한 [IMetaDataImport:: GetScopeProps](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getscopeprops-method.md) 메서드의 `szName` 매개 변수로도 노출 됩니다.  
   
- Although the `GetModuleInfo2` method may be called as soon as the module's ID exists, the ID of the parent assembly will not be available until the profiler receives the [ICorProfilerCallback::ModuleAttachedToAssembly](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleattachedtoassembly-method.md) callback.  
+ `GetModuleInfo2` 메서드는 모듈의 ID가 존재 하는 즉시 호출 될 수 있지만, 프로파일러가 [ICorProfilerCallback:: ModuleAttachedToAssembly](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleattachedtoassembly-method.md) 콜백을 받을 때까지 부모 어셈블리의 id를 사용할 수 없습니다.  
   
  `GetModuleInfo2`가 반환된 후 `szName` 버퍼가 모듈의 전체 파일 이름을 포함하기에 충분히 큰지 확인해야 합니다. 이렇게 하려면 `pcchName`가 가리키는 값을 `cchName` 매개 변수의 값과 비교합니다. `pcchName`이 `cchName`보다 큰 값을 가리키는 경우 더 큰 `szName` 버퍼를 할당하고 `cchName`을 더 큰 새 크기로 업데이트한 후 `GetModuleInfo2`를 다시 호출합니다.  
   
- 또는 길이가 0인 `szName` 버퍼로 `GetModuleInfo2`를 먼저 호출하여 올바른 버퍼 크기를 구합니다. 그런 다음 버퍼 크기를 `pcchName`에 반환된 값으로 설정하고 `GetModuleInfo2`을 다시 호출합니다.  
+ 또는 길이가 0인 `GetModuleInfo2` 버퍼로 `szName`를 먼저 호출하여 올바른 버퍼 크기를 구합니다. 그런 다음 버퍼 크기를 `pcchName`에 반환된 값으로 설정하고 `GetModuleInfo2`을 다시 호출합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
@@ -79,7 +79,7 @@ HRESULT GetModuleInfo2(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [ICorProfilerInfo 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
 - [프로파일링 인터페이스](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

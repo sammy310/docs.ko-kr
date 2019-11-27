@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446243"
 ---
 # <a name="isymunmanagedscope2getconstants-method"></a>ISymUnmanagedScope2::GetConstants 메서드
-Gets the local constants defined within this scope.  
+이 범위 내에 정의 된 지역 상수를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,20 +38,20 @@ HRESULT GetConstants(
   
 ## <a name="parameters"></a>매개 변수  
  `cConstants`  
- [in] The length of the buffer that the `pcConstants` parameter points to.  
+ 진행 `pcConstants` 매개 변수가 가리키는 버퍼의 길이입니다.  
   
  `pcConstants`  
- [out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the constants.  
+ 제한이 상수를 포함 하는 데 필요한 버퍼의 크기 (문자 수)를 수신 하는 `ULONG32`에 대 한 포인터입니다.  
   
  `constants`  
- [out] The buffer that stores the constants.  
+ 제한이 상수를 저장 하는 버퍼입니다.  
   
 ## <a name="return-value"></a>반환 값  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **Header:** CorSym.idl, CorSym.h  
+ **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [ISymUnmanagedScope2 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope2-interface.md)

@@ -14,7 +14,7 @@ ms.locfileid: "74447961"
 ---
 # <a name="ui-automation-properties-overview"></a>UI 자동화 속성 개요
 > [!NOTE]
-> 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조하세요.  
+> 이 설명서는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 네임스페이스에 정의된 관리되는 <xref:System.Windows.Automation> 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조하세요.  
   
  UI 자동화 공급자는 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 요소에 속성을 노출합니다. 이러한 속성을 통해 UI 자동화 클라이언트 애플리케이션은 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)]항목에 대한 정보(특히 정적 및 동적 데이터를 포함한 컨트롤)를 검색할 수 있습니다.  
   
@@ -26,11 +26,11 @@ ms.locfileid: "74447961"
   
 <a name="Property_Identifiers"></a>   
 ## <a name="property-identifiers"></a>속성 식별자  
- 모든 속성은 숫자 및 이름으로 식별됩니다. 속성의 이름은 디버깅 및 진단용으로만 사용됩니다. Providers use the numeric IDs to identify incoming property requests. 그러나 클라이언트 애플리케이션은 숫자 및 이름 캡슐화하는 <xref:System.Windows.Automation.AutomationProperty>만 사용하여 검색하려는 속성을 식별합니다.  
+ 모든 속성은 숫자 및 이름으로 식별됩니다. 속성의 이름은 디버깅 및 진단용으로만 사용됩니다. 공급자는 숫자 Id를 사용 하 여 들어오는 속성 요청을 식별 합니다. 그러나 클라이언트 애플리케이션은 숫자 및 이름 캡슐화하는 <xref:System.Windows.Automation.AutomationProperty>만 사용하여 검색하려는 속성을 식별합니다.  
   
  특정 속성을 나타내는<xref:System.Windows.Automation.AutomationProperty> 개체는 다양한 클래스에 필드로 사용할 수 있습니다. 보안상의 이유로, UI 자동화 공급자는 Uiautomationtypes.dll에 포함된 별도의 클래스 집합에서 이러한 개체를 가져옵니다.  
   
- The following table categorizes properties by the classes that contain the <xref:System.Windows.Automation.AutomationProperty>IDs.  
+ 다음 표에서는 <xref:System.Windows.Automation.AutomationProperty>Id를 포함 하는 클래스 별로 속성을 분류 합니다.  
   
 |속성의 종류|클라이언트가 ID를 가져오는 위치|공급자 ID를 가져오는 위치|  
 |-------------------------|--------------------------|----------------------------|  
@@ -53,24 +53,24 @@ ms.locfileid: "74447961"
   
 <a name="Properties_by_Category"></a>   
 ## <a name="properties-by-category"></a>범주별 속성  
- The following tables categorize the properties whose IDs are found in <xref:System.Windows.Automation.AutomationElement> and <xref:System.Windows.Automation.AutomationElementIdentifiers>. 이러한 속성은 모든 컨트롤에 공통됩니다. 일부를 제외한 모든 속성은 공급자 애플리케이션의 수명 동안 정적일 가능성이 높습니다. 대부분의 동적 속성은 컨트롤 패턴과 연결되어 있습니다.  
+ 다음 표에서는 Id가 <xref:System.Windows.Automation.AutomationElement> 및 <xref:System.Windows.Automation.AutomationElementIdentifiers>에 있는 속성을 분류 합니다. 이러한 속성은 모든 컨트롤에 공통됩니다. 일부를 제외한 모든 속성은 공급자 애플리케이션의 수명 동안 정적일 가능성이 높습니다. 대부분의 동적 속성은 컨트롤 패턴과 연결되어 있습니다.  
   
  **속성 액세스** 열에는 <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A> 및 <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>외에도 각 속성에 대한 기타 접근자가 나열됩니다. 클라이언트 애플리케이션에서 속성을 가져오는 방법에 대한 자세한 내용은 [UI Automation Properties for Clients](ui-automation-properties-for-clients.md)을 참조하세요.  
   
 > [!NOTE]
 > 각 속성에 대한 특정 정보를 보려면 **속성 액세스** 열에 있는 링크를 클릭하세요.  
   
-### <a name="display-characteristics"></a>특성 표시  
+### <a name="display-characteristics"></a>특징 표시  
   
 |속성 식별자|속성 액세스|  
 |-------------------------|---------------------|  
 |<xref:System.Windows.Automation.AutomationElement.BoundingRectangleProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.BoundingRectangle%2A>|  
-|<xref:System.Windows.Automation.AutomationElement.CultureProperty>|N/A|  
+|<xref:System.Windows.Automation.AutomationElement.CultureProperty>|해당 없음|  
 |<xref:System.Windows.Automation.AutomationElement.HelpTextProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.HelpText%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.IsOffscreenProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsOffscreen%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.OrientationProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Orientation%2A>|  
   
-### <a name="element-type"></a>요소 형식  
+### <a name="element-type"></a>Type 요소  
   
 |속성 식별자|속성 액세스|  
 |-------------------------|---------------------|  
@@ -159,7 +159,7 @@ ms.locfileid: "74447961"
   
  클라이언트는 이벤트를 구독하여 이벤트를 수신 대기합니다. 이벤트를 구독하는 것은 이벤트를 처리할 수 있는 대리자 메서드를 만들고, 이러한 메서드에서 처리될 특정 이벤트와 함께 해당 메서드를 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 에 전달한다는 의미입니다. 특히 속성 변경 이벤트의 경우 클라이언트는 <xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>를 구현해야 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [UI 자동화 클라이언트의 캐싱](caching-in-ui-automation-clients.md)
 - [클라이언트의 UI 자동화 속성](ui-automation-properties-for-clients.md)

@@ -19,7 +19,7 @@ ETW(Windows용 이벤트 추적)를 사용하여 CLR(공용 언어 런타임) �
 
 - Windows 운영 체제에 포함되어 있는 [Logman](/windows-server/administration/windows-commands/logman) 및 [Tracerpt](/windows-server/administration/windows-commands/tracerpt_1) 명령줄 도구
 
-- [Windows 성능 도구 키트](/windows-hardware/test/wpt/)에 있는 [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference) 도구 Xperf에 대한 자세한 내용은 [Windows Performance 블로그](https://blogs.msdn.microsoft.com/pigscanfly/tag/xperf/)를 참조하세요.
+- [Windows 성능 도구 키트](/windows-hardware/test/wpt/xperf-command-line-reference)에 있는 [Xperf](/windows-hardware/test/wpt/) 도구 Xperf에 대한 자세한 내용은 [Windows Performance 블로그](https://blogs.msdn.microsoft.com/pigscanfly/tag/xperf/)를 참조하세요.
 
 CLR 이벤트 정보를 캡처하려면 컴퓨터에 CLR 공급자가 설치되어 있어야 합니다. 공급자가 설치되어 있는지 확인하려면 명령줄에 `logman query providers`를 입력합니다. 공급자 목록이 나타납니다. 이 목록에는 다음과 같이 CLR 공급자 항목이 포함되어 있어야 합니다.
 
@@ -29,7 +29,7 @@ Provider                                 GUID
 .NET Common Language Runtime    {E13C0D23-CCBC-4E12-931B-D9CC2EEE27E4}.
 ```
 
-CLR 공급자가 목록에 없는 경우 Windows [Wevtutil](/windows-server/administration/windows-commands/wevtutil) 명령줄 도구를 사용하여 Windows Vista 이상의 운영 체제에 설치할 수 있습니다. 관리자 권한으로 명령 프롬프트 창을 엽니다. Change the prompt directory to the .NET Framework 4 folder (%WINDIR%\Microsoft.NET\Framework[64]\v4.\<.NET version>\ ). 이 폴더에는 CLR-ETW.man 파일이 들어 있습니다. 명령 프롬프트에서 다음 명령을 입력하여 CLR 공급자를 설치합니다.
+CLR 공급자가 목록에 없는 경우 Windows [Wevtutil](/windows-server/administration/windows-commands/wevtutil) 명령줄 도구를 사용하여 Windows Vista 이상의 운영 체제에 설치할 수 있습니다. 관리자 권한으로 명령 프롬프트 창을 엽니다. 프롬프트 디렉터리를 .NET Framework 4 폴더 (%WINDIR%\Microsoft.NET\Framework [64] \v4.\<.NET 버전 > \)로 변경 합니다. 이 폴더에는 CLR-ETW.man 파일이 들어 있습니다. 명령 프롬프트에서 다음 명령을 입력하여 CLR 공급자를 설치합니다.
 
 `wevtutil im CLR-ETW.man`
 
@@ -51,13 +51,13 @@ CLR 공급자가 목록에 없는 경우 Windows [Wevtutil](/windows-server/admi
 
      `logman start clrevents -p {e13c0d23-ccbc-4e12-931b-d9cc2eee27e4} 0x1CCBD 0x5 -ets -ct perf`
 
-     여기서
+     각 항목이 나타내는 의미는 다음과 같습니다.
 
     - `-p` 매개 변수는 공급자 GUID를 식별합니다.
 
-    - `0x1CCBD`는 발생할 이벤트의 범주를 지정합니다.
+    - `0x1CCBD` 발생 하는 이벤트 범주를 지정 합니다.
 
-    - `0x5`는 로깅 수준을 설정합니다(이 경우, verbose(5)).
+    - `0x5`는 로깅 수준을 설정 합니다 (이 경우 자세한 정보 표시 (5)).
 
     - `-ets` 매개 변수는 이벤트 추적 세션에 명령을 보내도록 Logman에 지시합니다.
 
@@ -111,7 +111,7 @@ CLR 공급자가 목록에 없는 경우 Windows [Wevtutil](/windows-server/admi
 
      이 명령에 의해 XPerf는 사용자가 볼 수 있는 쉼표로 분리된 값 파일(CSV)로 이벤트를 덤프하게 됩니다. 이벤트별로 서로 다른 필드가 있기 때문에 이 CSV 파일에서는 데이터 앞에 헤더 줄이 둘 이상 있습니다. 모든 줄의 첫 번째 필드는 이벤트 유형이고, 이 유형은 나머지 필드 확인에 사용되어야 하는 헤더를 나타냅니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
-- [Windows Performance Toolkit](/windows-hardware/test/wpt/)
+- [Windows 성능 도구 키트](/windows-hardware/test/wpt/)
 - [공용 언어 런타임의 ETW 이벤트](etw-events-in-the-common-language-runtime.md)

@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438111"
 ---
 # <a name="notify_filter-enumeration"></a>NOTIFY_FILTER 열거형
-Identifies callbacks for debugger functions. For more information, see the [INotifySource2::SetNotifyFilter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md) method.  
+디버거 함수의 콜백을 식별 합니다. 자세한 내용은 [INotifySource2:: SetNotifyFilter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md) 메서드를 참조 하세요.  
   
 ## <a name="syntax"></a>구문  
   
@@ -43,17 +43,17 @@ enum tagNOTIFY_FILTER
   
 |멤버|설명|  
 |------------|-----------------|  
-|`NOTIFY_FILTER_ONSYNCCALLOUT`|Indicates that the [INotifySink2::OnSyncCallOut](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallout-method.md) method should be invoked.|  
-|`NOTIFY_FILTER_ONSYNCCALLENTER`|Indicates that the [INotifySink2::OnSyncCallEnter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallenter-method.md) method should be invoked.|  
-|`NOTIFY_FILTER_ONSYNCCALLEXIT`|Indicates that the [INotifySink2::OnSyncCallExit](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallexit-method.md) method should be invoked.|  
-|`NOTIFY_FILTER_ONSYNCCALLRETURN`|Indicates that the [INotifySink2::OnSyncCallReturn](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallreturn-method.md) method should be invoked.|  
-|`NOTIFY_FILTER_ALLSYNC`|Indicates that all of the [INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md) methods should be invoked.|  
-|`NOTIFY_FILTER_ALL`|Activates all existing and future notifications.|  
-|`NOTIFY_FILTER_NONE`|Indicates that no notification methods should be invoked.|  
+|`NOTIFY_FILTER_ONSYNCCALLOUT`|[INotifySink2:: OnSyncCallOut](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallout-method.md) 메서드를 호출 해야 함을 나타냅니다.|  
+|`NOTIFY_FILTER_ONSYNCCALLENTER`|[INotifySink2:: OnSyncCallEnter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallenter-method.md) 메서드를 호출 해야 함을 나타냅니다.|  
+|`NOTIFY_FILTER_ONSYNCCALLEXIT`|[INotifySink2:: OnSyncCallExit](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallexit-method.md) 메서드를 호출 해야 함을 나타냅니다.|  
+|`NOTIFY_FILTER_ONSYNCCALLRETURN`|[INotifySink2:: OnSyncCallReturn](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallreturn-method.md) 메서드를 호출 해야 함을 나타냅니다.|  
+|`NOTIFY_FILTER_ALLSYNC`|모든 [INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md) 메서드를 호출 해야 함을 나타냅니다.|  
+|`NOTIFY_FILTER_ALL`|모든 기존 및 향후 알림을 활성화 합니다.|  
+|`NOTIFY_FILTER_NONE`|알림 메서드를 호출 하지 않아야 함을 나타냅니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **Header:** ProtocolNotify2.idl  
+ **헤더:** ProtocolNotify2  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [진단 기호 저장소 열거형](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)

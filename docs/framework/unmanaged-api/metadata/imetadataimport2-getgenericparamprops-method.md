@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427303"
 ---
 # <a name="imetadataimport2getgenericparamprops-method"></a>IMetaDataImport2::GetGenericParamProps 메서드
-Gets the metadata associated with the generic parameter represented by the specified token.  
+지정 된 토큰이 나타내는 제네릭 매개 변수와 연결 된 메타 데이터를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -42,39 +42,39 @@ HRESULT GetGenericParamProps (
   
 ## <a name="parameters"></a>매개 변수  
  `gp`  
- [in] The token that represents the generic parameter for which to return metadata.  
+ 진행 메타 데이터를 반환할 제네릭 매개 변수를 나타내는 토큰입니다.  
   
  `pulParamSeq`  
- [out] The ordinal position of the `Type` parameter in the parent constructor or method.  
+ 제한이 부모 생성자 또는 메서드에서 `Type` 매개 변수의 서 수 위치입니다.  
   
  `pdwParamFlags`  
- [out] A value of the [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) enumeration that describes the `Type` for the generic parameter.  
+ 제한이 제네릭 매개 변수에 대 한 `Type`를 설명 하는 [Corgenericparamattr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) 열거형의 값입니다.  
   
  `ptOwner`  
- [out] A TypeDef or MethodDef token that represents the owner of the parameter.  
+ 제한이 매개 변수의 소유자를 나타내는 TypeDef 또는 MethodDef 토큰입니다.  
   
  `reserved`  
- [out] Reserved for future extensibility.  
+ 제한이 향후 확장성을 위해 예약 되었습니다.  
   
  `wzName`  
- [out] The name of the generic parameter.  
+ 제한이 제네릭 매개 변수의 이름입니다.  
   
  `cchName`  
- [in] The size of the `wzName` buffer.  
+ 진행 `wzName` 버퍼의 크기입니다.  
   
  `pchName`  
- [out] The returned size of the name, in wide characters.  
+ 제한이 반환 된 이름의 크기 (와이드 문자)입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [IMetaDataImport2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
 - [IMetaDataImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

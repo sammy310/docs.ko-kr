@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74430615"
 ---
 # <a name="icorprofilercallbackruntimesuspendaborted-method"></a>ICorProfilerCallback::RuntimeSuspendAborted 메서드
-Notifies the profiler that the runtime has aborted the runtime suspension that was occurring.  
+런타임에서 발생 한 런타임 일시 중단이 중단 되었음을 프로파일러에 알립니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -31,12 +31,12 @@ Notifies the profiler that the runtime has aborted the runtime suspension that w
 HRESULT RuntimeSuspendAborted();  
 ```  
   
-## <a name="remarks"></a>주의  
- The run-time suspension might be aborted if two threads simultaneously attempt to suspend the runtime.  
+## <a name="remarks"></a>설명  
+ 두 스레드가 동시에 런타임을 일시 중단 하려고 하면 런타임 일시 중단이 중단 될 수 있습니다.  
   
- Either the [ICorProfilerCallback::RuntimeSuspendFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendfinished-method.md) callback or the `RuntimeSuspendAborted` callback will occur on a single thread following a [ICorProfilerCallback::RuntimeSuspendStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendstarted-method.md) callback.  
+ [ICorProfilerCallback:: RuntimeSuspendFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendfinished-method.md) callback 또는 `RuntimeSuspendAborted` 콜백은 [ICorProfilerCallback:: RuntimeSuspendStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendstarted-method.md) callback 다음에 나오는 단일 스레드에서 발생 합니다.  
   
- The `RuntimeSuspendAborted` callback is guaranteed to occur on the same thread as the `RuntimeSuspendStarted` callback.  
+ `RuntimeSuspendAborted` 콜백은 `RuntimeSuspendStarted` 콜백과 동일한 스레드에서 수행 됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
@@ -47,6 +47,6 @@ HRESULT RuntimeSuspendAborted();
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [ICorProfilerCallback 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

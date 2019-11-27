@@ -38,27 +38,27 @@ HRESULT GetUserString (
   
 ## <a name="parameters"></a>매개 변수  
  `stk`  
- [in] The String token to return the associated string for.  
+ 진행 연결 된 문자열을 반환할 문자열 토큰입니다.  
   
  `szString`  
- [out] A copy of the requested string.  
+ 제한이 요청 된 문자열의 복사본입니다.  
   
  `cchString`  
- [in] The maximum size in wide characters of the requested `szString`.  
+ 진행 요청 된 `szString`의 최대 와이드 문자 크기입니다.  
   
  `pchString`  
- [out] The size in wide characters of the returned `szString`.  
+ 제한이 반환 된 `szString`의 와이드 문자 크기입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [IMetaDataImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

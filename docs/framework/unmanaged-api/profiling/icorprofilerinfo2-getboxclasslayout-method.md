@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436025"
 ---
 # <a name="icorprofilerinfo2getboxclasslayout-method"></a>ICorProfilerInfo2::GetBoxClassLayout 메서드
-Gets information about where the specified value type is located when it is boxed.  
+Boxing 될 때 지정 된 값 형식이 있는 위치에 대 한 정보를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -35,13 +35,13 @@ HRESULT GetBoxClassLayout(
   
 ## <a name="parameters"></a>매개 변수  
  `classId`  
- [in] The ID of the class that describes the value type that is boxed.  
+ 진행 Boxing 된 값 형식을 설명 하는 클래스의 ID입니다.  
   
  `pBufferOffset`  
- [out] An integer that is the offset, relative to the boxed object ID pointer, of the value type.  
+ 제한이 Boxed 개체 ID 포인터에 상대적인 값 형식의 오프셋 인 정수입니다.  
   
-## <a name="remarks"></a>주의  
- The `pBufferOffset` value is the location of the value type within a box. After `pBufferOffset` is applied to a boxed object, the value type's class layout can be used to interpret the object's value.  
+## <a name="remarks"></a>설명  
+ `pBufferOffset` 값은 상자 내 값 형식의 위치입니다. Boxed 개체에 `pBufferOffset` 적용 된 후에는 값 형식의 클래스 레이아웃을 사용 하 여 개체의 값을 해석할 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
@@ -52,7 +52,7 @@ HRESULT GetBoxClassLayout(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [ICorProfilerInfo 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
 - [ICorProfilerInfo2 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

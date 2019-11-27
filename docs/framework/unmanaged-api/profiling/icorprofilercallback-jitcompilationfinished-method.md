@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449913"
 ---
 # <a name="icorprofilercallbackjitcompilationfinished-method"></a>ICorProfilerCallback::JITCompilationFinished 메서드
-Notifies the profiler that the just-in-time (JIT) compiler has finished compiling a function.  
+JIT (just-in-time) 컴파일러가 함수 컴파일을 완료 했음을 프로파일러에 알립니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,15 +36,15 @@ HRESULT JITCompilationFinished(
   
 ## <a name="parameters"></a>매개 변수  
  `functionId`  
- [in] The ID of the function that was compiled.  
+ 진행 컴파일된 함수의 ID입니다.  
   
  `hrStatus`  
- [in] A value indicating whether compilation was successful.  
+ 진행 컴파일이 성공 했는지 여부를 나타내는 값입니다.  
   
  `fIsSafeToBlock`  
- [in] A value indicating to the profiler whether blocking will affect the operation of the runtime. The value is `true` if blocking may cause the runtime to wait for the calling thread to return from this callback; otherwise, `false`.  
+ 진행 차단이 런타임 작업에 영향을 주는지 여부를 프로파일러에 나타내는 값입니다. 차단으로 인해 런타임에서 호출 스레드가이 콜백에서 반환 될 때까지 대기 하는 경우 값이 `true` 됩니다. 그렇지 않으면 `false`합니다.  
   
- Although a value of `true` will not harm the runtime, it can skew the profiling results.  
+ `true` 값은 런타임에 영향을 주지 않지만 프로 파일링 결과를 기울일 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
@@ -55,7 +55,7 @@ HRESULT JITCompilationFinished(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerCallback 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
 - [JITCompilationStarted 메서드](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md)

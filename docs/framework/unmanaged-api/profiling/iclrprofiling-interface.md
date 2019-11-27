@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448719"
 ---
 # <a name="iclrprofiling-interface"></a>ICLRProfiling 인터페이스
-Provides the [ICLRProfiling::AttachProfiler](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md) method, which enables a profiler to attach to a running process.  
+프로파일러가 실행 중인 프로세스에 연결할 수 있도록 하는 [ICLRProfiling:: AttachProfiler](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md) 메서드를 제공 합니다.  
   
 ## <a name="methods"></a>메서드  
   
@@ -30,7 +30,7 @@ Provides the [ICLRProfiling::AttachProfiler](../../../../docs/framework/unmanage
 |------------|-----------------|  
 |[AttachProfiler 메서드](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md)|지정한 프로파일러를 지정된 프로세스에 연결합니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
@@ -41,7 +41,7 @@ Provides the [ICLRProfiling::AttachProfiler](../../../../docs/framework/unmanage
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [프로파일링 인터페이스](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
 - [ICorProfilerInfo 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

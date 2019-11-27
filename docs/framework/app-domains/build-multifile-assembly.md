@@ -1,5 +1,5 @@
 ---
-title: 'How to: Build a multifile assembly'
+title: '방법: 다중 파일 어셈블리 빌드'
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assemblies [.NET Framework], multifile
@@ -24,7 +24,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74429563"
 ---
-# <a name="how-to-build-a-multifile-assembly"></a>How to: Build a multifile assembly
+# <a name="how-to-build-a-multifile-assembly"></a>방법: 다중 파일 어셈블리 빌드
 
 이 문서는 다중 파일 어셈블리를 만드는 방법을 설명하고 프로시저의 각 단계를 보여 주는 코드를 제공합니다.
 
@@ -168,7 +168,7 @@ ms.locfileid: "74429563"
    vbc /addmodule:Stringer.netmodule /t:module Client.vb
    ```
 
-   다음 단계에서 어셈블리에 이 모듈이 추가될 것이므로 **/t:module** 옵션을 지정합니다. *클라이언트*의 코드는 *Stringer.netmodule*의 코드에 의해 생성된 네임스페이스를 참조하므로 **/addmodule** 옵션을 지정하세요. 컴파일러는 *Client.netmodule*이라는 모듈을 만드는데, 이 모듈에는 다른 모듈인 *Stringer.netmodule*에 대한 참조가 들어 있습니다.
+   다음 단계에서 어셈블리에 이 모듈이 추가될 것이므로 **/t:module** 옵션을 지정합니다. **클라이언트**의 코드는 *Stringer.netmodule*의 코드에 의해 생성된 네임스페이스를 참조하므로 */addmodule* 옵션을 지정하세요. 컴파일러는 *Client.netmodule*이라는 모듈을 만드는데, 이 모듈에는 다른 모듈인 *Stringer.netmodule*에 대한 참조가 들어 있습니다.
 
    > [!NOTE]
    > C# 및 Visual Basic 컴파일러에서는 다음과 같은 두 구문을 사용하여 다중 파일 어셈블리를 직접 만들 수 있습니다.
@@ -213,7 +213,7 @@ ms.locfileid: "74429563"
 
     이 명령에서 *module name* 인수는 각 모듈의 이름을 지정하여 어셈블리에 포함합니다. **/main:** 옵션은 메서드 이름을 지정하는데, 이 메서드는 어셈블리의 진입점입니다. **/out:** 옵션은 출력 파일의 이름을 지정하는데, 이 파일에는 어셈블리 메타데이터가 들어 있습니다. **/target:** 옵션은 어셈블리를 콘솔 애플리케이션 실행 파일( *.exe*), Windows 실행 파일( *.win*) 또는 라이브러리 파일( *.lib*)로 지정합니다.
 
-    다음 예제에서 *Al.exe*는 *myAssembly.exe*라는 콘솔 애플리케이션 실행 파일인 어셈블리를 만듭니다. 이 애플리케이션은 *Client.netmodule* 및 *Stringer.netmodule*이라는 두 개의 모듈과 어셈블리 메타데이터만 포함하는 *myAssembly.exe*라는 실행 파일로 구성됩니다. 이 어셈블리의 진입점은 `MainClientApp` 클래스에 있는 `Main` 메서드이며, 이 클래스는 *Client.dll*에 들어 있습니다.
+    다음 예제에서 *Al.exe*는 *myAssembly.exe*라는 콘솔 애플리케이션 실행 파일인 어셈블리를 만듭니다. 이 애플리케이션은 *Client.netmodule* 및 *Stringer.netmodule*이라는 두 개의 모듈과 어셈블리 메타데이터만 포함하는 *myAssembly.exe*라는 실행 파일로 구성됩니다. 이 어셈블리의 진입점은 `Main` 클래스에 있는 `MainClientApp` 메서드이며, 이 클래스는 *Client.dll*에 들어 있습니다.
 
     ```cmd
     al Client.netmodule Stringer.netmodule /main:MainClientApp.Main /out:myAssembly.exe /target:exe
@@ -221,9 +221,9 @@ ms.locfileid: "74429563"
 
     [MSIL 디스어셈블러(Ildasm.exe)](../tools/ildasm-exe-il-disassembler.md)를 사용하면 어셈블리의 콘텐츠를 검사 할 수 있으며, 파일이 어셈블리인지 모듈인지를 결정할 수 있습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [어셈블리 만들기](../../standard/assembly/create.md)
-- [How to: View assembly contents](../../standard/assembly/view-contents.md)
+- [방법: 어셈블리 내용 보기](../../standard/assembly/view-contents.md)
 - [런타임에서 어셈블리를 찾는 방법](../deployment/how-the-runtime-locates-assemblies.md)
 - [다중 파일 어셈블리](multifile-assemblies.md)

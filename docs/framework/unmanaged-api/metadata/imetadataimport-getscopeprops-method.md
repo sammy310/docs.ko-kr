@@ -38,30 +38,30 @@ HRESULT GetScopeProps (
   
 ## <a name="parameters"></a>매개 변수  
  `szName`  
- [out] A buffer for the assembly or module name.  
+ 제한이 어셈블리 또는 모듈 이름에 대 한 버퍼입니다.  
   
  `cchName`  
- [in] The size in wide characters of `szName`.  
+ 진행 `szName`의 와이드 문자 크기입니다.  
   
  `pchName`  
- [out] The number of wide characters returned in `szName`.  
+ 제한이 `szName`에서 반환 되는 와이드 문자 수입니다.  
   
  `pmvid`  
- [out, optional] A pointer to a GUID that uniquely identifies the version of the assembly or module.  
+ [out, 선택 사항] 어셈블리 또는 모듈의 버전을 고유 하 게 식별 하는 GUID에 대 한 포인터입니다.  
   
 ## <a name="remarks"></a>주의  
- The [IMetaDataEmit::SetModuleProps](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md) method is used to set these properties.  
+ [IMetaDataEmit:: SetModuleProps](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md) 메서드는 이러한 속성을 설정 하는 데 사용 됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IMetaDataImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

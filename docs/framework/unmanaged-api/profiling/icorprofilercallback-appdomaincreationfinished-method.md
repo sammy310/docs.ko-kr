@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445281"
 ---
 # <a name="icorprofilercallbackappdomaincreationfinished-method"></a>ICorProfilerCallback::AppDomainCreationFinished 메서드
-Notifies the profiler that an application domain has been created.  
+응용 프로그램 도메인이 생성 되었음을 프로파일러에 알립니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -35,15 +35,15 @@ HRESULT AppDomainCreationFinished(
   
 ## <a name="parameters"></a>매개 변수  
  `appDomainId`  
- [in] Identifies the domain which has been created.  
+ 진행 만든 도메인을 식별 합니다.  
   
  `hrStatus`  
- [in] An HRESULT that indicates whether creation of the application domain completed successfully.  
+ 진행 응용 프로그램 도메인 만들기가 성공적으로 완료 되었는지 여부를 나타내는 HRESULT입니다.  
   
 ## <a name="remarks"></a>주의  
- The application ID is not valid for any information request until the `AppDomainCreationFinished` method is called.  
+ `AppDomainCreationFinished` 메서드를 호출할 때까지 모든 정보 요청에 대해 응용 프로그램 ID가 유효 하지 않습니다.  
   
- Some parts of loading the application domain might continue after the `AppDomainCreationFinished` callback. A failure HRESULT in `hrStatus` indicates a failure. However, a success HRESULT in `hrStatus` indicates only that the first part of creating the application domain has succeeded.  
+ 응용 프로그램 도메인 로드의 일부 부분은 `AppDomainCreationFinished` 콜백 후에도 계속 될 수 있습니다. `hrStatus` 오류 HRESULT는 오류를 나타냅니다. 그러나 `hrStatus`의 성공 HRESULT는 응용 프로그램 도메인을 만드는 첫 번째 부분이 성공 했다는 것만 나타냅니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
@@ -54,6 +54,6 @@ HRESULT AppDomainCreationFinished(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerCallback 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

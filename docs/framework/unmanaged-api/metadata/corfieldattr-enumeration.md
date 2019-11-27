@@ -60,33 +60,33 @@ typedef enum CorFieldAttr {
   
 |멤버|설명|  
 |------------|-----------------|  
-|`fdFieldAccessMask`|Specifies accessibility information.|  
-|`fdPrivateScope`|Specifies that the field cannot be referenced.|  
-|`fdPrivate`|Specifies that the field is accessible only by its parent type.|  
-|`fdFamANDAssem`|Specifies that the field is accessible by derived classes in its assembly.|  
-|`fdAssembly`|Specifies that the field is accessible by all types in its assembly.|  
-|`fdFamily`|Specifies that the field is accessible only by its type and derived classes.|  
-|`fdFamORAssem`|Specifies that the field is accessible by derived classes and by all types in its assembly.|  
-|`fdPublic`|Specifies that the field is accessible by all types with visibility of this scope.|  
-|`fdStatic`|Specifies that the field is a member of its type rather than an instance member.|  
-|`fdInitOnly`|Specifies that the field cannot be changed after it is initialized.|  
-|`fdLiteral`|Specifies that the field value is a compile-time constant.|  
-|`fdNotSerialized`|Specifies that the field is not serialized when its type is remoted.|  
-|`fdSpecialName`|Specifies that the field is special, and that its name describes how.|  
-|`fdPinvokeImpl`|Specifies that the field implementation is forwarded through PInvoke.|  
-|`fdReservedMask`|Reserved for internal use by the common language runtime.|  
-|`fdRTSpecialName`|Specifies that the common language runtime metadata internal APIs should check the encoding of the name.|  
-|`fdHasFieldMarshal`|Specifies that the field contains marshaling information.|  
-|`fdHasDefault`|Specifies that the field has a default value.|  
-|`fdHasFieldRVA`|Specifies that the field has a relative virtual address.|  
+|`fdFieldAccessMask`|내게 필요한 옵션 정보를 지정 합니다.|  
+|`fdPrivateScope`|필드는 참조할 수 없음을 지정 합니다.|  
+|`fdPrivate`|부모 형식 에서만 필드에 액세스할 수 있도록 지정 합니다.|  
+|`fdFamANDAssem`|해당 어셈블리의 파생 클래스에서 필드에 액세스할 수 있도록 지정 합니다.|  
+|`fdAssembly`|해당 어셈블리의 모든 형식에서 필드에 액세스할 수 있도록 지정 합니다.|  
+|`fdFamily`|해당 형식 및 파생 클래스만 필드에 액세스할 수 있도록 지정 합니다.|  
+|`fdFamORAssem`|파생 클래스와 해당 어셈블리의 모든 형식에서 필드에 액세스할 수 있도록 지정 합니다.|  
+|`fdPublic`|이 범위를 표시 하는 모든 형식에서 필드에 액세스할 수 있도록 지정 합니다.|  
+|`fdStatic`|필드가 인스턴스 멤버가 아니라 해당 형식의 멤버 임을 지정 합니다.|  
+|`fdInitOnly`|필드를 초기화 한 후에 변경할 수 없도록 지정 합니다.|  
+|`fdLiteral`|필드 값이 컴파일 타임 상수인 지정 합니다.|  
+|`fdNotSerialized`|필드가 원격 형식이 면 필드가 serialize 되지 않도록 지정 합니다.|  
+|`fdSpecialName`|필드를 특수 하 게 지정 하 고 해당 이름에서 방법을 설명 합니다.|  
+|`fdPinvokeImpl`|PInvoke를 통해 필드 구현이 전달 되도록 지정 합니다.|  
+|`fdReservedMask`|공용 언어 런타임에서 내부용으로 사용 하도록 예약 되어 있습니다.|  
+|`fdRTSpecialName`|공용 언어 런타임 메타 데이터 내부 Api가 이름의 인코딩을 확인 하도록 지정 합니다.|  
+|`fdHasFieldMarshal`|필드에 마샬링 정보를 포함 하도록 지정 합니다.|  
+|`fdHasDefault`|필드 기본값을 갖도록 지정 합니다.|  
+|`fdHasFieldRVA`|필드에 상대 가상 주소를 지정 합니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** CorHdr.h  
+ **헤더:** CorHdr .h  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [메타데이터 열거형](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

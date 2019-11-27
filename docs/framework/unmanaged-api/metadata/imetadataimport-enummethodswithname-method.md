@@ -40,43 +40,43 @@ HRESULT EnumMethodsWithName (
   
 ## <a name="parameters"></a>매개 변수  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
+ [in, out] 열거자에 대 한 포인터입니다. 이 메서드의 첫 번째 호출에서는 NULL 이어야 합니다.  
   
  `cl`  
- [in] A TypeDef token representing the type whose methods to enumerate.  
+ 진행 열거할 메서드를 포함 하는 형식을 나타내는 TypeDef 토큰입니다.  
   
  `szName`  
- [in] The name that limits the scope of the enumeration.  
+ 진행 열거형의 범위를 제한 하는 이름입니다.  
   
  `rMethods`  
- [out] The array used to store the MethodDef tokens.  
+ 제한이 MethodDef 토큰을 저장 하는 데 사용 되는 배열입니다.  
   
  `cMax`  
  [in] `rMethods` 배열의 최대 크기입니다.  
   
  `pcTokens`  
- [out] The number of MethodDef tokens returned in `rMethods`.  
+ 제한이 `rMethods`에서 반환 된 MethodDef 토큰 수입니다.  
   
 ## <a name="remarks"></a>주의  
- This method enumerates fields and methods, but not properties or events. Unlike [IMetaDataImport::EnumMethods](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enummethods-method.md), `EnumMethodsWithName` discards all method tokens that do not have the specified name.  
+ 이 메서드는 필드 및 메서드를 열거 하지만 속성이 나 이벤트는 열거 하지 않습니다. [IMetaDataImport:: EnumMethods](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enummethods-method.md)달리 `EnumMethodsWithName`는 지정 된 이름이 없는 메서드 토큰을 모두 삭제 합니다.  
   
 ## <a name="return-value"></a>반환 값  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethodsWithName` returned successfully.|  
-|`S_FALSE`|There are no tokens to enumerate. In that case, `pcTokens` is zero.|  
+|`S_OK`|`EnumMethodsWithName` 성공적으로 반환 되었습니다.|  
+|`S_FALSE`|열거할 토큰이 없습니다. 이 경우 `pcTokens`은 0입니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IMetaDataImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448882"
 ---
 # <a name="isymunmanagedmethodgetsequencepoints-method"></a>ISymUnmanagedMethod::GetSequencePoints 메서드
-Gets all the sequence points within this method.  
+이 메서드 내의 모든 시퀀스 위치를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -41,35 +41,35 @@ HRESULT GetSequencePoints(
   
 ## <a name="parameters"></a>매개 변수  
  `cPoints`  
- [in] A `ULONG32` that receives the size of the `offsets`, `documents`, `lines`, `columns`, `endLines`, and `endColumns` arrays.  
+ 진행 `offsets`, `documents`, `lines`, `columns`, `endLines`및 `endColumns` 배열의 크기를 수신 하는 `ULONG32`입니다.  
   
  `pcPoints`  
- [out] A pointer to a `ULONG32` that receives the length of the buffer required to contain the sequence points.  
+ 제한이 시퀀스 위치를 포함 하는 데 필요한 버퍼의 길이를 수신 하는 `ULONG32`에 대 한 포인터입니다.  
   
  `offsets`  
- [in] An array in which to store the Microsoft intermediate language (MSIL) offsets from the beginning of the method for the sequence points.  
+ 진행 시퀀스 위치에 대 한 메서드의 시작 부분에서 MSIL (Microsoft 중간 언어) 오프셋을 저장할 배열입니다.  
   
  `documents`  
- [in] An array in which to store the documents in which the sequence points are located.  
+ 진행 시퀀스 위치가 있는 문서를 저장할 배열입니다.  
   
  `lines`  
- [in] An array in which to store the lines in the documents at which the sequence points are located.  
+ 진행 시퀀스 위치가 있는 문서의 줄을 저장할 배열입니다.  
   
  `columns`  
- [in] An array in which to store the columns in the documents at which the sequence points are located.  
+ 진행 시퀀스 위치가 있는 문서의 열을 저장할 배열입니다.  
   
  `endLines`  
- [in] The array of lines in the documents at which the sequence points end.  
+ 진행 시퀀스 위치가 끝나는 문서의 줄 배열입니다.  
   
  `endColumns`  
- [in] The array of columns in the documents at which the sequence points end.  
+ 진행 시퀀스 위치가 끝나는 문서의 열 배열입니다.  
   
 ## <a name="return-value"></a>반환 값  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **Header:** CorSym.idl, CorSym.h  
+ **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ISymUnmanagedMethod 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445135"
 ---
 # <a name="icorprofilercallbackassemblyunloadstarted-method"></a>ICorProfilerCallback::AssemblyUnloadStarted 메서드
-Notifies the profiler that an assembly is being unloaded.  
+어셈블리가 언로드되고 있음을 프로파일러에 알립니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -34,10 +34,10 @@ HRESULT AssemblyUnloadStarted(
   
 ## <a name="parameters"></a>매개 변수  
  `assemblyId`  
- [in] Identifies the assembly that is being unloaded.  
+ 진행 언로드되고 있는 어셈블리를 식별 합니다.  
   
-## <a name="remarks"></a>주의  
- The value of `assemblyId` is not valid for an information request after the `AssemblyUnloadStarted` method returns — this is the profiler's last chance to get information about this assembly.  
+## <a name="remarks"></a>설명  
+ `assemblyId` 값은 `AssemblyUnloadStarted` 메서드가 반환 된 후 정보 요청에 유효 하지 않습니다 .이는 프로파일러에서이 어셈블리에 대 한 정보를 가져올 수 있는 마지막 기회입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
@@ -48,7 +48,7 @@ HRESULT AssemblyUnloadStarted(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [ICorProfilerCallback 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
 - [AssemblyUnloadFinished 메서드](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-assemblyunloadfinished-method.md)

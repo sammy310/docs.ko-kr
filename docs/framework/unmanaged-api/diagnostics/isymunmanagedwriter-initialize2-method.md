@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427952"
 ---
 # <a name="isymunmanagedwriterinitialize2-method"></a>ISymUnmanagedWriter::Initialize2 메서드
-Sets the metadata emitter interface with which this writer will be associated, and sets the output file name to which the debugging symbols will be written. This method also lets you set the final location of the program database (PDB) file.  
+이 작성기를 연결할 메타 데이터 내보내기 인터페이스를 설정 하 고 디버깅 기호를 쓸 출력 파일 이름을 설정 합니다. 이 메서드를 사용 하 여 PDB (프로그램 데이터베이스) 파일의 최종 위치를 설정할 수도 있습니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,27 +38,27 @@ HRESULT Initialize2(
   
 ## <a name="parameters"></a>매개 변수  
  `emitter`  
- [in] A pointer to the metadata emitter interface.  
+ 진행 메타 데이터 내보내기 인터페이스에 대 한 포인터입니다.  
   
  `tempfilename`  
- [in] A pointer to a `WCHAR` that contains the file name to which the debugging symbols are written. If a file name is specified for a writer that does not use file names, this parameter is ignored.  
+ 진행 디버깅 기호가 쓰여진 파일 이름을 포함 하는 `WCHAR`에 대 한 포인터입니다. 파일 이름을 사용하지 않는 작성기에 대해 파일 이름이 지정되면 이 매개 변수는 무시됩니다.  
   
  `pIStream`  
- [in] If specified, the symbol writer emits the symbols into the given <xref:System.Runtime.InteropServices.ComTypes.IStream> rather than to the file specified in the `filename` parameter. `pIStream` 매개 변수는 선택적 요소입니다.  
+ 진행 지정 된 경우 기호 작성기는 `filename` 매개 변수에 지정 된 파일이 아닌 지정 된 <xref:System.Runtime.InteropServices.ComTypes.IStream>으로 기호를 내보냅니다. `pIStream` 매개 변수는 선택적 요소입니다.  
   
  `fFullBuild`  
- [in] `true` if this is a full rebuild; `false` if this is an incremental compilation.  
+ [in] 전체 다시 작성 인 경우 `true` 합니다. 증분 컴파일 인 경우 `false` 합니다.  
   
  `finalfilename`  
- [in] A pointer to a `WCHAR` that is the path string to the final location of the PDB file.  
+ 진행 PDB 파일의 마지막 위치에 대 한 경로 문자열인 `WCHAR`에 대 한 포인터입니다.  
   
 ## <a name="return-value"></a>반환 값  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **Header:** CorSym.idl, CorSym.h  
+ **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [ISymUnmanagedWriter 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
 - [Initialize 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-initialize-method.md)

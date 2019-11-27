@@ -22,10 +22,10 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448568"
 ---
 # <a name="corsymsearchpolicyattributes-enumeration"></a>CorSymSearchPolicyAttributes 열거형
-Specifies the policy to be used when doing a search for a symbol reader. These constants are used by the [ISymUnmanagedBinder2::GetReaderForFile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md) and [ISymUnmanagedBinder3::GetReaderFromCallback](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md) methods.  
+기호 판독기를 검색할 때 사용할 정책을 지정 합니다. 이러한 상수는 [ISymUnmanagedBinder2:: GetReaderForFile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md) 및 [ISymUnmanagedBinder3:: GetReaderFromCallback](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md) 메서드에서 사용 됩니다.  
   
 > [!IMPORTANT]
-> It is a security risk to open a program database (PDB) file from an untrusted source.  
+> 신뢰할 수 없는 소스에서 PDB (프로그램 데이터베이스) 파일을 여는 것은 보안상 위험할 수 있습니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -43,14 +43,14 @@ typedef enum CorSymSearchPolicyAttributes
   
 |멤버|설명|  
 |------------|-----------------|  
-|`AllowRegistryAccess`|Queries the registry for symbol search paths.|  
-|`AllowSymbolServerAccess`|Accesses a symbol server.|  
-|`AllowOriginalPathAccess`|Searches the path specified in the Debug directory.|  
-|`AllowReferencePathAccess`|Searches for the PDB in the place where the .exe file is.|  
+|`AllowRegistryAccess`|레지스트리에 기호 검색 경로를 쿼리 합니다.|  
+|`AllowSymbolServerAccess`|기호 서버에 액세스 합니다.|  
+|`AllowOriginalPathAccess`|디버그 디렉터리에 지정 된 경로를 검색 합니다.|  
+|`AllowReferencePathAccess`|.Exe 파일이 인 위치에서 PDB를 검색 합니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **Header:** CorSym.idl, CorSym.h  
+ **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [진단 기호 저장소 열거형](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)

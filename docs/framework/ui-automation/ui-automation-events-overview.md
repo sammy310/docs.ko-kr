@@ -18,7 +18,7 @@ ms.locfileid: "74441499"
 ---
 # <a name="ui-automation-events-overview"></a>UI 자동화 이벤트 개요
 > [!NOTE]
-> 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조하세요.  
+> 이 설명서는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 네임스페이스에 정의된 관리되는 <xref:System.Windows.Automation> 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조하세요.  
   
  [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 이벤트 알림은 화면 판독기 및 화면 돋보기 같은 보조 기술의 핵심 기능입니다. 이러한 UI 자동화 클라이언트는 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 에서 상황이 발생하면 UI 자동화 공급자에서 생기는 이벤트를 추적하고 이 정보를 사용해 최종 사용자에게 알립니다.  
   
@@ -28,7 +28,7 @@ ms.locfileid: "74441499"
 ## <a name="types-of-events"></a>이벤트 유형  
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트는 다음 범주로 구분됩니다.  
   
-|이벤트(event)|설명|  
+|이벤트|설명|  
 |-----------|-----------------|  
 |속성 변경|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 요소의 속성이나 컨트롤 패턴이 변경되면 발생합니다. 예를 들어 클라이언트가 애플리케이션의 확인란 컨트롤을 모니터링해야 하는 경우 <xref:System.Windows.Automation.TogglePattern.TogglePatternInformation.ToggleState%2A> 속성에 대한 속성 변경 이벤트를 수신하도록 등록할 수 있습니다. 확인란 컨트롤을 선택하거나 선택 취소하면 공급자가 이벤트를 발생시키며 클라이언트가 필요에 따라 동작할 수 있습니다.|  
 |요소 작업|[!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 결과가 최종 사용자나 프로그래밍 작업에 의해 변경되면(예: 단추를 클릭하거나 <xref:System.Windows.Automation.InvokePattern>을 통해 호출) 발생합니다.|  
@@ -66,7 +66,7 @@ ms.locfileid: "74441499"
 ## <a name="ui-automation-event-arguments"></a>UI 자동화 이벤트 인수  
  다음 클래스는 이벤트 인수를 캡슐화합니다.  
   
-|인스턴스|설명|  
+|클래스|설명|  
 |-----------|-----------------|  
 |<xref:System.Windows.Automation.AsyncContentLoadedEventArgs>|로딩 완료율을 포함하여 콘텐츠의 비동기 로드에 대한 정보를 포함합니다.|  
 |<xref:System.Windows.Automation.AutomationEventArgs>|추가 데이터가 필요 없는 간단한 이벤트에 대한 정보를 포함합니다.|  
@@ -81,7 +81,7 @@ ms.locfileid: "74441499"
   
  이벤트 식별자 목록은 [UI Automation Events for Clients](ui-automation-events-for-clients.md)를 참조하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [클라이언트용 UI 자동화 이벤트](ui-automation-events-for-clients.md)
 - [서버 쪽 UI 자동화 공급자 구현](server-side-ui-automation-provider-implementation.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445269"
 ---
 # <a name="imetadataemitdefinemethodimpl-method"></a>IMetaDataEmit::DefineMethodImpl 메서드
-Creates a definition for implementation of a method inherited from an interface, and returns a token to that method-implementation definition.  
+인터페이스에서 상속 된 메서드의 구현에 대 한 정의를 만들고 해당 메서드 구현 정의에 대 한 토큰을 반환 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,24 +37,24 @@ HRESULT DefineMethodImpl (
   
 ## <a name="parameters"></a>매개 변수  
  `td`  
- [in] The `mdTypedef` token of the implementing class.  
+ 진행 구현 하는 클래스의 `mdTypedef` 토큰입니다.  
   
  `tkBody`  
- [in] The `mdMethodDef` or `mdMemberRef` token of the code body.  
+ 진행 코드 본문의 `mdMethodDef` 또는 `mdMemberRef` 토큰입니다.  
   
  `tkDecl`  
- [in] The `mdMethodDef` or `mdMemberRef` token of the interface method being implemented.  
+ 진행 구현 중인 인터페이스 메서드의 `mdMethodDef` 또는 `mdMemberRef` 토큰입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [IMetaDataEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

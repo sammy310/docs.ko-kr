@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445435"
 ---
 # <a name="imetadatatablesgetblob-method"></a>IMetaDataTables::GetBlob 메서드
-Gets a pointer to the binary large object (BLOB) at the specified column index.  
+지정 된 열 인덱스에 있는 BLOB (binary large object)에 대 한 포인터를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,24 +37,24 @@ HRESULT GetBlob (
   
 ## <a name="parameters"></a>매개 변수  
  `ixBlob`  
- [in] The memory address from which to get `ppData`.  
+ 진행 `ppData`가져올 메모리 주소입니다.  
   
  `pcbData`  
- [out] A pointer to the size, in bytes, of `ppData`.  
+ 제한이 `ppData`의 크기 (바이트)에 대 한 포인터입니다.  
   
  `ppData`  
- [out] A pointer to a pointer to the binary data retrieved.  
+ 제한이 검색 된 이진 데이터에 대 한 포인터에 대 한 포인터입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [IMetaDataTables 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
 - [IMetaDataTables2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

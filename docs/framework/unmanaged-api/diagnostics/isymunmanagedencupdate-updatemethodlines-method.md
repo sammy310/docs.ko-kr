@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449001"
 ---
 # <a name="isymunmanagedencupdateupdatemethodlines-method"></a>ISymUnmanagedENCUpdate::UpdateMethodLines 메서드
-Allows updating the line information for a method that has not been recompiled, but whose lines have moved independently. A delta for each statement is allowed.  
+다시 컴파일되지 않았지만 해당 줄이 독립적으로 이동 된 메서드에 대 한 줄 정보를 업데이트할 수 있습니다. 각 문에 대 한 델타를 사용할 수 있습니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,20 +36,20 @@ HRESULT UpdateMethodLines(
   
 ## <a name="parameters"></a>매개 변수  
  `mdMethodToken`  
- [in] The metadata of the method token.  
+ 진행 메서드 토큰의 메타 데이터입니다.  
   
  `pDeltas`  
- [in] An array of `INT32` values that indicates deltas for each sequence point in the method.  
+ 진행 메서드의 각 시퀀스 위치에 대 한 델타를 나타내는 `INT32` 값의 배열입니다.  
   
  `cDeltas`  
- [in] A `ULONG` containing the size of the `pDeltas` parameter.  
+ 진행 `pDeltas` 매개 변수의 크기를 포함 하는 `ULONG`입니다.  
   
 ## <a name="return-value"></a>반환 값  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **Header:** CorSym.idl, CorSym.h  
+ **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [ISymUnmanagedENCUpdate 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446571"
 ---
 # <a name="closeassembly-method"></a>CloseAssembly 메서드
-Finalizes assembly operations. Call this method before beginning a new assembly or unbound module.  
+어셈블리 작업을 종료 합니다. 새 어셈블리 또는 바인딩되지 않은 모듈을 시작 하기 전에이 메서드를 호출 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -35,15 +35,15 @@ HRESULT CloseAssembly(
   
 ## <a name="parameters"></a>매개 변수  
  `AssemblyID`  
- ID of the assembly.  
+ 어셈블리의 ID입니다.  
   
 ## <a name="return-value"></a>반환 값  
- Returns S_OK if the method succeeds.  
+ 메서드가 성공 하면 S_OK을 반환 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- Requires alink.h.  
+ Alink가 필요 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IALink 인터페이스](ialink-interface.md)
 - [IALink2 인터페이스](ialink2-interface.md)

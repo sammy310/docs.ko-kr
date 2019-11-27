@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450250"
 ---
 # <a name="cormanifestresourceflags-enumeration"></a>CorManifestResourceFlags 열거형
-Indicates the visibility of resources encoded in an assembly manifest.  
+어셈블리 매니페스트에 인코딩된 리소스의 표시 여부를 나타냅니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,17 +40,17 @@ typedef enum CorManifestResourceFlags {
   
 |멤버|설명|  
 |------------|-----------------|  
-|`mrVisibilityMask`|예약됨.|  
-|`mrPublic`|The resources are public.|  
-|`mrPrivate`|The resources are private.|  
+|`mrVisibilityMask`|예약되어 있습니다.|  
+|`mrPublic`|리소스는 공용입니다.|  
+|`mrPrivate`|전용 리소스입니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** CorHdr.h  
+ **헤더:** CorHdr .h  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [메타데이터 열거형](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

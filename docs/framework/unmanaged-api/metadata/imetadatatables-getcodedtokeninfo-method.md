@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74434060"
 ---
 # <a name="imetadatatablesgetcodedtokeninfo-method"></a>IMetaDataTables::GetCodedTokenInfo 메서드
-Gets a pointer to an array of tokens associated with the specified row index.  
+지정 된 행 인덱스와 연결 된 토큰의 배열에 대 한 포인터를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,27 +38,27 @@ HRESULT GetCodedTokenInfo (
   
 ## <a name="parameters"></a>매개 변수  
  `ixCdTkn`  
- [in] The kind of coded token to return.  
+ 진행 반환할 코딩 된 토큰의 종류입니다.  
   
  `pcTokens`  
- [out] A pointer to the length of `ppTokens`.  
+ 제한이 `ppTokens`의 길이에 대 한 포인터입니다.  
   
  `ppTokens`  
- [out] A pointer to a pointer to an array that contains the list of returned tokens.  
+ 제한이 반환 된 토큰의 목록이 포함 된 배열에 대 한 포인터에 대 한 포인터입니다.  
   
  `ppName`  
- [out] A pointer to a pointer to the name of the token at `ixCdTkn`.  
+ 제한이 `ixCdTkn`에서 토큰의 이름에 대 한 포인터에 대 한 포인터입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IMetaDataTables 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
 - [IMetaDataTables2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

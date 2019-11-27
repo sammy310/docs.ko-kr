@@ -33,7 +33,7 @@ HRESULT GetCount([out] ULONG * pcelt);
   
 ## <a name="parameters"></a>매개 변수  
  `celt`  
- [out] The number of runtime modules in the collection.  
+ 제한이 컬렉션의 런타임 모듈 수입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
@@ -44,7 +44,7 @@ HRESULT GetCount([out] ULONG * pcelt);
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [ICorProfilerModuleEnum 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md)
 - [프로파일링 인터페이스](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

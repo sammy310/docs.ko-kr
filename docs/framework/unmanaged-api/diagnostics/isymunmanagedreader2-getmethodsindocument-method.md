@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446436"
 ---
 # <a name="isymunmanagedreader2getmethodsindocument-method"></a>ISymUnmanagedReader2::GetMethodsInDocument 메서드
-Gets every method that has line information in the provided document.  
+제공 된 문서에서 줄 정보를 포함 하는 모든 메서드를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,23 +38,23 @@ HRESULT GetMethodsInDocument(
   
 ## <a name="parameters"></a>매개 변수  
  `document`  
- [in] A pointer to the document.  
+ 진행 문서에 대 한 포인터입니다.  
   
  `cMethod`  
- [in] A `ULONG32` that indicates the size of the  `pRetVal` array.  
+ 진행 `pRetVal` 배열의 크기를 나타내는 `ULONG32`입니다.  
   
  `pcMethod`  
- [out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the methods.  
+ 제한이 메서드를 포함 하는 데 필요한 버퍼 크기를 수신 하는 `ULONG32`에 대 한 포인터입니다.  
   
  `pRetVal`  
- [out] A pointer to the buffer that receives the methods.  
+ 제한이 메서드를 받는 버퍼에 대 한 포인터입니다.  
   
 ## <a name="return-value"></a>반환 값  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **Header:** CorSym.idl, CorSym.h  
+ **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [ISymUnmanagedReader2 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-interface.md)

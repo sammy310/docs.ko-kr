@@ -38,29 +38,29 @@ HRESULT SetFileProps (
   
 ## <a name="parameters"></a>매개 변수  
  `file`  
- [in] The metadata token that specifies the `File` metadata structure to be modified.  
+ 진행 수정할 `File` 메타 데이터 구조를 지정 하는 메타 데이터 토큰입니다.  
   
  `pbHashValue`  
- [in] A pointer to the hash data associated with the file.  
+ 진행 파일과 연결 된 해시 데이터에 대 한 포인터입니다.  
   
  `cbHashValue`  
- [in] The size in bytes of `pbHashValue`.  
+ 진행 `pbHashValue`의 크기 (바이트)입니다.  
   
  `dwFileFlags`  
- [in] A bitwise combination of [CorFileFlags](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md) values that specify various attributes of the file.  
+ 진행 파일의 다양 한 특성을 지정 하는 [Corfileflags](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md) 값의 비트 조합입니다.  
   
-## <a name="remarks"></a>주의  
- To create a `File` metadata structure, use the [IMetaDataAssemblyEmit::DefineFile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md) method.  
+## <a name="remarks"></a>설명  
+ `File` 메타 데이터 구조를 만들려면 [IMetaDataAssemblyEmit::D efineFile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md) 메서드를 사용 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [IMetaDataAssemblyEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

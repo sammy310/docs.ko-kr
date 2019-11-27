@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431694"
 ---
 # <a name="imetadataemitdefineparam-method"></a>IMetaDataEmit::DefineParam 메서드
-Creates a parameter definition with the specified signature for the method referenced by the specified token, and gets a token for that parameter definition.  
+지정 된 토큰이 참조 하는 메서드에 대해 지정 된 서명을 사용 하 여 매개 변수 정의를 만들고 해당 매개 변수 정의에 대 한 토큰을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -42,42 +42,42 @@ HRESULT DefineParam (
   
 ## <a name="parameters"></a>매개 변수  
  `md`  
- [in] The token for the method whose parameter is being defined.  
+ 진행 매개 변수가 정의 되 고 있는 메서드의 토큰입니다.  
   
  `ulParamSeq`  
- [in] The parameter sequence number.  
+ 진행 매개 변수 시퀀스 번호입니다.  
   
  `szName`  
- [in] The name of the parameter in Unicode.  
+ 진행 유니코드의 매개 변수 이름입니다.  
   
  `dwParamFlags`  
- [in] Flags for the parameter. This is a bitmask of `CorParamAttr` values.  
+ 진행 매개 변수에 대 한 플래그입니다. `CorParamAttr` 값의 비트 마스크입니다.  
   
  `dwCPlusTypeFlag`  
- [in] `ELEMENT_TYPE_` *\** for the constant value.  
+ [in] 상수 값에 대 한 *\** 을 `ELEMENT_TYPE_`합니다.  
   
  `pValue`  
- [in] The constant value for the parameter.  
+ 진행 매개 변수에 대 한 상수 값입니다.  
   
  `cchValue`  
- [in] The size, in Unicode characters, of `pValue`.  
+ 진행 `pValue`의 유니코드 문자 크기입니다.  
   
  `ppd`  
- [out] The `mdParamDef` token assigned.  
+ 제한이 할당 된 `mdParamDef` 토큰입니다.  
   
-## <a name="remarks"></a>주의  
- The sequence values in `ulParamSeq` begin with 1 for parameters. A return value has a sequence number of 0.  
+## <a name="remarks"></a>설명  
+ 매개 변수에 대 한 `ulParamSeq`의 시퀀스 값은 1로 시작 합니다. 반환 값의 시퀀스 번호는 0입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [IMetaDataEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

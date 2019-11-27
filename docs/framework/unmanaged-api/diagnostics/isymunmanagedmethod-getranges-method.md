@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448932"
 ---
 # <a name="isymunmanagedmethodgetranges-method"></a>ISymUnmanagedMethod::GetRanges 메서드
-Given a position in a document, returns an array of start and end offset pairs that correspond to the ranges of Microsoft intermediate language (MSIL) that the position covers within this method. The array is an array of integers and has the format [start, end, start, end]. The number of range pairs is the length of the array divided by 2.  
+문서에서 위치가 지정 된 경우이 메서드 내에서 위치가 포함 되는 MSIL (Microsoft 중간 언어)의 범위에 해당 하는 시작 및 종료 오프셋 쌍의 배열을 반환 합니다. 배열은 정수 배열이 며 [start, end, start, end] 형식을 갖습니다. 범위 쌍의 개수는 2로 나눈 결과 배열의 길이입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,29 +40,29 @@ HRESULT GetRanges(
   
 ## <a name="parameters"></a>매개 변수  
  `document`  
- [in] The document for which the offset is requested.  
+ 진행 오프셋이 요청 된 문서입니다.  
   
  `line`  
- [in] The document line corresponding to the ranges.  
+ 진행 범위에 해당 하는 문서 줄입니다.  
   
  `column`  
- [in] The document column corresponding to the ranges.  
+ 진행 범위에 해당 하는 문서 열입니다.  
   
  `cRanges`  
  [in] `ranges` 배열의 크기입니다.  
   
  `pcRanges`  
- [out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the ranges.  
+ 제한이 범위를 포함 하는 데 필요한 버퍼 크기를 수신 하는 `ULONG32`에 대 한 포인터입니다.  
   
  `ranges`  
- [out] A pointer to the buffer that receives the ranges.  
+ 제한이 범위를 받는 버퍼에 대 한 포인터입니다.  
   
 ## <a name="return-value"></a>반환 값  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **Header:** CorSym.idl, CorSym.h  
+ **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ISymUnmanagedMethod 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

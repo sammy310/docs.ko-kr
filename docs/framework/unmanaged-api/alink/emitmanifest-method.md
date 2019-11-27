@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446487"
 ---
 # <a name="emitmanifest-method"></a>EmitManifest 메서드
-Emits the final manifest. Call this method after importing all other files and setting all options. Do not call this method for unbound modules.  
+최종 매니페스트를 내보냅니다. 다른 모든 파일을 가져온 후이 메서드를 호출 하 고 모든 옵션을 설정 합니다. 바인딩되지 않은 모듈에 대해이 메서드를 호출 하지 마십시오.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,21 +37,21 @@ HRESULT EmitManifest(
   
 ## <a name="parameters"></a>매개 변수  
  `AssemblyID`  
- ID of the assembly.  
+ 어셈블리의 ID입니다.  
   
  `pdwReserveSize`  
- Receives the size to reserve in the assembly file, retrieved from [StrongNameSignatureSize Function](../strong-naming/strongnamesignaturesize-function.md).  
+ [StrongNameSignatureSize 함수](../strong-naming/strongnamesignaturesize-function.md)에서 검색 된 어셈블리 파일에서 예약할 크기를 수신 합니다.  
   
  `ptkManifest`  
- Optionally receives the assembly manifest token.  
+ 선택적으로 어셈블리 매니페스트 토큰을 받습니다.  
   
 ## <a name="return-value"></a>반환 값  
- Returns S_OK if the method succeeds.  
+ 메서드가 성공 하면 S_OK을 반환 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- Requires alink.h.  
+ Alink가 필요 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [IALink 인터페이스](ialink-interface.md)
 - [IALink2 인터페이스](ialink2-interface.md)

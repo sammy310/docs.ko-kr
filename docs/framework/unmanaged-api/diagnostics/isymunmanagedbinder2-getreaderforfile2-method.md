@@ -23,9 +23,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449336"
 ---
 # <a name="isymunmanagedbinder2getreaderforfile2-method"></a>ISymUnmanagedBinder2::GetReaderForFile2 메서드
-Given a metadata interface and a file name, returns the correct [ISymUnmanagedReader](isymunmanagedreader-interface.md) interface that will read the debugging symbols associated with the module.  
+메타 데이터 인터페이스와 파일 이름이 지정 된 경우 모듈에 연결 된 디버깅 기호를 읽을 올바른 [ISymUnmanagedReader](isymunmanagedreader-interface.md) 인터페이스를 반환 합니다.  
   
- This method provides a more extensive search for the program database (PDB) file than the [ISymUnmanagedBinder::GetReaderForFile](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderforfile-method.md) method.  
+ 이 메서드는 [ISymUnmanagedBinder:: GetReaderForFile](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderforfile-method.md) 메서드 보다 더 광범위 한 PDB (프로그램 데이터베이스) 파일 검색을 제공 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,30 +40,30 @@ HRESULT GetReaderForFile2(
   
 ## <a name="parameters"></a>매개 변수  
  `importer`  
- [in] A pointer to the metadata import interface.  
+ 진행 메타 데이터 가져오기 인터페이스에 대 한 포인터입니다.  
   
  `fileName`  
- [in] A pointer to the file name.  
+ 진행 파일 이름에 대 한 포인터입니다.  
   
  `searchPath`  
- [in] A pointer to the search path.  
+ 진행 검색 경로에 대 한 포인터입니다.  
   
  `searchPolicy`  
- [in] A value of the [CorSymSearchPolicyAttributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md) enumeration that specifies the policy to be used when doing a search for a symbol reader.  
+ 진행 기호 판독기를 검색할 때 사용할 정책을 지정 하는 [Corsymsearchpolicyattributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md) 열거형의 값입니다.  
   
  `pRetVal`  
- [out] A pointer that is set to the returned [ISymUnmanagedReader](isymunmanagedreader-interface.md) interface.  
+ 제한이 반환 된 [ISymUnmanagedReader](isymunmanagedreader-interface.md) interface로 설정 된 포인터입니다.  
   
 ## <a name="return-value"></a>반환 값  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **Header:** CorSym.idl, CorSym.h  
+ **헤더:** CorSym, CorSym  
   
-## <a name="remarks"></a>주의  
- This version of the method can search for the PDB file in areas other than right next to the module. The search policy can be controlled by combining [CorSymSearchPolicyAttributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md). For example, `AllowReferencePathAccess | AllowSymbolServerAccess` looks for the PDB next to the executable file and on a symbol server, but does not query the registry or use the path in the executable file. If the `searchPath` parameter is provided, those directories will always be searched.  
+## <a name="remarks"></a>설명  
+ 이 버전의 메서드는 모듈 바로 옆의 영역에서 PDB 파일을 검색할 수 있습니다. [Corsymsearchpolicyattributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md)를 결합 하 여 검색 정책을 제어할 수 있습니다. 예를 들어 `AllowReferencePathAccess | AllowSymbolServerAccess`은 실행 파일 및 기호 서버 옆에 있는 PDB를 찾지만 레지스트리를 쿼리하거나 실행 파일의 경로를 사용 하지 않습니다. `searchPath` 매개 변수를 제공 하는 경우 해당 디렉터리는 항상 검색 됩니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [ISymUnmanagedBinder2 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-interface.md)
 - [GetReaderForFile 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderforfile-method.md)

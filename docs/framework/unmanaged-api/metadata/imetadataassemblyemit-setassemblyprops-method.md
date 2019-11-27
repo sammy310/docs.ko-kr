@@ -41,38 +41,38 @@ HRESULT SetAssemblyProps (
   
 ## <a name="parameters"></a>매개 변수  
  `pma`  
- [in] The metadata token that specifies the `Assembly` metadata structure to be modified.  
+ 진행 수정할 `Assembly` 메타 데이터 구조를 지정 하는 메타 데이터 토큰입니다.  
   
  `pbPublicKey`  
- [in] A pointer to the public key of the publisher of the assembly.  
+ 진행 어셈블리 게시자의 공개 키에 대 한 포인터입니다.  
   
  `cbPublicKey`  
- [in] The size in bytes of `pbPublicKey`.  
+ 진행 `pbPublicKey`의 크기 (바이트)입니다.  
   
  `ulHashAlgId`  
- [in] The identifier for the hash algorithm used to hash the assembly files.  
+ 진행 어셈블리 파일을 해시 하는 데 사용 되는 해시 알고리즘의 식별자입니다.  
   
  `szName`  
- [in] The human-readable text name of the assembly.  
+ 진행 사람이 읽을 수 있는 어셈블리의 텍스트 이름입니다.  
   
  `pMetaData`  
- [in] A pointer to the ASSEMBLYMETADATA that contains version, platform, and locale information for the assembly.  
+ 진행 어셈블리에 대 한 버전, 플랫폼 및 로캘 정보를 포함 하는 ASSEMBLYMETADATA에 대 한 포인터입니다.  
   
  `dwAssemblyFlags`  
- [in] A bitwise combination of [AssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyflags-enumeration.md) values that specify various attributes of the assembly.  
+ 진행 어셈블리의 다양 한 특성을 지정 하는 [Assemblyflags](../../../../docs/framework/unmanaged-api/metadata/assemblyflags-enumeration.md) 값의 비트 조합입니다.  
   
 ## <a name="remarks"></a>주의  
- To create an `Assembly` metadata structure, use the [IMetaDataAssemblyEmit::DefineAssembly](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassembly-method.md) method.  
+ `Assembly` 메타 데이터 구조를 만들려면 [IMetaDataAssemblyEmit::D efineAssembly](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassembly-method.md) 메서드를 사용 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조 하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IMetaDataAssemblyEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

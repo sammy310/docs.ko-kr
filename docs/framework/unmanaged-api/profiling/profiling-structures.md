@@ -16,7 +16,7 @@ ms.locfileid: "74447701"
 # <a name="profiling-structures"></a>프로파일링 구조체
 이 섹션에서는 프로파일링 API에서 사용하는 관리되지 않는 구조체에 대해 설명합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [COR_PRF_ASSEMBLY_REFERENCE_INFO 구조체](../../../../docs/framework/unmanaged-api/profiling/cor-prf-assembly-reference-info-structure.md)  
  어셈블리 참조 closure 워커를 수행할 때 고려해야 하는 참조 어셈블리에 대한 정보를 공용 언어 런타임에 제공합니다.  
   

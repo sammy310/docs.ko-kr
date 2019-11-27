@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440483"
 ---
 # <a name="imetadataemittranslatesigwithscope-method"></a>IMetaDataEmit::TranslateSigWithScope 메서드
-Imports an assembly into the current scope and gets a new metadata signature for the merged scope.  
+어셈블리를 현재 범위로 가져오고 병합 된 범위에 대 한 새 메타 데이터 서명을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -45,48 +45,48 @@ HRESULT TranslateSigWithScope (
   
 ## <a name="parameters"></a>매개 변수  
  `pAssemImport`  
- [in] The interface for import assembly (where the signature is defined).  
+ [in] \(서명을 정의 됨) 가져오기 어셈블리에 대 한 인터페이스입니다.  
   
  `pbHashValue`  
- [in] The hash blob for the assembly.  
+ 진행 어셈블리에 대 한 해시 blob입니다.  
   
  `cbHashValue`  
- [in] The count of bytes in `pbHashValue`.  
+ 진행 `pbHashValue`바이트 수입니다.  
   
  `import`  
- [in] The interface for import metadata scope.  
+ 진행 메타 데이터 가져오기 범위에 대 한 인터페이스입니다.  
   
  `pbSigBlob`  
- [in] The signature to be imported.  
+ 진행 가져올 서명입니다.  
   
  `cbSigBlob`  
- [in] The size, in bytes, of `pbSigBlob`.  
+ 진행 `pbSigBlob`의 크기 (바이트)입니다.  
   
  `pAssemEmit`  
- [in] The interface for export assembly.  
+ 진행 내보내기 어셈블리에 대 한 인터페이스입니다.  
   
  `emit`  
- [in] The interface for export metadata scope.  
+ 진행 내보내기 메타 데이터 범위에 대 한 인터페이스입니다.  
   
  `pvTranslatedSig`  
- [out] The buffer to hold the translated signature blob.  
+ 제한이 번역 된 서명 blob을 저장할 버퍼입니다.  
   
  `cbTranslatedSigMax`  
- [in] The capacity, in bytes, of `pvTranslatedSig`.  
+ 진행 `pvTranslatedSig`의 용량 (바이트)입니다.  
   
  `pcbTranslatedSig`  
- [out] The number of actual bytes in the translated signature.  
+ 제한이 번역 된 시그니처의 실제 바이트 수입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [IMetaDataAssemblyEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
 - [IMetaDataAssemblyImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

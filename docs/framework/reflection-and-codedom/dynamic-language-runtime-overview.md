@@ -51,13 +51,13 @@ DLR을 사용하여 개발된 언어의 예는 다음과 같습니다.
 
 - IronPython. [GitHub](https://github.com/IronLanguages/ironpython2) 웹 사이트에서 오픈 소스 소프트웨어로 제공됩니다.
 
-- IronRuby. Available as open-source software from the [IronRuby](http://ironruby.net/) website.
+- IronRuby. [IronRuby](http://ironruby.net/) 웹 사이트에서 오픈 소스 소프트웨어로 제공 됩니다.
 
 ## <a name="primary-dlr-advantages"></a>기본 DLR 장점
  DLR은 다음과 같은 장점을 제공합니다.
 
 ### <a name="simplifies-porting-dynamic-languages-to-the-net-framework"></a>.NET Framework에 대한 동적 언어 포팅 간소화
- DLR을 사용하면 언어 구현자가 어휘 분석기, 구문 분석기, 의미 체계 분석기, 코드 생성기 및 기존에는 직접 만들어야 했던 기타 도구를 만들 필요가 없습니다. DLR을 사용하려면 언어가 트리 모양 구조의 언어 수준 코드, 런타임 도우미 루틴 및 <xref:System.Dynamic.IDynamicMetaObjectProvider> 인터페이스를 구현하는 선택적 동적 개체를 나타내는 *식 트리*를 생성해야 합니다. DLR 및 .NET Framework는 많은 코드 분석 및 코드 생성 작업을 자동화합니다. 이를 통해 언어 구현자는 고유한 언어 기능에 집중할 수 있습니다.
+ DLR을 사용하면 언어 구현자가 어휘 분석기, 구문 분석기, 의미 체계 분석기, 코드 생성기 및 기존에는 직접 만들어야 했던 기타 도구를 만들 필요가 없습니다. DLR을 사용하려면 언어가 트리 모양 구조의 언어 수준 코드, 런타임 도우미 루틴 및 *인터페이스를 구현하는 선택적 동적 개체를 나타내는*식 트리<xref:System.Dynamic.IDynamicMetaObjectProvider>를 생성해야 합니다. DLR 및 .NET Framework는 많은 코드 분석 및 코드 생성 작업을 자동화합니다. 이를 통해 언어 구현자는 고유한 언어 기능에 집중할 수 있습니다.
 
 ### <a name="enables-dynamic-features-in-statically-typed-languages"></a>정적 형식의 언어에서 동적 기능 사용
  C# 및 Visual Basic과 같은 기존 .NET Framework 언어는 동적 개체를 만들고 정적 형식의 개체와 함께 사용할 수 있습니다. 예를 들어 C# 및 Visual Basic은 HTML, DOM(문서 개체 모델) 및 .NET 리플렉션에 대해 동적 개체를 사용할 수 있습니다.
@@ -74,7 +74,7 @@ DLR을 사용하여 개발된 언어의 예는 다음과 같습니다.
 ## <a name="dlr-architecture"></a>DLR 아키텍처
  다음 그림은 동적 언어 런타임의 아키텍처를 보여 줍니다.
 
- ![Dynamic Language Runtime Architecture Overview](./media/dlr-archoverview.png "DLR_ArchOverview") DLR architecture
+ ![동적 언어 런타임 아키텍처 개요](./media/dlr-archoverview.png "DLR_ArchOverview") DLR 아키텍처
 
  DLR은 동적 언어 지원을 개선하기 위해 서비스 집합을 CLR에 추가합니다. 이러한 서비스에는 다음 항목이 포함됩니다.
 
@@ -89,7 +89,7 @@ DLR은 호출 사이트에서 바인더를 사용하여 .NET Framework뿐 아니
 ## <a name="dlr-documentation"></a>DLR 설명서
  오픈 소스 버전의 DLR을 사용하여 언어에 동적 동작을 추가하는 방법이나 .NET Framework에 동적 언어를 사용할 수 있도록 하는 방법에 대한 자세한 내용은 GitHub의 [IronLanguages/dlr](https://github.com/IronLanguages/dlr/tree/master/Docs) 리포지토리에 있는 설명서를 참조하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - <xref:System.Dynamic.ExpandoObject>
 - <xref:System.Dynamic.DynamicObject>

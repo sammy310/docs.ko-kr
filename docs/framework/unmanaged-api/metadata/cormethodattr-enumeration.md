@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450234"
 ---
 # <a name="cormethodattr-enumeration"></a>CorMethodAttr 열거형
-Contains values that describe the features of a method.  
+메서드의 기능을 설명 하는 값을 포함 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -66,38 +66,38 @@ typedef enum CorMethodAttr {
   
 |멤버|설명|  
 |------------|-----------------|  
-|`mdMemberAccessMask`|Specifies member access.|  
-|`mdPrivateScope`|Specifies that the member cannot be referenced.|  
-|`mdPrivate`|Specifies that the member is accessible only by the parent type.|  
-|`mdFamANDAssem`|Specifies that the member is accessible by subtypes only in this assembly.|  
-|`mdAssem`|Specifies that the member is accessibly by anyone in the assembly.|  
-|`mdFamily`|Specifies that the member is accessible only by type and subtypes.|  
-|`mdFamORAssem`|Specifies that the member is accessible by derived classes and by other types in its assembly.|  
-|`mdPublic`|Specifies that the member is accessible by all types with access to the scope.|  
-|`mdStatic`|Specifies that the member is defined as part of the type rather than as a member of an instance.|  
-|`mdFinal`|Specifies that the method cannot be overridden.|  
-|`mdVirtual`|Specifies that the method can be overridden.|  
-|`mdHideBySig`|Specifies that the method hides by name and signature, rather than just by name.|  
-|`mdVtableLayoutMask`|Specifies virtual table layout.|  
-|`mdReuseSlot`|Specifies that the slot used for this method in the virtual table be reused. 기본값입니다.|  
-|`mdNewSlot`|Specifies that the method always gets a new slot in the virtual table.|  
-|`mdCheckAccessOnOverride`|Specifies that the method can be overridden by the same types to which it is visible.|  
-|`mdAbstract`|Specifies that the method is not implemented.|  
-|`mdSpecialName`|Specifies that the method is special, and that its name describes how.|  
-|`mdPinvokeImpl`|Specifies that the method implementation is forwarded using PInvoke.|  
-|`mdUnmanagedExport`|Specifies that the method is a managed method exported to unmanaged code.|  
-|`mdReservedMask`|Reserved for internal use by the common language runtime.|  
-|`mdRTSpecialName`|Specifies that the common language runtime should check the encoding of the method name.|  
-|`mdHasSecurity`|Specifies that the method has security associated with it.|  
-|`mdRequireSecObject`|Specifies that the method calls another method containing security code.|  
+|`mdMemberAccessMask`|멤버 액세스를 지정 합니다.|  
+|`mdPrivateScope`|멤버를 참조할 수 없도록 지정 합니다.|  
+|`mdPrivate`|부모 형식만 멤버에 액세스할 수 있도록 지정 합니다.|  
+|`mdFamANDAssem`|이 어셈블리의 하위 형식에서 멤버에 액세스할 수 있도록 지정 합니다.|  
+|`mdAssem`|멤버가 어셈블리의 모든 사용자에 의해 accessibly 지정 합니다.|  
+|`mdFamily`|형식 및 하위 형식 에서만 멤버에 액세스할 수 있도록 지정 합니다.|  
+|`mdFamORAssem`|파생 클래스와 해당 어셈블리의 다른 형식에서 멤버에 액세스할 수 있도록 지정 합니다.|  
+|`mdPublic`|범위에 대 한 액세스 권한이 있는 모든 형식에서 멤버에 액세스할 수 있도록 지정 합니다.|  
+|`mdStatic`|멤버가 인스턴스의 멤버가 아니라 형식의 일부로 정의 되도록 지정 합니다.|  
+|`mdFinal`|메서드를 재정의할 수 없도록 지정 합니다.|  
+|`mdVirtual`|메서드를 재정의할 수 있도록 지정 합니다.|  
+|`mdHideBySig`|메서드가 이름 뿐만 아니라 이름 및 시그니처로 숨기도록 지정 합니다.|  
+|`mdVtableLayoutMask`|가상 테이블 레이아웃을 지정 합니다.|  
+|`mdReuseSlot`|가상 테이블에서이 메서드에 사용 되는 슬롯을 다시 사용 하도록 지정 합니다. 이 값이 기본값입니다.|  
+|`mdNewSlot`|메서드가 항상 가상 테이블에 새 슬롯을 가져옵니다.|  
+|`mdCheckAccessOnOverride`|표시 되는 형식과 동일한 형식으로 메서드를 재정의할 수 있도록 지정 합니다.|  
+|`mdAbstract`|메서드가 구현 되지 않도록 지정 합니다.|  
+|`mdSpecialName`|메서드를 특수 하 게 지정 하 고 해당 이름에서 방법을 설명 합니다.|  
+|`mdPinvokeImpl`|PInvoke를 사용 하 여 메서드 구현을 전달 하도록 지정 합니다.|  
+|`mdUnmanagedExport`|메서드를 비관리 코드로 내보낸 관리 되는 메서드로 지정 합니다.|  
+|`mdReservedMask`|공용 언어 런타임에서 내부용으로 사용 하도록 예약 되어 있습니다.|  
+|`mdRTSpecialName`|공용 언어 런타임에서 메서드 이름의 인코딩을 확인 하도록 지정 합니다.|  
+|`mdHasSecurity`|메서드에 연결 된 보안이 있음을 지정 합니다.|  
+|`mdRequireSecObject`|메서드가 보안 코드를 포함 하는 다른 메서드를 호출 하도록 지정 합니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** CorHdr.h  
+ **헤더:** CorHdr .h  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [메타데이터 열거형](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

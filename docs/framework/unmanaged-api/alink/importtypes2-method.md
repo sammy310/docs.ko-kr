@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445671"
 ---
 # <a name="importtypes2-method"></a>ImportTypes2 메서드
-Initiates the import of types. Call this method to begin importing types from each scope imported via [ImportFile Method](importfile-method.md).  
+형식의 가져오기를 시작 합니다. [Importfile 메서드](importfile-method.md)를 통해 가져온 각 범위에서 형식 가져오기를 시작 하려면이 메서드를 호출 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,30 +39,30 @@ HRESULT ImportTypes2(
   
 ## <a name="parameters"></a>매개 변수  
  `AssemblyID`  
- ID of assembly into which to import.  
+ 가져올 어셈블리의 ID입니다.  
   
  `FileToken`  
- ID of file to from which to import.  
+ 가져올 파일의 ID입니다.  
   
  `dwScope`  
- Zero-based scope from which to import.  
+ 가져올 범위 (0부터 시작)입니다.  
   
  `phEnum`  
- Receives enumerator handle for the types in the given scope.  
+ 지정 된 범위에 있는 형식에 대 한 열거자 핸들을 받습니다.  
   
  `ppImportScope`  
- Optionally receives [IMetaDataImport2 Interface](../metadata/imetadataimport2-interface.md) interface.  
+ 선택적으로 [IMetaDataImport2 인터페이스](../metadata/imetadataimport2-interface.md) 인터페이스를 수신 합니다.  
   
  `pdwCountOfTypes`  
- Optionally receives count of types in the specified scope.  
+ 선택적으로 지정 된 범위에 있는 형식의 수를 받습니다.  
   
 ## <a name="return-value"></a>반환 값  
- Returns S_OK if the method succeeds.  
+ 메서드가 성공 하면 S_OK을 반환 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- Requires alink.h  
+ Alink 필요  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [IALink2 인터페이스](ialink2-interface.md)
 - [IALink 인터페이스](ialink-interface.md)

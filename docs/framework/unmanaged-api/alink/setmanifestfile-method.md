@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445568"
 ---
 # <a name="setmanifestfile-method"></a>SetManifestFile 메서드
-Enables you to specify or reset the manifest file that the linker uses when it creates the assembly.  
+링커가 어셈블리를 만들 때 사용 하는 매니페스트 파일을 지정 하거나 다시 설정할 수 있습니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -35,18 +35,18 @@ HRESULT SetManifestFile(
 ## <a name="parameters"></a>매개 변수  
  `pszFile`  
   
- The name of the manifest file whose contents are put into the Win32 resources blob.  
+ Win32 리소스 blob에 콘텐츠를 포함 하는 매니페스트 파일의 이름입니다.  
   
 ## <a name="return-value"></a>반환 값  
- Returns S_OK if the method succeeds.  
+ 메서드가 성공 하면 S_OK을 반환 합니다.  
   
 ## <a name="remarks"></a>주의  
- Call this before asking for the Win32ResBlob. The value of the `pszFile` parameter is the name of the manifest file whose contents are read and put in the Win32 resources with ID of RT_MANIFEST. When called by using a parameter of NULL, any previously read manifest is cleared. This enables one to reset the state of the linker to that of initialization time.  
+ Win32ResBlob를 요청 하기 전에이를 호출 합니다. `pszFile` 매개 변수의 값은 콘텐츠를 읽은 매니페스트 파일의 이름이 며 ID가 RT_MANIFEST 인 Win32 리소스에 저장 됩니다. NULL의 매개 변수를 사용 하 여 호출 하면 이전에 읽은 모든 매니페스트가 지워집니다. 이렇게 하면 링커가 초기화 시간의 상태를 다시 설정할 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
- Requires aLink.h  
+ ALink 필요  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IALink3 인터페이스](ialink3-interface.md)
 - [ALink API](index.md)

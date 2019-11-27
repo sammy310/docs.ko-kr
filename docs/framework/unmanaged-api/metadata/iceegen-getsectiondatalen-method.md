@@ -23,9 +23,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448083"
 ---
 # <a name="iceegengetsectiondatalen-method"></a>ICeeGen::GetSectionDataLen 메서드
-Gets the length of the specified section.  
+지정 된 섹션의 길이를 가져옵니다.  
   
- This method is obsolete and should not be used.  
+ 이 메서드는 사용 되지 않으므로 사용 하면 안 됩니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,23 +38,23 @@ HRESULT GetSectionDataLen (
   
 ## <a name="parameters"></a>매개 변수  
  `section`  
- [in] The data section whose length will be retrieved.  
+ 진행 길이가 검색 되는 데이터 섹션입니다.  
   
  `dataLen`  
- [out] The returned length of the specified section.  
+ 제한이 지정 된 섹션의 반환 된 길이입니다.  
   
-## <a name="remarks"></a>주의  
- Call `GetSectionDataLen` only if you have special section requirements that are not handled by other methods.  
+## <a name="remarks"></a>설명  
+ 다른 메서드에서 처리 하지 않는 특별 한 섹션 요구 사항이 있는 경우에만 `GetSectionDataLen`를 호출 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [ICeeGen 인터페이스](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

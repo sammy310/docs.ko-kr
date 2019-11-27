@@ -1,5 +1,5 @@
 ---
-title: AssemblyAttributesGoHere Class (System.Runtime.CompilerServices)
+title: AssemblyAttributesGoHere 클래스 (System.runtime.compilerservices)
 ms.date: 03/30/2017
 api_name:
 - System.Runtime.CompilerServices.AssemblyAttributesGoHere
@@ -22,7 +22,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446646"
 ---
-# <a name="assemblyattributesgohere-class"></a>AssemblyAttributesGoHere Class
+# <a name="assemblyattributesgohere-class"></a>AssemblyAttributesGoHere 클래스
 
 ALink에서 사용자 지정 특성 정보를 저장하는 자리 표시자로 사용됩니다.
 
@@ -38,13 +38,13 @@ internal sealed class AssemblyAttributesGoHere
 
 이 형식에 대한 참조는 보안과 관련이 없고 다양한 용도로 사용되지 않는 사용자 지정 특성을 나타냅니다.
 
-These types are marked "internal" within the .NET Framework and are located in the <xref:System.Runtime.CompilerServices> namespace.
+이러한 형식은 .NET Framework 내에서 "내부"로 표시 되 고 <xref:System.Runtime.CompilerServices> 네임 스페이스에 있습니다.
 
 ## <a name="requirements"></a>요구 사항
 
 mscorlib.dll
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [AssemblyAttributesGoHereM](assemblyattributesgoherem.md)
 - [AssemblyAttributesGoHereS](assemblyattributesgoheres.md)

@@ -28,16 +28,16 @@ ms.locfileid: "74447493"
   
  모든 <xref:System.ServiceModel.ICommunicationObject>는 만듦 상태로 시작합니다. 이 상태에서는 애플리케이션이 속성을 설정하여 개체를 구성할 수 있습니다. 개체가 Created 외의 상태가 되면 변경할 수 없는 것으로 간주됩니다.  
   
- ![Dataflow diagram of the channel state transition.](./media/understanding-state-changes/channel-state-transitions.gif)  
-Figure 1. ICommunicationObject 상태 시스템.  
+ ![채널 상태 전환의 데이터 흐름 다이어그램](./media/understanding-state-changes/channel-state-transitions.gif)  
+그림 1. ICommunicationObject 상태 시스템.  
   
- Windows Communication Foundation (WCF) provides an abstract base class named <xref:System.ServiceModel.Channels.CommunicationObject> that implements <xref:System.ServiceModel.ICommunicationObject> and the channel state machine. 다음 그래픽은 <xref:System.ServiceModel.Channels.CommunicationObject>에 적용되는 수정된 상태 다이어그램입니다. 여기에는 <xref:System.ServiceModel.ICommunicationObject> 상태 시스템 외에도 추가 <xref:System.ServiceModel.Channels.CommunicationObject> 메서드가 호출되는 타이밍이 표시됩니다.  
+ WCF (Windows Communication Foundation)는 <xref:System.ServiceModel.ICommunicationObject> 및 채널 상태 시스템을 구현 하는 <xref:System.ServiceModel.Channels.CommunicationObject> 라는 추상 기본 클래스를 제공 합니다. 다음 그래픽은 <xref:System.ServiceModel.Channels.CommunicationObject>에 적용되는 수정된 상태 다이어그램입니다. 여기에는 <xref:System.ServiceModel.ICommunicationObject> 상태 시스템 외에도 추가 <xref:System.ServiceModel.Channels.CommunicationObject> 메서드가 호출되는 타이밍이 표시됩니다.  
   
- ![Dataflow diagram of CommunicationObject implementation state changes.](./media/understanding-state-changes/communicationobject-implementation-state-machine.gif)
+ CommunicationObject 구현 상태 변경 내용에 대 한 ![데이터 흐름 다이어그램](./media/understanding-state-changes/communicationobject-implementation-state-machine.gif)
 그림 2. 이벤트 및 보호된 메서드 호출을 포함한 ICommunicationObject 상태 시스템의 CommunicationObject 구현  
   
 ### <a name="icommunicationobject-events"></a>ICommunicationObject 이벤트  
- <xref:System.ServiceModel.Channels.CommunicationObject>는 <xref:System.ServiceModel.ICommunicationObject>에 정의된 5개의 이벤트를 노출합니다. 이러한 이벤트는 통신 개체를 사용하는 코드에 상태 전이를 알리는 데 사용하도록 디자인되었습니다. 위의 그림 2에 표시된 것과 같이 각 이벤트는 이벤트에서 명명된 상태로 개체의 상태 전이가 이루어진 후에 시작됩니다. 5개의 이벤트는 모두 다음과 같이 정의되는 `EventHandler` 형식입니다.  
+ <xref:System.ServiceModel.Channels.CommunicationObject> <xref:System.ServiceModel.ICommunicationObject>에서 정의한 5 개의 이벤트를 노출 합니다. 이러한 이벤트는 통신 개체를 사용하는 코드에 상태 전이를 알리는 데 사용하도록 디자인되었습니다. 위의 그림 2에 표시된 것과 같이 각 이벤트는 이벤트에서 명명된 상태로 개체의 상태 전이가 이루어진 후에 시작됩니다. 5개의 이벤트는 모두 다음과 같이 정의되는 `EventHandler` 형식입니다.  
   
  `public delegate void EventHandler(object sender, EventArgs e);`  
   
@@ -52,19 +52,19 @@ Figure 1. ICommunicationObject 상태 시스템.
   
  <xref:System.ServiceModel.Channels.CommunicationObject.OnOpen%2A?displayProperty=nameWithType>, <xref:System.ServiceModel.Channels.CommunicationObject.OnClose%2A?displayProperty=nameWithType> 및 <xref:System.ServiceModel.Channels.CommunicationObject.OnAbort%2A?displayProperty=nameWithType>에는 기본 구현이 없지만 다른 콜백에는 상태 시스템의 정확성을 위해 필요한 기본 구현이 있습니다. 해당 메서드를 재정의하는 경우에는 기본 구현을 호출하거나 올바르게 대체해야 합니다.  
   
- <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening%2A?displayProperty=nameWithType>, <xref:System.ServiceModel.Channels.CommunicationObject.OnClosing%2A?displayProperty=nameWithType> 및 <xref:System.ServiceModel.Channels.CommunicationObject.OnFaulted%2A?displayProperty=nameWithType>는 해당 <xref:System.ServiceModel.Channels.CommunicationObject.Opening?displayProperty=nameWithType>, <xref:System.ServiceModel.Channels.CommunicationObject.Closing?displayProperty=nameWithType> 및 <xref:System.ServiceModel.Channels.CommunicationObject.Faulted?displayProperty=nameWithType> 이벤트를 시작합니다. <xref:System.ServiceModel.Channels.CommunicationObject.OnOpened%2A?displayProperty=nameWithType> 및 <xref:System.ServiceModel.Channels.CommunicationObject.OnClosed%2A?displayProperty=nameWithType>는 각각 개체 상태를 Opened와 Closed로 설정한 다음 해당되는 <xref:System.ServiceModel.Channels.CommunicationObject.Opened?displayProperty=nameWithType> 및 <xref:System.ServiceModel.Channels.CommunicationObject.Closed?displayProperty=nameWithType> 이벤트를 시작합니다.  
+ <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening%2A?displayProperty=nameWithType>해당 <xref:System.ServiceModel.Channels.CommunicationObject.Opening?displayProperty=nameWithType>, <xref:System.ServiceModel.Channels.CommunicationObject.Closing?displayProperty=nameWithType> 및 <xref:System.ServiceModel.Channels.CommunicationObject.Faulted?displayProperty=nameWithType> 이벤트를 <xref:System.ServiceModel.Channels.CommunicationObject.OnClosing%2A?displayProperty=nameWithType> 및 <xref:System.ServiceModel.Channels.CommunicationObject.OnFaulted%2A?displayProperty=nameWithType> 발생 시킵니다. <xref:System.ServiceModel.Channels.CommunicationObject.OnOpened%2A?displayProperty=nameWithType> 및 <xref:System.ServiceModel.Channels.CommunicationObject.OnClosed%2A?displayProperty=nameWithType> 개체 상태를 각각 열린 후 닫힘으로 설정 하 고 해당 <xref:System.ServiceModel.Channels.CommunicationObject.Opened?displayProperty=nameWithType> 및 <xref:System.ServiceModel.Channels.CommunicationObject.Closed?displayProperty=nameWithType> 이벤트를 발생 시킵니다.  
   
 ### <a name="state-transition-methods"></a>상태 전이 메서드  
- <xref:System.ServiceModel.Channels.CommunicationObject>에서는 Abort, Close 및 Open의 구현을 제공합니다. 또한 Faulted 상태로 상태 전이를 일으키는 Fault 메서드도 제공합니다. 그림 2는 전이를 일으키는 각 메서드가 레이블로 표시된 <xref:System.ServiceModel.ICommunicationObject> 상태 시스템을 보여 줍니다. 레이블이 없는 전이는 레이블이 있는 마지막 전이를 일으킨 메서드의 구현 내에서 이루어집니다.  
+ <xref:System.ServiceModel.Channels.CommunicationObject>는 Abort, Close 및 Open의 구현을 제공 합니다. 또한 Faulted 상태로 상태 전이를 일으키는 Fault 메서드도 제공합니다. 그림 2는 전이를 일으키는 각 메서드가 레이블로 표시된 <xref:System.ServiceModel.ICommunicationObject> 상태 시스템을 보여 줍니다. 레이블이 없는 전이는 레이블이 있는 마지막 전이를 일으킨 메서드의 구현 내에서 이루어집니다.  
   
 > [!NOTE]
 > 통신 상태 가져오기/설정의 모든 <xref:System.ServiceModel.Channels.CommunicationObject> 구현은 스레드로 동기화됩니다.  
   
  생성자  
   
- <xref:System.ServiceModel.Channels.CommunicationObject>에서는 3개의 생성자를 제공하며, 이들 생성자는 모두 개체를 만듦 상태로 남겨 둡니다. 생성자는 다음과 같이 정의됩니다.  
+ <xref:System.ServiceModel.Channels.CommunicationObject>는 세 개의 생성자를 제공 하며, 모두 개체를 Created 상태로 둡니다. 생성자는 다음과 같이 정의됩니다.  
   
- The first constructor is a parameterless constructor that delegates to the constructor overload that takes an object:  
+ 첫 번째 생성자는 개체를 사용 하는 생성자 오버 로드에 위임 하는 매개 변수가 없는 생성자입니다.  
   
  `protected CommunicationObject() : this(new object()) { … }`  
   
@@ -90,7 +90,7 @@ Figure 1. ICommunicationObject 상태 시스템.
   
  다음으로는 상태를 Opening으로 설정하고 Opening 이벤트를 일으키는 OnOpening()과 OnOpen() 및 OnOpened()를 차례로 호출합니다. OnOpened()에서는 상태를 Opened로 설정하고 Opened 이벤트를 일으킵니다. 이 과정 중에 예외가 throw되면 Open()에서는 Fault()를 호출하고 예외를 일으킵니다. 다음 다이어그램은 Open 프로세스를 보다 자세히 나타낸 것입니다.  
   
- ![Dataflow diagram of ICommunicationObject.Open state changes.](./media/understanding-state-changes/ico-open-process-override-onopen.gif)  
+ ![ICommunicationObject 상태 변경 내용에 대 한 데이터 흐름 다이어그램](./media/understanding-state-changes/ico-open-process-override-onopen.gif)  
 내부 통신 개체 열기 등의 사용자 지정 열기 논리를 구현하려면 OnOpen 메서드를 재정의합니다.  
   
  Close 메서드  
@@ -101,7 +101,7 @@ Figure 1. ICommunicationObject 상태 시스템.
   
  Close() 메서드는 어느 상태에서나 호출할 수 있습니다. 여기서는 개체를 정상적으로 닫으려 합니다. 오류가 발생하면 개체를 종료합니다. 현재 상태가 Closing 또는 Closed이면 이 메서드에서는 아무 것도 하지 않습니다. 그렇지 않으면 상태를 Closing으로 설정합니다. 원래 상태가 Created, Opening 또는 Faulted이면 Abort()를 호출합니다(다음 다이어그램 참조). 원래 상태가 Opened이면 Closing 이벤트를 일으키는 OnClosing()과 OnClose() 및 OnClosed()를 순서대로 호출합니다. 이 과정 중에 예외가 throw되면 Close()에서는 Abort()를 호출하고 예외를 일으킵니다. OnClosed()에서는 상태를 Closed로 설정하고 Closed 이벤트를 일으킵니다. 다음 다이어그램은 Close 프로세스를 보다 자세히 나타낸 것입니다.  
   
- ![Dataflow diagram of ICommunicationObject.Close state changes.](./media/understanding-state-changes/ico-close-process-override-onclose.gif)  
+ ![ICommunicationObject 상태 변경 내용에 대 한 데이터 흐름 다이어그램](./media/understanding-state-changes/ico-close-process-override-onclose.gif)  
 내부 통신 개체 닫기 등의 사용자 지정 닫기 논리를 구현하려면 OnClose 메서드를 재정의합니다. 장기적으로 차단될 수 있는 모든 정상적인 닫기 논리는(예: 다른 쪽의 응답을 기다리는 경우) 제한 시간 매개 변수를 받고 Abort()의 일부로 호출되지 않기 때문에 OnClose()에 구현해야 합니다.  
   
  중단  
@@ -111,7 +111,7 @@ Figure 1. ICommunicationObject 상태 시스템.
   
  현재 상태가 Closed이거나 이전에 개체가 다른 스레드에서 Abort()를 실행하는 등의 방법으로 종료된 경우에는 Abort() 메서드에서 아무 것도 하지 않습니다. 그렇지 않은 경우에는 상태를 Closing으로 설정하고 Closing 이벤트를 일으키는 OnClosing()과 OnAbort() 및 OnClosed()를 순서대로 호출합니다. 개체를 닫는 경우가 아니라 종료하는 경우이기 때문에 OnClose는 호출하지 않습니다. OnClosed()에서는 상태를 Closed로 설정하고 Closed 이벤트를 일으킵니다. 이 과정에서 예외가 throw되면 Abort의 호출자에게 예외가 다시 throw됩니다. OnClosing(), OnClosed() 및 OnAbort()의 구현은 입력/출력 등을 차단하지 않아야 합니다. 다음 다이어그램은 Abort 프로세스를 보다 자세히 나타낸 것입니다.  
   
- ![Dataflow diagram of ICommunicationObject.Abort state changes.](./media/understanding-state-changes/ico-abort-process-override-onabort.gif)  
+ ![ICommunicationObject 상태 변경 내용에 대 한 데이터 흐름 다이어그램](./media/understanding-state-changes/ico-abort-process-override-onabort.gif)  
 내부 통신 개체 종료 등의 사용자 지정 종료 논리를 구현하려면 OnAbort 메서드를 재정의합니다.  
   
  Fault  
@@ -127,29 +127,29 @@ Figure 1. ICommunicationObject 상태 시스템.
 ### <a name="throwifxxx-methods"></a>ThrowIfXxx 메서드  
  CommunicationObject에는 개체가 특정 상태에 있을 때 예외를 throw하는 데 사용되는 보호된 메서드가 3개 있습니다.  
   
- <xref:System.ServiceModel.Channels.CommunicationObject.ThrowIfDisposed%2A>에서는 상태가 Closing, Closed 또는 Faulted인 경우에 예외를 throw합니다.  
+ 상태가 Closing, 닫힘 또는 오류 인 경우 <xref:System.ServiceModel.Channels.CommunicationObject.ThrowIfDisposed%2A> 예외를 throw 합니다.  
   
- <xref:System.ServiceModel.Channels.CommunicationObject.ThrowIfDisposedOrImmutable%2A>에서는 상태가 Created가 아닌 경우에 예외를 throw합니다.  
+ 상태가 생성 되지 않은 경우 <xref:System.ServiceModel.Channels.CommunicationObject.ThrowIfDisposedOrImmutable%2A> 예외를 throw 합니다.  
   
- <xref:System.ServiceModel.Channels.CommunicationObject.ThrowIfDisposedOrNotOpen%2A>에서는 상태가 Opened가 아닌 경우에 예외를 throw합니다.  
+ 상태가 열려 있지 않으면 <xref:System.ServiceModel.Channels.CommunicationObject.ThrowIfDisposedOrNotOpen%2A> 예외를 throw 합니다.  
   
  throw되는 예외는 상태에 따라 다릅니다. 다음 표에서는 여러 상태 및 해당 상태에서 ThrowIfXxx를 호출하면 throw되는 해당 예외 형식을 보여 줍니다.  
   
-|상태|Abort 호출 여부|예외|  
+|State|Abort 호출 여부|예외|  
 |-----------|----------------------------|---------------|  
 |만든 날짜|해당 사항 없음|<xref:System.InvalidOperationException?displayProperty=nameWithType>|  
 |Opening|해당 사항 없음|<xref:System.InvalidOperationException?displayProperty=nameWithType>|  
 |Opened|해당 사항 없음|<xref:System.InvalidOperationException?displayProperty=nameWithType>|  
 |Closing|예|<xref:System.ServiceModel.CommunicationObjectAbortedException?displayProperty=nameWithType>|  
 |Closing|아니요|<xref:System.ObjectDisposedException?displayProperty=nameWithType>|  
-|종결됨|예|이전에 명시적인 Abort 호출로 개체가 닫힌 경우 <xref:System.ServiceModel.CommunicationObjectAbortedException?displayProperty=nameWithType>. 개체에서 Close를 호출하면 <xref:System.ObjectDisposedException?displayProperty=nameWithType>이 throw됩니다.|  
-|종결됨|아니요|<xref:System.ObjectDisposedException?displayProperty=nameWithType>|  
+|Closed|예|개체가 이전 및 명시적 Abort 호출에 의해 닫힌 경우를 <xref:System.ServiceModel.CommunicationObjectAbortedException?displayProperty=nameWithType> 합니다. 개체에서 Close를 호출하면 <xref:System.ObjectDisposedException?displayProperty=nameWithType>이 throw됩니다.|  
+|Closed|아니요|<xref:System.ObjectDisposedException?displayProperty=nameWithType>|  
 |Faulted|해당 사항 없음|<xref:System.ServiceModel.CommunicationObjectFaultedException?displayProperty=nameWithType>|  
   
 ### <a name="timeouts"></a>시간 초과  
  지금까지 설명한 메서드 중 일부는 시간 제한 매개 변수를 사용합니다. Close, Open(일부 오버로드 및 비동기 버전), OnClose 및 OnOpen이 여기에 해당됩니다. 이러한 메서드는 연결을 정상적으로 닫는 동안 입력/출력을 차단하는 등의 오래 걸리는 작업이 가능하도록 디자인되었기 때문에 시간 제한 매개 변수는 인터럽트되기 전에 이러한 작업에 사용할 수 있는 시간을 나타냅니다. 이러한 메서드의 구현에서는 제공된 시간 제한 값을 사용하여 제한 시간 내에 호출자에게 반환되게 해야 합니다. 시간 제한을 사용하지 않는 다른 메서드의 구현은 오래 걸리는 작업을 위해 디자인되어 있지 않으며 입력/출력을 차단하지 않아야 합니다.  
   
- 시간 제한을 사용하지 않는 Open() 및 Close() 오버로드는 예외입니다. 파생된 클래스가 제공한 기본 시간 제한 값을 사용합니다. <xref:System.ServiceModel.Channels.CommunicationObject>는 다음과 같이 정의된 <xref:System.ServiceModel.Channels.CommunicationObject.DefaultCloseTimeout%2A>과 <xref:System.ServiceModel.Channels.CommunicationObject.DefaultOpenTimeout%2A>이라는 두 가지 보호된 추상 속성을 노출합니다.  
+ 시간 제한을 사용하지 않는 Open() 및 Close() 오버로드는 예외입니다. 파생된 클래스가 제공한 기본 시간 제한 값을 사용합니다. <xref:System.ServiceModel.Channels.CommunicationObject>는 <xref:System.ServiceModel.Channels.CommunicationObject.DefaultCloseTimeout%2A> 라는 두 개의 보호 된 추상 속성을 노출 하 고 <xref:System.ServiceModel.Channels.CommunicationObject.DefaultOpenTimeout%2A> 다음과 같이 정의 합니다.  
   
  `protected abstract TimeSpan DefaultCloseTimeout { get; }`  
   

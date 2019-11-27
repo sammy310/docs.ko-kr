@@ -56,30 +56,30 @@ typedef enum CorMethodImpl {
   
 |멤버|설명|  
 |------------|-----------------|  
-|`miCodeTypeMask`|Flags that describe code type.|  
-|`miIL`|Specifies that the method implementation is Microsoft intermediate language (MSIL).|  
+|`miCodeTypeMask`|코드 형식을 설명 하는 플래그입니다.|  
+|`miIL`|메서드 구현이 MSIL (Microsoft 중간 언어) 임을 지정 합니다.|  
 |`miNative`|메서드 구현이 네이티브임을 지정합니다.|  
-|`miOPTIL`|Specifies that the method implementation is OPTIL.|  
-|`miRuntime`|Specifies that the method implementation is provided by the common language runtime.|  
-|`miManagedMask`|Flags that indicate whether the code is managed or unmanaged.|  
-|`miUnmanaged`|Specifies that the method implementation is unmanaged.|  
-|`miManaged`|Specifies that the method implementation is managed.|  
-|`miForwardRef`|Specifies that the method is defined. This flag is used primarily in merge scenarios.|  
-|`miPreserveSig`|Specifies that the method signature cannot be mangled for an HRESULT conversion.|  
-|`miInternalCall`|Reserved for internal use by the common language runtime.|  
-|`miSynchronized`|Specifies that the method is single-threaded through its body.|  
+|`miOPTIL`|메서드 구현을 OPTIL 지정 합니다.|  
+|`miRuntime`|공용 언어 런타임에서 메서드 구현을 제공 하도록 지정 합니다.|  
+|`miManagedMask`|코드의 관리 또는 관리 되지 않는지 여부를 나타내는 플래그입니다.|  
+|`miUnmanaged`|메서드 구현이 관리 되지 않는 것으로 지정 합니다.|  
+|`miManaged`|메서드 구현을 관리 하도록 지정 합니다.|  
+|`miForwardRef`|메서드가 정의 되도록 지정 합니다. 이 플래그는 주로 병합 시나리오에서 사용 됩니다.|  
+|`miPreserveSig`|HRESULT 변환에 대해 메서드 시그니처가 손상 되지 않도록 지정 합니다.|  
+|`miInternalCall`|공용 언어 런타임에서 내부용으로 사용 하도록 예약 되어 있습니다.|  
+|`miSynchronized`|메서드가 본문을 통해 단일 스레드 임을 지정 합니다.|  
 |`miNoInlining`|메서드를 인라인될 수 없도록 지정합니다.|  
-|`miAggressiveInlining`|Specifies that the method should be inlined if possible.|  
-|`miNoOptimization`|Specifies that the method should not be optimized.|  
-|`miMaxMethodImplVal`|The maximum valid value for a `CorMethodImpl`.|  
+|`miAggressiveInlining`|가능한 경우 메서드를 인라인 하도록 지정 합니다.|  
+|`miNoOptimization`|메서드를 최적화 하지 않도록 지정 합니다.|  
+|`miMaxMethodImplVal`|`CorMethodImpl`에 대 한 최대 유효 값입니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** CorHdr.h  
+ **헤더:** CorHdr .h  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [메타데이터 열거형](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

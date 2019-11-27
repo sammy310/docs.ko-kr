@@ -39,37 +39,37 @@ HRESULT EnumMemberRefs (
   
 ## <a name="parameters"></a>매개 변수  
  `phEnum`  
- [in, out] A pointer to the enumerator.  
+ [in, out] 열거자에 대 한 포인터입니다.  
   
  `tkParent`  
- [in] A TypeDef, TypeRef, MethodDef, or ModuleRef token for the type whose members are to be enumerated.  
+ 진행 멤버가 열거 될 형식에 대 한 TypeDef, TypeRef, MethodDef 또는 ModuleRef 토큰입니다.  
   
  `rMemberRefs`  
- [out] The array used to store MemberRef tokens.  
+ 제한이 MemberRef 토큰을 저장 하는 데 사용 되는 배열입니다.  
   
  `cMax`  
  [in] `rMemberRefs` 배열의 최대 크기입니다.  
   
  `pcTokens`  
- [out] The actual number of MemberRef tokens returned in `rMemberRefs`.  
+ 제한이 `rMemberRefs`에서 반환 된 실제 MemberRef 토큰 수입니다.  
   
 ## <a name="return-value"></a>반환 값  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMemberRefs` returned successfully.|  
-|`S_FALSE`|There are no MemberRef tokens to enumerate. In that case, `pcTokens` is to zero.|  
+|`S_OK`|`EnumMemberRefs` 성공적으로 반환 되었습니다.|  
+|`S_FALSE`|열거할 MemberRef 토큰이 없습니다. 이 경우 `pcTokens`은 0이 됩니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [IMetaDataImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448116"
 ---
 # <a name="icorprofilerinfogetclassfromtoken-method"></a>ICorProfilerInfo::GetClassFromToken 메서드
-Gets the ID of the class, given the metadata token. This method is obsolete in the .NET Framework version 2.0. Use [ICorProfilerInfo2::GetClassFromTokenAndTypeArgs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassfromtokenandtypeargs-method.md) instead.  
+메타 데이터 토큰이 지정 된 경우 클래스의 ID를 가져옵니다. 이 메서드는 .NET Framework 버전 2.0에서 사용 되지 않습니다. 대신 [ICorProfilerInfo2:: GetClassFromTokenAndTypeArgs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassfromtokenandtypeargs-method.md) 를 사용 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,16 +36,16 @@ HRESULT GetClassFromToken(
   
 ## <a name="parameters"></a>매개 변수  
  `moduleID`  
- [in] The ID of the module that contains the class.  
+ 진행 클래스가 포함 된 모듈의 ID입니다.  
   
  `typeDef`  
- [in] An `mdTypeDef` metadata token that references the class.  
+ 진행 클래스를 참조 하는 `mdTypeDef` 메타 데이터 토큰입니다.  
   
  `cTypeArgs`  
- [out] A pointer to the class ID.  
+ 제한이 클래스 ID에 대 한 포인터입니다.  
   
-## <a name="remarks"></a>주의  
- This method is obsolete; instead, use `ICorProfilerInfo2::GetClassFromTokenAndTypeArgs` for all types.  
+## <a name="remarks"></a>설명  
+ 이 메서드는 사용 되지 않습니다. 대신 모든 형식에 대해 `ICorProfilerInfo2::GetClassFromTokenAndTypeArgs`를 사용 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
@@ -54,8 +54,8 @@ HRESULT GetClassFromToken(
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework Versions:** 1.0, 1.1  
+ **.NET Framework 버전:** 1.0, 1.1  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [ICorProfilerInfo 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

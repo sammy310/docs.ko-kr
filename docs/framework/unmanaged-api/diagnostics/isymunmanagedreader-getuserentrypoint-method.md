@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444514"
 ---
 # <a name="isymunmanagedreadergetuserentrypoint-method"></a>ISymUnmanagedReader::GetUserEntryPoint 메서드
-Returns the method that was specified as the user entry point for the module, if any. For example, this method could be the user's main method rather than compiler-generated stubs before the main method.  
+모듈에 대 한 사용자 진입점으로 지정 된 메서드를 반환 합니다 (있는 경우). 예를 들어이 메서드는 main 메서드 이전의 컴파일러 생성 스텁이 아닌 사용자의 main 메서드 일 수 있습니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -34,14 +34,14 @@ HRESULT GetUserEntryPoint (
   
 ## <a name="parameters"></a>매개 변수  
  `pToken`  
- [out] A pointer to a variable that receives the entry point.  
+ 제한이 진입점을 받는 변수에 대 한 포인터입니다.  
   
 ## <a name="return-value"></a>반환 값  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **Header:** CorSym.idl, CorSym.h  
+ **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ISymUnmanagedReader 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444162"
 ---
 # <a name="ceesectionreloctype-enumeration"></a>CeeSectionRelocType 열거형
-Provides values to influence the type of `reloc` instruction emitted in a call to [ICeeGen::AddSectionReloc](../../../../docs/framework/unmanaged-api/metadata/iceegen-addsectionreloc-method.md).  
+[ICeeGen:: AddSectionReloc](../../../../docs/framework/unmanaged-api/metadata/iceegen-addsectionreloc-method.md)에 대 한 호출에서 내보낸 `reloc` 명령의 형식에 영향을 주는 값을 제공 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -52,32 +52,32 @@ typedef enum  {
   
 |멤버|설명|  
 |------------|-----------------|  
-|`srRelocAbsolute`|Generates only a section-relative `reloc`, sending nothing into a .reloc section.|  
-|`srRelocHighLow`|Generates a `reloc` for a pointer-sized location. This is transformed into BASED_HIGHLOW or BASED_DIR64 depending on the platform.|  
-|`srRelocHighAdj`|Generates a `reloc` for the top 16 bits of a 32-bit number, where the bottom 16 bits are included in the next word in the .reloc table.|  
-|`srRelocMapToken`|Generates a token map relocation, sending nothing into a .reloc section.|  
-|`srRelocRelative`|Indicates that the value is a relative address fixup.|  
-|`srRelocFilePos`|Generates only a section-relative `reloc`, sending nothing into a .reloc section. This `reloc` is relative to the file position of the section, not the section's virtual address.|  
-|`srRelocCodeRelative`|Specifies a code-relative address fixup.|  
-|`srRelocIA64Imm64`|Generates a `reloc` for a 64 bit address in an ia64 `movl` instruction.|  
-|`srRelocDir64`|Generates a `reloc` for a 64-bit address.|  
-|`srRelocIA64PcRel25`|Generate a `reloc` for a 25-bit PC-relative address in an ia64 `br.call` instruction.|  
-|`srRelocIA64PcRel64`|Generates a `reloc` for a 64-bit PC-relative address in an ia64 `brl.call` instruction.|  
-|`srRelocAbsoluteTagged`|Generates a 30-bit section-relative `reloc`, used for tagged pointer values.|  
-|`srRelocSentinel`|A sentinel value to help ensure any additions to this enum are reflected to the internal `reloc` name array.|  
-|`srNoBaseReloc`|Specifies not to emit a base `reloc`.|  
-|`srRelocPtr`|A value indicating that the pre-fixup contents of memory are a pointer rather than a section offset.|  
+|`srRelocAbsolute`|.Reloc 섹션에 아무 것도 보내지 않는 섹션 별 `reloc`를 생성 합니다.|  
+|`srRelocHighLow`|포인터 크기의 위치에 대 한 `reloc`를 생성 합니다. 이는 플랫폼에 따라 BASED_HIGHLOW 또는 BASED_DIR64으로 변환 됩니다.|  
+|`srRelocHighAdj`|32 비트 숫자의 상위 16 비트에 대 한 `reloc`를 생성 합니다. 여기서 하위 16 비트는 .reloc 테이블의 다음 단어에 포함 됩니다.|  
+|`srRelocMapToken`|.Reloc 섹션에 아무 것도 보내지 않고 토큰 맵 재배치를 생성 합니다.|  
+|`srRelocRelative`|값이 상대 주소 픽스업 임을 나타냅니다.|  
+|`srRelocFilePos`|.Reloc 섹션에 아무 것도 보내지 않는 섹션 별 `reloc`를 생성 합니다. 이 `reloc` 섹션의 가상 주소가 아니라 섹션의 파일 위치를 기준으로 합니다.|  
+|`srRelocCodeRelative`|코드 상대 주소 픽스업을 지정 합니다.|  
+|`srRelocIA64Imm64`|Ia64 `movl` 명령에서 64 비트 주소에 대 한 `reloc`를 생성 합니다.|  
+|`srRelocDir64`|64 비트 주소에 대 한 `reloc`를 생성 합니다.|  
+|`srRelocIA64PcRel25`|Ia64 `br.call` 명령에서 25 비트 PC 상대 주소에 대 한 `reloc`를 생성 합니다.|  
+|`srRelocIA64PcRel64`|Ia64 `brl.call` 명령에서 64 비트 PC 관련 주소에 대 한 `reloc`를 생성 합니다.|  
+|`srRelocAbsoluteTagged`|태그가 지정 된 포인터 값에 사용 되는 30 비트 섹션 상대 `reloc`를 생성 합니다.|  
+|`srRelocSentinel`|이 열거형에 대 한 추가 항목이 내부 `reloc` 이름 배열에 반영 되도록 하는 센티널 값입니다.|  
+|`srNoBaseReloc`|기본 `reloc`를 내보내지 않도록 지정 합니다.|  
+|`srRelocPtr`|메모리의 미리 픽스업 콘텐츠가 섹션 오프셋이 아닌 포인터 임을 나타내는 값입니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [메타데이터 열거형](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
 - [ICeeGen 인터페이스](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
