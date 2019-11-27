@@ -17,19 +17,19 @@ ms.locfileid: "74346825"
 ---
 # <a name="how-to-speed-up-access-to-an-object-with-a-long-qualification-path-visual-basic"></a>방법: 정규화 경로가 긴 개체에 대한 액세스 속도 개선(Visual Basic)
 
-If you frequently access an object that requires a qualification path of several methods and properties, you can speed up your code by not repeating the qualification path.
+여러 메서드 및 속성의 정규화 경로를 필요로 하는 개체에 자주 액세스 하는 경우 한정 경로를 반복 하지 않고 코드 속도를 높일 수 있습니다.
 
-There are two ways you can avoid repeating the qualification path. You can assign the object to a variable, or you can use it in a `With`...`End With` block.
+두 가지 방법으로 한정 경로를 반복 하지 않을 수 있습니다. 개체를 변수에 할당 하거나 `With`...`End With` 블록에서 사용할 수 있습니다.
 
-### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-assigning-it-to-a-variable"></a>To speed up access to a heavily qualified object by assigning it to a variable
+### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-assigning-it-to-a-variable"></a>변수에 할당 하 여 높은 정규화 된 개체에 대 한 액세스 속도를 높이려면
 
-1. Declare a variable of the type of the object that you are accessing frequently. Specify the qualification path in the initialization part of the declaration.
+1. 자주 액세스 하는 개체의 형식에 대 한 변수를 선언 합니다. 선언의 초기화 부분에서 한정 경로를 지정 합니다.
 
     ```vb
     Dim ctrlActv As Control = someForm.ActiveForm.ActiveControl
     ```
 
-2. Use the variable to access the object's members.
+2. 변수를 사용 하 여 개체의 멤버에 액세스 합니다.
 
     ```vb
     ctrlActv.Text = "Test"
@@ -37,15 +37,15 @@ There are two ways you can avoid repeating the qualification path. You can assig
     ctrlActv.Show()
     ```
 
-### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-using-a-withend-with-block"></a>To speed up access to a heavily qualified object by using a With...End With block
+### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-using-a-withend-with-block"></a>을 사용 하 여 높은 정규화 된 개체에 대 한 액세스 속도를 높이려면 ... 블록으로 끝
 
-1. Put the qualification path in a `With` statement.
+1. `With` 문에 한정 경로를 넣습니다.
 
     ```vb
     With someForm.ActiveForm.ActiveControl
     ```
 
-2. Access the object's members inside the `With` block, before the `End With` statement.
+2. `End With` 문 앞에 `With` 블록 내에서 개체의 멤버에 액세스 합니다.
 
     ```vb
         .Text = "Test"
@@ -54,7 +54,7 @@ There are two ways you can avoid repeating the qualification path. You can assig
     End With
     ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [개체 변수](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [With...End With 문](../../../../visual-basic/language-reference/statements/with-end-with-statement.md)

@@ -12,23 +12,23 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346177"
 ---
 # <a name="xml-literals-and-the-xml-10-specification-visual-basic"></a>XML 리터럴 및 XML 1.0 사양(Visual Basic)
-The XML literal syntax in Visual Basic supports most of the Extensible Markup Language (XML) 1.0 specification. For details about the XML 1.0 specification, see [Extensible Markup Language (XML) 1.0](https://www.w3.org/TR/xml) on the W3C Web site.  
+Visual Basic의 XML 리터럴 구문은 대부분의 XML(Extensible Markup Language) (XML) 1.0 사양을 지원 합니다. XML 1.0 사양에 대 한 자세한 내용은 W3C 웹 사이트의 [XML(Extensible Markup Language) (xml) 1.0](https://www.w3.org/TR/xml) 을 참조 하십시오.  
   
-## <a name="what-visual-basic-does-not-support"></a>What Visual Basic Does Not Support  
+## <a name="what-visual-basic-does-not-support"></a>지원 하지 않는 Visual Basic  
   
-- An XML literal cannot contain a document type definition (DTD).  
+- XML 리터럴에는 DTD (문서 종류 정의)를 포함할 수 없습니다.  
   
-- An XML document literal must start with an XML document declaration.  
+- XML 문서 리터럴은 XML 문서 선언으로 시작 해야 합니다.  
   
-- An XML literal cannot contain more than 65,535 characters on one line.  
+- XML 리터럴은 한 줄에 65535 자를 초과할 수 없습니다.  
   
-- XML namespace prefixes, element names, and attribute names cannot contain more than 1,024 characters.  
+- XML 네임 스페이스 접두사, 요소 이름 및 특성 이름은 1024 자를 초과할 수 없습니다.  
   
-## <a name="extra-features-that-visual-basic-supports"></a>Extra Features That Visual Basic Supports  
+## <a name="extra-features-that-visual-basic-supports"></a>Visual Basic 지원 되는 추가 기능  
   
-- The embedded expression syntax allowed in document and element literals is not valid XML.  
+- 문서 및 요소 리터럴에 사용할 수 있는 포함 된 식 구문은 잘못 된 XML입니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Visual Basic에서 XML 만들기](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
 - [XML 문서 리터럴](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)

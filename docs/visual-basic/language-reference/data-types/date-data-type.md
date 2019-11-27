@@ -36,9 +36,9 @@ ms.locfileid: "74344023"
 
 ## <a name="format-requirements"></a>형식 요구 사항
 
-숫자 기호(`# #`) 내의 `Date` 리터럴을 묶어야 합니다. M/d/yyyy(예: `#5/31/1993#`) 또는 yyyy-MM-dd(예: `#1993-5-31#`) 형식으로 날짜 값을 지정해야 합니다. 연도를 먼저 지정하는 경우 슬래시를 사용할 수 있습니다.  이 요구 사항은 사용자 로캘과 컴퓨터의 날짜 및 시간 형식 설정에 독립적입니다.
+숫자 기호(`Date`) 내의 `# #` 리터럴을 묶어야 합니다. M/d/yyyy(예: `#5/31/1993#`) 또는 yyyy-MM-dd(예: `#1993-5-31#`) 형식으로 날짜 값을 지정해야 합니다. 연도를 먼저 지정하는 경우 슬래시를 사용할 수 있습니다.  이 요구 사항은 사용자 로캘과 컴퓨터의 날짜 및 시간 형식 설정에 독립적입니다.
 
-이러한 제한 이유는 애플리케이션을 실행하는 로캘에 따라 코드의 의미가 변경되면 안 되기 때문입니다. `#3/4/1998#`의 `Date` 리터럴을 하드 코딩하고 1998년 3월 4로 지정한다고 가정해 보세요. mm/dd/yyyy를 사용하는 로캘에서는 3/4/1998이 의도한 대로 컴파일됩니다. But suppose you deploy your application in many countries/regions. dd/mm/yyyy를 사용하는 로캘에서는 하드 코딩된 리터럴이 1998년 4월 3일로 컴파일됩니다. yyyy/mm/dd를 사용하는 로캘에서는 리터럴이 잘못 지정되며(0003년 4월 1998일) 컴파일러 오류가 발생합니다.
+이러한 제한 이유는 애플리케이션을 실행하는 로캘에 따라 코드의 의미가 변경되면 안 되기 때문입니다. `Date`의 `#3/4/1998#` 리터럴을 하드 코딩하고 1998년 3월 4로 지정한다고 가정해 보세요. mm/dd/yyyy를 사용하는 로캘에서는 3/4/1998이 의도한 대로 컴파일됩니다. 그러나 여러 국가/지역에 응용 프로그램을 배포 한다고 가정 합니다. dd/mm/yyyy를 사용하는 로캘에서는 하드 코딩된 리터럴이 1998년 4월 3일로 컴파일됩니다. yyyy/mm/dd를 사용하는 로캘에서는 리터럴이 잘못 지정되며(0003년 4월 1998일) 컴파일러 오류가 발생합니다.
 
 ## <a name="workarounds"></a>해결 방법
 
@@ -68,26 +68,26 @@ Dim dateInMay As New System.DateTime(1993, 5, 31, 12, 14, 0)
 
 ## <a name="programming-tips"></a>프로그래밍 팁
 
-- **Interop Considerations.** 자동화 개체나 COM 개체와 같이 .NET Framework용으로 작성되지 않은 구성 요소를 조작하는 경우 다른 환경의 날짜/시간 형식이 Visual Basic `Date` 형식과 호환되지 않는 것에 유의하세요. 이러한 구성 요소에 날짜/시간 인수를 전달하는 경우 새로운 Visual Basic 코드에서 이 인수를 `Date` 대신 `Double`로 선언하고 변환 메서드 <xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType> 및 <xref:System.DateTime.ToOADate%2A?displayProperty=nameWithType>를 사용합니다.
+- **Interop 고려 사항** 자동화 개체나 COM 개체와 같이 .NET Framework용으로 작성되지 않은 구성 요소를 조작하는 경우 다른 환경의 날짜/시간 형식이 Visual Basic `Date` 형식과 호환되지 않는 것에 유의하세요. 이러한 구성 요소에 날짜/시간 인수를 전달하는 경우 새로운 Visual Basic 코드에서 이 인수를 `Double` 대신 `Date`로 선언하고 변환 메서드 <xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType> 및 <xref:System.DateTime.ToOADate%2A?displayProperty=nameWithType>를 사용합니다.
 
-- **Type Characters.** `Date` has no literal type character or identifier type character. 그러나 컴파일러가 숫자 기호(`# #`)로 묶인 리터럴을 `Date`로 처리합니다.
+- **문자를 입력 합니다.** `Date`에는 리터럴 형식 문자 또는 식별자 형식 문자가 없습니다. 그러나 컴파일러가 숫자 기호(`# #`)로 묶인 리터럴을 `Date`로 처리합니다.
 
-- **Framework Type.** .NET Framework에서 해당하는 형식은 <xref:System.DateTime?displayProperty=nameWithType> 구조체입니다.
+- **프레임 워크 형식입니다.** .NET Framework에서 해당하는 형식은 <xref:System.DateTime?displayProperty=nameWithType> 구조체입니다.
 
 ## <a name="example"></a>예제
 
-`Date` 데이터 형식의 변수 또는 상수는 날짜와 시간을 모두 보유합니다. 다음은 이에 대한 예입니다.
+`Date` 데이터 형식의 변수 또는 상수는 날짜와 시간을 모두 보유합니다. 다음 예제에서는 이것을 보여 줍니다.
 
 ```vb
 Dim someDateAndTime As Date = #8/13/2002 12:14 PM#
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.DateTime?displayProperty=nameWithType>
 - [데이터 형식](../../../visual-basic/language-reference/data-types/index.md)
-- [표준 날짜 및 시간 형식 문자열](../../../standard/base-types/standard-date-and-time-format-strings.md)
-- [사용자 지정 날짜 및 시간 형식 문자열](../../../standard/base-types/custom-date-and-time-format-strings.md)
-- [형식 변환 함수](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Standard Date and Time Format Strings](../../../standard/base-types/standard-date-and-time-format-strings.md)
+- [Custom Date and Time Format Strings](../../../standard/base-types/custom-date-and-time-format-strings.md)
+- [CString](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
 - [변환 요약](../../../visual-basic/language-reference/keywords/conversion-summary.md)
 - [데이터 형식의 효율적 사용](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

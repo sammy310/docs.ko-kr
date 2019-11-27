@@ -10,17 +10,17 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350222"
 ---
 # <a name="a-e-statements"></a>A-E 문
-The following table contains a listing of Visual Basic language statements.  
+다음 표에서는 Visual Basic 언어 문의 목록을 포함 합니다.  
   
 |||||  
 |---|---|---|---|  
 |[AddHandler](addhandler-statement.md)|[Call](call-statement.md)|[클래스](class-statement.md)|[Const](const-statement.md)|  
 |[Continue](continue-statement.md)|[Declare](declare-statement.md)|[Delegate](delegate-statement.md)|[Dim](dim-statement.md)|  
-|[Do...Loop](do-loop-statement.md)|[Else](else-statement.md)|[End](end-statement.md)|[End \<키워드>](end-keyword-statement.md)|  
+|[Do ... 실행](do-loop-statement.md)|[Else](else-statement.md)|[End](end-statement.md)|[End \<키워드>](end-keyword-statement.md)|  
 |[Enum](enum-statement.md)|[Erase](erase-statement.md)|[오류](error-statement.md)|[Event](event-statement.md)|  
 |[끝내기](exit-statement.md)||||  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [F-P 문](f-p-statements.md)
 - [Q-Z 문](q-z-statements.md)

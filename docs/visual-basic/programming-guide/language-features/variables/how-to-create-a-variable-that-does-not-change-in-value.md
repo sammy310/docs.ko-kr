@@ -14,37 +14,37 @@ ms.locfileid: "74348638"
 ---
 # <a name="how-to-create-a-variable-that-does-not-change-in-value-visual-basic"></a>방법: 값이 변경되지 않는 변수 만들기(Visual Basic)
 
-The notion of a variable that does not change its value might appear to be contradictory. But there are situations when a constant is not feasible and it is useful to have a variable with a fixed value. In such a case you can define a member variable with the [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md) keyword.
+해당 값을 변경 하지 않는 변수의 개념은 모순 되는 것 처럼 보일 수 있습니다. 그러나 상수가 적절 하지 않으며 고정 값이 있는 변수를 사용 하는 것이 유용한 경우가 있습니다. 이 경우 [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md) 키워드를 사용 하 여 멤버 변수를 정의할 수 있습니다.
 
-You cannot use the [Const Statement](../../../../visual-basic/language-reference/statements/const-statement.md) to declare and assign a constant value in the following circumstances:
+다음과 같은 경우에는 [Const 문을](../../../../visual-basic/language-reference/statements/const-statement.md) 사용 하 여 상수 값을 선언 하 고 할당할 수 없습니다.
 
-- The `Const` statement does not accept the data type you want to use
+- `Const` 문은 사용 하려는 데이터 형식을 허용 하지 않습니다.
 
-- You do not know the value at compile time
+- 컴파일 시간에 값을 알 수 없습니다.
 
-- You are unable to compute the constant value at compile time
+- 컴파일 시간에 상수 값을 계산할 수 없습니다.
 
-### <a name="to-create-a-variable-that-does-not-change-in-value"></a>To create a variable that does not change in value
+### <a name="to-create-a-variable-that-does-not-change-in-value"></a>값이 변경 되지 않는 변수를 만들려면
 
-1. At module level, declare a member variable with the [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md), and include the [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md) keyword.
+1. 모듈 수준에서 [Dim 문을](../../../../visual-basic/language-reference/statements/dim-statement.md)사용 하 여 멤버 변수를 선언 하 고 [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md) 키워드를 포함 합니다.
 
     ```vb
     Dim ReadOnly timeStarted
     ```
 
-    You can specify `ReadOnly` only on a member variable. This means you must define the variable at module level, outside of any procedure.
+    멤버 변수에만 `ReadOnly` 지정할 수 있습니다. 즉, 프로시저 외부의 모듈 수준에서 변수를 정의 해야 합니다.
 
-2. If you can compute the value in a single statement at compile time, use an initialization clause in the `Dim` statement. Follow the [As](../../../../visual-basic/language-reference/statements/as-clause.md) clause with an equal sign (`=`), followed by an expression. Be sure the compiler can evaluate this expression to a constant value.
+2. 컴파일 시간에 단일 문에서 값을 계산할 수 있는 경우 `Dim` 문에서 초기화 절을 사용 합니다. [As](../../../../visual-basic/language-reference/statements/as-clause.md) 절 뒤에 등호 (`=`)를 추가 하 고 그 뒤에 식을 추가 합니다. 컴파일러가이 식을 상수 값으로 계산할 수 있어야 합니다.
 
     ```vb
     Dim ReadOnly timeStarted As Date = Now
     ```
 
-    You can assign a value to a `ReadOnly` variable only once. Once you do so, no code can ever change its value.
+    `ReadOnly` 변수에 값을 한 번만 할당할 수 있습니다. 이렇게 하면 코드에서 해당 값을 변경할 수 없습니다.
 
-    If you do not know the value at compile time, or cannot compute it at compile time in a single statement, you can still assign it at run time in a constructor. To do this, you must declare the `ReadOnly` variable at class or structure level. In the constructor for that class or structure, compute the variable's fixed value, and assign it to the variable before returning from the constructor.
+    컴파일 시간에 값을 알 수 없거나 컴파일 타임에 단일 문에서이 값을 계산할 수 없는 경우 생성자에서 런타임에 해당 값을 할당할 수 있습니다. 이렇게 하려면 클래스 또는 구조체 수준에서 `ReadOnly` 변수를 선언 해야 합니다. 해당 클래스 또는 구조체에 대 한 생성자에서 변수의 고정 값을 계산 하 고 생성자에서 반환 하기 전에 변수에 할당 합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [WriteOnly](../../../../visual-basic/language-reference/modifiers/writeonly.md)
 - [Const 문](../../../../visual-basic/language-reference/statements/const-statement.md)

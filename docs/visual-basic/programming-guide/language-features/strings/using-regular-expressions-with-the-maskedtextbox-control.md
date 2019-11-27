@@ -13,49 +13,49 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346257"
 ---
 # <a name="using-regular-expressions-with-the-maskedtextbox-control-in-visual-basic"></a>Visual Basic에서 MaskedTextBox 컨트롤과 함께 정규식 사용
-This example demonstrates how to convert simple regular expressions to work with the <xref:System.Windows.Forms.MaskedTextBox> control.  
+이 예제에서는 간단한 정규식을 <xref:System.Windows.Forms.MaskedTextBox> 컨트롤을 사용 하도록 변환 하는 방법을 보여 줍니다.  
   
-## <a name="description-of-the-masking-language"></a>Description of the Masking Language  
- The standard <xref:System.Windows.Forms.MaskedTextBox> masking language is based on the one used by the `Masked Edit` control in Visual Basic 6.0 and should be familiar to users migrating from that platform.  
+## <a name="description-of-the-masking-language"></a>마스킹 언어 설명  
+ 표준 <xref:System.Windows.Forms.MaskedTextBox> 마스킹 언어는 Visual Basic 6.0의 `Masked Edit` 컨트롤에서 사용 하는 언어를 기반으로 하며 해당 플랫폼에서 마이그레이션하는 사용자에 게 익숙할 것입니다.  
   
- The <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> property of the <xref:System.Windows.Forms.MaskedTextBox> control specifies what input mask to use. The mask must be a string composed of one or more of the masking elements from the following table.  
+ <xref:System.Windows.Forms.MaskedTextBox> 컨트롤의 <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> 속성은 사용할 입력 마스크를 지정 합니다. 마스크는 다음 표의 마스킹 요소 중 하나 이상으로 구성 된 문자열 이어야 합니다.  
   
-|Masking element|설명|Regular expression element|  
+|요소를 마스킹|설명|Regular expression 요소|  
 |---------------------|-----------------|--------------------------------|  
-|0|Any single digit between 0 and 9. Entry required.|\d|  
-|10|Digit or space. Entry optional.|[ \d]?|  
-|#|Digit or space. Entry optional. If this position is left blank in the mask, it will be rendered as a space. Plus (+) and minus (-) signs are allowed.|[ \d+-]?|  
-|L|ASCII letter. Entry required.|[a-zA-Z]|  
-|?|ASCII letter. Entry optional.|[a-zA-Z]?|  
-|&|문자. Entry required.|[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]|  
-|C|문자. Entry optional.|[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]?|  
-|A|Alphanumeric. Entry optional.|\W|  
-|이어야 합니다.|Culture-appropriate decimal placeholder.|사용할 수 없습니다.|  
-|와 달리|Culture-appropriate thousands placeholder.|사용할 수 없습니다.|  
-|:|Culture-appropriate time separator.|사용할 수 없습니다.|  
-|/|Culture-appropriate date separator.|사용할 수 없습니다.|  
-|$|Culture-appropriate currency symbol.|사용할 수 없습니다.|  
-|\<|Converts all characters that follow to lowercase.|사용할 수 없습니다.|  
-|>|Converts all characters that follow to uppercase.|사용할 수 없습니다.|  
-|&#124;|Undoes a previous shift up or shift down.|사용할 수 없습니다.|  
-|&#92;|Escapes a mask character, turning it into a literal. "\\\\" is the escape sequence for a backslash.|&#92;|  
-|All other characters.|Literals. All non-mask elements will appear as themselves within <xref:System.Windows.Forms.MaskedTextBox>.|All other characters.|  
+|0|0에서 9 사이의 단일 숫자입니다. 항목이 필요 합니다.|\d|  
+|9|숫자 또는 공간. 항목을 선택 합니다.|[ \d]?|  
+|#|숫자 또는 공간. 항목을 선택 합니다. 마스크에서이 위치를 비워 두면 공백으로 렌더링 됩니다. 더하기 (+) 및 빼기 (-) 기호를 사용할 수 있습니다.|[ \d+-]?|  
+|L|ASCII 문자입니다. 항목이 필요 합니다.|[a-zA-Z]|  
+|?|ASCII 문자입니다. 항목을 선택 합니다.|[a-zA-Z]?|  
+|&|문자. 항목이 필요 합니다.|[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]|  
+|C|문자. 항목을 선택 합니다.|[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]?|  
+|A|영숫자만. 항목을 선택 합니다.|\W|  
+|.|문화권에 맞는 소수 자리 표시자입니다.|사용할 수 없습니다.|  
+|,|문화권에 따라 적절 한 천 단위 자리 표시자입니다.|사용할 수 없습니다.|  
+|:|문화권에 맞는 시간 구분 기호입니다.|사용할 수 없습니다.|  
+|/|문화권에 따라 적절 한 날짜 구분 기호입니다.|사용할 수 없습니다.|  
+|$|문화권에 맞는 통화 기호입니다.|사용할 수 없습니다.|  
+|\<|소문자로 뒤에 있는 모든 문자를 변환 합니다.|사용할 수 없습니다.|  
+|>|대문자로 뒤에 있는 모든 문자를 변환 합니다.|사용할 수 없습니다.|  
+|&#124;|이전 shift 키를 실행 취소 합니다.|사용할 수 없습니다.|  
+|&#92;|리터럴로 설정 마스크 문자를 이스케이프 합니다. "\\\\"는 백슬래시의 이스케이프 시퀀스입니다.|&#92;|  
+|기타 모든 문자입니다.|리터럴입니다. 모든 비 마스크 요소는 <xref:System.Windows.Forms.MaskedTextBox>내에 자체로 표시 됩니다.|기타 모든 문자입니다.|  
   
- 소수점 (.), 1/1000 (,), 시간 (:), (/), 날짜 및 통화 ($) 기호 기본 애플리케이션의 문화권에서 정의 된 대로 해당 기호를 표시 합니다. You can force them to display symbols for another culture by using the <xref:System.Windows.Forms.MaskedTextBox.FormatProvider%2A> property.  
+ 소수점 (.), 1/1000 (,), 시간 (:), (/), 날짜 및 통화 ($) 기호 기본 애플리케이션의 문화권에서 정의 된 대로 해당 기호를 표시 합니다. <xref:System.Windows.Forms.MaskedTextBox.FormatProvider%2A> 속성을 사용 하 여 다른 문화권의 기호를 표시 하도록 강제할 수 있습니다.  
   
-## <a name="regular-expressions-and-masks"></a>Regular Expressions and Masks  
- Although you can use regular expressions and masks to validate user input, they are not completely equivalent. Regular expressions can express more complex patterns than masks, but masks can express the same information more succinctly and in a culturally relevant format.  
+## <a name="regular-expressions-and-masks"></a>정규식 및 마스크  
+ 정규식과 마스크를 사용 하 여 사용자 입력의 유효성을 검사할 수 있지만 완전히 일치 하지는 않습니다. 정규식은 마스크 보다 더 복잡 한 패턴을 표현할 수 있지만 마스크는 간략하게 및 문화권 관련 형식으로 동일한 정보를 표현할 수 있습니다.  
   
- The following table compares four regular expressions and the equivalent mask for each.  
+ 다음 표에서는 정규식 4 개와 각 정규식에 해당 하는 마스크를 비교 합니다.  
   
-|정규식|마스크|노트|  
+|정규식|마스크|참고|  
 |------------------------|----------|-----------|  
-|`\d{2}/\d{2}/\d{4}`|`00/00/0000`|The `/` character in the mask is a logical date separator, and it will appear to the user as the date separator appropriate to the application's current culture.|  
-|`\d{2}-[A-Z][a-z]{2}-\d{4}`|`00->L<LL-0000`|A date (day, month abbreviation, and year) in United States format in which the three-letter month abbreviation is displayed with an initial uppercase letter followed by two lowercase letters.|  
-|`(\(\d{3}\)-)?\d{3}-d{4}`|`(999)-000-0000`|United States phone number, area code optional. If the user does not wish to enter the optional characters, she can either enter spaces or place the mouse pointer directly at the position in the mask represented by the first 0.|  
-|`$\d{6}.00`|`$999,999.00`|A currency value in the range of 0 to 999999. The currency, thousandth, and decimal characters will be replaced at run-time with their culture-specific equivalents.|  
+|`\d{2}/\d{2}/\d{4}`|`00/00/0000`|마스크의 `/` 문자는 논리적 날짜 구분 기호 이며, 사용자에 게 응용 프로그램의 현재 문화권에 적절 한 날짜 구분 기호로 표시 됩니다.|  
+|`\d{2}-[A-Z][a-z]{2}-\d{4}`|`00->L<LL-0000`|날짜 (일, 월의 약어 및 연도) 미국 형식 뒤에 두 문자는 소문자 초기 대문자를 사용 하 여 표시 되는 세 자리 월의 약어입니다.|  
+|`(\(\d{3}\)-)?\d{3}-d{4}`|`(999)-000-0000`|미국 전화 번호로 지역 번호는 선택 사항입니다. 사용자가 선택적 문자를 입력 하지 않으려는 경우 공백을 입력 하거나 처음 0으로 표시 되는 마스크의 위치에 직접 마우스 포인터를 놓을 수 있습니다.|  
+|`$\d{6}.00`|`$999,999.00`|0-999999 사이의 통화 값입니다. 통화, 1000, 10 진수 문자는 런타임에 해당 하는 문화권 관련 항목으로 바뀝니다.|  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.MaskedTextBox.Mask%2A>
 - <xref:System.Windows.Forms.MaskedTextBox>

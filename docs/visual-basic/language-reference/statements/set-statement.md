@@ -18,7 +18,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349561"
 ---
 # <a name="set-statement-visual-basic"></a>Set 문(Visual Basic)
-Declares a `Set` property procedure used to assign a value to a property.  
+속성에 값을 할당 하는 데 사용 되는 `Set` 속성 프로시저를 선언 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -30,64 +30,64 @@ End Set
   
 ## <a name="parts"></a>요소  
  `attributelist`  
- (선택 사항) See [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md).  
+ (선택 사항) [특성 목록](../../../visual-basic/language-reference/statements/attribute-list.md)을 참조 하십시오.  
   
  `accessmodifier`  
- Optional on at most one of the `Get` and `Set` statements in this property. 다음 중 하나일 수 있습니다.  
+ 이 속성의 `Get` 및 `Set` 문 중 최대 하나에 대해 선택적입니다. 다음 중 하나일 수 있습니다.  
   
-- [보호됨](../../../visual-basic/language-reference/modifiers/protected.md)  
+- [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
   
 - [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
   
-- [전용](../../../visual-basic/language-reference/modifiers/private.md)  
+- [Private](../../../visual-basic/language-reference/modifiers/private.md)  
   
 - `Protected Friend`  
   
  [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)을 참조하세요.  
   
  `value`  
- 필수 요소. Parameter containing the new value for the property.  
+ 필수입니다. 속성의 새 값을 포함 하는 매개 변수입니다.  
   
  `datatype`  
- Required if `Option Strict` is `On`. Data type of the `value` parameter. The data type specified must be the same as the data type of the property where this `Set` statement is declared.  
+ `Option Strict` `On`경우 필수입니다. `value` 매개 변수의 데이터 형식입니다. 지정 된 데이터 형식은이 `Set` 문이 선언 된 속성의 데이터 형식과 동일 해야 합니다.  
   
  `statements`  
- (선택 사항) One or more statements that run when the `Set` property procedure is called.  
+ (선택 사항) `Set` 속성 프로시저가 호출 될 때 실행 되는 하나 이상의 문입니다.  
   
  `End Set`  
- 필수 요소. Terminates the definition of the `Set` property procedure.  
+ 필수입니다. `Set` 속성 프로시저의 정의를 종료 합니다.  
   
 ## <a name="remarks"></a>주의  
- Every property must have a `Set` property procedure unless the property is marked `ReadOnly`. The `Set` procedure is used to set the value of the property.  
+ 속성이 `ReadOnly`로 표시 되지 않은 경우 모든 속성에는 `Set` 속성 프로시저가 있어야 합니다. `Set` 프로시저는 속성의 값을 설정 하는 데 사용 됩니다.  
   
- Visual Basic automatically calls a property's `Set` procedure when an assignment statement provides a value to be stored in the property.  
+ Visual Basic는 대입문이 속성에 저장 될 값을 제공 하는 경우 속성의 `Set` 프로시저를 자동으로 호출 합니다.  
   
- Visual Basic passes a parameter to the `Set` procedure during property assignments. If you do not supply a parameter for `Set`, the integrated development environment (IDE) uses an implicit parameter named `value`. The parameter holds the value to be assigned to the property. You typically store this value in a private local variable and return it whenever the `Get` procedure is called.  
+ Visual Basic는 속성을 할당 하는 동안 매개 변수를 `Set` 프로시저에 전달 합니다. `Set`에 대 한 매개 변수를 제공 하지 않으면 IDE (통합 개발 환경)에서 `value`라는 암시적 매개 변수를 사용 합니다. 매개 변수는 속성에 할당 되는 값을 포함 합니다. 일반적으로이 값을 개인 지역 변수에 저장 하 고 `Get` 프로시저가 호출 될 때마다 반환 합니다.  
   
- The body of the property declaration can contain only the property's `Get` and `Set` procedures between the [Property Statement](../../../visual-basic/language-reference/statements/property-statement.md) and the `End Property` statement. It cannot store anything other than those procedures. In particular, it cannot store the property's current value. You must store this value outside the property, because if you store it inside either of the property procedures, the other property procedure cannot access it. The usual approach is to store the value in a [Private](../../../visual-basic/language-reference/modifiers/private.md) variable declared at the same level as the property. You must define a `Set` procedure inside the property to which it applies.  
+ 속성 선언의 본문은 속성의 `Get` 및 [속성 문과](../../../visual-basic/language-reference/statements/property-statement.md) `End Property` 문 간의 `Set` 프로시저만 포함할 수 있습니다. 이러한 프로시저 이외의 항목은 저장할 수 없습니다. 특히 속성의 현재 값을 저장할 수 없습니다. 속성 프로시저 중 하나에 저장 하는 경우 다른 속성 프로시저에서 액세스할 수 없기 때문에이 값을 속성 외부에 저장 해야 합니다. 일반적인 방법은 속성과 같은 수준에서 선언 된 [전용](../../../visual-basic/language-reference/modifiers/private.md) 변수에 값을 저장 하는 것입니다. 속성이 적용 되는 속성 내에 `Set` 프로시저를 정의 해야 합니다.  
   
- The `Set` procedure defaults to the access level of its containing property unless you use `accessmodifier` in the `Set` statement.  
+ `Set` 프로시저는 `Set` 문에서 `accessmodifier`를 사용 하지 않는 경우 포함 하는 속성의 액세스 수준으로 설정 됩니다.  
   
 ## <a name="rules"></a>규칙  
   
-- **Mixed Access Levels.** If you are defining a read-write property, you can optionally specify a different access level for either the `Get` or the `Set` procedure, but not both. If you do this, the procedure access level must be more restrictive than the property's access level. For example, if the property is declared `Friend`, you can declare the `Set` procedure `Private`, but not `Public`.  
+- **혼합 액세스 수준.** 읽기/쓰기 속성을 정의 하는 경우 필요에 따라 `Get` 또는 `Set` 프로시저에 대해 다른 액세스 수준을 지정할 수 있습니다. 이 작업을 수행 하는 경우 프로시저 액세스 수준이 속성의 액세스 수준 보다 더 제한적 이어야 합니다. 예를 들어 속성을 `Friend`선언 하는 경우 `Set` 프로시저 `Private`선언할 수 있지만 `Public`는 선언할 수 없습니다.  
   
-     If you are defining a `WriteOnly` property, the `Set` procedure represents the entire property. You cannot declare a different access level for `Set`, because that would set two access levels for the property.  
+     `WriteOnly` 속성을 정의 하는 경우 `Set` 프로시저는 전체 속성을 나타냅니다. 속성에 대해 두 개의 액세스 수준을 설정 하므로 `Set`에 대해 다른 액세스 수준을 선언할 수 없습니다.  
   
 ## <a name="behavior"></a>동작  
   
-- **Returning from a Property Procedure.** When the `Set` procedure returns to the calling code, execution continues following the statement that provided the value to be stored.  
+- **속성 프로시저에서 반환** `Set` 프로시저가 호출 코드로 반환 되 면 저장 될 값을 제공한 문 다음에 실행이 계속 됩니다.  
   
-     `Set` property procedures can return using either the [Return Statement](../../../visual-basic/language-reference/statements/return-statement.md) or the [Exit Statement](../../../visual-basic/language-reference/statements/exit-statement.md).  
+     `Set` 속성 프로시저는 [Return 문](../../../visual-basic/language-reference/statements/return-statement.md) 또는 [Exit 문](../../../visual-basic/language-reference/statements/exit-statement.md)중 하나를 사용 하 여를 반환할 수 있습니다.  
   
-     The `Exit Property` and `Return` statements cause an immediate exit from a property procedure. Any number of `Exit Property` and `Return` statements can appear anywhere in the procedure, and you can mix `Exit Property` and `Return` statements.  
+     `Exit Property` 및 `Return` 문은 속성 프로시저에서 즉시 종료를 발생 시킵니다. 프로시저의 어디에 든 많은 `Exit Property` 및 `Return` 문이 표시 될 수 있으며 `Exit Property` 문과 `Return` 문을 혼합할 수 있습니다.  
   
 ## <a name="example"></a>예제  
- The following example uses the `Set` statement to set the value of a property.  
+ 다음 예에서는 `Set` 문을 사용 하 여 속성의 값을 설정 합니다.  
   
  [!code-vb[VbVbalrStatements#55](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#55)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Get 문](../../../visual-basic/language-reference/statements/get-statement.md)
 - [Property 문](../../../visual-basic/language-reference/statements/property-statement.md)

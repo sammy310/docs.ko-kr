@@ -15,7 +15,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348050"
 ---
 # <a name="interface-statement-visual-basic"></a>Interface 문(Visual Basic)
-Declares the name of an interface and introduces the definitions of the members that the interface comprises.  
+인터페이스 이름을 선언 하 고 인터페이스에서 구성 하는 멤버의 정의를 소개 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,82 +37,82 @@ End Interface
   
 |용어|정의|  
 |---|---|  
-|`attributelist`|(선택 사항) See [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md).|  
-|`accessmodifier`|(선택 사항) 다음 중 하나일 수 있습니다.<br /><br /> -   [Public](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Private](../../../visual-basic/language-reference/modifiers/private.md)<br />-  [Protected Friend](../../language-reference/modifiers/protected-friend.md)<br/>- [Private Protected](../../language-reference/modifiers/private-protected.md)<br /><br /> [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)을 참조하세요.|  
-|`Shadows`|(선택 사항) See [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|  
-|`name`|필수 요소. Name of this interface. [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)을 참조하세요.|  
-|`Of`|(선택 사항) Specifies that this is a generic interface.|  
-|`typelist`|Required if you use the [Of](../../../visual-basic/language-reference/statements/of-clause.md) keyword. List of type parameters for this interface. Optionally, each type parameter can be declared variant by using `In` and `Out` generic modifiers. See [Type List](../../../visual-basic/language-reference/statements/type-list.md).|  
-|`Inherits`|(선택 사항) Indicates that this interface inherits the attributes and members of another interface or interfaces. See [Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md).|  
-|`interfacenames`|Required if you use the `Inherits` statement. The names of the interfaces from which this interface derives.|  
-|`modifiers`|(선택 사항) Appropriate modifiers for the interface member being defined.|  
-|`Property`|(선택 사항) Defines a property that is a member of the interface.|  
-|`Function`|(선택 사항) Defines a `Function` procedure that is a member of the interface.|  
-|`Sub`|(선택 사항) Defines a `Sub` procedure that is a member of the interface.|  
-|`Event`|(선택 사항) Defines an event that is a member of the interface.|  
-|`Interface`|(선택 사항) Defines an interface that is a nested within this interface. The nested interface definition must terminate with an `End Interface` statement.|  
-|`Class`|(선택 사항) Defines a class that is a member of the interface. The member class definition must terminate with an `End Class` statement.|  
-|`Structure`|(선택 사항) Defines a structure that is a member of the interface. The member structure definition must terminate with an `End Structure` statement.|  
-|`membername`|Required for each property, procedure, event, interface, class, or structure defined as a member of the interface. 멤버의 이름입니다.|  
-|`End Interface`|Terminates the `Interface` definition.|  
+|`attributelist`|(선택 사항) [특성 목록](../../../visual-basic/language-reference/statements/attribute-list.md)을 참조 하십시오.|  
+|`accessmodifier`|(선택 사항) 다음 중 하나일 수 있습니다.<br /><br /> [공용](../../../visual-basic/language-reference/modifiers/public.md) -   <br />-   [보호](../../../visual-basic/language-reference/modifiers/protected.md) 됨<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [개인](../../../visual-basic/language-reference/modifiers/private.md)<br />-  [보호 된 Friend](../../language-reference/modifiers/protected-friend.md)<br/>- [개인 보호](../../language-reference/modifiers/private-protected.md) 됨<br /><br /> [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)을 참조하세요.|  
+|`Shadows`|(선택 사항) [그림자](../../../visual-basic/language-reference/modifiers/shadows.md)를 참조 하세요.|  
+|`name`|필수입니다. 이 인터페이스의 이름입니다. [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)을 참조하세요.|  
+|`Of`|(선택 사항) 제네릭 인터페이스 임을 지정 합니다.|  
+|`typelist`|[Of](../../../visual-basic/language-reference/statements/of-clause.md) 키워드를 사용 하는 경우 필수 사항입니다. 이 인터페이스의 형식 매개 변수 목록입니다. 필요에 따라 `In` 및 `Out` 제네릭 한정자를 사용 하 여 각 형식 매개 변수를 variant로 선언할 수 있습니다. [형식 목록](../../../visual-basic/language-reference/statements/type-list.md)을 참조 하십시오.|  
+|`Inherits`|(선택 사항) 이 인터페이스가 다른 인터페이스나 인터페이스의 특성 및 멤버를 상속 함을 나타냅니다. [Inherits 문](../../../visual-basic/language-reference/statements/inherits-statement.md)을 참조 하세요.|  
+|`interfacenames`|`Inherits` 문을 사용 하는 경우 필요 합니다. 이 인터페이스가 파생 되는 인터페이스의 이름입니다.|  
+|`modifiers`|(선택 사항) 정의 되는 인터페이스 멤버에 대 한 적절 한 한정자입니다.|  
+|`Property`|(선택 사항) 인터페이스의 멤버인 속성을 정의 합니다.|  
+|`Function`|(선택 사항) 인터페이스의 멤버인 `Function` 프로시저를 정의 합니다.|  
+|`Sub`|(선택 사항) 인터페이스의 멤버인 `Sub` 프로시저를 정의 합니다.|  
+|`Event`|(선택 사항) 인터페이스의 멤버인 이벤트를 정의 합니다.|  
+|`Interface`|(선택 사항) 이 인터페이스 내에 중첩 된 인터페이스를 정의 합니다. 중첩 된 인터페이스 정의는 `End Interface` 문으로 종료 해야 합니다.|  
+|`Class`|(선택 사항) 인터페이스의 멤버인 클래스를 정의 합니다. 멤버 클래스 정의는 `End Class` 문으로 끝나야 합니다.|  
+|`Structure`|(선택 사항) 인터페이스의 멤버인 구조체를 정의 합니다. 멤버 구조 정의는 `End Structure` 문으로 종료 해야 합니다.|  
+|`membername`|인터페이스의 멤버로 정의 된 각 속성, 프로시저, 이벤트, 인터페이스, 클래스 또는 구조체에 필요 합니다. 멤버의 이름입니다.|  
+|`End Interface`|`Interface` 정의를 종료 합니다.|  
   
 ## <a name="remarks"></a>주의  
- An *interface* defines a set of members, such as properties and procedures, that classes and structures can implement. The interface defines only the signatures of the members and not their internal workings.  
+ *인터페이스* 는 클래스와 구조체에서 구현할 수 있는 속성, 프로시저 등의 멤버 집합을 정의 합니다. 인터페이스는 내부 동작이 아니라 멤버의 서명만 정의 합니다.  
   
- A class or structure implements the interface by supplying code for every member defined by the interface. Finally, when the application creates an instance from that class or structure, an object exists and runs in memory. For more information, see [Objects and Classes](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md) and [Interfaces](../../../visual-basic/programming-guide/language-features/interfaces/index.md).  
+ 클래스 또는 구조체는 인터페이스에서 정의 된 모든 멤버에 코드를 제공 하 여 인터페이스를 구현 합니다. 마지막으로, 응용 프로그램이 해당 클래스 또는 구조에서 인스턴스를 만들 때 개체가 존재 하 고 메모리에서 실행 됩니다. 자세한 내용은 [개체 및 클래스](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md) 및 [인터페이스](../../../visual-basic/programming-guide/language-features/interfaces/index.md)를 참조 하세요.  
   
- You can use `Interface` only at namespace or module level. This means the *declaration context* for an interface must be a source file, namespace, class, structure, module, or interface, and cannot be a procedure or block. 자세한 내용은 [선언 컨텍스트 및 기본 액세스 수준](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)을 참조하세요.  
+ `Interface`는 네임 스페이스 또는 모듈 수준 에서만 사용할 수 있습니다. 즉, 인터페이스의 *선언 컨텍스트* 는 소스 파일, 네임 스페이스, 클래스, 구조체, 모듈 또는 인터페이스 여야 하며 프로시저 또는 블록일 수 없습니다. 자세한 내용은 [선언 컨텍스트 및 기본 액세스 수준](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)을 참조하세요.  
   
- Interfaces default to [Friend](../../../visual-basic/language-reference/modifiers/friend.md) access. You can adjust their access levels with the access modifiers. For more information, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+ 인터페이스의 기본값은 [Friend](../../../visual-basic/language-reference/modifiers/friend.md) 액세스입니다. 액세스 한정자를 사용 하 여 액세스 수준을 조정할 수 있습니다. 자세한 내용은 [Visual Basic의 액세스 수준](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)을 참조 하세요.  
   
 ## <a name="rules"></a>규칙  
   
-- **Nesting Interfaces.** You can define one interface within another. The outer interface is called the *containing interface*, and the inner interface is called a *nested interface*.  
+- **인터페이스를 중첩 합니다.** 다른 인터페이스 내에서 인터페이스 하나를 정의할 수 있습니다. 외부 인터페이스를 *포함 하는 인터페이스*라고 하 고 내부 인터페이스를 *중첩 된 인터페이스*라고 합니다.  
   
-- **Member Declaration.** When you declare a property or procedure as a member of an interface, you are defining only the *signature* of that property or procedure. This includes the element type (property or procedure), its parameters and parameter types, and its return type. Because of this, the member definition uses only one line of code, and terminating statements such as `End Function` or `End Property` are not valid in an interface.  
+- **멤버 선언입니다.** 속성 또는 프로시저를 인터페이스의 멤버로 선언 하는 경우 해당 속성 또는 프로시저의 *서명만* 정의 합니다. 여기에는 요소 형식 (속성 또는 프로시저), 해당 매개 변수 및 매개 변수 형식 및 반환 형식이 포함 됩니다. 이로 인해 멤버 정의는 한 줄의 코드만 사용 하 고 `End Function` 또는 `End Property` 같은 종료 문은 인터페이스에서 유효 하지 않습니다.  
   
-     In contrast, when you define an enumeration or structure, or a nested class or interface, it is necessary to include their data members.  
+     반면, 열거형 또는 구조체 또는 중첩 된 클래스나 인터페이스를 정의 하는 경우에는 해당 데이터 멤버를 포함 해야 합니다.  
   
-- **Member Modifiers.** You cannot use any access modifiers when defining module members, nor can you specify [Shared](../../../visual-basic/language-reference/modifiers/shared.md) or any procedure modifier except [Overloads](../../../visual-basic/language-reference/modifiers/overloads.md). You can declare any member with [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md), and you can use [Default](../../../visual-basic/language-reference/modifiers/default.md) when defining a property, as well as [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md) or [WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md).  
+- **멤버 한정자입니다.** 모듈 멤버를 정의할 때 액세스 한정자를 사용할 수 없으며 [오버 로드](../../../visual-basic/language-reference/modifiers/overloads.md)를 제외한 [Shared](../../../visual-basic/language-reference/modifiers/shared.md) 또는 procedure 한정자를 지정할 수도 없습니다. [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)를 사용 하 여 모든 멤버를 선언 하 고, [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md) 또는 [WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md)뿐만 아니라 속성을 정의 하는 경우 [기본값](../../../visual-basic/language-reference/modifiers/default.md) 을 사용할 수 있습니다.  
   
-- **상속.** If the interface uses the [Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md), you can specify one or more base interfaces. You can inherit from two interfaces even if they each define a member with the same name. If you do so, the implementing code must use name qualification to specify which member it is implementing.  
+- **상속.** 인터페이스가 [Inherits 문을](../../../visual-basic/language-reference/statements/inherits-statement.md)사용 하는 경우 하나 이상의 기본 인터페이스를 지정할 수 있습니다. 두 인터페이스가 동일한 이름의 멤버를 정의 하는 경우에도 두 인터페이스에서 상속할 수 있습니다. 이렇게 하려면 구현 하는 코드에서 구현 중인 멤버를 지정 하는 데 이름 한정을 사용 해야 합니다.  
   
-     An interface cannot inherit from another interface with a more restrictive access level. For example, a `Public` interface cannot inherit from a `Friend` interface.  
+     인터페이스는 더 제한적인 액세스 수준으로 다른 인터페이스에서 상속할 수 없습니다. 예를 들어 `Public` 인터페이스는 `Friend` 인터페이스에서 상속할 수 없습니다.  
   
-     An interface cannot inherit from an interface nested within it.  
+     인터페이스는 그 안에 중첩 된 인터페이스에서 상속할 수 없습니다.  
   
-- **Implementation.** When a class uses the [Implements](../../../visual-basic/language-reference/statements/implements-clause.md) statement to implement this interface, it must implement every member defined within the interface. Furthermore, each signature in the implementing code must exactly match the corresponding signature defined in this interface. However, the name of the member in the implementing code does not have to match the member name as defined in the interface.  
+- **구현이.** 클래스가 [Implements](../../../visual-basic/language-reference/statements/implements-clause.md) 문을 사용 하 여이 인터페이스를 구현 하는 경우 인터페이스 내에 정의 된 모든 멤버를 구현 해야 합니다. 또한 구현 하는 코드의 각 서명은이 인터페이스에 정의 된 해당 시그니처와 정확히 일치 해야 합니다. 그러나 구현 하는 코드에서 멤버의 이름은 인터페이스에 정의 된 멤버 이름과 일치 하지 않아도 됩니다.  
   
-     When a class is implementing a procedure, it cannot designate the procedure as `Shared`.  
+     클래스가 프로시저를 구현 하는 경우 프로시저를 `Shared`으로 지정할 수 없습니다.  
   
-- **Default Property.** An interface can specify at most one property as its *default property*, which can be referenced without using the property name. You specify such a property by declaring it with the [Default](../../../visual-basic/language-reference/modifiers/default.md) modifier.  
+- **기본 속성입니다.** 인터페이스는 속성 이름을 사용 하지 않고 참조할 수 있는 *기본 속성*으로 최대 하나의 속성을 지정할 수 있습니다. 이러한 속성을 [Default](../../../visual-basic/language-reference/modifiers/default.md) 한정자로 선언 하 여 지정 합니다.  
   
-     Notice that this means that an interface can define a default property only if it inherits none.  
+     이는 인터페이스가 none을 상속 하는 경우에만 기본 속성을 정의할 수 있음을 의미 합니다.  
   
 ## <a name="behavior"></a>동작  
   
-- **Access Level.** All interface members implicitly have [Public](../../../visual-basic/language-reference/modifiers/public.md) access. You cannot use any access modifier when defining a member. However, a class implementing the interface can declare an access level for each implemented member.  
+- **액세스 수준입니다.** 모든 인터페이스 멤버는 암시적으로 [공용](../../../visual-basic/language-reference/modifiers/public.md) 액세스를 가집니다. 멤버를 정의할 때 액세스 한정자를 사용할 수 없습니다. 그러나 인터페이스를 구현 하는 클래스는 구현 된 각 멤버에 대 한 액세스 수준을 선언할 수 있습니다.  
   
-     If you assign a class instance to a variable, the access level of its members can depend on whether the data type of the variable is the underlying interface or the implementing class. 다음은 이에 대한 예입니다.  
+     클래스 인스턴스를 변수에 할당 하는 경우 해당 멤버의 액세스 수준은 변수의 데이터 형식이 기본 인터페이스 인지 아니면 구현 클래스 인지에 따라 달라질 수 있습니다. 다음 예제에서는 이것을 보여 줍니다.  
   
      [!code-vb[VbVbalrStatements#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#39)]  
   
-     If you access class members through `varAsInterface`, they all have public access. However, if you access members through `varAsClass`, the `Sub` procedure `doSomething` has private access.  
+     `varAsInterface`를 통해 클래스 멤버에 액세스 하는 경우 모든 사용자에 게 공용 액세스 권한이 있습니다. 그러나 `varAsClass`를 통해 멤버에 액세스 하는 경우 `Sub` 프로시저 `doSomething`에 전용 액세스 권한이 있습니다.  
   
-- **Scope.** An interface is in scope throughout its namespace, class, structure, or module.  
+- **범위.** 인터페이스는 네임 스페이스, 클래스, 구조체 또는 모듈 전체의 범위에 있습니다.  
   
-     The scope of every interface member is the entire interface.  
+     모든 인터페이스 멤버의 범위는 전체 인터페이스입니다.  
   
-- **Lifetime.** An interface does not itself have a lifetime, nor do its members. When a class implements an interface and an object is created as an instance of that class, the object has a lifetime within the application in which it is running. For more information, see "Lifetime" in [Class Statement](../../../visual-basic/language-reference/statements/class-statement.md).  
+- **수명.** 인터페이스 자체는 수명이 나 해당 멤버를 포함 하지 않습니다. 클래스가 인터페이스를 구현 하 고 해당 클래스의 인스턴스로 개체가 만들어지는 경우 개체는 실행 중인 응용 프로그램 내에서 수명을 가집니다. 자세한 내용은 [클래스 문의](../../../visual-basic/language-reference/statements/class-statement.md)"수명"을 참조 하세요.  
   
 ## <a name="example"></a>예제  
- The following example uses the `Interface` statement to define an interface named `thisInterface`, which must be implemented with a `Property` statement and a `Function` statement.  
+ 다음 예에서는 `Interface` 문을 사용 하 여 `thisInterface`이라는 인터페이스를 정의 합니다 .이 인터페이스는 `Property` 문과 `Function` 문으로 구현 되어야 합니다.  
   
  [!code-vb[VbVbalrStatements#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#40)]  
   
- Note that the `Property` and `Function` statements do not introduce blocks ending with `End Property` and `End Function` within the interface. The interface defines only the signatures of its members. The full `Property` and `Function` blocks appear in a class that implements `thisInterface`.  
+ `Property` 및 `Function` 문은 인터페이스 내에서 `End Property` 및 `End Function`로 끝나는 블록을 제공 하지 않습니다. 인터페이스는 해당 멤버의 서명만 정의 합니다. 전체 `Property` 및 `Function` 블록은 `thisInterface`를 구현 하는 클래스에 나타납니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [인터페이스](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
 - [Class 문](../../../visual-basic/language-reference/statements/class-statement.md)

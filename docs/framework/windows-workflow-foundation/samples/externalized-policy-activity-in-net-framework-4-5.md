@@ -17,9 +17,9 @@ ms.locfileid: "74283161"
 
 |프로젝트 이름|설명|기본 파일|
 |-|-|-|
-|ExternalizedPolicy4|ExternalizedPolicy4 활동과 이 활동의 WF 4.5 디자이너가 들어 있습니다.|**ExternalizedPolicy4.cs**: 활동 정의입니다.<br /><br /> **ExternalizedPolicy4Designer.xaml**: ExternalizedPolicy4 활동에 대한 사용자 지정 디자이너입니다. 이 디자이너는 WF 3.5 규칙 엔진의 규칙 편집기(<xref:System.Workflow.Activities.Rules.Design.RuleSetDialog>)를 사용합니다.|
-|ImperativeCodeClientSample|명령적 C# 코드를 사용하는 ExternalizedPolicy4 애플리케이션을 사용하여 워크플로를 구성하고 실행하는 샘플 클라이언트 애플리케이션입니다(디자이너가 사용되지 않음).|**ApplyDiscount.rules**: [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 규칙 정의가 있는 파일입니다.<br /><br /> **Order.cs**: 고객 주문을 나타내는 형식입니다. 이 형식의 개체에 규칙이 적용됩니다.<br /><br /> **Program.cs**: Policy4 활동이 있는 워크플로를 구성하고 실행하여 ApplyDiscount.rules에 정의된 규칙을 Order 개체의 인스턴스에 적용합니다.<br /><br /> App.config: 규칙 파일의 경로가 있는 구성 파일입니다.|
-|DesignerClientSample|[!INCLUDE[wf1](../../../../includes/wf1-md.md)] 디자이너에서 ExternalPolicy4 애플리케이션을 사용하여 워크플로를 구성하고 실행하는 샘플 클라이언트 애플리케이션입니다.|**Sequence1.xaml**: Policy4 활동을 사용하여 규칙을 평가하는 순차 워크플로입니다.<br /><br /> **Program.cs**: Sequence1.xaml에 정의된 워크플로의 인스턴스를 실행합니다.|
+|ExternalizedPolicy4|ExternalizedPolicy4 활동과 이 활동의 WF 4.5 디자이너가 들어 있습니다.|**ExternalizedPolicy4.cs**: 작업 정의입니다.<br /><br /> **ExternalizedPolicy4Designer**: ExternalizedPolicy4 작업에 대 한 사용자 지정 디자이너입니다. 이 디자이너는 WF 3.5 규칙 엔진의 규칙 편집기(<xref:System.Workflow.Activities.Rules.Design.RuleSetDialog>)를 사용합니다.|
+|ImperativeCodeClientSample|명령적 C# 코드를 사용하는 ExternalizedPolicy4 애플리케이션을 사용하여 워크플로를 구성하고 실행하는 샘플 클라이언트 애플리케이션입니다(디자이너가 사용되지 않음).|**Applydiscount. 규칙**: [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 규칙 정의를 포함 하는 파일입니다.<br /><br /> **Order.cs**: 고객 주문을 나타내는 형식입니다. 이 형식의 개체에 규칙이 적용됩니다.<br /><br /> **Program.cs**: applydiscount에 정의 된 규칙을 적용 하는 Policy4 활동이 있는 워크플로를 구성 하 고 실행 합니다. Order 개체의 인스턴스에 대 한 규칙입니다.<br /><br /> App.config: 규칙 파일의 경로가 있는 구성 파일입니다.|
+|DesignerClientSample|[!INCLUDE[wf1](../../../../includes/wf1-md.md)] 디자이너에서 ExternalPolicy4 애플리케이션을 사용하여 워크플로를 구성하고 실행하는 샘플 클라이언트 애플리케이션입니다.|**Sequence1.xaml**: Policy4 활동을 사용 하 여 규칙 평가를 수행 하는 순차 워크플로입니다.<br /><br /> **Program.cs**: sequence1.xaml에 정의 된 워크플로의 인스턴스를 실행 합니다.|
 
 ## <a name="the-externalizedpolicy4-activity"></a>ExternalizedPolicy4 활동
 
@@ -52,7 +52,7 @@ public class ExternalizedPolicy4Activity<TResult>: CodeActivity
 
 ## <a name="externalizedpolicy4-activity-designer"></a>ExternalizedPolicy4 활동 디자이너
 
-ExternalizedPolicy4 디자이너를 사용하면 코드를 작성하지 않고 기존 RuleSet을 사용하도록 활동을 구성할 수 있습니다. .rules 파일이 있는 경로를 설정하고 사용할 <xref:System.Workflow.Activities.Rules.RuleSet> 이름을 지정하기만 하면 됩니다. 이 디자이너를 사용하여 <xref:System.Workflow.Activities.Rules.RuleSet>을 수정할 수도 있습니다. 솔루션을 빌드한 후에는 도구 상자의 Microsoft.Samples.Activities.Rules 섹션에 있습니다. 디자이너를 사용하여 .rules 파일과 <xref:System.Workflow.Activities.Rules.RuleSet>을 선택할 수 있습니다. **RuleSet 편집** 단추를 클릭하면 WF 3.5 <xref:System.Workflow.Activities.Rules.Design.RuleSetDialog>가 표시됩니다. 이 대화 상자는 다시 호스트된 WF 3.5 규칙 편집기이며, ExternalizedPolicy4 활동에서 실행하는 규칙을 보고 편집하는 데 사용됩니다.
+ExternalizedPolicy4 디자이너를 사용하면 코드를 작성하지 않고 기존 RuleSet을 사용하도록 활동을 구성할 수 있습니다. .rules 파일이 있는 경로를 설정하고 사용할 <xref:System.Workflow.Activities.Rules.RuleSet> 이름을 지정하기만 하면 됩니다. 이 디자이너를 사용하여 <xref:System.Workflow.Activities.Rules.RuleSet>을 수정할 수도 있습니다. 솔루션을 빌드한 후에는 도구 상자의 Microsoft.Samples.Activities.Rules 섹션에 있습니다. 디자이너를 사용하여 .rules 파일과 <xref:System.Workflow.Activities.Rules.RuleSet>을 선택할 수 있습니다. **규칙 집합 편집** 단추를 클릭 하면 WF 3.5 <xref:System.Workflow.Activities.Rules.Design.RuleSetDialog> 표시 됩니다. 이 대화 상자는 다시 호스트된 WF 3.5 규칙 편집기이며, ExternalizedPolicy4 활동에서 실행하는 규칙을 보고 편집하는 데 사용됩니다.
 
 ## <a name="policy4-and-externalpolicy4"></a>Policy4 및 ExternalPolicy4
 
@@ -68,7 +68,7 @@ ExternalizedPolicy4 디자이너를 사용하면 코드를 작성하지 않고 �
 
 1. Visual Studio를 사용 하 여 *policy4sample.sln* 솔루션 파일을 엽니다.
 
-2. **솔루션 탐색기**에서 **ImperativeCodeClientSample** 프로젝트를 마우스 오른쪽 단추로 클릭한 다음 **시작 프로젝트로 설정**을 선택합니다.
+2. **솔루션 탐색기**에서 **ImperativeCodeClientSample** 프로젝트를 마우스 오른쪽 단추로 클릭 한 다음 **시작 프로젝트로 설정**을 선택 합니다.
 
 3. 프로젝트를 실행 하려면 **ctrl**+**f5**키를 누릅니다.
 
@@ -76,7 +76,7 @@ ExternalizedPolicy4 디자이너를 사용하면 코드를 작성하지 않고 �
 
 1. Visual Studio를 사용 하 여 *policy4sample.sln* 솔루션 파일을 엽니다.
 
-2. **솔루션 탐색기**에서 **DesignerClientSample** 프로젝트를 마우스 오른쪽 단추로 클릭한 다음 **시작 프로젝트로 설정**을 선택합니다.
+2. **솔루션 탐색기**에서 **designerclientsample** 프로젝트를 마우스 오른쪽 단추로 클릭 한 다음 **시작 프로젝트로 설정**을 선택 합니다.
 
 3. **Ctrl**+**shift**+**a** 를 눌러 프로젝트를 컴파일합니다.
 

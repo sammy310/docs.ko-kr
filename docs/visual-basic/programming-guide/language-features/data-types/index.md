@@ -23,7 +23,7 @@ ms.locfileid: "74346358"
   
 |프로그래밍 요소|데이터 형식 선언|  
 |-------------------------|---------------------------|  
-|변수|[Dim 문](../../../../visual-basic/language-reference/statements/dim-statement.md)에서 지정합니다.<br /><br /> `Dim`  `amount As Double`<br /><br /> `Static`  `yourName As String`<br /><br /> `Public`  `billsPaid As Decimal = 0`|  
+|Variable|[Dim 문](../../../../visual-basic/language-reference/statements/dim-statement.md)에서 지정합니다.<br /><br /> `Dim`  `amount As Double`<br /><br /> `Static`  `yourName As String`<br /><br /> `Public`  `billsPaid As Decimal = 0`|  
 |Literal|리터럴 형식 문자에 지정합니다. [형식 문자](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)에서 "리터럴 형식 문자"를 참조하세요.<br /><br /> `Dim searchChar As Char = "."`  `C`|  
 |상수|[Const 문](../../../../visual-basic/language-reference/statements/const-statement.md)에서 지정합니다.<br /><br /> `Const`  `modulus As Single = 4.17825F`|  
 |열거형|[Enum 문](../../../../visual-basic/language-reference/statements/enum-statement.md)에서 지정합니다.<br /><br /> `Public`   `Enum`   `colors`|  
@@ -34,14 +34,14 @@ ms.locfileid: "74346358"
   
  Visual Basic 데이터 형식 목록은 [데이터 형식](../../../../visual-basic/language-reference/data-types/index.md)을 참조하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [형식 문자](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
 - [기본 데이터 형식](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
 - [복합 데이터 형식](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)
 - [Generic Types in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
-- [값 형식과 참조 형식](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
-- [Type Conversions in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Visual Basic 형식 변환](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [구조체](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [튜플](tuples.md)
 - [데이터 형식 문제 해결](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)

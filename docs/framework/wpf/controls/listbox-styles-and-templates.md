@@ -17,7 +17,7 @@ ms.lasthandoff: 11/21/2019
 ms.locfileid: "74283748"
 ---
 # <a name="listbox-styles-and-templates"></a>ListBox 스타일 및 템플릿
-이 항목에서는 <xref:System.Windows.Controls.ListBox> 컨트롤의 스타일 및 템플릿에 대해 설명 합니다. 기본값을 수정할 수 있습니다 <xref:System.Windows.Controls.ControlTemplate> 고유한 모양을 제어할 수 있습니다. 자세한 내용은 [컨트롤에 대 한 템플릿 만들기](../../../desktop-wpf/themes/how-to-create-apply-template.md)를 참조 하세요.  
+이 항목에서는 <xref:System.Windows.Controls.ListBox> 컨트롤의 스타일 및 템플릿에 대해 설명 합니다. 기본 <xref:System.Windows.Controls.ControlTemplate>를 수정 하 여 컨트롤에 고유한 모양을 제공할 수 있습니다. 자세한 내용은 [컨트롤에 대 한 템플릿 만들기](../../../desktop-wpf/themes/how-to-create-apply-template.md)를 참조 하세요.  
   
 ## <a name="listbox-parts"></a>ListBox 파트  
  <xref:System.Windows.Controls.ListBox> 컨트롤에는 명명 된 파트가 없습니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "74283748"
   
 |VisualState 이름|VisualStateGroup 이름|설명|  
 |-|-|-|  
-|유효|ValidationStates|컨트롤이 유효합니다.|  
+|Valid|ValidationStates|컨트롤이 유효합니다.|  
 |InvalidFocused|ValidationStates|컨트롤이 유효하지 않고 컨트롤에 포커스가 있습니다.|  
 |InvalidUnfocused|ValidationStates|컨트롤이 유효하지 않고 컨트롤에 포커스가 없습니다.|  
   
@@ -47,9 +47,9 @@ ms.locfileid: "74283748"
 |포커스 있음|FocusStates|항목에 포커스가 있습니다.|  
 |포커스 없음|FocusStates|항목에 포커스가 없습니다.|  
 |선택 취소|SelectionStates|항목이 선택되어 있지 않습니다.|  
-|선택|SelectionStates|항목이 선택된 currentlyplate입니다.|  
+|Selected|SelectionStates|항목이 선택된 currentlyplate입니다.|  
 |SelectedUnfocused|SelectionStates|항목이 선택되었지만 항목에 포커스가 없습니다.|  
-|유효|ValidationStates|컨트롤은 <xref:System.Windows.Controls.Validation> 클래스를 사용 하 고 연결 된 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 속성은 `false`됩니다.|  
+|Valid|ValidationStates|컨트롤은 <xref:System.Windows.Controls.Validation> 클래스를 사용 하 고 연결 된 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 속성은 `false`됩니다.|  
 |InvalidFocused|ValidationStates|연결 된 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 속성 `true` 컨트롤에 포커스가 있습니다.|  
 |InvalidUnfocused|ValidationStates|연결 된 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 속성이 `true` 컨트롤에 포커스가 없는 경우|  
   

@@ -19,15 +19,15 @@ ms.locfileid: "74344140"
  `My.Application.Info` 개체의 메서드 및 속성에 대한 자세한 내용은 <xref:Microsoft.VisualBasic.ApplicationServices.AssemblyInfo>를 참조하세요.  
   
 > [!NOTE]
-> You can use properties of the <xref:System.Diagnostics.FileVersionInfo?displayProperty=nameWithType> class to obtain information about a file on disk.  
+> <xref:System.Diagnostics.FileVersionInfo?displayProperty=nameWithType> 클래스의 속성을 사용 하 여 디스크에 있는 파일에 대 한 정보를 가져올 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **네임스페이스:** <xref:Microsoft.VisualBasic.ApplicationServices>  
   
  **클래스:** <xref:Microsoft.VisualBasic.ApplicationServices.AssemblyInfo>  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **어셈블리:** Visual Basic 런타임 라이브러리 (Microsoft.visualbasic)  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [My.Application 개체](../../../visual-basic/language-reference/objects/my-application-object.md)

@@ -14,35 +14,35 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74330438"
 ---
 # <a name="manipulating-xml-in-visual-basic"></a>Visual Basic에서 XML 조작
-You can use *XML literals* to load XML from an external source such as a string, file, or stream. You can then use [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] to manipulate the XML and use [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] to query the XML.  
+*Xml 리터럴을* 사용 하 여 문자열, 파일 또는 스트림과 같은 외부 원본에서 xml을 로드할 수 있습니다. 그런 다음 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]를 사용 하 여 XML을 조작 하 고 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]를 사용 하 여 XML을 쿼리할 수 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [방법: 파일, 문자열 또는 스트림에서 XML 로드](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md)  
- Demonstrates how to load XML into an <xref:System.Xml.Linq.XDocument> or <xref:System.Xml.Linq.XElement> object from a text file, string, or stream.  
+ 텍스트 파일, 문자열 또는 스트림에서 XML을 <xref:System.Xml.Linq.XDocument> 또는 <xref:System.Xml.Linq.XElement> 개체로 로드 하는 방법을 보여 줍니다.  
   
  [방법: LINQ를 사용하여 XML 변형](../../../../visual-basic/programming-guide/language-features/xml/how-to-transform-xml-by-using-linq.md)  
- Demonstrates how to transform the contents of an <xref:System.Xml.Linq.XDocument> object into a new XML document.  
+ <xref:System.Xml.Linq.XDocument> 개체의 내용을 새 XML 문서로 변환 하는 방법을 보여 줍니다.  
   
  [방법: XML 리터럴 수정](../../../../visual-basic/programming-guide/language-features/xml/how-to-modify-xml-literals.md)  
- Demonstrates how to modify the elements, attributes, and values in an XML literal.  
+ XML 리터럴에서 요소, 특성 및 값을 수정 하는 방법을 보여 줍니다.  
   
-## <a name="related-sections"></a>관련 단원  
+## <a name="related-sections"></a>관련 섹션  
  [XML 축 속성](../../../../visual-basic/language-reference/xml-axis/index.md)  
- Provides links to sections that describe the various XML access properties.  
+ 다양 한 XML 액세스 속성을 설명 하는 섹션에 대 한 링크를 제공 합니다.  
   
  [Visual Basic의 LINQ to XML 개요](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)  
- Provides an introduction to using [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] in Visual Basic.  
+ Visual Basic에서 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]를 사용 하는 방법을 소개 합니다.  
   
  [Visual Basic에서 XML 만들기](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
- Provides an introduction to using XML literals in Visual Basic.  
+ Visual Basic에서 XML 리터럴을 사용 하는 방법을 소개 합니다.  
   
  [Visual Basic에서 XML에 액세스](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)  
- Demonstrates how to access parts of an XML element or document in Visual Basic.  
+ Visual Basic에서 XML 요소 또는 문서 부분에 액세스 하는 방법을 보여 줍니다.  
   
  [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)  
- Provides links to sections that describe how to use [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] in Visual Basic.  
+ Visual Basic에서 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]를 사용 하는 방법을 설명 하는 섹션에 대 한 링크를 제공 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)
 - [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)

@@ -17,7 +17,7 @@ ms.lasthandoff: 11/21/2019
 ms.locfileid: "74283629"
 ---
 # <a name="treeview-styles-and-templates"></a>TreeView 스타일 및 템플릿
-이 항목에서는 <xref:System.Windows.Controls.TreeView> 컨트롤의 스타일 및 템플릿에 대해 설명 합니다. 기본값을 수정할 수 있습니다 <xref:System.Windows.Controls.ControlTemplate> 고유한 모양을 제어할 수 있습니다. 자세한 내용은 [컨트롤에 대 한 템플릿 만들기](../../../desktop-wpf/themes/how-to-create-apply-template.md)를 참조 하세요.  
+이 항목에서는 <xref:System.Windows.Controls.TreeView> 컨트롤의 스타일 및 템플릿에 대해 설명 합니다. 기본 <xref:System.Windows.Controls.ControlTemplate>를 수정 하 여 컨트롤에 고유한 모양을 제공할 수 있습니다. 자세한 내용은 [컨트롤에 대 한 템플릿 만들기](../../../desktop-wpf/themes/how-to-create-apply-template.md)를 참조 하세요.  
   
 ## <a name="treeview-parts"></a>TreeView 파트  
  <xref:System.Windows.Controls.TreeView> 컨트롤에는 명명 된 파트가 없습니다.  
@@ -29,14 +29,14 @@ ms.locfileid: "74283629"
   
 |VisualState 이름|VisualStateGroup 이름|설명|  
 |-|-|-|  
-|유효|ValidationStates|컨트롤은 <xref:System.Windows.Controls.Validation> 클래스를 사용 하 고 연결 된 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 속성은 `false`됩니다.|  
+|Valid|ValidationStates|컨트롤은 <xref:System.Windows.Controls.Validation> 클래스를 사용 하 고 연결 된 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 속성은 `false`됩니다.|  
 |InvalidFocused|ValidationStates|연결 된 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 속성 `true` 컨트롤에 포커스가 있습니다.|  
 |InvalidUnfocused|ValidationStates|연결 된 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 속성이 `true` 컨트롤에 포커스가 없는 경우|  
   
 ## <a name="treeviewitem-parts"></a>TreeViewItem 파트  
  다음 표에서는 <xref:System.Windows.Controls.TreeViewItem> 컨트롤의 명명 된 파트를 나열 합니다.  
   
-|부분|형식|설명|  
+|파트|형식|설명|  
 |----------|----------|-----------------|  
 |PART_Header|<xref:System.Windows.FrameworkElement>|<xref:System.Windows.Controls.TreeView> 컨트롤의 머리글 내용을 포함 하는 시각적 요소입니다.|  
   
@@ -54,10 +54,10 @@ ms.locfileid: "74283629"
 |Collapsed|ExpansionStates|<xref:System.Windows.Controls.TreeViewItem> 컨트롤이 축소 됩니다.|  
 |HasItems|HasItemsStates|<xref:System.Windows.Controls.TreeViewItem>에 항목이 있습니다.|  
 |NoItems|HasItemsStates|<xref:System.Windows.Controls.TreeViewItem>에 항목이 없습니다.|  
-|선택|SelectionStates|<xref:System.Windows.Controls.TreeViewItem> 을 선택 합니다.|  
+|Selected|SelectionStates|<xref:System.Windows.Controls.TreeViewItem> 선택 됩니다.|  
 |SelectedInactive|SelectionStates|<xref:System.Windows.Controls.TreeViewItem> 선택 되어 있지만 활성화 되어 있지 않습니다.|  
-|선택 취소|SelectionStates|<xref:System.Windows.Controls.TreeViewItem> 선택 하지 않으면.|  
-|유효|ValidationStates|컨트롤은 <xref:System.Windows.Controls.Validation> 클래스를 사용 하 고 연결 된 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 속성은 `false`됩니다.|  
+|선택 취소|SelectionStates|<xref:System.Windows.Controls.TreeViewItem> 선택 되지 않았습니다.|  
+|Valid|ValidationStates|컨트롤은 <xref:System.Windows.Controls.Validation> 클래스를 사용 하 고 연결 된 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 속성은 `false`됩니다.|  
 |InvalidFocused|ValidationStates|연결 된 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 속성 `true` 컨트롤에 포커스가 있습니다.|  
 |InvalidUnfocused|ValidationStates|연결 된 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 속성이 `true` 컨트롤에 포커스가 없는 경우|  
   

@@ -32,12 +32,12 @@ Visual Basic 파일에서 코드 섹션을 축소하고 숨깁니다.
   
 |용어|정의|  
 |---|---|  
-|`identifier_string`|필수 요소. 축소된 경우 영역의 제목 역할을 하는 문자열입니다. 영역은 기본적으로 축소되어 있습니다.|  
+|`identifier_string`|필수입니다. 축소된 경우 영역의 제목 역할을 하는 문자열입니다. 영역은 기본적으로 축소되어 있습니다.|  
 |`#End Region`|`#Region` 블록을 종료합니다.|  
   
 ## <a name="remarks"></a>주의  
 
- `#Region` 지시문을 사용하면 Visual Studio 코드 편집기의 개요 기능을 사용할 때 확장하거나 축소할 코드 블록을 지정할 수 있습니다. You can place, or *nest*, regions within other regions to group similar regions together.  
+ `#Region` 지시문을 사용하면 Visual Studio 코드 편집기의 개요 기능을 사용할 때 확장하거나 축소할 코드 블록을 지정할 수 있습니다. 다른 지역 내에서 영역을 추가 하거나 *중첩*하 여 비슷한 지역을 함께 그룹화 할 수 있습니다.  
   
 ## <a name="example"></a>예제  
 
@@ -45,7 +45,7 @@ Visual Basic 파일에서 코드 섹션을 축소하고 숨깁니다.
   
  [!code-vb[VbVbalrConditionalComp#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConditionalComp/VB/Class1.vb#4)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [#If...Then...#Else 지시문](../../../visual-basic/language-reference/directives/if-then-else-directives.md)
 - [개요](/visualstudio/ide/outlining)

@@ -32,19 +32,19 @@ or
 ```  
   
 ## <a name="remarks"></a>주의  
- If you include this option in a compilation, no output file is created and no compilation takes place.  
+ 컴파일에이 옵션을 포함 하면 출력 파일이 생성 되지 않고 컴파일이 수행 되지 않습니다.  
   
 > [!NOTE]
-> The `-help` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.  
+> `-help` 옵션은 Visual Studio 개발 환경에서 사용할 수 없습니다. 명령줄에서 컴파일하는 경우에만 사용할 수 있습니다.  
   
 ## <a name="example"></a>예제  
- The following code displays help from the command line.  
+ 다음 코드는 명령줄에서 도움말을 표시 합니다.  
   
 ```console  
 vbc -help  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Visual Basic 명령줄 컴파일러](../../../visual-basic/reference/command-line-compiler/index.md)
 - [샘플 컴파일 명령줄](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

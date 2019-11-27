@@ -14,65 +14,65 @@ ms.locfileid: "74330322"
 ---
 # <a name="customizing-which-objects-are-available-in-my-visual-basic"></a>My에 사용할 수 있는 개체 사용자 지정(Visual Basic)
 
-This topic describes how you can control which `My` objects are enabled by setting your project's `_MYTYPE` conditional-compilation constant. The Visual Studio Integrated Development Environment (IDE) keeps the `_MYTYPE` conditional-compilation constant for a project in sync with the project's type.  
+이 항목에서는 프로젝트의 `_MYTYPE` 조건부 컴파일 상수를 설정 하 여 사용할 수 있는 `My` 개체를 제어 하는 방법에 대해 설명 합니다. Visual Studio IDE (통합 개발 환경)는 프로젝트에 대 한 `_MYTYPE` 조건부 컴파일 상수를 프로젝트 형식과 동기화 된 상태로 유지 합니다.  
   
-## <a name="predefined-_mytype-values"></a>Predefined \_MYTYPE Values  
+## <a name="predefined-_mytype-values"></a>\_MYTYPE 값 미리 정의  
 
-You must use the `/define` compiler option to set the `_MYTYPE` conditional-compilation constant. When specifying your own value for the `_MYTYPE` constant, you must enclose the string value in backslash/quotation mark (\\") sequences. For example, you could use:  
+`/define` 컴파일러 옵션을 사용 하 여 `_MYTYPE` 조건부 컴파일 상수를 설정 해야 합니다. `_MYTYPE` 상수에 대 한 고유한 값을 지정 하는 경우 문자열 값을 백슬래시/따옴표 (\\") 시퀀스로 묶어야 합니다. 예를 들어 다음을 사용할 수 있습니다.  
   
 ```console  
 /define:_MYTYPE=\"WindowsForms\"  
 ```  
   
- This table shows what the `_MYTYPE` conditional-compilation constant is set to for several project types.  
+ 다음 표에서는 여러 프로젝트 형식에 대해 `_MYTYPE` 조건부 컴파일 상수를 설정 하는 방법을 보여 줍니다.  
   
-|프로젝트 형식|\_MYTYPE value|  
+|프로젝트 형식|MYTYPE 값 \_|  
 |------------------|--------------------|  
 |클래스 라이브러리|"Windows"|  
-|콘솔 애플리케이션|"Console"|  
-|웹|"Web"|  
-|웹 컨트롤 라이브러리|"WebControl"|  
-|Windows 애플리케이션|"WindowsForms"|  
-|Windows Application, when starting with custom `Sub Main`|"WindowsFormsWithCustomSubMain"|  
+|콘솔 애플리케이션|콘솔이|  
+|웹|웹|  
+|웹 컨트롤 라이브러리|WebControl|  
+|Windows 응용 프로그램|"WindowsForms"|  
+|Windows 응용 프로그램, 사용자 지정 `Sub Main`를 시작 하는 경우|"Windows양식 Withcustomsubmain"|  
 |Windows 컨트롤 라이브러리|"Windows"|  
-|Windows 서비스|"Console"|  
-|Empty|"Empty"|  
+|Windows 서비스|콘솔이|  
+|비어 있음|비우려면|  
   
 > [!NOTE]
-> All conditional-compilation string comparisons are case-sensitive, regardless of how the `Option Compare` statement is set.  
+> 모든 조건부 컴파일 문자열 비교는 `Option Compare` 문이 설정 된 방법에 관계 없이 대/소문자를 구분 합니다.  
   
-## <a name="dependent-_my-compilation-constants"></a>Dependent \_MY Compilation Constants  
+## <a name="dependent-_my-compilation-constants"></a>내 컴파일 상수 \_종속  
 
-The `_MYTYPE` conditional-compilation constant, in turn, controls the values of several other `_MY` compilation constants:  
+`_MYTYPE` 조건부 컴파일 상수를 사용 하 여 다른 여러 `_MY` 컴파일 상수의 값을 제어 합니다.  
   
 |\_MYTYPE|\_MYAPPLICATIONTYPE|\_MYCOMPUTERTYPE|\_MYFORMS|\_MYUSERTYPE|\_MYWEBSERVICES|  
 |--------------|-------------------------|----------------------|---------------|------------------|---------------------|  
-|"Console"|"Console"|"Windows"|Undefined|"Windows"|true|  
-|"Custom"|Undefined|Undefined|Undefined|Undefined|Undefined|  
-|"Empty"|Undefined|Undefined|Undefined|Undefined|Undefined|  
-|"Web"|Undefined|"Web"|false|"Web"|false|  
-|"WebControl"|Undefined|"Web"|false|"Web"|true|  
-|"Windows" or ""|"Windows"|"Windows"|Undefined|"Windows"|true|  
-|"WindowsForms"|"WindowsForms"|"Windows"|true|"Windows"|true|  
-|"WindowsFormsWithCustomSubMain"|"Console"|"Windows"|true|"Windows"|true|  
+|콘솔이|콘솔이|"Windows"|정의되지 않음|"Windows"|TRUE|  
+|재구성|정의되지 않음|정의되지 않음|정의되지 않음|정의되지 않음|정의되지 않음|  
+|비우려면|정의되지 않음|정의되지 않음|정의되지 않음|정의되지 않음|정의되지 않음|  
+|웹|정의되지 않음|웹|FALSE|웹|FALSE|  
+|WebControl|정의되지 않음|웹|FALSE|웹|TRUE|  
+|"Windows" 또는 ""|"Windows"|"Windows"|정의되지 않음|"Windows"|TRUE|  
+|"WindowsForms"|"WindowsForms"|"Windows"|TRUE|"Windows"|TRUE|  
+|"Windows양식 Withcustomsubmain"|콘솔이|"Windows"|TRUE|"Windows"|TRUE|  
   
- By default, undefined conditional-compilation constants resolve to `FALSE`. You can specify values for the undefined constants when compiling your project to override the default behavior.  
+ 기본적으로 정의 되지 않은 조건부 컴파일 상수는 `FALSE`으로 확인 됩니다. 기본 동작을 재정의 하기 위해 프로젝트를 컴파일할 때 정의 되지 않은 상수에 대 한 값을 지정할 수 있습니다.  
   
 > [!NOTE]
-> When `_MYTYPE` is set to "Custom", the project contains the `My` namespace, but it contains no objects. However, setting `_MYTYPE` to "Empty" prevents the compiler from adding the `My` namespace and its objects.  
+> `_MYTYPE`이 "Custom"으로 설정 되 면 프로젝트에 `My` 네임 스페이스가 포함 되지만 개체는 포함 되지 않습니다. 그러나 `_MYTYPE`를 "Empty"로 설정 하면 컴파일러가 `My` 네임 스페이스와 해당 개체를 추가할 수 없습니다.  
   
- This table describes the effects of the predefined values of the `_MY` compilation constants.  
+ 다음 표에서는 `_MY` 컴파일 상수의 미리 정의 된 값에 대 한 영향을 설명 합니다.  
   
 |상수|의미|  
 |--------------|-------------|  
-|`_MYAPPLICATIONTYPE`|Enables `My.Application`, if the constant is "Console," Windows," or "WindowsForms":<br /><br /> -   The "Console" version derives from <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase>. and has fewer members than the "Windows" version.<br />-   The "Windows" version derives from <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>.and has fewer members than the "WindowsForms" version.<br />-   The "WindowsForms" version of `My.Application` derives from <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>. If the `TARGET` constant is defined to be "winexe", then the class includes a `Sub Main` method.|  
-|`_MYCOMPUTERTYPE`|Enables `My.Computer`, if the constant is "Web" or "Windows":<br /><br /> -   The "Web" version derives from <xref:Microsoft.VisualBasic.Devices.ServerComputer>, and has fewer members than the "Windows" version.<br />-   The "Windows" version of `My.Computer` derives from <xref:Microsoft.VisualBasic.Devices.Computer>.|  
-|`_MYFORMS`|Enables `My.Forms`, if the constant is `TRUE`.|  
-|`_MYUSERTYPE`|Enables `My.User`, if the constant is "Web" or "Windows":<br /><br /> -   The "Web" version of `My.User` is associated with the user identity of the current HTTP request.<br />-   The "Windows" version of `My.User` is associated with the thread's current principal.|  
-|`_MYWEBSERVICES`|Enables `My.WebServices`, if the constant is `TRUE`.|  
-|`_MYTYPE`|Enables `My.Log`, `My.Request`, and `My.Response`, if the constant is "Web".|  
+|`_MYAPPLICATIONTYPE`|상수가 "Console", Windows "또는" WindowsForms "인 경우 `My.Application`를 사용 하도록 설정 합니다.<br /><br /> -"콘솔" 버전이 <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase>에서 파생 됩니다. 및에 "Windows" 버전 보다 많은 멤버가 포함 되어 있습니다.<br />-"Windows" 버전은 <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>에서 파생 되며 "WindowsForms" 버전 보다 많은 멤버를 포함 합니다.<br />-`My.Application`의 "WindowsForms" 버전은 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>에서 파생 됩니다. `TARGET` 상수가 "winexe"로 정의 된 경우 클래스에 `Sub Main` 메서드가 포함 됩니다.|  
+|`_MYCOMPUTERTYPE`|상수가 "웹" 또는 "Windows" 인 경우 `My.Computer`를 사용 하도록 설정 합니다.<br /><br /> -"웹" 버전은 <xref:Microsoft.VisualBasic.Devices.ServerComputer>에서 파생 되며 "Windows" 버전 보다 많은 멤버를 포함 합니다.<br />-`My.Computer`의 "Windows" 버전이 <xref:Microsoft.VisualBasic.Devices.Computer>에서 파생 됩니다.|  
+|`_MYFORMS`|상수가 `TRUE`되는 경우 `My.Forms`를 사용 하도록 설정 합니다.|  
+|`_MYUSERTYPE`|상수가 "웹" 또는 "Windows" 인 경우 `My.User`를 사용 하도록 설정 합니다.<br /><br /> -`My.User`의 "웹" 버전은 현재 HTTP 요청에 대 한 사용자 id와 연결 되어 있습니다.<br />-`My.User`의 "Windows" 버전이 스레드의 현재 보안 주체와 연결 되어 있습니다.|  
+|`_MYWEBSERVICES`|상수가 `TRUE`되는 경우 `My.WebServices`를 사용 하도록 설정 합니다.|  
+|`_MYTYPE`|상수가 "Web" 인 경우 `My.Log`, `My.Request`및 `My.Response`를 사용 하도록 설정 합니다.|  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>
 - <xref:Microsoft.VisualBasic.Devices.Computer>

@@ -36,9 +36,9 @@ ms.locfileid: "74283568"
 ![NumericUpDown 사용자 지정 컨트롤입니다.](./media/ndp-numericupdown.png "NDP_NumericUPDown")
 사용자 지정 NumericUpDown 컨트롤입니다.
 
-이 항목에는 다음과 같은 섹션이 포함되어 있습니다.
+이 항목의 섹션:
 
-- [필수 구성 요소](#prerequisites)
+- [전제 조건](#prerequisites)
 
 - [파트 및 상태 모델](#parts_and_states_model)
 
@@ -52,7 +52,7 @@ ms.locfileid: "74283568"
 
 <a name="prerequisites"></a>
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>필수 조건
 
 이 항목에서는 기존 컨트롤에 대 한 새 <xref:System.Windows.Controls.ControlTemplate>을 만드는 방법, 컨트롤 계약의 요소에 대해 잘 알고 있다고 가정 하 고, [컨트롤에 대 한 템플릿 만들기](../../../desktop-wpf/themes/how-to-create-apply-template.md)에 설명 된 개념을 이해 하 고 있다고 가정 합니다.
 
@@ -143,9 +143,9 @@ ms.locfileid: "74283568"
 [!code-csharp[VSMCustomControl#ValueStateChange](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/numericupdown.cs#valuestatechange)]
 [!code-vb[VSMCustomControl#ValueStateChange](~/samples/snippets/visualbasic/VS_Snippets_Wpf/vsmcustomcontrol/visualbasic/numericupdown.vb#valuestatechange)]
 
-<xref:System.Windows.VisualStateManager.GoToState%2A> 메서드는 스토리 보드를 적절 하 게 시작 및 중지 하는 데 필요한 논리를 수행 합니다. 컨트롤을 호출 하는 경우 <xref:System.Windows.VisualStateManager.GoToState%2A> 해당 상태를 변경 하는 <xref:System.Windows.VisualStateManager> 다음을 수행 합니다.
+<xref:System.Windows.VisualStateManager.GoToState%2A> 메서드는 스토리 보드를 적절 하 게 시작 및 중지 하는 데 필요한 논리를 수행 합니다. 컨트롤에서 <xref:System.Windows.VisualStateManager.GoToState%2A>를 호출 하 여 해당 상태를 변경 하는 경우 <xref:System.Windows.VisualStateManager>는 다음을 수행 합니다.
 
-- 컨트롤에 <xref:System.Windows.Media.Animation.Storyboard>있는 <xref:System.Windows.VisualState> 있으면 storyboard가 시작 됩니다. 그런 다음 경우는 <xref:System.Windows.VisualState> 가 컨트롤에서 제공 되는 <xref:System.Windows.Media.Animation.Storyboard>, 스토리 보드 끝입니다.
+- 컨트롤에 <xref:System.Windows.Media.Animation.Storyboard>있는 <xref:System.Windows.VisualState> 있으면 storyboard가 시작 됩니다. 그런 다음 컨트롤에 포함 된 <xref:System.Windows.VisualState>에 <xref:System.Windows.Media.Animation.Storyboard>있으면 storyboard가 종료 됩니다.
 
 - 컨트롤이 이미 지정 된 상태에 있는 경우 <xref:System.Windows.VisualStateManager.GoToState%2A> 작업을 수행 하지 않고 `true`을 반환 합니다.
 
@@ -248,7 +248,7 @@ ms.locfileid: "74283568"
 
 [!code-xaml[VSMCustomControl#NUDTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/themes/generic.xaml#nudtemplate)]
 
-다음 예제에 대 한 논리는 `NumericUpDown`합니다.
+다음 예에서는 `NumericUpDown`에 대 한 논리를 보여 줍니다.
 
 [!code-csharp[VSMCustomControl#ControlLogic](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/numericupdown.cs#controllogic)]
 [!code-vb[VSMCustomControl#ControlLogic](~/samples/snippets/visualbasic/VS_Snippets_Wpf/vsmcustomcontrol/visualbasic/numericupdown.vb#controllogic)]

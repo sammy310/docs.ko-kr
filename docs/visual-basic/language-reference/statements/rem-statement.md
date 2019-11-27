@@ -21,7 +21,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346724"
 ---
 # <a name="rem-statement-visual-basic"></a>REM 문(Visual Basic)
-Used to include explanatory remarks in the source code of a program.  
+프로그램의 소스 코드에 설명 설명을 포함 하는 데 사용 됩니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -32,22 +32,22 @@ REM comment
   
 ## <a name="parts"></a>요소  
  `comment`  
- (선택 사항) The text of any comment you want to include. A space is required between the `REM` keyword and `comment`.  
+ (선택 사항) 포함 하려는 주석의 텍스트입니다. `REM` 키워드와 `comment`사이에 공백이 필요 합니다.  
   
 ## <a name="remarks"></a>주의  
- You can put a `REM` statement alone on a line, or you can put it on a line following another statement. The `REM` statement must be the last statement on the line. If it follows another statement, the `REM` must be separated from that statement by a space.  
+ `REM` 문을 한 줄에 단독으로 넣거나 다른 문 다음의 줄에 삽입할 수 있습니다. `REM` 문은 줄의 마지막 문 이어야 합니다. 다른 문을 따르는 경우에는 `REM`를 해당 문에서 공백으로 구분 해야 합니다.  
   
- You can use a single quotation mark (`'`) instead of `REM`. This is true whether your comment follows another statement on the same line or sits alone on a line.  
+ `REM`대신 작은따옴표 (`'`)를 사용할 수 있습니다. 이는 주석이 동일한 줄에서 다른 문을 팔 로우 하거나 한 줄에만 적용 되는지 여부에 해당 합니다.  
   
 > [!NOTE]
-> You cannot continue a `REM` statement by using a line-continuation sequence (`_`). Once a comment begins, the compiler does not examine the characters for special meaning. For a multiple-line comment, use another `REM` statement or a comment symbol (`'`) on each line.  
+> `_`(줄 연속 시퀀스)를 사용 하 여 `REM` 문을 계속할 수 없습니다. 주석이 시작 되 면 컴파일러는 특수 한 의미에 대 한 문자를 검사 하지 않습니다. 여러 줄로 된 주석을 보려면 각 줄에서 다른 `REM` 문이나 주석 기호 (`'`)를 사용 합니다.  
   
 ## <a name="example"></a>예제  
- The following example illustrates the `REM` statement, which is used to include explanatory remarks in a program. It also shows the alternative of using the single quotation-mark character (`'`) instead of `REM`.  
+ 다음 예에서는 프로그램에 설명 설명을 포함 하는 데 사용 되는 `REM` 문을 보여 줍니다. 또한 `REM`대신 작은따옴표 (`'`)를 사용 하는 대신 사용 하는 방법을 보여 줍니다.  
   
  [!code-vb[VbVbalrStatements#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#6)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [코드 주석](../../../visual-basic/programming-guide/program-structure/comments-in-code.md)
 - [방법: 코드에서 문 분리 및 결합](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)

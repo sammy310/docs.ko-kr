@@ -14,7 +14,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74332962"
 ---
 # <a name="-imports-visual-basic"></a>-imports (Visual Basic)
-Imports namespaces from a specified assembly.  
+지정 된 어셈블리에서 네임 스페이스를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -26,19 +26,19 @@ Imports namespaces from a specified assembly.
   
 |용어|정의|  
 |---|---|  
-|`namespaceList`|필수 요소. Comma-delimited list of namespaces to be imported.|  
+|`namespaceList`|필수입니다. 가져올 쉼표로 구분 된 네임 스페이스 목록입니다.|  
   
 ## <a name="remarks"></a>주의  
- The `-imports` option imports any namespace defined within the current set of source files or from any referenced assembly.  
+ `-imports` 옵션은 현재 소스 파일 집합 또는 참조 된 어셈블리에서 정의 된 네임 스페이스를 가져옵니다.  
   
- The members in a namespace specified with `-imports` are available to all source-code files in the compilation. Use the [Imports Statement (.NET Namespace and Type)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) to use a namespace in a single source-code file.  
+ `-imports` 지정 된 네임 스페이스의 멤버는 컴파일할 때 모든 소스 코드 파일에서 사용할 수 있습니다. [Imports 문 (.Net 네임 스페이스 및 형식)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) 을 사용 하 여 단일 소스 코드 파일에서 네임 스페이스를 사용 합니다.  
   
-|To set /imports in the Visual Studio integrated development environment|  
+|Visual Studio 통합 개발 환경에서/imports를 설정 하려면|  
 |---|  
-|1.  Have a project selected in **Solution Explorer**. **프로젝트** 메뉴에서 **속성**을 클릭합니다. <br />2.  Click the **References** tab.<br />3.  Enter the namespace name in the box beside the **Add User Import** button.<br />4.  Click the **Add User Import** button.|  
+|1. **솔루션 탐색기**에서 프로젝트를 선택 합니다. **프로젝트** 메뉴에서 **속성**을 클릭합니다. <br />2. **참조** 탭을 클릭 합니다.<br />3. **사용자 가져오기 추가** 단추 옆의 상자에 네임 스페이스 이름을 입력 합니다.<br />4. **사용자 가져오기 추가** 단추를 클릭 합니다.|  
   
 ## <a name="example"></a>예제  
- The following code compiles when `/imports:system.globalization` is specified. Without it, successful compilation requires either that an `Imports System.Globalization` statement be included at the beginning of the source code file, or that the property be fully qualified as `System.Globalization.CultureInfo.CurrentCulture.Name`.
+ 다음 코드는 `/imports:system.globalization`가 지정 될 때 컴파일됩니다. 이를 사용 하지 않으면 성공적으로 컴파일할 때 `Imports System.Globalization` 문이 소스 코드 파일의 시작 부분에 포함 되거나 속성이 `System.Globalization.CultureInfo.CurrentCulture.Name`으로 정규화 되어야 합니다.
 
 ```vb
 Module Example
@@ -48,7 +48,7 @@ Module Example
 End Module
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Visual Basic 명령줄 컴파일러](../../../visual-basic/reference/command-line-compiler/index.md)
 - [참조 및 Imports 문](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)

@@ -14,12 +14,12 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74336119"
 ---
 # <a name="bit-shift-operators-visual-basic"></a>비트 시프트 연산자(Visual Basic)
-The following are the bit shift operators defined in Visual Basic.  
+다음은 Visual Basic에 정의 된 비트 시프트 연산자입니다.  
   
- [<\< Operator](../../../visual-basic/language-reference/operators/left-shift-operator.md)  
+ [<\< 연산자](../../../visual-basic/language-reference/operators/left-shift-operator.md)  
   
  [>> 연산자](../../../visual-basic/language-reference/operators/right-shift-operator.md)  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [기능별 연산자 목록](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)

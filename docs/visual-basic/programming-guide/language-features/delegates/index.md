@@ -14,13 +14,13 @@ ms.locfileid: "74345230"
 ---
 # <a name="delegates-visual-basic"></a>대리자(Visual Basic)
 
-대리자는 메서드를 참조하는 개체입니다. 다른 프로그래밍 언어에서 사용되는 함수 포인터와 비슷하기 때문에 *형식 안전 함수 포인터*라고도 합니다. But unlike function pointers, Visual Basic delegates are a reference type based on the class <xref:System.Delegate?displayProperty=nameWithType>. 대리자는 공유 메서드(클래스의 특정 인스턴스 없이 호출할 수 있는 메서드) 및 인스턴스 메서드를 둘 다 참조할 수 있습니다.
+대리자는 메서드를 참조하는 개체입니다. 다른 프로그래밍 언어에서 사용되는 함수 포인터와 비슷하기 때문에 *형식 안전 함수 포인터*라고도 합니다. 그러나 함수 포인터와는 달리 Visual Basic 대리자는 <xref:System.Delegate?displayProperty=nameWithType>클래스를 기반으로 하는 참조 형식입니다. 대리자는 공유 메서드(클래스의 특정 인스턴스 없이 호출할 수 있는 메서드) 및 인스턴스 메서드를 둘 다 참조할 수 있습니다.
 
 ## <a name="delegates-and-events"></a>대리자 및 이벤트
 
-대리자는 호출 프로시저와 호출되는 프로시저 간에 중개자가 필요한 경우에 유용합니다. 예를 들어 다양한 상황에서 다른 이벤트 처리기를 호출하도록 하는 이벤트를 발생시키는 개체를 원할 수 있습니다. 그러나 이벤트를 발생시키는 개체는 특정 이벤트를 처리할 이벤트 처리기가 어느 것인지를 미리 알 수 없습니다. Visual Basic lets you dynamically associate event handlers with events by creating a delegate for you when you use the `AddHandler` statement. 런타임 시 대리자는 적절한 이벤트 처리기로 호출을 전달합니다.
+대리자는 호출 프로시저와 호출되는 프로시저 간에 중개자가 필요한 경우에 유용합니다. 예를 들어 다양한 상황에서 다른 이벤트 처리기를 호출하도록 하는 이벤트를 발생시키는 개체를 원할 수 있습니다. 그러나 이벤트를 발생시키는 개체는 특정 이벤트를 처리할 이벤트 처리기가 어느 것인지를 미리 알 수 없습니다. Visual Basic를 사용 하면 `AddHandler` 문을 사용할 때 대리자를 만들어 이벤트에 이벤트 처리기를 동적으로 연결할 수 있습니다. 런타임 시 대리자는 적절한 이벤트 처리기로 호출을 전달합니다.
 
-Although you can create your own delegates, in most cases Visual Basic creates the delegate and takes care of the details for you. 예를 들어 `Event` 문은 `<EventName>EventHandler`라는 대리자 클래스를 `Event` 문을 포함하고 이벤트와 시그니처가 같은 클래스의 중첩 클래스로 암시적으로 정의합니다. `AddressOf` 문은 특정 프로시저를 참조하는 대리자의 인스턴스를 암시적으로 만듭니다. 다음 두 코드 줄은 동일한 의미를 갖습니다. 첫 번째 줄에서는 `Button1_Click` 메서드에 대한 참조가 인수로 전달된 `EventHandler`의 인스턴스를 명시적으로 만듭니다. 두 번째 줄은 동일한 작업을 좀 더 편리하게 수행합니다.
+사용자 고유의 대리자를 만들 수는 있지만 대부분의 경우 Visual Basic는 대리자를 만들고 사용자에 대 한 세부 정보를 처리 합니다. 예를 들어 `Event` 문은 `<EventName>EventHandler`라는 대리자 클래스를 `Event` 문을 포함하고 이벤트와 시그니처가 같은 클래스의 중첩 클래스로 암시적으로 정의합니다. `AddressOf` 문은 특정 프로시저를 참조하는 대리자의 인스턴스를 암시적으로 만듭니다. 다음 두 코드 줄은 동일한 의미를 갖습니다. 첫 번째 줄에서는 `EventHandler` 메서드에 대한 참조가 인수로 전달된 `Button1_Click`의 인스턴스를 명시적으로 만듭니다. 두 번째 줄은 동일한 작업을 좀 더 편리하게 수행합니다.
 
 [!code-vb[VbVbalrDelegates#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#6)]
 

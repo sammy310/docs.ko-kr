@@ -14,17 +14,17 @@ LINQ to XML에서는 .NET LINQ(Language-Integrated Query) Framework를 사용하
   
  LINQ 기술은 개체(LINQ to Objects), 관계형 데이터베이스(LINQ to SQL) 및 XML(LINQ to XML)에 대한 일관성 있는 쿼리 환경을 제공합니다.  
   
-## <a name="in-this-section"></a>이 섹션의 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [시작(LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/getting-started-linq-to-xml.md)  
  개념 개요와 <xref:System.Xml.Linq?displayProperty=nameWithType> 클래스의 개요를 비롯하여 LINQ to XML에 대한 기초 정보를 제공합니다.  
   
- [Programming Guide (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)  
+ [프로그래밍 가이드 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)  
  LINQ to XML을 사용한 프로그래밍의 개념과 방법에 대해 설명합니다.  
   
  [참조(LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/reference-linq-to-xml.md)  
  LINQ to XML의 관리되는 참조 설명서에 대한 포인터를 제공합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Visual Basic의 LINQ to XML 개요](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)
 - [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)

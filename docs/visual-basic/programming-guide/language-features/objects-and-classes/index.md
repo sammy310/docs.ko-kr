@@ -16,13 +16,13 @@ ms.locfileid: "74346698"
 
 *개체*는 하나의 단위로 취급될 수 있는 코드 및 데이터의 조합입니다. 개체는 컨트롤 또는 폼과 같은 애플리케이션의 부분일 수 있습니다. 전체 애플리케이션이 하나의 개체가 될 수도 있습니다.
 
-When you create an application in Visual Basic, you constantly work with objects. You can use objects provided by Visual Basic, such as controls, forms, and data access objects. You can also use objects from other applications within your Visual Basic application. 개체를 직접 만들고 해당 개체에 대해 추가 속성 및 메서드를 정의할 수 있습니다. 개체는 프로그램에 대한 조립식 빌딩 블록처럼 작동합니다. 즉, 코드 조각을 한 번 작성한 후 반복해서 다시 사용할 수 있습니다.
+Visual Basic에서 응용 프로그램을 만들 때 개체를 계속 사용 합니다. Visual Basic에서 제공 하는 개체 (예: 컨트롤, 폼 및 데이터 액세스 개체)를 사용할 수 있습니다. Visual Basic 응용 프로그램 내에서 다른 응용 프로그램의 개체를 사용할 수도 있습니다. 개체를 직접 만들고 해당 개체에 대해 추가 속성 및 메서드를 정의할 수 있습니다. 개체는 프로그램에 대한 조립식 빌딩 블록처럼 작동합니다. 즉, 코드 조각을 한 번 작성한 후 반복해서 다시 사용할 수 있습니다.
 
 이 항목에서는 개체에 대해 좀 더 자세히 설명합니다.
 
 ## <a name="objects-and-classes"></a>개체 및 클래스
 
-Each object in Visual Basic is defined by a *class*. 클래스는 개체의 변수, 속성, 프로시저 및 이벤트를 설명합니다. 개체는 클래스의 인스턴스입니다. 클래스를 정의한 후에는 필요한 수만큼 개체를 만들 수 있습니다.
+Visual Basic의 각 개체는 *클래스*에 의해 정의 됩니다. 클래스는 개체의 변수, 속성, 프로시저 및 이벤트를 설명합니다. 개체는 클래스의 인스턴스입니다. 클래스를 정의한 후에는 필요한 수만큼 개체를 만들 수 있습니다.
 
 개체와 해당 클래스 간의 관계를 이해하기 위해 쿠키 커터와 쿠키를 생각해 보세요. 쿠키 커터는 클래스입니다. 각 쿠키에 대해 크기와 모양 같은 특징을 정의합니다. 클래스는 개체를 만드는 데 사용됩니다. 개체는 쿠키입니다.
 
@@ -51,7 +51,7 @@ Each object in Visual Basic is defined by a *class*. 클래스는 개체의 변�
    ```
 
 > [!NOTE]
-> 가능하면 항상 할당하려는 클래스 형식으로 변수를 선언해야 합니다. 이것을 *초기 바인딩*이라고 합니다. 컴파일 시간의 클래스 형식을 모르는 경우 변수를 [개체 데이터 형식](../../../../visual-basic/language-reference/data-types/object-data-type.md)으로 선언하여 *런타임에 바인딩*을 호출할 수 있습니다. 그러나 런타임에 바인딩을 사용하면 성능이 저하되고 런타임 개체 멤버에 대한 액세스가 제한됩니다. 자세한 내용은 [개체 변수 선언](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)을 참조하세요.
+> 가능하면 항상 할당하려는 클래스 형식으로 변수를 선언해야 합니다. 이것을 *초기 바인딩*이라고 합니다. 컴파일 시간의 클래스 형식을 모르는 경우 변수를 *개체 데이터 형식*으로 선언하여 [런타임에 바인딩](../../../../visual-basic/language-reference/data-types/object-data-type.md)을 호출할 수 있습니다. 그러나 런타임에 바인딩을 사용하면 성능이 저하되고 런타임 개체 멤버에 대한 액세스가 제한됩니다. 자세한 내용은 [개체 변수 선언](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)을 참조하세요.
 
 ### <a name="multiple-instances"></a>여러 인스턴스
 
@@ -71,11 +71,11 @@ warningLabel.Text = "Data not saved"
 
 #### <a name="intellisense-listing-of-members"></a>IntelliSense 멤버 목록
 
-IntelliSense는 멤버 나열 옵션을 호출할 때(예를 들어 멤버 액세스 연산자로 마침표(`.`)를 입력할 때) 클래스의 멤버를 나열합니다. 해당 클래스의 인스턴스로 선언된 변수 이름 뒤에 마침표를 입력하는 경우 IntelliSense는 공유 멤버가 아닌 모든 인스턴스 멤버를 나열합니다. 클래스 이름 뒤에 마침표를 입력하는 경우 IntelliSense는 인스턴스 멤버가 아닌 모든 공유 멤버를 나열합니다. 자세한 내용은 [IntelliSense 사용](/visualstudio/ide/using-intellisense)을 참조하세요.
+IntelliSense는 멤버 나열 옵션을 호출할 때(예를 들어 멤버 액세스 연산자로 마침표(`.`)를 입력할 때) 클래스의 멤버를 나열합니다. 해당 클래스의 인스턴스로 선언된 변수 이름 뒤에 마침표를 입력하는 경우 IntelliSense는 공유 멤버가 아닌 모든 인스턴스 멤버를 나열합니다. 클래스 이름 뒤에 마침표를 입력하는 경우 IntelliSense는 인스턴스 멤버가 아닌 모든 공유 멤버를 나열합니다. 자세한 내용은 [Using IntelliSense](/visualstudio/ide/using-intellisense)을 참조하세요.
 
 ### <a name="fields-and-properties"></a>필드 및 속성
 
-*필드* 및 *속성*은 개체에 저장된 정보를 나타냅니다. 프로시저에서 지역 변수를 검색하고 설정하는 것과 동일한 방식으로 대입문을 사용하여 해당 값을 검색하고 설정합니다. 다음 예제에서는 <xref:System.Windows.Forms.Control.Width%2A> 속성을 검색하고 <xref:System.Windows.Forms.Label> 개체의 <xref:System.Windows.Forms.Control.ForeColor%2A> 속성을 설정합니다.
+*필드* 및 *속성*은 개체에 저장된 정보를 나타냅니다. 프로시저에서 지역 변수를 검색하고 설정하는 것과 동일한 방식으로 대입문을 사용하여 해당 값을 검색하고 설정합니다. 다음 예제에서는 <xref:System.Windows.Forms.Control.Width%2A> 속성을 검색하고 <xref:System.Windows.Forms.Control.ForeColor%2A> 개체의 <xref:System.Windows.Forms.Label> 속성을 설정합니다.
 
 ```vb
 Dim warningWidth As Integer = warningLabel.Width
@@ -110,7 +110,7 @@ warningLabel.ForeColor = System.Drawing.Color.Red
 
 *메서드*는 개체에서 수행할 수 있는 작업입니다. 예를 들어 <xref:System.Windows.Forms.ComboBox.ObjectCollection.Add%2A>는 콤보 상자에 새 항목을 추가하는 <xref:System.Windows.Forms.ComboBox> 개체의 메서드입니다.
 
-다음 예제에서는 <xref:System.Windows.Forms.Timer> 개체의 <xref:System.Windows.Forms.Timer.Start%2A> 메서드를 설명합니다.
+다음 예제에서는 <xref:System.Windows.Forms.Timer.Start%2A> 개체의 <xref:System.Windows.Forms.Timer> 메서드를 설명합니다.
 
 ```vb
 Dim safetyTimer As New System.Windows.Forms.Timer
@@ -125,7 +125,7 @@ safetyTimer.Start()
 
 이벤트는 마우스 클릭이나 키 누르기와 같이 개체가 인식하는 동작이며 응답하기 위해 코드를 작성할 수 있습니다. 이벤트는 사용자 동작 또는 프로그램 코드의 결과로 발생하거나 시스템에 의해 발생할 수 있습니다. 이벤트에 신호를 보내는 코드를 이벤트 *발생*이라고 하고, 신호에 응답하는 코드를 *처리*라고 합니다.
 
-개체에 의해 발생하고 다른 개체에서 처리되는 사용자 지정 이벤트를 개발할 수도 있습니다. 자세한 내용은 [이벤트](../../../../visual-basic/programming-guide/language-features/events/index.md)를 참조하세요.
+개체에 의해 발생하고 다른 개체에서 처리되는 사용자 지정 이벤트를 개발할 수도 있습니다. 자세한 내용은 [이벤트](../../../../visual-basic/programming-guide/language-features/events/index.md)에 정의된 인터페이스의 private C++ 관련 구현입니다.
 
 ### <a name="instance-members-and-shared-members"></a>인스턴스 멤버 및 공유 멤버
 
@@ -176,7 +176,7 @@ safetyTimer.Start()
 
 개체를 사용하면 변수 및 프로시저를 한 번 선언한 후 필요할 때마다 다시 사용할 수 있습니다. 예를 들어 애플리케이션에 맞춤법 검사기를 추가하려는 경우 모든 변수 및 지원 함수를 정의하여 맞춤법 검사 기능을 제공할 수 있습니다. 맞춤법 검사기를 클래스로 만드는 경우 컴파일된 어셈블리에 대한 참조를 추가하여 다른 애플리케이션에서 다시 사용할 수 있습니다. 다른 사람이 이미 개발한 맞춤법 검사기 클래스를 사용하여 일부 작업을 줄일 수도 있습니다.
 
-The .NET Framework provides many examples of components that are available for use. 다음 예제에서는 <xref:System> 네임스페이스의 <xref:System.TimeZone> 클래스를 사용합니다. <xref:System.TimeZone>에서는 현재 컴퓨터 시스템의 표준 시간대에 대한 정보를 검색할 수 있도록 하는 멤버를 제공합니다.
+.NET Framework는 사용할 수 있는 구성 요소에 대 한 많은 예를 제공 합니다. 다음 예제에서는 <xref:System.TimeZone> 네임스페이스의 <xref:System> 클래스를 사용합니다. <xref:System.TimeZone>에서는 현재 컴퓨터 시스템의 표준 시간대에 대한 정보를 검색할 수 있도록 하는 멤버를 제공합니다.
 
 ```vb
 Public Sub examineTimeZone()
@@ -192,7 +192,7 @@ Public Sub examineTimeZone()
 End Sub
 ```
 
-앞의 예제에서 첫 번째 [Dim 문](../../../../visual-basic/language-reference/statements/dim-statement.md)은 <xref:System.TimeZone> 형식의 개체 변수를 선언하고 이를 <xref:System.TimeZone.CurrentTimeZone%2A> 속성에 의해 반환된 <xref:System.TimeZone> 개체에 할당합니다.
+앞의 예제에서 첫 번째 [Dim 문](../../../../visual-basic/language-reference/statements/dim-statement.md)은 <xref:System.TimeZone> 형식의 개체 변수를 선언하고 이를 <xref:System.TimeZone> 속성에 의해 반환된 <xref:System.TimeZone.CurrentTimeZone%2A> 개체에 할당합니다.
 
 ## <a name="relationships-among-objects"></a>개체 간 관계
 
@@ -212,7 +212,7 @@ End Sub
    Public Class reversibleButton
    ```
 
-   `End Class` 문은 클래스의 마지막 코드 줄 다음에 나옵니다. 기본적으로 IDE(통합 개발 환경)는 사용자가 `Class` 문을 입력하면 `End Class`를 자동으로 생성합니다.
+   `End Class` 문은 클래스의 마지막 코드 줄 다음에 나옵니다. 기본적으로 IDE(통합 개발 환경)는 사용자가 `End Class` 문을 입력하면 `Class`를 자동으로 생성합니다.
 
 2. `Class` 문 바로 다음에 [Inherits 문](../../../../visual-basic/language-reference/statements/inherits-statement.md)을 입력합니다. 새 클래스가 파생되는 클래스를 지정합니다.
 
@@ -249,14 +249,14 @@ End Sub
 
 #### <a name="collections"></a>컬렉션
 
-특정 형식의 개체 포함을 *컬렉션*으로 나타냅니다. 컬렉션은 열거할 수 있는 유사한 개체의 그룹입니다. Visual Basic supports a specific syntax in the [For Each...Next Statement](../../../../visual-basic/language-reference/statements/for-each-next-statement.md) that allows you to iterate through the items of a collection. 또한 컬렉션을 사용하면<xref:Microsoft.VisualBasic.Collection.Item%2A>을 사용하여 인덱스별로 또는 고유 문자열에 연결하여 요소를 검색할 수 있습니다. 컬렉션은 인덱스를 사용하지 않고도 항목을 추가 또는 제거할 수 있도록 하므로 배열보다 더 쉽게 사용할 수 있습니다. 사용 편의성 때문에 컬렉션을 폼 및 컨트롤을 저장하는 데 종종 사용합니다.
+특정 형식의 개체 포함을 *컬렉션*으로 나타냅니다. 컬렉션은 열거할 수 있는 유사한 개체의 그룹입니다. Visual Basic는 [For Each ... ](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)컬렉션의 항목을 반복 하는 데 사용할 수 있는 다음 문입니다. 또한 컬렉션을 사용하면<xref:Microsoft.VisualBasic.Collection.Item%2A>을 사용하여 인덱스별로 또는 고유 문자열에 연결하여 요소를 검색할 수 있습니다. 컬렉션은 인덱스를 사용하지 않고도 항목을 추가 또는 제거할 수 있도록 하므로 배열보다 더 쉽게 사용할 수 있습니다. 사용 편의성 때문에 컬렉션을 폼 및 컨트롤을 저장하는 데 종종 사용합니다.
 
 ## <a name="related-topics"></a>관련 항목
 
-[Walkthrough: Defining Classes](../../../../visual-basic/programming-guide/language-features/objects-and-classes/walkthrough-defining-classes.md)\
+[연습: 클래스 정의](../../../../visual-basic/programming-guide/language-features/objects-and-classes/walkthrough-defining-classes.md)\
 클래스를 만드는 방법에 대한 단계별 설명을 제공합니다.
 
-[Overloaded Properties and Methods](../../../../visual-basic/programming-guide/language-features/objects-and-classes/overloaded-properties-and-methods.md)\
+[오버 로드 된 속성 및 메서드](../../../../visual-basic/programming-guide/language-features/objects-and-classes/overloaded-properties-and-methods.md)\
 오버로드된 속성 및 메서드
 
 [상속 기본 사항](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)\
@@ -271,5 +271,5 @@ End Sub
 [개체 이니셜라이저: 명명된 형식과 익명 형식](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)\
 단일 식을 사용하여 명명된 형식 및 무명 형식의 인스턴스를 만드는 데 사용되는 개체 이니셜라이저에 대해 설명합니다.
 
-[How to: Infer Property Names and Types in Anonymous Type Declarations](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)\
+[방법: 익명 형식 선언에서 속성 이름 및 형식 유추](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)\
 무명 형식 선언에서 속성 이름 및 형식을 유추하는 방법을 설명합니다. 성공 및 실패한 유추의 예제를 제공합니다.

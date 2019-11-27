@@ -16,28 +16,28 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74341384"
 ---
 # <a name="differences-between-modifiable-and-nonmodifiable-arguments-visual-basic"></a>수정할 수 있는 인수와 수정할 수 없는 인수 사이의 차이점(Visual Basic)
-When you call a procedure, you typically pass one or more arguments to it. Each argument corresponds to an underlying programming element. Both the underlying elements and the arguments themselves can be either modifiable or nonmodifiable.  
+프로시저를 호출 하는 경우 일반적으로 하나 이상의 인수를 전달 합니다. 각 인수는 기본 프로그래밍 요소에 해당 합니다. 기본 요소와 인수 자체는 수정할 수 있거나 수정할 수 없습니다.  
   
-## <a name="modifiable-and-nonmodifiable-elements"></a>Modifiable and Nonmodifiable Elements  
- A programming element can be either a *modifiable element*, which can have its value changed, or a *nonmodifiable element*, which has a fixed value once it has been created.  
+## <a name="modifiable-and-nonmodifiable-elements"></a>수정 가능 하 고 수정할 요소가 없는 요소  
+ 프로그래밍 요소는 해당 값이 변경 될 수 있는 *수정 가능한 요소*이거나, 만들어진 후 고정 값이 있는 수정할 수 없는 *요소*일 수 있습니다.  
   
- The following table lists modifiable and nonmodifiable programming elements.  
+ 다음 표에서는 수정 및 수정할 때의 프로그래밍 요소를 보여 줍니다.  
   
-|Modifiable elements|Nonmodifiable elements|  
+|수정 가능한 요소|수정할 때 요소|  
 |-------------------------|----------------------------|  
-|Local variables (declared inside procedures), including object variables, except for read-only|Read-only variables, fields, and properties|  
-|Fields (member variables of modules, classes, and structures), except for read-only|Constants and literals|  
-|Properties, except for read-only|Enumeration members|  
-|Array elements|Expressions (even if their elements are modifiable)|  
+|읽기 전용을 제외 하 고 개체 변수를 포함 하 여 지역 변수 (프로시저 내에 선언 됨)|읽기 전용 변수, 필드 및 속성|  
+|필드 (모듈, 클래스 및 구조체의 멤버 변수) (읽기 전용 제외)|상수 및 리터럴|  
+|읽기 전용을 제외한 속성|열거형 멤버|  
+|배열 요소|식 (요소를 수정할 수 있는 경우에도)|  
   
-## <a name="modifiable-and-nonmodifiable-arguments"></a>Modifiable and Nonmodifiable Arguments  
- A *modifiable argument* is one with a modifiable underlying element. The calling code can store a new value at any time, and if you pass the argument [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), the code in the procedure can also modify the underlying element in the calling code.  
+## <a name="modifiable-and-nonmodifiable-arguments"></a>수정 가능 하 고 수정 가능한 인수  
+ *수정 가능한 인수* 는 수정 가능한 기본 요소를 포함 하는 인수입니다. 호출 코드는 언제 든 지 새 값을 저장할 수 있으며, [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)인수를 전달 하는 경우 프로시저의 코드는 호출 코드의 내부 요소를 수정할 수도 있습니다.  
   
- A *nonmodifiable argument* either has a nonmodifiable underlying element or is passed [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md). The procedure cannot modify the underlying element in the calling code, even if it is a modifiable element. If it is a nonmodifiable element, the calling code itself cannot modify it.  
+ 수정할 수 없는 *인수* 에는 수정할 수 없는 내부 요소가 있거나 [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)로 전달 됩니다. 이 프로시저는 수정 가능한 요소인 경우에도 호출 코드의 기본 요소를 수정할 수 없습니다. 수정할 수 없는 요소인 경우 호출 코드 자체에서 수정할 수 없습니다.  
   
- The called procedure might modify its local copy of a nonmodifiable argument, but that modification does not affect the underlying element in the calling code.  
+ 호출 된 프로시저는 수정할 수 없는 인수의 로컬 복사본을 수정할 수 있지만이 수정 작업은 호출 코드의 기본 요소에는 영향을 주지 않습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [절차](./index.md)
 - [프로시저 매개 변수 및 인수](./procedure-parameters-and-arguments.md)
@@ -48,4 +48,4 @@ When you call a procedure, you typically pass one or more arguments to it. Each 
 - [방법: 값 변경에 대해 프로시저 인수 보호](./how-to-protect-a-procedure-argument-against-value-changes.md)
 - [방법: 인수가 값으로 전달되도록 설정](./how-to-force-an-argument-to-be-passed-by-value.md)
 - [위치 및 이름으로 인수 전달](./passing-arguments-by-position-and-by-name.md)
-- [값 형식과 참조 형식](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)

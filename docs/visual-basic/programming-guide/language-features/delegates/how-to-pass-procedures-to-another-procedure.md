@@ -1,5 +1,5 @@
 ---
-title: 'How to: Pass Procedures to Another Procedure'
+title: '방법: 다른 프로시저에 프로시저 전달'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - AddressOf operator [Visual Basic]
@@ -13,39 +13,39 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345243"
 ---
 # <a name="how-to-pass-procedures-to-another-procedure-in-visual-basic"></a>방법: Visual Basic에서 프로시저에 다른 프로시저 전달
-This example shows how to use delegates to pass a procedure to another procedure.  
+이 예제에서는 대리자를 사용 하 여 프로시저를 다른 프로시저에 전달 하는 방법을 보여 줍니다.  
   
- A delegate is a type that you can use like any other type in Visual Basic. The `AddressOf` operator returns a delegate object when applied to a procedure name.  
+ 대리자는 Visual Basic의 다른 형식 처럼 사용할 수 있는 형식입니다. `AddressOf` 연산자는 프로시저 이름에 적용 될 때 대리자 개체를 반환 합니다.  
   
- This example has a procedure with a delegate parameter that can take a reference to another procedure, obtained with the `AddressOf` operator.  
+ 이 예제에는 `AddressOf` 연산자를 사용 하 여 얻은 다른 프로시저에 대 한 참조를 사용할 수 있는 대리자 매개 변수를 포함 하는 프로시저가 있습니다.  
   
-### <a name="create-the-delegate-and-matching-procedures"></a>Create the delegate and matching procedures  
+### <a name="create-the-delegate-and-matching-procedures"></a>대리자 및 일치 프로시저 만들기  
   
-1. Create a delegate named `MathOperator`.  
+1. `MathOperator`이라는 대리자를 만듭니다.  
   
      [!code-vb[VbVbalrDelegates#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#1)]  
   
-2. Create a procedure named `AddNumbers` with parameters and return value that match those of `MathOperator`, so that the signatures match.  
+2. 서명이 일치 하도록 `MathOperator`와 일치 하는 매개 변수 및 반환 값을 사용 하 여 `AddNumbers` 라는 프로시저를 만듭니다.  
   
      [!code-vb[VbVbalrDelegates#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#2)]  
   
-3. Create a procedure named `SubtractNumbers` with a signature that matches `MathOperator`.  
+3. `MathOperator`와 일치 하는 서명을 사용 하 여 `SubtractNumbers` 라는 프로시저를 만듭니다.  
   
      [!code-vb[VbVbalrDelegates#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#3)]  
   
-4. Create a procedure named `DelegateTest` that takes a delegate as a parameter.  
+4. 대리자를 매개 변수로 사용 하는 `DelegateTest` 라는 프로시저를 만듭니다.  
   
-     This procedure can accept a reference to `AddNumbers` or `SubtractNumbers`, because their signatures match the `MathOperator` signature.  
+     이 프로시저는 서명이 `MathOperator` 시그니처와 일치 하므로 `AddNumbers` 또는 `SubtractNumbers`에 대 한 참조를 수락할 수 있습니다.  
   
      [!code-vb[VbVbalrDelegates#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#4)]  
   
-5. Create a procedure named `Test` that calls `DelegateTest` once with the delegate for `AddNumbers` as a parameter, and again with the delegate for `SubtractNumbers` as a parameter.  
+5. `AddNumbers`에 대 한 대리자를 매개 변수로 사용 하 고 `SubtractNumbers`에 대 한 대리자를 매개 변수로 사용 하 여 `DelegateTest`를 한 번 호출 하는 `Test` 라는 프로시저를 만듭니다.  
   
      [!code-vb[VbVbalrDelegates#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#5)]  
   
-     When `Test` is called, it first displays the result of `AddNumbers` acting on `5` and `3`, which is 8. Then the result of `SubtractNumbers` acting on `9` and `3` is displayed, which is 6.  
+     `Test`를 호출 하면 먼저 `5` 및 `3`에서 작동 하는 `AddNumbers`의 결과 (8)를 표시 합니다. 그러면 `9` 및 `3`에서 작동 하는 `SubtractNumbers` 결과가 6이 됩니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [대리자](../../../../visual-basic/programming-guide/language-features/delegates/index.md)
 - [AddressOf 연산자](../../../../visual-basic/language-reference/operators/addressof-operator.md)

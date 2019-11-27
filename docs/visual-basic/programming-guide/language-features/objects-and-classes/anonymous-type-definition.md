@@ -13,15 +13,15 @@ ms.locfileid: "74344922"
 ---
 # <a name="anonymous-type-definition-visual-basic"></a>익명 형식 정의(Visual Basic)
 
-In response to the declaration of an instance of an anonymous type, the compiler creates a new class definition that contains the specified properties for the type.
+익명 형식의 인스턴스 선언에 대 한 응답으로 컴파일러는 해당 형식에 대해 지정 된 속성을 포함 하는 새 클래스 정의를 만듭니다.
 
-## <a name="compiler-generated-code"></a>Compiler-Generated Code
+## <a name="compiler-generated-code"></a>컴파일러 생성 코드
 
-For the following definition of `product`, the compiler creates a new class definition that contains properties `Name`, `Price`, and `OnHand`.
+다음 `product`정의의 경우 컴파일러는 `Name`, `Price`및 `OnHand`속성을 포함 하는 새 클래스 정의를 만듭니다.
 
 [!code-vb[VbVbalrAnonymousTypes#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#25)]
 
-The class definition contains property definitions similar to the following. Notice that there is no `Set` method for the key properties. The values of key properties are read-only.
+클래스 정의에는 다음과 유사한 속성 정의가 포함 되어 있습니다. 키 속성에 대 한 `Set` 메서드가 없습니다. 키 속성의 값은 읽기 전용입니다.
 
 ```vb
 Public Class $Anonymous1
@@ -52,38 +52,38 @@ Public Class $Anonymous1
 End Class
 ```
 
-In addition, anonymous type definitions contain a parameterless constructor. Constructors that require parameters are not permitted.
+또한 익명 형식 정의에는 매개 변수가 없는 생성자가 포함 됩니다. 매개 변수를 필요로 하는 생성자는 허용 되지 않습니다.
 
-If an anonymous type declaration contains at least one key property, the type definition overrides three members inherited from <xref:System.Object>: <xref:System.Object.Equals%2A>, <xref:System.Object.GetHashCode%2A>, and <xref:System.Object.ToString%2A>. If no key properties are declared, only <xref:System.Object.ToString%2A> is overridden. The overrides provide the following functionality:
+익명 형식 선언에 하나 이상의 키 속성이 포함 된 경우 형식 정의는 <xref:System.Object>에서 상속 된 세 개의 멤버 <xref:System.Object.Equals%2A>, <xref:System.Object.GetHashCode%2A>및 <xref:System.Object.ToString%2A>를 재정의 합니다. 키 속성이 선언 되지 않은 경우 <xref:System.Object.ToString%2A>만 재정의 됩니다. 재정의는 다음과 같은 기능을 제공 합니다.
 
-- `Equals` returns `True` if two anonymous type instances are the same instance, or if they meet the following conditions:
+- 두 익명 형식 인스턴스가 동일한 인스턴스이거나 다음 조건을 충족 하는 경우에는 `Equals` `True` 반환 됩니다.
 
-  - They have the same number of properties.
+  - 속성의 수는 동일 합니다.
 
-  - The properties are declared in the same order, with the same names and the same inferred types. Name comparisons are not case-sensitive.
+  - 속성은 같은 순서로 선언 되며 동일한 이름 및 유추 된 형식이 동일 합니다. 이름 비교는 대/소문자를 구분 하지 않습니다.
 
-  - At least one of the properties is a key property, and the `Key` keyword is applied to the same properties.
+  - 속성 중 하나 이상이 키 속성 이며 `Key` 키워드가 같은 속성에 적용 됩니다.
 
-  - Comparison of each corresponding pair of key properties returns `True`.
+  - 각 해당 키 속성 쌍의 비교는 `True`을 반환 합니다.
 
-    For example, in the following examples, `Equals` returns `True` only for `employee01` and `employee08`. The comment before each line specifies the reason why the new instance does not match `employee01`.
+    예를 들어 다음 예제에서 `Equals`은 `employee01` 및 `employee08`에 대해서만 `True` 반환 합니다. 각 줄 앞의 주석은 새 인스턴스가 `employee01`일치 하지 않는 이유를 지정 합니다.
 
     [!code-vb[VbVbalrAnonymousTypes#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#24)]
 
-- `GetHashcode` provides an appropriately unique GetHashCode algorithm. The algorithm uses only the key properties to compute the hash code.
+- `GetHashcode`은 적절 한 고유 GetHashCode 알고리즘을 제공 합니다. 알고리즘은 키 속성만 사용 하 여 해시 코드를 계산 합니다.
 
-- `ToString` returns a string of concatenated property values, as shown in the following example. Both key and non-key properties are included.
+- 다음 예제와 같이 `ToString`는 연결 된 속성 값의 문자열을 반환 합니다. 키와 키가 아닌 속성은 모두 포함 됩니다.
 
   [!code-vb[VbVbalrAnonymousTypes#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#29)]
 
-Explicitly named properties of an anonymous type cannot conflict with these generated methods. That is, you cannot use `.Equals`, `.GetHashCode`, or `.ToString` to name a property.
+익명 형식의 명시적으로 명명 된 속성은 이러한 생성 된 메서드와 충돌할 수 없습니다. 즉, `.Equals`, `.GetHashCode`또는 `.ToString`를 사용 하 여 속성의 이름을 지정할 수 없습니다.
 
-Anonymous type definitions that include at least one key property also implement the <xref:System.IEquatable%601?displayProperty=nameWithType> interface, where `T` is the type of the anonymous type.
+하나 이상의 키 속성을 포함 하는 익명 형식 정의는 <xref:System.IEquatable%601?displayProperty=nameWithType> 인터페이스도 구현 합니다. 여기서 `T`는 무명 형식의 형식입니다.
 
 > [!NOTE]
-> Anonymous type declarations create the same anonymous type only if they occur in the same assembly, their properties have the same names and the same inferred types, the properties are declared in the same order, and the same properties are marked as key properties.
+> 익명 형식 선언은 동일한 어셈블리에서 발생 하는 경우에만 동일한 익명 형식을 만들며, 해당 속성은 동일한 이름 및 유추 된 형식을 가지 며 속성은 동일한 순서로 선언 되며 동일한 속성이 키 속성으로 표시 됩니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [익명 형식](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
 - [방법: 익명 형식 선언에서 속성 이름 및 형식 유추](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)

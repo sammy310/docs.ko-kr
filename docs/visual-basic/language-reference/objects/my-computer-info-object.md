@@ -15,15 +15,15 @@ ms.locfileid: "74347206"
 컴퓨터의 메모리, 로드된 어셈블리, 이름 및 운영 체제에 대한 정보를 가져오기 위한 속성을 제공합니다.  
   
 ## <a name="remarks"></a>주의  
- For information about the properties of the `My.Computer.Info` object, see <xref:Microsoft.VisualBasic.Devices.ComputerInfo>.  
+ `My.Computer.Info` 개체의 속성에 대 한 자세한 내용은 <xref:Microsoft.VisualBasic.Devices.ComputerInfo>을 참조 하십시오.  
   
 ## <a name="requirements"></a>요구 사항  
  **네임스페이스:** <xref:Microsoft.VisualBasic.Devices>  
   
  **클래스:** <xref:Microsoft.VisualBasic.Devices.ComputerInfo>  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **어셈블리:** Visual Basic 런타임 라이브러리 (Microsoft.visualbasic)  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [My.Computer 개체](../../../visual-basic/language-reference/objects/my-computer-object.md)

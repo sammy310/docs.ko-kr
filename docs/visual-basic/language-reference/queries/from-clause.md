@@ -17,8 +17,8 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74343774"
 ---
-# <a name="from-clause-visual-basic"></a>From Clause (Visual Basic)
-Specifies one or more range variables and a collection to query.  
+# <a name="from-clause-visual-basic"></a>From 절(Visual Basic)
+하나 이상의 범위 변수와 쿼리할 컬렉션을 지정 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -31,45 +31,45 @@ From element [ As type ] In collection [ _ ]
   
 |용어|정의|  
 |---|---|  
-|`element`|필수 요소. A *range variable* used to iterate through the elements of the collection. A range variable is used to refer to each member of the `collection` as the query iterates through the `collection`. Must be an enumerable type.|  
-|`type`|(선택 사항) `element`의 형식입니다. If no `type` is specified, the type of `element` is inferred from `collection`.|  
-|`collection`|필수 요소. Refers to the collection to be queried. Must be an enumerable type.|  
+|`element`|필수입니다. 컬렉션의 요소를 반복 하는 데 사용 되는 *범위 변수* 입니다. 범위 변수는 쿼리가 `collection`를 반복 하 여 `collection`의 각 멤버를 참조 하는 데 사용 됩니다. 는 열거 가능한 형식 이어야 합니다.|  
+|`type`|(선택 사항) `element`의 형식입니다. `type` 지정 하지 않으면 `element` 형식이 `collection`에서 유추 됩니다.|  
+|`collection`|필수입니다. 쿼리할 컬렉션을 참조 합니다. 는 열거 가능한 형식 이어야 합니다.|  
   
 ## <a name="remarks"></a>주의  
- The `From` clause is used to identify the source data for a query and the variables that are used to refer to an element from the source collection. These variables are called *range variables*. The `From` clause is required for a query, except when the `Aggregate` clause is used to identify a query that returns only aggregated results. For more information, see [Aggregate Clause](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
+ `From` 절은 쿼리의 소스 데이터와 소스 컬렉션의 요소를 참조 하는 데 사용 되는 변수를 식별 하는 데 사용 됩니다. 이러한 변수를 *범위 변수*라고 합니다. `Aggregate` 절을 사용 하 여 집계 된 결과만 반환 하는 쿼리를 식별 하는 경우를 제외 하 고는 쿼리에는 `From` 절이 필요 합니다. 자세한 내용은 [Aggregate 절](../../../visual-basic/language-reference/queries/aggregate-clause.md)을 참조 하세요.  
   
- You can specify multiple `From` clauses in a query to identify multiple collections to be joined. When multiple collections are specified, they are iterated over independently, or you can join them if they are related. You can join collections implicitly by using the `Select` clause, or explicitly by using the `Join` or `Group Join` clauses. As an alternative, you can specify multiple range variables and collections in a single `From` clause, with each related range variable and collection separated from the others by a comma. The following code example shows both syntax options for the `From` clause.  
+ 쿼리에 여러 개의 `From` 절을 지정 하 여 조인할 여러 컬렉션을 식별할 수 있습니다. 여러 컬렉션을 지정 하는 경우 이러한 컬렉션은 독립적으로 반복 되거나 관련 된 경우 조인할 수 있습니다. `Select` 절을 사용 하 여 암시적으로 또는 `Join` 또는 `Group Join` 절을 사용 하 여 명시적으로 컬렉션을 조인할 수 있습니다. 또는 각각의 관련 범위 변수와 컬렉션을 쉼표로 구분 하 여 단일 `From` 절에 여러 범위 변수와 컬렉션을 지정할 수 있습니다. 다음 코드 예에서는 `From` 절의 구문 옵션을 모두 보여 줍니다.  
   
  [!code-vb[VbSimpleQuerySamples#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#21)]  
   
- The `From` clause defines the scope of a query, which is similar to the scope of a `For` loop. Therefore, each `element` range variable in the scope of a query must have a unique name. Because you can specify multiple `From` clauses for a query, subsequent `From` clauses can refer to range variables in the `From` clause, or they can refer to range variables in a previous `From` clause. For example, the following example shows a nested `From` clause where the collection in the second clause is based on a property of the range variable in the first clause.  
+ `From` 절은 쿼리 범위를 정의 하며,이는 `For` 루프의 범위와 비슷합니다. 따라서 쿼리 범위에 있는 각 `element` 범위 변수에는 고유한 이름이 있어야 합니다. 쿼리에 대해 여러 개의 `From` 절을 지정할 수 있으므로 후속 `From` 절은 `From` 절에서 범위 변수를 참조 하거나 이전 `From` 절에서 범위 변수를 참조할 수 있습니다. 예를 들어 다음 예에서는 두 번째 절의 컬렉션이 첫 번째 절의 범위 변수 속성을 기반으로 하는 중첩 된 `From` 절을 보여 줍니다.  
   
  [!code-vb[VbSimpleQuerySamples#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#22)]  
   
- Each `From` clause can be followed by any combination of additional query clauses to refine the query. You can refine the query in the following ways:  
+ 각 `From` 절 뒤에는 쿼리를 구체화 하기 위한 추가 쿼리 절의 조합이 올 수 있습니다. 다음과 같은 방법으로 쿼리를 구체화할 수 있습니다.  
   
-- Combine multiple collections implicitly by using the `From` and `Select` clauses, or explicitly by using the `Join` or `Group Join` clauses.  
+- `From` 및 `Select` 절을 사용 하 여 명시적으로 또는 `Join` 또는 `Group Join` 절을 사용 하 여 명시적으로 여러 컬렉션을 결합 합니다.  
   
-- Use the `Where` clause to filter the query result.  
+- `Where` 절을 사용 하 여 쿼리 결과를 필터링 합니다.  
   
-- Sort the result by using the `Order By` clause.  
+- `Order By` 절을 사용 하 여 결과를 정렬 합니다.  
   
-- Group similar results together by using the `Group By` clause.  
+- `Group By` 절을 사용 하 여 비슷한 결과를 그룹화 합니다.  
   
-- Use the `Aggregate` clause to identify aggregate functions to evaluate for the whole query result.  
+- `Aggregate` 절을 사용 하 여 전체 쿼리 결과를 평가 하는 집계 함수를 식별 합니다.  
   
-- Use the `Let` clause to introduce an iteration variable whose value is determined by an expression instead of a collection.  
+- `Let` 절을 사용 하 여 해당 값이 컬렉션이 아닌 식에 의해 결정 되는 반복 변수를 도입할 수 있습니다.  
   
-- Use the `Distinct` clause to ignore duplicate query results.  
+- `Distinct` 절을 사용 하 여 중복 쿼리 결과를 무시 합니다.  
   
-- Identify parts of the result to return by using the `Skip`, `Take`, `Skip While`, and `Take While` clauses.  
+- `Skip`, `Take`, `Skip While`및 `Take While` 절을 사용 하 여 반환할 결과의 일부를 식별 합니다.  
   
 ## <a name="example"></a>예제  
- The following query expression uses a `From` clause to declare a range variable `cust` for each `Customer` object in the `customers` collection. The `Where` clause uses the range variable to restrict the output to customers from the specified region. The `For Each` loop displays the company name for each customer in the query result.  
+ 다음 쿼리 식은 `From` 절을 사용 하 여 `customers` 컬렉션의 각 `Customer` 개체에 대해 범위 변수 `cust`를 선언 합니다. `Where` 절은 범위 변수를 사용 하 여 지정 된 지역의 고객에 대 한 출력을 제한 합니다. `For Each` 루프는 쿼리 결과에서 각 고객의 회사 이름을 표시 합니다.  
   
  [!code-vb[VbSimpleQuerySamples#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#23)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [쿼리](../../../visual-basic/language-reference/queries/index.md)
 - [Visual Basic의 LINQ 소개](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

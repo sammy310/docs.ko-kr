@@ -14,30 +14,30 @@ ms.locfileid: "74347416"
 ---
 # <a name="how-to-create-xml-documentation-in-visual-basic"></a>방법: Visual Basic에서 XML 문서 만들기
 
-This example shows how to add XML documentation comments to your code.
+이 예제에서는 코드에 XML 문서 주석을 추가 하는 방법을 보여 줍니다.
 
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]
 
-## <a name="to-create-xml-documentation-for-a-type-or-member"></a>To create XML documentation for a type or member
+## <a name="to-create-xml-documentation-for-a-type-or-member"></a>형식 또는 멤버에 대 한 XML 문서를 만들려면
 
-1. In the **Code Editor**, position your cursor on the line above the type or member for which you want to create documentation.
+1. **코드 편집기**에서 문서를 만들 형식 또는 멤버 위의 줄에 커서를 놓습니다.
 
-2. Type `'''` (three single-quotation marks).
+2. `'''` (세 개의 작은따옴표)를 입력 합니다.
 
-    An XML skeleton for the type or member is added in the **Code Editor**.
+    형식 또는 멤버에 대 한 XML 뼈대가 **코드 편집기**에 추가 됩니다.
 
-3. Add descriptive information between the appropriate tags.
+3. 적절 한 태그 사이에 설명 정보를 추가 합니다.
 
     > [!NOTE]
-    > If you add additional lines within the XML documentation block, each line must begin with `'''`.
+    > XML 문서 블록 내에 줄을 추가 하는 경우 각 줄은 `'''`으로 시작 해야 합니다.
 
-4. Add additional code that uses the type or member with the new XML documentation comments.
+4. 형식 또는 멤버를 사용 하는 코드를 새 XML 문서 주석과 함께 추가 합니다.
 
-    IntelliSense displays the text from the \<summary> tag for the type or member.
+    IntelliSense는 형식 또는 멤버에 대 한 \<요약 > 태그의 텍스트를 표시 합니다.
 
-5. Compile the code to generate an XML file containing the documentation comments. 자세한 내용은 [-doc](../../../visual-basic/reference/command-line-compiler/doc.md)를 참조하세요.
+5. 코드를 컴파일하여 문서 주석을 포함 하는 XML 파일을 생성 합니다. 자세한 내용은 [-doc](../../../visual-basic/reference/command-line-compiler/doc.md)를 참조하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [코드를 XML로 문서화](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)
 - [XML 주석 태그](../../../visual-basic/language-reference/xmldoc/index.md)

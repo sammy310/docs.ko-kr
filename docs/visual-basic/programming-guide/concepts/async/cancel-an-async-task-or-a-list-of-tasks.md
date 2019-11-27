@@ -9,11 +9,11 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347962"
 ---
-# <a name="cancel-an-async-task-or-a-list-of-tasks-visual-basic"></a>Cancel an Async Task or a List of Tasks (Visual Basic)
+# <a name="cancel-an-async-task-or-a-list-of-tasks-visual-basic"></a>비동기 작업 또는 작업 목록 취소 (Visual Basic)
 
 작업이 완료될 때까지 기다리지 않으려면 비동기 애플리케이션을 취소할 때 사용하는 단추를 설정할 수 있습니다. 이 항목의 예제에 따라 한 웹 사이트 또는 웹 사이트 목록의 콘텐츠를 다운로드하는 애플리케이션에 취소 단추를 추가할 수 있습니다.
 
-The examples use the UI that [Fine-Tuning Your Async Application (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md) describes.
+이 예제에서는 [비동기 응용 프로그램 (Visual Basic)을 미세 조정](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md) 하는 UI를 사용 합니다.
 
 > [!NOTE]
 > 예제를 실행하려면 Visual Studio 2012 이상 및 .NET Framework 4.5 이상이 컴퓨터에 설치되어 있어야 합니다.
@@ -38,7 +38,7 @@ The examples use the UI that [Fine-Tuning Your Async Application (Visual Basic)]
 
      디버그하지 않고 프로젝트를 실행하려면 Ctrl+F5를 선택합니다.
 
- If you don't want to download the project, you can review the MainWindow.xaml.vb files at the end of this topic.
+ 프로젝트를 다운로드 하지 않으려는 경우이 항목의 끝에 있는 Mainwindow.xaml 파일을 검토할 수 있습니다.
 
 ### <a name="building-the-example"></a>예제 빌드
 
@@ -46,7 +46,7 @@ The examples use the UI that [Fine-Tuning Your Async Application (Visual Basic)]
 
 직접 예제를 빌드하려면 "예제 다운로드" 섹션의 지침을 단계별로 따르지만 **시작 프로젝트**로 **CancelATask** 대신 **StarterCode**를 선택합니다.
 
-Then add the following changes to the MainWindow.xaml.vb file of that project.
+그런 다음, 해당 프로젝트의 Mainwindow.xaml 파일에 다음 변경 내용을 추가 합니다.
 
 1. 액세스하는 모든 메서드에 대한 범위 내에 있는 `CancellationTokenSource` 변수 `cts`를 선언합니다.
 
@@ -78,7 +78,7 @@ Then add the following changes to the MainWindow.xaml.vb file of that project.
       cts = New CancellationTokenSource()
       ```
 
-    - 지정된 웹 사이트의 콘텐츠를 다운로드하는 `AccessTheWebAsync` 호출에서 `cts`의 <xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=nameWithType> 속성을 인수로 전송합니다. 취소가 요청되면 `Token` 속성은 메시지를 전파합니다. 사용자가 다운로드 작업을 취소하도록 선택할 경우 메시지를 표시하는 catch 블록을 추가합니다. 다음 코드는 변경 내용을 보여 줍니다.
+    - 지정된 웹 사이트의 콘텐츠를 다운로드하는 `AccessTheWebAsync` 호출에서 <xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=nameWithType>의 `cts` 속성을 인수로 전송합니다. 취소가 요청되면 `Token` 속성은 메시지를 전파합니다. 사용자가 다운로드 작업을 취소하도록 선택할 경우 메시지를 표시하는 catch 블록을 추가합니다. 다음 코드는 변경 내용을 보여 줍니다.
 
       ```vb
       Try
@@ -97,7 +97,7 @@ Then add the following changes to the MainWindow.xaml.vb file of that project.
       End Try
       ```
 
-4. `AccessTheWebAsync`에서 <xref:System.Net.Http.HttpClient> 형식에 있는 `GetAsync` 메서드의 <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=nameWithType> 오버로드를 사용하여 웹 사이트의 콘텐츠를 다운로드합니다. `AccessTheWebAsync`의 <xref:System.Threading.CancellationToken> 매개 변수인 `ct`를 두 번째 인수로 전달합니다. 사용자가 **취소** 단추를 선택하면 토큰이 메시지를 전달합니다.
+4. `AccessTheWebAsync`에서 <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=nameWithType> 형식에 있는 `GetAsync` 메서드의 <xref:System.Net.Http.HttpClient> 오버로드를 사용하여 웹 사이트의 콘텐츠를 다운로드합니다. `ct`의 <xref:System.Threading.CancellationToken> 매개 변수인 `AccessTheWebAsync`를 두 번째 인수로 전달합니다. 사용자가 **취소** 단추를 선택하면 토큰이 메시지를 전달합니다.
 
     다음 코드는 `AccessTheWebAsync`의 변경 내용을 보여 줍니다.
 
@@ -124,14 +124,14 @@ Then add the following changes to the MainWindow.xaml.vb file of that project.
     End Function
     ```
 
-5. If you don’t cancel the program, it produces the following output:
+5. 프로그램을 취소 하지 않으면 다음과 같은 출력이 생성 됩니다.
 
     ```console
     Ready to download.
     Length of the downloaded string: 158125.
     ```
 
-    If you choose the **Cancel** button before the program finishes downloading the content, the program produces the following output:
+    프로그램이 콘텐츠 다운로드를 완료 하기 전에 **취소** 단추를 선택 하면 프로그램에서 다음과 같은 출력을 생성 합니다.
 
     ```console
     Ready to download.
@@ -158,7 +158,7 @@ Then add the following changes to the MainWindow.xaml.vb file of that project.
 
      디버그하지 않고 프로젝트를 실행하려면 Ctrl+F5를 선택합니다.
 
- If you don't want to download the project, you can review the MainWindow.xaml.vb files at the end of this topic.
+ 프로젝트를 다운로드 하지 않으려는 경우이 항목의 끝에 있는 Mainwindow.xaml 파일을 검토할 수 있습니다.
 
 ### <a name="building-the-example"></a>예제 빌드
 
@@ -209,7 +209,7 @@ Then add the following changes to the MainWindow.xaml.vb file of that project.
     Next
     ```
 
-4. `AccessTheWebAsync`는 길이를 표시하므로 메서드가 아무것도 반환할 필요가 없습니다. return 문을 제거하고 메서드의 반환 형식을 <xref:System.Threading.Tasks.Task%601> 대신 <xref:System.Threading.Tasks.Task>로 변경합니다.
+4. `AccessTheWebAsync`는 길이를 표시하므로 메서드가 아무것도 반환할 필요가 없습니다. return 문을 제거하고 메서드의 반환 형식을 <xref:System.Threading.Tasks.Task> 대신 <xref:System.Threading.Tasks.Task%601>로 변경합니다.
 
     ```vb
     Async Function AccessTheWebAsync(ct As CancellationToken) As Task
@@ -221,7 +221,7 @@ Then add the following changes to the MainWindow.xaml.vb file of that project.
     Await AccessTheWebAsync(cts.Token)
     ```
 
-5. If you don’t cancel the program, it produces the following output:
+5. 프로그램을 취소 하지 않으면 다음과 같은 출력이 생성 됩니다.
 
     ```console
     Length of the downloaded string: 35939.
@@ -261,7 +261,7 @@ Then add the following changes to the MainWindow.xaml.vb file of that project.
 
 ### <a name="cancel-a-task-example"></a>작업 취소 예제
 
-The following code is the complete MainWindow.xaml.vb file for the example that cancels a single task.
+다음 코드는 단일 작업을 취소 하는 예제에 대 한 전체 Mainwindow.xaml 파일입니다.
 
 ```vb
 ' Add an Imports directive and a reference for System.Net.Http.
@@ -346,7 +346,7 @@ End Class
 
 ### <a name="cancel-a-list-of-tasks-example"></a>작업 목록 취소 예제
 
-The following code is the complete MainWindow.xaml.vb file for the example that cancels a list of tasks.
+다음 코드는 작업 목록을 취소 하는 예제에 대 한 전체 Mainwindow.xaml 파일입니다.
 
 ```vb
 ' Add an Imports directive and a reference for System.Net.Http.
@@ -463,7 +463,7 @@ End Class
 ' Downloads canceled.
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Threading.CancellationTokenSource>
 - <xref:System.Threading.CancellationToken>

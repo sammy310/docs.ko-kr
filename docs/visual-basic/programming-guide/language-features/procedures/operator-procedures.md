@@ -20,33 +20,33 @@ ms.locfileid: "74346007"
 ---
 # <a name="operator-procedures-visual-basic"></a>연산자 프로시저(Visual Basic)
 
-An operator procedure is a series of Visual Basic statements that define the behavior of a standard operator (such as `*`, `<>`, or `And`) on a class or structure you have defined. This is also called *operator overloading*.
+연산자 프로시저는 정의한 클래스 또는 구조체에 대 한 표준 연산자 (예: `*`, `<>`또는 `And`)의 동작을 정의 하는 일련의 Visual Basic 문입니다. 이를 *연산자 오버 로드*라고도 합니다.
 
-## <a name="when-to-define-operator-procedures"></a>When to Define Operator Procedures
+## <a name="when-to-define-operator-procedures"></a>연산자 프로시저를 정의 하는 경우
 
-When you have defined a class or structure, you can declare variables to be of the type of that class or structure. Sometimes such a variable needs to participate in an operation as part of an expression. To do this, it must be an operand of an operator.
+클래스 또는 구조체를 정의한 경우 해당 클래스 또는 구조체의 형식으로 변수를 선언할 수 있습니다. 때로는 이러한 변수가 식의 일부로 작업에 참여 해야 하는 경우가 있습니다. 이렇게 하려면 연산자의 피연산자 여야 합니다.
 
-Visual Basic defines operators only on its fundamental data types. You can define the behavior of an operator when one or both of the operands are of the type of your class or structure.
+Visual Basic은 기본 데이터 형식에 대해서만 연산자를 정의 합니다. 피연산자 중 하나 또는 둘 다가 클래스 또는 구조체의 형식인 경우 연산자의 동작을 정의할 수 있습니다.
 
-For more information, see [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md).
+자세한 내용은 [Operator 문](../../../../visual-basic/language-reference/statements/operator-statement.md)을 참조 하세요.
 
-## <a name="types-of-operator-procedure"></a>Types of Operator Procedure
+## <a name="types-of-operator-procedure"></a>연산자 프로시저 유형
 
-An operator procedure can be one of the following types:
+연산자 프로시저는 다음 형식 중 하나일 수 있습니다.
 
-- A definition of a unary operator where the argument is of the type of your class or structure.
+- 인수가 클래스 또는 구조체의 형식인 단항 연산자의 정의입니다.
 
-- A definition of a binary operator where at least one of the arguments is of the type of your class or structure.
+- 하나 이상의 인수가 클래스 또는 구조체의 형식인 이항 연산자의 정의입니다.
 
-- A definition of a conversion operator where the argument is of the type of your class or structure.
+- 인수가 클래스 또는 구조체의 형식인 변환 연산자의 정의입니다.
 
-- A definition of a conversion operator that returns the type of your class or structure.
+- 클래스 또는 구조체의 형식을 반환 하는 변환 연산자의 정의입니다.
 
- Conversion operators are always unary, and you always use `CType` as the operator you are defining.
+ 변환 연산자는 항상 단항 이며, 정의 하는 연산자로 항상 `CType`를 사용 합니다.
 
 ## <a name="declaration-syntax"></a>선언 구문
 
-The syntax for declaring an operator procedure is as follows:
+연산자 프로시저를 선언 하는 구문은 다음과 같습니다.
 
 ```vb
 Public Shared [Widening | Narrowing] Operator operatorsymbol ( operand1 [,  operand2 ]) As datatype
@@ -56,39 +56,39 @@ Public Shared [Widening | Narrowing] Operator operatorsymbol ( operand1 [,  oper
 End Operator
 ```
 
-You use the `Widening` or `Narrowing` keyword only on a type conversion operator. The operator symbol is always [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md) for a type conversion operator.
+형식 변환 연산자에 대해서만 `Widening` 또는 `Narrowing` 키워드를 사용 합니다. 연산자 기호는 형식 변환 연산자에 대해 항상 [CType 함수](../../../../visual-basic/language-reference/functions/ctype-function.md) 입니다.
 
-You declare two operands to define a binary operator, and you declare one operand to define a unary operator, including a type conversion operator. All operands must be declared `ByVal`.
+이항 연산자를 정의 하는 두 개의 피연산자를 선언 하 고, 형식 변환 연산자를 포함 하 여 단항 연산자를 정의 하는 피연산자 하나를 선언 합니다. 모든 피연산자 `ByVal`선언 해야 합니다.
 
-You declare each operand the same way you declare parameters for [Sub Procedures](./sub-procedures.md).
+[Sub 프로시저](./sub-procedures.md)에 대 한 매개 변수를 선언 하는 것과 동일한 방식으로 각 피연산자를 선언 합니다.
 
 ### <a name="data-type"></a>데이터 형식
 
-Because you are defining an operator on a class or structure you have defined, at least one of the operands must be of the data type of that class or structure. For a type conversion operator, either the operand or the return type must be of the data type of the class or structure.
+정의한 클래스 또는 구조체에서 연산자를 정의 하기 때문에 하나 이상의 피연산자는 해당 클래스 또는 구조체의 데이터 형식 이어야 합니다. 형식 변환 연산자의 경우 피연산자 또는 반환 형식이 클래스 또는 구조체의 데이터 형식 이어야 합니다.
 
-For more details, see [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md).
+자세한 내용은 [Operator 문](../../../../visual-basic/language-reference/statements/operator-statement.md)을 참조 하세요.
 
-## <a name="calling-syntax"></a>Calling Syntax
+## <a name="calling-syntax"></a>호출 구문
 
-You invoke an operator procedure implicitly by using the operator symbol in an expression. You supply the operands the same way you do for predefined operators.
+식에서 연산자 기호를 사용 하 여 연산자 프로시저를 암시적으로 호출 합니다. 미리 정의 된 연산자에 대해 수행 하는 것과 동일한 방식으로 피연산자를 제공 합니다.
 
-The syntax for an implicit call to an operator procedure is as follows:
+연산자 프로시저에 대 한 암시적 호출 구문은 다음과 같습니다.
 
-`Dim testStruct As`  *structurename*
+`Dim testStruct As`*structurename*
 
-`Dim testNewStruct As`  *structurename*  `= testStruct`  *operatorsymbol*  `10`
+`Dim testNewStruct As`*structurename*`= testStruct`*operatorsymbol*`10`
 
-### <a name="illustration-of-declaration-and-call"></a>Illustration of Declaration and Call
+### <a name="illustration-of-declaration-and-call"></a>선언 및 호출에 대 한 그림
 
-The following structure stores a signed 128-bit integer value as the constituent high-order and low-order parts. It defines the `+` operator to add two `veryLong` values and generate a resulting `veryLong` value.
+다음 구조체는 부호 있는 128 비트 정수 값을 구성 된 상위 및 하위 부분으로 저장 합니다. `+` 연산자를 정의 하 여 두 개의 `veryLong` 값을 추가 하 고 결과 `veryLong` 값을 생성 합니다.
 
 [!code-vb[VbVbcnProcedures#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#23)]
 
-The following example shows a typical call to the `+` operator defined on `veryLong`.
+다음 예에서는 `veryLong`에 정의 된 `+` 연산자에 대 한 일반적인 호출을 보여 줍니다.
 
 [!code-vb[VbVbcnProcedures#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#24)]
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [절차](./index.md)
 - [Sub 프로시저](./sub-procedures.md)

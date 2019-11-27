@@ -13,48 +13,48 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345412"
 ---
 # <a name="differences-between-shadowing-and-overriding-visual-basic"></a>숨기기와 재정의의 차이점(Visual Basic)
-When you define a class that inherits from a base class, you sometimes want to redefine one or more of the base class elements in the derived class. Shadowing and overriding are both available for this purpose.  
+기본 클래스에서 상속 하는 클래스를 정의 하는 경우 파생 클래스에서 하나 이상의 기본 클래스 요소를 다시 정의 하려는 경우가 있습니다. 이러한 용도로 숨김과 재정의를 모두 사용할 수 있습니다.  
   
 ## <a name="comparison"></a>비교  
- Shadowing and overriding are both used when a derived class inherits from a base class, and both redefine one declared element with another. But there are significant differences between the two.  
+ 숨김 및 재정의는 모두 파생 클래스가 기본 클래스에서 상속 하는 경우와 선언 된 요소를 다른 요소와 모두 재정의 하는 데 사용 됩니다. 하지만 둘 사이에는 상당한 차이점이 있습니다.  
   
- The following table compares shadowing with overriding.  
+ 다음 표에서는 숨김과를 재정의 하는 것을 비교 합니다.  
   
 ||||  
 |---|---|---|  
-|Point of comparison|섀도잉|Overriding|  
-|용도|Protects against a subsequent base-class modification that introduces a member you have already defined in your derived class|Achieves polymorphism by defining a different implementation of a procedure or property with the same calling sequence<sup>1</sup>|  
-|Redefined element|Any declared element type|Only a procedure (`Function`, `Sub`, or `Operator`) or property|  
-|Redefining element|Any declared element type|Only a procedure or property with the identical calling sequence<sup>1</sup>|  
-|Access level of redefining element|Any access level|Cannot change access level of overridden element|  
-|Readability and writability of redefining element|Any combination|Cannot change readability or writability of overridden property|  
-|Control over redefining|Base class element cannot enforce or prohibit shadowing|Base class element can specify `MustOverride`, `NotOverridable`, or `Overridable`|  
-|Keyword usage|`Shadows` recommended in derived class; `Shadows` assumed if neither `Shadows` nor `Overrides` specified<sup>2</sup>|`Overridable` or `MustOverride` required in base class; `Overrides` required in derived class|  
-|Inheritance of redefining element by classes deriving from your derived class|Shadowing element inherited by further derived classes; shadowed element still hidden<sup>3</sup>|Overriding element inherited by further derived classes; overridden element still overridden|  
+|비교 지점|섀도잉|재정의|  
+|용도|파생 클래스에 이미 정의 된 멤버를 소개 하는 후속 기본 클래스 수정 으로부터 보호 합니다.|동일한 호출 시퀀스<sup>1</sup> 을 사용 하 여 프로시저 또는 속성의 다른 구현을 정의 함으로써 다형성을 달성 합니다.|  
+|다시 정의 요소|선언 된 모든 요소 형식|프로시저 (`Function`, `Sub`또는 `Operator`) 또는 속성만|  
+|요소 재정의|선언 된 모든 요소 형식|동일한 호출 시퀀스<sup>1</sup> 을 사용 하는 프로시저나 속성만|  
+|재정의 요소의 액세스 수준|모든 액세스 수준|재정의 된 요소의 액세스 수준을 변경할 수 없습니다.|  
+|재정의 요소의 가독성 및 쓰기 가능성|모든 조합|재정의 된 속성의 가독성 또는 쓰기 가능성를 변경할 수 없습니다.|  
+|재정의를 제어 합니다.|기본 클래스 요소는 숨김을 적용 하거나 금지할 수 없습니다.|기본 클래스 요소는 `MustOverride`, `NotOverridable`또는을 지정할 수 있습니다 `Overridable`|  
+|키워드 사용|파생 클래스에서 `Shadows` 권장 `Shadows` `Shadows` 또는<sup>`Overrides` 지정 하지</sup> 않은 경우를 가정 합니다.|기본 클래스에 `Overridable` 또는 `MustOverride` 필요 합니다. 파생 클래스에 `Overrides` 필요 합니다.|  
+|파생 클래스에서 파생 되는 클래스에의 한 재정의 요소 상속|추가 파생 클래스에서 상속 되는 요소 숨김 숨겨진 요소는 계속 숨겨져 있습니다.<sup>3</sup>|추가로 파생 된 클래스에서 상속 된 요소 재정의 재정의 된 요소가 계속 재정의 되었습니다.|  
   
- <sup>1</sup> The *calling sequence* consists of the element type (`Function`, `Sub`, `Operator`, or `Property`), name, parameter list, and return type. You cannot override a procedure with a property, or the other way around. You cannot override one kind of procedure (`Function`, `Sub`, or `Operator`) with another kind.  
+ <sup>1</sup> *호출 시퀀스* 는 요소 형식 (`Function`, `Sub`, `Operator`또는 `Property`), 이름, 매개 변수 목록 및 반환 형식으로 구성 됩니다. 속성 또는 그 밖의 다른 방법으로는 프로시저를 재정의할 수 없습니다. 다른 종류의 프로시저 (`Function`, `Sub`또는 `Operator`)를 재정의할 수 없습니다.  
   
- <sup>2</sup> If you do not specify either `Shadows` or `Overrides`, the compiler issues a warning message to help you be sure which kind of redefinition you want to use. If you ignore the warning, the shadowing mechanism is used.  
+ <sup>2</sup> `Shadows` 또는 `Overrides`을 지정 하지 않으면 컴파일러에서 사용 하려는 재정의의 종류를 확인할 수 있도록 경고 메시지를 발행 합니다. 경고를 무시 하면 섀도잉 메커니즘이 사용 됩니다.  
   
- <sup>3</sup> If the shadowing element is inaccessible in a further derived class, shadowing is not inherited. For example, if you declare the shadowing element as `Private`, a class deriving from your derived class inherits the original element instead of the shadowing element.  
+ <sup>3</sup> 추가 파생 클래스에서 섀도잉 요소에 액세스할 수 없는 경우 숨김은 상속 되지 않습니다. 예를 들어, 섀도잉 요소를 `Private`선언 하는 경우 파생 클래스에서 파생 되는 클래스는 숨기는 요소가 아니라 원래 요소를 상속 합니다.  
   
 ## <a name="guidelines"></a>지침  
- You normally use overriding in the following cases:  
+ 일반적으로 다음과 같은 경우에 재정의를 사용 합니다.  
   
-- You are defining polymorphic derived classes.  
+- 다형 파생 클래스를 정의 합니다.  
   
-- You want the safety of having the compiler enforce the identical element type and calling sequence.  
+- 컴파일러가 동일한 요소 형식 및 호출 시퀀스를 강제 적용 하는 것이 좋습니다.  
   
- You normally use shadowing in the following cases:  
+ 일반적으로 다음과 같은 경우에 섀도잉을 사용 합니다.  
   
-- You anticipate that your base class might be modified and define an element using the same name as yours.  
+- 기본 클래스를 수정 하 고 사용자와 동일한 이름을 사용 하 여 요소를 정의 하는 것이 예상 됩니다.  
   
-- You want the freedom of changing the element type or calling sequence.  
+- 요소 형식 또는 호출 시퀀스를 자유롭게 변경 하려고 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [선언된 요소 참조](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
-- [Shadowing in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [Visual Basic에서 숨김](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
 - [방법: 이름이 같은 변수 숨기기](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md)
 - [방법: 상속된 변수 숨기기](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md)
 - [방법: 파생 클래스에 의해 숨겨진 변수에 액세스](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md)

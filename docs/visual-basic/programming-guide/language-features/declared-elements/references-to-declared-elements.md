@@ -14,11 +14,11 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345296"
 ---
 # <a name="references-to-declared-elements-visual-basic"></a>선언된 요소 참조(Visual Basic)
-When your code refers to a declared element, the Visual Basic compiler matches the name in your reference to the appropriate declaration of that name. If more than one element is declared with the same name, you can control which of those elements is to be referenced by *qualifying* its name.  
+코드가 선언 된 요소를 참조 하는 경우 Visual Basic 컴파일러는 참조의 이름을 해당 이름의 적절 한 선언과 일치 시킵니다. 동일한 이름을 사용 하 여 두 개 이상의 요소를 선언 하는 경우 해당 이름을 *정규화* 하 여 참조할 요소를 제어할 수 있습니다.  
   
- The compiler attempts to match a name reference to a name declaration with the *narrowest scope*. This means it starts with the code making the reference and works outward through successive levels of containing elements.  
+ 컴파일러는 이름 참조를 가장 *좁은 범위의*이름 선언과 일치 시 키 려 고 합니다. 즉, 참조를 만드는 코드에서 시작 하 고 포함 하는 요소의 연속 수준을 통해 외부에서 작업 합니다.  
   
- The following example shows references to two variables with the same name. The example declares two variables, each named `totalCount`, at different levels of scope in module `container`. When the procedure `showCount` displays `totalCount` without qualification, the Visual Basic compiler resolves the reference to the declaration with the narrowest scope, namely the local declaration inside `showCount`. When it qualifies `totalCount` with the containing module `container`, the compiler resolves the reference to the declaration with the broader scope.  
+ 다음 예에서는 이름이 같은 두 변수에 대 한 참조를 보여 줍니다. 이 예제에서는 모듈 `container`의 여러 범위 수준에서 이름이 `totalCount`인 두 변수를 선언 합니다. 프로시저 `showCount` 한정자가 없는 `totalCount`를 표시 하는 경우 Visual Basic 컴파일러는 가장 좁은 범위의 선언에 대 한 참조를 확인 합니다. 즉, `showCount`내의 지역 선언입니다. 포함 하는 모듈 `container`를 사용 하 여 `totalCount` 한정 하는 경우 컴파일러는 더 넓은 범위의 선언에 대 한 참조를 확인 합니다.  
   
 ```vb  
 ' Assume these two modules are both in the same assembly.  
@@ -41,16 +41,16 @@ Module callingModule
 End Module  
 ```  
   
-## <a name="qualifying-an-element-name"></a>Qualifying an Element Name  
- If you want to override this search process and specify a name declared in a broader scope, you must *qualify* the name with the containing element of the broader scope. In some cases, you might also have to qualify the containing element.  
+## <a name="qualifying-an-element-name"></a>요소 이름 한정  
+ 이 검색 프로세스를 재정의 하 고 더 광범위 한 범위에서 선언 된 이름을 지정 하려면 광범위 한 범위의 포함 요소로 이름을 *한정* 해야 합니다. 경우에 따라 포함 하는 요소를 한 정해야 할 수도 있습니다.  
   
- Qualifying a name means preceding it in your source statement with information that identifies where the target element is defined. This information is called a *qualification string*. It can include one or more namespaces and a module, class, or structure.  
+ 이름을 정규화 하면 원본 문의 앞에 target 요소가 정의 된 위치를 식별 하는 정보가 포함 됩니다. 이 정보를 *한정 문자열*이라고 합니다. 하나 이상의 네임 스페이스와 모듈, 클래스 또는 구조를 포함할 수 있습니다.  
   
- The qualification string should unambiguously specify the module, class, or structure containing the target element. The container might in turn be located in another containing element, usually a namespace. You might need to include several containing elements in the qualification string.  
+ 한정 문자열은 대상 요소를 포함 하는 모듈, 클래스 또는 구조체를 명확 하 게 지정 해야 합니다. 컨테이너는 일반적으로 네임 스페이스를 포함 하는 다른 요소에 있을 수 있습니다. 한정 문자열에 포함 된 요소를 여러 개 포함 해야 할 수도 있습니다.  
   
-#### <a name="to-access-a-declared-element-by-qualifying-its-name"></a>To access a declared element by qualifying its name  
+#### <a name="to-access-a-declared-element-by-qualifying-its-name"></a>이름을 한정 하 여 선언 된 요소에 액세스 하려면  
   
-1. Determine the location in which the element has been defined. This might include a namespace, or even a hierarchy of namespaces. Within the lowest-level namespace, the element must be contained in a module, class, or structure.  
+1. 요소가 정의 된 위치를 확인 합니다. 여기에는 네임 스페이스 또는 네임 스페이스의 계층 구조도 포함 될 수 있습니다. 가장 낮은 수준의 네임 스페이스 내에서 요소는 모듈, 클래스 또는 구조체에 포함 되어야 합니다.  
   
     ```vb  
     ' Assume the following hierarchy exists outside your code.  
@@ -66,23 +66,23 @@ End Module
     End Namespace  
     ```  
   
-2. Determine a qualification path based on the target element's location. Start with the highest-level namespace, proceed to the lowest-level namespace, and end with the module, class, or structure containing the target element. Each element in the path must contain the element that follows it.  
+2. 대상 요소의 위치를 기준으로 한정 경로를 결정 합니다. 최상위 네임 스페이스로 시작 하 고, 최하위 수준 네임 스페이스로 이동 하 고, target 요소를 포함 하는 모듈, 클래스 또는 구조체를 사용 하 여 종료 합니다. 경로의 각 요소는 뒤에 오는 요소를 포함 해야 합니다.  
   
      `outerSpace` → `innerSpace` → `holdsTotals` → `totals`  
   
-3. Prepare the qualification string for the target element. Place a period (`.`) after every element in the path. Your application must have access to every element in your qualification string.  
+3. 대상 요소에 대 한 한정 문자열을 준비 합니다. 경로의 모든 요소 뒤에 마침표 (`.`)를 넣습니다. 응용 프로그램에는 한정 문자열의 모든 요소에 대 한 액세스 권한이 있어야 합니다.  
   
     ```vb  
     outerSpace.innerSpace.holdsTotals.totals.  
     ```  
   
-4. Write the expression or assignment statement referring to the target element in the normal way.  
+4. 일반적인 방법으로 target 요소를 참조 하는 식 또는 대입문을 작성 합니다.  
   
     ```vb  
     grandTotal = 9000  
     ```  
   
-5. Precede the target element name with the qualification string. The name should immediately follow the period (`.`) that follows the module, class, or structure that contains the element.  
+5. 대상 요소 이름 앞에 한정 문자열을 붙입니다. 이름은 요소를 포함 하는 모듈, 클래스 또는 구조체 뒤에 오는 마침표 (`.`) 바로 뒤에와 야 합니다.  
   
     ```vb  
     ' Assume the following module is part of your code.  
@@ -93,9 +93,9 @@ End Module
     End Module  
     ```  
   
-6. The compiler uses the qualification string to find a clear, unambiguous declaration to which it can match the target element reference.  
+6. 컴파일러는 한정 문자열을 사용 하 여 대상 요소 참조와 일치할 수 있는 명확 하 고 명확한 선언을 찾습니다.  
   
- You might also have to qualify a name reference if your application has access to more than one programming element that has the same name. For example, the <xref:System.Windows.Forms> and <xref:System.Web.UI.WebControls> namespaces both contain a `Label` class (<xref:System.Windows.Forms.Label?displayProperty=nameWithType> and <xref:System.Web.UI.WebControls.Label?displayProperty=nameWithType>). If your application uses both, or if it defines its own `Label` class, you must distinguish the different `Label` objects. Include the namespace or import alias in the variable declaration. The following example uses the import alias.  
+ 응용 프로그램에 동일한 이름을 가진 둘 이상의 프로그래밍 요소에 대 한 액세스 권한이 있는 경우 이름 참조를 정규화 해야 할 수도 있습니다. 예를 들어 <xref:System.Windows.Forms> 및 <xref:System.Web.UI.WebControls> 네임 스페이스는 모두 `Label` 클래스 (<xref:System.Windows.Forms.Label?displayProperty=nameWithType> 및 <xref:System.Web.UI.WebControls.Label?displayProperty=nameWithType>)를 포함 합니다. 응용 프로그램이 둘 다를 사용 하거나 자체 `Label` 클래스를 정의 하는 경우 서로 다른 `Label` 개체를 구분 해야 합니다. 변수 선언에 네임 스페이스 또는 가져오기 별칭을 포함 합니다. 다음 예에서는 가져오기 별칭을 사용 합니다.  
   
 ```vb  
 ' The following statement must precede all your declarations.  
@@ -104,21 +104,21 @@ Imports win = System.Windows.Forms, web = System.Web.UI.WebControls
 Dim winLabel As New win.Label()  
 ```  
   
-## <a name="members-of-other-containing-elements"></a>Members of Other Containing Elements  
- When you use a nonshared member of another class or structure, you must first qualify the member name with a variable or expression that points to an instance of the class or structure. In the following example, `demoClass` is an instance of a class named `class1`.  
+## <a name="members-of-other-containing-elements"></a>다른 포함 하는 요소의 멤버  
+ 다른 클래스 또는 구조체의 비공유 멤버를 사용 하는 경우 먼저 해당 멤버 이름을 클래스 또는 구조체의 인스턴스를 가리키는 변수나 식으로 정규화 해야 합니다. 다음 예제에서 `demoClass`은 `class1`라는 클래스의 인스턴스입니다.  
   
 ```vb  
 Dim demoClass As class1 = New class1()  
 demoClass.someSub[(argumentlist)]  
 ```  
   
- You cannot use the class name itself to qualify a member that is not [Shared](../../../../visual-basic/language-reference/modifiers/shared.md). You must first create an instance in an object variable (in this case `demoClass`) and then reference it by the variable name.  
+ 클래스 이름 자체를 사용 하 여 [공유](../../../../visual-basic/language-reference/modifiers/shared.md)되지 않은 멤버를 한정할 수는 없습니다. 먼저 개체 변수 (이 경우 `demoClass`)에서 인스턴스를 만든 다음 변수 이름으로 참조 해야 합니다.  
   
- If a class or structure has a `Shared` member, you can qualify that member either with the class or structure name or with a variable or expression that points to an instance.  
+ 클래스 또는 구조체에 `Shared` 멤버가 있는 경우 해당 멤버를 클래스 또는 구조체 이름으로 사용 하거나 인스턴스를 가리키는 변수나 식으로 한정할 수 있습니다.  
   
- A module does not have any separate instances, and all its members are `Shared` by default. Therefore, you qualify a module member with the module name.  
+ 모듈에는 별도의 인스턴스가 없으며 모든 멤버가 기본적으로 `Shared` 됩니다. 따라서 모듈 이름을 사용 하 여 모듈 멤버를 한정 합니다.  
   
- The following example shows qualified references to module member procedures. The example declares two `Sub` procedures, both named `perform`, in different modules in a project. Each one can be specified without qualification within its own module but must be qualified if referenced from anywhere else. Because the final reference in `module3` does not qualify `perform`, the compiler cannot resolve that reference.  
+ 다음 예에서는 모듈 멤버 프로시저에 대 한 정규화 된 참조를 보여 줍니다. 이 예제에서는 프로젝트의 다른 모듈에서 이름이 `perform`인 두 개의 `Sub` 프로시저를 선언 합니다. 각 항목은 고유한 모듈 내에서 한정 없이 지정할 수 있지만 다른 위치에서 참조 하는 경우에는 정규화 되어야 합니다. `module3`의 최종 참조는 `perform`한정 되지 않으므로 컴파일러는 해당 참조를 확인할 수 없습니다.  
   
 ```vb  
 ' Assume these three modules are all in the same assembly.  
@@ -149,10 +149,10 @@ Module module3
 End Module  
 ```  
   
-## <a name="references-to-projects"></a>References to Projects  
- To use [Public](../../../../visual-basic/language-reference/modifiers/public.md) elements defined in another project, you must first set a *reference* to that project's assembly or type library. To set a reference, click **Add Reference** on the **Project** menu, or use the [-reference (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/reference.md) command-line compiler option.  
+## <a name="references-to-projects"></a>프로젝트에 대 한 참조  
+ 다른 프로젝트에 정의 된 [공용](../../../../visual-basic/language-reference/modifiers/public.md) 요소를 사용 하려면 먼저 해당 프로젝트의 어셈블리 또는 형식 라이브러리에 대 한 *참조* 를 설정 해야 합니다. 참조를 설정 하려면 **프로젝트** 메뉴에서 **참조 추가** 를 클릭 하거나 [-reference (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/reference.md) 명령줄 컴파일러 옵션을 사용 합니다.  
   
- For example, you can use the XML object model of the .NET Framework. If you set a reference to the <xref:System.Xml> namespace, you can declare and use any of its classes, such as <xref:System.Xml.XmlDocument>. The following example uses <xref:System.Xml.XmlDocument>.  
+ 예를 들어 .NET Framework의 XML 개체 모델을 사용할 수 있습니다. <xref:System.Xml> 네임 스페이스에 대 한 참조를 설정 하는 경우 <xref:System.Xml.XmlDocument>와 같은 해당 클래스를 선언 하 고 사용할 수 있습니다. 다음 예에서는 <xref:System.Xml.XmlDocument>를 사용 합니다.  
   
 ```vb  
 ' Assume this project has a reference to System.Xml  
@@ -160,8 +160,8 @@ End Module
 Dim xDoc As System.Xml.XmlDocument  
 ```  
   
-## <a name="importing-containing-elements"></a>Importing Containing Elements  
- You can use the [Imports Statement (.NET Namespace and Type)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) to *import* the namespaces that contain the modules or classes that you want to use. This enables you to refer to the elements defined in an imported namespace without fully qualifying their names. The following example rewrites the previous example to import the <xref:System.Xml> namespace.  
+## <a name="importing-containing-elements"></a>포함 하는 요소 가져오기  
+ [Imports 문 (.Net 네임 스페이스 및 형식)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) 을 사용 하 여 사용 하려는 모듈이 나 클래스를 포함 하는 네임 스페이스를 *가져올* 수 있습니다. 이렇게 하면 이름을 정규화 하지 않고 가져온 네임 스페이스에 정의 된 요소를 참조할 수 있습니다. 다음 예제에서는 이전 예제를 다시 작성 하 여 <xref:System.Xml> 네임 스페이스를 가져옵니다.  
   
 ```vb  
 ' Assume this project has a reference to System.Xml  
@@ -171,7 +171,7 @@ Imports System.Xml
 Dim xDoc As XmlDocument  
 ```  
   
- In addition, the `Imports` statement can define an *import alias* for each imported namespace. This can make the source code shorter and easier to read. The following example rewrites the previous example to use `xD` as an alias for the <xref:System.Xml> namespace.  
+ 또한 `Imports` 문은 가져온 각 네임 스페이스에 대 한 *가져오기 별칭* 을 정의할 수 있습니다. 이렇게 하면 소스 코드를 더 짧고 읽기 쉽게 만들 수 있습니다. 다음 예에서는 `xD`를 <xref:System.Xml> 네임 스페이스에 대 한 별칭으로 사용 하도록 이전 예제를 다시 작성 합니다.  
   
 ```vb  
 ' Assume this project has a reference to System.Xml  
@@ -181,19 +181,19 @@ Imports xD = System.Xml
 Dim xDoc As xD.XmlDocument  
 ```  
   
- The `Imports` statement does not make elements from other projects available to your application. That is, it does not take the place of setting a reference. Importing a namespace just removes the requirement to qualify the names defined in that namespace.  
+ `Imports` 문은 응용 프로그램에서 다른 프로젝트의 요소를 사용할 수 있도록 하지 않습니다. 즉, 참조를 설정 하는 대신 사용 됩니다. 네임 스페이스를 가져오면 해당 네임 스페이스에 정의 된 이름을 한정 하는 요구 사항이 제거 됩니다.  
   
- You can also use the `Imports` statement to import modules, classes, structures, and enumerations. You can then use the members of such imported elements without qualification. However, you must always qualify nonshared members of classes and structures with a variable or expression that evaluates to an instance of the class or structure.  
+ `Imports` 문을 사용 하 여 모듈, 클래스, 구조체 및 열거형을 가져올 수도 있습니다. 그런 다음 이러한 가져온 요소의 멤버를 한정자 없이 사용할 수 있습니다. 그러나 클래스 또는 구조체의 인스턴스로 계산 되는 변수나 식으로 클래스와 구조체의 비공유 멤버를 항상 한정 해야 합니다.  
   
 ## <a name="naming-guidelines"></a>명명 지침  
- When you define two or more programming elements that have the same name, a *name ambiguity* can result when the compiler attempts to resolve a reference to that name. If more than one definition is in scope, or if no definition is in scope, the reference is irresolvable. For an example, see "Qualified Reference Example" on this Help page.  
+ 이름이 같은 프로그래밍 요소를 두 개 이상 정의 하면 컴파일러에서 해당 이름에 대 한 참조를 확인 하려고 할 때 *이름 모호성이* 발생할 수 있습니다. 둘 이상의 정의가 범위에 있거나, 범위에 정의가 없는 경우 참조는 해결할 수 없는입니다. 예제를 보려면이 도움말 페이지의 "정규화 된 참조 예제"를 참조 하십시오.  
   
- You can avoid name ambiguity by giving all your elements unique names. Then you can make reference to any element without having to qualify its name with a namespace, module, or class. You also reduce the chances of accidentally referring to the wrong element.  
+ 모든 요소에 고유한 이름을 지정 하 여 이름 모호성을 방지할 수 있습니다. 그런 다음 네임 스페이스, 모듈 또는 클래스를 사용 하 여 해당 이름을 한정할 필요 없이 모든 요소에 대 한 참조를 만들 수 있습니다. 실수로 잘못 된 요소를 참조할 가능성이 줄어듭니다.  
   
 ## <a name="shadowing"></a>섀도잉  
- When two programming elements share the same name, one of them can hide, or *shadow*, the other one. A shadowed element is not available for reference; instead, when your code uses the shadowed element name, the Visual Basic compiler resolves it to the shadowing element. For a more detailed explanation with examples, see [Shadowing in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
+ 두 프로그래밍 요소가 동일한 이름을 공유 하는 경우 그 중 하나는 다른 *요소를 숨기 거 나 숨길*수 있습니다. 숨겨진 요소는 참조에 사용할 수 없습니다. 대신, 코드가 숨겨진 요소 이름을 사용 하는 경우 Visual Basic 컴파일러는 숨기는 요소로이를 확인 합니다. 예제에 대 한 자세한 설명은 [Visual Basic에서 숨기기](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)를 참조 하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [선언 요소 이름](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
 - [선언 요소의 특징](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)

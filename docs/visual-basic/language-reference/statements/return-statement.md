@@ -17,7 +17,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74333010"
 ---
 # <a name="return-statement-visual-basic"></a>Return 문(Visual Basic)
-Returns control to the code that called a `Function`, `Sub`, `Get`, `Set`, or `Operator` procedure.  
+`Function`, `Sub`, `Get`, `Set`또는 `Operator` 프로시저를 호출한 코드에 대 한 제어를 반환 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -29,24 +29,24 @@ Return expression
   
 ## <a name="part"></a>파트  
  `expression`  
- Required in a `Function`, `Get`, or `Operator` procedure. Expression that represents the value to be returned to the calling code.  
+ `Function`, `Get`또는 `Operator` 프로시저에 필요 합니다. 호출 코드에 반환 될 값을 나타내는 식입니다.  
   
 ## <a name="remarks"></a>주의  
- In a `Sub` or `Set` procedure, the `Return` statement is equivalent to an `Exit Sub` or `Exit Property` statement, and `expression` must not be supplied.  
+ `Sub` 또는 `Set` 프로시저에서 `Return` 문은 `Exit Sub` 또는 `Exit Property` 문과 같으며 `expression`를 제공 하지 않아야 합니다.  
   
- In a `Function`, `Get`, or `Operator` procedure, the `Return` statement must include `expression`, and `expression` must evaluate to a data type that is convertible to the return type of the procedure. In a `Function` or `Get` procedure, you also have the alternative of assigning an expression to the procedure name to serve as the return value, and then executing an `Exit Function` or `Exit Property` statement. In an `Operator` procedure, you must use `Return expression`.  
+ `Function`, `Get`또는 `Operator` 프로시저에서 `Return` 문은 `expression`을 포함 해야 하며 `expression`는 프로시저의 반환 형식으로 변환할 수 있는 데이터 형식으로 계산 되어야 합니다. `Function` 또는 `Get` 프로시저에서는 프로시저 이름에 식을 할당 하 여 반환 값으로 사용 하 고 `Exit Function` 또는 `Exit Property` 문을 실행 하는 방법도 사용할 수 있습니다. `Operator` 프로시저에서는 `Return expression`를 사용 해야 합니다.  
   
- You can include as many `Return` statements as appropriate in the same procedure.  
+ 동일한 프로시저에 필요한 만큼 `Return` 문을 포함할 수 있습니다.  
   
 > [!NOTE]
-> The code in a `Finally` block runs after a `Return` statement in a `Try` or `Catch` block is encountered, but before that `Return` statement executes. A `Return` statement cannot be included in a `Finally` block.  
+> `Finally` 블록의 코드는 `Try` 또는 `Catch` 블록에서 `Return` 문이 발생 한 후에 실행 되지만 해당 `Return` 문이 실행 되기 전에 실행 됩니다. `Finally` 블록에는 `Return` 문을 포함할 수 없습니다.  
   
 ## <a name="example"></a>예제  
- The following example uses the `Return` statement several times to return to the calling code when the procedure does not have to do anything else.  
+ 다음 예제에서는 프로시저에서 다른 작업을 수행할 필요가 없을 때 `Return` 문을 여러 번 사용 하 여 호출 코드로 돌아갑니다.  
   
  [!code-vb[VbVbalrStatements#53](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#53)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Function 문](../../../visual-basic/language-reference/statements/function-statement.md)
 - [Sub 문](../../../visual-basic/language-reference/statements/sub-statement.md)

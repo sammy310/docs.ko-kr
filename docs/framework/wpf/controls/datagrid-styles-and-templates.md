@@ -17,12 +17,12 @@ ms.lasthandoff: 11/21/2019
 ms.locfileid: "74283799"
 ---
 # <a name="datagrid-styles-and-templates"></a>DataGrid 스타일 및 템플릿
-이 항목에서는 <xref:System.Windows.Controls.DataGrid> 컨트롤의 스타일 및 템플릿에 대해 설명 합니다. 기본값을 수정할 수 있습니다 <xref:System.Windows.Controls.ControlTemplate> 고유한 모양을 제어할 수 있습니다. 자세한 내용은 [컨트롤에 대 한 템플릿 만들기](../../../desktop-wpf/themes/how-to-create-apply-template.md)를 참조 하세요.  
+이 항목에서는 <xref:System.Windows.Controls.DataGrid> 컨트롤의 스타일 및 템플릿에 대해 설명 합니다. 기본 <xref:System.Windows.Controls.ControlTemplate>를 수정 하 여 컨트롤에 고유한 모양을 제공할 수 있습니다. 자세한 내용은 [컨트롤에 대 한 템플릿 만들기](../../../desktop-wpf/themes/how-to-create-apply-template.md)를 참조 하세요.  
   
 ## <a name="datagrid-parts"></a>DataGrid 파트  
  다음 표에서는 <xref:System.Windows.Controls.DataGrid> 컨트롤의 명명 된 파트를 나열 합니다.  
   
-|부분|형식|설명|  
+|파트|형식|설명|  
 |-|-|-|  
 |PART_ColumnHeadersPresenter|<xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter>|열 머리글을 포함 하는 행입니다.|  
   
@@ -39,7 +39,7 @@ ms.locfileid: "74283799"
 |사용 안 함|CommonStates|컨트롤이 비활성화되었습니다.|  
 |InvalidFocused|ValidationStates|컨트롤이 유효하지 않고 컨트롤에 포커스가 있습니다.|  
 |InvalidUnfocused|ValidationStates|컨트롤이 유효하지 않고 컨트롤에 포커스가 없습니다.|  
-|유효|ValidationStates|컨트롤이 유효합니다.|  
+|Valid|ValidationStates|컨트롤이 유효합니다.|  
   
 ## <a name="datagridcell-parts"></a>DataGridCell 파트  
  <xref:System.Windows.Controls.DataGridCell> 요소에는 명명 된 파트가 없습니다.  
@@ -54,14 +54,14 @@ ms.locfileid: "74283799"
 |포커스 있음|FocusStates|셀에 포커스가 있습니다.|  
 |포커스 없음|FocusStates|셀에 포커스가 없습니다.|  
 |현재|CurrentStates|현재 셀이 셀입니다.|  
-|Regular|CurrentStates|셀이 현재 셀이 아닙니다.|  
+|기본|CurrentStates|셀이 현재 셀이 아닙니다.|  
 |표시|InteractionStates|셀이 표시 모드에 있습니다.|  
 |편집|InteractionStates|셀이 편집 모드에 있습니다.|  
-|선택|SelectionStates|셀이 선택 됩니다.|  
+|Selected|SelectionStates|셀이 선택 됩니다.|  
 |선택 취소|SelectionStates|셀이 선택 되지 않았습니다.|  
 |InvalidFocused|ValidationStates|셀이 잘못 되었으며 포커스가 있습니다.|  
 |InvalidUnfocused|ValidationStates|셀이 잘못 되었으며 포커스가 없습니다.|  
-|유효|ValidationStates|셀이 유효 합니다.|  
+|Valid|ValidationStates|셀이 유효 합니다.|  
   
 ## <a name="datagridrow-parts"></a>DataGridRow 파트  
  <xref:System.Windows.Controls.DataGridRow> 요소에는 명명 된 파트가 없습니다.  
@@ -84,12 +84,12 @@ ms.locfileid: "74283799"
 |Unfocused_Selected|CommonStates|행이 선택 되어 있고 포커스가 없습니다.|  
 |InvalidFocused|ValidationStates|컨트롤이 유효하지 않고 컨트롤에 포커스가 있습니다.|  
 |InvalidUnfocused|ValidationStates|컨트롤이 유효하지 않고 컨트롤에 포커스가 없습니다.|  
-|유효|ValidationStates|컨트롤이 유효합니다.|  
+|Valid|ValidationStates|컨트롤이 유효합니다.|  
   
 ## <a name="datagridrowheader-parts"></a>DataGridRowHeader 파트  
  다음 표에서는 <xref:System.Windows.Controls.Primitives.DataGridRowHeader> 요소에 대 한 명명 된 파트를 나열 합니다.  
   
-|부분|형식|설명|  
+|파트|형식|설명|  
 |-|-|-|  
 |PART_TopHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|위쪽에서 행 머리글의 크기를 조정 하는 데 사용 되는 요소입니다.|  
 |PART_BottomHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|아래쪽에서 행 머리글의 크기를 조정 하는 데 사용 되는 요소입니다.|  
@@ -117,12 +117,12 @@ ms.locfileid: "74283799"
 |Unfocused_Selected|CommonStates|행이 선택 되어 있고 포커스가 없습니다.|  
 |InvalidFocused|ValidationStates|컨트롤이 유효하지 않고 컨트롤에 포커스가 있습니다.|  
 |InvalidUnfocused|ValidationStates|컨트롤이 유효하지 않고 컨트롤에 포커스가 없습니다.|  
-|유효|ValidationStates|컨트롤이 유효합니다.|  
+|Valid|ValidationStates|컨트롤이 유효합니다.|  
   
 ## <a name="datagridcolumnheaderspresenter-parts"></a>DataGridColumnHeadersPresenter 파트  
  다음 표에서는 <xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter> 요소에 대 한 명명 된 파트를 나열 합니다.  
   
-|부분|형식|설명|  
+|파트|형식|설명|  
 |-|-|-|  
 |PART_FillerColumnHeader|<xref:System.Windows.Controls.Primitives.DataGridColumnHeader>|열 머리글의 자리 표시자입니다.|  
   
@@ -133,12 +133,12 @@ ms.locfileid: "74283799"
 |-|-|-|  
 |InvalidFocused|ValidationStates|셀이 잘못 되었으며 포커스가 있습니다.|  
 |InvalidUnfocused|ValidationStates|셀이 잘못 되었으며 포커스가 없습니다.|  
-|유효|ValidationStates|셀이 유효 합니다.|  
+|Valid|ValidationStates|셀이 유효 합니다.|  
   
 ## <a name="datagridcolumnheader-parts"></a>DataGridColumnHeader 파트  
  다음 표에서는 <xref:System.Windows.Controls.Primitives.DataGridColumnHeader> 요소에 대 한 명명 된 파트를 나열 합니다.  
   
-|부분|형식|설명|  
+|파트|형식|설명|  
 |-|-|-|  
 |PART_LeftHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|왼쪽에서 열 머리글의 크기를 조정 하는 데 사용 되는 요소입니다.|  
 |PART_RightHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|오른쪽에서 열 머리글의 크기를 조정 하는 데 사용 되는 요소입니다.|  
@@ -156,7 +156,7 @@ ms.locfileid: "74283799"
 |계층이|SortStates|열이 정렬 되어 있지 않습니다.|  
 |InvalidFocused|ValidationStates|컨트롤이 유효하지 않고 컨트롤에 포커스가 있습니다.|  
 |InvalidUnfocused|ValidationStates|컨트롤이 유효하지 않고 컨트롤에 포커스가 없습니다.|  
-|유효|ValidationStates|컨트롤이 유효합니다.|  
+|Valid|ValidationStates|컨트롤이 유효합니다.|  
   
 ## <a name="datagrid-controltemplate-example"></a>DataGrid ControlTemplate 예제  
  다음 예제에서는 <xref:System.Windows.Controls.DataGrid> 컨트롤 및 관련 형식에 대 한 <xref:System.Windows.Controls.ControlTemplate>를 정의 하는 방법을 보여 줍니다.  

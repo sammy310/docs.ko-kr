@@ -1,5 +1,5 @@
 ---
-title: 'How to: Modify Data in a Database by Using LINQ'
+title: '방법: LINQ를 사용 하 여 데이터베이스의 데이터 수정'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - inserting rows [LINQ to SQL]
@@ -21,51 +21,51 @@ ms.locfileid: "74344952"
 ---
 # <a name="how-to-modify-data-in-a-database-by-using-linq-visual-basic"></a>방법: LINQ를 사용하여 데이터베이스의 데이터 수정(Visual Basic)
 
-Language-Integrated Query (LINQ) queries make it easy to access database information and modify values in the database.
+LINQ (통합 언어 쿼리) 쿼리를 사용 하면 데이터베이스 정보에 액세스 하 고 데이터베이스의 값을 쉽게 수정할 수 있습니다.
 
-The following example shows how to create a new application that retrieves and updates information in a SQL Server database.
+다음 예에서는 SQL Server 데이터베이스에서 정보를 검색 하 고 업데이트 하는 새 응용 프로그램을 만드는 방법을 보여 줍니다.
 
-The examples in this topic use the Northwind sample database. If you do not have this database on your development computer, you can download it from the Microsoft Download Center. For instructions, see [Downloading Sample Databases](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md).
+이 항목의 예제에서는 Northwind 샘플 데이터베이스를 사용 합니다. 이 데이터베이스가 개발 컴퓨터에 없는 경우 Microsoft 다운로드 센터에서 다운로드할 수 있습니다. 지침은 [샘플 데이터베이스 다운로드](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md)를 참조 하세요.
 
-### <a name="to-create-a-connection-to-a-database"></a>To create a connection to a database
+### <a name="to-create-a-connection-to-a-database"></a>데이터베이스에 대 한 연결을 만들려면
 
-1. In Visual Studio, open **Server Explorer**/**Database Explorer** by clicking the **View** menu, and then select **Server Explorer**/**Database Explorer**.
+1. Visual Studio에서 **보기** 메뉴를 클릭 한 다음 **서버 탐색기**/**데이터베이스 탐색기**를 선택 하 여 **서버 탐색기**/**데이터베이스 탐색기** 를 엽니다.
 
-2. Right-click **Data Connections** in **Server Explorer**/**Database Explorer**, and click **Add Connection**.
+2. **서버 탐색기**/**데이터베이스 탐색기**에서 **데이터 연결** 을 마우스 오른쪽 단추로 클릭 하 고 **연결 추가**를 클릭 합니다.
 
-3. Specify a valid connection to the Northwind sample database.
+3. Northwind 샘플 데이터베이스에 대 한 올바른 연결을 지정 하십시오.
 
-### <a name="to-add-a-project-with-a-linq-to-sql-file"></a>To add a Project with a LINQ to SQL file
+### <a name="to-add-a-project-with-a-linq-to-sql-file"></a>LINQ to SQL 파일을 사용 하 여 프로젝트를 추가 하려면
 
-1. Visual Studio의 **파일** 메뉴에서 **새로 만들기**를 가리킨 다음 **프로젝트**를 클릭합니다. Select Visual Basic **Windows Forms Application** as the project type.
+1. Visual Studio의 **파일** 메뉴에서 **새로 만들기**를 가리킨 다음 **프로젝트**를 클릭합니다. Visual Basic **Windows Forms 응용 프로그램** 을 프로젝트 형식으로 선택 합니다.
 
-2. **프로젝트** 메뉴에서 **새 항목 추가**를 클릭합니다. Select the **LINQ to SQL Classes** item template.
+2. **프로젝트** 메뉴에서 **새 항목 추가**를 클릭합니다. **LINQ to SQL 클래스** 항목 템플릿을 선택 합니다.
 
-3. 파일 이름을 `northwind.dbml`로 지정합니다. **추가**를 클릭합니다. The Object Relational Designer (O/R Designer) is opened for the `northwind.dbml` file.
+3. 파일 이름을 `northwind.dbml`로 지정합니다. **추가**를 클릭합니다. `northwind.dbml` 파일에 대 한 개체 관계형 디자이너 (O/R 디자이너)이 열립니다.
 
-### <a name="to-add-tables-to-query-and-modify-to-the-designer"></a>To add tables to query and modify to the designer
+### <a name="to-add-tables-to-query-and-modify-to-the-designer"></a>쿼리에 테이블을 추가 하 고 디자이너에 수정 하려면
 
-1. In **Server Explorer**/**Database Explorer**, expand the connection to the Northwind database. Expand the **Tables** folder.
+1. **서버 탐색기**/**데이터베이스 탐색기**에서 Northwind 데이터베이스에 대 한 연결을 확장 합니다. **Tables** 폴더를 확장 합니다.
 
-     If you have closed the O/R Designer, you can reopen it by double-clicking the `northwind.dbml` file that you added earlier.
+     O/R 디자이너를 닫은 경우 앞에서 추가한 `northwind.dbml` 파일을 두 번 클릭 하 여 다시 열 수 있습니다.
 
-2. Click the Customers table and drag it to the left pane of the designer.
+2. Customers 테이블을 클릭 하 고 디자이너의 왼쪽 창으로 끌어 놓습니다.
 
-     The designer creates a new Customer object for your project.
+     디자이너에서 프로젝트에 대 한 새 Customer 개체를 만듭니다.
 
-3. Save your changes and close the designer.
+3. 변경 내용을 저장 하 고 디자이너를 닫습니다.
 
 4. 프로젝트를 저장합니다.
 
-### <a name="to-add-code-to-modify-the-database-and-display-the-results"></a>To add code to modify the database and display the results
+### <a name="to-add-code-to-modify-the-database-and-display-the-results"></a>데이터베이스를 수정 하 고 결과를 표시 하는 코드를 추가 하려면
 
-1. From the **Toolbox**, drag a <xref:System.Windows.Forms.DataGridView> control onto the default Windows Form for your project, Form1.
+1. **도구 상자**에서 <xref:System.Windows.Forms.DataGridView> 컨트롤을 프로젝트의 기본 Windows 폼 (Form1)으로 끌어옵니다.
 
-2. When you added tables to the O/R Designer, the designer added a <xref:System.Data.Linq.DataContext> object to your project. This object contains code that you can use to access the Customers table. It also contains code that defines  a local Customer object and a Customers collection for the table. The <xref:System.Data.Linq.DataContext> object for your project is named based on the name of your .dbml file. For this project, the <xref:System.Data.Linq.DataContext> object is named `northwindDataContext`.
+2. O/R 디자이너에 테이블을 추가 하는 경우 디자이너는 <xref:System.Data.Linq.DataContext> 개체를 프로젝트에 추가 합니다. 이 개체에는 Customers 테이블에 액세스 하는 데 사용할 수 있는 코드가 포함 되어 있습니다. 또한 테이블에 대 한 로컬 고객 개체와 Customers 컬렉션을 정의 하는 코드도 포함 됩니다. 프로젝트에 대 한 <xref:System.Data.Linq.DataContext> 개체는 .dbml 파일의 이름을 기반으로 이름이 지정 됩니다. 이 프로젝트의 경우 <xref:System.Data.Linq.DataContext> 개체의 이름은 `northwindDataContext`입니다.
 
-     You can create an instance of the <xref:System.Data.Linq.DataContext> object in your code and query and modify the Customers collection specified by the O/R Designer. Changes that you make to the Customers collection are not reflected in the database until you submit them by calling the <xref:System.Data.Linq.DataContext.SubmitChanges%2A> method of the <xref:System.Data.Linq.DataContext> object.
+     코드에서 <xref:System.Data.Linq.DataContext> 개체의 인스턴스를 만들고 O/R 디자이너에서 지정한 Customers 컬렉션을 쿼리하고 수정할 수 있습니다. Customers 컬렉션에 대 한 변경 내용은 <xref:System.Data.Linq.DataContext> 개체의 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 메서드를 호출 하 여 제출할 때까지 데이터베이스에 반영 되지 않습니다.
 
-     Double-click the Windows Form, Form1, to add code to the <xref:System.Windows.Forms.Form.Load> event to query the Customers table that is exposed as a property of your <xref:System.Data.Linq.DataContext>. 다음 코드를 추가합니다.
+     Windows Form Form1을 두 번 클릭 하 여 <xref:System.Windows.Forms.Form.Load> 이벤트에 코드를 추가 하 여 <xref:System.Data.Linq.DataContext>의 속성으로 노출 되는 Customers 테이블을 쿼리 합니다. 다음 코드를 추가합니다.
 
     ```vb
     Private db As northwindDataContext
@@ -87,9 +87,9 @@ The examples in this topic use the Northwind sample database. If you do not have
     End Sub
     ```
 
-3. From the **Toolbox**, drag three <xref:System.Windows.Forms.Button> controls onto the form. Select the first `Button` control. In the **Properties** window, set the `Name` of the `Button` control to `AddButton` and the `Text` to `Add`. Select the second button and set the `Name` property to `UpdateButton` and the `Text` property to `Update`. Select the third button and set the `Name` property to `DeleteButton` and the `Text` property to `Delete`.
+3. **도구 상자**에서 세 개의 <xref:System.Windows.Forms.Button> 컨트롤을 폼으로 끌어옵니다. 첫 번째 `Button` 컨트롤을 선택 합니다. **속성** 창에서 `Button` 컨트롤의 `Name` `AddButton`로 설정 하 고 `Text`를 `Add`로 설정 합니다. 두 번째 단추를 선택 하 고 `Name` 속성을 `UpdateButton`로 설정 하 고 `Text` 속성을 `Update`로 설정 합니다. 세 번째 단추를 선택 하 고 `Name` 속성을 `DeleteButton`로 설정 하 고 `Text` 속성을 `Delete`로 설정 합니다.
 
-4. Double-click the **Add** button to add code to its `Click` event. 다음 코드를 추가합니다.
+4. **추가** 단추를 두 번 클릭 하 여 `Click` 이벤트에 코드를 추가 합니다. 다음 코드를 추가합니다.
 
     ```vb
     Private Sub AddButton_Click(ByVal sender As System.Object,
@@ -114,7 +114,7 @@ The examples in this topic use the Northwind sample database. If you do not have
     End Sub
     ```
 
-5. Double-click the **Update** button to add code to its `Click` event. 다음 코드를 추가합니다.
+5. **업데이트** 단추를 두 번 클릭 하 여 `Click` 이벤트에 코드를 추가 합니다. 다음 코드를 추가합니다.
 
     ```vb
     Private Sub UpdateButton_Click(ByVal sender As System.Object, _
@@ -138,7 +138,7 @@ The examples in this topic use the Northwind sample database. If you do not have
     End Sub
     ```
 
-6. Double-click the **Delete** button to add code to its `Click` event. 다음 코드를 추가합니다.
+6. **삭제** 단추를 두 번 클릭 하 여 `Click` 이벤트에 코드를 추가 합니다. 다음 코드를 추가합니다.
 
     ```vb
     Private Sub DeleteButton_Click(ByVal sender As System.Object, _
@@ -159,9 +159,9 @@ The examples in this topic use the Northwind sample database. If you do not have
     End Sub
     ```
 
-7. F5 키를 눌러 프로젝트를 실행합니다. Click **Add** to add a new record. Click **Update** to modify the new record. Click **Delete** to delete the new record.
+7. F5 키를 눌러 프로젝트를 실행합니다. **추가** 를 클릭 하 여 새 레코드를 추가 합니다. **업데이트** 를 클릭 하 여 새 레코드를 수정 합니다. **삭제** 를 클릭 하 여 새 레코드를 삭제 합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
 - [쿼리](../../../../visual-basic/language-reference/queries/index.md)

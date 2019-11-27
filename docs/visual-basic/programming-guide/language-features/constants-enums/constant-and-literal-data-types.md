@@ -17,51 +17,51 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74333726"
 ---
 # <a name="constant-and-literal-data-types-visual-basic"></a>상수 및 리터럴 데이터 형식(Visual Basic)
-A literal is a value that is expressed as itself rather than as a variable's value or the result of an expression, such as the number 3 or the string "Hello". A constant is a meaningful name that takes the place of a literal and retains this same value throughout the program, as opposed to a variable, whose value may change.  
+리터럴은 변수 값 또는 식의 결과 (예: 숫자 3 또는 문자열 "Hello")가 아니라 자체로 표현 되는 값입니다. 상수는 리터럴 자리를 사용 하 고 값이 변경 될 수 있는 변수와 달리 프로그램 전체에서 동일한 값을 유지 하는 의미 있는 이름입니다.  
   
- When [Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md) is `Off` and [Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md) is `On`, you must declare all constants explicitly with a data type. In the following example, the data type of `MyByte` is explicitly declared as data type `Byte`:  
+ [옵션 유추](../../../../visual-basic/language-reference/statements/option-infer-statement.md) 가 `Off` 되 고 [option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md) 가 `On`경우 데이터 형식을 사용 하 여 명시적으로 모든 상수를 선언 해야 합니다. 다음 예에서는 `MyByte` 데이터 형식이 명시적으로 `Byte`데이터 형식으로 선언 됩니다.  
   
  [!code-vb[VbVbalrConstants#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConstants/VB/Class1.vb#1)]  
   
- When `Option Infer` is `On` or `Option Strict` is `Off`, you can declare a constant without specifying a data type with an `As` clause. The compiler determines the type of the constant from the type of the expression. A numeric integer literal is cast by default to the `Integer` data type. The default data type for floating-point numbers is `Double`, and the keywords `True` and `False` specify a `Boolean` constant.  
+ `Option Infer` `On` 또는 `Option Strict` `Off`경우에는 `As` 절을 사용 하 여 데이터 형식을 지정 하지 않고 상수를 선언할 수 있습니다. 컴파일러는 식의 형식에서 상수의 형식을 결정 합니다. 숫자 정수 리터럴은 기본적으로 `Integer` 데이터 형식으로 캐스팅 됩니다. 부동 소수점 숫자의 기본 데이터 형식은 `Double`되며 키워드 `True` 및 `False` `Boolean` 상수를 지정 합니다.  
   
-## <a name="literals-and-type-coercion"></a>Literals and Type Coercion  
- In some cases, you might want to force a literal to a particular data type; for example, when assigning a particularly large integral literal value to a variable of type `Decimal`. The following example produces an error:  
+## <a name="literals-and-type-coercion"></a>리터럴 및 형식 강제 변환  
+ 경우에 따라 리터럴을 특정 데이터 형식으로 강제 지정할 수 있습니다. 예를 들어 `Decimal`형식의 변수에 특히 긴 정수 리터럴 값을 할당 하는 경우입니다. 다음 예에서는 오류를 생성 합니다.  
   
 ```vb  
 Dim myDecimal as Decimal  
 myDecimal = 100000000000000000000   ' This causes a compiler error.  
 ```  
   
- The error results from the representation of the literal. The `Decimal` data type can hold a value this large, but the literal is implicitly represented as a `Long`, which cannot.  
+ 리터럴 표현에서 발생 하는 오류입니다. `Decimal` 데이터 형식에는이 값이 너무 클 수 있지만 리터럴은 암시적으로 `Long`으로 표현 됩니다.  
   
- You can coerce a literal to a particular data type in two ways: by appending a type character to it, or by placing it within enclosing characters. A type character or enclosing characters must immediately precede and/or follow the literal, with no intervening space or characters of any kind.  
+ 리터럴를 특정 데이터 형식으로 강제 변환할 수 있습니다. 여기에는 형식 문자를 추가 하거나 묶기 문자 내에 배치 하는 방법입니다. 형식 문자 또는 바깥쪽 문자는 문자를 사용 하지 않고 리터럴 앞뒤에 바로 앞 이나 뒤에와 야 합니다.  
   
- To make the previous example work, you can append the `D` type character to the literal, which causes it to be represented as a `Decimal`:  
+ 이전 예제를 사용 하려면 `D` 형식 문자를 리터럴에 추가 하 여 `Decimal`으로 표시 되도록 할 수 있습니다.  
   
  [!code-vb[VbVbalrConstants#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConstants/VB/Class1.vb#2)]  
   
- The following example demonstrates correct usage of type characters and enclosing characters:  
+ 다음 예제에서는 형식 문자 및 묶기 문자를 올바르게 사용 하는 방법을 보여 줍니다.  
   
  [!code-vb[VbVbalrConstants#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConstants/VB/Class1.vb#3)]  
   
- The following table shows the enclosing characters and type characters available in Visual Basic.  
+ 다음 표에서는 Visual Basic에서 사용할 수 있는 바깥쪽 문자 및 형식 문자를 보여 줍니다.  
   
-|데이터 형식|Enclosing character|Appended type character|  
+|데이터 형식|묶기 문자|추가 된 형식 문자|  
 |---|---|---|  
 |`Boolean`|(없음)|(없음)|  
 |`Byte`|(없음)|(없음)|  
 |`Char`|"|C|  
 |`Date`|#|(없음)|  
-|`Decimal`|(없음)|D or @|  
-|`Double`|(없음)|R or #|  
-|`Integer`|(없음)|I or %|  
-|`Long`|(없음)|L or &|  
+|`Decimal`|(없음)|D 또는 @|  
+|`Double`|(없음)|R 또는 #|  
+|`Integer`|(없음)|I 또는%|  
+|`Long`|(없음)|L 또는 &|  
 |`Short`|(없음)|S|  
-|`Single`|(없음)|F or !|  
+|`Single`|(없음)|F 또는!|  
 |`String`|"|(없음)|  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [사용자 정의 상수](../../../../visual-basic/programming-guide/language-features/constants-enums/user-defined-constants.md)
 - [방법: 상수 선언](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md)
@@ -69,7 +69,7 @@ myDecimal = 100000000000000000000   ' This causes a compiler error.
 - [Option Strict 문](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
 - [Option Explicit 문](../../../../visual-basic/language-reference/statements/option-explicit-statement.md)
 - [열거형 개요](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)
-- [How to: Declare an Enumeration](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)
+- [방법: 열거형 선언](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)
 - [열거형 및 이름 한정](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)
 - [데이터 형식](../../../../visual-basic/language-reference/data-types/index.md)
 - [상수 및 열거형](../../../../visual-basic/language-reference/constants-and-enumerations.md)

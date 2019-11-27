@@ -14,37 +14,37 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346022"
 ---
 # <a name="how-to-return-a-value-from-a-procedure-visual-basic"></a>방법: 프로시저에서 값 반환(Visual Basic)
-A `Function` procedure returns a value to the calling code either by executing a `Return` statement or by encountering an `Exit Function` or `End Function` statement.  
+`Function` 프로시저는 `Return` 문을 실행 하거나 `Exit Function` 또는 `End Function` 문을 실행 하 여 호출 코드에 값을 반환 합니다.  
   
-### <a name="to-return-a-value-using-the-return-statement"></a>To return a value using the Return statement  
+### <a name="to-return-a-value-using-the-return-statement"></a>Return 문을 사용 하 여 값을 반환 하려면  
   
-1. Put a `Return` statement at the point where the procedure's task is completed.  
+1. 프로시저 태스크가 완료 된 지점에 `Return` 문을 배치 합니다.  
   
-2. Follow the `Return` keyword with an expression that yields the value you want to return to the calling code.  
+2. 호출 코드에 반환 하려는 값을 생성 하는 식으로 `Return` 키워드를 따릅니다.  
   
 3. 동일한 프로시저에 `Return` 문을 둘 이상 사용할 수 있습니다.  
   
-     The following `Function` procedure calculates the longest side, or hypotenuse, of a right triangle, and returns it to the calling code.  
+     다음 `Function` 프로시저는 오른쪽 삼각형의 가장 긴 변 또는 빗변을 계산 하 고 호출 코드에 반환 합니다.  
   
      [!code-vb[VbVbcnProcedures#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#1)]  
   
-     The following example shows a typical call to `hypotenuse`, which stores the returned value.  
+     다음 예제에서는 반환 된 값을 저장 하는 `hypotenuse`에 대 한 일반적인 호출을 보여 줍니다.  
   
      [!code-vb[VbVbcnProcedures#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#6)]  
   
-### <a name="to-return-a-value-using-exit-function-or-end-function"></a>To return a value using Exit Function or End Function  
+### <a name="to-return-a-value-using-exit-function-or-end-function"></a>Exit Function 또는 End 함수를 사용 하 여 값을 반환 하려면  
   
-1. In at least one place in the `Function` procedure, assign a value to the procedure's name.  
+1. `Function` 프로시저의 하나 이상의 위치에서 프로시저의 이름에 값을 할당 합니다.  
   
-2. When you execute an `Exit Function` or `End Function` statement, Visual Basic returns the value most recently assigned to the procedure's name.  
+2. `Exit Function` 또는 `End Function` 문을 실행 하는 경우 Visual Basic는 가장 최근에 프로시저 이름에 할당 된 값을 반환 합니다.  
   
 3. 동일한 프로시저에 `Exit Function` 문을 둘 이상 사용할 수 있으며, `Return` 및 `Exit Function` 문을 혼합할 수도 있습니다.  
   
-4. You can have only one `End Function` statement in a `Function` procedure.  
+4. `Function` 프로시저에는 `End Function` 문을 하나만 사용할 수 있습니다.  
   
-     For more information and an example, see "Return Value" in [Function Statement](../../../../visual-basic/language-reference/statements/function-statement.md).  
+     자세한 내용 및 예제는 [함수 문의](../../../../visual-basic/language-reference/statements/function-statement.md)"Return Value"를 참조 하십시오.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [절차](./index.md)
 - [Sub 프로시저](./sub-procedures.md)

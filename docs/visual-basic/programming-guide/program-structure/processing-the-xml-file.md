@@ -12,36 +12,36 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347298"
 ---
 # <a name="processing-the-xml-file-visual-basic"></a>XML 파일 처리(Visual Basic)
-컴파일러는 문서 생성을 위해 태그가 지정되는 코드의 각 구문에 대해 ID 문자열을 생성합니다. (For information on how to tag your code, see [XML Comment Tags](../../../visual-basic/language-reference/xmldoc/index.md).) The ID string uniquely identifies the construct. Programs that process the XML file can use the ID string to identify the corresponding .NET Framework metadata/reflection item.  
+컴파일러는 문서 생성을 위해 태그가 지정되는 코드의 각 구문에 대해 ID 문자열을 생성합니다. 코드에 태그를 설정 하는 방법에 대 한 자세한 내용은 [XML 주석 태그](../../../visual-basic/language-reference/xmldoc/index.md)를 참조 하세요. ID 문자열은 구문을 고유 하 게 식별 합니다. XML 파일을 처리 하는 프로그램은 ID 문자열을 사용 하 여 해당 하는 .NET Framework metadata/reflection 항목을 식별할 수 있습니다.  
   
- The XML file is not a hierarchical representation of your code; it is a flat list with a generated ID for each element.  
+ XML 파일은 코드의 계층적 표현이 아닙니다. 각 요소에 대해 생성 된 ID가 있는 단순 목록입니다.  
   
  컴파일러는 ID 문자열을 생성할 때 다음 규칙을 관찰합니다.  
   
 - 문자열에 공백이 배치되지 않았습니다.  
   
-- ID 문자열의 첫 부분이 뒤에 콜론이 붙은 한 글자로 식별 대상 멤버를 식별합니다. The following member types are used.  
+- ID 문자열의 첫 부분이 뒤에 콜론이 붙은 한 글자로 식별 대상 멤버를 식별합니다. 다음 멤버 유형이 사용 됩니다.  
   
 |문자|설명|  
 |---|---|  
-|N|네임스페이스(namespace)<br /><br /> You cannot add documentation comments to a namespace, but you can make CREF references to them, where supported.|  
-|T|type: `Class`, `Module`, `Interface`, `Structure`, `Enum`, `Delegate`|  
-|F|field: `Dim`|  
-|P|property: `Property` (including default properties)|  
-|M|method: `Sub`, `Function`, `Declare`, `Operator`|  
-|E|event: `Event`|  
-|!|오류 문자열<br /><br /> 문자열의 나머지 부분은 오류에 대한 정보를 제공합니다. The Visual Basic compiler generates error information for links that cannot be resolved.|  
+|N|namespace<br /><br /> 네임 스페이스에 문서 주석을 추가할 수는 없지만 지원 되는 경우에는이에 대 한 CREF 참조를 만들 수 있습니다.|  
+|T|유형: `Class`, `Module`, `Interface`, `Structure`, `Enum`, `Delegate`|  
+|F|필드: `Dim`|  
+|P|속성: `Property` (기본 속성 포함)|  
+|M|메서드: `Sub`, `Function`, `Declare`, `Operator`|  
+|E|이벤트: `Event`|  
+|!|오류 문자열<br /><br /> 문자열의 나머지 부분은 오류에 대한 정보를 제공합니다. Visual Basic 컴파일러는 확인할 수 없는 링크에 대 한 오류 정보를 생성 합니다.|  
   
-- The second part of the `String` is the fully qualified name of the item, starting at the root of the namespace. The name of the item, its enclosing type(s), and the namespace are separated by periods. If the name of the item itself contains periods, they are replaced by the number sign (#). It is assumed that no item has a number sign directly in its name. For example, the fully qualified name of the `String` constructor would be `System.String.#ctor`.  
+- `String`의 두 번째 부분은 네임 스페이스의 루트에서 시작 하는 항목의 정규화 된 이름입니다. 항목의 이름, 바깥쪽 형식 및 네임 스페이스는 마침표로 구분 됩니다. 항목 자체의 이름에 마침표가 포함 되어 있으면 숫자 기호 (#)로 대체 됩니다. 이름에 직접 번호 기호가 있는 항목이 없는 것으로 가정 합니다. 예를 들어 `String` 생성자의 정규화 된 이름이 `System.String.#ctor`됩니다.  
   
-- 속성 및 메서드의 경우 메서드에 대한 인수가 있으면 괄호로 묶인 인수 목록이 문자열 뒤에 붙습니다. 인수가 없으면 괄호도 없습니다. 인수는 쉼표로 구분됩니다. The encoding of each argument follows directly how it is encoded in a .NET Framework signature.  
+- 속성 및 메서드의 경우 메서드에 대한 인수가 있으면 괄호로 묶인 인수 목록이 문자열 뒤에 붙습니다. 인수가 없으면 괄호도 없습니다. 인수는 쉼표로 구분됩니다. 각 인수의 인코딩은 .NET Framework 시그니처에서 인코딩 되는 방식을 직접 따릅니다.  
   
 ## <a name="example"></a>예제  
- The following code shows how the ID strings for a class and its members are generated.  
+ 다음 코드에서는 클래스 및 해당 멤버에 대 한 ID 문자열이 생성 되는 방법을 보여 줍니다.  
   
  [!code-vb[VbVbcnXmlDocComments#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#10)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [-doc](../../../visual-basic/reference/command-line-compiler/doc.md)
 - [방법: XML 문서 만들기](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)

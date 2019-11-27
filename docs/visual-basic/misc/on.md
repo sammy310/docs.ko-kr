@@ -15,12 +15,12 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74331844"
 ---
 # <a name="on-visual-basic"></a>On(Visual Basic)
-Introduces a response to a run-time error or turns a compiler option on.  
+런타임 오류에 대 한 응답을 제공 하거나에서 컴파일러 옵션을 설정 합니다.  
   
- In queries, identifies keys for the collections being joined.  
+ 쿼리에서 조인 되는 컬렉션에 대 한 키를 식별 합니다.  
   
 ## <a name="remarks"></a>주의  
- The `On` keyword is used in these contexts:  
+ `On` 키워드는 다음 컨텍스트에서 사용 됩니다.  
   
  [Group Join 절](../../visual-basic/language-reference/queries/group-join-clause.md)  
   
@@ -34,6 +34,6 @@ Introduces a response to a run-time error or turns a compiler option on.
   
  [Option Strict 문](../../visual-basic/language-reference/statements/option-strict-statement.md)  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [C++ 키워드](../../visual-basic/language-reference/keywords/index.md)
+- [키워드](../../visual-basic/language-reference/keywords/index.md)

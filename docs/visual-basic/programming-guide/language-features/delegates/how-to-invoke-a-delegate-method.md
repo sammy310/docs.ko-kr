@@ -11,17 +11,17 @@ ms.locfileid: "74345260"
 ---
 # <a name="how-to-invoke-a-delegate-method-visual-basic"></a>방법: 대리자 메서드 호출(Visual Basic)
 
-This example shows how to associate a method with a delegate and then invoke that method through the delegate.
+이 예제에서는 메서드를 대리자와 연결한 다음 대리자를 통해 해당 메서드를 호출 하는 방법을 보여 줍니다.
 
-### <a name="create-the-delegate-and-matching-procedures"></a>Create the delegate and matching procedures
+### <a name="create-the-delegate-and-matching-procedures"></a>대리자 및 일치 프로시저 만들기
 
-1. Create a delegate named `MySubDelegate`.
+1. `MySubDelegate`이라는 대리자를 만듭니다.
 
     ```vb
     Delegate Sub MySubDelegate(ByVal x As Integer)
     ```
 
-2. Declare a class that contains a method with the same signature as the delegate.
+2. 대리자와 동일한 시그니처를 사용 하 여 메서드를 포함 하는 클래스를 선언 합니다.
 
     ```vb
     Class class1
@@ -31,7 +31,7 @@ This example shows how to associate a method with a delegate and then invoke tha
     End Class
     ```
 
-3. Define a method that creates an instance of the delegate and invokes the method associated with the delegate by calling the built-in `Invoke` method.
+3. 대리자의 인스턴스를 만들고 기본 제공 `Invoke` 메서드를 호출 하 여 대리자와 연결 된 메서드를 호출 하는 메서드를 정의 합니다.
 
     ```vb
     Protected Sub DelegateTest()
@@ -43,7 +43,7 @@ This example shows how to associate a method with a delegate and then invoke tha
     End Sub
     ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Delegate 문](../../../../visual-basic/language-reference/statements/delegate-statement.md)
 - [대리자](../../../../visual-basic/programming-guide/language-features/delegates/index.md)

@@ -18,16 +18,16 @@ ms.locfileid: "74347222"
 ## <a name="remarks"></a>주의  
  `My.Computer.FileSystem.SpecialDirectories` 개체의 메서드 및 속성에 대한 자세한 내용은 <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories>를 참조하세요.  
   
- For more information, see [How to: Retrieve the Contents of the My Documents Directory](../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-retrieve-the-contents-of-the-my-documents-directory.md).  
+ 자세한 내용은 [방법: 내 문서 디렉터리의 콘텐츠 검색](../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-retrieve-the-contents-of-the-my-documents-directory.md)을 참조 하세요.  
   
 ## <a name="requirements"></a>요구 사항  
  **네임스페이스:** <xref:Microsoft.VisualBasic.MyServices>  
   
- **Class:** <xref:Microsoft.VisualBasic.MyServices.SpecialDirectoriesProxy> (provides access to <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories>)  
+ **클래스:** <xref:Microsoft.VisualBasic.MyServices.SpecialDirectoriesProxy> (<xref:Microsoft.VisualBasic.FileIO.SpecialDirectories>에 대 한 액세스 제공)  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **어셈블리:** Visual Basic 런타임 라이브러리 (Microsoft.visualbasic)  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [My.Computer.FileSystem 개체](../../../visual-basic/language-reference/objects/my-computer-filesystem-object.md)
 - [My.Computer 개체](../../../visual-basic/language-reference/objects/my-computer-object.md)

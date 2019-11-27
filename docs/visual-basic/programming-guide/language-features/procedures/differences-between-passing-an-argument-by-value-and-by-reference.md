@@ -16,30 +16,30 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74341225"
 ---
 # <a name="differences-between-passing-an-argument-by-value-and-by-reference-visual-basic"></a>인수를 값으로 전달할 때와 참조로 전달할 때의 차이점(Visual Basic)
-When you pass one or more arguments to a procedure, each argument corresponds to an underlying programming element in the calling code. You can pass either the value of this underlying element, or a reference to it. This is known as the *passing mechanism*.  
+하나 이상의 인수를 프로시저에 전달 하는 경우 각 인수는 호출 코드의 기본 프로그래밍 요소에 해당 합니다. 이 기본 요소의 값 이나 참조를 전달할 수 있습니다. 이를 *전달 메커니즘*이라고 합니다.  
   
 ## <a name="passing-by-value"></a>값으로 전달  
- You pass an argument *by value* by specifying the [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) keyword for the corresponding parameter in the procedure definition. When you use this passing mechanism, Visual Basic copies the value of the underlying programming element into a local variable in the procedure. The procedure code does not have any access to the underlying element in the calling code.  
+ 프로시저 정의에서 해당 매개 변수에 대해 [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) 키워드를 지정 하 여 인수를 *값으로* 전달 합니다. 이 전달 메커니즘을 사용 하는 경우 Visual Basic는 기본 프로그래밍 요소의 값을 프로시저의 지역 변수로 복사 합니다. 프로시저 코드에는 호출 코드의 기본 요소에 대 한 액세스 권한이 없습니다.  
   
-## <a name="passing-by-reference"></a>Passing by Reference  
- You pass an argument *by reference* by specifying the [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) keyword for the corresponding parameter in the procedure definition. When you use this passing mechanism, Visual Basic gives the procedure a direct reference to the underlying programming element in the calling code.  
+## <a name="passing-by-reference"></a>참조로 전달  
+ 프로시저 정의에서 해당 매개 변수에 대해 [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) 키워드를 지정 하 여 인수를 *참조로* 전달 합니다. 이 전달 메커니즘을 사용 하는 경우 Visual Basic은 호출 코드의 기본 프로그래밍 요소에 대 한 직접 참조를 프로시저에 제공 합니다.  
   
-## <a name="passing-mechanism-and-element-type"></a>Passing Mechanism and Element Type  
- The choice of passing mechanism is not the same as the classification of the underlying element type. Passing by value or by reference refers to what Visual Basic supplies to the procedure code. A value type or reference type refers to how a programming element is stored in memory.  
+## <a name="passing-mechanism-and-element-type"></a>메커니즘 및 요소 형식 전달  
+ 전달 메커니즘의 선택은 기본 요소 형식의 분류와 동일 하지 않습니다. 값 또는 참조로 전달 하는 것은 프로시저 코드에 제공 Visual Basic는 것을 의미 합니다. 값 형식 또는 참조 형식은 프로그래밍 요소를 메모리에 저장 하는 방법을 나타냅니다.  
   
- However, the passing mechanism and element type are interrelated. The value of a reference type is a pointer to the data elsewhere in memory. This means that when you pass a reference type by value, the procedure code has a pointer to the underlying element's data, even though it cannot access the underlying element itself. For example, if the element is an array variable, the procedure code does not have access to the variable itself, but it can access the array members.  
+ 그러나 전달 메커니즘 및 요소 형식은 서로 연관 되어 있습니다. 참조 형식의 값은 메모리의 다른 위치에 있는 데이터에 대 한 포인터입니다. 즉, 참조 형식을 값으로 전달 하는 경우 기본 요소 자체에 액세스할 수 없는 경우에도 프로시저 코드에 기본 요소 데이터에 대 한 포인터가 있습니다. 예를 들어 요소가 배열 변수인 경우 프로시저 코드는 변수에 대 한 액세스 권한을 갖지 않지만 배열 멤버에 액세스할 수 있습니다.  
   
-## <a name="ability-to-modify"></a>Ability to Modify  
- When you pass a nonmodifiable element as an argument, the procedure can never modify it in the calling code, whether it is passed `ByVal` or `ByRef`.  
+## <a name="ability-to-modify"></a>수정 기능  
+ 수정할 수 없는 요소를 인수로 전달 하는 경우 프로시저는 호출 코드에서 `ByVal` 또는 `ByRef`전달 되는지 여부를 수정할 수 없습니다.  
   
- For a modifiable element, the following table summarizes the interaction between the element type and the passing mechanism.  
+ 수정 가능한 요소에 대해 다음 표에서는 요소 형식과 전달 메커니즘 간의 상호 작용을 요약 합니다.  
   
-|요소 형식|Passed `ByVal`|Passed `ByRef`|  
+|요소 형식|전달 된 `ByVal`|전달 된 `ByRef`|  
 |------------------|--------------------|--------------------|  
-|Value type (contains only a value)|The procedure cannot change the variable or any of its members.|The procedure can change the variable and its members.|  
-|Reference type (contains a pointer to a class or structure instance)|The procedure cannot change the variable but can change members of the instance to which it points.|The procedure can change the variable and members of the instance to which it points.|  
+|값 형식 (값만 포함)|프로시저는 변수나 해당 멤버를 변경할 수 없습니다.|프로시저는 변수와 해당 멤버를 변경할 수 있습니다.|  
+|참조 형식 (클래스 또는 구조체 인스턴스에 대 한 포인터 포함)|프로시저는 변수를 변경할 수 없지만 해당 변수를 가리키는 인스턴스의 멤버를 변경할 수 있습니다.|프로시저는 변수가 가리키는 인스턴스의 멤버 및 멤버를 변경할 수 있습니다.|  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [절차](./index.md)
 - [프로시저 매개 변수 및 인수](./procedure-parameters-and-arguments.md)
@@ -50,4 +50,4 @@ When you pass one or more arguments to a procedure, each argument corresponds to
 - [방법: 값 변경에 대해 프로시저 인수 보호](./how-to-protect-a-procedure-argument-against-value-changes.md)
 - [방법: 인수가 값으로 전달되도록 설정](./how-to-force-an-argument-to-be-passed-by-value.md)
 - [위치 및 이름으로 인수 전달](./passing-arguments-by-position-and-by-name.md)
-- [값 형식과 참조 형식](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)

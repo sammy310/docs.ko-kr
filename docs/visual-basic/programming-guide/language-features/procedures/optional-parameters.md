@@ -20,7 +20,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345959"
 ---
 # <a name="optional-parameters-visual-basic"></a>선택적 매개 변수(Visual Basic)
-프로시저 매개 변수를 선택적 요소로 지정하여 프로시저를 호출할 때 인수를 지정하지 않아도 되도록 할 수 있습니다. *Optional parameters* are indicated by the `Optional` keyword in the procedure definition. 이 때 적용되는 규칙은 다음과 같습니다.  
+프로시저 매개 변수를 선택적 요소로 지정하여 프로시저를 호출할 때 인수를 지정하지 않아도 되도록 할 수 있습니다. *선택적 매개 변수* 는 프로시저 정의에서 `Optional` 키워드로 표시 됩니다. 이 때 적용되는 규칙은 다음과 같습니다.  
   
 - 프로시저 정의의 모든 선택적 매개 변수에는 기본값을 지정해야 합니다.  
   
@@ -43,14 +43,14 @@ Sub name(ByVal parameter1 As datatype1, Optional ByVal parameter2 As datatype2 =
 Sub name(argument 1, , , argument 4)  
 ```  
   
- 다음 예제에서는 `MsgBox` 함수를 여러 번 호출합니다. `MsgBox`에는 필수적 매개 변수 하나와 선택적 매개 변수 두 개가 사용됩니다.  
+ 다음 예제에서는 `MsgBox` 함수를 여러 번 호출합니다. `MsgBox`에는 필수 매개 변수 하 나와 선택적 매개 변수 두 개가 있습니다.  
   
  `MsgBox`에 대한 첫 번째 호출에서 `MsgBox`에서 정의하는 순서대로 세 개의 인수를 모두 제공합니다. 두 번째 호출에서는 필수적 인수만 지정합니다. 세 번째와 네 번째 호출에서는 첫 번째 인수와 세 번째 인수를 지정합니다. 세 번째 호출에서는 위치로 인수를 지정하고, 네 번째 호출에서는 이름으로 인수를 지정합니다.  
   
  [!code-vb[VbVbcnProcedures#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#47)]  
   
 ## <a name="determining-whether-an-optional-argument-is-present"></a>선택적 인수의 존재 여부 확인  
- 프로시저는 지정된 인수가 생략되었는지 또는 호출 코드가 명시적으로 기본값을 제공했는지 여부를 런타임에서 감지할 수 없습니다. 이를 알아보려면 특이한 값을 기본값으로 설정하면 됩니다. The following procedure defines the optional parameter `office`, and tests for its default value, `QJZ`, to see if it has been omitted in the call:  
+ 프로시저는 지정된 인수가 생략되었는지 또는 호출 코드가 명시적으로 기본값을 제공했는지 여부를 런타임에서 감지할 수 없습니다. 이를 알아보려면 특이한 값을 기본값으로 설정하면 됩니다. 다음 절차에서는 선택적 매개 변수 `office`를 정의 하 고, `QJZ`기본값을 테스트 하 여 호출에서 생략 되었는지 확인 합니다.  
   
  [!code-vb[VbVbcnProcedures#46](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#46)]  
   
@@ -59,7 +59,7 @@ Sub name(argument 1, , , argument 4)
 ## <a name="optional-parameters-and-overloading"></a>선택적 매개 변수 및 오버로드  
  선택적 매개 변수가 있는 프로시저를 정의하는 또 다른 방법은 오버로드를 사용하는 것입니다. 선택적 매개 변수가 하나이면 프로시저의 오버로드된 두 버전을 매개 변수를 사용하는 버전과 매개 변수를 사용하지 않는 버전으로 정의할 수 있습니다. 이러한 방식은 선택적 매개 변수의 개수가 증가할수록 더욱 복잡해지지만 호출 프로그램이 각 선택적 인수를 제공했는지 여부를 확실히 알 수 있다는 장점이 있습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [절차](./index.md)
 - [프로시저 매개 변수 및 인수](./procedure-parameters-and-arguments.md)

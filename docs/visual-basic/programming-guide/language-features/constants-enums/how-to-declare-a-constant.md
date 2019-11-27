@@ -31,41 +31,41 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347465"
 ---
 # <a name="how-to-declare-a-constant-visual-basic"></a>방법: 상수 선언(Visual Basic)
-You use the `Const` statement to declare a constant and set its value. By declaring a constant, you assign a meaningful name to a value. Once a constant is declared, it cannot be modified or assigned a new value.  
+`Const` 문을 사용 하 여 상수를 선언 하 고 해당 값을 설정 합니다. 상수를 선언 하 여 값에 의미 있는 이름을 할당 합니다. 상수를 선언한 후에는 수정 하거나 새 값을 할당할 수 없습니다.  
   
- You declare a constant within a procedure or in the declarations section of a module, class, or structure. Class or structure-level constants are `Private` by default, but may also be declared as `Public`, `Friend`, `Protected`, or `Protected Friend` for the appropriate level of code access.  
+ 프로시저 내에서 상수를 선언 하거나 모듈, 클래스 또는 구조체의 선언 섹션에서 상수를 선언 합니다. 클래스 또는 구조체 수준 상수는 기본적으로 `Private` 되지만 적절 한 수준의 코드 액세스에 대해 `Public`, `Friend`, `Protected`또는 `Protected Friend`로 선언할 수도 있습니다.  
   
- The constant must have a valid symbolic name (the rules are the same as those for creating variable names) and an expression composed of numeric or string constants and operators (but no function calls).  
+ 상수에는 유효한 기호화 된 이름 (규칙은 변수 이름을 만드는 데 사용할 수 있는 이름)과 숫자 또는 문자열 상수와 연산자로 구성 된 식 (함수 호출은 제외)이 있어야 합니다.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-### <a name="to-declare-a-constant"></a>To declare a constant  
+### <a name="to-declare-a-constant"></a>상수를 선언 하려면  
   
-- Write a declaration that includes an access specifier, the `Const` keyword, and an expression, as in the following examples:  
+- 다음 예제와 같이 액세스 지정자, `Const` 키워드 및 식을 포함 하는 선언을 작성 합니다.  
   
      [!code-vb[VbEnumsTask#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#8)]  
   
-     When [Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md) is `Off` and [Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md) is `On`, you must declare a constant explicitly by specifying a data type (`Boolean`, `Byte`, `Char`, `DateTime`, `Decimal`, `Double`, `Integer`, `Long`, `Short`, `Single`, or `String`).  
+     [옵션 추론](../../../../visual-basic/language-reference/statements/option-infer-statement.md) 을 `Off` 하 고 [option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md) 를 `On`하는 경우 데이터 형식 (`Boolean`, `Byte`, `Char`, `DateTime`, `Decimal`, `Double`, `Integer`, `Long`, `Short`)을 지정 하 여 상수를 명시적으로 선언 해야 합니다.`Single``String`  
   
-     When `Option Infer` is `On` or `Option Strict` is `Off`, you can declare a constant without specifying a data type with an `As` clause. The compiler determines the type of the constant from the type of the expression. For more information, see [Constant and Literal Data Types](constant-and-literal-data-types.md).  
+     `Option Infer` `On` 또는 `Option Strict` `Off`경우에는 `As` 절을 사용 하 여 데이터 형식을 지정 하지 않고 상수를 선언할 수 있습니다. 컴파일러는 식의 형식에서 상수의 형식을 결정 합니다. 자세한 내용은 [상수 및 리터럴 데이터 형식](constant-and-literal-data-types.md)을 참조 하세요.  
   
-### <a name="to-declare-a-constant-that-has-an-explicitly-stated-data-type"></a>To declare a constant that has an explicitly stated data type  
+### <a name="to-declare-a-constant-that-has-an-explicitly-stated-data-type"></a>명시적으로 언급 된 데이터 형식이 있는 상수를 선언 하려면  
   
-- Write a declaration that includes the `As` keyword and an explicit data type, as in the following examples:  
+- 다음 예제와 같이 `As` 키워드 및 명시적 데이터 형식을 포함 하는 선언을 작성 합니다.  
   
      [!code-vb[VbEnumsTask#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#9)]  
   
-     You can declare multiple constants on a single line, although your code is more readable if you declare only a single constant per line. If you declare multiple constants on a single line, they must all have the same access level (`Public`, `Private`, `Friend`, `Protected`, or `Protected Friend`).  
+     한 줄에 하나의 상수만 선언 하는 경우 코드를 더 쉽게 읽을 수 있지만 단일 줄에 여러 상수를 선언할 수 있습니다. 단일 줄에 여러 상수를 선언 하는 경우 모두 동일한 액세스 수준 (`Public`, `Private`, `Friend`, `Protected`또는 `Protected Friend`)을 가져야 합니다.  
   
-### <a name="to-declare-multiple-constants-on-a-single-line"></a>To declare multiple constants on a single line  
+### <a name="to-declare-multiple-constants-on-a-single-line"></a>한 줄에 여러 상수를 선언 하려면  
   
-- Separate the declarations with a comma and a space, as in the following example:  
+- 다음 예제와 같이 선언을 쉼표와 공백으로 구분 합니다.  
   
     ```vb  
     Public Const Four As Integer = 4, Five As Integer = 5, Six As Integer = 44  
     ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Const 문](../../../../visual-basic/language-reference/statements/const-statement.md)
 - [상수 및 리터럴 데이터 형식](constant-and-literal-data-types.md)
@@ -84,7 +84,7 @@ You use the `Const` statement to declare a constant and set its value. By declar
 
 - [열거형 개요](enumerations-overview.md)
 - [상수 개요](constants-overview.md)
-- [How to: Declare an Enumeration](how-to-declare-enumerations.md)
+- [방법: 열거형 선언](how-to-declare-enumerations.md)
 - [열거형 및 이름 한정](enumerations-and-name-qualification.md)
 - [Option Strict 문](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
 - [상수 및 열거형](../../../../visual-basic/language-reference/constants-and-enumerations.md)

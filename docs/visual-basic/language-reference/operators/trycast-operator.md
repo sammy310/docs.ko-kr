@@ -15,31 +15,31 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348210"
 ---
 # <a name="trycast-operator-visual-basic"></a>TryCast 연산자(Visual Basic)
-Introduces a type conversion operation that does not throw an exception.  
+에는 예외를 throw 하지 않는 형식 변환 연산이 도입 되었습니다.  
   
 ## <a name="remarks"></a>주의  
- If an attempted conversion fails, `CType` and `DirectCast` both throw an <xref:System.InvalidCastException> error. This can adversely affect the performance of your application. `TryCast` returns [Nothing](../../../visual-basic/language-reference/nothing.md), so that instead of having to handle a possible exception, you need only test the returned result against `Nothing`.  
+ 시도한 변환이 실패 하면 `CType`와 `DirectCast` 모두 <xref:System.InvalidCastException> 오류가 throw 됩니다. 이로 인해 응용 프로그램의 성능에 부정적인 영향을 줄 수 있습니다. `TryCast`은 [아무 것도](../../../visual-basic/language-reference/nothing.md)반환 하지 않으므로 가능한 예외를 처리 하지 않고 `Nothing`에 대해 반환 된 결과만 테스트 하면 됩니다.  
   
- You use the `TryCast` keyword the same way you use the [CType Function](../../../visual-basic/language-reference/functions/ctype-function.md) and the [DirectCast Operator](../../../visual-basic/language-reference/operators/directcast-operator.md) keyword. You supply an expression as the first argument and a type to convert it to as the second argument. `TryCast` operates only on reference types, such as classes and interfaces. It requires an inheritance or implementation relationship between the two types. This means that one type must inherit from or implement the other.  
+ [CType 함수와](../../../visual-basic/language-reference/functions/ctype-function.md) [DirectCast Operator](../../../visual-basic/language-reference/operators/directcast-operator.md) 키워드를 사용 하는 것과 같은 방법으로 `TryCast` 키워드를 사용 합니다. 식을 첫 번째 인수로 제공 하 고이를 두 번째 인수로 변환할 형식으로 제공 합니다. `TryCast`는 클래스 및 인터페이스와 같은 참조 형식에만 작동 합니다. 두 형식 간에 상속 또는 구현 관계가 필요 합니다. 즉, 한 형식이 다른 형식에서 상속 되거나 다른 형식에서 구현 되어야 합니다.  
   
-## <a name="errors-and-failures"></a>Errors and Failures  
- `TryCast` generates a compiler error if it detects that no inheritance or implementation relationship exists. But the lack of a compiler error does not guarantee a successful conversion. If the desired conversion is narrowing, it could fail at run time. If this happens, `TryCast` returns [Nothing](../../../visual-basic/language-reference/nothing.md).  
+## <a name="errors-and-failures"></a>오류 및 오류  
+ 상속 또는 구현 관계가 없다는 것을 감지 하면 `TryCast` 컴파일러 오류가 생성 됩니다. 그러나 컴파일러 오류가 없으면 변환이 성공적으로 수행 되지 않습니다. 원하는 변환이 축소 인 경우 런타임에 실패할 수 있습니다. 이 경우 `TryCast`은 [아무 것도](../../../visual-basic/language-reference/nothing.md)반환 하지 않습니다.  
   
 ## <a name="conversion-keywords"></a>변환 키워드  
- A comparison of the type conversion keywords is as follows.  
+ 형식 변환 키워드의 비교는 다음과 같습니다.  
   
-|키워드|데이터 형식|Argument relationship|Run-time failure|  
+|키워드|데이터 형식|인수 관계|런타임 오류|  
 |---|---|---|---|  
-|[CType 함수](../../../visual-basic/language-reference/functions/ctype-function.md)|Any data types|Widening or narrowing conversion must be defined between the two data types|Throws <xref:System.InvalidCastException>|  
-|[DirectCast 연산자](../../../visual-basic/language-reference/operators/directcast-operator.md)|Any data types|One type must inherit from or implement the other type|Throws <xref:System.InvalidCastException>|  
-|`TryCast`|Reference types only|One type must inherit from or implement the other type|Returns [Nothing](../../../visual-basic/language-reference/nothing.md)|  
+|[CType Function](../../../visual-basic/language-reference/functions/ctype-function.md)|모든 데이터 형식|두 데이터 형식 간에 확대 또는 축소 변환을 정의 해야 합니다.|<xref:System.InvalidCastException>를 throw 합니다.|  
+|[DirectCast 연산자](../../../visual-basic/language-reference/operators/directcast-operator.md)|모든 데이터 형식|한 형식이 다른 형식에서 상속 되거나 다른 형식으로 구현 되어야 합니다.|<xref:System.InvalidCastException>를 throw 합니다.|  
+|`TryCast`|참조 형식만|한 형식이 다른 형식에서 상속 되거나 다른 형식으로 구현 되어야 합니다.|[아무 것도](../../../visual-basic/language-reference/nothing.md) 반환 하지 않음|  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 `TryCast`을 사용하는 방법을 보여 줍니다.  
   
  [!code-vb[VbVbalrKeywords#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class1.vb#6)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [확대 변환과 축소 변환](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
 - [암시적 변환과 명시적 변환](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)

@@ -19,61 +19,61 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345386"
 ---
 # <a name="how-to-control-the-availability-of-a-variable-visual-basic"></a>방법: 변수의 사용 가능성 제어(Visual Basic)
-You control the availability of a variable by specifying its *access level*. The access level determines what code has permission to read or write to the variable.  
+*액세스 수준을*지정 하 여 변수의 가용성을 제어 합니다. 액세스 수준에 따라 변수에 대 한 읽기 또는 쓰기 권한이 있는 코드가 결정 됩니다.  
   
-- *Member variables* (defined at module level and outside any procedure) default to public access, which means any code that can see them can access them. You can change this by specifying an access modifier.  
+- *멤버 변수* (모듈 수준 및 프로시저 외부에서 정의 됨)는 기본적으로 공용 액세스로 사용 됩니다. 즉, 해당 변수를 볼 수 있는 모든 코드에서 액세스할 수 있습니다. 액세스 한정자를 지정 하 여이를 변경할 수 있습니다.  
   
-- *Local variables* (defined inside a procedure) nominally have public access, although only code within their procedure can access them. You cannot change the access level of a local variable, but you can change the access level of the procedure that contains it.  
+- *지역 변수* (프로시저 내에서 정의 됨)에는 공용 액세스 권한이 있지만 프로시저 내의 코드만 액세스할 수 있는 명목상 있습니다. 지역 변수의 액세스 수준을 변경할 수는 없지만 해당 변수의 액세스 수준을 포함 하는 프로시저의 액세스 수준을 변경할 수는 있습니다.  
   
- For more information, see [Access levels in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+ 자세한 내용은 [Visual Basic의 액세스 수준](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)을 참조 하세요.  
   
-## <a name="private-and-public-access"></a>Private and Public Access  
+## <a name="private-and-public-access"></a>개인 및 공용 액세스  
   
-#### <a name="to-make-a-variable-accessible-only-from-within-its-module-class-or-structure"></a>To make a variable accessible only from within its module, class, or structure  
+#### <a name="to-make-a-variable-accessible-only-from-within-its-module-class-or-structure"></a>모듈, 클래스 또는 구조체 내 에서만 변수를 액세스할 수 있도록 하려면  
   
-1. Place the [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md) for the variable inside the module, class, or structure, but outside any procedure.  
+1. 모듈, 클래스 또는 구조체 내에서 프로시저 외부에 있는 변수에 [Dim 문을](../../../../visual-basic/language-reference/statements/dim-statement.md) 추가 합니다.  
   
-2. Include the [Private](../../../../visual-basic/language-reference/modifiers/private.md) keyword in the `Dim` statement.  
+2. [Private](../../../../visual-basic/language-reference/modifiers/private.md) 키워드를 `Dim` 문에 포함 합니다.  
   
-     You can read or write to the variable from anywhere within the module, class, or structure, but not from outside it.  
+     모듈, 클래스 또는 구조체 내의 어디에서 나 변수를 읽거나 쓸 수 있습니다.  
   
-#### <a name="to-make-a-variable-accessible-from-any-code-that-can-see-it"></a>To make a variable accessible from any code that can see it  
+#### <a name="to-make-a-variable-accessible-from-any-code-that-can-see-it"></a>변수를 볼 수 있는 모든 코드에서 액세스할 수 있도록 하려면  
   
-1. For a member variable, place the `Dim` statement for the variable inside a module, class, or structure, but outside any procedure.  
+1. 멤버 변수의 경우 모듈, 클래스 또는 구조체 내에 있는 변수에 대 한 `Dim` 문을 프로시저 외부에 저장 합니다.  
   
-2. Include the [Public](../../../../visual-basic/language-reference/modifiers/public.md) keyword in the `Dim` statement.  
+2. `Dim` 문에 [Public](../../../../visual-basic/language-reference/modifiers/public.md) 키워드를 포함 합니다.  
   
-     You can read or write to the variable from any code that interoperates with your assembly.  
+     어셈블리와 상호 작용 하는 모든 코드에서 변수를 읽거나 쓸 수 있습니다.  
   
- 또는  
+ -또는-  
   
-1. For a local variable, place the `Dim` statement for the variable inside a procedure.  
+1. 지역 변수의 경우 프로시저 안에 변수에 대 한 `Dim` 문을 추가 합니다.  
   
-2. Do not include the `Public` keyword in the `Dim` statement.  
+2. `Dim` 문에는 `Public` 키워드를 포함 하지 마십시오.  
   
-     You can read or write to the variable from anywhere within the procedure, but not from outside it.  
+     프로시저 내의 어디에서 나 변수를 읽거나 쓸 수 있습니다.  
   
-## <a name="protected-and-friend-access"></a>Protected and Friend Access  
- You can limit the access level of a variable to its class and any derived classes, or to its assembly. You can also specify the union of these limitations, which allows access from code in any derived class or in any other place in the same assembly. You specify this union by combining the `Protected` and `Friend` keywords in the same declaration.  
+## <a name="protected-and-friend-access"></a>보호 및 Friend 액세스  
+ 변수의 액세스 수준을 해당 클래스 및 파생 클래스 또는 해당 어셈블리로 제한할 수 있습니다. 이러한 제한의 합집합을 지정 하 여 파생 클래스의 코드나 동일한 어셈블리에 있는 다른 위치의 코드에서 액세스할 수 있습니다. 동일한 선언에서 `Protected`와 `Friend` 키워드를 결합 하 여이 union을 지정 합니다.  
   
-#### <a name="to-make-a-variable-accessible-only-from-within-its-class-and-any-derived-classes"></a>To make a variable accessible only from within its class and any derived classes  
+#### <a name="to-make-a-variable-accessible-only-from-within-its-class-and-any-derived-classes"></a>해당 클래스 및 파생 클래스 에서만 변수를 액세스할 수 있도록 하려면  
   
-1. Place the `Dim` statement for the variable inside a class, but outside any procedure.  
+1. 프로시저 외부에 있는 변수에 대 한 `Dim` 문을 클래스 내부에 저장 합니다.  
   
-2. Include the [Protected](../../../../visual-basic/language-reference/modifiers/protected.md) keyword in the `Dim` statement.  
+2. `Dim` 문에 [Protected](../../../../visual-basic/language-reference/modifiers/protected.md) 키워드를 포함 합니다.  
   
-     You can read or write to the variable from anywhere within the class, as well as from within any class derived from it, but not from outside any class in the derivation chain.  
+     클래스 내 어디에서 나 클래스 내에서 파생 된 클래스 내에서 또는 파생 체인의 모든 클래스 외부에서 변수를 읽거나 쓸 수 있습니다.  
   
-#### <a name="to-make-a-variable-accessible-only-from-within-the-same-assembly"></a>To make a variable accessible only from within the same assembly  
+#### <a name="to-make-a-variable-accessible-only-from-within-the-same-assembly"></a>동일한 어셈블리 내 에서만 변수를 액세스할 수 있도록 하려면  
   
-1. Place the `Dim` statement for the variable inside a module, class, or structure, but outside any procedure.  
+1. 모듈, 클래스 또는 구조체 내의 변수에 대 한 `Dim` 문을 프로시저 외부에 저장 합니다.  
   
-2. Include the [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) keyword in the `Dim` statement.  
+2. [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) 키워드를 `Dim` 문에 포함 합니다.  
   
-     You can read or write to the variable from anywhere within the module, class, or structure, as well as from any code in the same assembly, but not from outside the assembly.  
+     모듈, 클래스 또는 구조체의 모든 위치 뿐만 아니라 동일한 어셈블리의 모든 코드에서 변수를 읽거나 쓸 수 있습니다. 단, 어셈블리 외부에서는 읽을 수 없습니다.  
   
 ## <a name="example"></a>예제  
- The following example shows declarations of variables with `Public`, `Protected`, `Friend`, `Protected Friend`, and `Private` access levels. Note that when the `Dim` statement specifies an access level, you do not need to include the `Dim` keyword.  
+ 다음 예에서는 `Public`, `Protected`, `Friend`, `Protected Friend`및 `Private` 액세스 수준을 사용 하 여 변수 선언을 보여 줍니다. `Dim` 문이 액세스 수준을 지정 하는 경우 `Dim` 키워드를 포함할 필요가 없습니다.  
   
 ```vb  
 Public Class classForEverybody  
@@ -84,13 +84,13 @@ Private numberForMeOnly As Integer
 ```  
   
 ## <a name="net-framework-security"></a>.NET Framework 보안  
- The more restrictive the access level of a variable, the smaller the chances that malicious code can make improper use of it.  
+ 변수의 액세스 수준이 더 제한적 이면 악의적인 코드가이를 부적절 하 게 사용할 수 있는 가능성이 줄어듭니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [Access levels in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Visual Basic의 액세스 수준](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [Dim 문](../../../../visual-basic/language-reference/statements/dim-statement.md)
 - [Public](../../../../visual-basic/language-reference/modifiers/public.md)
-- [보호됨](../../../../visual-basic/language-reference/modifiers/protected.md)
+- [Protected](../../../../visual-basic/language-reference/modifiers/protected.md)
 - [Friend](../../../../visual-basic/language-reference/modifiers/friend.md)
-- [전용](../../../../visual-basic/language-reference/modifiers/private.md)
+- [Private](../../../../visual-basic/language-reference/modifiers/private.md)

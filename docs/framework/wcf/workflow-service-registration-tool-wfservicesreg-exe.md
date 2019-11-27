@@ -18,7 +18,7 @@ ms.locfileid: "74281665"
 WFServicesReg.exe [-c | -r | -v | -m | -i]  
 ```  
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
  이 도구는 .NET Framework 3.5 설치 위치, 특히%windir%\Microsoft.NET\Framework\v3.5 또는 64 비트 컴퓨터 의%windir%\Microsoft.NET\Framework64\v3.5에서 찾을 수 있습니다.  
   
  다음 표에서는 워크플로 서비스 등록 도구(WFServicesReg.exe)에서 사용할 수 있는 옵션에 대해 설명합니다.  

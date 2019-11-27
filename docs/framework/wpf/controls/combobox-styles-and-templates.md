@@ -17,12 +17,12 @@ ms.lasthandoff: 11/21/2019
 ms.locfileid: "74283785"
 ---
 # <a name="combobox-styles-and-templates"></a>ComboBox 스타일 및 템플릿
-이 항목에서는 <xref:System.Windows.Controls.ComboBox> 컨트롤의 스타일 및 템플릿에 대해 설명 합니다. 기본값을 수정할 수 있습니다 <xref:System.Windows.Controls.ControlTemplate> 고유한 모양을 제어할 수 있습니다. 자세한 내용은 [컨트롤에 대 한 템플릿 만들기](../../../desktop-wpf/themes/how-to-create-apply-template.md)를 참조 하세요.  
+이 항목에서는 <xref:System.Windows.Controls.ComboBox> 컨트롤의 스타일 및 템플릿에 대해 설명 합니다. 기본 <xref:System.Windows.Controls.ControlTemplate>를 수정 하 여 컨트롤에 고유한 모양을 제공할 수 있습니다. 자세한 내용은 [컨트롤에 대 한 템플릿 만들기](../../../desktop-wpf/themes/how-to-create-apply-template.md)를 참조 하세요.  
   
 ## <a name="combobox-parts"></a>ComboBox 파트  
  다음 표에서는 <xref:System.Windows.Controls.ComboBox> 컨트롤의 명명 된 파트를 나열 합니다.  
   
-|부분|형식|설명|  
+|파트|형식|설명|  
 |-|-|-|  
 |PART_EditableTextBox|<xref:System.Windows.Controls.TextBox>|<xref:System.Windows.Controls.ComboBox>텍스트를 포함 합니다.|  
 |PART_Popup|<xref:System.Windows.Controls.Primitives.Popup>|콤보 상자의 항목이 들어 있는 드롭다운입니다.|  
@@ -40,10 +40,10 @@ ms.locfileid: "74283785"
 |포커스 있음|FocusStates|컨트롤에 포커스가 있습니다.|  
 |포커스 없음|FocusStates|컨트롤에 포커스가 없습니다.|  
 |FocusedDropDown|FocusStates|<xref:System.Windows.Controls.ComboBox>에 대 한 드롭다운에 포커스가 있습니다.|  
-|유효|ValidationStates|컨트롤은 <xref:System.Windows.Controls.Validation> 클래스를 사용 하 고 연결 된 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 속성은 `false`됩니다.|  
+|Valid|ValidationStates|컨트롤은 <xref:System.Windows.Controls.Validation> 클래스를 사용 하 고 연결 된 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 속성은 `false`됩니다.|  
 |InvalidFocused|ValidationStates|연결 된 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 속성 `true` 컨트롤에 포커스가 있습니다.|  
 |InvalidUnfocused|ValidationStates|연결 된 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 속성이 `true` 컨트롤에 포커스가 없는 경우|  
-|수정할|EditStates|<xref:System.Windows.Controls.ComboBox.IsEditable%2A> 속성은 `true`입니다.|  
+|Editable|EditStates|<xref:System.Windows.Controls.ComboBox.IsEditable%2A> 속성은 `true`입니다.|  
 |편집할 수 없는|EditStates|<xref:System.Windows.Controls.ComboBox.IsEditable%2A> 속성은 `false`입니다.|  
   
 ## <a name="comboboxitem-parts"></a>ComboBoxItem 파트  
@@ -59,10 +59,10 @@ ms.locfileid: "74283785"
 |MouseOver|CommonStates|마우스 포인터가 <xref:System.Windows.Controls.ComboBox> 컨트롤 위에 있습니다.|  
 |포커스 있음|FocusStates|컨트롤에 포커스가 있습니다.|  
 |포커스 없음|FocusStates|컨트롤에 포커스가 없습니다.|  
-|선택|SelectionStates|항목이 현재 선택 되어 있습니다.|  
+|Selected|SelectionStates|항목이 현재 선택 되어 있습니다.|  
 |선택 취소|SelectionStates|항목이 선택되어 있지 않습니다.|  
 |SelectedUnfocused|SelectionStates|항목이 선택되었지만 항목에 포커스가 없습니다.|  
-|유효|ValidationStates|컨트롤은 <xref:System.Windows.Controls.Validation> 클래스를 사용 하 고 연결 된 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 속성은 `false`됩니다.|  
+|Valid|ValidationStates|컨트롤은 <xref:System.Windows.Controls.Validation> 클래스를 사용 하 고 연결 된 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 속성은 `false`됩니다.|  
 |InvalidFocused|ValidationStates|연결 된 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 속성 `true` 컨트롤에 포커스가 있습니다.|  
 |InvalidUnfocused|ValidationStates|연결 된 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 속성이 `true` 컨트롤에 포커스가 없는 경우|  
   

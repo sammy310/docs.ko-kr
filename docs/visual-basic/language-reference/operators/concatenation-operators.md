@@ -13,15 +13,15 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74331490"
 ---
 # <a name="concatenation-operators-visual-basic"></a>연결 연산자(Visual Basic)
-The following are the concatenation operators defined in Visual Basic.  
+Visual Basic에 정의 된 연결 연산자는 다음과 같습니다.  
   
  [& 연산자](../../../visual-basic/language-reference/operators/concatenation-operator.md)  
   
  [+ 연산자](../../../visual-basic/language-reference/operators/addition-operator.md)  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Text>
 - <xref:System.Text.StringBuilder>
 - [Visual Basic에서의 연산자 우선 순위](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [Concatenation Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)
+- [Visual Basic의 연결 연산자](../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)

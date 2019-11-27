@@ -15,7 +15,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74332308"
 ---
 # <a name="how-to-access-xml-descendant-elements-visual-basic"></a>방법: XML 하위 요소 액세스(Visual Basic)
-This example shows how to use a descendant axis property to access all XML elements that have a specified name and that are contained under an XML element. In particular, it uses the `Value` property to get the value of the first element in the collection that the `name` descendant axis property returns. The `name` descendant axis property gets all elements named `name` that are contained in the `contacts` object. This example also uses the `phone` descendant axis property to access all descendants named `phone` that are contained in the `contacts` object.  
+이 예제에서는 하위 항목 축 속성을 사용 하 여 지정 된 이름의 xml 요소에 포함 된 모든 XML 요소에 액세스 하는 방법을 보여 줍니다. 특히 `Value` 속성을 사용 하 여 `name` 하위 축 속성이 반환 하는 컬렉션의 첫 번째 요소 값을 가져옵니다. `name` 하위 축 속성은 `contacts` 개체에 포함 된 `name` 요소를 모두 가져옵니다. 또한이 예제에서는 `phone` 하위 축 속성을 사용 하 여 `contacts` 개체에 포함 된 `phone` 라는 모든 하위 요소에 액세스 합니다.  
   
 ## <a name="example"></a>예제  
  [!code-vb[VbXMLSamples#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#31)]  
@@ -25,7 +25,7 @@ This example shows how to use a descendant axis property to access all XML eleme
   
 - <xref:System.Xml.Linq> 네임스페이스에 대한 참조  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Xml.Linq.XContainer.Descendants%2A?displayProperty=nameWithType>
 - [XML Descendant 축 속성](../../../../visual-basic/language-reference/xml-axis/xml-descendant-axis-property.md)

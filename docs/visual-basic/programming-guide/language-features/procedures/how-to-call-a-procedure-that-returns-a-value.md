@@ -15,36 +15,36 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74340735"
 ---
 # <a name="how-to-call-a-procedure-that-returns-a-value-visual-basic"></a>방법: 값을 반환하는 프로시저 호출(Visual Basic)
-A `Function` procedure returns a value to the calling code. You call it by including its name and arguments either on the right side of an assignment statement or in an expression.  
+`Function` 프로시저는 호출 코드에 값을 반환 합니다. 해당 이름과 인수를 대입문의 오른쪽에 포함 하거나 식에 포함 하 여 호출 합니다.  
   
-### <a name="to-call-a-function-procedure-within-an-expression"></a>To call a Function procedure within an expression  
+### <a name="to-call-a-function-procedure-within-an-expression"></a>식 내에서 함수 프로시저를 호출 하려면  
   
-1. Use the `Function` procedure name the same way you would use a variable. You can use a `Function` procedure call anywhere you can use a variable or constant in an expression.  
+1. 변수를 사용 하는 것과 같은 방법으로 `Function` 프로시저 이름을 사용 합니다. 식에서 변수나 상수를 사용할 수 있는 모든 위치에서 `Function` 프로시저 호출을 사용할 수 있습니다.  
   
-2. Follow the procedure name with parentheses to enclose the argument list. If there are no arguments, you can optionally omit the parentheses. However, using the parentheses makes your code easier to read.  
+2. 프로시저 이름에 괄호를 추가 하 여 인수 목록을 묶습니다. 인수가 없으면 선택적으로 괄호를 생략할 수 있습니다. 그러나 괄호를 사용 하면 코드를 더 쉽게 읽을 수 있습니다.  
   
-3. Place the arguments in the argument list within the parentheses, separated by commas. Be sure you supply the arguments in the same order that the `Function` procedure defines the corresponding parameters.  
+3. 인수 목록에서 인수를 쉼표로 구분 하 여 괄호 안에 넣습니다. `Function` 프로시저에서 해당 하는 매개 변수를 정의 하는 순서와 동일한 순서로 인수를 제공 해야 합니다.  
   
-     Alternatively, you can pass one or more arguments by name. For more information, see [Passing Arguments by Position and by Name](./passing-arguments-by-position-and-by-name.md).  
+     또는 하나 이상의 인수를 이름으로 전달할 수 있습니다. 자세한 내용은 [위치 및 이름으로 인수 전달](./passing-arguments-by-position-and-by-name.md)을 참조 하세요.  
   
-4. The value returned from the procedure participates in the expression just as the value of a variable or constant would.  
+4. 프로시저에서 반환 된 값은 변수 또는 상수 값과 마찬가지로 식에 참여 합니다.  
   
-### <a name="to-call-a-function-procedure-in-an-assignment-statement"></a>To call a Function procedure in an assignment statement  
+### <a name="to-call-a-function-procedure-in-an-assignment-statement"></a>대입문에서 함수 프로시저를 호출 하려면  
   
-1. Use the `Function` procedure name following the equal (`=`) sign in the assignment statement.  
+1. 대입문에서 등호 (`=`) 뒤에 `Function` 프로시저 이름을 사용 합니다.  
   
-2. Follow the procedure name with parentheses to enclose the argument list. If there are no arguments, you can optionally omit the parentheses. However, using the parentheses makes your code easier to read.  
+2. 프로시저 이름에 괄호를 추가 하 여 인수 목록을 묶습니다. 인수가 없으면 선택적으로 괄호를 생략할 수 있습니다. 그러나 괄호를 사용 하면 코드를 더 쉽게 읽을 수 있습니다.  
   
-3. Place the arguments in the argument list within the parentheses, separated by commas. Be sure you supply the arguments in the same order that the `Function` procedure defines the corresponding parameters, unless you are passing them by name.  
+3. 인수 목록에서 인수를 쉼표로 구분 하 여 괄호 안에 넣습니다. 이름을 기준으로 전달 하는 경우를 제외 하 고 `Function` 프로시저에서 해당 매개 변수를 정의 하는 순서와 동일한 순서로 인수를 제공 해야 합니다.  
   
-4. The value returned from the procedure is stored in the variable or property on the left side of the assignment statement.  
+4. 프로시저에서 반환 된 값은 대입문의 왼쪽에 있는 변수 또는 속성에 저장 됩니다.  
   
 ## <a name="example"></a>예제  
- The following example calls the Visual Basic <xref:Microsoft.VisualBasic.Interaction.Environ%2A> to retrieve the value of an operating system environment variable. The first line calls `Environ` within an expression, and the second line calls it in an assignment statement. `Environ` takes the variable name as its sole argument. It returns the variable's value to the calling code.  
+ 다음 예에서는 Visual Basic <xref:Microsoft.VisualBasic.Interaction.Environ%2A>를 호출 하 여 운영 체제 환경 변수의 값을 검색 합니다. 첫 번째 줄은 식 내에서 `Environ`를 호출 하 고, 두 번째 줄은 대입문에서이를 호출 합니다. `Environ` 변수 이름을 유일한 인수로 사용 합니다. 이 메서드는 호출 코드에 변수의 값을 반환 합니다.  
   
  [!code-vb[VbVbcnProcedures#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#7)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Function 프로시저](./function-procedures.md)
 - [프로시저 매개 변수 및 인수](./procedure-parameters-and-arguments.md)
