@@ -15,18 +15,18 @@ ms.locfileid: "74348608"
 ---
 # <a name="how-to-determine-what-type-an-object-variable-refers-to-visual-basic"></a>방법: 개체 변수가 참조하는 형식 확인(Visual Basic)
 
-An object variable contains a pointer to data that is stored elsewhere. The type of that data can change during run time. At any moment, you can use the <xref:System.Type.GetTypeCode%2A> method to determine the current run-time type, or the [TypeOf Operator](../../../../visual-basic/language-reference/operators/typeof-operator.md) to find out if the current run-time type is compatible with a specified type.
+개체 변수는 다른 곳에 저장 된 데이터에 대 한 포인터를 포함 합니다. 런타임에 변경 될 수 있는 데이터의 형식입니다. 언제 든 지 <xref:System.Type.GetTypeCode%2A> 메서드를 사용 하 여 현재 런타임 형식을 확인 하거나 [TypeOf 연산자](../../../../visual-basic/language-reference/operators/typeof-operator.md) 를 사용 하 여 현재 런타임 형식이 지정 된 형식과 호환 되는지 확인할 수 있습니다.
 
-### <a name="to-determine-the-exact-type-an-object-variable-currently-refers-to"></a>To determine the exact type an object variable currently refers to
+### <a name="to-determine-the-exact-type-an-object-variable-currently-refers-to"></a>개체 변수가 현재 참조 하는 정확한 형식을 확인 하려면
 
-1. On the object variable, call the <xref:System.Object.GetType%2A> method to retrieve a <xref:System.Type?displayProperty=nameWithType> object.
+1. 개체 변수에서 <xref:System.Object.GetType%2A> 메서드를 호출 하 여 <xref:System.Type?displayProperty=nameWithType> 개체를 검색 합니다.
 
     ```vb
     Dim myObject As Object
     myObject.GetType()
     ```
 
-2. On the <xref:System.Type?displayProperty=nameWithType> class, call the shared method <xref:System.Type.GetTypeCode%2A> to retrieve the <xref:System.TypeCode> enumeration value for the object's type.
+2. <xref:System.Type?displayProperty=nameWithType> 클래스에서 공유 메서드 <xref:System.Type.GetTypeCode%2A>를 호출 하 여 개체의 형식에 대 한 <xref:System.TypeCode> 열거형 값을 검색 합니다.
 
     ```vb
     Dim myObject As Object
@@ -34,11 +34,11 @@ An object variable contains a pointer to data that is stored elsewhere. The type
     MsgBox("myObject currently has type code " & CStr(datTyp))
     ```
 
-    You can test the <xref:System.TypeCode> enumeration value against whichever enumeration members are of interest, such as `Double`.
+    `Double`와 같이 관심 있는 열거형 멤버에 대 한 <xref:System.TypeCode> 열거형 값을 테스트할 수 있습니다.
 
-### <a name="to-determine-whether-an-object-variables-type-is-compatible-with-a-specified-type"></a>To determine whether an object variable's type is compatible with a specified type
+### <a name="to-determine-whether-an-object-variables-type-is-compatible-with-a-specified-type"></a>개체 변수의 형식이 지정 된 형식과 호환 되는지 여부를 확인 하려면
 
-- Use the `TypeOf` operator in combination with the [Is Operator](../../../../visual-basic/language-reference/operators/is-operator.md) to test the object with a `TypeOf`...`Is` expression.
+- [Is 연산자](../../../../visual-basic/language-reference/operators/is-operator.md) 와 함께 `TypeOf` 연산자를 사용 하 여 `TypeOf`...`Is` 식으로 개체를 테스트 합니다.
 
     ```vb
     If TypeOf objA Is System.Windows.Forms.Control Then
@@ -46,15 +46,15 @@ An object variable contains a pointer to data that is stored elsewhere. The type
     End If
     ```
 
-    The `TypeOf`...`Is` expression returns `True` if the object's run-time type is compatible with the specified type.
+    `TypeOf`...`Is` 식은 개체의 런타임 형식이 지정 된 형식과 호환 되는 경우 `True`를 반환 합니다.
 
-    The criterion for compatibility depends on whether the specified type is a class, structure, or interface. In general, the types are compatible if the object is of the same type as, inherits from, or implements the specified type. For more information, see [TypeOf Operator](../../../../visual-basic/language-reference/operators/typeof-operator.md).
+    호환성 기준은 지정 된 형식이 클래스, 구조체 또는 인터페이스 인지에 따라 달라 집니다. 일반적으로이 형식은 개체가와 동일한 형식 이거나,에서 상속 되거나, 지정 된 형식을 구현 하는 경우 호환 됩니다. 자세한 내용은 [TypeOf 연산자](../../../../visual-basic/language-reference/operators/typeof-operator.md)를 참조 하세요.
 
 ## <a name="compiling-the-code"></a>코드 컴파일
 
-Note that the specified type cannot be a variable or expression. It must be the name of a defined type, such as a class, structure, or interface. This includes intrinsic types such as `Integer` and `String`.
+지정 된 형식은 변수나 식일 수 없습니다. 클래스, 구조체 또는 인터페이스와 같은 정의 된 형식의 이름 이어야 합니다. 여기에는 `Integer` 및 `String`와 같은 내장 형식이 포함 됩니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Object.GetType%2A>
 - <xref:System.Type?displayProperty=nameWithType>

@@ -14,7 +14,7 @@ ms.locfileid: "74353568"
 # <a name="statements-visual-basic"></a>문(Visual Basic)
 이 단원의 항목에는 Visual Basic 선언 및 실행 가능 문과 많은 문에 적용되는 중요한 목록의 테이블이 포함되어 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [A-E 문](../../../visual-basic/language-reference/statements/a-e-statements.md)  
   
  [F-P 문](../../../visual-basic/language-reference/statements/f-p-statements.md)  
@@ -31,7 +31,7 @@ ms.locfileid: "74353568"
   
  [형식 목록](../../../visual-basic/language-reference/statements/type-list.md)  
   
-## <a name="related-sections"></a>관련 단원  
+## <a name="related-sections"></a>관련 섹션  
  [Visual Basic 언어 참조](../../../visual-basic/language-reference/index.md)  
   
  [Visual Basic](../../../visual-basic/index.md)

@@ -1,5 +1,5 @@
 ---
-title: Can't perform requested operation
+title: 요청한 작업을 수행할 수 없습니다.
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID17
@@ -18,6 +18,6 @@ ms.locfileid: "74353315"
   
 - 코드 실행을 중지하고 필요한 경우 수정한 다음 작업을 다시 시도합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [오류 형식](../../visual-basic/programming-guide/language-features/error-types.md)

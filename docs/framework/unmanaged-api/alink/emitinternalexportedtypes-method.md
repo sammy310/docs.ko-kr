@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446504"
 ---
 # <a name="emitinternalexportedtypes-method"></a>EmitInternalExportedTypes 메서드
-Emits types added to the assembly. Call this method after known internal types have been added.  
+어셈블리에 추가 된 형식을 내보냅니다. 알려진 내부 형식이 추가 된 후이 메서드를 호출 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -35,15 +35,15 @@ HRESULT EmitInternalExportedTypes(
   
 ## <a name="parameters"></a>매개 변수  
  `AssemblyID`  
- ID of assembly.  
+ 어셈블리의 ID입니다.  
   
 ## <a name="return-value"></a>반환 값  
- Returns S_OK if the method succeeds.  
+ 메서드가 성공 하면 S_OK을 반환 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- Requires alink.h  
+ Alink 필요  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IALink2 인터페이스](ialink2-interface.md)
 - [IALink 인터페이스](ialink-interface.md)

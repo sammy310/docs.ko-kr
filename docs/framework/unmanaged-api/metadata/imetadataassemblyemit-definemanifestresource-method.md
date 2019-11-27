@@ -39,32 +39,32 @@ HRESULT DefineManifestResource (
   
 ## <a name="parameters"></a>매개 변수  
  `szName`  
- [in] The name of the resource.  
+ 진행 리소스의 이름입니다.  
   
  `tkImplementation`  
- [in] A metadata token of type `mdtFile` or `mdtAssemblyRef` that maps to the resource provider. A NULL value indicates that the file in which the metadata is embedded is the resource provider.  
+ 진행 리소스 공급자에 매핑되는 `mdtFile` 또는 `mdtAssemblyRef` 형식의 메타 데이터 토큰입니다. NULL 값은 메타 데이터가 포함 된 파일이 리소스 공급자 임을 나타냅니다.  
   
  `dwOffset`  
- [in] The offset to the beginning of the resource within the file. For resources in standalone files, this will always be zero. If the resource is embedded in a PE (portable executable) file, this is an offset of the resource BLOB, which starts at the location specified in the cor.h header file.  
+ 진행 파일 내 리소스의 시작에 대 한 오프셋입니다. 독립 실행형 파일의 리소스는 항상 0입니다. 리소스가 PE (이식 가능한 실행 파일) 파일에 포함 된 경우이는 cor 헤더 파일에 지정 된 위치에서 시작 하는 리소스 BLOB의 오프셋입니다.  
   
  `dwResourceFlags`  
- [in] A bitwise combination of flag values that specify property settings for the resource definition.  
+ 진행 리소스 정의에 대 한 속성 설정을 지정 하는 플래그 값의 비트 조합입니다.  
   
  `pmdmr`  
- [out] A pointer to the returned metadata token.  
+ 제한이 반환 된 메타 데이터 토큰에 대 한 포인터입니다.  
   
 ## <a name="remarks"></a>주의  
- One `ManifestResource` metadata structure must be defined for each resource that is implemented in each of the assembly's files.  
+ 각 어셈블리 파일에서 구현 되는 각 리소스에 대해 하나의 `ManifestResource` 메타 데이터 구조를 정의 해야 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조 하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IMetaDataAssemblyEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

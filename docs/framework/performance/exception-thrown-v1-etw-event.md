@@ -25,7 +25,7 @@ ms.locfileid: "74447634"
   
  다음 표에서는 이벤트 정보를 보여 줍니다.  
   
-|이벤트(event)|이벤트 ID|발생 시기|  
+|이벤트|이벤트 ID|발생 시기|  
 |-----------|--------------|-----------------|  
 |`ExceptionThrown_V1`|80|관리되는 예외가 throw됩니다.|  
   
@@ -37,9 +37,9 @@ ms.locfileid: "74447634"
 |예외 메시지|win:UnicodeString|실제 예외 메시지입니다.|  
 |EIPCodeThrow|win:Pointer|예외가 발생한 명령 포인터입니다.|  
 |ExceptionHR|win:UInt32|예외 [HRESULT](https://docs.microsoft.com/openspecs/windows_protocols/ms-erref/0642cb2f-2075-4469-918c-4441e69c548a)입니다.|  
-|ExceptionFlags|win:UInt16|0x01: HasInnerException(Visual Basic 설명서에서 [CLR ETW Events](clr-etw-events.md) 참조).<br /><br /> 0x02: IsNestedException.<br /><br /> 0x04: IsRethrownException.<br /><br /> 0x08: IsCorruptedStateException (indicates that the process state is corrupt; see [Handling Corrupted State Exceptions](https://docs.microsoft.com/archive/msdn-magazine/2009/february/clr-inside-out-handling-corrupted-state-exceptions)).<br /><br /> 0x10: IsCLSCompliant(<xref:System.Exception>에서 파생된 예외는 CLS와 호환됨, 그러지 않으면 CLS와 호환되지 않음).|  
+|ExceptionFlags|win:UInt16|0x01: HasInnerException(Visual Basic 설명서에서 [CLR ETW Events](clr-etw-events.md) 참조).<br /><br /> 0x02: IsNestedException.<br /><br /> 0x04: IsRethrownException.<br /><br /> 0x08: IsCorruptedStateException (프로세스 상태가 손상 되었음을 나타냅니다. [손상 된 상태 예외 처리](https://docs.microsoft.com/archive/msdn-magazine/2009/february/clr-inside-out-handling-corrupted-state-exceptions)를 참조 하세요.)<br /><br /> 0x10: IsCLSCompliant(<xref:System.Exception>에서 파생된 예외는 CLS와 호환됨, 그러지 않으면 CLS와 호환되지 않음).|  
 |ClrInstanceID|win:UInt16|CLR 또는 CoreCLR 인스턴스에 대한 고유 ID입니다.|  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [CLR ETW 이벤트](clr-etw-events.md)

@@ -33,19 +33,19 @@ ms.locfileid: "74350054"
   
  클래스 이외에도 제네릭 구조체, 인터페이스, 프로시저 및 대리자도 정의할 수 있습니다.  
   
- The following procedure takes a generic class defined in the .NET Framework and creates an instance from it.  
+ 다음 절차에서는 .NET Framework에 정의 된 제네릭 클래스를 사용 하 여이 클래스에서 인스턴스를 만듭니다.  
   
 ### <a name="to-use-a-class-that-takes-a-type-parameter"></a>형식 매개 변수를 가져오는 클래스를 사용하려면  
   
-1. At the beginning of your source file, include an [Imports Statement (.NET Namespace and Type)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) to import the <xref:System.Collections.Generic?displayProperty=nameWithType> namespace. 이렇게 하면 <xref:System.Collections.Queue?displayProperty=nameWithType> 같은 다른 큐 클래스와 차별화하기 위해 정규화하지 않고도 <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType> 클래스를 참조할 수 있습니다.  
+1. 소스 파일의 시작 부분에 <xref:System.Collections.Generic?displayProperty=nameWithType> 네임 스페이스를 가져오는 [Imports 문 (.Net 네임 스페이스 및 형식)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) 을 포함 합니다. 이렇게 하면 <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType> 같은 다른 큐 클래스와 차별화하기 위해 정규화하지 않고도 <xref:System.Collections.Queue?displayProperty=nameWithType> 클래스를 참조할 수 있습니다.  
   
-2. Create the object in the normal way, but add `(Of type)` immediately after the class name.  
+2. 일반적인 방법으로 개체를 만들지만 클래스 이름 바로 뒤에 `(Of type)`를 추가 합니다.  
   
      다음 예에서는 동일한 클래스(<xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType>)를 사용하여, 서로 다른 데이터 형식의 항목을 포함하는 두 개의 큐 개체를 만듭니다. 각 큐의 끝에 항목을 추가한 다음 각 큐의 앞부분부터 항목을 제거하고 표시합니다.  
   
      [!code-vb[VbVbalrDataTypes#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#9)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [데이터 형식](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [Generic Types in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)

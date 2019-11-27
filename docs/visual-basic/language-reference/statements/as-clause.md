@@ -16,7 +16,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350180"
 ---
 # <a name="as-clause-visual-basic"></a>As 절(Visual Basic)
-Introduces an `As` clause, which identifies a data type in a declaration statement or a constraint list on a generic type parameter.  
+제네릭 형식 매개 변수의 선언 문이나 제약 조건 목록에서 데이터 형식을 식별 하는 `As` 절을 소개 합니다.  
   
 ## <a name="remarks"></a>주의  
  `As` 키워드는 다음 컨텍스트에서 사용할 수 있습니다.  
@@ -27,7 +27,7 @@ Introduces an `As` clause, which identifies a data type in a declaration stateme
   
  [Const 문](../../../visual-basic/language-reference/statements/const-statement.md)  
   
- [Declare 문](../../../visual-basic/language-reference/statements/declare-statement.md)  
+ [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
  [Delegate 문](../../../visual-basic/language-reference/statements/delegate-statement.md)  
   
@@ -37,9 +37,9 @@ Introduces an `As` clause, which identifies a data type in a declaration stateme
   
  [Event 문](../../../visual-basic/language-reference/statements/event-statement.md)  
   
- [For...Next Statements](../../../visual-basic/language-reference/statements/for-next-statement.md)  
+ [... 다음 문](../../../visual-basic/language-reference/statements/for-next-statement.md)  
   
- [For Each...Next Statements](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
+ [For Each ... 다음 문](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
   
  [From 절](../../../visual-basic/language-reference/queries/from-clause.md)  
   
@@ -57,13 +57,13 @@ Introduces an `As` clause, which identifies a data type in a declaration stateme
   
  [Sub 문](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
- [Try...Catch...Finally Statements](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
+ [Try ... Catch ... Finally 문](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [방법: 새 변수 만들기](../../../visual-basic/programming-guide/language-features/variables/how-to-create-a-new-variable.md)
 - [데이터 형식](../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [변수 선언](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
 - [형식 목록](../../../visual-basic/language-reference/statements/type-list.md)
 - [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
-- [C++ 키워드](../../../visual-basic/language-reference/keywords/index.md)
+- [키워드](../../../visual-basic/language-reference/keywords/index.md)

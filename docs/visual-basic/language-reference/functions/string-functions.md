@@ -13,83 +13,83 @@ ms.locfileid: "74349976"
 ---
 # <a name="string-functions-visual-basic"></a>문자열 함수(Visual Basic)
 
-The following table lists the functions that Visual Basic provides in the <xref:Microsoft.VisualBasic.Strings?displayProperty=nameWithType> class to search and manipulate strings. They can be regarded as Visual Basic intrinsic functions; that is, you do not have to call them as explicit members of a class, as the examples show. Additional methods, and in some cases complementary methods, are available in the <xref:System.String?displayProperty=nameWithType> class.
+다음 표에서는 문자열을 검색 하 고 조작 하는 Visual Basic <xref:Microsoft.VisualBasic.Strings?displayProperty=nameWithType> 클래스에서 제공 하는 함수를 나열 합니다. Visual Basic 내장 함수로 간주할 수 있습니다. 즉, 예제에서 보여 주는 것 처럼 클래스의 명시적 멤버로 호출할 필요가 없습니다. <xref:System.String?displayProperty=nameWithType> 클래스에서 추가 메서드 및 경우에 따라 보충 메서드를 사용할 수 있습니다.
 
-|.NET Framework method|설명|
+|.NET Framework 메서드|설명|
 |---------------------------|-----------------|
-|<xref:Microsoft.VisualBasic.Strings.Asc%2A>, <xref:Microsoft.VisualBasic.Strings.AscW%2A>|Returns an `Integer` value representing the character code corresponding to a character.|
-|<xref:Microsoft.VisualBasic.Strings.Chr%2A>, <xref:Microsoft.VisualBasic.Strings.ChrW%2A>|Returns the character associated with the specified character code.|
-|<xref:Microsoft.VisualBasic.Strings.Filter%2A>|Returns a zero-based array containing a subset of a `String` array based on specified filter criteria.|
-|<xref:Microsoft.VisualBasic.Strings.Format%2A>|Returns a string formatted according to instructions contained in a format `String` expression.|
-|<xref:Microsoft.VisualBasic.Strings.FormatCurrency%2A>|Returns an expression formatted as a currency value using the currency symbol defined in the system control panel.|
-|<xref:Microsoft.VisualBasic.Strings.FormatDateTime%2A>|Returns a string expression representing a date/time value.|
-|<xref:Microsoft.VisualBasic.Strings.FormatNumber%2A>|Returns an expression formatted as a number.|
+|<xref:Microsoft.VisualBasic.Strings.Asc%2A>, <xref:Microsoft.VisualBasic.Strings.AscW%2A>|문자에 해당 하는 문자 코드를 나타내는 `Integer` 값을 반환 합니다.|
+|<xref:Microsoft.VisualBasic.Strings.Chr%2A>, <xref:Microsoft.VisualBasic.Strings.ChrW%2A>|지정 된 문자 코드와 연관 된 문자를 반환 합니다.|
+|<xref:Microsoft.VisualBasic.Strings.Filter%2A>|지정 된 필터 조건에 따라 `String` 배열의 하위 집합을 포함 하는 0부터 시작 하는 배열을 반환 합니다.|
+|<xref:Microsoft.VisualBasic.Strings.Format%2A>|형식 `String` 식에 포함 된 명령에 따라 형식이 지정 된 문자열을 반환 합니다.|
+|<xref:Microsoft.VisualBasic.Strings.FormatCurrency%2A>|시스템 제어판에 정의 된 통화 기호를 사용 하 여 통화 값으로 형식이 지정 된 식을 반환 합니다.|
+|<xref:Microsoft.VisualBasic.Strings.FormatDateTime%2A>|날짜/시간 값을 나타내는 문자열 식을 반환 합니다.|
+|<xref:Microsoft.VisualBasic.Strings.FormatNumber%2A>|숫자로 서식이 지정 된 식을 반환 합니다.|
 |<xref:Microsoft.VisualBasic.Strings.FormatPercent%2A>|백분율로 서식이 지정된 식(100을 곱함)을 % 문자를 붙여 반환합니다.|
-|<xref:Microsoft.VisualBasic.Strings.InStr%2A>|Returns an integer specifying the start position of the first occurrence of one string within another.|
-|<xref:Microsoft.VisualBasic.Strings.InStrRev%2A>|Returns the position of the first occurrence of one string within another, starting from the right side of the string.|
-|<xref:Microsoft.VisualBasic.Strings.Join%2A>|Returns a string created by joining a number of substrings contained in an array.|
-|<xref:Microsoft.VisualBasic.Strings.LCase%2A>|Returns a string or character converted to lowercase.|
-|<xref:Microsoft.VisualBasic.Strings.Left%2A>|Returns a string containing a specified number of characters from the left side of a string.|
-|<xref:Microsoft.VisualBasic.Strings.Len%2A>|Returns an integer that contains the number of characters in a string.|
-|<xref:Microsoft.VisualBasic.Strings.LSet%2A>|Returns a left-aligned string containing the specified string adjusted to the specified length.|
-|<xref:Microsoft.VisualBasic.Strings.LTrim%2A>|Returns a string containing a copy of a specified string with no leading spaces.|
-|<xref:Microsoft.VisualBasic.Strings.Mid%2A>|Returns a string containing a specified number of characters from a string.|
-|<xref:Microsoft.VisualBasic.Strings.Replace%2A>|Returns a string in which a specified substring has been replaced with another substring a specified number of times.|
-|<xref:Microsoft.VisualBasic.Strings.Right%2A>|Returns a string containing a specified number of characters from the right side of a string.|
-|<xref:Microsoft.VisualBasic.Strings.RSet%2A>|Returns a right-aligned string containing the specified string adjusted to the specified length.|
-|<xref:Microsoft.VisualBasic.Strings.RTrim%2A>|Returns a string containing a copy of a specified string with no trailing spaces.|
-|<xref:Microsoft.VisualBasic.Strings.Space%2A>|Returns a string consisting of the specified number of spaces.|
-|<xref:Microsoft.VisualBasic.Strings.Split%2A>|Returns a zero-based, one-dimensional array containing a specified number of substrings.|
-|<xref:Microsoft.VisualBasic.Strings.StrComp%2A>|Returns -1, 0, or 1, based on the result of a string comparison.|
-|<xref:Microsoft.VisualBasic.Strings.StrConv%2A>|Returns a string converted as specified.|
-|<xref:Microsoft.VisualBasic.Strings.StrDup%2A>|Returns a string or object consisting of the specified character repeated the specified number of times.|
-|<xref:Microsoft.VisualBasic.Strings.StrReverse%2A>|Returns a string in which the character order of a specified string is reversed.|
-|<xref:Microsoft.VisualBasic.Strings.Trim%2A>|Returns a string containing a copy of a specified string with no leading or trailing spaces.|
-|<xref:Microsoft.VisualBasic.Strings.UCase%2A>|Returns a string or character containing the specified string converted to uppercase.|
+|<xref:Microsoft.VisualBasic.Strings.InStr%2A>|한 문자열 안에 다른 문자열이 처음 나타나는 시작 위치를 지정 하는 정수를 반환 합니다.|
+|<xref:Microsoft.VisualBasic.Strings.InStrRev%2A>|다른 문자열의 오른쪽에서 시작에서 한 문자열의 첫 번째 발생 위치를 반환 합니다.|
+|<xref:Microsoft.VisualBasic.Strings.Join%2A>|여러 배열에 포함 된 문자열을 조인 하 여 만든 문자열을 반환 합니다.|
+|<xref:Microsoft.VisualBasic.Strings.LCase%2A>|소문자로 변환 된 문자열 또는 문자를 반환 합니다.|
+|<xref:Microsoft.VisualBasic.Strings.Left%2A>|지정 된 개수의 문자열의 왼쪽에서 문자를 포함 하는 문자열을 반환 합니다.|
+|<xref:Microsoft.VisualBasic.Strings.Len%2A>|문자열의 문자 수를 포함 하는 정수를 반환 합니다.|
+|<xref:Microsoft.VisualBasic.Strings.LSet%2A>|지정 된 길이에 맞게 조정 하는 지정된 된 문자열을 포함 하는 왼쪽 맞춤 문자열을 반환 합니다.|
+|<xref:Microsoft.VisualBasic.Strings.LTrim%2A>|선행 공백 없이 지정 된 문자열의 복사본을 포함 하는 문자열을 반환 합니다.|
+|<xref:Microsoft.VisualBasic.Strings.Mid%2A>|문자열에서 지정 된 수의 문자를 포함 하는 문자열을 반환 합니다.|
+|<xref:Microsoft.VisualBasic.Strings.Replace%2A>|문자열의 지정된 된 부분 문자열에 바뀌는 다른 반환 된 지정 된 횟수 만큼 부분 문자열입니다.|
+|<xref:Microsoft.VisualBasic.Strings.Right%2A>|지정 된 문자열의 오른쪽에 있는 문자 수를 포함 하는 문자열을 반환 합니다.|
+|<xref:Microsoft.VisualBasic.Strings.RSet%2A>|지정 된 길이에 맞게 조정 하는 지정된 된 문자열을 포함 하는 오른쪽 맞춤 문자열을 반환 합니다.|
+|<xref:Microsoft.VisualBasic.Strings.RTrim%2A>|후행 공백 없이 지정 된 문자열의 복사본을 포함 하는 문자열을 반환 합니다.|
+|<xref:Microsoft.VisualBasic.Strings.Space%2A>|지정 된 수 만큼의 공백으로 구성 된 문자열을 반환 합니다.|
+|<xref:Microsoft.VisualBasic.Strings.Split%2A>|부분 문자열의 지정된 된 수를 포함 하는 0부터 시작 하는 1 차원 배열을 반환 합니다.|
+|<xref:Microsoft.VisualBasic.Strings.StrComp%2A>|-1, 0 또는 1, 문자열 비교의 결과 기반으로 반환 합니다.|
+|<xref:Microsoft.VisualBasic.Strings.StrConv%2A>|지정 된 대로 변환 된 문자열을 반환 합니다.|
+|<xref:Microsoft.VisualBasic.Strings.StrDup%2A>|문자열 또는 지정된 된 문자도 이루어진 개체를 반복 횟수가 지정 된 횟수를 반환 합니다.|
+|<xref:Microsoft.VisualBasic.Strings.StrReverse%2A>|지정된 된 문자열의 문자 순서를 역순 문자열을 반환 합니다.|
+|<xref:Microsoft.VisualBasic.Strings.Trim%2A>|선행 또는 후행 공백이 없는 지정 된 문자열의 복사본을 포함 하는 문자열을 반환 합니다.|
+|<xref:Microsoft.VisualBasic.Strings.UCase%2A>|문자열 또는 문자를 대문자로 변환 된 지정 된 문자열을 반환 합니다.|
 
-You can use the [Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md) statement to set whether strings are compared using a case-insensitive text sort order determined by your system's locale (`Text`) or by the internal binary representations of the characters (`Binary`). 기본 텍스트 비교 방법은 `Binary`입니다.
+[Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md) 문을 사용 하 여 시스템의 로캘 (`Text`)에서 결정 한 대/소문자를 구분 하지 않는 텍스트 정렬 순서나 문자 (`Binary`)의 내부 이진 표시를 사용 하 여 문자열을 비교할지 여부를 설정할 수 있습니다. 기본 텍스트 비교 방법은 `Binary`입니다.
 
-## <a name="example-ucase"></a>Example: UCase
+## <a name="example-ucase"></a>예: UCase
 
-This example uses the `UCase` function to return an uppercase version of a string.
+이 예에서는 `UCase` 함수를 사용 하 여 문자열의 대문자 버전을 반환 합니다.
 [!code-vb[VbVbalrStrings#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#31)]
 
-## <a name="example-ltrim"></a>Example: LTrim
+## <a name="example-ltrim"></a>예: LTrim
 
-This example uses the `LTrim` function to strip leading spaces and the `RTrim` function to strip trailing spaces from a string variable. It uses the `Trim` function to strip both types of spaces.
+이 예에서는 `LTrim` 함수를 사용 하 여 선행 공백을 제거 하 고 `RTrim` 함수를 사용 하 여 문자열 변수에서 후행 공백을 제거 합니다. `Trim` 함수를 사용 하 여 두 가지 유형의 공백을 모두 제거 합니다.
 
 [!code-vb[VbVbalrStrings#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#25)]
 
-## <a name="example-mid"></a>Example: Mid
+## <a name="example-mid"></a>예: Mid
 
-This example uses the `Mid` function to return a specified number of characters from a string.
+이 예에서는 `Mid` 함수를 사용 하 여 문자열에서 지정 된 수의 문자를 반환 합니다.
 
 [!code-vb[VbVbalrStrings#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#17)]
 
-## <a name="example-len"></a>Example: Len
+## <a name="example-len"></a>예: Len
 
-This example uses `Len` to return the number of characters in a string.
+이 예제에서는 `Len`를 사용 하 여 문자열의 문자 수를 반환 합니다.
 
 [!code-vb[VbVbalrStrings#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#33)]
 
-## <a name="example-instr"></a>Example: InStr
+## <a name="example-instr"></a>예: InStr
 
-This example uses the `InStr` function to return the position of the first occurrence of one string within another.
+이 예제에서는 `InStr` 함수를 사용 하 여 다른 문자열 내에서 한 문자열의 첫 번째 발생 위치를 반환 합니다.
 
 [!code-vb[VbVbalrStrings#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#8)]
 
-## <a name="example-format"></a>Example: Format
+## <a name="example-format"></a>예: Format
 
-This example shows various uses of the `Format` function to format values using both `String` formats and user-defined formats. For the date separator (`/`), time separator (`:`), and the AM/PM indicators (`t` and `tt`), the actual formatted output displayed by your system depends on the locale settings the code is using. When times and dates are displayed in the development environment, the short time format and short date format of the code locale are used.
+이 예에서는 `String` 형식 및 사용자 정의 형식을 사용 하 여 값의 서식을 지정 하는 `Format` 함수의 다양 한 사용을 보여 줍니다. 날짜 구분 기호 (`/`), 시간 구분 기호 (`:`) 및 AM/PM 표시기 (`t` 및 `tt`)의 경우 시스템에 표시 되는 실제 형식이 지정 된 출력은 코드에서 사용 하는 로캘 설정에 따라 달라 집니다. 경우 시간 및 개발 환경에서 표시 되는 날짜, 간단한 시간 형식 및 코드 로캘의 간단한 날짜 서식을 사용 됩니다.
 
 > [!NOTE]
-> For locales that use a 24-hour clock, the AM/PM indicators (`t` and `tt`) display nothing.
+> 24 시간제를 사용 하는 로캘의 경우 AM/PM 표시기 (`t` 및 `tt`)는 아무 것도 표시 하지 않습니다.
 
 [!code-vb[VbVbalrStrings#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#27)]
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [C++ 키워드](../../../visual-basic/language-reference/keywords/index.md)
+- [키워드](../../../visual-basic/language-reference/keywords/index.md)
 - [Visual Basic 런타임 라이브러리 멤버](../../../visual-basic/language-reference/runtime-library-members.md)
 - [문자열 조작 요약](../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)
-- [System.String class methods](xref:System.String#methods)
+- [System.string 클래스 메서드](xref:System.String#methods)

@@ -9,7 +9,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353437"
 ---
-# <a name="functional-programming-vs-imperative-programming-visual-basic"></a>Functional Programming vs. Imperative Programming (Visual Basic)
+# <a name="functional-programming-vs-imperative-programming-visual-basic"></a>함수형 프로그래밍과 명령형 프로그래밍 비교 (Visual Basic)
 이 항목에서는 함수형 프로그래밍을 더욱 일반적인 명령형(절차적) 프로그래밍과 비교하고 대조합니다.  
   
 ## <a name="functional-programming-vs-imperative-programming"></a>함수형 프로그래밍 및 명령형 프로그래밍 비교  
@@ -17,20 +17,20 @@ ms.locfileid: "74353437"
   
  명령형 방법을 사용하는 경우 개발자는 컴퓨터에서 목표를 이루기 위해 수행해야 하는 단계를 매우 자세히 설명하는 코드를 작성합니다. 이러한 프로그래밍을 *알고리즘* 프로그래밍이라고도 합니다. 이와 대조적으로 함수형 방법에는 실행할 일련의 함수로 문제를 구성하는 작업이 포함됩니다. 이 경우 각 함수에 대한 입력과 각 함수가 반환하는 항목을 신중하게 정의합니다. 다음 표에서는 이러한 두 방법의 일반적인 차이점에 대해 설명합니다.  
   
-|특성|명령형 방법|함수형 방법|  
+|특징|명령형 방법|함수형 방법|  
 |--------------------|-------------------------|-------------------------|  
 |프로그래머가 중점을 두는 부분|작업을 수행하는 방법(알고리즘)과 상태의 변경을 추적하는 방법|원하는 정보와 필요한 변환|  
-|상태 변경|중요|존재하지 않음|  
-|실행 순서|중요|중요도가 낮음|  
+|상태 변경|중요.|존재하지 않음|  
+|실행 순서|중요.|중요도가 낮음|  
 |주요 흐름 제어|루프, 조건 및 함수(메서드) 호출|재귀를 비롯한 함수 호출|  
 |주요 조작 단위|클래스나 구조체의 인스턴스|1급(first-class) 개체와 데이터 컬렉션인 함수|  
   
- 대부분의 언어가 특정 프로그래밍 패러다임을 지원하도록 디자인되었지만 대부분의 일반 언어도 다양한 패러다임을 지원할 수 있습니다. 예를 들어, 함수 포인터가 있는 언어로 함수형 프로그래밍을 수행할 수 있습니다. Furthermore, Visual Basic includes explicit language extensions to support functional programming, including lambda expressions and type inference. LINQ 기술은 선언적 함수형 프로그래밍의 형태입니다.  
+ 대부분의 언어가 특정 프로그래밍 패러다임을 지원하도록 디자인되었지만 대부분의 일반 언어도 다양한 패러다임을 지원할 수 있습니다. 예를 들어, 함수 포인터가 있는 언어로 함수형 프로그래밍을 수행할 수 있습니다. 또한 Visual Basic에는 람다 식 및 형식 유추를 포함 하 여 함수형 프로그래밍을 지 원하는 명시적 언어 확장이 포함 되어 있습니다. LINQ 기술은 선언적 함수형 프로그래밍의 형태입니다.  
   
 ## <a name="functional-programming-using-xslt"></a>XSLT를 사용하는 함수형 프로그래밍  
  많은 XSLT 개발자는 순수 함수형 방법에 익숙합니다. XSLT 스타일시트를 개발하는 가장 효과적인 방법은 각 템플릿을 구성 가능한 분리된 변환으로 처리하는 것입니다. 실행 순서는 완전히 무시됩니다. XSLT는 절차적 코드 실행에 대한 이스케이프 메커니즘으로 인해 비순수 함수가 생성되는 의도하지 않은 결과를 발생시킬 수 있는 점을 제외하고 의도하지 않은 결과를 허용하지 않습니다. XSLT가 효과적인 도구이긴 하지만 일부 특징은 최적이 아닙니다. 예를 들어, XML로 프로그래밍 구문을 표현하면 비교적 상세한 코드가 생성되므로 코드를 유지 관리하기가 어렵습니다. 또한 재귀에 크게 의존하여 흐름을 제어하면 읽기 어려운 코드가 생성될 수 있습니다. XSLT에 대한 자세한 내용은 [XSLT 변환](../../../../standard/data/xml/xslt-transformations.md)을 참조하세요.  
   
- 그러나 XSLT는 XML의 모양을 변환하는 데 순수 함수형 방법을 사용하는 경우의 가치를 입증합니다. LINQ to XML을 사용하는 순수 함수형 프로그래밍은 많은 부분이 XSLT와 유사합니다. However, the programming constructs introduced by LINQ to XML and Visual Basic allow you to write pure functional transformations that are more readable and maintainable than XSLT.  
+ 그러나 XSLT는 XML의 모양을 변환하는 데 순수 함수형 방법을 사용하는 경우의 가치를 입증합니다. LINQ to XML을 사용하는 순수 함수형 프로그래밍은 많은 부분이 XSLT와 유사합니다. 그러나 LINQ to XML 및 Visual Basic에서 도입 된 프로그래밍 구문을 사용 하면 XSLT 보다 읽기 쉽고 유지 관리가 용이한 순수 함수 변환을 작성할 수 있습니다.  
   
 ## <a name="advantages-of-pure-functions"></a>순수 함수의 이점  
  함수 변환을 순수 함수로 구현하는 기본적인 이유는 순수 함수가 구성 가능하기 때문입니다. 즉, 순수 함수는 상태 비저장, 자체 포함 함수입니다. 이러한 특징은 다음과 같은 여러 가지 이점을 제공합니다.  
@@ -48,10 +48,10 @@ ms.locfileid: "74353437"
   
  이와 대조적으로 함수형 프로그래밍에서는 계산 문제를 데이터 컬렉션의 순수 함수 변환에 대한 계산에서의 실행으로 취급합니다. 함수형 프로그래밍에서는 상태와 변경 가능한 데이터를 사용하지 않으며 대신 함수의 적용을 강조합니다.  
   
- Fortunately, Visual Basic doesn't require the full leap to functional programming, because it supports both imperative and functional programming approaches. 개발자는 특정 시나리오에 가장 적합한 방법을 선택할 수 있습니다. 실제로 프로그램에는 흔히 두 방법이 결합되어 있습니다.  
+ 다행히 Visual Basic는 명령형 프로그래밍 방법과 함수형 프로그래밍 방법을 모두 지원 하기 때문에 함수형 프로그래밍을 완벽 하 게 수행 하지 않아도 됩니다. 개발자는 특정 시나리오에 가장 적합한 방법을 선택할 수 있습니다. 실제로 프로그램에는 흔히 두 방법이 결합되어 있습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [Introduction to Pure Functional Transformations (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
+- [순수 함수 변환 소개 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
 - [XSLT 변환](../../../../standard/data/xml/xslt-transformations.md)
-- [Refactoring Into Pure Functions (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+- [순수 함수로 리팩터링 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

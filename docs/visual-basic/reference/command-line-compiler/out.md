@@ -26,25 +26,25 @@ ms.locfileid: "74352383"
   
 |용어|정의|  
 |---|---|  
-|`filename`|필수 요소. The name of the output file the compiler creates. If the file name contains a space, enclose the name in quotation marks (" ").|  
+|`filename`|필수입니다. 컴파일러가 만드는 출력 파일의 이름입니다. 파일 이름에 공백이 포함 된 경우 이름을 큰따옴표 ("")로 묶습니다.|  
   
 ## <a name="remarks"></a>주의  
- Specify the full name and extension of the file to create. If you do not, the .exe file takes its name from the source-code file containing the `Sub Main` procedure, and the .dll file takes its name from the first source-code file.  
+ 만들 파일의 전체 이름 및 확장명을 지정 합니다. 이렇게 하지 않으면 .exe 파일은 `Sub Main` 프로시저를 포함 하는 소스 코드 파일에서 해당 이름을 사용 하 고 .dll 파일은 첫 번째 소스 코드 파일에서 해당 이름을 가져옵니다.  
   
- If you specify a file name without an .exe or .dll extension, the compiler automatically adds the extension for you, depending on the value specified for the `-target` compiler option.  
+ .Exe 또는 .dll 확장명 없이 파일 이름을 지정 하는 경우 컴파일러는 `-target` 컴파일러 옵션에 지정 된 값에 따라 자동으로 확장을 추가 합니다.  
   
-|To set -out in the Visual Studio integrated development environment|  
+|Visual Studio 통합 개발 환경에서 설정 하려면|  
 |---|  
-|1.  Have a project selected in **Solution Explorer**. **프로젝트** 메뉴에서 **속성**을 클릭합니다. <br />2.  **애플리케이션** 탭을 클릭합니다.<br />3.  Modify the value in the **Assembly Name** box.|  
+|1. **솔루션 탐색기**에서 프로젝트를 선택 합니다. **프로젝트** 메뉴에서 **속성**을 클릭합니다. <br />2.  **애플리케이션** 탭을 클릭합니다.<br />3. **어셈블리 이름** 상자에서 값을 수정 합니다.|  
   
 ## <a name="example"></a>예제  
- The following code compiles `T2.vb` and creates output file `T2.exe`.  
+ 다음 코드는 `T2.vb`를 컴파일하고 `T2.exe`출력 파일을 만듭니다.  
   
 ```console
 vbc t2.vb -out:t3.exe  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Visual Basic 명령줄 컴파일러](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)

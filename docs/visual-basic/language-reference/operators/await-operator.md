@@ -18,14 +18,14 @@ ms.locfileid: "74336260"
 
 대기 중인 작업이 완료될 때까지 메서드 실행을 일시 중단하려면 비동기 메서드 또는 람다 식의 피연산자에 `Await` 연산자를 적용합니다. 작업은 진행 중인 작업을 나타냅니다.
 
-The method in which `Await` is used must have an [Async](../../../visual-basic/language-reference/modifiers/async.md) modifier. `Async` 한정자를 사용하여 정의하고 일반적으로 하나 이상의 `Await` 식을 포함하는 이러한 메서드를 *비동기 메서드*라고 합니다.
+`Await` 사용 되는 메서드에는 [비동기](../../../visual-basic/language-reference/modifiers/async.md) 한정자가 있어야 합니다. `Async` 한정자를 사용하여 정의하고 일반적으로 하나 이상의 `Await` 식을 포함하는 이러한 메서드를 *비동기 메서드*라고 합니다.
 
 > [!NOTE]
-> `Async` 및 `Await` 키워드는 Visual Studio 2012에서 도입되었습니다. For an introduction to async programming, see [Asynchronous Programming with Async and Await](../../../visual-basic/programming-guide/concepts/async/index.md).
+> `Async` 및 `Await` 키워드는 Visual Studio 2012에서 도입되었습니다. 비동기 프로그래밍에 대 한 소개는 [async 및 wait를 사용한 비동기 프로그래밍](../../../visual-basic/programming-guide/concepts/async/index.md)을 참조 하세요.
 
-Typically, the task to which you apply the `Await` operator is the return value from a call to a method that implements the [Task-Based Asynchronous Pattern](https://go.microsoft.com/fwlink/?LinkId=204847), that is, a <xref:System.Threading.Tasks.Task> or a <xref:System.Threading.Tasks.Task%601>.
+일반적으로 `Await` 연산자를 적용 하는 작업은 [작업 기반 비동기 패턴](https://go.microsoft.com/fwlink/?LinkId=204847)을 구현 하는 메서드 호출의 반환 값입니다. 즉, <xref:System.Threading.Tasks.Task> 또는 <xref:System.Threading.Tasks.Task%601>입니다.
 
-다음 코드에서 <xref:System.Net.Http.HttpClient> 메서드 <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A>는 `getContentsTask`, `Task(Of Byte())`를 반환합니다. 이 작업은 작업이 완료될 때 실제 바이트 배열을 생성하기 위한 약속입니다. `Await` 연산자는 `getContentsTask`에 적용되어 `getContentsTask`가 완료될 때까지 `SumPageSizesAsync`의 실행을 일시 중단합니다. 동시에 컨트롤은 `SumPageSizesAsync` 호출자에게 반환됩니다. `getContentsTask`가 완료되면 `Await` 식이 바이트 배열로 계산됩니다.
+다음 코드에서 <xref:System.Net.Http.HttpClient> 메서드 <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A>는 `getContentsTask`, `Task(Of Byte())`를 반환합니다. 이 작업은 작업이 완료될 때 실제 바이트 배열을 생성하기 위한 약속입니다. `Await` 연산자는 `getContentsTask`에 적용되어 `SumPageSizesAsync`가 완료될 때까지 `getContentsTask`의 실행을 일시 중단합니다. 동시에 컨트롤은 `SumPageSizesAsync` 호출자에게 반환됩니다. `getContentsTask`가 완료되면 `Await` 식이 바이트 배열로 계산됩니다.
 
 ```vb
 Private Async Function SumPageSizesAsync() As Task
@@ -58,7 +58,7 @@ Await AsyncMethodThatReturnsTask()
 
 `Await` 식 또는 문은 식이 실행되고 있는 스레드를 차단하지 않습니다. 대신 `Await` 식 이후 컴파일러가 대기 중인 작업에서 연속된 작업으로 비동기 메서드의 나머지 부분을 등록하게 됩니다. 그런 다음 컨트롤이 비동기 메서드 호출자에게 반환됩니다. 작업이 완료되면 해당 연속 작업이 호출되고 중단된 비동기 메서드의 실행이 다시 시작됩니다.
 
-`Await` 식은 `Async` 수정자로 표시된 람다 식 또는 바로 바깥쪽에 있는 메서드의 본문에만 발생할 수 있습니다. The term *Await* serves as a keyword only in that context. 다른 컨텍스트에서는 식별자로 해석됩니다. Within the async method or lambda expression, an `Await` expression cannot occur in a query expression, in the `catch` or `finally` block of a [Try…Catch…Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md) statement, in the loop control variable expression of a `For` or `For Each` loop, or in the body of a [SyncLock](../../../visual-basic/language-reference/statements/synclock-statement.md) statement.
+`Await` 식은 `Async` 수정자로 표시된 람다 식 또는 바로 바깥쪽에 있는 메서드의 본문에만 발생할 수 있습니다. *Wait* 라는 용어는 해당 컨텍스트에서만 키워드 역할을 합니다. 다른 컨텍스트에서는 식별자로 해석됩니다. 비동기 메서드 또는 람다 식 내에서 Try ...의 `catch` 또는 `finally` 블록의 쿼리 식에서 `Await` 식이 발생할 수 없습니다. [ Catch ... Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md) 문은 `For` 또는 `For Each` 루프의 루프 제어 변수 식이나 [SyncLock](../../../visual-basic/language-reference/statements/synclock-statement.md) 문의 본문에 있습니다.
 
 ## <a name="exceptions"></a>예외
 
@@ -70,11 +70,11 @@ Await AsyncMethodThatReturnsTask()
 
 오류가 발생한 상태의 단일 작업에는 여러 예외가 반영될 수 있습니다.  예를 들어 작업은 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> 호출의 결과일 수 있습니다. 이러한 작업을 기다릴 경우 await 작업에서 예외 중 하나만 다시 throw합니다. 그러나 다시 throw되는 예외를 예측할 수 없습니다.
 
-For examples of error handling in async methods, see [Try...Catch...Finally Statement](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).
+비동기 메서드에서 오류 처리에 대 한 예제를 보려면 [Try ... Catch ... Finally 문](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).
 
 ## <a name="example"></a>예제
 
-다음 Windows Forms 예제에서는 비동기 메서드 `WaitAsynchronouslyAsync`에서 `Await`의 사용을 보여 줍니다. 해당 메서드의 동작을 `WaitSynchronously`의 동작과 대조합니다. `Await` 연산자가 없는 경우 `WaitSynchronously`는 해당 정의에 `Async` 수정자가 사용되었고 해당 본문에서 <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType> 호출이 있더라도 동기적으로 실행됩니다.
+다음 Windows Forms 예제에서는 비동기 메서드 `Await`에서 `WaitAsynchronouslyAsync`의 사용을 보여 줍니다. 해당 메서드의 동작을 `WaitSynchronously`의 동작과 대조합니다. `Await` 연산자가 없는 경우 `WaitSynchronously`는 해당 정의에 `Async` 수정자가 사용되었고 해당 본문에서 <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType> 호출이 있더라도 동기적으로 실행됩니다.
 
 ```vb
 Private Async Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -106,7 +106,7 @@ Public Async Function WaitSynchronously() As Task(Of String)
 End Function
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Async 및 Await를 사용한 비동기 프로그래밍](../../../visual-basic/programming-guide/concepts/async/index.md)
 - [연습: Async 및 Await를 사용하여 웹에 액세스](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)

@@ -29,25 +29,25 @@ object(index)
   
 |용어|정의|  
 |---|---|  
-|`object`|필수 요소. A queryable collection. That is, a collection that implements <xref:System.Collections.Generic.IEnumerable%601> or <xref:System.Linq.IQueryable%601>.|  
-|(|필수 요소. Denotes the start of the indexer property.|  
-|`index`|필수 요소. An integer expression that specifies the zero-based position of an element of the collection.|  
-|)|필수 요소. Denotes the end of the indexer property.|  
+|`object`|필수입니다. 쿼리 가능한 컬렉션입니다. 즉, <xref:System.Collections.Generic.IEnumerable%601> 또는 <xref:System.Linq.IQueryable%601>를 구현 하는 컬렉션입니다.|  
+|(|필수입니다. 인덱서 속성의 시작을 나타냅니다.|  
+|`index`|필수입니다. 컬렉션 요소의 0부터 시작 하는 위치를 지정 하는 정수 식입니다.|  
+|)|필수입니다. 인덱서 속성의 끝을 나타냅니다.|  
   
 ## <a name="return-value"></a>반환 값  
- The object from the specified location in the collection, or `Nothing` if the index is out of range.  
+ 컬렉션의 지정 된 위치에 있는 개체 이거나, 인덱스가 범위를 벗어난 경우 `Nothing`입니다.  
   
 ## <a name="remarks"></a>주의  
- You can use the extension indexer property to access individual elements in a collection. This indexer property is typically used on the output of XML axis properties. The XML child and XML descendent axis properties return collections of <xref:System.Xml.Linq.XElement> objects or an attribute value.  
+ 확장 인덱서 속성을 사용 하 여 컬렉션의 개별 요소에 액세스할 수 있습니다. 이 인덱서 속성은 일반적으로 XML 축 속성의 출력에 사용 됩니다. XML 자식 및 XML 하위 축 속성은 <xref:System.Xml.Linq.XElement> 개체 또는 특성 값의 컬렉션을 반환 합니다.  
   
- The Visual Basic compiler converts extension indexer properties to calls to the `ElementAtOrDefault` method. Unlike an array indexer, the `ElementAtOrDefault` method returns `Nothing` if the index is out of range. This behavior is useful when you cannot easily determine the number of elements in a collection.  
+ Visual Basic 컴파일러는 확장 인덱서 속성을 `ElementAtOrDefault` 메서드에 대 한 호출로 변환 합니다. 배열 인덱서와 달리 `ElementAtOrDefault` 메서드는 인덱스가 범위를 벗어난 경우 `Nothing`을 반환 합니다. 이 동작은 컬렉션의 요소 수를 쉽게 확인할 수 없는 경우에 유용 합니다.  
   
- This indexer property is like an extension property for collections that implement <xref:System.Collections.Generic.IEnumerable%601> or <xref:System.Linq.IQueryable%601>: it is used only if the collection does not have an indexer or a default property.  
+ 이 인덱서 속성은 <xref:System.Collections.Generic.IEnumerable%601> 또는 <xref:System.Linq.IQueryable%601>를 구현 하는 컬렉션에 대 한 확장 속성과 유사 합니다. 즉, 컬렉션에 인덱서가 나 기본 속성이 없는 경우에만 사용 됩니다.  
   
- To access the value of the first element in a collection of <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XAttribute> objects, you can use the XML `Value` property. For more information, see [XML Value Property](../../../visual-basic/language-reference/xml-axis/xml-value-property.md).  
+ <xref:System.Xml.Linq.XElement> 또는 <xref:System.Xml.Linq.XAttribute> 개체 컬렉션의 첫 번째 요소 값에 액세스 하려면 XML `Value` 속성을 사용 하면 됩니다. 자세한 내용은 [XML Value 속성](../../../visual-basic/language-reference/xml-axis/xml-value-property.md)을 참조 하세요.  
   
 ## <a name="example"></a>예제  
- The following example shows how to use the extension indexer to access the second child node in a collection of <xref:System.Xml.Linq.XElement> objects. The collection is accessed by using the child axis property, which gets all child elements named `phone` in the `contact` object.  
+ 다음 예제에서는 확장 인덱서를 사용 하 여 <xref:System.Xml.Linq.XElement> 개체 컬렉션의 두 번째 자식 노드에 액세스 하는 방법을 보여 줍니다. 자식 축 속성을 사용 하 여 컬렉션에 액세스할 수 있으며,이 속성은 `contact` 개체의 `phone` 이라는 모든 자식 요소를 가져옵니다.  
   
  [!code-vb[VbXMLSamples#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples11.vb#24)]  
   
@@ -55,7 +55,7 @@ object(index)
   
  `Second phone number: 425-555-0145`  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Xml.Linq.XElement>
 - [XML 축 속성](../../../visual-basic/language-reference/xml-axis/index.md)

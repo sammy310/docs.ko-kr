@@ -22,23 +22,23 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449100"
 ---
 # <a name="isymunmanageddocument-interface"></a>ISymUnmanagedDocument 인터페이스
-Represents a document referenced by a symbol store. A document is defined by a uniform resource locator (URL) and a document type GUID. You can locate the document regardless of how it is stored by using the URL and document type GUID. You can store the document source in the symbol store and retrieve it through this interface.  
+기호 저장소가 참조하는 문서를 나타냅니다. 문서는 URL (uniform resource locator) 및 문서 유형 GUID로 정의 됩니다. URL 및 문서 유형 GUID를 사용 하 여 문서를 저장 하는 방법에 관계 없이 문서를 찾을 수 있습니다. 문서 원본을 기호 저장소에 저장 하 고이 인터페이스를 통해 검색할 수 있습니다.  
   
 ## <a name="methods"></a>메서드  
   
 |메서드|설명|  
 |------------|-----------------|  
-|[FindClosestLine 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-findclosestline-method.md)|Returns the closest line that is a sequence point, given a line in this document that may or may not be a sequence point.|  
-|[GetCheckSum 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-getchecksum-method.md)|Gets the checksum.|  
-|[GetCheckSumAlgorithmId 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-getchecksumalgorithmid-method.md)|Gets the checksum algorithm identifier, or returns a GUID of all zeros if there is no checksum.|  
-|[GetDocumentType 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-getdocumenttype-method.md)|Gets the document type of this document.|  
-|[GetLanguage 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-getlanguage-method.md)|Gets the language identifier of this document.|  
-|[GetLanguageVendor 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-getlanguagevendor-method.md)|Gets the language vendor of this document.|  
-|[GetSourceLength 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-getsourcelength-method.md)|Gets the length, in bytes, of the embedded source.|  
-|[GetSourceRange 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-getsourcerange-method.md)|Returns the specified range of the embedded source into the given buffer.|  
-|[GetURL 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-geturl-method.md)|Returns the URL for this document.|  
-|[HasEmbeddedSource 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-hasembeddedsource-method.md)|Returns `true` if the document has source embedded in the debugging symbols; otherwise, returns `false`.|  
+|[FindClosestLine 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-findclosestline-method.md)|이 문서에서 시퀀스 위치가 될 수도 있고 그렇지 않을 수도 있는 줄을 지정 하 여 시퀀스 위치인 가장 가까운 줄을 반환 합니다.|  
+|[GetCheckSum 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-getchecksum-method.md)|체크섬을 가져옵니다.|  
+|[GetCheckSumAlgorithmId 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-getchecksumalgorithmid-method.md)|체크섬 알고리즘 식별자를 가져오거나, 체크섬이 없을 경우 모든 0의 GUID를 반환 합니다.|  
+|[GetDocumentType 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-getdocumenttype-method.md)|이 문서의 문서 유형을 가져옵니다.|  
+|[GetLanguage 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-getlanguage-method.md)|이 문서의 언어 식별자를 가져옵니다.|  
+|[GetLanguageVendor 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-getlanguagevendor-method.md)|이 문서의 언어 공급 업체를 가져옵니다.|  
+|[GetSourceLength 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-getsourcelength-method.md)|포함 소스의 길이(바이트)를 가져옵니다.|  
+|[GetSourceRange 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-getsourcerange-method.md)|포함 된 소스의 지정 된 범위를 지정 된 버퍼에 반환 합니다.|  
+|[GetURL 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-geturl-method.md)|이 문서에 대 한 URL을 반환 합니다.|  
+|[HasEmbeddedSource 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-hasembeddedsource-method.md)|문서에 디버깅 기호에 포함 된 소스가 있는 경우 `true`을 반환 합니다. 그렇지 않으면 `false`을 반환 합니다.|  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [진단 기호 저장소 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

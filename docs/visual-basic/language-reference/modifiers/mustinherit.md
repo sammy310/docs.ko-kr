@@ -18,38 +18,38 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351506"
 ---
 # <a name="mustinherit-visual-basic"></a>MustInherit(Visual Basic)
-Specifies that a class can be used only as a base class and that you cannot create an object directly from it.  
+클래스를 기본 클래스로만 사용할 수 있고이 클래스에서 직접 개체를 만들 수 없도록 지정 합니다.  
   
 ## <a name="remarks"></a>주의  
- The purpose of a *base class* (also known as an *abstract class*) is to define functionality that is common to all the classes derived from it. This saves the derived classes from having to redefine the common elements. In some cases, this common functionality is not complete enough to make a usable object, and each derived class defines the missing functionality. In such a case, you want the consuming code to create objects only from the derived classes. You use `MustInherit` on the base class to enforce this.  
+ *기본 클래스* ( *추상 클래스*라고도 함)의 목적은 클래스에서 파생 되는 모든 클래스에 공통적인 기능을 정의 하는 것입니다. 이렇게 하면 파생 클래스가 공통 요소를 다시 정의할 필요가 없습니다. 경우에 따라이 일반적인 기능은 사용 가능한 개체를 만들기에 충분 하지 않으며 각 파생 클래스는 누락 된 기능을 정의 합니다. 이러한 경우에는 사용 하는 코드가 파생 된 클래스 에서만 개체를 만들도록 할 수 있습니다. 기본 클래스에서 `MustInherit`를 사용 하 여이를 적용 합니다.  
   
- Another use of a `MustInherit` class is to restrict a variable to a set of related classes. You can define a base class and derive all these related classes from it. The base class does not need to provide any functionality common to all the derived classes, but it can serve as a filter for assigning values to variables. If your consuming code declares a variable as the base class, Visual Basic allows you to assign only an object from one of the derived classes to that variable.  
+ `MustInherit` 클래스의 또 다른 용도는 변수를 관련 클래스 집합으로 제한 하는 것입니다. 기본 클래스를 정의 하 고이 클래스에서 이러한 관련 클래스를 모두 파생 시킬 수 있습니다. 기본 클래스는 모든 파생 클래스에 공통적인 기능을 제공 하지 않아도 되지만 변수에 값을 할당 하는 필터 역할을 할 수 있습니다. 소비 하는 코드에서 변수를 기본 클래스로 선언 하는 경우 Visual Basic를 사용 하 여 파생 클래스 중 하나의 개체만 해당 변수에 할당할 수 있습니다.  
   
- The .NET Framework defines several `MustInherit` classes, among them <xref:System.Array>, <xref:System.Enum>, and <xref:System.ValueType>. <xref:System.ValueType> is an example of a base class that restricts a variable. All value types derive from <xref:System.ValueType>. If you declare a variable as <xref:System.ValueType>, you can assign only value types to that variable.  
+ .NET Framework `MustInherit` 클래스 <xref:System.Array>, <xref:System.Enum>및 <xref:System.ValueType>중 일부를 정의 합니다. <xref:System.ValueType>은 변수를 제한 하는 기본 클래스의 예입니다. 모든 값 형식은 <xref:System.ValueType>에서 파생 됩니다. 변수를 <xref:System.ValueType>선언 하는 경우 해당 변수에 값 형식만 할당할 수 있습니다.  
   
 ## <a name="rules"></a>규칙  
   
-- **Declaration Context.** You can use `MustInherit` only in a `Class` statement.  
+- **선언 컨텍스트입니다.** `Class` 문에서만 `MustInherit`을 사용할 수 있습니다.  
   
-- **Combined Modifiers.** You cannot specify `MustInherit` together with `NotInheritable` in the same declaration.  
+- **결합 된 한정자입니다.** 동일한 선언에서 `NotInheritable`와 함께 `MustInherit`를 지정할 수 없습니다.  
   
 ## <a name="example"></a>예제  
- The following example illustrates both forced inheritance and forced overriding. The base class `shape` defines a variable `acrossLine`. The classes `circle` and `square` derive from `shape`. They inherit the definition of `acrossLine`, but they must define the function `area` because that calculation is different for each kind of shape.  
+ 다음 예제에서는 강제 상속과 강제 재정의를 모두 보여 줍니다. 기본 클래스 `shape` `acrossLine`변수를 정의 합니다. 클래스 `circle` 및 `square`는 `shape`에서 파생 됩니다. `acrossLine`의 정의를 상속 하지만 각 종류의 셰이프에 대해 계산이 다르므로 함수 `area`를 정의 해야 합니다.  
   
  [!code-vb[VbVbalrKeywords#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class1.vb#2)]  
   
- You can declare `shape1` and `shape2` to be of type `shape`. However, you cannot create an object from `shape` because it lacks the functionality of the function `area` and is marked `MustInherit`.  
+ `shape1` 및 `shape2`를 `shape`형식으로 선언할 수 있습니다. 그러나 `shape`에서 개체를 만들 수 없습니다 .이는 함수 `area` 기능이 부족 하 고 `MustInherit`표시 되기 때문입니다.  
   
- Because they are declared as `shape`, the variables `shape1` and `shape2` are restricted to objects from the derived classes `circle` and `square`. Visual Basic does not allow you to assign any other object to these variables, which gives you a high level of type safety.  
+ `shape`로 선언 되기 때문에 `shape1` 및 `shape2` 변수가 파생 된 클래스 `circle` 및 `square`의 개체로 제한 됩니다. Visual Basic를 사용 하 여 이러한 변수에 다른 개체를 할당할 수 없으며,이는 높은 수준의 형식 안전성을 제공 합니다.  
   
-## <a name="usage"></a>사용 현황  
- The `MustInherit` modifier can be used in this context:  
+## <a name="usage"></a>사용법  
+ 이 컨텍스트에서는 `MustInherit` 한정자를 사용할 수 있습니다.  
   
  [Class 문](../../../visual-basic/language-reference/statements/class-statement.md)  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Inherits 문](../../../visual-basic/language-reference/statements/inherits-statement.md)
 - [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)
-- [C++ 키워드](../../../visual-basic/language-reference/keywords/index.md)
+- [키워드](../../../visual-basic/language-reference/keywords/index.md)
 - [상속 기본 사항](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)

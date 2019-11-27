@@ -40,19 +40,19 @@ typedef enum CorRefToDefCheck {
   
 |멤버|설명|  
 |------------|-----------------|  
-|`MDRefToDefDefault`|Specifies that type references and member references should be converted to definitions. This is the default value (`MDTypeRefToDef` &#124; `MDMemberRefToDef`).|  
-|`MDRefToDefAll`|Specifies that all referenced items should be converted to definitions.|  
-|`MDRefToDefNone`|Specifies that no referenced items should be converted to definitions.|  
-|`MDTypeRefToDef`|Specifies that only type references should be converted to type definitions.|  
-|`MDMemberRefToDef`|Specifies that only member references should be converted to definitions. That is, member references should be converted to either method definitions or field definitions.|  
+|`MDRefToDefDefault`|형식 참조 및 멤버 참조를 정의로 변환 하도록 지정 합니다. 이 값은 기본값 (`MDTypeRefToDef` &#124; `MDMemberRefToDef`)입니다.|  
+|`MDRefToDefAll`|참조 되는 모든 항목을 정의로 변환 하도록 지정 합니다.|  
+|`MDRefToDefNone`|참조 되는 항목을 정의로 변환 하지 않도록 지정 합니다.|  
+|`MDTypeRefToDef`|형식 참조만 형식 정의로 변환 하도록 지정 합니다.|  
+|`MDMemberRefToDef`|멤버 참조만 정의로 변환 하도록 지정 합니다. 즉, 멤버 참조는 메서드 정의 또는 필드 정의 중 하나로 변환 되어야 합니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** CorHdr.h  
+ **헤더:** CorHdr .h  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [메타데이터 열거형](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

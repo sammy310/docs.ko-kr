@@ -10,17 +10,17 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350724"
 ---
 # <a name="q-z-statements"></a>Q-Z 문
-The following table contains a listing of Visual Basic language statements.  
+다음 표에서는 Visual Basic 언어 문의 목록을 포함 합니다.  
   
 |||||  
 |---|---|---|---|  
 |[RaiseEvent](../../../visual-basic/language-reference/statements/raiseevent-statement.md)|[ReDim](../../../visual-basic/language-reference/statements/redim-statement.md)|[REM](../../../visual-basic/language-reference/statements/rem-statement.md)|[RemoveHandler](../../../visual-basic/language-reference/statements/removehandler-statement.md)|  
-|[Resume](../../../visual-basic/language-reference/statements/resume-statement.md)|[Return](../../../visual-basic/language-reference/statements/return-statement.md)|[Select...Case](../../../visual-basic/language-reference/statements/select-case-statement.md)|[Set](../../../visual-basic/language-reference/statements/set-statement.md)|  
-|[Stop](../../../visual-basic/language-reference/statements/stop-statement.md)|[Structure](../../../visual-basic/language-reference/statements/structure-statement.md)|[Sub](../../../visual-basic/language-reference/statements/sub-statement.md)|[SyncLock](../../../visual-basic/language-reference/statements/synclock-statement.md)|  
-|[Then](../../../visual-basic/language-reference/statements/then-statement.md)|[Throw](../../../visual-basic/language-reference/statements/throw-statement.md)|[Try...Catch...Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)|[Using](../../../visual-basic/language-reference/statements/using-statement.md)|  
-|[While...End While](../../../visual-basic/language-reference/statements/while-end-while-statement.md)|[With...End With](../../../visual-basic/language-reference/statements/with-end-with-statement.md)|[Yield](../../../visual-basic/language-reference/statements/yield-statement.md)||  
+|[Resume](../../../visual-basic/language-reference/statements/resume-statement.md)|[Return](../../../visual-basic/language-reference/statements/return-statement.md)|[...를 선택 합니다. 경우](../../../visual-basic/language-reference/statements/select-case-statement.md)|[Set](../../../visual-basic/language-reference/statements/set-statement.md)|  
+|[Stop](../../../visual-basic/language-reference/statements/stop-statement.md)|[구조체나](../../../visual-basic/language-reference/statements/structure-statement.md)|[Sub](../../../visual-basic/language-reference/statements/sub-statement.md)|[SyncLock](../../../visual-basic/language-reference/statements/synclock-statement.md)|  
+|[Then](../../../visual-basic/language-reference/statements/then-statement.md)|[Throw](../../../visual-basic/language-reference/statements/throw-statement.md)|[Try ... Catch ... 마지막으로](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)|[Using](../../../visual-basic/language-reference/statements/using-statement.md)|  
+|[While ... 종료](../../../visual-basic/language-reference/statements/while-end-while-statement.md)|[... 끝 날짜](../../../visual-basic/language-reference/statements/with-end-with-statement.md)|[Yield](../../../visual-basic/language-reference/statements/yield-statement.md)||  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [A-E 문](../../../visual-basic/language-reference/statements/a-e-statements.md)
 - [F-P 문](../../../visual-basic/language-reference/statements/f-p-statements.md)

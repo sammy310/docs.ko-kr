@@ -14,9 +14,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431363"
 ---
 # <a name="ialink2-interface"></a>IALink2 인터페이스
-Complements the [IALink Interface](ialink-interface.md) by declaring methods that operate on newer metadata interfaces such as [IMetaDataEmit2 Interface](../metadata/imetadataemit2-interface.md). Additionally, IALink2 declares methods that provide additional usage flexibility over the original IALink interfaces.  
+[IMetaDataEmit2 인터페이스](../metadata/imetadataemit2-interface.md)와 같이 최신 메타 데이터 인터페이스에서 작동 하는 메서드를 선언 하 여 [ialink 인터페이스](ialink-interface.md) 를 보완 합니다. 또한 IALink2는 원래 IALink 인터페이스에 대 한 추가 사용 유연성을 제공 하는 메서드를 선언 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [AddFile2 메서드](addfile2-method.md)  
   
  [EmitAssembly 메서드](emitassembly-method.md)  
@@ -39,7 +39,7 @@ Complements the [IALink Interface](ialink-interface.md) by declaring methods tha
   
  [SetPEKind 메서드](setpekind-method.md)  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ALink API](index.md)
 - [IALink 인터페이스](ialink-interface.md)

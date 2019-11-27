@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448871"
 ---
 # <a name="isymunmanagedmethodgetsourcestartend-method"></a>ISymUnmanagedMethod::GetSourceStartEnd 메서드
-Gets the start and end document positions for the source of this method. The first array position is the start, and the second array position is the end.  
+이 메서드의 소스에 대 한 시작 및 끝 문서 위치를 가져옵니다. 첫 번째 배열 위치는 시작이 고 두 번째 배열 위치는 끝입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,23 +37,23 @@ HRESULT GetSourceStartEnd(
   
 ## <a name="parameters"></a>매개 변수  
  `docs`  
- [in] The starting and ending source documents.  
+ 진행 시작 및 종료 소스 문서입니다.  
   
  `lines`  
- [in] The starting and ending lines in the corresponding source documents.  
+ 진행 해당 소스 문서의 시작 및 종료 줄입니다.  
   
  `columns`  
- [in] The starting and ending columns in the corresponding source documents.  
+ 진행 해당 소스 문서의 시작 및 끝 열입니다.  
   
  `pRetVal`  
- [out] `true` if positions were defined; otherwise, `false`.  
+ [out] 위치가 정의 된 경우 `true` 합니다. 그렇지 않으면 `false`합니다.  
   
 ## <a name="return-value"></a>반환 값  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **Header:** CorSym.idl, CorSym.h  
+ **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ISymUnmanagedMethod 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

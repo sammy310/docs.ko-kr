@@ -1,5 +1,5 @@
 ---
-title: Protected
+title: 보호됨
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Protected
@@ -19,29 +19,29 @@ ms.locfileid: "74351309"
 ---
 # <a name="protected-visual-basic"></a>Protected(Visual Basic)
 
-A member access modifier that specifies that one or more declared programming elements are accessible only from within their own class or from a derived class.
+하나 이상의 선언 된 프로그래밍 요소가 자체 클래스 또는 파생 된 클래스 내 에서만 액세스할 수 있도록 지정 하는 멤버 액세스 한정자입니다.
 
 ## <a name="remarks"></a>주의
 
-Sometimes a programming element declared in a class contains sensitive data or restricted code, and you want to limit access to the element. However, if the class is inheritable and you expect a hierarchy of derived classes, it might be necessary for these derived classes to access the data or code. In such a case, you want the element to be accessible both from the base class and from all derived classes. To limit access to an element in this manner, you can declare it with `Protected`.
+클래스에 선언 된 프로그래밍 요소가 중요 한 데이터 또는 제한 된 코드를 포함 하 고 있고 요소에 대 한 액세스를 제한 하려는 경우가 있습니다. 그러나 클래스가 상속 가능 하 고 파생 클래스의 계층 구조가 필요한 경우 이러한 파생 클래스에서 데이터 또는 코드에 액세스 해야 할 수 있습니다. 이 경우 기본 클래스와 모든 파생 클래스에서 요소에 액세스할 수 있도록 합니다. 이러한 방식으로 요소에 대 한 액세스를 제한 하기 위해 `Protected`로 선언할 수 있습니다.
 
 > [!NOTE]
-> The `Protected` access modifier can be combined with two other modifiers:
+> `Protected` 액세스 한정자는 다음과 같은 두 가지 한정자와 함께 사용할 수 있습니다.
 >
-> - The [Protected Friend](protected-friend.md) modifier makes a class member accessible from within that class, from derived classes, and from the same assembly in which the class is defined.
-> - The [Private Protected](private-protected.md) modifier makes a class member accessible by derived types, but only within its containing assembly.
+> - [Protected Friend](protected-friend.md) 한정자는 클래스, 파생 클래스 및 클래스가 정의 된 동일한 어셈블리에서 클래스 멤버를 액세스할 수 있도록 합니다.
+> - [Private Protected](private-protected.md) 한정자를 사용 하면 파생 형식에서 클래스 멤버에 액세스할 수 있지만 포함 하는 어셈블리 내 에서만 클래스 멤버에 액세스할 수 있습니다.
 
 ## <a name="rules"></a>규칙
 
-**Declaration Context.** You can use `Protected` only at the class level. This means the declaration context for a `Protected` element must be a class, and cannot be a source file, namespace, interface, module, structure, or procedure.
+**선언 컨텍스트입니다.** 클래스 수준 에서만 `Protected`를 사용할 수 있습니다. 즉, `Protected` 요소에 대 한 선언 컨텍스트는 클래스 여야 하며 소스 파일, 네임 스페이스, 인터페이스, 모듈, 구조체 또는 프로시저일 수 없습니다.
 
 ## <a name="behavior"></a>동작
 
-- **Access Level.** All code in a class can access its elements. Code in any class that derives from a base class can access all the `Protected` elements of the base class. This is true for all generations of derivation. This means that a class can access `Protected` elements of the base class of the base class, and so on.
+- **액세스 수준입니다.** 클래스의 모든 코드는 해당 요소에 액세스할 수 있습니다. 기본 클래스에서 파생 되는 모든 클래스의 코드는 기본 클래스의 모든 `Protected` 요소에 액세스할 수 있습니다. 이는 모든 파생 세대에 적용 됩니다. 즉, 클래스가 기본 클래스의 기본 클래스 `Protected` 요소에 액세스할 수 있습니다.
 
-     Protected access is not a superset or subset of friend access.
+     보호 된 액세스는 friend 액세스의 상위 집합이 나 하위 집합이 아닙니다.
 
-- **Access Modifiers.** The keywords that specify access level are called *access modifiers*. For a comparison of the access modifiers, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
+- **액세스 한정자입니다.** 액세스 수준을 지정 하는 키워드를 *액세스 한정자*라고 합니다. 액세스 한정자의 비교는 [Visual Basic의 액세스 수준](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)을 참조 하세요.
 
 `Protected` 한정자는 다음 컨텍스트에서 사용할 수 있습니다.
 
@@ -49,7 +49,7 @@ Sometimes a programming element declared in a class contains sensitive data or r
 
 - [Const 문](../../../visual-basic/language-reference/statements/const-statement.md)
 
-- [Declare 문](../../../visual-basic/language-reference/statements/declare-statement.md)
+- [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md)
 
 - [Delegate 문](../../../visual-basic/language-reference/statements/delegate-statement.md)
 
@@ -69,14 +69,14 @@ Sometimes a programming element declared in a class contains sensitive data or r
 
 - [Sub 문](../../../visual-basic/language-reference/statements/sub-statement.md)
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Public](../../../visual-basic/language-reference/modifiers/public.md)
 - [Friend](../../../visual-basic/language-reference/modifiers/friend.md)
-- [전용](../../../visual-basic/language-reference/modifiers/private.md)
+- [Private](../../../visual-basic/language-reference/modifiers/private.md)
 - [Private Protected](private-protected.md)
 - [Protected Friend](protected-friend.md)
-- [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Visual Basic의 액세스 수준](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [절차](../../../visual-basic/programming-guide/language-features/procedures/index.md)
 - [구조체](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [개체 및 클래스](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

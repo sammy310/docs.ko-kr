@@ -1,5 +1,5 @@
 ---
-title: 'How to: Sort An Array'
+title: '방법: 배열 정렬'
 ms.date: 07/20/2015
 f1_keywords:
 - Array.Sort
@@ -14,13 +14,13 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351847"
 ---
-# <a name="how-to-sort-an-array-in-visual-basic"></a>How to: sort an array in Visual Basic
+# <a name="how-to-sort-an-array-in-visual-basic"></a>방법: Visual Basic 배열 정렬
 
-This article shows an example of how to sort an array of strings in Visual Basic.
+이 문서에서는 Visual Basic에서 문자열 배열을 정렬 하는 방법의 예를 보여 줍니다.
 
 ## <a name="example"></a>예제
 
-This example declares an array of `String` objects named `zooAnimals`, populates it, and then sorts it alphabetically:
+이 예제에서는 `zooAnimals`라는 `String` 개체의 배열을 선언 하 고 채운 다음 사전순으로 정렬 합니다.
   
 ```vb
 Private Sub SortAnimals()
@@ -36,11 +36,11 @@ End Sub
 
 다음 조건에서 예외가 발생합니다.
 
-- Array is empty (<xref:System.ArgumentNullException> class).
-- Array is multidimensional (<xref:System.RankException> class).
-- One or more elements of the array don't implement the <xref:System.IComparable> interface (<xref:System.InvalidOperationException> class).
+- 배열이 비어 있습니다 (<xref:System.ArgumentNullException> 클래스).
+- 배열이 다차원 (<xref:System.RankException> 클래스) 인 경우
+- 배열의 하나 이상의 요소가 <xref:System.IComparable> 인터페이스 (<xref:System.InvalidOperationException> 클래스)를 구현 하지 않습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Array.Sort%2A?displayProperty=nameWithType>
 - [배열](index.md)

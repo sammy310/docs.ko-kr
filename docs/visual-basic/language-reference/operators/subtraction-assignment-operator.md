@@ -18,7 +18,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347806"
 ---
 # <a name="--operator-visual-basic"></a>-= 연산자(Visual Basic)
-Subtracts the value of an expression from the value of a variable or property and assigns the result to the variable or property.  
+변수 또는 속성 값에서 식의 값을 빼고 결과를 변수 또는 속성에 할당 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -28,27 +28,27 @@ variableorproperty -= expression
   
 ## <a name="parts"></a>요소  
  `variableorproperty`  
- 필수 요소. Any numeric variable or property.  
+ 필수입니다. 임의의 숫자 변수 또는 속성입니다.  
   
  `expression`  
- 필수 요소. 임의의 숫자 식입니다.  
+ 필수입니다. 임의의 숫자 식입니다.  
   
 ## <a name="remarks"></a>주의  
- The element on the left side of the `-=` operator can be a simple scalar variable, a property, or an element of an array. The variable or property cannot be [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  
+ `-=` 연산자의 좌 변에 있는 요소는 간단한 스칼라 변수, 속성 또는 배열의 요소일 수 있습니다. 변수 또는 속성은 [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)일 수 없습니다.  
   
- The `-=` operator first subtracts the value of the expression (on the right-hand side of the operator) from the value of the variable or property (on the left-hand side of the operator). The operator then assigns the result of that operation to the variable or property.  
+ `-=` 연산자는 먼저 연산자의 왼쪽에 있는 식의 값 (연산자의 왼쪽에 있는) 또는 속성의 값에서 연산자의 오른쪽에 있는 식의 값을 뺍니다. 그런 다음 연산자는 해당 작업의 결과를 변수나 속성에 할당 합니다.  
   
-## <a name="overloading"></a>오버로딩  
- The [- Operator (Visual Basic)](../../../visual-basic/language-reference/operators/subtraction-operator.md) can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure. Overloading the `-` operator affects the behavior of the `-=` operator. If your code uses `-=` on a class or structure that overloads `-`, be sure you understand its redefined behavior. 자세한 내용은 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)을 참조하세요.  
+## <a name="overloading"></a>오버로드  
+ [-연산자 (Visual Basic)](../../../visual-basic/language-reference/operators/subtraction-operator.md) 를 *오버 로드할*수 있습니다. 즉, 피연산자가 해당 클래스 또는 구조체의 형식일 때 클래스 또는 구조체에서 해당 동작을 재정의할 수 있습니다. `-` 연산자를 오버 로드 하면 `-=` 연산자의 동작에 영향을 줍니다. 코드에서 `-`오버 로드 하는 클래스 또는 구조체에 `-=`를 사용 하는 경우 다시 정의 된 동작을 이해 해야 합니다. 자세한 내용은 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)을 참조하세요.  
   
 ## <a name="example"></a>예제  
- The following example uses the `-=` operator to subtract one `Integer` variable from another and assign the result to the latter variable.  
+ 다음 예에서는 `-=` 연산자를 사용 하 여 다른 변수에서 하나의 `Integer` 변수를 빼고 결과를 후자 변수에 할당 합니다.  
   
  [!code-vb[VbVbalrOperators#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#11)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [- Operator (Visual Basic)](../../../visual-basic/language-reference/operators/subtraction-operator.md)
+- [-연산자 (Visual Basic)](../../../visual-basic/language-reference/operators/subtraction-operator.md)
 - [할당 연산자](../../../visual-basic/language-reference/operators/assignment-operators.md)
 - [산술 연산자](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
 - [Visual Basic에서의 연산자 우선 순위](../../../visual-basic/language-reference/operators/operator-precedence.md)

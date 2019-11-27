@@ -18,9 +18,9 @@ ms.locfileid: "74353096"
 ---
 # <a name="how-to-qualify-xml-element-and-xml-attribute-names"></a>방법: XML 요소 및 XML 특성 이름 한정
 
-XML namespaces contained by instances of the <xref:System.Xml.Serialization.XmlSerializerNamespaces> class must conform to the World Wide Web Consortium (W3C) specification called [Namespaces in XML](https://www.w3.org/TR/REC-xml-names/).
+<xref:System.Xml.Serialization.XmlSerializerNamespaces> 클래스의 인스턴스에 포함 된 XML 네임 스페이스는 [xml에서 네임 스페이스](https://www.w3.org/TR/REC-xml-names/)라는 W3C (World Wide Web 컨소시엄) 사양을 따라야 합니다.
 
-XML 네임스페이스는 XML 문서에서 XML 요소 및 XML 특성의 이름을 정규화하는 메서드를 제공합니다. A qualified name consists of a prefix and a local name, separated by a colon. The prefix functions only as a placeholder; it is mapped to a URI that specifies a namespace. 보편적으로 관리되는 URI 네임스페이스와 로컬 이름을 조합하면 보편적으로 고유한 이름이 만들어집니다.
+XML 네임스페이스는 XML 문서에서 XML 요소 및 XML 특성의 이름을 정규화하는 메서드를 제공합니다. 정규화된 이름은 콜론으로 구분된 접두사와 로컬 이름으로 이루어집니다. 접두사는 자리 표시자로만 사용되며 네임스페이스를 지정하는 URI에 매핑됩니다. 보편적으로 관리되는 URI 네임스페이스와 로컬 이름을 조합하면 보편적으로 고유한 이름이 만들어집니다.
 
 `XmlSerializerNamespaces`의 인스턴스를 만들고 네임스페이스 쌍을 개체에 추가하면 XML 문서에 사용되는 접두사를 지정할 수 있습니다.
 
@@ -36,7 +36,7 @@ XML 네임스페이스는 XML 문서에서 XML 요소 및 XML 특성의 이름�
 
 4. 각 특성의 `Namespace` 속성을 `XmlSerializerNamespaces`의 네임스페이스 값 중 하나로 설정합니다.
 
-5. Pass the `XmlSerializerNamespaces` to the `Serialize` method of the `XmlSerializer`.
+5. `XmlSerializer`의 `Serialize` 메서드에 `XmlSerializerNamespaces`를 전달 합니다.
 
 ## <a name="example"></a>예제
 
@@ -170,12 +170,12 @@ public class Book
 }
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Xml.Serialization.XmlSerializer>
 - [XML 스키마 정의 도구 및 XML serialization](the-xml-schema-definition-tool-and-xml-serialization.md)
 - [XML serialization 소개](introducing-xml-serialization.md)
-- [XmlSerializer Class](xref:System.Xml.Serialization.XmlSerializer)
+- [XmlSerializer 클래스](xref:System.Xml.Serialization.XmlSerializer)
 - [XML serialization을 제어하는 특성](attributes-that-control-xml-serialization.md)
 - [방법: XML 스트림의 대체 요소 이름 지정](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
 - [방법: 개체 직렬화](how-to-serialize-an-object.md)

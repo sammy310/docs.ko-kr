@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447711"
 ---
 # <a name="cor_prf_suspend_reason-enumeration"></a>COR_PRF_SUSPEND_REASON 열거형
-Indicates the reason that the runtime is suspended.  
+런타임이 일시 중단 된 이유를 나타냅니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -42,17 +42,17 @@ typedef enum {
   
 |멤버|설명|  
 |------------|-----------------|  
-|`COR_PRF_FIELD_SUSPEND_OTHER`|The runtime is suspended for an unspecified reason.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_GC`|The runtime is suspended to service a garbage collection request.<br /><br /> The garbage collection-related callbacks occur between the [ICorProfilerCallback::RuntimeSuspendFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendfinished-method.md) and [ICorProfilerCallback::RuntimeResumeStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimeresumestarted-method.md) callbacks.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_APPDOMAIN_SHUTDOWN`|The runtime is suspended so that an `AppDomain` can be shut down.<br /><br /> While the runtime is suspended, the runtime will determine which threads are in the `AppDomain` that is being shut down and set them to abort when they resume. There are no `AppDomain`-specific callbacks during this suspension.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_CODE_PITCHING`|The runtime is suspended so that code pitching can occur.<br /><br /> Code pitching ensues only when the just-in-time (JIT) compiler is active with code pitching enabled. Code pitching callbacks occur between the `ICorProfilerCallback::RuntimeSuspendFinished` and `ICorProfilerCallback::RuntimeResumeStarted` callbacks. **Note:**  The CLR JIT does not pitch functions in the .NET Framework version 2.0, so this value is not used in 2.0.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_SHUTDOWN`|The runtime is suspended so that it can shut down. It must suspend all threads to complete the operation.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_INPROC_DEBUGGER`|The runtime is suspended for in-process debugging.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_GC_PREP`|The runtime is suspended to prepare for a garbage collection.|  
-|`COR_PRF_SUSPEND_FOR_REJIT`|The runtime is suspended for JIT recompilation.|  
+|`COR_PRF_FIELD_SUSPEND_OTHER`|지정 되지 않은 이유로 런타임이 일시 중단 됩니다.|  
+|`COR_PRF_FIELD_SUSPEND_FOR_GC`|런타임은 가비지 수집 요청을 처리 하기 위해 일시 중단 됩니다.<br /><br /> 가비지 컬렉션 관련 콜백은 [ICorProfilerCallback:: RuntimeSuspendFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendfinished-method.md) 및 [ICorProfilerCallback:: Run Esumestarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimeresumestarted-method.md) 콜백 사이에서 발생 합니다.|  
+|`COR_PRF_FIELD_SUSPEND_FOR_APPDOMAIN_SHUTDOWN`|`AppDomain`를 종료할 수 있도록 런타임이 일시 중단 됩니다.<br /><br /> 런타임이 일시 중단 된 동안 런타임에서는 종료 되는 `AppDomain`에 있는 스레드를 확인 하 고 다시 시작할 때 abort로 설정 합니다. 이 일시 중단 중에 `AppDomain`특정 콜백이 없습니다.|  
+|`COR_PRF_FIELD_SUSPEND_FOR_CODE_PITCHING`|코드 피칭 발생할 수 있도록 런타임이 일시 중단 됩니다.<br /><br /> Code 피칭 ensues는 JIT (just-in-time) 컴파일러가 활성화 된 코드 피칭 사용 하는 경우에만 사용 됩니다. 코드 피칭 콜백은 `ICorProfilerCallback::RuntimeSuspendFinished`와 `ICorProfilerCallback::RuntimeResumeStarted` 콜백 사이에서 발생 합니다. **참고:**  CLR JIT는 .NET Framework 버전 2.0에서 함수를 피치 하지 않으므로 2.0에서는이 값이 사용 되지 않습니다.|  
+|`COR_PRF_FIELD_SUSPEND_FOR_SHUTDOWN`|런타임이 종료 될 수 있도록 일시 중단 됩니다. 작업을 완료 하려면 모든 스레드를 일시 중단 해야 합니다.|  
+|`COR_PRF_FIELD_SUSPEND_FOR_INPROC_DEBUGGER`|In-process 디버깅에 대해 런타임이 일시 중단 됩니다.|  
+|`COR_PRF_FIELD_SUSPEND_FOR_GC_PREP`|가비지 수집을 준비 하기 위해 런타임이 일시 중단 됩니다.|  
+|`COR_PRF_SUSPEND_FOR_REJIT`|JIT 재컴파일에 대해 런타임이 일시 중단 됩니다.|  
   
 ## <a name="remarks"></a>주의  
- All runtime threads that are in unmanaged code are permitted to continue running until they try to re-enter the runtime, at which point they will also be suspended until the runtime resumes. This also applies to new threads that enter the runtime. All threads within the runtime are either suspended immediately if they are in interruptible code, or asked to suspend when they do reach interruptible code.  
+ 비관리 코드에 있는 모든 런타임 스레드는 런타임을 다시 시작할 때까지 계속 실행 되도록 허용 되며, 런타임이 다시 시작 될 때까지 일시 중단 됩니다. 이는 런타임에 입력 하는 새 스레드에도 적용 됩니다. 런타임 내의 모든 스레드는 중단 될 수 있는 코드에 있는 경우 즉시 일시 중단 되 고, 인터럽트 가능 코드에 도달 하면 일시 중단을 요청 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
@@ -63,6 +63,6 @@ typedef enum {
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [프로파일링 열거형](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

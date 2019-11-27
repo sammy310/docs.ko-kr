@@ -48,7 +48,7 @@ ms.locfileid: "74350126"
   
  비유하자면 헤드를 교체할 수 있는 스크루드라이버와 비슷합니다. 즉, 돌려야 하는 나사에 맞는 헤드(일자, 십자, 별 모양)를 선택합니다. 그리고 올바른 헤드를 스크루드라이버 핸들에 삽입하면 스크루드라이버와 정확하게 동일한 기능, 즉 나사를 돌리는 기능을 수행할 수 있습니다.  
   
- ![Diagram of a screwdriver set with different heads.](./media/generic-types/generic-screwdriver-set.gif)  
+ ![다른 헤드를 사용 하는 드라이버 집합의 다이어그램입니다.](./media/generic-types/generic-screwdriver-set.gif)  
   
  제네릭 형식을 정의할 때는 하나 이상의 데이터 형식을 사용하여 매개 변수를 지정할 수 있습니다. 이렇게 하면 코드를 사용하여 데이터 형식을 요구 사항에 맞출 수 있습니다. 각각 서로 다른 데이터 형식 집합에 대해 작동하는 여러 프로그래밍 요소를 제네릭 요소에서 선언할 수 있습니다. 하지만 선언된 요소는 사용하는 데이터 형식에 관계없이 모두 동일한 논리를 수행합니다.  
   
@@ -73,10 +73,10 @@ ms.locfileid: "74350126"
   
  [!code-vb[VbVbalrDataTypes#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#4)]  
   
- For a more complete example, see [How to: Define a Class That Can Provide Identical Functionality on Different Data Types](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md).  
+ 더 자세한 예제는 [방법: 다른 데이터 형식에 동일한 기능을 제공할 수 있는 클래스 정의](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md)를 참조 하세요.  
   
 ## <a name="eligible-programming-elements"></a>적용 가능한 프로그래밍 요소  
- 제네릭 클래스, 구조체, 인터페이스, 프로시저 및 대리자를 정의하고 사용할 수 있습니다. Note that the .NET Framework defines several generic classes, structures, and interfaces that represent commonly used generic elements. <xref:System.Collections.Generic?displayProperty=nameWithType> 네임스페이스는 사전, 목록, 큐, 스택 등을 제공합니다. 제네릭 요소를 직접 정의하기 전에 <xref:System.Collections.Generic?displayProperty=nameWithType>에 이미 있지 않은지 확인하세요.  
+ 제네릭 클래스, 구조체, 인터페이스, 프로시저 및 대리자를 정의하고 사용할 수 있습니다. .NET Framework은 일반적으로 사용 되는 제네릭 요소를 나타내는 몇 개의 제네릭 클래스, 구조체 및 인터페이스를 정의 합니다. <xref:System.Collections.Generic?displayProperty=nameWithType> 네임스페이스는 사전, 목록, 큐, 스택 등을 제공합니다. 제네릭 요소를 직접 정의하기 전에 <xref:System.Collections.Generic?displayProperty=nameWithType>에 이미 있지 않은지 확인하세요.  
   
  프로시저는 형식이 아니지만 제네릭 프로시저를 정의하고 사용할 수 있습니다. [Generic Procedures in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)을 참조하세요.  
   
@@ -124,7 +124,7 @@ ms.locfileid: "74350126"
   
 - 형식 인수는 *참조 형식*이거나 *값 형식*이어야 함  
   
- 둘 이상의 요구 사항을 적용해야 하는 경우 쉼표로 구분된 *제약 조건 목록* 을 중괄호(`{ }`) 안에 넣으세요. To require an accessible constructor, you include the [New Operator](../../../../visual-basic/language-reference/operators/new-operator.md) keyword in the list. 참조 형식을 요구하려면 `Class` 키워드를 넣고, 값 형식을 요구하려면 `Structure` 키워드를 넣으세요.  
+ 둘 이상의 요구 사항을 적용해야 하는 경우 쉼표로 구분된 *제약 조건 목록* 을 중괄호(`{ }`) 안에 넣으세요. 액세스 가능한 생성자를 요구 하려면 목록에 [New Operator](../../../../visual-basic/language-reference/operators/new-operator.md) 키워드를 포함 합니다. 참조 형식을 요구하려면 `Class` 키워드를 넣고, 값 형식을 요구하려면 `Structure` 키워드를 넣으세요.  
   
  제약 조건에 대한 자세한 내용은 [Type List](../../../../visual-basic/language-reference/statements/type-list.md)을 참조하세요.  
   
@@ -146,12 +146,12 @@ ms.locfileid: "74350126"
   
 - *생성된 형식*. 형식 매개 변수에 대한 형식 인수를 제공하여 제네릭 형식에서 선언된 클래스, 구조체, 인터페이스, 프로시저 또는 대리자입니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [데이터 형식](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [형식 문자](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
-- [값 형식과 참조 형식](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
-- [Type Conversions in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Visual Basic 형식 변환](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [데이터 형식 문제 해결](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
 - [데이터 형식](../../../../visual-basic/language-reference/data-types/index.md)
 - [Of](../../../../visual-basic/language-reference/statements/of-clause.md)

@@ -45,7 +45,7 @@ HRESULT GetCustomAttributeProps (
  [out, optional] 사용자 지정 특성이 수정하는 개체를 나타내는 메타데이터 토큰입니다. 이 값은 `mdCustomAttribute`를 제외한 모든 메타데이터 토큰 형식일 수 있습니다.  
   
  `ptkType`  
- [out, optional] 반환된 사용자 지정 특성의 <xref:System.Type>을 나타내는 `mdMethodDef` 또는 `mdMemberRef` 메타데이터 토큰입니다.  
+ [out, optional] 반환된 사용자 지정 특성의 `mdMethodDef`을 나타내는 `mdMemberRef` 또는 <xref:System.Type> 메타데이터 토큰입니다.  
   
  `ppBlob`  
  [out, optional] 사용자 지정 특성의 값인 데이터 배열에 대한 포인터입니다.  
@@ -59,13 +59,13 @@ HRESULT GetCustomAttributeProps (
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IMetaDataImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

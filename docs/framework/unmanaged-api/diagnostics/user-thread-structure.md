@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437975"
 ---
 # <a name="user_thread-structure"></a>USER_THREAD 구조체
-Provides information to a debugger about a thread. For more information, see the [INotifySource2::SetNotifyFilter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md) method.  
+스레드에 대 한 정보를 디버거에 제공 합니다. 자세한 내용은 [INotifySource2:: SetNotifyFilter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md) 메서드를 참조 하세요.  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,14 +39,14 @@ typedef struct tagUSER_THREAD
   
 |멤버|설명|  
 |------------|-----------------|  
-|`pSidBuffer`|Address of thread buffer.|  
-|`dwSidLen`|Length of thread buffer, in bytes.|  
-|`dwTid`|Thread ID.|  
+|`pSidBuffer`|스레드 버퍼의 주소입니다.|  
+|`dwSidLen`|스레드 버퍼의 길이 (바이트)입니다.|  
+|`dwTid`|스레드 ID입니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **Header:** ProtocolNotify2.idl  
+ **헤더:** ProtocolNotify2  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [SetNotifyFilter 메서드](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md)
 - [진단 기호 저장소 구조체](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)

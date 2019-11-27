@@ -22,7 +22,7 @@ ms.locfileid: "74348010"
 ---
 # <a name="module-statement"></a>Module 문
 
-Declares the name of a module and introduces the definition of the variables, properties, events, and procedures that the module comprises.
+모듈 이름을 선언 하 고 모듈에서 구성 하는 변수, 속성, 이벤트 및 프로시저의 정의를 소개 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -35,7 +35,7 @@ End Module
 ## <a name="parts"></a>요소
 
 `attributelist`  
-(선택 사항) See [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md).
+(선택 사항) [특성 목록](../../../visual-basic/language-reference/statements/attribute-list.md)을 참조 하십시오.
 
 `accessmodifier`  
 (선택 사항) 다음 중 하나일 수 있습니다.
@@ -47,61 +47,61 @@ End Module
 [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)을 참조하세요.
 
 `name`  
-필수 요소. Name of this module. [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)을 참조하세요.
+필수입니다. 이 모듈의 이름입니다. [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)을 참조하세요.
 
 `statements`  
-(선택 사항) Statements which define the variables, properties, events, procedures, and nested types of this module.
+(선택 사항) 이 모듈의 변수, 속성, 이벤트, 프로시저 및 중첩 형식을 정의 하는 문입니다.
 
 `End Module`  
-Terminates the `Module` definition.
+`Module` 정의를 종료 합니다.
 
 ## <a name="remarks"></a>주의
 
-A `Module` statement defines a reference type available throughout its namespace. A *module* (sometimes called a *standard module*) is similar to a class but with some important distinctions. Every module has exactly one instance and does not need to be created or assigned to a variable. Modules do not support inheritance or implement interfaces. Notice that a module is not a *type* in the sense that a class or structure is — you cannot declare a programming element to have the data type of a module.
+`Module` 문은 해당 네임 스페이스 전체에서 사용할 수 있는 참조 형식을 정의 합니다. *모듈* ( *표준 모듈이*라고도 함)은 클래스와 비슷하지만 몇 가지 중요 한 차이점이 있습니다. 모든 모듈에는 정확히 하나의 인스턴스가 있으며 변수에 만들거나 할당할 필요가 없습니다. 모듈은 상속을 지원 하거나 인터페이스를 구현 하지 않습니다. 모듈은 클래스 또는 구조체 라는 점에서 *형식이* 아닙니다. 프로그래밍 요소를 모듈의 데이터 형식으로 선언할 수 없습니다.
 
-You can use `Module` only at namespace level. This means the *declaration context* for a module must be a source file or namespace, and cannot be a class, structure, module, interface, procedure, or block. You cannot nest a module within another module, or within any type. 자세한 내용은 [선언 컨텍스트 및 기본 액세스 수준](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)을 참조하세요.
+`Module`는 네임 스페이스 수준 에서만 사용할 수 있습니다. 즉, 모듈의 *선언 컨텍스트* 는 소스 파일 또는 네임 스페이스 여야 하 고 클래스, 구조체, 모듈, 인터페이스, 프로시저 또는 블록일 수 없습니다. 모듈은 다른 모듈 또는 모든 형식 내에서 중첩할 수 없습니다. 자세한 내용은 [선언 컨텍스트 및 기본 액세스 수준](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)을 참조하세요.
 
-A module has the same lifetime as your program. Because its members are all `Shared`, they also have lifetimes equal to that of the program.
+모듈의 수명은 프로그램의 수명과 동일 합니다. 해당 멤버는 모두 `Shared`있으므로 프로그램의 수명이 동일 합니다.
 
-Modules default to [Friend](../../../visual-basic/language-reference/modifiers/friend.md) access. You can adjust their access levels with the access modifiers. For more information, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
+모듈은 기본적으로 [Friend](../../../visual-basic/language-reference/modifiers/friend.md) 액세스를 사용 합니다. 액세스 한정자를 사용 하 여 액세스 수준을 조정할 수 있습니다. 자세한 내용은 [Visual Basic의 액세스 수준](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)을 참조 하세요.
 
-All members of a module are implicitly `Shared`.
+모듈의 모든 멤버는 암시적으로 `Shared`됩니다.
 
-## <a name="classes-and-modules"></a>Classes and Modules
+## <a name="classes-and-modules"></a>클래스 및 모듈
 
-These elements have many similarities, but there are some important differences as well.
+이러한 요소에는 여러 가지 유사점이 있지만 몇 가지 중요 한 차이점도 있습니다.
 
-- **Terminology.** Previous versions of Visual Basic recognize two types of modules: *class modules* (.cls files) and *standard modules* (.bas files). The current version calls these *classes* and *modules*, respectively.
+- **기술.** 이전 버전의 Visual Basic에서는 *클래스 모듈* (cls 파일)과 *표준 모듈* (bas 파일)의 두 가지 모듈 형식을 인식 합니다. 현재 버전은 이러한 *클래스* 및 *모듈*을 각각 호출 합니다.
 
-- **Shared Members.** You can control whether a member of a class is a shared or instance member.
+- **공유 멤버.** 클래스의 멤버가 공유 또는 인스턴스 멤버 인지 여부를 제어할 수 있습니다.
 
-- **Object Orientation.** Classes are object-oriented, but modules are not. So only classes can be instantiated as objects. For more information, see [Objects and Classes](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md).
+- **개체 방향입니다.** 클래스는 개체 지향적 이지만 모듈은 그렇지 않습니다. 따라서 클래스만 개체로 인스턴스화할 수 있습니다. 자세한 내용은 [개체 및 클래스](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)를 참조 하세요.
 
 ## <a name="rules"></a>규칙
 
-- **Modifiers.** All module members are implicitly [Shared](../../../visual-basic/language-reference/modifiers/shared.md). You cannot use the `Shared` keyword when declaring a member, and you cannot alter the shared status of any member.
+- **수정자.** 모든 모듈 멤버는 암시적으로 [공유](../../../visual-basic/language-reference/modifiers/shared.md)됩니다. 멤버를 선언 하는 경우에는 `Shared` 키워드를 사용할 수 없으며, 멤버의 공유 상태를 변경할 수 없습니다.
 
-- **상속.** A module cannot inherit from any type other than <xref:System.Object>, from which all modules inherit. In particular, one module cannot inherit from another.
+- **상속.** 모듈은 모든 모듈이 상속 하는 <xref:System.Object>이외의 모든 형식에서 상속할 수 없습니다. 특히 한 모듈은 다른 모듈에서 상속할 수 없습니다.
 
-  You cannot use the [Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md) in a module definition, even to specify <xref:System.Object>.
+  <xref:System.Object>지정 하기 위해 모듈 정의에서 [Inherits 문을](../../../visual-basic/language-reference/statements/inherits-statement.md) 사용할 수 없습니다.
 
-- **Default Property.** You cannot define any default properties in a module. For more information, see [Default](../../../visual-basic/language-reference/modifiers/default.md).
+- **기본 속성입니다.** 모듈에서 기본 속성을 정의할 수 없습니다. 자세한 내용은 [기본값](../../../visual-basic/language-reference/modifiers/default.md)을 참조 하세요.
 
 ## <a name="behavior"></a>동작
 
-- **Access Level.** Within a module, you can declare each member with its own access level. Module members default to [Public](../../../visual-basic/language-reference/modifiers/public.md) access, except variables and constants, which default to [Private](../../../visual-basic/language-reference/modifiers/private.md) access. When a module has more restricted access than one of its members, the specified module access level takes precedence.
+- **액세스 수준입니다.** 모듈 내에서 각 멤버를 고유한 액세스 수준으로 선언할 수 있습니다. 모듈 멤버는 기본적으로 [Private](../../../visual-basic/language-reference/modifiers/private.md) access로 기본 사용 되는 변수 및 상수를 제외 하 고 [공용](../../../visual-basic/language-reference/modifiers/public.md) 액세스를 사용 합니다. 모듈의 멤버 중 하나 보다 제한 된 액세스 권한이 있으면 지정 된 모듈 액세스 수준이 우선적으로 적용 됩니다.
 
-- **Scope.** A module is in scope throughout its namespace.
+- **범위.** 모듈은 전체 네임 스페이스 범위에 있습니다.
 
-  The scope of every module member is the entire module. Notice that all members undergo *type promotion*, which causes their scope to be promoted to the namespace containing the module. For more information, see [Type Promotion](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md).
+  모든 모듈 멤버의 범위는 전체 모듈입니다. 모든 멤버가 *형식 승격*을 거칩니다. 그러면 해당 범위가 모듈이 포함 된 네임 스페이스로 승격 됩니다. 자세한 내용은 [형식 승격](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md)을 참조 하세요.
 
-- **Qualification.** You can have multiple modules in a project, and you can declare members with the same name in two or more modules. However, you must qualify any reference to such a member with the appropriate module name if the reference is from outside that module. 자세한 내용은 [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)을 참조하세요.
+- **조인의.** 프로젝트에 여러 모듈을 포함할 수 있으며, 둘 이상의 모듈에서 같은 이름을 사용 하 여 멤버를 선언할 수 있습니다. 그러나 참조를 해당 모듈 외부에서 가져온 경우 적절 한 모듈 이름을 사용 하 여 이러한 멤버에 대 한 참조를 정규화 해야 합니다. 자세한 내용은 [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)을 참조하세요.
 
 ## <a name="example"></a>예제
 
 [!code-vb[VbVbalrStatements#69](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#69)]
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Class 문](../../../visual-basic/language-reference/statements/class-statement.md)
 - [Namespace 문](../../../visual-basic/language-reference/statements/namespace-statement.md)

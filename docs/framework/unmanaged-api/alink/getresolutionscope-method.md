@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447231"
 ---
 # <a name="getresolutionscope-method"></a>GetResolutionScope 메서드
-Retrieves the scope of a given type.  
+지정 된 형식의 범위를 검색 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,24 +37,24 @@ HRESULT GetResolutionScope(
   
 ## <a name="parameters"></a>매개 변수  
  `AssemblyID`  
- ID of the assembly.  
+ 어셈블리의 ID입니다.  
   
  `FileToken`  
- File that is in need of a reference.  
+ 참조를 필요로 하는 파일입니다.  
   
  `TargetFile`  
- Token of file that type is defined in, usually retrieved with [ImportFile Method](importfile-method.md).  
+ 형식이 정의 된 파일의 토큰으로, 일반적으로 [Importfile 메서드](importfile-method.md)를 사용 하 여 검색 합니다.  
   
  `pScope`  
- Receives the assembly or module reference.  
+ 어셈블리 또는 모듈 참조를 수신 합니다.  
   
 ## <a name="return-value"></a>반환 값  
- Returns S_OK if the method succeeds.  
+ 메서드가 성공 하면 S_OK을 반환 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- Requires alink.h.  
+ Alink가 필요 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IALink 인터페이스](ialink-interface.md)
 - [IALink2 인터페이스](ialink2-interface.md)

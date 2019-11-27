@@ -55,9 +55,9 @@ Class Class1
 End Class
 ```
 
-이 경우 `AllowMultiple`이 `true`로 설정되므로 `MultiUseAttr`를 반복적으로 적용할 수 있습니다. 여러 특성을 적용하기 위해 표시된 두 형식이 모두 유효합니다.
+이 경우 `MultiUseAttr`이 `AllowMultiple`로 설정되므로 `true`를 반복적으로 적용할 수 있습니다. 여러 특성을 적용하기 위해 표시된 두 형식이 모두 유효합니다.
 
-`Inherited`를 `false`로 설정하면 특성이 지정된 클래스에서 파생된 클래스가 특성을 상속하지 않습니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
+`Inherited`를 `false`로 설정하면 특성이 지정된 클래스에서 파생된 클래스가 특성을 상속하지 않습니다. 예를 들면 다음과 같습니다.
 
 ```vb
 <AttributeUsage(AttributeTargets.Class, Inherited:=False)>
@@ -85,7 +85,7 @@ End Class
 
 ## <a name="example"></a>예제
 
-다음 예제에서는 `AttributeUsage` 특성에 대한 `Inherited` 및 `AllowMultiple`의 영향과 클래스에 적용되는 사용자 지정 특성을 열거하는 방법을 보여 줍니다.
+다음 예제에서는 `Inherited` 특성에 대한 `AllowMultiple` 및 `AttributeUsage`의 영향과 클래스에 적용되는 사용자 지정 특성을 열거하는 방법을 보여 줍니다.
 
 ```vb
 ' Create some custom attributes:
@@ -148,7 +148,7 @@ A3
 A2
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Attribute>
 - <xref:System.Reflection>

@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438575"
 ---
 # <a name="exporttype-method"></a>ExportType 메서드
-Specifies that a type is exportable.  
+형식을 내보낼 수 있도록 지정 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,30 +39,30 @@ HRESULT ExportType(
   
 ## <a name="parameters"></a>매개 변수  
  `AssemblyID`  
- ID of the assembly to export from.  
+ 내보낼 어셈블리의 ID입니다.  
   
  `FileToken`  
- File token or assembly ID of file that defines the exportable type.  
+ 내보낼 수 있는 형식을 정의 하는 파일의 파일 토큰 또는 어셈블리 ID입니다.  
   
  `TypeToken`  
- Token of type to be made exportable.  
+ 내보낼 수 있도록 설정할 형식의 토큰입니다.  
   
  `pszTypename`  
- Fully qualified type name to be made exportable.  
+ 내보낼 수 있는 정규화 된 형식 이름입니다.  
   
  `dwFlags`  
- `ComType` flags such as `tdPublic` or `tdNested`. This parameter may be passed to [DefineExportedType Method](../metadata/imetadataassemblyemit-defineexportedtype-method.md).  
+ `tdPublic` 또는 `tdNested`와 같은 플래그를 `ComType` 합니다. 이 매개 변수는 [DefineExportedType 메서드에](../metadata/imetadataassemblyemit-defineexportedtype-method.md)전달 될 수 있습니다.  
   
  `pType`  
- Receives token for exported type.  
+ 내보낸 형식에 대 한 토큰을 받습니다.  
   
 ## <a name="return-value"></a>반환 값  
- Returns S_OK if the method succeeds.  
+ 메서드가 성공 하면 S_OK을 반환 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- Requires alink.h  
+ Alink 필요  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IALink 인터페이스](ialink-interface.md)
 - [IALink2 인터페이스](ialink2-interface.md)

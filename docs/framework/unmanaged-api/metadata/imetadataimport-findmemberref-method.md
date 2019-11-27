@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437963"
 ---
 # <a name="imetadataimportfindmemberref-method"></a>IMetaDataImport::FindMemberRef 메서드
-Gets a pointer to the MemberRef token for the member reference that is enclosed by the specified <xref:System.Type> and that has the specified name and metadata signature.  
+지정 된 <xref:System.Type>로 묶고 지정 된 이름과 메타 데이터 서명을 가진 멤버 참조의 MemberRef 토큰에 대 한 포인터를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,37 +39,37 @@ HRESULT FindMemberRef (
   
 ## <a name="parameters"></a>매개 변수  
  `td`  
- [in] The TypeRef token for the class or interface that encloses the member reference to search for. If this value is `mdTokenNil`, the lookup is done for a global variable or a global-function reference.  
+ 진행 검색할 멤버 참조를 포함 하는 클래스 또는 인터페이스의 TypeRef 토큰입니다. 이 값이 `mdTokenNil`되 면 전역 변수나 전역 함수 참조에 대 한 조회가 수행 됩니다.  
   
  `szName`  
- [in] The name of the member reference to search for.  
+ 진행 검색할 멤버 참조의 이름입니다.  
   
  `pvSigBlob`  
- [in] A pointer to the binary metadata signature of the member reference.  
+ 진행 멤버 참조의 이진 메타 데이터 서명에 대 한 포인터입니다.  
   
  `cbSigBlob`  
- [in] The size in bytes of `pvSigBlob`.  
+ 진행 `pvSigBlob`의 크기 (바이트)입니다.  
   
  `pmr`  
- [out] A pointer to the matching MemberRef token.  
+ 제한이 일치 하는 MemberRef 토큰에 대 한 포인터입니다.  
   
 ## <a name="remarks"></a>주의  
- You specify the member using its enclosing class or interface (`td`), its name (`szName`), and optionally its signature (`pvSigBlob`).  
+ 바깥쪽 클래스 또는 인터페이스 (`td`), 이름 (`szName`) 및 선택적으로 시그니처 (`pvSigBlob`)를 사용 하 여 멤버를 지정 합니다.  
   
- The signature passed to `FindMemberRef` must have been generated in the current scope, because signatures are bound to a particular scope. A signature can embed a token that identifies the enclosing class or value type. The token is an index into the local TypeDef table. You cannot build a run-time signature outside the context of the current scope and use that signature as input to `FindMemberRef`.  
+ 서명이 특정 범위에 바인딩되므로 현재 범위에서 `FindMemberRef` 전달 된 서명이 생성 되어야 합니다. 시그니처에는 바깥쪽 클래스 또는 값 형식을 식별 하는 토큰이 포함 될 수 있습니다. 토큰은 로컬 TypeDef 테이블의 인덱스입니다. 현재 범위의 컨텍스트 외부에서 런타임 시그니처를 작성 하 고 해당 시그니처를 `FindMemberRef`에 대 한 입력으로 사용할 수 없습니다.  
   
- `FindMemberRef` finds only member references that were defined directly in the class or interface; it does not find inherited member references.  
+ `FindMemberRef`은 클래스 또는 인터페이스에서 직접 정의 된 멤버 참조만 찾습니다. 상속 된 멤버 참조를 찾을 수 없습니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IMetaDataImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

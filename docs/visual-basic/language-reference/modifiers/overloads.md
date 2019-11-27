@@ -1,5 +1,5 @@
 ---
-title: Overloads
+title: Shadows
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Overloads
@@ -23,15 +23,15 @@ ms.locfileid: "74351405"
 
 ## <a name="remarks"></a>주의
 
-*Overloading* is the practice of supplying more than one definition for a given property or procedure name in the same scope. Redeclaring a property or procedure with a different signature is sometimes called *hiding by signature*.
+*오버 로드* 는 동일한 범위에서 지정 된 속성 또는 프로시저 이름에 대 한 정의를 두 개 이상 제공 하는 방법입니다. 서명이 다른 속성 또는 프로시저를 *서명으로*다시 선언할 하는 경우도 있습니다.
 
 ## <a name="rules"></a>규칙
 
-- **Declaration Context.** You can use `Overloads` only in a property or procedure declaration statement.
+- **선언 컨텍스트입니다.** `Overloads`는 속성 또는 프로시저 선언문 에서만 사용할 수 있습니다.
 
-- **Combined Modifiers.** You cannot specify `Overloads` together with [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md) in the same procedure declaration.
+- **결합 된 한정자입니다.** 동일한 프로시저 선언에서 [그림자](../../../visual-basic/language-reference/modifiers/shadows.md) 와 함께 `Overloads`를 지정할 수 없습니다.
 
-- **Required Differences.** The *signature* in this declaration must be different from the signature of every property or procedure that it overloads. 서명은 다음 항목과 함께 속성 또는 프로시저 이름으로 구성됩니다.
+- **필요한 차이점.** 이 선언의 *시그니처* 는 오버 로드 되는 모든 속성 또는 프로시저의 서명과 달라 야 합니다. 서명은 다음 항목과 함께 속성 또는 프로시저 이름으로 구성됩니다.
 
   - 매개 변수 수
 
@@ -45,7 +45,7 @@ ms.locfileid: "74351405"
 
   모든 오버로드는 이름이 같아야 하지만 앞에서 설명한 하나 이상의 측면과 관련하여 각각은 다른 모든 오버로드와 달라야 합니다. 그러면 컴파일러가 코드에서 속성 또는 프로시저를 호출할 때 사용할 버전을 구분할 수 있습니다.
 
-- **Disallowed Differences.** 다음 중 하나 이상은 서명의 일부가 아니므로 속성 또는 프로시저를 오버로드하기 위해 변경할 수 없습니다.
+- **허용 되지 않는 차이점입니다.** 다음 중 하나 이상은 서명의 일부가 아니므로 속성 또는 프로시저를 오버로드하기 위해 변경할 수 없습니다.
 
   - 값을 반환하는지 여부(프로시저의 경우)
 
@@ -59,9 +59,9 @@ ms.locfileid: "74351405"
 
   - 속성 또는 프로시저 한정자 키워드(예: `Public` 또는 `Shared`)
 
-- **Optional Modifier.** You do not have to use the `Overloads` modifier when you are defining multiple overloaded properties or procedures in the same class. 그러나 선언 중 하나에서 `Overloads`를 사용하는 경우에는 모든 선언에서 사용해야 합니다.
+- **선택적 한정자입니다.** 동일한 클래스에서 여러 오버 로드 된 속성 또는 프로시저를 정의 하는 경우에는 `Overloads` 한정자를 사용할 필요가 없습니다. 그러나 선언 중 하나에서 `Overloads`를 사용하는 경우에는 모든 선언에서 사용해야 합니다.
 
-- **Shadowing and Overloading.** `Overloads` can also be used to shadow an existing member, or set of overloaded members, in a base class. 이런 방식으로 `Overloads`를 사용하는 경우 기본 클래스 멤버와 동일한 이름 및 동일한 매개 변수 목록을 사용하여 속성 또는 메서드를 선언하고 `Shadows` 키워드는 제공하지 않습니다.
+- **숨김 및 오버 로드.** `Overloads`를 사용 하 여 기본 클래스에서 기존 멤버 또는 오버 로드 된 멤버 집합을 숨길 수도 있습니다. 이런 방식으로 `Overloads`를 사용하는 경우 기본 클래스 멤버와 동일한 이름 및 동일한 매개 변수 목록을 사용하여 속성 또는 메서드를 선언하고 `Shadows` 키워드는 제공하지 않습니다.
 
 `Overrides`를 사용하는 경우 라이브러리 API가 보다 쉽게 C#으로 작업할 수 있도록 컴파일러에서 암시적으로 `Overloads`를 추가합니다.
 
@@ -75,7 +75,7 @@ ms.locfileid: "74351405"
 
 - [Sub 문](../../../visual-basic/language-reference/statements/sub-statement.md)
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)
 - [프로시저 오버로딩](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)

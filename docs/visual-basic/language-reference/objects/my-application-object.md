@@ -15,22 +15,22 @@ ms.locfileid: "74350732"
 현재 애플리케이션과 관련된 속성, 메서드 및 이벤트를 제공합니다.  
   
 ## <a name="remarks"></a>주의  
- For information about the methods and properties of the `My.Application` object, see the following resources:  
+ `My.Application` 개체의 메서드 및 속성에 대 한 자세한 내용은 다음 리소스를 참조 하세요.  
   
-- <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase> for members that are available in all projects.  
+- 모든 프로젝트에서 사용할 수 있는 멤버에 대 한 <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>입니다.  
   
-- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> for members that are available in Windows Forms applications.  
+- Windows Forms 응용 프로그램에서 사용할 수 있는 멤버를 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> 합니다.  
   
-- <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase> for members that are available in console applications.  
+- 콘솔 응용 프로그램에서 사용할 수 있는 멤버를 <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase> 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **네임스페이스:** <xref:Microsoft.VisualBasic.ApplicationServices>  
   
- **Class:** <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> (the base class <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase> provides members available in console applications, and its base class <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase> provides the members that are available in all projects)  
+ **클래스:** <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> (기본 클래스 <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase>는 콘솔 응용 프로그램에서 사용할 수 있는 멤버를 제공 하 고, 기본 클래스 <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase> 모든 프로젝트에서 사용할 수 있는 멤버를 제공 합니다.)  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **어셈블리:** Visual Basic 런타임 라이브러리 (Microsoft.visualbasic)  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [My.Application.Info 개체](../../../visual-basic/language-reference/objects/my-application-info-object.md)
 - [My.Application.Log 개체](../../../visual-basic/language-reference/objects/my-application-log-object.md)

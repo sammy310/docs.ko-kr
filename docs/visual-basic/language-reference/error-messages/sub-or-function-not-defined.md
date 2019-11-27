@@ -12,25 +12,25 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349571"
 ---
 # <a name="sub-or-function-not-defined-visual-basic"></a>Sub 또는 Function이 정의되지 않았습니다(Visual Basic).
-A `Sub` or `Function` must be defined in order to be called. 이 오류가 발생하는 원인은 다음과 같습니다.  
+`Sub` 또는 `Function`를 호출 하기 위해 정의 해야 합니다. 이 오류가 발생하는 원인은 다음과 같습니다.  
   
-- Misspelling the procedure name.  
+- 프로시저 이름의 철자가 틀린 경우  
   
-- Trying to call a procedure from another project without explicitly adding a reference to that project in the **References** dialog box.  
+- **참조** 대화 상자에서 해당 프로젝트에 대 한 참조를 명시적으로 추가 하지 않고 다른 프로젝트에서 프로시저를 호출 하려고 합니다.  
   
-- Specifying a procedure that is not visible to the calling procedure.  
+- 호출 하는 프로시저에 표시 되지 않는 프로시저 지정  
   
-- Declaring a Windows dynamic-link library (DLL) routine or Macintosh code-resource routine that is not in the specified library or code resource.  
+- 지정 된 라이브러리 또는 코드 리소스에 없는 Windows DLL (동적 연결 라이브러리) 루틴 또는 Macintosh 코드 리소스 루틴을 선언 합니다.  
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
-1. Make sure that the procedure name is spelled correctly.  
+1. 프로시저 이름의 철자가 정확한 지 확인 합니다.  
   
-2. Find the name of the project containing the procedure you want to call in the **References** dialog box. If it does not appear, click the **Browse** button to search for it. Select the check box to the left of the project name, and then click **OK**.  
+2. **참조** 대화 상자에서 호출 하려는 프로시저를 포함 하는 프로젝트의 이름을 찾습니다. 표시 되지 않으면 **찾아보기** 단추를 클릭 하 여 검색 합니다. 프로젝트 이름 왼쪽의 확인란을 선택 하 고 **확인**을 클릭 합니다.  
   
-3. Check the name of the routine.  
+3. 루틴의 이름을 확인 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [오류 형식](../../../visual-basic/programming-guide/language-features/error-types.md)
 - [프로젝트의 참조 관리](/visualstudio/ide/managing-references-in-a-project)

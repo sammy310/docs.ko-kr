@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74426744"
 ---
 # <a name="isymunmanagedreadergetmethodfromdocumentposition-method"></a>ISymUnmanagedReader::GetMethodFromDocumentPosition 메서드
-Returns the method that contains the breakpoint at the given position in a document.  
+문서의 지정 된 위치에 중단점을 포함 하는 메서드를 반환 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,23 +37,23 @@ HRESULT GetMethodFromDocumentPosition (
   
 ## <a name="parameters"></a>매개 변수  
  `document`  
- [in] The specified document.  
+ 진행 지정 된 문서입니다.  
   
  `line`  
- [in] The line of the specified document.  
+ 진행 지정 된 문서의 줄입니다.  
   
  `column`  
- [in] The column of the specified document.  
+ 진행 지정 된 문서의 열입니다.  
   
  `pRetVal`  
- [out] A pointer to the address of a [ISymUnmanagedMethod Interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) object that represents the method containing the breakpoint.  
+ 제한이 중단점을 포함 하는 메서드를 나타내는 [ISymUnmanagedMethod Interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) 개체의 주소에 대 한 포인터입니다.  
   
 ## <a name="return-value"></a>반환 값  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **Header:** CorSym.idl, CorSym.h  
+ **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ISymUnmanagedReader 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

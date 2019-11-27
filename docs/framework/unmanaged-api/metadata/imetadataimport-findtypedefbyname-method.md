@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437845"
 ---
 # <a name="imetadataimportfindtypedefbyname-method"></a>IMetaDataImport::FindTypeDefByName 메서드
-Gets a pointer to the TypeDef metadata token for the <xref:System.Type> with the specified name.  
+지정 된 이름을 가진 <xref:System.Type>의 TypeDef 메타 데이터 토큰에 대 한 포인터를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,24 +37,24 @@ HRESULT FindTypeDefByName
   
 ## <a name="parameters"></a>매개 변수  
  `szTypeDef`  
- [in] The name of the type for which to get the TypeDef token.  
+ 진행 TypeDef 토큰을 가져올 형식의 이름입니다.  
   
  `tkEnclosingClass`  
- [in] A TypeDef or TypeRef token representing the enclosing class. If the type to find is not a nested class, set this value to NULL.  
+ 진행 바깥쪽 클래스를 나타내는 TypeDef 또는 TypeRef 토큰입니다. 찾을 형식이 중첩 된 클래스가 아닌 경우이 값을 NULL로 설정 합니다.  
   
  `ptd`  
- [out] A pointer to the matching TypeDef token.  
+ 제한이 일치 하는 TypeDef 토큰에 대 한 포인터입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IMetaDataImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

@@ -16,18 +16,18 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351601"
 ---
 # <a name="byref-visual-basic"></a>ByRef(Visual Basic)
-Specifies that an argument is passed in such a way that the called procedure can change the value of a variable underlying the argument in the calling code.  
+호출 된 프로시저가 호출 코드에서 인수를 기반으로 하는 변수의 값을 변경할 수 있는 방식으로 인수가 전달 되도록 지정 합니다.  
   
 ## <a name="remarks"></a>주의  
  `ByRef` 한정자는 다음 컨텍스트에서 사용할 수 있습니다.  
   
- [Declare 문](../../../visual-basic/language-reference/statements/declare-statement.md)  
+ [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
  [Function 문](../../../visual-basic/language-reference/statements/function-statement.md)  
   
  [Sub 문](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [C++ 키워드](../../../visual-basic/language-reference/keywords/index.md)
+- [키워드](../../../visual-basic/language-reference/keywords/index.md)
 - [값 또는 참조로 인수 전달](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)

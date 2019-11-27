@@ -39,7 +39,7 @@ HRESULT InitializeForAttach(
  [in] `ICorProfilerInfo*` 인터페이스에 대한 인터페이스 포인터입니다.  
   
  `pvClientData`  
- [in] A pointer to the data passed to the [IClrProfiling::AttachProfiler](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md) method in its `pvClientData` parameter. 이 매개 변수가 null일 경우 `cbClientData`는 0이 됩니다. CLR은 `InitializeForAttach`에서 반환될 때 이 메모리를 해제합니다.  
+ 진행 `pvClientData` 매개 변수에서 [IClrProfiling:: AttachProfiler](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md) 메서드에 전달 된 데이터에 대 한 포인터입니다. 이 매개 변수가 null일 경우 `cbClientData`는 0이 됩니다. CLR은 `InitializeForAttach`에서 반환될 때 이 메모리를 해제합니다.  
   
  `cbClientData`  
  [in] `pvClientData`가 가리키는 데이터의 크기(바이트)입니다.  
@@ -56,7 +56,7 @@ HRESULT InitializeForAttach(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerCallback 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
 - [ICorProfilerInfo3 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)

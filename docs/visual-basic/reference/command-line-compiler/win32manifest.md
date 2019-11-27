@@ -26,31 +26,31 @@ ms.locfileid: "74349140"
   
 |용어|정의|  
 |---|---|  
-|`fileName`|The path of the custom manifest file.|  
+|`fileName`|사용자 지정 매니페스트 파일의 경로입니다.|  
   
 ## <a name="remarks"></a>주의  
- By default, the Visual Basic compiler embeds an application manifest that specifies a requested execution level of asInvoker. It creates the manifest in the same folder in which the executable file is built, typically the bin\Debug or bin\Release folder when you use Visual Studio. If you want to supply a custom manifest, for example to specify a requested execution level of highestAvailable or requireAdministrator, use this option to specify the name of the file.  
+ 기본적으로 Visual Basic 컴파일러는 asInvoker의 요청 된 실행 수준을 지정 하는 응용 프로그램 매니페스트를 포함 합니다. 실행 파일이 빌드되는 폴더 (일반적으로 Visual Studio를 사용 하는 경우 bin\Debug 또는 bin\Release 폴더)에 매니페스트를 만듭니다. 예를 들어 highestAvailable 또는 requireAdministrator의 요청 된 실행 수준을 지정 하기 위해 사용자 지정 매니페스트를 제공 하려면이 옵션을 사용 하 여 파일 이름을 지정 합니다.  
   
 > [!NOTE]
-> This option and the [-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md) option are mutually exclusive. If you try to use both options in the same command line, you will get a build error.  
+> 이 옵션과 [-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md) 옵션은 함께 사용할 수 없습니다. 동일한 명령줄에서 두 옵션을 모두 사용 하려고 하면 빌드 오류가 발생 합니다.  
   
  요청된 실행 수준을 지정하는 애플리케이션 매니페스트가 없는 애플리케이션은 Windows Vista의 사용자 계정 컨트롤 기능 아래에서 파일/레지스트리 가상화의 적용을 받습니다. 가상화에 대한 자세한 내용은 [ClickOnce Deployment on Windows Vista](/visualstudio/deployment/clickonce-deployment-on-windows-vista)(Windows Vista의 ClickOnce 배포)를 참조하세요.  
   
- Your application will be subject to virtualization if either of the following conditions is true:  
+ 다음 조건 중 하나에 해당 하는 경우 응용 프로그램에 가상화가 적용 됩니다.  
   
-1. You use the `-nowin32manifest` option and you do not provide a manifest in a later build step or as part of a Windows Resource (.res) file by using the `-win32resource` option.  
+1. `-nowin32manifest` 옵션을 사용 하며, `-win32resource` 옵션을 사용 하 여 이후 빌드 단계 또는 Windows 리소스 (.res) 파일의 일부로 매니페스트를 제공 하지 않습니다.  
   
 2. 요청한 실행 수준을 지정하지 않는 사용자 지정 매니페스트를 제공합니다.  
   
- Visual Studio는 기본 .manifest 파일을 만들고 이를 실행 파일과 함께 debug 및 release 디렉터리에 저장합니다. You can view or edit the default app.manifest file by clicking **View UAC Settings** on the **Application** tab in the Project Designer. 자세한 내용은 [Application Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)을 참조하세요.  
+ Visual Studio는 기본 .manifest 파일을 만들고 이를 실행 파일과 함께 debug 및 release 디렉터리에 저장합니다. 프로젝트 디자이너의 **응용 프로그램** 탭에서 **UAC 설정 보기** 를 클릭 하 여 기본 응용 프로그램 매니페스트 파일을 보거나 편집할 수 있습니다. 자세한 내용은 [Application Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)을 참조하세요.  
   
- You can provide the application manifest as a custom post-build step or as part of a Win32 resource file by using the `-nowin32manifest` option. 애플리케이션이 Windows Vista에서 파일 또는 레지스트리 가상화의 적용을 받도록 하려면 동일한 옵션을 사용합니다. This will prevent the compiler from creating and embedding a default manifest in the PE file.  
+ `-nowin32manifest` 옵션을 사용 하 여 응용 프로그램 매니페스트를 사용자 지정 빌드 후 단계 또는 Win32 리소스 파일의 일부로 제공할 수 있습니다. 애플리케이션이 Windows Vista에서 파일 또는 레지스트리 가상화의 적용을 받도록 하려면 동일한 옵션을 사용합니다. 이렇게 하면 컴파일러가 PE 파일에 기본 매니페스트를 만들고 포함 하지 않습니다.  
   
 ## <a name="example"></a>예제  
- The following example shows the default manifest that the Visual Basic compiler inserts into a PE.  
+ 다음 예제에서는 Visual Basic 컴파일러가 PE에 삽입 하는 기본 매니페스트를 보여 줍니다.  
   
 > [!NOTE]
-> The compiler inserts a standard application name MyApplication.app into the manifest XML. 이는 Windows Server 2003 서비스 팩 3에서 애플리케이션을 실행하기 위한 해결 방법입니다.  
+> 컴파일러는 표준 응용 프로그램 이름 MyApplication. app을 매니페스트 XML에 삽입 합니다. 이는 Windows Server 2003 서비스 팩 3에서 애플리케이션을 실행하기 위한 해결 방법입니다.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>  
@@ -66,7 +66,7 @@ ms.locfileid: "74349140"
 </assembly>  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Visual Basic 명령줄 컴파일러](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-nowin32manifest (Visual Basic)](../../../visual-basic/reference/command-line-compiler/nowin32manifest.md)

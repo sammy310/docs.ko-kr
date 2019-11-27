@@ -39,32 +39,32 @@ HRESULT DefineFile (
   
 ## <a name="parameters"></a>매개 변수  
  `szName`  
- [in] The name of the file to be consumed.  
+ 진행 사용할 파일의 이름입니다.  
   
  `pbHashValue`  
- [in] A pointer to the hash data associated with the assembly.  
+ 진행 어셈블리와 연결 된 해시 데이터에 대 한 포인터입니다.  
   
  `cbHashValue`  
- [in] The size in bytes of `pbHashValue`.  
+ 진행 `pbHashValue`의 크기 (바이트)입니다.  
   
  `dwFileFlags`  
- [in] A bitwise combination of `FileFlags` values that specify property settings.  
+ 진행 속성 설정을 지정 하는 `FileFlags` 값의 비트 조합입니다.  
   
  `pmdf`  
- [out] A pointer to the returned `File` token.  
+ 제한이 반환 된 `File` 토큰에 대 한 포인터입니다.  
   
 ## <a name="remarks"></a>주의  
- One `File` metadata structure must be defined for each file that was part of this assembly at the time that this assembly was built, excluding the file that contains the metadata.  
+ 메타 데이터가 포함 된 파일을 제외 하 고이 어셈블리가 빌드된 시점에이 어셈블리의 일부인 각 파일에 대해 하나의 `File` 메타 데이터 구조를 정의 해야 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조 하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IMetaDataAssemblyEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427872"
 ---
 # <a name="isymunmanagedwritersetmethodsourcerange-method"></a>ISymUnmanagedWriter::SetMethodSourceRange 메서드
-Specifies the true start and end of a method within a source file. Use this method to specify the extent of a method independently of the sequence points that exist within the method.  
+True 이면 시작 및 끝 소스 파일 내의 메서드를 지정합니다. 이 메서드를 사용 하 여 메서드 내에 있는 시퀀스 위치와 독립적으로 메서드 범위를 지정 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,29 +39,29 @@ HRESULT SetMethodSourceRange(
   
 ## <a name="parameters"></a>매개 변수  
  `startDoc`  
- [in] A pointer to the document containing the starting position.  
+ 진행 시작 위치를 포함 하는 문서에 대 한 포인터입니다.  
   
  `startLine`  
- [in] The starting line number.  
+ 진행 시작 줄 번호입니다.  
   
  `startColumn`  
- [in] The starting column.  
+ 진행 시작 열입니다.  
   
  `endDoc`  
- [in] A pointer to the document containing the ending position.  
+ 진행 끝 위치를 포함 하는 문서에 대 한 포인터입니다.  
   
  `endLine`  
- [in] The ending line number.  
+ 진행 끝 줄 번호입니다.  
   
  `endColumn`  
- [in] The ending column number.  
+ 진행 끝 열 번호입니다.  
   
 ## <a name="return-value"></a>반환 값  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **Header:** CorSym.idl, CorSym.h  
+ **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ISymUnmanagedWriter 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

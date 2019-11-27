@@ -22,10 +22,10 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440580"
 ---
 # <a name="functionleave-function"></a>FunctionLeave 함수
-Notifies the profiler that a function is about to return to the caller.  
+함수가 호출자에 게 반환 될 것 이라고 프로파일러에 알립니다.  
   
 > [!NOTE]
-> The `FunctionLeave` function is deprecated in the .NET Framework 2.0. It will continue to work, but will incur a performance penalty. Use the [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md) function instead.  
+> `FunctionLeave` 함수는 2.0 .NET Framework에서 더 이상 사용 되지 않습니다. 계속 작동 하지만 성능이 저하 됩니다. 대신 [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md) 함수를 사용 해야 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,31 +37,31 @@ void __stdcall FunctionLeave (
   
 ## <a name="parameters"></a>매개 변수  
  `funcID`  
- [in] The identifier of the function that is returning.  
+ 진행 반환 되는 함수의 식별자입니다.  
   
 ## <a name="remarks"></a>주의  
- The `FunctionLeave` function is a callback; you must implement it. The implementation must use the `__declspec`(`naked`) storage-class attribute.  
+ `FunctionLeave` 함수는 콜백입니다. 구현 해야 합니다. 구현은 `__declspec`(`naked`) 저장소 클래스 특성을 사용 해야 합니다.  
   
- The execution engine does not save any registers before calling this function.  
+ 실행 엔진은이 함수를 호출 하기 전에 레지스터를 저장 하지 않습니다.  
   
-- On entry, you must save all registers that you use, including those in the floating-point unit (FPU).  
+- 항목에서 FPU (부동 소수점 단위)의 항목을 포함 하 여 사용 하는 모든 레지스터를 저장 해야 합니다.  
   
-- On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.  
+- 종료 시 호출자에 의해 푸시되는 모든 매개 변수를 팝 하 여 스택을 복원 해야 합니다.  
   
- The implementation of `FunctionLeave` should not block because it will delay garbage collection. The implementation should not attempt a garbage collection because the stack may not be in a garbage collection-friendly state. If a garbage collection is attempted, the runtime will block until `FunctionLeave` returns.  
+ `FunctionLeave` 구현은 가비지 수집을 지연 시킬 수 있으므로 차단 하면 안 됩니다. 스택이 가비지 컬렉션에 대 한 상태에 있지 않을 수 있기 때문에 구현에서 가비지 수집을 시도 하면 안 됩니다. 가비지 수집을 시도 하면 `FunctionLeave` 반환 될 때까지 런타임이 차단 됩니다.  
   
- Also, the `FunctionLeave` function must not call into managed code or in any way cause a managed memory allocation.  
+ 또한 `FunctionLeave` 함수는 관리 코드를 호출 하거나 관리 되는 메모리 할당을 발생 시 키 지 않아야 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** CorProf.idl  
+ **헤더:** Corprof.idl  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework Versions:** 1.1, 1.0  
+ **.NET Framework 버전:** 1.1, 1.0  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [FunctionEnter2 함수](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)
 - [FunctionLeave2 함수](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)

@@ -35,21 +35,21 @@ BOOL IsValidToken (
   
 ## <a name="parameters"></a>매개 변수  
  `tk`  
- [in] The token to check the reference validity for.  
+ 진행 참조 유효성 검사에 사용할 토큰입니다.  
   
 ## <a name="return-value"></a>반환 값  
- `true` if `tk` is a valid metadata token within the current scope. 그렇지 않으면 `false`입니다.  
+ `tk` 현재 범위 내의 유효한 메타 데이터 토큰이 `true` 합니다. 그렇지 않으면 `false`입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IMetaDataImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

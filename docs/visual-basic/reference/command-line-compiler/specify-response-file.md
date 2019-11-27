@@ -13,7 +13,7 @@ ms.locfileid: "74348547"
 ---
 # <a name="-specify-response-file-visual-basic"></a>@(지시 파일 지정)(Visual Basic)
 
-Specifies a file that contains compiler options and source-code files to compile.
+컴파일할 소스 코드 파일 및 컴파일러 옵션을 포함 하는 파일을 지정 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -24,30 +24,30 @@ Specifies a file that contains compiler options and source-code files to compile
 ## <a name="arguments"></a>인수
 
 `response_file`  
-필수 요소. A file that lists compiler options or source-code files to compile. Enclose the file name in quotation marks (" ") if it contains a space.
+필수입니다. 컴파일할 소스 코드 파일이 나 컴파일러 옵션을 나열 하는 파일입니다. 공백을 포함 하는 경우 파일 이름을 따옴표 ("")로 묶습니다.
 
 ## <a name="remarks"></a>주의
 
-The compiler processes the compiler options and source-code files specified in a response file as if they had been specified on the command line.
+컴파일러는 지시 파일에 지정 된 컴파일러 옵션 및 소스 코드 파일을 명령줄에 지정 된 것 처럼 처리 합니다.
 
-To specify more than one response file in a compilation, specify multiple response-file options, such as the following.
+컴파일에서 둘 이상의 지시 파일을 지정 하려면 다음과 같이 여러 지시 파일 옵션을 지정 합니다.
 
 ```console
 @file1.rsp @file2.rsp
 ```
 
-In a response file, multiple compiler options and source-code files can appear on one line. A single compiler-option specification must appear on one line (cannot span multiple lines). Response files can have comments that begin with the `#` symbol.
+지시 파일에서 여러 컴파일러 옵션 및 소스 코드 파일을 한 줄에 표시할 수 있습니다. 단일 컴파일러 옵션 사양은 한 줄에 표시 되어야 합니다 (여러 줄에 걸쳐 있을 수 없음). 지시 파일에는 `#` 기호로 시작 하는 주석이 있을 수 있습니다.
 
-You can combine options specified on the command line with options specified in one or more response files. The compiler processes the command options as it encounters them. Therefore, command-line arguments can override previously listed options in response files. Conversely, options in a response file override options listed previously on the command line or in other response files.
+명령줄에 지정 된 옵션을 하나 이상의 지시 파일에 지정 된 옵션과 결합할 수 있습니다. 컴파일러는 명령 옵션을 발견할 때이를 처리 합니다. 따라서 명령줄 인수는 지시 파일에서 이전에 나열 된 옵션을 재정의할 수 있습니다. 반대로, 지시 파일의 옵션은 이전에 명령줄 또는 다른 지시 파일에 나열 된 옵션을 재정의 합니다.
 
-Visual Basic provides the Vbc.rsp file, which is located in the same directory as the Vbc.exe file. The Vbc.rsp file is included by default unless the `-noconfig` option is used. For more information, see [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md).
+Visual Basic는 vbc.exe 파일과 동일한 디렉터리에 있는 Vbc.exe 파일을 제공 합니다. Vbc.exe 파일은 `-noconfig` 옵션을 사용 하지 않는 한 기본적으로 포함 되어 있습니다. 자세한 내용은 [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)를 참조 하세요.
 
 > [!NOTE]
-> The `@` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.
+> `@` 옵션은 Visual Studio 개발 환경에서 사용할 수 없습니다. 명령줄에서 컴파일하는 경우에만 사용할 수 있습니다.
 
 ## <a name="example"></a>예제
 
-The following lines are from a sample response file.
+다음 줄은 샘플 지시 파일에서 가져온 것입니다.
 
 ```console
 # build the first output file
@@ -59,13 +59,13 @@ source2.vb
 
 ## <a name="example"></a>예제
 
-The following example demonstrates how to use the `@` option with the response file named `File1.rsp`.
+다음 예제에서는 `File1.rsp`이라는 지시 파일에 `@` 옵션을 사용 하는 방법을 보여 줍니다.
 
 ```console
 vbc @file1.rsp
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Visual Basic 명령줄 컴파일러](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)

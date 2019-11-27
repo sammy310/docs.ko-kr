@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436704"
 ---
 # <a name="imetadataimportgettyperefprops-method"></a>IMetaDataImport::GetTypeRefProps 메서드
-Gets the metadata associated with the <xref:System.Type> referenced by the specified TypeRef token.  
+지정 된 TypeRef 토큰이 참조 하는 <xref:System.Type> 연결 된 메타 데이터를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,30 +39,30 @@ HRESULT GetTypeRefProps (
   
 ## <a name="parameters"></a>매개 변수  
  `tr`  
- [in] The TypeRef token that represents the type to return metadata for.  
+ 진행 메타 데이터를 반환할 형식을 나타내는 TypeRef 토큰입니다.  
   
  `ptkResolutionScope`  
- [out] A pointer to the scope in which the reference is made. This value is an AssemblyRef or ModuleRef token.  
+ 제한이 참조가 생성 되는 범위에 대 한 포인터입니다. 이 값은 AssemblyRef 또는 ModuleRef 토큰입니다.  
   
  `szName`  
- [out] A buffer containing the type name.  
+ 제한이 형식 이름을 포함 하는 버퍼입니다.  
   
  `cchName`  
- [in] The requested size in wide characters of `szName`.  
+ 진행 `szName`의 와이드 문자에서 요청 된 크기입니다.  
   
  `pchName`  
- [out] The returned size in wide characters of `szName`.  
+ 제한이 `szName`의 와이드 문자에서 반환 되는 크기입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IMetaDataImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

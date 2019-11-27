@@ -13,11 +13,11 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353772"
 ---
-# <a name="option-keyword-statement"></a>Option \<keyword> Statement
-Introduces a statement that specifies a compiler option that applies to the entire source file.  
+# <a name="option-keyword-statement"></a>Option \<키워드 > 문
+전체 소스 파일에 적용 되는 컴파일러 옵션을 지정 하는 문을 소개 합니다.  
   
 ## <a name="remarks"></a>주의  
- The compiler options can control whether all variables must be explicitly declared, whether narrowing type conversions must be explicit, or whether strings should be compared as text or as binary quantities.  
+ 컴파일러 옵션은 모든 변수를 명시적으로 선언 해야 하는지 여부, 축소 형식 변환이 명시적 이어야 하는지 여부 또는 문자열을 텍스트 또는 이진 수량으로 비교할지 여부를 제어할 수 있습니다.  
   
  `Option` 키워드는 다음 컨텍스트에서 사용할 수 있습니다.  
   
@@ -29,6 +29,6 @@ Introduces a statement that specifies a compiler option that applies to the enti
   
  [Option Strict 문](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [C++ 키워드](../../../visual-basic/language-reference/keywords/index.md)
+- [키워드](../../../visual-basic/language-reference/keywords/index.md)

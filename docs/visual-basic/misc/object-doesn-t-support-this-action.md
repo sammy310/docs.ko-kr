@@ -1,5 +1,5 @@
 ---
-title: Object doesn't support this action
+title: 개체가이 작업을 지원 하지 않습니다.
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID445
@@ -20,6 +20,6 @@ ms.locfileid: "74353875"
   
 2. 속성 및 메서드 이름의 철자가 정확한지 확인합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [오류 형식](../../visual-basic/programming-guide/language-features/error-types.md)

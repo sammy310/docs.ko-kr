@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432981"
 ---
 # <a name="icorprofilerinfo2getstaticfieldinfo-method"></a>ICorProfilerInfo2::GetStaticFieldInfo 메서드
-Gets a value that indicates the kind of static that applies to the specified field.  
+지정 된 필드에 적용 되는 정적의 종류를 나타내는 값을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,18 +36,18 @@ HRESULT GetStaticFieldInfo (
   
 ## <a name="parameters"></a>매개 변수  
  `classId`  
- [in] The ID of the class in which the static field is defined.  
+ 진행 정적 필드가 정의 된 클래스의 ID입니다.  
   
  `fieldToken`  
- [in] The metadata token for the static field.  
+ 진행 정적 필드에 대 한 메타 데이터 토큰입니다.  
   
  `pFieldInfo`  
- [out] A pointer to a value of the [COR_PRF_STATIC_TYPE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-static-type-enumeration.md) enumeration that indicates whether the specified field is static, and if so, the kind of static that applies to the field.  
+ 제한이 지정 된 필드가 정적 인지 여부를 나타내는 [COR_PRF_STATIC_TYPE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-static-type-enumeration.md) 열거형 값에 대 한 포인터이 고, 그렇지 않으면 필드에 적용 되는 정적의 종류입니다.  
   
 ## <a name="remarks"></a>주의  
- This information can be used to determine which function to call to get the address of the static field.  
+ 이 정보는 정적 필드의 주소를 가져오기 위해 호출할 함수를 결정 하는 데 사용할 수 있습니다.  
   
- The profiler code should still check the metadata for a static field to ensure that it actually has an address. Static literals (that is, constants) exist only in the metadata and do not have an address.  
+ 프로파일러 코드는 여전히 정적 필드에 대 한 메타 데이터를 확인 하 여 실제로 주소가 있는지 확인 해야 합니다. 정적 리터럴 (즉, 상수)은 메타 데이터에만 존재 하 고 주소는 포함 하지 않습니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
@@ -58,7 +58,7 @@ HRESULT GetStaticFieldInfo (
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerInfo 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
 - [ICorProfilerInfo2 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

@@ -16,26 +16,26 @@ ms.locfileid: "74347375"
 ---
 # <a name="how-to-label-statements-visual-basic"></a>방법: Label 문(Visual Basic)
 
-Statement blocks are made up of lines of code delimited by colons. Lines of code preceded by an identifying string or integer are said to be *labeled*. Statement labels are used to mark a line of code to identify it for use with statements such as `On Error Goto`.
+문 블록은 콜론으로 구분 된 코드 줄로 구성 됩니다. 식별 문자열이 나 정수로 시작 하는 코드 줄에는 *레이블이 지정*된 것으로 간주 됩니다. 문 레이블은 `On Error Goto`와 같은 문에서 사용할 수 있도록 코드 줄을 표시 하는 데 사용 됩니다.
 
-Labels may be either valid Visual Basic identifiers—such as those that identify programming elements—or integer literals. A label must appear at the beginning of a line of source code and must be followed by a colon, regardless of whether it is followed by a statement on the same line.
+레이블은 프로그래밍 요소를 식별 하는 식별자 (예: 올바른 Visual Basic 식별자 또는 정수 리터럴) 일 수 있습니다. 레이블은 소스 코드 줄의 시작 부분에 표시 되어야 하며, 뒤에 동일한 줄에 문이 있는지 여부에 관계 없이 콜론이와 야 합니다.
 
-The compiler identifies labels by checking whether the beginning of the line matches any already-defined identifier. If it does not, the compiler assumes it is a label.
+컴파일러는 줄의 시작 부분이 이미 정의 된 식별자와 일치 하는지 여부를 확인 하 여 레이블을 식별 합니다. 그렇지 않은 경우 컴파일러는 레이블로 간주 합니다.
 
-Labels have their own declaration space and do not interfere with other identifiers. A label's scope is the body of the method. Label declaration takes precedence in any ambiguous situation.
+레이블은 고유한 선언 공간을 가지 며 다른 식별자를 방해 하지 않습니다. 레이블의 범위는 메서드의 본문입니다. 모호한 상황에서는 레이블 선언이 우선적으로 적용 됩니다.
 
 > [!NOTE]
-> Labels can be used only on executable statements inside methods.
+> 레이블은 메서드 내의 실행 가능한 문에서만 사용할 수 있습니다.
 
-## <a name="to-label-a-line-of-code"></a>To label a line of code
+## <a name="to-label-a-line-of-code"></a>코드 줄에 레이블을 만들려면
 
-Place an identifier, followed by a colon, at the beginning of the line of source code.
+소스 코드 줄의 시작 부분에서 식별자 뒤에 콜론을 추가 합니다.
 
-For example, the following lines of code are labeled with `Jump` and `120`, respectively:
+예를 들어 다음 코드 줄은 각각 `Jump` 및 `120`레이블이 지정 됩니다.
 
 [!code-vb[VbVbalrStatements#708](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#708)]
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [문](../../../visual-basic/programming-guide/language-features/statements.md)
 - [선언 요소 이름](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)

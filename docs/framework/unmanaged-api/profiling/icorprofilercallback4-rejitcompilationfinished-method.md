@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439310"
 ---
 # <a name="icorprofilercallback4rejitcompilationfinished-method"></a>ICorProfilerCallback4::ReJITCompilationFinished 메서드
-Notifies the profiler that the just-in-time (JIT) compiler has finished recompiling a function.  
+JIT (just-in-time) 컴파일러가 함수를 다시 컴파일 했음을 프로파일러에 알립니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,18 +36,18 @@ HRESULT ReJITCompilationFinished(
   
 ## <a name="parameters"></a>매개 변수  
  `functionId`  
- [in] The ID of the function that was recompiled.  
+ 진행 다시 컴파일된 함수의 ID입니다.  
   
  `rejitId`  
  [in] JIT 다시 컴파일된 함수의 ID입니다.  
   
  `hrStatus`  
- [in] A value that indicates whether the JIT recompilation was successful.  
+ 진행 JIT 다시 컴파일 성공 여부를 나타내는 값입니다.  
   
  `fIsSafeToBlock`  
- [in] `true` to indicate that blocking may cause the runtime to wait for the calling thread to return from this callback; `false` to indicate that blocking will not affect the operation of the runtime.  
+ [in] `true` 차단으로 인해 런타임에서 호출 스레드가이 콜백에서 반환 될 때까지 대기 하는 것을 나타낼 수 있습니다. 블로킹이 런타임 작업에 영향을 주지 않음을 나타내려면 `false` 합니다.  
   
- A value of `true` does not harm the runtime, but can affect the profiling results.  
+ `true` 값은 런타임에 영향을 주지 않지만 프로 파일링 결과에 영향을 줄 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
@@ -58,7 +58,7 @@ HRESULT ReJITCompilationFinished(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerCallback 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
 - [ICorProfilerCallback4 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)

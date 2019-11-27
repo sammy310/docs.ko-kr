@@ -24,227 +24,227 @@ ms.locfileid: "74352496"
 ---
 # <a name="statements-in-visual-basic"></a>Visual Basic의 문
 
-A statement in Visual Basic is a complete instruction. It can contain keywords, operators, variables, constants, and expressions. Each statement belongs to one of the following categories:
+Visual Basic 문은 전체 명령입니다. 키워드, 연산자, 변수, 상수 및 식을 포함할 수 있습니다. 각 문은 다음 범주 중 하나에 속합니다.
 
-- **Declaration Statements**, which name a variable, constant, or procedure, and can also specify a data type.
+- 변수, 상수 또는 프로시저의 이름을 지정 하는 **선언문**을 지정 하 고 데이터 형식을 지정할 수도 있습니다.
 
-- **Executable Statements**, which initiate actions. These statements can call a method or function, and they can loop or branch through blocks of code. Executable statements include **Assignment Statements**, which assign a value or expression to a variable or constant.
+- 작업을 시작 하는 **실행 가능한 문** 이러한 문은 메서드나 함수를 호출할 수 있으며 코드 블록을 통해 루프 또는 분기할 수 있습니다. 실행 문에는 변수나 상수에 값 또는 식을 할당 하는 **대입문**이 포함 됩니다.
 
-This topic describes each category. Also, this topic describes how to combine multiple statements on a single line and how to continue a statement over multiple lines.
+이 항목에서는 각 범주에 대해 설명 합니다. 또한이 항목에서는 여러 문을 한 줄에 결합 하는 방법과 문을 여러 줄로 계속 하는 방법에 대해 설명 합니다.
 
 ## <a name="declaration-statements"></a>선언문
 
-You use declaration statements to name and define procedures, variables, properties, arrays, and constants. When you declare a programming element, you can also define its data type, access level, and scope. For more information, see [Declared Element Characteristics](./declared-elements/declared-element-characteristics.md).
+선언 문을 사용 하 여 프로시저, 변수, 속성, 배열 및 상수를 이름 지정 하 고 정의 합니다. 프로그래밍 요소를 선언 하는 경우 해당 데이터 형식, 액세스 수준 및 범위를 정의할 수도 있습니다. 자세한 내용은 [선언 된 요소 특성](./declared-elements/declared-element-characteristics.md)을 참조 하세요.
 
-The following example contains three declarations.
+다음 예제에는 세 개의 선언이 포함 되어 있습니다.
 
 [!code-vb[VbVbalrStatements#80](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#80)]
 
-The first declaration is the `Sub` statement. Together with its matching `End Sub` statement, it declares a procedure named `applyFormat`. It also specifies that `applyFormat` is `Public`, which means that any code that can refer to it can call it.
+첫 번째 선언은 `Sub` 문입니다. 일치 하는 `End Sub` 문과 함께 `applyFormat`라는 프로시저를 선언 합니다. 또한 `applyFormat` `Public`되도록 지정 합니다. 즉,이를 참조 하는 코드에서이를 호출할 수 있습니다.
 
-The second declaration is the `Const` statement, which declares the constant `limit`, specifying the `Integer` data type and a value of 33.
+두 번째 선언은 `Integer` 데이터 형식과 33 값을 지정 하 여 상수 `limit`를 선언 하는 `Const` 문입니다.
 
-The third declaration is the `Dim` statement, which declares the variable `thisWidget`. The data type is a specific object, namely an object created from the `Widget` class. You can declare a variable to be of any elementary data type or of any object type that is exposed in the application you are using.
+세 번째 선언은 `thisWidget`변수를 선언 하는 `Dim` 문입니다. 데이터 형식은 특정 개체 (즉, `Widget` 클래스에서 만든 개체)입니다. 변수를 기본 데이터 형식이 나 사용 중인 응용 프로그램에 노출 되는 모든 개체 형식으로 선언할 수 있습니다.
 
-### <a name="initial-values"></a>Initial Values
+### <a name="initial-values"></a>초기 값
 
-When the code containing a declaration statement runs, Visual Basic reserves the memory required for the declared element. If the element holds a value, Visual Basic initializes it to the default value for its data type. For more information, see "Behavior" in [Dim Statement](../../language-reference/statements/dim-statement.md).
+선언 문을 포함 하는 코드를 실행 하면 Visual Basic는 선언 된 요소에 필요한 메모리를 예약 합니다. 요소가 값을 포함 하는 경우에는 Visual Basic 해당 데이터 형식에 대 한 기본값으로 초기화 합니다. 자세한 내용은 [Dim 문의](../../language-reference/statements/dim-statement.md)"Behavior"를 참조 하십시오.
 
-You can assign an initial value to a variable as part of its declaration, as the following example illustrates.
+다음 예제와 같이 변수의 초기 값을 선언의 일부로 할당할 수 있습니다.
 
 [!code-vb[VbVbalrStatements#81](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#81)]
 
-If a variable is an object variable, you can explicitly create an instance of its class when you declare it by using the [New Operator](../../../visual-basic/language-reference/operators/new-operator.md) keyword, as the following example illustrates.
+변수가 개체 변수인 경우에는 다음 예제와 같이 [New Operator](../../../visual-basic/language-reference/operators/new-operator.md) 키워드를 사용 하 여 선언할 때 해당 클래스의 인스턴스를 명시적으로 만들 수 있습니다.
 
 [!code-vb[VbVbalrStatements#82](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#82)]
 
-Note that the initial value you specify in a declaration statement is not assigned to a variable until execution reaches its declaration statement. Until that time, the variable contains the default value for its data type.
+선언 문에 지정 하는 초기 값은 실행이 해당 선언문에 도달할 때까지 변수에 할당 되지 않습니다. 이 시간까지 변수는 해당 데이터 형식에 대 한 기본값을 포함 합니다.
 
-## <a name="executable-statements"></a>Executable statements
+## <a name="executable-statements"></a>실행 문
 
-An executable statement performs an action. It can call a procedure, branch to another place in the code, loop through several statements, or evaluate an expression. An assignment statement is a special case of an executable statement.
+실행 문은 동작을 수행 합니다. 프로시저를 호출 하 고, 코드의 다른 위치로 분기 하거나, 여러 문을 반복 하거나, 식을 계산할 수 있습니다. 대입문은 실행 가능한 문의 특수 한 경우입니다.
 
-The following example uses an `If...Then...Else` control structure to run different blocks of code based on the value of a variable. Within each block of code, a `For...Next` loop runs a specified number of times.
+다음 예에서는 `If...Then...Else` 컨트롤 구조를 사용 하 여 변수 값을 기반으로 다른 코드 블록을 실행 합니다. 각 코드 블록 내에서 `For...Next` 루프는 지정 된 횟수 만큼 실행 됩니다.
 
 [!code-vb[VbVbalrStatements#83](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#83)]
 
-The `If` statement in the preceding example checks the value of the parameter `clockwise`. If the value is `True`, it calls the `spinClockwise` method of `aWidget`. If the value is `False`, it calls the `spinCounterClockwise` method of `aWidget`. The `If...Then...Else` control structure ends with `End If`.
+위의 예제에서 `If` 문은 매개 변수 `clockwise`의 값을 확인 합니다. 값이 `True`이면 `aWidget`의 `spinClockwise` 메서드를 호출 합니다. 값이 `False`이면 `aWidget`의 `spinCounterClockwise` 메서드를 호출 합니다. `If...Then...Else` 컨트롤 구조는 `End If`으로 끝납니다.
 
-The `For...Next` loop within each block calls the appropriate method a number of times equal to the value of the `revolutions` parameter.
+각 블록 내의 `For...Next` 루프는 `revolutions` 매개 변수의 값과 같은 횟수 만큼 적절 한 메서드를 호출 합니다.
 
-## <a name="assignment-statements"></a>Assignment statements
+## <a name="assignment-statements"></a>대입문
 
-Assignment statements carry out assignment operations, which consist of taking the value on the right side of the assignment operator (`=`) and storing it in the element on the left, as in the following example.
+대입문은 할당 연산자 (`=`)의 오른쪽에 있는 값을 가져와 왼쪽의 요소에 저장 하는 것으로 구성 된 할당 작업을 수행 합니다 .이 작업은 다음 예제와 같습니다.
 
 [!code-vb[VbVbalrStatements#73](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#73)]
 
-In the preceding example, the assignment statement stores the literal value 42 in the variable `v`.
+위의 예에서 대입문은 `v`변수에 리터럴 값 42를 저장 합니다.
 
-### <a name="eligible-programming-elements"></a>Eligible programming elements
+### <a name="eligible-programming-elements"></a>적합 한 프로그래밍 요소
 
-The programming element on the left side of the assignment operator must be able to accept and store a value. This means it must be a variable or property that is not [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md), or it must be an array element. In the context of an assignment statement, such an element is sometimes called an *lvalue*, for "left value."
+할당 연산자의 좌 변에 있는 프로그래밍 요소는 값을 허용 하 고 저장할 수 있어야 합니다. 즉, [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)이거나 배열 요소 여야 하는 변수 또는 속성 이어야 합니다. 대입문의 컨텍스트에서 "left value"의 경우 이러한 요소를 *lvalue*라고도 합니다.
 
-The value on the right side of the assignment operator is generated by an expression, which can consist of any combination of literals, constants, variables, properties, array elements, other expressions, or function calls. 다음은 이에 대한 예입니다.
+대입 연산자의 오른쪽에 있는 값은 리터럴, 상수, 변수, 속성, 배열 요소, 기타 식 또는 함수 호출의 조합으로 구성 될 수 있는 식에 의해 생성 됩니다. 다음 예제에서는 이것을 보여 줍니다.
 
 [!code-vb[VbVbalrStatements#74](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#74)]
 
-The preceding example adds the value held in variable `y` to the value held in variable `z`, and then adds the value returned by the call to function `findResult`. The total value of this expression is then stored in variable `x`.
+앞의 예제에서는 `y` 변수에 저장 된 값을 `z`변수에 저장 된 값에 추가한 다음 함수 `findResult`에 대 한 호출에서 반환 된 값을 추가 합니다. 그러면이 식의 total 값이 `x`변수에 저장 됩니다.
 
-### <a name="data-types-in-assignment-statements"></a>Data types in assignment statements
+### <a name="data-types-in-assignment-statements"></a>대입문의 데이터 형식
 
-In addition to numeric values, the assignment operator can also assign `String` values, as the following example illustrates.
+다음 예제와 같이 숫자 값 외에도 할당 연산자는 `String` 값을 할당할 수 있습니다.
 
 [!code-vb[VbVbalrStatements#75](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#75)]
 
-You can also assign `Boolean` values, using either a `Boolean` literal or a `Boolean` expression, as the following example illustrates.
+다음 예제에 나와 있는 것 처럼 `Boolean` 리터럴 또는 `Boolean` 식을 사용 하 여 `Boolean` 값을 할당할 수도 있습니다.
 
 [!code-vb[VbVbalrStatements#76](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#76)]
 
-Similarly, you can assign appropriate values to programming elements of the `Char`, `Date`, or `Object` data type. You can also assign an object instance to an element declared to be of the class from which that instance is created.
+마찬가지로 `Char`, `Date`또는 `Object` 데이터 형식의 프로그래밍 요소에 적절 한 값을 할당할 수 있습니다. 또한 해당 인스턴스가 생성 된 클래스로 선언 된 요소에 개체 인스턴스를 할당할 수 있습니다.
 
-### <a name="compound-assignment-statements"></a>Compound assignment statements
+### <a name="compound-assignment-statements"></a>복합 대입문
 
-*Compound assignment statements* first perform an operation on an expression before assigning it to a programming element. The following example illustrates one of these operators, `+=`, which increments the value of the variable on the left side of the operator by the value of the expression on the right.
+*복합 대입문* 은 먼저 식에 대해 작업을 수행한 다음 프로그래밍 요소에 할당 합니다. 다음 예에서는 연산자의 좌 변에 있는 변수의 값을 오른쪽에 있는 식의 값으로 증가 시키는 `+=`연산자 중 하나를 보여 줍니다.
 
 [!code-vb[VbVbalrStatements#77](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#77)]
 
-The preceding example adds 1 to the value of `n`, and then stores that new value in `n`. It is a shorthand equivalent of the following statement:
+앞의 예제에서는 `n`값에 1을 추가한 다음 새 값을 `n`에 저장 합니다. 이는 다음 문과 동일한 의미를 갖습니다.
 
 [!code-vb[VbVbalrStatements#78](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#78)]
 
-A variety of compound assignment operations can be performed using operators of this type. For a list of these operators and more information about them, see [Assignment Operators](../../../visual-basic/language-reference/operators/assignment-operators.md).
+이 형식의 연산자를 사용 하 여 다양 한 복합 할당 작업을 수행할 수 있습니다. 이러한 연산자의 목록과 이러한 연산자에 대 한 자세한 내용은 [할당 연산자](../../../visual-basic/language-reference/operators/assignment-operators.md)를 참조 하세요.
 
-The concatenation assignment operator (`&=`) is useful for adding a string to the end of already existing strings, as the following example illustrates.
+연결 할당 연산자 (`&=`)는 다음 예제에 나와 있는 것 처럼 기존 문자열의 끝에 문자열을 추가 하는 데 유용 합니다.
 
 [!code-vb[VbVbalrStatements#79](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#79)]
 
-### <a name="type-conversions-in-assignment-statements"></a>Type Conversions in Assignment Statements
+### <a name="type-conversions-in-assignment-statements"></a>대입문의 형식 변환
 
-The value you assign to a variable, property, or array element must be of a data type appropriate to that destination element. In general, you should try to generate a value of the same data type as that of the destination element. However, some types can be converted to other types during assignment.
+변수, 속성 또는 배열 요소에 할당 하는 값은 해당 대상 요소에 적합 한 데이터 형식 이어야 합니다. 일반적으로 대상 요소와 동일한 데이터 형식의 값을 생성 하려고 합니다. 그러나 할당 하는 동안 일부 형식을 다른 형식으로 변환할 수 있습니다.
 
-For information on converting between data types, see [Type Conversions in Visual Basic](./data-types/type-conversions.md). In brief, Visual Basic automatically converts a value of a given type to any other type to which it widens. A *widening conversion* is one in that always succeeds at run time and does not lose any data. For example, Visual Basic converts an `Integer` value to `Double` when appropriate, because `Integer` widens to `Double`. 자세한 내용은 [Widening and Narrowing Conversions](./data-types/widening-and-narrowing-conversions.md)을 참조하세요.
+데이터 형식 간의 변환에 대 한 자세한 내용은 [Visual Basic 형식 변환](./data-types/type-conversions.md)을 참조 하세요. 간단히 말해서 Visual Basic는 지정 된 형식의 값을 자동으로 확대 되는 다른 형식으로 변환 합니다. *확대 변환은* 항상 런타임에 성공 하 고 데이터를 손실 하지 않는의 하나입니다. 예를 들어 Visual Basic는 `Double`로 확대 `Integer` 하므로 적절 한 경우 `Integer` 값을 `Double`로 변환 합니다. 자세한 내용은 [Widening and Narrowing Conversions](./data-types/widening-and-narrowing-conversions.md)을 참조하세요.
 
-*Narrowing conversions* (those that are not widening) carry a risk of failure at run time, or of data loss. You can perform a narrowing conversion explicitly by using a type conversion function, or you can direct the compiler to perform all conversions implicitly by setting `Option Strict Off`. For more information, see [Implicit and Explicit Conversions](./data-types/implicit-and-explicit-conversions.md).
+*축소 변환* (확대 되지 않은 변환)은 런타임에 오류가 발생 하거나 데이터 손실이 발생할 수 있습니다. 형식 변환 함수를 사용 하 여 명시적으로 축소 변환을 수행 하거나, `Option Strict Off`를 설정 하 여 컴파일러가 모든 변환을 암시적으로 수행 하도록 지시할 수 있습니다. 자세한 내용은 [암시적 변환과 명시적 변환](./data-types/implicit-and-explicit-conversions.md)을 참조 하세요.
 
-## <a name="putting-multiple-statements-on-one-line"></a>Putting multiple statements on one line
+## <a name="putting-multiple-statements-on-one-line"></a>여러 문을 한 줄에 배치
 
-You can have multiple statements on a single line separated by the colon (`:`) character. 다음은 이에 대한 예입니다.
+한 줄에 콜론 (`:`) 문자로 구분 된 문이 여러 개 있을 수 있습니다. 다음 예제에서는 이것을 보여 줍니다.
 
 [!code-vb[VbVbalrStatements#70](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#70)]
 
-Though occasionally convenient, this form of syntax makes your code hard to read and maintain. Thus, it is recommended that you keep one statement to a line.
+이러한 형태의 구문을 사용 하면 코드를 읽고 유지 관리 하기가 어렵습니다. 따라서 문을 한 줄에 유지 하는 것이 좋습니다.
 
-## <a name="continuing-a-statement-over-multiple-lines"></a>Continuing a statement over multiple lines
+## <a name="continuing-a-statement-over-multiple-lines"></a>문을 여러 줄에 걸쳐 계속
 
-A statement usually fits on one line, but when it is too long, you can continue it onto the next line using a line-continuation sequence, which consists of a space followed by an underscore character (`_`) followed by a carriage return. In the following example, the `MsgBox` executable statement is continued over two lines.
+문은 일반적으로 한 줄에 배치 되지만 너무 길면 줄 연속 시퀀스를 사용 하 여 다음 줄로 계속 진행할 수 있습니다 .이 시퀀스는 공백 뒤에 밑줄 문자 (`_`)와 캐리지 리턴이 차례로 표시 됩니다. 다음 예에서는 `MsgBox` 실행 가능 문이 두 줄에 걸쳐 계속 됩니다.
 
 [!code-vb[VbVbalrStatements#71](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#71)]
 
-### <a name="implicit-line-continuation"></a>Implicit line continuation
+### <a name="implicit-line-continuation"></a>암시적 줄 연속
 
-In many cases, you can continue a statement on the next consecutive line without using the underscore character (`_`). The following syntax elements implicitly continue the statement on the next line of code.
+대부분의 경우 밑줄 문자 (`_`)를 사용 하지 않고 다음 연속 줄에서 문을 계속할 수 있습니다. 다음 구문 요소는 코드의 다음 줄에서 문을 암시적으로 계속 합니다.
 
-- After a comma (`,`). 예를 들어 다음과 같은 가치를 제공해야 합니다.
+- 쉼표 (`,`) 뒤 예를 들면 다음과 같습니다.
 
    [!code-vb[VbVbalrLineContinuation#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#1)]
 
-- After an open parenthesis (`(`) or before a closing parenthesis (`)`). 예를 들어 다음과 같은 가치를 제공해야 합니다.
+- 여는 괄호 (`(`) 또는 닫는 괄호 (`)`) 앞에 있습니다. 예를 들면 다음과 같습니다.
 
    [!code-vb[VbVbalrLineContinuation#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#2)]
 
-- After an open curly brace (`{`) or before a closing curly brace (`}`). 예를 들어 다음과 같은 가치를 제공해야 합니다.
+- 여는 중괄호 (`{`) 또는 닫는 중괄호 앞 (`}`). 예를 들면 다음과 같습니다.
 
     [!code-vb[VbVbalrLineContinuation#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#3)]
 
-    For more information, see [Object Initializers: Named and Anonymous Types](./objects-and-classes/object-initializers-named-and-anonymous-types.md) or [Collection Initializers](./collection-initializers/index.md).
+    자세한 내용은 [개체 이니셜라이저: 명명 된 형식과 익명 형식](./objects-and-classes/object-initializers-named-and-anonymous-types.md) 또는 [컬렉션 이니셜라이저](./collection-initializers/index.md)를 참조 하세요.
 
-- After an open embedded expression (`<%=`) or before the close of an embedded expression (`%>`) within an XML literal. 예를 들어 다음과 같은 가치를 제공해야 합니다.
+- XML 리터럴 내에서 포함 된 식 (`<%=`) 또는 포함 된 식 (`%>`)이 가까이 있는 경우 예를 들면 다음과 같습니다.
 
    [!code-vb[VbVbalrLineContinuation#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#4)]
 
-   For more information, see [Embedded Expressions in XML](./xml/embedded-expressions-in-xml.md).
+   자세한 내용은 [XML의 포함 식](./xml/embedded-expressions-in-xml.md)을 참조 하세요.
 
-- After the concatenation operator (`&`). 예를 들어 다음과 같은 가치를 제공해야 합니다.
+- 연결 연산자 (`&`) 뒤 예를 들면 다음과 같습니다.
 
    [!code-vb[VbVbcnConventions#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/vb/Class1.vb#9)]
 
-   For more information, see [Operators Listed by Functionality](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md).
+   자세한 내용은 [기능에 나열 된 연산자](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)를 참조 하세요.
 
-- After assignment operators (`=`, `&=`, `:=`, `+=`, `-=`, `*=`, `/=`, `\=`, `^=`, `<<=`, `>>=`). 예를 들어 다음과 같은 가치를 제공해야 합니다.
+- 할당 연산자 (`=`, `&=`, `:=`, `+=`, `-=`, `*=`, `/=`, `\=``^=`)를 지정 합니다.`<<=``>>=` 예를 들면 다음과 같습니다.
 
    [!code-vb[VbVbalrLineContinuation#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#5)]
 
-   For more information, see [Operators Listed by Functionality](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md).
+   자세한 내용은 [기능에 나열 된 연산자](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)를 참조 하세요.
 
-- After binary operators (`+`, `-`, `/`, `*`, `Mod`, `<>`, `<`, `>`, `<=`, `>=`, `^`, `>>`, `<<`, `And`, `AndAlso`, `Or`, `OrElse`, `Like`, `Xor`) within an expression. 예를 들어 다음과 같은 가치를 제공해야 합니다.
+- 식 내의 이항 연산자 (`+`, `-`, `/`, `*`, `Mod`, `<>`, `<`, `>`, `<=`, `>=`, `^`, `>>`, `<<`, `And`, `AndAlso`, `Or`).`OrElse``Like``Xor` 예를 들면 다음과 같습니다.
 
    [!code-vb[VbVbalrLineContinuation#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#7)]
 
-   For more information, see [Operators Listed by Functionality](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md).
+   자세한 내용은 [기능에 나열 된 연산자](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)를 참조 하세요.
 
-- After the `Is` and `IsNot` operators. 예를 들어 다음과 같은 가치를 제공해야 합니다.
+- `Is` 및 `IsNot` 연산자 예를 들면 다음과 같습니다.
 
    [!code-vb[VbVbalrLineContinuation#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#8)]
 
-   For more information, see [Operators Listed by Functionality](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md).
+   자세한 내용은 [기능에 나열 된 연산자](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)를 참조 하세요.
 
-- After a member qualifier character (`.`) and before the member name. 예를 들어 다음과 같은 가치를 제공해야 합니다.
+- 멤버 한정자 문자 (`.`) 뒤와 멤버 이름 앞에 있습니다. 예를 들면 다음과 같습니다.
 
    [!code-vb[VbVbalrLineContinuation#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#5)]
 
-   However, you must include a line-continuation character (`_`) following a member qualifier character when you are using the `With` statement or supplying values in the initialization list for a type. Consider breaking the line after the assignment operator (for example, `=`) when you are using `With` statements or object initialization lists. 예를 들어 다음과 같은 가치를 제공해야 합니다.
+   그러나 `With` 문을 사용 하거나 형식에 대 한 초기화 목록에 값을 제공 하는 경우 멤버 한정자 문자 다음에 줄 연속 문자 (`_`)를 포함 해야 합니다. `With` 문이나 개체 초기화 목록을 사용할 때 할당 연산자 (예: `=`) 뒤의 줄을 분리 하는 것이 좋습니다. 예를 들면 다음과 같습니다.
 
    [!code-vb[VbVbalrLineContinuation#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#14)]
 
-   For more information, see [With...End With Statement](../../../visual-basic/language-reference/statements/with-end-with-statement.md) or [Object Initializers: Named and Anonymous Types](./objects-and-classes/object-initializers-named-and-anonymous-types.md).
+   자세한 내용은 다음 [을 참조 하세요. 문](../../../visual-basic/language-reference/statements/with-end-with-statement.md) 또는 [개체 이니셜라이저가 있는 End: 명명 된 형식과 익명 형식](./objects-and-classes/object-initializers-named-and-anonymous-types.md)입니다.
 
-- After an XML axis property qualifier (`.` or `.@` or `...`). However, you must include a line-continuation character (`_`) when you specify a member qualifier when you are using the `With` keyword. 예를 들어 다음과 같은 가치를 제공해야 합니다.
+- XML 축 속성 한정자 (`.` 또는 `.@` 또는 `...`) 그러나 `With` 키워드를 사용할 때 멤버 한정자를 지정 하는 경우에는 줄 연속 문자 (`_`)를 포함 해야 합니다. 예를 들면 다음과 같습니다.
 
    [!code-vb[VbVbalrLineContinuation#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#9)]
 
-   For more information, see [XML Axis Properties](../../../visual-basic/language-reference/xml-axis/index.md).
+   자세한 내용은 [XML 축 속성](../../../visual-basic/language-reference/xml-axis/index.md)을 참조 하세요.
 
-- After a less-than sign (<) or before a greater-than sign (`>`) when you specify an attribute. Also after a greater-than sign (`>`) when you specify an attribute. However, you must include a line-continuation character (`_`) when you specify assembly-level or module-level attributes. 예를 들어 다음과 같은 가치를 제공해야 합니다.
+- 특성을 지정할 때 보다 작음 기호 (<) 또는 보다 큼 부호 (`>`) 앞에 있습니다. 또한 특성을 지정할 때 보다 큼 기호 (`>`)를 사용할 수 있습니다. 그러나 어셈블리 수준 또는 모듈 수준 특성을 지정 하는 경우에는 줄 연속 문자 (`_`)를 포함 해야 합니다. 예를 들면 다음과 같습니다.
 
    [!code-vb[VbVbalrLineContinuation#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#10)]
 
-   For more information, see [Attributes overview](../../../visual-basic/programming-guide/concepts/attributes/index.md).
+   자세한 내용은 [특성 개요](../../../visual-basic/programming-guide/concepts/attributes/index.md)를 참조 하세요.
 
-- Before and after query operators (`Aggregate`, `Distinct`, `From`, `Group By`, `Group Join`, `Join`, `Let`, `Order By`, `Select`, `Skip`, `Skip While`, `Take`, `Take While`, `Where`, `In`, `Into`, `On`, `Ascending`, and `Descending`). You cannot break a line between the keywords of query operators that are made up of multiple keywords (`Order By`, `Group Join`, `Take While`, and `Skip While`). 예를 들어 다음과 같은 가치를 제공해야 합니다.
+- Before 및 after 쿼리 연산자 (`Aggregate`, `Distinct`, `From`, `Group By`, `Group Join`, `Join`, `Let`, `Order By`, `Select`, `Skip`, `Skip While`, `Take`, `Take While`, `Where`, `In`, `Into`, `On`).`Ascending``Descending` 여러 키워드로 구성 된 쿼리 연산자 (`Order By`, `Group Join`, `Take While`및 `Skip While`)의 키워드 사이에 줄을 나눌 수 없습니다. 예를 들면 다음과 같습니다.
 
    [!code-vb[VbVbalrLineContinuation#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#11)]
 
-   For more information, see [Queries](../../../visual-basic/language-reference/queries/index.md).
+   자세한 내용은 [쿼리](../../../visual-basic/language-reference/queries/index.md)를 참조 하세요.
 
-- After the `In` keyword in a `For Each` statement. 예를 들어 다음과 같은 가치를 제공해야 합니다.
+- `For Each` 문의 `In` 키워드 다음에 예를 들면 다음과 같습니다.
 
    [!code-vb[VbVbalrLineContinuation#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#12)]
 
-   For more information, see [For Each...Next Statement](../../../visual-basic/language-reference/statements/for-each-next-statement.md).
+   자세한 내용은 For Each ...를 참조 하십시오. [ 다음 문](../../../visual-basic/language-reference/statements/for-each-next-statement.md).
 
-- After the `From` keyword in a collection initializer. 예를 들어 다음과 같은 가치를 제공해야 합니다.
+- 컬렉션 이니셜라이저의 `From` 키워드 뒤에 있습니다. 예를 들면 다음과 같습니다.
 
    [!code-vb[VbVbalrLineContinuation#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#13)]
 
    자세한 내용은 [컬렉션 이니셜라이저](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)를 참조하세요.
 
-## <a name="adding-comments"></a>Adding comments
+## <a name="adding-comments"></a>주석 추가
 
-Source code is not always self-explanatory, even to the programmer who wrote it. To help document their code, therefore, most programmers make liberal use of embedded comments. Comments in code can explain a procedure or a particular instruction to anyone reading or working with it later. Visual Basic ignores comments during compilation, and they do not affect the compiled code.
+소스 코드는 코드를 작성 하는 프로그래머에 게는 항상 설명이 포함 되지 않습니다. 따라서 대부분의 프로그래머는 코드를 문서화할 수 있도록 포함 된 주석을 자유롭게 사용 합니다. 코드의 주석은 나중에 읽거나 작업 하는 모든 사용자에 게 프로시저 또는 특정 지침을 설명할 수 있습니다. 컴파일하는 동안 Visual Basic는 주석을 무시 하 고 컴파일된 코드에는 영향을 주지 않습니다.
 
-Comment lines begin with an apostrophe (`'`) or `REM` followed by a space. They can be added anywhere in code, except within a string. To append a comment to a statement, insert an apostrophe or `REM` after the statement, followed by the comment. Comments can also go on their own separate line. The following example demonstrates these possibilities.
+주석 줄은 아포스트로피 (`'`) 또는 `REM` 뒤에 공백으로 시작 합니다. 문자열 내에서를 제외 하 고 코드의 모든 위치에 추가할 수 있습니다. 문에 주석을 추가 하려면 문 뒤에 아포스트로피 또는 `REM`을 삽입 하 고 그 뒤에 주석을 삽입 합니다. 주석은 별도의 줄로 이동할 수도 있습니다. 다음 예제에서는 이러한 가능성을 보여 줍니다.
 
 [!code-vb[VbVbalrStatements#72](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#72)]
 
-## <a name="checking-compilation-errors"></a>Checking compilation errors
+## <a name="checking-compilation-errors"></a>컴파일 오류 확인
 
-If, after you type a line of code, the line is displayed with a wavy blue underline (an error message may appear as well), there is a syntax error in the statement. You must find out what is wrong with the statement (by looking in the task list, or hovering over the error with the mouse pointer and reading the error message) and correct it. Until you have fixed all syntax errors in your code, your program will fail to compile correctly.
+코드 줄을 입력 한 후 물결선이 파란색 물결선으로 표시 되 면 (오류 메시지가 표시 될 수 있음) 문에 구문 오류가 있습니다. 문에 무엇이 잘못 되었는지 확인 해야 합니다 (작업 목록에서 확인 하거나 마우스 포인터로 오류를 가리키고 오류 메시지를 읽은 후). 코드의 모든 구문 오류를 해결할 때까지 프로그램을 올바르게 컴파일하지 못합니다.
 
 ## <a name="related-sections"></a>관련 단원
 
 |용어|정의|
 |---|---|
-|[할당 연산자](../../../visual-basic/language-reference/operators/assignment-operators.md)|Provides links to language reference pages covering assignment operators such as `=`, `*=`, and `&=`.|
-|[연산자 및 식](./operators-and-expressions/index.md)|Shows how to combine elements with operators to yield new values.|
-|[방법: 코드에서 문 분리 및 결합](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)|Shows how to break a single statement into multiple lines and how to place multiple statements on the same line.|
-|[방법: Label 문](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)|Shows how to label a line of code.|
+|[할당 연산자](../../../visual-basic/language-reference/operators/assignment-operators.md)|`=`, `*=`및 `&=`와 같은 할당 연산자를 다루는 언어 참조 페이지에 대 한 링크를 제공 합니다.|
+|[연산자 및 식](./operators-and-expressions/index.md)|요소와 연산자를 결합 하 여 새 값을 생성 하는 방법을 보여 줍니다.|
+|[방법: 코드에서 문 분리 및 결합](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)|단일 문을 여러 줄로 나누고 여러 문을 같은 줄에 넣는 방법을 보여 줍니다.|
+|[방법: Label 문](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)|코드 줄에 레이블을 표시 하는 방법을 보여 줍니다.|

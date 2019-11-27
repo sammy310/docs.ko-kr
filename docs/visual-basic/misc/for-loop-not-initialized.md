@@ -1,5 +1,5 @@
 ---
-title: For loop not initialized
+title: For 루프가 초기화 되지 않았습니다.
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID92
@@ -18,7 +18,7 @@ ms.locfileid: "74348450"
   
 1. 루프로의 점프를 제거합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [For Each...Next 문](../../visual-basic/language-reference/statements/for-each-next-statement.md)
 - [방법: Label 문](../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)

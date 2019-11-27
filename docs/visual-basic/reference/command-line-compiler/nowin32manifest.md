@@ -27,7 +27,7 @@ ms.locfileid: "74347884"
   
  매니페스트 생성에 대한 자세한 내용은 [-win32manifest(Visual Basic)](../../../visual-basic/reference/command-line-compiler/win32manifest.md)를 참조하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Visual Basic 명령줄 컴파일러](../../../visual-basic/reference/command-line-compiler/index.md)
 - [프로젝트 디자이너, 애플리케이션 페이지(Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)

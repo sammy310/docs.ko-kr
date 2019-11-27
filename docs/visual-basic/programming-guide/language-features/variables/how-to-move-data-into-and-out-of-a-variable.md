@@ -14,44 +14,44 @@ ms.locfileid: "74346898"
 ---
 # <a name="how-to-move-data-into-and-out-of-a-variable-visual-basic"></a>방법: 변수 값 저장 및 검색(Visual Basic)
 
-You store a value in a variable by putting the variable name on the left side of an assignment statement.
+변수 이름을 대입문의 왼쪽에 배치 하 여 변수에 값을 저장 합니다.
 
-## <a name="putting-data-in-a-variable"></a>Putting Data in a Variable
+## <a name="putting-data-in-a-variable"></a>변수에 데이터 배치
 
-#### <a name="to-store-a-value-in-a-variable"></a>To store a value in a variable
+#### <a name="to-store-a-value-in-a-variable"></a>변수에 값을 저장 하려면
 
-- Use the variable name on the left side of an assignment statement.
+- 대입문의 왼쪽에 변수 이름을 사용 합니다.
 
-    The following example sets the value of the variable `alpha`.
+    다음 예에서는 `alpha`변수의 값을 설정 합니다.
 
     ```vb
     alpha = (beta * 6.27) / (gamma + 2.1)
     ```
 
-    The value generated on the right side of the assignment statement is stored in the variable.
+    대입문의 오른쪽에 생성 된 값은 변수에 저장 됩니다.
 
-## <a name="getting-data-from-a-variable"></a>Getting Data from a Variable
+## <a name="getting-data-from-a-variable"></a>변수에서 데이터 가져오기
 
-You retrieve a variable's value by including the variable name in an expression.
+식에 변수 이름을 포함 하 여 변수의 값을 검색 합니다.
 
-#### <a name="to-retrieve-a-value-from-a-variable"></a>To retrieve a value from a variable
+#### <a name="to-retrieve-a-value-from-a-variable"></a>변수에서 값을 검색 하려면
 
-- Use the variable name in an expression. You can use a variable anywhere you can use a constant or a literal, except in an expression that defines the value of a constant.
+- 식에서 변수 이름을 사용 합니다. 상수 값을 정의 하는 식을 제외 하 고 상수 또는 리터럴을 사용할 수 있는 모든 위치에서 변수를 사용할 수 있습니다.
 
   \-또는-
 
-- Use the variable name following the equal (`=`) sign in an assignment statement.
+- 대입문에서 등호 (`=`) 뒤에 변수 이름을 사용 합니다.
 
-  The following example reads the value of the variable `startValue` and then uses the value of the variable `counter` in an expression.
+  다음 예에서는 `startValue` 변수의 값을 읽은 다음 식에 `counter` 변수 값을 사용 합니다.
 
   ```vb
   counter = startValue
   cellValue = (counter + 5) ^ 2
   ```
 
-  The value of the variable participates in the expression just as a constant would, and then it is stored in the variable or property on the left side of the assignment statement.
+  변수 값은 상수와 마찬가지로 식에도 관여 하 고 대입문의 왼쪽에 있는 변수나 속성에 저장 됩니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [변수](../../../../visual-basic/programming-guide/language-features/variables/index.md)
 - [변수 선언](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)

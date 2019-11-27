@@ -18,42 +18,42 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345845"
 ---
 # <a name="how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters-visual-basic"></a>방법: 매개 변수를 무제한으로 사용하는 프로시저 오버로드(Visual Basic)
-If a procedure has a [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) parameter, you cannot define an overloaded version taking a one-dimensional array for the parameter array. For more information, see "Implicit Overloads for a ParamArray Parameter" in [Considerations in Overloading Procedures](./considerations-in-overloading-procedures.md).  
+프로시저에 [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) 매개 변수가 있는 경우 매개 변수 배열에 1 차원 배열을 가져오는 오버 로드 된 버전을 정의할 수 없습니다. 자세한 내용은 [오버 로드 절차의 고려 사항](./considerations-in-overloading-procedures.md)에서 "ParamArray 매개 변수에 대 한 암시적 오버 로드"를 참조 하십시오.  
   
-### <a name="to-overload-a-procedure-that-takes-a-variable-number-of-parameters"></a>To overload a procedure that takes a variable number of parameters  
+### <a name="to-overload-a-procedure-that-takes-a-variable-number-of-parameters"></a>가변적인 개수의 매개 변수를 사용 하는 프로시저를 오버 로드 하려면  
   
-1. Ascertain that the procedure and calling code logic benefits from overloaded versions more than from a `ParamArray` parameter. See "Overloads and ParamArrays" in [Considerations in Overloading Procedures](./considerations-in-overloading-procedures.md).  
+1. 프로시저와 호출 코드 논리가 `ParamArray` 매개 변수 보다 오버 로드 된 버전 보다 더 많은 이점을 제공 합니다. [오버 로드 프로시저에서 고려할 사항은](./considerations-in-overloading-procedures.md)"오버 로드 및 paramarrays"를 참조 하십시오.  
   
-2. Determine which numbers of supplied values the procedure should accept in the variable part of the parameter list. This might include the case of no value, and it might include the case of a single one-dimensional array.  
+2. 프로시저에서 매개 변수 목록의 변수 부분에 허용 해야 하는 제공 된 값의 개수를 확인 합니다. 여기에는 값이 없는 경우이 포함 될 수 있으며, 1 차원 배열의 대/소문자가 포함 될 수도 있습니다.  
   
-3. For each acceptable number of supplied values, write a `Sub` or `Function` declaration statement that defines the corresponding parameter list. Do not use either the `Optional` or the `ParamArray` keyword in this overloaded version.  
+3. 제공 된 값의 허용 되는 개수에는 해당 하는 매개 변수 목록을 정의 하는 `Sub` 또는 `Function` 선언문을 작성 합니다. 이 오버 로드 된 버전에서 `Optional` 또는 `ParamArray` 키워드를 사용 하지 마십시오.  
   
-4. In each declaration, precede the `Sub` or `Function` keyword with the [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md) keyword.  
+4. 각 선언에서 `Sub` 또는 `Function` 키워드 앞에 [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md) 키워드를 사용 합니다.  
   
-5. Following each declaration, write the procedure code that should execute when the calling code supplies values corresponding to that declaration's parameter list.  
+5. 각 선언 후에 호출 코드에서 해당 선언의 매개 변수 목록에 해당 하는 값을 제공할 때 실행 되어야 하는 프로시저 코드를 작성 합니다.  
   
-6. Terminate each procedure with the `End Sub` or `End Function` statement as appropriate.  
+6. `End Sub` 또는 `End Function` 문을 사용 하 여 각 프로시저를 적절 하 게 종료 합니다.  
   
 ## <a name="example"></a>예제  
- The following example shows a procedure defined with a [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) parameter, and then an equivalent set of overloaded procedures.  
+ 다음 예에서는 [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) 매개 변수를 사용 하 여 정의 된 프로시저와 해당 하는 오버 로드 된 프로시저 집합을 보여 줍니다.  
   
  [!code-vb[VbVbcnProcedures#69](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#69)]  
   
  [!code-vb[VbVbcnProcedures#70](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#70)]  
   
- You cannot overload such a procedure with a parameter list that takes a one-dimensional array for the parameter array. However, you can use the signatures of the other implicit overloads. The following declarations illustrate this.  
+ 매개 변수 배열에 1 차원 배열을 사용 하는 매개 변수 목록을 사용 하 여 이러한 프로시저를 오버 로드할 수 없습니다. 그러나 다른 암시적 오버 로드의 시그니처를 사용할 수 있습니다. 다음 선언에서는이를 보여 줍니다.  
   
  [!code-vb[VbVbcnProcedures#71](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#71)]  
   
- The code in the overloaded versions does not have to test whether the calling code supplied one or more values for the `ParamArray` parameter, or if so, how many. Visual Basic passes control to the version matching the calling argument list.  
+ 오버 로드 된 버전의 코드는 호출 코드에서 `ParamArray` 매개 변수에 대해 하나 이상의 값을 제공 했는지 여부를 테스트할 필요가 없습니다. Visual Basic 호출 하는 인수 목록과 일치 하는 버전으로 제어를 전달 합니다.  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
- Because a procedure with a `ParamArray` parameter is equivalent to a set of overloaded versions, you cannot overload such a procedure with a parameter list corresponding to any of these implicit overloads. For more information, see [Considerations in Overloading Procedures](./considerations-in-overloading-procedures.md).  
+ `ParamArray` 매개 변수를 사용 하는 프로시저는 오버 로드 된 버전 집합과 동일 하기 때문에 이러한 암시적 오버 로드에 해당 하는 매개 변수 목록을 사용 하 여 이러한 프로시저를 오버 로드할 수 없습니다. 자세한 내용은 [오버 로드 절차의 고려 사항](./considerations-in-overloading-procedures.md)을 참조 하세요.  
   
 ## <a name="net-framework-security"></a>.NET Framework 보안  
- Whenever you deal with an array which can be indefinitely large, there is a risk of overrunning some internal capacity of your application. If you accept a parameter array, you should test for the length of the array the calling code passed to it, and take appropriate steps if it is too large for your application.  
+ 무한정 클 수 있는 배열을 처리할 때마다 응용 프로그램의 내부 용량을 overrunning 위험이 있습니다. 매개 변수 배열을 허용 하는 경우, 호출 코드가 전달 된 배열의 길이를 테스트 하 고, 응용 프로그램에 비해 너무 클 경우 적절 한 단계를 수행 해야 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [절차](./index.md)
 - [프로시저 매개 변수 및 인수](./procedure-parameters-and-arguments.md)

@@ -18,6 +18,6 @@ ms.locfileid: "74353864"
   
 - 개체 설명서에서 개체에 대한 자세한 내용을 읽고 속성 및 메서드의 철자를 확인합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [오류 형식](../../visual-basic/programming-guide/language-features/error-types.md)

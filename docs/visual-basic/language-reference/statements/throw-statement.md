@@ -23,7 +23,7 @@ ms.locfileid: "74352791"
 ---
 # <a name="throw-statement-visual-basic"></a>Throw 문(Visual Basic)
 
-Throws an exception within a procedure.
+프로시저 내에서 예외를 throw 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -34,23 +34,23 @@ Throw [ expression ]
 ## <a name="part"></a>파트
 
 `expression`\
-Provides information about the exception to be thrown. Optional when residing in a `Catch` statement, otherwise required.
+Throw 되는 예외에 대 한 정보를 제공 합니다. 선택적으로 `Catch` 문에 있으면이 고, 그렇지 않으면 필수입니다.
 
 ## <a name="remarks"></a>주의
 
-The `Throw` statement throws an exception that you can handle with structured exception-handling code (`Try`...`Catch`...`Finally`) or unstructured exception-handling code (`On Error GoTo`). You can use the `Throw` statement to trap errors within your code because Visual Basic moves up the call stack until it finds the appropriate exception-handling code.
+`Throw` 문은 구조화 된 예외 처리 코드 (`Try`...`Catch`...`Finally`) 또는 비구조적 예외 처리 코드 (`On Error GoTo`)로 처리할 수 있는 예외를 throw 합니다. Visual Basic은 적절 한 예외 처리 코드를 찾을 때까지 호출 스택 위로 이동 하므로 `Throw` 문을 사용 하 여 코드 내에서 오류를 트래핑할 수 있습니다.
 
-A `Throw` statement with no expression can only be used in a `Catch` statement, in which case the statement rethrows the exception currently being handled by the `Catch` statement.
+식이 없는 `Throw` 문은 `Catch` 문에서만 사용할 수 있으며,이 경우 문이 현재 `Catch` 문에서 처리 하는 예외를 다시 throw 합니다.
 
-The `Throw` statement resets the call stack for the `expression` exception. If `expression` is not provided, the call stack is left unchanged. You can access the call stack for the exception through the <xref:System.Exception.StackTrace%2A> property.
+`Throw` 문은 `expression` 예외에 대 한 호출 스택을 다시 설정 합니다. `expression`를 제공 하지 않으면 호출 스택이 변경 되지 않고 그대로 유지 됩니다. <xref:System.Exception.StackTrace%2A> 속성을 통해 예외에 대 한 호출 스택에 액세스할 수 있습니다.
 
 ## <a name="example"></a>예제
 
-The following code uses the `Throw` statement to throw an exception:
+다음 코드에서는 `Throw` 문을 사용 하 여 예외를 throw 합니다.
 
 [!code-vb[VbVbalrStatements#84](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#84)]
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Try...Catch...Finally 문](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
 - [On Error 문](../../../visual-basic/language-reference/statements/on-error-statement.md)

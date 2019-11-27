@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439242"
 ---
 # <a name="icorprofilerinfogetclassidinfo-method"></a>ICorProfilerInfo::GetClassIDInfo 메서드
-Gets the parent module and the metadata token for the specified class.  
+지정 된 클래스에 대 한 부모 모듈과 메타 데이터 토큰을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,18 +36,18 @@ HRESULT GetClassIDInfo(
   
 ## <a name="parameters"></a>매개 변수  
  `classId`  
- [in] The ID of the class for which to get the information.  
+ 진행 정보를 가져올 클래스의 ID입니다.  
   
  `pModuleId`  
- [out] A pointer to the ID of the parent module of the class.  
+ 제한이 클래스의 부모 모듈 ID에 대 한 포인터입니다.  
   
  `pTypeDefToken`  
- [out] A pointer to the metadata token for the class.  
+ 제한이 클래스의 메타 데이터 토큰에 대 한 포인터입니다.  
   
 ## <a name="remarks"></a>주의  
- The profiler code can call [ICorProfilerInfo::GetModuleMetaData](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmodulemetadata-method.md) to obtain a metadata interface for a given module. 그런 다음 `pTypeDefToken`에서 참조된 위치로 반환되는 메타데이터 토큰을 사용하여 클래스에 대한 메타데이터에 액세스할 수 있습니다.  
+ 프로파일러 코드는 [ICorProfilerInfo:: GetModuleMetaData](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmodulemetadata-method.md) 를 호출 하 여 지정 된 모듈에 대 한 메타 데이터 인터페이스를 가져올 수 있습니다. 그런 다음 `pTypeDefToken`에서 참조된 위치로 반환되는 메타데이터 토큰을 사용하여 클래스에 대한 메타데이터에 액세스할 수 있습니다.  
   
- To get more information for generic types, use [ICorProfilerInfo2::GetClassIDInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassidinfo2-method.md).  
+ 제네릭 형식에 대 한 자세한 정보를 보려면 [ICorProfilerInfo2:: GetClassIDInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassidinfo2-method.md)를 사용 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
@@ -58,6 +58,6 @@ HRESULT GetClassIDInfo(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerInfo 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

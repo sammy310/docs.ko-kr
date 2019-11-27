@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447743"
 ---
 # <a name="icorprofilerinfobegininprocdebugging-method"></a>ICorProfilerInfo::BeginInprocDebugging 메서드
-Initializes in-process debugging support. This method is obsolete in the .NET Framework version 2.0.  
+In-process 디버깅 지원 기능을 초기화 합니다. 이 메서드는 .NET Framework 버전 2.0에서 사용 되지 않습니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -35,13 +35,13 @@ HRESULT BeginInprocDebugging(
   
 ## <a name="parameters"></a>매개 변수  
  `fThisThreadOnly`  
- [in] Set this value to `true` to initialize debugging support for only the current thread; set it to `false` to initialize debugging support for all threads.  
+ 진행 현재 스레드에서만 디버깅 지원을 초기화 하려면이 값을 `true` 설정 합니다. 모든 스레드에 대 한 디버깅 지원을 초기화 하려면 `false`로 설정 합니다.  
   
  `pdwProfilerContext`  
- [out] The pointer to a returned value that identifies the debugging session.  
+ 제한이 디버깅 세션을 식별 하는 반환 된 값에 대 한 포인터입니다.  
   
 ## <a name="remarks"></a>주의  
- The CLR debugging services supported limited in-process debugging in the .NET Framework versions 1.0 and 1.1. In-process debugging enabled a profiler to use the inspection portions of the debugging API. However, due to customer feedback, in-process debugging has been removed from the .NET Framework in version 2.0, and replaced with a set of functionality that is more in line with the profiling API.  
+ CLR 디버깅 서비스는 .NET Framework 버전 1.0 및 1.1에서 제한 된 in-process 디버깅을 지원 합니다. In-process 디버깅은 디버깅 API의 검사 부분을 사용 하는 프로파일러를 사용 하도록 설정 했습니다. 그러나 고객의 의견 때문에 2.0 버전의 .NET Framework에서 in-process 디버깅이 제거 되었고 프로 파일링 API를 사용 하 여 더 많은 기능 집합으로 대체 되었습니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
@@ -50,8 +50,8 @@ HRESULT BeginInprocDebugging(
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework Version:** 1.0  
+ **.NET Framework 버전:** 1.0  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerInfo 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

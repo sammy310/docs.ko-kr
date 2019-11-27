@@ -91,60 +91,60 @@ typedef enum CorNativeType {
 |------------|-----------------|  
 |`NATIVE_TYPE_END`|사용되지 않습니다.|  
 |`NATIVE_TYPE_VOID`|사용되지 않습니다.|  
-|`NATIVE_TYPE_BOOLEAN`|A 4-byte Boolean value, where TRUE is non-zero and FALSE is zero.|  
-|`NATIVE_TYPE_I1`|A signed 8-bit integer value.|  
-|`NATIVE_TYPE_U1`|An unsigned 8-bit integer value.|  
-|`NATIVE_TYPE_I2`|A signed 16-bit integer value.|  
-|`NATIVE_TYPE_U2`|An unsigned 16-bit integer value.|  
-|`NATIVE_TYPE_I4`|A signed 32-bit integer value.|  
+|`NATIVE_TYPE_BOOLEAN`|4 바이트 부울 값입니다. 여기서 TRUE는 0이 아니고 FALSE는 0입니다.|  
+|`NATIVE_TYPE_I1`|부호 있는 8 비트 정수 값입니다.|  
+|`NATIVE_TYPE_U1`|부호 없는 8 비트 정수 값입니다.|  
+|`NATIVE_TYPE_I2`|부호 있는 16 비트 정수 값입니다.|  
+|`NATIVE_TYPE_U2`|부호 없는 16 비트 정수 값입니다.|  
+|`NATIVE_TYPE_I4`|부호 있는 32비트 정수 값입니다.|  
 |`NATIVE_TYPE_U4`|부호 없는 32비트 정수 값입니다.|  
-|`NATIVE_TYPE_I8`|A signed 64-bit integer value.|  
-|`NATIVE_TYPE_U8`|An unsigned 64-bit integer value.|  
-|`NATIVE_TYPE_R4`|A 4-byte floating-point numeric value.|  
-|`NATIVE_TYPE_R8`|An 8-byte floating-point numeric value.|  
+|`NATIVE_TYPE_I8`|부호 있는 64 비트 정수 값입니다.|  
+|`NATIVE_TYPE_U8`|부호 없는 64 비트 정수 값입니다.|  
+|`NATIVE_TYPE_R4`|4 바이트 부동 소수점 숫자 값입니다.|  
+|`NATIVE_TYPE_R8`|8 바이트 부동 소수점 숫자 값입니다.|  
 |`NATIVE_TYPE_SYSCHAR`|사용되지 않습니다.|  
 |`NATIVE_TYPE_VARIANT`|사용되지 않습니다.|  
-|`NATIVE_TYPE_CURRENCY`|A numeric COM type that corresponds to the managed <xref:System.Decimal> type.|  
+|`NATIVE_TYPE_CURRENCY`|관리 되는 <xref:System.Decimal> 형식에 해당 하는 숫자 COM 형식입니다.|  
 |`NATIVE_TYPE_PTR`|사용되지 않습니다.|  
 |`NATIVE_TYPE_DECIMAL`|사용되지 않습니다.|  
 |`NATIVE_TYPE_DATE`|사용되지 않습니다.|  
-|`NATIVE_TYPE_BSTR`|COM Interop.|  
-|`NATIVE_TYPE_LPSTR`|An LPSTR string value.|  
-|`NATIVE_TYPE_LPWSTR`|An LPWSTR string value.|  
-|`NATIVE_TYPE_LPTSTR`|An LPTSTR string value.|  
-|`NATIVE_TYPE_FIXEDSYSSTRING`|A fixed, system-defined string value.|  
+|`NATIVE_TYPE_BSTR`|COM Interop를 참조하세요.|  
+|`NATIVE_TYPE_LPSTR`|LPSTR 문자열 값입니다.|  
+|`NATIVE_TYPE_LPWSTR`|LPWSTR 문자열 값입니다.|  
+|`NATIVE_TYPE_LPTSTR`|LPTSTR 문자열 값입니다.|  
+|`NATIVE_TYPE_FIXEDSYSSTRING`|수정 된 시스템 정의 문자열 값입니다.|  
 |`NATIVE_TYPE_OBJECTREF`|사용되지 않습니다.|  
-|`NATIVE_TYPE_IUNKNOWN`|COM Interop.|  
-|`NATIVE_TYPE_IDISPATCH`|COM Interop.|  
-|`NATIVE_TYPE_STRUCT`|A native structure value.|  
-|`NATIVE_TYPE_INTF`|COM Interop.|  
-|`NATIVE_TYPE_SAFEARRAY`|COM Interop.|  
-|`NATIVE_TYPE_FIXEDARRAY`|A fixed-length array value.|  
-|`NATIVE_TYPE_INT`|A native 16-bit signed integer value.|  
-|`NATIVE_TYPE_UINT`|A native 16-bit unsigned integer value.|  
-|`NATIVE_TYPE_NESTEDSTRUCT`|사용되지 않습니다.<br /><br /> Use NATIVE_TYPE_STRUCT.|  
-|`NATIVE_TYPE_BYVALSTR`|COM Interop.|  
-|`NATIVE_TYPE_ANSIBSTR`|COM Interop.|  
-|`NATIVE_TYPE_TBSTR`|COM Interop.<br /><br /> Select BSTR or ANSIBSTR depending on the platform.|  
-|`NATIVE_TYPE_VARIANTBOOL`|A 2-byte Boolean value, where TRUE is -1 and FALSE is zero.|  
+|`NATIVE_TYPE_IUNKNOWN`|COM Interop를 참조하세요.|  
+|`NATIVE_TYPE_IDISPATCH`|COM Interop를 참조하세요.|  
+|`NATIVE_TYPE_STRUCT`|네이티브 구조체 값입니다.|  
+|`NATIVE_TYPE_INTF`|COM Interop를 참조하세요.|  
+|`NATIVE_TYPE_SAFEARRAY`|COM Interop를 참조하세요.|  
+|`NATIVE_TYPE_FIXEDARRAY`|고정 길이 배열 값입니다.|  
+|`NATIVE_TYPE_INT`|네이티브 16 비트 부호 있는 정수 값입니다.|  
+|`NATIVE_TYPE_UINT`|네이티브 16 비트 부호 없는 정수 값입니다.|  
+|`NATIVE_TYPE_NESTEDSTRUCT`|사용되지 않습니다.<br /><br /> NATIVE_TYPE_STRUCT를 사용 합니다.|  
+|`NATIVE_TYPE_BYVALSTR`|COM Interop를 참조하세요.|  
+|`NATIVE_TYPE_ANSIBSTR`|COM Interop를 참조하세요.|  
+|`NATIVE_TYPE_TBSTR`|COM Interop를 참조하세요.<br /><br /> 플랫폼에 따라 BSTR 또는 ANSIBSTR를 선택 합니다.|  
+|`NATIVE_TYPE_VARIANTBOOL`|2 바이트 부울 값입니다. 여기서 TRUE는-1이 고 FALSE는 0입니다.|  
 |`NATIVE_TYPE_FUNC`|함수 포인터입니다.|  
-|`NATIVE_TYPE_ASANY`|A reference to any native type.|  
-|`NATIVE_TYPE_ARRAY`|A reference to an array with members of an unspecified type.|  
-|`NATIVE_TYPE_LPSTRUCT`|A 32-bit integer pointer to a structure.|  
-|`NATIVE_TYPE_CUSTOMMARSHALER`|A custom marshaler native type.<br /><br /> This must be followed by a string of the following format: "Native type name/0Custom marshaler type name/0Optional cookie/0" or "{Native type GUID}/0Custom marshaler type name/0Optional cookie/0"|  
-|`NATIVE_TYPE_ERROR`|COM Interop.<br /><br /> With ELEMENT_TYPE_I4 this type maps to VT_HRESULT.|  
-|`NATIVE_TYPE_IINSPECTABLE`|A native `IInspectable` type.|  
-|`NATIVE_TYPE_HSTRING`|A native `HString`.|  
-|`NATIVE_TYPE_MAX`|An invalid value.|  
+|`NATIVE_TYPE_ASANY`|네이티브 형식에 대 한 참조입니다.|  
+|`NATIVE_TYPE_ARRAY`|지정 되지 않은 형식의 멤버가 있는 배열에 대 한 참조입니다.|  
+|`NATIVE_TYPE_LPSTRUCT`|구조체에 대 한 32 비트 정수 포인터입니다.|  
+|`NATIVE_TYPE_CUSTOMMARSHALER`|사용자 지정 마샬러 네이티브 형식입니다.<br /><br /> 다음 형식의 문자열이 뒤에와 야 합니다. "네이티브 형식 이름/0 사용자 지정 마샬러 형식 이름/0 선택적 쿠키/0" 또는 "{네이티브 형식 GUID} (사용자 지정 마샬러 형식 이름/0 선택적 쿠키/0")|  
+|`NATIVE_TYPE_ERROR`|COM Interop를 참조하세요.<br /><br /> ELEMENT_TYPE_I4이 형식은 VT_HRESULT에 매핑됩니다.|  
+|`NATIVE_TYPE_IINSPECTABLE`|네이티브 `IInspectable` 형식입니다.|  
+|`NATIVE_TYPE_HSTRING`|네이티브 `HString`입니다.|  
+|`NATIVE_TYPE_MAX`|잘못 된 값입니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** CorHdr.h  
+ **헤더:** CorHdr .h  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Runtime.InteropServices.UnmanagedType>
 - [메타데이터 열거형](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

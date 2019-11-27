@@ -28,31 +28,31 @@ ms.locfileid: "74436311"
   
 |메서드|설명|  
 |------------|-----------------|  
-|[CloseEnum 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-closeenum-method.md)|Releases the handle to the specified enumerator.|  
-|[EnumAssemblyRefs 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-enumassemblyrefs-method.md)|Gets an interface pointer to an enumerator that contains the `mdAssemblyRef` tokens of the assemblies referenced by the assembly in the current metadata scope.|  
-|[EnumExportedTypes 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-enumexportedtypes-method.md)|Gets an interface pointer to an enumerator that contains the `mdExportedType` tokens of the COM types referenced by the assembly in the current metadata scope.|  
-|[EnumFiles 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-enumfiles-method.md)|Gets an interface pointer to an enumerator that contains the `mdFile` tokens of the files referenced by the assembly in the current metadata scope.|  
-|[EnumManifestResources 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-enummanifestresources-method.md)|Gets an interface pointer to an enumerator that contains the `mdManifestResource` tokens of the resources referenced by the assembly in the current metadata scope.|  
-|[FindAssembliesByName 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-findassembliesbyname-method.md)|Gets an array of `mdAssemblyRef` tokens for the assemblies with the specified name.|  
-|[FindExportedTypeByName 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-findexportedtypebyname-method.md)|Gets an `mdExportedType` token for the COM type with the specified name.|  
-|[FindManifestResourceByName 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-findmanifestresourcebyname-method.md)|Gets an `mdManifestResource` token for the resource with the specified name.|  
-|[GetAssemblyFromScope 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-getassemblyfromscope-method.md)|Gets the token for the assembly in the current metadata scope.|  
-|[GetAssemblyProps 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-getassemblyprops-method.md)|Gets the property settings of the specified assembly.|  
-|[GetAssemblyRefProps 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-getassemblyrefprops-method.md)|Gets the property settings of the specified `mdAssemblyRef` token.|  
-|[GetExportedTypeProps 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-getexportedtypeprops-method.md)|Gets the property settings of the specified COM type.|  
-|[GetFileProps 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-getfileprops-method.md)|Gets the property settings of the specified file.|  
-|[GetManifestResourceProps 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-getmanifestresourceprops-method.md)|Gets the property settings of the specified manifest resource.|  
+|[CloseEnum 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-closeenum-method.md)|지정 된 열거자에 대 한 핸들을 해제 합니다.|  
+|[EnumAssemblyRefs 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-enumassemblyrefs-method.md)|현재 메타 데이터 범위에서 어셈블리가 참조 하는 어셈블리의 `mdAssemblyRef` 토큰을 포함 하는 열거자에 대 한 인터페이스 포인터를 가져옵니다.|  
+|[EnumExportedTypes 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-enumexportedtypes-method.md)|현재 메타 데이터 범위에서 어셈블리가 참조 하는 COM 형식의 `mdExportedType` 토큰을 포함 하는 열거자에 대 한 인터페이스 포인터를 가져옵니다.|  
+|[EnumFiles 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-enumfiles-method.md)|현재 메타 데이터 범위에서 어셈블리가 참조 하는 파일의 `mdFile` 토큰을 포함 하는 열거자에 대 한 인터페이스 포인터를 가져옵니다.|  
+|[EnumManifestResources 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-enummanifestresources-method.md)|현재 메타 데이터 범위에서 어셈블리가 참조 하는 리소스의 `mdManifestResource` 토큰을 포함 하는 열거자에 대 한 인터페이스 포인터를 가져옵니다.|  
+|[FindAssembliesByName 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-findassembliesbyname-method.md)|지정 된 이름을 가진 어셈블리에 대 한 `mdAssemblyRef` 토큰의 배열을 가져옵니다.|  
+|[FindExportedTypeByName 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-findexportedtypebyname-method.md)|지정 된 이름을 사용 하 여 COM 형식에 대 한 `mdExportedType` 토큰을 가져옵니다.|  
+|[FindManifestResourceByName 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-findmanifestresourcebyname-method.md)|지정 된 이름을 사용 하 여 리소스에 대 한 `mdManifestResource` 토큰을 가져옵니다.|  
+|[GetAssemblyFromScope 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-getassemblyfromscope-method.md)|현재 메타 데이터 범위에 있는 어셈블리에 대 한 토큰을 가져옵니다.|  
+|[GetAssemblyProps 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-getassemblyprops-method.md)|지정 된 어셈블리의 속성 설정을 가져옵니다.|  
+|[GetAssemblyRefProps 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-getassemblyrefprops-method.md)|지정 된 `mdAssemblyRef` 토큰의 속성 설정을 가져옵니다.|  
+|[GetExportedTypeProps 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-getexportedtypeprops-method.md)|지정 된 COM 형식의 속성 설정을 가져옵니다.|  
+|[GetFileProps 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-getfileprops-method.md)|지정 된 파일의 속성 설정을 가져옵니다.|  
+|[GetManifestResourceProps 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-getmanifestresourceprops-method.md)|지정 된 매니페스트 리소스의 속성 설정을 가져옵니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조 하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [메타데이터 인터페이스](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
 - [IMetaDataAssemblyEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

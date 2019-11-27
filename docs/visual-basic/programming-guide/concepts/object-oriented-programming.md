@@ -1,5 +1,5 @@
 ---
-title: Object-oriented programming
+title: 개체 지향 프로그래밍
 ms.date: 07/20/2015
 ms.assetid: 49794de4-64c3-473c-b8ed-fe98835df69c
 ms.openlocfilehash: 3739919273f4cdd285d519c414c542f1a82a16d2
@@ -9,9 +9,9 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348155"
 ---
-# <a name="object-oriented-programming-visual-basic"></a>Object-oriented programming (Visual Basic)
+# <a name="object-oriented-programming-visual-basic"></a>개체 지향 프로그래밍 (Visual Basic)
 
-Visual Basic provides full support for object-oriented programming including encapsulation, inheritance, and polymorphism.
+Visual Basic은 캡슐화, 상속 및 다형성을 포함 하는 개체 지향 프로그래밍에 대 한 완전 한 지원을 제공 합니다.
 
  *캡슐화*는 서로 관련된 속성, 메서드 및 기타 멤버의 그룹을 하나의 단위나 개체로 취급하는 것을 말합니다.
 
@@ -23,18 +23,18 @@ Visual Basic provides full support for object-oriented programming including enc
 
 - [클래스 및 개체](#classes-and-objects)
   - [클래스 멤버](#class-members)
-    - [Properties and fields](#properties-and-fields)
+    - [속성 및 필드](#properties-and-fields)
     - [메서드](#methods)
     - [생성자](#constructors)
     - [소멸자](#destructors)
     - [이벤트](#events)
-    - [Nested classes](#nested-classes)
-  - [Access modifiers and access levels](#access-modifiers-and-access-levels)
-    - [Instantiating classes](#instantiating-classes)
-    - [Shared classes and members](#shared-classes-and-members)
+    - [중첩 클래스](#nested-classes)
+  - [액세스 한정자 및 액세스 수준](#access-modifiers-and-access-levels)
+    - [클래스 인스턴스화](#instantiating-classes)
+    - [공유 클래스 및 멤버](#shared-classes-and-members)
     - [무명 형식](#anonymous-types)
 - [상속](#inheritance)
-  - [Overriding members](#overriding-members)
+  - [멤버 재정의](#overriding-members)
 - [인터페이스](#interfaces)
 - [제네릭](#generics)
 - [대리자](#delegates)
@@ -50,7 +50,7 @@ Class SampleClass
 End Class
 ```
 
-Visual Basic also provides a light version of classes called *structures* that are useful when you need to create large array of objects and do not want to consume too much memory for that.
+또한 Visual Basic는 큰 개체 배열을 만들어야 하 고 해당 개체에 너무 많은 메모리를 사용 하지 않으려는 경우에 유용 하 게 사용 되는 *구조체* 라는 클래스의 light 버전을 제공 합니다.
 
 구조체를 정의하려면
 
@@ -64,11 +64,11 @@ End Structure
 - [Class 문](../../../visual-basic/language-reference/statements/class-statement.md)
 - [Structure 문](../../../visual-basic/language-reference/statements/structure-statement.md)
 
-### <a name="class-members"></a>Class members
+### <a name="class-members"></a>클래스 멤버
 
 각 클래스에는 클래스 데이터를 설명하는 속성, 클래스 동작을 정의하는 메서드 및 서로 다른 클래스와 개체 간의 통신을 제공하는 이벤트가 포함된 다양한 *클래스 멤버*가 있을 수 있습니다.
 
-#### <a name="properties-and-fields"></a>Properties and fields
+#### <a name="properties-and-fields"></a>속성 및 필드
 
 필드 및 속성은 개체가 포함하는 정보를 나타냅니다. 필드는 직접 읽거나 설정할 수 있기 때문에 변수와 비슷합니다.
 
@@ -82,7 +82,7 @@ End Class
 
 속성에는 값을 설정하고 가져오는 방법을 보다 세밀하게 제어할 수 있는 get 및 set 프로시저가 있습니다.
 
-Visual Basic allows you either to create a private field for storing the property value or use so-called auto-implemented properties that create this field automatically behind the scenes and provide the basic logic for the property procedures.
+Visual Basic를 사용 하면 속성 값을 저장 하기 위한 전용 필드를 만들거나이 필드를 내부적으로 자동으로 만들고 속성 프로시저에 대 한 기본 논리를 제공 하는 자동 구현 속성을 사용할 수 있습니다.
 
 자동 구현 속성을 정의하려면
 
@@ -150,13 +150,13 @@ Overloads Sub Display(ByVal theInteger As Integer)
 End Sub
 ```
 
-대부분의 경우 클래스 정의 내에서 메서드를 선언하지만 However, Visual Basic also supports *extension methods* that allow you to add methods to an existing class outside the actual definition of the class.
+대부분의 경우 클래스 정의 내에서 메서드를 선언하지만 그러나 Visual Basic는 클래스의 실제 정의 밖에 있는 기존 클래스에 메서드를 추가할 수 있는 *확장 메서드도* 지원 합니다.
 
 자세한 내용은 다음을 참조하십시오.
 
 - [Function 문](../../../visual-basic/language-reference/statements/function-statement.md)
 - [Sub 문](../../../visual-basic/language-reference/statements/sub-statement.md)
-- [오버로드](../../../visual-basic/language-reference/modifiers/overloads.md)
+- [Overloads](../../../visual-basic/language-reference/modifiers/overloads.md)
 - [확장명 메서드](../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)
 
 #### <a name="constructors"></a>생성자
@@ -173,7 +173,7 @@ Class SampleClass
 End Class
 ```
 
-For more information, see: [Object Lifetime: How Objects Are Created and Destroyed](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).
+자세한 내용은 [개체 수명: 개체가 만들어지고 소멸 되는 방법](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)을 참조 하세요.
 
 #### <a name="destructors"></a>소멸자
 
@@ -183,17 +183,17 @@ For more information, see: [Object Lifetime: How Objects Are Created and Destroy
 
 #### <a name="events"></a>이벤트
 
-클래스나 개체에서는 특정 상황이 발생할 때 이벤트를 통해 다른 클래스나 개체에 이를 알려 줄 수 있습니다. 이벤트를 보내거나 발생시키는 클래스를 *게시자*라고 하며 이벤트를 받거나 처리하는 클래스를 *구독자*라고 합니다. 이벤트를 발생시키고 처리하는 방법에 대한 자세한 내용은 [이벤트](../../../standard/events/index.md)를 참조하세요.
+클래스나 개체에서는 특정 상황이 발생할 때 이벤트를 통해 다른 클래스나 개체에 이를 알려줄 수 있습니다. 이벤트를 보내거나 발생시키는 클래스를 *게시자*라고 하며 이벤트를 받거나 처리하는 클래스를 *구독자*라고 합니다. 이벤트를 발생시키고 처리하는 방법에 대한 자세한 내용은 [이벤트](../../../standard/events/index.md)를 참조하세요.
 
-- To declare events, use the [Event Statement](../../../visual-basic/language-reference/statements/event-statement.md).
+- 이벤트를 선언 하려면 [이벤트 문을](../../../visual-basic/language-reference/statements/event-statement.md)사용 합니다.
 
-- To raise events, use the [RaiseEvent Statement](../../../visual-basic/language-reference/statements/raiseevent-statement.md).
+- 이벤트를 발생 시키려면 [RaiseEvent 문을](../../../visual-basic/language-reference/statements/raiseevent-statement.md)사용 합니다.
 
-- To specify event handlers using a declarative way, use the [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md) statement and the [Handles](../../../visual-basic/language-reference/statements/handles-clause.md) clause.
+- 선언적 방법을 사용 하 여 이벤트 처리기를 지정 하려면 [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md) 문과 [Handles](../../../visual-basic/language-reference/statements/handles-clause.md) 절을 사용 합니다.
 
-- To be able to dynamically add, remove, and change the event handler associated with an event, use the [AddHandler Statement](../../../visual-basic/language-reference/statements/addhandler-statement.md) and [RemoveHandler Statement](../../../visual-basic/language-reference/statements/removehandler-statement.md) together with the [AddressOf Operator](../../../visual-basic/language-reference/operators/addressof-operator.md).
+- 이벤트와 연결 된 이벤트 처리기를 동적으로 추가, 제거 및 변경할 수 있으려면 AddressOf [문과](../../../visual-basic/language-reference/statements/addhandler-statement.md) [RemoveHandler 문을](../../../visual-basic/language-reference/statements/removehandler-statement.md) [AddressOf 연산자](../../../visual-basic/language-reference/operators/addressof-operator.md)와 함께 사용 합니다.
 
-#### <a name="nested-classes"></a>Nested classes
+#### <a name="nested-classes"></a>중첩 클래스
 
 다른 클래스 내에 정의된 클래스를 *중첩 클래스*라고 합니다. 기본적으로 중첩 클래스는 전용입니다.
 
@@ -211,7 +211,7 @@ End Class
 Dim nestedInstance As Container.Nested = New Container.Nested()
 ```
 
-### <a name="access-modifiers-and-access-levels"></a>Access modifiers and access levels
+### <a name="access-modifiers-and-access-levels"></a>액세스 한정자 및 액세스 수준
 
 모든 클래스 및 클래스 멤버는 *액세스 한정자*를 사용하여 다른 클래스에 제공할 액세스 수준을 지정할 수 있습니다.
 
@@ -220,14 +220,14 @@ Dim nestedInstance As Container.Nested = New Container.Nested()
 |Visual Basic 한정자|정의|
 |---------------------------|----------------|
 |[Public](../../../visual-basic/language-reference/modifiers/public.md)|동일한 어셈블리의 다른 코드나 해당 어셈블리를 참조하는 다른 어셈블리의 코드에서 형식이나 멤버에 액세스할 수 있습니다.|
-|[전용](../../../visual-basic/language-reference/modifiers/private.md)|동일한 클래스의 코드에서만 형식이나 멤버에 액세스할 수 있습니다.|
-|[보호됨](../../../visual-basic/language-reference/modifiers/protected.md)|동일한 클래스의 코드나 파생 클래스의 코드에서만 형식이나 멤버에 액세스할 수 있습니다.|
+|[Private](../../../visual-basic/language-reference/modifiers/private.md)|동일한 클래스의 코드에서만 형식이나 멤버에 액세스할 수 있습니다.|
+|[Protected](../../../visual-basic/language-reference/modifiers/protected.md)|동일한 클래스의 코드나 파생 클래스의 코드에서만 형식이나 멤버에 액세스할 수 있습니다.|
 |[Friend](../../../visual-basic/language-reference/modifiers/friend.md)|동일한 어셈블리의 코드에서는 형식이나 멤버에 액세스할 수 있지만 다른 어셈블리의 코드에서는 액세스할 수 없습니다.|
 |`Protected Friend`|동일한 어셈블리의 코드 또는 다른 어셈블리의 파생 클래스에서 형식이나 멤버에 액세스할 수 있습니다.|
 
-For more information, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
+자세한 내용은 [Visual Basic의 액세스 수준](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)을 참조 하세요.
 
-### <a name="instantiating-classes"></a>Instantiating classes
+### <a name="instantiating-classes"></a>클래스 인스턴스화
 
 개체를 만들려면 클래스를 인스턴스화하거나 클래스 인스턴스를 만들어야 합니다.
 
@@ -256,11 +256,11 @@ Dim sampleObject = New SampleClass With
 - [New 연산자](../../../visual-basic/language-reference/operators/new-operator.md)
 - [개체 이니셜라이저: 명명된 형식과 익명 형식](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
 
-### <a name="shared-classes-and-members"></a>Shared classes and members
+### <a name="shared-classes-and-members"></a>공유 클래스 및 멤버
 
- A shared member of the class is a property, procedure, or field that is shared by all instances of a class.
+ 클래스의 공유 멤버는 클래스의 모든 인스턴스에서 공유 하는 속성, 프로시저 또는 필드입니다.
 
- To define a shared member:
+ 공유 멤버를 정의 하려면:
 
 ```vb
 Class SampleClass
@@ -268,13 +268,13 @@ Class SampleClass
 End Class
 ```
 
- To access the shared member, use the name of the class without creating an object of this class:
+ 공유 멤버에 액세스 하려면이 클래스의 개체를 만들지 않고 클래스의 이름을 사용 합니다.
 
 ```vb
 MsgBox(SampleClass.SampleString)
 ```
 
- Shared modules in Visual Basic have shared members only and cannot be instantiated. Shared members also cannot access non-shared properties, fields or methods
+ Visual Basic 공유 모듈은 공유 멤버만 포함 하며 인스턴스화할 수 없습니다. 공유 멤버도 비공유 속성, 필드 또는 메서드에 액세스할 수 없습니다.
 
  자세한 내용은 다음을 참조하십시오.
 
@@ -297,10 +297,10 @@ Dim sampleObject =
 
 ## <a name="inheritance"></a>상속
 
-상속을 사용하면 다른 클래스에 정의된 동작을 다시 사용, 확장 및 수정하는 새 클래스를 만들 수 있습니다. 멤버가 상속되는 클래스를 *기본 클래스*라고 하고 해당 멤버를 상속하는 클래스를 *파생 클래스*라고 합니다. However, all classes in Visual Basic implicitly inherit from the <xref:System.Object> class that supports .NET class hierarchy and provides low-level services to all classes.
+상속을 사용하면 다른 클래스에 정의된 동작을 다시 사용, 확장 및 수정하는 새 클래스를 만들 수 있습니다. 멤버가 상속되는 클래스를 *기본 클래스*라고 하고 해당 멤버를 상속하는 클래스를 *파생 클래스*라고 합니다. 그러나 Visual Basic의 모든 클래스는 .NET 클래스 계층 구조를 지원 하 고 모든 클래스에 하위 수준 서비스를 제공 하는 <xref:System.Object> 클래스에서 암시적으로 상속 됩니다.
 
 > [!NOTE]
-> Visual Basic doesn't support multiple inheritance. 즉, 파생된 클래스에 대해 하나의 기본 클래스만 지정할 수 있습니다.
+> Visual Basic는 다중 상속을 지원 하지 않습니다. 즉, 파생된 클래스에 대해 하나의 기본 클래스만 지정할 수 있습니다.
 
 기본 클래스에서 상속하려면
 
@@ -332,7 +332,7 @@ End Class
 - [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)
 - [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)
 
-### <a name="overriding-members"></a>Overriding members
+### <a name="overriding-members"></a>멤버 재정의
 
 기본적으로 파생 클래스는 해당 기본 클래스에서 모든 멤버를 상속합니다. 상속된 멤버의 동작을 변경하려면 해당 멤버를 재정의해야 합니다. 즉, 파생 클래스에 해당 메서드, 속성 또는 이벤트의 새로운 구현을 정의할 수 있습니다.
 
@@ -340,10 +340,10 @@ End Class
 
 |Visual Basic 한정자|정의|
 |---------------------------|----------------|
-|[재정의 가능](../../../visual-basic/language-reference/modifiers/overridable.md)|파생 클래스에서 클래스 멤버를 재정의할 수 있도록 합니다.|
+|[Overrides](../../../visual-basic/language-reference/modifiers/overridable.md)|파생 클래스에서 클래스 멤버를 재정의할 수 있도록 합니다.|
 |[재정의](../../../visual-basic/language-reference/modifiers/overrides.md)|기본 클래스에 정의된 가상(재정의 가능) 멤버를 재정의합니다.|
 |[NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)|멤버가 상속 클래스에서 재정의되지 않도록 합니다.|
-|[New](../../../visual-basic/language-reference/modifiers/mustoverride.md)|파생 클래스에서 클래스 멤버가 재정의되도록 합니다.|
+|[MyBase](../../../visual-basic/language-reference/modifiers/mustoverride.md)|파생 클래스에서 클래스 멤버가 재정의되도록 합니다.|
 |[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)|기본 클래스에서 상속된 멤버를 숨깁니다.|
 
 ## <a name="interfaces"></a>인터페이스
@@ -377,7 +377,7 @@ End Class
 
 ## <a name="generics"></a>제네릭
 
-Classes, structures, interfaces and methods in .NET can include *type parameters* that define types of objects that they can store or use. 제네릭의 가장 일반적인 예는 컬렉션에 저장할 개체의 형식을 지정할 수 있는 컬렉션입니다.
+.NET의 클래스, 구조체, 인터페이스 및 메서드는 저장 하거나 사용할 수 있는 개체 형식을 정의 하는 *형식 매개 변수* 를 포함할 수 있습니다. 제네릭의 가장 일반적인 예는 컬렉션에 저장할 개체의 형식을 지정할 수 있는 컬렉션입니다.
 
 제네릭 클래스를 정의하려면
 
@@ -434,6 +434,6 @@ End Class
 - [Delegate 문](../../../visual-basic/language-reference/statements/delegate-statement.md)
 - [AddressOf 연산자](../../../visual-basic/language-reference/operators/addressof-operator.md)
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Visual Basic 프로그래밍 가이드](../../../visual-basic/programming-guide/index.md)

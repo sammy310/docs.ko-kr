@@ -39,40 +39,40 @@ HRESULT EnumMethodSemantics (
   
 ## <a name="parameters"></a>매개 변수  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
+ [in, out] 열거자에 대 한 포인터입니다. 이 메서드의 첫 번째 호출에서는 NULL 이어야 합니다.  
   
  `mb`  
- [in] A MethodDef token that limits the scope of the enumeration.  
+ 진행 열거형의 범위를 제한 하는 MethodDef 토큰입니다.  
   
  `rEventProp`  
- [out] The array used to store the events or properties.  
+ 제한이 이벤트 또는 속성을 저장 하는 데 사용 되는 배열입니다.  
   
  `cMax`  
  [in] `rEventProp` 배열의 최대 크기입니다.  
   
  `pcEventProp`  
- [out] The number of events or properties returned in `rEventProp`.  
+ 제한이 `rEventProp`에서 반환 되는 이벤트 또는 속성의 수입니다.  
   
 ## <a name="return-value"></a>반환 값  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethodSemantics` returned successfully.|  
-|`S_FALSE`|There are no events or properties to enumerate. In that case, `pcEventProp` is zero.|  
+|`S_OK`|`EnumMethodSemantics` 성공적으로 반환 되었습니다.|  
+|`S_FALSE`|열거할 이벤트 또는 속성이 없습니다. 이 경우 `pcEventProp`은 0입니다.|  
   
 ## <a name="remarks"></a>주의  
- Many common language runtime types define *Property*`Changed` events and `On`*Property*`Changed` methods related to their properties. For example, the <xref:System.Windows.Forms.Control?displayProperty=nameWithType> type defines a <xref:System.Windows.Forms.Control.Font%2A> property, a <xref:System.Windows.Forms.Control.FontChanged> event, and an <xref:System.Windows.Forms.Control.OnFontChanged%2A> method. The set accessor method of the <xref:System.Windows.Forms.Control.Font%2A> property calls <xref:System.Windows.Forms.Control.OnFontChanged%2A> method, which in turn raises the <xref:System.Windows.Forms.Control.FontChanged> event. You would call `EnumMethodSemantics` using the MethodDef for <xref:System.Windows.Forms.Control.OnFontChanged%2A> to get references to the <xref:System.Windows.Forms.Control.Font%2A> property and the <xref:System.Windows.Forms.Control.FontChanged> event.  
+ 대부분의 공용 언어 런타임 형식은 *속성`Changed` 이벤트와 `On`속성`Changed`* *속성과 관련* 된 메서드를 정의 합니다. 예를 들어 <xref:System.Windows.Forms.Control?displayProperty=nameWithType> 형식은 <xref:System.Windows.Forms.Control.Font%2A> 속성, <xref:System.Windows.Forms.Control.FontChanged> 이벤트 및 <xref:System.Windows.Forms.Control.OnFontChanged%2A> 메서드를 정의 합니다. <xref:System.Windows.Forms.Control.Font%2A> 속성의 set 접근자 메서드는 <xref:System.Windows.Forms.Control.OnFontChanged%2A> 메서드를 호출 하 여 <xref:System.Windows.Forms.Control.FontChanged> 이벤트를 발생 시킵니다. <xref:System.Windows.Forms.Control.OnFontChanged%2A>에 대 한 MethodDef를 사용 하 여 `EnumMethodSemantics`를 호출 하 여 <xref:System.Windows.Forms.Control.Font%2A> 속성 및 <xref:System.Windows.Forms.Control.FontChanged> 이벤트에 대 한 참조를 가져옵니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IMetaDataImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

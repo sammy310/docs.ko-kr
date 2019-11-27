@@ -50,7 +50,7 @@ HRESULT Next (    [in]  ULONG      celt,
   
 |HRESULT|설명|  
 |-------------|-----------------|  
-|S_OK|`celt` 요소가 반환되었습니다.|  
+|S_OK|`celt` 요소가 반환 되었습니다.|  
 |S_FALSE|`celt`개 미만의 요소가 반환되었으며 이는 열거형이 완료되었음을 나타냅니다.|  
   
 ## <a name="requirements"></a>요구 사항  
@@ -62,7 +62,7 @@ HRESULT Next (    [in]  ULONG      celt,
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerThreadEnum 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md)
 - [프로파일링 인터페이스](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

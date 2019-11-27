@@ -16,7 +16,7 @@ ms.locfileid: "74351418"
 ---
 # <a name="out-generic-modifier-visual-basic"></a>Out(제네릭 한정자)(Visual Basic)
 
-For generic type parameters, the `Out` keyword specifies that the type is covariant.
+제네릭 형식 매개 변수의 경우 `Out` 키워드는 형식이 공변 (covariant) 임을 지정 합니다.
 
 ## <a name="remarks"></a>주의
 
@@ -37,11 +37,11 @@ For generic type parameters, the `Out` keyword specifies that the type is covari
 
 - 형식 매개 변수는 인터페이스 메서드에 대한 제네릭 제약 조건으로 사용되지 않습니다.
 
-In a generic delegate, a type parameter can be declared covariant if it is used only as a method return type and not used for method arguments.
+제네릭 대리자에서 형식 매개 변수는 메서드 반환 형식 으로만 사용 되 고 메서드 인수에는 사용 되지 않는 경우 공변 (covariant)으로 선언할 수 있습니다.
 
 공변성(Covariance) 및 반공변성(Contravariance)은 참조 형식에 대해 지원되고 값 형식에 대해서는 지원되지 않습니다.
 
-In Visual Basic, you cannot declare events in covariant interfaces without specifying the delegate type. Also, covariant interfaces cannot have nested classes, enums, or structures, but they can have nested interfaces.
+Visual Basic에서는 대리자 형식을 지정 하지 않고 공변 (covariant) 인터페이스에서 이벤트를 선언할 수 없습니다. 또한 공변 (covariant) 인터페이스에는 중첩 된 클래스, 열거형 또는 구조체를 사용할 수 없지만 중첩 된 인터페이스가 있을 수 있습니다.
 
 ## <a name="behavior"></a>동작
 
@@ -57,11 +57,11 @@ In Visual Basic, you cannot declare events in covariant interfaces without speci
 
 ## <a name="example"></a>예제
 
-다음 예제에서는 공변(covariant) 제네릭 대리자를 선언, 인스턴스화 및 호출하는 방법을 보여 줍니다. It also shows how you can use implicit conversion for delegate types.
+다음 예제에서는 공변(covariant) 제네릭 대리자를 선언, 인스턴스화 및 호출하는 방법을 보여 줍니다. 또한 대리자 형식에 대해 암시적 변환을 사용 하는 방법을 보여 줍니다.
 
 [!code-vb[vbVarianceKeywords#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvariancekeywords/vb/module1.vb#4)]
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [제네릭 인터페이스의 가변성](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
 - [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)

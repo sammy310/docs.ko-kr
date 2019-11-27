@@ -38,9 +38,9 @@ End With
 
 |용어|정의|
 |---|---|
-|`objectExpression`|필수 요소. 개체를 평가하는 식입니다. 식은 임의적으로 복잡할 수 있으며, 한 번만 계산됩니다. 식이 기본 형식을 포함하여 모든 데이터 형식으로 계산될 수 있습니다.|
+|`objectExpression`|필수입니다. 개체를 평가하는 식입니다. 식은 임의적으로 복잡할 수 있으며, 한 번만 계산됩니다. 식이 기본 형식을 포함하여 모든 데이터 형식으로 계산될 수 있습니다.|
 |`statements`|(선택 사항) `With`의 평가를 통해 생성된 개체의 멤버를 참조할 수 있는 `End With`와 `objectExpression` 사이의 하나 이상의 문입니다.|
-|`End With`|필수 요소. `With` 블록의 정의를 종료합니다.|
+|`End With`|필수입니다. `With` 블록의 정의를 종료합니다.|
 
 ## <a name="remarks"></a>주의
 
@@ -64,10 +64,10 @@ End With
 
 블록 외부에서 `With` 문 블록으로 분기할 수 없습니다.
 
-블록에 루프가 없으면 문이 한 번만 실행됩니다. 다른 종류의 제어 구조를 중첩할 수 있습니다. For more information, see [Nested Control Structures](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md).
+블록에 루프가 없으면 문이 한 번만 실행됩니다. 다른 종류의 제어 구조를 중첩할 수 있습니다. 자세한 내용은 [중첩 컨트롤 구조](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)를 참조 하세요.
 
 > [!NOTE]
-> 개체 이니셜라이저에서도 `With` 키워드를 사용할 수 있습니다. For more information and examples, see [Object Initializers: Named and Anonymous Types](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md) and [Anonymous Types](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).
+> 개체 이니셜라이저에서도 `With` 키워드를 사용할 수 있습니다. 자세한 내용 및 예제는 [개체 이니셜라이저: 명명 된 형식과 익명 형식](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md) 및 [익명 형식](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)을 참조 하세요.
 >
 > 인스턴스화한 개체의 필드 또는 속성을 초기화하기 위해서만 `With` 블록을 사용하는 경우 대신 개체 이니셜라이저를 사용할 것을 고려하십시오.
 
@@ -83,7 +83,7 @@ End With
 
 [!code-vb[VbVbalrWithStatement#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrwithstatement/vb/mainwindow.xaml.vb#1)]
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Collections.Generic.List%601>
 - [중첩 제어 구조](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)

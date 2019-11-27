@@ -16,33 +16,33 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350482"
 ---
 # <a name="how-to-define-multiple-versions-of-a-procedure-visual-basic"></a>방법: 여러 버전의 프로시저 정의(Visual Basic)
-You can define a procedure in multiple versions by *overloading* it, using the same name but a different parameter list for each version. The purpose of overloading is to define several closely related versions of a procedure without having to differentiate them by name.  
+각 버전에 대해 동일한 이름을 사용 하 고 다른 매개 변수 목록을 사용 *하 여 프로시저* 를 여러 버전으로 정의할 수 있습니다. 오버 로드의 목적은 프로시저를 이름으로 구분 하지 않고도 긴밀 하 게 관련 된 여러 버전을 정의 하는 것입니다.  
   
  자세한 내용은 [Procedure Overloading](./procedure-overloading.md)을 참조하세요.  
   
-### <a name="to-define-multiple-versions-of-a-procedure"></a>To define multiple versions of a procedure  
+### <a name="to-define-multiple-versions-of-a-procedure"></a>프로시저의 여러 버전을 정의 하려면  
   
-1. Write a `Sub` or `Function` declaration statement for each version of the procedure you want to define. Use the same procedure name in every declaration.  
+1. 정의 하려는 프로시저의 각 버전에 대 한 `Sub` 또는 `Function` 선언문을 작성 합니다. 모든 선언에 동일한 프로시저 이름을 사용 합니다.  
   
-2. Precede the `Sub` or `Function` keyword in each declaration with the [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md) keyword. You can optionally omit `Overloads` in the declarations, but if you include it in any of the declarations, you must include it in every declaration.  
+2. 각 선언의 `Sub` 또는 `Function` 키워드 앞에 [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md) 키워드를 사용 합니다. 필요에 따라 선언에서 `Overloads` 생략할 수 있지만 선언에 포함 하는 경우 모든 선언에 포함 해야 합니다.  
   
-3. Following each declaration statement, write procedure code to handle the specific case where the calling code supplies arguments matching that version's parameter list. You do not have to test for which parameters the calling code has supplied. Visual Basic passes control to the matching version of your procedure.  
+3. 각 선언 문 다음에 호출 코드가 해당 버전의 매개 변수 목록과 일치 하는 인수를 제공 하는 특정 사례를 처리 하는 프로시저 코드를 작성 합니다. 호출 코드에서 제공 하는 매개 변수를 테스트할 필요가 없습니다. Visual Basic는 프로시저의 일치 하는 버전으로 제어를 전달 합니다.  
   
-4. Terminate each version of the procedure with the `End Sub` or `End Function` statement as appropriate.  
+4. `End Sub` 또는 `End Function` 문을 사용 하 여 프로시저의 각 버전을 적절 하 게 종료 합니다.  
   
 ## <a name="example"></a>예제  
- The following example defines a `Sub` procedure to post a transaction against a customer's balance. It uses the `Overloads` keyword to define two versions of the procedure, one that accepts the customer by name and the other by account number.  
+ 다음 예에서는 고객의 잔액에 대해 트랜잭션을 게시 하는 `Sub` 프로시저를 정의 합니다. `Overloads` 키워드를 사용 하 여 두 가지 버전의 프로시저를 정의 합니다. 하나는 이름으로 고객을 수락 하 고 다른 하나는 계정 번호로 지정 합니다.  
   
  [!code-vb[VbVbcnProcedures#72](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#72)]  
   
- The calling code can obtain the customer identification as either a `String` or an `Integer`, and then use the same calling statement in either case.  
+ 호출 코드는 고객 id를 `String` 또는 `Integer`으로 가져온 다음 두 경우 모두 동일한 호출 문을 사용할 수 있습니다.  
   
- For information on how to call these versions of the `post` procedure, see [How to: Call an Overloaded Procedure](./how-to-call-an-overloaded-procedure.md).  
+ 이러한 버전의 `post` 프로시저를 호출 하는 방법에 대 한 자세한 내용은 [방법: 오버 로드 된 프로시저 호출](./how-to-call-an-overloaded-procedure.md)을 참조 하세요.  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
- Make sure each of your overloaded versions has the same procedure name but a different parameter list.  
+ 오버 로드 된 각 버전에 동일한 프로시저 이름이 있지만 다른 매개 변수 목록이 있는지 확인 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [절차](./index.md)
 - [프로시저 매개 변수 및 인수](./procedure-parameters-and-arguments.md)

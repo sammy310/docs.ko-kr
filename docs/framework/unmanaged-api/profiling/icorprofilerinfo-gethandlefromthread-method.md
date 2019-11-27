@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439058"
 ---
 # <a name="icorprofilerinfogethandlefromthread-method"></a>ICorProfilerInfo::GetHandleFromThread 메서드
-Maps the ID of a thread to a Win32 thread handle.  
+스레드의 ID를 Win32 스레드 핸들에 매핑합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -35,13 +35,13 @@ HRESULT GetHandleFromThread(
   
 ## <a name="parameters"></a>매개 변수  
  `threadId`  
- [in] The thread ID to be mapped.  
+ 진행 매핑할 스레드 ID입니다.  
   
  `phThread`  
- [out] A pointer to a Win32 thread handle.  
+ 제한이 Win32 스레드 핸들에 대 한 포인터입니다.  
   
 ## <a name="remarks"></a>주의  
- The profiler must call the Win32 `DuplicateHandle` function on the handle before using it.  
+ 프로파일러는 사용 하기 전에 핸들에서 Win32 `DuplicateHandle` 함수를 호출 해야 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
@@ -52,6 +52,6 @@ HRESULT GetHandleFromThread(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerInfo 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

@@ -15,27 +15,27 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351795"
 ---
 # <a name="object-variable-values-visual-basic"></a>개체 변수 값(Visual Basic)
-A variable of the [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md) can refer to data of any type. The value you store in an `Object` variable is kept elsewhere in memory, while the variable itself holds a pointer to the data.  
+[Object 데이터 형식의](../../../../visual-basic/language-reference/data-types/object-data-type.md) 변수는 모든 형식의 데이터를 참조할 수 있습니다. `Object` 변수에 저장 하는 값은 메모리의 다른 위치에 유지 되는 반면 변수 자체는 데이터에 대 한 포인터를 보유 합니다.  
   
-## <a name="object-classifier-functions"></a>Object Classifier Functions  
- Visual Basic supplies functions that return information about what an `Object` variable refers to, as shown in the following table.  
+## <a name="object-classifier-functions"></a>개체 분류자 함수  
+ Visual Basic는 다음 표에 나와 있는 것 처럼 `Object` 변수가 참조 하는 내용에 대 한 정보를 반환 하는 함수를 제공 합니다.  
   
-|기능|Returns True if the Object variable refers to|  
+|함수|개체 변수가 참조 하는 경우 True를 반환 합니다.|  
 |--------------|---------------------------------------------------|  
-|<xref:Microsoft.VisualBasic.Information.IsArray%2A>|An array of values, rather than a single value|  
-|<xref:Microsoft.VisualBasic.Information.IsDate%2A>|A [Date Data Type](../../../../visual-basic/language-reference/data-types/date-data-type.md) value, or a string that can be interpreted as a date and time value|  
-|<xref:Microsoft.VisualBasic.Information.IsDBNull%2A>|An object of type <xref:System.DBNull>, which represents missing or nonexistent data|  
-|<xref:Microsoft.VisualBasic.Information.IsError%2A>|An exception object, which derives from <xref:System.Exception>|  
-|<xref:Microsoft.VisualBasic.Information.IsNothing%2A>|[Nothing](../../../../visual-basic/language-reference/nothing.md), that is, no object is currently assigned to the variable|  
-|<xref:Microsoft.VisualBasic.Information.IsNumeric%2A>|A number, or a string that can be interpreted as a number|  
-|<xref:Microsoft.VisualBasic.Information.IsReference%2A>|A reference type (such as a string, array, delegate, or class type)|  
+|<xref:Microsoft.VisualBasic.Information.IsArray%2A>|단일 값이 아닌 값의 배열입니다.|  
+|<xref:Microsoft.VisualBasic.Information.IsDate%2A>|날짜 [데이터 형식](../../../../visual-basic/language-reference/data-types/date-data-type.md) 값 또는 날짜 및 시간 값으로 해석 될 수 있는 문자열입니다.|  
+|<xref:Microsoft.VisualBasic.Information.IsDBNull%2A>|누락 되거나 존재 하지 않는 데이터를 나타내는 <xref:System.DBNull>형식의 개체입니다.|  
+|<xref:Microsoft.VisualBasic.Information.IsError%2A>|에서 파생 되는 예외 개체 <xref:System.Exception>|  
+|<xref:Microsoft.VisualBasic.Information.IsNothing%2A>|[Nothing](../../../../visual-basic/language-reference/nothing.md), 즉 변수에 현재 할당 된 개체가 없습니다.|  
+|<xref:Microsoft.VisualBasic.Information.IsNumeric%2A>|숫자 또는 숫자로 해석할 수 있는 문자열입니다.|  
+|<xref:Microsoft.VisualBasic.Information.IsReference%2A>|참조 형식 (예: 문자열, 배열, 대리자 또는 클래스 형식)|  
   
- You can use these functions to avoid submitting an invalid value to an operation or a procedure.  
+ 이러한 함수를 사용 하 여 작업 또는 프로시저에 잘못 된 값을 제출 하지 않도록 방지할 수 있습니다.  
   
 ## <a name="typeof-operator"></a>TypeOf 연산자  
- You can also use the [TypeOf Operator](../../../../visual-basic/language-reference/operators/typeof-operator.md) to determine whether an object variable currently refers to a specific data type. The `TypeOf`...`Is` expression evaluates to `True` if the run-time type of the operand is derived from or implements the specified type.  
+ [TypeOf 연산자](../../../../visual-basic/language-reference/operators/typeof-operator.md) 를 사용 하 여 현재 개체 변수가 특정 데이터 형식을 참조 하는지 여부를 확인할 수도 있습니다. `TypeOf`...`Is` 식은 피연산자의 런타임 형식이에서 파생 되거나 지정 된 형식을 구현 하는 경우 `True`로 평가 됩니다.  
   
- The following example uses `TypeOf` on object variables referring to value and reference types.  
+ 다음 예제에서는 값 및 참조 형식을 참조 하는 개체 변수에 `TypeOf`를 사용 합니다.  
   
 ```vb  
 ' The following statement puts a value type (Integer) in an Object variable.  
@@ -51,7 +51,7 @@ If TypeOf frm Is Label Then Debug.WriteLine("frm is Label")
 If TypeOf frm Is Object Then Debug.WriteLine("frm is Object")  
 ```  
   
- The preceding example writes the following lines to the **Debug** window:  
+ 앞의 예제에서는 **디버그** 창에 다음 줄을 씁니다.  
   
  `num is Integer`  
   
@@ -61,12 +61,12 @@ If TypeOf frm Is Object Then Debug.WriteLine("frm is Object")
   
  `frm is Object`  
   
- The object variable `num` refers to data of type `Integer`, and `frm` refers to an object of class <xref:System.Windows.Forms.Form>.  
+ `num` 개체 변수는 `Integer`형식의 데이터를 참조 하 고 `frm`는 클래스 <xref:System.Windows.Forms.Form>의 개체를 참조 합니다.  
   
-## <a name="object-arrays"></a>Object Arrays  
- You can declare and use an array of `Object` variables. This is useful when you need to handle a variety of data types and object classes. All the elements in an array must have the same declared data type. Declaring this data type as `Object` allows you to store objects and class instances alongside other data types in the array.  
+## <a name="object-arrays"></a>개체 배열  
+ `Object` 변수 배열을 선언 하 고 사용할 수 있습니다. 이는 다양 한 데이터 형식 및 개체 클래스를 처리 해야 하는 경우에 유용 합니다. 배열의 모든 요소에는 동일한 선언 된 데이터 형식이 있어야 합니다. 이 데이터 형식을 `Object`로 선언 하면 개체와 클래스 인스턴스를 배열에 있는 다른 데이터 형식과 함께 저장할 수 있습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [개체 변수](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [개체 변수 선언](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)

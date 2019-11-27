@@ -16,23 +16,23 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347362"
 ---
 # <a name="visual-basic-limitations"></a>Visual Basic 제한 사항
-Earlier versions of Visual Basic enforced boundaries in code, such as the length of variable names, the number of variables allowed in modules, and module size. In Visual Basic .NET, these restrictions have been relaxed, giving you greater freedom in writing and arranging your code.  
+이전 버전의에서는 변수 이름 길이, 모듈에서 허용 되는 변수 수 및 모듈 크기와 같이 코드에서 경계를 적용 Visual Basic. Visual Basic .NET에서는 이러한 제한이 완화 되어 코드를 작성 하 고 정렬 하는 데 더 많은 자유를 제공 합니다.  
   
- Physical limits are dependent more on run-time memory than on compile-time considerations. If you use prudent programming practices, and divide large applications into multiple classes and modules, then there is very little chance of encountering an internal Visual Basic limitation.  
+ 실제 제한은 컴파일 시간 고려 사항 보다 런타임 메모리에 따라 달라 집니다. 신중한 프로그래밍 관행을 사용 하 고 큰 응용 프로그램을 여러 클래스 및 모듈로 나누는 경우 내부 Visual Basic 제한이 발생할 가능성이 거의 없습니다.  
   
- The following are some limitations that you might encounter in extreme cases:  
+ 극단적인 경우에 발생할 수 있는 몇 가지 제한 사항은 다음과 같습니다.  
   
-- **Name Length.** There is a maximum number of characters for the name of every declared programming element. This maximum applies to an entire qualification string if the element name is qualified. [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)을 참조하세요.  
+- **이름 길이입니다.** 선언 된 모든 프로그래밍 요소의 이름에는 최대 자까지 사용할 수 있습니다. 이 최대값은 요소 이름이 정규화 된 경우 전체 정규화 문자열에 적용 됩니다. [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)을 참조하세요.  
   
-- **Line Length.** There is a maximum of 65535 characters in a physical line of source code. The logical source code line can be longer if you use line continuation characters. See [How to: Break and Combine Statements in Code](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md).  
+- **줄 길이입니다.** 소스 코드의 물리적 줄에는 최대 65535 자까지 입력할 수 있습니다. 줄 연속 문자를 사용 하는 경우 논리적 소스 코드 줄이 더 길어질 수 있습니다. [방법: 코드에서 문 분리 및 결합을](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)참조 하세요.  
   
-- **Array Dimensions.** There is a maximum number of dimensions you can declare for an array. This limits how many indexes you can use to specify an array element. See [Array Dimensions in Visual Basic](../../../visual-basic/programming-guide/language-features/arrays/array-dimensions.md).  
+- **배열 차원입니다.** 배열에 대해 선언할 수 있는 차원의 최대 수가 있습니다. 이는 배열 요소를 지정 하는 데 사용할 수 있는 인덱스 수를 제한 합니다. [Visual Basic에서 배열 차원을](../../../visual-basic/programming-guide/language-features/arrays/array-dimensions.md)참조 하세요.  
   
-- **String Length.** There is a maximum number of Unicode characters you can store in a single string. See [String Data Type](../../../visual-basic/language-reference/data-types/string-data-type.md).  
+- **문자열 길이입니다.** 단일 문자열에 저장할 수 있는 최대 유니코드 문자 수가 있습니다. [문자열 데이터 형식](../../../visual-basic/language-reference/data-types/string-data-type.md)을 참조 하세요.  
   
-- **Environment String Length.** There is a maximum of 32768 characters for any environment string used as a command-line argument. This is a limitation on all platforms.  
+- **환경 문자열 길이입니다.** 명령줄 인수로 사용 되는 환경 문자열에는 최대 32768 자까지 사용할 수 있습니다. 이는 모든 플랫폼에 대 한 제한 사항입니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [프로그램 구조 및 코드 규칙](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
-- [Visual Basic Naming Conventions](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)
+- [Visual Basic 명명 규칙](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)

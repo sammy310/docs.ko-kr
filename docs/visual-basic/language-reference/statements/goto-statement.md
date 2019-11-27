@@ -21,7 +21,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351080"
 ---
 # <a name="goto-statement"></a>GoTo 문
-Branches unconditionally to a specified line in a procedure.  
+프로시저에서 지정 된 줄로 무조건 분기 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -31,37 +31,37 @@ GoTo line
   
 ## <a name="part"></a>파트  
  `line`  
- 필수 요소. Any line label.  
+ 필수입니다. 모든 줄 레이블입니다.  
   
 ## <a name="remarks"></a>주의  
- The `GoTo` statement can branch only to lines in the procedure in which it appears. The line must have a line label that `GoTo` can refer to. For more information, see [How to: Label Statements](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md).  
+ `GoTo` 문은 표시 되는 프로시저의 줄로만 분기할 수 있습니다. 줄에는 `GoTo` 참조할 수 있는 줄 레이블이 있어야 합니다. 자세한 내용은 [방법: 레이블 문](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)을 참조 하세요.  
   
 > [!NOTE]
-> `GoTo` statements can make code difficult to read and maintain. Whenever possible, use a control structure instead. For more information, see [Control Flow](../../../visual-basic/programming-guide/language-features/control-flow/index.md).  
+> `GoTo` 문을 사용 하면 코드를 읽고 유지 관리 하기 어려울 수 있습니다. 가능 하면 컨트롤 구조를 대신 사용 합니다. 자세한 내용은 [제어 흐름](../../../visual-basic/programming-guide/language-features/control-flow/index.md)을 참조 하세요.  
   
- You cannot use a `GoTo` statement to branch from outside a `For`...`Next`, `For Each`...`Next`, `SyncLock`...`End SyncLock`, `Try`...`Catch`...`Finally`, `With`...`End With`, or `Using`...`End Using` construction to a label inside.  
+ `GoTo` 문을 사용 하 여 `For``Next`, `For Each`...`Next`, `SyncLock`,`End SyncLock`... `Try`,`Catch`,`Finally``With`또는`End With`생성을 안에 있는 레이블로 분기할 수 없습니다. (예를 들어,).`Using``End Using`  
   
-## <a name="branching-and-try-constructions"></a>Branching and Try Constructions  
- Within a `Try`...`Catch`...`Finally` construction, the following rules apply to branching with the `GoTo` statement.  
+## <a name="branching-and-try-constructions"></a>분기 및 시도 생성  
+ `Try`...`Catch`...`Finally` 생성 내에서 `GoTo` 문으로 분기 하는 데 다음 규칙이 적용 됩니다.  
   
-|Block or region|Branching in from outside|Branching out from inside|  
+|블록 또는 지역|외부에서 분기|내부에서 외부 분기|  
 |---------------------|-------------------------------|-------------------------------|  
-|`Try` block|Only from a `Catch` block of the same construction <sup>1</sup>|Only to outside the whole construction|  
-|`Catch` block|Never allowed|Only to outside the whole construction, or to the `Try` block of the same construction <sup>1</sup>|  
-|`Finally` block|Never allowed|Never allowed|  
+|`Try` 블록|동일한 <sup>생성의</sup> `Catch` 블록 에서만|전체 생성 외부에만|  
+|`Catch` 블록|허용 되지 않음|전체 <sup>생성 외부 또는 동일한 생성의</sup> `Try` 블록에만 해당|  
+|`Finally` 블록|허용 되지 않음|허용 되지 않음|  
   
- <sup>1</sup> If one `Try`...`Catch`...`Finally` construction is nested within another, a `Catch` block can branch into the `Try` block at its own nesting level, but not into any other `Try` block. A nested `Try`...`Catch`...`Finally` construction must be contained completely in a `Try` or `Catch` block of the construction within which it is nested.  
+ <sup>1</sup> `Try`...`Catch`...`Finally` 생성이 다른에 중첩 되는 경우 `Catch` 블록은 자체 중첩 수준에서 `Try` 블록으로 분기할 수 있지만 다른 `Try` 블록으로는 분기할 수 없습니다. 중첩 된 `Try`...`Catch`...`Finally` 생성은 중첩 된 생성의 `Try` 또는 `Catch` 블록에 완전히 포함 되어야 합니다.  
   
- The following illustration shows one `Try` construction nested within another. Various branches among the blocks of the two constructions are indicated as valid or invalid.  
+ 다음 그림에서는 서로 중첩 된 하나의 `Try` 생성을 보여 줍니다. 두 생성의 블록 사이에 있는 다양 한 분기가 유효 하거나 유효 하지 않은 것으로 표시 됩니다.  
   
  ![Try 생성에서 분기의 그래픽 다이어그램](./media/goto-statement/try-construction-branching.gif)  
   
 ## <a name="example"></a>예제  
- The following example uses the `GoTo` statement to branch to line labels in a procedure.  
+ 다음 예에서는 `GoTo` 문을 사용 하 여 프로시저의 줄 레이블로 분기 합니다.  
   
  [!code-vb[VbVbalrStatements#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#31)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Do...Loop 문](../../../visual-basic/language-reference/statements/do-loop-statement.md)
 - [For...Next 문](../../../visual-basic/language-reference/statements/for-next-statement.md)

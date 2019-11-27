@@ -13,7 +13,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350922"
 ---
 # <a name="logicalbitwise-operators-visual-basic"></a>논리/비트 연산자(Visual Basic)
-The following are the logical/bitwise operators defined in Visual Basic.  
+Visual Basic에 정의 된 논리/비트 연산자는 다음과 같습니다.  
   
  [And 연산자](../../../visual-basic/language-reference/operators/and-operator.md)  
   
@@ -31,7 +31,7 @@ The following are the logical/bitwise operators defined in Visual Basic.
   
  [IsTrue 연산자](../../../visual-basic/language-reference/operators/istrue-operator.md)  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Visual Basic에서의 연산자 우선 순위](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [Logical and Bitwise Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+- [Visual Basic 논리 및 비트 연산자](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)

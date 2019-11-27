@@ -74,7 +74,7 @@ private void SerializeDataSet(string filename){
 
 ## <a name="serializing-an-xmlelement-and-xmlnode"></a>XmlElement 및 XmlNode serialize
 
-You can also serialize instances of an <xref:System.Xml.XmlElement> or <xref:System.Xml.XmlNode> class, as shown in the following code example.
+다음 코드 예제와 같이 <xref:System.Xml.XmlElement> 또는 <xref:System.Xml.XmlNode> 클래스의 인스턴스를 serialize 할 수도 있습니다.
 
 ```vb
 private Sub SerializeElement(filename As String)
@@ -123,7 +123,7 @@ private void SerializeNode(string filename){
 
 ## <a name="serializing-a-class-that-contains-a-field-returning-a-complex-object"></a>복잡한 개체를 반환하는 필드가 포함된 클래스 serialize
 
-If a property or field returns a complex object (such as an array or a class instance), the <xref:System.Xml.Serialization.XmlSerializer> converts it to an element nested within the main XML document. 예를 들어, 다음 코드 예제의 첫째 클래스는 둘째 클래스의 인스턴스를 반환합니다.
+속성이 나 필드가 복합 개체 (예: 배열 또는 클래스 인스턴스)를 반환 하는 경우 <xref:System.Xml.Serialization.XmlSerializer>는이 개체를 주 XML 문서 내에 중첩 된 요소로 변환 합니다. 예를 들어, 다음 코드 예제의 첫째 클래스는 둘째 클래스의 인스턴스를 반환합니다.
 
 ```vb
 Public Class PurchaseOrder
@@ -369,7 +369,7 @@ public class Employee {
 
 `CreatePO` 메서드는 `PurchaseOrder`, `Address` 및 `OrderedItem` 클래스 개체를 만들고 public 필드 값을 설정합니다. 메서드는 <xref:System.Xml.Serialization.XmlSerializer>를 직렬화하고 역직렬화하는 데 사용되는 `PurchaseOrder` 클래스의 인스턴스도 생성합니다. 코드는 serialize될 클래스 형식을 생성자에 전달합니다. 또한 코드는 XML 스트림을 XML 문서에 쓰는 데 사용되는 `FileStream`도 만듭니다.
 
-`ReadPo` 메서드는 조금 더 간단합니다. 역직렬화할 개체를 만들고 그 값을 읽습니다. As with the `CreatePo` method, you must first construct an <xref:System.Xml.Serialization.XmlSerializer>, passing the type of the class to be deserialized to the constructor. 또한 XML 문서를 읽기 위해 <xref:System.IO.FileStream>이 필요합니다. 개체를 역직렬화하기 위해 <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A>을 인수로 사용하여 <xref:System.IO.FileStream> 메서드를 호출합니다. 역직렬화된 개체는 `PurchaseOrder` 형식의 개체 변수로 캐스팅되어야 합니다. 그런 다음 코드는 역직렬화된 `PurchaseOrder`의 값을 읽습니다. 작성된 PO.xml 파일을 읽어 실제 XML 출력을 볼 수 있습니다.
+`ReadPo` 메서드는 조금 더 간단합니다. 역직렬화할 개체를 만들고 그 값을 읽습니다. `CreatePo` 메서드와 마찬가지로 deserialize 할 클래스의 형식을 생성자에 전달 하 여 <xref:System.Xml.Serialization.XmlSerializer>를 먼저 생성 해야 합니다. 또한 XML 문서를 읽기 위해 <xref:System.IO.FileStream>이 필요합니다. 개체를 역직렬화하기 위해 <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A>을 인수로 사용하여 <xref:System.IO.FileStream> 메서드를 호출합니다. 역직렬화된 개체는 `PurchaseOrder` 형식의 개체 변수로 캐스팅되어야 합니다. 그런 다음 코드는 역직렬화된 `PurchaseOrder`의 값을 읽습니다. 작성된 PO.xml 파일을 읽어 실제 XML 출력을 볼 수 있습니다.
 
 ```vb
 Imports System.IO
@@ -767,11 +767,11 @@ XML 출력은 다음과 같을 수 있습니다.
 </PurchaseOrder>
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [XML serialization 소개](introducing-xml-serialization.md)
 - [특성을 사용하여 XML serialization 제어](controlling-xml-serialization-using-attributes.md)
 - [XML serialization을 제어하는 특성](attributes-that-control-xml-serialization.md)
-- [XmlSerializer Class](xref:System.Xml.Serialization.XmlSerializer)
+- [XmlSerializer 클래스](xref:System.Xml.Serialization.XmlSerializer)
 - [방법: 개체 직렬화](how-to-serialize-an-object.md)
 - [방법: 개체 역직렬화](how-to-deserialize-an-object.md)

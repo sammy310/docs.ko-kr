@@ -9,11 +9,11 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74354251"
 ---
-# <a name="converting-data-types-visual-basic"></a>Converting Data Types (Visual Basic)
+# <a name="converting-data-types-visual-basic"></a>데이터 형식 변환 (Visual Basic)
 
 변환 메서드는 입력 개체의 형식을 변경합니다.
 
- LINQ 쿼리의 변환 작업은 다양한 애플리케이션에서 유용합니다. The following are some examples:
+ LINQ 쿼리의 변환 작업은 다양한 애플리케이션에서 유용합니다. 예는 다음과 같습니다.
 
 - <xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=nameWithType> 메서드는 표준 쿼리 연산자의 형식 사용자 지정 구현을 숨기는 데 사용될 수 있습니다.
 
@@ -27,20 +27,20 @@ ms.locfileid: "74354251"
 
 이 표에서 이름이 "As"로 시작하는 변환 메서드는 소스 컬렉션의 정적 형식을 변경하지만 열거하지는 않습니다. 이름이 "To"로 시작하는 메서드는 소스 컬렉션을 열거하고 항목을 해당하는 컬렉션 형식에 삽입합니다.
 
-|메서드 이름|설명|Visual Basic Query Expression Syntax|추가 정보|
+|메서드 이름|설명|Visual Basic 쿼리 식 구문|자세한 내용|
 |-----------------|-----------------|------------------------------------------|----------------------|
-|AsEnumerable|<xref:System.Collections.Generic.IEnumerable%601>로 형식화된 입력을 반환합니다.|해당 없음.|<xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=nameWithType>|
-|AsQueryable|(제네릭) <xref:System.Collections.IEnumerable>을 (제네릭) <xref:System.Linq.IQueryable>로 변환합니다.|해당 없음.|<xref:System.Linq.Queryable.AsQueryable%2A?displayProperty=nameWithType>|
-|Cast|컬렉션의 요소를 지정된 형식으로 캐스트합니다.|`From … As …`|<xref:System.Linq.Enumerable.Cast%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Cast%2A?displayProperty=nameWithType>|
-|OfType|지정된 형식으로 캐스트할 수 있는지 여부에 따라 값을 필터링합니다.|해당 없음.|<xref:System.Linq.Enumerable.OfType%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OfType%2A?displayProperty=nameWithType>|
-|ToArray|컬렉션을 배열로 변환합니다. 이 메서드는 쿼리를 강제로 실행합니다.|해당 없음.|<xref:System.Linq.Enumerable.ToArray%2A?displayProperty=nameWithType>|
-|ToDictionary|키 선택기 함수에 따라 <xref:System.Collections.Generic.Dictionary%602>에 요소를 배치합니다. 이 메서드는 쿼리를 강제로 실행합니다.|해당 없음.|<xref:System.Linq.Enumerable.ToDictionary%2A?displayProperty=nameWithType>|
-|ToList|컬렉션을 <xref:System.Collections.Generic.List%601>로 변환합니다. 이 메서드는 쿼리를 강제로 실행합니다.|해당 없음.|<xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType>|
-|ToLookup|키 선택기 함수에 따라 <xref:System.Linq.Lookup%602>(일 대 다 사전)에 요소를 배치합니다. 이 메서드는 쿼리를 강제로 실행합니다.|해당 없음.|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType>|
+|AsEnumerable|<xref:System.Collections.Generic.IEnumerable%601>로 형식화된 입력을 반환합니다.|적용할 수 없음|<xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=nameWithType>|
+|AsQueryable|(제네릭) <xref:System.Collections.IEnumerable>을 (제네릭) <xref:System.Linq.IQueryable>로 변환합니다.|적용할 수 없음|<xref:System.Linq.Queryable.AsQueryable%2A?displayProperty=nameWithType>|
+|캐스팅|컬렉션의 요소를 지정된 형식으로 캐스트합니다.|`From … As …`|<xref:System.Linq.Enumerable.Cast%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Cast%2A?displayProperty=nameWithType>|
+|OfType|지정된 형식으로 캐스트할 수 있는지 여부에 따라 값을 필터링합니다.|적용할 수 없음|<xref:System.Linq.Enumerable.OfType%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OfType%2A?displayProperty=nameWithType>|
+|ToArray|컬렉션을 배열로 변환합니다. 이 메서드는 쿼리를 강제로 실행합니다.|적용할 수 없음|<xref:System.Linq.Enumerable.ToArray%2A?displayProperty=nameWithType>|
+|ToDictionary|키 선택기 함수에 따라 <xref:System.Collections.Generic.Dictionary%602>에 요소를 배치합니다. 이 메서드는 쿼리를 강제로 실행합니다.|적용할 수 없음|<xref:System.Linq.Enumerable.ToDictionary%2A?displayProperty=nameWithType>|
+|ToList|컬렉션을 <xref:System.Collections.Generic.List%601>로 변환합니다. 이 메서드는 쿼리를 강제로 실행합니다.|적용할 수 없음|<xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType>|
+|ToLookup|키 선택기 함수에 따라 <xref:System.Linq.Lookup%602>(일 대 다 사전)에 요소를 배치합니다. 이 메서드는 쿼리를 강제로 실행합니다.|적용할 수 없음|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType>|
 
 ## <a name="query-expression-syntax-example"></a>쿼리 식 구문 예제
 
-The following code example uses the `From As` clause to cast a type to a subtype before accessing a member that is available only on the subtype.
+다음 코드 예제에서는 `From As` 절을 사용 하 여 하위 형식에만 사용할 수 있는 멤버에 액세스 하기 전에 형식을 하위 형식으로 캐스팅 합니다.
 
 ```vb
 Class Plant
@@ -80,9 +80,9 @@ Sub Cast()
 End Sub
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Linq>
 - [표준 쿼리 연산자 개요(Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [From 절](../../../../visual-basic/language-reference/queries/from-clause.md)
-- [How to: Query an ArrayList with LINQ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)
+- [방법: LINQ를 사용 하 여 ArrayList 쿼리 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)

@@ -17,7 +17,7 @@ ms.locfileid: "74350155"
 ---
 # <a name="call-statement-visual-basic"></a>Call 문(Visual Basic)
 
-Transfers control to a `Function`, `Sub`, or dynamic-link library (DLL) procedure.  
+`Function`, `Sub`또는 DLL (동적 연결 라이브러리) 프로시저로 제어를 전달 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -29,27 +29,27 @@ Transfers control to a `Function`, `Sub`, or dynamic-link library (DLL) procedur
 
 |||
 |---|---|
-|`procedureName`|필수 요소. Name of the procedure to call.|
-|`argumentList`|(선택 사항) List of variables or expressions representing arguments that are passed to the procedure when it is called. Multiple arguments are separated by commas. If you include `argumentList`, you must enclose it in parentheses.|
+|`procedureName`|필수입니다. 호출할 프로시저의 이름입니다.|
+|`argumentList`|(선택 사항) 프로시저를 호출할 때 프로시저에 전달 되는 인수를 나타내는 변수나 식의 목록입니다. 여러 인수를 쉼표로 구분 합니다. `argumentList`를 포함 하는 경우 괄호로 묶어야 합니다.|
 |||
   
 ## <a name="remarks"></a>주의
 
- You can use the `Call` keyword when you call a procedure. For most procedure calls, you aren’t required to use this  keyword.
+ 프로시저를 호출할 때 `Call` 키워드를 사용할 수 있습니다. 대부분의 프로시저 호출의 경우에는이 키워드를 사용할 필요가 없습니다.
 
- You typically use the `Call` keyword when the called expression doesn’t start with an identifier. Use of the `Call` keyword for other uses isn't recommended.
+ 일반적으로 호출 된 식이 식별자로 시작 하지 않는 경우 `Call` 키워드를 사용 합니다. 다른 용도로는 `Call` 키워드를 사용 하지 않는 것이 좋습니다.
 
- If the procedure returns a value, the `Call` statement discards it.
+ 프로시저에서 값을 반환 하는 경우 `Call` 문은 해당 값을 삭제 합니다.
 
 ## <a name="example"></a>예제
 
- The following code shows two examples where the `Call` keyword is necessary to call a procedure. In both examples, the called expression doesn't start with an identifier.
+ 다음 코드에서는 `Call` 키워드가 프로시저를 호출 하는 데 필요한 두 가지 예를 보여 줍니다. 두 예제에서 호출 된 식은 식별자로 시작 하지 않습니다.
 
  [!code-vb[VbVbalrStatements#97](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#97)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Function 문](function-statement.md)
 - [Sub 문](sub-statement.md)
-- [Declare 문](declare-statement.md)
+- [Declare Statement](declare-statement.md)
 - [람다 식](../../programming-guide/language-features/procedures/lambda-expressions.md)

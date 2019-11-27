@@ -13,22 +13,22 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351692"
 ---
 # <a name="my-reference-visual-basic"></a>My 참조(Visual Basic)
-The `My` feature makes programming faster and easier by giving you intuitive access to commonly used methods, properties, and events. This table lists the objects contained in `My`, and the actions that can be performed with each.  
+`My` 기능을 사용 하면 일반적으로 사용 되는 메서드, 속성 및 이벤트에 대 한 직관적인 액세스를 제공 하 여 더 빠르고 쉽게 프로그래밍할 수 있습니다. 다음 표에서는 `My`에 포함 된 개체와 각 개체에서 수행할 수 있는 작업을 나열 합니다.  
   
 |**작업**|**개체**|  
 |----------------|----------------|  
-|Accessing application information and services.|`My.Application` 개체는 다음 클래스로 구성됩니다.<br /><br /> <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>는 모든 프로젝트에서 사용 가능한 멤버를 제공합니다.<br /><br /> <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>는 Windows Forms 애플리케이션에서 사용 가능한 멤버를 제공합니다.<br /><br /> <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase>는 콘솔 애플리케이션에서 사용 가능한 멤버를 제공합니다.|  
-|Accessing the host computer and its resources, services, and data.|`My.Computer` (<xref:Microsoft.VisualBasic.Devices.Computer>)|  
-|Accessing the forms in the current project.|[My.Forms 개체](../../../visual-basic/language-reference/objects/my-forms-object.md)|  
-|Accessing the application log.|`My.Application.Log` (<xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log%2A>)|  
-|Accessing the current web request.|[My.Request 개체](../../../visual-basic/language-reference/objects/my-request-object.md)|  
-|Accessing resource elements.|[My.Resources 개체](../../../visual-basic/language-reference/objects/my-resources-object.md)|  
-|Accessing the current web response.|[My.Response 개체](../../../visual-basic/language-reference/objects/my-response-object.md)|  
-|Accessing user and application level settings.|[My.Settings 개체](../../../visual-basic/language-reference/objects/my-settings-object.md)|  
-|Accessing the current user's security context.|`My.User` (<xref:Microsoft.VisualBasic.ApplicationServices.User>)|  
-|Accessing XML Web services referenced by the current project.|[My.WebServices 개체](../../../visual-basic/language-reference/objects/my-webservices-object.md)|  
+|응용 프로그램 정보 및 서비스에 액세스 합니다.|`My.Application` 개체는 다음 클래스로 구성됩니다.<br /><br /> <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>는 모든 프로젝트에서 사용 가능한 멤버를 제공합니다.<br /><br /> <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>는 Windows Forms 애플리케이션에서 사용 가능한 멤버를 제공합니다.<br /><br /> <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase>는 콘솔 애플리케이션에서 사용 가능한 멤버를 제공합니다.|  
+|호스트 컴퓨터 및 해당 리소스, 서비스 및 데이터에 액세스 합니다.|`My.Computer` (<xref:Microsoft.VisualBasic.Devices.Computer>)|  
+|현재 프로젝트의 폼에 액세스 합니다.|[My.Forms 개체](../../../visual-basic/language-reference/objects/my-forms-object.md)|  
+|응용 프로그램 로그에 액세스 합니다.|`My.Application.Log` (<xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log%2A>)|  
+|현재 웹 요청에 액세스 하 고 있습니다.|[My.Request 개체](../../../visual-basic/language-reference/objects/my-request-object.md)|  
+|리소스 요소에 액세스 합니다.|[My.Resources 개체](../../../visual-basic/language-reference/objects/my-resources-object.md)|  
+|현재 웹 응답에 액세스 하는 중입니다.|[My.Response 개체](../../../visual-basic/language-reference/objects/my-response-object.md)|  
+|사용자 및 응용 프로그램 수준 설정에 액세스 합니다.|[My.Settings 개체](../../../visual-basic/language-reference/objects/my-settings-object.md)|  
+|현재 사용자의 보안 컨텍스트에 액세스 하는 중입니다.|`My.User` (<xref:Microsoft.VisualBasic.ApplicationServices.User>)|  
+|현재 프로젝트에서 참조 하는 XML Web services에 액세스 합니다.|[My.WebServices 개체](../../../visual-basic/language-reference/objects/my-webservices-object.md)|  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Visual Basic 애플리케이션 모델 개요](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)
 - [My를 사용한 개발](../../../visual-basic/developing-apps/development-with-my/index.md)

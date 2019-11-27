@@ -17,7 +17,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348373"
 ---
-# <a name="-operator-visual-basic"></a>* Operator (Visual Basic)
+# <a name="-operator-visual-basic"></a>* 연산자(Visual Basic)
 두 숫자를 곱합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -30,39 +30,39 @@ number1 * number2
   
 |용어|정의|  
 |---|---|  
-|`number1`|필수 요소. 임의의 숫자 식입니다.|  
-|`number2`|필수 요소. 임의의 숫자 식입니다.|  
+|`number1`|필수입니다. 임의의 숫자 식입니다.|  
+|`number2`|필수입니다. 임의의 숫자 식입니다.|  
   
 ## <a name="result"></a>결과  
- The result is the product of `number1` and `number2`.  
+ 결과는 `number1` 및 `number2`제품입니다.  
   
 ## <a name="supported-types"></a>지원 형식  
- All numeric types, including the unsigned and floating-point types and `Decimal`.  
+ 부호 없는 형식 및 부동 소수점 형식 및 `Decimal`을 포함 한 모든 숫자 형식입니다.  
   
 ## <a name="remarks"></a>주의  
- The data type of the result depends on the types of the operands. The following table shows how the data type of the result is determined.  
+ 결과의 데이터 형식은 피연산자의 형식에 따라 달라 집니다. 다음 표에서는 결과의 데이터 형식을 결정 하는 방법을 보여 줍니다.  
   
-|Operand data types|Result data type|  
+|피연산자 데이터 형식|Result 데이터 형식|  
 |---|---|  
-|Both expressions are integral data types ([SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md), [Byte](../../../visual-basic/language-reference/data-types/byte-data-type.md), [Short](../../../visual-basic/language-reference/data-types/short-data-type.md), [UShort](../../../visual-basic/language-reference/data-types/ushort-data-type.md), [Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md), [UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md), [Long](../../../visual-basic/language-reference/data-types/long-data-type.md), [ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md))|A numeric data type appropriate for the data types of `number1` and `number2`. See the "Integer Arithmetic" tables in [Data Types of Operator Results](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).|  
-|Both expressions are [Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md)|`Decimal`|  
-|Both expressions are [Single](../../../visual-basic/language-reference/data-types/single-data-type.md)|`Single`|  
-|Either expression is a floating-point data type (`Single` or [Double](../../../visual-basic/language-reference/data-types/double-data-type.md)) but not both `Single` (note `Decimal` is not a floating-point data type)|`Double`|  
+|두 식은 모두 정수 데이터 형식 ([SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md), [Byte](../../../visual-basic/language-reference/data-types/byte-data-type.md), [Short](../../../visual-basic/language-reference/data-types/short-data-type.md), [UShort](../../../visual-basic/language-reference/data-types/ushort-data-type.md), [Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md), [UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md), [Long](../../../visual-basic/language-reference/data-types/long-data-type.md), [ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md))입니다.|`number1` 및 `number2`의 데이터 형식에 적합 한 숫자 데이터 형식입니다. [연산자 결과의 데이터 형식](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md)에서 "정수 산술 연산" 표를 참조 하세요.|  
+|두 식이 모두 [Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md) 입니다.|`Decimal`|  
+|두 식이 모두 [단일](../../../visual-basic/language-reference/data-types/single-data-type.md) 입니다.|`Single`|  
+|두 식이 모두 부동 소수점 데이터 형식 (`Single` 또는 [Double](../../../visual-basic/language-reference/data-types/double-data-type.md)) 이지만 `Single` 둘 다는 아닙니다 (참고 `Decimal`가 부동 소수점 데이터 형식이 아님).|`Double`|  
   
- If an expression evaluates to [Nothing](../../../visual-basic/language-reference/nothing.md), it is treated as zero.  
+ 식이 [Nothing](../../../visual-basic/language-reference/nothing.md)으로 계산 되 면 0으로 처리 됩니다.  
   
-## <a name="overloading"></a>오버로딩  
- The `*` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure. If your code uses this operator on such a class or structure, be sure you understand its redefined behavior. 자세한 내용은 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)을 참조하세요.  
+## <a name="overloading"></a>오버로드  
+ `*` 연산자를 *오버 로드할*수 있습니다. 즉, 피연산자가 해당 클래스 또는 구조체의 형식일 때 클래스 또는 구조체에서 해당 동작을 다시 정의할 수 있습니다. 코드가 이러한 클래스 또는 구조체에서이 연산자를 사용 하는 경우 다시 정의 된 동작을 이해 해야 합니다. 자세한 내용은 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)을 참조하세요.  
   
 ## <a name="example"></a>예제  
- This example uses the `*` operator to multiply two numbers. The result is the product of the two operands.  
+ 이 예에서는 `*` 연산자를 사용 하 여 두 숫자를 곱합니다. 결과는 두 피연산자의 곱입니다.  
   
  [!code-vb[VbVbalrOperators#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#4)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [*= 연산자](../../../visual-basic/language-reference/operators/multiplication-assignment-operator.md)
 - [산술 연산자](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
 - [Visual Basic에서의 연산자 우선 순위](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [기능별 연산자 목록](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [Arithmetic Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [Visual Basic의 산술 연산자](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

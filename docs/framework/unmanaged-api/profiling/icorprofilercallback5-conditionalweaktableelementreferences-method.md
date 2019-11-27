@@ -46,7 +46,7 @@ HRESULT ConditionalWeakTableElementReferences(
 [in] 각각 종속 핸들 쌍의 주 요소에 대한 `ObjectID`를 포함하는 개체 ID의 배열입니다.
 
 `valueRefIds`\
-[in] 각각 종속 핸들 쌍의 보조 요소에 대한 `ObjectID`를 포함하는 개체 ID의 배열입니다. (`keyRefIds[i]` keeps `valueRefIds[i]` alive.)
+[in] 각각 종속 핸들 쌍의 보조 요소에 대한 `ObjectID`를 포함하는 개체 ID의 배열입니다. `keyRefIds[i]` 유지 `valueRefIds[i]` 합니다.
 
 `rootIds`\
 [in] 가비지 컬렉션 루트에 대한 추가 정보를 포함하는 정수를 가리키는 `GCHandleID` 값의 배열입니다.
@@ -55,7 +55,7 @@ HRESULT ConditionalWeakTableElementReferences(
 
 ## <a name="example"></a>예제
 
-The following code example demonstrates how to implement [ICorProfilerCallback5](icorprofilercallback5-interface.md) and use this method.
+다음 코드 예제에서는 [ICorProfilerCallback5](icorprofilercallback5-interface.md) 을 구현 하 고이 메서드를 사용 하는 방법을 보여 줍니다.
 
 ```cpp
 HRESULT Callback5Impl::ConditionalWeakTableElementReferences(
@@ -80,7 +80,7 @@ HRESULT Callback5Impl::ConditionalWeakTableElementReferences(
 
 ## <a name="remarks"></a>주의
 
-A profiler for the .NET Framework 4.5 or later versions implements the [ICorProfilerCallback5](icorprofilercallback5-interface.md) interface and records the dependencies specified by the `ConditionalWeakTableElementReferences` method. `ICorProfilerCallback5` provides the complete set of dependencies among live objects represented by `ConditionalWeakTable` entries. These dependencies and the member field references specified by the [ICorProfilerCallback::ObjectReferences](icorprofilercallback-objectreferences-method.md) method enable a managed profiler to generate the full object graph of live objects.
+.NET Framework 4.5 이상 버전에 대 한 프로파일러는 [ICorProfilerCallback5](icorprofilercallback5-interface.md) 인터페이스를 구현 하 고 `ConditionalWeakTableElementReferences` 메서드로 지정 된 종속성을 기록 합니다. `ICorProfilerCallback5`은 `ConditionalWeakTable` 항목이 나타내는 라이브 개체 간의 전체 종속성 집합을 제공 합니다. 이러한 종속성 및 [ICorProfilerCallback:: ObjectReferences](icorprofilercallback-objectreferences-method.md) 메서드로 지정 된 멤버 필드 참조를 사용 하면 관리 되는 프로파일러가 라이브 개체의 전체 개체 그래프를 생성할 수 있습니다.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -90,6 +90,6 @@ A profiler for the .NET Framework 4.5 or later versions implements the [ICorProf
 
 **.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerCallback5 인터페이스](icorprofilercallback5-interface.md)

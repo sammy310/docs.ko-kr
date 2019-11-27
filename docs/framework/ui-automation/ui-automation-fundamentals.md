@@ -15,11 +15,11 @@ ms.locfileid: "74441383"
 ---
 # <a name="ui-automation-fundamentals"></a>UI 자동화 기본 사항
 > [!NOTE]
-> 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조하세요.  
+> 이 설명서는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 네임스페이스에 정의된 관리되는 <xref:System.Windows.Automation> 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조하세요.  
   
- This section contains high-level overviews of the [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] API.  
+ 이 섹션에는 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] API에 대 한 개략적인 개요가 포함 되어 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [UI 자동화 개요](ui-automation-overview.md)  
  [UI 자동화 및 Microsoft Active Accessibility](ui-automation-and-microsoft-active-accessibility.md)  
  [UI 자동화 트리 개요](ui-automation-tree-overview.md)  
@@ -29,7 +29,7 @@ ms.locfileid: "74441383"
  [UI 자동화 보안 개요](ui-automation-security-overview.md)  
  [자동화된 테스트를 위해 UI 자동화 사용](using-ui-automation-for-automated-testing.md)  
   
-## <a name="reference"></a>참고  
+## <a name="reference"></a>참조  
  <xref:System.Windows.Automation>  
   
  <xref:System.Windows.Automation.Provider>  

@@ -21,34 +21,34 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350105"
 ---
 # <a name="efficient-use-of-data-types-visual-basic"></a>데이터 형식의 효율적 사용(Visual Basic)
-Undeclared variables and variables declared without a data type are assigned the `Object` data type. This makes it easy to write programs quickly, but it can cause them to execute more slowly.
+선언 되지 않은 변수와 데이터 형식 없이 선언 된 변수에는 `Object` 데이터 형식이 할당 됩니다. 이렇게 하면 프로그램을 신속 하 게 작성할 수 있지만 더 느리게 실행 될 수 있습니다.
 
-## <a name="strong-typing"></a>Strong Typing
- Specifying data types for all your variables is known as *strong typing*. Using strong typing has several advantages:
+## <a name="strong-typing"></a>강력한 형식 지정
+ 모든 변수에 대 한 데이터 형식을 지정 하는 것을 *강력한 형식화*라고 합니다. 강력한 형식화를 사용 하는 경우 다음과 같은 여러 이점이 있습니다.
 
-- It enables IntelliSense support for your variables. This allows you to see their properties and other members as you type in the code.
+- 변수에 대해 IntelliSense를 지원할 수 있습니다. 이렇게 하면 코드에 입력할 때 해당 속성 및 기타 멤버를 볼 수 있습니다.
 
-- It takes advantage of compiler type checking. This catches statements that can fail at run time due to errors such as overflow. It also catches calls to methods on objects that do not support them.
+- 컴파일러 형식 검사를 활용 합니다. 이는 오버플로와 같은 오류로 인해 런타임에 실패할 수 있는 문을 catch 합니다. 또한 지원 하지 않는 개체의 메서드에 대 한 호출을 catch 합니다.
 
-- It results in faster execution of your code.
+- 그러면 코드 실행 속도가 빨라집니다.
 
-## <a name="most-efficient-data-types"></a>Most Efficient Data Types
- For variables that never contain fractions, the integral data types are more efficient than the nonintegral types. In Visual Basic, `Integer` and `UInteger` are the most efficient numeric types.
+## <a name="most-efficient-data-types"></a>가장 효율적인 데이터 형식
+ 분수를 포함 하지 않는 변수의 경우 정수 계열 데이터 형식이 비정 수 형식 보다 더 효율적입니다. Visual Basic에서 `Integer` 및 `UInteger`은 가장 효율적인 숫자 형식입니다.
 
- For fractional numbers, `Double` is the most efficient data type, because the processors on current platforms perform floating-point operations in double precision. However, operations with `Double` are not as fast as with the integral types such as `Integer`.
+ 소수 자릿수의 경우 현재 플랫폼의 프로세서가 배정밀도로 부동 소수점 연산을 수행 하기 때문에 `Double` 가장 효율적인 데이터 형식입니다. 그러나 `Double`를 사용 하는 연산은 `Integer`와 같은 정수 계열 유형과는 속도가 빠릅니다.
 
-## <a name="specifying-data-type"></a>Specifying Data Type
- Use the [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md) to declare a variable of a specific type. You can simultaneously specify its access level by using the [Public](../../../../visual-basic/language-reference/modifiers/public.md), [Protected](../../../../visual-basic/language-reference/modifiers/protected.md), [Friend](../../../../visual-basic/language-reference/modifiers/friend.md), or [Private](../../../../visual-basic/language-reference/modifiers/private.md) keyword, as in the following example.
+## <a name="specifying-data-type"></a>데이터 형식 지정
+ [Dim 문을](../../../../visual-basic/language-reference/statements/dim-statement.md) 사용 하 여 특정 형식의 변수를 선언 합니다. 다음 예제와 같이 [Public](../../../../visual-basic/language-reference/modifiers/public.md), [Protected](../../../../visual-basic/language-reference/modifiers/protected.md), [Friend](../../../../visual-basic/language-reference/modifiers/friend.md)또는 [Private](../../../../visual-basic/language-reference/modifiers/private.md) 키워드를 사용 하 여 해당 액세스 수준을 동시에 지정할 수 있습니다.
 
 ```vb
 Private x As Double
 Protected s As String
 ```
 
-## <a name="character-conversion"></a>Character Conversion
- The `AscW` and `ChrW` functions operate in Unicode. You should use them in preference to `Asc` and `Chr`, which must translate into and out of Unicode.
+## <a name="character-conversion"></a>문자 변환
+ `AscW` 및 `ChrW` 함수는 유니코드로 작동 합니다. `Asc` 및 `Chr`에 대 한 기본 설정에서 사용 해야 합니다 .이는 유니코드로 변환 해야 합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:Microsoft.VisualBasic.Strings.Asc%2A>
 - <xref:Microsoft.VisualBasic.Strings.AscW%2A>

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446336"
 ---
 # <a name="isymunmanagedscopegetlocals-method"></a>ISymUnmanagedScope::GetLocals 메서드
-Gets the local variables defined within this scope.  
+이 범위 내에 정의 된 지역 변수를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,20 +37,20 @@ HRESULT GetLocals(
   
 ## <a name="parameters"></a>매개 변수  
  `cLocals`  
- [in] A `ULONG32` that indicates the size of the `locals` array.  
+ 진행 `locals` 배열의 크기를 나타내는 `ULONG32`입니다.  
   
  `pcLocals`  
- [out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the local variables.  
+ 제한이 지역 변수를 포함 하는 데 필요한 버퍼 크기를 수신 하는 `ULONG32`에 대 한 포인터입니다.  
   
  `locals`  
- [out] The array that receives the local variables.  
+ 제한이 지역 변수를 받는 배열입니다.  
   
 ## <a name="return-value"></a>반환 값  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **Header:** CorSym.idl, CorSym.h  
+ **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ISymUnmanagedScope 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)

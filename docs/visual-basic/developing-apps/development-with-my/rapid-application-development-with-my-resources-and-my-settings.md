@@ -16,19 +16,19 @@ ms.locfileid: "74349260"
 ---
 # <a name="rapid-application-development-with-myresources-and-mysettings-visual-basic"></a>My.Resources 및 My.Settings를 사용한 신속한 애플리케이션 개발(Visual Basic)
 
-The `My.Resources` object provides access to the application's resources and allows you to dynamically retrieve resources for your application.  
+`My.Resources` 개체는 응용 프로그램의 리소스에 대 한 액세스를 제공 하 고 응용 프로그램에 대 한 리소스를 동적으로 검색할 수 있도록 합니다.  
   
 ## <a name="retrieving-resources"></a>리소스 검색  
 
- A number of resources such as audio files, icons, images, and strings can be retrieved through the `My.Resources` object. For example, you can access the application's culture-specific resource files. The following example sets the icon of the form to the icon named `Form1Icon` stored in the application's resource file.  
+ 오디오 파일, 아이콘, 이미지 및 문자열과 같은 여러 리소스는 `My.Resources` 개체를 통해 검색할 수 있습니다. 예를 들어 응용 프로그램의 문화권 관련 리소스 파일에 액세스할 수 있습니다. 다음 예제에서는 폼의 아이콘을 응용 프로그램의 리소스 파일에 저장 된 `Form1Icon` 이라는 아이콘으로 설정 합니다.  
   
  [!code-vb[VbVbcnMy#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMy/VB/Class1.vb#7)]  
   
- The `My.Resources` object exposes only global resources. It does not provide access to resource files associated with forms. You must access the form resources from the form.  
+ `My.Resources` 개체는 전역 리소스만 노출 합니다. 폼과 연결 된 리소스 파일에 대 한 액세스 권한은 제공 하지 않습니다. 양식에서 양식 리소스에 액세스 해야 합니다.  
   
- Similarly, the `My.Settings` object provides access to the application's settings and allows you to dynamically store and retrieve property settings and other information for your application. For more information, see [My.Resources Object](../../../visual-basic/language-reference/objects/my-resources-object.md) and [My.Settings Object](../../../visual-basic/language-reference/objects/my-settings-object.md).  
+ 마찬가지로 `My.Settings` 개체는 응용 프로그램의 설정에 대 한 액세스를 제공 하 고 응용 프로그램에 대 한 속성 설정과 기타 정보를 동적으로 저장 하 고 검색할 수 있도록 합니다. 자세한 내용은 [My.resources 개체](../../../visual-basic/language-reference/objects/my-resources-object.md) 및 [my.settings 개체](../../../visual-basic/language-reference/objects/my-settings-object.md)를 참조 하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [My.Resources 개체](../../../visual-basic/language-reference/objects/my-resources-object.md)
 - [My.Settings 개체](../../../visual-basic/language-reference/objects/my-settings-object.md)

@@ -24,22 +24,22 @@ UTF-8 인코딩을 사용하여 컴파일러 출력을 표시합니다.
   
 ## <a name="arguments"></a>인수  
  `+` &#124; `-`  
- (선택 사항) The default for this option is `-utf8output-`, which means compiler output does not use UTF-8 encoding. `-utf8output`를 지정하는 것은 `-utf8output+`를 지정하는 것과 같습니다.  
+ (선택 사항) 이 옵션의 기본값은 `-utf8output-`입니다. 즉, 컴파일러 출력에서 UTF-8 인코딩을 사용 하지 않습니다. `-utf8output`를 지정하는 것은 `-utf8output+`를 지정하는 것과 같습니다.  
   
 ## <a name="remarks"></a>주의  
- In some international configurations, compiler output cannot be displayed correctly in the console. In such situations, use `-utf8output` and redirect compiler output to a file.  
+ 일부 국가별 구성에서는 컴파일러 출력이 콘솔에 올바르게 표시 되지 않습니다. 이러한 경우 `-utf8output`를 사용 하 고 컴파일러 출력을 파일로 리디렉션합니다.  
   
 > [!NOTE]
-> The `-utf8output` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.  
+> `-utf8output` 옵션은 Visual Studio 개발 환경에서 사용할 수 없습니다. 명령줄에서 컴파일하는 경우에만 사용할 수 있습니다.  
   
 ## <a name="example"></a>예제  
- The following code compiles `In.vb` and directs the compiler to display output using UTF-8 encoding.  
+ 다음 코드는 `In.vb` 컴파일하고 UTF-8 인코딩을 사용 하 여 출력을 표시 하도록 컴파일러에 지시 합니다.  
   
 ```console  
 vbc -utf8output in.vb  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Visual Basic 명령줄 컴파일러](../../../visual-basic/reference/command-line-compiler/index.md)
 - [샘플 컴파일 명령줄](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

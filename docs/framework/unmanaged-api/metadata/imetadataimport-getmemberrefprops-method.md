@@ -41,36 +41,36 @@ HRESULT GetMemberRefProps (
   
 ## <a name="parameters"></a>매개 변수  
  `mr`  
- [in] The MemberRef token to return associated metadata for.  
+ 진행 연결 된 메타 데이터를 반환할 MemberRef 토큰입니다.  
   
  `ptk`  
- [out] A TypeDef or TypeRef, or TypeSpec token that represents the class that declares the member, or a ModuleRef token that represents the module class that declares the member, or a MethodDef that represents the member.  
+ 제한이 TypeDef 또는 TypeRef 또는 멤버를 선언 하는 클래스를 나타내는 TypeSpec 토큰 또는 멤버를 선언 하는 모듈 클래스를 나타내는 ModuleRef 토큰 또는 멤버를 나타내는 MethodDef 토큰입니다.  
   
  `szMember`  
- [out] A string buffer for the member's name.  
+ 제한이 멤버의 이름에 대 한 문자열 버퍼입니다.  
   
  `cchMember`  
- [in] The requested size in wide characters of `szMember`.  
+ 진행 `szMember`의 와이드 문자에서 요청 된 크기입니다.  
   
  `pchMember`  
- [out] The returned size in wide characters of `szMember`.  
+ 제한이 `szMember`의 와이드 문자에서 반환 되는 크기입니다.  
   
  `ppvSibBlob`  
- [out] A pointer to the binary metadata signature for the member.  
+ 제한이 멤버의 이진 메타 데이터 서명에 대 한 포인터입니다.  
   
  `pbSig`  
- [out] The size in bytes of `ppvSigBlob`.  
+ 제한이 `ppvSigBlob`의 크기 (바이트)입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IMetaDataImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

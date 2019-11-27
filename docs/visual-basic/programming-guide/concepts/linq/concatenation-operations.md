@@ -9,7 +9,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345669"
 ---
-# <a name="concatenation-operations-visual-basic"></a>Concatenation Operations (Visual Basic)
+# <a name="concatenation-operations-visual-basic"></a>연결 작업 (Visual Basic)
 연결은 한 시퀀스를 다른 시퀀스에 추가하는 작업을 나타냅니다.  
   
  다음 그림은 두 개의 문자 시퀀스에 대한 연결 작업을 보여 줍니다.  
@@ -20,12 +20,12 @@ ms.locfileid: "74345669"
   
 ## <a name="methods"></a>메서드  
   
-|메서드 이름|설명|Visual Basic Query Expression Syntax|추가 정보|  
+|메서드 이름|설명|Visual Basic 쿼리 식 구문|자세한 내용|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
-|Concat|두 시퀀스를 연결하여 하나의 시퀀스를 구성합니다.|해당 없음.|<xref:System.Linq.Enumerable.Concat%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Concat%2A?displayProperty=nameWithType>|  
+|Concat|두 시퀀스를 연결하여 하나의 시퀀스를 구성합니다.|적용할 수 없음|<xref:System.Linq.Enumerable.Concat%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Concat%2A?displayProperty=nameWithType>|  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Linq>
 - [표준 쿼리 연산자 개요(Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [How to: Combine and Compare String Collections (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)
+- [방법: 문자열 컬렉션 결합 및 비교 (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)

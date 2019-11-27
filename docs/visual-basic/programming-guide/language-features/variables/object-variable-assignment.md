@@ -22,7 +22,7 @@ ms.locfileid: "74351825"
 ---
 # <a name="object-variable-assignment-visual-basic"></a>개체 변수 할당(Visual Basic)
 
-You use a normal assignment statement to assign an object to an object variable. You can assign an object expression or the [Nothing](../../../../visual-basic/language-reference/nothing.md) keyword, as the following example illustrates.
+개체를 개체 변수에 할당 하는 데 일반 대입문을 사용 합니다. 다음 예제와 같이 개체 식 또는 [Nothing](../../../../visual-basic/language-reference/nothing.md) 키워드를 할당할 수 있습니다.
 
 ```vb
 Dim thisObject As Object
@@ -32,22 +32,22 @@ thisObject = Form1
 thisObject = Nothing
 ```
 
-`Nothing` means there is no object currently assigned to the variable.
+`Nothing`은 현재 변수에 할당 된 개체가 없음을 의미 합니다.
 
 ## <a name="initialization"></a>초기화
 
-When your code begins running, your object variables are initialized to `Nothing`. Those whose declarations include initialization are reinitialized to the values you specify when the declaration statements are executed.
+코드 실행이 시작 되 면 개체 변수가 `Nothing`으로 초기화 됩니다. 선언이 포함 된 선언이 선언 문을 실행할 때 지정 하는 값으로 다시 초기화 됩니다.
 
-You can include initialization in your declaration by using the [New](../../../../visual-basic/language-reference/operators/new-operator.md) keyword. The following declaration statements declare object variables `testUri` and `ver` and assign specific objects to them. Each uses one of the overloaded constructors of the appropriate class to initialize the object.
+[New](../../../../visual-basic/language-reference/operators/new-operator.md) 키워드를 사용 하 여 선언에 초기화를 포함할 수 있습니다. 다음 선언문은 개체 변수 `testUri` 선언 하 고 `ver` 특정 개체를 할당 합니다. 각각은 적절 한 클래스의 오버 로드 된 생성자 중 하나를 사용 하 여 개체를 초기화 합니다.
 
 ```vb
 Dim testUri As New System.Uri("https://www.microsoft.com")
 Dim ver As New System.Version(6, 1, 0)
 ```
 
-## <a name="disassociation"></a>Disassociation
+## <a name="disassociation"></a>분리
 
-Setting an object variable to `Nothing` discontinues the association of the variable with any specific object. This prevents you from accidentally changing the object by changing the variable. It also allows you to test whether the object variable points to a valid object, as the following example shows.
+개체 변수를 `Nothing`로 설정 하면 변수를 특정 개체와 연결 하는 것을 중단 수 있습니다. 이렇게 하면 변수를 변경 하 여 실수로 개체를 변경할 수 없습니다. 또한 다음 예제와 같이 개체 변수가 유효한 개체를 가리키는지 여부를 테스트할 수 있습니다.
 
 ```vb
 If otherObject IsNot Nothing Then
@@ -55,17 +55,17 @@ If otherObject IsNot Nothing Then
 End If
 ```
 
-If the object your variable refers to is in another application, this test cannot determine whether that application has terminated or just invalidated the object.
+변수가 참조 하는 개체가 다른 응용 프로그램에 있는 경우이 테스트는 해당 응용 프로그램이 종료 되었는지 아니면 무효화 되었는지를 확인할 수 없습니다.
 
-An object variable with a value of `Nothing` is also called a *null reference*.
+`Nothing` 값을 포함 하는 개체 변수를 *null 참조*라고도 합니다.
 
-## <a name="current-instance"></a>Current Instance
+## <a name="current-instance"></a>현재 인스턴스
 
-The *current instance* of an object is the one in which the code is currently executing. Since all code executes inside a procedure, the current instance is the one in which the procedure was invoked.
+개체의 *현재 인스턴스* 는 코드가 현재 실행 중인 인스턴스입니다. 모든 코드가 프로시저 내에서 실행 되기 때문에 현재 인스턴스는 프로시저가 호출 된 인스턴스입니다.
 
-The `Me` keyword acts as an object variable referring to the current instance. If a procedure is not [Shared](../../../../visual-basic/language-reference/modifiers/shared.md), it can use the `Me` keyword to obtain a pointer to the current instance. Shared procedures cannot be associated with a specific instance of a class.
+`Me` 키워드는 현재 인스턴스를 참조 하는 개체 변수의 역할을 합니다. 프로시저를 [공유](../../../../visual-basic/language-reference/modifiers/shared.md)하지 않는 경우 `Me` 키워드를 사용 하 여 현재 인스턴스에 대 한 포인터를 가져올 수 있습니다. 공유 프로시저는 특정 클래스 인스턴스와 연결할 수 없습니다.
 
-Using `Me` is particularly useful for passing the current instance to a procedure in another module. For example, suppose you have a number of XML documents and wish to add some standard text to all of them. The following example defines a procedure to do this.
+`Me`를 사용 하는 것은 현재 인스턴스를 다른 모듈의 프로시저에 전달 하는 데 특히 유용 합니다. 예를 들어 여러 XML 문서를 포함 하 고 모든 표준 텍스트를이 문서에 추가 하려는 경우를 가정해 보겠습니다. 다음 예에서는이 작업을 수행 하는 프로시저를 정의 합니다.
 
 ```vb
 Sub addStandardText(XmlDoc As System.Xml.XmlDocument)
@@ -73,17 +73,17 @@ Sub addStandardText(XmlDoc As System.Xml.XmlDocument)
 End Sub
 ```
 
-Every XML document object could then call the procedure and pass its current instance as an argument. 다음은 이에 대한 예입니다.
+그러면 모든 XML 문서 개체가 프로시저를 호출 하 고 현재 인스턴스를 인수로 전달할 수 있습니다. 다음은 이에 대한 예입니다.
 
 ```vb
 addStandardText(Me)
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [개체 변수](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [개체 변수 선언](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
 - [개체 변수 값](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)
-- [How to: Declare an Object Variable and Assign an Object to It in Visual Basic](../../../../visual-basic/programming-guide/language-features/variables/how-to-declare-an-object-variable-and-assign-an-object-to-it.md)
+- [방법: 개체 변수를 선언 하 고 개체를에 할당 Visual Basic](../../../../visual-basic/programming-guide/language-features/variables/how-to-declare-an-object-variable-and-assign-an-object-to-it.md)
 - [방법: 개체 변수가 인스턴스를 참조하지 않도록 설정](../../../../visual-basic/programming-guide/language-features/variables/how-to-make-an-object-variable-not-refer-to-any-instance.md)
 - [Me, My, MyBase 및 MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)

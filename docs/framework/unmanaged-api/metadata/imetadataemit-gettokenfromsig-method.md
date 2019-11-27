@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74434322"
 ---
 # <a name="imetadataemitgettokenfromsig-method"></a>IMetaDataEmit::GetTokenFromSig 메서드
-Gets a token for the specified metadata signature.  
+지정 된 메타 데이터 시그니처의 토큰을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,24 +37,24 @@ HRESULT GetTokenFromSig (
   
 ## <a name="parameters"></a>매개 변수  
  `pvSig`  
- [in] The signature to be persisted and stored.  
+ 진행 유지 되 고 저장 되는 서명입니다.  
   
  `cbSig`  
- [in] The count of bytes in `pvSig`.  
+ 진행 `pvSig`바이트 수입니다.  
   
  `pmsig`  
- [out] The `mdSignature` token assigned.  
+ 제한이 할당 된 `mdSignature` 토큰입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IMetaDataEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

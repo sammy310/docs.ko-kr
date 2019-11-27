@@ -8,12 +8,12 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349600"
 ---
-# <a name="special-characters-visual-basic-reference"></a>Special Characters (Visual Basic Reference)
+# <a name="special-characters-visual-basic-reference"></a>특수 문자 (Visual Basic 참조)
 
-Special characters are predefined, contextual characters that modifies the program element to which they are prepended. Visual Basic supports the following special character:
+특수 문자는 앞에 있는 프로그램 요소를 수정 하는 미리 정의 된 상황별 문자입니다. Visual Basic는 다음과 같은 특수 문자를 지원 합니다.
 
 - [$](interpolated.md), 보간된 문자열 문자입니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Visual Basic 참조](../../../visual-basic/language-reference/index.md)

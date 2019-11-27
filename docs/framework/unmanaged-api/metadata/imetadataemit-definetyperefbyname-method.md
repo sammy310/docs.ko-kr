@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74434389"
 ---
 # <a name="imetadataemitdefinetyperefbyname-method"></a>IMetaDataEmit::DefineTypeRefByName 메서드
-Gets a metadata token for a type that is defined in the specified scope, which is outside the current scope.  
+현재 범위를 벗어난 지정 된 범위에 정의 된 형식에 대 한 메타 데이터 토큰을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,34 +37,34 @@ HRESULT DefineTypeRefByName (
   
 ## <a name="parameters"></a>매개 변수  
  `tkResolutionScope`  
- [in] The token specifying the resolution scope. The following token types are valid:  
+ 진행 확인 범위를 지정 하는 토큰입니다. 유효한 토큰 형식은 다음과 같습니다.  
   
-- `mdModuleRef`, if the type is defined in the same assembly in which the caller is defined.  
+- 호출자가 정의 된 동일한 어셈블리에서 형식이 정의 된 경우에는 `mdModuleRef`합니다.  
   
-- `mdAssemblyRef`, if the type is defined in an assembly other than the one in which the caller is defined.  
+- 호출자가 정의 된 어셈블리 이외의 어셈블리에서 형식이 정의 된 경우에는를 `mdAssemblyRef`합니다.  
   
-- `mdTypeRef`, if the type is a nested type.  
+- 형식이 중첩 형식이 면이 고, 그렇지 않으면 `mdTypeRef`입니다.  
   
-- `mdModule`, if the type is defined in the same module in which the caller is defined.  
+- 호출자가 정의 된 동일한 모듈에서 형식이 정의 된 경우에는 `mdModule`합니다.  
   
-- Null, if the type is defined globally.  
+- 형식이 전역적으로 정의 된 경우 Null입니다.  
   
  `szName`  
- [in] The name of the target type in Unicode.  
+ 진행 유니코드로 된 대상 형식의 이름입니다.  
   
  `ptr`  
- [out] A pointer to the `mdTypeRef` token that is assigned to the type.  
+ 제한이 형식에 할당 된 `mdTypeRef` 토큰에 대 한 포인터입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IMetaDataEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

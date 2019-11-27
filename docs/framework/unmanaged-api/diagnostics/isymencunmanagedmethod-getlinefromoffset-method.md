@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448643"
 ---
 # <a name="isymencunmanagedmethodgetlinefromoffset-method"></a>ISymENCUnmanagedMethod::GetLineFromOffset 메서드
-Gets the line information associated with an offset. If the offset parameter (`dwOffset`) is not a sequence point, this method gets the line information associated with the previous offset.  
+오프셋과 연결 된 줄 정보를 가져옵니다. Offset 매개 변수 (`dwOffset`)가 시퀀스 위치가 아니면이 메서드는 이전 오프셋과 관련 된 줄 정보를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,29 +39,29 @@ HRESULT GetLineFromOffset(
   
 ## <a name="parameters"></a>매개 변수  
  `dwOffset`  
- [in] A `ULONG32` that contains the offset.  
+ 진행 오프셋을 포함 하는 `ULONG32`입니다.  
   
  `pline`  
- [out] A pointer to a `ULONG32` that receives the line.  
+ 제한이 줄을 수신 하는 `ULONG32`에 대 한 포인터입니다.  
   
  `pcolumn`  
- [out] A pointer to a `ULONG32` that receives the column.  
+ 제한이 열을 수신 하는 `ULONG32`에 대 한 포인터입니다.  
   
  `pendLine`  
- [out] A pointer to a `ULONG32` that receives the end line.  
+ 제한이 끝 줄을 수신 하는 `ULONG32`에 대 한 포인터입니다.  
   
  `pendColumn`  
- [out] A pointer to a `ULONG32` that receives the end column.  
+ 제한이 끝 열을 수신 하는 `ULONG32`에 대 한 포인터입니다.  
   
  `pdwStartOffset`  
- [out] A pointer to a `ULONG32` that receives the associated sequence point.  
+ 제한이 연결 된 시퀀스 위치를 수신 하는 `ULONG32`에 대 한 포인터입니다.  
   
 ## <a name="return-value"></a>반환 값  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **Header:** CorSym.idl, CorSym.h  
+ **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ISymENCUnmanagedMethod 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)

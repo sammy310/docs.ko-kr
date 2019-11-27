@@ -16,7 +16,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350197"
 ---
 # <a name="-operator-visual-basic"></a>= 연산자(Visual Basic)
-Assigns a value to a variable or property.  
+변수 또는 속성에 값을 할당 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -26,33 +26,33 @@ variableorproperty = value
   
 ## <a name="parts"></a>요소  
  `variableorproperty`  
- Any writable variable or any property.  
+ 쓰기 가능한 변수 또는 모든 속성입니다.  
   
  `value`  
- Any literal, constant, or expression.  
+ 모든 리터럴, 상수 또는 식입니다.  
   
 ## <a name="remarks"></a>주의  
- The element on the left side of the equal sign (`=`) can be a simple scalar variable, a property, or an element of an array. The variable or property cannot be [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md). The `=` operator assigns the value on its right to the variable or property on its left.  
+ 등호 (`=`)의 왼쪽에 있는 요소는 간단한 스칼라 변수, 속성 또는 배열의 요소일 수 있습니다. 변수 또는 속성은 [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)일 수 없습니다. `=` 연산자는 오른쪽의 값을 왼쪽에 있는 변수나 속성에 할당 합니다.  
   
 > [!NOTE]
-> The `=` operator is also used as a comparison operator. For details, see [Comparison Operators](../../../visual-basic/language-reference/operators/comparison-operators.md).  
+> `=` 연산자는 비교 연산자로도 사용 됩니다. 자세한 내용은 [비교 연산자](../../../visual-basic/language-reference/operators/comparison-operators.md)를 참조 하세요.  
   
-## <a name="overloading"></a>오버로딩  
- The `=` operator can be overloaded only as a relational comparison operator, not as an assignment operator. 자세한 내용은 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)을 참조하세요.  
+## <a name="overloading"></a>오버로드  
+ `=` 연산자는 할당 연산자가 아닌 관계형 비교 연산자로만 오버 로드 될 수 있습니다. 자세한 내용은 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)을 참조하세요.  
   
 ## <a name="example"></a>예제  
- The following example demonstrates the assignment operator. The value on the right is assigned to the variable on the left.  
+ 다음 예에서는 대입 연산자를 보여 줍니다. 오른쪽의 값이 왼쪽의 변수에 할당 됩니다.  
   
  [!code-vb[VbVbalrOperators#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#9)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [&= 연산자](../../../visual-basic/language-reference/operators/and-assignment-operator.md)
 - [*= 연산자](../../../visual-basic/language-reference/operators/multiplication-assignment-operator.md)
 - [+= 연산자](../../../visual-basic/language-reference/operators/addition-assignment-operator.md)
-- [-= Operator (Visual Basic)](../../../visual-basic/language-reference/operators/subtraction-assignment-operator.md)
-- [/= Operator (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)
-- [\\= Operator](../../../visual-basic/language-reference/operators/integer-division-assignment-operator.md)
+- [-= 연산자 (Visual Basic)](../../../visual-basic/language-reference/operators/subtraction-assignment-operator.md)
+- [/= 연산자 (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)
+- [\\= 연산자](../../../visual-basic/language-reference/operators/integer-division-assignment-operator.md)
 - [^= 연산자](../../../visual-basic/language-reference/operators/exponentiation-assignment-operator.md)
 - [문](../../../visual-basic/programming-guide/language-features/statements.md)
 - [비교 연산자](../../../visual-basic/language-reference/operators/comparison-operators.md)

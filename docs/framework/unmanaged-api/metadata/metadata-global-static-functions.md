@@ -14,9 +14,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447829"
 ---
 # <a name="metadata-global-static-functions"></a>메타데이터 전역 정적 함수
-Beginning with the .NET Framework 4, the documentation for the `_Cor*`, `CoInitialize*`, `CoUninitialize*`, and `CoEEShutDownCOM` functions, which pertain to hosting, is located in [Deprecated CLR Hosting Functions](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md). 메타데이터와 관련된 전역 정적 함수는 없습니다.  
+.NET Framework 4부터 호스트와 관련 된 `_Cor*`, `CoInitialize*`, `CoUninitialize*`및 `CoEEShutDownCOM` 함수에 대 한 설명서는 [사용 되지 않는 CLR 호스팅 함수](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)에 있습니다. 메타데이터와 관련된 전역 정적 함수는 없습니다.  
   
-## <a name="related-sections"></a>관련 단원  
+## <a name="related-sections"></a>관련 섹션  
  [메타데이터 인터페이스](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)  
   
  [메타데이터 열거형](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)  

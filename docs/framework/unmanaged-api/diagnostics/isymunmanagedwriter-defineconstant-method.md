@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428068"
 ---
 # <a name="isymunmanagedwriterdefineconstant-method"></a>ISymUnmanagedWriter::DefineConstant 메서드
-Defines a name for a constant value.  
+상수 값의 이름을 정의 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,24 +37,24 @@ HRESULT DefineConstant(
   
 ## <a name="parameters"></a>매개 변수  
  `name`  
- [in] A pointer to a `WCHAR` that defines the constant name.  
+ 진행 상수 이름을 정의 하는 `WCHAR`에 대 한 포인터입니다.  
   
  `value`  
- [in] The value of the constant.  
+ 진행 상수의 값입니다.  
   
  `cSig`  
  [in] `signature` 배열의 크기입니다.  
   
  `signature`  
- [in] The type signature for the constant.  
+ 진행 상수에 대 한 형식 시그니처입니다.  
   
 ## <a name="return-value"></a>반환 값  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **Header:** CorSym.idl, CorSym.h  
+ **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ISymUnmanagedWriter 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
 - [DefineConstant2 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-defineconstant2-method.md)

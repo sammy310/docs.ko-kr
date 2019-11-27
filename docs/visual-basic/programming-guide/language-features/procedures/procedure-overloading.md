@@ -26,71 +26,71 @@ ms.locfileid: "74352595"
 ---
 # <a name="procedure-overloading-visual-basic"></a>프로시저 오버로딩(Visual Basic)
 
-*Overloading* a procedure means defining it in multiple versions, using the same name but different parameter lists. The purpose of overloading is to define several closely related versions of a procedure without having to differentiate them by name. You do this by varying the parameter list.
+프로시저를 *오버 로드* 하는 것은 동일한 이름을 사용 하지만 매개 변수 목록을 사용 하 여 여러 버전으로 정의 하는 것을 의미 합니다. 오버 로드의 목적은 프로시저를 이름으로 구분 하지 않고도 긴밀 하 게 관련 된 여러 버전을 정의 하는 것입니다. 매개 변수 목록을 변경 하 여이 작업을 수행 합니다.
 
-## <a name="overloading-rules"></a>Overloading Rules
+## <a name="overloading-rules"></a>오버 로드 규칙
 
-When you overload a procedure, the following rules apply:
+프로시저를 오버 로드 하는 경우 다음 규칙이 적용 됩니다.
 
-- **Same Name**. Each overloaded version must use the same procedure name.
+- **동일한 이름**입니다. 오버 로드 된 각 버전은 동일한 프로시저 이름을 사용 해야 합니다.
 
-- **Different Signature**. Each overloaded version must differ from all other overloaded versions in at least one of the following respects:
+- **서명이 다릅니다**. 오버 로드 된 각 버전은 다음 중 하나 이상의 오버 로드 된 버전과 달라 야 합니다.
 
-  - Number of parameters
+  - 매개 변수 수
 
-  - Order of the parameters
+  - 매개 변수의 순서
 
-  - Data types of the parameters
+  - 매개 변수의 데이터 형식
 
-  - Number of type parameters (for a generic procedure)
+  - 제네릭 프로시저에 대 한 형식 매개 변수 수
 
-  - Return type (only for a conversion operator)
+  - 반환 형식 (변환 연산자의 경우에만)
 
-  Together with the procedure name, the preceding items are collectively called the *signature* of the procedure. When you call an overloaded procedure, the compiler uses the signature to check that the call correctly matches the definition.
+  프로시저 이름과 함께 위의 항목을 통칭 하 여 프로시저의 *시그니처* 라고 합니다. 오버 로드 된 프로시저를 호출 하면 컴파일러는 서명을 사용 하 여 호출이 정의와 정확히 일치 하는지 확인 합니다.
 
-- **Items Not Part of Signature**. You cannot overload a procedure without varying the signature. In particular, you cannot overload a procedure by varying only one or more of the following items:
+- **항목은 시그니처의 일부가 아닙니다**. 시그니처를 변경 하지 않고 프로시저를 오버 로드할 수 없습니다. 특히 다음 항목 중 하나 이상을 변경 하 여 프로시저를 오버 로드할 수 없습니다.
 
-  - Procedure modifier keywords, such as `Public`, `Shared`, and `Static`
+  - 프로시저 한정자 키워드 (예: `Public`, `Shared`및 `Static`
 
-  - Parameter or type parameter names
+  - 매개 변수 또는 형식 매개 변수 이름
 
-  - Type parameter constraints (for a generic procedure)
+  - 형식 매개 변수 제약 조건 (제네릭 프로시저의 경우)
 
-  - Parameter modifier keywords, such as `ByRef` and `Optional`
+  - `ByRef` 및 `Optional`와 같은 매개 변수 한정자 키워드
 
-  - Whether it returns a value
+  - 값을 반환 하는지 여부
 
-  - The data type of the return value (except for a conversion operator)
+  - 반환 값의 데이터 형식 (변환 연산자 제외)
 
-  The items in the preceding list are not part of the signature. Although you cannot use them to differentiate between overloaded versions, you can vary them among overloaded versions that are properly differentiated by their signatures.
+  위의 목록에 있는 항목은 시그니처의 일부가 아닙니다. 오버 로드 된 버전을 구분 하는 데 사용할 수는 없지만 해당 시그니처로 적절히 구분 되는 오버 로드 된 버전 간에는 이러한 버전을 변경할 수 있습니다.
 
-- **Late-Bound Arguments**. If you intend to pass a late bound object variable to an overloaded version, you must declare the appropriate parameter as <xref:System.Object>.
+- **런타임에 바인딩된 인수**입니다. 런타임에 바인딩된 개체 변수를 오버 로드 된 버전에 전달 하려는 경우 적절 한 매개 변수를 <xref:System.Object>선언 해야 합니다.
 
-## <a name="multiple-versions-of-a-procedure"></a>Multiple Versions of a Procedure
+## <a name="multiple-versions-of-a-procedure"></a>프로시저의 여러 버전
 
-Suppose you are writing a `Sub` procedure to post a transaction against a customer's balance, and you want to be able to refer to the customer either by name or by account number. To accommodate this, you can define two different `Sub` procedures, as in the following example:
+고객의 잔액에 대해 트랜잭션을 게시 하는 `Sub` 프로시저를 작성 하 고 있거나 이름 또는 계정 번호를 기준으로 고객을 참조할 수 있습니다. 이를 수용 하기 위해 다음 예제와 같이 두 가지 다른 `Sub` 프로시저를 정의할 수 있습니다.
 
 [!code-vb[VbVbcnProcedures#73](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#73)]
 
-### <a name="overloaded-versions"></a>Overloaded Versions
+### <a name="overloaded-versions"></a>오버 로드 된 버전
 
-An alternative is to overload a single procedure name. You can use the [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md) keyword to define a version of the procedure for each parameter list, as follows:
+또 다른 방법은 단일 프로시저 이름을 오버 로드 하는 것입니다. 다음과 같이 [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md) 키워드를 사용 하 여 각 매개 변수 목록에 대 한 프로시저의 버전을 정의할 수 있습니다.
 
 [!code-vb[VbVbcnProcedures#72](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#72)]
 
-#### <a name="additional-overloads"></a>Additional Overloads
+#### <a name="additional-overloads"></a>추가 오버 로드
 
-If you also wanted to accept a transaction amount in either `Decimal` or `Single`, you could further overload `post` to allow for this variation. If you did this to each of the overloads in the preceding example, you would have four `Sub` procedures, all with the same name but with four different signatures.
+또한 `Decimal` 또는 `Single`에서 트랜잭션 양을 수락 하려는 경우이 변형에 대해 `post` 오버 로드를 추가로 수행할 수 있습니다. 앞의 예제에서 각 오버 로드에 대해이를 수행한 경우 이름이 같지만 서명이 4 개 있는 `Sub` 프로시저가 네 개 있습니다.
 
-## <a name="advantages-of-overloading"></a>Advantages of Overloading
+## <a name="advantages-of-overloading"></a>오버 로드의 이점
 
-The advantage of overloading a procedure is in the flexibility of the call. To use the `post` procedure declared in the preceding example, the calling code can obtain the customer identification as either a `String` or an `Integer`, and then call the same procedure in either case. 다음 예제는 이러한 과정을 보여 줍니다.
+프로시저 오버 로드의 이점은 호출의 유연성을 제공 합니다. 앞의 예제에서 선언 된 `post` 프로시저를 사용 하려면 호출 하는 코드에서 고객 id를 `String` 또는 `Integer`으로 가져온 다음 두 경우 모두 동일한 프로시저를 호출할 수 있습니다. 다음 예제는 이러한 과정을 보여 줍니다.
 
 [!code-vb[VbVbcnProcedures#56](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#56)]
 
 [!code-vb[VbVbcnProcedures#57](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#57)]
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [절차](./index.md)
 - [방법: 여러 버전의 프로시저 정의](./how-to-define-multiple-versions-of-a-procedure.md)
@@ -99,5 +99,5 @@ The advantage of overloading a procedure is in the flexibility of the call. To u
 - [방법: 매개 변수를 무제한으로 사용하는 프로시저 오버로드](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
 - [프로시저를 오버로드할 때 고려해야 할 사항](./considerations-in-overloading-procedures.md)
 - [오버로드 확인](./overload-resolution.md)
-- [오버로드](../../../../visual-basic/language-reference/modifiers/overloads.md)
+- [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md)
 - [Generic Types in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)

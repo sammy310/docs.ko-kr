@@ -16,7 +16,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348563"
 ---
-# <a name="-resource-visual-basic"></a>-resource (Visual Basic)
+# <a name="-resource-visual-basic"></a>-리소스 (Visual Basic)
 관리되는 리소스를 어셈블리에 포함합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -35,26 +35,26 @@ or
   
 |용어|정의|  
 |---|---|  
-|`filename`|필수 요소. The name of the resource file to embed in the output file. By default, `filename` is public in the assembly. Enclose the file name in quotation marks (" ") if it contains a space.|  
-|`identifier`|(선택 사항) The logical name for the resource; the name used to load it. 기본값은 파일 이름입니다. Optionally, you can specify whether the resource is public or private in the assembly manifest, as with the following: `-res:filename.res, myname.res, public`|  
+|`filename`|필수입니다. 출력 파일에 포함할 리소스 파일의 이름입니다. 기본적으로 `filename`는 어셈블리에서 public입니다. 공백을 포함 하는 경우 파일 이름을 따옴표 ("")로 묶습니다.|  
+|`identifier`|(선택 사항) 리소스의 논리적 이름입니다. 로드 하는 데 사용 되는 이름입니다. 기본값은 파일 이름입니다. 필요에 따라 다음과 같이 리소스를 어셈블리 매니페스트에서 public 또는 private으로 지정할 수 있습니다 `-res:filename.res, myname.res, public`|  
   
 ## <a name="remarks"></a>주의  
- Use `-linkresource` to link a resource to an assembly without placing the resource file in the output file.  
+ 리소스 파일을 출력 파일에 배치 하지 않고 어셈블리에 리소스를 연결 하려면 `-linkresource`를 사용 합니다.  
   
- If `filename` is a .NET Framework resource file created, for example, by the [Resgen.exe (Resource File Generator)](../../../framework/tools/resgen-exe-resource-file-generator.md) or in the development environment, it can be accessed with members in the <xref:System.Resources> namespace (see <xref:System.Resources.ResourceManager> for more information). To access all other resources at run time, use one of the following methods: <xref:System.Reflection.Assembly.GetManifestResourceInfo%2A>, <xref:System.Reflection.Assembly.GetManifestResourceNames%2A>, or <xref:System.Reflection.Assembly.GetManifestResourceStream%2A>.  
+ 예를 들어 [resgen.exe (리소스 파일 생성기)](../../../framework/tools/resgen-exe-resource-file-generator.md) 나 개발 환경에서 만든 .NET Framework 리소스 파일인 `filename` 경우 <xref:System.Resources> 네임 스페이스의 멤버를 사용 하 여 액세스할 수 있습니다 (자세한 내용은 <xref:System.Resources.ResourceManager> 참조). 런타임에 다른 모든 리소스에 액세스 하려면 다음 방법 중 하나를 사용 합니다. <xref:System.Reflection.Assembly.GetManifestResourceInfo%2A>, <xref:System.Reflection.Assembly.GetManifestResourceNames%2A>또는 <xref:System.Reflection.Assembly.GetManifestResourceStream%2A>.  
   
  `-resource`의 약식은 `-res`입니다.  
   
- For information about how to set `-resource` in the Visual Studio IDE, see [Managing Application Resources (.NET)](/visualstudio/ide/managing-application-resources-dotnet).  
+ Visual Studio IDE에서 `-resource`를 설정 하는 방법에 대 한 자세한 내용은 [응용 프로그램 리소스 관리 (.net)](/visualstudio/ide/managing-application-resources-dotnet)를 참조 하세요.  
   
 ## <a name="example"></a>예제  
- The following code compiles `In.vb` and attaches resource file `Rf.resource`.  
+ 다음 코드는 `In.vb` 컴파일하고 리소스 파일 `Rf.resource`을 연결 합니다.  
   
 ```console
 vbc -res:rf.resource in.vb  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Visual Basic 명령줄 컴파일러](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md)

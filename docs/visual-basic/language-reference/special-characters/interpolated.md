@@ -8,7 +8,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349595"
 ---
-# <a name="-visual-basic-reference"></a>$ (Visual Basic Reference)
+# <a name="-visual-basic-reference"></a>$ (Visual Basic 참조)
 
 문자열 리터럴을 [보간된 문자열](../../programming-guide/language-features/strings/interpolated-strings.md)로 식별합니다. 보간된 문자열은 *보간된 식*과 함께 리터럴 텍스트를 포함하는 템플릿과 유사한 문자열입니다. 예를 들어 대입문이나 메서드 호출에서 보간된 문자열이 확인되면 보간된 식이 결과 문자열의 해당 문자열 표현으로 바뀝니다. 보간된 문자열은 .NET Framework에서 지원되는 [복합 형식 문자열](../../../standard/base-types/composite-formatting.md)을 대체합니다.
 
@@ -18,7 +18,7 @@ ms.locfileid: "74349595"
 
 보간된 문자열에 대한 자세한 내용은 [보간된 문자열](../../programming-guide/language-features/strings/interpolated-strings.md) 항목을 참조하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Visual Basic 참조](../index.md)
-- [Visual Basic Special Characters](index.md)
+- [특수 문자 Visual Basic](index.md)

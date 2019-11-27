@@ -14,25 +14,25 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351653"
 ---
 # <a name="string-manipulation-summary-visual-basic"></a>문자열 조작 요약(Visual Basic)
-Visual Basic language keywords and run-time library members are organized by purpose and use.  
+Visual Basic 언어 키워드 및 런타임 라이브러리 멤버는 목적과 사용을 기준으로 구성 됩니다.  
   
-|작업|언어 요소|  
+|작업|Language 요소|  
 |------------|----------------------|  
-|Compare two strings.|<xref:Microsoft.VisualBasic.Strings.StrComp%2A>|  
-|Convert strings.|<xref:Microsoft.VisualBasic.Strings.StrConv%2A>|  
-|Reverse a string.|<xref:Microsoft.VisualBasic.Strings.InStrRev%2A>, <xref:Microsoft.VisualBasic.Strings.StrReverse%2A>|  
-|Convert to lowercase or uppercase.|<xref:Microsoft.VisualBasic.Strings.Format%2A>에서 <xref:Microsoft.VisualBasic.Strings.LCase%2A>에서 <xref:Microsoft.VisualBasic.Strings.UCase%2A>|  
-|Create a string of repeating characters.|<xref:Microsoft.VisualBasic.Strings.Space%2A>, <xref:Microsoft.VisualBasic.Strings.StrDup%2A>|  
-|Find the length of a string.|<xref:Microsoft.VisualBasic.Strings.Len%2A>|  
-|Format a string.|<xref:Microsoft.VisualBasic.Strings.Format%2A>, <xref:Microsoft.VisualBasic.Strings.FormatCurrency%2A>, <xref:Microsoft.VisualBasic.Strings.FormatDateTime%2A>, <xref:Microsoft.VisualBasic.Strings.FormatNumber%2A>, <xref:Microsoft.VisualBasic.Strings.FormatPercent%2A>|  
-|Manipulate strings.|<xref:Microsoft.VisualBasic.Strings.InStr%2A>, <xref:Microsoft.VisualBasic.Strings.Left%2A>, <xref:Microsoft.VisualBasic.Strings.LTrim%2A>, <xref:Microsoft.VisualBasic.Strings.Mid%2A>, <xref:Microsoft.VisualBasic.Strings.Right%2A>, <xref:Microsoft.VisualBasic.Strings.RTrim%2A>, <xref:Microsoft.VisualBasic.Strings.Trim%2A>|  
-|Set string comparison rules.|[Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md)|  
-|Work with ASCII and ANSI values.|<xref:Microsoft.VisualBasic.Strings.Asc%2A>, <xref:Microsoft.VisualBasic.Strings.AscW%2A>, <xref:Microsoft.VisualBasic.Strings.Chr%2A>, <xref:Microsoft.VisualBasic.Strings.ChrW%2A>|  
-|Replace a specified substring.|<xref:Microsoft.VisualBasic.Strings.Replace%2A>|  
-|Return a filter-based string array.|<xref:Microsoft.VisualBasic.Strings.Filter%2A>|  
-|Return a specified number of substrings.|<xref:Microsoft.VisualBasic.Strings.Split%2A>, <xref:Microsoft.VisualBasic.Strings.Join%2A>|  
+|두 문자열을 비교 합니다.|<xref:Microsoft.VisualBasic.Strings.StrComp%2A>|  
+|문자열을 변환 합니다.|<xref:Microsoft.VisualBasic.Strings.StrConv%2A>|  
+|문자열을 반대로 바꿉니다.|<xref:Microsoft.VisualBasic.Strings.InStrRev%2A>, <xref:Microsoft.VisualBasic.Strings.StrReverse%2A>|  
+|소문자 또는 대문자로 변환 합니다.|<xref:Microsoft.VisualBasic.Strings.Format%2A>, <xref:Microsoft.VisualBasic.Strings.LCase%2A>, <xref:Microsoft.VisualBasic.Strings.UCase%2A>|  
+|반복 되는 문자 문자열을 만듭니다.|<xref:Microsoft.VisualBasic.Strings.Space%2A>, <xref:Microsoft.VisualBasic.Strings.StrDup%2A>|  
+|문자열의 길이를 확인 합니다.|<xref:Microsoft.VisualBasic.Strings.Len%2A>|  
+|문자열의 형식을 지정 합니다.|<xref:Microsoft.VisualBasic.Strings.Format%2A>, <xref:Microsoft.VisualBasic.Strings.FormatCurrency%2A>, <xref:Microsoft.VisualBasic.Strings.FormatDateTime%2A>, <xref:Microsoft.VisualBasic.Strings.FormatNumber%2A>, <xref:Microsoft.VisualBasic.Strings.FormatPercent%2A>|  
+|문자열을 조작 합니다.|<xref:Microsoft.VisualBasic.Strings.InStr%2A>, <xref:Microsoft.VisualBasic.Strings.Left%2A>, <xref:Microsoft.VisualBasic.Strings.LTrim%2A>, <xref:Microsoft.VisualBasic.Strings.Mid%2A>, <xref:Microsoft.VisualBasic.Strings.Right%2A>, <xref:Microsoft.VisualBasic.Strings.RTrim%2A>, <xref:Microsoft.VisualBasic.Strings.Trim%2A>|  
+|문자열 비교 규칙을 설정 합니다.|[Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md)|  
+|ASCII 및 ANSI 값을 사용 하 여 작업 합니다.|<xref:Microsoft.VisualBasic.Strings.Asc%2A>, <xref:Microsoft.VisualBasic.Strings.AscW%2A>, <xref:Microsoft.VisualBasic.Strings.Chr%2A>, <xref:Microsoft.VisualBasic.Strings.ChrW%2A>|  
+|지정 된 부분 문자열을 바꿉니다.|<xref:Microsoft.VisualBasic.Strings.Replace%2A>|  
+|필터 기반 문자열 배열을 반환 합니다.|<xref:Microsoft.VisualBasic.Strings.Filter%2A>|  
+|지정 된 수의 부분 문자열을 반환 합니다.|<xref:Microsoft.VisualBasic.Strings.Split%2A>, <xref:Microsoft.VisualBasic.Strings.Join%2A>|  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [C++ 키워드](../../../visual-basic/language-reference/keywords/index.md)
+- [키워드](../../../visual-basic/language-reference/keywords/index.md)
 - [Visual Basic 런타임 라이브러리 멤버](../../../visual-basic/language-reference/runtime-library-members.md)

@@ -20,29 +20,29 @@ ms.locfileid: "74350015"
 ---
 # <a name="how-to-hold-more-than-one-value-in-a-variable-visual-basic"></a>방법: 변수에 두 개 이상의 값 사용(Visual Basic)
 
-A variable holds more than one value if you declare it to be of a *composite data type*.
+*복합 데이터 형식*으로 선언 하는 경우 변수에 두 개 이상의 값이 포함 됩니다.
 
-[Composite Data Types](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md) include structures, arrays, and classes. A variable of a composite data type can hold a combination of elementary data types and other composite types. Structures and classes can hold code as well as data.
+[복합 데이터 형식](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md) 에는 구조체, 배열 및 클래스가 포함 됩니다. 복합 데이터 형식의 변수는 기본 데이터 형식과 기타 복합 형식의 조합을 포함할 수 있습니다. 구조체와 클래스는 데이터 뿐만 아니라 코드도 포함할 수 있습니다.
 
-## <a name="to-hold-more-than-one-value-in-a-variable"></a>To hold more than one value in a variable
+## <a name="to-hold-more-than-one-value-in-a-variable"></a>변수에 두 개 이상의 값을 저장 하려면
 
-1. Determine what composite data type you want to use for your variable.
+1. 변수에 사용 하려는 복합 데이터 형식을 결정 합니다.
 
-2. If the composite data type is not already defined, define it so that your variable can use it.
+2. 복합 데이터 형식이 아직 정의 되지 않은 경우 변수에서 사용할 수 있도록 정의 합니다.
 
-    - Define a structure with a [Structure Statement](../../../../visual-basic/language-reference/statements/structure-statement.md).
+    - Structure [문을](../../../../visual-basic/language-reference/statements/structure-statement.md)사용 하 여 구조체를 정의 합니다.
 
-    - Define an array with a [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md).
+    - [Dim 문으로](../../../../visual-basic/language-reference/statements/dim-statement.md)배열을 정의 합니다.
 
-    - Define a class with a [Class Statement](../../../../visual-basic/language-reference/statements/class-statement.md).
+    - [클래스 문으로](../../../../visual-basic/language-reference/statements/class-statement.md)클래스를 정의 합니다.
 
-3. Declare your variable with a `Dim` statement.
+3. `Dim` 문을 사용 하 여 변수를 선언 합니다.
 
-4. Follow the variable name with an `As` clause.
+4. 변수 이름 뒤에 `As` 절을 사용 합니다.
 
-5. Follow the `As` keyword with the name of the appropriate composite data type.
+5. 적절 한 복합 데이터 형식의 이름과 함께 `As` 키워드를 따릅니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [데이터 형식](../../../../visual-basic/language-reference/data-types/index.md)
 - [형식 문자](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
@@ -50,4 +50,4 @@ A variable holds more than one value if you declare it to be of a *composite dat
 - [구조체](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [배열](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
 - [개체 및 클래스](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
-- [값 형식과 참조 형식](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)

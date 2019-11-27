@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448712"
 ---
 # <a name="exporttypeforwarder-method"></a>ExportTypeForwarder 메서드
-Adds a type forwarder to the type table of the given assembly.  
+지정 된 어셈블리의 형식 테이블에 형식 전달자를 추가 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,24 +37,24 @@ HRESULT ExportTypeForwarder(
   
 ## <a name="parameters"></a>매개 변수  
  `tkAssemblyRef`  
- Reference to the assembly to which the type forwarder refers.  
+ 형식 전달 자가 참조 하는 어셈블리에 대 한 참조입니다.  
   
  `pszTypename`  
- Fully qualified type name to export.  
+ 내보낼 정규화 된 형식 이름입니다.  
   
  `dwFlags`  
- `ComType` flags such as `tdPublic` or `tdNested`. This value may be passed to [DefineExportedType Method](../metadata/imetadataassemblyemit-defineexportedtype-method.md).  
+ `tdPublic` 또는 `tdNested`와 같은 플래그를 `ComType` 합니다. 이 값은 [DefineExportedType 메서드에](../metadata/imetadataassemblyemit-defineexportedtype-method.md)전달 될 수 있습니다.  
   
  `pType`  
- Receives the token of the exported type. This is necessary only for emitting nested types.  
+ 내보낸 형식의 토큰을 받습니다. 중첩 된 형식을 내보내는 경우에만 필요 합니다.  
   
 ## <a name="return-value"></a>반환 값  
- Returns S_OK if the method succeeds.  
+ 메서드가 성공 하면 S_OK을 반환 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- Requires alink.h  
+ Alink 필요  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IALink 인터페이스](ialink-interface.md)
 - [IALink2 인터페이스](ialink2-interface.md)

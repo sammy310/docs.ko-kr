@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449142"
 ---
 # <a name="isymunmanageddocumentgetsourcerange-method"></a>ISymUnmanagedDocument::GetSourceRange 메서드
-Returns the specified range of the embedded source into the given buffer. The buffer must be large enough to hold the source.  
+포함 된 소스의 지정 된 범위를 지정 된 버퍼에 반환 합니다. 버퍼는 원본을 저장할 수 있을 만큼 커야 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -41,29 +41,29 @@ HRESULT GetSourceRange(
   
 ## <a name="parameters"></a>매개 변수  
  `startLine`  
- [in] The starting line in the current document.  
+ 진행 현재 문서의 시작 줄입니다.  
   
  `startColumn`  
- [in] The starting column in the current document.  
+ 진행 현재 문서의 시작 열입니다.  
   
  `endLine`  
- [in] The final line in the current document.  
+ 진행 현재 문서의 마지막 줄입니다.  
   
  `endColumn`  
- [in] The final column in the current document.  
+ 진행 현재 문서의 마지막 열입니다.  
   
  `cSourceBytes`  
- [in] The size of the source, in bytes.  
+ 진행 소스의 크기 (바이트)입니다.  
   
  `pcSourceBytes`  
- [out] A pointer to a variable that receives the source size.  
+ 제한이 원본 크기를 받는 변수에 대 한 포인터입니다.  
   
  `source`  
- [out] The size and length of the specified range of the source document, in bytes.  
+ 제한이 지정 된 소스 문서 범위의 크기와 길이 (바이트)입니다.  
   
 ## <a name="return-value"></a>반환 값  
- S_OK if the method succeeds.  
+ 메서드가 성공 하면 S_OK 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ISymUnmanagedDocument 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

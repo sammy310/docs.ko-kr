@@ -44,45 +44,45 @@ HRESULT GetMethodProps (
   
 ## <a name="parameters"></a>매개 변수  
  `mb`  
- [in] The MethodDef token that represents the method to return metadata for.  
+ 진행 메타 데이터를 반환할 메서드를 나타내는 MethodDef 토큰입니다.  
   
  `pClass`  
- [out] A Pointer to a TypeDef token that represents the type that implements the method.  
+ 제한이 메서드를 구현 하는 형식을 나타내는 TypeDef 토큰에 대 한 포인터입니다.  
   
  `szMethod`  
- [out] A Pointer to a buffer that has the method's name.  
+ 제한이 메서드의 이름이 있는 버퍼에 대 한 포인터입니다.  
   
  `cchMethod`  
- [in] The requested size of `szMethod`.  
+ 진행 요청 된 `szMethod`크기입니다.  
   
  `pchMethod`  
- [out] A Pointer to the size in wide characters of `szMethod`, or in the case of truncation, the actual number of wide characters in the method name.  
+ 제한이 `szMethod`의 와이드 문자 크기에 대 한 포인터 이거나, 잘림 인 경우 메서드 이름에 있는 와이드 문자의 실제 수입니다.  
   
  `pdwAttr`  
- [out] A pointer to any flags associated with the method.  
+ 제한이 메서드와 연결 된 플래그에 대 한 포인터입니다.  
   
  `ppvSigBlob`  
- [out] A pointer to the binary metadata signature of the method.  
+ 제한이 메서드의 이진 메타 데이터 서명에 대 한 포인터입니다.  
   
  `pcbSigBlob`  
- [out] A Pointer to the size in bytes of `ppvSigBlob`.  
+ 제한이 `ppvSigBlob`의 크기 (바이트)에 대 한 포인터입니다.  
   
  `pulCodeRVA`  
- [out] A pointer to the relative virtual address of the method.  
+ 제한이 메서드의 상대 가상 주소에 대 한 포인터입니다.  
   
  `pdwImplFlags`  
- [out] A pointer to any implementation flags for the method.  
+ 제한이 메서드에 대 한 구현 플래그에 대 한 포인터입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IMetaDataImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

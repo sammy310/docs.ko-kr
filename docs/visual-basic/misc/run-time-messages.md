@@ -13,9 +13,9 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353663"
 ---
 # <a name="visual-basic-run-time-messages"></a>Visual Basic 런타임 메시지
-This section contains the Visual Basic error messages that occur at run time.  
+이 섹션에는 런타임에 발생 하는 Visual Basic 오류 메시지가 포함 되어 있습니다.  
   
- [\<address> is not a valid remote file address](../../visual-basic/misc/address-is-not-a-valid-remote-file-address.md)  
+ [\<address >은 (는) 올바른 원격 파일 주소가 아닙니다.](../../visual-basic/misc/address-is-not-a-valid-remote-file-address.md)  
   
  [구분 기호는 Nothing이나 빈 문자열일 수 없습니다.](../../visual-basic/misc/a-delimiter-cannot-be-nothing-or-an-empty-string.md)  
   
@@ -27,9 +27,9 @@ This section contains the Visual Basic error messages that occur at run time.
   
  [시작 폼이 지정되지 않았습니다.](../../visual-basic/language-reference/error-messages/a-startup-form-has-not-been-specified.md)  
   
- [Access denied to '\<name>'](../../visual-basic/misc/access-denied-to-name.md)  
+ ['\<name > '에 대 한 액세스가 거부 되었습니다.](../../visual-basic/misc/access-denied-to-name.md)  
   
- [Add failed. Duplicate key value supplied](../../visual-basic/misc/add-failed-duplicate-key-value-supplied.md)  
+ [추가 하지 못했습니다. 중복 키 값이 제공 되었습니다.](../../visual-basic/misc/add-failed-duplicate-key-value-supplied.md)  
   
  [마지막 요소를 제외한 모든 필드 너비는 0보다 커야 합니다.](../../visual-basic/misc/all-field-widths-except-the-last-element-must-be-greater-than-zero.md)  
   
@@ -41,51 +41,51 @@ This section contains the Visual Basic error messages that occur at run time.
   
  [애플리케이션 정의 또는 개체 정의 오류](../../visual-basic/misc/application-defined-or-object-defined-error.md)  
   
- [Argument '\<argument1>' must be less than or equal to the length of argument '\<argument2>'](../../visual-basic/misc/argument-argument1-must-be-less-than-or-equal-to-the-length-of-argument2.md)  
+ ['\<인수 1 > ' 인수는 '\<인수 2 > ' 인수의 길이 보다 작거나 같아야 합니다.](../../visual-basic/misc/argument-argument1-must-be-less-than-or-equal-to-the-length-of-argument2.md)  
   
- [Argument '\<argumentname>' cannot be a multidimensional array](../../visual-basic/misc/argument-argumentname-cannot-be-a-multidimensional-array.md)  
+ ['\<argumentname > ' 인수는 다차원 배열일 수 없습니다.](../../visual-basic/misc/argument-argumentname-cannot-be-a-multidimensional-array.md)  
   
- [Argument \<argumentname> cannot be an empty string or Nothing](../../visual-basic/misc/argument-argumentname-cannot-be-an-empty-string-or-nothing.md)  
+ [인수 \<argumentname >은 (는) 빈 문자열 이거나 Nothing 일 수 없습니다.](../../visual-basic/misc/argument-argumentname-cannot-be-an-empty-string-or-nothing.md)  
   
- [Argument '\<argumentname>' cannot be converted to a numeric value](../../visual-basic/misc/argument-argumentname-cannot-be-converted-to-a-numeric-value.md)  
+ ['\<argumentname > ' 인수를 숫자 값으로 변환할 수 없습니다.](../../visual-basic/misc/argument-argumentname-cannot-be-converted-to-a-numeric-value.md)  
   
- [Argument '\<argumentname>' cannot be converted to type '\<typename>'](../../visual-basic/misc/argument-argumentname-cannot-be-converted-to-type-typename.md)  
+ ['\<argumentname > ' 인수를 '\<typename > ' 형식으로 변환할 수 없습니다.](../../visual-basic/misc/argument-argumentname-cannot-be-converted-to-type-typename.md)  
   
- [Argument '\<argumentname>' cannot be converted to type 'Date'](../../visual-basic/misc/argument-argumentname-cannot-be-converted-to-type-date.md)  
+ ['\<argumentname > ' 인수를 ' Date ' 형식으로 변환할 수 없습니다.](../../visual-basic/misc/argument-argumentname-cannot-be-converted-to-type-date.md)  
   
- [Argument '\<argumentname>' is not a valid value](../../visual-basic/misc/argument-argumentname-is-not-a-valid-value.md)  
+ [인수 '\<argumentname > '은 (는) 올바른 값이 아닙니다.](../../visual-basic/misc/argument-argumentname-is-not-a-valid-value.md)  
   
- [Argument '\<argumentname>' is not valid for the array](../../visual-basic/misc/argument-argumentname-is-not-valid-for-the-array.md)  
+ [인수 '\<argumentname > '은 (는) 배열에 사용할 수 없습니다.](../../visual-basic/misc/argument-argumentname-is-not-valid-for-the-array.md)  
   
- [Argument '\<argumentname>' is Nothing](../../visual-basic/misc/argument-argumentname-is-nothing.md)  
+ ['\<argumentname > ' 인수가 Nothing입니다.](../../visual-basic/misc/argument-argumentname-is-nothing.md)  
   
- [Argument '\<argumentname>' is Nothing or empty](../../visual-basic/misc/argument-argumentname-is-nothing-or-empty.md)  
+ ['\<argumentname > ' 인수가 Nothing 이거나 비어 있습니다.](../../visual-basic/misc/argument-argumentname-is-nothing-or-empty.md)  
   
- [Argument '\<argumentname>' must be greater than 0 or equal to -1](../../visual-basic/misc/argument-argumentname-must-be-greater-than-0-or-equal-to-1.md)  
+ ['\<argumentname > ' 인수는 0 보다 크거나-1과 같아야 합니다.](../../visual-basic/misc/argument-argumentname-must-be-greater-than-0-or-equal-to-1.md)  
   
- [Argument '\<argumentname>' must be greater than or equal to 1](../../visual-basic/misc/argument-argumentname-must-be-greater-than-or-equal-to-1.md)  
+ ['\<argumentname > ' 인수는 1 보다 크거나 같아야 합니다.](../../visual-basic/misc/argument-argumentname-must-be-greater-than-or-equal-to-1.md)  
   
- [Argument '\<argumentname>' must be greater than or equal to -1](../../visual-basic/misc/argument-argumentname-must-be-greater-than-or-equal-to-1-1.md)  
+ ['\<argumentname > ' 인수는-1 보다 크거나 같아야 합니다.](../../visual-basic/misc/argument-argumentname-must-be-greater-than-or-equal-to-1-1.md)  
   
- [Argument \<argumentname> must be greater than or equal to zero](../../visual-basic/misc/argument-argumentname-must-be-greater-than-or-equal-to-zero-1.md)  
+ [인수 \<argumentname >는 0 보다 크거나 같아야 합니다.](../../visual-basic/misc/argument-argumentname-must-be-greater-than-or-equal-to-zero-1.md)  
   
- [Argument '\<argumentname>' must be greater than or equal to zero](../../visual-basic/misc/argument-argumentname-must-be-greater-than-or-equal-to-zero.md)  
+ ['\<argumentname > ' 인수는 0 보다 크거나 같아야 합니다.](../../visual-basic/misc/argument-argumentname-must-be-greater-than-or-equal-to-zero.md)  
   
- [Argument '\<argumentname>' must be greater than zero](../../visual-basic/misc/argument-argumentname-must-be-greater-than-zero.md)  
+ ['\<argumentname > ' 인수는 0 보다 커야 합니다.](../../visual-basic/misc/argument-argumentname-must-be-greater-than-zero.md)  
   
- [Argument '\<argumentname>' must be in the range of -32768 to 65535](../../visual-basic/misc/argument-argumentname-must-be-in-the-range-of-32768-to-65535.md)  
+ ['\<argumentname > ' 인수는-32768 ~ 65535의 범위 내에 있어야 합니다.](../../visual-basic/misc/argument-argumentname-must-be-in-the-range-of-32768-to-65535.md)  
   
- [Argument '\<argumentname>' must be within the range 0 to 99](../../visual-basic/misc/argument-argumentname-must-be-within-the-range-0-to-99.md)  
+ ['\<argumentname > ' 인수는 0에서 99 사이의 범위 내에 있어야 합니다.](../../visual-basic/misc/argument-argumentname-must-be-within-the-range-0-to-99.md)  
   
- [Argument '\<argumentname>' must be within the range 1 to 255](../../visual-basic/misc/argument-argumentname-must-be-within-the-range-1-to-255.md)  
+ ['\<argumentname > ' 인수는 1에서 255 사이 여야 합니다.](../../visual-basic/misc/argument-argumentname-must-be-within-the-range-1-to-255.md)  
   
- [Argument '\<argumentname1>' must be less than or equal the length of argument '\<argumentname2>'](../../visual-basic/misc/argument-argumentname1-must-be-less-than-or-equal-the-length-of-argumentname2.md)  
+ ['\<argumentname1 > ' 인수는 '\<argumentname2 > ' 인수의 길이 보다 작거나 같아야 합니다.](../../visual-basic/misc/argument-argumentname1-must-be-less-than-or-equal-the-length-of-argumentname2.md)  
   
- [Argument 'Access' is not valid. Valid values for Append mode are 'OpenAccess.Write' and 'OpenAccess.Default'](../../visual-basic/misc/argument-access-is-not-valid-append-mode.md)  
+ [' Access ' 인수가 잘못 되었습니다. 추가 모드의 유효한 값은 ' o ' 및 ' o '입니다.](../../visual-basic/misc/argument-access-is-not-valid-append-mode.md)  
   
- [Argument 'Access' is not valid. Valid values for Input mode are 'OpenAccess.Read' and 'OpenAccess.Default'](../../visual-basic/misc/argument-access-is-not-valid-input-mode.md)  
+ [' Access ' 인수가 잘못 되었습니다. 입력 모드에 유효한 값은 ' o ' 및 ' o '입니다.](../../visual-basic/misc/argument-access-is-not-valid-input-mode.md)  
   
- [Argument 'Access' is not valid. Valid values for Output mode are 'OpenAccess.Write' and 'OpenAccess.Default'](../../visual-basic/misc/argument-access-is-not-valid.md)  
+ [' Access ' 인수가 잘못 되었습니다. 출력 모드에 유효한 값은 ' o ' 및 ' o '입니다.](../../visual-basic/misc/argument-access-is-not-valid.md)  
   
  [인수 BasePath는 폴더에 대한 경로여야 합니다.](../../visual-basic/misc/argument-basepath-must-be-a-path-to-a-folder.md)  
   
@@ -99,7 +99,7 @@ This section contains the Visual Basic error messages that occur at run time.
   
  ['Life' 인수는 0일 수 없습니다.](../../visual-basic/misc/argument-life-cannot-be-zero.md)  
   
- [Argument not optional (Visual Basic)](../../visual-basic/language-reference/error-messages/argument-not-optional.md)  
+ [인수가 선택적 요소가 아닙니다 (Visual Basic).](../../visual-basic/language-reference/error-messages/argument-not-optional.md)  
   
  ['NPer' 인수는 0보다 커야 합니다.](../../visual-basic/misc/argument-nper-must-be-greater-than-zero.md)  
   
@@ -109,7 +109,7 @@ This section contains the Visual Basic error messages that occur at run time.
   
  ['Period' 인수는 'Life' 인수보다 작거나 같아야 합니다.](../../visual-basic/misc/argument-period-must-be-less-than-or-equal-to-argument-life.md)  
   
- [Argument value '\<pathname>' contains characters that are not valid in a path name](../../visual-basic/misc/argument-value-pathname-contains-characters-that-are-not-valid-in-a-path-name.md)  
+ ['\<pathname > ' 인수 값에 경로 이름에 사용할 수 없는 문자가 포함 되어 있습니다.](../../visual-basic/misc/argument-value-pathname-contains-characters-that-are-not-valid-in-a-path-name.md)  
   
  [인수가 잘못되었습니다.](../../visual-basic/misc/arguments-are-not-valid.md)  
   
@@ -141,11 +141,11 @@ This section contains the Visual Basic error messages that occur at run time.
   
  [클래스 정의 인스턴스가 아닌 개체에서 friend 함수를 호출할 수 없습니다.](../../visual-basic/misc/cannot-call-friend-function-on-object-which-is-not-instance-of-defining-class.md)  
   
- [Cannot convert argument '\<argumentname>' of type '\<type1>' to type '\<type2>'](../../visual-basic/misc/cannot-convert-argument-argumentname-of-type-type1-to-type-type2.md)  
+ ['\<type1 > ' 형식의 '\<argumentname > ' 인수를 '\<type2 > ' 형식으로 변환할 수 없습니다.](../../visual-basic/misc/cannot-convert-argument-argumentname-of-type-type1-to-type-type2.md)  
   
- [Cannot convert start value of type '\<type1>' and step value of type '\<type2>' to a common type](../../visual-basic/misc/cannot-convert-start-value-of-type1-and-step-value-of-type2-to-a-common-type.md)  
+ ['\<type1 > ' 형식의 시작 값 및 '\<type2 > ' 형식의 단계 값을 공통 형식으로 변환할 수 없습니다.](../../visual-basic/misc/cannot-convert-start-value-of-type1-and-step-value-of-type2-to-a-common-type.md)  
   
- [Cannot convert start value of type '\<type1>', limit value of '\<type2>' and step value of '\<type3>' to a common type](../../visual-basic/misc/cannot-convert-start-value-to-a-common-type.md)  
+ ['\<type1 > ' 형식의 시작 값, '\<type2 > ' 및 step 값 '\<3 > '의 제한 값을 공통 형식으로 변환할 수 없습니다.](../../visual-basic/misc/cannot-convert-start-value-to-a-common-type.md)  
   
  [ActiveX 구성 요소를 만들 수 없습니다.](../../visual-basic/language-reference/error-messages/cannot-create-activex-component.md)  
   
@@ -161,11 +161,11 @@ This section contains the Visual Basic error messages that occur at run time.
   
  [요청한 작업을 수행할 수 없습니다(Visual Basic).](../../visual-basic/misc/cant-perform-requested-operation.md)  
   
- [Cast from string "\<string>" to type '\<typename>' is not valid](../../visual-basic/misc/cast-from-string-string-to-type-typename-is-not-valid.md)  
+ [문자열 "\<문자열 >"에서 '\<typename > ' 형식으로의 캐스트가 잘못 되었습니다.](../../visual-basic/misc/cast-from-string-string-to-type-typename-is-not-valid.md)  
   
- [Cast from type '\<typename1>' to type '\<typename2>' is not valid](../../visual-basic/misc/cast-from-type-typename1-to-type-typename2-is-not-valid.md)  
+ ['\<typename1 > ' 형식에서 '\<typename2 > ' 형식으로의 캐스트가 잘못 되었습니다.](../../visual-basic/misc/cast-from-type-typename1-to-type-typename2-is-not-valid.md)  
   
- [Class '\<classname>' does not implement the System.Collections.ICollection interface](../../visual-basic/misc/class-classname-does-not-implement-the-system-collections-icollection-interface.md)  
+ ['\<classname > ' 클래스는 System.object를 구현 하지 않습니다.](../../visual-basic/misc/class-classname-does-not-implement-the-system-collections-icollection-interface.md)  
   
  [클래스가 자동화를 지원하지 않거나 필요한 인터페이스를 지원하지 않습니다.](../../visual-basic/language-reference/error-messages/class-does-not-support-automation-or-does-not-support-expected-interface.md)  
   
@@ -203,27 +203,27 @@ This section contains the Visual Basic error messages that occur at run time.
   
  [0으로 나누기(Visual Basic 런타임 오류)](../../visual-basic/misc/division-by-zero-run-time-error.md)  
   
- [Drive '\<drivename>' not found](../../visual-basic/misc/drive-drivename-not-found.md)  
+ ['\<drivename > ' 드라이브를 찾을 수 없습니다.](../../visual-basic/misc/drive-drivename-not-found.md)  
   
  [인코딩은 Nothing으로 설정할 수 없습니다.](../../visual-basic/misc/encoding-cannot-be-set-to-nothing.md)  
   
- [Error in loading DLL (Visual Basic)](../../visual-basic/language-reference/error-messages/error-in-loading-dll.md)  
+ [DLL을 로드 하는 동안 오류가 발생 했습니다 (Visual Basic).](../../visual-basic/language-reference/error-messages/error-in-loading-dll.md)  
   
  [오류 번호는 0에서 65535 사이의 범위 내에 있어야 합니다.](../../visual-basic/misc/error-number-must-be-within-the-range-0-and-65535.md)  
   
- [Expression '\<name>' is not a procedure, but occurs as the target of a procedure call](../../visual-basic/misc/expression-name-is-not-a-procedure-but-occurs-as-the-target-of-a-procedure-call.md)  
+ [식 '\<name > '은 (는) 프로시저가 아니지만 프로시저 호출의 대상으로 발생 합니다.](../../visual-basic/misc/expression-name-is-not-a-procedure-but-occurs-as-the-target-of-a-procedure-call.md)  
   
  [식이 너무 복잡합니다.](../../visual-basic/language-reference/error-messages/expression-too-complex.md)  
   
  [이 기능은 아직 구현되지 않았습니다.](../../visual-basic/misc/feature-not-yet-implemented.md)  
   
- [Field '\<fieldname>' of type '\<typename>' is 'ReadOnly'](../../visual-basic/misc/field-fieldname-of-type-typename-is-readonly.md)  
+ ['\<typename > ' 형식의 '\<fieldname > ' 필드는 ' ReadOnly '입니다.](../../visual-basic/misc/field-fieldname-of-type-typename-is-readonly.md)  
   
- [File '\<filename>' cannot be deleted because it is open](../../visual-basic/misc/file-filename-cannot-be-deleted-because-it-is-open.md)  
+ [파일 '\<파일 이름 > '은 (는) 열려 있으므로 삭제할 수 없습니다.](../../visual-basic/misc/file-filename-cannot-be-deleted-because-it-is-open.md)  
   
- [File '\<filename>' is write protected](../../visual-basic/misc/file-filename-is-write-protected.md)  
+ [파일 '\<파일 이름 > '은 (는) 쓰기 금지 되어 있습니다.](../../visual-basic/misc/file-filename-is-write-protected.md)  
   
- [File '\<filename>' not found](../../visual-basic/misc/file-filename-not-found.md)  
+ ['\<파일 이름 > ' 파일을 찾을 수 없습니다.](../../visual-basic/misc/file-filename-not-found.md)  
   
  [파일이 이미 있습니다.](../../visual-basic/misc/file-already-exists.md)  
   
@@ -231,9 +231,9 @@ This section contains the Visual Basic error messages that occur at run time.
   
  [파일 형식이 잘못되었습니다.](../../visual-basic/misc/file-format-not-valid.md)  
   
- [File I/O of a structure with field '\<fieldname>' of type '\<typename>' is not valid](../../visual-basic/misc/file-io-of-a-structure-with-field-fieldname-of-type-typename-is-not-valid.md)  
+ ['\<typename > ' 형식의 '\<fieldname > ' 필드를 사용 하는 구조체의 파일 i/o가 잘못 되었습니다.](../../visual-basic/misc/file-io-of-a-structure-with-field-fieldname-of-type-typename-is-not-valid.md)  
   
- [File I/O with type '\<typename>' is not valid](../../visual-basic/misc/file-i-o-with-type-typename-is-not-valid.md)  
+ [형식이 '\<typename > ' 인 파일 i/o가 잘못 되었습니다.](../../visual-basic/misc/file-i-o-with-type-typename-is-not-valid.md)  
   
  [파일이 없으면 파일 정보를 쿼리할 수 없습니다.](../../visual-basic/misc/file-information-cannot-be-queried-if-the-file-does-not-exist.md)  
   
@@ -241,7 +241,7 @@ This section contains the Visual Basic error messages that occur at run time.
   
  [파일이 너무 커서 바이트 배열로 읽어 들일 수 없습니다.](../../visual-basic/language-reference/error-messages/file-is-too-large-to-read-into-a-byte-array.md)  
   
- [File name or class name not found during Automation operation (Visual Basic)](../../visual-basic/language-reference/error-messages/file-name-or-class-name-not-found-during-automation-operation.md)  
+ [자동화 작업 중 파일 이름 또는 클래스 이름을 찾을 수 없습니다 (Visual Basic).](../../visual-basic/language-reference/error-messages/file-name-or-class-name-not-found-during-automation-operation.md)  
   
  [파일을 찾을 수 없습니다(Visual Basic 런타임 오류).](../../visual-basic/language-reference/error-messages/file-not-found-visual-basic-run-time-error.md)  
   
@@ -269,7 +269,7 @@ This section contains the Visual Basic error messages that occur at run time.
   
  [내부 오류(Visual Basic)](../../visual-basic/misc/internal-error.md)  
   
- [Internal error happened at \<location>](../../visual-basic/language-reference/error-messages/internal-error-happened-at-location.md)  
+ [\<위치에서 내부 오류가 발생 했습니다 >](../../visual-basic/language-reference/error-messages/internal-error-happened-at-location.md)  
   
  [Microsoft Visual Basic 런타임에 내부 오류 발생](../../visual-basic/misc/internal-error-in-the-microsoft-visual-basic-runtime.md)  
   
@@ -277,31 +277,31 @@ This section contains the Visual Basic error messages that occur at run time.
   
  [하위 키가 있으므로 키를 삭제할 수 없습니다.](../../visual-basic/misc/key-cannot-be-deleted-because-it-has-subkeys.md)  
   
- [Late-bound assignment to a field of value type '\<typename>' is not valid when '\<name>' is the result of a late-bound expression](../../visual-basic/misc/late-bound-assignment-to-a-field-of-value-type-typename-is-not-valid.md)  
+ ['\<name > '가 런타임에 바인딩된 식의 결과일 때 '\<typename > ' 값 형식의 필드에 대 한 런타임에 바인딩된 할당을 사용할 수 없습니다.](../../visual-basic/misc/late-bound-assignment-to-a-field-of-value-type-typename-is-not-valid.md)  
   
- [Length of argument '\<argumentname>' must be greater than zero](../../visual-basic/misc/length-of-argument-argumentname-must-be-greater-than-zero.md)  
+ ['\<argumentname > ' 인수의 길이는 0 보다 커야 합니다.](../../visual-basic/misc/length-of-argument-argumentname-must-be-greater-than-zero.md)  
   
- [Line \<number> cannot be parsed using the current Delimiters](../../visual-basic/misc/line-number-cannot-be-parsed-using-the-current-delimiters.md)  
+ [현재 구분 기호를 사용 하 여 줄 \<번호 >를 구문 분석할 수 없습니다.](../../visual-basic/misc/line-number-cannot-be-parsed-using-the-current-delimiters.md)  
   
- [Line \<number> cannot be parsed using the current FieldWidths](../../visual-basic/misc/line-number-cannot-be-parsed-using-the-current-fieldwidths.md)  
+ [현재 FieldWidths를 사용 하 여 줄 \<번호 >를 구문 분석할 수 없습니다.](../../visual-basic/misc/line-number-cannot-be-parsed-using-the-current-fieldwidths.md)  
   
- [Line \<number> cannot be read because it exceeds the maximum line size.](../../visual-basic/misc/line-number-cannot-be-read-because-it-exceeds-the-maximum-line-size.md)  
+ [줄 \<번호 > 최대 줄 크기를 초과 하기 때문에 읽을 수 없습니다.](../../visual-basic/misc/line-number-cannot-be-read-because-it-exceeds-the-maximum-line-size.md)  
   
- [Locale ID '\<name>' is not supported on this system](../../visual-basic/misc/locale-id-name-is-not-supported-on-this-system.md)  
+ [이 시스템에서는 로캘 ID '\<name > '이 (가) 지원 되지 않습니다.](../../visual-basic/misc/locale-id-name-is-not-supported-on-this-system.md)  
   
- [Loop control variable of type '\<typename>' does not implement the 'System.IComparable' interface](../../visual-basic/misc/loop-control-variable-of-type-typename-does-not-implement-system-icomparable.md)  
+ ['\<typename > ' 형식의 루프 제어 변수는 ' system.string ' 인터페이스를 구현 하지 않습니다.](../../visual-basic/misc/loop-control-variable-of-type-typename-does-not-implement-system-icomparable.md)  
   
  [COM 클래스에서 파생된 관리되는 클래스는 런타임에 바인딩된 호출을 할 수 없습니다.](../../visual-basic/misc/managed-classes-derived-from-a-com-class-cannot-be-called-late-bound.md)  
   
- [Method '\<methodname>' cannot be called with \<number> arguments](../../visual-basic/misc/method-methodname-cannot-be-called-with-number-arguments.md)  
+ [\<number > 인수를 사용 하 여 '\<methodname > ' 메서드를 호출할 수 없습니다.](../../visual-basic/misc/method-methodname-cannot-be-called-with-number-arguments.md)  
   
- [Method '\<methodname>' has no parameter named '\<parametername>'](../../visual-basic/misc/method-methodname-has-no-parameter-named-parametername.md)  
+ ['\<methodname > ' 메서드에 '\<parametername > ' (이) 라는 매개 변수가 없습니다.](../../visual-basic/misc/method-methodname-has-no-parameter-named-parametername.md)  
   
  [메서드 또는 데이터 멤버를 찾을 수 없습니다.](../../visual-basic/misc/method-or-data-member-not-found.md)  
   
- [My.Application.Log](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)  
+ [내 응용 프로그램 .Log](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)  
   
- [Named argument '\<argumentname>' specified multiple times](../../visual-basic/misc/named-argument-argumentname-specified-multiple-times.md)  
+ [명명 된 인수 '\<argumentname > '이 (가) 여러 번 지정 되었습니다.](../../visual-basic/misc/named-argument-argumentname-specified-multiple-times.md)  
   
  [명명된 인수를 찾을 수 없습니다(Visual Basic).](../../visual-basic/misc/named-argument-not-found.md)  
   
@@ -309,19 +309,19 @@ This section contains the Visual Basic error messages that occur at run time.
   
  [속성 배열 인덱스가 필요합니다.](../../visual-basic/language-reference/error-messages/need-property-array-index.md)  
   
- [No accessible overloaded '\<methodname>' can be called with these arguments without a narrowing conversion](../../visual-basic/misc/no-accessible-overloaded-methodname-can-be-called-with-these-arguments.md)  
+ [축소 변환 없이이 인수로 호출할 수 있는 액세스 가능한 오버 로드 된 '\<methodname > '을 (를) 호출할 수 없습니다.](../../visual-basic/misc/no-accessible-overloaded-methodname-can-be-called-with-these-arguments.md)  
   
- [No accessible overloaded '\<methodname>' can be called with these arguments without a narrowing conversion: \<list>](../../visual-basic/misc/no-accessible-overloaded-methodname-can-be-called-with-these-arguments-list-2.md)  
+ [축소 변환 없이이 인수로 호출할 수 있는 액세스 가능한 오버 로드 된 '\<methodname > '을 (를) 호출할 수 없습니다. \<목록 >](../../visual-basic/misc/no-accessible-overloaded-methodname-can-be-called-with-these-arguments-list-2.md)  
   
- [No accessible overloaded '\<methodname>' can be called with these arguments without a widening conversion: \<list>](../../visual-basic/misc/no-accessible-overloaded-methodname-can-be-called-without-widening.md)  
+ [확대 변환 없이이 인수로 호출할 수 있는 액세스 가능한 오버 로드 된 '\<methodname > '이 (가) 없습니다. \<목록 >](../../visual-basic/misc/no-accessible-overloaded-methodname-can-be-called-without-widening.md)  
   
- [No accessible overloaded '\<methodname>' can be called with these arguments: \<list>](../../visual-basic/misc/no-accessible-overloaded-methodname-can-be-called-with-these-arguments-list.md)  
+ [다음 인수를 사용 하 여 액세스할 수 있는 오버 로드 된 '\<methodname > '를 호출할 수 없습니다. \<목록 >](../../visual-basic/misc/no-accessible-overloaded-methodname-can-be-called-with-these-arguments-list.md)  
   
- [No default member found for type '\<typename>'](../../visual-basic/misc/no-default-member-found-for-type-typename.md)  
+ ['\<typename > ' 형식에 대 한 기본 멤버를 찾을 수 없습니다.](../../visual-basic/misc/no-default-member-found-for-type-typename.md)  
   
- [No files found matching '\<filename>'](../../visual-basic/misc/no-files-found-matching-filename.md)  
+ ['\<filename > '과 (와) 일치 하는 파일이 없습니다.](../../visual-basic/misc/no-files-found-matching-filename.md)  
   
- [No method '\<methodname>' can accept an argument of type '\<typename>' for parameter '\<parametername>'](../../visual-basic/misc/no-method-methodname-can-accept-an-argument-of-type-typename-for-parameter.md)  
+ ['\<methodname > ' 메서드는 '\<parametername > ' 매개 변수에 대해 '\<typename > ' 형식의 인수를 사용할 수 없습니다.](../../visual-basic/misc/no-method-methodname-can-accept-an-argument-of-type-typename-for-parameter.md)  
   
  [마우스가 없습니다.](../../visual-basic/misc/no-mouse-is-present.md)  
   
@@ -347,39 +347,39 @@ This section contains the Visual Basic error messages that occur at run time.
   
  [사용자 지정 로그 이름의 처음 8자만 의미가 있습니다.](../../visual-basic/misc/only-the-first-eight-characters-of-a-custom-log-name-are-significant.md)  
   
- [Operator is not valid for '\<name1>' and '\<name2>'](../../visual-basic/misc/operator-is-not-valid-for-name1-and-name2.md)  
+ ['\<name1 > ' 및 '\<name2 > '에는 연산자를 사용할 수 없습니다.](../../visual-basic/misc/operator-is-not-valid-for-name1-and-name2.md)  
   
- [Operator is not valid for type '\<typename>'](../../visual-basic/misc/operator-is-not-valid-for-type-typename.md)  
+ ['\<typename > ' 형식에 대 한 연산자가 잘못 되었습니다.](../../visual-basic/misc/operator-is-not-valid-for-type-typename.md)  
   
  [서수가 잘못되었습니다.](../../visual-basic/language-reference/error-messages/ordinal-is-not-valid.md)  
   
  [메모리가 부족합니다(Visual Basic 런타임 오류).](../../visual-basic/misc/out-of-memory-run-time-error.md)  
   
- [Out of stack space (Visual Basic)](../../visual-basic/language-reference/error-messages/out-of-stack-space.md)  
+ [스택 공간이 부족 합니다 (Visual Basic).](../../visual-basic/language-reference/error-messages/out-of-stack-space.md)  
   
- [Out of string space (Visual Basic)](../../visual-basic/language-reference/error-messages/out-of-string-space.md)  
+ [문자열 공간이 부족 합니다 (Visual Basic).](../../visual-basic/language-reference/error-messages/out-of-string-space.md)  
   
  [오버플로가 발생했습니다(Visual Basic 런타임 오류).](../../visual-basic/language-reference/error-messages/overflow-visual-basic-run-time-error.md)  
   
- [Path '\<pathname>' not found](../../visual-basic/misc/path-pathname-not-found.md)  
+ [경로 '\<경로 이름 > '이 (가) 없습니다.](../../visual-basic/misc/path-pathname-not-found.md)  
   
  [경로를 찾을 수 없습니다.](../../visual-basic/language-reference/error-messages/path-not-found.md)  
   
- [Path/File access error](../../visual-basic/language-reference/error-messages/path-file-access-error.md)  
+ [경로/파일 액세스 오류](../../visual-basic/language-reference/error-messages/path-file-access-error.md)  
   
- [Permission denied (Visual Basic)](../../visual-basic/language-reference/error-messages/permission-denied.md)  
+ [사용 권한이 거부 되었습니다 (Visual Basic).](../../visual-basic/language-reference/error-messages/permission-denied.md)  
   
  [그림이 잘못되었습니다.](../../visual-basic/misc/picture-is-not-valid.md)  
   
  [프린터 오류](../../visual-basic/misc/printer-error.md)  
   
- [Procedure call or argument is not valid (Visual Basic)](../../visual-basic/language-reference/error-messages/procedure-call-or-argument-is-not-valid.md)  
+ [프로시저 호출 또는 인수가 잘못 되었습니다 (Visual Basic).](../../visual-basic/language-reference/error-messages/procedure-call-or-argument-is-not-valid.md)  
   
- [Process '\<processname>' was not found](../../visual-basic/misc/process-processname-was-not-found.md)  
+ ['\<processname > ' 프로세스를 찾을 수 없습니다.](../../visual-basic/misc/process-processname-was-not-found.md)  
   
- [Property \<propertyname> cannot be set to an empty string or Nothing](../../visual-basic/misc/property-propertyname-cannot-be-set-to-an-empty-string-or-nothing.md)  
+ [Propertyname > 속성 \<빈 문자열이 나 Nothing으로 설정할 수 없습니다.](../../visual-basic/misc/property-propertyname-cannot-be-set-to-an-empty-string-or-nothing.md)  
   
- [Property \<propertyname> cannot be set to Nothing](../../visual-basic/misc/property-propertyname-cannot-be-set-to-nothing.md)  
+ [Propertyname > \<속성을 Nothing으로 설정할 수 없습니다.](../../visual-basic/misc/property-propertyname-cannot-be-set-to-nothing.md)  
   
  [속성 배열 인덱스가 잘못되었습니다.](../../visual-basic/language-reference/error-messages/property-array-index-is-not-valid.md)  
   
@@ -391,7 +391,7 @@ This section contains the Visual Basic error messages that occur at run time.
   
  [속성 값이 잘못되었습니다.](../../visual-basic/misc/property-value-is-not-valid.md)  
   
- [Public member '\<membername>' on type '\<typename>' not found](../../visual-basic/misc/public-member-membername-on-type-typename-not-found.md)  
+ ['\<typename > ' 형식의 '\<membername > ' Public 멤버를 찾을 수 없습니다.](../../visual-basic/misc/public-member-membername-on-type-typename-not-found.md)  
   
  ['ReDim'으로는 맨 오른쪽 차원만 변경할 수 있습니다.](../../visual-basic/misc/redim-can-only-change-the-right-most-dimension.md)  
   
@@ -399,9 +399,9 @@ This section contains the Visual Basic error messages that occur at run time.
   
  ['ReDim' Preserve 피연산자는 Nothing이 될 수 없습니다.](../../visual-basic/misc/redim-preserve-operand-cannot-be-nothing.md)  
   
- [Registry key '\<keyname>' could not be created](../../visual-basic/misc/registry-key-keyname-could-not-be-created.md)  
+ [레지스트리 키 '\<keyname > '을 (를) 만들 수 없습니다.](../../visual-basic/misc/registry-key-keyname-could-not-be-created.md)  
   
- [Registry key '\<keyname>' could not be found](../../visual-basic/misc/registry-key-keyname-could-not-be-found.md)  
+ [레지스트리 키 '\<keyname > '을 (를) 찾을 수 없습니다.](../../visual-basic/misc/registry-key-keyname-could-not-be-found.md)  
   
  [대체 텍스트가 너무 깁니다.](../../visual-basic/misc/replacements-too-long.md)  
   
@@ -443,9 +443,9 @@ This section contains the Visual Basic error messages that occur at run time.
   
  [문자열 길이가 'FileSystem' API의 최대 길이인 32767자를 초과합니다.](../../visual-basic/misc/string-length-exceeds-maximum-length-of-32767-characters-for-filesystem-apis.md)  
   
- [Sub or Function not defined (Visual Basic)](../../visual-basic/language-reference/error-messages/sub-or-function-not-defined.md)  
+ [Sub 또는 Function이 정의 되지 않았습니다 (Visual Basic).](../../visual-basic/language-reference/error-messages/sub-or-function-not-defined.md)  
   
- [Subscript out of range (Visual Basic)](../../visual-basic/language-reference/error-messages/subscript-out-of-range.md)  
+ [첨자가 범위를 벗어났습니다 (Visual Basic).](../../visual-basic/language-reference/error-messages/subscript-out-of-range.md)  
   
  [시스템 이벤트 로그를 삭제할 수 없습니다.](../../visual-basic/misc/system-event-log-cannot-be-deleted.md)  
   
@@ -453,7 +453,7 @@ This section contains the Visual Basic error messages that occur at run time.
   
  [TargetFilePath가 기존 폴더를 지정합니다.](../../visual-basic/misc/targetfilepath-specifies-an-existing-folder.md)  
   
- [TextFieldParser does not support comment tokens that contain white space](../../visual-basic/misc/textfieldparser-does-not-support-comment-tokens-that-contain-whitespace.md)  
+ [TextFieldParser는 공백이 포함 된 주석 토큰을 지원 하지 않습니다.](../../visual-basic/misc/textfieldparser-does-not-support-comment-tokens-that-contain-whitespace.md)  
   
  [TextFieldParser는 EndLine 문자가 포함된 구분 기호를 지원하지 않습니다.](../../visual-basic/misc/textfieldparser-does-not-support-delimiters-that-contain-endline-characters.md)  
   
@@ -485,11 +485,11 @@ This section contains the Visual Basic error messages that occur at run time.
   
  [TextFieldParser에 전달된 스트림을 읽을 수 없습니다.](../../visual-basic/misc/the-stream-passed-to-textfieldparser-cannot-be-read.md)  
   
- [The value of \<argumentname> must be a positive number](../../visual-basic/misc/the-value-of-argumentname-must-be-a-positive-number.md)  
+ [\<argumentname >의 값은 양수 여야 합니다.](../../visual-basic/misc/the-value-of-argumentname-must-be-a-positive-number.md)  
   
- [The value of \<argumentname> must be greater than or equal to 1000](../../visual-basic/misc/the-value-of-argumentname-must-be-greater-than-or-equal-to-1000.md)  
+ [\<argumentname >의 값은 1000 보다 크거나 같아야 합니다.](../../visual-basic/misc/the-value-of-argumentname-must-be-greater-than-or-equal-to-1000.md)  
   
- [This array is fixed or temporarily locked (Visual Basic)](../../visual-basic/language-reference/error-messages/this-array-is-fixed-or-temporarily-locked.md)  
+ [이 배열은 고정 되었거나 임시로 잠겨 있습니다 (Visual Basic).](../../visual-basic/language-reference/error-messages/this-array-is-fixed-or-temporarily-locked.md)  
   
  [이 키는 이 컬렉션의 요소와 이미 연결되어 있습니다.](../../visual-basic/language-reference/error-messages/this-key-is-already-associated-with-an-element-of-this-collection.md)  
   
@@ -509,9 +509,9 @@ This section contains the Visual Basic error messages that occur at run time.
   
  [파일이 너무 많습니다.](../../visual-basic/language-reference/error-messages/too-many-files.md)  
   
- [Type mismatch (Visual Basic)](../../visual-basic/language-reference/error-messages/type-mismatch.md)  
+ [형식이 일치 하지 않습니다 (Visual Basic).](../../visual-basic/language-reference/error-messages/type-mismatch.md)  
   
- [Type of argument '\<argumentname>' is '\<typename>', which is not numeric](../../visual-basic/misc/type-of-argument-argumentname-is-typename-which-is-not-numeric.md)  
+ [인수의 형식 '\<argumentname > '은 (는) 숫자가 아닌 '\<typename > '입니다.](../../visual-basic/misc/type-of-argument-argumentname-is-typename-which-is-not-numeric.md)  
   
  [내부 시스템 오류가 발생하여 직렬 포트 이름을 가져올 수 없습니다.](../../visual-basic/language-reference/error-messages/unable-to-get-serial-port-names-because-of-an-internal-system-error.md)  
   
@@ -553,6 +553,6 @@ This section contains the Visual Basic error messages that occur at run time.
   
  [현재 폴더 또는 하위 폴더 중 하나에 있는 경로를 지정해야 합니다.](../../visual-basic/misc/you-must-specify-path-that-is-under-the-current-folder-or-one-of-sub-folders.md)  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [오류 메시지](../../visual-basic/language-reference/error-messages/index.md)
