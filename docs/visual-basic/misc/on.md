@@ -14,26 +14,26 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74331844"
 ---
-# <a name="on-visual-basic"></a><span data-ttu-id="8e631-102">On(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8e631-102">On (Visual Basic)</span></span>
-<span data-ttu-id="8e631-103">Introduces a response to a run-time error or turns a compiler option on.</span><span class="sxs-lookup"><span data-stu-id="8e631-103">Introduces a response to a run-time error or turns a compiler option on.</span></span>  
+# <a name="on-visual-basic"></a><span data-ttu-id="72c15-102">On(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="72c15-102">On (Visual Basic)</span></span>
+<span data-ttu-id="72c15-103">런타임 오류에 대 한 응답을 제공 하거나에서 컴파일러 옵션을 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="72c15-103">Introduces a response to a run-time error or turns a compiler option on.</span></span>  
   
- <span data-ttu-id="8e631-104">In queries, identifies keys for the collections being joined.</span><span class="sxs-lookup"><span data-stu-id="8e631-104">In queries, identifies keys for the collections being joined.</span></span>  
+ <span data-ttu-id="72c15-104">쿼리에서 조인 되는 컬렉션에 대 한 키를 식별 합니다.</span><span class="sxs-lookup"><span data-stu-id="72c15-104">In queries, identifies keys for the collections being joined.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="8e631-105">주의</span><span class="sxs-lookup"><span data-stu-id="8e631-105">Remarks</span></span>  
- <span data-ttu-id="8e631-106">The `On` keyword is used in these contexts:</span><span class="sxs-lookup"><span data-stu-id="8e631-106">The `On` keyword is used in these contexts:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="72c15-105">주의</span><span class="sxs-lookup"><span data-stu-id="72c15-105">Remarks</span></span>  
+ <span data-ttu-id="72c15-106">`On` 키워드는 다음 컨텍스트에서 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="72c15-106">The `On` keyword is used in these contexts:</span></span>  
   
- [<span data-ttu-id="8e631-107">Group Join 절</span><span class="sxs-lookup"><span data-stu-id="8e631-107">Group Join Clause</span></span>](../../visual-basic/language-reference/queries/group-join-clause.md)  
+ [<span data-ttu-id="72c15-107">Group Join 절</span><span class="sxs-lookup"><span data-stu-id="72c15-107">Group Join Clause</span></span>](../../visual-basic/language-reference/queries/group-join-clause.md)  
   
- [<span data-ttu-id="8e631-108">Join 절</span><span class="sxs-lookup"><span data-stu-id="8e631-108">Join Clause</span></span>](../../visual-basic/language-reference/queries/join-clause.md)  
+ [<span data-ttu-id="72c15-108">Join 절</span><span class="sxs-lookup"><span data-stu-id="72c15-108">Join Clause</span></span>](../../visual-basic/language-reference/queries/join-clause.md)  
   
- [<span data-ttu-id="8e631-109">On Error 문</span><span class="sxs-lookup"><span data-stu-id="8e631-109">On Error Statement</span></span>](../../visual-basic/language-reference/statements/on-error-statement.md)  
+ [<span data-ttu-id="72c15-109">On Error 문</span><span class="sxs-lookup"><span data-stu-id="72c15-109">On Error Statement</span></span>](../../visual-basic/language-reference/statements/on-error-statement.md)  
   
- [<span data-ttu-id="8e631-110">Option Explicit 문</span><span class="sxs-lookup"><span data-stu-id="8e631-110">Option Explicit Statement</span></span>](../../visual-basic/language-reference/statements/option-explicit-statement.md)  
+ [<span data-ttu-id="72c15-110">Option Explicit 문</span><span class="sxs-lookup"><span data-stu-id="72c15-110">Option Explicit Statement</span></span>](../../visual-basic/language-reference/statements/option-explicit-statement.md)  
   
- [<span data-ttu-id="8e631-111">Option Infer 문</span><span class="sxs-lookup"><span data-stu-id="8e631-111">Option Infer Statement</span></span>](../../visual-basic/language-reference/statements/option-infer-statement.md)  
+ [<span data-ttu-id="72c15-111">Option Infer 문</span><span class="sxs-lookup"><span data-stu-id="72c15-111">Option Infer Statement</span></span>](../../visual-basic/language-reference/statements/option-infer-statement.md)  
   
- [<span data-ttu-id="8e631-112">Option Strict 문</span><span class="sxs-lookup"><span data-stu-id="8e631-112">Option Strict Statement</span></span>](../../visual-basic/language-reference/statements/option-strict-statement.md)  
+ [<span data-ttu-id="72c15-112">Option Strict 문</span><span class="sxs-lookup"><span data-stu-id="72c15-112">Option Strict Statement</span></span>](../../visual-basic/language-reference/statements/option-strict-statement.md)  
   
-## <a name="see-also"></a><span data-ttu-id="8e631-113">참조</span><span class="sxs-lookup"><span data-stu-id="8e631-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="72c15-113">참고 항목</span><span class="sxs-lookup"><span data-stu-id="72c15-113">See also</span></span>
 
-- [<span data-ttu-id="8e631-114">C++ 키워드</span><span class="sxs-lookup"><span data-stu-id="8e631-114">Keywords</span></span>](../../visual-basic/language-reference/keywords/index.md)
+- [<span data-ttu-id="72c15-114">키워드</span><span class="sxs-lookup"><span data-stu-id="72c15-114">Keywords</span></span>](../../visual-basic/language-reference/keywords/index.md)
