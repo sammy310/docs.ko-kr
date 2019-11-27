@@ -22,10 +22,10 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449898"
 ---
-# <a name="icorprofilerinfogetthreadinfo-method"></a><span data-ttu-id="99923-102">ICorProfilerInfo::GetThreadInfo 메서드</span><span class="sxs-lookup"><span data-stu-id="99923-102">ICorProfilerInfo::GetThreadInfo Method</span></span>
-<span data-ttu-id="99923-103">Gets the current Win32 thread identity for the specified thread.</span><span class="sxs-lookup"><span data-stu-id="99923-103">Gets the current Win32 thread identity for the specified thread.</span></span>  
+# <a name="icorprofilerinfogetthreadinfo-method"></a><span data-ttu-id="5b17c-102">ICorProfilerInfo::GetThreadInfo 메서드</span><span class="sxs-lookup"><span data-stu-id="5b17c-102">ICorProfilerInfo::GetThreadInfo Method</span></span>
+<span data-ttu-id="5b17c-103">지정 된 스레드에 대 한 현재 Win32 스레드 id를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="5b17c-103">Gets the current Win32 thread identity for the specified thread.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="99923-104">구문</span><span class="sxs-lookup"><span data-stu-id="99923-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5b17c-104">구문</span><span class="sxs-lookup"><span data-stu-id="5b17c-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetThreadInfo(  
@@ -33,22 +33,22 @@ HRESULT GetThreadInfo(
     [out] DWORD    *pdwWin32ThreadId);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="99923-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="99923-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="5b17c-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="5b17c-105">Parameters</span></span>  
  `threadId`  
- <span data-ttu-id="99923-106">[in] The ID of the thread for which to get the current Win32 ID.</span><span class="sxs-lookup"><span data-stu-id="99923-106">[in] The ID of the thread for which to get the current Win32 ID.</span></span>  
+ <span data-ttu-id="5b17c-106">진행 현재 Win32 ID를 가져올 스레드의 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="5b17c-106">[in] The ID of the thread for which to get the current Win32 ID.</span></span>  
   
  `pdwWin32ThreadId`  
- <span data-ttu-id="99923-107">[out] A pointer to the specified thread's current Win32 thread ID.</span><span class="sxs-lookup"><span data-stu-id="99923-107">[out] A pointer to the specified thread's current Win32 thread ID.</span></span>  
+ <span data-ttu-id="5b17c-107">제한이 지정 된 스레드의 현재 Win32 스레드 ID에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="5b17c-107">[out] A pointer to the specified thread's current Win32 thread ID.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="99923-108">요구 사항</span><span class="sxs-lookup"><span data-stu-id="99923-108">Requirements</span></span>  
- <span data-ttu-id="99923-109">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="99923-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5b17c-108">요구 사항</span><span class="sxs-lookup"><span data-stu-id="5b17c-108">Requirements</span></span>  
+ <span data-ttu-id="5b17c-109">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="5b17c-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="99923-110">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="99923-110">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="5b17c-110">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="5b17c-110">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="99923-111">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="99923-111">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="5b17c-111">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5b17c-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="99923-112">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="99923-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="5b17c-112">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5b17c-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="99923-113">참조</span><span class="sxs-lookup"><span data-stu-id="99923-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5b17c-113">참고 항목</span><span class="sxs-lookup"><span data-stu-id="5b17c-113">See also</span></span>
 
-- [<span data-ttu-id="99923-114">ICorProfilerInfo 인터페이스</span><span class="sxs-lookup"><span data-stu-id="99923-114">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="5b17c-114">ICorProfilerInfo 인터페이스</span><span class="sxs-lookup"><span data-stu-id="5b17c-114">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

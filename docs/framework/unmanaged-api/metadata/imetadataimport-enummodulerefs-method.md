@@ -22,10 +22,10 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450038"
 ---
-# <a name="imetadataimportenummodulerefs-method"></a><span data-ttu-id="594a7-102">IMetaDataImport::EnumModuleRefs 메서드</span><span class="sxs-lookup"><span data-stu-id="594a7-102">IMetaDataImport::EnumModuleRefs Method</span></span>
-<span data-ttu-id="594a7-103">가져온 모듈을 나타내는 ModuleRef 토큰을 열거합니다.</span><span class="sxs-lookup"><span data-stu-id="594a7-103">Enumerates ModuleRef tokens that represent imported modules.</span></span>  
+# <a name="imetadataimportenummodulerefs-method"></a><span data-ttu-id="4eda9-102">IMetaDataImport::EnumModuleRefs 메서드</span><span class="sxs-lookup"><span data-stu-id="4eda9-102">IMetaDataImport::EnumModuleRefs Method</span></span>
+<span data-ttu-id="4eda9-103">가져온 모듈을 나타내는 ModuleRef 토큰을 열거합니다.</span><span class="sxs-lookup"><span data-stu-id="4eda9-103">Enumerates ModuleRef tokens that represent imported modules.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="594a7-104">구문</span><span class="sxs-lookup"><span data-stu-id="594a7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4eda9-104">구문</span><span class="sxs-lookup"><span data-stu-id="4eda9-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT EnumModuleRefs (  
@@ -36,36 +36,36 @@ HRESULT EnumModuleRefs (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="594a7-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="594a7-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="4eda9-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="4eda9-105">Parameters</span></span>  
  `phEnum`  
- <span data-ttu-id="594a7-106">[in, out] A pointer to the enumerator.</span><span class="sxs-lookup"><span data-stu-id="594a7-106">[in, out] A pointer to the enumerator.</span></span> <span data-ttu-id="594a7-107">This must be NULL for the first call of this method.</span><span class="sxs-lookup"><span data-stu-id="594a7-107">This must be NULL for the first call of this method.</span></span>  
+ <span data-ttu-id="4eda9-106">[in, out] 열거자에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="4eda9-106">[in, out] A pointer to the enumerator.</span></span> <span data-ttu-id="4eda9-107">이 메서드의 첫 번째 호출에서는 NULL 이어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="4eda9-107">This must be NULL for the first call of this method.</span></span>  
   
  `rModuleRefs`  
- <span data-ttu-id="594a7-108">[out] The array used to store the ModuleRef tokens.</span><span class="sxs-lookup"><span data-stu-id="594a7-108">[out] The array used to store the ModuleRef tokens.</span></span>  
+ <span data-ttu-id="4eda9-108">제한이 ModuleRef 토큰을 저장 하는 데 사용 되는 배열입니다.</span><span class="sxs-lookup"><span data-stu-id="4eda9-108">[out] The array used to store the ModuleRef tokens.</span></span>  
   
  `cMax`  
- <span data-ttu-id="594a7-109">[in] `rModuleRefs` 배열의 최대 크기입니다.</span><span class="sxs-lookup"><span data-stu-id="594a7-109">[in] The maximum size of the `rModuleRefs` array.</span></span>  
+ <span data-ttu-id="4eda9-109">[in] `rModuleRefs` 배열의 최대 크기입니다.</span><span class="sxs-lookup"><span data-stu-id="4eda9-109">[in] The maximum size of the `rModuleRefs` array.</span></span>  
   
  `pcModuleRefs`  
- <span data-ttu-id="594a7-110">[out] The number of ModuleRef tokens returned in `rModuleRefs`.</span><span class="sxs-lookup"><span data-stu-id="594a7-110">[out] The number of ModuleRef tokens returned in `rModuleRefs`.</span></span>  
+ <span data-ttu-id="4eda9-110">제한이 `rModuleRefs`에서 반환 된 ModuleRef 토큰 수입니다.</span><span class="sxs-lookup"><span data-stu-id="4eda9-110">[out] The number of ModuleRef tokens returned in `rModuleRefs`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="594a7-111">반환 값</span><span class="sxs-lookup"><span data-stu-id="594a7-111">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="4eda9-111">반환 값</span><span class="sxs-lookup"><span data-stu-id="4eda9-111">Return Value</span></span>  
   
-|<span data-ttu-id="594a7-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="594a7-112">HRESULT</span></span>|<span data-ttu-id="594a7-113">설명</span><span class="sxs-lookup"><span data-stu-id="594a7-113">Description</span></span>|  
+|<span data-ttu-id="4eda9-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="4eda9-112">HRESULT</span></span>|<span data-ttu-id="4eda9-113">설명</span><span class="sxs-lookup"><span data-stu-id="4eda9-113">Description</span></span>|  
 |-------------|-----------------|  
-|`S_OK`|<span data-ttu-id="594a7-114">`EnumModuleRefs` returned successfully.</span><span class="sxs-lookup"><span data-stu-id="594a7-114">`EnumModuleRefs` returned successfully.</span></span>|  
-|`S_FALSE`|<span data-ttu-id="594a7-115">There are no tokens to enumerate.</span><span class="sxs-lookup"><span data-stu-id="594a7-115">There are no tokens to enumerate.</span></span> <span data-ttu-id="594a7-116">In that case, `pcModuleRefs` is zero.</span><span class="sxs-lookup"><span data-stu-id="594a7-116">In that case, `pcModuleRefs` is zero.</span></span>|  
+|`S_OK`|<span data-ttu-id="4eda9-114">`EnumModuleRefs` 성공적으로 반환 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="4eda9-114">`EnumModuleRefs` returned successfully.</span></span>|  
+|`S_FALSE`|<span data-ttu-id="4eda9-115">열거할 토큰이 없습니다.</span><span class="sxs-lookup"><span data-stu-id="4eda9-115">There are no tokens to enumerate.</span></span> <span data-ttu-id="4eda9-116">이 경우 `pcModuleRefs`은 0입니다.</span><span class="sxs-lookup"><span data-stu-id="4eda9-116">In that case, `pcModuleRefs` is zero.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="594a7-117">요구 사항</span><span class="sxs-lookup"><span data-stu-id="594a7-117">Requirements</span></span>  
- <span data-ttu-id="594a7-118">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="594a7-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4eda9-117">요구 사항</span><span class="sxs-lookup"><span data-stu-id="4eda9-117">Requirements</span></span>  
+ <span data-ttu-id="4eda9-118">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="4eda9-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="594a7-119">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="594a7-119">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="4eda9-119">**헤더:** Cor</span><span class="sxs-lookup"><span data-stu-id="4eda9-119">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="594a7-120">**Library:** Included as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="594a7-120">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="4eda9-120">**라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="4eda9-120">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="594a7-121">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="594a7-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="4eda9-121">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4eda9-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="594a7-122">참조</span><span class="sxs-lookup"><span data-stu-id="594a7-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4eda9-122">참고자료</span><span class="sxs-lookup"><span data-stu-id="4eda9-122">See also</span></span>
 
-- [<span data-ttu-id="594a7-123">IMetaDataImport 인터페이스</span><span class="sxs-lookup"><span data-stu-id="594a7-123">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="594a7-124">IMetaDataImport2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="594a7-124">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="4eda9-123">IMetaDataImport 인터페이스</span><span class="sxs-lookup"><span data-stu-id="4eda9-123">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="4eda9-124">IMetaDataImport2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="4eda9-124">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
