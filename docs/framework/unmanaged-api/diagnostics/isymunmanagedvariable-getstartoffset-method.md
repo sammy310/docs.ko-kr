@@ -22,27 +22,27 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446011"
 ---
-# <a name="isymunmanagedvariablegetstartoffset-method"></a><span data-ttu-id="f1628-102">ISymUnmanagedVariable::GetStartOffset 메서드</span><span class="sxs-lookup"><span data-stu-id="f1628-102">ISymUnmanagedVariable::GetStartOffset Method</span></span>
-<span data-ttu-id="f1628-103">Gets the start offset of this variable within its parent.</span><span class="sxs-lookup"><span data-stu-id="f1628-103">Gets the start offset of this variable within its parent.</span></span> <span data-ttu-id="f1628-104">If this is a local variable within a scope, the start offset will fall within the offsets defined for the scope.</span><span class="sxs-lookup"><span data-stu-id="f1628-104">If this is a local variable within a scope, the start offset will fall within the offsets defined for the scope.</span></span>  
+# <a name="isymunmanagedvariablegetstartoffset-method"></a><span data-ttu-id="78b32-102">ISymUnmanagedVariable::GetStartOffset 메서드</span><span class="sxs-lookup"><span data-stu-id="78b32-102">ISymUnmanagedVariable::GetStartOffset Method</span></span>
+<span data-ttu-id="78b32-103">부모 내에서이 변수의 시작 오프셋을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="78b32-103">Gets the start offset of this variable within its parent.</span></span> <span data-ttu-id="78b32-104">범위 내에 있는 지역 변수인 경우 시작 오프셋은 범위에 대해 정의 된 오프셋에 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="78b32-104">If this is a local variable within a scope, the start offset will fall within the offsets defined for the scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f1628-105">구문</span><span class="sxs-lookup"><span data-stu-id="f1628-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="78b32-105">구문</span><span class="sxs-lookup"><span data-stu-id="78b32-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetStartOffset(  
     [out, retval] ULONG32* pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f1628-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="f1628-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="78b32-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="78b32-106">Parameters</span></span>  
  `pRetVal`  
- <span data-ttu-id="f1628-107">[out] A pointer to a `ULONG32` that receives the start offset.</span><span class="sxs-lookup"><span data-stu-id="f1628-107">[out] A pointer to a `ULONG32` that receives the start offset.</span></span>  
+ <span data-ttu-id="78b32-107">제한이 시작 오프셋을 수신 하는 `ULONG32`에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="78b32-107">[out] A pointer to a `ULONG32` that receives the start offset.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="f1628-108">반환 값</span><span class="sxs-lookup"><span data-stu-id="f1628-108">Return Value</span></span>  
- <span data-ttu-id="f1628-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="f1628-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="78b32-108">반환 값</span><span class="sxs-lookup"><span data-stu-id="78b32-108">Return Value</span></span>  
+ <span data-ttu-id="78b32-109">메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="78b32-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f1628-110">요구 사항</span><span class="sxs-lookup"><span data-stu-id="f1628-110">Requirements</span></span>  
- <span data-ttu-id="f1628-111">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="f1628-111">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="78b32-110">요구 사항</span><span class="sxs-lookup"><span data-stu-id="78b32-110">Requirements</span></span>  
+ <span data-ttu-id="78b32-111">**헤더:** CorSym, CorSym</span><span class="sxs-lookup"><span data-stu-id="78b32-111">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f1628-112">참조</span><span class="sxs-lookup"><span data-stu-id="f1628-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="78b32-112">참고자료</span><span class="sxs-lookup"><span data-stu-id="78b32-112">See also</span></span>
 
-- [<span data-ttu-id="f1628-113">ISymUnmanagedVariable 인터페이스</span><span class="sxs-lookup"><span data-stu-id="f1628-113">ISymUnmanagedVariable Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)
-- [<span data-ttu-id="f1628-114">GetEndOffset 메서드</span><span class="sxs-lookup"><span data-stu-id="f1628-114">GetEndOffset Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getendoffset-method.md)
+- [<span data-ttu-id="78b32-113">ISymUnmanagedVariable 인터페이스</span><span class="sxs-lookup"><span data-stu-id="78b32-113">ISymUnmanagedVariable Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)
+- [<span data-ttu-id="78b32-114">GetEndOffset 메서드</span><span class="sxs-lookup"><span data-stu-id="78b32-114">GetEndOffset Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getendoffset-method.md)

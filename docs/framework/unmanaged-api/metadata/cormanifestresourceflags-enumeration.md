@@ -21,10 +21,10 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450250"
 ---
-# <a name="cormanifestresourceflags-enumeration"></a><span data-ttu-id="ec63d-102">CorManifestResourceFlags 열거형</span><span class="sxs-lookup"><span data-stu-id="ec63d-102">CorManifestResourceFlags Enumeration</span></span>
-<span data-ttu-id="ec63d-103">Indicates the visibility of resources encoded in an assembly manifest.</span><span class="sxs-lookup"><span data-stu-id="ec63d-103">Indicates the visibility of resources encoded in an assembly manifest.</span></span>  
+# <a name="cormanifestresourceflags-enumeration"></a><span data-ttu-id="c307d-102">CorManifestResourceFlags 열거형</span><span class="sxs-lookup"><span data-stu-id="c307d-102">CorManifestResourceFlags Enumeration</span></span>
+<span data-ttu-id="c307d-103">어셈블리 매니페스트에 인코딩된 리소스의 표시 여부를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="c307d-103">Indicates the visibility of resources encoded in an assembly manifest.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ec63d-104">구문</span><span class="sxs-lookup"><span data-stu-id="ec63d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c307d-104">구문</span><span class="sxs-lookup"><span data-stu-id="c307d-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum CorManifestResourceFlags {  
@@ -36,21 +36,21 @@ typedef enum CorManifestResourceFlags {
 } CorManifestResourceFlags;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="ec63d-105">멤버</span><span class="sxs-lookup"><span data-stu-id="ec63d-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="c307d-105">멤버</span><span class="sxs-lookup"><span data-stu-id="c307d-105">Members</span></span>  
   
-|<span data-ttu-id="ec63d-106">멤버</span><span class="sxs-lookup"><span data-stu-id="ec63d-106">Member</span></span>|<span data-ttu-id="ec63d-107">설명</span><span class="sxs-lookup"><span data-stu-id="ec63d-107">Description</span></span>|  
+|<span data-ttu-id="c307d-106">멤버</span><span class="sxs-lookup"><span data-stu-id="c307d-106">Member</span></span>|<span data-ttu-id="c307d-107">설명</span><span class="sxs-lookup"><span data-stu-id="c307d-107">Description</span></span>|  
 |------------|-----------------|  
-|`mrVisibilityMask`|<span data-ttu-id="ec63d-108">예약됨.</span><span class="sxs-lookup"><span data-stu-id="ec63d-108">Reserved.</span></span>|  
-|`mrPublic`|<span data-ttu-id="ec63d-109">The resources are public.</span><span class="sxs-lookup"><span data-stu-id="ec63d-109">The resources are public.</span></span>|  
-|`mrPrivate`|<span data-ttu-id="ec63d-110">The resources are private.</span><span class="sxs-lookup"><span data-stu-id="ec63d-110">The resources are private.</span></span>|  
+|`mrVisibilityMask`|<span data-ttu-id="c307d-108">예약되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c307d-108">Reserved.</span></span>|  
+|`mrPublic`|<span data-ttu-id="c307d-109">리소스는 공용입니다.</span><span class="sxs-lookup"><span data-stu-id="c307d-109">The resources are public.</span></span>|  
+|`mrPrivate`|<span data-ttu-id="c307d-110">전용 리소스입니다.</span><span class="sxs-lookup"><span data-stu-id="c307d-110">The resources are private.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="ec63d-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="ec63d-111">Requirements</span></span>  
- <span data-ttu-id="ec63d-112">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="ec63d-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c307d-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="c307d-111">Requirements</span></span>  
+ <span data-ttu-id="c307d-112">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="c307d-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ec63d-113">**Header:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="ec63d-113">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="c307d-113">**헤더:** CorHdr .h</span><span class="sxs-lookup"><span data-stu-id="c307d-113">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="ec63d-114">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ec63d-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="c307d-114">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c307d-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ec63d-115">참조</span><span class="sxs-lookup"><span data-stu-id="ec63d-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c307d-115">참고자료</span><span class="sxs-lookup"><span data-stu-id="c307d-115">See also</span></span>
 
-- [<span data-ttu-id="ec63d-116">메타데이터 열거형</span><span class="sxs-lookup"><span data-stu-id="ec63d-116">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="c307d-116">메타데이터 열거형</span><span class="sxs-lookup"><span data-stu-id="c307d-116">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

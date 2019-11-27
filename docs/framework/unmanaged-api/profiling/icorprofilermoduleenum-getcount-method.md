@@ -22,29 +22,29 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74442775"
 ---
-# <a name="icorprofilermoduleenumgetcount-method"></a><span data-ttu-id="4976f-102">ICorProfilerModuleEnum::GetCount 메서드</span><span class="sxs-lookup"><span data-stu-id="4976f-102">ICorProfilerModuleEnum::GetCount Method</span></span>
-<span data-ttu-id="4976f-103">애플리케이션에 로드된 관리되는 모듈 수를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="4976f-103">Gets the number of managed modules that were loaded into the application.</span></span>  
+# <a name="icorprofilermoduleenumgetcount-method"></a><span data-ttu-id="3716b-102">ICorProfilerModuleEnum::GetCount 메서드</span><span class="sxs-lookup"><span data-stu-id="3716b-102">ICorProfilerModuleEnum::GetCount Method</span></span>
+<span data-ttu-id="3716b-103">애플리케이션에 로드된 관리되는 모듈 수를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="3716b-103">Gets the number of managed modules that were loaded into the application.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4976f-104">구문</span><span class="sxs-lookup"><span data-stu-id="4976f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3716b-104">구문</span><span class="sxs-lookup"><span data-stu-id="3716b-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetCount([out] ULONG * pcelt);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="4976f-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="4976f-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="3716b-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="3716b-105">Parameters</span></span>  
  `celt`  
- <span data-ttu-id="4976f-106">[out] The number of runtime modules in the collection.</span><span class="sxs-lookup"><span data-stu-id="4976f-106">[out] The number of runtime modules in the collection.</span></span>  
+ <span data-ttu-id="3716b-106">제한이 컬렉션의 런타임 모듈 수입니다.</span><span class="sxs-lookup"><span data-stu-id="3716b-106">[out] The number of runtime modules in the collection.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4976f-107">요구 사항</span><span class="sxs-lookup"><span data-stu-id="4976f-107">Requirements</span></span>  
- <span data-ttu-id="4976f-108">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="4976f-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3716b-107">요구 사항</span><span class="sxs-lookup"><span data-stu-id="3716b-107">Requirements</span></span>  
+ <span data-ttu-id="3716b-108">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="3716b-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4976f-109">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="4976f-109">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="3716b-109">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="3716b-109">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="4976f-110">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4976f-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="3716b-110">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3716b-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="4976f-111">**.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4976f-111">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="3716b-111">**.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3716b-111">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4976f-112">참조</span><span class="sxs-lookup"><span data-stu-id="4976f-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3716b-112">참고자료</span><span class="sxs-lookup"><span data-stu-id="3716b-112">See also</span></span>
 
-- [<span data-ttu-id="4976f-113">ICorProfilerModuleEnum 인터페이스</span><span class="sxs-lookup"><span data-stu-id="4976f-113">ICorProfilerModuleEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md)
-- [<span data-ttu-id="4976f-114">프로파일링 인터페이스</span><span class="sxs-lookup"><span data-stu-id="4976f-114">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [<span data-ttu-id="3716b-113">ICorProfilerModuleEnum 인터페이스</span><span class="sxs-lookup"><span data-stu-id="3716b-113">ICorProfilerModuleEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md)
+- [<span data-ttu-id="3716b-114">프로파일링 인터페이스</span><span class="sxs-lookup"><span data-stu-id="3716b-114">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

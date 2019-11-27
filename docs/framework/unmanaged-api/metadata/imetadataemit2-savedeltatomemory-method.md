@@ -22,10 +22,10 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447895"
 ---
-# <a name="imetadataemit2savedeltatomemory-method"></a><span data-ttu-id="27a43-102">IMetaDataEmit2::SaveDeltaToMemory 메서드</span><span class="sxs-lookup"><span data-stu-id="27a43-102">IMetaDataEmit2::SaveDeltaToMemory Method</span></span>
-<span data-ttu-id="27a43-103">Saves changes from the current edit-and-continue session to memory.</span><span class="sxs-lookup"><span data-stu-id="27a43-103">Saves changes from the current edit-and-continue session to memory.</span></span>  
+# <a name="imetadataemit2savedeltatomemory-method"></a><span data-ttu-id="aba5a-102">IMetaDataEmit2::SaveDeltaToMemory 메서드</span><span class="sxs-lookup"><span data-stu-id="aba5a-102">IMetaDataEmit2::SaveDeltaToMemory Method</span></span>
+<span data-ttu-id="aba5a-103">현재 편집 하며 계속 하기 세션의 변경 내용을 메모리로 저장 합니다.</span><span class="sxs-lookup"><span data-stu-id="aba5a-103">Saves changes from the current edit-and-continue session to memory.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="27a43-104">구문</span><span class="sxs-lookup"><span data-stu-id="27a43-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="aba5a-104">구문</span><span class="sxs-lookup"><span data-stu-id="aba5a-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SaveDeltaToMemory (  
@@ -34,23 +34,23 @@ HRESULT SaveDeltaToMemory (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="27a43-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="27a43-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="aba5a-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="aba5a-105">Parameters</span></span>  
  `pbData`  
- <span data-ttu-id="27a43-106">[out] The address at which to begin writing the metadata delta.</span><span class="sxs-lookup"><span data-stu-id="27a43-106">[out] The address at which to begin writing the metadata delta.</span></span>  
+ <span data-ttu-id="aba5a-106">제한이 메타 데이터 델타를 쓰기 시작할 주소입니다.</span><span class="sxs-lookup"><span data-stu-id="aba5a-106">[out] The address at which to begin writing the metadata delta.</span></span>  
   
  `cbData`  
- <span data-ttu-id="27a43-107">[in] The size of the changes.</span><span class="sxs-lookup"><span data-stu-id="27a43-107">[in] The size of the changes.</span></span> <span data-ttu-id="27a43-108">Use [IMetaDataEmit2::GetDeltaSaveSize](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-getdeltasavesize-method.md) to determine the size.</span><span class="sxs-lookup"><span data-stu-id="27a43-108">Use [IMetaDataEmit2::GetDeltaSaveSize](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-getdeltasavesize-method.md) to determine the size.</span></span>  
+ <span data-ttu-id="aba5a-107">진행 변경 내용의 크기입니다.</span><span class="sxs-lookup"><span data-stu-id="aba5a-107">[in] The size of the changes.</span></span> <span data-ttu-id="aba5a-108">[IMetaDataEmit2:: GetDeltaSaveSize](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-getdeltasavesize-method.md) 를 사용 하 여 크기를 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="aba5a-108">Use [IMetaDataEmit2::GetDeltaSaveSize](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-getdeltasavesize-method.md) to determine the size.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="27a43-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="27a43-109">Requirements</span></span>  
- <span data-ttu-id="27a43-110">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="27a43-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="aba5a-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="aba5a-109">Requirements</span></span>  
+ <span data-ttu-id="aba5a-110">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="aba5a-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="27a43-111">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="27a43-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="aba5a-111">**헤더:** Cor</span><span class="sxs-lookup"><span data-stu-id="aba5a-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="27a43-112">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="27a43-112">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="aba5a-112">**라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="aba5a-112">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="27a43-113">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="27a43-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="aba5a-113">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="aba5a-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="27a43-114">참조</span><span class="sxs-lookup"><span data-stu-id="27a43-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="aba5a-114">참고자료</span><span class="sxs-lookup"><span data-stu-id="aba5a-114">See also</span></span>
 
-- [<span data-ttu-id="27a43-115">IMetaDataEmit2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="27a43-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
-- [<span data-ttu-id="27a43-116">IMetaDataEmit 인터페이스</span><span class="sxs-lookup"><span data-stu-id="27a43-116">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="aba5a-115">IMetaDataEmit2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="aba5a-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="aba5a-116">IMetaDataEmit 인터페이스</span><span class="sxs-lookup"><span data-stu-id="aba5a-116">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
