@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428030"
 ---
 # <a name="isymunmanagedwriterdefineglobalvariable-method"></a>ISymUnmanagedWriter::DefineGlobalVariable 메서드
-Defines a single global variable.  
+단일 전역 변수를 정의합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -41,36 +41,36 @@ HRESULT DefineGlobalVariable(
   
 ## <a name="parameters"></a>매개 변수  
  `name`  
- [in] A pointer to a `WCHAR` that defines the global variable name.  
+ 진행 전역 변수 이름을 정의 하는 `WCHAR`에 대 한 포인터입니다.  
   
  `attributes`  
- [in] The global variable attributes.  
+ 진행 전역 변수 특성입니다.  
   
  `cSig`  
- [in] A `ULONG32` that indicates the size, in characters, of the `signature` buffer.  
+ 진행 `signature` 버퍼의 크기 (문자)를 나타내는 `ULONG32`입니다.  
   
  `signature`  
- [in] The global variable signature.  
+ 진행 전역 변수 서명입니다.  
   
  `addrKind`  
- [in] The address type.  
+ 진행 주소 유형입니다.  
   
  `addr1`  
- [in] The first address for the parameter specification.  
+ 진행 매개 변수 사양의 첫 번째 주소입니다.  
   
  `addr2`  
- [in] The second address for the parameter specification.  
+ 진행 매개 변수 사양의 두 번째 주소입니다.  
   
  `addr3`  
- [in] The third address for the parameter specification.  
+ 진행 매개 변수 사양의 세 번째 주소입니다.  
   
 ## <a name="return-value"></a>반환 값  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **Header:** CorSym.idl, CorSym.h  
+ **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ISymUnmanagedWriter 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
 - [DefineLocalVariable 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-definelocalvariable-method.md)

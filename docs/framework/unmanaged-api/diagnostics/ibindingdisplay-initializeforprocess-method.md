@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448489"
 ---
 # <a name="ibindingdisplayinitializeforprocess-method"></a>IBindingDisplay::InitializeForProcess 메서드
-Initializes the [IBindingDisplay](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-interface.md) object.  
+[IBindingDisplay](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-interface.md) 개체를 초기화 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -35,20 +35,20 @@ HRESULT InitializeForProcess (
   
 ## <a name="parameters"></a>매개 변수  
  `pid`  
- [in] The process identifier.  
+ 진행 프로세스 식별자입니다.  
   
 ## <a name="remarks"></a>주의  
- The debugger calls the `InitializeForProcess` method at creation time to initialize the binding display. `InitializeForProcess` must be called at creation time before any other method on `IBindingDisplay` is called.  
+ 디버거는 만든 시간에 `InitializeForProcess` 메서드를 호출 하 여 바인딩 표시를 초기화 합니다. `InitializeForProcess` `IBindingDisplay`에서 다른 메서드를 호출 하기 전에 생성 시 호출 해야 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** BindingDisplay.h  
+ **헤더:** BindingDisplay. h  
   
- **Library:** BindingDisplay.idl  
+ **라이브러리:** BindingDisplay .idl  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IBindingDisplay 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-interface.md)

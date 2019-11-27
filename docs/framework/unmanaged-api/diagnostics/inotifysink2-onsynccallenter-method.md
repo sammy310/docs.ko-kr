@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440876"
 ---
 # <a name="inotifysink2onsynccallenter-method"></a>INotifySink2::OnSyncCallEnter 메서드
-Gets invoked when entering a call.  
+호출을 입력할 때 호출 됩니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,21 +38,21 @@ HRESULT OnSyncCallEnter
   
 ## <a name="parameters"></a>매개 변수  
  `in_CallID`  
- [in] ID of the call being entered. See [CALL_ID Structure](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md).  
+ 진행 입력 하는 호출의 ID입니다. [CALL_ID 구조체](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md)를 참조 하세요.  
   
  `in_pBuffer`  
- [in] Call buffer.  
+ 진행 버퍼를 호출 합니다.  
   
  `in_BufferSize`  
- [in] Size of the call buffer, in bytes.  
+ 진행 호출 버퍼의 크기 (바이트)입니다.  
   
 ## <a name="return-value"></a>반환 값  
- S_OK if the method succeeds.  
+ 메서드가 성공 하면 S_OK 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **Header:** ProtocolNotify2.idl  
+ **헤더:** ProtocolNotify2  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [INotifySink2 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
 - [INotifySource2 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)

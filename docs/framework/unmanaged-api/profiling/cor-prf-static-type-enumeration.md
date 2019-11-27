@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448443"
 ---
 # <a name="cor_prf_static_type-enumeration"></a>COR_PRF_STATIC_TYPE 열거형
-필드가 정적인지 여부와 정적인 경우 필드에 적용될 정적 품질을 나타냅니다. These values can be combined using the bitwise OR operation to indicate that the field has multiple, different static qualities.  
+필드가 정적인지 여부와 정적인 경우 필드에 적용될 정적 품질을 나타냅니다. 비트 OR 연산을 사용 하 여 이러한 값을 결합 하 여 필드에 여러 다른 정적 품질이 있음을 나타낼 수 있습니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,11 +40,11 @@ typedef enum {
   
 |멤버|설명|  
 |------------|-----------------|  
-|`COR_PRF_FIELD_NOT_A_STATIC`|The field is not static.|  
-|`COR_PRF_FIELD_APP_DOMAIN_STATIC`|The field is application domain-static.|  
-|`COR_PRF_FIELD_THREAD_STATIC`|The field is thread-static.|  
-|`COR_PRF_FIELD_CONTEXT_STATIC`|The field is context-static.|  
-|`COR_PRF_FIELD_RVA_STATIC`|The field is relative virtual address (RVA)-static.|  
+|`COR_PRF_FIELD_NOT_A_STATIC`|필드가 static이 아닙니다.|  
+|`COR_PRF_FIELD_APP_DOMAIN_STATIC`|응용 프로그램 도메인-정적 필드입니다.|  
+|`COR_PRF_FIELD_THREAD_STATIC`|이 필드는 스레드 정적 필드입니다.|  
+|`COR_PRF_FIELD_CONTEXT_STATIC`|정적 필드입니다.|  
+|`COR_PRF_FIELD_RVA_STATIC`|RVA (상대 가상 주소)-정적 필드입니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
@@ -55,6 +55,6 @@ typedef enum {
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [프로파일링 열거형](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

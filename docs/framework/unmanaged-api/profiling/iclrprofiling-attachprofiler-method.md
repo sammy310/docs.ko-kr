@@ -51,7 +51,7 @@ HRESULT AttachProfiler(
  [in] 로드할 프로파일러 DLL 파일의 전체 경로입니다. 이 문자열에는 null 종결자를 포함하여 260자 이하가 포함되어야 합니다. `wszProfilerPath`가 null 또는 빈 문자열인 경우 CLR(공용 언어 런타임)은 `pClsidProfiler`가 가리키는 CLSID를 레지스트리에서 찾아 프로파일러 DLL 파일의 위치를 찾으려고 합니다.  
   
  `pvClientData`  
- [in] A pointer to data to be passed to the profiler by the [ICorProfilerCallback3::InitializeForAttach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md) method. 트리거 프로세스는 `AttachProfiler`가 반환된 후 이 메모리를 다시 사용할 수 있습니다. `pvClientData`가 null이면 `cbClientData`는 0이어야 합니다.  
+ 진행 [ICorProfilerCallback3:: InitializeForAttach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md) 메서드로 프로파일러에 전달 될 데이터에 대 한 포인터입니다. 트리거 프로세스는 `AttachProfiler`가 반환된 후 이 메모리를 다시 사용할 수 있습니다. `pvClientData`가 null이면 `cbClientData`는 0이어야 합니다.  
   
  `cbClientData`  
  [in] `pvClientData`가 가리키는 데이터의 크기(바이트)입니다.  
@@ -72,7 +72,7 @@ HRESULT AttachProfiler(
 |HRESULT_FROM_WIN32(ERROR_TIMEOUT)|프로파일러 로드를 시작하지 않고 시간 제한이 만료되었습니다. 연결 작업을 다시 시도할 수 있습니다. 시간 초과는 대상 프로세스의 종료자가 시간 제한 값보다 오래 실행되는 경우에 발생합니다.|  
 |E_INVALIDARG|하나 이상의 매개 변수에 잘못된 값이 있습니다.|  
 |E_FAIL|지정되지 않은 다른 일부 오류가 발생했습니다.|  
-|기타 오류 코드|If the profiler’s [ICorProfilerCallback3::InitializeForAttach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md) method returns an HRESULT that indicates failure, `AttachProfiler` returns that same HRESULT. 이 경우 E_NOTIMPL이 CORPROF_E_PROFILER_NOT_ATTACHABLE로 변환됩니다.|  
+|기타 오류 코드|프로파일러의 [ICorProfilerCallback3:: InitializeForAttach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md) 메서드가 실패를 나타내는 hresult를 반환 하는 경우 `AttachProfiler`는 동일한 hresult를 반환 합니다. 이 경우 E_NOTIMPL이 CORPROF_E_PROFILER_NOT_ATTACHABLE로 변환됩니다.|  
   
 ## <a name="remarks"></a>주의  
   
@@ -88,7 +88,7 @@ HRESULT AttachProfiler(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerCallback 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
 - [ICorProfilerInfo3 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)

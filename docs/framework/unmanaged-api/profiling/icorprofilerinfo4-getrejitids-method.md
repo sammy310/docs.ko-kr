@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74442859"
 ---
 # <a name="icorprofilerinfo4getrejitids-method"></a>ICorProfilerInfo4::GetReJITIDs 메서드
-Returns an array of IDs that identify all JIT-recompiled versions of the specified function that are still allocated. This includes JIT-recompiled versions of functions that have been subsequently reverted but not yet freed (for example, when the application domain that contains the reverted function is still in use).  
+아직 할당 된 지정 된 함수의 JIT 다시 컴파일된 모든 버전을 식별 하는 Id 배열을 반환 합니다. 여기에는 나중에 되돌린 하지만 아직 해제 되지 않은 함수의 JIT 다시 컴파일된 버전 (예: 되돌린 함수를 포함 하는 응용 프로그램 도메인이 아직 사용 중인 경우)이 포함 됩니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,19 +37,19 @@ HRESULT GetReJITIDs (
   
 ## <a name="parameters"></a>매개 변수  
  `functionId`  
- [in] The `FunctionID` of the function instance for which to enumerate versions.  
+ 진행 버전을 열거할 함수 인스턴스의 `FunctionID`입니다.  
   
  `cReJitIds`  
- [in] The number of JIT-recompiled IDs allocated in the `reJitIds` array.  
+ 진행 `reJitIds` 배열에 할당 된 JIT 다시 컴파일된 Id 수입니다.  
   
  `pcReJitIds`  
- [out] The actual number of JIT-recompiled IDs.  
+ 제한이 JIT 다시 컴파일된 Id의 실제 수입니다.  
   
  `reJitIds`  
- [out] A caller-allocated array that will contain the JIT-recompiled IDs for the specified function.  
+ 제한이 지정 된 함수의 JIT 다시 컴파일된 Id를 포함 하는 호출자가 할당 한 배열입니다.  
   
 ## <a name="remarks"></a>주의  
- `GetReJITIDs` enumerates the active JIT-recompiled IDs for a given function instance. It follows the same usage pattern as other `ICorProfilerInfo` functions that accept caller-allocated buffers.  
+ `GetReJITIDs`는 지정 된 함수 인스턴스에 대해 활성 JIT 다시 컴파일된 Id를 열거 합니다. 호출자가 할당 한 버퍼를 허용 하는 다른 `ICorProfilerInfo` 함수와 동일한 사용 패턴을 따릅니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
@@ -60,7 +60,7 @@ HRESULT GetReJITIDs (
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerInfo4 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)
 - [프로파일링 인터페이스](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

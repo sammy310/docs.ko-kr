@@ -21,33 +21,33 @@ ms.locfileid: "74347844"
 ---
 # <a name="boolean-data-type-visual-basic"></a>Boolean 데이터 형식(Visual Basic)
 
-Holds values that can be only `True` or `False`. The keywords `True` and `False` correspond to the two states of `Boolean` variables.  
+`True` 또는 `False`만 될 수 있는 값을 포함 합니다. `True` 및 `False` 키워드는 `Boolean` 변수의 두 상태에 해당 합니다.  
   
 ## <a name="remarks"></a>주의  
 
- Use the [Boolean Data Type (Visual Basic)](../../../visual-basic/language-reference/data-types/boolean-data-type.md) to contain two-state values such as true/false, yes/no, or on/off.  
+ [Boolean 데이터 형식 (Visual Basic)](../../../visual-basic/language-reference/data-types/boolean-data-type.md) 을 사용 하 여 true/false, 예/아니요 또는 설정/해제와 같은 두 가지 상태 값을 포함 합니다.  
   
- `Boolean` 의 기본값은 `False`입니다.  
+ `Boolean`의 기본값은 `False`입니다.  
   
- `Boolean` values are not stored as numbers, and the stored values are not intended to be equivalent to numbers. You should never write code that relies on equivalent numeric values for `True` and `False`. Whenever possible, you should restrict usage of `Boolean` variables to the logical values for which they are designed.  
+ `Boolean` 값은 숫자로 저장 되지 않으며 저장 된 값은 숫자와 동일 하지 않습니다. `True` 및 `False`에 대해 동일한 숫자 값을 사용 하는 코드를 작성 하면 안 됩니다. 가능 하면 `Boolean` 변수의 사용을 디자인 된 논리 값으로 제한 해야 합니다.  
   
 ## <a name="type-conversions"></a>형식 변환  
 
- When Visual Basic converts numeric data type values to `Boolean`, 0 becomes `False` and all other values become `True`. When Visual Basic converts `Boolean` values to numeric types, `False` becomes 0 and `True` becomes -1.  
+ Visual Basic 숫자 데이터 형식 값을 `Boolean`변환 하면 0이 `False` 되 고 다른 모든 값은 `True`됩니다. Visual Basic `Boolean` 값을 숫자 형식으로 변환 하는 경우 `False` 0이 되며 `True`는-1이 됩니다.  
   
- When you convert between `Boolean` values and numeric data types, keep in mind that the .NET Framework conversion methods do not always produce the same results as the Visual Basic conversion keywords. This is because the Visual Basic conversion retains behavior compatible with previous versions. For more information, see "Boolean Type Does Not Convert to Numeric Type Accurately" in [Troubleshooting Data Types](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
+ `Boolean` 값과 숫자 데이터 형식 간에 변환 하는 경우 .NET Framework 변환 메서드는 항상 Visual Basic 변환 키워드와 동일한 결과를 생성 하지 않습니다. Visual Basic 변환은 이전 버전과 호환 되는 동작을 유지 하기 때문입니다. 자세한 내용은 [데이터 형식 문제 해결](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)의 "부울 형식이 숫자 형식으로 정확 하 게 변환 되지 않습니다."를 참조 하세요.  
   
 ## <a name="programming-tips"></a>프로그래밍 팁  
   
-- **Negative Numbers.** `Boolean` is not a numeric type and cannot represent a negative value. In any case, you should not use `Boolean` to hold numeric values.  
+- **음수.** `Boolean`는 숫자 형식이 아니므로 음수 값을 나타낼 수 없습니다. 어떤 경우 든 `Boolean`를 사용 하 여 숫자 값을 저장 하면 안 됩니다.  
   
-- **Type Characters.** `Boolean` has no literal type character or identifier type character.  
+- **문자를 입력 합니다.** `Boolean`에는 리터럴 형식 문자 또는 식별자 형식 문자가 없습니다.  
   
-- **Framework Type.** .NET Framework에서 해당하는 형식은 <xref:System.Boolean?displayProperty=nameWithType> 구조체입니다.  
+- **프레임 워크 형식입니다.** .NET Framework에서 해당하는 형식은 <xref:System.Boolean?displayProperty=nameWithType> 구조체입니다.  
   
 ## <a name="example"></a>예제  
 
- In the following example, `runningVB` is a `Boolean` variable, which stores a simple yes/no setting.  
+ 다음 예제에서 `runningVB`는 간단한 예/아니요 설정을 저장 하는 `Boolean` 변수입니다.  
   
 ```vb  
 Dim runningVB As Boolean  
@@ -57,12 +57,12 @@ If scriptEngine = "VB" Then
 End If  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Boolean?displayProperty=nameWithType>
 - [데이터 형식](../../../visual-basic/language-reference/data-types/index.md)
-- [형식 변환 함수](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [CString](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
 - [변환 요약](../../../visual-basic/language-reference/keywords/conversion-summary.md)
 - [데이터 형식의 효율적 사용](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
 - [데이터 형식 문제 해결](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
-- [CType 함수](../../../visual-basic/language-reference/functions/ctype-function.md)
+- [CType Function](../../../visual-basic/language-reference/functions/ctype-function.md)

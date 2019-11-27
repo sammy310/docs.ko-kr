@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445845"
 ---
 # <a name="icorprofilercallbackobjectallocated-method"></a>ICorProfilerCallback::ObjectAllocated 메서드
-Notifies the profiler that memory within the heap has been allocated for an object.  
+힙에 있는 메모리가 개체에 할당 되었음을 프로파일러에 알립니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -35,13 +35,13 @@ HRESULT ObjectAllocated(
   
 ## <a name="parameters"></a>매개 변수  
  `objectId`  
- [in] The ID of the object for which memory was allocated.  
+ 진행 메모리가 할당 된 개체의 ID입니다.  
   
  `classId`  
- [in] The ID of the class of which the object is an instance.  
+ 진행 개체가 인스턴스인 클래스의 ID입니다.  
   
 ## <a name="remarks"></a>주의  
- The `ObjectedAllocated` method is not called for allocations from either the stack or unmanaged memory. The `classId` parameter can refer to a class in managed code that has not been loaded yet. The profiler will receive a class load callback for that class immediately after the `ObjectAllocated` callback.  
+ 스택 또는 관리 되지 않는 메모리의 할당에 대해서는 `ObjectedAllocated` 메서드가 호출 되지 않습니다. `classId` 매개 변수는 아직 로드 되지 않은 관리 코드의 클래스를 참조할 수 있습니다. 프로파일러는 `ObjectAllocated` 콜백 직후 해당 클래스에 대 한 클래스 로드 콜백을 수신 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
@@ -52,7 +52,7 @@ HRESULT ObjectAllocated(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerCallback 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
 - [ClassLoadStarted 메서드](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadstarted-method.md)

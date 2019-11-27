@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438719"
 ---
 # <a name="icorprofilerinfoisarrayclass-method"></a>ICorProfilerInfo::IsArrayClass 메서드
-Determines whether the specified class is an array class.  
+지정 된 클래스가 배열 클래스 인지 여부를 확인 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,19 +37,19 @@ HRESULT IsArrayClass(
   
 ## <a name="parameters"></a>매개 변수  
  `classId`  
- [in] The ID of the class to be examined.  
+ 진행 검사할 클래스의 ID입니다.  
   
  `pBaseElemType`  
- [out] A pointer to a value of the CorElementType enumeration that indicates the type of the array elements.  
+ 제한이 배열 요소의 형식을 나타내는 CorElementType 열거형의 값에 대 한 포인터입니다.  
   
  `pBaseClassId`  
- [out] A pointer to the class ID of the array elements, when available.  
+ 제한이 사용할 수 있는 경우 배열 요소의 클래스 ID에 대 한 포인터입니다.  
   
  `pcRank`  
- [out] A pointer to an integer that indicates the rank (that is, number of dimensions) of the array.  
+ 제한이 배열의 차수 (차원 수)를 나타내는 정수에 대 한 포인터입니다.  
   
 ## <a name="remarks"></a>주의  
- If the specified class is an array class, the `IsArrayClass` method returns an S_OK HRESULT and values for any non-null output parameters. Otherwise, it returns S_FALSE.  
+ 지정 된 클래스가 배열 클래스인 경우 `IsArrayClass` 메서드는 null이 아닌 모든 출력 매개 변수에 대 한 S_OK HRESULT 및 값을 반환 합니다. 그렇지 않으면 S_FALSE을 반환 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
@@ -60,6 +60,6 @@ HRESULT IsArrayClass(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerInfo 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

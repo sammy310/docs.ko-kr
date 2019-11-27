@@ -14,59 +14,59 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447439"
 ---
 # <a name="profiling-global-static-functions"></a>프로파일링 전역 정적 함수
-This section describes the unmanaged API functions that the profiling API uses.  
+이 섹션에서는 프로 파일링 API에서 사용 하는 관리 되지 않는 API 함수에 대해 설명 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
   
-## <a name="net-framework-version-1-profiling-functions"></a>.NET Framework version 1 Profiling Functions  
+## <a name="net-framework-version-1-profiling-functions"></a>.NET Framework 버전 1 프로 파일링 함수  
  [FunctionEnter 함수](../../../../docs/framework/unmanaged-api/profiling/functionenter-function.md)  
- Notifies the profiler that control is being passed to a function. Deprecated in the .NET Framework 2.0.  
+ 컨트롤이 함수에 전달 되 고 있음을 프로파일러에 알립니다. .NET Framework 2.0에서 사용 되지 않습니다.  
   
  [FunctionLeave 함수](../../../../docs/framework/unmanaged-api/profiling/functionleave-function.md)  
- Notifies the profiler that a function is about to return to the caller. Deprecated in the .NET Framework 2.0.  
+ 함수가 호출자에 게 반환 될 것 이라고 프로파일러에 알립니다. .NET Framework 2.0에서 사용 되지 않습니다.  
   
  [FunctionTailcall 함수](../../../../docs/framework/unmanaged-api/profiling/functiontailcall-function.md)  
- Notifies the profiler that the currently executing function is about to perform a tail call to another function. Deprecated in the .NET Framework 2.0.  
+ 현재 실행 중인 함수가 다른 함수에 대 한 마무리 호출을 수행 하려고 함을 프로파일러에 알립니다. .NET Framework 2.0에서 사용 되지 않습니다.  
   
-## <a name="net-framework-version-2-profiling-functions"></a>.NET Framework version 2 Profiling Functions  
+## <a name="net-framework-version-2-profiling-functions"></a>.NET Framework 버전 2 프로 파일링 함수  
  [FunctionIDMapper 함수](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md)  
- Notifies the profiler that the given identifier of a function may be remapped to an alternative ID to be used in the [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md), [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md), and [FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md) callbacks for that function. Also enables the profiler to indicate whether it wants to receive callbacks for that function  
+ 함수의 지정 된 식별자를 해당 함수의 [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md), [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)및 [FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md) 콜백에서 사용할 대체 ID에 다시 매핑할 수 있음을 프로파일러에 알립니다. 또한 프로파일러를 사용 하 여 해당 함수에 대해 콜백을 받을지 여부를 지정할 수 있습니다.  
   
  [FunctionEnter2 함수](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)  
- Notifies the profiler that control is being passed to a function and provides information about the stack frame and function arguments. Deprecated in the .NET Framework 4.  
+ 컨트롤이 함수에 전달 되 고 있음을 프로파일러에 알리고 스택 프레임 및 함수 인수에 대 한 정보를 제공 합니다. .NET Framework 4에서 사용 되지 않습니다.  
   
  [FunctionLeave2 함수](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)  
- Notifies the profiler that a function is about to return to the caller and provides information about the stack frame and function return value. Deprecated in the .NET Framework 4.  
+ 함수가 호출자에 게 반환 될 것을 프로파일러에 알리고 스택 프레임 및 함수 반환 값에 대 한 정보를 제공 합니다. .NET Framework 4에서 사용 되지 않습니다.  
   
  [FunctionTailcall2 함수](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)  
- Notifies the profiler that the currently executing function is about to perform a tail call to another function and provides information about the stack frame. Deprecated in the .NET Framework 4.  
+ 현재 실행 중인 함수가 다른 함수에 대 한 마무리 호출을 수행 하려고 함을 프로파일러에 알리고 스택 프레임에 대 한 정보를 제공 합니다. .NET Framework 4에서 사용 되지 않습니다.  
   
  [StackSnapshotCallback 함수](../../../../docs/framework/unmanaged-api/profiling/stacksnapshotcallback-function.md)  
- Provides the profiler with information about each managed frame and each run of unmanaged frames on the stack during a stack walk, which is initiated by the [ICorProfilerInfo2::DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) method.  
+ [ICorProfilerInfo2::D ostacksnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) 메서드에서 시작 하는 스택 워크를 실행 하는 동안 스택에서 각 관리 되는 프레임 및 관리 되지 않는 프레임의 각 실행에 대 한 정보를 프로파일러에 제공 합니다.  
   
-## <a name="net-framework-version-4-profiling-functions"></a>.NET Framework version 4 Profiling Functions  
+## <a name="net-framework-version-4-profiling-functions"></a>.NET Framework 버전 4 프로 파일링 함수  
  [FunctionIDMapper2 함수](../../../../docs/framework/unmanaged-api/profiling/functionidmapper2-function.md)  
- Notifies the profiler that the given identifier of a function may be remapped to an alternative ID to be used in the [FunctionEnter3](../../../../docs/framework/unmanaged-api/profiling/functionenter3-function.md), [FunctionLeave3](../../../../docs/framework/unmanaged-api/profiling/functionleave3-function.md), and [FunctionTailcall3](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3-function.md), or[FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md), [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md), and [FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md) callbacks for that function. Also enables the profiler to indicate whether it wants to receive callbacks for that function.  
+ 함수의 지정 된 식별자를 해당 함수의 [FunctionEnter3](../../../../docs/framework/unmanaged-api/profiling/functionenter3-function.md), [FunctionLeave3](../../../../docs/framework/unmanaged-api/profiling/functionleave3-function.md)및 [FunctionTailcall3](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3-function.md),[FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md), [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md)및 [FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md) 콜백에서 사용할 대체 ID에 다시 매핑할 수 있음을 프로파일러에 알립니다. 또한 프로파일러는 해당 함수에 대해 콜백을 받을지 여부를 지정할 수 있습니다.  
   
- `FunctionIDMapper2` extends the [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md) function with a `clientData` parameter, which profilers may use to disambiguate among runtimes.  
+ `FunctionIDMapper2`는 `clientData` 매개 변수를 사용 하 여 [Functionidmapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md) 함수를 확장 합니다 .이 함수는 프로파일러를 사용 하 여 런타임을 명확 하 게 구분할 수  
   
  [FunctionEnter3 함수](../../../../docs/framework/unmanaged-api/profiling/functionenter3-function.md)  
- Notifies the profiler that control is being passed to a function.  
+ 컨트롤이 함수에 전달 되 고 있음을 프로파일러에 알립니다.  
   
  [FunctionEnter3WithInfo 함수](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md)  
- Notifies the profiler that control is being passed to a function, and provides a handle that can be passed to [ICorProfilerInfo3::GetFunctionEnter3Info](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md) to retrieve the stack frame and function arguments.  
+ 컨트롤이 함수에 전달 되 고 있음을 프로파일러에 알리고, [ICorProfilerInfo3:: GetFunctionEnter3Info](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md) 에 전달 하 여 스택 프레임 및 함수 인수를 검색 하는 핸들을 제공 합니다.  
   
  [FunctionLeave3 함수](../../../../docs/framework/unmanaged-api/profiling/functionleave3-function.md)  
- Notifies the profiler that control is being returned from a function.  
+ 컨트롤이 함수에서 반환 되 고 있음을 프로파일러에 알립니다.  
   
  [FunctionLeave3WithInfo 함수](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md)  
- Notifies the profiler that control is being returned from a function, and provides a handle that can be passed to [ICorProfilerInfo3::GetFunctionLeave3Info](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionleave3info-method.md) to retrieve the stack frame and the return value.  
+ 는 컨트롤이 함수에서 반환 되 고 있음을 프로파일러에 알리고 스택 프레임 및 반환 값을 검색 하기 위해 [ICorProfilerInfo3:: GetFunctionLeave3Info](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionleave3info-method.md) 에 전달할 수 있는 핸들을 제공 합니다.  
   
  [FunctionTailcall3 함수](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3-function.md)  
- Notifies the profiler that the currently executing function is about to perform a tail call to another function.  
+ 현재 실행 중인 함수가 다른 함수에 대 한 마무리 호출을 수행 하려고 함을 프로파일러에 알립니다.  
   
  [FunctionTailcall3WithInfo 함수](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md)  
- Notifies the profiler that the currently executing function is about to perform a tail call to another function, and provides a handle that can be passed to [ICorProfilerInfo3::GetFunctionTailcall3Info](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctiontailcall3info-method.md) to retrieve the stack frame.  
+ 현재 실행 중인 함수가 다른 함수에 대 한 마무리 호출을 수행 하려고 함을 프로파일러에 알리고 스택 프레임을 검색 하기 위해 [ICorProfilerInfo3:: GetFunctionTailcall3Info](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctiontailcall3info-method.md) 에 전달할 수 있는 핸들을 제공 합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
  [프로파일링 개요](../../../../docs/framework/unmanaged-api/profiling/profiling-overview.md)  

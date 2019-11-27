@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74433017"
 ---
 # <a name="icorprofilerinfo2getrvastaticaddress-method"></a>ICorProfilerInfo2::GetRVAStaticAddress 메서드
-Gets the address of the specified relative virtual address (RVA) static field.  
+지정 된 RVA (상대 가상 주소) 정적 필드의 주소를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,22 +36,22 @@ HRESULT GetRVAStaticAddress(
   
 ## <a name="parameters"></a>매개 변수  
  `classId`  
- [in] The ID of the class that contains the requested RVA-static field.  
+ 진행 요청 된 RVA 정적 필드를 포함 하는 클래스의 ID입니다.  
   
  `fieldToken`  
- [in] Metadata token for the requested RVA-static field.  
+ 진행 요청 된 RVA-정적 필드에 대 한 메타 데이터 토큰입니다.  
   
  `ppAddress`  
- [out] A pointer to the address of the RVA-static field.  
+ 제한이 RVA 정적 필드의 주소에 대 한 포인터입니다.  
   
 ## <a name="remarks"></a>주의  
- The `GetRVAStaticAddress` method may return one of the following:  
+ `GetRVAStaticAddress` 메서드는 다음 중 하나를 반환할 수 있습니다.  
   
-- A CORPROF_E_DATAINCOMPLETE HRESULT if the given static field has not been assigned an address in the specified context.  
+- 지정 된 컨텍스트에서 지정 된 정적 필드에 주소가 할당 되지 않은 경우 HRESULT CORPROF_E_DATAINCOMPLETE입니다.  
   
-- The addresses of objects that may be in the garbage collection heap. These addresses may become invalid after garbage collection, so after garbage collection, profilers should not assume that they are valid.  
+- 가비지 컬렉션 힙에 있을 수 있는 개체의 주소입니다. 이러한 주소는 가비지 수집 후에 무효화 될 수 있으므로 가비지 수집 후 프로파일러는 이러한 주소를 유효한 것으로 가정 하지 않아야 합니다.  
   
- Before a class’s class constructor is completed, `GetRVAStaticAddress` will return CORPROF_E_DATAINCOMPLETE for all its static fields, although some of the static fields may already be initialized and may be rooting garbage collection objects.  
+ 클래스의 클래스 생성자가 완료 되기 전에는 정적 필드 중 일부가 이미 초기화 되 고 가비지 컬렉션 개체를 루 팅 하 고 있을 수 있지만 `GetRVAStaticAddress`은 모든 정적 필드에 대 한 CORPROF_E_DATAINCOMPLETE를 반환 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
@@ -62,7 +62,7 @@ HRESULT GetRVAStaticAddress(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerInfo 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
 - [ICorProfilerInfo2 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
