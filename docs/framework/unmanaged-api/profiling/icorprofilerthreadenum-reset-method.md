@@ -22,25 +22,25 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447592"
 ---
-# <a name="icorprofilerthreadenumreset-method"></a><span data-ttu-id="f651f-102">ICorProfilerThreadEnum::Reset 메서드</span><span class="sxs-lookup"><span data-stu-id="f651f-102">ICorProfilerThreadEnum::Reset Method</span></span>
-<span data-ttu-id="f651f-103">열거자의 커서를 시퀀스의 시작 위치로 이동합니다.</span><span class="sxs-lookup"><span data-stu-id="f651f-103">Moves the enumerator's cursor to the starting position of the sequence.</span></span>  
+# <a name="icorprofilerthreadenumreset-method"></a><span data-ttu-id="c8eb6-102">ICorProfilerThreadEnum::Reset 메서드</span><span class="sxs-lookup"><span data-stu-id="c8eb6-102">ICorProfilerThreadEnum::Reset Method</span></span>
+<span data-ttu-id="c8eb6-103">열거자의 커서를 시퀀스의 시작 위치로 이동합니다.</span><span class="sxs-lookup"><span data-stu-id="c8eb6-103">Moves the enumerator's cursor to the starting position of the sequence.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f651f-104">구문</span><span class="sxs-lookup"><span data-stu-id="f651f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c8eb6-104">구문</span><span class="sxs-lookup"><span data-stu-id="c8eb6-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT Reset();  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="f651f-105">요구 사항</span><span class="sxs-lookup"><span data-stu-id="f651f-105">Requirements</span></span>  
- <span data-ttu-id="f651f-106">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="f651f-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c8eb6-105">요구 사항</span><span class="sxs-lookup"><span data-stu-id="c8eb6-105">Requirements</span></span>  
+ <span data-ttu-id="c8eb6-106">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="c8eb6-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f651f-107">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="f651f-107">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="c8eb6-107">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="c8eb6-107">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="f651f-108">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f651f-108">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c8eb6-108">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c8eb6-108">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="f651f-109">**.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f651f-109">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="c8eb6-109">**.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c8eb6-109">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f651f-110">참조</span><span class="sxs-lookup"><span data-stu-id="f651f-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c8eb6-110">참고 항목</span><span class="sxs-lookup"><span data-stu-id="c8eb6-110">See also</span></span>
 
-- [<span data-ttu-id="f651f-111">ICorProfilerThreadEnum 인터페이스</span><span class="sxs-lookup"><span data-stu-id="f651f-111">ICorProfilerThreadEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md)
-- [<span data-ttu-id="f651f-112">프로파일링 인터페이스</span><span class="sxs-lookup"><span data-stu-id="f651f-112">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [<span data-ttu-id="c8eb6-111">ICorProfilerThreadEnum 인터페이스</span><span class="sxs-lookup"><span data-stu-id="c8eb6-111">ICorProfilerThreadEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md)
+- [<span data-ttu-id="c8eb6-112">프로파일링 인터페이스</span><span class="sxs-lookup"><span data-stu-id="c8eb6-112">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

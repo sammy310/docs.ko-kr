@@ -22,10 +22,10 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439562"
 ---
-# <a name="icorprofilercallback2threadnamechanged-method"></a><span data-ttu-id="ac6f9-102">ICorProfilerCallback2::ThreadNameChanged 메서드</span><span class="sxs-lookup"><span data-stu-id="ac6f9-102">ICorProfilerCallback2::ThreadNameChanged Method</span></span>
-<span data-ttu-id="ac6f9-103">Notifies the code profiler that the name of a thread has changed.</span><span class="sxs-lookup"><span data-stu-id="ac6f9-103">Notifies the code profiler that the name of a thread has changed.</span></span>  
+# <a name="icorprofilercallback2threadnamechanged-method"></a><span data-ttu-id="08d54-102">ICorProfilerCallback2::ThreadNameChanged 메서드</span><span class="sxs-lookup"><span data-stu-id="08d54-102">ICorProfilerCallback2::ThreadNameChanged Method</span></span>
+<span data-ttu-id="08d54-103">스레드의 이름이 변경 되었음을 코드 프로파일러에 알립니다.</span><span class="sxs-lookup"><span data-stu-id="08d54-103">Notifies the code profiler that the name of a thread has changed.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ac6f9-104">구문</span><span class="sxs-lookup"><span data-stu-id="ac6f9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="08d54-104">구문</span><span class="sxs-lookup"><span data-stu-id="08d54-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT ThreadNameChanged(  
@@ -34,26 +34,26 @@ HRESULT ThreadNameChanged(
     [in] WCHAR name[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ac6f9-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="ac6f9-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="08d54-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="08d54-105">Parameters</span></span>  
  `threadId`  
- <span data-ttu-id="ac6f9-106">[in] The ID of the thread.</span><span class="sxs-lookup"><span data-stu-id="ac6f9-106">[in] The ID of the thread.</span></span>  
+ <span data-ttu-id="08d54-106">진행 스레드의 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="08d54-106">[in] The ID of the thread.</span></span>  
   
  `cchName`  
- <span data-ttu-id="ac6f9-107">[in] The length of the new name of the thread.</span><span class="sxs-lookup"><span data-stu-id="ac6f9-107">[in] The length of the new name of the thread.</span></span>  
+ <span data-ttu-id="08d54-107">진행 스레드의 새 이름 길이입니다.</span><span class="sxs-lookup"><span data-stu-id="08d54-107">[in] The length of the new name of the thread.</span></span>  
   
  `name`  
- <span data-ttu-id="ac6f9-108">[in] The new name of the thread.</span><span class="sxs-lookup"><span data-stu-id="ac6f9-108">[in] The new name of the thread.</span></span> <span data-ttu-id="ac6f9-109">The name is not null-terminated.</span><span class="sxs-lookup"><span data-stu-id="ac6f9-109">The name is not null-terminated.</span></span>  
+ <span data-ttu-id="08d54-108">진행 스레드의 새 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="08d54-108">[in] The new name of the thread.</span></span> <span data-ttu-id="08d54-109">이름이 null로 종료 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="08d54-109">The name is not null-terminated.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ac6f9-110">요구 사항</span><span class="sxs-lookup"><span data-stu-id="ac6f9-110">Requirements</span></span>  
- <span data-ttu-id="ac6f9-111">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="ac6f9-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="08d54-110">요구 사항</span><span class="sxs-lookup"><span data-stu-id="08d54-110">Requirements</span></span>  
+ <span data-ttu-id="08d54-111">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="08d54-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ac6f9-112">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="ac6f9-112">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="08d54-112">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="08d54-112">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="ac6f9-113">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ac6f9-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="08d54-113">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="08d54-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="ac6f9-114">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ac6f9-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="08d54-114">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="08d54-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ac6f9-115">참조</span><span class="sxs-lookup"><span data-stu-id="ac6f9-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="08d54-115">참고 항목</span><span class="sxs-lookup"><span data-stu-id="08d54-115">See also</span></span>
 
-- [<span data-ttu-id="ac6f9-116">ICorProfilerCallback 인터페이스</span><span class="sxs-lookup"><span data-stu-id="ac6f9-116">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [<span data-ttu-id="ac6f9-117">ICorProfilerCallback2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="ac6f9-117">ICorProfilerCallback2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)
+- [<span data-ttu-id="08d54-116">ICorProfilerCallback 인터페이스</span><span class="sxs-lookup"><span data-stu-id="08d54-116">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="08d54-117">ICorProfilerCallback2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="08d54-117">ICorProfilerCallback2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)

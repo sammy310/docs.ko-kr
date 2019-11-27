@@ -22,10 +22,10 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438322"
 ---
-# <a name="isymunmanagedwriter2defineconstant2-method"></a><span data-ttu-id="5f5fd-102">ISymUnmanagedWriter2::DefineConstant2 메서드</span><span class="sxs-lookup"><span data-stu-id="5f5fd-102">ISymUnmanagedWriter2::DefineConstant2 Method</span></span>
-<span data-ttu-id="5f5fd-103">Defines a name for a constant value.</span><span class="sxs-lookup"><span data-stu-id="5f5fd-103">Defines a name for a constant value.</span></span>  
+# <a name="isymunmanagedwriter2defineconstant2-method"></a><span data-ttu-id="4b676-102">ISymUnmanagedWriter2::DefineConstant2 메서드</span><span class="sxs-lookup"><span data-stu-id="4b676-102">ISymUnmanagedWriter2::DefineConstant2 Method</span></span>
+<span data-ttu-id="4b676-103">상수 값의 이름을 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="4b676-103">Defines a name for a constant value.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5f5fd-104">구문</span><span class="sxs-lookup"><span data-stu-id="5f5fd-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4b676-104">구문</span><span class="sxs-lookup"><span data-stu-id="4b676-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT DefineConstant2(  
@@ -34,23 +34,23 @@ HRESULT DefineConstant2(
     [in] mdSignature  sigToken);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="5f5fd-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="5f5fd-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="4b676-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="4b676-105">Parameters</span></span>  
  `name`  
- <span data-ttu-id="5f5fd-106">[in] The constant name.</span><span class="sxs-lookup"><span data-stu-id="5f5fd-106">[in] The constant name.</span></span>  
+ <span data-ttu-id="4b676-106">진행 상수 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="4b676-106">[in] The constant name.</span></span>  
   
  `value`  
- <span data-ttu-id="5f5fd-107">[in] The value of the constant.</span><span class="sxs-lookup"><span data-stu-id="5f5fd-107">[in] The value of the constant.</span></span>  
+ <span data-ttu-id="4b676-107">진행 상수의 값입니다.</span><span class="sxs-lookup"><span data-stu-id="4b676-107">[in] The value of the constant.</span></span>  
   
  `sigToken`  
- <span data-ttu-id="5f5fd-108">[in] The metadata token of the constant.</span><span class="sxs-lookup"><span data-stu-id="5f5fd-108">[in] The metadata token of the constant.</span></span>  
+ <span data-ttu-id="4b676-108">진행 상수의 메타 데이터 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="4b676-108">[in] The metadata token of the constant.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="5f5fd-109">반환 값</span><span class="sxs-lookup"><span data-stu-id="5f5fd-109">Return Value</span></span>  
- <span data-ttu-id="5f5fd-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="5f5fd-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="4b676-109">반환 값</span><span class="sxs-lookup"><span data-stu-id="4b676-109">Return Value</span></span>  
+ <span data-ttu-id="4b676-110">메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="4b676-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5f5fd-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="5f5fd-111">Requirements</span></span>  
- <span data-ttu-id="5f5fd-112">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="5f5fd-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4b676-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="4b676-111">Requirements</span></span>  
+ <span data-ttu-id="4b676-112">**헤더:** CorSym, CorSym</span><span class="sxs-lookup"><span data-stu-id="4b676-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5f5fd-113">참조</span><span class="sxs-lookup"><span data-stu-id="5f5fd-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4b676-113">참고 항목</span><span class="sxs-lookup"><span data-stu-id="4b676-113">See also</span></span>
 
-- [<span data-ttu-id="5f5fd-114">ISymUnmanagedWriter2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="5f5fd-114">ISymUnmanagedWriter2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-interface.md)
-- [<span data-ttu-id="5f5fd-115">DefineConstant 메서드</span><span class="sxs-lookup"><span data-stu-id="5f5fd-115">DefineConstant Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-defineconstant-method.md)
+- [<span data-ttu-id="4b676-114">ISymUnmanagedWriter2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="4b676-114">ISymUnmanagedWriter2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-interface.md)
+- [<span data-ttu-id="4b676-115">DefineConstant 메서드</span><span class="sxs-lookup"><span data-stu-id="4b676-115">DefineConstant Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-defineconstant-method.md)

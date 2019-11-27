@@ -1,5 +1,5 @@
 ---
-title: Disk full
+title: 디스크가 꽉 참
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID61
@@ -11,13 +11,13 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351107"
 ---
-# <a name="disk-full-visual-basic"></a><span data-ttu-id="1f066-102">디스크가 꽉 찼습니다(Visual Basic).</span><span class="sxs-lookup"><span data-stu-id="1f066-102">Disk full (Visual Basic)</span></span>
-<span data-ttu-id="1f066-103">디스크에 `Print`, `Write`또는 `FileClose` 작업을 완료하거나 필요한 파일을 만들기에 충분한 공간이 없습니다.</span><span class="sxs-lookup"><span data-stu-id="1f066-103">There is not enough room on the disk to either complete a `Print`, `Write`, or `FileClose` operation, or to create required files.</span></span>  
+# <a name="disk-full-visual-basic"></a><span data-ttu-id="9a67a-102">디스크가 꽉 찼습니다(Visual Basic).</span><span class="sxs-lookup"><span data-stu-id="9a67a-102">Disk full (Visual Basic)</span></span>
+<span data-ttu-id="9a67a-103">디스크에 `Print`, `Write`또는 `FileClose` 작업을 완료하거나 필요한 파일을 만들기에 충분한 공간이 없습니다.</span><span class="sxs-lookup"><span data-stu-id="9a67a-103">There is not enough room on the disk to either complete a `Print`, `Write`, or `FileClose` operation, or to create required files.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="1f066-104">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="1f066-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="9a67a-104">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="9a67a-104">To correct this error</span></span>  
   
-- <span data-ttu-id="1f066-105">일부 파일을 다른 디스크로 이동하거나 일부 파일을 삭제하여 디스크에 더 많은 공간을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="1f066-105">Create more room on the disk by either moving some files to another disk or deleting some files.</span></span>  
+- <span data-ttu-id="9a67a-105">일부 파일을 다른 디스크로 이동하거나 일부 파일을 삭제하여 디스크에 더 많은 공간을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="9a67a-105">Create more room on the disk by either moving some files to another disk or deleting some files.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1f066-106">참조</span><span class="sxs-lookup"><span data-stu-id="1f066-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9a67a-106">참고 항목</span><span class="sxs-lookup"><span data-stu-id="9a67a-106">See also</span></span>
 
-- [<span data-ttu-id="1f066-107">오류 형식</span><span class="sxs-lookup"><span data-stu-id="1f066-107">Error Types</span></span>](../../visual-basic/programming-guide/language-features/error-types.md)
+- [<span data-ttu-id="9a67a-107">오류 형식</span><span class="sxs-lookup"><span data-stu-id="9a67a-107">Error Types</span></span>](../../visual-basic/programming-guide/language-features/error-types.md)

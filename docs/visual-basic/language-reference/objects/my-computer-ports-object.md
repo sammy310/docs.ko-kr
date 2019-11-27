@@ -12,24 +12,24 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74332018"
 ---
-# <a name="mycomputerports-object"></a><span data-ttu-id="b826b-102">My.Computer.Ports 개체</span><span class="sxs-lookup"><span data-stu-id="b826b-102">My.Computer.Ports Object</span></span>
-<span data-ttu-id="b826b-103">컴퓨터의 직렬 포트에 액세스하기 위한 속성 및 메서드를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="b826b-103">Provides a property and a method for accessing the computer's serial ports.</span></span>  
+# <a name="mycomputerports-object"></a><span data-ttu-id="cfdd3-102">My.Computer.Ports 개체</span><span class="sxs-lookup"><span data-stu-id="cfdd3-102">My.Computer.Ports Object</span></span>
+<span data-ttu-id="cfdd3-103">컴퓨터의 직렬 포트에 액세스하기 위한 속성 및 메서드를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="cfdd3-103">Provides a property and a method for accessing the computer's serial ports.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="b826b-104">주의</span><span class="sxs-lookup"><span data-stu-id="b826b-104">Remarks</span></span>  
- <span data-ttu-id="b826b-105">`My.Computer.Ports` 개체의 메서드 및 속성에 대한 자세한 내용은 <xref:Microsoft.VisualBasic.Devices.Ports>를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="b826b-105">For information about the methods and properties of the `My.Computer.Ports` object, see <xref:Microsoft.VisualBasic.Devices.Ports>.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="cfdd3-104">주의</span><span class="sxs-lookup"><span data-stu-id="cfdd3-104">Remarks</span></span>  
+ <span data-ttu-id="cfdd3-105">`My.Computer.Ports` 개체의 메서드 및 속성에 대한 자세한 내용은 <xref:Microsoft.VisualBasic.Devices.Ports>를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="cfdd3-105">For information about the methods and properties of the `My.Computer.Ports` object, see <xref:Microsoft.VisualBasic.Devices.Ports>.</span></span>  
   
- <span data-ttu-id="b826b-106">For more information, see [Accessing the Computer's Ports](../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-computer-s-ports.md).</span><span class="sxs-lookup"><span data-stu-id="b826b-106">For more information, see [Accessing the Computer's Ports](../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-computer-s-ports.md).</span></span>  
+ <span data-ttu-id="cfdd3-106">자세한 내용은 [컴퓨터의 포트에 액세스](../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-computer-s-ports.md)를 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="cfdd3-106">For more information, see [Accessing the Computer's Ports](../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-computer-s-ports.md).</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="b826b-107">You can also use properties and methods of the <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType> class to access the computer's serial ports.</span><span class="sxs-lookup"><span data-stu-id="b826b-107">You can also use properties and methods of the <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType> class to access the computer's serial ports.</span></span>  
+> <span data-ttu-id="cfdd3-107">또한 <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType> 클래스의 속성 및 메서드를 사용 하 여 컴퓨터의 직렬 포트에 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cfdd3-107">You can also use properties and methods of the <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType> class to access the computer's serial ports.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b826b-108">요구 사항</span><span class="sxs-lookup"><span data-stu-id="b826b-108">Requirements</span></span>  
- <span data-ttu-id="b826b-109">**네임스페이스:** <xref:Microsoft.VisualBasic.Devices></span><span class="sxs-lookup"><span data-stu-id="b826b-109">**Namespace:** <xref:Microsoft.VisualBasic.Devices></span></span>  
+## <a name="requirements"></a><span data-ttu-id="cfdd3-108">요구 사항</span><span class="sxs-lookup"><span data-stu-id="cfdd3-108">Requirements</span></span>  
+ <span data-ttu-id="cfdd3-109">**네임스페이스:** <xref:Microsoft.VisualBasic.Devices></span><span class="sxs-lookup"><span data-stu-id="cfdd3-109">**Namespace:** <xref:Microsoft.VisualBasic.Devices></span></span>  
   
- <span data-ttu-id="b826b-110">**클래스:** <xref:Microsoft.VisualBasic.Devices.Ports></span><span class="sxs-lookup"><span data-stu-id="b826b-110">**Class:** <xref:Microsoft.VisualBasic.Devices.Ports></span></span>  
+ <span data-ttu-id="cfdd3-110">**클래스:** <xref:Microsoft.VisualBasic.Devices.Ports></span><span class="sxs-lookup"><span data-stu-id="cfdd3-110">**Class:** <xref:Microsoft.VisualBasic.Devices.Ports></span></span>  
   
- <span data-ttu-id="b826b-111">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span><span class="sxs-lookup"><span data-stu-id="b826b-111">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span></span>  
+ <span data-ttu-id="cfdd3-111">**어셈블리:** Visual Basic 런타임 라이브러리 (Microsoft.visualbasic)</span><span class="sxs-lookup"><span data-stu-id="cfdd3-111">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b826b-112">참조</span><span class="sxs-lookup"><span data-stu-id="b826b-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cfdd3-112">참고 항목</span><span class="sxs-lookup"><span data-stu-id="cfdd3-112">See also</span></span>
 
-- [<span data-ttu-id="b826b-113">My.Computer 개체</span><span class="sxs-lookup"><span data-stu-id="b826b-113">My.Computer Object</span></span>](../../../visual-basic/language-reference/objects/my-computer-object.md)
+- [<span data-ttu-id="cfdd3-113">My.Computer 개체</span><span class="sxs-lookup"><span data-stu-id="cfdd3-113">My.Computer Object</span></span>](../../../visual-basic/language-reference/objects/my-computer-object.md)

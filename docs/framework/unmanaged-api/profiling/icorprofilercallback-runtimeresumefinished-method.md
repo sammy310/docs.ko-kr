@@ -22,27 +22,27 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74430318"
 ---
-# <a name="icorprofilercallbackruntimeresumefinished-method"></a><span data-ttu-id="17c15-102">ICorProfilerCallback::RuntimeResumeFinished 메서드</span><span class="sxs-lookup"><span data-stu-id="17c15-102">ICorProfilerCallback::RuntimeResumeFinished Method</span></span>
-<span data-ttu-id="17c15-103">Notifies the profiler that the runtime has resumed all runtime threads and has returned to normal operation.</span><span class="sxs-lookup"><span data-stu-id="17c15-103">Notifies the profiler that the runtime has resumed all runtime threads and has returned to normal operation.</span></span>  
+# <a name="icorprofilercallbackruntimeresumefinished-method"></a><span data-ttu-id="3df6d-102">ICorProfilerCallback::RuntimeResumeFinished 메서드</span><span class="sxs-lookup"><span data-stu-id="3df6d-102">ICorProfilerCallback::RuntimeResumeFinished Method</span></span>
+<span data-ttu-id="3df6d-103">런타임이 모든 런타임 스레드를 다시 시작 하 고 정상 작업으로 반환 되었음을 프로파일러에 알립니다.</span><span class="sxs-lookup"><span data-stu-id="3df6d-103">Notifies the profiler that the runtime has resumed all runtime threads and has returned to normal operation.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="17c15-104">구문</span><span class="sxs-lookup"><span data-stu-id="17c15-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3df6d-104">구문</span><span class="sxs-lookup"><span data-stu-id="3df6d-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT RuntimeResumeFinished();  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="17c15-105">주의</span><span class="sxs-lookup"><span data-stu-id="17c15-105">Remarks</span></span>  
- <span data-ttu-id="17c15-106">The `RuntimeResumeFinished` callback is not guaranteed to occur on the same thread as the [ICorProfilerCallback::RuntimeSuspendStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendstarted-method.md) callback.</span><span class="sxs-lookup"><span data-stu-id="17c15-106">The `RuntimeResumeFinished` callback is not guaranteed to occur on the same thread as the [ICorProfilerCallback::RuntimeSuspendStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendstarted-method.md) callback.</span></span> <span data-ttu-id="17c15-107">However, it is guaranteed to occur on the same thread as the [ICorProfilerCallback::RuntimeResumeStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimeresumestarted-method.md) callback.</span><span class="sxs-lookup"><span data-stu-id="17c15-107">However, it is guaranteed to occur on the same thread as the [ICorProfilerCallback::RuntimeResumeStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimeresumestarted-method.md) callback.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="3df6d-105">주의</span><span class="sxs-lookup"><span data-stu-id="3df6d-105">Remarks</span></span>  
+ <span data-ttu-id="3df6d-106">`RuntimeResumeFinished` 콜백은 [ICorProfilerCallback:: RuntimeSuspendStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendstarted-method.md) 콜백과 동일한 스레드에서 수행 되는 것이 보장 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="3df6d-106">The `RuntimeResumeFinished` callback is not guaranteed to occur on the same thread as the [ICorProfilerCallback::RuntimeSuspendStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendstarted-method.md) callback.</span></span> <span data-ttu-id="3df6d-107">그러나 [ICorProfilerCallback:: Run Esumestarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimeresumestarted-method.md) 콜백과 동일한 스레드에서 발생 합니다.</span><span class="sxs-lookup"><span data-stu-id="3df6d-107">However, it is guaranteed to occur on the same thread as the [ICorProfilerCallback::RuntimeResumeStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimeresumestarted-method.md) callback.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="17c15-108">요구 사항</span><span class="sxs-lookup"><span data-stu-id="17c15-108">Requirements</span></span>  
- <span data-ttu-id="17c15-109">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="17c15-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3df6d-108">요구 사항</span><span class="sxs-lookup"><span data-stu-id="3df6d-108">Requirements</span></span>  
+ <span data-ttu-id="3df6d-109">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="3df6d-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="17c15-110">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="17c15-110">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="3df6d-110">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="3df6d-110">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="17c15-111">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="17c15-111">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="3df6d-111">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3df6d-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="17c15-112">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="17c15-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="3df6d-112">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3df6d-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="17c15-113">참조</span><span class="sxs-lookup"><span data-stu-id="17c15-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3df6d-113">참고 항목</span><span class="sxs-lookup"><span data-stu-id="3df6d-113">See also</span></span>
 
-- [<span data-ttu-id="17c15-114">ICorProfilerCallback 인터페이스</span><span class="sxs-lookup"><span data-stu-id="17c15-114">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="3df6d-114">ICorProfilerCallback 인터페이스</span><span class="sxs-lookup"><span data-stu-id="3df6d-114">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

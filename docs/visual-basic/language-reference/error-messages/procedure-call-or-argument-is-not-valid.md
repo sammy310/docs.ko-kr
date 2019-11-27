@@ -11,13 +11,13 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346988"
 ---
-# <a name="procedure-call-or-argument-is-not-valid-visual-basic"></a><span data-ttu-id="b70b9-102">프로시저 호출 또는 인수가 잘못되었습니다(Visual Basic).</span><span class="sxs-lookup"><span data-stu-id="b70b9-102">Procedure call or argument is not valid (Visual Basic)</span></span>
-<span data-ttu-id="b70b9-103">Some part of the call cannot be completed.</span><span class="sxs-lookup"><span data-stu-id="b70b9-103">Some part of the call cannot be completed.</span></span>  
+# <a name="procedure-call-or-argument-is-not-valid-visual-basic"></a><span data-ttu-id="a5daa-102">프로시저 호출 또는 인수가 잘못되었습니다(Visual Basic).</span><span class="sxs-lookup"><span data-stu-id="a5daa-102">Procedure call or argument is not valid (Visual Basic)</span></span>
+<span data-ttu-id="a5daa-103">호출의 일부를 완료할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="a5daa-103">Some part of the call cannot be completed.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="b70b9-104">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="b70b9-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="a5daa-104">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="a5daa-104">To correct this error</span></span>  
   
-- <span data-ttu-id="b70b9-105">Check the permitted ranges for arguments to make sure no arrangement exceeds the permitted values.</span><span class="sxs-lookup"><span data-stu-id="b70b9-105">Check the permitted ranges for arguments to make sure no arrangement exceeds the permitted values.</span></span>  
+- <span data-ttu-id="a5daa-105">허용 되는 값을 초과 하는 배열이 없는지 확인 하려면 인수에 대해 허용 되는 범위를 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="a5daa-105">Check the permitted ranges for arguments to make sure no arrangement exceeds the permitted values.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b70b9-106">참조</span><span class="sxs-lookup"><span data-stu-id="b70b9-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a5daa-106">참고 항목</span><span class="sxs-lookup"><span data-stu-id="a5daa-106">See also</span></span>
 
-- [<span data-ttu-id="b70b9-107">오류 형식</span><span class="sxs-lookup"><span data-stu-id="b70b9-107">Error Types</span></span>](../../../visual-basic/programming-guide/language-features/error-types.md)
+- [<span data-ttu-id="a5daa-107">오류 형식</span><span class="sxs-lookup"><span data-stu-id="a5daa-107">Error Types</span></span>](../../../visual-basic/programming-guide/language-features/error-types.md)

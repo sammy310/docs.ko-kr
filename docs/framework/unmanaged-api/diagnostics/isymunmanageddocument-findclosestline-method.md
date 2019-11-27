@@ -22,10 +22,10 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449220"
 ---
-# <a name="isymunmanageddocumentfindclosestline-method"></a><span data-ttu-id="86463-102">ISymUnmanagedDocument::FindClosestLine 메서드</span><span class="sxs-lookup"><span data-stu-id="86463-102">ISymUnmanagedDocument::FindClosestLine Method</span></span>
-<span data-ttu-id="86463-103">Returns the closest line that is a sequence point, given a line in this document that may or may not be a sequence point.</span><span class="sxs-lookup"><span data-stu-id="86463-103">Returns the closest line that is a sequence point, given a line in this document that may or may not be a sequence point.</span></span>  
+# <a name="isymunmanageddocumentfindclosestline-method"></a><span data-ttu-id="d412f-102">ISymUnmanagedDocument::FindClosestLine 메서드</span><span class="sxs-lookup"><span data-stu-id="d412f-102">ISymUnmanagedDocument::FindClosestLine Method</span></span>
+<span data-ttu-id="d412f-103">이 문서에서 시퀀스 위치가 될 수도 있고 그렇지 않을 수도 있는 줄을 지정 하 여 시퀀스 위치인 가장 가까운 줄을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="d412f-103">Returns the closest line that is a sequence point, given a line in this document that may or may not be a sequence point.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="86463-104">구문</span><span class="sxs-lookup"><span data-stu-id="86463-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d412f-104">구문</span><span class="sxs-lookup"><span data-stu-id="d412f-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT FindClosestLine(  
@@ -33,16 +33,16 @@ HRESULT FindClosestLine(
     [out, retval] ULONG32*  pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="86463-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="86463-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d412f-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="d412f-105">Parameters</span></span>  
  `line`  
- <span data-ttu-id="86463-106">[in] A line in this document.</span><span class="sxs-lookup"><span data-stu-id="86463-106">[in] A line in this document.</span></span>  
+ <span data-ttu-id="d412f-106">진행 이 문서의 한 줄입니다.</span><span class="sxs-lookup"><span data-stu-id="d412f-106">[in] A line in this document.</span></span>  
   
  `pRetVal`  
- <span data-ttu-id="86463-107">[out] A pointer to a variable that receives the line.</span><span class="sxs-lookup"><span data-stu-id="86463-107">[out] A pointer to a variable that receives the line.</span></span>  
+ <span data-ttu-id="d412f-107">제한이 줄을 받는 변수에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="d412f-107">[out] A pointer to a variable that receives the line.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="86463-108">반환 값</span><span class="sxs-lookup"><span data-stu-id="86463-108">Return Value</span></span>  
- <span data-ttu-id="86463-109">S_OK if the method succeeds; otherwise, an error code.</span><span class="sxs-lookup"><span data-stu-id="86463-109">S_OK if the method succeeds; otherwise, an error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="d412f-108">반환 값</span><span class="sxs-lookup"><span data-stu-id="d412f-108">Return Value</span></span>  
+ <span data-ttu-id="d412f-109">메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 오류 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="d412f-109">S_OK if the method succeeds; otherwise, an error code.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="86463-110">참조</span><span class="sxs-lookup"><span data-stu-id="86463-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d412f-110">참고 항목</span><span class="sxs-lookup"><span data-stu-id="d412f-110">See also</span></span>
 
-- [<span data-ttu-id="86463-111">ISymUnmanagedDocument 인터페이스</span><span class="sxs-lookup"><span data-stu-id="86463-111">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+- [<span data-ttu-id="d412f-111">ISymUnmanagedDocument 인터페이스</span><span class="sxs-lookup"><span data-stu-id="d412f-111">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

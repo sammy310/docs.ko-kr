@@ -9,22 +9,22 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74204576"
 ---
-# <a name="service-security-validation-and-authentication-failures"></a><span data-ttu-id="d65af-102">서비스: Security Validation and Authentication Failures</span><span class="sxs-lookup"><span data-stu-id="d65af-102">Service: Security Validation and Authentication Failures</span></span>
-<span data-ttu-id="d65af-103">카운터 이름: Security Validation and Authentication Failures</span><span class="sxs-lookup"><span data-stu-id="d65af-103">Counter name: Security Validation and Authentication Failures</span></span>  
+# <a name="service-security-validation-and-authentication-failures"></a><span data-ttu-id="2d9de-102">서비스: Security Validation and Authentication Failures</span><span class="sxs-lookup"><span data-stu-id="2d9de-102">Service: Security Validation and Authentication Failures</span></span>
+<span data-ttu-id="2d9de-103">카운터 이름: Security Validation and Authentication Failures</span><span class="sxs-lookup"><span data-stu-id="2d9de-103">Counter name: Security Validation and Authentication Failures</span></span>  
   
-## <a name="description"></a><span data-ttu-id="d65af-104">설명</span><span class="sxs-lookup"><span data-stu-id="d65af-104">Description</span></span>  
- <span data-ttu-id="d65af-105">이 카운터는 "Security Calls Not Authorized" 카운터로 처리되지 않는 보안 문제 때문에 메시지가 거부될 때마다 증가합니다.</span><span class="sxs-lookup"><span data-stu-id="d65af-105">This counter is incremented whenever a message is rejected due to a security problem not covered by the "Security Calls Not Authorized" counter.</span></span> <span data-ttu-id="d65af-106">이러한 문제는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="d65af-106">Such problems include:</span></span>  
+## <a name="description"></a><span data-ttu-id="2d9de-104">설명</span><span class="sxs-lookup"><span data-stu-id="2d9de-104">Description</span></span>  
+ <span data-ttu-id="2d9de-105">이 카운터는 "Security Calls Not Authorized" 카운터로 처리되지 않는 보안 문제 때문에 메시지가 거부될 때마다 증가합니다.</span><span class="sxs-lookup"><span data-stu-id="2d9de-105">This counter is incremented whenever a message is rejected due to a security problem not covered by the "Security Calls Not Authorized" counter.</span></span> <span data-ttu-id="2d9de-106">이러한 문제는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="2d9de-106">Such problems include:</span></span>  
   
-- <span data-ttu-id="d65af-107">클라이언트 토큰을 메시지에서 읽을 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="d65af-107">Client token cannot be read from the message.</span></span>  
+- <span data-ttu-id="2d9de-107">클라이언트 토큰을 메시지에서 읽을 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="2d9de-107">Client token cannot be read from the message.</span></span>  
   
-- <span data-ttu-id="d65af-108">클라이언트 토큰에서 인증에 실패했습니다(예: 잘못된 암호).</span><span class="sxs-lookup"><span data-stu-id="d65af-108">Client token has failed authentication (for example, bad password).</span></span>  
+- <span data-ttu-id="2d9de-108">클라이언트 토큰에서 인증에 실패했습니다(예: 잘못된 암호).</span><span class="sxs-lookup"><span data-stu-id="2d9de-108">Client token has failed authentication (for example, bad password).</span></span>  
   
-- <span data-ttu-id="d65af-109">서명 확인에 실패했습니다(예: 메시지 변조).</span><span class="sxs-lookup"><span data-stu-id="d65af-109">Signature verification has failed (for example, the message has been tampered).</span></span>  
+- <span data-ttu-id="2d9de-109">서명 확인에 실패했습니다(예: 메시지 변조).</span><span class="sxs-lookup"><span data-stu-id="2d9de-109">Signature verification has failed (for example, the message has been tampered).</span></span>  
   
-- <span data-ttu-id="d65af-110">메시지가 이전 메시지와 중복됩니다. 이러한 현상은 재생 공격 중에 나타날 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d65af-110">The message is a duplicate from a previous one, which can happen during a replay attack.</span></span>  
+- <span data-ttu-id="2d9de-110">메시지가 이전 메시지와 중복됩니다. 이러한 현상은 재생 공격 중에 나타날 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2d9de-110">The message is a duplicate from a previous one, which can happen during a replay attack.</span></span>  
   
-- <span data-ttu-id="d65af-111">해독 오류가 발생했습니다.</span><span class="sxs-lookup"><span data-stu-id="d65af-111">A decryption failure has occurred.</span></span>  
+- <span data-ttu-id="2d9de-111">해독 오류가 발생했습니다.</span><span class="sxs-lookup"><span data-stu-id="2d9de-111">A decryption failure has occurred.</span></span>  
   
-- <span data-ttu-id="d65af-112">일부 필수 요소(예: 타임스탬프 또는 암호화된 데이터 블록)가 메시지에 없습니다.</span><span class="sxs-lookup"><span data-stu-id="d65af-112">Some required elements (for example, missing timestamp or encrypted data block) are missing from the message.</span></span>  
+- <span data-ttu-id="2d9de-112">일부 필수 요소(예: 타임스탬프 또는 암호화된 데이터 블록)가 메시지에 없습니다.</span><span class="sxs-lookup"><span data-stu-id="2d9de-112">Some required elements (for example, missing timestamp or encrypted data block) are missing from the message.</span></span>  
   
-- <span data-ttu-id="d65af-113">TLSNEGO/SPNEGO 핸드셰이크 중에 오류가 발생했습니다.</span><span class="sxs-lookup"><span data-stu-id="d65af-113">Errors have occurred during TLSNEGO/SPNEGO handshake.</span></span>
+- <span data-ttu-id="2d9de-113">TLSNEGO/SPNEGO 핸드셰이크 중에 오류가 발생했습니다.</span><span class="sxs-lookup"><span data-stu-id="2d9de-113">Errors have occurred during TLSNEGO/SPNEGO handshake.</span></span>

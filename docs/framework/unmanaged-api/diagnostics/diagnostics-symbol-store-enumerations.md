@@ -14,25 +14,25 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448546"
 ---
-# <a name="diagnostics-symbol-store-enumerations"></a><span data-ttu-id="73368-102">진단 기호 저장소 열거형</span><span class="sxs-lookup"><span data-stu-id="73368-102">Diagnostics Symbol Store Enumerations</span></span>
-<span data-ttu-id="73368-103">This topic describes the unmanaged enumerations that the diagnostics symbol store API uses.</span><span class="sxs-lookup"><span data-stu-id="73368-103">This topic describes the unmanaged enumerations that the diagnostics symbol store API uses.</span></span>  
+# <a name="diagnostics-symbol-store-enumerations"></a><span data-ttu-id="45383-102">진단 기호 저장소 열거형</span><span class="sxs-lookup"><span data-stu-id="45383-102">Diagnostics Symbol Store Enumerations</span></span>
+<span data-ttu-id="45383-103">이 항목에서는 진단 기호 저장소 API에서 사용 하는 관리 되지 않는 열거형에 대해 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="45383-103">This topic describes the unmanaged enumerations that the diagnostics symbol store API uses.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="73368-104">단원 내용</span><span class="sxs-lookup"><span data-stu-id="73368-104">In This Section</span></span>  
- [<span data-ttu-id="73368-105">CorSymAddrKind 열거형</span><span class="sxs-lookup"><span data-stu-id="73368-105">CorSymAddrKind Enumeration</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/corsymaddrkind-enumeration.md)  
- <span data-ttu-id="73368-106">Indicates the type of memory address.</span><span class="sxs-lookup"><span data-stu-id="73368-106">Indicates the type of memory address.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="45383-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="45383-104">In This Section</span></span>  
+ [<span data-ttu-id="45383-105">CorSymAddrKind 열거형</span><span class="sxs-lookup"><span data-stu-id="45383-105">CorSymAddrKind Enumeration</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/corsymaddrkind-enumeration.md)  
+ <span data-ttu-id="45383-106">메모리 주소의 유형을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="45383-106">Indicates the type of memory address.</span></span>  
   
- [<span data-ttu-id="73368-107">CorSymSearchPolicyAttributes 열거형</span><span class="sxs-lookup"><span data-stu-id="73368-107">CorSymSearchPolicyAttributes Enumeration</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md)  
- <span data-ttu-id="73368-108">Specifies the policy to be used when doing a search for a symbol reader.</span><span class="sxs-lookup"><span data-stu-id="73368-108">Specifies the policy to be used when doing a search for a symbol reader.</span></span>  
+ [<span data-ttu-id="45383-107">CorSymSearchPolicyAttributes 열거형</span><span class="sxs-lookup"><span data-stu-id="45383-107">CorSymSearchPolicyAttributes Enumeration</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md)  
+ <span data-ttu-id="45383-108">기호 판독기를 검색할 때 사용할 정책을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="45383-108">Specifies the policy to be used when doing a search for a symbol reader.</span></span>  
   
- [<span data-ttu-id="73368-109">CorSymVarFlag 열거형</span><span class="sxs-lookup"><span data-stu-id="73368-109">CorSymVarFlag Enumeration</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/corsymvarflag-enumeration.md)  
- <span data-ttu-id="73368-110">Indicates whether a variable is compiler-generated.</span><span class="sxs-lookup"><span data-stu-id="73368-110">Indicates whether a variable is compiler-generated.</span></span>  
+ [<span data-ttu-id="45383-109">CorSymVarFlag 열거형</span><span class="sxs-lookup"><span data-stu-id="45383-109">CorSymVarFlag Enumeration</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/corsymvarflag-enumeration.md)  
+ <span data-ttu-id="45383-110">변수가 컴파일러에서 생성 되었는지 여부를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="45383-110">Indicates whether a variable is compiler-generated.</span></span>  
   
- [<span data-ttu-id="73368-111">NOTIFY_FILTER 열거형</span><span class="sxs-lookup"><span data-stu-id="73368-111">NOTIFY_FILTER Enumeration</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/notify-filter-enumeration.md)  
- <span data-ttu-id="73368-112">Identifies callbacks for debugger functions.</span><span class="sxs-lookup"><span data-stu-id="73368-112">Identifies callbacks for debugger functions.</span></span>  
+ [<span data-ttu-id="45383-111">NOTIFY_FILTER 열거형</span><span class="sxs-lookup"><span data-stu-id="45383-111">NOTIFY_FILTER Enumeration</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/notify-filter-enumeration.md)  
+ <span data-ttu-id="45383-112">디버거 함수의 콜백을 식별 합니다.</span><span class="sxs-lookup"><span data-stu-id="45383-112">Identifies callbacks for debugger functions.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="73368-113">관련 단원</span><span class="sxs-lookup"><span data-stu-id="73368-113">Related Sections</span></span>  
- [<span data-ttu-id="73368-114">진단 기호 저장소 인터페이스</span><span class="sxs-lookup"><span data-stu-id="73368-114">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)  
+## <a name="related-sections"></a><span data-ttu-id="45383-113">관련 섹션</span><span class="sxs-lookup"><span data-stu-id="45383-113">Related Sections</span></span>  
+ [<span data-ttu-id="45383-114">진단 기호 저장소 인터페이스</span><span class="sxs-lookup"><span data-stu-id="45383-114">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)  
   
- [<span data-ttu-id="73368-115">진단 기호 저장소 구조체</span><span class="sxs-lookup"><span data-stu-id="73368-115">Diagnostics Symbol Store Structures</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)  
+ [<span data-ttu-id="45383-115">진단 기호 저장소 구조체</span><span class="sxs-lookup"><span data-stu-id="45383-115">Diagnostics Symbol Store Structures</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)  
   
- [<span data-ttu-id="73368-116">디버깅</span><span class="sxs-lookup"><span data-stu-id="73368-116">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+ [<span data-ttu-id="45383-116">디버깅</span><span class="sxs-lookup"><span data-stu-id="45383-116">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

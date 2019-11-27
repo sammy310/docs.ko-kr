@@ -21,10 +21,10 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448555"
 ---
-# <a name="corsymvarflag-enumeration"></a><span data-ttu-id="16268-102">CorSymVarFlag 열거형</span><span class="sxs-lookup"><span data-stu-id="16268-102">CorSymVarFlag Enumeration</span></span>
-<span data-ttu-id="16268-103">Indicates whether a variable is compiler-generated.</span><span class="sxs-lookup"><span data-stu-id="16268-103">Indicates whether a variable is compiler-generated.</span></span>  
+# <a name="corsymvarflag-enumeration"></a><span data-ttu-id="ac798-102">CorSymVarFlag 열거형</span><span class="sxs-lookup"><span data-stu-id="ac798-102">CorSymVarFlag Enumeration</span></span>
+<span data-ttu-id="ac798-103">변수가 컴파일러에서 생성 되었는지 여부를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="ac798-103">Indicates whether a variable is compiler-generated.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="16268-104">구문</span><span class="sxs-lookup"><span data-stu-id="16268-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ac798-104">구문</span><span class="sxs-lookup"><span data-stu-id="ac798-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum CorSymVarFlag   
@@ -33,15 +33,15 @@ typedef enum CorSymVarFlag
 } CorSymVarFlag;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="16268-105">멤버</span><span class="sxs-lookup"><span data-stu-id="16268-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="ac798-105">멤버</span><span class="sxs-lookup"><span data-stu-id="ac798-105">Members</span></span>  
   
-|<span data-ttu-id="16268-106">멤버</span><span class="sxs-lookup"><span data-stu-id="16268-106">Member</span></span>|<span data-ttu-id="16268-107">설명</span><span class="sxs-lookup"><span data-stu-id="16268-107">Description</span></span>|  
+|<span data-ttu-id="ac798-106">멤버</span><span class="sxs-lookup"><span data-stu-id="ac798-106">Member</span></span>|<span data-ttu-id="ac798-107">설명</span><span class="sxs-lookup"><span data-stu-id="ac798-107">Description</span></span>|  
 |------------|-----------------|  
-|`VAR_IS_COMP_GEN`|<span data-ttu-id="16268-108">Indicates that the given variable is compiler-generated.</span><span class="sxs-lookup"><span data-stu-id="16268-108">Indicates that the given variable is compiler-generated.</span></span>|  
+|`VAR_IS_COMP_GEN`|<span data-ttu-id="ac798-108">지정 된 변수가 컴파일러에서 생성 되었음을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="ac798-108">Indicates that the given variable is compiler-generated.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="16268-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="16268-109">Requirements</span></span>  
- <span data-ttu-id="16268-110">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="16268-110">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ac798-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="ac798-109">Requirements</span></span>  
+ <span data-ttu-id="ac798-110">**헤더:** CorSym, CorSym</span><span class="sxs-lookup"><span data-stu-id="ac798-110">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="16268-111">참조</span><span class="sxs-lookup"><span data-stu-id="16268-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ac798-111">참고 항목</span><span class="sxs-lookup"><span data-stu-id="ac798-111">See also</span></span>
 
-- [<span data-ttu-id="16268-112">진단 기호 저장소 열거형</span><span class="sxs-lookup"><span data-stu-id="16268-112">Diagnostics Symbol Store Enumerations</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)
+- [<span data-ttu-id="ac798-112">진단 기호 저장소 열거형</span><span class="sxs-lookup"><span data-stu-id="ac798-112">Diagnostics Symbol Store Enumerations</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)

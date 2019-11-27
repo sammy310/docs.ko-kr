@@ -22,10 +22,10 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449053"
 ---
-# <a name="isymunmanageddocumentwritersetchecksum-method"></a><span data-ttu-id="c54d8-102">ISymUnmanagedDocumentWriter::SetCheckSum 메서드</span><span class="sxs-lookup"><span data-stu-id="c54d8-102">ISymUnmanagedDocumentWriter::SetCheckSum Method</span></span>
-<span data-ttu-id="c54d8-103">Sets checksum information.</span><span class="sxs-lookup"><span data-stu-id="c54d8-103">Sets checksum information.</span></span>  
+# <a name="isymunmanageddocumentwritersetchecksum-method"></a><span data-ttu-id="d8a70-102">ISymUnmanagedDocumentWriter::SetCheckSum 메서드</span><span class="sxs-lookup"><span data-stu-id="d8a70-102">ISymUnmanagedDocumentWriter::SetCheckSum Method</span></span>
+<span data-ttu-id="d8a70-103">체크섬 정보를 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="d8a70-103">Sets checksum information.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c54d8-104">구문</span><span class="sxs-lookup"><span data-stu-id="c54d8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d8a70-104">구문</span><span class="sxs-lookup"><span data-stu-id="d8a70-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetCheckSum(  
@@ -34,22 +34,22 @@ HRESULT SetCheckSum(
     [in, size_is(checkSumSize)]  BYTE checkSum[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c54d8-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="c54d8-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d8a70-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="d8a70-105">Parameters</span></span>  
  `algorithmId`  
- <span data-ttu-id="c54d8-106">[in] The GUID that represents the algorithm identifier.</span><span class="sxs-lookup"><span data-stu-id="c54d8-106">[in] The GUID that represents the algorithm identifier.</span></span>  
+ <span data-ttu-id="d8a70-106">진행 알고리즘 식별자를 나타내는 GUID입니다.</span><span class="sxs-lookup"><span data-stu-id="d8a70-106">[in] The GUID that represents the algorithm identifier.</span></span>  
   
  `checkSumSize`  
- <span data-ttu-id="c54d8-107">[in] A `ULONG32` that indicates the size, in bytes, of the `checkSum` buffer.</span><span class="sxs-lookup"><span data-stu-id="c54d8-107">[in] A `ULONG32` that indicates the size, in bytes, of the `checkSum` buffer.</span></span>  
+ <span data-ttu-id="d8a70-107">진행 `checkSum` 버퍼의 크기 (바이트)를 나타내는 `ULONG32`입니다.</span><span class="sxs-lookup"><span data-stu-id="d8a70-107">[in] A `ULONG32` that indicates the size, in bytes, of the `checkSum` buffer.</span></span>  
   
  `checkSum`  
- <span data-ttu-id="c54d8-108">[in] The buffer that stores the checksum information.</span><span class="sxs-lookup"><span data-stu-id="c54d8-108">[in] The buffer that stores the checksum information.</span></span>  
+ <span data-ttu-id="d8a70-108">진행 체크섬 정보를 저장 하는 버퍼입니다.</span><span class="sxs-lookup"><span data-stu-id="d8a70-108">[in] The buffer that stores the checksum information.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="c54d8-109">반환 값</span><span class="sxs-lookup"><span data-stu-id="c54d8-109">Return Value</span></span>  
- <span data-ttu-id="c54d8-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="c54d8-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="d8a70-109">반환 값</span><span class="sxs-lookup"><span data-stu-id="d8a70-109">Return Value</span></span>  
+ <span data-ttu-id="d8a70-110">메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="d8a70-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c54d8-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="c54d8-111">Requirements</span></span>  
- <span data-ttu-id="c54d8-112">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="c54d8-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d8a70-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="d8a70-111">Requirements</span></span>  
+ <span data-ttu-id="d8a70-112">**헤더:** CorSym, CorSym</span><span class="sxs-lookup"><span data-stu-id="d8a70-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c54d8-113">참조</span><span class="sxs-lookup"><span data-stu-id="c54d8-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d8a70-113">참고 항목</span><span class="sxs-lookup"><span data-stu-id="d8a70-113">See also</span></span>
 
-- [<span data-ttu-id="c54d8-114">ISymUnmanagedDocumentWriter 인터페이스</span><span class="sxs-lookup"><span data-stu-id="c54d8-114">ISymUnmanagedDocumentWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-interface.md)
+- [<span data-ttu-id="d8a70-114">ISymUnmanagedDocumentWriter 인터페이스</span><span class="sxs-lookup"><span data-stu-id="d8a70-114">ISymUnmanagedDocumentWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-interface.md)

@@ -22,10 +22,10 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440354"
 ---
-# <a name="imetadatafiltermarktoken-method"></a><span data-ttu-id="480a2-102">IMetaDataFilter::MarkToken 메서드</span><span class="sxs-lookup"><span data-stu-id="480a2-102">IMetaDataFilter::MarkToken Method</span></span>
-<span data-ttu-id="480a2-103">Sets a value indicating that the specified metadata token has been processed.</span><span class="sxs-lookup"><span data-stu-id="480a2-103">Sets a value indicating that the specified metadata token has been processed.</span></span>  
+# <a name="imetadatafiltermarktoken-method"></a><span data-ttu-id="e95bb-102">IMetaDataFilter::MarkToken 메서드</span><span class="sxs-lookup"><span data-stu-id="e95bb-102">IMetaDataFilter::MarkToken Method</span></span>
+<span data-ttu-id="e95bb-103">지정 된 메타 데이터 토큰이 처리 되었음을 나타내는 값을 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="e95bb-103">Sets a value indicating that the specified metadata token has been processed.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="480a2-104">구문</span><span class="sxs-lookup"><span data-stu-id="480a2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e95bb-104">구문</span><span class="sxs-lookup"><span data-stu-id="e95bb-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT MarkToken (  
@@ -33,19 +33,19 @@ HRESULT MarkToken (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="480a2-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="480a2-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e95bb-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="e95bb-105">Parameters</span></span>  
  `tk`  
- <span data-ttu-id="480a2-106">[in] The token to mark as processed.</span><span class="sxs-lookup"><span data-stu-id="480a2-106">[in] The token to mark as processed.</span></span>  
+ <span data-ttu-id="e95bb-106">진행 처리 된 것으로 표시할 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="e95bb-106">[in] The token to mark as processed.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="480a2-107">요구 사항</span><span class="sxs-lookup"><span data-stu-id="480a2-107">Requirements</span></span>  
- <span data-ttu-id="480a2-108">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="480a2-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e95bb-107">요구 사항</span><span class="sxs-lookup"><span data-stu-id="e95bb-107">Requirements</span></span>  
+ <span data-ttu-id="e95bb-108">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="e95bb-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="480a2-109">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="480a2-109">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="e95bb-109">**헤더:** Cor</span><span class="sxs-lookup"><span data-stu-id="e95bb-109">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="480a2-110">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="480a2-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="e95bb-110">**라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="e95bb-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="480a2-111">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="480a2-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="e95bb-111">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e95bb-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="480a2-112">참조</span><span class="sxs-lookup"><span data-stu-id="480a2-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e95bb-112">참고 항목</span><span class="sxs-lookup"><span data-stu-id="e95bb-112">See also</span></span>
 
-- [<span data-ttu-id="480a2-113">IMetaDataFilter 인터페이스</span><span class="sxs-lookup"><span data-stu-id="480a2-113">IMetaDataFilter Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-interface.md)
+- [<span data-ttu-id="e95bb-113">IMetaDataFilter 인터페이스</span><span class="sxs-lookup"><span data-stu-id="e95bb-113">IMetaDataFilter Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-interface.md)

@@ -22,10 +22,10 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446037"
 ---
-# <a name="imetadataassemblyimportcloseenum-method"></a><span data-ttu-id="3a096-102">IMetaDataAssemblyImport::CloseEnum 메서드</span><span class="sxs-lookup"><span data-stu-id="3a096-102">IMetaDataAssemblyImport::CloseEnum Method</span></span>
-<span data-ttu-id="3a096-103">Releases a reference to the specified enumeration instance.</span><span class="sxs-lookup"><span data-stu-id="3a096-103">Releases a reference to the specified enumeration instance.</span></span>  
+# <a name="imetadataassemblyimportcloseenum-method"></a><span data-ttu-id="4af3f-102">IMetaDataAssemblyImport::CloseEnum 메서드</span><span class="sxs-lookup"><span data-stu-id="4af3f-102">IMetaDataAssemblyImport::CloseEnum Method</span></span>
+<span data-ttu-id="4af3f-103">지정 된 열거형 인스턴스에 대 한 참조를 해제 합니다.</span><span class="sxs-lookup"><span data-stu-id="4af3f-103">Releases a reference to the specified enumeration instance.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3a096-104">구문</span><span class="sxs-lookup"><span data-stu-id="3a096-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4af3f-104">구문</span><span class="sxs-lookup"><span data-stu-id="4af3f-104">Syntax</span></span>  
   
 ```cpp  
 void CloseEnum (  
@@ -33,19 +33,19 @@ void CloseEnum (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="3a096-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="3a096-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="4af3f-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="4af3f-105">Parameters</span></span>  
  `hEnum`  
- <span data-ttu-id="3a096-106">[in] The enumeration instance to be closed.</span><span class="sxs-lookup"><span data-stu-id="3a096-106">[in] The enumeration instance to be closed.</span></span>  
+ <span data-ttu-id="4af3f-106">진행 닫을 열거형 인스턴스입니다.</span><span class="sxs-lookup"><span data-stu-id="4af3f-106">[in] The enumeration instance to be closed.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3a096-107">요구 사항</span><span class="sxs-lookup"><span data-stu-id="3a096-107">Requirements</span></span>  
- <span data-ttu-id="3a096-108">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="3a096-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4af3f-107">요구 사항</span><span class="sxs-lookup"><span data-stu-id="4af3f-107">Requirements</span></span>  
+ <span data-ttu-id="4af3f-108">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="4af3f-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3a096-109">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="3a096-109">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="4af3f-109">**헤더:** Cor</span><span class="sxs-lookup"><span data-stu-id="4af3f-109">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="3a096-110">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="3a096-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="4af3f-110">**라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="4af3f-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="3a096-111">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3a096-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="4af3f-111">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4af3f-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3a096-112">참조</span><span class="sxs-lookup"><span data-stu-id="3a096-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4af3f-112">참고 항목</span><span class="sxs-lookup"><span data-stu-id="4af3f-112">See also</span></span>
 
-- [<span data-ttu-id="3a096-113">IMetaDataAssemblyImport 인터페이스</span><span class="sxs-lookup"><span data-stu-id="3a096-113">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [<span data-ttu-id="4af3f-113">IMetaDataAssemblyImport 인터페이스</span><span class="sxs-lookup"><span data-stu-id="4af3f-113">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

@@ -22,22 +22,22 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428099"
 ---
-# <a name="isymunmanagedwriterclosemethod-method"></a><span data-ttu-id="ece44-102">ISymUnmanagedWriter::CloseMethod 메서드</span><span class="sxs-lookup"><span data-stu-id="ece44-102">ISymUnmanagedWriter::CloseMethod Method</span></span>
-<span data-ttu-id="ece44-103">현재 메서드를 닫습니다.</span><span class="sxs-lookup"><span data-stu-id="ece44-103">Closes the current method.</span></span> <span data-ttu-id="ece44-104">Once a method is closed, no more symbols can be defined within it.</span><span class="sxs-lookup"><span data-stu-id="ece44-104">Once a method is closed, no more symbols can be defined within it.</span></span>  
+# <a name="isymunmanagedwriterclosemethod-method"></a><span data-ttu-id="839e1-102">ISymUnmanagedWriter::CloseMethod 메서드</span><span class="sxs-lookup"><span data-stu-id="839e1-102">ISymUnmanagedWriter::CloseMethod Method</span></span>
+<span data-ttu-id="839e1-103">현재 메서드를 닫습니다.</span><span class="sxs-lookup"><span data-stu-id="839e1-103">Closes the current method.</span></span> <span data-ttu-id="839e1-104">메서드를 닫은 후에는 더 이상 기호를 정의할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="839e1-104">Once a method is closed, no more symbols can be defined within it.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ece44-105">구문</span><span class="sxs-lookup"><span data-stu-id="ece44-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="839e1-105">구문</span><span class="sxs-lookup"><span data-stu-id="839e1-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT CloseMethod();  
 ```  
   
-## <a name="return-value"></a><span data-ttu-id="ece44-106">반환 값</span><span class="sxs-lookup"><span data-stu-id="ece44-106">Return Value</span></span>  
- <span data-ttu-id="ece44-107">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="ece44-107">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="839e1-106">반환 값</span><span class="sxs-lookup"><span data-stu-id="839e1-106">Return Value</span></span>  
+ <span data-ttu-id="839e1-107">메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="839e1-107">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ece44-108">요구 사항</span><span class="sxs-lookup"><span data-stu-id="ece44-108">Requirements</span></span>  
- <span data-ttu-id="ece44-109">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="ece44-109">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="839e1-108">요구 사항</span><span class="sxs-lookup"><span data-stu-id="839e1-108">Requirements</span></span>  
+ <span data-ttu-id="839e1-109">**헤더:** CorSym, CorSym</span><span class="sxs-lookup"><span data-stu-id="839e1-109">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ece44-110">참조</span><span class="sxs-lookup"><span data-stu-id="ece44-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="839e1-110">참고 항목</span><span class="sxs-lookup"><span data-stu-id="839e1-110">See also</span></span>
 
-- [<span data-ttu-id="ece44-111">ISymUnmanagedWriter 인터페이스</span><span class="sxs-lookup"><span data-stu-id="ece44-111">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
-- [<span data-ttu-id="ece44-112">OpenMethod 메서드</span><span class="sxs-lookup"><span data-stu-id="ece44-112">OpenMethod Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openmethod-method.md)
+- [<span data-ttu-id="839e1-111">ISymUnmanagedWriter 인터페이스</span><span class="sxs-lookup"><span data-stu-id="839e1-111">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [<span data-ttu-id="839e1-112">OpenMethod 메서드</span><span class="sxs-lookup"><span data-stu-id="839e1-112">OpenMethod Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openmethod-method.md)

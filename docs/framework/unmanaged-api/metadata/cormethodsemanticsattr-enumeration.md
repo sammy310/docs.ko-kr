@@ -21,10 +21,10 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74442816"
 ---
-# <a name="cormethodsemanticsattr-enumeration"></a><span data-ttu-id="14799-102">CorMethodSemanticsAttr 열거형</span><span class="sxs-lookup"><span data-stu-id="14799-102">CorMethodSemanticsAttr Enumeration</span></span>
-<span data-ttu-id="14799-103">메서드와 관련 속성 또는 이벤트 간의 관계를 설명하는 값을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="14799-103">Contains values that describe the relationship between a method and an associated property or event.</span></span>  
+# <a name="cormethodsemanticsattr-enumeration"></a><span data-ttu-id="52695-102">CorMethodSemanticsAttr 열거형</span><span class="sxs-lookup"><span data-stu-id="52695-102">CorMethodSemanticsAttr Enumeration</span></span>
+<span data-ttu-id="52695-103">메서드와 관련 속성 또는 이벤트 간의 관계를 설명하는 값을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="52695-103">Contains values that describe the relationship between a method and an associated property or event.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="14799-104">구문</span><span class="sxs-lookup"><span data-stu-id="14799-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="52695-104">구문</span><span class="sxs-lookup"><span data-stu-id="52695-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum CorMethodSemanticsAttr {  
@@ -39,24 +39,24 @@ typedef enum CorMethodSemanticsAttr {
 } CorMethodSemanticsAttr;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="14799-105">멤버</span><span class="sxs-lookup"><span data-stu-id="14799-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="52695-105">멤버</span><span class="sxs-lookup"><span data-stu-id="52695-105">Members</span></span>  
   
-|<span data-ttu-id="14799-106">멤버</span><span class="sxs-lookup"><span data-stu-id="14799-106">Member</span></span>|<span data-ttu-id="14799-107">설명</span><span class="sxs-lookup"><span data-stu-id="14799-107">Description</span></span>|  
+|<span data-ttu-id="52695-106">멤버</span><span class="sxs-lookup"><span data-stu-id="52695-106">Member</span></span>|<span data-ttu-id="52695-107">설명</span><span class="sxs-lookup"><span data-stu-id="52695-107">Description</span></span>|  
 |------------|-----------------|  
-|`msSetter`|<span data-ttu-id="14799-108">Specifies that the method is a `set` accessor for a property.</span><span class="sxs-lookup"><span data-stu-id="14799-108">Specifies that the method is a `set` accessor for a property.</span></span>|  
-|`msGetter`|<span data-ttu-id="14799-109">Specifies that the method is a `get` accessor for a property.</span><span class="sxs-lookup"><span data-stu-id="14799-109">Specifies that the method is a `get` accessor for a property.</span></span>|  
-|`msOther`|<span data-ttu-id="14799-110">Specifies that the method has a relationship to a property or an event other than those defined here.</span><span class="sxs-lookup"><span data-stu-id="14799-110">Specifies that the method has a relationship to a property or an event other than those defined here.</span></span>|  
-|`msAddOn`|<span data-ttu-id="14799-111">Specifies that the method adds handler methods for an event.</span><span class="sxs-lookup"><span data-stu-id="14799-111">Specifies that the method adds handler methods for an event.</span></span>|  
-|`msRemoveOn`|<span data-ttu-id="14799-112">Specifies that the method removes handler methods for an event.</span><span class="sxs-lookup"><span data-stu-id="14799-112">Specifies that the method removes handler methods for an event.</span></span>|  
-|`msFire`|<span data-ttu-id="14799-113">Specifies that the method raises an event.</span><span class="sxs-lookup"><span data-stu-id="14799-113">Specifies that the method raises an event.</span></span>|  
+|`msSetter`|<span data-ttu-id="52695-108">메서드가 속성의 `set` 접근자 임을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="52695-108">Specifies that the method is a `set` accessor for a property.</span></span>|  
+|`msGetter`|<span data-ttu-id="52695-109">메서드가 속성의 `get` 접근자 임을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="52695-109">Specifies that the method is a `get` accessor for a property.</span></span>|  
+|`msOther`|<span data-ttu-id="52695-110">메서드가 속성 또는 여기에 정의 된 이벤트 이외의 이벤트와 관계가 있음을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="52695-110">Specifies that the method has a relationship to a property or an event other than those defined here.</span></span>|  
+|`msAddOn`|<span data-ttu-id="52695-111">메서드가 이벤트에 대 한 처리기 메서드를 추가 하도록 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="52695-111">Specifies that the method adds handler methods for an event.</span></span>|  
+|`msRemoveOn`|<span data-ttu-id="52695-112">메서드가 이벤트에 대 한 처리기 메서드를 제거 하도록 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="52695-112">Specifies that the method removes handler methods for an event.</span></span>|  
+|`msFire`|<span data-ttu-id="52695-113">메서드가 이벤트를 발생 하도록 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="52695-113">Specifies that the method raises an event.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="14799-114">요구 사항</span><span class="sxs-lookup"><span data-stu-id="14799-114">Requirements</span></span>  
- <span data-ttu-id="14799-115">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="14799-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="52695-114">요구 사항</span><span class="sxs-lookup"><span data-stu-id="52695-114">Requirements</span></span>  
+ <span data-ttu-id="52695-115">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="52695-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="14799-116">**Header:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="14799-116">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="52695-116">**헤더:** CorHdr .h</span><span class="sxs-lookup"><span data-stu-id="52695-116">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="14799-117">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="14799-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="52695-117">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="52695-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="14799-118">참조</span><span class="sxs-lookup"><span data-stu-id="14799-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="52695-118">참고 항목</span><span class="sxs-lookup"><span data-stu-id="52695-118">See also</span></span>
 
-- [<span data-ttu-id="14799-119">메타데이터 열거형</span><span class="sxs-lookup"><span data-stu-id="14799-119">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="52695-119">메타데이터 열거형</span><span class="sxs-lookup"><span data-stu-id="52695-119">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

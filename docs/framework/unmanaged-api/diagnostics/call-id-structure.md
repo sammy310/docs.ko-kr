@@ -21,10 +21,10 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448589"
 ---
-# <a name="call_id-structure"></a><span data-ttu-id="03573-102">CALL_ID 구조체</span><span class="sxs-lookup"><span data-stu-id="03573-102">CALL_ID Structure</span></span>
-<span data-ttu-id="03573-103">Provides information to a debugger about a function that is being called.</span><span class="sxs-lookup"><span data-stu-id="03573-103">Provides information to a debugger about a function that is being called.</span></span> <span data-ttu-id="03573-104">See the [INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md) interface for more information.</span><span class="sxs-lookup"><span data-stu-id="03573-104">See the [INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md) interface for more information.</span></span>  
+# <a name="call_id-structure"></a><span data-ttu-id="34662-102">CALL_ID 구조체</span><span class="sxs-lookup"><span data-stu-id="34662-102">CALL_ID Structure</span></span>
+<span data-ttu-id="34662-103">호출 되는 함수에 대 한 정보를 디버거에 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="34662-103">Provides information to a debugger about a function that is being called.</span></span> <span data-ttu-id="34662-104">자세한 내용은 [INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md) 인터페이스를 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="34662-104">See the [INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md) interface for more information.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="03573-105">구문</span><span class="sxs-lookup"><span data-stu-id="03573-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="34662-105">구문</span><span class="sxs-lookup"><span data-stu-id="34662-105">Syntax</span></span>  
   
 ```cpp  
 typedef struct tagCALL_ID  
@@ -38,21 +38,21 @@ typedef struct tagCALL_ID
 } CALL_ID;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="03573-106">멤버</span><span class="sxs-lookup"><span data-stu-id="03573-106">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="34662-106">멤버</span><span class="sxs-lookup"><span data-stu-id="34662-106">Members</span></span>  
   
-|<span data-ttu-id="03573-107">멤버</span><span class="sxs-lookup"><span data-stu-id="03573-107">Member</span></span>|<span data-ttu-id="03573-108">설명</span><span class="sxs-lookup"><span data-stu-id="03573-108">Description</span></span>|  
+|<span data-ttu-id="34662-107">멤버</span><span class="sxs-lookup"><span data-stu-id="34662-107">Member</span></span>|<span data-ttu-id="34662-108">설명</span><span class="sxs-lookup"><span data-stu-id="34662-108">Description</span></span>|  
 |------------|-----------------|  
-|`szMachine`|<span data-ttu-id="03573-109">Identifies the machine that is making the call.</span><span class="sxs-lookup"><span data-stu-id="03573-109">Identifies the machine that is making the call.</span></span>|  
-|`dwPid`|<span data-ttu-id="03573-110">Identifies the machine processor.</span><span class="sxs-lookup"><span data-stu-id="03573-110">Identifies the machine processor.</span></span>|  
-|`pUserThread`|<span data-ttu-id="03573-111">Identifies the thread that is executing the call.</span><span class="sxs-lookup"><span data-stu-id="03573-111">Identifies the thread that is executing the call.</span></span>|  
-|`addrStackPointer`|<span data-ttu-id="03573-112">Specifies the address of the call stack.</span><span class="sxs-lookup"><span data-stu-id="03573-112">Specifies the address of the call stack.</span></span>|  
-|`szEntryPoint`|<span data-ttu-id="03573-113">Specifies the address of the call.</span><span class="sxs-lookup"><span data-stu-id="03573-113">Specifies the address of the call.</span></span>|  
-|`szDestinationMachine`|<span data-ttu-id="03573-114">Identifies the machine that will execute the call.</span><span class="sxs-lookup"><span data-stu-id="03573-114">Identifies the machine that will execute the call.</span></span>|  
+|`szMachine`|<span data-ttu-id="34662-109">호출을 수행 하는 컴퓨터를 식별 합니다.</span><span class="sxs-lookup"><span data-stu-id="34662-109">Identifies the machine that is making the call.</span></span>|  
+|`dwPid`|<span data-ttu-id="34662-110">컴퓨터 프로세서를 식별 합니다.</span><span class="sxs-lookup"><span data-stu-id="34662-110">Identifies the machine processor.</span></span>|  
+|`pUserThread`|<span data-ttu-id="34662-111">호출을 실행 하는 스레드를 식별 합니다.</span><span class="sxs-lookup"><span data-stu-id="34662-111">Identifies the thread that is executing the call.</span></span>|  
+|`addrStackPointer`|<span data-ttu-id="34662-112">호출 스택의 주소를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="34662-112">Specifies the address of the call stack.</span></span>|  
+|`szEntryPoint`|<span data-ttu-id="34662-113">호출의 주소를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="34662-113">Specifies the address of the call.</span></span>|  
+|`szDestinationMachine`|<span data-ttu-id="34662-114">호출을 실행할 컴퓨터를 식별 합니다.</span><span class="sxs-lookup"><span data-stu-id="34662-114">Identifies the machine that will execute the call.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="03573-115">요구 사항</span><span class="sxs-lookup"><span data-stu-id="03573-115">Requirements</span></span>  
- <span data-ttu-id="03573-116">**Header:** ProtocolNotify2.idl</span><span class="sxs-lookup"><span data-stu-id="03573-116">**Header:** ProtocolNotify2.idl</span></span>  
+## <a name="requirements"></a><span data-ttu-id="34662-115">요구 사항</span><span class="sxs-lookup"><span data-stu-id="34662-115">Requirements</span></span>  
+ <span data-ttu-id="34662-116">**헤더:** ProtocolNotify2</span><span class="sxs-lookup"><span data-stu-id="34662-116">**Header:** ProtocolNotify2.idl</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="03573-117">참조</span><span class="sxs-lookup"><span data-stu-id="03573-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="34662-117">참고 항목</span><span class="sxs-lookup"><span data-stu-id="34662-117">See also</span></span>
 
-- [<span data-ttu-id="03573-118">INotifySink2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="03573-118">INotifySink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
-- [<span data-ttu-id="03573-119">진단 기호 저장소 구조체</span><span class="sxs-lookup"><span data-stu-id="03573-119">Diagnostics Symbol Store Structures</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)
+- [<span data-ttu-id="34662-118">INotifySink2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="34662-118">INotifySink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
+- [<span data-ttu-id="34662-119">진단 기호 저장소 구조체</span><span class="sxs-lookup"><span data-stu-id="34662-119">Diagnostics Symbol Store Structures</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)

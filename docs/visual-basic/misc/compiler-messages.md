@@ -12,5 +12,5 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353307"
 ---
-# <a name="visual-basic-compiler-messages"></a><span data-ttu-id="4864d-102">Visual Basic 컴파일러 메시지</span><span class="sxs-lookup"><span data-stu-id="4864d-102">Visual Basic Compiler Messages</span></span>
-<span data-ttu-id="4864d-103">This section contains the Visual Basic error messages that occur at compile time.</span><span class="sxs-lookup"><span data-stu-id="4864d-103">This section contains the Visual Basic error messages that occur at compile time.</span></span>
+# <a name="visual-basic-compiler-messages"></a><span data-ttu-id="33215-102">Visual Basic 컴파일러 메시지</span><span class="sxs-lookup"><span data-stu-id="33215-102">Visual Basic Compiler Messages</span></span>
+<span data-ttu-id="33215-103">이 섹션에는 컴파일 시간에 발생 하는 Visual Basic 오류 메시지가 포함 되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="33215-103">This section contains the Visual Basic error messages that occur at compile time.</span></span>
