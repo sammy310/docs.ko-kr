@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449435"
 ---
 # <a name="imetadataassemblyimportgetassemblyprops-method"></a>IMetaDataAssemblyImport::GetAssemblyProps 메서드
-Gets the set of properties for the assembly with the specified metadata signature.  
+지정 된 메타 데이터 시그니처를 사용 하 여 어셈블리에 대 한 속성 집합을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -43,41 +43,41 @@ HRESULT GetAssemblyProps (
   
 ## <a name="parameters"></a>매개 변수  
  `mda`  
- [in]. The `mdAssembly` metadata token that represents the assembly for which to get the properties.  
+ [in]. 속성을 가져올 어셈블리를 나타내는 `mdAssembly` 메타 데이터 토큰입니다.  
   
  `ppbPublicKey`  
- [out] A pointer to the public key or the metadata token.  
+ 제한이 공개 키 또는 메타 데이터 토큰에 대 한 포인터입니다.  
   
  `pcbPublicKey`  
- [out] The number of bytes in the returned public key.  
+ 제한이 반환 된 공개 키의 바이트 수입니다.  
   
  `pulHashAlgId`  
- [out] A pointer to the algorithm used to hash the files in the assembly.  
+ 제한이 어셈블리의 파일을 해시 하는 데 사용 되는 알고리즘에 대 한 포인터입니다.  
   
  `szName`  
- [out] The simple name of the assembly.  
+ 제한이 어셈블리의 단순한 이름입니다.  
   
  `cchName`  
- [in] The size, in wide chars, of `szName`.  
+ 진행 `szName`의 크기 (와이드 문자)입니다.  
   
  `pchName`  
- [out] The number of wide chars actually returned in `szName`.  
+ 제한이 `szName`에서 실제로 반환 되는 와이드 문자 수입니다.  
   
  `pMetaData`  
- [out] A pointer to an ASSEMBLYMETADATA structure that contains the assembly metadata.  
+ 제한이 어셈블리 메타 데이터를 포함 하는 ASSEMBLYMETADATA 구조체에 대 한 포인터입니다.  
   
  `pdwAssemblyFlags`  
- [out] Flags that describe the metadata applied to an assembly. This value is a combination of one or more [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) values.  
+ 제한이 어셈블리에 적용 된 메타 데이터를 설명 하는 플래그입니다. 이 값은 하나 이상의 [Corassemblyflags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) 값의 조합입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IMetaDataAssemblyImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

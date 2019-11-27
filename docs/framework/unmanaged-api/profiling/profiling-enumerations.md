@@ -16,12 +16,12 @@ ms.locfileid: "74447453"
 # <a name="profiling-enumerations"></a>프로파일링 열거형
 이 섹션에서는 프로파일링 API에서 사용하는 관리되지 않는 열거형에 대해 설명합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [COR_PRF_CLAUSE_TYPE 열거형](../../../../docs/framework/unmanaged-api/profiling/cor-prf-clause-type-enumeration.md)  
  코드에서 방금 시작되거나 끝난 예외 절 형식을 나타냅니다.  
   
  [COR_PRF_CODEGEN_FLAGS 열거형](../../../../docs/framework/unmanaged-api/profiling/cor-prf-codegen-flags-enumeration.md)  
- Defines the code generation flags that can be set with the [ICorProfilerFunctionControl::SetCodegenFlags](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setcodegenflags-method.md) method.  
+ [ICorProfilerFunctionControl:: SetCodegenFlags](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setcodegenflags-method.md) 메서드를 사용 하 여 설정할 수 있는 코드 생성 플래그를 정의 합니다.  
   
  [COR_PRF_FINALIZER_FLAGS 열거형](../../../../docs/framework/unmanaged-api/profiling/cor-prf-finalizer-flags-enumeration.md)  
  개체에 대한 종료자를 설명합니다.  
@@ -36,10 +36,10 @@ ms.locfileid: "74447453"
  가비지 수집기 루트의 속성을 나타냅니다.  
   
  [COR_PRF_GC_ROOT_KIND 열거형](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-root-kind-enumeration.md)  
- Indicates the kind of garbage collector root that is exposed by the [ICorProfilerCallback2::RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) callback.  
+ [ICorProfilerCallback2:: RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) 콜백에서 노출 하는 가비지 수집기 루트의 종류를 나타냅니다.  
   
  [COR_PRF_HIGH_MONITOR 열거형](../../../../docs/framework/unmanaged-api/profiling/cor-prf-high-monitor-enumeration.md)  
- Provides flags in addition to those found in the [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md) enumeration that the profiler can specify to the [ICorProfilerInfo5::SetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md) method when it is loading.  
+ 프로파일러에서 로드할 때 [ICorProfilerInfo5:: SetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md) 메서드에 지정할 수 있는 [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md) 열거형에 있는 플래그 외에도 플래그를 제공 합니다.  
   
  [COR_PRF_JIT_CACHE 열거형](../../../../docs/framework/unmanaged-api/profiling/cor-prf-jit-cache-enumeration.md)  
  캐시된 함수 검색의 결과를 나타냅니다.  
@@ -68,7 +68,7 @@ ms.locfileid: "74447453"
  [COR_PRF_TRANSITION_REASON 열거형](../../../../docs/framework/unmanaged-api/profiling/cor-prf-transition-reason-enumeration.md)  
  관리 코드에서 비관리 코드로 전환 또는 그 반대의 경우로 전환하는 이유를 나타냅니다.  
   
-## <a name="related-sections"></a>관련 단원  
+## <a name="related-sections"></a>관련 섹션  
  [프로파일링 개요](../../../../docs/framework/unmanaged-api/profiling/profiling-overview.md)  
   
  [프로파일링 인터페이스](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  

@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446957"
 ---
 # <a name="importfileex-method"></a>ImportFileEx 메서드
-Imports indicated assembly or unbound module.  
+표시 된 어셈블리 또는 바인딩되지 않은 모듈을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,33 +40,33 @@ HRESULT ImportFileEx(
   
 ## <a name="parameters"></a>매개 변수  
  `pszFilename`  
- Fully qualified name of file from which to import.  
+ 가져올 파일의 정규화 된 이름입니다.  
   
  `pszTargetName`  
- Optional name of target file.  
+ 대상 파일의 선택적 이름입니다.  
   
  `fSmartImport`  
- If TRUE, ImportTypes is used, otherwise importing must be performed manually.  
+ TRUE 이면 ImportTypes를 사용 합니다. 그렇지 않으면 가져오기는 수동으로 수행 해야 합니다.  
   
  `dwOpenFlags`  
- Flags to be passed along to [OpenScope Method](../metadata/imetadatadispenser-openscope-method.md).  
+ [Openscope 메서드에](../metadata/imetadatadispenser-openscope-method.md)따라 전달할 플래그입니다.  
   
  `pImportToken`  
- Receives ID of the file being imported.  
+ 가져올 파일의 ID를 받습니다.  
   
  `ppAssemblyScope`  
- Receives assembly import scope [IMetaDataAssemblyImport Interface](../metadata/imetadataassemblyimport-interface.md) interface. Is set to NULL if file is not an assembly.  
+ 어셈블리 가져오기 범위 [IMetaDataAssemblyImport interface](../metadata/imetadataassemblyimport-interface.md) 인터페이스를 수신 합니다. 파일이 어셈블리가 아닌 경우 NULL로 설정 됩니다.  
   
  `pdwCountOfScopes`  
- Receives count of imported files and/or scopes.  
+ 가져온 파일 및/또는 범위의 수를 수신 합니다.  
   
 ## <a name="return-value"></a>반환 값  
- Returns S_OK if the method succeeds.  
+ 메서드가 성공 하면 S_OK을 반환 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- Requires alink.h.  
+ Alink가 필요 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IALink2 인터페이스](ialink2-interface.md)
 - [IALink 인터페이스](ialink-interface.md)

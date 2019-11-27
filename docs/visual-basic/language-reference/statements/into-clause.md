@@ -12,10 +12,10 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348046"
 ---
 # <a name="into-clause-visual-basic"></a>Into 절(Visual Basic)
-Identifies aggregate functions or groupings to apply to a collection.  
+컬렉션에 적용할 집계 함수 또는 그룹화를 식별 합니다.  
   
 ## <a name="remarks"></a>주의  
- The `Each` keyword is used in the following contexts:  
+ `Each` 키워드는 다음 컨텍스트에서 사용 됩니다.  
   
  [Aggregate 절](../../../visual-basic/language-reference/queries/aggregate-clause.md)  
   
@@ -23,6 +23,6 @@ Identifies aggregate functions or groupings to apply to a collection.
   
  [Group Join 절](../../../visual-basic/language-reference/queries/group-join-clause.md)  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [C++ 키워드](../../../visual-basic/language-reference/keywords/index.md)
+- [키워드](../../../visual-basic/language-reference/keywords/index.md)

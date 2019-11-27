@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448246"
 ---
 # <a name="imetadataassemblyimportgetassemblyfromscope-method"></a>IMetaDataAssemblyImport::GetAssemblyFromScope 메서드
-Gets a pointer to the assembly in the current scope.  
+현재 범위에 있는 어셈블리에 대 한 포인터를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -35,17 +35,17 @@ HRESULT GetAssemblyFromScope (
   
 ## <a name="parameters"></a>매개 변수  
  `ptkAssembly`  
- [out] A pointer to the retrieved `mdAssembly` token that identifies the assembly.  
+ 제한이 어셈블리를 식별 하는 검색 된 `mdAssembly` 토큰에 대 한 포인터입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IMetaDataAssemblyImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446670"
 ---
 # <a name="addfile2-method"></a>AddFile2 메서드
-Adds files to the assembly. Can also be used to create unbound modules.  
+어셈블리에 파일을 추가 합니다. 바인딩되지 않은 모듈을 만드는 데 사용할 수도 있습니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,27 +39,27 @@ HRESULT AddFile2(
   
 ## <a name="parameters"></a>매개 변수  
  `AssemblyID`  
- ID for the assembly to which the file is added.  
+ 파일이 추가 된 어셈블리의 ID입니다.  
   
  `pszFilename`  
- Name of the file to be added.  
+ 추가할 파일의 이름입니다.  
   
  `dwFlags`  
- COM+ `FileDef` flags such as `ffContainsNoMetaData` and `ffWriteable`. `dwFlags` is passed to [DefineFile Method](../metadata/imetadataassemblyemit-definefile-method.md).  
+ `ffContainsNoMetaData` 및 `ffWriteable`와 같은 COM + `FileDef` 플래그입니다. `dwFlags` [DefineFile 메서드에](../metadata/imetadataassemblyemit-definefile-method.md)전달 됩니다.  
   
  `pEmitter`  
- Interface to [IMetaDataEmit2 Interface](../metadata/imetadataemit2-interface.md) interface.  
+ [IMetaDataEmit2 인터페이스](../metadata/imetadataemit2-interface.md) 인터페이스에 대 한 인터페이스입니다.  
   
  `pFileToken`  
- Receives ID for the file being added.  
+ 추가 되는 파일에 대 한 ID를 받습니다.  
   
 ## <a name="return-value"></a>반환 값  
- Returns S_OK if the method succeeds.  
+ 메서드가 성공 하면 S_OK을 반환 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- Requires alink.h.  
+ Alink가 필요 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IALink2 인터페이스](ialink2-interface.md)
 - [IALink 인터페이스](ialink-interface.md)

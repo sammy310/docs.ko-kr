@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445896"
 ---
 # <a name="icorprofilercallbackmoduleunloadstarted-method"></a>ICorProfilerCallback::ModuleUnloadStarted 메서드
-Notifies the profiler that a module is being unloaded.  
+모듈이 언로드되고 있음을 프로파일러에 알립니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -34,10 +34,10 @@ HRESULT ModuleUnloadStarted(
   
 ## <a name="parameters"></a>매개 변수  
  `moduleId`  
- [in] The ID of the module that is being unloaded.  
+ 진행 언로드될 모듈의 ID입니다.  
   
 ## <a name="remarks"></a>주의  
- The value of `moduleId` is not valid for an information request after the `ModuleUnloadStarted` method returns — this is the profiler's last chance to get information about this module.  
+ `moduleId` 값은 `ModuleUnloadStarted` 메서드가 반환 된 후 정보 요청에 대해 유효 하지 않습니다 .이는이 모듈에 대 한 정보를 가져올 수 있는 프로파일러의 마지막 기회입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
@@ -48,7 +48,7 @@ HRESULT ModuleUnloadStarted(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerCallback 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
 - [ModuleUnloadFinished 메서드](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleunloadfinished-method.md)

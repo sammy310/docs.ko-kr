@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448023"
 ---
 # <a name="icorprofilercallbackfunctionunloadstarted-method"></a>ICorProfilerCallback::FunctionUnloadStarted 메서드
-Notifies the profiler that the runtime has started to unload a function.  
+런타임이 함수 언로드를 시작 했음을 프로파일러에 알립니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -34,10 +34,10 @@ HRESULT FunctionUnloadStarted(
   
 ## <a name="parameters"></a>매개 변수  
  `functionId`  
- [in] The ID of the function that is being unloaded.  
+ 진행 언로드될 함수의 ID입니다.  
   
 ## <a name="remarks"></a>주의  
- The value of the `functionId` parameter is no longer valid after this method returns to the caller.  
+ 이 메서드가 호출자에 게 반환 된 후에는 `functionId` 매개 변수의 값이 더 이상 유효 하지 않습니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
@@ -48,6 +48,6 @@ HRESULT FunctionUnloadStarted(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerCallback 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
