@@ -1,5 +1,5 @@
 ---
-title: Syntax used by DebugView property
+title: DebugView 속성에서 사용 되는 구문
 description: 식 트리의 문자열 표현을 생성하기 위해 DebugView 속성이 사용하는 특수 구문을 설명합니다.
 author: zspitz
 ms.author: wiwagn
@@ -19,7 +19,7 @@ ms.locfileid: "74346875"
 
 `DebugView` 속성(디버깅할 때만 사용 가능)은 식 트리의 문자열 렌더링을 제공합니다. 대부분의 구문은 이해하기 쉽습니다. 특별한 경우는 다음 섹션에서 설명합니다.
 
-Each example is followed by a comment block containing the `DebugView`.
+각 예제 다음에 `DebugView`를 포함 하는 주석 블록이 나옵니다.
 
 ## <a name="parameterexpression"></a>ParameterExpression
 
@@ -27,7 +27,7 @@ Each example is followed by a comment block containing the `DebugView`.
 
 매개 변수에 이름이 없으면 자동으로 생성된 이름이 할당됩니다(예: `$var1` 또는 `$var2`).
 
-### <a name="examples"></a>예제
+### <a name="examples"></a>예
 
 ```vb
 Dim numParam As ParameterExpression = Expression.Parameter(GetType(Integer), "num")
@@ -43,20 +43,20 @@ Dim numParam As ParameterExpression = Expression.Parameter(GetType(Integer))
 
 ## <a name="constantexpressions"></a>ConstantExpressions
 
-정수 값, 문자열 및 `null`을 나타내는 <xref:System.Linq.Expressions.ConstantExpression?displayProperty=nameWithType> 개체의 경우 상수 값이 표시됩니다.
+정수 값, 문자열 및 <xref:System.Linq.Expressions.ConstantExpression?displayProperty=nameWithType>을 나타내는 `null` 개체의 경우 상수 값이 표시됩니다.
 
-For some numeric types, a suffix is added to the value:
+일부 숫자 형식의 경우 값에 접미사를 추가 합니다.
 
-| Type | 키워드 | 접미사 |
+| 형식 | 키워드 | 접미사 |
 |--|--|--|
 | <xref:System.UInt32> | [UInteger](../../../language-reference/data-types/uinteger-data-type.md) | U |
 | <xref:System.Int64> | [Long](../../../language-reference/data-types/long-data-type.md) | L |
 | <xref:System.UInt64> | [ULong](../../../language-reference/data-types/ulong-data-type.md) | UL |
-| <xref:System.Double> | [double](../../../language-reference/data-types/double-data-type.md) | D |
+| <xref:System.Double> | [Double](../../../language-reference/data-types/double-data-type.md) | D |
 | <xref:System.Single> | [Single](../../../language-reference/data-types/single-data-type.md) | F |
 | <xref:System.Decimal> | [Decimal](../../../language-reference/data-types/decimal-data-type.md) | M |
 
-### <a name="examples"></a>예제
+### <a name="examples"></a>예
 
 ```vb
 Dim num as Integer = 10
@@ -76,7 +76,7 @@ Dim expr As ConstantExpression = Expression.Constant(num)
 
 <xref:System.Linq.Expressions.BlockExpression?displayProperty=nameWithType> 개체의 형식이 블록에 있는 마지막 식의 형식과 다를 경우 형식은 꺾쇠 괄호(`<` 및 `>`) 안에 표시됩니다. 같을 경우 <xref:System.Linq.Expressions.BlockExpression> 개체의 형식이 표시되지 않습니다.
 
-### <a name="examples"></a>예제
+### <a name="examples"></a>예
 
 ```vb
 Dim block As BlockExpression = Expression.Block(Expression.Constant("test"))
@@ -103,7 +103,7 @@ Dim block As BlockExpression = Expression.Block(
 
 람다 식에 이름이 없으면 자동으로 생성된 이름이 할당됩니다(예: `#Lambda1` 또는 `#Lambda2`).
 
-### <a name="examples"></a>예제
+### <a name="examples"></a>예
 
 ```vb
 Dim lambda As LambdaExpression = Expression.Lambda(Of Func(Of Integer))(
@@ -135,7 +135,7 @@ Dim lambda As LambdaExpression = Expression.Lambda(Of Func(Of Integer))(
 
 레이블에 이름이 없으면 자동으로 생성된 이름이 할당됩니다(예: `#Label1` 또는 `#Label2`).
 
-### <a name="examples"></a>예제
+### <a name="examples"></a>예
 
 ```vb
 Dim target As LabelTarget = Expression.Label(GetType(Integer), "SampleLabel")
@@ -170,7 +170,7 @@ Dim block As BlockExpression = Expression.Block(
 
 확인된 연산자는 연산자 앞에 `#` 기호가 표시됩니다. 예를 들어 확인된 더하기 연산자는 `#+`로 표시됩니다.
 
-### <a name="examples"></a>예제
+### <a name="examples"></a>예
 
 ```vb
 Dim expr As Expression = Expression.AddChecked(

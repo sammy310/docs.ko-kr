@@ -1,5 +1,5 @@
 ---
-title: Private
+title: 프라이빗
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Private
@@ -15,23 +15,23 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351326"
 ---
 # <a name="private-visual-basic"></a>Private(Visual Basic)
-Specifies that one or more declared programming elements are accessible only from within their declaration context, including from within any contained types.  
+하나 이상의 선언 된 프로그래밍 요소를 포함 된 형식 내에서 포함 하 여 해당 선언 컨텍스트 내 에서만 액세스할 수 있도록 지정 합니다.  
   
-## <a name="remarks"></a>주의  
- If a programming element represents proprietary functionality, or contains confidential data, you usually want to limit access to it as strictly as possible. You achieve the maximum limitation by allowing only the module, class, or structure that defines it to access it. To limit access to an element in this way, you can declare it with `Private`.  
+## <a name="remarks"></a>설명  
+ 프로그래밍 요소가 독점적인 기능을 나타내거나 기밀 데이터를 포함 하는 경우 일반적으로 해당 요소에 대 한 액세스를 최대한 엄격 하 게 제한 하려고 합니다. 모듈, 클래스 또는 구조체를 정의 하는 구조체를 사용 하 여 액세스할 수 있도록 허용 하 여 최대 제한을 달성할 수 있습니다. 이러한 방식으로 요소에 대 한 액세스를 제한 하기 위해 `Private`로 선언할 수 있습니다.  
 
 > [!NOTE]
-> You can also use the [Private Protected](private-protected.md) access modifier, which makes a member accessible from within that class and from derived classes located in its containing assembly.
+> [Private Protected](private-protected.md) 액세스 한정자를 사용 하 여 해당 클래스 내에서, 그리고 포함 하는 어셈블리에 있는 파생 클래스에서 멤버에 액세스할 수 있게 할 수도 있습니다.
 
 ## <a name="rules"></a>규칙  
 
-- **Declaration Context.** `Private`는 모듈 수준에서만 사용할 수 있습니다. This means the declaration context for a `Private` element must be a module, class, or structure, and cannot be a source file, namespace, interface, or procedure.  
+- **선언 컨텍스트입니다.** `Private`는 모듈 수준에서만 사용할 수 있습니다. 즉, `Private` 요소에 대 한 선언 컨텍스트는 모듈, 클래스 또는 구조체 여야 하며 소스 파일, 네임 스페이스, 인터페이스 또는 프로시저일 수 없습니다.  
   
 ## <a name="behavior"></a>동작  
   
-- **Access Level.** All code within a declaration context can access its `Private` elements. This includes code within a contained type, such as a nested class or an assignment expression in an enumeration. No code outside of the declaration context can access its `Private` elements.  
+- **액세스 수준입니다.** 선언 컨텍스트 내의 모든 코드는 해당 `Private` 요소에 액세스할 수 있습니다. 여기에는 중첩 된 클래스 또는 열거형의 할당 식과 같은 포함 된 형식 내의 코드가 포함 됩니다. 선언 컨텍스트 외부의 코드는 `Private` 요소에 액세스할 수 없습니다.  
   
-- **Access Modifiers.** The keywords that specify access level are called *access modifiers*. For a comparison of the access modifiers, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+- **액세스 한정자입니다.** 액세스 수준을 지정 하는 키워드를 *액세스 한정자*라고 합니다. 액세스 한정자의 비교는 [Visual Basic의 액세스 수준](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)을 참조 하세요.  
   
  `Private` 한정자는 다음 컨텍스트에서 사용할 수 있습니다.  
   
@@ -39,7 +39,7 @@ Specifies that one or more declared programming elements are accessible only fro
   
  [Const 문](../../../visual-basic/language-reference/statements/const-statement.md)  
   
- [Declare 문](../../../visual-basic/language-reference/statements/declare-statement.md)  
+ [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
  [Delegate 문](../../../visual-basic/language-reference/statements/delegate-statement.md)  
   
@@ -59,13 +59,13 @@ Specifies that one or more declared programming elements are accessible only fro
   
  [Sub 문](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [Public](../../../visual-basic/language-reference/modifiers/public.md)
-- [보호됨](../../../visual-basic/language-reference/modifiers/protected.md)
+- [Protected](../../../visual-basic/language-reference/modifiers/protected.md)
 - [Friend](../../../visual-basic/language-reference/modifiers/friend.md)
 - [Private Protected](./private-protected.md)
-- [Protected Friend](./protected-friend.md)    [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- Visual Basic의 [보호 된 Friend](./protected-friend.md)[액세스 수준](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [절차](../../../visual-basic/programming-guide/language-features/procedures/index.md)
 - [구조체](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [개체 및 클래스](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

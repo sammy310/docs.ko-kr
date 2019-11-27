@@ -26,7 +26,7 @@ Visual Basic 애플리케이션을 작성, 컴파일 또는 실행할 때 다음
  특정 오류를 해결하는 방법에 대한 자세한 내용은 [Visual Basic 프로그래머를 위한 추가 리소스](../../../visual-basic/getting-started/additional-resources.md)를 참조하세요.  
   
 ## <a name="run-time-errors"></a>런타임 오류  
- If a Visual Basic application tries to perform an action that the system can't execute, a run-time error occurs, and Visual Basic throws an `Exception` object. Visual Basic can generate custom errors of any data type, including `Exception` objects, by using the `Throw` statement. 애플리케이션은 catch한 예외의 오류 번호 및 메시지를 표시하여 오류를 식별할 수 있습니다. 오류가 catch되지 않으면 애플리케이션이 종료됩니다.  
+ Visual Basic 응용 프로그램이 시스템에서 실행할 수 없는 작업을 수행 하려고 하면 런타임 오류가 발생 하 고 Visual Basic `Exception` 개체가 throw 됩니다. Visual Basic `Throw` 문을 사용 하 여 `Exception` 개체를 비롯 한 모든 데이터 형식의 사용자 지정 오류를 생성할 수 있습니다. 애플리케이션은 catch한 예외의 오류 번호 및 메시지를 표시하여 오류를 식별할 수 있습니다. 오류가 catch되지 않으면 애플리케이션이 종료됩니다.  
   
  코드는 런타임 오류를 트래핑하고 검사할 수 있습니다. 오류를 생성하는 코드를 `Try` 블록에 포함할 경우 일치 하는 `Catch` 블록 내에서 throw된 오류를 catch할 수 있습니다. 런타임 시 오류를 트래핑하고 코드에 응답하는 방법에 대한 자세한 내용은 [Try...Catch...Finally 문](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)을 참조하세요.  
   

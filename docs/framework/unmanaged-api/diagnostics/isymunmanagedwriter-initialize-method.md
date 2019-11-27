@@ -23,9 +23,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427968"
 ---
 # <a name="isymunmanagedwriterinitialize-method"></a>ISymUnmanagedWriter::Initialize 메서드
-Sets the metadata emitter interface with which this writer will be associated, and sets the output file name to which the debugging symbols will be written.  
+이 작성기를 연결할 메타 데이터 내보내기 인터페이스를 설정 하 고 디버깅 기호를 쓸 출력 파일 이름을 설정 합니다.  
   
- This method can be called only once, and it must be called before any other writer methods. Some writers may require a file name. However, you can always pass a file name to this method without any negative effect on writers that do not use the file name.  
+ 이 메서드는 한 번만 호출할 수 있으며 다른 작성기 메서드 보다 먼저 호출 해야 합니다. 일부 작성기에는 파일 이름이 필요할 수 있습니다. 그러나 파일 이름을 사용 하지 않는 작성기에는 부정적인 영향을 주지 않으면 서 항상이 메서드에 파일 이름을 전달할 수 있습니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,24 +39,24 @@ HRESULT Initialize(
   
 ## <a name="parameters"></a>매개 변수  
  `emitter`  
- [in] A pointer to the metadata emitter interface.  
+ 진행 메타 데이터 내보내기 인터페이스에 대 한 포인터입니다.  
   
  `filename`  
- [in] The file name to which the debugging symbols are written. If a file name is specified for a writer that does not use file names, this parameter is ignored.  
+ 진행 디버깅 기호를 쓸 파일 이름입니다. 파일 이름을 사용하지 않는 작성기에 대해 파일 이름이 지정되면 이 매개 변수는 무시됩니다.  
   
  `pIStream`  
- [in] If specified, the symbol writer will emit the symbols into the given <xref:System.Runtime.InteropServices.ComTypes.IStream> rather than to the file specified in the `filename` parameter. `pIStream` 매개 변수는 선택적 요소입니다.  
+ 진행 지정 된 경우 기호 작성기는 `filename` 매개 변수에 지정 된 파일이 아닌 지정 된 <xref:System.Runtime.InteropServices.ComTypes.IStream>에 기호를 내보냅니다. `pIStream` 매개 변수는 선택적 요소입니다.  
   
  `fFullBuild`  
- [in] `true` if this is a full rebuild; `false` if this is an incremental compilation.  
+ [in] 전체 다시 작성 인 경우 `true` 합니다. 증분 컴파일 인 경우 `false` 합니다.  
   
 ## <a name="return-value"></a>반환 값  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **Header:** CorSym.idl, CorSym.h  
+ **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ISymUnmanagedWriter 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
 - [Initialize2 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-initialize2-method.md)

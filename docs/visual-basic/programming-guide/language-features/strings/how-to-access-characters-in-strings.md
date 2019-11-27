@@ -13,21 +13,21 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352466"
 ---
 # <a name="how-to-access-characters-in-strings-in-visual-basic"></a>방법: Visual Basic에서 문자열 안의 문자에 액세스
-This example demonstrates how to use the <xref:System.String.Chars%2A> property to access the character at the specified location in a string.  
+이 예제에서는 <xref:System.String.Chars%2A> 속성을 사용 하 여 문자열의 지정 된 위치에 있는 문자에 액세스 하는 방법을 보여 줍니다.  
   
 ## <a name="example"></a>예제  
- Sometimes it is useful to have data about the characters in your string and the positions of those characters within your string. You can think of a string as an array of characters (`Char` instances); you can retrieve a particular character by referencing the index of that character through the <xref:System.String.Chars%2A> property.  
+ 문자열의 문자에 대 한 데이터와 문자열 내에서 해당 문자의 위치에 대 한 데이터를 포함 하는 것이 유용한 경우도 있습니다. 문자열을 문자 배열 (`Char` 인스턴스)로 간주할 수 있습니다. <xref:System.String.Chars%2A> 속성을 통해 해당 문자의 인덱스를 참조 하 여 특정 문자를 검색할 수 있습니다.  
   
  [!code-vb[VbVbalrStrings#49](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#49)]  
   
- The `index` parameter of the <xref:System.String.Chars%2A> property is zero-based.  
+ <xref:System.String.Chars%2A> 속성의 `index` 매개 변수는 0부터 시작 합니다.  
   
 ## <a name="robust-programming"></a>강력한 프로그래밍  
- The <xref:System.String.Chars%2A> property returns the character at the specified position. However, some Unicode characters can be represented by more than one character. For more information on how to work with Unicode characters, see [How to: Convert a String to an Array of Characters](../../../../visual-basic/programming-guide/language-features/strings/how-to-convert-a-string-to-an-array-of-characters.md).  
+ <xref:System.String.Chars%2A> 속성은 지정 된 위치에 있는 문자를 반환 합니다. 그러나 일부 유니코드 문자는 둘 이상의 문자로 나타낼 수 있습니다. 유니코드 문자로 작업 하는 방법에 대 한 자세한 내용은 [방법: 문자열을 문자 배열로 변환](../../../../visual-basic/programming-guide/language-features/strings/how-to-convert-a-string-to-an-array-of-characters.md)을 참조 하세요.  
   
- The <xref:System.String.Chars%2A> property throws an <xref:System.IndexOutOfRangeException> exception if the `index` parameter is greater than or equal to the length of the string, or if it is less than zero  
+ <xref:System.String.Chars%2A> 속성은 `index` 매개 변수가 문자열의 길이 보다 크거나 같거나 0 보다 작은 경우 <xref:System.IndexOutOfRangeException> 예외를 throw 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - <xref:System.String.Chars%2A>
 - [방법: 문자열을 문자 배열로 변환](../../../../visual-basic/programming-guide/language-features/strings/how-to-convert-a-string-to-an-array-of-characters.md)

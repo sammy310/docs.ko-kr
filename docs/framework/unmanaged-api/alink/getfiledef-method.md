@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74426053"
 ---
 # <a name="getfiledef-method"></a>GetFileDef 메서드
-Retrieves the actual FileDef token used in metadata (as opposed to the token assigned by ALink).  
+ALink에서 할당 된 토큰과는 반대로 메타 데이터에 사용 되는 실제 FileDef 토큰을 검색 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,21 +36,21 @@ HRESULT GetFileDef(
   
 ## <a name="parameters"></a>매개 변수  
  `AssemblyID`  
- ID of the assembly.  
+ 어셈블리의 ID입니다.  
   
  `TargetFile`  
- Token of the added file as retrieved from AddFile Method or AddImport Method.  
+ AddFile Method 또는 AddImport 메서드에서 검색 된 추가 된 파일의 토큰입니다.  
   
  `pScope`  
- Receives the FileDef token.  
+ FileDef 토큰을 받습니다.  
   
 ## <a name="return-value"></a>반환 값  
- Returns S_OK if the method succeeds.  
+ 메서드가 성공 하면 S_OK을 반환 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- Requires alink.h  
+ Alink 필요  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [IALink2 인터페이스](ialink2-interface.md)
 - [IALink 인터페이스](ialink-interface.md)

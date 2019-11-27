@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428434"
 ---
 # <a name="imetadataemit2resetenclog-method"></a>IMetaDataEmit2::ResetENCLog 메서드
-Resets the edit-and-continue log and starts a new session.  
+편집 하며 계속 하기 로그를 다시 설정 하 고 새 세션을 시작 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -32,18 +32,18 @@ HRESULT ResetENCLog ();
 ```  
   
 ## <a name="parameters"></a>매개 변수  
- `ResetENCLog` takes no parameters.  
+ `ResetENCLog` 매개 변수를 사용 하지 않습니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [IMetaDataEmit2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
 - [IMetaDataEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)

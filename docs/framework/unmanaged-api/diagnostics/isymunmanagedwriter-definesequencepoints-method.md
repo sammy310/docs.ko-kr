@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427989"
 ---
 # <a name="isymunmanagedwriterdefinesequencepoints-method"></a>ISymUnmanagedWriter::DefineSequencePoints 메서드
-Defines a group of sequence points within the current method. Each starting line and starting column define the start of a statement within a method. Each ending line and ending column define the end of a statement within a method. The arrays should be sorted in increasing order of offsets. The offset is always measured from the start of the method, in bytes.  
+현재 메서드 내에서 시퀀스 위치 그룹을 정의합니다. 각 시작 줄과 시작 열은 메서드 내에서 문의 시작을 정의 합니다. 각 끝 줄과 끝 열은 메서드 내에서 문의 끝을 정의 합니다. 배열은 오프셋의 오름차순으로 정렬 되어야 합니다. 오프셋은 항상 메서드의 시작 부분에서 바이트 단위로 측정 됩니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,32 +40,32 @@ HRESULT DefineSequencePoints(
   
 ## <a name="parameters"></a>매개 변수  
  `document`  
- [in] The document object for which the sequence points are being defined.  
+ 진행 시퀀스 위치를 정의할 문서 개체입니다.  
   
  `spCount`  
- [in] A `ULONG32` that indicates the size of each of the `offsets`, `lines`, `columns`, `endLines`, and `endColumns` buffers.  
+ 진행 각 `offsets`, `lines`, `columns`, `endLines`및 `endColumns` 버퍼의 크기를 나타내는 `ULONG32`입니다.  
   
  `offsets`  
- [in] The offset of the sequence points measured from the beginning of the method.  
+ 진행 메서드의 시작 부분에서 측정 한 시퀀스 위치의 오프셋입니다.  
   
  `lines`  
- [in] The starting line numbers of the sequence points.  
+ 진행 시퀀스 위치의 시작 줄 번호입니다.  
   
  `columns`  
- [in] The starting column numbers of the sequence points.  
+ 진행 시퀀스 위치의 시작 열 번호입니다.  
   
  `endLines`  
- [in] The ending line numbers of the sequence points. 이 매개 변수는 선택적 요소입니다.  
+ 진행 시퀀스 위치의 끝 줄 번호입니다. 이 매개 변수는 선택 사항입니다.  
   
  `endColumns`  
- [in] The ending column numbers of the sequence points. 이 매개 변수는 선택적 요소입니다.  
+ 진행 시퀀스 위치의 끝 열 번호입니다. 이 매개 변수는 선택 사항입니다.  
   
 ## <a name="return-value"></a>반환 값  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **Header:** CorSym.idl, CorSym.h  
+ **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [ISymUnmanagedWriter 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
