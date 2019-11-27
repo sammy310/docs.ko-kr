@@ -38,34 +38,34 @@ HRESULT EnumModuleRefs (
   
 ## <a name="parameters"></a>매개 변수  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
+ [in, out] 열거자에 대 한 포인터입니다. 이 메서드의 첫 번째 호출에서는 NULL 이어야 합니다.  
   
  `rModuleRefs`  
- [out] The array used to store the ModuleRef tokens.  
+ 제한이 ModuleRef 토큰을 저장 하는 데 사용 되는 배열입니다.  
   
  `cMax`  
  [in] `rModuleRefs` 배열의 최대 크기입니다.  
   
  `pcModuleRefs`  
- [out] The number of ModuleRef tokens returned in `rModuleRefs`.  
+ 제한이 `rModuleRefs`에서 반환 된 ModuleRef 토큰 수입니다.  
   
 ## <a name="return-value"></a>반환 값  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
-|`S_OK`|`EnumModuleRefs` returned successfully.|  
-|`S_FALSE`|There are no tokens to enumerate. In that case, `pcModuleRefs` is zero.|  
+|`S_OK`|`EnumModuleRefs` 성공적으로 반환 되었습니다.|  
+|`S_FALSE`|열거할 토큰이 없습니다. 이 경우 `pcModuleRefs`은 0입니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [IMetaDataImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449350"
 ---
 # <a name="getalinkmessagedll-function"></a>GetALinkMessageDll 함수
-Finds and loads the message DLL. Returns 0 if the message DLL could not be located or loaded. The message DLL should be either in a subdirectory whose name is a language ID, or in the current directory.  
+메시지 DLL을 찾아서 로드 합니다. 메시지 DLL을 찾을 수 없거나 로드할 수 없는 경우 0을 반환 합니다. 메시지 DLL은 이름이 언어 ID 이거나 현재 디렉터리에 있는 하위 디렉터리에 있어야 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -32,10 +32,10 @@ HINSTANCE WINAPI GetALinkMessageDll();
 ```  
   
 ## <a name="requirements"></a>요구 사항  
- **Header:** alink.h  
+ **헤더:** alink. h  
   
- **Library**: alink.dll  
+ **라이브러리**: alink .dll  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Al.exe(어셈블리 링커)](../../tools/al-exe-assembly-linker.md)

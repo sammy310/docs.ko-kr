@@ -39,37 +39,37 @@ HRESULT EnumMethods (
   
 ## <a name="parameters"></a>매개 변수  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
+ [in, out] 열거자에 대 한 포인터입니다. 이 메서드의 첫 번째 호출에서는 NULL 이어야 합니다.  
   
  `cl`  
- [in] A TypeDef token representing the type with the methods to enumerate.  
+ 진행 열거할 메서드가 포함 된 형식을 나타내는 TypeDef 토큰입니다.  
   
  `rMethods`  
- [out] The array to store the MethodDef tokens.  
+ 제한이 MethodDef 토큰을 저장할 배열입니다.  
   
  `cMax`  
- [in] The maximum size of the MethodDef `rMethods` array.  
+ 진행 MethodDef `rMethods` 배열의 최대 크기입니다.  
   
  `pcTokens`  
- [out] The number of MethodDef tokens returned in `rMethods`.  
+ 제한이 `rMethods`에서 반환 된 MethodDef 토큰 수입니다.  
   
 ## <a name="return-value"></a>반환 값  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethods` returned successfully.|  
-|`S_FALSE`|There are no MethodDef tokens to enumerate. In that case, `pcTokens` is zero.|  
+|`S_OK`|`EnumMethods` 성공적으로 반환 되었습니다.|  
+|`S_FALSE`|열거할 MethodDef 토큰이 없습니다. 이 경우 `pcTokens`은 0입니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [IMetaDataImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
