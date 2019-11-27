@@ -14,20 +14,20 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350653"
 ---
-# <a name="myresponse-object"></a><span data-ttu-id="c6d4a-102">My.Response 개체</span><span class="sxs-lookup"><span data-stu-id="c6d4a-102">My.Response Object</span></span>
-<span data-ttu-id="c6d4a-103">Gets the <xref:System.Web.HttpResponse> object associated with the <xref:System.Web.UI.Page>.</span><span class="sxs-lookup"><span data-stu-id="c6d4a-103">Gets the <xref:System.Web.HttpResponse> object associated with the <xref:System.Web.UI.Page>.</span></span> <span data-ttu-id="c6d4a-104">이 개체를 사용하여 HTTP 응답 데이터를 클라이언트에 보낼 수 있고 이 개체는 해당 응답에 대한 정보를 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="c6d4a-104">This object allows you to send HTTP response data to a client and contains information about that response.</span></span>  
+# <a name="myresponse-object"></a><span data-ttu-id="e57c5-102">My.Response 개체</span><span class="sxs-lookup"><span data-stu-id="e57c5-102">My.Response Object</span></span>
+<span data-ttu-id="e57c5-103"><xref:System.Web.UI.Page>와 연결 된 <xref:System.Web.HttpResponse> 개체를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="e57c5-103">Gets the <xref:System.Web.HttpResponse> object associated with the <xref:System.Web.UI.Page>.</span></span> <span data-ttu-id="e57c5-104">이 개체를 사용하여 HTTP 응답 데이터를 클라이언트에 보낼 수 있고 이 개체는 해당 응답에 대한 정보를 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="e57c5-104">This object allows you to send HTTP response data to a client and contains information about that response.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="c6d4a-105">주의</span><span class="sxs-lookup"><span data-stu-id="c6d4a-105">Remarks</span></span>  
- <span data-ttu-id="c6d4a-106">The `My.Response` object contains the current <xref:System.Web.HttpResponse> object associated with the page.</span><span class="sxs-lookup"><span data-stu-id="c6d4a-106">The `My.Response` object contains the current <xref:System.Web.HttpResponse> object associated with the page.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e57c5-105">주의</span><span class="sxs-lookup"><span data-stu-id="e57c5-105">Remarks</span></span>  
+ <span data-ttu-id="e57c5-106">`My.Response` 개체에는 페이지와 연결 된 현재 <xref:System.Web.HttpResponse> 개체가 포함 되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e57c5-106">The `My.Response` object contains the current <xref:System.Web.HttpResponse> object associated with the page.</span></span>  
   
- <span data-ttu-id="c6d4a-107">The `My.Response` object is only available for ASP.NET applications.</span><span class="sxs-lookup"><span data-stu-id="c6d4a-107">The `My.Response` object is only available for ASP.NET applications.</span></span>  
+ <span data-ttu-id="e57c5-107">`My.Response` 개체는 ASP.NET 응용 프로그램에만 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e57c5-107">The `My.Response` object is only available for ASP.NET applications.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="c6d4a-108">예제</span><span class="sxs-lookup"><span data-stu-id="c6d4a-108">Example</span></span>  
- <span data-ttu-id="c6d4a-109">The following example gets the header collection from the `My.Request` object and uses the `My.Response` object to write it to the ASP.NET page.</span><span class="sxs-lookup"><span data-stu-id="c6d4a-109">The following example gets the header collection from the `My.Request` object and uses the `My.Response` object to write it to the ASP.NET page.</span></span>  
+## <a name="example"></a><span data-ttu-id="e57c5-108">예제</span><span class="sxs-lookup"><span data-stu-id="e57c5-108">Example</span></span>  
+ <span data-ttu-id="e57c5-109">다음 예제에서는 `My.Request` 개체에서 헤더 컬렉션을 가져온 다음 `My.Response` 개체를 사용 하 여 ASP.NET 페이지에 씁니다.</span><span class="sxs-lookup"><span data-stu-id="e57c5-109">The following example gets the header collection from the `My.Request` object and uses the `My.Response` object to write it to the ASP.NET page.</span></span>  
   
  [!code-aspx-vb[VbVbalrMyWeb#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyWeb/VB/Default.aspx#1)]  
   
-## <a name="see-also"></a><span data-ttu-id="c6d4a-110">참조</span><span class="sxs-lookup"><span data-stu-id="c6d4a-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e57c5-110">참고 항목</span><span class="sxs-lookup"><span data-stu-id="e57c5-110">See also</span></span>
 
 - <xref:System.Web.HttpResponse>
-- [<span data-ttu-id="c6d4a-111">My.Request 개체</span><span class="sxs-lookup"><span data-stu-id="c6d4a-111">My.Request Object</span></span>](../../../visual-basic/language-reference/objects/my-request-object.md)
+- [<span data-ttu-id="e57c5-111">My.Request 개체</span><span class="sxs-lookup"><span data-stu-id="e57c5-111">My.Request Object</span></span>](../../../visual-basic/language-reference/objects/my-request-object.md)

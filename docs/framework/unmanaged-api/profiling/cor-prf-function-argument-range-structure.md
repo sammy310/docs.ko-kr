@@ -21,10 +21,10 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449493"
 ---
-# <a name="cor_prf_function_argument_range-structure"></a><span data-ttu-id="52e99-102">COR_PRF_FUNCTION_ARGUMENT_RANGE 구조체</span><span class="sxs-lookup"><span data-stu-id="52e99-102">COR_PRF_FUNCTION_ARGUMENT_RANGE Structure</span></span>
-<span data-ttu-id="52e99-103">왼쪽에서 오른쪽 순서로 연속적으로 메모리에 저장한 함수 인수 블록을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="52e99-103">Represents a block of function arguments stored contiguously in left-to-right order in memory.</span></span>  
+# <a name="cor_prf_function_argument_range-structure"></a><span data-ttu-id="186a2-102">COR_PRF_FUNCTION_ARGUMENT_RANGE 구조체</span><span class="sxs-lookup"><span data-stu-id="186a2-102">COR_PRF_FUNCTION_ARGUMENT_RANGE Structure</span></span>
+<span data-ttu-id="186a2-103">왼쪽에서 오른쪽 순서로 연속적으로 메모리에 저장한 함수 인수 블록을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="186a2-103">Represents a block of function arguments stored contiguously in left-to-right order in memory.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="52e99-104">구문</span><span class="sxs-lookup"><span data-stu-id="52e99-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="186a2-104">구문</span><span class="sxs-lookup"><span data-stu-id="186a2-104">Syntax</span></span>  
   
 ```cpp  
 typedef struct _COR_PRF_FUNCTION_ARGUMENT_RANGE {  
@@ -33,22 +33,22 @@ typedef struct _COR_PRF_FUNCTION_ARGUMENT_RANGE {
 } COR_PRF_FUNCTION_ARGUMENT_RANGE;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="52e99-105">멤버</span><span class="sxs-lookup"><span data-stu-id="52e99-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="186a2-105">멤버</span><span class="sxs-lookup"><span data-stu-id="186a2-105">Members</span></span>  
   
-|<span data-ttu-id="52e99-106">멤버</span><span class="sxs-lookup"><span data-stu-id="52e99-106">Members</span></span>|<span data-ttu-id="52e99-107">설명</span><span class="sxs-lookup"><span data-stu-id="52e99-107">Description</span></span>|  
+|<span data-ttu-id="186a2-106">멤버</span><span class="sxs-lookup"><span data-stu-id="186a2-106">Members</span></span>|<span data-ttu-id="186a2-107">설명</span><span class="sxs-lookup"><span data-stu-id="186a2-107">Description</span></span>|  
 |-------------|-----------------|  
-|`startAddress`|<span data-ttu-id="52e99-108">The starting address of the block.</span><span class="sxs-lookup"><span data-stu-id="52e99-108">The starting address of the block.</span></span>|  
-|`length`|<span data-ttu-id="52e99-109">The length of the contiguous block.</span><span class="sxs-lookup"><span data-stu-id="52e99-109">The length of the contiguous block.</span></span>|  
+|`startAddress`|<span data-ttu-id="186a2-108">블록의 시작 주소입니다.</span><span class="sxs-lookup"><span data-stu-id="186a2-108">The starting address of the block.</span></span>|  
+|`length`|<span data-ttu-id="186a2-109">연속 블록의 길이입니다.</span><span class="sxs-lookup"><span data-stu-id="186a2-109">The length of the contiguous block.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="52e99-110">요구 사항</span><span class="sxs-lookup"><span data-stu-id="52e99-110">Requirements</span></span>  
- <span data-ttu-id="52e99-111">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="52e99-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="186a2-110">요구 사항</span><span class="sxs-lookup"><span data-stu-id="186a2-110">Requirements</span></span>  
+ <span data-ttu-id="186a2-111">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="186a2-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="52e99-112">**Header:** CorProf.idl</span><span class="sxs-lookup"><span data-stu-id="52e99-112">**Header:** CorProf.idl</span></span>  
+ <span data-ttu-id="186a2-112">**헤더:** Corprof.idl</span><span class="sxs-lookup"><span data-stu-id="186a2-112">**Header:** CorProf.idl</span></span>  
   
- <span data-ttu-id="52e99-113">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="52e99-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="186a2-113">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="186a2-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="52e99-114">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="52e99-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="186a2-114">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="186a2-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="52e99-115">참조</span><span class="sxs-lookup"><span data-stu-id="52e99-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="186a2-115">참고 항목</span><span class="sxs-lookup"><span data-stu-id="186a2-115">See also</span></span>
 
-- [<span data-ttu-id="52e99-116">프로파일링 구조체</span><span class="sxs-lookup"><span data-stu-id="52e99-116">Profiling Structures</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)
+- [<span data-ttu-id="186a2-116">프로파일링 구조체</span><span class="sxs-lookup"><span data-stu-id="186a2-116">Profiling Structures</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)

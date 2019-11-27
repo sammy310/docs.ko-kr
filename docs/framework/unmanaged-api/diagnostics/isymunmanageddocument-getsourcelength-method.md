@@ -22,23 +22,23 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449156"
 ---
-# <a name="isymunmanageddocumentgetsourcelength-method"></a><span data-ttu-id="f6c8f-102">ISymUnmanagedDocument::GetSourceLength 메서드</span><span class="sxs-lookup"><span data-stu-id="f6c8f-102">ISymUnmanagedDocument::GetSourceLength Method</span></span>
-<span data-ttu-id="f6c8f-103">Gets the length, in bytes, of the embedded source.</span><span class="sxs-lookup"><span data-stu-id="f6c8f-103">Gets the length, in bytes, of the embedded source.</span></span>  
+# <a name="isymunmanageddocumentgetsourcelength-method"></a><span data-ttu-id="76bff-102">ISymUnmanagedDocument::GetSourceLength 메서드</span><span class="sxs-lookup"><span data-stu-id="76bff-102">ISymUnmanagedDocument::GetSourceLength Method</span></span>
+<span data-ttu-id="76bff-103">포함 소스의 길이(바이트)를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="76bff-103">Gets the length, in bytes, of the embedded source.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f6c8f-104">구문</span><span class="sxs-lookup"><span data-stu-id="f6c8f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="76bff-104">구문</span><span class="sxs-lookup"><span data-stu-id="76bff-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetSourceLength(  
     [out, retval]  ULONG32*  pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f6c8f-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="f6c8f-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="76bff-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="76bff-105">Parameters</span></span>  
  `pRetVal`  
- <span data-ttu-id="f6c8f-106">[out] A pointer to a variable that indicates the length, in bytes, of the embedded source.</span><span class="sxs-lookup"><span data-stu-id="f6c8f-106">[out] A pointer to a variable that indicates the length, in bytes, of the embedded source.</span></span>  
+ <span data-ttu-id="76bff-106">제한이 포함 된 소스의 길이 (바이트)를 나타내는 변수에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="76bff-106">[out] A pointer to a variable that indicates the length, in bytes, of the embedded source.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="f6c8f-107">반환 값</span><span class="sxs-lookup"><span data-stu-id="f6c8f-107">Return Value</span></span>  
- <span data-ttu-id="f6c8f-108">S_OK if the method succeeds.</span><span class="sxs-lookup"><span data-stu-id="f6c8f-108">S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="76bff-107">반환 값</span><span class="sxs-lookup"><span data-stu-id="76bff-107">Return Value</span></span>  
+ <span data-ttu-id="76bff-108">메서드가 성공 하면 S_OK 합니다.</span><span class="sxs-lookup"><span data-stu-id="76bff-108">S_OK if the method succeeds.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f6c8f-109">참조</span><span class="sxs-lookup"><span data-stu-id="f6c8f-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="76bff-109">참고 항목</span><span class="sxs-lookup"><span data-stu-id="76bff-109">See also</span></span>
 
-- [<span data-ttu-id="f6c8f-110">ISymUnmanagedDocument 인터페이스</span><span class="sxs-lookup"><span data-stu-id="f6c8f-110">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+- [<span data-ttu-id="76bff-110">ISymUnmanagedDocument 인터페이스</span><span class="sxs-lookup"><span data-stu-id="76bff-110">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

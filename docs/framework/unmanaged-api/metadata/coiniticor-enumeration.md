@@ -21,10 +21,10 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444270"
 ---
-# <a name="coiniticor-enumeration"></a><span data-ttu-id="85fee-102">COINITICOR 열거형</span><span class="sxs-lookup"><span data-stu-id="85fee-102">COINITICOR Enumeration</span></span>
-<span data-ttu-id="85fee-103">Specifies constants used by [CoInitializeCor](../../../../docs/framework/unmanaged-api/hosting/coinitializecor-function.md) when it initializes the common language runtime.</span><span class="sxs-lookup"><span data-stu-id="85fee-103">Specifies constants used by [CoInitializeCor](../../../../docs/framework/unmanaged-api/hosting/coinitializecor-function.md) when it initializes the common language runtime.</span></span>  
+# <a name="coiniticor-enumeration"></a><span data-ttu-id="5a78c-102">COINITICOR 열거형</span><span class="sxs-lookup"><span data-stu-id="5a78c-102">COINITICOR Enumeration</span></span>
+<span data-ttu-id="5a78c-103">공용 언어 런타임을 초기화할 때 [CoInitializeCor](../../../../docs/framework/unmanaged-api/hosting/coinitializecor-function.md) 에서 사용 하는 상수를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="5a78c-103">Specifies constants used by [CoInitializeCor](../../../../docs/framework/unmanaged-api/hosting/coinitializecor-function.md) when it initializes the common language runtime.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="85fee-104">구문</span><span class="sxs-lookup"><span data-stu-id="85fee-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5a78c-104">구문</span><span class="sxs-lookup"><span data-stu-id="5a78c-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum tagCOINITCOR  
@@ -33,21 +33,21 @@ typedef enum tagCOINITCOR
 } COINITICOR;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="85fee-105">멤버</span><span class="sxs-lookup"><span data-stu-id="85fee-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="5a78c-105">멤버</span><span class="sxs-lookup"><span data-stu-id="5a78c-105">Members</span></span>  
   
-|<span data-ttu-id="85fee-106">멤버</span><span class="sxs-lookup"><span data-stu-id="85fee-106">Member</span></span>|<span data-ttu-id="85fee-107">설명</span><span class="sxs-lookup"><span data-stu-id="85fee-107">Description</span></span>|  
+|<span data-ttu-id="5a78c-106">멤버</span><span class="sxs-lookup"><span data-stu-id="5a78c-106">Member</span></span>|<span data-ttu-id="5a78c-107">설명</span><span class="sxs-lookup"><span data-stu-id="5a78c-107">Description</span></span>|  
 |------------|-----------------|  
-|`COINITCOR`|<span data-ttu-id="85fee-108">Indicates the default initialization mode.</span><span class="sxs-lookup"><span data-stu-id="85fee-108">Indicates the default initialization mode.</span></span>|  
+|`COINITCOR`|<span data-ttu-id="5a78c-108">기본 초기화 모드를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="5a78c-108">Indicates the default initialization mode.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="85fee-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="85fee-109">Requirements</span></span>  
- <span data-ttu-id="85fee-110">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="85fee-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5a78c-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="5a78c-109">Requirements</span></span>  
+ <span data-ttu-id="5a78c-110">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="5a78c-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="85fee-111">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="85fee-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="5a78c-111">**헤더:** Cor</span><span class="sxs-lookup"><span data-stu-id="5a78c-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="85fee-112">**Library:** Included as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="85fee-112">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="5a78c-112">**라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="5a78c-112">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="85fee-113">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="85fee-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="5a78c-113">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5a78c-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="85fee-114">참조</span><span class="sxs-lookup"><span data-stu-id="85fee-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5a78c-114">참고 항목</span><span class="sxs-lookup"><span data-stu-id="5a78c-114">See also</span></span>
 
-- [<span data-ttu-id="85fee-115">메타데이터 열거형</span><span class="sxs-lookup"><span data-stu-id="85fee-115">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="5a78c-115">메타데이터 열거형</span><span class="sxs-lookup"><span data-stu-id="5a78c-115">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

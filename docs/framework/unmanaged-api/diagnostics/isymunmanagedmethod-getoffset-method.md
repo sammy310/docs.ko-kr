@@ -22,10 +22,10 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448941"
 ---
-# <a name="isymunmanagedmethodgetoffset-method"></a><span data-ttu-id="d3401-102">ISymUnmanagedMethod::GetOffset 메서드</span><span class="sxs-lookup"><span data-stu-id="d3401-102">ISymUnmanagedMethod::GetOffset Method</span></span>
-<span data-ttu-id="d3401-103">Returns the offset within this method that corresponds to a given position within a document.</span><span class="sxs-lookup"><span data-stu-id="d3401-103">Returns the offset within this method that corresponds to a given position within a document.</span></span>  
+# <a name="isymunmanagedmethodgetoffset-method"></a><span data-ttu-id="47a6a-102">ISymUnmanagedMethod::GetOffset 메서드</span><span class="sxs-lookup"><span data-stu-id="47a6a-102">ISymUnmanagedMethod::GetOffset Method</span></span>
+<span data-ttu-id="47a6a-103">문서 내의 지정 된 위치에 해당 하는이 메서드 내의 오프셋을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="47a6a-103">Returns the offset within this method that corresponds to a given position within a document.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d3401-104">구문</span><span class="sxs-lookup"><span data-stu-id="d3401-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="47a6a-104">구문</span><span class="sxs-lookup"><span data-stu-id="47a6a-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetOffset(  
@@ -35,25 +35,25 @@ HRESULT GetOffset(
     [out, retval] ULONG32*        pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d3401-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="d3401-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="47a6a-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="47a6a-105">Parameters</span></span>  
  `document`  
- <span data-ttu-id="d3401-106">[in] A pointer to the document for which the offset is requested.</span><span class="sxs-lookup"><span data-stu-id="d3401-106">[in] A pointer to the document for which the offset is requested.</span></span>  
+ <span data-ttu-id="47a6a-106">진행 오프셋이 요청 된 문서에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="47a6a-106">[in] A pointer to the document for which the offset is requested.</span></span>  
   
  `line`  
- <span data-ttu-id="d3401-107">[in] The document line for which the offset is requested.</span><span class="sxs-lookup"><span data-stu-id="d3401-107">[in] The document line for which the offset is requested.</span></span>  
+ <span data-ttu-id="47a6a-107">진행 오프셋이 요청 된 문서 줄입니다.</span><span class="sxs-lookup"><span data-stu-id="47a6a-107">[in] The document line for which the offset is requested.</span></span>  
   
  `column`  
- <span data-ttu-id="d3401-108">[in] The document column for which the offset is requested.</span><span class="sxs-lookup"><span data-stu-id="d3401-108">[in] The document column for which the offset is requested.</span></span>  
+ <span data-ttu-id="47a6a-108">진행 오프셋이 요청 된 문서 열입니다.</span><span class="sxs-lookup"><span data-stu-id="47a6a-108">[in] The document column for which the offset is requested.</span></span>  
   
  `pRetVal`  
- <span data-ttu-id="d3401-109">[out] A pointer to a `ULONG32` that receives the offsets.</span><span class="sxs-lookup"><span data-stu-id="d3401-109">[out] A pointer to a `ULONG32` that receives the offsets.</span></span>  
+ <span data-ttu-id="47a6a-109">제한이 오프셋을 수신 하는 `ULONG32`에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="47a6a-109">[out] A pointer to a `ULONG32` that receives the offsets.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="d3401-110">반환 값</span><span class="sxs-lookup"><span data-stu-id="d3401-110">Return Value</span></span>  
- <span data-ttu-id="d3401-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="d3401-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="47a6a-110">반환 값</span><span class="sxs-lookup"><span data-stu-id="47a6a-110">Return Value</span></span>  
+ <span data-ttu-id="47a6a-111">메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="47a6a-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d3401-112">요구 사항</span><span class="sxs-lookup"><span data-stu-id="d3401-112">Requirements</span></span>  
- <span data-ttu-id="d3401-113">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="d3401-113">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="47a6a-112">요구 사항</span><span class="sxs-lookup"><span data-stu-id="47a6a-112">Requirements</span></span>  
+ <span data-ttu-id="47a6a-113">**헤더:** CorSym, CorSym</span><span class="sxs-lookup"><span data-stu-id="47a6a-113">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d3401-114">참조</span><span class="sxs-lookup"><span data-stu-id="d3401-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="47a6a-114">참고 항목</span><span class="sxs-lookup"><span data-stu-id="47a6a-114">See also</span></span>
 
-- [<span data-ttu-id="d3401-115">ISymUnmanagedMethod 인터페이스</span><span class="sxs-lookup"><span data-stu-id="d3401-115">ISymUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+- [<span data-ttu-id="47a6a-115">ISymUnmanagedMethod 인터페이스</span><span class="sxs-lookup"><span data-stu-id="47a6a-115">ISymUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

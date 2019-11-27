@@ -22,10 +22,10 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449208"
 ---
-# <a name="isymunmanageddocumentgetchecksum-method"></a><span data-ttu-id="5ccf4-102">ISymUnmanagedDocument::GetCheckSum 메서드</span><span class="sxs-lookup"><span data-stu-id="5ccf4-102">ISymUnmanagedDocument::GetCheckSum Method</span></span>
-<span data-ttu-id="5ccf4-103">Gets the checksum.</span><span class="sxs-lookup"><span data-stu-id="5ccf4-103">Gets the checksum.</span></span>  
+# <a name="isymunmanageddocumentgetchecksum-method"></a><span data-ttu-id="f6906-102">ISymUnmanagedDocument::GetCheckSum 메서드</span><span class="sxs-lookup"><span data-stu-id="f6906-102">ISymUnmanagedDocument::GetCheckSum Method</span></span>
+<span data-ttu-id="f6906-103">체크섬을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="f6906-103">Gets the checksum.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5ccf4-104">구문</span><span class="sxs-lookup"><span data-stu-id="5ccf4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f6906-104">구문</span><span class="sxs-lookup"><span data-stu-id="f6906-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetCheckSum(  
@@ -34,19 +34,19 @@ HRESULT GetCheckSum(
     [out, size_is(cData), length_is(*pcData)] BYTE data[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="5ccf4-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="5ccf4-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f6906-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="f6906-105">Parameters</span></span>  
  `cData`  
- <span data-ttu-id="5ccf4-106">[in] The length of the buffer provided by the `data` parameter</span><span class="sxs-lookup"><span data-stu-id="5ccf4-106">[in] The length of the buffer provided by the `data` parameter</span></span>  
+ <span data-ttu-id="f6906-106">진행 `data` 매개 변수에서 제공 하는 버퍼의 길이입니다.</span><span class="sxs-lookup"><span data-stu-id="f6906-106">[in] The length of the buffer provided by the `data` parameter</span></span>  
   
  `pcData`  
- <span data-ttu-id="5ccf4-107">[out] The size and length of the checksum, in bytes.</span><span class="sxs-lookup"><span data-stu-id="5ccf4-107">[out] The size and length of the checksum, in bytes.</span></span>  
+ <span data-ttu-id="f6906-107">제한이 체크섬의 크기 및 길이 (바이트)입니다.</span><span class="sxs-lookup"><span data-stu-id="f6906-107">[out] The size and length of the checksum, in bytes.</span></span>  
   
  `data`  
- <span data-ttu-id="5ccf4-108">[out] The buffer that receives the checksum.</span><span class="sxs-lookup"><span data-stu-id="5ccf4-108">[out] The buffer that receives the checksum.</span></span>  
+ <span data-ttu-id="f6906-108">제한이 체크섬을 수신 하는 버퍼입니다.</span><span class="sxs-lookup"><span data-stu-id="f6906-108">[out] The buffer that receives the checksum.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="5ccf4-109">반환 값</span><span class="sxs-lookup"><span data-stu-id="5ccf4-109">Return Value</span></span>  
- <span data-ttu-id="5ccf4-110">S_OK if the method succeeds; otherwise, an error code.</span><span class="sxs-lookup"><span data-stu-id="5ccf4-110">S_OK if the method succeeds; otherwise, an error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="f6906-109">반환 값</span><span class="sxs-lookup"><span data-stu-id="f6906-109">Return Value</span></span>  
+ <span data-ttu-id="f6906-110">메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 오류 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="f6906-110">S_OK if the method succeeds; otherwise, an error code.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5ccf4-111">참조</span><span class="sxs-lookup"><span data-stu-id="5ccf4-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f6906-111">참고 항목</span><span class="sxs-lookup"><span data-stu-id="f6906-111">See also</span></span>
 
-- [<span data-ttu-id="5ccf4-112">ISymUnmanagedDocument 인터페이스</span><span class="sxs-lookup"><span data-stu-id="5ccf4-112">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+- [<span data-ttu-id="f6906-112">ISymUnmanagedDocument 인터페이스</span><span class="sxs-lookup"><span data-stu-id="f6906-112">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
