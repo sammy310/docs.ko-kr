@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447236"
 ---
 # <a name="getpublickeytoken-method"></a>GetPublicKeyToken 메서드
-Retrieves the public key token for a given keyfile or key container.  
+지정 된 keyfile 또는 키 컨테이너에 대 한 공개 키 토큰을 검색 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,24 +37,24 @@ HRESULT GetPublicKeyToken(
   
 ## <a name="parameters"></a>매개 변수  
  `pszKeyFile`  
- Filename of the key.  
+ 키의 파일 이름입니다.  
   
  `pszKeyContainer`  
- Name of the key container.  
+ 키 컨테이너의 이름입니다.  
   
  `pvPublicKeyToken`  
- Address where key token is to be stored.  
+ 키 토큰을 저장할 주소입니다.  
   
  `pcbPublicKeyToken`  
- Specifies the size, in bytes, of the buffer indicated by `pvPublicKeyToken`. Upon return, contains actual number of bytes used.  
+ `pvPublicKeyToken`로 표시 되는 버퍼의 크기 (바이트)를 지정 합니다. 반환 시 실제 사용 된 바이트 수를 포함 합니다.  
   
 ## <a name="return-value"></a>반환 값  
- Returns S_OK if the method succeeds.  
+ 메서드가 성공 하면 S_OK을 반환 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- Requires alink.h.  
+ Alink가 필요 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IALink2 인터페이스](ialink2-interface.md)
 - [IALink 인터페이스](ialink-interface.md)

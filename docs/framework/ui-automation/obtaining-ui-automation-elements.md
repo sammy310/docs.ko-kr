@@ -5,16 +5,16 @@ helpviewer_keywords:
 - UI Automation, obtaining elements
 - elements, UI Automation, obtaining
 ms.assetid: c2caaf45-e59c-42a1-bc9b-77a6de520171
-ms.openlocfilehash: 46de1b5de8ef7585919d331e6bf4b1537739ae1d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 0ae4694e2efb6f6c51b279adf2851baf38785c8b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71042884"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446893"
 ---
 # <a name="obtaining-ui-automation-elements"></a>UI 자동화 요소 가져오기
 > [!NOTE]
-> 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. 에 대 한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [최신 정보는 Windows Automation API: UI 자동화](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> 이 설명서는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 네임스페이스에 정의된 관리되는 <xref:System.Windows.Automation> 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조하세요.  
   
  이 항목에서는 <xref:System.Windows.Automation.AutomationElement> 요소에 대한 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 개체를 가져오는 다양한 방법을 설명합니다.  
   
@@ -22,7 +22,7 @@ ms.locfileid: "71042884"
 > 클라이언트 애플리케이션이 자체 사용자 인터페이스에서 요소를 찾으려고 시도하는 경우 별도 스레드에서 모든 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 을 호출해야 합니다. 자세한 내용은 [UI Automation Threading Issues](ui-automation-threading-issues.md)을 참조하세요.  
   
 <a name="The_Root_Element"></a>   
-## <a name="root-element"></a>루트 요소  
+## <a name="root-element"></a>Root 요소  
  <xref:System.Windows.Automation.AutomationElement> 개체에 대한 모든 검색은 시작 지점이 있어야 합니다. 데스크톱, 애플리케이션 창 또는 컨트롤을 포함한 모든 요소가 대상이 될 수 있습니다.  
   
  모든 요소가 하위 항목인 데스크톱의 루트 요소는 정적 <xref:System.Windows.Automation.AutomationElement.RootElement%2A?displayProperty=nameWithType> 속성에서 가져옵니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "71042884"
 > 일반적으로 <xref:System.Windows.Automation.AutomationElement.RootElement%2A>의 직계 자식 항목만 가져와야 합니다. 하위 항목 검색은 수 많은 요소에서 반복될 수 있기 때문에 스택 오버플로가 발생할 수 있습니다. 낮은 수준의 특정 요소를 가져오려고 시도하는 경우, 낮은 수준의 컨테이너 또는 애플리케이션 창에서 검색을 시작해야 합니다.  
   
 <a name="Using_Conditions"></a>   
-## <a name="conditions"></a>조건  
+## <a name="conditions"></a>상태  
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 요소를 검색할 때 사용할 수 있는 대부분의 기술에 대해, 검색할 요소가 무엇인지 정의하는 기준 집합인 <xref:System.Windows.Automation.Condition>을 지정해야 합니다.  
   
  가장 간단한 조건은 <xref:System.Windows.Automation.Condition.TrueCondition>으로서, 검색 범위 내의 모든 요소가 반환되도록 하는 미리 정의된 개체입니다. <xref:System.Windows.Automation.Condition.FalseCondition>과는 반대로 <xref:System.Windows.Automation.Condition.TrueCondition>은 요소가 검색되지 않도록 하기 때문에 그다지 유용하지 않습니다.  
@@ -96,7 +96,7 @@ ms.locfileid: "71042884"
 ### <a name="from-the-focused-control"></a>포커스가 있는 컨트롤에서  
  정적 <xref:System.Windows.Automation.AutomationElement> 속성에서 포커스가 있는 컨트롤을 나타내는 <xref:System.Windows.Automation.AutomationElement.FocusedElement%2A> 를 검색할 수 있습니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - [속성 조건을 기반으로 UI 자동화 요소 찾기](find-a-ui-automation-element-based-on-a-property-condition.md)
 - [TreeWalker를 사용하여 UI 자동화 요소 간 탐색](navigate-among-ui-automation-elements-with-treewalker.md)

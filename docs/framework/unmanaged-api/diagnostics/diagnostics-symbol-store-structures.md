@@ -15,19 +15,19 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448508"
 ---
 # <a name="diagnostics-symbol-store-structures"></a>진단 기호 저장소 구조체
-This topic describes the unmanaged structures that the diagnostics symbol store API uses.  
+이 항목에서는 진단 기호 저장소 API에서 사용 하는 관리 되지 않는 구조체에 대해 설명 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [CALL_ID 구조체](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md)  
- Provides information to a debugger about a function that is being called.  
+ 호출 되는 함수에 대 한 정보를 디버거에 제공 합니다.  
   
  [SYMLINEDELTA 구조체](../../../../docs/framework/unmanaged-api/diagnostics/symlinedelta-structure.md)  
- Provides information to the symbol handler about methods that were moved as a result of edits.  
+ 편집의 결과로 이동 된 메서드에 대 한 정보를 기호 처리기에 제공 합니다.  
   
  [USER_THREAD 구조체](../../../../docs/framework/unmanaged-api/diagnostics/user-thread-structure.md)  
- Provides information to a debugger about a thread.  
+ 스레드에 대 한 정보를 디버거에 제공 합니다.  
   
-## <a name="related-sections"></a>관련 단원  
+## <a name="related-sections"></a>관련 섹션  
  [진단 기호 저장소 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)  
   
  [진단 기호 저장소 열거형](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)  

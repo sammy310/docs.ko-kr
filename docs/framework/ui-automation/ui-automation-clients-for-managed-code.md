@@ -16,11 +16,11 @@ ms.locfileid: "74448799"
 ---
 # <a name="ui-automation-clients-for-managed-code"></a>관리 코드에 대한 UI 자동화 클라이언트
 > [!NOTE]
-> 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조하세요.  
+> 이 설명서는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 네임스페이스에 정의된 관리되는 <xref:System.Windows.Automation> 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조하세요.  
   
  이 섹션에는 UI 자동화 클라이언트 개발에 도움이 되는 개요 및 방법이 설명되어 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [UI 자동화 및 화면 크기 조정](ui-automation-and-screen-scaling.md)  
  [표준 컨트롤에 대한 UI 자동화 지원](ui-automation-support-for-standard-controls.md)  
  [클라이언트용 UI 자동화 이벤트](ui-automation-events-for-clients.md)  
@@ -32,5 +32,5 @@ ms.locfileid: "74448799"
  [UI 자동화 스레딩 문제](ui-automation-threading-issues.md)  
  [방법 항목](ui-automation-clients-for-managed-code-how-to-topics.md)  
   
-## <a name="reference"></a>참고  
+## <a name="reference"></a>참조  
  <xref:System.Windows.Automation>

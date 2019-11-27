@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449156"
 ---
 # <a name="isymunmanageddocumentgetsourcelength-method"></a>ISymUnmanagedDocument::GetSourceLength 메서드
-Gets the length, in bytes, of the embedded source.  
+포함 소스의 길이(바이트)를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -34,11 +34,11 @@ HRESULT GetSourceLength(
   
 ## <a name="parameters"></a>매개 변수  
  `pRetVal`  
- [out] A pointer to a variable that indicates the length, in bytes, of the embedded source.  
+ 제한이 포함 된 소스의 길이 (바이트)를 나타내는 변수에 대 한 포인터입니다.  
   
 ## <a name="return-value"></a>반환 값  
- S_OK if the method succeeds.  
+ 메서드가 성공 하면 S_OK 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ISymUnmanagedDocument 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

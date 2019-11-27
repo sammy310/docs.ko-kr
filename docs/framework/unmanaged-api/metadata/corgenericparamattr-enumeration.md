@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450287"
 ---
 # <a name="corgenericparamattr-enumeration"></a>CorGenericParamAttr 열거형
-Contains values that describe the <xref:System.Type> parameters for generic types, as used in calls to [IMetaDataEmit2::DefineGenericParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md).  
+[IMetaDataEmit2::D efineGenericParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md)호출에 사용 되는 제네릭 형식에 대 한 <xref:System.Type> 매개 변수를 설명 하는 값을 포함 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -47,23 +47,23 @@ typedef enum CorGenericParamAttr {
   
 |멤버|설명|  
 |------------|-----------------|  
-|`gpVarianceMask`|Parameter variance applies only to generic parameters for interfaces and delegates.|  
-|`gpNonVariant`|Indicates the absence of variance.|  
-|`gpCovariant`|Indicates covariance.|  
-|`gpContravariant`|Indicates contravariance.|  
-|`gpSpecialConstraintMask`|Special constraints can apply to any <xref:System.Type> parameter.|  
-|`gpNoSpecialConstraint`|Indicates that no constraint applies to the <xref:System.Type> parameter.|  
-|`gpReferenceTypeConstraint`|Indicates that the <xref:System.Type> parameter must be a reference type.|  
-|`gpNotNullableValueTypeConstraint`|Indicates that the <xref:System.Type> parameter must be a value type that cannot be a null value.|  
-|`gpDefaultConstructorConstraint`|Indicates that the <xref:System.Type> parameter must have a default public constructor that takes no parameters.|  
+|`gpVarianceMask`|매개 변수 분산은 인터페이스 및 대리자에 대 한 제네릭 매개 변수에만 적용 됩니다.|  
+|`gpNonVariant`|분산이 없음을 나타냅니다.|  
+|`gpCovariant`|공 분산을 나타냅니다.|  
+|`gpContravariant`|반 공변성 (contravariance)을 나타냅니다.|  
+|`gpSpecialConstraintMask`|특수 제약 조건은 모든 <xref:System.Type> 매개 변수에 적용할 수 있습니다.|  
+|`gpNoSpecialConstraint`|<xref:System.Type> 매개 변수에 제약 조건이 적용 되지 않음을 나타냅니다.|  
+|`gpReferenceTypeConstraint`|<xref:System.Type> 매개 변수가 참조 형식 이어야 함을 나타냅니다.|  
+|`gpNotNullableValueTypeConstraint`|<xref:System.Type> 매개 변수가 null 값이 될 수 없는 값 형식 이어야 함을 나타냅니다.|  
+|`gpDefaultConstructorConstraint`|<xref:System.Type> 매개 변수에 매개 변수를 사용 하지 않는 기본 public 생성자가 있어야 함을 나타냅니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** CorHdr.h  
+ **헤더:** CorHdr .h  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [메타데이터 열거형](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

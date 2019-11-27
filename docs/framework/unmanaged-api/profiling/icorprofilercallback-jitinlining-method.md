@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449911"
 ---
 # <a name="icorprofilercallbackjitinlining-method"></a>ICorProfilerCallback::JITInlining 메서드
-Notifies the profiler that the just-in-time (JIT) compiler is about to insert a function in line with another function.  
+JIT (just-in-time) 컴파일러가 다른 함수를 사용 하 여 함수를 삽입 하려고 함을 프로파일러에 알립니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,18 +36,18 @@ HRESULT JITInlining(
   
 ## <a name="parameters"></a>매개 변수  
  `callerId`  
- [in] The ID of the function into which the `calleeId` function will be inserted.  
+ 진행 `calleeId` 함수를 삽입할 함수의 ID입니다.  
   
  `calleeId`  
- [in] The ID of the function to be inserted.  
+ 진행 삽입할 함수의 ID입니다.  
   
  `pfShouldInline`  
- [out] `true` to allow the insertion to occur; otherwise, `false`.  
+ [out] 삽입을 수행할 수 있도록 `true` 합니다. 그렇지 않으면 `false`합니다.  
   
 ## <a name="remarks"></a>주의  
- The profiler can set `pfShouldInline` to `false` to prevent the `calleeId` function from being inserted into the `callerId` function. Also, the profiler can globally disable inline insertion by using the COR_PRF_DISABLE_INLINING value of the [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md) enumeration.  
+ 프로파일러는 `false` `pfShouldInline`를 설정 하 여 `calleeId` 함수가 `callerId` 함수에 삽입 되지 않도록 할 수 있습니다. 또한 프로파일러는 [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md) 열거형의 COR_PRF_DISABLE_INLINING 값을 사용 하 여 인라인 삽입을 전역적으로 사용 하지 않도록 설정할 수 있습니다.  
   
- Functions inserted inline do not raise events for entering or leaving. Therefore, the profiler must set `pfShouldInline` to `false` in order to produce an accurate callgraph. Setting `pfShouldInline` to `false` will affect performance, because inline insertion typically increases speed and reduces the number of separate JIT compilation events for the inserted method.  
+ 인라인으로 삽입 된 함수는 시작 또는 종료에 대 한 이벤트를 발생 시 키 지 않습니다. 따라서 정확한 호출 그래프을 생성 하기 위해 프로파일러는 `false` `pfShouldInline` 설정 해야 합니다. 인라인 삽입은 일반적으로 속도가 향상 되 고 삽입 된 메서드에 대 한 별도의 JIT 컴파일 이벤트 수가 줄어들기 때문에 `pfShouldInline`를 `false`로 설정 하면 성능에 영향을 줍니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
@@ -58,6 +58,6 @@ HRESULT JITInlining(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerCallback 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

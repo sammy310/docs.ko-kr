@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448635"
 ---
 # <a name="cor_prf_gc_generation-enumeration"></a>COR_PRF_GC_GENERATION 열거형
-Identifies a garbage-collection generation.  
+가비지 컬렉션 생성을 식별 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,17 +39,17 @@ typedef enum {
   
 |멤버|설명|  
 |------------|-----------------|  
-|`COR_PRF_GC_GEN_0`|The object is stored as generation 0.|  
-|`COR_PRF_GC_GEN_1`|The object is stored as generation 1.|  
-|`COR_PRF_GC_GEN_2`|The object is stored as generation 2.|  
-|`COR_PRF_GC_LARGE_OBJECT_HEAP`|The object is stored in the large-object heap.|  
+|`COR_PRF_GC_GEN_0`|개체는 0 세대로 저장 됩니다.|  
+|`COR_PRF_GC_GEN_1`|개체는 1 세대로 저장 됩니다.|  
+|`COR_PRF_GC_GEN_2`|개체는 2 세대로 저장 됩니다.|  
+|`COR_PRF_GC_LARGE_OBJECT_HEAP`|개체가 대량 개체 힙에 저장 됩니다.|  
   
 ## <a name="remarks"></a>주의  
- The garbage collector improves memory management performance by dividing objects into generations based on age. The garbage collector currently uses three generations, numbered 0, 1, and 2, plus a special heap segment that is used for large objects. Objects whose size is larger than a particular value are stored in the large-object heap. Other allocated objects start out belonging to generation 0. All objects that exist after garbage collection occurs in generation 0 are promoted to generation 1. Objects that exist after garbage collection occurs in generation 1 move into generation 2.  
+ 가비지 수집기는 개체를 age를 기반으로 하는 세대로 분할 하 여 메모리 관리 성능을 향상 시킵니다. 가비지 수집기는 현재 세 세대 (숫자 0, 1, 2)를 사용 하 고 큰 개체에 사용 되는 특수 힙 세그먼트를 사용 합니다. 크기가 특정 값 보다 큰 개체는 큰 개체 힙에 저장 됩니다. 할당 된 다른 개체는 0 세대에 속하는 것으로 시작 합니다. 0 세대에서 가비지 수집 후에 존재 하는 모든 개체는 1 세대로 승격 됩니다. 1 세대에서 가비지 수집이 수행 된 후 존재 하는 개체는 2 세대로 이동 합니다.  
   
- The use of generations means that the garbage collector has to work with only a subset of the allocated objects at any one time.  
+ 세대를 사용 하면 가비지 수집기에서 한 번에 할당 된 개체의 하위 집합만 작업 해야 합니다.  
   
- The `COR_PRF_GC_GENERATION` enumeration is used by the [COR_PRF_GC_GENERATION_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-range-structure.md) structure.  
+ `COR_PRF_GC_GENERATION` 열거형은 [COR_PRF_GC_GENERATION_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-range-structure.md) 구조에서 사용 됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
@@ -60,6 +60,6 @@ typedef enum {
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [프로파일링 열거형](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

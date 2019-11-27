@@ -13,14 +13,14 @@ ms.locfileid: "74353907"
 ---
 # <a name="argument-not-optional-visual-basic"></a>필수 인수입니다(Visual Basic).
 
-The number and types of arguments must match those expected. Either there is an incorrect number of arguments, or an omitted argument is not optional. An argument can only be omitted from a call to a user-defined procedure if it was declared `Optional` in the procedure definition.  
+인수의 개수와 형식은 예상 값과 일치 해야 합니다. 인수 개수가 잘못 되었거나 생략 된 인수는 선택 사항이 아닙니다. 프로시저 정의에서 `Optional` 선언한 경우에만 사용자 정의 프로시저에 대 한 호출에서 인수를 생략할 수 있습니다.  
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
-1. Supply all necessary arguments.  
+1. 필요한 모든 인수를 제공 합니다.  
   
-2. Make sure omitted arguments are optional. If they are not, either supply the argument in the call, or declare the parameter `Optional` in the definition.  
+2. 생략 된 인수는 선택 사항입니다. 그렇지 않으면 호출에 인수를 제공 하거나 정의에서 `Optional` 매개 변수를 선언 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [오류 형식](../../../visual-basic/programming-guide/language-features/error-types.md)

@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450152"
 ---
 # <a name="cornotificationfortokenmovement-enumeration"></a>CorNotificationForTokenMovement 열거형
-Specifies the notifications that will be sent to the metadata API client when a token remap occurs.  
+토큰 다시 매핑을 수행 하는 경우 메타 데이터 API 클라이언트에 전송 되는 알림을 지정 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -63,40 +63,40 @@ typedef enum CorNotificationForTokenMovement {
   
 |멤버|설명|  
 |------------|-----------------|  
-|`MDNotifyDefault`|Notify when `mdTypeRef`, `mdMethodDef`, `mdMemberRef`, or `mdFieldDef` tokens move.|  
-|`MDNotifyAll`|Notify when any token moves.|  
-|`MDNotifyNone`|Do not notify when tokens move.|  
-|`MDNotifyMethodDef`|Notify when an `mdMethodDef` token moves.|  
-|`MDNotifyMemberRef`|Notify when an `mdMemberRef` token moves.|  
-|`MDNotifyFieldDef`|Notify when an `mdFieldDef` token moves.|  
-|`MDNotifyTypeRef`|Notify when an `mdTypeRef` token moves.|  
-|`MDNotifyTypeDef`|Notify when an `mdTypeDef` token moves.|  
-|`MDNotifyParamDef`|Notify when an `mdParamDef` token moves.|  
-|`MDNotifyInterfaceImpl`|Notify when an `mdInterfaceImpl` token moves.|  
-|`MDNotifyProperty`|Notify when an `mdProperty` token moves.|  
-|`MDNotifyEvent`|Notify when an `mdEvent` token moves.|  
-|`MDNotifySignature`|Notify when an `mdSignature` token moves.|  
-|`MDNotifyTypeSpec`|Notify when an `mdTypeSpec` token moves.|  
-|`MDNotifyCustomAttribute`|Notify when an `mdCustomAttribute` token moves.|  
-|`MDNotifySecurityValue`|Notify when an `mdSecurityValue` token moves.|  
-|`MDNotifyPermission`|Notify when an `mdPermission` token moves.|  
-|`MDNotifyModuleRef`|Notify when an `mdModuleRef` token moves.|  
-|`MDNotifyNameSpace`|Notify when an `mdNameSpace` token moves.|  
-|`MDNotifyAssemblyRef`|Notify when an `mdAssemblyRef` token moves.|  
-|`MDNotifyFile`|Notify when an `mdFile` token moves.|  
-|`MDNotifyExportedType`|Notify when an `mdExportedType` token moves.|  
-|`MDNotifyResource`|Notify when an `mdManifestResource` token moves.|  
+|`MDNotifyDefault`|`mdTypeRef`, `mdMethodDef`, `mdMemberRef`또는 `mdFieldDef` 토큰이 이동할 때 알립니다.|  
+|`MDNotifyAll`|토큰이 이동 하면 알립니다.|  
+|`MDNotifyNone`|토큰이 이동할 때 알리지 않습니다.|  
+|`MDNotifyMethodDef`|`mdMethodDef` 토큰이 이동할 때 알립니다.|  
+|`MDNotifyMemberRef`|`mdMemberRef` 토큰이 이동할 때 알립니다.|  
+|`MDNotifyFieldDef`|`mdFieldDef` 토큰이 이동할 때 알립니다.|  
+|`MDNotifyTypeRef`|`mdTypeRef` 토큰이 이동할 때 알립니다.|  
+|`MDNotifyTypeDef`|`mdTypeDef` 토큰이 이동할 때 알립니다.|  
+|`MDNotifyParamDef`|`mdParamDef` 토큰이 이동할 때 알립니다.|  
+|`MDNotifyInterfaceImpl`|`mdInterfaceImpl` 토큰이 이동할 때 알립니다.|  
+|`MDNotifyProperty`|`mdProperty` 토큰이 이동할 때 알립니다.|  
+|`MDNotifyEvent`|`mdEvent` 토큰이 이동할 때 알립니다.|  
+|`MDNotifySignature`|`mdSignature` 토큰이 이동할 때 알립니다.|  
+|`MDNotifyTypeSpec`|`mdTypeSpec` 토큰이 이동할 때 알립니다.|  
+|`MDNotifyCustomAttribute`|`mdCustomAttribute` 토큰이 이동할 때 알립니다.|  
+|`MDNotifySecurityValue`|`mdSecurityValue` 토큰이 이동할 때 알립니다.|  
+|`MDNotifyPermission`|`mdPermission` 토큰이 이동할 때 알립니다.|  
+|`MDNotifyModuleRef`|`mdModuleRef` 토큰이 이동할 때 알립니다.|  
+|`MDNotifyNameSpace`|`mdNameSpace` 토큰이 이동할 때 알립니다.|  
+|`MDNotifyAssemblyRef`|`mdAssemblyRef` 토큰이 이동할 때 알립니다.|  
+|`MDNotifyFile`|`mdFile` 토큰이 이동할 때 알립니다.|  
+|`MDNotifyExportedType`|`mdExportedType` 토큰이 이동할 때 알립니다.|  
+|`MDNotifyResource`|`mdManifestResource` 토큰이 이동할 때 알립니다.|  
   
 ## <a name="remarks"></a>주의  
- A token may be re-mapped (that is, moved) during a metadata merge.  
+ 토큰은 메타 데이터 병합 중에 다시 매핑 (즉, 이동) 될 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** CorHdr.h  
+ **헤더:** CorHdr .h  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [메타데이터 열거형](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

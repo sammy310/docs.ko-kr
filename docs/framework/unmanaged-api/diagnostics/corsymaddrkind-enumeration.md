@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448582"
 ---
 # <a name="corsymaddrkind-enumeration"></a>CorSymAddrKind 열거형
-Indicates the type of memory address.  
+메모리 주소의 유형을 나타냅니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -46,20 +46,20 @@ typedef enum CorSymAddrKind
   
 |멤버|설명|  
 |------------|-----------------|  
-|`ADDR_IL_OFFSET`|Indicates a Microsoft intermediate language (MSIL) local variable or parameter index.|  
-|`ADDR_NATIVE_RVA`|Indicates a relative virtual address into a module.|  
-|`ADDR_NATIVE_REGISTER`|Indicates a CPU register.|  
-|`ADDR_NATIVE_REGREL`|Indicates that the first address is a register and the second address is an offset.|  
-|`ADDR_NATIVE_OFFSET`|Indicates an offset from a base address.|  
-|`ADDR_NATIVE_REGREG`|Indicates that the first address is the low portion of a register, and the second address is the high portion.|  
-|`ADDR_NATIVE_REGSTK`|Indicates that the first address is the low portion of a register, the second is the high portion, and the third is an offset.|  
-|`ADDR_NATIVE_STKREG`|Indicates that the first address is a register, the second is an offset, and the third is the high portion of the register.|  
-|`ADDR_BITFIELD`|Indicates that the first address is the start of a field and the second address is the field length.|  
-|`ADDR_NATIVE_ISECTOFFSET`|Indicates that the first address is the section and the second address is an offset.|  
+|`ADDR_IL_OFFSET`|MSIL (Microsoft 중간 언어) 지역 변수 또는 매개 변수 인덱스를 나타냅니다.|  
+|`ADDR_NATIVE_RVA`|모듈에 대 한 상대 가상 주소를 나타냅니다.|  
+|`ADDR_NATIVE_REGISTER`|CPU 레지스터를 나타냅니다.|  
+|`ADDR_NATIVE_REGREL`|첫 번째 주소가 레지스터가 고 두 번째 주소가 오프셋 임을 나타냅니다.|  
+|`ADDR_NATIVE_OFFSET`|기본 주소에서 오프셋을 나타냅니다.|  
+|`ADDR_NATIVE_REGREG`|첫 번째 주소가 레지스터의 하위 부분이 고 두 번째 주소가 높은 부분 임을 나타냅니다.|  
+|`ADDR_NATIVE_REGSTK`|첫 번째 주소가 레지스터의 하위 부분이 고 두 번째 주소가 상위 부분이 며 세 번째 주소가 오프셋 임을 나타냅니다.|  
+|`ADDR_NATIVE_STKREG`|첫 번째 주소가 레지스터이 고, 두 번째 주소가 오프셋 임을 나타내며, 세 번째 주소가 레지스터의 상위 부분 임을 나타냅니다.|  
+|`ADDR_BITFIELD`|첫 번째 주소는 필드의 시작이 고 두 번째 주소는 필드 길이 임을 나타냅니다.|  
+|`ADDR_NATIVE_ISECTOFFSET`|첫 번째 주소는 섹션이 고 두 번째 주소는 오프셋 임을 나타냅니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **Header:** CorSym.idl, CorSym.h  
+ **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [진단 기호 저장소 열거형](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)

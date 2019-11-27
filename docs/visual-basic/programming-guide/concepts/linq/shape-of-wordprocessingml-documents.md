@@ -9,7 +9,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350600"
 ---
-# <a name="shape-of-wordprocessingml-documents-visual-basic"></a>Shape of WordprocessingML Documents (Visual Basic)
+# <a name="shape-of-wordprocessingml-documents-visual-basic"></a>WordprocessingML 문서의 모양 (Visual Basic)
 이 항목에서는 WordprocessingML 문서의 XML 모양에 대해 소개합니다.  
   
 ## <a name="microsoft-office-formats"></a>Microsoft Office 형식  
@@ -94,6 +94,6 @@ End Module
   
  [Office 2003: XML 참조 스키마 다운로드 페이지](https://go.microsoft.com/fwlink/?LinkId=98095)  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [자습서: WordprocessingML 문서에서 내용 조작 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

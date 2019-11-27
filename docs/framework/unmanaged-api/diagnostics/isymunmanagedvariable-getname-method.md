@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446061"
 ---
 # <a name="isymunmanagedvariablegetname-method"></a>ISymUnmanagedVariable::GetName 메서드
-Gets the name of this variable.  
+이 변수의 이름을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,20 +37,20 @@ HRESULT GetName(
   
 ## <a name="parameters"></a>매개 변수  
  `cchName`  
- [in] The length of the buffer that the `pcchName` parameter points to.  
+ 진행 `pcchName` 매개 변수가 가리키는 버퍼의 길이입니다.  
   
  `pcchName`  
- [out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the name, including the null termination.  
+ 제한이 Null 종료를 포함 하 여 이름을 포함 하는 데 필요한 버퍼의 크기 (문자 수)를 수신 하는 `ULONG32`에 대 한 포인터입니다.  
   
  `szName`  
- [out] The buffer that stores the name.  
+ 제한이 이름을 저장 하는 버퍼입니다.  
   
 ## <a name="return-value"></a>반환 값  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **Header:** CorSym.idl, CorSym.h  
+ **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ISymUnmanagedVariable 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)

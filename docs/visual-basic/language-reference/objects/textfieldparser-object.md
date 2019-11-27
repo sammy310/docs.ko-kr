@@ -25,11 +25,11 @@ Public Class TextFieldParser
 ## <a name="remarks"></a>주의  
  `TextFieldParser` 개체의 메서드 및 속성에 대한 자세한 내용은 <xref:Microsoft.VisualBasic.FileIO.TextFieldParser>를 참조하세요.  
   
- For more information, see [Reading from Files](../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md).  
+ 자세한 내용은 [파일에서 읽기](../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)를 참조 하세요.  
   
 ## <a name="requirements"></a>요구 사항  
  **네임스페이스:** <xref:Microsoft.VisualBasic.FileIO>  
   
  **클래스:** <xref:Microsoft.VisualBasic.FileIO.TextFieldParser>  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)
+ **어셈블리:** Visual Basic 런타임 라이브러리 (Microsoft.visualbasic)

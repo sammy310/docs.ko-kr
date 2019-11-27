@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448154"
 ---
 # <a name="icorprofilerinfogetclassfromobject-method"></a>ICorProfilerInfo::GetClassFromObject 메서드
-Gets the `ClassID` of an object, given its `ObjectID`.  
+`ObjectID`지정 된 경우 개체의 `ClassID`을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -35,13 +35,13 @@ HRESULT GetClassFromObject(
   
 ## <a name="parameters"></a>매개 변수  
  `objectId`  
- [in] The ID of the object for which to get the `ClassID`.  
+ 진행 `ClassID`를 가져올 개체의 ID입니다.  
   
  `pClassId`  
- [out] A pointer to the returned `ClassID`.  
+ 제한이 반환 된 `ClassID`에 대 한 포인터입니다.  
   
 ## <a name="remarks"></a>주의  
- A null `pClassId` indicates that `objectId` has a type that is unloading.  
+ Null `pClassId`은 `objectId`의 형식이 언로드되고 있음을 나타냅니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
@@ -52,6 +52,6 @@ HRESULT GetClassFromObject(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerInfo 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

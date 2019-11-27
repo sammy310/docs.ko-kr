@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448191"
 ---
 # <a name="icorprofilerinfoforcegc-method"></a>ICorProfilerInfo::ForceGC 메서드
-Forces garbage collection to occur within the common language runtime (CLR).  
+CLR (공용 언어 런타임) 내에서 가비지 수집을 강제로 수행 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -32,7 +32,7 @@ HRESULT ForceGC();
 ```  
   
 ## <a name="remarks"></a>주의  
- The `ForceGC` method must be called only from a thread that has never run managed code and does not have any profiler callbacks on its stack. The most convenient implementation is to create a separate thread within the profiler that calls `ForceGC` when signaled.  
+ `ForceGC` 메서드는 관리 코드를 실행 하지 않고 스택에 프로파일러 콜백이 없는 스레드에서만 호출 해야 합니다. 가장 편리한 구현은 신호를 받을 때 `ForceGC`를 호출 하는 프로파일러 내에 별도의 스레드를 만드는 것입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
@@ -43,6 +43,6 @@ HRESULT ForceGC();
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerInfo 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

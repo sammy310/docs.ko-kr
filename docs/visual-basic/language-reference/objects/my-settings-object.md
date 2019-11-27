@@ -15,51 +15,51 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350353"
 ---
 # <a name="mysettings-object"></a>My.Settings 개체
-Provides properties and methods for accessing the application's settings.  
+응용 프로그램의 설정에 액세스 하기 위한 속성 및 메서드를 제공 합니다.  
   
 ## <a name="remarks"></a>주의  
- The `My.Settings` object provides access to the application's settings and allows you to dynamically store and retrieve property settings and other information for your application. 자세한 내용은 [애플리케이션 설정 관리(.NET)](/visualstudio/ide/managing-application-settings-dotnet)를 참조하세요.  
+ `My.Settings` 개체는 응용 프로그램의 설정에 대 한 액세스를 제공 하 고 응용 프로그램에 대 한 속성 설정과 기타 정보를 동적으로 저장 하 고 검색할 수 있도록 합니다. 자세한 내용은 [애플리케이션 설정 관리(.NET)](/visualstudio/ide/managing-application-settings-dotnet)를 참조하세요.  
   
-## <a name="properties"></a>데이터 액세스  
- `My.Settings` 개체의 속성을 통해 애플리케이션 설정에 액세스할 수 있습니다. To add or remove settings, use the **Settings Designer**.  
+## <a name="properties"></a>속성  
+ `My.Settings` 개체의 속성을 통해 애플리케이션 설정에 액세스할 수 있습니다. 설정을 추가 하거나 제거 하려면 **설정 디자이너**를 사용 합니다.  
   
- Each setting has a **Name**, **Type**, **Scope**, and **Value**, and these settings determine how the property to access each setting appears in the `My.Settings` object:  
+ 각 설정에는 **이름**, **형식**, **범위**및 **값**이 있습니다. 이러한 설정에 따라 각 설정에 액세스 하는 속성이 `My.Settings` 개체에 표시 되는 방식이 결정 됩니다.  
   
-- **Name** determines the name of the property.  
+- **이름** 속성의 이름을 결정 합니다.  
   
-- **Type** determines the type of the property.  
+- **Type** 은 속성의 유형을 결정 합니다.  
   
-- **Scope** indicates if the property is read-only. If the value is **Application**, the property is read-only; if the value is **User**, the property is read-write.  
+- **범위** 는 속성이 읽기 전용인 경우를 나타냅니다. **응용 프로그램**값 이면 속성이 읽기 전용입니다. 값이 **User**이면 속성은 읽기/쓰기입니다.  
   
-- **Value** is the default value of the property.  
+- **Value** 는 속성의 기본값입니다.  
   
 ## <a name="methods"></a>메서드  
   
 |메서드|설명|  
 |---|---|  
-|`Reload`|Reloads the user settings from the last saved values.|  
-|`Save`|Saves the current user settings.|  
+|`Reload`|마지막으로 저장 된 값에서 사용자 설정을 다시 로드 합니다.|  
+|`Save`|현재 사용자 설정을 저장 합니다.|  
   
- The `My.Settings` object also provides advanced properties and methods, inherited from the <xref:System.Configuration.ApplicationSettingsBase> class.  
+ 또한 `My.Settings` 개체는 <xref:System.Configuration.ApplicationSettingsBase> 클래스에서 상속 된 고급 속성 및 메서드를 제공 합니다.  
   
-## <a name="tasks"></a>태스크  
+## <a name="tasks"></a>작업  
  다음 표에서 관련 된 작업의 예제는 `My.Settings` 개체입니다.  
   
-|대상|참조 항목|  
+|수행 작업|다음을 참조하십시오.|  
 |---|---|  
-|Read an application setting|[방법: Visual Basic에서 애플리케이션 설정 읽기](../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)|  
-|Change a user setting|[방법: Visual Basic에서 사용자 설정 변경](../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)|  
-|Persist user settings|[방법: Visual Basic에서 사용자 설정 유지](../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)|  
-|Create a property grid for user settings|[방법: Visual Basic에서 사용자 설정의 속성 표 만들기](../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)|  
+|응용 프로그램 설정 읽기|[방법: Visual Basic에서 애플리케이션 설정 읽기](../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)|  
+|사용자 설정 변경|[방법: Visual Basic에서 사용자 설정 변경](../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)|  
+|사용자 설정 유지|[방법: Visual Basic에서 사용자 설정 유지](../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)|  
+|사용자 설정에 대 한 속성 표 만들기|[방법: Visual Basic에서 사용자 설정의 속성 표 만들기](../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)|  
   
 ## <a name="example"></a>예제  
  이 예제에서는 `Nickname` 설정의 값을 표시합니다.  
   
  [!code-vb[VbVbalrMyResources#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#14)]  
   
- 이 예제가 작동하려면 애플리케이션에 `String` 형식의 `Nickname` 설정이 있어야 합니다.  
+ 이 예제가 작동하려면 애플리케이션에 `Nickname` 형식의 `String` 설정이 있어야 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Configuration.ApplicationSettingsBase>
 - [방법: Visual Basic에서 애플리케이션 설정 읽기](../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449185"
 ---
 # <a name="isymunmanageddocumentgetdocumenttype-method"></a>ISymUnmanagedDocument::GetDocumentType 메서드
-Gets the document type of this document.  
+이 문서의 문서 유형을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -34,11 +34,11 @@ HRESULT GetDocumentType(
   
 ## <a name="parameters"></a>매개 변수  
  `pRetVal`  
- [out] Pointer to a variable that receives the document type.  
+ 제한이 문서 유형을 받는 변수에 대 한 포인터입니다.  
   
 ## <a name="return-value"></a>반환 값  
- S_OK if the method succeeds.  
+ 메서드가 성공 하면 S_OK 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ISymUnmanagedDocument 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

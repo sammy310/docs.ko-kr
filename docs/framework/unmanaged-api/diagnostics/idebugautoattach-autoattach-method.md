@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445529"
 ---
 # <a name="idebugautoattachautoattach-method"></a>IDebugAutoAttach::AutoAttach 메서드
-Performs server-invoked debugger auto attach.  
+서버에서 호출 하는 디버거 자동 연결을 수행 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,26 +40,26 @@ HRESULT AutoAttach
   
 ## <a name="parameters"></a>매개 변수  
  `guidPort`  
- [in] Always set to `GUID_NULL`.  
+ 진행 항상 `GUID_NULL`로 설정 합니다.  
   
  `dwPid`  
- [in] Process ID, normally retrieved with the `GetCurrentProcessId` function.  
+ 진행 일반적으로 `GetCurrentProcessId` 함수를 사용 하 여 검색 되는 프로세스 ID입니다.  
   
  `dwProgramType`  
- [in] Program type: `AUTOATTACH_PROGRAM_WIN32`, `AUTOATTACH_PROGRAM_COMPLUS`, or `AUTOATTACH_PROGRAM_UNKNOWN`.  
+ 진행 Program type: `AUTOATTACH_PROGRAM_WIN32`, `AUTOATTACH_PROGRAM_COMPLUS`또는 `AUTOATTACH_PROGRAM_UNKNOWN`합니다.  
   
  `dwProgramId`  
- [in] Program ID.  
+ 진행 프로그램 ID입니다.  
   
  `pszSessionId`  
- [in] String passed by the debug verb.  
+ 진행 디버그 동사에 의해 전달 된 문자열입니다.  
   
 ## <a name="return-value"></a>반환 값  
- S_OK if the method succeeds.  
+ 메서드가 성공 하면 S_OK 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **Header:** DbgAutoAttach.h  
+ **헤더:** DbgAutoAttach  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IDebugAutoAttach 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-interface.md)

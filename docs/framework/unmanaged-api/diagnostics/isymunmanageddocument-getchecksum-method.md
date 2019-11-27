@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449208"
 ---
 # <a name="isymunmanageddocumentgetchecksum-method"></a>ISymUnmanagedDocument::GetCheckSum 메서드
-Gets the checksum.  
+체크섬을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,17 +36,17 @@ HRESULT GetCheckSum(
   
 ## <a name="parameters"></a>매개 변수  
  `cData`  
- [in] The length of the buffer provided by the `data` parameter  
+ 진행 `data` 매개 변수에서 제공 하는 버퍼의 길이입니다.  
   
  `pcData`  
- [out] The size and length of the checksum, in bytes.  
+ 제한이 체크섬의 크기 및 길이 (바이트)입니다.  
   
  `data`  
- [out] The buffer that receives the checksum.  
+ 제한이 체크섬을 수신 하는 버퍼입니다.  
   
 ## <a name="return-value"></a>반환 값  
- S_OK if the method succeeds; otherwise, an error code.  
+ 메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 오류 코드입니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ISymUnmanagedDocument 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

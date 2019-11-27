@@ -57,32 +57,32 @@ typedef enum CorAssemblyFlags {
   
 |멤버|설명|  
 |------------|-----------------|  
-|`afPublicKey`|Indicates that the assembly reference holds the full, unhashed public key.|  
-|`afPA_None`|Indicates that the processor architecture is unspecified.|  
-|`afPA_MSIL`|Indicates that the processor architecture is neutral (PE32).|  
-|`afPA_x86`|Indicates that the processor architecture is x86 (PE32).|  
-|`afPA_IA64`|Indicates that the processor architecture is Itanium (PE32+).|  
-|`afPA_AMD64`|Indicates that the processor architecture is AMD X64 (PE32+).|  
-|`afPA_ARM`|Indicates that the processor architecture is ARM (PE32).|  
-|`afPA_NoPlatform`|Indicates that the assembly is a reference assembly; that is, it applies to any architecture but cannot run on any architecture. Thus, the flag is the same as `afPA_Mask`.|  
-|`afPA_Specified`|Indicates that the processor architecture flags should be propagated to the `AssemblyRef` record.|  
-|`afPA_Mask`|A mask that describes the processor architecture.|  
-|`afPA_FullMask`|Specifies that the processor architecture description is included.|  
-|`afPA_Shift`|Indicates a shift count in the processor architecture flags to and from the index.|  
-|`afEnableJITcompileTracking`|Indicates the corresponding value from the <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> of the <xref:System.Diagnostics.DebuggableAttribute>.|  
-|`afDisableJITcompileOptimizer`|Indicates the corresponding value from the <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> of the <xref:System.Diagnostics.DebuggableAttribute>.|  
-|`afRetargetable`|Indicates that the assembly can be retargeted at run time to an assembly from a different publisher.|  
-|`afContentType_Mask`|A mask that describes the content type.|  
-|`afContentType_Default`|Indicates the default content type.|  
-|`afContentType_WindowsRuntime`|Indicates the Windows Runtime content type.|  
+|`afPublicKey`|어셈블리 참조에 해시 되지 않은 전체 공개 키가 포함 되어 있음을 나타냅니다.|  
+|`afPA_None`|프로세서 아키텍처가 지정 되지 않았음을 나타냅니다.|  
+|`afPA_MSIL`|프로세서 아키텍처가 중립 상태임을 나타냅니다 (PE32).|  
+|`afPA_x86`|프로세서 아키텍처가 x86 (PE32) 임을 나타냅니다.|  
+|`afPA_IA64`|프로세서 아키텍처가 Itanium (PE32 +) 임을 나타냅니다.|  
+|`afPA_AMD64`|프로세서 아키텍처가 AMD X64 (PE32 +) 임을 나타냅니다.|  
+|`afPA_ARM`|프로세서 아키텍처가 ARM (PE32) 임을 나타냅니다.|  
+|`afPA_NoPlatform`|어셈블리가 참조 어셈블리 임을 나타냅니다. 즉, 모든 아키텍처에 적용 되지만 모든 아키텍처에서 실행할 수는 없습니다. 따라서 플래그는 `afPA_Mask`와 동일 합니다.|  
+|`afPA_Specified`|`AssemblyRef` 레코드에 프로세서 아키텍처 플래그를 전파 해야 함을 나타냅니다.|  
+|`afPA_Mask`|프로세서 아키텍처를 설명 하는 마스크입니다.|  
+|`afPA_FullMask`|프로세서 아키텍처 설명을 포함 하도록 지정 합니다.|  
+|`afPA_Shift`|인덱스에 대 한 프로세서 아키텍처 플래그의 이동 횟수를 나타냅니다.|  
+|`afEnableJITcompileTracking`|<xref:System.Diagnostics.DebuggableAttribute><xref:System.Diagnostics.DebuggableAttribute.DebuggingModes>의 해당 값을 나타냅니다.|  
+|`afDisableJITcompileOptimizer`|<xref:System.Diagnostics.DebuggableAttribute><xref:System.Diagnostics.DebuggableAttribute.DebuggingModes>의 해당 값을 나타냅니다.|  
+|`afRetargetable`|런타임에 다른 게시자의 어셈블리에 어셈블리의 대상을 지정할 수 있음을 나타냅니다.|  
+|`afContentType_Mask`|내용 유형을 설명 하는 마스크입니다.|  
+|`afContentType_Default`|기본 콘텐츠 형식을 나타냅니다.|  
+|`afContentType_WindowsRuntime`|Windows 런타임 내용 유형을 나타냅니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** CorHdr.h  
+ **헤더:** CorHdr .h  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [메타데이터 열거형](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

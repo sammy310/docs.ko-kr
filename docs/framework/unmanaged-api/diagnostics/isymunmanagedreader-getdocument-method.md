@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448351"
 ---
 # <a name="isymunmanagedreadergetdocument-method"></a>ISymUnmanagedReader::GetDocument 메서드
-Finds a document. The document language, vendor, and type are optional.  
+문서를 찾습니다. 문서 언어, 공급 업체 및 형식은 선택 사항입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,26 +38,26 @@ HRESULT GetDocument (
   
 ## <a name="parameters"></a>매개 변수  
  `url`  
- [in] The URL that identifies the document.  
+ 진행 문서를 식별 하는 URL입니다.  
   
  `language`  
- [in] The document language. 이 매개 변수는 선택적 요소입니다.  
+ 진행 문서 언어입니다. 이 매개 변수는 선택 사항입니다.  
   
  `languageVendor`  
- [in] The identity of the vendor for the document language. 이 매개 변수는 선택적 요소입니다.  
+ 진행 문서 언어의 공급 업체 id입니다. 이 매개 변수는 선택 사항입니다.  
   
  `documentType`  
- [in] The type of the document. 이 매개 변수는 선택적 요소입니다.  
+ 진행 문서의 형식입니다. 이 매개 변수는 선택 사항입니다.  
   
  `pRetVal`  
- [out] A pointer to the returned interface.  
+ 제한이 반환 된 인터페이스에 대 한 포인터입니다.  
   
 ## <a name="return-value"></a>반환 값  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **Header:** CorSym.idl, CorSym.h  
+ **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ISymUnmanagedReader 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

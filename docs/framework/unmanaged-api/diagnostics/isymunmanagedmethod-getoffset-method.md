@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448941"
 ---
 # <a name="isymunmanagedmethodgetoffset-method"></a>ISymUnmanagedMethod::GetOffset 메서드
-Returns the offset within this method that corresponds to a given position within a document.  
+문서 내의 지정 된 위치에 해당 하는이 메서드 내의 오프셋을 반환 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,23 +37,23 @@ HRESULT GetOffset(
   
 ## <a name="parameters"></a>매개 변수  
  `document`  
- [in] A pointer to the document for which the offset is requested.  
+ 진행 오프셋이 요청 된 문서에 대 한 포인터입니다.  
   
  `line`  
- [in] The document line for which the offset is requested.  
+ 진행 오프셋이 요청 된 문서 줄입니다.  
   
  `column`  
- [in] The document column for which the offset is requested.  
+ 진행 오프셋이 요청 된 문서 열입니다.  
   
  `pRetVal`  
- [out] A pointer to a `ULONG32` that receives the offsets.  
+ 제한이 오프셋을 수신 하는 `ULONG32`에 대 한 포인터입니다.  
   
 ## <a name="return-value"></a>반환 값  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **Header:** CorSym.idl, CorSym.h  
+ **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ISymUnmanagedMethod 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

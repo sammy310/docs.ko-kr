@@ -24,8 +24,8 @@ ms.locfileid: "74347202"
   
  **클래스:** <xref:Microsoft.VisualBasic.Devices.Keyboard>  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **어셈블리:** Visual Basic 런타임 라이브러리 (Microsoft.visualbasic)  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [My.Computer 개체](../../../visual-basic/language-reference/objects/my-computer-object.md)

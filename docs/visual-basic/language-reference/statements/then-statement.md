@@ -12,15 +12,15 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352796"
 ---
 # <a name="then-statement"></a>Then 문
-Introduces a statement block to be compiled or executed if a tested condition is true.  
+테스트 된 조건이 true 일 때 컴파일하거나 실행할 문 블록을 제공 합니다.  
   
 ## <a name="remarks"></a>주의  
  `Then` 키워드는 다음 컨텍스트에서 사용할 수 있습니다.  
   
- [#If...Then...#Else Directive](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
+ [#If ... Then ... #Else 지시문](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
   
  [If...Then...Else 문](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [C++ 키워드](../../../visual-basic/language-reference/keywords/index.md)
+- [키워드](../../../visual-basic/language-reference/keywords/index.md)

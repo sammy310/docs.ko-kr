@@ -17,11 +17,11 @@ ms.locfileid: "74350668"
 ## <a name="remarks"></a>주의  
  `My.Log` 개체의 메서드 및 속성에 대한 자세한 내용은 <xref:Microsoft.VisualBasic.Logging.AspLog>를 참조하세요.  
   
- The `My.Log` object is available for ASP.NET applications only. For client applications, use [My.Application.Log Object](../../../visual-basic/language-reference/objects/my-application-log-object.md).  
+ `My.Log` 개체는 ASP.NET 응용 프로그램에만 사용할 수 있습니다. 클라이언트 응용 프로그램의 경우에는 [My.settings 개체](../../../visual-basic/language-reference/objects/my-application-log-object.md)를 사용 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **네임스페이스:** <xref:Microsoft.VisualBasic.Logging>  
   
  **클래스:** <xref:Microsoft.VisualBasic.Logging.AspLog>  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)
+ **어셈블리:** Visual Basic 런타임 라이브러리 (Microsoft.visualbasic)

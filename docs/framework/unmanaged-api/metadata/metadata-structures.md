@@ -1,5 +1,5 @@
 ---
-title: 메타데이터 구조체
+title: 메타데이터 구조
 ms.date: 03/30/2017
 helpviewer_keywords:
 - structures [.NET Framework metadata]
@@ -13,10 +13,10 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444614"
 ---
-# <a name="metadata-structures"></a>메타데이터 구조체
+# <a name="metadata-structures"></a>메타데이터 구조
 이 섹션에서는 메타데이터 API에서 사용하는 관리되지 않는 구조체에 대해 설명합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  ASSEMBLYMETADATA  
  나중에 사용할 어셈블리 메타데이터를 저장합니다.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "74444614"
  [OSINFO 구조체](../../../../docs/framework/unmanaged-api/metadata/osinfo-structure.md)  
  운영 체제에 대한 정보를 포함합니다.  
   
-## <a name="related-sections"></a>관련 단원  
+## <a name="related-sections"></a>관련 섹션  
  [메타데이터 인터페이스](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)  
   
  [메타데이터 전역 정적 함수](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)  

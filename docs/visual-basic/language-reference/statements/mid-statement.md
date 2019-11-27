@@ -18,7 +18,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348035"
 ---
 # <a name="mid-statement"></a>Mid 문
-Replaces a specified number of characters in a `String` variable with characters from another string.  
+`String` 변수의 지정 된 문자 수를 다른 문자열의 문자로 바꿉니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -32,44 +32,44 @@ Mid( _
   
 ## <a name="parts"></a>요소  
  `Target`  
- 필수 요소. Name of the `String` variable to modify.  
+ 필수입니다. 수정할 `String` 변수의 이름입니다.  
   
  `Start`  
- 필수 요소. `Integer` 식입니다. Character position in `Target` where the replacement of text begins. `Start` uses a one-based index.  
+ 필수입니다. `Integer` 식입니다. 텍스트 바꾸기가 시작 되는 `Target`의 문자 위치입니다. `Start`는 1부터 사용 하는 인덱스를 사용 합니다.  
   
  `Length`  
- (선택 사항) `Integer` 식입니다. Number of characters to replace. If omitted, all of `String` is used.  
+ (선택 사항) `Integer` 식입니다. 바꿀 문자 수입니다. 생략 하면 모든 `String` 사용 됩니다.  
   
  `StringExpression`  
- 필수 요소. `String` expression that replaces part of `Target`.  
+ 필수입니다. `Target`의 일부를 대체 하는 `String` 식입니다.  
   
 ## <a name="exceptions"></a>예외  
   
 |예외 형식|조건|  
 |--------------------|---------------|  
-|<xref:System.ArgumentException>|`Start` <= 0 or `Length` < 0.|  
+|<xref:System.ArgumentException>|`Start` < = 0 또는 `Length` < 0입니다.|  
   
 ## <a name="remarks"></a>주의  
- The number of characters replaced is always less than or equal to the number of characters in `Target`.  
+ 대체 되는 문자 수는 항상 `Target`의 문자 수보다 작거나 같습니다.  
   
- Visual Basic has a <xref:Microsoft.VisualBasic.Strings.Mid%2A> function and a `Mid` statement. These elements both operate on a specified number of characters in a string, but the `Mid` function returns the characters while the `Mid` statement replaces the characters. 자세한 내용은 <xref:Microsoft.VisualBasic.Strings.Mid%2A>를 참조하세요.  
+ Visual Basic에는 <xref:Microsoft.VisualBasic.Strings.Mid%2A> 함수와 `Mid` 문이 있습니다. 이러한 요소는 모두 문자열에서 지정 된 수의 문자에서 작동 하지만 `Mid` 문이 문자를 대체 하는 동안 `Mid` 함수는 문자를 반환 합니다. 자세한 내용은 <xref:Microsoft.VisualBasic.Strings.Mid%2A>을 참조하세요.  
   
 > [!NOTE]
-> The `MidB` statement of earlier versions of Visual Basic replaces a substring in bytes, rather than characters. 더블 바이트 문자 집합 (DBCS) 애플리케이션의 문자열을 변환에 주로 사용 됩니다. All Visual Basic strings are in Unicode, and `MidB` is no longer supported.  
+> 이전 버전의 Visual Basic `MidB` 문은 문자열이 아닌 바이트 단위로 대체 합니다. 더블 바이트 문자 집합 (DBCS) 애플리케이션의 문자열을 변환에 주로 사용 됩니다. 모든 Visual Basic 문자열은 유니코드 이며 `MidB`는 더 이상 지원 되지 않습니다.  
   
 ## <a name="example"></a>예제  
- This example uses the `Mid` statement to replace a specified number of characters in a string variable with characters from another string.  
+ 이 예에서는 `Mid` 문을 사용 하 여 문자열 변수의 지정 된 문자 수를 다른 문자열의 문자로 바꿉니다.  
   
  [!code-vb[VbVbalrStrings#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#5)]  
   
 ## <a name="requirements"></a>요구 사항  
- **Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
+ **네임 스페이스:** [microsoft.visualbasic](../../../visual-basic/language-reference/runtime-library-members.md)  
   
- **Module:** `Strings`  
+ **모듈:** `Strings`  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **어셈블리:** Visual Basic 런타임 라이브러리 (Microsoft.visualbasic)  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:Microsoft.VisualBasic.Strings.Mid%2A>
 - [문자열](../../../visual-basic/programming-guide/language-features/strings/index.md)

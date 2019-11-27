@@ -17,11 +17,11 @@ ms.locfileid: "74448830"
 # <a name="ui-automation-control-types"></a>UI 자동화 컨트롤 형식
 
 > [!NOTE]
-> 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조하세요.
+> 이 설명서는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 네임스페이스에 정의된 관리되는 <xref:System.Windows.Automation> 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조하세요.
 
-This section contains information about support for control types in [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)].
+이 섹션에서는 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]의 컨트롤 형식에 대 한 지원 정보를 제공 합니다.
 
-## <a name="in-this-section"></a>단원 내용
+## <a name="in-this-section"></a>섹션 내용
 
 - [UI 자동화 컨트롤 형식 개요](ui-automation-control-types-overview.md)
 - [Button 컨트롤 형식에 대한 UI 자동화 지원](ui-automation-support-for-the-button-control-type.md)
@@ -63,10 +63,10 @@ This section contains information about support for control types in [!INCLUDE[T
 - [TreeItem 컨트롤 형식에 대한 UI 자동화 지원](ui-automation-support-for-the-treeitem-control-type.md)
 - [Window 컨트롤 형식에 대한 UI 자동화 지원](ui-automation-support-for-the-window-control-type.md)
 
-## <a name="reference"></a>참고
+## <a name="reference"></a>참조
 
 <xref:System.Windows.Automation.ControlType>
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [UI 자동화 컨트롤 패턴](ui-automation-control-patterns.md)

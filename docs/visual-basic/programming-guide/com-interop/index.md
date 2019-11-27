@@ -13,9 +13,9 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347999"
 ---
 # <a name="com-interop-visual-basic"></a>COM Interop(Visual Basic)
-COM(구성 요소 개체 모델)을 통해 개체는 기능을 다른 구성 요소에 노출하고 애플리케이션을 호스트할 수 있습니다. 오늘날 대부분의 소프트웨어에는 COM 개체가 포함됩니다. 새 애플리케이션에는 .NET 어셈블리가 제일 나은 선택이지만 때로는 COM 개체를 채택해야 할 수 있습니다. This section covers some of the issues associated with creating and using COM objects with Visual Basic.  
+COM(구성 요소 개체 모델)을 통해 개체는 기능을 다른 구성 요소에 노출하고 애플리케이션을 호스트할 수 있습니다. 오늘날 대부분의 소프트웨어에는 COM 개체가 포함됩니다. 새 애플리케이션에는 .NET 어셈블리가 제일 나은 선택이지만 때로는 COM 개체를 채택해야 할 수 있습니다. 이 섹션에서는 Visual Basic로 COM 개체를 만들고 사용 하는 것과 관련 된 몇 가지 문제에 대해 설명 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [COM Interop 소개](../../../visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)  
  COM 상호 운용성의 개요를 제공합니다.  
   
@@ -23,7 +23,7 @@ COM(구성 요소 개체 모델)을 통해 개체는 기능을 다른 구성 요
  형식 라이브러리가 포함된 COM 개체에 참조를 추가하는 방법을 설명합니다.  
   
  [방법: ActiveX 컨트롤을 사용하여 작업](../../../visual-basic/programming-guide/com-interop/how-to-work-with-activex-controls.md)  
- Demonstrates how to use existing ActiveX controls to add features to the Visual Studio Toolbox.  
+ 기존 ActiveX 컨트롤을 사용 하 여 Visual Studio 도구 상자에 기능을 추가 하는 방법을 보여 줍니다.  
   
  [연습: Windows API 호출](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)  
  Windows 운영 체제에 포함된 API를 호출하는 프로세스를 단계별로 진행합니다.  
@@ -46,7 +46,7 @@ COM(구성 요소 개체 모델)을 통해 개체는 기능을 다른 구성 요
  [연습: COM 개체를 사용한 상속 구현](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
  기존 COM 개체를 새 개체의 기반으로 사용하는 방법을 설명합니다.  
   
-## <a name="related-sections"></a>관련 단원  
+## <a name="related-sections"></a>관련 섹션  
  [비관리 코드와의 상호 운용](../../../framework/interop/index.md)  
  공용 언어 런타임에서 제공하는 상호 운용성 서비스를 설명합니다.  
   

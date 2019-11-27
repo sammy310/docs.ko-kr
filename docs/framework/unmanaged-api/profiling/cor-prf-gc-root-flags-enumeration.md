@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449464"
 ---
 # <a name="cor_prf_gc_root_flags-enumeration"></a>COR_PRF_GC_ROOT_FLAGS 열거형
-Indicates a property of a garbage collection root.  
+가비지 컬렉션 루트의 속성을 나타냅니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,13 +39,13 @@ typedef enum {
   
 |멤버|설명|  
 |------------|-----------------|  
-|`COR_PRF_GC_ROOT_PINNING`|The root prevents a garbage collection from moving the object.|  
-|`COR_PRF_GC_ROOT_WEAKREF`|The root does not prevent garbage collection.|  
-|`COR_PRF_GC_ROOT_INTERIOR`|The root refers to a field of the object rather than the object itself.|  
-|`COR_PRF_GC_ROOT_REFCOUNTED`|The root prevents garbage collection if the reference count of the object is a certain value.|  
+|`COR_PRF_GC_ROOT_PINNING`|Root를 설정 하면 가비지 수집에서 개체를 이동할 수 없습니다.|  
+|`COR_PRF_GC_ROOT_WEAKREF`|루트는 가비지 수집을 방지 하지 않습니다.|  
+|`COR_PRF_GC_ROOT_INTERIOR`|루트는 개체 자체가 아니라 개체의 필드를 참조 합니다.|  
+|`COR_PRF_GC_ROOT_REFCOUNTED`|개체의 참조 횟수가 특정 값 이면 루트는 가비지 수집을 방지 합니다.|  
   
 ## <a name="remarks"></a>주의  
- `COR_PRF_GC_ROOT_FLAGS` is a bitmask that provides additional information about special roots. However, not all roots are special. For example, some roots are not weak references, interior pointers, pinned, or reference-counted. For such roots, there are no flags to convey. Therefore, methods that use this enumeration, such as the [ICorProfilerCallback2::RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) method, send 0 for the flags bitmask, indicating that all flags are turned off.  
+ `COR_PRF_GC_ROOT_FLAGS`은 특정 루트에 대 한 추가 정보를 제공 하는 비트 마스크입니다. 그러나 모든 루트가 특수 한 것은 아닙니다. 예를 들어 일부 루트는 약한 참조, 내부 포인터, 고정 또는 참조 횟수가 계산 되지 않습니다. 이러한 루트의 경우 전달할 플래그가 없습니다. 따라서 [ICorProfilerCallback2:: RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) 메서드와 같이이 열거형을 사용 하는 메서드는 플래그 비트 마스크에 대해 0을 보내 모든 플래그가 해제 되어 있음을 나타냅니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
@@ -56,6 +56,6 @@ typedef enum {
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [프로파일링 열거형](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

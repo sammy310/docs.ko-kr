@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448623"
 ---
 # <a name="isymencunmanagedmethodgetsourceextentindocument-method"></a>ISymENCUnmanagedMethod::GetSourceExtentInDocument 메서드
-Gets the smallest start line and largest end line for the method in a specific document.  
+특정 문서에서 메서드의 가장 작은 시작 줄과 가장 큰 끝 줄을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,20 +36,20 @@ HRESULT GetSourceExtentInDocument(
   
 ## <a name="parameters"></a>매개 변수  
  `document`  
- [in] A pointer to the document.  
+ 진행 문서에 대 한 포인터입니다.  
   
  `pstartLine`  
- [out] A pointer to a `ULONG32` that receives the start line.  
+ 제한이 시작 줄을 수신 하는 `ULONG32`에 대 한 포인터입니다.  
   
  `pendLine`  
- [out] A pointer to a `ULONG32` that receives the end line.  
+ 제한이 끝 줄을 수신 하는 `ULONG32`에 대 한 포인터입니다.  
   
 ## <a name="return-value"></a>반환 값  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **Header:** CorSym.idl, CorSym.h  
+ **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ISymENCUnmanagedMethod 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)
