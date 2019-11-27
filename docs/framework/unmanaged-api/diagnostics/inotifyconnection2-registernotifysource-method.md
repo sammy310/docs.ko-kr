@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445467"
 ---
 # <a name="inotifyconnection2registernotifysource-method"></a>INotifyConnection2::RegisterNotifySource 메서드
-Installs a specified notification source.  
+지정 된 알림 소스를 설치 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,18 +37,18 @@ HRESULT RegisterNotifySource
   
 ## <a name="parameters"></a>매개 변수  
  `in_pNotifySource`  
- [in] Specifies the object to be used as the notification source.  
+ 진행 알림 소스로 사용할 개체를 지정 합니다.  
   
  `out_ppNotifySink`  
- [out] Receives the object to be used as the notification sink.  
+ 제한이 알림 싱크로 사용할 개체를 받습니다.  
   
 ## <a name="return-value"></a>반환 값  
- S_OK if the method succeeds.  
+ 메서드가 성공 하면 S_OK 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **Header:** ProtocolNotify2.idl  
+ **헤더:** ProtocolNotify2  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [INotifyConnection2 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
 - [INotifySource2 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)

@@ -14,7 +14,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350215"
 ---
 # <a name="arithmetic-operators-visual-basic"></a>산술 연산자(Visual Basic)
-The following are the arithmetic operators defined in Visual Basic.  
+다음은 Visual Basic에 정의 된 산술 연산자입니다.  
   
  [^ 연산자](../../../visual-basic/language-reference/operators/exponentiation-operator.md)  
   
@@ -26,11 +26,11 @@ The following are the arithmetic operators defined in Visual Basic.
   
  [Mod 연산자](../../../visual-basic/language-reference/operators/mod-operator.md)  
   
- [+ Operator](../../../visual-basic/language-reference/operators/addition-operator.md) (unary and binary)  
+ [+ 연산자](../../../visual-basic/language-reference/operators/addition-operator.md) (단항 및 binary)  
   
- [- Operator](../../../visual-basic/language-reference/operators/subtraction-operator.md) (unary and binary)  
+ [-연산자](../../../visual-basic/language-reference/operators/subtraction-operator.md) (단항 및 binary)  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [Visual Basic에서의 연산자 우선 순위](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [Arithmetic Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [Visual Basic의 산술 연산자](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

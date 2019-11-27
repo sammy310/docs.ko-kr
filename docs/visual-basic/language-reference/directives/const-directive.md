@@ -24,7 +24,7 @@ ms.locfileid: "74343841"
 ---
 # <a name="const-directive"></a>#Const 지시문
 
-Defines conditional compiler constants for Visual Basic.  
+Visual Basic에 대 한 조건부 컴파일러 상수를 정의 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -35,16 +35,16 @@ Defines conditional compiler constants for Visual Basic.
 ## <a name="parts"></a>요소  
 
  `constname`  
- 필수 요소. Name of the constant being defined.  
+ 필수 요소. 정의 되는 상수의 이름입니다.  
   
  `expression`  
- 필수 요소. Literal, other conditional compiler constant, or any combination that includes any or all arithmetic or logical operators except `Is`.  
+ 필수 요소. 리터럴, 기타 조건부 컴파일러 상수 또는 `Is`를 제외한 모든 산술 또는 논리 연산자가 포함 된 조합입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
 
- Conditional compiler constants are always private to the file in which they appear. You cannot create public compiler constants using the `#Const` directive; you can create them only in the user interface or with the `/define` compiler option.  
+ 조건부 컴파일러 상수는 항상 표시 되는 파일에 대해 private입니다. `#Const` 지시어를 사용 하 여 공용 컴파일러 상수를 만들 수는 없습니다. 사용자 인터페이스 또는 `/define` 컴파일러 옵션을 사용 하 여 만들 수 있습니다.  
   
- You can use only conditional compiler constants and literals in `expression`. Using a standard constant defined with `Const` causes an error. Conversely, you can use constants defined with the `#Const` keyword only for conditional compilation. Constants can also be undefined, in which case they have a value of `Nothing`.  
+ `expression`에서는 조건부 컴파일러 상수 및 리터럴만 사용할 수 있습니다. `Const` 정의 된 표준 상수를 사용 하면 오류가 발생 합니다. 반대로 `#Const` 키워드와 함께 정의 된 상수는 조건부 컴파일에만 사용할 수 있습니다. 상수는 정의 되지 않을 수도 있으며,이 경우 값 `Nothing`입니다.  
   
 ## <a name="example"></a>예제  
 
@@ -52,7 +52,7 @@ Defines conditional compiler constants for Visual Basic.
   
  [!code-vb[VbVbalrConditionalComp#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConditionalComp/VB/Class1.vb#3)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [-define (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md)
 - [#If...Then...#Else 지시문](../../../visual-basic/language-reference/directives/if-then-else-directives.md)

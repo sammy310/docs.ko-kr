@@ -24,7 +24,7 @@ ms.locfileid: "74431426"
 ---
 # <a name="imetadatatablesgetuserstring-method"></a>IMetaDataTables::GetUserString 메서드
 
-Gets the hard-coded string at the specified index in the string column in the current scope.
+현재 범위에 있는 문자열 열의 지정 된 인덱스에서 하드 코드 된 문자열을 가져옵니다.
 
 ## <a name="syntax"></a>구문
 
@@ -39,25 +39,25 @@ HRESULT GetUserString (
 ## <a name="parameters"></a>매개 변수
 
 `ixUserString`\
-[in] The index value from which the hard-coded string will be retrieved.
+진행 하드 코딩 된 문자열이 검색 되는 인덱스 값입니다.
 
 `pcbData`\
-[out] A pointer to the size of `ppData`.
+제한이 `ppData`의 크기에 대 한 포인터입니다.
 
 `ppData`\
-[out] A pointer to a pointer to the returned string.
+제한이 반환 된 문자열에 대 한 포인터에 대 한 포인터입니다.
 
 ## <a name="requirements"></a>요구 사항
 
 **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.
 
-**Header:** Cor.h
+**헤더:** Cor
 
-**Library:** Used as a resource in MsCorEE.dll
+**라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.
 
 **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [IMetaDataTables 인터페이스](imetadatatables-interface.md)
 - [IMetaDataTables2 인터페이스](imetadatatables2-interface.md)

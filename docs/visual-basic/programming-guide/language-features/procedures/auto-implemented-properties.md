@@ -16,7 +16,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350380"
 ---
 # <a name="auto-implemented-properties-visual-basic"></a>자동 구현 속성(Visual Basic)
-*Auto-implemented properties* enable you to quickly specify a property of a class without having to write code to `Get` and `Set` the property. 자동 구현 속성에 대한 코드를 작성하면 Visual Basic 컴파일러에서 관련 `Get` 및 `Set` 프로시저가 생성될 뿐만 아니라 속성 변수를 저장하는 전용 필드가 자동으로 만들어집니다.  
+*자동 구현 속성* 을 사용 하면 `Get` 하는 코드를 작성 하지 않고도 속성을 `Set` 하 여 클래스의 속성을 신속 하 게 지정할 수 있습니다. 자동 구현 속성에 대한 코드를 작성하면 Visual Basic 컴파일러에서 관련 `Get` 및 `Set` 프로시저가 생성될 뿐만 아니라 속성 변수를 저장하는 전용 필드가 자동으로 만들어집니다.  
   
  자동 구현 속성을 사용하면 기본값을 포함한 속성을 한 줄에 선언할 수 있습니다. 다음 예제에서는 3개의 속성 선언을 보여 줍니다.  
   
@@ -47,11 +47,11 @@ End Class
  예제처럼 초기화 식을 사용해 속성에 할당할 수 있습니다. 또는 포함하는 형식의 생성자에서 속성에 할당할 수 있습니다.  언제든지 읽기 전용 속성의 지원 필드에 할당할 수 있습니다.  
   
 ## <a name="backing-field"></a>지원 필드  
- When you declare an auto-implemented property, Visual Basic automatically creates a hidden private field called the *backing field* to contain the property value. 지원 필드 이름은 밑줄(_) 다음에 자동 구현 속성 이름이 나오는 형태입니다. 예를 들어 `ID`라는 자동 구현 속성을 선언하는 경우 지원 필드의 이름은 `_ID`가 됩니다. 이름이 `_ID`인 클래스의 멤버를 포함하는 경우 이름 충돌이 발생하며 Visual Basic에서 컴파일러 오류가 보고됩니다.  
+ 자동 구현 속성을 선언 하면 Visual Basic는 속성 값을 포함 하기 위해 *지원 필드* 라는 숨겨진 private 필드를 자동으로 만듭니다. 지원 필드 이름은 밑줄(_) 다음에 자동 구현 속성 이름이 나오는 형태입니다. 예를 들어 `ID`라는 자동 구현 속성을 선언하는 경우 지원 필드의 이름은 `_ID`가 됩니다. 이름이 `_ID`인 클래스의 멤버를 포함하는 경우 이름 충돌이 발생하며 Visual Basic에서 컴파일러 오류가 보고됩니다.  
   
  지원 필드에는 또한 다음과 같은 특징이 있습니다.  
   
-- 속성 자체에 `Public`과 같은 다른 액세스 수준이 있는 경우에도, 지원 필드에 대한 액세스 한정자는 항상 `Private`입니다.  
+- 속성 자체에 `Private`과 같은 다른 액세스 수준이 있는 경우에도, 지원 필드에 대한 액세스 한정자는 항상 `Public`입니다.  
   
 - 속성이 `Shared`로 표시된 경우 지원 필드도 공유됩니다.  
   
@@ -73,7 +73,7 @@ End Class
  [!code-vb[VbVbalrAutoImplementedProperties#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrautoimplementedproperties/vb/module1.vb#4)]  
   
 ## <a name="property-definitions-that-require-standard-syntax"></a>표준 구문이 요구되는 속성 정의  
- 자동 구현 속성은 편리하며 많은 프로그래밍 시나리오를 지원합니다. However, there are situations in which you cannot use an auto-implemented property and must instead use standard, or *expanded*, property syntax.  
+ 자동 구현 속성은 편리하며 많은 프로그래밍 시나리오를 지원합니다. 그러나 자동으로 구현 된 속성을 사용할 수 없으며 대신 표준 또는 *확장*된 속성 구문을 사용 해야 하는 경우도 있습니다.  
   
  다음 중 하나를 수행하려는 경우 확장된 속성 정의 구문을 사용해야 합니다.  
   
@@ -90,11 +90,11 @@ End Class
 - 지원 필드에 대한 XML 주석을 제공합니다.  
   
 ## <a name="expanding-an-auto-implemented-property"></a>자동 구현 속성 확장명  
- 자동 구현 속성을 `Get` 또는 `Set` 프로시저가 포함된 확장된 속성으로 변환해야 하는 경우 Visual Basic 코드 편집기는 속성에 대한 `Get` 및 `Set` 프로시저와 `End Property` 문을 자동으로 생성할 수 있습니다. The code is generated if you put the cursor on a blank line following the `Property` statement, type a `G` (for `Get`) or an `S` (for `Set`) and press ENTER. `Property` 문 끝에서 Enter 키를 누르면 Visual Basic 코드 편집기에서 읽기 전용 및 쓰기 전용 속성에 대한 `Get` 또는 `Set` 프로시저가 자동으로 생성됩니다.  
+ 자동 구현 속성을 `Get` 또는 `Set` 프로시저가 포함된 확장된 속성으로 변환해야 하는 경우 Visual Basic 코드 편집기는 속성에 대한 `Get` 및 `Set` 프로시저와 `End Property` 문을 자동으로 생성할 수 있습니다. `Property` 문 뒤에 있는 빈 줄에 커서를 놓고 `G` (`Get`) 또는 `S` (`Set`)를 입력 한 다음 ENTER 키를 누르면 코드가 생성 됩니다. `Get` 문 끝에서 Enter 키를 누르면 Visual Basic 코드 편집기에서 읽기 전용 및 쓰기 전용 속성에 대한 `Set` 또는 `Property` 프로시저가 자동으로 생성됩니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
-- [How to: Declare and Call a Default Property in Visual Basic](./how-to-declare-and-call-a-default-property.md)
+- [방법: Visual Basic에서 기본 속성 선언 및 호출](./how-to-declare-and-call-a-default-property.md)
 - [방법: 액세스 수준이 혼합된 속성 선언](./how-to-declare-a-property-with-mixed-access-levels.md)
 - [Property 문](../../../../visual-basic/language-reference/statements/property-statement.md)
 - [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md)

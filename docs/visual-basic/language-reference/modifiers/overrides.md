@@ -26,11 +26,11 @@ ms.locfileid: "74351378"
 
 ## <a name="rules"></a>규칙
 
-- **Declaration Context.** You can use `Overrides` only in a property or procedure declaration statement.
+- **선언 컨텍스트입니다.** `Overrides`는 속성 또는 프로시저 선언문 에서만 사용할 수 있습니다.
 
-- **Combined Modifiers.** You cannot specify `Overrides` together with `Shadows` or `Shared` in the same declaration. 재정의 요소는 암시적으로 재정의할 수 있으므로 `Overridable`과 `Overrides`를 결합할 수 없습니다.
+- **결합 된 한정자입니다.** 동일한 선언에서 `Shadows` 또는 `Shared`와 함께 `Overrides`를 지정할 수 없습니다. 재정의 요소는 암시적으로 재정의할 수 있으므로 `Overridable`과 `Overrides`를 결합할 수 없습니다.
 
-- **Matching Signatures.** The signature of this declaration must exactly match the *signature* of the property or procedure that it overrides. 즉, 매개 변수 목록에 동일한 데이터 형식의 매개 변수가 동일한 개수 및 순서로 포함되어야 합니다.
+- **일치 하는 서명.** 이 선언의 서명은 재정의 하는 속성 또는 프로시저의 *시그니처와* 정확히 일치 해야 합니다. 즉, 매개 변수 목록에 동일한 데이터 형식의 매개 변수가 동일한 개수 및 순서로 포함되어야 합니다.
 
   서명 외에도 재정의 선언이 다음과 정확히 일치해야 합니다.
 
@@ -38,17 +38,17 @@ ms.locfileid: "74351378"
 
   - 반환 형식(있는 경우)
 
-- **Generic Signatures.** 제네릭 프로시저의 경우 서명에 형식 매개 변수 개수가 포함됩니다. 따라서 해당 측면에서도 재정의 선언이 기본 클래스 버전과 일치해야 합니다.
+- **제네릭 서명.** 제네릭 프로시저의 경우 서명에 형식 매개 변수 개수가 포함됩니다. 따라서 해당 측면에서도 재정의 선언이 기본 클래스 버전과 일치해야 합니다.
 
-- **Additional Matching.** 기본 클래스 버전과의 서명 일치 외에도 이 선언은 다음 측면에서 기본 클래스 버전과 일치해야 합니다.
+- **추가 일치입니다.** 기본 클래스 버전과의 서명 일치 외에도 이 선언은 다음 측면에서 기본 클래스 버전과 일치해야 합니다.
 
-  - Access-level modifier (such as [Public](../../../visual-basic/language-reference/modifiers/public.md))
+  - 액세스 수준 한정자 (예: [Public](../../../visual-basic/language-reference/modifiers/public.md))
 
-  - Passing mechanism of each parameter ([ByVal](../../../visual-basic/language-reference/modifiers/byval.md) or [ByRef](../../../visual-basic/language-reference/modifiers/byref.md))
+  - 각 매개 변수의 전달 메커니즘 ([ByVal](../../../visual-basic/language-reference/modifiers/byval.md) 또는 [ByRef](../../../visual-basic/language-reference/modifiers/byref.md))
 
   - 제네릭 프로시저의 각 형식 매개 변수에 대한 제약 조건 목록
 
-- **Shadowing and Overriding.** 숨김과 재정의는 둘 다 상속된 요소를 다시 정의하지만 두 방법에는 중요한 차이점이 있습니다. For more information, see [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).
+- **숨김 및 재정의.** 숨김과 재정의는 둘 다 상속된 요소를 다시 정의하지만 두 방법에는 중요한 차이점이 있습니다. 자세한 내용은 [Visual Basic에서 숨기기](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)를 참조 하세요.
 
 `Overrides`를 사용하는 경우 라이브러리 API가 보다 쉽게 C#으로 작업할 수 있도록 컴파일러에서 암시적으로 `Overloads`를 추가합니다.
 
@@ -60,12 +60,12 @@ ms.locfileid: "74351378"
 
 - [Sub 문](../../../visual-basic/language-reference/statements/sub-statement.md)
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
-- [New](../../../visual-basic/language-reference/modifiers/mustoverride.md)
+- [MyBase](../../../visual-basic/language-reference/modifiers/mustoverride.md)
 - [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)
-- [재정의 가능](../../../visual-basic/language-reference/modifiers/overridable.md)
-- [C++ 키워드](../../../visual-basic/language-reference/keywords/index.md)
-- [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [Overrides](../../../visual-basic/language-reference/modifiers/overridable.md)
+- [키워드](../../../visual-basic/language-reference/keywords/index.md)
+- [Visual Basic에서 숨김](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
 - [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 - [형식 목록](../../../visual-basic/language-reference/statements/type-list.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440443"
 ---
 # <a name="imetadataemit2setgenericparamprops-method"></a>IMetaDataEmit2::SetGenericParamProps 메서드
-Sets property values for the generic parameter definition referenced by the specified token.  
+지정 된 토큰이 참조 하는 제네릭 매개 변수 정의에 대 한 속성 값을 설정 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,30 +39,30 @@ HRESULT SetGenericParamProps (
   
 ## <a name="parameters"></a>매개 변수  
  `gp`  
- [in] The token for the generic parameter definition for which to set values.  
+ 진행 값을 설정할 제네릭 매개 변수 정의에 대 한 토큰입니다.  
   
  `dwParamFlags`  
- [in] A value of the [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) enumeration that describes the type for the generic parameter.  
+ 진행 제네릭 매개 변수의 형식을 설명 하는 [Corgenericparamattr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) 열거형의 값입니다.  
   
  `szName`  
- [in] 선택적 항목으로, The name of the parameter for which to set values.  
+ [in] 선택적 항목으로, 값을 설정할 매개 변수의 이름입니다.  
   
  `reserved`  
- [in] Reserved for future extensibility.  
+ 진행 향후 확장성을 위해 예약 되었습니다.  
   
  `rtkConstraints`  
- [in] 선택적 항목으로, A zero-terminated array of type constraints. Array members must be an `mdTypeDef`, `mdTypeRef`, or `mdTypeSpec` metadata token.  
+ [in] 선택적 항목으로, 0으로 끝나는 형식의 제약 조건 배열입니다. 배열 멤버는 `mdTypeDef`, `mdTypeRef`또는 `mdTypeSpec` 메타 데이터 토큰 이어야 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [IMetaDataEmit2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
 - [IMetaDataEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)

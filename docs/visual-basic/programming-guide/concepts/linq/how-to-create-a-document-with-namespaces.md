@@ -1,5 +1,5 @@
 ---
-title: 'How to: Create a Document with Namespaces (LINQ to XML)'
+title: '방법: 네임 스페이스를 사용 하 여 문서 만들기 (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: cc5b0d4d-360c-4ada-94fa-2d2916e989be
 ms.openlocfilehash: bbd23840b0356cf14d2c7d6cb71591fe6461a8bd
@@ -18,7 +18,7 @@ ms.locfileid: "74332581"
   
  `Imports` 키워드를 사용하여 기본 네임스페이스와 접두사가 포함된 네임스페이스를 모두 정의할 수 있습니다.  
   
- For more information, see [Introduction to XML Literals in Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-xml-literals.md).  
+ 자세한 내용은 [Visual Basic의 XML 리터럴 소개](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-xml-literals.md)를 참조 하세요.  
   
  기본 XML 네임스페이스는 요소에만 적용되고 특성에는 적용되지 않습니다. 특성은 기본적으로 항상 네임스페이스에 없습니다. 그러나 네임스페이스 접두사를 사용하여 특성을 네임스페이스에 배치할 수 있습니다.  
   
@@ -114,6 +114,6 @@ End Module
 </aw:Root>  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
-- [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)
+- [네임 스페이스 개요 (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)

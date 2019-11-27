@@ -9,7 +9,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345724"
 ---
-# <a name="atomized-xname-and-xnamespace-objects-linq-to-xml-visual-basic"></a>Atomized XName and XNamespace Objects (LINQ to XML) (Visual Basic)
+# <a name="atomized-xname-and-xnamespace-objects-linq-to-xml-visual-basic"></a>원자화 명령의 xname 및 XNamespace 개체 (LINQ to XML) (Visual Basic)
 
 <xref:System.Xml.Linq.XName> 및 <xref:System.Xml.Linq.XNamespace> 개체는 *원자화*됩니다. 즉, 이들 개체의 정규화된 이름이 같으면 같은 개체를 참조합니다. 이를 통해 쿼리 성능이 향상될 수 있습니다. 두 개의 원자화된 이름이 같은지 비교하는 경우 기본 중간 언어에서 이 두 개의 참조가 같은 개체를 가리키는지 여부만 확인하면 됩니다. 기본 코드는 시간이 많이 걸리는 문자열 비교를 수행할 필요가 없습니다.
 
@@ -19,7 +19,7 @@ ms.locfileid: "74345724"
 
 클래스가 원자화된 개체를 사용하려면 클래스에 대한 생성자가 public이 아니라 private이어야 합니다. 이는 생성자가 public인 경우 원자화되지 않은 개체를 생성할 수 있기 때문입니다. <xref:System.Xml.Linq.XName> 및 <xref:System.Xml.Linq.XNamespace> 클래스는 문자열을 <xref:System.Xml.Linq.XName> 또는 <xref:System.Xml.Linq.XNamespace>로 변환하는 암시적 변환 연산자를 구현합니다. 이를 통해 이러한 개체의 인스턴스를 가져올 수 있습니다. 생성자는 액세스할 수 없으므로 생성자를 사용하여 인스턴스를 가져올 수 없습니다.
 
-<xref:System.Xml.Linq.XName> 및 <xref:System.Xml.Linq.XNamespace>는 비교하는 두 개체가 같은 인스턴스를 참조하는지 확인하기 위해 같음 연산자 및 같지 않음 연산자도 구현합니다.
+또한 <xref:System.Xml.Linq.XName> 및 <xref:System.Xml.Linq.XNamespace>는 같음 연산자와 같지 않음 연산자를 구현 하 여 비교할 두 개체가 동일한 인스턴스에 대 한 참조 인지 여부를 확인 합니다.
 
 ## <a name="example"></a>예제
 
@@ -72,6 +72,6 @@ Next
 <C1>1</C1>
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
-- [Performance (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)
+- [성능 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)

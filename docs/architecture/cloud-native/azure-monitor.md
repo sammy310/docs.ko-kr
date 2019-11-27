@@ -59,7 +59,7 @@ Azure Monitor에서 정보를 노출 하는 데 사용할 수 있는 여러 가�
 **그림 7-12**](./media/azure-monitor.png)
 예제 Power BI 대시보드를 ![합니다. Power BI 대시보드의 예입니다.
 
-## <a name="alerts"></a>경고
+## <a name="alerts"></a>,
 
 경우에 따라 데이터 대시보드가 충분 하지 않을 수 있습니다. 대시보드를 시청 하기 위해 아무도 해제 되지 않은 경우 문제가 해결 될 때까지 몇 시간이 걸릴 수 있습니다. 또는 검색 하기도 합니다. 이를 위해 Azure Monitor에는 상위 [경고 솔루션](https://docs.microsoft.com/azure/azure-monitor/platform/alerts-overview)도 제공 됩니다. 경고는 다음과 같은 다양 한 조건에 의해 트리거될 수 있습니다.
 

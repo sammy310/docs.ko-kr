@@ -22,19 +22,19 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445486"
 ---
 # <a name="inotifyconnection2-interface"></a>INotifyConnection2 인터페이스
-Declares methods for registering and unregistering a connection notification source.  
+연결 알림 소스를 등록 및 등록 취소 하는 메서드를 선언 합니다.  
   
 ## <a name="methods"></a>메서드  
   
 |메서드|설명|  
 |------------|-----------------|  
-|[RegisterNotifySource 메서드](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-registernotifysource-method.md)|Installs a specified notification source object.|  
-|[UnregisterNotifySource 메서드](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-unregisternotifysource-method.md)|Removes a specified notification source object from the connection.|  
+|[RegisterNotifySource 메서드](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-registernotifysource-method.md)|지정 된 알림 소스 개체를 설치 합니다.|  
+|[UnregisterNotifySource 메서드](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-unregisternotifysource-method.md)|지정 된 알림 소스 개체를 연결에서 제거 합니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **Header:** ProtocolNotify2.idl  
+ **헤더:** ProtocolNotify2  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [INotifySink2 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
 - [INotifySource2 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)

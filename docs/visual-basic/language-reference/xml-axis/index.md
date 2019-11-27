@@ -15,18 +15,18 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352688"
 ---
 # <a name="xml-axis-properties-visual-basic"></a>XML 축 속성(Visual Basic)
-The topics in this section document the syntax of XML axis properties in Visual Basic. The XML axis properties make it easy to access XML directly in your code.  
+이 단원의 항목에서는 Visual Basic의 XML 축 속성 구문을 설명 합니다. XML 축 속성을 사용 하면 코드에서 직접 XML에 쉽게 액세스할 수 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
   
 |항목|설명|  
 |-----------|-----------------|  
-|[XML Attribute 축 속성](../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)|Describes how to access the attributes of an <xref:System.Xml.Linq.XElement> object.|  
-|[XML Child 축 속성](../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)|Describes how to access the children of an <xref:System.Xml.Linq.XElement> object.|  
-|[XML Descendant 축 속성](../../../visual-basic/language-reference/xml-axis/xml-descendant-axis-property.md)|Describes how to access the descendants of an <xref:System.Xml.Linq.XElement> object.|  
-|[확장명 인덱서 속성](../../../visual-basic/language-reference/xml-axis/extension-indexer-property.md)|Describes how to access individual elements in a collection of <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XAttribute> objects.|  
-|[XML 값 속성](../../../visual-basic/language-reference/xml-axis/xml-value-property.md)|Describes how to access the value of the first element of a collection of <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XAttribute> objects.|  
+|[XML Attribute 축 속성](../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)|<xref:System.Xml.Linq.XElement> 개체의 특성에 액세스 하는 방법을 설명 합니다.|  
+|[XML Child 축 속성](../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)|<xref:System.Xml.Linq.XElement> 개체의 자식에 액세스 하는 방법을 설명 합니다.|  
+|[XML Descendant 축 속성](../../../visual-basic/language-reference/xml-axis/xml-descendant-axis-property.md)|<xref:System.Xml.Linq.XElement> 개체의 하위 항목에 액세스 하는 방법을 설명 합니다.|  
+|[확장명 인덱서 속성](../../../visual-basic/language-reference/xml-axis/extension-indexer-property.md)|<xref:System.Xml.Linq.XElement> 또는 <xref:System.Xml.Linq.XAttribute> 개체 컬렉션의 개별 요소에 액세스 하는 방법을 설명 합니다.|  
+|[XML 값 속성](../../../visual-basic/language-reference/xml-axis/xml-value-property.md)|<xref:System.Xml.Linq.XElement> 또는 <xref:System.Xml.Linq.XAttribute> 개체 컬렉션의 첫 번째 요소 값에 액세스 하는 방법을 설명 합니다.|  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)

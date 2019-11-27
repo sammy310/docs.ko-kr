@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436039"
 ---
 # <a name="icorprofilerinfo2getarrayobjectinfo-method"></a>ICorProfilerInfo2::GetArrayObjectInfo 메서드
-Gets detailed information about an array object.  
+배열 개체에 대 한 자세한 정보를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,22 +38,22 @@ HRESULT GetArrayObjectInfo(
   
 ## <a name="parameters"></a>매개 변수  
  `objectId`  
- [in] The ID of a valid array object.  
+ 진행 유효한 배열 개체의 ID입니다.  
   
  `cDimensions`  
- [in] The rank (number of dimensions) of the array.  
+ 진행 배열의 순위 (차원의 수)입니다.  
   
  `pDimensionSizes`  
- [out] An array that contains integers, each representing the size of a dimension of the array.  
+ 제한이 각각 배열의 차원 크기를 나타내는 정수를 포함 하는 배열입니다.  
   
  `pDimensionLowerBounds`  
- [out] An array that contains integers, each representing the lower bound of a dimension of the array.  
+ 제한이 각각 배열 차원의 하 한을 나타내는 정수를 포함 하는 배열입니다.  
   
  `ppData`  
- [out] A pointer to the address of the raw buffer for the array, which is laid out according to the C++ convention.  
+ 제한이 C++ 규칙에 따라 배치 되는 배열에 대 한 원시 버퍼의 주소에 대 한 포인터입니다.  
   
-## <a name="remarks"></a>주의  
- The `pDimensionSizes` and `pDimensionLowerBounds` are parallel arrays, so the elements located at the same index in each array are characteristics of the same entity.  
+## <a name="remarks"></a>설명  
+ `pDimensionSizes` 및 `pDimensionLowerBounds`은 병렬 배열 이므로 각 배열의 동일한 인덱스에 있는 요소는 동일한 엔터티의 특징입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
@@ -64,7 +64,7 @@ HRESULT GetArrayObjectInfo(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [ICorProfilerInfo 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
 - [ICorProfilerInfo2 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

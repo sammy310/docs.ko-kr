@@ -40,13 +40,13 @@ ms.locfileid: "74345049"
  [!code-vb[VbVbalrOOP#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#17)]  
   
 ## <a name="implementing-interfaces"></a>인터페이스 구현  
- The Visual Basic reserved word `Implements` is used in two ways. `Implements` 문은 클래스 또는 구조체가 인터페이스를 구현한다는 것을 나타냅니다. `Implements` 키워드는 클래스 멤버 또는 구조체 멤버가 특정 인터페이스 멤버를 구현한다는 것을 나타냅니다.  
+ Visual Basic 예약어 `Implements`는 두 가지 방법으로 사용 됩니다. `Implements` 문은 클래스 또는 구조체가 인터페이스를 구현한다는 것을 나타냅니다. `Implements` 키워드는 클래스 멤버 또는 구조체 멤버가 특정 인터페이스 멤버를 구현한다는 것을 나타냅니다.  
   
 ### <a name="implements-statement"></a>Implements 문  
- 하나 이상의 인터페이스를 구현하는 클래스 또는 구조체에는 `Class` 또는 `Structure` 문 바로 다음에 `Implements`문이 나와야 합니다. `Implements` 문에는 클래스에 의해 구현될 인터페이스를 나열한, 쉼표로 구분된 목록이 필요합니다. 클래스 또는 구조체는 `Implements` 키워드를 사용하여 모든 인터페이스 멤버를 구현해야 합니다.  
+ 하나 이상의 인터페이스를 구현하는 클래스 또는 구조체에는 `Implements` 또는 `Class` 문 바로 다음에 `Structure`문이 나와야 합니다. `Implements` 문에는 클래스에 의해 구현될 인터페이스를 나열한, 쉼표로 구분된 목록이 필요합니다. 클래스 또는 구조체는 `Implements` 키워드를 사용하여 모든 인터페이스 멤버를 구현해야 합니다.  
   
 ### <a name="implements-keyword"></a>Implements 키워드  
- `Implements` 키워드에는 구현될 인터페이스 멤버를 나열한, 쉼표로 구분된 목록이 필요합니다. 일반적으로 단일 인터페이스 멤버만 지정되지만 여러 멤버를 지정할 수도 있습니다. 인터페이스 멤버의 사양은 인터페이스 이름(클래스 내의 implements 문에서 지정해야 함)과 기간 및 구현할 멤버 함수, 속성 또는 이벤트의 이름으로 구성됩니다. The name of a member that implements an interface member can use any legal identifier, and it is not limited to the `InterfaceName_MethodName` convention used in earlier versions of Visual Basic.  
+ `Implements` 키워드에는 구현될 인터페이스 멤버를 나열한, 쉼표로 구분된 목록이 필요합니다. 일반적으로 단일 인터페이스 멤버만 지정되지만 여러 멤버를 지정할 수도 있습니다. 인터페이스 멤버의 사양은 인터페이스 이름(클래스 내의 implements 문에서 지정해야 함)과 기간 및 구현할 멤버 함수, 속성 또는 이벤트의 이름으로 구성됩니다. 인터페이스 멤버를 구현 하는 멤버의 이름에는 유효한 식별자를 사용할 수 있으며,이는 이전 버전의 Visual Basic에서 사용 되는 `InterfaceName_MethodName` 규칙으로 제한 되지 않습니다.  
   
  예를 들어 다음 코드에서는 인터페이스의 메서드를 구현하는 `Sub1`이라는 서브루틴을 선언하는 방법을 보여 줍니다.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "74345049"
   
  [!code-vb[VbVbalrOOP#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#40)]  
   
- 마지막 예제에서는 `Interface1`에서 상속된 메서드를 포함하여 `Interface2`를 구현합니다.  
+ 마지막 예제에서는 `Interface2`에서 상속된 메서드를 포함하여 `Interface1`를 구현합니다.  
   
  [!code-vb[VbVbalrOOP#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#41)]  
   

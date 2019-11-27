@@ -21,36 +21,36 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348991"
 ---
 # <a name="efficient-combination-of-operators-visual-basic"></a>연산자의 효율적 결합(Visual Basic)
-Complex expressions can contain many different operators. 다음은 이에 대한 예입니다.  
+복잡 한 식에는 여러 연산자가 포함 될 수 있습니다. 다음은 이에 대한 예입니다.  
   
  `x = (45 * (y + z)) ^ (2 / 85) * 5 + z`  
   
- Creating complex expressions such as the one in the preceding example requires a thorough understanding of the rules of operator precedence. For more information, see [Operator Precedence in Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md).  
+ 위의 예에 나와 있는 것과 같은 복잡 한 식을 만들려면 연산자 우선 순위 규칙을 철저 하 게 이해 해야 합니다. 자세한 내용은 [Visual Basic 연산자 우선 순위](../../../../visual-basic/language-reference/operators/operator-precedence.md)를 참조 하세요.  
   
-## <a name="parenthetical-expressions"></a>Parenthetical Expressions  
- Often you want operations to proceed in a different order from that determined by operator precedence. 다음 예제를 살펴보십시오.  
+## <a name="parenthetical-expressions"></a>괄호 식  
+ 연산자 우선 순위에 따라 결정 되는 것과 다른 순서로 작업을 진행 하려는 경우가 종종 있습니다. 다음 예제를 살펴보십시오.  
   
  `x = z * y + 4`  
   
- The preceding example multiplies `z` by `y`, then adds the result to `4`. But if you want to add `y` and `4` before multiplying the result by `z`, you can override normal operator precedence by using parentheses. By enclosing an expression in parentheses, you force that expression to be evaluated first, regardless of operator precedence. To force the preceding example to do the addition first, you could rewrite it as in the following example.  
+ 앞의 예제에서는 `y`를 `z` 곱하고 결과를 `4`에 추가 합니다. 그러나 결과를 `z`에 곱하여 `y` 및 `4`를 추가 하려는 경우에는 괄호를 사용 하 여 일반적인 연산자 우선 순위를 재정의할 수 있습니다. 식을 괄호로 묶으면 연산자 우선 순위에 관계 없이 식이 먼저 계산 됩니다. 앞의 예제에서 더하기를 먼저 수행 하도록 하려면 다음 예제와 같이 다시 작성할 수 있습니다.  
   
  `x = z * (y + 4)`  
   
- The preceding example adds `y` and `4`, then multiplies that sum by `z`.  
+ 앞의 예제에서는 `y` 및 `4`를 추가 하 고이 합계를 `z`에 곱합니다.  
   
-### <a name="nested-parenthetical-expressions"></a>Nested Parenthetical Expressions  
- You can nest expressions in multiple levels of parentheses to override precedence even further. The expressions most deeply nested in parentheses are evaluated first, followed by the next most deeply nested, and so on to the least deeply nested, and finally the expressions outside parentheses. 다음은 이에 대한 예입니다.  
+### <a name="nested-parenthetical-expressions"></a>중첩 된 괄호 식  
+ 여러 수준의 괄호에 식을 중첩 하 여 우선 순위를 추가로 재정의할 수 있습니다. 괄호 안의 가장 안쪽에 중첩 된 식은 먼저 계산 된 다음 가장 안쪽에 중첩 된 다음으로 가장 많이 중첩 된 식과 괄호 외부에 있는 식의 순서로 계산 됩니다. 다음은 이에 대한 예입니다.  
   
  `x = (z * 4) ^ (y * (z + 2))`  
   
- In the preceding example, `z + 2` is evaluated first, then the other parenthetical expressions. Exponentiation, which normally has higher precedence than addition or multiplication, is evaluated last in this example because the other expressions are enclosed in parentheses.  
+ 앞의 예제에서는 `z + 2` 먼저 평가한 다음 다른 괄호 식을 계산 합니다. 더하기 또는 곱하기 보다 우선 순위가 높은 지 수는 다른 식이 괄호로 묶여 있기 때문에이 예제에서는 마지막으로 계산 됩니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
-- [Arithmetic Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
-- [Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
-- [Logical and Bitwise Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
-- [Logical/Bitwise Operators (Visual Basic)](../../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
+- [Visual Basic의 산술 연산자](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [Visual Basic의 비교 연산자](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Visual Basic 논리 및 비트 연산자](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+- [논리/비트 연산자 (Visual Basic)](../../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
 - [부울 식](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md)
 - [값 비교](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)
 - [방법: 숫자 값 계산](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-calculate-numeric-values.md)

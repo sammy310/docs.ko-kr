@@ -9,7 +9,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347695"
 ---
-# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-visual-basic"></a>How to: Query for Files with a Specified Attribute or Name (Visual Basic)
+# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-visual-basic"></a>방법: 지정 된 특성 또는 이름으로 파일 쿼리 (Visual Basic)
 이 예제에서는 지정된 디렉터리 트리에서 지정된 파일 이름 확장명(예: ".txt")을 가진 파일을 모두 찾는 방법을 보여 줍니다. 또한 생성 시간을 기준으로 트리에서 가장 최신 파일이나 가장 오래된 파일을 반환하는 방법을 보여 줍니다.  
   
 ## <a name="example"></a>예제  
@@ -61,9 +61,9 @@ End Module
 ```  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
-Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.
+VB.NET 콘솔 응용 프로그램 프로젝트를 만듭니다 .이 프로젝트에는 system.string 네임 스페이스에 대 한 `Imports` 문이 있습니다.
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [LINQ to Objects(Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
 - [LINQ 및 파일 디렉터리(Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

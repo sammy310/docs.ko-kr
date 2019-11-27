@@ -126,7 +126,7 @@ ms.locfileid: "74350032"
 
   [!code-vb[VbVbalrAnonymousTypes#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#16)]
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [개체 이니셜라이저: 명명된 형식과 익명 형식](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
 - [지역 형식 유추](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)

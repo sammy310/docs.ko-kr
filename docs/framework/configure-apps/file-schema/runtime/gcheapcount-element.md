@@ -15,7 +15,7 @@ ms.locfileid: "74283080"
 
 서버 가비지 수집에 사용할 힙/스레드 수를 지정 합니다.
 
-\<configuration>\
+\<구성 > \
 &nbsp;&nbsp;\<런타임 > \
 &nbsp;&nbsp;&nbsp;&nbsp;\<GCHeapCount >
 
@@ -93,7 +93,7 @@ ms.locfileid: "74283080"
 </configuration>
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType>
 - [GCNoAffinitize 요소](gcnoaffinitize-element.md)

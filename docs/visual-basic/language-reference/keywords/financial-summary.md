@@ -13,19 +13,19 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349804"
 ---
 # <a name="financial-summary-visual-basic"></a>회계 요약(Visual Basic)
-Visual Basic language keywords and run-time library members are organized by purpose and use.  
+Visual Basic 언어 키워드 및 런타임 라이브러리 멤버는 목적과 사용을 기준으로 구성 됩니다.  
   
-|작업|언어 요소|  
+|작업|Language 요소|  
 |------------|----------------------|  
-|Calculate depreciation.|<xref:Microsoft.VisualBasic.Financial.DDB%2A>에서 <xref:Microsoft.VisualBasic.Financial.SLN%2A>에서 <xref:Microsoft.VisualBasic.Financial.SYD%2A>|  
-|Calculate future value.|<xref:Microsoft.VisualBasic.Financial.FV%2A>|  
-|Calculate interest rate.|<xref:Microsoft.VisualBasic.Financial.Rate%2A>|  
-|Calculate internal rate of return.|<xref:Microsoft.VisualBasic.Financial.IRR%2A>, <xref:Microsoft.VisualBasic.Financial.MIRR%2A>|  
-|Calculate number of periods.|<xref:Microsoft.VisualBasic.Financial.NPer%2A>|  
-|Calculate payments.|<xref:Microsoft.VisualBasic.Financial.IPmt%2A>에서 <xref:Microsoft.VisualBasic.Financial.Pmt%2A>에서 <xref:Microsoft.VisualBasic.Financial.PPmt%2A>|  
-|Calculate present value.|<xref:Microsoft.VisualBasic.Financial.NPV%2A>, <xref:Microsoft.VisualBasic.Financial.PV%2A>|  
+|감가 상각 계산.|<xref:Microsoft.VisualBasic.Financial.DDB%2A>, <xref:Microsoft.VisualBasic.Financial.SLN%2A>, <xref:Microsoft.VisualBasic.Financial.SYD%2A>|  
+|미래 가치를 계산 합니다.|<xref:Microsoft.VisualBasic.Financial.FV%2A>|  
+|이자율을 계산 합니다.|<xref:Microsoft.VisualBasic.Financial.Rate%2A>|  
+|내부 수익률을 계산 합니다.|<xref:Microsoft.VisualBasic.Financial.IRR%2A>, <xref:Microsoft.VisualBasic.Financial.MIRR%2A>|  
+|기간 수를 계산 합니다.|<xref:Microsoft.VisualBasic.Financial.NPer%2A>|  
+|지불액 계산.|<xref:Microsoft.VisualBasic.Financial.IPmt%2A>, <xref:Microsoft.VisualBasic.Financial.Pmt%2A>, <xref:Microsoft.VisualBasic.Financial.PPmt%2A>|  
+|현재 값을 계산 합니다.|<xref:Microsoft.VisualBasic.Financial.NPV%2A>, <xref:Microsoft.VisualBasic.Financial.PV%2A>|  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
-- [C++ 키워드](../../../visual-basic/language-reference/keywords/index.md)
+- [키워드](../../../visual-basic/language-reference/keywords/index.md)
 - [Visual Basic 런타임 라이브러리 멤버](../../../visual-basic/language-reference/runtime-library-members.md)

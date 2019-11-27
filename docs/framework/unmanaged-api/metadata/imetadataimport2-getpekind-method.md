@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445242"
 ---
 # <a name="imetadataimport2getpekind-method"></a>IMetaDataImport2::GetPEKind 메서드
-Gets a value identifying the nature of the code in the portable executable (PE) file, typically a DLL or EXE file, that is defined in the current metadata scope.  
+현재 메타 데이터 범위에 정의 된 PE (이식 가능한 실행) 파일 (일반적으로 DLL 또는 EXE 파일)에 있는 코드의 특성을 식별 하는 값을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,30 +36,30 @@ HRESULT GetPEKind (
   
 ## <a name="parameters"></a>매개 변수  
  `pdwPEKind`  
- [out] A pointer to a value of the [CorPEKind](../../../../docs/framework/unmanaged-api/metadata/corpekind-enumeration.md) enumeration that describes the PE file.  
+ 제한이 PE 파일을 설명 하는 [CorPEKind](../../../../docs/framework/unmanaged-api/metadata/corpekind-enumeration.md) 열거형의 값에 대 한 포인터입니다.  
   
  `pdwMachine`  
- [out] A pointer to a value that identifies the architecture of the machine. See the next section for possible values.  
+ 제한이 컴퓨터의 아키텍처를 식별 하는 값에 대 한 포인터입니다. 가능한 값에 대해서는 다음 섹션을 참조 하십시오.  
   
 ## <a name="remarks"></a>주의  
- The value referenced by the `pdwMachine` parameter can be one of the following.  
+ `pdwMachine` 매개 변수에서 참조 하는 값은 다음 중 하나일 수 있습니다.  
   
-|값|Machine architecture|  
+|값|컴퓨터 아키텍처|  
 |-----------|--------------------------|  
 |IMAGE_FILE_MACHINE_I386<br /><br /> 0x014C|x86|  
 |IMAGE_FILE_MACHINE_IA64<br /><br /> 0x0200|Intel IPF|  
-|IMAGE_FILE_MACHINE_AMD64<br /><br /> 0x8664|X64|  
+|IMAGE_FILE_MACHINE_AMD64<br /><br /> 0x8664|x64|  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IMetaDataImport2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
 - [IMetaDataImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

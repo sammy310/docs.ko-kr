@@ -13,7 +13,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74332954"
 ---
 # <a name="how-to-declare-and-use-xml-namespace-prefixes-visual-basic"></a>방법: XML 네임스페이스 접두사 선언 및 사용(Visual Basic)
-This example shows how to import the XML namespace prefix `ns` and use it in an XML literal and XML axis properties.  
+이 예에서는 `ns` XML 네임 스페이스 접두사를 가져오고 xml 리터럴 및 XML 축 속성에서 사용 하는 방법을 보여 줍니다.  
   
 ## <a name="example"></a>예제  
  [!code-vb[VbXMLSamples#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples3.vb#8)]  
@@ -23,7 +23,7 @@ This example shows how to import the XML namespace prefix `ns` and use it in an 
   
 - <xref:System.Xml.Linq> 네임스페이스에 대한 참조  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - <xref:System.Xml.Linq.XElement.Attributes%2A?displayProperty=nameWithType>
 - [Imports 문(XML 네임스페이스)](../../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)

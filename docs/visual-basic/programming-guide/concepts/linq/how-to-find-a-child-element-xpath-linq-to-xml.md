@@ -9,7 +9,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353040"
 ---
-# <a name="how-to-find-a-child-element-xpath-linq-to-xml-visual-basic"></a>How to: Find a Child Element (XPath-LINQ to XML) (Visual Basic)
+# <a name="how-to-find-a-child-element-xpath-linq-to-xml-visual-basic"></a>방법: 자식 요소 찾기 (XPath-LINQ to XML) (Visual Basic)
 이 항목에서는 XPath 자식 요소 축과 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Element%2A> 메서드를 비교합니다.  
   
  XPath 식은 `DeliveryNotes`입니다.  
@@ -46,6 +46,6 @@ Results are identical
 <DeliveryNotes>Please leave packages in shed by driveway.</DeliveryNotes>  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
-- [LINQ to XML for XPath Users (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [XPath 사용자에 대 한 LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

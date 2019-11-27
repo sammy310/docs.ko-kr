@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450364"
 ---
 # <a name="icorprofilerinfogetilfunctionbody-method"></a>ICorProfilerInfo::GetILFunctionBody 메서드
-Gets a pointer to the body of a method in Microsoft intermediate language (MSIL) code, starting at its header.  
+MSIL (Microsoft 중간 언어) 코드에서 헤더를 시작 하는 메서드의 본문에 대 한 포인터를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,21 +37,21 @@ HRESULT GetILFunctionBody(
   
 ## <a name="parameters"></a>매개 변수  
  `moduleId`  
- [in] The ID of the module in which the function resides.  
+ 진행 함수가 상주 하는 모듈의 ID입니다.  
   
  `methodId`  
- [in] The metadata token for the method.  
+ 진행 메서드에 대 한 메타 데이터 토큰입니다.  
   
  `ppMethodHeader`  
- [out] A pointer to the method's header.  
+ 제한이 메서드의 헤더에 대 한 포인터입니다.  
   
  `pcbMethodSize`  
- [out] An integer that specifies the size of the method.  
+ [out] 메서드의 크기를 지정하는 정수입니다.  
   
 ## <a name="remarks"></a>주의  
- A method is scoped by the module in which it lives. Because the `GetILFunctionBody` method is designed to give a tool access to the MSIL code before it has been loaded by the common language runtime (CLR), it uses the metadata token of the method to find the desired instance.  
+ 메서드는 해당 메서드가 상주 하는 모듈로 범위가 지정 됩니다. `GetILFunctionBody` 메서드는 CLR (공용 언어 런타임)에 의해 로드 되기 전에 도구에 MSIL 코드에 대 한 액세스를 제공 하도록 설계 되었기 때문에 메서드의 메타 데이터 토큰을 사용 하 여 원하는 인스턴스를 찾습니다.  
   
- `GetILFunctionBody` can return a CORPROF_E_FUNCTION_NOT_IL HRESULT if the `methodId` points to a method without any MSIL code (such as an abstract method, or a platform invoke (PInvoke) method).  
+ `methodId`가 MSIL 코드 (예: 추상 메서드 또는 플랫폼 호출 (PInvoke) 메서드)를 사용 하지 않고 메서드를 가리키는 경우에는 CORPROF_E_FUNCTION_NOT_IL HRESULT를 반환할 수 `GetILFunctionBody`.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
@@ -62,6 +62,6 @@ HRESULT GetILFunctionBody(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerInfo 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

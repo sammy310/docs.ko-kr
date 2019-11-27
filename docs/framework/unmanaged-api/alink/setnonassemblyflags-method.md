@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445545"
 ---
 # <a name="setnonassemblyflags-method"></a>SetNonAssemblyFlags 메서드
-Sets flags that are not assembly-specific.  
+어셈블리와 관련 없는 플래그를 설정 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -34,15 +34,15 @@ HRESULT SetNonAssemblyFlags(
   
 ## <a name="parameters"></a>매개 변수  
  `afFlags`  
- ALink flags.  
+ ALink 플래그입니다.  
   
 ## <a name="return-value"></a>반환 값  
- Returns S_OK if the method succeeds.  
+ 메서드가 성공 하면 S_OK을 반환 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- Requires alink.h  
+ Alink 필요  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [IALink 인터페이스](ialink-interface.md)
 - [IALink2 인터페이스](ialink2-interface.md)

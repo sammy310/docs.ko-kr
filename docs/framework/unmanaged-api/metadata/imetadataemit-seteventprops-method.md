@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450326"
 ---
 # <a name="imetadataemitseteventprops-method"></a>IMetaDataEmit::SetEventProps 메서드
-Sets or updates the specified feature of an event defined by a prior call to [IMetaDataEmit::DefineEvent](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineevent-method.md).  
+[IMetaDataEmit::D efineEvent](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineevent-method.md)에 대 한 이전 호출에서 정의한 이벤트의 지정 된 기능을 설정 하거나 업데이트 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -41,36 +41,36 @@ HRESULT SetEventProps (
   
 ## <a name="parameters"></a>매개 변수  
  `ev`  
- [in] The event token.  
+ 진행 이벤트 토큰입니다.  
   
  `dwEventFlags`  
- [in] Event flags. This is a bitmask of `CorEventAttr` values.  
+ 진행 이벤트 플래그입니다. `CorEventAttr` 값의 비트 마스크입니다.  
   
  `tkEventType`  
- [in] The token for the event class. This is either a `mdTypeDef` or a `mdTypeRef` token.  
+ 진행 이벤트 클래스에 대 한 토큰입니다. `mdTypeDef` 또는 `mdTypeRef` 토큰입니다.  
   
  `mdAddOn`  
- [in] The method used to subscribe to the event, or null.  
+ 진행 이벤트를 구독 하는 데 사용 되는 메서드 이거나 null입니다.  
   
  `mdRemoveOn`  
- [in] The method used to unsubscribe to the event, or null.  
+ 진행 이벤트를 구독 취소 하는 데 사용 되는 메서드 이거나 null입니다.  
   
  `mdFire`  
- [in] The method used (by a derived class) to raise the event.  
+ 진행 파생 클래스에서 이벤트를 발생 시키는 데 사용 되는 메서드입니다.  
   
  `rmdOtherMethods[]`  
- [in] An array of tokens for other methods associated with the event. The last element of the array must be `mdMethodDefNil`.  
+ 진행 이벤트와 연결 된 다른 메서드에 대 한 토큰의 배열입니다. 배열의 마지막 요소는 `mdMethodDefNil`이어야 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IMetaDataEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

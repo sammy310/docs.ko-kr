@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431710"
 ---
 # <a name="imetadataemitdefinenestedtype-method"></a>IMetaDataEmit::DefineNestedType 메서드
-Creates the metadata signature of a type definition, returns an `mdTypeDef` token for that type, and specifies that the defined type is a member of the type referenced by the `tdEncloser` parameter.  
+형식 정의의 메타 데이터 서명을 만들고 해당 형식에 대 한 `mdTypeDef` 토큰을 반환 하 고, 정의 된 형식이 `tdEncloser` 매개 변수에서 참조 하는 형식의 멤버 임을 지정 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,33 +40,33 @@ HRESULT DefineNestedType (
   
 ## <a name="parameters"></a>매개 변수  
  `szTypeDef`  
- [in] The name of the type in Unicode.  
+ 진행 유니코드 형식의 이름입니다.  
   
  `dwTypeDefFlags`  
- [in] `TypeDef` attributes. This is a bitmask of `CorTypeAttr` values.  
+ [in] `TypeDef` 특성입니다. `CorTypeAttr` 값의 비트 마스크입니다.  
   
  `tkExtends`  
- [in] The token of the base class. This is either a `mdTypeDef` or a `mdTypeRef` token.  
+ 진행 기본 클래스의 토큰입니다. `mdTypeDef` 또는 `mdTypeRef` 토큰입니다.  
   
  `rtkImplements`[]  
- [in] An array of tokens that specify the interfaces that this class or interface implements.  
+ 진행 이 클래스 또는 인터페이스가 구현 하는 인터페이스를 지정 하는 토큰의 배열입니다.  
   
  `tdEncloser`  
- [in] The token of the enclosing type. The last element of the array must be `mdTokenNil`.  
+ 진행 바깥쪽 형식의 토큰입니다. 배열의 마지막 요소는 `mdTokenNil`이어야 합니다.  
   
  `ptd`  
- [out] The `mdTypeDef` token assigned.  
+ 제한이 할당 된 `mdTypeDef` 토큰입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [IMetaDataEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

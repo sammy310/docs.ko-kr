@@ -21,45 +21,45 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74331621"
 ---
 # <a name="declared-element-characteristics-visual-basic"></a>선언된 요소 특성(Visual Basic)
-A *characteristic* of a declared element is an aspect of that element that affects how code can interact with it. Every declared element has one or more of the following characteristics associated with it:  
+선언 된 요소의 *특징* 은 코드와 상호 작용 하는 방법에 영향을 주는 요소에 대 한 측면입니다. 선언 된 모든 요소에는 다음과 같은 특징이 하나 이상 있습니다.  
   
-- *Data type* — the values the element can hold, and how it stores those values. 자세한 내용은 [데이터 형식](../../../../visual-basic/language-reference/data-types/index.md)을 참조하세요.  
+- *데이터 형식* -요소에서 보유할 수 있는 값과 해당 값을 저장 하는 방법입니다. 자세한 내용은 [데이터 형식](../../../../visual-basic/language-reference/data-types/index.md)을 참조하세요.  
   
-- *Lifetime* — the period of execution time during which the element is available for use. For more information, see [Lifetime in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md).  
+- *수명* -요소를 사용할 수 있는 실행 시간의 기간입니다. 자세한 내용은 [Visual Basic 수명](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)을 참조 하세요.  
   
-- *Scope* — the set of all code that can refer to the element without qualifying its name. For more information, see [How to: Control the Scope of a Variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md).  
+- *범위* — 이름을 한정 하지 않고 요소를 참조할 수 있는 모든 코드 집합입니다. 자세한 내용은 [방법: 변수의 범위 제어](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md)를 참조 하세요.  
   
-- *Access level* — the permission for code to make use of the element. For more information, see [How to: Control the Availability of a Variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-availability-of-a-variable.md).  
+- *액세스 수준* -요소를 사용 하는 코드에 대 한 권한입니다. 자세한 내용은 [방법: 변수의 가용성 제어](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-availability-of-a-variable.md)를 참조 하세요.  
   
-## <a name="characteristics-of-the-elements"></a>Characteristics of the Elements  
- The following table shows the declared elements and the characteristics that apply to each one.  
+## <a name="characteristics-of-the-elements"></a>요소의 특징  
+ 다음 표에서는 선언 된 요소와 각 요소에 적용 되는 특성을 보여 줍니다.  
   
-|요소|데이터 형식|수명|Scope <sup>1</sup>|Access Level|  
+|요소|데이터 형식|수명|범위 <sup>1</sup>|액세스 수준|  
 |-------------|---------------|--------------|------------------------|------------------|  
 |변수|예|예|예|예|  
 |상수|예|아니요|예|예|  
 |열거형|예|아니요|예|예|  
-|구조체|아니요|아니요|예|예|  
+|구조|아니요|아니요|예|예|  
 |속성|예|예|예|예|  
 |메서드|아니요|예|예|예|  
-|Procedure (`Sub` or `Function`)|아니요|예|예|예|  
+|프로시저 (`Sub` 또는 `Function`)|아니요|예|예|예|  
 |프로시저 매개 변수|예|예|예|아니요|  
-|Function return|예|예|예|아니요|  
+|함수 반환|예|예|예|아니요|  
 |연산자|예|아니요|예|예|  
 |인터페이스|아니요|아니요|예|예|  
-|인스턴스|아니요|아니요|예|예|  
-|이벤트(event)|아니요|아니요|예|예|  
-|대리자(delegate)|아니요|아니요|예|예|  
+|클래스|아니요|아니요|예|예|  
+|이벤트|아니요|아니요|예|예|  
+|대리자|아니요|아니요|예|예|  
   
- <sup>1</sup> Scope is sometimes referred to as *visibility*.  
+ <sup>1</sup> 범위는 *표시 유형*이 라고도 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [선언 요소](../../../../visual-basic/programming-guide/language-features/declared-elements/index.md)
 - [선언 요소 이름](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
 - [선언된 요소 참조](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
-- [Lifetime in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
-- [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
-- [Access levels in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Visual Basic 수명](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
+- [Visual Basic 범위](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Visual Basic의 액세스 수준](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [데이터 형식](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [변수 선언](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)

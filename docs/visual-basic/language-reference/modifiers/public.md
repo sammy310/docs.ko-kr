@@ -16,24 +16,24 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351289"
 ---
 # <a name="public-visual-basic"></a>Public(Visual Basic)
-Specifies that one or more declared programming elements have no access restrictions.  
+하나 이상의 선언 된 프로그래밍 요소에 액세스 제한이 없도록 지정 합니다.  
   
-## <a name="remarks"></a>주의  
- If you are publishing a component or set of components, such as a class library, you usually want the programming elements to be accessible by any code that interoperates with your assembly. To confer such unlimited access on an element, you can declare it with `Public`.  
+## <a name="remarks"></a>설명  
+ 클래스 라이브러리와 같은 구성 요소 또는 구성 요소 집합을 게시 하는 경우 일반적으로 어셈블리와 상호 작용 하는 코드에서 프로그래밍 요소에 액세스할 수 있도록 합니다. 요소에 대 한 무제한 액세스를 설정 하기 위해 `Public`를 사용 하 여 선언할 수 있습니다.  
   
- Public access is the normal level for a programming element when you do not need to limit access to it. Note that the access level of an element declared within an interface, module, class, or structure defaults to `Public` if you do not declare it otherwise.  
+ 공용 액세스는 프로그래밍 요소에 대 한 액세스를 제한 하지 않아도 되는 일반적인 수준입니다. 인터페이스, 모듈, 클래스 또는 구조체 내에서 선언 된 요소에 대 한 액세스 수준은 기본적으로 `Public` (그렇지 않은 경우)로 선언 됩니다.  
   
 ## <a name="rules"></a>규칙  
   
-- **Declaration Context.** You can use `Public` only at module, interface, or namespace level. This means the declaration context for a `Public` element must be a source file, namespace, interface, module, class, or structure, and cannot be a procedure.  
+- **선언 컨텍스트입니다.** `Public`는 모듈, 인터페이스 또는 네임 스페이스 수준 에서만 사용할 수 있습니다. 즉, `Public` 요소에 대 한 선언 컨텍스트는 소스 파일, 네임 스페이스, 인터페이스, 모듈, 클래스 또는 구조체 여야 하 고 프로시저일 수 없습니다.  
   
 ## <a name="behavior"></a>동작  
   
-- **Access Level.** All code that can access a module, class, or structure can access its `Public` elements.  
+- **액세스 수준입니다.** 모듈, 클래스 또는 구조체에 액세스할 수 있는 모든 코드는 해당 `Public` 요소에 액세스할 수 있습니다.  
   
-- **Default Access.** Local variables inside a procedure default to public access, and you cannot use any access modifiers on them.  
+- **기본 액세스.** 프로시저 내의 지역 변수는 기본적으로 공용 액세스로 설정 되며 액세스 한정자를 사용할 수 없습니다.  
   
-- **Access Modifiers.** The keywords that specify access level are called *access modifiers*. For a comparison of the access modifiers, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+- **액세스 한정자입니다.** 액세스 수준을 지정 하는 키워드를 *액세스 한정자*라고 합니다. 액세스 한정자의 비교는 [Visual Basic의 액세스 수준](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)을 참조 하세요.  
   
  `Public` 한정자는 다음 컨텍스트에서 사용할 수 있습니다.  
   
@@ -41,7 +41,7 @@ Specifies that one or more declared programming elements have no access restrict
   
  [Const 문](../../../visual-basic/language-reference/statements/const-statement.md)  
   
- [Declare 문](../../../visual-basic/language-reference/statements/declare-statement.md)  
+ [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
  [Delegate 문](../../../visual-basic/language-reference/statements/delegate-statement.md)  
   
@@ -65,14 +65,14 @@ Specifies that one or more declared programming elements have no access restrict
   
  [Sub 문](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
-- [보호됨](../../../visual-basic/language-reference/modifiers/protected.md)
+- [Protected](../../../visual-basic/language-reference/modifiers/protected.md)
 - [Friend](../../../visual-basic/language-reference/modifiers/friend.md)
-- [전용](../../../visual-basic/language-reference/modifiers/private.md)
+- [Private](../../../visual-basic/language-reference/modifiers/private.md)
 - [Private Protected](private-protected.md)
 - [Protected Friend](protected-friend.md)
-- [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Visual Basic의 액세스 수준](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [절차](../../../visual-basic/programming-guide/language-features/procedures/index.md)
 - [구조체](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [개체 및 클래스](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

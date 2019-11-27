@@ -38,27 +38,27 @@ HRESULT GetModuleRefProps (
   
 ## <a name="parameters"></a>매개 변수  
  `mur`  
- [in] The ModuleRef metadata token that references the module to get metadata information for.  
+ 진행 메타 데이터 정보를 가져올 모듈을 참조 하는 ModuleRef metadata 토큰입니다.  
   
  `szName`  
- [out] A buffer to hold the module name.  
+ 제한이 모듈 이름을 저장할 버퍼입니다.  
   
  `cchName`  
- [in] The requested size of `szName` in wide characters.  
+ 진행 `szName`의 요청 된 크기 (와이드 문자)입니다.  
   
  `pchName`  
- [out] The returned size of `szName` in wide characters.  
+ 제한이 반환 되는 `szName` 크기 (와이드 문자)입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [IMetaDataImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

@@ -12,8 +12,8 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352237"
 ---
-# <a name="returns-visual-basic"></a>\<returns> (Visual Basic)
-Specifies the return value of the property or function.  
+# <a name="returns-visual-basic"></a>\<반환 > (Visual Basic)
+속성 또는 함수의 반환 값을 지정 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -25,16 +25,16 @@ Specifies the return value of the property or function.
  `description`  
  반환 값에 대한 설명입니다.  
   
-## <a name="remarks"></a>주의  
- Use the `<returns>` tag in the comment for a method declaration to describe the return value.  
+## <a name="remarks"></a>설명  
+ 메서드 선언의 주석에서 `<returns>` 태그를 사용 하 여 반환 값을 설명 합니다.  
   
  [-doc](../../../visual-basic/reference/command-line-compiler/doc.md)로 컴파일하여 문서 주석을 파일로 처리합니다.  
   
 ## <a name="example"></a>예제  
- This example uses the `<returns>` tag to explain what the `DoesRecordExist` function returns.  
+ 이 예에서는 `<returns>` 태그를 사용 하 여 `DoesRecordExist` 함수가 반환 하는 항목을 설명 합니다.  
   
  [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [XML 주석 태그](../../../visual-basic/language-reference/xmldoc/index.md)

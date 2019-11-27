@@ -1,5 +1,5 @@
 ---
-title: 인증서 사용
+title: 인증서 작업
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,7 +14,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/21/2019
 ms.locfileid: "74283280"
 ---
-# <a name="working-with-certificates"></a>인증서 사용
+# <a name="working-with-certificates"></a>인증서 작업
 
 WCF(Windows Communication Foundation) 보안을 프로그래밍하려면 일반적으로 X.509 디지털 인증서를 사용하여 클라이언트 및 서버를 인증하고, 암호화하고, 메시지에 디지털 서명합니다. 이 항목에서는 X.509 디지털 인증서 기능과 WCF에서 인증서 기능을 사용하는 방법을 간략하게 설명하며, 이러한 개념을 자세히 설명하거나 WCF 및 인증서를 사용하여 일반 작업을 수행하는 방법을 보여 주는 항목에 대한 링크를 제공합니다.
 
@@ -188,7 +188,7 @@ Windows 사용자 계정을 나타내는 토큰에 X.509 인증서를 매핑하�
 
 WCF의 첫 번째 릴리스에서는 도메인 정책을 참조하지 않고 매핑을 수행했습니다. 따라서 매핑을 실행할 때 X.509 인증서가 도메인 정책에 맞지 않을 경우 첫 번째 릴리스에서 작동했던 이전 애플리케이션이 실패할 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - <xref:System.ServiceModel.Channels>
 - <xref:System.ServiceModel.Security>

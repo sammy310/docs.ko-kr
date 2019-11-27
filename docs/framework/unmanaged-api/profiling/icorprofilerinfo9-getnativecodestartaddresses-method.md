@@ -18,9 +18,9 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444722"
 ---
-# <a name="icorprofilerinfo9getnativecodestartaddresses-method"></a>ICorProfilerInfo9::GetNativeCodeStartAddresses Method
+# <a name="icorprofilerinfo9getnativecodestartaddresses-method"></a>ICorProfilerInfo9:: GetNativeCodeStartAddresses 메서드
 
-Given a functionId and rejitId, enumerates the native code start address of all jitted versions of this code that currently exist.
+FunctionId 및 rejitId가 지정 된 경우 현재 존재 하는이 코드의 모든 jit 컴파일된 버전의 네이티브 코드 시작 주소를 열거 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -35,7 +35,7 @@ HRESULT GetNativeCodeStartAddresses( [in]  FunctionID functionID,
 #### <a name="parameters"></a>매개 변수
 
 `functionId` \
-[in] The ID of the function whose native code start addresses should be returned.
+진행 네이티브 코드 시작 주소가 반환 되어야 하는 함수의 ID입니다.
 
 `reJitId` \
 [in] JIT 다시 컴파일된 함수의 ID입니다.
@@ -44,25 +44,25 @@ HRESULT GetNativeCodeStartAddresses( [in]  FunctionID functionID,
 [in] `codeStartAddresses` 배열의 최대 크기입니다.
 
 `pcCodeStartAddresses` \
-[out] The number of available addresses.
+제한이 사용 가능한 주소 수입니다.
 
 `codeStartAddresses` \
-[out] An array of `UINT_PTR`, each one of which is the start address for a native body for the specified function.
+제한이 `UINT_PTR`의 배열입니다. 각는 지정 된 함수에 대 한 네이티브 본문의 시작 주소입니다.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-When tiered compilation is enabled, a function may have more than one native code body.
+계층화 된 컴파일을 사용 하는 경우 함수에 둘 이상의 네이티브 코드 본문이 있을 수 있습니다.
 
 ## <a name="requirements"></a>요구 사항
 
-**Platforms:** See [.NET Core supported operating systems](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).
+**플랫폼:** [.Net Core 지원 운영 체제](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows)를 참조 하세요.
 
 **헤더:** CorProf.idl, CorProf.h
 
 **라이브러리:** CorGuids.lib
 
-**.NET Versions:** [!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
+**.Net 버전:** [!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
-- [ICorProfilerInfo9 Interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo9-interface.md)
+- [ICorProfilerInfo9 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo9-interface.md)

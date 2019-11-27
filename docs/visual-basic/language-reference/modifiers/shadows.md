@@ -1,5 +1,5 @@
 ---
-title: Overloads
+title: Shadows
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Shadows
@@ -20,29 +20,29 @@ ms.locfileid: "74351271"
 ---
 # <a name="shadows-visual-basic"></a>Shadows(Visual Basic)
 
-Specifies that a declared programming element redeclares and hides an identically named element, or set of overloaded elements, in a base class.
+선언 된 프로그래밍 요소가 기본 클래스에서 동일 하 게 명명 된 요소 또는 오버 로드 된 요소 집합을 요소가 하 고 숨기도록 지정 합니다.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-The main purpose of shadowing (which is also known as *hiding by name*) is to preserve the definition of your class members. The base class might undergo a change that creates an element with the same name as one you have already defined. If this happens, the `Shadows` modifier forces references through your class to be resolved to the member you defined, instead of to the new base class element.
+숨김 ( *이름으로 숨기기*라고도 함)의 주요 용도는 클래스 멤버의 정의를 유지 하는 것입니다. 기본 클래스는 이미 정의한 것과 동일한 이름으로 요소를 만드는 변경 될 수 있습니다. 이 경우 `Shadows` 한정자는 클래스를 통해 참조가 새 기본 클래스 요소가 아닌 사용자가 정의한 멤버로 확인 되도록 합니다.
 
-숨김과 재정의는 둘 다 상속된 요소를 다시 정의하지만 두 방법에는 중요한 차이점이 있습니다. For more information, see [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).
+숨김과 재정의는 둘 다 상속된 요소를 다시 정의하지만 두 방법에는 중요한 차이점이 있습니다. 자세한 내용은 [Visual Basic에서 숨기기](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)를 참조 하세요.
 
 ## <a name="rules"></a>규칙
 
-- **Declaration Context.** You can use `Shadows` only at class level. This means the declaration context for a `Shadows` element must be a class, and cannot be a source file, namespace, interface, module, structure, or procedure.
+- **선언 컨텍스트입니다.** `Shadows`는 클래스 수준 에서만 사용할 수 있습니다. 즉, `Shadows` 요소에 대 한 선언 컨텍스트는 클래스 여야 하며 소스 파일, 네임 스페이스, 인터페이스, 모듈, 구조체 또는 프로시저일 수 없습니다.
 
-  You can declare only one shadowing element in a single declaration statement.
+  단일 선언문에서 하나의 섀도잉 요소만 선언할 수 있습니다.
 
-- **Combined Modifiers.** You cannot specify `Shadows` together with `Overloads`, `Overrides`, or `Static` in the same declaration.
+- **결합 된 한정자입니다.** 동일한 선언에서 `Overloads`, `Overrides`또는 `Static`와 함께 `Shadows`를 지정할 수 없습니다.
 
-- **Element Types.** 모든 종류의 선언된 요소를 다른 종류로 섀도잉할 수 있습니다. If you shadow a property or procedure with another property or procedure, the parameters and the return type do not have to match those in the base class property or procedure.
+- **요소 형식.** 모든 종류의 선언된 요소를 다른 종류로 섀도잉할 수 있습니다. 다른 속성이 나 프로시저를 사용 하 여 속성 또는 프로시저를 숨기는 경우 매개 변수와 반환 형식이 기본 클래스 속성 또는 프로시저의 매개 변수와 일치 하지 않아도 됩니다.
 
-- **Accessing.** The shadowed element in the base class is normally unavailable from within the derived class that shadows it. However, the following considerations apply.
+- **하.** 기본 클래스의 숨겨진 요소는 일반적으로 해당 요소를 숨기는 파생 클래스 내에서 사용할 수 없습니다. 그러나 다음 고려 사항이 적용 됩니다.
 
-  - If the shadowing element is not accessible from the code referring to it, the reference is resolved to the shadowed element. For example, if a `Private` element shadows a base class element, code that does not have permission to access the `Private` element accesses the base class element instead.
+  - 해당 요소를 참조 하는 코드에서 숨기는 요소에 액세스할 수 없는 경우 참조는 숨겨진 요소로 확인 됩니다. 예를 들어 `Private` 요소가 기본 클래스 요소를 숨기는 경우 `Private` 요소에 액세스할 수 있는 권한이 없는 코드는 대신 기본 클래스 요소에 액세스할 수 있습니다.
 
-  - If you shadow an element, you can still access the shadowed element through an object declared with the type of the base class. You can also access it through `MyBase`.
+  - 요소를 숨기는 경우에도 기본 클래스의 형식으로 선언 된 개체를 통해 숨겨진 요소에 액세스할 수 있습니다. `MyBase`를 통해 액세스할 수도 있습니다.
 
 `Shadows` 한정자는 다음 컨텍스트에서 사용할 수 있습니다.
 
@@ -50,7 +50,7 @@ The main purpose of shadowing (which is also known as *hiding by name*) is to pr
 
 - [Const 문](../../../visual-basic/language-reference/statements/const-statement.md)
 
-- [Declare 문](../../../visual-basic/language-reference/statements/declare-statement.md)
+- [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md)
 
 - [Delegate 문](../../../visual-basic/language-reference/statements/delegate-statement.md)
 
@@ -70,16 +70,16 @@ The main purpose of shadowing (which is also known as *hiding by name*) is to pr
 
 - [Sub 문](../../../visual-basic/language-reference/statements/sub-statement.md)
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [공유](../../../visual-basic/language-reference/modifiers/shared.md)
-- [Static](../../../visual-basic/language-reference/modifiers/static.md)
-- [전용](../../../visual-basic/language-reference/modifiers/private.md)
+- [정적](../../../visual-basic/language-reference/modifiers/static.md)
+- [Private](../../../visual-basic/language-reference/modifiers/private.md)
 - [Me, My, MyBase 및 MyClass](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
 - [상속 기본 사항](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
-- [New](../../../visual-basic/language-reference/modifiers/mustoverride.md)
+- [MyBase](../../../visual-basic/language-reference/modifiers/mustoverride.md)
 - [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)
-- [오버로드](../../../visual-basic/language-reference/modifiers/overloads.md)
-- [재정의 가능](../../../visual-basic/language-reference/modifiers/overridable.md)
+- [Overloads](../../../visual-basic/language-reference/modifiers/overloads.md)
+- [Overrides](../../../visual-basic/language-reference/modifiers/overridable.md)
 - [재정의](../../../visual-basic/language-reference/modifiers/overrides.md)
-- [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [Visual Basic에서 숨김](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)

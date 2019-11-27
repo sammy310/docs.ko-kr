@@ -39,7 +39,7 @@ tlbimp Loanlib.tlb
 tlbimp LoanLib.tlb /out: LOANLib.dll  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [형식 라이브러리를 어셈블리로 가져오기](importing-a-type-library-as-an-assembly.md)
 - [.NET Framework에 COM 구성 요소 노출](exposing-com-components.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74442159"
 ---
 # <a name="imetadataemitsethandler-method"></a>IMetaDataEmit::SetHandler 메서드
-Sets the method referenced by the specified `IUnknown` pointer as a notification callback for token remaps.  
+지정 된 `IUnknown` 포인터에서 참조 하는 메서드를 토큰 다시 매핑에 대 한 알림 콜백으로 설정 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -35,23 +35,23 @@ HRESULT SetHandler (
   
 ## <a name="parameters"></a>매개 변수  
  `pUnk`  
- [in] The handler to register.  
+ 진행 등록할 처리기입니다.  
   
-## <a name="remarks"></a>주의  
- The metadata engine sends notification by using the method that is provided by `SetHandler`, to compilers that do not generate records in an optimized way and that would like to optimize saved records.  
+## <a name="remarks"></a>설명  
+ 메타 데이터 엔진은 `SetHandler`에서 제공 하는 메서드를 사용 하 여 최적화 된 방식으로 레코드를 생성 하지 않고 저장 된 레코드를 최적화 하는 컴파일러로 알림을 보냅니다.  
   
- If the callback method is not provided through `SetHandler`, no optimization will be performed on save except where several import scopes have been merged using `IMapToken` on merge for each scope.  
+ `SetHandler`를 통해 콜백 메서드를 제공 하지 않는 경우 각 범위에 대해 병합 시 `IMapToken`를 사용 하 여 여러 가져오기 범위가 병합 된 경우를 제외 하 고는 저장 시 최적화가 수행 되지 않습니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [IMetaDataEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

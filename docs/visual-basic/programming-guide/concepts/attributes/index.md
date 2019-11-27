@@ -1,5 +1,5 @@
 ---
-title: Attributes overview
+title: 특성 개요
 ms.date: 07/20/2015
 ms.assetid: 1449f69b-c063-41de-8d89-f0bbdcf96ac6
 ms.openlocfilehash: 97a2a13102718b6ee8829fca678b2b49df21e5d1
@@ -25,7 +25,7 @@ ms.locfileid: "74349491"
 
 ## <a name="using-attributes"></a>특성 사용
 
-특정 특성은 유효한 선언 형식이 제한적일 수 있지만 거의 모든 선언에 특성을 사용할 수 있습니다. Visual Basic의 경우 특성은 꺾쇠 괄호(\<>) 안에 포함됩니다. 특성은 적용되는 요소 바로 앞에 표시되어야 하며 같은 줄에 위치합니다.
+특정 특성이 유효한 선언 형식을 제한할 수  있지만 거의 모든 선언에 특성을 사용할 수 있습니다. Visual Basic의 경우 특성은 꺾쇠 괄호(\<>) 안에 포함됩니다. 특성은 적용되는 요소 바로 앞에 표시되어야 하며 같은 줄에 위치합니다.
 
 이 예제에서 <xref:System.SerializableAttribute> 특성은 클래스에 특정 특성을 적용하는 데 사용됩니다.
 
@@ -112,9 +112,9 @@ Module: CLSCompliant(True)>
 
 다음 목록에는 코드에서 특성이 사용되는 일반적인 경우가 나와 있습니다.
 
-- SOAP 프로토콜을 통해 메서드를 호출할 수 있음을 나타내기 위해 웹 서비스에서 `WebMethod` 특성을 사용하여 메서드에 표시. 자세한 내용은 <xref:System.Web.Services.WebMethodAttribute>를 참조하세요.
+- SOAP 프로토콜을 통해 메서드를 호출할 수 있음을 나타내기 위해 웹 서비스에서 `WebMethod` 특성을 사용하여 메서드에 표시. 자세한 내용은 <xref:System.Web.Services.WebMethodAttribute>을 참조하세요.
 
-- 네이티브 코드와 상호 운용될 경우 메서드 매개 변수를 마샬링하는 방법 설명. 자세한 내용은 <xref:System.Runtime.InteropServices.MarshalAsAttribute>를 참조하세요.
+- 네이티브 코드와 상호 운용될 경우 메서드 매개 변수를 마샬링하는 방법 설명. 자세한 내용은 <xref:System.Runtime.InteropServices.MarshalAsAttribute>을 참조하세요.
 
 - 클래스, 메서드 및 인터페이스에 대한 COM 속성 설명
 
@@ -136,7 +136,7 @@ Module: CLSCompliant(True)>
 
 ## <a name="related-sections"></a>관련 단원
 
-자세한 내용은 다음을 참조하십시오.
+참조 항목:
 
 - [사용자 지정 특성 만들기(Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)
 
@@ -148,7 +148,7 @@ Module: CLSCompliant(True)>
 
 - [호출자 정보(Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md)
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [Visual Basic 프로그래밍 가이드](../../../../visual-basic/programming-guide/index.md)
 - [리플렉션(Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)

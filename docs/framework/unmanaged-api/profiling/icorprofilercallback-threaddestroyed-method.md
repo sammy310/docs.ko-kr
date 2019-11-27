@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439935"
 ---
 # <a name="icorprofilercallbackthreaddestroyed-method"></a>ICorProfilerCallback::ThreadDestroyed 메서드
-Notifies the profiler that a thread has been destroyed.  
+스레드가 소멸 되었음을 프로파일러에 알립니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -34,10 +34,10 @@ HRESULT ThreadDestroyed(
   
 ## <a name="parameters"></a>매개 변수  
  `threadId`  
- [in] The ID of the thread that has been destroyed.  
+ 진행 제거 된 스레드의 ID입니다.  
   
-## <a name="remarks"></a>주의  
- The `threadId` value is no longer valid at the time of this call.  
+## <a name="remarks"></a>설명  
+ 이 호출 시에는 `threadId` 값이 더 이상 유효 하지 않습니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
@@ -48,7 +48,7 @@ HRESULT ThreadDestroyed(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [ICorProfilerCallback 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
 - [ThreadCreated 메서드](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threadcreated-method.md)

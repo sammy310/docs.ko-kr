@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447216"
 ---
 # <a name="imetadataassemblyimportgetfileprops-method"></a>IMetaDataAssemblyImport::GetFileProps 메서드
-Gets the properties of the file with the specified metadata signature.  
+지정 된 메타 데이터 시그니처를 사용 하 여 파일의 속성을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -41,35 +41,35 @@ HRESULT GetFileProps (
   
 ## <a name="parameters"></a>매개 변수  
  `mdf`  
- [in] The `mdFile` metadata token that represents the file for which to get the properties.  
+ 진행 속성을 가져올 파일을 나타내는 `mdFile` 메타 데이터 토큰입니다.  
   
  `szName`  
- [out] The simple name of the file.  
+ 제한이 파일의 단순한 이름입니다.  
   
  `cchName`  
- [in] The size, in wide chars, of `szName`.  
+ 진행 `szName`의 크기 (와이드 문자)입니다.  
   
  `pchName`  
- [out] The number of wide chars actually returned in `szName`.  
+ 제한이 `szName`에서 실제로 반환 되는 와이드 문자 수입니다.  
   
  `ppbHashValue`  
- [out] A pointer to the hash value. This is the hash, using the SHA-1 algorithm, of the file.  
+ 제한이 해시 값에 대 한 포인터입니다. 이는 파일의 SHA-1 알고리즘을 사용 하는 해시입니다.  
   
  `pcbHashValue`  
- [out] The number of wide chars in the returned hash value.  
+ 제한이 반환 된 해시 값의 와이드 문자 수입니다.  
   
  `pdwFileFlags`  
- [out] A pointer to the flags that describe the metadata applied to a file. The flags value is a combination of one or more [CorFileFlags](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md) values.  
+ 제한이 파일에 적용 된 메타 데이터를 설명 하는 플래그에 대 한 포인터입니다. Flags 값은 하나 이상의 [Corfileflags](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md) 값의 조합입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조 하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [IMetaDataAssemblyImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

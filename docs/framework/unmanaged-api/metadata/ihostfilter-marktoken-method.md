@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432232"
 ---
 # <a name="ihostfiltermarktoken-method"></a>IHostFilter::MarkToken 메서드
-Indicates that the specified metadata token will be processed.  
+지정 된 메타 데이터 토큰이 처리 됨을 나타냅니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -35,21 +35,21 @@ HRESULT MarkToken (
   
 ## <a name="parameters"></a>매개 변수  
  `tk`  
- [in] The metadata token to be processed.  
+ 진행 처리할 메타 데이터 토큰입니다.  
   
-## <a name="remarks"></a>주의  
- Typically, you want a token to be processed if it is in the metadata scope. The `MarkToken` method is passed to the metadata engine via the [IMetaDataEmit::SetHandler](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-sethandler-method.md) method.  
+## <a name="remarks"></a>설명  
+ 일반적으로 토큰은 메타 데이터 범위에 있는 경우 처리 하도록 하려고 합니다. `MarkToken` 메서드는 [IMetaDataEmit:: SetHandler](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-sethandler-method.md) 메서드를 통해 메타 데이터 엔진에 전달 됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [메타데이터 인터페이스](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
 - [IHostFilter 인터페이스](../../../../docs/framework/unmanaged-api/metadata/ihostfilter-interface.md)

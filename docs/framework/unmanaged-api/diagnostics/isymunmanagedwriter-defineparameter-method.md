@@ -23,9 +23,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428001"
 ---
 # <a name="isymunmanagedwriterdefineparameter-method"></a>ISymUnmanagedWriter::DefineParameter 메서드
-Defines a single parameter in the current method. The parameter type is taken from the parameter's position (sequence) within the method's signature.  
+현재 메서드의 단일 매개 변수를 정의합니다. 매개 변수 형식은 메서드의 시그니처 내에서 매개 변수의 위치 (시퀀스)에서 가져옵니다.  
   
- If parameters are defined in the metadata for a given method, you do not have to define them again by using this method. The symbol readers must check the normal metadata for the parameters before checking the symbol store.  
+ 매개 변수가 지정 된 메서드에 대 한 메타 데이터에 정의 되어 있는 경우에는이 메서드를 사용 하 여 매개 변수를 다시 정의할 필요가 없습니다. 기호 판독기는 기호 저장소를 확인 하기 전에 매개 변수에 대 한 일반 메타 데이터를 확인 해야 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -42,32 +42,32 @@ HRESULT DefineParameter(
   
 ## <a name="parameters"></a>매개 변수  
  `name`  
- [in] The parameter name.  
+ 진행 매개 변수 이름입니다.  
   
  `attributes`  
- [in] The parameter attributes.  
+ 진행 매개 변수 특성입니다.  
   
  `sequence`  
- [in] The parameter signature.  
+ 진행 매개 변수 서명입니다.  
   
  `addrKind`  
- [in] The address type.  
+ 진행 주소 유형입니다.  
   
  `addr1`  
- [in] The first address for the parameter specification.  
+ 진행 매개 변수 사양의 첫 번째 주소입니다.  
   
  `addr2`  
- [in] The second address for the parameter specification.  
+ 진행 매개 변수 사양의 두 번째 주소입니다.  
   
  `addr3`  
- [in] The third address for the parameter specification.  
+ 진행 매개 변수 사양의 세 번째 주소입니다.  
   
 ## <a name="return-value"></a>반환 값  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **Header:** CorSym.idl, CorSym.h  
+ **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ISymUnmanagedWriter 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

@@ -45,48 +45,48 @@ HRESULT GetFieldProps (
   
 ## <a name="parameters"></a>매개 변수  
  `mb`  
- [in] A FieldDef token that represents the field to get associated metadata for.  
+ 진행 연결 된 메타 데이터를 가져올 필드를 나타내는 FieldDef 토큰입니다.  
   
  `pClass`  
- [out] A pointer to a TypeDef token that represents the type of the class that the field belongs to.  
+ 제한이 필드가 속한 클래스의 형식을 나타내는 TypeDef 토큰에 대 한 포인터입니다.  
   
  `szField`  
- [out] The name of the field.  
+ 제한이 필드의 이름입니다.  
   
  `cchField`  
- [in] The size in wide characters of the buffer for *szField*.  
+ 진행 *Szfield*에 대 한 버퍼의 와이드 문자 크기입니다.  
   
  `pchField`  
- [out] The actual size of the returned buffer.  
+ 제한이 반환 된 버퍼의 실제 크기입니다.  
   
  `pdwAttr`  
- [out] Flags associated with the field's metadata.  
+ 제한이 필드의 메타 데이터와 연결 된 플래그입니다.  
   
  `ppvSigBlob`  
- [in] A pointer to the binary metadata value that describes the field.  
+ 진행 필드를 설명 하는 이진 메타 데이터 값에 대 한 포인터입니다.  
   
  `pcbSigBlob`  
- [out] The size in bytes of `ppvSigBlob`.  
+ 제한이 `ppvSigBlob`의 크기 (바이트)입니다.  
   
  `pdwCPlusTypeFlag`  
- [out] A flag that specifies the value type of the field.  
+ 제한이 필드의 값 형식을 지정 하는 플래그입니다.  
   
  `ppValue`  
- [out] A constant value for the field.  
+ 제한이 필드에 대 한 상수 값입니다.  
   
  `pcchValue`  
- [out] The size in chars of `ppValue`, or zero if no string exists.  
+ 제한이 `ppValue`의 문자 크기 이거나, 문자열이 없는 경우 0입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [IMetaDataImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

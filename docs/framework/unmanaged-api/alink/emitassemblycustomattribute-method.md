@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446511"
 ---
 # <a name="emitassemblycustomattribute-method"></a>EmitAssemblyCustomAttribute 메서드
-Call to set assembly-level custom attributes.  
+을 호출 하 여 어셈블리 수준 사용자 지정 특성을 설정 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -41,33 +41,33 @@ HRESULT EmitAssemblyCustomAttribute(
   
 ## <a name="parameters"></a>매개 변수  
  `AssemblyID`  
- ID of the assembly.  
+ 어셈블리의 ID입니다.  
   
  `FileToken`  
- File that defiles the attribute. Can be NULL if `AssemblyID` does not indicate an unbound netmodule.  
+ 특성의 파일을 제거 하는 파일입니다. `AssemblyID`에서 바인딩되지 않은 .netmodule을 나타내지 않는 경우 NULL 일 수 있습니다.  
   
  `tkType`  
- Type of the custom attribute.  
+ 사용자 지정 특성의 형식입니다.  
   
  `pCustomValue`  
- Custom value data.  
+ 사용자 지정 값 데이터입니다.  
   
  `cbCustomValue`  
- Length of custom value data.  
+ 사용자 지정 값 데이터의 길이입니다.  
   
  `bSecurity`  
- TRUE if the custom attribute is related to assembly signing.  
+ 사용자 지정 특성이 어셈블리 서명과 관련 되어 있으면 TRUE입니다.  
   
  `bAllowMulti`  
- TRUE if multiple attributes are to be emitted.  
+ 여러 특성을 내보내야 하는 경우 TRUE입니다.  
   
 ## <a name="return-value"></a>반환 값  
- Returns S_OK if the method succeeds.  
+ 메서드가 성공 하면 S_OK을 반환 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- Requires alink.h  
+ Alink 필요  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [IALink 인터페이스](ialink-interface.md)
 - [IALink2 인터페이스](ialink2-interface.md)

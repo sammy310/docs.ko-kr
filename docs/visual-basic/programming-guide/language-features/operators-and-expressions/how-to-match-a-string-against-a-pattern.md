@@ -22,65 +22,65 @@ ms.locfileid: "74343634"
 ---
 # <a name="how-to-match-a-string-against-a-pattern-visual-basic"></a>방법: 패턴에 대해 문자열 비교(Visual Basic)
 
-If you want to find out if an expression of the [String Data Type](../../../../visual-basic/language-reference/data-types/string-data-type.md) satisfies a pattern, then you can use the [Like Operator](../../../../visual-basic/language-reference/operators/like-operator.md).
+[문자열 데이터 형식의](../../../../visual-basic/language-reference/data-types/string-data-type.md) 식이 패턴을 충족 하는지 확인 하려는 경우 [Like 연산자](../../../../visual-basic/language-reference/operators/like-operator.md)를 사용할 수 있습니다.
 
-`Like` takes two operands. The left operand is a string expression, and the right operand is a string containing the pattern to be used for matching. `Like` returns a `Boolean` value indicating whether the string expression satisfies the pattern.
+`Like`는 두 개의 피연산자를 사용 합니다. 왼쪽 피연산자는 문자열 식이고 오른쪽 피연산자는 일치에 사용할 패턴이 포함 된 문자열입니다. `Like`는 문자열 식이 패턴을 충족 하는지 여부를 나타내는 `Boolean` 값을 반환 합니다.
 
-You can match each character in the string expression against a specific character, a wildcard character, a character list, or a character range. The positions of the specifications in the pattern string correspond to the positions of the characters to be matched in the string expression.
+문자열 식의 각 문자를 특정 문자, 와일드 카드 문자, 문자 목록 또는 문자 범위에 대해 일치 시킬 수 있습니다. 패턴 문자열의 사양 위치는 문자열 식에서 일치 시킬 문자의 위치에 해당 합니다.
 
-## <a name="to-match-a-character-in-the-string-expression-against-a-specific-character"></a>To match a character in the string expression against a specific character
+## <a name="to-match-a-character-in-the-string-expression-against-a-specific-character"></a>문자열 식의 문자를 특정 문자와 일치 시키려면
 
-Put the specific character directly in the pattern string. Certain special characters must be enclosed in brackets (`[ ]`). For more information, see [Like Operator](../../../../visual-basic/language-reference/operators/like-operator.md).
+패턴 문자열에 특정 문자를 직접 입력 합니다. 특정 특수 문자는 대괄호로 묶어야 합니다 (`[ ]`). 자세한 내용은 [Like 연산자](../../../../visual-basic/language-reference/operators/like-operator.md)를 참조 하세요.
 
-The following example tests whether `myString` consists exactly of the single character `H`.
+다음 예제에서는 `myString`가 단일 문자 `H`를 정확히 구성 했는지 여부를 테스트 합니다.
 
 [!code-vb[VbVbalrOperators#70](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#70)]
 
-## <a name="to-match-a-character-in-the-string-expression-against-a-wildcard-character"></a>To match a character in the string expression against a wildcard character
+## <a name="to-match-a-character-in-the-string-expression-against-a-wildcard-character"></a>와일드 카드 문자를 기준으로 문자열 식의 문자를 일치 시키려면
 
-Put a question mark (`?`) in the pattern string. Any valid character in this position makes a successful match.
+패턴 문자열에 물음표 (`?`)를 입력 합니다. 이 위치에 있는 모든 유효한 문자가 성공적으로 일치 하 게 됩니다.
 
-The following example tests whether `myString` consists of the single character `W` followed by exactly two characters of any values.
+다음 예에서는 `myString` 단일 문자 `W`로 구성 되어 있는지 여부를 테스트 한 다음 값의 정확히 두 문자를 테스트 합니다.
 
 [!code-vb[VbVbalrOperators#71](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#71)]
 
-## <a name="to-match-a-character-in-the-string-expression-against-a-list-of-characters"></a>To match a character in the string expression against a list of characters
+## <a name="to-match-a-character-in-the-string-expression-against-a-list-of-characters"></a>문자열 식의 문자를 문자 목록과 일치 시키려면
 
-Put brackets (`[ ]`) in the pattern string, and inside the brackets put the list of characters. Do not separate the characters with commas or any other separator. Any single character in the list makes a successful match.
+패턴 문자열에 대괄호 (`[ ]`)를 배치 하 고 대괄호 안에 문자 목록을 넣습니다. 문자를 쉼표 또는 다른 구분 기호로 구분 하지 마십시오. 목록의 모든 단일 문자가 성공적으로 일치 하 게 됩니다.
 
-The following example tests whether `myString` consists of any valid character followed by exactly one of the characters `A`, `C`, or `E`.
+다음 예제에서는 `myString` 유효한 모든 문자로 구성 된 다음 `A`, `C`또는 `E`문자 중 하나를 정확 하 게 하나로 구성 했는지 여부를 테스트 합니다.
 
 [!code-vb[VbVbalrOperators#72](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#72)]
 
-Note that this match is case-sensitive.
+이 일치 항목은 대/소문자를 구분 합니다.
 
-## <a name="to-match-a-character-in-the-string-expression-against-a-range-of-characters"></a>To match a character in the string expression against a range of characters
+## <a name="to-match-a-character-in-the-string-expression-against-a-range-of-characters"></a>문자열 식에서 문자 범위에 대해 문자를 일치 시키려면
 
-Put brackets (`[ ]`) in the pattern string, and inside the brackets put the lowest and highest characters in the range, separated by a hyphen (`–`). Any single character within the range makes a successful match.
+패턴 문자열에 대괄호 (`[ ]`)를 배치 하 고 대괄호 안에는 범위에서 가장 낮거나 가장 높은 문자가 하이픈 (`–`)으로 구분 되어 배치 됩니다. 범위 내의 모든 단일 문자가 성공적으로 일치 하 게 됩니다.
 
-The following example tests whether `myString` consists of the characters `num` followed by exactly one of the characters `i`, `j`, `k`, `l`, `m`, or `n`.
+다음 예에서는 `myString` `num` 문자로 구성 되어 있는지 여부를 테스트 한 다음 `i`, `j`, `k`, `l`, `m`또는 `n`문자 중 하나만 입력 합니다.
 
 [!code-vb[VbVbalrOperators#73](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#73)]
 
-Note that this match is case-sensitive.
+이 일치 항목은 대/소문자를 구분 합니다.
 
-## <a name="matching-empty-strings"></a>Matching Empty Strings
+## <a name="matching-empty-strings"></a>빈 문자열 일치
 
-`Like` treats the sequence `[]` as a zero-length string (`""`). You can use `[]` to test whether the entire string expression is empty, but you cannot use it to test if a particular position in the string expression is empty. If an empty position is one of the options you need to test for, you can use `Like` more than once.
+`Like`는 시퀀스 `[]`를 길이가 0 인 문자열 (`""`)로 처리 합니다. `[]`를 사용 하 여 전체 문자열 식이 비어 있는지 여부를 테스트할 수 있지만 문자열 식의 특정 위치가 비어 있는지 테스트 하는 데 사용할 수는 없습니다. 빈 위치가 테스트 해야 하는 옵션 중 하나인 경우 `Like`를 두 번 이상 사용할 수 있습니다.
 
-### <a name="to-match-a-character-in-the-string-expression-against-a-list-of-characters-or-no-character"></a>To match a character in the string expression against a list of characters or no character
+### <a name="to-match-a-character-in-the-string-expression-against-a-list-of-characters-or-no-character"></a>문자열 식의 문자를 문자 목록에 대해 일치 하거나 문자를 검색 하지 않으려면
 
-1. Call the `Like` operator twice on the same string expression, and connect the two calls with either the [Or Operator](../../../../visual-basic/language-reference/operators/or-operator.md) or the [OrElse Operator](../../../../visual-basic/language-reference/operators/orelse-operator.md).
+1. 동일한 문자열 식에서 `Like` 연산자를 두 번 호출 하 고, [Or 연산자](../../../../visual-basic/language-reference/operators/or-operator.md) 또는 [OrElse 연산자](../../../../visual-basic/language-reference/operators/orelse-operator.md)중 하나를 사용 하 여 두 호출을 연결 합니다.
 
-2. In the pattern string for the first `Like` clause, include the character list, enclosed in brackets (`[ ]`).
+2. 첫 번째 `Like` 절의 패턴 문자열에서 대괄호 (`[ ]`)로 묶인 문자 목록을 포함 합니다.
 
-3. In the pattern string for the second `Like` clause, do not put any character at the position in question.
+3. 두 번째 `Like` 절의 패턴 문자열에서 질문의 위치에 문자를 넣지 않습니다.
 
-    The following example tests the seven-digit telephone number `phoneNum` for exactly three numeric digits, followed by a space, a hyphen (`–`), a period (`.`), or no character at all, followed by exactly four numeric digits.
+    다음 예에서는 정확 하 게 3 자리 숫자를 입력 한 다음 공백, 하이픈 (`–`), 마침표 (`.`) 또는 문자 없이 문자를 정확히 4 자리 숫자로 `phoneNum` 7 자리 전화 번호를 테스트 합니다.
 
     [!code-vb[VbVbalrOperators#74](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#74)]
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [비교 연산자](../../../../visual-basic/language-reference/operators/comparison-operators.md)
 - [연산자 및 식](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)

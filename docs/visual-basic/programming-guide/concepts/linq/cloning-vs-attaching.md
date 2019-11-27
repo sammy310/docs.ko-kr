@@ -9,7 +9,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345685"
 ---
-# <a name="cloning-vs-attaching-visual-basic"></a>Cloning vs. Attaching (Visual Basic)
+# <a name="cloning-vs-attaching-visual-basic"></a>복제 및 연결 비교 (Visual Basic)
 <xref:System.Xml.Linq.XNode>(<xref:System.Xml.Linq.XElement> 포함) 또는 <xref:System.Xml.Linq.XAttribute> 개체를 새 트리에 추가할 때 새 내용에 부모가 없으면 개체가 XML 트리에 추가되기만 합니다. 새 내용에 이미 부모가 있고 다른 XML 트리의 일부이면 새 내용이 복제되고 새로 복제된 내용이 XML 트리에 추가됩니다.  
   
 ## <a name="example"></a>예제  
@@ -50,6 +50,6 @@ Child1 was cloned
 Child2 was attached  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
-- [Creating XML Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)
+- [XML 트리 만들기 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)

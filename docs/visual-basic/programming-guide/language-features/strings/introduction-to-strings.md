@@ -11,19 +11,19 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344309"
 ---
-# <a name="introduction-to-strings-in-visual-basic"></a>Introduction to Strings in Visual Basic
-This section describes the basic concepts behind using strings in Visual Basic.  
+# <a name="introduction-to-strings-in-visual-basic"></a>Visual Basic의 문자열 소개
+이 섹션에서는 Visual Basic의 문자열 사용에 대 한 기본 개념을 설명 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [문자열 기본](../../../../visual-basic/programming-guide/language-features/strings/string-basics.md)  
- Introduces the basic concepts behind using strings and string variables.  
+ 문자열 및 문자열 변수 사용에 대 한 기본 개념을 소개 합니다.  
   
- [Types of String Manipulation Methods in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/types-of-string-manipulation-methods.md)  
- Introduces several different ways to analyze and manipulate strings.  
+ [Visual Basic의 문자열 조작 메서드 유형](../../../../visual-basic/programming-guide/language-features/strings/types-of-string-manipulation-methods.md)  
+ 에서는 문자열을 분석 하 고 조작 하는 여러 가지 방법을 소개 합니다.  
   
- [How Culture Affects Strings in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/how-culture-affects-strings.md)  
- Discusses how Visual Basic uses culture information to perform string conversions and comparisons.  
+ [문화권이 Visual Basic 문자열에 미치는 영향](../../../../visual-basic/programming-guide/language-features/strings/how-culture-affects-strings.md)  
+ Visual Basic에서 문화권 정보를 사용 하 여 문자열 변환 및 비교를 수행 하는 방법에 대해 설명 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [문자열](../../../../visual-basic/programming-guide/language-features/strings/index.md)

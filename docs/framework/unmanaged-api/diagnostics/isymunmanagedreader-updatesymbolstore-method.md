@@ -23,10 +23,10 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446464"
 ---
 # <a name="isymunmanagedreaderupdatesymbolstore-method"></a>ISymUnmanagedReader::UpdateSymbolStore 메서드
-Updates the existing symbol store with a delta symbol store. This method is used in edit-and-continue scenarios to update the symbol store to match deltas to the original portable executable (PE) file.  
+기존 기호 저장소를 델타 기호 저장소로 업데이트합니다. 이 메서드는 편집 하며 계속 하기 시나리오에서 델타를 원래 PE (이식 가능한 실행) 파일에 일치 하도록 기호 저장소를 업데이트 하는 데 사용 됩니다.  
   
 > [!NOTE]
-> You need specify only one of the `filename` or `pIStream` parameters, not both. If `filename` is specified, the symbol store will be updated with the symbols in that file. If `pIStream` is specified, the store will be updated with the data from the <xref:System.Runtime.InteropServices.ComTypes.IStream>.  
+> `filename` 또는 `pIStream` 매개 변수 중 하나만 지정 해야 합니다. `filename` 지정 하면 기호 저장소가 해당 파일의 기호로 업데이트 됩니다. `pIStream` 지정 된 경우 저장소는 <xref:System.Runtime.InteropServices.ComTypes.IStream>의 데이터로 업데이트 됩니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,17 +38,17 @@ HRESULT UpdateSymbolStore (
   
 ## <a name="parameters"></a>매개 변수  
  `filename`  
- [in] The name of the file that contains the symbol store.  
+ 진행 기호 저장소를 포함 하는 파일의 이름입니다.  
   
  `pIStream`  
- [in] The file stream, used as an alternative to the `filename` parameter.  
+ 진행 `filename` 매개 변수의 대 안으로 사용 되는 파일 스트림입니다.  
   
 ## <a name="return-value"></a>반환 값  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **Header:** CorSym.idl, CorSym.h  
+ **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ISymUnmanagedReader 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

@@ -9,7 +9,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353068"
 ---
-# <a name="how-to-debug-empty-query-results-sets-visual-basic"></a>How to: Debug Empty Query Results Sets (Visual Basic)
+# <a name="how-to-debug-empty-query-results-sets-visual-basic"></a>방법: 빈 쿼리 결과 집합 디버그 (Visual Basic)
 
 XML 트리를 쿼리할 때 가장 일반적인 문제 중 하나는 XML 트리에 기본 네임스페이스가 있으면 개발자가 경우에 따라 XML이 네임스페이스에 없는 것처럼 쿼리를 작성하는 것입니다.
 
@@ -17,7 +17,7 @@ XML 트리를 쿼리할 때 가장 일반적인 문제 중 하나는 XML 트리�
 
 두 번째 예제 집합에서는 네임스페이스의 XML을 쿼리할 수 있도록 필요한 수정을 하는 방법을 보여 줍니다.
 
-For more information, see [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).
+자세한 내용은 [네임 스페이스 개요 (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)를 참조 하세요.
 
 ## <a name="example"></a>예제
 
@@ -54,7 +54,7 @@ End of result set
 
 이 예제에서는 네임스페이스에 XML을 만들고 제대로 코딩된 쿼리를 만드는 방법을 보여 줍니다.
 
-The solution is to declare and initialize a global default namespace. 이렇게 하면 기본 네임스페이스에 모든 XML 속성이 배치됩니다. 예제가 제대로 작동하도록 하기 위해 다른 수정은 필요하지 않습니다.
+이 솔루션은 전역 기본 네임 스페이스를 선언 하 고 초기화 하는 것입니다. 이렇게 하면 기본 네임스페이스에 모든 XML 속성이 배치됩니다. 예제가 제대로 작동하도록 하기 위해 다른 수정은 필요하지 않습니다.
 
 ```vb
 Imports <xmlns="http://www.adventure-works.com">
@@ -92,6 +92,6 @@ Result set follows:
 End of result set
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
-- [Basic Queries (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [기본 쿼리 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

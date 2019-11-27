@@ -14,15 +14,15 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74335389"
 ---
 # <a name="equals-clause-visual-basic"></a>Equals 절(Visual Basic)
-Compares keys from collections being joined.  
+조인 되는 컬렉션의 키를 비교 합니다.  
   
-## <a name="remarks"></a>주의  
- The `Equals` keyword is used in the following contexts:  
+## <a name="remarks"></a>설명  
+ `Equals` 키워드는 다음 컨텍스트에서 사용 됩니다.  
   
  [Group Join 절](../../../visual-basic/language-reference/queries/group-join-clause.md)  
   
  [Join 절](../../../visual-basic/language-reference/queries/join-clause.md)  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
-- [C++ 키워드](../../../visual-basic/language-reference/keywords/index.md)
+- [키워드](../../../visual-basic/language-reference/keywords/index.md)

@@ -9,7 +9,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353508"
 ---
-# <a name="example-that-outputs-office-open-xml-document-parts-visual-basic"></a>Example that Outputs Office Open XML Document Parts (Visual Basic)
+# <a name="example-that-outputs-office-open-xml-document-parts-visual-basic"></a>Office Open XML 문서 부분을 출력 하는 예제 (Visual Basic)
 이 항목에서는 Office Open XML 문서를 열고 문서 안의 부분에 액세스하는 방법을 보여 줍니다.  
   
 ## <a name="example"></a>예제  
@@ -64,6 +64,6 @@ Using wdPackage As Package = Package.Open(fileName, FileMode.Open, FileAccess.Re
 End Using  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
-- [Details of Office Open XML WordprocessingML Documents (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
+- [Office Open XML WordprocessingML 문서에 대 한 세부 정보 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)

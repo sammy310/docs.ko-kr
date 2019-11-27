@@ -22,8 +22,8 @@ ms.locfileid: "74343605"
   
  *식*은 연산자와 결합된 일련의 값 요소로서, 새 값을 생성합니다. 연산자는 계산, 비교 또는 기타 작업을 수행하여 값 요소에 적용됩니다.  
   
-## <a name="types-of-operators"></a>연산자 형식  
- Visual Basic provides the following types of operators:  
+## <a name="types-of-operators"></a>연산자의 유형  
+ Visual Basic는 다음과 같은 유형의 연산자를 제공 합니다.  
   
 - [산술 연산자](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)는 비트 패턴 이동을 포함하여 숫자 값에서 친숙한 계산을 수행합니다.  
   
@@ -60,9 +60,9 @@ ms.locfileid: "74343605"
   
  [!code-vb[VbVbalrOperators#56](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#56)]  
   
- In the preceding example, Visual Basic performs the operations in the expression on the right side of the assignment operator (`=`), then assigns the resulting value to the variable `x` on the left. 식에 결합할 수 있는 연산자 수에는 실제로 제한이 없지만 예상하는 결과를 얻으려면 [Visual Basic의 연산자 우선 순위](../../../../visual-basic/language-reference/operators/operator-precedence.md)를 이해해야 합니다.  
+ 위의 예에서 Visual Basic는 대입 연산자의 오른쪽에 있는 식에서 작업을 수행 하 고 (`=`), 결과 값을 왼쪽의 `x` 변수에 할당 합니다. 식에 결합할 수 있는 연산자 수에는 실제로 제한이 없지만 예상하는 결과를 얻으려면 [Visual Basic의 연산자 우선 순위](../../../../visual-basic/language-reference/operators/operator-precedence.md)를 이해해야 합니다.  
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [연산자](../../../../visual-basic/language-reference/operators/index.md)
 - [연산자의 효율적 결합](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/efficient-combination-of-operators.md)

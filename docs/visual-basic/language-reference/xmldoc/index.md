@@ -1,5 +1,5 @@
 ---
-title: Recommended XML Tags for Documentation Comments
+title: 문서 주석에 대 한 권장 XML 태그
 ms.date: 07/20/2015
 f1_keywords:
 - vb.XmlDocComment
@@ -16,30 +16,30 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352327"
 ---
 # <a name="recommended-xml-tags-for-documentation-comments-visual-basic"></a>문서 주석에 대한 권장 XML 태그(Visual Basic)
-The Visual Basic compiler can process documentation comments in your code to an XML file. You can use additional tools to process the XML file into documentation.  
+Visual Basic 컴파일러는 코드의 문서 주석을 XML 파일로 처리할 수 있습니다. 추가 도구를 사용 하 여 XML 파일을 문서로 처리할 수 있습니다.  
   
- XML comments are allowed on code constructs such as types and type members. For partial types, only one part of the type can have XML comments, although there is no restriction on commenting its members.  
+ 형식 및 형식 멤버와 같은 코드 구문에서 XML 주석을 사용할 수 있습니다. 부분 형식의 경우 해당 멤버를 주석으로 처리 하는 데 제한이 없더라도 형식의 한 부분 에서만 XML 주석을 사용할 수 있습니다.  
   
 > [!NOTE]
-> Documentation comments cannot be applied to namespaces. The reason is that one namespace can span several assemblies, and not all assemblies have to be loaded at the same time.  
+> 네임 스페이스에는 문서 주석을 적용할 수 없습니다. 그 이유는 한 네임 스페이스가 여러 어셈블리에 걸쳐 있을 수 있고 모든 어셈블리를 동시에 로드 해야 하는 것이 아니라는 것입니다.  
   
- The compiler processes any tag that is valid XML. The following tags provide commonly used functionality in user documentation.  
+ 컴파일러는 유효한 XML 인 모든 태그를 처리 합니다. 다음 태그는 사용자 설명서에서 일반적으로 사용 되는 기능을 제공 합니다.  
   
 ||||  
 |---|---|---|  
 |[\<c>](../../../visual-basic/language-reference/xmldoc/c.md)|[\<code>](../../../visual-basic/language-reference/xmldoc/code.md)|[\<example>](../../../visual-basic/language-reference/xmldoc/example.md)|  
-|[\<exception>](../../../visual-basic/language-reference/xmldoc/exception.md) <sup>1</sup>|[\<include>](../../../visual-basic/language-reference/xmldoc/include.md) <sup>1</sup>|[\<list>](../../../visual-basic/language-reference/xmldoc/list.md)|  
-|[\<para>](../../../visual-basic/language-reference/xmldoc/para.md)|[\<param>](../../../visual-basic/language-reference/xmldoc/param.md) <sup>1</sup>|[\<paramref>](../../../visual-basic/language-reference/xmldoc/paramref.md)|  
-|[\<permission>](../../../visual-basic/language-reference/xmldoc/permission.md) <sup>1</sup>|[\<remarks>](../../../visual-basic/language-reference/xmldoc/remarks.md)|[\<returns>](../../../visual-basic/language-reference/xmldoc/returns.md)|  
-|[\<see>](../../../visual-basic/language-reference/xmldoc/see.md) <sup>1</sup>|[\<seealso>](../../../visual-basic/language-reference/xmldoc/seealso.md) <sup>1</sup>|[\<summary>](../../../visual-basic/language-reference/xmldoc/summary.md)|  
-|[\<typeparam>](../../../visual-basic/language-reference/xmldoc/typeparam.md) <sup>1</sup>|[\<value>](../../../visual-basic/language-reference/xmldoc/value.md)||  
+|[\<예외 >](../../../visual-basic/language-reference/xmldoc/exception.md) <sup>1</sup>|[> 1\<포함](../../../visual-basic/language-reference/xmldoc/include.md) <sup></sup>|[\<list>](../../../visual-basic/language-reference/xmldoc/list.md)|  
+|[\<para>](../../../visual-basic/language-reference/xmldoc/para.md)|[\<매개 변수 >](../../../visual-basic/language-reference/xmldoc/param.md) <sup>1</sup>|[\<paramref>](../../../visual-basic/language-reference/xmldoc/paramref.md)|  
+|[\<권한 >](../../../visual-basic/language-reference/xmldoc/permission.md) <sup>1</sup>|[\<remarks>](../../../visual-basic/language-reference/xmldoc/remarks.md)|[\<returns>](../../../visual-basic/language-reference/xmldoc/returns.md)|  
+|[> 1 참조\<](../../../visual-basic/language-reference/xmldoc/see.md) <sup></sup>|[\<seealso >](../../../visual-basic/language-reference/xmldoc/seealso.md) <sup>1</sup>|[\<summary>](../../../visual-basic/language-reference/xmldoc/summary.md)|  
+|[\<typeparam >](../../../visual-basic/language-reference/xmldoc/typeparam.md) <sup>1</sup>|[\<value>](../../../visual-basic/language-reference/xmldoc/value.md)||  
   
- (<sup>1</sup> The compiler verifies syntax.)  
+ (<sup>1</sup> 컴파일러는 구문을 확인 합니다.)  
   
 > [!NOTE]
-> If you want angle brackets to appear in the text of a documentation comment, use `&lt;` and `&gt;`. For example, the string `"&lt;text in angle brackets&gt;"` will appear as `<text in angle brackets>`.  
+> 문서 주석의 텍스트에 꺾쇠 괄호를 표시 하려면 `&lt;` 및 `&gt;`를 사용 합니다. 예를 들어 `"&lt;text in angle brackets&gt;"` 문자열은 `<text in angle brackets>`으로 표시 됩니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [코드를 XML로 문서화](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)
 - [-doc](../../../visual-basic/reference/command-line-compiler/doc.md)

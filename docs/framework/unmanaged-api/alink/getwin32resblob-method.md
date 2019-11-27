@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74430695"
 ---
 # <a name="getwin32resblob-method"></a>GetWin32ResBlob 메서드
-Retrieves Win32 resource blob. Call this method after setting assembly options.  
+Win32 리소스 blob을 검색 합니다. 어셈블리 옵션을 설정한 후이 메서드를 호출 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,30 +39,30 @@ HRESULT GetWin32ResBlob(
   
 ## <a name="parameters"></a>매개 변수  
  `AssemblyID`  
- ID of the assembly.  
+ 어셈블리의 ID입니다.  
   
  `FileToken`  
- File token used to retrieve the filename to be used when constructing the Win32 Version resource  
+ Win32 버전 리소스를 생성할 때 사용할 파일 이름을 검색 하는 데 사용 되는 파일 토큰입니다.  
   
  `fDll`  
- TRUE if file is a DLL, false for an EXE.  
+ 파일이 DLL 이면 TRUE이 고, EXE의 경우 false입니다.  
   
  `pszIconFile`  
- Optional icon to insert into the resource blob.  
+ 리소스 blob에 삽입할 선택적 아이콘입니다.  
   
  `ppResBlob`  
- Receives the resource blob.  
+ 리소스 blob을 받습니다.  
   
  `pcbResBlob`  
- Receives the size of the blob.  
+ Blob의 크기를 수신 합니다.  
   
 ## <a name="return-value"></a>반환 값  
- Returns S_OK if the method succeeds.  
+ 메서드가 성공 하면 S_OK을 반환 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- Requires alink.h  
+ Alink 필요  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [IALink 인터페이스](ialink-interface.md)
 - [IALink2 인터페이스](ialink2-interface.md)

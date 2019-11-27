@@ -39,18 +39,18 @@ typedef enum CorThreadSafetyOptions {
 
 |멤버|설명|
 |------------|-----------------|
-|`MDThreadSafetyDefault`|Default value. `MDThreadSafetyOff`와 동일합니다.|
-|`MDThreadSafetyOff`|Indicates that a reader/writer lock cannot be set.|
-|`MDThreadSafetyOn`|Indicates that a reader/writer lock can be set.|
+|`MDThreadSafetyDefault`|기본 값입니다. `MDThreadSafetyOff`와 동일합니다.|
+|`MDThreadSafetyOff`|판독기/작성기 잠금을 설정할 수 없음을 나타냅니다.|
+|`MDThreadSafetyOn`|판독기/작성기 잠금을 설정할 수 있음을 나타냅니다.|
 
 ## <a name="requirements"></a>요구 사항
 
 **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.
 
-**Header:** CorHdr.h
+**헤더:** CorHdr .h
 
 **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [메타데이터 열거형](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

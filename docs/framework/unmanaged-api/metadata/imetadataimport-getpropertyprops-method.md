@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437065"
 ---
 # <a name="imetadataimportgetpropertyprops-method"></a>IMetaDataImport::GetPropertyProps 메서드
-Gets the metadata for the property represented by the specified token.  
+지정 된 토큰이 나타내는 속성의 메타 데이터를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -50,63 +50,63 @@ HRESULT GetPropertyProps (
   
 ## <a name="parameters"></a>매개 변수  
  `prop`  
- [in] A token that represents the property to return metadata for.  
+ 진행 메타 데이터를 반환할 속성을 나타내는 토큰입니다.  
   
  `pClass`  
- [out] A pointer to the TypeDef token that represents the type that implements the property.  
+ 제한이 속성을 구현 하는 형식을 나타내는 TypeDef 토큰에 대 한 포인터입니다.  
   
  `szProperty`  
- [out] A buffer to hold the property name.  
+ 제한이 속성 이름을 보유할 버퍼입니다.  
   
  `cchProperty`  
- [in] The size in wide characters of `szProperty`.  
+ 진행 `szProperty`의 와이드 문자 크기입니다.  
   
  `pchProperty`  
- [out] The number of wide characters returned in `szProperty`.  
+ 제한이 `szProperty`에서 반환 되는 와이드 문자 수입니다.  
   
  `pdwPropFlags`  
- [out] A pointer to any attribute flags applied to the property. This value is a bitmask from the [CorPropertyAttr](../../../../docs/framework/unmanaged-api/metadata/corpropertyattr-enumeration.md) enumeration.  
+ 제한이 속성에 적용 된 특성 플래그에 대 한 포인터입니다. 이 값은 [Corpropertyattr](../../../../docs/framework/unmanaged-api/metadata/corpropertyattr-enumeration.md) 열거형의 비트 마스크입니다.  
   
  `ppvSig`  
- [out] A pointer to the metadata signature of the property.  
+ 제한이 속성의 메타 데이터 서명에 대 한 포인터입니다.  
   
  `pbSig`  
- [out] The number of bytes returned in `ppvSig`.  
+ 제한이 `ppvSig`에서 반환 된 바이트 수입니다.  
   
  `pdwCPlusTypeFlag`  
- [out] A flag specifying the type of the constant that is the default value of the property. This value is from the CorElementType enumeration.  
+ 제한이 속성의 기본값 인 상수의 형식을 지정 하는 플래그입니다. 이 값은 CorElementType 열거형에서 가져온 값입니다.  
   
  `ppDefaultValue`  
- [out] A pointer to the bytes that store the default value for this property.  
+ 제한이 이 속성의 기본값을 저장 하는 바이트에 대 한 포인터입니다.  
   
  `pcchDefaultValue`  
- [out] The size in wide characters of `ppDefaultValue`, if `pdwCPlusTypeFlag` is ELEMENT_TYPE_STRING; otherwise, this value is not relevant. In that case, the length of `ppDefaultValue` is inferred from the type that is specified by `pdwCPlusTypeFlag`.  
+ 제한이 `pdwCPlusTypeFlag`을 ELEMENT_TYPE_STRING 하는 경우 `ppDefaultValue`의 와이드 문자 크기입니다. 그렇지 않으면이 값은 관련이 없습니다. 이 경우 `ppDefaultValue` 길이는 `pdwCPlusTypeFlag`으로 지정 된 형식에서 유추 됩니다.  
   
  `pmdSetter`  
- [out] A pointer to the MethodDef token that represents the set accessor method for the property.  
+ 제한이 속성의 set 접근자 메서드를 나타내는 MethodDef 토큰에 대 한 포인터입니다.  
   
  `pmdGetter`  
- [out] A pointer to the MethodDef token that represents the get accessor method for the property.  
+ 제한이 속성의 get 접근자 메서드를 나타내는 MethodDef 토큰에 대 한 포인터입니다.  
   
  `rmdOtherMethod`  
- [out] An array of MethodDef tokens that represent other methods associated with the property.  
+ 제한이 속성과 연결 된 다른 메서드를 나타내는 MethodDef 토큰의 배열입니다.  
   
  `cMax`  
- [in] `rmdOtherMethod` 배열의 최대 크기입니다. If you do not provide an array large enough to hold all the methods, they are skipped without warning.  
+ [in] `rmdOtherMethod` 배열의 최대 크기입니다. 모든 메서드를 저장할 수 있을 만큼 충분히 크지 않은 배열을 제공 하지 않으면 경고 없이 건너뜁니다.  
   
  `pcOtherMethod`  
- [out] The number of MethodDef tokens returned in `rmdOtherMethod`.  
+ 제한이 `rmdOtherMethod`에서 반환 된 MethodDef 토큰 수입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [IMetaDataImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

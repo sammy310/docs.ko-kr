@@ -1,5 +1,5 @@
 ---
-title: 'How to: Declare an Object Variable and Assign an Object to It'
+title: '방법: 개체 변수 선언 및 개체 변수 할당'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - object variables [Visual Basic], declaring
@@ -14,18 +14,18 @@ ms.locfileid: "74352898"
 ---
 # <a name="how-to-declare-an-object-variable-and-assign-an-object-to-it-in-visual-basic"></a>방법: Visual Basic에서 개체 변수 선언 및 개체 변수에 개체 할당
 
-You declare a variable of the [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md) by specifying `As Object` in a [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md). You assign an object to such a variable by placing the object after the equal sign (`=`) in an assignment statement or initialization clause.
+[Dim 문에](../../../../visual-basic/language-reference/statements/dim-statement.md)`As Object`를 지정 하 여 [개체 데이터 형식의](../../../../visual-basic/language-reference/data-types/object-data-type.md) 변수를 선언 합니다. 개체를 대입문 또는 initialization 절에서 등호 (`=`) 뒤에 배치 하 여 개체를 이러한 변수에 할당 합니다.
 
 ## <a name="example"></a>예제
 
-The following example declares an `Object` variable and assigns the current instance to it.
+다음 예에서는 `Object` 변수를 선언 하 고 여기에 현재 인스턴스를 할당 합니다.
 
 ```vb
 Dim thisObject As Object
 thisObject = "This is an Object"
 ```
 
-You can combine the declaration and assignment by initializing the variable as part of its declaration. The following example is equivalent to the preceding example.
+변수를 선언의 일부로 초기화 하 여 선언과 할당을 결합할 수 있습니다. 다음 예제는 앞의 예제와 동일 합니다.
 
 ```vb
 Dim thisObject As Object= "This is an Object"
@@ -37,11 +37,11 @@ Dim thisObject As Object= "This is an Object"
 
 - <xref:System> 네임스페이스에 대한 참조
 
-- A class, structure, or module in which to put the `Dim` statement.
+- `Dim` 문을 넣을 클래스, 구조체 또는 모듈입니다.
 
-- A procedure in which to put the assignment statement.
+- 대입문을 배치 하는 프로시저입니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [변수 선언](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
 - [개체 변수](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)

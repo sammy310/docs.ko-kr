@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440112"
 ---
 # <a name="imetadataimportcloseenum-method"></a>IMetaDataImport::CloseEnum 메서드
-Closes the enumerator that is identified by the specified handle.  
+지정 된 핸들로 식별 되는 열거자를 닫습니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -35,21 +35,21 @@ void CloseEnum (
   
 ## <a name="parameters"></a>매개 변수  
  `hEnum`  
- [in] The handle for the enumerator to close.  
+ 진행 닫을 열거자에 대 한 핸들입니다.  
   
-## <a name="remarks"></a>주의  
- The handle specified by `hEnum` is obtained from a previous `Enum`*Name* call (for example, [IMetaDataImport::EnumTypeDefs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumtypedefs-method.md)).  
+## <a name="remarks"></a>설명  
+ `hEnum`로 지정 된 핸들은 이전 `Enum`*이름* 호출 (예 [: IMetaDataImport:: enumtypedefs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumtypedefs-method.md))에서 가져옵니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [IMetaDataImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

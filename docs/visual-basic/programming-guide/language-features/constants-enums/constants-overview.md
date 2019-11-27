@@ -12,39 +12,39 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74338350"
 ---
 # <a name="constants-overview-visual-basic"></a>상수 개요(Visual Basic)
-A constant is a meaningful name that takes the place of a number or string that does not change. Constants store values that, as the name implies, remain the same throughout the execution of an application. You can greatly improve the readability of your code and make it easier to maintain by using constants. Use them in code that contains values that reappear or that depends on certain numbers that are difficult to remember or have no obvious meaning.  
+상수는 변경 되지 않는 숫자 또는 문자열을 대신 사용 하는 의미 있는 이름입니다. 상수는 이름이 암시 하는 것 처럼 응용 프로그램 실행 전체에서 동일 하 게 유지 되는 값을 저장 합니다. 코드의 가독성을 크게 향상 시키고 상수를 사용 하 여 더 쉽게 유지 관리할 수 있습니다. 이러한 값을 포함 하는 코드에서 사용 하거나, 기억할 수 없는 특정 숫자에 따라 달라 지는 코드 또는 분명 한 의미가 없는 코드에서 사용 합니다.  
   
-## <a name="how-to-create-and-use-constants"></a>How to Create and Use Constants  
- Visual Basic contains a number of predefined constants, mainly using for printing and displaying. You can also create your own constants with the `Const` statement, using the same guidelines you would for creating a variable name. If `Option Strict` is `On`, you must explicitly declare the constant type.  
+## <a name="how-to-create-and-use-constants"></a>상수를 만들고 사용 하는 방법  
+ Visual Basic에는 인쇄 및 표시를 위해 주로 사용 되는 미리 정의 된 여러 상수가 포함 되어 있습니다. 변수 이름을 만들기 위해 사용 하는 것과 동일한 지침을 사용 하 여 `Const` 문으로 고유한 상수를 만들 수도 있습니다. `Option Strict` `On`경우 상수 형식을 명시적으로 선언 해야 합니다.  
   
- A constant's scope, which is the set of all code that can refer to it without qualifying its name, is the same as that of a variable declared in the same location. To create a constant that exists within the scope of a particular procedure, declare it inside that procedure. To create a constant that is available throughout an application, declare it using the `Public` keyword in the declarations section of the class.  
+ 이름을 한정 하지 않고이를 참조할 수 있는 모든 코드 집합인 상수 범위는 동일한 위치에 선언 된 변수의 변수와 동일 합니다. 특정 프로시저의 범위 내에 있는 상수를 만들려면 해당 프로시저 내에서 선언 합니다. 응용 프로그램 전체에서 사용할 수 있는 상수를 만들려면 클래스의 선언 섹션에서 `Public` 키워드를 사용 하 여 선언 합니다.  
   
 > [!NOTE]
-> Although constants somewhat resemble variables, you cannot modify them or assign new values to them as you can to variables.  
+> 상수는 변수와 유사 하지만 변수를 수정할 수 있는 값으로 변경 하거나 새 값을 할당할 수 없습니다.  
   
- The constants you use in your code can be defined by the object model for controls or components you work with, or they can be user-defined (that is, those you create yourself).  
+ 사용자가 작업 하는 컨트롤 또는 구성 요소에 대 한 개체 모델을 사용 하 여 코드에서 사용 하는 상수를 정의 하거나 사용자가 직접 만든 상수를 사용자가 정의할 수 있습니다.  
   
-## <a name="compile-time-and-run-time-constants"></a>Compile-time and Run-time Constants  
- A compile-time constant is computed at the time the code is compiled, while a run-time constant can only be computed while the application is running. A compile-time constant will have the same value each time an application runs, while a run-time constant may change each time. Compile-time constants are required for cases such as array bounds, case expressions, or enumerator initializers.  
+## <a name="compile-time-and-run-time-constants"></a>컴파일 시간 및 런타임 상수  
+ 컴파일 타임 상수는 코드를 컴파일할 때 계산 되지만 런타임 상수는 응용 프로그램이 실행 되는 동안에만 계산할 수 있습니다. 컴파일 타임 상수는 응용 프로그램이 실행 될 때마다 동일한 값을 갖게 되지만 런타임 상수는 매번 변경 될 수 있습니다. 배열 범위, case 식 또는 열거자 이니셜라이저와 같은 경우에는 컴파일 시간 상수가 필요 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
-  
-|정의|용어|  
-|---|---|  
-|[방법: 상수 선언](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md)|Explains how to use the `Const` statement to declare a constant and set its value; by declaring a constant, you assign a meaningful name to the value.|  
-|[사용자 정의 상수](../../../../visual-basic/programming-guide/language-features/constants-enums/user-defined-constants.md)|Describes how to create your own constants, including information on scoping and how to avoid circular references.|  
-|[상수 및 리터럴 데이터 형식](../../../../visual-basic/programming-guide/language-features/constants-enums/constant-and-literal-data-types.md)|Provides information on how the Visual Basic compiler initializes constants when `Option Explicit` is turned off.|  
-|[방법: 관련 상수 값 그룹화](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-group-related-constant-values-together.md)|Demonstrates how to group constant values that are related.|  
-  
-## <a name="reference"></a>참고  
+## <a name="in-this-section"></a>섹션 내용  
   
 |정의|용어|  
 |---|---|  
-|[상수 및 열거형](../../../../visual-basic/language-reference/constants-and-enumerations.md)|Lists the constants predefined by Visual Basic.|  
-|[Const 문](../../../../visual-basic/language-reference/statements/const-statement.md)|Describes the `Const` statement and its use.|  
-|[Option Strict 문](../../../../visual-basic/language-reference/statements/option-strict-statement.md)|Describes the `Option Strict` statement and its use.|  
+|[방법: 상수 선언](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md)|`Const` 문을 사용 하 여 상수를 선언 하 고 값을 설정 하는 방법을 설명 합니다. 상수를 선언 하 여 값에 의미 있는 이름을 할당 합니다.|  
+|[사용자 정의 상수](../../../../visual-basic/programming-guide/language-features/constants-enums/user-defined-constants.md)|범위 지정 및 순환 참조를 방지 하는 방법에 대 한 정보를 포함 하 여 고유한 상수를 만드는 방법을 설명 합니다.|  
+|[상수 및 리터럴 데이터 형식](../../../../visual-basic/programming-guide/language-features/constants-enums/constant-and-literal-data-types.md)|`Option Explicit` 해제 될 때 Visual Basic 컴파일러가 상수를 초기화 하는 방법에 대 한 정보를 제공 합니다.|  
+|[방법: 관련 상수 값 그룹화](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-group-related-constant-values-together.md)|관련 된 상수 값을 그룹화 하는 방법을 보여 줍니다.|  
   
-## <a name="see-also"></a>참조
+## <a name="reference"></a>참조  
+  
+|정의|용어|  
+|---|---|  
+|[상수 및 열거형](../../../../visual-basic/language-reference/constants-and-enumerations.md)|Visual Basic에서 미리 정의 된 상수를 나열 합니다.|  
+|[Const 문](../../../../visual-basic/language-reference/statements/const-statement.md)|`Const` 문과 사용 방법에 대해 설명 합니다.|  
+|[Option Strict 문](../../../../visual-basic/language-reference/statements/option-strict-statement.md)|`Option Strict` 문과 사용 방법에 대해 설명 합니다.|  
+  
+## <a name="see-also"></a>참고자료
 
 - [열거형 개요](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)
 - [방법: Visual Basic에서 배열 변수 초기화](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)

@@ -17,9 +17,9 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349413"
 ---
 # <a name="xml-literals-visual-basic"></a>XML 리터럴(Visual Basic)
-The topics in this section document the syntax of XML literals in Visual Basic. XML 리터럴 구문을 사용하여 코드에서 직접 XML을 통합할 수 있습니다.  
+이 단원의 항목에서는 Visual Basic의 XML 리터럴 구문을 설명 합니다. XML 리터럴 구문을 사용하여 코드에서 직접 XML을 통합할 수 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
   
 |항목|설명|  
 |-----------|-----------------|  
@@ -29,6 +29,6 @@ The topics in this section document the syntax of XML literals in Visual Basic. 
 |[XML 주석 리터럴](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md)|<xref:System.Xml.Linq.XComment> 개체를 나타내는 리터럴 구문을 설명합니다.|  
 |[XML 처리 명령 리터럴](../../../visual-basic/language-reference/xml-literals/xml-processing-instruction-literal.md)|<xref:System.Xml.Linq.XProcessingInstruction> 개체를 나타내는 리터럴 구문을 설명합니다.|  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)

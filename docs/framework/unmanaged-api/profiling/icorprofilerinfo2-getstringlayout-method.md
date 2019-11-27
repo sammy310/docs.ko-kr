@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431412"
 ---
 # <a name="icorprofilerinfo2getstringlayout-method"></a>ICorProfilerInfo2::GetStringLayout 메서드
-문자열 개체의 레이아웃 정보를 가져옵니다. This method is deprecated in the .NET Framework 4, and is superseded by the [ICorProfilerInfo3::GetStringLayout2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getstringlayout2-method.md) method.  
+문자열 개체의 레이아웃 정보를 가져옵니다. 이 메서드는 .NET Framework 4에서 더 이상 사용 되지 않으며 [ICorProfilerInfo3:: GetStringLayout2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getstringlayout2-method.md) 메서드로 대체 됩니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,27 +36,27 @@ HRESULT GetStringLayout(
   
 ## <a name="parameters"></a>매개 변수  
  `pBufferLengthOffset`  
- [out] A pointer to the offset of the location, relative to the `ObjectID` pointer, that stores the length of the string. The length is stored as a `DWORD`.  
+ 제한이 문자열의 길이를 저장 하는 `ObjectID` 포인터를 기준으로 하는 위치의 오프셋에 대 한 포인터입니다. 길이는 `DWORD`로 저장 됩니다.  
   
 > [!NOTE]
-> This parameter returns the length of the string itself, not the length of the buffer. The length of the buffer is no longer available.  
+> 이 매개 변수는 버퍼의 길이가 아니라 문자열 자체의 길이를 반환 합니다. 버퍼의 길이는 더 이상 사용할 수 없습니다.  
   
  `PStringLengthOffset`  
- [out] A pointer to the offset of the location, relative to the `ObjectID` pointer, that stores the length of the string itself. The length is stored as a `DWORD`.  
+ 제한이 문자열 자체의 길이를 저장 하는 `ObjectID` 포인터를 기준으로 하는 위치의 오프셋에 대 한 포인터입니다. 길이는 `DWORD`로 저장 됩니다.  
   
  `pBufferOffset`  
- [out] A pointer to the offset of the buffer, relative to the `ObjectID` pointer, that stores the string of wide characters.  
+ 제한이 와이드 문자 문자열을 저장 하는 `ObjectID` 포인터를 기준으로 하는 버퍼의 오프셋에 대 한 포인터입니다.  
   
-## <a name="remarks"></a>주의  
- The `GetStringLayout` method gets the offsets, relative to the `ObjectID` pointer, of the locations in which the following are stored:  
+## <a name="remarks"></a>설명  
+ `GetStringLayout` 메서드는 `ObjectID` 포인터를 기준으로 다음이 저장 된 위치의 오프셋을 가져옵니다.  
   
-- The length of the string's buffer.  
+- 문자열 버퍼의 길이입니다.  
   
-- The length of the string itself.  
+- 문자열 자체의 길이입니다.  
   
-- The buffer that contains the actual string of wide characters.  
+- 와이드 문자의 실제 문자열을 포함 하는 버퍼입니다.  
   
- Strings may be null-terminated.  
+ 문자열이 null로 종료 될 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
@@ -67,7 +67,7 @@ HRESULT GetStringLayout(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [ICorProfilerInfo 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
 - [ICorProfilerInfo2 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

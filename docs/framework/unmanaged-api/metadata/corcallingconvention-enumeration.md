@@ -52,27 +52,27 @@ typedef enum CorCallingConvention
   
 |멤버|설명|  
 |------------|-----------------|  
-|`IMAGE_CEE_CS_CALLCONV_DEFAULT`|Indicates a default calling convention.|  
-|`IMAGE_CEE_CS_CALLCONV_VARARG`|Indicates that the method takes a variable number of parameters.|  
-|`IMAGE_CEE_CS_CALLCONV_FIELD`|Indicates that the call is to a field.|  
-|`IMAGE_CEE_CS_CALLCONV_LOCAL_SIG`|Indicates that the call is to a local method.|  
-|`IMAGE_CEE_CS_CALLCONV_PROPERTY`|Indicates that the call is to a property.|  
-|`IMAGE_CEE_CS_CALLCONV_UNMGD`|Indicates that the call is unmanaged.|  
-|`IMAGE_CEE_CS_CALLCONV_GENERICINST`|Indicates a generic method instantiation.|  
-|`IMAGE_CEE_CS_CALLCONV_NATIVEVARARG`|Indicates a 64-bit PInvoke call to a method that takes a variable number of parameters.|  
-|`IMAGE_CEE_CS_CALLCONV_MAX`|Describes an invalid 4-bit value.|  
-|`IMAGE_CEE_CS_CALLCONV_MASK`|Indicates that the calling convention is described by the bottom four bits.|  
-|`IMAGE_CEE_CS_CALLCONV_HASTHIS`|Indicates that the top bit describes a `this` parameter.|  
-|`IMAGE_CEE_CS_CALLCONV_EXPLICITTHIS`|Indicates that a `this` parameter is explicitly described in the signature.|  
-|`IMAGE_CEE_CS_CALLCONV_GENERIC`|Indicates a generic method signature with an explicit number of type arguments. This precedes an ordinary parameter count.|  
+|`IMAGE_CEE_CS_CALLCONV_DEFAULT`|기본 호출 규칙을 나타냅니다.|  
+|`IMAGE_CEE_CS_CALLCONV_VARARG`|메서드가 가변적인 개수의 매개 변수를 사용 함을 나타냅니다.|  
+|`IMAGE_CEE_CS_CALLCONV_FIELD`|필드에 대 한 호출 임을 나타냅니다.|  
+|`IMAGE_CEE_CS_CALLCONV_LOCAL_SIG`|로컬 메서드에 대 한 호출 임을 나타냅니다.|  
+|`IMAGE_CEE_CS_CALLCONV_PROPERTY`|속성에 대 한 호출 임을 나타냅니다.|  
+|`IMAGE_CEE_CS_CALLCONV_UNMGD`|호출이 관리 되지 않음을 나타냅니다.|  
+|`IMAGE_CEE_CS_CALLCONV_GENERICINST`|제네릭 메서드 인스턴스화를 나타냅니다.|  
+|`IMAGE_CEE_CS_CALLCONV_NATIVEVARARG`|가변 개수의 매개 변수를 사용 하는 메서드에 대 한 64 비트 PInvoke 호출을 나타냅니다.|  
+|`IMAGE_CEE_CS_CALLCONV_MAX`|잘못 된 4 비트 값을 설명 합니다.|  
+|`IMAGE_CEE_CS_CALLCONV_MASK`|호출 규칙이 아래쪽 4 비트로 설명 됨을 나타냅니다.|  
+|`IMAGE_CEE_CS_CALLCONV_HASTHIS`|상위 비트가 `this` 매개 변수를 설명 함을 나타냅니다.|  
+|`IMAGE_CEE_CS_CALLCONV_EXPLICITTHIS`|`this` 매개 변수가 시그니처에 명시적으로 설명 됨을 나타냅니다.|  
+|`IMAGE_CEE_CS_CALLCONV_GENERIC`|명시적 개수의 형식 인수가 있는 제네릭 메서드 시그니처를 나타냅니다. 이는 일반 매개 변수 개수 앞에 나옵니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** CorHdr.h  
+ **헤더:** CorHdr .h  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [메타데이터 열거형](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

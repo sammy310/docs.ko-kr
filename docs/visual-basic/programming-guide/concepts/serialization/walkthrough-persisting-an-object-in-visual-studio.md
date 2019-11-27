@@ -33,7 +33,7 @@ ms.locfileid: "74350392"
   
 1. 새 클래스 라이브러리 프로젝트를 만들고 "LoanClass"라는 이름을 지정합니다. 자세한 내용은 [솔루션 및 프로젝트 만들기](https://docs.microsoft.com/visualstudio/ide/creating-solutions-and-projects)를 참조하세요.  
   
-2. **솔루션 탐색기**에서 Class1 파일에 대한 바로 가기 메뉴를 열고 **이름 바꾸기**를 선택합니다. 파일 이름을 `Loan`로 바꾸고 ENTER 키를 누릅니다. 파일 이름을 바꾸면 클래스 이름도 `Loan`로 바뀝니다.  
+2. **솔루션 탐색기**에서 Class1 파일에 대한 바로 가기 메뉴를 열고 **이름 바꾸기**를 선택합니다. 파일 이름을 `Loan`으로 바꾸고 ENTER 키를 누릅니다. 파일 이름을 바꾸면 클래스 이름도 `Loan`으로 바뀝니다.  
   
 3. 클래스에 다음 공용 멤버를 추가합니다.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "74350392"
   
 6. **참조 추가** 대화 상자에서 **프로젝트** 탭을 선택한 다음 LoanClass 프로젝트를 선택합니다.  
   
-7. **확인** 을 클릭하여 대화 상자를 닫습니다.  
+7. **확인**을 클릭하여 대화 상자를 닫습니다.  
   
 8. 디자이너에서 <xref:System.Windows.Forms.TextBox> 컨트롤 4개를 폼에 추가합니다.  
   
@@ -215,7 +215,7 @@ ms.locfileid: "74350392"
   
  이 시점에서 다시 애플리케이션을 빌드 및 실행할 수 있습니다. 처음에는 텍스트 상자에 기본값이 나타납니다. 값을 변경하고 네 번째 텍스트 상자에 이름을 입력합니다. 애플리케이션을 닫았다가 다시 엽니다. 이제 새 값이 텍스트 상자에 나타납니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [Serialization(Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/index.md)
 - [Visual Basic 프로그래밍 가이드](../../../../visual-basic/programming-guide/index.md)

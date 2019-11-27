@@ -37,24 +37,24 @@ HRESULT GetSigFromToken (
   
 ## <a name="parameters"></a>매개 변수  
  `mdSig`  
- [in] The token to return the binary metadata signature for.  
+ 진행 이진 메타 데이터 서명을 반환할 토큰입니다.  
   
  `ppvSig`  
- [out] A pointer to the returned metadata signature.  
+ 제한이 반환 된 메타 데이터 서명에 대 한 포인터입니다.  
   
  `pcbSig`  
- [out] The size in bytes of the binary metadata signature.  
+ 제한이 이진 메타 데이터 시그니처의 크기 (바이트)입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [IMetaDataImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

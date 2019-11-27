@@ -25,7 +25,7 @@ ms.locfileid: "74281600"
   
 - HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSDTC Bridge 3.0.0.0  
   
- 이러한 키는 **제어판**의 **프로그램 추가/제거** 애플릿에서 실행된 .NET Framework 3.0 설치 관리자를 사용하여 복구를 실행해도 다시 만들 수 없습니다. 해당 키를 다시 만들려면 .NET Framework 3.0을 제거하고 다시 설치해야 합니다.  
+ 제어판의 [ **프로그램 추가/제거** **]** 에서 시작 된 .NET Framework 3.0 설치 관리자를 사용 하 여 복구를 실행 하는 경우 키가 다시 생성 되지 않습니다. 해당 키를 다시 만들려면 .NET Framework 3.0을 제거하고 다시 설치해야 합니다.  
   
 ## <a name="wmi-service-corruption-blocks-installation-of-the-windows-communication-foundation-wmi-provider-during-installation-of-net-framework-30-package"></a>.NET Framework 3.0 패키지 설치 시 WMI 서비스 손상으로 인해 Windows Communication Foundation WMI 공급자가 설치되지 않음  
  WMI 서비스 손상으로 인해 Windows Communication Foundation WMI 공급자가 설치되지 않을 수 있습니다. 설치 시 Windows Communication Foundation 설치 관리자가 mofcomp.exe 구성 요소를 사용하여 WCF .mof 파일을 등록할 수 없습니다. 다음과 같은 증상이 있습니다.  
@@ -54,7 +54,7 @@ ms.locfileid: "74281600"
   
 1. [WMI Diagnosis Utility 버전 2.0을](https://go.microsoft.com/fwlink/?LinkId=94685) 실행 하 여 WMI 서비스를 복구 합니다. 이 도구를 사용 하는 방법에 대 한 자세한 내용은 [WMI Diagnosis Utility](https://go.microsoft.com/fwlink/?LinkId=94686) 항목을 참조 하세요.  
   
- **제어판**의 **프로그램 추가/제거** 애플릿을 사용하여 .NET Framework 3.0 설치를 복구하거나 .NET Framework 3.0을 제거하고 다시 설치합니다.  
+ **제어판**에 있는 **프로그램 추가/제거** 애플릿을 사용 하 여 .NET Framework 3.0 설치를 복구 하거나 .NET Framework 3.0를 제거/다시 설치 합니다.  
   
 ## <a name="repairing-net-framework-30-after-net-framework-35-installation-removes-configuration-elements-introduced-by-net-framework-35-in-machineconfig"></a>.NET Framework 3.5 설치 후 .NET Framework 3.0을 복구하면 machine.config에서 .NET Framework 3.5에 의해 추가된 구성 요소가 제거됨  
  .NET Framework 3.5를 설치한 후 .NET Framework 3.0을 복구 하면 machine.config에서 .NET Framework 3.5에 의해 도입 된 구성 요소가 제거 됩니다. 그러나 web.config는 그대로 유지됩니다. 해결 방법은 ARP를 통해 .NET Framework 3.5를 복구 하거나 `/c` 스위치와 함께 [워크플로 서비스 등록 도구 (wfservicesreg.exe)](workflow-service-registration-tool-wfservicesreg-exe.md) 를 사용 하는 것입니다.  
@@ -73,6 +73,6 @@ ms.locfileid: "74281600"
 aspnet_regiis.exe -i -enable  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [설치 지침](./samples/set-up-instructions.md)

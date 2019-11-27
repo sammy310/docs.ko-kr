@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436181"
 ---
 # <a name="imetadatainfogetfilemapping-method"></a>IMetaDataInfo::GetFileMapping 메서드
-Gets the memory region of the mapped file, and the type of mapping.  
+매핑된 파일의 메모리 영역 및 매핑 유형을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,41 +37,41 @@ HRESULT GetFileMapping (
   
 ## <a name="parameters"></a>매개 변수  
  `ppvData`  
- [out] A pointer to the start of the mapped file.  
+ 제한이 매핑된 파일의 시작에 대 한 포인터입니다.  
   
  `pcbData`  
- [out] The size of the mapped region. If `pdwMappingType` is `fmFlat`, this is the size of the file.  
+ 제한이 매핑된 영역의 크기입니다. `pdwMappingType` `fmFlat`경우 파일의 크기입니다.  
   
  `pdwMappingType`  
- [out] A [CorFileMapping](../../../../docs/framework/unmanaged-api/metadata/corfilemapping-enumeration.md) value that indicates the type of mapping. The current implementation of the common language runtime (CLR) always returns `fmFlat`. Other values are reserved for future use. However, you should always verify the returned value, because other values may be enabled in future versions or service releases.  
+ 제한이 매핑의 유형을 나타내는 [CorFileMapping](../../../../docs/framework/unmanaged-api/metadata/corfilemapping-enumeration.md) 값입니다. CLR (공용 언어 런타임)의 현재 구현은 항상 `fmFlat`을 반환 합니다. 다른 값은 나중에 사용할 수 있도록 예약되어 있습니다. 그러나 이후 버전 또는 서비스 릴리스에서 다른 값을 사용할 수 있기 때문에 항상 반환 된 값을 확인 해야 합니다.  
   
 ## <a name="return-value"></a>반환 값  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
-|`S_OK`|All outputs are filled.|  
-|`E_INVALIDARG`|NULL was passed as an argument value.|  
-|`COR_E_NOTSUPPORTED`|The CLR implementation cannot provide information about the memory region. This can happen for the following reasons:<br /><br /> -   The metadata scope was opened with the `ofWrite` or `ofCopyMemory` flag.<br />-   The metadata scope was opened without the `ofReadOnly` flag.<br />-   The [IMetaDataDispenser::OpenScopeOnMemory](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md) method was used to open only the metadata portion of the file.<br />-   The file is not a portable executable (PE) file. **Note:**  These conditions depend on the CLR implementation, and are likely to be weakened in future versions of the CLR.|  
+|`S_OK`|모든 출력이 채워집니다.|  
+|`E_INVALIDARG`|NULL이 인수 값으로 전달 되었습니다.|  
+|`COR_E_NOTSUPPORTED`|CLR 구현은 메모리 영역에 대 한 정보를 제공할 수 없습니다. 이 문제는 다음과 같은 이유로 발생할 수 있습니다.<br /><br /> -`ofWrite` 또는 `ofCopyMemory` 플래그를 사용 하 여 메타 데이터 범위를 열었습니다.<br />-메타 데이터 범위가 `ofReadOnly` 플래그 없이 열렸습니다.<br />- [IMetaDataDispenser:: OpenScopeOnMemory](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md) 메서드는 파일의 메타 데이터 부분만 여는 데 사용 되었습니다.<br />-파일이 PE (이식 가능한 실행 파일) 파일이 아닙니다. **참고:**  이러한 조건은 CLR 구현에 따라 달라 지 며 CLR의 이후 버전에서 약화 될 가능성이 높습니다.|  
   
-## <a name="remarks"></a>주의  
- The memory that `ppvData` points to is valid only as long as the underlying metadata scope is open.  
+## <a name="remarks"></a>설명  
+ `ppvData` 가리키는 메모리는 기본 메타 데이터 범위가 열려 있는 동안에만 유효 합니다.  
   
- In order for this method to work, when you map the metadata of an on-disk file into memory by calling the [IMetaDataDispenser::OpenScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md) method, you must specify the `ofReadOnly` flag and you must not specify the `ofWrite` or `ofCopyMemory` flag.  
+ 이 메서드가 작동 하려면 [IMetaDataDispenser:: OpenScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md) 메서드를 호출 하 여 디스크에 있는 파일의 메타 데이터를 메모리에 매핑하면 `ofReadOnly` 플래그를 지정 해야 하며 `ofWrite` 또는 `ofCopyMemory` 플래그를 지정 하지 않아야 합니다.  
   
- The choice of file mapping type for each scope is specific to a given implementation of the CLR. It cannot be set by the user. The current implementation of the CLR always returns `fmFlat` in `pdwMappingType`, but this can change in future versions of the CLR or in future service releases of a given version. You should always check the returned value in `pdwMappingType`, because different types will have different layouts and offsets.  
+ 각 범위에 대 한 파일 매핑 형식의 선택은 CLR의 지정 된 구현과 관련이 있습니다. 사용자가 설정할 수 없습니다. CLR의 현재 구현은 항상 `pdwMappingType`에 `fmFlat`를 반환 하지만이는 이후 버전의 CLR 또는 지정 된 버전의 이후 서비스 릴리스에서 변경 될 수 있습니다. 서로 다른 레이아웃과 오프셋이 있으므로 항상 `pdwMappingType`에서 반환 된 값을 확인 해야 합니다.  
   
- Passing NULL for any of the three parameters is not supported. The method returns `E_INVALIDARG`, and none of the outputs are filled. Ignoring the mapping type or the size of the region can result in abnormal program termination.  
+ 세 매개 변수 중 하나에 대해 NULL을 전달 하는 것은 지원 되지 않습니다. 메서드는 `E_INVALIDARG`을 반환 하 고 출력은 채워지지 않습니다. 매핑 형식이 나 영역의 크기를 무시 하면 비정상적인 프로그램이 종료 될 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [IMetaDataInfo 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-interface.md)
 - [CorFileMapping 열거형](../../../../docs/framework/unmanaged-api/metadata/corfilemapping-enumeration.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436241"
 ---
 # <a name="imetadatadispenserdefinescope-method"></a>IMetaDataDispenser::DefineScope 메서드
-Creates a new area in memory in which you can create new metadata.  
+새 메타 데이터를 만들 수 있는 메모리에 새 영역을 만듭니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,34 +38,34 @@ HRESULT DefineScope (
   
 ## <a name="parameters"></a>매개 변수  
  `rclsid`  
- [in] The CLSID of the version of metadata structures to be created. This value must be CLSID_CorMetaDataRuntime for the .NET Framework version 2.0.  
+ 진행 만들 메타 데이터 구조 버전의 CLSID입니다. .NET Framework 버전 2.0에 대해이 값을 CLSID_CorMetaDataRuntime 해야 합니다.  
   
  `dwCreateFlags`  
- [in] Flags that specify options. This value must be zero for the .NET Framework 2.0.  
+ 진행 옵션을 지정 하는 플래그입니다. .NET Framework 2.0의 경우이 값은 0 이어야 합니다.  
   
  `riid`  
- [in] The IID of the desired metadata interface to be returned; the caller will use the interface to create the new metadata.  
+ 진행 반환할 원하는 메타 데이터 인터페이스의 IID입니다. 호출자는 인터페이스를 사용 하 여 새 메타 데이터를 만듭니다.  
   
- The value of `riid` must specify one of the "emit" interfaces. Valid values are IID_IMetaDataEmit, IID_IMetaDataAssemblyEmit, or IID_IMetaDataEmit2.  
+ `riid` 값은 "내보내기" 인터페이스 중 하나를 지정 해야 합니다. 유효한 값은 IID_IMetaDataEmit, IID_IMetaDataAssemblyEmit 또는 IID_IMetaDataEmit2입니다.  
   
  `ppIUnk`  
- [out] The pointer to the returned interface.  
+ 제한이 반환 된 인터페이스에 대 한 포인터입니다.  
   
-## <a name="remarks"></a>주의  
- `DefineScope` creates a set of in-memory metadata tables, generates a unique GUID (module version identifier, or MVID) for the metadata, and creates an entry in the module table for the compilation unit being emitted.  
+## <a name="remarks"></a>설명  
+ `DefineScope`는 메모리 내 메타 데이터 테이블 집합을 만들고, 메타 데이터에 대 한 고유 GUID (모듈 버전 식별자 또는 MVID)를 생성 하 고, 내보내는 컴파일 단위에 대 한 모듈 테이블에 항목을 만듭니다.  
   
- You can attach attributes to the metadata scope as a whole by using the [IMetaDataEmit::SetModuleProps](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md) or [IMetaDataEmit::DefineCustomAttribute](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definecustomattribute-method.md) method, as appropriate.  
+ [IMetaDataEmit:: SetModuleProps](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md) 또는 [IMetaDataEmit::D efinecustomattribute](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definecustomattribute-method.md) 메서드를 적절 하 게 사용 하 여 전체 메타 데이터 범위에 특성을 연결할 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조 하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [IMetaDataDispenser 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)
 - [IMetaDataDispenserEx 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)

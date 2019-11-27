@@ -23,9 +23,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436335"
 ---
 # <a name="iceegengetmethodbuffer-method"></a>ICeeGen::GetMethodBuffer 메서드
-Gets a buffer of the appropriate size for the method at the specified relative virtual address.  
+지정 된 상대 가상 주소에서 메서드에 대 한 적절 한 크기의 버퍼를 가져옵니다.  
   
- This method is obsolete and should not be used.  
+ 이 메서드는 사용 되지 않으므로 사용 하면 안 됩니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,20 +38,20 @@ HRESULT GetMethodBuffer (
   
 ## <a name="parameters"></a>매개 변수  
  `RVA`  
- [in] The relative virtual address of the method for which to return a buffer.  
+ 진행 버퍼를 반환할 메서드의 상대 가상 주소입니다.  
   
  `lpBuffer`  
- [out] A pointer to the returned buffer.  
+ 제한이 반환 된 버퍼에 대 한 포인터입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICeeGen 인터페이스](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445204"
 ---
 # <a name="icorprofilercallbackappdomainshutdownfinished-method"></a>ICorProfilerCallback::AppDomainShutdownFinished 메서드
-Notifies the profiler that an application domain has been unloaded from a process.  
+응용 프로그램 도메인이 프로세스에서 언로드 되었음을 프로파일러에 알립니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -35,15 +35,15 @@ HRESULT AppDomainShutdownFinished(
   
 ## <a name="parameters"></a>매개 변수  
  `appDomainId`  
- [in] Identifies the domain in which the application's assemblies are stored.  
+ 진행 응용 프로그램의 어셈블리가 저장 된 도메인을 식별 합니다.  
   
  `hrStatus`  
- [in] An HRESULT that indicates whether the application domain was unloaded successfully.  
+ 진행 응용 프로그램 도메인이 성공적으로 언로드 되었는지 여부를 나타내는 HRESULT입니다.  
   
-## <a name="remarks"></a>주의  
- The value of `appDomainId` is not valid for an information request after the [ICorProfilerCallback::AppDomainShutdownStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomainshutdownstarted-method.md) method returns.  
+## <a name="remarks"></a>설명  
+ [ICorProfilerCallback:: AppDomainShutdownStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomainshutdownstarted-method.md) 메서드가 반환 된 후에는 `appDomainId` 값이 정보 요청에 적합 하지 않습니다.  
   
- Some parts of unloading the application domain might continue after the `AppDomainCreationFinished` callback. A failure HRESULT in `hrStatus` indicates a failure. However, a success HRESULT in `hrStatus` indicates only that the first part of unloading the application domain has succeeded.  
+ 응용 프로그램 도메인 언로드의 일부 부분은 `AppDomainCreationFinished` 콜백 후에도 계속 될 수 있습니다. `hrStatus` 오류 HRESULT는 오류를 나타냅니다. 그러나 `hrStatus`의 성공 HRESULT는 응용 프로그램 도메인 언로드의 첫 번째 부분만 성공 했다는 것을 나타냅니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
@@ -54,6 +54,6 @@ HRESULT AppDomainShutdownFinished(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [ICorProfilerCallback 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

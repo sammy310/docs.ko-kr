@@ -29,33 +29,33 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74343602"
 ---
 # <a name="logical-and-bitwise-operators-in-visual-basic"></a>Visual Basic의 논리 및 비트 연산자
-Logical operators compare `Boolean` expressions and return a `Boolean` result. The `And`, `Or`, `AndAlso`, `OrElse`, and `Xor` operators are *binary* because they take two operands, while the `Not` operator is *unary* because it takes a single operand. Some of these operators can also perform bitwise logical operations on integral values.  
+논리 연산자는 `Boolean` 식을 비교 하 고 `Boolean` 결과를 반환 합니다. `And`, `Or`, `AndAlso`, `OrElse`및 `Xor` 연산자는 두 개의 피연산자를 사용 하므로 *이진* 이 고, `Not` 연산자는 단일 피연산자를 사용 하기 때문에 *단항* 연산자입니다. 이러한 연산자 중 일부는 정수 값에 대해 비트 논리적 연산을 수행할 수도 있습니다.  
   
-## <a name="unary-logical-operator"></a>Unary Logical Operator  
- The [Not Operator](../../../../visual-basic/language-reference/operators/not-operator.md) performs logical *negation* on a `Boolean` expression. It yields the logical opposite of its operand. If the expression evaluates to `True`, then `Not` returns `False`; if the expression evaluates to `False`, then `Not` returns `True`. 다음은 이에 대한 예입니다.  
+## <a name="unary-logical-operator"></a>단항 논리 연산자  
+ [Not 연산자](../../../../visual-basic/language-reference/operators/not-operator.md) 는 `Boolean` 식에 논리 *부정을* 수행 합니다. 피연산자와 반대 되는 논리를 생성 합니다. 식이 `True`로 계산 되 면 `Not` `False`반환 됩니다. 식이 `False`로 계산 되 면 `Not` `True`반환 됩니다. 다음은 이에 대한 예입니다.  
   
  [!code-vb[VbVbalrOperators#77](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#77)]  
   
-## <a name="binary-logical-operators"></a>Binary Logical Operators  
- The [And Operator](../../../../visual-basic/language-reference/operators/and-operator.md) performs logical *conjunction* on two `Boolean` expressions. If both expressions evaluate to `True`, then `And` returns `True`. If at least one of the expressions evaluates to `False`, then `And` returns `False`.  
+## <a name="binary-logical-operators"></a>이항 논리 연산자  
+ [And 연산자](../../../../visual-basic/language-reference/operators/and-operator.md) 는 두 개의 `Boolean` 식에 논리 *결합* 을 수행 합니다. 두 식이 모두 `True`로 계산 되 면 `And` `True`반환 됩니다. 식 중 하나 이상이 `False`로 계산 되 면 `And` `False`반환 됩니다.  
   
- The [Or Operator](../../../../visual-basic/language-reference/operators/or-operator.md) performs logical *disjunction* or *inclusion* on two `Boolean` expressions. If either expression evaluates to `True`, or both evaluate to `True`, then `Or` returns `True`. If neither expression evaluates to `True`, `Or` returns `False`.  
+ [Or 연산자](../../../../visual-basic/language-reference/operators/or-operator.md) 는 두 개의 `Boolean` 식 *에 대* *한 논리합 연산을* 수행 합니다. 두 식이 모두 `True`로 계산 되거나 모두 `True`로 계산 되는 경우 `Or`는 `True`를 반환 합니다. 두 식이 모두 `True`로 계산 되지 않으면 `Or` `False`반환 됩니다.  
   
- The [Xor Operator](../../../../visual-basic/language-reference/operators/xor-operator.md) performs logical *exclusion* on two `Boolean` expressions. If exactly one expression evaluates to `True`, but not both, `Xor` returns `True`. If both expressions evaluate to `True` or both evaluate to `False`, `Xor` returns `False`.  
+ [Xor 연산자](../../../../visual-basic/language-reference/operators/xor-operator.md) 는 두 개의 `Boolean` 식에 대해 논리적 *제외* 를 수행 합니다. 정확 하 게 하나의 식으로 계산 되는 경우에는 `True``Xor` `True`반환 됩니다. 두 식이 모두 `True`로 계산 되거나 모두 `False`로 계산 되는 경우 `Xor`는 `False`을 반환 합니다.  
   
- The following example illustrates the `And`, `Or`, and `Xor` operators.  
+ 다음 예에서는 `And`, `Or`및 `Xor` 연산자를 보여 줍니다.  
   
  [!code-vb[VbVbalrOperators#78](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#78)]  
   
-## <a name="short-circuiting-logical-operations"></a>Short-Circuiting Logical Operations  
- The [AndAlso Operator](../../../../visual-basic/language-reference/operators/andalso-operator.md) is very similar to the `And` operator, in that it also performs logical conjunction on two `Boolean` expressions. The key difference between the two is that `AndAlso` exhibits *short-circuiting* behavior. If the first expression in an `AndAlso` expression evaluates to `False`, then the second expression is not evaluated because it cannot alter the final result, and `AndAlso` returns `False`.  
+## <a name="short-circuiting-logical-operations"></a>순환이 짧은 논리 작업  
+ [AndAlso 연산자](../../../../visual-basic/language-reference/operators/andalso-operator.md) 는 두 개의 `Boolean` 식에서 논리적 결합도 수행 한다는 점에서 `And` 연산자와 매우 비슷합니다. 둘 사이의 주요 차이점은 `AndAlso`는 *단락 동작을* 보여 주는 것입니다. `AndAlso` 식의 첫 번째 식이 `False`이면 최종 결과를 변경할 수 없으므로 두 번째 식이 계산 되지 않으며 `AndAlso` `False`을 반환 합니다.  
   
- Similarly, the [OrElse Operator](../../../../visual-basic/language-reference/operators/orelse-operator.md) performs short-circuiting logical disjunction on two `Boolean` expressions. If the first expression in an `OrElse` expression evaluates to `True`, then the second expression is not evaluated because it cannot alter the final result, and `OrElse` returns `True`.  
+ 마찬가지로 [OrElse 연산자](../../../../visual-basic/language-reference/operators/orelse-operator.md) 는 두 개의 `Boolean` 식에 순환이 짧은 논리 분리를 수행 합니다. `OrElse` 식의 첫 번째 식이 `True`이면 최종 결과를 변경할 수 없으므로 두 번째 식이 계산 되지 않으며 `OrElse` `True`을 반환 합니다.  
   
-### <a name="short-circuiting-trade-offs"></a>Short-Circuiting Trade-Offs  
- Short-circuiting can improve performance by not evaluating an expression that cannot alter the result of the logical operation. However, if that expression performs additional actions, short-circuiting skips those actions. For example, if the expression includes a call to a `Function` procedure, that procedure is not called if the expression is short-circuited, and any additional code contained in the `Function` does not run. Therefore, the function might run only occasionally, and might not be tested correctly. Or the program logic might depend on the code in the `Function`.  
+### <a name="short-circuiting-trade-offs"></a>단락 장단점  
+ 단락을 통해 논리 연산의 결과를 변경할 수 없는 식을 계산 하지 않고 성능을 향상 시킬 수 있습니다. 그러나 해당 식에서 추가 작업을 수행 하는 경우 단락에서는 이러한 작업을 건너뜁니다. 예를 들어 식에 `Function` 프로시저에 대 한 호출이 포함 된 경우 식이 짧은 short-circuit `Function`에 포함 된 추가 코드는 실행 되지 않는 경우 해당 프로시저는 호출 되지 않습니다. 따라서 함수는 가끔씩만 실행 될 수 있으며 제대로 테스트 되지 않을 수도 있습니다. 또는 프로그램 논리는 `Function`코드에 따라 달라질 수 있습니다.  
   
- The following example illustrates the difference between `And`, `Or`, and their short-circuiting counterparts.  
+ 다음 예에서는 `And`, `Or`및 해당 단락 (short circuit)의 차이점을 보여 줍니다.  
   
  [!code-vb[VbVbalrOperators#81](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#81)]  
   
@@ -63,43 +63,43 @@ Logical operators compare `Boolean` expressions and return a `Boolean` result. T
   
  [!code-vb[VbVbalrOperators#79](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#79)]  
   
- In the preceding example, note that some important code inside `checkIfValid()` does not run when the call is short-circuited. The first `If` statement calls `checkIfValid()` even though `12 > 45` returns `False`, because `And` does not short-circuit. The second `If` statement does not call `checkIfValid()`, because when `12 > 45` returns `False`, `AndAlso` short-circuits the second expression. The third `If` statement calls `checkIfValid()` even though `12 < 45` returns `True`, because `Or` does not short-circuit. The fourth `If` statement does not call `checkIfValid()`, because when `12 < 45` returns `True`, `OrElse` short-circuits the second expression.  
+ 앞의 예제에서 `checkIfValid()` 내부의 일부 중요 한 코드는 호출이 단기 short-circuit 때 실행 되지 않습니다. `And`가 짧은 회로를 수행 하지 않으므로 첫 번째 `If` 문이 `12 > 45` `False`를 반환 하는 경우에도 `checkIfValid()`를 호출 합니다. 두 번째 `If` 문은 `checkIfValid()`를 호출 하지 않습니다. `12 > 45` `False`반환 될 때 두 번째 식을 `AndAlso` 하는 것 이기 때문입니다. 세 번째 `If` 문은 `Or`가 짧은 회로를 수행 하지 않기 때문에 `12 < 45` `True`반환 하는 경우에도 `checkIfValid()`를 호출 합니다. 네 번째 `If` 문은 `checkIfValid()`를 호출 하지 않습니다. `12 < 45` `True`반환 되는 경우 두 번째 식을 `OrElse` 하는 것 이기 때문입니다.  
   
-## <a name="bitwise-operations"></a>Bitwise Operations  
- Bitwise operations evaluate two integral values in binary (base 2) form. They compare the bits at corresponding positions and then assign values based on the comparison. The following example illustrates the `And` operator.  
+## <a name="bitwise-operations"></a>비트 연산  
+ 비트 연산은 이진 (기본 2) 형식으로 두 개의 정수 값을 평가 합니다. 해당 위치의 비트를 비교한 다음 비교에 따라 값을 할당 합니다. 다음 예에서는 `And` 연산자를 보여 줍니다.  
   
  [!code-vb[VbVbalrConcepts#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConcepts/VB/Class1.vb#2)]  
   
- The preceding example sets the value of `x` to 1. This happens for the following reasons:  
+ 앞의 예제에서는 `x`의 값을 1로 설정 합니다. 이 문제는 다음과 같은 이유로 발생 합니다.  
   
-- The values are treated as binary:  
+- 값은 binary로 처리 됩니다.  
   
-     3 in binary form = 011  
+     3 이진 형식 = 011  
   
-     5 in binary form = 101  
+     5 이진 형식 = 101  
   
-- The `And` operator compares the binary representations, one binary position (bit) at a time. If both bits at a given position are 1, then a 1 is placed in that position in the result. If either bit is 0, then a 0 is placed in that position in the result. In the preceding example this works out as follows:  
+- `And` 연산자는 한 번에 하나의 이진 위치 (비트)를 비교 합니다. 지정 된 위치에 있는 두 비트가 모두 1 이면 결과의 해당 위치에 1이 배치 됩니다. 두 비트가 모두 0 인 경우 결과의 해당 위치에 0이 배치 됩니다. 위의 예제에서는 다음과 같이 작동 합니다.  
   
-     011 (3 in binary form)  
+     011 (이진 형식의 경우 3)  
   
-     101 (5 in binary form)  
+     101 (이진 형식의 5)  
   
-     001 (The result, in binary form)  
+     001 (이진 형식으로 된 결과)  
   
-- The result is treated as decimal. The value 001 is the binary representation of 1, so `x` = 1.  
+- 결과는 10 진수로 처리 됩니다. 값 001은 1의 이진 표현 이므로 `x` = 1입니다.  
   
- The bitwise `Or` operation is similar, except that a 1 is assigned to the result bit if either or both of the compared bits is 1. `Xor` assigns a 1 to the result bit if exactly one of the compared bits (not both) is 1. `Not` takes a single operand and inverts all the bits, including the sign bit, and assigns that value to the result. This means that for signed positive numbers, `Not` always returns a negative value, and for negative numbers, `Not` always returns a positive or zero value.  
+ 비교 비트 중 하나 또는 둘 다가 1 이면 결과 비트에 1이 할당 된다는 점을 제외 하 고 비트 `Or` 연산은 비슷합니다. 비교 된 비트 (둘 다) 중 정확히 하나가 1 이면 결과 비트에 1을 할당 `Xor`. `Not`는 단일 피연산자를 사용 하 고 부호 비트를 포함 하 여 모든 비트를 반전 하 고 결과에 해당 값을 할당 합니다. 즉, 부호 있는 양수의 경우 `Not` 항상 음수 값을 반환 하 고 음수에 대해 `Not` 항상 양수 또는 0 값을 반환 합니다.  
   
- The `AndAlso` and `OrElse` operators do not support bitwise operations.  
+ `AndAlso` 및 `OrElse` 연산자는 비트 연산을 지원 하지 않습니다.  
   
 > [!NOTE]
-> Bitwise operations can be performed on integral types only. Floating-point values must be converted to integral types before bitwise operation can proceed.  
+> 비트 연산은 정수 계열 형식에 대해서만 수행할 수 있습니다. 비트 연산을 계속 하려면 부동 소수점 값을 정수 계열 형식으로 변환 해야 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
-- [Logical/Bitwise Operators (Visual Basic)](../../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
+- [논리/비트 연산자 (Visual Basic)](../../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
 - [부울 식](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md)
-- [Arithmetic Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
-- [Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
-- [Concatenation Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)
+- [Visual Basic의 산술 연산자](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [Visual Basic의 비교 연산자](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Visual Basic의 연결 연산자](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)
 - [연산자의 효율적 결합](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/efficient-combination-of-operators.md)

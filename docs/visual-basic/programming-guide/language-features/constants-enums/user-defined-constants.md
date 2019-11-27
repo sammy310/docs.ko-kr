@@ -17,45 +17,45 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74354014"
 ---
 # <a name="user-defined-constants-visual-basic"></a>사용자 정의 상수(Visual Basic)
-A constant is a meaningful name that takes the place of a number or string that does not change. 상수는 애플리케이션 실행 중 변함없이 유지되는 값을 저장합니다. You can use constants that are defined by the controls or components you work with, or you can create your own. Constants you create yourself are described as *user-defined*.  
+상수는 변경 되지 않는 숫자 또는 문자열을 대신 사용 하는 의미 있는 이름입니다. 상수는 애플리케이션 실행 중 변함없이 유지되는 값을 저장합니다. 작업 하는 컨트롤이 나 구성 요소에 의해 정의 된 상수를 사용 하거나 직접 만들 수 있습니다. 직접 만든 상수는 *사용자 정의*로 설명 됩니다.  
   
- You declare a constant with the `Const` statement, using the same guidelines you would for creating a variable name. If `Option Strict` is `On`, you must explicitly declare the constant type.  
+ 변수 이름을 만들기 위해 사용 하는 것과 동일한 지침을 사용 하 여 `Const` 문으로 상수를 선언 합니다. `Option Strict` `On`경우 상수 형식을 명시적으로 선언 해야 합니다.  
   
-## <a name="const-statement-usage"></a>Const Statement Usage  
- A `Const` statement can represent a mathematical or date/time quantity:  
+## <a name="const-statement-usage"></a>Const 문 사용  
+ `Const` 문은 수치 또는 날짜/시간 수량을 나타낼 수 있습니다.  
   
  [!code-vb[VbEnumsTask#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#10)]  
   
- It also can define `String` constants:  
+ 또한 `String` 상수를 정의할 수 있습니다.  
   
  [!code-vb[VbEnumsTask#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#13)]  
   
- The expression on the right side of the equal sign ( `=` ) is often a number or literal string, but it also can be an expression that results in a number or string (although that expression cannot contain calls to functions). You can even define constants in terms of previously defined constants:  
+ 등호 (`=`) 오른쪽에 있는 식은 종종 숫자 또는 리터럴 문자열이 긴 하지만 숫자나 문자열이 발생 하는 식일 수도 있습니다 (식에서 함수에 대 한 호출을 포함할 수는 없음). 이전에 정의 된 상수를 기준으로 상수를 정의할 수도 있습니다.  
   
  [!code-vb[VbEnumsTask#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#15)]  
   
-## <a name="scope-of-user-defined-constants"></a>Scope of User-Defined Constants  
- A `Const` statement's scope is the same as that of a variable declared in the same location. You can specify scope in any of the following ways:  
+## <a name="scope-of-user-defined-constants"></a>사용자 정의 상수의 범위  
+ `Const` 문의 범위는 동일한 위치에 선언 된 변수의 범위와 같습니다. 다음 방법 중 하나를 지정 하 여 범위를 지정할 수 있습니다.  
   
-- To create a constant that exists only within a procedure, declare it within that procedure.  
+- 프로시저 내에만 존재 하는 상수를 만들려면 해당 프로시저 내에서 선언 합니다.  
   
-- To create a constant available to all procedures within a class, but not to any code outside that module, declare it in the declarations section of the class.  
+- 클래스 내의 모든 프로시저에서 사용할 수 있지만 해당 모듈 외부의 코드에는 사용할 수 없는 상수를 만들려면 클래스의 선언 섹션에서 선언 합니다.  
   
-- To create a constant that is available to all members of an assembly, but not to outside clients of the assembly, declare it using the `Friend` keyword in the declarations section of the class.  
+- 어셈블리의 모든 멤버에 사용할 수 있지만 어셈블리의 외부 클라이언트에는 사용할 수 없는 상수를 만들려면 클래스의 선언 섹션에서 `Friend` 키워드를 사용 하 여 선언 합니다.  
   
-- To create a constant available throughout the application, declare it using the `Public` keyword in the declarations section the class.  
+- 응용 프로그램 전체에서 사용할 수 있는 상수를 만들려면 클래스의 선언 섹션에서 `Public` 키워드를 사용 하 여 해당 상수를 선언 합니다.  
   
- For more information, see [How to: Declare A Constant](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md).  
+ 자세한 내용은 [방법: 상수 선언](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md)을 참조 하세요.  
   
-### <a name="avoiding-circular-references"></a>Avoiding Circular References  
- Because constants can be defined in terms of other constants, it is possible to inadvertently create a *cycle*, or circular reference, between two or more constants. A cycle occurs when you have two or more public constants, each of which is defined in terms of the other, as in the following example:  
+### <a name="avoiding-circular-references"></a>순환 참조 방지  
+ 상수 *는 다른*상수를 기준으로 정의 될 수 있으므로 실수로 두 개 이상의 상수 사이에 순환 또는 순환 참조를 만들 수 있습니다. 다음 예제와 같이 둘 이상의 public 상수를 사용 하는 경우 각 상수는 서로를 기준으로 정의 됩니다.  
   
  [!code-vb[VbEnumsTask#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#16)]  
 [!code-vb[VbEnumsTask#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#17)]  
   
- If a cycle occurs, Visual Basic generates a compiler error.  
+ 순환이 발생 하면 Visual Basic는 컴파일러 오류를 생성 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [Const 문](../../../../visual-basic/language-reference/statements/const-statement.md)
 - [상수 및 리터럴 데이터 형식](../../../../visual-basic/programming-guide/language-features/constants-enums/constant-and-literal-data-types.md)
@@ -63,6 +63,6 @@ A constant is a meaningful name that takes the place of a number or string that 
 - [상수 및 열거형](../../../../visual-basic/language-reference/constants-and-enumerations.md)
 - [열거형 개요](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)
 - [상수 개요](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)
-- [How to: Declare an Enumeration](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)
+- [방법: 열거형 선언](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)
 - [열거형 및 이름 한정](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)
 - [Option Strict 문](../../../../visual-basic/language-reference/statements/option-strict-statement.md)

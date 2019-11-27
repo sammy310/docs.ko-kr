@@ -22,7 +22,7 @@ ms.locfileid: "74353825"
 ---
 # <a name="how-to-create-genericprincipal-and-genericidentity-objects"></a>방법: GenericPrincipal 및 GenericIdentity 개체 만들기
 
-You can use the <xref:System.Security.Principal.GenericIdentity> class in conjunction with the <xref:System.Security.Principal.GenericPrincipal> class to create an authorization scheme that exists independent of a Windows domain.
+<xref:System.Security.Principal.GenericPrincipal> 클래스와 함께 <xref:System.Security.Principal.GenericIdentity> 클래스를 사용 하 여 Windows 도메인과는 독립적으로 존재 하는 권한 부여 체계를 만들 수 있습니다.
 
 ### <a name="to-create-a-genericprincipal-object"></a>GenericPrincipal 개체를 만들려면
 
@@ -48,7 +48,7 @@ You can use the <xref:System.Security.Principal.GenericIdentity> class in conjun
     GenericPrincipal myPrincipal = new GenericPrincipal(myIdentity, myStringArray);
     ```
 
-3. 해당 Principal을 현재 스레드에 연결하려면 다음 코드를 사용합니다. This is valuable in situations where the principal must be validated several times, it must be validated by other code running in your application, or it must be validated by a <xref:System.Security.Permissions.PrincipalPermission> object. Principal 개체를 스레드에 연결하지 않고도 이 개체에 대해 역할 기반 확인을 수행할 수 있습니다. 자세한 내용은 [Principal 개체 바꾸기](../../../docs/standard/security/replacing-a-principal-object.md)를 참조하세요.
+3. 해당 Principal을 현재 스레드에 연결하려면 다음 코드를 사용합니다. 이는 보안 주체가 여러 번 유효성을 검사 해야 하는 경우에 유용 하며, 응용 프로그램에서 실행 되는 다른 코드에서 유효성을 검사 해야 하거나 <xref:System.Security.Permissions.PrincipalPermission> 개체에서 유효성을 검사 해야 하는 경우에 유용 합니다. Principal 개체를 스레드에 연결하지 않고도 이 개체에 대해 역할 기반 확인을 수행할 수 있습니다. 자세한 내용은 [Principal 개체 바꾸기](../../../docs/standard/security/replacing-a-principal-object.md)를 참조하세요.
 
     ```vb
     Thread.CurrentPrincipal = myPrincipal
@@ -141,7 +141,7 @@ The IsAuthenticated is: True
 Is this a Manager? True
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - <xref:System.Security.Principal.GenericIdentity>
 - <xref:System.Security.Principal.GenericPrincipal>

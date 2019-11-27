@@ -19,28 +19,28 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352632"
 ---
 # <a name="partial-methods-visual-basic"></a>부분 메서드(Visual Basic)
-Partial methods enable developers to insert custom logic into code. Typically, the code is part of a designer-generated class. Partial methods are defined in a partial class that is created by a code generator, and they are commonly used to provide notification that something has been changed. They enable the developer to specify custom behavior in response to the change.  
+개발자는 부분 메서드를 사용 하 여 사용자 지정 논리를 코드에 삽입할 수 있습니다. 일반적으로 코드는 디자이너에서 생성 된 클래스의 일부입니다. 부분 메서드 (partial method)는 코드 생성기에 의해 생성 되는 partial 클래스에서 정의 되며, 일반적으로 항목이 변경 되었음을 알리는 데 사용 됩니다. 개발자는 변경에 대 한 응답으로 사용자 지정 동작을 지정할 수 있습니다.  
   
- The designer of the code generator defines only the method signature and one or more calls to the method. Developers can then provide implementations for the method if they want to customize the behavior of the generated code. When no implementation is provided, calls to the method are removed by the compiler, resulting in no additional performance overhead.  
+ 코드 생성기의 디자이너는 메서드 시그니처와 메서드에 대 한 호출을 하나 이상 정의 합니다. 그러면 개발자는 생성 된 코드의 동작을 사용자 지정 하려는 경우 메서드에 대 한 구현을 제공할 수 있습니다. 구현을 제공 하지 않으면 컴파일러에서 메서드에 대 한 호출을 제거 하 여 추가 성능 오버 헤드를 초래 하지 않습니다.  
   
 ## <a name="declaration"></a>선언  
- The generated code marks the definition of a partial method by placing the keyword `Partial` at the start of the signature line.  
+ 생성 된 코드는 시그니처 줄의 시작 부분에 `Partial` 키워드를 배치 하 여 부분 메서드 정의를 표시 합니다.  
   
 ```vb  
 Partial Private Sub QuantityChanged()  
 End Sub  
 ```  
   
- The definition must meet the following conditions:  
+ 정의는 다음 조건을 충족 해야 합니다.  
   
-- The method must be a `Sub`, not a `Function`.  
+- 메서드는 `Function`가 아닌 `Sub`이어야 합니다.  
   
-- The body of the method must be left empty.  
+- 메서드의 본문은 비워 두어야 합니다.  
   
-- The access modifier must be `Private`.  
+- 액세스 한정자를 `Private`해야 합니다.  
   
 ## <a name="implementation"></a>구현  
- The implementation consists primarily of filling in the body of the partial method. The implementation is typically in a separate partial class from the definition, and is written by a developer who wants to extend the generated code.  
+ 구현은 주로 부분 메서드 본문의 입력으로 구성 됩니다. 구현은 일반적으로 정의와 별도의 partial 클래스에 있으며 생성 된 코드를 확장 하려는 개발자가 작성 합니다.  
   
 ```vb  
 Private Sub QuantityChanged()  
@@ -48,29 +48,29 @@ Private Sub QuantityChanged()
 End Sub  
 ```  
   
- The previous example duplicates the signature in the declaration exactly, but variations are possible. In particular, other modifiers can be added, such as `Overloads` or `Overrides`. Only one `Overrides` modifier is permitted. For more information about method modifiers, see [Sub Statement](../../../../visual-basic/language-reference/statements/sub-statement.md).  
+ 이전 예제에서는 선언의 시그니처를 정확 하 게 복제 하지만 변형이 가능 합니다. 특히 `Overloads` 또는 `Overrides`와 같은 다른 한정자를 추가할 수 있습니다. `Overrides` 한정자가 하나만 허용 됩니다. 메서드 한정자에 대 한 자세한 내용은 [Sub 문](../../../../visual-basic/language-reference/statements/sub-statement.md)을 참조 하세요.  
   
-## <a name="use"></a>관리 그룹을 연결하거나 연결된 관리 그룹의 속성을 편집하려면 관리 작업 영역의  
- You call a partial method as you would call any other `Sub` procedure. If the method has been implemented, the arguments are evaluated and the body of the method is executed. However, remember that implementing a partial method is optional. If the method is not implemented, a call to it has no effect, and expressions passed as arguments to the method are not evaluated.  
+## <a name="use"></a>이후  
+ 다른 `Sub` 프로시저를 호출 하는 것 처럼 부분 메서드를 호출 합니다. 메서드가 구현 된 경우 인수가 평가 되 고 메서드의 본문이 실행 됩니다. 그러나 부분 메서드를 구현 하는 것은 선택 사항입니다. 메서드가 구현 되지 않은 경우에는 호출에 영향을 주지 않으며 메서드에 인수로 전달 된 식은 계산 되지 않습니다.  
   
 ## <a name="example"></a>예제  
- In a file named Product.Designer.vb, define a `Product` class that has a `Quantity` property.  
+ 이름이 node.js 인 파일에서 `Quantity` 속성이 있는 `Product` 클래스를 정의 합니다.  
   
  [!code-vb[VbVbalrPartialMeths#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrPartialMeths/VB/Class1.vb#4)]  
   
- In a file named Product.vb, provide an implementation for `QuantityChanged`.  
+ 이름이 node.js 인 파일에서 `QuantityChanged`에 대 한 구현을 제공 합니다.  
   
  [!code-vb[VbVbalrPartialMeths#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrPartialMeths/VB/Class1.vb#5)]  
   
- Finally, in the Main method of a project, declare a `Product` instance and provide an initial value for its `Quantity` property.  
+ 마지막으로 프로젝트의 Main 메서드에서 `Product` 인스턴스를 선언 하 고 `Quantity` 속성의 초기 값을 제공 합니다.  
   
  [!code-vb[VbVbalrPartialMeths#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrPartialMeths/VB/Class1.vb#6)]  
   
- A message box should appear that displays this message:  
+ 다음 메시지가 표시 되는 메시지 상자가 나타납니다.  
   
  `Quantity was changed to 100`  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [Sub 문](../../../../visual-basic/language-reference/statements/sub-statement.md)
 - [Sub 프로시저](./sub-procedures.md)

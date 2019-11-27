@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74435938"
 ---
 # <a name="imetadataemitsave-method"></a>IMetaDataEmit::Save 메서드
-Saves all metadata in the current scope to the file at the specified address.  
+현재 범위에 있는 모든 메타 데이터를 지정 된 주소에 있는 파일에 저장 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,21 +36,21 @@ HRESULT Save (
   
 ## <a name="parameters"></a>매개 변수  
  `wzFile`  
- [in] The name of the file to save to. If this value is null, the in-memory copy will be saved to the last location that was used.  
+ 진행 저장할 파일의 이름입니다. 이 값이 null 이면 메모리 내 복사본이 사용 된 마지막 위치에 저장 됩니다.  
   
  `dwSaveFlags`  
- [in] 예약되어 있습니다. Must be zero.  
+ [in] 예약되어 있습니다. 0 이어야 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [IMetaDataEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

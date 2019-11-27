@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428049"
 ---
 # <a name="isymunmanagedwriterdefinedocument-method"></a>ISymUnmanagedWriter::DefineDocument 메서드
-Defines a source document. GUIDs are provided for known languages, vendors, and document types.  
+소스 문서를 정의합니다. 알려진 언어, 공급 업체 및 문서 형식에 대 한 Guid가 제공 됩니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,26 +38,26 @@ HRESULT DefineDocument(
   
 ## <a name="parameters"></a>매개 변수  
  `url`  
- [in] A pointer to a `WCHAR` that defines the uniform resource locator (URL) that identifies the document.  
+ 진행 문서를 식별 하는 URL (uniform resource locator)을 정의 하는 `WCHAR`에 대 한 포인터입니다.  
   
  `language`  
- [in] A pointer to a GUID that defines the document language.  
+ 진행 문서 언어를 정의 하는 GUID에 대 한 포인터입니다.  
   
  `languageVendor`  
- [in] A pointer to a GUID that defines the identity of the vendor for the document language.  
+ 진행 문서 언어의 공급 업체 id를 정의 하는 GUID에 대 한 포인터입니다.  
   
  `documentType`  
- [in] A pointer to a GUID that defines the type of the document.  
+ 진행 문서의 형식을 정의 하는 GUID에 대 한 포인터입니다.  
   
  `pRetVal`  
- [out] A pointer to the returned [ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md) interface.  
+ 제한이 반환 된 [ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md) interface에 대 한 포인터입니다.  
   
 ## <a name="return-value"></a>반환 값  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **Header:** CorSym.idl, CorSym.h  
+ **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [ISymUnmanagedWriter 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

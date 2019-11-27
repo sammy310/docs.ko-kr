@@ -17,17 +17,17 @@ ms.locfileid: "74343799"
 
 이 섹션의 항목에서는 Visual Basic 소스 코드 컴파일러 지시문을 문서화합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
 
- [#Const Directive](../../../visual-basic/language-reference/directives/const-directive.md) -- Define a compiler constant  
+ [#Const 지시문](../../../visual-basic/language-reference/directives/const-directive.md) --컴파일러 상수를 정의 합니다.  
   
- [#ExternalSource Directive](../../../visual-basic/language-reference/directives/externalsource-directive.md) -- Indicate a mapping between source lines and text external to the source  
+ [#ExternalSource 지시어](../../../visual-basic/language-reference/directives/externalsource-directive.md) -소스 줄과 소스 외부 텍스트 간의 매핑을 나타냄  
   
- [#If...Then...#Else Directives](../../../visual-basic/language-reference/directives/if-then-else-directives.md) -- Compile selected blocks of code  
+ [#If ... Then ... #Else 지시문](../../../visual-basic/language-reference/directives/if-then-else-directives.md) --선택한 코드 블록을 컴파일합니다.  
   
- [#Region Directive](../../../visual-basic/language-reference/directives/region-directive.md) -- Collapse and hide sections of code in the Visual Studio editor  
+ [#Region 지시문](../../../visual-basic/language-reference/directives/region-directive.md) --Visual Studio 편집기에서 코드 섹션을 축소 하 고 숨깁니다.  
   
- **#Disable, #Enable** -- Disable and enable specific warnings for regions of code.  
+ **#Disable #Enable** --코드 영역에 대 한 특정 경고를 사용 하지 않도록 설정 하 고 사용 하도록 설정 합니다.  
   
 ```vb  
 #Disable Warning BC42356 ' suppress warning about no awaits in this method  

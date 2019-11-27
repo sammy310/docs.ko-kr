@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74426223"
 ---
 # <a name="imetadatatables2getmetadatastreaminfo-method"></a>IMetaDataTables2::GetMetaDataStreamInfo 메서드
-Gets the name, size, and contents of the metadata stream at the specified index.  
+지정 된 인덱스에 있는 메타 데이터 스트림의 이름, 크기 및 내용을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,27 +38,27 @@ HRESULT GetMetaDataStreamInfo (
   
 ## <a name="parameters"></a>매개 변수  
  `ix`  
- [in] The index of the requested metadata stream.  
+ 진행 요청 된 메타 데이터 스트림의 인덱스입니다.  
   
  `ppchName`  
- [out] A pointer to the name of the stream.  
+ 제한이 스트림 이름에 대 한 포인터입니다.  
   
  `ppv`  
- [out] A pointer to the metadata stream.  
+ 제한이 메타 데이터 스트림에 대 한 포인터입니다.  
   
  `pcb`  
- [out] The size, in bytes, of `ppv`.  
+ 제한이 `ppv`의 크기 (바이트)입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [IMetaDataTables2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
 - [IMetaDataTables 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)

@@ -9,10 +9,10 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347507"
 ---
-# <a name="retrieving-the-paragraphs-and-their-styles-visual-basic"></a>Retrieving the Paragraphs and Their Styles (Visual Basic)
+# <a name="retrieving-the-paragraphs-and-their-styles-visual-basic"></a>단락 및 해당 스타일 검색 (Visual Basic)
 이 예제에서는 WordprocessingML 문서에서 단락 노드를 검색하는 쿼리를 작성합니다. 또한 각 단락의 스타일도 식별합니다.  
   
- This query builds on the query in the previous example, [Finding the Default Paragraph Style (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/finding-the-default-paragraph-style.md), which retrieves the default style from the list of styles. 이 정보는 쿼리에서 스타일이 명시적으로 설정되지 않은 단락의 스타일을 식별할 수 있도록 하는 데 필요합니다. 단락 스타일은 `w:pPr` 요소를 통해 설정되며 단락이 이 요소를 포함하지 않으면 기본 스타일로 서식이 지정됩니다.  
+ 이 쿼리는 이전 예제의 쿼리를 기반으로 하 여 스타일 목록에서 기본 스타일을 검색 하는 [기본 단락 스타일 (Visual Basic)을 찾습니다](../../../../visual-basic/programming-guide/concepts/linq/finding-the-default-paragraph-style.md). 이 정보는 쿼리에서 스타일이 명시적으로 설정되지 않은 단락의 스타일을 식별할 수 있도록 하는 데 필요합니다. 단락 스타일은 `w:pPr` 요소를 통해 설정되며 단락이 이 요소를 포함하지 않으면 기본 스타일로 서식이 지정됩니다.  
   
  이 항목에서는 몇 가지 쿼리 부분의 의미에 대해 설명한 다음 작동하는 전체 예제의 일부로 쿼리를 보여 줍니다.  
   
@@ -23,7 +23,7 @@ ms.locfileid: "74347507"
 xDoc.Root.<w:body>...<w:p>  
 ```  
   
- This expression is similar to the source of the query in the previous example, [Finding the Default Paragraph Style (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/finding-the-default-paragraph-style.md). 주요 차이점은 이 식에서는 <xref:System.Xml.Linq.XContainer.Descendants%2A> 축 대신 <xref:System.Xml.Linq.XContainer.Elements%2A> 축을 사용하는 것입니다. 섹션이 포함된 문서에서 단락은 본문 요소의 직접적 자식이 아니고 계층 구조에서 두 수준 아래에 있기 때문에 쿼리에서는 <xref:System.Xml.Linq.XContainer.Descendants%2A> 축을 사용합니다. 코드에서는 <xref:System.Xml.Linq.XContainer.Descendants%2A> 축을 사용하여 문서에서 섹션을 사용하는지 여부에 대한 작업을 합니다.  
+ 이 식은 이전 예제에서 [기본 단락 스타일 (Visual Basic)을 찾는](../../../../visual-basic/programming-guide/concepts/linq/finding-the-default-paragraph-style.md)쿼리의 소스와 비슷합니다. 주요 차이점은 이 식에서는 <xref:System.Xml.Linq.XContainer.Descendants%2A> 축 대신 <xref:System.Xml.Linq.XContainer.Elements%2A> 축을 사용하는 것입니다. 섹션이 포함된 문서에서 단락은 본문 요소의 직접적 자식이 아니고 계층 구조에서 두 수준 아래에 있기 때문에 쿼리에서는 <xref:System.Xml.Linq.XContainer.Descendants%2A> 축을 사용합니다. 코드에서는 <xref:System.Xml.Linq.XContainer.Descendants%2A> 축을 사용하여 문서에서 섹션을 사용하는지 여부에 대한 작업을 합니다.  
   
 ## <a name="example"></a>예제  
  쿼리에서는 `Let` 절을 사용하여 스타일 노드가 포함된 요소를 확인합니다. 요소가 없으면 `styleNode`가 `Nothing`로 설정됩니다.  
@@ -39,7 +39,7 @@ Let styleNode As XElement = para.<w:pPr>.<w:pStyle>.FirstOrDefault()
 ## <a name="example"></a>예제  
  이 예제에서는 WordprocessingML 문서를 처리하여 WordprocessingML 문서에서 단락 노드를 검색합니다. 또한 각 단락의 스타일도 식별합니다. 이 예제는 이 자습서의 이전 예제를 기반으로 합니다. 새 쿼리는 아래에 있는 코드의 주석에서 호출됩니다.  
   
- You can find instructions for creating the source document for this example in [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ 원본 [Office OPEN XML 문서 만들기 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)에서이 예제에 대 한 소스 문서를 만드는 방법에 대 한 지침을 찾을 수 있습니다.  
   
  이 예제에서는 WindowsBase 어셈블리의 클래스를 사용하고 <xref:System.IO.Packaging?displayProperty=nameWithType> 네임스페이스의 형식을 사용합니다.  
   
@@ -111,7 +111,7 @@ Module Module1
 End Module  
 ```  
   
- This example produces the following output when applied to the document described in [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ 이 예제에서는 [소스 Office OPEN XML 문서 만들기 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)에서 설명 하는 문서에 적용할 때 다음 출력을 생성 합니다.  
   
 ```console  
 StyleName:Heading1  
@@ -132,8 +132,8 @@ StyleName:Code
 ```  
   
 ## <a name="next-steps"></a>다음 단계  
- In the next topic, [Retrieving the Text of the Paragraphs (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), you'll create a query to retrieve the text of paragraphs.  
+ 다음 항목의 [단락 텍스트 검색 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md)에서는 단락의 텍스트를 검색 하는 쿼리를 만듭니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
-- [Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [자습서: WordprocessingML 문서에서 내용 조작 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

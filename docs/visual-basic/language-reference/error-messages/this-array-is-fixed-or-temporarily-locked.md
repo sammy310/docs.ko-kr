@@ -12,22 +12,22 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350779"
 ---
 # <a name="this-array-is-fixed-or-temporarily-locked-visual-basic"></a>이 배열은 고정되었거나 임시로 잠겨 있습니다(Visual Basic).
-This error has the following possible causes:  
+이 오류는 다음과 같은 경우에 발생할 수 있습니다.  
   
-- Using `ReDim` to change the number of elements of a fixed-size array.  
+- `ReDim`를 사용 하 여 고정 크기 배열의 요소 수를 변경 합니다.  
   
-- Redimensioning a module-level dynamic array, in which one element has been passed as an argument to a procedure. If an element is passed, the array is locked to prevent deallocating memory for the reference parameter within the procedure.  
+- Redimensioning 한 요소가 프로시저에 인수로 전달 된 모듈 수준 동적 배열을 포함 합니다. 요소가 전달 되 면 프로시저 내에서 참조 매개 변수에 대 한 메모리 할당 취소를 방지 하기 위해 배열이 잠깁니다.  
   
-- Attempting to assign a value to a `Variant` variable containing an array, but the `Variant` is currently locked.  
+- 배열이 포함 된 `Variant` 변수에 값을 할당 하려고 하지만 `Variant` 현재 잠겨 있습니다.  
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
-1. Make the original array dynamic rather than fixed by declaring it with `ReDim` (if the array is declared within a procedure), or by declaring it without specifying the number of elements (if the array is declared at the module level.  
+1. 배열을 프로시저 내에 선언 하는 경우에는 `ReDim`를 사용 하 여 선언 하거나, 배열을 모듈 수준에서 선언 하는 경우 요소 수를 지정 하지 않고 선언 하 여 (배열을 고정 하지 않고 동적으로 만듭니다.  
   
-2. Determine whether you really need to pass the element, since it is visible within all procedures in the module.  
+2. 모듈의 모든 프로시저 내에 표시 되므로 요소를 전달 해야 하는지 여부를 결정 합니다.  
   
-3. Determine what is locking the `Variant` and remedy it.  
+3. `Variant`를 잠그고 있는지 확인 하 고 해결 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [배열](../../../visual-basic/programming-guide/language-features/arrays/index.md)

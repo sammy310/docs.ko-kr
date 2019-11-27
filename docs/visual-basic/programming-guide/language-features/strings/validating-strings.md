@@ -15,22 +15,22 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346253"
 ---
 # <a name="validating-strings-in-visual-basic"></a>Visual Basic의 문자열 유효성 검사
-This section discusses how to validate strings in Visual Basic.  
+이 섹션에서는 Visual Basic에서 문자열의 유효성을 검사 하는 방법을 설명 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
- [How to: Validate File Names and Paths in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/how-to-validate-file-names-and-paths.md)  
- How to determine whether a string represents a file name or path.  
+## <a name="in-this-section"></a>섹션 내용  
+ [방법: Visual Basic에서 파일 이름 및 경로 유효성 검사](../../../../visual-basic/programming-guide/language-features/strings/how-to-validate-file-names-and-paths.md)  
+ 문자열이 파일 이름 또는 경로를 나타내는지 여부를 확인 하는 방법  
   
  [방법: 날짜 또는 시간을 나타내는 문자열 확인](../../../../visual-basic/programming-guide/language-features/strings/how-to-validate-strings-that-represent-dates-or-times.md)  
- How to determine whether a string represents a valid date.  
+ 문자열이 유효한 날짜를 나타내는지 여부를 확인 하는 방법입니다.  
   
- [Using Regular Expressions with the MaskedTextBox Control in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/using-regular-expressions-with-the-maskedtextbox-control.md)  
- Demonstrates how to convert simple regular expressions to work with the <xref:System.Windows.Forms.MaskedTextBox> control.  
+ [Visual Basic에서 MaskedTextBox 컨트롤을 사용 하 여 정규식 사용](../../../../visual-basic/programming-guide/language-features/strings/using-regular-expressions-with-the-maskedtextbox-control.md)  
+ <xref:System.Windows.Forms.MaskedTextBox> 컨트롤을 사용 하도록 간단한 정규식을 변환 하는 방법을 보여 줍니다.  
   
  [연습: 암호의 복합성 검사](../../../../visual-basic/programming-guide/language-features/strings/walkthrough-validating-that-passwords-are-complex.md)  
- How to determine whether a string has the characteristics of a strong password.  
+ 문자열에 강력한 암호의 특징이 있는지 확인 하는 방법입니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [문자열](../../../../visual-basic/programming-guide/language-features/strings/index.md)
 - [MaskedTextBox 컨트롤](../../../../framework/winforms/controls/maskedtextbox-control-windows-forms.md)

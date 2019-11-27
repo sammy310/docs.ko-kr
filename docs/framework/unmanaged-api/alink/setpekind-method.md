@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445538"
 ---
 # <a name="setpekind-method"></a>SetPEKind 메서드
-Determines the portable executable type, either machine-specific or machine-agnostic.  
+이식 가능한 실행 파일 유형 (컴퓨터 특정 컴퓨터 또는 컴퓨터 관계 없음)을 결정 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,24 +37,24 @@ HRESULT SetPEKind(
   
 ## <a name="parameters"></a>매개 변수  
  `AssemblyID`  
- ID of the assembly.  
+ 어셈블리의 ID입니다.  
   
  `FileToken`  
- Token of file for which the PE type is to be set. Can be NULL if `AssemblyID` does not indicate an unbound netmodule.  
+ PE 형식을 설정할 파일의 토큰입니다. `AssemblyID`에서 바인딩되지 않은 .netmodule을 나타내지 않는 경우 NULL 일 수 있습니다.  
   
  `dwPEKind`  
- The type of PE, as indicated by the [CorPEKind Enumeration](../metadata/corpekind-enumeration.md).  
+ [CorPEKind 열거](../metadata/corpekind-enumeration.md)에 표시 되는 PE의 형식입니다.  
   
  `dwMachine`  
- The target machine architecture, as indicated in the NT header.  
+ NT 헤더에 표시 된 대상 컴퓨터 아키텍처입니다.  
   
 ## <a name="return-value"></a>반환 값  
- Returns S_OK if the method succeeds.  
+ 메서드가 성공 하면 S_OK을 반환 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- Requires alink.h.  
+ Alink가 필요 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [GetPEKind 메서드](../metadata/imetadataimport2-getpekind-method.md)
 - [IALink2 인터페이스](ialink2-interface.md)

@@ -17,8 +17,8 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350288"
 ---
-# <a name="-operator-visual-basic"></a>+ Operator (Visual Basic)
-Adds two numbers or returns the positive value of a numeric expression. Can also be used to concatenate two string expressions.  
+# <a name="-operator-visual-basic"></a>+ 연산자(Visual Basic)
+숫자 식의 양수 값을 두 개 더 추가 하거나 반환 합니다. 를 사용 하 여 두 문자열 식을 연결할 수도 있습니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -26,7 +26,7 @@ Adds two numbers or returns the positive value of a numeric expression. Can also
 expression1 + expression2
 ```
   
-or
+로 구분하거나 여러
 
 ```vb  
 +expression1  
@@ -36,88 +36,88 @@ or
   
 |용어|정의|  
 |---|---|  
-|`expression1`|필수 요소. Any numeric or string expression.|  
-|`expression2`|Required unless the `+` operator is calculating a negative value. Any numeric or string expression.|  
+|`expression1`|필수 요소. 임의의 숫자 또는 문자열 식입니다.|  
+|`expression2`|`+` 연산자가 음수 값을 계산 하는 경우에만 필요 합니다. 임의의 숫자 또는 문자열 식입니다.|  
   
 ## <a name="result"></a>결과  
- If `expression1` and `expression2` are both numeric, the result is their arithmetic sum.  
+ `expression1`와 `expression2` 모두 숫자인 경우 결과는 산술 합계입니다.  
   
- If `expression2` is absent, the `+` operator is the *unary* identity operator for the unchanged value of an expression. In this sense, the operation consists of retaining the sign of `expression1`, so the result is negative if `expression1` is negative.  
+ `expression2` 없는 경우 `+` 연산자는 변경 되지 않은 식 값의 *단항* id 연산자입니다. 이 경우 작업은 `expression1`의 부호를 유지 하는 것으로 구성 되므로 `expression1` 음수 이면 결과는 음수입니다.  
   
- If `expression1` and `expression2` are both strings, the result is the concatenation of their values.  
+ `expression1`와 `expression2` 모두 문자열이 면 결과는 값을 연결 하는 것입니다.  
   
- If `expression1` and `expression2` are of mixed types, the action taken depends on their types, their contents, and the setting of the [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md). For more information, see the tables in "Remarks."  
+ `expression1` 및 `expression2` 혼합 유형인 경우 수행 되는 작업은 형식, 해당 내용 및 [Option Strict 문의](../../../visual-basic/language-reference/statements/option-strict-statement.md)설정에 따라 달라 집니다. 자세한 내용은 "주의"의 표를 참조 하십시오.  
   
 ## <a name="supported-types"></a>지원 형식  
- All numeric types, including the unsigned and floating-point types and `Decimal`, and `String`.  
+ 부호 없는 형식, 부동 소수점 형식 및 `Decimal`를 포함 하는 모든 숫자 형식 및 `String`입니다.  
   
-## <a name="remarks"></a>주의  
- In general, `+` performs arithmetic addition when possible, and concatenates only when both expressions are strings.  
+## <a name="remarks"></a>설명  
+ 일반적으로 `+`는 가능한 경우 산술 덧셈을 수행 하 고 두 식이 모두 문자열인 경우에만 연결 합니다.  
   
- If neither expression is an `Object`, Visual Basic takes the following actions.  
+ 식이 `Object`아닌 경우 Visual Basic는 다음 작업을 수행 합니다.  
   
-|Data types of expressions|Action by compiler|  
+|식의 데이터 형식|컴파일러 작업|  
 |---|---|  
-|Both expressions are numeric data types (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, `ULong`, `Decimal`, `Single`, or `Double`)|Add. The result data type is a numeric type appropriate for the data types of `expression1` and `expression2`. See the "Integer Arithmetic" tables in [Data Types of Operator Results](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).|  
-|Both expressions are of type `String`|Concatenate.|  
-|One expression is a numeric data type and the other is a string|If `Option Strict` is `On`, then generate a compiler error.<br /><br /> If `Option Strict` is `Off`, then implicitly convert the `String` to `Double` and add.<br /><br /> If the `String` cannot be converted to `Double`, then throw an <xref:System.InvalidCastException> exception.|  
-|One expression is a numeric data type, and the other is [Nothing](../../../visual-basic/language-reference/nothing.md)|Add, with `Nothing` valued as zero.|  
-|One expression is a string, and the other is `Nothing`|Concatenate, with `Nothing` valued as "".|  
+|두 식은 모두 숫자 데이터 형식입니다 (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, `ULong`, `Decimal`, `Single`또는 `Double`).|추가를 마우스 오른쪽 단추로 클릭합니다. 결과 데이터 형식은 `expression1` 및 `expression2`데이터 형식에 적합 한 숫자 형식입니다. [연산자 결과의 데이터 형식](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md)에서 "정수 산술 연산" 표를 참조 하세요.|  
+|두 식은 모두 형식 `String`|연결.|  
+|한 식은 숫자 데이터 형식이 고 다른 하나는 문자열입니다.|`Option Strict` `On`경우 컴파일러 오류를 생성 합니다.<br /><br /> `Option Strict` `Off`되는 경우 `String`를 `Double`로 암시적으로 변환 하 고를 추가 합니다.<br /><br /> `String` `Double`로 변환할 수 없는 경우 <xref:System.InvalidCastException> 예외를 throw 합니다.|  
+|한 식은 숫자 데이터 형식이 고 다른 하나는 [Nothing](../../../visual-basic/language-reference/nothing.md) 입니다.|`Nothing` 값이 0 인을 추가 합니다.|  
+|한 식은 문자열이 고 다른 하나는 `Nothing`|`Nothing` 값을 ""로 연결 합니다.|  
   
- If one expression is an `Object` expression, Visual Basic takes the following actions.  
+ 한 식이 `Object` 식인 경우 Visual Basic는 다음 작업을 수행 합니다.  
   
-|Data types of expressions|Action by compiler|  
+|식의 데이터 형식|컴파일러 작업|  
 |---|---|  
-|`Object` expression holds a numeric value and the other is a numeric data type|If `Option Strict` is `On`, then generate a compiler error.<br /><br /> If `Option Strict` is `Off`, then add.|  
-|`Object` expression holds a numeric value and the other is of type `String`|If `Option Strict` is `On`, then generate a compiler error.<br /><br /> If `Option Strict` is `Off`, then implicitly convert the `String` to `Double` and add.<br /><br /> If the `String` cannot be converted to `Double`, then throw an <xref:System.InvalidCastException> exception.|  
-|`Object` expression holds a string and the other is a numeric data type|If `Option Strict` is `On`, then generate a compiler error.<br /><br /> If `Option Strict` is `Off`, then implicitly convert the string `Object` to `Double` and add.<br /><br /> If the string `Object` cannot be converted to `Double`, then throw an <xref:System.InvalidCastException> exception.|  
-|`Object` expression holds a string and the other is of type `String`|If `Option Strict` is `On`, then generate a compiler error.<br /><br /> If `Option Strict` is `Off`, then implicitly convert `Object` to `String` and concatenate.|  
+|`Object` 식에는 숫자 값이 포함 되 고 다른 값은 숫자 데이터 형식입니다.|`Option Strict` `On`경우 컴파일러 오류를 생성 합니다.<br /><br /> `Option Strict` `Off`이면를 추가 합니다.|  
+|`Object` 식에는 숫자 값이 포함 되 고 다른 값은 형식 `String`|`Option Strict` `On`경우 컴파일러 오류를 생성 합니다.<br /><br /> `Option Strict` `Off`되는 경우 `String`를 `Double`로 암시적으로 변환 하 고를 추가 합니다.<br /><br /> `String` `Double`로 변환할 수 없는 경우 <xref:System.InvalidCastException> 예외를 throw 합니다.|  
+|`Object` 식은 문자열을 포함 하 고 다른 문자열은 숫자 데이터 형식입니다.|`Option Strict` `On`경우 컴파일러 오류를 생성 합니다.<br /><br /> `Option Strict` `Off`된 경우는 문자열 `Object`를 `Double`로 암시적으로 변환 하 고를 추가 합니다.<br /><br /> `Object` 문자열을 `Double`변환할 수 없는 경우 <xref:System.InvalidCastException> 예외를 throw 합니다.|  
+|`Object` 식은 문자열을 포함 하 고 다른 문자열은 형식 `String`|`Option Strict` `On`경우 컴파일러 오류를 생성 합니다.<br /><br /> `Option Strict` `Off`되는 경우는 `Object`를 `String` 및 연결로 암시적으로 변환 합니다.|  
   
- If both expressions are `Object` expressions, Visual Basic takes the following actions (`Option Strict Off` only).  
+ 두 식이 모두 식 `Object` 경우 Visual Basic는 다음 작업을 수행 합니다 (`Option Strict Off`에만 해당).  
   
-|Data types of expressions|Action by compiler|  
+|식의 데이터 형식|컴파일러 작업|  
 |---|---|  
-|Both `Object` expressions hold numeric values|Add.|  
-|Both `Object` expressions are of type `String`|Concatenate.|  
-|One `Object` expression holds a numeric value and the other holds a string|Implicitly convert the string `Object` to `Double` and add.<br /><br /> If the string `Object` cannot be converted to a numeric value, then throw an <xref:System.InvalidCastException> exception.|  
+|두 `Object` 식 모두 숫자 값을 포함 합니다.|추가를 마우스 오른쪽 단추로 클릭합니다.|  
+|두 `Object` 식 모두 형식이 `String`|연결.|  
+|하나의 `Object` 식에는 숫자 값이 포함 되 고 다른 식에는 문자열이 포함 됩니다.|문자열 `Object` `Double`로 암시적으로 변환 하 고를 추가 합니다.<br /><br /> `Object` 문자열을 숫자 값으로 변환할 수 없는 경우 <xref:System.InvalidCastException> 예외를 throw 합니다.|  
   
- If either `Object` expression evaluates to [Nothing](../../../visual-basic/language-reference/nothing.md) or <xref:System.DBNull>, the `+` operator treats it as a `String` with a value of "".  
+ `Object` 식이 [Nothing](../../../visual-basic/language-reference/nothing.md) 또는 <xref:System.DBNull>로 계산 되는 경우 `+` 연산자는 값을 ""의 `String`로 처리 합니다.  
   
 > [!NOTE]
-> When you use the `+` operator, you might not be able to determine whether addition or string concatenation will occur. Use the `&` operator for concatenation to eliminate ambiguity and to provide self-documenting code.  
+> `+` 연산자를 사용 하는 경우 더하기 또는 문자열 연결의 발생 여부를 확인 하지 못할 수 있습니다. 모호성을 없애고 자체 문서화 코드를 제공 하기 위해 `&` 연산자를 연결에 사용 합니다.  
   
-## <a name="overloading"></a>오버로딩  
- The `+` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure. If your code uses this operator on such a class or structure, be sure you understand its redefined behavior. 자세한 내용은 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)을 참조하세요.  
+## <a name="overloading"></a>오버로드  
+ `+` 연산자를 *오버 로드할*수 있습니다. 즉, 피연산자가 해당 클래스 또는 구조체의 형식일 때 클래스 또는 구조체에서 해당 동작을 다시 정의할 수 있습니다. 코드가 이러한 클래스 또는 구조체에서이 연산자를 사용 하는 경우 다시 정의 된 동작을 이해 해야 합니다. 자세한 내용은 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)을 참조하세요.  
   
 ## <a name="example"></a>예제  
- The following example uses the `+` operator to add numbers. If the operands are both numeric, Visual Basic computes the arithmetic result. The arithmetic result represents the sum of the two operands.  
+ 다음 예에서는 `+` 연산자를 사용 하 여 숫자를 추가 합니다. 피연산자가 둘 다 숫자인 경우 Visual Basic 산술 결과를 계산 합니다. 산술 결과는 두 피연산자의 합계를 나타냅니다.  
   
  [!code-vb[VbVbalrOperators#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#6)]  
   
- You can also use the `+` operator to concatenate strings. If the operands are both strings, Visual Basic concatenates them. The concatenation result represents a single string consisting of the contents of the two operands one after the other.  
+ `+` 연산자를 사용 하 여 문자열을 연결할 수도 있습니다. 피연산자가 둘 다 문자열이 면 Visual Basic 연결 합니다. 연결 결과는 두 피연산자의 콘텐츠로 구성 된 단일 문자열을 나타냅니다.  
   
- If the operands are of mixed types, the result depends on the setting of the [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md). The following example illustrates the result when `Option Strict` is `On`.  
+ 피연산자가 혼합 형식인 경우 결과는 [Option Strict 문의](../../../visual-basic/language-reference/statements/option-strict-statement.md)설정에 따라 달라 집니다. 다음 예에서는 `Option Strict` `On`되는 경우의 결과를 보여 줍니다.  
   
  [!code-vb[VbVbalrOperators#53](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class3.vb#53)]  
   
  [!code-vb[VbVbalrOperators#50](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class2.vb#50)]  
 [!code-vb[VbVbalrOperators#51](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class2.vb#51)]  
   
- The following example illustrates the result when `Option Strict` is `Off`.  
+ 다음 예에서는 `Option Strict` `Off`되는 경우의 결과를 보여 줍니다.  
   
  [!code-vb[VbVbalrOperators#54](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class2.vb#54)]  
   
  [!code-vb[VbVbalrOperators#50](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class2.vb#50)]  
 [!code-vb[VbVbalrOperators#52](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class2.vb#52)]  
   
- To eliminate ambiguity, you should use the `&` operator instead of `+` for concatenation.  
+ 모호성을 없애기 위해 `+` 대신 `&` 연산자를 사용 하 여 연결 해야 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [& 연산자](../../../visual-basic/language-reference/operators/concatenation-operator.md)
 - [연결 연산자](../../../visual-basic/language-reference/operators/concatenation-operators.md)
 - [산술 연산자](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
 - [기능별 연산자 목록](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
 - [Visual Basic에서의 연산자 우선 순위](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [Arithmetic Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [Visual Basic의 산술 연산자](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
 - [Option Strict 문](../../../visual-basic/language-reference/statements/option-strict-statement.md)

@@ -1,5 +1,5 @@
 ---
-title: Named argument not found
+title: 명명 된 인수를 찾을 수 없습니다.
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID448
@@ -18,6 +18,6 @@ ms.locfileid: "74348468"
   
 - 인수 이름의 철자를 확인합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [오류 형식](../../visual-basic/programming-guide/language-features/error-types.md)

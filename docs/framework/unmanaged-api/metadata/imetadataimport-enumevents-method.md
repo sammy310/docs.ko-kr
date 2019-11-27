@@ -39,37 +39,37 @@ HRESULT EnumEvents (
   
 ## <a name="parameters"></a>매개 변수  
  `phEnum`  
- [in, out] A pointer to the enumerator.  
+ [in, out] 열거자에 대 한 포인터입니다.  
   
  `td`  
- [in] The TypeDef token whose event definitions are to be enumerated.  
+ 진행 이벤트 정의가 열거 될 TypeDef 토큰입니다.  
   
  `rEvents`  
- [out] The array of returned events.  
+ 제한이 반환 된 이벤트의 배열입니다.  
   
  `cMax`  
  [in] `rEvents` 배열의 최대 크기입니다.  
   
  `pcEvents`  
- [out] The actual number of events returned in `rEvents`.  
+ 제한이 `rEvents`에서 반환 되는 실제 이벤트 수입니다.  
   
 ## <a name="return-value"></a>반환 값  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
-|`S_OK`|`EnumEvents` returned successfully.|  
-|`S_FALSE`|There are no events to enumerate. In that case, `pcEvents` is zero.|  
+|`S_OK`|`EnumEvents` 성공적으로 반환 되었습니다.|  
+|`S_FALSE`|열거할 이벤트가 없습니다. 이 경우 `pcEvents`은 0입니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [IMetaDataImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

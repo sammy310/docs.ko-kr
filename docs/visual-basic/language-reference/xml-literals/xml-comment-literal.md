@@ -17,7 +17,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349393"
 ---
 # <a name="xml-comment-literal-visual-basic"></a>XML 주석 리터럴(Visual Basic)
-A literal representing an <xref:System.Xml.Linq.XComment> object.  
+<xref:System.Xml.Linq.XComment> 개체를 나타내는 리터럴입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -29,33 +29,33 @@ A literal representing an <xref:System.Xml.Linq.XComment> object.
   
 |용어|정의|  
 |---|---|  
-|`<!--`|필수 요소. Denotes the start of the XML comment.|  
-|`content`|필수 요소. Text to appear in the XML comment. Cannot contain a series of two hyphens (--) or end with a hyphen adjacent to the closing tag.|  
-|`-->`|필수 요소. Denotes the end of the XML comment.|  
+|`<!--`|필수 요소. XML 주석의 시작을 나타냅니다.|  
+|`content`|필수 요소. XML 주석에 표시할 텍스트입니다. 두 개의 하이픈 (--)을 포함 하거나 닫는 태그 옆에 하이픈으로 끝날 수 없습니다.|  
+|`-->`|필수 요소. XML 주석의 끝을 나타냅니다.|  
   
 ## <a name="return-value"></a>반환 값  
  <xref:System.Xml.Linq.XComment> 개체입니다.  
   
-## <a name="remarks"></a>주의  
- XML comment literals do not contain document content; they contain information about the document. The XML comment section ends with the sequence "-->". This implies the following points:  
+## <a name="remarks"></a>설명  
+ XML 주석 리터럴에 문서 내용이 포함 되어 있지 않습니다. 문서에 대 한 정보를 포함 합니다. XML 주석 섹션은 "-->" 시퀀스로 끝납니다. 이는 다음 사항을 의미 합니다.  
   
-- You cannot use an embedded expression in an XML comment literal because the embedded expression delimiters are valid XML comment content.  
+- 포함 된 식 구분 기호가 유효한 XML 주석 내용 이므로 XML 주석 리터럴에 포함 식을 사용할 수 없습니다.  
   
-- XML comment sections cannot be nested, because `content` cannot contain the value "-->".  
+- `content` "-->" 값을 포함할 수 없기 때문에 XML 주석 섹션을 중첩할 수 없습니다.  
   
- You can assign an XML comment literal to a variable, or you can include it in an XML element literal.  
+ XML 주석 리터럴을 변수에 할당 하거나 XML 요소 리터럴에 포함할 수 있습니다.  
   
 > [!NOTE]
-> An XML literal can span multiple lines without using line continuation characters. This feature enables you to copy content from an XML document and paste it directly into a Visual Basic program.  
+> XML 리터럴은 줄 연속 문자를 사용 하지 않고 여러 줄에 걸쳐 있을 수 있습니다. 이 기능을 사용 하면 XML 문서에서 콘텐츠를 복사 하 여 Visual Basic 프로그램에 직접 붙여넣을 수 있습니다.  
   
- The Visual Basic compiler converts the XML comment literal to a call to the <xref:System.Xml.Linq.XComment.%23ctor%2A> constructor.  
+ Visual Basic 컴파일러는 XML 주석 리터럴을 <xref:System.Xml.Linq.XComment.%23ctor%2A> 생성자에 대 한 호출로 변환 합니다.  
   
 ## <a name="example"></a>예제  
- The following example creates an XML comment that contains the text "This is a comment".  
+ 다음 예에서는 "This is comment" 라는 텍스트가 포함 된 XML 주석을 만듭니다.  
   
  [!code-vb[VbXMLSamples#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples4.vb#9)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - <xref:System.Xml.Linq.XComment>
 - [XML 요소 리터럴](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)

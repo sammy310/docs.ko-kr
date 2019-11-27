@@ -14,10 +14,10 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353586"
 ---
 # <a name="in-clause-visual-basic"></a>In 절(Visual Basic)
-Specifies the group that the loop variable is to traverse in a `For Each` loop, or specifies the collection to query in a `From`, `Join`, or `Group Join` clause.  
+루프 변수가 `For Each` 루프에서 트래버스할 그룹을 지정 하거나 `From`, `Join`또는 `Group Join` 절에서 쿼리할 컬렉션을 지정 합니다.  
   
-## <a name="remarks"></a>주의  
- The `In` keyword can be used in the following contexts:  
+## <a name="remarks"></a>설명  
+ 다음 컨텍스트에서는 `In` 키워드를 사용할 수 있습니다.  
   
  [For Each...Next 문](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
   
@@ -27,6 +27,6 @@ Specifies the group that the loop variable is to traverse in a `For Each` loop, 
   
  [Group Join 절](../../../visual-basic/language-reference/queries/group-join-clause.md)  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
-- [C++ 키워드](../../../visual-basic/language-reference/keywords/index.md)
+- [키워드](../../../visual-basic/language-reference/keywords/index.md)

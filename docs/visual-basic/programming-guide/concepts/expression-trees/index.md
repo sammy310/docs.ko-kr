@@ -1,5 +1,5 @@
 ---
-title: Expression Trees
+title: 식 트리
 ms.date: 07/20/2015
 ms.assetid: 8bbbb02d-7ffc-476b-8c25-118d82bf5d46
 ms.openlocfilehash: 4ca3b56f48368e465560fc5edd60c0df8dd4e1c0
@@ -141,11 +141,11 @@ Console.WriteLine(expr.Compile()(4))
   
  자세한 내용은 [방법: 식 트리 실행(Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)을 참조하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - <xref:System.Linq.Expressions>
-- [How to: Execute Expression Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)
-- [How to: Modify Expression Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)
+- [방법: 식 트리 실행 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)
+- [방법: 식 트리 수정 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)
 - [람다 식](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
 - [동적 언어 런타임 개요](../../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)
 - [프로그래밍 개념(Visual Basic)](../../../../visual-basic/programming-guide/concepts/index.md)

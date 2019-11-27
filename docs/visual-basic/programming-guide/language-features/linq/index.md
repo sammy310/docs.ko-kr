@@ -14,7 +14,7 @@ ms.locfileid: "74354176"
 # <a name="linq-in-visual-basic"></a>Visual Basic의 LINQ
 이 섹션에는 Visual Basic 및 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]를 이해하고 사용하는 데 도움이 되는 개요, 예제 및 배경 정보가 나와 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [Visual Basic의 LINQ 소개](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
  [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 공급자, 연산자, 쿼리 구조 및 언어 기능을 소개합니다.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "74354176"
  [방법: LINQ 쿼리 결과를 특정 형식으로 반환](../../../../visual-basic/programming-guide/language-features/linq/how-to-return-a-linq-query-result-as-a-specific-type.md)  
  LINQ 쿼리 결과를 무명 형식 대신 특정 형식으로 반환하는 방법의 예를 제공합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [LINQ(Language-Integrated Query)](../../../../visual-basic/programming-guide/concepts/linq/index.md)
 - [Visual Basic의 LINQ to XML 개요](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)

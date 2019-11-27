@@ -9,7 +9,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353080"
 ---
-# <a name="how-to-create-a-tree-from-an-xmlreader-visual-basic"></a>How to: Create a Tree from an XmlReader (Visual Basic)
+# <a name="how-to-create-a-tree-from-an-xmlreader-visual-basic"></a>방법: XmlReader에서 트리 만들기 (Visual Basic)
 
 이 항목에서는 <xref:System.Xml.XmlReader>에서 XML 트리를 직접 만드는 방법을 보여 줍니다. <xref:System.Xml.Linq.XElement>에서 <xref:System.Xml.XmlReader>를 만들려면 요소 노드에 <xref:System.Xml.XmlReader>를 배치해야 합니다. <xref:System.Xml.XmlReader>는 주석과 처리 명령을 건너뛰지만 <xref:System.Xml.XmlReader>가 텍스트 노드에 배치되면 오류가 throw됩니다. 이러한 오류를 방지하려면 <xref:System.Xml.XmlReader>에서 XML 트리를 만들기 전에 항상 <xref:System.Xml.XmlReader>를 요소에 배치하세요.
 
@@ -54,6 +54,6 @@ Console.WriteLine(e)
 </Catalog>
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
-- [Parsing XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)
+- [XML 구문 분석 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)

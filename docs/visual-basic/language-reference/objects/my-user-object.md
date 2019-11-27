@@ -15,15 +15,15 @@ ms.locfileid: "74350648"
 # <a name="myuser-object"></a>My.User 개체
 현재 사용자에 대한 정보에 액세스할 수 있습니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  `My.User` 개체의 메서드 및 속성에 대한 자세한 내용은 <xref:Microsoft.VisualBasic.ApplicationServices.User?displayProperty=nameWithType>를 참조하세요.  
   
- For more information, see [Accessing User Data](../../../visual-basic/developing-apps/programming/accessing-user-data.md).  
+ 자세한 내용은 [사용자 데이터 액세스](../../../visual-basic/developing-apps/programming/accessing-user-data.md)를 참조 하세요.  
   
 ## <a name="requirements"></a>요구 사항  
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **어셈블리:** Visual Basic 런타임 라이브러리 (Microsoft.visualbasic)  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - <xref:System.Security.Principal.IPrincipal>
 - <xref:System.Threading.Thread.CurrentPrincipal%2A>

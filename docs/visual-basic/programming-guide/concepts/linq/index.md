@@ -12,7 +12,7 @@ ms.locfileid: "74344413"
 # <a name="language-integrated-query-linq-visual-basic"></a>LINQ(Language-Integrated Query)(Visual Basic)
 LINQ는 강력한 쿼리 기능을 Visual Basic 언어 구문으로 확장하는 기능 집합입니다. LINQ는 데이터 쿼리 및 업데이트를 위해 쉽게 배울 수 있는 표준 패턴을 제공하며 모든 종류의 데이터 저장소를 지원하도록 이 기술을 확장할 수 있습니다.  .NET Framework에는 .NET Framework 컬렉션, SQL Server 데이터베이스, ADO.NET 데이터 세트 및 XML 문서와 함께 LINQ를 사용할 수 있게 해주는 LINQ 공급자 어셈블리가 포함됩니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [LINQ 소개(Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)  
  LINQ 쿼리를 사용하여 해결할 수 있는 문제의 종류와 작성 가능한 애플리케이션의 종류에 대한 일반적인 소개 수준의 정보를 제공합니다.  
   

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436254"
 ---
 # <a name="imetadataconvertergettypelibfrommetadata-method"></a>IMetaDataConverter::GetTypeLibFromMetaData 메서드
-Gets a pointer to an `ITypeLib` instance that represents the type library that has the specified library and module names.  
+지정 된 라이브러리 및 모듈 이름이 있는 형식 라이브러리를 나타내는 `ITypeLib` 인스턴스에 대 한 포인터를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,23 +37,23 @@ HRESULT GetTypeLibFromMetaData (
   
 ## <a name="parameters"></a>매개 변수  
  `strModule`  
- [in] The name of the type library's module.  
+ 진행 형식 라이브러리의 모듈 이름입니다.  
   
  `strTlbName`  
- [in] The name of the type library.  
+ 진행 형식 라이브러리의 이름입니다.  
   
  `ppITL`  
- [out] A pointer to a location that receives the address of the `ITypeLib` instance that represents the type library.  
+ 제한이 형식 라이브러리를 나타내는 `ITypeLib` 인스턴스의 주소를 받는 위치에 대 한 포인터입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조 하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [IMetaDataConverter 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataconverter-interface.md)

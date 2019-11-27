@@ -14,7 +14,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347908"
 ---
 # <a name="-nostdlib-visual-basic"></a>-nostdlib (Visual Basic)
-Causes the compiler not to automatically reference the standard libraries.  
+컴파일러가 표준 라이브러리를 자동으로 참조 하지 않도록 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -22,23 +22,23 @@ Causes the compiler not to automatically reference the standard libraries.
 -nostdlib  
 ```  
   
-## <a name="remarks"></a>주의  
- The `-nostdlib` option removes the automatic reference to the System.dll assembly and prevents the compiler from reading the Vbc.rsp file. The Vbc.rsp file, which is located in the same directory as the Vbc.exe file, references the commonly used .NET Framework assemblies and imports the `System` and `Microsoft.VisualBasic` namespaces.  
+## <a name="remarks"></a>설명  
+ `-nostdlib` 옵션은 System.object 어셈블리에 대 한 자동 참조를 제거 하 고 컴파일러에서 Vbc.rsp 파일을 읽을 수 없도록 합니다. Vbc.exe 파일과 동일한 디렉터리에 있는 Vbc.exe 파일은 일반적으로 사용 되는 .NET Framework 어셈블리를 참조 하 고 `System` 및 `Microsoft.VisualBasic` 네임 스페이스를 가져옵니다.  
   
 > [!NOTE]
-> The Mscorlib.dll and Microsoft.VisualBasic.dll assemblies are always referenced.  
+> Mscorlib.dll 및 Microsoft.visualbasic 어셈블리는 항상 참조 됩니다.  
   
 > [!NOTE]
-> The `-nostdlib` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.  
+> `-nostdlib` 옵션은 Visual Studio 개발 환경에서 사용할 수 없습니다. 명령줄에서 컴파일하는 경우에만 사용할 수 있습니다.  
   
 ## <a name="example"></a>예제  
- The following code compiles `T2.vb` without referencing the standard libraries. You must set the `_MYTYPE` conditional-compilation constant to the string "Empty" to remove the `My` object.  
+ 다음 코드는 표준 라이브러리를 참조 하지 않고 `T2.vb`을 컴파일합니다. `My` 개체를 제거 하려면 `_MYTYPE` 조건부 컴파일 상수를 문자열 "Empty"로 설정 해야 합니다.  
   
 ```console
 vbc -nostdlib -define:_MYTYPE=\"Empty\" T2.vb  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)
 - [Visual Basic 명령줄 컴파일러](../../../visual-basic/reference/command-line-compiler/index.md)

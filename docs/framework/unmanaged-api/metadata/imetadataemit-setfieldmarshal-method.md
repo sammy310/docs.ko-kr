@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74442269"
 ---
 # <a name="imetadataemitsetfieldmarshal-method"></a>IMetaDataEmit::SetFieldMarshal 메서드
-Sets the PInvoke marshaling information for the field, method return, or method parameter referenced by the specified token.  
+지정 된 토큰이 참조 하는 필드, 메서드 반환 또는 메서드 매개 변수에 대 한 PInvoke 마샬링 정보를 설정 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,24 +37,24 @@ HRESULT SetFieldMarshal (
   
 ## <a name="parameters"></a>매개 변수  
  `tk`  
- [in] The token for target data item. This is either a `mdFieldDef` or a `mdParamDef` token.  
+ 진행 대상 데이터 항목에 대 한 토큰입니다. `mdFieldDef` 또는 `mdParamDef` 토큰입니다.  
   
  `pvNativeType`  
- [in] The signature for unmanaged type.  
+ 진행 관리 되지 않는 형식에 대 한 서명입니다.  
   
  `cbNativeType`  
- [in] The count of bytes in `pvNativeType`.  
+ 진행 `pvNativeType`바이트 수입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [IMetaDataEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450180"
 ---
 # <a name="imetadataemitdefineuserstring-method"></a>IMetaDataEmit::DefineUserString 메서드
-Gets a metadata token for the specified literal string.  
+지정 된 리터럴 문자열에 대 한 메타 데이터 토큰을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,24 +37,24 @@ HRESULT DefineUserString (
   
 ## <a name="parameters"></a>매개 변수  
  `szString`  
- [in] The user string to store.  
+ 진행 저장할 사용자 문자열입니다.  
   
  `cchString`  
- [in] The count of wide characters in `szString`.  
+ 진행 `szString`의 와이드 문자 수입니다.  
   
  `pstk`  
- [out] The string token assigned.  
+ 제한이 할당 된 문자열 토큰입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IMetaDataEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

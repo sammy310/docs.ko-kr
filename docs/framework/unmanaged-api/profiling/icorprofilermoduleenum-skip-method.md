@@ -33,18 +33,18 @@ HRESULT Skip([in] ULONG celt);
   
 ## <a name="parameters"></a>매개 변수  
  `celt`  
- [in] The number of elements to be skipped.  
+ 진행 건너뛸 요소의 수입니다.  
   
 ## <a name="return-value"></a>반환 값  
  이 메서드는 다음과 같은 특정 HRESULT뿐만 아니라 메서드 오류를 나타내는 HRESULT 오류도 반환합니다.  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
-|S_OK|`celt` elements were skipped.|  
-|S_FALSE|Fewer than `celt` elements were skipped, which indicates that there are no more elements.|  
+|S_OK|`celt` 요소를 건너뛰었습니다.|  
+|S_FALSE|`celt` 요소 수를 건너 뛰 었으 며 요소가 더 이상 없음을 나타냅니다.|  
   
-## <a name="remarks"></a>주의  
- The new position of this enumerator's cursor is (current position) + `celt`.  
+## <a name="remarks"></a>설명  
+ 이 열거자 커서의 새 위치는 (현재 위치) + `celt`입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
@@ -55,7 +55,7 @@ HRESULT Skip([in] ULONG celt);
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [ICorProfilerModuleEnum 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md)
 - [프로파일링 인터페이스](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

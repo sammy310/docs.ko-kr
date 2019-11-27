@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437171"
 ---
 # <a name="imetadataimportgetparamformethodindex-method"></a>IMetaDataImport::GetParamForMethodIndex 메서드
-Gets the token that represents a specified parameter of the method represented by the specified MethodDef token.  
+지정 된 MethodDef 토큰이 나타내는 메서드의 지정 된 매개 변수를 나타내는 토큰을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,24 +37,24 @@ HRESULT GetParamForMethodIndex (
   
 ## <a name="parameters"></a>매개 변수  
  `md`  
- [in] A token that represents the method to return the parameter token for.  
+ 진행 매개 변수 토큰을 반환할 메서드를 나타내는 토큰입니다.  
   
  `ulParamSeq`  
- [in] The ordinal position in the parameter list where the requested parameter occurs. Parameters are numbered starting from one, with the method's return value in position zero.  
+ 진행 매개 변수 목록에서 요청 된 매개 변수가 발생 하는 서 수 위치입니다. 매개 변수의 번호는 1부터 시작 하며 메서드의 반환 값은 0입니다.  
   
  `ppd`  
- [out] A pointer to a ParamDef token that represents the requested parameter.  
+ 제한이 요청 된 매개 변수를 나타내는 ParamDef 토큰에 대 한 포인터입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IMetaDataImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

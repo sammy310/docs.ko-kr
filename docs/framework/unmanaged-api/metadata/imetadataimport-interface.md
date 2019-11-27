@@ -91,7 +91,7 @@ PE(이식 가능) 파일이나 형식 라이브러리 또는 독립 실행형 �
 |[ResetEnum 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-resetenum-method.md)|지정한 열거자를 지정한 위치로 다시 설정합니다.|  
 |[ResolveTypeRef 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-resolvetyperef-method.md)|지정한 TypeRef 토큰이 참조하는 형식에 대한 형식 정보를 가져옵니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  `IMetaDataImport` 인터페이스의 디자인은 주로 형식 정보를 가져오거나(예: 개발 도구) 배포된 구성 요소를 관리(예: 확인/활성화 서비스)하는 도구 및 서비스에서 사용하기 위한 것입니다. `IMetaDataImport`의 메서드는 다음과 같은 작업 범주로 나뉩니다.  
   
 - 메타데이터 범위의 항목 컬렉션 열거  
@@ -105,13 +105,13 @@ PE(이식 가능) 파일이나 형식 라이브러리 또는 독립 실행형 �
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [메타데이터 인터페이스](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
 - [IMetaDataImport2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

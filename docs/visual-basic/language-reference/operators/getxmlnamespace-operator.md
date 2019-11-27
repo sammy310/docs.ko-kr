@@ -16,7 +16,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353188"
 ---
 # <a name="getxmlnamespace-operator-visual-basic"></a>GetXmlNamespace 연산자(Visual Basic)
-Gets the <xref:System.Xml.Linq.XNamespace> object that corresponds to the specified XML namespace prefix.  
+지정 된 XML 네임 스페이스 접두사에 해당 하는 <xref:System.Xml.Linq.XNamespace> 개체를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -26,26 +26,26 @@ GetXmlNamespace(xmlNamespacePrefix)
   
 ## <a name="parts"></a>요소  
  `xmlNamespacePrefix`  
- (선택 사항) The string that identifies the XML namespace prefix. If supplied, this string must be a valid XML identifier. For more information, see [Names of Declared XML Elements and Attributes](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md). If no prefix is specified, the default namespace is returned. If no default namespace is specified, the empty namespace is returned.  
+ 선택 사항입니다. XML 네임 스페이스 접두사를 식별 하는 문자열입니다. 제공 되는 경우이 문자열은 올바른 XML 식별자 여야 합니다. 자세한 내용은 [선언 된 XML 요소 및 특성의 이름](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)을 참조 하세요. 접두사가 지정 되지 않은 경우에는 기본 네임 스페이스가 반환 됩니다. 기본 네임 스페이스를 지정 하지 않으면 빈 네임 스페이스가 반환 됩니다.  
   
 ## <a name="return-value"></a>반환 값  
- The <xref:System.Xml.Linq.XNamespace> object that corresponds to the XML namespace prefix.  
+ XML 네임 스페이스 접두사에 해당 하는 <xref:System.Xml.Linq.XNamespace> 개체입니다.  
   
-## <a name="remarks"></a>주의  
- The `GetXmlNamespace` operator gets the <xref:System.Xml.Linq.XNamespace> object that corresponds to the XML namespace prefix `xmlNamespacePrefix`.  
+## <a name="remarks"></a>설명  
+ `GetXmlNamespace` 연산자는 XML 네임 스페이스 접두사 `xmlNamespacePrefix`에 해당 하는 <xref:System.Xml.Linq.XNamespace> 개체를 가져옵니다.  
   
- You can use XML namespace prefixes directly in XML literals and XML axis properties. However, you must use the `GetXmlNamespace` operator to convert a namespace prefix to an <xref:System.Xml.Linq.XNamespace> object before you can use it in your code. You can append an unqualified element name to an <xref:System.Xml.Linq.XNamespace> object to get a fully qualified <xref:System.Xml.Linq.XName> object, which many [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] methods require.  
+ Xml 리터럴 및 XML 축 속성에 XML 네임 스페이스 접두사를 직접 사용할 수 있습니다. 그러나 코드에서 사용할 수 있으려면 먼저 `GetXmlNamespace` 연산자를 사용 하 여 네임 스페이스 접두사를 <xref:System.Xml.Linq.XNamespace> 개체로 변환 해야 합니다. 정규화 되지 않은 요소 이름을 <xref:System.Xml.Linq.XNamespace> 개체에 추가 하 여 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 메서드가 필요로 하는 정규화 된 <xref:System.Xml.Linq.XName> 개체를 가져올 수 있습니다.  
   
 ## <a name="example"></a>예제  
- The following example imports `ns` as an XML namespace prefix. It then uses the prefix of the namespace to create an XML literal and access the first child node that has the qualified name `ns:phone`. It then passes that child node to the `ShowName` subroutine, which constructs a qualified name by using the `GetXmlNamespace` operator. The `ShowName` subroutine then passes the qualified name to the <xref:System.Xml.Linq.XNode.Ancestors%2A> method to get the parent `ns:contact` node.  
+ 다음 예에서는 `ns` XML 네임 스페이스 접두사로 가져옵니다. 그런 다음 네임 스페이스의 접두사를 사용 하 여 XML 리터럴을 만들고 `ns:phone`정규화 된 이름을 가진 첫 번째 자식 노드에 액세스 합니다. 그런 다음 해당 자식 노드를 `ShowName` 서브루틴에 전달 합니다. 그러면 `GetXmlNamespace` 연산자를 사용 하 여 정규화 된 이름을 생성 합니다. 그러면 `ShowName` 서브루틴이 정규화 된 이름을 <xref:System.Xml.Linq.XNode.Ancestors%2A> 메서드로 전달 하 여 부모 `ns:contact` 노드를 가져옵니다.  
   
  [!code-vb[VbXMLSamples#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/GetXmlNamespace.vb#38)]  
   
- When you call `TestGetXmlNamespace.RunSample()`, it displays a message box that contains the following text:  
+ `TestGetXmlNamespace.RunSample()`를 호출 하면 다음 텍스트를 포함 하는 메시지 상자가 표시 됩니다.  
   
  `Name: Patrick Hines`  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [Imports 문(XML 네임스페이스)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)
 - [Visual Basic에서 XML에 액세스](../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)

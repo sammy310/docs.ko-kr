@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437545"
 ---
 # <a name="imetadataimportgetinterfaceimplprops-method"></a>IMetaDataImport::GetInterfaceImplProps 메서드
-Gets a pointer to the metadata tokens for the <xref:System.Type> that implements the specified method, and for the interface that declares that method.
+지정 된 메서드를 구현 하는 <xref:System.Type> 및 해당 메서드를 선언 하는 인터페이스에 대 한 메타 데이터 토큰에 대 한 포인터를 가져옵니다.
   
 ## <a name="syntax"></a>구문  
   
@@ -37,27 +37,27 @@ HRESULT GetInterfaceImplProps (
   
 ## <a name="parameters"></a>매개 변수  
  `iiImpl`  
- [in] The metadata token representing the method to return the class and interface tokens for.  
+ 진행 클래스 및 인터페이스 토큰을 반환할 메서드를 나타내는 메타 데이터 토큰입니다.  
   
  `pClass`  
- [out] The metadata token representing the class that implements the method.  
+ 제한이 메서드를 구현 하는 클래스를 나타내는 메타 데이터 토큰입니다.  
   
  `ptkIface`  
- [out] The metadata token representing the interface that defines the implemented method.  
+ 제한이 구현 된 메서드를 정의 하는 인터페이스를 나타내는 메타 데이터 토큰입니다.  
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
- You obtain the value for `iImpl` by calling the [EnumInterfaceImpls](imetadataimport-enuminterfaceimpls-method.md) method.
+ [EnumInterfaceImpls](imetadataimport-enuminterfaceimpls-method.md) 메서드를 호출 하 여 `iImpl` 값을 가져옵니다.
  
- For example, suppose that a class has an `mdTypeDef` token value of 0x02000007 and that it implements three interfaces whose types have tokens: 
+ 예를 들어 클래스에 `mdTypeDef` 토큰 값이 0x02000007이 고 해당 형식에 토큰이 있는 세 개의 인터페이스를 구현 한다고 가정 합니다. 
 
 - 0x02000003 (TypeDef)
 - 0x0100000A (TypeRef)
 - 0x0200001C (TypeDef)
 
-Conceptually, this information is stored into an interface implementation table as:
+개념적으로이 정보는 다음과 같이 인터페이스 구현 테이블에 저장 됩니다.
 
-| Row number | Class token | Interface token |
+| 행 번호 | 클래스 토큰 | 인터페이스 토큰 |
 |------------|-------------|-----------------|
 | 4          |             |                 |
 | 5          | 02000007    | 02000003        |
@@ -65,23 +65,23 @@ Conceptually, this information is stored into an interface implementation table 
 | 7          |             |                 |
 | 8          | 02000007    | 0200001C        |
 
-Recall, the token is a 4-byte value:
+리콜, 토큰은 4 바이트 값입니다.
 
-- The lower 3 bytes hold the row number, or RID.
-- The upper byte holds the token type – 0x09 for `mdtInterfaceImpl`.
+- 하위 3 바이트는 행 번호 또는 RID를 보유 합니다.
+- 상위 바이트는 `mdtInterfaceImpl`에 대 한 토큰 유형-0x09을 보유 합니다.
 
-`GetInterfaceImplProps` returns the information held in the row whose token you provide in the `iImpl` argument. 
+`GetInterfaceImplProps`는 `iImpl` 인수에서 토큰을 제공 하는 행에 포함 된 정보를 반환 합니다. 
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [IMetaDataImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

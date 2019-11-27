@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438280"
 ---
 # <a name="isymunmanagedwriter2defineglobalvariable2-method"></a>ISymUnmanagedWriter2::DefineGlobalVariable2 메서드
-Defines a single global variable.  
+단일 전역 변수를 정의합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,33 +40,33 @@ HRESULT DefineGlobalVariable2(
   
 ## <a name="parameters"></a>매개 변수  
  `name`  
- [in] The global variable name.  
+ 진행 전역 변수 이름입니다.  
   
  `attributes`  
- [in] The global variable attributes.  
+ 진행 전역 변수 특성입니다.  
   
  `sigToken`  
- [in] The metadata token of the signature.  
+ 진행 시그니처의 메타 데이터 토큰입니다.  
   
  `addrKind`  
- [in] The address type.  
+ 진행 주소 유형입니다.  
   
  `addr1`  
- [in] The first address for the parameter specification.  
+ 진행 매개 변수 사양의 첫 번째 주소입니다.  
   
  `addr2`  
- [in] The second address for the parameter specification.  
+ 진행 매개 변수 사양의 두 번째 주소입니다.  
   
  `addr3`  
- [in] The third address for the parameter specification.  
+ 진행 매개 변수 사양의 세 번째 주소입니다.  
   
 ## <a name="return-value"></a>반환 값  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **Header:** CorSym.idl  
+ **헤더:** CorSym  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [ISymUnmanagedWriter2 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-interface.md)
 - [DefineGlobalVariable 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-defineglobalvariable-method.md)

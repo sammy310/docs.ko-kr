@@ -1,5 +1,5 @@
 ---
-title: 'How to: Control Namespace Prefixes (LINQ to XML)'
+title: '방법: 네임 스페이스 접두사 제어 (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 2fcf28a5-31b6-409d-84ea-27c22f71fc9f
 ms.openlocfilehash: 5ba415452a8671466c3a4c71a88731e5bd3cda60
@@ -15,7 +15,7 @@ ms.locfileid: "74348383"
 ## <a name="example"></a>예제  
   
 ### <a name="description"></a>설명  
- 이 예제에서는 두 네임스페이스를 선언한 다음 It specifies that the `http://www.adventure-works.com` namespace has the prefix `aw`, and that the `www.fourthcoffee.com` namespace has the prefix of `fc`.  
+ 이 예제에서는 두 네임스페이스를 선언한 다음 `http://www.adventure-works.com` 네임 스페이스에 `aw`접두사가 있음을 지정 하 고 `www.fourthcoffee.com` 네임 스페이스에 `fc`접두사가 있음을 지정 합니다.  
   
 ### <a name="code"></a>코드  
   
@@ -53,6 +53,6 @@ End Module
 </aw:Root>  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
-- [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)
+- [네임 스페이스 개요 (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)

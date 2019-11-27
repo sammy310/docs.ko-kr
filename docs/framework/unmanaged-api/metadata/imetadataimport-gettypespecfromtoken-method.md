@@ -37,27 +37,27 @@ HRESULT GetTypeSpecFromToken (
   
 ## <a name="parameters"></a>매개 변수  
  `typespec`  
- [in] The TypeSpec token associated with the requested metadata signature.  
+ 진행 요청 된 메타 데이터 시그니처와 연결 된 TypeSpec 토큰입니다.  
   
  `ppvSig`  
- [out] A pointer to the binary metadata signature.  
+ 제한이 이진 메타 데이터 서명에 대 한 포인터입니다.  
   
  `pcbSig`  
- [out] The size, in bytes, of the metadata signature.  
+ 제한이 메타 데이터 시그니처의 크기 (바이트)입니다.  
   
 ## <a name="return-value"></a>반환 값  
- An HRESULT that indicates success or failure. Failures can be tested with the FAILED macro.  
+ 성공 또는 실패를 나타내는 HRESULT입니다. 실패 한 매크로를 사용 하 여 오류를 테스트할 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [IMetaDataImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

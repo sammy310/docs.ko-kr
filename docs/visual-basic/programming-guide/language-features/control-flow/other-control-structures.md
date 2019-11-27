@@ -13,15 +13,15 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348127"
 ---
 # <a name="other-control-structures-visual-basic"></a>기타 제어 구조(Visual Basic)
-Visual Basic provides control structures that help you dispose of a resource or reduce the number of times you have to repeat an object reference.  
+Visual Basic는 리소스를 삭제 하거나 개체 참조를 반복 해야 하는 횟수를 줄이는 데 도움이 되는 제어 구조를 제공 합니다.  
   
-## <a name="usingend-using-construction"></a>Using...End Using Construction  
- The `Using...End Using` construction establishes a statement block within which you make use of a resource such as a SQL connection. You can optionally acquire the resource with the `Using` statement. When you exit the `Using` block, Visual Basic automatically disposes of the resource so that it is available for other code to use. The resource must be local and disposable. 자세한 내용은 [using 문](../../../../visual-basic/language-reference/statements/using-statement.md)을 참조하세요.  
+## <a name="usingend-using-construction"></a>Using ... 생성 사용 종료  
+ `Using...End Using` 생성은 SQL 연결과 같은 리소스를 사용 하는 문 블록을 설정 합니다. 필요에 따라 `Using` 문을 사용 하 여 리소스를 가져올 수 있습니다. `Using` 블록을 종료 하면 Visual Basic 다른 코드에서 사용할 수 있도록 리소스를 자동으로 삭제 합니다. 리소스는 로컬 이며 삭제 가능 해야 합니다. 자세한 내용은 [using 문](../../../../visual-basic/language-reference/statements/using-statement.md)을 참조하세요.  
   
-## <a name="withend-with-construction"></a>With...End With Construction  
- The `With...End With` construction lets you specify an object reference once and then run a series of statements that access its members. This can simplify your code and improve performance because Visual Basic does not have to re-establish the reference for each statement that accesses it. For more information, see [With...End With Statement](../../../../visual-basic/language-reference/statements/with-end-with-statement.md).  
+## <a name="withend-with-construction"></a>... 생성으로 종료  
+ `With...End With` 생성을 사용 하면 개체 참조를 한 번 지정한 다음 해당 멤버에 액세스 하는 일련의 문을 실행할 수 있습니다. 이를 통해 Visual Basic는 코드를 단순화 하 고 성능을 향상 시킬 수 있습니다 .이를 통해 액세스 하는 각 문에 대 한 참조를 다시 설정할 필요가 없기 때문입니다. 자세한 내용은 다음 [을 참조 하세요. End With 문](../../../../visual-basic/language-reference/statements/with-end-with-statement.md)  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [제어 흐름](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
 - [판단 구조](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)

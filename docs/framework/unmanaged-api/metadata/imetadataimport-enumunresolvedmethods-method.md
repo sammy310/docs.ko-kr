@@ -38,39 +38,39 @@ HRESULT EnumUnresolvedMethods (
   
 ## <a name="parameters"></a>매개 변수  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
+ [in, out] 열거자에 대 한 포인터입니다. 이 메서드의 첫 번째 호출에서는 NULL 이어야 합니다.  
   
  `rMethods`  
- [out] The array used to store the MemberDef tokens.  
+ 제한이 MemberDef 토큰을 저장 하는 데 사용 되는 배열입니다.  
   
  `cMax`  
  [in] `rMethods` 배열의 최대 크기입니다.  
   
  `pcTokens`  
- [out] The number of MemberDef tokens returned in `rMethods`.  
+ 제한이 `rMethods`에서 반환 된 MemberDef 토큰 수입니다.  
   
 ## <a name="return-value"></a>반환 값  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
-|`S_OK`|`EnumUnresolvedMethods` returned successfully.|  
-|`S_FALSE`|There are no tokens to enumerate. In that case, `pcTokens` is zero.|  
+|`S_OK`|`EnumUnresolvedMethods` 성공적으로 반환 되었습니다.|  
+|`S_FALSE`|열거할 토큰이 없습니다. 이 경우 `pcTokens`은 0입니다.|  
   
-## <a name="remarks"></a>주의  
- An unresolved method is one that has been declared but not implemented. A method is included in the enumeration if the method is marked `miForwardRef` and either `mdPinvokeImpl` or `miRuntime` is set to zero. In other words, an unresolved method is a class method that is marked `miForwardRef` but which is not implemented in unmanaged code (reached via PInvoke) nor implemented internally by the runtime itself  
+## <a name="remarks"></a>설명  
+ 확인 되지 않은 메서드는 선언 되었지만 구현 되지 않은 메서드입니다. 메서드가 `miForwardRef` 표시 되 고 `mdPinvokeImpl` 또는 `miRuntime` 0으로 설정 된 경우 메서드는 열거형에 포함 됩니다. 즉, 확인 되지 않은 메서드는 `miForwardRef`로 표시 되었지만 비관리 코드 (PInvoke를 통해 도달) 또는 런타임 자체에서 내부적으로 구현 되지 않는 클래스 메서드입니다.  
   
- The enumeration excludes all methods that are defined either at module scope (globals) or in interfaces or abstract classes.  
+ 열거형은 모듈 범위 (globals) 또는 인터페이스 또는 추상 클래스에 정의 된 모든 메서드를 제외 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [IMetaDataImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

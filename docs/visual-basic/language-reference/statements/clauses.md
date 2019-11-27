@@ -12,14 +12,14 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74354136"
 ---
 # <a name="clauses-visual-basic"></a>절(Visual Basic)
-The topics in this section document Visual Basic run-time clauses.  
+이 단원의 항목에서는 런타임 절 Visual Basic 설명 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [Alias](../../../visual-basic/language-reference/statements/alias-clause.md)  
   
  [As](../../../visual-basic/language-reference/statements/as-clause.md)  
   
- [Handles](../../../visual-basic/language-reference/statements/handles-clause.md)  
+ [!](../../../visual-basic/language-reference/statements/handles-clause.md)  
   
  [Sub New](../../../visual-basic/language-reference/statements/implements-clause.md)  
   

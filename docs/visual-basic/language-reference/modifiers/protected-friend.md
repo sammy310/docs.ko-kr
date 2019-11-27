@@ -11,25 +11,25 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351316"
 ---
-# <a name="protected-friend-visual-basic"></a>Protected Friend (Visual Basic)
+# <a name="protected-friend-visual-basic"></a>보호 된 Friend (Visual Basic)
 
-`Protected Friend` 키워드 조합은 멤버 액세스 한정자입니다. It confers both [Friend](friend.md) access and [Protected](protected.md) access on the declared elements, so they are accessible from anywhere in the same assembly, from their own class, and from derived classes. You can specify `Protected Friend` only on members of classes; you cannot apply `Protected Friend` to members of a structure because structures cannot be inherited.
+`Protected Friend` 키워드 조합은 멤버 액세스 한정자입니다. 선언 된 요소에 대 한 [Friend](friend.md) 액세스와 [보호 된](protected.md) 액세스를 모두 권한을 부여, 동일한 어셈블리, 자체 클래스 및 파생 클래스의 어디에서 나 액세스할 수 있습니다. `Protected Friend`는 클래스의 멤버에만 지정할 수 있습니다. 구조체는 상속 될 수 없으므로 구조체의 멤버에 `Protected Friend`을 적용할 수 없습니다.
 
 > [!NOTE]
-> In Visual Studio, selecting F1 help on `protected friend` provides help for either [protected](protected.md) or [friend](friend.md). The IDE picks the single token under the cursor rather than the compound word.
+> Visual Studio에서는 `protected friend`에 대 한 F1 도움말을 선택 하 여 [보호](protected.md) 또는 [friend](friend.md)에 대 한 도움말을 제공 합니다. IDE는 복합 단어가 아니라 커서에서 단일 토큰을 선택 합니다.
 
 ## <a name="rules"></a>규칙
 
-**Declaration Context.** You can use `Protected Friend` only at the class level. This means the declaration context for a `Protected` element must be a class, and cannot be a source file, namespace, interface, module, structure, or procedure.
+**선언 컨텍스트입니다.** 클래스 수준 에서만 `Protected Friend`를 사용할 수 있습니다. 즉, `Protected` 요소에 대 한 선언 컨텍스트는 클래스 여야 하며 소스 파일, 네임 스페이스, 인터페이스, 모듈, 구조체 또는 프로시저일 수 없습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [Public](../../../visual-basic/language-reference/modifiers/public.md)
-- [보호됨](../../../visual-basic/language-reference/modifiers/protected.md)
+- [Protected](../../../visual-basic/language-reference/modifiers/protected.md)
 - [Friend](friend.md)
-- [전용](../../../visual-basic/language-reference/modifiers/private.md)
+- [Private](../../../visual-basic/language-reference/modifiers/private.md)
 - [Private Protected](./private-protected.md)
-- [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Visual Basic의 액세스 수준](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [절차](../../../visual-basic/programming-guide/language-features/procedures/index.md)
 - [구조체](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [개체 및 클래스](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

@@ -12,18 +12,18 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351680"
 ---
 # <a name="registry-summary-visual-basic"></a>레지스트리 요약(Visual Basic)
-Visual Studio language keywords and run-time library members are organized by purpose and use.  
+Visual Studio 언어 키워드 및 런타임 라이브러리 멤버는 목적과 사용을 기준으로 구성 됩니다.  
   
- Using the `My` feature provides you with greater productivity and performance in registry operations than these elements. 자세한 내용은 <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>를 참조하세요.  
+ `My` 기능을 사용 하면 이러한 요소 보다 레지스트리 작업의 생산성 및 성능이 향상 됩니다. 자세한 내용은 <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>을 참조하세요.  
   
 |**작업**|**언어 요소**|  
 |----------------|--------------------------|  
-|Delete program settings.|<xref:Microsoft.VisualBasic.Interaction.DeleteSetting%2A>|  
-|Read program settings.|<xref:Microsoft.VisualBasic.Interaction.GetSetting%2A>, <xref:Microsoft.VisualBasic.Interaction.GetAllSettings%2A>|  
-|Save program settings.|<xref:Microsoft.VisualBasic.Interaction.SaveSetting%2A>|  
+|프로그램 설정을 삭제 합니다.|<xref:Microsoft.VisualBasic.Interaction.DeleteSetting%2A>|  
+|프로그램 설정을 읽습니다.|<xref:Microsoft.VisualBasic.Interaction.GetSetting%2A>, <xref:Microsoft.VisualBasic.Interaction.GetAllSettings%2A>|  
+|프로그램 설정을 저장 합니다.|<xref:Microsoft.VisualBasic.Interaction.SaveSetting%2A>|  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
-- [C++ 키워드](../../../visual-basic/language-reference/keywords/index.md)
+- [키워드](../../../visual-basic/language-reference/keywords/index.md)
 - [Visual Basic 런타임 라이브러리 멤버](../../../visual-basic/language-reference/runtime-library-members.md)
 - [레지스트리 읽기 및 쓰기](../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)

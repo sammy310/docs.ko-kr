@@ -34,7 +34,7 @@ ms.locfileid: "74447613"
 |[Reset 메서드](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-reset-method.md)|열거자의 커서를 시퀀스의 시작 위치로 이동합니다.|  
 |[Skip 메서드](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-skip-method.md)|지정한 개수의 요소를 건너뛰도록 현재 위치에서 열거자의 커서를 진행합니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  `ICorProfilerThreadEnum` 인터페이스는 열거자입니다. 배열의 수신기가 수신기에 적합한 속도로 송신기에서 요소를 끌어올 수 있게 합니다. 즉, 수신기가 배열 요소의 흐름을 명시적으로 제어하여 대형 배열을 메서드 매개 변수로 전달하는 기능과 관련된 문제를 방지할 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
@@ -46,7 +46,7 @@ ms.locfileid: "74447613"
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [ICorProfilerInfo 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
 - [프로파일링 인터페이스](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

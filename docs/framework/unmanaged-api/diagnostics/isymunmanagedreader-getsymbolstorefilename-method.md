@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431233"
 ---
 # <a name="isymunmanagedreadergetsymbolstorefilename-method"></a>ISymUnmanagedReader::GetSymbolStoreFileName 메서드
-Provides the on-disk file name of the symbol store.  
+기호 저장소의 디스크에 있는 파일 이름을 제공 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,20 +37,20 @@ HRESULT GetSymbolStoreFileName (
   
 ## <a name="parameters"></a>매개 변수  
  `cchName`  
- [in] The size of the `szName` buffer.  
+ 진행 `szName` 버퍼의 크기입니다.  
   
  `pcchName`  
- [out] A pointer to the variable that receives the length of the name returned in `szName`, including the null termination.  
+ 제한이 Null 종료를 포함 하 여 `szName`에서 반환 된 이름의 길이를 받는 변수에 대 한 포인터입니다.  
   
  `szName`  
- [out] A pointer to the variable that receives the file name of the symbol store.  
+ 제한이 기호 저장소의 파일 이름을 받는 변수에 대 한 포인터입니다.  
   
 ## <a name="return-value"></a>반환 값  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **Header:** CorSym.idl, CorSym.h  
+ **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ISymUnmanagedReader 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

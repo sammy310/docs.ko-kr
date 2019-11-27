@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445893"
 ---
 # <a name="icorprofilercallbackobjectreferences-method"></a>ICorProfilerCallback::ObjectReferences 메서드
-Notifies the profiler about objects in memory that are being referenced by the specified object.  
+지정 된 개체에서 참조 되는 메모리의 개체에 대해 프로파일러에 알립니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,25 +37,25 @@ HRESULT ObjectReferences(
   
 ## <a name="parameters"></a>매개 변수  
  `objectId`  
- [in] The ID of the object that is referencing objects.  
+ 진행 개체를 참조 하는 개체의 ID입니다.  
   
  `classId`  
- [in] The ID of the class that the specified object is an instance of.  
+ 진행 지정 된 개체가 인스턴스인 클래스의 ID입니다.  
   
  `cObjectRefs`  
- [in] The number of objects referenced by the specified object (that is, the number of elements in the `objectRefIds` array).  
+ 진행 지정 된 개체에서 참조 하는 개체 수 (`objectRefIds` 배열의 요소 수)입니다.  
   
  `objectRefIds`  
- [in] An array of IDs of objects that are being referenced by `objectId`.  
+ 진행 `objectId`에서 참조 하는 개체의 Id 배열입니다.  
   
-## <a name="remarks"></a>주의  
- The `ObjectReferences` method is called for each object remaining in the heap after a garbage collection has completed. If the profiler returns an error from this callback, the profiling services will discontinue invoking this callback until the next garbage collection.  
+## <a name="remarks"></a>설명  
+ `ObjectReferences` 메서드는 가비지 수집이 완료 된 후 힙에 남아 있는 각 개체에 대해 호출 됩니다. 프로파일러가이 콜백에서 오류를 반환 하는 경우 프로 파일링 서비스는 다음 가비지 수집이 끝날 때까지이 콜백 호출을 중단 합니다.  
   
- The `ObjectReferences` callback can be used in conjunction with the [ICorProfilerCallback::RootReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md) callback to create a complete object reference graph for the runtime. The common language runtime (CLR) ensures that each object reference is reported only once by the `ObjectReferences` method.  
+ [ICorProfilerCallback:: RootReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md) 콜백과 함께 `ObjectReferences` 콜백을 사용 하 여 런타임에 대 한 전체 개체 참조 그래프를 만들 수 있습니다. CLR (공용 언어 런타임)은 각 개체 참조가 `ObjectReferences` 메서드에서 한 번만 보고 되도록 합니다.  
   
- The object IDs returned by `ObjectReferences` are not valid during the callback itself, because the garbage collection might be in the middle of moving objects. Therefore, profilers must not attempt to inspect objects during an `ObjectReferences` call. When [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) is called, the garbage collection is complete and inspection can be safely done.  
+ 가비지 컬렉션이 개체를 이동 하는 중일 수 있기 때문에 `ObjectReferences`에 의해 반환 되는 개체 Id는 콜백 자체에서 유효 하지 않습니다. 따라서 프로파일러는 `ObjectReferences` 호출 중에 개체 검사를 시도 하지 않아야 합니다. [ICorProfilerCallback2:: GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) 를 호출 하면 가비지 수집이 완료 되 고 검사를 안전 하 게 수행할 수 있습니다.  
   
- A null `ClassId` indicates that `objectId` has a type that is unloading.  
+ Null `ClassId`은 `objectId`의 형식이 언로드되고 있음을 나타냅니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
@@ -66,6 +66,6 @@ HRESULT ObjectReferences(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [ICorProfilerCallback 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

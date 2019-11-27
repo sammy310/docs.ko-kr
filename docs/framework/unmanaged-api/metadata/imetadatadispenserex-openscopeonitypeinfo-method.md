@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431135"
 ---
 # <a name="imetadatadispenserexopenscopeonitypeinfo-method"></a>IMetaDataDispenserEx::OpenScopeOnITypeInfo 메서드
-This method is not implemented. If called, it returns E_NOTIMPL.  
+이 메서드가 구현되지 않았습니다. 이 메서드를 호출 하면 E_NOTIMPL 반환 됩니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,27 +38,27 @@ HRESULT OpenScopeOnITypeInfo (
   
 ## <a name="parameters"></a>매개 변수  
  `pITI`  
- [in] Pointer to an [ITypeInfo](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-itypeinfo) interface that provides the type information on which to open the scope.  
+ 진행 범위를 열 수 있는 형식 정보를 제공 하는 [ITypeInfo](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-itypeinfo) 인터페이스에 대 한 포인터입니다.  
   
  `dwOpenFlags`  
- [in] The open mode flags.  
+ 진행 열기 모드 플래그입니다.  
   
  `riid`  
- [in] The desired interface.  
+ 진행 원하는 인터페이스입니다.  
   
  `ppIUnk`  
- [out] Pointer to a pointer to the returned interface.  
+ 제한이 반환 된 인터페이스에 대 한 포인터에 대 한 포인터입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조 하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [IMetaDataDispenserEx 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
 - [IMetaDataDispenser 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)

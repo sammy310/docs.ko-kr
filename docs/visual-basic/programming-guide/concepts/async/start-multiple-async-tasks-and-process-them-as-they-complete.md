@@ -9,7 +9,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346675"
 ---
-# <a name="start-multiple-async-tasks-and-process-them-as-they-complete-visual-basic"></a>Start Multiple Async Tasks and Process Them As They Complete (Visual Basic)
+# <a name="start-multiple-async-tasks-and-process-them-as-they-complete-visual-basic"></a>비동기 작업을 여러 개 시작 하 고 완료 될 때마다 처리 (Visual Basic)
 <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>를 사용하면 시작된 순서대로 처리하는 대신 동시에 여러 작업을 시작하고 완료 시 하나씩 처리할 수 있습니다.  
   
  다음 예제에서는 쿼리를 사용하여 작업 컬렉션을 만듭니다. 각 작업은 지정된 웹 사이트의 콘텐츠를 다운로드합니다. while 루프의 각 반복에서 대기된 `WhenAny` 호출은 다운로드를 먼저 완료하는 작업 컬렉션의 작업을 반환합니다. 해당 작업은 컬렉션에서 제거되고 처리됩니다. 컬렉션에 더 이상 작업이 없을 때까지 루프가 반복됩니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "74346675"
  프로젝트를 다운로드하지 않으려는 경우 이 항목의 끝에 있는 MainWindow.xaml.vb 파일을 검토할 수 있습니다.  
   
 ## <a name="building-the-example"></a>예제 빌드  
- This example adds to the code that’s developed in [Cancel Remaining Async Tasks after One Is Complete (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md) and uses the same UI.  
+ 이 예제에서는 [작업 하나가 완료 된 후 남은 비동기 작업 취소 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md) 에서 개발 된 코드에를 추가 하 고 동일한 UI를 사용 합니다.  
   
  직접 예제를 빌드하려면 "예제 다운로드" 섹션의 지침을 단계별로 따르되, **CancelAfterOneTask**를 **시작 프로젝트**로 선택합니다. 이 항목의 변경 내용을 해당 프로젝트의 `AccessTheWebAsync` 메서드에 추가합니다. 변경 내용은 별표로 표시됩니다.  
   
@@ -48,9 +48,9 @@ Dim downloadTasksQuery As IEnumerable(Of Task(Of Integer)) =
     From url In urlList Select ProcessURLAsync(url, client, ct)  
 ```  
   
- In the MainWindow.xaml.vb file of the  project, make the following changes to the `AccessTheWebAsync` method.  
+ 프로젝트의 Mainwindow.xaml 파일에서 `AccessTheWebAsync` 메서드를 다음과 같이 변경 합니다.  
   
-- <xref:System.Linq.Enumerable.ToArray%2A> 대신 <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType>를 적용하여 쿼리를 실행합니다.  
+- <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> 대신 <xref:System.Linq.Enumerable.ToArray%2A>를 적용하여 쿼리를 실행합니다.  
   
     ```vb  
     Dim downloadTasks As List(Of Task(Of Integer)) = downloadTasksQuery.ToList()  
@@ -70,7 +70,7 @@ Dim downloadTasksQuery As IEnumerable(Of Task(Of Integer)) =
         downloadTasks.Remove(firstFinishedTask)  
         ```  
   
-    3. `ProcessURLAsync` 호출에서 반환된 `firstFinishedTask`를 대기합니다. `firstFinishedTask` 변수는 <xref:System.Threading.Tasks.Task%601>입니다. 여기서 `TReturn`은 정수입니다. 작업은 이미 완료되었지만, 다음 예제와 같이 다운로드한 웹 사이트의 길이를 검색하도록 기다립니다.  
+    3. `firstFinishedTask` 호출에서 반환된 `ProcessURLAsync`를 대기합니다. `firstFinishedTask` 변수는 <xref:System.Threading.Tasks.Task%601>입니다. 여기서 `TReturn`은 정수입니다. 작업은 이미 완료되었지만, 다음 예제와 같이 다운로드한 웹 사이트의 길이를 검색하도록 기다립니다.  
   
         ```vb  
         Dim length = Await firstFinishedTask  
@@ -205,7 +205,7 @@ End Class
 ' Downloads complete.  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - <xref:System.Threading.Tasks.Task.WhenAny%2A>
 - [Async 애플리케이션 미세 조정(Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)

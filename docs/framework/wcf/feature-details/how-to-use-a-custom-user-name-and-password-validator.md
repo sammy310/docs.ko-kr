@@ -63,7 +63,7 @@ ms.locfileid: "74283256"
         HTTP (S)를 통해 전송 수준 보안을 사용 하는 경우 [\<전송 >](../../configure-apps/file-schema/wcf/transport-of-wshttpbinding.md) 의 `clientCredentialType` 특성을 설정 하거나 [전송 >](../../configure-apps/file-schema/wcf/transport-of-basichttpbinding.md) 를 `Basic`으로\<합니다.
 
         > [!NOTE]
-        > WCF 서비스에서 인터넷 정보 서비스 (IIS) 전송 수준 보안을 사용 하 여 호스팅된 경우 및 <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.UserNamePasswordValidationMode%2A> 속성이 <xref:System.ServiceModel.Security.UserNamePasswordValidationMode.Custom>, 사용자 지정 인증 체계는 Windows 인증의 하위 집합을 사용 합니다. 이것은 IIS이이 시나리오에서는 WCF 사용자 지정 인증자를 호출 하기 전에 Windows 인증을 수행 합니다.
+        > WCF 서비스가 전송 수준 보안을 사용 하 여 인터넷 정보 서비스 (IIS)에서 호스트 되 고 <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.UserNamePasswordValidationMode%2A> 속성이 <xref:System.ServiceModel.Security.UserNamePasswordValidationMode.Custom>으로 설정 된 경우 사용자 지정 인증 체계는 Windows 인증의 하위 집합을 사용 합니다. 이것은 IIS이이 시나리오에서는 WCF 사용자 지정 인증자를 호출 하기 전에 Windows 인증을 수행 합니다.
 
     WCF 바인딩 요소를 만드는 방법에 대 한 자세한 내용은 [방법: 구성에서 서비스 바인딩 지정](../how-to-specify-a-service-binding-in-configuration.md)을 참조 하세요.
 
@@ -119,7 +119,7 @@ ms.locfileid: "74283256"
 [!code-csharp[C_CustomUsernameAndPasswordValidator#2](~/samples/snippets/csharp/VS_Snippets_CFX/c_customusernameandpasswordvalidator/cs/service.cs#2)]
 [!code-vb[C_CustomUsernameAndPasswordValidator#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/c_customusernameandpasswordvalidator/vb/service.vb#2)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>
 - [방법: ASP.NET 멤버 자격 공급자 사용](how-to-use-the-aspnet-membership-provider.md)

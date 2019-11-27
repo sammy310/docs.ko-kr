@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448764"
 ---
 # <a name="corvalidatormoduletype-enumeration"></a>CorValidatorModuleType 열거형
-Specifies the type of a module.  
+모듈의 유형을 지정 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -43,23 +43,23 @@ typedef enum
   
 |멤버|설명|  
 |------------|-----------------|  
-|`ValidatorModuleTypeInvalid`|The module is an invalid type.|  
-|`ValidatorModuleTypeMin`|The minimum value of the `CorValidatorModuleType` enum.|  
-|`ValidatorModuleTypePE`|The module is a portable executable (PE) file.|  
-|`ValidatorModuleTypeObj`|The module is a .obj file.|  
-|`ValidatorModuleTypeEnc`|The module is an edit-and-continue debugger session.|  
-|`ValidatorModuleTypeIncr`|The module is one that has been incrementally built.|  
-|`ValidatorModuleTypeMax`|The maximum value of the `CorValidatorModuleType` enum.|  
+|`ValidatorModuleTypeInvalid`|모듈의 형식이 잘못 되었습니다.|  
+|`ValidatorModuleTypeMin`|`CorValidatorModuleType` 열거형의 최소값입니다.|  
+|`ValidatorModuleTypePE`|모듈은 PE (이식 가능한 실행) 파일입니다.|  
+|`ValidatorModuleTypeObj`|모듈은 .obj 파일입니다.|  
+|`ValidatorModuleTypeEnc`|이 모듈은 편집 하며 계속 하기 디버거 세션입니다.|  
+|`ValidatorModuleTypeIncr`|모듈은 증분 방식으로 작성 된 모듈입니다.|  
+|`ValidatorModuleTypeMax`|`CorValidatorModuleType` 열거형의 최대값입니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [메타데이터 열거형](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

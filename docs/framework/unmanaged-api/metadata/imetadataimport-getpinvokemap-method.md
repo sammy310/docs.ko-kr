@@ -40,33 +40,33 @@ HRESULT GetPinvokeMap (
   
 ## <a name="parameters"></a>매개 변수  
  `tk`  
- [in] A FieldDef or MethodDef token to get the PInvoke mapping metadata for.  
+ 진행 PInvoke 매핑 메타 데이터를 가져올 FieldDef 또는 MethodDef 토큰입니다.  
   
  `pdwMappingFlags`  
- [out] A pointer to flags used for mapping. This value is a bitmask from the [CorPinvokeMap](../../../../docs/framework/unmanaged-api/metadata/corpinvokemap-enumeration.md) enumeration.  
+ 제한이 매핑에 사용 되는 플래그에 대 한 포인터입니다. 이 값은 [CorPinvokeMap](../../../../docs/framework/unmanaged-api/metadata/corpinvokemap-enumeration.md) 열거형의 비트 마스크입니다.  
   
  `szImportName`  
- [out] The name of the unmanaged target DLL.  
+ 제한이 관리 되지 않는 대상 DLL의 이름입니다.  
   
  `cchImportName`  
- [in] The size in wide characters of `szImportName`.  
+ 진행 `szImportName`의 와이드 문자 크기입니다.  
   
  `pchImportName`  
- [out] The number of wide characters returned in `szImportName`.  
+ 제한이 `szImportName`에서 반환 되는 와이드 문자 수입니다.  
   
  `pmrImportDLL`  
- [out] A pointer to a ModuleRef token that represents the unmanaged target object library.  
+ 제한이 관리 되지 않는 대상 개체 라이브러리를 나타내는 ModuleRef 토큰에 대 한 포인터입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [IMetaDataImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

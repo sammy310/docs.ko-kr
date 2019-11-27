@@ -12,8 +12,8 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346966"
 ---
-# <a name="exception-visual-basic"></a>\<exception> (Visual Basic)
-Specifies which exceptions can be thrown.  
+# <a name="exception-visual-basic"></a>\<예외 > (Visual Basic)
+Throw 할 수 있는 예외를 지정 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -28,16 +28,16 @@ Specifies which exceptions can be thrown.
  `description`  
  설명.  
   
-## <a name="remarks"></a>주의  
- Use the `<exception>` tag to specify which exceptions can be thrown. 이 태그는 메서드 정의에 적용됩니다.  
+## <a name="remarks"></a>설명  
+ `<exception>` 태그를 사용 하 여 throw 할 수 있는 예외를 지정 합니다. 이 태그는 메서드 정의에 적용됩니다.  
   
  [-doc](../../../visual-basic/reference/command-line-compiler/doc.md)로 컴파일하여 문서 주석을 파일로 처리합니다.  
   
 ## <a name="example"></a>예제  
- This example uses the `<exception>` tag to describe an exception that the `IntDivide` function can throw.  
+ 이 예제에서는 `<exception>` 태그를 사용 하 여 `IntDivide` 함수가 throw 할 수 있는 예외를 설명 합니다.  
   
  [!code-vb[VbVbcnXmlDocComments#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#3)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [XML 주석 태그](../../../visual-basic/language-reference/xmldoc/index.md)

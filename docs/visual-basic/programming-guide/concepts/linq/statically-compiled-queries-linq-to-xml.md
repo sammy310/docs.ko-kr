@@ -9,7 +9,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350573"
 ---
-# <a name="statically-compiled-queries-linq-to-xml-visual-basic"></a>Statically Compiled Queries (LINQ to XML) (Visual Basic)
+# <a name="statically-compiled-queries-linq-to-xml-visual-basic"></a>정적으로 컴파일된 쿼리 (LINQ to XML) (Visual Basic)
 
 <xref:System.Xml.XmlDocument>와는 달리 LINQ to XML의 가장 큰 성능 이점 중 하나는 LINQ to XML의 쿼리가 정적으로 컴파일된다는 점입니다. 반면 XPath 쿼리는 런타임에 해석되어야 합니다. 이 기능은 LINQ to XML에 기본 제공되므로 이를 활용하기 위해 별도의 단계를 수행할 필요는 없습니다. 그러나 이 두 가지 기술 중 하나를 선택해야 하는 경우를 위해 그 차이를 알고 있는 것이 좋습니다. 이 항목에서는 그 차이에 대해 설명합니다.
 
@@ -58,7 +58,7 @@ For Each el In list1
 Next
 ```
 
-이 예제의 결과는 위의 두 예제의 결과와 정확히 동일합니다. 이를 통해 쿼리가 정적으로 연결된 메서드 호출로 효과적으로 컴파일되었음을 알 수 있습니다. 이 예제에서는 반복기의 지연된 실행 의미 체계를 결합하여 성능을 향상합니다. For more information about the deferred execution semantics of iterators, see [Deferred Execution and Lazy Evaluation in LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).
+이 예제의 결과는 위의 두 예제의 결과와 정확히 동일합니다. 이를 통해 쿼리가 정적으로 연결된 메서드 호출로 효과적으로 컴파일되었음을 알 수 있습니다. 이 예제에서는 반복기의 지연된 실행 의미 체계를 결합하여 성능을 향상합니다. 반복기의 지연 된 실행 의미 체계에 대 한 자세한 내용은 [LINQ to XML (Visual Basic)에서 지연 된 실행 및 지연 계산](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)을 참조 하세요.
 
 > [!NOTE]
 > 이러한 예제는 컴파일러에서 작성할 수 있는 대표적인 코드 예제입니다. 실제 구현은 이러한 예제와 약간 다를 수 있으나 성능은 이러한 예제와 같거나 매우 유사할 것입니다.
@@ -92,6 +92,6 @@ reader.Close()
 
 이는 이에 해당하는 LINQ to XML 쿼리에서 수행하는 작업보다 훨씬 많습니다. 구체적인 성능 차이는 쿼리 형식에 따라 다르지만 일반 LINQ to XML 쿼리의 경우 작업을 덜 수행하므로 <xref:System.Xml.XmlDocument>를 사용하여 XPath 식을 계산하는 것보다 성능이 더 좋습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
-- [Performance (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)
+- [성능 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74434329"
 ---
 # <a name="imetadataemitgetsavesize-method"></a>IMetaDataEmit::GetSaveSize 메서드
-Gets the estimated binary size of the assembly and its metadata in the current scope.  
+현재 범위에서 어셈블리의 예상 이진 크기와 해당 메타 데이터를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,34 +36,34 @@ HRESULT GetSaveSize (
   
 ## <a name="parameters"></a>매개 변수  
  `fSave`  
- [in] A value of the [CorSaveSize](../../../../docs/framework/unmanaged-api/metadata/corsavesize-enumeration.md) enumeration that specifies whether to get an accurate or approximate size. Only three values are valid: cssAccurate, cssQuick, and cssDiscardTransientCAs:  
+ 진행 정확 하 게 또는 대략적인 크기를 가져올 것인지 여부를 지정 하는 [CorSaveSize](../../../../docs/framework/unmanaged-api/metadata/corsavesize-enumeration.md) 열거형의 값입니다. CssAccurate, cssQuick 및 cssDiscardTransientCAs의 세 가지 값만 유효 합니다.  
   
-- cssAccurate returns the exact save size but takes longer to calculate.  
+- cssAccurate는 정확한 저장 크기를 반환 하지만 계산 하는 데 더 오래 걸립니다.  
   
-- cssQuick returns a size, padded for safety, but takes less time to calculate.  
+- cssQuick은 안전을 위해 채워진 크기를 반환 하지만 계산 하는 데 시간이 더 짧습니다.  
   
-- cssDiscardTransientCAs tells `GetSaveSize` that it can throw away discardable custom attributes.  
+- cssDiscardTransientCAs는 삭제 가능한 사용자 지정 특성을 throw 할 수 있음을 `GetSaveSize`에 알려 줍니다.  
   
  `pdwSaveSize`  
- [out] A pointer to the size that is required to save the file.  
+ 제한이 파일을 저장 하는 데 필요한 크기에 대 한 포인터입니다.  
   
 ## <a name="remarks"></a>주의  
- `GetSaveSize` calculates the space required, in bytes, to save the assembly and all its metadata in the current scope. (A call to the [IMetaDataEmit::SaveToStream](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-savetostream-method.md) method would emit this number of bytes.)  
+ `GetSaveSize`은 현재 범위에서 어셈블리와 모든 메타 데이터를 저장 하는 데 필요한 공간 (바이트)을 계산 합니다. [IMetaDataEmit:: SaveToStream](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-savetostream-method.md) 메서드를 호출 하면이 바이트 수가 생성 됩니다.  
   
- If the caller implements the [IMapToken](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md) interface (through [IMetaDataEmit::SetHandler](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-sethandler-method.md) or [IMetaDataEmit::Merge](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md)), `GetSaveSize` will perform two passes over the metadata to optimize and compress it. Otherwise, no optimizations are performed.  
+ 호출자가 [IMapToken](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md) 인터페이스 ( [IMetaDataEmit:: SetHandler](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-sethandler-method.md) 또는 [IMetaDataEmit:: Merge](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md)`GetSaveSize`)를 구현 하는 경우 메타 데이터에 대해 두 개의 패스를 수행 하 여 최적화 하 고 압축 합니다. 그렇지 않으면 최적화가 수행 되지 않습니다.  
   
- If optimization is performed, the first pass simply sorts the metadata structures to tune the performance of import-time searches. This step typically results in moving records around, with the side effect that tokens retained by the tool for future reference are invalidated. The metadata does not inform the caller of these token changes until after the second pass, however. In the second pass, various optimizations are performed that are intended to reduce the overall size of the metadata, such as optimizing away (early binding) `mdTypeRef` and `mdMemberRef` tokens when the reference is to a type or member that is declared in the current metadata scope. In this pass, another round of token mapping occurs. After this pass, the metadata engine notifies the caller, through its `IMapToken` interface, of any changed token values.  
+ 최적화를 수행 하는 경우 첫 번째 패스는 단지 메타 데이터 구조를 정렬 하 여 가져오기 시간 검색의 성능을 조정 합니다. 이 단계에서는 일반적으로 레코드를 이동 하 고 나중에 참조할 수 있도록 도구에 의해 유지 된 토큰의 부작용이 발생 합니다. 그러나 메타 데이터는 두 번째 통과 이후까지 이러한 토큰 변경을 호출자에 게 알리지 않습니다. 두 번째 단계에서는 현재 메타 데이터 범위에서 선언 된 형식 또는 멤버에 대 한 참조가 있는 경우 (초기 바인딩) `mdTypeRef` 및 `mdMemberRef` 토큰을 최적화 하는 등의 전체 메타 데이터 크기를 줄이기 위해 다양 한 최적화가 수행 됩니다. 이 패스에는 토큰 매핑의 또 다른 왕복이 발생 합니다. 이 단계를 완료 한 후 메타 데이터 엔진은 `IMapToken` 인터페이스를 통해 변경 된 모든 토큰 값을 호출자에 게 알립니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IMetaDataEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

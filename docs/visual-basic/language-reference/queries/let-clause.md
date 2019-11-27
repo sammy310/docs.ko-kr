@@ -16,7 +16,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350430"
 ---
 # <a name="let-clause-visual-basic"></a>Let 절(Visual Basic)
-Computes a value and assigns it to a new variable within the query.  
+값을 계산 하 여 쿼리 내의 새 변수에 할당 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -28,20 +28,20 @@ Let variable = expression [, ...]
   
 |용어|정의|  
 |---|---|  
-|`variable`|필수 요소. An alias that can be used to reference the results of the supplied expression.|  
-|`expression`|필수 요소. An expression that will be evaluated and assigned to the specified variable.|  
+|`variable`|필수 요소. 제공 된 식의 결과를 참조 하는 데 사용할 수 있는 별칭입니다.|  
+|`expression`|필수 요소. 지정 된 변수에 계산 되어 할당 되는 식입니다.|  
   
-## <a name="remarks"></a>주의  
- The `Let` clause enables you to compute values for each query result and reference them by using an alias. The alias can be used in other clauses, such as the `Where` clause. The `Let` clause enables you to create a query statement that is easier to read because you can specify an alias for an expression clause included in the query and substitute the alias each time the expression clause is used.  
+## <a name="remarks"></a>설명  
+ `Let` 절을 사용 하면 각 쿼리 결과의 값을 계산 하 고 별칭을 사용 하 여 값을 참조할 수 있습니다. 별칭은 `Where` 절과 같은 다른 절에서 사용할 수 있습니다. `Let` 절을 사용 하면 쿼리에 포함 된 식 절에 별칭을 지정 하 고 expression 절이 사용 될 때마다 별칭을 대체할 수 있기 때문에 더 쉽게 읽을 수 있는 쿼리 문을 만들 수 있습니다.  
   
- You can include any number of `variable` and `expression` assignments in the `Let` clause. Separate each assignment with a comma (,).  
+ `variable` 및 `expression` 할당을 `Let` 절에 포함할 수 있습니다. 각 할당을 쉼표 (,)로 구분 합니다.  
   
 ## <a name="example"></a>예제  
- The following code example uses the `Let` clause to compute a 10 percent discount on products.  
+ 다음 코드 예제에서는 `Let` 절을 사용 하 여 제품에 대해 10% 할인을 계산 합니다.  
   
  [!code-vb[VbSimpleQuerySamples#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#16)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [Visual Basic의 LINQ 소개](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [쿼리](../../../visual-basic/language-reference/queries/index.md)

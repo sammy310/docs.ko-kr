@@ -1,5 +1,5 @@
 ---
-title: CVStruct 구조체
+title: CVStruct Structure
 ms.date: 03/30/2017
 api_name:
 - CVStruct
@@ -21,7 +21,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436418"
 ---
-# <a name="cvstruct-structure"></a>CVStruct 구조체
+# <a name="cvstruct-structure"></a>CVStruct Structure
 모듈 또는 합성 이미지를 설치할 때 사용되는 정보를 포함합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -39,20 +39,20 @@ typedef struct {
   
 |멤버|설명|  
 |------------|-----------------|  
-|주요함|Major version build number.|  
-|사소함|Minor version build number.|  
-|Sub|Sub-build number.|  
-|빌드|Build number.|  
+|중요한 변경|주 버전 빌드 번호입니다.|  
+|사소한 변경|부 버전 빌드 번호입니다.|  
+|하위|하위 빌드 번호입니다.|  
+|빌드|빌드 번호입니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [메타데이터 구조체](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)

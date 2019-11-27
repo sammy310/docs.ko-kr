@@ -24,7 +24,7 @@ ms.locfileid: "74448741"
 ---
 # <a name="enumimporttypes-method"></a>EnumImportTypes 메서드
 
-Enumerates each type in each scope.
+각 범위에서 각 형식을 열거 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -40,26 +40,26 @@ HRESULT EnumImportTypes(
 ## <a name="parameters"></a>매개 변수
 
 `hEnum`\
-Handle for enumerator.
+열거자에 대 한 핸들입니다.
 
 `dwMax`\
-Maximum number of types to retrieve.
+검색할 최대 형식 수입니다.
 
 `aTypeDefs`\
-Receives type tokens, not to exceed `dwMax`.
+`dwMax`를 초과 하지 않는 형식 토큰을 받습니다.
 
 `pdwCount`\
-Receives actual number of type in `aTypeDefs`.
+`aTypeDefs`에서 실제 형식의 수를 받습니다.
 
 ## <a name="return-value"></a>반환 값
 
-Returns S_OK if the method succeeds.
+메서드가 성공 하면 S_OK을 반환 합니다.
 
 ## <a name="requirements"></a>요구 사항
 
-Requires alink.h
+Alink 필요
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [IALink 인터페이스](ialink-interface.md)
 - [IALink2 인터페이스](ialink2-interface.md)

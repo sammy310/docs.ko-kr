@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431228"
 ---
 # <a name="imetadataerroronerror-method"></a>IMetaDataError::OnError 메서드
-Provides notification of errors that occur during the metadata merge.  
+메타 데이터 병합 중에 발생 하는 오류에 대 한 알림을 제공 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,20 +36,20 @@ HRESULT OnError (
   
 ## <a name="parameters"></a>매개 변수  
  `hrError`  
- [in] The HRESULT error value returned to the calling method.  
+ 진행 호출 하는 메서드에 반환 되는 HRESULT 오류 값입니다.  
   
  `token`  
- [in] The metadata token of the code object that was being merged when the error occurred.  
+ 진행 오류가 발생 했을 때 병합 되 고 있던 코드 개체의 메타 데이터 토큰입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IMetaDataError 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-interface.md)

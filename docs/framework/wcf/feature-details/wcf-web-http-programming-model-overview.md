@@ -14,13 +14,13 @@ WCF (Windows Communication Foundation) 웹 HTTP 프로그래밍 모델은 WCF를
   
 - Uri **및 Uri 처리** Uri는 웹 HTTP 서비스의 디자인에서 중앙 역할을 수행 합니다. WCF 웹 HTTP 프로그래밍 모델은 <xref:System.UriTemplate> 및 <xref:System.UriTemplateTable> 클래스를 사용 하 여 URI 처리 기능을 제공 합니다.  
   
-- **GET 및 POST 작업 지원** WEB HTTP 서비스는 데이터 수정 및 원격 호출에 다양한 호출 동사를 사용할 뿐 아니라, 데이터 검색에 GET 동사를 사용합니다. WCF 웹 HTTP 프로그래밍 모델은 <xref:System.ServiceModel.Web.WebGetAttribute> 및 <xref:System.ServiceModel.Web.WebInvokeAttribute>를 사용 하 여 PUT, POST, DELETE 등의 GET 및 다른 HTTP 동사 둘 다에 서비스 작업을 연결 합니다.  
+- **GET 및 POST 작업 지원** 웹 HTTP 서비스는 데이터 수정 및 원격 호출에 대 한 다양 한 호출 동사 뿐만 아니라 데이터 검색에 GET 동사를 사용 합니다. WCF 웹 HTTP 프로그래밍 모델은 <xref:System.ServiceModel.Web.WebGetAttribute> 및 <xref:System.ServiceModel.Web.WebInvokeAttribute>를 사용 하 여 PUT, POST, DELETE 등의 GET 및 다른 HTTP 동사 둘 다에 서비스 작업을 연결 합니다.  
   
-- **다양한 데이터 형식** 웹 스타일 서비스는 SOAP 메시지 외에도 여러 종류의 데이터를 처리합니다. WCF 웹 HTTP 프로그래밍 모델은 <xref:System.ServiceModel.WebHttpBinding> 및 <xref:System.ServiceModel.Description.WebHttpBehavior>를 사용 하 여 XML 문서, JSON 데이터 개체 및 이미지, 비디오 파일, 일반 텍스트 등의 이진 콘텐츠 스트림을 비롯 한 다양 한 데이터 형식을 지원 합니다.  
+- **여러 데이터 형식** 웹 스타일 서비스는 SOAP 메시지 외에도 여러 종류의 데이터를 처리 합니다. WCF 웹 HTTP 프로그래밍 모델은 <xref:System.ServiceModel.WebHttpBinding> 및 <xref:System.ServiceModel.Description.WebHttpBehavior>를 사용 하 여 XML 문서, JSON 데이터 개체 및 이미지, 비디오 파일, 일반 텍스트 등의 이진 콘텐츠 스트림을 비롯 한 다양 한 데이터 형식을 지원 합니다.  
   
  WCF 웹 HTTP 프로그래밍 모델은 웹 HTTP 서비스, AJAX 및 JSON 서비스 및 배포 (ATOM/RSS) 피드가 포함 된 웹 스타일 시나리오를 포함 하도록 WCF의 범위를 확장 합니다. AJAX 및 JSON 서비스에 대 한 자세한 내용은 [Ajax 통합 및 Json 지원](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)을 참조 하세요. 배포에 대 한 자세한 내용은 [WCF 배포 개요](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)를 참조 하세요.  
   
- WEB HTTP 서비스에서 반환될 수 있는 데이터 형식에 대한 추가 제한은 없습니다. 모든 직렬화 가능 형식이 WEB HTTP 서비스 작업에서 반환될 수 있습니다. 웹 브라우저가 WEB HTTP 서비스 작업을 호출할 수 있기 때문에 URL에 지정할 수 있는 데이터 형식에 대한 제한이 있습니다. 기본적으로 지원되는 형식에 대한 자세한 내용은 아래의 **UriTemplate 쿼리 문자열 매개 변수 및 URL** 단원을 참조하십시오. URL에 지정된 매개 변수를 실제 매개 변수 형식으로 변환하는 방법을 지정하는 고유한 T:System.ServiceModel.Dispatcher.QueryStringConverter 구현을 제공하여 기본 동작을 변경할 수 있습니다. 자세한 내용은 <xref:System.ServiceModel.Dispatcher.QueryStringConverter>을 참조하세요.  
+ WEB HTTP 서비스에서 반환될 수 있는 데이터 형식에 대한 추가 제한은 없습니다. 모든 직렬화 가능 형식이 WEB HTTP 서비스 작업에서 반환될 수 있습니다. 웹 브라우저가 WEB HTTP 서비스 작업을 호출할 수 있기 때문에 URL에 지정할 수 있는 데이터 형식에 대한 제한이 있습니다. 기본적으로 지원 되는 형식에 대 한 자세한 내용은 아래의 **UriTemplate 쿼리 문자열 매개 변수 및 url** 섹션을 참조 하십시오. URL에 지정된 매개 변수를 실제 매개 변수 형식으로 변환하는 방법을 지정하는 고유한 T:System.ServiceModel.Dispatcher.QueryStringConverter 구현을 제공하여 기본 동작을 변경할 수 있습니다. 자세한 내용은 <xref:System.ServiceModel.Dispatcher.QueryStringConverter>을 참조하세요.  
   
 > [!CAUTION]
 > WCF 웹 HTTP 프로그래밍 모델을 사용 하 여 작성 된 서비스는 SOAP 메시지를 사용 하지 않습니다. SOAP는 사용 되지 않으므로 WCF에서 제공 하는 보안 기능을 사용할 수 없습니다. 그러나 HTTPS를 사용하여 서비스를 호스트하면 전송 기반 보안을 사용할 수 있습니다. WCF 보안에 대 한 자세한 내용은 [보안 개요](../../../../docs/framework/wcf/feature-details/security-overview.md) 를 참조 하세요.  
@@ -39,13 +39,13 @@ WCF (Windows Communication Foundation) 웹 HTTP 프로그래밍 모델은 WCF를
   
 - a/z/c  
   
-- 등  
+- 있습니다.  
   
  이 템플릿에서 중괄호 표기법("{segment}")은 리터럴 값 대신 변수 세그먼트를 나타냅니다.  
   
  .NET Framework는 <xref:System.UriTemplate>이라는 URI 템플릿으로 작업하기 위한 API를 제공합니다. `UriTemplates`를 사용 하 여 다음을 수행할 수 있습니다.  
   
-- 매개 변수 집합으로 `Bind` 메서드 중 하나를 호출하여, 템플릿에 일치하는 *완전 폐쇄형 URI*를 생성할 수 있습니다. 즉, URI 템플릿 내에 있는 변수는 모두 실제 값으로 바뀝니다.  
+- 매개 변수 집합을 사용 하 여 `Bind` 메서드 중 하나를 호출 하 여 템플릿과 일치 하는 *완전히 폐쇄형 URI* 를 생성할 수 있습니다. 즉, URI 템플릿 내에 있는 변수는 모두 실제 값으로 바뀝니다.  
   
 - 후보 URI로 `Match`()를 호출할 수 있으며, 후보 URI는 템플릿을 사용하여 후보 URI를 구성 부분으로 나누고 템플릿의 변수에 따라 레이블이 지정된 URI의 다른 부분이 포함된 사전을 반환합니다.  
   
@@ -122,7 +122,7 @@ interface ICustomer
 |<xref:System.Guid>|GUID, 예:<br /><br /> 936DA01F-9ABD-4d9d-80C7-02AF85C822A8|  
 |<xref:System.DateTimeOffset>|MM/DD/YYYY HH:MM:SS MM:SS<br /><br /> 여기서 DD = 일, HH = 시간, MM = 분, SS = 초입니다.|  
 |열거형|다음 코드에서처럼 열거형을 정의하는 예제의 열거형 값입니다.<br /><br /> `public enum Days{ Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday };`<br /><br /> 개별 열거형 값 또는 해당 정수 값은 쿼리 문자열에 지정할 수 있습니다.|  
-|문자열 표현과 형식을 서로 변환할 수 있는 `TypeConverterAttribute`가 있는 형식입니다.|형식 변환기에 따라 다릅니다.|  
+|형식을 문자열 표현으로 변환할 수 있는 `TypeConverterAttribute` 있는 형식입니다.|형식 변환기에 따라 다릅니다.|  
   
 ## <a name="formats-and-the-wcf-web-http-programming-model"></a>형식 및 WCF WEB HTTP 프로그래밍 모델  
  WCF WEB HTTP 프로그래밍 모델에는 다양 한 데이터 형식으로 작업할 수 있는 새로운 기능이 있습니다. <xref:System.ServiceModel.WebHttpBinding>은 바인딩 계층에서 다음과 같은 여러 종류의 데이터를 읽고 쓸 수 있습니다.  
@@ -143,7 +143,7 @@ interface ICustomer
 ## <a name="troubleshooting-the-wcf-web-http-programming-model"></a>WCF WEB HTTP 프로그래밍 모델 문제 해결  
  <xref:System.ServiceModel.Channels.ChannelFactoryBase%601>을 사용하는 WCF WEB HTTP 서비스를 호출해 채널을 만들 때 <xref:System.ServiceModel.Description.WebHttpBehavior>는 다른 <xref:System.ServiceModel.EndpointAddress>가 <xref:System.ServiceModel.EndpointAddress>로 전달되어도 구성 파일에 설정된 <xref:System.ServiceModel.Channels.ChannelFactoryBase%601>를 사용합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [WCF 배포](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)
 - [WCF 웹 HTTP 프로그래밍 개체 모델](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)

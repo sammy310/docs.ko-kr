@@ -72,7 +72,7 @@ ms.locfileid: "74283240"
 ## <a name="the-service-uses-a-different-certificate-than-the-client-intended"></a>서비스에서 클라이언트가 의도한 것과 다른 인증서 사용  
  경우에 따라 클라이언트가 X.509 인증서를 사용하여 메시지에 디지털 서명을 하고 서비스에서 의도한 인증서와 다른 인증서를 검색하도록 할 수 있습니다.  
   
- 이러한 상황은 다음과 같은 경우에 발생할 수 있습니다.  
+ 이러한 작업은 다음과 같은 경우에 발생할 수 있습니다.  
   
 - 클라이언트가 X.509 인증서를 사용하여 메시지에 디지털 서명을 하고 X.509 인증서를 메시지에 첨부하지 않으며 해당 주체 키 식별자를 사용하여 인증서를 참조합니다.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "74283240"
   
  이 가능성을 줄이려면 <xref:System.ServiceModel.Security.Tokens.X509KeyIdentifierClauseType.IssuerSerial> 사용 등의 방식으로 X.509 인증서를 참조합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [보안 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
 - [정보 공개](../../../../docs/framework/wcf/feature-details/information-disclosure.md)

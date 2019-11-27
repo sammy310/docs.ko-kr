@@ -24,8 +24,8 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348221"
 ---
-# <a name="--operator-visual-basic"></a>- Operator (Visual Basic)
-Returns the difference between two numeric expressions or the negative value of a numeric expression.  
+# <a name="--operator-visual-basic"></a>- 연산자(Visual Basic)
+두 숫자 식의 차이를 반환 하거나 숫자 식의 음수 값을 반환 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -33,7 +33,7 @@ Returns the difference between two numeric expressions or the negative value of 
 expression1 – expression2
 ```
   
-or
+로 구분하거나 여러
 
 ```vb  
 –expression1  
@@ -44,37 +44,37 @@ or
  필수 요소. 임의의 숫자 식입니다.  
   
  `expression2`  
- Required unless the `–` operator is calculating a negative value. 임의의 숫자 식입니다.  
+ `–` 연산자가 음수 값을 계산 하는 경우에만 필요 합니다. 임의의 숫자 식입니다.  
   
 ## <a name="result"></a>결과  
- The result is the difference between `expression1` and `expression2`, or the negated value of `expression1`.  
+ 결과는 `expression1`와 `expression2`의 차이 또는 `expression1`의 부정 값입니다.  
   
- The result data type is a numeric type appropriate for the data types of `expression1` and `expression2`. See the "Integer Arithmetic" tables in [Data Types of Operator Results](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).  
+ 결과 데이터 형식은 `expression1` 및 `expression2`데이터 형식에 적합 한 숫자 형식입니다. [연산자 결과의 데이터 형식](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md)에서 "정수 산술 연산" 표를 참조 하세요.  
   
 ## <a name="supported-types"></a>지원 형식  
- 모든 숫자 형식. This includes the unsigned and floating-point types and `Decimal`.  
+ 모든 숫자 형식. 여기에는 부호 없는 형식과 부동 소수점 형식 및 `Decimal`포함 됩니다.  
   
-## <a name="remarks"></a>주의  
- In the first usage shown in the syntax shown previously, the `–` operator is the *binary* arithmetic subtraction operator for the difference between two numeric expressions.  
+## <a name="remarks"></a>설명  
+ 앞에 표시 된 구문에 표시 된 첫 번째 사용에서 `–` 연산자는 두 숫자 식의 차이에 대 한 *이진* 산술 빼기 연산자입니다.  
   
- In the second usage shown in the syntax shown previously, the `–` operator is the *unary* negation operator for the negative value of an expression. In this sense, the negation consists of reversing the sign of `expression1` so that the result is positive if `expression1` is negative.  
+ 앞에 표시 된 구문에 표시 된 두 번째 사용에서 `–` 연산자는 식의 음수 값에 대 한 *단항* 부정 연산자입니다. 이러한 의미에서 부정은 `expression1`의 부호를 반대로 하 여 `expression1`가 음수인 경우 결과가 양수가 되도록 구성 됩니다.  
   
- If either expression evaluates to [Nothing](../../../visual-basic/language-reference/nothing.md), the `–` operator treats it as zero.  
+ 두 식이 모두 [Nothing](../../../visual-basic/language-reference/nothing.md)으로 계산 되는 경우 `–` 연산자는이 값을 0으로 처리 합니다.  
   
 > [!NOTE]
-> The `–` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure. If your code uses this operator on such a class or structure, make sure that you understand its redefined behavior. 자세한 내용은 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)을 참조하세요.  
+> `–` 연산자를 *오버 로드할*수 있습니다. 즉, 피연산자가 해당 클래스 또는 구조체의 형식일 때 클래스 또는 구조체에서 해당 동작을 다시 정의할 수 있습니다. 코드가 이러한 클래스 또는 구조체에서이 연산자를 사용 하는 경우 다시 정의 된 동작을 이해 해야 합니다. 자세한 내용은 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)을 참조하세요.  
   
 ## <a name="example"></a>예제  
- The following example uses the `–` operator to calculate and return the difference between two numbers, and then to negate a number.  
+ 다음 예에서는 `–` 연산자를 사용 하 여 두 숫자 간의 차이를 계산 하 고 반환한 다음 숫자를 부정 합니다.  
   
  [!code-vb[VbVbalrOperators#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#10)]  
   
- Following the execution of these statements, `binaryResult` contains 124.45 and `unaryResult` contains –334.90.  
+ 이러한 문을 실행 한 후 `binaryResult`에는 124.45이 포함 되 고 `unaryResult`에는-334.90가 포함 됩니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
-- [-= Operator (Visual Basic)](../../../visual-basic/language-reference/operators/subtraction-assignment-operator.md)
+- [-= 연산자 (Visual Basic)](../../../visual-basic/language-reference/operators/subtraction-assignment-operator.md)
 - [산술 연산자](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
 - [Visual Basic에서의 연산자 우선 순위](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [기능별 연산자 목록](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [Arithmetic Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [Visual Basic의 산술 연산자](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

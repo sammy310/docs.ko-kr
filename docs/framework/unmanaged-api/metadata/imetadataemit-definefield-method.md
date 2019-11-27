@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432552"
 ---
 # <a name="imetadataemitdefinefield-method"></a>IMetaDataEmit::DefineField 메서드
-Creates a definition for a field with the specified metadata signature, and gets a token to that field definition.  
+지정 된 메타 데이터 시그니처를 사용 하 여 필드에 대 한 정의를 만들고 해당 필드 정의에 대 한 토큰을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -43,42 +43,42 @@ HRESULT DefineField (
   
 ## <a name="parameters"></a>매개 변수  
  `td`  
- [in] The `mdTypeDef` token for the enclosing class or interface.  
+ 진행 바깥쪽 클래스 또는 인터페이스에 대 한 `mdTypeDef` 토큰입니다.  
   
  `szName`  
- [in] The field name in Unicode.  
+ 진행 유니코드의 필드 이름입니다.  
   
  `dwFieldFlags`  
- [in] The field attributes. This is a bitmask of `CorFieldAttr` values.  
+ 진행 필드 특성입니다. `CorFieldAttr` 값의 비트 마스크입니다.  
   
  `pvSigBlob`  
- [in] The field signature as a BLOB.  
+ 진행 BLOB으로 필드 시그니처입니다.  
   
  `cbSigBlob`  
- [in] The count of bytes in `pvSigBlob`.  
+ 진행 `pvSigBlob`바이트 수입니다.  
   
  `dwCPlusTypeFlag`  
- [in] The `ELEMENT_TYPE_` *\** for the constant value. This is a `CorElementType` value. If not defining a constant value for the field, use `ELEMENT_TYPE_END`.  
+ 진행 상수 값에 대 한 `ELEMENT_TYPE_` *\** 입니다. `CorElementType` 값입니다. 필드에 대 한 상수 값을 정의 하지 않는 경우 `ELEMENT_TYPE_END`를 사용 합니다.  
   
  `pValue`  
- [in] The constant value for the field.  
+ 진행 필드의 상수 값입니다.  
   
  `cchValue`  
- [in] The size in (Unicode) characters of `pValue`.  
+ 진행 `pValue`의 (유니코드) 문자 크기입니다.  
   
  `pmd`  
- [out] The `mdFieldDef` token assigned.  
+ 제한이 할당 된 `mdFieldDef` 토큰입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [IMetaDataEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

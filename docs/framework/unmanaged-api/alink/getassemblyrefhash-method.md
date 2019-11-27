@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74433880"
 ---
 # <a name="getassemblyrefhash-method"></a>GetAssemblyRefHash 메서드
-Retrieves a hash blob for a given assembly.  
+지정 된 어셈블리에 대 한 해시 blob를 검색 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,21 +36,21 @@ HRESULT GetAssemblyRefHash(
   
 ## <a name="parameters"></a>매개 변수  
  `FileToken`  
- ID of assembly to which the hash will refer.  
+ 해시가 참조할 어셈블리의 ID입니다.  
   
  `ppvHash`  
- Receives the resulting hash blob.  
+ 결과 해시 blob을 받습니다.  
   
  `pcbHash`  
- Receives size, in bytes, of hash blob.  
+ 해시 blob의 크기 (바이트)를 수신 합니다.  
   
 ## <a name="return-value"></a>반환 값  
- Returns S_OK if the method succeeds.  
+ 메서드가 성공 하면 S_OK을 반환 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- Requires alink.h  
+ Alink 필요  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [IALink 인터페이스](ialink-interface.md)
 - [IALink2 인터페이스](ialink2-interface.md)

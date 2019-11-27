@@ -13,11 +13,11 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352890"
 ---
 # <a name="how-to-make-an-object-variable-not-refer-to-any-instance-visual-basic"></a>방법: 개체 변수가 인스턴스를 참조하지 않도록 설정(Visual Basic)
-You can disassociate an object variable from any object instance by setting it to [Nothing](../../../../visual-basic/language-reference/nothing.md).  
+개체 변수를 [Nothing](../../../../visual-basic/language-reference/nothing.md)으로 설정 하 여 개체 인스턴스의 연관을 해제할 수 있습니다.  
   
-### <a name="to-disassociate-an-object-variable-from-any-object-instance"></a>To disassociate an object variable from any object instance  
+### <a name="to-disassociate-an-object-variable-from-any-object-instance"></a>개체 인스턴스에서 개체 변수를 분리 하려면  
   
-- Set the variable to `Nothing` in an assignment statement.  
+- 대입문에서 변수를 `Nothing` 설정 합니다.  
   
     ```vb  
     ' Assume account is a defined class  
@@ -26,12 +26,12 @@ You can disassociate an object variable from any object instance by setting it t
     ```  
   
 ## <a name="robust-programming"></a>강력한 프로그래밍  
- If your code tries to access a member of an object variable that has been set to `Nothing`, a <xref:System.NullReferenceException> occurs. If you set an object variable to `Nothing` frequently, or if it is possible the variable is not initialized, it is a good idea to enclose member accesses in a `Try...Catch...Finally` block.  
+ 코드가 `Nothing`로 설정 된 개체 변수의 멤버에 액세스 하려고 하면 <xref:System.NullReferenceException> 발생 합니다. 개체 변수를 자주 `Nothing` 설정 하거나 변수가 초기화 되지 않은 경우 멤버 액세스를 `Try...Catch...Finally` 블록에 포함 하는 것이 좋습니다.  
   
 ## <a name="net-framework-security"></a>.NET Framework 보안  
- If you use an object variable for objects that contain confidential or sensitive data, you can set the variable to `Nothing` when you are not actively dealing with one of those objects. This reduces the chance of malicious code gaining access to the data.  
+ 기밀 데이터 나 중요 한 데이터가 포함 된 개체에 대해 개체 변수를 사용 하는 경우 해당 개체 중 하나를 사용 하 여 적극적으로 처리 하지 않을 때 변수를 `Nothing` 설정할 수 있습니다. 이렇게 하면 악의적인 코드가 데이터에 액세스 하는 가능성을 줄일 수 있습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - <xref:System.NullReferenceException>
 - [개체 변수](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)

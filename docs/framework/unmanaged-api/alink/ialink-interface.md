@@ -14,12 +14,12 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74441825"
 ---
 # <a name="ialink-interface"></a>IALink 인터페이스
-Helps in constructing .NET Framework assemblies. Among other things, the interface contains methods that assist in writing assembly manifests for multi-module assemblies, signing assemblies with strong names, and creating netmodules.  
+.NET Framework 어셈블리를 생성 하는 데 도움이 됩니다. 무엇 보다도 인터페이스에는 다중 모듈 어셈블리에 대 한 어셈블리 매니페스트 작성, 강력한 이름으로 어셈블리 서명, .netmodules 만들기를 지 원하는 메서드가 포함 되어 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
- [AddFile Method](addfile-method.md)  
+## <a name="in-this-section"></a>섹션 내용  
+ [AddFile 메서드](addfile-method.md)  
   
- [AddImport Method](addimport-method.md)  
+ [AddImport 메서드](addimport-method.md)  
   
  [CloseAssembly 메서드](closeassembly-method.md)  
   
@@ -51,7 +51,7 @@ Helps in constructing .NET Framework assemblies. Among other things, the interfa
   
  [GetResolutionScope 메서드](getresolutionscope-method.md)  
   
- [GetScope Method](getscope-method.md)  
+ [GetScope 메서드](getscope-method.md)  
   
  [GetWin32ResBlob 메서드](getwin32resblob-method.md)  
   
@@ -61,7 +61,7 @@ Helps in constructing .NET Framework assemblies. Among other things, the interfa
   
  [ImportTypes 메서드](importtypes-method.md)  
   
- "Init Method"  
+ "Init 메서드"  
   
  [LinkResource 메서드](linkresource-method.md)  
   
@@ -73,7 +73,7 @@ Helps in constructing .NET Framework assemblies. Among other things, the interfa
   
  [SetNonAssemblyFlags 메서드](setnonassemblyflags-method.md)  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [ALink API](index.md)
 - [IALink2 인터페이스](ialink2-interface.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439471"
 ---
 # <a name="icorprofilercallback3profilerattachcomplete-method"></a>ICorProfilerCallback3::ProfilerAttachComplete 메서드
-Called by the common language runtime (CLR) to indicate that the profiler can now call the [ICorProfilerInfo3::EnumJITedFunctions](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-enumjitedfunctions-method.md) and [ICorProfilerInfo3::EnumModules](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-enummodules-method.md) catch-up methods.  
+프로파일러가 [ICorProfilerInfo3:: EnumJITedFunctions](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-enumjitedfunctions-method.md) 및 [ICorProfilerInfo3:: enummodules](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-enummodules-method.md) catch 메서드를 호출할 수 있음을 나타내기 위해 CLR (공용 언어 런타임)에 의해 호출 됩니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -31,8 +31,8 @@ Called by the common language runtime (CLR) to indicate that the profiler can no
 HRESULT ProfilerAttachComplete ();  
 ```  
   
-## <a name="remarks"></a>주의  
- The `ProfilerAttachComplete` callback is issued after the [ICorProfilerCallback3::InitializeForAttach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md) method is called. 다음을 나타냅니다.  
+## <a name="remarks"></a>설명  
+ `ProfilerAttachComplete` 콜백은 [ICorProfilerCallback3:: InitializeForAttach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md) 메서드가 호출 된 후에 실행 됩니다. 다음을 나타냅니다.  
   
 - `InitializeForAttach`에서 프로파일러가 요청한 콜백이 활성화되었습니다.  
   
@@ -49,7 +49,7 @@ HRESULT ProfilerAttachComplete ();
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - [ICorProfilerCallback 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
 - [ICorProfilerInfo3 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)

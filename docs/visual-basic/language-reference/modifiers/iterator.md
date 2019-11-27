@@ -14,24 +14,24 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351532"
 ---
 # <a name="iterator-visual-basic"></a>반복기(Visual Basic)
-Specifies that a function or `Get` accessor is an iterator.  
+함수 또는 `Get` 접근자가 반복기 임을 지정 합니다.  
   
-## <a name="remarks"></a>주의  
- An *iterator* performs a custom iteration over a collection. An iterator uses the [Yield](../../../visual-basic/language-reference/statements/yield-statement.md) statement to return each element in the collection one at a time. When a `Yield` statement is reached, the current location in code is retained. 다음에 반복기 함수가 호출되면 해당 위치에서 실행이 다시 시작됩니다.  
+## <a name="remarks"></a>설명  
+ *반복기* 는 컬렉션에 대해 사용자 지정 반복을 수행 합니다. 반복기는 [Yield](../../../visual-basic/language-reference/statements/yield-statement.md) 문을 사용 하 여 컬렉션의 각 요소를 한 번에 하나씩 반환 합니다. `Yield` 문에 도달 하면 코드의 현재 위치가 유지 됩니다. 다음에 반복기 함수가 호출되면 해당 위치에서 실행이 다시 시작됩니다.  
   
- An iterator can be implemented as a function or as a `Get` accessor of a property definition. The `Iterator` modifier appears in the declaration of the iterator function or `Get` accessor.  
+ 반복기는 함수 또는 속성 정의의 `Get` 접근자로 구현할 수 있습니다. `Iterator` 한정자는 반복기 함수 또는 `Get` 접근자의 선언에 나타납니다.  
   
- You call an iterator from client code by using a [For Each...Next Statement](../../../visual-basic/language-reference/statements/for-each-next-statement.md).  
+ For Each ...를 사용 하 여 클라이언트 코드에서 반복기를 호출 합니다. [ 다음 문](../../../visual-basic/language-reference/statements/for-each-next-statement.md).  
   
- The return type of an iterator function or `Get` accessor can be <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator>, or <xref:System.Collections.Generic.IEnumerator%601>.  
+ 반복기 함수 또는 `Get` 접근자의 반환 형식은 <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator>또는 <xref:System.Collections.Generic.IEnumerator%601>수 있습니다.  
   
- An iterator cannot have any `ByRef` parameters.  
+ 반복기에는 `ByRef` 매개 변수를 사용할 수 없습니다.  
   
  반복기는 이벤트, 인스턴스 생성자, 정적 생성자 또는 정적 소멸자에서 발생할 수 없습니다.  
   
- An iterator can be an anonymous function. 자세한 내용은 [반복기](../../programming-guide/concepts/iterators.md)를 참조하세요.  
+ 반복기는 익명 함수 일 수 있습니다. 자세한 내용은 [반복기](../../programming-guide/concepts/iterators.md)를 참조하세요.  
   
-## <a name="usage"></a>사용 현황  
+## <a name="usage"></a>사용법  
  `Iterator` 한정자는 다음 컨텍스트에서 사용할 수 있습니다.  
   
 - [Function 문](../../../visual-basic/language-reference/statements/function-statement.md)  
@@ -39,18 +39,18 @@ Specifies that a function or `Get` accessor is an iterator.
 - [Property 문](../../../visual-basic/language-reference/statements/property-statement.md)  
   
 ## <a name="example"></a>예제  
- The following example demonstrates an iterator function. The iterator function has a `Yield` statement that is inside a [For…Next](../../../visual-basic/language-reference/statements/for-next-statement.md) loop. Each iteration of the [For Each](../../../visual-basic/language-reference/statements/for-each-next-statement.md) statement body in `Main` creates a call to the `Power` iterator function. 반복기 함수를 호출할 때마다 다음에 `Yield` 루프를 반복하는 도중에 `For…Next` 문이 실행됩니다.  
+ 다음 예제에서는 반복기 함수를 보여 줍니다. 반복기 함수에는 [에 대 한 `Yield` 문이 있습니다. Next](../../../visual-basic/language-reference/statements/for-next-statement.md) 루프. `Main`의 각 문 본문 [에 대 한](../../../visual-basic/language-reference/statements/for-each-next-statement.md) 각 반복은 `Power` 반복기 함수에 대 한 호출을 만듭니다. 반복기 함수를 호출할 때마다 다음에 `Yield` 루프를 반복하는 도중에 `For…Next` 문이 실행됩니다.  
   
  [!code-vb[VbVbalrStatements#98](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class2.vb#98)]  
   
 ## <a name="example"></a>예제  
- 다음 예제는 반복기인 `Get` 접근자에 대해 설명합니다. The `Iterator` modifier is in the property declaration.  
+ 다음 예제는 반복기인 `Get` 접근자에 대해 설명합니다. `Iterator` 한정자는 속성 선언에 있습니다.  
   
  [!code-vb[VbVbalrStatements#99](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class2.vb#99)]  
   
- For additional examples, see [Iterators](../../programming-guide/concepts/iterators.md).  
+ 추가 예제는 [반복기](../../programming-guide/concepts/iterators.md)를 참조 하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 
 - <xref:System.Runtime.CompilerServices.IteratorStateMachineAttribute>
 - [반복기](../../programming-guide/concepts/iterators.md)

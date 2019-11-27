@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446541"
 ---
 # <a name="embedresource-method"></a>EmbedResource 메서드
-Declares an embedded resource. This method does not actually embed the resource.  
+포함 리소스를 선언 합니다. 이 메서드는 실제로 리소스를 포함 하지 않습니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,27 +39,27 @@ HRESULT EmbedResource(
   
 ## <a name="parameters"></a>매개 변수  
  `AssemblyID`  
- ID of the assembly.  
+ 어셈블리의 ID입니다.  
   
  `FileToken`  
- File token or assembly ID of file that contains the resource.  
+ 리소스를 포함 하는 파일의 파일 토큰 또는 어셈블리 ID입니다.  
   
  `pszResourceName`  
- Name of the resource.  
+ 리소스의 이름입니다.  
   
  `dwOffset`  
- Offset of resource from RVA.  
+ RVA에서 리소스의 오프셋입니다.  
   
  `dwFlags`  
- Accessibility flags such as `mrPublic` and `mrPrivate`. These flags may be passed to [DefineExportedType Method](../metadata/imetadataassemblyemit-defineexportedtype-method.md).  
+ `mrPublic` 및 `mrPrivate`와 같은 내게 필요한 옵션 플래그입니다. 이러한 플래그는 [DefineExportedType 메서드에](../metadata/imetadataassemblyemit-defineexportedtype-method.md)전달 될 수 있습니다.  
   
 ## <a name="return-value"></a>반환 값  
- Returns S_OK if the method succeeds.  
+ 메서드가 성공 하면 S_OK을 반환 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- Requires alink.h.  
+ Alink가 필요 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IALink 인터페이스](ialink-interface.md)
 - [IALink2 인터페이스](ialink2-interface.md)
