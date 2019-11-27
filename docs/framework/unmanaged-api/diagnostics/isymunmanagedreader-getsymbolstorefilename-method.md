@@ -22,10 +22,10 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431233"
 ---
-# <a name="isymunmanagedreadergetsymbolstorefilename-method"></a><span data-ttu-id="18495-102">ISymUnmanagedReader::GetSymbolStoreFileName 메서드</span><span class="sxs-lookup"><span data-stu-id="18495-102">ISymUnmanagedReader::GetSymbolStoreFileName Method</span></span>
-<span data-ttu-id="18495-103">Provides the on-disk file name of the symbol store.</span><span class="sxs-lookup"><span data-stu-id="18495-103">Provides the on-disk file name of the symbol store.</span></span>  
+# <a name="isymunmanagedreadergetsymbolstorefilename-method"></a><span data-ttu-id="6f2c8-102">ISymUnmanagedReader::GetSymbolStoreFileName 메서드</span><span class="sxs-lookup"><span data-stu-id="6f2c8-102">ISymUnmanagedReader::GetSymbolStoreFileName Method</span></span>
+<span data-ttu-id="6f2c8-103">기호 저장소의 디스크에 있는 파일 이름을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="6f2c8-103">Provides the on-disk file name of the symbol store.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="18495-104">구문</span><span class="sxs-lookup"><span data-stu-id="18495-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6f2c8-104">구문</span><span class="sxs-lookup"><span data-stu-id="6f2c8-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetSymbolStoreFileName (  
@@ -35,22 +35,22 @@ HRESULT GetSymbolStoreFileName (
         length_is (*pcchName)] WCHAR szName[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="18495-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="18495-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="6f2c8-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="6f2c8-105">Parameters</span></span>  
  `cchName`  
- <span data-ttu-id="18495-106">[in] The size of the `szName` buffer.</span><span class="sxs-lookup"><span data-stu-id="18495-106">[in] The size of the `szName` buffer.</span></span>  
+ <span data-ttu-id="6f2c8-106">진행 `szName` 버퍼의 크기입니다.</span><span class="sxs-lookup"><span data-stu-id="6f2c8-106">[in] The size of the `szName` buffer.</span></span>  
   
  `pcchName`  
- <span data-ttu-id="18495-107">[out] A pointer to the variable that receives the length of the name returned in `szName`, including the null termination.</span><span class="sxs-lookup"><span data-stu-id="18495-107">[out] A pointer to the variable that receives the length of the name returned in `szName`, including the null termination.</span></span>  
+ <span data-ttu-id="6f2c8-107">제한이 Null 종료를 포함 하 여 `szName`에서 반환 된 이름의 길이를 받는 변수에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="6f2c8-107">[out] A pointer to the variable that receives the length of the name returned in `szName`, including the null termination.</span></span>  
   
  `szName`  
- <span data-ttu-id="18495-108">[out] A pointer to the variable that receives the file name of the symbol store.</span><span class="sxs-lookup"><span data-stu-id="18495-108">[out] A pointer to the variable that receives the file name of the symbol store.</span></span>  
+ <span data-ttu-id="6f2c8-108">제한이 기호 저장소의 파일 이름을 받는 변수에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="6f2c8-108">[out] A pointer to the variable that receives the file name of the symbol store.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="18495-109">반환 값</span><span class="sxs-lookup"><span data-stu-id="18495-109">Return Value</span></span>  
- <span data-ttu-id="18495-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="18495-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="6f2c8-109">반환 값</span><span class="sxs-lookup"><span data-stu-id="6f2c8-109">Return Value</span></span>  
+ <span data-ttu-id="6f2c8-110">메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="6f2c8-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="18495-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="18495-111">Requirements</span></span>  
- <span data-ttu-id="18495-112">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="18495-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6f2c8-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="6f2c8-111">Requirements</span></span>  
+ <span data-ttu-id="6f2c8-112">**헤더:** CorSym, CorSym</span><span class="sxs-lookup"><span data-stu-id="6f2c8-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="18495-113">참조</span><span class="sxs-lookup"><span data-stu-id="18495-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6f2c8-113">참고 항목</span><span class="sxs-lookup"><span data-stu-id="6f2c8-113">See also</span></span>
 
-- [<span data-ttu-id="18495-114">ISymUnmanagedReader 인터페이스</span><span class="sxs-lookup"><span data-stu-id="18495-114">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [<span data-ttu-id="6f2c8-114">ISymUnmanagedReader 인터페이스</span><span class="sxs-lookup"><span data-stu-id="6f2c8-114">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

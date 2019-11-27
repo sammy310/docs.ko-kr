@@ -21,10 +21,10 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74430695"
 ---
-# <a name="getwin32resblob-method"></a><span data-ttu-id="fda9d-102">GetWin32ResBlob 메서드</span><span class="sxs-lookup"><span data-stu-id="fda9d-102">GetWin32ResBlob Method</span></span>
-<span data-ttu-id="fda9d-103">Retrieves Win32 resource blob.</span><span class="sxs-lookup"><span data-stu-id="fda9d-103">Retrieves Win32 resource blob.</span></span> <span data-ttu-id="fda9d-104">Call this method after setting assembly options.</span><span class="sxs-lookup"><span data-stu-id="fda9d-104">Call this method after setting assembly options.</span></span>  
+# <a name="getwin32resblob-method"></a><span data-ttu-id="bb5bf-102">GetWin32ResBlob 메서드</span><span class="sxs-lookup"><span data-stu-id="bb5bf-102">GetWin32ResBlob Method</span></span>
+<span data-ttu-id="bb5bf-103">Win32 리소스 blob을 검색 합니다.</span><span class="sxs-lookup"><span data-stu-id="bb5bf-103">Retrieves Win32 resource blob.</span></span> <span data-ttu-id="bb5bf-104">어셈블리 옵션을 설정한 후이 메서드를 호출 합니다.</span><span class="sxs-lookup"><span data-stu-id="bb5bf-104">Call this method after setting assembly options.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fda9d-105">구문</span><span class="sxs-lookup"><span data-stu-id="fda9d-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="bb5bf-105">구문</span><span class="sxs-lookup"><span data-stu-id="bb5bf-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetWin32ResBlob(  
@@ -37,33 +37,33 @@ HRESULT GetWin32ResBlob(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="fda9d-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="fda9d-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="bb5bf-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="bb5bf-106">Parameters</span></span>  
  `AssemblyID`  
- <span data-ttu-id="fda9d-107">ID of the assembly.</span><span class="sxs-lookup"><span data-stu-id="fda9d-107">ID of the assembly.</span></span>  
+ <span data-ttu-id="bb5bf-107">어셈블리의 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="bb5bf-107">ID of the assembly.</span></span>  
   
  `FileToken`  
- <span data-ttu-id="fda9d-108">File token used to retrieve the filename to be used when constructing the Win32 Version resource</span><span class="sxs-lookup"><span data-stu-id="fda9d-108">File token used to retrieve the filename to be used when constructing the Win32 Version resource</span></span>  
+ <span data-ttu-id="bb5bf-108">Win32 버전 리소스를 생성할 때 사용할 파일 이름을 검색 하는 데 사용 되는 파일 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="bb5bf-108">File token used to retrieve the filename to be used when constructing the Win32 Version resource</span></span>  
   
  `fDll`  
- <span data-ttu-id="fda9d-109">TRUE if file is a DLL, false for an EXE.</span><span class="sxs-lookup"><span data-stu-id="fda9d-109">TRUE if file is a DLL, false for an EXE.</span></span>  
+ <span data-ttu-id="bb5bf-109">파일이 DLL 이면 TRUE이 고, EXE의 경우 false입니다.</span><span class="sxs-lookup"><span data-stu-id="bb5bf-109">TRUE if file is a DLL, false for an EXE.</span></span>  
   
  `pszIconFile`  
- <span data-ttu-id="fda9d-110">Optional icon to insert into the resource blob.</span><span class="sxs-lookup"><span data-stu-id="fda9d-110">Optional icon to insert into the resource blob.</span></span>  
+ <span data-ttu-id="bb5bf-110">리소스 blob에 삽입할 선택적 아이콘입니다.</span><span class="sxs-lookup"><span data-stu-id="bb5bf-110">Optional icon to insert into the resource blob.</span></span>  
   
  `ppResBlob`  
- <span data-ttu-id="fda9d-111">Receives the resource blob.</span><span class="sxs-lookup"><span data-stu-id="fda9d-111">Receives the resource blob.</span></span>  
+ <span data-ttu-id="bb5bf-111">리소스 blob을 받습니다.</span><span class="sxs-lookup"><span data-stu-id="bb5bf-111">Receives the resource blob.</span></span>  
   
  `pcbResBlob`  
- <span data-ttu-id="fda9d-112">Receives the size of the blob.</span><span class="sxs-lookup"><span data-stu-id="fda9d-112">Receives the size of the blob.</span></span>  
+ <span data-ttu-id="bb5bf-112">Blob의 크기를 수신 합니다.</span><span class="sxs-lookup"><span data-stu-id="bb5bf-112">Receives the size of the blob.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="fda9d-113">반환 값</span><span class="sxs-lookup"><span data-stu-id="fda9d-113">Return Value</span></span>  
- <span data-ttu-id="fda9d-114">Returns S_OK if the method succeeds.</span><span class="sxs-lookup"><span data-stu-id="fda9d-114">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="bb5bf-113">반환 값</span><span class="sxs-lookup"><span data-stu-id="bb5bf-113">Return Value</span></span>  
+ <span data-ttu-id="bb5bf-114">메서드가 성공 하면 S_OK을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="bb5bf-114">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="fda9d-115">요구 사항</span><span class="sxs-lookup"><span data-stu-id="fda9d-115">Requirements</span></span>  
- <span data-ttu-id="fda9d-116">Requires alink.h</span><span class="sxs-lookup"><span data-stu-id="fda9d-116">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="bb5bf-115">요구 사항</span><span class="sxs-lookup"><span data-stu-id="bb5bf-115">Requirements</span></span>  
+ <span data-ttu-id="bb5bf-116">Alink 필요</span><span class="sxs-lookup"><span data-stu-id="bb5bf-116">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fda9d-117">참조</span><span class="sxs-lookup"><span data-stu-id="fda9d-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bb5bf-117">참고자료</span><span class="sxs-lookup"><span data-stu-id="bb5bf-117">See also</span></span>
 
-- [<span data-ttu-id="fda9d-118">IALink 인터페이스</span><span class="sxs-lookup"><span data-stu-id="fda9d-118">IALink Interface</span></span>](ialink-interface.md)
-- [<span data-ttu-id="fda9d-119">IALink2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="fda9d-119">IALink2 Interface</span></span>](ialink2-interface.md)
-- [<span data-ttu-id="fda9d-120">ALink API</span><span class="sxs-lookup"><span data-stu-id="fda9d-120">ALink API</span></span>](index.md)
+- [<span data-ttu-id="bb5bf-118">IALink 인터페이스</span><span class="sxs-lookup"><span data-stu-id="bb5bf-118">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="bb5bf-119">IALink2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="bb5bf-119">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="bb5bf-120">ALink API</span><span class="sxs-lookup"><span data-stu-id="bb5bf-120">ALink API</span></span>](index.md)

@@ -22,10 +22,10 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432552"
 ---
-# <a name="imetadataemitdefinefield-method"></a><span data-ttu-id="8fb92-102">IMetaDataEmit::DefineField 메서드</span><span class="sxs-lookup"><span data-stu-id="8fb92-102">IMetaDataEmit::DefineField Method</span></span>
-<span data-ttu-id="8fb92-103">Creates a definition for a field with the specified metadata signature, and gets a token to that field definition.</span><span class="sxs-lookup"><span data-stu-id="8fb92-103">Creates a definition for a field with the specified metadata signature, and gets a token to that field definition.</span></span>  
+# <a name="imetadataemitdefinefield-method"></a><span data-ttu-id="defd7-102">IMetaDataEmit::DefineField 메서드</span><span class="sxs-lookup"><span data-stu-id="defd7-102">IMetaDataEmit::DefineField Method</span></span>
+<span data-ttu-id="defd7-103">지정 된 메타 데이터 시그니처를 사용 하 여 필드에 대 한 정의를 만들고 해당 필드 정의에 대 한 토큰을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="defd7-103">Creates a definition for a field with the specified metadata signature, and gets a token to that field definition.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8fb92-104">구문</span><span class="sxs-lookup"><span data-stu-id="8fb92-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="defd7-104">구문</span><span class="sxs-lookup"><span data-stu-id="defd7-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT DefineField (   
@@ -41,44 +41,44 @@ HRESULT DefineField (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="8fb92-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="8fb92-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="defd7-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="defd7-105">Parameters</span></span>  
  `td`  
- <span data-ttu-id="8fb92-106">[in] The `mdTypeDef` token for the enclosing class or interface.</span><span class="sxs-lookup"><span data-stu-id="8fb92-106">[in] The `mdTypeDef` token for the enclosing class or interface.</span></span>  
+ <span data-ttu-id="defd7-106">진행 바깥쪽 클래스 또는 인터페이스에 대 한 `mdTypeDef` 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="defd7-106">[in] The `mdTypeDef` token for the enclosing class or interface.</span></span>  
   
  `szName`  
- <span data-ttu-id="8fb92-107">[in] The field name in Unicode.</span><span class="sxs-lookup"><span data-stu-id="8fb92-107">[in] The field name in Unicode.</span></span>  
+ <span data-ttu-id="defd7-107">진행 유니코드의 필드 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="defd7-107">[in] The field name in Unicode.</span></span>  
   
  `dwFieldFlags`  
- <span data-ttu-id="8fb92-108">[in] The field attributes.</span><span class="sxs-lookup"><span data-stu-id="8fb92-108">[in] The field attributes.</span></span> <span data-ttu-id="8fb92-109">This is a bitmask of `CorFieldAttr` values.</span><span class="sxs-lookup"><span data-stu-id="8fb92-109">This is a bitmask of `CorFieldAttr` values.</span></span>  
+ <span data-ttu-id="defd7-108">진행 필드 특성입니다.</span><span class="sxs-lookup"><span data-stu-id="defd7-108">[in] The field attributes.</span></span> <span data-ttu-id="defd7-109">`CorFieldAttr` 값의 비트 마스크입니다.</span><span class="sxs-lookup"><span data-stu-id="defd7-109">This is a bitmask of `CorFieldAttr` values.</span></span>  
   
  `pvSigBlob`  
- <span data-ttu-id="8fb92-110">[in] The field signature as a BLOB.</span><span class="sxs-lookup"><span data-stu-id="8fb92-110">[in] The field signature as a BLOB.</span></span>  
+ <span data-ttu-id="defd7-110">진행 BLOB으로 필드 시그니처입니다.</span><span class="sxs-lookup"><span data-stu-id="defd7-110">[in] The field signature as a BLOB.</span></span>  
   
  `cbSigBlob`  
- <span data-ttu-id="8fb92-111">[in] The count of bytes in `pvSigBlob`.</span><span class="sxs-lookup"><span data-stu-id="8fb92-111">[in] The count of bytes in `pvSigBlob`.</span></span>  
+ <span data-ttu-id="defd7-111">진행 `pvSigBlob`바이트 수입니다.</span><span class="sxs-lookup"><span data-stu-id="defd7-111">[in] The count of bytes in `pvSigBlob`.</span></span>  
   
  `dwCPlusTypeFlag`  
- <span data-ttu-id="8fb92-112">[in] The `ELEMENT_TYPE_` *\** for the constant value.</span><span class="sxs-lookup"><span data-stu-id="8fb92-112">[in] The `ELEMENT_TYPE_`*\** for the constant value.</span></span> <span data-ttu-id="8fb92-113">This is a `CorElementType` value.</span><span class="sxs-lookup"><span data-stu-id="8fb92-113">This is a `CorElementType` value.</span></span> <span data-ttu-id="8fb92-114">If not defining a constant value for the field, use `ELEMENT_TYPE_END`.</span><span class="sxs-lookup"><span data-stu-id="8fb92-114">If not defining a constant value for the field, use `ELEMENT_TYPE_END`.</span></span>  
+ <span data-ttu-id="defd7-112">진행 상수 값에 대 한 `ELEMENT_TYPE_` *\** 입니다.</span><span class="sxs-lookup"><span data-stu-id="defd7-112">[in] The `ELEMENT_TYPE_`*\** for the constant value.</span></span> <span data-ttu-id="defd7-113">`CorElementType` 값입니다.</span><span class="sxs-lookup"><span data-stu-id="defd7-113">This is a `CorElementType` value.</span></span> <span data-ttu-id="defd7-114">필드에 대 한 상수 값을 정의 하지 않는 경우 `ELEMENT_TYPE_END`를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="defd7-114">If not defining a constant value for the field, use `ELEMENT_TYPE_END`.</span></span>  
   
  `pValue`  
- <span data-ttu-id="8fb92-115">[in] The constant value for the field.</span><span class="sxs-lookup"><span data-stu-id="8fb92-115">[in] The constant value for the field.</span></span>  
+ <span data-ttu-id="defd7-115">진행 필드의 상수 값입니다.</span><span class="sxs-lookup"><span data-stu-id="defd7-115">[in] The constant value for the field.</span></span>  
   
  `cchValue`  
- <span data-ttu-id="8fb92-116">[in] The size in (Unicode) characters of `pValue`.</span><span class="sxs-lookup"><span data-stu-id="8fb92-116">[in] The size in (Unicode) characters of `pValue`.</span></span>  
+ <span data-ttu-id="defd7-116">진행 `pValue`의 (유니코드) 문자 크기입니다.</span><span class="sxs-lookup"><span data-stu-id="defd7-116">[in] The size in (Unicode) characters of `pValue`.</span></span>  
   
  `pmd`  
- <span data-ttu-id="8fb92-117">[out] The `mdFieldDef` token assigned.</span><span class="sxs-lookup"><span data-stu-id="8fb92-117">[out] The `mdFieldDef` token assigned.</span></span>  
+ <span data-ttu-id="defd7-117">제한이 할당 된 `mdFieldDef` 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="defd7-117">[out] The `mdFieldDef` token assigned.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8fb92-118">요구 사항</span><span class="sxs-lookup"><span data-stu-id="8fb92-118">Requirements</span></span>  
- <span data-ttu-id="8fb92-119">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="8fb92-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="defd7-118">요구 사항</span><span class="sxs-lookup"><span data-stu-id="defd7-118">Requirements</span></span>  
+ <span data-ttu-id="defd7-119">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="defd7-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8fb92-120">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="8fb92-120">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="defd7-120">**헤더:** Cor</span><span class="sxs-lookup"><span data-stu-id="defd7-120">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="8fb92-121">**Library:** Used as a resource in MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="8fb92-121">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="defd7-121">**라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="defd7-121">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="8fb92-122">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8fb92-122">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="defd7-122">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="defd7-122">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8fb92-123">참조</span><span class="sxs-lookup"><span data-stu-id="8fb92-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="defd7-123">참고자료</span><span class="sxs-lookup"><span data-stu-id="defd7-123">See also</span></span>
 
-- [<span data-ttu-id="8fb92-124">IMetaDataEmit 인터페이스</span><span class="sxs-lookup"><span data-stu-id="8fb92-124">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="8fb92-125">IMetaDataEmit2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="8fb92-125">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="defd7-124">IMetaDataEmit 인터페이스</span><span class="sxs-lookup"><span data-stu-id="defd7-124">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="defd7-125">IMetaDataEmit2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="defd7-125">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

@@ -22,10 +22,10 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439147"
 ---
-# <a name="icorprofilerinfogetfunctionfromtoken-method"></a><span data-ttu-id="6386b-102">ICorProfilerInfo::GetFunctionFromToken 메서드</span><span class="sxs-lookup"><span data-stu-id="6386b-102">ICorProfilerInfo::GetFunctionFromToken Method</span></span>
-<span data-ttu-id="6386b-103">Gets the ID of a function.</span><span class="sxs-lookup"><span data-stu-id="6386b-103">Gets the ID of a function.</span></span> <span data-ttu-id="6386b-104">This method is obsolete in the .NET Framework version 2.0.</span><span class="sxs-lookup"><span data-stu-id="6386b-104">This method is obsolete in the .NET Framework version 2.0.</span></span> <span data-ttu-id="6386b-105">Use the [ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctionfromtokenandtypeargs-method.md) method instead.</span><span class="sxs-lookup"><span data-stu-id="6386b-105">Use the [ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctionfromtokenandtypeargs-method.md) method instead.</span></span>  
+# <a name="icorprofilerinfogetfunctionfromtoken-method"></a><span data-ttu-id="52a8f-102">ICorProfilerInfo::GetFunctionFromToken 메서드</span><span class="sxs-lookup"><span data-stu-id="52a8f-102">ICorProfilerInfo::GetFunctionFromToken Method</span></span>
+<span data-ttu-id="52a8f-103">함수의 ID를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="52a8f-103">Gets the ID of a function.</span></span> <span data-ttu-id="52a8f-104">이 메서드는 .NET Framework 버전 2.0에서 사용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="52a8f-104">This method is obsolete in the .NET Framework version 2.0.</span></span> <span data-ttu-id="52a8f-105">대신 [ICorProfilerInfo2:: GetFunctionFromTokenAndTypeArgs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctionfromtokenandtypeargs-method.md) 메서드를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="52a8f-105">Use the [ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctionfromtokenandtypeargs-method.md) method instead.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6386b-106">구문</span><span class="sxs-lookup"><span data-stu-id="6386b-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="52a8f-106">구문</span><span class="sxs-lookup"><span data-stu-id="52a8f-106">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetFunctionFromToken(  
@@ -34,18 +34,18 @@ HRESULT GetFunctionFromToken(
     [out] FunctionID *pFunctionId);  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="6386b-107">주의</span><span class="sxs-lookup"><span data-stu-id="6386b-107">Remarks</span></span>  
- <span data-ttu-id="6386b-108">The `GetFunctionFromToken` method will not work for generic functions or functions in generic types; it is now obsolete.</span><span class="sxs-lookup"><span data-stu-id="6386b-108">The `GetFunctionFromToken` method will not work for generic functions or functions in generic types; it is now obsolete.</span></span> <span data-ttu-id="6386b-109">Use `ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs` for all functions.</span><span class="sxs-lookup"><span data-stu-id="6386b-109">Use `ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs` for all functions.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="52a8f-107">설명</span><span class="sxs-lookup"><span data-stu-id="52a8f-107">Remarks</span></span>  
+ <span data-ttu-id="52a8f-108">제네릭 함수 또는 제네릭 형식의 함수에는 `GetFunctionFromToken` 메서드를 사용할 수 없습니다. 이제 사용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="52a8f-108">The `GetFunctionFromToken` method will not work for generic functions or functions in generic types; it is now obsolete.</span></span> <span data-ttu-id="52a8f-109">모든 함수에 대해 `ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs`를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="52a8f-109">Use `ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs` for all functions.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6386b-110">요구 사항</span><span class="sxs-lookup"><span data-stu-id="6386b-110">Requirements</span></span>  
- <span data-ttu-id="6386b-111">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="6386b-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="52a8f-110">요구 사항</span><span class="sxs-lookup"><span data-stu-id="52a8f-110">Requirements</span></span>  
+ <span data-ttu-id="52a8f-111">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="52a8f-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6386b-112">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="6386b-112">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="52a8f-112">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="52a8f-112">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="6386b-113">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6386b-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="52a8f-113">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="52a8f-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="6386b-114">**.NET Framework Versions:** 1.1, 1.0</span><span class="sxs-lookup"><span data-stu-id="6386b-114">**.NET Framework Versions:** 1.1, 1.0</span></span>  
+ <span data-ttu-id="52a8f-114">**.NET Framework 버전:** 1.1, 1.0</span><span class="sxs-lookup"><span data-stu-id="52a8f-114">**.NET Framework Versions:** 1.1, 1.0</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6386b-115">참조</span><span class="sxs-lookup"><span data-stu-id="6386b-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="52a8f-115">참고자료</span><span class="sxs-lookup"><span data-stu-id="52a8f-115">See also</span></span>
 
-- [<span data-ttu-id="6386b-116">ICorProfilerInfo 인터페이스</span><span class="sxs-lookup"><span data-stu-id="6386b-116">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="52a8f-116">ICorProfilerInfo 인터페이스</span><span class="sxs-lookup"><span data-stu-id="52a8f-116">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

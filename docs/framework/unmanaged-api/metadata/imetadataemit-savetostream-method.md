@@ -22,10 +22,10 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74435933"
 ---
-# <a name="imetadataemitsavetostream-method"></a><span data-ttu-id="8eef7-102">IMetaDataEmit::SaveToStream 메서드</span><span class="sxs-lookup"><span data-stu-id="8eef7-102">IMetaDataEmit::SaveToStream Method</span></span>
-<span data-ttu-id="8eef7-103">Saves all metadata in the current scope to the specified `IStream`.</span><span class="sxs-lookup"><span data-stu-id="8eef7-103">Saves all metadata in the current scope to the specified `IStream`.</span></span>  
+# <a name="imetadataemitsavetostream-method"></a><span data-ttu-id="de194-102">IMetaDataEmit::SaveToStream 메서드</span><span class="sxs-lookup"><span data-stu-id="de194-102">IMetaDataEmit::SaveToStream Method</span></span>
+<span data-ttu-id="de194-103">현재 범위에 있는 모든 메타 데이터를 지정 된 `IStream`에 저장 합니다.</span><span class="sxs-lookup"><span data-stu-id="de194-103">Saves all metadata in the current scope to the specified `IStream`.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8eef7-104">구문</span><span class="sxs-lookup"><span data-stu-id="8eef7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="de194-104">구문</span><span class="sxs-lookup"><span data-stu-id="de194-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SaveToStream (   
@@ -34,23 +34,23 @@ HRESULT SaveToStream (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="8eef7-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="8eef7-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="de194-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="de194-105">Parameters</span></span>  
  `pIStream`  
- <span data-ttu-id="8eef7-106">[in] The writable stream to save to.</span><span class="sxs-lookup"><span data-stu-id="8eef7-106">[in] The writable stream to save to.</span></span>  
+ <span data-ttu-id="de194-106">진행 저장할 쓰기 가능한 스트림입니다.</span><span class="sxs-lookup"><span data-stu-id="de194-106">[in] The writable stream to save to.</span></span>  
   
  `dwSaveFlags`  
- <span data-ttu-id="8eef7-107">[in] 예약되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8eef7-107">[in] Reserved.</span></span> <span data-ttu-id="8eef7-108">Must be zero.</span><span class="sxs-lookup"><span data-stu-id="8eef7-108">Must be zero.</span></span>  
+ <span data-ttu-id="de194-107">[in] 예약되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="de194-107">[in] Reserved.</span></span> <span data-ttu-id="de194-108">0 이어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="de194-108">Must be zero.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8eef7-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="8eef7-109">Requirements</span></span>  
- <span data-ttu-id="8eef7-110">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="8eef7-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="de194-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="de194-109">Requirements</span></span>  
+ <span data-ttu-id="de194-110">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="de194-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8eef7-111">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="8eef7-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="de194-111">**헤더:** Cor</span><span class="sxs-lookup"><span data-stu-id="de194-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="8eef7-112">**Library:** Used as a resource in MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="8eef7-112">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="de194-112">**라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="de194-112">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="8eef7-113">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8eef7-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="de194-113">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="de194-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8eef7-114">참조</span><span class="sxs-lookup"><span data-stu-id="8eef7-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="de194-114">참고 항목</span><span class="sxs-lookup"><span data-stu-id="de194-114">See also</span></span>
 
-- [<span data-ttu-id="8eef7-115">IMetaDataEmit 인터페이스</span><span class="sxs-lookup"><span data-stu-id="8eef7-115">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="8eef7-116">IMetaDataEmit2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="8eef7-116">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="de194-115">IMetaDataEmit 인터페이스</span><span class="sxs-lookup"><span data-stu-id="de194-115">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="de194-116">IMetaDataEmit2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="de194-116">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

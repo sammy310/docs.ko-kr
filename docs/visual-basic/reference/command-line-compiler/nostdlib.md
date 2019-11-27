@@ -13,34 +13,34 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347908"
 ---
-# <a name="-nostdlib-visual-basic"></a><span data-ttu-id="1cd85-102">-nostdlib (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1cd85-102">-nostdlib (Visual Basic)</span></span>
-<span data-ttu-id="1cd85-103">Causes the compiler not to automatically reference the standard libraries.</span><span class="sxs-lookup"><span data-stu-id="1cd85-103">Causes the compiler not to automatically reference the standard libraries.</span></span>  
+# <a name="-nostdlib-visual-basic"></a><span data-ttu-id="a0e7a-102">-nostdlib (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a0e7a-102">-nostdlib (Visual Basic)</span></span>
+<span data-ttu-id="a0e7a-103">컴파일러가 표준 라이브러리를 자동으로 참조 하지 않도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="a0e7a-103">Causes the compiler not to automatically reference the standard libraries.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1cd85-104">구문</span><span class="sxs-lookup"><span data-stu-id="1cd85-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a0e7a-104">구문</span><span class="sxs-lookup"><span data-stu-id="a0e7a-104">Syntax</span></span>  
   
 ```console  
 -nostdlib  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="1cd85-105">주의</span><span class="sxs-lookup"><span data-stu-id="1cd85-105">Remarks</span></span>  
- <span data-ttu-id="1cd85-106">The `-nostdlib` option removes the automatic reference to the System.dll assembly and prevents the compiler from reading the Vbc.rsp file.</span><span class="sxs-lookup"><span data-stu-id="1cd85-106">The `-nostdlib` option removes the automatic reference to the System.dll assembly and prevents the compiler from reading the Vbc.rsp file.</span></span> <span data-ttu-id="1cd85-107">The Vbc.rsp file, which is located in the same directory as the Vbc.exe file, references the commonly used .NET Framework assemblies and imports the `System` and `Microsoft.VisualBasic` namespaces.</span><span class="sxs-lookup"><span data-stu-id="1cd85-107">The Vbc.rsp file, which is located in the same directory as the Vbc.exe file, references the commonly used .NET Framework assemblies and imports the `System` and `Microsoft.VisualBasic` namespaces.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a0e7a-105">설명</span><span class="sxs-lookup"><span data-stu-id="a0e7a-105">Remarks</span></span>  
+ <span data-ttu-id="a0e7a-106">`-nostdlib` 옵션은 System.object 어셈블리에 대 한 자동 참조를 제거 하 고 컴파일러에서 Vbc.rsp 파일을 읽을 수 없도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="a0e7a-106">The `-nostdlib` option removes the automatic reference to the System.dll assembly and prevents the compiler from reading the Vbc.rsp file.</span></span> <span data-ttu-id="a0e7a-107">Vbc.exe 파일과 동일한 디렉터리에 있는 Vbc.exe 파일은 일반적으로 사용 되는 .NET Framework 어셈블리를 참조 하 고 `System` 및 `Microsoft.VisualBasic` 네임 스페이스를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="a0e7a-107">The Vbc.rsp file, which is located in the same directory as the Vbc.exe file, references the commonly used .NET Framework assemblies and imports the `System` and `Microsoft.VisualBasic` namespaces.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="1cd85-108">The Mscorlib.dll and Microsoft.VisualBasic.dll assemblies are always referenced.</span><span class="sxs-lookup"><span data-stu-id="1cd85-108">The Mscorlib.dll and Microsoft.VisualBasic.dll assemblies are always referenced.</span></span>  
+> <span data-ttu-id="a0e7a-108">Mscorlib.dll 및 Microsoft.visualbasic 어셈블리는 항상 참조 됩니다.</span><span class="sxs-lookup"><span data-stu-id="a0e7a-108">The Mscorlib.dll and Microsoft.VisualBasic.dll assemblies are always referenced.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="1cd85-109">The `-nostdlib` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.</span><span class="sxs-lookup"><span data-stu-id="1cd85-109">The `-nostdlib` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.</span></span>  
+> <span data-ttu-id="a0e7a-109">`-nostdlib` 옵션은 Visual Studio 개발 환경에서 사용할 수 없습니다. 명령줄에서 컴파일하는 경우에만 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a0e7a-109">The `-nostdlib` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="1cd85-110">예제</span><span class="sxs-lookup"><span data-stu-id="1cd85-110">Example</span></span>  
- <span data-ttu-id="1cd85-111">The following code compiles `T2.vb` without referencing the standard libraries.</span><span class="sxs-lookup"><span data-stu-id="1cd85-111">The following code compiles `T2.vb` without referencing the standard libraries.</span></span> <span data-ttu-id="1cd85-112">You must set the `_MYTYPE` conditional-compilation constant to the string "Empty" to remove the `My` object.</span><span class="sxs-lookup"><span data-stu-id="1cd85-112">You must set the `_MYTYPE` conditional-compilation constant to the string "Empty" to remove the `My` object.</span></span>  
+## <a name="example"></a><span data-ttu-id="a0e7a-110">예제</span><span class="sxs-lookup"><span data-stu-id="a0e7a-110">Example</span></span>  
+ <span data-ttu-id="a0e7a-111">다음 코드는 표준 라이브러리를 참조 하지 않고 `T2.vb`을 컴파일합니다.</span><span class="sxs-lookup"><span data-stu-id="a0e7a-111">The following code compiles `T2.vb` without referencing the standard libraries.</span></span> <span data-ttu-id="a0e7a-112">`My` 개체를 제거 하려면 `_MYTYPE` 조건부 컴파일 상수를 문자열 "Empty"로 설정 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="a0e7a-112">You must set the `_MYTYPE` conditional-compilation constant to the string "Empty" to remove the `My` object.</span></span>  
   
 ```console
 vbc -nostdlib -define:_MYTYPE=\"Empty\" T2.vb  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="1cd85-113">참조</span><span class="sxs-lookup"><span data-stu-id="1cd85-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a0e7a-113">참고자료</span><span class="sxs-lookup"><span data-stu-id="a0e7a-113">See also</span></span>
 
-- [<span data-ttu-id="1cd85-114">-noconfig</span><span class="sxs-lookup"><span data-stu-id="1cd85-114">-noconfig</span></span>](../../../visual-basic/reference/command-line-compiler/noconfig.md)
-- [<span data-ttu-id="1cd85-115">Visual Basic 명령줄 컴파일러</span><span class="sxs-lookup"><span data-stu-id="1cd85-115">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
-- [<span data-ttu-id="1cd85-116">샘플 컴파일 명령줄</span><span class="sxs-lookup"><span data-stu-id="1cd85-116">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [<span data-ttu-id="1cd85-117">My에 사용할 수 있는 개체 사용자 지정</span><span class="sxs-lookup"><span data-stu-id="1cd85-117">Customizing Which Objects are Available in My</span></span>](../../../visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)
+- [<span data-ttu-id="a0e7a-114">-noconfig</span><span class="sxs-lookup"><span data-stu-id="a0e7a-114">-noconfig</span></span>](../../../visual-basic/reference/command-line-compiler/noconfig.md)
+- [<span data-ttu-id="a0e7a-115">Visual Basic 명령줄 컴파일러</span><span class="sxs-lookup"><span data-stu-id="a0e7a-115">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
+- [<span data-ttu-id="a0e7a-116">샘플 컴파일 명령줄</span><span class="sxs-lookup"><span data-stu-id="a0e7a-116">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [<span data-ttu-id="a0e7a-117">My에 사용할 수 있는 개체 사용자 지정</span><span class="sxs-lookup"><span data-stu-id="a0e7a-117">Customizing Which Objects are Available in My</span></span>](../../../visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)

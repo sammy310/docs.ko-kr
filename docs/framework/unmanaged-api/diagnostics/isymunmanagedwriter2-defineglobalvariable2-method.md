@@ -22,10 +22,10 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438280"
 ---
-# <a name="isymunmanagedwriter2defineglobalvariable2-method"></a><span data-ttu-id="de0ba-102">ISymUnmanagedWriter2::DefineGlobalVariable2 메서드</span><span class="sxs-lookup"><span data-stu-id="de0ba-102">ISymUnmanagedWriter2::DefineGlobalVariable2 Method</span></span>
-<span data-ttu-id="de0ba-103">Defines a single global variable.</span><span class="sxs-lookup"><span data-stu-id="de0ba-103">Defines a single global variable.</span></span>  
+# <a name="isymunmanagedwriter2defineglobalvariable2-method"></a><span data-ttu-id="d0a22-102">ISymUnmanagedWriter2::DefineGlobalVariable2 메서드</span><span class="sxs-lookup"><span data-stu-id="d0a22-102">ISymUnmanagedWriter2::DefineGlobalVariable2 Method</span></span>
+<span data-ttu-id="d0a22-103">단일 전역 변수를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="d0a22-103">Defines a single global variable.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="de0ba-104">구문</span><span class="sxs-lookup"><span data-stu-id="de0ba-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d0a22-104">구문</span><span class="sxs-lookup"><span data-stu-id="d0a22-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT DefineGlobalVariable2(  
@@ -38,35 +38,35 @@ HRESULT DefineGlobalVariable2(
     [in] ULONG32      addr3);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="de0ba-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="de0ba-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d0a22-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="d0a22-105">Parameters</span></span>  
  `name`  
- <span data-ttu-id="de0ba-106">[in] The global variable name.</span><span class="sxs-lookup"><span data-stu-id="de0ba-106">[in] The global variable name.</span></span>  
+ <span data-ttu-id="d0a22-106">진행 전역 변수 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="d0a22-106">[in] The global variable name.</span></span>  
   
  `attributes`  
- <span data-ttu-id="de0ba-107">[in] The global variable attributes.</span><span class="sxs-lookup"><span data-stu-id="de0ba-107">[in] The global variable attributes.</span></span>  
+ <span data-ttu-id="d0a22-107">진행 전역 변수 특성입니다.</span><span class="sxs-lookup"><span data-stu-id="d0a22-107">[in] The global variable attributes.</span></span>  
   
  `sigToken`  
- <span data-ttu-id="de0ba-108">[in] The metadata token of the signature.</span><span class="sxs-lookup"><span data-stu-id="de0ba-108">[in] The metadata token of the signature.</span></span>  
+ <span data-ttu-id="d0a22-108">진행 시그니처의 메타 데이터 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="d0a22-108">[in] The metadata token of the signature.</span></span>  
   
  `addrKind`  
- <span data-ttu-id="de0ba-109">[in] The address type.</span><span class="sxs-lookup"><span data-stu-id="de0ba-109">[in] The address type.</span></span>  
+ <span data-ttu-id="d0a22-109">진행 주소 유형입니다.</span><span class="sxs-lookup"><span data-stu-id="d0a22-109">[in] The address type.</span></span>  
   
  `addr1`  
- <span data-ttu-id="de0ba-110">[in] The first address for the parameter specification.</span><span class="sxs-lookup"><span data-stu-id="de0ba-110">[in] The first address for the parameter specification.</span></span>  
+ <span data-ttu-id="d0a22-110">진행 매개 변수 사양의 첫 번째 주소입니다.</span><span class="sxs-lookup"><span data-stu-id="d0a22-110">[in] The first address for the parameter specification.</span></span>  
   
  `addr2`  
- <span data-ttu-id="de0ba-111">[in] The second address for the parameter specification.</span><span class="sxs-lookup"><span data-stu-id="de0ba-111">[in] The second address for the parameter specification.</span></span>  
+ <span data-ttu-id="d0a22-111">진행 매개 변수 사양의 두 번째 주소입니다.</span><span class="sxs-lookup"><span data-stu-id="d0a22-111">[in] The second address for the parameter specification.</span></span>  
   
  `addr3`  
- <span data-ttu-id="de0ba-112">[in] The third address for the parameter specification.</span><span class="sxs-lookup"><span data-stu-id="de0ba-112">[in] The third address for the parameter specification.</span></span>  
+ <span data-ttu-id="d0a22-112">진행 매개 변수 사양의 세 번째 주소입니다.</span><span class="sxs-lookup"><span data-stu-id="d0a22-112">[in] The third address for the parameter specification.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="de0ba-113">반환 값</span><span class="sxs-lookup"><span data-stu-id="de0ba-113">Return Value</span></span>  
- <span data-ttu-id="de0ba-114">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="de0ba-114">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="d0a22-113">반환 값</span><span class="sxs-lookup"><span data-stu-id="d0a22-113">Return Value</span></span>  
+ <span data-ttu-id="d0a22-114">메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="d0a22-114">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="de0ba-115">요구 사항</span><span class="sxs-lookup"><span data-stu-id="de0ba-115">Requirements</span></span>  
- <span data-ttu-id="de0ba-116">**Header:** CorSym.idl</span><span class="sxs-lookup"><span data-stu-id="de0ba-116">**Header:** CorSym.idl</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d0a22-115">요구 사항</span><span class="sxs-lookup"><span data-stu-id="d0a22-115">Requirements</span></span>  
+ <span data-ttu-id="d0a22-116">**헤더:** CorSym</span><span class="sxs-lookup"><span data-stu-id="d0a22-116">**Header:** CorSym.idl</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="de0ba-117">참조</span><span class="sxs-lookup"><span data-stu-id="de0ba-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d0a22-117">참고자료</span><span class="sxs-lookup"><span data-stu-id="d0a22-117">See also</span></span>
 
-- [<span data-ttu-id="de0ba-118">ISymUnmanagedWriter2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="de0ba-118">ISymUnmanagedWriter2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-interface.md)
-- [<span data-ttu-id="de0ba-119">DefineGlobalVariable 메서드</span><span class="sxs-lookup"><span data-stu-id="de0ba-119">DefineGlobalVariable Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-defineglobalvariable-method.md)
+- [<span data-ttu-id="d0a22-118">ISymUnmanagedWriter2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="d0a22-118">ISymUnmanagedWriter2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-interface.md)
+- [<span data-ttu-id="d0a22-119">DefineGlobalVariable 메서드</span><span class="sxs-lookup"><span data-stu-id="d0a22-119">DefineGlobalVariable Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-defineglobalvariable-method.md)

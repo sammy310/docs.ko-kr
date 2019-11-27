@@ -22,10 +22,10 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74426816"
 ---
-# <a name="imetadataemitsetrva-method"></a><span data-ttu-id="3d937-102">IMetaDataEmit::SetRVA 메서드</span><span class="sxs-lookup"><span data-stu-id="3d937-102">IMetaDataEmit::SetRVA Method</span></span>
-<span data-ttu-id="3d937-103">Sets the relative virtual address of the specified method.</span><span class="sxs-lookup"><span data-stu-id="3d937-103">Sets the relative virtual address of the specified method.</span></span>  
+# <a name="imetadataemitsetrva-method"></a><span data-ttu-id="64f41-102">IMetaDataEmit::SetRVA 메서드</span><span class="sxs-lookup"><span data-stu-id="64f41-102">IMetaDataEmit::SetRVA Method</span></span>
+<span data-ttu-id="64f41-103">지정 된 메서드의 상대 가상 주소를 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="64f41-103">Sets the relative virtual address of the specified method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3d937-104">구문</span><span class="sxs-lookup"><span data-stu-id="3d937-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="64f41-104">구문</span><span class="sxs-lookup"><span data-stu-id="64f41-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetRVA (  
@@ -34,23 +34,23 @@ HRESULT SetRVA (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="3d937-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="3d937-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="64f41-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="64f41-105">Parameters</span></span>  
  `md`  
- <span data-ttu-id="3d937-106">[in] The token for the target method or method implementation.</span><span class="sxs-lookup"><span data-stu-id="3d937-106">[in] The token for the target method or method implementation.</span></span>  
+ <span data-ttu-id="64f41-106">진행 대상 메서드 또는 메서드 구현에 대 한 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="64f41-106">[in] The token for the target method or method implementation.</span></span>  
   
  `ulRVA`  
- <span data-ttu-id="3d937-107">[in] The address of the code or data area.</span><span class="sxs-lookup"><span data-stu-id="3d937-107">[in] The address of the code or data area.</span></span>  
+ <span data-ttu-id="64f41-107">진행 코드 또는 데이터 영역의 주소입니다.</span><span class="sxs-lookup"><span data-stu-id="64f41-107">[in] The address of the code or data area.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3d937-108">요구 사항</span><span class="sxs-lookup"><span data-stu-id="3d937-108">Requirements</span></span>  
- <span data-ttu-id="3d937-109">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="3d937-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="64f41-108">요구 사항</span><span class="sxs-lookup"><span data-stu-id="64f41-108">Requirements</span></span>  
+ <span data-ttu-id="64f41-109">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="64f41-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3d937-110">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="3d937-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="64f41-110">**헤더:** Cor</span><span class="sxs-lookup"><span data-stu-id="64f41-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="3d937-111">**Library:** Used as a resource in MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="3d937-111">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="64f41-111">**라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="64f41-111">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="3d937-112">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3d937-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="64f41-112">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="64f41-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3d937-113">참조</span><span class="sxs-lookup"><span data-stu-id="3d937-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="64f41-113">참고자료</span><span class="sxs-lookup"><span data-stu-id="64f41-113">See also</span></span>
 
-- [<span data-ttu-id="3d937-114">IMetaDataEmit 인터페이스</span><span class="sxs-lookup"><span data-stu-id="3d937-114">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="3d937-115">IMetaDataEmit2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="3d937-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="64f41-114">IMetaDataEmit 인터페이스</span><span class="sxs-lookup"><span data-stu-id="64f41-114">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="64f41-115">IMetaDataEmit2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="64f41-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
