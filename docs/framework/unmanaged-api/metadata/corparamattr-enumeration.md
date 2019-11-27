@@ -46,21 +46,21 @@ typedef enum CorParamAttr {
   
 |멤버|설명|  
 |------------|-----------------|  
-|`pdIn`|Specifies that the parameter is passed into the method call.|  
-|`pdOut`|Specifies that the parameter is passed from the method return.|  
-|`pdOptional`|Specifies that the parameter is optional.|  
-|`pdReservedMask`|Reserved for internal use by the common language runtime.|  
-|`pdHasDefault`|Specifies that the parameter has a default value.|  
-|`pdHasFieldMarshal`|Specifies that the parameter has marshaling information.|  
+|`pdIn`|매개 변수가 메서드 호출에 전달 되도록 지정 합니다.|  
+|`pdOut`|매개 변수가 메서드 반환에서 전달 되도록 지정 합니다.|  
+|`pdOptional`|매개 변수가 선택 사항임을 지정 합니다.|  
+|`pdReservedMask`|공용 언어 런타임에서 내부용으로 사용 하도록 예약 되어 있습니다.|  
+|`pdHasDefault`|매개 변수 기본값을 갖도록 지정 합니다.|  
+|`pdHasFieldMarshal`|매개 변수에 마샬링 정보를 포함 하도록 지정 합니다.|  
 |`pdUnused`|사용되지 않습니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** CorHdr.h  
+ **헤더:** CorHdr .h  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [메타데이터 열거형](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

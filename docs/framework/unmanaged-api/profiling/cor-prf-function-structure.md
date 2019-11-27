@@ -34,20 +34,20 @@ typedef struct _COR_PRF_FUNCTION {    FunctionID functionId;    ReJITID    reJit
   
 |멤버|설명|  
 |------------|-----------------|  
-|`functionId`|The ID of the function.|  
-|`reJitId`|The ID of the recompiled function. A value of 0 (zero) represents the original version of the function.|  
+|`functionId`|함수의 ID입니다.|  
+|`reJitId`|다시 컴파일된 함수의 ID입니다. 값이 0 이면 함수의 원래 버전을 나타냅니다.|  
   
 ## <a name="remarks"></a>주의  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** CorProf.idl  
+ **헤더:** Corprof.idl  
   
  **라이브러리:** CorGuids.lib  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [프로파일링 구조체](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)

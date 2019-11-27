@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440989"
 ---
 # <a name="inotifyconnection2unregisternotifysource-method"></a>INotifyConnection2::UnregisterNotifySource 메서드
-Removes a specified notification source object from the connection.  
+지정 된 알림 소스 개체를 연결에서 제거 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,15 +36,15 @@ HRESULT UnregisterNotifySource
   
 ## <a name="parameters"></a>매개 변수  
  `in_pNotifySource`  
- [in] Notification object to be unregistered.  
+ 진행 등록을 취소할 알림 개체입니다.  
   
 ## <a name="return-value"></a>반환 값  
- S_OK if the method succeeds.  
+ 메서드가 성공 하면 S_OK 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **Header:** ProtocolNotify2.idl  
+ **헤더:** ProtocolNotify2  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [INotifyConnection2 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
 - [INotifySource2 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)

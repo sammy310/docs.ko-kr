@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444172"
 ---
 # <a name="ceesectionrelocextra-union"></a>CeeSectionRelocExtra 공용 구조체
-Represents an address offset that is used by the [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interface to relocate a section.  
+[ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) 인터페이스에서 섹션의 위치를 다시 배치 하는 데 사용 되는 주소 오프셋을 나타냅니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,17 +36,17 @@ typedef union  {
   
 |멤버|설명|  
 |------------|-----------------|  
-|`highAdj`|The upper address adjustment for the section.|  
+|`highAdj`|섹션에 대 한 상한 주소 조정입니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [메타데이터 공용 구조체](../../../../docs/framework/unmanaged-api/metadata/metadata-unions.md)

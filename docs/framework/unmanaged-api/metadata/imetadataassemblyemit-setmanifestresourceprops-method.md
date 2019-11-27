@@ -38,29 +38,29 @@ HRESULT SetManifestResourceProps (
   
 ## <a name="parameters"></a>매개 변수  
  `mr`  
- [in] The token that specifies the `ManifestResource` metadata structure to be modified.  
+ 진행 수정할 `ManifestResource` 메타 데이터 구조를 지정 하는 토큰입니다.  
   
  `tkImplementation`  
- [in] The token, of type `File` or `AssemblyRef`, that maps to the resource provider.  
+ 진행 리소스 공급자에 매핑되는 `File` 또는 `AssemblyRef`형식의 토큰입니다.  
   
  `dwOffset`  
- [in] The offset to the beginning of the resource within the file.  
+ 진행 파일 내 리소스의 시작에 대 한 오프셋입니다.  
   
  `dwResourceFlags`  
- [in] A bitwise combination of flag values that specify the attributes of the resource.  
+ 진행 리소스의 특성을 지정 하는 플래그 값의 비트 조합입니다.  
   
 ## <a name="remarks"></a>주의  
- To create a `ManifestResource` metadata structure, use the [IMetaDataAssemblyEmit::DefineManifestResource](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definemanifestresource-method.md) method.  
+ `ManifestResource` 메타 데이터 구조를 만들려면 [IMetaDataAssemblyEmit::D efinemanifestresource](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definemanifestresource-method.md) 메서드를 사용 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IMetaDataAssemblyEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

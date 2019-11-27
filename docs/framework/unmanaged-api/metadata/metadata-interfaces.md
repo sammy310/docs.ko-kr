@@ -16,7 +16,7 @@ ms.locfileid: "74431594"
 # <a name="metadata-interfaces"></a>메타데이터 인터페이스
 이 섹션에서는 .NET Framework 형식, 메서드, 필드 등이 노출하는 메타데이터에 대한 액세스를 제공하는 관리되지 않는 인터페이스를 설명합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [ICeeGen 인터페이스](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)  
  동적 코드 컴파일에 대한 메서드를 제공합니다.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "74431594"
  형식 라이브러리를 메타데이터 서명에 매핑하고 서로 변환하는 메서드를 제공합니다.  
   
  [IMetaDataDispenser 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)  
- `IMetaDataDispenser`는 사용되지 않습니다. 대신 `IMetaDataDispenserEx` 를 사용하세요.  
+ `IMetaDataDispenser`는 사용되지 않습니다. 대신 `IMetaDataDispenserEx`를 사용하세요.  
   
  [IMetaDataDispenserEx 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)  
  메타데이터를 만들거나 수정할 메모리 영역을 매핑하는 메서드를 제공합니다.  
@@ -71,7 +71,7 @@ ms.locfileid: "74431594"
  [IMetaDataValidate 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadatavalidate-interface.md)  
  메타데이터 서명의 유효성을 검사하는 데 사용할 메서드를 제공합니다.  
   
-## <a name="related-sections"></a>관련 단원  
+## <a name="related-sections"></a>관련 섹션  
  [메타데이터 전역 정적 함수](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)  
   
  [메타데이터 열거형](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)  

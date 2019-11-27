@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432557"
 ---
 # <a name="imetadataemitdefineevent-method"></a>IMetaDataEmit::DefineEvent 메서드
-Creates a definition for an event with the specified metadata signature, and gets a token to that event definition.  
+지정 된 메타 데이터 시그니처를 사용 하 여 이벤트에 대 한 정의를 만들고 해당 이벤트 정의에 대 한 토큰을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -43,42 +43,42 @@ HRESULT DefineEvent (
   
 ## <a name="parameters"></a>매개 변수  
  `td`  
- [in] The token for the target class or interface. This is either a `mdTypeDef` or `mdTypeDefNil` token.  
+ 진행 대상 클래스 또는 인터페이스에 대 한 토큰입니다. `mdTypeDef` 또는 `mdTypeDefNil` 토큰입니다.  
   
  `szEvent`  
- [in] The name of the event.  
+ 진행 이벤트의 이름입니다.  
   
  `dwEventFlags`  
- [in] Event flags.  
+ 진행 이벤트 플래그입니다.  
   
  `tkEventType`  
- [in] The token for the event class. This is a `mdTypeDef`, a `mdTypeRef`, or a `mdTokenNil` token.  
+ 진행 이벤트 클래스에 대 한 토큰입니다. `mdTypeDef`, `mdTypeRef`또는 `mdTokenNil` 토큰입니다.  
   
  `mdAddOn`  
- [in] The method used to subscribe to the event, or null.  
+ 진행 이벤트를 구독 하는 데 사용 되는 메서드 이거나 null입니다.  
   
  `mdRemoveOn`  
- [in] The method used to unsubscribe to the event, or null.  
+ 진행 이벤트를 구독 취소 하는 데 사용 되는 메서드 이거나 null입니다.  
   
  `mdFire`  
- [in] The method used (by a derived class) to raise the event.  
+ 진행 파생 클래스에서 이벤트를 발생 시키는 데 사용 되는 메서드입니다.  
   
  `rmdOtherMethods[]`  
- [in] An array of tokens for other methods associated with the event. The array is terminated with a `mdMethodDefNil` token.  
+ 진행 이벤트와 연결 된 다른 메서드에 대 한 토큰의 배열입니다. 배열이 `mdMethodDefNil` 토큰으로 종료 되었습니다.  
   
  `pmdEvent`  
- [out] The metadata token assigned to the event.  
+ 제한이 이벤트에 할당 된 메타 데이터 토큰입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IMetaDataEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

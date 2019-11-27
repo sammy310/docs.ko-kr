@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428270"
 ---
 # <a name="icorprofilerobjectenumclone-method"></a>ICorProfilerObjectEnum::Clone 메서드
-Gets an interface pointer to a copy of this [ICorProfilerObjectEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md) interface.  
+이 [ICorProfilerObjectEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md) 인터페이스의 복사본에 대 한 인터페이스 포인터를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -34,7 +34,7 @@ HRESULT Clone (
   
 ## <a name="parameters"></a>매개 변수  
  `ppEnum`  
- [out] A pointer to the interface pointer that in turn points to the copy of this `ICorProfilerObjectEnum` interface. The copy maintains its own enumeration state separately from this one. However, the copy's initial cursor position will be the same as this enumerator's current cursor position.  
+ 제한이 이 `ICorProfilerObjectEnum` 인터페이스의 복사본을 가리키는 인터페이스 포인터에 대 한 포인터입니다. 복사본은이 항목에서 별도로 자체 열거 상태를 유지 관리 합니다. 그러나 복사본의 초기 커서 위치는이 열거자의 현재 커서 위치와 동일 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
@@ -45,6 +45,6 @@ HRESULT Clone (
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerObjectEnum 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md)

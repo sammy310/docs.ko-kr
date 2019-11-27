@@ -44,7 +44,7 @@ WCF의 <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>는 
 
 2. [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)를 수행 했는지 확인 합니다.
 
-3. 솔루션을 빌드하려면 [Windows Communication Foundation 샘플 빌드](../../../../docs/framework/wcf/samples/building-the-samples.md)의 지침을 따릅니다.
+3. 솔루션을 빌드하려면 [Windows Communication Foundation 샘플 빌드](../../../../docs/framework/wcf/samples/building-the-samples.md)의 지침을 따르세요.
 
 4. 단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)의 지침을 따르세요.
 
@@ -212,7 +212,7 @@ CustomBinding binding = new CustomBinding(bindingElements);
 
 ## <a name="adding-metadata-support-to-the-message-encoding-binding-element"></a>메시지 인코딩 바인딩 요소에 메타데이터 지원 추가
 
-<xref:System.ServiceModel.Channels.MessageEncodingBindingElement>에서 파생되는 모든 형식은 서비스에 대해 생성되는 WSDL 문서에서 SOAP 바인딩 버전을 업데이트합니다. 이 작업은 `ExportEndpoint` 인터페이스에서 <xref:System.ServiceModel.Description.IWsdlExportExtension> 메서드를 구현한 다음 생성된 WSDL을 수정하여 수행됩니다. 이 샘플에서 `CustomTextMessageBindingElement`는 `TextMessageEncodingBindingElement`의 WSDL 내보내기 논리를 사용합니다.
+<xref:System.ServiceModel.Channels.MessageEncodingBindingElement>에서 파생 되는 모든 형식은 서비스에 대해 생성 된 WSDL 문서에서 SOAP 바인딩의 버전을 업데이트 해야 합니다. 이 작업은 `ExportEndpoint` 인터페이스에서 <xref:System.ServiceModel.Description.IWsdlExportExtension> 메서드를 구현한 다음 생성된 WSDL을 수정하여 수행됩니다. 이 샘플에서 `CustomTextMessageBindingElement`는 `TextMessageEncodingBindingElement`의 WSDL 내보내기 논리를 사용합니다.
 
 이 샘플에서 클라이언트 구성은 수동 구성입니다. `CustomTextMessageBindingElement`는 그 동작을 설명하기 위해 정책 어설션을 내보내지 않으므로 Svcutil.exe를 사용하여 클라이언트 구성을 생성할 수 없습니다. 일반적으로 사용자 지정 바인딩 요소에서 <xref:System.ServiceModel.Description.IPolicyExportExtension> 인터페이스를 구현하여 바인딩 요소에서 구현한 동작 또는 기능을 설명하는 사용자 지정 정책 어설션을 내보내야 합니다. 사용자 지정 바인딩 요소에 대 한 정책 어설션을 내보내는 방법에 대 한 예제는 [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) 샘플을 참조 하세요.
 

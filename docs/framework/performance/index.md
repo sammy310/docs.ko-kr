@@ -33,7 +33,7 @@ ms.locfileid: "74204659"
 |도구|설명|  
 |----------|-----------------|  
 |Visual Studio 성능 분석|Windows 운영 체제를 실행하는 컴퓨터에 배포할 .NET Framework 앱의 CPU 사용률을 분석하는 데 사용합니다.<br /><br /> 이 도구는 Visual Studio에서 프로젝트를 연 후 **디버그** 메뉴에서 사용할 수 있습니다. 자세한 내용은 [성능 탐색기](/visualstudio/profiling/performance-explorer)를 참조하세요. **참고:** Windows Phone을 대상으로 할 경우 Windows Phone 애플리케이션 분석(다음 행 참조)을 사용하세요.|  
-|Windows Phone 애플리케이션 분석|Windows Phone 앱의 CPU 및 메모리, 네트워크 데이터 전송 속도, 앱 응답성 및 배터리 소비를 분석하는 데 사용합니다.<br /><br /> 이 도구는 [Windows Phone SDK](https://go.microsoft.com/fwlink/?LinkId=265773)를 설치한 후 Visual Studio에서 Windows Phone 프로젝트의 **디버그** 메뉴에서 사용할 수 있습니다. For more information, see [App profiling for Windows Phone 8](https://docs.microsoft.com/previous-versions/windows/apps/jj215908(v=vs.105)).|  
+|Windows Phone 애플리케이션 분석|Windows Phone 앱의 CPU 및 메모리, 네트워크 데이터 전송 속도, 앱 응답성 및 배터리 소비를 분석하는 데 사용합니다.<br /><br /> 이 도구는 **Windows Phone SDK**를 설치한 후 Visual Studio에서 Windows Phone 프로젝트의 [디버그](https://go.microsoft.com/fwlink/?LinkId=265773) 메뉴에서 사용할 수 있습니다. 자세한 내용은 [Windows Phone 8의 앱 프로 파일링](https://docs.microsoft.com/previous-versions/windows/apps/jj215908(v=vs.105))을 참조 하세요.|  
 |[PerfView](https://www.microsoft.com/download/details.aspx?id=28567)|CPU 및 메모리 관련 성능 문제를 식별하는 데 사용합니다. 이 도구는 ETW(Windows용 이벤트 추적) 및 CLR 프로파일링 API를 사용하여 가비지 수집 및 JIT 컴파일에 대한 정보와 고급 메모리 및 CPU 확인 기능을 제공합니다. PerfView 사용 방법에 대한 자세한 내용은 앱에 포함된 자습서 및 도움말 파일, [Channel 9 비디오 자습서](https://channel9.msdn.com/Series/PerfView-Tutorial) 및 [블로그 게시물](https://blogs.msdn.microsoft.com/vancem/tag/perfview/)을 참조하세요.<br /><br /> 메모리 관련 문제는 [Using PerfView for Memory Investigations](https://channel9.msdn.com/Series/PerfView-Tutorial/PerfView-Tutorial-9-NET-Memory-Investigation-Basics-of-GC-Heap-Snapshots)(메모리 확인에 PerfView 사용)를 참조하세요.|  
 |[Windows Performance Analyzer](https://www.microsoft.com/download/details.aspx?id=30652)|동일한 컴퓨터에서 여러 앱이 실행되고 있는 경우 앱의 메모리 및 스토리지 사용과 같은 전체 시스템 성능을 확인하는 데 사용합니다. 이 도구는 다운로드 센터에서 [!INCLUDE[win8](../../../includes/win8-md.md)]용 Windows ADK(평가 및 배포 키트)의 일부로 사용할 수 있습니다. 자세한 내용은 [Windows Performance Analyzer](/windows-hardware/test/wpt/windows-performance-analyzer)를 참조하세요.|  
   
@@ -43,10 +43,10 @@ ms.locfileid: "74204659"
 ## <a name="performance-by-app-type"></a>응용 프로그램 종류별 성능  
  .NET Framework 앱 형식마다 성능을 평가하기 위한 모범 사례, 고려 사항 및 도구가 다릅니다. 다음 테이블에는 특정 .NET Framework 앱 형식에 대한 성능 항목 링크가 표시되어 있습니다.  
   
-|앱 형식|참조 항목|  
+|앱 형식|다음을 참조하십시오.|  
 |--------------|---------|  
 |모든 플랫폼용 .NET Framework 앱|[가비지 수집 및 성능](../../standard/garbage-collection/performance.md)<br /><br /> [성능 팁](performance-tips.md)|  
-|Windows 8.x Store apps written in C++, C#, and Visual Basic|[C++, C# 및 Visual Basic을 사용하는 Windows 스토어 앱의 성능 모범 사례](https://docs.microsoft.com/previous-versions/windows/apps/hh750313%28v=win.10%29)|  
+|C++, C#및 Visual Basic로 작성 된 Windows 8.x 스토어 앱|[C++, C# 및 Visual Basic을 사용하는 Windows 스토어 앱의 성능 모범 사례](https://docs.microsoft.com/previous-versions/windows/apps/hh750313%28v=win.10%29)|  
 |WPF(Windows Presentation Foundation)|[WPF 성능 제품군](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100))|  
 |ASP.NET|[ASP.NET 성능 개요](https://docs.microsoft.com/previous-versions/aspnet/cc668225(v=vs.100))|  
   

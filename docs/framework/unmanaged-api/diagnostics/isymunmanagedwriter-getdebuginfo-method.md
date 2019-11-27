@@ -23,9 +23,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427957"
 ---
 # <a name="isymunmanagedwritergetdebuginfo-method"></a>ISymUnmanagedWriter::GetDebugInfo 메서드
-Returns the information necessary for a compiler to write the debug directory entry in the portable executable (PE) file header. The symbol writer fills out all fields except for `TimeDateStamp` and `PointerToRawData`. (The compiler is responsible for setting these two fields appropriately.)  
+컴파일러가 PE (이식 가능한 실행) 파일 헤더에 디버그 디렉터리 항목을 쓰는 데 필요한 정보를 반환 합니다. 기호 작성기는 `TimeDateStamp` 및 `PointerToRawData`를 제외한 모든 필드를 채웁니다. 컴파일러는 이러한 두 필드를 적절 하 게 설정 해야 합니다.  
   
- A compiler should call this method, emit the data blob to the PE file, set the `PointerToRawData` field in the IMAGE_DEBUG_DIRECTORY to point to the emitted data, and write the IMAGE_DEBUG_DIRECTORY to the PE file. The compiler should also set the `TimeDateStamp` field to equal the `TimeDateStamp` of the PE file being generated.  
+ 컴파일러는이 메서드를 호출 하 고, 데이터 blob을 PE 파일로 내보내고, IMAGE_DEBUG_DIRECTORY의 `PointerToRawData` 필드를 내보낸 데이터를 가리키도록 설정 하 고, IMAGE_DEBUG_DIRECTORY를 PE 파일에 써야 합니다. 또한 컴파일러는 `TimeDateStamp` 필드가 생성 되는 PE 파일의 `TimeDateStamp` 같도록 설정 해야 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,23 +40,23 @@ HRESULT GetDebugInfo(
   
 ## <a name="parameters"></a>매개 변수  
  `pIDD`  
- [in, out] A pointer to an IMAGE_DEBUG_DIRECTORY that the symbol writer will fill out.  
+ [in, out] 기호 작성기가 채울 IMAGE_DEBUG_DIRECTORY에 대 한 포인터입니다.  
   
  `cData`  
- [in] A `DWORD` that contains the size of the debug data.  
+ 진행 디버그 데이터의 크기를 포함 하는 `DWORD`입니다.  
   
  `pcData`  
- [out] A pointer to a `DWORD` that receives the size of the buffer required to contain the debug data.  
+ 제한이 디버그 데이터를 포함 하는 데 필요한 버퍼 크기를 수신 하는 `DWORD`에 대 한 포인터입니다.  
   
  `data`  
- [out] A pointer to a buffer that is large enough to hold the debug data for the symbol store.  
+ 제한이 기호 저장소에 대 한 디버그 데이터를 저장 하기에 충분 한 크기의 버퍼에 대 한 포인터입니다.  
   
 ## <a name="return-value"></a>반환 값  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **Header:** CorSym.idl, CorSym.h  
+ **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ISymUnmanagedWriter 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449129"
 ---
 # <a name="isymunmanageddocumentgeturl-method"></a>ISymUnmanagedDocument::GetURL 메서드
-Returns the uniform resource locator (URL) for this document.  
+이 문서에 대 한 URL (uniform resource locator)을 반환 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,17 +36,17 @@ HRESULT GetURL(
   
 ## <a name="parameters"></a>매개 변수  
  `cchUrl`  
- [in] The size, in characters, of the `szURL` buffer.  
+ 진행 `szURL` 버퍼의 크기 (문자)입니다.  
   
  `pcchUrl`  
- [out] A pointer to a variable that receives the size of the URL, including the null termination.  
+ 제한이 Null 종료를 포함 하 여 URL의 크기를 받는 변수에 대 한 포인터입니다.  
   
  `szUrl`  
- [out] The buffer containing the URL.  
+ 제한이 URL을 포함 하는 버퍼입니다.  
   
 ## <a name="return-value"></a>반환 값  
- S_OK if the method succeeds; otherwise, an error code.  
+ 메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 오류 코드입니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ISymUnmanagedDocument 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

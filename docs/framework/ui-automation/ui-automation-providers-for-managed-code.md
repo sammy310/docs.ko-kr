@@ -17,11 +17,11 @@ ms.locfileid: "74441477"
 ---
 # <a name="ui-automation-providers-for-managed-code"></a>관리 코드에 대한 UI 자동화 공급자
 > [!NOTE]
-> 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조하세요.  
+> 이 설명서는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 네임스페이스에 정의된 관리되는 <xref:System.Windows.Automation> 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조하세요.  
   
- This section contains overviews and how-to topics that describe how to write [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] providers for custom [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] elements.  
+ 이 섹션에서는 사용자 지정 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 요소에 대 한 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 공급자를 작성 하는 방법을 설명 하는 개요 및 방법 항목을 제공 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [서버 쪽 UI 자동화 공급자 구현](server-side-ui-automation-provider-implementation.md)  
  [UI 자동화 공급자 개요](ui-automation-providers-overview.md)  
  [클라이언트 쪽 UI 자동화 공급자 구현](client-side-ui-automation-provider-implementation.md)  

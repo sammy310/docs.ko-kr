@@ -14,17 +14,17 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349142"
 ---
 # <a name="alias-clause-visual-basic"></a>Alias 절(Visual Basic)
-Indicates that an external procedure has another name in its DLL.  
+외부 프로시저의 DLL에 다른 이름이 있음을 나타냅니다.  
   
 ## <a name="remarks"></a>주의  
- The `Alias` keyword can be used in this context:  
+ 이 컨텍스트에서는 `Alias` 키워드를 사용할 수 있습니다.  
   
- [Declare 문](../../../visual-basic/language-reference/statements/declare-statement.md)  
+ [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
- In the following example, the `Alias` keyword is used to provide the name of the function in advapi32.dll, `GetUserNameA`, that `getUserName` is used in place of in this example. Function `getUserName` is called in sub `getUser`, which displays the name of the current user.  
+ 다음 예에서는 `Alias` 키워드를 사용 하 여이 예제에서 사용 되는 `getUserName`를 사용 하는 advapi32.dll `GetUserNameA`의 함수 이름을 제공 합니다. 함수 `getUserName`은 현재 사용자의 이름을 표시 하는 sub `getUser`에서 호출 됩니다.  
   
  [!code-vb[VbVbalrStatements#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#15)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [C++ 키워드](../../../visual-basic/language-reference/keywords/index.md)
+- [키워드](../../../visual-basic/language-reference/keywords/index.md)

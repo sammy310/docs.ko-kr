@@ -41,15 +41,15 @@ ms.locfileid: "74283088"
 |`enabled`|네트워킹 성능 카운터의 사용 여부를 지정 합니다. 기본값은 `false`입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
- 없음  
+ None.  
   
 ### <a name="parent-elements"></a>부모 요소  
   
 |요소|설명|  
 |-------------|-----------------|  
-|[settings](settings-element-network-settings.md)|<xref:System.Net> 네임스페이스에 대한 기본 네트워크 옵션을 구성합니다.|  
+|[설정](settings-element-network-settings.md)|<xref:System.Net> 네임스페이스에 대한 기본 네트워크 옵션을 구성합니다.|  
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
  이 요소는 애플리케이션 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.  
   
  네트워킹 성능 카운터를 사용하려면 구성 파일에서 사용하도록 설정해야 합니다. 구성 파일의 단일 설정을 통해 모든 네트워킹 성능 카운터를 사용하거나 사용하지 않도록 설정합니다. 개별 네트워킹 성능 카운터를 사용하거나 사용하지 않도록 설정할 수는 없습니다. 특정 네트워킹 성능 카운터에 대 한 자세한 내용은 [네트워킹 성능 카운터](../../../debug-trace-profile/performance-counters.md#networking-performance-counters)를 참조 하세요.  

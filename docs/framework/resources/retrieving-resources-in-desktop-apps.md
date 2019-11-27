@@ -27,7 +27,7 @@ ms.locfileid: "74445749"
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>데스크톱 응용 프로그램의 리소스 검색
 
-.NET Framework 데스크톱 앱의 지역화된 리소스로 작업할 경우에는 기본 또는 중립 문화권의 리소스를 주 어셈블리와 패키지하여 앱이 지원하는 각 언어 또는 문화권에 대해 별도의 위성 어셈블리를 만드는 것이 가장 바람직합니다. 그런 다음 <xref:System.Resources.ResourceManager> 클래스를 다음 섹션에 설명한 대로 사용하여 명명된 리소스에 액세스할 수 있습니다. 주 어셈블리와 위성 어셈블리에 리소스를 포함하지 않으려는 경우 이 문서의 뒷부분에 나오는 [.resources 파일에서 리소스 검색](#from_file) 섹션에서 설명한 것처럼, 이진 .resources 파일에 직접 액세스할 수도 있습니다.  To retrieve resources in Windows 8.x Store apps, see [Creating and retrieving resources in Windows Store apps](https://docs.microsoft.com/previous-versions/windows/apps/hh694557(v=vs.140)).  
+.NET Framework 데스크톱 앱의 지역화된 리소스로 작업할 경우에는 기본 또는 중립 문화권의 리소스를 주 어셈블리와 패키지하여 앱이 지원하는 각 언어 또는 문화권에 대해 별도의 위성 어셈블리를 만드는 것이 가장 바람직합니다. 그런 다음 <xref:System.Resources.ResourceManager> 클래스를 다음 섹션에 설명한 대로 사용하여 명명된 리소스에 액세스할 수 있습니다. 주 어셈블리와 위성 어셈블리에 리소스를 포함하지 않으려는 경우 이 문서의 뒷부분에 나오는 [.resources 파일에서 리소스 검색](#from_file) 섹션에서 설명한 것처럼, 이진 .resources 파일에 직접 액세스할 수도 있습니다.  Windows 8.x 스토어 앱에서 리소스를 검색 하려면 [Windows 스토어 앱에서 리소스 만들기 및 검색](https://docs.microsoft.com/previous-versions/windows/apps/hh694557(v=vs.140))을 참조 하세요.  
   
 <a name="from_assembly"></a>   
 ## <a name="retrieving-resources-from-assemblies"></a>어셈블리에서 리소스 검색  
@@ -189,7 +189,7 @@ Prompt=Как вас зовут?
  [!code-csharp[Conceptual.Resources.Retrieving#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.retrieving/cs/example3.cs#9)]
  [!code-vb[Conceptual.Resources.Retrieving#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.retrieving/vb/example3.vb#9)]  
   
- 다음 배치 파일을 실행하여 예제의 C# 버전을 컴파일할 수 있습니다. Visual Basic을 사용하는 경우 `csc`를 `vbc`로 바꾸고 `.cs` 확장을 `.vb`로 바꿉니다.  
+ 다음 배치 파일을 실행하여 예제의 C# 버전을 컴파일할 수 있습니다. Visual Basic을 사용하는 경우 `csc` 를 `vbc`로 바꾸고 `.cs` 확장을 `.vb`로 바꿉니다.  
   
 ```console
 Md Resources  
@@ -200,7 +200,7 @@ Resgen Strings.ru-RU.txt Resources\Strings.ru-RU.resources
 csc Example.cs  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Resources.ResourceManager>
 - [데스크톱 앱의 리소스](index.md)

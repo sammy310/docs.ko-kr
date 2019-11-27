@@ -56,21 +56,21 @@ typedef enum CorOpenFlags
 |`ofCopyMemory`|파일을 메모리로 읽어들여야 함을 나타냅니다. 메타데이터는 자체 복사본을 유지해야 합니다.|  
 |`ofCacheImage`|사용되지 않습니다. 이 플래그는 무시됩니다.|  
 |`ofManifestMetadata`|사용되지 않습니다. 이 플래그는 무시됩니다.|  
-|`ofReadOnly`|Indicates that the file should be opened for reading, and that a call to `QueryInterface` for an [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) cannot be made.|  
-|`ofTakeOwnership`|Indicates that the memory was allocated using a call to [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) and will be freed by the metadata.|  
+|`ofReadOnly`|읽기 위해 파일을 열어야 하며 [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) 에 대 한 `QueryInterface` 호출을 만들 수 없음을 나타냅니다.|  
+|`ofTakeOwnership`|메모리가 [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) 에 대 한 호출을 사용 하 여 할당 되었으며 메타 데이터에 의해 해제 됨을 나타냅니다.|  
 |`ofNoTypeLib`|사용되지 않습니다. 이 플래그는 무시됩니다.|  
-|`ofNoTransform`|.winmd 파일의 자동 변형을 사용하지 않도록 설정해야 함을 나타냅니다. 즉, Windows 런타임 형식에서 .NET Framework 형식으로의 프로젝션을 사용하지 않도록 설정해야 합니다. For more information, see [Windows Runtime and the CLR - Underneath the Hood with .NET and the Windows Runtime](https://docs.microsoft.com/archive/msdn-magazine/2012/windows-8-special-issue/windows-runtime-and-the-clr-underneath-the-hood-with-net-and-the-windows-runtime).|  
-|`ofReserved1`|내부용으로 예약됩니다.|  
-|`ofReserved2`|내부용으로 예약됩니다.|  
-|`ofReserved`|내부용으로 예약됩니다.|  
+|`ofNoTransform`|.winmd 파일의 자동 변형을 사용하지 않도록 설정해야 함을 나타냅니다. 즉, Windows 런타임 형식에서 .NET Framework 형식으로의 프로젝션을 사용하지 않도록 설정해야 합니다. 자세한 내용은 [Windows 런타임 및 CLR-.net 및 Windows 런타임의 내부](https://docs.microsoft.com/archive/msdn-magazine/2012/windows-8-special-issue/windows-runtime-and-the-clr-underneath-the-hood-with-net-and-the-windows-runtime)를 참조 하십시오.|  
+|`ofReserved1`|내부 용도로 예약되어 있습니다.|  
+|`ofReserved2`|내부 용도로 예약되어 있습니다.|  
+|`ofReserved`|내부 용도로 예약되어 있습니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** CorHdr.h  
+ **헤더:** CorHdr .h  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [메타데이터 열거형](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

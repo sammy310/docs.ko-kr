@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445598"
 ---
 # <a name="setassemblyfile-method"></a>SetAssemblyFile 메서드
-Assigns the name of the assembly to be built. Not for use when producing unbound modules.  
+빌드할 어셈블리의 이름을 할당 합니다. 바인딩되지 않은 모듈을 생성할 때 사용할 수 없습니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,24 +37,24 @@ HRESULT SetAssemblyFile(
   
 ## <a name="parameters"></a>매개 변수  
  `pszFilename`  
- Fully qualified name of the manifest file.  
+ 매니페스트 파일의 정규화 된 이름입니다.  
   
  `pEmitter`  
- Pointer to [IMetaDataEmit Interface](../metadata/imetadataemit-interface.md) interface.  
+ [IMetaDataEmit interface](../metadata/imetadataemit-interface.md) 인터페이스에 대 한 포인터입니다.  
   
  `afFlags`  
- Flags as defined in [AssemblyFlags Enumeration](../metadata/assemblyflags-enumeration.md).  
+ [Assemblyflags 열거형](../metadata/assemblyflags-enumeration.md)에 정의 된 플래그입니다.  
   
  `pAssemblyID`  
- Pointer to ID of resulting assembly.  
+ 결과 어셈블리의 ID에 대 한 포인터입니다.  
   
 ## <a name="return-value"></a>반환 값  
- Returns S_OK if the method succeeds.  
+ 메서드가 성공 하면 S_OK을 반환 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- Requires alink.h.  
+ Alink가 필요 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IALink 인터페이스](ialink-interface.md)
 - [IALink2 인터페이스](ialink2-interface.md)

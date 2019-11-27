@@ -23,9 +23,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448100"
 ---
 # <a name="iceegengetsectioncreate-method"></a>ICeeGen::GetSectionCreate 메서드
-Generates and gets a code section using the specified name and flag values.  
+지정 된 이름 및 플래그 값을 사용 하 여 코드 섹션을 생성 하 고 가져옵니다.  
   
- This method is obsolete and should not be used.  
+ 이 메서드는 사용 되지 않으므로 사용 하면 안 됩니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,26 +39,26 @@ HRESULT GetSectionCreate (
   
 ## <a name="parameters"></a>매개 변수  
  `name`  
- [in] A pointer to a string that specifies the name of the section to be created.  
+ 진행 만들 섹션의 이름을 지정 하는 문자열에 대 한 포인터입니다.  
   
  `flags`  
- [in] Flags that specify options.  
+ 진행 옵션을 지정 하는 플래그입니다.  
   
  `section`  
- [out] A pointer to the newly created code section.  
+ 제한이 새로 만든 코드 섹션에 대 한 포인터입니다.  
   
 ## <a name="remarks"></a>주의  
- Call `GetSectionCreate` only if you have special section requirements that are not handled by other methods.  
+ 다른 메서드에서 처리 하지 않는 특별 한 섹션 요구 사항이 있는 경우에만 `GetSectionCreate`를 호출 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICeeGen 인터페이스](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

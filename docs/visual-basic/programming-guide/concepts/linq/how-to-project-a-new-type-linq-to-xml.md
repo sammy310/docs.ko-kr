@@ -9,7 +9,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353331"
 ---
-# <a name="how-to-project-a-new-type-linq-to-xml-visual-basic"></a>How to: Project a New Type (LINQ to XML) (Visual Basic)
+# <a name="how-to-project-a-new-type-linq-to-xml-visual-basic"></a>방법: 새 형식 프로젝션 (LINQ to XML) (Visual Basic)
 이 단원의 다른 예제에서는 <xref:System.Collections.Generic.IEnumerable%601>의 <xref:System.Xml.Linq.XElement>, <xref:System.Collections.Generic.IEnumerable%601>의 `string` 및 <xref:System.Collections.Generic.IEnumerable%601>의 `int`로 결과를 반환하는 쿼리를 보여 줍니다. 이러한 결과 형식이 일반적이지만 모든 시나리오에 적합하지는 아닙니다. 대부분의 경우 다른 형식의 <xref:System.Collections.Generic.IEnumerable%601>을 반환하는 쿼리를 작성하려고 할 수 있습니다.  
   
 ## <a name="example"></a>예제  
@@ -43,7 +43,7 @@ Public Class Program
 End Class  
 ```  
   
- This example uses the `M:System.Xml.Linq.XElement.Element` method that was introduced in the topic [How to: Retrieve a Single Child Element (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-a-single-child-element-linq-to-xml.md). 또한, 캐스트를 사용하여 `M:System.Xml.Linq.XElement.Element` 메서드에서 반환하는 요소의 값을 검색합니다.  
+ 이 예제에서는 [방법: 단일 자식 요소 검색 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-a-single-child-element-linq-to-xml.md)항목에 소개 된 `M:System.Xml.Linq.XElement.Element` 메서드를 사용 합니다. 또한, 캐스트를 사용하여 `M:System.Xml.Linq.XElement.Element` 메서드에서 반환하는 요소의 값을 검색합니다.  
   
  이 예제는 다음과 같은 출력을 생성합니다.  
   
@@ -52,6 +52,6 @@ Lawnmower:1
 Baby Monitor:2  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [Projections and Transformations (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+- [프로젝션 및 변환 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

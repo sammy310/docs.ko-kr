@@ -21,7 +21,7 @@ ms.locfileid: "74283229"
 
  WCF (Windows Communication Foundation)는 서비스 지향 응용 프로그램을 빌드하기 위한 Microsoft의 통합 프로그래밍 모델입니다. WF3와 함께 .NET 3.0의 일부로 처음 도입 되었으며 현재는 .NET Framework의 주요 구성 요소 중 하나입니다.
 
- Windows Server AppFabric은 IIS에서 실행되는 웹 애플리케이션 및 복합 애플리케이션을 쉽게 빌드하고, 확장 및 관리할 수 있게 하는 통합 기술 집합입니다. 서비스와 워크플로를 모니터링 및 관리하기 위한 도구를 제공합니다. 자세한 내용은 [Windows Server AppFabric 1.0](https://docs.microsoft.com/previous-versions/appfabric/ff384253(v=azure.10))을 참조 하세요.
+ Windows Server AppFabric은 보다 간단하게 웹은 물론 IIS에서 실행하는 복합 응용 프로그램을 작성, 조정 및 관리할 수 있도록 지원하는 일련의 통합 기술입니다. 서비스와 워크플로를 모니터링 및 관리하기 위한 도구를 제공합니다. 자세한 내용은 [Windows Server AppFabric 1.0](https://docs.microsoft.com/previous-versions/appfabric/ff384253(v=azure.10))을 참조 하세요.
 
 ## <a name="goals"></a>목표
  이 항목은 각각 다른 시나리오에 대해 측정된 데이터와 함께 WF4의 성능 특성을 보여 주는 것을 목표로 합니다. 또한 WF4와 WF3을 자세히 비교하고 이 새로운 수정 버전에서 향상된 기능을 보여 줍니다. 이 문서에 제공된 시나리오와 데이터는 WF4 및 WF3의 여러 측면에 대한 기본 비용을 수량화합니다. 이 데이터는 WF4의 성능 특징을 파악하는 데 유용하며 WF3에서 WF4로의 마이그레이션을 계획하거나 애플리케이션 개발에 WF4를 사용할 때 도움이 될 수 있습니다. 하지만 이 문서에 제공된 데이터에서 결론을 도출할 때는 주의해야 합니다. 복합 워크플로 애플리케이션의 성능은 워크플로 구현 방법과 여러 구성 요소의 통합 방법에 따라 크게 달라집니다. 각 애플리케이션을 측정하여 해당 애플리케이션의 성능 특성을 결정해야 합니다.
@@ -49,7 +49,7 @@ ms.locfileid: "74283229"
 ### <a name="asynchronous-programming"></a>비동기 프로그래밍
  일반적으로 I/O 또는 분산 컴퓨팅 작업과 같은 장기 실행 차단 작업에 대해 비동기 프로그래밍을 사용하면 애플리케이션의 성능과 확장성이 향상됩니다. WF4에서는 기본 작업 형식 <xref:System.Activities.AsyncCodeActivity>, <xref:System.Activities.AsyncCodeActivity%601>를 통해 비동기 지원을 제공합니다. 런타임은 기본적으로 비동기 작업을 이해하므로 비동기 작업이 처리되는 동안 자동으로 인스턴스를 지속적이지 않은 영역에 배치할 수 있습니다. 워크플로 스케줄러 스레드를 보류하지 않고 병렬로 실행될 수 있는 작업을 차단하지 않으면서 비동기 작업을 수행하기 위해 이러한 유형에서 사용자 지정 작업이 파생될 수 있습니다.
 
-### <a name="messaging"></a>Messaging(메시징)
+### <a name="messaging"></a>메시징
  처음에 WF3은 외부 이벤트 또는 웹 서비스 호출을 통해 매우 제한된 메시징을 지원했습니다. .NET 3.5에서는 워크플로를 WCF 클라이언트로 구현 하거나 <xref:System.Workflow.Activities.SendActivity> 및 <xref:System.Workflow.Activities.ReceiveActivity>를 통해 WCF 서비스로 노출할 수 있습니다. W F 4에서 워크플로 기반 메시징 프로그래밍의 개념은 WCF 메시징 논리를 WF에 긴밀 하 게 통합 하 여 더욱 강화 되었습니다.
 
  .NET 4의 WCF에서 제공 하는 통합 메시지 처리 파이프라인은 W F 4 services가 WF3 보다 훨씬 향상 된 성능 및 확장성을 제공 하는 데 도움이 됩니다. WF4는 복잡한 MEP(메시지 Exchange 패턴)를 모델링할 수 있는 보다 풍부한 메시징 프로그래밍 지원도 제공합니다. 개발자는 형식화된 서비스 계약을 사용하여 프로그래밍을 간소화하거나 형식화되지 않은 서비스 계약을 사용하여 serialization 비용 없이 성능을 향상시킬 수 있습니다. WF4의 <xref:System.ServiceModel.Activities.SendMessageChannelCache> 클래스를 통한 클라이언트 쪽 채널 캐싱 지원은 개발자가 최소한의 노력으로 빠른 애플리케이션을 빌드하는 데 도움이 됩니다. 자세한 내용은 [Send 활동의 캐시 공유 수준 변경](../wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md)을 참조 하세요.
@@ -201,7 +201,7 @@ public sealed class CompensableActivityEmptyCompensation : CodeActivity
  WCF 워크플로 서비스 응용 프로그램에서 새 워크플로를 시작 하거나 기존 워크플로를 로드 하는 데 걸리는 대기 시간은 차단할 수 있으므로 중요 합니다.  이 테스트 사례에서는 일반적인 시나리오의 WF4 XAMLX 호스트를 기준으로 WF3 XOML 호스트를 측정합니다.
 
 ##### <a name="environment-setup"></a>환경 설치
- ![대기 시간 및 처리량 테스트를 위한 환경 설정](./media/performance/latency-throughput-environment-setup.gif)
+ ![지연 및 처리량 테스트를 위한 환경 설정](./media/performance/latency-throughput-environment-setup.gif)
 
 ##### <a name="test-setup"></a>테스트 설치
  시나리오에서 클라이언트 컴퓨터는 컨텍스트 기반 상관 관계를 사용 하 여 WCF workflow service에 연결 합니다.  컨텍스트 상관 관계에는 특수 컨텍스트 바인딩이 필요하며 컨텍스트 헤더나 쿠키를 사용하여 메시지를 올바른 워크플로 인스턴스에 연결합니다.  상관 관계 ID가 메시지 헤더에 있으므로 메시지 본문을 구문 분석할 필요가 없다는 점에서 성능 이점이 있습니다.
@@ -218,7 +218,7 @@ public sealed class CompensableActivityEmptyCompensation : CodeActivity
 
  ![WF3 및 W F 4를 사용 하는 WCF 워크플로 서비스의 콜드 및 웜 대기 시간을 보여 주는 세로 막대형 차트](./media/performance/latency-results-graph.gif)
 
- 이전 차트에서 콜드은 지정 된 워크플로에 대 한 기존 <xref:System.ServiceModel.WorkflowServiceHost> 없는 경우를 나타냅니다.  즉, 콜드 대기 시간은 워크플로가 처음 사용되고 있으며 XOML 또는 XAML을 컴파일해야 하는 경우입니다.  웜 대기 시간은 워크플로 형식이 이미 컴파일된 경우 새 워크플로 인스턴스를 만드는 시간입니다.  WF4 사례에서는 워크플로 복잡성에 거의 차이가 없지만 WF3 사례에서는 선형으로 진행합니다.
+ 이전 차트에서 콜드은 지정 된 워크플로에 대 한 기존 <xref:System.ServiceModel.WorkflowServiceHost> 없는 경우를 나타냅니다.  콜드 대기 시간은 워크플로를 처음 사용하고 XOML이나 XAML을 컴파일해야 할 때입니다.  웜 대기 시간은 워크플로 유형이 이미 컴파일되었을 때 새 워크플로 인스턴스를 생성하는 시간입니다.  WF4 사례에서는 워크플로 복잡성에 거의 차이가 없지만 WF3 사례에서는 선형으로 진행합니다.
 
 #### <a name="correlation-throughput"></a>상관 관계 처리량
  WF4에서는 콘텐츠 기반의 새 상관 관계 기능이 도입되었습니다.  WF3은 컨텍스트 기반 상관 관계만 제공했습니다.  컨텍스트 기반 상관 관계는 특정 WCF 채널 바인딩에 대해서만 수행할 수 있습니다.  이러한 바인딩을 사용하는 경우 메시지 헤더에 워크플로 ID가 삽입됩니다.  WF3 런타임은 해당 Id로만 워크플로를 식별할 수 있었습니다.  내용 기반 상관 관계를 사용 하면 워크플로 작성자가 계정 번호 또는 고객 Id와 같은 관련 데이터 부분에서 상관 관계 키를 만들 수 있습니다.
@@ -397,7 +397,7 @@ public class Workflow1 : Activity
 
 - SQLServer:Latches\Latch Waits/sec
 
-### <a name="tracking"></a>추적
+### <a name="tracking"></a>Tracking
  워크플로 추적을 사용하여 워크플로 진행률을 추적할 수 있습니다.  추적 이벤트에 포함되는 정보는 추적 프로필에서 결정됩니다.  추적 프로필이 복잡할수록 추적 비용이 증가합니다.
 
  WF3에는 SQL 기반 추적 서비스가 포함되어 있었습니다.  이 서비스는 일괄 처리 모드와 비일괄 처리 모드로 작동할 수 있었습니다.  비일괄 처리 모드에서는 추적 이벤트가 데이터베이스에 직접 기록됩니다.  일괄 처리 모드에서는 추적 이벤트가 동일한 일괄 처리에 워크플로 인스턴스 상태로 수집됩니다.  일괄 처리 모드는 광범위한 워크플로 디자인에서 최고 성능을 제공합니다.  그러나 워크플로에서 많은 작업을 유지하지 않고 실행하며 이러한 작업이 추적되는 경우 일괄 처리 시 성능이 저하될 수 있습니다.  이 문제는 대체로 루프에서 발생하며, 이 시나리오를 방지하는 가장 좋은 방법은 지속성 지점이 포함될 큰 루프를 디자인하는 것입니다.  지속성 지점을 루프에 포함하는 경우에도 성능이 저하될 수 있으므로 각 루프의 비용을 측정하고 균형을 이루는 것이 중요합니다.

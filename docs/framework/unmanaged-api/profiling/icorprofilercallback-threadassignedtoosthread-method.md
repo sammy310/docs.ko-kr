@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440031"
 ---
 # <a name="icorprofilercallbackthreadassignedtoosthread-method"></a>ICorProfilerCallback::ThreadAssignedToOSThread 메서드
-Notifies the profiler that a managed thread is being implemented using a particular operating system thread.  
+특정 운영 체제 스레드를 사용 하 여 관리 되는 스레드가 구현 중임을 프로파일러에 알립니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -35,13 +35,13 @@ HRESULT ThreadAssignedToOSThread(
   
 ## <a name="parameters"></a>매개 변수  
  `managedThreadId`  
- [in] The identifier of the managed thread.  
+ 진행 관리 되는 스레드의 식별자입니다.  
   
  `osThreadId`  
- [in] The identifier of the operating system thread.  
+ 진행 운영 체제 스레드의 식별자입니다.  
   
 ## <a name="remarks"></a>주의  
- The `ThreadAssignedToOSThread` callback exists so that the profiler can maintain an accurate mapping across fibers of operating system threads to managed threads.  
+ 프로파일러가 운영 체제 스레드의 파이버에서 관리 되는 스레드에 대 한 정확한 매핑을 유지할 수 있도록 `ThreadAssignedToOSThread` 콜백이 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
@@ -52,6 +52,6 @@ HRESULT ThreadAssignedToOSThread(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerCallback 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

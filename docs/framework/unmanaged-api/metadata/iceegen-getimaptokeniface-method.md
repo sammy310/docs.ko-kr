@@ -23,9 +23,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74435023"
 ---
 # <a name="iceegengetimaptokeniface-method"></a>ICeeGen::GetIMapTokenIface 메서드
-Gets the interface referenced by the specified token.  
+지정 된 토큰이 참조 하는 인터페이스를 가져옵니다.  
   
- This method is obsolete and should not be used.  
+ 이 메서드는 사용 되지 않으므로 사용 하면 안 됩니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,17 +37,17 @@ HRESULT GetIMapTokenIface (
   
 ## <a name="parameters"></a>매개 변수  
  `pIMapToken`  
- [in, out] The metadata token for the interface to be returned.  
+ [in, out] 반환 될 인터페이스에 대 한 메타 데이터 토큰입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICeeGen 인터페이스](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

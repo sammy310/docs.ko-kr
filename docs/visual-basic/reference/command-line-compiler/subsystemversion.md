@@ -66,9 +66,9 @@ ms.locfileid: "74348530"
 
 ## <a name="setting-this-option"></a>이 옵션 설정
 
-To set the **-subsystemversion** compiler option in Visual Studio, you must open the .vbproj file and specify a value for the `SubsystemVersion` property in the MSBuild XML. Visual Studio IDE에서는 이 옵션을 설정할 수 없습니다. 자세한 내용은 이 항목의 앞부분에 나오는 "기본값"이나 [일반적인 MSBuild 프로젝트 속성](/visualstudio/msbuild/common-msbuild-project-properties)을 참조하세요.
+Visual Studio에서 **-subsystemversion** 컴파일러 옵션을 설정 하려면 .vbproj 파일을 열고 MSBuild XML에서 `SubsystemVersion` 속성의 값을 지정 해야 합니다. Visual Studio IDE에서는 이 옵션을 설정할 수 없습니다. 자세한 내용은 이 항목의 앞부분에 나오는 "기본값"이나 [일반적인 MSBuild 프로젝트 속성](/visualstudio/msbuild/common-msbuild-project-properties)을 참조하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Visual Basic 명령줄 컴파일러](../../../visual-basic/reference/command-line-compiler/index.md)
 

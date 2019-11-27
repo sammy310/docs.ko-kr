@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446426"
 ---
 # <a name="isymunmanagedreader2getsymattributepreremap-method"></a>ISymUnmanagedReader2::GetSymAttributePreRemap 메서드
-Gets a custom attribute based upon its name. Unlike metadata custom attributes, these attributes are held in the symbol store.  
+이름에 따라 사용자 지정 특성을 가져옵니다. 메타 데이터 사용자 지정 특성과 달리 이러한 특성은 기호 저장소에 저장 됩니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,26 +39,26 @@ HRESULT GetSymAttributePreRemap(
   
 ## <a name="parameters"></a>매개 변수  
  `parent`  
- [in] The metadata token of the parent.  
+ 진행 부모의 메타 데이터 토큰입니다.  
   
  `name`  
- [in] A pointer to a `WCHAR` that contains the name.  
+ 진행 이름을 포함 하는 `WCHAR`에 대 한 포인터입니다.  
   
  `cBuffer`  
- [in] A `ULONG32` that indicates the size of the `buffer` array.  
+ 진행 `buffer` 배열의 크기를 나타내는 `ULONG32`입니다.  
   
  `pcBuffer`  
- [out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the attribute bytes.  
+ 제한이 특성 바이트를 포함 하는 데 필요한 버퍼 크기를 수신 하는 `ULONG32`에 대 한 포인터입니다.  
   
  `buffer`  
- [out] A pointer to the buffer that receives the attribute bytes.  
+ 제한이 특성 바이트를 받는 버퍼에 대 한 포인터입니다.  
   
 ## <a name="return-value"></a>반환 값  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **Header:** CorSym.idl, CorSym.h  
+ **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ISymUnmanagedReader2 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-interface.md)

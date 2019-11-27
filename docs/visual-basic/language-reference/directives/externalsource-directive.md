@@ -21,7 +21,7 @@ ms.locfileid: "74343827"
 ---
 # <a name="externalsource-directive"></a>#ExternalSource 지시문
 
-Indicates a mapping between specific lines of source code and text external to the source.  
+소스 코드의 특정 줄과 소스 외부의 텍스트 간 매핑을 나타냅니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -34,25 +34,25 @@ Indicates a mapping between specific lines of source code and text external to t
 ## <a name="parts"></a>요소  
 
  `StringLiteral`  
- The path to the external source.  
+ 외부 소스에 대 한 경로입니다.  
   
  `IntLiteral`  
- The line number of the first line of the external source.  
+ 외부 소스 첫째 줄의 줄 번호입니다.  
   
  `LogicalLine`  
- The line where the error occurs in the external source.  
+ 외부 소스에서 오류가 발생 하는 줄입니다.  
   
  `#End ExternalSource`  
  `#ExternalSource` 블록을 종료합니다.  
   
 ## <a name="remarks"></a>주의  
 
- This directive is used only by the compiler and the debugger.  
+ 이 지시문은 컴파일러와 디버거에서만 사용 됩니다.  
   
- A source file may include external source directives, which indicate a mapping between specific lines of code in the source file and text external to the source, such as an .aspx file. If errors are encountered in the designated source code during compilation, they are identified as coming from the external source.  
+ 소스 파일에는 소스 파일의 특정 코드 줄과 소스 외부의 텍스트 (예: .aspx 파일) 간의 매핑을 나타내는 외부 소스 지시문이 포함 될 수 있습니다. 컴파일 중에 지정 된 소스 코드에서 오류가 발생 하면 외부 소스에서 가져온 것으로 식별 됩니다.  
   
- External source directives have no effect on compilation and cannot be nested. They are intended for internal use by the application only.  
+ 외부 소스 지시문은 컴파일에 영향을 주지 않으며 중첩할 수 없습니다. 응용 프로그램에서 내부용으로 사용 됩니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [조건부 컴파일](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)

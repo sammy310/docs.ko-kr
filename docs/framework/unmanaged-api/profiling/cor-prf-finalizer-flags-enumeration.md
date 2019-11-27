@@ -36,10 +36,10 @@ typedef enum {
   
 |멤버|설명|  
 |------------|-----------------|  
-|`COR_PRF_FINALIZER_CRITICAL`|The finalizer is critical.|  
+|`COR_PRF_FINALIZER_CRITICAL`|종료자는 중요 합니다.|  
   
 ## <a name="remarks"></a>주의  
- The `COR_PRF_FINALIZER_FLAGS` enumeration is used by the [ICorProfilerCallback2::FinalizeableObjectQueued](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-finalizeableobjectqueued-method.md) method to describe the finalizer for an object.  
+ `COR_PRF_FINALIZER_FLAGS` 열거형은 [ICorProfilerCallback2:: FinalizeableObjectQueued](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-finalizeableobjectqueued-method.md) 메서드에서 개체의 종료자를 설명 하는 데 사용 됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
@@ -50,6 +50,6 @@ typedef enum {
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [프로파일링 열거형](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

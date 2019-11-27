@@ -23,9 +23,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74434874"
 ---
 # <a name="iceegengetsectionblock-method"></a>ICeeGen::GetSectionBlock 메서드
-Gets a section block of the code base.  
+코드 베이스의 섹션 블록을 가져옵니다.  
   
- This method is obsolete and should not be used.  
+ 이 메서드는 사용 되지 않으므로 사용 하면 안 됩니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,29 +40,29 @@ HRESULT GetSectionBlock (
   
 ## <a name="parameters"></a>매개 변수  
  `section`  
- [in] The section from which to retrieve a block of the code base.  
+ 진행 코드 베이스 블록을 검색할 섹션입니다.  
   
  `len`  
- [in] The length of the block to be retrieved.  
+ 진행 검색할 블록의 길이입니다.  
   
  `align`  
- [in] The byte, relative to the beginning of the section, with which to align the first byte of the block. This is the position of the block within the section.  
+ 진행 블록의 첫 번째 바이트를 정렬 하는 데 사용 되는 섹션의 시작 부분을 기준으로 하는 바이트입니다. 이는 섹션 내에서 블록의 위치입니다.  
   
  `ppBytes`  
- [out] A pointer to a location that receives the address of the retrieved block.  
+ 제한이 검색 된 블록의 주소를 받는 위치에 대 한 포인터입니다.  
   
 ## <a name="remarks"></a>주의  
- Call `GetSectionBlock` only if you have special section requirements that are not handled by other methods.  
+ 다른 메서드에서 처리 하지 않는 특별 한 섹션 요구 사항이 있는 경우에만 `GetSectionBlock`를 호출 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICeeGen 인터페이스](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

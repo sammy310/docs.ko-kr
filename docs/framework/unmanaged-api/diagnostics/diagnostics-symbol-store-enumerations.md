@@ -15,22 +15,22 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448546"
 ---
 # <a name="diagnostics-symbol-store-enumerations"></a>진단 기호 저장소 열거형
-This topic describes the unmanaged enumerations that the diagnostics symbol store API uses.  
+이 항목에서는 진단 기호 저장소 API에서 사용 하는 관리 되지 않는 열거형에 대해 설명 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [CorSymAddrKind 열거형](../../../../docs/framework/unmanaged-api/diagnostics/corsymaddrkind-enumeration.md)  
- Indicates the type of memory address.  
+ 메모리 주소의 유형을 나타냅니다.  
   
  [CorSymSearchPolicyAttributes 열거형](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md)  
- Specifies the policy to be used when doing a search for a symbol reader.  
+ 기호 판독기를 검색할 때 사용할 정책을 지정 합니다.  
   
  [CorSymVarFlag 열거형](../../../../docs/framework/unmanaged-api/diagnostics/corsymvarflag-enumeration.md)  
- Indicates whether a variable is compiler-generated.  
+ 변수가 컴파일러에서 생성 되었는지 여부를 나타냅니다.  
   
  [NOTIFY_FILTER 열거형](../../../../docs/framework/unmanaged-api/diagnostics/notify-filter-enumeration.md)  
- Identifies callbacks for debugger functions.  
+ 디버거 함수의 콜백을 식별 합니다.  
   
-## <a name="related-sections"></a>관련 단원  
+## <a name="related-sections"></a>관련 섹션  
  [진단 기호 저장소 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)  
   
  [진단 기호 저장소 구조체](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)  

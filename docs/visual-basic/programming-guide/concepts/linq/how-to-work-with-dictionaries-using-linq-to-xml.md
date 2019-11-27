@@ -9,11 +9,11 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74332360"
 ---
-# <a name="how-to-work-with-dictionaries-using-linq-to-xml-visual-basic"></a>How to: Work with Dictionaries Using LINQ to XML (Visual Basic)
+# <a name="how-to-work-with-dictionaries-using-linq-to-xml-visual-basic"></a>방법: LINQ to XML를 사용 하 여 사전 작업 (Visual Basic)
 다양한 데이터 구조를 XML로 변환하고 XML을 다시 다른 데이터 구조로 변환하는 것이 편리한 경우가 많습니다. 이 항목에서는 <xref:System.Collections.Generic.Dictionary%602>를 XML로 변환하고 다시 그 반대로 변환하여 이 일반적인 방법을 구체적으로 구현하는 것을 보여 줍니다.  
   
 ## <a name="example"></a>예제  
- This example uses XML literals and a query in an embedded expression. The query projects new <xref:System.Xml.Linq.XElement> objects, which then become the new content for the `Root` <xref:System.Xml.Linq.XElement> object.  
+ 이 예에서는 포함 된 식에서 XML 리터럴과 쿼리를 사용 합니다. 이 쿼리는 새 <xref:System.Xml.Linq.XElement> 개체를 프로젝션 합니다. 그러면 `Root` <xref:System.Xml.Linq.XElement> 개체에 대 한 새 내용이 됩니다.  
   
 ```vb  
 Dim dict As Dictionary(Of String, String) = New Dictionary(Of String, String)()  
@@ -70,6 +70,6 @@ Child3:Value3
 Child4:Value4  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [Projections and Transformations (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+- [프로젝션 및 변환 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

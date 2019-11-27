@@ -9,7 +9,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344655"
 ---
-# <a name="how-to-find-related-elements-xpath-linq-to-xml-visual-basic"></a>How to: Find Related Elements (XPath-LINQ to XML) (Visual Basic)
+# <a name="how-to-find-related-elements-xpath-linq-to-xml-visual-basic"></a>방법: 관련 요소 찾기 (XPath-LINQ to XML) (Visual Basic)
 이 항목에서는 다른 요소의 값에 의해 참조되는 특성을 기준으로 선택하여 요소를 가져오는 방법을 비교합니다.  
   
  XPath 식은 다음과 같습니다.  
@@ -73,6 +73,6 @@ Results are identical
 </Customer>  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [LINQ to XML for XPath Users (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [XPath 사용자에 대 한 LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

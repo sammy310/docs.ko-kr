@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74442444"
 ---
 # <a name="corunmanagedcallingconvention-enumeration"></a>CorUnmanagedCallingConvention 열거형
-Specifies the calling conventions for unmanaged code.  
+비관리 코드에 대 한 호출 규칙을 지정 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -46,25 +46,25 @@ typedef enum CorUnmanagedCallingConvention {
   
 |멤버|설명|  
 |------------|-----------------|  
-|`IMAGE_CEE_UNMANAGED_CALLCONV_C`|The C language calling convention.|  
-|`IMAGE_CEE_UNMANAGED_CALLCONV_STDCALL`|The standard calling convention.|  
-|`IMAGE_CEE_UNMANAGED_CALLCONV_THISCALL`|The "this" calling convention.|  
-|`IMAGE_CEE_UNMANAGED_CALLCONV_FASTCALL`|The "fast" calling convention.|  
+|`IMAGE_CEE_UNMANAGED_CALLCONV_C`|C 언어 호출 규칙입니다.|  
+|`IMAGE_CEE_UNMANAGED_CALLCONV_STDCALL`|표준 호출 규칙입니다.|  
+|`IMAGE_CEE_UNMANAGED_CALLCONV_THISCALL`|"This" 호출 규칙입니다.|  
+|`IMAGE_CEE_UNMANAGED_CALLCONV_FASTCALL`|"Fast" 호출 규칙입니다.|  
 |`IMAGE_CEE_CS_CALLCONV_C`|사용되지 않습니다.|  
 |`IMAGE_CEE_CS_CALLCONV_STDCALL`|사용되지 않습니다.|  
 |`IMAGE_CEE_CS_CALLCONV_THISCALL`|사용되지 않습니다.|  
 |`IMAGE_CEE_CS_CALLCONV_FASTCALL`|사용되지 않습니다.|  
   
 ## <a name="remarks"></a>주의  
- The CLR does not support the "fast" calling convention in the .NET Framework version 1.0.  
+ CLR은 .NET Framework 버전 1.0의 "fast" 호출 규칙을 지원 하지 않습니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** CorHdr.h  
+ **헤더:** CorHdr .h  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [메타데이터 열거형](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

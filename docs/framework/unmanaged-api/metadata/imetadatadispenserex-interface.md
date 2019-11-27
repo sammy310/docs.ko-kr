@@ -22,29 +22,29 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431150"
 ---
 # <a name="imetadatadispenserex-interface"></a>IMetaDataDispenserEx 인터페이스
-Extends the [IMetaDataDispenser Interface](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md) interface to provide the capability to control how the metadata APIs operate on the current metadata scope.  
+[IMetaDataDispenser 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md) 인터페이스를 확장 하 여 메타 데이터 api가 현재 메타 데이터 범위에서 작동 하는 방식을 제어할 수 있는 기능을 제공 합니다.  
   
 ## <a name="methods"></a>메서드  
   
 |메서드|설명|  
 |------------|-----------------|  
-|[FindAssembly 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-findassembly-method.md)|This method is not implemented. If called, it returns E_NOTIMPL.|  
-|[FindAssemblyModule 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-findassemblymodule-method.md)|This method is not implemented. If called, it returns E_NOTIMPL.|  
-|[GetCORSystemDirectory 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-getcorsystemdirectory-method.md)|Gets the directory that holds the current common language runtime (CLR). This method is supported only for use by out-of-process debuggers. If called from another component, it will return E_NOTIMPL.|  
-|[GetOption 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-getoption-method.md)|Gets the value of the specified option for the current metadata scope. The option controls how calls to the current metadata scope are handled.|  
-|[OpenScopeOnITypeInfo 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-openscopeonitypeinfo-method.md)|This method is not implemented. If called, it returns E_NOTIMPL.|  
-|[SetOption 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-setoption-method.md)|Sets the specified option to a given value for the current metadata scope. The option controls how calls to the current metadata scope are handled.|  
+|[FindAssembly 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-findassembly-method.md)|이 메서드가 구현되지 않았습니다. 이 메서드를 호출 하면 E_NOTIMPL 반환 됩니다.|  
+|[FindAssemblyModule 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-findassemblymodule-method.md)|이 메서드가 구현되지 않았습니다. 이 메서드를 호출 하면 E_NOTIMPL 반환 됩니다.|  
+|[GetCORSystemDirectory 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-getcorsystemdirectory-method.md)|현재 CLR (공용 언어 런타임)을 보유 하 고 있는 디렉터리를 가져옵니다. 이 메서드는 in-process 디버거가 사용할 때만 지원 됩니다. 다른 구성 요소에서 호출 되는 경우 E_NOTIMPL 반환 됩니다.|  
+|[GetOption 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-getoption-method.md)|현재 메타 데이터 범위에 지정 된 옵션의 값을 가져옵니다. 옵션은 현재 메타 데이터 범위에 대 한 호출을 처리 하는 방법을 제어 합니다.|  
+|[OpenScopeOnITypeInfo 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-openscopeonitypeinfo-method.md)|이 메서드가 구현되지 않았습니다. 이 메서드를 호출 하면 E_NOTIMPL 반환 됩니다.|  
+|[SetOption 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-setoption-method.md)|지정 된 옵션을 현재 메타 데이터 범위의 지정 된 값으로 설정 합니다. 옵션은 현재 메타 데이터 범위에 대 한 호출을 처리 하는 방법을 제어 합니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조 하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [메타데이터 인터페이스](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
 - [IMetaDataDispenser 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)

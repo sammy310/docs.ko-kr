@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439822"
 ---
 # <a name="icorprofilercallback2garbagecollectionstarted-method"></a>ICorProfilerCallback2::GarbageCollectionStarted 메서드
-Notifies the code profiler that garbage collection has started.  
+가비지 수집이 시작 되었음을 코드 프로파일러에 알립니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,20 +36,20 @@ HRESULT GarbageCollectionStarted(
   
 ## <a name="parameters"></a>매개 변수  
  `cGenerations`  
- [in] The total number of entries in the `generationCollected` array.  
+ 진행 `generationCollected` 배열에 있는 총 항목 수입니다.  
   
  `generationCollected`  
- [in] An array of Boolean values, which are `true` if the generation that corresponds to the array index is being collected by this garbage collection; otherwise, `false`.  
+ 진행 이 가비지 컬렉션에서 배열 인덱스에 해당 하는 세대를 수집 하는 경우 `true` 되는 부울 값의 배열입니다. 그렇지 않으면 `false`합니다.  
   
- The array is indexed by a value of the [COR_PRF_GC_GENERATION](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-enumeration.md) enumeration, which indicates the generation.  
+ 배열은 생성을 나타내는 [COR_PRF_GC_GENERATION](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-enumeration.md) 열거형 값으로 인덱싱됩니다.  
   
  `reason`  
- [in] A value of the [COR_PRF_GC_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-reason-enumeration.md) enumeration that indicates the reason the garbage collection was induced.  
+ 진행 가비지 컬렉션이 발생 한 이유를 나타내는 [COR_PRF_GC_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-reason-enumeration.md) 열거형의 값입니다.  
   
 ## <a name="remarks"></a>주의  
- All callbacks that pertain to this garbage collection will occur between the `GarbageCollectionStarted` callback and the corresponding [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) callback. These callbacks need not occur on the same thread.  
+ 이 가비지 컬렉션과 관련 된 모든 콜백은 `GarbageCollectionStarted` 콜백과 해당 [ICorProfilerCallback2:: GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) callback 사이에서 발생 합니다. 이러한 콜백은 동일한 스레드에서 발생 하지 않아도 됩니다.  
   
- It is safe for the profiler to inspect objects in their original locations during the `GarbageCollectionStarted` callback. The garbage collector will begin moving objects after the return from `GarbageCollectionStarted`. After the profiler has returned from this callback, the profiler should consider all object IDs to be invalid until it receives a `ICorProfilerCallback2::GarbageCollectionFinished` callback.  
+ 프로파일러에서 `GarbageCollectionStarted` 콜백 중에 원래 위치에서 개체를 검사 하는 것이 안전 합니다. `GarbageCollectionStarted`반환한 후에 가비지 수집기가 개체 이동을 시작 합니다. 프로파일러가이 콜백에서 반환 된 후 프로파일러는 `ICorProfilerCallback2::GarbageCollectionFinished` 콜백을 받을 때까지 모든 개체 Id가 유효 하지 않은 것으로 간주 해야 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
@@ -60,7 +60,7 @@ HRESULT GarbageCollectionStarted(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerCallback 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
 - [ICorProfilerCallback2 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)

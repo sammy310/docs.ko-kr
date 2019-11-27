@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74433538"
 ---
 # <a name="icorprofilercallbackruntimeresumestarted-method"></a>ICorProfilerCallback::RuntimeResumeStarted 메서드
-Notifies the profiler that the runtime is resuming all run-time threads.  
+런타임이 모든 런타임 스레드를 재개 함을 프로파일러에 알립니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,7 +40,7 @@ HRESULT RuntimeResumeStarted();
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerCallback 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
 - [RuntimeResumeFinished 메서드](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimeresumefinished-method.md)

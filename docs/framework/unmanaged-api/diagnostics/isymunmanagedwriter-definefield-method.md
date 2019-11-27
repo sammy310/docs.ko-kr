@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428041"
 ---
 # <a name="isymunmanagedwriterdefinefield-method"></a>ISymUnmanagedWriter::DefineField 메서드
-Defines a single variable that is not within a method. This method is used for certain fields in classes, bit fields, and so on.  
+메서드 내에 없는 단일 변수를 정의 합니다. 이 메서드는 클래스, 비트 필드 등의 특정 필드에 사용 됩니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -42,38 +42,38 @@ HRESULT DefineField(
   
 ## <a name="parameters"></a>매개 변수  
  `parent`  
- [in] The metadata type or method token.  
+ 진행 메타 데이터 형식 또는 메서드 토큰입니다.  
   
  `name`  
- [in] The field name.  
+ 진행 필드 이름입니다.  
   
  `attributes`  
- [in] The field attributes.  
+ 진행 필드 특성입니다.  
   
  `cSig`  
- [in] A `ULONG32` that is the size, in characters, of the buffer required to contain the field signature.  
+ 진행 필드 시그니처를 포함 하는 데 필요한 버퍼의 크기 (문자) 인 `ULONG32`입니다.  
   
  `signature`  
- [in] The array of field signatures.  
+ 진행 필드 시그니처의 배열입니다.  
   
  `addrKind`  
- [in] The address type.  
+ 진행 주소 유형입니다.  
   
  `addr1`  
- [in] The first address for the field specification.  
+ 진행 필드 사양의 첫 번째 주소입니다.  
   
  `addr2`  
- [in] The second address for the field specification.  
+ 진행 필드 사양의 두 번째 주소입니다.  
   
  `addr3`  
- [in] The third address for the field specification.  
+ 진행 필드 사양의 세 번째 주소입니다.  
   
 ## <a name="return-value"></a>반환 값  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **Header:** CorSym.idl, CorSym.h  
+ **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ISymUnmanagedWriter 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432877"
 ---
 # <a name="corserializationtype-enumeration"></a>CorSerializationType 열거형
-Specifies how an object is serialized by the common language runtime.  
+공용 언어 런타임에 의해 개체가 serialize 되는 방법을 지정 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -57,34 +57,34 @@ typedef enum CorSerializationType {
   
 |멤버|설명|  
 |------------|-----------------|  
-|`SERIALIZATION_TYPE_UNDEFINED`|Serialization of the object is undefined.|  
-|`SERIALIZATION_TYPE_BOOLEAN`|Object is serialized as a Boolean type|  
-|`SERIALIZATION_TYPE_CHAR`|Object is serialized as a character type.|  
-|`SERIALIZATION_TYPE_I1`|Object is serialized as a signed 1-byte integer.|  
-|`SERIALIZATION_TYPE_U1`|Object is serialized as an unsigned 1-byte integer.|  
-|`SERIALIZATION_TYPE_I2`|Object is serialized as a signed 2-byte integer.|  
-|`SERIALIZATION_TYPE_U2`|Object is serialized as an unsigned 2-byte integer.|  
-|`SERIALIZATION_TYPE_I4`|Object is serialized as a signed 4-byte integer.|  
-|`SERIALIZATION_TYPE_U4`|Object is serialized as an unsigned 4-byte integer.|  
-|`SERIALIZATION_TYPE_I8`|Object is serialized as a signed 8-byte integer.|  
-|`SERIALIZATION_TYPE_U8`|Object is serialized as an unsigned 8-byte integer.|  
-|`SERIALIZATION_TYPE_R4`|Object is serialized as a 4-byte floating point.|  
-|`SERIALIZATION_TYPE_R8`|Object is serialized as an 8-byte floating point.|  
-|`SERIALIZATION_TYPE_STRING`|Object is serialized as a System.String type.|  
-|`SERIALIZATION_TYPE_SZARRAY`|Object is serialized as a single-dimensional, zero lower-bound array.|  
-|`SERIALIZATION_TYPE_TYPE`|Object is serialized as a generic type.|  
-|`SERIALIZATION_TYPE_TAGGED_OBJECT`|Object is serialized as a tagged object.|  
-|`SERIALIZATION_TYPE_FIELD`|Object is serialized as a field.|  
-|`SERIALIZATION_TYPE_PROPERTY`|Object is serialized as a property.|  
-|`SERIALIZATION_TYPE_ENUM`|Object is serialized as an enumeration.|  
+|`SERIALIZATION_TYPE_UNDEFINED`|개체의 Serialization이 정의 되지 않았습니다.|  
+|`SERIALIZATION_TYPE_BOOLEAN`|개체는 부울 형식으로 직렬화 됩니다.|  
+|`SERIALIZATION_TYPE_CHAR`|개체는 문자 형식으로 serialize 됩니다.|  
+|`SERIALIZATION_TYPE_I1`|개체는 부호 있는 1 바이트 정수로 serialize 됩니다.|  
+|`SERIALIZATION_TYPE_U1`|개체는 부호 없는 1 바이트 정수로 serialize 됩니다.|  
+|`SERIALIZATION_TYPE_I2`|개체는 부호 있는 2 바이트 정수로 serialize 됩니다.|  
+|`SERIALIZATION_TYPE_U2`|개체는 부호 없는 2 바이트 정수로 serialize 됩니다.|  
+|`SERIALIZATION_TYPE_I4`|개체는 부호 있는 4 바이트 정수로 serialize 됩니다.|  
+|`SERIALIZATION_TYPE_U4`|개체는 부호 없는 4 바이트 정수로 serialize 됩니다.|  
+|`SERIALIZATION_TYPE_I8`|개체는 부호 있는 8 바이트 정수로 serialize 됩니다.|  
+|`SERIALIZATION_TYPE_U8`|개체는 부호 없는 8 바이트 정수로 serialize 됩니다.|  
+|`SERIALIZATION_TYPE_R4`|개체가 4 바이트 부동 소수점으로 serialize 됩니다.|  
+|`SERIALIZATION_TYPE_R8`|개체가 8 바이트 부동 소수점으로 serialize 됩니다.|  
+|`SERIALIZATION_TYPE_STRING`|개체는 System.string 형식으로 serialize 됩니다.|  
+|`SERIALIZATION_TYPE_SZARRAY`|개체는 0이 아닌 1 차원 배열로 serialize 됩니다.|  
+|`SERIALIZATION_TYPE_TYPE`|개체가 제네릭 형식으로 serialize 됩니다.|  
+|`SERIALIZATION_TYPE_TAGGED_OBJECT`|개체가 태그가 지정 된 개체로 serialize 됩니다.|  
+|`SERIALIZATION_TYPE_FIELD`|개체가 필드로 serialize 됩니다.|  
+|`SERIALIZATION_TYPE_PROPERTY`|개체는 속성으로 serialize 됩니다.|  
+|`SERIALIZATION_TYPE_ENUM`|개체가 열거형으로 serialize 됩니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** CorHdr.h  
+ **헤더:** CorHdr .h  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [메타데이터 열거형](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446402"
 ---
 # <a name="isymunmanagedreadersymbolsearchinfogetsymbolsearchinfo-method"></a>ISymUnmanagedReaderSymbolSearchInfo::GetSymbolSearchInfo 메서드
-Gets symbol search information.  
+기호 검색 정보를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,20 +37,20 @@ HRESULT GetSymbolSearchInfo(
   
 ## <a name="parameters"></a>매개 변수  
  `cSearchInfo`  
- [in] A `ULONG32` that indicates the size of `rgpSearchInfo`.  
+ 진행 `rgpSearchInfo`크기를 나타내는 `ULONG32`입니다.  
   
  `pcSearchInfo`  
- [out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the search information.  
+ 제한이 검색 정보를 포함 하는 데 필요한 버퍼 크기를 수신 하는 `ULONG32`에 대 한 포인터입니다.  
   
  `rgpSearchInfo`  
- [out] A pointer that is set to the returned [ISymUnmanagedSymbolSearchInfo](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsymbolsearchinfo-interface.md) interface.  
+ 제한이 반환 된 [ISymUnmanagedSymbolSearchInfo](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsymbolsearchinfo-interface.md) interface로 설정 된 포인터입니다.  
   
 ## <a name="return-value"></a>반환 값  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **Header:** CorSym.idl, CorSym.h  
+ **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ISymUnmanagedReaderSymbolSearchInfo 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreadersymbolsearchinfo-interface.md)

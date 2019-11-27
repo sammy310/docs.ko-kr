@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444252"
 ---
 # <a name="ceesectionattr-enumeration"></a>CeeSectionAttr 열거형
-Provides values that specify attributes of a section for use by the [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interface.  
+[ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) 인터페이스에서 사용할 섹션의 특성을 지정 하는 값을 제공 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -41,20 +41,20 @@ typedef enum  {
   
 |멤버|설명|  
 |------------|-----------------|  
-|`sdNone`|Section has no attributes.|  
-|`sdReadOnly`|Section contains initialized data that can be only read, not updated.|  
-|`sdReadWrite`|Section contains initialized data that can be read or updated.|  
-|`sdExecute`|Section contains executable code that is allowed to be read and executed.|  
+|`sdNone`|섹션에는 특성이 없습니다.|  
+|`sdReadOnly`|섹션에는 업데이트 되지 않고 읽을 수만 있는 초기화 된 데이터가 포함 되어 있습니다.|  
+|`sdReadWrite`|섹션에는 읽거나 업데이트할 수 있는 초기화 된 데이터가 포함 되어 있습니다.|  
+|`sdExecute`|섹션에는 읽고 실행할 수 있는 실행 코드가 포함 되어 있습니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [메타데이터 열거형](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

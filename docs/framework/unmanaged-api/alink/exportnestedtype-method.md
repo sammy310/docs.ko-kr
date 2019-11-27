@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438428"
 ---
 # <a name="exportnestedtype-method"></a>ExportNestedType 메서드
-Specifies nested types as exportable. The [ExportType Method](exporttype-method.md) can also export nested types, but this method is faster.  
+중첩 형식을 내보낼 수 있는 형식으로 지정 합니다. [Exporttype 메서드](exporttype-method.md) 는 중첩 형식을 내보낼 수도 있지만이 메서드는 더 빠릅니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -41,33 +41,33 @@ HRESULT ExportNestedType(
   
 ## <a name="parameters"></a>매개 변수  
  `AssemblyID`  
- ID of assembly to export from.  
+ 내보낼 어셈블리의 ID입니다.  
   
  `FileToken`  
- File token or Assembly of file that defines the type to be made exportable.  
+ 내보낼 수 있는 형식을 정의 하는 파일의 파일 토큰 또는 어셈블리입니다.  
   
  `TypeToken`  
- Type token of type to be made exportable.  
+ 내보낼 수 있는 형식의 형식 토큰입니다.  
   
  `ParentType`  
- Token of parent type.  
+ 부모 형식의 토큰입니다.  
   
  `pszTypename`  
- Fully qualified type name to export.  
+ 내보낼 정규화 된 형식 이름입니다.  
   
  `dwFlags`  
- `ComType` flags such as `tdPublic` or `tdNested`. This value may be passed to [DefineExportedType Method](../metadata/imetadataassemblyemit-defineexportedtype-method.md).  
+ `tdPublic` 또는 `tdNested`와 같은 플래그를 `ComType` 합니다. 이 값은 [DefineExportedType 메서드에](../metadata/imetadataassemblyemit-defineexportedtype-method.md)전달 될 수 있습니다.  
   
  `pType`  
- Receives token for exported type.  
+ 내보낸 형식에 대 한 토큰을 받습니다.  
   
 ## <a name="return-value"></a>반환 값  
- Returns S_OK if the method succeeds.  
+ 메서드가 성공 하면 S_OK을 반환 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- Requires alink.h  
+ Alink 필요  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IALink 인터페이스](ialink-interface.md)
 - [IALink2 인터페이스](ialink2-interface.md)

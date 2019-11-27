@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436004"
 ---
 # <a name="isymunmanagedreadergetmethodversion-method"></a>ISymUnmanagedReader::GetMethodVersion 메서드
-Gets the method version. The method version starts at 1 and is incremented each time the method is recompiled. Recompilation can happen without changes to the method.  
+메서드 버전을 가져옵니다. 메서드 버전은 1에서 시작 하 고 메서드를 다시 컴파일할 때마다 증가 합니다. 메서드를 변경 하지 않고도 다시 컴파일할 수 있습니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -35,17 +35,17 @@ HRESULT GetMethodVersion (
   
 ## <a name="parameters"></a>매개 변수  
  `pMethod`  
- [in] The method for which to get the version.  
+ 진행 버전을 가져올 메서드입니다.  
   
  `version`  
- [out] A pointer to a variable that receives the method version.  
+ 제한이 메서드 버전을 받는 변수에 대 한 포인터입니다.  
   
 ## <a name="return-value"></a>반환 값  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **Header:** CorSym.idl, CorSym.h  
+ **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ISymUnmanagedReader 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

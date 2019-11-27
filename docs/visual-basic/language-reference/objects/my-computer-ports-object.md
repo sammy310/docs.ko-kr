@@ -18,18 +18,18 @@ ms.locfileid: "74332018"
 ## <a name="remarks"></a>주의  
  `My.Computer.Ports` 개체의 메서드 및 속성에 대한 자세한 내용은 <xref:Microsoft.VisualBasic.Devices.Ports>를 참조하세요.  
   
- For more information, see [Accessing the Computer's Ports](../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-computer-s-ports.md).  
+ 자세한 내용은 [컴퓨터의 포트에 액세스](../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-computer-s-ports.md)를 참조 하세요.  
   
 > [!NOTE]
-> You can also use properties and methods of the <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType> class to access the computer's serial ports.  
+> 또한 <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType> 클래스의 속성 및 메서드를 사용 하 여 컴퓨터의 직렬 포트에 액세스할 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **네임스페이스:** <xref:Microsoft.VisualBasic.Devices>  
   
  **클래스:** <xref:Microsoft.VisualBasic.Devices.Ports>  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **어셈블리:** Visual Basic 런타임 라이브러리 (Microsoft.visualbasic)  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [My.Computer 개체](../../../visual-basic/language-reference/objects/my-computer-object.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428157"
 ---
 # <a name="icorprofilerobjectenumnext-method"></a>ICorProfilerObjectEnum::Next 메서드
-Gets the specified number of contiguous objects from a sequential collection of objects, starting at the enumerator's current position in the sequence.  
+시퀀스에서 열거자의 현재 위치부터 시작 하 여 순차적 개체 컬렉션에서 지정 된 개수의 연속 개체를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -41,7 +41,7 @@ HRESULT Next (
  [in] 검색할 개체 수입니다.  
   
  `objects`  
- [out] An array of `ObjectID` values, each of which represents a retrieved object.  
+ 제한이 각각 검색 된 개체를 나타내는 `ObjectID` 값의 배열입니다.  
   
  `pceltFetched`  
  [out] `objects` 배열에 실제로 반환된 모듈 수에 대한 포인터입니다.  
@@ -55,6 +55,6 @@ HRESULT Next (
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerObjectEnum 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md)

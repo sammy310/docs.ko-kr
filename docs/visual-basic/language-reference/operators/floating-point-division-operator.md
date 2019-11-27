@@ -23,8 +23,8 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74331048"
 ---
-# <a name="-operator-visual-basic"></a>/ Operator (Visual Basic)
-Divides two numbers and returns a floating-point result.  
+# <a name="-operator-visual-basic"></a>/ 연산자(Visual Basic)
+두 숫자를 나누고 부동 소수점 결과를 반환 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -34,58 +34,58 @@ expression1 / expression2
   
 ## <a name="parts"></a>요소  
  `expression1`  
- 필수 요소. 임의의 숫자 식입니다.  
+ 필수입니다. 임의의 숫자 식입니다.  
   
  `expression2`  
- 필수 요소. 임의의 숫자 식입니다.  
+ 필수입니다. 임의의 숫자 식입니다.  
   
 ## <a name="supported-types"></a>지원 형식  
- All numeric types, including the unsigned and floating-point types and `Decimal`.  
+ 부호 없는 형식 및 부동 소수점 형식 및 `Decimal`을 포함 한 모든 숫자 형식입니다.  
   
 ## <a name="result"></a>결과  
- The result is the full quotient of `expression1` divided by `expression2`, including any remainder.  
+ 결과는 나머지를 포함 하 여 `expression2`으로 나눈 `expression1`의 전체 몫입니다.  
   
- The [\ Operator (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md) returns the integer quotient, which drops the remainder.  
+ [\ 연산자 (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md) 는 나머지를 삭제 하는 정수 몫을 반환 합니다.  
   
 ## <a name="remarks"></a>주의  
- The data type of the result depends on the types of the operands. The following table shows how the data type of the result is determined.  
+ 결과의 데이터 형식은 피연산자의 형식에 따라 달라 집니다. 다음 표에서는 결과의 데이터 형식을 결정 하는 방법을 보여 줍니다.  
   
-|Operand data types|Result data type|  
+|피연산자 데이터 형식|Result 데이터 형식|  
 |------------------------|----------------------|  
-|Both expressions are integral data types ([SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md), [Byte](../../../visual-basic/language-reference/data-types/byte-data-type.md), [Short](../../../visual-basic/language-reference/data-types/short-data-type.md), [UShort](../../../visual-basic/language-reference/data-types/ushort-data-type.md), [Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md), [UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md), [Long](../../../visual-basic/language-reference/data-types/long-data-type.md), [ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md))|`Double`|  
-|One expression is a [Single](../../../visual-basic/language-reference/data-types/single-data-type.md) data type and the other is not a [Double](../../../visual-basic/language-reference/data-types/double-data-type.md)|`Single`|  
-|One expression is a [Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md) data type and the other is not a [Single](../../../visual-basic/language-reference/data-types/single-data-type.md) or a [Double](../../../visual-basic/language-reference/data-types/double-data-type.md)|`Decimal`|  
-|Either expression is a [Double](../../../visual-basic/language-reference/data-types/double-data-type.md) data type|`Double`|  
+|두 식은 모두 정수 데이터 형식 ([SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md), [Byte](../../../visual-basic/language-reference/data-types/byte-data-type.md), [Short](../../../visual-basic/language-reference/data-types/short-data-type.md), [UShort](../../../visual-basic/language-reference/data-types/ushort-data-type.md), [Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md), [UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md), [Long](../../../visual-basic/language-reference/data-types/long-data-type.md), [ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md))입니다.|`Double`|  
+|한 식은 [단일](../../../visual-basic/language-reference/data-types/single-data-type.md) 데이터 형식이 고 다른 하나는 [Double](../../../visual-basic/language-reference/data-types/double-data-type.md) 이 아닙니다.|`Single`|  
+|한 식은 [Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md) 데이터 형식이 고 다른 하나는 [단일](../../../visual-basic/language-reference/data-types/single-data-type.md) 또는 [Double](../../../visual-basic/language-reference/data-types/double-data-type.md) 이 아닙니다.|`Decimal`|  
+|두 식이 모두 [Double](../../../visual-basic/language-reference/data-types/double-data-type.md) 데이터 형식입니다.|`Double`|  
   
- Before division is performed, any integral numeric expressions are widened to `Double`. If you assign the result to an integral data type, Visual Basic attempts to convert the result from `Double` to that type. This can throw an exception if the result does not fit in that type. In particular, see "Attempted Division by Zero" on this Help page.  
+ 나누기를 수행 하기 전에 정수 계열 숫자 식이 `Double`확장 됩니다. 정수 계열 데이터 형식에 결과를 할당 하는 경우 Visual Basic는 `Double` 결과를 해당 형식으로 변환 하려고 시도 합니다. 결과가 해당 형식에 맞지 않는 경우 예외를 throw 할 수 있습니다. 특히이 도움말 페이지의 "0으로 나누기 시도"를 참조 하십시오.  
   
- If `expression1` or `expression2` evaluates to [Nothing](../../../visual-basic/language-reference/nothing.md), it is treated as zero.  
+ `expression1` 또는 `expression2`가 [Nothing](../../../visual-basic/language-reference/nothing.md)으로 평가 되 면 0으로 처리 됩니다.  
   
-## <a name="attempted-division-by-zero"></a>Attempted Division by Zero  
- If `expression2` evaluates to zero, the `/` operator behaves differently for different operand data types. The following table shows the possible behaviors.  
+## <a name="attempted-division-by-zero"></a>0으로 나누기 시도  
+ `expression2` 0으로 계산 되는 경우 `/` 연산자는 피연산자 데이터 형식에 따라 다르게 동작 합니다. 다음 표에서는 가능한 동작을 보여 줍니다.  
   
-|Operand data types|Behavior if `expression2` is zero|  
+|피연산자 데이터 형식|`expression2` 0 인 경우의 동작|  
 |------------------------|---------------------------------------|  
-|Floating-point (`Single` or `Double`)|Returns infinity (<xref:System.Double.PositiveInfinity> or <xref:System.Double.NegativeInfinity>), or <xref:System.Double.NaN> (not a number) if `expression1` is also zero|  
-|`Decimal`|Throws <xref:System.DivideByZeroException>|  
-|Integral (signed or unsigned)|Attempted conversion back to integral type throws <xref:System.OverflowException> because integral types cannot accept <xref:System.Double.PositiveInfinity>, <xref:System.Double.NegativeInfinity>, or <xref:System.Double.NaN>|  
+|부동 소수점 (`Single` 또는 `Double`)|`expression1`가 0 인 경우 infinity (<xref:System.Double.PositiveInfinity> 또는 <xref:System.Double.NegativeInfinity>) 또는 <xref:System.Double.NaN> (숫자가 아님)을 반환 합니다.|  
+|`Decimal`|<xref:System.DivideByZeroException>를 throw 합니다.|  
+|정수 (부호 있음 또는 부호 없음)|정수 계열 형식은 <xref:System.Double.PositiveInfinity>, <xref:System.Double.NegativeInfinity><xref:System.Double.NaN> 또는를 사용할 수 없으므로 정수 계열 형식으로 다시 변환 하려고 시도 하면 <xref:System.OverflowException> throw 됩니다.|  
   
 > [!NOTE]
-> The `/` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure. If your code uses this operator on such a class or structure, be sure you understand its redefined behavior. 자세한 내용은 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)을 참조하세요.  
+> `/` 연산자를 *오버 로드할*수 있습니다. 즉, 피연산자가 해당 클래스 또는 구조체의 형식일 때 클래스 또는 구조체에서 해당 동작을 다시 정의할 수 있습니다. 코드가 이러한 클래스 또는 구조체에서이 연산자를 사용 하는 경우 다시 정의 된 동작을 이해 해야 합니다. 자세한 내용은 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)을 참조하세요.  
   
 ## <a name="example"></a>예제  
- This example uses the `/` operator to perform floating-point division. The result is the quotient of the two operands.  
+ 이 예제에서는 `/` 연산자를 사용 하 여 부동 소수점 나누기를 수행 합니다. 결과는 두 피연산자의 몫입니다.  
   
  [!code-vb[VbVbalrOperators#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#16)]  
   
- The expressions in the preceding example return values of 2.5 and 3.333333. Note that the result is always floating-point (`Double`), even though both operands are integer constants.  
+ 위의 예제에서 식은 2.5 및 3.333333의 값을 반환 합니다. 두 피연산자가 모두 정수 상수인 경우에도 결과는 항상 부동 소수점 (`Double`)입니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [/= Operator (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)
-- [\ Operator (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)
+- [/= 연산자 (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)
+- [\ 연산자 (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)
 - [연산자 결과의 데이터 형식](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md)
 - [산술 연산자](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
 - [Visual Basic에서의 연산자 우선 순위](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [기능별 연산자 목록](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [Arithmetic Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [Visual Basic의 산술 연산자](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

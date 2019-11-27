@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431845"
 ---
 # <a name="imetadataemitdefineimporttype-method"></a>IMetaDataEmit::DefineImportType 메서드
-Creates a reference to the specified type that is defined outside the current scope, and defines a token for that reference.  
+현재 범위 외부에 정의 된 지정 된 형식에 대 한 참조를 만들고 해당 참조에 대 한 토큰을 정의 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -41,39 +41,39 @@ HRESULT DefineImportType (
   
 ## <a name="parameters"></a>매개 변수  
  `pAssemImport`  
- [in] An [IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) interface that represents the assembly from which the target type is imported.  
+ 진행 대상 유형을 가져올 어셈블리를 나타내는 [IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) 인터페이스입니다.  
   
  `pbHashValue`  
- [in] An array that contains the hash for the assembly specified by `pAssemImport`.  
+ 진행 `pAssemImport`에 지정 된 어셈블리에 대 한 해시를 포함 하는 배열입니다.  
   
  `cbHashValue`  
  [in] `pbHashValue` 배열의 바이트 수입니다.  
   
  `pImport`  
- [in] An [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) interface that represents the metadata scope from which the target type is imported.  
+ 진행 대상 유형을 가져올 메타 데이터 범위를 나타내는 [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) 인터페이스입니다.  
   
  `tdImport`  
- [in] An `mdTypeDef` token that specifies the target type.  
+ 진행 대상 유형을 지정 하는 `mdTypeDef` 토큰입니다.  
   
  `pAssemEmit`  
- [in] An [IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md) interface that represents the assembly into which the target type is imported.  
+ 진행 대상 형식을 가져오는 대상 어셈블리를 나타내는 [IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md) 인터페이스입니다.  
   
  `ptr`  
- [out] The `mdTypeRef` token that is defined in the current scope for the type reference.  
+ 제한이 형식 참조에 대 한 현재 범위에서 정의 된 `mdTypeRef` 토큰입니다.  
   
 ## <a name="remarks"></a>주의  
- Prior to calling the [IMetaDataEmit::DefineImportMember](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimportmember-method.md) method, you can use the `DefineImportType` method to create a type reference, in the current scope, for the member's parent class or parent interface.  
+ [IMetaDataEmit::D efineImportMember](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimportmember-method.md) 메서드를 호출 하기 전에 `DefineImportType` 메서드를 사용 하 여 현재 범위에서 멤버의 부모 클래스 또는 부모 인터페이스에 대 한 형식 참조를 만들 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IMetaDataEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

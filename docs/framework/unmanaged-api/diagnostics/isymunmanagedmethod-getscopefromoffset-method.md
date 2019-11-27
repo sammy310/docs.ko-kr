@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448908"
 ---
 # <a name="isymunmanagedmethodgetscopefromoffset-method"></a>ISymUnmanagedMethod::GetScopeFromOffset 메서드
-Gets the most enclosing lexical scope within this method that encloses the given offset. This can be used to start local variable searches.  
+이 메서드 내에서 지정 된 오프셋을 둘러싸는 가장 바깥쪽 어휘 범위를 가져옵니다. 이를 사용 하 여 지역 변수 검색을 시작할 수 있습니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -35,17 +35,17 @@ HRESULT GetScopeFromOffset(
   
 ## <a name="parameters"></a>매개 변수  
  `offset`  
- [in] A `ULONG` that contains the offset.  
+ 진행 오프셋을 포함 하는 `ULONG`입니다.  
   
  `pRetVal`  
- [out] A pointer that is set to the returned [ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md) interface.  
+ 제한이 반환 된 [ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md) interface로 설정 된 포인터입니다.  
   
 ## <a name="return-value"></a>반환 값  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **Header:** CorSym.idl, CorSym.h  
+ **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ISymUnmanagedMethod 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

@@ -34,7 +34,7 @@ WS-RELIABLEMESSAGING 2 월 2007 프로토콜은 WCF에서 <xref:System.ServiceMo
 |netrmp|http://schemas.microsoft.com/ws-rx/wsrmp/200702|
 |wsp|(WS-Policy 1.2 또는 WS-Policy 1.5)|
 
-## <a name="messaging"></a>Messaging(메시징)
+## <a name="messaging"></a>메시징
 
 ### <a name="sequence-creation"></a>시퀀스 만들기
 
@@ -352,11 +352,11 @@ WCF는 보안 전송 (HTTPS), WS-SECURITY를 사용 하 여 컴퍼지션 및 WS-
 
 - R2301: 개별 메시지의 무결성과 기밀성 뿐만 아니라 WS-RELIABLEMESSAGING 시퀀스의 무결성을 보호 하기 위해 WCF에서는 WS-SECURITY 대화를 사용 해야 합니다.
 
-- R2302: AWS 시퀀스를 설정 하기 전에 보안 대화 세션을 설정 해야 합니다.
+- R2302:WS-Secure Conversation 세션은 WS-ReliableMessaging 시퀀스를 설정하기 전에 설정해야 합니다.
 
 - R2303: WS-ReliableMessaging 시퀀스 수명이 WS-Secure Conversation 세션의 수명을 초과하는 경우 WS-Secure Conversation을 사용하여 설정한 `SecurityContextToken`을 해당 WS-Secure Conversation 갱신 바인딩을 사용하여 갱신해야 합니다.
 
-- B2304: WS-RELIABLEMESSAGING 시퀀스 또는 상관 관계가 지정 된 역방향 시퀀스의 쌍은 항상 단일 Ws-secureconversation 세션에 바인딩됩니다.
+- B2304:WS-ReliableMessaging 시퀀스 또는 한 쌍의 상호 관련된 역방향 시퀀스는 항상 하나의 WS-SecureConversation 세션에 바인딩됩니다.
 
 - R2305: WS-SECURITY 대화로 구성 된 경우 WCF 응답자는 `CreateSequence` 메시지에 `wsse:SecurityTokenReference` 요소와 `wsrm:UsesSequenceSTR` 헤더가 포함 되어야 합니다.
 

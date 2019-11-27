@@ -1,5 +1,5 @@
 ---
-title: 끄기
+title: 끔
 ms.date: 07/20/2015
 f1_keywords:
 - Off
@@ -15,7 +15,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74331931"
 ---
 # <a name="off-visual-basic"></a>Off(Visual Basic)
-Turns a compiler option off.  
+컴파일러 옵션을 해제 합니다.  
   
 ## <a name="remarks"></a>주의  
  `Off` 키워드는 다음 컨텍스트에서 사용할 수 있습니다.  
@@ -26,6 +26,6 @@ Turns a compiler option off.
   
  [Option Infer 문](../../visual-basic/language-reference/statements/option-infer-statement.md)  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [C++ 키워드](../../visual-basic/language-reference/keywords/index.md)
+- [키워드](../../visual-basic/language-reference/keywords/index.md)

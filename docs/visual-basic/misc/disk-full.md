@@ -1,5 +1,5 @@
 ---
-title: Disk full
+title: 디스크가 꽉 참
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID61
@@ -18,6 +18,6 @@ ms.locfileid: "74351107"
   
 - 일부 파일을 다른 디스크로 이동하거나 일부 파일을 삭제하여 디스크에 더 많은 공간을 만듭니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [오류 형식](../../visual-basic/programming-guide/language-features/error-types.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438610"
 ---
 # <a name="icorprofilerinfosetfunctionrejit-method"></a>ICorProfilerInfo::SetFunctionReJIT 메서드
-구현되지 않았습니다. 사용하지 마십시오.  
+구현되지 않았습니다. 사용 안 함.  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,8 +39,8 @@ HRESULT SetFunctionReJIT(
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework Version:** 1.0  
+ **.NET Framework 버전:** 1.0  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerInfo 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

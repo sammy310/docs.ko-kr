@@ -26,16 +26,16 @@ ms.locfileid: "74343541"
   
 |용어|정의|  
 |---|---|  
-|`id`|필수 요소. The compiler uses the code page specified by `id` to interpret the encoding of the source files.|  
+|`id`|필수입니다. 컴파일러는 `id`에 지정 된 코드 페이지를 사용 하 여 소스 파일의 인코딩을 해석 합니다.|  
   
 ## <a name="remarks"></a>주의  
- To compile source code saved with a specific encoding, you can use `-codepage` to specify which code page should be used. The `-codepage` option applies to all source-code files in your compilation. For more information, see [Character Encoding in the .NET Framework](../../../standard/base-types/character-encoding.md).  
+ 특정 인코딩으로 저장 된 소스 코드를 컴파일하려면 `-codepage`를 사용 하 여 사용할 코드 페이지를 지정할 수 있습니다. `-codepage` 옵션은 컴파일의 모든 소스 코드 파일에 적용 됩니다. 자세한 내용은 [.NET Framework의 문자 인코딩](../../../standard/base-types/character-encoding.md)을 참조 하세요.  
   
- The `-codepage` option is not needed if the source-code files were saved using the current ANSI code page, Unicode, or UTF-8 with a signature. Visual Studio saves all source-code files with the current ANSI code page by default, unless the user specifies another encoding in the **Encoding** dialog box. Visual Studio uses the **Encoding** dialog box to open source-code files saved with a different code page.  
+ 소스 코드 파일이 시그니처와 함께 현재 ANSI 코드 페이지, 유니코드 또는 u t f-8을 사용 하 여 저장 된 경우에는 `-codepage` 옵션이 필요 하지 않습니다. 사용자가 **인코딩** 대화 상자에서 다른 인코딩을 지정 하지 않는 한 Visual Studio는 기본적으로 현재 ANSI 코드 페이지를 사용 하 여 모든 소스 코드 파일을 저장 합니다. Visual Studio는 **인코딩** 대화 상자를 사용 하 여 다른 코드 페이지로 저장 된 소스 코드 파일을 엽니다.  
   
 > [!NOTE]
-> The `-codepage` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.  
+> `-codepage` 옵션은 Visual Studio 개발 환경에서 사용할 수 없습니다. 명령줄에서 컴파일하는 경우에만 사용할 수 있습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Visual Basic 명령줄 컴파일러](../../../visual-basic/reference/command-line-compiler/index.md)

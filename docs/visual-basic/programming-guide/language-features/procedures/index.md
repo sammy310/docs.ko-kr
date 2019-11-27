@@ -16,7 +16,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345988"
 ---
 # <a name="procedures-in-visual-basic"></a>Visual Basic의 프로시저
-A *procedure* is a block of Visual Basic statements enclosed by a declaration statement (`Function`, `Sub`, `Operator`, `Get`, `Set`) and a matching `End` declaration. All executable statements in Visual Basic must be within some procedure.  
+*프로시저* 는 선언 문 (`Function`, `Sub`, `Operator`, `Get`, `Set`) 및 일치 하는 `End` 선언으로 묶인 Visual Basic 문 블록입니다. Visual Basic의 모든 실행 문은 일부 프로시저 내에 있어야 합니다.  
   
 ## <a name="calling-a-procedure"></a>프로시저 호출  
  코드에서 다른 위치에 있는 프로시저를 호출합니다. 이것을 *프로시저 호출*이라고 합니다. 프로시저는 실행이 완료되면 자신을 호출한 코드(*호출 코드*라고 함)로 컨트롤을 반환합니다. 호출 코드란 프로시저를 이름으로 지정하고 프로시저에 컨트롤을 전달하는 문 또는 문 내부의 식입니다.  
@@ -34,7 +34,7 @@ A *procedure* is a block of Visual Basic statements enclosed by a declaration st
  대부분의 경우 프로시저는 사용자가 호출할 때마다 다른 데이터에서 작동해야 합니다. 프로시저 호출의 일부로 이 정보를 프로시저에 전달할 수 있습니다. 프로시저는 0개 이상의 *매개 변수*를 정의하며, 각 매개 변수는 사용자가 전달할 것으로 예상하는 값을 나타냅니다. 프로시저 정의의 각 매개 변수에 해당하는 것이 프로시저 호출의 *인수*입니다. 인수는 지정된 프로시저 호출에서 해당 매개 변수에 전달하는 값을 나타냅니다.  
   
 ## <a name="types-of-procedures"></a>프로시저 유형  
- Visual Basic uses several types of procedures:  
+ Visual Basic는 다음과 같은 몇 가지 유형의 프로시저를 사용 합니다.  
   
 - [Sub 프로시저](./sub-procedures.md)는 작업을 수행하지만 호출 코드에 값을 반환하지 않습니다.  
   
@@ -61,7 +61,7 @@ A *procedure* is a block of Visual Basic statements enclosed by a declaration st
   
 - 한 프로그램에서 사용하기 위해 프로시저를 개발한 후, 거의 또는 전혀 수정하지 않고 종종 다른 프로그램에서 사용할 수 있습니다. 이를 통해 코드 중복을 방지할 수 있습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [방법: 프로시저 만들기](./how-to-create-a-procedure.md)
 - [Sub 프로시저](./sub-procedures.md)

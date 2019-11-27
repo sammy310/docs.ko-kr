@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440354"
 ---
 # <a name="imetadatafiltermarktoken-method"></a>IMetaDataFilter::MarkToken 메서드
-Sets a value indicating that the specified metadata token has been processed.  
+지정 된 메타 데이터 토큰이 처리 되었음을 나타내는 값을 설정 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -35,17 +35,17 @@ HRESULT MarkToken (
   
 ## <a name="parameters"></a>매개 변수  
  `tk`  
- [in] The token to mark as processed.  
+ 진행 처리 된 것으로 표시할 토큰입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IMetaDataFilter 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-interface.md)

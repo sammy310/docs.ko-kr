@@ -7,16 +7,16 @@ helpviewer_keywords:
 - UI Automation, Microsoft Active Accessibility
 - Active Accessibility, UI Automation compared to
 ms.assetid: 87bee662-0a3e-4232-a421-20e7a5968321
-ms.openlocfilehash: 99909f29e3228e7bc140ebdc888d4663bcbca0b5
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 96998b2e625c7e395dd61d6905bc437ef1ca697d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040528"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436641"
 ---
 # <a name="ui-automation-and-microsoft-active-accessibility"></a>UI 자동화 및 Microsoft Active Accessibility
 > [!NOTE]
-> 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대 한 최신 정보는 Windows Automation API [를 참조 하세요. UI 자동화](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> 이 설명서는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 네임스페이스에 정의된 관리되는 <xref:System.Windows.Automation> 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조하세요.  
   
  Microsoft Active Accessibility는 응용 프로그램에 액세스할 수 있도록 하기 위한 이전 솔루션 이었습니다. [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]는 Microsoft Windows에 대 한 새로운 접근성 모델로 서 보조 기술 제품 및 자동화 된 테스트 도구의 요구를 해결 하기 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Active Accessibility에 비해 많은 향상 된 기능을 제공 합니다.  
   
@@ -54,13 +54,13 @@ ms.locfileid: "73040528"
   
  Active Accessibility에서 요소 간의 탐색은 공간 (예: 화면 왼쪽에 있는 요소로 이동), 논리적 (예: 다음 메뉴 항목으로 이동 또는 대화 상자 내에서 탭 순서의 다음 항목으로 이동), 계층적 ( 예를 들어 컨테이너의 첫 번째 자식 또는 자식에서 부모로 이동 합니다. 계층적 탐색의 경우, 자식 요소가 `IAccessible`을 구현하는 개체가 아닐 수도 있기 때문에 복잡한 방법입니다.  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에서, 모든 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 요소는 동일한 기본 기능을 지원하는 <xref:System.Windows.Automation.AutomationElement> 개체입니다. 공급자의 관점에서 이러한 개체는 <xref:System.Windows.Automation.Provider.IRawElementProviderSimple>에서 상속 된 인터페이스를 구현 하는 개체입니다. 탐색은 주로 계층 구조입니다. 부모에서 자식으로, 한 형제에서 다른 형제로 탐색합니다. (형제 간 탐색은 탭 순서를 따를 수 있기 때문에 논리적 요소가 있습니다.) <xref:System.Windows.Automation.TreeWalker> 클래스를 사용 하 여 트리의 필터링 된 뷰를 사용 하 여 모든 시작 지점에서 탐색할 수 있습니다. <xref:System.Windows.Automation.AutomationElement.FindFirst%2A> 및 <xref:System.Windows.Automation.AutomationElement.FindAll%2A>을 사용하여 특정 자식 또는 하위 항목을 탐색할 수도 있습니다. 예를 들어, 지정된 컨트롤 패턴을 지원하는 대화 상자 내에서 모든 요소를 쉽게 검색할 수 있습니다.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에서, 모든 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 요소는 동일한 기본 기능을 지원하는 <xref:System.Windows.Automation.AutomationElement> 개체입니다. 공급자의 관점에서 이러한 개체는 <xref:System.Windows.Automation.Provider.IRawElementProviderSimple>에서 상속 된 인터페이스를 구현 하는 개체입니다. 탐색은 주로 계층 구조: 부모에서 자식으로, 한 형제에서 다음으로의 계층 구조입니다. (형제 간의 탐색에는 탭 순서를 따를 수 있으므로 논리적 요소가 있습니다.) <xref:System.Windows.Automation.TreeWalker> 클래스를 사용 하 여 트리의 필터링 된 뷰를 사용 하 여 모든 시작 지점에서 탐색할 수 있습니다. <xref:System.Windows.Automation.AutomationElement.FindFirst%2A> 및 <xref:System.Windows.Automation.AutomationElement.FindAll%2A>을 사용하여 특정 자식 또는 하위 항목을 탐색할 수도 있습니다. 예를 들어, 지정된 컨트롤 패턴을 지원하는 대화 상자 내에서 모든 요소를 쉽게 검색할 수 있습니다.  
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]의 탐색은 Active Accessibility 보다 더 일관적입니다. 드롭다운 목록 및 팝업 창과 같은 일부 요소는 Active Accessibility 트리에 두 번 나타나며, 이러한 요소를 탐색 하면 예기치 않은 결과가 발생할 수 있습니다. 크기 조정 컨트롤에 대 한 Active Accessibility를 올바르게 구현 하는 것은 실제로 불가능 합니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 을 사용하면 부모 재지정 및 위치 변경이 가능하므로, 창 소유권에 의해 계층 구조가 적용되더라도 트리에서 요소를 원하는 위치에 배치할 수 있습니다.  
   
 <a name="Roles_and_Control_Types"></a>   
 ## <a name="roles-and-control-types"></a>역할 및 컨트롤 형식  
- Active Accessibility는 `accRole` 속성 (`IAccessible::get_actRole`)을 사용 하 여 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]의 요소 역할 (예: ROLE_SYSTEM_SLIDER 또는 ROLE_SYSTEM_MENUITEM)에 대 한 설명을 검색 합니다. 요소의 역할을 통해 사용 가능한 기능을 알 수 있습니다. `IAccessible::accSelect` 및 `IAccessible::accDoDefaultAction`과 같은 고정 메서드를 사용하여 컨트롤과 상호 작용할 수 있습니다. 클라이언트 애플리케이션과 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 간의 상호 작용은 `IAccessible`을 통해서 수행할 수 있는 작업으로 제한됩니다.  
+ Active Accessibility `accRole` 속성 (`IAccessible::get_actRole`)을 사용 하 여 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]에서 요소 역할에 대 한 설명 (예: ROLE_SYSTEM_SLIDER 또는 ROLE_SYSTEM_MENUITEM)을 검색 합니다. 요소의 역할을 통해 사용 가능한 기능을 알 수 있습니다. `IAccessible::accSelect` 및 `IAccessible::accDoDefaultAction`과 같은 고정 메서드를 사용하여 컨트롤과 상호 작용할 수 있습니다. 클라이언트 애플리케이션과 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 간의 상호 작용은 `IAccessible`을 통해서 수행할 수 있는 작업으로 제한됩니다.  
   
  한편, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 은 주로 예상 기능에서 요소의 컨트롤 형식( <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.ControlType%2A> 속성으로 설명됨)을 분리합니다. 기능은 특수화된 인터페이스의 구현을 통해 공급자가 지원하는 컨트롤 패턴에 의해 결정됩니다. 컨트롤 패턴을 조합하여 특정 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 요소가 지원하는 전체 기능 집합을 설명할 수 있습니다. 일부 공급자는 특정 컨트롤 패턴을 지원하는 데 필요합니다. 예를 들어, 확인란에 대한 공급자는 Toggle 컨트롤 패턴을 지원해야 합니다. 기타 공급자는 하나 이상의 컨트롤 패턴 집합을 지원하는 데 필요합니다. 예를 들어, 단추는 Toggle 또는 Invoke를 지원해야 합니다. 컨트롤 패턴을 지원하지 않는 공급자도 있습니다. 예를 들어 이동, 크기 조정 또는 도킹할 수 없는 창에는 컨트롤 패턴이 없습니다.  
   
@@ -75,10 +75,10 @@ ms.locfileid: "73040528"
 |ROLE_SYSTEM_CHECKBUTTON|확인란|  
 |ROLE_SYSTEM_COMBOBOX|콤보 상자|  
 |ROLE_SYSTEM_CLIENT|사용자 지정|  
-|ROLE_SYSTEM_LIST|데이터 표|  
+|ROLE_SYSTEM_LIST|데이터 그리드|  
 |ROLE_SYSTEM_LISTITEM|데이터 항목|  
 |ROLE_SYSTEM_DOCUMENT|문서|  
-|ROLE_SYSTEM_TEXT|편집|  
+|ROLE_SYSTEM_TEXT|Edit|  
 |ROLE_SYSTEM_GROUPING|그룹|  
 |ROLE_SYSTEM_LIST|헤더|  
 |ROLE_SYSTEM_COLUMNHEADER|헤더 항목|  
@@ -100,12 +100,12 @@ ms.locfileid: "73040528"
 |ROLE_SYSTEM_STATUSBAR|상태 표시줄|  
 |ROLE_SYSTEM_PAGETABLIST|탭|  
 |ROLE_SYSTEM_PAGETAB|탭 항목|  
-|ROLE_SYSTEM_TABLE|표|  
-|ROLE_SYSTEM_STATICTEXT|텍스트|  
+|ROLE_SYSTEM_TABLE|Table|  
+|ROLE_SYSTEM_STATICTEXT|Text|  
 |ROLE_SYSTEM_INDICATOR|Thumb|  
 |ROLE_SYSTEM_TITLEBAR|제목 표시줄|  
 |ROLE_SYSTEM_TOOLBAR|도구 모음|  
-|ROLE_SYSTEM_TOOLTIP|도구 설명|  
+|ROLE_SYSTEM_TOOLTIP|ToolTip|  
 |ROLE_SYSTEM_OUTLINE|Tree|  
 |ROLE_SYSTEM_OUTLINEITEM|트리 항목|  
 |ROLE_SYSTEM_WINDOW|창|  
@@ -139,9 +139,9 @@ ms.locfileid: "73040528"
   
 |Active Accessibility 상태|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성|상태 변경 트리거 여부|  
 |-----------------------------------------------------------------------|------------------------------------------------------------------------------------|----------------------------|  
-|STATE_SYSTEM_CHECKED|확인란의 경우, <xref:System.Windows.Automation.TogglePattern.ToggleStateProperty><br /><br /> 라디오 단추의 경우, <xref:System.Windows.Automation.SelectionItemPattern.IsSelectedProperty>|Y|  
-|STATE_SYSTEM_COLLAPSED|<xref:System.Windows.Automation.ExpandCollapsePattern.ExpandCollapsePatternInformation.ExpandCollapseState%2A> = <xref:System.Windows.Automation.ExpandCollapseState.Collapsed>|Y|  
-|STATE_SYSTEM_EXPANDED|<xref:System.Windows.Automation.ExpandCollapsePattern.ExpandCollapsePatternInformation.ExpandCollapseState%2A> = <xref:System.Windows.Automation.ExpandCollapseState.Expanded> 또는 <xref:System.Windows.Automation.ExpandCollapseState.PartiallyExpanded>|Y|  
+|STATE_SYSTEM_CHECKED|확인란의 경우, <xref:System.Windows.Automation.TogglePattern.ToggleStateProperty><br /><br /> 라디오 단추의 경우, <xref:System.Windows.Automation.SelectionItemPattern.IsSelectedProperty>|지원|  
+|STATE_SYSTEM_COLLAPSED|<xref:System.Windows.Automation.ExpandCollapsePattern.ExpandCollapsePatternInformation.ExpandCollapseState%2A> = <xref:System.Windows.Automation.ExpandCollapseState.Collapsed>|지원|  
+|STATE_SYSTEM_EXPANDED|<xref:System.Windows.Automation.ExpandCollapsePattern.ExpandCollapsePatternInformation.ExpandCollapseState%2A> = <xref:System.Windows.Automation.ExpandCollapseState.Expanded> 또는 <xref:System.Windows.Automation.ExpandCollapseState.PartiallyExpanded>|지원|  
 |STATE_SYSTEM_FOCUSABLE|<xref:System.Windows.Automation.AutomationElement.IsKeyboardFocusableProperty>|N|  
 |STATE_SYSTEM_FOCUSED|<xref:System.Windows.Automation.AutomationElement.HasKeyboardFocusProperty>|N|  
 |STATE_SYSTEM_HASPOPUP|메뉴 항목에 대해<xref:System.Windows.Automation.ExpandCollapsePattern>|N|  
@@ -156,7 +156,7 @@ ms.locfileid: "73040528"
 |STATE_SYSTEM_SELECTABLE|<xref:System.Windows.Automation.SelectionItemPattern> 이 지원됨|N|  
 |STATE_SYSTEM_SELECTED|<xref:System.Windows.Automation.SelectionItemPattern.IsSelectedProperty>|N|  
 |STATE_SYSTEM_SIZEABLE|<xref:System.Windows.Automation.TransformPattern.TransformPatternInformation.CanResize%2A>|N|  
-|STATE_SYSTEM_UNAVAILABLE|<xref:System.Windows.Automation.AutomationElement.IsEnabledProperty>|Y|  
+|STATE_SYSTEM_UNAVAILABLE|<xref:System.Windows.Automation.AutomationElement.IsEnabledProperty>|지원|  
   
  다음 상태는 대부분의 Active Accessibility 제어 서버에서 구현 되지 않았거나 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 해당 하는 항목이 없습니다.  
   
@@ -189,7 +189,7 @@ ms.locfileid: "73040528"
 |WinEvent|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트 식별자|  
 |--------------|--------------------------------------------------------------------------------------------|  
 |EVENT_OBJECT_ACCELERATORCHANGE|<xref:System.Windows.Automation.AutomationElement.AcceleratorKeyProperty> 속성 변경|  
-|EVENT_OBJECT_CONTENTSCROLLED|연결된 스크롤 막대의<xref:System.Windows.Automation.ScrollPattern.VerticalScrollPercentProperty> 또는  속성 변경|  
+|EVENT_OBJECT_CONTENTSCROLLED|연결된 스크롤 막대의<xref:System.Windows.Automation.ScrollPattern.VerticalScrollPercentProperty> 또는 <xref:System.Windows.Automation.ScrollPattern.HorizontalScrollPercentProperty> 속성 변경|  
 |EVENT_OBJECT_CREATE|<xref:System.Windows.Automation.AutomationElement.StructureChangedEvent>|  
 |EVENT_OBJECT_DEFACTIONCHANGE|동일한 요소 없음|  
 |EVENT_OBJECT_DESCRIPTIONCHANGE|정확하게 해당하는 요소가 없습니다. <xref:System.Windows.Automation.AutomationElement.HelpTextProperty> 또는 <xref:System.Windows.Automation.AutomationElement.LocalizedControlTypeProperty> 속성 변경이 이에 해당할 수 있습니다.|  

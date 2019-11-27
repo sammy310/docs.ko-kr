@@ -23,10 +23,10 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445034"
 ---
 # <a name="icorprofilercallbackcomclassicvtabledestroyed-method"></a>ICorProfilerCallback::COMClassicVTableDestroyed 메서드
-Notifies the profiler that a COM interop vtable is being destroyed.  
+COM interop vtable이 제거 중임을 프로파일러에 알립니다.  
   
 > [!NOTE]
-> This callback is likely never to occur, because the destruction of vtables occurs very close to shutdown.  
+> Vtables의 소멸이 종료와 매우 근접 하 게 발생 하기 때문에이 콜백은 발생 하지 않을 수 있습니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,18 +39,18 @@ HRESULT COMClassicVTableDestroyed(
   
 ## <a name="parameters"></a>매개 변수  
  `wrappedClassId`  
- [in] The ID of the class for which this vtable was created.  
+ 진행 이 vtable이 생성 된 클래스의 ID입니다.  
   
  `implementedIID`  
- [in] The ID of the interface implemented by the class. This value may be NULL if the interface is internal only.  
+ 진행 클래스에서 구현 하는 인터페이스의 ID입니다. 인터페이스가 내부 전용 이면이 값은 NULL 일 수 있습니다.  
   
  `pVTable`  
- [in] A pointer to the start of the vtable.  
+ 진행 Vtable의 시작에 대 한 포인터입니다.  
   
 ## <a name="remarks"></a>주의  
- The profiler should not block in its implementation of this method because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled. If the profiler blocks here and garbage collection is attempted, the runtime will block until this callback returns.  
+ 스택은 가비지 수집을 허용 하는 상태가 아닐 수 있으므로 선점형 가비지 수집을 사용 하도록 설정할 수 없기 때문에 프로파일러는이 메서드의 구현에서 차단 해서는 안 됩니다. 프로파일러가 여기에서 차단 되 고 가비지 수집이 시도 되는 경우이 콜백이 반환 될 때까지 런타임이 차단 됩니다.  
   
- The profiler's implementation of this method should not call into managed code or in any way cause a managed-memory allocation.  
+ 이 메서드의 프로파일러 구현은 관리 코드를 호출 하거나 관리 되는 메모리 할당을 발생 시 키 지 않아야 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
@@ -61,7 +61,7 @@ HRESULT COMClassicVTableDestroyed(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerCallback 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
 - [COMClassicVTableCreated 메서드](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-comclassicvtablecreated-method.md)

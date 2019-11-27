@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440543"
 ---
 # <a name="imetadataemitsetpropertyprops-method"></a>IMetaDataEmit::SetPropertyProps 메서드
-Sets the features stored in metadata for a property defined by a prior call to [DefineProperty Method](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md).  
+[DefineProperty 메서드에](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md)대 한 이전 호출로 정의 된 속성에 대 한 메타 데이터에 저장 된 기능을 설정 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -42,39 +42,39 @@ HRESULT SetPropertyProps (
   
 ## <a name="parameters"></a>매개 변수  
  `pr`  
- [in] The token for the property to be changed  
+ 진행 변경할 속성의 토큰입니다.  
   
  `dwPropFlags`  
- [in] Property flags.  
+ 진행 속성 플래그입니다.  
   
  `dwCPlusTypeFlag`  
- [in] The type of the property's default value.  
+ 진행 속성의 기본값 형식입니다.  
   
  `pValue`  
- [in] The default value for the property.  
+ 진행 속성의 기본값입니다.  
   
  `cchValue`  
- [in] The count of (Unicode) characters in `pValue`.  
+ 진행 `pValue`의 (유니코드) 문자 수입니다.  
   
  `mdSetter`  
- [in] The method that sets the property value.  
+ 진행 속성 값을 설정 하는 메서드입니다.  
   
  `mdGetter`  
- [in] The method that gets the property value.  
+ 진행 속성 값을 가져오는 메서드입니다.  
   
  `rmdOtherMethods[]`  
- [in] An array of other methods associated with the property. Terminate this array with an `mdTokenNil` token.  
+ 진행 속성과 연결 된 다른 메서드의 배열입니다. `mdTokenNil` 토큰을 사용 하 여이 배열을 종료 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IMetaDataEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

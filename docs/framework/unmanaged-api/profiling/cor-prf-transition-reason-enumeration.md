@@ -37,11 +37,11 @@ typedef enum {
   
 |멤버|설명|  
 |------------|-----------------|  
-|`COR_PRF_TRANSITION_CALL`|The transition is due to a call into a function.|  
-|`COR_PRF_TRANSITION_RETURN`|The transition is due to a return from a function.|  
+|`COR_PRF_TRANSITION_CALL`|함수 호출로 인해 전환이 발생 합니다.|  
+|`COR_PRF_TRANSITION_RETURN`|이 전환은 함수에서의 반환 때문에 발생 합니다.|  
   
 ## <a name="remarks"></a>주의  
- When a transition occurs, the profiler receives an [ICorProfilerCallback::ManagedToUnmanagedTransition](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-managedtounmanagedtransition-method.md) or [ICorProfilerCallback::UnmanagedToManagedTransition](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-unmanagedtomanagedtransition-method.md) callback, either of which provides a value of the `COR_PRF_TRANSITION_REASON` enumeration to indicate the reason for the transition.  
+ 전환이 발생 하면 프로파일러는 [ICorProfilerCallback:: ManagedToUnmanagedTransition](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-managedtounmanagedtransition-method.md) 또는 [ICorProfilerCallback:: UnmanagedToManagedTransition](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-unmanagedtomanagedtransition-method.md) callback을 받습니다 .이 중 하나는 `COR_PRF_TRANSITION_REASON` 열거형의 값을 제공 하 여 전환 이유를 표시 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  

@@ -1,6 +1,6 @@
 ---
-title: Get Started with F# in Visual Studio Code
-description: Learn how to use F# with Visual Studio Code and the Ionide plugin suite.
+title: Visual Studio Code에서 F# 시작
+description: Visual Studio Code와 Ionide 플러그인 도구 모음으로 F#을 사용하는 방법을 알아봅니다.
 ms.date: 12/23/2018
 ms.openlocfilehash: 2802438144eb2352c3abeeccfc126b16c6a87d8f
 ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
@@ -9,135 +9,135 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74204908"
 ---
-# <a name="get-started-with-f-in-visual-studio-code"></a>Get Started with F# in Visual Studio Code
+# <a name="get-started-with-f-in-visual-studio-code"></a>Visual Studio Code에서 F# 시작
 
-You can write F# in [Visual Studio Code](https://code.visualstudio.com) with the [Ionide plugin](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp) to get a great cross-platform, lightweight Integrated Development Environment (IDE) experience with IntelliSense and code refactorings. Visit [Ionide.io](http://ionide.io) to learn more about the plugin.
+리팩터링 F# [ide 플러그](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp) 인을 사용 하 여 [Visual Studio Code](https://code.visualstudio.com) 을 작성 하 여 IntelliSense 및 코드를 사용 하는 뛰어난 플랫폼 간 경량 ide (통합 개발 환경) 환경을 가져올 수 있습니다. 플러그 인에 대 한 자세한 내용은 [Ionide.io](http://ionide.io) 를 참조 하세요.
 
-To begin, ensure that you have [F# and the Ionide plugin correctly installed](install-fsharp.md#install-f-with-visual-studio-code).
+시작 하려면 [ F# 및 작동 하는 ide 플러그 인이 올바르게 설치](install-fsharp.md#install-f-with-visual-studio-code)되어 있는지 확인 합니다.
 
-## <a name="create-your-first-project-with-ionide"></a>Create your first project with Ionide
+## <a name="create-your-first-project-with-ionide"></a>이상 Ide를 사용 하 여 첫 번째 프로젝트 만들기
 
-To create a new F# project, open a command line and create a new project with the .NET Core CLI:
+새 F# 프로젝트를 만들려면 명령줄을 열고 .NET Core CLI를 사용 하 여 새 프로젝트를 만듭니다.
 
 ```dotnetcli
 dotnet new console -lang F# -o FirstIonideProject
 ```
 
-Once it completes, change directory to the project and open Visual Studio Code:
+완료 되 면 디렉터리를 프로젝트로 변경 하 고 Visual Studio Code를 엽니다.
 
 ```console
 cd FirstIonideProject
 code .
 ```
 
-After the project loads on Visual Studio Code, you should see the F# Solution Explorer pane on the left-hand side of your window open. This means Ionide has successfully loaded the project you just created. You can write code in the editor before this point in time, but once this happens, everything has finished loading.
+Visual Studio Code에서 프로젝트가 로드 되 면 창의 왼쪽에 F# 솔루션 탐색기 창이 표시 됩니다. 즉, 사용자가 방금 만든 프로젝트가 성공적으로 로드 된 것입니다. 이 시점 이전에 편집기에서 코드를 작성할 수 있지만이 경우 모든 것이 로드를 완료 한 것입니다.
 
-## <a name="configure-f-interactive"></a>Configure F# interactive
+## <a name="configure-f-interactive"></a>대화형 F# 구성
 
-First, ensure that .NET Core scripting is your default scripting environment:
+먼저 .NET Core 스크립팅이 기본 스크립팅 환경 인지 확인 합니다.
 
-1. Open the Visual Studio Code settings (**Code** > **Preferences** > **Settings**).
-1. Search for the term **F# Script**.
-1. Click the checkbox that says **FSharp: use SDK scripts**.
+1. Visual Studio Code 설정 (**코드** > **기본** 설정 > **설정**)을 엽니다.
+1. 용어  **F# 스크립트**를 검색 합니다.
+1. **Fsharp.core: USE SDK scripts**확인란을 클릭 합니다.
 
-This is currently necessary due to some legacy behaviors in .NET Framework-based scripting that don't work with .NET Core scripting, and Ionide is currently striving for that backwards compatibility. In the future, .NET Core scripting will become the default.
+이는 현재 .NET Core 스크립팅을 사용 하지 않는 .NET Framework 기반 스크립팅에 사용 되는 일부 레거시 동작으로 인해 필요 하며, 현재는 이전 버전과의 호환성을 위해 현재 웹사이트를 사용 하 고 있습니다. 나중에 .NET Core 스크립팅이 기본값이 됩니다.
 
-### <a name="write-your-first-script"></a>Write your first script
+### <a name="write-your-first-script"></a>첫 번째 스크립트 작성
 
-Once you've configured Visual Studio Code to use .NET Core scripting, navigate to the Explorer view in Visual Studio Code and create a new file. Name it *MyFirstScript.fsx*.
+.NET Core 스크립팅을 사용 하도록 Visual Studio Code 구성 했으면 Visual Studio Code에서 탐색기 보기로 이동 하 여 새 파일을 만듭니다. 이름을 *Myfirstscript*로 합니다.
 
-Now add the following code to it:
+이제 다음 코드를 추가 합니다.
 
 [!code-fsharp[ToPigLatin](~/samples/snippets/fsharp/getting-started/to-pig-latin.fsx)]
 
-This function converts a word to a form of [Pig Latin](https://en.wikipedia.org/wiki/Pig_Latin). The next step is to evaluate it using F# Interactive (FSI).
+이 함수는 단어를 [Pig 라틴어](https://en.wikipedia.org/wiki/Pig_Latin)형식으로 변환 합니다. 다음으로 F# Interactive (FSI)를 사용하여 평가합니다.
 
-Highlight the entire function (it should be 11 lines long). Once it's highlighted, hold the **Alt** key and hit **Enter**. You'll notice a terminal window pop up on the bottom of the screen, and it should look similar to this:
+전체 함수를 강조 표시합니다(11줄 길이여야 함). 강조 표시 되 면 **Alt** 키를 누르고 **enter**키를 누릅니다. 화면 아래쪽에 터미널 창이 표시 되 고 다음과 같이 표시 됩니다.
 
-![Example of F# Interactive output with Ionide](./media/getting-started-vscode/vscode-fsi.png)
+![Ionide를 사용한 F# Interactive 출력 예시](./media/getting-started-vscode/vscode-fsi.png)
 
-This did three things:
+여기서 다음 세 가지 작업이 수행되었습니다.
 
-1. It started the FSI process.
-2. It sent the code you highlighted over the FSI process.
-3. The FSI process evaluated the code you sent over.
+1. FSI 프로세스를 시작했습니다.
+2. FSI 프로세스로 강조 표시된 코드를 전송했습니다.
+3. FSI 프로세스에서 전송한 코드를 평가합니다.
 
-Because what you sent over was a [function](../language-reference/functions/index.md), you can now call that function with FSI! In the interactive window, type the following:
+에서 전송 된 항목은 [함수](../language-reference/functions/index.md)이기 때문에 이제 fsi.exe!를 사용 하 여 해당 함수를 호출할 수 있습니다. 대화형 창에서 다음을 입력합니다.
 
 ```fsharp
 toPigLatin "banana";;
 ```
 
-You should see the following result:
+다음과 같은 결과가 나타납니다.
 
 ```fsharp
 val it : string = "ananabay"
 ```
 
-Now, let's try with a vowel as the first letter. 다음을 입력하세요.
+이제 모음을 첫 글자로 사용해 보겠습니다. 다음을 입력하세요.
 
 ```fsharp
 toPigLatin "apple";;
 ```
 
-You should see the following result:
+다음과 같은 결과가 나타납니다.
 
 ```fsharp
 val it : string = "appleyay"
 ```
 
-The function appears to be working as expected. Congratulations, you just wrote your first F# function in Visual Studio Code and evaluated it with FSI!
+예상대로 함수가 작동합니다. 축하합니다. 첫 번째 F#함수를 Visual Studio Code에서 작성하고 FSI를 사용하여 평가했습니다!
 
 > [!NOTE]
-> As you may have noticed, the lines in FSI are terminated with `;;`. This is because FSI allows you to enter multiple lines. The `;;` at the end lets FSI know when the code is finished.
+> FSI.EXE의 줄은 `;;`로 종료 됩니다. FSI에서는 여러 줄의 입력을 허용하기 때문입니다. 끝에 `;;`는 코드 완료 시점을 FSI.EXE 알 수 있습니다.
 
-## <a name="explaining-the-code"></a>Explaining the code
+## <a name="explaining-the-code"></a>코드 설명
 
-If you're not sure about what the code is actually doing, here's a step-by-step.
+코드가 실제로 수행 하는 작업을 잘 모르는 경우에는 다음 단계를 수행 합니다.
 
-As you can see, `toPigLatin` is a function that takes a word as its input and converts it to a Pig-Latin representation of that word. The rules for this are as follows:
+여기에서 볼 수 있듯이 `toPigLatin`는 단어를 입력으로 사용 하 고 해당 단어의 Pig 표현으로 변환 하는 함수입니다. 이에 대 한 규칙은 다음과 같습니다.
 
-If the first character in a word starts with a vowel, add "yay" to the end of the word. If it doesn't start with a vowel, move that first character to the end of the word and add "ay" to it.
+단어의 첫 문자가 모음으로 시작 하는 경우 단어의 끝에 "yay"를 추가 합니다. 모음으로 시작 하지 않으면 첫 번째 문자를 단어의 끝으로 이동 하 여 "ay"를 추가 합니다.
 
-You may have noticed the following in FSI:
+FSI.EXE에서 다음을 발견할 수 있습니다.
 
 ```fsharp
 val toPigLatin : word:string -> string
 ```
 
-This states that `toPigLatin` is a function that takes in a `string` as input (called `word`), and returns another `string`. This is known as the [type signature of the function](https://fsharpforfunandprofit.com/posts/function-signatures/), a fundamental piece of F# that's key to understanding F# code. You'll also notice this if you hover over the function in Visual Studio Code.
+이는 `toPigLatin`이 `string`를 `word`입력으로 사용 하 고 다른 `string`를 반환 하는 함수입니다. 이를 [함수의 형식 서명](https://fsharpforfunandprofit.com/posts/function-signatures/)이라고 하며, 코드를 이해 F# F# 하는 데 해당 키의 기본 부분입니다. 또한 Visual Studio Code에서 함수를 가리키면이를 확인할 수 있습니다.
 
-In the body of the function, you'll notice two distinct parts:
+함수의 본문에는 다음과 같은 두 가지 요소가 있습니다.
 
-1. An inner function, called `isVowel`, that determines if a given character (`c`) is a vowel by checking if it matches one of the provided patterns via [Pattern Matching](../language-reference/pattern-matching.md):
+1. 지정 된 문자 (`c`)가 [패턴 일치](../language-reference/pattern-matching.md)를 통해 제공 된 패턴 중 하 나와 일치 하는지 확인 하 여 모음 인지 여부를 확인 하는 `isVowel`이라는 내부 함수입니다.
 
    [!code-fsharp[ToPigLatin](~/samples/snippets/fsharp/getting-started/to-pig-latin.fsx#L2-L6)]
 
-2. An [`if..then..else`](../language-reference/conditional-expressions-if-then-else.md) expression that checks if the first character is a vowel, and constructs a return value out of the input characters based on if the first character was a vowel or not:
+2. 첫 번째 문자가 모음 인지 확인 하 고 첫 번째 문자가 모음 인지 여부를 기준으로 입력 문자에서 반환 값을 생성 하는 [`if..then..else`](../language-reference/conditional-expressions-if-then-else.md) 식입니다.
 
    [!code-fsharp[ToPigLatin](~/samples/snippets/fsharp/getting-started/to-pig-latin.fsx#L8-L11)]
 
-The flow of `toPigLatin` is thus:
+따라서 `toPigLatin` 흐름은 다음과 같습니다.
 
-Check if the first character of the input word is a vowel. If it is, attach "yay" to the end of the word. Otherwise, move that first character to the end of the word and add "ay" to it.
+입력 단어의 첫 문자가 모음 인지 확인 합니다. 이 경우 "yay"를 단어 끝에 연결 합니다. 그렇지 않으면 첫 번째 문자를 단어의 끝으로 이동 하 여 "ay"를 추가 합니다.
 
-There's one final thing to notice about this: there's no explicit instruction to return from the function, unlike many other languages out there. This is because F# is Expression-based, and the last expression in the body of a function is the return value. Because `if..then..else` is itself an expression, the body of the `then` block or the body of the `else` block will be returned depending on the input value.
+이에 대 한 최종 정보는 다음과 같습니다. 다른 많은 언어와 달리 함수에서 반환할 명시적인 명령이 없습니다. 가 식 기반 F# 이 고 함수 본문의 마지막 식이 반환 값 이기 때문입니다. `if..then..else` 자체가 식 이므로 `then` 블록의 본문이 나 `else` 블록의 본문은 입력 값에 따라 반환 됩니다.
 
-## <a name="turn-the-console-app-into-a-pig-latin-generator"></a>Turn the console app into a Pig Latin generator
+## <a name="turn-the-console-app-into-a-pig-latin-generator"></a>콘솔 앱을 Pig 라틴어 생성기로 전환 합니다.
 
-The previous sections in this article demonstrated a common first step in writing F# code: writing an initial function and executing it interactively with FSI. This is known as REPL-driven development, where [REPL](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop) stands for "Read-Evaluate-Print Loop". It's a great way to experiment with functionality until you have something working.
+이 문서의 이전 섹션에서는 초기 함수를 작성 하 고 FSI.EXE를 F# 사용 하 여 대화형으로 실행 하는 코드를 작성 하는 일반적인 첫 번째 단계를 보여 주었습니다. 이를 repl 기반 개발 이라고 하며, 여기서 [repl](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop) 은 "읽기-평가-인쇄 루프"를 나타냅니다. 작업을 수행할 때까지 기능을 시험해 볼 수 있는 좋은 방법입니다.
 
-The next step in REPL-driven development is to move working code into an F# implementation file. It can then be compiled by the F# compiler into an assembly that can be executed.
+REPL 기반 개발의 다음 단계는 작업 코드를 F# 구현 파일로 이동 하는 것입니다. 그런 다음 F# 컴파일러에서 실행할 수 있는 어셈블리로 컴파일할 수 있습니다.
 
-To begin, open the *Program.fs* file that you created earlier with the .NET Core CLI. You'll notice that some code is already in there.
+시작 하려면 이전에 .NET Core CLI를 사용 하 여 만든 *Program fs* 파일을 엽니다. 일부 코드는 이미 여기에 있습니다.
 
-Next, create a new [`module`](../language-reference/modules.md) called `PigLatin` and copy the `toPigLatin` function you created earlier into it as such:
+그런 다음 `PigLatin` 이라는 새 [`module`](../language-reference/modules.md) 만들고 앞에서 만든 `toPigLatin` 함수를 다음과 같이 복사 합니다.
 
 [!code-fsharp[ToPigLatin](~/samples/snippets/fsharp/getting-started/pig-latin.fs#L1-L14)]
 
-This module should be above the `main` function and below the `open System` declaration. Order of declarations matters in F#, so you'll need to define the function before you call it in a file.
+이 모듈은 `main` 함수와 `open System` 선언 아래에 있어야 합니다. 의 F#선언 순서는 중요 하므로 파일에서 호출 하기 전에 함수를 정의 해야 합니다.
 
-Now, in the `main` function, call your Pig Latin generator function on the arguments:
+이제 `main` 함수에서 인수에 대해 Pig 라틴어 생성기 함수를 호출 합니다.
 
 ```fsharp
 [<EntryPoint>]
@@ -149,29 +149,29 @@ let main argv =
     0
 ```
 
-Now you can run your console app from the command line:
+이제 명령줄에서 콘솔 앱을 실행할 수 있습니다.
 
 ```console
 dotnet run apple banana
 ```
 
-And you'll see that it outputs the same result as your script file, but this time as a running program!
+스크립트 파일과 동일한 결과를 출력 하는 것을 볼 수 있지만 이번에는 실행 중인 프로그램입니다.
 
-## <a name="troubleshooting-ionide"></a>Troubleshooting Ionide
+## <a name="troubleshooting-ionide"></a>문제가 있는 Ide 문제 해결
 
-Here are a few ways you can troubleshoot certain problems that you might run into:
+다음은 발생할 수 있는 특정 문제를 해결할 수 있는 몇 가지 방법입니다.
 
-1. To get the code editing features of Ionide, your F# files need to be saved to disk and inside of a folder that is open in the Visual Studio Code workspace.
-1. If you've made changes to your system or installed Ionide prerequisites with Visual Studio Code open, restart Visual Studio Code.
-1. If you have invalid characters in your project directories, Ionide might not work.  Rename your project directories if this is the case.
-1. If none of the Ionide commands are working, check your [Visual Studio Code keybindings](https://code.visualstudio.com/docs/customization/keybindings#_customizing-shortcuts) to see if you're overriding them by accident.
-1. If Ionide is broken on your machine and none of the above has fixed your problem, try removing the `ionide-fsharp` directory on your machine and reinstall the plugin suite.
-1. If a project failed to load (the F# Solution Explorer will show this), right-click on that project and click **See details** to get more diagnostic info.
+1. F# 파일을 디스크에 저장 하 고 Visual Studio Code 작업 영역에 열려 있는 폴더 내에 저장 해야 합니다.
+1. 시스템이 열려 있는 상태에서 시스템을 변경 하거나 Visual Studio Code를 설치한 경우 Visual Studio Code를 다시 시작 합니다.
+1. 프로젝트 디렉터리에 잘못 된 문자가 있는 경우에는 작동 하지 않을 수 있습니다.  이 경우 프로젝트 디렉터리의 이름을 바꿉니다.
+1. 작동 하는 지 여부 Ide 명령이 없으면 [Visual Studio Code 키 바인딩을](https://code.visualstudio.com/docs/customization/keybindings#_customizing-shortcuts) 확인 하 여 실수로 재정의 하 고 있는지 확인 합니다.
+1. 컴퓨터에서 하드 Ide가 중단 되 고 위의 어떤 것도 문제를 해결 하지 못한 경우에는 컴퓨터에서 `ionide-fsharp` 디렉터리를 제거 하 고 플러그 인 도구 모음을 다시 설치 해 보십시오.
+1. 프로젝트를 로드 하지 못한 경우 ( F# 솔루션 탐색기 표시 됨) 해당 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 자세한 **정보 보기** 를 클릭 하 여 더 많은 진단 정보를 얻습니다.
 
-Ionide is an open source project built and maintained by members of the F# community. Please report issues and feel free to contribute at the [ionide-vscode-fsharp GitHub repository](https://github.com/ionide/ionide-vscode-fsharp).
+이상 ide는 F# 커뮤니티의 구성원이 빌드하고 유지 관리 하는 오픈 소스 프로젝트입니다. 문제를 보고 하 고 무료 [ide-vscode-Fsharp.core GitHub 리포지토리에](https://github.com/ionide/ionide-vscode-fsharp)참여 하세요.
 
-You can also ask for further help from the Ionide developers and F# community in the [Ionide Gitter channel](https://gitter.im/ionide/ionide-project).
+이상 ide 개발자와 F# 커뮤니티의 [Gitter channel](https://gitter.im/ionide/ionide-project)에서 추가 도움을 요청할 수도 있습니다.
 
 ## <a name="next-steps"></a>다음 단계
 
-To learn more about F# and the features of the language, check out [Tour of F#](../tour.md).
+F# 및 해당 언어의 기능에 대해 자세히 알아보려면 [둘러보기 F# ](../tour.md)를 참조 하세요.

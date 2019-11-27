@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446550"
 ---
 # <a name="createalink-function"></a>CreateALink 함수
-Creates an instance of the Assembly Linker and sets a pointer to the specified interface.  
+어셈블리 링커의 인스턴스를 만들고 지정 된 인터페이스에 대 한 포인터를 설정 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,12 +38,12 @@ HRESULT CreateALink (
   
 |매개 변수|설명|  
 |---------------|-----------------|  
-|`riid`|The physical name of one of the Assembly Linker interfaces.|  
-|`ppInterface`|The location that on successful completion contains a pointer to the `riid` interface.|  
+|`riid`|어셈블리 링커 인터페이스 중 하나의 물리적 이름입니다.|  
+|`ppInterface`|성공적으로 완료 되 면 `riid` 인터페이스에 대 한 포인터를 포함 하는 위치입니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **Library**: alink.dll  
+ **라이브러리**: alink .dll  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Al.exe(어셈블리 링커)](../../tools/al-exe-assembly-linker.md)

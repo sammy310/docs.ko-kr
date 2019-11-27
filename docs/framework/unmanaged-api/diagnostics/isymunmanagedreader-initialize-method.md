@@ -23,10 +23,10 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74429743"
 ---
 # <a name="isymunmanagedreaderinitialize-method"></a>ISymUnmanagedReader::Initialize 메서드
-Initializes the symbol reader with the metadata importer interface that this reader will be associated with, along with the file name of the module.  
+이 판독기가 연결 될 메타 데이터 가져오기 인터페이스를 사용 하 여 기호 판독기를 모듈의 파일 이름과 함께 초기화 합니다.  
   
 > [!NOTE]
-> This method can be called only once, and must be called before any other reader methods.  
+> 이 메서드는 한 번만 호출할 수 있으며 다른 판독기 메서드 보다 먼저 호출 해야 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,26 +40,26 @@ HRESULT Initialize (
   
 ## <a name="parameters"></a>매개 변수  
  `importer`  
- [in] The metadata importer interface with which this reader will be associated.  
+ 진행 이 판독기가 연결 되는 메타 데이터 가져오기 인터페이스입니다.  
   
  `filename`  
- [in] The file name of the module. You can use the `pIStream` parameter instead.  
+ 진행 모듈의 파일 이름입니다. 대신 `pIStream` 매개 변수를 사용할 수 있습니다.  
   
  `searchPath`  
- [in] The path to search. 이 매개 변수는 선택적 요소입니다.  
+ 진행 검색할 경로입니다. 이 매개 변수는 선택 사항입니다.  
   
  `pIStream`  
- [in] The file stream, used as an alternative to the filename parameter.  
+ 진행 Filename 매개 변수의 대 안으로 사용 되는 파일 스트림입니다.  
   
 ## <a name="return-value"></a>반환 값  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
 ## <a name="remarks"></a>주의  
- You need to specify only one of the `filename` or the `pIStream` parameters, not both. `searchPath` 매개 변수는 선택적 요소입니다.  
+ `filename` 또는 `pIStream` 매개 변수 중 하나만 지정 해야 합니다. `searchPath` 매개 변수는 선택적 요소입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **Header:** CorSym.idl, CorSym.h  
+ **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ISymUnmanagedReader 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74443149"
 ---
 # <a name="icorprofilerinfo4getfunctionfromip2-method"></a>ICorProfilerInfo4::GetFunctionFromIP2 메서드
-Maps a managed code instruction pointer to the JIT-recompiled version of a function.  
+관리 되는 코드 명령 포인터를 함수의 JIT 다시 컴파일된 버전에 매핑합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,19 +36,19 @@ HRESULT GetFunctionFromIP2(
   
 ## <a name="parameters"></a>매개 변수  
  `ip`  
- [in] The instruction pointer in managed code.  
+ 진행 관리 코드의 명령 포인터입니다.  
   
  `pFunctionId`  
- [out] The function ID.  
+ 제한이 함수 ID입니다.  
   
  `pReJitId`  
- [out] The identity of the JIT-recompiled version of the function.  
+ 제한이 함수의 JIT 다시 컴파일된 버전 id입니다.  
   
 ## <a name="remarks"></a>주의  
- `GetFunctionFromIP2` is similar to `GetFunctionFromIP`, except that it gets the JIT-recompiled ID instead of the function ID of the function that contains the specified IP address.  
+ `GetFunctionFromIP2`는 지정 된 IP 주소를 포함 하는 함수의 함수 ID 대신 JIT 다시 컴파일된 ID를 가져오는 점을 제외 하 고 `GetFunctionFromIP`와 비슷합니다.  
   
 > [!NOTE]
-> `GetFunctionFromIP2` can trigger a garbage collection, whereas `GetFunctionFromIP` will not.  For more information, see [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md).  
+> `GetFunctionFromIP2` 가비지 수집을 트리거할 수 있지만 `GetFunctionFromIP`는 그렇지 않습니다.  자세한 내용은 [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md)를 참조 하세요.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
@@ -59,6 +59,6 @@ HRESULT GetFunctionFromIP2(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerInfo 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

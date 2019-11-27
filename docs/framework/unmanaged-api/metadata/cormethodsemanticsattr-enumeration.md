@@ -43,20 +43,20 @@ typedef enum CorMethodSemanticsAttr {
   
 |멤버|설명|  
 |------------|-----------------|  
-|`msSetter`|Specifies that the method is a `set` accessor for a property.|  
-|`msGetter`|Specifies that the method is a `get` accessor for a property.|  
-|`msOther`|Specifies that the method has a relationship to a property or an event other than those defined here.|  
-|`msAddOn`|Specifies that the method adds handler methods for an event.|  
-|`msRemoveOn`|Specifies that the method removes handler methods for an event.|  
-|`msFire`|Specifies that the method raises an event.|  
+|`msSetter`|메서드가 속성의 `set` 접근자 임을 지정 합니다.|  
+|`msGetter`|메서드가 속성의 `get` 접근자 임을 지정 합니다.|  
+|`msOther`|메서드가 속성 또는 여기에 정의 된 이벤트 이외의 이벤트와 관계가 있음을 지정 합니다.|  
+|`msAddOn`|메서드가 이벤트에 대 한 처리기 메서드를 추가 하도록 지정 합니다.|  
+|`msRemoveOn`|메서드가 이벤트에 대 한 처리기 메서드를 제거 하도록 지정 합니다.|  
+|`msFire`|메서드가 이벤트를 발생 하도록 지정 합니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** CorHdr.h  
+ **헤더:** CorHdr .h  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [메타데이터 열거형](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

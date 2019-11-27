@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445645"
 ---
 # <a name="init-method"></a>Init 메서드
-Prepares objects implementing the [IALink Interface](ialink-interface.md) for use.  
+사용할 [Ialink 인터페이스](ialink-interface.md) 를 구현 하는 개체를 준비 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -35,18 +35,18 @@ HRESULT Init(
   
 ## <a name="parameters"></a>매개 변수  
  `pDispenser`  
- [IMetaDataDispenserEx Interface](../metadata/imetadatadispenserex-interface.md) pointer to the metadata dispenser.  
+ 메타 데이터 디스펜서에 대 한 [IMetaDataDispenserEx 인터페이스](../metadata/imetadatadispenserex-interface.md) 포인터입니다.  
   
  `pErrorHandler`  
- [IMetaDataError Interface](../metadata/imetadataerror-interface.md) pointer to an optional error handling interface.  
+ 선택적 오류 처리 인터페이스에 대 한 [IMetaDataError 인터페이스](../metadata/imetadataerror-interface.md) 포인터입니다.  
   
 ## <a name="return-value"></a>반환 값  
- Returns S_OK if the method succeeds.  
+ 메서드가 성공 하면 S_OK을 반환 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- Requires alink.h  
+ Alink 필요  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IALink 인터페이스](ialink-interface.md)
 - [IALink2 인터페이스](ialink2-interface.md)

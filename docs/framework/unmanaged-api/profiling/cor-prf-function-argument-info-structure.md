@@ -38,26 +38,26 @@ typedef struct _COR_PRF_FUNCTION_ARGUMENT_INFO {
   
 |멤버|설명|  
 |------------|-----------------|  
-|`numRanges`|The number of blocks of arguments. That is, this value is the number of [COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) structures in the `ranges` array.|  
-|`totalArgumentSize`|The total size of all arguments. In other words, this value is the sum of the argument lengths.|  
-|`ranges`|An array of `COR_PRF_FUNCTION_ARGUMENT_RANGE` structures, each of which represents one block of function arguments.|  
+|`numRanges`|인수의 블록 수입니다. 즉,이 값은 `ranges` 배열의 [COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) 구조체 수입니다.|  
+|`totalArgumentSize`|모든 인수의 전체 크기입니다. 즉,이 값은 인수 길이의 합계입니다.|  
+|`ranges`|각각 하나의 함수 인수 블록을 나타내는 `COR_PRF_FUNCTION_ARGUMENT_RANGE` 구조체의 배열입니다.|  
   
 ## <a name="remarks"></a>주의  
- A function may have many arguments. Those arguments might not be stored contiguously in memory. You might have a block of three arguments in one place, a block of two arguments in another place, and a final block of one argument in a different place. These arguments are all for the same function; they're just stored in different places.  
+ 함수에는 여러 개의 인수가 있을 수 있습니다. 이러한 인수는 메모리에 연속적으로 저장 되지 않을 수도 있습니다. 한 곳에 세 개의 인수 블록, 다른 위치의 두 인수 블록, 다른 위치의 한 인수에 대 한 최종 블록이 있을 수 있습니다. 이러한 인수는 모두 동일한 함수에 대해입니다. 다른 위치에 저장 됩니다.  
   
- The `COR_PRF_FUNCTION_ARGUMENT_INFO` structure represents all the arguments of a single function. It uses an array to reference all the blocks of function arguments. So, for a single function, you have a single `COR_PRF_FUNCTION_ARGUMENT_INFO` structure, which references multiple `COR_PRF_FUNCTION_ARGUMENT_RANGE` structures, each of which points to one or more function arguments.  
+ `COR_PRF_FUNCTION_ARGUMENT_INFO` 구조체는 단일 함수의 모든 인수를 나타냅니다. 배열을 사용 하 여 함수 인수의 모든 블록을 참조 합니다. 따라서 단일 함수의 경우 하나 이상의 함수 인수를 가리키는 여러 개의 `COR_PRF_FUNCTION_ARGUMENT_RANGE` 구조체를 참조 하는 단일 `COR_PRF_FUNCTION_ARGUMENT_INFO` 구조가 있습니다.  
   
- Arguments that are stored in registers are spilled into memory to build the structures.  
+ 레지스터에 저장 된 인수는 메모리에 분산 되어 구조를 작성 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** CorProf.idl  
+ **헤더:** Corprof.idl  
   
  **라이브러리:** CorGuids.lib  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [프로파일링 구조체](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)

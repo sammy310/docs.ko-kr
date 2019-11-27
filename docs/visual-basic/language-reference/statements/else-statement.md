@@ -14,7 +14,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74343750"
 ---
 # <a name="else-statement-visual-basic"></a>Else 문(Visual Basic)
-Introduces a group of statements to be run or compiled if no other conditional group of statements has been run or compiled.  
+는 다른 조건부 그룹의 문이 실행 되거나 컴파일되지 않은 경우 실행 하거나 컴파일할 문 그룹을 소개 합니다.  
   
 ## <a name="remarks"></a>주의  
  `Else` 키워드는 다음 컨텍스트에서 사용할 수 있습니다.  
@@ -23,8 +23,8 @@ Introduces a group of statements to be run or compiled if no other conditional g
   
  [Select...Case 문](../../../visual-basic/language-reference/statements/select-case-statement.md)  
   
- [#If...Then...#Else Directive](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
+ [#If ... Then ... #Else 지시문](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [C++ 키워드](../../../visual-basic/language-reference/keywords/index.md)
+- [키워드](../../../visual-basic/language-reference/keywords/index.md)

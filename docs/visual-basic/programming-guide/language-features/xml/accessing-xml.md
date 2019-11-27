@@ -16,45 +16,45 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351744"
 ---
 # <a name="accessing-xml-in-visual-basic"></a>Visual Basic에서 XML에 액세스
-Visual Basic provides XML axis properties for accessing and navigating [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] structures. These properties use a special syntax to enable you to access elements and attributes by specifying the XML names.  
+Visual Basic는 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 구조에 액세스 하 고 탐색 하기 위한 XML 축 속성을 제공 합니다. 이러한 속성은 XML 이름을 지정 하 여 요소 및 특성에 액세스할 수 있도록 특수 구문을 사용 합니다.  
   
- The following table lists the language features that enable you to access XML elements and attributes in Visual Basic.  
+ 다음 표에서는 Visual Basic의 XML 요소와 특성에 액세스할 수 있게 해 주는 언어 기능을 보여 줍니다.  
   
 ### <a name="xml-axis-properties"></a>XML 축 속성  
   
-|Property description|예제|설명|  
+|속성 설명|예제|설명|  
 |--------------------------|-------------|-----------------|  
-|*child axis*|`contact.<phone>`|Gets all `phone` elements that are child elements of the `contact` element.|  
-|*attribute axis*|`phone.@type`|Gets all `type` attributes of the `phone` element.|  
-|*descendant axis*|`contacts...<name>`|Gets all `name` elements of the `contacts` element, regardless of how deep in the hierarchy they occur.|  
-|*extension indexer*|`contacts...<name>(0)`|Gets the first `name` element from the sequence.|  
-|*value*|`contacts...<name>.Value`|Gets the string representation of the first object in the sequence, or `Nothing` if the sequence is empty.|  
+|*자식 축*|`contact.<phone>`|`contact` 요소의 자식 요소인 모든 `phone` 요소를 가져옵니다.|  
+|*특성 축*|`phone.@type`|`phone` 요소의 `type` 특성을 모두 가져옵니다.|  
+|*하위 항목 축*|`contacts...<name>`|발생 한 계층의 깊이에 관계 없이 `contacts` 요소의 모든 `name` 요소를 가져옵니다.|  
+|*확장 인덱서*|`contacts...<name>(0)`|시퀀스에서 첫 번째 `name` 요소를 가져옵니다.|  
+|*value*|`contacts...<name>.Value`|시퀀스에서 첫 번째 개체의 문자열 표현을 가져오거나, 시퀀스가 비어 있는 경우 `Nothing` 합니다.|  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [방법: XML 하위 요소 액세스](../../../../visual-basic/programming-guide/language-features/xml/how-to-access-xml-descendant-elements.md)  
- Shows how to use a descendant axis property to access all XML elements that have a specified name and that are contained under a specified XML element.  
+ 하위 축 속성을 사용 하 여 지정 된 이름을 가진 모든 XML 요소에 액세스 하 고 지정 된 XML 요소에 포함 된 모든 XML 요소에 액세스 하는 방법을 보여 줍니다.  
   
  [방법: XML 자식 요소 액세스](../../../../visual-basic/programming-guide/language-features/xml/how-to-access-xml-child-elements.md)  
- Shows how to use a child axis property to access all XML child elements that have a specified name in an XML element.  
+ 자식 축 속성을 사용 하 여 XML 요소에 지정 된 이름의 모든 XML 자식 요소에 액세스 하는 방법을 보여 줍니다.  
   
  [방법: XML 특성 액세스](../../../../visual-basic/programming-guide/language-features/xml/how-to-access-xml-attributes.md)  
- Shows how to use an attribute axis property to access all XML attributes that have a specified name in an XML element.  
+ 특성 축 속성을 사용 하 여 XML 요소에 지정 된 이름의 모든 XML 특성에 액세스 하는 방법을 보여 줍니다.  
   
  [방법: XML 네임스페이스 접두사 선언 및 사용](../../../../visual-basic/programming-guide/language-features/xml/how-to-declare-and-use-xml-namespace-prefixes.md)  
- Shows how to declare an XML namespace prefix and use it to create and access XML elements.  
+ XML 네임 스페이스 접두사를 선언 하 고이 접두사를 사용 하 여 XML 요소를 만들고 액세스 하는 방법을 보여 줍니다.  
   
-## <a name="related-sections"></a>관련 단원  
+## <a name="related-sections"></a>관련 섹션  
  [XML 축 속성](../../../../visual-basic/language-reference/xml-axis/index.md)  
- Provides links to sections describing the various XML access properties.  
+ 다양 한 XML 액세스 속성을 설명 하는 섹션에 대 한 링크를 제공 합니다.  
   
  [Visual Basic의 LINQ to XML 개요](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)  
- Provides an introduction to using [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] in Visual Basic.  
+ Visual Basic에서 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]를 사용 하는 방법을 소개 합니다.  
   
  [Visual Basic에서 XML 만들기](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
- Provides an introduction to using XML literals in Visual Basic.  
+ Visual Basic에서 XML 리터럴을 사용 하는 방법을 소개 합니다.  
   
  [Visual Basic에서 XML 조작](../../../../visual-basic/programming-guide/language-features/xml/manipulating-xml.md)  
- Provides links to sections about loading and modifying XML in Visual Basic.  
+ Visual Basic에서 XML을 로드 하 고 수정 하는 방법에 대 한 링크를 제공 합니다.  
   
  [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)  
- Provides links to sections describing how to use [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] in Visual Basic.
+ Visual Basic에서 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]를 사용 하는 방법을 설명 하는 섹션에 대 한 링크를 제공 합니다.

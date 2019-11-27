@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446213"
 ---
 # <a name="isymunmanagedsourceservermodulegetsourceserverdata-method"></a>ISymUnmanagedSourceServerModule::GetSourceServerData 메서드
-Returns the source server data for the module. The caller must free resources by using `CoTaskMemFree`.  
+모듈에 대 한 원본 서버 데이터를 반환 합니다. 호출자는 `CoTaskMemFree`을 사용 하 여 리소스를 해제 해야 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -35,17 +35,17 @@ HRESULT GetSourceServerData(
   
 ## <a name="parameters"></a>매개 변수  
  `pDataByteCount`  
- [out] A pointer to a `ULONG32` that receives the size, in bytes, of the source server data.  
+ 제한이 원본 서버 데이터의 크기 (바이트)를 수신 하는 `ULONG32`에 대 한 포인터입니다.  
   
  `ppData`  
- [out] A pointer to the returned `pDataByteCount` value.  
+ 제한이 반환 된 `pDataByteCount` 값에 대 한 포인터입니다.  
   
 ## <a name="return-value"></a>반환 값  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **Header:** CorSym.idl, CorSym.h  
+ **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ISymUnmanagedSourceServerModule 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsourceservermodule-interface.md)

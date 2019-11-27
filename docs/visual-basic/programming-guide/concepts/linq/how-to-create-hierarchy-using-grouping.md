@@ -9,7 +9,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74341592"
 ---
-# <a name="how-to-create-hierarchy-using-grouping-visual-basic"></a>How to: Create Hierarchy Using Grouping (Visual Basic)
+# <a name="how-to-create-hierarchy-using-grouping-visual-basic"></a>방법: 그룹화를 사용 하 여 계층 구조 만들기 (Visual Basic)
 이 예제에서는 데이터를 그룹화한 다음 그룹화에 따라 XML을 생성하는 방법을 보여 줍니다.  
   
 ## <a name="example"></a>예제  
@@ -79,6 +79,6 @@ Console.WriteLine(newData)
 </Root>  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [Advanced Query Techniques (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+- [LINQ to XML (고급 쿼리 기술) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

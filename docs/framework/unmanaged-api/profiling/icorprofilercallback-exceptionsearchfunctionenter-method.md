@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445348"
 ---
 # <a name="icorprofilercallbackexceptionsearchfunctionenter-method"></a>ICorProfilerCallback::ExceptionSearchFunctionEnter 메서드
-Notifies the profiler that the search phase of exception handling has begun searching a function to find a handler for the current exception.  
+예외 처리의 검색 단계가 함수를 검색 하 여 현재 예외에 대 한 처리기를 시작 했음을 프로파일러에 알립니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -34,7 +34,7 @@ HRESULT ExceptionSearchFunctionEnter(
   
 ## <a name="parameters"></a>매개 변수  
  `functionId`  
- [in] The ID of the function that has been entered.  
+ 진행 입력 된 함수의 ID입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
@@ -45,7 +45,7 @@ HRESULT ExceptionSearchFunctionEnter(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerCallback 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
 - [ExceptionSearchFunctionLeave 메서드](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfunctionleave-method.md)

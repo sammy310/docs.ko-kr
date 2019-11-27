@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448959"
 ---
 # <a name="isymunmanagedmethodgetparameters-method"></a>ISymUnmanagedMethod::GetParameters 메서드
-Gets the parameters for this method. The parameters are returned in the order in which they are defined within the method's signature.  
+이 메서드에 대 한 매개 변수를 가져옵니다. 매개 변수는 메서드 서명 내에서 정의 된 순서 대로 반환 됩니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,17 +40,17 @@ HRESULT GetParameters(
  [in] `params` 배열의 크기입니다.  
   
  `pcParams`  
- [in] A pointer to a `ULONG32` that receives the size of the buffer that is required to contain the parameters.  
+ 진행 매개 변수를 포함 하는 데 필요한 버퍼 크기를 수신 하는 `ULONG32`에 대 한 포인터입니다.  
   
  `params`  
- [out] A pointer to the buffer that receives the parameters.  
+ 제한이 매개 변수를 받는 버퍼에 대 한 포인터입니다.  
   
 ## <a name="return-value"></a>반환 값  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **Header:** CorSym.idl, CorSym.h  
+ **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ISymUnmanagedMethod 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

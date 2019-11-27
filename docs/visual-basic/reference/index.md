@@ -1,5 +1,5 @@
 ---
-title: 참고
+title: 참조
 ms.date: 07/20/2015
 helpviewer_keywords:
 - language reference
@@ -13,27 +13,27 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352875"
 ---
 # <a name="reference-visual-basic"></a>참조(Visual Basic)
-This section provides links to reference information about various aspects of Visual Basic programming.  
+이 섹션에서는 Visual Basic 프로그래밍의 다양 한 측면에 대 한 참조 정보에 대 한 링크를 제공 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [Visual Basic 언어 참조](../../visual-basic/language-reference/index.md)  
- Provides reference information for various aspects of the Visual Basic language.  
+ Visual Basic 언어의 다양 한 측면에 대 한 참조 정보를 제공 합니다.  
   
  [Visual Basic 명령줄 컴파일러](../../visual-basic/reference/command-line-compiler/index.md)  
  Visual Studio IDE에서 프로그램을 컴파일하는 대신 사용할 수 있는 명령줄 컴파일러에 대한 정보 링크를 제공합니다.  
   
  [.NET Framework 참조 정보](../../visual-basic/reference/net-framework-reference-information.md)  
- Provides links to information on working with the .NET Framework class library.  
+ .NET Framework 클래스 라이브러리를 사용 하는 방법에 대 한 정보 링크를 제공 합니다.  
   
  [Visual Basic 언어 사양](../../visual-basic/reference/language-specification/index.md)  
- Provides links to the complete Visual Basic language specification, which contains detailed information on all aspects of the language.  
+ 언어의 모든 측면에 대 한 자세한 정보를 포함 하는 전체 Visual Basic 언어 사양에 대 한 링크를 제공 합니다.  
   
-## <a name="related-sections"></a>관련 단원  
+## <a name="related-sections"></a>관련 섹션  
  [일반 사용자 인터페이스 요소(Visual Studio)](/visualstudio/ide/reference/general-user-interface-elements-visual-studio)  
- Contains topics for dialog boxes and windows used in Visual Studio.  
+ Visual Studio에 사용 되는 대화 상자 및 창에 대 한 항목이 포함 되어 있습니다.  
   
  [Visual Studio의 XML 도구](/visualstudio/xml-tools/xml-tools-in-visual-studio)  
- Provides links to topics on various XML tools available in Visual Studio.  
+ Visual Studio에서 사용할 수 있는 다양 한 XML 도구에 대 한 항목의 링크를 제공 합니다.  
   
  [자동화 및 확장성 참조](/visualstudio/extensibility/extensibility-in-visual-studio?view=vs-2015)  
- Provides links to topics covering automation and extensibility in Visual Studio, for both shared and language-specific components.
+ 공유 및 언어별 구성 요소에 대 한 Visual Studio의 자동화 및 확장성에 대해 다루는 항목의 링크를 제공 합니다.

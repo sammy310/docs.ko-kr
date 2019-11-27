@@ -42,43 +42,43 @@ HRESULT DefineAssemblyRef (
   
 ## <a name="parameters"></a>매개 변수  
  `pbPublicKeyOrToken`  
- [in] The public key of the publisher of the referenced assembly. The helper function [StrongNameTokenFromAssembly](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfromassembly-function.md) can be used to get the hash of the public key to pass as this parameter.  
+ 진행 참조 된 어셈블리의 게시자에 대 한 공개 키입니다. 도우미 함수 [StrongNameTokenFromAssembly](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfromassembly-function.md) 를 사용 하 여이 매개 변수로 전달할 공개 키의 해시를 가져올 수 있습니다.  
   
  `cbPublicKeyOrToken`  
- [in] The size in bytes of `pbPublicKeyOrToken`.  
+ 진행 `pbPublicKeyOrToken`의 크기 (바이트)입니다.  
   
  `szName`  
- [in] The human-readable text name of the assembly. This value must not exceed 1024 characters.  
+ 진행 사람이 읽을 수 있는 어셈블리의 텍스트 이름입니다. 이 값은 1024 자를 초과할 수 없습니다.  
   
  `pMetaData`  
- [in] An ASSEMBLYMETADATA instance that contains the version, platform and locale information of the referenced assembly.  
+ 진행 참조 된 어셈블리의 버전, 플랫폼 및 로캘 정보를 포함 하는 ASSEMBLYMETADATA 인스턴스입니다.  
   
  `pbHashValue`  
- [in] The hash data associated with the referenced assembly. (선택 사항)  
+ 진행 참조 된 어셈블리와 연결 된 해시 데이터입니다. (선택 사항)  
   
  `cbHashValue`  
- [in] The size in bytes of `pbHashValue`.  
+ 진행 `pbHashValue`의 크기 (바이트)입니다.  
   
  `dwAssemblyRefFlags`  
- [in] A bitwise combination of [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) values that influence the behavior of the execution engine.  
+ 진행 실행 엔진의 동작에 영향을 주는 [Corassemblyflags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) 값의 비트 조합입니다.  
   
  `pmdar`  
- [out] A pointer to the returned `AssemblyRef` metadata token.  
+ 제한이 반환 된 `AssemblyRef` 메타 데이터 토큰에 대 한 포인터입니다.  
   
 ## <a name="remarks"></a>주의  
- One `AssemblyRef` metadata structure must be defined for each assembly that this assembly references.  
+ 이 어셈블리가 참조 하는 각 어셈블리에 대해 하나의 `AssemblyRef` 메타 데이터 구조를 정의 해야 합니다.  
   
- At run time, the details of a referenced assembly are passed to the assembly resolver with an indication that they represent the "as built" information. The assembly resolver then applies policy.  
+ 런타임에 참조 된 어셈블리의 세부 정보는 "빌드" 정보를 나타내는 것으로 어셈블리 확인자에 전달 됩니다. 그런 다음 어셈블리 확인자는 정책을 적용 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IMetaDataAssemblyEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

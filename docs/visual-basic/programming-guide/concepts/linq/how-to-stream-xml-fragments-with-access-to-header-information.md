@@ -9,10 +9,10 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74332458"
 ---
-# <a name="how-to-stream-xml-fragments-with-access-to-header-information-visual-basic"></a>How to: Stream XML Fragments with Access to Header Information (Visual Basic)
+# <a name="how-to-stream-xml-fragments-with-access-to-header-information-visual-basic"></a>방법: 헤더 정보에 액세스 하 여 XML 조각 스트리밍 (Visual Basic)
 예상할 수 없는 큰 크기의 XML 파일을 읽고 애플리케이션의 메모리 사용 공간이 예상 가능하도록 애플리케이션을 작성해야 하는 경우가 있습니다. XML 트리를 큰 XML 파일로 채우려는 경우 파일 크기에 비례하여 메모리가 사용되므로 메모리 사용량이 지나치게 증가하게 됩니다. 따라서 스트리밍 기법을 대신 사용해야 합니다.  
   
- 한 가지 방법은 <xref:System.Xml.XmlReader>를 사용하여 애플리케이션을 작성하는 것입니다. 그러나 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]를 사용하여 XML 트리를 쿼리할 수도 있습니다. 이 경우에는 사용자 지정 축 메서드를 직접 작성할 수 있습니다. For more information, see [How to: Write a LINQ to XML Axis Method (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-write-a-linq-to-xml-axis-method.md).  
+ 한 가지 방법은 <xref:System.Xml.XmlReader>를 사용하여 애플리케이션을 작성하는 것입니다. 그러나 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]를 사용하여 XML 트리를 쿼리할 수도 있습니다. 이 경우에는 사용자 지정 축 메서드를 직접 작성할 수 있습니다. 자세한 내용은 [방법: LINQ to XML 축 메서드 작성 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-write-a-linq-to-xml-axis-method.md)을 참조 하세요.  
   
  축 메서드를 직접 작성하려면 <xref:System.Xml.XmlReader>를 사용하여 관심이 있는 노드 중 하나에 도달할 때까지 노드를 읽는 작은 메서드를 작성해야 합니다. 이 메서드는 <xref:System.Xml.Linq.XNode.ReadFrom%2A>에서 읽고 XML 조각을 인스턴스화하는 <xref:System.Xml.XmlReader>을 호출한 후 그런 다음 사용자 지정 축 메서드에 대한 LINQ 쿼리를 작성할 수 있습니다.  
   
@@ -230,6 +230,6 @@ End Class
 </Root>  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [Advanced LINQ to XML Programming (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [Visual Basic (Advanced LINQ to XML 프로그래밍)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

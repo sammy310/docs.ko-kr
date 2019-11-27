@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74429931"
 ---
 # <a name="icorprofilerfunctioncontrolsetcodegenflags-method"></a>ICorProfilerFunctionControl::SetCodegenFlags 메서드
-Sets one or more flags from the [COR_PRF_CODEGEN_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-codegen-flags-enumeration.md) enumeration to control code generation for a just-in-time (JIT) recompiled function.  
+JIT (just in time) 컴파일 함수의 코드 생성을 제어 하기 위해 [COR_PRF_CODEGEN_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-codegen-flags-enumeration.md) 열거형에서 하나 이상의 플래그를 설정 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -34,12 +34,12 @@ HRESULT SetCodegenFlags(
   
 ## <a name="parameters"></a>매개 변수  
  `flags`  
- [in] One or more flags from the [COR_PRF_CODEGEN_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-codegen-flags-enumeration.md) enumeration.  
+ 진행 [COR_PRF_CODEGEN_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-codegen-flags-enumeration.md) 열거형의 하나 이상의 플래그입니다.  
   
 ## <a name="remarks"></a>주의  
- The profiler obtains an instance of this interface through the [ICorProfilerCallback4::GetReJITParameters](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-getrejitparameters-method.md) callback. `SetCodegenFlags` allows the profiler to control the code generation for the recompiled function. As with all other JIT recompilation parameters, the code generation flags apply to all instances of the function.  
+ 프로파일러는 [ICorProfilerCallback4:: GetReJITParameters](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-getrejitparameters-method.md) 콜백을 통해이 인터페이스의 인스턴스를 가져옵니다. `SetCodegenFlags`를 사용 하면 프로파일러가 다시 컴파일된 함수에 대 한 코드 생성을 제어할 수 있습니다. 다른 모든 JIT 재컴파일 매개 변수와 마찬가지로 코드 생성 플래그는 함수의 모든 인스턴스에 적용 됩니다.  
   
- The JIT compiler considers these compilation flags, along with other flags specified by other sources, when compiling a function.  The other sources include the debugger, global flags set by the profiler on startup by using the [ICorProfilerInfo::SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) method (with the values `COR_PRF_DISABLE_INLINING` and `COR_PRF_DISABLE_OPTIMIZATIONS`), and the profiler’s [ICorProfilerCallback::JITInlining](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitinlining-method.md) callback.  The JIT compiler gives precedence to a source that requests the least amount of optimizing.  For example, if the profiler specifies `COR_PRF_DISABLE_INLINING` on startup, but does not specify `COR_PRF_CODEGEN_DISABLE_INLINING` in the [ICorProfilerFunctionControl::SetCodegenFlags](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setcodegenflags-method.md) callback, inlining is still disabled.  Similarly, if the profiler does not specify `COR_PRF_CODEGEN_DISABLE_INLINING` in `SetCodegenFlags`, but then disables inlining by using the [ICorProfilerCallback::JITInlining](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitinlining-method.md) callback, inlining is disabled.  
+ JIT 컴파일러는 함수를 컴파일할 때 다른 원본에서 지정 된 다른 플래그와 함께 이러한 컴파일 플래그를 고려 합니다.  다른 소스에는 [ICorProfilerInfo:: SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) 메서드 (값 `COR_PRF_DISABLE_INLINING` 및 `COR_PRF_DISABLE_OPTIMIZATIONS`) 및 프로파일러의 [ICorProfilerCallback:: JITInlining](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitinlining-method.md) callback을 사용 하 여 시작 시 프로파일러에서 설정 하는 디버거, 전역 플래그가 포함 됩니다.  JIT 컴파일러는 최소한의 최적화를 요청 하는 소스에 우선 순위를 부여 합니다.  예를 들어 프로파일러가 시작 시 `COR_PRF_DISABLE_INLINING` 지정 하지만 [ICorProfilerFunctionControl:: SetCodegenFlags](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setcodegenflags-method.md) 콜백에서 `COR_PRF_CODEGEN_DISABLE_INLINING`를 지정 하지 않는 경우에도 인라이닝을 사용할 수 없습니다.  마찬가지로 프로파일러가 `SetCodegenFlags`에서 `COR_PRF_CODEGEN_DISABLE_INLINING` 지정 하지 않지만 [ICorProfilerCallback:: JITInlining](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitinlining-method.md) 콜백을 사용 하 여 인라이닝을 사용 하지 않도록 설정 하면 인라이닝을 사용 하지 않도록 설정 됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
@@ -50,6 +50,6 @@ HRESULT SetCodegenFlags(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerFunctionControl 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-interface.md)

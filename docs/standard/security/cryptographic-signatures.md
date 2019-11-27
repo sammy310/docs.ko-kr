@@ -39,7 +39,7 @@ ms.locfileid: "74350465"
 
 일반적으로 디지털 서명은 더 큰 데이터를 나타내는 해시 값에 적용됩니다. 다음 예제에서는 해시 값에 디지털 서명을 적용합니다. 먼저 <xref:System.Security.Cryptography.RSACryptoServiceProvider> 클래스의 새 인스턴스는 public/private 키 쌍을 생성합니다. 다음으로 <xref:System.Security.Cryptography.RSACryptoServiceProvider> 는 <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> 클래스의 새 인스턴스에 전달됩니다. 실제로 디지털 서명을 수행하는 <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter>에 private 키를 전달합니다. 해시 코드에 서명하기 전에 사용할 해시 알고리즘을 지정해야 합니다. 이 예제에서는 SHA1 알고리즘을 사용합니다. 마지막으로 <xref:System.Security.Cryptography.AsymmetricSignatureFormatter.CreateSignature%2A> 메서드가 호출되어 서명을 수행합니다.
 
-Due to collision problems with SHA1, Microsoft recommends SHA256 or better.
+S h a 1의 충돌 문제로 인해 s h a 1 이상을 권장 합니다.
 
 ```vb
 Imports System.Security.Cryptography
@@ -118,7 +118,7 @@ class Class1
 
 - 서명자가 사용한 해시 알고리즘입니다.
 
-<xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> 클래스로 서명된 서명을 확인하려면 <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> 클래스를 사용합니다. <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> 클래스에는 서명자의 public 키가 제공되어야 합니다. public 키를 지정하려면 모듈러스 및 지수의 값이 필요합니다. (The party that generated the public/private key pair should provide these values.) First create an <xref:System.Security.Cryptography.RSACryptoServiceProvider> object to hold the public key that will verify the signature, and then initialize an <xref:System.Security.Cryptography.RSAParameters> structure to the modulus and exponent values that specify the public key.
+<xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> 클래스로 서명된 서명을 확인하려면 <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> 클래스를 사용합니다. <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> 클래스에는 서명자의 public 키가 제공되어야 합니다. public 키를 지정하려면 모듈러스 및 지수의 값이 필요합니다. 공개/개인 키 쌍을 생성 한 파티는 이러한 값을 제공 해야 합니다. 먼저 서명을 확인할 공개 키를 보유 하는 <xref:System.Security.Cryptography.RSACryptoServiceProvider> 개체를 만든 다음, 공개 키를 지정 하는 모듈러스 및 지 수 값에 <xref:System.Security.Cryptography.RSAParameters> 구조체를 초기화 합니다.
 
 다음 코드는 <xref:System.Security.Cryptography.RSAParameters> 구조체를 만드는 방법을 보여 줍니다. `Modulus` 속성은 `modulusData` 바이트 배열 값으로 설정되고 `Exponent` 속성은 `exponentData`바이트 배열 값으로 설정됩니다.
 
@@ -136,7 +136,7 @@ rsaKeyInfo.Exponent = exponentData;
 
 <xref:System.Security.Cryptography.RSAParameters> 개체를 만든 후에 <xref:System.Security.Cryptography.RSACryptoServiceProvider> 클래스의 새 인스턴스를 <xref:System.Security.Cryptography.RSAParameters>에 지정된 값으로 초기화할 수 있습니다. <xref:System.Security.Cryptography.RSACryptoServiceProvider> 가 다시 <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> 의 생성자에 전달되어 키를 전송합니다.
 
-다음 예제에서는 이 프로세스를 보여 줍니다. 이 예제에서 `hashValue` 및 `signedHashValue` 는 원격 당사자가 제공한 바이트 배열입니다. 원격 당사자는 `hashValue` 를 생성하는 SHA1 알고리즘을 사용하여 `signedHashValue`에 서명했습니다. The <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter.VerifySignature%2A?displayProperty=nameWithType> method verifies that the digital signature is valid and was used to sign the `hashValue`.
+다음 예제에서는 이 프로세스를 보여 줍니다. 이 예제에서 `hashValue` 및 `signedHashValue` 는 원격 당사자가 제공한 바이트 배열입니다. 원격 당사자는 `hashValue` 를 생성하는 SHA1 알고리즘을 사용하여 `signedHashValue`에 서명했습니다. <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter.VerifySignature%2A?displayProperty=nameWithType> 메서드는 디지털 서명이 유효 하 고 `hashValue`에 서명 하는 데 사용 되었는지 확인 합니다.
 
 ```vb
 Dim rsa As New RSACryptoServiceProvider()
@@ -167,6 +167,6 @@ else
 
 이 코드 조각은 서명이 유효하면 "`The signature is valid`"를 표시하고, 유효하지 않으면 "`The signature is not valid`"를 표시합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [암호화 서비스](../../../docs/standard/security/cryptographic-services.md)
+- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)

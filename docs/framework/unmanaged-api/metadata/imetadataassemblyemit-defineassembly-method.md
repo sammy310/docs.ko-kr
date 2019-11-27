@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432126"
 ---
 # <a name="imetadataassemblyemitdefineassembly-method"></a>IMetaDataAssemblyEmit::DefineAssembly 메서드
-Creates an `Assembly` structure containing metadata for the specified assembly and returns the associated metadata token.  
+지정 된 어셈블리에 대 한 메타 데이터를 포함 하는 `Assembly` 구조체를 만들고 연결 된 메타 데이터 토큰을 반환 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -41,38 +41,38 @@ HRESULT DefineAssembly (
   
 ## <a name="parameters"></a>매개 변수  
  `pbPublicKey`  
- [in] The public key that identifies the publisher of the assembly, or NULL if the assembly is not strongly named.  
+ 진행 어셈블리의 게시자를 식별 하는 공개 키 이거나, 어셈블리에 강력한 이름이 지정 되지 않은 경우 NULL입니다.  
   
  `cbPublicKey`  
- [in] The size in bytes of `pbPublicKey`.  
+ 진행 `pbPublicKey`의 크기 (바이트)입니다.  
   
  `uHashAlgId`  
- [in] The identifier of the hashing algorithm to use to encrypt the files in the assembly, or NULL to specify the SHA-1 algorithm.  
+ 진행 어셈블리의 파일을 암호화 하는 데 사용할 해시 알고리즘의 식별자 이거나, SHA-1 알고리즘을 지정 하려면 NULL입니다.  
   
  `szName`  
- [in] The human-readable text name of the assembly. This value must not exceed 1024 characters.  
+ 진행 사람이 읽을 수 있는 어셈블리의 텍스트 이름입니다. 이 값은 1024 자를 초과할 수 없습니다.  
   
  `pMetaData`  
- [in] A pointer to an ASSEMBLYMETADATA instance that contains the version, platform, and locale information for the assembly.  
+ 진행 어셈블리에 대 한 버전, 플랫폼 및 로캘 정보를 포함 하는 ASSEMBLYMETADATA 인스턴스에 대 한 포인터입니다.  
   
  `dwAssemblyFlags`  
- [in] A combination of [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) values that describe features of the assembly.  
+ 진행 어셈블리의 기능을 설명 하는 [Corassemblyflags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) 값의 조합입니다.  
   
  `pmda`  
- [out] A pointer to the metadata token.  
+ 제한이 메타 데이터 토큰에 대 한 포인터입니다.  
   
 ## <a name="remarks"></a>주의  
- Only one `Assembly` metadata structure can be defined within a manifest.  
+ 매니페스트 내에는 하나의 `Assembly` 메타 데이터 구조만 정의할 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IMetaDataAssemblyEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

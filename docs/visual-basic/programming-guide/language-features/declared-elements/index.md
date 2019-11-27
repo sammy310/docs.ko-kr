@@ -32,7 +32,7 @@ ms.locfileid: "74345344"
   
 - [Sub 문](../../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-- [Declare 문](../../../../visual-basic/language-reference/statements/declare-statement.md)  
+- [Declare Statement](../../../../visual-basic/language-reference/statements/declare-statement.md)  
   
 - [Operator 문](../../../../visual-basic/language-reference/statements/operator-statement.md)  
   
@@ -42,7 +42,7 @@ ms.locfileid: "74345344"
   
 - [Delegate 문](../../../../visual-basic/language-reference/statements/delegate-statement.md)  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [선언 요소 이름](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  
  요소 이름을 지정하고 알파벳 대/소문자를 사용하는 방법을 설명합니다.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "74345344"
  [선언된 요소 참조](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
  컴파일러에서 선언에 대한 참조를 일치시키는 방법과 이름을 정규화하는 방법을 설명합니다.  
   
-## <a name="related-sections"></a>관련 단원  
+## <a name="related-sections"></a>관련 섹션  
  [프로그램 구조 및 코드 규칙](../../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)  
  코드를 쉽게 읽고 이해하고 관리하기 위한 지침을 제공합니다.  
   

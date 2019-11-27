@@ -9,7 +9,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344659"
 ---
-# <a name="how-to-find-elements-in-a-namespace-xpath-linq-to-xml-visual-basic"></a>How to: Find Elements in a Namespace (XPath-LINQ to XML) (Visual Basic)
+# <a name="how-to-find-elements-in-a-namespace-xpath-linq-to-xml-visual-basic"></a>방법: 네임 스페이스에서 요소 찾기 (XPath-LINQ to XML) (Visual Basic)
 XPath 식은 특정 네임스페이스에서 노드를 찾을 수 있습니다. XPath 식은 네임스페이스를 지정하는 데 네임스페이스 접두사를 사용합니다. 네임스페이스 접두사가 포함된 XPath 식의 구문을 분석하려면 <xref:System.Xml.IXmlNamespaceResolver>를 구현하는 XPath 메서드에 개체를 전달해야 합니다. 이 예제에서는 <xref:System.Xml.XmlNamespaceManager>를 사용합니다.  
   
  XPath 식은 다음과 같습니다.  
@@ -80,6 +80,6 @@ Results are identical
   </aw:PurchaseOrder>  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [LINQ to XML for XPath Users (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [XPath 사용자에 대 한 LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

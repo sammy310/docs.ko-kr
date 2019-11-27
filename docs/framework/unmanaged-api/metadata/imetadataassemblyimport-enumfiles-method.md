@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74443549"
 ---
 # <a name="imetadataassemblyimportenumfiles-method"></a>IMetaDataAssemblyImport::EnumFiles 메서드
-Enumerates the files referenced in the current assembly manifest.  
+현재 어셈블리 매니페스트에서 참조 하는 파일을 열거 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,33 +38,33 @@ HRESULT EnumFiles (
   
 ## <a name="parameters"></a>매개 변수  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be a null value for the first call of this method.  
+ [in, out] 열거자에 대 한 포인터입니다. 이 메서드의 첫 번째 호출에는 null 값이 있어야 합니다.  
   
  `rFiles`  
- [out] The array used to store the `mdFile` metadata tokens.  
+ 제한이 `mdFile` 메타 데이터 토큰을 저장 하는 데 사용 되는 배열입니다.  
   
  `cMax`  
- [in] The maximum number of `mdFile` tokens that can be placed in `rFiles`.  
+ 진행 `rFiles`에 배치할 수 있는 `mdFile` 토큰의 최대 수입니다.  
   
  `pcTokens`  
- [out] The number of `mdFile` tokens actually placed in `rFiles`.  
+ 제한이 `rFiles`에 실제로 배치 된 `mdFile` 토큰 수입니다.  
   
 ## <a name="return-value"></a>반환 값  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
-|`S_OK`|`EnumFiles` returned successfully.|  
-|`S_FALSE`|There are no tokens to enumerate. In this case, `pcTokens` is set to zero.|  
+|`S_OK`|`EnumFiles` 성공적으로 반환 되었습니다.|  
+|`S_FALSE`|열거할 토큰이 없습니다. 이 경우 `pcTokens`은 0으로 설정 됩니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IMetaDataAssemblyImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

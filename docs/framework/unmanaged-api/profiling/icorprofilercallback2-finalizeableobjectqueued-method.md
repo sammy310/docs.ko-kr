@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439856"
 ---
 # <a name="icorprofilercallback2finalizeableobjectqueued-method"></a>ICorProfilerCallback2::FinalizeableObjectQueued 메서드
-Notifies the code profiler that an object with a finalizer has been queued to the finalizer thread for execution of its `Finalize` method.  
+종료자를 사용 하는 개체가 `Finalize` 메서드를 실행 하기 위해 종료자 스레드에 대기 되었음을 코드 프로파일러에 알립니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -35,10 +35,10 @@ HRESULT FinalizeableObjectQueued(
   
 ## <a name="parameters"></a>매개 변수  
  `finalizerFlags`  
- [in] A value of the [COR_PRF_FINALIZER_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-finalizer-flags-enumeration.md) enumeration that describes aspects of the finalizer.  
+ 진행 종료자의 여러 측면을 설명 하는 [COR_PRF_FINALIZER_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-finalizer-flags-enumeration.md) 열거형의 값입니다.  
   
  `objectID`  
- [in] The ID of the object that has been queued.  
+ 진행 큐에 대기 된 개체의 ID입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
@@ -49,7 +49,7 @@ HRESULT FinalizeableObjectQueued(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerCallback 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
 - [ICorProfilerCallback2 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439203"
 ---
 # <a name="icorprofilerinfogetfunctionfromip-method"></a>ICorProfilerInfo::GetFunctionFromIP 메서드
-Maps a managed code instruction pointer to a `FunctionID`.  
+관리 코드 명령 포인터를 `FunctionID`에 매핑합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -35,10 +35,10 @@ HRESULT GetFunctionFromIP(
   
 ## <a name="parameters"></a>매개 변수  
  `ip`  
- [in] The instruction pointer in managed code.  
+ 진행 관리 코드의 명령 포인터입니다.  
   
  `pFunctionId`  
- [out] The returned function ID.  
+ 제한이 반환 된 함수 ID입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
@@ -49,6 +49,6 @@ HRESULT GetFunctionFromIP(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerInfo 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436459"
 ---
 # <a name="cortokentype-enumeration"></a>CorTokenType 열거형
-Indicates the type of a metadata token.  
+메타 데이터 토큰의 형식을 나타냅니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -63,43 +63,43 @@ typedef enum CorTokenType {
   
 |멤버|설명|  
 |------------|-----------------|  
-|`mdtModule`|An `mdModule` token.|  
-|`mdtTypeRef`|An `mdTypeRef` token.|  
-|`mdtTypeDef`|An `mdTypeDef` token.|  
-|`mdtFieldDef`|An `mdFieldDef` token.|  
-|`mdtMethodDef`|An `mdMethodDef` token.|  
-|`mdtParamDef`|An `mdParamDef` token.|  
-|`mdtInterfaceImpl`|An `mdInterfaceImpl` token.|  
-|`mdtMemberRef`|An `mdMemberRef` token.|  
-|`mdtCustomAttribute`|An `mdCustomAttribute` token.|  
-|`mdtPermission`|An `mdPermission` token.|  
-|`mdtSignature`|An `mdSignature` token.|  
-|`mdtEvent`|An `mdEvent` token.|  
-|`mdtProperty`|An `mdProperty` token.|  
-|`mdtModuleRef`|An `mdModuleRef` token.|  
-|`mdtTypeSpec`|An `mdTypeSpec` token.|  
-|`mdtAssembly`|An `mdAssembly` token.|  
-|`mdtAssemblyRef`|An `mdAssemblyRef` token.|  
-|`mdtFile`|An `mdFile` token.|  
-|`mdtExportedType`|An `mdExportedType` token.|  
-|`mdtManifestResource`|An `mdManifestResource` token.|  
-|`mdtGenericParam`|An `mdGenericParam` token.|  
-|`mdtMethodSpec`|An `mdMethodSpec` token.|  
-|`mdtGenericParamConstraint`|An `mdGenericParamConstraint` token.|  
-|`mdtString`|An `mdString` token.|  
-|`mdtName`|An `mdName` token.|  
+|`mdtModule`|`mdModule` 토큰입니다.|  
+|`mdtTypeRef`|`mdTypeRef` 토큰입니다.|  
+|`mdtTypeDef`|`mdTypeDef` 토큰입니다.|  
+|`mdtFieldDef`|`mdFieldDef` 토큰입니다.|  
+|`mdtMethodDef`|`mdMethodDef` 토큰입니다.|  
+|`mdtParamDef`|`mdParamDef` 토큰입니다.|  
+|`mdtInterfaceImpl`|`mdInterfaceImpl` 토큰입니다.|  
+|`mdtMemberRef`|`mdMemberRef` 토큰입니다.|  
+|`mdtCustomAttribute`|`mdCustomAttribute` 토큰입니다.|  
+|`mdtPermission`|`mdPermission` 토큰입니다.|  
+|`mdtSignature`|`mdSignature` 토큰입니다.|  
+|`mdtEvent`|`mdEvent` 토큰입니다.|  
+|`mdtProperty`|`mdProperty` 토큰입니다.|  
+|`mdtModuleRef`|`mdModuleRef` 토큰입니다.|  
+|`mdtTypeSpec`|`mdTypeSpec` 토큰입니다.|  
+|`mdtAssembly`|`mdAssembly` 토큰입니다.|  
+|`mdtAssemblyRef`|`mdAssemblyRef` 토큰입니다.|  
+|`mdtFile`|`mdFile` 토큰입니다.|  
+|`mdtExportedType`|`mdExportedType` 토큰입니다.|  
+|`mdtManifestResource`|`mdManifestResource` 토큰입니다.|  
+|`mdtGenericParam`|`mdGenericParam` 토큰입니다.|  
+|`mdtMethodSpec`|`mdMethodSpec` 토큰입니다.|  
+|`mdtGenericParamConstraint`|`mdGenericParamConstraint` 토큰입니다.|  
+|`mdtString`|`mdString` 토큰입니다.|  
+|`mdtName`|`mdName` 토큰입니다.|  
 |`mdtBaseType`|사용되지 않습니다.|  
   
 ## <a name="remarks"></a>주의  
- Each value is equal to the value of the top byte in the corresponding metadata token.  
+ 각 값은 해당 하는 메타 데이터 토큰에서 최상위 바이트의 값과 같습니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** CorHdr.h  
+ **헤더:** CorHdr .h  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [메타데이터 열거형](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

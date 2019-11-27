@@ -28,19 +28,19 @@ ms.locfileid: "74440170"
   
 |메서드|설명|  
 |------------|-----------------|  
-|[IsTokenMarked 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-istokenmarked-method.md)|Gets a value indicating whether the specified metadata token has been processed.|  
-|[MarkToken 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-marktoken-method.md)|Sets a value indicating that the specified metadata token has been processed.|  
-|[UnmarkAll 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-unmarkall-method.md)|Removes the processing marks from all the tokens in the current metadata scope.|  
+|[IsTokenMarked 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-istokenmarked-method.md)|지정 된 메타 데이터 토큰이 처리 되었는지 여부를 나타내는 값을 가져옵니다.|  
+|[MarkToken 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-marktoken-method.md)|지정 된 메타 데이터 토큰이 처리 되었음을 나타내는 값을 설정 합니다.|  
+|[UnmarkAll 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-unmarkall-method.md)|현재 메타 데이터 범위에 있는 모든 토큰에서 처리 표시를 제거 합니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [메타데이터 인터페이스](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)

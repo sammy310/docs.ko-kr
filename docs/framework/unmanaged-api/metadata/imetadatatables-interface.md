@@ -28,36 +28,36 @@ ms.locfileid: "74443225"
   
 |메서드|설명|  
 |------------|-----------------|  
-|[GetBlob 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getblob-method.md)|Gets a pointer to the binary large object (BLOB) at the specified column index.|  
-|[GetBlobHeapSize 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getblobheapsize-method.md)|Gets the size, in bytes, of the BLOB heap.|  
-|[GetCodedTokenInfo 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getcodedtokeninfo-method.md)|Gets a pointer to an array of tokens associated with the specified row index.|  
-|[GetColumn 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getcolumn-method.md)|Gets a pointer to the values contained in the column at the specified column index, in the table at the specified table index.|  
-|[GetColumnInfo 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getcolumninfo-method.md)|Gets data about the specified column in the specified table.|  
-|[GetGuid 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getguid-method.md)|Gets a GUID from the row at the specified index.|  
-|[GetGuidHeapSize 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getguidheapsize-method.md)|Gets the size, in bytes, of the GUID heap.|  
-|[GetNextBlob 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getnextblob-method.md)|Gets the index of the next BLOB in the table.|  
-|[GetNextGuid 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getnextguid-method.md)|Gets the index of the next GUID value in the current table column.|  
-|[GetNextString 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getnextstring-method.md)|Gets the index of the next string in the current table column.|  
-|[GetNextUserString 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getnextuserstring-method.md)|Gets the index of the row that contains the next hard-coded string in the current table column.|  
-|[GetNumTables 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getnumtables-method.md)|Gets the number of tables in the scope of the current `IMetaDataTables` instance.|  
-|[GetRow 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getrow-method.md)|Gets the row at the specified row index, in the table at the specified table index.|  
-|[GetString 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getstring-method.md)|Gets the string at the specified index from the table column in the current reference scope.|  
-|[GetStringHeapSize 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getstringheapsize-method.md)|Gets the size, in bytes, of the string heap.|  
-|[GetTableIndex 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-gettableindex-method.md)|Gets the index for the table referenced by the specified token.|  
-|[GetTableInfo 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-gettableinfo-method.md)|Gets the name, row size, number of rows, number of columns, and key column index of the table at the specified table index.|  
-|[GetUserString 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getuserstring-method.md)|Gets the hard-coded string at the specified index in the string column in the current scope.|  
-|[GetUserStringHeapSize 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getuserstringheapsize-method.md)|Gets the size, in bytes, of the user string heap.|  
+|[GetBlob 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getblob-method.md)|지정 된 열 인덱스에 있는 BLOB (binary large object)에 대 한 포인터를 가져옵니다.|  
+|[GetBlobHeapSize 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getblobheapsize-method.md)|BLOB 힙의 크기 (바이트)를 가져옵니다.|  
+|[GetCodedTokenInfo 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getcodedtokeninfo-method.md)|지정 된 행 인덱스와 연결 된 토큰의 배열에 대 한 포인터를 가져옵니다.|  
+|[GetColumn 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getcolumn-method.md)|지정 된 테이블 인덱스에 있는 테이블의 지정 된 열 인덱스에 있는 열에 포함 된 값에 대 한 포인터를 가져옵니다.|  
+|[GetColumnInfo 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getcolumninfo-method.md)|지정 된 테이블의 지정 된 열에 대 한 데이터를 가져옵니다.|  
+|[GetGuid 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getguid-method.md)|지정 된 인덱스의 행에서 GUID를 가져옵니다.|  
+|[GetGuidHeapSize 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getguidheapsize-method.md)|GUID 힙의 크기 (바이트)를 가져옵니다.|  
+|[GetNextBlob 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getnextblob-method.md)|테이블에서 다음 BLOB의 인덱스를 가져옵니다.|  
+|[GetNextGuid 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getnextguid-method.md)|현재 테이블 열에서 다음 GUID 값의 인덱스를 가져옵니다.|  
+|[GetNextString 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getnextstring-method.md)|현재 테이블 열에서 다음 문자열의 인덱스를 가져옵니다.|  
+|[GetNextUserString 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getnextuserstring-method.md)|현재 테이블 열에 하드 코딩 된 다음 문자열이 포함 된 행의 인덱스를 가져옵니다.|  
+|[GetNumTables 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getnumtables-method.md)|현재 `IMetaDataTables` 인스턴스의 범위에 있는 테이블 수를 가져옵니다.|  
+|[GetRow 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getrow-method.md)|지정 된 테이블 인덱스에 있는 테이블의 지정 된 행 인덱스에 있는 행을 가져옵니다.|  
+|[GetString 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getstring-method.md)|현재 참조 범위의 테이블 열에서 지정 된 인덱스에 있는 문자열을 가져옵니다.|  
+|[GetStringHeapSize 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getstringheapsize-method.md)|문자열 힙의 크기 (바이트)를 가져옵니다.|  
+|[GetTableIndex 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-gettableindex-method.md)|지정 된 토큰이 참조 하는 테이블의 인덱스를 가져옵니다.|  
+|[GetTableInfo 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-gettableinfo-method.md)|지정 된 테이블 인덱스에 있는 테이블의 이름, 행 크기, 행 수, 열 수, 키 열 인덱스를 가져옵니다.|  
+|[GetUserString 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getuserstring-method.md)|현재 범위에 있는 문자열 열의 지정 된 인덱스에서 하드 코드 된 문자열을 가져옵니다.|  
+|[GetUserStringHeapSize 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getuserstringheapsize-method.md)|사용자 문자열 힙의 크기 (바이트)를 가져옵니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [메타데이터 인터페이스](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
 - [IMetaDataTables2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

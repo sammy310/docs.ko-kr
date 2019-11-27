@@ -1,5 +1,5 @@
 ---
-title: 'How to: Find All Nodes in a Namespace'
+title: '방법: 네임스페이스에서 모든 노드 찾기'
 ms.date: 07/20/2015
 ms.assetid: b735d7da-5727-48a3-ab57-a16378adc32e
 ms.openlocfilehash: f6bc38140bc2ea43393133d78c798469d26671c5
@@ -9,7 +9,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352964"
 ---
-# <a name="how-to-find-all-nodes-in-a-namespace-visual-basic"></a>How to: Find All Nodes in a Namespace (Visual Basic)
+# <a name="how-to-find-all-nodes-in-a-namespace-visual-basic"></a>방법: 네임 스페이스에서 모든 노드 찾기 (Visual Basic)
 해당 특정 네임스페이스에서 모든 노드를 찾기 위해 각 요소나 특성의 네임스페이스를 기준으로 필터링할 수 있습니다.  
   
 ## <a name="example"></a>예제  
@@ -109,6 +109,6 @@ End Module
 </Root>  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [Basic Queries (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [기본 쿼리 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

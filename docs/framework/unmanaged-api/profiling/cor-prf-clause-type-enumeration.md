@@ -39,10 +39,10 @@ typedef enum {
   
 |멤버|설명|  
 |------------|-----------------|  
-|`COR_PRF_CLAUSE_NONE`|The exception clause is not valid.|  
-|`COR_PRF_CLAUSE_FILTER`|The exception clause is a filter expression.|  
-|`COR_PRF_CLAUSE_CATCH`|The exception clause is a `catch` statement.|  
-|`COR_PRF_CLAUSE_FINALLY`|The exception clause is a `finally` statement.|  
+|`COR_PRF_CLAUSE_NONE`|예외 절이 잘못 되었습니다.|  
+|`COR_PRF_CLAUSE_FILTER`|Exception 절은 필터 식입니다.|  
+|`COR_PRF_CLAUSE_CATCH`|Exception 절은 `catch` 문입니다.|  
+|`COR_PRF_CLAUSE_FINALLY`|Exception 절은 `finally` 문입니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
@@ -53,6 +53,6 @@ typedef enum {
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [프로파일링 열거형](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

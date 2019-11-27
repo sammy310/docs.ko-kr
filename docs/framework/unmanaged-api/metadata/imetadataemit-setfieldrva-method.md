@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428412"
 ---
 # <a name="imetadataemitsetfieldrva-method"></a>IMetaDataEmit::SetFieldRVA 메서드
-Sets a global variable value for the relative virtual address of the field referenced by the specified token.  
+지정 된 토큰이 참조 하는 필드의 상대 가상 주소에 대 한 전역 변수 값을 설정 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,21 +36,21 @@ HRESULT SetFieldRVA (
   
 ## <a name="parameters"></a>매개 변수  
  `fd`  
- [in] The token for the target field.  
+ 진행 대상 필드의 토큰입니다.  
   
  `ulRVA`  
- [in] The address of a code or data area.  
+ 진행 코드 또는 데이터 영역의 주소입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IMetaDataEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74443779"
 ---
 # <a name="corcheckduplicatesfor-enumeration"></a>CorCheckDuplicatesFor 열거형
-Specifies the metadata tokens that will be checked for duplicates.  
+중복을 확인할 메타 데이터 토큰을 지정 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -68,41 +68,41 @@ typedef enum CorCheckDuplicatesFor {
   
 |멤버|설명|  
 |------------|-----------------|  
-|`MDDupAll`|Check all metadata tokens for duplicates.|  
+|`MDDupAll`|모든 메타 데이터 토큰에 중복 항목이 있는지 확인 합니다.|  
 |`MDDupENC`|사용되지 않습니다.|  
-|`MDNoDupChecks`|Do not check metadata tokens for duplicates.|  
-|`MDDupTypeDef`|Check for duplicates of `mdTypeDef` tokens.|  
-|`MDDupInterfaceImpl`|Check for duplicates of `mdInterfaceImpl` tokens.|  
-|`MDDupMethodDef`|Check for duplicates of `mdMethodDef` tokens.|  
-|`MDDupTypeRef`|Check for duplicates of `mdTypeRef` tokens.|  
-|`MDDupMemberRef`|Check for duplicates of `mdMemberRef` tokens.|  
-|`MDDupCustomAttribute`|Check for duplicates of `mdCustomAttribute` tokens.|  
-|`MDDupParamDef`|Check for duplicates of `mdParamDef` tokens.|  
-|`MDDupPermission`|Check for duplicates of `mdPermission` tokens.|  
-|`MDDupProperty`|Check for duplicates of `mdProperty` tokens.|  
-|`MDDupEvent`|Check for duplicates of `mdEvent` tokens.|  
-|`MDDupFieldDef`|Check for duplicates of `mdFieldDef` tokens.|  
-|`MDDupSignature`|Check for duplicates of `mdSignature` tokens.|  
-|`MDDupModuleRef`|Check for duplicates of `mdModuleRef` tokens.|  
-|`MDDupTypeSpec`|Check for duplicates of `mdTypeSpec` tokens.|  
-|`MDDupImplMap`|Check for duplicates of `mdImplMap` tokens.|  
-|`MDDupAssemblyRef`|Check for duplicates of `mdAssemblyRef` tokens.|  
-|`MDDupFile`|Check for duplicates of `mdFile` tokens.|  
-|`MDDupExportedType`|Check for duplicates of `mdExportedType` tokens.|  
-|`MDDupManifestResource`|Check for duplicates of `mdManifestResource` tokens.|  
-|`MDDupGenericParam`|Check for duplicates of `mdGenericParam` tokens.|  
-|`MDDupMethodSpec`|Check for duplicates of `mdMethodSpec` tokens.|  
-|`MDDupGenericParamConstraint`|Check for duplicates of `mdGenericParamConstraint` tokens.|  
-|`MDDupAssembly`|Check for duplicates of `mdAssembly` tokens.|  
-|`MDDupDefault`|Check for duplicates of `mdMemberRef`, `mdTypeRef`, `mdSignature`, `mdTypeSpec`, and `mdMethodSpec` tokens.|  
+|`MDNoDupChecks`|메타 데이터 토큰에서 중복 항목을 확인 하지 않습니다.|  
+|`MDDupTypeDef`|`mdTypeDef` 토큰이 중복 되는지 확인 합니다.|  
+|`MDDupInterfaceImpl`|`mdInterfaceImpl` 토큰이 중복 되는지 확인 합니다.|  
+|`MDDupMethodDef`|`mdMethodDef` 토큰이 중복 되는지 확인 합니다.|  
+|`MDDupTypeRef`|`mdTypeRef` 토큰이 중복 되는지 확인 합니다.|  
+|`MDDupMemberRef`|`mdMemberRef` 토큰이 중복 되는지 확인 합니다.|  
+|`MDDupCustomAttribute`|`mdCustomAttribute` 토큰이 중복 되는지 확인 합니다.|  
+|`MDDupParamDef`|`mdParamDef` 토큰이 중복 되는지 확인 합니다.|  
+|`MDDupPermission`|`mdPermission` 토큰이 중복 되는지 확인 합니다.|  
+|`MDDupProperty`|`mdProperty` 토큰이 중복 되는지 확인 합니다.|  
+|`MDDupEvent`|`mdEvent` 토큰이 중복 되는지 확인 합니다.|  
+|`MDDupFieldDef`|`mdFieldDef` 토큰이 중복 되는지 확인 합니다.|  
+|`MDDupSignature`|`mdSignature` 토큰이 중복 되는지 확인 합니다.|  
+|`MDDupModuleRef`|`mdModuleRef` 토큰이 중복 되는지 확인 합니다.|  
+|`MDDupTypeSpec`|`mdTypeSpec` 토큰이 중복 되는지 확인 합니다.|  
+|`MDDupImplMap`|`mdImplMap` 토큰이 중복 되는지 확인 합니다.|  
+|`MDDupAssemblyRef`|`mdAssemblyRef` 토큰이 중복 되는지 확인 합니다.|  
+|`MDDupFile`|`mdFile` 토큰이 중복 되는지 확인 합니다.|  
+|`MDDupExportedType`|`mdExportedType` 토큰이 중복 되는지 확인 합니다.|  
+|`MDDupManifestResource`|`mdManifestResource` 토큰이 중복 되는지 확인 합니다.|  
+|`MDDupGenericParam`|`mdGenericParam` 토큰이 중복 되는지 확인 합니다.|  
+|`MDDupMethodSpec`|`mdMethodSpec` 토큰이 중복 되는지 확인 합니다.|  
+|`MDDupGenericParamConstraint`|`mdGenericParamConstraint` 토큰이 중복 되는지 확인 합니다.|  
+|`MDDupAssembly`|`mdAssembly` 토큰이 중복 되는지 확인 합니다.|  
+|`MDDupDefault`|`mdMemberRef`, `mdTypeRef`, `mdSignature`, `mdTypeSpec`및 `mdMethodSpec` 토큰이 중복 되는지 확인 합니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** CorHdr.h  
+ **헤더:** CorHdr .h  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [메타데이터 열거형](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

@@ -15,7 +15,7 @@ ms.locfileid: "74341511"
 
 ### <a name="to-create-a-file-that-contains-data"></a>데이터가 포함된 파일을 만들려면
 
-Copy the scores.csv data from the topic [How to: Join Content from Dissimilar Files (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md) and save it to your solution folder.
+[방법: 서로 다른 파일의 콘텐츠 조인 (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md) 항목에서 점수 .csv 데이터를 복사 하 여 솔루션 폴더에 저장 합니다.
 
 ## <a name="example"></a>예제
 
@@ -70,12 +70,12 @@ End Class
 ' 115, 35, 72, 91, 70
 ```
 
-This example also demonstrates how to return a query variable from a Function.
+이 예에서는 함수에서 쿼리 변수를 반환 하는 방법도 보여 줍니다.
 
 ## <a name="compiling-the-code"></a>코드 컴파일
 
-Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.
+VB.NET 콘솔 응용 프로그램 프로젝트를 만듭니다 .이 프로젝트에는 system.string 네임 스페이스에 대 한 `Imports` 문이 있습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [LINQ and Strings (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ 및 문자열 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

@@ -1,5 +1,5 @@
 ---
-title: 키워드가
+title: 키워드
 ms.date: 07/20/2015
 helpviewer_keywords:
 - reserved keywords, Visual Basic
@@ -19,7 +19,7 @@ ms.locfileid: "74338786"
 ---
 # <a name="keywords-visual-basic"></a>키워드(Visual Basic)
 
-The following tables list all Visual Basic language keywords.
+다음 표에는 모든 Visual Basic 언어 키워드가 나와 있습니다.
 
 ## <a name="reserved-keywords"></a>예약 키워드
 
@@ -40,31 +40,31 @@ The following tables list all Visual Basic language keywords.
 |[CShort](../functions/type-conversion-functions.md)|[CSng](../functions/type-conversion-functions.md)|[CStr](../functions/type-conversion-functions.md)|[CType](../functions/type-conversion-functions.md)|  
 |[CUInt](../functions/type-conversion-functions.md)|[CULng](../functions/type-conversion-functions.md)|[CUShort](../functions/type-conversion-functions.md)|[Date](../data-types/date-data-type.md)|  
 |[Decimal](../data-types/decimal-data-type.md)|[Declare](../statements/declare-statement.md)|[기본](../modifiers/default.md)|[Delegate](../statements/delegate-statement.md)|  
-|[Dim](../statements/dim-statement.md)|[DirectCast](../operators/directcast-operator.md)|[Do](../statements/do-loop-statement.md)|[double](../data-types/double-data-type.md)|  
+|[Dim](../statements/dim-statement.md)|[DirectCast](../operators/directcast-operator.md)|[Do](../statements/do-loop-statement.md)|[Double](../data-types/double-data-type.md)|  
 |[Each](../statements/for-each-next-statement.md)|[Else](../statements/else-statement.md)|[ElseIf](../statements/if-then-else-statement.md)|[End 문](../statements/end-statement.md)|  
 |[End \<키워드>](../statements/end-keyword-statement.md)|`EndIf`|[Enum](../statements/enum-statement.md)|[Erase](../statements/erase-statement.md)|  
 |[오류](../statements/on-error-statement.md)|[Event](../statements/event-statement.md)|[끝내기](../statements/exit-statement.md)|[False](../data-types/boolean-data-type.md)|  
 |[Finally](../statements/try-catch-finally-statement.md)|[For(For…Next에서)](../statements/for-next-statement.md)|[For Each…Next](../statements/for-each-next-statement.md)|[Friend](../modifiers/friend.md)|  
 |[Function](../statements/function-statement.md)|[Get](../statements/get-statement.md)|[GetType](../operators/gettype-operator.md)|[GetXMLNamespace](../operators/getxmlnamespace-operator.md)|  
-|[Global](../../../visual-basic/programming-guide/program-structure/namespaces.md)|`GoSub`|[GoTo](../statements/goto-statement.md)|[Handles](../statements/handles-clause.md)|  
+|[Global](../../../visual-basic/programming-guide/program-structure/namespaces.md)|`GoSub`|[GoTo](../statements/goto-statement.md)|[!](../statements/handles-clause.md)|  
 |[If](../statements/if-then-else-statement.md)|[If()](../operators/if-operator.md)|[Sub New](../statements/implements-clause.md)|[Implements 문](../statements/implements-statement.md)|  
 |[Imports(.NET 네임스페이스 및 형식)](../statements/imports-statement-net-namespace-and-type.md)|[Imports(XML 네임스페이스)](../statements/imports-statement-xml-namespace.md)|[In](../statements/in-clause.md)|[In(제네릭 한정자)](../modifiers/in-generic-modifier.md)|  
 |[Inherits](../statements/inherits-statement.md)|[Integer](../data-types/integer-data-type.md)|[Interface](../statements/interface-statement.md)|[Is](../operators/is-operator.md)|  
 |[IsNot](../operators/isnot-operator.md)|[Let](../queries/let-clause.md)|[Lib](../statements/declare-statement.md)|[Like](../operators/like-operator.md)|  
 |[Long](../data-types/long-data-type.md)|[Loop](../statements/do-loop-statement.md)|[Me](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)|[Mod](../operators/mod-operator.md)|  
-|[모듈](../modifiers/module-keyword.md)|[Module 문](../statements/module-statement.md)|[MustInherit](../modifiers/mustinherit.md)|[New](../modifiers/mustoverride.md)|  
+|[모듈](../modifiers/module-keyword.md)|[Module 문](../statements/module-statement.md)|[MustInherit](../modifiers/mustinherit.md)|[MyBase](../modifiers/mustoverride.md)|  
 |[MyBase](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)|[MyClass](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)|[NameOf](../operators/nameof.md)|[Namespace](../statements/namespace-statement.md)|
 |[Narrowing](../modifiers/narrowing.md)|[New 제약 조건](../statements/type-list.md)|[New 연산자](../operators/new-operator.md)|[다음](../statements/for-next-statement.md)|
 |[Next(Resume에서)](../statements/resume-statement.md)|[Not](../operators/not-operator.md)|[Nothing](../nothing.md)|[NotInheritable](../modifiers/notinheritable.md)|
 |[NotOverridable](../modifiers/notoverridable.md)|[개체](../data-types/object-data-type.md)|[Of](../statements/of-clause.md)|[On](../../../visual-basic/misc/on.md)|
 |[Operator](../statements/operator-statement.md)|[옵션](../statements/option-keyword-statement.md)|[Optional](../modifiers/optional.md)|[Or](../operators/or-operator.md)|
-|[OrElse](../operators/orelse-operator.md)|[Out(제네릭 한정자)](../modifiers/out-generic-modifier.md)|[오버로드](../modifiers/overloads.md)|[재정의 가능](../modifiers/overridable.md)|
-|[재정의](../modifiers/overrides.md)|[ParamArray](../modifiers/paramarray.md)|[부분](../modifiers/partial.md)|[전용](../modifiers/private.md)|
-|[Property](../statements/property-statement.md)|[보호됨](../modifiers/protected.md)|[Public](../modifiers/public.md)|[RaiseEvent](../statements/raiseevent-statement.md)|
+|[OrElse](../operators/orelse-operator.md)|[Out(제네릭 한정자)](../modifiers/out-generic-modifier.md)|[Overloads](../modifiers/overloads.md)|[Overrides](../modifiers/overridable.md)|
+|[재정의](../modifiers/overrides.md)|[ParamArray](../modifiers/paramarray.md)|[부분](../modifiers/partial.md)|[Private](../modifiers/private.md)|
+|[Property](../statements/property-statement.md)|[Protected](../modifiers/protected.md)|[Public](../modifiers/public.md)|[RaiseEvent](../statements/raiseevent-statement.md)|
 |[ReadOnly](../modifiers/readonly.md)|[ReDim](../statements/redim-statement.md)|[REM](../statements/rem-statement.md)|[RemoveHandler](../statements/removehandler-statement.md)|
 |[Resume](../statements/resume-statement.md)|[Return](../statements/return-statement.md)|[SByte](../data-types/sbyte-data-type.md)|[선택](../statements/select-case-statement.md)|
 [Set](../statements/set-statement.md)|[Shadows](../modifiers/shadows.md)|[공유](../modifiers/shared.md)|[Short](../data-types/short-data-type.md)|
-|[Single](../data-types/single-data-type.md)|[Static](../modifiers/static.md)|[Step](../statements/for-next-statement.md)|[Stop](../statements/stop-statement.md)|
+|[Single](../data-types/single-data-type.md)|[정적](../modifiers/static.md)|[Step](../statements/for-next-statement.md)|[Stop](../statements/stop-statement.md)|
 |[String](../data-types/string-data-type.md)|[Structure 제약 조건](../statements/type-list.md)|[Structure 문](../statements/structure-statement.md)|[Sub](../statements/sub-statement.md)|
 |[SyncLock](../statements/synclock-statement.md)|[Then](../statements/then-statement.md)|[Throw](../statements/throw-statement.md)|[대상](../statements/for-next-statement.md)|
 |[True](../data-types/boolean-data-type.md)|[Try](../statements/try-catch-finally-statement.md)|[TryCast](../operators/trycast-operator.md)|[TypeOf…Is](../operators/typeof-operator.md)|
@@ -80,7 +80,7 @@ The following tables list all Visual Basic language keywords.
 |[<\<=](../operators/left-shift-assignment-operator.md)|
 
 > [!NOTE]
-> `EndIf`, `GoSub`, `Variant`, and `Wend` are retained as reserved keywords, although they are no longer used in Visual Basic. `Let` 키워드의 의미가 변경되었습니다. `Let`은 이제 LINQ 쿼리에서 사용됩니다. 자세한 내용은 [Let 절](../queries/let-clause.md)을 참조하세요.
+> `EndIf`, `GoSub`, `Variant`및 `Wend`는 Visual Basic에서 더 이상 사용 되지 않지만 예약 된 키워드로 유지 됩니다. `Let` 키워드의 의미가 변경되었습니다. `Let`은 이제 LINQ 쿼리에서 사용됩니다. 자세한 내용은 [Let 절](../queries/let-clause.md)을 참조하세요.
 
 ## <a name="unreserved-keywords"></a>예약되지 않은 키워드
 
@@ -95,7 +95,7 @@ The following tables list all Visual Basic language keywords.
 |[IsFalse](../operators/isfalse-operator.md)|[IsTrue](../operators/istrue-operator.md)|[반복기](../modifiers/iterator.md)|[Join](../queries/join-clause.md)|  
 |[키](../modifiers/key.md)|[Mid](../statements/mid-statement.md)|[Off](../../../visual-basic/misc/off.md)|[Order By](../queries/order-by-clause.md)|  
 |[Preserve](../statements/redim-statement.md)|[Skip](../queries/skip-clause.md)|[Skip While](../queries/skip-while-clause.md)|[Strict](../statements/option-strict-statement.md)|  
-|[Take](../queries/take-clause.md)|[Take While](../queries/take-while-clause.md)|[텍스트](../statements/option-compare-statement.md)|[유니코드](../modifiers/unicode.md)|  
+|[Take](../queries/take-clause.md)|[Take While](../queries/take-while-clause.md)|[텍스트](../statements/option-compare-statement.md)|[Unicode](../modifiers/unicode.md)|  
 |[Until](../statements/do-loop-statement.md)|[Where](../queries/where-clause.md)|[Yield](../statements/yield-statement.md)|[#ExternalSource](../directives/externalsource-directive.md)|  
 |[#Region](../directives/region-directive.md)||||  
   
@@ -121,6 +121,6 @@ The following tables list all Visual Basic language keywords.
 |[레지스트리 요약](registry-summary.md)|프로그램 설정을 읽고, 저장 및 삭제하는 데 사용되는 함수를 나열합니다.|  
 |[문자열 조작 요약](string-manipulation-summary.md)|문자열을 조작하는 데 사용되는 함수를 나열합니다.|  
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Visual Basic 런타임 라이브러리 멤버](../runtime-library-members.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439849"
 ---
 # <a name="icorprofilercallback2garbagecollectionfinished-method"></a>ICorProfilerCallback2::GarbageCollectionFinished 메서드
-Notifies the profiler that garbage collection has completed and all garbage collection callbacks have been issued for it.  
+가비지 수집이 완료 되었으며이에 대해 모든 가비지 수집 콜백이 실행 되었음을 프로파일러에 알립니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -32,7 +32,7 @@ HRESULT GarbageCollectionFinished();
 ```  
   
 ## <a name="remarks"></a>주의  
- It is safe for the profiler to inspect objects in their final locations when the `GarbageCollectionFinished` method is called.  
+ 프로파일러에서는 `GarbageCollectionFinished` 메서드가 호출 될 때 최종 위치에서 개체를 검사 하는 것이 안전 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
@@ -43,7 +43,7 @@ HRESULT GarbageCollectionFinished();
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerCallback 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
 - [ICorProfilerCallback2 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)

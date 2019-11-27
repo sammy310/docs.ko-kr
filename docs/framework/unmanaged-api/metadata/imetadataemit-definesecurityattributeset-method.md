@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428252"
 ---
 # <a name="imetadataemitdefinesecurityattributeset-method"></a>IMetaDataEmit::DefineSecurityAttributeSet 메서드
-Creates a set of security permissions to attach to the object referenced by the specified token.  
+지정 된 토큰이 참조 하는 개체에 연결할 보안 권한 집합을 만듭니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,27 +38,27 @@ HRESULT DefineSecurityAttributeSet (
   
 ## <a name="parameters"></a>매개 변수  
  `tkObj`  
- [in] The token to which the security information is attached.  
+ 진행 보안 정보가 연결 된 토큰입니다.  
   
  `rSecAttrs`  
- [in] An array of `COR_SECATTR` structures.  
+ 진행 `COR_SECATTR` 구조체의 배열입니다.  
   
  `cSecAttrs`  
- [in] The number of elements in `rSecAttrs`.  
+ 진행 `rSecAttrs`의 요소 수입니다.  
   
  `pulErrorAttr`  
- [out] If the method fails, specifies the index in `rSecAttrs` of the element that caused the problem.  
+ 제한이 메서드가 실패 하는 경우 문제를 일으킨 요소의 `rSecAttrs` 인덱스를 지정 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IMetaDataEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

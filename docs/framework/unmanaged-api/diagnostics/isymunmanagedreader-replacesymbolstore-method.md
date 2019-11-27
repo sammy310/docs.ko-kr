@@ -23,10 +23,10 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445728"
 ---
 # <a name="isymunmanagedreaderreplacesymbolstore-method"></a>ISymUnmanagedReader::ReplaceSymbolStore 메서드
-Replaces the existing symbol store with a delta symbol store. This method is similar to the [UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) method, except that the given delta acts as a complete replacement rather than an update.  
+기존 기호 저장소를 델타 기호 저장소로 바꿉니다. 이 메서드는 지정 된 델타가 업데이트가 아닌 완전 한 대체 역할을 한다는 점을 제외 하 고 [UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) 메서드와 비슷합니다.  
   
 > [!NOTE]
-> You need specify only one of the `filename` or `pIStream` parameters, not both. If `filename` is specified, the symbol store will be updated with the symbols in that file. If `pIStream` is specified, the store will be updated with the data from the <xref:System.Runtime.InteropServices.ComTypes.IStream>.  
+> `filename` 또는 `pIStream` 매개 변수 중 하나만 지정 해야 합니다. `filename` 지정 하면 기호 저장소가 해당 파일의 기호로 업데이트 됩니다. `pIStream` 지정 된 경우 저장소는 <xref:System.Runtime.InteropServices.ComTypes.IStream>의 데이터로 업데이트 됩니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,17 +38,17 @@ HRESULT ReplaceSymbolStore (
   
 ## <a name="parameters"></a>매개 변수  
  `filename`  
- [in] The name of the file containing the symbol store.  
+ 진행 기호 저장소를 포함 하는 파일의 이름입니다.  
   
  `pIStream`  
- [in] The file stream, used as an alternative to the `filename` parameter.  
+ 진행 `filename` 매개 변수의 대 안으로 사용 되는 파일 스트림입니다.  
   
 ## <a name="return-value"></a>반환 값  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **Header:** CorSym.idl, CorSym.h  
+ **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ISymUnmanagedReader 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

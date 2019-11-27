@@ -13,11 +13,11 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344333"
 ---
 # <a name="strings-in-visual-basic"></a>Visual Basic의 문자열
-This section describes the basic concepts behind using strings in Visual Basic.  
+이 섹션에서는 Visual Basic의 문자열 사용에 대 한 기본 개념을 설명 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [Visual Basic의 문자열 소개](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)  
- Lists topics that describe the basic concepts behind using strings in Visual Basic.  
+ Visual Basic의 문자열 사용에 대 한 기본 개념을 설명 하는 항목을 나열 합니다.  
   
  [방법: Visual Basic에서 StringBuilder를 사용하여 문자열 만들기](../../../../visual-basic/programming-guide/language-features/strings/how-to-create-strings-using-a-stringbuilder.md)  
  많은 짧은 문자열에서 긴 문자열을 효율적으로 만드는 방법을 보여 줍니다.  
@@ -34,6 +34,6 @@ This section describes the basic concepts behind using strings in Visual Basic.
  [연습: Visual Basic에서 문자열 암호화 및 암호 해독](../../../../visual-basic/programming-guide/language-features/strings/walkthrough-encrypting-and-decrypting-strings.md)  
  Triple Data Encryption Standard 알고리즘의 암호 서비스 공급자 버전을 사용하여 문자열을 암호화 및 암호 해독하는 방법을 설명합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Visual Basic 언어 기능](../../../../visual-basic/programming-guide/language-features/index.md)

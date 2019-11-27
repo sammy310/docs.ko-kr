@@ -19,9 +19,9 @@ ms.locfileid: "74429343"
 ---
 # <a name="additional-class-libraries-and-apis"></a>추가 클래스 라이브러리 및 API
 
-The .NET Framework is constantly evolving. To improve cross-platform development and introduce new functionality early, new features are released out of band (OOB). 이 항목에서는 설명서를 제공하는 OOB 프로젝트를 나열합니다.  
+.NET Framework 지속적으로 진화 하 고 있습니다. 플랫폼 간 개발을 개선 하 고 새로운 기능을 조기에 도입 하기 위해 새로운 기능이 대역 외 (OOB) 출시 됩니다. 이 항목에서는 설명서를 제공하는 OOB 프로젝트를 나열합니다.  
   
-또한 일부 라이브러리는 .NET Framework의 구현이나 특정 플랫폼을 대상으로 합니다. For example, the <xref:System.Text.CodePagesEncodingProvider> class makes code page encodings available to UWP apps developed using the .NET Framework. 이 항목에서는 이러한 라이브러리도 나열됩니다.  
+또한 일부 라이브러리는 .NET Framework의 구현이나 특정 플랫폼을 대상으로 합니다. 예를 들어 <xref:System.Text.CodePagesEncodingProvider> 클래스를 사용 하면 .NET Framework를 사용 하 여 개발 된 UWP 앱에서 코드 페이지 인코딩을 사용할 수 있습니다. 이 항목에서는 이러한 라이브러리도 나열됩니다.  
   
 ## <a name="oob-projects"></a>OOB 프로젝트
   
@@ -36,62 +36,62 @@ The .NET Framework is constantly evolving. To improve cross-platform development
   
 | 프로젝트 | 설명 |  
 | ------- | ----------- |  
-| <xref:System.Text.CodePagesEncodingProvider> | Extends the <xref:System.Text.EncodingProvider> class to make code page encodings available to apps that target the Universal Windows Platform. |  
+| <xref:System.Text.CodePagesEncodingProvider> | <xref:System.Text.EncodingProvider> 클래스를 확장 하 여 유니버설 Windows 플랫폼를 대상으로 하는 앱에서 코드 페이지 인코딩을 사용할 수 있도록 합니다. |  
   
 ## <a name="private-apis"></a>전용 API  
 
 이러한 API는 제품 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
   
-* [Microsoft.SqlServer.Server.SmiOrderProperty.Item Property](microsoft.sqlserver.server.smiorderproperty.item.md)
-* [System.Exception.PrepForRemoting Method](system.exception.prepforremoting.md)
-* [System.Data.SqlTypes.SqlChars.Stream Property](system.data.sqltypes.sqlchars.stream.md)
-* [System.Data.SqlTypes.SqlStreamChars Constructor](system.data.sqltypes.sqlstreamchars.-ctor.md)
-* [System.Data.SqlTypes.SqlStreamChars.CanSeek Property](system.data.sqltypes.sqlstreamchars.canseek.md)
-* [System.Data.SqlTypes.SqlStreamChars.IsNull Property](system.data.sqltypes.sqlstreamchars.isnull.md)
-* [System.Data.SqlTypes.SqlStreamChars.Length Property](system.data.sqltypes.sqlstreamchars.length.md)
-* [System.Data.SqlTypes.SqlStreamChars.Close Method](system.data.sqltypes.sqlstreamchars.close.md)
-* [System.Data.SqlTypes.SqlStreamChars.Dispose Method](system.data.sqltypes.sqlstreamchars.dispose.md)
-* [System.Data.SqlTypes.SqlStreamChars.Flush Method](system.data.sqltypes.sqlstreamchars.flush.md)
-* [System.Data.SqlTypes.SqlStreamChars.Read Method](system.data.sqltypes.sqlstreamchars.read.md)
-* [System.Data.SqlTypes.SqlStreamChars.Seek Method](system.data.sqltypes.sqlstreamchars.seek.md)
-* [System.Data.SqlTypes.SqlStreamChars.SetLength Method](system.data.sqltypes.sqlstreamchars.setlength.md)
-* [System.Data.SqlTypes.SqlStreamChars.Write Method](system.data.sqltypes.sqlstreamchars.write.md)
-* [System.IO.MemoryStream.InternalGetOriginAndLength Method](system.io.memorystream.internalgetoriginandlength.md)
-* [System.Net.Connection Class](connection.md)
-* [System.Net.Connection.m\_WriteList Field](m_writelist.md)
-* [System.Net.ConnectionGroup Class](connectiongroup.md)
-* [System.Net.ConnectionGroup.m\_ConnectionList Field](m_connectionlist.md)
-* [System.Net.ConnectStream.Connection Property](system.net.connectstream.connection.md)
-* [System.Net.CoreResponseData Class](coreresponsedata.md)
-* [System.Net.CoreResponseData.m\_ResponseHeaders Field](coreresponsedata_m_responseheaders.md)
-* [System.Net.CoreResponseData.m\_StatusCode Field](coreresponsedata_m_statuscode.md)
-* [System.Net.HttpWebRequest.\_AutoRedirects Field](_autoredirects.md)
-* [System.Net.HttpWebRequest.\_CoreResponse Field](httpwebrequest__coreresponse.md)
-* [System.Net.HttpWebRequest.\_HttpResponse Field](_httpresponse.md)
-* [System.Net.PooledStream.NetworkStream Property](system.net.pooledstream.networkstream.md)
-* [System.Net.RtcState class](system.net.rtcstate.md)
-* [System.Net.ServicePoint.m\_ConnectionGroupList Field](m_connectiongrouplist.md)
-* [System.Net.ServicePointManager.s\_ServicePointTable Field](s_servicepointtable.md)
-* [System.Net.TlsStream.m_Worker Field](system.net.tlsstream.m_worker.md)
-* [System.Net.Security.SslState.SslProtocol Property](system.net.security.sslstate.sslprotocol.md)
-* [System.ServiceModel.Channels.Message.BodyToString Method](system.servicemodel.channels.message.bodytostring.md)
-* [System.ServiceModel.Channels.Message.WriteStartHeaders Method](system.servicemodel.channels.message.writestartheaders.md)
-* [System.Windows.Diagnostics.VisualDiagnostics.s\_isDebuggerCheckDisabledForTestPurposes Field](s-isdebuggercheckdisabledfortestpurposes-field.md)
-* [System.Windows.Forms.Design.DataMemberFieldEditor Class](datamemberfieldeditor-class.md)
-* [System.Windows.Forms.Design.DataMemberListEditor Class](datamemberlisteditor-class.md)
-* [System.Xml.XmlReader.CreateSqlReader Method](system.xml.xmlreader.createsqlreader.md)
-* [adodb.Connection Interface](adodb.connection.md)
-* [adodb.EventReason Enum](adodb.eventreasonenum.md)
-* [adodb.EventStatus Enum](adodb.eventstatusenum.md)
-* [stdole.DISPPARAMS Structure](stdole.dispparams.md)
-* [stdole.EXCEPINFO Structure](stdole.excepinfo.md)
-* [stdole.IFont.Name Property](stdole.ifont.name.md)
-* [stdole.IFontDisp Interface](stdole.ifontdisp.md)
-* [stdole.IPicture.Handle Property](stdole.ipicture.handle.md)
-* [stdole.IPictureDisp.Handle Property](stdole.ipicturedisp.handle.md)
-* [stdole.StdFont Interface](stdole.stdfont.md)
-* [stdole.StdPicture Interface](stdole.stdpicture.md)
+* [SmiOrderProperty 속성입니다.](microsoft.sqlserver.server.smiorderproperty.item.md)
+* [PrepForRemoting 메서드](system.exception.prepforremoting.md)
+* [SqlTypes 속성입니다. Stream 속성](system.data.sqltypes.sqlchars.stream.md)
+* [SqlTypes. SqlStreamChars 생성자](system.data.sqltypes.sqlstreamchars.-ctor.md)
+* [SqlTypes 속성입니다. .Canseek 속성](system.data.sqltypes.sqlstreamchars.canseek.md)
+* [SqlTypes 속성 ()](system.data.sqltypes.sqlstreamchars.isnull.md)
+* [SqlTypes 속성에 대 한](system.data.sqltypes.sqlstreamchars.length.md)
+* [SqlTypes 메서드를 닫습니다.](system.data.sqltypes.sqlstreamchars.close.md)
+* [SqlTypes 메서드를 삭제 합니다.](system.data.sqltypes.sqlstreamchars.dispose.md)
+* [SqlTypes 메서드 (메서드)](system.data.sqltypes.sqlstreamchars.flush.md)
+* [SqlTypes 메서드를 참조 하세요.](system.data.sqltypes.sqlstreamchars.read.md)
+* [SqlTypes 메서드를 검색 합니다.](system.data.sqltypes.sqlstreamchars.seek.md)
+* [SqlTypes입니다. SetLength 메서드](system.data.sqltypes.sqlstreamchars.setlength.md)
+* [SqlTypes 메서드를 작성 합니다.](system.data.sqltypes.sqlstreamchars.write.md)
+* [MemoryStream. InternalGetOriginAndLength 메서드](system.io.memorystream.internalgetoriginandlength.md)
+* [시스템 .Net 연결 클래스](connection.md)
+* [시스템 .Net. 연결\_WriteList 필드](m_writelist.md)
+* [시스템 .Net ConnectionGroup 클래스](connectiongroup.md)
+* [시스템 .Net. ConnectionGroup. m\_Connectiongroup 필드](m_connectionlist.md)
+* [시스템 .Net. ConnectStream. 연결 속성](system.net.connectstream.connection.md)
+* [CoreResponseData 클래스](coreresponsedata.md)
+* [CoreResponseData\_ResponseHeaders 필드](coreresponsedata_m_responseheaders.md)
+* [CoreResponseData\_StatusCode 필드](coreresponsedata_m_statuscode.md)
+* [AutoRedirects 필드\_](_autoredirects.md)
+* [CoreResponse 필드\_](httpwebrequest__coreresponse.md)
+* [Httpresponse.cache 필드\_](_httpresponse.md)
+* [시스템 .Net. PooledStream. NetworkStream 속성](system.net.pooledstream.networkstream.md)
+* [RtcState 클래스](system.net.rtcstate.md)
+* [시스템 .Net. ServicePoint. m\_ConnectionGroupList 필드](m_connectiongrouplist.md)
+* [시스템 .Net. ServicePointManager\_Servicepointmanager 필드](s_servicepointtable.md)
+* [시스템 .Net. TlsStream m_Worker 필드](system.net.tlsstream.m_worker.md)
+* [시스템 .Net. SslState. Sslstate 속성](system.net.security.sslstate.sslprotocol.md)
+* [BodyToString 메서드입니다.](system.servicemodel.channels.message.bodytostring.md)
+* [WriteStartHeaders 메서드입니다.](system.servicemodel.channels.message.writestartheaders.md)
+* [IsDebuggerCheckDisabledForTestPurposes 필드를\_합니다.](s-isdebuggercheckdisabledfortestpurposes-field.md)
+* [DataMemberFieldEditor 클래스입니다.](datamemberfieldeditor-class.md)
+* [DataMemberListEditor 클래스입니다.](datamemberlisteditor-class.md)
+* [CreateSqlReader 메서드입니다.](system.xml.xmlreader.createsqlreader.md)
+* [adodb.dll. 연결 인터페이스](adodb.connection.md)
+* [adodb.dll. EventReason 열거형](adodb.eventreasonenum.md)
+* [adodb.dll. EventStatus 열거형](adodb.eventstatusenum.md)
+* [stdole. DISPPARAMS 구조체](stdole.dispparams.md)
+* [stdole. EXCEPINFO 구조체](stdole.excepinfo.md)
+* [stdole. IFont.Name 속성](stdole.ifont.name.md)
+* [stdole. IFontDisp 인터페이스](stdole.ifontdisp.md)
+* [stdole. IPicture 속성](stdole.ipicture.handle.md)
+* [stdole. IPictureDisp 속성](stdole.ipicturedisp.handle.md)
+* [stdole. StdFont 인터페이스](stdole.stdfont.md)
+* [stdole. StdPicture 인터페이스](stdole.stdpicture.md)
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 * [.NET Framework 및 번외 릴리스](../get-started/the-net-framework-and-out-of-band-releases.md)

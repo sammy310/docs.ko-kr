@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448210"
 ---
 # <a name="imetadataassemblyimportgetexportedtypeprops-method"></a>IMetaDataAssemblyImport::GetExportedTypeProps 메서드
-Gets the set of properties of the exported type with the specified metadata signature.  
+지정 된 메타 데이터 시그니처를 사용 하 여 내보낸 형식의 속성 집합을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -41,35 +41,35 @@ HRESULT GetExportedTypeProps (
   
 ## <a name="parameters"></a>매개 변수  
  `mdct`  
- [in] An `mdExportedType` metadata token that represents the exported type.  
+ 진행 내보낸 형식을 나타내는 `mdExportedType` 메타 데이터 토큰입니다.  
   
  `szName`  
- [out] The name of the exported type.  
+ 제한이 내보낸 형식의 이름입니다.  
   
  `cchName`  
- [in] The size, in wide characters, of `szName`.  
+ 진행 `szName`의 크기 (와이드 문자)입니다.  
   
  `pchName`  
- [out] The number of wide characters actually returned in `szName`  
+ 제한이 `szName`에서 실제로 반환 된 와이드 문자의 수입니다.  
   
  `ptkImplementation`  
- [out] An `mdFile`, `mdAssemblyRef`, or `mdExportedType` metadata token that contains or allows access to the properties of the exported type.  
+ 제한이 내보낸 형식의 속성에 대 한 액세스를 포함 하거나 허용 하는 `mdFile`, `mdAssemblyRef`또는 `mdExportedType` 메타 데이터 토큰입니다.  
   
  `ptkTypeDef`  
- [out] A pointer to an `mdTypeDef` token that represents a type in the file.  
+ 제한이 파일의 형식을 나타내는 `mdTypeDef` 토큰에 대 한 포인터입니다.  
   
  `pdwExportedTypeFlags`  
- [out] A pointer to the flags that describe the metadata applied to the exported type. The flags value can be one or more [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) values.  
+ 제한이 내보낸 형식에 적용 되는 메타 데이터를 설명 하는 플래그에 대 한 포인터입니다. Flags 값은 하나 이상의 [Cortypeattr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) 값일 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IMetaDataAssemblyImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

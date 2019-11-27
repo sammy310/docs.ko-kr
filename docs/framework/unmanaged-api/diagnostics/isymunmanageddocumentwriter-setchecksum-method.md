@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449053"
 ---
 # <a name="isymunmanageddocumentwritersetchecksum-method"></a>ISymUnmanagedDocumentWriter::SetCheckSum 메서드
-Sets checksum information.  
+체크섬 정보를 설정합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,20 +36,20 @@ HRESULT SetCheckSum(
   
 ## <a name="parameters"></a>매개 변수  
  `algorithmId`  
- [in] The GUID that represents the algorithm identifier.  
+ 진행 알고리즘 식별자를 나타내는 GUID입니다.  
   
  `checkSumSize`  
- [in] A `ULONG32` that indicates the size, in bytes, of the `checkSum` buffer.  
+ 진행 `checkSum` 버퍼의 크기 (바이트)를 나타내는 `ULONG32`입니다.  
   
  `checkSum`  
- [in] The buffer that stores the checksum information.  
+ 진행 체크섬 정보를 저장 하는 버퍼입니다.  
   
 ## <a name="return-value"></a>반환 값  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **Header:** CorSym.idl, CorSym.h  
+ **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ISymUnmanagedDocumentWriter 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-interface.md)

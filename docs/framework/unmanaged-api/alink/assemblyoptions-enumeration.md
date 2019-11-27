@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446595"
 ---
 # <a name="assemblyoptions-enumeration"></a>AssemblyOptions 열거형
-Enumerates the assembly options.  
+어셈블리 옵션을 열거 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -56,32 +56,32 @@ typedef enum _AssemblyOptions {
   
 |필드|설명|  
 |-----------|-----------------|  
-|optAssemTitle|String - Represents the assembly title.|  
-|optAssemDescription|String - Contains the assembly description.|  
-|optAssemConfig|String - Contains the assembly configuration.|  
-|optAssemOS|String - Encoded as: "dwOSPlatformId.dwOSMajorVersion.dwOSMinorVersion".|  
+|optAssemTitle|String-어셈블리 제목을 나타냅니다.|  
+|optAssemDescription|String-어셈블리 설명을 포함 합니다.|  
+|optAssemConfig|String-어셈블리 구성을 포함 합니다.|  
+|optAssemOS|문자열 인코딩: "dwOSPlatformId. DwosdwOSMinorVersion".|  
 |optAssemProcessor|ULONG|  
-|optAssemLocale|String - Contains the assembly locale.|  
-|optAssemVersion|String - Encoded as: "Major.Minor.Build.Revision".|  
-|optAssemCompany|String - Contains the company.|  
-|optAssemProduct|String - Contains the product name.|  
-|optAssemProductVersion|String (also known as InformationalVersion).|  
-|optAssemCopyright|String - Contains the copyright information.|  
-|optAssemTrademark|String - Contains the trademark information.|  
-|optAssemKeyFile|String (file name).|  
-|optAssemKeyName|String (The key name).|  
+|optAssemLocale|String-어셈블리 로캘을 포함 합니다.|  
+|optAssemVersion|문자열 인코딩: "주. 부. 빌드. 수정 버전".|  
+|optAssemCompany|String-회사를 포함 합니다.|  
+|optAssemProduct|String-제품 이름을 포함 합니다.|  
+|optAssemProductVersion|문자열 (InformationalVersion이 라고도 함)|  
+|optAssemCopyright|String-저작권 정보를 포함 합니다.|  
+|optAssemTrademark|String-상표 정보를 포함 합니다.|  
+|optAssemKeyFile|문자열 (파일 이름)입니다.|  
+|optAssemKeyName|문자열 (키 이름)입니다.|  
 |optAssemAlgID|ULONG|  
 |optAssemFlags|ULONG|  
-|optAssemHalfSign|Bool (Also known as DelaySign).|  
-|optAssemFileVersion|String - Encoded as "Major.Minor.Build.Revision"--same as ProductVersion.|  
-|optAssemSatelliteVer|String - Encoded as "Major.Minor.Build.Revision".|  
-|optLastAssemOption|A counter of the number of elements.|  
+|optAssemHalfSign|Bool (DelaySign 라고도 함).|  
+|optAssemFileVersion|"Major. ProductVersion"로 인코딩된 문자열입니다.|  
+|optAssemSatelliteVer|"Major. 부. 빌드. 수정 버전"으로 문자열 인코딩됩니다.|  
+|optLastAssemOption|요소 수의 카운터입니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **Header:** alink.h  
+ **헤더:** alink. h  
   
- **Library**: alink.dll  
+ **라이브러리**: alink .dll  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Al.exe(어셈블리 링커)](../../tools/al-exe-assembly-linker.md)

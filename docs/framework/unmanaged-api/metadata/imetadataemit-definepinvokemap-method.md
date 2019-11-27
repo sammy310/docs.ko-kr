@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431481"
 ---
 # <a name="imetadataemitdefinepinvokemap-method"></a>IMetaDataEmit::DefinePinvokeMap 메서드
-Sets features of the PInvoke signature of the method referenced by the specified token.  
+지정 된 토큰이 참조 하는 메서드에 대 한 PInvoke 시그니처의 기능을 설정 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,27 +38,27 @@ HRESULT DefinePinvokeMap (
   
 ## <a name="parameters"></a>매개 변수  
  `tk`  
- [in] The token for the target method.  
+ 진행 대상 메서드에 대 한 토큰입니다.  
   
  `dwMappingFlags`  
- [in] Flags used by PInvoke to do the mapping.  
+ 진행 PInvoke에서 매핑을 수행 하는 데 사용 되는 플래그입니다.  
   
  `szImportName`  
- [in] The name of the target export method in an unmanaged DLL.  
+ 진행 관리 되지 않는 DLL의 대상 내보내기 메서드 이름입니다.  
   
  `mrImportDLL`  
- [in] The token for the target native DLL.  
+ 진행 대상 네이티브 DLL의 토큰입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IMetaDataEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

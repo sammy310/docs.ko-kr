@@ -13,12 +13,12 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345117"
 ---
 # <a name="events-visual-basic"></a>이벤트(Visual Basic)
-While you might visualize a Visual Studio project as a series of procedures that execute in a sequence, in reality, most programs are event driven—meaning the flow of execution is determined by external occurrences called *events*.  
+Visual Studio 프로젝트를 순서 대로 실행 되는 일련의 프로시저로 시각화할 수도 있지만 실제로 대부분의 프로그램은 이벤트 구동 방식입니다. 즉, 실행 흐름이 *이벤트*라는 외부 발생에 의해 결정 됩니다.  
   
  이벤트는 중요한 문제가 발생했음을 애플리케이션에 알리는 신호입니다. 예를 들어 사용자가 폼의 컨트롤을 클릭하면 폼이 `Click` 이벤트를 발생시키고 이벤트를 처리하는 프로시저를 호출할 수 있습니다. 또한 이벤트는 개별 작업이 통신할 수 있도록 합니다. 예를 들어 애플리케이션이 주 애플리케이션과는 별도로 정렬 작업을 수행한다고 가정해 봅니다. 사용자가 정렬을 취소하면 애플리케이션은 정렬 프로세스를 중지하도록 지시하는 취소 이벤트를 전송할 수 있습니다.  
   
 ## <a name="event-terms-and-concepts"></a>이벤트 용어 및 개념  
- This section describes the terms and concepts used with events in Visual Basic.  
+ 이 섹션에서는 Visual Basic 이벤트에 사용 되는 용어 및 개념에 대해 설명 합니다.  
   
 ### <a name="declaring-events"></a>이벤트 선언  
  다음 예제와 같이 `Event` 키워드를 사용하여 클래스, 구조체, 모듈 및 인터페이스를 사용하여 이벤트를 선언합니다.  
@@ -26,7 +26,7 @@ While you might visualize a Visual Studio project as a series of procedures that
  [!code-vb[VbVbalrEvents#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#24)]  
   
 ### <a name="raising-events"></a>이벤트 발생  
- 이벤트는 중요한 문제가 발생했음을 알리는 메시지와 같습니다. 메시지를 브로드캐스트하는 동작을 이벤트 *발생*이라고 합니다. In Visual Basic, you raise events with the `RaiseEvent` statement, as in the following example:  
+ 이벤트는 중요한 문제가 발생했음을 알리는 메시지와 같습니다. 메시지를 브로드캐스트하는 동작을 이벤트 *발생*이라고 합니다. Visual Basic에서 다음 예제와 같이 `RaiseEvent` 문으로 이벤트를 발생 시킵니다.  
   
  [!code-vb[VbVbalrEvents#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#25)]  
   
@@ -38,7 +38,7 @@ While you might visualize a Visual Studio project as a series of procedures that
 ### <a name="event-handlers"></a>이벤트 처리기  
  *이벤트 처리기*는 해당 이벤트가 발생할 때 호출되는 프로시저입니다. 서명이 일치하는 모든 유효한 서브루틴을 이벤트 처리기로 사용할 수 있습니다. 그러나 함수는 이벤트 처리기로 사용할 수 없습니다. 이벤트 소스에 값을 반환할 수 없기 때문입니다.  
   
- Visual Basic uses a standard naming convention for event handlers that combines the name of the event sender, an underscore, and the name of the event. 예를 들어 `button1`이라는 단추의 `Click` 이벤트의 이름은 `Sub button1_Click`으로 지정됩니다.  
+ Visual Basic는 이벤트 보낸 사람의 이름, 밑줄 및 이벤트 이름을 결합 하는 이벤트 처리기에 표준 명명 규칙을 사용 합니다. 예를 들어 `Click`이라는 단추의 `button1` 이벤트의 이름은 `Sub button1_Click`으로 지정됩니다.  
   
 > [!NOTE]
 > 사용자 고유의 이벤트에 대해 이벤트 처리기를 정의하는 경우 이러한 명명 규칙을 사용하는 것이 좋지만 필수는 아닙니다. 유효한 어떤 서브루틴 이름도 사용 가능합니다.  
@@ -55,7 +55,7 @@ While you might visualize a Visual Studio project as a series of procedures that
   
 - `WithEvents` 변수를 개체 변수로 사용할 수 없습니다. 즉, `Object`로 선언할 수 없습니다. 따라서 변수를 선언할 때는 클래스 이름을 지정해야 합니다.  
   
-- Because shared events are not tied to class instances, you cannot use `WithEvents` to declaratively handle shared events. 마찬가지로 `WithEvents` 또는 `Handles`를 사용하여 `Structure`의 이벤트를 처리할 수 없습니다. 두 경우 모두 `AddHandler` 문을 사용해서 해당 이벤트를 처리할 수 있습니다.  
+- 공유 이벤트는 클래스 인스턴스에 연결 되지 않기 때문에 `WithEvents`를 사용 하 여 shared 이벤트를 선언적으로 처리할 수 없습니다. 마찬가지로 `WithEvents` 또는 `Handles`를 사용하여 `Structure`의 이벤트를 처리할 수 없습니다. 두 경우 모두 `AddHandler` 문을 사용해서 해당 이벤트를 처리할 수 있습니다.  
   
 - `WithEvents` 변수 배열을 만들 수 없습니다.  
   
@@ -63,18 +63,18 @@ While you might visualize a Visual Studio project as a series of procedures that
   
  `Handles` 절은 이벤트를 이벤트 처리기와 연결하는 표준 방법이지만 컴파일 타임에 이벤트를 이벤트 처리기와 연결하도록 제한됩니다.  
   
- In some cases, such as with events associated with forms or controls, Visual Basic automatically stubs out an empty event handler and associates it with an event. For example, when you double-click a command button on a form in design mode, Visual Basic creates an empty event handler and a `WithEvents` variable for the command button, as in the following code:  
+ 양식이 나 컨트롤과 연결 된 이벤트와 같은 일부 경우에는 빈 이벤트 처리기를 자동으로 스텁 하 여 이벤트에 연결 Visual Basic. 예를 들어 디자인 모드에서 폼의 명령 단추를 두 번 클릭 하면 Visual Basic 다음 코드와 같이 명령 단추에 대해 빈 이벤트 처리기와 `WithEvents` 변수를 만듭니다.  
   
  [!code-vb[VbVbalrEvents#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#26)]  
   
 ### <a name="addhandler-and-removehandler"></a>AddHandler 및 RemoveHandler  
  `AddHandler` 문은 둘 다 이벤트 처리기를 지정할 수 있다는 측면에서 `Handles` 절과 비슷합니다. 그러나 `AddHandler`를 `RemoveHandler`와 함께 사용하면 `Handles` 절보다 유연성이 높아져서 이벤트와 연결된 이벤트 처리기를 동적으로 추가, 제거 및 변경할 수 있습니다. 공유 이벤트 또는 구조체의 이벤트를 처리하려는 경우 `AddHandler`를 사용해야 합니다.  
   
- `AddHandler`는 두 개의 인수, 즉 컨트롤과 같은 이벤트 전송자의 이벤트 이름과 대리자로 평가되는 식을 사용합니다. `AddressOf` 문은 항상 대리자에 대한 참조를 반환하므로 `AddHandler`를 사용할 경우 대리자 클래스를 명시적으로 지정할 필요가 없습니다. 다음 예제에서는 개체에 의해 발생하는 이벤트와 이벤트 처리기를 연결합니다.  
+ `AddHandler`는 두 개의 인수, 즉 컨트롤과 같은 이벤트 전송자의 이벤트 이름과 대리자로 평가되는 식을 사용합니다. `AddHandler` 문은 항상 대리자에 대한 참조를 반환하므로 `AddressOf`를 사용할 경우 대리자 클래스를 명시적으로 지정할 필요가 없습니다. 다음 예제에서는 개체에 의해 발생하는 이벤트와 이벤트 처리기를 연결합니다.  
   
  [!code-vb[VbVbalrEvents#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#28)]  
   
- 이벤트 처리기에서 이벤트의 연결을 끊는 `RemoveHandler`는 `AddHandler`와 동일한 구문을 사용합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.  
+ 이벤트 처리기에서 이벤트의 연결을 끊는 `RemoveHandler`는 `AddHandler`와 동일한 구문을 사용합니다. 예를 들면 다음과 같습니다.  
   
  [!code-vb[VbVbalrEvents#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#29)]  
   
@@ -91,11 +91,11 @@ While you might visualize a Visual Studio project as a series of procedures that
   
 ### <a name="to-handle-events-from-a-base-class"></a>기본 클래스의 이벤트를 처리하려면  
   
-- 이벤트 처리기 프로시저의 선언 줄에 `Handles MyBase.`*eventname* 문을 추가하여 파생 클래스에서 이벤트 처리기를 선언합니다. 여기서 *eventname*은 처리하는 기본 클래스의 이벤트 이름입니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.  
+- 이벤트 처리기 프로시저의 선언 줄에 `Handles MyBase.`*eventname* 문을 추가하여 파생 클래스에서 이벤트 처리기를 선언합니다. 여기서 *eventname*은 처리하는 기본 클래스의 이벤트 이름입니다. 예를 들면 다음과 같습니다.  
   
      [!code-vb[VbVbalrEvents#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#12)]  
   
-## <a name="related-sections"></a>관련 단원  
+## <a name="related-sections"></a>관련 섹션  
   
 |제목|설명|  
 |-----------|-----------------|  

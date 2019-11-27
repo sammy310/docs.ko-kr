@@ -21,12 +21,12 @@ ms.locfileid: "74435744"
 ---
 # <a name="find-and-highlight-text-using-ui-automation"></a>UI 자동화를 사용하여 텍스트 찾기 및 강조
 > [!NOTE]
-> 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조하세요.  
+> 이 설명서는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 네임스페이스에 정의된 관리되는 <xref:System.Windows.Automation> 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조하세요.  
   
- This topic demonstrates how to sequentially search for and highlight each occurrence of a string within the content of a text control using [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)].  
+ 이 항목에서는 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]를 사용 하 여 텍스트 컨트롤의 내용 내에서 각 문자열의 발생을 순차적으로 검색 하 고 강조 표시 하는 방법을 보여 줍니다.  
   
 ## <a name="example"></a>예제  
- The following example obtains a <xref:System.Windows.Automation.TextPattern> object from a text control. A <xref:System.Windows.Automation.Text.TextPatternRange> object, representing the textual content of the entire document, is then created using the <xref:System.Windows.Automation.TextPattern.DocumentRange%2A> property of this <xref:System.Windows.Automation.TextPattern>. Two additional <xref:System.Windows.Automation.Text.TextPatternRange> objects are then created for the sequential search and highlight functionality.  
+ 다음 예제에서는 텍스트 컨트롤에서 <xref:System.Windows.Automation.TextPattern> 개체를 가져옵니다. 그러면이 <xref:System.Windows.Automation.TextPattern>의 <xref:System.Windows.Automation.TextPattern.DocumentRange%2A> 속성을 사용 하 여 전체 문서의 텍스트 내용을 나타내는 <xref:System.Windows.Automation.Text.TextPatternRange> 개체가 만들어집니다. 그런 다음 순차적 검색 및 강조 표시 기능을 위해 두 개의 추가 <xref:System.Windows.Automation.Text.TextPatternRange> 개체가 생성 됩니다.  
   
 [!code-csharp[FindText#StartApp](../../../samples/snippets/csharp/VS_Snippets_Wpf/FindText/CSharp/SearchWindow.cs#startapp)]
 [!code-vb[FindText#StartApp](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FindText/VisualBasic/SearchWindow.vb#startapp)]  
@@ -35,6 +35,6 @@ ms.locfileid: "74435744"
 [!code-csharp[FindText#SearchTarget](../../../samples/snippets/csharp/VS_Snippets_Wpf/FindText/CSharp/SearchWindow.cs#searchtarget)]
 [!code-vb[FindText#SearchTarget](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FindText/VisualBasic/SearchWindow.vb#searchtarget)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [UI 자동화를 사용하여 텍스트 찾기 및 강조](find-and-highlight-text-using-ui-automation.md)

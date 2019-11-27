@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438769"
 ---
 # <a name="icorprofilerinfogetthreadcontext-method"></a>ICorProfilerInfo::GetThreadContext 메서드
-Gets the context identity currently associated with the specified thread.  
+지정 된 스레드와 현재 연결 된 컨텍스트 id를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -35,10 +35,10 @@ HRESULT GetThreadContext(
   
 ## <a name="parameters"></a>매개 변수  
  `threadId`  
- [in] The ID of the thread.  
+ 진행 스레드의 ID입니다.  
   
  `pContextId`  
- [out] A pointer to the context ID currently associated with the specified thread. If the thread has no context currently associated with it, this function will return CORPROF_E_DATAINCOMPLETE.  
+ 제한이 지정 된 스레드와 현재 연결 된 컨텍스트 ID에 대 한 포인터입니다. 스레드에 현재 연결 된 컨텍스트가 없으면이 함수는 CORPROF_E_DATAINCOMPLETE을 반환 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
@@ -49,6 +49,6 @@ HRESULT GetThreadContext(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerInfo 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

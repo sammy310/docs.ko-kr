@@ -42,41 +42,41 @@ HRESULT SetAssemblyRefProps (
   
 ## <a name="parameters"></a>매개 변수  
  `ar`  
- [in] The metadata token that specifies the `AssemblyRef` metadata structure to be modified.  
+ 진행 수정할 `AssemblyRef` 메타 데이터 구조를 지정 하는 메타 데이터 토큰입니다.  
   
  `pbPublicKeyOrToken`  
- [in] The public key of the publisher of the referenced assembly.  
+ 진행 참조 된 어셈블리의 게시자에 대 한 공개 키입니다.  
   
  `cbPublicKeyOrToken`  
- [in] The size in bytes of `pbPublicKeyOrToken`.  
+ 진행 `pbPublicKeyOrToken`의 크기 (바이트)입니다.  
   
  `szName`  
- [in] The human-readable text name of the assembly.  
+ 진행 사람이 읽을 수 있는 어셈블리의 텍스트 이름입니다.  
   
  `pMetaData`  
- [in] A pointer to an ASSEMBLYMETADATA instance that contains the version, platform, and locale information for the assembly.  
+ 진행 어셈블리에 대 한 버전, 플랫폼 및 로캘 정보를 포함 하는 ASSEMBLYMETADATA 인스턴스에 대 한 포인터입니다.  
   
  `pbHashValue`  
- [in] A pointer to the hash data associated with the assembly.  
+ 진행 어셈블리와 연결 된 해시 데이터에 대 한 포인터입니다.  
   
  `cbHashValue`  
- [in] The size in bytes of `pbHashValue`.  
+ 진행 `pbHashValue`의 크기 (바이트)입니다.  
   
  `dwAssemblyRefFlags`  
- [in] A bitwise combination of [AssemblyRefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) values that specify attributes of the referenced assembly.  
+ 진행 참조 된 어셈블리의 특성을 지정 하는 [Assemblyrefflags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) 값의 비트 조합입니다.  
   
 ## <a name="remarks"></a>주의  
- To create an `AssemblyRef` metadata structure, use the [IMetaDataAssemblyEmit::DefineAssemblyRef](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassemblyref-method.md) method.  
+ `AssemblyRef` 메타 데이터 구조를 만들려면 [IMetaDataAssemblyEmit::D efineAssemblyRef](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassemblyref-method.md) 메서드를 사용 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IMetaDataAssemblyEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

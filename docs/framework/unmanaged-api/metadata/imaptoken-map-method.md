@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432142"
 ---
 # <a name="imaptokenmap-method"></a>IMapToken::Map 메서드
-Maps a relationship between the assemblies using metadata signatures.  
+메타 데이터 시그니처를 사용 하 여 어셈블리 간의 관계를 매핑합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,23 +36,23 @@ HRESULT Map (
   
 ## <a name="parameters"></a>매개 변수  
  `tkImp`  
- [in] The metadata token that represents the imported code object.  
+ 진행 가져온 코드 개체를 나타내는 메타 데이터 토큰입니다.  
   
  `tkEmit`  
- [in] The metadata token that represents the emitted code object.  
+ 진행 내보낸 코드 개체를 나타내는 메타 데이터 토큰입니다.  
   
 ## <a name="remarks"></a>주의  
- When the token re-map occurs during a merge, the original token is scoped in the imported (source) metadata scope and the new token is scoped in the emitted (target) metadata scope.  
+ 병합 하는 동안 토큰 다시 맵이 발생 하면 원래 토큰은 가져온 (원본) 메타 데이터 범위에서 범위가 지정 되 고 새 토큰은 내보낸 (대상) 메타 데이터 범위에서 범위가 지정 됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IMapToken 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md)

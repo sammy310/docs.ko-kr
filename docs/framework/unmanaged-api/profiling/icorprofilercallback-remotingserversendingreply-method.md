@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74430723"
 ---
 # <a name="icorprofilercallbackremotingserversendingreply-method"></a>ICorProfilerCallback::RemotingServerSendingReply 메서드
-Notifies the profiler that the process has finished processing a remote method invocation request and is about to transmit the reply through a channel.  
+프로세스가 원격 메서드 호출 요청 처리를 완료 했으며 채널을 통해 회신을 전송 하려고 함을 프로파일러에 알립니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -35,18 +35,18 @@ HRESULT RemotingServerSendingReply(
   
 ## <a name="parameters"></a>매개 변수  
  `pCookie`  
- [in] A pointer to a GUID that will correspond with the value provided in [ICorProfilerCallback::RemotingClientReceivingReply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientreceivingreply-method.md) under these conditions:  
+ 진행 다음 조건에서 [ICorProfilerCallback:: RemotingClientReceivingReply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientreceivingreply-method.md) 에 제공 된 값과 일치 하는 GUID에 대 한 포인터입니다.  
   
-- Remoting GUID cookies are active.  
+- 원격 GUID 쿠키가 활성 상태입니다.  
   
-- The channel succeeds in transmitting the message.  
+- 채널에서 메시지를 전송 하는 데 성공 했습니다.  
   
-- GUID cookies are active on the client-side process.  
+- GUID 쿠키는 클라이언트 쪽 프로세스에서 활성화 됩니다.  
   
- This allows easy pairing of remoting calls and the creation of a logical call stack.  
+ 이렇게 하면 원격 호출을 쉽게 페어링 하 고 논리 호출 스택을 만들 수 있습니다.  
   
  `fIsAsync`  
- [in] A value that is `true` if the call is asynchronous; otherwise, `false`.  
+ 진행 호출이 비동기 인 경우 `true` 하는 값입니다. 그렇지 않으면 `false`합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
@@ -57,6 +57,6 @@ HRESULT RemotingServerSendingReply(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerCallback 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

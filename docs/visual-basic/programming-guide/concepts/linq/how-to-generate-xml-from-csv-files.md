@@ -9,7 +9,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344601"
 ---
-# <a name="how-to-generate-xml-from-csv-files-visual-basic"></a>How to: Generate XML from CSV Files (Visual Basic)
+# <a name="how-to-generate-xml-from-csv-files-visual-basic"></a>방법: CSV 파일에서 XML 생성 (Visual Basic)
 이 예제에서는 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 및 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]을 사용하여 CSV(쉼표로 구분된 값) 파일에서 XML 파일을 생성하는 방법을 보여 줍니다.  
   
 ## <a name="example"></a>예제  
@@ -107,6 +107,6 @@ Console.WriteLine(cust)
 </Root>  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [Projections and Transformations (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+- [프로젝션 및 변환 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

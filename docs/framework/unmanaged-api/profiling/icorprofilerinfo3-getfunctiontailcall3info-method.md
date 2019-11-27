@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449696"
 ---
 # <a name="icorprofilerinfo3getfunctiontailcall3info-method"></a>ICorProfilerInfo3::GetFunctionTailcall3Info 메서드
-Provides the stack frame of the function that is being reported to the profiler by the [FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md) function. 이 함수는 `FunctionTailcall3WithInfo` 콜백 중에만 호출할 수 있습니다.  
+[FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md) 함수가 프로파일러에 보고 하는 함수의 스택 프레임을 제공 합니다. 이 함수는 `FunctionTailcall3WithInfo` 콜백 중에만 호출할 수 있습니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,13 +36,13 @@ HRESULT GetFunctionTailcall3Info(
   
 ## <a name="parameters"></a>매개 변수  
  `functionId`  
- [in] The `FunctionID` of the function that is returning.  
+ 진행 을 반환 하는 함수의 `FunctionID`입니다.  
   
  `eltInfo`  
- [in] 지정된 스택 프레임에 대한 정보를 나타내는 불투명 핸들입니다. The profiler should provide the same `eltInfo` that was given to the profiler by the `FunctionTailcall3WithInfo` function.  
+ [in] 지정된 스택 프레임에 대한 정보를 나타내는 불투명 핸들입니다. 프로파일러는 `FunctionTailcall3WithInfo` 함수를 통해 프로파일러에 지정 된 것과 동일한 `eltInfo`를 제공 해야 합니다.  
   
  `pFrameInfo`  
- [out] 지정된 스택 프레임에 대한 일반 정보를 나타내는 불투명 핸들입니다. 이 핸들은 프로파일러가 `GetFunctionTailcall3Info` 메서드를 호출한 `FunctionTailcall3WithInfo` 콜백 중에만 유효합니다.  
+ [out] 지정된 스택 프레임에 대한 일반 정보를 나타내는 불투명 핸들입니다. 이 핸들은 프로파일러가 `FunctionTailcall3WithInfo` 메서드를 호출한 `GetFunctionTailcall3Info` 콜백 중에만 유효합니다.  
   
 ## <a name="remarks"></a>주의  
   
@@ -55,7 +55,7 @@ HRESULT GetFunctionTailcall3Info(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md)
 - [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md)

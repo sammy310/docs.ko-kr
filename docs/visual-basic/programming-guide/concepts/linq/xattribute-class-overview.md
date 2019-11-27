@@ -9,7 +9,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349335"
 ---
-# <a name="xattribute-class-overview-visual-basic"></a>XAttribute Class Overview (Visual Basic)
+# <a name="xattribute-class-overview-visual-basic"></a>XAttribute 클래스 개요 (Visual Basic)
 특성은 요소와 연결된 이름/값 쌍입니다. <xref:System.Xml.Linq.XAttribute> 클래스는 XML 특성을 나타냅니다.  
   
 ## <a name="overview"></a>개요  
@@ -25,7 +25,7 @@ ms.locfileid: "74349335"
 |`XAttribute(XName name, object content)`|<xref:System.Xml.Linq.XAttribute> 개체를 만듭니다. `name` 인수는 특성의 이름을 지정하고, `content`는 특성의 내용을 지정합니다.|  
   
 ### <a name="creating-an-element-with-an-attribute"></a>특성을 사용하여 요소 만들기  
- The following code shows an element that contains an attribute using XML literals in Visual Basic:  
+ 다음 코드는 Visual Basic에서 XML 리터럴을 사용 하는 특성이 포함 된 요소를 보여 줍니다.  
   
 ```vb  
 Dim phone As XElement = <Phone Type="Home">555-555-5555</Phone>  
@@ -74,6 +74,6 @@ Console.WriteLine(c)
   
  이 차이는 주로 노드 수준에서 XML 트리 작업을 하는 코드를 작성하는 개발자에게만 중요합니다. 대부분의 개발자는 이 차이에 대해 염려하지 않습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [LINQ to XML Programming Overview (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+- [LINQ to XML 프로그래밍 개요 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)

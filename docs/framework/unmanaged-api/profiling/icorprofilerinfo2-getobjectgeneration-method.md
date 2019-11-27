@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74433086"
 ---
 # <a name="icorprofilerinfo2getobjectgeneration-method"></a>ICorProfilerInfo2::GetObjectGeneration 메서드
-Gets the segment of the heap that contains the specified object.  
+지정 된 개체를 포함 하는 힙의 세그먼트를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -35,13 +35,13 @@ HRESULT GetObjectGeneration(
   
 ## <a name="parameters"></a>매개 변수  
  `objectId`  
- [in] The ID of the object.  
+ 진행 개체의 ID입니다.  
   
  `range`  
- [out] A pointer to a [COR_PRF_GC_GENERATION_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-range-structure.md) structure, which describes a range (that is, a block) of memory within the generation that is undergoing garbage collection. This range contains the specified object.  
+ 제한이 가비지 수집이 수행 되는 세대 내의 메모리 범위 (즉, 블록)를 설명 하는 [COR_PRF_GC_GENERATION_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-range-structure.md) 구조체에 대 한 포인터입니다. 이 범위에는 지정 된 개체가 포함 됩니다.  
   
 ## <a name="remarks"></a>주의  
- The `GetObjectGeneration` method may be called from any profiler callback, provided that garbage collection is not in progress. That is, it may be called from any callback except those that occur between [ICorProfilerCallback2::GarbageCollectionStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionstarted-method.md) and [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md).  
+ 가비지 수집이 진행 되 고 있지 않은 경우 모든 프로파일러 콜백에서 `GetObjectGeneration` 메서드를 호출할 수 있습니다. 즉, [ICorProfilerCallback2:: GarbageCollectionStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionstarted-method.md) 및 [ICorProfilerCallback2:: GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md)간에 발생 하는 것을 제외 하 고 모든 콜백에서 호출 될 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
@@ -52,7 +52,7 @@ HRESULT GetObjectGeneration(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerInfo 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
 - [ICorProfilerInfo2 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

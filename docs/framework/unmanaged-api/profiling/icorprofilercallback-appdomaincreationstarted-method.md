@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445209"
 ---
 # <a name="icorprofilercallbackappdomaincreationstarted-method"></a>ICorProfilerCallback::AppDomainCreationStarted 메서드
-Notifies the profiler that an application domain is being created.  
+응용 프로그램 도메인이 생성 중임을 프로파일러에 알립니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -34,10 +34,10 @@ HRESULT AppDomainCreationStarted(
   
 ## <a name="parameters"></a>매개 변수  
  `appDomainId`  
- [in] Identifies the domain which is being created.  
+ 진행 만들고 있는 도메인을 식별 합니다.  
   
 ## <a name="remarks"></a>주의  
- The ID is not valid for any information request until the [ICorProfilerCallback::AppDomainCreationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomaincreationfinished-method.md) method is called.  
+ [ICorProfilerCallback:: AppDomainCreationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomaincreationfinished-method.md) 메서드가 호출 될 때까지 정보 요청에 대해 ID가 유효 하지 않습니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
@@ -48,6 +48,6 @@ HRESULT AppDomainCreationStarted(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerCallback 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

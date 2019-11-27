@@ -38,29 +38,29 @@ HRESULT SetExportedTypeProps (
   
 ## <a name="parameters"></a>매개 변수  
  `ct`  
- [in] The metadata token that specifies the `ExportedType` metadata structure to be modified.  
+ 진행 수정할 `ExportedType` 메타 데이터 구조를 지정 하는 메타 데이터 토큰입니다.  
   
  `tkImplementation`  
- [in] The token, of type `File`, `AssemblyRef`, or `ExportedType`, that specifies how this type is implemented.  
+ 진행 이 형식을 구현 하는 방법을 지정 하는 `File`, `AssemblyRef`또는 `ExportedType`형식의 토큰입니다.  
   
  `tkTypeDef`  
- [in] The `TypeDef` token referenced in the code file.  
+ 진행 코드 파일에서 참조 되는 `TypeDef` 토큰입니다.  
   
  `dwExportedTypeFlags`  
- [in] A bitwise combination of values that specify attributes of the type.  
+ 진행 형식의 특성을 지정 하는 값의 비트 조합입니다.  
   
 ## <a name="remarks"></a>주의  
- To create an `ExportedType` metadata structure, use the [IMetaDataAssemblyEmit::DefineExportedType](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md) method.  
+ `ExportedType` 메타 데이터 구조를 만들려면 [IMetaDataAssemblyEmit::D efineExportedType](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md) 메서드를 사용 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IMetaDataAssemblyEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

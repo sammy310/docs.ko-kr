@@ -37,8 +37,8 @@ typedef enum {
   
 |멤버|설명|  
 |------------|-----------------|  
-|`COR_PRF_GC_INDUCED`|The garbage collection was induced by a <xref:System.GC.Collect%2A> method.|  
-|`COR_PRF_GC_OTHER`|The reason is unspecified.|  
+|`COR_PRF_GC_INDUCED`|<xref:System.GC.Collect%2A> 메서드에서 가비지 수집을 발생 시킨 경우|  
+|`COR_PRF_GC_OTHER`|이유가 지정 되지 않았습니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
@@ -49,6 +49,6 @@ typedef enum {
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [프로파일링 열거형](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

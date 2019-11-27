@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445916"
 ---
 # <a name="icorprofilercallbackmoduleunloadfinished-method"></a>ICorProfilerCallback::ModuleUnloadFinished 메서드
-Notifies the profiler that a module has finished unloading.  
+모듈의 언로드가 완료 되었음을 프로파일러에 알립니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -35,15 +35,15 @@ HRESULT ModuleUnloadFinished(
   
 ## <a name="parameters"></a>매개 변수  
  `moduleId`  
- [in] The ID of the module that was unloaded.  
+ 진행 언로드된 모듈의 ID입니다.  
   
  `hrStatus`  
- [in] An HRESULT that indicates whether the module was unloaded successfully.  
+ 진행 모듈이 성공적으로 언로드 되었는지 여부를 나타내는 HRESULT입니다.  
   
 ## <a name="remarks"></a>주의  
- The value of `moduleId` is not valid for an information request after the [ICorProfilerCallback::ModuleUnloadStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleunloadstarted-method.md) method returns.  
+ [ICorProfilerCallback:: ModuleUnloadStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleunloadstarted-method.md) 메서드가 반환 된 후에는 `moduleId` 값이 정보 요청에 적합 하지 않습니다.  
   
- Some parts of unloading the class might continue after the `ModuleUnloadFinished` callback. A failure HRESULT in `hrStatus` indicates a failure. However, a success HRESULT in `hrStatus` indicates only that the first part of unloading the module has succeeded.  
+ 클래스를 언로드하는 일부 부분은 `ModuleUnloadFinished` 콜백 후에도 계속 될 수 있습니다. `hrStatus` 오류 HRESULT는 오류를 나타냅니다. 그러나 `hrStatus`의 성공 HRESULT는 모듈 언로드의 첫 번째 부분이 성공 했다는 것만 나타냅니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
@@ -54,6 +54,6 @@ HRESULT ModuleUnloadFinished(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerCallback 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

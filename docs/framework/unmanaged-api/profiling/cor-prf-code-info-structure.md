@@ -37,18 +37,18 @@ typedef struct _COR_PRF_CODE_INFO {
   
 |멤버|설명|  
 |------------|-----------------|  
-|`startAddress`|The starting address of the contiguous block of code.|  
-|`size`|The size of the block.|  
+|`startAddress`|연속 된 코드 블록의 시작 주소입니다.|  
+|`size`|블록의 크기입니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** CorProf.idl  
+ **헤더:** Corprof.idl  
   
  **라이브러리:** CorGuids.lib  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [프로파일링 구조체](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)

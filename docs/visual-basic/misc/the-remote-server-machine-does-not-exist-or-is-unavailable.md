@@ -1,5 +1,5 @@
 ---
-title: The remote server machine does not exist or is unavailable
+title: 원격 서버 컴퓨터가 없거나 사용할 수 없습니다.
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID462
@@ -18,6 +18,6 @@ ms.locfileid: "74348191"
   
 - 네트워크에 다시 연결하여 시도합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [오류 형식](../../visual-basic/programming-guide/language-features/error-types.md)

@@ -1,5 +1,5 @@
 ---
-title: 유니코드(Unicode)
+title: Unicode
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Unicode
@@ -17,24 +17,24 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344216"
 ---
 # <a name="unicode-visual-basic"></a>Unicode(Visual Basic)
-Specifies that Visual Basic should marshal all strings to Unicode values regardless of the name of the external procedure being declared.  
+선언 되는 외부 프로시저의 이름에 관계 없이 모든 문자열을 유니코드 값으로 마샬링하 Visual Basic 하도록 지정 합니다.  
   
- When you call a procedure defined outside your project, the Visual Basic compiler does not have access to the information it must have in order to call the procedure correctly. This information includes where the procedure is located, how it is identified, its calling sequence and return type, and the string character set it uses. The [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md) creates a reference to an external procedure and supplies this necessary information.  
+ 프로젝트 외부에서 정의 된 프로시저를 호출 하는 경우 Visual Basic 컴파일러는 프로시저를 올바르게 호출 하기 위해 가져야 하는 정보에 액세스할 수 없습니다. 이 정보에는 프로시저가 있는 위치, 식별 방법, 호출 시퀀스 및 반환 형식, 사용 하는 문자열 문자 집합이 포함 됩니다. [Declare 문은](../../../visual-basic/language-reference/statements/declare-statement.md) 외부 프로시저에 대 한 참조를 만들고이 필요한 정보를 제공 합니다.  
   
- The `charsetmodifier` part in the `Declare` statement supplies the character set information to marshal strings during a call to the external procedure. It also affects how Visual Basic searches the external file for the external procedure name. The `Unicode` modifier specifies that Visual Basic should marshal all strings to Unicode values and should look up the procedure without modifying its name during the search.  
+ `Declare` 문의 `charsetmodifier` 부분은 외부 프로시저를 호출 하는 동안 문자열을 마샬링하는 문자 집합 정보를 제공 합니다. 외부 파일에서 외부 프로시저 이름을 검색 Visual Basic는 방법에도 영향을 줍니다. `Unicode` 한정자는 Visual Basic 모든 문자열을 유니코드 값으로 마샬링하고 검색 하는 동안 해당 이름을 수정 하지 않고 프로시저를 조회 하도록 지정 합니다.  
   
- If no character set modifier is specified, `Ansi` is the default.  
+ 문자 집합 한정자가 지정 되지 않은 경우 `Ansi` 기본값입니다.  
   
 ## <a name="remarks"></a>주의  
- The `Unicode` modifier can be used in this context:  
+ 이 컨텍스트에서는 `Unicode` 한정자를 사용할 수 있습니다.  
   
- [Declare 문](../../../visual-basic/language-reference/statements/declare-statement.md)  
+ [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
 ## <a name="smart-device-developer-notes"></a>스마트 디바이스 개발자 노트  
- This keyword is not supported.  
+ 이 키워드는 지원 되지 않습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ANSI](../../../visual-basic/language-reference/modifiers/ansi.md)
 - [자동](../../../visual-basic/language-reference/modifiers/auto.md)
-- [C++ 키워드](../../../visual-basic/language-reference/keywords/index.md)
+- [키워드](../../../visual-basic/language-reference/keywords/index.md)

@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448589"
 ---
 # <a name="call_id-structure"></a>CALL_ID 구조체
-Provides information to a debugger about a function that is being called. See the [INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md) interface for more information.  
+호출 되는 함수에 대 한 정보를 디버거에 제공 합니다. 자세한 내용은 [INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md) 인터페이스를 참조 하세요.  
   
 ## <a name="syntax"></a>구문  
   
@@ -42,17 +42,17 @@ typedef struct tagCALL_ID
   
 |멤버|설명|  
 |------------|-----------------|  
-|`szMachine`|Identifies the machine that is making the call.|  
-|`dwPid`|Identifies the machine processor.|  
-|`pUserThread`|Identifies the thread that is executing the call.|  
-|`addrStackPointer`|Specifies the address of the call stack.|  
-|`szEntryPoint`|Specifies the address of the call.|  
-|`szDestinationMachine`|Identifies the machine that will execute the call.|  
+|`szMachine`|호출을 수행 하는 컴퓨터를 식별 합니다.|  
+|`dwPid`|컴퓨터 프로세서를 식별 합니다.|  
+|`pUserThread`|호출을 실행 하는 스레드를 식별 합니다.|  
+|`addrStackPointer`|호출 스택의 주소를 지정 합니다.|  
+|`szEntryPoint`|호출의 주소를 지정 합니다.|  
+|`szDestinationMachine`|호출을 실행할 컴퓨터를 식별 합니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **Header:** ProtocolNotify2.idl  
+ **헤더:** ProtocolNotify2  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [INotifySink2 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
 - [진단 기호 저장소 구조체](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)

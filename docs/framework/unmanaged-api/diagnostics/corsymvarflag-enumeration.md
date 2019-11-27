@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448555"
 ---
 # <a name="corsymvarflag-enumeration"></a>CorSymVarFlag 열거형
-Indicates whether a variable is compiler-generated.  
+변수가 컴파일러에서 생성 되었는지 여부를 나타냅니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,11 +37,11 @@ typedef enum CorSymVarFlag
   
 |멤버|설명|  
 |------------|-----------------|  
-|`VAR_IS_COMP_GEN`|Indicates that the given variable is compiler-generated.|  
+|`VAR_IS_COMP_GEN`|지정 된 변수가 컴파일러에서 생성 되었음을 나타냅니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **Header:** CorSym.idl, CorSym.h  
+ **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [진단 기호 저장소 열거형](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)

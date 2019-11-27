@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440575"
 ---
 # <a name="imetadataemitsetpinvokemap-method"></a>IMetaDataEmit::SetPinvokeMap 메서드
-Sets or changes features of a method's PInvoke signature, as defined by a prior call to [IMetaDataEmit::DefinePinvokeMap](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definepinvokemap-method.md).  
+[IMetaDataEmit::D efinepinvokemap](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definepinvokemap-method.md)에 대 한 이전 호출에서 정의한 대로 메서드 PInvoke 시그니처의 기능을 설정 하거나 변경 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,27 +38,27 @@ HRESULT SetPinvokeMap (
   
 ## <a name="parameters"></a>매개 변수  
  `tk`  
- [in] The `mdToken` to which mapping information applies.  
+ 진행 매핑 정보가 적용 되는 `mdToken`입니다.  
   
  `dwMappingFlags`  
- [in] Flags used by PInvoke to do the mapping. This is a bitmask of `CorPinvokeMap` values.  
+ 진행 PInvoke에서 매핑을 수행 하는 데 사용 되는 플래그입니다. `CorPinvokeMap` 값의 비트 마스크입니다.  
   
  `szImportName`  
- [in] The name of the target export in the native DLL.  
+ 진행 네이티브 DLL의 대상 내보내기 이름입니다.  
   
  `mrImportDLL`  
- [in] The `mdModuleRef` token for the target unmanaged DLL.  
+ 진행 관리 되지 않는 대상 DLL에 대 한 `mdModuleRef` 토큰입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IMetaDataEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

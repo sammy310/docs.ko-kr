@@ -1,5 +1,5 @@
 ---
-title: 선택적
+title: 선택 사항
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Optional
@@ -17,17 +17,17 @@ ms.locfileid: "74351431"
 ---
 # <a name="optional-visual-basic"></a>Optional(Visual Basic)
 
-Specifies that a procedure argument can be omitted when the procedure is called.
+프로시저를 호출할 때 프로시저 인수를 생략할 수 있도록 지정 합니다.
 
 ## <a name="remarks"></a>주의
 
-For each optional parameter, you must specify a constant expression as the default value of that parameter. If the expression evaluates to [Nothing](../../../visual-basic/language-reference/nothing.md), the default value of the value data type is used as the default value of the parameter.
+각 선택적 매개 변수에 대해 상수 식을 해당 매개 변수의 기본값으로 지정 해야 합니다. 식이 [Nothing](../../../visual-basic/language-reference/nothing.md)으로 평가 되 면 value 데이터 형식의 기본값이 매개 변수의 기본값으로 사용 됩니다.
 
-If the parameter list contains an optional parameter, every parameter that follows it must also be optional.
+매개 변수 목록에 선택적 매개 변수가 포함 된 경우 뒤에 오는 모든 매개 변수도 선택 사항 이어야 합니다.
 
 `Optional` 한정자는 다음 컨텍스트에서 사용할 수 있습니다.
 
-- [Declare 문](../../../visual-basic/language-reference/statements/declare-statement.md)
+- [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md)
 
 - [Function 문](../../../visual-basic/language-reference/statements/function-statement.md)
 
@@ -36,14 +36,14 @@ If the parameter list contains an optional parameter, every parameter that follo
 - [Sub 문](../../../visual-basic/language-reference/statements/sub-statement.md)
 
 > [!NOTE]
-> When calling a procedure with or without optional parameters, you can pass arguments by position or by name. For more information, see [Passing Arguments by Position and by Name](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md).
+> 선택적 매개 변수를 사용 하거나 사용 하지 않고 프로시저를 호출 하는 경우 위치 또는 이름을 기준으로 인수를 전달할 수 있습니다. 자세한 내용은 [위치 및 이름으로 인수 전달](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md)을 참조 하세요.
 
 > [!NOTE]
-> You can also define a procedure with optional parameters by using overloading. If you have one optional parameter, you can define two overloaded versions of the procedure, one that accepts the parameter and one that doesn’t. 자세한 내용은 [Procedure Overloading](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)을 참조하세요.
+> 오버 로드를 사용 하 여 선택적 매개 변수가 있는 프로시저를 정의할 수도 있습니다. 선택적 매개 변수 하나가 있는 경우 매개 변수를 허용 하는 프로시저의 오버 로드 된 버전 두 개와 그렇지 않은 버전을 정의할 수 있습니다. 자세한 내용은 [Procedure Overloading](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)을 참조하세요.
 
 ## <a name="example"></a>예제
 
-The following example defines a procedure that has an optional parameter.
+다음 예에서는 선택적 매개 변수를 포함 하는 프로시저를 정의 합니다.
 
 ```vb
 Public Function FindMatches(ByRef values As List(Of String),
@@ -66,12 +66,12 @@ End Function
 
 ## <a name="example"></a>예제
 
-The following example demonstrates how to call a procedure with arguments passed by position and with arguments passed by name. The procedure has two optional parameters.
+다음 예제에서는 위치로 전달 된 인수 및 이름으로 전달 된 인수를 사용 하 여 프로시저를 호출 하는 방법을 보여 줍니다. 프로시저에는 두 가지 선택적 매개 변수가 있습니다.
 
 [!code-vb[VbVbalrKeywords#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/class8.vb#21)]
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [매개 변수 목록](../../../visual-basic/language-reference/statements/parameter-list.md)
 - [선택적 매개 변수](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)
-- [C++ 키워드](../../../visual-basic/language-reference/keywords/index.md)
+- [키워드](../../../visual-basic/language-reference/keywords/index.md)

@@ -24,7 +24,7 @@ ms.locfileid: "74428174"
   
  공급자에 대한 자세한 내용은 [CLR ETW 공급자](clr-etw-providers.md)를 참조하세요.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [런타임 정보 이벤트](runtime-information-etw-events.md)  
  SKU, 버전 번호, 런타임이 활성화된 방법, 시작하는 데 사용된 명령줄 매개 변수, GUID(해당되는 경우) 및 다른 관련 정보를 비롯한 런타임 관련 정보를 캡처합니다.  
   
@@ -61,10 +61,10 @@ ms.locfileid: "74428174"
  [스택 이벤트](stack-etw-event.md)  
  이벤트가 발생한 이후 스택 추적을 생성하기 위해 다른 이벤트와 함께 사용되는 정보를 캡처합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [Improve Debugging And Performance Tuning With ETW](https://docs.microsoft.com/archive/msdn-magazine/2007/april/event-tracing-improve-debugging-and-performance-tuning-with-etw)
-- [Windows Performance Blog](https://blogs.msdn.microsoft.com/pigscanfly/tag/xperf/)
+- [ETW를 사용한 디버깅 및 성능 조정 개선](https://docs.microsoft.com/archive/msdn-magazine/2007/april/event-tracing-improve-debugging-and-performance-tuning-with-etw)
+- [Windows 성능 블로그](https://blogs.msdn.microsoft.com/pigscanfly/tag/xperf/)
 - [.NET Framework 로깅 제어](controlling-logging.md)
 - [CLR ETW 공급자](clr-etw-providers.md)
 - [CLR ETW 키워드 및 수준](clr-etw-keywords-and-levels.md)

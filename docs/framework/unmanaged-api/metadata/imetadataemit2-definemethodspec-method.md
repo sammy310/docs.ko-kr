@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432746"
 ---
 # <a name="imetadataemit2definemethodspec-method"></a>IMetaDataEmit2::DefineMethodSpec 메서드
-Creates a generic instance of a method, and gets a token to the definition.  
+메서드의 제네릭 인스턴스를 만들고 해당 정의에 대 한 토큰을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,27 +38,27 @@ HRESULT DefineMethodSpec (
   
 ## <a name="parameters"></a>매개 변수  
  `tkParent`  
- [in] A token for the method of which to create the generic instance. The token must be of type `mdMethodDef` or `mdMemberRef`.  
+ 진행 제네릭 인스턴스를 만들 메서드의 토큰입니다. 토큰은 `mdMethodDef` 또는 `mdMemberRef`형식 이어야 합니다.  
   
  `pvSigBlob`  
- [in] A pointer to the binary COM+ signature of the method.  
+ 진행 메서드의 이진 COM + 시그니처에 대 한 포인터입니다.  
   
  `cbSibBlob`  
- [in] The size, in bytes, of `pvSigBlob`.  
+ 진행 `pvSigBlob`의 크기 (바이트)입니다.  
   
  `pmi`  
- [out] A token to the metadata signature definition of the method.  
+ 제한이 메서드의 메타 데이터 서명 정의에 대 한 토큰입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IMetaDataEmit2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
 - [IMetaDataEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)

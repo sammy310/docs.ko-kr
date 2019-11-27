@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74429751"
 ---
 # <a name="isymunmanagedreadergetvariables-method"></a>ISymUnmanagedReader::GetVariables 메서드
-Returns a non-local variable, given its parent and name.  
+부모 및 이름이 지정 된 경우 지역 변수가 아닌 변수를 반환 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,23 +38,23 @@ HRESULT GetVariables (
   
 ## <a name="parameters"></a>매개 변수  
  `parent`  
- [in] The parent of the variable.  
+ 진행 변수의 부모입니다.  
   
  `cVars`  
  [in] `pVars` 배열의 크기입니다.  
   
  `pcVars`  
- [out] A pointer to the variable that receives the number of variables returned in `pVars`.  
+ 제한이 `pVars`에서 반환 된 변수 수를 받는 변수에 대 한 포인터입니다.  
   
  `pVars`  
- [out] A pointer to the variable that receives the variables.  
+ 제한이 변수를 받는 변수에 대 한 포인터입니다.  
   
 ## <a name="return-value"></a>반환 값  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **Header:** CorSym.idl, CorSym.h  
+ **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ISymUnmanagedReader 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

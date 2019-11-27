@@ -1,5 +1,5 @@
 ---
-title: .NET Framework 애플리케이션에서 캐싱
+title: .NET Framework 응용 프로그램에서 캐싱
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ASP.NET caching
@@ -13,13 +13,13 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428195"
 ---
-# <a name="caching-in-net-framework-applications"></a>.NET Framework 애플리케이션에서 캐싱
+# <a name="caching-in-net-framework-applications"></a>.NET Framework 응용 프로그램에서 캐싱
 캐싱을 사용하면 빠른 액세스를 위해 데이터를 메모리에 저장할 수 있습니다. 데이터에 다시 액세스할 때 애플리케이션은 원래 소스에서 검색하는 대신 캐시에서 데이터를 가져올 수 있습니다. 이 경우 성능과 확장성이 향상됩니다. 또한 캐싱을 사용하면 데이터 소스를 일시적으로 사용할 수 없는 경우에도 데이터를 사용할 수 있습니다.  
   
  .NET Framework에서는 ASP.NET을 포함하여 Windows 클라이언트와 서버 애플리케이션 둘 다의 성능과 확장성을 개선하는 데 사용할 수 있는 캐싱 기능을 제공합니다.  
   
 > [!NOTE]
-> In the .NET Framework 3.5 and earlier versions, ASP.NET provided an in-memory cache implementation in the <xref:System.Web.Caching> namespace. In previous versions of the .NET Framework, caching was available only in the <xref:System.Web> namespace and therefore required a dependency on ASP.NET classes. .NET Framework 4에서는 <xref:System.Runtime.Caching> 네임스페이스에 웹 애플리케이션과 비웹 애플리케이션 둘 다에 사용 가능한 API가 포함되어 있습니다.  
+> .NET Framework 3.5 및 이전 버전에서 ASP.NET는 <xref:System.Web.Caching> 네임 스페이스에 메모리 내 캐시 구현을 제공 했습니다. 이전 버전의 .NET Framework에서 캐싱은 <xref:System.Web> 네임 스페이스 에서만 사용할 수 있으므로 ASP.NET 클래스에 대 한 종속성이 필요 했습니다. .NET Framework 4에서는 <xref:System.Runtime.Caching> 네임스페이스에 웹 애플리케이션과 비웹 애플리케이션 둘 다에 사용 가능한 API가 포함되어 있습니다.  
   
 ## <a name="caching-data"></a>데이터 캐싱  
  <xref:System.Runtime.Caching> 네임스페이스의 클래스를 사용하여 정보를 캐시할 수 있습니다. 이 네임스페이스의 캐싱 클래스는 다음과 같은 기능을 제공합니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "74428195"
  <xref:System.Runtime.Caching> 네임스페이스의 캐싱 클래스는 ASP.NET에서 데이터를 캐시하기 위한 기능을 제공합니다.  
   
 > [!NOTE]
-> If your application targets the .NET Framework 3.5 or earlier, you must use the caching classes that are defined in the <xref:System.Web.Caching> namespace. 자세한 내용은 [ASP.NET 캐싱 개요](https://docs.microsoft.com/previous-versions/aspnet/ms178597(v=vs.100))를 참조하세요.  
+> 응용 프로그램이 .NET Framework 3.5 이전 버전을 대상으로 하는 경우 <xref:System.Web.Caching> 네임 스페이스에 정의 된 캐싱 클래스를 사용 해야 합니다. 자세한 내용은 [ASP.NET 캐싱 개요](https://docs.microsoft.com/previous-versions/aspnet/ms178597(v=vs.100))를 참조하세요.  
   
 > [!NOTE]
 > 새 애플리케이션을 개발하는 경우 <xref:System.Runtime.Caching.MemoryCache> 클래스를 사용하는 것이 좋습니다. <xref:System.Runtime.Caching> 네임스페이스에 제공된 API는 <xref:System.Web.Caching.Cache> 네임스페이스에 제공된 API와 비슷합니다. 따라서 이전 버전의 ASP.NET에서 캐싱을 사용한 경우 API가 익숙할 것입니다. ASP.NET 애플리케이션에서 캐싱을 사용하는 방법의 예제는 [연습: ASP.NET에서 애플리케이션 데이터 캐싱](https://docs.microsoft.com/previous-versions/ff477235(v=vs.100))을 참조하세요.  
@@ -75,7 +75,7 @@ ms.locfileid: "74428195"
   
  자세한 내용은 Scott Guthrie 블로그의 [Extensible Output Caching with ASP.NET 4 (VS 2010 and .NET 4.0 Series)](https://weblogs.asp.net/scottgu/extensible-output-caching-with-asp-net-4-vs-2010-and-net-4-0-series)(ASP.NET 4(VS 2010 및 .NET 4.0 시리즈)에서 확장 가능한 출력 캐싱) 항목을 참조하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Runtime.Caching.ObjectCache>
 - <xref:System.Runtime.Caching.MemoryCache>

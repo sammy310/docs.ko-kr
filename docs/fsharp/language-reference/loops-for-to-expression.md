@@ -20,7 +20,7 @@ for identifier = start [ to | downto ] finish do
     body-expression
 ```
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 식별자의 형식은 *start* 및 *finish* 식의 형식에서 유추 됩니다. 이러한 식의 형식은 32 비트 정수 여야 합니다.
 

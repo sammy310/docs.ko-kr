@@ -45,7 +45,7 @@ ms.locfileid: "74344151"
 |[My.WebServices 개체](../../../visual-basic/language-reference/objects/my-webservices-object.md)|현재 프로젝트에서 참조하는 각 웹 서비스의 단일 인스턴스를 만들고 액세스하기 위한 속성을 제공합니다.|  
 |<xref:Microsoft.VisualBasic.FileIO.TextFieldParser>|구조화된 텍스트 파일을 구문 분석하기 위한 메서드와 속성을 제공합니다.|  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Visual Basic 언어 참조](../../../visual-basic/language-reference/index.md)
 - [Visual Basic](../../../visual-basic/index.md)

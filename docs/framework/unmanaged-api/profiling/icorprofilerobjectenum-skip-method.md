@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428133"
 ---
 # <a name="icorprofilerobjectenumskip-method"></a>ICorProfilerObjectEnum::Skip 메서드
-Advances the cursor of this enumerator from its current position so that the specified number of elements are skipped.  
+지정 된 수의 요소를 건너뛰도록 현재 위치에서이 열거자의 커서를 앞으로 이동 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -35,10 +35,10 @@ HRESULT Skip (
   
 ## <a name="parameters"></a>매개 변수  
  `celt`  
- [in] The number of elements to be skipped.  
+ 진행 건너뛸 요소의 수입니다.  
   
 ## <a name="remarks"></a>주의  
- The new position of this enumerator's cursor is: (current position) + `celt` .  
+ 이 열거자 커서의 새 위치는 (현재 위치) + `celt`입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
@@ -49,6 +49,6 @@ HRESULT Skip (
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerObjectEnum 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md)

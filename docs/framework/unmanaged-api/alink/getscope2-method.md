@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447190"
 ---
 # <a name="getscope2-method"></a>GetScope2 메서드
-Gets an import scope.  
+가져오기 범위를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,24 +37,24 @@ HRESULT GetScope2(
   
 ## <a name="parameters"></a>매개 변수  
  `AssemblyID`  
- ID of target assembly.  
+ 대상 어셈블리의 ID입니다.  
   
  `FileToken`  
- ID of file from which to import.  
+ 가져올 파일의 ID입니다.  
   
  `dwScope`  
- Zero-based scope to import.  
+ 가져올 범위 (0부터 시작)입니다.  
   
  `ppImportScope`  
- Receives pointer to [IMetaDataImport2 Interface](../metadata/imetadataimport2-interface.md) interface for indicated scope.  
+ 표시 된 범위에 대 한 [IMetaDataImport2 interface](../metadata/imetadataimport2-interface.md) 인터페이스에 대 한 포인터를 받습니다.  
   
 ## <a name="return-value"></a>반환 값  
- Returns S_OK if the method succeeds.  
+ 메서드가 성공 하면 S_OK을 반환 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- Requires alink.h.  
+ Alink가 필요 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IALink2 인터페이스](ialink2-interface.md)
 - [IALink 인터페이스](ialink-interface.md)

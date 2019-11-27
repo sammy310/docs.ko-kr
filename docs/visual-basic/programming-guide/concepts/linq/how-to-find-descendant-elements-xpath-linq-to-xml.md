@@ -9,7 +9,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346805"
 ---
-# <a name="how-to-find-descendant-elements-xpath-linq-to-xml-visual-basic"></a>How to: Find Descendant Elements (XPath-LINQ to XML) (Visual Basic)
+# <a name="how-to-find-descendant-elements-xpath-linq-to-xml-visual-basic"></a>방법: 하위 요소 찾기 (XPath-LINQ to XML) (Visual Basic)
 이 항목에서는 특정 이름을 가진 하위 요소를 가져오는 방법을 보여 줍니다.  
   
  XPath 식은 `//Name`입니다.  
@@ -51,6 +51,6 @@ Results are identical
 <Name>Jessica Arnold</Name>  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [LINQ to XML for XPath Users (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [XPath 사용자에 대 한 LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

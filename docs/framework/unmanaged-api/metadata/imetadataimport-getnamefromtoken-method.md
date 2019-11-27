@@ -36,24 +36,24 @@ HRESULT GetNameFromToken (
   
 ## <a name="parameters"></a>매개 변수  
  `tk`  
- [in] The token representing the object to return the name for.  
+ 진행 이름을 반환할 개체를 나타내는 토큰입니다.  
   
  `pszUtf8NamePtr`  
- [out] A pointer to the UTF-8 object name in the heap.  
+ 제한이 힙의 UTF-8 개체 이름에 대 한 포인터입니다.  
   
 ## <a name="remarks"></a>주의  
- `GetNameFromToken`는 사용되지 않습니다. As an alternative, call a method to get the properties of the particular type of token required, such as `GetFieldProps` for a field or `GetMethodProps` for a method.  
+ `GetNameFromToken`는 사용되지 않습니다. 대신 메서드를 호출 하 여 메서드의 필드 또는 `GetMethodProps`에 대 한 `GetFieldProps`와 같이 필요한 특정 유형의 토큰 속성을 가져옵니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
   
- **.NET Framework Versions:** 1.0  
+ **.NET Framework 버전:** 1.0  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IMetaDataImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

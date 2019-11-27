@@ -13,7 +13,7 @@ ms.locfileid: "74283190"
 <xref:System.Activities.Statements.Interop> 활동은 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 워크플로 내에서 WF 3.5 (.NET Framework 3.5) 활동을 래핑하는 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] (WF 4.5) 활동입니다. WF 3 활동은 단일 리프 활동이거나 전체 활동 트리입니다. 실행 (취소 및 예외 처리 포함) 및 .NET Framework 3.5 작업의 지 속성은 실행 중인 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 워크플로 인스턴스의 컨텍스트 내에서 발생 합니다.  
   
 > [!NOTE]
-> 워크플로 프로젝트의 <xref:System.Activities.Statements.Interop>대상 프레임워크**설정을**.NET Framework 4.5**로 설정하지 않으면**  활동이 Workflow Designer 도구 상자에 나타나지 않습니다.  
+> 워크플로 프로젝트의 **대상 프레임 워크** 설정이 **.NET Framework 4.5**로 설정 되어 있지 않으면 <xref:System.Activities.Statements.Interop> 활동이 workflow designer 도구 상자에 나타나지 않습니다.  
   
 ## <a name="criteria-for-using-a-wf-3-activity-with-an-interop-activity"></a>Interop 활동에서 WF 3 활동 사용을 위한 기준  
  WF 3 활동을 <xref:System.Activities.Statements.Interop> 활동 내에서 성공적으로 실행하려면 다음 기준을 충족해야 합니다.  
@@ -24,7 +24,7 @@ ms.locfileid: "74283190"
   
 - WF 3 활동에는 매개 변수가 없는 public 생성자가 있어야 합니다.  
   
-- <xref:System.Activities.Statements.Interop> 작업이 지원하는 인터페이스 형식의 제한 사항 때문에 <xref:System.Workflow.Activities.HandleExternalEventActivity> 및 <xref:System.Workflow.Activities.CallExternalMethodActivity>를 직접 사용할 수는 없지만 워크플로 통신 작업 도구(WCA.exe)를 사용하여 만든 파생 작업을 사용할 수 있습니다. 참조 [Windows Workflow Foundation 도구](https://go.microsoft.com/fwlink/?LinkId=178889) 세부 정보에 대 한 합니다.  
+- <xref:System.Activities.Statements.Interop> 작업에서 지원할 수 있는 인터페이스 형식의 제한 사항으로 인해 <xref:System.Workflow.Activities.HandleExternalEventActivity> 및 <xref:System.Workflow.Activities.CallExternalMethodActivity>는 직접 사용할 수 없지만 워크플로 통신 활동 도구 (WCA. .exe)를 사용 하 여 만든 파생 활동을 사용할 수 있습니다. 자세한 내용은 [Windows Workflow Foundation 도구](https://go.microsoft.com/fwlink/?LinkId=178889) 를 참조 하세요.  
   
 ## <a name="configuring-a-wf-3-activity-within-an-interop-activity"></a>Interop 활동에서 WF 3 활동 구성  
  상호 운용 경계에서 WF 3 활동을 구성하여 데이터를 주고 받으려면 WF 3 활동의 속성 및 메타데이터 속성을 <xref:System.Activities.Statements.Interop> 활동에서 노출해야 합니다. WF 3 활동의 메타데이터 속성(예: <xref:System.Workflow.ComponentModel.Activity.Name%2A>)은 <xref:System.Activities.Statements.Interop.ActivityMetaProperties%2A> 컬렉션을 통해 노출됩니다. 이 컬렉션은 WF 3 활동의 메타데이터 속성 값을 정의하는 데 사용되는 이름-값 쌍의 컬렉션입니다. 메타데이터 속성은 <xref:System.Workflow.ComponentModel.DependencyPropertyOptions.Metadata> 플래그가 설정되는 종속성 속성에 의해 지원되는 속성입니다.  

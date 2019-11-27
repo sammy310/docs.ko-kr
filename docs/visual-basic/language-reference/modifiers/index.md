@@ -12,7 +12,7 @@ ms.locfileid: "74351537"
 # <a name="modifiers-visual-basic"></a>한정자(Visual Basic)
 이 단원의 항목에서는 Visual Basic 런타임 한정자를 설명합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [ANSI](../../../visual-basic/language-reference/modifiers/ansi.md)  
   
  [어셈블리](../../../visual-basic/language-reference/modifiers/assembly.md)  
@@ -39,7 +39,7 @@ ms.locfileid: "74351537"
   
  [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)  
   
- [New](../../../visual-basic/language-reference/modifiers/mustoverride.md)  
+ [MyBase](../../../visual-basic/language-reference/modifiers/mustoverride.md)  
   
  [Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md)  
   
@@ -51,9 +51,9 @@ ms.locfileid: "74351537"
   
  [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)  
   
- [오버로드](../../../visual-basic/language-reference/modifiers/overloads.md)  
+ [Overloads](../../../visual-basic/language-reference/modifiers/overloads.md)  
   
- [재정의 가능](../../../visual-basic/language-reference/modifiers/overridable.md)  
+ [Overrides](../../../visual-basic/language-reference/modifiers/overridable.md)  
   
  [재정의](../../../visual-basic/language-reference/modifiers/overrides.md)  
   
@@ -61,11 +61,11 @@ ms.locfileid: "74351537"
   
  [부분](../../../visual-basic/language-reference/modifiers/partial.md)  
   
- [전용](../../../visual-basic/language-reference/modifiers/private.md)  
+ [Private](../../../visual-basic/language-reference/modifiers/private.md)  
   
  [Private Protected](../../../visual-basic/language-reference/modifiers/private-protected.md)  
   
- [보호됨](../../../visual-basic/language-reference/modifiers/protected.md)  
+ [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
 
  [Protected Friend](../../../visual-basic/language-reference/modifiers/protected-friend.md)  
   
@@ -77,9 +77,9 @@ ms.locfileid: "74351537"
   
  [공유](../../../visual-basic/language-reference/modifiers/shared.md)  
   
- [Static](../../../visual-basic/language-reference/modifiers/static.md)  
+ [정적](../../../visual-basic/language-reference/modifiers/static.md)  
   
- [유니코드](../../../visual-basic/language-reference/modifiers/unicode.md)  
+ [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md)  
   
  [확장](../../../visual-basic/language-reference/modifiers/widening.md)  
   
@@ -87,7 +87,7 @@ ms.locfileid: "74351537"
   
  [WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md)  
   
-## <a name="related-sections"></a>관련 단원  
+## <a name="related-sections"></a>관련 섹션  
  [Visual Basic 언어 참조](../../../visual-basic/language-reference/index.md)  
   
  [Visual Basic](../../../visual-basic/index.md)

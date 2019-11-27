@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431577"
 ---
 # <a name="imetadataemitdefinepermissionset-method"></a>IMetaDataEmit::DefinePermissionSet 메서드
-Creates a definition for a permission set with the specified metadata signature, and gets a token to that permission set definition.  
+지정 된 메타 데이터 시그니처를 사용 하 여 권한 집합에 대 한 정의를 만들고 해당 권한 집합 정의에 대 한 토큰을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,30 +39,30 @@ HRESULT DefinePermissionSet (
   
 ## <a name="parameters"></a>매개 변수  
  `tk`  
- [in] The object to be decorated.  
+ 진행 데코레이팅 할 개체입니다.  
   
  `dwAction`  
- [in] A [CorDeclSecurity](../../../../docs/framework/unmanaged-api/metadata/cordeclsecurity-enumeration.md) value that specifies the type of declarative security to be used.  
+ 진행 사용할 선언적 보안의 형식을 지정 하는 [CorDeclSecurity](../../../../docs/framework/unmanaged-api/metadata/cordeclsecurity-enumeration.md) 값입니다.  
   
  `pvPermission`  
- [in] The permission BLOB.  
+ 진행 권한 BLOB입니다.  
   
  `cbPermission`  
- [in] The size, in bytes, of `pvPermission`.  
+ 진행 `pvPermission`의 크기 (바이트)입니다.  
   
  `ppm`  
- [out] The returned permission token.  
+ 제한이 반환 된 권한 토큰입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IMetaDataEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

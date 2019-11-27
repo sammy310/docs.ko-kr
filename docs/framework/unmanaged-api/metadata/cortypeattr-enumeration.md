@@ -77,47 +77,47 @@ typedef enum CorTypeAttr {
   
 |멤버|설명|  
 |------------|-----------------|  
-|`tdVisibilityMask`|Used for type visibility information.|  
-|`tdNotPublic`|Specifies that the type is not in public scope.|  
-|`tdPublic`|Specifies that the type is in public scope.|  
-|`tdNestedPublic`|Specifies that the type is nested with public visibility.|  
-|`tdNestedPrivate`|Specifies that the type is nested with private visibility.|  
-|`tdNestedFamily`|Specifies that the type is nested with family visibility.|  
-|`tdNestedAssembly`|Specifies that the type is nested with assembly visibility.|  
-|`tdNestedFamANDAssem`|Specifies that the type is nested with family and assembly visibility.|  
-|`tdNestedFamORAssem`|Specifies that the type is nested with family or assembly visibility.|  
-|`tdLayoutMask`|Gets layout information for the type.|  
-|`tdAutoLayout`|Specifies that the fields of this type are laid out automatically.|  
-|`tdSequentialLayout`|Specifies that the fields of this type are laid out sequentially.|  
-|`tdExplicitLayout`|Specifies that field layout is supplied explicitly.|  
-|`tdClassSemanticsMask`|Gets semantic information about the type.|  
-|`tdClass`|Specifies that the type is a class.|  
-|`tdInterface`|Specifies that the type is an interface.|  
-|`tdAbstract`|Specifies that the type is abstract.|  
-|`tdSealed`|Specifies that the type cannot be extended.|  
-|`tdSpecialName`|Specifies that the class name is special. Its name describes how.|  
-|`tdImport`|Specifies that the type is imported.|  
-|`tdSerializable`|Specifies that the type is serializable.|  
-|`tdWindowsRuntime`|Specifies that this type is a Windows Runtime type.|  
-|`tdStringFormatMask`|Gets information about how strings are encoded and formatted.|  
-|`tdAnsiClass`|Specifies that this type interprets an LPTSTR as ANSI.|  
-|`tdUnicodeClass`|Specifies that this type interprets an LPTSTR as Unicode.|  
-|`tdAutoClass`|Specifies that this type interprets an LPTSTR automatically.|  
-|`tdCustomFormatClass`|Specifies that the type has a non-standard encoding, as specified by `CustomFormatMask`.|  
-|`tdCustomFormatMask`|Use this mask to get non-standard encoding information for native interop. The meaning of the values of these two bits is unspecified.|  
-|`tdBeforeFieldInit`|Specifies that the type must be initialized before the first attempt to access a static field.|  
-|`tdForwarder`|Specifies that the type is exported, and a type forwarder.|  
-|`tdReservedMask`|This flag and the flags below are used internally by the common language runtime.|  
-|`tdRTSpecialName`|Specifies that the common language runtime should check the name encoding.|  
-|`tdHasSecurity`|Specifies that the type has security associated with it.|  
+|`tdVisibilityMask`|형식 표시 유형 정보에 사용 됩니다.|  
+|`tdNotPublic`|형식이 공용 범위에 있지 않도록 지정 합니다.|  
+|`tdPublic`|형식이 공용 범위에 있음을 지정 합니다.|  
+|`tdNestedPublic`|형식이 공용 표시 유형으로 중첩 되도록 지정 합니다.|  
+|`tdNestedPrivate`|형식이 전용 표시 유형으로 중첩 되도록 지정 합니다.|  
+|`tdNestedFamily`|형식이 패밀리 표시 유형으로 중첩 되도록 지정 합니다.|  
+|`tdNestedAssembly`|형식이 어셈블리 표시 유형으로 중첩 되도록 지정 합니다.|  
+|`tdNestedFamANDAssem`|형식이 패밀리 및 어셈블리 표시 유형으로 중첩 되도록 지정 합니다.|  
+|`tdNestedFamORAssem`|형식이 패밀리 또는 어셈블리 표시 유형으로 중첩 되도록 지정 합니다.|  
+|`tdLayoutMask`|형식에 대 한 레이아웃 정보를 가져옵니다.|  
+|`tdAutoLayout`|이 형식의 필드를 자동으로 배치 하도록 지정 합니다.|  
+|`tdSequentialLayout`|이 형식의 필드를 순차적으로 배치 하도록 지정 합니다.|  
+|`tdExplicitLayout`|필드 레이아웃이 명시적으로 제공 되도록 지정 합니다.|  
+|`tdClassSemanticsMask`|형식에 대 한 의미 체계 정보를 가져옵니다.|  
+|`tdClass`|형식을 클래스로 지정합니다.|  
+|`tdInterface`|형식을 인터페이스로 지정합니다.|  
+|`tdAbstract`|형식을 추상으로 지정합니다.|  
+|`tdSealed`|형식을 확장할 수 없도록 지정 합니다.|  
+|`tdSpecialName`|클래스 이름을 특수 하도록 지정 합니다. 해당 이름에서 방법을 설명 합니다.|  
+|`tdImport`|형식을 가져오도록 지정 합니다.|  
+|`tdSerializable`|형식을 serialize 할 수 있도록 지정 합니다.|  
+|`tdWindowsRuntime`|이 형식이 Windows 런타임 형식이 되도록 지정 합니다.|  
+|`tdStringFormatMask`|문자열을 인코딩하고 형식을 지정 하는 방법에 대 한 정보를 가져옵니다.|  
+|`tdAnsiClass`|이 형식이 LPTSTR를 ANSI로 해석 하도록 지정 합니다.|  
+|`tdUnicodeClass`|이 형식이 LPTSTR를 유니코드로 해석 하도록 지정 합니다.|  
+|`tdAutoClass`|이 형식이 LPTSTR를 자동으로 해석 하도록 지정 합니다.|  
+|`tdCustomFormatClass`|`CustomFormatMask`에 지정 된 대로 형식이 비표준 인코딩을 포함 하도록 지정 합니다.|  
+|`tdCustomFormatMask`|네이티브 interop에 대 한 비표준 인코딩 정보를 가져오려면이 마스크를 사용 합니다. 이러한 두 비트 값의 의미는 지정 되지 않습니다.|  
+|`tdBeforeFieldInit`|정적 필드에 대 한 첫 번째 액세스를 시도 하기 전에 형식을 초기화 하도록 지정 합니다.|  
+|`tdForwarder`|형식을 내보내도록 지정 하 고 형식 전달자를 지정 합니다.|  
+|`tdReservedMask`|이 플래그와 아래 플래그는 공용 언어 런타임에서 내부적으로 사용 됩니다.|  
+|`tdRTSpecialName`|공용 언어 런타임에서 이름 인코딩을 확인 하도록 지정 합니다.|  
+|`tdHasSecurity`|형식에 연결 된 보안이 있음을 지정 합니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** CorHdr.h  
+ **헤더:** CorHdr .h  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [메타데이터 열거형](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

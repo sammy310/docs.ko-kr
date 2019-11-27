@@ -9,7 +9,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351935"
 ---
-# <a name="linq-to-xml-events-visual-basic"></a>LINQ to XML Events (Visual Basic)
+# <a name="linq-to-xml-events-visual-basic"></a>LINQ to XML 이벤트 (Visual Basic)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 이벤트를 통해 XML 트리가 변경될 때 알림을 받을 수 있습니다.  
   
  <xref:System.Xml.Linq.XObject>의 인스턴스에 이벤트를 추가할 수 있습니다. 이벤트 처리기는 이 <xref:System.Xml.Linq.XObject>와 해당 하위 항목의 수정에 대한 이벤트를 받습니다. 예를 들어, 이벤트 처리기를 트리의 루트에 추가하고 해당 이벤트 처리기에서 트리의 모든 수정을 처리할 수 있습니다.  
@@ -19,14 +19,14 @@ ms.locfileid: "74351935"
 ## <a name="types-and-events"></a>형식 및 이벤트  
  이벤트 작업을 할 때 다음 형식을 사용할 수 있습니다.  
   
-|Type|설명|  
+|형식|설명|  
 |----------|-----------------|  
 |<xref:System.Xml.Linq.XObjectChange>|<xref:System.Xml.Linq.XObject>에 대한 이벤트가 발생할 때 이벤트 형식을 지정합니다.|  
 |<xref:System.Xml.Linq.XObjectChangeEventArgs>|<xref:System.Xml.Linq.XObject.Changing> 및 <xref:System.Xml.Linq.XObject.Changed> 이벤트에 대한 데이터를 제공합니다.|  
   
  다음 이벤트는 XML 트리를 수정할 때 발생합니다.  
   
-|이벤트(event)|설명|  
+|이벤트|설명|  
 |-----------|-----------------|  
 |<xref:System.Xml.Linq.XObject.Changing>|이 <xref:System.Xml.Linq.XObject> 또는 해당 하위 항목이 변경되기 직전에 발생합니다.|  
 |<xref:System.Xml.Linq.XObject.Changed>|<xref:System.Xml.Linq.XObject>가 변경되거나 해당 하위 항목이 변경될 때 발생합니다.|  
@@ -92,7 +92,7 @@ Module Module1
 End Module  
 ```  
   
-### <a name="comments"></a>주석  
+### <a name="comments"></a>설명  
  이 코드의 결과는 다음과 같습니다.  
   
 ```console  
@@ -114,6 +114,6 @@ Total:308
 </Root>  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [Advanced LINQ to XML Programming (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [Visual Basic (Advanced LINQ to XML 프로그래밍)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

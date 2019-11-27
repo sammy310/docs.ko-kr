@@ -42,22 +42,22 @@ typedef enum
   
 |멤버|설명|  
 |------------|-----------------|  
-|`nltNone`|Indicates that none of the keywords are specified.|  
-|`nltAnsi`|Indicates that an ANSI keyword is specified.|  
-|`nltUnicode`|Indicates that a Unicode keyword is specified|  
-|`nltAuto`|Indicates that an auto keyword is specified.|  
-|`nltOle`|Indicates that an OLE keyword is specified.|  
+|`nltNone`|지정 된 키워드가 없음을 나타냅니다.|  
+|`nltAnsi`|ANSI 키워드가 지정 되었음을 나타냅니다.|  
+|`nltUnicode`|유니코드 키워드가 지정 되었음을 나타냅니다.|  
+|`nltAuto`|Auto 키워드가 지정 되었음을 나타냅니다.|  
+|`nltOle`|OLE 키워드가 지정 되었음을 나타냅니다.|  
 |`nltMaxValue`|사용되지 않습니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [메타데이터 열거형](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

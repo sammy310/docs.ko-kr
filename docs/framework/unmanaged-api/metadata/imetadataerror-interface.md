@@ -22,26 +22,26 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74441624"
 ---
 # <a name="imetadataerror-interface"></a>IMetaDataError 인터페이스
-Provides a callback mechanism for reporting errors during the metadata merge.  
+메타 데이터 병합 중에 오류를 보고 하는 콜백 메커니즘을 제공 합니다.  
   
 > [!NOTE]
-> The `IMetaDataError` interface must be implemented by the client.  
+> 클라이언트는 `IMetaDataError` 인터페이스를 구현 해야 합니다.  
   
 ## <a name="methods"></a>메서드  
   
 |메서드|설명|  
 |------------|-----------------|  
-|[OnError 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-onerror-method.md)|Provides notification of errors that occur during the metadata merge.|  
+|[OnError 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-onerror-method.md)|메타 데이터 병합 중에 발생 하는 오류에 대 한 알림을 제공 합니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **Header:** Cor.h  
+ **헤더:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [메타데이터 인터페이스](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
