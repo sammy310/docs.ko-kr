@@ -22,32 +22,32 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448023"
 ---
-# <a name="icorprofilercallbackfunctionunloadstarted-method"></a><span data-ttu-id="61212-102">ICorProfilerCallback::FunctionUnloadStarted 메서드</span><span class="sxs-lookup"><span data-stu-id="61212-102">ICorProfilerCallback::FunctionUnloadStarted Method</span></span>
-<span data-ttu-id="61212-103">Notifies the profiler that the runtime has started to unload a function.</span><span class="sxs-lookup"><span data-stu-id="61212-103">Notifies the profiler that the runtime has started to unload a function.</span></span>  
+# <a name="icorprofilercallbackfunctionunloadstarted-method"></a><span data-ttu-id="b8703-102">ICorProfilerCallback::FunctionUnloadStarted 메서드</span><span class="sxs-lookup"><span data-stu-id="b8703-102">ICorProfilerCallback::FunctionUnloadStarted Method</span></span>
+<span data-ttu-id="b8703-103">런타임이 함수 언로드를 시작 했음을 프로파일러에 알립니다.</span><span class="sxs-lookup"><span data-stu-id="b8703-103">Notifies the profiler that the runtime has started to unload a function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="61212-104">구문</span><span class="sxs-lookup"><span data-stu-id="61212-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b8703-104">구문</span><span class="sxs-lookup"><span data-stu-id="b8703-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT FunctionUnloadStarted(  
     [in] FunctionID functionId);   
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="61212-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="61212-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b8703-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="b8703-105">Parameters</span></span>  
  `functionId`  
- <span data-ttu-id="61212-106">[in] The ID of the function that is being unloaded.</span><span class="sxs-lookup"><span data-stu-id="61212-106">[in] The ID of the function that is being unloaded.</span></span>  
+ <span data-ttu-id="b8703-106">진행 언로드될 함수의 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="b8703-106">[in] The ID of the function that is being unloaded.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="61212-107">주의</span><span class="sxs-lookup"><span data-stu-id="61212-107">Remarks</span></span>  
- <span data-ttu-id="61212-108">The value of the `functionId` parameter is no longer valid after this method returns to the caller.</span><span class="sxs-lookup"><span data-stu-id="61212-108">The value of the `functionId` parameter is no longer valid after this method returns to the caller.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b8703-107">주의</span><span class="sxs-lookup"><span data-stu-id="b8703-107">Remarks</span></span>  
+ <span data-ttu-id="b8703-108">이 메서드가 호출자에 게 반환 된 후에는 `functionId` 매개 변수의 값이 더 이상 유효 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="b8703-108">The value of the `functionId` parameter is no longer valid after this method returns to the caller.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="61212-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="61212-109">Requirements</span></span>  
- <span data-ttu-id="61212-110">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="61212-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b8703-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="b8703-109">Requirements</span></span>  
+ <span data-ttu-id="b8703-110">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="b8703-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="61212-111">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="61212-111">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="b8703-111">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="b8703-111">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="61212-112">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="61212-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="b8703-112">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b8703-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="61212-113">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="61212-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="b8703-113">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b8703-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="61212-114">참조</span><span class="sxs-lookup"><span data-stu-id="61212-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b8703-114">참고 항목</span><span class="sxs-lookup"><span data-stu-id="b8703-114">See also</span></span>
 
-- [<span data-ttu-id="61212-115">ICorProfilerCallback 인터페이스</span><span class="sxs-lookup"><span data-stu-id="61212-115">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="b8703-115">ICorProfilerCallback 인터페이스</span><span class="sxs-lookup"><span data-stu-id="b8703-115">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
