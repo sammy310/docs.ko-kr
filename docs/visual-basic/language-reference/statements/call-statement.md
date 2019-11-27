@@ -15,41 +15,41 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350155"
 ---
-# <a name="call-statement-visual-basic"></a><span data-ttu-id="0d807-102">Call 문(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0d807-102">Call Statement (Visual Basic)</span></span>
+# <a name="call-statement-visual-basic"></a><span data-ttu-id="af157-102">Call 문(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="af157-102">Call Statement (Visual Basic)</span></span>
 
-<span data-ttu-id="0d807-103">Transfers control to a `Function`, `Sub`, or dynamic-link library (DLL) procedure.</span><span class="sxs-lookup"><span data-stu-id="0d807-103">Transfers control to a `Function`, `Sub`, or dynamic-link library (DLL) procedure.</span></span>  
+<span data-ttu-id="af157-103">`Function`, `Sub`또는 DLL (동적 연결 라이브러리) 프로시저로 제어를 전달 합니다.</span><span class="sxs-lookup"><span data-stu-id="af157-103">Transfers control to a `Function`, `Sub`, or dynamic-link library (DLL) procedure.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0d807-104">구문</span><span class="sxs-lookup"><span data-stu-id="0d807-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="af157-104">구문</span><span class="sxs-lookup"><span data-stu-id="af157-104">Syntax</span></span>  
   
 ```vb  
 [ Call ] procedureName [ (argumentList) ]  
 ```  
   
-## <a name="parts"></a><span data-ttu-id="0d807-105">요소</span><span class="sxs-lookup"><span data-stu-id="0d807-105">Parts</span></span>  
+## <a name="parts"></a><span data-ttu-id="af157-105">요소</span><span class="sxs-lookup"><span data-stu-id="af157-105">Parts</span></span>  
 
 |||
 |---|---|
-|`procedureName`|<span data-ttu-id="0d807-106">필수 요소.</span><span class="sxs-lookup"><span data-stu-id="0d807-106">Required.</span></span> <span data-ttu-id="0d807-107">Name of the procedure to call.</span><span class="sxs-lookup"><span data-stu-id="0d807-107">Name of the procedure to call.</span></span>|
-|`argumentList`|<span data-ttu-id="0d807-108">(선택 사항)</span><span class="sxs-lookup"><span data-stu-id="0d807-108">Optional.</span></span> <span data-ttu-id="0d807-109">List of variables or expressions representing arguments that are passed to the procedure when it is called.</span><span class="sxs-lookup"><span data-stu-id="0d807-109">List of variables or expressions representing arguments that are passed to the procedure when it is called.</span></span> <span data-ttu-id="0d807-110">Multiple arguments are separated by commas.</span><span class="sxs-lookup"><span data-stu-id="0d807-110">Multiple arguments are separated by commas.</span></span> <span data-ttu-id="0d807-111">If you include `argumentList`, you must enclose it in parentheses.</span><span class="sxs-lookup"><span data-stu-id="0d807-111">If you include `argumentList`, you must enclose it in parentheses.</span></span>|
+|`procedureName`|<span data-ttu-id="af157-106">필수입니다.</span><span class="sxs-lookup"><span data-stu-id="af157-106">Required.</span></span> <span data-ttu-id="af157-107">호출할 프로시저의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="af157-107">Name of the procedure to call.</span></span>|
+|`argumentList`|<span data-ttu-id="af157-108">(선택 사항)</span><span class="sxs-lookup"><span data-stu-id="af157-108">Optional.</span></span> <span data-ttu-id="af157-109">프로시저를 호출할 때 프로시저에 전달 되는 인수를 나타내는 변수나 식의 목록입니다.</span><span class="sxs-lookup"><span data-stu-id="af157-109">List of variables or expressions representing arguments that are passed to the procedure when it is called.</span></span> <span data-ttu-id="af157-110">여러 인수를 쉼표로 구분 합니다.</span><span class="sxs-lookup"><span data-stu-id="af157-110">Multiple arguments are separated by commas.</span></span> <span data-ttu-id="af157-111">`argumentList`를 포함 하는 경우 괄호로 묶어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="af157-111">If you include `argumentList`, you must enclose it in parentheses.</span></span>|
 |||
   
-## <a name="remarks"></a><span data-ttu-id="0d807-112">주의</span><span class="sxs-lookup"><span data-stu-id="0d807-112">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="af157-112">주의</span><span class="sxs-lookup"><span data-stu-id="af157-112">Remarks</span></span>
 
- <span data-ttu-id="0d807-113">You can use the `Call` keyword when you call a procedure.</span><span class="sxs-lookup"><span data-stu-id="0d807-113">You can use the `Call` keyword when you call a procedure.</span></span> <span data-ttu-id="0d807-114">For most procedure calls, you aren’t required to use this  keyword.</span><span class="sxs-lookup"><span data-stu-id="0d807-114">For most procedure calls, you aren’t required to use this  keyword.</span></span>
+ <span data-ttu-id="af157-113">프로시저를 호출할 때 `Call` 키워드를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="af157-113">You can use the `Call` keyword when you call a procedure.</span></span> <span data-ttu-id="af157-114">대부분의 프로시저 호출의 경우에는이 키워드를 사용할 필요가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="af157-114">For most procedure calls, you aren’t required to use this  keyword.</span></span>
 
- <span data-ttu-id="0d807-115">You typically use the `Call` keyword when the called expression doesn’t start with an identifier.</span><span class="sxs-lookup"><span data-stu-id="0d807-115">You typically use the `Call` keyword when the called expression doesn’t start with an identifier.</span></span> <span data-ttu-id="0d807-116">Use of the `Call` keyword for other uses isn't recommended.</span><span class="sxs-lookup"><span data-stu-id="0d807-116">Use of the `Call` keyword for other uses isn't recommended.</span></span>
+ <span data-ttu-id="af157-115">일반적으로 호출 된 식이 식별자로 시작 하지 않는 경우 `Call` 키워드를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="af157-115">You typically use the `Call` keyword when the called expression doesn’t start with an identifier.</span></span> <span data-ttu-id="af157-116">다른 용도로는 `Call` 키워드를 사용 하지 않는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="af157-116">Use of the `Call` keyword for other uses isn't recommended.</span></span>
 
- <span data-ttu-id="0d807-117">If the procedure returns a value, the `Call` statement discards it.</span><span class="sxs-lookup"><span data-stu-id="0d807-117">If the procedure returns a value, the `Call` statement discards it.</span></span>
+ <span data-ttu-id="af157-117">프로시저에서 값을 반환 하는 경우 `Call` 문은 해당 값을 삭제 합니다.</span><span class="sxs-lookup"><span data-stu-id="af157-117">If the procedure returns a value, the `Call` statement discards it.</span></span>
 
-## <a name="example"></a><span data-ttu-id="0d807-118">예제</span><span class="sxs-lookup"><span data-stu-id="0d807-118">Example</span></span>
+## <a name="example"></a><span data-ttu-id="af157-118">예제</span><span class="sxs-lookup"><span data-stu-id="af157-118">Example</span></span>
 
- <span data-ttu-id="0d807-119">The following code shows two examples where the `Call` keyword is necessary to call a procedure.</span><span class="sxs-lookup"><span data-stu-id="0d807-119">The following code shows two examples where the `Call` keyword is necessary to call a procedure.</span></span> <span data-ttu-id="0d807-120">In both examples, the called expression doesn't start with an identifier.</span><span class="sxs-lookup"><span data-stu-id="0d807-120">In both examples, the called expression doesn't start with an identifier.</span></span>
+ <span data-ttu-id="af157-119">다음 코드에서는 `Call` 키워드가 프로시저를 호출 하는 데 필요한 두 가지 예를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="af157-119">The following code shows two examples where the `Call` keyword is necessary to call a procedure.</span></span> <span data-ttu-id="af157-120">두 예제에서 호출 된 식은 식별자로 시작 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="af157-120">In both examples, the called expression doesn't start with an identifier.</span></span>
 
  [!code-vb[VbVbalrStatements#97](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#97)]  
   
-## <a name="see-also"></a><span data-ttu-id="0d807-121">참조</span><span class="sxs-lookup"><span data-stu-id="0d807-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="af157-121">참고 항목</span><span class="sxs-lookup"><span data-stu-id="af157-121">See also</span></span>
 
-- [<span data-ttu-id="0d807-122">Function 문</span><span class="sxs-lookup"><span data-stu-id="0d807-122">Function Statement</span></span>](function-statement.md)
-- [<span data-ttu-id="0d807-123">Sub 문</span><span class="sxs-lookup"><span data-stu-id="0d807-123">Sub Statement</span></span>](sub-statement.md)
-- [<span data-ttu-id="0d807-124">Declare 문</span><span class="sxs-lookup"><span data-stu-id="0d807-124">Declare Statement</span></span>](declare-statement.md)
-- [<span data-ttu-id="0d807-125">람다 식</span><span class="sxs-lookup"><span data-stu-id="0d807-125">Lambda Expressions</span></span>](../../programming-guide/language-features/procedures/lambda-expressions.md)
+- [<span data-ttu-id="af157-122">Function 문</span><span class="sxs-lookup"><span data-stu-id="af157-122">Function Statement</span></span>](function-statement.md)
+- [<span data-ttu-id="af157-123">Sub 문</span><span class="sxs-lookup"><span data-stu-id="af157-123">Sub Statement</span></span>](sub-statement.md)
+- [<span data-ttu-id="af157-124">Declare Statement</span><span class="sxs-lookup"><span data-stu-id="af157-124">Declare Statement</span></span>](declare-statement.md)
+- [<span data-ttu-id="af157-125">람다 식</span><span class="sxs-lookup"><span data-stu-id="af157-125">Lambda Expressions</span></span>](../../programming-guide/language-features/procedures/lambda-expressions.md)

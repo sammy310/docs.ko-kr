@@ -22,23 +22,23 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431073"
 ---
-# <a name="isymunmanageddocumentgetchecksumalgorithmid-method"></a><span data-ttu-id="6d4fe-102">ISymUnmanagedDocument::GetCheckSumAlgorithmId 메서드</span><span class="sxs-lookup"><span data-stu-id="6d4fe-102">ISymUnmanagedDocument::GetCheckSumAlgorithmId Method</span></span>
-<span data-ttu-id="6d4fe-103">Gets the checksum algorithm identifier, or returns a GUID of all zeros if there is no checksum.</span><span class="sxs-lookup"><span data-stu-id="6d4fe-103">Gets the checksum algorithm identifier, or returns a GUID of all zeros if there is no checksum.</span></span>  
+# <a name="isymunmanageddocumentgetchecksumalgorithmid-method"></a><span data-ttu-id="8a7a5-102">ISymUnmanagedDocument::GetCheckSumAlgorithmId 메서드</span><span class="sxs-lookup"><span data-stu-id="8a7a5-102">ISymUnmanagedDocument::GetCheckSumAlgorithmId Method</span></span>
+<span data-ttu-id="8a7a5-103">체크섬 알고리즘 식별자를 가져오거나, 체크섬이 없을 경우 모든 0의 GUID를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="8a7a5-103">Gets the checksum algorithm identifier, or returns a GUID of all zeros if there is no checksum.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6d4fe-104">구문</span><span class="sxs-lookup"><span data-stu-id="6d4fe-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8a7a5-104">구문</span><span class="sxs-lookup"><span data-stu-id="8a7a5-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetCheckSumAlgorithmId(  
     [out, retval] GUID*  pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="6d4fe-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="6d4fe-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="8a7a5-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="8a7a5-105">Parameters</span></span>  
  `pRetVal`  
- <span data-ttu-id="6d4fe-106">[out] A pointer to a variable that receives the checksum algorithm identifier.</span><span class="sxs-lookup"><span data-stu-id="6d4fe-106">[out] A pointer to a variable that receives the checksum algorithm identifier.</span></span>  
+ <span data-ttu-id="8a7a5-106">제한이 체크섬 알고리즘 식별자를 받는 변수에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="8a7a5-106">[out] A pointer to a variable that receives the checksum algorithm identifier.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="6d4fe-107">반환 값</span><span class="sxs-lookup"><span data-stu-id="6d4fe-107">Return Value</span></span>  
- <span data-ttu-id="6d4fe-108">S_OK if the method succeeds.</span><span class="sxs-lookup"><span data-stu-id="6d4fe-108">S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="8a7a5-107">반환 값</span><span class="sxs-lookup"><span data-stu-id="8a7a5-107">Return Value</span></span>  
+ <span data-ttu-id="8a7a5-108">메서드가 성공 하면 S_OK 합니다.</span><span class="sxs-lookup"><span data-stu-id="8a7a5-108">S_OK if the method succeeds.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6d4fe-109">참조</span><span class="sxs-lookup"><span data-stu-id="6d4fe-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8a7a5-109">참고 항목</span><span class="sxs-lookup"><span data-stu-id="8a7a5-109">See also</span></span>
 
-- [<span data-ttu-id="6d4fe-110">ISymUnmanagedDocument 인터페이스</span><span class="sxs-lookup"><span data-stu-id="6d4fe-110">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+- [<span data-ttu-id="8a7a5-110">ISymUnmanagedDocument 인터페이스</span><span class="sxs-lookup"><span data-stu-id="8a7a5-110">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

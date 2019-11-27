@@ -22,11 +22,11 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74430056"
 ---
-# <a name="icorprofilercallback5conditionalweaktableelementreferences-method"></a><span data-ttu-id="44172-102">ICorProfilerCallback5::ConditionalWeakTableElementReferences 메서드</span><span class="sxs-lookup"><span data-stu-id="44172-102">ICorProfilerCallback5::ConditionalWeakTableElementReferences Method</span></span>
+# <a name="icorprofilercallback5conditionalweaktableelementreferences-method"></a><span data-ttu-id="a38cf-102">ICorProfilerCallback5::ConditionalWeakTableElementReferences 메서드</span><span class="sxs-lookup"><span data-stu-id="a38cf-102">ICorProfilerCallback5::ConditionalWeakTableElementReferences Method</span></span>
 
-<span data-ttu-id="44172-103">직접 멤버 필드 참조와 `ConditionalWeakTable` 종속성을 모두 사용하여 루트를 통해 참조되는 개체의 전이적 Closure를 식별합니다.</span><span class="sxs-lookup"><span data-stu-id="44172-103">Identifies the transitive closure of objects referenced by those roots through both direct member field references and through `ConditionalWeakTable` dependencies.</span></span>
+<span data-ttu-id="a38cf-103">직접 멤버 필드 참조와 `ConditionalWeakTable` 종속성을 모두 사용하여 루트를 통해 참조되는 개체의 전이적 Closure를 식별합니다.</span><span class="sxs-lookup"><span data-stu-id="a38cf-103">Identifies the transitive closure of objects referenced by those roots through both direct member field references and through `ConditionalWeakTable` dependencies.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="44172-104">구문</span><span class="sxs-lookup"><span data-stu-id="44172-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="a38cf-104">구문</span><span class="sxs-lookup"><span data-stu-id="a38cf-104">Syntax</span></span>
 
 ```cpp
 HRESULT ConditionalWeakTableElementReferences(
@@ -37,25 +37,25 @@ HRESULT ConditionalWeakTableElementReferences(
 );
 ```
 
-## <a name="parameters"></a><span data-ttu-id="44172-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="44172-105">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="a38cf-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="a38cf-105">Parameters</span></span>
 
 `cRootRefs`\
-<span data-ttu-id="44172-106">[in] `keyRefIds`, `valueRefIds` 및 `rootIds` 배열의 요소 수입니다.</span><span class="sxs-lookup"><span data-stu-id="44172-106">[in] The number of elements in the `keyRefIds`, `valueRefIds`, and `rootIds` arrays.</span></span>
+<span data-ttu-id="a38cf-106">[in] `keyRefIds`, `valueRefIds` 및 `rootIds` 배열의 요소 수입니다.</span><span class="sxs-lookup"><span data-stu-id="a38cf-106">[in] The number of elements in the `keyRefIds`, `valueRefIds`, and `rootIds` arrays.</span></span>
 
 `keyRefIds`\
-<span data-ttu-id="44172-107">[in] 각각 종속 핸들 쌍의 주 요소에 대한 `ObjectID`를 포함하는 개체 ID의 배열입니다.</span><span class="sxs-lookup"><span data-stu-id="44172-107">[in] An array of object IDs, each of which contains the `ObjectID` for the primary element in the dependent handle pair.</span></span>
+<span data-ttu-id="a38cf-107">[in] 각각 종속 핸들 쌍의 주 요소에 대한 `ObjectID`를 포함하는 개체 ID의 배열입니다.</span><span class="sxs-lookup"><span data-stu-id="a38cf-107">[in] An array of object IDs, each of which contains the `ObjectID` for the primary element in the dependent handle pair.</span></span>
 
 `valueRefIds`\
-<span data-ttu-id="44172-108">[in] 각각 종속 핸들 쌍의 보조 요소에 대한 `ObjectID`를 포함하는 개체 ID의 배열입니다.</span><span class="sxs-lookup"><span data-stu-id="44172-108">[in] An array of object IDs, each of which contains the `ObjectID` for the secondary element in the dependent handle pair.</span></span> <span data-ttu-id="44172-109">(`keyRefIds[i]` keeps `valueRefIds[i]` alive.)</span><span class="sxs-lookup"><span data-stu-id="44172-109">(`keyRefIds[i]` keeps `valueRefIds[i]` alive.)</span></span>
+<span data-ttu-id="a38cf-108">[in] 각각 종속 핸들 쌍의 보조 요소에 대한 `ObjectID`를 포함하는 개체 ID의 배열입니다.</span><span class="sxs-lookup"><span data-stu-id="a38cf-108">[in] An array of object IDs, each of which contains the `ObjectID` for the secondary element in the dependent handle pair.</span></span> <span data-ttu-id="a38cf-109">`keyRefIds[i]` 유지 `valueRefIds[i]` 합니다.</span><span class="sxs-lookup"><span data-stu-id="a38cf-109">(`keyRefIds[i]` keeps `valueRefIds[i]` alive.)</span></span>
 
 `rootIds`\
-<span data-ttu-id="44172-110">[in] 가비지 컬렉션 루트에 대한 추가 정보를 포함하는 정수를 가리키는 `GCHandleID` 값의 배열입니다.</span><span class="sxs-lookup"><span data-stu-id="44172-110">[in] An array of `GCHandleID` values that point to an integer that contains additional information about the garbage collection root.</span></span>
+<span data-ttu-id="a38cf-110">[in] 가비지 컬렉션 루트에 대한 추가 정보를 포함하는 정수를 가리키는 `GCHandleID` 값의 배열입니다.</span><span class="sxs-lookup"><span data-stu-id="a38cf-110">[in] An array of `GCHandleID` values that point to an integer that contains additional information about the garbage collection root.</span></span>
 
-<span data-ttu-id="44172-111">콜백 자체가 진행되는 동안 `ObjectID` 메서드에서 반환되는 `ConditionalWeakTableElementReferences` 값은 유효하지 않습니다. 가비지 수집기가 이전 위치에서 새 위치로 개체를 이동하는 중일 수 있기 때문입니다.</span><span class="sxs-lookup"><span data-stu-id="44172-111">None of the `ObjectID` values returned by the `ConditionalWeakTableElementReferences` method are valid during the callback itself, because the garbage collector may be in the process of moving objects from old to new locations.</span></span> <span data-ttu-id="44172-112">그러므로 프로파일러는 `ConditionalWeakTableElementReferences` 호출 중에 개체 검사를 시도하지 않아야 합니다.</span><span class="sxs-lookup"><span data-stu-id="44172-112">Therefore, profilers should not attempt to inspect objects during a `ConditionalWeakTableElementReferences` call.</span></span> <span data-ttu-id="44172-113">`GarbageCollectionFinished` 시에는 모든 개체가 새 위치로 이동했으므로 검사를 수행해도 됩니다.</span><span class="sxs-lookup"><span data-stu-id="44172-113">At `GarbageCollectionFinished`, all objects have been moved to their new locations, and inspection may be done.</span></span>
+<span data-ttu-id="a38cf-111">콜백 자체가 진행되는 동안 `ObjectID` 메서드에서 반환되는 `ConditionalWeakTableElementReferences` 값은 유효하지 않습니다. 가비지 수집기가 이전 위치에서 새 위치로 개체를 이동하는 중일 수 있기 때문입니다.</span><span class="sxs-lookup"><span data-stu-id="a38cf-111">None of the `ObjectID` values returned by the `ConditionalWeakTableElementReferences` method are valid during the callback itself, because the garbage collector may be in the process of moving objects from old to new locations.</span></span> <span data-ttu-id="a38cf-112">그러므로 프로파일러는 `ConditionalWeakTableElementReferences` 호출 중에 개체 검사를 시도하지 않아야 합니다.</span><span class="sxs-lookup"><span data-stu-id="a38cf-112">Therefore, profilers should not attempt to inspect objects during a `ConditionalWeakTableElementReferences` call.</span></span> <span data-ttu-id="a38cf-113">`GarbageCollectionFinished` 시에는 모든 개체가 새 위치로 이동했으므로 검사를 수행해도 됩니다.</span><span class="sxs-lookup"><span data-stu-id="a38cf-113">At `GarbageCollectionFinished`, all objects have been moved to their new locations, and inspection may be done.</span></span>
 
-## <a name="example"></a><span data-ttu-id="44172-114">예제</span><span class="sxs-lookup"><span data-stu-id="44172-114">Example</span></span>
+## <a name="example"></a><span data-ttu-id="a38cf-114">예제</span><span class="sxs-lookup"><span data-stu-id="a38cf-114">Example</span></span>
 
-<span data-ttu-id="44172-115">The following code example demonstrates how to implement [ICorProfilerCallback5](icorprofilercallback5-interface.md) and use this method.</span><span class="sxs-lookup"><span data-stu-id="44172-115">The following code example demonstrates how to implement [ICorProfilerCallback5](icorprofilercallback5-interface.md) and use this method.</span></span>
+<span data-ttu-id="a38cf-115">다음 코드 예제에서는 [ICorProfilerCallback5](icorprofilercallback5-interface.md) 을 구현 하 고이 메서드를 사용 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="a38cf-115">The following code example demonstrates how to implement [ICorProfilerCallback5](icorprofilercallback5-interface.md) and use this method.</span></span>
 
 ```cpp
 HRESULT Callback5Impl::ConditionalWeakTableElementReferences(
@@ -78,18 +78,18 @@ HRESULT Callback5Impl::ConditionalWeakTableElementReferences(
 }
 ```
 
-## <a name="remarks"></a><span data-ttu-id="44172-116">주의</span><span class="sxs-lookup"><span data-stu-id="44172-116">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="a38cf-116">주의</span><span class="sxs-lookup"><span data-stu-id="a38cf-116">Remarks</span></span>
 
-<span data-ttu-id="44172-117">A profiler for the .NET Framework 4.5 or later versions implements the [ICorProfilerCallback5](icorprofilercallback5-interface.md) interface and records the dependencies specified by the `ConditionalWeakTableElementReferences` method.</span><span class="sxs-lookup"><span data-stu-id="44172-117">A profiler for the .NET Framework 4.5 or later versions implements the [ICorProfilerCallback5](icorprofilercallback5-interface.md) interface and records the dependencies specified by the `ConditionalWeakTableElementReferences` method.</span></span> <span data-ttu-id="44172-118">`ICorProfilerCallback5` provides the complete set of dependencies among live objects represented by `ConditionalWeakTable` entries.</span><span class="sxs-lookup"><span data-stu-id="44172-118">`ICorProfilerCallback5` provides the complete set of dependencies among live objects represented by `ConditionalWeakTable` entries.</span></span> <span data-ttu-id="44172-119">These dependencies and the member field references specified by the [ICorProfilerCallback::ObjectReferences](icorprofilercallback-objectreferences-method.md) method enable a managed profiler to generate the full object graph of live objects.</span><span class="sxs-lookup"><span data-stu-id="44172-119">These dependencies and the member field references specified by the [ICorProfilerCallback::ObjectReferences](icorprofilercallback-objectreferences-method.md) method enable a managed profiler to generate the full object graph of live objects.</span></span>
+<span data-ttu-id="a38cf-117">.NET Framework 4.5 이상 버전에 대 한 프로파일러는 [ICorProfilerCallback5](icorprofilercallback5-interface.md) 인터페이스를 구현 하 고 `ConditionalWeakTableElementReferences` 메서드로 지정 된 종속성을 기록 합니다.</span><span class="sxs-lookup"><span data-stu-id="a38cf-117">A profiler for the .NET Framework 4.5 or later versions implements the [ICorProfilerCallback5](icorprofilercallback5-interface.md) interface and records the dependencies specified by the `ConditionalWeakTableElementReferences` method.</span></span> <span data-ttu-id="a38cf-118">`ICorProfilerCallback5`은 `ConditionalWeakTable` 항목이 나타내는 라이브 개체 간의 전체 종속성 집합을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="a38cf-118">`ICorProfilerCallback5` provides the complete set of dependencies among live objects represented by `ConditionalWeakTable` entries.</span></span> <span data-ttu-id="a38cf-119">이러한 종속성 및 [ICorProfilerCallback:: ObjectReferences](icorprofilercallback-objectreferences-method.md) 메서드로 지정 된 멤버 필드 참조를 사용 하면 관리 되는 프로파일러가 라이브 개체의 전체 개체 그래프를 생성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a38cf-119">These dependencies and the member field references specified by the [ICorProfilerCallback::ObjectReferences](icorprofilercallback-objectreferences-method.md) method enable a managed profiler to generate the full object graph of live objects.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="44172-120">요구 사항</span><span class="sxs-lookup"><span data-stu-id="44172-120">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="a38cf-120">요구 사항</span><span class="sxs-lookup"><span data-stu-id="a38cf-120">Requirements</span></span>
 
-<span data-ttu-id="44172-121">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="44172-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>
+<span data-ttu-id="a38cf-121">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="a38cf-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>
 
-<span data-ttu-id="44172-122">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="44172-122">**Header:** CorProf.idl, CorProf.h</span></span>
+<span data-ttu-id="a38cf-122">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="a38cf-122">**Header:** CorProf.idl, CorProf.h</span></span>
 
-<span data-ttu-id="44172-123">**.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="44172-123">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>
+<span data-ttu-id="a38cf-123">**.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a38cf-123">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="44172-124">참조</span><span class="sxs-lookup"><span data-stu-id="44172-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a38cf-124">참고 항목</span><span class="sxs-lookup"><span data-stu-id="a38cf-124">See also</span></span>
 
-- [<span data-ttu-id="44172-125">ICorProfilerCallback5 인터페이스</span><span class="sxs-lookup"><span data-stu-id="44172-125">ICorProfilerCallback5 Interface</span></span>](icorprofilercallback5-interface.md)
+- [<span data-ttu-id="a38cf-125">ICorProfilerCallback5 인터페이스</span><span class="sxs-lookup"><span data-stu-id="a38cf-125">ICorProfilerCallback5 Interface</span></span>](icorprofilercallback5-interface.md)

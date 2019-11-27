@@ -9,13 +9,13 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74354234"
 ---
-# <a name="deferred-execution-example-visual-basic"></a><span data-ttu-id="2c902-102">Deferred Execution Example (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2c902-102">Deferred Execution Example (Visual Basic)</span></span>
+# <a name="deferred-execution-example-visual-basic"></a><span data-ttu-id="67a89-102">지연 된 실행 예제 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="67a89-102">Deferred Execution Example (Visual Basic)</span></span>
 
-<span data-ttu-id="2c902-103">이 항목에서는 지연된 실행과 지연 계산이 LINQ to XML 쿼리의 실행에 미치는 영향을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="2c902-103">This topic shows how deferred execution and lazy evaluation affect the execution of your LINQ to XML queries.</span></span>
+<span data-ttu-id="67a89-103">이 항목에서는 지연된 실행과 지연 계산이 LINQ to XML 쿼리의 실행에 미치는 영향을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="67a89-103">This topic shows how deferred execution and lazy evaluation affect the execution of your LINQ to XML queries.</span></span>
 
-## <a name="example"></a><span data-ttu-id="2c902-104">예제</span><span class="sxs-lookup"><span data-stu-id="2c902-104">Example</span></span>
+## <a name="example"></a><span data-ttu-id="67a89-104">예제</span><span class="sxs-lookup"><span data-stu-id="67a89-104">Example</span></span>
 
-<span data-ttu-id="2c902-105">다음 예제에서는 지연된 실행을 사용하는 확장 메서드를 사용하는 경우의 실행 순서를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="2c902-105">The following example shows the order of execution when using an extension method that uses deferred execution.</span></span> <span data-ttu-id="2c902-106">이 예제에서는 세 문자열의 배열을 선언한 다음</span><span class="sxs-lookup"><span data-stu-id="2c902-106">The example declares an array of three strings.</span></span> <span data-ttu-id="2c902-107">`ConvertCollectionToUpperCase`에서 반환하는 컬렉션을 반복합니다.</span><span class="sxs-lookup"><span data-stu-id="2c902-107">It then iterates through the collection returned by `ConvertCollectionToUpperCase`.</span></span>
+<span data-ttu-id="67a89-105">다음 예제에서는 지연된 실행을 사용하는 확장 메서드를 사용하는 경우의 실행 순서를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="67a89-105">The following example shows the order of execution when using an extension method that uses deferred execution.</span></span> <span data-ttu-id="67a89-106">이 예제에서는 세 문자열의 배열을 선언한 다음</span><span class="sxs-lookup"><span data-stu-id="67a89-106">The example declares an array of three strings.</span></span> <span data-ttu-id="67a89-107">`ConvertCollectionToUpperCase`에서 반환하는 컬렉션을 반복합니다.</span><span class="sxs-lookup"><span data-stu-id="67a89-107">It then iterates through the collection returned by `ConvertCollectionToUpperCase`.</span></span>
 
 ```vb
 Imports System.Runtime.CompilerServices
@@ -46,7 +46,7 @@ Module Module1
 End Module
 ```
 
-<span data-ttu-id="2c902-108">이 예제는 다음과 같은 출력을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="2c902-108">This example produces the following output:</span></span>
+<span data-ttu-id="67a89-108">이 예제는 다음과 같은 출력을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="67a89-108">This example produces the following output:</span></span>
 
 ```console
 ToUpper: source abc
@@ -57,10 +57,10 @@ ToUpper: source ghi
 Main: str GHI
 ```
 
-<span data-ttu-id="2c902-109">`ConvertCollectionToUpperCase`에서 반환하는 컬렉션을 반복할 때 각 항목이 소스 문자열 배열에서 검색되어 대문자로 변환된 후 다음 항목이 소스 문자열 배열에서 검색됩니다.</span><span class="sxs-lookup"><span data-stu-id="2c902-109">Notice that when iterating through the collection returned by `ConvertCollectionToUpperCase`, each item is retrieved from the source string array and converted to uppercase before the next item is retrieved from the source string array.</span></span>
+<span data-ttu-id="67a89-109">`ConvertCollectionToUpperCase`에서 반환하는 컬렉션을 반복할 때 각 항목이 소스 문자열 배열에서 검색되어 대문자로 변환된 후 다음 항목이 소스 문자열 배열에서 검색됩니다.</span><span class="sxs-lookup"><span data-stu-id="67a89-109">Notice that when iterating through the collection returned by `ConvertCollectionToUpperCase`, each item is retrieved from the source string array and converted to uppercase before the next item is retrieved from the source string array.</span></span>
 
-<span data-ttu-id="2c902-110">반환된 컬렉션의 각 항목이 `foreach`의 `Main` 루프에서 처리되기 전에는 문자열의 전체 배열이 대문자로 변환되지 않는 것을 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2c902-110">You can see that the entire array of strings is not converted to uppercase before each item in the returned collection is processed in the `foreach` loop in `Main`.</span></span>
+<span data-ttu-id="67a89-110">반환된 컬렉션의 각 항목이 `foreach`의 `Main` 루프에서 처리되기 전에는 문자열의 전체 배열이 대문자로 변환되지 않는 것을 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="67a89-110">You can see that the entire array of strings is not converted to uppercase before each item in the returned collection is processed in the `foreach` loop in `Main`.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="2c902-111">참조</span><span class="sxs-lookup"><span data-stu-id="2c902-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="67a89-111">참고 항목</span><span class="sxs-lookup"><span data-stu-id="67a89-111">See also</span></span>
 
-- [<span data-ttu-id="2c902-112">Tutorial: Deferred Execution (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2c902-112">Tutorial: Deferred Execution (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md)
+- [<span data-ttu-id="67a89-112">자습서: 지연 된 실행 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="67a89-112">Tutorial: Deferred Execution (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md)

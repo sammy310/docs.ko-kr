@@ -13,21 +13,21 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347884"
 ---
-# <a name="-nowin32manifest-visual-basic"></a><span data-ttu-id="ab8de-102">-nowin32manifest(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ab8de-102">-nowin32manifest (Visual Basic)</span></span>
-<span data-ttu-id="ab8de-103">실행 파일에 애플리케이션 매니페스트를 포함하지 않도록 컴파일러에 지시합니다.</span><span class="sxs-lookup"><span data-stu-id="ab8de-103">Instructs the compiler not to embed any application manifest into the executable file.</span></span>  
+# <a name="-nowin32manifest-visual-basic"></a><span data-ttu-id="ef679-102">-nowin32manifest(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ef679-102">-nowin32manifest (Visual Basic)</span></span>
+<span data-ttu-id="ef679-103">실행 파일에 애플리케이션 매니페스트를 포함하지 않도록 컴파일러에 지시합니다.</span><span class="sxs-lookup"><span data-stu-id="ef679-103">Instructs the compiler not to embed any application manifest into the executable file.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ab8de-104">구문</span><span class="sxs-lookup"><span data-stu-id="ab8de-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ef679-104">구문</span><span class="sxs-lookup"><span data-stu-id="ef679-104">Syntax</span></span>  
   
 ```console  
 -nowin32manifest  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="ab8de-105">주의</span><span class="sxs-lookup"><span data-stu-id="ab8de-105">Remarks</span></span>  
- <span data-ttu-id="ab8de-106">이 옵션을 사용하는 경우 Win32 리소스 파일에서 또는 이후 빌드 단계 중에 애플리케이션 매니페스트를 제공하지 않으면 Windows Vista에서 애플리케이션에 가상화가 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="ab8de-106">When this option is used, the application will be subject to virtualization on Windows Vista unless you provide an application manifest in a Win32 Resource file or during a later build step.</span></span> <span data-ttu-id="ab8de-107">가상화에 대한 자세한 내용은 [ClickOnce Deployment on Windows Vista](/visualstudio/deployment/clickonce-deployment-on-windows-vista)(Windows Vista의 ClickOnce 배포)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="ab8de-107">For more information about virtualization, see [ClickOnce Deployment on Windows Vista](/visualstudio/deployment/clickonce-deployment-on-windows-vista).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ef679-105">주의</span><span class="sxs-lookup"><span data-stu-id="ef679-105">Remarks</span></span>  
+ <span data-ttu-id="ef679-106">이 옵션을 사용하는 경우 Win32 리소스 파일에서 또는 이후 빌드 단계 중에 애플리케이션 매니페스트를 제공하지 않으면 Windows Vista에서 애플리케이션에 가상화가 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="ef679-106">When this option is used, the application will be subject to virtualization on Windows Vista unless you provide an application manifest in a Win32 Resource file or during a later build step.</span></span> <span data-ttu-id="ef679-107">가상화에 대한 자세한 내용은 [ClickOnce Deployment on Windows Vista](/visualstudio/deployment/clickonce-deployment-on-windows-vista)(Windows Vista의 ClickOnce 배포)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="ef679-107">For more information about virtualization, see [ClickOnce Deployment on Windows Vista](/visualstudio/deployment/clickonce-deployment-on-windows-vista).</span></span>  
   
- <span data-ttu-id="ab8de-108">매니페스트 생성에 대한 자세한 내용은 [-win32manifest(Visual Basic)](../../../visual-basic/reference/command-line-compiler/win32manifest.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="ab8de-108">For more information about manifest creation, see [-win32manifest (Visual Basic)](../../../visual-basic/reference/command-line-compiler/win32manifest.md).</span></span>  
+ <span data-ttu-id="ef679-108">매니페스트 생성에 대한 자세한 내용은 [-win32manifest(Visual Basic)](../../../visual-basic/reference/command-line-compiler/win32manifest.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="ef679-108">For more information about manifest creation, see [-win32manifest (Visual Basic)](../../../visual-basic/reference/command-line-compiler/win32manifest.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ab8de-109">참조</span><span class="sxs-lookup"><span data-stu-id="ab8de-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ef679-109">참고 항목</span><span class="sxs-lookup"><span data-stu-id="ef679-109">See also</span></span>
 
-- [<span data-ttu-id="ab8de-110">Visual Basic 명령줄 컴파일러</span><span class="sxs-lookup"><span data-stu-id="ab8de-110">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
-- [<span data-ttu-id="ab8de-111">프로젝트 디자이너, 애플리케이션 페이지(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ab8de-111">Application Page, Project Designer (Visual Basic)</span></span>](/visualstudio/ide/reference/application-page-project-designer-visual-basic)
+- [<span data-ttu-id="ef679-110">Visual Basic 명령줄 컴파일러</span><span class="sxs-lookup"><span data-stu-id="ef679-110">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
+- [<span data-ttu-id="ef679-111">프로젝트 디자이너, 애플리케이션 페이지(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ef679-111">Application Page, Project Designer (Visual Basic)</span></span>](/visualstudio/ide/reference/application-page-project-designer-visual-basic)

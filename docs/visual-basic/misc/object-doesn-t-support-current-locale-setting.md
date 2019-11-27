@@ -1,5 +1,5 @@
 ---
-title: Object doesn't support current locale setting
+title: 개체가 현재 로캘 설정을 지원 하지 않습니다.
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID447
@@ -11,13 +11,13 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353888"
 ---
-# <a name="object-doesnt-support-current-locale-setting-visual-basic"></a><span data-ttu-id="d5d54-102">개체가 현재 로캘 설정을 지원하지 않음(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d5d54-102">Object doesn't support current locale setting (Visual Basic)</span></span>
-<span data-ttu-id="d5d54-103">현재 프로젝트에 대한 로캘 설정을 지원하지 않는 개체에 액세스하려고 했습니다.</span><span class="sxs-lookup"><span data-stu-id="d5d54-103">You tried to access an object that does not support the locale setting for the current project.</span></span>  
+# <a name="object-doesnt-support-current-locale-setting-visual-basic"></a><span data-ttu-id="0160f-102">개체가 현재 로캘 설정을 지원하지 않음(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0160f-102">Object doesn't support current locale setting (Visual Basic)</span></span>
+<span data-ttu-id="0160f-103">현재 프로젝트에 대한 로캘 설정을 지원하지 않는 개체에 액세스하려고 했습니다.</span><span class="sxs-lookup"><span data-stu-id="0160f-103">You tried to access an object that does not support the locale setting for the current project.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="d5d54-104">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="d5d54-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="0160f-104">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="0160f-104">To correct this error</span></span>  
   
-- <span data-ttu-id="d5d54-105">개체가 지원하는 로캘 설정을 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="d5d54-105">Check which locale settings the object supports.</span></span>  
+- <span data-ttu-id="0160f-105">개체가 지원하는 로캘 설정을 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="0160f-105">Check which locale settings the object supports.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d5d54-106">참조</span><span class="sxs-lookup"><span data-stu-id="d5d54-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0160f-106">참고 항목</span><span class="sxs-lookup"><span data-stu-id="0160f-106">See also</span></span>
 
-- [<span data-ttu-id="d5d54-107">오류 형식</span><span class="sxs-lookup"><span data-stu-id="d5d54-107">Error Types</span></span>](../../visual-basic/programming-guide/language-features/error-types.md)
+- [<span data-ttu-id="0160f-107">오류 형식</span><span class="sxs-lookup"><span data-stu-id="0160f-107">Error Types</span></span>](../../visual-basic/programming-guide/language-features/error-types.md)
