@@ -4,12 +4,12 @@ description: .NET Core SDK 및 빌드 서버의 도구를 사용하는 방법에
 author: mairaw
 ms.date: 05/18/2017
 ms.custom: seodec18
-ms.openlocfilehash: 629b7a9e1f2b59981adb77ab4d3125be7036ff02
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 481d54904192ee82da1f9d34bbf62fa8ffe1cd3b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66299965"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428599"
 ---
 # <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci"></a>.NET Core SDK 및 CI(연속 통합)의 도구 사용
 
@@ -34,7 +34,7 @@ macOS 사용자는 PKG 설치 관리자를 사용해야 합니다. Linux에서�
 > [!NOTE]
 > **Azure DevOps Services**
 >
-> 설치 관리자 스크립트를 사용할 경우 기본 종속성은 자동으로 설치되지 않습니다. 운영 체제에 기본 종속성이 없는 경우 기본 종속성을 설치해야 합니다. 자세한 내용은 [Linux에서 .NET Core의 필수 조건](../linux-prerequisites.md)을 참조하세요.
+> 설치 관리자 스크립트를 사용할 경우 기본 종속성은 자동으로 설치되지 않습니다. 운영 체제에 기본 종속성이 없는 경우 기본 종속성을 설치해야 합니다. 자세한 내용은 [.NET Core 종속성 및 요구 사항](../install/dependencies.md?tabs=netcore30&pivots=os-linux)을 참조하세요.
 
 ## <a name="ci-setup-examples"></a>CI 설치 예제
 
@@ -161,7 +161,7 @@ Azure DevOps Services에서 수동 설치 스크립트를 사용하려면 새 �
 
    ![빌드 단계 추가](./media/using-ci-with-cli/add-build-step.png)
 
-1. **작업 카탈로그**가 표시됩니다. 카탈로그에는 빌드에서 사용할 작업이 포함됩니다. 스크립트가 준비되면 **PowerShell: PowerShell 스크립트 실행**에 대해 추가 단추를 선택합니다.
+1. **작업 카탈로그**가 표시됩니다. 카탈로그에는 빌드에서 사용할 작업이 포함됩니다. 스크립트가 준비되면 **PowerShell: PowerShell 스크립트 실행**에 대해 **추가** 단추를 선택합니다.
 
    ![PowerShell 스크립트 단계 추가](./media/using-ci-with-cli/add-powershell-script.png)
 

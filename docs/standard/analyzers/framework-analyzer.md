@@ -1,16 +1,16 @@
 ---
-title: .NET 보안 분석기 - .NET
-description: .NET Framework 분석기 패키지에서 .NET 보안 분석기를 사용하여 보안 위험을 찾아 해결하는 방법을 알아봅니다.
+title: .NET Framework 분석기 - .NET
+description: .NET Framework 분석기 패키지에서 .NET Framework 분석기를 사용하여 보안 위험을 찾아 해결하는 방법을 알아봅니다.
 author: billwagner
 ms.author: wiwagn
 ms.date: 01/25/2018
 ms.technology: dotnet-standard
-ms.openlocfilehash: 03268375739b34a43f38c60fbfd2c993da9f3840
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 7e64b00eb6fd2c2dbb12c54a2c725590b4d22e15
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197955"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345944"
 ---
 # <a name="the-net-framework-analyzer"></a>.NET Framework 분석기
 
@@ -20,7 +20,7 @@ ms.locfileid: "73197955"
 
 ## <a name="installing-and-configuring-the-net-framework-analyzer"></a>.NET Framework 분석기 설치 및 구성
 
-.NET 보안 분석기를 실행하려는 모든 프로젝트에서 NuGet 패키지로 설치해야 합니다. 한 명의 개발자만이 이를 프로젝트에 추가해야 합니다. 분석기 패키지는 프로젝트에 종속된 기능이며 업데이트된 솔루션이 포함되면 모든 개발자의 컴퓨터에서 실행됩니다.
+.NET Framework 분석기를 실행하려는 모든 프로젝트에서 NuGet 패키지로 설치해야 합니다. 한 명의 개발자만이 이를 프로젝트에 추가해야 합니다. 분석기 패키지는 프로젝트에 종속된 기능이며 업데이트된 솔루션이 포함되면 모든 개발자의 컴퓨터에서 실행됩니다.
 
 .NET Framework 분석기는 [Microsoft.NetFramework.Analyzers](https://www.nuget.org/packages/Microsoft.NetFramework.Analyzers/) NuGet 패키지에서 제공됩니다. 이 패키지는 보안 분석기를 포함하는 .NET Framework에 특정 분석기만을 제공합니다. 대부분의 경우에 [Microsoft.CodeAnalysis.FxCopAnalyzers](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers) NuGet 패키지가 필요합니다. FxCopAnalyzers 집계 패키지에는 다음 분석기뿐만 아니라 Framework.Analyzers 패키지에 포함된 모든 프레임워크 분석기가 포함됩니다.
 
@@ -50,7 +50,7 @@ NuGet 패키지를 설치하면 솔루션을 빌드합니다. 분석기는 코�
 
 **범주:** 디자인
 
-**심각도:** Warning
+**심각도:** 경고
 
 추가 정보: [CA:1058: 형식은 특정 기본 형식을 확장하면 안 됩니다.](/visualstudio/code-quality/ca1058-types-should-not-extend-certain-base-types)
 
@@ -60,7 +60,7 @@ NuGet 패키지를 설치하면 솔루션을 빌드합니다. 분석기는 코�
 
 **범주:** 보안
 
-**심각도:** Warning
+**심각도:** 경고
 
 추가 정보: [## CA2153: 손상된 상태 예외를 catch하지 마세요.](/visualstudio/code-quality/ca2153-avoid-handling-corrupted-state-exceptions)
 
@@ -79,9 +79,9 @@ public class MyItemType
 }
 ```
 
-**범주:** 사용
+**범주:** 사용법
 
-**심각도:** Warning
+**심각도:** 경고
 
 추가 정보: [CA2229: serialization 생성자를 구현하십시오.](/visualstudio/code-quality/ca2229-implement-serialization-constructors)
 
@@ -89,9 +89,9 @@ public class MyItemType
 
 serialize할 수 없는 형식의 인스턴스 필드가 serialize할 수 있는 형식에 정의되었습니다. 해당 필드를 <xref:System.NonSerializedAttribute>로 명시적으로 표시하여 이 경고를 수정해야 합니다.
 
-**범주:** 사용
+**범주:** 사용법
 
-**심각도:** Warning
+**심각도:** 경고
 
 추가 정보: [CA2235: 모두 serialize할 수 없는 필드로 표시하십시오.](/visualstudio/code-quality/ca2235-mark-all-non-serializable-fields)
 
@@ -99,9 +99,9 @@ serialize할 수 없는 형식의 인스턴스 필드가 serialize할 수 있는
 
 공용 언어 런타임에서 serializable로 인식되도록 하려면 형식이 <xref:System.Runtime.Serialization.ISerializable> 인터페이스를 구현하여 사용자 지정 serialization 루틴을 사용하는 경우에도 <xref:System.SerializableAttribute> 특성을 사용하여 형식을 표시해야 합니다.
 
-**범주:** 사용
+**범주:** 사용법
 
-**심각도:** Warning
+**심각도:** 경고
 
 추가 정보: [CA2237: ISerializable 형식을 serializable로 표시하세요.](/visualstudio/code-quality/ca2237-mark-iserializable-types-with-serializableattribute)
 
@@ -111,7 +111,7 @@ serialize할 수 없는 형식의 인스턴스 필드가 serialize할 수 있는
 
 **범주:** 보안
 
-**심각도:** Warning
+**심각도:** 경고
 
 추가 정보: [A3075: XML의 안전하지 않은 DTD 처리](/visualstudio/code-quality/ca2237-mark-iserializable-types-with-serializableattribute)
 
@@ -121,7 +121,7 @@ serialize할 수 없는 형식의 인스턴스 필드가 serialize할 수 있는
 
 **범주:** 보안
 
-**심각도:** Warning
+**심각도:** 경고
 
 추가 정보: [CA5350: 취약한 암호화 알고리즘을 사용하지 마세요.](/visualstudio/code-quality/ca5350-do-not-use-weak-cryptographic-algorithms)
 
@@ -131,6 +131,6 @@ serialize할 수 없는 형식의 인스턴스 필드가 serialize할 수 있는
 
 **범주:** 보안
 
-**심각도:** Warning
+**심각도:** 경고
 
 추가 정보: [CA5351: 손상된 암호화 알고리즘을 사용하지 마세요.](/visualstudio/code-quality/ca5351)

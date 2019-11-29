@@ -9,16 +9,16 @@ helpviewer_keywords:
 - operator associativity [C#]
 - expressions [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 78233b9a18f4369ebb086f2016af3f945b6a654a
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 11c544e7fc923b0820141fb2e096ef7707f0a95f
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039011"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552468"
 ---
 # <a name="c-operators-c-reference"></a>C# 연산자(C# 참조)
 
-C#은 기본 제공 형식에서 지원되는 여러 연산자를 제공합니다. 예를 들어 [산술 연산자](arithmetic-operators.md)는 숫자 피연산자를 사용하여 산술 연산을 수행하고 [부울 논리 연산자](boolean-logical-operators.md)는 [bool](../keywords/bool.md) 피연산자를 사용하여 논리 연산을 수행합니다. 특정 연산자는 [오버로드](operator-overloading.md)할 수 있습니다. 연산자 오버로드를 사용하여 사용자 정의 형식의 피연산자에 대해 연산자 동작을 지정할 수 있습니다.
+C#은 기본 제공 형식에서 지원되는 여러 연산자를 제공합니다. 예를 들어 [산술 연산자](arithmetic-operators.md)는 숫자 피연산자를 사용하여 산술 연산을 수행하고 [부울 논리 연산자](boolean-logical-operators.md)는 [bool](../builtin-types/bool.md) 피연산자를 사용하여 논리 연산을 수행합니다. 특정 연산자는 [오버로드](operator-overloading.md)할 수 있습니다. 연산자 오버로드를 사용하여 사용자 정의 형식의 피연산자에 대해 연산자 동작을 지정할 수 있습니다.
 
 [식](../../programming-guide/statements-expressions-operators/expressions.md)에서 연산자 우선 순위 및 결합성은 연산이 수행되는 순서를 결정합니다. 괄호를 사용하여 연산자 우선 순위 및 결합성에 따라 주어진 계산 순서를 변경할 수 있습니다.
 

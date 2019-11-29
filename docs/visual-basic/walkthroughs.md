@@ -1,5 +1,5 @@
 ---
-title: Visual Basic 언어 연습
+title: 언어 연습
 description: Visual Basic 개발의 일반적인 시나리오에 대한 단계별 지침
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual Basic code, walkthroughs
 - walkthroughs [Visual Basic]
 ms.assetid: e4e1f849-e1ce-4cf7-8483-d9b4c4887a8e
-ms.openlocfilehash: f6a4c5b5376c5ee746bb0fadfeeac7ac9793e91f
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: a6e45e31e2678ce05dc0f637ed1121b54d8d6cbb
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040946"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352837"
 ---
 # <a name="visual-basic-language-walkthroughs"></a>Visual Basic 언어 연습
 

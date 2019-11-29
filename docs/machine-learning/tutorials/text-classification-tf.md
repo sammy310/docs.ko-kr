@@ -1,17 +1,17 @@
 ---
 title: '자습서: 미리 학습된 TensorFlow 모델을 사용하여 영화 리뷰의 감정 분석'
 description: 이 자습서에서는 미리 학습된 TensorFlow 모델을 사용하여 웹 사이트 댓글의 감정을 분류하는 방법을 보여 줍니다. 이진 감정 분류자는 Visual Studio를 사용하여 개발된 C# 콘솔 애플리케이션입니다.
-ms.date: 09/30/2019
+ms.date: 11/15/2019
 ms.topic: tutorial
 ms.custom: mvc
 ms.author: nakersha
 author: natke
-ms.openlocfilehash: 417abb5052df95c8496d97894d3e11d2956d7a1a
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 8c3544b60b1fba1d419ca091b0a1d85fbbdbe2d6
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774393"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204930"
 ---
 # <a name="tutorial-analyze-sentiment-of-movie-reviews-using-a-pre-trained-tensorflow-model-in-mlnet"></a>자습서: ML.NET에서 미리 학습된 TensorFlow 모델을 사용하여 영화 리뷰의 감정 분석
 
@@ -42,7 +42,7 @@ ms.locfileid: "72774393"
 
 3. **Microsoft.ML NuGet 패키지**를 설치합니다.
 
-    솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **NuGet 패키지 관리**를 선택합니다. 패키지 소스로 "nuget.org"를 선택하고 **찾아보기** 탭을 선택합니다. **Microsoft.ML**을 검색하고 원하는 패키지를 선택한 다음, **설치** 단추를 선택합니다. 선택한 패키지의 사용 조건에 동의하여 설치를 진행합니다. **Microsoft.ML.TensorFlow**에 대해 이 단계를 반복합니다.
+    솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **NuGet 패키지 관리**를 선택합니다. 패키지 소스로 "nuget.org"를 선택하고 **찾아보기** 탭을 선택합니다. **Microsoft.ML**을 검색하고 원하는 패키지를 선택한 다음, **설치** 단추를 선택합니다. 선택한 패키지의 사용 조건에 동의하여 설치를 진행합니다. **Microsoft.ML.TensorFlow** 및 **SciSharp.TensorFlow.Redist**에 이 단계를 반복합니다.
 
 ### <a name="add-the-tensorflow-model-to-the-project"></a>TensorFlow 모델을 프로젝트에 추가합니다.
 
@@ -132,7 +132,7 @@ ms.locfileid: "72774393"
 
 1. 다음 표에 표시된 것처럼 [`LoadFromTextFile`](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%2A) 메서드를 사용하여 파일에서 매핑 데이터를 로드하여 단어를 정수로 인코딩하는 사전을 만듭니다.
 
-    |단어     |인덱스    |
+    |단어     |Index    |
     |---------|---------|
     |kids     |  362    |
     |want     |  181    |

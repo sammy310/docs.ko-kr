@@ -5,12 +5,12 @@ author: BillWagner
 ms.author: wiwagn
 ms.date: 09/13/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 3b397c8cac989fb7d1cbc1982cc2ce40a8777983
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: cc7d78006998b79fe9d522e71883ce1af817c051
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73454757"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428554"
 ---
 # <a name="build-a-c-hello-world-application-with-the-net-core-sdk-in-visual-studio-2017"></a>Visual Studio 2017에서 .NET Core SDK를 사용하여 C# Hello World 애플리케이션 빌드
 
@@ -20,7 +20,7 @@ ms.locfileid: "73454757"
 
 “.NET Core 플랫폼 간 개발” 워크로드가 설치된 [Visual Studio 2017 이상](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) .NET Core 2.1 버전 이상을 사용하여 앱을 개발할 수 있습니다.
 
-자세한 내용은 [Windows의 .NET Core에 대한 필수 조건](../windows-prerequisites.md) 문서를 참조하세요.
+자세한 내용은 [.NET Core 종속성 및 요구 사항](../install/sdk.md?tabs=netcore30&pivots=os-windows#install-with-visual-studio) 문서를 참조하세요.
 
 ## <a name="a-simple-hello-world-application"></a>간단한 Hello World 애플리케이션
 

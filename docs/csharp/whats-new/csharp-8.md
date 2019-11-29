@@ -2,12 +2,12 @@
 title: C# 8.0의 새로운 기능 - C# 가이드
 description: C# 8.0의 새로운 기능을 살펴봅니다.
 ms.date: 09/20/2019
-ms.openlocfilehash: e6a2357f4405b4eb31b12a1e3faa6896a31c21a1
-ms.sourcegitcommit: 9b2ef64c4fc10a4a10f28a223d60d17d7d249ee8
+ms.openlocfilehash: 540b95beaf00c17812a3b602602504278be69b0e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "72960825"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74429394"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0의 새로운 기능
 
@@ -30,6 +30,8 @@ C#8.0은 다음 기능 및 향상된 기능을 C# 언어에 추가합니다.
 - [관리되지 않는 생성 형식](#unmanaged-constructed-types)
 - [중첩 식의 stackalloc](#stackalloc-in-nested-expressions)
 - [보간된 약어 문자열의 향상된 기능](#enhancement-of-interpolated-verbatim-strings)
+
+C#8.0은 **.NET Core 3.x** 및 **.NET Standard 2.1**에서 지원됩니다. 자세한 내용은 [C# 언어 버전 관리](../language-reference/configure-language-version.md)를 참조하세요.
 
 이 문서의 나머지 부분에서는 이러한 기능에 대해 간략하게 설명합니다. 심화 문서가 공개되면 해당 자습서에 대한 링크 및 개요가 제공됩니다. `dotnet try` 글로벌 도구를 사용하여 환경에서 다음과 같은 기능을 탐색할 수 있습니다.
 

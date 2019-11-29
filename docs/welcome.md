@@ -5,12 +5,12 @@ author: mairaw
 ms.author: mairaw
 ms.date: 09/23/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: d0ea5aefa62dd4029610ab8a7f7ce9ed52a59600
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: ccff6256b56daccdf8105fd5ad31e81bb892c2a8
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283932"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552960"
 ---
 # <a name="welcome-to-net"></a>.NET 시작
 
@@ -48,7 +48,7 @@ ms.locfileid: "74283932"
 - [.NET Core 가이드](core/index.md)
 - [.NET Framework 가이드](framework/index.md)
 - [C# 가이드](csharp/index.yml)
-- [F# 가이드](fsharp/index.md)
+- [F# 가이드](fsharp/index.yml)
 - [Visual Basic 가이드](visual-basic/index.md)
 - [ML.NET 가이드](machine-learning/index.yml)
 - [Apache Spark용 .NET](spark/index.yml)

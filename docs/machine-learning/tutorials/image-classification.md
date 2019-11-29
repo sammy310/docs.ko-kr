@@ -1,17 +1,17 @@
 ---
 title: '자습서: 미리 학습된 TensorFlow 모델에서 ML.NET 이미지 분류 모델 생성'
 description: 기존 TensorFlow 모델에서 새로운 ML.NET 이미지 분류 모델로 정보를 전이하는 방법을 알아봅니다. TensorFlow 모델은 이미지를 천 개 범주로 분류하도록 학습되었습니다. ML.NET 모델은 전이 학습을 사용하여 이미지를 좀 더 광범위한 범주로 분류합니다.
-ms.date: 10/30/2019
+ms.date: 11/15/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
 author: natke
 ms.author: nakersha
-ms.openlocfilehash: bd25a24e467148c46958b6e7ce7b18e181dab5fd
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 952ce5c52bcd09b8c4e4e40d5ddf85835a26478d
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129595"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204993"
 ---
 # <a name="tutorial-generate-an-mlnet-image-classification-model-from-a-pre-trained-tensorflow-model"></a>자습서: 미리 학습된 TensorFlow 모델에서 ML.NET 이미지 분류 모델 생성
 
@@ -40,13 +40,7 @@ TensorFlow 모델은 이미지를 천 개 범주로 분류하도록 학습되었
 ## <a name="prerequisites"></a>전제 조건
 
 * “.NET Core 플랫폼 간 개발” 워크로드가 설치된 [Visual Studio 2017 버전 15.6 이상](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)
-
-* Microsoft.ML 1.3.1 Nuget 패키지
-* Microsoft.ML.ImageAnalytics 1.3.1 Nuget 패키지
-* Microsoft.ML.TensorFlow 1.3.1 Nuget 패키지
-
 * [자습서 자산 디렉터리 .ZIP 파일](https://github.com/dotnet/samples/blob/master/machine-learning/tutorials/TransferLearningTF/image-classifier-assets.zip)
-
 * [InceptionV1 기계 학습 모델](https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip)
 
 ## <a name="select-the-right-machine-learning-task"></a>적절한 기계 학습 작업 선택
@@ -130,10 +124,10 @@ toaster2.png    appliance
 
     * 솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **NuGet 패키지 관리**를 선택합니다.
     * 패키지 소스로 “nuget.org”를 선택하고, [찾아보기] 탭을 선택하고, **Microsoft.ML**을 검색합니다.
-    * **버전** 드롭다운을 클릭하고, 목록에서 **1.3.1** 패키지를 선택하고, **설치** 단추를 선택합니다.
+    * **버전** 드롭다운을 클릭하고, 목록에서 **1.4.0** 패키지를 선택하고, **설치** 단추를 선택합니다.
     * **변경 내용 미리 보기** 대화 상자에서 **확인** 단추를 선택합니다.
     * 나열된 패키지 라이선스 조건에 동의하면 **라이선스 수락** 대화 상자에서 **동의함** 단추를 선택합니다.
-    * **Microsoft.ML.ImageAnalytics v1.3.1** 및 **Microsoft.ML.TensorFlow v1.3.1**에 대해 이 단계를 반복합니다.
+    * **Microsoft.ML.ImageAnalytics v1.4.0**, **SciSharp.TensorFlow.Redist v1.15.0** 및 **Microsoft.ML.TensorFlow v1.4.0**에 이 단계를 반복합니다.
 
 ### <a name="download-assets"></a>자산 다운로드
 

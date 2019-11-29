@@ -4,12 +4,12 @@ description: Windows, Linux 및 macOS에서 .NET Core 애플리케이션을 빌�
 author: thraka
 ms.author: adegeo
 ms.date: 09/19/2019
-ms.openlocfilehash: 9dbc3ebc8d43fe2570a90f4e10fd155a5b114351
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 78066f2904f6a874b71165e4fe1769b6b778ae41
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72521631"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428875"
 ---
 # <a name="get-started-with-net-core"></a>.NET Core 시작
 
@@ -52,7 +52,7 @@ Hello World!
 - [Visual Studio 2017 및 .NET Core를 설치 및 사용하는 방법](https://channel9.msdn.com/Blogs/dotnet/Get-Started-NET-Core-Visual-Studio-2017/)에 관한 비디오 시청.
 - [명령줄을 사용하여 .NET Core 시작.](tutorials/using-with-xplat-cli.md)
 
-지원되는 Windows 버전 목록은 [Windows 개발을 위한 필수 조건](windows-prerequisites.md) 문서를 참조하세요.
+지원되는 Windows 버전 목록은 [.NET Core 종속성 및 요구 사항](install/dependencies.md?tabs=netcore30&pivots=os-windows) 문서를 참조하세요.
 
 # <a name="linuxtablinux"></a>[Linux](#tab/linux)
 
@@ -61,7 +61,7 @@ Hello World!
 - [명령줄을 사용하여 .NET Core 시작.](tutorials/using-with-xplat-cli.md)
 - [Ubuntu에서 C# 및 .NET Core를 사용하여 Visual Studio Code 시작](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu)에 관한 비디오 시청.
 
-지원되는 Linux 배포판 및 버전 목록은 [Linux 개발을 위한 필수 조건](linux-prerequisites.md) 문서를 참조하세요.
+지원되는 Linux 배포판 및 버전 목록은 [.NET Core 종속성 및 요구 사항](install/dependencies.md?tabs=netcore30&pivots=os-linux) 문서를 참조하세요.
 
 # <a name="macostabmacos"></a>[macOS](#tab/macos)
 
@@ -73,6 +73,6 @@ Hello World!
 - [Mac용 Visual Studio를 사용하여 macOS에서 .NET Core 시작.](tutorials/using-on-mac-vs.md)
 - [Mac용 Visual Studio를 사용하여 macOS에서 완전한 .NET Core 솔루션 빌드.](tutorials/using-on-mac-vs-full-solution.md)
 
-지원되는 OS X/macOS 버전 목록은 [macOS 개발을 위한 필수 구성 요소](macos-prerequisites.md) 항목을 참조하세요.
+지원되는 OS X/macOS 버전 목록은 [.NET Core 종속성 및 요구 사항](install/dependencies.md?tabs=netcore30&pivots=os-macos) 문서를 참조하세요.
 
 ---

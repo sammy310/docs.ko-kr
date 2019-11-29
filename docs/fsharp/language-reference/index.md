@@ -2,12 +2,12 @@
 title: F# 언어 참조
 description: 이 F# 참조에서 언어 토큰, 개념, 형식, 식 및 컴파일러 지원 구문 항목에 대 한 언어 기능 정보를 찾습니다.
 ms.date: 05/16/2016
-ms.openlocfilehash: ac7e268b28d6bb654e4443d04695cb15fe756e9f
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: bd9894176fa736b9eed939d72972e676e2bd2671
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424997"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552900"
 ---
 # <a name="f-language-reference"></a>F# 언어 참조
 
@@ -110,7 +110,3 @@ ms.locfileid: "73424997"
 |[컴파일러 옵션](compiler-options.md)|F# 컴파일러에 대한 명령줄 옵션에 대해 설명합니다.|
 |[컴파일러 지시문](compiler-directives.md)|처리기 지시문 및 컴파일러 지시문에 대해 설명합니다.|
 |[소스 줄, 파일 및 경로 식별자](source-line-file-path-identifiers.md)|코드의 소스 줄 번호, 디렉터리 및 파일 이름에 액세스할 수 있도록 지원하는 기본 제공 값인 `__LINE__`, `__SOURCE_DIRECTORY__` 및 `__SOURCE_FILE__` 식별자에 대해 설명합니다.|
-
-## <a name="see-also"></a>참조
-
-- [Visual F#](../index.md)

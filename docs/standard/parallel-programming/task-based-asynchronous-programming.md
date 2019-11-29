@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - parallelism, task
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
-ms.openlocfilehash: 36ff76db984a864a201313ddb7478cc1e93888fd
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 51292d977f2be87cec7c3481f5004fe5fe756224
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139990"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204536"
 ---
 # <a name="task-based-asynchronous-programming"></a>작업 기반 비동기 프로그래밍
 
@@ -268,9 +268,9 @@ TPL에는 병렬 시나리오와 순차 시나리오 모두에 유용한 새로�
 
 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 또는 <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>에서 상속하지 않는 것이 좋습니다. 대신 <xref:System.Threading.Tasks.Task.AsyncState%2A> 속성을 사용하여 추가 데이터 또는 상태를 <xref:System.Threading.Tasks.Task> 또는 <xref:System.Threading.Tasks.Task%601> 개체에 연결하는 것이 좋습니다. 확장 메서드를 사용하여 <xref:System.Threading.Tasks.Task> 및 <xref:System.Threading.Tasks.Task%601> 클래스의 기능을 확장할 수도 있습니다. 확장 메서드에 대한 자세한 내용은 [확장 메서드](../../csharp/programming-guide/classes-and-structs/extension-methods.md) 및 [확장 메서드](../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)를 참조하세요.
 
-<xref:System.Threading.Tasks.Task> 또는 <xref:System.Threading.Tasks.Task%601>에서 상속해야 하는 경우에는 <xref:System.Threading.Tasks.Task.Run%2A>, <xref:System.Threading.Tasks.Task.Run%2A> 또는 <xref:System.Threading.Tasks.TaskFactory?displayProperty=nameWithType>, <xref:System.Threading.Tasks.TaskFactory%601?displayProperty=nameWithType> 또는 <xref:System.Threading.Tasks.TaskCompletionSource%601?displayProperty=nameWithType> 클래스를 사용하여 사용자 지정 작업 형식의 인스턴스를 만들 수 없습니다. 이러한 메커니즘은 <xref:System.Threading.Tasks.Task> 및 <xref:System.Threading.Tasks.Task%601> 개체만 만들기 때문입니다. 또한 <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.TaskFactory> 및 <xref:System.Threading.Tasks.TaskFactory%601>에서 제공하는 작업 연속 메커니즘을 사용하여 사용자 지정 작업의 인스턴스를 만들 수 없습니다. 이 메커니즘에서도 mechanisms also create only <xref:System.Threading.Tasks.Task> 및 <xref:System.Threading.Tasks.Task%601> 개체만 만들기 때문입니다.
+<xref:System.Threading.Tasks.Task> 또는 <xref:System.Threading.Tasks.Task%601>에서 상속해야 하는 경우에는 <xref:System.Threading.Tasks.Task.Run%2A>을(를) 사용하거나 <xref:System.Threading.Tasks.TaskFactory?displayProperty=nameWithType>, <xref:System.Threading.Tasks.TaskFactory%601?displayProperty=nameWithType> 또는 <xref:System.Threading.Tasks.TaskCompletionSource%601?displayProperty=nameWithType> 클래스를 사용하여 사용자 지정 작업 형식의 인스턴스를 만들 수 없습니다. 이러한 메커니즘은 <xref:System.Threading.Tasks.Task> 및 <xref:System.Threading.Tasks.Task%601> 개체만 만들기 때문입니다. 또한 <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.TaskFactory> 및 <xref:System.Threading.Tasks.TaskFactory%601>에서 제공하는 작업 연속 메커니즘을 사용하여 사용자 지정 작업의 인스턴스를 만들 수 없습니다. 이 메커니즘에서도 mechanisms also create only <xref:System.Threading.Tasks.Task> 및 <xref:System.Threading.Tasks.Task%601> 개체만 만들기 때문입니다.
 
-## <a name="related-topics"></a>관련된 항목
+## <a name="related-topics"></a>관련 항목
 
 |제목|설명|
 |-|-|

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - walkthroughs [Visual Studio], Visual C#
 - Visual C#, walkthroughs
 ms.assetid: 2d07b972-ef69-4676-9aef-e1784728e1ff
-ms.openlocfilehash: 757cbce98c73821a19ee162b7828fa4ad952de3c
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: a997cc62b03a0d92d5ef76173981f5a9e287b13a
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73195494"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204599"
 ---
 # <a name="c-walkthroughs"></a>C# 연습
 연습에서는 일반 시나리오에 대한 단계별 지침을 제공하므로 제품 또는 특정 기능 영역 파악을 효율적으로 시작할 수 있습니다.  
@@ -24,7 +24,7 @@ ms.locfileid: "73195494"
  [async](./language-reference/keywords/async.md) 및 [await](./language-reference/operators/await.md)를 사용하여 비동기 솔루션을 만드는 방법을 보여 줍니다.  
   
  [C# 또는 Visual Basic에서 Windows 런타임 구성 요소를 만든 다음 JavaScript에서 호출](/windows/uwp/winrt-components/walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript)  
- Windows 런타임 형식을 만들고 Windows 런타임 구성 요소에 패키지한 다음, JavaScript를 사용하여 Windows용으로 빌드된 [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] 앱에서 해당 구성 요소를 호출하는 방법을 보여 줍니다.  
+ Windows 런타임 형식을 만들고 Windows 런타임 구성 요소에 패키지한 다음, JavaScript를 사용하여 Windows용으로 빌드된 Windows 8.x 스토어 앱에서 해당 구성 요소를 호출하는 방법을 보여 줍니다.  
   
  [Office 프로그래밍(C# 및 Visual Basic)](./programming-guide/interop/walkthrough-office-programming.md)  
  C# 및 Visual Basic을 사용하여 Excel 통합 문서와 Word 문서를 만드는 방법을 보여 줍니다.  

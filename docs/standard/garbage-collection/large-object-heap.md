@@ -1,17 +1,17 @@
 ---
-title: Windows 시스템의 큰 개체 힙
+title: Windows의 LOH - .NET
 ms.date: 05/02/2018
 helpviewer_keywords:
 - large object heap (LOH)"
 - LOH
 - garbage collection, large object heap
 - GC [.NET ], large object heap
-ms.openlocfilehash: 618db9faff137e6ff0f878c928e3a889cff37838
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5125b76dd26ffa4fb363ecf8449f65b490f57b93
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120931"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283614"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Windows 시스템의 큰 개체 힙
 
@@ -22,7 +22,7 @@ ms.locfileid: "73120931"
 
 ## <a name="how-an-object-ends-up-on-the-large-object-heap-and-how-gc-handles-them"></a>개체가 큰 개체 힙에서 종료하는 방법 및 GC에서 처리하는 방법
 
-개체는 85,000바이트 이상이면 큰 개체로 간주됩니다. 이 숫자는 성능 튜닝으로 결정됩니다. 개체 할당 요청이 85,000바이트 이상이면 런타임에서 이를 큰 개체 힙에 할당합니다.
+개체 크기가 85,000바이트 이상이면 큰 개체로 간주됩니다. 이 숫자는 성능 튜닝으로 결정됩니다. 개체 할당 요청이 85,000바이트 이상이면 런타임에서 이를 큰 개체 힙에 할당합니다.
 
 이 의미를 이해하려면 .NET GC에 대한 몇 가지 기본 사항을 검토하는 것이 유용합니다.
 

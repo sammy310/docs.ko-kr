@@ -1,20 +1,22 @@
 ---
 title: 파일 및 기타 소스에서 데이터 로드
-description: 여기에서는 ML.NET에서의 처리 및 학습을 위해 데이터를 로드하는 방법을 보여 줍니다. 데이터는 원래 파일이나 데이터베이스, JSON, XML 또는 메모리 내 컬렉션 등의 다른 데이터 원본에 저장됩니다.
-ms.date: 09/11/2019
+description: API를 사용하여 처리 및 학습을 위한 데이터를 ML.NET으로 로드하는 방법을 알아봅니다. 데이터는 파일, 데이터베이스, JSON, XML 또는 메모리 내 컬렉션에 저장됩니다.
+ms.date: 11/07/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to, title-hack-0625
-ms.openlocfilehash: 82a4d19a6296faa6d195e301016b1bf97d483a2c
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 83aaae2d2e75b3076841750bf5d505390a538bc0
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040798"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344750"
 ---
 # <a name="load-data-from-files-and-other-sources"></a>파일 및 기타 소스에서 데이터 로드
 
-여기에서는 ML.NET에서의 처리 및 학습을 위해 데이터를 로드하는 방법을 보여 줍니다. 데이터는 원래 파일이나 데이터베이스, JSON, XML 또는 메모리 내 컬렉션 등의 다른 데이터 원본에 저장됩니다.
+API를 사용하여 처리 및 학습을 위한 데이터를 ML.NET으로 로드하는 방법을 알아봅니다. 데이터는 원래 파일이나 데이터베이스, JSON, XML 또는 메모리 내 컬렉션 등의 다른 데이터 원본에 저장됩니다.
+
+모델 작성기를 사용하는 경우, [모델 작성기에 학습 데이터 로드](load-data-model-builder.md)를 참조하세요.
 
 ## <a name="create-the-data-model"></a>데이터 모델 만들기
 
@@ -107,10 +109,10 @@ IDataView data = textLoader.Load("DataFolder/SubFolder1/1.txt", "DataFolder/SubF
 
 ## <a name="load-data-from-a-relational-database"></a>관계형 데이터베이스에서 데이터 로드
 
-> [!NOTE]
-> DatabaseLoader는 현재 미리 보기로 제공됩니다. DatabaseLoader는 [Microsoft.ML.Experimental](https://www.nuget.org/packages/Microsoft.ML.Experimental/0.16.0-preview) 및 [System.Data.SqlClient](https://www.nuget.org/packages/System.Data.SqlClient/4.6.1) NuGet 패키지를 참조하여 사용할 수 있습니다.
-
 ML.NET은 SQL Server, Azure Database, Oracle, SQLite, PostgreSQL, Progress, IBM DB2 등 [`System.Data`](xref:System.Data)가 지원하는 다양한 관계형 데이터베이스에서의 데이터 로드를 지원합니다.
+
+> [!NOTE]
+> `DatabaseLoader`를 사용하려면 [System.Data.SqlClient](https://www.nuget.org/packages/System.Data.SqlClient) NuGet 패키지를 참조합니다.
 
 `House`라는 테이블과 다음 스키마가 포함된 데이터베이스가 있는 경우:
 
@@ -130,7 +132,7 @@ CREATE TABLE [House] (
 public class HouseData
 {
     public float Size { get; set; }
-    
+
     public float NumBed { get; set; }
 
     public float Price { get; set; }
@@ -213,4 +215,5 @@ IDataView data = mlContext.Data.LoadFromEnumerable<HousingData>(inMemoryCollecti
 
 ## <a name="next-steps"></a>다음 단계
 
-모델 작성기를 사용하여 기계 학습 모델을 학습하는 경우 [모델 작성기에 학습 데이터 로드](load-data-model-builder.md)를 참조하세요.
+- 데이터를 정리하거나 처리하려면 [모델 빌드를 위해 데이터 준비](prepare-data-ml-net.md)를 참조하세요.
+- 모델을 빌드할 준비가 된 경우, [모델 학습 및 평가](train-machine-learning-model-ml-net.md)를 참조하세요.

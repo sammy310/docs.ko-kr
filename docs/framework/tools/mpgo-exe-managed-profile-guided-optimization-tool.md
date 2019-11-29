@@ -10,20 +10,20 @@ helpviewer_keywords:
 ms.assetid: f6976502-a000-4fbe-aaf5-a7aab9ce4ec2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e8c9093faa80249a2c5898c1f250e97208764be6
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: a5ab3040a246a135771c45b2639567db9ab510e3
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044405"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447962"
 ---
 # <a name="mpgoexe-managed-profile-guided-optimization-tool"></a>Mpgo.exe(관리되는 프로필 기반 최적화 도구)
 
-관리되는 프로필 기반 최적화 도구(Mpgo.exe)는 공통 최종 사용자 시나리오를 사용하여 [네이티브 이미지 생성기(Ngen.exe)](ngen-exe-native-image-generator.md)로 만들어지는 네이티브 이미지 어셈블리를 최적화하는 명령줄 도구입니다. 이 도구를 사용하면 프로필 데이터를 생성하는 교육 시나리오를 실행할 수 있습니다. [네이티브 이미지 생성기(Ngen.exe)](ngen-exe-native-image-generator.md)는 이 데이터를 사용하여 생성된 네이티브 이미지 애플리케이션 어셈블리를 최적화합니다. 교육 시나리오는 애플리케이션의 정상적 용도에 대한 평가 실행입니다. Mpgo.exe는 Visual Studio Ultimate 2012 이상 버전에서 사용할 수 있습니다. Visual Studio 2013부터 Mpgo.exe를 사용하여 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 앱을 최적화할 수도 있습니다.  
+관리되는 프로필 기반 최적화 도구(Mpgo.exe)는 공통 최종 사용자 시나리오를 사용하여 [네이티브 이미지 생성기(Ngen.exe)](ngen-exe-native-image-generator.md)로 만들어지는 네이티브 이미지 어셈블리를 최적화하는 명령줄 도구입니다. 이 도구를 사용하면 프로필 데이터를 생성하는 교육 시나리오를 실행할 수 있습니다. [네이티브 이미지 생성기(Ngen.exe)](ngen-exe-native-image-generator.md)는 이 데이터를 사용하여 생성된 네이티브 이미지 애플리케이션 어셈블리를 최적화합니다. 교육 시나리오는 애플리케이션의 정상적 용도에 대한 평가 실행입니다. Mpgo.exe는 Visual Studio Ultimate 2012 이상 버전에서 사용할 수 있습니다. Visual Studio 2013부터 Mpgo.exe를 사용하여 Windows 8.x 스토어 앱을 최적화할 수도 있습니다.  
   
 프로필 기반 최적화는 교육 시나리오에서 데이터를 수집하고 네이티브 이미지의 레이아웃을 최적화하는 데 사용하여 애플리케이션 시작 시간, 메모리 사용률(작업 집합 크기), 처리량을 개선합니다.  
   
-중간 언어(IL) 어셈블리에 대한 시작 시간 및 작업 집합에서 성능 문제가 발생하면 먼저 Ngen.exe를 사용하여 JIT(Just-In-Time) 컴파일 비용을 제거하고 코드 공유를 지원하는 것이 좋습니다. 추가 개선이 필요한 경우 Mpgo.exe를 사용하여 애플리케이션을 더 최적화할 수 있습니다. 최적화되지 않은 네이티브 이미지 어셈블리의 성능 데이터를 성능 향상을 평가하는 기준선으로 사용할 수 있습니다. Mpgo.exe를 사용하면 콜드 시작 시간이 단축되고 작업 집합 크기가 작아질 수 있습니다. Mpgo.exe는 Ngen.exe가 정보 최적화 네이티브 이미지 어셈블리를 생성하는 데 사용하는 정보를 IL 어셈블리에 추가합니다. 자세한 내용은 .NET 블로그의 [데스크톱 애플리케이션의 시작 성능 개선](https://go.microsoft.com/fwlink/p/?LinkId=248943) 항목을 참조하세요.  
+중간 언어(IL) 어셈블리에 대한 시작 시간 및 작업 집합에서 성능 문제가 발생하면 먼저 Ngen.exe를 사용하여 JIT(Just-In-Time) 컴파일 비용을 제거하고 코드 공유를 지원하는 것이 좋습니다. 추가 개선이 필요한 경우 Mpgo.exe를 사용하여 애플리케이션을 더 최적화할 수 있습니다. 최적화되지 않은 네이티브 이미지 어셈블리의 성능 데이터를 성능 향상을 평가하는 기준선으로 사용할 수 있습니다. Mpgo.exe를 사용하면 콜드 시작 시간이 단축되고 작업 집합 크기가 작아질 수 있습니다. Mpgo.exe는 Ngen.exe가 정보 최적화 네이티브 이미지 어셈블리를 생성하는 데 사용하는 정보를 IL 어셈블리에 추가합니다. 자세한 내용은 .NET 블로그의 [데스크톱 애플리케이션의 시작 성능 개선](https://devblogs.microsoft.com/dotnet/improving-launch-performance-for-your-desktop-applications/) 항목을 참조하세요.  
   
 이 도구는 자동으로 Visual Studio와 함께 설치됩니다. 도구를 실행하려면 Visual Studio용 개발자 명령 프롬프트(또는 Windows 7의 Visual Studio 명령 프롬프트)를 관리자 자격 증명과 함께 사용하고 다음 명령 프롬프트를 입력합니다. 자세한 내용은 [명령 프롬프트](developer-command-prompt-for-vs.md)를 참조하세요.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "71044405"
 mpgo –Scenario <command> [-Import <directory>] –AssemblyList <assembly1>  <assembly2> ... -OutDir <directory> [options]  
 ```  
   
-[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램:  
+Windows 8.x 스토어 앱:  
   
 ## <a name="syntax"></a>구문  
   
@@ -49,11 +49,11 @@ mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>
 
 |필수적 매개 변수|설명|
 |------------------------|-----------------|
-|`-Scenario` \<*command*><br /><br /> 또는<br /><br /> `-Scenario` \<*packageName*><br /><br /> 또는<br /><br /> `-Import` \<*directory*>|데스크톱 앱의 경우 `–Scenario`를 사용하여 명령줄 인수 등의 최적화할 애플리케이션을 실행할 명령을 지정합니다. 공백이 포함된 경로를 지정하는 경우 *command*에 세 개의 큰따옴표를 사용합니다(예: `mpgo.exe -scenario """C:\My App\myapp.exe""" -assemblylist """C:\My App\myapp.exe""" -outdir "C:\optimized files"`). *command*에 공백이 포함되어 있는 경우 큰따옴표를 사용하면 제대로 작동하지 않으므로 큰따옴표를 사용하지 마세요.<br /><br /> 또는<br /><br /> [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 앱의 경우 `–Scenario`를 사용하여 프로필 정보를 생성할 패키지를 지정합니다. 전체 패키지 이름 대신 패키지의 표시 이름 또는 패키지 제품군 이름을 지정하는 경우, Mpgo.exe는 일치 항목이 하나뿐이면 사용자가 입력한 이름과 일치하는 패키지를 선택합니다. 여러 패키지가 지정된 이름과 일치하는 경우, Mpgo.exe는 패키지를 선택하라는 메시지를 표시합니다.<br /><br /> 또는<br /><br /> `-Import`를 사용하여 이전에 최적화된 어셈블리의 최적화 데이터가 `-AssemblyList`에서 어셈블리를 최적화하는 데 사용해야 함을 지정합니다. *directory*는 이전에 최적화된 파일이 들어있는 디렉터리를 지정합니다. `–AssemblyList` 또는 `–AssemblyListFile`에서 지정된 어셈블리는 가져온 파일의 데이터를 사용하여 최적화할 어셈블리의 새 버전입니다. 이전 어셈블리 버전의 최적화 데이터를 사용하면 시나리오를 다시 실행하지 않고도 새 버전의 어셈블리를 최적화할 수 있습니다.  그러나 가져온 어셈블리와 대상 어셈블리가 현저히 다른 코드를 포함하는 경우, 최적화 데이터의 효율성이 저하됩니다. `–AssemblyList` 또는 `–AssemblyListFile`에 지정된 어셈블리 이름은 `–Import`*directory*로 지정된 디렉터리에 있어야 합니다. 공백이 포함된 경로를 지정하는 경우 *directory*를 세 개의 큰따옴표로 묶습니다.<br /><br /> `–Scenario` 또는 `–Import` 매개 변수를 지정해야 하지만 둘 다 지정할 수는 없습니다.|
+|`-Scenario` \<*command*><br /><br /> 또는<br /><br /> `-Scenario` \<*packageName*><br /><br /> 또는<br /><br /> `-Import` \<*directory*>|데스크톱 앱의 경우 `–Scenario`를 사용하여 명령줄 인수 등의 최적화할 애플리케이션을 실행할 명령을 지정합니다. 공백이 포함된 경로를 지정하는 경우 *command*에 세 개의 큰따옴표를 사용합니다(예: `mpgo.exe -scenario """C:\My App\myapp.exe""" -assemblylist """C:\My App\myapp.exe""" -outdir "C:\optimized files"`). *command*에 공백이 포함되어 있는 경우 큰따옴표를 사용하면 제대로 작동하지 않으므로 큰따옴표를 사용하지 마세요.<br /><br /> 또는<br /><br /> Windows 8.x 스토어 앱의 경우 `–Scenario`을(를) 사용하여 프로필 정보를 생성할 패키지를 지정합니다. 전체 패키지 이름 대신 패키지의 표시 이름 또는 패키지 제품군 이름을 지정하는 경우, Mpgo.exe는 일치 항목이 하나뿐이면 사용자가 입력한 이름과 일치하는 패키지를 선택합니다. 여러 패키지가 지정된 이름과 일치하는 경우, Mpgo.exe는 패키지를 선택하라는 메시지를 표시합니다.<br /><br /> 또는<br /><br /> `-Import`를 사용하여 이전에 최적화된 어셈블리의 최적화 데이터가 `-AssemblyList`에서 어셈블리를 최적화하는 데 사용해야 함을 지정합니다. *directory*는 이전에 최적화된 파일이 들어있는 디렉터리를 지정합니다. `–AssemblyList` 또는 `–AssemblyListFile`에서 지정된 어셈블리는 가져온 파일의 데이터를 사용하여 최적화할 어셈블리의 새 버전입니다. 이전 어셈블리 버전의 최적화 데이터를 사용하면 시나리오를 다시 실행하지 않고도 새 버전의 어셈블리를 최적화할 수 있습니다.  그러나 가져온 어셈블리와 대상 어셈블리가 현저히 다른 코드를 포함하는 경우, 최적화 데이터의 효율성이 저하됩니다. `–AssemblyList` 또는 `–AssemblyListFile`에 지정된 어셈블리 이름은 `–Import`*directory*로 지정된 디렉터리에 있어야 합니다. 공백이 포함된 경로를 지정하는 경우 *directory*를 세 개의 큰따옴표로 묶습니다.<br /><br /> `–Scenario` 또는 `–Import` 매개 변수를 지정해야 하지만 둘 다 지정할 수는 없습니다.|
 |`-OutDir` \<*directory*>|최적화된 어셈블리를 저장할 디렉터리 출력 디렉터리 폴더에 어셈블리가 이미 있으면, 새 복사본이 생성되고 이름에 인덱스 번호가 추가됩니다(예: *assemblyname*-1.exe). 공백이 포함된 경로를 지정하는 경우 *directory*를 큰따옴표로 묶습니다.|
 |`-AssemblyList` \<*assembly1 assembly2 ...* ><br /><br /> 또는<br /><br /> `-AssemblyListFile` \<*file*>|공백으로 분리된 프로필 정보를 수집할 어셈블리(.exe 및 .dll 파일 등)의 목록 `C:\Dir\*.dll` 또는 `*.dll`을 지정하여 지정된 또는 현재 작업 디렉터리에 있는 모든 어셈블리를 선택할 수 있습니다. 자세한 내용은 설명 부분을 참조하세요.<br /><br /> 또는<br /><br /> 줄당 하나의 어셈블리로 나열된 어셈블리에 대한 프로필 정보를 수집한 어셈블리 목록이 포함된 텍스트 파일 어셈블리 이름이 하이픈(-)으로 시작되면 어셈블리 파일 목록을 사용하거나 어셈블리의 이름을 변경합니다.|
 |`-AppID` \<*appId*>|지정된 패키지에 있는 애플리케이션의 ID입니다. 와일드카드(\*)를 사용하는 경우, Mpgo.exe는 패키지에서 AppID를 열거하려고 하고, 실패하는 경우 \<*package_family_name*>!App으로 대체합니다. 앞에 느낌표(!)가 있는 문자열을 지정하는 경우, Mpgo.exe는 제공되는 인수를 사용하여 패키지 제품군 이름을 연결합니다.|
-|`-Timeout` \<*seconds*>|응용 프로그램이 종료되기 전에 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램을 실행할 수 있는 시간|
+|`-Timeout` \<*seconds*>|앱이 종료되기 전에 Windows 8.x 스토어 앱을 실행할 수 있는 시간|
 
 |선택적 매개 변수|설명|
 |------------------------|-----------------|
@@ -130,5 +130,5 @@ mpgo.exe -import "C:\Optimized" -assemblylist "C:\MyApp\MyTax.dll" "C:\MyApp\MyT
 
 - [Ngen.exe(네이티브 이미지 생성기)](ngen-exe-native-image-generator.md)
 - [명령 프롬프트](developer-command-prompt-for-vs.md)
-- [데스크톱 애플리케이션의 시작 성능 개선](https://go.microsoft.com/fwlink/p/?LinkId=248943)
-- [.NET 4.5의 성능 개선 개요](https://go.microsoft.com/fwlink/p/?LinkId=249131)
+- [데스크톱 애플리케이션의 시작 성능 개선](https://devblogs.microsoft.com/dotnet/improving-launch-performance-for-your-desktop-applications/)
+- [.NET 4.5의 성능 개선 개요](https://docs.microsoft.com/archive/msdn-magazine/2012/april/clr-an-overview-of-performance-improvements-in-net-4-5)

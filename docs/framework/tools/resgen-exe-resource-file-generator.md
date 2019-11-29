@@ -15,12 +15,12 @@ helpviewer_keywords:
 - binary resources files
 - embedding files in runtime binary executable
 ms.assetid: 8ef159de-b660-4bec-9213-c3fbc4d1c6f4
-ms.openlocfilehash: 4605c7361705ba37091eb2e34d8425810854973e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5fc2bcb03ae6814d69e229ba083c1d5c44ae8ff3
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73104901"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204623"
 ---
 # <a name="resgenexe-resource-file-generator"></a>Resgen.exe(리소스 파일 생성기)
 리소스 파일 생성기(Resgen.exe)를 사용하면 텍스트 파일(.txt 또는 .restext)과 XML 기반 리소스 형식 파일(.resx)을 런타임 이진 실행 파일에 포함하거나 위성 어셈블리에 포함할 수 있는 공용 언어 런타임의 이진 파일(.resources)로 변환할 수 있습니다. [리소스 파일 만들기](../resources/creating-resource-files-for-desktop-apps.md)를 참조하세요.  
@@ -33,13 +33,13 @@ ms.locfileid: "73104901"
   
 - .resx 파일을 텍스트 또는 .resources 파일로 변환합니다.  
   
-- 어셈블리로부터 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램에서 사용하기 적합한 .resw 파일로 문자열 리소스를 추출합니다.  
+- 어셈블리로부터 Windows 8.x 스토어 앱에서 사용하기 적합한 .resw 파일로 문자열 리소스를 추출합니다.  
   
 - 개별 명명된 리소스와 <xref:System.Resources.ResourceManager> 인스턴스에 대한 액세스를 제공하는 강력한 형식의 클래스를 만듭니다.  
   
  Resgen.exe에서 어떤 이유로든 오류가 발생하면 –1 값이 반환됩니다.  
   
- Resgen.exe의 도움말을 보려면 다음 명령을 명령 구문 및 Resgen.exe에 대한 옵션을 표시하도록 지정하는 옵션 없이 사용할 수 있습니다.  
+ Resgen.exe의 도움말을 보려면, 옵션 지정 없이 다음 명령을 사용하여 Resgen.exe의 명령 구문과 옵션을 표시할 수 있습니다.  
   
 ```console  
 resgen  
@@ -74,10 +74,10 @@ resgen filename.extension [outputDirectory]
 |`/define:` *symbol1*[, *symbol2*,...]|.NET Framework 4.5로 시작하며 텍스트 기반(.txt 또는 .restext) 리소스 파일로 된 조건부 컴파일을 지원합니다. *symbol*이 `#ifdef` 구문 안의 입력 텍스트 파일에 포함된 기호에 해당하는 경우 연결된 문자열 리소스가 .resources 파일에 포함됩니다. 입력 텍스트 파일에 `#if !` 문이 `/define` 스위치에 의해 정의되지 않은 기호와 함께 포함되어 있는 경우 연결된 문자열 리소스는 리소스 파일에 포함됩니다.<br /><br /> `/define`은 텍스트가 아닌 파일과 함께 사용하는 경우 무시됩니다. 기호는 대/소문자를 구분합니다.<br /><br /> 이 옵션에 대한 자세한 내용은 이 항목의 뒤에 나오는 [리소스 조건부 컴파일](#Conditional)을 참조하세요.|  
 |`useSourcePath`|입력 파일의 현재 디렉터리를 사용하여 상대 경로를 확인하도록 지정합니다.|  
 |`/compile`|단일 일괄 작업을 통해 여러 .resources 파일로 변환할 여러 .resx 또는 텍스트 파일을 지정할 수 있습니다. 이 옵션을 지정하지 않으면 입력 파일 인수를 하나만 지정할 수 있습니다. 출력 파일의 이름은 *filename*.resources입니다.<br /><br /> 이 옵션은 `/str:` 옵션과 함께 사용할 수 없습니다.<br /><br /> 이 옵션에 대한 자세한 내용은 이 항목의 뒤에 나오는 [다중 파일 컴파일 또는 변환](#Multiple)을 참조하세요.|  
-|`/r:` `assembly`|지정한 어셈블리에서 메타데이터를 참조합니다. .Resx 파일을 변환할 때 사용하고 Resgen.exe를 통해 개체 리소스를 serialize하거나 deserialize할 수 있습니다. C# 및 Visual Basic 컴파일러에 대한 `/reference:` 또는 `/r:` 옵션과 유사합니다.|  
-|`filename.extension`|변환할 입력 파일의 이름을 지정합니다. 이 테이블 앞에 나타난 첫째, 긴 명령줄 구문을 사용하는 경우 `extension`은 다음 중 하나여야 합니다.<br /><br /> .txt 또는 .restext<br /> .resources 또는 .resx 파일로 변환할 텍스트 파일입니다. 텍스트 파일에는 문자열 리소스만 포함될 수 있습니다. 파일 형식에 대한 자세한 내용은 [리소스 파일 만들기](../resources/creating-resource-files-for-desktop-apps.md)에서 "텍스트 파일의 리소스" 섹션을 참조하세요.<br /><br /> .resx<br /> .resources 또는 텍스트 파일(.txt 또는 .restext)로 변환할 XML 기반 리소스 파일입니다.<br /><br /> .resources<br /> .resx 또는 텍스트(.txt 또는 .restext) 파일로 변환할 이진 리소스 파일입니다.<br /><br /> 이 테이블 앞에 표시되는 두 번째, 짧은 명령줄 구문을 사용하는 경우 `extension`은 다음과 같아야 합니다.<br /><br /> .exe 또는 .dll<br /> [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램을 개발하는 데 사용하는 .resw 파일로 문자열 리소스를 추출할 .NET Framework 어셈블리(실행 파일 또는 라이브러리)입니다.|  
+|`/r:` `assembly`|지정한 어셈블리에서 메타데이터를 참조합니다. .Resx 파일을 변환할 때 사용하고 Resgen.exe를 통해 개체 리소스를 직렬화하거나 역직렬화할 수 있습니다. C# 및 Visual Basic 컴파일러에 대한 `/reference:` 또는 `/r:` 옵션과 유사합니다.|  
+|`filename.extension`|변환할 입력 파일의 이름을 지정합니다. 이 테이블 앞에 나타난 첫째, 긴 명령줄 구문을 사용하는 경우 `extension`은 다음 중 하나여야 합니다.<br /><br /> .txt 또는 .restext<br /> .resources 또는 .resx 파일로 변환할 텍스트 파일입니다. 텍스트 파일에는 문자열 리소스만 포함될 수 있습니다. 파일 형식에 대한 자세한 내용은 [리소스 파일 만들기](../resources/creating-resource-files-for-desktop-apps.md)에서 "텍스트 파일의 리소스" 섹션을 참조하세요.<br /><br /> .resx<br /> .resources 또는 텍스트 파일(.txt 또는 .restext)로 변환할 XML 기반 리소스 파일입니다.<br /><br /> .resources<br /> .resx 또는 텍스트(.txt 또는 .restext) 파일로 변환할 이진 리소스 파일입니다.<br /><br /> 이 테이블 앞에 표시되는 두 번째, 짧은 명령줄 구문을 사용하는 경우 `extension`은 다음과 같아야 합니다.<br /><br /> .exe 또는 .dll<br /> Windows 8.x 스토어 앱을 개발하는 데 사용하는 .resw 파일로 문자열 리소스를 추출할 .NET Framework 어셈블리(실행 파일 또는 라이브러리)입니다.|  
 |`outputFilename.extension`|만들 리소스 파일의 이름 및 유형을 지정합니다.<br /><br /> .txt, .restext 또는 .resx 파일을 .resources 파일로 변환하는 경우 이 인수는 선택적 인수입니다. `outputFilename`을 지정하지 않으면 Resgen.exe에서는 입력 `filename`에 .resources 확장명을 추가하고 `filename,extension`이 들어 있는 디렉터리에 해당 파일을 씁니다.<br /><br /> `outputFilename.extension` 인수는 .resources 파일에서 변환할 때 사용되는 필수 항목입니다. .resources 파일을 XML 기반 리소스 파일로 변환할 때에는 .resx 확장명을 갖는 파일 이름을 지정합니다. .resources 파일을 텍스트 파일로 변환할 때는 .txt 또는 .restext 확장명을 갖는 파일 이름을 지정합니다. .resources 파일에 문자열 값만 있는 경우에는 .resources 파일을 .txt 파일로만 변환해야 합니다.|  
-|`outputDirectory`|[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램의 경우 `filename.extension`에 있는 문자열 리소스를 포함하는 .resw 파일은 디렉터리를 지정합니다. `outputDirectory`가 이미 있어야 합니다.|  
+|`outputDirectory`|Windows 8.x 스토어 앱의 경우, `filename.extension`에 있는 문자열 리소스를 포함하는 .resw 파일은 디렉터리를 지정합니다. `outputDirectory`가 이미 있어야 합니다.|  
 |`/str:` `language[,namespace[,classname[,filename]]]`|`language` 옵션에 지정된 프로그래밍 언어로 강력한 형식의 리소스 클래스 파일을 만듭니다. `language`는 다음과 같은 리터럴 중 하나로 구성할 수 있습니다.<br /><br /> -   C#의 경우: `c#`, `cs` 또는 `csharp`입니다.<br />-   Visual Basic의 경우: `vb` 또는 `visualbasic`입니다.<br />-   VBScript의 경우: `vbs` 또는 `vbscript`입니다.<br />-   C++의 경우: `c++`, `mc` 또는 `cpp`입니다.<br />-   JavaScript의 경우: `js`, `jscript` 또는 `javascript`입니다.<br /><br /> `namespace` 옵션은 프로젝트의 기본 네임스페이스를 지정하고, `classname` 옵션은 생성되는 클래스의 이름을 지정하고, `filename` 옵션은 클래스 파일의 이름을 지정합니다.<br /><br /> `/str:` 옵션에서는 입력 파일을 하나만 지정할 수 있으므로 이 옵션과 `/compile` 옵션을 함께 사용할 수 없습니다.<br /><br /> `namespace`만 지정하고 `classname`은 지정하지 않을 경우 출력 파일 이름에서 마침표를 밑줄로 대체하는 등의 방식으로 클래스 이름이 파생됩니다. 따라서 강력한 형식의 리소스가 제대로 작동하지 않을 수도 있습니다. 이 문제를 방지하려면 클래스 이름과 출력 파일 이름을 모두 지정해야 합니다.<br /><br /> 이 옵션에 대한 자세한 내용은 이 항목의 뒤에 나오는 [강력한 형식의 리소스 클래스 생성](#Strong)을 참조하세요.|  
 |`/publicClass`|공용 클래스로 강력한 형식의 리소스 클래스를 만듭니다. 기본적으로 리소스 클래스는 C#에서 `internal`이고 Visual Basic에서는 `Friend`입니다.<br /><br /> `/str:` 옵션을 사용하지 않으면 이 옵션은 무시됩니다.|  
   
@@ -178,7 +178,7 @@ resgen Resources.resx Resources.resources
   
  구문은 이전 단원에 나와 있는 것과 동일합니다.  
   
- 또한, Resgen.exe을 사용하여 .NET Framework 어셈블리의 포함 리소스를 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램용 .resw 파일로 변환할 수 있습니다.  
+ 또한, Resgen.exe을 사용하여 .NET Framework 어셈블리의 포함 리소스를 Windows 8.x 스토어 앱용 .resw 파일로 변환할 수 있습니다.  
   
  다음 명령을 사용하여 이진 리소스 파일 Resources.resources를 읽고 Resources.resx라는 XML 기반 출력 파일을 작성합니다.  
   
@@ -215,10 +215,10 @@ resgen /compile StringResources.txt TableResources.resx ImageResources.resx
   
 <a name="Exporting"></a>   
 ### <a name="exporting-resources-to-a-resw-file"></a>.resw 파일에 리소스 내보내기  
- [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램을 개발하는 경우, 기존 데스크톱 응용 프로그램의 리소스를 사용하려는 경우가 있습니다. 하지만 두 종류의 애플리케이션은 다른 파일 형식을 지원합니다. 데스크톱 응용 프로그램에서 텍스트(.txt 또는.restext) 또는.resx 파일의 리소스는 이진 .resources 파일로 컴파일됩니다. [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램에서 .resw 파일은 이진 패키지 리소스 인덱스(PRI) 파일로 컴파일됩니다. 실행 가능한 또는 위성 어셈블리에서 리소스를 추출하거나 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램 개발 시 사용할 수 있는 하나 이상의 .resw 파일을 작성하여 이 간격을 연결하는 데 Resgen.exe을 사용할 수 있습니다.  
+ Windows 8.x 스토어 앱을 개발하는 경우, 기존 데스크톱 앱의 리소스가 필요할 수 있습니다. 하지만 두 종류의 애플리케이션은 다른 파일 형식을 지원합니다. 데스크톱 응용 프로그램에서 텍스트(.txt 또는.restext) 또는.resx 파일의 리소스는 이진 .resources 파일로 컴파일됩니다. Windows 8.x 스토어 앱에서 .resw 파일은 이진 패키지 리소스 인덱스(PRI) 파일로 컴파일됩니다. 실행 가능한 또는 위성 어셈블리에서 리소스를 추출하거나 Windows 8.x 스토어 앱 개발 시 사용할 수 있는 하나 이상의 .resw 파일을 작성하여 이 간격을 연결하는 데 Resgen.exe을 사용할 수 있습니다.  
   
 > [!IMPORTANT]
-> Visual Studio는 휴대용 라이브러리에서 리소스를 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램에 통합시키는 데 필요한 모든 변환을 자동으로 처리합니다. 어셈블리에서 리소스를 .resw 파일 형식으로 변환하기 위해 .Resgen.exe를 직접 사용하는 것은 Visual Studio 외부에서 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램을 개발하려고 하는 개발자에게만 필요합니다.  
+> Visual Studio는 휴대용 라이브러리에서 리소스를 Windows 8.x 스토어 앱에 통합시키는 데 필요한 모든 변환을 자동으로 처리합니다. 어셈블리에서 리소스를 .resw 파일 형식으로 변환하기 위해 .Resgen.exe를 직접 사용하는 것은 Visual Studio 외부에서 Windows 8.x 스토어 앱을 개발하려고 하는 개발자에게만 필요합니다.  
   
  어셈블리에서 .resw 파일을 생성하는 구문은 다음과 같습니다.  
   

@@ -7,12 +7,12 @@ dev_langs:
 - vb
 helpviewer_keywords:
 - what's new [.NET Framework]
-ms.openlocfilehash: 22d70d0ee976d9c1a6aabd57e5d13dc70cd2d081
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 681328af3f3624a8398d5125b952593f2c0510c7
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73454263"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74427691"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>.NET Framework에서 내게 필요한 옵션의 새로운 기능
 
@@ -167,7 +167,7 @@ if (raiseMethod != null) {
 
 다음 그림은 사용자가 키보드를 사용하여 단추를 선택한 경우의 도구 설명을 보여줍니다.
 
-![사용자가 키보드를 사용하여 단추를 탐색할 때 도구 설명](./media/tooltip.png)
+![사용자가 키보드를 사용하여 단추로 이동하는 경우 도구 설명의 스크린샷](./media/whats-new-in-accessibility/select-tooltip-with-keyboard.png)
 
 <a name="wpf48" />
 
@@ -187,7 +187,7 @@ if (raiseMethod != null) {
 
 이 속성을 사용하려면 XAML 코드에 추가하고 적절한 브러시 또는 바인딩을 사용하기만 하면 됩니다. 결과 텍스트 선택 영역은 다음과 같습니다.
 
-![사용자가 키보드를 사용하여 단추를 탐색할 때 도구 설명](./media/selectiontextbrush-property.png)
+![단어 Hello World가 선택되어 실행 중인 앱의 스크린샷](./media/whats-new-in-accessibility/selectiontextbrush-property.png)
 
 `SelectionBrush` 및 `SelectionTextBrush` 속성의 사용을 조합하여 적절한 것으로 간주되는 배경 및 전경색 조합을 생성할 수 있습니다.
 
@@ -480,11 +480,11 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
   이전: 
 
-  ![내게 필요한 옵션 개선 사항 이전의 포커스가 있는 Expander 컨트롤](./media/expander-before.png)
+  ![포커스가 있는 확장기 컨트롤 및 포커스 화면 효과가 없는 확장기 컨트롤의 스크린샷.](./media/whats-new-in-accessibility/expander-control-before.png)
 
   이후: 
 
-  ![내게 필요한 옵션 개선 사항 이후의 포커스가 있는 Expander 컨트롤](./media/expander-after.png)
+  ![포커스가 있는 확장기 컨트롤(컨트롤의 텍스트 주위가 점선으로 표시됨)의 스크린샷](./media/whats-new-in-accessibility/expander-control-after.png)
 
 - <xref:System.Windows.Controls.CheckBox> 및 <xref:System.Windows.Controls.RadioButton> 컨트롤
 
@@ -492,11 +492,11 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
   이전: 
 
-  ![내게 필요한 옵션 개선 사항 이전의 포커스가 있는 고대비 라디오 단추](./media/radio-button-before.png)
+  ![고대비 테마에서 텍스트 가시성이 낮은 라디오 단추 및 확인 단추의 스크린샷](./media/whats-new-in-accessibility/high-contrast-radio-button-before.png)
 
   이후: 
 
-  ![내게 필요한 옵션 개선 사항 이후의 포커스가 있는 고대비 라디오 단추](./media/radio-button-after.png)
+  ![고대비 테마에서 텍스트 가시성이 높은 라디오 단추 및 확인 단추의 스크린샷](./media/whats-new-in-accessibility/high-contrast-radio-button-after.png)
 
 - <xref:System.Windows.Controls.ComboBox> 컨트롤
 
@@ -504,31 +504,31 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
   이전: 
 
-  ![내게 필요한 옵션 개선 사항 이전의 콤보 상자 비활성화된 테두리 및 텍스트](./media/combo-disabled-before.png)
+  ![테두리와 컨트롤 텍스트의 색상이 다른 비활성화된 콤보 상자의 스크린샷](./media/whats-new-in-accessibility/combo-disabled-before.png)
 
   이후:   
 
-  ![내게 필요한 옵션 개선 사항 이후의 콤보 상자 비활성화된 테두리 및 텍스트](./media/combo-disabled-after.png)
+  ![테두리와 컨트롤 텍스트의 색상이 동일한 비활성화된 콤보 상자의 스크린샷](./media/whats-new-in-accessibility/combo-disabled-after.png)
 
   또한 비활성화되고 포커스가 있는 단추는 올바른 테마 색을 사용합니다.
 
   이전:
 
-  ![내게 필요한 옵션 개선 사항 이전의 단추 테마 색](./media/button-themes-before.png) 
+  ![회색 텍스트로 나에게 포커스 지정이 표시되는 검은색 단추의 스크린샷](./media/whats-new-in-accessibility/button-theme-colors-before.png) 
 
   이후: 
 
-  ![내게 필요한 옵션 개선 사항 이후의 단추 테마 색](./media/button-themes-after.png) 
+  ![검은색 텍스트로 나에게 포커스 지정이 표시되는 파란색 단추의 스크린샷](./media/whats-new-in-accessibility/button-theme-colors-after.png) 
 
   마지막으로 .NET Framework 4.7 이전 버전에서 <xref:System.Windows.Controls.ComboBox> 컨트롤의 스타일을 `Toolbar.ComboBoxStyleKey`로 설정하면 드롭다운 화살표가 표시되지 않았습니다. 이 문제는 .NET Framework 4.7.1부터 수정되었습니다. 예:
 
   이전: 
 
-  ![내게 필요한 옵션 개선 사항 이전의 Toolbar.ComboBoxStyleKey](./media/comboboxstylekey-before.png) 
+  ![보이지 않는 드롭다운 화살표가 있는 콤보 상자 컨트롤의 스크린샷](./media/whats-new-in-accessibility/combo-box-style-key-before.png) 
 
   이후: 
 
-  ![내게 필요한 옵션 개선 사항 이후의 Toolbar.ComboBoxStyleKey](./media/comboboxstylekey-after.png) 
+  ![드롭다운 화살표가 표시된 콤보 상자 컨트롤의 스크린샷](./media/whats-new-in-accessibility/combo-box-style-key-after.png) 
 
 - <xref:System.Windows.Controls.DataGrid> 컨트롤
 
@@ -536,21 +536,21 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
   이전: 
 
-  ![내게 필요한 옵션 개선 사항 이전의 정렬 표시기 화살표](./media/sort-indicator-before.png) 
+  ![개선 사항 이전의 정렬 표시기 화살표의 스크린샷](./media/whats-new-in-accessibility/sort-indicator-before.png) 
 
   이후:   
 
-  ![내게 필요한 옵션 개선 사항 이후의 정렬 표시기 화살표](./media/sort-indicator-after.png) 
+  ![개선 사항 이후의 정렬 표시기 화살표의 스크린샷](./media/whats-new-in-accessibility/sort-indicator-after.png) 
 
   또한 .NET Framework 4.7 이전 버전에서 기본 링크 스타일은 고대비 모드의 마우스에서 잘못된 색으로 변경되었습니다. 이는 .NET Framework 4.7.1부터 해결되었습니다. 마찬가지로 <xref:System.Windows.Controls.DataGrid> 확인란 열은 .NET Framework 4.7.1부터 키보드 포커스 피드백에 대해 예상되는 색을 사용합니다.
 
   이전: 
 
-  ![내게 필요한 옵션 개선 사항 이전의 DataGrid 기본 링크 스타일](./media/default-link-style-before.png) 
+  ![빨간색으로 여기를 클릭하세요가 표시되는 링크의 스크린샷.](./media/whats-new-in-accessibility/default-link-style-before.png) 
 
   이후:    
 
-  ![내게 필요한 옵션 개선 사항 이후의 DataGrid 기본 링크 스타일](./media/default-link-style-after.png) 
+  ![노란색으로 여기를 클릭하세요가 표시되는 링크의 스크린샷.](./media/whats-new-in-accessibility/default-link-style-after.png) 
 
 .NET Framework 4.7.1에서 WPF 내게 필요한 옵션 개선 사항에 대한 자세한 내용은 [WPF의 내게 필요한 옵션 개선 사항](../migration-guide/retargeting/4.7-4.7.1.md#accessibility-improvements-in-wpf)을 참조하세요.
 
@@ -581,11 +581,11 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
   이전:
 
-  ![내게 필요한 옵션 개선 사항 이전의 비활성화된 텍스트](./media/wf-disabled-before.png) 
+  ![접근성이 개선되기 전에 고대비 모드에서 실행되는 다른 컨트롤을 사용하는 앱의 스크린샷.](./media/whats-new-in-accessibility/high-contrast-mode-menu-items-before.png) 
 
   이후:
 
-  ![내게 필요한 옵션 개선 사항 이후의 비활성화된 텍스트](./media/wf-disabled-after.png) 
+  ![접근성이 개선된 후에 고대비 모드에서 실행되는 다른 컨트롤을 사용하는 앱의 스크린샷.](./media/whats-new-in-accessibility/high-contrast-mode-menu-items-after.png) 
 
 - 스레드 예외 대화 상자의 고대비 개선 사항입니다.
 

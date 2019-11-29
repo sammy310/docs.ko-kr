@@ -1,5 +1,5 @@
 ---
-title: 데이터를 클립보드에 저장하고 클립보드에서 읽기(Visual Basic)
+title: 데이터를 클립보드에 저장하고 클립보드에서 읽기
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Clipboard, storing data to (My.Computer.Clipboard)
@@ -9,17 +9,19 @@ helpviewer_keywords:
 - data [Visual Basic], Clipboard
 - reading data, from Clipboard
 ms.assetid: f690119a-4378-4f7d-b20e-d9377ef49496
-ms.openlocfilehash: d7693f6b5dc74e17686cd7d2667f32adbde9df80
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 243fb237f3f9ba53f8b29079df08531c102c78dd
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916513"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349728"
 ---
 # <a name="storing-data-to-and-reading-from-the-clipboard-visual-basic"></a>데이터를 클립보드에 저장하고 클립보드에서 읽기(Visual Basic)
+
 클립보드를 사용하여 텍스트 및 이미지와 같은 데이터를 저장할 수 있습니다. 클립보드는 모든 활성 프로세스에서 공유되기 때문에 프로세스 간에 데이터를 전송하는 데 사용할 수 있습니다. `My.Computer.Clipboard` 개체를 사용하면 클립보드에 쉽게 액세스하고 읽고 쓸 수 있습니다.  
   
 ## <a name="reading-from-the-clipboard"></a>클립보드에서 읽기  
+
  <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.GetText%2A> 메서드를 사용하여 클립보드에 텍스트를 읽습니다. 다음 코드는 텍스트를 읽고 메시지 상자에 표시합니다. 예제가 제대로 실행되려면 클립보드에 텍스트가 저장되어 있어야 합니다.  
   
  [!code-vb[VbVbcnMyClipboard#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyClipboard/VB/Class1.vb#4)]  
@@ -35,6 +37,7 @@ ms.locfileid: "69916513"
  클립보드에 배치된 항목은 애플리케이션이 종료된 후에도 유지됩니다.  
   
 ## <a name="determining-the-type-of-file-stored-in-the-clipboard"></a>클립보드에 저장된 파일 형식 확인  
+
  클립보드의 데이터는 텍스트, 오디오 파일 또는 이미지와 같은 다양한 형태일 수 있습니다. 클립보드에 있는 파일의 종류를 확인하려는 경우 <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsAudio%2A>, <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsFileDropList%2A>, <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsImage%2A>, <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsText%2A> 등의 메서드를 사용할 수 있습니다. 사용자 지정 형식을 확인하려는 경우에는 <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsData%2A> 메서드를 사용할 수 있습니다.  
   
  `ContainsImage` 함수를 사용하여 클립보드에 포함된 데이터가 이미지인지 여부를 확인할 수 있습니다. 다음 코드는 데이터가 이미지인지 여부를 확인하고 그에 따라 보고합니다.  
@@ -42,6 +45,7 @@ ms.locfileid: "69916513"
  [!code-vb[VbResourceTasks#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#13)]  
   
 ## <a name="clearing-the-clipboard"></a>클립보드 지우기  
+
  <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.Clear%2A> 메서드는 클립보드를 지웁니다. 클립보드가 다른 프로세스에서 공유되기 때문에 클립보드를 지우면 해당 프로세스에 영향을 줄 수 있습니다.  
   
  다음 코드에서는 `Clear` 메서드를 사용하는 방법을 보여 줍니다.  
@@ -49,6 +53,7 @@ ms.locfileid: "69916513"
  [!code-vb[VbVbcnMyClipboard#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyClipboard/VB/Class1.vb#3)]  
   
 ## <a name="writing-to-the-clipboard"></a>클립보드에 쓰기  
+
  <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetText%2A> 메서드를 사용하여 클립보드에 텍스트를 씁니다. 다음 코드는 클립보드에 "This is a test string" 문자열을 씁니다.  
   
  [!code-vb[VbVbcnMyClipboard#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyClipboard/VB/Class1.vb#1)]  
