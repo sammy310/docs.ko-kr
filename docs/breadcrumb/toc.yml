@@ -115,7 +115,7 @@
           tocHref: /dotnet/core/
           topicHref: /dotnet/core/index
           items:
-            - name: 호환성
+            - name: 호환성이 손상되는 변경
               tocHref: /dotnet/core/compatibility/
               topicHref: /dotnet/core/compatibility/index
             - name: 런타임 구성
@@ -127,10 +127,6 @@
             - name: 설치 가이드
               tocHref: /dotnet/core/install/
               topicHref: /dotnet/core/install/index
-              items:
-                - name: Linux 패키지 관리자
-                  tocHref: /dotnet/core/install/
-                  topicHref: /dotnet/core/install/index
         - name: .NET Framework
           tocHref: /dotnet/framework/
           topicHref: /dotnet/framework/index
