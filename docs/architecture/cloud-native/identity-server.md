@@ -2,12 +2,12 @@
 title: 클라우드 네이티브 앱에 대 한 IdentityServer
 description: Azure 용 클라우드 네이티브 .NET 앱 설계 | IdentityServer
 ms.date: 06/30/2019
-ms.openlocfilehash: 3797214685d20109b2c5dc4440ae5fc64dfddce6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e96395766d1a4b63815c10c2c90e35a8f7f9159d
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73841788"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568474"
 ---
 # <a name="identityserver-for-cloud-native-applications"></a>클라우드 네이티브 응용 프로그램에 대 한 IdentityServer
 
@@ -65,7 +65,7 @@ public class Startup
                 options.SignInScheme = IdentityServerConstants.ExternalCookieAuthenticationScheme;
 
                 options.ClientId = "<insert here>";
-                options.ClientSecret = "<inser here>";
+                options.ClientSecret = "<insert here>";
             })
             .AddOpenIdConnect("demoidsrv", "IdentityServer", options =>
             {
@@ -92,7 +92,7 @@ public class Startup
 
 **그림 8-2**. IdentityServer 구성.
 
-또한 IdentityServer는 다양 한 프로토콜 및 구성을 테스트 하는 데 사용할 수 있는 공개 데모 사이트를 호스팅합니다. [https://demo.identityserver.io/](https://demo.identityserver.io/) 에 있으며 제공 된 `client_id`에 따라 동작을 구성 하는 방법에 대 한 정보를 포함 합니다.
+또한 IdentityServer는 다양 한 프로토콜 및 구성을 테스트 하는 데 사용할 수 있는 공개 데모 사이트를 호스팅합니다. [https://demo.identityserver.io/](https://demo.identityserver.io/) 에 있으며 제공 된 `client_id` 에 따라 동작을 구성 하는 방법에 대 한 정보를 포함 합니다.
 
 ## <a name="javascript-clients"></a>JavaScript 클라이언트
 
