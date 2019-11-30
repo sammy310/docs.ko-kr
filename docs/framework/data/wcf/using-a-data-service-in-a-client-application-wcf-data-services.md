@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, getting started
 ms.assetid: 90872d0c-e989-4490-b3e9-54afb10d33d4
-ms.openlocfilehash: ccf003b915876a30eeb27b39066168fb22950292
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 26fd25a268204ad2644a07b6a56967cc5d2df95e
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975101"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568826"
 ---
 # <a name="using-a-data-service-in-a-client-application-wcf-data-services"></a>클라이언트 애플리케이션에서 데이터 서비스 사용(WCF Data Services)
 웹 브라우저에 URI를 제공 하 여 OData (Open Data Protocol) 피드를 노출 하는 서비스에 액세스할 수 있습니다. URI는 리소스의 주소를 제공하고 요청 메시지는 해당 리소스가 나타내는 기본 데이터에 액세스하거나 변경하기 위해 이러한 주소로 전송됩니다. 브라우저는 HTTP GET 명령을 실행 하 고 요청 된 리소스를 OData 피드로 반환 합니다. 자세한 내용은 [웹 브라우저에서 서비스 액세스](accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md)를 참조 하세요.  
@@ -45,7 +45,7 @@ ms.locfileid: "73975101"
  페이로드의 메시지 형식은 HTTP 요청 메시지의 헤더에서 요청됩니다. 자세한 내용은 [OData: 작업](https://go.microsoft.com/fwlink/?LinkID=185792)을 참조 하세요.  
   
 ## <a name="accessing-and-changing-data-using-client-libraries"></a>클라이언트 라이브러리를 사용하여 데이터 액세스 및 변경  
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]에는 .NET Framework 및 Silverlight 기반 클라이언트 응용 프로그램에서 OData 피드를 보다 쉽게 사용할 수 있도록 하는 클라이언트 라이브러리가 포함 되어 있습니다. 이러한 라이브러리는 HTTP 메시지를 보내고 받는 작업을 단순화합니다. 또한 엔터티 데이터를 나타내는 CLR 개체로 메시지 페이로드를 변환합니다. 클라이언트 라이브러리는 두 가지 핵심 클래스인 <xref:System.Data.Services.Client.DataServiceContext> 및 <xref:System.Data.Services.Client.DataServiceQuery%601>를 제공합니다. 이러한 클래스를 사용하면 데이터 서비스를 쿼리한 다음 반환된 엔터티 데이터를 CLR 개체로 사용하여 작업할 수 있습니다. 자세한 내용은 [WCF Data Services 클라이언트 라이브러리](wcf-data-services-client-library.md) 및 [WCF Data Services (Silverlight)](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v=vs.95))를 참조 하세요.  
+ WCF Data Services에는 .NET Framework 및 Silverlight 기반 클라이언트 응용 프로그램에서 OData 피드를 보다 쉽게 사용할 수 있도록 하는 클라이언트 라이브러리가 포함 되어 있습니다. 이러한 라이브러리는 HTTP 메시지를 보내고 받는 작업을 단순화합니다. 또한 엔터티 데이터를 나타내는 CLR 개체로 메시지 페이로드를 변환합니다. 클라이언트 라이브러리는 두 가지 핵심 클래스인 <xref:System.Data.Services.Client.DataServiceContext> 및 <xref:System.Data.Services.Client.DataServiceQuery%601>를 제공합니다. 이러한 클래스를 사용하면 데이터 서비스를 쿼리한 다음 반환된 엔터티 데이터를 CLR 개체로 사용하여 작업할 수 있습니다. 자세한 내용은 [WCF Data Services 클라이언트 라이브러리](wcf-data-services-client-library.md) 및 [WCF Data Services (Silverlight)](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v=vs.95))를 참조 하세요.  
   
  Visual Studio의 **서비스 참조 추가** 대화 상자를 사용 하 여 데이터 서비스에 대 한 참조를 추가할 수 있습니다. 이 도구는 참조된 데이터 서비스에서 서비스 메타데이터를 요청하고 데이터 서비스를 나타내는 <xref:System.Data.Services.Client.DataServiceContext> 및 엔터티를 나타내는 클라이언트 데이터 서비스 클래스를 생성합니다. 자세한 내용은 [데이터 서비스 클라이언트 라이브러리 생성](generating-the-data-service-client-library-wcf-data-services.md)을 참조 하십시오.  
   

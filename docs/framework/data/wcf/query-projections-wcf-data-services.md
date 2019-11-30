@@ -10,12 +10,12 @@ helpviewer_keywords:
 - query projection [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: a09f4985-9f0d-48c8-b183-83d67a3dfe5f
-ms.openlocfilehash: 17475cccf461371a909660bfe3f8db29bf1fa2fe
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 03fa40a895d322a8b5ad543f75424ef5b379672b
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975182"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568892"
 ---
 # <a name="query-projections-wcf-data-services"></a>쿼리 프로젝션 (WCF Data Services)
 
@@ -65,7 +65,7 @@ URI에서 `$select` 쿼리 옵션을 사용 하거나 LINQ 쿼리에서 [select]
 
 **이니셜라이저를 사용 하 여 새 프로젝션 인스턴스 만들기**
 
-- 예제:
+- 예:
 
    [!code-csharp[Astoria Northwind Client#ProjectWithInitializer](~/samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#projectwithinitializer)]
    [!code-vb[Astoria Northwind Client#ProjectWithInitializer](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#projectwithinitializer)]
@@ -76,7 +76,7 @@ URI에서 `$select` 쿼리 옵션을 사용 하거나 LINQ 쿼리에서 [select]
 
 **생성자를 사용 하 여 새 프로젝션 인스턴스 만들기**
 
-- 예제:
+- 예:
 
    [!code-csharp[Astoria Northwind Client#ProjectWithConstructor](~/samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#projectwithconstructor)]
    [!code-vb[Astoria Northwind Client#ProjectWithConstructor](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#projectwithconstructor)]
@@ -87,7 +87,7 @@ URI에서 `$select` 쿼리 옵션을 사용 하거나 LINQ 쿼리에서 [select]
 
 **프로젝션을 사용 하 여 속성 값 변환**
 
-- 예제:
+- 예:
 
    [!code-csharp[Astoria Northwind Client#ProjectWithTransform](~/samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#projectwithtransform)]
    [!code-vb[Astoria Northwind Client#ProjectWithTransform](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#projectwithtransform)]
@@ -112,7 +112,7 @@ URI에서 `$select` 쿼리 옵션을 사용 하거나 LINQ 쿼리에서 [select]
 
 - 프로젝션에 탐색 속성이 포함된 경우 <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> 메서드를 호출하지 않고도 관련 개체가 암시적으로 로드됩니다. <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> 메서드는 프로젝션된 쿼리에서 사용할 수 없습니다.
 
-- 클라이언트의 쿼리 프로젝션 쿼리는 요청 URI에서 `$select` 쿼리 옵션을 사용하도록 변환됩니다. 프로젝션을 사용하는 쿼리가 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 쿼리 옵션을 지원하지 않는 이전 버전의 `$select`에 대해 실행되는 경우 오류가 반환됩니다. 이러한 문제는 데이터 서비스에 대한 <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A>의 <xref:System.Data.Services.DataServiceBehavior>이 <xref:System.Data.Services.Common.DataServiceProtocolVersion.V1> 값으로 설정된 경우에도 발생할 수 있습니다. 자세한 내용은 [데이터 서비스 버전 관리](data-service-versioning-wcf-data-services.md)를 참조 하세요.
+- 클라이언트의 쿼리 프로젝션 쿼리는 요청 URI에서 `$select` 쿼리 옵션을 사용하도록 변환됩니다. `$select` 쿼리 옵션을 지원 하지 않는 이전 버전의 WCF Data Services에 대해 프로젝션이 있는 쿼리가 실행 되 면 오류가 반환 됩니다. 이러한 문제는 데이터 서비스에 대한 <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A>의 <xref:System.Data.Services.DataServiceBehavior>이 <xref:System.Data.Services.Common.DataServiceProtocolVersion.V1> 값으로 설정된 경우에도 발생할 수 있습니다. 자세한 내용은 [데이터 서비스 버전 관리](data-service-versioning-wcf-data-services.md)를 참조 하세요.
 
 자세한 내용은 [방법: 쿼리 결과 프로젝트](how-to-project-query-results-wcf-data-services.md)를 참조 하세요.
 

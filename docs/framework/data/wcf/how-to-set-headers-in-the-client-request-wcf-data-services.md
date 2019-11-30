@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, customizing requests
 ms.assetid: 3d55168d-5901-4f48-8117-6c93da3ab5ae
-ms.openlocfilehash: 420b13df0cc9d3f89087e18b58a2b416ce0bab7f
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: c8b20fc16b75b0d5267079db19ed55ae08604ff0
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975257"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568993"
 ---
 # <a name="how-to-set-headers-in-the-client-request-wcf-data-services"></a>방법: 클라이언트 요청의 헤더 설정(WCF Data Services)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 클라이언트 라이브러리를 사용 하 여 OData (Open Data Protocol)를 지 원하는 데이터 서비스에 액세스 하는 경우 클라이언트 라이브러리는 데이터 서비스에 전송 된 요청 메시지에 필요한 HTTP 헤더를 자동으로 설정 합니다. 하지만 클라이언트 라이브러리는 데이터 서비스에 청구 기반 인증이나 쿠키가 필요한 경우와 같은 특정 상황에서 필요한 메시지 헤더를 설정하지 못합니다. 자세한 내용은 [Securing WCF Data Services](securing-wcf-data-services.md#clientAuthentication)을 참조하세요. 이런 경우에는 전송하기 전에 요청 메시지의 메시지 헤더를 수동으로 설정해야 합니다. 이 항목의 예제에서는 데이터 서비스로 전송하기 전에 요청 메시지에 새로운 헤더를 추가하도록 <xref:System.Data.Services.Client.DataServiceContext.SendingRequest> 이벤트를 처리하는 방법을 설명합니다.  
+WCF Data Services 클라이언트 라이브러리를 사용 하 여 OData (Open Data Protocol)를 지 원하는 데이터 서비스에 액세스 하는 경우 클라이언트 라이브러리는 데이터 서비스에 전송 된 요청 메시지에 필요한 HTTP 헤더를 자동으로 설정 합니다. 하지만 클라이언트 라이브러리는 데이터 서비스에 청구 기반 인증이나 쿠키가 필요한 경우와 같은 특정 상황에서 필요한 메시지 헤더를 설정하지 못합니다. 자세한 내용은 [Securing WCF Data Services](securing-wcf-data-services.md#clientAuthentication)을 참조하세요. 이런 경우에는 전송하기 전에 요청 메시지의 메시지 헤더를 수동으로 설정해야 합니다. 이 항목의 예제에서는 데이터 서비스로 전송하기 전에 요청 메시지에 새로운 헤더를 추가하도록 <xref:System.Data.Services.Client.DataServiceContext.SendingRequest> 이벤트를 처리하는 방법을 설명합니다.  
   
  이 항목의 예제에서는 Northwind 샘플 데이터 서비스 및 자동 생성된 클라이언트 데이터 서비스 클래스를 사용합니다. 이 서비스 및 클라이언트 데이터 클래스는 [WCF Data Services 빠른](quickstart-wcf-data-services.md)시작을 완료 하면 생성 됩니다. OData 웹 사이트에 게시 된 [Northwind 샘플 데이터 서비스](https://go.microsoft.com/fwlink/?LinkId=187426) 를 사용할 수도 있습니다. 이 샘플 데이터 서비스는 읽기 전용 이므로 변경 내용을 저장 하려고 하면 오류가 반환 됩니다. OData 웹 사이트의 샘플 데이터 서비스는 익명 인증을 허용 합니다.  
   

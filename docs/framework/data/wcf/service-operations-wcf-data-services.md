@@ -8,16 +8,16 @@ helpviewer_keywords:
 - service operations [WCF Data Services]
 - WCF Data Services, service operations
 ms.assetid: 583a690a-e60f-4990-8991-d6efce069d76
-ms.openlocfilehash: 4f36081ef1a3eec84f3cc2ced3c629109acd6a38
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: c254a7362c7bc28f4b38fc0189ae0ea763bc90cc
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894277"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568842"
 ---
 # <a name="service-operations-wcf-data-services"></a>서비스 작업(WCF Data Services)
 
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]를 사용하면 데이터 서비스에 서버의 메서드를 노출하는 서비스 작업을 정의할 수 있습니다. 다른 데이터 서비스 리소스와 마찬가지로 서비스 작업도 URI로 주소가 지정됩니다. 서비스 작업을 사용하면 유효성 검사 논리 구현, 역할 기반 보안 적용 또는 특수 쿼리 기능 노출 등을 위해 데이터 서비스에 비즈니스 논리를 노출할 수 있습니다. 서비스 작업은 <xref:System.Data.Services.DataService%601>에서 파생되는 데이터 서비스 클래스에 추가된 메서드입니다. 다른 모든 데이터 서비스 리소스와 마찬가지로 서비스 작업 메서드에 매개 변수를 제공할 수 있습니다. 예를 들어 다음 서비스 작업 URI ( [퀵 스타트](quickstart-wcf-data-services.md) 데이터 서비스 기반)는 값 `London` `city` 을 매개 변수에 전달 합니다.
+WCF Data Services를 사용 하면 데이터 서비스에 대 한 서비스 작업을 정의 하 여 서버에서 메서드를 노출할 수 있습니다. 다른 데이터 서비스 리소스와 마찬가지로 서비스 작업도 URI로 주소가 지정됩니다. 서비스 작업을 사용하면 유효성 검사 논리 구현, 역할 기반 보안 적용 또는 특수 쿼리 기능 노출 등을 위해 데이터 서비스에 비즈니스 논리를 노출할 수 있습니다. 서비스 작업은 <xref:System.Data.Services.DataService%601>에서 파생되는 데이터 서비스 클래스에 추가된 메서드입니다. 다른 모든 데이터 서비스 리소스와 마찬가지로 서비스 작업 메서드에 매개 변수를 제공할 수 있습니다. 예를 들어 다음 서비스 작업 URI ( [퀵 스타트](quickstart-wcf-data-services.md) 데이터 서비스 기반)는 `London` 값을 `city` 매개 변수에 전달 합니다.
 
 ```http
 http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'
@@ -28,7 +28,7 @@ http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'
 [!code-csharp[Astoria Northwind Service#ServiceOperationDef](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_service/cs/northwind2.svc.cs#serviceoperationdef)]
 [!code-vb[Astoria Northwind Service#ServiceOperationDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_service/vb/northwind2.svc.vb#serviceoperationdef)]
 
-<xref:System.Data.Services.DataService%601.CurrentDataSource%2A>의 <xref:System.Data.Services.DataService%601>를 사용하여 데이터 서비스에서 사용하는 데이터 소스에 직접 액세스할 수 있습니다. 자세한 내용은 [방법: 서비스 작업](how-to-define-a-service-operation-wcf-data-services.md)을 정의 합니다.
+<xref:System.Data.Services.DataService%601.CurrentDataSource%2A>의 <xref:System.Data.Services.DataService%601>를 사용하여 데이터 서비스에서 사용하는 데이터 소스에 직접 액세스할 수 있습니다. 자세한 내용은 [방법: 서비스 작업 정의](how-to-define-a-service-operation-wcf-data-services.md)를 참조 하세요.
 
 .NET Framework 클라이언트 응용 프로그램에서 서비스 작업을 호출 하는 방법에 대 한 자세한 내용은 [서비스 작업 호출](calling-service-operations-wcf-data-services.md)을 참조 하세요.
 
@@ -80,7 +80,7 @@ http://localhost:12345/Northwind.svc/GetOrdersByState?state='CA'&includeItems=tr
 
 |유효한 반환 형식|URI 규칙|
 |------------------------|---------------|
-|`void`(Visual Basic에서는 `Nothing`)<br /><br /> 또는<br /><br /> 엔터티 형식<br /><br /> 또는<br /><br /> 기본 형식|URI는 서비스 작업의 이름에 해당하는 단일 경로 세그먼트여야 합니다. 쿼리 옵션은 허용되지 않습니다.|
+|`void`(Visual Basic에서는 `Nothing`)<br /><br /> -또는-<br /><br /> 엔터티 형식<br /><br /> -또는-<br /><br /> 기본 형식|URI는 서비스 작업의 이름에 해당하는 단일 경로 세그먼트여야 합니다. 쿼리 옵션은 허용되지 않습니다.|
 |<xref:System.Collections.Generic.IEnumerable%601>|URI는 서비스 작업의 이름에 해당하는 단일 경로 세그먼트여야 합니다. 결과 형식이 <xref:System.Linq.IQueryable%601> 형식이 아니므로 쿼리 옵션은 허용되지 않습니다.|
 |<xref:System.Linq.IQueryable%601>|서비스 작업의 이름에 해당하는 경로 외에도 쿼리 경로 세그먼트가 허용됩니다. 쿼리 옵션도 허용됩니다.|
 
@@ -100,7 +100,7 @@ http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'&$expand=Order
 > [!NOTE]
 > 서비스 작업의 반환 형식이 기본 엔터티 집합에 대한 액세스를 제한하여 숨겨진 경우에는 클라이언트 애플리케이션에서 서비스 작업을 사용할 수 없습니다.
 
-자세한 내용은 [방법: 서비스 작업](how-to-define-a-service-operation-wcf-data-services.md)을 정의 합니다.
+자세한 내용은 [방법: 서비스 작업 정의](how-to-define-a-service-operation-wcf-data-services.md)를 참조 하세요.
 
 ## <a name="raising-exceptions"></a>예외 발생
 
@@ -109,6 +109,6 @@ http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'&$expand=Order
 [!code-csharp[Astoria Northwind Service#HandleExceptions](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_service/cs/northwind2.svc.cs#handleexceptions)]
 [!code-vb[Astoria Northwind Service#HandleExceptions](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_service/vb/northwind2.svc.vb#handleexceptions)]
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [인터셉터](interceptors-wcf-data-services.md)

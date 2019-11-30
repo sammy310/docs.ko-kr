@@ -1,5 +1,5 @@
 ---
-title: '방법: 데이터 서비스 쿼리 실행 (WCF Data Services)'
+title: '방법: 데이터 서비스 쿼리 실행(WCF Data Services)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - WCF Data Services, querying
 - WCF Data Services, accessing data
 ms.assetid: 62997821-e0c6-4c4d-9fb7-1273fb5e5d18
-ms.openlocfilehash: 984bba9f31ddaee68c6997ba6da09a511e42b4ce
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: b06a21a45dcf6e67c41287c4cd59cdda4aa7b447
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780070"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569075"
 ---
-# <a name="how-to-execute-data-service-queries-wcf-data-services"></a>방법: 데이터 서비스 쿼리 실행 (WCF Data Services)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]를 사용하면 생성된 클라이언트 데이터 서비스 클래스를 통해 .NET Framework 기반 클라이언트 애플리케이션에서 데이터 서비스를 쿼리할 수 있습니다. 다음 방법 중 하나를 사용하여 쿼리를 실행할 수 있습니다.  
+# <a name="how-to-execute-data-service-queries-wcf-data-services"></a>방법: 데이터 서비스 쿼리 실행(WCF Data Services)
+WCF Data Services를 사용 하면 생성 된 클라이언트 데이터 서비스 클래스를 사용 하 여 .NET Framework 기반 클라이언트 응용 프로그램에서 데이터 서비스를 쿼리할 수 있습니다. 다음 방법 중 하나를 사용하여 쿼리를 실행할 수 있습니다.  
   
 - <xref:System.Data.Services.Client.DataServiceQuery%601> 도구가 생성하는 <xref:System.Data.Services.Client.DataServiceContext>에서 가져온 명명된 `Add Data Service Reference`에 대해 LINQ 쿼리 실행  
   
@@ -36,7 +36,7 @@ ms.locfileid: "70780070"
  [!code-vb[Astoria Northwind Client#GetAllCustomersLinq](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#getallcustomerslinq)]  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 `Add Data Service Reference` 도구가 생성하는 컨텍스트를 사용하여 Northwind 데이터 서비스에 대해 모든 `Customers`를 반환하는 쿼리를 암시적으로 실행하는 방법을 보여 줍니다. 요청한 `Customers` 엔터티 집합의 URI는 컨텍스트에 의해 자동으로 결정됩니다. 열거가 수행될 때 암시적으로 쿼리가 실행됩니다.  
+ 다음 예제에서는 `Add Data Service Reference` 도구가 생성하는 컨텍스트를 사용하여 Northwind 데이터 서비스에 대해 모든 `Customers`를 반환하는 쿼리를 암시적으로 실행하는 방법을 보여 줍니다. 요청 된 `Customers` 엔터티 집합의 URI는 컨텍스트에 의해 자동으로 결정 됩니다. 열거형이 발생 하면 쿼리가 암시적으로 실행 됩니다.  
   
  [!code-csharp[Astoria Northwind Client#GetAllCustomers](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#getallcustomers)]
  [!code-vb[Astoria Northwind Client#GetAllCustomers](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#getallcustomers)]  
@@ -47,6 +47,6 @@ ms.locfileid: "70780070"
  [!code-csharp[Astoria Northwind Client#GetAllCustomersExplicit](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#getallcustomersexplicit)]
  [!code-vb[Astoria Northwind Client#GetAllCustomersExplicit](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#getallcustomersexplicit)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
-- [방법: 데이터 서비스 쿼리에 쿼리 옵션 추가](how-to-add-query-options-to-a-data-service-query-wcf-data-services.md)
+- [방법: 쿼리 옵션을 데이터 서비스 쿼리에 추가](how-to-add-query-options-to-a-data-service-query-wcf-data-services.md)

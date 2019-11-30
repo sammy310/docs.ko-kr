@@ -8,12 +8,12 @@ metadata:
   author: cartermp
   ms.author: phcart
   ms.date: 11/25/2019
-  ms.openlocfilehash: 7aef8012a5ef58c1c0a142dce8baf7ccb73f50fa
-  ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
-  ms.translationtype: HT
+  ms.openlocfilehash: 113a99d75f77cba56639abf485bf646155f0ff36
+  ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+  ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/27/2019
-  ms.locfileid: "74553064"
+  ms.lasthandoff: 11/28/2019
+  ms.locfileid: "74569495"
 landingContent:
 - title: 프로그램에 대 한 자세한 정보F#
   linkLists:
@@ -53,6 +53,16 @@ landingContent:
     links:
     - text: 비동기 프로그래밍F#
       url: tutorials/asynchronous-and-concurrent-programming/async.md
+- title: 의 새로운 기능F#
+  linkLists:
+  - linkListType: whats-new
+    links:
+    - text: 4.7의 F# 새로운 기능
+      url: whats-new/fsharp-47.md
+    - text: 4.6의 F# 새로운 기능
+      url: whats-new/fsharp-46.md
+    - text: 4.5의 F# 새로운 기능
+      url: whats-new/fsharp-45.md
 - title: F#언어 참조
   linkLists:
   - linkListType: reference

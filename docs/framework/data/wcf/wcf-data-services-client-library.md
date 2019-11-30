@@ -6,21 +6,21 @@ helpviewer_keywords:
 - DataServiceQuery class, about DataServiceQuery class
 - DataServiceContext class, about DataServiceContext class
 ms.assetid: 21075e50-8917-413e-a8ea-35a0f6e65aa5
-ms.openlocfilehash: e078ba07072f71332aa2f19681b142df946ec391
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 74b3e50c36f0b3238b8fb74ca1ea1b336e0983c0
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975069"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568775"
 ---
 # <a name="wcf-data-services-client-library"></a>WCF Data Services 클라이언트 라이브러리
-모든 응용 프로그램은 HTTP 요청을 보내고 데이터 서비스에서 반환 하는 OData 피드를 처리할 수 있는 경우 OData (Open Data Protocol) 기반 데이터 서비스와 상호 작용할 수 있습니다. 이러한 상호 운용성을 통해 광범위 한 웹 사용 응용 프로그램에서 OData 기반 서비스에 액세스할 수 있습니다. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]에는 .NET Framework 또는 Silverlight 기반 응용 프로그램에서 OData 피드를 사용할 때 보다 다양 한 프로그래밍 환경을 제공 하는 클라이언트 라이브러리가 포함 되어 있습니다.  
+모든 응용 프로그램은 HTTP 요청을 보내고 데이터 서비스에서 반환 하는 OData 피드를 처리할 수 있는 경우 OData (Open Data Protocol) 기반 데이터 서비스와 상호 작용할 수 있습니다. 이러한 상호 운용성을 통해 광범위 한 웹 사용 응용 프로그램에서 OData 기반 서비스에 액세스할 수 있습니다. WCF Data Services에는 .NET Framework 또는 Silverlight 기반 응용 프로그램에서 OData 피드를 사용할 때 보다 다양 한 프로그래밍 환경을 제공 하는 클라이언트 라이브러리가 포함 되어 있습니다.  
   
  클라이언트 라이브러리의 두 가지 주요 클래스는 <xref:System.Data.Services.Client.DataServiceContext> 클래스와 <xref:System.Data.Services.Client.DataServiceQuery%601> 클래스입니다. <xref:System.Data.Services.Client.DataServiceContext> 클래스는 지정한 데이터 서비스에 대해 지원되는 작업을 캡슐화합니다. OData 서비스는 상태 비저장 이지만 컨텍스트는 그렇지 않습니다. 따라서 변경 관리 등의 기능을 지원 하기 위해 <xref:System.Data.Services.Client.DataServiceContext> 클래스를 사용 하 여 데이터 서비스와의 상호 작용 간에 클라이언트의 상태를 유지할 수 있습니다. 또한 이 클래스는 ID를 관리하고 변경 내용을 추적합니다. <xref:System.Data.Services.Client.DataServiceQuery%601> 클래스는 특정 엔터티 집합에 대한 쿼리를 나타냅니다.  
   
- 이 단원에서는 클라이언트 라이브러리를 사용하여 .NET Framework 클라이언트 애플리케이션에서 데이터에 액세스하고 변경하는 방법에 대해 설명합니다. Silverlight 기반 응용 프로그램에서 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 클라이언트 라이브러리를 사용 하는 방법에 대 한 자세한 내용은 [WCF Data Services (silverlight)](https://go.microsoft.com/fwlink/?LinkId=186016)를 참조 하세요. 다른 종류의 응용 프로그램에서 OData 피드를 사용할 수 있는 다른 클라이언트 라이브러리를 사용할 수 있습니다. 자세한 내용은 [ODATA SDK](https://go.microsoft.com/fwlink/?LinkID=185796)를 참조 하세요.  
+ 이 단원에서는 클라이언트 라이브러리를 사용하여 .NET Framework 클라이언트 애플리케이션에서 데이터에 액세스하고 변경하는 방법에 대해 설명합니다. Silverlight 기반 응용 프로그램에서 WCF Data Services 클라이언트 라이브러리를 사용 하는 방법에 대 한 자세한 내용은 [WCF Data Services (silverlight)](https://go.microsoft.com/fwlink/?LinkId=186016)를 참조 하세요. 다른 종류의 응용 프로그램에서 OData 피드를 사용할 수 있는 다른 클라이언트 라이브러리를 사용할 수 있습니다. 자세한 내용은 [ODATA SDK](https://go.microsoft.com/fwlink/?LinkID=185796)를 참조 하세요.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [데이터 서비스 클라이언트 라이브러리 생성](generating-the-data-service-client-library-wcf-data-services.md)  
  OData 피드를 기반으로 하는 클라이언트 데이터 서비스 클래스 및 클라이언트 라이브러리를 생성 하는 방법에 대해 설명 합니다.  
   

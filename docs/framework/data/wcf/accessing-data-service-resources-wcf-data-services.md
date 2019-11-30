@@ -8,15 +8,15 @@ helpviewer_keywords:
 - WCF Data Services, getting started
 - WCF Data Services, accessing data
 ms.assetid: 9665ff5b-3e3a-495d-bf83-d531d5d060ed
-ms.openlocfilehash: cf6877dd67ad9e17a43be5eafb84a2ecf21d7190
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 7eea23ba3dc5e9cc327d9cdfba10c72af7525c30
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975441"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569399"
 ---
 # <a name="accessing-data-service-resources-wcf-data-services"></a>데이터 서비스 리소스에 액세스(WCF Data Services)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]는 Uri로 주소를 지정할 수 있는 리소스로 데이터를 피드로 노출 하기 위해 OData (Open Data Protocol)를 지원 합니다. 이러한 리소스는 [엔터티 데이터 모델](../adonet/entity-data-model.md)의 엔터티-관계 규칙에 따라 표시 됩니다. 이 모델에서 엔터티는 고객, 주문, 항목 및 제품과 같이 애플리케이션 도메인의 데이터 형식인 데이터 운영 단위를 나타냅니다. REST(Representational State Transfer)의 의미 체계, 특히 GET, PUT, POST, DELETE 등의 표준 HTTP 동사를 사용하여 엔터티 데이터에 액세스하고 변경합니다.  
+WCF Data Services는 Uri로 주소를 지정할 수 있는 리소스로 데이터를 피드로 노출 하기 위해 OData (Open Data Protocol)를 지원 합니다. 이러한 리소스는 [엔터티 데이터 모델](../adonet/entity-data-model.md)의 엔터티-관계 규칙에 따라 표시 됩니다. 이 모델에서 엔터티는 고객, 주문, 항목 및 제품과 같이 애플리케이션 도메인의 데이터 형식인 데이터 운영 단위를 나타냅니다. REST(Representational State Transfer)의 의미 체계, 특히 GET, PUT, POST, DELETE 등의 표준 HTTP 동사를 사용하여 엔터티 데이터에 액세스하고 변경합니다.  
   
 ## <a name="addressing-resources"></a>리소스 처리  
  OData에서는 URI를 사용 하 여 데이터 모델에 의해 노출 되는 모든 데이터를 처리 합니다. 예를 들어, 다음 URI는 Customer 엔터티 형식의 모든 인스턴스에 대 한 항목을 포함 하는 Customers 엔터티 집합인 피드를 반환 합니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "73975441"
   
  또한 반환된 피드의 항목은 주문의 ShipCity 속성 값을 기준으로 정렬됩니다.  
   
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]는 다음과 같은 OData 시스템 쿼리 옵션을 지원 합니다.  
+ WCF Data Services는 다음과 같은 OData 시스템 쿼리 옵션을 지원 합니다.  
   
 |쿼리 옵션|설명|  
 |------------------|-----------------|  

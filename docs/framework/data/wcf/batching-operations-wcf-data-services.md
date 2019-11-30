@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, client library
 ms.assetid: 962a49d1-cc11-4b96-bc7d-071dd6607d6c
-ms.openlocfilehash: 573a5fc43022e95bea81f299f461e91396f0d464
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 48c0a5f1573f64396971e1265dbf467300a98406
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974850"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569352"
 ---
 # <a name="batching-operations-wcf-data-services"></a>일괄 처리 작업(WCF Data Services)
-OData (Open Data Protocol)는 OData 기반 서비스에 대 한 요청의 일괄 처리를 지원 합니다. 자세한 내용은 [OData: 일괄 처리](https://go.microsoft.com/fwlink/?LinkId=186075)를 참조 하세요. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]에서 쿼리 실행 또는 변경 내용 저장과 같이 <xref:System.Data.Services.Client.DataServiceContext>를 사용 하는 각 작업을 수행 하면 별도의 요청이 데이터 서비스로 전송 됩니다. 작업 집합에 대해 논리적 범위를 유지하려면 작업 일괄 처리를 명시적으로 정의합니다. 이렇게 하면 일괄 처리의 모든 작업이 단일 HTTP 요청으로 데이터 서비스에 전송 되 고, 서버에서 작업을 원자 단위로 처리할 수 있으며, 데이터 서비스에 대 한 왕복 수를 줄일 수 있습니다.  
+OData (Open Data Protocol)는 OData 기반 서비스에 대 한 요청의 일괄 처리를 지원 합니다. 자세한 내용은 [OData: 일괄 처리](https://go.microsoft.com/fwlink/?LinkId=186075)를 참조 하세요. WCF Data Services에서 쿼리 실행 또는 변경 내용 저장과 같이 <xref:System.Data.Services.Client.DataServiceContext>를 사용 하는 각 작업을 수행 하면 별도의 요청이 데이터 서비스로 전송 됩니다. 작업 집합에 대해 논리적 범위를 유지하려면 작업 일괄 처리를 명시적으로 정의합니다. 이렇게 하면 일괄 처리의 모든 작업이 단일 HTTP 요청으로 데이터 서비스에 전송 되 고, 서버에서 작업을 원자 단위로 처리할 수 있으며, 데이터 서비스에 대 한 왕복 수를 줄일 수 있습니다.  
   
 ## <a name="batching-query-operations"></a>쿼리 작업 일괄 처리  
  여러 쿼리를 단일 일괄 처리로 실행하려면 일괄 처리의 각 쿼리를 별도의 <xref:System.Data.Services.Client.DataServiceRequest%601> 클래스 인스턴스로 만들어야 합니다. 이런 방식으로 쿼리 요청을 만들면 쿼리 자체가 URI로 정의되며 리소스의 주소 지정 규칙을 따릅니다. 자세한 내용은 [데이터 서비스 리소스에 액세스](accessing-data-service-resources-wcf-data-services.md)를 참조 하세요. 쿼리 요청 개체가 포함된 <xref:System.Data.Services.Client.DataServiceContext.ExecuteBatch%2A> 메서드를 호출하면 일괄 처리된 쿼리 요청 결과가 데이터 서비스로 전송됩니다. 이 메서드는 일괄 처리에 포함된 개별 쿼리에 대한 응답을 나타내며 각각 쿼리에서 반환된 개체 컬렉션이나 오류 정보를 포함하는 <xref:System.Data.Services.Client.DataServiceResponse> 개체의 컬렉션인 <xref:System.Data.Services.Client.QueryOperationResponse%601> 개체를 반환합니다. 일괄 처리에서 단일 쿼리 작업이 실패하면 <xref:System.Data.Services.Client.QueryOperationResponse%601> 개체에 실패한 작업에 대한 오류 정보가 반환되며 나머지 작업은 계속 실행됩니다. 자세한 내용은 [방법: 일괄 처리로 쿼리 실행](how-to-execute-queries-in-a-batch-wcf-data-services.md)을 참조 하세요.  

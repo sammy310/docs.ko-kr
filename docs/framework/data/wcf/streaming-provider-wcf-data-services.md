@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: da575c65902ec8751c12482d0c8d0abd523623e4
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: a5793eae92ffdfa65872c93273bd7cfefdc6f674
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975127"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568803"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>스트리밍 공급자(WCF Data Services)
 
@@ -25,7 +25,7 @@ ms.locfileid: "73975127"
 
 - 미디어 링크 항목 - 관련 미디어 리소스 스트림에 대한 참조가 있는 엔터티입니다.
 
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]에서 스트리밍 데이터 공급자를 이진 리소스 스트림을 정의합니다. 스트리밍 공급자 구현은 데이터 서비스에 특정 엔터티와 연결 된 미디어 리소스 스트림을 <xref:System.IO.Stream> 개체로 제공 합니다. 이 구현을 사용하면 데이터 서비스가 HTTP를 통해 미디어 리소스를 받아들이고 지정된 MIME 형식의 이진 데이터 스트림으로 반환합니다.
+WCF Data Services를 사용 하 여 스트리밍 데이터 공급자를 구현 하 여 이진 리소스 스트림을 정의 합니다. 스트리밍 공급자 구현은 데이터 서비스에 특정 엔터티와 연결 된 미디어 리소스 스트림을 <xref:System.IO.Stream> 개체로 제공 합니다. 이 구현을 사용하면 데이터 서비스가 HTTP를 통해 미디어 리소스를 받아들이고 지정된 MIME 형식의 이진 데이터 스트림으로 반환합니다.
 
 이진 데이터의 스트리밍을 지원하도록 데이터 서비스를 구성하려면 다음 단계를 수행해야 합니다.
 
@@ -79,7 +79,7 @@ Entity Framework 공급자를 사용 하 고 미디어 리소스를 노출 하�
 
 ## <a name="creating-the-streaming-data-service"></a>스트리밍 데이터 서비스 만들기
 
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 런타임에 <xref:System.Data.Services.Providers.IDataServiceStreamProvider> 구현에 대한 액세스 권한을 제공하려면 만든 데이터 서비스에서 <xref:System.IServiceProvider> 인터페이스도 구현해야 합니다. 다음 예제에서는 <xref:System.IServiceProvider.GetService%2A>를 구현하는 `PhotoServiceStreamProvider` 클래스의 인스턴스를 반환하기 위해 <xref:System.Data.Services.Providers.IDataServiceStreamProvider> 메서드를 구현하는 방법을 보여 줍니다.
+WCF Data Services 런타임에 <xref:System.Data.Services.Providers.IDataServiceStreamProvider> 구현에 대 한 액세스를 제공 하려면 사용자가 만든 데이터 서비스 에서도 <xref:System.IServiceProvider> 인터페이스를 구현 해야 합니다. 다음 예제에서는 <xref:System.IServiceProvider.GetService%2A>를 구현하는 `PhotoServiceStreamProvider` 클래스의 인스턴스를 반환하기 위해 <xref:System.Data.Services.Providers.IDataServiceStreamProvider> 메서드를 구현하는 방법을 보여 줍니다.
 
 [!code-csharp[Astoria Photo Streaming Service#PhotoServiceStreamingProvider](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_photo_streaming_service/cs/photodata.svc.cs#photoservicestreamingprovider)]
 [!code-vb[Astoria Photo Streaming Service#PhotoServiceStreamingProvider](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_photo_streaming_service/vb/photodata.svc.vb#photoservicestreamingprovider)]
@@ -99,7 +99,7 @@ ASP.NET 웹 응용 프로그램에서 데이터 서비스를 만들 때 WCF (Win
 
 ## <a name="using-data-streams-in-a-client-application"></a>클라이언트 애플리케이션에서 데이터 스트림 사용
 
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 클라이언트 라이브러리를 사용하면 클라이언트에서 이진 스트림으로 노출된 이러한 리소스를 검색하고 업데이트할 수 있습니다. 자세한 내용은 [이진 데이터 작업](working-with-binary-data-wcf-data-services.md)을 참조 하세요.
+WCF Data Services 클라이언트 라이브러리를 사용 하면 클라이언트에서 이러한 노출 된 리소스를 이진 스트림으로 검색 하 고 업데이트할 수 있습니다. 자세한 내용은 [이진 데이터 작업](working-with-binary-data-wcf-data-services.md)을 참조 하세요.
 
 ## <a name="considerations-for-working-with-a-streaming-provider"></a>스트리밍 공급자로 작업하기 위한 고려 사항
 

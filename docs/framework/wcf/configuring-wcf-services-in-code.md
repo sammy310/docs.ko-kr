@@ -2,12 +2,12 @@
 title: 코드로 WCF 서비스 구성
 ms.date: 03/30/2017
 ms.assetid: 193c725d-134f-4d31-a8f8-4e575233bff6
-ms.openlocfilehash: c6bcf08511470d28e1087108d95e477683b0338b
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 5d05fe5f70f4e2b1490c728cc019430cd94ff925
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320637"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569512"
 ---
 # <a name="configuring-wcf-services-in-code"></a>코드로 WCF 서비스 구성
 WCF (Windows Communication Foundation)를 사용 하면 개발자가 구성 파일 또는 코드를 사용 하 여 서비스를 구성할 수 있습니다.  구성 파일은 배포 후 서비스를 구성해야 하는 경우에 유용합니다. 구성 파일을 사용할 경우 IT 전문가가 구성 파일을 업데이트하기만 하면 되고 다시 컴파일할 필요가 없습니다. 하지만 구성 파일은 관리하기가 복잡하고 어려울 수 있습니다. 구성 파일 디버깅은 지원되지 않으며 구성 요소는 이름으로 참조되므로 구성 파일을 작성하기가 어렵고 오류가 발생하기 쉽습니다. WCF를 사용 하면 코드에서 서비스를 구성할 수도 있습니다. 이전 버전의 WCF (4.0 및 이전 버전)에서 코드의 서비스 구성은 자체 호스팅 시나리오에서 쉽기 때문에 <xref:System.ServiceModel.ServiceHost> 클래스를 통해 ServiceHost를 호출 하기 전에 끝점과 동작을 구성할 수 있었습니다. 그러나 웹 호스팅 시나리오에서는 <xref:System.ServiceModel.ServiceHost> 클래스에 직접 액세스할 수 없습니다. 웹 호스팅 서비스를 구성하려면 `System.ServiceModel.ServiceHostFactory`를 만들고 필요한 구성을 수행하는 <xref:System.ServiceModel.Activation.ServiceHostFactory>를 만들어야 했습니다. .NET 4.5부터 WCF는 자체 호스팅 서비스와 웹 호스팅 서비스를 코드에서 더 쉽게 구성 하는 방법을 제공 합니다.  
@@ -68,7 +68,7 @@ public class Service1 : IService1
        config.Description.Behaviors.Add( new ServiceMetadataBehavior { HttpGetEnabled = true });   
        // set up support for http, https, net.tcp, net.pipe   
        config.EnableProtocol(new BasicHttpBinding());   
-       config.EnableProtocol(new BasicHttpBinding());   
+       config.EnableProtocol(new BasicHttpsBinding());   
        config.EnableProtocol(new NetTcpBinding());   
        config.EnableProtocol(new NetNamedPipeBinding());   
        // add an extra BasicHttpBinding endpoint at http:///basic   
@@ -77,7 +77,7 @@ public class Service1 : IService1
 }   
 ```  
   
- < @No__t_0 > 섹션의 설정은 프로그래밍 방식으로 <xref:System.ServiceModel.ServiceConfiguration>에 응용 프로그램 끝점을 추가 하지 않은 경우에만 사용 됩니다. 필요에 따라 <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration%2A>를 호출 하 여 기본 응용 프로그램 구성 파일에서 서비스 구성을 로드 한 다음 설정을 변경할 수 있습니다. <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration> 클래스를 사용하면 중앙 집중식 구성에서 구성을 로드할 수도 있습니다. 다음 코드에서는 이를 구현하는 방법을 보여 줍니다.  
+ `protocolMappings`> 섹션의 설정은 프로그래밍 방식으로 <xref:System.ServiceModel.ServiceConfiguration>에 응용 프로그램 끝점을 추가 하지 않은 경우에만 사용 됩니다. 필요에 따라 <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration%2A>를 호출 하 여 기본 응용 프로그램 구성 파일에서 서비스 구성을 로드 한 다음 설정을 변경할 수 있습니다. <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration> 클래스를 사용하면 중앙 집중식 구성에서 구성을 로드할 수도 있습니다. 다음 코드에서는 이를 구현하는 방법을 보여 줍니다.  
   
 ```csharp
 public class Service1 : IService1   
@@ -91,7 +91,7 @@ public class Service1 : IService1
 ```  
   
 > [!IMPORTANT]
-> @No__t_0는 < `service` >의 < `system.serviceModel` > 태그 내에서 < `host` > 설정을 무시 합니다. 개념적으로 < `host` >는 서비스 구성이 아니라 호스트 구성에 대 한 것 이며 Configure 메서드가 실행 되기 전에 로드 됩니다.  
+> <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration%2A>는 <`service`>의 <`system.serviceModel`> 태그 내에서 <`host`> 설정을 무시 합니다. 개념적으로 <`host`>는 서비스 구성이 아니라 호스트 구성에 대 한 것 이며 Configure 메서드가 실행 되기 전에 로드 됩니다.  
   
 ## <a name="see-also"></a>참조
 

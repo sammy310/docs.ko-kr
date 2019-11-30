@@ -2,23 +2,23 @@
 title: 데이터 서비스 컨텍스트 관리(WCF Data Services)
 ms.date: 03/30/2017
 ms.assetid: 15b19d09-7de7-4638-9556-6ef396cc45ec
-ms.openlocfilehash: 621887f2814127c7c6800fecc9ade1e161db46e0
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 104b87a9fdfc1e461b708acf7a75c8327ad182af
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975201"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568933"
 ---
 # <a name="managing-the-data-service-context-wcf-data-services"></a>데이터 서비스 컨텍스트 관리(WCF Data Services)
 <xref:System.Data.Services.Client.DataServiceContext> 클래스는 지정한 데이터 서비스에 대해 지원되는 작업을 캡슐화합니다. OData 서비스는 상태 비저장 이지만 컨텍스트는 그렇지 않습니다. 따라서 변경 관리 등의 기능을 지원 하기 위해 <xref:System.Data.Services.Client.DataServiceContext> 클래스를 사용 하 여 데이터 서비스와의 상호 작용 간에 클라이언트의 상태를 유지할 수 있습니다. 또한 이 클래스는 ID를 관리하고 변경 내용을 추적합니다.  
   
 ## <a name="merge-options-and-identity-resolution"></a>병합 옵션 및 ID 확인  
- <xref:System.Data.Services.Client.DataServiceQuery%601>가 실행되면 응답 피드의 엔터티가 개체로 구체화됩니다. 자세한 내용은 [개체 구체화](object-materialization-wcf-data-services.md)를 참조 하세요. 응답 메시지의 항목이 개체로 구체화되는 방법은 ID 확인에 따라 수행되며 쿼리가 실행된 병합 옵션에 따라 달라집니다. 여러 쿼리 또는 로드 요청이 단일 <xref:System.Data.Services.Client.DataServiceContext>의 범위에서 실행되는 경우 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 클라이언트는 특정 키 값이 있는 개체의 단일 인스턴스만 추적합니다. ID 확인을 수행하는 데 사용되는 이 키는 엔터티를 고유하게 식별합니다.  
+ <xref:System.Data.Services.Client.DataServiceQuery%601>가 실행되면 응답 피드의 엔터티가 개체로 구체화됩니다. 자세한 내용은 [개체 구체화](object-materialization-wcf-data-services.md)를 참조 하세요. 응답 메시지의 항목이 개체로 구체화되는 방법은 ID 확인에 따라 수행되며 쿼리가 실행된 병합 옵션에 따라 달라집니다. 단일 <xref:System.Data.Services.Client.DataServiceContext>의 범위에서 여러 쿼리 또는 로드 요청을 실행 하는 경우 WCF Data Services 클라이언트는 특정 키 값을 가진 개체의 단일 인스턴스만 추적 합니다. ID 확인을 수행하는 데 사용되는 이 키는 엔터티를 고유하게 식별합니다.  
   
  기본적으로 클라이언트는 응답 피드의 항목을 <xref:System.Data.Services.Client.DataServiceContext>에 의해 추적되지 않는 엔터티의 개체로만 구체화합니다. 즉, 캐시에 이미 있는 개체의 변경 내용이 덮어쓰여지지 않습니다. 쿼리 및 로드 작업에 <xref:System.Data.Services.Client.MergeOption> 값을 지정하여 이 동작을 제어합니다. 이 옵션은 <xref:System.Data.Services.Client.DataServiceContext.MergeOption%2A>에서 <xref:System.Data.Services.Client.DataServiceContext> 속성을 설정하여 지정합니다. 기본 병합 옵션 값은 <xref:System.Data.Services.Client.MergeOption.AppendOnly>입니다. 이 경우 추적되지 않는 엔터티의 개체만 구체화되므로 기존 개체는 덮어쓰여지지 않습니다. 클라이언트의 개체에 대한 변경 내용이 데이터 서비스의 업데이트에 의해 덮어쓰여지지 않도록 하는 다른 방법은 <xref:System.Data.Services.Client.MergeOption.PreserveChanges>를 지정하는 것입니다. <xref:System.Data.Services.Client.MergeOption.OverwriteChanges>를 지정하면 클라이언트의 개체 값은 해당 개체가 이미 변경된 경우에도 응답 피드에 있는 항목의 최신 값으로 대체됩니다. <xref:System.Data.Services.Client.MergeOption.NoTracking> 병합 옵션을 사용하는 경우 <xref:System.Data.Services.Client.DataServiceContext>는 클라이언트 개체의 변경 내용을 데이터 서비스에 보낼 수 없습니다. 이 옵션을 사용하면 변경 내용이 항상 데이터 서비스의 값으로 덮어쓰여집니다.  
   
 ## <a name="managing-concurrency"></a>동시성 관리  
- OData는 데이터 서비스에서 업데이트 충돌을 감지할 수 있도록 하는 낙관적 동시성을 지원 합니다. 데이터 서비스에서 동시성 토큰을 사용하여 엔터티의 변경 내용을 확인하는 방식으로 데이터 서비스 공급자를 구성할 수 있습니다. 이 토큰에는 리소스 변경 여부를 확인하기 위해 데이터 서비스에서 유효성이 검사되는 엔터티 형식의 속성이 하나 이상 포함됩니다. 데이터 서비스에 대 한 요청 및 응답의 eTag 헤더에 포함 된 동시성 토큰은 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 클라이언트에서 관리 됩니다. 자세한 내용은 [데이터 서비스 업데이트](updating-the-data-service-wcf-data-services.md)를 참조 하세요.  
+ OData는 데이터 서비스에서 업데이트 충돌을 감지할 수 있도록 하는 낙관적 동시성을 지원 합니다. 데이터 서비스에서 동시성 토큰을 사용하여 엔터티의 변경 내용을 확인하는 방식으로 데이터 서비스 공급자를 구성할 수 있습니다. 이 토큰에는 리소스 변경 여부를 확인하기 위해 데이터 서비스에서 유효성이 검사되는 엔터티 형식의 속성이 하나 이상 포함됩니다. 데이터 서비스에 대 한 요청 및 응답의 eTag 헤더에 포함 된 동시성 토큰은 WCF Data Services 클라이언트에서 관리 됩니다. 자세한 내용은 [데이터 서비스 업데이트](updating-the-data-service-wcf-data-services.md)를 참조 하세요.  
   
  <xref:System.Data.Services.Client.DataServiceContext>는 <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A>, <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> 및 <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A>를 사용하거나 <xref:System.Data.Services.Client.DataServiceCollection%601>에 의해 수동으로 보고된 개체의 변경 내용을 추적합니다. <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> 메서드가 호출되면 클라이언트가 변경 내용을 데이터 서비스에 보냅니다. <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A>는 클라이언트의 데이터 변경 내용이 데이터 서비스의 변경 내용과 충돌하는 경우 실패할 수 있습니다. 이러한 경우에는 엔터티 리소스에 대한 쿼리를 다시 실행하여 업데이트 데이터를 받아야 합니다. 데이터 서비스의 변경 내용을 덮어쓰려면 <xref:System.Data.Services.Client.MergeOption.PreserveChanges> 병합 옵션을 사용하여 쿼리를 실행합니다. <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A>를 다시 호출하면 데이터 서비스의 해당 리소스에 다른 변경이 이미 수행되지 않은 경우 클라이언트에 유지된 변경 내용이 데이터 서비스에 유지됩니다.  
   

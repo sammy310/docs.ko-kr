@@ -10,22 +10,22 @@ helpviewer_keywords:
 - Atom Publishing Protocol [WCF Data Services]
 - WCF Data Services, customizing feeds
 ms.assetid: 0d1a39bc-6462-4683-bd7d-e74e0fd28a85
-ms.openlocfilehash: 56c91fd1e9ea4a2e35bacbebab0f489e337cfec5
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 08df16be9df6d55ab9f1426e205e56d9609ce72e
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975293"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569219"
 ---
 # <a name="feed-customization-wcf-data-services"></a>피드 사용자 지정(WCF Data Services)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]는 OData (Open Data Protocol)를 사용 하 여 데이터를 피드로 노출 합니다. OData는 데이터 피드에 대해 Atom 및 JavaScript Object Notation (JSON) 형식을 모두 지원 합니다. Atom 피드를 사용 하는 경우 OData는 엔터티 및 관계와 같은 데이터를 HTTP 메시지의 본문에 포함할 수 있는 XML 형식으로 serialize 하는 표준 메서드를 제공 합니다. OData는 엔터티와 Atom 요소에 포함 된 데이터 간의 기본 엔터티 속성 매핑을 정의 합니다. 자세한 내용은 [OData: Atom Format](https://go.microsoft.com/fwlink/?LinkID=185794)을 참조 하십시오.  
+WCF Data Services는 OData (Open Data Protocol)를 사용 하 여 데이터를 피드로 노출 합니다. OData는 데이터 피드에 대해 Atom 및 JavaScript Object Notation (JSON) 형식을 모두 지원 합니다. Atom 피드를 사용 하는 경우 OData는 엔터티 및 관계와 같은 데이터를 HTTP 메시지의 본문에 포함할 수 있는 XML 형식으로 serialize 하는 표준 메서드를 제공 합니다. OData는 엔터티와 Atom 요소에 포함 된 데이터 간의 기본 엔터티 속성 매핑을 정의 합니다. 자세한 내용은 [OData: Atom Format](https://go.microsoft.com/fwlink/?LinkID=185794)을 참조 하십시오.  
   
  데이터 서비스에서 반환된 속성 데이터를 표준 피드 형식이 아니라 사용자 지정 방식으로 serialize(직렬화)해야 하는 애플리케이션 시나리오가 있을 수도 있습니다. OData를 사용 하면 엔터티의 속성이 사용 되지 않는 요소 및 항목의 특성이 나 피드의 항목의 사용자 지정 요소에 매핑될 수 있도록 데이터 피드의 serialization을 사용자 지정할 수 있습니다.  
   
 > [!NOTE]
 > 피드 사용자 지정은 Atom 피드에만 지원됩니다. 반환된 피드에 대해 JSON 형식이 요청되는 경우에는 사용자 지정 피드가 반환되지 않습니다.  
   
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]를 사용하면 수동으로 데이터 모델의 엔터티 형식에 특성을 적용하여 Atom 페이로드에 대한 대체 엔터티 속성 매핑을 정의할 수 있습니다. 데이터 서비스의 데이터 소스 공급자가 이러한 특성의 적용 방법을 결정합니다.  
+ WCF Data Services를 사용 하면 데이터 모델의 엔터티 형식에 특성을 수동으로 적용 하 여 Atom 페이로드에 대 한 대체 엔터티 속성 매핑을 정의할 수 있습니다. 데이터 서비스의 데이터 소스 공급자가 이러한 특성의 적용 방법을 결정합니다.  
   
 > [!IMPORTANT]
 > 사용자 지정 피드를 정의하는 경우 사용자 지정 매핑이 정의되어 있는 모든 엔터티 속성이 프로젝션에 포함되도록 해야 합니다. 매핑된 엔터티 속성이 프로젝션에 포함되지 않는 경우 데이터가 손실될 수 있습니다. 자세한 내용은 [쿼리 프로젝션](query-projections-wcf-data-services.md)을 참조 하세요.  
@@ -50,7 +50,7 @@ ms.locfileid: "73975293"
 |특성 이름|설명|  
 |--------------------|-----------------|  
 |`FC_ContentKind`|콘텐츠의 형식을 나타냅니다. 다음 키워드는 배포 콘텐츠 형식을 정의합니다.<br /><br /> `text:` 속성 값이 피드에 텍스트로 표시 됩니다.<br /><br /> `html:` 속성 값이 피드에 HTML로 표시 됩니다.<br /><br /> `xhtml:` 속성 값이 피드에 XML 형식의 HTML로 표시 됩니다.<br /><br /> 이러한 키워드는 리플렉션 공급자와 함께 사용되는 <xref:System.Data.Services.Common.SyndicationTextContentKind> 열거 값과 같습니다.<br /><br /> `FC_NsPrefix` 및 `FC_NsUri` 특성을 사용하는 경우 이 특성은 지원되지 않습니다.<br /><br /> `FC_ContentKind` 특성에 `xhtml` 값을 지정 하는 경우 속성 값에 올바른 형식의 XML이 포함 되어 있는지 확인 해야 합니다. 데이터 서비스는 변환을 수행 하지 않고 값을 반환 합니다. 또한 반환 된 XML의 모든 XML 요소 접두사에 매핑된 피드에 정의 된 네임 스페이스 URI 및 접두사가 있는지 확인 해야 합니다.|  
-|`FC_KeepInContent`|참조된 속성 값이 피드의 콘텐츠 섹션과 매핑 대상 위치에 모두 포함되어야 함을 나타냅니다. 유효한 값은 `true` 및 `false`입니다. 결과 피드가 이전 버전의 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]와 이전 버전과 호환 되도록 하려면 값이 피드의 콘텐츠 섹션에 포함 되도록 `true` 값을 지정 합니다.|  
+|`FC_KeepInContent`|참조된 속성 값이 피드의 콘텐츠 섹션과 매핑 대상 위치에 모두 포함되어야 함을 나타냅니다. 유효한 값은 `true` 및 `false`입니다. 결과 피드가 이전 버전의 WCF Data Services와 이전 버전과 호환 되도록 하려면 값이 피드의 콘텐츠 섹션에 포함 되도록 `true` 값을 지정 합니다.|  
 |`FC_NsPrefix`|배포 이외의 매핑에서 XML 요소의 네임스페이스 접두사입니다. 이 특성은 `FC_NsUri` 특성과 함께 사용해야 하며, `FC_ContentKind` 특성과 함께 사용할 수는 없습니다.|  
 |`FC_NsUri`|배포 이외의 매핑에서 XML 요소의 네임스페이스 URI입니다. 이 특성은 `FC_NsPrefix` 특성과 함께 사용해야 하며, `FC_ContentKind` 특성과 함께 사용할 수는 없습니다.|  
 |`FC_SourcePath`|이 피드 매핑 규칙이 적용되는 엔터티의 속성 경로입니다. 이 특성은 `EntityType` 요소와 함께 사용하는 경우에만 지원됩니다.<br /><br /> <xref:System.Data.Services.Common.EntityPropertyMappingAttribute.SourcePath%2A> 속성은 복합 형식을 직접 참조할 수 없습니다. 복합 형식의 경우 속성 이름이 백슬래시 (`/`) 문자로 구분 되는 경로 식을 사용 해야 합니다. 예를 들어 정수 속성 `Age` 및 복합 속성을 사용 하는 `Person` 엔터티 형식에는 다음 값을 사용할 수 있습니다.<br /><br /> `Address`:<br /><br /> `Age`<br /><br /> `Address/Street`<br /><br /> <xref:System.Data.Services.Common.EntityPropertyMappingAttribute.SourcePath%2A> 속성을 공백 또는 속성 이름에 사용할 수 없는 다른 문자를 포함 하는 값으로 설정할 수 없습니다.|  
@@ -83,7 +83,7 @@ ms.locfileid: "73975293"
 ## <a name="feed-customization-considerations"></a>피드 사용자 지정 고려 사항  
  사용자 지정 피드 매핑을 정의할 때는 다음을 고려해야 합니다.  
   
-- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 클라이언트는 공백만 포함 하는 경우 피드의 매핑된 요소를 비어 있는 것으로 처리 합니다. 이로 인해 공백만 포함 하는 매핑된 요소는 동일한 공백이 있는 클라이언트에서 구체화 되지 않습니다. 클라이언트에서이 공백을 유지 하려면 피드 매핑 특성에서 `KeepInContext` 값을 `true`으로 설정 해야 합니다.  
+- WCF Data Services 클라이언트는 공백만 포함 하는 경우 피드의 매핑된 요소를 비어 있는 것으로 처리 합니다. 이로 인해 공백만 포함 하는 매핑된 요소는 동일한 공백이 있는 클라이언트에서 구체화 되지 않습니다. 클라이언트에서이 공백을 유지 하려면 피드 매핑 특성에서 `KeepInContext` 값을 `true`으로 설정 해야 합니다.  
   
 ## <a name="versioning-requirements"></a>버전 관리 요구 사항  
  피드 사용자 지정에는 다음과 같은 OData 프로토콜 버전 관리 요구 사항이 있습니다.  

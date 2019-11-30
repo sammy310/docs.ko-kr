@@ -7,12 +7,12 @@ helpviewer_keywords:
 - GAC (global assembly cache), publisher policy assembly
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
-ms.openlocfilehash: 346671d4febd5f3999f1f4fbf2fe4b7e475ae5fa
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 313af6046fda8dd8905e8bda4e8c4aec187ef8bf
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040196"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568398"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>방법: 게시자 정책 만들기
 
@@ -53,7 +53,7 @@ ms.locfileid: "73040196"
 
 #### <a name="to-create-a-publisher-policy-assembly"></a>게시자 정책 어셈블리를 만들려면
 
-명령 프롬프트에서 다음 명령을 입력 합니다.
+명령 프롬프트에서 다음 명령을 입력합니다.
 
 ```console
 al /link:publisherPolicyFile /out:publisherPolicyAssemblyFile /keyfile:keyPairFile /platform:processorArchitecture
@@ -74,7 +74,7 @@ al /link:publisherPolicyFile /out:publisherPolicyAssemblyFile /keyfile:keyPairFi
   > [!NOTE]
   > 특정 프로세서 아키텍처를 대상으로 하는 기능은 .NET Framework 2.0부터 사용할 수 있습니다.
 
-특정 프로세서 아키텍처를 대상으로 하는 기능은 .NET Framework 2.0부터 사용할 수 있습니다. 다음 명령은 `pub.config`이라는 게시자 정책 파일에서 `policy.1.0.myAssembly` 라는 게시자 정책 어셈블리를 만들고, `sgKey.snk` 파일의 키 쌍을 사용 하 여 어셈블리에 강력한 이름을 할당 하 고, 어셈블리가 x86 프로세서를 대상으로 하도록 지정 합니다. 마이크로아키텍처.
+특정 프로세서 아키텍처를 대상으로 하는 기능은 .NET Framework 2.0부터 사용할 수 있습니다. 다음 명령은 `pub.config`이라는 게시자 정책 파일에서 `policy.1.0.myAssembly` 라는 게시자 정책 어셈블리를 만들고, `sgKey.snk` 파일의 키 쌍을 사용 하 여 어셈블리에 강력한 이름을 할당 하 고, 어셈블리가 x86 프로세서 아키텍처를 대상으로 하도록 지정 합니다.
 
 ```console
 al /link:pub.config /out:policy.1.0.myAssembly.dll /keyfile:sgKey.snk /platform:x86
@@ -92,7 +92,7 @@ al /link:pub.config /out:policy.1.0.myAssembly.dll /keyfile:sgKey.snk /platform:
 
 ### <a name="to-add-the-publisher-policy-assembly-to-the-global-assembly-cache"></a>전역 어셈블리 캐시에 게시자 정책 어셈블리를 추가 하려면
 
-명령 프롬프트에서 다음 명령을 입력 합니다.
+명령 프롬프트에서 다음 명령을 입력합니다.
 
 ```console
 gacutil /i publisherPolicyAssemblyFile
@@ -105,7 +105,7 @@ gacutil /i policy.1.0.myAssembly.dll
 ```
 
 > [!IMPORTANT]
-> 원본 게시자 정책 파일이 어셈블리와 동일한 디렉터리에 있는 경우가 아니면 게시자 정책 어셈블리를 전역 어셈블리 캐시에 추가할 수 없습니다.
+> `/link` 인수에 지정 된 원래 게시자 정책 파일이 어셈블리와 동일한 디렉터리에 있는 경우가 아니면 게시자 정책 어셈블리를 전역 어셈블리 캐시에 추가할 수 없습니다.
 
 ## <a name="see-also"></a>참조
 

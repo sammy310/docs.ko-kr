@@ -9,16 +9,16 @@ helpviewer_keywords:
 - WCF Data Services, querying
 - WCF Data Services, accessing data
 ms.assetid: 823e9444-27aa-4f1f-be8e-0486d67f54c0
-ms.openlocfilehash: e37a1654bdc62937bbb27c293a110293c9928645
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 99fe377e8fff193c4f8bb566946b95c61c1b3693
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975161"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568890"
 ---
 # <a name="querying-the-data-service-wcf-data-services"></a>데이터 서비스 쿼리 (WCF Data Services)
 
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 클라이언트 라이브러리를 사용하면 LINQ(Language-Integrated Query) 사용을 비롯한 익숙한 .NET Framework 프로그래밍 패턴을 사용하여 데이터 서비스에 대해 쿼리를 실행할 수 있습니다. 클라이언트 라이브러리는 클라이언트에서 <xref:System.Data.Services.Client.DataServiceQuery%601> 클래스의 인스턴스로 정의된 쿼리를 HTTP GET 요청 메시지로 변환합니다. 라이브러리는 응답 메시지를 수신 하 고이를 클라이언트 데이터 서비스 클래스의 인스턴스로 변환 합니다. 이러한 클래스는 <xref:System.Data.Services.Client.DataServiceContext>가 속해 있는 <xref:System.Data.Services.Client.DataServiceQuery%601>에 의해 추적됩니다.
+WCF Data Services 클라이언트 라이브러리를 사용 하면 LINQ (통합 언어 쿼리)를 사용 하는 것과 같은 친숙 한 .NET Framework 프로그래밍 패턴을 사용 하 여 데이터 서비스에 대해 쿼리를 실행할 수 있습니다. 클라이언트 라이브러리는 클라이언트에서 <xref:System.Data.Services.Client.DataServiceQuery%601> 클래스의 인스턴스로 정의된 쿼리를 HTTP GET 요청 메시지로 변환합니다. 라이브러리는 응답 메시지를 수신 하 고이를 클라이언트 데이터 서비스 클래스의 인스턴스로 변환 합니다. 이러한 클래스는 <xref:System.Data.Services.Client.DataServiceContext>가 속해 있는 <xref:System.Data.Services.Client.DataServiceQuery%601>에 의해 추적됩니다.
 
 ## <a name="data-service-queries"></a>데이터 서비스 쿼리
 
@@ -45,11 +45,11 @@ ms.locfileid: "73975161"
 
 자세한 내용은 [방법: 데이터 서비스 쿼리 실행](how-to-execute-data-service-queries-wcf-data-services.md)을 참조 하세요.
 
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 클라이언트는에서 C# *동적* 형식을 사용할 때와 같은 런타임에 바인딩된 개체에 대 한 쿼리를 지원 합니다. 하지만 성능상의 이유로 데이터 서비스에 대해 항상 강력한 형식의 쿼리를 작성해야 합니다. <xref:System.Tuple> 유형 및 동적 개체는 클라이언트에서 지원되지 않습니다.
+WCF Data Services 클라이언트는에서 C# *동적* 형식을 사용할 때와 같은 런타임에 바인딩된 개체에 대 한 쿼리를 지원 합니다. 하지만 성능상의 이유로 데이터 서비스에 대해 항상 강력한 형식의 쿼리를 작성해야 합니다. <xref:System.Tuple> 유형 및 동적 개체는 클라이언트에서 지원되지 않습니다.
 
 ## <a name="linq-queries"></a>LINQ 쿼리
 
-<xref:System.Data.Services.Client.DataServiceQuery%601> 클래스가 LINQ로 정의 된 <xref:System.Linq.IQueryable%601> 인터페이스를 구현 하므로 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 클라이언트 라이브러리는 엔터티 집합 데이터에 대 한 LINQ 쿼리를 데이터 서비스 리소스에 대해 평가 되는 쿼리 식을 나타내는 URI로 변환할 수 있습니다. 다음 예제는 운송료가 $30를 초과하는 <xref:System.Data.Services.Client.DataServiceQuery%601>를 반환하고 결과를 운송료순으로 정렬하는 이전 `Orders`와 동일한 LINQ 쿼리입니다.
+<xref:System.Data.Services.Client.DataServiceQuery%601> 클래스가 LINQ로 정의 된 <xref:System.Linq.IQueryable%601> 인터페이스를 구현 하므로 WCF Data Services 클라이언트 라이브러리는 엔터티 집합 데이터에 대 한 LINQ 쿼리를 데이터 서비스 리소스에 대해 평가 되는 쿼리 식을 나타내는 URI로 변환할 수 있습니다. 다음 예제는 운송료가 $30를 초과하는 <xref:System.Data.Services.Client.DataServiceQuery%601>를 반환하고 결과를 운송료순으로 정렬하는 이전 `Orders`와 동일한 LINQ 쿼리입니다.
 
 [!code-csharp[Astoria Northwind Client#AddQueryOptionsLinqSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#addqueryoptionslinqspecific)]
 [!code-vb[Astoria Northwind Client#AddQueryOptionsLinqSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#addqueryoptionslinqspecific)]
@@ -67,7 +67,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 
 ## <a name="adding-query-options"></a>쿼리 옵션 추가
 
-데이터 서비스 쿼리는 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]에서 제공하는 모든 쿼리 옵션을 지원합니다. 쿼리 옵션을 <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> 인스턴스에 추가하려면 <xref:System.Data.Services.Client.DataServiceQuery%601> 메서드를 호출합니다. <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A>은 원래 쿼리와 동일하지만 새 쿼리 옵션 집합이 포함된 새 <xref:System.Data.Services.Client.DataServiceQuery%601> 인스턴스를 반환합니다. 다음 쿼리를 실행하면 `Orders` 값으로 필터링되고 `Freight`를 기준으로 내림차순으로 정렬된 `OrderID`가 반환됩니다.
+데이터 서비스 쿼리는 WCF 데이터 Servicess가 제공 하는 모든 쿼리 옵션을 지원 합니다. 쿼리 옵션을 <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> 인스턴스에 추가하려면 <xref:System.Data.Services.Client.DataServiceQuery%601> 메서드를 호출합니다. <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A>은 원래 쿼리와 동일하지만 새 쿼리 옵션 집합이 포함된 새 <xref:System.Data.Services.Client.DataServiceQuery%601> 인스턴스를 반환합니다. 다음 쿼리를 실행하면 `Orders` 값으로 필터링되고 `Freight`를 기준으로 내림차순으로 정렬된 `OrderID`가 반환됩니다.
 
 [!code-csharp[Astoria Northwind Client#AddQueryOptionsSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#addqueryoptionsspecific)]
 [!code-vb[Astoria Northwind Client#AddQueryOptionsSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#addqueryoptionsspecific)]
@@ -118,7 +118,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 
 - <xref:System.Data.Services.Client.QueryOperationResponse.GetContinuation%2A> - 결과의 다음 페이지 URI를 포함하는 <xref:System.Data.Services.Client.DataServiceQueryContinuation> 개체를 반환합니다.
 
-기본적으로 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]는 쿼리 URI에 의해 명시적으로 선택 된 데이터만 반환 합니다. 이에 따라 필요한 경우 데이터 서비스에서 추가 데이터를 명시적으로 로드하는 옵션이 제공됩니다. 데이터 서비스에서 데이터를 명시적으로 로드할 때마다 요청이 데이터 서비스로 전송됩니다. 명시적으로 로드될 수 있는 데이터에는 관련 엔터티, 페이징 응답 데이터 및 이진 데이터 스트림이 포함됩니다.
+기본적으로 WCF Data Services는 쿼리 URI에 의해 명시적으로 선택 된 데이터만 반환 합니다. 이에 따라 필요한 경우 데이터 서비스에서 추가 데이터를 명시적으로 로드하는 옵션이 제공됩니다. 데이터 서비스에서 데이터를 명시적으로 로드할 때마다 요청이 데이터 서비스로 전송됩니다. 명시적으로 로드될 수 있는 데이터에는 관련 엔터티, 페이징 응답 데이터 및 이진 데이터 스트림이 포함됩니다.
 
 > [!NOTE]
 > 데이터 서비스가 페이징 응답을 반환할 수 있기 때문에 애플리케이션에서 프로그래밍 패턴을 사용하여 페이징 데이터 서비스 응답을 처리하는 것이 좋습니다. 자세한 내용은 [지연 된 콘텐츠 로드](loading-deferred-content-wcf-data-services.md)를 참조 하세요.
@@ -131,7 +131,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 
 <xref:System.Int32> 또는 <xref:System.Int64> 메서드를 호출하여 각각 <xref:System.Linq.Enumerable.Count%2A> 또는 <xref:System.Linq.Enumerable.LongCount%2A> 값으로 집합의 총 엔터티 수만 가져올 수도 있습니다. 이러한 메서드를 호출하면 <xref:System.Data.Services.Client.QueryOperationResponse%601>가 반환되지 않고 개수 값만 반환됩니다. 자세한 내용은 [방법: 쿼리에서 반환 되는 엔터티 수 확인](number-of-entities-returned-by-a-query-wcf.md)을 참조 하세요.
 
-## <a name="in-this-section"></a>단원 내용
+## <a name="in-this-section"></a>섹션 내용
 
 - [프로젝트 쿼리](query-projections-wcf-data-services.md)
 

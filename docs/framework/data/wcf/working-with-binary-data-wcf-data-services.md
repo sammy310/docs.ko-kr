@@ -8,22 +8,22 @@ helpviewer_keywords:
 - WCF Data Services, binary data
 - WCF Data Services, streams
 ms.assetid: aeccc45c-d5c5-4671-ad63-a492ac8043ac
-ms.openlocfilehash: e088383adf2345f9a2698d0f8794765461cdbaad
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 9a09908a2a998d5da739b28aefda3d5aecdc08e0
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975019"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568746"
 ---
 # <a name="working-with-binary-data-wcf-data-services"></a>이진 데이터 작업(WCF Data Services)
 
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 클라이언트 라이브러리를 사용 하면 다음 방법 중 하나를 사용 하 여 OData (Open Data Protocol) 피드에서 이진 데이터를 검색 하 고 업데이트할 수 있습니다.
+WCF Data Services 클라이언트 라이브러리를 사용 하면 다음 방법 중 하나를 사용 하 여 OData (Open Data Protocol) 피드에서 이진 데이터를 검색 하 고 업데이트할 수 있습니다.
 
 - 엔터티의 기본 형식 속성으로. 이 방법은 메모리에 쉽게 로드할 수 있는 작은 이진 데이터 개체로 작업하는 경우 권장됩니다. 이 경우 이진 속성은 데이터 모델에서 노출하는 엔터티 속성이며, 데이터 서비스는 이진 데이터를 응답 메시지에서 base-64 이진 인코딩 XML로 serialize합니다.
 
 - 별도의 이진 리소스 스트림으로. 이 방법은 사진, 비디오 또는 다른 형식의 이진 인코딩 데이터를 나타낼 수 있는 BLOB(Binary Large Object) 데이터에 액세스하고 변경하는 경우 권장됩니다.
 
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]는 OData에 정의 된 대로 HTTP를 사용 하 여 이진 데이터의 스트리밍을 구현 합니다. 이 메커니즘에서 이진 데이터는와 별개 이지만 미디어 링크 항목 이라고 하는 엔터티와 관련 된 미디어 리소스로 처리 됩니다. 자세한 내용은 [스트리밍 공급자](streaming-provider-wcf-data-services.md)를 참조 하세요.
+WCF Data Services는 OData에 정의 된 대로 HTTP를 사용 하 여 이진 데이터의 스트리밍을 구현 합니다. 이 메커니즘에서 이진 데이터는와 별개 이지만 미디어 링크 항목 이라고 하는 엔터티와 관련 된 미디어 리소스로 처리 됩니다. 자세한 내용은 [스트리밍 공급자](streaming-provider-wcf-data-services.md)를 참조 하세요.
 
 > [!TIP]
 > 사진을 저장 하는 OData 서비스에서 이진 이미지 파일을 다운로드 하는 Windows Presentation Foundation (WPF) 클라이언트 응용 프로그램을 만드는 방법에 대 한 단계별 예제는 [Data Services 스트리밍 공급자 시리즈-2 부: 클라이언트에서 미디어 리소스 스트림에 액세스](https://go.microsoft.com/fwlink/?LinkId=201637)게시물을 참조 하세요. 블로그 게시물에 제공 되는 stream photo data service에 대 한 샘플 코드를 다운로드 하려면 MSDN 코드 갤러리의 [스트리밍 사진 데이터 서비스 샘플](https://go.microsoft.com/fwlink/?LinkId=198988) 을 참조 하세요.
@@ -34,11 +34,11 @@ ms.locfileid: "73975019"
 
 [!code-xml[Astoria Photo Streaming Service#HasStream](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria_photo_streaming_service/xml/photodata.edmx#hasstream)]
 
-이 항목의 나머지 예제에서는 미디어 리소스 스트림에 액세스하고 변경하는 방법을 보여 줍니다. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 클라이언트 라이브러리를 사용 하 여 .NET Framework 클라이언트 응용 프로그램에서 미디어 리소스 스트림을 사용 하는 방법에 대 한 전체 예제는 [클라이언트에서 미디어 리소스 스트림에 액세스](https://go.microsoft.com/fwlink/?LinkID=201637)게시물을 참조 하세요.
+이 항목의 나머지 예제에서는 미디어 리소스 스트림에 액세스하고 변경하는 방법을 보여 줍니다. WCF Data Services 클라이언트 라이브러리를 사용 하 여 .NET Framework 클라이언트 응용 프로그램에서 미디어 리소스 스트림을 사용 하는 방법에 대 한 전체 예제는 [클라이언트에서 미디어 리소스 스트림에 액세스](https://go.microsoft.com/fwlink/?LinkID=201637)게시물을 참조 하세요.
 
 ## <a name="accessing-the-binary-resource-stream"></a>이진 리소스 스트림 액세스
 
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 클라이언트 라이브러리는 OData 기반 데이터 서비스에서 이진 리소스 스트림에 액세스 하는 메서드를 제공 합니다. 미디어 리소스를 다운로드할 때 미디어 리소스의 URI를 사용하거나 미디어 리소스 데이터 자체가 포함된 이진 스트림을 가져올 수 있습니다. 또한 미디어 리소스 데이터를 이진 스트림으로 업로드할 수도 있습니다.
+WCF Data Services 클라이언트 라이브러리는 OData 기반 데이터 서비스에서 이진 리소스 스트림에 액세스 하는 메서드를 제공 합니다. 미디어 리소스를 다운로드할 때 미디어 리소스의 URI를 사용하거나 미디어 리소스 데이터 자체가 포함된 이진 스트림을 가져올 수 있습니다. 또한 미디어 리소스 데이터를 이진 스트림으로 업로드할 수도 있습니다.
 
 > [!TIP]
 > 사진을 저장 하는 OData 서비스에서 이진 이미지 파일을 다운로드 하는 Windows Presentation Foundation (WPF) 클라이언트 응용 프로그램을 만드는 방법에 대 한 단계별 예제는 [Data Services 스트리밍 공급자 시리즈-2 부: 클라이언트에서 미디어 리소스 스트림에 액세스](https://go.microsoft.com/fwlink/?LinkId=201637)게시물을 참조 하세요. 블로그 게시물에 제공 되는 stream photo data service에 대 한 샘플 코드를 다운로드 하려면 MSDN 코드 갤러리의 [스트리밍 사진 데이터 서비스 샘플](https://go.microsoft.com/fwlink/?LinkId=198988) 을 참조 하세요.

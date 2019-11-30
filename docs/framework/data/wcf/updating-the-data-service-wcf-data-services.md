@@ -8,15 +8,15 @@ helpviewer_keywords:
 - WCF Data Services, changing data
 - WCF Data Services, client library
 ms.assetid: 00d993be-ffed-4dea-baf7-6eea982cdb54
-ms.openlocfilehash: 02bcb8f12cd7f230d60c3b3c58174a54405ff955
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 060cdab4f486782e6ad60511fadad95a41255dec
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975108"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568818"
 ---
 # <a name="updating-the-data-service-wcf-data-services"></a>데이터 서비스 업데이트 (WCF Data Services)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 클라이언트 라이브러리를 사용 하 여 OData (Open Data Protocol) 피드를 사용 하는 경우 라이브러리는 피드의 항목을 클라이언트 데이터 서비스 클래스의 인스턴스로 변환 합니다. 이러한 데이터 서비스 클래스는 <xref:System.Data.Services.Client.DataServiceContext>가 속해 있는 <xref:System.Data.Services.Client.DataServiceQuery%601>를 사용하여 추적됩니다. 클라이언트는 <xref:System.Data.Services.Client.DataServiceContext>의 메서드를 사용하여 보고하는 엔터티의 변경 내용을 추적합니다. 클라이언트는 이러한 메서드를 사용하여 추가된 엔터티와 삭제된 엔터티를 추적하고 속성 값 또는 엔터티 인스턴스 간의 관계에 대한 변경 내용도 추적할 수 있습니다. 이렇게 추적된 변경 내용은 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> 메서드를 호출할 때 REST 기반 작업으로 데이터 서비스에 전송됩니다.  
+WCF Data Services 클라이언트 라이브러리를 사용 하 여 OData (Open Data Protocol) 피드를 사용 하는 경우 라이브러리는 피드의 항목을 클라이언트 데이터 서비스 클래스의 인스턴스로 변환 합니다. 이러한 데이터 서비스 클래스는 <xref:System.Data.Services.Client.DataServiceContext>가 속해 있는 <xref:System.Data.Services.Client.DataServiceQuery%601>를 사용하여 추적됩니다. 클라이언트는 <xref:System.Data.Services.Client.DataServiceContext>의 메서드를 사용하여 보고하는 엔터티의 변경 내용을 추적합니다. 클라이언트는 이러한 메서드를 사용하여 추가된 엔터티와 삭제된 엔터티를 추적하고 속성 값 또는 엔터티 인스턴스 간의 관계에 대한 변경 내용도 추적할 수 있습니다. 이렇게 추적된 변경 내용은 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> 메서드를 호출할 때 REST 기반 작업으로 데이터 서비스에 전송됩니다.  
   
 > [!NOTE]
 > <xref:System.Data.Services.Client.DataServiceCollection%601>의 인스턴스를 사용하여 데이터를 컨트롤에 바인딩하는 경우 바인딩된 컨트롤의 데이터에 대한 변경 내용이 <xref:System.Data.Services.Client.DataServiceContext>에 자동으로 보고됩니다. 자세한 내용은 [컨트롤에 데이터 바인딩](binding-data-to-controls-wcf-data-services.md)을 참조 하세요.  
@@ -67,7 +67,7 @@ ms.locfileid: "73975108"
 ## <a name="creating-and-modifying-relationship-links"></a>관계 링크 만들기 및 수정  
  <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> 메서드나 **서비스 참조 추가** 대화 상자에서 생성 하는 <xref:System.Data.Services.Client.DataServiceContext> 클래스의 적절 한 *AddTo* 메서드를 사용 하 여 새 엔터티를 추가 하는 경우 새 엔터티와 관련 엔터티 간의 관계가 자동으로 정의 되지 않습니다.  
   
- 엔터티 인스턴스 간의 관계를 만들고 변경할 수 있으며 클라이언트 라이브러리에서 이러한 변경 사항을 데이터 서비스에 반영하도록 지정할 수 있습니다. 엔터티 간의 관계는 모델에서 연결로 정의되며 <xref:System.Data.Services.Client.DataServiceContext>는 각 관계를 컨텍스트의 링크 개체로 추적합니다. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]은 <xref:System.Data.Services.Client.DataServiceContext> 클래스에서 다음 메서드를 제공 하 여 이러한 링크를 만들고 수정 하 고 삭제 합니다.  
+ 엔터티 인스턴스 간의 관계를 만들고 변경할 수 있으며 클라이언트 라이브러리에서 이러한 변경 사항을 데이터 서비스에 반영하도록 지정할 수 있습니다. 엔터티 간의 관계는 모델에서 연결로 정의되며 <xref:System.Data.Services.Client.DataServiceContext>는 각 관계를 컨텍스트의 링크 개체로 추적합니다. WCF Data Services은 <xref:System.Data.Services.Client.DataServiceContext> 클래스에서 다음 메서드를 제공 하 여 이러한 링크를 만들고 수정 하 고 삭제 합니다.  
   
 |메서드|설명|  
 |------------|-----------------|  

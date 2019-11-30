@@ -9,15 +9,15 @@ helpviewer_keywords:
 - querying the data service [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: cc4ec9e9-348f-42a6-a78e-1cd40e370656
-ms.openlocfilehash: 4792850221da69be79b064313792dcd7ad226788
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 41f1d1f0ca04dff0faa9eb070882f845ef4827d2
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975211"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568959"
 ---
 # <a name="linq-considerations-wcf-data-services"></a>LINQ 고려 사항(WCF Data Services)
-이 항목에서는 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 클라이언트를 사용할 때 LINQ 쿼리를 작성 하 고 실행 하는 방법에 대 한 정보를 제공 하 고 LINQ를 사용 하 여 OData (Open Data Protocol)를 구현 하는 데이터 서비스를 쿼리할 수 있는 제한 사항을 제공 합니다. OData 기반 데이터 서비스에 대 한 쿼리를 작성 하 고 실행 하는 방법에 대 한 자세한 내용은 [데이터 서비스 쿼리](querying-the-data-service-wcf-data-services.md)를 참조 하세요.  
+이 항목에서는 WCF Data Services 클라이언트를 사용할 때 LINQ 쿼리를 작성 하 고 실행 하는 방법에 대 한 정보를 제공 하 고 LINQ를 사용 하 여 OData (Open Data Protocol)를 구현 하는 데이터 서비스를 쿼리할 수 있는 제한 사항을 제공 합니다. OData 기반 데이터 서비스에 대 한 쿼리를 작성 하 고 실행 하는 방법에 대 한 자세한 내용은 [데이터 서비스 쿼리](querying-the-data-service-wcf-data-services.md)를 참조 하세요.  
   
 ## <a name="composing-linq-queries"></a>LINQ 쿼리 작성  
  LINQ 쿼리를 사용하면 <xref:System.Collections.Generic.IEnumerable%601>을 구현하는 개체의 집합에 대한 쿼리를 작성할 수 있습니다. Visual Studio 및 Datasvcutil.exe 도구의 **서비스 참조 추가** 대화 상자는 모두 피드에서 반환 된 엔터티를 나타내는 개체 뿐만 아니라 <xref:System.Data.Services.Client.DataServiceContext>에서 상속 되는 엔터티 컨테이너 클래스로 OData 서비스의 표현을 생성 하는 데 사용 됩니다. 또한 이러한 도구는 서비스에서 피드로 노출되는 모음의 엔터티 컨테이너 클래스에 대한 속성도 생성합니다. 데이터 서비스를 캡슐화하는 클래스의 해당 속성은 <xref:System.Data.Services.Client.DataServiceQuery%601>을 반환합니다. <xref:System.Data.Services.Client.DataServiceQuery%601> 클래스가 LINQ로 정의된 <xref:System.Linq.IQueryable%601> 인터페이스를 구현하기 때문에 데이터 서비스를 통해 노출되는 피드에 대해 LINQ 쿼리를 작성할 수 있으며, 이 쿼리는 클라이언트 라이브러리에 의해 실행 시 데이터 서비스로 보내지는 쿼리 요청 URI로 변환됩니다.  
@@ -43,7 +43,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 [!code-csharp[Astoria Northwind Client#AddQueryOptionsLinqExpressionSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#addqueryoptionslinqexpressionspecific)]      
 [!code-vb[Astoria Northwind Client#AddQueryOptionsLinqExpressionSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#addqueryoptionslinqexpressionspecific)]    
   
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]클라이언트는 두 종류의 작성된 쿼리를 쿼리 URI로 변환할 수 있고 쿼리 식에 쿼리 메서드를 추가하여 LINQ 쿼리를 확장할 수 있습니다. 쿼리 식 또는 <xref:System.Data.Services.Client.DataServiceQuery%601>에 메서드 구문을 추가하여 LINQ 쿼리를 작성할 때 메서드가 호출되는 순서로 연산이 쿼리 URI에 추가됩니다. 이 동작은 <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> 메서드를 호출하여 쿼리 URI에 각 쿼리 옵션을 추가하는 것과 같습니다.  
+ WCF Data Services 클라이언트는 두 종류의 구성 된 쿼리를 쿼리 URI로 변환할 수 있으며 쿼리 식에 쿼리 메서드를 추가 하 여 LINQ 쿼리를 확장할 수 있습니다. 쿼리 식 또는 <xref:System.Data.Services.Client.DataServiceQuery%601>에 메서드 구문을 추가하여 LINQ 쿼리를 작성할 때 메서드가 호출되는 순서로 연산이 쿼리 URI에 추가됩니다. 이 동작은 <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> 메서드를 호출하여 쿼리 URI에 각 쿼리 옵션을 추가하는 것과 같습니다.  
   
 ## <a name="executing-linq-queries"></a>LINQ 쿼리 실행  
  <xref:System.Linq.Enumerable.First%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29> 또는 <xref:System.Linq.Enumerable.Single%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29>과 같은 쿼리에 추가되는 특정 LINQ 쿼리 메서드로 인해 쿼리가 실행됩니다. 또한 쿼리는 `foreach` 루프 중이나 쿼리가 `List` 컬렉션에 할당될 때와 같이 결과가 명시적으로 열거될 때에도 실행됩니다. 자세한 내용은 [데이터 서비스 쿼리](querying-the-data-service-wcf-data-services.md)를 참조 하세요.  
@@ -135,7 +135,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
  위의 두 가지 예는 쿼리 URI `http://localhost:12345/northwind.svc/Orders()?$orderby=OrderDate desc&$skip=50&$top=25`로 변환됩니다.  
   
 <a name="expand"></a>   
-### <a name="expand"></a>Expand  
+### <a name="expand"></a>확장  
  OData 데이터 서비스를 쿼리하면 쿼리를 대상으로 하는 엔터티와 관련 된 엔터티에 반환 된 피드가 포함 되도록 요청할 수 있습니다. <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> 메서드는 LINQ 쿼리의 대상인 엔터티 집합에 대한 <xref:System.Data.Services.Client.DataServiceQuery%601>에서 호출되며, 관련 엔터티 집합 이름은 `path` 매개 변수로 지정됩니다. 자세한 내용은 [지연 된 콘텐츠 로드](loading-deferred-content-wcf-data-services.md)를 참조 하세요.  
   
  다음 예에서는 쿼리에서 <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> 메서드를 사용하는 여러 가지 동등한 방법을 보여 줍니다.  

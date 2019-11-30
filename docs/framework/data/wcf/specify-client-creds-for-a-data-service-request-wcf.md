@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, customizing requests
 ms.assetid: 1632f9af-e45f-4363-9222-03823daa8e28
-ms.openlocfilehash: bb25319e3a4b1f8c7a3586c546ce1d589b48e438
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: bb6447c39c3de9605f6f7bc280da2778be2b3070
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975148"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568862"
 ---
 # <a name="how-to-specify-client-credentials-for-a-data-service-request-wcf-data-services"></a>방법: 데이터 서비스 요청에 대한 클라이언트 자격 증명 지정(WCF Data Services)
-기본적으로 클라이언트 라이브러리는 OData 서비스에 요청을 보낼 때 자격 증명을 제공 하지 않습니다. 하지만 <xref:System.Net.NetworkCredential>의 <xref:System.Data.Services.Client.DataServiceContext.Credentials%2A> 속성에 대해 <xref:System.Data.Services.Client.DataServiceContext>을 제공하여 데이터 서비스에 요청을 인증하기 위해 자격 증명이 보내지도록 지정할 수 있습니다. 자세한 내용은 [Securing WCF Data Services](securing-wcf-data-services.md)을 참조하세요. 이 항목의 예제는 데이터 서비스의 데이터를 요청할 때 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 클라이언트에 사용되는 자격 증명을 명시적으로 제공하는 방법을 나타냅니다.  
+기본적으로 클라이언트 라이브러리는 OData 서비스에 요청을 보낼 때 자격 증명을 제공 하지 않습니다. 하지만 <xref:System.Net.NetworkCredential>의 <xref:System.Data.Services.Client.DataServiceContext.Credentials%2A> 속성에 대해 <xref:System.Data.Services.Client.DataServiceContext>을 제공하여 데이터 서비스에 요청을 인증하기 위해 자격 증명이 보내지도록 지정할 수 있습니다. 자세한 내용은 [Securing WCF Data Services](securing-wcf-data-services.md)을 참조하세요. 이 항목의 예제에서는 데이터 서비스에서 데이터를 요청할 때 WCF Data Services 클라이언트에서 사용 하는 자격 증명을 명시적으로 제공 하는 방법을 보여 줍니다.  
   
  이 항목의 예제에서는 Northwind 샘플 데이터 서비스 및 자동 생성된 클라이언트 데이터 서비스 클래스를 사용합니다. 이 서비스 및 클라이언트 데이터 클래스는 [WCF Data Services 빠른](quickstart-wcf-data-services.md)시작을 완료 하면 생성 됩니다. OData 웹 사이트에 게시 된 [Northwind 샘플 데이터 서비스](https://go.microsoft.com/fwlink/?LinkId=187426) 를 사용할 수도 있습니다. 이 샘플 데이터 서비스는 읽기 전용 이므로 변경 내용을 저장 하려고 하면 오류가 반환 됩니다. OData 웹 사이트의 샘플 데이터 서비스는 익명 인증을 허용 합니다.  
   

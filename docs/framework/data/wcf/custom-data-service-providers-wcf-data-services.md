@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: e702ecdb-3419-4743-92a9-c3c0e7d44082
-ms.openlocfilehash: fd76f456665da76138b927d85a53924e8169c30a
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: c5f6bd001a5198f14bf05c0730f3988d54142eae
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975367"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569244"
 ---
 # <a name="custom-data-service-providers-wcf-data-services"></a>사용자 지정 데이터 서비스 공급자(WCF Data Services)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]에 포함된 공급자 집합을 사용하면 런타임에 바인딩된 데이터 형식을 기반으로 데이터 모델을 정의할 수 있습니다.  
+WCF Data Services에는 런타임에 바인딩된 데이터 형식을 기반으로 데이터 모델을 정의 하는 데 사용할 수 있는 공급자 집합이 포함 되어 있습니다.  
   
 |Provider|설명|  
 |--------------|-----------------|  
