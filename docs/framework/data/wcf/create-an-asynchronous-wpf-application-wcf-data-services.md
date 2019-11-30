@@ -1,5 +1,5 @@
 ---
-title: '방법: 비동기 Windows Presentation Framework 응용 프로그램 만들기 (WCF Data Services)'
+title: '방법: 비동기 Windows Presentation Foundation 애플리케이션 만들기(WCF Data Services)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,29 +7,29 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, asynchronous operations
 ms.assetid: 834614df-1427-4839-b0be-90f68e5afffd
-ms.openlocfilehash: 820cb4aa39b49d63cf1acc31e6eb5aa56fd1ba03
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 9bc1cef1f76e6e55e9cd5ed318741f8913abbaab
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790985"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569272"
 ---
-# <a name="how-to-create-an-asynchronous-windows-presentation-framework-application-wcf-data-services"></a><span data-ttu-id="a98ce-102">방법: 비동기 Windows Presentation Framework 응용 프로그램 만들기 (WCF Data Services)</span><span class="sxs-lookup"><span data-stu-id="a98ce-102">How to: Create an Asynchronous Windows Presentation Framework Application (WCF Data Services)</span></span>
-<span data-ttu-id="a98ce-103">[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]를 사용하면 데이터 서비스에서 가져온 데이터를 WPF(Windows Presentation Framework) 애플리케이션의 UI 요소에 바인딩할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a98ce-103">With [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], you can bind data obtained from a data service to UI element of a Windows Presentation Framework (WPF) application.</span></span> <span data-ttu-id="a98ce-104">자세한 내용은 [컨트롤에 데이터 바인딩](binding-data-to-controls-wcf-data-services.md)을 참조 하세요. 비동기 방식으로 데이터 서비스에 대해 작업을 실행할 수도 있습니다 .이 경우 데이터 서비스 요청에 대 한 응답을 기다리는 동안 응용 프로그램이 계속 응답할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a98ce-104">For more information, see [Binding Data to Controls](binding-data-to-controls-wcf-data-services.md).You can also execute operations against the data service in an asynchronous manner, which enables the application to continue to respond while waiting for a response to a data service request.</span></span> <span data-ttu-id="a98ce-105">데이터 서비스에 비동기적으로 액세스하려면 Silverlight용 애플리케이션이 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="a98ce-105">Applications for Silverlight are required to access the data service asynchronously.</span></span> <span data-ttu-id="a98ce-106">자세한 내용은 [비동기 작업](asynchronous-operations-wcf-data-services.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="a98ce-106">For more information, see [Asynchronous Operations](asynchronous-operations-wcf-data-services.md).</span></span>  
+# <a name="how-to-create-an-asynchronous-windows-presentation-framework-application-wcf-data-services"></a><span data-ttu-id="66aeb-102">방법: 비동기 Windows Presentation Foundation 애플리케이션 만들기(WCF Data Services)</span><span class="sxs-lookup"><span data-stu-id="66aeb-102">How to: Create an Asynchronous Windows Presentation Framework Application (WCF Data Services)</span></span>
+<span data-ttu-id="66aeb-103">WCF Data Services를 사용 하면 데이터 서비스에서 가져온 데이터를 WPF (Windows Presentation Framework) 응용 프로그램의 UI 요소에 바인딩할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="66aeb-103">With WCF Data Services, you can bind data obtained from a data service to UI element of a Windows Presentation Framework (WPF) application.</span></span> <span data-ttu-id="66aeb-104">자세한 내용은 [컨트롤에 데이터 바인딩](binding-data-to-controls-wcf-data-services.md)을 참조 하세요. 비동기 방식으로 데이터 서비스에 대해 작업을 실행할 수도 있습니다 .이 경우 데이터 서비스 요청에 대 한 응답을 기다리는 동안 응용 프로그램이 계속 응답할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="66aeb-104">For more information, see [Binding Data to Controls](binding-data-to-controls-wcf-data-services.md).You can also execute operations against the data service in an asynchronous manner, which enables the application to continue to respond while waiting for a response to a data service request.</span></span> <span data-ttu-id="66aeb-105">데이터 서비스에 비동기적으로 액세스하려면 Silverlight용 애플리케이션이 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="66aeb-105">Applications for Silverlight are required to access the data service asynchronously.</span></span> <span data-ttu-id="66aeb-106">자세한 내용은 [비동기 작업](asynchronous-operations-wcf-data-services.md)을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="66aeb-106">For more information, see [Asynchronous Operations](asynchronous-operations-wcf-data-services.md).</span></span>  
   
- <span data-ttu-id="a98ce-107">이 항목에서는 데이터 서비스에 비동기적으로 액세스하고 그 결과를 WPF 애플리케이션의 요소에 바인딩하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="a98ce-107">This topic shows how to access a data service asynchronously and bind the results to elements of a WPF application.</span></span> <span data-ttu-id="a98ce-108">이 항목의 예제에서는 Northwind 샘플 데이터 서비스 및 자동 생성된 클라이언트 데이터 서비스 클래스를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="a98ce-108">The examples in this topic use the Northwind sample data service and autogenerated client data service classes.</span></span> <span data-ttu-id="a98ce-109">이 서비스 및 클라이언트 데이터 클래스는 [WCF Data Services 빠른](quickstart-wcf-data-services.md)시작을 완료 하면 생성 됩니다.</span><span class="sxs-lookup"><span data-stu-id="a98ce-109">This service and the client data classes are created when you complete the [WCF Data Services quickstart](quickstart-wcf-data-services.md).</span></span>  
+ <span data-ttu-id="66aeb-107">이 항목에서는 데이터 서비스에 비동기적으로 액세스하고 그 결과를 WPF 애플리케이션의 요소에 바인딩하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="66aeb-107">This topic shows how to access a data service asynchronously and bind the results to elements of a WPF application.</span></span> <span data-ttu-id="66aeb-108">이 항목의 예제에서는 Northwind 샘플 데이터 서비스 및 자동 생성된 클라이언트 데이터 서비스 클래스를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="66aeb-108">The examples in this topic use the Northwind sample data service and autogenerated client data service classes.</span></span> <span data-ttu-id="66aeb-109">이 서비스 및 클라이언트 데이터 클래스는 [WCF Data Services 빠른](quickstart-wcf-data-services.md)시작을 완료 하면 생성 됩니다.</span><span class="sxs-lookup"><span data-stu-id="66aeb-109">This service and the client data classes are created when you complete the [WCF Data Services quickstart](quickstart-wcf-data-services.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="a98ce-110">예제</span><span class="sxs-lookup"><span data-stu-id="a98ce-110">Example</span></span>  
- <span data-ttu-id="a98ce-111">다음 XAML에서는 WPF 애플리케이션의 창을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="a98ce-111">The following XAML defines the window of the WPF application.</span></span>  
+## <a name="example"></a><span data-ttu-id="66aeb-110">예제</span><span class="sxs-lookup"><span data-stu-id="66aeb-110">Example</span></span>  
+ <span data-ttu-id="66aeb-111">다음 XAML에서는 WPF 애플리케이션의 창을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="66aeb-111">The following XAML defines the window of the WPF application.</span></span>  
   
  [!code-xaml[Astoria Northwind Client#WpfDataBindingAsyncXaml](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerordersasync.xaml#wpfdatabindingasyncxaml)]  
   
-## <a name="example"></a><span data-ttu-id="a98ce-112">예제</span><span class="sxs-lookup"><span data-stu-id="a98ce-112">Example</span></span>  
- <span data-ttu-id="a98ce-113">XAML 파일의 다음 코드 숨김 페이지에서는 데이터 서비스를 사용하여 비동기 쿼리를 실행하고 그 결과를 WPF 창의 요소에 바인딩합니다.</span><span class="sxs-lookup"><span data-stu-id="a98ce-113">The following code-behind page for the XAML file executes an asynchronous query by using the data service and binds the results to elements in the WPF window.</span></span>  
+## <a name="example"></a><span data-ttu-id="66aeb-112">예제</span><span class="sxs-lookup"><span data-stu-id="66aeb-112">Example</span></span>  
+ <span data-ttu-id="66aeb-113">XAML 파일의 다음 코드 숨김 페이지에서는 데이터 서비스를 사용하여 비동기 쿼리를 실행하고 그 결과를 WPF 창의 요소에 바인딩합니다.</span><span class="sxs-lookup"><span data-stu-id="66aeb-113">The following code-behind page for the XAML file executes an asynchronous query by using the data service and binds the results to elements in the WPF window.</span></span>  
   
  [!code-csharp[Astoria Northwind Client#WpfDataBindingAsync](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/customerordersasync.xaml.cs#wpfdatabindingasync)]
  [!code-vb[Astoria Northwind Client#WpfDataBindingAsync](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerordersasync.xaml.vb#wpfdatabindingasync)]  
   
-## <a name="see-also"></a><span data-ttu-id="a98ce-114">참고자료</span><span class="sxs-lookup"><span data-stu-id="a98ce-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="66aeb-114">참조</span><span class="sxs-lookup"><span data-stu-id="66aeb-114">See also</span></span>
 
-- [<span data-ttu-id="a98ce-115">WCF Data Services 클라이언트 라이브러리</span><span class="sxs-lookup"><span data-stu-id="a98ce-115">WCF Data Services Client Library</span></span>](wcf-data-services-client-library.md)
+- [<span data-ttu-id="66aeb-115">WCF Data Services 클라이언트 라이브러리</span><span class="sxs-lookup"><span data-stu-id="66aeb-115">WCF Data Services Client Library</span></span>](wcf-data-services-client-library.md)
