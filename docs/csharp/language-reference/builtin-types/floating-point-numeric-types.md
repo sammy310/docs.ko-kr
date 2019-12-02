@@ -18,12 +18,12 @@ helpviewer_keywords:
 - floating-point numbers [C#], float keyword
 - double data type [C#]
 - decimal keyword [C#]
-ms.openlocfilehash: 4d71f7eea3f574e483dc4250f5c87e1ffd551f2f
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 23aa33c6887db48a12f995efc5e1e2220d30216c
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771898"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552274"
 ---
 # <a name="floating-point-numeric-types-c-reference"></a>부동 소수점 숫자 형식(C# 참조)
 
@@ -52,8 +52,8 @@ System.Double b = 12.3;
 
 식에서 [정수](integral-numeric-types.md) 형식과 부동 소수점 형식을 혼합할 수 있습니다. 이 경우 정수 형식이 부동 소수점 형식으로 변환됩니다. 식의 계산은 다음 규칙에 따라 수행됩니다.
 
-- 부동 소수점 형식 중 하나가 `double`인 경우 식은 관계형 및 같음에 대한 비교에서 `double` 또는 [bool](../keywords/bool.md)로 계산됩니다.
-- 식에 `double` 형식이 없는 경우 식은 같음에 대한 관계형 또는 비교에서 `float` 또는 [bool](../keywords/bool.md)로 계산됩니다.
+- 부동 소수점 형식 중 하나가 `double`인 경우 식은 관계형 및 같음에 대한 비교에서 `double` 또는 [bool](bool.md)로 계산됩니다.
+- 식에 `double` 형식이 없는 경우 식은 같음에 대한 관계형 또는 비교에서 `float` 또는 [bool](bool.md)로 계산됩니다.
 
 부동 소수점 식에는 다음과 같은 값 집합이 포함될 수 있습니다.
 

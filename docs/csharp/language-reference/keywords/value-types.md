@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: b264be5d2589455562a19ef55b5ddf1a4e74ce15
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: c797b1e9a80030ce6a97fccb14da2c51d753a1dc
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428457"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552329"
 ---
 # <a name="value-types-c-reference"></a>값 형식(C# 참조)
 
@@ -42,7 +42,7 @@ ms.locfileid: "74428457"
 
 - [정수 형식](../builtin-types/integral-numeric-types.md): 정수 숫자 형식 및 [char](../builtin-types/char.md) 형식
 - [부동 소수점 형식](../builtin-types/floating-point-numeric-types.md)
-- [bool](bool.md)
+- [bool](../builtin-types/bool.md)
 
 단순 형식은 키워드를 통해 식별되지만, 이러한 키워드는 단순히 <xref:System> 네임스페이스에 미리 정의된 구조체 형식의 별칭입니다. 예를 들어 [int](../builtin-types/integral-numeric-types.md)는 <xref:System.Int32?displayProperty=nameWithType>의 별칭입니다. 별칭의 전체 목록은 [기본 제공 형식 표](built-in-types-table.md)를 참조하세요.
 

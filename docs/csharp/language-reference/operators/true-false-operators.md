@@ -6,16 +6,16 @@ helpviewer_keywords:
 - false operator [C#]
 - true operator [C#]
 ms.assetid: 81a888fd-011e-4589-b242-6c261fea505e
-ms.openlocfilehash: 780c63e5a8f3f0d82559565b3319fe54507e3d21
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: f65ed3b362080d7a8afe89e22bd132d1fc190b06
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73036132"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552457"
 ---
 # <a name="true-and-false-operators-c-reference"></a>true 및 false 연산자(C# 참조)
 
-`true` 연산자는 [부울](../keywords/bool.md) 값을 반환하여 `true` 피연산자가 확실히 true임을 나타냅니다. `false` 연산자는 `bool` 값을 반환하여 `true` 피연산자가 확실히 false임을 나타냅니다. `true` 및 `false` 연산자는 서로를 보완한다고 보장되지 않습니다. 즉, `true` 및 `false` 연산자는 모두 `bool` 값을 동일한 `false` 피연산자에 반환할 수도 있습니다. 형식이 두 연산자 중 하나를 정의하는 경우 나머지 연산자도 정의해야 합니다.
+`true` 연산자는 [부울](../builtin-types/bool.md) 값을 반환하여 `true` 피연산자가 확실히 true임을 나타냅니다. `false` 연산자는 `bool` 값을 반환하여 `true` 피연산자가 확실히 false임을 나타냅니다. `true` 및 `false` 연산자는 서로를 보완한다고 보장되지 않습니다. 즉, `true` 및 `false` 연산자는 모두 `bool` 값을 동일한 `false` 피연산자에 반환할 수도 있습니다. 형식이 두 연산자 중 하나를 정의하는 경우 나머지 연산자도 정의해야 합니다.
 
 > [!TIP]
 > 예를 들어 값이 세 개인 논리를 지원해야 하는 경우(예: 값이 세 개인 부울 형식을 지원하는 데이터베이스에서 작업하는 경우) `bool?` 형식을 사용합니다. C#은 `bool?` 피연산자를 사용하여 값이 세 개인 논리를 지원하는 `&` 및 `|` 연산자를 제공합니다. 자세한 내용은 [부울 논리 연산자](boolean-logical-operators.md) 문서의 [Nullable 부울 논리 연산자](boolean-logical-operators.md#nullable-boolean-logical-operators) 섹션을 참조하세요.
@@ -45,5 +45,3 @@ Wait!
 
 - [C# 참조](../index.md)
 - [C# 연산자](index.md)
-- [true 리터럴](../keywords/true-literal.md)
-- [false 리터럴](../keywords/false-literal.md)

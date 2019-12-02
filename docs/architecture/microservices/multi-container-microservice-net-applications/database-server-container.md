@@ -2,12 +2,12 @@
 title: 컨테이너로 실행되는 데이터베이스 서버 사용
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | 컨테이너로 실행되는 데이터베이스 서버를 개발을 위해서만 사용하나요? 이유를 이해합니다.
 ms.date: 10/02/2018
-ms.openlocfilehash: a508ba734525b24e2f3f00408e2c59c8c00f1898
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 371d622dc39681edb0b52e723faccbf611b7797c
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291310"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568425"
 ---
 # <a name="using-a-database-server-running-as-a-container"></a>컨테이너로 실행되는 데이터베이스 서버 사용
 
@@ -162,7 +162,7 @@ public class Startup
 
 Redis는 Redis에서 Docker 이미지를 제공합니다. 해당 이미지는 다음 URL의 Docker 허브에서 제공됩니다.
 
-<https://hub.docker.com/\_/redis/>
+<https://hub.docker.com/_/redis/>
 
 명령 프롬프트에서 다음 Docker CLI 명령을 실행하여 Docker Redis 컨테이너를 직접 실행할 수 있습니다.
 

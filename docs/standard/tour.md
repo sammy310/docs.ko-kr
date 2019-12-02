@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: e0e35562e2351f9b985c74b60d8769577c3e3f56
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 274fea83c474d4b67aab919b604eda893d8204d7
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283890"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552860"
 ---
 # <a name="tour-of-net"></a>.NET 둘러보기
 
@@ -31,7 +31,7 @@ Microsoft에서는 C#과 F#, VB(Visual Basic) 이 세 가지 .NET 언어를 적�
 
 * C#은 C 스타일 언어의 표현력과 우아함은 그대로 유지하면서 간단하고 형식이 안전한 개체 지향 언어입니다. C나 이와 비슷한 언어에 익숙한 사용자라면 누구나 거의 문제 없이 C#을 사용할 수 있을 것입니다. C#에 대한 자세한 내용은 [C# 가이드](../csharp/index.yml)를 참조하세요.
 
-* F#은 일반적인 개체 지향 프로그래밍과 명령형 프로그래밍을 지원하며 다양한 플랫폼에서 사용할 수 있는 함수 우선 프로그래밍 언어입니다. F#에 대한 자세한 내용을 보려면 [F# 가이드](../fsharp/index.md)를 참조하세요.
+* F#은 일반적인 개체 지향 프로그래밍과 명령형 프로그래밍을 지원하며 다양한 플랫폼에서 사용할 수 있는 함수 우선 프로그래밍 언어입니다. F#에 대한 자세한 내용을 보려면 [F# 가이드](../fsharp/index.yml)를 참조하세요.
 
 * Visual Basic은 .NET에서 실행되는 다양한 앱을 만들 수 있는 배우기 쉬운 언어입니다. .NET 언어 중에서 VB 구문이 일반적인 인간 언어와 가장 유사하여 소프트웨어를 처음 개발하는 사람도 쉽게 배울 수 있습니다.
 

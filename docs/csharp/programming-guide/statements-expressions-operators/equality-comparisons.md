@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - object equality [C#]
 ms.assetid: 10b865ea-4e7b-4127-9242-c9b8f57d9f04
-ms.openlocfilehash: bc3ce4b94bfc72e058d4660d01eb16ef0e0f11db
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: a6876cb98a8c1b1e58e61eb650416d412467ae3d
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588711"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552415"
 ---
 # <a name="equality-comparisons-c-programming-guide"></a>같음 비교(C# 프로그래밍 가이드)
 
@@ -28,7 +28,7 @@ ms.locfileid: "69588711"
 
 ## <a name="value-equality"></a>값 같음
 
- 값 같음은 두 개체에 동일한 값이 포함되어 있음을 의미합니다. [int](../../language-reference/builtin-types/integral-numeric-types.md) 또는 [bool](../../language-reference/keywords/bool.md)과 같은 기본 값 형식의 경우 값 같음 테스트가 간단합니다. 다음 예제와 같이 [==](../../language-reference/operators/equality-operators.md#equality-operator-) 연산자를 사용할 수 있습니다.  
+ 값 같음은 두 개체에 동일한 값이 포함되어 있음을 의미합니다. [int](../../language-reference/builtin-types/integral-numeric-types.md) 또는 [bool](../../language-reference/builtin-types/bool.md)과 같은 기본 값 형식의 경우 값 같음 테스트가 간단합니다. 다음 예제와 같이 [==](../../language-reference/operators/equality-operators.md#equality-operator-) 연산자를 사용할 수 있습니다.  
   
 ```csharp  
 int a = GetOriginalValue();  

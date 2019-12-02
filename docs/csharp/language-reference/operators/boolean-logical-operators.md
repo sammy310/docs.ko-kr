@@ -32,16 +32,16 @@ helpviewer_keywords:
 - conditional OR operator [C#]
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
-ms.openlocfilehash: 327a2a8a95809923446107e6ba1c4b331eee82b7
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: e4efb283c835a703ec64b6ec5995b821c995dc60
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737888"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552487"
 ---
 # <a name="boolean-logical-operators-c-reference"></a>부울 논리 연산자(C# 참조)
 
-다음 연산자는 [부울](../keywords/bool.md) 피연산자를 사용하여 논리 작업을 수행합니다.
+다음 연산자는 [부울](../builtin-types/bool.md) 피연산자를 사용하여 논리 작업을 수행합니다.
 
 - 단항 [`!`(논리 부정)](#logical-negation-operator-) 연산자.
 - 이진 [`&`(논리 AND)](#logical-and-operator-), [`|`(논리 OR)](#logical-or-operator-) 및 [`^`(논리 배타적 OR)](#logical-exclusive-or-operator-) 연산자. 해당 연산자는 항상 두 피연산자를 모두 평가합니다.
