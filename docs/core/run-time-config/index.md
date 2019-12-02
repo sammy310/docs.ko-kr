@@ -2,12 +2,12 @@
 title: 런타임 구성
 description: 런타임 구성 설정을 사용하여 .NET Core 애플리케이션을 구성하는 방법을 알아봅니다.
 ms.date: 11/13/2019
-ms.openlocfilehash: f7074b07bdd5aca23b6caae78952d630d905c489
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: e3922f6df81198b5e122f16d5cfc4b6d15cbb4ae
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283965"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74567386"
 ---
 # <a name="net-core-run-time-configuration-settings"></a>.NET Core 런타임 구성 설정
 
