@@ -1,15 +1,15 @@
 ---
-title: 호환성이 손상되는 변경 평가 - .NET Core
-description: .NET Core에서 개발자를 위해 .NET 버전 간의 호환성을 유지하는 방법을 알아봅니다.
+title: 호환성이 손상되는 변경 유형 - .NET Core
+description: .Net Core가 .NET 버전에서 개발자에 대한 호환성을 유지하는 방법 및 호환성이 손상되는 변경으로 간주되는 변경 사항 유형을 알아보세요.
 ms.date: 06/10/2019
-ms.openlocfilehash: 3ad3cbe36ee09d371e26dc7da36a31207a6c1b25
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 5624a35a0d71224faf9adc5df2b02a529e650314
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73973643"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74567713"
 ---
-# <a name="evaluate-breaking-changes-in-net-core"></a>.NET Core의 호환성이 손상되는 변경 평가
+# <a name="changes-that-affect-compatibility"></a>호환성에 영향을 미치는 변경 사항
 
 지금까지 .NET은 버전 간은 물론 .NET 버전 전체에서 높은 수준의 호환성을 유지해 왔습니다. 이러한 노력은 .NET Core에서도 그대로 이어졌습니다. .NET Core는 .NET Framework와 독립적인 새로운 기술로 간주될 수 있지만, 다음 두 가지 주요 요인으로 인해 .NET Framework에서 .NET Core를 완전히 분리하기는 어렵습니다.
 
@@ -31,7 +31,7 @@ ms.locfileid: "73973643"
 
 ## <a name="modifications-to-the-public-contract"></a>공용 계약 수정
 
-이 범주의 변경 내용은 형식의 공용 노출 영역을 ‘수정’합니다.  이 범주의 변경 내용은 대부분 *이전 버전과의 호환성*(이전 버전의 API로 개발된 애플리케이션이 최신 버전에서 다시 컴파일하지 않고도 실행되는 기능)을 위반하기 때문에 허용되지 않습니다.
+이 범주의 변경 내용은 형식의 공용 노출 영역을 ‘수정’합니다. 이 범주의 변경 내용은 대부분 *이전 버전과의 호환성*(이전 버전의 API로 개발된 애플리케이션이 최신 버전에서 다시 컴파일하지 않고도 실행되는 기능)을 위반하기 때문에 허용되지 않습니다.
 
 ### <a name="types"></a>유형
 

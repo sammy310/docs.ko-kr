@@ -1,5 +1,7 @@
-- name: 'F# 가이드'
-  href: index.md
+- name: 'F# 설명서'
+  href: index.yml
+- name: 'F#이란?'
+  href: what-is-fsharp.md
 - name: 시작
   href: get-started/index.md
   items:
@@ -13,8 +15,6 @@
       href: get-started/get-started-command-line.md
     - name: 'Mac용 Visual Studio에서 F# 시작'
       href: get-started/get-started-with-visual-studio-for-mac.md
-- name: 'F#이란?'
-  href: what-is-fsharp.md
 - name: 'F# 둘러보기'
   href: tour.md
 - name: 자습서
@@ -39,6 +39,14 @@
           href: tutorials/type-providers/troubleshooting-type-providers.md
     - name: 'F# Interactive'
       href: tutorials/fsharp-interactive/index.md
+- name: 'F#의 새로운 기능'
+  items:
+    - name: 'F# 4.7'
+      href: whats-new/fsharp-47.md
+    - name: 'F# 4.6'
+      href: whats-new/fsharp-46.md
+    - name: 'F# 4.5'
+      href: whats-new/fsharp-45.md
 - name: 'F# 언어 참조'
   href: language-reference/index.md
   items:
