@@ -2,23 +2,23 @@
 title: 구성을 사용하지 않고 AJAX 서비스 만들기
 ms.date: 03/30/2017
 ms.assetid: e6db7acd-5679-45d4-b98a-8449c6873838
-ms.openlocfilehash: 06af14ad551de0e56700b044aea25b59dbf890ce
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: bf80f00bbca370c973dab9f20024284a465be521
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895136"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716207"
 ---
 # <a name="ajax-service-without-configuration"></a>구성을 사용하지 않고 AJAX 서비스 만들기
 
 이 샘플에서는 ASP.NET (WCF)를 Windows Communication Foundation 사용 하 여 구성을 사용 하지 않고 기본 AJAX (비동기 JavaScript and XML) 서비스 (웹 브라우저 클라이언트에서 JavaScript 코드를 사용 하 여 액세스할 수 있는 서비스)를 만드는 방법을 보여 줍니다. 설정. 이 서비스는 .svc 파일의 특수한 구문을 사용하여 AJAX 엔드포인트를 사용하도록 자동으로 설정합니다.
 
-WCF의 ajax 지원은 컨트롤을 `ScriptManager` 통해 ASP.NET ajax와 함께 사용 하도록 최적화 되어 있습니다. ASP.NET AJAX에서 WCF를 사용 하는 예제는 [Ajax 샘플](ajax.md)을 참조 하세요.
+WCF의 AJAX 지원은 `ScriptManager` 컨트롤을 통해 ASP.NET AJAX와 함께 사용 하도록 최적화 되어 있습니다. ASP.NET AJAX에서 WCF를 사용 하는 예제는 [Ajax 샘플](ajax.md)을 참조 하세요.
 
 > [!NOTE]
 > 이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.
 
- 이 샘플은 AJAX Service Using HTTP POST를 기반으로 합니다. [기본 AJAX 서비스](../../../../docs/framework/wcf/samples/basic-ajax-service.md) 샘플 <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> 에 설명 된 대로는 서비스를 호스트 하는 데 사용 됩니다.
+ 이 샘플은 AJAX Service Using HTTP POST를 기반으로 합니다. [기본 AJAX 서비스](../../../../docs/framework/wcf/samples/basic-ajax-service.md) 샘플에 설명 된 대로 <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>를 사용 하 여 서비스를 호스팅합니다.
 
 ```text
 <%ServiceHost
@@ -36,7 +36,7 @@ WCF의 ajax 지원은 컨트롤을 `ScriptManager` 통해 ASP.NET ajax와 함께
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.
+> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Ajax\ConfigFreeAjaxService`
 
@@ -46,11 +46,11 @@ WCF의 ajax 지원은 컨트롤을 `ScriptManager` 통해 ASP.NET ajax와 함께
 
 2. [Windows Communication Foundation 샘플 빌드](../../../../docs/framework/wcf/samples/building-the-samples.md)에 설명 된 대로 ConfigFreeAjaxService 솔루션을 빌드합니다.
 
-3. (프로젝트 `http://localhost/ServiceModelSamples/ConfigFreeClientPage.aspx` 디렉터리 내에서 브라우저에서 configfreeclientpage.aspx을 열지 마십시오.)로 이동 합니다.
+3. `http://localhost/ServiceModelSamples/ConfigFreeClientPage.aspx`로 이동 합니다 (프로젝트 디렉터리 내에서 브라우저에서 Configfreeclientpage.aspx를 열지 마세요.).
 
 > [!NOTE]
 > 이 샘플을 실행할 때 IIS의 ServiceModelSamples 폴더에 대해 익명 인증 및 Windows 인증을 동시에 사용하도록 설정되지 않았는지 확인하세요. 두 인증이 동시에 사용하도록 설정되어 있는 경우에는 Windows 인증을 비활성화하세요. 샘플을 실행한 다음 Windows 인증을 사용하도록 설정하고 "iisreset"를 실행합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [기본 AJAX 서비스](../../../../docs/framework/wcf/samples/basic-ajax-service.md)

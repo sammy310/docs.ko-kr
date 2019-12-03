@@ -2,12 +2,12 @@
 title: HttpCookieSession
 ms.date: 03/30/2017
 ms.assetid: 101cb624-8303-448a-a3af-933247c1e109
-ms.openlocfilehash: af624305e4ab4678938b7f63c4e4056404de0bc9
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 9e47959314ba161ff07a37f3d45088d038557c9e
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71393131"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74711600"
 ---
 # <a name="httpcookiesession"></a>HttpCookieSession
 이 샘플에서는 세션 관리에 HTTP 쿠키를 사용하기 위해 사용자 지정 프로토콜 채널을 빌드하는 방법을 보여 줍니다. 이 채널을 통해 Windows Communication Foundation (WCF) 서비스와 ASMX 클라이언트 간 또는 WCF 클라이언트와 ASMX 서비스 간에 통신할 수 있습니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "71393131"
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\HttpCookieSession`  
   
@@ -66,7 +66,7 @@ ms.locfileid: "71393131"
     Dictionary<string, IReplySessionChannel> channelMapping;  
     ```  
   
- `HttpCookieReplySessionChannel` 클래스는 <xref:System.ServiceModel.Channels.IReplySessionChannel>을 구현합니다. 채널 스택의 상위 수준에서는 <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A> 메서드를 호출하여 이 세션에 대한 요청을 읽습니다. 각 세션 채널에는 서비스 채널에서 채우는 개인 메시지 큐가 있습니다.  
+ `HttpCookieReplySessionChannel` 클래스는 <xref:System.ServiceModel.Channels.IReplySessionChannel>를 구현 합니다. 채널 스택의 상위 수준에서는 <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A> 메서드를 호출하여 이 세션에 대한 요청을 읽습니다. 각 세션 채널에는 서비스 채널에서 채우는 개인 메시지 큐가 있습니다.  
   
 ```csharp  
 InputQueue<RequestContext> requestQueue;  
@@ -130,7 +130,7 @@ InputQueue<RequestContext> requestQueue;
 ```  
   
 ## <a name="test-code"></a>테스트 코드  
- 이 샘플 전송을 사용하기 위한 테스트 코드는 Client 및 Service 디렉터리에 있습니다. 이는 두 가지 테스트로 구성 됩니다. 즉, 한 `allowCookies` 테스트는 `true` 클라이언트에서가로 설정 된 바인딩을 사용 합니다. 두 번째 테스트에서는 종료 메시지 교환을 사용하여 바인딩에서 명시적인 종료를 사용하도록 설정합니다.  
+ 이 샘플 전송을 사용하기 위한 테스트 코드는 Client 및 Service 디렉터리에 있습니다. 이는 두 가지 테스트로 구성 됩니다. 즉, 한 테스트는 클라이언트에서 `true`로 설정 된 바인딩을 사용 하 여 `allowCookies` 합니다. 두 번째 테스트에서는 종료 메시지 교환을 사용하여 바인딩에서 명시적인 종료를 사용하도록 설정합니다.  
   
  샘플을 실행하면 다음 출력이 표시됩니다.  
   

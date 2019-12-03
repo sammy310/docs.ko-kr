@@ -2,18 +2,18 @@
 title: Programming Model Item Tree
 ms.date: 03/30/2017
 ms.assetid: 0229efde-19ac-4bdc-a187-c6227a7bd1a5
-ms.openlocfilehash: f2d89cb2a3b0f6167f043148ea793ec1c264a556
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: efda69ac568b0ad9c5fdcf4d42722c5b7dadd3f3
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038182"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715673"
 ---
 # <a name="programming-model-item-tree"></a>Programming Model Item Tree
-이 샘플에서는 Windows Presentation Foundation (WPF) <xref:System.Activities.Presentation.Model.ModelItem> 트리 뷰에서 선언적 데이터 바인딩을 사용 하 여 트리를 탐색 하는 방법을 보여 줍니다.
+이 샘플에서는 Windows Presentation Foundation (WPF) 트리 뷰에서 선언적 데이터 바인딩을 사용 하 여 <xref:System.Activities.Presentation.Model.ModelItem> 트리를 탐색 하는 방법을 보여 줍니다.
 
 ## <a name="sample-details"></a>샘플 세부 정보
- <xref:System.Activities.Presentation.Model.ModelItem> 트리는 [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)] 인프라에서 편집할 기본 인스턴스에 대한 데이터를 노출하는 데 사용되는 추상화입니다. 다음 그림에서는 [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)] 내의 다양한 인프라 계층을 보여 줍니다.
+ <xref:System.Activities.Presentation.Model.ModelItem> 트리는 Windows 워크플로 디자이너 인프라에서 편집 중인 기본 인스턴스에 대 한 데이터를 노출 하는 데 사용 되는 추상화입니다. 다음 그림은 워크플로 디자이너 내에서 인프라의 다양 한 계층을 묘사 하는 것입니다.
 
  ![워크플로 디자이너 아키텍처를 보여 주는 다이어그램입니다.](./media/programming-model-item-tree/workflow-designer-architecture.jpg)
 
@@ -33,9 +33,9 @@ justAdded.Properties["DisplayName"].SetValue("new name");
 
 2. **빌드** 메뉴에서 **솔루션 빌드** 를 선택 하 여 솔루션을 빌드합니다.
 
-3. F5 키를 눌러 애플리케이션을 실행합니다. WPF 양식이 표시 됩니다.
+3. F5 키를 눌러 응용 프로그램을 실행합니다. WPF 양식이 표시 됩니다.
 
-4. **WF 로드** 단추를 클릭 하 여를 <xref:System.Activities.Presentation.Model.ModelItem> 로드 하 고 트리 뷰에 바인딩합니다.
+4. **WF 로드** 단추를 클릭 하 여 <xref:System.Activities.Presentation.Model.ModelItem>를 로드 하 고 트리 뷰에 바인딩합니다.
 
 5. **모델 항목 트리 변경** 단추를 클릭 하면 이전 코드를 실행 하 여 트리에 항목을 추가 하 고 속성을 설정 합니다.
 
@@ -44,10 +44,10 @@ justAdded.Properties["DisplayName"].SetValue("new name");
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Designer\ProgrammingModelItemTree`  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Windows.Data.IValueConverter>

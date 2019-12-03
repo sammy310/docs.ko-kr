@@ -3,12 +3,12 @@ title: 닫기 및 중단을 사용하여 WCF 클라이언트 리소스 해제
 description: 네트워크에 오류가 발생 하면 Dispose가 실패 하 고 예외를 throw 할 수 있습니다. 이로 인해 원치 않는 동작이 발생할 수 있습니다. 네트워크에 오류가 발생 한 경우 Close 및 Abort를 사용 하 여 클라이언트 리소스를 해제 합니다.
 ms.date: 11/12/2018
 ms.assetid: aff82a8d-933d-4bdc-b0c2-c2f7527204fb
-ms.openlocfilehash: afb52e89c5f159e7866ebc8f30fcfae7dd5be93a
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 38861252a470f71a6fa88554e289344e2918d710
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424169"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715327"
 ---
 # <a name="close-and-abort-release-resources-safely-when-network-connections-have-dropped"></a>네트워크 연결이 끊어진 경우 릴리스 리소스를 안전 하 게 닫고 중단
 
@@ -116,6 +116,6 @@ Press <ENTER> to terminate client.
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.
+> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\UsingUsing`

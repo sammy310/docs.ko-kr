@@ -2,12 +2,12 @@
 title: WS 2007 페더레이션 HTTP 바인딩
 ms.date: 03/30/2017
 ms.assetid: 91c1b477-a96e-4bf5-9330-5e9312113371
-ms.openlocfilehash: ad56665b5b6648fb93a9f31f18167a964b4cba92
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 2f924bdcbf9082d9d43e02d82c9d00c32ebcaacf
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834651"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714981"
 ---
 # <a name="ws-2007-federation-http-binding"></a>WS 2007 페더레이션 HTTP 바인딩
 
@@ -37,7 +37,7 @@ ms.locfileid: "71834651"
 </bindings>
 ```
 
-[@No__t-1security >](../../configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md)에서 `security` 값은 사용 해야 하는 보안 모드를 지정 합니다. 이 샘플에서는 `message` 보안이 사용 됩니다 .이 때문에 [\< 메시지 >](../../configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md) [\<security >](../../configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md)내에 지정 됩니다. [@No__t-3 > 메시지](../../configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md) 내의 [\< 발급자 >](../../configure-apps/file-schema/wcf/issuer.md) 요소는 클라이언트에 보안 토큰을 발급 하는 STS에 대 한 주소와 바인딩을 지정 하 여 클라이언트에서 `ICalculator` 서비스를 인증할 수 있도록 합니다.
+[\<보안 >](../../configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md)에서 `security` 값은 사용 해야 하는 보안 모드를 지정 합니다. 이 샘플에서는 `message` 보안을 사용 합니다. 따라서 [\<메시지 >](../../configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md) [\<보안 >](../../configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md)내에 지정 됩니다. [\<메시지](../../configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md) 내의 [\<발급자 >](../../configure-apps/file-schema/wcf/issuer.md) 요소는 클라이언트가 `ICalculator` 서비스에 인증할 수 있도록 클라이언트에 보안 토큰을 발급 하는 STS에 대 한 주소와 바인딩을 지정 >.
   
 서비스에서이 바인딩의 구성은 다음 코드에 나와 있습니다.
 
@@ -64,7 +64,7 @@ ms.locfileid: "71834651"
 </bindings>
 ```
 
-[@No__t-1security >](../../configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md)에서 `security` 값은 사용 해야 하는 보안 모드를 지정 합니다. 이 샘플에서는 `message` 보안이 사용 됩니다 .이 때문에 [\< 메시지 >](../../configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md) [\<security >](../../configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md)내에 지정 됩니다. [@No__t-4message](../../configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md) 내에서 `ws2007FederationHttpBinding`의 [\<issuerMetadata >](../../configure-apps/file-schema/wcf/issuermetadata.md) 요소는 STS에 대 한 메타 데이터를 검색 하는 데 사용할 수 있는 끝점의 주소와 id를 지정 > 합니다.
+[\<보안 >](../../configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md)에서 `security` 값은 사용 해야 하는 보안 모드를 지정 합니다. 이 샘플에서는 `message` 보안을 사용 합니다. 따라서 [\<메시지 >](../../configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md) [\<보안 >](../../configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md)내에 지정 됩니다. [\<메시지](../../configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md) 내 `ws2007FederationHttpBinding`의 [\<issuerMetadata >](../../configure-apps/file-schema/wcf/issuermetadata.md) 요소 >는 STS에 대 한 메타 데이터를 검색 하는 데 사용할 수 있는 끝점의 주소와 id를 지정 합니다.
 
 다음 코드에서는 서비스에 대 한 동작을 보여 줍니다.
 
@@ -93,7 +93,7 @@ ms.locfileid: "71834651"
 </behaviors>
 ```
   
-[@No__t-1issuedTokenAuthentication >](../../configure-apps/file-schema/wcf/issuedtokenauthentication-of-servicecredentials.md)>를 사용 하면 서비스에서 인증 중에 클라이언트를 제공할 수 있는 토큰에 대 한 제약 조건을 지정할 수 있습니다. 이 구성은 주체 이름이 CN=STS인 인증서에 의해 서명된 토큰을 서비스에서 수락하도록 지정합니다.
+[\<issuedTokenAuthentication >](../../configure-apps/file-schema/wcf/issuedtokenauthentication-of-servicecredentials.md)>를 사용 하면 서비스에서 인증 중에 클라이언트에 제공할 수 있는 토큰에 대 한 제약 조건을 지정할 수 있습니다. 이 구성은 주체 이름이 CN=STS인 인증서에 의해 서명된 토큰을 서비스에서 수락하도록 지정합니다.
 
 STS는 표준 <xref:System.ServiceModel.WS2007HttpBinding>을 사용하여 단일 엔드포인트를 사용할 수 있게 만듭니다. 서비스는 토큰에 대한 클라이언트의 요청에 응답합니다. 클라이언트가 Windows 계정을 사용하여 인증될 경우 서비스는 클라이언트의 사용자 이름을 클레임으로 포함하는 토큰을 발급합니다. 토큰을 만드는 도중에 STS는 CN=STS 인증서와 연관된 프라이빗 키를 사용하여 토큰에 서명합니다. 또한 대칭 키를 만들고 CN=localhost 인증서와 연관된 공개 키를 사용하여 이를 암호화합니다. 토큰을 클라이언트에게 반환할 때 STS는 대칭 키도 반환합니다. 클라이언트는 발급된 토큰을 `ICalculator` 서비스에 제공하고 대칭 키로 메시지에 서명하여 해당 키를 알고 있음을 증명합니다.
 
@@ -119,13 +119,13 @@ Press <ENTER> to terminate client.
 
 1. C# 또는 Visual Basic .NET 버전의 솔루션을 빌드하려면 [Building the Windows Communication Foundation Samples](building-the-samples.md)의 지침을 따릅니다.
 
-2. 단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면 [Windows Communication Foundation 샘플 실행](running-the-samples.md)의 지침을 따르세요. @No__t-0을 사용 하는 경우에는 상승된 권한으로 서비스별 *, setup.exe 및 gacutil.exe를 실행*해야 합니다 (파일을 마우스 오른쪽 단추로 클릭 한 다음 **관리자 권한으로 실행**을 클릭 *).*
+2. 단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면 [Windows Communication Foundation 샘플 실행](running-the-samples.md)의 지침을 따르세요. [!INCLUDE[windowsver](../../../../includes/windowsver-md.md)]를 사용 하는 경우에는 상승된 권한으로 setup.exe *, setup.exe 및 gacutil.exe를 실행*해야 합니다 (파일을 마우스 오른쪽 단추로 클릭 한 다음 **관리자 권한으로 실행**을 클릭 *).*
 
 > [!IMPORTANT]
 > 컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.
 > 
 > `<InstallDrive>:\WF_WCF_Samples`
 > 
-> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.
+> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.
 > 
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\WS2007FederationHttp`

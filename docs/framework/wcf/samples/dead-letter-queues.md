@@ -2,12 +2,12 @@
 title: 배달 못 한 편지 큐
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-ms.openlocfilehash: c8fea29fc420ea6bb922c93ea08e0e23d5bb941d
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 70007289e457588e94128a573ced4b28e238acf4
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928674"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74710884"
 ---
 # <a name="dead-letter-queues"></a>배달 못 한 편지 큐
 이 샘플에서는 배달에 실패한 메시지를 처리하는 방법을 보여 줍니다. [트랜잭션 된 MSMQ 바인딩](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) 샘플을 기반으로 합니다. 이 샘플에서는 `netMsmqBinding` 바인딩을 사용합니다. 이 서비스는 자체적으로 호스트되는 콘솔 애플리케이션으로서 이를 사용하여 서비스에서 대기된 메시지를 받는 것을 볼 수 있습니다.
@@ -26,11 +26,11 @@ ms.locfileid: "70928674"
 
 - <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> 속성은 클라이언트에 필요한 배달 못 한 편지 큐의 종류를 표현합니다. 이 열거형에는 다음과 같은 값이 있습니다.
 
-- `None`: 클라이언트에서 배달 못 한 편지 큐가 필요 하지 않습니다.
+- `None`: 클라이언트에 필요한 배달 못 한 편지 큐가 없습니다.
 
-- `System`: 배달 못한 시스템 편지 큐는 배달 하지 못한 메시지를 저장 하는 데 사용 됩니다. 배달 못 한 편지 시스템 큐는 컴퓨터에서 실행되는 모든 애플리케이션에서 공유합니다.
+- `System`: 배달 못 한 시스템 큐를 사용하여 배달 못 한 메시지를 저장합니다. 배달 못 한 편지 시스템 큐는 컴퓨터에서 실행되는 모든 애플리케이션에서 공유합니다.
 
-- `Custom`: <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> 속성을 사용 하 여 지정한 사용자 지정 배달 못 한 편지 큐는 배달 하지 못한 메시지를 저장 하는 데 사용 됩니다. 이 기능은 [!INCLUDE[wv](../../../../includes/wv-md.md)]에서만 사용할 수 있습니다. 이 기능은 애플리케이션이 동일한 컴퓨터에서 실행되는 다른 애플리케이션과 배달 못 한 편지 큐를 공유하지 않고 고유한 배달 못 한 편지 큐를 사용해야 하는 경우에 사용됩니다.
+- `Custom`: <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> 속성을 사용하여 지정한 사용자 지정 배달 못 한 편지 큐를 사용하여 배달 못 한 메시지를 저장합니다. 이 기능은 [!INCLUDE[wv](../../../../includes/wv-md.md)]에서만 사용할 수 있습니다. 이 기능은 애플리케이션이 동일한 컴퓨터에서 실행되는 다른 애플리케이션과 배달 못 한 편지 큐를 공유하지 않고 고유한 배달 못 한 편지 큐를 사용해야 하는 경우에 사용됩니다.
 
 - <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> 속성은 배달 못 한 편지 큐로 사용할 특정 큐를 표현합니다. 이 속성은 [!INCLUDE[wv](../../../../includes/wv-md.md)]에서만 사용할 수 있습니다.
 
@@ -171,7 +171,7 @@ public void SubmitPurchaseOrder(PurchaseOrder po)
 
  배달 못 한 편지 큐의 메시지는 메시지를 처리하고 있는 서비스로 주소가 지정되는 메시지입니다. 따라서 배달 못 한 편지 메시지 서비스가 큐에서 메시지를 읽으면 WCF (Windows Communication Foundation) 채널 계층이 끝점에서 불일치를 찾아 메시지를 디스패치하지 않습니다. 이 경우 메시지의 주소는 주문 처리 서비스로 지정되지만 배달 못 한 메시지 서비스에서 해당 메시지를 받습니다. 다른 엔드포인트로 주소가 지정된 메시지를 받으려면 모든 주소와 일치하는 주소 필터를 `ServiceBehavior`에 지정합니다. 이 구성은 배달 못 한 편지 큐에서 읽은 메시지를 성공적으로 처리하기 위해 필요합니다.
 
- 이 샘플에서 배달 못 한 메시지 서비스는 실패의 원인이 메시지 시간 초과인 경우 메시지를 다시 보냅니다. 다른 모든 원인에 대해서는 다음 샘플 코드와 같이 배달 오류를 표시합니다.
+ 이 샘플에서 배달 못 한 메시지 서비스는 오류가 발생 한 경우 메시지 시간이 초과 된 경우 메시지를 다시 보냅니다. 다른 모든 이유로 다음 샘플 코드에 표시 된 것 처럼 배달 실패를 표시 합니다.
 
 ```csharp
 // Service class that implements the service contract.
@@ -322,7 +322,7 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
 
     4. **트랜잭션** 상자를 확인 합니다.
 
-    5. 새 `ServiceModelSamplesTransacted` 큐의 이름으로을 입력 합니다.
+    5. 새 큐 이름으로 `ServiceModelSamplesTransacted`을 입력 합니다.
 
 3. C# 또는 Visual Basic .NET 버전의 솔루션을 빌드하려면 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)의 지침을 따릅니다.
 
@@ -350,13 +350,13 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
     > `security mode`를 `None`으로 설정하는 것은 `MsmqAuthenticationMode`, `MsmqProtectionLevel` 및 `Message` 보안을 `None`으로 설정하는 것과 같습니다.
 
 ## <a name="comments"></a>주석
- 기본적으로 `netMsmqBinding` 바인딩 전송을 사용하여 보안이 설정됩니다. `MsmqAuthenticationMode` 및 `MsmqProtectionLevel` 속성은 모두 전송 보안의 형식을 결정합니다. 기본적으로 인증 모드는 `Windows`로 설정되고 보호 수준은 `Sign`으로 설정됩니다. MSMQ에서 인증 및 서명 기능을 제공하려면 도메인에 속해 있어야 합니다. 도메인에 속하지 않은 컴퓨터에서이 샘플을 실행 하는 경우 다음과 같은 오류가 표시 됩니다. "사용자의 내부 메시지 큐 인증서가 없습니다."
+ 기본적으로 `netMsmqBinding` 바인딩 전송을 사용하여 보안이 설정됩니다. `MsmqAuthenticationMode` 및 `MsmqProtectionLevel` 속성은 모두 전송 보안의 형식을 결정합니다. 기본적으로 인증 모드는 `Windows`로 설정되고 보호 수준은 `Sign`으로 설정됩니다. MSMQ에서 인증 및 서명 기능을 제공하려면 도메인에 속해 있어야 합니다. 도메인에 속하지 않은 컴퓨터에서 이 샘플을 실행할 경우 "사용자의 내부 메시지 큐 인증서가 없습니다."라는 오류 메시지가 표시됩니다.
 
 > [!IMPORTANT]
 > 컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\DeadLetter`  

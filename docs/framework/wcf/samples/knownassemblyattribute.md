@@ -2,12 +2,12 @@
 title: KnownAssemblyAttribute
 ms.date: 03/30/2017
 ms.assetid: b3bc7f31-95ff-46e1-8308-d206ec426f6e
-ms.openlocfilehash: 5a911e0ae49955c5b089bb231f94e4afc0c05c97
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 6e3708fb386760ae067de0e86e4315114c85113c
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039537"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714898"
 ---
 # <a name="knownassemblyattribute"></a>KnownAssemblyAttribute
 이 샘플에서는 <xref:System.Runtime.Serialization.DataContractResolver> 클래스를 사용하여 serialization 및 deserialization 프로세스를 사용자 지정하는 방법을 보여 줍니다. 또한 serialization 및 deserialization 동안 알려진 형식을 동적으로 추가하는 방법을 보여 줍니다.  
@@ -189,7 +189,7 @@ public interface IDataContractCalculator
   
  서비스 계약의 정의는 `KnownAssembly` 특성으로 표시됩니다. 이 특성에는 서비스와 클라이언트 모두에서 런타임에 알려지는 형식 라이브러리의 이름이 포함되어 있습니다.  
   
- 각 작업 동작에 대해 정의된 `KnownAssembly`로 `IContractBehavior`를 정의하기 위해 `DataContractSerializer` 특성은 `DataContractResolver`를 구현합니다. `DataContractResolver`는 만들어질 때 어셈블리를 반영하며, 다른 형식을 serialize 및 deserialize할 때 사용할 형식과 이름 간의 매핑으로 사전을 만듭니다. 이 방법으로 `ResolveType` 및 `ResolveName` 형식에서는 사전에 필요한 데이터를 조회해야 합니다.  
+ 각 작업 동작에 대해 정의된 `KnownAssembly`로 `IContractBehavior`를 정의하기 위해 `DataContractSerializer` 특성은 `DataContractResolver`를 구현합니다. `DataContractResolver`는 만들어질 때 어셈블리를 반영하며, 다른 형식을 직렬화 및 역직렬화할 때 사용할 형식과 이름 간의 매핑으로 사전을 만듭니다. 이 방법으로 `ResolveType` 및 `ResolveName` 형식에서는 사전에 필요한 데이터를 조회해야 합니다.  
   
  이 샘플에서는 다음 예제와 같이 `DataContractResolver`를 정의합니다.  
   
@@ -367,6 +367,6 @@ Lists combined:
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\KnownAssemblyAttribute`  

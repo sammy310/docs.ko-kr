@@ -2,12 +2,12 @@
 title: 범위 샘플을 사용한 검색
 ms.date: 03/30/2017
 ms.assetid: 6a37a754-6b8c-4ebe-bdf2-d4f0520271d5
-ms.openlocfilehash: 9b65a348c943b07e813e3fe690f1364b77a94890
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 23991002a5236c491a9f74c7efe71ceb2bf51a37
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972012"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74712072"
 ---
 # <a name="discovery-with-scopes-sample"></a>범위 샘플을 사용한 검색
 
@@ -19,7 +19,7 @@ ms.locfileid: "68972012"
 
 ## <a name="client-features"></a>Client Features
 
-`FindCalculatorServiceAddress()` 메서드는 <xref:System.ServiceModel.Discovery.DiscoveryClient>를 사용하고 두 가지 제한으로 <xref:System.ServiceModel.Discovery.FindCriteria>를 전달하는 방법을 보여 줍니다. 범위가 조건에 추가되고 <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> 속성은 1로 설정됩니다. 범위는 동일한 범위를 게시하는 서비스만으로 결과를 제한합니다. <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A>를 1로 설정하면 <xref:System.ServiceModel.Discovery.DiscoveryClient>에서 기다리는 응답이 최대 1개의 엔드포인트로 제한됩니다. <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> 호출은 제한 시간에 도달하거나 하나의 엔드포인트가 발견될 때까지 스레드를 차단하는 동기 작업입니다.
+`FindCalculatorServiceAddress()` 메서드는 <xref:System.ServiceModel.Discovery.DiscoveryClient>를 사용하고 두 가지 제한으로 <xref:System.ServiceModel.Discovery.FindCriteria>를 전달하는 방법을 보여 줍니다. 범위가 조건에 추가되고 <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> 속성은 1로 설정됩니다. 범위는 동일한 범위를 게시하는 서비스만으로 결과를 제한합니다. <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A>를 1로 설정하면 <xref:System.ServiceModel.Discovery.DiscoveryClient>에서 기다리는 응답이 최대 1개의 엔드포인트로 제한됩니다. ph x="1" /&gt; 호출은 제한 시간에 도달하거나 하나의 엔드포인트가 발견될 때까지 스레드를 차단하는 동기 작업입니다.
 
 ### <a name="to-use-this-sample"></a>이 샘플을 사용하려면
 
@@ -36,6 +36,6 @@ ms.locfileid: "68972012"
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.
+> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\DiscoveryWithScopes`

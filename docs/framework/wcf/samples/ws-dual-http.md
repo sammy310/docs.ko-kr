@@ -2,12 +2,12 @@
 title: WS 다중 Http
 ms.date: 03/30/2017
 ms.assetid: 9997eba5-29ec-48db-86f3-fa77b241fb1a
-ms.openlocfilehash: 44fdf6f0b27e15c486afa32f67668e9fd6eeac10
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 1f1592598c0ed148f06c0a99ccdb8a8347175d8f
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74138681"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716784"
 ---
 # <a name="ws-dual-http"></a>WS 다중 Http
 
@@ -21,7 +21,7 @@ Dual Http 샘플에서는 `WSDualHttpBinding` 바인딩을 구성하는 방법�
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.
+> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\DualHttp`
 
@@ -88,7 +88,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 4. 단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)의 지침을 따르세요.
 
     > [!IMPORTANT]
-    > 다중 컴퓨터 구성에서 클라이언트를 실행 하는 경우 [\<client > 요소 >\<끝점](../../configure-apps/file-schema/wcf/endpoint-of-client.md) 의 `address` 특성 및 [`clientBaseAddress` 바인딩의](../../configure-apps/file-schema/wcf/bindings.md)\<특성 둘 다에서 localhost를 대체 해야 > [\<wsDualHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md) 요소의 요소로, 다음과 같이 적절 한 컴퓨터의 이름을 사용 합니다.
+    > 다중 컴퓨터 구성에서 클라이언트를 실행 하는 경우 다음과 같이 [\<client > 요소의\<끝점 >](../../configure-apps/file-schema/wcf/endpoint-of-client.md) 의 `address` 특성과 [`clientBaseAddress` wsDualHttpBinding\<](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md) 요소의 [> binding](../../configure-apps/file-schema/wcf/bindings.md)\<요소에 있는 > 특성 모두에서 localhost를 바꾸어야 합니다.
 
     ```xml
     <client>

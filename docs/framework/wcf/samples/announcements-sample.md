@@ -2,12 +2,12 @@
 title: 알림 샘플
 ms.date: 03/30/2017
 ms.assetid: 954a75e4-9a97-41d6-94fc-43765d4205a9
-ms.openlocfilehash: 1acf51ebe36872424be1e0fdda65a7d18aa737f2
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 57b61dbd82338aafd248285c9cb11ecdf58d25bb
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045790"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716144"
 ---
 # <a name="announcements-sample"></a>알림 샘플
 
@@ -15,7 +15,7 @@ ms.locfileid: "70045790"
 
 ## <a name="service"></a>서비스
 
-이 프로젝트에는 자체 호스팅 계산기 서비스가 들어 있습니다. `Main` 메서드에서는 서비스 호스트가 만들어지고 이 서비스 호스트에 서비스 엔드포인트가 추가됩니다. 그런 다음 <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>가 만들어집니다. 알림을 사용하도록 설정하려면 <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>에 알림 엔드포인트를 추가해야 합니다. 이 경우 UDP 멀티캐스트를 사용하는 표준 엔드포인트가 알림 엔드포인트로 추가됩니다. 이 끝점에서는 잘 알려진 UDP 주소를 통해 알림을 브로드캐스팅합니다.
+이 프로젝트에는 자체 호스팅 계산기 서비스가 들어 있습니다. ph x="1" /&gt; 메서드에서는 서비스 호스트가 만들어지고 이 서비스 호스트에 서비스 엔드포인트가 추가됩니다. 그런 다음 <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>가 만들어집니다. 알림을 사용하도록 설정하려면 <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>에 알림 엔드포인트를 추가해야 합니다. 이 경우 UDP 멀티캐스트를 사용하는 표준 엔드포인트가 알림 엔드포인트로 추가됩니다. 이 끝점에서는 잘 알려진 UDP 주소를 통해 알림을 브로드캐스팅합니다.
 
 ```csharp
 Uri baseAddress = new Uri("http://localhost:8000/" + Guid.NewGuid().ToString());
@@ -38,7 +38,7 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService), base
 }
 ```
 
-## <a name="client"></a>클라이언트
+## <a name="client"></a>Client
 
 이 프로젝트에서는 클라이언트가 <xref:System.ServiceModel.Discovery.AnnouncementService>를 호스팅합니다. 또한 두 개의 대리자가 이벤트에 등록됩니다. 이러한 이벤트는 온라인 및 오프라인 알림을 받을 때 클라이언트에서 수행하는 작업을 나타냅니다.
 
@@ -75,17 +75,17 @@ static void OnOfflineEvent(object sender, AnnouncementEventArgs e)
 
 2. 솔루션을 빌드합니다.
 
-3. client.exe 응용 프로그램을 실행합니다.
+3. client.exe 애플리케이션을 실행합니다.
 
-4. service.exe 응용 프로그램을 실행합니다. 그러면 클라이언트에서는 온라인 알림을 받습니다.
+4. service.exe 애플리케이션을 실행합니다. 그러면 클라이언트에서는 온라인 알림을 받습니다.
 
-5. service.exe 응용 프로그램을 닫습니다. 그러면 클라이언트에서는 오프라인 알림을 받습니다.
+5. service.exe 애플리케이션을 닫습니다. 그러면 클라이언트에서는 오프라인 알림을 받습니다.
 
 > [!IMPORTANT]
 > 컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.
+> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\Announcements`

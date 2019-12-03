@@ -2,12 +2,12 @@
 title: '전송: UDP'
 ms.date: 03/30/2017
 ms.assetid: 738705de-ad3e-40e0-b363-90305bddb140
-ms.openlocfilehash: fab15b1d4dab61de37f4b609a6e43c5f4a32fb75
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: f7dea8a95490377226acd09a3463b102d42834d6
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74138695"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74711924"
 ---
 # <a name="transport-udp"></a>전송: UDP
 UDP 전송 샘플은 UDP 유니캐스트 및 멀티 캐스트를 WCF (사용자 지정 Windows Communication Foundation) 전송으로 구현 하는 방법을 보여 줍니다. 이 샘플에서는 채널 프레임 워크 및 WCF 모범 사례를 사용 하 여 WCF에서 사용자 지정 전송을 만드는 권장 절차에 대해 설명 합니다. 사용자 지정 전송을 만드는 단계는 다음과 같습니다.  
@@ -477,6 +477,6 @@ svcutil http://localhost:8000/udpsample/ /reference:UdpTransport\bin\UdpTranspor
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Transport\Udp`

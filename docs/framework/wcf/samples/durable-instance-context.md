@@ -2,12 +2,12 @@
 title: 영속 인스턴스 컨텍스트
 ms.date: 03/30/2017
 ms.assetid: 97bc2994-5a2c-47c7-927a-c4cd273153df
-ms.openlocfilehash: 4c2e39aa257d4b4b9b3bd28e0cd469f09cae0766
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 3ff4cbcf7a6007339d98820384f5e2d4164d1b0b
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71351624"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74711935"
 ---
 # <a name="durable-instance-context"></a>영속 인스턴스 컨텍스트
 
@@ -49,7 +49,7 @@ class DurableInstanceContextChannelBase
 }
 ```
 
-이러한 두 메서드는 `IContextManager` 구현을 사용하여 메시지에서 컨텍스트 ID를 쓰고 읽습니다. `IContextManager`는 모든 컨텍스트 관리자에 대해 계약을 정의하는 데 사용되는 사용자 지정 인터페이스입니다. 채널에는 사용자 지정 SOAP 헤더나 HTTP 쿠키 헤더의 컨텍스트 ID를 포함할 수 있습니다. 각 컨텍스트 관리자 구현은 모든 컨텍스트 관리자의 공통 기능이 포함된 `ContextManagerBase` 클래스에서 상속됩니다. 이 클래스의 `GetContextId` 메서드는 클라이언트에서 컨텍스트 ID를 가져오는 데 사용됩니다. 컨텍스트 ID를 처음으로 가져오면 이 메서드는 원격 엔드포인트 주소로 이름이 생성되는 텍스트 파일에 컨텍스트 ID를 저장합니다. 일반적인 URI에서 잘못된 파일 이름 문자는 @ 문자로 바뀝니다.
+이러한 두 메서드는 `IContextManager` 구현을 사용하여 메시지에서 컨텍스트 ID를 쓰고 읽습니다. (`IContextManager`는 모든 컨텍스트 관리자에 대 한 계약을 정의 하는 데 사용 되는 사용자 지정 인터페이스입니다.) 채널은 사용자 지정 SOAP 헤더에 컨텍스트 ID를 포함 하거나 HTTP 쿠키 헤더에 포함할 수 있습니다. 각 컨텍스트 관리자 구현은 모든 컨텍스트 관리자의 공통 기능이 포함된 `ContextManagerBase` 클래스에서 상속됩니다. 이 클래스의 `GetContextId` 메서드는 클라이언트에서 컨텍스트 ID를 가져오는 데 사용됩니다. 컨텍스트 ID를 처음으로 가져오면 이 메서드는 원격 엔드포인트 주소로 이름이 생성되는 텍스트 파일에 컨텍스트 ID를 저장합니다. 일반적인 URI에서 잘못된 파일 이름 문자는 @ 문자로 바뀝니다.
 
 나중에 동일한 원격 엔드포인트에 컨텍스트 ID가 필요하면 적합한 파일이 있는지 확인합니다. 파일이 있으면 컨텍스트 ID를 읽어 반환하고, 그렇지 않으면 새로 생성한 컨텍스트 ID를 반환하여 파일에 저장합니다. 기본 구성을 사용할 경우 이러한 파일은 현재 사용자의 temp 디렉터리의 ContextStore라는 디렉터리에 저장됩니다. 그러나 이 위치는 바인딩 요소를 사용하여 구성할 수 있습니다.
 
@@ -122,7 +122,7 @@ if (isFirstMessage)
 }
 ```
 
-이러한 채널 구현은 클래스 및 `DurableInstanceContextBindingElement` `DurableInstanceContextBindingElementSection` 클래스에 의해 WCF 채널 런타임에 적절히 추가 됩니다. 바인딩 요소 및 바인딩 요소에 대 한 자세한 내용은 [HttpCookieSession](../../../../docs/framework/wcf/samples/httpcookiesession.md) channel 샘플 설명서를 참조 하세요.
+그런 다음 이러한 채널 구현은 `DurableInstanceContextBindingElement` 클래스 및 `DurableInstanceContextBindingElementSection` 클래스에서 적절 하 게 WCF 채널 런타임에 추가 됩니다. 바인딩 요소 및 바인딩 요소에 대 한 자세한 내용은 [HttpCookieSession](../../../../docs/framework/wcf/samples/httpcookiesession.md) channel 샘플 설명서를 참조 하세요.
 
 ## <a name="service-model-layer-extensions"></a>서비스 모델 계층 확장명
 
@@ -234,13 +234,13 @@ else
 
 이 프로세스의 첫 번째 단계로 채널 계층을 통해 현재 InstanceContext에 도달한 컨텍스트 ID를 저장해야 합니다. InstanceContext는 WCF 디스패처와 서비스 인스턴스 간의 링크 역할을 하는 런타임 구성 요소입니다. 이 구성 요소를 사용하면 서비스 인스턴스에 추가 상태 및 동작을 제공할 수 있습니다. 세션 통신에서는 첫 번째 메시지에 대해서만 컨텍스트 ID를 전송하기 때문에 이 구성 요소가 매우 중요합니다.
 
-WCF를 사용 하면 확장 가능한 개체 패턴을 사용 하 여 새 상태 및 동작을 추가 하 여 InstanceContext 런타임 구성 요소를 확장할 수 있습니다. 확장 가능한 개체 패턴은 새 기능으로 기존 런타임 클래스를 확장 하거나 개체에 새 상태 기능을 추가 하기 위해 WCF에서 사용 됩니다. 확장 가능한 개체 패턴에는 iextensibleobject<t>\<t >, iextension\<t > 및 iextensioncollection\<t >의 세 가지 인터페이스가 있습니다.
+WCF를 사용 하면 확장 가능한 개체 패턴을 사용 하 여 새 상태 및 동작을 추가 하 여 InstanceContext 런타임 구성 요소를 확장할 수 있습니다. 확장 가능한 개체 패턴은 새 기능으로 기존 런타임 클래스를 확장 하거나 개체에 새 상태 기능을 추가 하기 위해 WCF에서 사용 됩니다. 확장 가능한 개체 패턴에는 Iextensibleobject<t>\<T >, IExtension\<T > 및 IExtensionCollection\<T >의 세 가지 인터페이스가 있습니다.
 
 - Iextensibleobject<t>\<T > 인터페이스는 해당 기능을 사용자 지정 하는 확장을 허용 하는 개체에 의해 구현 됩니다.
 
-- Iextension\<t > 인터페이스는 t 형식의 클래스를 확장 하는 개체에 의해 구현 됩니다.
+- IExtension\<T > 인터페이스는 T 형식의 클래스를 확장 하는 개체에 의해 구현 됩니다.
 
-- Iextensioncollection\<T > 인터페이스는 형식으로 iextension을 검색할 수 있도록 하는 iextensions의 컬렉션입니다.
+- IExtensionCollection\<T > 인터페이스는 형식으로 Iextension을 검색할 수 있도록 하는 IExtensions의 컬렉션입니다.
 
 따라서 IExtension 인터페이스를 구현하고 필요한 상태를 정의하는 InstanceContextExtension 클래스를 만들어 컨텍스트 ID를 저장해야 합니다. 이 클래스는 사용할 스토리지 관리자를 보유하는 상태도 제공합니다. 새 상태가 저장된 다음에는 수정할 수 없습니다. 따라서 상태가 생성되어 인스턴스에 제공되고 저장된 다음에는 읽기 전용 속성으로만 액세스할 수 있습니다.
 
@@ -351,7 +351,7 @@ foreach (ChannelDispatcherBase cdb in serviceHostBase.ChannelDispatchers)
 
 이제 서비스 인스턴스를 영구 스토리지에 저장하는 방법만 남아 있습니다. 앞에서 설명한 대로 상태를 저장하는 데 필요한 기능은 `IStorageManager`에 이미 구현되어 있습니다. 이제이를 WCF 런타임과 통합 해야 합니다. 서비스 구현 클래스의 메서드에 적용할 수 있는 또 다른 특성이 필요합니다. 이 특성은 서비스 인스턴스의 상태를 변경하는 메서드에 적용됩니다.
 
-`SaveStateAttribute` 클래스가 이 기능을 구현합니다. 또한 각 작업 `IOperationBehavior` 에 대해 WCF 런타임을 수정 하는 클래스를 구현 합니다. 메서드가이 특성으로 표시 된 경우 WCF 런타임은 적절 한 `ApplyBehavior` `DispatchOperation` 가 생성 되는 동안 메서드를 호출 합니다. 이 메서드 구현에는 다음과 같은 코드가 한 줄 있습니다.
+`SaveStateAttribute` 클래스가 이 기능을 구현합니다. 또한 `IOperationBehavior` 클래스를 구현 하 여 각 작업에 대 한 WCF 런타임을 수정 합니다. 메서드가이 특성으로 표시 되는 경우 WCF 런타임은 적절 한 `DispatchOperation` 생성 되는 동안 `ApplyBehavior` 메서드를 호출 합니다. 이 메서드 구현에는 다음과 같은 코드가 한 줄 있습니다.
 
 ```csharp
 dispatch.Invoker = new OperationInvoker(dispatch.Invoker);
@@ -457,6 +457,6 @@ Press ENTER to shut down client
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.
+> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Instancing\Durable`

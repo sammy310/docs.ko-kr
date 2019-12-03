@@ -2,17 +2,17 @@
 title: 검색 라우터 서비스
 ms.date: 03/30/2017
 ms.assetid: 3d30af47-b24f-40e5-833a-24d77125c9e6
-ms.openlocfilehash: 9434c26fb12b73ea4f1c185658b03cb95a3a2310
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 09309b23d2a3cc672811c2f617e6fb81a2b4e021
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039824"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74712293"
 ---
 # <a name="discovery-router-service"></a>검색 라우터 서비스
 이 샘플에서는 검색 메시지를 다른 엔드포인트에 전달하는 방법을 보여 줍니다.  
   
-## <a name="demonstrates"></a>세부 항목  
+## <a name="demonstrates"></a>데모  
  검색 라우팅  
   
 ## <a name="discussion"></a>토론  
@@ -35,6 +35,6 @@ ms.locfileid: "70039824"
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\DiscoveryRouter`

@@ -2,12 +2,12 @@
 title: 본문 요소에 의한 디스패치
 ms.date: 03/30/2017
 ms.assetid: f64a3c04-62b4-47b2-91d9-747a3af1659f
-ms.openlocfilehash: f1ff6d099ad0aee0c17b011000fe78f961293a82
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 307d6bbbab118392ef079942eae367a4c6792c22
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039768"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74712024"
 ---
 # <a name="dispatch-by-body-element"></a>본문 요소에 의한 디스패치
 이 샘플에서는 들어오는 메시지를 작업에 할당하는 대체 알고리즘을 구현하는 방법을 보여 줍니다.  
@@ -120,7 +120,7 @@ public void ApplyDispatchBehavior(ContractDescription contractDescription, Servi
 ## <a name="implementing-the-service"></a>서비스 구현  
  이 샘플에 구현된 동작은 네트워크의 메시지가 해석되고 디스패치되는 방식에 직접적인 영향을 주며, 이는 서비스 계약의 기능입니다. 따라서 이 동작을 사용하도록 선택하는 서비스 구현에서는 서비스 계약 수준으로 동작을 선언해야 합니다.  
   
- `DispatchByBodyElementBehaviorAttribute` 샘플 프로젝트 서비스는 계약 동작 `IDispatchedByBody` 을 서비스 계약에 적용 하 고 각 `DispatchBodyElementAttribute` 두 작업 `OperationForBodyA()` 및 `OperationForBodyB()` 작업 동작에 레이블을 적용 합니다. 이 계약을 구현하는 서비스에 대한 서비스 호스트를 열면 앞에서 설명한 대로 디스패처 작성기에서 이 메타데이터를 선택합니다.  
+ 샘플 프로젝트 서비스는 `DispatchByBodyElementBehaviorAttribute` 계약 동작을 `IDispatchedByBody` 서비스 계약에 적용 하 고 두 작업 `OperationForBodyA()` 각각에 레이블을 적용 하 고 `DispatchBodyElementAttribute` 작업 동작을 사용 하 여 `OperationForBodyB()` 합니다. 이 계약을 구현하는 서비스에 대한 서비스 호스트를 열면 앞에서 설명한 대로 디스패처 작성기에서 이 메타데이터를 선택합니다.  
   
  작업 선택기는 메시지 본문 요소만을 기준으로 디스패치하고 "Action"을 무시하므로 `ReplyAction`의 <xref:System.ServiceModel.OperationContractAttribute> 속성에 와일드카드 "*"를 할당하여 반환된 회신에서 "Action" 헤더를 검사하지 않도록 런타임에 알려야 합니다. 또한 "Action" 속성이 와일드 카드 "\*"로 설정 된 기본 작업이 필요 합니다. 기본 작업은 디스패치할 수 없는 모든 메시지를 받으므로 `DispatchBodyElementAttribute`이 없습니다.  
   
@@ -175,6 +175,6 @@ public interface IDispatchedByBody
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Interop\AdvancedDispatchByBody`  

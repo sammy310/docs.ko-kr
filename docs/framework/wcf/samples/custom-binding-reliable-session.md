@@ -2,12 +2,12 @@
 title: 사용자 지정 바인딩 신뢰할 수 있는 세션
 ms.date: 03/30/2017
 ms.assetid: c5fcd409-246f-4f3e-b3f1-629506ca4c04
-ms.openlocfilehash: b2679ad4c6e8595a7b6d6bc9818880da56781e38
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: c39dc9c57332800628012e88e1b274296556e756
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70990000"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74710954"
 ---
 # <a name="custom-binding-reliable-session"></a>사용자 지정 바인딩 신뢰할 수 있는 세션
 
@@ -18,7 +18,7 @@ ms.locfileid: "70990000"
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.
+> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Custom\ReliableSession`
 
@@ -116,7 +116,7 @@ Press <ENTER> to terminate client.
 4. 단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)의 지침을 따르세요.
 
     > [!IMPORTANT]
-    > 다중 컴퓨터 구성에서 클라이언트를 실행 하는 경우 `address` [ \<끝점 >](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) 요소의 `clientBaseAddress` 특성과 [ \<compositeDuplex 특성에서 "localhost"를 바꾸어야 합니다. ](../../../../docs/framework/configure-apps/file-schema/wcf/compositeduplex.md)다음 예제와 같이 해당 컴퓨터의 이름으로 > 합니다.
+    > 다중 컴퓨터 구성에서 클라이언트를 실행 하는 경우 다음 예제와 같이 [\<endpoint >](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) 요소의 `address` 특성과 [\<compositeDuplex >](../../../../docs/framework/configure-apps/file-schema/wcf/compositeduplex.md) 의 `clientBaseAddress` 특성 모두에서 "localhost"를 해당 컴퓨터의 이름으로 바꾸어야 합니다.
 
     ```xml
     <endpoint name = ""

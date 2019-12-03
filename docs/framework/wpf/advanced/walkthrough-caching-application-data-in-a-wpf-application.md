@@ -9,12 +9,12 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
-ms.openlocfilehash: f0082bd99b154f87ab90bee7a89afdb8405f6623
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 922d91466731b331cc409cc362c4ada2c287916a
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920309"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715884"
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>연습: WPF 애플리케이션에서 애플리케이션 데이터 캐싱
 캐싱을 사용하면 빠른 액세스를 위해 데이터를 메모리에 저장할 수 있습니다. 데이터에 다시 액세스할 때 애플리케이션은 원래 소스에서 검색하는 대신 캐시에서 데이터를 가져올 수 있습니다. 이 경우 성능과 확장성이 향상됩니다. 또한 캐싱을 사용하면 데이터 소스를 일시적으로 사용할 수 없는 경우에도 데이터를 사용할 수 있습니다.
@@ -78,7 +78,7 @@ ms.locfileid: "72920309"
      WPF 디자이너가 **디자인** 뷰에서 열리고 mainwindow.xaml 파일이 표시 됩니다. Visual Studio에서 **My Project** 폴더, 응용 프로그램 .xaml 파일 및 mainwindow.xaml 파일을 만듭니다.
 
 ## <a name="targeting-the-net-framework-and-adding-a-reference-to-the-caching-assemblies"></a>.NET Framework 대상 지정 및 캐싱 어셈블리에 대 한 참조 추가
- 기본적으로 WPF 응용 프로그램은 [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]를 대상으로 합니다. WPF 응용 프로그램에서 <xref:System.Runtime.Caching> 네임 스페이스를 사용 하려면 응용 프로그램이 .NET Framework 4 ([!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]아님)를 대상으로 하 고 네임 스페이스에 대 한 참조를 포함 해야 합니다.
+ 기본적으로 WPF 응용 프로그램은 .NET Framework 4 클라이언트 프로필을 대상으로 합니다. WPF 응용 프로그램에서 <xref:System.Runtime.Caching> 네임 스페이스를 사용 하려면 응용 프로그램이 .NET Framework 4 (.NET Framework 4 클라이언트 프로필 아님)를 대상으로 해야 하며 네임 스페이스에 대 한 참조를 포함 해야 합니다.
 
  따라서 다음 단계는 .NET Framework 대상을 변경 하 고 <xref:System.Runtime.Caching> 네임 스페이스에 대 한 참조를 추가 하는 것입니다.
 
@@ -97,7 +97,7 @@ ms.locfileid: "72920309"
 
      **고급 컴파일러 설정** 대화 상자가 표시 됩니다.
 
-4. **대상 프레임 워크 (모든 구성)** 목록에서 .NET Framework 4를 선택 합니다. [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]를 선택 하지 마십시오.
+4. **대상 프레임 워크 (모든 구성)** 목록에서 .NET Framework 4를 선택 합니다. .NET Framework 4 클라이언트 프로필을 선택 하지 마십시오.
 
 5. **확인**을 클릭합니다.
 
@@ -288,7 +288,7 @@ ms.locfileid: "72920309"
 
 #### <a name="to-test-caching-in-the-wpf-application"></a>WPF 응용 프로그램에서 캐싱을 테스트 하려면
 
-1. Ctrl+F5를 눌러 애플리케이션을 실행합니다.
+1. Ctrl+F5를 눌러 응용 프로그램을 실행합니다.
 
      `MainWindow` 창이 표시 됩니다.
 

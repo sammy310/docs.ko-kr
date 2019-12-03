@@ -2,12 +2,12 @@
 title: HPPTS 기반의 사용자 지정 바인딩 신뢰할 수 있는 세션
 ms.date: 03/30/2017
 ms.assetid: 16aaa80d-3ffe-47c4-8b16-ec65c4d25f8d
-ms.openlocfilehash: d4845a1058f42dab35919eb7bb83b16b45e42ff3
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: b83f7af2cd4d0518454a5147904c21c9ffbbbf21
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70990022"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74710975"
 ---
 # <a name="custom-binding-reliable-session-over-https"></a>HPPTS 기반의 사용자 지정 바인딩 신뢰할 수 있는 세션
 이 샘플에서는 신뢰할 수 있는 세션에 SSL 전송 보안을 사용하는 방법을 보여 줍니다. 신뢰할 수 있는 세션에서는 WS-Reliable Messaging 프로토콜을 구현합니다. 신뢰할 수 있는 세션에 WS-Security를 작성하여 신뢰할 수 있는 보안 세션을 만들 수 있습니다. 하지만 경우에 따라 대신 SSL에 HTTP 전송 보안을 사용할 수도 있습니다.  
@@ -17,14 +17,14 @@ ms.locfileid: "70990022"
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Custom\ReliableSessionOverHttps`  
   
 ## <a name="sample-details"></a>샘플 세부 정보  
  SSL을 사용하면 패킷 자체가 보안됩니다. 이는 WS-Secure Conversation을 사용하여 신뢰할 수 있는 세션을 보안하는 경우와 다릅니다.  
   
- HTTPS를 통해 신뢰할 수 있는 세션을 사용하려면 먼저 사용자 지정 바인딩을 만들어야 합니다. 이 샘플은 계산기 서비스를 구현 하는 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md) 을 기반으로 합니다. 사용자 지정 바인딩은 신뢰할 수 있는 세션 바인딩 요소와 [ \<httpsTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/httpstransport.md)를 사용 하 여 만듭니다. 다음 구성은 사용자 지정 바인딩의 구성입니다.  
+ HTTPS를 통해 신뢰할 수 있는 세션을 사용하려면 먼저 사용자 지정 바인딩을 만들어야 합니다. 이 샘플은 계산기 서비스를 구현 하는 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md) 을 기반으로 합니다. 사용자 지정 바인딩은 신뢰할 수 있는 세션 바인딩 요소와 [\<httpsTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/httpstransport.md)를 사용 하 여 만듭니다. 다음 구성은 사용자 지정 바인딩의 구성입니다.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -102,7 +102,7 @@ ms.locfileid: "70990022"
   
  지정된 주소에서는 https:// 체계를 사용합니다.  
   
- 이 샘플에 사용 된 인증서는 makecert.exe를 사용 하 여 만든 테스트 인증서 이므로 브라우저에서와 https://localhost/servicemodelsamples/service.svc 같은 https: 주소에 액세스 하려고 하면 보안 경고가 나타납니다. WCF (Windows Communication Foundation) 클라이언트가 현재 위치의 테스트 인증서를 사용 하도록 허용 하기 위해 일부 추가 코드를 클라이언트에 추가 하 여 보안 경고를 표시 하지 않습니다. 이 코드 및 함께 사용되는 클래스는 프로덕션 인증서를 사용할 때에는 필요가 없습니다.  
+ 이 샘플에 사용 된 인증서는 Makecert.exe를 사용 하 여 만든 테스트 인증서 이므로 브라우저에서 https://localhost/servicemodelsamples/service.svc 와 같은 https: 주소에 액세스 하려고 하면 보안 경고가 나타납니다. WCF (Windows Communication Foundation) 클라이언트가 현재 위치의 테스트 인증서를 사용 하도록 허용 하기 위해 일부 추가 코드를 클라이언트에 추가 하 여 보안 경고를 표시 하지 않습니다. 이 코드 및 함께 사용되는 클래스는 프로덕션 인증서를 사용할 때에는 필요가 없습니다.  
 
 ```csharp
 // This code is required only for test certificates like those created by Makecert.exe.  

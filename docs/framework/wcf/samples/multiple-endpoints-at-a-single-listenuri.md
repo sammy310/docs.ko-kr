@@ -2,12 +2,12 @@
 title: 단일 ListenUri의 여러 엔드포인트
 ms.date: 03/30/2017
 ms.assetid: 911ffad4-4d47-4430-b7c2-79192ce6bcbd
-ms.openlocfilehash: 8e514b28d9b3719a52d420551c607c49c70738e1
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: ef4212fa0989f80393f62119d9b2b6cda370ef94
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044842"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714730"
 ---
 # <a name="multiple-endpoints-at-a-single-listenuri"></a>단일 ListenUri의 여러 엔드포인트
 이 샘플에서는 단일 `ListenUri`에서 여러 엔드포인트를 호스팅하는 서비스를 보여 줍니다. 이 샘플은 계산기 서비스를 구현 하는 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md) 을 기반으로 합니다.  
@@ -39,11 +39,11 @@ ms.locfileid: "70044842"
   
  세 개의 엔드포인트는 모두 동일한 `ListenUri`에서 호스팅되고 동일한 `binding`을 사용합니다. 동일한 `ListenUri`에 있는 엔드포인트는 컴퓨터의 해당 실제 주소에서 메시지를 수신 대기하는 단일 채널 스택을 공유하므로 동일한 바인딩을 가져야 합니다. 각 엔드포인트의 `address`는 URN입니다. 일반적으로 주소가 실제 위치를 나타내지만 이 샘플에 나온 것처럼 실제로 이 주소는 일치 및 필터링 목적에 사용되므로 모든 종류의 URI가 될 수 있습니다.  
   
- 3 개의 끝점이 모두 동일한 `ListenUri`를 공유 하기 때문에 메시지가 도착할 때 WCF (Windows Communication Foundation)는 메시지를 보낼 끝점을 결정 해야 합니다. 각 엔드포인트에는 주소 필터와 계약 필터의 두 부분으로 구성된 메시지 필터가 있습니다. 주소 필터는 SOAP 메시지의 `To`를 서비스 엔드포인트의 주소에 일치시킵니다. 예를 들어, `To "Urn:OtherEcho"`에 주소 지정된 메시지만 이 서비스의 세 번째 엔드포인트의 후보가 됩니다. 계약 필터는 특정 계약의 작업과 연관된 작업을 일치시킵니다. 예를 들면 `IEcho`의 작업을 가진 메시지입니다. 이 서비스의 두 번째 및 세 번째 엔드포인트가 `Echo` 계약을 호스팅하기 때문에 `IEcho`는 이러한 두 엔드포인트 모두의 계약 필터를 일치시킵니다.  
+ 3 개의 끝점이 모두 같은 `ListenUri`를 공유 하기 때문에 메시지가 도착할 때 WCF (Windows Communication Foundation)는 메시지의 대상이 되는 끝점을 결정 해야 합니다. 각 엔드포인트에는 주소 필터와 계약 필터의 두 부분으로 구성된 메시지 필터가 있습니다. 주소 필터는 SOAP 메시지의 `To`를 서비스 엔드포인트의 주소에 일치시킵니다. 예를 들어, `To "Urn:OtherEcho"`에 주소 지정된 메시지만 이 서비스의 세 번째 엔드포인트의 후보가 됩니다. 계약 필터는 특정 계약의 작업과 연관된 작업을 일치시킵니다. 예를 들면 `IEcho`의 작업을 가진 메시지입니다. 이 서비스의 두 번째 및 세 번째 엔드포인트가 `Echo` 계약을 호스팅하기 때문에 `IEcho`는 이러한 두 엔드포인트 모두의 계약 필터를 일치시킵니다.  
   
  따라서 주소 필터와 계약 필터를 조합하면 이 서비스의 `ListenUri`에 도착하는 각 메시지를 올바른 엔드포인트에 라우트할 수 있습니다. 세 번째 엔드포인트는 다른 엔드포인트에서 다른 주소로 보내진 메시지를 수락하기 때문에 다른 두 개와 구별됩니다. 첫 번째 및 두 번째 엔드포인트는 해당 계약(들어오는 메시지의 작업)에 기초하여 서로 구별됩니다.  
   
-## <a name="client"></a>클라이언트  
+## <a name="client"></a>Client  
  서버의 엔드포인트가 두 개의 다른 주소를 가진 것처럼 클라이언트 엔드포인트도 두 개의 주소를 가집니다. 서버 및 클라이언트 모두에서 논리 주소를 `EndpointAddress`라고 합니다. 그러나 서버에서 물리 주소를 `ListenUri`라고 하는 것과 달리 클라이언트에서는 물리 주소를 `Via`라고 합니다.  
   
  서버에서와 같이 기본적으로 이러한 두 주소는 동일합니다. 엔드포인트 주소와 다른 클라이언트의 `Via`를 지정하려면 `ClientViaBehavior`를 사용합니다.  
@@ -75,6 +75,6 @@ calcClient.ChannelFactory.Endpoint.Behaviors.Add(
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\MultipleEndpointsSingleUri`  

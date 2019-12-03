@@ -2,12 +2,12 @@
 title: 문서 승인 프로세스
 ms.date: 03/30/2017
 ms.assetid: 9b240937-76a7-45cd-8823-7f82c34d03bd
-ms.openlocfilehash: 20167cd1c06c2ae57dfe48fd07ab3a0e2adf9927
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: cee43aff991f9482de7b3172174eb0e786ec1fe6
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038233"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74710842"
 ---
 # <a name="document-approval-process"></a>문서 승인 프로세스
 
@@ -18,7 +18,7 @@ ms.locfileid: "70038233"
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.
+> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Application\DocumentApprovalProcess`
 
@@ -78,7 +78,7 @@ ms.locfileid: "70038233"
 
 9. 승인 프로세스 워크플로의 결과가 클라이언트로 보내집니다.
 
-## <a name="using-the-sample"></a>샘플 사용
+## <a name="using-the-sample"></a>예제 사용
 
 ##### <a name="to-set-up-the-database"></a>데이터베이스를 설정하려면
 
@@ -90,7 +90,7 @@ ms.locfileid: "70038233"
 
 2. Ctrl+Shift+B를 눌러 솔루션을 빌드합니다.
 
-3. 솔루션을 실행 하려면 **솔루션 탐색기** 에서 approvalmanager 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 오른쪽 클릭 메뉴에서 **디버그**->새 인스턴스**시작** 을 클릭 하 여 승인 관리자 응용 프로그램을 시작 합니다.
+3. 솔루션을 실행 하려면 **솔루션 탐색기** 에서 ApprovalManager 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 오른쪽 클릭 메뉴에서 **디버그**->새 인스턴스 **시작** 을 클릭 하 여 승인 관리자 응용 프로그램을 시작 합니다.
 
     실행 준비가 되었다는 관리자의 메시지가 표시될 때까지 기다립니다.
 

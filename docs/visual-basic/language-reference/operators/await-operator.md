@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Await operator [Visual Basic]
 - Await [Visual Basic]
 ms.assetid: 6b1ce283-e92b-4ba7-b081-7be7b3d37af9
-ms.openlocfilehash: c2389ff0c94afc2156e594f5d93535d1ed0107a8
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: e0c617ce32f80bdde1bcfda31da40ae610e07452
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74336260"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74712359"
 ---
 # <a name="await-operator-visual-basic"></a>Await 연산자(Visual Basic)
 
@@ -23,9 +23,9 @@ ms.locfileid: "74336260"
 > [!NOTE]
 > `Async` 및 `Await` 키워드는 Visual Studio 2012에서 도입되었습니다. 비동기 프로그래밍에 대 한 소개는 [async 및 wait를 사용한 비동기 프로그래밍](../../../visual-basic/programming-guide/concepts/async/index.md)을 참조 하세요.
 
-일반적으로 `Await` 연산자를 적용 하는 작업은 [작업 기반 비동기 패턴](https://go.microsoft.com/fwlink/?LinkId=204847)을 구현 하는 메서드 호출의 반환 값입니다. 즉, <xref:System.Threading.Tasks.Task> 또는 <xref:System.Threading.Tasks.Task%601>입니다.
+일반적으로 `Await` 연산자를 적용 하는 작업은 [작업 기반 비동기 패턴](https://www.microsoft.com/download/details.aspx?id=19957)을 구현 하는 메서드 호출의 반환 값입니다. 즉, <xref:System.Threading.Tasks.Task> 또는 <xref:System.Threading.Tasks.Task%601>입니다.
 
-다음 코드에서 <xref:System.Net.Http.HttpClient> 메서드 <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A>는 `getContentsTask`, `Task(Of Byte())`를 반환합니다. 이 작업은 작업이 완료될 때 실제 바이트 배열을 생성하기 위한 약속입니다. `Await` 연산자는 `getContentsTask`에 적용되어 `SumPageSizesAsync`가 완료될 때까지 `getContentsTask`의 실행을 일시 중단합니다. 동시에 컨트롤은 `SumPageSizesAsync` 호출자에게 반환됩니다. `getContentsTask`가 완료되면 `Await` 식이 바이트 배열로 계산됩니다.
+다음 코드에서 <xref:System.Net.Http.HttpClient> 메서드 <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A>는 `getContentsTask`, `Task(Of Byte())`를 반환합니다. 이 작업은 작업이 완료될 때 실제 바이트 배열을 생성하기 위한 약속입니다. `Await` 연산자는 `getContentsTask`에 적용되어 `getContentsTask`가 완료될 때까지 `SumPageSizesAsync`의 실행을 일시 중단합니다. 동시에 컨트롤은 `SumPageSizesAsync` 호출자에게 반환됩니다. `getContentsTask`가 완료되면 `Await` 식이 바이트 배열로 계산됩니다.
 
 ```vb
 Private Async Function SumPageSizesAsync() As Task
@@ -74,7 +74,7 @@ Await AsyncMethodThatReturnsTask()
 
 ## <a name="example"></a>예제
 
-다음 Windows Forms 예제에서는 비동기 메서드 `Await`에서 `WaitAsynchronouslyAsync`의 사용을 보여 줍니다. 해당 메서드의 동작을 `WaitSynchronously`의 동작과 대조합니다. `Await` 연산자가 없는 경우 `WaitSynchronously`는 해당 정의에 `Async` 수정자가 사용되었고 해당 본문에서 <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType> 호출이 있더라도 동기적으로 실행됩니다.
+다음 Windows Forms 예제에서는 비동기 메서드 `WaitAsynchronouslyAsync`에서 `Await`의 사용을 보여 줍니다. 해당 메서드의 동작을 `WaitSynchronously`의 동작과 대조합니다. `Await` 연산자가 없는 경우 `WaitSynchronously`는 해당 정의에 `Async` 수정자가 사용되었고 해당 본문에서 <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType> 호출이 있더라도 동기적으로 실행됩니다.
 
 ```vb
 Private Async Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -106,7 +106,7 @@ Public Async Function WaitSynchronously() As Task(Of String)
 End Function
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Async 및 Await를 사용한 비동기 프로그래밍](../../../visual-basic/programming-guide/concepts/async/index.md)
 - [연습: Async 및 Await를 사용하여 웹에 액세스](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)

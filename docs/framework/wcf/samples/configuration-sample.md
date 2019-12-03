@@ -2,12 +2,12 @@
 title: 구성 샘플
 ms.date: 03/30/2017
 ms.assetid: 75515b4a-8d70-44c8-99e0-7423df41380e
-ms.openlocfilehash: 87afeb0c562254e0f4cf6a85946a765a740c79ec
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 78108dc9b28657f0479e9e39ad134f03cf6c877b
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70990074"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714951"
 ---
 # <a name="configuration-sample"></a>구성 샘플
 이 샘플에서는 구성 파일을 사용하여 서비스를 검색 가능하게 만드는 방법을 보여 줍니다.  
@@ -20,7 +20,7 @@ ms.locfileid: "70990074"
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\Configuration`  
   
@@ -31,9 +31,9 @@ ms.locfileid: "70990074"
   
 - 서비스의 애플리케이션 엔드포인트에 대한 검색 관련 정보를 조정하고 표준 엔드포인트의 검색 관련 설정 중 일부를 조정합니다.  
   
- 검색 가능하도록 설정하려면 서비스의 응용 프로그램 구성 파일에서 몇 가지 변경 작업을 수행해야 합니다.  
+ 검색 가능하도록 설정하려면 서비스의 애플리케이션 구성 파일에서 몇 가지 변경 작업을 수행해야 합니다.  
   
-- `<service>` 요소에 검색 끝점을 추가해야 합니다. 이는 표준 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> 엔드포인트로서, 런타임에서 검색 서비스와 연결하는 시스템 엔드포인트입니다. 검색 서비스는 이 엔드포인트에서 메시지를 수신 대기합니다.  
+- ph x="1" /&gt; 요소에 검색 엔드포인트를 추가해야 합니다. 이는 표준 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> 엔드포인트로서, 런타임에서 검색 서비스와 연결하는 시스템 엔드포인트입니다. 검색 서비스는 이 엔드포인트에서 메시지를 수신 대기합니다.  
   
 - `<serviceDiscovery>` 섹션에 `<serviceBehaviors>` 동작을 추가합니다. 이 동작은 런타임에 서비스를 검색할 수 있게 해 주며, 앞에서 설명한 검색 엔드포인트를 사용하여 검색 `Probe` 및 `Resolve` 메시지를 수신 대기합니다. 이 두 가지 항목을 추가하면 서비스를 지정된 검색 엔드포인트에서 검색할 수 있게 됩니다.  
   

@@ -2,17 +2,17 @@
 title: 구성 채널 팩터리
 ms.date: 03/30/2017
 ms.assetid: 3b749493-bd8a-4ccb-893e-5948901a1486
-ms.openlocfilehash: 1b74c15599ebc932a2a0ed46d646b54bec986794
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 1a236f1812d3124e83702a97e1877b7fec10be64
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045651"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715499"
 ---
 # <a name="configuration-channel-factory"></a>구성 채널 팩터리
-이 샘플에서는 <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601>의 사용법에 대해 설명합니다. 에서는 <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601> WCF 클라이언트 구성의 중앙 관리를 수행할 수 있습니다. 애플리케이션 도메인의 로드 이후 구성이 선택되었거나 변경된 경우에도 유용합니다.
+이 샘플에서는 <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601>의 사용법에 대해 설명합니다. <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601>은 WCF 클라이언트 구성의 중앙 관리를 허용 합니다. 애플리케이션 도메인의 로드 이후 구성이 선택되었거나 변경된 경우에도 유용합니다.
 
-## <a name="demonstrates"></a>세부 항목
+## <a name="demonstrates"></a>데모
  <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601>
 
 ## <a name="discussion"></a>토론
@@ -39,7 +39,7 @@ ICalculatorChannel client1 = factory1.CreateChannel();
 
 3. **공용 속성**에서 **시작 프로젝트**를 선택한 다음 **여러 개의 시작 프로젝트**를 클릭 합니다.
 
-4. **서비스** 프로젝트를 **' start ' 작업**을 사용 하 여 목록의 시작 부분으로 이동한 다음 클라이언트 프로젝트를 **' 시작 ' 작업**을 사용 하 여 **서비스** 프로젝트 뒤에 이동 하 여 **클라이언트** 프로젝트를 실행 합니다. **서비스** 프로젝트 후
+4. **서비스 프로젝트** 를 **' start ' 작업**을 사용 하 여 목록의 시작 부분으로 이동한 다음 **클라이언트** 프로젝트를 **' Start ' 작업**을 사용 하 여 **서비스** 프로젝트 뒤로 이동 하 여 **서비스 프로젝트 이후에** **클라이언트** 프로젝트가 실행 되도록 합니다.
 
 5. **확인**을 클릭 한 다음 F5 키 (또는 CTRL + F5)를 눌러 샘플을 실행 합니다.
 
@@ -48,6 +48,6 @@ ICalculatorChannel client1 = factory1.CreateChannel();
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\ConfigurationChannelFactory`

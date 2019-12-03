@@ -2,12 +2,12 @@
 title: Flowchart 활동에서 TryCatch를 사용하여 오류 처리
 ms.date: 03/30/2017
 ms.assetid: 50922964-bfe0-4ba8-9422-0e7220d514fd
-ms.openlocfilehash: 42eb660aff01c7e29227c28a6ad0d47d4370eb91
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: 8e3ca59bc9743300a230877a6fbcbed5468a1589
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70016026"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74710833"
 ---
 # <a name="fault-handling-in-a-flowchart-activity-using-trycatch"></a>Flowchart 활동에서 TryCatch를 사용하여 오류 처리
 
@@ -17,7 +17,7 @@ ms.locfileid: "70016026"
 
 다음 표에서는 `CreateFlowchartWithFaults` 활동의 변수에 대해 자세히 설명합니다.
 
-|매개 변수|Description|
+|매개 변수|설명|
 |----------------|-----------------|
 |promoCode|승격 코드입니다. 형식: String<br /><br /> 가능한 값은 다음과 같으며 괄호 안에 설명이 포함되어 있습니다.<br /><br /> -단일 (단일)<br />-MNK (자녀가 없는 결혼)<br />-MWK (어린이와 결혼)|
 |numKids|자식 수입니다. 형식: int|
@@ -28,7 +28,7 @@ ms.locfileid: "70016026"
 |--------------------------|--------------------|
 |Single|10|
 |MNK|15|
-|MWK|15 + (1-1/`numberOfKids`)\*10 **참고:**  이 계산에서 <xref:System.DivideByZeroException>을 throw할 수도 있으므로 할인율 계산은 <xref:System.Activities.Statements.TryCatch> 예외를 catch하고 할인율을 0으로 설정하는 <xref:System.DivideByZeroException> 활동에 래핑됩니다.|
+|MWK|15 + (1 – 1/`numberOfKids`)\*10 **참고:** 잠재적으로이 계산은 <xref:System.DivideByZeroException>을 throw 할 수 있습니다. 할인율 계산은 <xref:System.Activities.Statements.TryCatch> 예외를 catch하고 할인율을 0으로 설정하는 <xref:System.DivideByZeroException> 활동에 래핑됩니다.|
 
 #### <a name="to-use-this-sample"></a>이 샘플을 사용하려면
 
@@ -43,11 +43,11 @@ ms.locfileid: "70016026"
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.
+> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\FlowChartWithFaultHandling`
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [순서도 워크플로](../flowchart-workflows.md)
 - [예외](../exceptions.md)
