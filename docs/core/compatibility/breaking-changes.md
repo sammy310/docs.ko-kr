@@ -1,32 +1,38 @@
 ---
 title: .NET Core 호환성이 손상되는 변경 사항
 description: 각 .NET Core 버전의 호환성이 손상되는 변경에 대해 알아봅니다.
-ms.date: 08/12/2019
-ms.openlocfilehash: 92ebb627240bce3d9b20dca51263732d1856c2a4
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.date: 11/27/2019
+ms.openlocfilehash: 30459ca1178c0d62427138b22dd42f11cd2c2475
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739771"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568023"
 ---
-# <a name="net-core-breaking-changes"></a><span data-ttu-id="15d57-103">.NET Core 호환성이 손상되는 변경 사항</span><span class="sxs-lookup"><span data-stu-id="15d57-103">.NET Core breaking changes</span></span>
+# <a name="breaking-change-selectors"></a><span data-ttu-id="1319a-103">호환성이 손상되는 변경 선택기</span><span class="sxs-lookup"><span data-stu-id="1319a-103">Breaking change selectors</span></span>
 
-<span data-ttu-id="15d57-104">다음 버전 선택기는 .NET Core, ASP.NET Core, EF Core에 적용되는 호환성이 손상되는 변경 사항의 필터링된 목록을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="15d57-104">The following version selector provides a filtered list of breaking changes for .NET Core, ASP.NET Core, and EF Core.</span></span> <span data-ttu-id="15d57-105">대상 버전에는 .NET Core 2.2 및 .NET Core 3.0과 같은 주 릴리스 뿐만 아니라 .NET Core 3.0 미리 보기 7과 같은 미리 보기 릴리스도 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="15d57-105">The target versions include not only major releases, such as .NET Core 2.2 and .NET Core 3.0, but also preview releases, such as .NET Core 3.0 Preview 7.</span></span>
+<span data-ttu-id="1319a-104">다음 버전 및 영역 선택기는 다양한 버전의 .NET Core, ASP.NET Core 및 EF Core에 적용 가능하며 호환성이 손상되는 변경 사항을 필터링한 목록을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="1319a-104">The following version and area selectors provide a filtered list of applicable breaking changes between different versions of .NET Core, ASP.NET Core, and EF Core.</span></span> <span data-ttu-id="1319a-105">버전별로 찾아보거나 목차에서 문서를 범주화할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1319a-105">You can also browse version to version or category articles in the table of contents.</span></span>
 
-<span data-ttu-id="15d57-106">.NET Core에 도입된 호환성이 손상되는 변경을 자세히 설명하는 개별 문제를 다음 GitHub 리포지토리에서 확인할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="15d57-106">You can also view individual issues that detail the breaking changes introduced in .NET Core in the following GitHub repositories:</span></span>
+## <a name="by-version"></a><span data-ttu-id="1319a-106">버전별</span><span class="sxs-lookup"><span data-stu-id="1319a-106">By version</span></span>
 
-- <span data-ttu-id="15d57-107">.NET Core의 경우 [dotnet/docs](https://github.com/dotnet/docs/issues?q=is%3Aissue+label%3Abreaking-change) 리포지토리.</span><span class="sxs-lookup"><span data-stu-id="15d57-107">For .NET Core, the [dotnet/docs](https://github.com/dotnet/docs/issues?q=is%3Aissue+label%3Abreaking-change) repository.</span></span>
-- <span data-ttu-id="15d57-108">ASP.NET Core의 경우 [aspnet/Announcements](https://github.com/aspnet/Announcements/issues?q=is%3Aissue+is%3Aopen+label%3A%22Breaking+change%22+label%3A3.0.0) 리포지토리.</span><span class="sxs-lookup"><span data-stu-id="15d57-108">For ASP.NET Core, the [aspnet/Announcements](https://github.com/aspnet/Announcements/issues?q=is%3Aissue+is%3Aopen+label%3A%22Breaking+change%22+label%3A3.0.0) repository.</span></span>
-- <span data-ttu-id="15d57-109">Entity Framework Core의 경우 [aspnet/EntityFrameworkCore](https://github.com/aspnet/EntityFrameworkCore/issues?q=is%3Aopen+is%3Aissue+label%3Abreaking-change) 리포지토리.</span><span class="sxs-lookup"><span data-stu-id="15d57-109">For Entity Framework Core, the [aspnet/EntityFrameworkCore](https://github.com/aspnet/EntityFrameworkCore/issues?q=is%3Aopen+is%3Aissue+label%3Abreaking-change) repository.</span></span>
-
-## <a name="breaking-changes-by-version"></a><span data-ttu-id="15d57-110">버전별 호환성이 손상되는 변경 사항</span><span class="sxs-lookup"><span data-stu-id="15d57-110">Breaking changes by version</span></span>
-
-<span data-ttu-id="15d57-111">현재 대상으로 하는 .NET Core 버전을 선택한 후 마이그레이션할 .NET Core 버전을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="15d57-111">Select the .NET Core version that you're currently targeting and then the .NET Core version you wish to migrate to:</span></span>
+<span data-ttu-id="1319a-107">현재 대상으로 하는 .NET Core 버전을 선택한 후 마이그레이션할 .NET Core 버전을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="1319a-107">Select the .NET Core version that you're currently targeting and then the .NET Core version you wish to migrate to:</span></span>
 
 [!INCLUDE[versionselector](~/includes/core-changes/versionselector.md)]
 
-## <a name="breaking-changes-by-category"></a><span data-ttu-id="15d57-112">범주별 호환성이 손상되는 변경</span><span class="sxs-lookup"><span data-stu-id="15d57-112">Breaking changes by category</span></span>
+## <a name="by-area"></a><span data-ttu-id="1319a-108">영역별</span><span class="sxs-lookup"><span data-stu-id="1319a-108">By area</span></span>
 
-<span data-ttu-id="15d57-113">관심 있는 .NET Core 기술 영역을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="15d57-113">Select the .NET Core technology area that you're interested in.</span></span> <span data-ttu-id="15d57-114">개별 변경 내용은 .NET Core 버전별로 정렬되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="15d57-114">Individual changes are ordered by .NET Core version.</span></span>
+<span data-ttu-id="1319a-109">관심 있는 .NET Core 기술 영역을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="1319a-109">Select the .NET Core technology area that you're interested in.</span></span> <span data-ttu-id="1319a-110">개별 변경 내용은 .NET Core 버전별로 정렬되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1319a-110">Individual changes are ordered by .NET Core version.</span></span>
 
-[!INCLUDE[cateegoryselector](~/includes/core-changes/categoryselector.md)]
+[!INCLUDE[categoryselector](~/includes/core-changes/categoryselector.md)]
+
+## <a name="github-issues-and-announcements"></a><span data-ttu-id="1319a-111">GitHub 문제 및 알림</span><span class="sxs-lookup"><span data-stu-id="1319a-111">GitHub issues and announcements</span></span>
+
+<span data-ttu-id="1319a-112">.NET Core에 도입된 호환성이 손상되는 변경을 자세히 설명하는 개별 문제를 다음 GitHub 리포지토리에서 확인할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1319a-112">You can also view individual issues that detail the breaking changes introduced in .NET Core in the following GitHub repositories:</span></span>
+
+- <span data-ttu-id="1319a-113">.NET Core의 경우 [dotnet/docs](https://github.com/dotnet/docs/issues?q=is%3Aissue+label%3Abreaking-change) 리포지토리.</span><span class="sxs-lookup"><span data-stu-id="1319a-113">For .NET Core, the [dotnet/docs](https://github.com/dotnet/docs/issues?q=is%3Aissue+label%3Abreaking-change) repository.</span></span>
+- <span data-ttu-id="1319a-114">ASP.NET Core의 경우 [aspnet/Announcements](https://github.com/aspnet/Announcements/issues?q=is%3Aissue+is%3Aopen+label%3A%22Breaking+change%22+label%3A3.0.0) 리포지토리.</span><span class="sxs-lookup"><span data-stu-id="1319a-114">For ASP.NET Core, the [aspnet/Announcements](https://github.com/aspnet/Announcements/issues?q=is%3Aissue+is%3Aopen+label%3A%22Breaking+change%22+label%3A3.0.0) repository.</span></span>
+- <span data-ttu-id="1319a-115">Entity Framework Core의 경우 [aspnet/EntityFrameworkCore](https://github.com/aspnet/EntityFrameworkCore/issues?q=is%3Aopen+is%3Aissue+label%3Abreaking-change) 리포지토리.</span><span class="sxs-lookup"><span data-stu-id="1319a-115">For Entity Framework Core, the [aspnet/EntityFrameworkCore](https://github.com/aspnet/EntityFrameworkCore/issues?q=is%3Aopen+is%3Aissue+label%3Abreaking-change) repository.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="1319a-116">참고 항목</span><span class="sxs-lookup"><span data-stu-id="1319a-116">See also</span></span>
+
+- [<span data-ttu-id="1319a-117">.NET Framework에서 .NET Core로 마이그레이션</span><span class="sxs-lookup"><span data-stu-id="1319a-117">Migrate from .NET Framework to .NET Core</span></span>](../porting/index.md)
