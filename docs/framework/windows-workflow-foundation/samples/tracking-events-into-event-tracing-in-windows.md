@@ -2,12 +2,12 @@
 title: Windows에서 이벤트 추적으로 이벤트 추적
 ms.date: 03/30/2017
 ms.assetid: f812659b-0943-45ff-9430-4defa733182b
-ms.openlocfilehash: 2a8e93604654d20c210015896e02d76b4b8bd36e
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: fe50476eedef505258c2e6818e75a32c06ed6fa6
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70037899"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715922"
 ---
 # <a name="tracking-events-into-event-tracing-in-windows"></a>Windows에서 이벤트 추적으로 이벤트 추적
 
@@ -47,11 +47,11 @@ Windows Workflow Foundation는 추적 인프라를 제공 하 여 워크플로 �
 
 3. F5 키를 눌러 솔루션을 실행합니다.
 
-    기본적으로이 서비스는 포트 53797 ()http://localhost:53797/SampleWorkflowService.xamlx) 에서 수신 대기 합니다.
+    기본적으로 서비스는 포트 53797 (http://localhost:53797/SampleWorkflowService.xamlx) 에서 수신 대기 합니다.
 
 4. 파일 탐색기를 사용 하 여 WCF 테스트 클라이언트를 엽니다.
 
-    WCF 테스트 클라이언트 (wcftestclient.exe)는 \<Visual Studio 2010 설치 폴더 > \Common7\IDE\ 폴더에 있습니다.
+    WCF 테스트 클라이언트 (Wcftestclient.exe)는 \<Visual Studio 2010 설치 폴더 > \Common7\IDE\ 폴더에 있습니다.
 
     기본 Visual Studio 2010 설치 폴더는 C:\Program Files\Microsoft Visual Studio 10.0입니다.
 
@@ -61,7 +61,7 @@ Windows Workflow Foundation는 추적 인프라를 제공 하 여 워크플로 �
 
 6. 이벤트 뷰어 애플리케이션을 엽니다.
 
-    서비스를 호출 하기 전에 **시작** 메뉴에서 이벤트 뷰어을 시작 하 `eventvwr.exe`고 **실행** 을 선택 하 고 입력을 입력 합니다. 이벤트 로그가 워크플로 서비스에서 내보낸 추적 이벤트를 수신 대기하고 있는지 확인합니다.
+    서비스를 호출 하기 전에 **시작** 메뉴에서 이벤트 뷰어을 시작 하 고 **실행** 을 선택한 다음 `eventvwr.exe`을 입력 합니다. 이벤트 로그가 워크플로 서비스에서 내보낸 추적 이벤트를 수신 대기하고 있는지 확인합니다.
 
 7. 이벤트 뷰어의 트리 뷰에서 **이벤트 뷰어**, **응용 프로그램 및 서비스 로그**및 **Microsoft**로 이동 합니다. **Microsoft** 를 마우스 오른쪽 단추로 클릭 하 고 **보기** 를 선택한 다음 **분석 및 디버그 로그 표시** 를 선택 하 여 분석 및 디버그 로그를 사용 하도록 설정 합니다.
 
@@ -136,9 +136,9 @@ Windows Workflow Foundation는 추적 인프라를 제공 하 여 워크플로 �
 ## <a name="known-issue"></a>알려진 문제
 
 > [!NOTE]
-> ETW 이벤트가 디코딩되지 않을 수 있으며, 이는 이벤트 뷰어와 관련하여 알려진 문제입니다. 다음과 같은 오류 메시지가 표시될 수 있습니다.
+> 알려진 문제로 인해 이벤트 뷰어에서 ETW 이벤트를 디코딩하지 못할 수 있습니다. 다음과 같은 오류 메시지가 표시될 수 있습니다.
 >
-> 원본 Microsoft-Windows 응용 \<프로그램 서버의 이벤트 id id >에 대 한 설명을 찾을 수 없습니다. 이 이벤트를 발생시킨 구성 요소가 로컬 컴퓨터에 설치되어 있지 않거나 설치가 손상되었습니다. 로컬 컴퓨터에서 구성 요소를 설치 또는 복구할 수 있습니다.
+> 원본 Microsoft-Windows 응용 프로그램 서버의 이벤트 ID \<id >에 대 한 설명을 찾을 수 없습니다. 이 이벤트를 발생시킨 구성 요소가 로컬 컴퓨터에 설치되어 있지 않거나 설치가 손상되었습니다. 로컬 컴퓨터에서 구성 요소를 설치 또는 복구할 수 있습니다.
 >
 > 이 오류가 발생하면 동작 창에서 새로 고침을 클릭합니다. 그러면 이벤트가 올바르게 디코딩됩니다.
 
@@ -147,10 +147,10 @@ Windows Workflow Foundation는 추적 인프라를 제공 하 여 워크플로 �
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.
+> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\EtwTracking`
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [AppFabric 모니터링 샘플](https://go.microsoft.com/fwlink/?LinkId=193959)

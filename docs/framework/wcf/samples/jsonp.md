@@ -2,17 +2,17 @@
 title: JSONP
 ms.date: 03/30/2017
 ms.assetid: c13b4d7b-dac7-4ffd-9f84-765c903511e1
-ms.openlocfilehash: 1fc85838d7491f94b8da1e0ab458d6d021cd2b32
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 82fa0bb09ebdf3ca2325872c2b884f4940de17ed
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989771"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715716"
 ---
 # <a name="jsonp"></a>JSONP
-이 샘플에서는 WCF REST 서비스에서 JSONP(JSON with Padding)를 지원하는 방법을 보여 줍니다. JSONP는 스크립트 태그를 현재 문서에서 생성함으로써 도메인의 제한 없이 스크립트를 호출하는 데 사용되는 규칙입니다. 결과는 지정된 콜백 함수를 통해 반환됩니다. JSONP은와 `<script src="http://..." >` 같은 태그가 모든 도메인의 스크립트를 평가할 수 있으며 이러한 태그로 검색 된 스크립트는 다른 기능이 이미 정의 되어 있을 수 있는 범위 내에서 평가 된다는 개념을 기반으로 합니다.
+이 샘플에서는 WCF REST 서비스에서 JSONP(JSON with Padding)를 지원하는 방법을 보여 줍니다. JSONP는 스크립트 태그를 현재 문서에서 생성함으로써 도메인의 제한 없이 스크립트를 호출하는 데 사용되는 규칙입니다. 결과는 지정된 콜백 함수를 통해 반환됩니다. JSONP는 `<script src="http://..." >`와 같은 태그가 모든 도메인의 스크립트를 평가할 수 있으며 이러한 태그로 검색 된 스크립트는 다른 기능이 이미 정의 되어 있을 수 있는 범위 내에서 평가 된다는 개념을 기반으로 합니다.
 
-## <a name="demonstrates"></a>세부 항목
+## <a name="demonstrates"></a>데모
  JSONP를 사용한 도메인 간 스크립팅
 
 ## <a name="discussion"></a>토론
@@ -24,7 +24,7 @@ proxy.set_enableJsonp(true);
 proxy.GetCustomer(onSuccess, onFail, null);
 ```
 
- WCF REST 서비스에서는 <xref:System.ServiceModel.Description.WebScriptEndpoint>가 `crossDomainScriptAccessEnabled`로 설정된  `true`를 사용하므로 웹 페이지에서 이 서비스를 호출할 수 있습니다. 이러한 구성은 모두 system.servicemodel > 요소 아래의 \<web.config 파일에서 수행 됩니다.
+ WCF REST 서비스에서는 <xref:System.ServiceModel.Description.WebScriptEndpoint>가 `crossDomainScriptAccessEnabled`로 설정된  `true`를 사용하므로 웹 페이지에서 이 서비스를 호출할 수 있습니다. 이러한 구성은 모두 web.config 파일의 \<System.servicemodel > 요소 아래에 수행 됩니다.
 
 ```xml
 <system.serviceModel>
@@ -37,7 +37,7 @@ proxy.GetCustomer(onSuccess, onFail, null);
 </system.serviceModel>
 ```
 
- ScriptManager는 서비스와의 상호 작용을 관리하며 JSONP 액세스를 수동으로 구현하는 복잡한 과정을 단순하게 해 줍니다. 가 `crossDomainScriptAccessEnabled` 로`true` 설정 되 고 작업의 응답 형식이 JSON 인 경우 WCF 인프라는 콜백 쿼리 문자열 매개 변수에 대 한 요청의 URI를 검사 하 고 콜백 쿼리 문자열의 값으로 JSON 응답을 래핑합니다. 변수에. 샘플의 웹 페이지에서는 다음 URI를 사용하여 WCF REST 서비스를 호출합니다.
+ ScriptManager는 서비스와의 상호 작용을 관리하며 JSONP 액세스를 수동으로 구현하는 복잡한 과정을 단순하게 해 줍니다. `crossDomainScriptAccessEnabled`을 `true`로 설정 하 고 작업에 대 한 응답 형식을 JSON으로 설정 하면 WCF 인프라에서 콜백 쿼리 문자열 매개 변수에 대 한 요청의 URI를 검사 하 고 콜백 쿼리 문자열 매개 변수의 값을 사용 하 여 JSON 응답을 래핑합니다. 샘플의 웹 페이지에서는 다음 URI를 사용하여 WCF REST 서비스를 호출합니다.
 
 ```http
 http://localhost:33695/CustomerService/GetCustomer?callback=Sys._json0
@@ -58,7 +58,7 @@ Sys._json0({"__type":"Customer:#Microsoft.Samples.Jsonp","Address":"1 Example Wa
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\AJAX\JSONP`  
   
@@ -66,6 +66,6 @@ Sys._json0({"__type":"Customer:#Microsoft.Samples.Jsonp","Address":"1 Example Wa
   
 1. JSONP 샘플의 솔루션을 엽니다.  
   
-2. F5 키를 눌러 `http://localhost:26648/JSONPClientPage.aspx` 브라우저에서 시작 합니다.  
+2. F5 키를 눌러 브라우저에서 `http://localhost:26648/JSONPClientPage.aspx`를 시작 합니다.  
   
 3. 페이지가 로드 된 후에는 "Name" 및 "Address"에 대 한 텍스트 입력이 값으로 채워집니다.  이러한 값은 브라우저에서 페이지 렌더링을 마친 후 WCF 서비스 호출에서 제공 되었습니다.

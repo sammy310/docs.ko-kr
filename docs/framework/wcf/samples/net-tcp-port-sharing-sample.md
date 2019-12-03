@@ -2,12 +2,12 @@
 title: Net.TCP Port Sharing 샘플
 ms.date: 03/30/2017
 ms.assetid: 03da5959-0574-4e91-8a53-05854b6c55dc
-ms.openlocfilehash: 240579ef36405d730bb04ea171846c8e5ef9322e
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: e7a814dcdc027980f70ec90e384f3ec2f74b364d
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73416754"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714711"
 ---
 # <a name="nettcp-port-sharing-sample"></a>Net.TCP Port Sharing 샘플
 TCP/IP 프로토콜은 포트라는 16비트 숫자를 사용하여 동일한 컴퓨터에서 실행되는 여러 네트워크 애플리케이션에 대한 연결을 구분합니다. 애플리케이션이 포트에서 수신 대기 중이면 이 포트의 모든 TCP 트래픽이 해당 애플리케이션으로 이동합니다. 다른 애플리케이션이 동시에 이 포트에서 수신 대기할 수는 없습니다.  
@@ -17,7 +17,7 @@ TCP/IP 프로토콜은 포트라는 16비트 숫자를 사용하여 동일한 �
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\TCP\PortSharing`  
   

@@ -2,12 +2,12 @@
 title: SQL 추적
 ms.date: 03/30/2017
 ms.assetid: bcaebeb1-b9e5-49e8-881b-e49af66fd341
-ms.openlocfilehash: a72ac326108a1d202231a684f21d5b70017dc6cc
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: c1bb4492695df3ff803dff893de24453d7c03dfb
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774265"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715562"
 ---
 # <a name="sql-tracking"></a>SQL 추적
 이 샘플에서는 SQL 데이터베이스에 추적 레코드를 기록 하는 사용자 지정 SQL 추적 참가자를 작성 하는 방법을 보여 줍니다. WF (Windows Workflow Foundation)는 워크플로 인스턴스 실행에 대 한 가시성을 확보 하기 위해 워크플로 추적을 제공 합니다. 추적 런타임에서는 워크플로를 실행하는 동안 워크플로 추적 레코드를 내보냅니다. 워크플로 추적에 대 한 자세한 내용은 [워크플로 추적 및 추적](../workflow-tracking-and-tracing.md)을 참조 하세요.
@@ -25,7 +25,7 @@ ms.locfileid: "72774265"
 
 4. Ctrl+Shift+B를 눌러 솔루션을 빌드합니다.
 
-5. F5 키를 눌러 애플리케이션을 실행합니다.
+5. F5 키를 눌러 응용 프로그램을 실행합니다.
 
      브라우저 창이 열리고 애플리케이션의 디렉터리 목록이 표시됩니다.
 
@@ -33,7 +33,7 @@ ms.locfileid: "72774265"
 
 7. 브라우저에 StockPriceService 페이지가 표시됩니다. 이 페이지에는 로컬 서비스 WSDL 주소가 포함되어 있습니다. 이 주소를 복사합니다.
 
-     로컬 서비스 WSDL 주소의 예를 `http://localhost:65193/StockPriceService.xamlx?wsdl` 합니다.
+     로컬 서비스 WSDL 주소의 예를 `http://localhost:65193/StockPriceService.xamlx?wsdl`합니다.
 
 8. 파일 탐색기를 사용 하 여 WCF 테스트 클라이언트 (Wcftestclient.exe)를 실행 합니다. 이는 Microsoft Visual Studio 10.0\Common7\IDE 디렉터리에 있습니다.
 
@@ -55,7 +55,7 @@ ms.locfileid: "72774265"
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.
+> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\SqlTracking`
 

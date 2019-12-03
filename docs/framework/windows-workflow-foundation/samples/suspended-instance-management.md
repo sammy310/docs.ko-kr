@@ -2,20 +2,20 @@
 title: 일시 중단된 인스턴스 관리
 ms.date: 03/30/2017
 ms.assetid: f5ca3faa-ba1f-4857-b92c-d927e4b29598
-ms.openlocfilehash: 7a2f36ac2c127376eea56601f54aa5e571d66a55
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 3f1f4f8edcbe0e05067d3ca739ef3d5f4fe4d798
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70037885"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715939"
 ---
 # <a name="suspended-instance-management"></a>일시 중단된 인스턴스 관리
 이 샘플에서는 일시 중단된 워크플로 인스턴스를 관리하는 방법을 보여 줍니다.  <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior>의 기본 동작은 `AbandonAndSuspend`입니다. 즉, 기본적으로 <xref:System.ServiceModel.WorkflowServiceHost>에서 호스트되는 워크플로 인스턴스에서 처리되지 않은 예외가 throw될 경우 인스턴스가 메모리에서 삭제(중단)되고 영속/지속적 버전의 인스턴스는 일시 중단된 인스턴스로 표시됩니다. 일시 중단된 워크플로 인스턴스는 일시 중단이 해제될 때까지 실행할 수 없습니다.
 
  이 샘플에서는 일시 중단된 인스턴스를 쿼리하는 명령줄 유틸리티를 구현하는 방법과 사용자에게 해당 인스턴스를 다시 시작하거나 종료하는 옵션을 제공하는 방법을 보여 줍니다. 이 샘플에서는 워크플로 서비스가 의도적으로 예외를 throw하여 일시 중단 상태가 됩니다. 그런 다음 명령줄 유틸리티를 사용하여 인스턴스를 쿼리하고 이후에 인스턴스를 다시 시작하거나 종료할 수 있습니다.
 
-## <a name="demonstrates"></a>세부 항목
- <xref:System.ServiceModel.WorkflowServiceHost>WF (Windows Workflow Foundation)를 사용 <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> 합니다. <xref:System.ServiceModel.Activities.WorkflowControlEndpoint>
+## <a name="demonstrates"></a>데모
+ WF (Windows Workflow Foundation)의 <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> 및 <xref:System.ServiceModel.Activities.WorkflowControlEndpoint>를 사용 하 여 <xref:System.ServiceModel.WorkflowServiceHost> 합니다.
 
 ## <a name="discussion"></a>토론
  이 샘플에서 구현하는 명령줄 유틸리티는 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]에서 제공되는 SQL 인스턴스 저장소 구현에 따라 다릅니다. 인스턴스 저장소의 사용자 지정 구현이 있는 경우 샘플의 `WorkflowInstanceCommand` 구현을 현재 인스턴스 저장소와 관련된 구현으로 바꿔 이 유틸리티를 적용할 수 있습니다.
@@ -54,7 +54,7 @@ ms.locfileid: "70037885"
 
     6. **ReceiveTx** 큐를 마우스 오른쪽 단추로 클릭 하 고 **속성**을 선택 합니다.
 
-    7. **보안** 탭을 선택 하 고 **모든 사용자** 가 메시지를 **받고**, 메시지를 읽고, **메시지를 보낼**수 있는 권한을 갖도록 허용 합니다.
+    7. **보안** 탭을 선택 하 고 **모든 사용자** 가 메시지를 **받고** **, 메시지를 읽고,** **메시지를 보낼**수 있는 권한을 갖도록 허용 합니다.
 
 4. 이제 샘플을 실행합니다.
 
@@ -81,6 +81,6 @@ ms.locfileid: "70037885"
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WF\Application\SuspendedInstanceManagement`

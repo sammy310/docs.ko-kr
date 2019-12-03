@@ -2,12 +2,12 @@
 title: 개체 참조
 ms.date: 03/30/2017
 ms.assetid: 7a93d260-91c3-4448-8f7a-a66fb562fc23
-ms.openlocfilehash: f82ebe741c2deaccb3bd6593c7b4f53a646582dd
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: bc9c318fc0e05f384a00df7cd1436a138315d880
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039147"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714676"
 ---
 # <a name="object-references"></a>개체 참조
 이 샘플에서는 서버와 클라이언트 간에 개체를 참조로 전달하는 방법을 보여 줍니다. 이 샘플에서는 시뮬레이트된 *소셜 네트워크*를 사용 합니다. 인맥 네트워크는 친구 목록을 포함하는 `Person` 클래스로 구성되며, 이 목록의 친구는 `Person` 클래스의 인스턴스이며 자체적으로도 친구 목록을 가지고 있습니다. 이를 기반으로 개체 그래프가 생성됩니다. 서비스는 이러한 인맥 네트워크에 대한 작업을 노출합니다.  
@@ -91,7 +91,7 @@ public List<Person> GetCommonFriends(List<Person> people)
 }  
 ```  
   
-## <a name="client"></a>클라이언트  
+## <a name="client"></a>Client  
  클라이언트 프록시는 Visual Studio의 **서비스 참조 추가** 기능을 사용 하 여 만듭니다.  
   
  5개의 `Person` 개체로 구성된 인맥 네트워크가 생성됩니다. 클라이언트는 서비스의 메서드 3개를 각각 호출합니다.  
@@ -109,11 +109,11 @@ public List<Person> GetCommonFriends(List<Person> people)
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\ObjectReferences`  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A>
 - [상호 운영 가능한 개체 참조](../../../../docs/framework/wcf/feature-details/interoperable-object-references.md)

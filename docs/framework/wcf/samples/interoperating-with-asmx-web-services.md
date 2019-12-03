@@ -2,12 +2,12 @@
 title: ASMX 웹 서비스와의 상호 운영성
 ms.date: 03/30/2017
 ms.assetid: a7c11f0a-9e68-4f03-a6b1-39cf478d1a89
-ms.openlocfilehash: 2ef4e34de76c046ba21dd7a3c50ea6ba782d459e
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 6d8be3fe6daa19a842dcaa92d05ec89ebef9fa5f
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989808"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715743"
 ---
 # <a name="interoperating-with-asmx-web-services"></a>ASMX 웹 서비스와의 상호 운영성
 이 샘플에서는 WCF (Windows Communication Foundation) 클라이언트 응용 프로그램을 기존 ASMX 웹 서비스와 통합 하는 방법을 보여 줍니다.  
@@ -46,7 +46,7 @@ public class CalculatorService : System.Web.Services.WebService
     }  
 ```  
   
- 구성 된 대로 동일한 컴퓨터의 클라이언트에서 서비스 `http://localhost/servicemodelsamples/service.asmx` 에 액세스할 수 있습니다. 원격 시스템의 클라이언트가 서비스에 액세스하려면 localhost 대신 정규화된 도메인 이름을 지정해야 합니다.  
+ 구성 된 대로 동일한 컴퓨터의 클라이언트에서 `http://localhost/servicemodelsamples/service.asmx` 하 여 서비스에 액세스할 수 있습니다. 원격 시스템의 클라이언트가 서비스에 액세스하려면 localhost 대신 정규화된 도메인 이름을 지정해야 합니다.  
   
  통신은 [ServiceModel Metadata 유틸리티 도구 (svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)에서 생성 한 클라이언트를 통해 수행 됩니다. 클라이언트는 generatedClient.cs 파일에 포함됩니다. 업데이트된 메타데이터를 검색하는 데 프록시 코드가 사용되므로 프록시 코드를 생성하기 위해 ASMX 서비스를 사용할 수 있어야 합니다. 클라이언트 디렉터리의 명령 프롬프트에서 다음 명령을 실행하여 형식화된 프록시를 생성합니다.  
   
@@ -127,6 +127,6 @@ Press <ENTER> to terminate client.
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\Interop\ASMX`  

@@ -2,12 +2,12 @@
 title: 사용자 지정 메시지 인터셉터
 ms.date: 03/30/2017
 ms.assetid: 73f20972-53f8-475a-8bfe-c133bfa225b0
-ms.openlocfilehash: 61f9bae24f5edb70430f4f3eaa16e42da221a7b4
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 53005212bc834d73ab5cbb4545d1477112f29c75
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73978305"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716809"
 ---
 # <a name="custom-message-interceptor"></a>사용자 지정 메시지 인터셉터
 이 샘플에서는 채널 확장성 모델의 사용 방법을 보여 줍니다. 특히 채널 팩터리 및 채널 수신기를 만드는 사용자 지정 바인딩 요소를 구현하여 런타임 스택의 특정 지점에서 들어오고 보내는 모든 메시지를 가로채는 방법을 보여 줍니다. 또한 이 샘플에는 이 사용자 지정 팩터리의 사용을 보여 주는 클라이언트와 서버도 포함되어 있습니다.  
@@ -22,7 +22,7 @@ ms.locfileid: "73978305"
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\MessageInterceptor`  
   
@@ -57,7 +57,7 @@ class InterceptingChannelListener<TChannel> : ListenerFactoryBase<TChannel>
 ```  
   
 ## <a name="adding-a-binding-element"></a>바인딩 요소 추가  
- 이 샘플에서는 사용자 지정 바인딩 요소인 `InterceptingBindingElement`를 정의합니다. `InterceptingBindingElement` `ChannelMessageInterceptor`를 입력으로 사용 하 고이 `ChannelMessageInterceptor`를 사용 하 여 전달 되는 메시지를 조작 합니다. 이는 public이어야 하는 유일한 클래스입니다. 팩터리, 수신기 및 채널 모두 public 런타임 인터페이스의 내부 구현이 될 수 있습니다.  
+ 이 샘플에서는 사용자 지정 바인딩 요소인 `InterceptingBindingElement`를 정의합니다. `InterceptingBindingElement` `ChannelMessageInterceptor`를 입력으로 사용 하 고이 `ChannelMessageInterceptor`를 사용 하 여 전달 되는 메시지를 조작 합니다. 이는 public이어야 하는 유일한 클래스입니다. 팩터리, 수신기 및 채널은 모두 공용 런타임 인터페이스의 내부 구현일 수 있습니다.  
   
 ```csharp
 public class InterceptingBindingElement : BindingElement

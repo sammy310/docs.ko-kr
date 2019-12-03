@@ -2,12 +2,12 @@
 title: PII 보안 잠금
 ms.date: 03/30/2017
 ms.assetid: c44fb338-9527-4dd0-8607-b8787d15acb4
-ms.openlocfilehash: f82d3f19a3bf6fc6a5ac038034880dafc03fcce1
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 63410ecc19e94e57f943e5d7dc13a6098bd91d51
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044794"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714634"
 ---
 # <a name="pii-security-lockdown"></a>PII 보안 잠금
 이 샘플에서는 다음을 수행 하 여 WCF (Windows Communication Foundation) 서비스의 몇 가지 보안 관련 기능을 제어 하는 방법을 보여 줍니다.  
@@ -23,7 +23,7 @@ ms.locfileid: "70044794"
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\SecurityLockdown`  
   
@@ -37,17 +37,17 @@ ms.locfileid: "70044794"
  이 샘플에서는 사용자 이름 및 암호와 같은 추적 및 메시지 로그의 알려진 PII(개인적으로 식별할 수 있는 정보)의 로깅을 제어하는 방법을 보여 줍니다. 기본적으로 알려진 PII의 로깅은 사용되지 않지만 특정 상황에서는 애플리케이션 디버깅을 위해 PII의 로깅이 중요할 수 있습니다. 이 샘플은 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md)을 기반으로 합니다. 또한 이 샘플에서는 추적 및 메시지 로깅을 사용합니다. 자세한 내용은 [추적 및 메시지 로깅](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md) 샘플을 참조 하세요.  
   
 ## <a name="encrypting-configuration-file-elements"></a>구성 파일 요소 암호화  
- 공유된 웹 호스팅 환경에서의 보안을 위해 중요한 정보가 포함된 데이터베이스 연결 문자열과 같은 특정 구성 요소를 암호화하는 것이 바람직할 수 있습니다. .NET Framework 폴더 (예:%WINDIR%\Microsoft.NET\Framework\v4.0.20728.)에 있는 aspnet_regiis.exe 도구를 사용 하 여 구성 요소를 암호화할 수 있습니다.  
+ 공유된 웹 호스팅 환경에서의 보안을 위해 중요한 정보가 포함된 데이터베이스 연결 문자열과 같은 특정 구성 요소를 암호화하는 것이 바람직할 수 있습니다. 구성 요소는 .NET Framework 폴더에 있는 aspnet_regiis 도구 (예:%WINDIR%\Microsoft.NET\Framework\v4.0.20728.)를 사용 하 여 암호화할 수 있습니다.  
   
 #### <a name="to-encrypt-the-values-in-the-appsettings-section-in-webconfig-for-the-sample"></a>샘플의 Web.config에서 appSettings 섹션의 값을 암호화하려면  
   
-1. 시작-> 실행 ...을 사용 하 여 명령 프롬프트를 엽니다. 을 입력 하 고 확인을 클릭 합니다. `cmd`  
+1. 시작-> 실행 ...을 사용 하 여 명령 프롬프트를 엽니다. `cmd`를 입력 하 고 **확인**을 클릭 합니다.  
   
 2. `cd %WINDIR%\Microsoft.NET\Framework\v4.0.20728` 명령을 실행하여 현재 .NET Framework 디렉터리로 이동합니다.  
   
 3. `aspnet_regiis -pe "appSettings" -app "/servicemodelsamples" -prov "DataProtectionConfigurationProvider"` 명령을 실행하여 Web.config 폴더에서 appSettings 구성 설정을 암호화합니다.  
   
- 구성 파일의 섹션을 암호화 하는 방법에 대 한 자세한 내용은 ASP.NET 구성[의 DPAPI에서 방법: 보안 ASP.NET 응용 프로그램 빌드를 참조 하세요. ASP.NET 구성에서 RSA에 대 한](https://go.microsoft.com/fwlink/?LinkId=95137)인증, 권한 부여 및 보안 통신) 및 방법에 대해[설명 합니다 (방법: RSA](https://go.microsoft.com/fwlink/?LinkId=95138)를 사용 하 여 ASP.NET 2.0의 구성 섹션을 암호화 합니다.  
+ 구성 파일의 섹션을 암호화 하는 방법에 대 한 자세한 내용은 ASP.NET 구성에서 DPAPI를 사용 하는 방법 ([보안 ASP.NET 응용 프로그램 빌드: 인증, 권한 부여 및 보안 통신](https://go.microsoft.com/fwlink/?LinkId=95137)) 및 ASP.NET 구성에서 rsa에 대 한 방법 ([방법: Rsa를 사용 하 여 ASP.NET 2.0의 구성 섹션 암호화](https://go.microsoft.com/fwlink/?LinkId=95138))을 참조 하세요.  
   
 ## <a name="locking-configuration-file-elements"></a>구성 파일 요소 잠금  
  웹 호스팅 시나리오에서는 서비스의 하위 디렉터리에 서비스를 가질 수 있습니다. 이러한 상황에서는 Machine.config의 값을 검사한 다음 디렉터리 트리를 내려가면서 부모 디렉터리의 모든 Web.config 파일과 병합하고 마지막으로 서비스가 포함된 디렉터리의 Web.config 파일을 병합함으로써 하위 디렉터리의 서비스에 대한 구성 값을 계산합니다. 대부분의 구성 요소에서는 기본적으로 하위 디렉터리의 구성 파일이 부모 디렉터리의 값을 재정의하도록 허용됩니다. 그러나 특정 상황에서는 하위 디렉터리의 구성 파일이 부모 디렉터리 구성에 설정된 값을 재정의하지 못하도록 방지하는 것이 바람직할 수 있습니다.  
@@ -76,7 +76,7 @@ ms.locfileid: "70044794"
 ## <a name="pii-logging-configuration"></a>PII 로깅 구성  
  PII 로깅은 두 개의 스위치로 제어됩니다. 하나는 컴퓨터 관리자가 PII 로깅을 허용하거나 거부할 수 있게 하는 Machine.config에 있는 컴퓨터 수준 설정이고 다른 하나는 애플리케이션 관리자가 Web.config 또는 App.config 파일의 각 소스에 대해 PII 로깅을 설정/해제할 수 있게 하는 애플리케이션 설정입니다.  
   
- 컴퓨터 수준 설정은 Machine.config의 `enableLoggingKnownPii` 요소에서 `true`를 `false` 또는 `machineSettings`로 설정하여 제어합니다. 예를 들어, 다음을 통해 응용 프로그램에서 PII 로깅을 설정할 수 있습니다.  
+ 컴퓨터 전체 설정은 Machine.config의 `machineSettings` 요소에서 `enableLoggingKnownPii`를 `true` 또는 `false`로 설정 하 여 제어 합니다. 예를 들어 다음을 사용 하 여 응용 프로그램에서 PII 로깅을 켤 수 있습니다.  
   
 ```xml  
 <configuration>  
@@ -120,7 +120,7 @@ ms.locfileid: "70044794"
 > System.Diagnostics는 구성 파일에 나열된 첫 번째 소스를 제외한 모든 소스의 모든 특성을 무시합니다. 구성 파일의 두 번째 소스에 `logKnownPii` 특성을 추가해도 아무 효과가 없습니다.  
   
 > [!IMPORTANT]
-> 이 샘플을 실행하려면 Machine.config를 수동으로 수정해야 합니다. 값이나 구문이 잘못되면 모든 .NET Framework 응용 프로그램이 실행되지 않을 수도 있으므로 Machine.config를 수정할 때 주의해야 합니다.  
+> 이 샘플을 실행 하려면 machine.config를 수동으로 수정 해야 합니다. Machine.config를 잘못 된 값 이나 구문으로 수정 하면 모든 .NET Framework 응용 프로그램이 실행 되지 않을 수 있으므로 주의를 기울여야 합니다.  
   
  또한 DPAPI 및 RSA를 사용하여 구성 파일 요소를 암호화할 수 있습니다. 자세한 내용은 다음 링크를 참조하세요.  
   
@@ -142,6 +142,6 @@ ms.locfileid: "70044794"
   
 1. Machine.config를 편집하여 `enableLoggingKnownPii` 특성을 `false`로 설정합니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [AppFabric 모니터링 샘플](https://go.microsoft.com/fwlink/?LinkId=193959)

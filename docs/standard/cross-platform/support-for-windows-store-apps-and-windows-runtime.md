@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6fa7d044-ae12-4c54-b8ee-50915607a565
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 15d6262fb5e7dfb99759f0f85c9a197157713300
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 4629139a7c89c0808e97bbe64b7d02441aec1dea
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204950"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714479"
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>Windows 스토어 앱 및 Windows 런타임에 대한 .NET Framework 지원
 
@@ -32,7 +32,7 @@ ms.locfileid: "74204950"
 
 ## <a name="the-basics"></a>기본 사항
 
-.NET Framework는 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]를 제공 하 고 Windows 런타임 자체를 지원 하 여 앞에서 설명한 세 가지 개발 시나리오를 지원 합니다.
+.NET Framework는 Windows 8.x 스토어 앱 용 .NET을 제공 하 고 Windows 런타임 자체를 지원 하 여 앞에서 설명한 세 가지 개발 시나리오를 지원 합니다.
 
 - [.NET Framework 및 Windows 런타임 네임 스페이스](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)#net-framework-and-windows-runtime-namespaces) 는 .NET Framework 클래스 라이브러리를 간소화 된 뷰로 제공 하며 Windows 8.x 스토어 앱 및 Windows 런타임 구성 요소를 만드는 데 사용할 수 있는 형식과 멤버만 포함 합니다.
 
@@ -42,7 +42,7 @@ ms.locfileid: "74204950"
 
   - Windows 런타임는 관리 코드에서 쉽게 호출할 수 있으므로 단순히 운영 체제 API를 래핑하는 기능도 제거 됩니다.
 
-  [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]에 대 한 자세한 내용은 [Windows 스토어 앱 용 .net 개요](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140))를 참조 하세요. API 선택 프로세스에 대 한 자세한 내용은 .NET 블로그에서 [Metro 스타일 앱 용 .net](https://devblogs.microsoft.com/dotnet/net-for-metro-style-apps/) 항목을 참조 하세요.
+  Windows 8.x 스토어 앱 용 .NET에 대 한 자세한 내용은 [Windows 스토어 앱 용 .net 개요](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140))를 참조 하세요. API 선택 프로세스에 대 한 자세한 내용은 .NET 블로그에서 [Metro 스타일 앱 용 .net](https://devblogs.microsoft.com/dotnet/net-for-metro-style-apps/) 항목을 참조 하세요.
 
 - [Windows 런타임](/uwp/api/) 는 Windows 8.x 스토어 앱을 빌드하기 위한 사용자 인터페이스 요소를 제공 하 고 운영 체제 기능에 대 한 액세스를 제공 합니다. .NET Framework와 마찬가지로 Windows 런타임에는 C# 및 Visual Basic 컴파일러가 .NET Framework 클래스 라이브러리를 사용 하는 방식으로 Windows 런타임를 사용할 수 있도록 하는 메타 데이터가 있습니다. .NET Framework를 사용 하면 몇 가지 차이점을 숨겨 Windows 런타임를 더 쉽게 사용할 수 있습니다.
 
@@ -88,7 +88,7 @@ JavaScript를 사용 하 여 Windows 용으로 빌드된 Windows 8.x 스토어 �
 
 Windows 런타임에서 `IMap<K, V>` 및 `IMapView<K, V>`는 `IKeyValuePair`를 사용 하 여 반복 됩니다. 관리 코드에 전달되면 이들은 `IDictionary<TKey, TValue>` 및 `IReadOnlyDictionary<TKey, TValue>`로 표시되므로 당연히 `System.Collections.Generic.KeyValuePair<TKey, TValue>`를 사용하여 열거해야 합니다.
 
-인터페이스가 관리 코드에 표시되는 방식은 이러한 인터페이스를 구현하는 형식이 표시되는 방식에 영향을 미칩니다. 예를 들어 `PropertySet` 클래스는 관리되는 코드에 `IMap<K, V>`로 나타나는 `IDictionary<TKey, TValue>`를 구현합니다. `PropertySet`는 `IMap<K, V>`대신 `IDictionary<TKey, TValue>` 구현 된 것 처럼 나타나므로, 관리 코드에는 `Add` 사전에서 .NET Framework 메서드 처럼 동작 하는 `Add` 메서드가 있는 것 처럼 보입니다. 이 클래스는 `Insert` 메서드를 가지고 있는 것으로 보이지 않습니다.
+인터페이스가 관리 코드에 나타나는 방법은 이러한 인터페이스를 구현한 형식이 나타나는 방법에 영향을 줍니다. 예를 들어 `PropertySet` 클래스는 관리되는 코드에 `IDictionary<TKey, TValue>`로 나타나는 `IMap<K, V>`를 구현합니다. `PropertySet`에서 `IMap<K, V>` 대신 `IDictionary<TKey, TValue>`가 구현된 것으로 나타나므로 관리되는 코드에서는 .NET Framework 사전의 `Add` 메서드처럼 동작하는 `Add` 메서드가 있는 것으로 나타납니다. 이 클래스는 `Insert` 메서드를 가지고 있는 것으로 보이지 않습니다.
 
 .NET Framework를 사용 하 여 Windows 런타임 구성 요소를 만드는 방법 및 JavaScript와 함께 이러한 구성 요소를 사용 하는 방법을 보여 주는 연습은 [및 Visual Basic에서 C# Windows 런타임 구성 요소 만들기](/windows/uwp/winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic)를 참조 하세요.
 

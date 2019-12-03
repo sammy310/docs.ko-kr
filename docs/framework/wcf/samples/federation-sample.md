@@ -2,18 +2,18 @@
 title: Federation 샘플
 ms.date: 03/30/2017
 ms.assetid: 7e9da0ca-e925-4644-aa96-8bfaf649d4bb
-ms.openlocfilehash: d3a326f08e78edb79908485361f161c1b6da6625
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 271790e08476533fc1d83e22c5a0daf2f1eaa42a
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044973"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716933"
 ---
 # <a name="federation-sample"></a>Federation 샘플
 이 샘플에서는 연결된 보안을 보여 줍니다.  
   
 ## <a name="sample-details"></a>샘플 세부 정보  
- WCF (Windows Communication Foundation)는을 `wsFederationHttpBinding`통해 페더레이션 보안 아키텍처를 배포 하기 위한 지원을 제공 합니다. `wsFederationHttpBinding`에서는 요청/회신 통신의 기본 전송 메커니즘으로 HTTP를 사용하고, 인코딩 통신 형식으로 텍스트/XML을 사용하는, 안전하고 안정적이며 상호 운용 가능한 바인딩을 제공합니다. WCF의 페더레이션에 대 한 자세한 내용은 [페더레이션](../../../../docs/framework/wcf/feature-details/federation.md)을 참조 하세요.  
+ WCF (Windows Communication Foundation)는 `wsFederationHttpBinding`를 통해 페더레이션 보안 아키텍처를 배포 하는 기능을 제공 합니다. `wsFederationHttpBinding`에서는 요청/회신 통신의 기본 전송 메커니즘으로 HTTP를 사용하고, 인코딩 통신 형식으로 텍스트/XML을 사용하는, 안전하고 안정적이며 상호 운용 가능한 바인딩을 제공합니다. WCF의 페더레이션에 대 한 자세한 내용은 [페더레이션](../../../../docs/framework/wcf/feature-details/federation.md)을 참조 하세요.  
   
  이 시나리오는 네 부분으로 구성되어 있습니다.  
   
@@ -113,6 +113,6 @@ ms.locfileid: "70044973"
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\Federation`  

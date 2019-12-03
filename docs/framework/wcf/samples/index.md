@@ -1,26 +1,26 @@
 ---
-title: Windows Communication Foundation (WCF) 샘플
+title: WCF (Windows Communication Foundation) 샘플
 ms.date: 09/24/2018
 ms.assetid: 89d4efce-7832-4dd5-82a8-0e574b3302f9
-ms.openlocfilehash: 408b0df9d6e3691d7c9b7e7c1934846880bd38cd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2d11db7bfaa473a7c4fd27e91b95a965dcf9bee7
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61954674"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715775"
 ---
-# <a name="windows-communication-foundation-wcf-samples"></a>Windows Communication Foundation (WCF) 샘플
+# <a name="windows-communication-foundation-wcf-samples"></a>WCF (Windows Communication Foundation) 샘플
 
-다운로드할 수 있습니다 [.NET Framework 4 용 Windows Communication Foundation (WCF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780)합니다. 샘플은 Windows Communication Foundation (WCF)의 다양 한 측면에 대 한 지침을 제공 합니다.
+[.NET Framework 4에 대 한 WCF (Windows Communication Foundation) 샘플](https://www.microsoft.com/download/details.aspx?id=21459)을 다운로드할 수 있습니다. 이 샘플에서는 WCF (Windows Communication Foundation)의 다양 한 측면에 대 한 지침을 제공 합니다.
   
 > [!TIP]
-> 이 섹션의에서 문서 다운로드 패키지에서 샘플의 일부를 설명합니다. 전체 설명서 집합의 모든 샘플에 설명 하는 경우를 확인 합니다 [WCF 샘플에 대 한.NET Framework 4 설명서](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd483346(v%3dvs.100))합니다.
+> 이 섹션의 문서에서는 다운로드 패키지의 일부 샘플에 대해 설명 합니다. 모든 샘플을 포함 하는 전체 설명서를 보려면 [WCF 샘플에 대 한 .NET Framework 4 설명서](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd483346(v%3dvs.100))를 확인 하세요.
 
-Windows WF (Workflow Foundation) [응용 프로그램](../../windows-workflow-foundation/samples/application.md) 샘플도 몇 가지 WCF 기능을 보여 줍니다.
+WF (Windows Workflow Foundation) [응용 프로그램](../../windows-workflow-foundation/samples/application.md) 샘플 에서도 몇 가지 WCF 기능을 보여 줍니다.
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>이 섹션의 내용  
 
-[기본](basic.md) -기본적인 WCF 기능을 보여 주는 샘플입니다.  
+[Basic](basic.md) -기본 WCF 기능을 보여 주는 샘플입니다.  
 
 [확장성](extensibility.md) -검색 기능과 관련 된 샘플입니다.  
 

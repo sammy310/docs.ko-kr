@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Tracing and logging
 ms.assetid: a4f39bfc-3c5e-4d51-a312-71c5c3ce0afd
-ms.openlocfilehash: a58541b7d50d83d1e39d7c9dd9c58be4111ec494
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: f6f2fd0bbbc191d466ac600bd9639c8955d5b7fe
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038734"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715685"
 ---
 # <a name="tracing-and-message-logging"></a>추적 및 메시지 로깅
 이 샘플에서는 추적 및 메시지 로깅을 사용하도록 설정하는 방법을 보여 줍니다. 결과 추적 및 메시지 로그는 [서비스 추적 뷰어 도구 (svctraceviewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)를 사용 하 여 볼 수 있습니다. 이 샘플은 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md)을 기반으로 합니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "70038734"
  추적 소스에 대 한 자세한 내용은 추적 [구성](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md) 항목에서 추적 원본 섹션을 참조 하세요.  
   
 ## <a name="activity-tracing-and-propagation"></a>동작 추적 및 전파  
- 클라이언트와 서비스 `propagateActivity` 모두에 `true` 대해 `system.ServiceModel` 추적 소스에서를 사용하도록설정하고를로설정하면끝점내의여러활동에서논리적처리단위(활동)내에추적의상관관계가제공됩니다(`ActivityTracing` 작업 전송) 및 여러 끝점에 걸친 작업 (작업 ID 전파를 통해) 간에.  
+ 클라이언트와 서비스 모두에 대 한 `system.ServiceModel` 추적 원본에서 `ActivityTracing` 사용 하도록 설정 하 고 `propagateActivity`을 `true`로 설정 하면 논리 처리 단위 (작업) 내에서 추적의 상관 관계를 제공 하 고 (작업 전송) 여러 끝점에 걸친 작업 (활동 ID 전파를 통해) 간에 상관 관계를 제공 합니다.  
   
  이러한 세 가지 메커니즘(동작, 전송 및 전파)은 Service Trace Viewer 도구를 사용하여 오류의 근본 원인을 더 신속하게 찾을 수 있도록 도와줍니다. 자세한 내용은 [서비스 추적 뷰어를 사용 하 여 상호 관련 된 추적 보기 및 문제 해결](../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)을 참조 하세요.  
   
@@ -128,11 +128,11 @@ ms.locfileid: "70038734"
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\TracingAndLogging`  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [추적](../../../../docs/framework/wcf/diagnostics/tracing/index.md)
 - [AppFabric 모니터링 샘플](https://go.microsoft.com/fwlink/?LinkId=193959)

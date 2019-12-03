@@ -2,12 +2,12 @@
 title: '연습: Async 및 Await를 사용하여 웹에 액세스'
 ms.date: 07/20/2015
 ms.assetid: 84fd047f-fab8-4d89-8ced-104fb7310a91
-ms.openlocfilehash: c13e592eb155d14c2e7cb2388a96925a7f1fa413
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 7f649f1f16da545c4587f0ed76b8f1a443ee8744
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349091"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715850"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-visual-basic"></a>연습: Async 및 Await를 사용하여 웹에 액세스(Visual Basic)
 
@@ -37,7 +37,7 @@ async/await 기능을 사용하여 비동기 프로그램을 보다 쉽고 직�
 
 전체 비동기 예제는 [예제](#example) 섹션을 참조 하세요.
 
-## <a name="prerequisites"></a>필수 조건
+## <a name="prerequisites"></a>Prerequisites
 
 Visual Studio 2012 이상이 컴퓨터에 설치되어 있어야 합니다. 자세한 내용은 Visual Studio [다운로드](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 페이지를 참조 하세요.
 
@@ -65,7 +65,7 @@ Visual Studio 2012 이상이 컴퓨터에 설치되어 있어야 합니다. 자�
 
 4. **TextBox** 컨트롤을 강조 표시하고 **속성** 창에서 다음 값을 설정합니다.
 
-    - **Name** 속성을 `resultsTextBox`으로 설정합니다.
+    - **Name** 속성을 `resultsTextBox`로 설정합니다.
 
     - **Height** 속성을 250으로 설정합니다.
 
@@ -75,7 +75,7 @@ Visual Studio 2012 이상이 컴퓨터에 설치되어 있어야 합니다. 자�
 
 5. **Button** 컨트롤을 강조 표시하고 **속성** 창에서 다음 값을 설정합니다.
 
-    - **Name** 속성을 `startButton`으로 설정합니다.
+    - **Name** 속성을 `startButton`로 설정합니다.
 
     - **Content** 속성 값을 **Button**에서 **Start**로 변경합니다.
 
@@ -259,7 +259,7 @@ Visual Studio 2012 이상이 컴퓨터에 설치되어 있어야 합니다. 자�
     Using response As WebResponse = Await webReq.GetResponseAsync()
     ```
 
-    `Await` 연산자는 대기 중인 작업이 완료될 때까지 현재 메서드 `GetURLContents`의 실행을 일시 중단합니다. 반면, 컨트롤은 현재 메서드의 호출자에게 반환됩니다. 이 예제에서 현재 메서드는 `GetURLContents`이고 호출자는 `SumPageSizes`입니다. 작업이 완료되면 약속된 `WebResponse` 개체가 대기 중인 작업의 값으로 생성되고 `response` 변수에 할당됩니다.
+    `GetURLContents` 연산자는 대기 중인 작업이 완료될 때까지 현재 메서드 `Await`의 실행을 일시 중단합니다. 반면, 컨트롤은 현재 메서드의 호출자에게 반환됩니다. 이 예제에서 현재 메서드는 `GetURLContents`이고 호출자는 `SumPageSizes`입니다. 작업이 완료되면 약속된 `WebResponse` 개체가 대기 중인 작업의 값으로 생성되고 `response` 변수에 할당됩니다.
 
     위의 문을 다음과 같은 두 개의 문으로 구분하여 수행되는 작업을 명확하게 나타낼 수 있습니다.
 
@@ -299,7 +299,7 @@ Visual Studio 2012 이상이 컴퓨터에 설치되어 있어야 합니다. 자�
     Private Async Function GetURLContents(url As String) As Byte()
     ```
 
-5. 비동기 메서드의 반환 형식은 <xref:System.Threading.Tasks.Task%601>만 <xref:System.Threading.Tasks.Task>수 있습니다. Visual Basic에서 메서드는 `Function` 또는 `Task`를 반환하는 `Task(Of T)`이거나 `Sub`여야 합니다. 일반적으로 `Sub` 메서드는 `Sub` 필요한 비동기 이벤트 처리기 에서만 사용 됩니다. 경우에 따라 완료 된 메서드에 T 형식의 값을 반환 하는 [Return](../../../../visual-basic/language-reference/statements/return-statement.md) 문이 있는 경우 `Task(T)`를 사용 하 고, 완료 된 메서드에서 의미 있는 값을 반환 하지 않는 경우 `Task`를 사용 합니다.
+5. 비동기 메서드의 반환 형식은 <xref:System.Threading.Tasks.Task%601>만 <xref:System.Threading.Tasks.Task>수 있습니다. Visual Basic에서 메서드는 `Task` 또는 `Task(Of T)`를 반환하는 `Function`이거나 `Sub`여야 합니다. 일반적으로 `Sub` 메서드는 `Sub` 필요한 비동기 이벤트 처리기 에서만 사용 됩니다. 경우에 따라 완료 된 메서드에 T 형식의 값을 반환 하는 [Return](../../../../visual-basic/language-reference/statements/return-statement.md) 문이 있는 경우 `Task(T)`를 사용 하 고, 완료 된 메서드에서 의미 있는 값을 반환 하지 않는 경우 `Task`를 사용 합니다.
 
     자세한 내용은 [비동기 반환 형식 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)을 참조 하세요.
 
@@ -323,7 +323,7 @@ Visual Studio 2012 이상이 컴퓨터에 설치되어 있어야 합니다. 자�
 
     - 호출되는 메서드의 이름을 `GetURLContents`에서 `GetURLContentsAsync`로 변경하지 않은 경우 지금 변경합니다.
 
-    - `Await`에서 반환하는 작업에 `GetURLContentsAsync`를 적용하여 바이트 배열 값을 가져옵니다.
+    - `GetURLContentsAsync`에서 반환하는 작업에 `Await`를 적용하여 바이트 배열 값을 가져옵니다.
 
     다음 코드에서는 이러한 변경을 보여 줍니다.
 
@@ -362,7 +362,7 @@ Visual Studio 2012 이상이 컴퓨터에 설치되어 있어야 합니다. 자�
 
 2. `SumPageSizesAsync`는 비동기 메서드이므로 이벤트 처리기에서 코드를 변경하여 결과를 대기합니다.
 
-    `SumPageSizesAsync` 호출은 `CopyToAsync`에서 `GetURLContentsAsync` 호출을 미러링합니다. 이 호출에서는 `Task`가 아니라 `Task(T)`를 반환합니다.
+    `SumPageSizesAsync` 호출은 `GetURLContentsAsync`에서 `CopyToAsync` 호출을 미러링합니다. 이 호출에서는 `Task(T)`가 아니라 `Task`를 반환합니다.
 
     이전 절차에서처럼 한 개 또는 두 개의 문을 사용하여 호출을 변환할 수 있습니다. 다음 코드에서는 이러한 변경을 보여 줍니다.
 
@@ -658,13 +658,13 @@ Class MainWindow
 End Class
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Async 샘플: 웹 연습에 액세스(C# 및 Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)
-- [Await 연산자](../../../../visual-basic/language-reference/operators/await-operator.md)
-- [비동기](../../../../visual-basic/language-reference/modifiers/async.md)
-- [Async 및 Await를 사용한 비동기 프로그래밍(Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
-- [비동기 반환 형식(Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)
-- [TAP(작업 기반 비동기 프로그래밍)](https://go.microsoft.com/fwlink/?LinkId=204847)
-- [방법: Task.WhenAll을 사용하여 비동기 연습 확장(Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
-- [방법: Async 및 Await를 사용하여 병렬로 여러 웹 요청 만들기(Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)
+- [Await 연산자](../../../language-reference/operators/await-operator.md)
+- [비동기](../../../language-reference/modifiers/async.md)
+- [Async 및 Await를 사용한 비동기 프로그래밍(Visual Basic)](index.md)
+- [비동기 반환 형식(Visual Basic)](async-return-types.md)
+- [TAP(작업 기반 비동기 프로그래밍)](https://www.microsoft.com/download/details.aspx?id=19957)
+- [방법: Task.WhenAll을 사용하여 비동기 연습 확장(Visual Basic)](how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
+- [방법: Async 및 Await를 사용하여 병렬로 여러 웹 요청 만들기(Visual Basic)](how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)

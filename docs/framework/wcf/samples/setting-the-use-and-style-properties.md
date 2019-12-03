@@ -2,12 +2,12 @@
 title: 사용 및 스타일 속성 설정-WCF 샘플
 ms.date: 03/30/2017
 ms.assetid: c09a0600-116f-41cf-900a-1b7e4ea4e300
-ms.openlocfilehash: 946f8f6aab253eb881faaba7adfdc68dc54d7f0b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f92b25144759692c54aa7a1730a9bb85cab4f15f
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69958797"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714433"
 ---
 # <a name="setting-the-use-and-style-properties"></a>속성의 사용 및 스타일 설정
 
@@ -25,7 +25,7 @@ ms.locfileid: "69958797"
 </wsdl:message>
 ```
 
-스타일을 <xref:System.ServiceModel.OperationFormatStyle.Document>로 설정하면 다음 예제와 같이 WSDL 표현에는 작업에 대해 교환된 문서를 나타내는 요소가 하나 포함됨을 의미합니다.
+스타일을 <xref:System.ServiceModel.OperationFormatStyle.Document>로 설정 하면 다음 예제와 같이 WSDL 표현에 작업에 대해 교환 되는 문서를 나타내는 단일 요소가 포함 됩니다.
 
 ```xml
 <wsdl:message name="IUseAndStyleCalculator_Add_InputMessage">
@@ -42,7 +42,7 @@ ms.locfileid: "69958797"
 </Add>
 ```
 
-Encoded는 WSDL의 스키마가 SOAP 1.1 섹션 5의 규칙에 따라 인코딩된 추상 사양임을 나타냅니다. 다음은 RPC/Encoded 예제입니다.
+인코딩된은 WSDL의 스키마가 SOAP 1.1 섹션 5에 있는 규칙에 따라 인코딩된 추상 사양 임을 의미 합니다. 다음은 RPC/Encoded 예제입니다.
 
 ```xml
 <q1:Add xmlns:q1="http://Microsoft.ServiceModel.Samples">
@@ -74,7 +74,7 @@ public interface IUseAndStyleCalculator
 }
 ```
 
-다른 <xref:System.ServiceModel.XmlSerializerFormatAttribute.Use%2A> 및 <xref:System.ServiceModel.XmlSerializerFormatAttribute.Style%2A> 설정 간의 차이를 보려면 서비스에서 해당 설정을 수정하고 클라이언트를 다시 생성한 다음 샘플을 실행하고 Service Trace Viewer 도구에서 c:\logs\message.logs 파일을 검사합니다. 또한를 확인 하 여 `http://localhost/ServiceModelSamples/service.svc?wsdl`메타 데이터에 미치는 영향을 관찰 합니다. 서비스의 메타데이터는 일반적으로 여러 페이지로 분리됩니다. 기본 wsdl 페이지에는 wsdl 바인딩이 포함 되어 있지만 메시지 `http://localhost/ServiceModelSamples/service.svc?wsdl=wsdl0` 정의를 관찰 하는 뷰가 포함 되어 있습니다.
+다른 <xref:System.ServiceModel.XmlSerializerFormatAttribute.Use%2A> 및 <xref:System.ServiceModel.XmlSerializerFormatAttribute.Style%2A> 설정 간의 차이를 보려면 서비스에서 해당 설정을 수정하고 클라이언트를 다시 생성한 다음 샘플을 실행하고 Service Trace Viewer 도구에서 c:\logs\message.logs 파일을 검사합니다. 또한 `http://localhost/ServiceModelSamples/service.svc?wsdl`를 확인 하 여 메타 데이터에 미치는 영향을 관찰 합니다. 서비스의 메타데이터는 일반적으로 여러 페이지로 분리됩니다. 기본 wsdl 페이지에는 WSDL 바인딩이 포함 되어 있지만 메시지 정의를 관찰 하는 `http://localhost/ServiceModelSamples/service.svc?wsdl=wsdl0` 표시 됩니다.
 
 ## <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면
 
@@ -91,6 +91,6 @@ public interface IUseAndStyleCalculator
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.
+> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.
 > 
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Message\UseAndStyle`

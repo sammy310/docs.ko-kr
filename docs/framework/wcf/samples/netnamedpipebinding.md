@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Net Profile Named Pipe
 ms.assetid: e78e845f-c325-46e2-927d-81616f97f7d5
-ms.openlocfilehash: 95007a323bd71b89d2037896129c6be1b19ac377
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 5904a5b61c0cc472c40eb2b4967815d5e6add195
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039158"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714665"
 ---
 # <a name="netnamedpipebinding"></a>NetNamedPipeBinding
 이 샘플에서는 동일한 시스템에서 프로세스 간 통신을 제공하는 `netNamedPipeBinding` 바인딩을 보여 줍니다. 이름이 지정된 파이프는 시스템 간에 작동하지 않습니다. 이 샘플은 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md) 계산기 서비스를 기반으로 합니다.  
@@ -19,7 +19,7 @@ ms.locfileid: "70039158"
 > [!NOTE]
 > 이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.  
   
- 클라이언트 및 서비스 구성 파일에 바인딩이 지정됩니다. 바인딩 형식은 다음 샘플 구성에서와 `binding` 같이 [ \< \<클라이언트 >](../../configure-apps/file-schema/wcf/endpoint-of-client.md) 요소의 끝점 [ \<>](../../configure-apps/file-schema/wcf/endpoint-element.md) 또는 끝점 >의 특성에 지정 됩니다.  
+ 클라이언트 및 서비스 구성 파일에 바인딩이 지정됩니다. 바인딩 형식은 다음 샘플 구성에 표시 된 것 처럼 [> client \<](../../configure-apps/file-schema/wcf/endpoint-of-client.md) 요소의 [\<끝점 >](../../configure-apps/file-schema/wcf/endpoint-element.md) 또는\<끝점의 `binding` 특성에 지정 됩니다.  
   
 ```xml  
 <endpoint address="net.pipe://localhost/ServiceModelSamples/service"  
@@ -90,6 +90,6 @@ Press <ENTER> to terminate client.
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\NamedPipe`  

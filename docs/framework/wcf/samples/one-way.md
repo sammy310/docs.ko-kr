@@ -2,12 +2,12 @@
 title: 단방향
 ms.date: 03/30/2017
 ms.assetid: 74e3e03d-cd15-4191-a6a5-1efa2dcb9e73
-ms.openlocfilehash: f392fad0461dab4dff6e5e4efe0070d7017a700b
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 91bdc09e374b3a1c6d407d4bd95428fafaf3ecc1
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039047"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714657"
 ---
 # <a name="one-way"></a>단방향
 이 샘플에서는 단방향 서비스 작업이 있는 서비스 계약을 보여 줍니다. 클라이언트는 양방향 서비스 작업에서처럼 서비스 작업이 완료될 때까지 대기하지 않습니다. 이 샘플은 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md) 을 기반으로 하며 `wsHttpBinding` 바인딩을 사용 합니다. 이 샘플의 서비스는 자체적으로 호스팅되는 콘솔 애플리케이션으로서 이를 통해 요청을 수신하고 처리하는 서비스를 볼 수 있습니다. 클라이언트 역시 콘솔 애플리케이션입니다.  
@@ -102,6 +102,6 @@ Processing Divide(22,7) - result: 3.14285714285714
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Oneway`  
