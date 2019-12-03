@@ -2,12 +2,12 @@
 title: 서비스 메시-WCF 개발자를 위한 gRPC
 description: 서비스 메시를 사용 하 여 Kubernetes 클러스터의 gRPC 서비스에 대 한 요청을 라우팅하고 분산 합니다.
 ms.date: 09/02/2019
-ms.openlocfilehash: d20275082973f30bddbb342da90454401d4f019b
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: cc4855b1ed27e29076e4f13f5c5d3dffa63a6554
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73966964"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74711272"
 ---
 # <a name="service-meshes"></a>서비스 메시
 
@@ -21,7 +21,7 @@ ms.locfileid: "73966964"
 
 Kubernetes service 메시는 메시에 포함 된 각 pod에 *사이드카 proxy*라는 추가 컨테이너를 추가 하 여 작동 합니다. 프록시는 모든 인바운드 및 아웃 바운드 네트워크 요청을 처리 하 여 네트워크 문제를 구성 하 고 관리 하는 작업은 응용 프로그램 컨테이너와 별도로 유지 하 고 대부분의 경우 응용 프로그램 코드를 변경 하지 않고도 수행할 수 있습니다.
 
-[이전 챕터의 예제](kubernetes.md#testing-the-application)를 사용 합니다. 여기서 웹 응용 프로그램의 grpc 요청은 모두 grpc 서비스의 단일 인스턴스로 라우팅됩니다. 이는 서비스의 호스트 이름이 IP 주소로 확인 되 고 해당 IP 주소가 `HttpClientHandler` 인스턴스의 수명 동안 캐시 되기 때문에 발생 합니다. DNS 조회를 수동으로 처리 하거나 여러 클라이언트를 만들어이 문제를 해결할 수 있지만 비즈니스 또는 고객 가치를 추가 하지 않으면 응용 프로그램 코드가 상당히 복잡 해질 수 있습니다.
+[이전 챕터의 예제](kubernetes.md#test-the-application)를 사용 합니다. 여기서 웹 응용 프로그램의 grpc 요청은 모두 grpc 서비스의 단일 인스턴스로 라우팅됩니다. 이는 서비스의 호스트 이름이 IP 주소로 확인 되 고 해당 IP 주소가 `HttpClientHandler` 인스턴스의 수명 동안 캐시 되기 때문에 발생 합니다. DNS 조회를 수동으로 처리 하거나 여러 클라이언트를 만들어이 문제를 해결할 수 있지만 비즈니스 또는 고객 가치를 추가 하지 않으면 응용 프로그램 코드가 상당히 복잡 해질 수 있습니다.
 
 서비스 메시를 사용 하 여 응용 프로그램 컨테이너의 요청은 사이드카 프록시로 전송 되며이를 통해 다른 서비스의 모든 인스턴스에 지능적으로 배포할 수 있습니다. 메시도 다음을 수행할 수 있습니다.
 
