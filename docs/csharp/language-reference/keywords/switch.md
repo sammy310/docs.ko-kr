@@ -12,12 +12,12 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: 012fa5b4d5f39b4dfa4d1c77bc3d6fbe181e78a6
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 6f0a2cfd5a6de9c8c05bc3daea1e242183ebf03e
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428497"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552349"
 ---
 # <a name="switch-c-reference"></a>switch(C# 참조)
 
@@ -45,7 +45,7 @@ C# 6 이하에서 일치 식은 다음 형식의 값을 반환하는 식이어�
 
 - [char](../builtin-types/char.md)
 - [string](../builtin-types/reference-types.md)
-- [bool](bool.md)
+- [bool](../builtin-types/bool.md)
 - [정수](../builtin-types/integral-numeric-types.md) 값(예: `int` 또는 `long`)입니다.
 - [enum](enum.md) 값
 
@@ -120,7 +120,7 @@ C# 6에서 상수 패턴만 지원하고 상수 값의 반복을 허용하지 �
 
 여기서 *constant*는 테스트할 값입니다. *constant*는 다음 상수 식 중 하나가 될 수 있습니다.
 
-- [bool](bool.md) 리터럴(`true` 또는 `false`)
+- [bool](../builtin-types/bool.md) 리터럴(`true` 또는 `false`).
 - [정수](../builtin-types/integral-numeric-types.md) 상수(예: `int`, `long` 또는 `byte`)입니다.
 - 선언된 `const` 변수의 이름
 - 열거형 상수

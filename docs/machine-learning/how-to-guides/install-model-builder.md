@@ -3,14 +3,14 @@ title: 모델 작성기 설치 방법
 description: ML.NET 모델 작성기 도구를 설치하는 방법 알아보기
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 06/21/2019
+ms.date: 11/21/2019
 ms.custom: mvc, how-to
-ms.openlocfilehash: a1034d294012b8df5ec778fc40602fe52223961d
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: b87f712ad7a8b2229c1d42db4bad1fe511475ac7
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774562"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552937"
 ---
 # <a name="how-to-install-mlnet-model-builder"></a>ML.NET 모델 작성기 설치 방법
 
@@ -19,10 +19,13 @@ ML.NET 모델 작성기를 설치하여 .NET 애플리케이션에 기계 학습
 > [!NOTE]
 > 모델 작성기는 현재 미리 보기로 제공됩니다.
 
-## <a name="pre-requisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>전제 조건
 
 - Visual Studio 2017 버전 15.9.12 이상/Visual Studio 2019
-- .NET Core 2.1 이상 SDK
+- .NET Core 2.1 SDK 이상.
+
+> [!NOTE]
+> .NET Core 3.0 SDK는 현재 지원되지 않습니다.
 
 ## <a name="limitations"></a>제한 사항
 

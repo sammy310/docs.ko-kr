@@ -2,12 +2,12 @@
 title: .NET Core 정보
 description: .NET Core에 대한 자세히 알아봅니다.
 ms.date: 09/17/2019
-ms.openlocfilehash: a1127a39d67b6c24994a2957298c62d87703950d
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 4fe16475e18eb88e88fb33d30508f9ef5c9f2cd5
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73416742"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552237"
 ---
 # <a name="about-net-core"></a>.NET Core 정보
 
@@ -29,14 +29,14 @@ C#, Visual Basic 및 F# 언어를 사용하여 .NET Core에 대한 애플리케�
 - [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)
 - Sublime 텍스트
 - Vim
- 
+
 [OmniSharp](https://www.omnisharp.net/) 및 [Ionide](http://ionide.io) 프로젝트의 참가자가 이 통합의 일부를 제공합니다.
 
 ## <a name="apis"></a>API
 
 .NET Core는 다음과 같은 여러 시나리오에서 API를 노출합니다.
 
-- [bool](../csharp/language-reference/keywords/bool.md) 및 [int](../csharp/language-reference/builtin-types/integral-numeric-types.md)와 같은 기본 형식
+- 기본 형식(예: <xref:System.Boolean?displayProperty=nameWithType> 및 <xref:System.Int32?displayProperty=nameWithType>).
 - <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 및 <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>과 같은 컬렉션
 - <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> 및 <xref:System.IO.FileStream?displayProperty=nameWithType>과 같은 유틸리티 형식
 - <xref:System.Data.DataSet?displayProperty=nameWithType> 및 [DbSet](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore/)과 같은 데이터 형식

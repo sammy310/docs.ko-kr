@@ -6,12 +6,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 10/22/2019
-ms.openlocfilehash: 9cb2568aa36af9ced0525660962966375d69e35b
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 8c2d586a444412abd67198ad7f295e81cb3101fb
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74140674"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74567329"
 ---
 # <a name="whats-new-in-net-core-30"></a>.NET Core 3.0의 새로운 기능
 
@@ -520,4 +520,4 @@ System.Console.WriteLine($"RuntimeInformation.FrameworkDescription: {System.Runt
 ## <a name="next-steps"></a>다음 단계
 
 - [.NET Core 2.2 및 3.0 간의 호환성이 손상되는 변경 검토](../compatibility/2.2-3.0.md)
-- [.NET Framework 및 .NET Core 3.0 간의 호환성이 손상되는 변경 검토](../compatibility/framework-core.md)
+- [Windows Forms 앱의 .NET Framework 및 .NET Core 3.0 간의 호환성이 손상되는 변경 검토](../porting/winforms-breaking-changes.md)

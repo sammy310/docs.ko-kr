@@ -3,15 +3,15 @@ title: '자습서: 모델 작성기와 함께 회귀를 사용하여 가격 예�
 description: 이 자습서에서는 ML.NET 모델 작성기를 사용하여 가격(특히, 뉴욕 시 택시 요금)을 예측하기 위한 회귀 모델을 빌드하는 방법에 대해 설명합니다.
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 10/08/2019
+ms.date: 11/21/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: bd6acd83df4d2d5f19d30da847212d60b1576199
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: ed2afe307492b6d38e7e2f9d8ae02dafbb5ae1f4
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977350"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552923"
 ---
 # <a name="tutorial-predict-prices-using-regression-with-model-builder"></a>자습서: 모델 작성기와 함께 회귀를 사용하여 가격 예측
 
@@ -38,7 +38,7 @@ ML.NET 모델 작성기 빌드를 사용하여 가격을 예측하기 위한 회
 
 ## <a name="create-a-console-application"></a>콘솔 애플리케이션 만들기
 
-1. "TaxiFarePrediction"이라는 **.NET Core 콘솔 애플리케이션**을 만듭니다.
+1. "TaxiFarePrediction"이라는 **C# .NET Core Console 애플리케이션**을 만듭니다. **솔루션 및 프로젝트를 같은 디렉터리에 배치**가 **선택 취소**되었는지(VS 2019) 또는 **솔루션의 디렉터리 만들기**가 **선택되었는지**(VS 2017)를 확인하세요.
 
 ## <a name="prepare-and-understand-the-data"></a>데이터 준비 및 이해
 

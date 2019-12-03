@@ -2,16 +2,24 @@
 title: 주요 변경 범주 - .NET Core
 description: .NET Core에서 주요 변경 내용을 분류하는 방법을 알아봅니다.
 ms.date: 06/10/2019
-ms.openlocfilehash: 68bc51b6662de070ef901b73fb75ff3aced95726
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 4569c1ab19cb9bfa3e16aa8d5f941705eb926fa7
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739358"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74567920"
 ---
 # <a name="breaking-change-categories"></a>호환성이 손상되는 변경 범주
 
-‘호환성’은 원래 코드를 개발한 .NET 구현 버전이 아닌 다른 버전에서 코드를 컴파일하거나 실행하는 기능을 나타냅니다.  특정 변경 내용은 6가지 측면에서 호환성에 영향을 줄 수 있습니다. [호환성을 평가할 때 고려되는 개별 변경 유형](index.md)은 처음에 5개 범주로 분류됩니다.
+‘호환성’은 원래 코드를 개발한 .NET 구현 버전이 아닌 다른 버전에서 코드를 컴파일하거나 실행하는 기능을 나타냅니다.  특정 변경 내용은 6가지 측면에서 호환성에 영향을 줄 수 있습니다. [호환성을 평가할 때 고려되는 개별 변경 유형](index.md)은 다음 범주로 분류됩니다.
+
+- [동작 변경](#behavioral-change)
+- [이진 호환성](#binary-compatibility)
+- [소스 호환성](#source-compatibility)
+- [디자인 타임 호환성](#design-time-compatibility)
+- [이전 버전과의 호환성](#backwards-compatibility)
+
+[이후 버전과의 호환성](#forward-compatibility)을 유지하는 것은 .NET Core의 목표가 아닙니다.
 
 ## <a name="behavioral-change"></a>동작 변경
 

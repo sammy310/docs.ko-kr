@@ -1,20 +1,19 @@
 ---
-title: .NET Core 3.0에 Windows Forms 앱 포팅
-description: Windows용 .NET Core 3.0에 .NET Framework Windows Forms 애플리케이션을 포팅하는 방법을 설명합니다.
+title: .NET Core에 Windows Forms 앱 포팅
+description: Windows용 .NET Core에 .NET Framework Windows Forms 애플리케이션을 포팅하는 방법을 설명합니다.
 author: Thraka
 ms.author: adegeo
 ms.date: 03/01/2019
-ms.custom: ''
-ms.openlocfilehash: 64920f1d226fcc8265d0be252d4751f2ba278cc1
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 959b506fe23691e160d7e88e0ae61cc71c1f3421
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73973286"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74567283"
 ---
 # <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>.NET Core에 Windows Forms 데스크톱 앱을 포팅하는 방법
 
-이 문서에서는 .NET Framework에서 .NET Core 3.0으로 Windows Forms 기반 데스크톱 앱을 포팅하는 방법을 설명합니다. .NET Core 3.0 SDK는 Windows Forms 애플리케이션을 지원합니다. Windows Forms는 Windows 전용 프레임워크이고 Windows에서만 실행됩니다. 이 예제에서는 .NET Core SDK CLI를 사용하여 프로젝트를 만들고 관리합니다.
+이 문서에서는 .NET Framework에서 .NET Core 3.0 이상으로 Windows Forms 기반 데스크톱 앱을 포팅하는 방법을 설명합니다. .NET Core 3.0 SDK는 Windows Forms 애플리케이션을 지원합니다. Windows Forms는 Windows 전용 프레임워크이고 Windows에서만 실행됩니다. 이 예제에서는 .NET Core SDK CLI를 사용하여 프로젝트를 만들고 관리합니다.
 
 이 문서에서는 마이그레이션에 사용되는 파일의 유형을 식별하기 위해 다양한 이름이 사용됩니다. 프로젝트를 마이그레이션할 때 파일 이름이 다르게 지정되므로 파일을 아래 나열된 파일과 대조합니다.
 
@@ -31,14 +30,14 @@ ms.locfileid: "73973286"
 
   다음 Visual Studio 워크로드를 설치합니다.
   - .NET 데스크톱 개발
-  - .NET 플랫폼 간 개발
+  - .NET Core 플랫폼 간 개발
 
 - 문제없이 빌드 및 실행되는 솔루션의 작업 Windows Forms 프로젝트.
-- 프로젝트는 C#으로 코딩되어야 합니다. 
-- 최신 [.NET Core 3.0](https://aka.ms/netcore3download) 미리 보기를 설치합니다.
+- C#로 코딩된 프로젝트입니다.
+- [.NET Core](https://dotnet.microsoft.com/download/dotnet-core) 3.0 이상.
 
->[!NOTE]
->**Visual Studio 2017**은 .NET Core 3.0 프로젝트를 지원하지 않습니다. **Visual Studio 2019**는 .NET Core 3.0 프로젝트를 지원하지만, .NET Core 3.0 Windows Forms 프로젝트의 비주얼 디자이너는 아직 지원하지 않습니다. 비주얼 디자이너를 사용하려면 .NET Core 프로젝트와 양식 파일을 공유하는 .NET Windows Forms 프로젝트가 솔루션에 있어야 합니다.
+> [!NOTE]
+> **Visual Studio 2017**은 .NET Core 3.0 프로젝트를 지원하지 않습니다. **Visual Studio 2019**는 .NET Core 3.0 프로젝트를 지원하지만, .NET Core 3.0 Windows Forms 프로젝트의 비주얼 디자이너는 아직 지원하지 않습니다. 비주얼 디자이너를 사용하려면 .NET Core 프로젝트와 양식 파일을 공유하는 .NET Windows Forms 프로젝트가 솔루션에 있어야 합니다.
 
 ### <a name="consider"></a>Consider
 
@@ -117,7 +116,7 @@ dotnet sln add .\MyFormsAppCore\MyFormsCore.csproj
 
 .NET Framework로 만든 Windows Forms 프로젝트에는 생성할 어셈블리 버전과 같은 어셈블리 특성을 포함하는 `AssemblyInfo.cs` 파일이 포함됩니다. SDK 스타일 프로젝트는 SDK 프로젝트 파일을 기반으로 이 정보를 자동으로 생성합니다. 두 유형의 “어셈블리 정보”가 모두 있으면 충돌이 발생합니다. 자동 생성을 비활성화하여 이 문제를 해결합니다. 그러면 프로젝트가 기존 `AssemblyInfo.cs` 파일을 강제로 사용합니다.
 
-기본 `<PropertyGroup>` 노드에 추가할 세 가지 설정이 있습니다. 
+기본 `<PropertyGroup>` 노드에 추가할 세 가지 설정이 있습니다.
 
 - **GenerateAssemblyInfo**\
 이 속성을 `false`로 설정하면 어셈블리 특성이 생성되지 않습니다. 따라서 .NET Framework 프로젝트의 기존 `AssemblyInfo.cs` 파일과 충돌하지 않습니다.
@@ -148,7 +147,7 @@ dotnet sln add .\MyFormsAppCore\MyFormsCore.csproj
 
 ## <a name="add-source-code"></a>소스 코드 추가
 
-현재는 **MyFormsCore.csproj** 프로젝트가 코드를 컴파일하지 않습니다. 기본적으로 .NET Core 프로젝트는 현재 디렉터리 및 자식 디렉터리에 있는 모든 소스 코드를 자동으로 포함합니다. 상대 경로를 사용하여 .NET Framework 프로젝트의 코드를 포함하도록 프로젝트를 구성해야 합니다. .NET Framework 프로젝트가 양식의 아이콘과 리소스에 **.resx** 파일을 사용한 경우 해당 파일도 포함해야 합니다. 
+현재는 **MyFormsCore.csproj** 프로젝트가 코드를 컴파일하지 않습니다. 기본적으로 .NET Core 프로젝트는 현재 디렉터리 및 자식 디렉터리에 있는 모든 소스 코드를 자동으로 포함합니다. 상대 경로를 사용하여 .NET Framework 프로젝트의 코드를 포함하도록 프로젝트를 구성해야 합니다. .NET Framework 프로젝트가 양식의 아이콘과 리소스에 **.resx** 파일을 사용한 경우 해당 파일도 포함해야 합니다.
 
 다음 `<ItemGroup>` 노드를 프로젝트에 추가합니다. 각 문에는 자식 디렉터리를 포함하는 파일 GLOB 패턴이 포함됩니다.
 
@@ -163,7 +162,7 @@ dotnet sln add .\MyFormsAppCore\MyFormsCore.csproj
 
 ## <a name="add-nuget-packages"></a>NuGet 패키지 추가
 
-.NET Framework 프로젝트에서 참조하는 각 NuGet 패키지를 .NET Core 프로젝트에 추가합니다. 
+.NET Framework 프로젝트에서 참조하는 각 NuGet 패키지를 .NET Core 프로젝트에 추가합니다.
 
 대부분의 경우 .NET Framework Windows Forms 앱에는 프로젝트에서 참조하는 모든 NuGet 패키지의 목록을 포함하는 **packages.config** 파일이 있습니다. 이 목록을 보고 .NET Core 프로젝트에 추가할 NuGet 패키지를 결정할 수 있습니다. 예를 들어 .NET Framework 프로젝트가 `MetroFramework`, `MetroFramework.Design` 및 `MetroFramework.Fonts` NuGet 패키지를 참조한 경우 Visual Studio를 사용하거나 **SolutionFolder** 디렉터리에서 .NET Core CLI를 사용하여 프로젝트에 각 NuGet 패키지를 추가합니다.
 
@@ -243,7 +242,7 @@ SolutionFolder
 <Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
 
   <PropertyGroup>
-    
+
     <TargetFramework>netcoreapp3.0</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
 
@@ -251,12 +250,12 @@ SolutionFolder
     <AssemblyName>MyCoreControls</AssemblyName>
     <RootNamespace>WindowsFormsControlLibrary1</RootNamespace>
   </PropertyGroup>
-  
+
   <ItemGroup>
     <Compile Include="..\MyFormsControls\**\*.cs" />
     <EmbeddedResource Include="..\MyFormsControls\**\*.resx" />
   </ItemGroup>
-  
+
 </Project>
 ```
 
@@ -276,7 +275,7 @@ dotnet add .\MyFormsAppCore\MyFormsCore.csproj reference .\MyFormsControlsCore\M
   </ItemGroup>
 ```
 
-## <a name="problems-compiling"></a>컴파일 문제
+## <a name="compilation-problems"></a>컴파일 문제
 
 프로젝트를 컴파일하는 데 문제가 있는 경우 .NET Framework에서 사용할 수 있지만 .NET Core에서는 사용할 수 없는 일부 Windows 전용 API를 사용하고 있는 것일 수 있습니다. [Windows 호환성 팩][compat-pack] NuGet 패키지를 프로젝트에 추가해 볼 수 있습니다. 이 패키지는 Windows에서만 실행되고 .NET Core 및 .NET Standard 프로젝트에 20,000개 정도의 Windows API를 추가합니다.
 
@@ -297,7 +296,7 @@ dotnet add .\MyFormsAppCore\MyFormsCore.csproj package Microsoft.Windows.Compati
 이 문서에 설명된 대로, Visual Studio 2019만 .NET Framework 프로젝트의 Forms 디자이너를 지원합니다. 동시에 .NET Core 프로젝트를 만들면 .NET Framework 프로젝트를 사용하여 양식을 디자인하는 동안 .NET Core를 사용하여 프로젝트를 테스트할 수 있습니다. 솔루션 파일에는 .NET Framework 및 .NET Core 프로젝트가 모두 포함됩니다. .NET Framework 프로젝트에서 양식과 컨트롤을 추가 및 디자인합니다. 그러면 .NET Core 프로젝트에 추가한 파일 GLOB 패턴을 기반으로 새 파일이나 변경된 파일이 자동으로 .NET Core 프로젝트에 포함됩니다.
 
 Visual Studio 2019가 Windows Forms 디자이너를 지원하면 .NET Core 프로젝트 파일의 콘텐츠를 .NET Framework 프로젝트 파일로 복사하여 붙여넣을 수 있습니다. 그런 다음, `<Source>` 및 `<EmbeddedResource>` 항목과 함께 추가된 파일 GLOB 패턴을 삭제합니다. 앱에서 사용하는 프로젝트 참조의 경로를 수정합니다. 이렇게 하면 .NET Framework 프로젝트가 .NET Core 프로젝트로 효과적으로 업그레이드됩니다.
- 
+
 ## <a name="next-steps"></a>다음 단계
 
 - [Windows 호환성 팩][compat-pack]에 대해 자세히 알아봅니다.

@@ -3,15 +3,15 @@ title: '자습서: 모델 작성기를 사용하여 위생 위반 분류'
 description: 이 자습서에서는 ML.NET 모델 작성기를 사용하여 다중 클래스 분류 모델을 빌드하고 샌프란시스코의 식당 위생 위반 심각도를 분류하는 방법을 보여 줍니다.
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 10/30/2019
+ms.date: 11/21/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: cbe20183d317ac6fe39a937e1cfa8a5e3df81b74
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 07729e1667f8aa3aba74576943d79eaa3bcd14d8
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977217"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552891"
 ---
 # <a name="tutorial-classify-the-severity-of-restaurant-health-violations-with-model-builder"></a>자습서: 모델 작성기를 사용하여 식당 위생 위반의 심각도 분류
 
@@ -41,7 +41,7 @@ ms.locfileid: "73977217"
 
 ## <a name="create-a-console-application"></a>콘솔 애플리케이션 만들기
 
-1. "RestaurantViolations"라는 **C# .NET Core 콘솔 애플리케이션**을 만듭니다.
+1. "RestaurantViolations"라는 **C# .NET Core 콘솔 애플리케이션**을 만듭니다. **솔루션 및 프로젝트를 같은 디렉터리에 배치**가 **선택 취소**되었는지(VS 2019) 또는 **솔루션의 디렉터리 만들기**가 **선택되었는지**(VS 2017)를 확인하세요.
 
 ## <a name="prepare-and-understand-the-data"></a>데이터 준비 및 이해
 

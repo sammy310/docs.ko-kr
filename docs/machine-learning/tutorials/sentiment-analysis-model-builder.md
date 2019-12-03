@@ -1,17 +1,17 @@
 ---
 title: '자습서: 감정 분석 - 이진 분류'
 description: 이 자습서에서는 웹 사이트 주석에서 감정을 분류하고 적절한 조치를 취하는 Razor Pages 애플리케이션을 만드는 방법을 보여 줍니다. 감정 이진 분류자는 Visual Studio에서 모델 작성기를 사용합니다.
-ms.date: 10/08/2019
+ms.date: 11/21/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 5e5b60a53db70b33ed798bcf33497b74911ba727
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: e919341130c6778207f324dd9eb3b3f54c8a9c68
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974804"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74551842"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-in-a-web-application-using-mlnet-model-builder"></a>자습서: ML.NET 모델 작성기를 사용하여 웹 애플리케이션에서 웹 사이트 댓글 감정 분석
 
@@ -48,7 +48,7 @@ ms.locfileid: "73974804"
     1. [새 프로젝트] 대화 상자에서 **Visual C#** 노드와 **Web** 노드를 차례로 선택합니다.
     1. 그런 다음, **ASP.NET Core 웹 애플리케이션** 프로젝트 템플릿을 선택합니다.
     1. **이름** 텍스트 상자에 "SentimentRazor"를 입력합니다.
-    1. **솔루션용 디렉터리 만들기** 확인란은 기본적으로 선택되어 있습니다. 선택되어 있지 않다면 직접 선택합니다.
+    1. **솔루션 및 프로젝트를 같은 디렉터리에 배치**가 **선택 취소**되었는지(VS 2019) 또는 **솔루션의 디렉터리 만들기**가 **선택되었는지**(VS 2017)를 확인하세요.
     1. **확인** 단추를 선택합니다.
     1. 다른 유형의 ASP.NET Core 프로젝트를 표시하는 창에서 **웹 애플리케이션**을 선택하고 **확인** 단추를 선택합니다.
 
