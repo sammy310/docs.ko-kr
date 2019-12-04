@@ -2,12 +2,12 @@
 title: 신뢰할 수 있는 보안 프로필
 ms.date: 03/30/2017
 ms.assetid: 921edc41-e91b-40f9-bde9-b6148b633e61
-ms.openlocfilehash: d7cfc028c5cf1ba5cfba009cd29c89f07c64fd9c
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: ee94dc5be2c50f9e383a42d435996b2fd35df4a4
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044822"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716499"
 ---
 # <a name="reliable-secure-profile"></a>신뢰할 수 있는 보안 프로필
 이 샘플에서는 WCF 및 RSP ( [신뢰할 수 있는 보안 프로필](https://go.microsoft.com/fwlink/?LinkId=178140) )를 구성 하는 방법을 보여 줍니다. 이 샘플에서는 [연결 된 연결](https://go.microsoft.com/fwlink/?LinkId=178141) 채널의 구현을 보여 줍니다 .이 채널은 신뢰할 수 있는 메시징 및 선택적으로 보안 채널로 구성 하 여 RSP 사양을 기반으로 하는 안정적인 보안 바인딩을 만들 수 있습니다.  
@@ -17,7 +17,7 @@ ms.locfileid: "70044822"
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\ReliableSecureProfile`  
   

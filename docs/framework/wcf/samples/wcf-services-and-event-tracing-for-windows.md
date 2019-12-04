@@ -2,12 +2,12 @@
 title: Windows용 WCF 서비스 및 이벤트 추척
 ms.date: 03/30/2017
 ms.assetid: eda4355d-0bd0-4dc9-80a2-d2c832152272
-ms.openlocfilehash: e1ee7154e2ad5b22ff0debcdd15d5809fc55df13
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 93663cbc33b6fab9b34bb02187e5b04192f5c13d
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044525"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715262"
 ---
 # <a name="wcf-services-and-event-tracing-for-windows"></a>Windows용 WCF 서비스 및 이벤트 추척
 이 샘플에서는 Windows Communication Foundation (WCF)에서 분석 추적을 사용 하 여 ETW (ETW(Windows용 이벤트 추적))에서 이벤트를 내보내는 방법을 보여 줍니다. 분석 추적은 프로덕션 환경에서 WCF 서비스의 문제를 해결할 수 있는 WCF 스택의 주요 지점에서 발생 하는 이벤트입니다.
@@ -26,11 +26,11 @@ ms.locfileid: "70044525"
 
      웹 브라우저에서 **계산기 .svc**를 클릭 합니다. 서비스의 WSDL 문서에 대한 URI가 브라우저에 나타납니다. 이 URI를 복사합니다.
 
-     기본적으로 서비스는 포트 1378 `http://localhost:1378/Calculator.svc`에서 요청 수신을 시작 합니다.
+     기본적으로 서비스는 `http://localhost:1378/Calculator.svc`포트 1378에서 요청 수신을 시작 합니다.
 
 4. WCF 테스트 클라이언트 (Wcftestclient.exe)를 실행 합니다.
 
-     WCF 테스트 클라이언트 (Wcftestclient.exe)는에 `\<Visual Studio 2012 Install Dir>\Common7\IDE\WcfTestClient.exe`있습니다.  기본 Visual Studio 2012 설치 디렉터리 `C:\Program Files\Microsoft Visual Studio 10.0`는입니다.
+     WCF 테스트 클라이언트 (Wcftestclient.exe)는 `\<Visual Studio 2012 Install Dir>\Common7\IDE\WcfTestClient.exe`에 있습니다.  기본 Visual Studio 2012 설치 디렉터리는 `C:\Program Files\Microsoft Visual Studio 10.0`.
 
 5. WCF 테스트 클라이언트 내에서 **파일**을 선택 하 고 **서비스 추가**를 선택 하 여 서비스를 추가 합니다.
 
@@ -52,7 +52,7 @@ ms.locfileid: "70044525"
 
 #### <a name="to-test-the-service"></a>서비스를 테스트하려면
 
-1. WCF 테스트 클라이언트로 다시 전환 하 고 분모를 0 `Divide` 으로 지정 하는 기본값을 두 번 클릭 하 고 유지 합니다.
+1. WCF 테스트 클라이언트로 다시 전환 하 고 `Divide`를 두 번 클릭 한 후 분모를 0으로 지정 하는 기본값을 유지 합니다.
 
      분모가 0이면 서비스에서는 오류를 throw합니다.
 
@@ -83,10 +83,10 @@ ms.locfileid: "70044525"
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ETWTracing`  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [AppFabric 모니터링 샘플](https://go.microsoft.com/fwlink/?LinkId=193959)

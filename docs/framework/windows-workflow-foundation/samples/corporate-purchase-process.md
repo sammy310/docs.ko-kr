@@ -2,12 +2,12 @@
 title: 기업 구매 프로세스
 ms.date: 03/30/2017
 ms.assetid: a5e57336-4290-41ea-936d-435593d97055
-ms.openlocfilehash: d019c1915e691fcba00fa8f1b0884a898ce02fab
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 95fa421ed44cf2d930fb4b80979d1b8bd9fda5ed
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69951520"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715216"
 ---
 # <a name="corporate-purchase-process"></a>기업 구매 프로세스
 이 샘플에서는 최상의 제안을 자동으로 선택하는 구매 프로세스를 기반으로 매우 기본적인 RFP(제안 요청서)를 만드는 방법을 보여 줍니다. 여기에서는 <xref:System.Activities.Statements.Parallel>, <xref:System.Activities.Statements.ParallelForEach%601> 및 <xref:System.Activities.Statements.ForEach%601>과 사용자 지정 활동을 결합하여 이 프로세스를 나타내는 워크플로를 만듭니다.
@@ -20,7 +20,7 @@ ms.locfileid: "69951520"
 
 - [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].
 
-## <a name="demonstrates"></a>세부 항목
+## <a name="demonstrates"></a>데모
 
 - 사용자 지정 활동
 
@@ -34,16 +34,16 @@ ms.locfileid: "69951520"
 
 - 추적(Tracing)
 
-- 추적(Tracking)
+- 추적.
 
-- 다른 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 클라이언트 (ASP.NET 웹 응용 프로그램 및 WinForms 응용 프로그램)에서 호스팅.
+- 다른 클라이언트에서 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 호스팅 (ASP.NET 웹 응용 프로그램 및 WinForms 응용 프로그램)
 
 > [!IMPORTANT]
 > 컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WF\Application\PurchaseProcess`  
   
@@ -78,7 +78,7 @@ ms.locfileid: "69951520"
 ## <a name="projects-in-this-sample"></a>이 샘플의 프로젝트  
  이 샘플에는 다음 프로젝트가 포함되어 있습니다.  
   
-|Project|Description|  
+|프로젝트|설명|  
 |-------------|-----------------|  
 |공용|프로세스 내에 사용되는 엔터티 개체(제안 요청서, 공급업체 및 공급업체 제안서)입니다.|  
 |WfDefinition|구매 프로세스 워크플로의 인스턴스를 만들고 사용하기 위해 클라이언트 애플리케이션에 사용되는 프로세스([!INCLUDE[wf1](../../../../includes/wf1-md.md)] 프로그램)와 호스트(`PurchaseProcessHost`)에 대한 정의입니다.|  
@@ -88,7 +88,7 @@ ms.locfileid: "69951520"
 ### <a name="wfdefinition"></a>WfDefinition  
  다음 표에는 WfDefinition 프로젝트의 주요 파일에 대한 설명이 나와 있습니다.  
   
-|파일|Description|  
+|File|설명|  
 |----------|-----------------|  
 |IPurchaseProcessHost.cs|워크플로의 호스트에 대한 인터페이스입니다.|  
 |PurchaseProcessHost.cs|워크플로에 대한 호스트의 구현입니다. 이 호스트는 워크플로 런타임에 대한 세부 사항을 추상화하며, 모든 클라이언트 애플리케이션에서 `PurchaseProcess` 워크플로 인스턴스를 로드 및 실행하고 상호 작용하는 데 사용됩니다.|  
@@ -104,7 +104,7 @@ ms.locfileid: "69951520"
   
 |클래스|설명|  
 |-----------|-----------------|  
-|Vendor|제안 요청서에 제안을 제출하는 공급업체입니다.|  
+|공급업체|제안 요청서에 제안을 제출하는 공급업체입니다.|  
 |RequestForProposal|RFP(제안 요청서)는 특정 상품이나 서비스에 대한 제안서를 제출하도록 공급업체에 요청하는 초대장입니다.|  
 |VendorProposal|공급업체가 구체적인 RFP에 대해 제출한 제안서입니다.|  
 |VendorRepository|공급업체의 리포지토리입니다. 이 구현에는 공급업체 인스턴스의 메모리 내 컬렉션과 해당 인스턴스를 노출하기 위한 메서드가 포함됩니다.|  
@@ -114,7 +114,7 @@ ms.locfileid: "69951520"
 ### <a name="web-client"></a>웹 클라이언트  
  다음 표에는 WebClient 프로젝트의 주요 웹 페이지에 대한 설명이 나와 있습니다.  
   
-|파일|Description|  
+|File|설명|  
 |-|-|  
 |CreateRfp.aspx|새 제안 요청서를 만들고 제출합니다.|  
 |Default.aspx|활성화된 제안 요청서와 완료된 제안 요청서를 모두 표시합니다.|  
@@ -124,7 +124,7 @@ ms.locfileid: "69951520"
 ### <a name="winforms-client"></a>WinFormsClient  
  다음 표에는 WinFormsClient 프로젝트의 주요 폼에 대한 설명이 나와 있습니다.  
   
-|Form|Description|  
+|Form|설명|  
 |-|-|  
 |NewRfp|새 제안 요청서를 만들고 제출합니다.|  
 |ShowProposals|활성화된 제안 요청서와 완료된 제안 요청서를 모두 표시합니다. **참고:**  제안에 대 한 요청을 만들거나 수정한 후 해당 화면에 변경 내용을 표시 하려면 UI에서 **새로 고침** 단추를 클릭 해야 할 수도 있습니다.|  
@@ -134,7 +134,7 @@ ms.locfileid: "69951520"
 ### <a name="persistence-files"></a>지속성 파일  
  다음 표에는 지속성 공급자(`XmlPersistenceProvider`)가 생성하는 파일이 나와 있습니다. 이 파일은 <xref:System.IO.Path.GetTempPath%2A>를 사용하여 현재 시스템의 임시 폴더 경로에 저장됩니다. 추적 파일은 현재 실행 경로에 만들어집니다.  
   
-|파일 이름|설명|경로|  
+|파일 이름|설명|Path|  
 |-|-|-|  
 |rfps.xml|활성화된 제안 요청서와 완료된 제안 요청서가 모두 포함된 XML 파일입니다.|<xref:System.IO.Path.GetTempPath%2A>|  
 |[instanceid]|이 파일에는 워크플로 인스턴스에 대한 모든 정보가 포함됩니다.<br /><br /> 이 파일은 스키마화된 지속성 구현(XmlPersistenceProvider의 PersistenceParticipant)을 통해 생성됩니다.|<xref:System.IO.Path.GetTempPath%2A>|  
@@ -155,20 +155,20 @@ ms.locfileid: "69951520"
   
 ### <a name="web-client-options"></a>웹 클라이언트 옵션  
   
-- **새 RFP을 만듭니다**. 제안 (RFP)에 대 한 새 요청을 만들고 구매 프로세스 워크플로를 시작 합니다.  
+- **새 RFP 만들기**: 제안에 대 한 새 요청 (RFP)을 만들고 구매 프로세스 워크플로를 시작 합니다.  
   
-- **새로 고침**: 주 창에서 활성 및 완료 된 Rfp 목록을 새로 고칩니다.  
+- **Refresh**: 주 창에서 활성 및 완료 된 rfp 목록을 새로 고칩니다.  
   
 - **보기**: 기존 RFP의 콘텐츠를 표시 합니다. RFP가 완료되지 않았거나 공급업체가 요청을 받은 경우 공급업체에서 제안서를 제출할 수 있습니다.  
   
-- 다음으로 보기: 사용자는 active Rfp 표의 **보기 형식** 콤보 상자에서 원하는 참가자를 선택 하 여 다른 id를 사용 하 여 RFP에 액세스할 수 있습니다.  
+- 다음으로 보기: active Rfp 표의 **보기 형식** 콤보 상자에서 원하는 참가자를 선택 하 여 사용자가 다른 id를 사용 하 여 RFP에 액세스할 수 있습니다.  
   
 ### <a name="winforms-client-options"></a>WinForms 클라이언트 옵션  
   
-- **RFP 만들기**: 제안 (RFP)에 대 한 새 요청을 만들고 구매 프로세스 워크플로를 시작 합니다.  
+- **CREATE RFP**: 제안 (RFP)에 대 한 새 요청을 만들고 구매 프로세스 워크플로를 시작 합니다.  
   
-- **새로 고침**: 주 창에서 활성 및 완료 된 Rfp 목록을 새로 고칩니다.  
+- **Refresh**: 주 창에서 활성 및 완료 된 rfp 목록을 새로 고칩니다.  
   
 - **RFP 보기**: 기존 RFP의 콘텐츠를 표시 합니다. RFP가 완료되지 않았거나 공급업체가 요청을 받은 경우 공급업체에서 제안서를 제출할 수 있습니다.  
   
-- **연결 이름**: 사용자는 active Rfp 표의 **보기 형식** 콤보 상자에서 원하는 참가자를 선택 하 여 다른 id를 사용 하 여 RFP에 액세스할 수 있습니다.
+- **연결**방법: 사용자는 active Rfp 표의 **보기 형식** 콤보 상자에서 원하는 참가자를 선택 하 여 다른 id를 사용 하 여 RFP에 액세스할 수 있습니다.

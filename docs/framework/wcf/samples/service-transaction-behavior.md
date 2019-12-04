@@ -4,16 +4,16 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Service Transaction Behavior Sample [Windows Communication Foundation]
 ms.assetid: 1a9842a3-e84d-427c-b6ac-6999cbbc2612
-ms.openlocfilehash: fc71d077e219481281be8f8bf22352bd19baebac
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 38ad03d64d95e0653fba8018c59c62db9a698096
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425471"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715104"
 ---
 # <a name="service-transaction-behavior"></a>서비스 트랜잭션 동작
 
-이 샘플에서는 클라이언트에서 조정하는 트랜잭션과 ServiceBehaviorAttribute 및 OperationBehaviorAttribute의 설정을 사용하여 서비스 트랜잭션 동작을 제어하는 방법을 보여 줍니다. 이 샘플은 기반 합니다 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) 계산기 서비스를 구현 하는 동시 데이터베이스 테이블에서 상태 저장 계산기 작업에 대 한 누계에 수행된 된 작업의 서버 로그를 유지 하기 위해 확장 됩니다. 서버 로그 테이블에 대한 지속적인 쓰기는 클라이언트에서 조정하는 트랜잭션의 결과에 영향을 받습니다. 즉, 클라이언트 트랜잭션이 완료되지 않은 경우 웹 서비스 트랜잭션은 데이터베이스의 업데이트가 커밋되지 않도록 합니다.
+이 샘플에서는 클라이언트에서 조정하는 트랜잭션과 ServiceBehaviorAttribute 및 OperationBehaviorAttribute의 설정을 사용하여 서비스 트랜잭션 동작을 제어하는 방법을 보여 줍니다. 이 샘플은 계산기 서비스를 구현 하는 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md) 을 기반으로 하지만, 수행 된 작업의 서버 로그를 데이터베이스 테이블에 유지 관리 하 고 계산기 작업의 상태 저장 누계를 유지 관리 하도록 확장 되었습니다. 서버 로그 테이블에 대한 지속적인 쓰기는 클라이언트에서 조정하는 트랜잭션의 결과에 영향을 받습니다. 즉, 클라이언트 트랜잭션이 완료되지 않은 경우 웹 서비스 트랜잭션은 데이터베이스의 업데이트가 커밋되지 않도록 합니다.
 
 > [!NOTE]
 > 이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.
@@ -101,7 +101,7 @@ client.Close();
 
   - `ReleaseServiceInstanceOnTransactionComplete` 속성은 트랜잭션이 완료될 때 서비스 인스턴스를 재활용할지 여부를 지정합니다. 이 속성을 `false`로 설정하면 서비스는 전체 작업 요청에 대해 동일한 서비스 인스턴스를 유지합니다. 이 설정은 누계를 유지 관리하는 데 필요합니다. 이 속성을 `true`로 설정하면 각 작업이 완료된 후에 새 인스턴스가 생성됩니다.
 
-  - `TransactionAutoCompleteOnSessionClose` 속성에서는 세션을 닫을 때 처리되지 않은 트랜잭션을 완료할 것인지 여부를 지정합니다. 로 설정 하 여 `false`, 개별 작업을 설정 하는 데 필요한 합니다 <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete?displayProperty=nameWithType> 속성을 `true` 또는 명시적으로 호출을 요구 하는 <xref:System.ServiceModel.OperationContext.SetTransactionComplete?displayProperty=nameWithType> 거래를 완료 하는 방법. 이 샘플에서는 두 가지 접근 방식을 모두 보여 줍니다.
+  - `TransactionAutoCompleteOnSessionClose` 속성은 세션이 닫힐 때 처리 되지 않은 트랜잭션을 완료할 지 여부를 지정 합니다. `false`로 설정 하면 <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete?displayProperty=nameWithType> 속성을 `true`로 설정 하거나 <xref:System.ServiceModel.OperationContext.SetTransactionComplete?displayProperty=nameWithType> 메서드를 명시적으로 호출 하 여 트랜잭션을 완료 해야 합니다. 이 샘플에서는 두 가지 접근 방식을 모두 보여 줍니다.
 
 - `ServiceContractAttribute`:
 
@@ -211,23 +211,23 @@ Creating new service instance...
 
 2. C# 또는 Visual Basic .NET 버전의 솔루션을 빌드하려면 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)의 지침을 따릅니다.
 
-3. 단일 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면의 지침을 따릅니다 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)합니다.
+3. 단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)의 지침을 따르세요.
 
-컴퓨터에서 샘플을 실행 하는 MSDTC Microsoft Distributed Transaction Coordinator () 네트워크 트랜잭션 흐름을 사용 하 여 WsatConfig.exe 도구를 사용 하 여 Windows Communication Foundation (WCF) 트랜잭션이 네트워크를 사용 하도록 설정 하려면 구성 해야 합니다. 이 옵션을 지원 합니다.
+여러 컴퓨터에서 샘플을 실행 하는 경우 네트워크 트랜잭션 흐름을 사용 하도록 MSDTC (Microsoft DTC(Distributed Transaction Coordinator))를 구성 하 고 Wsatconfig.exe 도구를 사용 하 여 WCF (Windows Communication Foundation) 트랜잭션 네트워크를 사용 하도록 설정 해야 합니다. 지원은.
 
 ### <a name="to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-to-support-running-the-sample-across-machines"></a>여러 컴퓨터에서 샘플을 실행할 수 있도록 MSDTC(Microsoft Distributed Transaction Coordinator)를 구성하려면
 
 1. 서비스 컴퓨터에서 들어오는 네트워크 트랜잭션을 허용하도록 MSDTC를 구성합니다.
 
-    1. **시작** 메뉴에서 이동할 **제어판**, 다음 **관리 도구**를 차례로 **구성 요소 서비스**.
+    1. **시작** 메뉴에서 **제어판**, **관리 도구**, **구성 요소 서비스**로 차례로 이동 합니다.
 
-    2. 마우스 오른쪽 단추로 클릭 **내 컴퓨터** 선택한 **속성**합니다.
+    2. **내 컴퓨터** 를 마우스 오른쪽 단추로 클릭 하 고 **속성**을 선택 합니다.
 
-    3. 에 **MSDTC** 탭을 클릭 **보안 구성**합니다.
+    3. **MSDTC** 탭에서 **보안 구성**을 클릭 합니다.
 
-    4. 확인할 **네트워크 DTC 액세스** 하 고 **허용 인바운드**합니다.
+    4. **네트워크 DTC 액세스** 를 확인 하 고 **인바운드를 허용**합니다.
 
-    5. 클릭 **Yes** MS DTC 서비스를 다시 시작을 클릭 한 다음 **확인**합니다.
+    5. **예** 를 클릭 하 여 MS DTC 서비스를 다시 시작한 다음 **확인**을 클릭 합니다.
 
     6. **확인** 을 클릭하여 대화 상자를 닫습니다.
 
@@ -235,25 +235,25 @@ Creating new service instance...
 
     1. 제어판에서 Windows 방화벽 애플리케이션을 실행합니다.
 
-    2. **예외** 탭을 클릭 **추가 프로그램**합니다.
+    2. **예외** 탭에서 **프로그램 추가**를 클릭 합니다.
 
     3. C:\WINDOWS\System32 폴더로 이동합니다.
 
-    4. Msdtc.exe를 선택 하 고 클릭 **열려**합니다.
+    4. Mmc.exe를 선택 하 고 **열기**를 클릭 합니다.
 
-    5. 클릭 **확인** 닫으려면 합니다 **프로그램 추가** 대화 상자를 클릭 **확인** Windows 방화벽 애플릿을 닫습니다를 다시 합니다.
+    5. **확인** 을 클릭 하 여 **프로그램 추가** 대화 상자를 닫고 **확인** 을 다시 클릭 하 여 Windows 방화벽 애플릿을 닫습니다.
 
 3. 클라이언트 컴퓨터에서 나가는 네트워크 트랜잭션을 허용하도록 MSDTC를 구성합니다.
 
-    1. **시작** 메뉴에서 이동할 **제어판**, 다음 **관리 도구**를 차례로 **구성 요소 서비스**.
+    1. **시작** 메뉴에서 **제어판**, **관리 도구**, **구성 요소 서비스**로 차례로 이동 합니다.
 
-    2. 마우스 오른쪽 단추로 클릭 **내 컴퓨터** 선택한 **속성**합니다.
+    2. **내 컴퓨터** 를 마우스 오른쪽 단추로 클릭 하 고 **속성**을 선택 합니다.
 
-    3. 에 **MSDTC** 탭을 클릭 **보안 구성**합니다.
+    3. **MSDTC** 탭에서 **보안 구성**을 클릭 합니다.
 
-    4. 확인할 **네트워크 DTC 액세스** 하 고 **아웃 바운드 허용**합니다.
+    4. **네트워크 DTC 액세스** 를 확인 하 고 **아웃 바운드를 허용**합니다.
 
-    5. 클릭 **Yes** MS DTC 서비스를 다시 시작을 클릭 한 다음 **확인**합니다.
+    5. **예** 를 클릭 하 여 MS DTC 서비스를 다시 시작한 다음 **확인**을 클릭 합니다.
 
     6. **확인** 을 클릭하여 대화 상자를 닫습니다.
 
@@ -262,6 +262,6 @@ Creating new service instance...
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> 이 디렉터리가 없으면로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4 용 Windows WF (Workflow Foundation) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.
+> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\Transactions`

@@ -2,12 +2,12 @@
 title: JSON 및 XML 샘플을 포함한 AJAX 서비스
 ms.date: 03/30/2017
 ms.assetid: 8ea5860d-0c42-4ae9-941a-e07efdd8e29c
-ms.openlocfilehash: eadb884667a0b29ef36056f0c3bec4675b7f1b05
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: ca9bdbfa135ac7dc0b69589d4f8fce07bc4c4afe
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895145"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716210"
 ---
 # <a name="ajax-service-with-json-and-xml-sample"></a>JSON 및 XML 샘플을 포함한 AJAX 서비스
 
@@ -20,11 +20,11 @@ ms.locfileid: "70895145"
 > [!NOTE]
 > 이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.
 
-ASP.NET 이외의 AJAX 클라이언트를 사용할 수 있도록 설정하려면 .svc 파일에서 <xref:System.ServiceModel.Activation.WebServiceHostFactory>가 아닌 <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>를 사용합니다. <xref:System.ServiceModel.Activation.WebServiceHostFactory>는 <xref:System.ServiceModel.Description.WebHttpEndpoint> 표준 엔드포인트를 서비스에 추가합니다. 끝점은 .svc 파일을 기준으로 하는 빈 주소에 구성 됩니다. 즉, 서비스의 주소는 이며 `http://localhost/ServiceModelSamples/service.svc`작업 이름이 아닌 추가 접미사를 포함 하지 않습니다.
+ASP.NET 이외의 AJAX 클라이언트를 사용할 수 있도록 설정하려면 .svc 파일에서 <xref:System.ServiceModel.Activation.WebServiceHostFactory>가 아닌 <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>를 사용합니다. <xref:System.ServiceModel.Activation.WebServiceHostFactory>는 <xref:System.ServiceModel.Description.WebHttpEndpoint> 표준 엔드포인트를 서비스에 추가합니다. 끝점은 .svc 파일을 기준으로 하는 빈 주소에 구성 됩니다. 이는 서비스의 주소가 작업 이름이 아닌 추가 접미사를 사용 하지 않고 `http://localhost/ServiceModelSamples/service.svc`는 것을 의미 합니다.
 
 `<%@ServiceHost language="c#" Debug="true" Service="Microsoft.Samples.XmlAjaxService.CalculatorService" Factory="System.ServiceModel.Activation.WebServiceHostFactory" %>`
 
-Web.config의 다음 섹션은 끝점에 대한 추가 구성 변경 작업을 수행하는 데 사용할 수 있으며 추가 변경이 필요하지 않은 경우 제거할 수 있습니다.
+Web.config의 다음 섹션은 엔드포인트에 대한 추가 구성 변경 작업을 수행하는 데 사용할 수 있으며 추가 변경이 필요하지 않은 경우 제거할 수 있습니다.
 
 ```xml
 <system.serviceModel>
@@ -37,7 +37,7 @@ Web.config의 다음 섹션은 끝점에 대한 추가 구성 변경 작업을 �
 </system.serviceModel>
 ```
 
-의 <xref:System.ServiceModel.Description.WebHttpEndpoint> 기본 데이터 형식은 XML 이지만의 <xref:System.ServiceModel.Description.WebScriptEndpoint> 기본 데이터 형식은 JSON입니다. 자세한 내용은 ASP.NET를 사용 [하지 않고 WCF AJAX 서비스 만들기](../../../../docs/framework/wcf/feature-details/creating-wcf-ajax-services-without-aspnet.md)를 참조 하세요.
+<xref:System.ServiceModel.Description.WebHttpEndpoint>의 기본 데이터 형식은 XML 이지만 <xref:System.ServiceModel.Description.WebScriptEndpoint>의 기본 데이터 형식은 JSON입니다. 자세한 내용은 ASP.NET를 사용 [하지 않고 WCF AJAX 서비스 만들기](../../../../docs/framework/wcf/feature-details/creating-wcf-ajax-services-without-aspnet.md)를 참조 하세요.
 
 다음 샘플의 서비스는 두 개의 작업을 포함 하는 표준 WCF 서비스입니다. 두 작업 모두 <xref:System.ServiceModel.Web.WebMessageBodyStyle.Wrapped> 또는 <xref:System.ServiceModel.Web.WebGetAttribute> 특성에서 <xref:System.ServiceModel.Web.WebInvokeAttribute> 본문 스타일을 필요로 합니다. 이는 `webHttp` 동작과 관련이 있으며 JSON/XML 데이터 형식 전환과는 관계가 없습니다.
 
@@ -47,7 +47,7 @@ Web.config의 다음 섹션은 끝점에 대한 추가 구성 변경 작업을 �
 MathResult DoMathXml(double n1, double n2);
 ```
 
-작업에 대 한 응답 형식은 [ \<webhttp >](../../../../docs/framework/configure-apps/file-schema/wcf/webhttp.md) 동작에 대 한 기본 설정인 XML로 지정 됩니다. 그러나 응답 형식을 명시적으로 지정하는 것이 좋습니다.
+작업에 대 한 응답 형식은 [\<webHttp >](../../../../docs/framework/configure-apps/file-schema/wcf/webhttp.md) 동작에 대 한 기본 설정인 XML로 지정 됩니다. 그러나 응답 형식을 명시적으로 지정하는 것이 좋습니다.
 
 다른 작업에서는 `WebInvokeAttribute` 특성을 사용하고 응답에 대해 XML 대신 명시적으로 JSON을 지정합니다.
 
@@ -57,7 +57,7 @@ MathResult DoMathXml(double n1, double n2);
 MathResult DoMathJson(double n1, double n2);
 ```
 
-두 경우 모두 `MathResult`, 작업은 표준 WCF 데이터 계약 형식인 복합 형식인을 반환 합니다.
+두 경우 모두, 작업은 표준 WCF 데이터 계약 형식인 `MathResult`복합 형식인을 반환 합니다.
 
 클라이언트 웹 페이지 Xmlajaxclientpage.htm에는 사용자가 **계산 수행 (JSON 반환)** 또는 페이지에서 **계산 수행 (XML 반환)** 단추를 클릭할 때 앞의 두 작업 중 하나를 호출 하는 JavaScript 코드가 포함 됩니다. 서비스를 호출하는 코드는 JSON 본문을 만든 다음 HTTP POST를 사용하여 전송합니다. [기본 Ajax 서비스](../../../../docs/framework/wcf/samples/basic-ajax-service.md) 샘플과 ASP.NET ajax를 사용 하는 다른 샘플과 달리이 요청은 JavaScript에서 수동으로 생성 됩니다.
 
@@ -98,7 +98,7 @@ xmlHttp.onreadystatechange=function(){
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.
+> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\AJAX\XmlAjaxService`
 
@@ -108,8 +108,8 @@ xmlHttp.onreadystatechange=function(){
 
 2. [Windows Communication Foundation 샘플 빌드](../../../../docs/framework/wcf/samples/building-the-samples.md)에 설명 된 대로 XmlAjaxService 솔루션을 빌드합니다.
 
-3. 로 `http://localhost/ServiceModelSamples/XmlAjaxClientPage.htm` 이동 합니다 (프로젝트 디렉터리에서 브라우저의 xmlajaxclientpage.htm을 열지 마십시오.).
+3. `http://localhost/ServiceModelSamples/XmlAjaxClientPage.htm`로 이동 합니다 (프로젝트 디렉터리에서 브라우저에서 Xmlajaxclientpage.htm를 열지 마세요.).
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [HTTP POST를 사용하는 AJAX 서비스](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md)

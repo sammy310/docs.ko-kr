@@ -2,12 +2,12 @@
 title: 메시지 검사자
 ms.date: 03/30/2017
 ms.assetid: 9bd1f305-ad03-4dd7-971f-fa1014b97c9b
-ms.openlocfilehash: 7b8cc0f8e8aa0544c531566a8fe35f54a3914896
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 29c7fd9729cbdcc99a05d01f717c1cc548e8d9ea
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977302"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714822"
 ---
 # <a name="message-inspectors"></a>메시지 검사자
 이 샘플에서는 클라이언트 및 서비스 메시지 검사자를 구현하고 구성하는 방법을 보여 줍니다.  
@@ -41,7 +41,7 @@ public class SchemaValidationMessageInspector : IClientMessageInspector, IDispat
   
  모든 서비스(디스패처) 메시지 검사자는 <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector> 메서드 <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A>와 <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%28System.ServiceModel.Channels.Message%40%2CSystem.Object%29>를 구현해야 합니다.  
   
- 메시지를 받아 채널 스택에서 처리한 후 서비스에 할당한 경우 deserialize하여 작업에 디스패치하기 전에 디스패처에서 <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A>를 호출합니다. 들어오는 메시지가 암호화된 경우 메시지 검사자에 도달하면 해당 메시지는 이미 암호가 해독되어 있습니다. 메서드는 참조 매개 변수로 전달된 `request` 메시지를 가져오며, 이를 통해 필요에 따라 메시지를 검사, 조작 또는 대체할 수 있습니다. 반환 값은 임의의 개체가 될 수 있으며 서비스에서 현재 메시지에 대한 회신을 반환할 때 <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%2A>에 전달되는 상관 관계 상태 개체로 사용됩니다. 이 샘플에서 <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A>는 메시지의 검사(유효성 검사)를 전용 로컬 메서드 `ValidateMessageBody`에 위임하며 상관 관계 상태 개체를 반환하지 않습니다. 이 메서드는 잘못된 메시지가 서비스에 전달되지 않도록 합니다.  
+ 메시지를 받아 채널 스택에서 처리한 후 서비스에 할당한 경우 역직렬화하여 작업에 디스패치하기 전에 디스패처에서 <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A>를 호출합니다. 들어오는 메시지가 암호화된 경우 메시지 검사자에 도달하면 해당 메시지는 이미 암호가 해독되어 있습니다. 메서드는 참조 매개 변수로 전달된 `request` 메시지를 가져오며, 이를 통해 필요에 따라 메시지를 검사, 조작 또는 대체할 수 있습니다. 반환 값은 임의의 개체가 될 수 있으며 서비스에서 현재 메시지에 대한 회신을 반환할 때 <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%2A>에 전달되는 상관 관계 상태 개체로 사용됩니다. 이 샘플에서 <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A>는 메시지의 검사(유효성 검사)를 전용 로컬 메서드 `ValidateMessageBody`에 위임하며 상관 관계 상태 개체를 반환하지 않습니다. 이 메서드는 잘못된 메시지가 서비스에 전달되지 않도록 합니다.  
   
 ```csharp  
 object IDispatchMessageInspector.AfterReceiveRequest(ref System.ServiceModel.Channels.Message request, System.ServiceModel.IClientChannel channel, System.ServiceModel.InstanceContext instanceContext)  
@@ -409,6 +409,6 @@ catch (Exception e)
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageInspectors`  

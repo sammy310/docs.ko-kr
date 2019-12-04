@@ -2,18 +2,18 @@
 title: 워크플로 인스턴스 만들기 및 실행
 ms.date: 03/30/2017
 ms.assetid: 19d27f47-0491-4569-8f53-51bc1d940e80
-ms.openlocfilehash: fe00ebec8d81e77ff982a36419f1b0a988fcd4ab
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: d895cfa9e924ecf4d1571cf67f1c1e7069e25da5
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70016043"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715199"
 ---
 # <a name="creating-and-running-a-workflow-instance"></a>워크플로 인스턴스 만들기 및 실행
 
 이 샘플에서는 워크플로 인스턴스를 실행하는 방법을 보여 줍니다. 동기적 실행 방법과 비동기적 실행 방법을 모두 보여 줍니다.
 
-## <a name="demonstrates"></a>세부 항목
+## <a name="demonstrates"></a>데모
 
 <xref:System.Activities.WorkflowInvoker>, <xref:System.Activities.WorkflowApplication>.
 
@@ -28,10 +28,10 @@ ms.locfileid: "70016043"
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.
+> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Execution\CreatingWorkflowInstances`
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [WorkflowInvoker 및 WorkflowApplication 사용](../using-workflowinvoker-and-workflowapplication.md)

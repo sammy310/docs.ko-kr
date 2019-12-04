@@ -2,12 +2,12 @@
 title: 스트리밍 피드 샘플
 ms.date: 03/30/2017
 ms.assetid: 1f1228c0-daaa-45f0-b93e-c4a158113744
-ms.openlocfilehash: ede1dbb4f5c682b8182dda4888a9cbd373b95dd8
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 9d40a07b81474a283a8edbeb7aca1aa7ab3993b2
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976370"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716644"
 ---
 # <a name="streaming-feeds-sample"></a>스트리밍 피드 샘플
 이 샘플에서는 많은 수의 항목이 포함된 배포 피드를 관리하는 방법을 보여 줍니다. 서버에서 이 샘플은 항목을 네트워크 스트림에 쓰기 바로 전까지 피드 내에 개별 <xref:System.ServiceModel.Syndication.SyndicationItem> 개체를 만드는 동작을 지연시키는 방법을 보여 줍니다.  
@@ -67,7 +67,7 @@ public Atom10FeedFormatter StreamedFeed()
   
  결과적으로 항목 스트림은 메모리에 완전히 버퍼링되지 않습니다. `ItemGenerator.GenerateItems()` 메서드 내의 `yield return` 문에 중단점을 설정 하 고 서비스가 `StreamedFeed()` 메서드의 결과를 반환한 후 처음으로이 중단점이 발생 하는 것을 확인 하 여이 동작을 관찰할 수 있습니다.  
   
-## <a name="client"></a>클라이언트  
+## <a name="client"></a>Client  
  이 샘플의 클라이언트는 피드에 있는 개별 항목을 메모리에 버퍼링하는 대신 이 항목의 구체화를 지연시키는 사용자 지정 <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> 구현을 사용합니다. 사용자 지정 `StreamedAtom10FeedFormatter` 인스턴스는 다음과 같이 사용됩니다.  
   
 ```csharp  
@@ -114,7 +114,7 @@ private IEnumerable<SyndicationItem> DelayReadItems(XmlReader reader, Syndicatio
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Syndication\StreamingFeeds`  
   

@@ -2,15 +2,15 @@
 title: POCO 지원
 ms.date: 03/30/2017
 ms.assetid: 3846ca73-2819-4ca2-8367-dc739dde5a5b
-ms.openlocfilehash: 6796d7948bd3ebe0a8b96a861c628b30b7540912
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 2962fa8a9eb824bbfbbb2f1e9347f8988b50ddcd
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044775"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716538"
 ---
 # <a name="poco-support"></a>POCO 지원
-이 샘플에서는 표시되지 않은 형식, 즉 serialization 특성이 적용되지 않은 형식을 소개합니다. 이러한 형식을 POCO(Plain Old CLR Object) 형식이라고도 합니다. 는 <xref:System.Runtime.Serialization.DataContractSerializer> 매개 변수가 없는 생성자가 있는 모든 공개 되지 않은 형식에 대 한 데이터 계약을 유추 합니다. 데이터 계약을 사용하면 서비스와 구조적 데이터를 주고 받을 수 있습니다. 표시 되지 않은 형식에 대 한 자세한 내용은 [Serializable 형식](../../../../docs/framework/wcf/feature-details/serializable-types.md)을 참조 하세요.  
+이 샘플에서는 표시되지 않은 형식, 즉 serialization 특성이 적용되지 않은 형식을 소개합니다. 이러한 형식을 POCO(Plain Old CLR Object) 형식이라고도 합니다. <xref:System.Runtime.Serialization.DataContractSerializer>은 매개 변수가 없는 생성자가 있는 모든 공개 되지 않은 형식에 대 한 데이터 계약을 유추 합니다. 데이터 계약을 사용하면 서비스와 구조적 데이터를 주고 받을 수 있습니다. 표시 되지 않은 형식에 대 한 자세한 내용은 [Serializable 형식](../../../../docs/framework/wcf/feature-details/serializable-types.md)을 참조 하세요.  
   
  이 샘플은 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md)을 기반으로 하지만 기본 숫자 형식 대신 복소수를 사용 합니다. <xref:System.Runtime.Serialization.DataContractAttribute> 및<xref:System.Runtime.Serialization.DataMemberAttribute> 특성을 사용하지 않는 경우를 제외하고는 [기본 데이터 계약](../../../../docs/framework/wcf/samples/basic-data-contract.md) 샘플과도 유사합니다.  
   
@@ -52,11 +52,11 @@ public class ComplexNumber
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\POCO`  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute>
 - [직렬화 가능 형식](../../../../docs/framework/wcf/feature-details/serializable-types.md)

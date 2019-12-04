@@ -2,23 +2,23 @@
 title: SOAP 및 HTTP 엔드포인트
 ms.date: 03/30/2017
 ms.assetid: e3c8be75-9dda-4afa-89b6-a82cb3b73cf8
-ms.openlocfilehash: 6fdd3bf4fb1712b181e753d1223df2709673b51e
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 93f410b8b8632b0158d0a52b12845f1e8cec132c
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045501"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716679"
 ---
 # <a name="soap-and-http-endpoints"></a>SOAP 및 HTTP 엔드포인트
 이 샘플에서는 WCF 웹 프로그래밍 모델을 사용 하 여 RPC 기반 서비스를 구현 하 고 SOAP 형식 및 "일반 이전 XML" (POX) 형식으로이를 노출 하는 방법을 보여 줍니다. 서비스의 HTTP 바인딩에 대 한 자세한 내용은 [기본 Http 서비스](../../../../docs/framework/wcf/samples/basic-http-service.md) 샘플을 참조 하세요. 이 샘플에서는 서로 다른 바인딩을 사용하는 SOAP 및 HTTP를 통해 동일한 서비스를 노출하는 데 관련된 세부 정보를 중점적으로 다룹니다.  
   
-## <a name="demonstrates"></a>세부 항목  
+## <a name="demonstrates"></a>데모  
  WCF를 사용 하 여 SOAP 및 HTTP를 통해 RPC 서비스 노출.  
   
 ## <a name="discussion"></a>토론  
  이 샘플은 WCF 서비스를 포함 하는 웹 응용 프로그램 프로젝트 (서비스)와 SOAP 및 HTTP 바인딩을 사용 하 여 서비스 작업을 호출 하는 콘솔 응용 프로그램 (클라이언트)의 두 구성 요소로 구성 되어 있습니다.  
   
- WCF 서비스는 입력으로 전달 된`GetData` 문자열 `PutData` 을 에코 하는 2 개의 작업을 노출 합니다. 서비스 작업에는 <xref:System.ServiceModel.Web.WebGetAttribute> 및<xref:System.ServiceModel.Web.WebInvokeAttribute>를 주석으로 답니다. 이러한 특성은 해당 작업의 HTTP 프로젝션을 제어합니다. 또한 서비스 작업에는 SOAP 바인딩을 통해 노출되도록 설정하는 <xref:System.ServiceModel.OperationContractAttribute>를 주석으로 답니다. 서비스의 `PutData` 메서드는 <xref:System.ServiceModel.Web.WebFaultException>을 throw하며, 이 예외는 HTTP 상태 코드를 사용하여 HTTP를 통해 다시 보내지고 SOAP을 통해 SOAP 오류로 다시 보내집니다.  
+ WCF 서비스는 입력으로 전달 된 문자열을 에코 하는 2 개의 작업 (`GetData` 및 `PutData`)을 노출 합니다. 서비스 작업에는 <xref:System.ServiceModel.Web.WebGetAttribute> 및<xref:System.ServiceModel.Web.WebInvokeAttribute>를 주석으로 답니다. 이러한 특성은 해당 작업의 HTTP 프로젝션을 제어합니다. 또한 서비스 작업에는 SOAP 바인딩을 통해 노출되도록 설정하는 <xref:System.ServiceModel.OperationContractAttribute>를 주석으로 답니다. 서비스의 `PutData` 메서드는 <xref:System.ServiceModel.Web.WebFaultException>을 throw하며, 이 예외는 HTTP 상태 코드를 사용하여 HTTP를 통해 다시 보내지고 SOAP을 통해 SOAP 오류로 다시 보내집니다.  
   
  Web.config 파일은 3 개의 끝점을 사용 하 여 WCF 서비스를 구성 합니다.  
   
@@ -28,9 +28,9 @@ ms.locfileid: "70045501"
   
 - 클라이언트가 SOAP 및 HTTP 바인딩을 사용하여 서비스에 액세스할 수 있도록 하는 ~/service.svc/soap 엔드포인트  
   
- HTTP 끝점은가로`webHttp` `helpEnabled` `true`설정 된 < > 표준 끝점으로 구성 됩니다. 따라서 서비스에서는 HTTP 기반 클라이언트가 서비스에 액세스하는 데 사용할 수 있는 XHTML 기반 도움말 페이지를 ~/service.svc/http/help에 노출합니다.  
+ HTTP 끝점은 `helpEnabled`가 `true`로 설정 된 > 표준 끝점`webHttp`<으로 구성 됩니다. 따라서 서비스에서는 HTTP 기반 클라이언트가 서비스에 액세스하는 데 사용할 수 있는 XHTML 기반 도움말 페이지를 ~/service.svc/http/help에 노출합니다.  
   
- 클라이언트 프로젝트는 **서비스 참조 추가**를 통해 생성 된 SOAP 프록시를 사용 하 여 서비스에 액세스 하 고를 사용 <xref:System.Net.WebClient>하 여 서비스에 액세스 하는 방법을 보여 줍니다.  
+ 클라이언트 프로젝트는 SOAP 프록시 ( **서비스 참조 추가**을 통해 생성)를 사용 하 여 서비스에 액세스 하 고 <xref:System.Net.WebClient>를 사용 하 여 서비스에 액세스 하는 방법을 보여 줍니다.  
   
  이 샘플은 웹 호스팅 서비스와 콘솔 애플리케이션으로 구성되어 있습니다. 콘솔 애플리케이션이 실행되면 클라이언트에서는 서비스로 요청을 보내고 응답의 관련 정보를 콘솔 창에 씁니다.  
   
@@ -61,6 +61,6 @@ ms.locfileid: "70045501"
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\SoapAndHttpEndpoints`

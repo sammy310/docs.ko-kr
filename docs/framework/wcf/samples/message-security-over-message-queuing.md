@@ -2,12 +2,12 @@
 title: 메시지 큐에 대한 메시지 보안
 ms.date: 03/30/2017
 ms.assetid: 329aea9c-fa80-45c0-b2b9-e37fd7b85b38
-ms.openlocfilehash: d27ee01636e37ac8f09c4f7dc497f14bfac1b0f1
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 03f4bd3f580163868920622a74ae4f34d7a1a97a
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424115"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714791"
 ---
 # <a name="message-security-over-message-queuing"></a>메시지 큐에 대한 메시지 보안
 이 샘플에서는 클라이언트에 대해 X.509v3 인증서를 통한 WS-Security 인증을 사용하며 MSMQ를 통해 서버의 X.509v3 인증서를 사용한 서버 인증을 수행해야 하는 애플리케이션의 구현 방법을 보여 줍니다. 메시지 보안에서는 MSMQ 스토리지에 있는 메시지의 암호화가 유지되며 애플리케이션에서 메시지의 자체 인증을 수행할 수 있도록 하는 것이 더 좋습니다.
@@ -85,7 +85,7 @@ ms.locfileid: "73424115"
 ## <a name="requirements"></a>요구 사항
  이 샘플을 실행하려면 MSMQ가 설치되어 실행 중이어야 합니다.
 
-## <a name="demonstrates"></a>세부 항목
+## <a name="demonstrates"></a>데모
  클라이언트는 서비스의 공개 키를 사용하여 메시지를 암호화하고 자체 인증서로 메시지에 서명합니다. 큐로부터 메시지를 읽는 서비스는 신뢰할 수 있는 사용자 저장소에 포함된 인증서를 사용하여 클라이언트 인증서를 인증합니다. 그리고 메시지를 해독한 후 서비스 작업에 디스패치합니다.
 
  Windows Communication Foundation (WCF) 메시지는 MSMQ 메시지 본문에서 페이로드로 전달 되기 때문에 본문은 MSMQ 저장소에서 암호화 된 상태로 유지 됩니다. 그러면 원치 않는 노출로부터 메시지를 보호할 수 있습니다. MSMQ 자체에서는 전달하는 메시지의 암호화 여부를 인식하지 못합니다.
@@ -323,7 +323,7 @@ Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
-     %SERVER_NAME% 변수는 서버 이름을 지정합니다. 인증서는 LocalMachine 저장소에 저장됩니다. 서비스의 인수 (예: `setup.bat service`)를 사용 하 여 설치 일괄 처리 파일을 실행 하는 경우% 서비스 이름%에는 컴퓨터의 정규화 된 도메인 이름이 포함 됩니다. 그렇지 않은 경우 기본값은 localhost입니다.
+     %SERVER_NAME% 변수는 서버 이름을 지정합니다. 인증서는 LocalMachine 저장소에 저장됩니다. 서비스의 인수 (예: `setup.bat service`)를 사용 하 여 설치 배치 파일을 실행 하는 경우% SERVER_NAME%에는 컴퓨터의 정규화 된 도메인 이름이 포함 됩니다. 그렇지 않은 경우 기본값은 localhost입니다.
 
 - 클라이언트의 신뢰할 수 있는 인증서 저장소에 서버 인증서 설치
 
@@ -341,6 +341,6 @@ Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\MessageSecurity`  

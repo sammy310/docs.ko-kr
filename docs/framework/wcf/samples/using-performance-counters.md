@@ -2,12 +2,12 @@
 title: 성능 카운터 사용
 ms.date: 03/30/2017
 ms.assetid: 00a787af-1876-473c-a48d-f52b51e28a3f
-ms.openlocfilehash: 724580c1725cf6513e1d85f03b0abfdefb4d040a
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 3e0a0199e93abe1218f7d9c052807cb94e911140
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044538"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716706"
 ---
 # <a name="using-performance-counters"></a>성능 카운터 사용
 이 샘플에서는 WCF (Windows Communication Foundation) 성능 카운터에 액세스 하는 방법과 사용자 정의 성능 카운터를 만드는 방법을 보여 줍니다. 이 샘플은 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md)을 기반으로 합니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "70044538"
   
 ### <a name="to-view-performance-data"></a>성능 데이터를 보려면  
   
-1. **시작**, **실행** `perfmon` 을 차례로 클릭 하 고 **확인을** 클릭 하거나 제어판에서 **관리 도구** 를 선택 하 고 **성능**을 두 번 클릭 하 여 성능 모니터 도구를 시작 합니다.  
+1. **시작**, **실행**을 차례로 클릭 하 고 `perfmon`를 입력 한 다음 **확인을** 클릭 하거나 제어판에서 **관리 도구** 를 선택 하 고 **성능**을 두 번 클릭 하 여 성능 모니터 도구를 시작 합니다.  
   
     > [!NOTE]
     > 샘플 코드가 실행될 때까지는 카운터를 추가할 수 없습니다.  
@@ -72,10 +72,10 @@ ms.locfileid: "70044538"
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\PerfCounters`  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [AppFabric 모니터링 샘플](https://go.microsoft.com/fwlink/?LinkId=193959)

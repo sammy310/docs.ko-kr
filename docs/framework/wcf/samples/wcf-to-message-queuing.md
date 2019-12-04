@@ -2,12 +2,12 @@
 title: Windows Communication Foundation에서 메시지 큐로
 ms.date: 03/30/2017
 ms.assetid: 78d0d0c9-648e-4d4a-8f0a-14d9cafeead9
-ms.openlocfilehash: 34ac2dd8b6e01e2d7ae6f7978e1b09af174b71dd
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 1cbc1251a8e4eaaaf4b47357851dd681ae326f25
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038636"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715052"
 ---
 # <a name="windows-communication-foundation-to-message-queuing"></a>Windows Communication Foundation에서 메시지 큐로
 이 샘플에서는 WCF (Windows Communication Foundation) 응용 프로그램에서 메시지 큐 (MSMQ) 응용 프로그램으로 메시지를 보내는 방법을 보여 줍니다. 이 서비스는 자체적으로 호스트되는 콘솔 애플리케이션으로서 이를 사용하여 서비스에서 대기된 메시지를 받는 것을 볼 수 있습니다. 서비스 및 클라이언트가 동시에 실행될 필요는 없습니다.
@@ -130,7 +130,7 @@ public partial class OrderProcessorClient : System.ServiceModel.ClientBase<IOrde
  샘플을 실행하면 클라이언트 및 서비스 동작이 서비스 콘솔 창과 클라이언트 콘솔 창에 모두 표시됩니다. 서비스에서 클라이언트가 보내는 메시지를 받는 것을 볼 수 있습니다. 서비스와 클라이언트를 종료하려면 각 콘솔 창에서 Enter 키를 누릅니다. 큐를 사용하므로 클라이언트와 서비스가 동시에 실행 중일 필요는 없습니다. 예를 들어 클라이언트를 실행하고 종료한 다음 서비스를 다시 시작해도 메시지를 받을 수 있습니다.
 
 > [!NOTE]
-> 이 샘플을 사용하려면 메시지 큐를 설치해야 합니다. [메시지 큐](https://go.microsoft.com/fwlink/?LinkId=94968)의 설치 지침을 참조 하세요.  
+> 이 샘플을 사용하려면 메시지 큐(영문 페이질 수 있음)를 설치해야 합니다. [메시지 큐](https://go.microsoft.com/fwlink/?LinkId=94968)의 설치 지침을 참조 하세요.  
   
 ### <a name="to-setup-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면  
   
@@ -146,7 +146,7 @@ public partial class OrderProcessorClient : System.ServiceModel.ClientBase<IOrde
   
     4. **트랜잭션** 상자를 확인 합니다.  
   
-    5. 새 `ServiceModelSamplesTransacted` 큐의 이름으로을 입력 합니다.  
+    5. 새 큐 이름으로 `ServiceModelSamplesTransacted`을 입력 합니다.  
   
 3. C# 또는 Visual Basic .NET 버전의 솔루션을 빌드하려면 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)의 지침을 따릅니다.  
   
@@ -169,11 +169,11 @@ public partial class OrderProcessorClient : System.ServiceModel.ClientBase<IOrde
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\WcfToMsmq`  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
-- [방법: WCF 끝점 및 메시지 큐 응용 프로그램과 메시지 교환](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
+- [방법: WCF 엔드포인트 및 메시지 큐 애플리케이션과 메시지 교환](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
 - [메시지 큐](https://go.microsoft.com/fwlink/?LinkId=94968)

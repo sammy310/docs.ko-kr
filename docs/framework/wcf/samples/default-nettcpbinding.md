@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Net profile TCP
 ms.assetid: e8475fe6-0ecd-407a-8e7e-45860561bb74
-ms.openlocfilehash: f2dee85f3d84d840b33d81277419ab22e88e8556
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: dc417300eb6f62b89a1c07a4f2291b7366e410b1
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928587"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716556"
 ---
 # <a name="default-nettcpbinding"></a>기본 NetTcpBinding
 이 샘플에서는 <xref:System.ServiceModel.NetTcpBinding> 바인딩을 사용하는 방법을 보여 줍니다. 이 샘플은 계산기 서비스를 구현 하는 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md) 을 기반으로 합니다. 이 샘플에서 서비스는 자체 호스트됩니다. 서비스와 클라이언트 모두 콘솔 애플리케이션입니다.  
@@ -22,11 +22,11 @@ ms.locfileid: "70928587"
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\TCP\Default`  
   
- 클라이언트 및 서비스 구성 파일에 바인딩이 지정됩니다. 바인딩 형식은 다음 샘플 구성에 표시 `binding` 된 것 처럼 [ \<끝점 >](../../configure-apps/file-schema/wcf/endpoint-element.md) 요소의 특성에 지정 됩니다.  
+ 클라이언트 및 서비스 구성 파일에 바인딩이 지정됩니다. 바인딩 형식은 다음 샘플 구성에 표시 된 것 처럼 [\<끝점 >](../../configure-apps/file-schema/wcf/endpoint-element.md) 요소의 `binding` 특성에 지정 됩니다.  
   
 ```xml  
 <endpoint address=""  

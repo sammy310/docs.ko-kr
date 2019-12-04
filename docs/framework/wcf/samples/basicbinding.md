@@ -2,12 +2,12 @@
 title: BasicBinding
 ms.date: 03/30/2017
 ms.assetid: 86fbeb87-4d89-4b61-9577-867e0ac12945
-ms.openlocfilehash: e98b1254710ebac2305fd7dd5d39a146d749ff44
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: ddbe3e505028acf3abbadc9a741f66fdceca3784
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70990142"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716055"
 ---
 # <a name="basicbinding"></a>BasicBinding
 
@@ -21,7 +21,7 @@ ms.locfileid: "70990142"
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.
+> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Basic\Http`
 
@@ -29,7 +29,7 @@ ms.locfileid: "70990142"
 
 이 샘플은 계산기 서비스를 구현 하는 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md) 을 기반으로 합니다.
 
-기본 동작을 가진 기본 바인딩을 사용하려면 바인딩 섹션 이름만 필요합니다. 기본 바인딩을 구성하고 일부 설정을 변경하려면 바인딩 구성을 정의해야 합니다. 다음 샘플 코드에 표시 된 것 처럼 끝점은 < `bindingConfiguration` `endpoint`> 요소의 특성을 사용 하 여 이름으로 바인딩 구성을 참조 해야 합니다.
+기본 동작을 가진 기본 바인딩을 사용하려면 바인딩 섹션 이름만 필요합니다. 기본 바인딩을 구성하고 일부 설정을 변경하려면 바인딩 구성을 정의해야 합니다. 다음 샘플 코드에 표시 된 것 처럼 끝점은 <`endpoint`> 요소의 `bindingConfiguration` 특성을 사용 하 여 이름으로 바인딩 구성을 참조 해야 합니다.
 
 ```xml
 <services>

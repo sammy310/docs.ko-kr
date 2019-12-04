@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 70055c4b-1173-47a3-be80-b5bce6f59e9a
-ms.openlocfilehash: b28981196490e249d053ecd1704f6ba978585520
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 542440d6bf9d6809abee1ec37c85c44ce72fd132
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662861"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715167"
 ---
 # <a name="custom-composite-designers---workflow-items-presenter"></a>사용자 지정 복합 디자이너 - 워크플로 항목 프리젠터
 
@@ -20,13 +20,13 @@ ms.locfileid: "67662861"
 
 - <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType>를 사용하여 사용자 지정 활동 디자이너 만들기
 
-- "축소" 또는 "확장" 뷰를 사용 하 여 활동 디자이너를 만드는 중입니다.
+- "축소" 및 "확장" 보기를 사용 하 여 활동 디자이너 만들기
 
 - 다시 호스트된 애플리케이션에서 기본 디자이너 재정의
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면
 
-1. 엽니다는 **UsingWorkflowItemsPresenter.sln** Visual Studio 2010에서 VB 또는 C#에 대 한 샘플 솔루션.
+1. Visual Studio 2010의 VB 용 **usingworkflowitemspresenter.sln** 샘플 C# 솔루션을 엽니다.
 
 2. 솔루션을 빌드하고 실행합니다. 다시 호스트된 Workflow Designer 애플리케이션이 열리며 여기에서 활동을 캔버스로 끌어 올 수 있습니다.
 
@@ -155,11 +155,11 @@ ms.locfileid: "67662861"
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> 이 디렉터리가 없으면로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4 용 Windows WF (Workflow Foundation) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.
+> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\WorkflowItemsPresenter`
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Activities.Presentation.WorkflowItemsPresenter>
-- [워크플로 디자이너로 응용 프로그램 개발](/visualstudio/workflow-designer/developing-applications-with-the-workflow-designer)
+- [워크플로 디자이너로 애플리케이션 개발](/visualstudio/workflow-designer/developing-applications-with-the-workflow-designer)

@@ -2,15 +2,15 @@
 title: 예상되는 예외
 ms.date: 03/30/2017
 ms.assetid: 299a6987-ae6b-43c6-987f-12b034b583ae
-ms.openlocfilehash: a874b291202cb8c3c8752c13b357679c7fd5a556
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 24bb9b483a3f26241f895d68b763a1974b02151b
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989973"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716448"
 ---
 # <a name="expected-exceptions"></a>예상되는 예외
-이 샘플에서는 형식화된 클라이언트를 사용할 때 예상되는 예외를 catch하는 방법을 보여 줍니다. 이 샘플은 계산기 서비스를 구현 하는 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md) 을 기반으로 합니다. 이 샘플에서 클라이언트는 콘솔 응용 프로그램(.exe)이고 서비스는 IIS(인터넷 정보 서비스)를 통해 호스트됩니다.  
+이 샘플에서는 형식화된 클라이언트를 사용할 때 예상되는 예외를 catch하는 방법을 보여 줍니다. 이 샘플은 계산기 서비스를 구현 하는 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md) 을 기반으로 합니다. 이 샘플에서 클라이언트는 콘솔 애플리케이션(.exe)이고 서비스는 IIS(인터넷 정보 서비스)를 통해 호스트됩니다.  
   
 > [!NOTE]
 > 이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.  
@@ -19,7 +19,7 @@ ms.locfileid: "70989973"
   
  WCF (Windows Communication Foundation) 클라이언트의 통신 메서드에서 throw 되는 예외는 예상 된 예외 이거나 예기치 않은 예외입니다. 예기치 않은 예외에는 `OutOfMemoryException`과 같은 치명적인 실패와 `ArgumentNullException` 또는 `InvalidOperationException` 등의 프로그래밍 오류가 포함됩니다. 일반적으로 예기치 않은 오류를 처리 하는 데 유용한 방법이 없으므로 WCF 클라이언트 통신 메서드를 호출할 때 일반적으로 catch 하지 않아야 합니다.  
   
- WCF 클라이언트의 통신 메서드에서 예상 되는 예외에 `TimeoutException`는 `CommunicationException`, 및의 `CommunicationException`파생 클래스가 포함 됩니다. 이러한 오류는 WCF 클라이언트를 중단 하 고 통신 오류를 보고 하 여 안전 하 게 처리할 수 있는 통신 중에 발생 하는 문제를 의미 합니다. 어느 애플리케이션에서나 외부 요소에 의해 이런 오류가 발생할 수 있기 때문에 올바른 애플리케이션에서는 이런 예외를 catch할 수 있어야 하며, 이런 예외가 발생한 경우 복구할 수 있어야 합니다.  
+ WCF 클라이언트에 대 한 통신 메서드에서 예상 되는 예외에는 `TimeoutException`, `CommunicationException`및 `CommunicationException`의 파생 클래스가 포함 됩니다. 이러한 오류는 WCF 클라이언트를 중단 하 고 통신 오류를 보고 하 여 안전 하 게 처리할 수 있는 통신 중에 발생 하는 문제를 의미 합니다. 어느 애플리케이션에서나 외부 요소에 의해 이런 오류가 발생할 수 있기 때문에 올바른 애플리케이션에서는 이런 예외를 catch할 수 있어야 하며, 이런 예외가 발생한 경우 복구할 수 있어야 합니다.  
   
  클라이언트에서 throw할 수 있는 `CommunicationException`의 파생 클래스가 몇 가지 있습니다. 경우에 따라 애플리케이션에서 이 중 일부를 catch하여 특수 처리를 수행하고, 나머지는 `CommunicationException`으로 처리할 수도 있습니다. 보다 한정된 예외 형식을 먼저 catch한 다음 이후의 catch 절에서 `CommunicationException`을 catch하면 됩니다.  
   
@@ -76,6 +76,6 @@ Got System.TimeoutException
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\ExpectedExceptions`  

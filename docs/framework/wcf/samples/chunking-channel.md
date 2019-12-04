@@ -2,12 +2,12 @@
 title: 청크 채널
 ms.date: 03/30/2017
 ms.assetid: e4d53379-b37c-4b19-8726-9cc914d5d39f
-ms.openlocfilehash: 6bd7f1f31426c2d355b42f04ad770aac60183838
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 3811f7e7229dec1a46585a558b96f94bb202902f
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70990109"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716036"
 ---
 # <a name="chunking-channel"></a>청크 채널
 
@@ -23,7 +23,7 @@ WCF (Windows Communication Foundation)를 사용 하 여 대용량 메시지를 
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.
+> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\ChunkingChannel`
 
@@ -256,7 +256,7 @@ interface ITestService
 
 - Send에 전달되는 시간 제한은 모든 청크의 보내기를 포함하는 전체 Send 작업의 시간 제한으로 사용됩니다.
 
-- 전체 원본 메시지 본문의 버퍼링을 방지하기 위해 사용자 지정 <xref:System.Xml.XmlDictionaryWriter> 디자인이 선택되었습니다. <xref:System.Xml.XmlDictionaryReader>를 사용하여 본문에서 `message.GetReaderAtBodyContents`를 가져올 경우에는 전체 본문이 버퍼링됩니다. 대신에 <xref:System.Xml.XmlDictionaryWriter> `message.WriteBodyContents`전달 되는 사용자 지정이 있습니다. 메시지가 작성기에서 WriteBase64를 호출할 경우 작성기는 청크를 메시지에 패키지하고 내부 채널을 사용하여 보냅니다. 청크가 보내질 때까지 WriteBase64는 차단됩니다.
+- 전체 원본 메시지 본문의 버퍼링을 방지하기 위해 사용자 지정 <xref:System.Xml.XmlDictionaryWriter> 디자인이 선택되었습니다. <xref:System.Xml.XmlDictionaryReader>를 사용하여 본문에서 `message.GetReaderAtBodyContents`를 가져올 경우에는 전체 본문이 버퍼링됩니다. 대신 `message.WriteBodyContents`에 전달 되는 사용자 지정 <xref:System.Xml.XmlDictionaryWriter> 있습니다. 메시지가 작성기에서 WriteBase64를 호출할 경우 작성기는 청크를 메시지에 패키지하고 내부 채널을 사용하여 보냅니다. 청크가 보내질 때까지 WriteBase64는 차단됩니다.
 
 ## <a name="implementing-the-receive-operation"></a>Receive 작업 구현
 
@@ -282,7 +282,7 @@ interface ITestService
 
 ### <a name="onclose"></a>OnClose
 
-`OnClose`는 먼저 `stopReceive`를 `true`로 설정하여 보류 중인 `ReceiveChunkLoop`를 중지할 것을 알립니다. 그런 다음이 중지 될 `receiveStopped` 때 `ReceiveChunkLoop` 설정 되는 <xref:System.Threading.ManualResetEvent>을 기다립니다. `ReceiveChunkLoop`가 지정된 시간 제한 내에 중지한다고 가정하고 `OnClose`는 남은 시간 제한을 사용하여 `innerChannel.Close`를 호출합니다.
+`OnClose`는 먼저 `stopReceive`를 `true`로 설정하여 보류 중인 `ReceiveChunkLoop`를 중지할 것을 알립니다. 그런 다음 `ReceiveChunkLoop` 중지 될 때 설정 되는 `receiveStopped` <xref:System.Threading.ManualResetEvent>대기 합니다. `ReceiveChunkLoop`가 지정된 시간 제한 내에 중지한다고 가정하고 `OnClose`는 남은 시간 제한을 사용하여 `innerChannel.Close`를 호출합니다.
 
 ### <a name="onabort"></a>OnAbort
 
@@ -306,9 +306,9 @@ interface ITestService
 
 ## <a name="implementing-binding-element-and-binding"></a>바인딩 요소 및 바인딩 구현
 
-`ChunkingBindingElement`는 `ChunkingChannelFactory` 및 `ChunkingChannelListener`를 만드는 작업을 담당합니다. 는 `ChunkingBindingElement` t > 및 `CanBuildChannelFactory` t>`CanBuildChannelListener`의 \<t가 형식 `IDuplexSessionChannel` (청크 채널에서 지 원하는 유일한 채널)이 고 바인딩의 다른 바인딩 요소가이를 지원 하는지 확인 합니다. \< 채널 유형입니다.
+`ChunkingBindingElement`는 `ChunkingChannelFactory` 및 `ChunkingChannelListener`를 만드는 작업을 담당합니다. `ChunkingBindingElement` `CanBuildChannelFactory`\<T > `CanBuildChannelListener`\<T >가 `IDuplexSessionChannel` 형식 (청크 채널에서 지 원하는 유일한 채널)이 고 바인딩의 다른 바인딩 요소가이 채널 형식을 지원 하는지 여부를 확인 합니다.
 
-`BuildChannelFactory`\<T >은 요청 된 채널 형식을 생성할 수 있는지 먼저 확인 한 다음 청크 할 메시지 동작 목록을 가져옵니다. 자세한 내용은 다음 단원을 참조하세요. 그런 다음 새 `ChunkingChannelFactory`를 만들어 내부 채널 팩터리(`context.BuildInnerChannelFactory<IDuplexSessionChannel>`에서 반환), 메시지 동작 목록 및 버퍼링할 최대 청크 수를 전달합니다. 최대 청크 수는 `MaxBufferedChunks`에 의해 노출되는 `ChunkingBindingElement`라는 속성에서 제공됩니다.
+`BuildChannelFactory`\<T >는 먼저 요청 된 채널 형식을 생성할 수 있는지 확인 한 다음 청크 할 메시지 동작 목록을 가져옵니다. 자세한 내용은 다음 섹션을 참조하십시오. 그런 다음 새 `ChunkingChannelFactory`를 만들어 내부 채널 팩터리(`context.BuildInnerChannelFactory<IDuplexSessionChannel>`에서 반환), 메시지 동작 목록 및 버퍼링할 최대 청크 수를 전달합니다. 최대 청크 수는 `MaxBufferedChunks`에 의해 노출되는 `ChunkingBindingElement`라는 속성에서 제공됩니다.
 
 `BuildChannelListener<T>`에서도 `ChunkingChannelListener`를 만들어 내부 채널 수신기에 전달하는 구현 방법이 비슷합니다.
 
@@ -320,7 +320,7 @@ interface ITestService
 
 청크 채널은 `ChunkingBehavior` 특성을 통해 식별된 메시지만 청크합니다. `ChunkingBehavior` 클래스는 `IOperationBehavior`를 구현하며 `AddBindingParameter` 메서드 호출에 의해 구현됩니다. 이 메서드에서 `ChunkingBehavior`는 해당 `AppliesTo` 속성의 값(`InMessage`, `OutMessage` 또는 둘 다)을 확인하여 청크해야 하는 메시지를 결정합니다. 그런 다음 `OperationDescription`의 메시지 컬렉션에서 이러한 각 메시지의 동작을 가져와 `ChunkingBindingParameter`의 인스턴스 내에 포함된 문자열 컬렉션에 추가합니다. 그런 다음 이 `ChunkingBindingParameter`를 제공된 `BindingParameterCollection`에 추가합니다.
 
-바인딩의 각 바인딩 요소가 채널 팩터리나 채널 수신기를 빌드할 때 `BindingParameterCollection` 내에서 이 `BindingContext`이 해당 바인딩 요소에 전달됩니다. 의 `ChunkingBindingElement`는의 `BuildChannelFactory<T>` 구현 이며 `BuildChannelListener<T>` 에서이 `ChunkingBindingParameter` `BindingContext’`를 끌어옵니다 .`BindingParameterCollection` 그런 다음 `ChunkingBindingParameter` 내에 포함된 동작 컬렉션이 `ChunkingChannelFactory` 또는 `ChunkingChannelListener`에 전달된 다음 `ChunkingDuplexSessionChannel`에 전달됩니다.
+바인딩의 각 바인딩 요소가 채널 팩터리나 채널 수신기를 빌드할 때 `BindingParameterCollection` 내에서 이 `BindingContext`이 해당 바인딩 요소에 전달됩니다. `ChunkingBindingElement`에서 `BuildChannelFactory<T>`를 구현 하 고 `BindingContext’`s `BindingParameterCollection`에서이 `ChunkingBindingParameter`를 `BuildChannelListener<T>` 합니다. 그런 다음 `ChunkingBindingParameter` 내에 포함된 동작 컬렉션이 `ChunkingChannelFactory` 또는 `ChunkingChannelListener`에 전달된 다음 `ChunkingDuplexSessionChannel`에 전달됩니다.
 
 ## <a name="running-the-sample"></a>샘플 실행
 
@@ -342,7 +342,7 @@ interface ITestService
 
 샘플을 실행할 경우의 예상 출력은 다음과 같습니다.
 
-클라이언트
+클라이언트:
 
 ```console
 Press enter when service is available

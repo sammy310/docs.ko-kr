@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Message Contract
 ms.assetid: 5a200b78-1a46-4104-b7fb-da6dbab33893
-ms.openlocfilehash: 2115ac88c52efca09d32a870fc52905f80f6f746
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: dcdeeda0d6054c9cf6fefa31ea33d720c0c0f3f7
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045047"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716578"
 ---
 # <a name="default-message-contract"></a>기본 메시지 계약
-Default Message Contract 샘플에서는 사용자 지정 사용자 정의 메시지를 서비스 작업에 전달하고 전달받는 서비스를 보여 줍니다. 이 샘플은 형식화 된 서비스로 계산기 인터페이스를 구현 하는 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md) 을 기반으로 합니다. [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md)부분에서 사용 되는 더하기, 빼기, 곱하기 및 나누기에 대 한 개별 서비스 작업 대신이 샘플은 피연산자와 연산자를 모두 포함 하는 사용자 지정 메시지를 전달 하 고 결과를 반환 합니다. 산술 계산.  
+Default Message Contract 샘플에서는 사용자 지정 사용자 정의 메시지를 서비스 작업에 전달하고 전달받는 서비스를 보여 줍니다. 이 샘플은 형식화 된 서비스로 계산기 인터페이스를 구현 하는 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md) 을 기반으로 합니다. [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md)부분에서 사용 되는 더하기, 빼기, 곱하기 및 나누기에 대 한 개별 서비스 작업 대신이 샘플에서는 피연산자와 연산자를 모두 포함 하는 사용자 지정 메시지를 전달 하 고 산술 계산 결과를 반환 합니다.  
   
  클라이언트는 콘솔 프로그램(.exe)이고 서비스 라이브러리(.dll)는 IIS(인터넷 정보 서비스)에서 호스팅됩니다. 콘솔 창에는 클라이언트 동작이 표시됩니다.  
   
@@ -181,6 +181,6 @@ Press <ENTER> to terminate client.
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Message\Default`  

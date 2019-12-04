@@ -2,12 +2,12 @@
 title: 느슨한 형 확장 샘플
 ms.date: 03/30/2017
 ms.assetid: 56ce265b-8163-4b85-98e7-7692a12c4357
-ms.openlocfilehash: 6cfdef1d083a25999f62c23667c9c6ea00326dca
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: f3beed9b9ca1dd6b1d4bb32078e6cd35a636501c
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989785"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714877"
 ---
 # <a name="loosely-typed-extensions-sample"></a>느슨한 형 확장 샘플
 배포 개체 모델은 확장 데이터, 즉 배포 피드의 XML 표현에는 있지만 <xref:System.ServiceModel.Syndication.SyndicationFeed> 및 <xref:System.ServiceModel.Syndication.SyndicationItem>과 같은 클래스에서 명시적으로 노출되지 않는 정보로 작업할 수 있도록 풍부한 지원을 제공합니다. 이 샘플에서는 확장명 데이터로 작업하는 기본적인 기술을 보여 줍니다.  
@@ -54,15 +54,15 @@ w.w3.org/2001/XMLSchema" xmlns="">
   
  이 문서에는 다음과 같은 확장명 데이터가 포함되어 있습니다.  
   
-- `myAttribute` 요소의 `<feed>` 특성  
+- `<feed>` 요소의 `myAttribute` 특성입니다.  
   
-- `<simpleString>`요소인.  
+- `<simpleString>` 요소  
   
-- `<DataContractExtension>`요소인.  
+- `<DataContractExtension>` 요소  
   
-- `<XmlSerializerExtension>`요소인.  
+- `<XmlSerializerExtension>` 요소  
   
-- `<xElementExtension>`요소인.  
+- `<xElementExtension>` 요소  
   
 ## <a name="writing-extension-data"></a>확장명 데이터 쓰기  
  특성 확장명은 다음 샘플 코드에서와 같이 <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> 컬렉션에 항목을 추가하여 만듭니다.  
@@ -151,11 +151,11 @@ foreach (SyndicationElementExtension extension in feed2.ElementExtensions.Where<
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Syndication\LooselyTypedExtensions`  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [강력한 형식 확장명](../../../../docs/framework/wcf/samples/strongly-typed-extensions-sample.md)
 - [WCF 배포](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)

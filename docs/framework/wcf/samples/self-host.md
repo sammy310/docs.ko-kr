@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Self hosted service
 - Self Host Sample [Windows Communication Foundation]
 ms.assetid: 05e68661-1ddf-4abf-a899-9bb1b8272a5b
-ms.openlocfilehash: a1fecb0ade00604d9a6e019ec50ceca04abeb545
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 9077f2b00c97ae2a2106a50780cfd2cd9596c1ec
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044760"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716316"
 ---
 # <a name="self-host"></a>자체 호스팅
 이 샘플에서는 콘솔 애플리케이션에서 자체 호스팅 서비스를 구현하는 방법을 보여 줍니다. 이 샘플은 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md)을 기반으로 합니다. 서비스 구성 파일이 Web.config에서 App.config로 이름이 바뀌고 호스트에서 사용하는 기본 주소를 구성하도록 수정되었습니다. 서비스 소스 코드가 구성된 기본 주소를 제공하는 서비스 호스트를 만들고 여는 정적 `Main` 기능을 구현하도록 수정되었습니다. 서비스 구현이 각 작업에 대해 콘솔에 출력을 쓰도록 수정되었습니다. 클라이언트는 서비스의 올바른 엔드포인트 주소를 구성하기 위한 부분을 제외하고는 수정되지 않았습니다.  
@@ -41,7 +41,7 @@ public static void Main()
 }  
 ```  
   
- 인터넷 정보 서비스(IIS) 또는 WAS(Windows Process Activation Service)에 서비스가 호스팅된 경우 서비스의 기본 주소는 호스팅 환경에 의해 제공됩니다. 자체 호스팅의 경우에는 직접 기본 주소를 지정해야 합니다. 이 작업은 다음 샘플 `add` 구성에서 보여 주는 것 처럼 요소, [ \<baseaddresses](../../../../docs/framework/configure-apps/file-schema/wcf/baseaddresses.md)의 자식 >, [ \<호스트 >](../../../../docs/framework/configure-apps/file-schema/wcf/host.md)의 자식, [ \<서비스 >](../../../../docs/framework/configure-apps/file-schema/wcf/service.md) 자식 등을 사용 하 여 수행 됩니다.  
+ 인터넷 정보 서비스(IIS) 또는 WAS(Windows Process Activation Service)에 서비스가 호스팅된 경우 서비스의 기본 주소는 호스팅 환경에 의해 제공됩니다. 자체 호스팅의 경우에는 직접 기본 주소를 지정해야 합니다. 이 작업은 다음 샘플 구성에서 보여 주는 것 처럼 `add` 요소, [\<baseAddresses](../../../../docs/framework/configure-apps/file-schema/wcf/baseaddresses.md) [\<](../../../../docs/framework/configure-apps/file-schema/wcf/host.md)>의 자식 ( [> 서비스](../../../../docs/framework/configure-apps/file-schema/wcf/service.md)\<의 자식)을 사용 하 여 수행 됩니다.  
   
 ```xml  
 <service   
@@ -71,10 +71,10 @@ public static void Main()
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\SelfHost`  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [AppFabric 호스팅 및 지 속성 샘플](https://go.microsoft.com/fwlink/?LinkId=193961)
