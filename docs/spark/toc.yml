@@ -17,6 +17,8 @@
       href: tutorials/amazon-emr-spark-deployment.md
     - name: Databricks에 배포
       href: tutorials/databricks-deployment.md
+    - name: Structured Streaming
+      href: tutorials/streaming.md
 - name: 방법 가이드
   items:
     - name: 애플리케이션 디버그

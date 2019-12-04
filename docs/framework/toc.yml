@@ -42,8 +42,6 @@
       href: configure-apps/
     - name: .NET 네이티브로 앱 컴파일
       href: net-native/
-    - name: Windows Identity Foundation
-      href: security/
     - name: '디버깅, 추적 및 프로파일링'
       href: debug-trace-profile/
     - name: 배포
