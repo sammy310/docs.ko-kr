@@ -2,12 +2,12 @@
 title: 지속성 데이터베이스 스키마
 ms.date: 03/30/2017
 ms.assetid: 34f69f4c-df81-4da7-b281-a525a9397a5c
-ms.openlocfilehash: 65d8b2f7a6283d65823e1a186239d398ee4a530a
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 025e04acb0d9cf75ea54814274c1875f8661eb88
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038331"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802507"
 ---
 # <a name="persistence-database-schema"></a>지속성 데이터베이스 스키마
 이 항목에서는 SQL 워크플로 인스턴스 저장소에서 지원하는 공용 뷰에 대해 설명합니다.  
@@ -15,7 +15,7 @@ ms.locfileid: "70038331"
 ## <a name="instances-view"></a>인스턴스 뷰  
  **인스턴스** 뷰에는 데이터베이스의 모든 워크플로 인스턴스에 대 한 일반 정보가 포함 되어 있습니다.  
   
-|열 이름|열 유형|Description|  
+|열 이름|열 유형|설명|  
 |-----------------|-----------------|-----------------|  
 |InstanceId|UniqueIdentifier|워크플로 인스턴스의 ID입니다.|  
 |PendingTimer|DateTime|워크플로가 Delay 활동에서 차단되었으며 타이머가 만료된 후 다시 시작될 것임을 나타냅니다. 워크플로가 차단되지 않고 타이머가 만료될 때까지 기다리는 경우 이 값은 Null일 수 있습니다.|  
@@ -32,15 +32,15 @@ ms.locfileid: "70038331"
 |IsSuspended|비트|워크플로 인스턴스가 일시 중단되었는지 여부를 나타냅니다.|  
 |IsCompleted|비트|워크플로 인스턴스의 실행이 완료되었는지 여부를 나타냅니다. **참고:**  Iif **InstanceCompletionAction** 속성은 **DeleteAll**로 설정 되 고, 완료 되 면 뷰에서 인스턴스가 제거 됩니다.|  
 |EncodingOption|TinyInt|데이터 속성을 serialize하는 데 사용된 인코딩에 대해 설명합니다.<br /><br /> -0 – 인코딩 안 함<br />-1 – GzipStream|  
-|ReadWritePrimitiveDataProperties|Varbinary(max)|인스턴스가 로드될 때 워크플로 런타임에 다시 제공될 serialize된 인스턴스 데이터 속성을 포함합니다.<br /><br /> 각각의 기본 속성은 네이티브 CLR 형식이며, 이는 blob를 deserialize하는 데 특별한 어셈블리가 필요하지 않음을 의미합니다.|  
-|WriteOnlyPrimitiveDataProperties|Varbinary(max)|인스턴스가 로드될 때 워크플로 런타임에 다시 제공되지 않는 serialize된 인스턴스 데이터 속성을 포함합니다.<br /><br /> 각각의 기본 속성은 네이티브 CLR 형식이며, 이는 blob를 deserialize하는 데 특별한 어셈블리가 필요하지 않음을 의미합니다.|  
-|ReadWriteComplexDataProperties|Varbinary(max)|인스턴스가 로드될 때 워크플로 런타임에 다시 제공될 serialize된 인스턴스 데이터 속성을 포함합니다.<br /><br /> deserializer에는 이 blob에 저장된 모든 개체 형식에 대한 정보가 필요합니다.|  
-|WriteOnlyComplexDataProperties|Varbinary(max)|인스턴스가 로드될 때 워크플로 런타임에 다시 제공되지 않는 serialize된 인스턴스 데이터 속성을 포함합니다.<br /><br /> deserializer에는 이 blob에 저장된 모든 개체 형식에 대한 정보가 필요합니다.|  
+|ReadWritePrimitiveDataProperties|Varbinary(max)|인스턴스가 로드될 때 워크플로 런타임에 다시 제공될 serialize된 인스턴스 데이터 속성을 포함합니다.<br /><br /> 각각의 기본 속성은 네이티브 CLR 형식이며, 이는 blob를 역직렬화하는 데 특별한 어셈블리가 필요하지 않음을 의미합니다.|  
+|WriteOnlyPrimitiveDataProperties|Varbinary(max)|인스턴스가 로드될 때 워크플로 런타임에 다시 제공되지 않는 serialize된 인스턴스 데이터 속성을 포함합니다.<br /><br /> 각각의 기본 속성은 네이티브 CLR 형식이며, 이는 blob를 역직렬화하는 데 특별한 어셈블리가 필요하지 않음을 의미합니다.|  
+|ReadWriteComplexDataProperties|Varbinary(max)|인스턴스가 로드될 때 워크플로 런타임에 다시 제공될 serialize된 인스턴스 데이터 속성을 포함합니다.<br /><br /> 역직렬 변환기에는 이 blob에 저장된 모든 개체 형식에 대한 정보가 필요합니다.|  
+|WriteOnlyComplexDataProperties|Varbinary(max)|인스턴스가 로드될 때 워크플로 런타임에 다시 제공되지 않는 serialize된 인스턴스 데이터 속성을 포함합니다.<br /><br /> 역직렬 변환기에는 이 blob에 저장된 모든 개체 형식에 대한 정보가 필요합니다.|  
 |IdentityName|Nvarchar(max)|워크플로 정의의 이름입니다.|  
 |IdentityPackage|Nvarchar(max)|워크플로가 만들어질 때 지정된 패키지 정보입니다(예:어셈블리 이름).|  
 |빌드|BigInt|워크플로 버전의 빌드 번호입니다.|  
-|최대|BigInt|워크플로 버전의 주 번호입니다.|  
-|최소|BigInt|워크플로 버전의 부 번호입니다.|  
+|중요한 변경|BigInt|워크플로 버전의 주 번호입니다.|  
+|사소한 변경|BigInt|워크플로 버전의 부 번호입니다.|  
 |Revision|BigInt|워크플로 버전의 개정 번호입니다.|  
   
 > [!CAUTION]
@@ -49,7 +49,7 @@ ms.locfileid: "70038331"
 ## <a name="servicedeployments-view"></a>ServiceDeployments 뷰  
  **Servicedeployments** 뷰에는 모든 웹 (IIS/WAS) 호스팅 워크플로 서비스에 대 한 배포 정보가 포함 되어 있습니다. 웹 호스트 되는 각 워크플로 인스턴스에는이 뷰의 행을 참조 하는 **Servicedeploymentid** 가 포함 됩니다.  
   
-|열 이름|열 유형|Description|  
+|열 이름|열 유형|설명|  
 |-----------------|-----------------|-----------------|  
 |ServiceDeploymentId|BigInt|이 뷰의 기본 키입니다.|  
 |SiteName|Nvarchar(max)|워크플로 서비스 (예: **기본 웹 사이트**)를 포함 하는 사이트의 이름을 나타냅니다.|  
@@ -67,7 +67,7 @@ ms.locfileid: "70038331"
 ## <a name="instancepromotedproperties-view"></a>InstancePromotedProperties 뷰  
  **InstancePromotedProperties** 보기에는 사용자가 지정한 모든 승격 된 속성에 대 한 정보가 포함 되어 있습니다. 승격된 속성은 사용자가 인스턴스를 검색할 때 쿼리에 사용할 수 있는 고급 속성 역할을 합니다.  예를 들어 사용자는 항상 **Value1** 열에 주문 비용을 저장 하는 PurchaseOrder 승격을 추가할 수 있습니다. 그러면 사용자는 가격이 특정 값을 초과하는 모든 구매 주문을 쿼리할 수 있습니다.  
   
-|열 유형|열 유형|Description|  
+|열 유형|열 유형|설명|  
 |-|-|-|  
 |InstanceId|UniqueIdentifier|워크플로 인스턴스의 ID입니다.|  
 |EncodingOption|TinyInt|승격된 이진 속성을 serialize하는 데 사용된 인코딩에 대해 설명합니다.<br /><br /> -0 – 인코딩 안 함<br />-1 – GZipStream|  
@@ -78,4 +78,4 @@ ms.locfileid: "70038331"
  InstancePromotedProperties 뷰는 스키마 바인딩 뷰이며, 이는 이 뷰에 대한 쿼리를 최적화하기 위해 사용자가 하나 이상의 열에 대한 인덱스를 추가할 수 있음을 의미합니다.  
   
 > [!NOTE]
-> 인덱싱된 뷰에는 추가 스토리지가 필요하며 처리 오버헤드가 추가됩니다. 자세한 내용은 [SQL Server 2008 인덱싱된 뷰를 사용 하 여 성능 향상](https://go.microsoft.com/fwlink/?LinkId=179529) 을 참조 하세요.
+> 인덱싱된 뷰에는 추가 스토리지가 필요하며 처리 오버헤드가 추가됩니다. 자세한 내용은 [SQL Server 2008 인덱싱된 뷰를 사용 하 여 성능 향상](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/dd171921(v=sql.100)) 을 참조 하세요.

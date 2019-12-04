@@ -2,12 +2,12 @@
 title: 워크플로에서 OData 피드 사용-WF
 ms.date: 03/30/2017
 ms.assetid: 1b26617c-53e9-476a-81af-675c36d95919
-ms.openlocfilehash: e7cfa138a01719988586f9dce0a9009bea643076
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: c9780200d9b7c7bc89797b3c16b22bc38440fccc
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989764"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802663"
 ---
 # <a name="consuming-odata-feeds-from-a-workflow"></a>워크플로에서 OData 피드 사용
 
@@ -15,7 +15,7 @@ WCF Data Services는 Representational State Transfer (REST)의 의미 체계를 
 
 ## <a name="using-the-sample-northwind-odata-service"></a>Sample Northwind OData 서비스 사용
 
-이 항목의 예제에서는에 <https://services.odata.org/Northwind/Northwind.svc/>있는 샘플 Northwind 데이터 서비스를 사용 합니다. 이 서비스는 [OData SDK](https://go.microsoft.com/fwlink/?LinkID=185248) 의 일부로 제공되며 샘플 Northwind 데이터베이스에 읽기 전용으로 액세스할 수 있게 해줍니다. 쓰기 권한이 필요하거나 로컬 WCF 데이터 서비스가 필요한 경우 [퀵 스타트(WCF Data Services)](https://go.microsoft.com/fwlink/?LinkID=131076) 의 단계를 수행하여 Northwind 데이터베이스에 액세스할 수 있게 해 주는 로컬 OData 서비스를 만들 수 있습니다. 퀵 스타트를 따르는 경우 이 항목의 예제 코드에 제공된 URI를 로컬 URI로 바꿉니다.
+이 항목의 예제에서는 <https://services.odata.org/Northwind/Northwind.svc/>에 있는 샘플 Northwind 데이터 서비스를 사용 합니다. 이 서비스는 [OData SDK](https://www.odata.org/wp-content/uploads/sites/21/odatasdkcodesamples.zip) 의 일부로 제공되며 샘플 Northwind 데이터베이스에 읽기 전용으로 액세스할 수 있게 해줍니다. 쓰기 권한이 필요하거나 로컬 WCF 데이터 서비스가 필요한 경우 [퀵 스타트(WCF Data Services)](../data/wcf/quickstart-wcf-data-services.md) 의 단계를 수행하여 Northwind 데이터베이스에 액세스할 수 있게 해 주는 로컬 OData 서비스를 만들 수 있습니다. 퀵 스타트를 따르는 경우 이 항목의 예제 코드에 제공된 URI를 로컬 URI로 바꿉니다.
 
 ## <a name="consuming-an-odata-feed-using-the-client-libraries"></a>클라이언트 라이브러리를 사용 하 여 OData 피드 사용
 
@@ -34,7 +34,7 @@ Northwind 클라이언트 라이브러리를 생성 하려면 Visual Studio 2012
 
 ### <a name="using-asynchronous-methods"></a>비동기 메서드 사용
 
-웹을 통해 리소스에 액세스할 때 발생할 수 있는 지연 문제를 해결하려면 WCF Data Services에 비동기적으로 액세스하는 것이 좋습니다. WCF Data Services 클라이언트 라이브러리에는 쿼리를 호출 하는 비동기 메서드가 포함 되어 있으며 WF (Windows Workflow Foundation <xref:System.Activities.AsyncCodeActivity> )는 비동기 작업을 작성 하기 위한 클래스를 제공 합니다. <xref:System.Activities.AsyncCodeActivity>파생 작업은 비동기 메서드를 포함 하는 .NET Framework 클래스를 활용 하기 위해 작성 하거나 비동기적으로 실행 되는 코드를 메서드에 추가 하 고 대리자를 사용 하 여 호출할 수 있습니다. 이 단원에서는 <xref:System.Activities.AsyncCodeActivity> 파생 활동의 두 가지 예제를 제공합니다. 한 예제에서는 WCF Data Services 클라이언트 라이브러리의 비동기 메서드를 사용하고 다른 예제에서는 대리자를 사용합니다.
+웹을 통해 리소스에 액세스할 때 발생할 수 있는 지연 문제를 해결하려면 WCF Data Services에 비동기적으로 액세스하는 것이 좋습니다. WCF Data Services 클라이언트 라이브러리에는 쿼리를 호출 하는 비동기 메서드가 포함 되어 있으며 WF (Windows Workflow Foundation)는 비동기 작업을 작성 하기 위한 <xref:System.Activities.AsyncCodeActivity> 클래스를 제공 합니다. 비동기 메서드를 사용 하는 .NET Framework 클래스를 활용 하도록 파생 작업을 작성할 수 있습니다. 또는 비동기적으로 실행 되는 코드는 메서드에 배치 하 고 대리자를 사용 하 여 호출할 수 있습니다. <xref:System.Activities.AsyncCodeActivity> 이 단원에서는 <xref:System.Activities.AsyncCodeActivity> 파생 활동의 두 가지 예제를 제공합니다. 한 예제에서는 WCF Data Services 클라이언트 라이브러리의 비동기 메서드를 사용하고 다른 예제에서는 대리자를 사용합니다.
 
 > [!NOTE]
 > 자세한 내용은 [비동기 작업 (WCF Data Services)](../data/wcf/asynchronous-operations-wcf-data-services.md) 및 [비동기 작업 만들기](creating-asynchronous-activities-in-wf.md)를 참조 하세요.
@@ -66,18 +66,18 @@ Calling WCF Data Service...
 > [!NOTE]
 > OData 서버에 연결할 수 없는 경우 다음 예외와 유사한 예외가 발생합니다.
 >
-> 처리되지 않은 예외: System.InvalidOperationException: 이 요청을 처리 하는 동안 오류가 발생 했습니다. ---> System.Net.WebException: 원격 서버---에 연결할 수 없습니다. > 연결 된 당사자가 일정 시간 후에 적절 하 게 응답 하지 않거나 연결 된 호스트가 응답 하지 못해 연결을 설정 하지 못해 연결 하지 못했습니다.
+> 처리되지 않은 예외: System.InvalidOperationException: 이 요청을 처리하는 동안 오류가 발생했습니다. ---> System.Net.WebException: 원격 서버에 연결할 수 없습니다. ---> System.Net.Sockets.SocketException: 연결된 구성원으로부터 응답이 없어 연결하지 못했거나, 호스트로부터 응답이 없어 연결이 끊어졌습니다.
 
 쿼리에서 반환된 데이터를 추가로 처리해야 하는 경우 활동의 <xref:System.Activities.AsyncCodeActivity%601.EndExecute%2A> 재정의에서 이를 수행할 수 있습니다. <xref:System.Activities.AsyncCodeActivity%601.BeginExecute%2A> 및 <xref:System.Activities.AsyncCodeActivity%601.EndExecute%2A> 는 워크플로 스레드를 사용하여 호출되며 이러한 재정의의 모든 코드는 비동기적으로 실행되지 않습니다. 추가 처리가 광범위하거나 오래 실행되는 경우나 쿼리 결과가 페이징되는 경우 다음 단원에서 설명하는 방법을 고려해야 합니다. 이 방법에서는 대리자를 사용하여 쿼리를 실행하고 비동기적으로 추가 처리를 수행합니다.
 
 ### <a name="using-a-delegate"></a>대리자 사용
 
-기반 활동은 .NET Framework 클래스 <xref:System.Activities.AsyncCodeActivity>의 비동기 메서드를 호출 하는 것 외에도 해당 메서드 중 하나에서 비동기 논리를 정의할 수 있습니다. 이 메서드는 활동의 <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> 재정의에서 대리자를 사용하여 지정됩니다. 메서드가 반환될 때 런타임에서 활동의 <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> 재정의를 호출합니다. 워크플로에서 OData 서비스를 호출할 때 이 메서드를 사용하여 서비스를 쿼리하고 추가 처리를 제공할 수 있습니다.
+<xref:System.Activities.AsyncCodeActivity>기반 활동은 .NET Framework 클래스의 비동기 메서드를 호출 하는 것 외에도 해당 메서드 중 하나에서 비동기 논리를 정의할 수 있습니다. 이 메서드는 활동의 <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> 재정의에서 대리자를 사용하여 지정됩니다. 메서드가 반환될 때 런타임에서 활동의 <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> 재정의를 호출합니다. 워크플로에서 OData 서비스를 호출할 때 이 메서드를 사용하여 서비스를 쿼리하고 추가 처리를 제공할 수 있습니다.
 
 다음 예제에서는 `ListCustomers` 활동을 정의합니다. 이 활동은 샘플 Northwind 데이터 서비스를 쿼리하고 Northwind 데이터베이스의 모든 고객이 포함된 `List<Customer>` 를 반환합니다. 비동기 작업은 `GetCustomers` 메서드에서 수행됩니다. 이 메서드는 서비스에서 모든 고객을 쿼리하여 `List<Customer>`에 복사합니다. 그런 다음 결과가 페이징되는지 확인하고 페이징되면 서비스에서 결과의 다음 페이지를 쿼리하여 목록에 추가하고 모든 고객 데이터가 검색될 때까지 계속합니다.
 
 > [!NOTE]
-> WCF Data Services에서 페이징 [하는 방법에 대 한 자세한 내용은 방법: 페이지 단위 결과를 로드 합니다](../data/wcf/how-to-load-paged-results-wcf-data-services.md)(WCF Data Services).
+> WCF Data Services에서 페이징 하는 방법에 대 한 자세한 내용은 [방법: 페이지 단위 결과 로드 (WCF Data Services)](../data/wcf/how-to-load-paged-results-wcf-data-services.md)를 참조 하세요.
 
 모든 고객이 추가되면 목록이 반환됩니다. `GetCustomers` 메서드는 활동의 <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> 재정의에 지정됩니다. 메서드에 반환 값이 있으므로 `Func<string, List<Customer>>` 가 메서드를 지정하기 위해 만들어집니다.
 
@@ -154,4 +154,4 @@ xmlns="http://www.w3.org/2005/Atom">
 ...
 ```
 
-이 예제에서는 워크플로 응용 프로그램 작성자가 OData 서비스에서 반환된 원시 데이터를 사용하는 데 사용할 수 있는 한 가지 방법을 제공합니다. Uri를 사용 하 여 WCF Data Services 액세스 하는 방법에 대 한 자세한 내용은 [데이터 서비스 리소스 (WCF Data Services)](../data/wcf/accessing-data-service-resources-wcf-data-services.md) 및 [OData에 액세스를 참조 하세요. URI 규칙](https://go.microsoft.com/fwlink/?LinkId=185564).
+이 예제에서는 워크플로 애플리케이션 작성자가 OData 서비스에서 반환된 원시 데이터를 사용하는 데 사용할 수 있는 한 가지 방법을 제공합니다. Uri를 사용 하 여 WCF Data Services 액세스 하는 방법에 대 한 자세한 내용은 [데이터 서비스 리소스에 액세스 (WCF Data Services)](../data/wcf/accessing-data-service-resources-wcf-data-services.md) 및 [OData: URI 규칙](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/)을 참조 하세요.

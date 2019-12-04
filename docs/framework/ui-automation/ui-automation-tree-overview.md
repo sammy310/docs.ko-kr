@@ -5,20 +5,20 @@ helpviewer_keywords:
 - automation tree
 - UI Automation, tree
 ms.assetid: 03b98058-bdb3-47a0-8ff7-45e6cdf67166
-ms.openlocfilehash: adb1d10e659254b5fa326e7c598107d768aa2685
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: d1edbb82e0d5d6a6275c09646fbf8e54b4ff90df
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71040402"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74800287"
 ---
 # <a name="ui-automation-tree-overview"></a>UI 자동화 트리 개요
 > [!NOTE]
-> 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. 에 대 한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [최신 정보는 Windows Automation API: UI 자동화](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조하세요.  
   
  보조 기술 제품 및 테스트 스크립트가 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리를 탐색하여 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 및 요소에 대한 정보를 수집합니다.  
   
- 트리 내에는 현재 데스크톱을 나타내고 해당<xref:System.Windows.Automation.AutomationElement.RootElement%2A>자식 요소가 응용 프로그램 창을 나타내는 루트 요소 ()가 있습니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이러한 자식 요소에는 메뉴, 단추, 도구 모음, 목록 상자 등과 같은 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 조각을 나타내는 요소가 각각 포함될 수 있습니다. 따라서 이러한 요소에 목록 항목 등과 같은 요소가 포함될 수 있습니다.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 내에는 현재 데스크톱을 나타내고 해당 자식 요소가 응용 프로그램 창을 나타내는 루트 요소 (<xref:System.Windows.Automation.AutomationElement.RootElement%2A>)가 있습니다. 이러한 자식 요소에는 메뉴, 단추, 도구 모음, 목록 상자 등과 같은 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 조각을 나타내는 요소가 각각 포함될 수 있습니다. 따라서 이러한 요소에 목록 항목 등과 같은 요소가 포함될 수 있습니다.  
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리는 고정된 구조가 아니며 수많은 요소가 포함될 수 있기 때문에 트리 전체가 표시되는 경우는 드뭅니다. 트리의 일부는 필요 시에 빌드되며 요소가 추가, 이동 또는 제거될 때 변경될 수 있습니다.  
   
@@ -49,12 +49,12 @@ ms.locfileid: "71040402"
  컨트롤 뷰는 <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsControlElement%2A> 속성이 `true`로 설정된 요소를 검색하거나 <xref:System.Windows.Automation.TreeWalker.ControlViewWalker>를 통해 트리를 탐색하여 표시할 수 있습니다.  
   
 <a name="uiautomation_content_view"></a>   
-### <a name="content-view"></a>콘텐츠 뷰  
+### <a name="content-view"></a>콘텐츠 보기  
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]의 콘텐츠 뷰는 컨트롤 뷰의 하위 집합입니다. 여기에는 키보드 포커스와 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 항목의 레이블이 아닌 일부 텍스트를 받을 수 있는 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 항목을 비롯하여, 사용자 인터페이스의 실제 정보를 전달하는 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 항목이 포함됩니다. 예를 들어, 드롭다운 콤보 상자의 값은 최종 사용자가 사용하는 정보를 나타내므로 콘텐츠 뷰에 나타납니다. 콘텐츠 뷰에서, 콤보 상자와 목록 상자 둘 다 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 항목의 컬렉션으로 표시되며 하나 또는 둘 이상의 항목을 선택할 수 있습니다. 상자 하나는 항상 열려 있고 다른 하나를 확장하고 축소할 수 있다는 점은 콘텐츠 뷰와 관련이 없습니다. 이 뷰는 사용자에게 표시되는 데이터 또는 내용을 보여주도록 설계되어 있기 때문입니다.  
   
  콘텐츠 뷰는 <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsContentElement%2A> 속성이 `true`로 설정된 요소를 검색하거나 <xref:System.Windows.Automation.TreeWalker.ContentViewWalker>를 통해 트리를 탐색하여 표시할 수 있습니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Windows.Automation.AutomationElement>
 - [UI 자동화 개요](ui-automation-overview.md)

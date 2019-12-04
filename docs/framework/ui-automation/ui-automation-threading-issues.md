@@ -5,18 +5,18 @@ helpviewer_keywords:
 - UI Automation, threading issues
 - threading issues with UI Automation
 ms.assetid: 0ab8d42c-5b8b-481b-b788-2caecc2f0191
-ms.openlocfilehash: f4820d2db6275e3c1ae9b55754b8cb6fec6fcc56
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8dc21a680a19933e9db8d52a0e6b7e6ffdd333f8
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69954058"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74800832"
 ---
 # <a name="ui-automation-threading-issues"></a>UI 자동화 스레딩 문제
 > [!NOTE]
-> 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. 에 대 한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [최신 정보는 Windows Automation API: UI 자동화](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조하세요.  
   
- [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 가 Windows 메시지를 사용하는 방식 때문에 클라이언트 응용 프로그램이 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 스레드에서 자체 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 와 상호 작용을 시도할 때 충돌이 발생할 수 있습니다. 이러한 충돌로 인해 성능이 매우 저하되거나 애플리케이션의 응답이 중지될 수 있습니다.  
+ [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 가 Windows 메시지를 사용하는 방식 때문에 클라이언트 애플리케이션이 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 스레드에서 자체 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 와 상호 작용을 시도할 때 충돌이 발생할 수 있습니다. 이러한 충돌로 인해 성능이 매우 저하되거나 애플리케이션의 응답이 중지될 수 있습니다.  
   
  클라이언트 애플리케이션이 데스크톱의 모든 요소와 상호 작용하도록 구성된 경우 자체 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]를 포함하여 별도 스레드의 모든 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 를 호출해야 합니다. 여기에는 요소 찾기(예: <xref:System.Windows.Automation.TreeWalker> 또는 <xref:System.Windows.Automation.AutomationElement.FindAll%2A> 메서드를 사용하여 찾기)와 컨트롤 패턴 사용이 포함됩니다.  
   

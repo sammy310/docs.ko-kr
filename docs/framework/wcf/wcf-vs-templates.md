@@ -2,12 +2,12 @@
 title: WCF Visual Studio 템플릿
 ms.date: 03/30/2017
 ms.assetid: 6a608575-3535-4190-89da-911e24c8374f
-ms.openlocfilehash: 1b4a600e4ed19b967bcaeb6d880ea181b7c2d61f
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: ec73036921632bc855e79239f1fc578587de7ca3
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197197"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802351"
 ---
 # <a name="wcf-visual-studio-templates"></a>WCF Visual Studio 템플릿
 WCF (Windows Communication Foundation) Visual Studio 템플릿은 Visual Studio에서 WCF 서비스 및 주변 응용 프로그램을 신속 하 게 빌드하기 위해 사용할 수 있는 미리 정의 된 프로젝트 및 항목 템플릿입니다.  
@@ -72,7 +72,7 @@ WCF (Windows Communication Foundation) Visual Studio 템플릿은 Visual Studio�
  피드의 주소를 변경 하는 경우에는 **디버그** 탭 에서도 주소를 변경 해야 합니다. 이렇게 하지 않으면 Internet Explorer는 기본 주소에서 피드를 열려고 시도 하 고 실패 합니다.  
   
 ### <a name="ajax-enabled-wcf-service-item-template"></a>AJAX 사용 WCF 서비스 항목 템플릿  
- 이 템플릿은 AJAX 컨트롤을 WCF 서비스로 노출 합니다. AJAX 컨트롤에 대 한 자세한 내용은 [ajax 컨트롤 설명서](https://go.microsoft.com/fwlink/?LinkId=96717)를 참조 하세요.  
+ 이 템플릿은 AJAX 컨트롤을 WCF 서비스로 노출 합니다. AJAX 컨트롤에 대 한 자세한 내용은 [ajax 컨트롤 설명서](https://docs.microsoft.com/aspnet/ajax/)를 참조 하세요.  
   
 ### <a name="silverlight-enabled-wcf-service-item-template"></a>Silverlight 사용 WCF 서비스 항목 템플릿  
  이 템플릿은 Silverlight 클라이언트 또는 프런트 엔드에 데이터를 제공하는 웹 서비스를 만듭니다. 웹 사이트 또는 웹 응용 프로그램 프로젝트에 템플릿을 추가 하 여 WCF 서비스를 만들 수 있습니다. 여기에는 Silverlight 클라이언트와의 통신을 지 원하는 서비스 코드와 구성이 포함 됩니다. 그런 다음 **서비스 참조 추가** 를 사용 하 여 서비스의 클라이언트 프록시를 클라이언트에 추가 하 고 silverlight 클라이언트와 SILVERLIGHT 사용 WCF 서비스 간에 데이터를 교환할 수 있습니다.  

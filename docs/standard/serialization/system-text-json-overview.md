@@ -9,16 +9,16 @@ helpviewer_keywords:
 - serialization
 - objects, serializing
 ms.assetid: 4d1111c0-9447-4231-a997-96a2b74b3453
-ms.openlocfilehash: 5ce98a7908470a402779436db43333d46f5101fc
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: b43c3f6fd8ca56aaa99fffd40317920ee7600a2c
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72180150"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802715"
 ---
 # <a name="json-serialization-in-net---overview"></a>.NET의 JSON serialization-개요
 
-@No__t-0 네임 스페이스는 JavaScript Object Notation (JSON)로 serialize 및 deserialize 하는 기능을 제공 합니다.
+`System.Text.Json` 네임 스페이스는 JSON (JavaScript Object Notation)로 serialize 및 deserialize 하는 기능을 제공 합니다.
 
 라이브러리 디자인은 광범위 한 기능 집합에 대 한 높은 성능 및 낮은 메모리 할당을 강조 합니다. UTF-8 지원은 UTF-8로 인코딩된 JSON 텍스트를 읽고 쓰는 프로세스를 최적화 합니다 .이는 웹의 데이터와 디스크의 파일에 대해 가장 널리 알려진 인코딩입니다.
 
@@ -35,10 +35,10 @@ ms.locfileid: "72180150"
 ## <a name="additional-resources"></a>추가 자료
 
 * [라이브러리를 사용 하는 방법](system-text-json-how-to.md)
-* [소스 코드](https://github.com/dotnet/corefx/tree/master/src/System.Text.Json)
+* [소스 코드](https://github.com/dotnet/runtime/tree/master/src/libraries/System.Text.Json)
 * [API 참조](xref:System.Text.Json)
-* [로드맵](https://github.com/dotnet/corefx/blob/master/src/System.Text.Json/roadmap/README.md)
+* [로드맵](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Text.Json/roadmap/README.md)
 * Dotnet/corefx 리포지토리의 GitHub 문제
-  * [System.object의 개발에 대 한 토론](https://github.com/dotnet/corefx/issues/33115)
-  * [모든 System.web. Json 문제](https://github.com/dotnet/corefx/issues?q=is%3Aopen+is%3Aissue+label%3Aarea-System.Text.Json)
-  * [Json 이라는 레이블이 지정 된 system.web 문제-doc](https://github.com/dotnet/corefx/labels/json-functionality-doc)
+  * [System.object의 개발에 대 한 토론](https://github.com/dotnet/corefx/issues/33115) <!-- TODO: Issues are still not moved to the new repo-->
+  * [모든 System.web. Json 문제](https://github.com/dotnet/runtime/issues?q=is%3Aopen+is%3Aissue+label%3Aarea-System.Text.Json)
+  * [Json 이라는 레이블이 지정 된 system.web 문제-doc](https://github.com/dotnet/runtime/labels/json-functionality-doc)

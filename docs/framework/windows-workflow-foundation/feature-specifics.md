@@ -2,12 +2,12 @@
 title: Windows Workflow Foundation 기능 특성
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
-ms.openlocfilehash: 0c312eed1a5ba064771e7cc4c260b43d97b16315
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 869d6108edaa7f32101b6fe8d077e4eba7eef6b5
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141874"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802598"
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Windows Workflow Foundation 기능 특성
 
@@ -95,15 +95,15 @@ WCF 구성 스키마는 복잡 하며 사용자에 게 다양 한 기능을 찾�
 
 ### <a name="getting-started"></a>시작
 
-- [WCF 4.0에 대 한 개발자 가이드](https://go.microsoft.com/fwlink/?LinkId=204940)
+- [WCF 4.0에 대 한 개발자 가이드](https://docs.microsoft.com/previous-versions/dotnet/articles/ee354381(v=msdn.10))
 
-- [구성 채널 팩터리](https://go.microsoft.com/fwlink/?LinkId=204941)
+- [구성 채널 팩터리](xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601)
 
-- [표준 끝점 요소](https://go.microsoft.com/fwlink/?LinkId=204942)
+- [표준 끝점 요소](xref:System.ServiceModel.Configuration.StandardEndpointElement)
 
-- [.NET Framework 4의 서비스 구성 개선](https://go.microsoft.com/fwlink/?LinkId=204943)
+- [.NET Framework 4의 서비스 구성 개선](https://blogs.msdn.microsoft.com/endpoint/2009/06/30/service-configuration-improvements-in-net-4/)
 
-- [.NET 4의 일반적인 사용자 오류: WF/WCF 서비스 구성 이름을 잘못 사용 했습니다.](https://go.microsoft.com/fwlink/?LinkId=204944)
+- [.NET 4의 일반적인 사용자 오류: WF/WCF 서비스 구성 이름을 잘못 사용 했습니다.](https://blogs.msdn.microsoft.com/endpoint/2009/11/09/common-user-mistake-in-net-4-mistyping-the-wfwcf-service-configuration-name/)
 
 ### <a name="simplified-configuration-scenarios"></a>단순화된 구성 시나리오
 
@@ -125,11 +125,11 @@ WCF 구성 스키마는 복잡 하며 사용자에 게 다양 한 기능을 찾�
 
 ### <a name="getting-started"></a>시작
 
-- [데이터 계약 확인자 API 설명서](https://go.microsoft.com/fwlink/?LinkId=204946)
+- [데이터 계약 확인자 API 설명서](xref:System.Runtime.Serialization.DataContractResolver)
 
-- [데이터 계약 확인자 소개](https://go.microsoft.com/fwlink/?LinkId=204947)
+- [데이터 계약 확인자 소개](https://blogs.msdn.microsoft.com/youssefm/2009/06/05/configuring-known-types-dynamically-introducing-the-datacontractresolver/)
 
-- 샘플:
+- 예제:
 
   - [DataContractResolver](../wcf/samples/datacontractresolver.md)
 
@@ -161,7 +161,7 @@ WCF 구성 스키마는 복잡 하며 사용자에 게 다양 한 기능을 찾�
 
   - <xref:System.Activities.Statements.FlowSwitch%601>
 
-- 샘플:
+- 예제:
 
   - [Flowchart 작업에서 TryCatch를 사용하여 오류 처리](./samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)
 
@@ -195,7 +195,7 @@ WCF 구성 스키마는 복잡 하며 사용자에 게 다양 한 기능을 찾�
 
 - Visual Studio 2012에서 워크플로 콘솔 응용 프로그램을 만듭니다. Workflow Designer에서 절차 작업을 추가합니다.
 
-- 샘플:
+- 예제:
 
   - [채용 프로세스](./samples/hiring-process.md)
 
@@ -247,7 +247,7 @@ WCF 구성 스키마는 복잡 하며 사용자에 게 다양 한 기능을 찾�
 
 ## <a name="pick-activity"></a>Pick 작업
 
-<xref:System.Activities.Statements.Pick> 작업은 WF에서 이벤트 기반 제어 흐름 모델링을 제공합니다. <xref:System.Activities.Statements.Pick>에는 각 분기가 실행되기 전에 특정 이벤트의 발생을 기다리는 많은 분기가 포함되어 있습니다. 이 설치에서 <xref:System.Activities.Statements.Pick>은 작업이 수신 대기 중인 이벤트 집합 중 하나만 실행하는 <xref:System.Activities.Statements.Switch%601>와 유사하게 동작합니다. 각 분기는 이벤트 기반 이며, 발생 하는 이벤트는 해당 분기를 먼저 실행 합니다. 다른 모든 분기는 이벤트 수신 대기를 취소 하 고 중지 합니다.
+<xref:System.Activities.Statements.Pick> 작업은 WF에서 이벤트 기반 제어 흐름 모델링을 제공합니다. <xref:System.Activities.Statements.Pick>에는 각 분기가 실행되기 전에 특정 이벤트의 발생을 기다리는 많은 분기가 포함되어 있습니다. 이 설치에서 <xref:System.Activities.Statements.Pick>은 작업이 수신 대기 중인 이벤트 집합 중 하나만 실행하는 <xref:System.Activities.Statements.Switch%601>와 유사하게 동작합니다. 각 분기는 이벤트 구동 방식이며 처음 발생하는 이벤트는 해당 분기를 실행합니다. 다른 분기는 모두 이벤트 수신 대기를 취소하고 중지합니다.
 
 ### <a name="getting-started"></a>시작
 
@@ -287,7 +287,7 @@ WCF 구성 스키마는 복잡 하며 사용자에 게 다양 한 기능을 찾�
 
 2. 샘플: [Routing Services &#91;WCF 샘플&#93; ](../wcf/samples/routing-services.md)
 
-3. 블로그: [라우팅 규칙](https://go.microsoft.com/fwlink/?LinkId=204956)
+3. 블로그: [라우팅 규칙](https://blogs.msdn.microsoft.com/RoutingRules/)
 
 ### <a name="routing-scenarios"></a>라우팅 시나리오
 
@@ -325,7 +325,7 @@ WCF Discovery는 응용 프로그램 인프라에 검색 메커니즘을 통합 
 
 서비스를 사용할 수 있게 될 시기를 알 수 없기 때문에 개발자가 엔드포인트를 하드 코딩하는 대신 런타임에 서비스를 선택하려고 합니다. 애플리케이션 구성 요소 간에 분리, 견고성 및 자동 구성이 더 필요합니다.
 
-## <a name="tracking"></a>추적
+## <a name="tracking"></a>Tracking
 
 워크플로 추적을 통해 워크플로 인스턴스 실행에 대 한 통찰력을 제공 합니다. 워크플로 인스턴스 수준에서 워크플로 및 워크플로 내의 활동이 실행 될 때 추적 이벤트를 내보냅니다. 추적 레코드를 구독하려면 워크플로 추적 참가자를 워크플로 호스트에 추가해야 합니다. 추적 레코드는 추적 프로필을 사용하여 필터링됩니다. .NET Framework는 ETW (ETW(Windows용 이벤트 추적)) 추적 참가자를 제공 하며, 기본 프로필은 machine.config 파일에 설치 됩니다.
 

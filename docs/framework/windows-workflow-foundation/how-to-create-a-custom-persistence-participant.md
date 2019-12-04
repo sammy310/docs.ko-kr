@@ -1,16 +1,16 @@
 ---
-title: '방법: 사용자 지정 지속성 참가자 만들기'
+title: '방법: 사용자 지정 지속성 참석자 만들기'
 ms.date: 03/30/2017
 ms.assetid: 1d9cc47a-8966-4286-94d5-4221403d9c06
-ms.openlocfilehash: 47283375b618422d91a6279ee9049fae469f540a
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 0e61395cb59a7d162668445d23241e3ff562d67b
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989675"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802546"
 ---
-# <a name="how-to-create-a-custom-persistence-participant"></a>방법: 사용자 지정 지속성 참가자 만들기
-다음 절차에서는 지속성 참석자를 만드는 단계에 대해 설명합니다. 지 속성 참가자의 샘플 구현에 대 한 내용은 지 속성 샘플 및 [저장소 확장성](store-extensibility.md) [에 참여](https://go.microsoft.com/fwlink/?LinkID=177735) 항목을 참조 하세요.  
+# <a name="how-to-create-a-custom-persistence-participant"></a>방법: 사용자 지정 지속성 참석자 만들기
+다음 절차에서는 지속성 참석자를 만드는 단계에 대해 설명합니다. 지 속성 참가자의 샘플 구현에 대 한 내용은 지 속성 샘플 및 [저장소 확장성](store-extensibility.md) [에 참여](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd699769(v=vs.100)) 항목을 참조 하세요.  
   
 1. <xref:System.Activities.Persistence.PersistenceParticipant> 또는 <xref:System.Activities.Persistence.PersistenceIOParticipant> 클래스에서 파생되는 클래스를 만듭니다. PersistenceIOParticipant 클래스는 i/o 작업에 참여할 수 있는 것 외에도 PersistenceParticipant 클래스와 동일한 확장 요소를 제공 합니다. 다음 단계 중 하나 이상을 수행합니다.  
   

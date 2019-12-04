@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: c1676cca-3f1a-41ec-b469-9029566074fc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 041fc89ba319edb63af3aeea43dc581f59323906
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: b3f3d035ebf6472788e2c7d6e11cb1a39708367b
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204659"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74800334"
 ---
 # <a name="net-framework-performance"></a>.NET Framework 성능
 성능이 우수한 앱을 만들려면 앱의 다른 모든 기능을 디자인하는 것처럼 성능을 디자인하고 계획해야 합니다. 앱의 성능을 측정할 수 있도록 Microsoft에서 제공하는 도구를 사용하고 필요한 경우 메모리 사용, 코드 처리량 및 응답성을 향상시킬 수 있습니다. 이 항목에는 Microsoft에서 제공하는 성능 분석 도구가 나열되어 있으며, 앱 개발의 특정 영역에 대한 성능을 설명하는 다른 항목의 링크가 제공되어 있습니다.  
@@ -33,9 +33,9 @@ ms.locfileid: "74204659"
 |도구|설명|  
 |----------|-----------------|  
 |Visual Studio 성능 분석|Windows 운영 체제를 실행하는 컴퓨터에 배포할 .NET Framework 앱의 CPU 사용률을 분석하는 데 사용합니다.<br /><br /> 이 도구는 Visual Studio에서 프로젝트를 연 후 **디버그** 메뉴에서 사용할 수 있습니다. 자세한 내용은 [성능 탐색기](/visualstudio/profiling/performance-explorer)를 참조하세요. **참고:** Windows Phone을 대상으로 할 경우 Windows Phone 애플리케이션 분석(다음 행 참조)을 사용하세요.|  
-|Windows Phone 애플리케이션 분석|Windows Phone 앱의 CPU 및 메모리, 네트워크 데이터 전송 속도, 앱 응답성 및 배터리 소비를 분석하는 데 사용합니다.<br /><br /> 이 도구는 **Windows Phone SDK**를 설치한 후 Visual Studio에서 Windows Phone 프로젝트의 [디버그](https://go.microsoft.com/fwlink/?LinkId=265773) 메뉴에서 사용할 수 있습니다. 자세한 내용은 [Windows Phone 8의 앱 프로 파일링](https://docs.microsoft.com/previous-versions/windows/apps/jj215908(v=vs.105))을 참조 하세요.|  
+|Windows Phone 애플리케이션 분석|Windows Phone 앱의 CPU 및 메모리, 네트워크 데이터 전송 속도, 앱 응답성 및 배터리 소비를 분석하는 데 사용합니다.<br /><br /> 이 도구는 [Windows Phone SDK](https://go.microsoft.com/fwlink/?LinkId=265773)를 설치한 후 Visual Studio에서 Windows Phone 프로젝트의 **디버그** 메뉴에서 사용할 수 있습니다. 자세한 내용은 [Windows Phone 8의 앱 프로 파일링](https://docs.microsoft.com/previous-versions/windows/apps/jj215908(v=vs.105))을 참조 하세요.|  
 |[PerfView](https://www.microsoft.com/download/details.aspx?id=28567)|CPU 및 메모리 관련 성능 문제를 식별하는 데 사용합니다. 이 도구는 ETW(Windows용 이벤트 추적) 및 CLR 프로파일링 API를 사용하여 가비지 수집 및 JIT 컴파일에 대한 정보와 고급 메모리 및 CPU 확인 기능을 제공합니다. PerfView 사용 방법에 대한 자세한 내용은 앱에 포함된 자습서 및 도움말 파일, [Channel 9 비디오 자습서](https://channel9.msdn.com/Series/PerfView-Tutorial) 및 [블로그 게시물](https://blogs.msdn.microsoft.com/vancem/tag/perfview/)을 참조하세요.<br /><br /> 메모리 관련 문제는 [Using PerfView for Memory Investigations](https://channel9.msdn.com/Series/PerfView-Tutorial/PerfView-Tutorial-9-NET-Memory-Investigation-Basics-of-GC-Heap-Snapshots)(메모리 확인에 PerfView 사용)를 참조하세요.|  
-|[Windows Performance Analyzer](https://www.microsoft.com/download/details.aspx?id=30652)|동일한 컴퓨터에서 여러 앱이 실행되고 있는 경우 앱의 메모리 및 스토리지 사용과 같은 전체 시스템 성능을 확인하는 데 사용합니다. 이 도구는 다운로드 센터에서 [!INCLUDE[win8](../../../includes/win8-md.md)]용 Windows ADK(평가 및 배포 키트)의 일부로 사용할 수 있습니다. 자세한 내용은 [Windows Performance Analyzer](/windows-hardware/test/wpt/windows-performance-analyzer)를 참조하세요.|  
+|[Windows Performance Analyzer](https://www.microsoft.com/download/details.aspx?id=30652)|동일한 컴퓨터에서 여러 앱이 실행되고 있는 경우 앱의 메모리 및 스토리지 사용과 같은 전체 시스템 성능을 확인하는 데 사용합니다. 이 도구는 Windows 8 용 Windows ADK (평가 및 배포 키트)의 일부로 다운로드 센터에서 사용할 수 있습니다. 자세한 내용은 [Windows Performance Analyzer](/windows-hardware/test/wpt/windows-performance-analyzer)를 참조하세요.|  
   
 ### <a name="event-tracing-for-windows-etw"></a>ETW(Windows용 이벤트 추적)  
  ETW는 실행 중인 코드에 대한 진단 정보를 얻을 수 있는 기술로서, 앞에서 언급한 여러 성능 도구에 필수적입니다. ETW는 .NET Framework 앱 및 Windows에서 특정 이벤트가 발생하면 로그를 만듭니다. ETW를 사용하면 동적으로 로깅을 사용하거나 사용하지 않도록 설정할 수 있어 앱을 다시 시작하지 않고도 프로덕션 환경에서 자세한 추적을 수행할 수 있습니다. .NET Framework는 ETW 이벤트에 대한 지원을 제공하고, ETW는 성능 데이터를 생성하기 위해 여러 프로파일링 및 성능 도구에서 사용됩니다. 이러한 도구는 ETW 이벤트를 자주 사용하거나 사용하지 않도록 설정하므로 익숙해지는 것이 좋습니다. 특정 ETW 이벤트를 사용하여 앱의 특정 구성 요소에 대한 성능 정보를 수집할 수 있습니다. .NET Framework의 ETW 지원에 대한 자세한 내용은 [공용 언어 런타임의 ETW 이벤트](etw-events-in-the-common-language-runtime.md) 및 [작업 병렬 라이브러리 및 PLINQ의 ETW 이벤트](etw-events-in-task-parallel-library-and-plinq.md)를 참조하세요.  
@@ -43,7 +43,7 @@ ms.locfileid: "74204659"
 ## <a name="performance-by-app-type"></a>응용 프로그램 종류별 성능  
  .NET Framework 앱 형식마다 성능을 평가하기 위한 모범 사례, 고려 사항 및 도구가 다릅니다. 다음 테이블에는 특정 .NET Framework 앱 형식에 대한 성능 항목 링크가 표시되어 있습니다.  
   
-|앱 형식|다음을 참조하십시오.|  
+|앱 형식|항목을 참조하세요.|  
 |--------------|---------|  
 |모든 플랫폼용 .NET Framework 앱|[가비지 수집 및 성능](../../standard/garbage-collection/performance.md)<br /><br /> [성능 팁](performance-tips.md)|  
 |C++, C#및 Visual Basic로 작성 된 Windows 8.x 스토어 앱|[C++, C# 및 Visual Basic을 사용하는 Windows 스토어 앱의 성능 모범 사례](https://docs.microsoft.com/previous-versions/windows/apps/hh750313%28v=win.10%29)|  

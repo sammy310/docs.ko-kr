@@ -8,12 +8,12 @@ helpviewer_keywords:
 - service contracts [WCF], synchronous operations
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
-ms.openlocfilehash: 39a7db3fb7dc3651f2cf6c850e7ebb5525e24963
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 143cc0f4566d86f1d42ebd11063f9af3c1ec331f
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74281625"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802442"
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>동기 및 비동기 작업
 이 항목에서는 비동기 서비스 작업의 구현 및 호출에 대해 설명합니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "74281625"
 3. IAsyncResult 비동기 패턴  
   
 #### <a name="task-based-asynchronous-pattern"></a>작업 기반 비동기 패턴  
- 작업 기반 비동기 패턴은 가장 쉽고 단순하기 때문에 비동기 작업을 구현하는 데 가장 선호하는 방법입니다. 이 방법을 사용하려면 서비스 작업을 구현하고 반환 형식으로 Task\<T>를 지정하면 됩니다. 여기서, T는 논리 연산에서 반환하는 형식입니다. 예를 들면 다음과 같습니다.  
+ 작업 기반 비동기 패턴은 가장 쉽고 단순하기 때문에 비동기 작업을 구현하는 데 가장 선호하는 방법입니다. 이 방법을 사용하려면 서비스 작업을 구현하고 반환 형식으로 Task\<T>를 지정하면 됩니다. 여기서, T는 논리 연산에서 반환하는 형식입니다. 예를 들면 다음과 같습니다.:  
   
 ```csharp  
 public class SampleService:ISampleService   
@@ -107,7 +107,7 @@ public class AsyncExample
 }  
 ```  
   
- 이벤트 기반 비동기 패턴에 대한 자세한 내용은 [이벤트 기반 비동기 패턴](https://go.microsoft.com/fwlink/?LinkId=232515)을 참조하세요.  
+ 이벤트 기반 비동기 패턴에 대한 자세한 내용은 [이벤트 기반 비동기 패턴](../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)을 참조하세요.  
   
 #### <a name="iasyncresult-asynchronous-pattern"></a>IAsyncResult 비동기 패턴  
  비동기 방식으로 .NET Framework 비동기 프로그래밍 패턴을 사용 하 여 서비스 작업을 구현 하 고 <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A> 속성이 `true`로 설정 된 `<Begin>` 메서드를 표시할 수 있습니다. 이 경우 비동기 작업은 동기 작업과 동일한 형태로 메타데이터에 노출됩니다. 즉, 요청 메시지와 관련 응답 메시지가 포함된 단일 작업으로 노출됩니다. 그런 다음 클라이언트 프로그래밍 모델에서는 둘 중 하나를 선택할 수 있습니다. 즉, 서비스가 호출될 때 요청-응답 메시지 교환이 발생하는 한 이 패턴을 동기 작업이나 비동기 작업으로 나타낼 수 있습니다.  
@@ -166,7 +166,7 @@ Function EndDoWork(ByRef inout As String, ByRef outonly As String, ByVal result 
 await simpleServiceClient.SampleMethodTaskAsync("hello, world");  
 ```  
   
- 이벤트 기반 비동기 패턴을 사용할 경우 응답 알림을 받기 위해 이벤트 처리기를 추가하기만 하면 되고 결과 이벤트가 사용자 인터페이스 스레드에서 자동으로 발생합니다. 이 방법을 사용하려면 다음 예제와 같이 **ServiceModel Metadata 유틸리티 도구(Svcutil.exe)** 에서 **/async**와 [/tcv:Version35](servicemodel-metadata-utility-tool-svcutil-exe.md) 명령 옵션을 모두 지정합니다.  
+ 이벤트 기반 비동기 패턴을 사용할 경우 응답 알림을 받기 위해 이벤트 처리기를 추가하기만 하면 되고 결과 이벤트가 사용자 인터페이스 스레드에서 자동으로 발생합니다. 이 방법을 사용하려면 다음 예제와 같이 [ServiceModel Metadata 유틸리티 도구(Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md)에서 **/async**와 **/tcv:Version35** 명령 옵션을 모두 지정합니다.  
   
 ```console  
 svcutil http://localhost:8000/servicemodelsamples/service/mex /async /tcv:Version35  
@@ -174,7 +174,7 @@ svcutil http://localhost:8000/servicemodelsamples/service/mex /async /tcv:Versio
   
  그러면 Svcutil.exe는 호출 애플리케이션이 응답을 받고 적절한 작업을 수행하기 위한 이벤트 처리기를 구현하고 할당할 수 있는 이벤트 인프라를 사용하여 WCF 클라이언트 클래스를 생성합니다. 전체 예제에 대해서는 [방법: 비동기적으로 서비스 작업 호출](./feature-details/how-to-call-wcf-service-operations-asynchronously.md)을 참조하세요.  
   
- 그러나 이벤트 기반 비동기 모델은 .NET Framework 3.5 에서만 사용할 수 있습니다. 또한 <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>를 사용 하 여 WCF 클라이언트 채널이 만들어지는 경우에도 .NET Framework 3.5에서 지원 되지 않습니다. WCF 클라이언트 채널 개체가 있는 경우 <xref:System.IAsyncResult?displayProperty=nameWithType> 개체를 사용하여 작업을 비동기적으로 호출해야 합니다. 이 방법을 사용하려면 다음 예제와 같이 **ServiceModel Metadata 유틸리티 도구(Svcutil.exe)** 에서 [/async](servicemodel-metadata-utility-tool-svcutil-exe.md) 명령 옵션을 지정합니다.  
+ 그러나 이벤트 기반 비동기 모델은 .NET Framework 3.5 에서만 사용할 수 있습니다. 또한 <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>를 사용 하 여 WCF 클라이언트 채널이 만들어지는 경우에도 .NET Framework 3.5에서 지원 되지 않습니다. WCF 클라이언트 채널 개체가 있는 경우 <xref:System.IAsyncResult?displayProperty=nameWithType> 개체를 사용하여 작업을 비동기적으로 호출해야 합니다. 이 방법을 사용하려면 다음 예제와 같이 [ServiceModel Metadata 유틸리티 도구(Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md)에서 **/async** 명령 옵션을 지정합니다.  
   
 ```console  
 svcutil http://localhost:8000/servicemodelsamples/service/mex /async   
@@ -192,7 +192,7 @@ svcutil http://localhost:8000/servicemodelsamples/service/mex /async
   
  메시지 개체를 `Result` 속성으로 받고 반환된 값을 해당 개체의 속성으로 포함하려면 **/messageContract** 명령 옵션을 사용합니다. 이렇게 하면 응답 메시지를 `Result` 개체의 <xref:System.EventArgs> 속성으로 반환하는 서명이 생성됩니다. 모든 내부 반환 값은 응답 메시지 개체의 속성이 됩니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A>
 - <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A>

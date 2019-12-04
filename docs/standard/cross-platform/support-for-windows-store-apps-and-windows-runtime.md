@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6fa7d044-ae12-4c54-b8ee-50915607a565
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4629139a7c89c0808e97bbe64b7d02441aec1dea
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: dd7e045bf54b09fe2a229efefc0218eb3f2f731a
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714479"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802754"
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>Windows 스토어 앱 및 Windows 런타임에 대한 .NET Framework 지원
 
@@ -112,7 +112,7 @@ Windows 런타임에서 `IMap<K, V>` 및 `IMapView<K, V>`는 `IKeyValuePair`를 
 
 ### <a name="other-differences"></a>기타 차이점
 
-일부 경우에는 Windows 런타임 형식 대신 .NET Framework 형식이 코드에 표시 되기 때문에 사용자가 작업을 수행 해야 합니다. 예를 들어 <xref:Windows.Foundation.Uri?displayProperty=nameWithType> 클래스는 .NET Framework 코드에서 <xref:System.Uri?displayProperty=nameWithType>로 표시 됩니다. <xref:System.Uri?displayProperty=nameWithType>는 상대 URI를 허용 하지만 <xref:Windows.Foundation.Uri?displayProperty=nameWithType>에는 절대 URI가 필요 합니다. 따라서 Windows 런타임 메서드에 URI를 전달 하는 경우 절대 URI 인지 확인 해야 합니다. [Windows 런타임에 URI 전달을](../../../docs/standard/cross-platform/passing-a-uri-to-the-windows-runtime.md)참조 하세요.
+일부 경우에는 Windows 런타임 형식 대신 .NET Framework 형식이 코드에 표시 되기 때문에 사용자가 작업을 수행 해야 합니다. 예를 들어 <xref:Windows.Foundation.Uri?displayProperty=nameWithType> 클래스는 .NET Framework 코드에서 <xref:System.Uri?displayProperty=nameWithType>로 표시 됩니다. <xref:System.Uri?displayProperty=nameWithType>는 상대 URI를 허용 하지만 <xref:Windows.Foundation.Uri?displayProperty=nameWithType>에는 절대 URI가 필요 합니다. 따라서 Windows 런타임 메서드에 URI를 전달 하는 경우 절대 URI 인지 확인 해야 합니다. [Windows 런타임에 URI 전달](../../../docs/standard/cross-platform/passing-a-uri-to-the-windows-runtime.md)을 참조하세요.
 
 <a name="WindowsRuntimeComponents"></a>
 
@@ -137,7 +137,7 @@ Windows 런타임에서 `IMap<K, V>` 및 `IMapView<K, V>`는 `IKeyValuePair`를 
 - 구성 요소의 형식은 Windows 런타임 형식에서 파생 될 수 있습니다. 컨트롤은 <xref:Windows.UI.Xaml.Controls.Primitives> 네임 스페이스의 기본 컨트롤 형식이 나 <xref:Windows.UI.Xaml.Controls.Button>와 같은 완성 된 컨트롤에서 파생할 수 있습니다.
 
   > [!IMPORTANT]
-  > [!INCLUDE[win8](../../../includes/win8-md.md)] 및 .NET Framework 4.5부터 관리 되는 Windows 런타임 구성 요소의 모든 public 형식이 sealed 여야 합니다. 다른 Windows 런타임 구성 요소의 형식은 해당 형식에서 파생 될 수 없습니다. 구성 요소에서 다형 동작을 제공하려면 인터페이스를 만들어 다형 형식에서 구현할 수 있습니다.
+  > Windows 8 및 .NET Framework 4.5부터 관리 되는 Windows 런타임 구성 요소의 모든 public 형식이 sealed 여야 합니다. 다른 Windows 런타임 구성 요소의 형식은 해당 형식에서 파생 될 수 없습니다. 구성 요소에서 다형 동작을 제공하려면 인터페이스를 만들어 다형 형식에서 구현할 수 있습니다.
 
 - 구성 요소의 공용 형식에 대 한 모든 매개 변수 및 반환 형식은 구성 요소에서 정의 하는 Windows 런타임 형식을 포함 하 여 Windows 런타임 형식 이어야 합니다.
 

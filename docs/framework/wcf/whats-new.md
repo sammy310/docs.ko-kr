@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF [WCF], what's new
 - Windows Communication Foundation [WCF], what's new
 ms.assetid: 7e93fe73-af93-46b5-9f63-32f761ee40cf
-ms.openlocfilehash: 0a065676d81b36f32729bb08c23025825e94d3bc
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: e01b3a39a004e963e5bb66c5fa71433cb4e7204a
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320453"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802377"
 ---
 # <a name="whats-new-in-windows-communication-foundation-45"></a>Windows Communication Foundation 4.5의 새로운 기능
 
@@ -78,7 +78,7 @@ WebSocket은 TCP와 유사한 성능 특성으로 포트 80 및 443에서 진정
 
 다음 표에는 변경된 설정과 추가 정보를 찾을 수 있는 위치가 나와 있습니다.
 
-|속성|켜기|새 기본값|추가 정보|
+|속성|On|새 기본값|자세한 내용은 을 참조하십시오.|
 |--------------|--------|-----------------|------------------------------|
 |channelInitializationTimeout|<xref:System.ServiceModel.NetTcpBinding>|30초|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ChannelInitializationTimeout%2A>|
 |listenBacklog|<xref:System.ServiceModel.NetTcpBinding>|12 * 프로세서 수|<xref:System.ServiceModel.NetTcpBinding.ListenBacklog%2A>|
@@ -126,7 +126,7 @@ IDN(Internationalized Domain Name)을 사용하는 WCF 서비스에 대한 지�
 
 ## <a name="httpclient"></a>HttpClient
 
-<xref:System.Net.Http.HttpClient>라는 새 클래스가 추가되어 HTTP 요청 작업을 더 쉽게 수행할 수 있습니다. 자세한 내용은 [응용 프로그램을 http 서비스를 사용 하 여 소셜 및 연결 만들기](https://go.microsoft.com/fwlink/?LinkId=231886) 및 [http 클라이언트 샘플](https://code.msdn.microsoft.com/windowsapps/HttpClient-sample-55700664)을 참조 하세요.
+<xref:System.Net.Http.HttpClient>라는 새 클래스가 추가되어 HTTP 요청 작업을 더 쉽게 수행할 수 있습니다. 자세한 내용은 [응용 프로그램을 http 서비스를 사용 하 여 소셜 및 연결 만들기](https://channel9.msdn.com/Events/BUILD/BUILD2011/PLAT-581T) 및 [http 클라이언트 샘플](https://code.msdn.microsoft.com/windowsapps/HttpClient-sample-55700664)을 참조 하세요.
 
 ## <a name="configuration-intellisense"></a>구성 Intellisense
 

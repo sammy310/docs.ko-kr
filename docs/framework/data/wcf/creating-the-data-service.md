@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 34d1d971-5e18-4c22-9bf6-d3612e27ea59
-ms.openlocfilehash: d30b2e30639837730ecb185a2c0f659a63955004
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 72e3b35465968674a20aa48262d3425a2190ff74
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975391"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802271"
 ---
 # <a name="create-the-data-service"></a>데이터 서비스 만들기
 
@@ -26,7 +26,7 @@ ms.locfileid: "73975391"
 
 ## <a name="create-the-aspnet-web-app"></a>ASP.NET 웹 앱 만들기
 
-1. Visual Studio의 **파일** 메뉴에서 **새로 만들기**  > **프로젝트**를 선택 합니다.
+1. Visual Studio의 **파일** 메뉴에서 **새로 만들기** > **프로젝트**를 차례로 선택합니다.
 
 1. **새 프로젝트** 대화 상자의 Visual Basic 또는 시각적 개체 C# 에서 **웹** 범주를 선택 하 고 **ASP.NET 웹 응용 프로그램**을 선택 합니다.
 
@@ -71,11 +71,11 @@ ms.locfileid: "73975391"
    ![Visual Studio 2015의 WCF 데이터 서비스 항목 템플릿](./media/wcf-data-service-item-template.png)
 
    > [!NOTE]
-   > **WCF 데이터 서비스** 템플릿은 visual studio 2015에서 사용할 수 있지만 visual studio 2017에서는 사용할 수 없습니다.
+   > **WCF 데이터 서비스** 템플릿은 visual studio 2015 이상에서 사용할 수 있지만 visual studio 2017 이상에서는 사용할 수 없습니다.
 
 3. 서비스 이름에 `Northwind`을 입력 합니다.
 
-     Visual Studio에서 새 서비스의 XML 태그 및 코드 파일이 생성됩니다. 기본적으로 코드 편집기 창이 열립니다. **솔루션 탐색기**서비스에는 이름이 *svc.cs* 또는. n a n *.vb*인 Northwind 이름이 있습니다.
+     에서 새 서비스의 XML 태그와 코드 파일이 만들어집니다. 기본적으로 코드 편집기 창이 열립니다. **솔루션 탐색기**서비스에는 이름이 *svc.cs* 또는. n a n *.vb*인 Northwind 이름이 있습니다.
 
 4. 데이터 서비스 코드에서 데이터 서비스를 정의하는 클래스 정의의 `/* TODO: put your data source class name here */` 주석을 데이터 모델의 엔터티 컨테이너인 형식(이 경우 `NorthwindEntities`)으로 바꿉니다. 클래스 정의는 다음과 같이 나타납니다.
 

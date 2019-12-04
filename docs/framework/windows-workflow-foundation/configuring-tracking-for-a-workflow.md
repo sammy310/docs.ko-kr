@@ -2,12 +2,12 @@
 title: 워크플로 추적 구성
 ms.date: 03/30/2017
 ms.assetid: 905adcc9-30a0-4918-acd6-563f86db988a
-ms.openlocfilehash: 25edef2edc23a3823a892c64809df21f333478db
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 97b25873e9f20d5d390b7a59531b3a5af32296df
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458906"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802676"
 ---
 # <a name="configuring-tracking-for-a-workflow"></a>워크플로 추적 구성
 
@@ -134,7 +134,7 @@ if (null != workflowServiceHost)
 ```
 
 > [!NOTE]
-> 추적 프로필에 대 한 자세한 내용은 [추적 프로필](https://go.microsoft.com/fwlink/?LinkId=201310)을 참조 하세요.
+> 추적 프로필에 대 한 자세한 내용은 [추적 프로필](tracking-profiles.md)을 참조 하세요.
 
 ### <a name="configuring-tracking-using-workflowinvoker"></a>WorkflowInvoker를 사용하여 추적 구성
 
@@ -196,7 +196,7 @@ WF 4는 추적 레코드를 ETW(Windows용 이벤트 추적) 세션에 기록하
     </system.serviceModel>
     ```
 
-2. %Windir%\Microsoft.NET\Framework\\\<최신 버전 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]> \Microsoft.Windows.ApplicationServer.Applications.man의 매니페스트 파일을 임시 위치로 복사한 후 이름을 Applications_Provider1. man.
+2. %Windir%\Microsoft.NET\Framework\\\<최신 버전 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]> Applications_Provider1에서 매니페스트 파일을 임시 위치로 복사한 후 이름을 \Microsoft.Windows.ApplicationServer.Applications.man로 바꿉니다.
 
 3. 매니페스트 파일의 GUID를 새 GUID로 변경합니다.
 
@@ -222,7 +222,7 @@ WF 4는 추적 레코드를 ETW(Windows용 이벤트 추적) 세션에 기록하
 
 6. 다음 단계에 따라 리소스 DLL을 생성합니다.
 
-    1. Windows SDK를 설치합니다. Windows SDK에는 메시지 컴파일러 ([mc](https://go.microsoft.com/fwlink/?LinkId=184606))와 리소스 컴파일러 ([rc](https://go.microsoft.com/fwlink/?LinkId=184605))가 포함 됩니다.
+    1. Windows SDK를 설치합니다. Windows SDK에는 메시지 컴파일러 ([mc](/windows/win32/wes/message-compiler--mc-exe-))와 리소스 컴파일러 ([rc](/windows/win32/menurc/using-rc-the-rc-command-line-))가 포함 됩니다.
 
     2. Windows SDK 명령 프롬프트에서 새 매니페스트 파일에 대해 mc.exe를 실행합니다.
 
@@ -250,7 +250,7 @@ WF 4는 추적 레코드를 ETW(Windows용 이벤트 추적) 세션에 기록하
         <provider name="Microsoft-Windows-Application Server-Applications_Provider1" guid="{2720e974-9fe9-477a-bb60-81fe3bf91eec}" symbol="Microsoft_Windows_ApplicationServer_ApplicationEvents" resourceFileName="<dll directory>\Microsoft.Windows.ApplicationServer.Applications_Provider1.dll" messageFileName="<dll directory>\Microsoft.Windows.ApplicationServer.Applications_Provider1.dll">
         ```
 
-    7. [Wevtutil](https://go.microsoft.com/fwlink/?LinkId=184608) 을 사용 하 여 매니페스트를 등록 합니다.
+    7. [Wevtutil](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732848(v=ws.10)) 을 사용 하 여 매니페스트를 등록 합니다.
 
         ```console
         wevtutil im Microsoft.Windows.ApplicationServer.Applications_Provider1.man
@@ -258,5 +258,5 @@ WF 4는 추적 레코드를 ETW(Windows용 이벤트 추적) 세션에 기록하
 
 ## <a name="see-also"></a>참조
 
-- [Windows Server App Fabric 모니터링](https://go.microsoft.com/fwlink/?LinkId=201273)
-- [App Fabric을 사용 하 여 응용 프로그램 모니터링](https://go.microsoft.com/fwlink/?LinkId=201275)
+- [Windows Server App Fabric 모니터링](https://docs.microsoft.com/previous-versions/appfabric/ee677251(v=azure.10))
+- [App Fabric을 사용 하 여 응용 프로그램 모니터링](https://docs.microsoft.com/previous-versions/appfabric/ee677276(v=azure.10))

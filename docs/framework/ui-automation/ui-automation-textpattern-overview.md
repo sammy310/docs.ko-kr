@@ -6,17 +6,17 @@ helpviewer_keywords:
 - TextPattern class
 - classes, TextPattern
 ms.assetid: 41787927-df1f-4f4a-aba3-641662854fc4
-ms.openlocfilehash: 2f417aaba5361bea3bf2493001bca938d9dd08cb
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: b7e378d79109d33859a38ea398cffd2193044abd
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975488"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74800204"
 ---
 # <a name="ui-automation-textpattern-overview"></a>UI 자동화 TextPattern 개요
 
 > [!NOTE]
-> 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](https://go.microsoft.com/fwlink/?LinkID=156746)를 참조하세요.
+> 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조하세요.
 
 이 개요에서는 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 을 사용하여 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]이 지원되는 플랫폼에 있는 텍스트 컨트롤의 텍스트 콘텐츠(형식 및 스타일 특성 포함)를 노출하는 방법을 설명합니다. 이러한 컨트롤에는 Microsoft .NET 프레임 워크 <xref:System.Windows.Controls.TextBox> 및 <xref:System.Windows.Controls.RichTextBox>와 해당 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 포함 됩니다.
 
@@ -41,7 +41,7 @@ TSF (텍스트 서비스 프레임 워크)는 데스크톱 및 응용 프로그�
 
 ## <a name="control-types"></a>컨트롤 형식
 
-### <a name="text"></a>Text
+### <a name="text"></a>텍스트
 
 텍스트 컨트롤은 화면에 텍스트 부분을 나타내는 기본 요소입니다.
 
@@ -50,7 +50,7 @@ TSF (텍스트 서비스 프레임 워크)는 데스크톱 및 응용 프로그�
 > [!NOTE]
 > 텍스트 컨트롤이 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리의 콘텐츠 뷰에 표시 되지 않을 수 있습니다 ( [UI 자동화 트리 개요](ui-automation-tree-overview.md)참조). 이는 텍스트 컨트롤이 대개 다른 컨트롤의 Name 속성을 통해 표시되기 때문입니다. 예를 들어 편집 컨트롤의 레이블을 지정하는 데 사용되는 텍스트는 편집 컨트롤의 Name 속성을 통해 노출됩니다. 편집 컨트롤이 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리의 콘텐츠 뷰에 있기 때문에 텍스트 요소 자체가 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리의 해당 뷰에 있을 필요는 없습니다. 콘텐츠 뷰에 표시되는 텍스트는 중복 정보가 아닌 텍스트뿐입니다. 이렇게 하면 보조 기술이 사용자에게 필요한 정보 부분만 신속하게 필터링할 수 있습니다.
 
-### <a name="edit"></a>편집
+### <a name="edit"></a>Edit
 
 편집 컨트롤을 통해 사용자는 텍스트 한 줄을 보고 편집할 수 있습니다.
 

@@ -2,12 +2,12 @@
 title: Windows Workflow Foundation 4 성능
 ms.date: 03/30/2017
 ms.assetid: 67d2b3e8-3777-49f8-9084-abbb33b5a766
-ms.openlocfilehash: 9a7e1dd2c5ab92ace955aa3b3095f2ed04ee3272
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 6e6669cd41795c356e4b7b30f19d93bd8dfa917a
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283229"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802650"
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Windows Workflow Foundation 4 성능
 
@@ -17,7 +17,7 @@ ms.locfileid: "74283229"
 
 ## <a name="terminology"></a>용어
 
- .NET Framework 4에 도입 된 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 버전은이 항목의 나머지 부분에서 W F 4 이라고 합니다. [!INCLUDE[wf1](../../../includes/wf1-md.md)] .NET Framework 3.0에 도입 되었으며 .NET Framework 3.5 s p 1을 통해 몇 가지 사소한 수정이 있었습니다. Workflow Foundation의 .NET Framework 3.5 버전은이 항목의 나머지 부분에 대 한 WF3 이라고 합니다. WF3는 W F 4와 나란히 .NET Framework 4로 제공 됩니다. WF3 아티팩트를 W F 4로 마이그레이션하는 방법에 대 한 자세한 내용은 [Windows Workflow Foundation 4 마이그레이션 가이드](https://go.microsoft.com/fwlink/?LinkID=153313)를 참조 하세요.
+ .NET Framework 4에 도입 된 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 버전은이 항목의 나머지 부분에서 W F 4 이라고 합니다. [!INCLUDE[wf1](../../../includes/wf1-md.md)] .NET Framework 3.0에 도입 되었으며 .NET Framework 3.5 s p 1을 통해 몇 가지 사소한 수정이 있었습니다. Workflow Foundation의 .NET Framework 3.5 버전은이 항목의 나머지 부분에 대 한 WF3 이라고 합니다. WF3는 W F 4와 나란히 .NET Framework 4로 제공 됩니다. WF3 아티팩트를 W F 4로 마이그레이션하는 방법에 대 한 자세한 내용은 [Windows Workflow Foundation 4 마이그레이션 가이드](migration-guidance.md)를 참조 하세요.
 
  WCF (Windows Communication Foundation)는 서비스 지향 응용 프로그램을 빌드하기 위한 Microsoft의 통합 프로그래밍 모델입니다. WF3와 함께 .NET 3.0의 일부로 처음 도입 되었으며 현재는 .NET Framework의 주요 구성 요소 중 하나입니다.
 
@@ -59,7 +59,7 @@ ms.locfileid: "74283229"
 
  WF4에서는 XAML이 선언적 경험을 제공하며 .NET을 사용하여 빌드된 작업과 형식을 참조하여 XML 태그로 전체 워크플로 정의를 정의할 수 있도록 합니다. 사용자 지정 코드 숨김 논리를 포함하지 않는 WF3의 XOML 형식으로는 이러한 작업을 수행하는 것이 어려웠습니다. .NET 4의 새로운 XAML 스택은 워크플로 아티팩트를 serialize/deserialize 할 때 훨씬 더 나은 성능을 가지 며 선언적 프로그래밍을 더욱 매력적인 및 solid로 만듭니다.
 
-### <a name="workflow-designer"></a>Workflow Designer
+### <a name="workflow-designer"></a>워크플로 디자이너
  WF4에서는 선언적 프로그래밍을 지원하므로 큰 워크플로의 경우 디자인 타임 성능을 위해 보다 엄격한 요구 사항이 명시적으로 부과됩니다. WF4의 워크플로 디자이너에서는 WF3에 비해 큰 워크플로에 대한 확장성이 향상되었습니다. WF3 디자이너에서는 몇백 개의 작업으로 구성된 워크플로도 거의 로드할 수 없는 반면에 WF4 디자이너는 UI 가상화 지원을 통해 1000개 작업으로 구성된 큰 워크플로를 몇 초 만에 쉽게 로드할 수 있습니다.
 
 ## <a name="component-level-performance-comparisons"></a>구성 요소 수준 성능 비교
@@ -105,7 +105,7 @@ ms.locfileid: "74283229"
  시퀀스 워크플로에는 아무 작업도 수행하지 않는 자식 작업 한 개가 루프에 포함된 <xref:System.Activities.Statements.While> 작업 한 개가 있습니다.
 
 ### <a name="replicator-compared-to-parallelforeach"></a>ParallelForEach와 비교되는 복제기
- WF3의 <xref:System.Workflow.Activities.ReplicatorActivity>에는 순차 및 병렬 실행 모드가 있습니다.  순차 모드에서는 작업 성능이 <xref:System.Workflow.Activities.WhileActivity>와 유사합니다.  <xref:System.Workflow.Activities.ReplicatorActivity>는 병렬 실행에 가장 유용합니다.  WF4에서 이 작업과 유사한 작업은 <xref:System.Activities.Statements.ParallelForEach%601> 작업입니다.
+ WF3의 <xref:System.Workflow.Activities.ReplicatorActivity>에는 순차 실행 모드와 병렬 실행 모드가 있습니다.  순차 모드에서는 작업 성능이 <xref:System.Workflow.Activities.WhileActivity>와 유사합니다.  <xref:System.Workflow.Activities.ReplicatorActivity>는 병렬 실행에 가장 유용합니다.  WF4에서 이 작업과 유사한 작업은 <xref:System.Activities.Statements.ParallelForEach%601> 작업입니다.
 
  다음 다이어그램에서는 이 테스트에 사용되는 워크플로를 보여 줍니다. 왼쪽은 WF3 워크플로이고 오른쪽은 WF4 워크플로입니다.
 
@@ -180,7 +180,7 @@ public sealed class CompensableActivityEmptyCompensation : CodeActivity
 ### <a name="online-store-service"></a>온라인 저장소 서비스
  Windows Workflow Foundation의 장점 중 하나는 여러 서비스를 사용 하 여 프로세스를 작성 하는 기능입니다.  이러한 예로 서비스 호출 두 개를 오케스트레이션하여 주문을 구입하는 온라인 저장소 서비스가 있습니다.  첫 번째 단계에서는 주문 확인 서비스를 사용하여 주문을 확인합니다.  두 번째 단계에서는 웨어하우스 서비스를 사용하여 주문을 채웁니다.
 
- 두 개의 백 엔드 서비스인 주문 확인 서비스와 웨어하우스 서비스는 두 테스트에서 모두 동일하게 유지됩니다.  변경되는 부분은 오케스트레이션을 수행하는 온라인 저장소 서비스입니다.  한 경우에 서비스는 WCF 서비스로 직접 코딩 됩니다.  다른 경우에는 서비스는 W F 4에서 WCF 워크플로 서비스로 작성 됩니다. 이 테스트에 대해 추적 및 지 속성과 같은 [!INCLUDE[wf1](../../../includes/wf1-md.md)]관련 기능이 해제 되어 있습니다.
+ 두 개의 백 엔드 서비스인 주문 확인 서비스와 웨어하우스 서비스는 두 테스트에서 모두 동일하게 유지됩니다.  변경되는 부분은 오케스트레이션을 수행하는 온라인 저장소 서비스입니다.  한 경우에 서비스는 WCF 서비스로 직접 코딩 됩니다.  다른 경우에는 서비스는 W F 4에서 WCF 워크플로 서비스로 작성 됩니다. 추적 및 지속성과 같은 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 관련 기능은 이 테스트에서 해제됩니다.
 
 ### <a name="environment"></a>환경
 ![성능 측정을 위한 환경 설정](./media/performance/performance-test-environment.gif)
@@ -301,9 +301,9 @@ public sealed class CompensableActivityEmptyCompensation : CodeActivity
  이 그래프에서 확인할 명확한 추세 중 하나는 WF3과 WF4에서 모두 중첩이 메모리 사용에 미치는 영향이 비교적 최소화된다는 것입니다.  가장 중요한 메모리 영향은 지정된 워크플로의 작업 수에서 비롯됩니다.  시퀀스 1000, 복잡한 깊이 5 시퀀스 5 및 복잡한 깊이 7 시퀀스 1 변형의 데이터가 주어질 경우 작업 수가 수천 개로 늘어나면 메모리 사용 증가가 더 두드러집니다.  ~29K 작업이 있는 극단적인 사례(깊이 7 시퀀스 1)에서 WF4는 WF3보다 거의 79% 더 적은 메모리를 사용합니다.
 
 ### <a name="multiple-workflow-definitions-test"></a>여러 워크플로 정의 테스트
- WF3 및 WF4에서 워크플로를 호스트하는 데 사용 가능한 옵션 때문에 워크플로 정의당 메모리 측정은 두 가지 테스트로 나뉩니다.  이러한 테스트는 지정된 워크플로가 정의당 한 번만 인스턴스화되고 실행된다는 점에서 워크플로 복잡성 테스트와는 다른 방식으로 실행됩니다.  워크플로 정의와 해당 호스트가 AppDomain 수명 동안 메모리에 남아 있기 때문입니다.  지정된 워크플로 인스턴스를 실행할 때 사용된 메모리를 가비지 수집 중에 정리해야 합니다.  호스팅 옵션에 대한 자세한 내용은 WF4에 대한 마이그레이션 지침을 참조하세요. 자세한 내용은 [WF Migration Cookbook: 워크플로 호스팅](https://go.microsoft.com/fwlink/?LinkID=153313)을 참조 하세요.
+ WF3 및 WF4에서 워크플로를 호스트하는 데 사용 가능한 옵션 때문에 워크플로 정의당 메모리 측정은 두 가지 테스트로 나뉩니다.  이러한 테스트는 지정된 워크플로가 정의당 한 번만 인스턴스화되고 실행된다는 점에서 워크플로 복잡성 테스트와는 다른 방식으로 실행됩니다.  워크플로 정의와 해당 호스트가 AppDomain 수명 동안 메모리에 남아 있기 때문입니다.  지정된 워크플로 인스턴스를 실행할 때 사용된 메모리를 가비지 수집 중에 정리해야 합니다.  호스팅 옵션에 대한 자세한 내용은 WF4에 대한 마이그레이션 지침을 참조하세요. 자세한 내용은 [WF Migration Cookbook: 워크플로 호스팅](migration-guidance.md)을 참조 하세요.
 
- 여러 가지 방법으로 워크플로 정의 테스트에 사용할 많은 워크플로 정의를 만들 수 있습니다.  예를 들어, 코드 생성을 사용하여 이름만 제외하고 모두 동일한 1000개 워크플로 집합을 만들고 각 워크플로를 개별 파일에 저장할 수 있습니다.  이 방법은 콘솔 호스팅 테스트에 사용되었습니다.  WF3에서는 워크플로 정의를 실행하기 위해 <xref:System.Workflow.Runtime.WorkflowRuntime> 클래스가 사용되었습니다.  WF4는 <xref:System.Activities.WorkflowApplication>을 사용하여 단일 워크플로 인스턴스를 만들거나 직접 <xref:System.Activities.WorkflowInvoker>를 사용하여 메서드 호출인 것처럼 작업을 실행할 수 있습니다.  <xref:System.Activities.WorkflowApplication>은 단일 워크플로 인스턴스의 호스트 이며이 테스트에서 사용 되는 <xref:System.Workflow.Runtime.WorkflowRuntime>에 대 한 기능 패리티가 더 가깝습니다.
+ 여러 가지 방법으로 워크플로 정의 테스트에 사용할 많은 워크플로 정의를 만들 수 있습니다.  예를 들어, 코드 생성을 사용하여 이름만 제외하고 모두 동일한 1000개 워크플로 집합을 만들고 각 워크플로를 개별 파일에 저장할 수 있습니다.  이 방법은 콘솔 호스팅 테스트에 사용되었습니다.  WF3에서는 워크플로 정의를 실행하기 위해 <xref:System.Workflow.Runtime.WorkflowRuntime> 클래스가 사용되었습니다.  WF4는 <xref:System.Activities.WorkflowApplication>을 사용하여 단일 워크플로 인스턴스를 만들거나 직접 <xref:System.Activities.WorkflowInvoker>를 사용하여 메서드 호출인 것처럼 작업을 실행할 수 있습니다.  <xref:System.Activities.WorkflowApplication>은 단일 워크플로 인스턴스의 호스트이며 기능 패리티가 <xref:System.Workflow.Runtime.WorkflowRuntime>에 더 가깝기 때문에 이 테스트에서는 이 클래스가 사용되었습니다.
 
  IIS에서 워크플로를 호스트하는 경우 XAMLX 또는 XOML 파일을 모두 생성하는 대신 <xref:System.Web.Hosting.VirtualPathProvider>를 사용하여 새 <xref:System.ServiceModel.WorkflowServiceHost>를 만들 수 있습니다.  <xref:System.Web.Hosting.VirtualPathProvider>는 들어오는 요청을 처리 하 고 데이터베이스에서 로드 될 수 있거나이 경우 즉석에서 생성 되는 "가상 파일"을 사용 하 여 응답 합니다.  따라서 실제 파일 1000개를 만들 필요는 없습니다.
 
@@ -434,7 +434,7 @@ public class Workflow1 : Activity
  상태 모니터링은 처리량에 대략 3% 영향을 줍니다.  기본 프로필 비용은 약 8%입니다.
 
 ## <a name="interop"></a>Interop
- WF4는 [!INCLUDE[wf1](../../../includes/wf1-md.md)]에서 거의 완전히 다시 작성되었으므로 WF3 워크플로와 작업은 WF4와 직접 호환되지 않습니다.  Windows Workflow Foundation 조기에 채택 된 많은 고객에 게는 사내 또는 타사 워크플로 정의와 WF3에 대 한 사용자 지정 활동이 있습니다.  WF4로 간단하게 전환하는 방법 중 하나는 WF4 워크플로 내에서 WF3 작업을 실행할 수 있는 Interop 작업을 사용하는 것입니다.  필요한 경우 <xref:System.Activities.Statements.Interop> 작업만 사용하는 것이 좋습니다. W F 4로 마이그레이션하는 방법에 대 한 자세한 내용은 [W f 4 마이그레이션 지침](https://go.microsoft.com/fwlink/?LinkID=153313)을 참조 하세요.
+ WF4는 [!INCLUDE[wf1](../../../includes/wf1-md.md)]에서 거의 완전히 다시 작성되었으므로 WF3 워크플로와 작업은 WF4와 직접 호환되지 않습니다.  Windows Workflow Foundation 조기에 채택 된 많은 고객에 게는 사내 또는 타사 워크플로 정의와 WF3에 대 한 사용자 지정 활동이 있습니다.  WF4로 간단하게 전환하는 방법 중 하나는 WF4 워크플로 내에서 WF3 작업을 실행할 수 있는 Interop 작업을 사용하는 것입니다.  필요한 경우 <xref:System.Activities.Statements.Interop> 작업만 사용하는 것이 좋습니다. W F 4로 마이그레이션하는 방법에 대 한 자세한 내용은 [W f 4 마이그레이션 지침](migration-guidance.md)을 참조 하세요.
 
 ### <a name="environment-setup"></a>환경 설치
  ![워크플로 성능 테스트에 대 한 환경 설정](./media/performance/performance-test-environment.gif)

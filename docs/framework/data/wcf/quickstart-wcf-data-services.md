@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, quick-start example
 - WCF Data Services, Entity Data Model (EDM) service
 ms.assetid: 7b18ca1e-d4d6-4c7a-afb9-ce3cebb98a8d
-ms.openlocfilehash: d0002182c5ae519c36348acdd2587bca499fe72e
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: df3151dfd3628231d84d2d128c61d1c0b6b0d48e
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975134"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74800358"
 ---
 # <a name="quickstart-wcf-data-services"></a>빠른 시작(WCF Data Services)
 
@@ -26,7 +26,7 @@ ms.locfileid: "73975134"
 
 - Visual Studio
 
-- SQL Server 인스턴스입니다. 여기에는 visual studio 2015의 기본 설치에 포함 되거나 Visual Studio 2017의 **데이터 저장 및 처리** 워크 로드의 일부로 포함 되는 SQL Server Express 포함 됩니다.
+- SQL Server 인스턴스입니다. 여기에는 visual studio 2015의 기본 설치에 포함 되거나 Visual Studio 2017 이상에서 **데이터 저장소 및 처리** 워크 로드의 일부로 포함 되는 SQL Server Express 포함 됩니다.
 
 - Northwind 샘플 데이터베이스 이 샘플 데이터베이스를 다운로드하려면 [SQL Server용 샘플 데이터베이스](https://go.microsoft.com/fwlink/?linkid=24758)다운로드 페이지를 참조하세요.
 

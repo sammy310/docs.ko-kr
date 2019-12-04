@@ -2,12 +2,12 @@
 title: WCF 개발 도구 사용
 ms.date: 03/30/2017
 ms.assetid: 054adb87-c244-4d5a-83d1-0b2b44bd454b
-ms.openlocfilehash: afa62a63aa955dc868791da635418331f93e9e87
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 59913f4c00c32699d788e2a0244798fc652361be
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73420687"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802415"
 ---
 # <a name="using-the-wcf-development-tools"></a>WCF 개발 도구 사용
 이 섹션에서는 WCFservice 개발에 도움이 될 수 있는 Visual Studio 개발 도구에 대해 설명 합니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "73420687"
 netsh http add urlacl url=http://+:8001/MyService user=<domain>\<user>  
 ```  
   
- Netsh.exe에 대 한 자세한 내용은 [Netsh.exe 도구 및 명령줄 스위치를 사용 하는 방법](https://go.microsoft.com/fwlink/?LinkId=97877)을 참조 하십시오.  
+ Netsh.exe에 대 한 자세한 내용은 [Netsh.exe 도구 및 명령줄 스위치를 사용 하는 방법](https://docs.microsoft.com/previous-versions/tn-archive/bb490939(v=technet.10))을 참조 하십시오.  
   
 ## <a name="see-also"></a>참조
 

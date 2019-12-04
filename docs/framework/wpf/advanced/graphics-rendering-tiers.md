@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics rendering tiers [WPF]
 - graphics [WPF], rendering tiers
 ms.assetid: 08dd1606-02a2-4122-9351-c0afd2ec3a70
-ms.openlocfilehash: c6856002288a46e78d1e1373201cf149407a814f
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 4c9acc3ef806eabea05d1b64080275293c83e895
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974010"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802145"
 ---
 # <a name="graphics-rendering-tiers"></a>그래픽 렌더링 계층
 렌더링 계층은 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 애플리케이션을 실행하는 디바이스의 그래픽 하드웨어 기능과 성능 수준을 정의합니다.  
@@ -64,7 +64,7 @@ ms.locfileid: "73974010"
   
  다음 특징과 기능은 렌더링 계층 1과 렌더링 계층 2용으로 가속화된 하드웨어입니다.  
   
-|기능|노트|  
+|기능|참고|  
 |-------------|-----------|  
 |2D 렌더링|대부분의 2D 렌더링이 지원됩니다.|  
 |3D 래스터화|대부분의 3D 래스터화가 지원됩니다.|  
@@ -76,23 +76,23 @@ ms.locfileid: "73974010"
   
  다음 특징과 기능은 렌더링 계층 2용으로만 가속화된 하드웨어입니다.  
   
-|기능|노트|  
+|기능|참고|  
 |-------------|-----------|  
-|3D 앤티앨리어싱|3D 앤티앨리어싱은 Windows Vista 및 [!INCLUDE[win7](../../../../includes/win7-md.md)]와 같이 WDDM (Windows Display Driver Model)을 지 원하는 운영 체제 에서만 지원 됩니다.|  
+|3D 앤티앨리어싱|3D 앤티앨리어싱은 Windows Vista 및 Windows 7과 같은 WDDM (Windows Display Driver Model)을 지 원하는 운영 체제 에서만 지원 됩니다.|  
   
  다음 특징과 기능은 가속화된 하드웨어가 **아닙니다**.  
   
-|기능|노트|  
+|기능|참고|  
 |-------------|-----------|  
 |인쇄된 콘텐츠|인쇄된 모든 콘텐츠는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 소프트웨어 파이프라인을 사용하여 렌더링합니다.|  
 |<xref:System.Windows.Media.Imaging.RenderTargetBitmap>를 사용 하는 래스터화된 콘텐츠|<xref:System.Windows.Media.Imaging.RenderTargetBitmap>의 <xref:System.Windows.Media.Imaging.RenderTargetBitmap.Render%2A> 메서드를 사용 하 여 렌더링 된 모든 콘텐츠입니다.|  
 |<xref:System.Windows.Media.TileBrush>를 사용 하는 바둑판식 콘텐츠|<xref:System.Windows.Media.TileBrush>의 <xref:System.Windows.Media.TileBrush.TileMode%2A> 속성이 <xref:System.Windows.Media.TileMode.Tile>로 설정 된 모든 바둑판식 콘텐츠|  
 |그래픽 하드웨어의 최대 질감 크기를 초과하는 화면|대부분의 그래픽 하드웨어에서 대형 화면의 크기는 2048x2048 또는 4096x4096 픽셀입니다.|  
 |비디오 RAM 요구 사항이 그래픽 하드웨어의 메모리를 초과하는 모든 작업|Windows SDK에서 [WPF 성능 제품군](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100))에 포함된 Perforator 도구를 사용하여 애플리케이션 비디오 RAM 사용량을 모니터링할 수 있습니다.|  
-|계층적 창|계층적 창을 사용하면 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 애플리케이션에서 직사각형이 아닌 창의 화면에 맞게 콘텐츠를 렌더링할 수 있습니다. Windows Vista 및 [!INCLUDE[win7](../../../../includes/win7-md.md)]같이 WDDM (Windows 디스플레이 드라이버 모델)을 지 원하는 운영 체제에서는 계층화 된 창이 하드웨어 가속 됩니다. [!INCLUDE[winxp](../../../../includes/winxp-md.md)]와 같은 다른 시스템에서는 하드웨어 가속이 없는 소프트웨어를 통해 계층적 창을 렌더링합니다.<br /><br /> 다음 <xref:System.Windows.Window> 속성을 설정 하 여 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 계층화 된 창을 사용 하도록 설정할 수 있습니다.<br /><br /> -   <xref:System.Windows.Window.WindowStyle%2A> = <xref:System.Windows.WindowStyle.None><br />-   <xref:System.Windows.Window.AllowsTransparency%2A> = `true`<br />-   <xref:System.Windows.Controls.Control.Background%2A> = <xref:System.Windows.Media.Brushes.Transparent%2A>|  
+|계층적 창|계층적 창을 사용하면 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 애플리케이션에서 직사각형이 아닌 창의 화면에 맞게 콘텐츠를 렌더링할 수 있습니다. Windows Vista 및 Windows 7과 같이 WDDM (Windows 디스플레이 드라이버 모델)을 지 원하는 운영 체제에서는 계층화 된 창이 하드웨어 가속 됩니다. [!INCLUDE[winxp](../../../../includes/winxp-md.md)]와 같은 다른 시스템에서는 하드웨어 가속이 없는 소프트웨어를 통해 계층적 창을 렌더링합니다.<br /><br /> 다음 <xref:System.Windows.Window> 속성을 설정 하 여 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 계층화 된 창을 사용 하도록 설정할 수 있습니다.<br /><br /> -   <xref:System.Windows.Window.WindowStyle%2A> = <xref:System.Windows.WindowStyle.None><br />-   <xref:System.Windows.Window.AllowsTransparency%2A> = `true`<br />-   <xref:System.Windows.Controls.Control.Background%2A> = <xref:System.Windows.Media.Brushes.Transparent%2A>|  
   
 <a name="other_resources"></a>   
-## <a name="other-resources"></a>기타 리소스  
+## <a name="other-resources"></a>관련 자료  
  다음 리소스를 사용하면 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 애플리케이션의 성능 특징을 분석할 수 있습니다.  
   
 ### <a name="graphics-rendering-registry-settings"></a>그래픽 렌더링 레지스트리 설정  

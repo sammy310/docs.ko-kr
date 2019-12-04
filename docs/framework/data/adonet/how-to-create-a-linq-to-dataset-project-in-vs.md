@@ -2,18 +2,18 @@
 title: Visual Studio에서 LINQ to DataSet 프로젝트 만들기
 ms.date: 08/15/2018
 ms.assetid: 49ba6cb0-cdd2-4571-aeaa-25bf0f40e9b3
-ms.openlocfilehash: 8b905c65575c3c567459d843b2a5d1606bc63228
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 91032766248b11e51b90aa788b1c64c140347c25
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70783770"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802018"
 ---
 # <a name="how-to-create-a-linq-to-dataset-project-in-visual-studio"></a>방법: Visual Studio에서 LINQ to DataSet 프로젝트 만들기
 
-LINQ 프로젝트의 다양한 형식에는 특정 어셈블리 참조 및 가져온 네임 스페이스 (Visual Basic)를 사용하거나 지시문 (C#)을 [사용](../../../csharp/language-reference/keywords/using-directive.md)해야 합니다. LINQ의 최소 요구 사항은 *system.object* 에 대 한 참조 및 `using` 에 대 한 <xref:System.Linq>지시문입니다.
+LINQ 프로젝트의 다양한 형식에는 특정 어셈블리 참조 및 가져온 네임 스페이스 (Visual Basic)를 사용하거나 지시문 (C#)을 [사용](../../../csharp/language-reference/keywords/using-directive.md)해야 합니다. LINQ에 대 한 최소 요구 사항은 *system.object* 에 대 한 참조 및 <xref:System.Linq>에 대 한 `using` 지시문입니다.
 
-이러한 요구 사항은 Visual Studio 2017에서 새 C# 콘솔 앱 프로젝트를 만드는 경우 기본적으로 제공 됩니다. 이전 버전의 Visual Studio에서 프로젝트를 업그레이드 하는 경우 이러한 LINQ 관련 참조를 직접 제공 해야 할 수 있습니다.
+이러한 요구 사항은 Visual Studio 2017 이상 버전에서 새 C# 콘솔 앱 프로젝트를 만드는 경우 기본적으로 제공 됩니다. 이전 버전의 Visual Studio에서 프로젝트를 업그레이드 하는 경우 이러한 LINQ 관련 참조를 직접 제공 해야 할 수 있습니다.
 
 LINQ to DataSet에는 *system.object* 및 *system.object*에 대 한 두 개의 추가 참조가 필요 합니다.
 
@@ -35,8 +35,8 @@ LINQ to DataSet에는 *system.object* 및 *system.object*에 대 한 두 개의 
    using System.Linq;
    ```
 
-1. 필요에 따라 데이터베이스 `using` 에 연결 하 `Imports` 는 방법에 따라 **system.web** 또는 **system.object**에 대 한 지시문 (또는 문)을 추가 합니다.
+1. 필요에 따라 데이터베이스에 연결 하는 방법에 따라 **system.web** 또는 **system.object**에 대 한 `using` 지시문 (또는 `Imports` 문)을 추가 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [LINQ to DataSet 시작](getting-started-linq-to-dataset.md)
