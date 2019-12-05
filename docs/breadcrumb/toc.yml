@@ -293,9 +293,6 @@
             - name: 데스크톱 앱의 리소스
               tocHref: /dotnet/framework/resources/
               topicHref: /dotnet/framework/resources/index
-            - name: .NET Framework의 보안
-              tocHref: /dotnet/framework/security/
-              topicHref: /dotnet/framework/security/index
             - name: .NET Framework 도구
               tocHref: /dotnet/framework/tools/
               topicHref: /dotnet/framework/tools/index
