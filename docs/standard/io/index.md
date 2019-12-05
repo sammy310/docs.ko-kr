@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 889271ca41fb84b44757adfffc61ffbfbc0a03a8
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: d59ff7f66076fc56ebb27841105fad07a7c7fee1
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204789"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716264"
 ---
 # <a name="file-and-stream-io"></a>파일 및 스트림 I/O
 
@@ -143,11 +143,11 @@ Visual Basic 사용자는 이러한 클래스를 사용하는 것 외에도, 파
 
 ## <a name="io-operations-in-windows-store-apps"></a>Windows 스토어 앱에서 I/O 작업
 
-[!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]에는 스트림에서 읽고 스트림에 쓰기 위한 다양한 형식이 포함됩니다. 하지만, 이 세트에 모든 .NET Framework I/O 형식이 포함되는 것은 아닙니다.
+Windows 8.x 스토어 앱용 .NET에는 스트림에서 읽고 스트림에 쓰기 위한 다양한 형식이 포함됩니다. 하지만, 이 세트에 모든 .NET Framework I/O 형식이 포함되는 것은 아닙니다.
 
 다음은 Windows 8.x 스토어 앱에서 I/O 작업을 사용할 때 알아야 할 몇 가지 중요한 차이점입니다.
 
-- 특히 파일 작업에 관련된 형식(예: <xref:System.IO.File>, <xref:System.IO.FileInfo>, <xref:System.IO.Directory> 및 <xref:System.IO.DirectoryInfo>)은 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]에 포함되지 않습니다. 대신 <xref:Windows.Storage.StorageFile> 및 <xref:Windows.Storage.StorageFolder> 등 Windows 런타임의 <xref:Windows.Storage?displayProperty=nameWithType> 네임스페이스에 있는 유형을 사용합니다.
+- <xref:System.IO.File>, <xref:System.IO.FileInfo>, <xref:System.IO.Directory> 및 <xref:System.IO.DirectoryInfo>과(와) 같은 파일 작업과 관련된 형식은 Windows 8.x 스토어 앱용 .NET에 포함되지 않습니다. 대신 <xref:Windows.Storage.StorageFile> 및 <xref:Windows.Storage.StorageFolder> 등 Windows 런타임의 <xref:Windows.Storage?displayProperty=nameWithType> 네임스페이스에 있는 유형을 사용합니다.
 
 - 격리된 스토리지는 사용할 수 없습니다. 대신에 [애플리케이션 데이터](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10))를 사용합니다.
 

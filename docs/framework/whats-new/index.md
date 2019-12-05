@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: ffcb288995975433bdd915362fccca03f345b5f5
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: c651f5c02bd49acc593c585395bc52e9ee64f870
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74281661"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714502"
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework의 새로운 기능
 
@@ -2116,13 +2116,13 @@ ASP.NET 4.5 및 4.5.1은 Web Forms, WebSocket 지원, 비동기 처리기, 성�
 
 <a name="tailored" />
 
-### [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]
+### <a name="net-for-windows-8x-store-apps"></a>Windows 8.x 스토어 앱용 .NET
 
-Windows 8.x 스토어 앱은 특정 폼 팩터용으로 설계되었으며 Windows 운영 체제의 강력한 기능을 활용합니다. .NET Framework 4.5 또는 4.5.1의 하위 집합은 C# 또는 Visual Basic을 사용하여 Windows용 Windows 8.x 스토어 앱을 빌드하는 데 사용할 수 있습니다. 이 하위 집합을 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]이라고 하며 Windows 개발자 센터의 [개요](https://go.microsoft.com/fwlink/?LinkId=228491)에 설명되어 있습니다.
+Windows 8.x 스토어 앱은 특정 폼 팩터용으로 설계되었으며 Windows 운영 체제의 강력한 기능을 활용합니다. .NET Framework 4.5 또는 4.5.1의 하위 집합은 C# 또는 Visual Basic을 사용하여 Windows용 Windows 8.x 스토어 앱을 빌드하는 데 사용할 수 있습니다. 이 하위 집합을 Windows 8.x 스토어 앱용 .NET이라고 하며 Windows 개발자 센터의 [개요](https://go.microsoft.com/fwlink/?LinkId=228491)에 설명되어 있습니다.
 
 ### <a name="portable-class-libraries-a-nameportable-"></a>이식 가능한 클래스 라이브러리<a name="portable" />
 
-Visual Studio 2012 및 이후 버전의 이식 가능한 클래스 라이브러리 프로젝트를 사용하여 여러 .NET Framework 플랫폼에서 작동하는 관리되는 어셈블리를 작성하고 빌드할 수 있습니다. 이식 가능한 클래스 라이브러리 프로젝트를 사용하여 대상 플랫폼(예: Windows Phone 및 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)])을 선택합니다. 프로젝트에서 사용할 수 있는 형식 및 멤버는 이러한 플랫폼에서 공용 형식 및 멤버로 자동으로 제한됩니다. 자세한 내용은 [이식 가능한 클래스 라이브러리](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)를 참조하십시오.
+Visual Studio 2012 및 이후 버전의 이식 가능한 클래스 라이브러리 프로젝트를 사용하여 여러 .NET Framework 플랫폼에서 작동하는 관리되는 어셈블리를 작성하고 빌드할 수 있습니다. 이식 가능한 클래스 라이브러리 프로젝트를 사용하여 대상 플랫폼(예: Windows Phone 및 Windows 8.x 스토어 앱용 .NET)을 선택합니다. 프로젝트에서 사용할 수 있는 형식 및 멤버는 이러한 플랫폼에서 공용 형식 및 멤버로 자동으로 제한됩니다. 자세한 내용은 [이식 가능한 클래스 라이브러리](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)를 참조하십시오.
 
 ## <a name="see-also"></a>참고 항목
 

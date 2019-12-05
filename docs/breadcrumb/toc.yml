@@ -19,7 +19,7 @@
             - name: .NET 마이크로 서비스 - 아키텍처 eBook
               tocHref: /dotnet/architecture/microservices/
               topicHref: /dotnet/architecture/microservices/index
-            - name: 클라우드 네이티브
+            - name: 네이티브 클라우드
               tocHref: /dotnet/architecture/cloud-native/
               topicHref: /dotnet/architecture/cloud-native/index
             - name: .NET 앱 현대화 eBook
@@ -78,10 +78,10 @@
             - name: 이벤트 처리 및 발생
               tocHref: /dotnet/standard/events/
               topicHref: /dotnet/standard/events/index
-            - name: 예외 처리 및 Throw
+            - name: 예외 처리 및 throw
               tocHref: /dotnet/standard/exceptions/
               topicHref: /dotnet/standard/exceptions/index
-            - name: 가비지 컬렉션
+            - name: 가비지 수집
               tocHref: /dotnet/standard/garbage-collection/
               topicHref: /dotnet/standard/garbage-collection/index
             - name: .NET의 제네릭
@@ -115,18 +115,57 @@
           tocHref: /dotnet/core/
           topicHref: /dotnet/core/index
           items:
-            - name: 호환성이 손상되는 변경
-              tocHref: /dotnet/core/compatibility/
-              topicHref: /dotnet/core/compatibility/index
-            - name: 런타임 구성
-              tocHref: /dotnet/core/run-time-config/
-              topicHref: /dotnet/core/run-time-config/index
-            - name: 도구
-              tocHref: /dotnet/core/tools/
-              topicHref: /dotnet/core/tools/index
             - name: 설치 가이드
               tocHref: /dotnet/core/install/
               topicHref: /dotnet/core/install/index
+            - name: 새로운 기능
+              tocHref: /dotnet/core/whats-new/
+              topicHref: /dotnet/core/whats-new/dotnet-core-3-0
+            - name: 호환성이 손상되는 변경
+              tocHref: /dotnet/core/compatibility/
+              topicHref: /dotnet/core/compatibility/index
+            - name: 자습서
+              tocHref: /dotnet/core/tutorials/
+              topicHref: /dotnet/core/tutorials/index
+            - name: 런타임 구성
+              tocHref: /dotnet/core/run-time-config/
+              topicHref: /dotnet/core/run-time-config/index
+            - name: 기본 상호 운용성
+              tocHref: /dotnet/core/native-interop/
+              topicHref: /dotnet/core/native-interop/expose-components-to-com
+            - name: 마이그레이션
+              tocHref: /dotnet/core/migration/
+              topicHref: /dotnet/core/migration/index
+            - name: 배포
+              tocHref: /dotnet/core/deploying/
+              topicHref: /dotnet/core/deploying/index
+            - name: Docker
+              tocHref: /dotnet/core/docker/
+              topicHref: /dotnet/core/docker/introduction
+            - name: 진단 도구
+              tocHref: /dotnet/core/diagnostics/
+              topicHref: /dotnet/core/diagnostics/index
+            - name: 단위 테스트
+              tocHref: /dotnet/core/testing/
+              topicHref: /dotnet/core/testing/index
+            - name: 버전 관리
+              tocHref: /dotnet/core/versions/
+              topicHref: /dotnet/core/versions/index
+            - name: 도구
+              tocHref: /dotnet/core/tools/
+              topicHref: /dotnet/core/tools/index
+            - name: 추가 도구
+              tocHref: /dotnet/core/additional-tools/
+              topicHref: /dotnet/core/additional-tools/index
+            - name: 이식
+              tocHref: /dotnet/core/porting/
+              topicHref: /dotnet/core/porting/index
+            - name: 종속성 로딩
+              tocHref: /dotnet/core/dependency-loading/
+              topicHref: /dotnet/core/dependency-loading/overview
+            - name: .NET Core 빌드
+              tocHref: /dotnet/core/build/
+              topicHref: /dotnet/core/build/index
         - name: .NET Framework
           tocHref: /dotnet/framework/
           topicHref: /dotnet/framework/index
@@ -221,7 +260,7 @@
             - name: .NET Framework 배포
               tocHref: /dotnet/framework/deployment/
               topicHref: /dotnet/framework/deployment/index
-            - name: Docker를 통해 .NET Framework 애플리케이션 배포
+            - name: Docker를 사용하여 .NET Framework 앱 배포
               tocHref: /dotnet/framework/docker/
               topicHref: /dotnet/framework/docker/index
             - name: 시작
@@ -230,7 +269,7 @@
             - name: 설치 가이드
               tocHref: /dotnet/framework/install/
               topicHref: /dotnet/framework/install/index
-            - name: 비관리 코드와의 상호 운용
+            - name: 비관리 코드와 상호 운용
               tocHref: /dotnet/framework/interop/
               topicHref: /dotnet/framework/interop/index
             - name: MEF(Managed Extensibility Framework)
@@ -251,7 +290,7 @@
             - name: .NET Framework의 동적 프로그래밍
               tocHref: /dotnet/framework/reflection-and-codedom/
               topicHref: /dotnet/framework/reflection-and-codedom/index
-            - name: 데스크톱 응용 프로그램의 리소스
+            - name: 데스크톱 앱의 리소스
               tocHref: /dotnet/framework/resources/
               topicHref: /dotnet/framework/resources/index
             - name: .NET Framework의 보안
@@ -320,7 +359,7 @@
                     - name: 추적
                       tocHref: /dotnet/framework/wcf/diagnostics/tracing/
                       topicHref: /dotnet/framework/wcf/diagnostics/tracing/index
-                    - name: 진단에 Windows Management Instrumentation 사용
+                    - name: 진단에 WMI(Windows Management Instrumentation) 사용
                       tocHref: /dotnet/framework/wcf/diagnostics/wmi/
                       topicHref: /dotnet/framework/wcf/diagnostics/wmi/index
                 - name: WCF 확장
@@ -359,7 +398,7 @@
               tocHref: /dotnet/framework/wpf/
               topicHref: /dotnet/framework/wpf/index
               items:
-                - name: 고급(Windows Presentation Foundation)
+                - name: 고급
                   tocHref: /dotnet/framework/wpf/advanced/
                   topicHref: /dotnet/framework/wpf/advanced/index
                 - name: 애플리케이션 개발
@@ -601,7 +640,7 @@
                 - name: 상수 및 열거형
                   tocHref: /dotnet/visual-basic/programming-guide/language-features/constants-enums/
                   topicHref: /dotnet/visual-basic/programming-guide/language-features/constants-enums/index
-                - name: 제어 흐름
+                - name: 흐름 제어
                   tocHref: /dotnet/visual-basic/programming-guide/language-features/control-flow/
                   topicHref: /dotnet/visual-basic/programming-guide/language-features/control-flow/index
                 - name: 데이터 형식
@@ -640,7 +679,7 @@
                 - name: XML
                   tocHref: /dotnet/visual-basic/programming-guide/language-features/xml/
                   topicHref: /dotnet/visual-basic/programming-guide/language-features/xml/index
-            - name: COM Interop
+            - name: COM interop
               tocHref: /dotnet/visual-basic/programming-guide/com-interop/
               topicHref: /dotnet/visual-basic/programming-guide/com-interop/index
             - name: 언어 참조
@@ -662,6 +701,6 @@
             - name: 자습서
               tocHref: /dotnet/machine-learning/tutorials/
               topicHref: /dotnet/machine-learning/tutorials/index
-        - name: Apache Spark 가이드용 .NET
+        - name: .NET for Apache Spark 가이드
           tocHref: /dotnet/spark/
           topicHref: /dotnet/spark/index
