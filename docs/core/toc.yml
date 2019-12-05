@@ -47,21 +47,21 @@
   items:
     - name: 'C# 및 Visual Studio Code 시작'
       href: tutorials/with-visual-studio-code.md
-    - name: 'Visual Studio 2017에서 .NET Core를 사용하여 C# Hello World 앱 빌드'
+    - name: 'Visual Studio에서 C# Hello World 앱 빌드'
       href: tutorials/with-visual-studio.md
-    - name: Visual Studio 2017에서 .NET Core를 사용하여 Visual Basic Hello World 앱 빌드
+    - name: Visual Studio에서 Visual Basic Hello World 앱 빌드
       href: tutorials/vb-with-visual-studio.md
-    - name: 'Visual Studio 2017을 사용하여 C# 또는 Visual Basic .NET Core Hello World 애플리케이션 디버그'
+    - name: Visual Studio를 사용하여 애플리케이션 디버그
       href: tutorials/debugging-with-visual-studio.md
-    - name: Visual Studio 2017을 사용하여 Hello World 애플리케이션 게시
+    - name: Visual Studio를 사용하여 애플리케이션 게시
       href: tutorials/publishing-with-visual-studio.md
-    - name: 'Visual Studio 2017에서 C# 및 .NET Core를 사용하여 .NET Standard 라이브러리 빌드'
+    - name: 'Visual Studio의 C#를 사용하여 .NET Standard 라이브러리 빌드'
       href: tutorials/library-with-visual-studio.md
-    - name: Visual Studio 2017에서 Visual Basic 및 .NET Core를 사용하여 .NET Standard 라이브러리 빌드
+    - name: Visual Studio에서 Visual Basic을 사용하여 .NET Standard 라이브러리 빌드
       href: tutorials/vb-library-with-visual-studio.md
-    - name: Visual Studio 2017에서 .NET Core를 사용하여 .NET Standard 라이브러리 테스트
+    - name: Visual Studio에서 .NET Standard 라이브러리 테스트
       href: tutorials/testing-library-with-visual-studio.md
-    - name: Visual Studio 2017에서 .NET Standard 라이브러리 사용
+    - name: Visual Studio에서 .NET Standard 라이브러리 사용
       href: tutorials/consuming-library-with-visual-studio.md
 - name: .NET Core의 새로운 기능
   items:
@@ -128,7 +128,7 @@
   items:
     - name: .NET Core 2.0 ~ 2.1
       href: migration/20-21.md
-    - name: project.json에서 마이그레이션
+    - name: Project. json에서 마이그레이션
       href: migration/index.md
     - name: project.json 및 csproj 간 매핑
       href: tools/project-json-to-csproj.md
@@ -141,7 +141,7 @@
       href: deploying/deploy-with-cli.md
     - name: Visual Studio를 사용한 앱 배포
       href: deploying/deploy-with-vs.md
-    - name: 플랫폼 간 도구로 NuGet 패키지 만들기
+    - name: 플랫폼 간 도구로 NuGet 패키지를 만드는 방법
       href: deploying/creating-nuget-packages.md
     - name: 자체 포함된 배포 런타임 롤포워드
       href: deploying/runtime-patch-selection.md
@@ -198,7 +198,7 @@
       href: testing/selective-unit-tests.md
     - name: 게시된 출력 단위 테스트
       href: testing/unit-testing-published-output.md
-    - name: Visual Studio를 사용한 Live Unit Testing .NET Core 프로젝트
+    - name: Visual Studio를 사용하여 .NET Core 프로젝트 라이브 단위 테스트
       href: /visualstudio/test/live-unit-testing-start
 - name: 연속 통합
   href: tools/using-ci-with-cli.md
@@ -225,7 +225,7 @@
           items:
             - name: 개요
               href: tools/global-tools.md
-            - name: Global Tool 만들기
+            - name: 전역 도구 만들기
               href: tools/global-tools-how-to-create.md
         - name: 도구 사용 문제 해결
           href: tools/troubleshoot-usage-issues.md
@@ -235,7 +235,7 @@
       href: tools/extensibility.md
     - name: 사용자 지정 템플릿
       href: tools/custom-templates.md
-    - name: TAB 완성 기능 사용
+    - name: Tab 완성 기능 사용
       href: tools/enable-tab-autocomplete.md
     - name: 원격 분석
       href: tools/telemetry.md
@@ -355,11 +355,11 @@
       items:
         - name: 기본 종속성 프로브
           href: dependency-loading/default-probing.md
-        - name: 관리형 어셈블리를 로드하는 중
+        - name: 관리되는 어셈블리 로드
           href: dependency-loading/loading-managed.md
-        - name: 위성 어셈블리를 로드하는 중
+        - name: 위성 어셈블리 로드
           href: dependency-loading/loading-resources.md
-        - name: 비관리형 라이브러리를 로드하는 중
+        - name: 관리되지 않는 라이브러리 로드
           href: dependency-loading/loading-unmanaged.md
     - name: 자습서
       items:
