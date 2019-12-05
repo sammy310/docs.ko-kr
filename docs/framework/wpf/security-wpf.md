@@ -13,12 +13,12 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: 939c9c6b8a8a8822174f08d5c0b50ef051264ee1
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 75e6c7b4886bd490c462e9128eca7ec13f233824
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802089"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837300"
 ---
 # <a name="security-wpf"></a>보안(WPF)
 <a name="introduction"></a>Windows Presentation Foundation (WPF) 독립 실행형 및 브라우저에서 호스팅되는 응용 프로그램을 개발 하는 경우 보안 모델을 고려해 야 합니다. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 독립 실행형 응용 프로그램은 Windows Installer (.msi), XCopy 또는 ClickOnce를 사용 하 여 배포 되었는지와 상관 없이 무제한 권한 (CAS**FullTrust** 권한 집합)으로 실행 됩니다. ClickOnce를 포함한 부분 신뢰, 독립 실행형 WPF 애플리케이션 배포가 지원되지 않습니다. 그러나 완전 신뢰 호스트 응용 프로그램은 .NET Framework 추가 기능 모델을 사용 하 여 부분 신뢰 <xref:System.AppDomain>를 만들 수 있습니다. 자세한 내용은 [WPF 추가 기능 개요](./app-development/wpf-add-ins-overview.md)를 참조 하세요.  
@@ -87,7 +87,7 @@ ms.locfileid: "74802089"
   
 <a name="InternetExplorerSecuritySettings"></a>   
 ## <a name="web-browsing-software-security-settings"></a>웹 브라우징 소프트웨어 보안 설정  
- 컴퓨터의 보안 설정은 웹 브라우징 소프트웨어 권한이 부여된 액세스 권한을 결정합니다. 웹 검색 소프트웨어에는 Internet Explorer 및 Presentationhost.exe를 비롯 한 [WinINet](https://go.microsoft.com/fwlink/?LinkId=179379) 또는 [urlmon.dll](https://go.microsoft.com/fwlink/?LinkId=179383) api를 사용 하는 응용 프로그램 또는 구성 요소가 포함 되어 있습니다.  
+ 컴퓨터의 보안 설정은 웹 브라우징 소프트웨어 권한이 부여된 액세스 권한을 결정합니다. 웹 검색 소프트웨어에는 Internet Explorer 및 Presentationhost.exe를 비롯 한 [WinINet](/windows/win32/wininet/portal) 또는 [urlmon.dll](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa767916(v=vs.85)) api를 사용 하는 응용 프로그램 또는 구성 요소가 포함 되어 있습니다.  
   
  Internet Explorer는 다음과 같은 방법으로 또는 Internet Explorer에서 실행할 수 있는 기능을 구성할 수 있는 메커니즘을 제공 합니다.  
   
@@ -148,14 +148,14 @@ ms.locfileid: "74802089"
   
 <a name="webbrowser_control_and_feature_controls"></a>   
 ## <a name="webbrowser-control-and-feature-controls"></a>WebBrowser 컨트롤 및 기능 컨트롤  
- WPF <xref:System.Windows.Controls.WebBrowser> 컨트롤은 웹 콘텐츠를 호스트 하는 데 사용할 수 있습니다. WPF <xref:System.Windows.Controls.WebBrowser> 컨트롤은 기본 WebBrowser ActiveX 컨트롤을 래핑합니다. Wpf는 WPF <xref:System.Windows.Controls.WebBrowser> 컨트롤을 사용 하 여 신뢰할 수 없는 웹 콘텐츠를 호스팅할 때 응용 프로그램 보안을 지원 합니다. 그러나 일부 보안 기능은 응용 프로그램에서 <xref:System.Windows.Controls.WebBrowser> 컨트롤을 사용 하 여 직접 적용 해야 합니다. WebBrowser ActiveX 컨트롤에 대 한 자세한 내용은 [Webbrowser 컨트롤 개요 및 자습서](https://go.microsoft.com/fwlink/?LinkId=179388)를 참조 하세요.  
+ WPF <xref:System.Windows.Controls.WebBrowser> 컨트롤은 웹 콘텐츠를 호스트 하는 데 사용할 수 있습니다. WPF <xref:System.Windows.Controls.WebBrowser> 컨트롤은 기본 WebBrowser ActiveX 컨트롤을 래핑합니다. Wpf는 WPF <xref:System.Windows.Controls.WebBrowser> 컨트롤을 사용 하 여 신뢰할 수 없는 웹 콘텐츠를 호스팅할 때 응용 프로그램 보안을 지원 합니다. 그러나 일부 보안 기능은 응용 프로그램에서 <xref:System.Windows.Controls.WebBrowser> 컨트롤을 사용 하 여 직접 적용 해야 합니다. WebBrowser ActiveX 컨트롤에 대 한 자세한 내용은 [Webbrowser 컨트롤 개요 및 자습서](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752041(v=vs.85))를 참조 하세요.  
   
 > [!NOTE]
 > 이 섹션은 <xref:System.Windows.Controls.WebBrowser>를 사용 하 여 HTML 콘텐츠를 탐색 하므로 <xref:System.Windows.Controls.Frame> 컨트롤에도 적용 됩니다.  
   
  WPF <xref:System.Windows.Controls.WebBrowser> 제어를 사용 하 여 신뢰할 수 없는 웹 콘텐츠를 호스팅하는 경우 응용 프로그램은 부분 신뢰 <xref:System.AppDomain>를 사용 하 여 잠재적으로 악의적인 HTML 스크립트 코드에서 응용 프로그램 코드를 보호 해야 합니다. 이는 <xref:System.Windows.Controls.WebBrowser.InvokeScript%2A> 메서드와 <xref:System.Windows.Controls.WebBrowser.ObjectForScripting%2A> 속성을 사용 하 여 응용 프로그램이 호스팅된 스크립트와 상호 작용 하는 경우 특히 그렇습니다. 자세한 내용은 [WPF 추가 기능 개요](./app-development/wpf-add-ins-overview.md)를 참조 하세요.  
   
- 응용 프로그램이 WPF <xref:System.Windows.Controls.WebBrowser> 제어를 사용 하는 경우 보안을 강화 하 고 공격을 완화 하는 또 다른 방법은 Internet Explorer 기능 제어를 사용 하도록 설정 하는 것입니다. 기능 컨트롤은 관리자와 개발자가 Internet explorer 및 WPF <xref:System.Windows.Controls.WebBrowser> 컨트롤에서 래핑하는 WebBrowser ActiveX 컨트롤을 호스트 하는 응용 프로그램의 기능을 구성 하는 데 사용할 수 있는 Internet Explorer의 추가 기능입니다. 기능 컨트롤은 [Cointernetsetfeatureenabled](https://go.microsoft.com/fwlink/?LinkId=179394) 함수를 사용 하거나 레지스트리에서 값을 변경 하 여 구성할 수 있습니다. 기능 컨트롤에 대 한 자세한 내용은 [기능 컨트롤 소개](https://go.microsoft.com/fwlink/?LinkId=179390) 및 [인터넷 기능 컨트롤](https://go.microsoft.com/fwlink/?LinkId=179392)을 참조 하세요.  
+ 응용 프로그램이 WPF <xref:System.Windows.Controls.WebBrowser> 제어를 사용 하는 경우 보안을 강화 하 고 공격을 완화 하는 또 다른 방법은 Internet Explorer 기능 제어를 사용 하도록 설정 하는 것입니다. 기능 컨트롤은 관리자와 개발자가 Internet explorer 및 WPF <xref:System.Windows.Controls.WebBrowser> 컨트롤에서 래핑하는 WebBrowser ActiveX 컨트롤을 호스트 하는 응용 프로그램의 기능을 구성 하는 데 사용할 수 있는 Internet Explorer의 추가 기능입니다. 기능 컨트롤은 [Cointernetsetfeatureenabled](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537168(v=vs.85)) 함수를 사용 하거나 레지스트리에서 값을 변경 하 여 구성할 수 있습니다. 기능 컨트롤에 대 한 자세한 내용은 [기능 컨트롤 소개](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537184(v=vs.85)) 및 [인터넷 기능 컨트롤](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/general-info/ee330720(v=vs.85))을 참조 하세요.  
   
  WPF <xref:System.Windows.Controls.WebBrowser> 컨트롤을 사용 하는 독립 실행형 WPF 응용 프로그램을 개발 하는 경우 WPF는 응용 프로그램에 대해 다음과 같은 기능 컨트롤을 자동으로 사용 하도록 설정 합니다.  
   
@@ -184,7 +184,7 @@ ms.locfileid: "74802089"
  기능 컨트롤은 WebBrowser ActiveX 개체를 인스턴스화하는 프로세스에 의해 적용 됩니다. 따라서 신뢰할 수 없는 콘텐츠를 탐색할 수 있는 독립 실행형 애플리케이션을 만드는 경우, 추가 기능 컨트롤 사용을 심각하게 고려해야 합니다.  
   
 > [!NOTE]
-> 이 권장 사항은 MSHTML 및 SHDOCVW 호스트 보안을 위한 일반 권장 사항을 기반으로 합니다. 자세한 내용은 [Mshtml 호스트 보안 faq: 파트 I/ii](https://go.microsoft.com/fwlink/?LinkId=179396) 및 [MSHTML 호스트 보안 FAQ: 파트 ii/ii](https://go.microsoft.com/fwlink/?LinkId=179415)를 참조 하십시오.  
+> 이 권장 사항은 MSHTML 및 SHDOCVW 호스트 보안을 위한 일반 권장 사항을 기반으로 합니다. 자세한 내용은 [Mshtml 호스트 보안 faq: 파트 I/ii](https://msrc-blog.microsoft.com/archive/2009/04/02/the-mshtml-host-security-faq.aspx) 및 [MSHTML 호스트 보안 FAQ: 파트 ii/ii](https://msrc-blog.microsoft.com/archive/2009/04/03/the-mshtml-host-security-faq-part-ii-of-ii.aspx)를 참조 하십시오.  
   
  실행 파일의 경우, 레지스트리 값을 1로 설정하여 다음 기능 컨트롤을 사용하도록 설정하는 것이 좋습니다.  
   
@@ -209,7 +209,7 @@ ms.locfileid: "74802089"
   
  Windows Internet Explorer에서 WPF <xref:System.Windows.Controls.WebBrowser> 컨트롤을 포함 하는 부분 신뢰 XBAP (XAML 브라우저 응용 프로그램)를 실행 하는 경우 WPF는 Internet Explorer 프로세스의 주소 공간에서 WebBrowser ActiveX 컨트롤을 호스팅합니다. WebBrowser ActiveX 컨트롤은 Internet Explorer 프로세스에서 호스트 되므로 Internet Explorer에 대 한 모든 기능 컨트롤은 WebBrowser ActiveX 컨트롤에도 사용할 수 있습니다.  
   
- 또한 Internet Explorer에서 실행하는 XBAP는 일반 독립 실행형 애플리케이션보다 추가된 보안 수준이 제공됩니다. Internet Explorer 및 WebBrowser ActiveX 컨트롤은 Windows Vista 및 Windows 7에서 기본적으로 보호 된 모드로 실행 되기 때문에 이러한 보안을 강화 해야 합니다. 보호 된 모드에 대 한 자세한 내용은 [보호 모드 Internet Explorer 이해 및 작업](https://go.microsoft.com/fwlink/?LinkId=179393)을 참조 하세요.  
+ 또한 Internet Explorer에서 실행하는 XBAP는 일반 독립 실행형 애플리케이션보다 추가된 보안 수준이 제공됩니다. Internet Explorer 및 WebBrowser ActiveX 컨트롤은 Windows Vista 및 Windows 7에서 기본적으로 보호 된 모드로 실행 되기 때문에 이러한 보안을 강화 해야 합니다. 보호 된 모드에 대 한 자세한 내용은 [보호 모드 Internet Explorer 이해 및 작업](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/)을 참조 하세요.  
   
 > [!NOTE]
 > Firefox에서 WPF <xref:System.Windows.Controls.WebBrowser> 컨트롤을 포함 하는 XBAP를 실행 하려고 하면 인터넷 영역에 <xref:System.Security.SecurityException>이 throw 됩니다. 이는 WPF 보안 정책에 의한 것입니다.  
@@ -266,7 +266,7 @@ ms.locfileid: "74802089"
   
 |영역|리소스|  
 |----------|--------------|  
-|관리 코드|[애플리케이션에 대한 패턴 및 사례 보안 지침](https://go.microsoft.com/fwlink/?LinkId=117426)|  
+|관리 코드|[애플리케이션에 대한 패턴 및 사례 보안 지침](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10))|  
 |CAS|[코드 액세스 보안](../misc/code-access-security.md)|  
 |ClickOnce|[ClickOnce 보안 및 배포](/visualstudio/deployment/clickonce-security-and-deployment)|  
 |[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]|[WPF 부분 신뢰 보안](wpf-partial-trust-security.md)|  
@@ -276,7 +276,7 @@ ms.locfileid: "74802089"
 - [WPF 부분 신뢰 보안](wpf-partial-trust-security.md)
 - [WPF 보안 전략 - 플랫폼 보안](wpf-security-strategy-platform-security.md)
 - [WPF 보안 전략 - 보안 엔지니어링](wpf-security-strategy-security-engineering.md)
-- [애플리케이션에 대한 패턴 및 사례 보안 지침](https://go.microsoft.com/fwlink/?LinkId=117426)
+- [애플리케이션에 대한 패턴 및 사례 보안 지침](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10))
 - [코드 액세스 보안](../misc/code-access-security.md)
 - [ClickOnce 보안 및 배포](/visualstudio/deployment/clickonce-security-and-deployment)
 - [XAML 개요(WPF)](../../desktop-wpf/fundamentals/xaml.md)

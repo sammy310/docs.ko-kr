@@ -2,12 +2,12 @@
 title: WCF 서비스 호스트(WcfSvcHost.exe)
 ms.date: 03/30/2017
 ms.assetid: 8643a63d-a357-4c39-bd6c-cdfdf71e370e
-ms.openlocfilehash: c855fe7cc804fac14348990b7a6f5f84a0956b0c
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: b8fb32111a80178f5eb92411eb4990decb645bb6
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802409"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837742"
 ---
 # <a name="wcf-service-host-wcfsvchostexe"></a>WCF 서비스 호스트(WcfSvcHost.exe)
 
@@ -113,7 +113,7 @@ Visual Studio 내에서 F5 키를 눌러 WCF 서비스 호스트를 처음 호�
 
 관리자 권한이 없는 사용자가 WCF 서비스를 개발할 수 있도록 Visual Studio를 설치 하는 동안 네임 스페이스 "http://+:8731/Design_Time_Addresses"에 대 한 ACL (Access Control 목록)이 만들어집니다. ACL은 (UI)로 설정되며 시스템에 로그온한 모든 대화식 사용자를 포함합니다. 관리자는이 ACL에서 사용자를 추가 또는 제거 하거나 추가 포트를 열 수 있습니다. 이 ACL을 통해 사용자는 관리자 권한을 부여 하지 않고 WCF 서비스 자동 호스트 (Wcfsvchost.exe)를 사용할 수 있습니다.
 
-[!INCLUDE[wv](../../../includes/wv-md.md)]의 강화된 관리자 계정으로 netsh.exe를 사용하여 액세스 권한을 수정할 수 있습니다. 다음은 netsh.exe를 사용하는 예입니다.
+관리자 권한으로 Windows Vista의 netsh.exe 도구를 사용 하 여 액세스 권한을 수정할 수 있습니다. 다음은 netsh.exe를 사용하는 예입니다.
 
 ```console
 netsh http add urlacl url=http://+:8001/MyService user=<domain>\<user>

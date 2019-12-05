@@ -2,12 +2,12 @@
 title: 워크플로 추적
 ms.date: 03/30/2017
 ms.assetid: 18737989-0502-4367-b5f6-617ebfb77c96
-ms.openlocfilehash: 7bca78b24963d94bfa0f2e2245a677b7dce455c9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 972520aae7a2af950ed1ba079769861173784148
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69933434"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837508"
 ---
 # <a name="workflow-tracing"></a>워크플로 추적
 워크플로 추적을 사용하면 .NET Framework 추적 수신기를 통해 진단 정보를 캡처할 수 있습니다. 추적은 애플리케이션에서 문제가 발견되면 사용하도록 설정했다가 문제가 해결되면 다시 사용하지 않도록 설정할 수 있습니다. 워크플로에 대한 디버그 추적을 두 가지 방법으로 활성화할 수 있습니다. 이벤트 추적 뷰어를 사용하여 구성하거나 <xref:System.Diagnostics>를 사용하여 추적 이벤트를 파일로 보낼 수 있습니다.  
@@ -25,7 +25,7 @@ ms.locfileid: "69933434"
   
     1. 현재 프레임워크 디렉터리(예: C:\Windows\Microsoft.NET\Framework\v4.0.21203)에서 `wevtutil um Microsoft.Windows.ApplicationServer.Applications.man` 명령을 실행합니다.  
   
-    2. Windows applicationserver. man 파일의 bufferSize>값을32로변경합니다.\<  
+    2. > \<bufferSize 파일의 값을 32로 변경 합니다.  
   
         ```xml  
         <channel name="Microsoft-Windows-Application Server-Applications/Analytic" chid="ANALYTIC_CHANNEL" symbol="ANALYTIC_CHANNEL" type="Analytic" enabled="false" isolation="Application" message="$(string.MICROSOFT_WINDOWS_APPLICATIONSERVER_APPLICATIONS.channel.ANALYTIC_CHANNEL.message)" >  
@@ -38,10 +38,10 @@ ms.locfileid: "69933434"
     3. 현재 프레임워크 디렉터리(예: C:\Windows\Microsoft.NET\Framework\v4.0.21203)에서 `wevtutil im Microsoft.Windows.ApplicationServer.Applications.man` 명령을 실행합니다.  
   
 > [!NOTE]
-> .NET Framework 4 클라이언트 프로필을 사용 하는 경우 먼저 .NET Framework 4 디렉터리에서 다음 명령을 실행 하 여 ETW 매니페스트를 등록 해야 합니다.`ServiceModelReg.exe –i –c:etw`  
+> .NET Framework 4 클라이언트 프로필을 사용 하는 경우 먼저 .NET Framework 4 디렉터리에서 다음 명령을 실행 하 여 ETW 매니페스트를 등록 해야 합니다. `ServiceModelReg.exe –i –c:etw`  
   
 ## <a name="enabling-debug-tracing-using-systemdiagnostics"></a>System.Diagnostics를 사용하여 디버그 추적 활성화  
- 이러한 수신기는 워크플로 애플리케이션의 App.config 파일 또는 워크플로 서비스의 Web.config에서 구성할 수 있습니다. 이 예제에서 [TextWriterTraceListener](https://go.microsoft.com/fwlink/?LinkId=165424) 는 추적 정보를 현재 디렉터리의 MyTraceLog 파일에 저장 하도록 구성 되어 있습니다.  
+ 이러한 수신기는 워크플로 애플리케이션의 App.config 파일 또는 워크플로 서비스의 Web.config에서 구성할 수 있습니다. 이 예제에서 <xref:System.Diagnostics.TextWriterTraceListener>는 추적 정보를 현재 디렉터리의 MyTraceLog .txt 파일에 저장 하도록 구성 되어 있습니다.  
   
 ```xml  
 <configuration>  
@@ -69,7 +69,7 @@ ms.locfileid: "69933434"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
-- [Windows Server App Fabric 모니터링](https://go.microsoft.com/fwlink/?LinkId=201273)
-- [App Fabric을 사용 하 여 응용 프로그램 모니터링](https://go.microsoft.com/fwlink/?LinkId=201275)
+- [Windows Server App Fabric 모니터링](https://docs.microsoft.com/previous-versions/appfabric/ee677251(v=azure.10))
+- [App Fabric을 사용 하 여 응용 프로그램 모니터링](https://docs.microsoft.com/previous-versions/appfabric/ee677276(v=azure.10))

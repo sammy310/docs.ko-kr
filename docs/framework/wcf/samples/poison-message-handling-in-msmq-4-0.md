@@ -2,12 +2,12 @@
 title: Poison Message Handling in MSMQ 4.0
 ms.date: 03/30/2017
 ms.assetid: ec8d59e3-9937-4391-bb8c-fdaaf2cbb73e
-ms.openlocfilehash: eb0801a3df0f6f384dd646598e43fe1c20b6eda0
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: d1d23ffd600e7f770b942899ecc3b493b84c605a
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716532"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837820"
 ---
 # <a name="poison-message-handling-in-msmq-40"></a>Poison Message Handling in MSMQ 4.0
 이 샘플에서는 서비스에서 포이즌 메시지 처리를 수행하는 방법을 보여 줍니다. 이 샘플은 [트랜잭션 된 MSMQ 바인딩](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) 샘플을 기반으로 합니다. 이 샘플에서는 `netMsmqBinding`을 사용합니다. 이 서비스는 자체적으로 호스트되는 콘솔 애플리케이션으로서 이를 사용하여 서비스에서 대기된 메시지를 받는 것을 볼 수 있습니다.
@@ -18,12 +18,12 @@ ms.locfileid: "74716532"
 
  MSMQ의 버전에 따라 NetMsmqBinding에서는 포이즌 메시지의 제한적 검색부터 완전한 검색까지 지원합니다. 포이즌 메시지로 검색된 메시지는 몇 가지 방법으로 처리할 수 있습니다. 또한 MSMQ의 버전에 따라 NetMsmqBinding에서는 포이즌 메시지의 제한된 처리부터 전체 처리까지를 지원합니다.
 
- 이 샘플에서는 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 및 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 플랫폼에서 제공되는 제한된 포이즌 기능 및 [!INCLUDE[wv](../../../../includes/wv-md.md)]에서 제공되는 전체 포이즌 기능을 보여 줍니다. 두 샘플의 목표는 큐에서 포이즌 메시지를 다른 큐로 이동하여 포이즌 메시지 서비스에 의해 처리되도록 하는 것입니다.
+ 이 샘플에서는 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 및 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 플랫폼과 Windows Vista에서 제공 되는 완전 한 포이즌 기능에 대해 제공 되는 제한 된 포이즌 기능을 보여 줍니다. 두 샘플의 목표는 큐에서 포이즌 메시지를 다른 큐로 이동하여 포이즌 메시지 서비스에 의해 처리되도록 하는 것입니다.
 
 ## <a name="msmq-v40-poison-handling-sample"></a>MSMQ v4.0 Poison Handling 샘플
- [!INCLUDE[wv](../../../../includes/wv-md.md)]의 MSMQ에서는 포이즌 메시지를 저장하는 데 사용할 수 있는 포이즌 하위 큐 기능을 제공합니다. 이 샘플에서는 [!INCLUDE[wv](../../../../includes/wv-md.md)]를 사용하여 포이즌 메시지를 처리하는 가장 좋은 방법을 보여 줍니다.
+ Windows Vista에서 MSMQ는 포이즌 메시지를 저장 하는 데 사용할 수 있는 포이즌 하위 큐 기능을 제공 합니다. 이 샘플에서는 Windows Vista를 사용 하는 포이즌 메시지를 처리 하는 최선의 방법을 보여 줍니다.
 
- [!INCLUDE[wv](../../../../includes/wv-md.md)]의 포이즌 메시지 검색은 매우 정교합니다. 검색에 도움이 되는 속성은 세 가지입니다. <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A>는 큐에서 지정된 메시지를 다시 읽고 애플리케이션으로 디스패치하여 처리할 수 있는 횟수입니다. 메시지를 애플리케이션으로 디스패치할 수 없어 큐에 다시 배치하거나 애플리케이션이 서비스 작업에서 트랜잭션을 롤백하는 경우에 큐의 메시지를 다시 읽을 수 있습니다. <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A>는 메시지를 재시도 큐로 이동하는 횟수입니다. <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A>에 도달하면 메시지가 재시도 큐로 이동합니다. <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A> 속성은 메시지가 재시도 큐에서 다시 기본 큐로 이동한 후의 시간 지연입니다. <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A>는 0으로 다시 설정되고, 메시지가 다시 시도됩니다. 메시지를 읽으려는 시도가 모두 실패하면 메시지가 포이즌으로 표시됩니다.
+ Windows Vista의 포이즌 메시지 검색은 매우 정교 합니다. 검색에 도움이 되는 속성은 세 가지입니다. <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A>는 큐에서 지정된 메시지를 다시 읽고 애플리케이션으로 디스패치하여 처리할 수 있는 횟수입니다. 메시지를 애플리케이션으로 디스패치할 수 없어 큐에 다시 배치하거나 애플리케이션이 서비스 작업에서 트랜잭션을 롤백하는 경우에 큐의 메시지를 다시 읽을 수 있습니다. <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A>는 메시지를 재시도 큐로 이동하는 횟수입니다. <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A>에 도달하면 메시지가 재시도 큐로 이동합니다. <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A> 속성은 메시지가 재시도 큐에서 다시 기본 큐로 이동한 후의 시간 지연입니다. <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A>는 0으로 다시 설정되고, 메시지가 다시 시도됩니다. 메시지를 읽으려는 시도가 모두 실패하면 메시지가 포이즌으로 표시됩니다.
 
  메시지가 포이즌으로 표시되면 메시지는 <xref:System.ServiceModel.MsmqBindingBase.ReceiveErrorHandling%2A> 열거의 설정에 따라 처리됩니다. 반복하려는 경우 가능한 값은 다음과 같습니다.
 
@@ -31,9 +31,9 @@ ms.locfileid: "74716532"
 
 - Drop: 메시지를 삭제합니다.
 
-- Move: 메시지를 포이즌 메시지 하위 큐로 이동합니다. 이 값은 [!INCLUDE[wv](../../../../includes/wv-md.md)]에서만 사용할 수 있습니다.
+- Move: 메시지를 포이즌 메시지 하위 큐로 이동합니다. 이 값은 Windows Vista 에서만 사용할 수 있습니다.
 
-- Reject: 메시지를 보낸 사람의 배달 못 한 편지 큐로 돌려보내는 방법으로 메시지를 거부합니다. 이 값은 [!INCLUDE[wv](../../../../includes/wv-md.md)]에서만 사용할 수 있습니다.
+- Reject: 메시지를 보낸 사람의 배달 못 한 편지 큐로 돌려보내는 방법으로 메시지를 거부합니다. 이 값은 Windows Vista 에서만 사용할 수 있습니다.
 
  이 샘플에서는 포이즌 메시지에 `Move` 처리를 사용하는 방법을 보여 줍니다. `Move`를 사용하면 메시지가 포이즌 하위 큐로 이동합니다.
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF, privacy information
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-ms.openlocfilehash: 0b277728d2f2c224d5e45e3990ab2fd588bc81d3
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: c5500b8fd8b35081e83e2e9279dc4f236ef3c7b0
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318689"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837937"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Windows Communication Foundation 개인 정보 취급 방침
 Microsoft는 최종 사용자의 개인 정보 보호를 위해 최선을 다할 것을 약속합니다. WCF (Windows Communication Foundation) 버전 3.0을 사용 하 여 응용 프로그램을 빌드할 때 응용 프로그램이 최종 사용자의 개인 정보에 영향을 줄 수 있습니다. 예를 들어 애플리케이션에서 사용자 연락처 정보를 명시적으로 수집하거나, 정보를 요청하거나 인터넷을 통해 정보를 웹 사이트로 보낼 수 있습니다. 애플리케이션에 Microsoft 기술을 포함하는 경우 해당 기술의 동작이 개인 정보 보호에 영향을 줄 수 있습니다. 사용자 또는 최종 사용자가 Microsoft에 전송 하도록 선택 하지 않는 한 WCF는 응용 프로그램에서 Microsoft로 정보를 보내지 않습니다.  
@@ -44,7 +44,7 @@ Microsoft는 최종 사용자의 개인 정보 보호를 위해 최선을 다할
   
  인증을 통해 통신하는 엔드포인트 간에 보안 세션이 설정될 수 있습니다. 세션은 보안 세션의 수명 동안 지속되는 GUID로 식별됩니다. 다음 표에서는 보관되는 데이터와 위치를 보여 줍니다.  
   
-|데이터|스토리지|  
+|데이터|저장소|  
 |----------|-------------|  
 |사용자 이름, X.509 인증서, Kerberos 토큰, 자격 증명에 대한 참조 등의 프레젠테이션 자격 증명|Windows 인증서 저장소 등의 표준 Windows 자격 증명 관리 메커니즘|  
 |사용자 이름, 암호 등의 사용자 멤버 자격 정보|ASP.NET 멤버 자격 공급자입니다.|  
@@ -54,9 +54,9 @@ Microsoft는 최종 사용자의 개인 정보 보호를 위해 최선을 다할
 ## <a name="auditing"></a>감사  
  감사는 인증 및 권한 부여 이벤트의 성공과 실패를 기록합니다. 감사 레코드에는 서비스 URI, 작업 URI, 호출자 ID 등의 데이터가 들어 있습니다.  
   
- 또한 감사는 메시지 로깅에서 애플리케이션별 데이터를 헤더와 본문에 기록할 수 있으므로 관리자가 설정 또는 해제하여 메시지 로깅의 구성을 수정하는 시기를 기록합니다. [!INCLUDE[wxp](../../../includes/wxp-md.md)]의 경우 애플리케이션 이벤트 로그에 레코드가 기록됩니다. [!INCLUDE[wv](../../../includes/wv-md.md)] 및 [!INCLUDE[ws2003](../../../includes/ws2003-md.md)]의 경우 보안 이벤트 로그에 레코드가 기록됩니다.  
+ 또한 감사는 메시지 로깅에서 애플리케이션별 데이터를 헤더와 본문에 기록할 수 있으므로 관리자가 설정 또는 해제하여 메시지 로깅의 구성을 수정하는 시기를 기록합니다. [!INCLUDE[wxp](../../../includes/wxp-md.md)]의 경우 애플리케이션 이벤트 로그에 레코드가 기록됩니다. Windows Vista 및 [!INCLUDE[ws2003](../../../includes/ws2003-md.md)]의 경우 보안 이벤트 로그에 레코드가 기록 됩니다.  
   
-## <a name="transactions"></a>의  
+## <a name="transactions"></a>트랜잭션  
  트랜잭션 기능은 WCF 응용 프로그램에 트랜잭션 서비스를 제공 합니다.  
   
  트랜잭션 전파에 사용된 트랜잭션 헤더에는 GUID인 트랜잭션 ID 또는 인리스트먼트 ID가 포함될 수도 있습니다.  
@@ -149,7 +149,7 @@ Microsoft는 최종 사용자의 개인 정보 보호를 위해 최선을 다할
   
  \- xmlns: saml = "urn: oasis: names: tc: SAML: 1.0: assertion"의 경우 굵게 표시 된 항목 (아래)이 제거 됩니다.  
   
- \<Assertion  
+ \<어설션  
   
  MajorVersion="1"  
   
@@ -163,41 +163,41 @@ Microsoft는 최종 사용자의 개인 정보 보호를 위해 최선을 다할
   
  >  
   
- \<Conditions NotBefore = "[dateTime]" NotOnOrAfter = "[dateTime]" >  
+ \<Conditions NotBefore="[dateTime]" NotOnOrAfter="[dateTime]">  
   
- \<AudienceRestrictionCondition >  
+ \<AudienceRestrictionCondition>  
   
- \<Audience > [uri] \</대상 사용자 > +  
+ \<Audience>[uri]\</Audience>+  
   
- \</AudienceRestrictionCondition > *  
+ \</AudienceRestrictionCondition>*  
   
- \<DoNotCacheCondition/> *  
+ \<DoNotCacheCondition />*  
   
- < \!--추상 기본 형식  
+ <\!--추상 기본 형식  
   
- \<Condition/> *  
+ \<조건/> *  
   
  -->  
   
  \</조건 >?  
   
- \<Advice >  
+ \<조언 >  
   
- \<AssertionIDReference > [ID] \</AssertionIDReference > *  
+ \<AssertionIDReference>[ID]\</AssertionIDReference>*  
   
- \<Assertion > [assertion] \</어설션 > *  
+ \<Assertion>[assertion]\</Assertion>*  
   
  [any]*  
   
  \</조언을 >?  
   
- < \!--추상 기본 형식  
+ <\!--추상 기본 형식  
   
- \<Statement/> *  
+ \<문/> *  
   
- \<SubjectStatement >  
+ \<SubjectStatement>  
   
- \<Subject >  
+ \<제목 >  
   
  `<NameIdentifier`  
   
@@ -211,19 +211,19 @@ Microsoft는 최종 사용자의 개인 정보 보호를 위해 최선을 다할
   
  `</NameIdentifier>?`  
   
- \<SubjectConfirmation >  
+ \<SubjectConfirmation>  
   
- \<ConfirmationMethod > [anyUri] \</ConfirmationMethod > +  
+ \<ConfirmationMethod>[anyUri]\</ConfirmationMethod>+  
   
- \<SubjectConfirmationData > [any] \</SubjectConfirmationData >?  
+ \<SubjectConfirmationData>[any]\</SubjectConfirmationData>?  
   
- \<ds: KeyInfo > ... \</ds: KeyInfo >?  
+ \<ds:KeyInfo>...\</ds:KeyInfo>?  
   
- \</SubjectConfirmation >?  
+ \</SubjectConfirmation>?  
   
- \</주제 >  
+ \</Subject>  
   
- \</SubjectStatement > *  
+ \</SubjectStatement>*  
   
  -->  
   
@@ -255,13 +255,13 @@ Microsoft는 최종 사용자의 개인 정보 보호를 위해 최선을 다할
   
  />*  
   
- \</AuthenticationStatement > *  
+ \</AuthenticationStatement>*  
   
- \<AttributeStatement >  
+ \<AttributeStatement>  
   
  [Subject]  
   
- \<Attribute  
+ \<특성  
   
  AttributeName="[string]"  
   
@@ -271,33 +271,33 @@ Microsoft는 최종 사용자의 개인 정보 보호를 위해 최선을 다할
   
  `<AttributeValue>[any]</AttributeValue>+`  
   
- \</특성 > +  
+ \</Attribute>+  
   
- \</AttributeStatement > *  
+ \</AttributeStatement>*  
   
  \<AuthorizationDecisionStatement  
   
  Resource="[uri]"  
   
- 의사 결정 = "[&#124;거부&#124;승인 비활성화]"  
+ Decision="[Permit&#124;Deny&#124;Indeterminate]"  
   
  >  
   
  [Subject]  
   
- \<Action Namespace = "[uri]" > [string] \</Action > +  
+ \<Action Namespace="[uri]">[string]\</Action>+  
   
- \<Evidence >  
+ \<증명 정보 >  
   
- \<AssertionIDReference > [ID] \</AssertionIDReference > +  
+ \<AssertionIDReference>[ID]\</AssertionIDReference>+  
   
- \<Assertion > [assertion] \</assertion > +  
+ \<Assertion>[assertion]\</Assertion>+  
   
- \</증거 >?  
+ \</Evidence>?  
   
- \</AuthorizationDecisionStatement > *  
+ \</AuthorizationDecisionStatement>*  
   
- \</어설션 >  
+ \</Assertion>  
   
 #### <a name="information-removed-from-message-bodies-when-logging-decryptedunencrypted-messages"></a>해독/암호화되지 않은 메시지를 기록할 때 메시지 본문에서 제거되는 정보  
  앞서 설명한 것 처럼 WCF는 암호 해독/암호화 되지 않은 메시지에 대 한 메시지 헤더에서 키 및 알려진 잠재적 개인 정보를 제거 합니다. 또한 WCF는 키 교환과 관련 된 보안 메시지를 설명 하는 다음 목록의 본문 요소 및 작업에 대 한 메시지 본문에서 키 및 알려진 잠재적 개인 정보를 제거 합니다.  

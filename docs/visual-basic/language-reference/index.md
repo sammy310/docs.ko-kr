@@ -10,12 +10,12 @@ helpviewer_keywords:
 - language reference, Visual Basic
 - Visual Basic, language reference
 ms.assetid: 5c6bd31a-9542-4f3e-bfd5-e951af58f0f2
-ms.openlocfilehash: 7e1838fe6c9d563358757700d74cbf27228812a9
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: ba611be8e63380f2bff958e37b72ffe8e0f90d9a
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349948"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837092"
 ---
 # <a name="visual-basic-language-reference"></a>Visual Basic 언어 참조
 
@@ -29,7 +29,7 @@ ms.locfileid: "74349948"
  [Visual Basic 런타임 라이브러리 멤버](../../visual-basic/language-reference/runtime-library-members.md)  
  <xref:Microsoft.VisualBasic?displayProperty=nameWithType> 네임스페이스의 클래스 및 모듈을 멤버 함수, 메서드, 속성, 상수, 열거형의 링크와 함께 나열합니다.  
   
- [키워드](../../visual-basic/language-reference/keywords/index.md)  
+ [C++ 키워드](../../visual-basic/language-reference/keywords/index.md)  
  모든 Visual Basic 키워드를 나열하고 추가 정보의 링크를 제공합니다.  
   
  [특성(Visual Basic)](../../visual-basic/language-reference/attributes.md)  
@@ -85,8 +85,5 @@ ms.locfileid: "74349948"
   
 ## <a name="related-sections"></a>관련 섹션  
 
- [Visual Basic](../../visual-basic/index.md)  
- Visual Basic 언어의 모든 영역에 대 한 포괄적인 도움말을 제공 합니다.  
-  
  [Visual Basic 명령줄 컴파일러](../../visual-basic/reference/command-line-compiler/index.md)  
  Visual Studio IDE (통합 개발 환경) 내에서 프로그램을 컴파일하는 대신 명령줄 컴파일러를 사용 하는 방법을 설명 합니다.

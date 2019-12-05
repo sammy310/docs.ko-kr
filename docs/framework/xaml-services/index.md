@@ -6,18 +6,18 @@ helpviewer_keywords:
 - XAML Services in WPF [XAML Services]
 - System.Xaml [XAML Services], conceptual documentation
 ms.assetid: 0e11f386-808c-4eae-9ba6-029ad7ba2211
-ms.openlocfilehash: a99b9f3cb8c008f72eaac7ee1b8790d63c547a8d
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 8e1e8dc9a1410d05c19e4dd1bccb30c65d7c5e66
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73453960"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837287"
 ---
 # <a name="xaml-services"></a>XAML 서비스
 이 항목에서는 .NET Framework XAML 서비스 라고 하는 기술 집합의 기능에 대해 설명 합니다. 설명 된 대부분의 서비스 및 Api는 .NET core 어셈블리의 .NET Framework 4 집합으로 도입 된 어셈블리인 어셈블리 System.xaml에 있습니다. 서비스에는 판독기와 작성기, 스키마 클래스 및 스키마 지원, 팩터리, 클래스의 특성, XAML 언어 내장 지원 및 기타 XAML 언어 기능이 포함 되어 있습니다.  
   
 ## <a name="about-this-documentation"></a>이 설명서 정보  
- .NET Framework XAML 서비스에 대 한 개념 설명서에서는 이전에 XAML 언어를 사용 하는 경험이 있고 특정 프레임 워크 (예: [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 또는 Windows Workflow Foundation 또는 특정 기술 기능 영역에 적용 될 수 있다고 가정 합니다. 예를 들어 <xref:Microsoft.Build.Framework.XamlTypes>의 빌드 사용자 지정 기능입니다. 이 설명서에서는 XAML의 기본 사항을 태그 언어, XAML 구문 용어 또는 기타 소개 자료로 설명 하지 않습니다. 대신이 설명서에서는 system.xaml 어셈블리 라이브러리에서 사용 되는 .NET Framework XAML 서비스를 사용 하는 방법을 집중적으로 설명 합니다. 이러한 Api의 대부분은 XAML 언어 통합 및 확장성 시나리오를 위한 것입니다. 여기에는 다음이 포함 될 수 있습니다.  
+ .NET Framework XAML 서비스에 대 한 개념 설명서에서는 이전에 XAML 언어를 사용 하는 경험이 있거나, 특정 프레임 워크 (예: [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 또는 Windows Workflow Foundation 또는 특정 기술 기능 영역 (예: <xref:Microsoft.Build.Framework.XamlTypes>의 빌드 사용자 지정 기능)에 적용 되는 방법을 전제로 합니다. 이 설명서에서는 XAML의 기본 사항을 태그 언어, XAML 구문 용어 또는 기타 소개 자료로 설명 하지 않습니다. 대신이 설명서에서는 system.xaml 어셈블리 라이브러리에서 사용 되는 .NET Framework XAML 서비스를 사용 하는 방법을 집중적으로 설명 합니다. 이러한 Api의 대부분은 XAML 언어 통합 및 확장성 시나리오를 위한 것입니다. 여기에는 다음이 포함 될 수 있습니다.  
   
 - 기본 XAML 판독기 또는 XAML 작성기의 기능 확장 (XAML 노드 스트림을 직접 처리, 고유한 XAML 판독기 또는 XAML 작성기 파생).  
   
@@ -27,16 +27,16 @@ ms.locfileid: "73453960"
   
 - XAML 값 변환기 작성 (태그 확장, 사용자 지정 형식에 대 한 형식 변환기).  
   
-- 사용자 지정 XAML 스키마 컨텍스트 정의 (형식 소스를 지원 하기 위한 대체 어셈블리 로드 기법 사용, 어셈블리를 항상 반영 하는 대신 알려진 형식 조회 기법 사용, CLR `AppDomain`를 사용 하지 않는 로드 된 어셈블리 개념 사용 및 해당 연결 된 보안 모델).  
+- 사용자 지정 XAML 스키마 컨텍스트 정의 (형식 소스를 지원 하기 위한 대체 어셈블리 로드 기법 사용, 어셈블리를 항상 반영 하는 대신 알려진 형식 조회 기법 사용, CLR `AppDomain` 및 관련 보안 모델을 사용 하지 않는 로드 된 어셈블리 개념 사용).  
   
 - 기본 XAML 형식 시스템 확장  
   
 - `Lookup` 또는 `Invoker` 기술을 사용 하 여 XAML 형식 시스템에 영향을 주거나 형식 백을 평가 하는 방법을 설명 합니다.  
   
- XAML에 대 한 소개 자료를 언어로 찾으려는 경우 [Xaml 개요 (WPF)](../../desktop-wpf/fundamentals/xaml.md)를 사용해 볼 수 있습니다. 이 항목에서는 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]와 XAML 태그 및 XAML 언어 기능을 모두 사용 하는 것이 새로운 대상 사용자를 위한 XAML에 대해 설명 합니다. 또 다른 유용한 문서는 [XAML 언어 사양의](https://go.microsoft.com/fwlink/?LinkId=114525)소개 자료입니다.  
+ XAML에 대 한 소개 자료를 언어로 찾으려는 경우 [Xaml 개요 (WPF)](../../desktop-wpf/fundamentals/xaml.md)를 사용해 볼 수 있습니다. 이 항목에서는 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]와 XAML 태그 및 XAML 언어 기능을 모두 사용 하는 것이 새로운 대상 사용자를 위한 XAML에 대해 설명 합니다. 또 다른 유용한 문서는 [XAML 언어 사양의](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10))소개 자료입니다.  
   
 ## <a name="net-framework-xaml-services-and-systemxaml-in-the-net-architecture"></a>.NET 아키텍처의 XAML 서비스 및 system.xaml .NET Framework  
- 이전 버전의 Microsoft .NET Framework에서는 XAML 언어 기능에 대 한 지원이 Microsoft .NET Framework ([!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Windows Workflow Foundation 및 Windows Communication Foundation)를 기반으로 하는 프레임 워크에 의해 구현 되었습니다. 따라서 사용 중인 특정 프레임 워크에 따라 동작 및 API가 다양 하 게 사용 됩니다. 여기에는 XAML 파서 및 해당 개체 그래프 생성 메커니즘, XAML 언어 내장 함수, serialization 지원 등이 포함 됩니다.  
+ 이전 버전의 Microsoft .NET Framework에서는 XAML 언어 기능에 대 한 지원이 Microsoft .NET Framework Windows Communication Foundation Windows Workflow Foundation[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)](WCF)를 기반으로 하는 프레임 워크에 의해 구현 되었으므로 사용 중인 특정 프레임 워크에 따라 동작 및 API가 다양 하 게 사용 됩니다. 여기에는 XAML 파서 및 해당 개체 그래프 생성 메커니즘, XAML 언어 내장 함수, serialization 지원 등이 포함 됩니다.  
   
  .NET Framework 4에서 .NET Framework XAML 서비스와 system.xaml 어셈블리는 XAML 언어 기능을 지 원하는 데 필요한 많은 항목을 정의 합니다. 여기에는 XAML 판독기 및 XAML 작성기에 대 한 기본 클래스가 포함 됩니다. 프레임 워크 관련 XAML 구현에 없는 .NET Framework XAML 서비스에 추가 되는 가장 중요 한 기능은 XAML의 형식 시스템 표현입니다. 형식 시스템 표현은 프레임 워크의 특정 기능에 대 한 종속성을 취하지 않고 XAML 기능을 중심으로 하는 개체 지향 방식으로 XAML을 제공 합니다.  
   
@@ -55,11 +55,11 @@ ms.locfileid: "73453960"
   
 - UTF 인코딩 XML 형식의 XAML 표현으로 시작 하 여 텍스트 파일로 저장 합니다.  
   
-- <xref:System.Xaml.XamlXmlReader>로 XAML을 로드 합니다. <xref:System.Xaml.XamlXmlReader>은 <xref:System.Xaml.XamlReader> 하위 클래스입니다.  
+- <xref:System.Xaml.XamlXmlReader>로 XAML을 로드 합니다. <xref:System.Xaml.XamlXmlReader> 가 <xref:System.Xaml.XamlReader> 하위 클래스입니다.  
   
 - 결과는 XAML 노드 스트림입니다. <xref:System.Xaml.XamlXmlReader> / <xref:System.Xaml.XamlReader> API를 사용 하 여 XAML 노드 스트림의 개별 노드에 액세스할 수 있습니다. 여기에서 가장 일반적인 작업은 XAML 노드 스트림을 진행 하면서 "현재 레코드" 메타포를 사용 하 여 각 노드를 처리 하는 것입니다.  
   
-- XAML 노드 스트림에서 결과 노드를 <xref:System.Xaml.XamlObjectWriter> API에 전달 합니다. <xref:System.Xaml.XamlObjectWriter>은 <xref:System.Xaml.XamlWriter> 하위 클래스입니다.  
+- XAML 노드 스트림에서 결과 노드를 <xref:System.Xaml.XamlObjectWriter> API에 전달 합니다. <xref:System.Xaml.XamlObjectWriter> 가 <xref:System.Xaml.XamlWriter> 하위 클래스입니다.  
   
 - <xref:System.Xaml.XamlObjectWriter>는 소스 XAML 노드 스트림의 진행에 따라 개체 그래프를 한 번에 하나씩 씁니다. 이 작업은 지원 형식 시스템 및 프레임 워크의 어셈블리와 형식에 액세스할 수 있는 XAML 스키마 컨텍스트 및 구현에서 지원 됩니다.  
   
@@ -69,17 +69,17 @@ ms.locfileid: "73453960"
   
 - 전체 응용 프로그램 실행 시간, 실행 시간의 UI 콘텐츠 및 상태 또는 런타임에 전체 응용 프로그램 개체 표현의 작은 세그먼트의 개체 그래프로 시작 합니다.  
   
-- 응용 프로그램 루트 또는 문서 루트와 같은 논리적 시작 개체에서 개체를 <xref:System.Xaml.XamlObjectReader>으로 로드 합니다. <xref:System.Xaml.XamlObjectReader>은 <xref:System.Xaml.XamlReader> 하위 클래스입니다.  
+- 응용 프로그램 루트 또는 문서 루트와 같은 논리적 시작 개체에서 개체를 <xref:System.Xaml.XamlObjectReader>으로 로드 합니다. <xref:System.Xaml.XamlObjectReader> 가 <xref:System.Xaml.XamlReader> 하위 클래스입니다.  
   
 - 결과는 XAML 노드 스트림입니다. <xref:System.Xaml.XamlObjectReader> 및 <xref:System.Xaml.XamlReader> API를 사용 하 여 XAML 노드 스트림의 개별 노드에 액세스할 수 있습니다. 여기에서 가장 일반적인 작업은 XAML 노드 스트림을 진행 하면서 "현재 레코드" 메타포를 사용 하 여 각 노드를 처리 하는 것입니다.  
   
-- XAML 노드 스트림에서 결과 노드를 <xref:System.Xaml.XamlXmlWriter> API에 전달 합니다. <xref:System.Xaml.XamlXmlWriter>은 <xref:System.Xaml.XamlWriter> 하위 클래스입니다.  
+- XAML 노드 스트림에서 결과 노드를 <xref:System.Xaml.XamlXmlWriter> API에 전달 합니다. <xref:System.Xaml.XamlXmlWriter> 가 <xref:System.Xaml.XamlWriter> 하위 클래스입니다.  
   
 - <xref:System.Xaml.XamlXmlWriter>는 XML UTF 인코딩으로 XAML을 작성 합니다. 이를 텍스트 파일, 스트림 또는 다른 형식으로 저장할 수 있습니다.  
   
 - <xref:System.Xaml.XamlXmlWriter.Flush%2A>를 호출 하 여 최종 출력을 가져옵니다.  
   
- XAML 노드 스트림 개념에 대 한 자세한 내용은 [Xaml 노드 스트림 구조 및 개념 이해](understanding-xaml-node-stream-structures-and-concepts.md)를 참조 하세요.  
+ XAML 노드 스트림 개념에 대 한 자세한 내용은 참조 하십시오 [Understanding XAML 노드 Stream 구조 및 개념](understanding-xaml-node-stream-structures-and-concepts.md)합니다.  
   
 ### <a name="the-xamlservices-class"></a>XamlServices 클래스  
  XAML 노드 스트림을 반드시 처리 해야 하는 것은 아닙니다. 기본 로드 경로 또는 기본 저장 경로를 원하는 경우 <xref:System.Xaml.XamlServices> 클래스에서 Api를 사용할 수 있습니다.  

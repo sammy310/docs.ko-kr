@@ -2,12 +2,12 @@
 title: Using the WCF Moniker with COM Clients
 ms.date: 03/30/2017
 ms.assetid: e2799bfe-88bd-49d7-9d6d-ac16a9b16b04
-ms.openlocfilehash: faaf8e80402ddaef85dcf8d7bfe9b1da202227c9
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: bcac9e344e2d981f9f165480cb84ac37c99fa5b0
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715295"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837781"
 ---
 # <a name="using-the-wcf-moniker-with-com-clients"></a>Using the WCF Moniker with COM Clients
 이 샘플에서는 WCF (Windows Communication Foundation) 서비스 모니커를 사용 하 여 웹 서비스를 Microsoft Office Visual Basic for Applications (Office VBA) 또는 Visual Basic 6.0와 같은 COM 기반 개발 환경에 통합 하는 방법을 보여 줍니다. 이 샘플은 IIS(인터넷 정보 서비스)에서 호스트되는 Windows 스크립트 호스트 클라이언트(.vbs), 지원 클라이언트 라이브러리(.dll) 및 서비스 라이브러리(.dll)로 구성됩니다. 서비스는 계산기 서비스이고 COM 클라이언트는 서비스에서 수학 작업인 Add, Subtract, Multiply 및 Divide를 호출합니다. 클라이언트 동작이 메시지 상자 창에 표시됩니다.  
@@ -191,7 +191,7 @@ WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9,
 3. Visual Studio에 대 한 개발자 명령 프롬프트에서 언어 관련 폴더 아래의 \client\bin 폴더를 엽니다.  
   
     > [!NOTE]
-    > [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[lserver](../../../../includes/lserver-md.md)], Windows 7 또는 Windows Server 2008 R2를 사용하는 경우에는 관리자 권한으로 명령 프롬프트를 실행해야 합니다.  
+    > Windows Vista, [!INCLUDE[lserver](../../../../includes/lserver-md.md)], Windows 7 또는 Windows Server 2008 r 2를 사용 하는 경우 관리자 권한으로 명령 프롬프트를 실행 해야 합니다.  
   
 4. `tlbexp.exe client.dll /out:CalcProxy.tlb`를 입력 하 여 dll을 tlb 파일로 내보냅니다. "형식 라이브러리 내보내기 경고"가 발생할 수 있지만 제네릭 형식이 필요하지 않으므로 문제가 되지는 않습니다.  
   
@@ -221,7 +221,7 @@ WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9,
   
 6. 언어별 폴더의 \client\bin 폴더에서 클라이언트 컴퓨터의 디렉터리로 Client.dll 라이브러리를 복사합니다.  
   
-7. 명령 프롬프트에서 클라이언트 컴퓨터의 대상 디렉터리로 이동합니다. [!INCLUDE[wv](../../../../includes/wv-md.md)] 또는 [!INCLUDE[lserver](../../../../includes/lserver-md.md)]을 사용할 경우 관리자 권한으로 명령 프롬프트를 실행해야 합니다.  
+7. 명령 프롬프트에서 클라이언트 컴퓨터의 대상 디렉터리로 이동합니다. Windows Vista 또는 [!INCLUDE[lserver](../../../../includes/lserver-md.md)]를 사용 하는 경우 관리자 권한으로 명령 프롬프트를 실행 해야 합니다.  
   
 8. `tlbexp.exe client.dll /out:CalcProxy.tlb`를 입력 하 여 dll을 tlb 파일로 내보냅니다. "형식 라이브러리 내보내기 경고"가 발생할 수 있지만 제네릭 형식이 필요하지 않으므로 문제가 되지는 않습니다.  
   

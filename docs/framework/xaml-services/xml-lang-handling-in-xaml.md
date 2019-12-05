@@ -7,12 +7,12 @@ helpviewer_keywords:
 - RFC 3066 standard [XAML Services]
 - standards [XAML Services], RFC 3066
 ms.assetid: 7aac0078-a1c5-41f8-b8b0-975510d9dca0
-ms.openlocfilehash: 98bfabba96e5805b96c63eb02233b15eae233cc0
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: b3f236b2378d6af78f034856e3ba0f7a9e17993c
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740558"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837144"
 ---
 # <a name="xmllang-handling-in-xaml"></a>XAML의 xml:lang 처리
 `xml:lang` 특성은 XML의 요소에 대 한 언어 및 문화권 정보를 선언 하는 XML 정의 특성입니다. XAML을 사용해도 특성의 의미가 동일하게 유지되지만, 일부 추가적인 고려 사항이 적용됩니다.  
@@ -27,7 +27,7 @@ ms.locfileid: "73740558"
   
 |||  
 |-|-|  
-|*rfc3066lang*|[RFC 3066](https://go.microsoft.com/fwlink/?LinkId=132454) 표준에서 파생되고 언어 또는 언어 영역을 식별하는 문자열입니다. 후자의 경우, 언어 및 지역이 단일 하이픈으로 구분됩니다. 값 및 형식에 대한 자세한 내용은 <xref:System.Windows.Markup.XmlLanguage> 를 참조하세요.|  
+|*rfc3066lang*|[RFC 3066](https://www.ietf.org/rfc/rfc3066.txt) 표준에서 파생되고 언어 또는 언어 영역을 식별하는 문자열입니다. 후자의 경우, 언어 및 지역이 단일 하이픈으로 구분됩니다. 값 및 형식에 대한 자세한 내용은 <xref:System.Windows.Markup.XmlLanguage> 를 참조하세요.|  
   
 ## <a name="remarks"></a>주의  
  [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]의 `xml:lang` 특성에 대 한 정의는 W3C (World Wide Web 컨소시엄) for XML에서 "특수 특성"으로 정의 된 `xml:lang`에서 파생 됩니다. 언어 및 문화권 정보는 구현에 따라 요소에서 다양한 방법으로 처리될 수 있습니다. 하지만 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 특성의 기본 `xml:lang` 처리는 없습니다.  

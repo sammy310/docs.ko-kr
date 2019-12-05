@@ -1,13 +1,13 @@
 ---
 title: 값 옵션
 description: 옵션 형식의 구조체 F# 버전인 Value 옵션 형식에 대해 알아봅니다.
-ms.date: 02/06/2019
-ms.openlocfilehash: 4dc3f7217943345b7aaf1165fd648ab2e01bd727
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.date: 12/04/2019
+ms.openlocfilehash: 0e9882ab4acdf2757705ef6022516d3572d87ef2
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424016"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837118"
 ---
 # <a name="value-options"></a>값 옵션
 
@@ -63,15 +63,13 @@ match (result1, result2) with
 
 ## <a name="value-option-functions"></a>Value 옵션 함수
 
-현재 값 옵션에 대 한 모듈 바인딩 함수는 `defaultValueArg`있습니다.
+Fsharp.core의 `ValueOption` 모듈에는 `Option` 모듈에 해당 하는 기능이 포함 되어 있습니다. `defaultValueArg`와 같이 이름에는 몇 가지 차이점이 있습니다.
 
 ```fsharp
 val defaultValueArg : arg:'T voption -> defaultValue:'T -> 'T
 ```
 
-`defaultArg` 함수와 마찬가지로 `defaultValueArg`는 지정 된 값 옵션의 기본 값이 있는 경우이를 반환 합니다. 그렇지 않으면 지정 된 기본값을 반환 합니다.
-
-지금은 값 옵션에 대 한 다른 모듈 바인딩 함수가 없습니다.
+이는 `Option` 모듈에서 `defaultArg`와 동일 하 게 작동 하지만 대신 값 옵션에서 작동 합니다.
 
 ## <a name="see-also"></a>참조
 

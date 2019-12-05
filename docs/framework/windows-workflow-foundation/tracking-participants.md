@@ -2,12 +2,12 @@
 title: 추적 참가자
 ms.date: 03/30/2017
 ms.assetid: f13e360c-eeb7-4a49-98a0-8f6a52d64f68
-ms.openlocfilehash: 45a92c3ab710fc9bc86fbf269a4672f1d34737cc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a033b65125a562307c6247eeda93dcacb31f5382
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963681"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837651"
 ---
 # <a name="tracking-participants"></a>추적 참가자
 추적 참가자는 워크플로 개발자가 <xref:System.Activities.Tracking.InteropTrackingRecord.TrackingRecord%2A> 개체에 액세스하여 처리할 수 있는 확장성 지점입니다. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]에는 추적 레코드를 ETW(Windows용 이벤트 추적) 이벤트로 기록하는 표준 추적 참가자가 포함되어 있습니다. 표준 참가자가 요구 사항에 맞지 않는 경우 사용자 지정 추적 참가자를 작성할 수도 있습니다.  
@@ -15,7 +15,7 @@ ms.locfileid: "69963681"
 ## <a name="tracking-participants"></a>추적 참가자  
  추적 인프라를 사용하면 참가자가 레코드 하위 집합을 구독할 수 있도록 보내는 추적 레코드에 필터를 적용할 수 있습니다. 필터를 적용하는 메커니즘은 추적 프로필을 사용합니다.  
   
- 의 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] WF (Windows Workflow Foundation)는 추적 레코드를 ETW 세션에 기록 하는 추적 참가자를 제공 합니다. 추적 참가자는 워크플로 서비스에서 구성 파일에 추적별 동작을 추가하여 구성할 수 있습니다. ETW 추적 참가자를 사용하여 이벤트 뷰어에서 추적 레코드를 볼 수 있습니다. ETW 기반 추적에 대한 SDK 샘플을 사용하면 ETW 기반 추적 참가자를 사용하는 WF 추적을 쉽게 익힐 수 있습니다.  
+ [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]의 WF (Windows Workflow Foundation)는 추적 레코드를 ETW 세션에 기록 하는 추적 참가자를 제공 합니다. 추적 참가자는 워크플로 서비스에서 구성 파일에 추적별 동작을 추가하여 구성할 수 있습니다. ETW 추적 참가자를 사용하여 이벤트 뷰어에서 추적 레코드를 볼 수 있습니다. ETW 기반 추적에 대한 SDK 샘플을 사용하면 ETW 기반 추적 참가자를 사용하는 WF 추적을 쉽게 익힐 수 있습니다.  
   
 ## <a name="etw-tracking-participant"></a>ETW 추적 참가자  
  [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]에는 추적 레코드를 ETW 세션에 기록하는 ETW 추적 참가자가 포함됩니다. 이 작업은 애플리케이션 성능이나 서버 처리량에 미치는 영향을 최소화하면서 매우 효율적인 방식으로 수행됩니다. 표준 ETW 추적 참가자를 사용하는 이점은 Windows 이벤트 뷰어에서 다른 애플리케이션 및 시스템 로그를 사용하여 참가자가 받는 추적 레코드를 볼 수 있다는 것입니다.  
@@ -67,7 +67,7 @@ ms.locfileid: "69963681"
   
  ETW 이벤트 크기는 ETW 버퍼 크기 또는 ETW 이벤트의 최대 페이로드 중 작은 값에 따라 제한됩니다. 이벤트 크기가 이 ETW 제한 중 하나를 초과하면 임의의 방식으로 이벤트가 잘리고 이벤트 내용이 제거됩니다. 변수, 인수, 주석 및 사용자 지정 데이터는 선택적으로 제거되지 않습니다. 잘리는 경우 어떤 값 때문에 이벤트 크기가 ETW 제한을 초과하는지와 상관없이 이 모든 항목이 잘립니다.  제거된 데이터는 `<item>..<item>`으로 대체됩니다.  
   
- 변수, 인수 및 사용자 지정 데이터 항목의 복합 형식은 [NetDataContractSerializer 클래스](https://go.microsoft.com/fwlink/?LinkId=177537)를 사용 하 여 ETW 이벤트 레코드로 serialize 됩니다. 이 클래스는 serialize된 XML 스트림에 CLR 형식 정보를 포함합니다.  
+ 변수, 인수 및 사용자 지정 데이터 항목의 복합 형식은 <xref:System.Runtime.Serialization.NetDataContractSerializer> 클래스를 사용 하 여 ETW 이벤트 레코드로 serialize 됩니다. 이 클래스는 serialize된 XML 스트림에 CLR 형식 정보를 포함합니다.  
   
  ETW 제한으로 인해 페이로드 데이터가 잘리면 중복 추적 레코드가 ETW 세션에 전송될 수 있습니다. 하나 이상의 세션이 이벤트를 수신하고 세션마다 다른 이벤트 페이로드 제한이 있는 경우 이 문제가 발생할 수 있습니다.  
   
@@ -140,7 +140,7 @@ instance.Extensions.Add(new ConsoleTrackingParticipant());
             Console.ReadLine();  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
-- [Windows Server App Fabric 모니터링](https://go.microsoft.com/fwlink/?LinkId=201273)
-- [App Fabric을 사용 하 여 응용 프로그램 모니터링](https://go.microsoft.com/fwlink/?LinkId=201275)
+- [Windows Server App Fabric 모니터링](https://docs.microsoft.com/previous-versions/appfabric/ee677251(v=azure.10))
+- [App Fabric을 사용 하 여 응용 프로그램 모니터링](https://docs.microsoft.com/previous-versions/appfabric/ee677276(v=azure.10))

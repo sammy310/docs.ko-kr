@@ -2,12 +2,12 @@
 title: ServiceModel 등록 도구(ServiceModelReg.exe)
 ms.date: 03/30/2017
 ms.assetid: 396ec5ae-e34f-4c64-a164-fcf50e86b6ac
-ms.openlocfilehash: aa9fc1b2338007db240fb10a9af35754107b07d0
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 2b2580a43270cc221de9cfdf0894a59a040ba307
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424872"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837768"
 ---
 # <a name="servicemodel-registration-tool-servicemodelregexe"></a>ServiceModel 등록 도구(ServiceModelReg.exe)
 이 명령줄 도구는 단일 컴퓨터에서 WCF 및 WF 구성 요소 등록을 관리하는 기능을 제공합니다. 일반적인 경우에는 설치 시 WCF 및 WF 구성 요소가 구성되므로 이 도구를 사용할 필요가 없습니다. 하지만 서비스 활성화 문제가 있는 경우 이 도구를 사용하여 구성 요소를 등록해 볼 수 있습니다.  
@@ -24,7 +24,7 @@ ServiceModelReg.exe[(-ia|-ua|-r)|((-i|-u) -c:<command>)] [-v|-q] [-nologo] [-?]
  %SystemRoot%\Microsoft.Net\Framework\v3.0\Windows Communication Foundation\  
   
 > [!NOTE]
-> ServiceModel 등록 도구가 [!INCLUDE[wv](../../../includes/wv-md.md)]에서 실행 되는 경우 **Windows 기능** 대화 상자 **Microsoft .NET Framework 3.0** 의 **Windows Communication Foundation HTTP 활성화** 옵션이 켜져 있음을 반영 하지 않을 수 있습니다. **시작**을 클릭 하 고 **실행** 을 클릭 한 다음 **OptionalFeatures**를 입력 하 여 **Windows 기능** 대화 상자에 액세스할 수 있습니다.  
+> ServiceModel 등록 도구가 Windows Vista에서 실행 되는 경우 **Windows 기능** 대화 상자에 **Microsoft .NET Framework 3.0** 의 **Windows Communication Foundation HTTP 활성화** 옵션이 설정 되어 있지 않을 수 있습니다. **시작**을 클릭 하 고 **실행** 을 클릭 한 다음 **OptionalFeatures**를 입력 하 여 **Windows 기능** 대화 상자에 액세스할 수 있습니다.  
   
  다음 표에서는 ServiceModelReg.exe와 함께 사용할 수 있는 옵션을 보여 줍니다.  
   
@@ -67,7 +67,7 @@ File name: 'System.ServiceModel, Version=2.0.0.0, Culture=neutral, PublicKeyToke
   
  이 파일에서 "System.servicemodel, Version = 2.0.0.0"을 참조 하는 XML 노드를 찾아 삭제 하 고 자식 노드를 삭제 합니다. 파일을 저장하고 ServiceModelReg.exe를 다시 실행하면 이 문제가 해결됩니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예제에서는 ServiceModelReg.exe 도구의 가장 일반적인 옵션을 사용하는 방법을 보여 줍니다.  
   
 ```console  

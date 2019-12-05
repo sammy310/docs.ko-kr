@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - objects [Visual Basic]
 ms.assetid: 651c73e4-dca8-402b-9c6b-e3902b3a3f4b
-ms.openlocfilehash: 8956d8dd8f46b4235d71802ccc743dfebcb051be
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 2108e36956ada98e48e6ab05cec56dbf2a12b3dd
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344151"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74838262"
 ---
 # <a name="objects-visual-basic"></a>개체(Visual Basic)
 이 항목에서는 Visual Basic 런타임 개체를 설명하고 멤버 프로시저, 속성 및 이벤트 테이블을 포함하는 기타 항목의 링크를 제공합니다.  
@@ -45,7 +45,6 @@ ms.locfileid: "74344151"
 |[My.WebServices 개체](../../../visual-basic/language-reference/objects/my-webservices-object.md)|현재 프로젝트에서 참조하는 각 웹 서비스의 단일 인스턴스를 만들고 액세스하기 위한 속성을 제공합니다.|  
 |<xref:Microsoft.VisualBasic.FileIO.TextFieldParser>|구조화된 텍스트 파일을 구문 분석하기 위한 메서드와 속성을 제공합니다.|  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Visual Basic 언어 참조](../../../visual-basic/language-reference/index.md)
-- [Visual Basic](../../../visual-basic/index.md)

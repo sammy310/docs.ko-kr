@@ -2,12 +2,12 @@
 title: Federation 샘플
 ms.date: 03/30/2017
 ms.assetid: 7e9da0ca-e925-4644-aa96-8bfaf649d4bb
-ms.openlocfilehash: 271790e08476533fc1d83e22c5a0daf2f1eaa42a
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: c143ad9315df94a2d836a2c2c742ffa9a7728511
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716933"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837885"
 ---
 # <a name="federation-sample"></a>Federation 샘플
 이 샘플에서는 연결된 보안을 보여 줍니다.  
@@ -89,7 +89,7 @@ ms.locfileid: "74716933"
 1. SDK 명령 창을 엽니다. 샘플 경로에서 Setup.bat를 실행합니다. 그러면 샘플에 필요한 가상 디렉터리가 만들어지고 적절한 권한과 함께 필요한 인증서가 설치됩니다.  
   
     > [!NOTE]
-    > Setup.bat 배치 파일은 Windows SDK 명령 프롬프트에서 실행되도록 디자인되었습니다. MSSDK 환경 변수는 SDK가 설치되는 디렉터리를 가리켜야 합니다. 이 환경 변수는 Windows SDK 명령 프롬프트 내에서 자동으로 설정됩니다. 설치에서 IIS 관리자 스크립트를 사용하므로 [!INCLUDE[wv](../../../../includes/wv-md.md)]에서 IIS 6.0 관리 호환성이 설치되었는지 확인해야 합니다. [!INCLUDE[wv](../../../../includes/wv-md.md)]에서 설치 스크립트를 실행하려면 관리자 권한이 필요합니다.  
+    > Setup.bat 배치 파일은 Windows SDK 명령 프롬프트에서 실행되도록 디자인되었습니다. MSSDK 환경 변수는 SDK가 설치되는 디렉터리를 가리켜야 합니다. 이 환경 변수는 Windows SDK 명령 프롬프트 내에서 자동으로 설정됩니다. Windows Vista에서는 설치에서 IIS 관리자 스크립트를 사용 하므로 IIS 6.0 관리 호환성이 설치 되었는지 확인 해야 합니다. Windows Vista에서 설치 스크립트를 실행 하려면 관리자 권한이 필요 합니다.  
   
 2. Visual Studio에서 FederationSample을 열고 **빌드** 메뉴에서 **솔루션 빌드** 를 선택 합니다. 그러면 일반 프로젝트 파일, Bookstore 서비스, Bookstore STS 및 HomeRealm STS를 빌드하고 IIS에 배포합니다. 또한 Bookstore 클라이언트 애플리케이션도 빌드하며, BookStoreClient.exe 실행 파일을 FederationSample\BookStoreClient\bin\Debug 폴더에 배치합니다.  
   

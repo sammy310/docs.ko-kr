@@ -2,12 +2,12 @@
 title: Windows Communication Foundation 샘플의 일회 설치 절차
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-ms.openlocfilehash: 7dbc4a1b5235c0cb6aa154379358c7761bc4ab1d
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: cfe50cb2bb017292b69f578bfff2bf84bf6ba8f0
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141848"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837833"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Windows Communication Foundation 샘플의 일회 설치 절차
 
@@ -16,7 +16,7 @@ ms.locfileid: "74141848"
 **ServiceModelSamples** 가상 디렉터리는 IIS에서 호스팅되는 서비스를 사용 하는 모든 샘플을 빌드하고 실행 하는 데 사용 됩니다. 이 디렉터리는 샘플을 실행하는 데 필요한 유일한 가상 디렉터리입니다. 샘플을 빌드하면 이 가상 디렉터리에서 이전에 배포된 서비스가 대체되고 가장 최근에 빌드된 샘플만 배포되어 이 가상 디렉터리에서 사용할 수 있게 됩니다.
 
 > [!NOTE]
-> 모든 명령을 로컬 관리자 계정으로 실행해야 합니다. Windows 7, [!INCLUDE[windowsver](../../../../includes/windowsver-md.md)] 또는 Windows Server 2008 R2를 사용하는 경우에는 높은 권한으로 명령 프롬프트를 실행해야 합니다. 이렇게 하려면 명령 프롬프트 아이콘을 마우스 오른쪽 단추로 클릭 한 다음 **관리자 권한으로 실행**을 클릭 합니다. 이 항목의 모든 명령은 경로 설정이 적절한 명령 프롬프트에서 실행해야 합니다.  이를 위한 가장 쉬운 방법은 Visual Studio 명령 프롬프트를 사용하는 것입니다. 이 프롬프트를 열려면 **시작**을 클릭 하 고, **모든 프로그램**을 선택 하 고, **visual studio 2010**으로 스크롤하고, **Visual Studio Tools**을 선택 하 고 **visual Studio 명령 프롬프트 (2010)** 를 마우스 오른쪽 단추로 클릭 한 다음 **관리자 권한으로 실행을 클릭 합니다.** . Visual Studio Express Edition 중 하나가 설치되어 있어 이 명령 프롬프트를 사용할 수 없는 경우에는 시스템 경로에 "C:\Windows\Microsoft.Net\Framework\v4.0"을 추가해야 합니다.
+> 모든 명령을 로컬 관리자 계정으로 실행해야 합니다. Windows 7, [!INCLUDE[windowsver](../../../../includes/windowsver-md.md)] 또는 Windows Server 2008 R2를 사용하는 경우에는 높은 권한으로 명령 프롬프트를 실행해야 합니다. 이렇게 하려면 명령 프롬프트 아이콘을 마우스 오른쪽 단추로 클릭 한 다음 **관리자 권한으로 실행**을 클릭 합니다. 이 항목의 모든 명령은 경로 설정이 적절한 명령 프롬프트에서 실행해야 합니다.  이를 위한 가장 쉬운 방법은 Visual Studio 명령 프롬프트를 사용하는 것입니다. 이 프롬프트를 열려면 **시작**을 클릭 하 고, **모든 프로그램**을 선택 하 고, **visual studio 2010**으로 스크롤하고, **Visual Studio Tools**을 선택 하 고 **visual Studio 명령 프롬프트 (2010)** 를 마우스 오른쪽 단추로 클릭 한 다음 **관리자 권한으로 실행**을 클릭 합니다. Visual Studio Express Edition 중 하나가 설치되어 있어 이 명령 프롬프트를 사용할 수 없는 경우에는 시스템 경로에 "C:\Windows\Microsoft.Net\Framework\v4.0"을 추가해야 합니다.
 
 ### <a name="one-time-setup-procedure-for-wcf-samples"></a>WCF 샘플의 일회 설치 절차
 
@@ -63,7 +63,7 @@ ms.locfileid: "74141848"
     > [!NOTE]
     > 이 단계를 완료하지 않으면 IIS에서 호스팅되는 모든 샘플이 빌드 중에 실패합니다. 사용 권한을 올바르게 설정했는지 확인하거나 SDK 명령 프롬프트와 Visual Studio 명령 프롬프트(2012)를 관리자 권한으로 실행하십시오.
 
-11. 컴퓨터에 C:\logs 디렉터리를 만듭니다. 일부 샘플에 이 디렉터리가 필요할 수 있습니다. 적절한 계정에 이 폴더에 대한 쓰기 권한을 부여해야 합니다. Windows 7, [!INCLUDE[wv](../../../../includes/wv-md.md)]및 Windows Server 2008 r 2의 경우이 계정은 **Network Service**입니다. [!INCLUDE[lserver](../../../../includes/lserver-md.md)]의 경우 NT Authority\Network Service이며, [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 및 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]의 경우에는 ASPNET입니다.
+11. 컴퓨터에 C:\logs 디렉터리를 만듭니다. 일부 샘플에 이 디렉터리가 필요할 수 있습니다. 적절한 계정에 이 폴더에 대한 쓰기 권한을 부여해야 합니다. Windows 7, Windows Vista 및 Windows Server 2008 r 2의 경우이 계정은 **네트워크 서비스**입니다. [!INCLUDE[lserver](../../../../includes/lserver-md.md)]의 경우 NT Authority\Network Service이며, [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 및 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]의 경우에는 ASPNET입니다.
 
 12. Setupcerttool.bat 파일을 실행합니다. 이 파일은 \<InstallPath > \ WF_WCF_Samples \WCF\Setup\ 폴더에 있습니다.  이 스크립트는 다음 작업을 수행합니다.
 

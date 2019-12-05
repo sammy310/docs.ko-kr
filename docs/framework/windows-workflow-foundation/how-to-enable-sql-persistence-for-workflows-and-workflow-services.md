@@ -2,12 +2,12 @@
 title: '방법: 워크플로 및 워크플로 서비스에 SQL 지속성 사용'
 ms.date: 03/30/2017
 ms.assetid: ca7bf77f-3e5d-4b23-b17a-d0b60f46411d
-ms.openlocfilehash: bef95dbeaaa96678a66ba94494a0207c7314c326
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: bbbd2e6a5eb3babeb1a4d06976fdefd621581766
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802585"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837690"
 ---
 # <a name="how-to-enable-sql-persistence-for-workflows-and-workflow-services"></a>방법: 워크플로 및 워크플로 서비스에 SQL 지속성 사용
 
@@ -152,7 +152,7 @@ workflowServiceHost.DurableInstancingOptions.InstanceStore = sqlInstanceStoreObj
 ```
 
 > [!IMPORTANT]
-> Web.config 파일에는 사용자 이름 및 암호와 같은 중요한 정보를 저장하지 않는 것이 좋습니다. Web.config 파일에 중요한 정보를 저장하는 경우 파일 시스템 ACL(액세스 제어 목록)을 사용하여 Web.config 파일에 대한 액세스를 보호해야 합니다. 또한 [보호 된 구성을 사용 하 여 구성 정보 암호화](https://docs.microsoft.com/en-us/previous-versions/aspnet/53tyfkaw(v=vs.100))에 설명 된 대로 구성 파일 내에서 구성 값을 보호할 수도 있습니다.
+> Web.config 파일에는 사용자 이름 및 암호와 같은 중요한 정보를 저장하지 않는 것이 좋습니다. Web.config 파일에 중요한 정보를 저장하는 경우 파일 시스템 ACL(액세스 제어 목록)을 사용하여 Web.config 파일에 대한 액세스를 보호해야 합니다. 또한 [보호 된 구성을 사용 하 여 구성 정보 암호화](https://docs.microsoft.com/previous-versions/aspnet/53tyfkaw(v=vs.100))에 설명 된 대로 구성 파일 내에서 구성 값을 보호할 수도 있습니다.
 
 ### <a name="machineconfig-elements-related-to-the-sql-workflow-instance-store-feature"></a>SQL 워크플로 인스턴스 저장소 기능과 관련된 Machine.config 요소
 

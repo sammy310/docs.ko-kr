@@ -2,12 +2,12 @@
 title: WS-AtomicTransaction 구성 유틸리티(wsatConfig.exe)
 ms.date: 03/30/2017
 ms.assetid: 1c56cf98-3963-46d5-a4e1-482deae58c58
-ms.openlocfilehash: 224777fe5bf8e8d832ede582f460a8fa6ae6181d
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 429e11cdafc154b6913ab9de76dabe9c5b81d924
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802337"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837716"
 ---
 # <a name="ws-atomictransaction-configuration-utility-wsatconfigexe"></a>WS-AtomicTransaction 구성 유틸리티(wsatConfig.exe)
 WS-AtomicTransaction 구성 유틸리티는 기본 WS-AtomicTransaction 지원 설정을 구성하는 데 사용됩니다.  
@@ -25,7 +25,7 @@ wsatConfig [Options]
   
  %SystemRoot%\Microsoft.Net\Framework\v3.0\Windows Communication Foundation\wsatConfig.exe  
   
- [!INCLUDE[wxp](../../../includes/wxp-md.md)] 또는 [!INCLUDE[ws2003](../../../includes/ws2003-md.md)]을 실행 중인 경우 WsatConfig.exe를 실행하기 전에 업데이트를 다운로드해야 합니다. 이 업데이트에 대 한 자세한 내용은 [update for Windows Communication Foundation (KB912817)](https://www.microsoft.com/en-us/download/details.aspx?id=21520)를 참조 하십시오.  
+ [!INCLUDE[wxp](../../../includes/wxp-md.md)] 또는 [!INCLUDE[ws2003](../../../includes/ws2003-md.md)]을 실행 중인 경우 WsatConfig.exe를 실행하기 전에 업데이트를 다운로드해야 합니다. 이 업데이트에 대 한 자세한 내용은 [update for Windows Communication Foundation (KB912817)](https://www.microsoft.com/download/details.aspx?id=21520)를 참조 하십시오.  
   
  다음 표에서는 WS-AtomicTransaction 구성 유틸리티(wsatConfig.exe)에 사용할 수 있는 옵션을 보여 줍니다.  
   

@@ -2,12 +2,12 @@
 title: 대기 중인 메시지 문제 해결
 ms.date: 03/30/2017
 ms.assetid: a5f2836f-018d-42f5-a571-1e97e64ea5b0
-ms.openlocfilehash: dcff128a7718245fa765c57d3af80665699f4891
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 2999d1ab4129c72c231b6dc80480d8bfef5186fa
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976047"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837313"
 ---
 # <a name="troubleshooting-queued-messaging"></a>대기 중인 메시지 문제 해결
 
@@ -25,7 +25,7 @@ ms.locfileid: "73976047"
 
 **Q:** <xref:System.ServiceModel.NetMsmqBinding> 및 `MsmqIntegration` 바인딩을 사용 하려면 MSMQ를 업그레이드 해야 하나요?
 
-**A:** 아니요. 두 바인딩은 모두 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 및 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]에서 MSMQ 3.0에 사용됩니다. 바인딩의 일부 기능은 [!INCLUDE[wv](../../../../includes/wv-md.md)]에서 MSMQ 4.0으로 업그레이드하면 사용할 수 있게 됩니다.
+**A:** 아니요. 두 바인딩은 모두 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 및 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]에서 MSMQ 3.0에 사용됩니다. Windows Vista에서 MSMQ 4.0로 업그레이드 하는 경우 바인딩의 특정 기능을 사용할 수 있습니다.
 
 **Q:** <xref:System.ServiceModel.NetMsmqBinding> 및 <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> 바인딩의 기능은 msmq 4.0에서 사용할 수 있지만 MSMQ 3.0에서는 사용할 수 없습니다.
 
@@ -55,11 +55,11 @@ ms.locfileid: "73976047"
 
 **A:** 구성 및 코드에서 큐 URI (Uniform Resource Identifier)를 확인 하세요. URI에는 "$" 문자를 사용하지 마십시오. 예를 들어 OrdersQueue라는 개인 큐를 지정하려면 URI를 net.msmq://localhost/private/ordersQueue로 지정합니다.
 
-**Q:** 대기 중인 응용 프로그램에서 `ServiceHost.Open()`를 호출 하면 다음 예외가 throw 됩니다. `System.ArgumentException`: 기본 주소는 URI 쿼리 문자열을 포함할 수 없습니다. 이유
+**Q:** 대기 중인 응용 프로그램에서 `ServiceHost.Open()`를 호출 하면 다음 예외가 throw 됩니다. `System.ArgumentException`: 기본 주소는 URI 쿼리 문자열을 포함할 수 없습니다. 이유는 무엇입니까?
 
 **A:** 구성 파일 및 코드에서 큐 URI를 확인 합니다. MSMQ 큐에서는 '?' 문자 사용을 지원하지만 URI에서는 이 문자를 문자열 쿼리의 시작으로 해석합니다. 이 문제를 방지하려면 '?' 문자가 포함되지 않은 큐 이름을 사용합니다.
 
-**Q:** 내 보내기가 성공 했지만 수신자에 대해 서비스 작업이 호출 되지 않습니다. 이유
+**Q:** 내 보내기가 성공 했지만 수신자에 대해 서비스 작업이 호출 되지 않습니다. 이유는 무엇입니까?
 
 **A:** 답변을 확인 하려면 다음 검사 목록을 사용 합니다.
 
@@ -87,7 +87,7 @@ ms.locfileid: "73976047"
 
 보증이 none (<xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> = `false`) 이면 기본값은 배달 못 한 편지 큐 기능입니다.
 
-**Q:** 내 서비스에서 Svchost.exe를 throw 합니다. "EndpointListener 요구 사항은 ListenerFactory에서 만족할 수 없습니다." 라는 메시지와 함께 열립니다. 이유
+**Q:** 내 서비스에서 Svchost.exe를 throw 합니다. "EndpointListener 요구 사항은 ListenerFactory에서 만족할 수 없습니다." 라는 메시지와 함께 열립니다. 이유는 무엇입니까?
 
 대답: 서비스 계약을 확인하십시오. 모든 서비스 작업에 "IsOneWay =`true`"를 추가 하는 것을 잊은 것일 수 있습니다. 큐에서는 단방향 서비스 작업만 지원합니다.
 
@@ -95,7 +95,7 @@ ms.locfileid: "73976047"
 
 **A:** 서비스 호스트에 오류가 발생 했는지 확인 합니다. 추적을 검토하거나 `IErrorHandler`를 구현하면 확인할 수 있습니다. 포이즌 메시지가 검색되면 기본적으로 서비스 호스트 오류가 발생합니다.
 
-**Q:** 큐에 메시지가 있지만 웹에서 호스팅되는 대기 중인 서비스가 활성화 되지 않았습니다. 이유
+**Q:** 큐에 메시지가 있지만 웹에서 호스팅되는 대기 중인 서비스가 활성화 되지 않았습니다. 이유는 무엇입니까?
 
 **A:** 가장 일반적인 이유는 사용 권한입니다.
 
@@ -130,15 +130,15 @@ System.ServiceModel.MsmqPoisonMessageException: The transport channel detected a
 
 ### <a name="msmq-integration-specific-troubleshooting"></a>MSMQ 통합: 특정 문제 해결
 
-**Q:** 메시지를 보낼 때 또는 서비스 호스트를 열 때 스키마가 잘못 되었음을 나타내는 오류가 발생 합니다. 이유
+**Q:** 메시지를 보낼 때 또는 서비스 호스트를 열 때 스키마가 잘못 되었음을 나타내는 오류가 발생 합니다. 이유는 무엇입니까?
 
 **A:** MSMQ 통합 바인딩을 사용 하는 경우 msmq.formatname 체계를 사용 해야 합니다. 예를 들어 msmq.formatname:DIRECT=OS:.\private$\OrdersQueue입니다. 하지만 사용자 지정 배달 못한 편지 큐를 지정하는 경우에는 net.msmq 체계를 사용해야 합니다.
 
-**Q:** 공용 또는 개인 형식 이름을 사용 하 고 [!INCLUDE[wv](../../../../includes/wv-md.md)]에서 서비스 호스트를 열면 오류가 발생 합니다. 이유
+**Q:** 공용 또는 개인 형식 이름을 사용 하 고 Windows Vista에서 서비스 호스트를 여는 경우 오류가 발생 합니다. 이유는 무엇입니까?
 
-**A:** [!INCLUDE[wv](../../../../includes/wv-md.md)]의 WCF 통합 채널은 포이즌 메시지를 처리 하기 위해 주 응용 프로그램 큐에 대 한 하위 큐를 열 수 있는지 확인 합니다. 하위 큐의 이름은 수신기에 전달되는 msmq.formatname URI에서 파생됩니다. MSMQ에서 하위 큐 이름에는 직접 형식 이름만 사용할 수 있습니다. 따라서 오류가 발생합니다. 큐 URI를 직접 형식 이름으로 변경하십시오.
+**A:** Windows Vista의 WCF 통합 채널은 포이즌 메시지를 처리 하기 위해 주 응용 프로그램 큐에 대 한 하위 큐를 열 수 있는지 확인 합니다. 하위 큐의 이름은 수신기에 전달되는 msmq.formatname URI에서 파생됩니다. MSMQ에서 하위 큐 이름에는 직접 형식 이름만 사용할 수 있습니다. 따라서 오류가 발생합니다. 큐 URI를 직접 형식 이름으로 변경하십시오.
 
-**Q:** MSMQ 응용 프로그램에서 메시지를 수신 하는 경우 메시지는 큐에 있으며 수신 하는 WCF 응용 프로그램에서 읽지 않습니다. 이유
+**Q:** MSMQ 응용 프로그램에서 메시지를 수신 하는 경우 메시지는 큐에 있으며 수신 하는 WCF 응용 프로그램에서 읽지 않습니다. 이유는 무엇입니까?
 
 **A:** 메시지에 본문이 있는지 여부를 확인 합니다. 메시지에 본문이 없으면 MSMQ 통합 채널에서 메시지를 무시합니다. 예외에 대한 알림을 받고 추적을 확인하려면 `IErrorHandler`를 구현하십시오.
 
@@ -174,7 +174,7 @@ System.ServiceModel.MsmqPoisonMessageException: The transport channel detected a
 
 6. 다음으로, 이전 단계를 사용 하 여 두 번째 인증서 스냅인을 추가 하지만 이번에는 **컴퓨터 계정** 을 선택 하 고 **다음**을 클릭 합니다.
 
-7. **로컬 컴퓨터** 를 선택 하 고 **마침**을 클릭 합니다. 이제 시스템 인증서 저장소에서 현재 사용자 저장소로 인증서를 끌어서 놓을 수 있습니다.
+7. **로컬 컴퓨터**를 선택하고 **마침**을 클릭합니다. 이제 시스템 인증서 저장소에서 현재 사용자 저장소로 인증서를 끌어서 놓을 수 있습니다.
 
 **Q:** 서비스 그룹 모드의 다른 컴퓨터에 있는 큐에서 서비스를 읽으면 "액세스 거부" 예외가 발생 합니다.
 
@@ -186,7 +186,7 @@ System.ServiceModel.MsmqPoisonMessageException: The transport channel detected a
 
 ### <a name="remote-transacted-receives"></a>트랜잭션된 원격 수신
 
-**Q:** 컴퓨터 A에 큐가 있고 컴퓨터 B의 큐에서 메시지를 읽는 WCF 서비스 (원격으로 트랜잭션 된 수신 시나리오)가 있는 경우 메시지를 큐에서 읽지 않습니다. 추적 정보는 "트랜잭션을 가져올 수 없습니다." 라는 메시지와 함께 수신이 실패 했음을 나타냅니다. 이 문제를 해결 하려면 어떻게 해야 하나요?
+**Q:** 컴퓨터 A에 큐가 있고 컴퓨터 B의 큐에서 메시지를 읽는 WCF 서비스 (원격으로 트랜잭션 된 수신 시나리오)가 있는 경우 메시지를 큐에서 읽지 않습니다. 추적 정보는 "트랜잭션을 가져올 수 없습니다." 라는 메시지와 함께 수신이 실패 했음을 나타냅니다. 이 문제를 해결하려면 어떻게 해야 하나요?
 
 **A:** 다음과 같은 세 가지 원인이 있을 수 있습니다.
 
@@ -200,7 +200,7 @@ System.ServiceModel.MsmqPoisonMessageException: The transport channel detected a
 
 - **인터넷 연결 방화벽** 설정에서 MSDTC가 예외 목록에 있는지 확인 합니다.
 
-- [!INCLUDE[wv](../../../../includes/wv-md.md)]를 사용하고 있는지 확인하십시오. [!INCLUDE[wv](../../../../includes/wv-md.md)]의 MSMQ에서는 트랜잭션된 원격 읽기를 지원합니다. 이전 Windows 릴리스의 MSMQ에서는 트랜잭션된 원격 읽기를 지원하지 않습니다.
+- Windows Vista를 사용 하 고 있는지 확인 합니다. Windows Vista의 MSMQ는 원격 트랜잭션 읽기를 지원 합니다. 이전 Windows 릴리스의 MSMQ에서는 트랜잭션된 원격 읽기를 지원하지 않습니다.
 
 **Q:** 큐에서 읽는 서비스가 웹 호스트와 같은 네트워크 서비스인 경우 큐에서 읽을 때 액세스 거부 예외가 발생 하는 이유는 무엇입니까?
 

@@ -2,12 +2,12 @@
 title: 배달 못 한 편지 큐
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-ms.openlocfilehash: 70007289e457588e94128a573ced4b28e238acf4
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 244920eb9a0cdb33f4d5d83b939fe1166f4f5fcd
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74710884"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837911"
 ---
 # <a name="dead-letter-queues"></a>배달 못 한 편지 큐
 이 샘플에서는 배달에 실패한 메시지를 처리하는 방법을 보여 줍니다. [트랜잭션 된 MSMQ 바인딩](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) 샘플을 기반으로 합니다. 이 샘플에서는 `netMsmqBinding` 바인딩을 사용합니다. 이 서비스는 자체적으로 호스트되는 콘솔 애플리케이션으로서 이를 사용하여 서비스에서 대기된 메시지를 받는 것을 볼 수 있습니다.
@@ -16,7 +16,7 @@ ms.locfileid: "74710884"
 > 이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.
 
 > [!NOTE]
-> 이 샘플에서는 [!INCLUDE[wv](../../../../includes/wv-md.md)]에서만 사용할 수 있는 각 애플리케이션의 배달 못 한 편지 큐를 보여 줍니다. 샘플을 수정하면 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 및 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]에서 MSMQ 3.0에 기본 시스템 차원 큐를 사용할 수 있습니다.
+> 이 샘플은 Windows Vista 에서만 사용할 수 있는 각 응용 프로그램 배달 못 한 편지 큐를 보여 줍니다. 샘플을 수정하면 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 및 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]에서 MSMQ 3.0에 기본 시스템 차원 큐를 사용할 수 있습니다.
 
  대기 중인 통신에서 클라이언트는 큐를 사용하여 서비스와 통신합니다. 좀더 정확하게 말하면 클라이언트는 큐에 메시지를 보내고, 서비스는 큐에서 보낸 메시지를 받습니다. 따라서 서비스와 클라이언트가 동시에 실행되고 있지 않더라도 큐를 사용하여 통신할 수 있습니다.
 
@@ -30,9 +30,9 @@ ms.locfileid: "74710884"
 
 - `System`: 배달 못 한 시스템 큐를 사용하여 배달 못 한 메시지를 저장합니다. 배달 못 한 편지 시스템 큐는 컴퓨터에서 실행되는 모든 애플리케이션에서 공유합니다.
 
-- `Custom`: <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> 속성을 사용하여 지정한 사용자 지정 배달 못 한 편지 큐를 사용하여 배달 못 한 메시지를 저장합니다. 이 기능은 [!INCLUDE[wv](../../../../includes/wv-md.md)]에서만 사용할 수 있습니다. 이 기능은 애플리케이션이 동일한 컴퓨터에서 실행되는 다른 애플리케이션과 배달 못 한 편지 큐를 공유하지 않고 고유한 배달 못 한 편지 큐를 사용해야 하는 경우에 사용됩니다.
+- `Custom`: <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> 속성을 사용하여 지정한 사용자 지정 배달 못 한 편지 큐를 사용하여 배달 못 한 메시지를 저장합니다. 이 기능은 Windows Vista 에서만 사용할 수 있습니다. 이 기능은 애플리케이션이 동일한 컴퓨터에서 실행되는 다른 애플리케이션과 배달 못 한 편지 큐를 공유하지 않고 고유한 배달 못 한 편지 큐를 사용해야 하는 경우에 사용됩니다.
 
-- <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> 속성은 배달 못 한 편지 큐로 사용할 특정 큐를 표현합니다. 이 속성은 [!INCLUDE[wv](../../../../includes/wv-md.md)]에서만 사용할 수 있습니다.
+- <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> 속성은 배달 못 한 편지 큐로 사용할 특정 큐를 표현합니다. Windows Vista 에서만 사용할 수 있습니다.
 
  이 샘플에서 클라이언트는 트랜잭션 범위 내에서 서비스로 일괄 처리 메시지를 보내고 이러한 메시지의 "TTL(Time-To-Live)" 값을 임의로 낮게 지정합니다(약 2초). 또한 클라이언트는 사용자 지정 배달 못 한 편지 큐를 지정하여 만료된 메시지를 큐에 삽입하는 데 사용합니다.
 

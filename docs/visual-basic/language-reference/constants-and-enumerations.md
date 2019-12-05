@@ -6,12 +6,12 @@ helpviewer_keywords:
 - constants [Visual Basic]
 - constants [Visual Basic], list of
 ms.assetid: 309c0ad5-83e4-4f96-99ea-83cd95107417
-ms.openlocfilehash: de03ce61535d4695a00d0c4b8998ef4b81583425
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: e47fd1c606f7d4cd0cf2fa6398beaa183ed95076
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347877"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74838158"
 ---
 # <a name="constants-and-enumerations-visual-basic"></a>상수 및 열거형(Visual Basic)
 
@@ -43,7 +43,7 @@ Visual Basic는 개발자를 위해 미리 정의 된 많은 상수 및 열거�
 |`vbNewLine`|줄 바꿈 문자입니다.|  
 |`vbNullChar`|Null 문자.|  
 |`vbNullString`|길이가 0 인 문자열 ("")과 같지 않습니다. 외부 프로시저를 호출 하는 데 사용 됩니다.|  
-|`vbObjectError`|오류 번호 사용자 정의 오류 번호는이 값 보다 커야 합니다. 예를 들면 다음과 같습니다.<br /><br /> `Err.Raise(Number) = vbObjectError + 1000`|  
+|`vbObjectError`|오류 번호 사용자 정의 오류 번호는이 값 보다 커야 합니다. 예를 들면 다음과 같습니다.:<br /><br /> `Err.Raise(Number) = vbObjectError + 1000`|  
 |`vbTab`|탭 문자.|  
 |`vbBack`|백스페이스 문자.|  
 |`vbFormFeed`|Microsoft Windows에서는 사용 되지 않습니다.|  
@@ -55,12 +55,12 @@ Visual Basic는 개발자를 위해 미리 정의 된 많은 상수 및 열거�
   
 |열거형|설명|  
 |---|---|  
-|<xref:Microsoft.VisualBasic.AppWinStyle>|<xref:Microsoft.VisualBasic.Interaction.Shell%2A> 함수를 호출할 때 호출 된 프로그램에 사용할 창 스타일을 나타냅니다.|  
+|<xref:Microsoft.VisualBasic.AppWinStyle>|호출할 때 호출된 프로그램에 사용할 창 스타일을 나타내는 <xref:Microsoft.VisualBasic.Interaction.Shell%2A> 함수입니다.|  
 |<xref:Microsoft.VisualBasic.AudioPlayMode>|오디오 메서드를 호출할 때 소리를 재생 하는 방법을 나타냅니다.|  
-|<xref:Microsoft.VisualBasic.ApplicationServices.BuiltInRole>|<xref:Microsoft.VisualBasic.ApplicationServices.User.IsInRole%2A> 메서드를 호출할 때 확인할 역할의 형식을 나타냅니다.|  
-|<xref:Microsoft.VisualBasic.CallType>|<xref:Microsoft.VisualBasic.Interaction.CallByName%2A> 함수를 호출할 때 호출 되는 프로시저의 유형을 나타냅니다.|  
+|<xref:Microsoft.VisualBasic.ApplicationServices.BuiltInRole>|호출할 때 확인할 역할 유형을 나타냅니다는 <xref:Microsoft.VisualBasic.ApplicationServices.User.IsInRole%2A> 메서드.|  
+|<xref:Microsoft.VisualBasic.CallType>|호출할 때 호출 되는 프로시저의 유형을 나타냅니다는 <xref:Microsoft.VisualBasic.Interaction.CallByName%2A> 함수입니다.|  
 |<xref:Microsoft.VisualBasic.CompareMethod>|비교 함수를 호출할 때 문자열을 비교 하는 방법을 나타냅니다.|  
-|<xref:Microsoft.VisualBasic.DateFormat>|<xref:Microsoft.VisualBasic.Strings.FormatDateTime%2A> 함수를 호출할 때 날짜를 표시 하는 방법을 나타냅니다.|  
+|<xref:Microsoft.VisualBasic.DateFormat>|날짜를 표시 하는 방법을 나타내는 호출 하는 경우는 <xref:Microsoft.VisualBasic.Strings.FormatDateTime%2A> 함수입니다.|  
 |<xref:Microsoft.VisualBasic.DateInterval>|날짜 관련 함수를 호출할 때 날짜 간격을 결정하고 형식을 지정하는 방법을 나타냅니다.|  
 |<xref:Microsoft.VisualBasic.FileIO.DeleteDirectoryOption>|파일 또는 디렉터리를 삭제 해야 하는 디렉터리를 포함 하는 경우 수행을 지정 합니다.|  
 |<xref:Microsoft.VisualBasic.DueDate>|지불 하는 시점을 나타내는 재무 메서드를 호출할 때.|  
@@ -78,12 +78,11 @@ Visual Basic는 개발자를 위해 미리 정의 된 많은 상수 및 열거�
 |<xref:Microsoft.VisualBasic.TriState>|`Boolean` 값을 표시 하거나 숫자 형식 지정 함수를 호출할 때 기본값을 사용 해야 하는지 여부를 나타냅니다.|  
 |<xref:Microsoft.VisualBasic.FileIO.UICancelOption>|작업 중에 사용자가 **취소** 를 클릭 하는 경우 수행할 작업을 지정 합니다.|  
 |<xref:Microsoft.VisualBasic.FileIO.UIOption>|파일이 나 디렉터리를 복사, 삭제 또는 이동할 때 진행률 대화 상자를 표시할지 여부를 지정 합니다.|  
-|<xref:Microsoft.VisualBasic.VariantType>|<xref:Microsoft.VisualBasic.Information.VarType%2A> 함수에서 반환 하는 variant 개체의 형식을 나타냅니다.|  
+|<xref:Microsoft.VisualBasic.VariantType>|반환 된 variant 개체의 유형을 나타냅니다는 <xref:Microsoft.VisualBasic.Information.VarType%2A> 함수입니다.|  
 |<xref:Microsoft.VisualBasic.VbStrConv>|<xref:Microsoft.VisualBasic.Strings.StrConv%2A> 함수를 호출할 때 수행할 변환 형식을 나타냅니다.|  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Visual Basic 언어 참조](../../visual-basic/language-reference/index.md)
-- [Visual Basic](../../visual-basic/index.md)
 - [상수 개요](../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)
 - [열거형 개요](../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)

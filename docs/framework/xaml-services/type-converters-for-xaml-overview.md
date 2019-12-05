@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XAML [XAML Services], TypeConverter
 - type conversion for XAML [XAML Services]
 ms.assetid: 51a65860-efcb-4fe0-95a0-1c679cde66b7
-ms.openlocfilehash: b54731cc1aba1a47ed6b11f2bff5c596a53fd4b5
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 65210d8224b145ab23c7bc9ed76997c0892a5f59
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458512"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837261"
 ---
 # <a name="type-converters-for-xaml-overview"></a>XAML 형식 변환기 개요
 형식 변환기는 XAML 태그의 문자열에서 개체 그래프의 특정 개체로 변환하는 논리를 개체 작성기에 제공합니다. .NET Framework XAML 서비스에서 형식 변환기는 <xref:System.ComponentModel.TypeConverter>에서 파생되는 클래스여야 합니다. 또한 일부 변환기는 XAML 저장 경로를 지원하며 serialization 태그에서 개체를 문자열 형식으로 직렬화하는 데 사용할 수 있습니다. 이 항목에서는 XAML의 형식 변환기가 호출되는 방법 및 시기에 대해 설명하고 <xref:System.ComponentModel.TypeConverter>의 메서드 재정의에 대한 구현 권장 사항을 제공합니다.  
@@ -60,7 +60,7 @@ ms.locfileid: "73458512"
  <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A> 및 <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A> 은 서비스에서 <xref:System.ComponentModel.TypeConverter> 구현의 기능을 쿼리할 때 사용되는 지원 메서드입니다. 변환기의 동일한 변환 메서드에서 지원하는 형식 관련 케이스에 대해 `true` 를 반환하려면 이러한 메서드를 구현해야 합니다. XAML 용도에서는 일반적으로 <xref:System.String> 형식을 의미합니다.  
   
 ### <a name="culture-information-and-type-converters-for-xaml"></a>XAML에 대한 문화권 정보 및 형식 변환기  
- 각 <xref:System.ComponentModel.TypeConverter> 구현에서는 변환에 유효한 문자열을 고유하게 해석할 수 있으며 매개 변수로 전달되는 형식 설명을 사용하거나 무시할 수도 있습니다. 문화권 및 XAML 형식 변환에서 중요한 고려 사항은 XAML에서 지역화 가능한 문자열을 특성 값으로 사용할 수 있지만 이러한 지역화 가능한 문자열을 특정 문화권 요구 사항이 있는 형식 변환기 입력으로 사용할 수 없다는 점입니다. 이러한 제한은 XAML 특성 값에 대한 형식 변환기에서 `en-US` 문화권을 사용하는 고정 언어 XAML 처리 동작을 반드시 포함하기 때문입니다. 이러한 제한의 디자인 이유에 대 한 자세한 내용은 XAML 언어 사양 ([\[\]](https://go.microsoft.com/fwlink/?LinkId=114525)) 또는 [WPF 전역화 및 지역화 개요](../wpf/advanced/wpf-globalization-and-localization-overview.md)를 참조 하세요.  
+ 각 <xref:System.ComponentModel.TypeConverter> 구현에서는 변환에 유효한 문자열을 고유하게 해석할 수 있으며 매개 변수로 전달되는 형식 설명을 사용하거나 무시할 수도 있습니다. 문화권 및 XAML 형식 변환에서 중요한 고려 사항은 XAML에서 지역화 가능한 문자열을 특성 값으로 사용할 수 있지만 이러한 지역화 가능한 문자열을 특정 문화권 요구 사항이 있는 형식 변환기 입력으로 사용할 수 없다는 점입니다. 이러한 제한은 XAML 특성 값에 대한 형식 변환기에서 `en-US` 문화권을 사용하는 고정 언어 XAML 처리 동작을 반드시 포함하기 때문입니다. 이러한 제한의 디자인 이유에 대 한 자세한 내용은 XAML 언어 사양 ([\[\]](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10))) 또는 [WPF 전역화 및 지역화 개요](../wpf/advanced/wpf-globalization-and-localization-overview.md)를 참조 하세요.  
   
  문화권이 문제가 될 수 있는 경우에 대한 예로 일부 문화권에서는 문자열 형식의 숫자에 대한 소수점 구분 기호로 마침표 대신 쉼표를 사용합니다. 이러한 사용은 쉼표를 구분 기호로 사용하는 기존의 많은 형식 변환기의 동작과 충돌합니다. 주변 XAML에서 `xml:lang` 을 통해 문화권을 전달하면 문제가 해결되지 않습니다.  
   
