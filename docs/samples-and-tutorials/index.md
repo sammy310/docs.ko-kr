@@ -4,12 +4,12 @@ description: .NET Core, ASP.NET Core 및 .NET에 대해 배우는 데 도움이 
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
-ms.openlocfilehash: 7953d178e9a24fc42f11b6bc5c866805ec381137
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 5132415a6be03787111aaed8d027d436bb6820fe
+ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423567"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74884438"
 ---
 # <a name="net-samples-and-tutorials"></a>.NET 샘플 및 자습서
 
@@ -25,7 +25,7 @@ ms.locfileid: "73423567"
 
 ### <a name="tutorials"></a>자습서
 
-**[CLI 도구를 사용하여 .NET Core 콘솔 앱 작성: 단계별 가이드](../core/tutorials/using-with-xplat-cli.md)**
+**[CLI 도구를 사용하여 .NET Core 콘솔 앱 작성: 단계별 가이드](../core/tutorials/cli-create-console-app.md)**
 
 이 가이드에서는 .NET Core CLI 도구를 사용하여 플랫폼 간 콘솔 앱을 빌드하는 방법을 보여 줍니다. 기본적인 콘솔 앱으로 시작하여 테스트를 비롯한 여러 프로젝트로 확장됩니다. 단계별로 기능을 추가하면서 지식을 쌓게 됩니다. [완료된 샘플](https://github.com/dotnet/samples/tree/master/core/console-apps)은 GitHub의 dotnet/samples 리포지토리에서 사용 가능합니다.
 
