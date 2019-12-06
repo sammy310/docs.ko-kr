@@ -14,14 +14,14 @@ helpviewer_keywords:
 - BeginMethodEnumeration function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: a27787052757098d4edb2d8516e22d8a03b7009a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: be1e86e0b760ab403cf42ac19da03f84769a85cf
+ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138796"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74884425"
 ---
-# <a name="beginenumeration-function"></a>BeginEnumeration 함수
+# <a name="beginmethodenumeration-function"></a>BeginMethodEnumeration 함수
 개체에 사용할 수 있는 메서드의 열거를 시작 합니다.  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -70,7 +70,7 @@ HRESULT BeginMethodEnumeration (
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** WMINet_Utils  
+ **헤더:** WMINet_Utils idl  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
