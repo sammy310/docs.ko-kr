@@ -65,6 +65,8 @@
       href: tutorials/consuming-library-with-visual-studio.md
 - name: .NET Core의 새로운 기능
   items:
+    - name: .NET Core 3.1의 새로운 기능
+      href: whats-new/dotnet-core-3-1.md
     - name: .NET Core 3.0의 새로운 기능
       href: whats-new/dotnet-core-3-0.md
     - name: .NET Core 2.2의 새로운 기능
@@ -109,8 +111,18 @@
   items:
     - name: 설정
       href: run-time-config/index.md
+    - name: 컴파일 설정
+      href: run-time-config/compilation.md
+    - name: 디버깅 및 프로파일링 설정
+      href: run-time-config/debugging-profiling.md
     - name: 가비지 수집기 설정
       href: run-time-config/garbage-collector.md
+    - name: 전역 설정
+      href: run-time-config/globalization.md
+    - name: 네트워킹 서비스
+      href: run-time-config/networking.md
+    - name: 스레딩 설정
+      href: run-time-config/threading.md
 - name: 기본 상호 운용성
   items:
     - name: COM에 .NET Core 구성 요소 공개

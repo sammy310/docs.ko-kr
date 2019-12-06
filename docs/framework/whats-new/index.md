@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: c651f5c02bd49acc593c585395bc52e9ee64f870
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 82a2c1780c6e0e1d94a206b9b959d8e1944fd0a9
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714502"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802328"
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework의 새로운 기능
 
@@ -800,7 +800,7 @@ WISP(Windows 잉크 서비스 플랫폼) 대신 [WM_POINTER 메시지](https://d
 
 - [디버깅 기능 향상](#Debug462)
 
-.NET Framework 4.6.2에 추가된 새 API 목록은 GitHub에서 [.NET Framework 4.6.2 API 변경 내용](https://github.com/Microsoft/dotnet/blob/master/releases/net462/dotnet462-api-changes.md)을 참조하세요. .NET Framework 4.6.2의 향상된 기능 및 버그 수정 목록은 GitHub에서 [.NET Framework 4.6.2 변경 내용 목록](https://go.microsoft.com/fwlink/?LinkId=708778)을 참조하세요.  자세한 내용은 .NET 블로그에서 [.NET Framework 4.6.2 알림](https://devblogs.microsoft.com/dotnet/announcing-net-framework-4-6-2/)을 참조하십시오.
+.NET Framework 4.6.2에 추가된 새 API 목록은 GitHub에서 [.NET Framework 4.6.2 API 변경 내용](https://github.com/Microsoft/dotnet/blob/master/releases/net462/dotnet462-api-changes.md)을 참조하세요. .NET Framework 4.6.2의 향상된 기능 및 버그 수정 목록은 GitHub에서 [.NET Framework 4.6.2 변경 내용 목록](https://github.com/Microsoft/dotnet/blob/master/releases/net462/dotnet462-changes.md)을 참조하세요. 자세한 내용은 .NET 블로그에서 [.NET Framework 4.6.2 알림](https://devblogs.microsoft.com/dotnet/announcing-net-framework-4-6-2/)을 참조하십시오.
 
 <a name="ASPNET462" />
 
@@ -1196,7 +1196,7 @@ WPF 앱에 대해 최근에 확산되는 높은 DPI 및 하이브리드 DPI 환�
 
 **다시 호스트된 WF 디자이너에서 C# 식 및 IntelliSense 지원**
 
-.NET Framework 4.5 이상에서 WF는 Visual Studio 디자이너와 코드 워크플로 모두에서 C# 식을 지원합니다. 다시 호스트된 워크플로 디자이너는 Visual Studio 외부 애플리케이션(예: WPF)에서 워크플로 디자이너가 위치할 수 있도록 해주는 WF의 주요 기능입니다.  Windows Workflow Foundation을 사용하면 다시 호스트된 워크플로 디자이너에서 C# 식 및 IntelliSense를 지원할 수 있습니다. 자세한 내용은 [Windows Workflow Foundation 블로그](https://go.microsoft.com/fwlink/?LinkID=809042&clcid=0x409)를 참조하십시오.
+.NET Framework 4.5 이상에서 WF는 Visual Studio 디자이너와 코드 워크플로 모두에서 C# 식을 지원합니다. 다시 호스트된 워크플로 디자이너는 Visual Studio 외부 애플리케이션(예: WPF)에서 워크플로 디자이너가 위치할 수 있도록 해주는 WF의 주요 기능입니다.  Windows Workflow Foundation을 사용하면 다시 호스트된 워크플로 디자이너에서 C# 식 및 IntelliSense를 지원할 수 있습니다. 자세한 내용은 [Windows Workflow Foundation 블로그](https://blogs.msdn.microsoft.com/workflowteam/2016/07/20/building-c-expressions-support-and-intellisense-in-the-rehosted-workflow-designer/)를 참조하십시오.
 
 `Availability of IntelliSense when a customer rebuilds a workflow project from Visual Studio` .NET Framework 4.6.2 이전 버전의 .NET Framework에서는 고객이 Visual Studio에서 워크플로 프로젝트를 다시 작성할 때 WF Designer IntelliSense가 중단됩니다. 프로젝트가 빌드되면 워크플로 형식을 디자이너에서 찾을 수 없으므로 IntelliSense의 누락된 워크플로 형식에 대한 경고가 **오류 목록** 창에 표시됩니다. .NET Framework 4.6.2에서는 이 문제를 해결하고 IntelliSense를 사용할 수 있도록 해줍니다.
 
@@ -1262,11 +1262,11 @@ ClickOnce는 이미 지원되는 1.0 프로토콜 외에 TLS 1.1 및 TLS 1.2를 
 
 .NET Framework 4.6.1에 대한 자세한 내용은 다음 항목을 참조하세요.
 
-- [.NET Framework 4.6.1 변경 내용 목록](https://go.microsoft.com/fwlink/?LinkId=622964)
+- [.NET Framework 4.6.1 변경 내용 목록](https://github.com/Microsoft/dotnet/blob/master/releases/net461/dotnet461-changes.md)
 
 - [4.6.1의 애플리케이션 호환성](../migration-guide/application-compatibility.md)
 
-- [.NET Framework API 차이점](https://go.microsoft.com/fwlink/?LinkId=622989)(GitHub에서)
+- [.NET Framework API 차이점](https://github.com/Microsoft/dotnet/blob/master/releases/net461/dotnet461-api-changes.md)(GitHub에서)
 
 <a name="Crypto" />
 
@@ -1324,7 +1324,7 @@ Windows 8.1 이상 버전에서는 추가 언어 맞춤법 검사에 대한 운�
 
 - 현재 스레드 문화권
 
-WPF의 언어 지원에 대한 자세한 내용은 [.NET Framework 4.6.1 기능에 대한 WPF 블로그 게시물](https://go.microsoft.com/fwlink/?LinkID=691819)을 참조하십시오.
+WPF의 언어 지원에 대한 자세한 내용은 [.NET Framework 4.6.1 기능에 대한 WPF 블로그 게시물](https://devblogs.microsoft.com/wpf/wpf-in-net-4-6-1/)을 참조하십시오.
 
 **사용자 단위 사용자 지정 사전에 대한 추가 지원**
 
@@ -1349,7 +1349,7 @@ WPF 이전 버전에서는 사용자 지정 사전에서 제외된 단어 및 �
 
 **DirectX 확장**
 
-WPF에는 DX10 및 Dx11 콘텐츠와 쉽게 상호 운용할 수 있는 <xref:System.Windows.Interop.D3DImage>의 새 구현을 제공하는 [NuGet 패키지](https://go.microsoft.com/fwlink/?LinkID=691342)가 포함되어 있습니다. 이 패키지의 코드는 오픈 소스로 [GitHub](https://github.com/Microsoft/WPFDXInterop)에서 사용할 수 있습니다.
+WPF에는 DX10 및 Dx11 콘텐츠와 쉽게 상호 운용할 수 있는 <xref:System.Windows.Interop.D3DImage>의 새 구현을 제공하는 [NuGet 패키지](https://www.nuget.org/packages/Microsoft.Wpf.Interop.DirectX-x86/)가 포함되어 있습니다. 이 패키지의 코드는 오픈 소스로 [GitHub](https://github.com/Microsoft/WPFDXInterop)에서 사용할 수 있습니다.
 
 <a name="WWF461" />
 
@@ -1755,7 +1755,7 @@ Ngen PDB를 사용하면 NGen이 IL PDB에 대한 종속성 없이 IL-네이티�
 
 - **오픈 소스 .NET Framework 패키지**
 
-  이제 .NET Core 패키지(예: 변경할 수 없는 컬렉션, [SIMD API](https://go.microsoft.com/fwlink/?LinkID=518639)) 및 네트워킹 API(예: <xref:System.Net.Http> 네임스페이스에 있는 API)를 [GitHub](https://github.com/)에서 오픈 소스 패키지로 사용할 수 있습니다. 코드에 액세스하려면 [GitHub의 CoreFx](https://github.com/dotnet/corefx)를 참조하세요. 자세한 내용과 이러한 패키지에 기여하는 방법은 [.NET Core 및 오픈 소스](../get-started/net-core-and-open-source.md), [GitHub의 .NET 홈페이지](https://github.com/dotnet/home)를 참조하십시오.
+  이제 .NET Core 패키지(예: 변경할 수 없는 컬렉션, [SIMD API](https://www.nuget.org/packages/Microsoft.Bcl.Simd)) 및 네트워킹 API(예: <xref:System.Net.Http> 네임스페이스에 있는 API)를 [GitHub](https://github.com/)에서 오픈 소스 패키지로 사용할 수 있습니다. 코드에 액세스하려면 [GitHub의 CoreFx](https://github.com/dotnet/corefx)를 참조하세요. 자세한 내용과 이러한 패키지에 기여하는 방법은 [.NET Core 및 오픈 소스](../get-started/net-core-and-open-source.md), [GitHub의 .NET 홈페이지](https://github.com/dotnet/home)를 참조하십시오.
 
 <a name="v452" />
 
@@ -1892,7 +1892,7 @@ Visual Studio 2013의 .NET Framework 응용 프로그램 디버깅 시 개선된
 
 - 비동기 인식 디버깅. Visual Studio 2013에서 비동기 응용 프로그램을 더 쉽게 디버깅하기 위해 호출 스택은 컴파일러에서 제공된 인프라 코드를 숨겨 비동기 프로그래밍을 지원하고, 논리 프로그램 실행을 보다 명확하게 반영할 수 있도록 논리 부모 프레임의 체인을 숨깁니다. 병렬 작업 창은 작업 창으로 대체되고 특정 중단점과 관련된 작업을 표시하며 응용 프로그램에서 현재 활성 상태이거나 예약된 다른 작업도 모두 표시합니다. 이 기능에 대한 자세한 내용을 [.NET Framework 4.5.1 알림](https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-5-1-preview/)의 "비동기 인식 디버깅" 섹션에서 확인할 수 있습니다.
 
-- Windows 런타임 구성 요소에 대한 예외 지원 향상. [!INCLUDE[win81](../../../includes/win81-md.md)]에서는 다른 언어 간에도 예외의 원인인 오류에 대한 정보를 Windows 스토어 응용 프로그램에서 발생시킨 예외에 보존합니다. 이 기능에 대한 자세한 내용을 [.NET Framework 4.5.1 알림](https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-5-1-preview/)의 "Windows 스토어 앱 개발" 섹션에서 확인할 수 있습니다.
+- Windows 런타임 구성 요소에 대한 예외 지원 향상. Windows 8.1에서는 다른 언어 간에도 예외의 원인인 오류에 대한 정보를 Windows 스토어 응용 프로그램에서 발생시킨 예외에 보존합니다. 이 기능에 대한 자세한 내용을 [.NET Framework 4.5.1 알림](https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-5-1-preview/)의 "Windows 스토어 앱 개발" 섹션에서 확인할 수 있습니다.
 
 Visual Studio 2013부터 [관리되는 프로필 기반 최적화 도구(Mpgo.exe)](../tools/mpgo-exe-managed-profile-guided-optimization-tool.md)를 사용하여 Windows 8.x 스토어 앱과 데스크톱 앱을 최적화할 수 있습니다.
 
@@ -1926,9 +1926,9 @@ ASP.NET 4.5.1의 새로운 기능은 [Visual Studio 2013용 ASP.NET 및 Web Tool
 
 - <xref:System.Reflection.Context.CustomReflectionContext> 클래스를 통해 기본 리플렉션 동작을 재정의하도록 리플렉션 컨텍스트를 사용자 지정하는 기능
 
-- <xref:System.Globalization.IdnMapping?displayProperty=nameWithType>에서 [!INCLUDE[win8](../../../includes/win8-md.md)] 클래스 사용 시 IDNA(Internationalizing Domain Names in Applications) 표준의 2008 버전 지원
+- Windows 8에서 <xref:System.Globalization.IdnMapping?displayProperty=nameWithType> 클래스 사용 시 IDNA(Internationalizing Domain Names in Applications) 표준의 2008 버전 지원
 
-- .NET Framework가 [!INCLUDE[win8](../../../includes/win8-md.md)]에서 사용되면 유니코드 6.0을 구현하는 문자열 비교가 운영 체제에 위임됨. 다른 플랫폼에서 실행되는 경우 유니코드 5.x를 구현하는 자체 문자열 비교 데이터가 .NET Framework에 포함됩니다. <xref:System.String> 클래스 및 <xref:System.Globalization.SortVersion> 클래스의 설명 섹션을 참조하세요.
+- .NET Framework가 Windows 8에서 사용되면 유니코드 6.0을 구현하는 문자열 비교가 운영 체제에 위임됨. 다른 플랫폼에서 실행되는 경우 유니코드 5.x를 구현하는 자체 문자열 비교 데이터가 .NET Framework에 포함됩니다. <xref:System.String> 클래스 및 <xref:System.Globalization.SortVersion> 클래스의 설명 섹션을 참조하세요.
 
 - 애플리케이션 도메인 단위로 문자열에 대한 해시 코드를 계산하는 기능. [\<<UseRandomizedStringHashAlgorithm> 요소](../configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md)를 참조하십시오.
 
@@ -1944,7 +1944,7 @@ ASP.NET 4.5.1의 새로운 기능은 [Visual Studio 2013용 ASP.NET 및 Web Tool
 
 - 다중 범위
 
-- Windows 8.x 스토어 앱을 만들 때 사용할 수 있는 MEF의 하위 집합. 이 하위 집합은 NuGet 갤러리에서 [다운로드 가능 패키지](https://go.microsoft.com/fwlink/?LinkId=256238)로 사용할 수 있습니다. 패키지를 설치하려면 Visual Studio에서 프로젝트를 열고 **프로젝트** 메뉴에서 **NuGet 패키지 관리**를 선택한 후 `Microsoft.Composition` 패키지를 온라인으로 검색합니다.
+- Windows 8.x 스토어 앱을 만들 때 사용할 수 있는 MEF의 하위 집합. 이 하위 집합은 NuGet 갤러리에서 [다운로드 가능 패키지](https://www.nuget.org/packages/Microsoft.Composition)로 사용할 수 있습니다. 패키지를 설치하려면 Visual Studio에서 프로젝트를 열고 **프로젝트** 메뉴에서 **NuGet 패키지 관리**를 선택한 후 `Microsoft.Composition` 패키지를 온라인으로 검색합니다.
 
 자세한 내용은 [MEF(관리되는 확장성 프레임워크 개요)](../mef/index.md)를 참조하십시오.
 
@@ -1964,7 +1964,7 @@ ASP.NET 4.5.1의 새로운 기능은 [Visual Studio 2013용 ASP.NET 및 Web Tool
 
 ### <a name="parallel-computing"></a>병렬 컴퓨팅
 
-.NET Framework 4.5는 병렬 컴퓨팅을 위한 몇 가지 새로운 기능과 향상된 기능을 제공합니다. 여기에는 성능 향상, 제어 강화, 비동기 프로그래밍에 대한 지원 개선, 새 데이터 흐름 라이브러리 및 병렬 디버깅 및 성능 분석에 대한 지원 개선이 포함됩니다. .NET 블로그에서 병렬 프로그래밍에 대한 항목인 [.NET 4.5의 새로운 병렬 처리 기능](https://go.microsoft.com/fwlink/?LinkId=235061)을 참조하십시오.
+.NET Framework 4.5는 병렬 컴퓨팅을 위한 몇 가지 새로운 기능과 향상된 기능을 제공합니다. 여기에는 성능 향상, 제어 강화, 비동기 프로그래밍에 대한 지원 개선, 새 데이터 흐름 라이브러리 및 병렬 디버깅 및 성능 분석에 대한 지원 개선이 포함됩니다. .NET 블로그에서 병렬 프로그래밍에 대한 항목인 [.NET 4.5의 새로운 병렬 처리 기능](https://devblogs.microsoft.com/pfxteam/whats-new-for-parallelism-in-net-4-5/)을 참조하십시오.
 
 <a name="web" />
 
@@ -2058,7 +2058,7 @@ ASP.NET 4.5 및 4.5.1은 Web Forms, WebSocket 지원, 비동기 처리기, 성�
 
 - IDN(Internationalized Domain Name)을 사용하는 WCF 서비스 지원
 
-자세한 내용은 [Windows Communication Foundation의 새로운 기능](https://go.microsoft.com/fwlink/?LinkId=228173)을 참조하십시오.
+자세한 내용은 [Windows Communication Foundation의 새로운 기능](../wcf/whats-new.md)을 참조하십시오.
 
 <a name="windows_workflow_foundation" />
 
@@ -2066,7 +2066,7 @@ ASP.NET 4.5 및 4.5.1은 Web Forms, WebSocket 지원, 비동기 처리기, 성�
 
 .NET Framework 4.5의 Windows WF(Workflow Foundation)에 몇 가지 새로운 기능이 추가되었습니다.
 
-- 상태 머신 워크플로가 .NET Framework 4.0.1([.NET Framework 4 플랫폼 업데이트 1](https://go.microsoft.com/fwlink/?LinkID=215092))의 일부로 처음 도입되었습니다. 이 업데이트에는 개발자가 상태 시스템 워크플로를 만들 수 있도록 하는 몇 가지 새로운 클래스와 활동이 포함되었습니다. 이러한 클래스와 활동은 다음을 포함하도록 .NET Framework 4.5에 대해 업데이트되었습니다.
+- 상태 머신 워크플로가 .NET Framework 4.0.1([.NET Framework 4 플랫폼 업데이트 1](https://blogs.msdn.microsoft.com/endpoint/2011/04/18/microsoft-net-framework-4-platform-update-1/))의 일부로 처음 도입되었습니다. 이 업데이트에는 개발자가 상태 시스템 워크플로를 만들 수 있도록 하는 몇 가지 새로운 클래스와 활동이 포함되었습니다. 이러한 클래스와 활동은 다음을 포함하도록 .NET Framework 4.5에 대해 업데이트되었습니다.
 
   - 상태에 중단점을 설정하는 기능
 
@@ -2112,13 +2112,13 @@ ASP.NET 4.5 및 4.5.1은 Web Forms, WebSocket 지원, 비동기 처리기, 성�
 
 - 기존 서비스 계약과 일치하도록 자동 생성 활동에 대한 지원을 제공하는 계약 중심 워크플로 서비스 개발
 
-자세한 내용은 [Windows Workflow Foundation의 새로운 기능](https://go.microsoft.com/fwlink/?LinkId=228176)을 참조하십시오.
+자세한 내용은 [Windows Workflow Foundation의 새로운 기능](../windows-workflow-foundation/whats-new-in-wf-in-dotnet.md)을 참조하십시오.
 
 <a name="tailored" />
 
 ### <a name="net-for-windows-8x-store-apps"></a>Windows 8.x 스토어 앱용 .NET
 
-Windows 8.x 스토어 앱은 특정 폼 팩터용으로 설계되었으며 Windows 운영 체제의 강력한 기능을 활용합니다. .NET Framework 4.5 또는 4.5.1의 하위 집합은 C# 또는 Visual Basic을 사용하여 Windows용 Windows 8.x 스토어 앱을 빌드하는 데 사용할 수 있습니다. 이 하위 집합을 Windows 8.x 스토어 앱용 .NET이라고 하며 Windows 개발자 센터의 [개요](https://go.microsoft.com/fwlink/?LinkId=228491)에 설명되어 있습니다.
+Windows 8.x 스토어 앱은 특정 폼 팩터용으로 설계되었으며 Windows 운영 체제의 강력한 기능을 활용합니다. .NET Framework 4.5 또는 4.5.1의 하위 집합은 C# 또는 Visual Basic을 사용하여 Windows용 Windows 8.x 스토어 앱을 빌드하는 데 사용할 수 있습니다. 이 하위 집합을 Windows 8.x 스토어 앱용 .NET이라고 하며 [개요](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140))에 설명되어 있습니다.
 
 ### <a name="portable-class-libraries-a-nameportable-"></a>이식 가능한 클래스 라이브러리<a name="portable" />
 
@@ -2129,5 +2129,6 @@ Visual Studio 2012 및 이후 버전의 이식 가능한 클래스 라이브러�
 - [.NET Framework 및 번외 릴리스](../get-started/the-net-framework-and-out-of-band-releases.md)
 - [.NET Framework에서 내게 필요한 옵션의 새로운 기능](whats-new-in-accessibility.md)
 - [Visual Studio 2017의 새로운 기능](/visualstudio/ide/whats-new-visual-studio-2017)
+- [Visual Studio 2019의 새로운 기능](/visualstudio/ide/whats-new-visual-studio-2019)
 - [ASP.NET](/aspnet)
 - [Visual Studio의 새로운 C++ 기능](/cpp/what-s-new-for-visual-cpp-in-visual-studio)

@@ -3,14 +3,14 @@ title: .NET 시작
 description: .NET 기술 제품군을 시작합니다.
 author: mairaw
 ms.author: mairaw
-ms.date: 09/23/2019
+ms.date: 12/03/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: ccff6256b56daccdf8105fd5ad31e81bb892c2a8
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 15daaafed02ab1132a3c82c12efa6fad0e0a6db2
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552960"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74838132"
 ---
 # <a name="welcome-to-net"></a>.NET 시작
 
@@ -29,9 +29,9 @@ ms.locfileid: "74552960"
 
 또한 최신 .NET 이벤트를 따르세요.
 
+- [Microsoft Ignite](https://www.microsoft.com/ignite)
 - [Microsoft Build](https://www.microsoft.com/build)
 - [.NET Conf](https://www.dotnetconf.net/)
-- [Microsoft Connect()](https://www.microsoft.com/connectevent)
 
 .NET 구현 및 지원되는 언어에 추가된 최신 기능에 대한 자세한 내용은 다음 문서를 참조하세요.
 
@@ -49,7 +49,7 @@ ms.locfileid: "74552960"
 - [.NET Framework 가이드](framework/index.md)
 - [C# 가이드](csharp/index.yml)
 - [F# 가이드](fsharp/index.yml)
-- [Visual Basic 가이드](visual-basic/index.md)
+- [Visual Basic 가이드](visual-basic/index.yml)
 - [ML.NET 가이드](machine-learning/index.yml)
 - [Apache Spark용 .NET](spark/index.yml)
 - [.NET 애플리케이션 아키텍처](architecture/index.yml)
@@ -67,11 +67,10 @@ ms.locfileid: "74552960"
 이 문서는 완전히 [오픈 소스](https://github.com/dotnet/docs)입니다. 문제 생성부터 문서 작성에 이르기까지 원하는 방식으로 참여할 수 있습니다. 또한 .NET 자체도 대부분 오픈 소스입니다. 다음 목록에서는 기본 .NET GitHub 리포지토리를 보여줍니다.
 
 - [.NET Core 홈](https://github.com/dotnet/core)
-- [.NET 라이브러리](https://github.com/dotnet/corefx)
-- [.NET Core 런타임](https://github.com/dotnet/coreclr)
-- [.NET Core CLI](https://github.com/dotnet/cli)
+- [.NET Core 런타임](https://github.com/dotnet/runtime)
+- [.NET Core SDK](https://github.com/dotnet/sdk)
 - [Roslyn(C# 및 Visual Basic) 컴파일러 플랫폼 및 IDE 도구](https://github.com/dotnet/roslyn)
-- [F# 컴파일러 및 IDE 도구](https://github.com/microsoft/visualfsharp)
+- [F# 컴파일러 및 IDE 도구](https://github.com/dotnet/fsharp)
 - [Windows Forms](https://github.com/dotnet/winforms)
 - [WPF](https://github.com/dotnet/wpf)
 
