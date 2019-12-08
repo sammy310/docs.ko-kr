@@ -4,12 +4,12 @@ description: Windows, Linux 및 macOS에서 .NET Core 애플리케이션을 빌�
 author: thraka
 ms.author: adegeo
 ms.date: 09/19/2019
-ms.openlocfilehash: 78066f2904f6a874b71165e4fe1769b6b778ae41
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 89db6d79336c01315983133d9041904d88cba301
+ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428875"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74884256"
 ---
 # <a name="get-started-with-net-core"></a>.NET Core 시작
 
@@ -50,7 +50,7 @@ Hello World!
 - [Visual Studio 2017에서 Visual Basic 및 .NET Core로 클래스 라이브러리 빌드.](./tutorials/vb-library-with-visual-studio.md)  
 - [Visual Studio Code 및 .NET Core를 설치 및 사용하는 방법](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core/)에 관한 비디오 시청.
 - [Visual Studio 2017 및 .NET Core를 설치 및 사용하는 방법](https://channel9.msdn.com/Blogs/dotnet/Get-Started-NET-Core-Visual-Studio-2017/)에 관한 비디오 시청.
-- [명령줄을 사용하여 .NET Core 시작.](tutorials/using-with-xplat-cli.md)
+- [명령줄을 사용하여 .NET Core 시작.](tutorials/cli-create-console-app.md)
 
 지원되는 Windows 버전 목록은 [.NET Core 종속성 및 요구 사항](install/dependencies.md?tabs=netcore30&pivots=os-windows) 문서를 참조하세요.
 
@@ -58,7 +58,7 @@ Hello World!
 
 다음 단계별 자습서에 따라 .NET Core 애플리케이션 개발을 시작할 수 있습니다.
 
-- [명령줄을 사용하여 .NET Core 시작.](tutorials/using-with-xplat-cli.md)
+- [명령줄을 사용하여 .NET Core 시작.](tutorials/cli-create-console-app.md)
 - [Ubuntu에서 C# 및 .NET Core를 사용하여 Visual Studio Code 시작](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu)에 관한 비디오 시청.
 
 지원되는 Linux 배포판 및 버전 목록은 [.NET Core 종속성 및 요구 사항](install/dependencies.md?tabs=netcore30&pivots=os-linux) 문서를 참조하세요.
@@ -69,7 +69,7 @@ Hello World!
 
 - [macOS에서 C# 및 .NET Core를 사용하여 Visual Studio Code 시작](https://channel9.msdn.com/Blogs/dotnet/Get-started-VSCode-NET-Core-Mac)에 관한 비디오 시청.
 - [Visual Studio Code를 사용하여 macOS에서 .NET Core 시작.](tutorials/using-on-macos.md)
-- [명령줄을 사용하여 .NET Core 시작.](tutorials/using-with-xplat-cli.md)
+- [명령줄을 사용하여 .NET Core 시작.](tutorials/cli-create-console-app.md)
 - [Mac용 Visual Studio를 사용하여 macOS에서 .NET Core 시작.](tutorials/using-on-mac-vs.md)
 - [Mac용 Visual Studio를 사용하여 macOS에서 완전한 .NET Core 솔루션 빌드.](tutorials/using-on-mac-vs-full-solution.md)
 

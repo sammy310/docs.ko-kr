@@ -4,16 +4,16 @@ description: 이 자습서에서는 명령줄에서 .NET Core 프로젝트를 �
 author: cartermp
 ms.date: 09/10/2018
 ms.custom: seodec18
-ms.openlocfilehash: d93ba5f41f1e7b5818790d0853bd219466b317ee
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 38017a788a8e43601f49a98230cb4d96e0390061
+ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117374"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74884217"
 ---
 # <a name="organizing-and-testing-projects-with-the-net-core-command-line"></a>.NET Core 명령줄을 사용하여 프로젝트 구성 및 테스트
 
-이 자습서에서는 [명령줄을 사용하여 Windows/Linux/macOS에서 .NET Core 시작](using-with-xplat-cli.md)에 따라 간단한 콘솔 앱 이상의 잘 구성된 고급 애플리케이션을 개발하는 과정을 안내합니다. 이 자습서에서는 폴더를 사용하여 코드를 구성하는 방법을 보여 준 후에 [xUnit](https://xunit.github.io/) 테스트 프레임워크를 사용하여 콘솔 애플리케이션을 확장하는 방법을 보여 줍니다.
+이 자습서에서는 [명령줄을 사용하여 Windows/Linux/macOS에서 .NET Core 시작](cli-create-console-app.md)에 따라 간단한 콘솔 앱 이상의 잘 구성된 고급 애플리케이션을 개발하는 과정을 안내합니다. 이 자습서에서는 폴더를 사용하여 코드를 구성하는 방법을 보여 준 후에 [xUnit](https://xunit.github.io/) 테스트 프레임워크를 사용하여 콘솔 애플리케이션을 확장하는 방법을 보여 줍니다.
 
 ## <a name="using-folders-to-organize-code"></a>폴더를 사용하여 코드 구성
 
