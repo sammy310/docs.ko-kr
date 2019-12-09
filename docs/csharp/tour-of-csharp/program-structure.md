@@ -3,12 +3,12 @@ title: C# 프로그램 구조 - C# 언어 둘러보기
 description: C# 프로그램의 기본 구성 요소에 대해 알아보기
 ms.date: 08/10/2016
 ms.assetid: 984f0314-507f-47a0-af56-9011243f5e65
-ms.openlocfilehash: 5102c72d68108f698a0456b9c14e6713778f4325
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 5e095e71549ed3eec6c73e6a134fdb5a64fb63c0
+ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834163"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74884386"
 ---
 # <a name="program-structure"></a>프로그램 구조
 
@@ -27,7 +27,7 @@ csc /t:library acme.cs
 예제를 라이브러리(`Main` 진입점이 없는 코드)를 컴파일하고 `acme.dll`이라는 어셈블리를 생성합니다.
 
 > [!IMPORTANT]
-> 위 예제에서는 `csc`를 명령줄 C# 컴파일러로 사용합니다. 이 컴파일러는 Windows 실행 파일입니다. 다른 플랫폼에서도 C#을 사용하려면 .NET Core용 도구를 사용해야 합니다. .NET Core 에코시스템은 `dotnet` CLI를 사용하여 명령줄 빌드를 관리합니다. 여기에는 종속성 관리 및 C# 컴파일러 호출이 포함됩니다. .NET Core에서 지원되는 플랫폼의 이러한 도구에 대한 자세한 설명을 보려면 [이 자습서](../../core/tutorials/using-with-xplat-cli.md)를 참조하세요.
+> 위 예제에서는 `csc`를 명령줄 C# 컴파일러로 사용합니다. 이 컴파일러는 Windows 실행 파일입니다. 다른 플랫폼에서도 C#을 사용하려면 .NET Core용 도구를 사용해야 합니다. .NET Core 에코시스템은 `dotnet` CLI를 사용하여 명령줄 빌드를 관리합니다. 여기에는 종속성 관리 및 C# 컴파일러 호출이 포함됩니다. .NET Core에서 지원되는 플랫폼의 이러한 도구에 대한 자세한 설명을 보려면 [이 자습서](../../core/tutorials/cli-create-console-app.md)를 참조하세요.
 
 어셈블리에는 IL(중간 언어) 명령 형식의 실행 코드와 메타데이터 형식의 기호 정보가 포함됩니다. 실행되기 전에 어셈블리의 IL 코드는 .NET 공용 언어 런타임의 JIT(Just-In-Time) 컴파일러에 의해 자동으로 프로세서 특정 코드로 변환됩니다.
 

@@ -2,12 +2,12 @@
 title: 클라우드를 위한 복원력 있는 서비스 빌드 클라우드의 일시적 오류 포용
 description: Azure Cloud 및 Windows 컨테이너를 사용하여 기존 .NET 애플리케이션 현대화 | 클라우드를 위한 복원력 있는 서비스 빌드 클라우드의 일시적 오류 포용
 ms.date: 04/30/2018
-ms.openlocfilehash: e6fae8140b55cb0308dca9f4b77e961501b41f8f
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: e516dc675ceb8def25c6d676bced0ea7f253b2d5
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73739406"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74711259"
 ---
 # <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>클라우드를 위한 탄력적인 서비스 빌드: 클라우드의 일시적 오류 포용
 
@@ -27,7 +27,7 @@ HTTP 서비스를 사용하는 앱에서도 비슷한 시나리오가 발생할 
 
 그림 4-9에 표시된 것과 같은 복원력 있는 애플리케이션은 "지수 백오프를 사용하여 다시 시도"와 같은 기술을 구현하여 애플리케이션에서 리소스의 일시적 실패를 처리할 수 있는 기회가 있어야 합니다. 또한 애플리케이션에서 "회로 차단기"를 사용해야 합니다. 회로 차단기는 실제로 장기 오류일 때 애플리케이션이 리소스에 액세스를 시도하는 것을 차단합니다. 애플리케이션은 회로 차단기를 사용하여 자신에 대한 서비스 거부를 방지합니다.
 
-![지수 백오프를 사용하여 다시 시도에 의해 처리되는 부분 실패의 다이어그램](./media/build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud/retry-partial-failures.png)
+![지수 백오프를 사용하여 다시 시도에 의해 처리되는 부분 실패의 다이어그램](./media/retry-partial-failures.png)
 
 **그림 4-9.** 지수 백오프를 사용하여 다시 시도에 의해 처리되는 부분 실패
 

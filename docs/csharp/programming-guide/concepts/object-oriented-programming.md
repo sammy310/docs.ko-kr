@@ -2,12 +2,12 @@
 title: 개체 지향 프로그래밍(C#)
 ms.date: 07/20/2015
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-ms.openlocfilehash: 121d2e43f6896179756067e661be6d7960a1ee64
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 1de150f6eb4be893ca1afce6bd16afde5752c986
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73418038"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74711815"
 ---
 # <a name="object-oriented-programming-c"></a>개체 지향 프로그래밍(C#)
 
@@ -158,7 +158,7 @@ class SampleClass
 메서드를 오버로드하려면
 
 ```csharp
-public int sampleMethod(string sampleParam) {};
+public int sampleMethod(string sampleParam) {}
 public int sampleMethod(int sampleParam) {}
 ```
 
@@ -186,9 +186,7 @@ public class SampleClass
 }
 ```
 
-자세한 내용은 다음을 참조하세요.
-
-[생성자](../classes-and-structs/constructors.md).
+자세한 내용은 [생성자](../classes-and-structs/constructors.md)를 참조하세요.
 
 #### <a name="Finalizers"></a> 종료자
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - members, obsolete in .NET Framework
 - obsolete members [.NET Framework]
 ms.assetid: 0ee25062-4071-4d3c-a552-87a75d3ecd34
-ms.openlocfilehash: 2231552f9c3353890963a4ad5388194036fa27bf
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 063d7b5cfddace89efa636327c71a214ee01fdd0
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134095"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802728"
 ---
 # <a name="obsolete-members-in-the-net-framework"></a>.NET Framework에서 사용되지 않는 멤버
 
@@ -646,8 +646,8 @@ ms.locfileid: "73134095"
 |<xref:System.Web.HttpContext?displayProperty=nameWithType>|<xref:System.Web.HttpContext.GetConfig%2A>|대신 System.Web.dll의 <xref:System.Web.HttpContext.GetSection%2A?displayProperty=nameWithType>을 사용하는 것이 좋습니다.|
 |<xref:System.Web.HttpUtility?displayProperty=nameWithType>|<xref:System.Web.HttpUtility.UrlEncodeUnicode%2A>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> 이 메서드는 \-표준\- 규격이 아닌 출력을 생성하며 상호 운용성 문제가 있습니다. 대신 <xref:System.Web.HttpUtility.UrlEncode%28System.String%29>를 사용하는 것이 좋습니다.|
 |<xref:System.Web.HttpUtility?displayProperty=nameWithType>|<xref:System.Web.HttpUtility.UrlEncodeUnicodeToBytes%2A>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> 이 메서드는 \-표준\- 규격이 아닌 출력을 생성하며 상호 운용성 문제가 있습니다. 대신 <xref:System.Web.HttpUtility.UrlEncodeToBytes%28System.String%29>를 사용하는 것이 좋습니다.|
-|<xref:System.Web.Configuration.AuthenticationMode?displayProperty=nameWithType>|<xref:System.Web.Configuration.AuthenticationMode.Passport>|이 필드는 사용되지 않습니다. Passport 인증 제품은 더 이상 지원되지 않으며 [Microsoft Account](https://go.microsoft.com/fwlink/?LinkId=733413)로 대체되었습니다.|
-|<xref:System.Web.Configuration.AuthenticationSection?displayProperty=nameWithType>|<xref:System.Web.Configuration.AuthenticationSection.Passport%2A>|이 속성은 사용되지 않습니다. Passport 인증 제품은 더 이상 지원되지 않으며 [Microsoft Account](https://go.microsoft.com/fwlink/?LinkId=733413)로 대체되었습니다.|
+|<xref:System.Web.Configuration.AuthenticationMode?displayProperty=nameWithType>|<xref:System.Web.Configuration.AuthenticationMode.Passport>|이 필드는 사용되지 않습니다. Passport 인증 제품은 더 이상 지원되지 않으며 [Microsoft Account](https://account.microsoft.com/account/Account?destrt=home-index)로 대체되었습니다.|
+|<xref:System.Web.Configuration.AuthenticationSection?displayProperty=nameWithType>|<xref:System.Web.Configuration.AuthenticationSection.Passport%2A>|이 속성은 사용되지 않습니다. Passport 인증 제품은 더 이상 지원되지 않으며 [Microsoft Account](https://account.microsoft.com/account/Account?destrt=home-index)로 대체되었습니다.|
 |<xref:System.Web.Configuration.HttpCapabilitiesBase?displayProperty=nameWithType>|<xref:System.Web.Configuration.HttpCapabilitiesBase.JavaScript%2A>|대신 <xref:System.Web.Configuration.HttpCapabilitiesBase.EcmaScriptVersion%2A?displayProperty=nameWithType> 속성을 사용하는 것이 좋습니다. <xref:System.Version.Major%2A?displayProperty=nameWithType> 버전 값이 1보다 크거나 같으면 JavaScript가 지원됩니다.|
 |<xref:System.Web.Configuration.SystemWebSectionGroup?displayProperty=nameWithType>|<xref:System.Web.Configuration.SystemWebSectionGroup.MobileControls%2A>|System.Web.Mobile.dll은 사용되지 않습니다.|
 |<xref:System.Web.Routing.UrlRoutingModule?displayProperty=nameWithType>|<xref:System.Web.Routing.UrlRoutingModule.PostMapRequestHandler%2A>|이 메서드는 사용되지 않습니다. <xref:System.Web.Routing.UrlRoutingModule.PostMapRequestHandler%2A> 이벤트를 사용하려면 <xref:System.Web.Routing.UrlRoutingModule.Init%2A> 메서드를 재정의하세요.|

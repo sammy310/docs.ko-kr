@@ -5,12 +5,12 @@ author: cartermp
 ms.author: mairaw
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: 4e787377bf954de3be499ae0fc74ef274a61e129
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 543f05cd52e62166b8a5ee318a588dee1e8ef76a
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552882"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74838197"
 ---
 # <a name="net-architectural-components"></a>.NET 아키텍처 구성 요소
 
@@ -112,4 +112,4 @@ C# 언어 및 CLI(공용 언어 인프라) 사양은 [Ecma International® ](htt
 - [.NET Framework 가이드](../framework/index.md)
 - [C# 가이드](../csharp/index.yml)
 - [F# 가이드](../fsharp/index.yml)
-- [VB.NET 가이드](../visual-basic/index.md)
+- [VB.NET 가이드](../visual-basic/index.yml)
