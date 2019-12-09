@@ -2,68 +2,68 @@
 title: -subsystemversion(C# 컴파일러 옵션)
 ms.date: 07/20/2015
 ms.assetid: a99fce81-9d92-4813-9874-bee777041445
-ms.openlocfilehash: f70389f87bf49ffccded4aef775c27ed0d034e1f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d76c9424340b4b6f3c211c849b466be55eb79d1e
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69922454"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802036"
 ---
-# <a name="-subsystemversion-c-compiler-options"></a><span data-ttu-id="fd15a-102">-subsystemversion(C# 컴파일러 옵션)</span><span class="sxs-lookup"><span data-stu-id="fd15a-102">-subsystemversion (C# Compiler Options)</span></span>
+# <a name="-subsystemversion-c-compiler-options"></a><span data-ttu-id="a9239-102">-subsystemversion(C# 컴파일러 옵션)</span><span class="sxs-lookup"><span data-stu-id="a9239-102">-subsystemversion (C# Compiler Options)</span></span>
 
-<span data-ttu-id="fd15a-103">생성된 실행 파일을 실행할 수 있는 하위 시스템의 최소 버전을 지정하여 실행 파일을 실행할 수 있는 Windows 버전을 결정합니다.</span><span class="sxs-lookup"><span data-stu-id="fd15a-103">Specifies the minimum version of the subsystem on which the generated executable file can run, thereby determining the versions of Windows on which the executable file can run.</span></span> <span data-ttu-id="fd15a-104">가장 일반적으로, 이 옵션은 실행 파일이 이전 버전의 Windows에서 사용할 수 없는 특정 보안 기능을 활용할 수 있도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="fd15a-104">Most commonly, this option ensures that the executable file can leverage particular security features that aren’t available with older versions of Windows.</span></span>
+<span data-ttu-id="a9239-103">생성된 실행 파일을 실행할 수 있는 하위 시스템의 최소 버전을 지정하여 실행 파일을 실행할 수 있는 Windows 버전을 결정합니다.</span><span class="sxs-lookup"><span data-stu-id="a9239-103">Specifies the minimum version of the subsystem on which the generated executable file can run, thereby determining the versions of Windows on which the executable file can run.</span></span> <span data-ttu-id="a9239-104">가장 일반적으로, 이 옵션은 실행 파일이 이전 버전의 Windows에서 사용할 수 없는 특정 보안 기능을 활용할 수 있도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="a9239-104">Most commonly, this option ensures that the executable file can leverage particular security features that aren’t available with older versions of Windows.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="fd15a-105">하위 시스템 자체를 지정하려면 [-target](./target-compiler-option.md) 컴파일러 옵션을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="fd15a-105">To specify the subsystem itself, use the [-target](./target-compiler-option.md) compiler option.</span></span>
+> <span data-ttu-id="a9239-105">하위 시스템 자체를 지정하려면 [-target](./target-compiler-option.md) 컴파일러 옵션을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="a9239-105">To specify the subsystem itself, use the [-target](./target-compiler-option.md) compiler option.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="fd15a-106">구문</span><span class="sxs-lookup"><span data-stu-id="fd15a-106">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="a9239-106">구문</span><span class="sxs-lookup"><span data-stu-id="a9239-106">Syntax</span></span>
 
 ```console
 -subsystemversion:major.minor
 ```
 
-## <a name="parameters"></a><span data-ttu-id="fd15a-107">매개 변수</span><span class="sxs-lookup"><span data-stu-id="fd15a-107">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="a9239-107">매개 변수</span><span class="sxs-lookup"><span data-stu-id="a9239-107">Parameters</span></span>
 
 `major.minor`
 
-<span data-ttu-id="fd15a-108">주 버전과 부 버전의 점 표기법으로 표현된 필수 최소 버전의 하위 시스템입니다.</span><span class="sxs-lookup"><span data-stu-id="fd15a-108">The minimum required version of the subsystem, as expressed in a dot notation for major and minor versions.</span></span> <span data-ttu-id="fd15a-109">예를 들어 이 항목의 뒷부분에 나오는 표의 설명에 따라 이 옵션의 값을 6.01로 설정하는 경우 Windows 7 이전 운영 체제에서는 애플리케이션을 실행할 수 없도록 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fd15a-109">For example, you can specify that an application can't run on an operating system that's older than Windows 7 if you set the value of this option to 6.01, as the table later in this topic describes.</span></span> <span data-ttu-id="fd15a-110">`major` 및 `minor`의 값을 정수로 지정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="fd15a-110">You must specify the values for `major` and `minor` as integers.</span></span>
+<span data-ttu-id="a9239-108">주 버전과 부 버전의 점 표기법으로 표현된 필수 최소 버전의 하위 시스템입니다.</span><span class="sxs-lookup"><span data-stu-id="a9239-108">The minimum required version of the subsystem, as expressed in a dot notation for major and minor versions.</span></span> <span data-ttu-id="a9239-109">예를 들어 이 항목의 뒷부분에 나오는 표의 설명에 따라 이 옵션의 값을 6.01로 설정하는 경우 Windows 7 이전 운영 체제에서는 애플리케이션을 실행할 수 없도록 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a9239-109">For example, you can specify that an application can't run on an operating system that's older than Windows 7 if you set the value of this option to 6.01, as the table later in this topic describes.</span></span> <span data-ttu-id="a9239-110">`major` 및 `minor`의 값을 정수로 지정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="a9239-110">You must specify the values for `major` and `minor` as integers.</span></span>
 
-<span data-ttu-id="fd15a-111">`minor` 버전에서 선행 0은 버전을 변경하지 않지만 후행 0은 버전을 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="fd15a-111">Leading zeroes in the `minor` version don't change the version, but trailing zeroes do.</span></span> <span data-ttu-id="fd15a-112">예를 들어 6.1과 6.01은 동일한 버전을 가리키지만 6.10은 다른 버전을 가리킵니다.</span><span class="sxs-lookup"><span data-stu-id="fd15a-112">For example, 6.1 and 6.01 refer to the same version, but 6.10 refers to a different version.</span></span> <span data-ttu-id="fd15a-113">혼동을 피하기 위해 부 버전을 두 자리로 표현하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="fd15a-113">We recommend expressing the minor version as two digits to avoid confusion.</span></span>
+<span data-ttu-id="a9239-111">`minor` 버전에서 선행 0은 버전을 변경하지 않지만 후행 0은 버전을 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="a9239-111">Leading zeroes in the `minor` version don't change the version, but trailing zeroes do.</span></span> <span data-ttu-id="a9239-112">예를 들어 6.1과 6.01은 동일한 버전을 가리키지만 6.10은 다른 버전을 가리킵니다.</span><span class="sxs-lookup"><span data-stu-id="a9239-112">For example, 6.1 and 6.01 refer to the same version, but 6.10 refers to a different version.</span></span> <span data-ttu-id="a9239-113">혼동을 피하기 위해 부 버전을 두 자리로 표현하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="a9239-113">We recommend expressing the minor version as two digits to avoid confusion.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="fd15a-114">설명</span><span class="sxs-lookup"><span data-stu-id="fd15a-114">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="a9239-114">설명</span><span class="sxs-lookup"><span data-stu-id="a9239-114">Remarks</span></span>
 
-<span data-ttu-id="fd15a-115">다음 표에는 Windows의 일반적인 하위 시스템 버전이 나와 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fd15a-115">The following table lists common subsystem versions of Windows.</span></span>
+<span data-ttu-id="a9239-115">다음 표에는 Windows의 일반적인 하위 시스템 버전이 나와 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a9239-115">The following table lists common subsystem versions of Windows.</span></span>
 
-|<span data-ttu-id="fd15a-116">Windows 버전</span><span class="sxs-lookup"><span data-stu-id="fd15a-116">Windows version</span></span>|<span data-ttu-id="fd15a-117">하위 시스템 버전</span><span class="sxs-lookup"><span data-stu-id="fd15a-117">Subsystem version</span></span>|
+|<span data-ttu-id="a9239-116">Windows 버전</span><span class="sxs-lookup"><span data-stu-id="a9239-116">Windows version</span></span>|<span data-ttu-id="a9239-117">하위 시스템 버전</span><span class="sxs-lookup"><span data-stu-id="a9239-117">Subsystem version</span></span>|
 |---------------------|-----------------------|
-|<span data-ttu-id="fd15a-118">Windows 2000</span><span class="sxs-lookup"><span data-stu-id="fd15a-118">Windows 2000</span></span>|<span data-ttu-id="fd15a-119">5.00</span><span class="sxs-lookup"><span data-stu-id="fd15a-119">5.00</span></span>|
-|<span data-ttu-id="fd15a-120">Windows XP</span><span class="sxs-lookup"><span data-stu-id="fd15a-120">Windows XP</span></span>|<span data-ttu-id="fd15a-121">5.01</span><span class="sxs-lookup"><span data-stu-id="fd15a-121">5.01</span></span>|
-|<span data-ttu-id="fd15a-122">Windows Server 2003</span><span class="sxs-lookup"><span data-stu-id="fd15a-122">Windows Server 2003</span></span>|<span data-ttu-id="fd15a-123">5.02</span><span class="sxs-lookup"><span data-stu-id="fd15a-123">5.02</span></span>|
-|<span data-ttu-id="fd15a-124">Windows Vista</span><span class="sxs-lookup"><span data-stu-id="fd15a-124">Windows Vista</span></span>|<span data-ttu-id="fd15a-125">6.00</span><span class="sxs-lookup"><span data-stu-id="fd15a-125">6.00</span></span>|
-|<span data-ttu-id="fd15a-126">Windows 7</span><span class="sxs-lookup"><span data-stu-id="fd15a-126">Windows 7</span></span>|<span data-ttu-id="fd15a-127">6.01</span><span class="sxs-lookup"><span data-stu-id="fd15a-127">6.01</span></span>|
-|<span data-ttu-id="fd15a-128">Windows Server 2008</span><span class="sxs-lookup"><span data-stu-id="fd15a-128">Windows Server 2008</span></span>|<span data-ttu-id="fd15a-129">6.01</span><span class="sxs-lookup"><span data-stu-id="fd15a-129">6.01</span></span>|
-|[!INCLUDE[win8](~/includes/win8-md.md)]|<span data-ttu-id="fd15a-130">6.02</span><span class="sxs-lookup"><span data-stu-id="fd15a-130">6.02</span></span>|
+|<span data-ttu-id="a9239-118">Windows 2000</span><span class="sxs-lookup"><span data-stu-id="a9239-118">Windows 2000</span></span>|<span data-ttu-id="a9239-119">5.00</span><span class="sxs-lookup"><span data-stu-id="a9239-119">5.00</span></span>|
+|<span data-ttu-id="a9239-120">Windows XP</span><span class="sxs-lookup"><span data-stu-id="a9239-120">Windows XP</span></span>|<span data-ttu-id="a9239-121">5.01</span><span class="sxs-lookup"><span data-stu-id="a9239-121">5.01</span></span>|
+|<span data-ttu-id="a9239-122">Windows Server 2003</span><span class="sxs-lookup"><span data-stu-id="a9239-122">Windows Server 2003</span></span>|<span data-ttu-id="a9239-123">5.02</span><span class="sxs-lookup"><span data-stu-id="a9239-123">5.02</span></span>|
+|<span data-ttu-id="a9239-124">Windows Vista</span><span class="sxs-lookup"><span data-stu-id="a9239-124">Windows Vista</span></span>|<span data-ttu-id="a9239-125">6.00</span><span class="sxs-lookup"><span data-stu-id="a9239-125">6.00</span></span>|
+|<span data-ttu-id="a9239-126">Windows 7</span><span class="sxs-lookup"><span data-stu-id="a9239-126">Windows 7</span></span>|<span data-ttu-id="a9239-127">6.01</span><span class="sxs-lookup"><span data-stu-id="a9239-127">6.01</span></span>|
+|<span data-ttu-id="a9239-128">Windows Server 2008</span><span class="sxs-lookup"><span data-stu-id="a9239-128">Windows Server 2008</span></span>|<span data-ttu-id="a9239-129">6.01</span><span class="sxs-lookup"><span data-stu-id="a9239-129">6.01</span></span>|
+|<span data-ttu-id="a9239-130">Windows 8</span><span class="sxs-lookup"><span data-stu-id="a9239-130">Windows 8</span></span>|<span data-ttu-id="a9239-131">6.02</span><span class="sxs-lookup"><span data-stu-id="a9239-131">6.02</span></span>|
 
-## <a name="default-values"></a><span data-ttu-id="fd15a-131">기본값</span><span class="sxs-lookup"><span data-stu-id="fd15a-131">Default values</span></span>
+## <a name="default-values"></a><span data-ttu-id="a9239-132">기본값</span><span class="sxs-lookup"><span data-stu-id="a9239-132">Default values</span></span>
 
-<span data-ttu-id="fd15a-132">**-subsystemversion** 컴파일러 옵션의 기본값은 다음 목록의 조건에 따라 달라집니다.</span><span class="sxs-lookup"><span data-stu-id="fd15a-132">The default value of the **-subsystemversion** compiler option depends on the conditions in the following list:</span></span>
+<span data-ttu-id="a9239-133">**-subsystemversion** 컴파일러 옵션의 기본값은 다음 목록의 조건에 따라 달라집니다.</span><span class="sxs-lookup"><span data-stu-id="a9239-133">The default value of the **-subsystemversion** compiler option depends on the conditions in the following list:</span></span>
 
-- <span data-ttu-id="fd15a-133">다음 목록의 컴파일러 옵션이 설정된 경우 기본값은 6.02입니다.</span><span class="sxs-lookup"><span data-stu-id="fd15a-133">The default value is 6.02 if any compiler option in the following list is set:</span></span>
+- <span data-ttu-id="a9239-134">다음 목록의 컴파일러 옵션이 설정된 경우 기본값은 6.02입니다.</span><span class="sxs-lookup"><span data-stu-id="a9239-134">The default value is 6.02 if any compiler option in the following list is set:</span></span>
 
-  - [<span data-ttu-id="fd15a-134">/target:appcontainerexe</span><span class="sxs-lookup"><span data-stu-id="fd15a-134">-target:appcontainerexe</span></span>](./target-appcontainerexe-compiler-option.md)
+  - [<span data-ttu-id="a9239-135">/target:appcontainerexe</span><span class="sxs-lookup"><span data-stu-id="a9239-135">-target:appcontainerexe</span></span>](./target-appcontainerexe-compiler-option.md)
 
-  - [<span data-ttu-id="fd15a-135">/target:winmdobj</span><span class="sxs-lookup"><span data-stu-id="fd15a-135">-target:winmdobj</span></span>](./target-winmdobj-compiler-option.md)
+  - [<span data-ttu-id="a9239-136">/target:winmdobj</span><span class="sxs-lookup"><span data-stu-id="a9239-136">-target:winmdobj</span></span>](./target-winmdobj-compiler-option.md)
 
-  - [<span data-ttu-id="fd15a-136">-platform:arm</span><span class="sxs-lookup"><span data-stu-id="fd15a-136">-platform:arm</span></span>](./platform-compiler-option.md)
+  - [<span data-ttu-id="a9239-137">-platform:arm</span><span class="sxs-lookup"><span data-stu-id="a9239-137">-platform:arm</span></span>](./platform-compiler-option.md)
 
-- <span data-ttu-id="fd15a-137">MSBuild를 사용하고 .NET Framework 4.5를 대상으로 하며, 이 목록의 앞에서 지정된 컴파일러 옵션 중 하나를 설정하지 않은 경우 기본값은 6.00입니다.</span><span class="sxs-lookup"><span data-stu-id="fd15a-137">The default value is 6.00 if you're using MSBuild, you're targeting .NET Framework 4.5, and you haven't set any of the compiler options that were specified earlier in this list.</span></span>
+- <span data-ttu-id="a9239-138">MSBuild를 사용하고 .NET Framework 4.5를 대상으로 하며, 이 목록의 앞에서 지정된 컴파일러 옵션 중 하나를 설정하지 않은 경우 기본값은 6.00입니다.</span><span class="sxs-lookup"><span data-stu-id="a9239-138">The default value is 6.00 if you're using MSBuild, you're targeting .NET Framework 4.5, and you haven't set any of the compiler options that were specified earlier in this list.</span></span>
 
-- <span data-ttu-id="fd15a-138">앞의 조건이 하나도 true가 아닌 경우 기본값은 4.00입니다.</span><span class="sxs-lookup"><span data-stu-id="fd15a-138">The default value is 4.00 if none of the previous conditions is true.</span></span>
+- <span data-ttu-id="a9239-139">앞의 조건이 하나도 true가 아닌 경우 기본값은 4.00입니다.</span><span class="sxs-lookup"><span data-stu-id="a9239-139">The default value is 4.00 if none of the previous conditions is true.</span></span>
 
-## <a name="setting-this-option"></a><span data-ttu-id="fd15a-139">이 옵션 설정</span><span class="sxs-lookup"><span data-stu-id="fd15a-139">Setting this option</span></span>
+## <a name="setting-this-option"></a><span data-ttu-id="a9239-140">이 옵션 설정</span><span class="sxs-lookup"><span data-stu-id="a9239-140">Setting this option</span></span>
 
-<span data-ttu-id="fd15a-140">Visual Studio에서 **-subsystemversion** 컴파일러 옵션을 설정하려면 .csproj 파일을 열고 MSBuild XML에서 `SubsystemVersion` 속성의 값을 지정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="fd15a-140">To set the **-subsystemversion** compiler option in Visual Studio, you must open the .csproj file and specify a value for the `SubsystemVersion` property in the MSBuild XML.</span></span> <span data-ttu-id="fd15a-141">Visual Studio IDE에서는 이 옵션을 설정할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="fd15a-141">You can't set this option in the Visual Studio IDE.</span></span> <span data-ttu-id="fd15a-142">자세한 내용은 이 항목의 앞부분에 나오는 "기본값"이나 [일반적인 MSBuild 프로젝트 속성](/visualstudio/msbuild/common-msbuild-project-properties)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="fd15a-142">For more information, see "Default values" earlier in this topic or [Common MSBuild Project Properties](/visualstudio/msbuild/common-msbuild-project-properties).</span></span>
+<span data-ttu-id="a9239-141">Visual Studio에서 **-subsystemversion** 컴파일러 옵션을 설정하려면 .csproj 파일을 열고 MSBuild XML에서 `SubsystemVersion` 속성의 값을 지정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="a9239-141">To set the **-subsystemversion** compiler option in Visual Studio, you must open the .csproj file and specify a value for the `SubsystemVersion` property in the MSBuild XML.</span></span> <span data-ttu-id="a9239-142">Visual Studio IDE에서는 이 옵션을 설정할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="a9239-142">You can't set this option in the Visual Studio IDE.</span></span> <span data-ttu-id="a9239-143">자세한 내용은 이 항목의 앞부분에 나오는 "기본값"이나 [일반적인 MSBuild 프로젝트 속성](/visualstudio/msbuild/common-msbuild-project-properties)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="a9239-143">For more information, see "Default values" earlier in this topic or [Common MSBuild Project Properties](/visualstudio/msbuild/common-msbuild-project-properties).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="fd15a-143">참고 항목</span><span class="sxs-lookup"><span data-stu-id="fd15a-143">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a9239-144">참고 항목</span><span class="sxs-lookup"><span data-stu-id="a9239-144">See also</span></span>
 
-- [<span data-ttu-id="fd15a-144">C# 컴파일러 옵션</span><span class="sxs-lookup"><span data-stu-id="fd15a-144">C# Compiler Options</span></span>](./index.md)
+- [<span data-ttu-id="a9239-145">C# 컴파일러 옵션</span><span class="sxs-lookup"><span data-stu-id="a9239-145">C# Compiler Options</span></span>](./index.md)
