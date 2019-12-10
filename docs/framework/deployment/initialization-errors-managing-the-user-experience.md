@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 680a7382-957f-4f6e-b178-4e866004a07e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3cd881044d45a276ec361d24097b59b8ce76b7e4
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: cadcb5c2e85f046b5c1c561c17663b7c94829f4f
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975693"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802249"
 ---
 # <a name="net-framework-initialization-errors-managing-the-user-experience"></a>.NET Framework 초기화 오류: 사용자 환경 관리
 
@@ -80,14 +80,14 @@ CLR은 다양한 시나리오에 대한 호스트 집합을 포함하며, 이러
 
 ## <a name="windows-8-behavior-and-ui"></a>Windows 8 동작 및 UI
 
-CLR 활성화 시스템은 CLR 2.0을 로드하는 데 문제가 있는 점을 제외하고 다른 버전의 Windows 운영 체제에서와 동일한 동작 및 UI를 [!INCLUDE[win8](../../../includes/win8-md.md)]에서 제공합니다. [!INCLUDE[win8](../../../includes/win8-md.md)]에는 CLR 4.5를 사용하는 .NET Framework 4.5가 포함되어 있습니다. 그러나 [!INCLUDE[win8](../../../includes/win8-md.md)]에 CLR 2.0을 사용하는 .NET Framework 2.0, 3.0 또는 3.5는 포함되어 있지 않습니다. 따라서 CLR 2.0을 사용하는 애플리케이션은 기본적으로 [!INCLUDE[win8](../../../includes/win8-md.md)]에서 실행되지 않습니다. 대신, 사용자가 .NET Framework 3.5를 설치할 수 있는 다음과 같은 대화 상자를 표시합니다. 사용자는 제어판에서 .NET Framework 3.5를 사용하도록 설정할 수도 있습니다. 두 옵션 모두 [Windows 10, Windows 8.1 및 Windows 8에 .NET Framework 3.5 설치](../install/dotnet-35-windows-10.md) 문서에서 설명합니다.
+CLR 활성화 시스템은 CLR 2.0을 로드하는 데 문제가 있는 점을 제외하고 다른 버전의 Windows 운영 체제에서와 동일한 동작 및 UI를 Windows 8에서 제공합니다. Windows 8에는 CLR 4.5를 사용하는 .NET Framework 4.5가 포함되어 있습니다. 그러나 Windows 8에는 CLR 2.0을 사용하는 .NET Framework 2.0, 3.0 또는 3.5가 포함되어 있지 않습니다. 따라서 CLR 2.0을 사용하는 애플리케이션은 기본적으로 Windows 8에서 실행되지 않습니다. 대신, 사용자가 .NET Framework 3.5를 설치할 수 있는 다음과 같은 대화 상자를 표시합니다. 사용자는 제어판에서 .NET Framework 3.5를 사용하도록 설정할 수도 있습니다. 두 옵션 모두 [Windows 10, Windows 8.1 및 Windows 8에 .NET Framework 3.5 설치](../install/dotnet-35-windows-10.md) 문서에서 설명합니다.
 
 ![Windows 8에 3.5 설치용 대화 상자](./media/initialization-errors-managing-the-user-experience/install-framework-on-demand-dialog.png "요청 시 .NET Framework 3.5를 설치하도록 메시지 표시")
 
 > [!NOTE]
-> .NET Framework 4.5가 사용자 컴퓨터의 .NET Framework 4(CLR 4)를 대체합니다. 따라서 .NET Framework 4 애플리케이션이 [!INCLUDE[win8](../../../includes/win8-md.md)]에서 이 대화 상자를 표시하지 않고 매끄럽게 실행됩니다.
+> .NET Framework 4.5가 사용자 컴퓨터의 .NET Framework 4(CLR 4)를 대체합니다. 따라서 .NET Framework 4 애플리케이션이 Windows 8에서 이 대화 상자를 표시하지 않고 원활하게 실행됩니다.
 
-.NET Framework 3.5가 설치되어 있으면 사용자가 해당 [!INCLUDE[win8](../../../includes/win8-md.md)] 컴퓨터에서 .NET Framework 2.0, 3.0 또는 3.5를 사용하는 애플리케이션을 실행할 수 있습니다. 애플리케이션이 .NET Framework 1.0 또는 1.1에서만 실행되도록 명시적으로 구성되지 않은 경우 .NET Framework 1.0 및 1.1 애플리케이션도 실행할 수 있습니다. [.NET Framework 1.1에서 마이그레이션](../migration-guide/migrating-from-the-net-framework-1-1.md)을 참조하세요.
+.NET Framework 3.5가 설치되어 있으면 사용자가 해당 Windows 8 컴퓨터에서 .NET Framework 2.0, 3.0 또는 3.5를 사용하는 애플리케이션을 실행할 수 있습니다. 애플리케이션이 .NET Framework 1.0 또는 1.1에서만 실행되도록 명시적으로 구성되지 않은 경우 .NET Framework 1.0 및 1.1 애플리케이션도 실행할 수 있습니다. [.NET Framework 1.1에서 마이그레이션](../migration-guide/migrating-from-the-net-framework-1-1.md)을 참조하세요.
 
 .NET Framework 4.5부터 CLR 활성화 로깅이 초기화 오류 메시지가 표시되는 시기 및 이유를 기록하는 로그 항목을 포함하도록 향상되었습니다. 자세한 내용은 [방법: CLR 활성화 문제 디버깅](how-to-debug-clr-activation-issues.md).
 
