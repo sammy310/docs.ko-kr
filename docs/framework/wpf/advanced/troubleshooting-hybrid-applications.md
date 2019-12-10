@@ -9,12 +9,12 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - message loops [WPF]
 ms.assetid: f440c23f-fa5d-4d5a-852f-ba61150e6405
-ms.openlocfilehash: f3cddcd6cd90e7e43ea6af67725e709673f7650f
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 46d8f00f9328e9c0a4df596b709195ae42d651bf
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73978346"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960121"
 ---
 # <a name="troubleshooting-hybrid-applications"></a>혼합 애플리케이션 문제 해결
 <a name="introduction"></a> 이 항목에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 및 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 기술을 둘 다 사용하는 혼합 애플리케이션을 작성할 때 발생할 수 있는 몇 가지 일반적인 문제에 대해 설명합니다.  
@@ -86,7 +86,7 @@ ms.locfileid: "73978346"
   
 <a name="enabling_visual_styles"></a>   
 ## <a name="enabling-visual-styles"></a>비주얼 스타일 사용  
- [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤에서 [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] 비주얼 스타일을 사용할 수 없습니다. <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> 메서드는 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 응용 프로그램에 대 한 템플릿에서 호출 됩니다. 이 메서드는 기본적으로 호출 되지 않지만 Visual Studio를 사용 하 여 프로젝트를 만드는 경우 Comctl32.dll 버전 6.0를 사용할 수 있는 경우 컨트롤에 대 한 [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] 비주얼 스타일을 얻게 됩니다. 스레드에 핸들이 만들어지기 전에 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> 메서드를 호출 해야 합니다. 자세한 내용은 [방법: 혼합 애플리케이션에서 비주얼 스타일 사용](how-to-enable-visual-styles-in-a-hybrid-application.md)을 참조하세요.  
+ [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤의 Microsoft Windows XP 비주얼 스타일을 사용 하도록 설정할 수 없습니다. <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> 메서드는 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 응용 프로그램에 대 한 템플릿에서 호출 됩니다. 이 메서드는 기본적으로 호출 되지 않지만 Visual Studio를 사용 하 여 프로젝트를 만드는 경우 Comctl32.dll 버전 6.0를 사용할 수 있는 경우 컨트롤에 대 한 Microsoft Windows XP 비주얼 스타일을 얻게 됩니다. 스레드에 핸들이 만들어지기 전에 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> 메서드를 호출 해야 합니다. 자세한 내용은 [방법: 혼합 애플리케이션에서 비주얼 스타일 사용](how-to-enable-visual-styles-in-a-hybrid-application.md)을 참조하세요.  
   
 <a name="licensed_controls"></a>   
 ## <a name="licensed-controls"></a>사용이 허가된 컨트롤  

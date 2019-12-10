@@ -8,12 +8,12 @@ helpviewer_keywords:
 - troubleshooting graphics rendering [WPF]
 - graphics [WPF], rendering
 ms.assetid: f4b41b42-327d-407c-b398-3ed5f505df8b
-ms.openlocfilehash: a7a11029c4e896b0486311bc3caf42fab53d1ea6
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: adb4848e844ff091c45ec9a8a2e6d36f01c3cf91
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802105"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960157"
 ---
 # <a name="graphics-rendering-registry-settings"></a>그래픽 렌더링 레지스트리 설정
 이 항목에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 애플리케이션에 영향을 미치는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 그래픽 렌더링 레지스트리 설정에 대해 간략하게 설명합니다.  
@@ -24,7 +24,7 @@ ms.locfileid: "74802105"
   
 <a name="xpdmandwddm"></a>   
 ## <a name="what-are-xpdm-and-wddm"></a>XPDM 및 WDDM이란?  
- 일부 그래픽 렌더링 레지스트리 설정은 비디오 카드가 XPDM 드라이버를 사용하는지 또는 WDDM 드라이버를 사용하는지에 따라 기본값이 다릅니다. XPDM은 [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] 디스플레이 드라이버 모델이고 WDDM은 Windows 디스플레이 드라이버 모델입니다. WDDM은 Windows Vista 및 Windows 7을 실행 하는 컴퓨터에서 사용할 수 있습니다. XPDM은 Windows Vista, [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]및 [!INCLUDE[TLA#tla_winnetsvrfam](../../../../includes/tlasharptla-winnetsvrfam-md.md)]를 실행 하는 컴퓨터에서 사용할 수 있습니다. WDDM에 대한 자세한 내용은 [Windows Vista 디스플레이 드라이버 모델 디자인 가이드](https://go.microsoft.com/fwlink/?LinkId=178394)를 참조하세요.  
+ 일부 그래픽 렌더링 레지스트리 설정은 비디오 카드가 XPDM 드라이버를 사용하는지 또는 WDDM 드라이버를 사용하는지에 따라 기본값이 다릅니다. XPDM은 Microsoft Windows XP 디스플레이 드라이버 모델 이며, WDDM은 Windows 디스플레이 드라이버 모델입니다. WDDM은 Windows Vista 및 Windows 7을 실행 하는 컴퓨터에서 사용할 수 있습니다. XPDM은 Windows Vista, Microsoft Windows XP 및 [!INCLUDE[TLA#tla_winnetsvrfam](../../../../includes/tlasharptla-winnetsvrfam-md.md)]를 실행 하는 컴퓨터에서 사용할 수 있습니다. WDDM에 대한 자세한 내용은 [Windows Vista 디스플레이 드라이버 모델 디자인 가이드](https://go.microsoft.com/fwlink/?LinkId=178394)를 참조하세요.  
   
 <a name="registry_settings"></a>   
 ## <a name="registry-settings"></a>레지스트리 설정  
@@ -57,7 +57,7 @@ ms.locfileid: "74802105"
 |------------------|----------------|  
 |`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\MaxMultisampleType`|DWORD|  
   
- **Maximum 다중 샘플 값** 을 사용 하면 3 차원 콘텐츠의 최대 앤티 앨리어싱 크기를 조정할 수 있습니다. 이 수준을 사용 하 여 Windows Vista에서 3 차원 앤티 앨리어싱을 사용 하지 않도록 설정 하거나 [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]에서 사용 하도록 설정 합니다.  
+ **Maximum 다중 샘플 값** 을 사용 하면 3 차원 콘텐츠의 최대 앤티 앨리어싱 크기를 조정할 수 있습니다. Windows Vista에서 3 차원 앤티 앨리어싱을 사용 하지 않도록 설정 하려면이 수준을 사용 합니다.  
   
  **최대 다중 샘플 값**은 0~16 사이의 DWORD 값입니다. 값 0은 3차원 콘텐츠의 다중 샘플 앤티앨리어싱을 사용 안 함으로 설정하도록 지정하고, 값 16은 비디오 카드에서 지원할 경우 최대 16배의 다중 샘플 앤티앨리어싱을 사용하려고 합니다. XPDM 드라이버를 사용 하는 컴퓨터에서이 레지스트리 키 값을 설정 하면 응용 프로그램에서 많은 양의 추가 비디오 메모리를 사용 하 고, 3 차원 렌더링의 성능을 저하 시키고, 렌더링 오류 및 안정성을 도입할 수 있습니다. 문제점과.  
   

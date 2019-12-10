@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics rendering tiers [WPF]
 - graphics [WPF], rendering tiers
 ms.assetid: 08dd1606-02a2-4122-9351-c0afd2ec3a70
-ms.openlocfilehash: 4c9acc3ef806eabea05d1b64080275293c83e895
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: c7859ab610f5eae54eeb31833cb370b694df6553
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802145"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74959794"
 ---
 # <a name="graphics-rendering-tiers"></a>그래픽 렌더링 계층
 렌더링 계층은 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 애플리케이션을 실행하는 디바이스의 그래픽 하드웨어 기능과 성능 수준을 정의합니다.  
@@ -89,7 +89,7 @@ ms.locfileid: "74802145"
 |<xref:System.Windows.Media.TileBrush>를 사용 하는 바둑판식 콘텐츠|<xref:System.Windows.Media.TileBrush>의 <xref:System.Windows.Media.TileBrush.TileMode%2A> 속성이 <xref:System.Windows.Media.TileMode.Tile>로 설정 된 모든 바둑판식 콘텐츠|  
 |그래픽 하드웨어의 최대 질감 크기를 초과하는 화면|대부분의 그래픽 하드웨어에서 대형 화면의 크기는 2048x2048 또는 4096x4096 픽셀입니다.|  
 |비디오 RAM 요구 사항이 그래픽 하드웨어의 메모리를 초과하는 모든 작업|Windows SDK에서 [WPF 성능 제품군](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100))에 포함된 Perforator 도구를 사용하여 애플리케이션 비디오 RAM 사용량을 모니터링할 수 있습니다.|  
-|계층적 창|계층적 창을 사용하면 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 애플리케이션에서 직사각형이 아닌 창의 화면에 맞게 콘텐츠를 렌더링할 수 있습니다. Windows Vista 및 Windows 7과 같이 WDDM (Windows 디스플레이 드라이버 모델)을 지 원하는 운영 체제에서는 계층화 된 창이 하드웨어 가속 됩니다. [!INCLUDE[winxp](../../../../includes/winxp-md.md)]와 같은 다른 시스템에서는 하드웨어 가속이 없는 소프트웨어를 통해 계층적 창을 렌더링합니다.<br /><br /> 다음 <xref:System.Windows.Window> 속성을 설정 하 여 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 계층화 된 창을 사용 하도록 설정할 수 있습니다.<br /><br /> -   <xref:System.Windows.Window.WindowStyle%2A> = <xref:System.Windows.WindowStyle.None><br />-   <xref:System.Windows.Window.AllowsTransparency%2A> = `true`<br />-   <xref:System.Windows.Controls.Control.Background%2A> = <xref:System.Windows.Media.Brushes.Transparent%2A>|  
+|계층적 창|계층적 창을 사용하면 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 애플리케이션에서 직사각형이 아닌 창의 화면에 맞게 콘텐츠를 렌더링할 수 있습니다. Windows Vista 및 Windows 7과 같이 WDDM (Windows 디스플레이 드라이버 모델)을 지 원하는 운영 체제에서는 계층화 된 창이 하드웨어 가속 됩니다. Windows XP와 같은 다른 시스템에서는 계층화 된 창이 하드웨어 가속 없이 소프트웨어로 렌더링 됩니다.<br /><br /> 다음 <xref:System.Windows.Window> 속성을 설정 하 여 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 계층화 된 창을 사용 하도록 설정할 수 있습니다.<br /><br /> -   <xref:System.Windows.Window.WindowStyle%2A> = <xref:System.Windows.WindowStyle.None><br />-   <xref:System.Windows.Window.AllowsTransparency%2A> = `true`<br />-   <xref:System.Windows.Controls.Control.Background%2A> = <xref:System.Windows.Media.Brushes.Transparent%2A>|  
   
 <a name="other_resources"></a>   
 ## <a name="other-resources"></a>관련 자료  

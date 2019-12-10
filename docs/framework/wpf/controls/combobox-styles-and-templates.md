@@ -9,20 +9,20 @@ helpviewer_keywords:
 - templates [WPF], ComboBox
 - parts [WPF], ComboBox
 ms.assetid: b0662fa1-16d7-4320-b26b-c1804e565a44
-ms.openlocfilehash: 92671001733f525188ba3c7bcf3ed3c55615e301
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 887698bdaebf7bc5ddac8997167589d9fbd3dd4d
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283785"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960370"
 ---
 # <a name="combobox-styles-and-templates"></a>ComboBox 스타일 및 템플릿
-이 항목에서는 <xref:System.Windows.Controls.ComboBox> 컨트롤의 스타일 및 템플릿에 대해 설명 합니다. 기본 <xref:System.Windows.Controls.ControlTemplate>를 수정 하 여 컨트롤에 고유한 모양을 제공할 수 있습니다. 자세한 내용은 [컨트롤에 대 한 템플릿 만들기](../../../desktop-wpf/themes/how-to-create-apply-template.md)를 참조 하세요.  
+이 항목에서는 <xref:System.Windows.Controls.ComboBox> 컨트롤의 스타일 및 템플릿에 대해 설명 합니다. 기본값을 수정할 수 있습니다 <xref:System.Windows.Controls.ControlTemplate> 고유한 모양을 제어할 수 있습니다. 자세한 내용은 [컨트롤에 대 한 템플릿 만들기](../../../desktop-wpf/themes/how-to-create-apply-template.md)를 참조 하세요.  
   
 ## <a name="combobox-parts"></a>ComboBox 파트  
  다음 표에서는 <xref:System.Windows.Controls.ComboBox> 컨트롤의 명명 된 파트를 나열 합니다.  
   
-|파트|형식|설명|  
+|구성 요소|형식|설명|  
 |-|-|-|  
 |PART_EditableTextBox|<xref:System.Windows.Controls.TextBox>|<xref:System.Windows.Controls.ComboBox>텍스트를 포함 합니다.|  
 |PART_Popup|<xref:System.Windows.Controls.Primitives.Popup>|콤보 상자의 항목이 들어 있는 드롭다운입니다.|  
@@ -35,7 +35,7 @@ ms.locfileid: "74283785"
 |VisualState 이름|VisualStateGroup 이름|설명|  
 |-|-|-|  
 |보통|CommonStates|기본 상태입니다.|  
-|사용 안 함|CommonStates|컨트롤이 비활성화되었습니다.|  
+|Disabled|CommonStates|컨트롤이 비활성화되었습니다.|  
 |MouseOver|CommonStates|마우스 포인터가 <xref:System.Windows.Controls.ComboBox> 컨트롤 위에 있습니다.|  
 |포커스 있음|FocusStates|컨트롤에 포커스가 있습니다.|  
 |포커스 없음|FocusStates|컨트롤에 포커스가 없습니다.|  
@@ -55,8 +55,8 @@ ms.locfileid: "74283785"
 |VisualState 이름|VisualStateGroup 이름|설명|  
 |-|-|-|  
 |보통|CommonStates|기본 상태입니다.|  
-|사용 안 함|CommonStates|컨트롤이 비활성화되었습니다.|  
-|MouseOver|CommonStates|마우스 포인터가 <xref:System.Windows.Controls.ComboBox> 컨트롤 위에 있습니다.|  
+|Disabled|CommonStates|컨트롤이 비활성화되었습니다.|  
+|MouseOver|CommonStates|마우스 포인터가 <xref:System.Windows.Controls.ComboBoxItem> 컨트롤 위에 있습니다.|  
 |포커스 있음|FocusStates|컨트롤에 포커스가 있습니다.|  
 |포커스 없음|FocusStates|컨트롤에 포커스가 없습니다.|  
 |Selected|SelectionStates|항목이 현재 선택 되어 있습니다.|  
@@ -77,7 +77,7 @@ ms.locfileid: "74283785"
   
  전체 샘플을 보려면 [Styling with ControlTemplates Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating)(ControlTemplate으로 스타일 지정 샘플)을 참조하세요.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>

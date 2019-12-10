@@ -2,12 +2,12 @@
 title: '전송: UDP 샘플에 의한 사용자 지정 트랜잭션'
 ms.date: 03/30/2017
 ms.assetid: 6cebf975-41bd-443e-9540-fd2463c3eb23
-ms.openlocfilehash: 09ce715da4cf4d4fb4c959f63af3bb2c8c68b841
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 00e6d593e185cd09ea66e88f38cf1d8e71785704
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74711998"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960418"
 ---
 # <a name="transport-custom-transactions-over-udp-sample"></a>전송: UDP 샘플에 의한 사용자 지정 트랜잭션
 이 샘플은 Windows Communication Foundation (WCF)[전송 확장성](../../../../docs/framework/wcf/samples/transport-extensibility.md)의 [전송: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) 샘플을 기반으로 합니다. 이 샘플은 사용자 지정 트랜잭션 흐름을 지원하도록 UDP 전송 샘플을 확장하고 <xref:System.ServiceModel.Channels.TransactionMessageProperty> 속성의 사용 방법을 보여 줍니다.  
@@ -178,7 +178,7 @@ if (transaction != null)
   
 1. 솔루션을 빌드하려면 [Windows Communication Foundation 샘플 빌드](../../../../docs/framework/wcf/samples/building-the-samples.md)의 지침을 따르세요.  
   
-2. 현재 샘플은 [전송: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) 샘플과 유사 하 게 실행 되어야 합니다. 이 샘플을 실행하려면 UdpTestService.exe를 실행하여 서비스를 시작합니다. [!INCLUDE[windowsver](../../../../includes/windowsver-md.md)]를 실행하는 경우에는 높은 권한으로 서비스를 시작해야 합니다. 이렇게 하려면 파일 탐색기에서 UdpTestService .exe를 마우스 오른쪽 단추로 클릭 하 고 **관리자 권한으로 실행**을 클릭 합니다.  
+2. 현재 샘플은 [전송: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) 샘플과 유사 하 게 실행 되어야 합니다. 이 샘플을 실행하려면 UdpTestService.exe를 실행하여 서비스를 시작합니다. Windows Vista를 실행 하는 경우에는 상승 된 권한으로 서비스를 시작 해야 합니다. 이렇게 하려면 파일 탐색기에서 UdpTestService .exe를 마우스 오른쪽 단추로 클릭 하 고 **관리자 권한으로 실행**을 클릭 합니다.  
   
 3. 다음과 같은 출력이 표시됩니다.  
   

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - mouse clicks [Windows Forms], simulating
 - mouse [Windows Forms], event simulation
 ms.assetid: 6abcb67e-3766-4af2-9590-bf5dabd17e41
-ms.openlocfilehash: 9fac74aacf6b902a25438151db247a1a4aee1f4c
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 52f89df8d7f28f0e00c3becd9005b46e52b5532c
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802481"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960210"
 ---
 # <a name="how-to-simulate-mouse-and-keyboard-events-in-code"></a>방법: 코드에서 마우스 및 키보드 이벤트 시뮬레이션
 
@@ -72,7 +72,7 @@ Windows Forms는 프로그래밍 방식으로 마우스 및 키보드 입력을 
 1. 키 입력을 수신할 애플리케이션 창을 활성화한 다음 <xref:System.Windows.Forms.SendKeys.Send%2A> 또는 <xref:System.Windows.Forms.SendKeys.SendWait%2A> 메서드를 호출합니다. 다른 애플리케이션을 활성화할 관리되는 메서드가 없으므로 네이티브 Windows 메서드를 사용하여 다른 애플리케이션에 포커스를 강제로 설정해야 합니다. 다음 코드 예제에서는 플랫폼 호출을 통해 `FindWindow` 및 `SetForegroundWindow` 메서드를 호출하여 계산기 애플리케이션 창을 활성화한 다음 <xref:System.Windows.Forms.SendKeys.SendWait%2A> 를 호출하여 계산기 애플리케이션에 일련의 계산을 실행합니다.
 
     > [!NOTE]
-    > 계산기 애플리케이션을 찾는 `FindWindow` 호출의 올바른 매개 변수는 Windows 버전에 따라 달라집니다.  다음 코드는 Windows 7에서 계산기 응용 프로그램을 찾습니다. [!INCLUDE[windowsver](../../../includes/windowsver-md.md)]에서 첫 번째 매개 변수를 "SciCalc"로 변경합니다. Visual Studio에 포함된 Spy++ 도구를 사용하여 올바른 매개 변수를 확인할 수 있습니다.
+    > 계산기 애플리케이션을 찾는 `FindWindow` 호출의 올바른 매개 변수는 Windows 버전에 따라 달라집니다.  다음 코드는 Windows 7에서 계산기 응용 프로그램을 찾습니다. Windows Vista에서 첫 번째 매개 변수를 "SciCalc"로 변경 합니다. Visual Studio에 포함된 Spy++ 도구를 사용하여 올바른 매개 변수를 확인할 수 있습니다.
 
     [!code-cpp[System.Windows.Forms.SimulateKeyPress#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/cpp/form1.cpp#5)]
     [!code-csharp[System.Windows.Forms.SimulateKeyPress#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/CS/form1.cs#5)]

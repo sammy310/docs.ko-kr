@@ -5,16 +5,16 @@ helpviewer_keywords:
 - controls, UI Automation support for
 - UI Automation, support for standard controls
 ms.assetid: 3770ea8a-2655-4add-9c59-fe0610ad5084
-ms.openlocfilehash: c59352f908c5f4a1fd2ca6dd631d26bb5d69f09a
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 314526c1164f70e6b261df1a6f11ddce2b5fa240
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74441217"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960073"
 ---
 # <a name="ui-automation-support-for-standard-controls"></a>표준 컨트롤에 대한 UI 자동화 지원
 > [!NOTE]
-> 이 설명서는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 네임스페이스에 정의된 관리되는 <xref:System.Windows.Automation> 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조하세요.  
+> 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조하세요.  
   
  이 항목에는 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] , [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]및 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]프레임워크용으로 개발된 애플리케이션에서 표준 컨트롤에 대한 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] 지원 정보가 들어 있습니다.  
   
@@ -26,7 +26,7 @@ ms.locfileid: "74441217"
 ## <a name="win32-controls"></a>Win32 컨트롤  
  대부분의 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 컨트롤은 UIAutomationClientsideProviders.dll의 클라이언트쪽 공급자를 통해 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 에 노출됩니다. 이 어셈블리는 UI 자동화 클라이언트 애플리케이션과 함께 사용할 수 있도록 자동으로 등록됩니다.  
   
- 전체 지원은 ComCtrl32.dll 버전 6의 컨트롤에만 제공됩니다( [!INCLUDE[TLA#tla_winxp](../../../includes/tlasharptla-winxp-md.md)] 이상에서 사용 가능).  
+ *지원은 comctrl32.dll*버전 6의 컨트롤에 대해서만 전체 지원이 제공 됩니다.  
   
  다음과 같은 컨트롤이 지원됩니다.  
   
@@ -44,8 +44,8 @@ ms.locfileid: "74441217"
 |Edit|문서|  
 |Edit|Edit|  
 |SysLink|하이퍼링크|  
-|정적|Text|  
-|정적|이미지|  
+|Static|텍스트|  
+|Static|이미지|  
 |SysIPAddress32|사용자 지정|  
 |SysHeader32|Header/HeaderItem|  
 |SysListView32|DataGrid|  
@@ -71,9 +71,9 @@ ms.locfileid: "74441217"
 |ToolbarWindow32|CheckBox|  
 |ToolbarWindow32|RadioButton|  
 |ToolbarWindow32|구분 기호|  
-|tooltips_class32|ToolTip|  
-|#32774|ToolTip|  
-|ReBarWindow32|도구 모음|  
+|tooltips_class32|도구 설명|  
+|#32774|도구 설명|  
+|ReBarWindow32|ToolBar|  
 |SysTreeView32|Tree|  
 |SysTreeView32|TreeItem|  
   
@@ -81,7 +81,7 @@ ms.locfileid: "74441217"
   
  다음 컨트롤은 지원되지 않습니다.  
   
-|클래스 이름|컨트롤 종류|  
+|클래스 이름|컨트롤 형식|  
 |----------------|------------------|  
 |SysAnimate32|이미지|  
 |SysPager|Spinner|  
@@ -128,9 +128,9 @@ ms.locfileid: "74441217"
 |StatusBar|  
 |TabControl/TabPage|  
 |TextBox|  
-|타이머|  
-|도구 모음|  
-|ToolTip|  
+|Timer|  
+|ToolBar|  
+|도구 설명|  
 |TrackBar|  
 |TreeView|  
 |VscrollBar|  
@@ -167,6 +167,6 @@ ms.locfileid: "74441217"
 |RaftingContainer|  
 |StatusStrip|  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [UI 자동화 컨트롤 형식](ui-automation-control-types.md)

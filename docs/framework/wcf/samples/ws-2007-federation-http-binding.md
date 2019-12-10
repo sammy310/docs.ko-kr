@@ -2,12 +2,12 @@
 title: WS 2007 페더레이션 HTTP 바인딩
 ms.date: 03/30/2017
 ms.assetid: 91c1b477-a96e-4bf5-9330-5e9312113371
-ms.openlocfilehash: 2f924bdcbf9082d9d43e02d82c9d00c32ebcaacf
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 74f21494c08f33a61eb1e1b0a102638cff59a970
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714981"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960196"
 ---
 # <a name="ws-2007-federation-http-binding"></a>WS 2007 페더레이션 HTTP 바인딩
 
@@ -119,7 +119,7 @@ Press <ENTER> to terminate client.
 
 1. C# 또는 Visual Basic .NET 버전의 솔루션을 빌드하려면 [Building the Windows Communication Foundation Samples](building-the-samples.md)의 지침을 따릅니다.
 
-2. 단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면 [Windows Communication Foundation 샘플 실행](running-the-samples.md)의 지침을 따르세요. [!INCLUDE[windowsver](../../../../includes/windowsver-md.md)]를 사용 하는 경우에는 상승된 권한으로 setup.exe *, setup.exe 및 gacutil.exe를 실행*해야 합니다 (파일을 마우스 오른쪽 단추로 클릭 한 다음 **관리자 권한으로 실행**을 클릭 *).*
+2. 단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면 [Windows Communication Foundation 샘플 실행](running-the-samples.md)의 지침을 따르세요. Windows Vista를 사용 하는 경우에는 상승 된 *권한으로* setup.exe *, setup.exe 및 gacutil.exe를 실행*해야 합니다 (파일을 마우스 오른쪽 단추로 클릭 한 다음 관리자 권한 **으로 실행**클릭).
 
 > [!IMPORTANT]
 > 컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.

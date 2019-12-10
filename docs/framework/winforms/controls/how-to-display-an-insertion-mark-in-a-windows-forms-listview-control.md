@@ -1,5 +1,5 @@
 ---
-title: '방법: Windows Forms ListView 컨트롤에서 삽입 표시 보기'
+title: '방법: Windows Forms ListView 컨트롤에 삽입 표시 나타내기'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,18 +11,15 @@ helpviewer_keywords:
 - drop and drag [Windows Forms], insertion marks
 - insertion marks
 ms.assetid: 88d0a15b-25fd-4dc3-a685-297351311940
-ms.openlocfilehash: f5de00fd41b24fc1a7f1ff4484c3a126e98952a1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 62d105dc3c0b9aabc3699c12259e1624ac31a3a0
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967829"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960434"
 ---
-# <a name="how-to-display-an-insertion-mark-in-a-windows-forms-listview-control"></a>방법: Windows Forms ListView 컨트롤에서 삽입 표시 보기
+# <a name="how-to-display-an-insertion-mark-in-a-windows-forms-listview-control"></a>방법: Windows Forms ListView 컨트롤에 삽입 표시 나타내기
 <xref:System.Windows.Forms.ListView> 컨트롤에 있는 삽입 표시는 끌어온 항목이 삽입되는 지점을 사용자에게 표시합니다. 사용자가 다른 두 항목 사이의 지점으로 항목을 끌면 삽입 표시가 항목의 새 예상 위치를 보여 줍니다.  
-  
-> [!NOTE]
-> 삽입 표시 기능은 애플리케이션이 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> 메서드를 호출할 때 [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)]에서만 사용할 수 있습니다. 이전 버전의 운영 체제에서는 삽입 표시와 관련된 코드가 아무 효과도 없으며 삽입 표시가 나타나지 않습니다. 자세한 내용은 <xref:System.Windows.Forms.ListViewInsertionMark>을 참조하세요.  
   
  다음 이미지에서는 삽입 표시를 보여 줍니다.  
   
@@ -40,7 +37,7 @@ ms.locfileid: "69967829"
   
 - System 및 System.Windows.Forms 어셈블리에 대한 참조  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Windows.Forms.ListView>
 - <xref:System.Windows.Forms.ListView.InsertionMark%2A?displayProperty=nameWithType>
