@@ -16,12 +16,12 @@ helpviewer_keywords:
 - code, runtime functionality
 ms.assetid: 059a624e-f7db-4134-ba9f-08b676050482
 ms.custom: updateeachrelease
-ms.openlocfilehash: c866e3d1a4de31361843f5c071510fd18247cb39
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6f9ad8aafc37039b55ae3bf6eb743e07ad8e2235
+ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132806"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74884412"
 ---
 # <a name="common-language-runtime-clr-overview"></a>CLR(공용 언어 런타임) 개요
 
@@ -62,22 +62,9 @@ ms.locfileid: "73132806"
 
 ## <a name="clr-versions"></a>CLR 버전
 
-.NET Framework 버전 번호는 포함하는 CLR 버전 번호와 반드시 일치하지는 않습니다. 다음 표에서는 두 버전 번호의 상관 관계를 보여줍니다.
+.NET Framework 버전 번호는 포함하는 CLR 버전 번호와 반드시 일치하지는 않습니다. .NET Framework 버전 및 해당 CLR 버전 목록은 [.NET Framework 버전 및 종속성](../framework/migration-guide/versions-and-dependencies.md)을 참조하세요. .NET Core 릴리스는 단일 제품 버전을 포함합니다. 즉, 별도의 CLR 버전이 없습니다. .NET Core 버전 목록은 [.NET Core 다운로드](https://dotnet.microsoft.com/download/dotnet-core)를 참조하세요.
 
-|.NET Framework 버전|포함하는 CLR 버전|
-|----------------------------|--------------------------|
-|1.0|1.0|
-|1.1|1.1|
-|2.0|2.0|
-|3.0|2.0|
-|3.5|2.0|
-|4|4|
-|4.5(4.5.1 및 4.5.2 포함)|4|
-|4.6(4.6.1 및 4.6.2 포함)|4|
-|4.7(4.7.1 및 4.7.2 포함)|4|
-|4.8|4|
-
-## <a name="related-topics"></a>관련된 항목
+## <a name="related-topics"></a>관련 항목
 
 |제목|설명|
 |-----------|-----------------|
@@ -85,7 +72,3 @@ ms.locfileid: "73132806"
 |[자동 메모리 관리](automatic-memory-management.md)|가비지 수집기에서 메모리를 할당하고 해제하는 방법에 대해 설명합니다.|
 |[.NET Framework의 개요](../framework/get-started/overview.md)|공용 형식 시스템, 언어 간 상호 운용성, 관리되는 실행, 애플리케이션 도메인, 어셈블리 등과 같은 .NET Framework의 주요 개념에 대해 설명합니다.|
 |[공용 형식 시스템](./base-types/common-type-system.md)|언어 간 통합을 지원하면서 런타임에서 형식을 선언, 사용, 관리하는 방법에 대해 설명합니다.|
-
-## <a name="see-also"></a>참고 항목
-
-- [버전 및 종속성](../framework/migration-guide/versions-and-dependencies.md)

@@ -2,12 +2,12 @@
 title: 마이크로 서비스(통합 이벤트) 간 이벤트 기반 통신 구현
 description: 컨테이너화된 .NET 애플리케이션용 .NET Microservices 아키텍처 | 마이크로 서비스 간의 이벤트 기반 통신을 구현하기 위해 통합 이벤트를 이해합니다.
 ms.date: 10/02/2018
-ms.openlocfilehash: 70566745dc084ba9016a850ad749fefb958e89ec
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: a355ba9ede4e3390edd858d173dd88548e876202
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737132"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74711218"
 ---
 # <a name="implementing-event-based-communication-between-microservices-integration-events"></a>마이크로 서비스(통합 이벤트) 간 이벤트 기반 통신 구현
 
@@ -126,6 +126,19 @@ public interface IEventBus
 `Publish` 메서드는 간단합니다. 이벤트 버스는 모든 마이크로 서비스로 전달되는 통합 이벤트 또는 해당 이벤트를 구독하는 외부 애플리케이션을 브로드캐스트합니다. 이 메서드 해당 이벤트를 게시하는 마이크로 서비스가 사용합니다.
 
 `Subscribe` 메서드(인수에 따라 몇 가지 구현이 있을 수 있습니다)는 이벤트를 수신하려는 마이크로 서비스에서 사용됩니다. 이 메서드는 두 개의 인수를 갖습니다. 첫 번째는 (`IntegrationEvent`)을 구독할 통합 이벤트입니다. 두 번째 인수는 `IIntegrationEventHandler<T>`로 명명된 통합 이벤트 처리기(또는 콜백 메서드)로서, 수신기 마이크로 서비스가 해당 통합 이벤트 메시지를 수신할 때 실행됩니다.
+
+## <a name="additional-resources"></a>추가 자료
+
+프로덕션 환경에서 사용할 수 있는 몇 가지 메시징 솔루션:
+
+- **Azure Service Bus** \
+  <https://docs.microsoft.com/azure/service-bus-messaging/>
+  
+- **NServiceBus** \
+  <https://particular.net/nservicebus>
+  
+- **MassTransit** \
+  <https://masstransit-project.com/>
 
 > [!div class="step-by-step"]
 > [이전](database-server-container.md)

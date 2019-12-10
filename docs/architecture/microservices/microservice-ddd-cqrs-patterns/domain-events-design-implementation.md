@@ -2,12 +2,12 @@
 title: 도메인 이벤트. 디자인 및 구현
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | 집계 간에 통신을 설정하는 주요 개념인 도메인 이벤트의 세부적인 보기를 가져옵니다.
 ms.date: 10/08/2018
-ms.openlocfilehash: f0dbd6b0e70d825122d319611a327438df065588
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 3bba18d4a77b47abee55c16bae8a64ed27ac9aba
+ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739906"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74884230"
 ---
 # <a name="domain-events-design-and-implementation"></a>도메인 이벤트: 디자인 및 구현
 
@@ -124,7 +124,7 @@ public class OrderStartedDomainEvent : INotification
 
 이전에 언급했듯이 이벤트의 중요한 특징은 이벤트는 과거에 발생한 것이므로 변경되지 않는다는 점입니다. 따라서 변경할 수 없는 클래스여야 합니다. 이전 코드에서 속성이 읽기 전용임을 알 수 있습니다. 개체를 업데이트할 방법이 없으며, 개체를 만들 때만 값을 설정할 수 있습니다.
 
-여기서 중요한 것은 이벤트 개체를 직렬화 및 역 직렬화해야 하는 큐를 사용하여 도메인 이벤트를 비동기적으로 처리해야 하는 경우, 속성은 읽기 전용 대신 "개인 설정" 이어야 하므로 deserializer는 큐에서 제거할 때 값을 할당할 수 있습니다. 이는 도메인 이벤트 pub/sub가 MediatR을 사용하여 동기적으로 구현되므로 주문 마이크로 서비스에서는 문제가 되지 않습니다.
+여기서 중요한 것은 이벤트 개체를 직렬화 및 역직렬화해야 하는 큐를 사용하여 도메인 이벤트를 비동기적으로 처리해야 하는 경우, 속성은 읽기 전용 대신 "개인 설정" 이어야 하므로 역직렬 변환기는 큐에서 제거할 때 값을 할당할 수 있습니다. 이는 도메인 이벤트 pub/sub가 MediatR을 사용하여 동기적으로 구현되므로 주문 마이크로 서비스에서는 문제가 되지 않습니다.
 
 ### <a name="raise-domain-events"></a>도메인 이벤트 발생
 
@@ -341,6 +341,8 @@ public class ValidateOrAddBuyerAggregateWhenOrderStartedDomainEventHandler
 ## <a name="conclusions-on-domain-events"></a>도메인 이벤트에 대한 결론
 
 언급했듯이, 도메인 이벤트를 사용하여 도메인 내 변경의 파생 작업을 명시적으로 구현합니다. DDD 용어를 사용하려면, 도메인 이벤트를 사용하여 하나 또는 여러 집합체 전반에 파생 작업을 명시적으로 구현합니다. 추가적으로, 데이터베이스 잠금의 확장성을 높이고 영향을 줄이려면 동일한 도메인 내의 집합체 간에 최종 일관성을 사용합니다.
+
+참조 앱은 [MediatR](https://github.com/jbogard/MediatR)을 사용하여 단일 트랜잭션 내에서 여러 집계 간에 도메인 이벤트를 동기적으로 전파합니다. 그러나 [RabbitMQ](https://www.rabbitmq.com/) 또는 [Azure Service Bus](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messaging-overview) 같은 일부 AMQP 구현을 사용하여 최종 일관성을 통해 도메인 이벤트를 비동기적으로 전파할 수 있지만, 위에서 설명한 대로 오류가 발생할 경우 보정 작업에 대한 필요성을 고려해야 합니다.
 
 ## <a name="additional-resources"></a>추가 자료
 
