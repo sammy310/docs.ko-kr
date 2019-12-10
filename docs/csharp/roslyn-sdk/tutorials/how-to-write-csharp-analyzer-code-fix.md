@@ -3,12 +3,12 @@ title: '자습서: 첫 번째 분석기 및 코드 수정 작성'
 description: 이 자습서에서는 .NET Complier SDK(Roslyn API)를 사용하여 분석기 및 코드 수정 사항을 빌드하는 단계별 지침을 제공합니다.
 ms.date: 08/01/2018
 ms.custom: mvc
-ms.openlocfilehash: d6645a2a6e83f68c1959c255756393c9251dc1ba
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 7bd0fda9fb717a48c09aafde47f9b7f4f360c357
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105753"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837053"
 ---
 # <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>자습서: 첫 번째 분석기 및 코드 수정 작성
 
@@ -21,7 +21,7 @@ ms.locfileid: "70105753"
 - [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/#visual-studio-2017-and-other-products)
 - [Visual Studio 2019](https://www.visualstudio.com/downloads)
 
-Visual Studio Intaller를 통해 **.NET Compiler Platform SDK**를 설치해야 합니다.
+Visual Studio 설치 관리자를 통해 **.NET Compiler Platform SDK**를 설치해야 합니다.
 
 [!INCLUDE[interactive-note](~/includes/roslyn-installation.md)]
 
@@ -427,7 +427,7 @@ foreach (var variable in localDeclaration.Declaration.Variables)
 
 [!code-csharp[Mismatched types don't raise diagnostics](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#DeclarationIsInvalid "When the variable type and the constant type don't match, there's no diagnostic")]
 
-또한 참조 형식이 제대로 처리되지 않습니다. 참조 형식에 허용되는 유일한 상수 값은 문자열 리터럴을 허용하는 <xref:System.String?displayProperty=nameWIthType>의 이 경우를 제외하고 `null`입니다. 즉, `const string s = "abc"`는 적합하지만 `const object s = "abc"`는 적합하지 않습니다. 이 코드 조각은 해당 조건을 확인합니다.
+또한 참조 형식이 제대로 처리되지 않습니다. 참조 형식에 허용되는 유일한 상수 값은 문자열 리터럴을 허용하는 <xref:System.String?displayProperty=nameWithType>의 이 경우를 제외하고 `null`입니다. 즉, `const string s = "abc"`는 적합하지만 `const object s = "abc"`는 적합하지 않습니다. 이 코드 조각은 해당 조건을 확인합니다.
 
 [!code-csharp[Reference types don't raise diagnostics](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#DeclarationIsntString "When the variable type is a reference type other than string, there's no diagnostic")]
 

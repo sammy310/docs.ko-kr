@@ -4,12 +4,12 @@ description: .NET Framework 및 .NET Core에 대해 솔루션을 나란히 컴�
 author: conniey
 ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: 701aa64be8d6c712ef635411ad6c226a3c3ab8ed
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 789f50ffb61b80f590a24bc45693df895b3424f7
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72522974"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74801932"
 ---
 # <a name="organize-your-project-to-support-both-net-framework-and-net-core"></a>.NET Framework 및 .NET Core를 둘 다 지원하도록 프로젝트 구성
 
@@ -24,12 +24,12 @@ ms.locfileid: "72522974"
   - 컴파일러 지시문을 사용하여 라이브러리에서 특정 .NET Framework 버전에 대한 코드를 작성할 수 있습니다.
 
   *지원되지 않는 시나리오:*
-  - 개발자가 기존 프로젝트를 열려면 Visual Studio 2017을 사용해야 합니다. Visual Studio의 이전 버전을 지원하려면 [프로젝트 파일을 서로 다른 폴더에 유지](#support-vs)하는 것이 더 낫습니다.
+  - 개발자가 기존 프로젝트를 열려면 Visual Studio 2017 이상 버전을 사용해야 합니다. Visual Studio의 이전 버전을 지원하려면 [프로젝트 파일을 서로 다른 폴더에 유지](#support-vs)하는 것이 더 낫습니다.
 
 - <a name="support-vs"></a>[**기존 프로젝트와 새로운 .NET Core 프로젝트를 별도로 유지**](#keep-existing-projects-and-create-a-net-core-project)
 
   *좋은 점:*
-  - Visual Studio 2017이 없는 개발자/참가자의 경우 업그레이드하지 않고 기존 프로젝트에 대한 개발을 계속 지원할 수 있습니다.
+  - Visual Studio 2017 이상 버전이 없는 개발자/참가자의 경우 기존 프로젝트에 대한 개발을 지원합니다.
   - 기존 프로젝트에서 코드 변동이 필요하지 않으므로 새 버그가 발생할 가능성이 줄어듭니다.
 
 ## <a name="example"></a>예

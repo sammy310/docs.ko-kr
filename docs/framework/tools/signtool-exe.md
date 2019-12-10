@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Sign tool
 - SignTool.exe
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
-ms.openlocfilehash: cb0aca3b527c16a7abf984952795a673948775dd
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 636aa76a17a887aefe51b7e7858099c541dbb21f
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73104637"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74801846"
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe(서명 도구)
 서명 도구는 파일에 디지털 서명을 하고, 파일의 서명을 확인하고, 파일에 타임스탬프를 기록하는 명령줄 도구입니다.  
@@ -126,7 +126,7 @@ signtool [command] [options] [file_name | ...]
 |`/ds`  *Index*|지정된 위치에서 시그니처를 확인합니다.|  
 |`/hash` (`SHA1`&#124;`SHA256`)|카탈로그에서 파일을 검색할 때 사용할 선택적 해시 알고리즘을 지정합니다.|  
 |`/kp`|커널 모드 드라이버 서명 정책을 이용하여 검증을 수행하도록 지정합니다.|  
-|`/ms`|여러 확인 의미 체계를 사용합니다. 이는 [!INCLUDE[win8](../../../includes/win8-md.md)] 이상에 대한 [WinVerifyTrust](/windows/desktop/api/wintrust/nf-wintrust-winverifytrust) 호출의 기본 동작입니다.|  
+|`/ms`|여러 확인 의미 체계를 사용합니다. 이는 Windows 8 이상에 대한 [WinVerifyTrust](/windows/desktop/api/wintrust/nf-wintrust-winverifytrust) 호출의 기본 동작입니다.|  
 |`/o` *Version*|운영 체제 버전별로 파일을 확인합니다. *Version*의 형식은 다음과 같습니다. *PlatformID*:*VerMajor*.*VerMinor*.*BuildNumber*. *PlatformID*는 <xref:System.PlatformID> 열거형 멤버의 내부 값을 나타냅니다. **중요:**  `/o` 스위치를 사용하는 것이 좋습니다. `/o`가 지정되지 않으면 SignTool.exe가 예기치 않은 결과를 반환할 수 있습니다. 예를 들어 `/o` 스위치가 포함되지 않는 경우 이전 운영 체계에서 유효성이 제대로 입증된 시스템 카탈로그가 새로운 운영 체계에서는 유효성이 제대로 입증되지 않을지 모릅니다.|  
 |`/p7`|PKCS #7 파일을 확인합니다. PKCS #7 유효성 검사에 기존 정책이 사용되지 않습니다. 서명이 확인되고 서명 인증서에 대한 체인이 빌드됩니다.|  
 |`/pa`|기본 Authenticode 확인 정책이 사용되도록 지정합니다. `/pa` 옵션을 지정하지 않으면 서명 도구는 Windows 드라이버 확인 정책을 사용합니다. 이 옵션은 `catdb` 옵션과 함께 사용할 수 없습니다.|  

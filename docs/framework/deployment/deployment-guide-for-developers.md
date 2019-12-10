@@ -6,12 +6,12 @@ helpviewer_keywords:
 - developer's guide, deploying .NET Framework
 - deployment [.NET Framework], developer's guide
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
-ms.openlocfilehash: 3e87ba8c9442c4bba24e4e569cd20bdbdc76f6ec
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 62777356dae6e2dce9753b832f08ab2fa2cb5881
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73457986"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74801881"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>개발자를 위한 .NET Framework 배포 가이드
 이 항목에서는 앱과 함께 .NET Framework 4.5에서 [!INCLUDE[net_current](../../../includes/net-current-version.md)] 사이의 .NET Framework 버전을 설치하려는 개발자를 위한 정보를 제공합니다.
@@ -51,7 +51,7 @@ ms.locfileid: "73457986"
 
 - .NET Framework 4.5 및 해당 포인트 릴리스를 설치하려면 관리자 권한이 있어야 합니다.
 
-- [!INCLUDE[win8](../../../includes/win8-md.md)] 및 [!INCLUDE[winserver8](../../../includes/winserver8-md.md)]에는 .NET Framework 4.5가 포함되어 있으므로, 해당 운영 체제에서는 앱과 함께 배포할 필요가 없습니다. 마찬가지로, [!INCLUDE[win81](../../../includes/win81-md.md)] 및 Windows Server 2012 R2에는 .NET Framework 4.5.1이 포함되어 있습니다. .NET Framework 4.5.2는 어떤 운영 체제에도 포함되어 있지 않습니다. .NET Framework 4.6은 Windows 10, .NET Framework 4.6.1은 Windows 10의 11월 업데이트, .NET Framework 4.6.2는 Windows 10의 1주년 업데이트에 각각 포함되어 있습니다.  .NET Framework 4.7은 Windows 10 크리에이터스 업데이트, .NET Framework 4.7.1은 Windows 10 Fall Creators Update, .NET Framework 4.7.2는 Windows 10 2018년 10월 업데이트와 Windows 10 2018년 4월 업데이트에 각각 포함되어 있습니다. .NET Framework 4.8은 Windows 10 2019년 5월 업데이트에 포함되어 있습니다. 하드웨어 및 소프트웨어 요구 사항의 전체 목록은 [시스템 요구 사항](../get-started/system-requirements.md)을 참조하세요.
+- Windows 8 및 [!INCLUDE[winserver8](../../../includes/winserver8-md.md)]에는 .NET Framework 4.5가 포함되어 있으므로, 해당 운영 체제에서는 앱과 함께 배포할 필요가 없습니다. 마찬가지로, Windows 8.1 및 Windows Server 2012 R2에는 .NET Framework 4.5.1이 포함되어 있습니다. .NET Framework 4.5.2는 어떤 운영 체제에도 포함되어 있지 않습니다. .NET Framework 4.6은 Windows 10, .NET Framework 4.6.1은 Windows 10의 11월 업데이트, .NET Framework 4.6.2는 Windows 10의 1주년 업데이트에 각각 포함되어 있습니다.  .NET Framework 4.7은 Windows 10 크리에이터스 업데이트, .NET Framework 4.7.1은 Windows 10 Fall Creators Update, .NET Framework 4.7.2는 Windows 10 2018년 10월 업데이트와 Windows 10 2018년 4월 업데이트에 각각 포함되어 있습니다. .NET Framework 4.8은 Windows 10 2019년 5월 업데이트에 포함되어 있습니다. 하드웨어 및 소프트웨어 요구 사항의 전체 목록은 [시스템 요구 사항](../get-started/system-requirements.md)을 참조하세요.
 
 - .NET Framework 4.5부터, 사용자는 설치하는 동안 실행 중인 .NET Framework 앱 목록을 보고 쉽게 닫을 수 있습니다. 이렇게 하면 .NET Framework 설치로 인해 시스템이 다시 시작되는 것을 방지할 수 있습니다. [시스템 다시 시작 사례 감소](reducing-system-restarts.md)를 참조하세요.
 
@@ -276,8 +276,8 @@ WiX(Windows Installer XML) 도구 집합은 XML 소스 코드에서 Windows 설�
 |Windows 10에 설치된 .NET Framework 4.6|393295|
 |Windows 10 이외의 모든 OS 버전에 설치된 .NET Framework 4.6|393297|
 |.NET Framework 4.5.2|379893|
-|[!INCLUDE[win81](../../../includes/win81-md.md)] 또는 Windows Server 2012 R2와 함께 설치된 .NET Framework 4.5.1|378675|
-|[!INCLUDE[win8](../../../includes/win8-md.md)], Windows 7에 설치된 .NET Framework 4.5.1|378758|
+|.NET Framework 4.5.1이 Windows 8.1 또는 Windows Server 2012 R2와 함께 설치됨|378675|
+|Windows 8, Windows 7에 설치된 .NET Framework 4.5.1|378758|
 |.NET Framework 4.5|378389|
 
 ### <a name="detecting-the-language-packs"></a>언어 팩 검색
@@ -368,7 +368,7 @@ WiX(Windows Installer XML) 도구 집합은 XML 소스 코드에서 Windows 설�
 
 ## <a name="uninstalling-the-net-framework"></a>.NET Framework 제거
 
-[!INCLUDE[win8](../../../includes/win8-md.md)]부터, 제어판의 **Windows 기능 사용/사용 안 함**을 통해 .NET Framework 4.5 또는 해당 포인트 릴리스 중 하나를 제거할 수 있습니다. 이전 버전의 Windows에서는 제어판의 **프로그램 추가/제거**를 통해 .NET Framework 4.5 또는 해당 포인트 릴리스 중 하나를 제거할 수 있습니다.
+Windows 8부터, 제어판의 **Windows 기능 사용/사용 안 함**을 통해 .NET Framework 4.5 또는 해당 포인트 릴리스 중 하나를 제거할 수 있습니다. 이전 버전의 Windows에서는 제어판의 **프로그램 추가/제거**를 통해 .NET Framework 4.5 또는 해당 포인트 릴리스 중 하나를 제거할 수 있습니다.
 
 > [!IMPORTANT]
 > Windows 7 및 이전 버전의 운영 체제에서 .NET Framework 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, 4.7.2 또는 4.8을 제거하면 .NET Framework 4.5 파일이 복원되지 않고, .NET Framework 4.5를 제거하면 .NET Framework 4 파일이 복원되지 않습니다. 이전 버전으로 돌아가려면 해당 프로그램과 업데이트를 다시 설치해야 합니다.
@@ -401,7 +401,7 @@ WiX(Windows Installer XML) 도구 집합은 XML 소스 코드에서 Windows 설�
 
 다음 표에는 .NET Framework 4.5 및 해당 포인트 릴리스에 사용할 수 있는 .NET Framework 언어 팩이 나와 있습니다.
 
-|인 DWORD 값의 레지스트리에서 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\|언어 - 국가/지역|culture|
+|LCID|언어 - 국가/지역|culture|
 |----------|--------------------------------|-------------|
 |1025|아랍어 - 사우디아라비아|ar|
 |1028|중국어 - 번체|zh-Hant|

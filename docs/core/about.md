@@ -2,12 +2,12 @@
 title: .NET Core 정보
 description: .NET Core에 대한 자세히 알아봅니다.
 ms.date: 09/17/2019
-ms.openlocfilehash: 4fe16475e18eb88e88fb33d30508f9ef5c9f2cd5
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 22530e861f6a13a6930b2fb35c91b4f7a95a17c7
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552237"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74801953"
 ---
 # <a name="about-net-core"></a>.NET Core 정보
 
@@ -40,7 +40,7 @@ C#, Visual Basic 및 F# 언어를 사용하여 .NET Core에 대한 애플리케�
 - <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 및 <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>과 같은 컬렉션
 - <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> 및 <xref:System.IO.FileStream?displayProperty=nameWithType>과 같은 유틸리티 형식
 - <xref:System.Data.DataSet?displayProperty=nameWithType> 및 [DbSet](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore/)과 같은 데이터 형식
-- <xref:System.Numerics.Vector?displayProperty=nameWithType> 및 [Pipelines](https://devblogs.microsoft.com/dotnet/system-io-pipelines-high-performance-io-in-net/)와 같은 고성능 형식
+- <xref:System.Numerics.Vector?displayProperty=nameWithType> 및 [Pipelines](../standard/io/pipelines.md)와 같은 고성능 형식
 
 .NET Core는 [.NET Standard](../standard/net-standard.md) 사양을 구현하여 .NET Framework 및 Mono API에서 호환성을 제공합니다.
 
@@ -56,7 +56,7 @@ C#, Visual Basic 및 F# 언어를 사용하여 .NET Core에 대한 애플리케�
 
 .NET Core는 다음과 같은 부분으로 구성됩니다.
 
-- [.NET Core 런타임](https://github.com/dotnet/coreclr)은 형식 시스템, 어셈블리 로드, 가비지 수집기, 네이티브 interop, 기타 기본 서비스를 제공합니다. [.NET Core 프레임워크 라이브러리](https://github.com/dotnet/corefx)는 기본 데이터 형식, 앱 컴퍼지션 형식, 기본 유틸리티를 제공합니다.
+- [.NET Core 런타임](https://github.com/dotnet/runtime/tree/master/src/coreclr)은 형식 시스템, 어셈블리 로드, 가비지 수집기, 네이티브 interop, 기타 기본 서비스를 제공합니다. [.NET Core 프레임워크 라이브러리](https://github.com/dotnet/runtime/tree/master/src/libraries)는 기본 데이터 형식, 앱 컴퍼지션 형식, 기본 유틸리티를 제공합니다.
 - [ASP.NET 런타임](https://github.com/aspnet/home)은 웹앱, IoT 앱, 모바일 백 엔드 등의 최신 클라우드 기반 인터넷 연결 애플리케이션을 빌드하기 위한 프레임워크를 제공합니다.
 - .NET Core 개발자 환경을 사용할 수 있도록 하는 [.NET Core CLI 도구](https://github.com/dotnet/cli) 및 언어 컴파일러([Roslyn](https://github.com/dotnet/roslyn) 및 [F#](https://github.com/microsoft/visualfsharp))입니다.
 - [dotnet 도구](https://github.com/dotnet/core-setup)는 .NET Core 앱 및 CLI 도구를 시작하는 데 사용됩니다. 런타임을 선택 및 호스트하고, 어셈블리 로드 정책을 제공하며, 앱과 도구를 시작합니다.
@@ -79,17 +79,17 @@ C#, Visual Basic 및 F# 언어를 사용하여 .NET Core에 대한 애플리케�
 
 일반적으로 사용자는 여러 운영 체제를 지원하기 위해 .NET Core를 구현하는 방법을 질문합니다. 또한 별도의 구현이 있는지 또는 [조건부 컴파일](https://en.wikipedia.org/wiki/Conditional_compilation)이 사용되는지에 대해서도 질문합니다. 둘 다 조건부 컴파일에 대한 강력한 편견이 있습니다.
 
-대부분의 [CoreFX](https://github.com/dotnet/corefx)가 모든 플랫폼에서 공유되는 플랫폼 중립 코드임을 다음 차트에서 확인할 수 있습니다. 플랫폼 중립 코드는 모든 플랫폼에서 사용할 수 있는 이식 가능한 단일 어셈블리로 구현할 수 있습니다.
+대부분의 [.NET Core 라이브러리](https://github.com/dotnet/runtime/tree/master/src/libraries)가 모든 플랫폼에서 공유되는 플랫폼 중립 코드임을 다음 차트에서 확인할 수 있습니다. 플랫폼 중립 코드는 모든 플랫폼에서 사용할 수 있는 이식 가능한 단일 어셈블리로 구현할 수 있습니다.
 
 ![CoreFX: 플랫폼별 코드 줄](../images/corefx-platforms-loc.png)
 
-Windows 및 Unix 구현은 크기가 비슷합니다. CoreFX에서 [Microsoft.Win32.Registry](https://github.com/dotnet/corefx/tree/master/src/Microsoft.Win32.Registry)와 같은 일부 Windows 전용 기능만 구현하고 Unix 전용 개념은 많이 구현하지 않으므로, Windows 구현이 더 큽니다. Linux 및 macOS 특정 구현은 크기가 거의 비슷하지만, 대부분의 Linux 및 macOS 구현이 Unix 구현에서 공유된다는 것도 확인할 수 있습니다.
+Windows 및 Unix 구현은 크기가 비슷합니다. .NET Core 라이브러리에서 [Microsoft.Win32.Registry](https://github.com/dotnet/runtime/tree/master/src/libraries/Microsoft.Win32.Registry)와 같은 일부 Windows 전용 기능만 구현하고 Unix 전용 개념은 많이 구현하지 않으므로, Windows 구현이 더 큽니다. Linux 및 macOS 특정 구현은 크기가 거의 비슷하지만, 대부분의 Linux 및 macOS 구현이 Unix 구현에서 공유된다는 것도 확인할 수 있습니다.
 
 .NET Core에는 플랫폼별 라이브러리와 플랫폼 중립 라이브러리가 혼합되어 있습니다. 몇 가지 예제에서 패턴을 확인할 수 있습니다.
 
-- [CoreCLR](https://github.com/dotnet/coreclr)는 플랫폼별이며, 메모리 관리자 및 스레드 스케줄러와 같은 OS 하위 시스템을 기반으로 빌드합니다.
-- 스토리지 및 암호화 API가 각 OS에서 다르기 때문에 [System.IO](https://github.com/dotnet/corefx/tree/master/src/System.IO) 및 [System.Security.Cryptography.Algorithms](https://github.com/dotnet/corefx/tree/master/src/System.Security.Cryptography.Algorithms)는 플랫폼별입니다.
-- [System.Collections](https://github.com/dotnet/corefx/tree/master/src/System.Collections) 및 [System.Linq](https://github.com/dotnet/corefx/tree/master/src/System.Linq)는 데이터 구조를 통해 만들고 작동하기 때문에 플랫폼 중립입니다.
+- [CoreCLR](https://github.com/dotnet/runtime/tree/master/src/coreclr)는 플랫폼별이며, 메모리 관리자 및 스레드 스케줄러와 같은 OS 하위 시스템을 기반으로 빌드합니다.
+- 스토리지 및 암호화 API가 각 OS에서 다르기 때문에 [System.IO](https://github.com/dotnet/runtime/tree/master/src/libraries/System.IO) 및 [System.Security.Cryptography.Algorithms](https://github.com/dotnet/runtime/tree/master/src/libraries/System.Security.Cryptography.Algorithms)는 플랫폼별입니다.
+- [System.Collections](https://github.com/dotnet/runtime/tree/master/src/libraries/System.Collections) 및 [System.Linq](https://github.com/dotnet/runtime/tree/master/src/libraries/System.Linq)는 데이터 구조를 통해 만들고 작동하기 때문에 플랫폼 중립입니다.
 
 ## <a name="comparisons-to-other-net-implementations"></a>다른 .NET 구현과 비교
 

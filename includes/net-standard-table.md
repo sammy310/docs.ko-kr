@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 9b8d28f7f5508b4ba7c46306b5e78aa3d53d95e0
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 9e95db8a1530fabd30b5344c87728b9210c0ad69
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71263336"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802834"
 ---
 | .NET Standard              | [1.0]  | [1.1]  | [1.2] | [1.3] | [1.4] | [1.5]              | [1.6]              | [2.0]               | [2.1] |
 |----------------------------|--------|--------|-------|-------|-------|--------------------|--------------------|---------------------|---------------------
@@ -17,7 +17,7 @@ ms.locfileid: "71263336"
 | UWP | 10.0   | 10.0   | 10.0  | 10.0  | 10.0  | 10.0.16299         | 10.0.16299         | 10.0.16299          | TBD |
 | Unity                      | 2018.1 | 2018.1 | 2018.1| 2018.1| 2018.1| 2018.1             |  2018.1            | 2018.1              | TBD |
 
-<sup>1 .NET Framework용으로 나열된 버전은 .NET Core 2.0 SDK 이상 버전의 도구에 적용됩니다. 이전 버전에서는 .NET Standard 1.5 이상에서 다른 매핑을 사용했습니다. Visual Studio 2017로 업그레이드할 수 없는 경우 [Visual Studio 2015용 .NET Core 도구를 다운로드](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md)할 수 있습니다.</sup>
+<sup>1 .NET Framework용으로 나열된 버전은 .NET Core 2.0 SDK 이상 버전의 도구에 적용됩니다. 이전 버전에서는 .NET Standard 1.5 이상에서 다른 매핑을 사용했습니다. Visual Studio 2017 이상 버전으로 업그레이드할 수 없는 경우 [Visual Studio 2015용 .NET Core 도구를 다운로드](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md)할 수 있습니다.</sup>
 
 <sup>2 여기에 나열된 버전은 지정된 .NET Standard 라이브러리를 적용할 수 있는지 여부를 확인하기 위해 NuGet이 사용하는 규칙을 나타냅니다. NuGet에서는 .NET Framework 4.6.1을 .NET Standard 1.5에서 2.0까지 지원하는 것으로 간주하는 반면, .NET Framework 4.6.1에서 해당 버전용으로 빌드된 .NET Standard 라이브러리를 사용하는 데 몇 가지 문제가 있습니다. 이러한 라이브러리를 사용해야 하는 .NET Framework 프로젝트의 경우 .NET Framework 4.7.2 이상을 대상으로 하려면 프로젝트를 업그레이드하는 것이 좋습니다.</sup>
 

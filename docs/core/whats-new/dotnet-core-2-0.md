@@ -2,12 +2,12 @@
 title: .NET Core 2.0의 새로운 기능
 description: .NET Core에서 볼 수 있는 새로운 기능에 대해 알아봅니다.
 ms.date: 08/13/2017
-ms.openlocfilehash: fcac4255e7370f31ea6c26771fdd7d341bafe38b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 115b3adc72b6798c6a7bac9cc18044a8822808a6
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73100836"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74801898"
 ---
 # <a name="whats-new-in-net-core-20"></a>.NET Core 2.0의 새로운 기능
 
@@ -136,7 +136,7 @@ Visual Studio에서 프로젝트의 대상을 변경하려면 프로젝트 속�
 
 Live Unit Testing이 코드를 수정하려면 언제든지 자동으로 백그라운드에서 영향을 받는 단위 테스트를 실행하고 Visual Studio 환경에서 결과 및 코드 검사 라이브를 표시합니다. 이제 .NET Core 2.0은 Live Unit Testing을 지원합니다. 이전에 Live Unit Testing은 .NET Framework 애플리케이션에만 사용할 수 있었습니다.
 
-자세한 내용은 [Visual Studio 2017에서 Live Unit Testing](/visualstudio/test/live-unit-testing) 및 [Live Unit Testing FAQ](/visualstudio/test/live-unit-testing-faq)를 참조하세요.
+자세한 내용은 [Visual Studio에서 Live Unit Testing](/visualstudio/test/live-unit-testing) 및 [Live Unit Testing FAQ](/visualstudio/test/live-unit-testing-faq)를 참조하세요.
 
 ### <a name="better-support-for-multiple-target-frameworks"></a>다양한 대상 프레임워크에 대한 지원 향상
 

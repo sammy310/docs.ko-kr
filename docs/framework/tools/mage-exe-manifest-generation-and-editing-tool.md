@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - Mage.exe
 ms.assetid: 77dfe576-2962-407e-af13-82255df725a1
-ms.openlocfilehash: aa2ad9222460f8732397f8b1c72e36085bbe4a21
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 3752ac7108a9fcd55b61b32b889a717ef7c0faff
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449427"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714469"
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe(매니페스트 생성 및 편집 도구)
 
@@ -139,9 +139,9 @@ Visual Studio 2017에는 *Mage.exe*의 4.6.1 버전이 포함되어 있습니다
 ||어셈블리 추가|지원 안 함|확인|
 ||어셈블리 제거|지원 안 함|확인|
 
- Mage.exe는 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]대상으로 새 매니페스트를 만듭니다. [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] 대상의 ClickOnce 애플리케이션은 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] 및 전체 버전의 .NET Framework 4에서 실행할 수 있습니다. 애플리케이션이 전체 버전의 .NET Framework 4를 대상으로 하며 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]에서 실행할 수 없는 경우 텍스트 편집기를 사용하여 클라이언트 `<framework>` 요소를 제거하고 매니페스트에 다시 서명합니다.
+ Mage.exe는 .NET Framework 4 클라이언트 프로필을 대상으로 하는 새 매니페스트를 만듭니다. .NET Framework 4 클라이언트 프로필을 대상으로 하는 ClickOnce 애플리케이션은 .NET Framework 4 클라이언트 프로필 및 정식 버전의 .NET Framework 4에서 모두 실행할 수 있습니다. 애플리케이션이 정식 버전의 .NET Framework 4를 대상으로 하며 .NET Framework 4 클라이언트 프로필에서 실행할 수 없는 경우 텍스트 편집기를 사용하여 클라이언트 `<framework>` 요소를 제거하고 매니페스트에 다시 서명합니다.
 
-다음은 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] 대상으로 하는 샘플 `<framework>` 요소입니다.
+다음은 .NET Framework 4 클라이언트 프로필을 대상으로 하는 샘플 `<framework>` 요소입니다.
 
 ```xml
 <framework targetVersion="4.0" profile="client" supportedRuntime="4.0.20506" />

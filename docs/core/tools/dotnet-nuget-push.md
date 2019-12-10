@@ -2,13 +2,13 @@
 title: dotnet nuget push 명령
 description: dotnet nuget push 명령은 서버에 패키지를 푸시하고 게시합니다.
 author: karann-msft
-ms.date: 06/26/2019
-ms.openlocfilehash: 3299f79ec62aebdcdbef38f1e8b09a2dc5529ec4
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.date: 12/04/2019
+ms.openlocfilehash: 5e80295a570adc30a06d86b6735cb0387e39d5a3
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117497"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74835521"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
@@ -26,7 +26,7 @@ ms.locfileid: "71117497"
 
 ```dotnetcli
 dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output] [--interactive] [-k|--api-key] [-n|--no-symbols]
-    [--no-service-endpoint] [-s|--source] [-sk|--symbol-api-key] [-ss|--symbol-source] [-t|--timeout]
+    [--no-service-endpoint] [-s|--source] [--skip-duplicate] [-sk|--symbol-api-key] [-ss|--symbol-source] [-t|--timeout]
 dotnet nuget push [-h|--help]
 ```
 
@@ -52,7 +52,7 @@ dotnet nuget push [-h|--help]
 
 * **`-h|--help`**
 
-명령에 대한 간단한 도움말을 출력합니다.
+  명령에 대한 간단한 도움말을 출력합니다.
 
 * **`--interactive`**
 
@@ -74,6 +74,10 @@ dotnet nuget push [-h|--help]
 
   서버 URL을 지정합니다. 이 옵션은 NuGet 구성 파일에 `DefaultPushSource` 구성 값이 설정되어 있지 않을 때 필요합니다.
 
+* **`--skip-duplicate`**
+
+  여러 패키지를 HTTP(S) 서버로 푸시할 때 푸시를 계속할 수 있도록 409 충돌 응답을 경고로 처리합니다. .NET Core 3.1 SDK부터 사용할 수 있습니다.
+                                 
 * **`-sk|--symbol-api-key <API_KEY>`**
 
   기호 서버에 대한 API 키입니다.
@@ -86,7 +90,7 @@ dotnet nuget push [-h|--help]
 
   서버에 푸시하기 위한 제한 시간(초)을 지정합니다. 기본값은 300 초(5 분)입니다. 0(0초)을 지정하면 기본값이 적용됩니다.
 
-## <a name="examples"></a>예제
+## <a name="examples"></a>예
 
 * 기본 푸시 소스에 *foo.nupkg*를 푸시하여 API 키를 지정합니다.
 
@@ -127,3 +131,9 @@ dotnet nuget push [-h|--help]
   > [!NOTE]
   > 이 명령이 작동하지 않는 경우 이전 버전의 SDK(.NET Core 2.1 SDK 및 이전 버전)에 존재했던 버그 때문일 수 있습니다.
   > 이 문제를 해결하려면 SDK 버전을 업그레이드하거나 대신 `dotnet nuget push **/*.nupkg` 명령을 실행합니다.
+  
+* HTTP(S) 서버가 409 충돌 응답을 반환하더라도 모든 *.nupkg* 파일을 푸시합니다.
+
+  ```dotnetcli
+  dotnet nuget push *.nupkg --skip-duplicate
+  ```

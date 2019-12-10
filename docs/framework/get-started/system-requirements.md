@@ -10,12 +10,12 @@ helpviewer_keywords:
 - operating systems supported
 - hardware requirements
 ms.assetid: 298275e2-da1d-4618-9f74-6a3567832350
-ms.openlocfilehash: f2c22f13f74698b8cbd1474b331d65dcedfa4889
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d171a1aafe2d7e69dfbc9b16577b2d56672fdd3f
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73114558"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802212"
 ---
 # <a name="net-framework-system-requirements"></a>.NET Framework 시스템 요구 사항
 
@@ -62,8 +62,8 @@ ms.locfileid: "73114558"
 | Windows 10 1주년 업데이트 | 32비트 및 64비트 | .NET Framework 4.6.2 |.NET Framework 4.7<br/><br/>.NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2<br/><br/>.NET Framework 4.8  |
 | Windows 10 11월 업데이트 | 32비트 및 64비트 | .NET Framework 4.6.1 | .NET Framework 4.6.2 |
 | Windows 10 | 32비트 및 64비트 | .NET Framework 4.6 | .NET Framework 4.6.1 <br/><br/> .NET Framework 4.6.2 |
-| [!INCLUDE[win81](../../../includes/win81-md.md)] | 32비트, 64비트 및 ARM | .NET Framework 4.5.1 | .NET Framework 4.5.2<br /><br /> .NET Framework 4.6<br /><br /> .NET Framework 4.6.1<br /><br /> .NET Framework 4.6.2<br /><br />.NET Framework 4.7<br/><br/>.NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2<br/><br/>.NET Framework 4.8 |
-| [!INCLUDE[win8](../../../includes/win8-md.md)] | 32비트, 64비트 및 ARM | .NET Framework 4.5 | .NET Framework 4.5.1<br /><br />.NET Framework 4.5.2<br /><br /> .NET Framework 4.6<br /><br /> .NET Framework 4.6.1 |
+| Windows 8.1 | 32비트, 64비트 및 ARM | .NET Framework 4.5.1 | .NET Framework 4.5.2<br /><br /> .NET Framework 4.6<br /><br /> .NET Framework 4.6.1<br /><br /> .NET Framework 4.6.2<br /><br />.NET Framework 4.7<br/><br/>.NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2<br/><br/>.NET Framework 4.8 |
+| Windows 8 | 32비트, 64비트 및 ARM | .NET Framework 4.5 | .NET Framework 4.5.1<br /><br />.NET Framework 4.5.2<br /><br /> .NET Framework 4.6<br /><br /> .NET Framework 4.6.1 |
 | Windows 7 SP1|32비트 및 64비트 | -- | .NET Framework 4<br /><br /> .NET Framework 4.5<br /><br /> .NET Framework 4.5.1<br /><br /> .NET Framework 4.5.2<br /><br /> .NET Framework 4.6<br /><br /> .NET Framework 4.6.1<br /><br /> .NET Framework 4.6.2<br /><br />.NET Framework 4.7<br/><br/>.NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2<br/><br/>.NET Framework 4.8 |
 | Windows Vista SP2|32비트 및 64비트 | -- | .NET Framework 4<br /><br /> .NET Framework 4.5<br /><br /> .NET Framework 4.5.1<br /><br /> .NET Framework 4.5.2<br /><br /> .NET Framework 4.6 |
 | Windows XP |32비트 및 64비트 | -- | .NET Framework 4 |
@@ -76,7 +76,7 @@ ms.locfileid: "73114558"
 
 - .NET Framework 4는 IA64 플랫폼도 지원합니다.
 
-- 최상의 호환성 및 보안을 위해 모든 플랫폼에 대해 [Windows 업데이트 웹 사이트](https://go.microsoft.com/fwlink/?LinkId=168461)에서 제공하는 최신 Windows 서비스 팩으로 업그레이드하고 중요 업데이트를 설치하는 것이 좋습니다.
+- 최상의 호환성 및 보안을 위해 모든 플랫폼에 대해 [Windows 업데이트](https://support.microsoft.com/help/12373/windows-update-faq)에서 제공하는 최신 Windows 서비스 팩으로 업그레이드하고 중요 업데이트를 설치하는 것이 좋습니다.
 
 - 64비트 운영 체제에서는 .NET Framework가 WOW64(64비트 머신의 32비트 프로세싱) 및 64비트 프로세싱을 둘 다 지원합니다.
 
@@ -104,7 +104,7 @@ ms.locfileid: "73114558"
 
 - Windows Server 2008 SP2에서는 .NET Framework가 Server Core 역할에서 지원되지 않습니다.
 
-- 최상의 호환성 및 보안을 위해 모든 플랫폼에 대해 [Windows 업데이트 웹 사이트](https://go.microsoft.com/fwlink/?LinkId=168461)에서 제공하는 최신 Windows 서비스 팩과 중요 업데이트로 업그레이드하는 것이 좋습니다. 일부 운영 체제에서는 최신 Windows 서비스 팩을 설치해야 할 수도 있습니다.
+- 최상의 호환성 및 보안을 위해 모든 플랫폼에 대해 [Windows 업데이트](https://support.microsoft.com/help/12373/windows-update-faq)에서 제공하는 최신 Windows 서비스 팩 및 중요 업데이트를 업그레이드하는 것이 좋습니다. 일부 운영 체제에서는 최신 Windows 서비스 팩을 설치해야 할 수도 있습니다.
 
 - 64비트 운영 체제에서는 .NET Framework가 WOW64(64비트 컴퓨터의 32비트 프로세싱) 및 64비트 프로세싱을 둘 다 지원합니다.
 
