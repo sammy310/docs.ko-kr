@@ -64,5 +64,7 @@
           href: how-to-use-named-pipes-for-network-interprocess-communication.md
     - name: 파이프라인
       href: pipelines.md
+    - name: 버퍼 작업
+      href: buffers.md
     - name: 메모리 매핑된 파일
       href: memory-mapped-files.md
