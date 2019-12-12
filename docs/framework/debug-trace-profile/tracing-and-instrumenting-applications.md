@@ -44,7 +44,7 @@ ms.locfileid: "73196713"
  <xref:System.Diagnostics.Trace> 및 <xref:System.Diagnostics.Debug> 클래스는 개발 중이나 배포 후에 애플리케이션 성능을 모니터링하고 검사할 수 있는 수단을 제공합니다. 예를 들어, 배포된 애플리케이션에서 특정 동작 유형(예: 새 데이터베이스 연결 만들기)이 발생할 때 <xref:System.Diagnostics.Trace> 클래스를 사용하여 해당 동작을 추적할 수 있으므로 애플리케이션의 효율성을 모니터링할 수 있습니다.  
   
 ## <a name="code-tracing-and-debugging"></a>코드 추적 및 디버깅  
- 개발하는 동안 <xref:System.Diagnostics.Debug> 클래스의 출력 메서드를 사용하여 Visual Studio IDE(통합 개발 환경)의 출력 창에 메시지를 표시할 수 있습니다. 예를 들면,  
+ 개발하는 동안 <xref:System.Diagnostics.Debug> 클래스의 출력 메서드를 사용하여 Visual Studio IDE(통합 개발 환경)의 출력 창에 메시지를 표시할 수 있습니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.  
   
 ```vb  
 Trace.WriteLine("Hello World!")  
@@ -58,11 +58,11 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
  각 예제에서 응용 프로그램을 디버거에서 실행하는 경우 “Hello World!”가 출력 창에 표시됩니다.  
   
- 이 경우 애플리케이션을 디버그하고 테스트 환경에서의 해당 동작에 따라 성능을 최적화할 수 있습니다. 모든 디버깅 출력을 받을 수 있도록 <xref:System.Diagnostics.Debug> 조건부 특성을 설정한 상태로 디버그 빌드에서 애플리케이션을 디버깅할 수 있습니다. 애플리케이션을 릴리스할 준비가 된 경우, <xref:System.Diagnostics.Debug> 조건부 특성을 설정하지 않고 릴리스 빌드를 컴파일하면 컴파일러가 디버깅 코드를 최종 실행 파일에 포함시키지 않도록 할 수 있습니다. 자세한 내용은 [방법: 추적 및 디버그를 사용한 조건부 컴파일](how-to-compile-conditionally-with-trace-and-debug.md)을 참조하세요. 애플리케이션의 다양한 빌드 구성에 대한 자세한 내용은 [컴파일 및 빌드](/visualstudio/ide/compiling-and-building-in-visual-studio)를 참조하세요.  
+ 이 경우 애플리케이션을 디버그하고 테스트 환경에서의 해당 동작에 따라 성능을 최적화할 수 있습니다. 모든 디버깅 출력을 받을 수 있도록 <xref:System.Diagnostics.Debug> 조건부 특성을 설정한 상태로 디버그 빌드에서 애플리케이션을 디버깅할 수 있습니다. 애플리케이션을 릴리스할 준비가 된 경우, <xref:System.Diagnostics.Debug> 조건부 특성을 설정하지 않고 릴리스 빌드를 컴파일하면 컴파일러가 디버깅 코드를 최종 실행 파일에 포함시키지 않도록 할 수 있습니다. 자세한 내용은 [방법: 추적 및 디버그를 사용한 조건부 컴파일](how-to-compile-conditionally-with-trace-and-debug.md) 애플리케이션의 다양한 빌드 구성에 대한 자세한 내용은 [컴파일 및 빌드](/visualstudio/ide/compiling-and-building-in-visual-studio)를 참조하세요.  
   
- 또한 <xref:System.Diagnostics.Trace> 클래스의 메서드를 사용하여 설치된 애플리케이션에서 코드 실행을 추적할 수 있습니다. 코드에 [추적 스위치](trace-switches.md)를 배치하면 추적 발생 여부와 추적 범위를 제어할 수 있습니다. 이 경우 프로덕션 환경에서 애플리케이션의 상태를 모니터링할 수 있습니다. 이 기능은 여러 컴퓨터에서 실행되는 여러 구성 요소를 사용하는 비즈니스 애플리케이션에서 특히 중요합니다. 배포 후 구성 파일을 통해 스위치를 사용하는 방법을 제어할 수 있습니다. 자세한 내용은 [방법: 추적 스위치 만들기, 초기화 및 구성](how-to-create-initialize-and-configure-trace-switches.md)을 참조하세요.  
+ 또한 <xref:System.Diagnostics.Trace> 클래스의 메서드를 사용하여 설치된 애플리케이션에서 코드 실행을 추적할 수 있습니다. 코드에 [추적 스위치](trace-switches.md)를 배치하면 추적 발생 여부와 추적 범위를 제어할 수 있습니다. 이 경우 프로덕션 환경에서 애플리케이션의 상태를 모니터링할 수 있습니다. 이 기능은 여러 컴퓨터에서 실행되는 여러 구성 요소를 사용하는 비즈니스 애플리케이션에서 특히 중요합니다. 배포 후 구성 파일을 통해 스위치를 사용하는 방법을 제어할 수 있습니다. 자세한 내용은 [방법: ](how-to-create-initialize-and-configure-trace-switches.md)추적 스위치 만들기, 초기화 및 구성  
   
- 추적을 사용하려는 애플리케이션을 개발하는 경우 일반적으로 추적 및 디버깅 메시지 둘 다를 애플리케이션 코드에 포함합니다. 애플리케이션을 배포할 준비가 되면 **디버그** 조건부 특성을 설정하지 않고 릴리스 빌드를 컴파일할 수 있습니다. 그러나 컴파일러가 실행 파일에 추적 코드를 포함하도록 **추적** 조건부 특성을 설정할 수 있습니다. 자세한 내용은 [방법: 추적 및 디버그를 사용한 조건부 컴파일](how-to-compile-conditionally-with-trace-and-debug.md)을 참조하세요.  
+ 추적을 사용하려는 애플리케이션을 개발하는 경우 일반적으로 추적 및 디버깅 메시지 둘 다를 애플리케이션 코드에 포함합니다. 애플리케이션을 배포할 준비가 되면 **디버그** 조건부 특성을 설정하지 않고 릴리스 빌드를 컴파일할 수 있습니다. 그러나 컴파일러가 실행 파일에 추적 코드를 포함하도록 **추적** 조건부 특성을 설정할 수 있습니다. 자세한 내용은 [방법: 추적 및 디버그를 사용한 조건부 컴파일](how-to-compile-conditionally-with-trace-and-debug.md)  
   
 ### <a name="phases-of-code-tracing"></a>코드 추적 단계  
  코드 추적에는 다음 세 단계가 있습니다.  
@@ -81,7 +81,7 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
 1. 애플리케이션을 배포한 후 온사이트에서 수신할 추적 출력을 고려합니다.  
   
-2. 스위치 집합을 만듭니다. 자세한 내용은 [방법: 추적 스위치 구성](how-to-create-initialize-and-configure-trace-switches.md)을 참조하세요.  
+2. 스위치 집합을 만듭니다. 자세한 내용은 [방법: ](how-to-create-initialize-and-configure-trace-switches.md)추적 스위치를 구성 합니다.  
   
 3. 애플리케이션 코드에 trace 문을 추가합니다.  
   
@@ -111,7 +111,7 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
  trace 문을 통해 원래 소스 코드를 검사, 수정 및 다시 컴파일하고 디버깅 환경 내에서 런타임 오류 생성을 시도하는 어려운 작업을 피할 수 있습니다. 애플리케이션을 계측하여 오류를 표시하는 것은 물론 성능을 모니터링할 수도 있습니다.  
   
 ## <a name="strategic-placement-of-trace-statements"></a>Trace 문의 전략적 배치  
- 런타임 중에 사용하기 위해 trace 문을 배치할 때는 특별히 주의해야 합니다. 가능한 모든 추적 시나리오가 적절하게 처리되도록 배포된 애플리케이션에서 필요할 가능성이 큰 추적 정보를 고려해야 합니다. 그러나 추적을 사용하는 애플리케이션은 매우 광범위하기 대문에 추적의 전략적 배치에 대한 일반적인 지침은 없습니다. trace 문 배치에 대한 자세한 내용은 [방법: 애플리케이션 코드에 Trace 문 추가](how-to-add-trace-statements-to-application-code.md)를 참조하세요.  
+ 런타임 중에 사용하기 위해 trace 문을 배치할 때는 특별히 주의해야 합니다. 가능한 모든 추적 시나리오가 적절하게 처리되도록 배포된 애플리케이션에서 필요할 가능성이 큰 추적 정보를 고려해야 합니다. 그러나 추적을 사용하는 애플리케이션은 매우 광범위하기 대문에 추적의 전략적 배치에 대한 일반적인 지침은 없습니다. Trace 문 배치에 대 한 자세한 내용은 [방법: 응용 프로그램 코드](how-to-add-trace-statements-to-application-code.md)에 Trace 문을 추가 합니다.  
   
 ## <a name="output-from-tracing"></a>추적 출력  
  추적 출력은 *수신기*라는 개체에 의해 수집됩니다. 수신기는 추적 출력을 받아 출력 디바이스(일반적으로 창, 로그 또는 텍스트 파일)에 쓰는 개체입니다. 새로 만든 추적 수신기는 일반적으로 <xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=nameWithType> 컬렉션에 추가되므로 수신기가 모든 추적 출력을 받을 수 있습니다.  
@@ -120,11 +120,11 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
  추적 정보를 기록하는 여섯 가지 <xref:System.Diagnostics.Debug> 멤버 및 <xref:System.Diagnostics.Trace> 메서드는 다음 표에 나와 있습니다.  
   
-|메서드|Output|  
+|메서드|출력|  
 |------------|------------|  
 |**Assert**|지정된 텍스트 또는 지정되지 않은 경우 호출 스택입니다. **Assert** 문에서 인수로 지정된 조건이 **false**인 경우에만 출력이 기록됩니다.|  
 |**Fail**|지정된 텍스트 또는 지정되지 않은 경우 호출 스택입니다.|  
-|**Write**|지정 된 텍스트입니다.|  
+|**Write**|지정된 텍스트입니다.|  
 |**WriteIf**|**WriteIf** 문에서 인수로 지정된 조건이 충족되는 경우 지정된 텍스트입니다.|  
 |**WriteLine**|지정된 텍스트와 캐리지 리턴입니다.|  
 |**WriteLineIf**|**WriteLineIf** 문에서 인수로 지정된 조건이 충족되는 경우 지정된 텍스트와 캐리지 리턴입니다.|  
@@ -133,21 +133,21 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
  고유한 수신기를 구현하여 사용자 지정 결과를 생성할 수 있습니다. 예를 들어 사용자 지정 추적 수신기는 메시지 상자에 메시지를 표시하거나 데이터베이스에 연결하여 테이블에 메시지를 추가할 수 있습니다. 모든 사용자 지정 수신기는 위에서 언급한 6가지 메서드를 지원해야 합니다. 개발자 정의 수신기를 만드는 방법에 대한 자세한 내용은 .NET Framework 참조에서 <xref:System.Diagnostics.TraceListener>를 참조하세요.  
   
- **Write** 및 **WriteLine** 메서드는 항상 지정된 텍스트를 씁니다. **Assert**, **WriteIf** 및 **WriteLineIf**에는 지정된 텍스트를 쓸지 여부를 제어하는 부울 인수를 사용해야 합니다. 이들 메서드는 식이 **true**(**WriteIf** 및 **WriteLineIf**) 또는 **false**(**Assert**)인 경우에만 지정된 텍스트를 씁니다. **Fail** 메서드는 항상 지정된 텍스트를 씁니다. 자세한 내용은 [방법: 애플리케이션 코드에 Trace 문 추가](how-to-add-trace-statements-to-application-code.md) 및 .NET Framework 참조를 참조하세요.  
+ **Write** 및 **WriteLine** 메서드는 항상 지정된 텍스트를 씁니다. **Assert**, **WriteIf** 및 **WriteLineIf**에는 지정된 텍스트를 쓸지 여부를 제어하는 부울 인수를 사용해야 합니다. 이들 메서드는 식이 **true**(**WriteIf** 및 **WriteLineIf**) 또는 **false**(**Assert**)인 경우에만 지정된 텍스트를 씁니다. **Fail** 메서드는 항상 지정된 텍스트를 씁니다. 자세한 내용은 [방법: 응용 프로그램 코드](how-to-add-trace-statements-to-application-code.md) 및 .NET Framework 참조에 Trace 문을 추가 합니다.  
   
 ## <a name="security-concerns"></a>보안 고려 사항  
- ASP.NET 애플리케이션을 배포하기 전에 추적 및 디버깅을 사용하지 않도록 설정하지 않으면 애플리케이션이 해당 정보를 노출하여 악성 프로그램에서 악용될 수 있습니다. 자세한 내용은 [방법: 추적 및 디버그를 사용한 조건부 컴파일](how-to-compile-conditionally-with-trace-and-debug.md), [컴파일 및 빌드](/visualstudio/ide/compiling-and-building-in-visual-studio) 및 [방법: 추적 스위치 만들기, 초기화 및 구성](how-to-create-initialize-and-configure-trace-switches.md)을 참조하세요. IIS(인터넷 정보 서비스)를 통해 디버깅을 구성할 수도 있습니다.  
+ ASP.NET 애플리케이션을 배포하기 전에 추적 및 디버깅을 사용하지 않도록 설정하지 않으면 애플리케이션이 해당 정보를 노출하여 악성 프로그램에서 악용될 수 있습니다. 자세한 내용은 [방법: 추적 및 디버그](how-to-compile-conditionally-with-trace-and-debug.md), [컴파일 및 빌드](/visualstudio/ide/compiling-and-building-in-visual-studio)및 [방법을 사용 하 여 조건부로 컴파일합니다. ](how-to-create-initialize-and-configure-trace-switches.md)추적 스위치 만들기, 초기화 및 구성 IIS(인터넷 정보 서비스)를 통해 디버깅을 구성할 수도 있습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Diagnostics.Trace>
 - <xref:System.Diagnostics.TraceSource>
 - [코드 계약](code-contracts.md)
 - [C#, F#, and Visual Basic Project Types](/visualstudio/debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types)(C#, F# 및 Visual Basic 프로젝트 형식)
-- [방법: 애플리케이션 코드에 Trace 문 추가](how-to-add-trace-statements-to-application-code.md)
+- [방법: 애플리케이션 코드에 추적 문 추가](how-to-add-trace-statements-to-application-code.md)
 - [방법: 추적 및 디버그를 사용한 조건부 컴파일](how-to-compile-conditionally-with-trace-and-debug.md)
 - [방법: 추적 스위치 만들기, 초기화 및 구성](how-to-create-initialize-and-configure-trace-switches.md)
-- [방법: 추적 소스 생성 및 초기화](how-to-create-and-initialize-trace-sources.md)
-- [방법: 추적 수신기와 함께 TraceSource 및 필터 사용](how-to-use-tracesource-and-filters-with-trace-listeners.md)
+- [방법: 추적 소스](how-to-create-and-initialize-trace-sources.md) 만들기 및 초기화
+- [방법: 추적 수신기를 사용 하 여 TraceSource 및 필터 사용](how-to-use-tracesource-and-filters-with-trace-listeners.md)
 - [추적 수신기](trace-listeners.md)
 - [추적 스위치](trace-switches.md)

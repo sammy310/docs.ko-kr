@@ -21,7 +21,7 @@ ms.locfileid: "74710904"
   
 - <xref:System.Activities.Statements.Transition>  
   
- 상태 시스템 워크플로를 만들기 위해 상태가 <xref:System.Activities.Statements.StateMachine> 활동에 추가되고 상태 간 흐름을 제어하기 위해 전환이 사용됩니다. [시작 자습서](getting-started-tutorial.md) 의 [방법: 상태 시스템 워크플로 만들기](how-to-create-a-state-machine-workflow.md)에서 다음 스크린샷에서 세 가지 상태와 세 가지 전환을 포함 하는 상태 시스템 워크플로를 보여 줍니다. **Initialize Target** 은 초기 상태 이며 워크플로의 첫 번째 상태를 나타냅니다. 이는 **시작** 노드에서 앞으로 이어지는 줄로 지정 됩니다. 워크플로의 최종 상태는 전체 **상태**라는 이름이 지정 되며 워크플로가 완료 된 지점을 나타냅니다.  
+ 상태 시스템 워크플로를 만들기 위해 상태가 <xref:System.Activities.Statements.StateMachine> 활동에 추가되고 상태 간 흐름을 제어하기 위해 전환이 사용됩니다. [시작 자습서](getting-started-tutorial.md) 의 다음 스크린샷은 방법: [. 상태 시스템 워크플로](how-to-create-a-state-machine-workflow.md)만들고 세 가지 상태와 세 가지 전환을 포함 하는 상태 시스템 워크플로를 표시 합니다. **Initialize Target** 은 초기 상태 이며 워크플로의 첫 번째 상태를 나타냅니다. 이는 **시작** 노드에서 앞으로 이어지는 줄로 지정 됩니다. 워크플로의 최종 상태는 전체 **상태**라는 이름이 지정 되며 워크플로가 완료 된 지점을 나타냅니다.  
   
  ![완료 된 상태 시스템 워크플로를 보여 주는 그림입니다.](./media/state-machine-workflows/complete-state-machine-workflow.jpg)  
   
@@ -59,7 +59,7 @@ ms.locfileid: "74710904"
 > [!NOTE]
 > 전환의 <xref:System.Activities.Statements.Transition.Condition%2A>이 `False`가 되거나 모든 공유 트리거 전환 조건이 `False`가 되는 경우에는 전환이 일어나지 않으며 해당 상태로부터의 모든 전환에 대한 모든 트리거가 다시 예약됩니다.  
   
- 상태 시스템 워크플로를 만드는 방법에 대 한 자세한 내용은 [방법: 상태 시스템 워크플로 만들기](how-to-create-a-state-machine-workflow.md), [StateMachine 활동 디자이너](/visualstudio/workflow-designer/statemachine-activity-designer), [상태 활동 디자이너](/visualstudio/workflow-designer/state-activity-designer), 상태 [활동 디자이너](/visualstudio/workflow-designer/finalstate-activity-designer)및 [전환 활동 디자이너](/visualstudio/workflow-designer/transition-activity-designer)를 참조 하세요.  
+ 상태 시스템 워크플로를 만드는 방법에 대 한 자세한 내용은 [How to: 상태 시스템 워크플로](how-to-create-a-state-machine-workflow.md), [StateMachine 활동 디자이너](/visualstudio/workflow-designer/statemachine-activity-designer), [상태 활동 디자이너](/visualstudio/workflow-designer/state-activity-designer) [, 상태](/visualstudio/workflow-designer/finalstate-activity-designer)활동 디자이너 및 [전환 활동 디자이너](/visualstudio/workflow-designer/transition-activity-designer)를 만듭니다.  
   
 ## <a name="state-machine-terminology"></a>상태 시스템 용어  
  이 단원에서는 이 항목의 전체에서 사용되는 상태 시스템 용어 모음을 정의합니다.  
@@ -82,7 +82,7 @@ ms.locfileid: "74710904"
  트리거  
  전환을 발생시키는 트리거 활동입니다.  
   
- 상태  
+ 조건  
  전환을 완료하기 위해 트리거가 발생한 후에 `true`로 확인되어야 하는 제한 조건입니다.  
   
  전환 작업  
@@ -100,9 +100,9 @@ ms.locfileid: "74710904"
  최종 상태  
  상태 시스템의 완료를 나타내는 상태입니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [방법: 상태 시스템 워크플로 만들기](how-to-create-a-state-machine-workflow.md)
+- [방법: 상태 시스템 워크플로를 만듭니다](how-to-create-a-state-machine-workflow.md)
 - [StateMachine 활동 디자이너](/visualstudio/workflow-designer/statemachine-activity-designer)
 - [State 활동 디자이너](/visualstudio/workflow-designer/state-activity-designer)
 - [FinalState 활동 디자이너](/visualstudio/workflow-designer/finalstate-activity-designer)
