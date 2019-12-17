@@ -10,12 +10,12 @@ helpviewer_keywords:
 - managed execution process
 - common language runtime, managed execution process
 ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
-ms.openlocfilehash: 5ead3d1ac37b3c7ee50f18a81530720205678de2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0ce7182af33a795188d01ac457b9d45b8ad305dd
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122000"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960391"
 ---
 # <a name="managed-execution-process"></a>관리되는 실행 프로세스
 <a name="introduction"></a> 관리되는 실행 프로세스에는 이 항목의 뒷부분에서 설명하는 다음 단계가 포함됩니다.  
@@ -95,7 +95,7 @@ ms.locfileid: "73122000"
   
  실행되는 동안 관리 코드는 가비지 수집, 보안, 비관리 코드와의 상호 운용성, 언어 간 디버깅 지원 및 향상된 배포/버전 관리 지원과 같은 서비스를 수신합니다.  
   
- Microsoft [!INCLUDE[winxp](../../includes/winxp-md.md)] 및 [!INCLUDE[windowsver](../../includes/windowsver-md.md)]에서는 운영 체제 로더가 COFF 헤더에서 비트를 검사하여 관리 모듈을 확인합니다. 설정되는 비트는 관리 모듈을 나타냅니다. 로더는 관리 모듈을 감지하면 mscoree.dll을 로드하고 `_CorValidateImage` 및 `_CorImageUnloading` 는 관리 모듈 이미지가 로드 및 언로드될 때 로더에 알립니다. `_CorValidateImage` 는 다음 작업을 수행합니다.  
+ Microsoft Windows Vista에서는 운영 체제 로더가 COFF 헤더에서 비트를 검사하여 관리 모듈을 확인합니다. 설정되는 비트는 관리 모듈을 나타냅니다. 로더는 관리 모듈을 감지하면 mscoree.dll을 로드하고 `_CorValidateImage` 및 `_CorImageUnloading` 는 관리 모듈 이미지가 로드 및 언로드될 때 로더에 알립니다. `_CorValidateImage` 는 다음 작업을 수행합니다.  
   
 1. 코드가 올바른 관리 코드인지 확인합니다.  
   

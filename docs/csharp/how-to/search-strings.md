@@ -6,12 +6,12 @@ helpviewer_keywords:
 - strings [C#], searching with String methods
 - strings [C#], searching with regular expressions
 ms.assetid: fb1d9a6d-598d-4a35-bd5f-b86012edcb2b
-ms.openlocfilehash: 4a1eb818dfd8fb48b003ca184dd533f73d342662
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 15ea77d13a93d88bd996a22b6fe1aaad81df572d
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73973101"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74959704"
 ---
 # <a name="how-to-search-strings"></a>문자열 검색 방법
 
@@ -43,7 +43,7 @@ ms.locfileid: "73973101"
 
 검색 패턴은 검색할 텍스트를 설명합니다. 다음 표에서는 검색 패턴의 각 요소에 대해 설명합니다. (아래 표에서는 C# 문자열에서 `\\`로 이스케이프되어야 하는 단일 `\`을 사용합니다.)
 
-| pattern  | 의미     |
+| 패턴  | 의미     |
 | -------- |-------------|
 | the      | 텍스트 "the" 일치 |
 | (eir)?   | “eir”과 0 또는 1개 항목 일치 |
@@ -52,13 +52,13 @@ ms.locfileid: "73973101"
 [!code-csharp-interactive[Search using regular expressions](../../../samples/snippets/csharp/how-to/strings/SearchStrings.cs#3)]
   
 > [!TIP]
-> 정확한 문자열을 검색하는 경우 일반적으로 `string` 메서드를 사용하는 것이 좋습니다. 원본 문자열인 몇 가지 패턴을 검색하는 경우 정규식을 사용하는 것이 좋습니다.
+> 정확한 문자열을 검색하는 경우 일반적으로 `string` 메서드를 사용하는 것이 좋습니다. 원본 문자열에서 몇 가지 패턴을 검색하는 경우 정규식을 사용하는 것이 좋습니다.
 
 ## <a name="does-a-string-follow-a-pattern"></a>문자열은 패턴을 따르나요?
 
 다음 코드는 정규식을 사용하여 배열에서 각 문자열 형식의 유효성을 검사합니다. 유효성 검사에서는 각 문자열이 전화 번호의 형식을 사용해야 합니다. 이 경우 3개의 숫자 그룹이 대시로 구분되고, 처음 두 그룹에는 세 자리 숫자가 포함되며, 세 번째 그룹에는 네 자리 숫자가 포함됩니다. 검색 패턴은 정규식 `^\\d{3}-\\d{3}-\\d{4}$`을 사용합니다. 자세한 내용은 [정규식 언어 - 빠른 참조](../../standard/base-types/regular-expression-language-quick-reference.md)를 참조하세요.
 
-| pattern  | 의미                             |
+| 패턴  | 의미                             |
 | -------- |-------------------------------------|
 | ^        | 문자열의 시작 부분 일치 |
 | \d{3}    | 정확히 3자리 문자 일치  |

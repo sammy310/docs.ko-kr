@@ -6,12 +6,12 @@ helpviewer_keywords:
 - .NET Framework, troubleshooting blocked installations
 - blocked .NET Framework installations, troubleshooting
 ms.assetid: c3fdfbc1-ed99-4202-a2b0-8c4f1646385d
-ms.openlocfilehash: d0f3d857a90aca763121595151a2193125b47c6c
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: df7eaf971f3a54057758dc7d974ae00cd4797ad7
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975636"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960019"
 ---
 # <a name="troubleshoot-blocked-net-framework-installations-and-uninstallations"></a>차단된 .NET Framework 설치 및 제거 문제 해결
 
@@ -48,7 +48,7 @@ Windows 8 이상에서 .NET Framework는 운영 체제 구성 요소이며 독�
 |.NET Framework 4.5.x/4.6.x/4.7.x/4.8은 이 운영 체제에 이미 포함되어 있습니다. .NET Framework 4.5.x/4.6.x/4.7.x/4.8 재배포 가능 패키지를 설치할 필요가 없습니다.|작업이 필요 없습니다.<br /><br /> 시스템에 설치된 .NET Framework의 버전을 확인하려면 [방법: 설치된 .NET Framework 버전 확인](../migration-guide/how-to-determine-which-versions-are-installed.md)을 참조하세요. 지원되는 운영 체제는 [시스템 요구 사항](../get-started/system-requirements.md)을 참조하십시오.|  
 |.NET Framework 4.5.x/4.6.x/4.7.x/4.8은 이 운영 체제에서 지원되지 않습니다.|지원되는 운영 체제는 [시스템 요구 사항](../get-started/system-requirements.md)을 참조하십시오.<br /><br /> Windows 7에서 .NET Framework의 설치가 실패하는 경우 이 메시지는 일반적으로 Windows 7 SP1이 설치되어 있지 않는 것을 나타냅니다. Windows 7 시스템에서 .NET Framework를 사용하려면 Windows 7 SP1이 필요합니다. Windows 7을 사용하며 서비스 팩 1을 아직 설치하지 않은 경우 .NET Framework를 설치하기 전에 먼저 설치해야 합니다. Windows 7 SP1의 설치에 대한 정보는 [Windows 7 서비스 팩 1(SP1) 설치 방법 알아보기](https://windows.microsoft.com/windows7/install-windows-7-service-pack-1)를 참조하십시오.|  
 |컴퓨터에서 현재 Windows Server 2008 운영 체제의 Server Core 설치를 실행하고 있습니다. .NET Framework 4.5.x를 실행하려면 정식 버전의 운영 체제 또는 Server Core 2008 R2 SP1이 필요합니다. Windows Server 2008 SP2 또는 Windows Server 2008 R2 SP1 또는 Server Core 2008 R2 SP1의 정식 버전을 설치하고 .NET Framework 4.5.x 설치 프로그램을 다시 실행하세요.|.NET Framework는 Windows Server 2008 R2 SP1 이상의 Server Core 역할에서 지원됩니다. [시스템 요구 사항](../get-started/system-requirements.md)을 참조하십시오.|  
-|.NET Framework 4.5.x는 이 운영 체제에 이미 포함되어 있지만 현재 해제되어 있습니다([!INCLUDE[winserver8](../../../includes/winserver8-md.md)] 전용).| **제어판**에서 **Windows 기능 사용/사용 안 함**을 사용하여 .NET Framework 4.5.x를 켭니다. |  
+|.NET Framework 4.5.x는 이 운영 체제에 이미 포함되어 있지만 현재 해제되어 있습니다(Windows Server 2012만 해당).| **제어판**에서 **Windows 기능 사용/사용 안 함**을 사용하여 .NET Framework 4.5.x를 켭니다. |  
 |이 설치 프로그램을 사용하려면 x86 컴퓨터가 필요합니다. x64 또는 IA64 컴퓨터에는 설치할 수 없습니다.|[시스템 요구 사항](../get-started/system-requirements.md)을 참조하십시오.|  
 |이 설치 프로그램을 사용하려면 x64 또는 x86 컴퓨터가 필요합니다. IA64 컴퓨터에는 설치할 수 없습니다.|[시스템 요구 사항](../get-started/system-requirements.md)을 참조하십시오.|  
 

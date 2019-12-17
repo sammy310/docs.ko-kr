@@ -6,12 +6,12 @@ helpviewer_keywords:
 - developer's guide, deploying .NET Framework
 - deployment [.NET Framework], developer's guide
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
-ms.openlocfilehash: 62777356dae6e2dce9753b832f08ab2fa2cb5881
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 1b7fccc673f82986a53dcb3dfcb68e8575b99dfd
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74801881"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74959994"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>개발자를 위한 .NET Framework 배포 가이드
 이 항목에서는 앱과 함께 .NET Framework 4.5에서 [!INCLUDE[net_current](../../../includes/net-current-version.md)] 사이의 .NET Framework 버전을 설치하려는 개발자를 위한 정보를 제공합니다.
@@ -51,7 +51,7 @@ ms.locfileid: "74801881"
 
 - .NET Framework 4.5 및 해당 포인트 릴리스를 설치하려면 관리자 권한이 있어야 합니다.
 
-- Windows 8 및 [!INCLUDE[winserver8](../../../includes/winserver8-md.md)]에는 .NET Framework 4.5가 포함되어 있으므로, 해당 운영 체제에서는 앱과 함께 배포할 필요가 없습니다. 마찬가지로, Windows 8.1 및 Windows Server 2012 R2에는 .NET Framework 4.5.1이 포함되어 있습니다. .NET Framework 4.5.2는 어떤 운영 체제에도 포함되어 있지 않습니다. .NET Framework 4.6은 Windows 10, .NET Framework 4.6.1은 Windows 10의 11월 업데이트, .NET Framework 4.6.2는 Windows 10의 1주년 업데이트에 각각 포함되어 있습니다.  .NET Framework 4.7은 Windows 10 크리에이터스 업데이트, .NET Framework 4.7.1은 Windows 10 Fall Creators Update, .NET Framework 4.7.2는 Windows 10 2018년 10월 업데이트와 Windows 10 2018년 4월 업데이트에 각각 포함되어 있습니다. .NET Framework 4.8은 Windows 10 2019년 5월 업데이트에 포함되어 있습니다. 하드웨어 및 소프트웨어 요구 사항의 전체 목록은 [시스템 요구 사항](../get-started/system-requirements.md)을 참조하세요.
+- Windows 8 및 Windows Server 2012에는 .NET Framework 4.5가 포함되어 있으므로, 해당 운영 체제에서는 앱과 함께 배포할 필요가 없습니다. 마찬가지로, Windows 8.1 및 Windows Server 2012 R2에는 .NET Framework 4.5.1이 포함되어 있습니다. .NET Framework 4.5.2는 어떤 운영 체제에도 포함되어 있지 않습니다. .NET Framework 4.6은 Windows 10, .NET Framework 4.6.1은 Windows 10의 11월 업데이트, .NET Framework 4.6.2는 Windows 10의 1주년 업데이트에 각각 포함되어 있습니다.  .NET Framework 4.7은 Windows 10 크리에이터스 업데이트, .NET Framework 4.7.1은 Windows 10 Fall Creators Update, .NET Framework 4.7.2는 Windows 10 2018년 10월 업데이트와 Windows 10 2018년 4월 업데이트에 각각 포함되어 있습니다. .NET Framework 4.8은 Windows 10 2019년 5월 업데이트에 포함되어 있습니다. 하드웨어 및 소프트웨어 요구 사항의 전체 목록은 [시스템 요구 사항](../get-started/system-requirements.md)을 참조하세요.
 
 - .NET Framework 4.5부터, 사용자는 설치하는 동안 실행 중인 .NET Framework 앱 목록을 보고 쉽게 닫을 수 있습니다. 이렇게 하면 .NET Framework 설치로 인해 시스템이 다시 시작되는 것을 방지할 수 있습니다. [시스템 다시 시작 사례 감소](reducing-system-restarts.md)를 참조하세요.
 
