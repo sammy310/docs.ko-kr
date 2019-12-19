@@ -94,7 +94,7 @@ ML.NET은 이미지를 분류하는 다양한 방법을 제공합니다. 이 자
 ### <a name="prepare-and-understand-the-data"></a>데이터 준비 및 이해
 
 > [!NOTE]
-> 이 자습서의 데이터 세트는 Maguire, Marc, Dorafshan, Sattar 및 Thomas, Robert J., “SDNET2018: A concrete crack image dataset for machine learning applications”(기계 학습 애플리케이션의 콘크리트 금 이미지 데이터 세트)(2018)에서 가져온 것입니다. 모든 데이터 세트를 살펴봅니다. 논문 48입니다. https://digitalcommons.usu.edu/all_datasets/48
+> 이 자습서의 데이터 세트는 Maguire, Marc, Dorafshan, Sattar 및 Thomas, Robert J., “SDNET2018: A concrete crack image dataset for machine learning applications”(기계 학습 애플리케이션의 콘크리트 금 이미지 데이터 세트)(2018)에서 가져온 것입니다. 모든 데이터 세트를 살펴봅니다. 논문 48입니다. [https://digitalcommons.usu.edu/all_datasets/48](https://digitalcommons.usu.edu/all_datasets/48 )
 
 SDNET2018은 금이 간 콘크리트 구조물(교량 상판, 벽, 도로)과 금이 가지 않은 콘크리트 구조물에 대한 주석이 포함된 이미지 데이터 세트입니다.
 
