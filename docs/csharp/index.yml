@@ -1,0 +1,111 @@
+### YamlMime:Landing
+title: C# 설명서
+summary: .NET 플랫폼에서 C# 프로그래밍 언어를 사용하여 애플리케이션을 작성하는 방법에 대해 알아봅니다.
+metadata:
+  title: C# 문서 - 시작, 자습서, 참조.
+  description: 프로그래밍 C# 알아보기 - 초보 개발자, C#을 처음 사용하는 개발자, 숙련된 C# / .NET 개발자용
+  ms.topic: landing-page
+  ms.date: 11/19/2019
+  ms.openlocfilehash: fa778c4610dbfe8320d488098b5bfd39de8e4705
+  ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+  ms.translationtype: HT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "75303419"
+landingContent:
+- title: C#의 프로그램에 대해 알아보기
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: 온라인, 대화형 Hello world
+      url: tutorials/intro-to-csharp/hello-world.yml
+    - text: C#의 수학 및 숫자
+      url: tutorials/intro-to-csharp/numbers-in-csharp.yml
+    - text: 기본 자습서
+      url: tutorials/intro-to-csharp/index.md
+    - text: Visual Studio로 C# 앱 만들기
+      url: https://docs.microsoft.com/visualstudio/get-started/csharp/tutorial-console
+  - linkListType: video
+    links:
+    - text: C#이란?
+      url: https://channel9.msdn.com/Series/CSharp-101/What-is-C/player
+    - text: C# 101 비디오 시리즈
+      url: https://aka.ms/dotnet3-csharp
+  - linkListType: download
+    links:
+    - text: .NET Core SDK 다운로드
+      url: https://dotnet.microsoft.com/download
+- title: C# 기초
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: C# 둘러보기
+      url: tour-of-csharp/index.md
+    - text: C# 프로그램 내부
+      url: programming-guide/inside-a-program/index.md
+    - text: Main()과 명령줄 인수
+      url: programming-guide/main-and-command-args/index.md
+  - linkListType: concept
+    links:
+    - text: C# 및 .NET 형식 시스템
+      url: programming-guide/types/index.md
+    - text: LINQ(Language-Integrated Query)
+      url: linq/index.md
+    - text: Async 및 Await
+      url: programming-guide/concepts/async/index.md
+  - linkListType: tutorial
+    links:
+    - text: 개체 지향 상속
+      url: tutorials/inheritance.md
+    - text: LINQ를 사용하여 데이터 쿼리
+      url: tutorials/working-with-linq.md
+    - text: 문자열 보간을 사용하여 텍스트 형식 지정
+      url: tutorials/string-interpolation.md
+    - text: 모든 자습서 찾아보기
+      url: tutorials/index.md
+- title: C# 8.0의 새 기능
+  linkLists:
+  - linkListType: whats-new
+    links:
+    - text: C# 8.0의 새로운 기능
+      url: whats-new/csharp-8.md
+  - linkListType: overview
+    links:
+    - text: 패턴 일치
+      url: pattern-matching.md
+    - text: nullable 참조 형식
+      url: nullable-references.md
+  - linkListType: concept
+    links:
+    - text: Null 허용 여부에 대한 API 주석
+      url: nullable-attributes.md
+  - linkListType: tutorial
+    links:
+    - text: 비동기 스트림 사용 및 생성
+      url: tutorials/generate-consume-asynchronous-stream.md
+    - text: nullable 참조 형식을 사용하여 개발
+      url: tutorials/nullable-reference-types.md
+    - text: nullable 참조 형식을 사용하기 위한 기존 코드 업그레이드
+      url: tutorials/upgrade-to-nullable-references.md
+    - text: 더 많은 표현 알고리즘에 패턴 일치 사용
+      url: tutorials/pattern-matching.md
+    - text: 기본 인터페이스 멤버로 안전한 버전 인터페이스
+      url: tutorials/default-interface-methods-versions.md
+    - text: 기본 인터페이스 멤버와 기능 결합
+      url: tutorials/mixins-with-default-interface-methods.md
+    - text: 범위 및 인덱스를 사용하여 하위 집합 작업
+      url: tutorials/ranges-indexes.md
+- title: C# 언어 참조
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: 언어 참조
+      url: language-reference/index.md
+    - text: C# 키워드
+      url: language-reference/keywords/index.md
+    - text: C# 연산자
+      url: language-reference/operators/index.md
+    - text: 언어 버전 구성
+      url: language-reference/configure-language-version.md
+    - text: C# 언어 사양
+      url: ../../_csharplang/spec/introduction.md
