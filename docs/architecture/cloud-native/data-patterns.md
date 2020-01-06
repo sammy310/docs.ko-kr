@@ -2,12 +2,12 @@
 title: 클라우드 네이티브 데이터 패턴
 description: Azure 용 클라우드 네이티브 .NET 앱 설계 | 클라우드 네이티브 데이터 패턴
 ms.date: 06/30/2019
-ms.openlocfilehash: 0d251f3046fcd3f3a2f5d856a123a35d3f7ecff2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9e90409b0b633796b452cfcfecb3896e79002d4d
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73841824"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337418"
 ---
 # <a name="cloud-native-data-patterns"></a>클라우드 네이티브 데이터 패턴
 
@@ -69,7 +69,7 @@ ms.locfileid: "73841824"
 
 프로그래밍 방식으로 트랜잭션 지원을 추가 하는 일반적인 패턴은 [Saga 패턴](https://blog.couchbase.com/saga-pattern-implement-business-transactions-using-microservices-part/)입니다. 로컬 트랜잭션을 하나로 그룹화 하 고 각 트랜잭션을 순차적으로 호출 하 여 구현 합니다. 로컬 트랜잭션이 실패 하면 Saga는 작업을 중단 하 고 [보정 트랜잭션](https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction) 집합을 호출 하 여 이전 로컬 트랜잭션에의 한 변경 내용을 취소 합니다. 그림 5-9에서는 Saga 패턴을 사용 하는 실패 한 트랜잭션을 보여 줍니다.
 
-![Saga 패턴에서 롤백](./media/saga-rollback-operation.png)
+![Saga 패턴으로 롤백](./media/saga-rollback-operation.png)
 
 **그림 5-9**. 트랜잭션 롤백
 

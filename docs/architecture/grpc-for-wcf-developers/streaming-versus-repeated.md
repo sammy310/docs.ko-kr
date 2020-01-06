@@ -1,13 +1,13 @@
 ---
-title: gRPC 스트리밍 서비스 및 반복 필드-WCF 개발자를 위한 gRPC
+title: 스트리밍 서비스 및 반복 되는 필드-WCF 개발자를 위한 gRPC
 description: GRPC를 사용 하 여 데이터 컬렉션을 전달 하는 방법으로 반복 되는 필드를 스트리밍 서비스와 비교 합니다.
 ms.date: 09/02/2019
-ms.openlocfilehash: f2f13776586607ed489c45ebb324c0c5713bed99
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 46586ab08df6b136cdafb990ce8be75435a6bf6c
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73966916"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337861"
 ---
 # <a name="grpc-streaming-services-versus-repeated-fields"></a>gRPC 스트리밍 서비스 및 반복 필드
 

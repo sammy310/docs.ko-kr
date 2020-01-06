@@ -2,12 +2,12 @@
 title: Azure의 데이터 저장소
 description: Azure 용 클라우드 네이티브 .NET 앱 설계 | Azure의 데이터 저장소
 ms.date: 06/30/2019
-ms.openlocfilehash: 1a86cecf005c6dbdfda5cf4cacfafaad4711c076
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5ba05f53faf65334f6269af8ae2c54d81e6b0779
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73841896"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337462"
 ---
 # <a name="data-storage-in-azure"></a>Azure의 데이터 저장소
 
@@ -63,7 +63,7 @@ Azure SQL Database에는 성능을 최대화 하 고 운영 비용을 절감 하
 
 - 몇 초 내에 필요에 따라 [크기를 조정](https://docs.microsoft.com/azure/mysql/concepts-high-availability) 합니다.
 
-- 휴지 상태의 중요 한 데이터를 보호 하 고 이동 합니다.
+- 중요한 미사용 데이터 및 사용 데이터 보호
 
 - 최대 35 일 동안 [자동 백업](https://docs.microsoft.com/azure/mysql/concepts-backup) 및 지정 [시간 복원](https://docs.microsoft.com/azure/mysql/concepts-backup) .
 
@@ -131,9 +131,9 @@ Cosmos DB의 [다중 마스터](https://docs.microsoft.com/azure/cosmos-db/how-t
 
 - 무제한 탄력적 쓰기 및 읽기 확장성.
 
-- 전 세계의 모든 읽기 및 쓰기 가용성 99.999%
+- 전 세계의 99.999% 읽기 및 쓰기 가용성
 
-- 99 번째 백분위 수에서 10 밀리초 이내에 보장 된 읽기 및 쓰기가 제공 됩니다.
+- 99번째 백분위에서 10밀리초 미만으로 제공되는 보장된 읽기 및 쓰기
 
 내부적으로 Cosmos DB는 일관성 수준 보장 및 재정적 지원 서비스 수준 계약을 포함 하는 지역 간의 데이터 복제를 처리 합니다.
 
@@ -141,7 +141,7 @@ Cosmos DB [멀티 호 밍 api](https://docs.microsoft.com/azure/cosmos-db/distri
 
 ### <a name="multi-model-support"></a>다중 모델 지원
 
-Cosmos DB는 문서, 키-값 쌍, 넓은 열 및 그래프 표현을 포함 하 여 지원 되는 여러 NoSQL 모델을 사용 하 여 데이터와 상호 작용할 수 있도록 하는 *다중 모델 데이터 플랫폼* 입니다. 내부적으로 데이터는 문자열, 부울 및 숫자를 포함 하 여 기본 데이터 형식으로 구성 된 간단한 [구조체](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/using-structs) 형식으로 저장 됩니다. 각 요청에 대해 데이터베이스 엔진은 데이터를 선택한 모델 표현으로 변환 합니다. 전용 Cosmos DB SQL 기반 API 또는 그림 5-14에 표시 된 [호환성 api](https://www.wikiwand.com/en/Cosmos_DB) 중에서 선택할 수 있습니다.
+Cosmos DB은 문서, 키-값 쌍, 넓은 열 및 그래프 표현을 포함 하 여 지원 되는 여러 NoSQL 모델을 사용 하 여 데이터와 상호 작용할 수 있도록 하는 *다중 모델 데이터 플랫폼* 입니다. 내부적으로 데이터는 문자열, 부울 및 숫자를 포함 하 여 기본 데이터 형식으로 구성 된 간단한 [구조체](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/using-structs) 형식으로 저장 됩니다. 각 요청에 대해 데이터베이스 엔진은 데이터를 선택한 모델 표현으로 변환 합니다. 전용 Cosmos DB SQL 기반 API 또는 그림 5-14에 표시 된 [호환성 api](https://www.wikiwand.com/en/Cosmos_DB) 중에서 선택할 수 있습니다.
 
 ![Cosmos DB 공급자](./media/cosmos-db-providers.png)
 

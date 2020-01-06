@@ -2,12 +2,12 @@
 title: Azure 플랫폼 복원 력
 description: Azure 용 클라우드 네이티브 .NET 앱 설계 | Azure를 사용 하는 클라우드 인프라 복원 력
 ms.date: 06/30/2019
-ms.openlocfilehash: 02d661952c860da25442b0fa9fed0d5f93abe023
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 8b33c1cec1633c9fb25ae2b02e51f8be01c22941
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "73841260"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337383"
 ---
 # <a name="azure-platform-resiliency"></a>Azure 플랫폼 복원 력
 
@@ -26,11 +26,11 @@ ms.locfileid: "73841260"
 
 오류는 영향 범위에 따라 다릅니다. 하드웨어 오류 (예: 실패 한 디스크)는 클러스터의 단일 노드에 영향을 줄 수 있습니다. 실패 한 네트워크 스위치는 전체 서버 랙에 영향을 줄 수 있습니다. 전력 손실과 같이 일반적이 지 않은 오류는 전체 데이터 센터에 방해가 될 수 있습니다. 드물게 전체 지역을 사용할 수 없게 됩니다.
 
-[중복성](https://docs.microsoft.com/azure/architecture/guide/design-principles/redundancy) 은 응용 프로그램 복원 력을 제공 하는 한 가지 방법입니다. 필요한 정확한 중복성 수준은 비즈니스 요구 사항에 따라 다르며 시스템의 비용과 복잡도에 영향을 줍니다. 예를 들어 다중 지역 배포는 단일 지역 배포 보다 더 비용이 많이 들고 관리가 복잡 합니다. 장애 조치 (failover) 및 장애 복구를 관리 하려면 운영 절차가 필요 합니다. 추가 비용 및 복잡성은 일부 비즈니스 시나리오에 맞게 정당화 될 수 있습니다.
+[중복성](https://docs.microsoft.com/azure/architecture/guide/design-principles/redundancy) 은 응용 프로그램 복원 력을 제공 하는 한 가지 방법입니다. 필요한 정확한 중복성 수준은 비즈니스 요구 사항에 따라 다르며 시스템의 비용과 복잡도에 영향을 줍니다. 예를 들어 다중 지역 배포는 단일 지역 배포 보다 더 비용이 많이 들고 관리가 복잡 합니다. 장애 조치 (failover) 및 장애 복구를 관리 하려면 운영 절차가 필요 합니다. 추가적인 비용 및 복잡성이 타당한 비즈니스 시나리오도 있고 그렇지 않은 경우도 있습니다.
 
 중복성을 설계 하려면 응용 프로그램에서 중요 한 경로를 확인 한 다음 경로의 각 지점에서 중복성이 있는지 확인 해야 합니다. 하위 시스템이 실패 하는 경우 응용 프로그램이 다른 작업으로 장애 조치 (failover) 되나요? 마지막으로, 중복성 요구 사항을 충족 하기 위해 활용할 수 있는 Azure 클라우드 플랫폼에 기본 제공 되는 기능을 명확 하 게 이해 해야 합니다. 중복성 설계에 대 한 권장 사항은 다음과 같습니다.
 
-- *여러 서비스 인스턴스를 배포 합니다.* 응용 프로그램이 서비스의 단일 인스턴스에 종속 되는 경우 단일 실패 지점이 만들어집니다. 여러 인스턴스를 프로 비전 하면 복원 력과 확장성이 모두 향상 됩니다. Azure Kubernetes Service에서 호스트 하는 경우 Kubernetes 매니페스트 파일에서 중복 인스턴스 (복제본 집합)를 선언적으로 구성할 수 있습니다. 복제본 수 값은 포털에서 프로그래밍 방식으로 관리 하거나 자동 크기 조정 기능을 통해 관리할 수 있습니다 .이에 대해서는 뒷부분에서 설명 합니다.
+- *서비스의 여러 인스턴스를 배포합니다.* 애플리케이션이 서비스의 단일 인스턴스에 종속된 경우 단일 실패 지점이 생깁니다. 여러 인스턴스를 프로비전하면 복원력 및 확장성이 모두 개선됩니다. Azure Kubernetes Service에서 호스트 하는 경우 Kubernetes 매니페스트 파일에서 중복 인스턴스 (복제본 집합)를 선언적으로 구성할 수 있습니다. 복제본 수 값은 포털에서 프로그래밍 방식으로 관리 하거나 자동 크기 조정 기능을 통해 관리할 수 있습니다 .이에 대해서는 뒷부분에서 설명 합니다.
 
 - *부하 분산 장치 활용* 부하 분산은 응용 프로그램의 요청을 정상적인 서비스 인스턴스에 배포 하 고 자동으로 비정상 인스턴스를 회전에서 제거 합니다. Kubernetes에 배포 하는 경우 Kubernetes manifest 파일의 서비스 섹션에서 부하 분산을 지정할 수 있습니다.
 
@@ -48,7 +48,7 @@ ms.locfileid: "73841260"
 
 **그림 6-7** AKS 및 Azure Traffic Manager
 
-## <a name="design-for-scalability"></a>확장성을 위한 설계
+## <a name="design-for-scalability"></a>확장성을 위한 디자인
 
 클라우드는 크기를 thrives. 시스템 리소스를 늘리거나 줄여 시스템 부하를 해결 하는 기능은 Azure 클라우드의 주요 개념입니다. 그러나 응용 프로그램을 효과적으로 확장 하려면 응용 프로그램에 포함 하는 각 Azure 서비스의 크기 조정 기능을 이해 해야 합니다.  시스템에서 크기 조정을 효과적으로 구현 하기 위한 권장 사항은 다음과 같습니다.
 
@@ -74,17 +74,17 @@ ms.locfileid: "73841260"
 
 이전 섹션에서 프로그래밍 방식으로 다시 시도 하는 작업을 구현 하는 것이 좋습니다. 많은 Azure 서비스와 해당 클라이언트 Sdk에도 다시 시도 메커니즘이 포함 되어 있습니다. 다음 목록에서는이 책에서 설명 하는 대부분의 Azure 서비스에 대 한 다시 시도 기능을 요약 합니다.
 
-- *Azure Cosmos DB.* 클라이언트 API의 <xref:Microsoft.Azure.Documents.Client.DocumentClient> 클래스는 실패 한 시도를 자동으로 받아볼 합니다. 재시도 횟수와 최대 대기 시간을 구성할 수 있습니다. 클라이언트 API에서 throw 되는 예외는 재시도 정책 또는 일시적이 지 않은 오류를 초과 하는 요청입니다.
+- *Azure Cosmos DB.* 클라이언트 API의 <xref:Microsoft.Azure.Documents.Client.DocumentClient> 클래스는 실패 한 시도를 자동으로 받아볼 합니다. The number of retries and maximum wait time are configurable. Exceptions thrown by the client API are either requests that exceed the retry policy or non-transient errors.
 
-- *Azure Redis Cache.* Redis StackExchange 클라이언트는 실패 한 시도에서 재시도를 포함 하는 연결 관리자 클래스를 사용 합니다. 재시도 횟수, 특정 재시도 정책 및 대기 시간을 모두 구성할 수 있습니다.
+- *Azure Redis Cache.* The Redis StackExchange client uses a connection manager class that includes retries on failed attempts. The number of retries, specific retry policy and wait time are all configurable.
 
-- *Azure Service Bus.* Service Bus 클라이언트는 백오프 간격, 다시 시도 횟수 및 <xref:Microsoft.ServiceBus.RetryExponential.TerminationTimeBuffer>로 구성할 수 있는 [RetryPolicy 클래스](xref:Microsoft.ServiceBus.RetryPolicy) 를 노출 합니다 .이 클래스는 작업이 수행할 수 있는 최대 시간을 지정 합니다. 기본 정책은 시도 사이에 30 초 간격으로 재시도 하는 최대 9 번의 재시도 백오프.
+- *Azure Service Bus.* The Service Bus client exposes a [RetryPolicy class](xref:Microsoft.ServiceBus.RetryPolicy) that can be configured with a back-off interval, retry count, and <xref:Microsoft.ServiceBus.RetryExponential.TerminationTimeBuffer%2A>, which specifies the maximum time an operation can take. The default policy is nine maximum retry attempts with a 30-second backoff period between attempts.
 
-- *Azure SQL Database.* [Entity Framework Core](https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency) 라이브러리를 사용 하는 경우 다시 시도 지원이 제공 됩니다.
+- *Azure SQL Database.* Retry support is provided when using the [Entity Framework Core](https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency) library.
 
-- *Azure Storage.* 저장소 클라이언트 라이브러리는 다시 시도 작업을 지원 합니다. 전략은 Azure storage 테이블, blob 및 큐에서 다릅니다. 또한 대체 재시도는 지역 중복 기능이 사용 하도록 설정 된 경우 기본 및 보조 저장소 서비스 위치 간에 전환 됩니다.
+- *Azure Storage.* The storage client library support retry operations. The strategies vary across Azure storage tables, blobs, and queues. As well, alternate retries switch between primary and secondary storage services locations when the geo-redundancy feature is enabled.
 
-- *Azure Event Hubs.* 이벤트 허브 클라이언트 라이브러리는 구성 가능한 지 수 백오프 기능을 포함 하는 RetryPolicy 속성을 제공 합니다.
+- *Azure Event Hubs.* The Event Hub client library features a RetryPolicy property, which includes a configurable exponential backoff feature.
 
 >[!div class="step-by-step"]
 >[이전](application-resiliency-patterns.md)

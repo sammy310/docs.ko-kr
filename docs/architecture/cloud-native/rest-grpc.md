@@ -3,12 +3,12 @@ title: REST 및 gRPC
 description: GRPC, 클라우드 네이티브 응용 프로그램에서의 역할 및 HTTP REST와의 차이점에 대해 알아봅니다.
 author: robvet
 ms.date: 09/08/2019
-ms.openlocfilehash: 80960a9042b1514fb78e7a8c993a1854067407e8
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: c77343e7a594d34cbd2c00ce11281bd6bf4000c1
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73842052"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337069"
 ---
 # <a name="rest-and-grpc"></a>REST 및 gRPC
 
@@ -26,7 +26,7 @@ gRPC는 간단 하 고 성능이 뛰어난 최신 RPC 프레임 워크입니다.
 - HTTP 1.1은 한 번에 하나의 왕복 요청/응답을 처리 하는 것으로 제한 되지만, h t t p/2는 동일한 연결을 통해 멀티플렉싱 또는 여러 병렬 요청을 지원 합니다.
 - H t t p/2는 클라이언트와 서버 모두에서 동시에 통신할 수 있는 전이중 또는 양방향 통신을 지원 합니다. 클라이언트는 서버에서 응답 데이터를 다시 보낼 때 동시에 요청 데이터를 업로드할 수 있습니다.
 - 스트리밍은 HTTP/2로 기본 설정 됩니다. 즉, 요청 및 응답이 모두 대량 데이터 집합을 비동기적으로 스트리밍할 수 있습니다.
-- GRPC와 HTTP/2를 결합 하면 성능이 크게 향상 됩니다. [Windows Communication Foundation (WCF)](https://docs.microsoft.com/dotnet/framework/wcf/whats-wcf) 용어에서 grpc 성능은 [nettcp 바인딩의](https://docs.microsoft.com/dotnet/api/system.servicemodel.nettcpbinding?view=netframework-4.8)속도와 효율성을 충족 하 고 초과 합니다. 그러나 NetTCP와 달리 gRPC는 또는 VB.NET와 C# 같은 Microsoft 언어로 제한 되지 않습니다.
+- GRPC와 HTTP/2를 결합 하면 성능이 크게 향상 됩니다. [Windows Communication Foundation (WCF)](https://docs.microsoft.com/dotnet/framework/wcf/whats-wcf) 용어에서 grpc 성능은 [nettcp 바인딩의](https://docs.microsoft.com/dotnet/api/system.servicemodel.nettcpbinding?view=netframework-4.8)속도와 효율성을 충족 하 고 초과 합니다. 그러나 NetTCP와 달리 gRPC는 C# 또는 Visual Basic 같은 Microsoft 언어로 제한 되지 않습니다.
 
 gRPC는 Java, C#, Golang 및 nodejs를 비롯 한 가장 인기 있는 플랫폼에서 지원 됩니다.
 

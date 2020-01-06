@@ -4,18 +4,18 @@ description: 모듈, 처리기 및 미들웨어를 사용 하 여 HTTP 요청을
 author: danroth27
 ms.author: daroth
 ms.date: 10/11/2019
-ms.openlocfilehash: b0be6109b9226bddbb9cbe4cebf114fd2b2a6114
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 3ecc109c54f88b5b06a1474f7c6e262d426a78a9
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "73841206"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337470"
 ---
 # <a name="modules-handlers-and-middleware"></a>모듈, 처리기 및 미들웨어
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-ASP.NET Core 앱은 일련의 미들웨어를 기반으로 빌드됩니다. 미들웨어는 요청 및 응답을 처리 하기 위해 파이프라인으로 정렬 되는 처리기입니다. Web Forms 앱에서 HTTP 처리기와 모듈은 유사한 문제를 해결 합니다. ASP.NET Core 모듈, 처리기, *Global.asax.cs*및 앱 수명 주기가 미들웨어로 바뀝니다. 이 장에서는 Blazor 앱의 컨텍스트에서 미들웨어에 대해 알아봅니다.
+ASP.NET Core 앱은 일련의 *미들웨어*를 기반으로 빌드됩니다. 미들웨어는 요청 및 응답을 처리 하기 위해 파이프라인으로 정렬 되는 처리기입니다. Web Forms 앱에서 HTTP 처리기와 모듈은 유사한 문제를 해결 합니다. ASP.NET Core 모듈, 처리기, *Global.asax.cs*및 앱 수명 주기가 미들웨어로 바뀝니다. 이 장에서는 Blazor 앱의 컨텍스트에서 미들웨어에 대해 알아봅니다.
 
 ## <a name="overview"></a>개요
 
@@ -35,7 +35,7 @@ ASP.NET 4.x에는 많은 모듈이 포함 되어 있습니다. 마찬가지로 A
 
 다음 표에서는 ASP.NET Core의 대체 미들웨어 및 구성 요소를 보여 줍니다.
 
-|모듈                 |ASP.NET 4.x 모듈           |ASP.NET Core 옵션|
+|Module                 |ASP.NET 4.x 모듈           |ASP.NET Core 옵션|
 |-----------------------|-----------------------------|-------------------|
 |HTTP 오류            |`CustomErrorModule`          |[상태 코드 페이지 미들웨어](/aspnet/core/fundamentals/error-handling#usestatuscodepages)|
 |기본 문서       |`DefaultDocumentModule`      |[기본 파일 미들웨어](/aspnet/core/fundamentals/static-files#serve-a-default-document)|

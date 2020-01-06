@@ -3,12 +3,12 @@ title: 클라우드 네이티브 용 후보 앱
 description: 클라우드 기본 방법의 이점을 활용 하는 응용 프로그램의 유형 알아보기
 author: robvet
 ms.date: 08/20/2019
-ms.openlocfilehash: 328af4081d830cf1a7959a37c2155090ec4da3ff
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 2087ef0c327a82419be95552293d1b56742b73c7
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73968290"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337440"
 ---
 # <a name="candidate-apps-for-cloud-native"></a>클라우드 네이티브 용 후보 앱
 
@@ -40,7 +40,7 @@ Cloud native의 후보가 될 수 있는 응용 프로그램의 유형은 무엇
 
 **그림 1-10**. 레거시 작업을 마이그레이션하기 위한 전략
 
-심각 하지 않은 모놀리식 앱은 빠른 리프트 앤 시프트 ([클라우드 인프라 지원](https://docs.microsoft.com/dotnet/standard/modernize-with-azure-and-containers/lift-and-shift-existing-apps-azure-iaas)) 마이그레이션을 통해 주로 이점을 누릴 수 있습니다. 여기서 온-프레미스 워크 로드는 변경 없이 클라우드 기반 VM에 다시 호스트 됩니다. 이 방법은 [IaaS (Infrastructure as a Service) 모델](https://azure.microsoft.com/overview/what-is-iaas/)을 사용 합니다. Azure에는 ([Azure Migrate](https://aka.ms/azuremigrate), [Azure Site Recovery](https://azure.microsoft.com/services/site-recovery/)및 [Azure Database Migration Service](https://azure.microsoft.com/campaigns/database-migration/))와 같은 몇 가지 도구를 사용 하 여 이러한 이동을 보다 쉽게 수행할 수 있습니다. 이 전략은 몇 가지 비용 절감 효과를 얻을 수 있지만, 이러한 응용 프로그램은 일반적으로 클라우드 컴퓨팅의 이점을 활용 하기 위해 설계 되지 않았습니다.
+심각 하지 않은 모놀리식 앱은 빠른 리프트 앤 시프트 ([클라우드 인프라 지원](../modernize-with-azure-containers/lift-and-shift-existing-apps-azure-iaas.md)) 마이그레이션을 통해 주로 이점을 누릴 수 있습니다. 여기서 온-프레미스 워크 로드는 변경 없이 클라우드 기반 VM에 다시 호스트 됩니다. 이 방법은 [IaaS (Infrastructure as a Service) 모델](https://azure.microsoft.com/overview/what-is-iaas/)을 사용 합니다. Azure에는 ([Azure Migrate](https://aka.ms/azuremigrate), [Azure Site Recovery](https://azure.microsoft.com/services/site-recovery/)및 [Azure Database Migration Service](https://azure.microsoft.com/campaigns/database-migration/))와 같은 몇 가지 도구를 사용 하 여 이러한 이동을 보다 쉽게 수행할 수 있습니다. 이 전략은 몇 가지 비용 절감 효과를 얻을 수 있지만, 이러한 응용 프로그램은 일반적으로 클라우드 컴퓨팅의 이점을 활용 하기 위해 설계 되지 않았습니다.
 
 비즈니스에 중요 한 모놀리식 앱은 향상 된 리프트 앤 시프트 (*클라우드 최적화*) 마이그레이션을 활용 하는 것이 좋습니다. 이 접근 방식에는 응용 프로그램의 핵심 아키텍처를 변경 하지 않고도 핵심 클라우드 서비스를 사용할 수 있도록 하는 배포 최적화가 포함 됩니다. 예를 들어 응용 프로그램을 [컨테이너 화](https://docs.microsoft.com/virtualization/windowscontainers/about/) 하 고이 책의 뒷부분에서 설명 하는 [Azure Kubernetes Services](https://azure.microsoft.com/services/kubernetes-service/)와 같은 컨테이너 orchestrator에 배포할 수 있습니다. 클라우드에서 응용 프로그램은 데이터베이스, 메시지 큐, 모니터링 및 분산 캐싱과 같은 다른 클라우드 서비스를 사용할 수 있습니다.
 

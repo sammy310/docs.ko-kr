@@ -2,12 +2,12 @@
 title: 자체 호스팅 gRPC 응용 프로그램-WCF 개발자를 위한 gRPC
 description: ASP.NET Core gRPC 응용 프로그램을 자체 호스팅 서비스로 배포 합니다.
 ms.date: 09/02/2019
-ms.openlocfilehash: 59f6275dbf85442bca3a98a1521597ef40e9675b
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 00b4ad50eae629b5b36a890d1eecf7119386c74c
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73967220"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75545071"
 ---
 # <a name="self-hosted-grpc-applications"></a>자체 호스팅 gRPC 응용 프로그램
 
@@ -34,7 +34,7 @@ public static IHostBuilder CreateHostBuilder(string[] args) =>
 
 이제 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 상황에 맞는 메뉴 또는 .NET Core CLI에서 *게시* 를 선택 하 여 Visual Studio에서 응용 프로그램을 게시 합니다.
 
-.NET Core 응용 프로그램을 게시할 때 *프레임 워크 종속* 배포 또는 *자체 포함* 배포를 만들도록 선택할 수 있습니다. 프레임 워크 종속 배포에는 .NET Core 공유 런타임이 실행 되는 호스트에 설치 되어 있어야 합니다. 자체 포함 배포는 .NET Core 런타임 및 프레임 워크의 전체 복사본을 사용 하 여 게시 되며 모든 호스트에서 실행할 수 있습니다. 각 방법의 장점과 단점을 비롯 한 자세한 내용은 [.Net Core 응용 프로그램 배포](https://docs.microsoft.com/dotnet/core/deploying/) 설명서를 참조 하세요.
+.NET Core 응용 프로그램을 게시할 때 *프레임 워크 종속* 배포 또는 *자체 포함* 배포를 만들도록 선택할 수 있습니다. 프레임 워크 종속 배포에는 .NET Core 공유 런타임이 실행 되는 호스트에 설치 되어 있어야 합니다. 자체 포함 배포는 .NET Core 런타임 및 프레임 워크의 전체 복사본을 사용 하 여 게시 되며 모든 호스트에서 실행할 수 있습니다. 각 방법의 장점과 단점을 비롯 한 자세한 내용은 [.Net Core 응용 프로그램 배포](../../core/deploying/index.md) 설명서를 참조 하세요.
 
 호스트에 .NET Core 3.0 런타임을 설치 하지 않아도 되는 자체 포함 된 응용 프로그램 빌드를 게시 하려면 `-r` (또는 `--runtime`) 플래그를 사용 하 여 응용 프로그램에 포함 될 런타임을 지정 합니다.
 
@@ -83,7 +83,7 @@ public static IHostBuilder CreateHostBuilder(string[] args) =>
 dotnet publish -c Release -r linux-x64 -o ./publish
 ```
 
-`publish` 디렉터리의 전체 내용을 Linux 호스트의 설치 폴더에 복사 합니다. 서비스를 등록 하려면 "단위 파일" 이라고 하는 특수 파일을 `/etc/systemd/system` 디렉터리에 추가 해야 합니다. 이 폴더에 파일을 만들려면 루트 권한이 필요 합니다. 사용할 `systemd` 식별자를 사용 하 여 파일의 이름을로, `.service` 확장을 선택 합니다. 예를 들어 `/etc/systemd/system/myapp.service`과 같은 형식입니다.
+`publish` 디렉터리의 전체 내용을 Linux 호스트의 설치 폴더에 복사 합니다. 서비스를 등록 하려면 "단위 파일" 이라고 하는 특수 파일을 `/etc/systemd/system` 디렉터리에 추가 해야 합니다. 이 폴더에 파일을 만들려면 루트 권한이 필요 합니다. 사용할 `systemd` 식별자를 사용 하 여 파일의 이름을로, `.service` 확장을 선택 합니다. 예: `/etc/systemd/system/myapp.service`.
 
 이 예제와 같이 서비스 파일에는 INI 형식이 사용 됩니다.
 
@@ -150,7 +150,7 @@ sudo journalctl -u myapp
 
 프로덕션 환경에서 gRPC 응용 프로그램을 실행 하는 경우 신뢰할 수 있는 CA (인증 기관)의 TLS 인증서를 사용 해야 합니다. 이 CA는 공용 CA 또는 조직에 대 한 내부 ca 일 수 있습니다.
 
-Windows 호스트에서 [X509Store 클래스](https://docs.microsoft.com/dotnet/api/system.security.cryptography.x509certificates.x509store?view=netcore-3.0)를 사용 하 여 보안 [인증서 저장소](https://docs.microsoft.com/windows/win32/seccrypto/managing-certificates-with-certificate-stores) 에서 인증서를 로드할 수 있습니다. `X509Store` 클래스는 일부 Linux 호스트의 OpenSSL 키 저장소와 함께 사용할 수도 있습니다.
+Windows 호스트에서 <xref:System.Security.Cryptography.X509Certificates.X509Store> 클래스를 사용 하 여 보안 [인증서 저장소](/windows/win32/seccrypto/managing-certificates-with-certificate-stores) 에서 인증서를 로드할 수 있습니다. `X509Store` 클래스는 일부 Linux 호스트의 OpenSSL 키 저장소와 함께 사용할 수도 있습니다.
 
 [X509Certificate2 생성자](https://docs.microsoft.com/dotnet/api/system.security.cryptography.x509certificates.x509certificate.-ctor?view=netcore-3.0)중 하나를 사용 하 여 인증서를 만들 수도 있습니다 (예: 강력한 암호로 보호 되는 `.pfx` 파일) 또는 [Azure Key Vault](https://azure.microsoft.com/services/key-vault/)과 같은 보안 저장소 서비스에서 검색 된 이진 데이터에서 인증서를 만들 수도 있습니다.
 

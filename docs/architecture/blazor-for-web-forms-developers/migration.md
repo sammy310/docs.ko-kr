@@ -4,12 +4,12 @@ description: 기존 ASP.NET Web Forms 앱을 Blazor로 마이그레이션하는 
 author: twsouthwick
 ms.author: tasou
 ms.date: 09/19/2019
-ms.openlocfilehash: b6604e000eaf79bcd8da15d72a3d85713c620851
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 52f463c66c2980d59a93f3210b3cfd825bec33da
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73842040"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337445"
 ---
 # <a name="migrate-from-aspnet-web-forms-to-blazor"></a>ASP.NET Web Forms에서 Blazor로 마이그레이션
 
@@ -627,7 +627,7 @@ EShop에는 다음과 같은 EF 관련 변경이 필요 했습니다.
 
 데이터 집합 바인딩에 대 한 기본 지원이 없어도 Blazor는 Razor 페이지에서 유연 하 고 강력한 C# 기능을 제공 합니다. 예를 들어 계산을 수행 하 고 결과를 표시할 수 있습니다. Blazor의 데이터 패턴에 대 한 자세한 내용은 [데이터 액세스](data.md) 챕터를 참조 하세요.
 
-## <a name="architectural-changes"></a>아키텍처 변경
+## <a name="architectural-changes"></a>아키텍처 자체가 변경
 
 마지막으로 Blazor로 마이그레이션할 때 고려해 야 할 몇 가지 중요 한 아키텍처 차이점이 있습니다. 이러한 변경 내용 중 상당수는 .NET Core 또는 ASP.NET Core을 기반으로 하는 모든 항목에 적용 됩니다.
 
