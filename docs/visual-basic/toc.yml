@@ -5,8 +5,6 @@
 - name: 시작
   href: getting-started/index.md
   items:
-    - name: Visual Studio의 Visual Basic 주요 변경 내용
-      href: getting-started/breaking-changes-in-visual-studio.md
     - name: Visual Basic 프로그래머를 위한 추가 리소스
       href: getting-started/additional-resources.md
 - name: 애플리케이션 개발
@@ -1285,7 +1283,7 @@
           href: language-reference/error-messages/xml-literals-and-xml-properties-are-not-supported-in-embedded-code-in-aspnet.md
         - name: XML 네임스페이스 URI '<uri>'는 'xmlns'에만 바인딩할 수 있습니다.
           href: language-reference/error-messages/xml-namespace-uri-uri-can-be-bound-only-to-xmlns.md
-- name: 참조
+- name: 참고
   href: reference/index.md
   items:
     - name: 명령줄 컴파일러

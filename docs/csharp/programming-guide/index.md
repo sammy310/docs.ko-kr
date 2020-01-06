@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Visual C#, programming concepts
 - C# language, concepts
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
-ms.openlocfilehash: ad4e953941e189e6ed9baefb6cb07e7955000c7f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: de40369a661c347a2125075e820420af4eb71cac
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283111"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337254"
 ---
 # <a name="c-programming-guide"></a>C# 프로그래밍 가이드
 
@@ -40,8 +40,6 @@ ms.locfileid: "74283111"
   
  [인터페이스](./interfaces/index.md)  
 
- [열거형 형식](./enumeration-types.md)  
-  
  [대리자](./delegates/index.md)  
 
  [배열](./arrays/index.md)  
@@ -86,6 +84,6 @@ ms.locfileid: "74283111"
   
  [리플렉션](./concepts/reflection.md)  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 참조](../language-reference/index.md)
