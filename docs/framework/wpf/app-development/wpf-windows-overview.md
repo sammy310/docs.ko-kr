@@ -28,18 +28,18 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: 87d5ff67a9e95c5ec5385802d09d667ee8b6e0f9
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 3bc31391d30b0724a480152aa7f1d0dc93380b8c
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740683"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636408"
 ---
 # <a name="wpf-windows-overview"></a>WPF 창 개요
-사용자는 Windows를 통해 Windows Presentation Foundation (WPF) 독립 실행형 응용 프로그램과 상호 작용 합니다. 창의 기본 용도는 데이터를 시각화하는 콘텐츠를 호스트하고 사용자가 데이터와 상호 작용할 수 있도록 하는 것입니다. 독립 실행형 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램은 <xref:System.Windows.Window> 클래스를 사용 하 여 자체 창을 제공 합니다. 이 항목에서는 독립 실행형 응용 프로그램에서 windows를 만들고 관리 하는 기본적인 사항을 다루기 전에 <xref:System.Windows.Window> 소개 합니다.  
+사용자는 Windows를 통해 Windows Presentation Foundation (WPF) 독립 실행형 응용 프로그램과 상호 작용 합니다. 창의 기본 용도는 데이터를 시각화하는 콘텐츠를 호스트하고 사용자가 데이터와 상호 작용할 수 있도록 하는 것입니다. 독립 실행형 WPF 응용 프로그램은 <xref:System.Windows.Window> 클래스를 사용 하 여 자체 창을 제공 합니다. 이 항목에서는 독립 실행형 응용 프로그램에서 windows를 만들고 관리 하는 기본적인 사항을 다루기 전에 <xref:System.Windows.Window> 소개 합니다.  
   
 > [!NOTE]
-> Xbap (XAML 브라우저 응용 프로그램) 및 느슨한 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 페이지를 비롯 한 브라우저에서 호스팅되는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램은 자체 창을 제공 하지 않습니다. 대신 Windows Internet Explorer에서 제공 하는 windows에서 호스팅됩니다. [WPF XAML 브라우저 응용 프로그램 개요](wpf-xaml-browser-applications-overview.md)를 참조 하세요.  
+> Xbap (XAML 브라우저 응용 프로그램) 및 느슨한 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 페이지를 비롯 한 브라우저에서 호스팅되는 WPF 응용 프로그램은 자체 창을 제공 하지 않습니다. 대신 Windows Internet Explorer에서 제공 하는 windows에서 호스팅됩니다. [WPF XAML 브라우저 응용 프로그램 개요](wpf-xaml-browser-applications-overview.md)를 참조 하세요.  
 
 <a name="TheWindowClass"></a>   
 ## <a name="the-window-class"></a>Window 클래스  
@@ -49,7 +49,7 @@ ms.locfileid: "73740683"
   
  창은 비클라이언트 영역과 클라이언트 영역의 두 영역으로 나뉩니다.  
   
- 창의 *비클라이언트 영역은* [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]에 의해 구현 되며, 다음을 포함 하 여 대부분의 창에 공통적인 창 부분을 포함 합니다.  
+ 창의 *비클라이언트 영역은* WPF에서 구현 되며, 다음을 포함 하 여 대부분의 창에 공통적인 창 부분을 포함 합니다.  
   
 - 테두리.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "73740683"
   
  창의 *클라이언트 영역은* 창의 비클라이언트 영역에 있는 영역이 며 개발자가 메뉴 모음, 도구 모음 및 컨트롤과 같은 응용 프로그램 관련 콘텐츠를 추가 하는 데 사용 됩니다.  
   
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]에서 창은 다음 작업을 수행 하는 데 사용 하는 <xref:System.Windows.Window> 클래스로 캡슐화 됩니다.  
+ WPF에서 창은 다음 작업을 수행 하는 데 사용 하는 <xref:System.Windows.Window> 클래스에 의해 캡슐화 됩니다.  
   
 - 창을 표시합니다.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "73740683"
   
 <a name="DefiningAWindow"></a>   
 ## <a name="implementing-a-window"></a>창 구현  
- 일반적인 창의 구현은 모양과 동작으로 구성 되며, *모양은* 창이 사용자에 게 표시 되는 방식을 정의 하 고 *동작은* 사용자가 상호 작용할 때 창이 작동 하는 방식을 정의 합니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]코드 또는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 태그 중 하나를 사용 하 여 창의 모양 및 동작을 구현할 수 있습니다.  
+ 일반적인 창의 구현은 모양과 동작으로 구성 되며, *모양은* 창이 사용자에 게 표시 되는 방식을 정의 하 고 *동작은* 사용자가 상호 작용할 때 창이 작동 하는 방식을 정의 합니다. WPF에서 코드 또는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 태그를 사용 하 여 창의 모양 및 동작을 구현할 수 있습니다.  
   
  그러나 일반적으로 창의 모양은 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 태그를 사용 하 여 구현 되며, 해당 동작은 다음 예제와 같이 코드를 사용 하 여 구현 됩니다.  
   
@@ -124,7 +124,7 @@ ms.locfileid: "73740683"
 </Project>  
 ```  
   
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램을 빌드하는 방법에 대 한 자세한 내용은 [WPF 응용 프로그램 빌드](building-a-wpf-application-wpf.md)를 참조 하세요.  
+ WPF 응용 프로그램을 빌드하는 방법에 대 한 자세한 내용은 [Wpf 응용 프로그램 빌드](building-a-wpf-application-wpf.md)를 참조 하세요.  
   
 <a name="WindowLifetime"></a>   
 ## <a name="window-lifetime"></a>창 수명  
@@ -190,7 +190,7 @@ ms.locfileid: "73740683"
   
 - 현재 활성 창이 활성 상태로 유지됩니다.  
   
- 그러나 사용자가 클라이언트 영역이나 비클라이언트 영역을 클릭하여 창을 활성화하면 해당 창이 활성화됩니다. 이 경우:  
+ 그러나 사용자가 클라이언트 영역이나 비클라이언트 영역을 클릭하여 창을 활성화하면 해당 창이 활성화됩니다. 이 경우 처리 방식은 다음과 같습니다.  
   
 - 창이 활성화됩니다.  
   
@@ -262,7 +262,7 @@ ms.locfileid: "73740683"
  <xref:System.Windows.Window.Closing> 처리 되지 않거나 처리 되었지만 취소 되지 않은 경우 창이 닫힙니다. 창이 실제로 닫히기 직전에 <xref:System.Windows.Window.Closed> 발생 합니다. 이 시점에서는 창 닫기를 방지할 수 없습니다.  
   
 > [!NOTE]
-> 주 응용 프로그램 창이 닫히거나 (<xref:System.Windows.Application.MainWindow%2A>참조), 마지막 창이 닫히면 응용 프로그램은 자동으로 종료 되도록 구성할 수 있습니다. 자세한 내용은 <xref:System.Windows.Application.ShutdownMode%2A>를 참조하십시오.  
+> 주 응용 프로그램 창이 닫히거나 (<xref:System.Windows.Application.MainWindow%2A>참조), 마지막 창이 닫히면 응용 프로그램은 자동으로 종료 되도록 구성할 수 있습니다. 자세한 내용은 <xref:System.Windows.Application.ShutdownMode%2A>을 참조하세요.  
   
  비클라이언트 및 클라이언트 영역에서 제공 하는 메커니즘을 통해 창을 명시적으로 닫을 수 있지만, 다음을 포함 하 여 응용 프로그램이 나 창의 다른 부분에서 동작의 결과로 창이 암시적으로 닫힐 수도 있습니다.  
   
@@ -272,7 +272,7 @@ ms.locfileid: "73740683"
   
 - 주 응용 프로그램 창이 닫혀 <xref:System.Windows.Application.ShutdownMode%2A> <xref:System.Windows.ShutdownMode.OnMainWindowClose>됩니다.  
   
-- <xref:System.Windows.Application.Shutdown%2A>가 호출 됩니다.  
+- <xref:System.Windows.Application.Shutdown%2A>가 호출된 경우  
   
 > [!NOTE]
 > 창을 닫은 뒤에는 다시 열 수 없습니다.  
@@ -293,7 +293,7 @@ ms.locfileid: "73740683"
   
  <xref:System.Windows.Window.WindowStartupLocation%2A> 속성을 다음 <xref:System.Windows.WindowStartupLocation> 열거형 값 중 하나로 설정 하 여 처음 표시 될 때 <xref:System.Windows.Window>의 초기 위치를 지정할 수도 있습니다.  
   
-- <xref:System.Windows.WindowStartupLocation.CenterOwner>(기본값)  
+- <xref:System.Windows.WindowStartupLocation.CenterOwner>(기본)  
   
 - <xref:System.Windows.WindowStartupLocation.CenterScreen>  
   
@@ -325,13 +325,13 @@ ms.locfileid: "73740683"
   
  창의 너비와 높이를 창 내용의 크기에 맞게 조정 하려는 경우에는 다음 값을 포함 하는 <xref:System.Windows.Window.SizeToContent%2A> 속성을 사용할 수 있습니다.  
   
-- <xref:System.Windows.SizeToContent.Manual> 아무런 영향이 없습니다(기본값).  
+- <xref:System.Windows.SizeToContent.Manual>. 아무런 영향이 없습니다(기본값).  
   
-- <xref:System.Windows.SizeToContent.Width> 콘텐츠 너비에 맞게 <xref:System.Windows.FrameworkElement.MinWidth%2A>와 <xref:System.Windows.FrameworkElement.MaxWidth%2A>를 모두 설정 하는 것과 동일한 효과가 있습니다.  
+- <xref:System.Windows.SizeToContent.Width>. 콘텐츠 너비에 맞게 <xref:System.Windows.FrameworkElement.MinWidth%2A>와 <xref:System.Windows.FrameworkElement.MaxWidth%2A>를 모두 설정 하는 것과 동일한 효과가 있습니다.  
   
-- <xref:System.Windows.SizeToContent.Height> 콘텐츠 높이에 맞게 <xref:System.Windows.FrameworkElement.MinHeight%2A>와 <xref:System.Windows.FrameworkElement.MaxHeight%2A>를 모두 설정 하는 것과 동일한 효과가 있습니다.  
+- <xref:System.Windows.SizeToContent.Height>. 콘텐츠 높이에 맞게 <xref:System.Windows.FrameworkElement.MinHeight%2A>와 <xref:System.Windows.FrameworkElement.MaxHeight%2A>를 모두 설정 하는 것과 동일한 효과가 있습니다.  
   
-- <xref:System.Windows.SizeToContent.WidthAndHeight> 콘텐츠 너비와 높이에 맞게 <xref:System.Windows.FrameworkElement.MinHeight%2A>와 <xref:System.Windows.FrameworkElement.MaxHeight%2A>를 모두 설정 하는 것과 동일한 효과를 적용 하 고 <xref:System.Windows.FrameworkElement.MinWidth%2A> 및 <xref:System.Windows.FrameworkElement.MaxWidth%2A>을 모두 콘텐츠의 너비로 설정 합니다.  
+- <xref:System.Windows.SizeToContent.WidthAndHeight>. 콘텐츠 너비와 높이에 맞게 <xref:System.Windows.FrameworkElement.MinHeight%2A>와 <xref:System.Windows.FrameworkElement.MaxHeight%2A>를 모두 설정 하는 것과 동일한 효과를 적용 하 고 <xref:System.Windows.FrameworkElement.MinWidth%2A> 및 <xref:System.Windows.FrameworkElement.MaxWidth%2A>을 모두 콘텐츠의 너비로 설정 합니다.  
   
  다음 예는 창이 처음 표시될 때 콘텐츠에 맞도록 수직 및 수평으로 크기를 자동으로 조정하는 창을 보여 줍니다.  
   
@@ -381,7 +381,7 @@ ms.locfileid: "73740683"
   
  다음 <xref:System.Windows.WindowState> 열거형 값 중 하나를 가질 수 있는 <xref:System.Windows.Window.WindowState%2A> 속성을 설정 하 여 창의 상태를 구성할 수 있습니다.  
   
-- <xref:System.Windows.WindowState.Normal>(기본값)  
+- <xref:System.Windows.WindowState.Normal>(기본)  
   
 - <xref:System.Windows.WindowState.Maximized>  
   
@@ -401,7 +401,7 @@ ms.locfileid: "73740683"
 
 <a name="Resize_Mode"></a>   
 ### <a name="resize-mode"></a>크기 조정 모드  
- <xref:System.Windows.Window.WindowStyle%2A> 속성에 따라 사용자가 창의 크기를 조정 하는 방법 (및)을 제어할 수 있습니다. 창 스타일 선택은 사용자가 마우스를 사용 하 여 창의 테두리를 끌어 창의 크기를 조정할 수 있는지 여부, **최소화**, **최대화**및 **크기 조정** 단추가 비클라이언트 영역에 나타나는지 여부 및 표시 되는지 여부에 영향을 줍니다. 사용.  
+ <xref:System.Windows.Window.WindowStyle%2A> 속성에 따라 사용자가 창의 크기를 조정 하는 방법 (및)을 제어할 수 있습니다. 창 스타일 선택은 사용자가 마우스를 사용 하 여 창의 테두리를 끌어 창의 크기를 조정할 수 있는지 여부, **최소화**, **최대화**및 **크기 조정** 단추가 비클라이언트 영역에 표시 되는지 여부, 표시 되는 경우 설정 여부에 따라 달라 집니다.  
   
  다음 <xref:System.Windows.ResizeMode> 열거형 값 중 하나일 수 있는 <xref:System.Windows.Window.ResizeMode%2A> 속성을 설정 하 여 창의 크기를 조정 하는 방법을 구성할 수 있습니다.  
   
@@ -409,7 +409,7 @@ ms.locfileid: "73740683"
   
 - <xref:System.Windows.ResizeMode.CanMinimize>  
   
-- <xref:System.Windows.ResizeMode.CanResize>(기본값)  
+- <xref:System.Windows.ResizeMode.CanResize>(기본)  
   
 - <xref:System.Windows.ResizeMode.CanResizeWithGrip>  
   
@@ -427,7 +427,7 @@ ms.locfileid: "73740683"
   
 - <xref:System.Windows.WindowStyle.None>  
   
-- <xref:System.Windows.WindowStyle.SingleBorderWindow>(기본값)  
+- <xref:System.Windows.WindowStyle.SingleBorderWindow>(기본)  
   
 - <xref:System.Windows.WindowStyle.ThreeDBorderWindow>  
   

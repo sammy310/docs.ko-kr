@@ -9,12 +9,12 @@ helpviewer_keywords:
 - certificates [WCF], making X.509 certificates accessible to WCF
 - X.509 certificates [WCF], making accessible to WCF
 ms.assetid: a54e407c-c2b5-4319-a648-60e43413664b
-ms.openlocfilehash: abd074701ca667abe4590f4f17a044b34325e874
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 7f24966f06730e62ea7a8967c3930f05ca78f50e
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837404"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347076"
 ---
 # <a name="how-to-make-x509-certificates-accessible-to-wcf"></a>방법: WCF에서 X.509 인증서에 액세스할 수 있도록 설정
 Windows Communication Foundation (WCF)에서 x.509 인증서에 액세스할 수 있도록 하려면 응용 프로그램 코드에서 인증서 저장소 이름 및 위치를 지정 해야 합니다. 상황에 따라, X.509 인증서와 연결된 프라이빗 키를 포함하는 파일에 대한 액세스가 프로세스 ID에 필요할 수 있습니다. 인증서 저장소에 있는 x.509 인증서와 연결 된 개인 키를 가져오려면 WCF에서이 작업을 수행할 수 있는 권한이 있어야 합니다. 기본적으로 소유자와 시스템 계정에서만 인증서의 프라이빗 키에 액세스할 수 있습니다.  
@@ -59,7 +59,7 @@ Windows Communication Foundation (WCF)에서 x.509 인증서에 액세스할 수
         |--------------|----------------------|  
         |클라이언트(콘솔 또는 WinForms 애플리케이션).|현재 로그인한 사용자.|  
         |자체 호스팅된 서비스.|현재 로그인한 사용자.|  
-        |IIS 6.0 ([!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]) 또는 IIS 7.0 (Windows Vista)에서 호스트 되는 서비스입니다.|NETWORK SERVICE|  
+        |IIS 6.0 (Windows Server 2003) 또는 IIS 7.0 (Windows Vista)에서 호스트 되는 서비스입니다.|NETWORK SERVICE|  
         |IIS 5.X([!INCLUDE[wxp](../../../../includes/wxp-md.md)])에서 호스팅되는 서비스.|Machine.config 파일의 `<processModel>` 요소로 제어됩니다. 기본 계정은 ASPNET입니다.|  
   
     5. Icacls와 같은 도구를 사용 하 여 개인 키가 포함 된 파일에 대 한 읽기 권한을 WCF가 실행 중인 계정에 부여 합니다.  

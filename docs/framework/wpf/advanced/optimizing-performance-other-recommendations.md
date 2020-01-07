@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ScrollBarVisibility enumeration [WPF]
 - brushes [WPF], performance
 ms.assetid: d028cc65-7e97-4a4f-9859-929734eaf40d
-ms.openlocfilehash: 6b4a5379145ebdffde0d5b76d8c7b9ab57261007
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: b6d99d90a3da232e1873ebe8433e01ceb2977de6
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975783"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636434"
 ---
 # <a name="optimizing-performance-other-recommendations"></a>성능 최적화: 기타 권장 사항
 <a name="introduction"></a> 이 항목에서는 [WPF 애플리케이션 성능 최적화](optimizing-wpf-application-performance.md) 섹션의 항목 내용에 추가되는 성능 권장 사항을 제공합니다.  
@@ -64,13 +64,13 @@ ms.locfileid: "73975783"
   
 <a name="Avoid_Using_ScrollBarVisibility"></a>   
 ## <a name="avoid-using-scrollbarvisibilityauto"></a>ScrollBarVisibility=Auto 사용 안 함  
- 가능 하면 `HorizontalScrollBarVisibility` 및 `VerticalScrollBarVisibility` 속성에 <xref:System.Windows.Controls.ScrollBarVisibility.Auto?displayProperty=nameWithType> 값을 사용 하지 마십시오. 이러한 속성은 <xref:System.Windows.Controls.RichTextBox>, <xref:System.Windows.Controls.ScrollViewer> 및 <xref:System.Windows.Controls.TextBox> 개체에 대해 정의 되 고 <xref:System.Windows.Controls.ListBox> 개체의 연결 된 속성으로 정의 됩니다. 대신 <xref:System.Windows.Controls.ScrollBarVisibility>를 <xref:System.Windows.Controls.ScrollBarVisibility.Disabled>, <xref:System.Windows.Controls.ScrollBarVisibility.Hidden> 또는 <xref:System.Windows.Controls.ScrollBarVisibility.Visible>로 설정 합니다.  
+ 가능 하면 `HorizontalScrollBarVisibility` 및 `VerticalScrollBarVisibility` 속성에 <xref:System.Windows.Controls.ScrollBarVisibility.Auto?displayProperty=nameWithType> 값을 사용 하지 마십시오. 이러한 속성은 <xref:System.Windows.Controls.RichTextBox>, <xref:System.Windows.Controls.ScrollViewer>및 <xref:System.Windows.Controls.TextBox> 개체에 대해 정의 되 고 <xref:System.Windows.Controls.ListBox> 개체의 연결 된 속성으로 정의 됩니다. 대신 <xref:System.Windows.Controls.ScrollBarVisibility>를 <xref:System.Windows.Controls.ScrollBarVisibility.Disabled>, <xref:System.Windows.Controls.ScrollBarVisibility.Hidden>또는 <xref:System.Windows.Controls.ScrollBarVisibility.Visible>로 설정 합니다.  
   
  <xref:System.Windows.Controls.ScrollBarVisibility.Auto> 값은 공간이 제한 되 고 필요한 경우 스크롤 막대가 표시 되어야 하는 경우에 적합 합니다. 예를 들어이 <xref:System.Windows.Controls.ScrollBarVisibility> 값을 사용 하는 경우에는 수백 개의 텍스트가 포함 된 <xref:System.Windows.Controls.TextBox> 아닌 30 개 항목 <xref:System.Windows.Controls.ListBox> 사용 하는 것이 유용할 수 있습니다.  
   
 <a name="FontCache"></a>   
 ## <a name="configure-font-cache-service-to-reduce-start-up-time"></a>시작 시간을 줄이도록 글꼴 캐시 서비스 구성  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 글꼴 캐시 서비스는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 애플리케이션 간에 글꼴 데이터를 공유합니다. 서비스가 실행되고 있지 않은 경우 처음 실행하는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 애플리케이션에서 이 서비스가 시작됩니다. Windows Vista를 사용 하는 경우 "Windows Presentation Foundation (WPF) Font Cache 3.0.0.0" 서비스를 "수동" (기본값)에서 "자동 (지연 된 시작)"으로 설정 하 여 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램의 초기 시작 시간을 줄일 수 있습니다.  
+ WPF 글꼴 캐시 서비스는 WPF 응용 프로그램 간에 글꼴 데이터를 공유 합니다. 실행 하는 첫 번째 WPF 응용 프로그램은 서비스가 아직 실행 되 고 있지 않은 경우이 서비스를 시작 합니다. Windows Vista를 사용 하는 경우 "Windows Presentation Foundation (WPF) Font Cache 3.0.0.0" 서비스를 "수동" (기본값)에서 "자동 (지연 된 시작)"으로 설정 하 여 WPF 응용 프로그램의 초기 시작 시간을 줄일 수 있습니다.  
   
 ## <a name="see-also"></a>참조
 
@@ -80,6 +80,6 @@ ms.locfileid: "73975783"
 - [2차원 그래픽 및 이미징](optimizing-performance-2d-graphics-and-imaging.md)
 - [개체 동작](optimizing-performance-object-behavior.md)
 - [애플리케이션 리소스](optimizing-performance-application-resources.md)
-- [텍스트](optimizing-performance-text.md)
+- [Text](optimizing-performance-text.md)
 - [데이터 바인딩](optimizing-performance-data-binding.md)
 - [애니메이션에 대한 유용한 정보](../graphics-multimedia/animation-tips-and-tricks.md)

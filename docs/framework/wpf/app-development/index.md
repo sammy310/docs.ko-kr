@@ -1,18 +1,18 @@
 ---
-title: 애플리케이션 개발
+title: 응용 프로그램 개발
 ms.date: 01/26/2018
 helpviewer_keywords:
 - WPF [WPF], about application development
 - application development [WPF], about
 ms.assetid: 2996ce5e-81e9-49ae-881b-952db3dd1b7e
-ms.openlocfilehash: ce37eecf7edf2adcc4f56af27a5c658400f7abba
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: b0bdf49e0bb3d9bfa3fc4e7fd94aa68ee4ea0bb3
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73420648"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636395"
 ---
-# <a name="application-development"></a>애플리케이션 개발
+# <a name="application-development"></a>응용 프로그램 개발
 <a name="introduction"></a>WPF (Windows Presentation Foundation)는 다음과 같은 종류의 응용 프로그램을 개발 하는 데 사용할 수 있는 프레젠테이션 프레임 워크입니다.  
   
 - 독립 실행형 응용 프로그램 (클라이언트 컴퓨터에 설치 되 고 실행 되는 실행 가능 어셈블리로 빌드된 기존 스타일의 Windows 응용 프로그램).  
@@ -26,11 +26,11 @@ ms.locfileid: "73420648"
 > [!NOTE]
 > Windows 서비스에서 WPF 유형을 사용해서는 안 됩니다. Windows 서비스에서 이러한 기능을 사용하려고 하면 예상대로 작동하지 않을 수 있습니다.  
   
- 이 애플리케이션 집합을 빌드하려면 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]에서 서비스 호스트를 구현합니다. 이 항목에서 이러한 서비스의 개요를 제공하며 자세한 정보를 찾을 수 있습니다.  
+ WPF는 이러한 응용 프로그램 집합을 빌드하기 위해 서비스 호스트를 구현 합니다. 이 항목에서 이러한 서비스의 개요를 제공하며 자세한 정보를 찾을 수 있습니다.  
 
 <a name="Application_Management"></a>   
-## <a name="application-management"></a>애플리케이션 관리  
- 실행 가능한 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 애플리케이션에는 일반적으로 다음을 포함하는 핵심 기능 집합이 필요합니다.  
+## <a name="application-management"></a>응용 프로그램 관리  
+ 실행 가능한 WPF 응용 프로그램에는 일반적으로 다음을 포함 하는 핵심 기능 집합이 필요 합니다.  
   
 - 일반적인 애플리케이션 인프라 만들기 및 관리(시스템 및 입력 메시지를 수신하는 Windows 메시지 루프 및 진입점 메서드 만들기 포함)  
   
@@ -54,13 +54,13 @@ ms.locfileid: "73420648"
   
 <a name="WPF_Application_Resource__Content__and_Data_Files"></a>   
 ## <a name="wpf-application-resource-content-and-data-files"></a>WPF 애플리케이션 리소스, 콘텐츠 및 데이터 파일  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]는 포함 리소스에 대 한 Microsoft .NET Framework의 핵심 지원을 확장 하 여 세 가지 비실행 데이터 파일 (리소스, 콘텐츠 및 데이터)에 대 한 지원을 제공 합니다. 자세한 내용은 [WPF 애플리케이션 리소스, 콘텐츠 및 데이터 파일](wpf-application-resource-content-and-data-files.md)을 참조하세요.  
+ WPF는 리소스, 콘텐츠 및 데이터의 세 가지 종류의 비실행 데이터 파일에 대 한 지원을 포함 하는 포함 리소스에 대 한 Microsoft .NET Framework의 핵심 지원을 확장 합니다. 자세한 내용은 [WPF 애플리케이션 리소스, 콘텐츠 및 데이터 파일](wpf-application-resource-content-and-data-files.md)을 참조하세요.  
   
  WPF 실행 불가능 데이터 파일에 대 한 지원의 핵심 구성 요소는 고유한 URI를 사용 하 여 해당 파일을 식별 하 고 로드 하는 기능입니다. 자세한 내용은 [WPF의 Pack URI](pack-uris-in-wpf.md)를 참조하세요.  
   
 <a name="Windows_and_Dialog_Boxes"></a>   
 ## <a name="windows-and-dialog-boxes"></a>창 및 대화 상자  
- 사용자는 창을 통해 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 독립 실행형 애플리케이션과 상호 작용합니다. 창의 목적은 애플리케이션 콘텐츠를 호스트하고 일반적으로 사용자가 콘텐츠와 상호 작용할 수 있도록 애플리케이션 기능을 노출하는 것입니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]에서 창은 다음을 지원하는 <xref:System.Windows.Window> 클래스에 의해 캡슐화됩니다.  
+ 사용자는 windows를 통해 WPF 독립 실행형 응용 프로그램과 상호 작용 합니다. 창의 목적은 애플리케이션 콘텐츠를 호스트하고 일반적으로 사용자가 콘텐츠와 상호 작용할 수 있도록 애플리케이션 기능을 노출하는 것입니다. WPF에서 windows는 다음을 지 원하는 <xref:System.Windows.Window> 클래스에 캡슐화 됩니다.  
   
 - 창 만들기 및 표시  
   
@@ -74,7 +74,7 @@ ms.locfileid: "73420648"
   
  <xref:System.Windows.Window>는 대화 상자로 알려진 특별한 유형의 창을 만드는 기능을 지원합니다. 모달 및 모덜리스 유형의 대화 상자를 모두 만들 수 있습니다.  
   
- 편의를 위해 응용 프로그램에 대 한 재사용 및 일관적인 사용자 환경의 이점은 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] <xref:Microsoft.Win32.OpenFileDialog>, <xref:Microsoft.Win32.SaveFileDialog>및 <xref:System.Windows.Controls.PrintDialog>의 세 가지 일반적인 Windows 대화 상자를 노출 합니다.  
+ 편의를 위해 응용 프로그램에 대 한 재사용 및 일관적인 사용자 환경의 이점 및 WPF는 <xref:Microsoft.Win32.OpenFileDialog>, <xref:Microsoft.Win32.SaveFileDialog>및 <xref:System.Windows.Controls.PrintDialog>의 세 가지 일반적인 Windows 대화 상자를 노출 합니다.  
   
  메시지 상자는 중요한 텍스트 정보를 보여 주고 간단한 예/아니요/확인/취소 질문을 묻는 특별한 유형의 대화 상자입니다. <xref:System.Windows.MessageBox> 클래스를 사용하여 메시지 상자를 만들고 표시합니다.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "73420648"
   
 <a name="Navigation"></a>   
 ## <a name="navigation"></a>탐색  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]에서는 페이지(<xref:System.Windows.Controls.Page>) 및 하이퍼링크(<xref:System.Windows.Documents.Hyperlink>)를 통한 웹 스타일 탐색을 지원합니다. 다음을 포함한 다양한 방법으로 탐색을 구현할 수 있습니다.  
+ WPF는 페이지 (<xref:System.Windows.Controls.Page>) 및 하이퍼링크 (<xref:System.Windows.Documents.Hyperlink>)를 사용 하 여 웹 스타일 탐색을 지원 합니다. 다음을 포함한 다양한 방법으로 탐색을 구현할 수 있습니다.  
   
 - 웹 브라우저에 호스트되는 독립 실행형 페이지  
   
@@ -92,7 +92,7 @@ ms.locfileid: "73420648"
   
 - 독립 실행형 페이지에서 호스팅될 수 있는 프레임 (<xref:System.Windows.Controls.Frame>)에서 호스트 되는 페이지 또는 XBAP 또는 독립 실행형 응용 프로그램으로 컴파일된 페이지.  
   
- 탐색을 쉽게 하려면 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]에서 다음을 구현합니다.  
+ WPF는 탐색을 용이 하 게 하기 위해 다음을 구현 합니다.  
   
 - <xref:System.Windows.Navigation.NavigationService><xref:System.Windows.Controls.Frame>, <xref:System.Windows.Navigation.NavigationWindow>, Xbap에서 응용 프로그램 간 탐색을 지원 하기 위해 사용 하는 탐색 요청을 처리 하기 위한 공유 탐색 엔진입니다.  
   
@@ -104,7 +104,7 @@ ms.locfileid: "73420648"
   
  자세한 내용은 [탐색 개요](navigation-overview.md)를 참조하세요.  
   
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]는 구조적 탐색이라고 알려진 특별한 유형의 탐색도 지원합니다. 구조적 탐색을 사용하여 호출 함수와 일치하는 구조적이고 예측 가능한 방식으로 데이터를 반환하는 하나 이상의 페이지를 호출할 수 있습니다. 이 기능은 <xref:System.Windows.Navigation.PageFunction%601> 클래스에 따라 달라지며 [구조적 탐색 개요](structured-navigation-overview.md)에 자세히 설명되어 있습니다. <xref:System.Windows.Navigation.PageFunction%601>은 복잡한 탐색 토폴로지 생성을 간소화하는 역할도 합니다. 이러한 탐색 토폴로지에 대한 설명은 [탐색 토폴로지 개요](navigation-topologies-overview.md)에 나와 있습니다.  
+ WPF는 구조화 된 탐색 이라고 하는 특수 한 유형의 탐색도 지원 합니다. 구조적 탐색을 사용하여 호출 함수와 일치하는 구조적이고 예측 가능한 방식으로 데이터를 반환하는 하나 이상의 페이지를 호출할 수 있습니다. 이 기능은 <xref:System.Windows.Navigation.PageFunction%601> 클래스에 따라 달라지며 [구조적 탐색 개요](structured-navigation-overview.md)에 자세히 설명되어 있습니다. <xref:System.Windows.Navigation.PageFunction%601>은 복잡한 탐색 토폴로지 생성을 간소화하는 역할도 합니다. 이러한 탐색 토폴로지에 대한 설명은 [탐색 토폴로지 개요](navigation-topologies-overview.md)에 나와 있습니다.  
   
 <a name="Hosting"></a>   
 ## <a name="hosting"></a>호스팅  
@@ -112,7 +112,7 @@ ms.locfileid: "73420648"
   
 <a name="Build_and_Deploy"></a>   
 ## <a name="build-and-deploy"></a>빌드 및 배포  
- 간단한 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램은 명령줄 컴파일러를 사용 하 여 명령 프롬프트에서 빌드할 수 있지만 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Visual Studio와 통합 되어 개발 및 빌드 프로세스를 간소화 하는 추가 지원을 제공 합니다. 자세한 내용은 [WPF 애플리케이션 빌드](building-a-wpf-application-wpf.md)를 참조하세요.  
+ 간단한 WPF 응용 프로그램은 명령줄 컴파일러를 사용 하 여 명령 프롬프트에서 빌드할 수 있지만 WPF는 Visual Studio와 통합 되어 개발 및 빌드 프로세스를 간소화 하는 추가 지원을 제공 합니다. 자세한 내용은 [WPF 애플리케이션 빌드](building-a-wpf-application-wpf.md)를 참조하세요.  
   
  빌드하는 애플리케이션의 유형에 따라 선택할 수 있는 하나 이상의 배포 옵션이 있습니다. 자세한 내용은 [WPF 애플리케이션 배포](deploying-a-wpf-application-wpf.md)를 참조하세요.  
   
