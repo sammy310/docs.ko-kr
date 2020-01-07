@@ -7,30 +7,30 @@ helpviewer_keywords:
 - localization [WPF], features
 - globalization [WPF], features
 ms.assetid: c4b484fb-bc90-4186-a08d-f081e7109cad
-ms.openlocfilehash: a2ab04f40a3299bc0cd5a17c0f31e4f4ee0433ad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 98368a54fad095337038236d7bfdc2123edb6be2
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62010295"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559411"
 ---
-# <a name="globalization-and-localization-how-to-topics"></a><span data-ttu-id="fb67d-102">전역화 및 지역화 방법 항목</span><span class="sxs-lookup"><span data-stu-id="fb67d-102">Globalization and Localization How-to Topics</span></span>
-<span data-ttu-id="fb67d-103">이 섹션의에서 항목에서는 세계 시장 대응 응용 프로그램을 개발 하는 방법에 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="fb67d-103">The topics in this section describe how to develop world-ready applications.</span></span>  
+# <a name="globalization-and-localization-how-to-topics"></a><span data-ttu-id="c0f1c-102">전역화 및 지역화 방법 항목</span><span class="sxs-lookup"><span data-stu-id="c0f1c-102">Globalization and Localization How-to Topics</span></span>
+<span data-ttu-id="c0f1c-103">이 단원의 항목에서는 전 세계에서 사용할 수 있는 응용 프로그램을 개발 하는 방법을 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="c0f1c-103">The topics in this section describe how to develop world-ready applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="fb67d-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="fb67d-104">In This Section</span></span>  
- [<span data-ttu-id="fb67d-105">응용 프로그램 지역화</span><span class="sxs-lookup"><span data-stu-id="fb67d-105">Localize an Application</span></span>](how-to-localize-an-application.md)  
- [<span data-ttu-id="fb67d-106">자동 레이아웃을 사용하여 단추 만들기</span><span class="sxs-lookup"><span data-stu-id="fb67d-106">Use Automatic Layout to Create a Button</span></span>](how-to-use-automatic-layout-to-create-a-button.md)  
- [<span data-ttu-id="fb67d-107">자동 레이아웃에 그리드 사용</span><span class="sxs-lookup"><span data-stu-id="fb67d-107">Use a Grid for Automatic Layout</span></span>](how-to-use-a-grid-for-automatic-layout.md)  
- [<span data-ttu-id="fb67d-108">ResourceDictionary를 사용하여 지역화 가능한 문자열 리소스 관리</span><span class="sxs-lookup"><span data-stu-id="fb67d-108">Use a ResourceDictionary to Manage Localizable String Resources</span></span>](how-to-use-a-resourcedictionary-to-manage-localizable-string-resources.md)  
- [<span data-ttu-id="fb67d-109">지역화할 수 있는 애플리케이션에서 리소스 사용</span><span class="sxs-lookup"><span data-stu-id="fb67d-109">Use Resources in Localizable Applications</span></span>](how-to-use-resources-in-localizable-applications.md)  
+## <a name="in-this-section"></a><span data-ttu-id="c0f1c-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="c0f1c-104">In This Section</span></span>  
+ [<span data-ttu-id="c0f1c-105">애플리케이션 지역화</span><span class="sxs-lookup"><span data-stu-id="c0f1c-105">Localize an Application</span></span>](how-to-localize-an-application.md)  
+ [<span data-ttu-id="c0f1c-106">자동 레이아웃을 사용하여 단추 만들기</span><span class="sxs-lookup"><span data-stu-id="c0f1c-106">Use Automatic Layout to Create a Button</span></span>](how-to-use-automatic-layout-to-create-a-button.md)  
+ [<span data-ttu-id="c0f1c-107">자동 레이아웃에 그리드 사용</span><span class="sxs-lookup"><span data-stu-id="c0f1c-107">Use a Grid for Automatic Layout</span></span>](how-to-use-a-grid-for-automatic-layout.md)  
+ [<span data-ttu-id="c0f1c-108">ResourceDictionary를 사용하여 지역화 가능한 문자열 리소스 관리</span><span class="sxs-lookup"><span data-stu-id="c0f1c-108">Use a ResourceDictionary to Manage Localizable String Resources</span></span>](how-to-use-a-resourcedictionary-to-manage-localizable-string-resources.md)  
+ [<span data-ttu-id="c0f1c-109">지역화할 수 있는 애플리케이션에서 리소스 사용</span><span class="sxs-lookup"><span data-stu-id="c0f1c-109">Use Resources in Localizable Applications</span></span>](how-to-use-resources-in-localizable-applications.md)  
   
-## <a name="reference"></a><span data-ttu-id="fb67d-110">참조</span><span class="sxs-lookup"><span data-stu-id="fb67d-110">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="c0f1c-110">참조</span><span class="sxs-lookup"><span data-stu-id="c0f1c-110">Reference</span></span>  
  <xref:System.Globalization>  
   
  <xref:System.Windows.FrameworkElement.FlowDirection%2A>  
   
  <xref:System.Resources.NeutralResourcesLanguageAttribute>  
   
- [<span data-ttu-id="fb67d-111">XAML의 xml:lang 처리</span><span class="sxs-lookup"><span data-stu-id="fb67d-111">xml:lang Handling in XAML</span></span>](../../xaml-services/xml-lang-handling-in-xaml.md)  
+ [<span data-ttu-id="c0f1c-111">XAML의 xml:lang 처리</span><span class="sxs-lookup"><span data-stu-id="c0f1c-111">xml:lang Handling in XAML</span></span>](../../../desktop-wpf/xaml-services/xml-language-handling.md)  
   
-## <a name="related-sections"></a><span data-ttu-id="fb67d-112">관련 단원</span><span class="sxs-lookup"><span data-stu-id="fb67d-112">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="c0f1c-112">관련 섹션</span><span class="sxs-lookup"><span data-stu-id="c0f1c-112">Related Sections</span></span>
