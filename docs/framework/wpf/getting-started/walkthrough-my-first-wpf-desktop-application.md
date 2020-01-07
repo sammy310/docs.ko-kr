@@ -9,15 +9,15 @@ helpviewer_keywords:
 - WPF [WPF], getting started
 ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 ms.topic: tutorial
-ms.custom: vs-dotnet
+ms.custom: mvc,vs-dotnet
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0d45932f6a8822ec2aaa40cd52431d9981ab8fa1
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 7b5f74448ffce448740937c06a476a29c8659879
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73453754"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75336818"
 ---
 # <a name="tutorial-create-your-first-wpf-application-in-visual-studio-2019"></a>자습서: Visual Studio 2019에서 첫 번째 WPF 응용 프로그램 만들기
 
@@ -41,7 +41,7 @@ ms.locfileid: "73453754"
 >
 > 이 페이지 맨 위에 있는 언어 선택기를 사용 하 여 C# 및 Visual Basic 사이에 샘플 코드의 코드 언어를 전환할 수 있습니다.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>전제 조건
 
 - **.Net 데스크톱 개발** 워크 로드가 설치 된 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) .
 
@@ -83,7 +83,7 @@ ms.locfileid: "73453754"
 
     [!code-xaml[ExpenseIt#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt/App.xaml#1)]
 
-3. *Mainwindow.xaml*를 엽니다.
+3. *MainWindow.xaml*을 엽니다.
 
     이 XAML 파일은 응용 프로그램의 주 창이 며 페이지에서 만든 콘텐츠를 표시 합니다. <xref:System.Windows.Window> 클래스는 창의 속성 (예: 제목, 크기 또는 아이콘)을 정의 하 고 닫기 또는 숨기기와 같은 이벤트를 처리 합니다.
 
@@ -151,7 +151,7 @@ ms.locfileid: "73453754"
 
     [!code-xaml[ExpenseIt#6](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt2/ExpenseItHome.xaml#6)]
 
-1. *Mainwindow.xaml*를 엽니다.
+1. *MainWindow.xaml*을 엽니다.
 
 1. <xref:System.Windows.Navigation.NavigationWindow> 요소에 <xref:System.Windows.Navigation.NavigationWindow.Source%2A> 속성을 추가 하 고 "`ExpenseItHome.xaml`"로 설정 합니다.
 
@@ -161,7 +161,7 @@ ms.locfileid: "73453754"
 
     [!code-xaml[ExpenseIt#7_A](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ExpenseIt/VB/ExpenseIt1_A/MainWindow.xaml#7_a)]
 
-    및의 C#경우:
+    및 C#:
 
     [!code-xaml[ExpenseIt#7](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt2/MainWindow.xaml#7)]
 

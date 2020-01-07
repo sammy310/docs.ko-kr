@@ -17,19 +17,19 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 9c237c06de1388de4c1fe6a6edb3fb5b52522d1f
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: b2fd923de165c0926e6f812764c71127b7c27691
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424622"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636239"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>WPF 보안 전략 - 플랫폼 보안
-WPF (Windows Presentation Foundation)는 다양 한 보안 서비스를 제공 하지만 운영 체제, CLR 및 Internet Explorer를 포함 하는 기본 플랫폼의 보안 기능도 활용 합니다. 이러한 계층이 결합되어 다음 그림과 같이 단일 실패 지점을 방지하는 강력한 심층 방어 보안 모델인 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]를 제공합니다.  
+WPF (Windows Presentation Foundation)는 다양 한 보안 서비스를 제공 하지만 운영 체제, CLR 및 Internet Explorer를 포함 하는 기본 플랫폼의 보안 기능도 활용 합니다. 이러한 계층은 다음 그림과 같이 단일 실패 지점을 방지 하는 강력한 심층 방어 보안 모델을 WPF에 제공 하기 위해 결합 되었습니다.  
   
  ![WPF 보안 모델을 보여 주는 다이어그램입니다.](./media/wpf-security-strategy-platform-security/windows-presentation-foundation-security.png)  
   
- 이 항목의 나머지 부분에서는 특히 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]와 관련된 각 계층의 기능을 설명합니다.  
+ 이 항목의 나머지 부분에서는 특히 WPF와 관련 된 각 계층의 기능에 대해 설명 합니다.  
 
 ## <a name="operating-system-security"></a>운영 체제 보안  
 Windows의 핵심은 WPF로 빌드된 응용 프로그램을 포함 하 여 모든 Windows 응용 프로그램에 대 한 보안 기반을 형성 하는 몇 가지 보안 기능을 제공 합니다. 이 항목에서는 wpf에 중요 한 이러한 보안 기능의 범위 뿐만 아니라 WPF를 사용 하 여 심층 방어를 제공 하는 방법을 설명 합니다.  
@@ -42,13 +42,13 @@ Windows의 핵심은 WPF로 빌드된 응용 프로그램을 포함 하 여 모�
 - Microsoft Windows 업데이트.  
   
 #### <a name="gs-compilation"></a>/GS 컴파일  
- [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)]는 CLR과 같은 모든 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 종속성을 포함 하 여 많은 핵심 시스템 라이브러리를 다시 컴파일하여 버퍼 오버런을 완화 하는 기능을 제공 합니다. 이 작업을 위해 /GS 매개 변수와 C/C++ 명령줄 컴파일러를 함께 사용합니다. 버퍼 오버런을 명시적으로 피해야 하지만 /GS 컴파일은 실수 또는 악의적으로 만들어진 잠재적인 취약성에 대한 심층 방어의 예를 제공합니다.  
+ [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)]는 CLR과 같은 모든 WPF 종속성을 포함 하 여 많은 핵심 시스템 라이브러리를 다시 컴파일하여 버퍼 오버런을 완화 하는 기능을 제공 합니다. 이 작업을 위해 /GS 매개 변수와 C/C++ 명령줄 컴파일러를 함께 사용합니다. 버퍼 오버런을 명시적으로 피해야 하지만 /GS 컴파일은 실수 또는 악의적으로 만들어진 잠재적인 취약성에 대한 심층 방어의 예를 제공합니다.  
   
  지금까지 버퍼 오버런은 많은 강력한 보안 익스플로이트의 원인이 되었습니다. 버퍼 오버런은 공격자는 버퍼의 경계를 지나서 쓰는 악성 코드의 삽입을 허용하는 코드 취약성을 활용하는 경우에 발생합니다. 이 경우 공격자의 코드가 실행되도록 함수의 반환 주소를 덮어써서 코드가 실행되는 프로세스를 공격자가 가로챌 수 있습니다. 그 결과, 가로챈 프로세스와 동일한 권한으로 임의 코드를 실행하는 악성 코드가 생깁니다.  
   
  높은 수준에서-GS 컴파일러 플래그는 로컬 문자열 버퍼가 있는 함수의 반환 주소를 보호 하기 위해 특수 보안 쿠키를 삽입 하 여 잠재적인 버퍼 오버런 으로부터 보호 합니다. 함수가 반환된 후 보안 쿠키를 이전 값과 비교합니다. 값이 변경된 경우 버퍼 오버런이 발생했을 수 있으며 프로세스가 오류 상태로 중지됩니다. 프로세스를 중지하면 잠재적인 악성 코드의 실행이 방지됩니다. 자세한 내용은 [-GS (버퍼 보안 검사)](/cpp/build/reference/gs-buffer-security-check) 를 참조 하세요.  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 애플리케이션에 다른 방어 계층을 추가하기 위해 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]는 /GS 플래그로 컴파일됩니다.  
+ Wpf는/GS 플래그를 사용 하 여 컴파일되어 WPF 응용 프로그램에 또 다른 방어 계층을 추가 합니다.  
   
 ### <a name="windows-vista"></a>Windows Vista  
 Windows Vista의 WPF 사용자는 "최소 권한 사용자 액세스", 코드 무결성 검사 및 권한 격리를 비롯 한 운영 체제의 추가 보안 향상 기능을 활용 합니다.  
@@ -68,7 +68,7 @@ Windows Vista의 WPF 사용자는 "최소 권한 사용자 액세스", 코드 �
  Windows Vista에서는 로드/실행 시 악성 코드가 시스템 파일이 나 커널에 삽입 되는 것을 방지 하기 위해 보다 심층적인 코드 무결성 검사를 통합 합니다. 이는 시스템 파일 보호 수준을 벗어납니다.  
    
 ### <a name="limited-rights-process-for-browser-hosted-applications"></a>브라우저에서 호스트된 애플리케이션에 대한 제한된 권한 프로세스  
- 브라우저에서 호스트된 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 애플리케이션은 인터넷 영역 샌드박스 내에서 실행됩니다. Microsoft Internet Explorer와의 통합을 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 추가 지원으로이 보호를 확장 합니다.  
+ 브라우저에서 호스트 되는 WPF 응용 프로그램은 인터넷 영역 샌드박스 내에서 실행 됩니다. Microsoft Internet Explorer와의 WPF 통합은 추가 지원으로이 보호를 확장 합니다.  
   
  Xbap (XAML 브라우저 응용 프로그램)는 일반적으로 인터넷 영역 권한 집합을 통해 샌드 박싱 되므로 이러한 권한을 제거 해도 호환성 관점에서 Xbap (XAML 브라우저 응용 프로그램)에는 영향을 주지 않습니다. 대신, 추가 심층 방어 계층이 만들어집니다. 샌드박스 애플리케이션이 다른 계층을 악용하고 프로세스를 가로챌 수 있는 경우 프로세스에 여전히 제한된 권한만 포함됩니다.  
   
@@ -92,12 +92,12 @@ Windows Vista의 WPF 사용자는 "최소 권한 사용자 액세스", 코드 �
   
  검증 규칙을 준수하지 않는 관리 코드는 신뢰할 수 있는 코드로 간주되지 않을 경우 실행할 수 없습니다.  
   
- 안정형 코드의 이점은 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] .NET Framework를 기반으로 하는 주요 이유입니다. 검증할 수 있는 코드를 사용하면 가능한 취약성이 악용될 가능성이 훨씬 줄어듭니다.  
+ 안정형 코드의 장점은 WPF가 .NET Framework를 빌드하는 주요 이유입니다. 검증할 수 있는 코드를 사용하면 가능한 취약성이 악용될 가능성이 훨씬 줄어듭니다.  
   
 ### <a name="code-access-security"></a>코드 액세스 보안  
  클라이언트 컴퓨터는 파일 시스템, 레지스트리, 인쇄 서비스, 사용자 인터페이스, 리플렉션 및 환경 변수를 포함하여 관리되는 애플리케이션이 액세스할 수 있는 다양한 리소스를 노출합니다. 관리 되는 응용 프로그램이 클라이언트 컴퓨터의 리소스에 액세스할 수 있으려면 먼저 .NET Framework 권한이 있어야 합니다. CAS의 사용 권한은 <xref:System.Security.CodeAccessPermission>의 서브 클래스입니다. CAS는 관리 되는 응용 프로그램이 액세스할 수 있는 각 리소스에 대해 하나의 하위 클래스를 구현 합니다.  
   
- 관리 되는 응용 프로그램이 실행을 시작할 때 CA에서 부여 하는 사용 권한 집합은 권한 집합 이라고 하며 응용 프로그램에서 제공 하는 증명 정보에 의해 결정 됩니다. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 애플리케이션의 경우 제공되는 증거는 애플리케이션이 시작되는 위치 또는 영역입니다. CA는 다음과 같은 영역을 식별 합니다.  
+ 관리 되는 응용 프로그램이 실행을 시작할 때 CA에서 부여 하는 사용 권한 집합은 권한 집합 이라고 하며 응용 프로그램에서 제공 하는 증명 정보에 의해 결정 됩니다. WPF 응용 프로그램의 경우 제공 되는 증명 정보는 응용 프로그램이 시작 되는 위치 또는 영역입니다. CA는 다음과 같은 영역을 식별 합니다.  
   
 - **내 컴퓨터** 클라이언트 컴퓨터에서 시작된 애플리케이션입니다(완전 신뢰).  
   
@@ -123,14 +123,14 @@ Windows Vista의 WPF 사용자는 "최소 권한 사용자 액세스", 코드 �
   
  ![CAS 권한 집합을 표시 하는 다이어그램입니다.](./media/wpf-security-strategy-platform-security/code-access-security-permissions-relationship.png)  
   
- 인터넷 영역 보안 샌드박스의 제한 사항은 XBAP가 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]를 포함 하 여 시스템 라이브러리에서 가져오는 모든 코드에 동일 하 게 적용 됩니다. 이렇게 하면 코드의 모든 비트가 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]에서도 잠깁니다. 불행 하 게도 XBAP는 인터넷 영역 보안 샌드박스에서 사용 하도록 설정 된 것 보다 많은 권한을 필요로 하는 기능을 실행 해야 합니다.  
+ 인터넷 영역 보안 샌드박스의 제한 사항은 XBAP가 WPF를 비롯 한 시스템 라이브러리에서 가져오는 모든 코드에 동일 하 게 적용 됩니다. 이렇게 하면 WPF를 비롯 하 여 코드의 모든 비트가 잠깁니다. 불행 하 게도 XBAP는 인터넷 영역 보안 샌드박스에서 사용 하도록 설정 된 것 보다 많은 권한을 필요로 하는 기능을 실행 해야 합니다.  
   
  다음 페이지가 포함 된 XBAP 응용 프로그램을 살펴보겠습니다.  
   
  [!code-csharp[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/CSharp/Page1.xaml.cs#permission)]
  [!code-vb[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/VisualBasic/Page1.xaml.vb#permission)]  
   
- 이 XBAP를 실행 하려면 기본 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 코드에서 다음을 포함 하 여 호출 하는 XBAP에 사용할 수 있는 것 보다 많은 기능을 실행 해야 합니다.  
+ 이 XBAP를 실행 하려면 기본 WPF 코드에서 다음을 포함 하 여 호출 하는 XBAP에 사용할 수 있는 것 보다 많은 기능을 실행 해야 합니다.  
   
 - 렌더링을 위한 창 핸들 (HWND) 만들기  
   
@@ -140,28 +140,28 @@ Windows Vista의 WPF 사용자는 "최소 권한 사용자 액세스", 코드 �
   
  샌드박스 애플리케이션에서 이러한 작업에 직접 액세스할 수 있도록 허용하면 보안상 치명적일 수 있습니다.  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]는 샌드박스 애플리케이션 대신 높은 권한으로 이러한 작업을 실행할 수 있도록 허용하여 이 상황에 대응합니다. 모든 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 작업은 XBAP의 응용 프로그램 도메인에 대 한 제한 된 인터넷 영역 보안 권한에 대해 검사 되지만 다른 시스템 라이브러리와 마찬가지로 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]에는 가능한 모든 권한을 포함 하는 권한 집합이 부여 됩니다.
+ 다행히 WPF는 샌드박스가 적용 된 응용 프로그램을 대신 하 여 이러한 작업을 상승 된 권한으로 실행할 수 있도록 하 여 이러한 상황을 맞춘 합니다. 모든 WPF 작업은 XBAP의 응용 프로그램 도메인에 대 한 제한 된 인터넷 영역 보안 권한에 대해 검사 되지만 다른 시스템 라이브러리와 마찬가지로 WPF에는 가능한 모든 권한을 포함 하는 권한 집합이 부여 됩니다.
   
- 이 경우 해당 권한이 호스트 애플리케이션 도메인의 인터넷 영역 권한 집합에 의해 제어되지 않도록 하는 동시에 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]가 높은 권한을 받아야 합니다.  
+ 이렇게 하려면 WPF가 상승 된 권한을 받아야 하며 이러한 권한은 호스트 응용 프로그램 도메인의 인터넷 영역 권한 집합에 의해 제어 되는 것을 방지 해야 합니다.  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]는 사용 권한의 **Assert** 메서드를 사용 하 여이를 수행 합니다. 다음 코드에서는 이렇게 되는 방식을 보여 줍니다.  
+ WPF는 사용 권한의 **Assert** 메서드를 사용 하 여이를 수행 합니다. 다음 코드에서는 이렇게 되는 방식을 보여 줍니다.  
   
  [!code-csharp[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/CSharp/Page1.xaml.cs#permission)]
  [!code-vb[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/VisualBasic/Page1.xaml.vb#permission)]  
   
- **Assert** 는 기본적으로 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]에 필요한 무제한 권한이 XBAP의 인터넷 영역 권한에 의해 제한 되지 않도록 방지 합니다.  
+ **Assert** 는 기본적으로 WPF에 필요한 무제한 권한이 XBAP의 인터넷 영역 권한으로 제한 되지 않도록 방지 합니다.  
   
- 플랫폼 측면에서 **Assert** 를 올바르게 사용 하는 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]를 담당 합니다. **Assert** 를 잘못 사용 하면 악성 코드가 권한을 상승 시킬 수 있습니다. 따라서 필요한 경우에만 **Assert** 를 호출 하 고 sandbox 제한이 그대로 유지 되도록 하는 것이 중요 합니다. 예를 들어 샌드박스 코드는 임의의 파일을 열 수 없지만 글꼴을 사용할 수 있습니다. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 샌드박스 응용 프로그램에서 **Assert**를 호출 하 여 글꼴 기능을 사용할 수 있도록 하 고, [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]는 샌드박스가 적용 된 응용 프로그램 대신 해당 글꼴을 포함 하는 것으로 알려진 파일을 읽을 수 있습니다  
+ 플랫폼 측면에서 WPF는 **Assert** 를 올바르게 사용 하는 일을 담당 합니다. **Assert** 를 잘못 사용 하면 악성 코드가 권한을 상승 시킬 수 있습니다. 따라서 필요한 경우에만 **Assert** 를 호출 하 고 sandbox 제한이 그대로 유지 되도록 하는 것이 중요 합니다. 예를 들어 샌드박스 코드는 임의의 파일을 열 수 없지만 글꼴을 사용할 수 있습니다. WPF를 사용 하면 샌드박스가 적용 된 응용 프로그램에서 **Assert**를 호출 하 여 글꼴 기능을 사용할 수 있으며, wpf는 샌드박스가 적용 된 응용 프로그램 대신 이러한 글꼴을 포함 하는 것으로 알려진 파일을  
   
 ### <a name="clickonce-deployment"></a>ClickOnce 배포  
- ClickOnce는 .NET Framework에 포함 되어 있으며 Visual Studio와 통합 되는 포괄적인 배포 기술입니다 (자세한 내용은 [clickonce 보안 및 배포](/visualstudio/deployment/clickonce-security-and-deployment) 참조). ClickOnce를 사용 하 여 독립 실행형 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램을 배포할 수 있지만 브라우저에서 호스팅되는 응용 프로그램은 ClickOnce를 사용 하 여 배포 해야 합니다.  
+ ClickOnce는 .NET Framework에 포함 되어 있으며 Visual Studio와 통합 되는 포괄적인 배포 기술입니다 (자세한 내용은 [clickonce 보안 및 배포](/visualstudio/deployment/clickonce-security-and-deployment) 참조). ClickOnce를 사용 하 여 독립 실행형 WPF 응용 프로그램을 배포할 수 있지만 브라우저에서 호스팅되는 응용 프로그램은 ClickOnce를 사용 하 여 배포 해야 합니다.  
   
  ClickOnce를 사용 하 여 배포 된 응용 프로그램에는 CAS (코드 액세스 보안)를 통해 추가 보안 계층이 제공 됩니다. 기본적으로 ClickOnce 배포 응용 프로그램은 필요한 사용 권한을 요청 합니다. 애플리케이션이 배포된 소스 영역에 대한 권한 집합을 초과하지 않는 경우에만 해당 권한이 부여됩니다. 시작 영역의 권한 집합에서 제공 하는 것 보다 작은 경우라도 사용 권한 집합을 필요한 권한 으로만 줄이면 응용 프로그램이 액세스할 수 있는 리소스 수가 최소한으로 줄어듭니다. 따라서 애플리케이션을 가로채는 경우 클라이언트 컴퓨터의 손상 가능성이 줄어듭니다.  
   
 ### <a name="security-critical-methodology"></a>보안에 중요한 방법론  
- 사용 권한을 사용 하 여 XBAP 응용 프로그램에 대 한 인터넷 영역 샌드박스를 사용 하도록 설정 하는 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 코드는 최대한 높은 수준의 보안 감사 및 제어로 유지 해야 합니다. 이러한 요구 사항을 용이 하 게 하기 위해 .NET Framework는 권한을 상승 시키는 코드를 관리 하기 위한 새로운 지원을 제공 합니다. 특히 CLR을 사용 하면 권한을 상승 하는 코드를 식별 하 고 <xref:System.Security.SecurityCriticalAttribute>로 표시할 수 있습니다. <xref:System.Security.SecurityCriticalAttribute>로 표시 되지 않은 코드는이 방법론을 사용 하 여 *투명* 하 게 됩니다. 반대로, <xref:System.Security.SecurityCriticalAttribute>로 표시되지 않은 관리 코드는 권한을 높일 수 있습니다.  
+ 사용 권한을 사용 하 여 XBAP 응용 프로그램에 대 한 인터넷 영역 샌드박스를 사용 하도록 설정 하는 WPF 코드는 가능한 한 높은 수준의 보안 감사 및 제어로 유지 해야 합니다. 이러한 요구 사항을 용이 하 게 하기 위해 .NET Framework는 권한을 상승 시키는 코드를 관리 하기 위한 새로운 지원을 제공 합니다. 특히 CLR을 사용 하면 권한을 상승 하는 코드를 식별 하 고 <xref:System.Security.SecurityCriticalAttribute>로 표시할 수 있습니다. <xref:System.Security.SecurityCriticalAttribute>로 표시 되지 않은 코드는이 방법론을 사용 하 여 *투명* 하 게 됩니다. 반대로, <xref:System.Security.SecurityCriticalAttribute>로 표시되지 않은 관리 코드는 권한을 높일 수 있습니다.  
   
- 보안에 중요 한 방법론을 사용 하면 권한을 *보안에 중요 한 커널*로 상승 하는 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 코드를 구성 하 고 나머지는 투명 하 게 지정할 수 있습니다. 보안에 중요 한 코드를 격리 하면 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 엔지니어링 팀이 보안에 중요 한 커널에 대 한 추가 보안 분석 및 소스 제어를 표준 보안 방법 이상으로 설정할 수 있습니다 ( [WPF 보안 전략-보안 참조). 엔지니어링](wpf-security-strategy-security-engineering.md)).  
+ 보안에 중요 한 방법론을 사용 하면 권한을 상승 시키는 WPF 코드를 *보안에 중요 한 커널*로 구성 하 고 나머지는 투명 하 게 지정할 수 있습니다. 보안에 중요 한 코드를 격리 하면 WPF 엔지니어링 팀이 보안에 중요 한 커널에 대 한 추가 보안 분석 및 소스 제어를 표준 보안 방법 이상의 기능 ( [Wpf 보안 전략-보안 엔지니어링](wpf-security-strategy-security-engineering.md)참조)에 집중할 수 있습니다.  
   
  .NET Framework는 개발자가 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (APTCA)로 표시 되 고 사용자의 GAC (전역 어셈블리 캐시)에 배포 된 관리 되는 어셈블리를 작성할 수 있도록 하 여 XBAP 인터넷 영역 샌드박스를 확장할 수 있습니다. 어셈블리에 APTCA로 표시하는 경우 인터넷의 악성 코드를 비롯한 모든 코드에서 해당 어셈블리를 호출할 수 있으므로 중요한 보안 작업입니다. 이 작업을 수행할 때는 주의해서 최선의 방법을 사용해야 하며, 사용자가 해당 소프트웨어를 신뢰해야 설치됩니다.  
   
@@ -180,9 +180,9 @@ Windows Vista의 WPF 사용자는 "최소 권한 사용자 액세스", 코드 �
   
  IE6 s p 2에는 사용자 시작의 개념을 중심으로 이러한 유형의 문제를 완화 하는 여러 가지 기능이 포함 되어 있습니다. IE6 s p 2는 사용자가 작업을 수행 하기 전에 링크 또는 페이지 요소를 클릭 한 경우 ( *사용자 시작*이라고 함)를 검색 하 고, 페이지의 스크립트에 의해 비슷한 동작이 트리거되는 경우와 다르게 처리 합니다. 예를 들어 IE6 s p 2에는 사용자가 팝업을 만들기 전에 단추를 클릭할 때 검색 되는 **팝업 차단이** 통합 되어 있습니다. 이를 통해 IE6 s p 2는 사용자에 게 묻지 않고 원하지 않는 팝업을 방지 하는 동시에 대부분의 무해 한 팝업을 허용할 수 있습니다. 차단 된 팝업은 새 **알림 표시줄**아래에 트래핑 됩니다. 그러면 사용자가 수동으로 블록을 재정의 하 고 팝업을 볼 수 있습니다.  
   
- 동일한 사용자 시작 논리가 보안 프롬프트를 **열기** /**저장** 하는 데에도 적용 됩니다. 이전에 설치 된 컨트롤의 업그레이드를 나타내지 않는 한 ActiveX 설치 대화 상자는 항상 알림 표시줄 아래에 트래핑 됩니다. 이러한 조치가 결합되어 사용자에게 더 안전하고 제어된 사용자 환경을 제공합니다. 사용자가 원하지 않는 소프트웨어나 악성 소프트웨어를 설치하도록 유인하는 사이트로부터 보호되기 때문입니다.  
+ 동일한 사용자 시작 논리가 보안 프롬프트를 **열기**/**저장** 하는 데에도 적용 됩니다. 이전에 설치 된 컨트롤의 업그레이드를 나타내지 않는 한 ActiveX 설치 대화 상자는 항상 알림 표시줄 아래에 트래핑 됩니다. 이러한 조치가 결합되어 사용자에게 더 안전하고 제어된 사용자 환경을 제공합니다. 사용자가 원하지 않는 소프트웨어나 악성 소프트웨어를 설치하도록 유인하는 사이트로부터 보호되기 때문입니다.  
   
- 또한 이러한 기능은 IE6 s p 2를 사용 하 여 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램을 다운로드 하 고 설치할 수 있는 웹 사이트를 검색 하는 고객을 보호 합니다. 특히 IE6 s p 2가 사용자 환경을 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]구축 하는 데 사용 된 기술에 관계 없이 악의적인 응용 프로그램 또는 유해한 응용 프로그램을 설치할 기회를 줄이는 향상 된 사용자 환경을 제공 하기 때문입니다. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]는 ClickOnce를 사용 하 여 인터넷을 통해 응용 프로그램을 쉽게 다운로드할 수 있도록 이러한 보호 기능에 추가 합니다. Xbap (XAML 브라우저 응용 프로그램)는 인터넷 영역 보안 샌드박스 내에서 실행 되므로 매끄럽게 시작할 수 있습니다. 반면, 독립 실행형 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 애플리케이션을 실행하려면 완전 신뢰가 필요합니다. 이러한 응용 프로그램의 경우 ClickOnce는 시작 프로세스 중에 보안 대화 상자를 표시 하 여 응용 프로그램의 추가 보안 요구 사항을 사용 하도록 알립니다. 그러나 사용자가 시작해야 하고, 사용자가 시작한 논리에 의해 제어되며, 취소할 수 있습니다.  
+ 또한 이러한 기능은 IE6 s p 2를 사용 하 여 WPF 응용 프로그램을 다운로드 하 고 설치할 수 있는 웹 사이트를 검색 하는 고객을 보호 합니다. 특히 IE6 s p 2는 사용자가 WPF를 비롯 하 여 빌드하는 데 사용 된 기술에 관계 없이 악의적인 응용 프로그램 또는 유해한 응용 프로그램을 설치할 기회를 줄이는 향상 된 사용자 환경을 제공 하기 때문입니다. WPF는 ClickOnce를 사용 하 여 인터넷을 통해 응용 프로그램을 쉽게 다운로드할 수 있도록 이러한 보호 기능을 추가 합니다. Xbap (XAML 브라우저 응용 프로그램)는 인터넷 영역 보안 샌드박스 내에서 실행 되므로 매끄럽게 시작할 수 있습니다. 반면에 독립 실행형 WPF 응용 프로그램을 실행 하려면 완전 신뢰가 필요 합니다. 이러한 응용 프로그램의 경우 ClickOnce는 시작 프로세스 중에 보안 대화 상자를 표시 하 여 응용 프로그램의 추가 보안 요구 사항을 사용 하도록 알립니다. 그러나 사용자가 시작해야 하고, 사용자가 시작한 논리에 의해 제어되며, 취소할 수 있습니다.  
   
  Internet Explorer 7은 보안에 대 한 지속적인 약정의 일환으로 IE6 s p 2의 보안 기능을 통합 하 고 확장 합니다.  
   

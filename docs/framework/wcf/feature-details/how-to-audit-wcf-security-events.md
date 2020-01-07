@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], auditing events
 ms.assetid: e71e9587-3336-46a2-9a9e-d72a1743ecec
-ms.openlocfilehash: b96c68c06099db2f396d16772cfaa8aee37390fe
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 7071aaf88346ee217226632501ebd6c82cfc1cb8
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838015"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346751"
 ---
 # <a name="how-to-audit-windows-communication-foundation-security-events"></a>방법: Windows Communication Foundation 보안 이벤트 감사
 WCF (Windows Communication Foundation)를 사용 하면 windows 이벤트 뷰어를 사용 하 여 볼 수 있는 Windows 이벤트 로그에 보안 이벤트를 기록할 수 있습니다. 이 항목에서는 보안 이벤트를 기록하도록 애플리케이션을 설정하는 방법에 대해 설명합니다. WCF 감사에 대 한 자세한 내용은 [감사](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)를 참조 하세요.  
@@ -24,7 +24,7 @@ WCF (Windows Communication Foundation)를 사용 하면 windows 이벤트 뷰어
      [!code-csharp[AuditingSecurityEvents#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/auditingsecurityevents/cs/auditingsecurityevents.cs#2)]
      [!code-vb[AuditingSecurityEvents#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/auditingsecurityevents/vb/auditingsecurityevents.vb#2)]  
   
-     <xref:System.ServiceModel.AuditLogLocation> 열거형에는 `Application`, `Security`또는 `Default`의 세 가지 값이 있습니다. 이 값은 이벤트 뷰어에서 볼 수 있는 로그(보안 로그 또는 애플리케이션 로그) 중 하나를 지정합니다. `Default` 값을 사용하는 경우 실제 로그는 애플리케이션을 실행하는 운영 체제에 따라 달라집니다. 감사를 사용하지만 로그 위치가 지정되지 않은 경우 기본값은 보안 로그에 쓰기를 지원하는 플랫폼의 `Security` 로그입니다. 그렇지 않으면 `Application` 로그에 씁니다. [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 및 Windows Vista 에서만 기본적으로 보안 로그에 쓰기를 지원 합니다.  
+     <xref:System.ServiceModel.AuditLogLocation> 열거형에는 `Application`, `Security`또는 `Default`의 세 가지 값이 있습니다. 이 값은 이벤트 뷰어에서 볼 수 있는 로그(보안 로그 또는 애플리케이션 로그) 중 하나를 지정합니다. `Default` 값을 사용하는 경우 실제 로그는 애플리케이션을 실행하는 운영 체제에 따라 달라집니다. 감사를 사용하지만 로그 위치가 지정되지 않은 경우 기본값은 보안 로그에 쓰기를 지원하는 플랫폼의 `Security` 로그입니다. 그렇지 않으면 `Application` 로그에 씁니다. Windows Server 2003 및 Windows Vista 에서만 기본적으로 보안 로그에 쓰기를 지원 합니다.  
   
 2. 감사할 이벤트 형식을 설정합니다. 서비스 수준 이벤트나 메시지 수준 권한 부여 이벤트를 동시에 감사할 수 있습니다. 이렇게 하려면 다음 코드와 같이 <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.ServiceAuthorizationAuditLevel%2A> 속성이나 <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.MessageAuthenticationAuditLevel%2A> 속성을 <xref:System.ServiceModel.AuditLevel> 열거형 값 중 하나로 설정합니다.  
   
@@ -72,7 +72,7 @@ WCF (Windows Communication Foundation)를 사용 하면 windows 이벤트 뷰어
     </services>  
     ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드에서는 <xref:System.ServiceModel.ServiceHost> 클래스의 인스턴스를 만들고 동작 컬렉션에 새 <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>를 추가합니다.  
   
  [!code-csharp[AuditingSecurityEvents#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/auditingsecurityevents/cs/auditingsecurityevents.cs#1)]

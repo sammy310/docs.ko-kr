@@ -7,15 +7,15 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: 1d6430ba5969d8a05db47baf9521d2409e596c23
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 769afe4d301a7b0fafd26018255f98b6faa29887
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740859"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559437"
 ---
 # <a name="globalization-for-wpf"></a>WPF의 전역화
-이 항목에서는 글로벌 시장을 위해 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 응용 프로그램을 작성할 때 알아야 하는 문제를 소개 합니다. 세계화 프로그래밍 요소는 <xref:System.Globalization> 네임 스페이스의 .NET에서 정의 됩니다.
+이 항목에서는 글로벌 시장을 위해 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 응용 프로그램을 작성할 때 알아야 하는 문제를 소개 합니다. 세계화 프로그래밍 요소는 <xref:System.Globalization> 네임 스페이스의 .NET에 정의 되어 있습니다.
 
 <a name="xaml_globalization"></a>
 ## <a name="xaml-globalization"></a>XAML 전역화
@@ -36,7 +36,7 @@ ms.locfileid: "73740859"
 ```
 
 <a name="encoding"></a>
-### <a name="encoding"></a>인코딩
+### <a name="encoding"></a>Encoding
  [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]에서 지원 되는 인코딩은 ASCII, 유니코드 UTF-16 및 u t f-8입니다. Encoding 문은 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 문서의 시작 부분에 있습니다. 인코딩 특성이 없으며 바이트 순서가 없으면 기본적으로 구문 분석기가 UTF-8로 설정됩니다. UTF-8과 UTF-16이 기본 인코딩입니다. UTF-7은 지원되지 않습니다. 다음 예에서는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 파일에서 UTF-8 인코딩을 지정 하는 방법을 보여 줍니다.
 
 ```xaml
@@ -45,7 +45,7 @@ ms.locfileid: "73740859"
 
 <a name="lang_attrib"></a>
 ### <a name="language-attribute"></a>언어 특성
- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]는 [xml: lang](../../xaml-services/xml-lang-handling-in-xaml.md) 을 사용 하 여 요소의 language 특성을 나타냅니다.  <xref:System.Globalization.CultureInfo> 클래스를 활용 하려면 language 특성 값이 <xref:System.Globalization.CultureInfo>에서 미리 정의 된 문화권 이름 중 하나 여야 합니다. [xml:lang](../../xaml-services/xml-lang-handling-in-xaml.md)은 요소 트리에서 상속 가능하며(반드시 종속성 속성 상속성때문이 아니라 XML 규칙에 따름), 명시적으로 할당되지 않은 경우 기본값은 비어 있습니다.
+ [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]는 [xml: lang](../../../desktop-wpf/xaml-services/xml-language-handling.md) 을 사용 하 여 요소의 language 특성을 나타냅니다.  <xref:System.Globalization.CultureInfo> 클래스를 활용 하려면 language 특성 값이 <xref:System.Globalization.CultureInfo>에서 미리 정의 된 문화권 이름 중 하나 여야 합니다. [xml:lang](../../../desktop-wpf/xaml-services/xml-language-handling.md)은 요소 트리에서 상속 가능하며(반드시 종속성 속성 상속성때문이 아니라 XML 규칙에 따름), 명시적으로 할당되지 않은 경우 기본값은 비어 있습니다.
 
  언어를 지정할 때 언어 특성이 매우 유용합니다. 예를 들어, 프랑스, 퀘벡, 벨기에 및 스위스의 프랑스어에는 다른 철자, 어휘 및 발음이 있습니다. 또한 중국어, 일본어 및 한국어는 유니코드에서 코드 점수를 공유 하지만 표의 문자 모양은 서로 다르며 완전히 다른 글꼴을 사용 합니다.
 
@@ -163,7 +163,7 @@ ms.locfileid: "73740859"
 <EmbeddedResource Include="data\stringtable.en-US.restext"/>
 ```
 
- 응용 프로그램에서 리소스를 사용 하려면 <xref:System.Resources.ResourceManager>을 인스턴스화하고 사용 하려는 리소스를 로드 합니다. 다음 예제에서는 이 작업을 수행하는 방법을 보여 줍니다.
+ 응용 프로그램에서 리소스를 사용 하려면 <xref:System.Resources.ResourceManager>를 인스턴스화하고 사용 하려는 리소스를 로드 합니다. 다음 예제에서는 이 작업을 수행하는 방법을 보여 줍니다.
 
  [!code-csharp[LocalizationResources#2](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationResources/CSharp/page1.xaml.cs#2)]
 
@@ -171,7 +171,7 @@ ms.locfileid: "73740859"
 ## <a name="using-clickonce-with-localized-applications"></a>지역화된 애플리케이션에서 ClickOnce 사용
  ClickOnce는 Visual Studio 2005와 함께 제공 되는 새로운 Windows Forms 배포 기술입니다. 애플리케이션 설치 및 웹 애플리케이션의 업그레이드를 수행할 수 있습니다. ClickOnce로 배포된 애플리케이션이 지역화되면 지역화된 문화권에서만 볼 수 있습니다. 예를 들어 배포 된 응용 프로그램이 일본어로 지역화 된 경우 영어 창이 아닌 일본어 Microsoft Windows 에서만 볼 수 있습니다. 이것은 일본어 사용자가 영어 버전의 Windows를 실행 하는 일반적인 시나리오 이기 때문에 문제가 발생 합니다.
 
- 이 문제는 중립 언어 대체 특성을 설정하여 해결합니다. 애플리케이션 개발자가 선택적으로 기본 어셈블리에서 리소스를 제거하고 특정 문화권에 해당하는 위성 어셈블리에서 해당 리소스를 찾을 수 있게 지정할 수 있습니다. 이 프로세스를 제어 하려면 <xref:System.Resources.NeutralResourcesLanguageAttribute>을 사용 합니다. <xref:System.Resources.NeutralResourcesLanguageAttribute> 클래스의 생성자에는 두 개의 시그니처가 있습니다. 하나는 <xref:System.Resources.UltimateResourceFallbackLocation> 매개 변수를 사용 하 여 <xref:System.Resources.ResourceManager>에서 대체 리소스를 추출할 위치를 지정 합니다. 주 어셈블리 또는 위성 어셈블리입니다. 다음 예제에서는 이 특성을 사용하는 방법을 보여 줍니다. 최종 대체 (fallback) 위치에 대해 코드는 <xref:System.Resources.ResourceManager>이 현재 실행 중인 어셈블리의 디렉터리에 있는 "de" 하위 디렉터리에서 리소스를 찾도록 합니다.
+ 이 문제는 중립 언어 대체 특성을 설정하여 해결합니다. 애플리케이션 개발자가 선택적으로 기본 어셈블리에서 리소스를 제거하고 특정 문화권에 해당하는 위성 어셈블리에서 해당 리소스를 찾을 수 있게 지정할 수 있습니다. 이 프로세스를 제어 하려면 <xref:System.Resources.NeutralResourcesLanguageAttribute>을 사용 합니다. <xref:System.Resources.NeutralResourcesLanguageAttribute> 클래스의 생성자에는 두 개의 시그니처가 있습니다. 하나는 <xref:System.Resources.UltimateResourceFallbackLocation> 매개 변수를 사용 하 여 <xref:System.Resources.ResourceManager>에서 대체 리소스를 추출할 위치를 지정 합니다. 주 어셈블리 또는 위성 어셈블리입니다. 다음 예제에서는 이 특성을 사용하는 방법을 보여 줍니다. 최종 대체 (fallback) 위치에 대 한 코드는 <xref:System.Resources.ResourceManager>에서 현재 실행 중인 어셈블리의 디렉터리에 있는 "de" 하위 디렉터리에 있는 리소스를 찾도록 합니다.
 
 ```csharp
 [assembly: NeutralResourcesLanguageAttribute(

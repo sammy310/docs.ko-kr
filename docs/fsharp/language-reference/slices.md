@@ -1,17 +1,17 @@
 ---
-title: 조각 (F#)
-description: 기존 F# 데이터 형식에 조각을 사용 하는 방법과 다른 데이터 형식에 대 한 사용자 고유의 조각을 정의 하는 방법에 대해 알아봅니다.
-ms.date: 01/22/2019
-ms.openlocfilehash: 2f7b87cda87aad1fdac05b4e14b16f454f8c0461
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+title: 조각
+description: 기존 F# 데이터 형식에 대 한 조각을 사용 하는 방법 및 다른 데이터 형식에 대 한 사용자 고유의 조각을 정의 하는 방법을 알아봅니다.
+ms.date: 12/23/2019
+ms.openlocfilehash: 3911139c7ce656043817eb23d30f3686555b6efe
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73733379"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75545108"
 ---
 # <a name="slices"></a>조각
 
-에서 F#조각은 데이터 형식의 하위 집합입니다. 데이터 형식에서 조각을 가져올 수 있으려면 데이터 형식이 범위 내에 있는 `GetSlice` 메서드나 [형식 확장](type-extensions.md) 으로 정의 해야 합니다. 이 문서에서는 기존 F# 형식에서 조각을 가져오는 방법 및 사용자 고유의 조각을 정의 하는 방법을 설명 합니다.
+에서 F#조각은 해당 정의 또는 범위 내 [형식 확장](type-extensions.md)에 `GetSlice` 메서드가 있는 모든 데이터 형식의 하위 집합입니다. F# 배열 및 목록과 가장 일반적으로 사용 됩니다. 이 문서에서는 기존 F# 형식에서 조각을 가져오는 방법 및 사용자 고유의 조각을 정의 하는 방법을 설명 합니다.
 
 조각은 [인덱서와](./members/indexed-properties.md)비슷하지만 기본 데이터 구조에서 단일 값을 생성 하는 대신 여러 개를 생성 합니다.
 
@@ -89,7 +89,7 @@ let twoByTwo = A.[0..1,0..1]
 printfn "%A" twoByTwo
 ```
 
-핵심 F# 라이브러리는 3d 배열에 대 한`GetSlice`를 정의 하지 않습니다. 차원의 다른 배열이 나 다른 배열을 조각화 하려는 경우 `GetSlice` 멤버를 직접 정의 해야 합니다.
+핵심 F# 라이브러리는 현재 3d 배열에 대 한 `GetSlice`를 정의 하지 않습니다. 3D 배열 또는 다른 차원의 다른 배열을 조각화 하려는 경우 `GetSlice` 멤버를 직접 정의 합니다.
 
 ## <a name="defining-slices-for-other-data-structures"></a>다른 데이터 구조에 대 한 조각 정의
 
@@ -140,6 +140,17 @@ printSpan sp.[0..] // [|1; 2; 3; 4; 5|]
 printSpan sp.[..5] // [|1; 2; 3; 4; 5|]
 printSpan sp.[0..3] // [|1; 2; 3|]
 printSpan sp.[1..2] // |2; 3|]
+```
+
+## <a name="built-in-f-slices-are-end-inclusive"></a>기본 제공 F# 조각은 끝이 포함 됩니다.
+
+의 F# 모든 내장 조각은 끝이 포함 됩니다. 즉, 상한이 조각에 포함 됩니다. 시작 인덱스 `x` 및 끝 인덱스 `y`있는 지정 된 조각에 대해 *yth* 값이 결과 조각에 포함 됩니다.
+
+```fsharp
+// Define a new list
+let xs = [1 .. 10]
+
+printfn "%A" xs.[2..5] // Includes the 5th index
 ```
 
 ## <a name="see-also"></a>참조

@@ -2,12 +2,12 @@
 title: 워크플로 서비스 등록 도구(WFServicesReg.exe)
 ms.date: 03/30/2017
 ms.assetid: 9e92c87b-99c5-4e8d-9d53-7944cc2b47d3
-ms.openlocfilehash: cf5ea345c900dec0e4859d81fcb272c1ba3d3df6
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 182bef75bff1785905d77d3bc497e0701e297912
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837755"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346585"
 ---
 # <a name="workflow-service-registration-tool-wfservicesregexe"></a>워크플로 서비스 등록 도구(WFServicesReg.exe)
 워크플로 서비스 등록 도구(WFServicesReg.exe)는 Windows WF(Workflow Foundation) 서비스의 구성 요소를 추가, 제거 또는 복구하는 데 사용할 수 있는 독립 실행형 도구입니다.  
@@ -56,7 +56,7 @@ WFServicesReg.exe [-c | -r | -v | -m | -i]
   
  이 도구는 또한 IIS 메타베이스에 .xoml과 .rules 스크립트 맵 및 처리기를 등록합니다.  
   
- [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] 및 [!INCLUDE[wxp](../../../includes/wxp-md.md)] 컴퓨터 (IIS 5.1 및 IIS 6.0)에서는 하나의 xoml 및. 규칙 스크립트 집합이 등록 됩니다.  
+ Windows Server 2003 및 [!INCLUDE[wxp](../../../includes/wxp-md.md)] 컴퓨터 (IIS 5.1 및 IIS 6.0)에서는 하나의 xoml 및. 규칙 스크립트 집합이 등록 됩니다.  
   
  64비트 시스템에서 도구는 `Enable32BitAppOnWin64` 스위치를 사용할 수 있는 경우 WOW 모드 스크립트 맵을 등록하고, `Enable32BitAppOnWin64` 스위치를 사용할 수 없는 경우 네이티브 64비트 스크립트 맵을 등록합니다.  
   
@@ -70,17 +70,17 @@ WFServicesReg.exe [-c | -r | -v | -m | -i]
 ## <a name="usage-scenarios"></a>사용 시나리오  
   
 ### <a name="installing-iis-after-net-framework-35-is-installed"></a>.NET Framework 3.5 설치 후 IIS 설치  
- [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] 컴퓨터에서 IIS를 설치 하기 전에 .NET Framework 3.5가 설치 됩니다. IIS 메타 베이스를 사용할 수 없기 때문에 .NET Framework 3.5의 설치는 xoml 및. 규칙 스크립트 맵을 설치 하지 않고 성공 합니다.  
+ Windows Server 2003 컴퓨터에서는 IIS 설치 전에 .NET Framework 3.5이 설치 됩니다. IIS 메타 베이스를 사용할 수 없기 때문에 .NET Framework 3.5의 설치는 xoml 및. 규칙 스크립트 맵을 설치 하지 않고 성공 합니다.  
   
  IIS가 설치된 후에는 `/c` 스위치와 함께 WFServicesReg.exe 도구를 사용하여 이러한 특정 스크립트 맵을 설치할 수 있습니다.  
   
 ### <a name="repairing-the-scriptmaps"></a>스크립트 맵 복구  
   
 #### <a name="scriptmap-deleted-under-web-sites-node"></a>웹 사이트 노드에서 삭제된 스크립트 맵  
- [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] 시스템에서 .xoml이나 .rules가 웹 사이트 노드에서 실수로 삭제된 경우입니다. 이런 경우 `/c` 스위치와 함께 WFServicesReg.exe 도구를 실행하여 복구할 수 있습니다.  
+ Windows Server 2003 컴퓨터에서 xoml 또는. 규칙은 웹 사이트 노드에서 실수로 삭제 됩니다. 이런 경우 `/c` 스위치와 함께 WFServicesReg.exe 도구를 실행하여 복구할 수 있습니다.  
   
 #### <a name="scriptmap-deleted-under-a-particular-web-site"></a>특정 웹 사이트에서 삭제된 스크립트 맵  
- [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] 시스템에서 .xoml이나 .rules가 웹 사이트 노드가 아닌 특정 웹 사이트(예: 기본 웹 사이트)에서 실수로 삭제된 경우입니다.  
+ Windows Server 2003 컴퓨터에서 xoml 또는. 규칙은 웹 사이트 노드가 아닌 특정 웹 사이트 (예: 기본 웹 사이트)에서 실수로 삭제 됩니다.  
   
  특정 웹 사이트에 대 한 삭제 된 처리기를 복구 하려면 "Wfservicesreg.exe/r"을 실행 하 여 모든 웹 사이트에서 처리기를 제거한 다음 "Wfservicesreg.exe/c"를 실행 하 여 모든 웹 사이트에 대 한 적절 한 처리기를 만들어야 합니다.  
   

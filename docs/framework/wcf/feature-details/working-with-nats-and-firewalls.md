@@ -5,12 +5,12 @@ helpviewer_keywords:
 - firewalls [WCF]
 - NATs [WCF]
 ms.assetid: 74db0632-1bf0-428b-89c8-bd53b64332e7
-ms.openlocfilehash: 7e907f234afd0fc5e81d586ed456279f684c29de
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: bfbff63c8c2cdb76d5f6d84424a9b03233744dae
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837950"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347113"
 ---
 # <a name="working-with-nats-and-firewalls"></a>NAT 및 방화벽 작업
 네트워크 연결의 클라이언트와 서버에 통신을 위한 직접 및 열린 경로가 없는 경우가 자주 발생합니다. 패킷은 네트워크의 중간 컴퓨터와 엔드포인트 컴퓨터 모두에서 필터링, 라우트, 분석 및 변환됩니다. NAT(Network Address Translation) 및 방화벽은 네트워크 통신에 참여할 수 있는 일반적인 중간 애플리케이션의 예입니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "74837950"
  개인 사용자 방화벽의 일반적인 구성에서는 나가는 연결이 해당 컴퓨터에서 설정될 때까지 들어오는 연결을 금지합니다. 비즈니스 사용자 방화벽의 일반적인 구성에서는 특별히 식별된 그룹을 제외한 모든 포트에서 들어오는 연결을 금지합니다. 예를 들어, HTTP 및 HTTPS 서비스를 제공하기 위해 포트 80 및 443을 제외한 모든 포트에서 연결을 금지하는 방화벽이 있습니다. 개인 사용자와 비즈니스 사용자 모두에 컴퓨터의 신뢰할 수 있는 사용자 또는 프로세스에서 방화벽 구성을 변경할 수 있도록 허용하는 관리되는 방화벽이 있습니다. 관리되는 방화벽은 네트워크 사용을 제어하는 회사 정책이 없는 개인 사용자에게 더 일반적입니다.  
   
 ## <a name="using-teredo"></a>Teredo 사용  
- Teredo는 NAT 뒤에서 컴퓨터의 주소를 직접 지정할 수 있는 IPv6 전환 기술입니다. Teredo는 잠재적 연결을 광고하기 위해 공개적이고 전역적으로 라우팅될 수 있는 서버를 사용합니다. Teredo 서버는 애플리케이션 클라이언트와 서버에 연결 정보를 교환할 수 있는 공통 만남 지점을 제공합니다. 컴퓨터는 임시 Teredo 주소를 요청하고 패킷이 기존 네트워크를 통해 터널링됩니다. WCF에서 teredo를 지원 하려면 운영 체제에서 IPv6 및 Teredo 지원을 사용 하도록 설정 해야 합니다. [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 이상 운영 체제에서는 Teredo를 지원합니다. Windows Vista 이상 운영 체제는 기본적으로 i p v 6을 지원 하며, 사용자만 Teredo를 사용 하도록 설정 해야 합니다. [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] 및 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]에서는 IPv6과 Teredo를 모두 사용하도록 설정해야 합니다. 자세한 내용은 [Teredo 개요](https://go.microsoft.com/fwlink/?LinkId=87571)를 참조 하세요.  
+ Teredo는 NAT 뒤에서 컴퓨터의 주소를 직접 지정할 수 있는 IPv6 전환 기술입니다. Teredo는 잠재적 연결을 광고하기 위해 공개적이고 전역적으로 라우팅될 수 있는 서버를 사용합니다. Teredo 서버는 애플리케이션 클라이언트와 서버에 연결 정보를 교환할 수 있는 공통 만남 지점을 제공합니다. 컴퓨터는 임시 Teredo 주소를 요청하고 패킷이 기존 네트워크를 통해 터널링됩니다. WCF에서 teredo를 지원 하려면 운영 체제에서 IPv6 및 Teredo 지원을 사용 하도록 설정 해야 합니다. [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 이상 운영 체제에서는 Teredo를 지원합니다. Windows Vista 이상 운영 체제는 기본적으로 i p v 6을 지원 하며, 사용자만 Teredo를 사용 하도록 설정 해야 합니다. [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] 및 Windows Server 2003에는 사용자가 i p v 6과 Teredo를 모두 사용 하도록 설정 해야 합니다. 자세한 내용은 [Teredo 개요](https://go.microsoft.com/fwlink/?LinkId=87571)를 참조 하세요.  
   
 ## <a name="choosing-a-transport-and-message-exchange-pattern"></a>전송 및 메시지 교환 패턴 선택  
  전송 및 MEP 선택은 3단계 프로세스입니다.  

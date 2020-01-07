@@ -9,18 +9,18 @@ helpviewer_keywords:
 - navigation topologies [WPF]
 - dynamically-generated topology
 ms.assetid: 5d5ee837-629a-4933-869a-186dc22ac43d
-ms.openlocfilehash: 5d9b09085ed8057f53cae9f9177682b01e698f6d
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 5679bac06b87b3c4e50cbc4a238d7daf3e33a564
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72580717"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636278"
 ---
 # <a name="navigation-topologies-overview"></a>탐색 토폴로지 개요
-<a name="introduction"></a>이 개요에서는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]의 탐색 토폴로지를 소개 합니다. 세 가지 일반적인 탐색 토폴로지를 샘플과 함께 차례로 설명합니다.  
+<a name="introduction"></a>이 개요에서는 WPF의 탐색 토폴로지를 소개 합니다. 세 가지 일반적인 탐색 토폴로지를 샘플과 함께 차례로 설명합니다.  
   
 > [!NOTE]
-> 이 항목을 읽기 전에 페이지 함수를 사용 하 여 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]에서 구조화 된 탐색 개념에 대해 잘 알고 있어야 합니다. 이러한 두 항목에 대 한 자세한 내용은 [구조적 탐색 개요](structured-navigation-overview.md)를 참조 하세요.  
+> 이 항목을 읽기 전에 페이지 함수를 사용 하 여 WPF에서 구조화 된 탐색 개념에 대해 잘 알고 있어야 합니다. 이러한 두 항목에 대 한 자세한 내용은 [구조적 탐색 개요](structured-navigation-overview.md)를 참조 하세요.  
   
  이 항목에는 다음과 같은 단원이 포함되어 있습니다.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "72580717"
   
 <a name="Navigation_Topologies"></a>   
 ## <a name="navigation-topologies"></a>탐색 토폴로지  
- @No__t_0 탐색은 일반적으로 클릭 하면 다른 페이지로 이동 하는 하이퍼링크 (<xref:System.Windows.Documents.Hyperlink>)가 있는 페이지 (<xref:System.Windows.Controls.Page>)로 구성 됩니다. 탐색 되는 페이지는 Uri (uniform resource identifier)로 식별 됩니다 ( [WPF의 Pack uri](pack-uris-in-wpf.md)참조). 페이지, 하이퍼링크 및 Uri (uniform resource identifier)를 보여 주는 다음과 같은 간단한 예제를 살펴보겠습니다.  
+ WPF에서 탐색은 일반적으로 클릭 하면 다른 페이지로 이동 하는 하이퍼링크 (<xref:System.Windows.Documents.Hyperlink>)가 있는 페이지 (<xref:System.Windows.Controls.Page>)로 구성 됩니다. 탐색 되는 페이지는 Uri (uniform resource identifier)로 식별 됩니다 ( [WPF의 Pack uri](pack-uris-in-wpf.md)참조). 페이지, 하이퍼링크 및 Uri (uniform resource identifier)를 보여 주는 다음과 같은 간단한 예제를 살펴보겠습니다.  
   
  [!code-xaml[NavigationTopologiesOverviewSnippets#Page1](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationTopologiesOverviewSnippets/CS/Page1.xaml#page1)]  
   
@@ -66,7 +66,7 @@ ms.locfileid: "72580717"
   
  고정 선형 토폴로지를 탐색하는 일반적인 동작은 다음과 같습니다.  
   
-- 호출 페이지에서 마법사를 초기화하고 첫 번째 마법사 페이지로 이동하는 시작 프로그램 페이지로 이동합니다. 호출 페이지에서 첫 번째 마법사 페이지를 직접 호출할 수 있으므로 시작 관리자 페이지 ([!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 없는 <xref:System.Windows.Navigation.PageFunction%601>)가 필요 하지 않습니다. 그러나 시작 페이지를 사용하면 특히 초기화가 복잡한 경우 마법사 초기화를 단순화할 수 있습니다.  
+- 호출 페이지에서 마법사를 초기화하고 첫 번째 마법사 페이지로 이동하는 시작 프로그램 페이지로 이동합니다. 호출 페이지에서 첫 번째 마법사 페이지를 직접 호출할 수 있으므로 시작 관리자 페이지 ([!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]없는 <xref:System.Windows.Navigation.PageFunction%601>)가 필요 하지 않습니다. 그러나 시작 페이지를 사용하면 특히 초기화가 복잡한 경우 마법사 초기화를 단순화할 수 있습니다.  
   
 - 사용자는 뒤로 및 앞으로 단추(또는 하이퍼링크)를 사용하여 페이지 사이를 탐색할 수 있습니다.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "72580717"
   
  고정 계층적 구조의 페이지를 탐색하는 시퀀스가 런타임에 결정되더라도 사용자 환경은 고정 선형 토폴로지의 사용자 환경과 동일합니다.  
   
-- 호출 페이지에서 마법사를 초기화하고 첫 번째 마법사 페이지로 이동하는 시작 프로그램 페이지로 이동합니다. 호출 페이지에서 첫 번째 마법사 페이지를 직접 호출할 수 있으므로 시작 관리자 페이지 ([!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 없는 <xref:System.Windows.Navigation.PageFunction%601>)가 필요 하지 않습니다. 그러나 시작 페이지를 사용하면 특히 초기화가 복잡한 경우 마법사 초기화를 단순화할 수 있습니다.  
+- 호출 페이지에서 마법사를 초기화하고 첫 번째 마법사 페이지로 이동하는 시작 프로그램 페이지로 이동합니다. 호출 페이지에서 첫 번째 마법사 페이지를 직접 호출할 수 있으므로 시작 관리자 페이지 ([!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]없는 <xref:System.Windows.Navigation.PageFunction%601>)가 필요 하지 않습니다. 그러나 시작 페이지를 사용하면 특히 초기화가 복잡한 경우 마법사 초기화를 단순화할 수 있습니다.  
   
 - 사용자는 뒤로 및 앞으로 단추(또는 하이퍼링크)를 사용하여 페이지 사이를 탐색할 수 있습니다.  
   
@@ -124,7 +124,7 @@ ms.locfileid: "72580717"
   
  탐색 시퀀스를 동적으로 생성된 토폴로지라고 합니다. 다른 탐색 토폴로지와 마찬가지로 사용자의 환경은 이전 토폴로지의 경우와 같습니다.  
   
-- 호출 페이지에서 마법사를 초기화하고 첫 번째 마법사 페이지로 이동하는 시작 프로그램 페이지로 이동합니다. 호출 페이지에서 첫 번째 마법사 페이지를 직접 호출할 수 있으므로 시작 관리자 페이지 ([!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 없는 <xref:System.Windows.Navigation.PageFunction%601>)가 필요 하지 않습니다. 그러나 시작 페이지를 사용하면 특히 초기화가 복잡한 경우 마법사 초기화를 단순화할 수 있습니다.  
+- 호출 페이지에서 마법사를 초기화하고 첫 번째 마법사 페이지로 이동하는 시작 프로그램 페이지로 이동합니다. 호출 페이지에서 첫 번째 마법사 페이지를 직접 호출할 수 있으므로 시작 관리자 페이지 ([!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]없는 <xref:System.Windows.Navigation.PageFunction%601>)가 필요 하지 않습니다. 그러나 시작 페이지를 사용하면 특히 초기화가 복잡한 경우 마법사 초기화를 단순화할 수 있습니다.  
   
 - 사용자는 뒤로 및 앞으로 단추(또는 하이퍼링크)를 사용하여 페이지 사이를 탐색할 수 있습니다.  
   
