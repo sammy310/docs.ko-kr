@@ -5,15 +5,15 @@ helpviewer_keywords:
 - WPF applications [WPF], deployment
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
-ms.openlocfilehash: a1441f0cc3a7ac715a173be12e68c055ce36ff00
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: d67919ba38c2e306672966ddc2f62140ef92b638
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460139"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636304"
 ---
 # <a name="deploying-a-wpf-application-wpf"></a>WPF 애플리케이션 배포(WPF)
-Windows Presentation Foundation (WPF) 응용 프로그램을 빌드한 후 배포 해야 합니다. Windows 및 .NET Framework에는 몇 가지 배포 기술이 포함 되어 있습니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 애플리케이션을 배포하는 데 사용되는 배포 기술은 애플리케이션 종류에 따라 달라집니다. 이 항목에서는 각 배포 기술과 해당 기술이 각 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 애플리케이션 종류의 배포 요구 사항과 함께 사용되는 방법에 대해 간략하게 설명합니다.  
+Windows Presentation Foundation (WPF) 응용 프로그램을 빌드한 후 배포 해야 합니다. Windows 및 .NET Framework에는 몇 가지 배포 기술이 포함 되어 있습니다. WPF 응용 프로그램을 배포 하는 데 사용 되는 배포 기술은 응용 프로그램 유형에 따라 달라 집니다. 이 항목에서는 각 배포 기술에 대 한 간략 한 개요와 각 WPF 응용 프로그램 유형의 배포 요구 사항과 함께 사용 되는 방법을 설명 합니다.  
 
 <a name="Deployment_Technologies"></a>   
 ## <a name="deployment-technologies"></a>배포 기술  
@@ -63,7 +63,7 @@ Windows Presentation Foundation (WPF) 응용 프로그램을 빌드한 후 배�
   
 <a name="Deploying_WPF_Applications"></a>   
 ## <a name="deploying-wpf-applications"></a>WPF 애플리케이션 배포  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 애플리케이션에 대한 배포 옵션은 애플리케이션 종류에 따라 달라집니다. 배포 측면에서 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]는 세 가지 중요한 애플리케이션 종류를 제공합니다.  
+ WPF 응용 프로그램에 대 한 배포 옵션은 응용 프로그램의 형식에 따라 달라 집니다. 배포 관점에서 WPF는 다음과 같은 세 가지 중요 한 응용 프로그램 유형을 갖습니다.  
   
 - 독립 실행형 애플리케이션.  
   
@@ -79,7 +79,7 @@ Windows Presentation Foundation (WPF) 응용 프로그램을 빌드한 후 배�
 ### <a name="deploying-markup-only-xaml-applications"></a>마크업 전용 XAML 애플리케이션 배포  
  태그 전용 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 페이지는 일반적으로 HTML 페이지와 같은 웹 서버에 게시 되며 Internet Explorer를 사용 하 여 볼 수 있습니다. 마크업 전용 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 페이지는 인터넷 영역 권한 설정에 정의된 제한 사항이 있는 부분 신뢰 보안 샌드박스 내에서 실행됩니다. HTML 기반 웹 응용 프로그램에 해당 하는 보안 샌드박스를 제공 합니다.  
   
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 애플리케이션의 보안에 대한 자세한 내용은 [보안](../security-wpf.md)을 참조하세요.  
+ WPF 응용 프로그램의 보안에 대 한 자세한 내용은 [보안](../security-wpf.md)을 참조 하세요.  
   
  마크업 전용 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 페이지는 XCopy 또는 Windows Installer를 사용 하 여 로컬 파일 시스템에 설치할 수 있습니다. 이러한 페이지는 Internet Explorer 또는 Windows 탐색기를 사용 하 여 볼 수 있습니다.  
   
@@ -112,7 +112,7 @@ Windows Presentation Foundation (WPF) 응용 프로그램을 빌드한 후 배�
   
 <a name="Installing__NET_Framework_3_0"></a>   
 ## <a name="installing-the-net-framework"></a>.NET Framework 설치  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램을 실행 하려면 Microsoft .NET Framework가 클라이언트에 설치 되어 있어야 합니다. Internet Explorer는 브라우저에서 호스트 되는 응용 프로그램을 볼 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 때 클라이언트가 .NET Framework 설치 되는지 여부를 자동으로 검색 합니다. .NET Framework 설치 되어 있지 않으면 Internet Explorer에서 사용자에 게 설치를 요청 합니다.  
+ WPF 응용 프로그램을 실행 하려면 클라이언트에 Microsoft .NET 프레임 워크를 설치 해야 합니다. Internet Explorer는 WPF 브라우저에서 호스트 되는 응용 프로그램을 볼 때 클라이언트가 .NET Framework와 함께 설치 되는지 여부를 자동으로 검색 합니다. .NET Framework 설치 되어 있지 않으면 Internet Explorer에서 사용자에 게 설치를 요청 합니다.  
   
  .NET Framework 설치 되어 있는지 여부를 검색 하기 위해 Internet Explorer에는 확장명이 .xaml 인 콘텐츠 파일에 대 한 MIME (대체 다목적 Internet Mail Extensions) 처리기로 등록 된 부트스트래퍼 응용 프로그램 (.xaml, .xps, xbap)이 포함 되어 있습니다. , 및. 응용 프로그램. 이러한 파일 형식으로 이동 하 여 클라이언트에 .NET Framework 설치 되어 있지 않으면 부트스트래퍼 응용 프로그램에서 설치 권한을 요청 합니다. 사용 권한이 제공 되지 않으면 .NET Framework 및 응용 프로그램은 설치 되지 않습니다.  
   

@@ -2,12 +2,12 @@
 title: 참조
 ms.date: 03/30/2017
 ms.assetid: 312c3935-a947-4220-a837-0039d9fc458b
-ms.openlocfilehash: 3c33613c3b20020248b0ba6bb9e17266edc07bae
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 287aca605ddb80d32cdbad38181244bb57fb8337
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70792839"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75634290"
 ---
 # <a name="reference"></a>참조
 이 단원에서는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 개발자를 위한 참조 정보를 제공합니다.  
@@ -31,18 +31,18 @@ ms.locfileid: "70792839"
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에 관련된 일반적인 질문에 대한 대답을 제공합니다.  
   
  [SQL Server Compact 및 LINQ to SQL](sql-server-compact-and-linq-to-sql.md)  
- SQL Server Compact 3.5이 응용 프로그램의 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] SQL Server와 어떻게 다른 지 설명 합니다.  
+ SQL Server Compact 3.5이 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 응용 프로그램의 SQL Server와 어떻게 다른 지 설명 합니다.  
   
  [표준 쿼리 연산자 변환](standard-query-operator-translation.md)  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 표준 쿼리 연산자를 SQL 명령으로 변환하는 방법에 대해 설명합니다.  
   
-## <a name="related-sections"></a>관련 단원  
+## <a name="related-sections"></a>관련 섹션  
  [LINQ to SQL](index.md)  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 항목에 대한 포털을 제공합니다.  
   
  [LINQ(Language-Integrated Query) - C#](../../../../../csharp/programming-guide/concepts/linq/index.md)  
  [LINQ(Language-Integrated Query) - Visual Basic](../../../../../visual-basic/programming-guide/concepts/linq/index.md)  
- 항목에 대 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 한 포털을 제공 합니다.  
+ LINQ 토픽에 대 한 포털을 제공 합니다.  
   
  [LinqDataSource 웹 서버 컨트롤 개요](https://docs.microsoft.com/previous-versions/aspnet/bb547113(v=vs.100))  
- <xref:System.Web.UI.WebControls.LinqDataSource> 컨트롤이 ASP.NET 데이터 소스 제어 아키텍처를 통해 웹 개발자에 게 노출 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 하는 방법을 설명 합니다.
+ <xref:System.Web.UI.WebControls.LinqDataSource> 컨트롤이 ASP.NET 데이터 소스 제어 아키텍처를 통해 LINQ to Web 개발자를 노출 하는 방법을 설명 합니다.

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - WPF [WPF], localization
 - Windows Presentation Foundation [WPF], localization
 ms.assetid: e96f9764-4e3f-4d1c-bf20-3fb890118aae
-ms.openlocfilehash: 0d01f7536c120f51372961d944804cfe0063fb9f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 80e0bf641c46eb1461769f5a85950982258c78f5
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62010282"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559424"
 ---
 # <a name="globalization-and-localization"></a>전역화 및 지역화
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 세계 시장 대응 응용 프로그램 개발에 대 한 광범위 한 지원을 제공합니다.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]은 전 세계에서 사용할 수 있는 응용 프로그램 개발에 대 한 광범위 한 지원을 제공 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [WPF 전역화 및 지역화 개요](wpf-globalization-and-localization-overview.md)  
@@ -36,6 +36,6 @@ ms.locfileid: "62010282"
   
  <xref:System.Resources.NeutralResourcesLanguageAttribute>  
   
- [XAML의 xml:lang 처리](../../xaml-services/xml-lang-handling-in-xaml.md)  
+ [XAML의 xml:lang 처리](../../../desktop-wpf/xaml-services/xml-language-handling.md)  
   
-## <a name="related-sections"></a>관련 단원
+## <a name="related-sections"></a>관련 섹션

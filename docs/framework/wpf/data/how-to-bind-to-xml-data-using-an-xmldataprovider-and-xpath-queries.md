@@ -6,19 +6,19 @@ helpviewer_keywords:
 - data binding [WPF], binding to XML data using XmlDataProvider queries
 - binding [WPF], to XML data using XmlDataProvider queries
 ms.assetid: 7dcd018f-16aa-4870-8e47-c1b4ea31e574
-ms.openlocfilehash: f075d646539de5d68e1c9c75d9664451125e9919
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: a5ad7d8bce9bc0a760868e483278d1836f9472af
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73733556"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559705"
 ---
 # <a name="how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries"></a>방법: XMLData Provider 및 XPath 쿼리를 사용하여 XML 데이터에 바인딩
 이 예제에서는 <xref:System.Windows.Data.XmlDataProvider>를 사용 하 여 XML 데이터에 바인딩하는 방법을 보여 줍니다.  
   
  <xref:System.Windows.Data.XmlDataProvider>를 사용 하면 응용 프로그램에서 데이터 바인딩을 통해 액세스할 수 있는 기본 데이터가 모든 XML 노드의 트리가 될 수 있습니다. 즉, <xref:System.Windows.Data.XmlDataProvider>은 모든 XML 노드 트리를 바인딩 소스로 사용 하는 편리한 방법을 제공 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서 데이터는 <xref:System.Windows.FrameworkElement.Resources%2A> 섹션 내에 XML *데이터 아일랜드* 로 직접 포함 됩니다. XML 데이터 아일랜드는 `<x:XData>` 태그에 래핑해야 하며 항상 단일 루트 노드 (이 예제에서는 *인벤토리* )를 포함 해야 합니다.  
   
 > [!NOTE]
@@ -26,7 +26,7 @@ ms.locfileid: "73733556"
   
  [!code-xaml[XMLDataSource#1](~/samples/snippets/csharp/VS_Snippets_Wpf/XmlDataSource/CS/Window1.xaml#1)]  
   
- 이 예에 표시된 대로 특성 구문에서 동일한 바인딩 선언을 만들기 위해 특수 문자를 적절하게 이스케이프 처리해야 합니다. 자세한 내용은 [XML 문자 엔터티 및 XAML](../../xaml-services/xml-character-entities-and-xaml.md)을 참조하세요.  
+ 이 예에 표시된 대로 특성 구문에서 동일한 바인딩 선언을 만들기 위해 특수 문자를 적절하게 이스케이프 처리해야 합니다. 자세한 내용은 [XML 문자 엔터티 및 XAML](../../../desktop-wpf/xaml-services/xml-character-entities.md)을 참조하세요.  
   
  이 예제를 실행 하면 <xref:System.Windows.Controls.ListBox>에 다음 항목이 표시 됩니다. *재고* 값이 “*out*”이거나 *숫자* 값이 3이상 또는 8과 동일한 *책* 아래에 있는 모든 요소의 *제목*입니다. <xref:System.Windows.Data.XmlDataProvider>에 설정 된 <xref:System.Windows.Data.XmlDataProvider.XPath%2A> 값은 *Books* 요소만 노출 되어야 함을 나타내므로 (기본적으로 필터 설정) *CD* 항목이 반환 되지 않습니다.  
   

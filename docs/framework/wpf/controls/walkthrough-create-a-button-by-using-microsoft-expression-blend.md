@@ -6,16 +6,16 @@ helpviewer_keywords:
 - converting [WPF], shape to button
 - Expression Blend [WPF Designer]
 ms.assetid: ff5037c2-bba7-4cae-8abb-6475b686c48e
-ms.openlocfilehash: e1fdc3ef51e8658e07bc555238229bed9116e165
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 10d049288cf560dadedf7bc5e624deb7c42aae81
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460100"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636174"
 ---
 # <a name="walkthrough-create-a-button-by-using-microsoft-expression-blend"></a>연습: Microsoft Expression Blend를 사용하여 단추 만들기
 
-이 연습에서는 Microsoft Expression Blend를 사용 하 여 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 사용자 지정 단추를 만드는 과정을 단계별로 안내 합니다.
+이 연습에서는 Microsoft Expression Blend를 사용 하 여 WPF 사용자 지정 단추를 만드는 과정을 단계별로 안내 합니다.
 
 > [!IMPORTANT]
 > Microsoft Expression Blend는 실행 프로그램을 만들기 위해 컴파일된 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]를 생성 하는 방식으로 작동 합니다. XAML로 직접 작업 하는 경우 Blend가 아닌 Visual Studio에서 XAML을 사용 하 여 동일한 응용 프로그램을 만드는 다른 연습이 있습니다. 자세한 내용은 [XAML을 사용 하 여 단추 만들기](walkthrough-create-a-button-by-using-xaml.md) 를 참조 하세요.
@@ -40,7 +40,7 @@ ms.locfileid: "73460100"
 
 5. 프로젝트 이름을 `CustomButton` 하 고 **확인**을 누릅니다.
 
-이때 빈 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 프로젝트가 있습니다. F5 키를 눌러 응용 프로그램을 실행할 수 있습니다. 짐작할 수 있듯이 응용 프로그램은 빈 창 으로만 구성 됩니다. 다음으로 모퉁이가 둥근 사각형을 만들어 단추로 변환 합니다.
+이 시점에서 빈 WPF 프로젝트를 사용할 수 있습니다. F5 키를 눌러 응용 프로그램을 실행할 수 있습니다. 짐작할 수 있듯이 응용 프로그램은 빈 창 으로만 구성 됩니다. 다음으로 모퉁이가 둥근 사각형을 만들어 단추로 변환 합니다.
 
 ### <a name="to-convert-a-rectangle-to-a-button"></a>사각형을 단추로 변환 하려면
 
@@ -208,7 +208,7 @@ ms.locfileid: "73460100"
 
     ![단추 크기를 축소하는 방법](./media/custom-button-blend-sizetransform.png)
 
-    F5 키를 눌러 애플리케이션을 실행합니다. 마우스 포인터를 단추 위로 이동 합니다. 투명 효과 레이어가 단추 위쪽으로 축소 됩니다.
+    F5 키를 눌러 응용 프로그램을 실행합니다. 마우스 포인터를 단추 위로 이동 합니다. 투명 효과 레이어가 단추 위쪽으로 축소 됩니다.
 
 5. **다른 이벤트 트리거를 만들고 다른 애니메이션을 연결 합니다.** 하나 이상의 애니메이션을 추가 해 보겠습니다. 이전 이벤트 트리거 애니메이션을 만드는 데 사용한 것과 비슷한 절차를 사용 합니다.
 
@@ -222,9 +222,9 @@ ms.locfileid: "73460100"
 
     4. 0\.3 초의 키프레임이 강조 표시 된 상태로 **회전 변환 각도** 를 360도로 설정 합니다.
 
-        ![회전 변환을 만드는 방법](./media/custom-button-blend-rotatetransform.gif)
+        ![회전 변형을 만드는 방법](./media/custom-button-blend-rotatetransform.gif)
 
-    5. F5 키를 눌러 애플리케이션을 실행합니다. 단추를 클릭합니다. 투명 효과 레이어가 회전 합니다.
+    5. F5 키를 눌러 응용 프로그램을 실행합니다. 단추를 클릭합니다. 투명 효과 레이어가 회전 합니다.
 
 ## <a name="conclusion"></a>결론
 
@@ -234,7 +234,7 @@ ms.locfileid: "73460100"
 
 ![같은 템플릿을 사용하는 여러 단추](./media/custom-button-blend-createmultiplebuttons.png)
 
-F5 키를 눌러 애플리케이션을 실행합니다. 단추를 클릭 하 고 모두 동일한 방식으로 동작 하는 방식을 확인 합니다.
+F5 키를 눌러 응용 프로그램을 실행합니다. 단추를 클릭 하 고 모두 동일한 방식으로 동작 하는 방식을 확인 합니다.
 
 템플릿을 사용자 지정 하는 동안 **innerRectangle** 의 <xref:System.Windows.Shapes.Shape.Fill%2A> 속성을 설정 하 고 <xref:System.Windows.Shapes.Shape.Stroke%2A> 속성 **outerRectangle** 를 템플릿 배경 ({TemplateBinding background})으로 설정 합니다. 따라서 개별 단추의 배경색을 설정 하는 경우 설정 하는 배경은 해당 속성에 사용 됩니다. 지금 배경을 변경해 보세요. 다음 그림에서는 서로 다른 그라데이션을 사용 합니다. 따라서 서식 파일은 단추와 같은 컨트롤의 전반적인 사용자 지정에 유용 하지만 템플릿이 있는 컨트롤은 서로 다르게 보이도록 수정할 수 있습니다.
 

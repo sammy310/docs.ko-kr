@@ -5,18 +5,18 @@ helpviewer_keywords:
 - Visual Basic [WPF], event handlers
 - event handlers [WPF], Visual Basic
 ms.assetid: ad4eb9aa-3afc-4a71-8cf6-add3fbea54a1
-ms.openlocfilehash: 9a3d579019db4d2b59a0252dbe63b4a6a0468849
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 5625b63f2a2162f8f188476bfd61bde4c717f1dd
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458307"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559861"
 ---
 # <a name="visual-basic-and-wpf-event-handling"></a>Visual Basic 및 WPF 이벤트 처리
 특히 Microsoft Visual Basic .NET 언어의 경우 특성을 사용 하 여 이벤트 처리기를 연결 하거나 <xref:System.Windows.UIElement.AddHandler%2A> 메서드를 사용 하는 대신 언어별 `Handles` 키워드를 사용 하 여 이벤트 처리기를 인스턴스와 연결할 수 있습니다. 그러나 처리기를 인스턴스에 연결하는 `Handles` 기술에는 몇 가지 제한 사항이 있습니다. 이는 `Handles` 구문이 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 이벤트 시스템의 특정 라우트된 이벤트 기능 중 일부를 지원할 수 없기 때문입니다.  
   
 ## <a name="using-handles-in-a-wpf-application"></a>WPF 애플리케이션에서 "Handles" 사용  
- `Handles`를 사용하여 인스턴스 및 이벤트에 연결되는 이벤트 처리기는 모두 인스턴스의 partial 클래스 선언 내에 정의되어야 하며, 이는 요소에서 특성 값을 통해 할당되는 이벤트 처리기에 대한 요구 사항이기도 합니다. <xref:System.Windows.FrameworkContentElement.Name%2A> 속성 값 (또는 [X:Name 지시문](../../xaml-services/x-name-directive.md) 이 선언 됨)이 있는 페이지의 요소에 대해서만 `Handles` 지정할 수 있습니다. 이는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]의 <xref:System.Windows.FrameworkContentElement.Name%2A>에서 `Handles` 구문에 필요한 *인스턴스* 참조 형식에 필요한 인스턴스 참조를 만들기 때문입니다. <xref:System.Windows.FrameworkContentElement.Name%2A> 참조 없이 `Handles`에 사용할 수 있는 유일한 요소는 partial 클래스를 정의 하는 루트 요소 인스턴스입니다.  
+ `Handles`를 사용하여 인스턴스 및 이벤트에 연결되는 이벤트 처리기는 모두 인스턴스의 partial 클래스 선언 내에 정의되어야 하며, 이는 요소에서 특성 값을 통해 할당되는 이벤트 처리기에 대한 요구 사항이기도 합니다. <xref:System.Windows.FrameworkContentElement.Name%2A> 속성 값 (또는 [X:Name 지시문](../../../desktop-wpf/xaml-services/xname-directive.md) 이 선언 됨)이 있는 페이지의 요소에 대해서만 `Handles` 지정할 수 있습니다. 이는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]의 <xref:System.Windows.FrameworkContentElement.Name%2A>에서 `Handles` 구문에 필요한 *인스턴스* 참조 형식에 필요한 인스턴스 참조를 만들기 때문입니다. <xref:System.Windows.FrameworkContentElement.Name%2A> 참조 없이 `Handles`에 사용할 수 있는 유일한 요소는 partial 클래스를 정의 하는 루트 요소 인스턴스입니다.  
   
  `Handles` 다음에 오는 *Instance.Event* 참조를 쉼표로 구분하여 동일한 처리기를 여러 요소에 할당할 수 있습니다.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "73458307"
 > XAML에서 동일한 이벤트에 대 한 이벤트 처리기를 지정 하는 경우 Visual Basic 코드에 `Handles` 구문을 사용 하지 마세요. 이 경우 이벤트 처리기가 두 번 호출됩니다.  
   
 ## <a name="how-wpf-implements-handles-functionality"></a>WPF에서 "Handles" 기능을 구현하는 방법  
- [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 페이지가 컴파일되면 중간 파일은 <xref:System.Windows.FrameworkContentElement.Name%2A> 속성 집합 (또는 [X:Name 지시문](../../xaml-services/x-name-directive.md) 이 선언 됨)이 있는 페이지의 모든 요소에 대 한 `Friend` `WithEvents` 참조를 선언 합니다. 각 명명된 인스턴스는 `Handles`를 통해 처리기에 할당할 수 있는 요소일 수 있습니다.  
+ [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 페이지가 컴파일되면 중간 파일은 <xref:System.Windows.FrameworkContentElement.Name%2A>속성 집합이 있거나 [x:Name 지시문](../../../desktop-wpf/xaml-services/xname-directive.md)이 선언 된 페이지의 모든 요소에 대 한 `Friend` `WithEvents`참조를 선언 합니다. 각 명명된 인스턴스는 `Handles`를 통해 처리기에 할당할 수 있는 요소일 수 있습니다.  
   
 > [!NOTE]
 > Visual Studio 내에서 IntelliSense는 페이지의 `Handles` 참조에 사용할 수 있는 요소에 대 한 완료를 표시할 수 있습니다. 그러나 이렇게 하려면 중간 파일에서 모든 `Friends` 참조를 채울 수 있도록 하나의 컴파일 패스가 필요할 수 있습니다.  

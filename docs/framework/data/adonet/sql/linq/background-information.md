@@ -2,12 +2,12 @@
 title: 배경 정보
 ms.date: 03/30/2017
 ms.assetid: 724888f2-d3f1-4bea-b9a1-a0adb8a00f3b
-ms.openlocfilehash: d4466085419830e8fd91a3421271fde4e7e3a174
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: deb4d59dc2fb40b63e0362a9a4ee4b84c08dce49
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248087"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75634731"
 ---
 # <a name="background-information"></a>배경 정보
 이 단원의 항목은 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 사용에 대한 개념 및 기본 사용법을 확장하는 절차와 관련되어 있습니다.  
@@ -18,7 +18,7 @@ ms.locfileid: "70248087"
   
 - 전문가와 관련 하 여 더 복잡 한 항목을 자세히 논의할 수 있는 [LINQ 포럼](https://go.microsoft.com/fwlink/?LinkId=76488)에 참여 하세요.  
   
-- 기술에 대해 자세히 설명 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 하 고 Visual Basic 및 C# 코드 예제를 설명 하는 백서를 학습 합니다. 자세한 내용은 [LINQ to SQL: 관계형 데이터에 대 한 .Net 언어 통합 쿼리](https://go.microsoft.com/fwlink/?LinkId=93205)를 참조 하세요.  
+- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 기술에 대해 자세히 설명 하 고 Visual Basic 및 C# 코드 예제를 사용 하 여 완료 하는 백서를 학습 합니다. 자세한 내용은 [LINQ to SQL: 관계형 데이터에 대 한 .Net 언어 통합 쿼리](https://go.microsoft.com/fwlink/?LinkId=93205)를 참조 하세요.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [ADO.NET 및 LINQ to SQL](ado-net-and-linq-to-sql.md)  
@@ -39,7 +39,7 @@ ms.locfileid: "70248087"
  [로컬 메서드 호출](local-method-calls.md)  
  로컬 메서드 호출에 대한 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 지원에 대해 설명합니다.  
   
- [LINQ to SQL을 사용한 N 계층 및 원격 응용 프로그램](n-tier-and-remote-applications-with-linq-to-sql.md)  
+ [LINQ to SQL을 사용한 N 계층 및 원격 애플리케이션](n-tier-and-remote-applications-with-linq-to-sql.md)  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]을 사용하는 다중 계층 애플리케이션에 대한 자세한 정보를 제공합니다.  
   
  [개체 ID](object-identity.md)  
@@ -55,7 +55,7 @@ ms.locfileid: "70248087"
  낙관적 동시성에 대해 설명하며 용어를 정의합니다.  
   
  [쿼리 개념](query-concepts.md)  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]의 쿼리와 다른 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]의 쿼리 기능에 대해 설명합니다.  
+ LINQ의 쿼리와 다른 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]의 쿼리 측면을 설명 합니다.  
   
  [ID 캐시에서 개체 검색](retrieving-objects-from-the-identity-cache.md)  
  ID 캐시에서 개체를 검색하는 쿼리 형식에 대해 설명합니다.  
@@ -81,6 +81,6 @@ ms.locfileid: "70248087"
  [사용자 정의 함수](user-defined-functions.md)  
  디자인 타임에 사용자 정의 함수를 매핑하여 애플리케이션에서 해당 함수를 호출하는 방법에 대해 설명합니다.  
   
-## <a name="related-sections"></a>관련 단원  
+## <a name="related-sections"></a>관련 섹션  
  [프로그래밍 가이드](programming-guide.md)  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]의 다양한 기능에 대해 설명하는 단원의 링크를 제공합니다.

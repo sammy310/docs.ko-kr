@@ -8,29 +8,29 @@ helpviewer_keywords:
 - resources [WPF]
 - reusing commonly defined objects [WPF]
 ms.assetid: 12ae4b67-cd0c-4c4d-a188-2c3de173bbb9
-ms.openlocfilehash: 8f3ab7a11757ba1936aae6e63ace28c4b336292b
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 50e21f2d23054e58079f97466aea5d2d7d9f659e
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458702"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559731"
 ---
 # <a name="resources-wpf"></a>리소스(WPF)
 리소스는 애플리케이션의 여러 위치에서 다시 사용할 수 있는 개체입니다. WPF는 다양 한 형식의 리소스를 지원 합니다. 이러한 리소스는 주로 XAML 리소스와 리소스 데이터 파일의 두 가지 리소스 형식입니다. XAML 리소스의 예로는 브러시와 스타일이 있습니다. 리소스 데이터 파일은 응용 프로그램에 필요한 비실행 데이터 파일입니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [XAML 리소스](../../../desktop-wpf/fundamentals/xaml-resources-define.md)  
  [WPF 애플리케이션 리소스, 콘텐츠 및 데이터 파일](../app-development/wpf-application-resource-content-and-data-files.md)  
  [WPF의 Pack URI](../app-development/pack-uris-in-wpf.md)  
   
-## <a name="reference"></a>참고  
+## <a name="reference"></a>참조  
  <xref:System.Windows.ResourceDictionary>  
   
  [StaticResource 태그 확장](staticresource-markup-extension.md)  
   
  [DynamicResource 태그 확장](dynamicresource-markup-extension.md)  
   
- [x:Key 지시문](../../xaml-services/x-key-directive.md)  
+ [x:Key 지시문](../../../desktop-wpf/xaml-services/xkey-directive.md)  
   
-## <a name="related-sections"></a>관련 단원  
+## <a name="related-sections"></a>관련 섹션  
  [WPF의 XAML](xaml-in-wpf.md)

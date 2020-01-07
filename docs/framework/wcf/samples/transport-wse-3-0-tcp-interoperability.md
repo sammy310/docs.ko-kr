@@ -2,12 +2,12 @@
 title: 'Transport: WSE 3.0 TCP Interoperability'
 ms.date: 03/30/2017
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
-ms.openlocfilehash: 6541ddf322a2084601daf2f1271ac5c888073f8f
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 8166e1c378bc745eb8c9f37d6982642e754813cb
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423869"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544626"
 ---
 # <a name="transport-wse-30-tcp-interoperability"></a>Transport: WSE 3.0 TCP Interoperability
 WSE 3.0 TCP 상호 운용성 전송 샘플에서는 TCP 이중 세션을 WCF (사용자 지정 Windows Communication Foundation) 전송으로 구현 하는 방법을 보여 줍니다. 또한 채널 계층의 확장성을 사용하여 연결을 통해 기존에 배포된 시스템과 상호 작용할 수 있는 방법도 보여 줍니다. 다음 단계에서는이 사용자 지정 WCF 전송을 빌드하는 방법을 보여 줍니다.  
@@ -133,7 +133,7 @@ WSE 3.0 TCP 상호 운용성 전송 샘플에서는 TCP 이중 세션을 WCF (�
   
  샘플을 실행할 경우의 예상 출력은 다음과 같습니다.  
   
- 클라이언트  
+ 클라이언트:  
   
 ```console  
 Calling soap://stockservice.contoso.com/wse/samples/2003/06/TcpSyncStockService  
@@ -175,7 +175,7 @@ Symbols:
 1. 이 샘플을 실행하려면 WSE 3.0과 WSE `TcpSyncStockService` 샘플이 설치되어 있어야 합니다. [WSE 3.0은 MSDN에서](https://go.microsoft.com/fwlink/?LinkId=95000)다운로드할 수 있습니다.  
   
 > [!NOTE]
-> WSE 3.0은 [!INCLUDE[lserver](../../../../includes/lserver-md.md)]에서는 지원되지 않으므로 이 운영 체제에서는 `TcpSyncStockService` 샘플을 설치하거나 실행할 수 없습니다.  
+> WSE 3.0은 Windows Server 2008에서 지원 되지 않으므로 해당 운영 체제에서 `TcpSyncStockService` 샘플을 설치 하거나 실행할 수 없습니다.  
   
 1. `TcpSyncStockService` 샘플을 설치했으면 다음 작업을 수행합니다.  
   

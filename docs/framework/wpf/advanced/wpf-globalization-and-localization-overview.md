@@ -5,12 +5,12 @@ helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: b8777e1402bef1708136a5f81a641beb8c761905
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: c2b78b990969fb5bc9814ebda8ffcf38efa458b1
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740703"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559926"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>WPF 전역화 및 지역화 개요
 
@@ -42,7 +42,7 @@ ms.locfileid: "73740703"
 
 - 클리핑을 방지 하려면 <xref:System.Windows.Controls.TextBlock>에서 <xref:System.Windows.Controls.TextBlock.TextWrapping%2A>를 사용 하도록 설정 합니다.
 
-- `xml:lang` 특성을 설정합니다. 이 특성은 특정 요소 및 해당 자식 요소의 문화권을 설명 합니다. 이 속성의 값은 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]의 여러 기능에 대 한 동작을 변경 합니다. 예를 들어 하이픈 넣기, 맞춤법 검사, 숫자 대체, 복잡한 스크립트 셰이핑 및 글꼴 대체의 동작을 변경합니다. [XAML에서 xml: Lang 처리](../../xaml-services/xml-lang-handling-in-xaml.md)를 설정 하는 방법에 대 한 자세한 내용은 [WPF 용 전역화](globalization-for-wpf.md) 를 참조 하세요.
+- `xml:lang` 특성을 설정합니다. 이 특성은 특정 요소 및 해당 자식 요소의 문화권을 설명 합니다. 이 속성의 값은 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]의 여러 기능에 대 한 동작을 변경 합니다. 예를 들어 하이픈 넣기, 맞춤법 검사, 숫자 대체, 복잡한 스크립트 셰이핑 및 글꼴 대체의 동작을 변경합니다. [XAML에서 xml: Lang 처리](../../../desktop-wpf/xaml-services/xml-language-handling.md)를 설정 하는 방법에 대 한 자세한 내용은 [WPF 용 전역화](globalization-for-wpf.md) 를 참조 하세요.
 
 - 다양 한 언어에 사용 되는 글꼴을 보다 효율적으로 제어 하기 위해 사용자 지정 된 복합 글꼴을 만듭니다. 기본적으로 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]는 Windows\Fonts 디렉터리에서 GlobalUserInterface. 복합 글꼴을 사용 합니다.
 
@@ -144,11 +144,11 @@ ms.locfileid: "73740703"
 
 이 예에서는 <xref:System.Windows.Controls.Grid>의 공유 크기 조정 기능을 사용 합니다. 마지막 세 열은 같은 <xref:System.Windows.Controls.DefinitionBase.SharedSizeGroup%2A>에 배치 하 여이를 활용 합니다. 속성의 이름에서 알 수 있듯이 이 속성을 통해 열은 같은 크기를 공유할 수 있습니다. 따라서 "찾아보기 ..." 긴 문자열 "찾아보기 ..."로 지역화 된 모든 단추는 작은 "확인" 단추를 포함 하는 대신 너비가 커지고 "찾아보기 ..." 단추만.
 
-**xml: lang**
+**xml:lang**
 
 `xml:lang="en-US"`
 
-[XAML의 xml: Lang 처리가](../../xaml-services/xml-lang-handling-in-xaml.md) [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]의 루트 요소에 배치 되어 있는지 확인 합니다. 이 속성은 해당 요소 및 자식의 문화권을 설명합니다. 이 값은 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]의 여러 기능에서 사용 되며 지역화 하는 동안 적절 하 게 변경 해야 합니다. 이 값은 단어 하이픈 넣기와 맞춤법 검사에 사용할 언어 사전을 변경합니다. 또한 숫자의 표시 및 글꼴 대체 시스템에서 사용할 글꼴을 선택하는 방법에도 영향을 줍니다. 마지막으로, 속성은 숫자 표시 방식과 복잡한 스크립트에 포함된 텍스트의 모양이 지정되는 방식에 영향을 줍니다. 기본값은 "en-US"입니다.
+[XAML의 xml: Lang 처리가](../../../desktop-wpf/xaml-services/xml-language-handling.md) [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]의 루트 요소에 배치 되어 있는지 확인 합니다. 이 속성은 해당 요소 및 자식의 문화권을 설명합니다. 이 값은 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]의 여러 기능에서 사용 되며 지역화 하는 동안 적절 하 게 변경 해야 합니다. 이 값은 단어 하이픈 넣기와 맞춤법 검사에 사용할 언어 사전을 변경합니다. 또한 숫자의 표시 및 글꼴 대체 시스템에서 사용할 글꼴을 선택하는 방법에도 영향을 줍니다. 마지막으로, 속성은 숫자 표시 방식과 복잡한 스크립트에 포함된 텍스트의 모양이 지정되는 방식에 영향을 줍니다. 기본값은 "en-US"입니다.
 
 **위성 리소스 어셈블리 빌드**
 
@@ -180,25 +180,25 @@ ms.locfileid: "73740703"
 
 |리소스 키|지역화 범주|값|
 |-|-|-|
-|Button_1:System.Windows.Controls.Button.$Content|단추|확인을 클릭합니다|
-|Button_2:System.Windows.Controls.Button.$Content|단추|취소|
+|Button_1:System.Windows.Controls.Button.$Content|단추|확인|
+|Button_2:System.Windows.Controls.Button.$Content|단추|Cancel|
 |Button_3:System.Windows.Controls.Button.$Content|단추|찾아보기...|
 |ComboBox_1:System.Windows.Controls.ComboBox.$Content|ComboBox||
-|TextBlock_1:System.Windows.Controls.TextBlock.$Content|Text|프로그램, 폴더, 문서 또는 인터넷 리소스의 이름을 입력하면 Windows에서 열립니다.|
-|TextBlock_2:System.Windows.Controls.TextBlock.$Content|Text|열기:|
-|Window_1:System.Windows.Window.Title|제목|Run|
+|TextBlock_1:System.Windows.Controls.TextBlock.$Content|텍스트|프로그램, 폴더, 문서 또는 인터넷 리소스의 이름을 입력하면 Windows에서 열립니다.|
+|TextBlock_2:System.Windows.Controls.TextBlock.$Content|텍스트|열기:|
+|Window_1:System.Windows.Window.Title|제목|를 실행합니다.|
 
 애플리케이션을 독일어로 지역화하려면 다음과 같이 번역해야 합니다.
 
 |리소스 키|지역화 범주|값|
 |-|-|-|
-|Button_1:System.Windows.Controls.Button.$Content|단추|확인을 클릭합니다|
+|Button_1:System.Windows.Controls.Button.$Content|단추|확인|
 |Button_2:System.Windows.Controls.Button.$Content|단추|Abbrechen|
 |Button_3:System.Windows.Controls.Button.$Content|단추|Durchsuchen…|
 |ComboBox_1:System.Windows.Controls.ComboBox.$Content|ComboBox||
-|TextBlock_1:System.Windows.Controls.TextBlock.$Content|Text|Geben Sie den Namen eines Programms, Ordners, Dokuments oder einer Internetresource an.|
-|TextBlock_2:System.Windows.Controls.TextBlock.$Content|Text|Öffnen:|
-|Window_1:System.Windows.Window.Title|제목|Run|
+|TextBlock_1:System.Windows.Controls.TextBlock.$Content|텍스트|Geben Sie den Namen eines Programms, Ordners, Dokuments oder einer Internetresource an.|
+|TextBlock_2:System.Windows.Controls.TextBlock.$Content|텍스트|열기:|
+|Window_1:System.Windows.Window.Title|제목|를 실행합니다.|
 
 **생성**
 
@@ -265,11 +265,11 @@ ms.locfileid: "73740703"
 
 [!code-xaml[GlobalizationHomepage#LocalizationComment](~/samples/snippets/csharp/VS_Snippets_Wpf/GlobalizationHomepage/CS/Homepage.xaml#localizationcomment)]
 
-이 주석은 TextBlock_1's 콘텐츠와 연결 되며 LocBaml 도구의 경우 ( [응용 프로그램 지역화](how-to-localize-an-application.md)참조) 출력 .csv 파일의 TextBlock_1 행에 있는 6 번째 열에 표시 될 수 있습니다.
+이 주석은 TextBlock_1 콘텐츠와 연결 되며 LocBaml 도구의 경우 ( [응용 프로그램 지역화](how-to-localize-an-application.md)참조) 출력 .csv 파일에서 TextBlock_1 행의 6 번째 열에 표시 될 수 있습니다.
 
 |리소스 키|범주|가독성|수정 가능성|설명|값|
 |-|-|-|-|-|-|
-|TextBlock_1:System.Windows.Controls.TextBlock.$Content|Text|true|true|이 문자는 장식 규칙으로 사용됩니다.|&#124;|
+|TextBlock_1:System.Windows.Controls.TextBlock.$Content|텍스트|true|true|이 문자는 장식 규칙으로 사용됩니다.|&#124;|
 
 다음 구문을 사용하여 주석을 요소의 속성 또는 콘텐츠에 배치할 수 있습니다.
 
@@ -277,7 +277,7 @@ ms.locfileid: "73740703"
 
 **지역화 특성**
 
-개발자 또는 지역화 관리자는 지역화 담당자가 읽고 수정할 수 있는 컨트롤을 필요로 할 수 있습니다. 예를 들어 회사 이름이나 법적 고지문은 번역하지 않아야 할 수 있습니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서는 지역화 도구가 요소를 잠그거나, 숨기거나, 정렬할 때 사용할 수 있는 요소의 콘텐츠나 속성의 가독성, 수정 가능 여부 및 범주를 설정할 수 있는 특성을 제공합니다. 자세한 내용은 <xref:System.Windows.Localization.Attributes%2A>을 참조하십시오. 이 샘플의 목적상 LocBaml 도구는 이러한 특성의 값만 출력합니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 컨트롤은 모두 이러한 특성에 대해 기본값을 사용하지만 이를 재정의할 수 있습니다. 예를 들어 다음 예제에서는 `TextBlock_1`에 대 한 기본 지역화 특성을 재정의 하 고 지역화 담당자가 콘텐츠를 읽을 수는 있지만 수정할 수 없도록 설정 합니다.
+개발자 또는 지역화 관리자는 지역화 담당자가 읽고 수정할 수 있는 컨트롤을 필요로 할 수 있습니다. 예를 들어 회사 이름이나 법적 고지문은 번역하지 않아야 할 수 있습니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서는 지역화 도구가 요소를 잠그거나, 숨기거나, 정렬할 때 사용할 수 있는 요소의 콘텐츠나 속성의 가독성, 수정 가능 여부 및 범주를 설정할 수 있는 특성을 제공합니다. 자세한 내용은 <xref:System.Windows.Localization.Attributes%2A>를 참조하세요. 이 샘플의 목적상 LocBaml 도구는 이러한 특성의 값만 출력합니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 컨트롤은 모두 이러한 특성에 대해 기본값을 사용하지만 이를 재정의할 수 있습니다. 예를 들어 다음 예제에서는 `TextBlock_1`에 대 한 기본 지역화 특성을 재정의 하 고 지역화 담당자가 콘텐츠를 읽을 수는 있지만 수정할 수 없도록 설정 합니다.
 
 [!code-xaml[LocalizationComAtt#LocalizationAttributes](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationComAtt/CSharp/Attributes.xaml#localizationattributes)]
 
@@ -285,7 +285,7 @@ ms.locfileid: "73740703"
 
 [!code-xaml[LocalizationComAtt#LocalizationAttributesOverridden](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationComAtt/CSharp/Attributes.xaml#localizationattributesoverridden)]
 
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 제공 하는 기본 지역화 특성은 코드를 통해 재정의할 수도 있으므로 사용자 지정 컨트롤에 대 한 올바른 기본값을 올바르게 설정할 수 있습니다. 예를 들면,
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 제공 하는 기본 지역화 특성은 코드를 통해 재정의할 수도 있으므로 사용자 지정 컨트롤에 대 한 올바른 기본값을 올바르게 설정할 수 있습니다. 예를 들면 다음과 같습니다.:
 
 ```csharp
 [Localizability(Readability = Readability.Readable, Modifiability=Modifiability.Unmodifiable, LocalizationCategory.None)]

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - language reference, Visual Basic
 - Visual Basic, language reference
 ms.assetid: 5c6bd31a-9542-4f3e-bfd5-e951af58f0f2
-ms.openlocfilehash: ba611be8e63380f2bff958e37b72ffe8e0f90d9a
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 90cd1984ceb3bdb9de62450e86184f493e7417f0
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837092"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636720"
 ---
 # <a name="visual-basic-language-reference"></a>Visual Basic 언어 참조
 
@@ -66,7 +66,7 @@ ms.locfileid: "74837092"
  Visual Basic에서 사용할 수 있는 속성을 설명 합니다.  
   
  [쿼리](../../visual-basic/language-reference/queries/index.md)  
- 코드에서 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 식을 사용하는 방법에 대한 참조 정보를 제공합니다.  
+ 코드에 LINQ (통합 언어 쿼리) 식을 사용 하는 방법에 대 한 참조 정보를 제공 합니다.  
   
  [문](../../visual-basic/language-reference/statements/index.md)  
  Visual Basic에서 사용할 수 있는 선언 및 실행 문을 문서화 합니다.  

@@ -8,15 +8,15 @@ helpviewer_keywords:
 - XAML [WPF], StaticResource markup extension
 - StaticResource markup extensions [WPF]
 ms.assetid: 97af044c-71f1-4617-9a94-9064b68185d2
-ms.openlocfilehash: b15e2c0bac5610c6f1b10a640254236987c0bcf5
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: aa7f69e8871295006c3c5a9c7d0a70d0ecbd6d7e
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458730"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559822"
 ---
 # <a name="staticresource-markup-extension"></a>StaticResource 태그 확장
-이미 정의 된 리소스에 대 한 참조를 조회 하 여 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 속성 특성에 대 한 값을 제공 합니다. 해당 리소스에 대 한 조회 동작은 이전에 다른 응용 프로그램 소스 뿐만 아니라 현재 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 페이지의 태그에서 로드 된 리소스를 검색 하 여 해당 리소스 값을 속성으로 생성 하는 로드 시간 조회와 유사 합니다. 런타임 개체의 값입니다.  
+이미 정의 된 리소스에 대 한 참조를 조회 하 여 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 속성 특성에 대 한 값을 제공 합니다. 해당 리소스에 대 한 조회 동작은 이전에 다른 응용 프로그램 소스 뿐만 아니라 현재 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 페이지의 태그에서 로드 된 리소스를 검색 하 여 런타임 개체의 속성 값으로 해당 리소스 값을 생성 하는 로드 시간 조회와 유사 합니다.  
   
 ## <a name="xaml-attribute-usage"></a>XAML 특성 사용  
   
@@ -38,20 +38,20 @@ ms.locfileid: "73458730"
   
 |||  
 |-|-|  
-|`key`|요청한 리소스의 키입니다. 리소스를 태그에서 만들었거나 코드에서 리소스를 만든 경우 <xref:System.Windows.ResourceDictionary.Add%2A?displayProperty=nameWithType>를 호출할 때 `key` 매개 변수로 제공 된 경우이 키는 처음에 [X:Key 지시문](../../xaml-services/x-key-directive.md) 에 의해 할당 되었습니다.|  
+|`key`|요청한 리소스의 키입니다. 리소스를 태그에서 만들었거나 코드에서 리소스를 만든 경우 <xref:System.Windows.ResourceDictionary.Add%2A?displayProperty=nameWithType>를 호출할 때 `key` 매개 변수로 제공 된 경우이 키는 처음에 [X:Key 지시문](../../../desktop-wpf/xaml-services/xkey-directive.md) 에 의해 할당 되었습니다.|  
   
 ## <a name="remarks"></a>주의  
   
 > [!IMPORTANT]
 > `StaticResource`는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 파일 내에서 어휘 적으로 정의 된 리소스에 대 한 전방 참조를 만들려고 해서는 안 됩니다. 이 작업을 수행 하는 것은 지원 되지 않습니다. 이러한 참조가 실패 하더라도 전방 참조를 시도 하면 <xref:System.Windows.ResourceDictionary>를 나타내는 내부 해시 테이블이 검색 될 때 로드 시 성능 저하가 발생 합니다. 최상의 결과를 위해 전방 참조를 피할 수 있도록 리소스 사전의 컴퍼지션을 조정 합니다. 전방 참조를 방지할 수 없는 경우 [DynamicResource 태그 확장](dynamicresource-markup-extension.md) 을 대신 사용 합니다.  
   
- 지정 된 <xref:System.Windows.StaticResourceExtension.ResourceKey%2A>는 페이지, 응용 프로그램, 사용 가능한 컨트롤 테마 및 외부 리소스 또는 시스템 리소스의 특정 수준에서 [X:Key 지시문](../../xaml-services/x-key-directive.md) 으로 식별 되는 기존 리소스와 일치 해야 합니다. 리소스 조회는 해당 순서로 발생 합니다. 정적 및 동적 리소스의 리소스 조회 동작에 대 한 자세한 내용은 [XAML 리소스](../../../desktop-wpf/fundamentals/xaml-resources-define.md)를 참조 하세요.  
+ 지정 된 <xref:System.Windows.StaticResourceExtension.ResourceKey%2A>는 페이지, 응용 프로그램, 사용 가능한 컨트롤 테마 및 외부 리소스 또는 시스템 리소스의 특정 수준에서 [X:Key 지시문](../../../desktop-wpf/xaml-services/xkey-directive.md) 으로 식별 되는 기존 리소스와 일치 해야 합니다. 리소스 조회는 해당 순서로 발생 합니다. 정적 및 동적 리소스의 리소스 조회 동작에 대 한 자세한 내용은 [XAML 리소스](../../../desktop-wpf/fundamentals/xaml-resources-define.md)를 참조 하세요.  
   
- 리소스 키는 [XamlName 문법](../../xaml-services/xamlname-grammar.md)에 정의 된 임의의 문자열일 수 있습니다. 리소스 키는 <xref:System.Type>같은 다른 개체 형식일 수도 있습니다. <xref:System.Type> 키는 암시적 스타일 키를 통해 컨트롤을 테마에 따라 스타일을 지정 하는 방법에 대 한 기본입니다. 자세한 내용은 [컨트롤 제작 개요](../controls/control-authoring-overview.md)를 참조하세요.  
+ 리소스 키는 [XamlName 문법](../../../desktop-wpf/xaml-services/xamlname-grammar.md)에 정의 된 임의의 문자열일 수 있습니다. 리소스 키는 <xref:System.Type>같은 다른 개체 형식일 수도 있습니다. <xref:System.Type> 키는 암시적 스타일 키를 통해 컨트롤을 테마에 따라 스타일을 지정 하는 방법에 대 한 기본입니다. 자세한 내용은 [컨트롤 제작 개요](../controls/control-authoring-overview.md)를 참조하세요.  
   
  리소스를 참조 하는 다른 선언적 방법은 [DynamicResource 태그 확장](dynamicresource-markup-extension.md)입니다.  
   
- 특성 구문은 이러한 태그 확장에 가장 많이 사용되는 구문입니다. `StaticResource` 식별자 문자열 다음에 나오는 문자열 토큰은 기본 <xref:System.Windows.StaticResourceExtension.ResourceKey%2A> 확장 클래스의 <xref:System.Windows.StaticResourceExtension> 값으로 할당됩니다.  
+ 특성 구문은 이러한 태그 확장에 가장 많이 사용되는 구문입니다. `StaticResource` 식별자 문자열 다음에 나오는 문자열 토큰은 기본 <xref:System.Windows.StaticResourceExtension.ResourceKey%2A> 확장명 클래스의 <xref:System.Windows.StaticResourceExtension> 값으로 할당됩니다.  
   
  개체 요소 구문에 `StaticResource` 사용할 수 있습니다. 이 경우 <xref:System.Windows.StaticResourceExtension.ResourceKey%2A> 속성의 값을 지정 해야 합니다.  
   

@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - analytic tracing [WCF], overview
 ms.assetid: ae55e9cc-0809-442f-921f-d644290ebf15
-ms.openlocfilehash: f6ffed3d9f0bf5e3dc5698d51276eb1db276993c
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: f1a24e34375e98d4bfb48c1e2fd84290e08f6eea
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837495"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544756"
 ---
 # <a name="analytic-tracing-overview"></a>분석 추적 개요
 [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] 의 분석 추적은 ETW(Event Tracing for Windows)를 기반으로 하는 고성능의 간단한 추적 기능 집합입니다. ETW는 커널 수준에서 실행되기 때문에 추적 작업의 오버헤드를 크게 줄이며, 사용자 및 커널 모드 이벤트를 효율적으로 버퍼링하고 서비스를 다시 시작하지 않고도 동적으로 로깅을 사용하도록 설정할 수 있습니다. 추적 데이터는 내보내기와 받기 과정을 거친 후 이벤트 로그에 제공됩니다.  
   
  ETW에 대 한 자세한 내용은 [etw를 사용한 디버깅 및 성능 조정 개선](https://go.microsoft.com/fwlink/?LinkId=164781)을 참조 하세요.  
   
- Windows 시스템, 보안 및 응용 프로그램 이벤트 로그를 사용 하 여 응용 프로그램을 분석 하는 것 외에도 Windows Vista 및 [!INCLUDE[lserver](../../../../../includes/lserver-md.md)]는 응용 프로그램 및 서비스 로그 최상위 노드 아래에 추가 로그를 도입 했습니다. 이러한 새 로그의 목적은 보안 이벤트 로그에 기록될 수 있는 이벤트 형식처럼 시스템 전체에 영향을 주는 전역 이벤트가 아니라 특정 애플리케이션이나 구성 요소에 대한 이벤트를 저장하기 위한 것입니다. [!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)]는 WCF 추적 이벤트, WCF 메시지 로그 및 [!INCLUDE[wf1](../../../../../includes/wf1-md.md)] 추적 레코드의 로깅을 응용 프로그램 및 서비스 로그와 통합 하 고 상관 관계를 합니다.  
+ Windows 시스템, 보안 및 응용 프로그램 이벤트 로그를 사용 하 여 응용 프로그램을 분석 하는 것 외에도 Windows Vista 및 Windows Server 2008에서는 응용 프로그램 및 서비스 로그 최상위 노드 아래에 추가 로그를 도입 했습니다. 이러한 새 로그의 목적은 보안 이벤트 로그에 기록될 수 있는 이벤트 형식처럼 시스템 전체에 영향을 주는 전역 이벤트가 아니라 특정 애플리케이션이나 구성 요소에 대한 이벤트를 저장하기 위한 것입니다. [!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)]는 WCF 추적 이벤트, WCF 메시지 로그 및 [!INCLUDE[wf1](../../../../../includes/wf1-md.md)] 추적 레코드의 로깅을 응용 프로그램 및 서비스 로그와 통합 하 고 상관 관계를 합니다.  
   
 ## <a name="concepts-and-capabilities"></a>개념 및 기능  
  다음 개념 및 기능은 WCF 분석 추적에 적용 됩니다.  

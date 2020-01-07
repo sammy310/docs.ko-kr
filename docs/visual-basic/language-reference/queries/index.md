@@ -5,15 +5,15 @@ helpviewer_keywords:
 - queries [Visual Basic]
 - LINQ, queries
 ms.assetid: 8edc717c-4a24-4cbc-9c16-11f479c935db
-ms.openlocfilehash: a4a926d089a8bec1abaa47404f6c9112687e6df2
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: d23e18527fadce031f56bed3ae4c5a5c17b12e18
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350447"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636733"
 ---
 # <a name="queries-visual-basic"></a>쿼리(Visual Basic)
-Visual Basic를 사용 하 여 코드에서 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 식을 만들 수 있습니다.  
+Visual Basic를 사용 하면 코드에 LINQ (통합 언어 쿼리) 식을 만들 수 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [Aggregate 절](../../../visual-basic/language-reference/queries/aggregate-clause.md)  
@@ -58,7 +58,7 @@ Visual Basic를 사용 하 여 코드에서 [!INCLUDE[vbteclinqext](~/includes/v
  [Where 절](../../../visual-basic/language-reference/queries/where-clause.md)  
  쿼리의 필터링 조건을 지정 하는 `Where` 절에 대해 설명 합니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [LINQ](../../../visual-basic/programming-guide/language-features/linq/index.md)
 - [Visual Basic의 LINQ 소개](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

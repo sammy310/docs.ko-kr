@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [WPF], listed by category
 ms.assetid: f8a1f78e-d9fa-4367-9ec6-f084577e83bb
-ms.openlocfilehash: 41cbe57f1e3711bb4e18b2b4da28c26ebbd2bc60
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 5958793015d409678b67cdc7eedcb4289f5e885c
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005700"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636213"
 ---
 # <a name="controls-by-category"></a>컨트롤 범주
 WPF (Windows Presentation Foundation) 컨트롤은 논리적으로 여러 범주로 그룹화 할 수 있습니다. 이러한 범주를 사용하면 유사한 사용 패턴 또는 기능이 있는 컨트롤을 볼 수 있으므로 시나리오에 적절한 컨트롤을 선택할 수 있습니다.  
@@ -56,7 +56,7 @@ WPF (Windows Presentation Foundation) 컨트롤은 논리적으로 여러 범주
 - <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="buttons"></a>단추  
- 단추는 가장 기본적인 사용자 인터페이스 컨트롤 중 하나입니다. 응용 프로그램은 일반적으로 사용자가 클릭 하는 경우 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 이벤트에서 일부 작업을 수행 합니다.  
+ 단추는 가장 기본적인 사용자 인터페이스 컨트롤 중 하나입니다. 응용 프로그램은 일반적으로 사용자가 클릭할 때 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 이벤트에서 일부 작업을 수행 합니다.  
   
 - <xref:System.Windows.Controls.Button>  
   
@@ -87,7 +87,7 @@ WPF (Windows Presentation Foundation) 컨트롤은 논리적으로 여러 범주
   
 - <xref:System.Windows.Controls.ToolBar>  
   
-## <a name="selection"></a>선택  
+## <a name="selection"></a>선택 항목  
  선택 컨트롤은 사용자가 하나 이상의 옵션을 선택할 수 있게 하는 데 사용됩니다.  
   
 - <xref:System.Windows.Controls.CheckBox>  
@@ -140,7 +140,7 @@ WPF (Windows Presentation Foundation) 컨트롤은 논리적으로 여러 범주
 - <xref:System.Windows.Controls.ToolTip>  
   
 ## <a name="documents"></a>문서  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]에는 문서를 보는 데 필요한 여러 가지 특수 컨트롤이 포함되어 있습니다. 이러한 컨트롤은 대상 사용자 시나리오를 기반으로 읽기 환경을 최적화합니다.  
+ WPF에는 문서를 보기 위한 여러 특수 컨트롤이 포함 되어 있습니다. 이러한 컨트롤은 대상 사용자 시나리오를 기반으로 읽기 환경을 최적화합니다.  
   
 - <xref:System.Windows.Controls.DocumentViewer>  
   
@@ -161,8 +161,8 @@ WPF (Windows Presentation Foundation) 컨트롤은 논리적으로 여러 범주
   
 - <xref:System.Windows.Controls.PasswordBox>  
   
-## <a name="media"></a>미디어  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]에는 가장 인기있는 이미지 형식을 위한 [코덱]뿐만 아니라 오디오 및 비디오 콘텐츠 호스팅을 위한 통합 지원이 포함되어 있습니다.  
+## <a name="media"></a>Media  
+ WPF에는 가장 인기 있는 이미지 형식에 대 한 [코덱] 뿐만 아니라 오디오 및 비디오 콘텐츠 호스팅을 위한 통합 지원이 포함 되어 있습니다.  
   
 - <xref:System.Windows.Controls.Image>  
   

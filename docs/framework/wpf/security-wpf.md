@@ -13,19 +13,19 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: 75e6c7b4886bd490c462e9128eca7ec13f233824
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 612b99354310c18030cefce4e6f02fab8ed20f83
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837300"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636773"
 ---
 # <a name="security-wpf"></a>보안(WPF)
-<a name="introduction"></a>Windows Presentation Foundation (WPF) 독립 실행형 및 브라우저에서 호스팅되는 응용 프로그램을 개발 하는 경우 보안 모델을 고려해 야 합니다. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 독립 실행형 응용 프로그램은 Windows Installer (.msi), XCopy 또는 ClickOnce를 사용 하 여 배포 되었는지와 상관 없이 무제한 권한 (CAS**FullTrust** 권한 집합)으로 실행 됩니다. ClickOnce를 포함한 부분 신뢰, 독립 실행형 WPF 애플리케이션 배포가 지원되지 않습니다. 그러나 완전 신뢰 호스트 응용 프로그램은 .NET Framework 추가 기능 모델을 사용 하 여 부분 신뢰 <xref:System.AppDomain>를 만들 수 있습니다. 자세한 내용은 [WPF 추가 기능 개요](./app-development/wpf-add-ins-overview.md)를 참조 하세요.  
+<a name="introduction"></a>Windows Presentation Foundation (WPF) 독립 실행형 및 브라우저에서 호스팅되는 응용 프로그램을 개발 하는 경우 보안 모델을 고려해 야 합니다. WPF 독립 실행형 응용 프로그램은 Windows Installer (.msi), XCopy 또는 ClickOnce를 사용 하 여 배포 되었는지와 상관 없이 무제한 권한 (CAS**FullTrust** 권한 집합)으로 실행 됩니다. ClickOnce를 포함한 부분 신뢰, 독립 실행형 WPF 애플리케이션 배포가 지원되지 않습니다. 그러나 완전 신뢰 호스트 응용 프로그램은 .NET Framework 추가 기능 모델을 사용 하 여 부분 신뢰 <xref:System.AppDomain>를 만들 수 있습니다. 자세한 내용은 [WPF 추가 기능 개요](./app-development/wpf-add-ins-overview.md)를 참조 하세요.  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 브라우저에서 호스팅되는 응용 프로그램은 Windows Internet Explorer 또는 Firefox에서 호스팅되며 Xbap (XAML 브라우저 응용 프로그램) 또는 느슨한 [!INCLUDE[TLA#tla_xaml](../../../includes/tlasharptla-xaml-md.md)] 문서 중 하나일 수 있습니다. 자세한 내용은 [WPF XAML 브라우저 응용 프로그램 개요](./app-development/wpf-xaml-browser-applications-overview.md)를 참조 하세요.  
+ WPF 브라우저에서 호스팅되는 응용 프로그램은 Windows Internet Explorer 또는 Firefox에서 호스팅되며, Xbap (XAML 브라우저 응용 프로그램) 또는 느슨한 [!INCLUDE[TLA#tla_xaml](../../../includes/tlasharptla-xaml-md.md)] 문서 일 수 있습니다. 자세한 내용은 [WPF XAML 브라우저 응용 프로그램 개요](./app-development/wpf-xaml-browser-applications-overview.md)를 참조 하세요.  
   
- 브라우저에서 호스트 되는 응용 프로그램은 기본적으로 부분 신뢰 보안 샌드박스 내에서 실행 되며, 기본 CAS**인터넷** 영역 권한 집합으로 제한 됩니다. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 이렇게 하면 일반적인 웹 응용 프로그램을 격리 하는 것과 동일한 방식으로 브라우저에서 호스트 되는 응용 프로그램 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 클라이언트 컴퓨터에서 효과적으로 격리 됩니다. XBAP는 배포 URL 및 클라이언트의 보안 구성의 보안 영역에 따라 권한을 완전 신뢰까지 높일 수 있습니다. 자세한 내용은 [WPF 부분 신뢰 보안](wpf-partial-trust-security.md)을 참조하세요.  
+ WPF 브라우저에서 호스팅되는 응용 프로그램은 기본적으로 기본 CAS**인터넷** 영역 권한 집합으로 제한 되는 부분 신뢰 보안 샌드박스 내에서 실행 됩니다. 이렇게 하면 일반적인 웹 응용 프로그램을 격리 하는 것과 동일한 방식으로 WPF 브라우저에서 호스팅되는 응용 프로그램을 클라이언트 컴퓨터에서 효과적으로 격리할 수 있습니다. XBAP는 배포 URL 및 클라이언트의 보안 구성의 보안 영역에 따라 권한을 완전 신뢰까지 높일 수 있습니다. 자세한 내용은 [WPF 부분 신뢰 보안](wpf-partial-trust-security.md)을 참조하세요.  
   
  이 항목에서는 Windows Presentation Foundation (WPF) 독립 실행형 및 브라우저에서 호스팅되는 응용 프로그램에 대 한 보안 모델을 설명 합니다.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "74837300"
   
 <a name="SafeTopLevelNavigation"></a>   
 ## <a name="safe-navigation"></a>안전한 탐색  
- Xbap의 경우 두 가지 유형의 탐색 인 응용 프로그램 및 브라우저를 구별 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)].  
+ Xbap의 경우 WPF는 두 가지 유형의 탐색 인 응용 프로그램 및 브라우저를 구별 합니다.  
   
  *애플리케이션 탐색*은 브라우저에서 호스트되는 애플리케이션 내의 콘텐츠 항목 간을 탐색합니다. *브라우저 탐색*은 브라우저 자체의 콘텐츠 및 위치 URL을 변경하는 탐색입니다. 응용 프로그램 탐색 (일반적으로 XAML)과 브라우저 탐색 (일반적으로 HTML) 간의 관계는 다음 그림에 나와 있습니다.
   
@@ -220,7 +220,7 @@ ms.locfileid: "74837300"
   
  그러나 APTCA 어셈블리는 GAC에 설치 된 후에 보안 결함을 나타낼 수 있습니다. 보안 결함이 발견되면 어셈블리 게시자는 기존 설치에서 문제를 해결하는 보안 업데이트를 생성할 수 있으며, 문제가 발견된 후 발생할 수 있는 설치를 방지할 수 있습니다. 업데이트에 대한 한 가지 옵션은 어셈블리를 제거하는 것이지만 어셈블리를 사용하는 완전히 신뢰할 수 있는 다른 클라이언트 애플리케이션이 중단될 수 있습니다.  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] APTCA 어셈블리를 제거 하지 않고 부분적으로 신뢰할 수 있는 Xbap에 대해 APTCA 어셈블리를 사용 하지 않도록 설정할 수 있는 메커니즘을 제공 합니다.  
+ WPF는 APTCA 어셈블리를 제거 하지 않고 부분적으로 신뢰할 수 있는 Xbap에 대해 APTCA 어셈블리를 사용 하지 않도록 설정할 수 있는 메커니즘을 제공 합니다.  
   
  APTCA 어셈블리를 사용하지 않도록 설정하려면 특수한 레지스트리 키를 만들어야 합니다.  
   
@@ -262,14 +262,14 @@ ms.locfileid: "74837300"
   
 <a name="BestPractices"></a>   
 ## <a name="resources-for-developing-wpf-applications-that-promote-security"></a>보안을 승격하는 WPF 애플리케이션 개발을 위한 리소스  
- 다음은 보안 수준을 올리는 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램을 개발 하는 데 도움이 되는 몇 가지 추가 리소스입니다.  
+ 다음은 보안 수준을 올리는 WPF 응용 프로그램을 개발 하는 데 도움이 되는 몇 가지 추가 리소스입니다.  
   
 |영역|리소스|  
 |----------|--------------|  
 |관리 코드|[애플리케이션에 대한 패턴 및 사례 보안 지침](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10))|  
 |CAS|[코드 액세스 보안](../misc/code-access-security.md)|  
 |ClickOnce|[ClickOnce 보안 및 배포](/visualstudio/deployment/clickonce-security-and-deployment)|  
-|[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]|[WPF 부분 신뢰 보안](wpf-partial-trust-security.md)|  
+|WPF|[WPF 부분 신뢰 보안](wpf-partial-trust-security.md)|  
   
 ## <a name="see-also"></a>참조
 

@@ -7,16 +7,16 @@ dev_langs:
 helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
-ms.openlocfilehash: bf673195f06475daf8341fd17cd701b84a970b39
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 48536d8fba3f86c2883e48cd4e5cf9a3a8752fcd
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740672"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636317"
 ---
 # <a name="building-a-wpf-application-wpf"></a>WPF 애플리케이션 빌드(WPF)
 
-WPF (Windows Presentation Foundation) 응용 프로그램은 .NET Framework 실행 파일 (.exe), 라이브러리 (.dll) 또는 두 어셈블리 형식의 조합으로 빌드할 수 있습니다. 이 항목에서는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 애플리케이션을 빌드하는 방법과 빌드 프로세스의 주요 단계에 대해 설명합니다.
+WPF (Windows Presentation Foundation) 응용 프로그램은 .NET Framework 실행 파일 (.exe), 라이브러리 (.dll) 또는 두 어셈블리 형식의 조합으로 빌드할 수 있습니다. 이 항목에서는 WPF 응용 프로그램을 빌드하는 방법을 소개 하 고 빌드 프로세스의 주요 단계에 대해 설명 합니다.
 
 <a name="Building_a_WPF_Application_using_Command_Line"></a>
 
@@ -28,13 +28,13 @@ WPF (Windows Presentation Foundation) 응용 프로그램은 .NET Framework 실�
 
 - MSBuild(Microsoft Build Engine). 애플리케이션에 코드 및 XAML 파일 외에 MSBuild 프로젝트 파일이 포함되어야 합니다. 자세한 내용은 "MSBuild"를 참조하세요.
 
-- Visual Studio. Visual Studio는 MSBuild를 사용하여 WPF 애플리케이션을 컴파일하고 UI를 만들기 위한 비주얼 디자이너를 포함하는 통합 개발 환경입니다. 자세한 내용은 visual Studio를 [사용 하 여 코드 작성 및 관리](/visualstudio/ide/index-writing-code) 및 [VISUAL Studio에서 XAML 디자인](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)을 참조 하세요.
+- 보여 줍니다. Visual Studio는 MSBuild를 사용하여 WPF 애플리케이션을 컴파일하고 UI를 만들기 위한 비주얼 디자이너를 포함하는 통합 개발 환경입니다. 자세한 내용은 visual Studio를 [사용 하 여 코드 작성 및 관리](/visualstudio/ide/index-writing-code) 및 [VISUAL Studio에서 XAML 디자인](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)을 참조 하세요.
 
 <a name="The_Windows_Presentation_Foundation_Build_Pipeline"></a>
 
 ## <a name="wpf-build-pipeline"></a>WPF 빌드 파이프라인
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 프로젝트를 빌드할 때 언어별 및 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]별 대상 조합이 호출됩니다. 이러한 대상을 실행 중인 프로세스를 빌드 파이프라인이라고 하며 주요 단계는 다음 그림에서와 같이 설명됩니다.
+WPF 프로젝트를 빌드할 때 언어별 및 WPF 관련 대상의 조합이 호출 됩니다. 이러한 대상을 실행 중인 프로세스를 빌드 파이프라인이라고 하며 주요 단계는 다음 그림에서와 같이 설명됩니다.
 
 ![WPF 빌드 프로세스](./media/wpfbuildsystem-figure1.png "WPFBuildSystem_Figure1")
 
@@ -48,7 +48,7 @@ WPF (Windows Presentation Foundation) 응용 프로그램은 .NET Framework 실�
 
 - Windows SDK 디렉터리입니다.
 
-- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 참조 어셈블리 위치
+- WPF 참조 어셈블리의 위치입니다.
 
 - 어셈블리 검색 경로의 속성
 
@@ -58,7 +58,7 @@ MSBuild에서 어셈블리를 검색 하는 첫 번째 위치는 참조 어셈�
 
 ### <a name="resolving-references"></a>참조 확인
 
-빌드 프로세스는 애플리케이션 프로젝트를 빌드하는 데 필요한 어셈블리를 찾아서 바인딩합니다. 이 논리는 `ResolveAssemblyReference` 작업에 포함되어 있습니다. 프로젝트 파일에서 `Reference`로 선언된 모든 어셈블리는 시스템에 이미 설치된 어셈블리의 메타데이터 및 검색 경로에 대한 정보와 함께 작업에 제공됩니다. 이 작업은 어셈블리를 찾고 설치된 어셈블리의 메타데이터를 사용하여 출력 매니페스트에 표시할 필요 없는 이러한 코어 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 어셈블리를 필터링합니다. 이 작업의 목적은 ClickOnce 매니페스트에서 중복되는 정보를 방지하는 것입니다. 예를 들어 PresentationFramework는 및 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]에 대해 빌드된 응용 프로그램의 대표로 간주할 수 있으며, 모든 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 어셈블리가 .NET Framework 설치 된 모든 컴퓨터의 동일한 위치에 존재 하기 때문에 매니페스트에서 모든 .NET Framework 참조 어셈블리에 대 한 모든 정보를 포함할 필요는 없습니다.
+빌드 프로세스는 애플리케이션 프로젝트를 빌드하는 데 필요한 어셈블리를 찾아서 바인딩합니다. 이 논리는 `ResolveAssemblyReference` 작업에 포함되어 있습니다. 프로젝트 파일에서 `Reference`로 선언된 모든 어셈블리는 시스템에 이미 설치된 어셈블리의 메타데이터 및 검색 경로에 대한 정보와 함께 작업에 제공됩니다. 작업은 어셈블리를 조회 하 고 설치 된 어셈블리의 메타 데이터를 사용 하 여 출력 매니페스트에 표시 되지 않아도 되는 핵심 WPF 어셈블리를 필터링 합니다. 이 작업의 목적은 ClickOnce 매니페스트에서 중복되는 정보를 방지하는 것입니다. 예를 들어, PresentationFramework는 및 WPF에 대해 빌드된 응용 프로그램의 대표로 간주할 수 있으며, 모든 WPF 어셈블리는 .NET Framework가 설치 된 모든 컴퓨터의 동일한 위치에 있으므로 모두 포함할 필요가 없습니다. 매니페스트의 모든 .NET Framework 참조 어셈블리에 대 한 정보입니다.
 
 <a name="Markup_Compilation___Pass_1"></a>
 
@@ -142,13 +142,13 @@ End Sub
 
 이러한 매니페스트 파일은 항상 Xbap에 대해 만들어집니다. 설치된 애플리케이션의 경우 프로젝트 파일에서 `GenerateManifests` 속성 값이 `true`로 지정되지 않는 한 만들어지지 않습니다.
 
-Xbap는 일반적인 인터넷 영역 응용 프로그램에 할당 된 권한 (<xref:System.Security.Permissions.WebBrowserPermission> 및 <xref:System.Security.Permissions.MediaPermission>에 대 한 두 가지 추가 권한을 얻습니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 빌드 시스템은 애플리케이션 매니페스트에서 이러한 사용 권한을 선언합니다.
+Xbap는 일반적인 인터넷 영역 응용 프로그램에 할당 된 권한 (<xref:System.Security.Permissions.WebBrowserPermission> 및 <xref:System.Security.Permissions.MediaPermission>에 대 한 두 가지 추가 권한을 얻습니다. WPF 빌드 시스템은 응용 프로그램 매니페스트에서 이러한 사용 권한을 선언 합니다.
 
 <a name="Incremental_Build_Support"></a>
 
 ## <a name="incremental-build-support"></a>증분 빌드 지원
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 빌드 시스템은 증분 빌드에 대한 지원을 제공합니다. 태그 또는 코드에 대한 변경 사항을 지능적으로 검색하고 변경 사항의 영향을 받는 아티팩트만 컴파일합니다. 증분 빌드 메커니즘은 다음 파일을 사용합니다.
+WPF 빌드 시스템은 증분 빌드에 대 한 지원을 제공 합니다. 태그 또는 코드에 대한 변경 사항을 지능적으로 검색하고 변경 사항의 영향을 받는 아티팩트만 컴파일합니다. 증분 빌드 메커니즘은 다음 파일을 사용합니다.
 
 - 현재 컴파일러 상태를 유지 관리하는 $(*AssemblyName*)_MarkupCompiler.Cache 파일
 

@@ -9,34 +9,34 @@ helpviewer_keywords:
 - text [WPF]
 - typography [WPF], text formatting
 ms.assetid: f0a7986e-f5b2-485c-a27d-f8e922022212
-ms.openlocfilehash: 2c120c6d71cb22bc38909f980b2f6faf2b5c3663
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: d509de02cd1b3f645ee439c0b0eb33fd1ddbdb07
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395213"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636109"
 ---
 # <a name="advanced-text-formatting"></a>고급 텍스트 서식 지정
-WPF (Windows Presentation Foundation)는 응용 프로그램에 텍스트를 포함 하기 위한 강력한 Api 집합을 제공 합니다. <xref:System.Windows.Controls.TextBlock>등의 레이아웃 및 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]Api는 텍스트 표시를 위해 가장 일반적이 고 일반적으로 사용 되는 요소를 제공 합니다. <xref:System.Windows.Media.GlyphRunDrawing> 및 <xref:System.Windows.Media.FormattedText>와 같은 그리기 Api를 사용 하면 서식 있는 텍스트를 그리기에 포함할 방법이 제공 됩니다. 가장 고급 수준에서 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]는 확장 가능 텍스트 서식 지정 엔진을 제공 하 여 텍스트 저장소 관리, 텍스트 실행 서식 관리, 포함 된 개체 관리 등 텍스트 표현의 모든 측면을 제어 합니다.  
+WPF (Windows Presentation Foundation)는 응용 프로그램에 텍스트를 포함 하기 위한 강력한 Api 집합을 제공 합니다. <xref:System.Windows.Controls.TextBlock>등의 레이아웃 및 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] Api는 텍스트 표시를 위해 가장 일반적이 고 일반적으로 사용 되는 요소를 제공 합니다. <xref:System.Windows.Media.GlyphRunDrawing> 및 <xref:System.Windows.Media.FormattedText>와 같은 그리기 Api를 사용 하면 서식 있는 텍스트를 그리기에 포함할 방법이 제공 됩니다. 가장 고급 수준에서 WPF는 텍스트 저장소 관리, 텍스트 실행 서식 관리, 포함 된 개체 관리 등 텍스트 표현의 모든 측면을 제어 하는 확장 가능한 텍스트 서식 엔진을 제공 합니다.  
   
- 이 항목에서는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 텍스트 서식 지정에 대해 소개 합니다. 클라이언트 구현 및 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 텍스트 서식 지정 엔진 사용에 중점을 둘 수 있습니다.  
+ 이 항목에서는 WPF 텍스트 서식 지정에 대해 소개 합니다. WPF 텍스트 서식 지정 엔진의 클라이언트 구현 및 사용에 중점을 둘 수 있습니다.  
   
 > [!NOTE]
 > 이 문서 내의 모든 코드 예제는 [고급 텍스트 서식 지정 샘플](https://go.microsoft.com/fwlink/?LinkID=159965)에서 찾을 수 있습니다.  
 
 <a name="prereq"></a>   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 항목에서는 사용자가 텍스트 프레젠테이션에 사용 되는 더 높은 수준의 Api에 대해 잘 알고 있다고 가정 합니다. 대부분의 사용자 시나리오에는이 항목에서 설명 하는 고급 텍스트 서식 지정 Api가 필요 하지 않습니다. 다른 텍스트 Api에 대 한 소개는 [WPF의 문서](documents-in-wpf.md)를 참조 하세요.  
   
 <a name="section1"></a>   
 ## <a name="advanced-text-formatting"></a>고급 텍스트 서식 지정  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]의 텍스트 레이아웃 및 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 컨트롤은 서식 지정 된 텍스트를 응용 프로그램에 쉽게 포함할 수 있도록 하는 서식 속성을 제공 합니다. 이러한 컨트롤은 텍스트의 표현을 처리하는 다양한 속성을 표시하며 서체, 크기 및 색을 포함합니다. 일반적인 상황에서 이러한 컨트롤은 애플리케이션에서 대부분의 텍스트 표현을 처리할 수 있습니다. 그러나 일부 고급 시나리오는 텍스트 표현 뿐만 아니라 텍스트 스토리지 컨트롤이 필요합니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]는 이러한 목적으로 확장 가능한 텍스트 서식 지정 엔진을 제공합니다.  
+ WPF의 텍스트 레이아웃 및 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 컨트롤은 응용 프로그램에 서식 있는 텍스트를 쉽게 포함할 수 있도록 하는 서식 속성을 제공 합니다. 이러한 컨트롤은 텍스트의 표현을 처리하는 다양한 속성을 표시하며 서체, 크기 및 색을 포함합니다. 일반적인 상황에서 이러한 컨트롤은 애플리케이션에서 대부분의 텍스트 표현을 처리할 수 있습니다. 그러나 일부 고급 시나리오는 텍스트 표현 뿐만 아니라 텍스트 스토리지 컨트롤이 필요합니다. WPF는 이러한 용도로 사용할 수 있는 확장 가능 텍스트 서식 지정 엔진을 제공 합니다.  
   
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]에 있는 고급 텍스트 서식 지정 기능은 텍스트 서식 지정 엔진, 텍스트 저장소, 텍스트 실행 및 서식 속성으로 구성 됩니다. 텍스트 서식 지정 엔진 <xref:System.Windows.Media.TextFormatting.TextFormatter>는 프레젠테이션에 사용할 텍스트 줄을 만듭니다. 이렇게 하려면 줄 서식 지정 프로세스를 시작 하 고 텍스트 포맷터의 <xref:System.Windows.Media.TextFormatting.TextFormatter.FormatLine%2A>를 호출 합니다. 텍스트 포맷터는 저장소의 <xref:System.Windows.Media.TextFormatting.TextSource.GetTextRun%2A> 메서드를 호출 하 여 텍스트 저장소에서 텍스트 실행을 검색 합니다. 그런 다음 <xref:System.Windows.Media.TextFormatting.TextRun> 개체는 텍스트 포맷터에 의해 <xref:System.Windows.Media.TextFormatting.TextLine> 개체로 구성 되 고 검사 또는 표시를 위해 응용 프로그램에 제공 됩니다.  
+ WPF에 있는 고급 텍스트 서식 지정 기능은 텍스트 서식 지정 엔진, 텍스트 저장소, 텍스트 실행 및 서식 속성으로 구성 됩니다. 텍스트 서식 지정 엔진 <xref:System.Windows.Media.TextFormatting.TextFormatter>는 프레젠테이션에 사용할 텍스트 줄을 만듭니다. 이렇게 하려면 줄 서식 지정 프로세스를 시작 하 고 텍스트 포맷터의 <xref:System.Windows.Media.TextFormatting.TextFormatter.FormatLine%2A>를 호출 합니다. 텍스트 포맷터는 저장소의 <xref:System.Windows.Media.TextFormatting.TextSource.GetTextRun%2A> 메서드를 호출 하 여 텍스트 저장소에서 텍스트 실행을 검색 합니다. 그런 다음 <xref:System.Windows.Media.TextFormatting.TextRun> 개체는 텍스트 포맷터에 의해 <xref:System.Windows.Media.TextFormatting.TextLine> 개체로 구성 되 고 검사 또는 표시를 위해 응용 프로그램에 제공 됩니다.  
   
 <a name="section2"></a>   
 ## <a name="using-the-text-formatter"></a>텍스트 포맷터 사용  
- <xref:System.Windows.Media.TextFormatting.TextFormatter>은 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 텍스트 서식 엔진 이며 텍스트 줄의 서식을 지정 하 고 줄을 구분 하는 서비스를 제공 합니다. 텍스트 포맷터는 다양한 텍스트 문자 서식과 단락 스타일을 처리할 수 있으며 국제 텍스트 레이아웃에 대한 지원을 포함합니다.  
+ <xref:System.Windows.Media.TextFormatting.TextFormatter>은 WPF 텍스트 서식 엔진 이며 텍스트 줄의 서식을 지정 하 고 줄을 구분 하는 서비스를 제공 합니다. 텍스트 포맷터는 다양한 텍스트 문자 서식과 단락 스타일을 처리할 수 있으며 국제 텍스트 레이아웃에 대한 지원을 포함합니다.  
   
  기존 텍스트 API와 달리 <xref:System.Windows.Media.TextFormatting.TextFormatter>는 콜백 메서드 집합을 통해 텍스트 레이아웃 클라이언트와 상호 작용 합니다. 구현에서 이러한 메서드를 제공 하기 위해 클라이언트 필요는 <xref:System.Windows.Media.TextFormatting.TextSource> 클래스입니다. 다음 다이어그램에서는 클라이언트 응용 프로그램과 <xref:System.Windows.Media.TextFormatting.TextFormatter>간의 텍스트 레이아웃 상호 작용을 보여 줍니다.  
   
@@ -67,7 +67,7 @@ WPF (Windows Presentation Foundation)는 응용 프로그램에 텍스트를 포
   
  다음 표에서는 미리 정의 된 <xref:System.Windows.Media.TextFormatting.TextRun> 개체 중 일부를 보여 줍니다.  
   
-|TextRun 유형|사용법|  
+|TextRun 유형|용도|  
 |------------------|-----------|  
 |<xref:System.Windows.Media.TextFormatting.TextCharacters>|문자 모양의 표현을 텍스트 포맷터로 다시 전달하는 데 사용된 특수 텍스트 실행.|  
 |<xref:System.Windows.Media.TextFormatting.TextEmbeddedObject>|측정, 적중 테스트 및 그리기가 텍스트 내 이미지나 단추에서와 같이 전체적으로 수행되는 컨텐츠를 제공하는 데 사용된 특수 텍스트 실행.|  
@@ -91,7 +91,7 @@ WPF (Windows Presentation Foundation)는 응용 프로그램에 텍스트를 포
 ## <a name="specifying-formatting-properties"></a>서식 속성 지정  
  <xref:System.Windows.Media.TextFormatting.TextRun> 개체는 텍스트 저장소에서 제공 하는 속성을 사용 하 여 형식이 지정 됩니다. 이러한 속성은 <xref:System.Windows.Media.TextFormatting.TextParagraphProperties> 및 <xref:System.Windows.Media.TextFormatting.TextRunProperties>의 두 가지 형식으로 제공 됩니다. <xref:System.Windows.Media.TextFormatting.TextParagraphProperties> <xref:System.Windows.TextAlignment> 및 <xref:System.Windows.FlowDirection>와 같은 단락 포함 속성을 처리 합니다. <xref:System.Windows.Media.TextFormatting.TextRunProperties>는 전경 브러시, <xref:System.Windows.Media.Typeface>및 글꼴 크기와 같이 단락 내의 각 텍스트 실행에 대해 다를 수 있는 속성입니다. 사용자 지정 단락 및 사용자 지정 텍스트 실행 속성 형식을 구현 하려면 응용 프로그램이 각각 <xref:System.Windows.Media.TextFormatting.TextParagraphProperties> 및 <xref:System.Windows.Media.TextFormatting.TextRunProperties>에서 파생 되는 클래스를 만들어야 합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [WPF의 입력 체계](typography-in-wpf.md)
 - [WPF의 문서](documents-in-wpf.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - characters [WPF], curly brace
 - DynamicResource markup extensions [WPF]
 ms.assetid: 618dc745-8b14-4886-833f-486d2254bb78
-ms.openlocfilehash: 7ba2beae4ef8176764a5caaff609c365f283e285
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: a9e0657aa9f9dd4de0ff3f8788c686bf1535b1ad
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459819"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559796"
 ---
 # <a name="markup-extensions-and-wpf-xaml"></a>태그 확장명 및 WPF XAML
 이 항목에서는 XAML 태그 확장의 구문 규칙, 용도, 기반이 되는 클래스 개체 모델 등을 비롯한 개념에 대해 소개합니다. 태그 확장은 XAML 언어의 일반적 기능이며 XAML 서비스에 대한 .NET 구현의 일반적 기능입니다. 이 항목에서는 WPF XAML에서 사용할 태그 확장에 대해 자세히 설명합니다.  
@@ -38,16 +38,16 @@ ms.locfileid: "73459819"
  속성 요소 구문에 사용되는 경우 태그 확장은 속성 요소 값을 제공하는 데 사용되는 다른 요소와 시각적으로 동일합니다. 즉, 태그 확장 클래스를 요소로 참조하는 XAML 요소 선언을 꺾쇠 괄호(<>)로 묶습니다.  
   
 <a name="XAML_Defined_Markup_Extensions"></a>   
-## <a name="xaml-defined-markup-extensions"></a>XAML 정의 태그 확장  
+## <a name="xaml-defined-markup-extensions"></a>XAML 정의 태그 확장명  
  XAML의 WPF 구현과 관련되지 않고 대신 XAML의 내장 형식 또는 기능 구현에서 언어로 사용되는 몇 가지 태그 확장도 있습니다. 이러한 태그 확장은 System.Xaml 어셈블리에 일반적인 .NET Framework XAML 서비스의 일부로 구현되어 있으며, XAML 언어 XAML 네임스페이스 내에 있습니다. 일반적인 태그 사용법에서 볼 수 있는 것처럼 이러한 태그 확장은 대개 사용법에서 `x:` 접두사로 식별됩니다. <xref:System.Windows.Markup.MarkupExtension> 기본 클래스 (System.xaml에도 정의 됨)는 WPF XAML을 비롯 하 여 XAML 판독기와 XAML 작성기에서 지원 되기 위해 모든 태그 확장에서 사용 해야 하는 패턴을 제공 합니다.  
   
-- `x:Type` 은 명명된 형식에 <xref:System.Type> 개체를 제공합니다. 이 기능은 스타일 및 템플릿에서 가장 많이 사용됩니다. 자세한 내용은 [x:Type 태그 확장](../../xaml-services/x-type-markup-extension.md)을 참조하세요.  
+- `x:Type` 은 명명된 형식에 <xref:System.Type> 개체를 제공합니다. 이 기능은 스타일 및 템플릿에서 가장 많이 사용됩니다. 자세한 내용은 [x:Type 태그 확장](../../../desktop-wpf/xaml-services/xtype-markup-extension.md)을 참조하세요.  
   
-- `x:Static`은 정적 값을 생성합니다. 값은 직접적으로 대상 속성 값의 형식이 아니라 해당 형식으로 계산될 수 있는 값-형식 코드 엔터티에서 생성됩니다. 자세한 내용은 [x:Static 태그 확장](../../xaml-services/x-static-markup-extension.md)을 참조하세요.  
+- `x:Static`은 정적 값을 생성합니다. 값은 직접적으로 대상 속성 값의 형식이 아니라 해당 형식으로 계산될 수 있는 값-형식 코드 엔터티에서 생성됩니다. 자세한 내용은 [x:Static 태그 확장](../../../desktop-wpf/xaml-services/xstatic-markup-extension.md)을 참조하세요.  
   
-- `x:Null`은 속성 값으로 `null`을 지정하며 특성 또는 속성 요소 값에 사용될 수 있습니다. 자세한 내용은 [x:Null 태그 확장](../../xaml-services/x-null-markup-extension.md)을 참조하세요.  
+- `x:Null`은 속성 값으로 `null`을 지정하며 특성 또는 속성 요소 값에 사용될 수 있습니다. 자세한 내용은 [x:Null 태그 확장](../../../desktop-wpf/xaml-services/xnull-markup-extension.md)을 참조하세요.  
   
-- `x:Array`는 WPF 기본 요소 및 컨트롤 모델에서 제공하는 컬렉션 지원이 의도적으로 사용되지 않는 경우 XAML 구문에서 일반적인 배열 만들기를 지원합니다. 자세한 내용은 [x:Array 태그 확장](../../xaml-services/x-array-markup-extension.md)을 참조하세요.  
+- `x:Array`는 WPF 기본 요소 및 컨트롤 모델에서 제공하는 컬렉션 지원이 의도적으로 사용되지 않는 경우 XAML 구문에서 일반적인 배열 만들기를 지원합니다. 자세한 내용은 [x:Array 태그 확장](../../../desktop-wpf/xaml-services/xarray-markup-extension.md)을 참조하세요.  
   
 > [!NOTE]
 > `x:` 접두사는 XAML 파일 또는 프로덕션의 루트 요소에서 XAML 언어 내장 형식의 일반적인 XAML 네임스페이스 매핑에 사용됩니다. 예를 들어, WPF 응용 프로그램에 대 한 Visual Studio 템플릿은이 `x:` 매핑을 사용 하 여 XAML 파일을 시작 합니다. 사용자 고유의 XAML 네임스페이스 매핑에서 다른 접두사 토큰을 선택할 수 있지만 이 설명서에서는 특정 프레임워크와 관련되지 않은 WPF 기본 네임스페이스나 다른 XAML 네임스페이스와 달리 XAML 언어의 XAML 네임스페이스에서 정의된 부분인 해당 엔터티를 식별하는 방법으로 기본 `x:` 매핑을 가정합니다.  
@@ -74,7 +74,7 @@ ms.locfileid: "73459819"
 ## <a name="extension-classes"></a>\*확장 클래스  
  일반적인 XAML 언어와 WPF 관련 태그 확장 모두에 대해 각 태그 확장의 동작은 <xref:System.Windows.Markup.MarkupExtension>에서 파생 되는 `*Extension` 클래스를 통해 XAML 프로세서로 식별 되며 <xref:System.Windows.Markup.StaticExtension.ProvideValue%2A> 메서드의 구현을 제공 합니다. 각 확장에서 이 메서드는 태그 확장이 평가될 때 반환되는 개체를 제공합니다. 반환되는 개체는 대개 태그 확장에 전달된 다양한 문자열 토큰을 기반으로 평가됩니다.  
   
- 예를 들어, <xref:System.Windows.StaticResourceExtension> 클래스는 <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A> 구현이 요청 된 개체를 반환 하 고, 해당 구현을 검색 하는 데 사용 되는 문자열이 되는 문자열을 반환 하도록 실제 리소스 조회의 표면 구현을 제공 합니다. 리소스를 `x:Key`합니다. 기존 태그 확장을 사용할 때에는 이러한 구현 세부 사항이 중요하지 않습니다.  
+ 예를 들어, <xref:System.Windows.StaticResourceExtension> 클래스는 <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A> 구현에서 요청 된 개체를 반환 하 고 해당 특정 구현의 입력을 `x:Key`에서 리소스를 조회 하는 데 사용 되는 문자열이 되도록 실제 리소스 조회의 표면 구현을 제공 합니다. 기존 태그 확장을 사용할 때에는 이러한 구현 세부 사항이 중요하지 않습니다.  
   
  일부 태그 확장에는 문자열 토큰 인수가 사용되지 않습니다. 이는 태그 확장이 정적 값 또는 일정한 값을 반환하기 때문이거나, 반환해야 하는 값의 컨텍스트가 `serviceProvider` 매개 변수로 전달된 서비스 중 하나를 통해 사용 가능하기 때문입니다.  
   
@@ -92,13 +92,13 @@ ms.locfileid: "73459819"
   
 - 구분 된 개별 토큰에 등호가 포함 된 경우 XAML 프로세서는 먼저 태그 확장에 대해 매개 변수가 없는 생성자를 호출 합니다. 그런 다음 각 이름=값 쌍이 태그 확장에 존재하는 속성 이름과 해당 속성에 할당할 값으로 해석됩니다.  
   
-- 태그 확장에서 생성자 동작과 속성 설정 동작이 동일한 경우에는 어떤 동작을 사용해도 관계가 없습니다. 설정 가능한 속성이 둘 이상 있는 태그 확장에서는 *property*`=`*value* 쌍을 사용하는 것이 보다 일반적입니다. 그 이유는 태그의 의도를 더욱 명확하게 지정할 수 있고, 속성 = 값 쌍을 지정 하는 경우 해당 속성은 순서에 관계 없이 지정할 수 있습니다. 또한 태그 확장이 설정 가능한 속성 중 하나를 설정 하는 생성자 매개 변수를 제공 한다는 보장이 없습니다. 예를 들어 <xref:System.Windows.Data.Binding>은 *속성*`=`*값* 형식에서 확장을 통해 설정할 수 있는 많은 속성이 있는 태그 확장 이지만, <xref:System.Windows.Data.Binding>는 매개 변수가 없는 생성자와를 설정 하는 생성자 두 개를 지원 합니다. 초기 경로입니다.  
+- 태그 확장에서 생성자 동작과 속성 설정 동작이 동일한 경우에는 어떤 동작을 사용해도 관계가 없습니다. 설정 가능한 속성이 둘 이상 있는 태그 확장에서는 *property*`=`*value* 쌍을 사용하는 것이 보다 일반적입니다. 그 이유는 태그의 의도를 더욱 명확하게 지정할 수 있고, 속성 = 값 쌍을 지정 하는 경우 해당 속성은 순서에 관계 없이 지정할 수 있습니다. 또한 태그 확장이 설정 가능한 속성 중 하나를 설정 하는 생성자 매개 변수를 제공 한다는 보장이 없습니다. 예를 들어 <xref:System.Windows.Data.Binding>은 *속성*`=`*값* 형식에서 확장을 통해 설정할 수 있는 많은 속성이 있는 태그 확장 이지만, <xref:System.Windows.Data.Binding>는 매개 변수가 없는 생성자와 초기 경로를 설정 하는 생성자 두 개를 지원 합니다.  
   
 - 리터럴 쉼표는 이스케이프 없이 태그 확장에 전달할 수 없습니다.  
   
 <a name="EscapeSequences"></a>   
 ## <a name="escape-sequences-and-markup-extensions"></a>이스케이프 시퀀스 및 태그 확장  
- XAML 프로세서의 특성 처리에서는 중괄호를 태그 확장 시퀀스의 표시기로 사용합니다. 또한 필요한 경우에는 리터럴 중괄호 다음에 비어 있는 중괄호 쌍을 사용하여 이스케이프 시퀀스를 입력함으로써 리터럴 중괄호 문자 특성 값을 생성할 수 있습니다. [{} 이스케이프 시퀀스 태그 확장명](../../xaml-services/escape-sequence-markup-extension.md)을 참조 하세요.  
+ XAML 프로세서의 특성 처리에서는 중괄호를 태그 확장 시퀀스의 표시기로 사용합니다. 또한 필요한 경우에는 리터럴 중괄호 다음에 비어 있는 중괄호 쌍을 사용하여 이스케이프 시퀀스를 입력함으로써 리터럴 중괄호 문자 특성 값을 생성할 수 있습니다. [{} 이스케이프 시퀀스 태그 확장명](../../../desktop-wpf/xaml-services/escape-sequence-markup-extension.md)을 참조 하세요.  
   
 <a name="Nesting"></a>   
 ## <a name="nesting-markup-extensions-in-xaml-usage"></a>XAML에서 중첩 태그 확장 사용법  
@@ -114,14 +114,14 @@ ms.locfileid: "73459819"
 ## <a name="markup-extensions-and-property-element-syntax"></a>태그 확장 및 속성 요소 구문  
  속성 요소 값을 채우는 개체 요소로 사용된 경우에는 태그 확장 클래스를 XAML에서 사용할 수 있는 일반적인 형식 기반 개체 요소와 시각적으로 구분할 수 없습니다. 이 경우 일반적인 개체 요소와 태그 확장 간의 실질적인 차이는 태그 확장이 형식화된 값으로 계산되거나 식으로 지연된다는 점입니다. 따라서 다른 프로그래밍 모델에서 런타임에 바인딩되는 속성이 처리되는 방식과 마찬가지로 태그 확장의 속성 값에서 발생할 수 있는 형식 오류에 대한 메커니즘이 달라집니다. 일반적인 개체 요소는 XAML이 구문 분석될 때 해당 요소가 설정하고 있는 대상 속성을 기준으로 형식 일치 여부가 평가됩니다.  
   
- 속성 요소를 채우는 개체 요소 구문에 사용되는 대부분의 태그 확장에는 콘텐츠나 추가 속성 요소 구문이 없습니다. 따라서 개체 요소 태그를 닫고 자식 요소를 제공하지 않을 수 있습니다. XAML 프로세서에서 개체 요소를 발견할 때마다 해당 클래스의 생성자가 호출되어 구문 분석된 요소에서 생성되는 개체를 인스턴스화합니다. 태그 확장 클래스는 다릅니다. 개체 요소 구문에서 태그 확장을 사용할 수 있도록 하려면 매개 변수가 없는 생성자를 제공 해야 합니다. 일부 기존 태그 확장에는 효율적인 초기화를 위해 지정해야 하는 필수 속성 값이 적어도 하나는 있습니다. 이런 경우 해당 속성 값은 대개 개체 요소에 속성 특성으로 지정됩니다. [XAML 네임스페이스(x:) 언어 기능](../../xaml-services/xaml-namespace-x-language-features.md) 및 [WPF XAML 확장](wpf-xaml-extensions.md) 참조 페이지에는 필수 속성이 있는 태그 확장 및 필수 속성의 이름이 나와 있습니다. 또한 참조 페이지에는 특정 태그 확장에서 개체 요소 구문이나 특성 구문을 사용할 수 없는지 여부도 나와 있습니다. 예를 들어 [x:Array 태그 확장](../../xaml-services/x-array-markup-extension.md)의 경우에는 배열의 내용을 태그에서 콘텐츠로 지정해야 하기 때문에 특성 구문을 사용할 수 없습니다. 배열 내용은 일반 개체로 처리되므로 특성에 대한 기본 형식 변환기를 사용할 수 없습니다. [x:Array 태그 확장](../../xaml-services/x-array-markup-extension.md)에는 `type` 매개 변수도 필요합니다.  
+ 속성 요소를 채우는 개체 요소 구문에 사용되는 대부분의 태그 확장에는 콘텐츠나 추가 속성 요소 구문이 없습니다. 따라서 개체 요소 태그를 닫고 자식 요소를 제공하지 않을 수 있습니다. XAML 프로세서에서 개체 요소를 발견할 때마다 해당 클래스의 생성자가 호출되어 구문 분석된 요소에서 생성되는 개체를 인스턴스화합니다. 태그 확장 클래스는 다릅니다. 개체 요소 구문에서 태그 확장을 사용할 수 있도록 하려면 매개 변수가 없는 생성자를 제공 해야 합니다. 일부 기존 태그 확장에는 효율적인 초기화를 위해 지정해야 하는 필수 속성 값이 적어도 하나는 있습니다. 이런 경우 해당 속성 값은 대개 개체 요소에 속성 특성으로 지정됩니다. [XAML 네임스페이스(x:) 언어 기능](../../../desktop-wpf/xaml-services/namespace-language-features.md) 및 [WPF XAML 확장](wpf-xaml-extensions.md) 참조 페이지에는 필수 속성이 있는 태그 확장 및 필수 속성의 이름이 나와 있습니다. 또한 참조 페이지에는 특정 태그 확장에서 개체 요소 구문이나 특성 구문을 사용할 수 없는지 여부도 나와 있습니다. 예를 들어 [x:Array 태그 확장](../../../desktop-wpf/xaml-services/xarray-markup-extension.md)의 경우에는 배열의 내용을 태그에서 콘텐츠로 지정해야 하기 때문에 특성 구문을 사용할 수 없습니다. 배열 내용은 일반 개체로 처리되므로 특성에 대한 기본 형식 변환기를 사용할 수 없습니다. [x:Array 태그 확장](../../../desktop-wpf/xaml-services/xarray-markup-extension.md)에는 `type` 매개 변수도 필요합니다.  
   
 ## <a name="see-also"></a>참조
 
 - [XAML 개요(WPF)](../../../desktop-wpf/fundamentals/xaml.md)
-- [XAML 네임스페이스(x:) 언어 기능](../../xaml-services/xaml-namespace-x-language-features.md)
+- [XAML 네임스페이스(x:) 언어 기능](../../../desktop-wpf/xaml-services/namespace-language-features.md)
 - [WPF XAML 확장](wpf-xaml-extensions.md)
 - [StaticResource 태그 확장](staticresource-markup-extension.md)
 - [Binding 태그 확장](binding-markup-extension.md)
 - [DynamicResource 태그 확장](dynamicresource-markup-extension.md)
-- [x:Type 태그 확장](../../xaml-services/x-type-markup-extension.md)
+- [x:Type 태그 확장](../../../desktop-wpf/xaml-services/xtype-markup-extension.md)

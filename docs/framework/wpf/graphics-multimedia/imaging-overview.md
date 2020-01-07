@@ -21,12 +21,12 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-ms.openlocfilehash: b60f2871062a12d3bee91a9c6d9883222b3034f4
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: a4151ff610c67ac762f0096c6a136f4475317782
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73733572"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636642"
 ---
 # <a name="imaging-overview"></a>이미징 개요
 이 항목에서는 Microsoft Windows Presentation Foundation Imaging 구성 요소에 대해 소개 합니다. 개발자는 WPF 이미징을 사용 하 여 이미지를 표시 하 고, 변환 하 고, 서식을 지정할 수 있습니다.  
@@ -48,7 +48,7 @@ ms.locfileid: "73733572"
   
 - 파일 내 독점 메타데이터에 대한 지원  
   
-- 관리되는 구성 요소는 관리되지 않는 인프라를 활용하여 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)], 애니메이션 및 그래픽 등의 기타 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 기능에 이미지를 원활하게 통합할 수 있도록 합니다. 또한 관리 되는 구성 요소는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램에서 새 이미지 형식을 자동으로 인식할 수 있도록 하는 Windows Presentation Foundation (WPF) 이미징 코덱 확장성 모델을 활용 합니다.  
+- 관리 되는 구성 요소는 관리 되지 않는 인프라를 활용 하 여 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)], 애니메이션 및 그래픽과 같은 다른 WPF 기능과 이미지의 원활한 통합을 제공 합니다. 관리 되는 구성 요소는 WPF 응용 프로그램에서 새로운 이미지 형식을 자동으로 인식할 수 있도록 하는 Windows Presentation Foundation (WPF) 이미징 코덱 확장성 모델을 활용할 수도 있습니다.  
   
  대부분의 관리 되는 WPF 이미징 API는 <xref:System.Windows.Media.Imaging?displayProperty=nameWithType> 네임 스페이스에 상주 하지만 <xref:System.Windows.Media.ImageBrush> 및 <xref:System.Windows.Media.ImageDrawing>와 같은 몇 가지 중요 한 형식이 <xref:System.Windows.Media?displayProperty=nameWithType> 네임 스페이스에 있고 <xref:System.Windows.Controls.Image> 네임 스페이스에 상주 합니다.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "73733572"
 
  코덱은 특정 미디어 형식을 인코딩하거나 디코딩하는 데 사용됩니다. WPF Imaging에는 BMP, JPEG, PNG, TIFF, Windows Media Photo, GIF 및 아이콘 이미지 형식에 대 한 코덱이 포함 되어 있습니다. 이러한 각 코덱을 사용하여 애플리케이션은 ICON을 제외한 해당 이미지 형식을 디코딩 및 인코딩할 수 있습니다.  
   
- <xref:System.Windows.Media.Imaging.BitmapSource>는 이미지의 디코딩 및 인코딩에 사용 되는 중요 한 클래스입니다. 이는 WPF 이미징 파이프라인의 기본 구성 요소 이며 특정 크기 및 해상도의 단일 고정 픽셀 집합을 나타냅니다. <xref:System.Windows.Media.Imaging.BitmapSource>은 다중 프레임 이미지의 개별 프레임이 될 수도 있고 <xref:System.Windows.Media.Imaging.BitmapSource>에서 수행 되는 변환의 결과일 수도 있습니다. <xref:System.Windows.Media.Imaging.BitmapFrame>와 같이 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] imaging에서 사용 되는 많은 기본 클래스의 부모입니다.  
+ <xref:System.Windows.Media.Imaging.BitmapSource>는 이미지의 디코딩 및 인코딩에 사용 되는 중요 한 클래스입니다. 이는 WPF 이미징 파이프라인의 기본 구성 요소 이며 특정 크기 및 해상도의 단일 고정 픽셀 집합을 나타냅니다. <xref:System.Windows.Media.Imaging.BitmapSource>은 다중 프레임 이미지의 개별 프레임이 될 수도 있고 <xref:System.Windows.Media.Imaging.BitmapSource>에서 수행 되는 변환의 결과일 수도 있습니다. <xref:System.Windows.Media.Imaging.BitmapFrame>와 같이 WPF 이미징에서 사용 되는 대부분의 기본 클래스의 부모입니다.  
   
  <xref:System.Windows.Media.Imaging.BitmapFrame>는 이미지 형식의 실제 비트맵 데이터를 저장 하는 데 사용 됩니다. GIF 및 TIFF와 같은 형식은 이미지 당 여러 프레임을 지원 하지만 많은 이미지 형식은 단일 <xref:System.Windows.Media.Imaging.BitmapFrame>만 지원 합니다. 프레임은 디코더에서 입력 데이터로 사용되고 이미지 파일을 만들기 위해 인코더에 전달됩니다.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "73733572"
  [!code-vb[BitmapFrameExample#10](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapFrameExample/VB/BitmapFrame.vb#10)]  
   
 ### <a name="image-format-decoding"></a>이미지 형식 디코딩  
- 이미지 디코딩은 이미지 형식을 시스템에서 사용할 수 있는 이미지 데이터로 변환하는 것입니다. 그런 후 이미지 데이터를 다른 형식으로 표시, 처리 또는 인코딩할 수 있습니다. 디코더를 선택할 때는 이미지 형식을 고려해야 합니다. 특정 디코더를 지정하지 않으면 코덱이 자동으로 선택됩니다. [WPF로 이미지 표시](#_displayingimages) 섹션의 예제는 자동 디코딩을 보여 줍니다. 관리 되지 않는 WPF 이미징 인터페이스를 사용 하 여 개발 되 고 시스템에 등록 된 사용자 지정 형식 디코더는 자동으로 디코더 선택에 참여 합니다. 이를 통해 사용자 지정 형식이 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 애플리케이션에 자동으로 표시될 수 있습니다.  
+ 이미지 디코딩은 이미지 형식을 시스템에서 사용할 수 있는 이미지 데이터로 변환하는 것입니다. 그런 후 이미지 데이터를 다른 형식으로 표시, 처리 또는 인코딩할 수 있습니다. 디코더를 선택할 때는 이미지 형식을 고려해야 합니다. 특정 디코더를 지정하지 않으면 코덱이 자동으로 선택됩니다. [WPF로 이미지 표시](#_displayingimages) 섹션의 예제는 자동 디코딩을 보여 줍니다. 관리 되지 않는 WPF 이미징 인터페이스를 사용 하 여 개발 되 고 시스템에 등록 된 사용자 지정 형식 디코더는 자동으로 디코더 선택에 참여 합니다. 이렇게 하면 사용자 지정 형식을 WPF 응용 프로그램에 자동으로 표시할 수 있습니다.  
   
  다음 예제에서는 비트맵 디코더를 사용 하 여 BMP 형식 이미지를 디코딩하는 방법을 보여 줍니다.  
   
@@ -100,13 +100,13 @@ ms.locfileid: "73733572"
  다음 예제에서는 코드를 사용하여 200픽셀 너비의 이미지를 렌더링하는 방법을 보여 줍니다.  
   
 > [!NOTE]
-> <xref:System.Windows.Media.Imaging.BitmapImage>는 <xref:System.ComponentModel.ISupportInitialize> 인터페이스를 구현 하 여 여러 속성에 대 한 초기화를 최적화 합니다. 개체 초기화 동안에만 속성 변경이 발생할 수 있습니다. <xref:System.Windows.Media.Imaging.BitmapImage.BeginInit%2A>를 호출 하 여 초기화가 시작 되었음을 알리고 초기화가 완료 되었음을 신호를 <xref:System.Windows.Media.Imaging.BitmapImage.EndInit%2A> 합니다. 일단 초기화되면 속성 변경은 무시됩니다.  
+> <xref:System.Windows.Media.Imaging.BitmapImage> 구현 된 <xref:System.ComponentModel.ISupportInitialize> 여러 속성에 대해 초기화를 최적화 하는 인터페이스입니다. 개체 초기화 동안에만 속성 변경이 발생할 수 있습니다. 호출 <xref:System.Windows.Media.Imaging.BitmapImage.BeginInit%2A> 초기화가 시작 되었음을 알리기 위해 및 <xref:System.Windows.Media.Imaging.BitmapImage.EndInit%2A> 초기화가 완료 되었음을 알립니다. 일단 초기화되면 속성 변경은 무시됩니다.  
   
  [!code-csharp[ImageElementExample_snip#ImageSimpleExampleInlineCode1](~/samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/ImageSimpleExample.xaml.cs#imagesimpleexampleinlinecode1)]
  [!code-vb[ImageElementExample_snip#ImageSimpleExampleInlineCode1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample_snip/VB/ImageSimpleExample.xaml.vb#imagesimpleexampleinlinecode1)]  
   
 #### <a name="rotating-converting-and-cropping-images"></a>이미지 회전, 변환 및 자르기  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]를 사용 하면 <xref:System.Windows.Media.Imaging.BitmapImage>의 속성을 사용 하거나 <xref:System.Windows.Media.Imaging.CroppedBitmap> 또는 <xref:System.Windows.Media.Imaging.FormatConvertedBitmap>같은 추가 <xref:System.Windows.Media.Imaging.BitmapSource> 개체를 사용 하 여 이미지를 변형할 수 있습니다. 이러한 이미지 변환은 이미지 크기를 조정 또는 이미지를 회전하거나, 이미지의 픽셀 형식을 변경하거나, 이미지를 잘라낼 수 있습니다.  
+ WPF를 사용 하면 사용자가 <xref:System.Windows.Media.Imaging.BitmapImage>의 속성을 사용 하거나 <xref:System.Windows.Media.Imaging.CroppedBitmap> 또는 <xref:System.Windows.Media.Imaging.FormatConvertedBitmap>와 같은 추가 <xref:System.Windows.Media.Imaging.BitmapSource> 개체를 사용 하 여 이미지를 변환할 수 있습니다. 이러한 이미지 변환은 이미지 크기를 조정 또는 이미지를 회전하거나, 이미지의 픽셀 형식을 변경하거나, 이미지를 잘라낼 수 있습니다.  
   
  이미지 회전은 <xref:System.Windows.Media.Imaging.BitmapImage>의 <xref:System.Windows.Media.Imaging.BitmapImage.Rotation%2A> 속성을 사용 하 여 수행 됩니다. 회전은 90도 단위로만 수행할 수 있습니다. 다음 예제에서 이미지는 90도 회전됩니다.  
   
@@ -181,7 +181,7 @@ ms.locfileid: "73733572"
   
 <a name="_extensibility"></a>   
 ## <a name="codec-extensibility"></a>코덱 확장성  
- WPF 이미징의 핵심 기능은 새 이미지 코덱에 대 한 확장성 모델입니다. 이러한 관리되지 않는 인터페이스를 통해 코덱 개발자들은 코덱을 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]에 통합할 수 있으므로 새로운 이미지 형식이 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 애플리케이션에서 자동으로 사용될 수 있습니다.  
+ WPF 이미징의 핵심 기능은 새 이미지 코덱에 대 한 확장성 모델입니다. 이러한 관리 되지 않는 인터페이스를 사용 하면 코덱 개발자가 새 이미지 형식을 wpf 응용 프로그램에서 자동으로 사용할 수 있도록 코덱을 WPF와 통합할 수 있습니다.  
   
  확장성 API에 대 한 샘플은 [Win32 샘플 코덱](https://go.microsoft.com/fwlink/?LinkID=160052)을 참조 하세요. 이 샘플에는 사용자 지정 이미지 형식용 디코더 및 인코더를 만드는 방법을 보여 줍니다.  
   

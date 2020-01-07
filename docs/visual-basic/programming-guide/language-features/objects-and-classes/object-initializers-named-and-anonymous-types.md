@@ -10,12 +10,12 @@ helpviewer_keywords:
 - initializers [Visual Basic]
 - named types [Visual Basic]
 ms.assetid: e2df3807-a70f-49dd-ac94-f1e07f472b1b
-ms.openlocfilehash: 20e46d7ecc206abb28240075d9ec5f764ab78d01
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: e6ffc649d7eb841c2d009b0ec1237975f46e2d2d
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346127"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636811"
 ---
 # <a name="object-initializers-named-and-anonymous-types-visual-basic"></a>개체 이니셜라이저: 명명된 형식과 익명 형식(Visual Basic)
 개체 이니셜라이저를 사용 하면 단일 식을 사용 하 여 복합 개체에 대 한 속성을 지정할 수 있습니다. 명명 된 형식과 익명 형식의 인스턴스를 만드는 데 사용할 수 있습니다.  
@@ -105,7 +105,7 @@ ms.locfileid: "74346127"
   
  형식의 이름을 사용할 수 없기 때문에 `As` 절을 사용 하 여 `cust13`를 선언할 수 없습니다. 해당 형식을 유추 해야 합니다. 런타임에 바인딩을 사용 하지 않으면 로컬 변수에 익명 형식의 사용이 제한 됩니다.  
   
- 익명 형식은 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리에 대 한 중요 한 지원을 제공 합니다. 쿼리에서 익명 형식을 사용 하는 방법에 대 한 자세한 내용은 [익명 형식](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md) 및 [LINQ 소개 Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)를 참조 하세요.  
+ 무명 형식은 LINQ 쿼리에 대 한 중요 한 지원을 제공 합니다. 쿼리에서 익명 형식을 사용 하는 방법에 대 한 자세한 내용은 [익명 형식](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md) 및 [LINQ 소개 Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)를 참조 하세요.  
   
 ### <a name="remarks-about-anonymous-types"></a>익명 형식에 대 한 설명  
   
@@ -127,7 +127,7 @@ ms.locfileid: "74346127"
   
      무명 형식의 속성을 정의 하는 옵션에 대 한 자세한 내용은 [방법: 익명 형식 선언에서 속성 이름 및 형식 유추](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)를 참조 하세요.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [지역 형식 유추](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
 - [익명 형식](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)

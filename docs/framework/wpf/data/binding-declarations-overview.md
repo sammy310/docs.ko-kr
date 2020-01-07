@@ -12,12 +12,12 @@ helpviewer_keywords:
 - syntax [WPF], object elements
 - binding declarations [WPF]
 ms.assetid: b97fd626-4c0d-4761-872a-2bca5820da2c
-ms.openlocfilehash: bc3a139db80066c9cad5199c7734fe66a8639400
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 8fea61c463928ee69ef5dd0dfbf107f89c5384ff
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460037"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544471"
 ---
 # <a name="binding-declarations-overview"></a>바인딩 선언 개요
 
@@ -25,7 +25,7 @@ ms.locfileid: "73460037"
 
 <a name="Prereq"></a>
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>전제 조건
 
 이 항목은 태그 확장의 개념 및 사용 방법에 익숙하다는 것을 전제로 합니다. 태그 확장에 대한 자세한 내용은 [XAML 태그 확장 및 WPF XAML](../advanced/markup-extensions-and-wpf-xaml.md)을 참조하세요.
 
@@ -84,13 +84,13 @@ ms.locfileid: "73460037"
 
 ## <a name="binding-path-syntax"></a>바인딩 경로 구문
 
-바인딩할 원본 값을 지정 하려면 <xref:System.Windows.Data.Binding.Path%2A> 속성을 사용 합니다.
+사용 된 <xref:System.Windows.Data.Binding.Path%2A> 속성에 바인딩할 원본 값을 지정 하려면:
 
-- 가장 간단한 경우에 <xref:System.Windows.Data.Binding.Path%2A> 속성 값은 바인딩에 사용할 소스 개체의 속성 이름 (예: `Path=PropertyName`)입니다.
+- 가장 간단한 경우에는 <xref:System.Windows.Data.Binding.Path%2A> 속성 값이 같은 바인딩에 사용할 소스 개체의 속성 이름을 `Path=PropertyName`입니다.
 
 - 속성의 하위 속성은와 비슷한 구문으로 지정할 수 있습니다 C#. 예를 들어 `Path=ShoppingCart.Order` 절은 개체 또는 속성 `ShoppingCart`의 하위 속성 `Order`에 대한 바인딩을 설정합니다.
 
-- 연결된 속성에 바인딩하려면 연결된 속성을 괄호로 묶습니다. 예를 들어 연결 된 속성 <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>에 바인딩하려면 구문은 `Path=(DockPanel.Dock)`됩니다.
+- 연결된 속성에 바인딩하려면 연결된 속성을 괄호로 묶습니다. 예를 들어 연결된 된 속성에 바인딩할 <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>, 구문은 `Path=(DockPanel.Dock)`합니다.
 
 - 속성의 인덱서는 인덱서가 적용되는 속성 이름 뒤에 대괄호로 묶어서 지정할 수 있습니다. 예를 들어 `Path=ShoppingCart[0]` 절은 속성의 내부 인덱싱에서 리터럴 문자열 "0"을 처리하는 방법에 해당하는 인덱스에 대한 바인딩을 설정합니다. 중첩된 인덱서도 지원됩니다.
 
@@ -110,9 +110,9 @@ ms.locfileid: "73460037"
 
 - XAML에서 <xref:System.Windows.Data.Binding.Path%2A>를 설정 하는 경우 XML 언어 정의와 특별히 사용 되는 특정 문자를 이스케이프 (XML 엔터티 사용) 해야 합니다.
 
-  - "&" 문자를 이스케이프하려면 `&`를 사용합니다.
+  - "&" 문자를 이스케이프하려면 `&amp;`를 사용합니다.
 
-  - ">" 끝 태그를 이스케이프하려면 `>`를 사용합니다.
+  - ">" 태그를 이스케이프하려면 `&gt;`를 사용합니다.
 
 - 또한 태그 확장 구문을 사용하여 특성의 전체 바인딩을 설명하는 경우 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 태그 확장 파서와 관련된 문자를 이스케이프(백슬래시 \\ 사용)해야 합니다.
 

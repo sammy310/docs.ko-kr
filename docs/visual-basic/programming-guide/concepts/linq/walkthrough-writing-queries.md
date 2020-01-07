@@ -7,18 +7,18 @@ helpviewer_keywords:
 - LINQ [Visual Basic], writing queries
 - writing LINQ queries [Visual Basic]
 ms.assetid: f0045808-b9fe-4d31-88d1-473d9957211e
-ms.openlocfilehash: 6a9f229697ce3d6328c6fb09d18d4cc2627eab10
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 6d2e472cc996c42aa091ed95c6954d0879c98372
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351025"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636759"
 ---
 # <a name="walkthrough-writing-queries-in-visual-basic"></a>연습: Visual Basic에서 쿼리 작성
 
-이 연습에서는 Visual Basic 언어 기능을 사용 하 여 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 쿼리 식을 작성 하는 방법을 보여 줍니다. 이 연습에서는 학생 개체 목록에 대 한 쿼리를 만드는 방법, 쿼리를 실행 하는 방법 및 수정 하는 방법을 보여 줍니다. 이 쿼리는 개체 이니셜라이저, 로컬 형식 유추 및 익명 형식을 비롯 한 여러 기능을 통합 합니다.
+이 연습에서는 Visual Basic 언어 기능을 사용 하 여 LINQ (통합 언어 쿼리) 쿼리 식을 작성 하는 방법을 보여 줍니다. 이 연습에서는 학생 개체 목록에 대 한 쿼리를 만드는 방법, 쿼리를 실행 하는 방법 및 수정 하는 방법을 보여 줍니다. 이 쿼리는 개체 이니셜라이저, 로컬 형식 유추 및 익명 형식을 비롯 한 여러 기능을 통합 합니다.
 
-이 연습을 완료 한 후 관심 있는 특정 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 공급자의 샘플과 설명서로 이동할 준비가 됩니다. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 공급자는 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], LINQ to DataSet 및 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]를 포함 합니다.
+이 연습을 완료 하면 관심 있는 특정 LINQ 공급자에 대 한 샘플 및 설명서로 이동할 준비가 됩니다. LINQ 공급자는 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], LINQ to DataSet 및 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]를 포함 합니다.
 
 ## <a name="create-a-project"></a>프로젝트 만들기
 
@@ -133,13 +133,13 @@ ms.locfileid: "74351025"
 
 ## <a name="additional-examples"></a>추가 예
 
-기본 사항을 이해 했으므로 다음은 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리의 유연성과 성능을 보여 주는 추가 예제 목록입니다. 각 예제 앞에는 수행 되는 작업에 대 한 간략 한 설명이 나와 있습니다. 각 쿼리에 대 한 쿼리 결과 변수 위로 마우스 포인터를 가져가면 유추 된 형식을 볼 수 있습니다. `For Each` 루프를 사용 하 여 결과를 생성 합니다.
+기본 사항을 이해 했으므로 다음은 LINQ 쿼리의 유연성과 성능을 보여 주는 추가 예제 목록입니다. 각 예제 앞에는 수행 되는 작업에 대 한 간략 한 설명이 나와 있습니다. 각 쿼리에 대 한 쿼리 결과 변수 위로 마우스 포인터를 가져가면 유추 된 형식을 볼 수 있습니다. `For Each` 루프를 사용 하 여 결과를 생성 합니다.
 
 [!code-vb[VbLINQWalkthrough#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#7)]
 
 ## <a name="additional-information"></a>추가 정보
 
-쿼리 작업의 기본 개념을 잘 알고 있으면 관심 있는 특정 형식의 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 공급자에 대 한 설명서와 예제를 읽을 준비가 된 것입니다.
+쿼리 작업의 기본 개념을 잘 알고 있으면 관심 있는 특정 형식의 LINQ 공급자에 대 한 설명서와 샘플을 읽을 준비가 된 것입니다.
 
 - [LINQ to Objects](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
 
@@ -149,7 +149,7 @@ ms.locfileid: "74351025"
 
 - [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [LINQ(Language-Integrated Query)(Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)
 - [Visual Basic에서 LINQ 시작](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)

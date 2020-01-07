@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - structured navigation [WPF]
 ms.assetid: 025d30ef-fec5-436d-ad7a-5d5483331c26
-ms.openlocfilehash: 09c3c57f3ac1009416a5c67b37c035fe30cd5b5e
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 5e8c27d017ed4bf8a7dcc2dda18877c9ed8dba69
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425336"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636343"
 ---
 # <a name="structured-navigation-overview"></a>구조적 탐색 개요
 
@@ -135,7 +135,7 @@ XBAP (XAML 브라우저 응용 프로그램), <xref:System.Windows.Controls.Fram
 
   - <xref:System.Windows.Application.Properties%2A>에 저장 된 매개 변수를 검색 하 고 사용 합니다.
 
-그러나 간단히 살펴보겠지만 호출된 페이지에서 반환된 데이터를 수집하려고 호출된 페이지를 인스턴스화하고 여기로 이동하는 데는 코드를 사용해야 합니다. 이러한 이유로 <xref:System.Windows.Navigation.PageFunction%601>을 활성 상태로 유지 해야 합니다. 그렇지 않으면 다음에 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] <xref:System.Windows.Navigation.PageFunction%601>으로 이동할 때 매개 변수가 없는 생성자를 사용 하 여 <xref:System.Windows.Navigation.PageFunction%601>를 인스턴스화합니다.
+그러나 간단히 살펴보겠지만 호출된 페이지에서 반환된 데이터를 수집하려고 호출된 페이지를 인스턴스화하고 여기로 이동하는 데는 코드를 사용해야 합니다. 이러한 이유로 <xref:System.Windows.Navigation.PageFunction%601>을 활성 상태로 유지 해야 합니다. 그렇지 않은 경우 다음에 <xref:System.Windows.Navigation.PageFunction%601>으로 이동할 때 WPF는 매개 변수가 없는 생성자를 사용 하 여 <xref:System.Windows.Navigation.PageFunction%601>를 인스턴스화합니다.
 
 하지만 호출된 페이지는 호출 페이지에서 검색될 수 있는 데이터를 반환해야 합니다.
 
@@ -154,7 +154,7 @@ XBAP (XAML 브라우저 응용 프로그램), <xref:System.Windows.Controls.Fram
 [!code-csharp[StructuredNavigationSample#ReturnCODEBEHIND2](~/samples/snippets/csharp/VS_Snippets_Wpf/StructuredNavigationSample/CSharp/CalledPageFunction.xaml.cs#returncodebehind2)]
 [!code-vb[StructuredNavigationSample#ReturnCODEBEHIND2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StructuredNavigationSample/VisualBasic/CalledPageFunction.xaml.vb#returncodebehind2)]
 
-이 예제에서 사용자가 [취소] 단추를 누르면 `null` 값이 호출 페이지로 반환됩니다. [확인] 단추를 누르면 사용자가 제공한 문자열 값이 반환됩니다. <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A>은 호출 페이지로 데이터를 반환 하기 위해 호출 하는 `protected virtual` 메서드입니다. 데이터는 제네릭 <xref:System.Windows.Navigation.ReturnEventArgs%601> 형식의 인스턴스에 패키지 되어야 합니다. 형식 인수는 <xref:System.Windows.Navigation.ReturnEventArgs%601.Result%2A> 반환 하는 값의 형식을 지정 합니다. 이러한 방식으로 특정 형식 인수를 사용 하 여 <xref:System.Windows.Navigation.PageFunction%601>을 선언 하면 <xref:System.Windows.Navigation.PageFunction%601>는 형식 인수에 지정 된 형식의 인스턴스를 반환 합니다. 이 예제에서 형식 인수 및 따라서 반환 값은 <xref:System.String> 형식입니다.
+이 예제에서 사용자가 [취소] 단추를 누르면 `null` 값이 호출 페이지로 반환됩니다. [확인] 단추를 누르면 사용자가 제공한 문자열 값이 반환됩니다. <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A>은 호출 페이지로 데이터를 반환 하기 위해 호출 하는 `protected virtual` 메서드입니다. 데이터는 제네릭 <xref:System.Windows.Navigation.ReturnEventArgs%601> 형식의 인스턴스에 패키지 되어야 합니다. 형식 인수는 <xref:System.Windows.Navigation.ReturnEventArgs%601.Result%2A> 반환 하는 값의 형식을 지정 합니다. 이러한 방식으로 특정 형식 인수를 사용 하 여 <xref:System.Windows.Navigation.PageFunction%601>을 선언 하면 <xref:System.Windows.Navigation.PageFunction%601>는 형식 인수에 지정 된 형식의 인스턴스를 반환 합니다. 이 예제에서 형식 인수 및 따라서 반환 값은 <xref:System.String>형식입니다.
 
 <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A>를 호출 하면 호출 페이지에서 <xref:System.Windows.Navigation.PageFunction%601>의 반환 값을 받는 방법이 필요 합니다. 따라서 <xref:System.Windows.Navigation.PageFunction%601>에서 처리할 페이지를 호출 하는 <xref:System.Windows.Navigation.PageFunction%601.Return> 이벤트를 구현 합니다. <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A>를 호출 하면 <xref:System.Windows.Navigation.PageFunction%601.Return> 발생 하므로 호출 하는 페이지가 <xref:System.Windows.Navigation.PageFunction%601.Return>에 등록 하 여 알림을 받을 수 있습니다.
 

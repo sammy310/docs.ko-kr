@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: 10bd924664a469be26174fadf3892ee56aa33856
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 2c6a8662236b614545e7fb8545b7b60e1b08b6bd
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740644"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559835"
 ---
 # <a name="xaml-syntax-in-detail"></a>XAML 구문 정보
 이 항목에서는 XAML 구문의 요소를 설명 하는 데 사용 되는 용어를 정의 합니다. 이러한 용어는이 설명서의 나머지 부분 전체에서 자주 사용 됩니다. WPF 설명서와 XAML을 사용 하는 다른 프레임 워크 또는 system.xaml 수준에서 XAML 언어 지원에 의해 설정 된 기본 XAML 개념에 대해 자주 사용 됩니다. 이 항목에서는 [XAML 개요 (WPF)](../../../desktop-wpf/fundamentals/xaml.md)항목에서 소개 하는 기본 용어를 확장 합니다.  
@@ -86,7 +86,7 @@ ms.locfileid: "73740644"
  특성 구문은 기존 개체 요소에 특성을 선언 하 여 속성에 대 한 값을 설정 하는 XAML 태그 구문입니다. 특성 이름은 관련 개체 요소를 지 원하는 클래스의 속성에 대 한 CLR 멤버 이름과 일치 해야 합니다. 특성 이름 다음에는 할당 연산자 (=)가 나옵니다. 특성 값은 따옴표로 묶인 문자열 이어야 합니다.  
   
 > [!NOTE]
-> 교대로 반복 되는 따옴표를 사용 하 여 특성 안에 리터럴 따옴표를 추가할 수 있습니다. 예를 들어 큰따옴표를 사용 하 여 큰따옴표 문자를 포함 하는 문자열을 선언할 수 있습니다. 작은따옴표 또는 큰따옴표를 사용 하는 경우에는 일치 하는 쌍을 사용 하 여 특성 값 문자열을 열고 닫아야 합니다. 특정 XAML 구문에 적용 되는 문자 제한을 해결 하는 데 사용할 수 있는 이스케이프 시퀀스 또는 기타 기술도 있습니다. [XML 문자 엔터티 및 XAML을](../../xaml-services/xml-character-entities-and-xaml.md)참조 하세요.  
+> 교대로 반복 되는 따옴표를 사용 하 여 특성 안에 리터럴 따옴표를 추가할 수 있습니다. 예를 들어 큰따옴표를 사용 하 여 큰따옴표 문자를 포함 하는 문자열을 선언할 수 있습니다. 작은따옴표 또는 큰따옴표를 사용 하는 경우에는 일치 하는 쌍을 사용 하 여 특성 값 문자열을 열고 닫아야 합니다. 특정 XAML 구문에 적용 되는 문자 제한을 해결 하는 데 사용할 수 있는 이스케이프 시퀀스 또는 기타 기술도 있습니다. [XML 문자 엔터티 및 XAML을](../../../desktop-wpf/xaml-services/xml-character-entities.md)참조 하세요.  
   
  특성 구문을 통해 설정 하려면 속성이 public 이어야 하며 쓰기 가능 해야 합니다. 지원 형식 시스템의 속성 값은 값 형식 이어야 하며, 관련 된 지원 형식에 액세스할 때 XAML 프로세서가 인스턴스화하거나 참조할 수 있는 참조 형식 이어야 합니다.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "73740644"
   
 1. XAML 프로세서가 중괄호 또는 <xref:System.Windows.Markup.MarkupExtension>에서 파생 되는 개체 요소를 발견 하면 값을 문자열로 처리 하는 대신 참조 된 태그 확장이 먼저 계산 되 고, 태그 확장에서 반환 된 개체가 값으로 사용 됩니다. 대부분의 경우 태그 확장에서 반환 되는 개체는 기존 개체에 대 한 참조 또는 런타임까지 계산을 지연 하는 식이 며 새로 인스턴스화된 개체가 아닙니다.  
   
-2. 속성이 <xref:System.ComponentModel.TypeConverter>특성을 사용 하 여 선언 되거나 해당 속성의 값 형식이 특성을 사용 하는 <xref:System.ComponentModel.TypeConverter>으로 선언 된 경우에는 특성의 문자열 값이 변환 입력으로 형식 변환기에 전송 되 고 변환기는 새 개체를 반환 합니다. 인스턴스.  
+2. 속성이 <xref:System.ComponentModel.TypeConverter>특성을 사용 하 여 선언 되거나 해당 속성의 값 형식이 특성을 사용 하는 <xref:System.ComponentModel.TypeConverter>으로 선언 된 경우에는 특성의 문자열 값이 변환 입력으로 형식 변환기에 전송 되 고 변환기는 새 개체 인스턴스를 반환 합니다.  
   
 3. <xref:System.ComponentModel.TypeConverter>없으면 속성 형식으로 직접 변환 하려고 시도 합니다. 이 최종 수준은 XAML 언어 기본 형식 사이의 파서 네이티브 값에서 직접 변환 하거나, 열거형의 명명 된 상수 이름을 확인 하는 것입니다. 파서는 일치 하는 값에 액세스 합니다.  
   
@@ -128,7 +128,7 @@ ms.locfileid: "73740644"
   
  또는 포함 하는 개체 요소와 관계 없이 연결 된 속성 또는 연결 된 이벤트를 참조할 수 있습니다. (연결 된 속성은 이후의 섹션에서 설명 합니다.)  
   
- 또한 *typeName*을 사용 하 여 기본 네임 스페이스를 통해 액세스할 수 있는 모든 개체에서 이벤트의 이름을 지정할 수 있습니다. 부분적으로 정규화 된 *이벤트* 이름; 이 구문은 자식 요소에서 라우트된 이벤트를 처리 하기 위해 처리기를 사용 하는 라우트된 이벤트에 대 한 처리기를 연결 하는 것을 지원 하지만, 부모 요소의 members 테이블에도 해당 이벤트가 없습니다. 이 구문은 연결 된 이벤트 구문과 유사 하지만 여기에 있는 이벤트는 진정한 연결 된 이벤트가 아닙니다. 대신 정규화 된 이름을 가진 이벤트를 참조 합니다. 자세한 내용은 [라우트된 이벤트 개요](routed-events-overview.md)를 참조 하세요.  
+ 또한 *typeName*을 사용 하 여 기본 네임 스페이스를 통해 액세스할 수 있는 모든 개체에서 이벤트의 이름을 지정할 수 있습니다. 부분적으로 정규화 된 *이벤트* 이름; 이 구문은 자식 요소에서 라우트된 이벤트를 처리 하기 위해 처리기를 사용 하는 라우트된 이벤트에 대 한 처리기를 연결 하는 것을 지원 하지만, 부모 요소의 members 테이블에도 해당 이벤트가 없습니다. 이 구문은 연결 된 이벤트 구문과 유사 하지만 여기에 있는 이벤트는 진정한 연결 된 이벤트가 아닙니다. 대신 정규화 된 이름을 가진 이벤트를 참조 합니다. 자세한 내용은 [라우트된 이벤트 개요](routed-events-overview.md)합니다.  
   
  일부 시나리오에서는 속성 이름이 특성 이름이 아니라 특성의 값으로 제공 되는 경우도 있습니다. 해당 속성 이름에는 *ownerType*형식으로 지정 된 속성과 같은 한정자도 포함 될 수 있습니다. *dependencyPropertyName*. 이 시나리오는 XAML에서 스타일이 나 템플릿을 작성할 때 일반적입니다. 특성 값으로 제공 되는 속성 이름에 대 한 처리 규칙은 서로 다르며, 설정 되는 속성의 형식이 나 특정 WPF 하위 시스템의 동작에 의해 제어 됩니다. 자세한 내용은 스타일 지정 [및 템플릿](../controls/styling-and-templating.md)을 참조 하세요.  
   
@@ -144,7 +144,7 @@ ms.locfileid: "73740644"
   
  [!code-xaml[XAMLOvwSupport#ContextMenu](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/Page1.xaml#contextmenu)]  
   
- 지정 되는 속성 형식이 <xref:System.String>와 같은 기본 값 형식 이거나 이름이 지정 된 열거형 인 경우에는 속성 요소 내의 값을 내부 텍스트로 지정할 수도 있습니다. 이러한 두 가지 사용은 일반적이 지 않습니다. 이러한 각 경우에는 보다 간단한 특성 구문을 사용할 수도 있기 때문입니다. 속성 요소를 문자열로 채우는 한 가지 시나리오는 XAML 콘텐츠 속성이 아니지만 UI 텍스트 표현에 사용 되는 속성에 대 한 것 이며, 줄 바꿈과 같은 특정 공백 요소가 해당 UI 텍스트에 표시 되어야 합니다. 특성 구문은 줄 바꿈을 유지할 수 없지만, 유효 공백 유지가 활성화 되어 있으면 속성 요소 구문이 가능 합니다. 자세한 내용은 [XAML의 공백 처리](../../xaml-services/whitespace-processing-in-xaml.md)를 참조 하세요. 또 다른 시나리오는 [X:Uid 지시문](../../xaml-services/x-uid-directive.md) 을 property 요소에 적용 하 여의 값을 WPF 출력 BAML 또는 다른 기술에서 지역화 해야 하는 값으로 표시 하는 것입니다.  
+ 지정 되는 속성 형식이 <xref:System.String>와 같은 기본 값 형식 이거나 이름이 지정 된 열거형 인 경우에는 속성 요소 내의 값을 내부 텍스트로 지정할 수도 있습니다. 이러한 두 가지 사용은 일반적이 지 않습니다. 이러한 각 경우에는 보다 간단한 특성 구문을 사용할 수도 있기 때문입니다. 속성 요소를 문자열로 채우는 한 가지 시나리오는 XAML 콘텐츠 속성이 아니지만 UI 텍스트 표현에 사용 되는 속성에 대 한 것 이며, 줄 바꿈과 같은 특정 공백 요소가 해당 UI 텍스트에 표시 되어야 합니다. 특성 구문은 줄 바꿈을 유지할 수 없지만, 유효 공백 유지가 활성화 되어 있으면 속성 요소 구문이 가능 합니다. 자세한 내용은 [XAML의 공백 처리](../../../desktop-wpf/xaml-services/white-space-processing.md)를 참조 하세요. 또 다른 시나리오는 [X:Uid 지시문](../../../desktop-wpf/xaml-services/xuid-directive.md) 을 property 요소에 적용 하 여의 값을 WPF 출력 BAML 또는 다른 기술에서 지역화 해야 하는 값으로 표시 하는 것입니다.  
   
  속성 요소는 WPF 논리 트리에 표시 되지 않습니다. 속성 요소는 속성을 설정 하기 위한 특정 구문 이지만 인스턴스 또는 개체를 지 원하는 요소는 아닙니다. 논리적 트리 개념에 대 한 자세한 내용은 [WPF의 트리](trees-in-wpf.md)를 참조 하세요.  
   
@@ -158,7 +158,7 @@ ms.locfileid: "73740644"
   
 - 형식이 <xref:System.Collections.IDictionary>를 구현 합니다.  
   
-- 형식은 <xref:System.Array>에서 파생 됩니다. XAML의 배열에 대 한 자세한 내용은 [X:Array 태그 확장](../../xaml-services/x-array-markup-extension.md)을 참조 하세요.  
+- 형식은 <xref:System.Array>에서 파생 됩니다. XAML의 배열에 대 한 자세한 내용은 [X:Array 태그 확장](../../../desktop-wpf/xaml-services/xarray-markup-extension.md)을 참조 하세요.  
   
  속성 형식이 컬렉션인 경우에는 유추 된 컬렉션 형식을 개체 요소로 태그에 지정할 필요가 없습니다. 대신 컬렉션의 항목으로 사용 되는 요소는 property 요소의 자식 요소로 하나 이상의 자식 요소로 지정 됩니다. 이러한 각 항목은 로드 하는 동안 개체로 계산 된 후 암시적 컬렉션의 `Add` 메서드를 호출 하 여 컬렉션에 추가 됩니다. 예를 들어 <xref:System.Windows.Style>의 <xref:System.Windows.Style.Triggers%2A> 속성은 <xref:System.Collections.IList>을 구현 하는 특수화 된 컬렉션 형식 <xref:System.Windows.TriggerCollection>를 사용 합니다. 태그에서 <xref:System.Windows.TriggerCollection> object 요소를 인스턴스화할 필요가 없습니다. 대신 `Style.Triggers` 속성 요소 내에서 하나 이상의 <xref:System.Windows.Trigger> 항목을 요소로 지정 합니다. 여기서 <xref:System.Windows.Trigger> (또는 파생 클래스)는 강력한 형식의 및 암시적 <xref:System.Windows.TriggerCollection>에 대 한 항목 형식으로 예상 되는 형식입니다.  
   
@@ -231,7 +231,7 @@ ms.locfileid: "73740644"
   
  [!code-xaml[XAMLOvwSupport#SyntaxContent](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page5.xaml#syntaxcontent)]  
   
- <xref:System.Windows.Controls.Panel.Children%2A>에 대 한 property 요소와 <xref:System.Windows.Controls.UIElementCollection> 요소는 태그에 필요 하지 않습니다. 이는 XAML의 디자인 기능으로, [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]을 정의 하는 재귀적으로 포함 된 요소가 중간 속성 요소 태그 없이 직계 부모-자식 요소 관계를 가진 중첩 된 요소의 트리로 보다 직관적으로 표현 됩니다. 컬렉션 개체입니다. 실제로 <xref:System.Windows.Controls.UIElementCollection>은 태그에서 의도적으로 개체 요소로 명시적으로 지정할 수 없습니다. 유일 하 게 사용 되는 것은 암시적 컬렉션 이므로 <xref:System.Windows.Controls.UIElementCollection>는 매개 변수가 없는 public 생성자를 노출 하지 않으므로 개체 요소로 인스턴스화할 수 없습니다.  
+ <xref:System.Windows.Controls.Panel.Children%2A>에 대 한 property 요소와 <xref:System.Windows.Controls.UIElementCollection> 요소는 태그에 필요 하지 않습니다. 이는 XAML의 디자인 기능으로, [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]을 정의 하는 재귀적으로 포함 된 요소가 중간 속성 요소 태그 또는 컬렉션 개체 없이 직계 부모-자식 요소 관계가 있는 중첩 된 요소의 트리로 보다 직관적으로 표현 됩니다. 실제로 <xref:System.Windows.Controls.UIElementCollection>은 태그에서 의도적으로 개체 요소로 명시적으로 지정할 수 없습니다. 유일 하 게 사용 되는 것은 암시적 컬렉션 이므로 <xref:System.Windows.Controls.UIElementCollection>는 매개 변수가 없는 public 생성자를 노출 하지 않으므로 개체 요소로 인스턴스화할 수 없습니다.  
   
 ### <a name="mixing-property-elements-and-object-elements-in-an-object-with-a-content-property"></a>콘텐츠 속성을 사용 하 여 개체에서 속성 요소 및 개체 요소 혼합  
  Xaml 사양에서는 XAML 프로세서가 개체 요소 내에서 XAML 콘텐츠 속성을 채우는 데 사용 되는 개체 요소를 연속 해야 하며 혼합할 수 없도록 선언 합니다. 속성 요소와 콘텐츠를 혼합 하는 이러한 제한은 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] XAML 프로세서에 의해 적용 됩니다.  
@@ -242,7 +242,7 @@ ms.locfileid: "73740644"
   
 <a name="xaml_namespaces"></a>   
 ## <a name="xaml-namespaces"></a>XAML 네임스페이스  
- 이전 구문 예제에서 기본 XAML 네임 스페이스 이외의 XAML 네임 스페이스를 지정 하지 않았습니다. 일반적인 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램에서 기본 XAML 네임 스페이스는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 네임 스페이스로 지정 됩니다. 기본 XAML 네임 스페이스 외에도 여전히 유사한 구문을 사용 하는 XAML 네임 스페이스를 지정할 수 있습니다. 그러나 기본 XAML 네임 스페이스 내에서 액세스할 수 없는 클래스 이름이 지정 된 위치에 있는 경우 해당 클래스 이름 앞에는 해당 CLR 네임 스페이스에 매핑된 XAML 네임 스페이스의 접두사가와 야 합니다. 예를 들어 `<custom:Example/>`은 `Example` 클래스의 인스턴스를 인스턴스화하는 개체 요소 구문입니다 .이 클래스는 해당 클래스를 포함 하는 CLR 네임 스페이스 (및 지원 형식을 포함 하는 외부 어셈블리 정보)가 이전에 `custom` 매핑 되었습니다. 접두사.  
+ 이전 구문 예제에서 기본 XAML 네임 스페이스 이외의 XAML 네임 스페이스를 지정 하지 않았습니다. 일반적인 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램에서 기본 XAML 네임 스페이스는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 네임 스페이스로 지정 됩니다. 기본 XAML 네임 스페이스 외에도 여전히 유사한 구문을 사용 하는 XAML 네임 스페이스를 지정할 수 있습니다. 그러나 기본 XAML 네임 스페이스 내에서 액세스할 수 없는 클래스 이름이 지정 된 위치에 있는 경우 해당 클래스 이름 앞에는 해당 CLR 네임 스페이스에 매핑된 XAML 네임 스페이스의 접두사가와 야 합니다. 예를 들어 `<custom:Example/>`은 `Example` 클래스의 인스턴스를 인스턴스화하는 개체 요소 구문입니다 .이 클래스는 해당 클래스를 포함 하는 CLR 네임 스페이스와 지원 형식이 포함 된 외부 어셈블리 정보는 이전에 `custom` 접두사에 매핑 되었습니다.  
   
  XAML 네임 스페이스에 대 한 자세한 내용은 [WPF xaml을 위한 Xaml 네임 스페이스 및 네임 스페이스 매핑](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)을 참조 하세요.  
   
@@ -254,9 +254,9 @@ ms.locfileid: "73740644"
   
  `<Button Style="{StaticResource MyStyle}">My button</Button>`  
   
- 여기서 `StaticResource`는 태그 확장 구현을 제공 하는 <xref:System.Windows.StaticResourceExtension> 클래스를 식별 합니다. 다음 문자열 `MyStyle`는 기본이 아닌 <xref:System.Windows.StaticResourceExtension> 생성자의 입력으로 사용 됩니다. 여기서 확장 문자열에서 가져온 매개 변수는 요청 된 <xref:System.Windows.ResourceKey>를 선언 합니다. `MyStyle`는 리소스로 정의 된 <xref:System.Windows.Style>의 [x:Key](../../xaml-services/x-key-directive.md) 값 이어야 합니다. [StaticResource 태그 확장](staticresource-markup-extension.md) 사용은 리소스가 로드 시 정적 리소스 조회 논리를 통해 <xref:System.Windows.Style> 속성 값을 제공 하는 데 사용 되도록 요청 합니다.  
+ 여기서 `StaticResource`는 태그 확장 구현을 제공 하는 <xref:System.Windows.StaticResourceExtension> 클래스를 식별 합니다. 다음 문자열 `MyStyle`는 기본이 아닌 <xref:System.Windows.StaticResourceExtension> 생성자의 입력으로 사용 됩니다. 여기서 확장 문자열에서 가져온 매개 변수는 요청 된 <xref:System.Windows.ResourceKey>를 선언 합니다. `MyStyle`는 리소스로 정의 된 <xref:System.Windows.Style>의 [x:Key](../../../desktop-wpf/xaml-services/xkey-directive.md) 값 이어야 합니다. [StaticResource 태그 확장](staticresource-markup-extension.md) 사용은 리소스가 로드 시 정적 리소스 조회 논리를 통해 <xref:System.Windows.Style> 속성 값을 제공 하는 데 사용 되도록 요청 합니다.  
   
- 태그 확장에 대한 자세한 내용은 [XAML 태그 확장 및 WPF XAML](markup-extensions-and-wpf-xaml.md)을 참조하세요. 일반 .NET XAML 구현에서 사용 되는 태그 확장 및 기타 XAML 프로그래밍 기능에 대 한 참조는 [Xaml 네임 스페이스 (x:)를 참조 하세요. 언어 기능](../../xaml-services/xaml-namespace-x-language-features.md). WPF 관련 태그 확장은 [WPF XAML 확장](wpf-xaml-extensions.md)을 참조 하세요.  
+ 태그 확장에 대한 자세한 내용은 [XAML 태그 확장 및 WPF XAML](markup-extensions-and-wpf-xaml.md)을 참조하세요. 일반 .NET XAML 구현에서 사용 되는 태그 확장 및 기타 XAML 프로그래밍 기능에 대 한 참조는 [Xaml 네임 스페이스 (x:)를 참조 하세요. 언어 기능](../../../desktop-wpf/xaml-services/namespace-language-features.md). WPF 관련 태그 확장은 [WPF XAML 확장](wpf-xaml-extensions.md)을 참조 하세요.  
   
 <a name="attached_properties"></a>   
 ## <a name="attached-properties"></a>연결된 속성  
@@ -289,7 +289,7 @@ ms.locfileid: "73740644"
  다음 섹션에서는 xaml 프로세서에서 기술적으로 지원 되지만 xaml 소스를 포함 하는 응용 프로그램을 개발할 때 사용자가 읽을 수 있는 XAML 파일을 방해 하는 자세한 정보 표시 또는 기타 미적 문제를 생성 하는 XAML 사용에 대해 설명 합니다.  
   
 ### <a name="optional-property-element-usages"></a>선택적 속성 요소 사용  
- 선택적 속성 요소 사용에는 XAML 프로세서에서 암시적으로 고려 하는 요소 콘텐츠 속성을 명시적으로 작성 하는 작업이 포함 됩니다. 예를 들어 <xref:System.Windows.Controls.Menu>의 콘텐츠를 선언 하는 경우 <xref:System.Windows.Controls.Menu>의 <xref:System.Windows.Controls.ItemsControl.Items%2A> 컬렉션을 `<Menu.Items>` 속성 요소 태그로 명시적으로 선언 하 고 각 <xref:System.Windows.Controls.MenuItem>를 `<Menu.Items>`에 추가할 수 있습니다. 는 암시적 XAML 프로세서 동작을 사용 하는 대신 <xref:System.Windows.Controls.Menu>의 모든 자식 요소가 <xref:System.Windows.Controls.MenuItem> 여야 하 고 <xref:System.Windows.Controls.ItemsControl.Items%2A> 컬렉션에 배치 됩니다. 경우에 따라 선택적 사용을 사용 하면 태그에 표시 된 개체 구조를 시각적으로 명확 하 게 파악할 수 있습니다. 또는 명시적 속성 요소를 사용 하는 경우에는 기술적으로 작동 하지만 시각적으로 혼동 되는 태그를 방지할 수 있습니다 (예: 특성 값 내 중첩 된 태그 확장).  
+ 선택적 속성 요소 사용에는 XAML 프로세서에서 암시적으로 고려 하는 요소 콘텐츠 속성을 명시적으로 작성 하는 작업이 포함 됩니다. 예를 들어 <xref:System.Windows.Controls.Menu>의 내용을 선언 하는 경우 `<Menu.Items>` 속성 요소 태그로 <xref:System.Windows.Controls.Menu>의 <xref:System.Windows.Controls.ItemsControl.Items%2A> 컬렉션을 명시적으로 선언 하 고 <xref:System.Windows.Controls.MenuItem> 내의 모든 자식 요소가 `<Menu.Items>`여야 하 고 <xref:System.Windows.Controls.Menu> 컬렉션에 배치 되어야 하는 암시적 XAML 프로세서 동작을 사용 하지 않고 <xref:System.Windows.Controls.MenuItem> 내에 각 <xref:System.Windows.Controls.ItemsControl.Items%2A>을 배치할 수 있습니다. 경우에 따라 선택적 사용을 사용 하면 태그에 표시 된 개체 구조를 시각적으로 명확 하 게 파악할 수 있습니다. 또는 명시적 속성 요소를 사용 하는 경우에는 기술적으로 작동 하지만 시각적으로 혼동 되는 태그를 방지할 수 있습니다 (예: 특성 값 내 중첩 된 태그 확장).  
   
 ### <a name="full-typenamemembername-qualified-attributes"></a>전체 typeName. memberName 정규화 된 특성  
  형식 *이름*입니다. 특성에 대 한 *memberName* 폼은 실제로 라우트된 이벤트 사례 보다 훨씬 더 일반적으로 작동 합니다. 그러나 형식이 불필요 하 고 태그 스타일 및 가독성을 위해 필요한 경우에만이를 방지 해야 하는 경우도 있습니다. 다음 예제에서 <xref:System.Windows.Controls.Control.Background%2A> 특성에 대 한 세 개의 참조는 모두 동일 합니다.  
@@ -316,7 +316,7 @@ ms.locfileid: "73740644"
 ## <a name="see-also"></a>참조
 
 - [XAML 개요(WPF)](../../../desktop-wpf/fundamentals/xaml.md)
-- [XAML 네임스페이스(x:) 언어 기능](../../xaml-services/xaml-namespace-x-language-features.md)
+- [XAML 네임스페이스(x:) 언어 기능](../../../desktop-wpf/xaml-services/namespace-language-features.md)
 - [WPF XAML 확장](wpf-xaml-extensions.md)
 - [종속성 속성 개요](dependency-properties-overview.md)
 - [TypeConverter 및 XAML](typeconverters-and-xaml.md)

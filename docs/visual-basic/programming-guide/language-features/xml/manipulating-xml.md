@@ -6,15 +6,15 @@ helpviewer_keywords:
 - Visual Basic code, XML
 - XML [Visual Basic], manipulating
 ms.assetid: da32cffb-198d-41b1-9af3-260fe32e3b7d
-ms.openlocfilehash: 2565f43c1014bf0fa9fab1618fedfd1bd6bdb7ca
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: bb5aed5099d81f8c8898cd61523b90a43f27db78
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74330438"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636161"
 ---
 # <a name="manipulating-xml-in-visual-basic"></a>Visual Basic에서 XML 조작
-*Xml 리터럴을* 사용 하 여 문자열, 파일 또는 스트림과 같은 외부 원본에서 xml을 로드할 수 있습니다. 그런 다음 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]를 사용 하 여 XML을 조작 하 고 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]를 사용 하 여 XML을 쿼리할 수 있습니다.  
+*Xml 리터럴을* 사용 하 여 문자열, 파일 또는 스트림과 같은 외부 원본에서 xml을 로드할 수 있습니다. 그런 다음 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]를 사용 하 여 XML을 조작 하 고 LINQ (통합 언어 쿼리)를 사용 하 여 XML을 쿼리할 수 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [방법: 파일, 문자열 또는 스트림에서 XML 로드](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md)  
@@ -42,7 +42,7 @@ ms.locfileid: "74330438"
  [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)  
  Visual Basic에서 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]를 사용 하는 방법을 설명 하는 섹션에 대 한 링크를 제공 합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)
 - [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)

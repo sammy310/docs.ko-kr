@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XAML [WPF], custom classes
 - classes [WPF], custom classes in XAML
 ms.assetid: e7313137-581e-4a64-8453-d44e15a6164a
-ms.openlocfilehash: b573137b8d96565776d4b31f7ae8e5cc0b203a21
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: aa2dd7a5c30894f85ed1d4aae0228b76ece3c005
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459463"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559874"
 ---
 # <a name="xaml-and-custom-classes-for-wpf"></a>WPF에 대한 XAML 및 사용자 지정 클래스
 CLR (공용 언어 런타임) 프레임 워크에서 구현 된 XAML은 CLR (공용 언어 런타임) 언어로 사용자 지정 클래스 또는 구조체를 정의 하 고 XAML 태그를 사용 하 여 해당 클래스에 액세스할 수 있는 기능을 지원 합니다. 일반적으로 사용자 지정 형식을 XAML 네임스페이스 접두사에 매핑하여 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 정의 형식과 사용자 지정 형식의 혼합을 동일한 태그 파일에서 함께 사용할 수 있습니다. 이 항목에서는 사용자 지정 클래스를 XAML 요소로 사용 가능하기 위해 만족해야 하는 요구 사항을 설명합니다.  
@@ -57,7 +57,7 @@ CLR (공용 언어 런타임) 프레임 워크에서 구현 된 XAML은 CLR (공
  특성 구문이 허용 되지만 개체 요소를 포함 하는 속성 요소 구문이 XAML을 통해 허용 되지 않는 속성의 예로는 <xref:System.Windows.Input.Cursor> 형식을 사용 하는 다양 한 속성이 있습니다. <xref:System.Windows.Input.Cursor> 클래스는 전용 형식 변환기 <xref:System.Windows.Input.CursorConverter>있지만 매개 변수가 없는 생성자를 노출 하지 않으므로 실제 <xref:System.Windows.Input.Cursor> 형식이 참조 형식인 경우에도 <xref:System.Windows.FrameworkElement.Cursor%2A> 속성은 특성 구문을 통해서만 설정할 수 있습니다.  
   
 ### <a name="per-property-type-converters"></a>속성별 형식 변환기  
- 또는 속성 자체가 속성 수준에서 형식 변환기를 선언할 수도 있습니다. 이렇게 하면 특성의 들어오는 문자열 값을 해당 형식에 따라 <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A> 작업에 대 한 입력으로 처리 하 여 속성 형식의 개체를 인라인으로 인스턴스화하는 "미니 언어"를 사용할 수 있습니다. 일반적으로 이 작업은 XAML에서 속성을 설정할 수 있는 유일한 방법이 아니라 편리한 접근자를 제공하기 위해 수행합니다. 그러나 매개 변수가 없는 생성자 또는 특성 사용 형식 변환기를 제공 하지 않는 기존 CLR 형식을 사용 하려는 특성에 대해 형식 변환기를 사용할 수도 있습니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] API의 예제는 <xref:System.Globalization.CultureInfo> 유형을 사용 하는 특정 속성입니다. 이 경우 이전 버전의 프레임 워크에서 사용 된 호환성 및 마이그레이션 시나리오를 더 효과적으로 해결 하기 위해 기존 Microsoft .NET 프레임 워크 <xref:System.Globalization.CultureInfo> 형식을 사용 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 하지만 <xref:System.Globalization.CultureInfo> 형식이 필요한 생성자를 지원 하지 않았습니다. XAML 속성 값으로 직접 사용할 수 있는 형식 수준 형식 변환입니다.  
+ 또는 속성 자체가 속성 수준에서 형식 변환기를 선언할 수도 있습니다. 이렇게 하면 특성의 들어오는 문자열 값을 해당 형식에 따라 <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A> 작업에 대 한 입력으로 처리 하 여 속성 형식의 개체를 인라인으로 인스턴스화하는 "미니 언어"를 사용할 수 있습니다. 일반적으로 이 작업은 XAML에서 속성을 설정할 수 있는 유일한 방법이 아니라 편리한 접근자를 제공하기 위해 수행합니다. 그러나 매개 변수가 없는 생성자 또는 특성 사용 형식 변환기를 제공 하지 않는 기존 CLR 형식을 사용 하려는 특성에 대해 형식 변환기를 사용할 수도 있습니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] API의 예제는 <xref:System.Globalization.CultureInfo> 유형을 사용 하는 특정 속성입니다. 이 경우 이전 버전의 프레임 워크에서 사용 된 호환성 및 마이그레이션 시나리오를 더 효과적으로 해결 하기 위해 기존 Microsoft .NET 프레임 워크 <xref:System.Globalization.CultureInfo> 형식을 사용 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 하지만 <xref:System.Globalization.CultureInfo> 형식은 필요한 생성자 또는 형식 수준 형식 변환을 XAML 속성 값으로 직접 사용할 수 있도록 지원 하지 않았습니다.  
   
  따라서 컨트롤 작성자는 XAML을 사용하는 속성을 노출할 때마다 해당 속성에 종속성 속성을 지원하는 방법을 고려해야 합니다. 이는 <xref:System.Windows.DependencyProperty>를 사용 하 여 성능을 향상 시킬 수 있으므로 XAML 프로세서의 기존 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 구현을 사용 하는 경우에 특히 그렇습니다. 종속성 속성은 XAML 액세스 가능 속성이 제공할 것으로 예상되는 속성 시스템의 기능을 노출합니다. 이러한 기능에는 애니메이션, 데이터 바인딩 및 스타일 지원 등이 포함됩니다. 자세한 내용은 [사용자 지정 종속성 속성](custom-dependency-properties.md) 및 [XAML 로드 및 종속성 속성](xaml-loading-and-dependency-properties.md)을 참조하세요.  
   
@@ -77,15 +77,15 @@ CLR (공용 언어 런타임) 프레임 워크에서 구현 된 XAML은 CLR (공
   
 - 컬렉션 개체인 개체를 개체 요소 구문에 지정할 필요가 없습니다. 컬렉션 형식을 사용하는 XAML에 속성을 지정할 때마다 컬렉션 형식이 항상 암시적으로 존재합니다.  
   
-- 태그에서 컬렉션 속성의 자식 요소는 컬렉션의 멤버로 처리됩니다. 일반적으로 컬렉션 멤버에 대한 코드 액세스는 `Add`와 같은 목록/사전 메서드를 통해 또는 인덱서를 통해 수행됩니다. 하지만 XAML 구문은 메서드나 인덱서를 지원하지 않습니다(예외: XAML 2009는 메서드를 지원할 수 있지만, XAML 2009를 사용하여 가능한 WPF 사용을 제한합니다. [XAML 2009 언어 기능](../../xaml-services/xaml-2009-language-features.md) 참조). 컬렉션은 요소 트리를 구성하는 데 있어 공통된 요구 사항이므로 선언적 XAML에서 이러한 컬렉션을 채우는 데 사용할 몇 가지 방법이 필요합니다. 따라서 컬렉션 속성의 자식 요소는 컬렉션 속성 형식 값인 컬렉션에 추가하여 처리됩니다.  
+- 태그에서 컬렉션 속성의 자식 요소는 컬렉션의 멤버로 처리됩니다. 일반적으로 컬렉션 멤버에 대한 코드 액세스는 `Add`와 같은 목록/사전 메서드를 통해 또는 인덱서를 통해 수행됩니다. 하지만 XAML 구문은 메서드나 인덱서를 지원하지 않습니다(예외: XAML 2009는 메서드를 지원할 수 있지만, XAML 2009를 사용하여 가능한 WPF 사용을 제한합니다. [XAML 2009 언어 기능](../../../desktop-wpf/xaml-services/xaml-2009-language-features.md) 참조). 컬렉션은 요소 트리를 구성하는 데 있어 공통된 요구 사항이므로 선언적 XAML에서 이러한 컬렉션을 채우는 데 사용할 몇 가지 방법이 필요합니다. 따라서 컬렉션 속성의 자식 요소는 컬렉션 속성 형식 값인 컬렉션에 추가하여 처리됩니다.  
   
  .NET Framework XAML 서비스 구현과 WPF XAML 프로세서에서 컬렉션 속성을 구성하는 사항에 대한 다음 정의를 사용합니다. 속성의 형식은 다음 중 하나를 구현해야 합니다.  
   
-- <xref:System.Collections.IList>를 구현 합니다.  
+- 구현 <xref:System.Collections.IList>합니다.  
   
 - <xref:System.Collections.IDictionary> 또는 해당 하는 제네릭 (<xref:System.Collections.Generic.IDictionary%602>)을 구현 합니다.  
   
-- <xref:System.Array>에서 파생 됩니다. XAML의 배열에 대 한 자세한 내용은 [X:Array 태그 확장](../../xaml-services/x-array-markup-extension.md)을 참조 하세요.  
+- <xref:System.Array>에서 파생 됩니다. XAML의 배열에 대 한 자세한 내용은 [X:Array 태그 확장](../../../desktop-wpf/xaml-services/xarray-markup-extension.md)을 참조 하세요.  
   
 - <xref:System.Windows.Markup.IAddChild> ([!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에 의해 정의 된 인터페이스)를 구현 합니다.  
   
@@ -104,7 +104,7 @@ CLR (공용 언어 런타임) 프레임 워크에서 구현 된 XAML은 CLR (공
   
  컬렉션 속성을 XAML 콘텐츠 속성으로 지정할 수 있습니다. 이 경우 중간의 컬렉션 개체 요소나 속성 요소 태그 없이도 개체 요소가 하나 이상의 자식 요소를 가질 수 있는 상황에서 해당 속성이 사용됩니다. 그러면 이러한 요소가 XAML 콘텐츠 속성에 대한 값으로 처리되어 지원 컬렉션 인스턴스에 추가됩니다.  
   
- 기존 XAML 콘텐츠 속성 중 일부에서는 `Object`의 속성 형식을 사용합니다. 이렇게 하면 단일 참조 개체 값을 사용 하는 것 외에도 <xref:System.String> 같은 기본 값을 사용할 수 있는 XAML 콘텐츠 속성을 사용할 수 있습니다. 이 모델을 따르는 경우 사용자의 형식을 통해 형식을 결정하고 가능한 형식을 처리합니다. <xref:System.Object> 콘텐츠 형식에 대 한 일반적인 이유는 개체 콘텐츠를 문자열 (기본 프레젠테이션 처리 수신)로 추가 하는 간단한 방법 또는 기본이 아닌 프레젠테이션을 지정 하는 개체 콘텐츠를 추가 하는 고급 방법을 모두 지 원하는 것입니다. 추가 데이터입니다.  
+ 기존 XAML 콘텐츠 속성 중 일부에서는 `Object`의 속성 형식을 사용합니다. 이렇게 하면 단일 참조 개체 값을 사용 하는 것 외에도 <xref:System.String> 같은 기본 값을 사용할 수 있는 XAML 콘텐츠 속성을 사용할 수 있습니다. 이 모델을 따르는 경우 사용자의 형식을 통해 형식을 결정하고 가능한 형식을 처리합니다. <xref:System.Object> 콘텐츠 형식에 대 한 일반적인 이유는 개체 콘텐츠를 문자열 (기본 프레젠테이션 처리 수신)로 추가 하는 간단한 방법 또는 기본이 아닌 프레젠테이션이나 추가 데이터를 지정 하는 개체 콘텐츠를 추가 하는 고급 방법을 모두 지 원하는 것입니다.  
   
 <a name="Serializing"></a>   
 ## <a name="serializing-xaml"></a>XAML Serialize  
