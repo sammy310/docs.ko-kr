@@ -12,12 +12,12 @@ helpviewer_keywords:
 - graphics features [WPF]
 - transition effects [WPF]
 ms.assetid: 1817d9dc-3d6c-46cb-afc8-63b0bae35e37
-ms.openlocfilehash: 150b742c2195c07abf2b2823871627b0ba827580
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: f9d27ce50376c3a494a546a23cd5d7409b4c475a
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72919983"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636629"
 ---
 # <a name="graphics-and-multimedia"></a>그래픽 및 멀티미디어
 
@@ -59,11 +59,11 @@ WPF는 고품질의 2차원 그래픽을 지원합니다. 기능으로는 브러
 
 ### <a name="2-d-shapes"></a>2차원 도형
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]는 다음 그림에 표시 된 사각형 및 타원과 같이 일반적으로 사용 되는 벡터 그리기 2 차원 도형 라이브러리를 제공 합니다.
+WPF는 다음 그림에 표시 된 사각형 및 타원과 같이 일반적으로 사용 되는 벡터 그리기 2 차원 도형 라이브러리를 제공 합니다.
 
 ![타원과 사각형을 보여 주는 다이어그램](./media/index/two-deminsional-shapes-ellipses-rectangles.png)
 
-이러한 내장 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 도형은 단순히 도형이 아닙니다. 키보드 및 마우스 입력을 포함하는 가장 일반적인 컨트롤에서 기대하는 많은 기능을 구현하는 프로그래밍 가능 요소입니다. 다음 예제에서는 <xref:System.Windows.Shapes.Ellipse> 요소를 클릭 하 여 발생 하는 <xref:System.Windows.UIElement.MouseUp> 이벤트를 처리 하는 방법을 보여 줍니다.
+이러한 내장 WPF 셰이프는 모양이 아니라 키보드 및 마우스 입력을 포함 하는 대부분의 일반적인 컨트롤에서 제공 하는 다양 한 기능을 구현 하는 프로그래밍 가능한 요소입니다. 다음 예제에서는 <xref:System.Windows.Shapes.Ellipse> 요소를 클릭 하 여 발생 하는 <xref:System.Windows.UIElement.MouseUp> 이벤트를 처리 하는 방법을 보여 줍니다.
 
 ```xaml
 <Window
@@ -101,7 +101,7 @@ End Class
 
 ### <a name="2-d-geometries"></a>2차원 기하 도형
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]에서 제공 하는 2 차원 셰이프가 충분 하지 않을 경우 기 하 도형 및 경로에 대 한 지원을 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 사용 하 여 직접 만들 수 있습니다. 다음 그림에서는 기하 도형을 그리기 브러시로 사용하여 도형을 만들고 다른 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 요소를 클리핑하는 방법을 보여 줍니다.
+WPF에서 제공 하는 2 차원 도형에 충분 하지 않은 경우 기 하 도형 및 경로에 대 한 WPF 지원을 사용 하 여 직접 만들 수 있습니다. 다음 그림에서는 기 하 도형을 사용 하 여 도형을 만들고 드로잉 브러시로 만들고 다른 WPF 요소를 자르는 방법을 보여 줍니다.
 
 ![기 하 도형을 사용 하 여 도형을 만드는 방법을 보여 주는 스크린샷](./media/index/use-geometries-create-shapes.png)
 
@@ -109,7 +109,7 @@ End Class
 
 ### <a name="2-d-effects"></a>2차원 효과
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]는 다양 한 효과를 만드는 데 사용할 수 있는 2 차원 클래스 라이브러리를 제공 합니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]의 2 차원 렌더링 기능은 그라데이션, 비트맵, 그림 및 비디오를 포함 하는 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 요소를 그리는 기능을 제공 합니다. 그리고 회전, 크기 조정 및 기울이기를 사용 하 여 조작할 수 있습니다. 다음 그림에서는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 브러시를 사용하여 획득할 수 있는 많은 효과의 예를 보여 줍니다.
+WPF는 다양 한 효과를 만드는 데 사용할 수 있는 2 차원 클래스 라이브러리를 제공 합니다. WPF의 2 차원 렌더링 기능은 그라데이션, 비트맵, 그림 및 비디오를 포함 하는 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 요소를 그리는 기능을 제공 합니다. 그리고 회전, 크기 조정 및 기울이기를 사용 하 여 조작할 수 있습니다. 다음 그림에서는 WPF 브러시를 사용 하 여 얻을 수 있는 많은 효과의 예를 보여 줍니다.
 
 ![여러 WPF 브러시 및 그리기 요소를 보여 주는 그림입니다.](./media/index/brushes-paint-elements.png)
 
@@ -119,7 +119,7 @@ End Class
 
 ## <a name="3-d-rendering"></a>3차원 렌더링
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]는 더 흥미로운 레이아웃, [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]및 데이터 시각화를 만들 수 있도록 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]에서 2 차원 그래픽 지원과 통합 되는 3 차원 렌더링 기능 집합을 제공 합니다. 스펙트럼의 한쪽 끝에서 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]를 사용 하면 다음 그림에서 설명 하는 3 차원 모양의 표면에 2 차원 이미지를 렌더링할 수 있습니다.
+WPF는 더 흥미로운 레이아웃, [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]및 데이터 시각화를 만들 수 있도록 WPF에서 2 차원 그래픽 지원과 통합 되는 3 차원 렌더링 기능 집합을 제공 합니다. 스펙트럼의 한쪽 끝에서 WPF를 사용 하면 다음 그림에서 설명 하는 3 차원 모양의 표면에 2 차원 이미지를 렌더링할 수 있습니다.
 
 ![질감이 다른 3 차원 도형을 보여 주는 샘플의 스크린샷](./media/index/visual-three-dimensional-shape.png)
 
@@ -129,7 +129,7 @@ End Class
 
 ## <a name="animation"></a>애니메이션
 
-애니메이션으로 컨트롤 및 요소가 커지거나, 흔들리거나, 회전하거나, 사라지도록 하여 흥미로운 페이지 전환 등을 만들 수 있습니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]에서는 대부분의 속성에 애니메이션 효과를 줄 수 있을 뿐 아니라 대부분의 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 개체에도 애니메이션 효과를 줄 수 있으므로 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]를 사용하여 만든 사용자 지정 개체에 애니메이션 효과를 줄 수도 있습니다.
+애니메이션으로 컨트롤 및 요소가 커지거나, 흔들리거나, 회전하거나, 사라지도록 하여 흥미로운 페이지 전환 등을 만들 수 있습니다. WPF를 사용 하면 대부분의 속성에 애니메이션 효과를 주기 때문에 대부분의 WPF 개체에 애니메이션 효과를 적용할 수 있을 뿐만 아니라 WPF를 사용 하 여 사용자 지정 개체에 애니메이션 효과를 적용할 수도 있습니다.
 
 ![애니메이션 큐브의 스크린샷](./media/index/animate-custom-objects.png)
 
@@ -137,13 +137,13 @@ End Class
 
 <a name="media"></a>
 
-## <a name="media"></a>미디어
+## <a name="media"></a>Media
 
 이미지, 비디오 및 오디오는 미디어를 통해 정보 및 사용자 환경을 전달하는 방법입니다.
 
 ### <a name="images"></a>이미지
 
-아이콘, 배경 및 애니메이션 일부를 포함하는 이미지는 대부분의 애플리케이션에서 핵심적인 부분입니다. 이미지를 자주 사용해야 하므로 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]는 여러 가지 방법으로 이미지로 작업하는 기능을 제공합니다. 다음 그림에서는 해당 방법 중 하나만 보여 줍니다.
+아이콘, 배경 및 애니메이션 일부를 포함하는 이미지는 대부분의 애플리케이션에서 핵심적인 부분입니다. 이미지를 사용 해야 하는 경우가 많으므로 WPF는 다양 한 방법으로 사용할 수 있는 기능을 제공 합니다. 다음 그림에서는 해당 방법 중 하나만 보여 줍니다.
 
 ![스타일 지정 샘플 스크린샷](../controls/./media/stylingintro-eventtriggers.png "StylingIntro_EventTriggers")
 
@@ -151,7 +151,7 @@ End Class
 
 ### <a name="video-and-audio"></a>비디오 및 오디오
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]에서 제공하는 그래픽 기능 중 핵심 기능은 비디오 및 오디오를 포함하는 멀티미디어로 작업할 수 있도록 지원하는 것입니다. 다음 예제에서는 미디어 플레이어를 애플리케이션에 삽입하는 방법을 보여 줍니다.
+WPF의 그래픽 기능에 대 한 핵심 기능은 비디오와 오디오를 포함 하는 멀티미디어 작업을 위한 기본 지원을 제공 하는 것입니다. 다음 예제에서는 미디어 플레이어를 애플리케이션에 삽입하는 방법을 보여 줍니다.
 
 ```xaml
 <MediaElement Source="media\numbers.wmv" Width="450" Height="250" />
@@ -161,7 +161,7 @@ End Class
 
 자세한 내용은 [멀티미디어 개요](multimedia-overview.md)를 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Windows.Media>
 - <xref:System.Windows.Media.Animation>

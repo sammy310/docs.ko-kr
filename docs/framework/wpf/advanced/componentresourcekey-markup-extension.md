@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ComponentResourceKey markup extension [WPF]
 - XAML [WPF], ComponentResourceKey markup extension
 ms.assetid: d6bcdbe6-61b3-40a7-b381-4e02185b5a85
-ms.openlocfilehash: 85e6862d59284df1b51bf5ea7fbba786fe0492d7
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 2ccc4f3154996a4e442a4092833f5c9ed9c8938a
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458962"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559463"
 ---
 # <a name="componentresourcekey-markup-extension"></a>ComponentResourceKey 태그 확장
 외부 어셈블리에서 로드 되는 리소스에 대 한 키를 정의 하 고 참조 합니다. 이렇게 하면 리소스 조회가 어셈블리 또는 클래스의 명시적 리소스 사전이 아닌 어셈블리의 대상 형식을 지정할 수 있습니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "73458962"
 |||  
 |-|-|  
 |`targetTypeName`|리소스 어셈블리에 정의 된 공용 CLR (공용 언어 런타임) 형식의 이름입니다.|  
-|`targetID`|리소스의 키입니다. 리소스가 조회 될 때 `targetID`는 리소스의 [X:Key 지시문](../../xaml-services/x-key-directive.md) 과 유사 합니다.|  
+|`targetID`|리소스의 키입니다. 리소스가 조회 될 때 `targetID`는 리소스의 [X:Key 지시문](../../../desktop-wpf/xaml-services/xkey-directive.md) 과 유사 합니다.|  
   
 ## <a name="remarks"></a>주의  
  위의 사용에서 볼 수 있듯이 {`ComponentResourceKey`} 태그 확장 사용은 다음 두 위치에서 찾을 수 있습니다.  
@@ -66,7 +66,7 @@ ms.locfileid: "73458962"
   
  표시 되는 압축 구문은 태그 확장의 <xref:System.Windows.ComponentResourceKey.%23ctor%2A?displayProperty=nameWithType> 생성자 시그니처와 위치 매개 변수 사용을 기반으로 합니다. `targetTypeName` 및 `targetID` 지정 되는 순서는 중요 합니다. 자세한 정보 표시 구문은 <xref:System.Windows.ComponentResourceKey.%23ctor%2A?displayProperty=nameWithType> 매개 변수가 없는 생성자를 사용 하 여 개체 요소에 대 한 진정한 특성 구문과 비슷한 방식으로 <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> 및 <xref:System.Windows.ComponentResourceKey.ResourceId%2A>를 설정 합니다. 자세한 구문에서 속성이 설정 되는 순서는 중요 하지 않습니다. 이러한 두 가지 대안 (압축 및 자세한 정보)의 관계와 메커니즘은 [태그 확장 및 WPF XAML](markup-extensions-and-wpf-xaml.md)항목에 자세히 설명 되어 있습니다.  
   
- 기술적으로 `targetID`의 값은 임의의 개체 일 수 있으며, 문자열일 필요가 없습니다. 그러나 WPF에서 가장 일반적으로 사용 되는 경우는 `targetID` 값을 문자열 형식으로 정렬 하는 것이 고 이러한 문자열은 [XamlName 문법](../../xaml-services/xamlname-grammar.md)에서 유효 합니다.  
+ 기술적으로 `targetID`의 값은 임의의 개체 일 수 있으며, 문자열일 필요가 없습니다. 그러나 WPF에서 가장 일반적으로 사용 되는 경우는 `targetID` 값을 문자열 형식으로 정렬 하는 것이 고 이러한 문자열은 [XamlName 문법](../../../desktop-wpf/xaml-services/xamlname-grammar.md)에서 유효 합니다.  
   
  개체 요소 구문에 `ComponentResourceKey` 사용할 수 있습니다. 이 경우 확장을 제대로 초기화 하려면 <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> 및 <xref:System.Windows.ComponentResourceKey.ResourceId%2A> 속성의 값을 모두 지정 해야 합니다.  
   

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - variables [Visual Basic], object
 - object variables [Visual Basic], determining type
 ms.assetid: 6f6a138d-58a4-40d1-9f4e-0a3c598eaf81
-ms.openlocfilehash: 9f9b89e2fea0bd69cba6d50fa1d1fb9cc3927685
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b3778a170759f685db78e7dcde219138196f9eca
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348608"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344194"
 ---
 # <a name="how-to-determine-what-type-an-object-variable-refers-to-visual-basic"></a>방법: 개체 변수가 참조하는 형식 확인(Visual Basic)
 
@@ -50,11 +50,11 @@ ms.locfileid: "74348608"
 
     호환성 기준은 지정 된 형식이 클래스, 구조체 또는 인터페이스 인지에 따라 달라 집니다. 일반적으로이 형식은 개체가와 동일한 형식 이거나,에서 상속 되거나, 지정 된 형식을 구현 하는 경우 호환 됩니다. 자세한 내용은 [TypeOf 연산자](../../../../visual-basic/language-reference/operators/typeof-operator.md)를 참조 하세요.
 
-## <a name="compiling-the-code"></a>코드 컴파일
+## <a name="compile-the-code"></a>코드 컴파일
 
 지정 된 형식은 변수나 식일 수 없습니다. 클래스, 구조체 또는 인터페이스와 같은 정의 된 형식의 이름 이어야 합니다. 여기에는 `Integer` 및 `String`와 같은 내장 형식이 포함 됩니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Object.GetType%2A>
 - <xref:System.Type?displayProperty=nameWithType>
@@ -62,4 +62,4 @@ ms.locfileid: "74348608"
 - <xref:System.TypeCode>
 - [개체 변수](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [개체 변수 값](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)
-- [Object 데이터 형식](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)

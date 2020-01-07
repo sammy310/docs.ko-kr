@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: fb7ad54f61d9dcfe94379aef14930a0395da5291
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: a4d3b808aee14d5d2f29053b0c60798f9f626e8c
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424583"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636330"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>WPF XAML 브라우저 애플리케이션 개요
 <a name="introduction"></a>Xbap (XAML 브라우저 응용 프로그램)는 웹 응용 프로그램과 리치 클라이언트 응용 프로그램의 기능을 결합 합니다. XBAP는 웹 애플리케이션처럼 웹 서버에 배포할 수 있으며 Internet Explorer 또는 Firefox에서 시작할 수 있습니다. 풍부한 클라이언트 응용 프로그램과 마찬가지로 Xbap는 WPF의 기능을 활용할 수 있습니다. XBAP를 개발하는 것은 리치 클라이언트 개발과도 비슷합니다. 이 항목에서는 XBAP 개발에 대한 간단하고 고급 수준의 소개를 제공하며 XBAP 개발이 표준 리치 클라이언트 개발과 다른 점을 설명합니다.
@@ -45,13 +45,13 @@ ms.locfileid: "73424583"
 ## <a name="deploying-an-xbap"></a>XBAP 배포
  XBAP를 빌드하는 경우 출력에는 다음 세 가지 파일이 포함됩니다.
 
-|파일|설명|
+|File|설명|
 |----------|-----------------|
 |실행 파일(.exe)|컴파일된 코드가 포함되며 확장명이 .exe입니다.|
 |애플리케이션 매니페스트(.manifest)|애플리케이션과 연결된 메타데이터가 포함되며 확장명이 .manifest입니다.|
 |배포 매니페스트(.xbap)|이 파일은 ClickOnce에서 응용 프로그램을 배포 하는 데 사용 하는 정보를 포함 하며 확장명이입니다.|
 
- 웹 서버 (예: Microsoft 인터넷 정보 서비스 (IIS) 5.0 이상 버전)에 Xbap를 배포 합니다. 웹 서버에 .NET Framework을 설치할 필요는 없지만 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 다목적 MIME (인터넷 메일 확장) 형식 및 파일 이름 확장명을 등록 해야 합니다. 자세한 내용은 [IIS 5.0 및 IIS 6.0을 구성하여 WPF 애플리케이션 배포](how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md)를 참조하세요.
+ 웹 서버 (예: Microsoft 인터넷 정보 서비스 (IIS) 5.0 이상 버전)에 Xbap를 배포 합니다. 웹 서버에 .NET Framework을 설치할 필요는 없지만 WPF 다목적 MIME (인터넷 메일 확장) 형식 및 파일 이름 확장명을 등록 해야 합니다. 자세한 내용은 [IIS 5.0 및 IIS 6.0을 구성하여 WPF 애플리케이션 배포](how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md)를 참조하세요.
 
  배포를 위해 XBAP를 준비하려면 .exe 및 연결된 매니페스트를 웹 서버에 복사합니다. 확장명이 .xbap인 파일인 배포 매니페스트를 여는 하이퍼링크가 포함된 HTML 페이지를 만듭니다. 사용자가 xbap 파일에 대 한 링크를 클릭 하면 ClickOnce에서 응용 프로그램을 다운로드 하 고 시작 하는 메커니즘을 자동으로 처리 합니다. 다음 예제 코드는 XBAP를 가리키는 하이퍼링크가 포함된 HTML 페이지를 보여 줍니다.
 
@@ -168,7 +168,7 @@ ms.locfileid: "73424583"
 
 |보안 영역|동작|완전 신뢰 얻기|
 |-------------------|--------------|------------------------|
-|로컬 컴퓨터|자동 완전 신뢰|아무 동작도 필요하지 않습니다.|
+|로컬 컴퓨터|자동 완전 신뢰|작업이 필요하지 않습니다.|
 |인트라넷 및 신뢰할 수 있는 사이트|완전 신뢰 확인|사용자가 프롬프트에서 소스를 볼 수 있도록 인증서로 XBAP에 로그인합니다.|
 |인터넷|"신뢰할 수 없음"과 함께 실패|인증서로 XBAP를 서명합니다.|
 

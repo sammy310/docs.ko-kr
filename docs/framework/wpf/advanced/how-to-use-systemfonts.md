@@ -9,17 +9,17 @@ helpviewer_keywords:
 - fonts [WPF], system fonts
 - classes [WPF], SystemFonts
 ms.assetid: 3f46a4ec-2225-408a-8123-8838a8f7057a
-ms.openlocfilehash: 63ba7a6fb1c8776cc35c0e6f07a6b78f5b3d93d0
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 157565ceb9057049aef8b2bf274847d58c6b8dc8
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459513"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559965"
 ---
 # <a name="how-to-use-systemfonts"></a>방법: SystemFonts 사용
 이 예제에서는 단추에 스타일을 지정 하거나 사용자 지정 하기 위해 <xref:System.Windows.SystemFonts> 클래스의 정적 리소스를 사용 하는 방법을 보여 줍니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  시스템 설정과 일관된 시각적 효과를 만들도록 지원하기 위해 시스템 리소스는 몇 가지 시스템이 결정하는 값을 리소스와 속성 모두로 노출합니다. <xref:System.Windows.SystemFonts>는 시스템 글꼴 값을 정적 속성으로 포함 하는 클래스이 고, 런타임에 이러한 값에 동적으로 액세스 하는 데 사용할 수 있는 리소스 키를 참조 하는 속성입니다. 예를 들어 <xref:System.Windows.SystemFonts.CaptionFontFamily%2A>은 <xref:System.Windows.SystemFonts> 값 이며 <xref:System.Windows.SystemFonts.CaptionFontFamilyKey%2A>는 해당 하는 리소스 키입니다.  
   
  [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]에서는 <xref:System.Windows.SystemFonts>의 멤버를 정적 속성 또는 동적 리소스 참조 (정적 속성 값을 키로 사용)로 사용할 수 있습니다. 애플리케이션이 실행되는 동안 글꼴 메트릭을 자동으로 업데이트하려면 동적 리소스 참조를 사용하고 자동으로 업데이트하지 않으려면 정적 값 참조를 사용합니다.  
@@ -43,6 +43,6 @@ ms.locfileid: "73459513"
 - [SystemParameters 사용](how-to-use-systemparameters.md)
 - [시스템 글꼴 키 사용](how-to-use-system-fonts-keys.md)
 - [방법 항목](resources-how-to-topics.md)
-- [x:Static 태그 확장](../../xaml-services/x-static-markup-extension.md)
+- [x:Static 태그 확장](../../../desktop-wpf/xaml-services/xstatic-markup-extension.md)
 - [XAML 리소스](../../../desktop-wpf/fundamentals/xaml-resources-define.md)
 - [DynamicResource 태그 확장](dynamicresource-markup-extension.md)

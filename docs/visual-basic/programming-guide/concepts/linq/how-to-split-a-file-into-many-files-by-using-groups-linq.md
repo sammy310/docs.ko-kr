@@ -2,12 +2,12 @@
 title: '방법: 그룹을 사용하여 파일을 여러 파일로 분할(LINQ)'
 ms.date: 07/20/2015
 ms.assetid: 5e8b2a2b-0b1d-4933-8a2b-03e91dfaf77f
-ms.openlocfilehash: bd210f5119540bd35c18a07a21fc836339222bd0
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 07d53c9afca88cd3156c7fc8fcfab5ac7ca24f25
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74341366"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348035"
 ---
 # <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-visual-basic"></a>방법: 그룹을 사용 하 여 파일을 여러 파일로 분할 (LINQ) (Visual Basic)
 
@@ -45,7 +45,7 @@ ms.locfileid: "74341366"
     El Yassir, Mehdi
     ```
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 ```vb
 Class SplitWithGroups
@@ -116,11 +116,11 @@ End Class
 
 프로그램에서 데이터 파일과 동일한 폴더에 각 그룹에 대한 별도 파일을 작성합니다.
 
-## <a name="compiling-the-code"></a>코드 컴파일
+## <a name="compile-the-code"></a>코드 컴파일
 
-VB.NET 콘솔 응용 프로그램 프로젝트를 만듭니다 .이 프로젝트에는 system.string 네임 스페이스에 대 한 `Imports` 문이 있습니다.
+System.xml 네임 스페이스에 대 한 `Imports` 문을 사용 하 여 Visual Basic 콘솔 응용 프로그램 프로젝트를 만듭니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [LINQ 및 문자열 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
 - [LINQ 및 파일 디렉터리(Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

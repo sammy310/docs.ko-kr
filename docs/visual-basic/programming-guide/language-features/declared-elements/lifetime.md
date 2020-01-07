@@ -10,12 +10,12 @@ helpviewer_keywords:
 - lifetime [Visual Basic], Visual Basic
 - lifetime [Visual Basic]
 ms.assetid: bd91e390-690a-469a-9946-8dca70bc14e7
-ms.openlocfilehash: 05a39388e8aa9681af60cf86a3df8346d744b69e
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 293537ad33c8e751d49d820fc57ea525e68bc203
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345309"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347770"
 ---
 # <a name="lifetime-in-visual-basic"></a>Visual Basic의 수명
 선언 된 요소의 *수명은* 사용할 수 있는 기간입니다. 변수는 수명이 있는 유일한 요소입니다. 이러한 목적을 위해 컴파일러는 프로시저 매개 변수와 함수 반환을 변수의 특수 한 경우로 처리 합니다. 변수의 수명은 값을 보유할 수 있는 기간을 나타냅니다. 해당 값은 수명에 따라 변경 될 수 있지만 항상 일부 값을 포함 합니다.  
@@ -52,7 +52,7 @@ ms.locfileid: "74345309"
 ## <a name="containing-elements-for-static-variables"></a>정적 변수에 대 한 요소 포함  
  클래스 내에서, 즉 해당 클래스의 프로시저 내에서 정적 지역 변수를 선언할 수 있습니다. 그러나 구조체 내에서 정적 지역 변수를 구조체 멤버 또는 해당 구조 내 프로시저의 지역 변수로 선언할 수 없습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ### <a name="description"></a>설명  
  다음 예에서는 [Static](../../../../visual-basic/language-reference/modifiers/static.md) 키워드를 사용 하 여 변수를 선언 합니다. [Dim 문이](../../../../visual-basic/language-reference/statements/dim-statement.md) `Static`와 같은 한정자를 사용 하는 경우에는 `Dim` 키워드가 필요 하지 않습니다.  
@@ -65,13 +65,13 @@ ms.locfileid: "74345309"
   
  `Static`를 사용 하지 않고 `applesSold` 선언 된 경우 이전 누적 값은 `runningTotal`호출에서 유지 되지 않습니다. 다음에 `runningTotal`가 호출 되 면 `applesSold` 다시 생성 되 고 0으로 초기화 되며 `runningTotal`는 호출 된 것과 동일한 값을 반환 합니다.  
   
-### <a name="compiling-the-code"></a>코드 컴파일  
+### <a name="compile-the-code"></a>코드 컴파일  
  정적 지역 변수의 값을 선언의 일부로 초기화할 수 있습니다. `Static`배열을 선언 하는 경우 차수 (차원 수), 각 차원의 길이 및 개별 요소의 값을 초기화할 수 있습니다.  
   
 ### <a name="security"></a>보안  
  위의 예제에서는 모듈 수준에서 `applesSold`를 선언 하 여 동일한 수명을 생성할 수 있습니다. 그러나 이러한 방식으로 변수의 범위를 변경한 경우 프로시저는 더 이상 단독으로 액세스할 수 없습니다. 다른 프로시저가 `applesSold`에 액세스 하 고 해당 값을 변경할 수 있기 때문에 누계는 안정적이 고 코드를 유지 관리 하기가 더 어려울 수 있습니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [공유](../../../../visual-basic/language-reference/modifiers/shared.md)
 - [Nothing](../../../../visual-basic/language-reference/nothing.md)
@@ -82,4 +82,4 @@ ms.locfileid: "74345309"
 - [변수](../../../../visual-basic/programming-guide/language-features/variables/index.md)
 - [변수 선언](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
 - [데이터 형식 문제 해결](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
-- [정적](../../../../visual-basic/language-reference/modifiers/static.md)
+- [Static](../../../../visual-basic/language-reference/modifiers/static.md)

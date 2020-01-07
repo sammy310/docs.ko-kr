@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Impersonating the Client Sample [Windows Communication Foundation]
 - impersonation, Windows Communication Foundation sample
 ms.assetid: 8bd974e1-90db-4152-95a3-1d4b1a7734f8
-ms.openlocfilehash: 40bde7d9bd2735dfd6f1a18f9359533db0e11724
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 0c262d8b5460f236ef0429154ae337c7adf96714
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989832"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75338710"
 ---
 # <a name="impersonating-the-client"></a>Impersonating the Client
 Impersonation 샘플에서는 서비스가 호출자를 대신하여 시스템 리소스에 액세스할 수 있도록 서비스에서 호출자 애플리케이션을 가장하는 방법을 보여 줍니다.  
@@ -105,7 +105,7 @@ client.ClientCredentials.Windows.AllowedImpersonationLevel = TokenImpersonationL
 > 서비스는 관리 계정에서 실행 하거나, 실행 하는 계정에는 HTTP 계층에 `http://localhost:8000/ServiceModelSamples` URI를 등록할 수 있는 권한을 부여 해야 합니다. [Httpcfg.exe 도구](https://go.microsoft.com/fwlink/?LinkId=95010)를 사용 하 여 [네임 스페이스 예약](https://go.microsoft.com/fwlink/?LinkId=95012) 을 설정 하 여 이러한 권한을 부여할 수 있습니다.  
   
 > [!NOTE]
-> [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]을 실행하는 컴퓨터에서는 Host.exe 애플리케이션에 가장 권한이 있는 경우에만 가장이 지원됩니다. 기본적으로 관리자만 이 사용 권한을 가집니다. 서비스를 실행 하는 계정에이 권한을 추가 하려면 **관리 도구**로 이동 하 여 **로컬 보안 정책**, **로컬 정책**을 차례로 연 다음 **사용자 권한 할당**을 클릭 하 고 **다음 이후 클라이언트 가장을 선택 합니다. 인증** 을 클릭 하 고 **속성** 을 두 번 클릭 하 여 사용자 또는 그룹을 추가 합니다.  
+> Windows Server 2003를 실행 하는 컴퓨터에서 가장은 호스트나 응용 프로그램에 가장 권한이 있는 경우에만 지원 됩니다. 기본적으로 관리자 에게만이 권한이 있습니다. 서비스를 실행 하는 계정에이 권한을 추가 하려면 **관리 도구**로 이동 하 여 **로컬 보안 정책**, **로컬 정책**을 차례로 열고 **사용자 권한 할당**을 클릭 한 다음 **인증 후 클라이언트 가장** 을 선택 하 고 **속성** 을 두 번 클릭 하 여 사용자 또는 그룹을 추가 합니다.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면  
   

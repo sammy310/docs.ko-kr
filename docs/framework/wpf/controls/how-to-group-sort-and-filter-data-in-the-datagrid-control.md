@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DataGrid [WPF], group
 - DataGrid [WPF], filter
 ms.assetid: 03345e85-89e3-4aec-9ed0-3b80759df770
-ms.openlocfilehash: 2632566b5b55ae641d2750e903bf94cdc681f8f8
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 622b64fd7738b02cd72131e7e9fe91c04314b1d0
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460246"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559476"
 ---
 # <a name="how-to-group-sort-and-filter-data-in-the-datagrid-control"></a>방법: DataGrid 컨트롤에서 데이터 그룹화, 정렬 및 필터링
 
@@ -42,9 +42,9 @@ ms.locfileid: "73460246"
     [!code-csharp[DataGrid_GroupSortFilter#101](~/samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_GroupSortFilter/CS/MainWindow.xaml.cs#101)]
     [!code-vb[DataGrid_GroupSortFilter#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DataGrid_GroupSortFilter/VB/MainWindow.xaml.vb#101)]
 
-2. XAML에서 컬렉션 클래스의 인스턴스를 만들고 [X:Key 지시어](../../xaml-services/x-key-directive.md)를 설정 합니다.
+2. XAML에서 컬렉션 클래스의 인스턴스를 만들고 [X:Key 지시어](../../../desktop-wpf/xaml-services/xkey-directive.md)를 설정 합니다.
 
-3. XAML에서 <xref:System.Windows.Data.CollectionViewSource> 클래스의 인스턴스를 만들고, [X:Key 지시어](../../xaml-services/x-key-directive.md)를 설정 하 고, 컬렉션 클래스의 인스턴스를 <xref:System.Windows.Data.CollectionViewSource.Source%2A>로 설정 합니다.
+3. XAML에서 <xref:System.Windows.Data.CollectionViewSource> 클래스의 인스턴스를 만들고, [X:Key 지시어](../../../desktop-wpf/xaml-services/xkey-directive.md)를 설정 하 고, 컬렉션 클래스의 인스턴스를 <xref:System.Windows.Data.CollectionViewSource.Source%2A>로 설정 합니다.
 
     [!code-xaml[DataGrid_GroupSortFilter#201](~/samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_GroupSortFilter/CS/WindowSnips1.xaml#201)]
 
@@ -84,7 +84,7 @@ ms.locfileid: "73460246"
     [!code-csharp[DataGrid_GroupSortFilter#114](~/samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_GroupSortFilter/CS/MainWindow.xaml.cs#114)]
     [!code-vb[DataGrid_GroupSortFilter#114](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DataGrid_GroupSortFilter/VB/MainWindow.xaml.vb#114)]
 
-항목이 <xref:System.Windows.Controls.DataGrid>그룹화 되 면 각 그룹의 모양을 지정 하는 <xref:System.Windows.Controls.GroupStyle>를 정의할 수 있습니다. <xref:System.Windows.Controls.GroupStyle> DataGrid의 <xref:System.Windows.Controls.ItemsControl.GroupStyle%2A> 컬렉션에 추가 하 여이를 적용 합니다. 그룹화 수준이 여러 개인 경우 각 그룹 수준에 다른 스타일을 적용할 수 있습니다. 스타일은 정의 된 순서 대로 적용 됩니다. 예를 들어 두 스타일을 정의 하는 경우 첫 번째이 최상위 행 그룹에 적용 됩니다. 두 번째 스타일은 두 번째 수준 이하의 모든 행 그룹에 적용 됩니다. <xref:System.Windows.Controls.GroupStyle> <xref:System.Windows.FrameworkElement.DataContext%2A>는 그룹이 나타내는 <xref:System.Windows.Data.CollectionViewGroup>입니다.
+항목이 그룹화 되는 경우는 <xref:System.Windows.Controls.DataGrid>를 정의할 수 있습니다는 <xref:System.Windows.Controls.GroupStyle> 각 그룹의 모양을 지정 하는 합니다. <xref:System.Windows.Controls.GroupStyle> DataGrid의 <xref:System.Windows.Controls.ItemsControl.GroupStyle%2A> 컬렉션에 추가 하 여이를 적용 합니다. 여러 가지 수준의 그룹화를 사용 하는 경우에 각 그룹 수준으로 다양 한 스타일을 적용할 수 있습니다. 스타일 정의 되는 순서 대로 적용 됩니다. 예를 들어 두 스타일을 정의 하는 경우 첫 번째이 최상위 행 그룹에 적용 됩니다. 두 번째 스타일은 두 번째 수준 이하의 모든 행 그룹에 적용 됩니다. <xref:System.Windows.Controls.GroupStyle> <xref:System.Windows.FrameworkElement.DataContext%2A>는 그룹이 나타내는 <xref:System.Windows.Data.CollectionViewGroup>입니다.
 
 ### <a name="to-change-the-appearance-of-row-group-headers"></a>행 그룹 머리글의 모양을 변경 하려면
 
@@ -132,7 +132,7 @@ ms.locfileid: "73460246"
 
 또는 필터링 논리를 제공 하는 메서드를 만들고 <xref:System.Windows.Data.CollectionView.Filter%2A?displayProperty=nameWithType> 속성을 설정 하 여 필터를 적용 하 여 <xref:System.Windows.Controls.DataGrid>에서 항목을 필터링 할 수 있습니다. 이 메서드의 예를 보려면 [뷰에서 데이터 필터링](../data/how-to-filter-data-in-a-view.md)을 참조 하세요.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 다음 예에서는 <xref:System.Windows.Data.CollectionViewSource>에서 `Task` 데이터를 그룹화, 정렬 및 필터링 하 고 <xref:System.Windows.Controls.DataGrid>에서 그룹화, 정렬 및 필터링 된 `Task` 데이터를 표시 하는 방법을 보여 줍니다. <xref:System.Windows.Data.CollectionViewSource>는 <xref:System.Windows.Controls.DataGrid>에 대 한 <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>으로 사용 됩니다. 그룹화, 정렬 및 필터링은 <xref:System.Windows.Data.CollectionViewSource>에서 수행 되며 <xref:System.Windows.Controls.DataGrid> UI에 표시 됩니다.
 

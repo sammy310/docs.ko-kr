@@ -7,18 +7,18 @@ helpviewer_keywords:
 - XAML [WPF]
 - Extensible Application Markup Language [WPF]
 ms.assetid: 5d858575-a83b-42df-ad3f-047ed2d6e3c8
-ms.openlocfilehash: cea6809ebf9a4ae516d59bd99bf8126d2e874788
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: b43da2723fb618bc44a14e8102c8d59e6ecc0c11
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459569"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559848"
 ---
 # <a name="xaml-in-wpf"></a>WPF의 XAML
 
 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]은 선언적 응용 프로그램 프로그래밍을 위한 태그 언어입니다. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]는 XAML 프로세서 구현을 구현 하 고 XAML 언어 지원을 제공 합니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 형식은 XAML 표현에 필요한 형식 지원을 제공할 수 있도록 구현 됩니다. 일반적으로 XAML 태그에서 대부분의 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램 UI를 만들 수 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
 
 [XAML 개요(WPF)](xaml-overview-wpf.md)  
 [XAML 구문 정보](xaml-syntax-in-detail.md)  
@@ -28,14 +28,14 @@ ms.locfileid: "73459569"
 [WPF XAML을 위한 XAML 네임스페이스 및 네임스페이스 매핑](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)  
 [WPF XAML 이름 범위](wpf-xaml-namescopes.md)  
 [인라인 스타일 및 템플릿](inline-styles-and-templates.md)  
-[XAML의 공백 처리](../../xaml-services/whitespace-processing-in-xaml.md)  
+[XAML의 공백 처리](../../../desktop-wpf/xaml-services/white-space-processing.md)  
 [TypeConverter 및 XAML](typeconverters-and-xaml.md)  
-[XML 문자 엔터티 및 XAML](../../xaml-services/xml-character-entities-and-xaml.md)  
-[XAML 네임스페이스(x:) 언어 기능](../../xaml-services/xaml-namespace-x-language-features.md)  
+[XML 문자 엔터티 및 XAML](../../../desktop-wpf/xaml-services/xml-character-entities.md)  
+[XAML 네임스페이스(x:) 언어 기능](../../../desktop-wpf/xaml-services/namespace-language-features.md)  
 [WPF XAML 확장](wpf-xaml-extensions.md)  
 [태그 호환성(mc:) 언어 기능](markup-compatibility-mc-language-features.md)  
   
-## <a name="related-sections"></a>관련 단원  
+## <a name="related-sections"></a>관련 섹션  
 
 [WPF 아키텍처](wpf-architecture.md)  
 [기본 요소](base-elements.md)  

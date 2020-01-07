@@ -2,19 +2,19 @@
 title: 확장명 메서드를 사용하여 리팩터링
 ms.date: 07/20/2015
 ms.assetid: d87ae99a-cfa9-4a31-a5e4-9d6437be6810
-ms.openlocfilehash: 1045a649907f877bddd0ec2d8c0e5dfa2a5d0830
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: c66fb90f9949ee3e47105498b211c857d5d63804
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346512"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348012"
 ---
 # <a name="refactoring-using-an-extension-method-visual-basic"></a>확장 메서드를 사용 하 여 리팩터링 (Visual Basic)
 이 예제는 확장 메서드로 구현 된 순수 함수를 사용 하 여 문자열의 연결을 리팩터링하여 이전 예제를 기반으로 하 여 [단락 텍스트 (Visual Basic)를 검색](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md)합니다.  
   
- 이전 예제에서는 <xref:System.Linq.Enumerable.Aggregate%2A> 표준 쿼리 연산자를 사용하여 여러 문자열을 한 문자열로 연결합니다. 그러나 생성되는 쿼리가 더 작고 간단하기 때문에 이 작업을 수행하는 확장명 메서드를 작성하는 것이 간편합니다.  
+ 이전 예제에서는 <xref:System.Linq.Enumerable.Aggregate%2A> 표준 쿼리 연산자를 사용하여 여러 문자열을 한 문자열로 연결합니다. 그러나 생성되는 쿼리가 더 작고 간단하기 때문에 이 작업을 수행하는 확장 메서드를 작성하는 것이 간편합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에서는 WordprocessingML 문서를 처리하여 단락, 각 단락의 스타일 및 각 단락의 텍스트를 검색합니다. 이 예제는 이 자습서의 이전 예제를 기반으로 합니다.  
   
  이 예제에는 `StringConcatenate` 메서드의 오버로드가 여러 개 포함되어 있습니다.  
@@ -64,7 +64,7 @@ ByVal func As Func(Of T, String), ByVal separator As String) As String
 End Function  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  `StringConcatenate` 메서드의 오버로드는 네 가지가 있습니다. 한 오버로드는 문자열의 컬렉션을 가져와서 단일 문자열을 반환합니다. 다른 오버로드는 원하는 형식의 컬렉션과 컬렉션의 singleton에서 문자열로 프로젝션하는 대리자를 사용할 수 있습니다. 나머지 두 오버로드는 구분 기호 문자열을 지정할 수 있도록 합니다.  
   
  다음 코드에서는 네 오버로드를 모두 사용합니다.  
@@ -89,7 +89,7 @@ one:two:three:
 1:2:3:  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이제 새 확장명 메서드를 활용하기 위해 예제를 수정할 수 있습니다.  
   
 ```vb  
@@ -135,7 +135,7 @@ Module Module1
         Return sb.ToString()  
     End Function  
   
-    ' Following function is required because VB does not support short circuit evaluation  
+    ' Following function is required because Visual Basic does not support short circuit evaluation  
     Private Function GetStyleOfParagraph(ByVal styleNode As XElement, _  
                                          ByVal defaultStyle As String) As String  
         If (styleNode Is Nothing) Then  
@@ -243,7 +243,7 @@ StyleName:Code >Hello World<
   
 - [순수 함수를 사용하여 리팩터링(Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [자습서: WordprocessingML 문서에서 내용 조작 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
 - [순수 함수로 리팩터링 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

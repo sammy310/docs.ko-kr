@@ -1,13 +1,13 @@
 ---
 title: 명령줄 도구를 사용하여 F# 시작
-description: .NET Core CLI를 사용하여 모든 운영 체제(Windows나 macOs, Linux)에서 간단한 F# 다중 프로젝트 솔루션을 구축하는 방법을 알아봅니다.
+description: 운영 체제 (Windows, macOS 또는 Linux)에서 F# .NET Core CLI 사용 하 여 간단한 다중 프로젝트 솔루션을 빌드하는 방법에 대해 알아봅니다.
 ms.date: 03/26/2018
-ms.openlocfilehash: f9177e653273e5a2191407c4fb22343ded11fece
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: aa3ed84660a951eeafc11a00ea3831f587b6d876
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117923"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559489"
 ---
 # <a name="get-started-with-f-with-the-net-core-cli"></a>.NET Core CLI를 사용하여 F# 시작
 
@@ -41,7 +41,7 @@ FSNetCore
 `dotnet new` 명령어를 사용하여 **src** 폴더에 Library라는 클래스 라이브러리 프로젝트를 만듭니다.
 
 ```dotnetcli
-dotnet new classlib -lang F# -o src/Library
+dotnet new classlib -lang "F#" -o src/Library
 ```
 
 위의 명령을 실행하면 다음과 같은 디렉터리 구조가 생성됩니다.
@@ -85,7 +85,7 @@ dotnet sln add src/Library/Library.fsproj
 다음과 같이 `dotnet new` 명령을 사용하여 **src**의 App 폴더에 콘솔 응용 프로그램을 만듭니다.
 
 ```dotnetcli
-dotnet new console -lang F# -o src/App
+dotnet new console -lang "F#" -o src/App
 ```
 
 위의 명령을 실행하면 다음과 같은 디렉터리 구조가 생성됩니다.
@@ -140,7 +140,7 @@ cd src/App
 dotnet run Hello World
 ```
 
-다음 결과가 표시 됩니다.
+다음 결과가 보일 것입니다.
 
 ```console
 Nice command-line arguments! Here's what JSON.NET has to say about them:

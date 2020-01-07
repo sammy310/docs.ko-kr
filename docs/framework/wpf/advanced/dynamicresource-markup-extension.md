@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XAML [WPF], DynamicResource markup extension
 - DynamicResource markup extensions [WPF]
 ms.assetid: 7324f243-03af-4c2b-b0db-26ac6cdfcbe4
-ms.openlocfilehash: a04e1569f77fed73a480fda3d63cabf6dbc30664
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: f8b05f314be84e6104f1a9c7fe2edfdf826e51da
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460514"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559450"
 ---
 # <a name="dynamicresource-markup-extension"></a>DynamicResource 태그 확장
 해당 값을 정의 된 리소스에 대 한 참조로 지연 하 여 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 속성 특성에 대 한 값을 제공 합니다. 해당 리소스에 대 한 조회 동작은 런타임 조회와 유사 합니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "73460514"
   
 |||  
 |-|-|  
-|`key`|요청한 리소스의 키입니다. 리소스를 태그에서 만들었거나 코드에서 리소스를 만든 경우 <xref:System.Windows.ResourceDictionary.Add%2A?displayProperty=nameWithType>를 호출할 때 `key` 매개 변수로 제공 된 경우이 키는 처음에 [X:Key 지시문](../../xaml-services/x-key-directive.md) 에 의해 할당 되었습니다.|  
+|`key`|요청한 리소스의 키입니다. 리소스를 태그에서 만들었거나 코드에서 리소스를 만든 경우 <xref:System.Windows.ResourceDictionary.Add%2A?displayProperty=nameWithType>를 호출할 때 `key` 매개 변수로 제공 된 경우이 키는 처음에 [X:Key 지시문](../../../desktop-wpf/xaml-services/xkey-directive.md) 에 의해 할당 되었습니다.|  
   
 ## <a name="remarks"></a>주의  
  `DynamicResource`에서는 초기 컴파일 중에 임시 식을 만들고 요청 된 리소스 값이 실제로 개체를 생성 하는 데 필요할 때까지 리소스 조회를 지연 합니다. 이는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 페이지가 로드 된 후에 발생할 수 있습니다. 리소스 값은 현재 페이지 범위에서 시작 하는 모든 활성 리소스 사전에 대 한 키 검색에 따라 검색 되며, 컴파일의 자리 표시자 식으로 대체 됩니다.  
@@ -48,15 +48,15 @@ ms.locfileid: "73460514"
   
  특정 리소스 액세스 시나리오는 [StaticResource 태그 확장이](staticresource-markup-extension.md)아닌 `DynamicResource`에 특히 적합 합니다. `DynamicResource` 및 `StaticResource` 의 상대적인 장점 및 성능 영향에 대한 자세한 내용은 [XAML리소스](xaml-resources.md)를 참조하세요.  
   
- 지정 된 <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> 페이지, 응용 프로그램, 사용 가능한 컨트롤 테마 및 외부 리소스 또는 시스템 리소스의 특정 수준에서 [X:Key 지시문](../../xaml-services/x-key-directive.md) 에 의해 결정 되는 기존 리소스와 일치 해야 하며, 리소스 조회가에서 발생 합니다. 순서입니다. 정적 및 동적 리소스의 리소스 조회에 대 한 자세한 내용은 [XAML 리소스](xaml-resources.md)를 참조 하세요.  
+ 지정 된 <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> 페이지, 응용 프로그램, 사용 가능한 컨트롤 테마 및 외부 리소스 또는 시스템 리소스의 특정 수준에서 [X:Key 지시문](../../../desktop-wpf/xaml-services/xkey-directive.md) 에 의해 결정 되는 기존 리소스와 일치 해야 하며, 리소스 조회가 해당 순서로 수행 됩니다. 정적 및 동적 리소스의 리소스 조회에 대 한 자세한 내용은 [XAML 리소스](xaml-resources.md)를 참조 하세요.  
   
- 리소스 키는 [XamlName 문법](../../xaml-services/xamlname-grammar.md)에 정의 된 모든 문자열일 수 있습니다. 리소스 키는 <xref:System.Type>와 같은 다른 개체 형식일 수도 있습니다. <xref:System.Type> 키는 테마를 기준으로 컨트롤의 스타일을 지정 하는 방법에 대 한 기본입니다. 자세한 내용은 [컨트롤 제작 개요](../controls/control-authoring-overview.md)를 참조하세요.  
+ 리소스 키는 [XamlName 문법](../../../desktop-wpf/xaml-services/xamlname-grammar.md)에 정의 된 모든 문자열일 수 있습니다. 리소스 키는 <xref:System.Type>와 같은 다른 개체 형식일 수도 있습니다. <xref:System.Type> 키는 테마를 기준으로 컨트롤의 스타일을 지정 하는 방법에 대 한 기본입니다. 자세한 내용은 [컨트롤 제작 개요](../controls/control-authoring-overview.md)를 참조하세요.  
   
  <xref:System.Windows.FrameworkElement.FindResource%2A>와 같은 리소스 값을 조회 하기 위한 Api는 `DynamicResource`에서 사용 되는 것과 동일한 리소스 조회 논리를 따릅니다.  
   
  리소스를 참조 하는 다른 선언적 방법은 [StaticResource 태그 확장](staticresource-markup-extension.md)입니다.  
   
- 특성 구문은 이러한 태그 확장에 가장 많이 사용되는 구문입니다. `DynamicResource` 식별자 문자열 다음에 나오는 문자열 토큰은 기본 <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> 확장 클래스의 <xref:System.Windows.DynamicResourceExtension> 값으로 할당됩니다.  
+ 특성 구문은 이러한 태그 확장에 가장 많이 사용되는 구문입니다. `DynamicResource` 식별자 문자열 다음에 나오는 문자열 토큰은 기본 <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> 확장명 클래스의 <xref:System.Windows.DynamicResourceExtension> 값으로 할당됩니다.  
   
  개체 요소 구문에 `DynamicResource` 사용할 수 있습니다. 이 경우 <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> 속성의 값을 지정 해야 합니다.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "73460514"
 
 - [XAML 리소스](xaml-resources.md)
 - [리소스 및 코드](resources-and-code.md)
-- [x:Key 지시문](../../xaml-services/x-key-directive.md)
+- [x:Key 지시문](../../../desktop-wpf/xaml-services/xkey-directive.md)
 - [XAML 개요(WPF)](../../../desktop-wpf/fundamentals/xaml.md)
 - [태그 확장 및 WPF XAML](markup-extensions-and-wpf-xaml.md)
 - [StaticResource 태그 확장](staticresource-markup-extension.md)

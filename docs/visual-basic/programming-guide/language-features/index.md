@@ -5,15 +5,15 @@ helpviewer_keywords:
 - Visual Basic code, elements of
 - Visual Basic code
 ms.assetid: b0b21730-298c-47e6-9a2f-cc81f628067b
-ms.openlocfilehash: 8cb0b017410e991628bad59a6986ba37426c913f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 0c8496d4e452da92e0ae994f0b246cc16723c06e
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345060"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636577"
 ---
 # <a name="visual-basic-language-features"></a>Visual Basic 언어 기능
-다음 항목에서는 개체 지향 프로그래밍 언어인 Visual Basic의 필수 구성 요소를 소개 하 고 설명 합니다. 폼 및 컨트롤을 사용하여 자신의 애플리케이션에 사용할 사용자 인터페이스를 만든 다음에는 애플리케이션의 동작을 정의하는 코드를 작성해야 합니다. 모든 최신 프로그래밍 언어와 마찬가지로 Visual Basic는 여러 가지 일반적인 프로그래밍 구문과 언어 요소를 지원 합니다.  
+다음 항목에서는 개체 지향 프로그래밍 언어인 Visual Basic의 필수 구성 요소를 소개 하 고 설명 합니다. 폼 및 컨트롤을 사용하여 자신의 애플리케이션에 사용할 사용자 인터페이스를 만든 다음에는 애플리케이션의 동작을 정의하는 코드를 작성해야 합니다. 현대의 모든 프로그래밍 언어와 같이 Visual Basic은 다양한 공용 프로그래밍 구조 및 언어 요소를 지원합니다.  
   
  다른 언어로 프로그래밍해본 경우 이 섹션에서 다루는 내용의 상당 부분이 익숙할 것입니다. 대부분의 구문이 다른 언어의 구문과 유사 하지만 Visual Basic의 이벤트 기반 특성에는 약간의 차이가 있습니다.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "74345060"
  인터페이스의 정의와 애플리케이션에서 사용할 수 있는 방법을 설명합니다.  
   
  [LINQ](../../../visual-basic/programming-guide/language-features/linq/index.md)  
- [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 기능 및 프로그래밍을 소개하는 항목에 대한 링크를 제공합니다.  
+ LINQ (언어 통합 쿼리) 기능 및 프로그래밍을 소개 하는 항목에 대 한 링크를 제공 합니다.  
   
  [개체 및 클래스](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
  개체 및 클래스의 개요, 사용 방법, 서로 간의 관계, 개체와 클래스가 노출하는 속성, 메서드 및 이벤트의 개요를 제공합니다.  

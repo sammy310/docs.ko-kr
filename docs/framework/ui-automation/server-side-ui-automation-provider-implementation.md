@@ -6,21 +6,21 @@ helpviewer_keywords:
 - UI Automation, server-side provider implementation
 - provider implementation, UI Automation
 ms.assetid: 6acc6d08-bd67-4e2e-915c-9c1d34eb86fe
-ms.openlocfilehash: 35754d49bf223e7afcdec32e8b24cfb749f48aa6
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 25f22d5e8caacc69643f6d79e109ebaa94159d80
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446855"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75632317"
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>서버 쪽 UI 자동화 공급자 구현
 
 > [!NOTE]
-> 이 설명서는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 네임스페이스에 정의된 관리되는 <xref:System.Windows.Automation> 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조하세요.
+> 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조하세요.
 
 이 섹션에서는 사용자 지정 컨트롤에 대한 서버 쪽 UI 자동화 공급자를 구현하는 방법을 설명합니다.
 
-WPF (Windows Presentation Foundation) 요소 및 비[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 요소 (예: [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]용으로 설계 된 요소)에 대 한 구현은 근본적으로 다릅니다. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 요소는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 에서 파생 클래스를 통해 <xref:System.Windows.Automation.Peers.AutomationPeer>에 대해 지원합니다. 비[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 요소는 공급자 인터페이스의 구현을 통해 지원합니다.
+WPF (Windows Presentation Foundation) 요소 및 비 WPF 요소 (예: [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]에 대해 디자인 된 요소)에 대 한 구현은 근본적으로 다릅니다. WPF 요소는 <xref:System.Windows.Automation.Peers.AutomationPeer>에서 파생 된 클래스를 통해 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대 한 지원을 제공 합니다. 비 WPF 요소는 공급자 인터페이스의 구현을 통해 지원을 제공 합니다.
 
 <a name="Security_Considerations"></a>
 
@@ -40,7 +40,7 @@ WPF (Windows Presentation Foundation) 요소 및 비[!INCLUDE[TLA2#tla_wpf](../.
 
 ## <a name="provider-implementation-by-non-wpf-elements"></a>비 WPF 요소를 사용한 공급자 구현
 
-[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 프레임워크의 일부가 아니지만 관리 코드로 작성된 사용자 지정 컨트롤(대부분의 경우 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] 컨트롤)은 인터페이스를 구현하여 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 에 대해 지원합니다. 모든 요소는 다음 섹션의 첫 번째 표에 나온 인터페이스 중 하나 이상을 구현해야 합니다. 또한 요소가 하나 이상의 컨트롤 패턴을 지원하는 경우 각 컨트롤 패턴에 대해 적절한 인터페이스를 구현해야 합니다.
+WPF 프레임 워크의 일부가 아니지만 관리 코드로 작성 된 사용자 지정 컨트롤 (대부분의 경우 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] 컨트롤)은 인터페이스를 구현 하 여 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대 한 지원을 제공 합니다. 모든 요소는 다음 섹션의 첫 번째 표에 나온 인터페이스 중 하나 이상을 구현해야 합니다. 또한 요소가 하나 이상의 컨트롤 패턴을 지원하는 경우 각 컨트롤 패턴에 대해 적절한 인터페이스를 구현해야 합니다.
 
 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 공급자 프로젝트는 다음 어셈블리를 참조해야 합니다.
 
@@ -115,7 +115,7 @@ HWND 기반 컨트롤에 대한 공급자는 일반적으로 다음 속성(필�
 - <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty>
 
 > [!NOTE]
-> 간단한 요소나 창에서 호스트되는 조각 루트의 <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty> 는 창에서 가져옵니다. 그러나 루트 아래의 조각 요소(예: 목록 상자에 있는 목록 항목)는 고유 식별자를 제공해야 합니다. 자세한 내용은 <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.GetRuntimeId%2A>을 참조하세요.
+> 간단한 요소나 창에서 호스트되는 조각 루트의 <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty> 는 창에서 가져옵니다. 그러나 루트 아래의 조각 요소(예: 목록 상자에 있는 목록 항목)는 고유 식별자를 제공해야 합니다. 자세한 내용은 <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.GetRuntimeId%2A>를 참조하세요.
 >
 > <xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty> 컨트롤에서 호스트되는 공급자에 대해 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] 를 반환해야 합니다. 이 경우 기본 창 공급자가 올바른 값을 검색하지 못할 수 있습니다.
 >
@@ -189,7 +189,7 @@ HWND 기반 컨트롤에 대한 공급자는 일반적으로 다음 속성(필�
 
 이를 위해 rebar에 대한 조각 루트 공급자는 밴드는 나타내는 일련의 자식 항목을 노출합니다. 각 밴드에는 속성 및 패턴을 노출할 수 있는 단일 공급자가 있습니다. <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.HostRawElementProvider%2A>구현에서 밴드 공급자는 <xref:System.Windows.Automation.Provider.AutomationInteropProvider.HostProviderFromHandle%2A>호출 후 컨트롤의 창 핸들에 전달하여 가져온 컨트롤 HWND에 대한 기본 창 공급자를 반환합니다. 마지막으로, rebar에 대한 조각 루트 공급자는 <xref:System.Windows.Automation.Provider.IRawElementProviderHwndOverride> 인터페이스를 구현하고 <xref:System.Windows.Automation.Provider.IRawElementProviderHwndOverride.GetOverrideProviderForHwnd%2A> 구현에서 지정된 HWND에 포함된 컨트롤에 적절한 밴드 공급자를 반환합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [UI 자동화 공급자 개요](ui-automation-providers-overview.md)
 - [서버 쪽 UI 자동화 공급자 노출](expose-a-server-side-ui-automation-provider.md)
