@@ -2,12 +2,12 @@
 title: 방화벽 지침
 ms.date: 03/30/2017
 ms.assetid: a7dc429f-65ac-4faf-974a-77d5fb977fe1
-ms.openlocfilehash: 3c94f0edbb244b6c378cc32f05c34fd029d253ff
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: e2c4dd8e784599a5e110e7454d9d0e709cbc5776
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837846"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544782"
 ---
 # <a name="firewall-instructions"></a>방화벽 지침
 WCF (Windows Communication Foundation) 샘플이 작동할 수 있도록 방화벽에서 몇 가지 포트나 프로그램을 사용 하도록 설정 해야 합니다. 대부분의 샘플은 8000-8003 범위의 포트와 포트 9000을 사용하여 통신합니다. 방화벽은 기본적으로 켜져 있어 이러한 포트에 액세스하지 못하도록 합니다. 샘플에 대해 방화벽을 사용하려면 요구 사항 및 보안 환경에 따라 다음 절차 중 하나를 완료합니다.  
@@ -36,7 +36,7 @@ WCF (Windows Communication Foundation) 샘플이 작동할 수 있도록 방화�
   
     - Windows 7 또는 Windows Server 2008 r 2에서 **Windows 방화벽을 통해 프로그램 또는 기능 허용**을 클릭 합니다. **설정 변경**, **다른 프로그램**허용 ...을 클릭 합니다.  
   
-    - Windows Vista 또는 [!INCLUDE[lserver](../../../../includes/lserver-md.md)]에서 **Windows 방화벽을 통해 프로그램 허용**을 클릭 합니다.  
+    - Windows Vista 또는 Windows Server 2008에서 **Windows 방화벽을 통해 프로그램 허용**을 클릭 합니다.  
   
 4. **예외** 탭에서 **프로그램 추가**를 클릭 합니다.  
   
@@ -72,7 +72,7 @@ WCF (Windows Communication Foundation) 샘플이 작동할 수 있도록 방화�
   
     10. **아웃 바운드 규칙** 을 클릭 하 고 c ~ h 단계를 반복 합니다.  
   
-3. Windows Vista 또는 [!INCLUDE[lserver](../../../../includes/lserver-md.md)]에서 다음 단계를 수행 합니다.  
+3. Windows Vista 또는 Windows Server 2008에서 다음 단계를 수행 합니다.  
   
     1. **Windows 방화벽을 통한 프로그램 실행 허용**을 클릭합니다.  
   
