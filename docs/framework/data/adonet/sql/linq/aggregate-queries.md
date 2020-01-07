@@ -2,12 +2,12 @@
 title: 집계 쿼리
 ms.date: 03/30/2017
 ms.assetid: 13ec5580-05ce-4a1f-9d3d-8660be7891a2
-ms.openlocfilehash: e61b16d6337c9b40f9e94052869a4c5592291d71
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 8defefb39974bea150fed84b0e7404b43882c41c
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248111"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75634744"
 ---
 # <a name="aggregate-queries"></a>집계 쿼리
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 `Average`, `Count`, `Max`, `Min` 및 `Sum` 집계 연산자가 지원됩니다. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 집계 연산자의 다음과 같은 특징에 유의하세요.  
@@ -37,15 +37,15 @@ ms.locfileid: "70248111"
  [숫자 시퀀스에서 최소값 찾기](find-the-minimum-value-in-a-numeric-sequence.md)  
  <xref:System.Linq.Enumerable.Min%2A> 연산자를 사용하는 방법을 보여 줍니다.  
   
- [숫자 시퀀스에서 값의 합계 계산](compute-the-sum-of-values-in-a-numeric-sequence.md)  
+ [숫자 시퀀스에서 값의 합계 컴퓨팅](compute-the-sum-of-values-in-a-numeric-sequence.md)  
  <xref:System.Linq.Enumerable.Sum%2A> 연산자를 사용하는 방법을 보여 줍니다.  
   
-## <a name="related-sections"></a>관련 단원  
+## <a name="related-sections"></a>관련 섹션  
  [쿼리 예제](query-examples.md)  
  Visual Basic 및 C#의 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 쿼리에 대한 링크를 제공합니다.  
   
  [쿼리 개념](query-concepts.md)  
- [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]의 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 쿼리 설계 개념을 설명하는 항목에 대한 링크를 제공합니다.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 LINQ 쿼리를 디자인 하는 개념을 설명 하는 항목에 대 한 링크를 제공 합니다.  
   
  [LINQ 쿼리 소개(C#)](../../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)  
- [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]의 쿼리 작동 방식을 설명합니다.
+ LINQ에서 쿼리를 작동 하는 방법을 설명 합니다.

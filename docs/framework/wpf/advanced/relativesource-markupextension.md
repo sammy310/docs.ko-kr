@@ -7,12 +7,12 @@ helpviewer_keywords:
 - RelativeSource markup extensions [WPF]
 - XAML [WPF], RelativeSource markup extension
 ms.assetid: 26be4721-49b5-4717-a92e-7d54ad0d3a81
-ms.openlocfilehash: 28f3aa500014b768bd07723511613a42df8689aa
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 15fdc9d093bb3efb4ea4cef5d4cdfa8474042f12
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458765"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559749"
 ---
 # <a name="relativesource-markupextension"></a>RelativeSource MarkupExtension
 
@@ -40,7 +40,7 @@ ms.locfileid: "73458765"
 </Binding>
 ```
 
-또는
+-또는-
 
 ```xml
 <Binding>
@@ -69,13 +69,13 @@ ms.locfileid: "73458765"
 
 `{RelativeSource FindAncestor}`는 컨트롤이 항상 특정 상위 형식의 시각적 트리에 있을 것으로 예상 되는 경우 컨트롤 템플릿 또는 예측 가능한 자체 포함 UI 컴포지션에 사용 됩니다. 예를 들어, 항목 컨트롤의 항목은 `FindAncestor`를 사용하여 항목 컨트롤 부모 상위 항목의 속성에 바인딩할 수 있습니다. 또는 템플릿에 컨트롤 컴퍼지션의 일부인 요소에서 `FindAncestor` 바인딩을 동일한 컴퍼지션 구조에서 상위 요소로 사용할 수 있습니다.
 
-XAML 구문 섹션에 표시된 `FindAncestor` 모드에 대한 개체 요소 구문에서 `FindAncestor` 모드의 경우에는 특히 두 번째 개체 요소 구문이 사용됩니다. `FindAncestor` 모드에는 <xref:System.Windows.Data.RelativeSource.AncestorType%2A> 값이 필요합니다. 찾을 상위 항목의 형식에 대 한 [X:Type 태그 확장](../../xaml-services/x-type-markup-extension.md) 참조를 사용 하 여 <xref:System.Windows.Data.RelativeSource.AncestorType%2A>를 특성으로 설정 해야 합니다. 바인딩 요청이 실시간으로 처리될 때 <xref:System.Windows.Data.RelativeSource.AncestorType%2A> 값이 사용됩니다.
+XAML 구문 섹션에 표시된 `FindAncestor` 모드에 대한 개체 요소 구문에서 `FindAncestor` 모드의 경우에는 특히 두 번째 개체 요소 구문이 사용됩니다. `FindAncestor` 모드에는 <xref:System.Windows.Data.RelativeSource.AncestorType%2A> 값이 필요합니다. 찾을 상위 항목의 형식에 대 한 [X:Type 태그 확장](../../../desktop-wpf/xaml-services/xtype-markup-extension.md) 참조를 사용 하 여 <xref:System.Windows.Data.RelativeSource.AncestorType%2A>를 특성으로 설정 해야 합니다. 바인딩 요청이 실시간으로 처리될 때 <xref:System.Windows.Data.RelativeSource.AncestorType%2A> 값이 사용됩니다.
 
 `FindAncestor` 모드의 경우 선택적 속성인 <xref:System.Windows.Data.RelativeSource.AncestorLevel%2A>을 사용하면 요소 트리에 같은 형식의 상위 항목이 둘 이상 있을 때 상위 항목을 쉽게 구분할 수 있습니다.
 
 `FindAncestor` 모드를 사용하는 방법에 대한 자세한 내용은 <xref:System.Windows.Data.RelativeSource>를 참조하십시오.
 
-`{RelativeSource Self}` 인스턴스의 한 속성이 같은 인스턴스의 다른 속성 값에 종속 되어야 하 고 이러한 두 속성 간에 일반 종속성 속성 관계 (예: 강제 변환)가 이미 존재 하는 시나리오에 유용 합니다. 값이 동일 하 게 (그리고 동일 하 게 형식화 됨) 개체에 두 속성이 있는 경우는 거의 없지만 `{RelativeSource Self}`있는 바인딩에 `Converter` 매개 변수를 적용 하 고 변환기를 사용 하 여 원본과 대상 간에 변환할 수도 있습니다. 종류. `{RelativeSource Self}`에 대 한 다른 시나리오는 <xref:System.Windows.MultiDataTrigger>의 일부입니다.
+`{RelativeSource Self}` 인스턴스의 한 속성이 같은 인스턴스의 다른 속성 값에 종속 되어야 하 고 이러한 두 속성 간에 일반 종속성 속성 관계 (예: 강제 변환)가 이미 존재 하는 시나리오에 유용 합니다. 두 속성이 동일 하 게 동일 하 게 (그리고 동일 하 게 형식화 됨) 개체에 존재 하는 경우에도 `Converter` 매개 변수를 `{RelativeSource Self}`있는 바인딩에 적용 하 고 변환기를 사용 하 여 소스와 대상 형식 사이를 변환할 수 있습니다. `{RelativeSource Self}`에 대 한 다른 시나리오는 <xref:System.Windows.MultiDataTrigger>의 일부입니다.
 
 예를 들어, 다음 XAML은 <xref:System.Windows.Shapes.Rectangle>에 어떤 값이 입력되더라도 <xref:System.Windows.FrameworkElement.Width%2A>은 항상 사각형이 되도록 <xref:System.Windows.Shapes.Rectangle> 요소를 정의합니다. `<Rectangle Width="200" Height="{Binding RelativeSource={RelativeSource Self}, Path=Width}" .../>`
 
@@ -117,4 +117,4 @@ XAML 구문 섹션에 표시된 `FindAncestor` 모드에 대한 개체 요소 �
 - [태그 확장 및 WPF XAML](markup-extensions-and-wpf-xaml.md)
 - [데이터 바인딩 개요](../../../desktop-wpf/data/data-binding-overview.md)
 - [바인딩 선언 개요](../data/binding-declarations-overview.md)
-- [x:Type 태그 확장](../../xaml-services/x-type-markup-extension.md)
+- [x:Type 태그 확장](../../../desktop-wpf/xaml-services/xtype-markup-extension.md)

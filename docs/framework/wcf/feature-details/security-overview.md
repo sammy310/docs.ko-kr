@@ -1,16 +1,16 @@
 ---
-title: 보안 개요-WCF
+title: 보안 개요
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Communication Foundation, security
 - WCF, security
 ms.assetid: f478c80d-792d-4e7a-96bd-a2ff0b6f65f9
-ms.openlocfilehash: ae03684449e902c0d05744a19671169f2e0b8be2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 58057709e2d5c5e34d0aa37158ea9b033840f840
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949351"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344698"
 ---
 # <a name="windows-communication-foundation-security-overview"></a>Windows Communication Foundation 보안 개요
 WCF (Windows Communication Foundation)는 SOAP 메시지 기반의 분산 프로그래밍 플랫폼 이며, 클라이언트와 서비스 간의 메시지 보안은 데이터를 보호 하는 데 필요 합니다. WCF는 기존 보안 인프라와 SOAP 메시지에 대해 인식 되는 보안 표준을 기반으로 보안 메시지를 교환 하기 위한 다양 하 고 상호 운용할 수 있는 플랫폼을 제공 합니다.  
@@ -68,7 +68,7 @@ WCF (Windows Communication Foundation)는 SOAP 메시지 기반의 분산 프로
 ### <a name="standards-and-interoperability"></a>표준 및 상호 운용성  
  기존의 대규모 배포에서는 동기종 환경을 유지하는 경우가 극히 드뭅니다. 분산 컴퓨팅/통신 플랫폼은 다른 공급업체에서 제공하는 기술과 상호 운용되어야 합니다. 마찬가지로 보안 역시 상호 운용 가능해야 합니다.  
   
- 상호 운용 가능한 보안 시스템을 지원하기 위해 웹 서비스 업계 기업들은 다양한 표준을 작성하고 있습니다. 특히 보안과 관련 하 여 몇 가지 주목할 만한 표준을 제안 했습니다. WS-SECURITY: SOAP 메시지 보안 (OASIS 표준 본문 및 이전의 WS-SECURITY로 알려짐), WS-TRUST, Ws-secureconversation 및 WS-Ws-securitypolicy.  
+ 상호 운용 가능한 보안 시스템을 지원하기 위해 웹 서비스 업계 기업들은 다양한 표준을 작성하고 있습니다. 특히 보안과 관련해서는 WS-Security: SOAP Message Security(OASIS 표준 기구에서 채택, 이전 명칭은 WS-Security), WS-Trust, WS-SecureConversation 및 WS-SecurityPolicy와 같은 몇몇 주요 표준이 제안되었습니다.  
   
  WCF는 다양 한 상호 운용성 시나리오를 지원 합니다. <xref:System.ServiceModel.BasicHttpBinding> 클래스는 BSP(기본 보안 프로필)를 대상으로 하고 <xref:System.ServiceModel.WSHttpBinding> 클래스는 WS-Security 1.1 및 WS-SecureConversation과 같은 최신 보안 표준을 대상으로 합니다. 이러한 표준을 준수 하 여 WCF 보안은 Microsoft Windows 이외의 운영 체제 및 플랫폼에서 호스팅되는 웹 서비스와 상호 운용 하 고 통합할 수 있습니다.  
   
@@ -89,21 +89,21 @@ WCF (Windows Communication Foundation)는 SOAP 메시지 기반의 분산 프로
   
  세 번째 보안 모드는 위 두 가지 모드를 모두 사용하며 두 모드의 이점을 모두 갖추고 있습니다. 이 모드를 `TransportWithMessageCredential`이라고 합니다. 이 모드에서는 클라이언트를 인증하는 데 메시지 보안을 사용하고 서버를 인증하고 메시지 기밀성과 무결성을 제공하는 데 전송 보안을 사용합니다. 이로 인해 `TransportWithMessageCredential` 보안 모드는 전송 보안 모드만큼 빠른 속도를 제공하면서 메시지 보안과 같은 방식으로 클라이언트 인증 확장성을 지원합니다. 반면 메시지 보안 모드와는 달리 완벽한 엔드투엔드 보안은 제공하지 않습니다.  
   
-### <a name="access-control"></a>Access Control  
+### <a name="access-control"></a>액세스 제어  
  *액세스 제어* 를 권한 부여 라고도 합니다. *권한 부여* 를 통해 서로 다른 사용자가 데이터를 볼 수 있는 권한을 가질 수 있습니다. 예를 들어, 회사의 인사 관리 파일에는 중요한 직원 데이터가 들어 있기 때문에 관리자만 직원 데이터를 볼 수 있습니다. 또한 관리자는 자신이 관리하는 부하 직원에 대한 데이터만 볼 수 있습니다. 이 경우 액세스 제어는 역할("관리자")뿐 아니라 관리자의 특정 ID에 기반하므로 관리자는 다른 관리자의 직원 레코드를 볼 수 없습니다.  
   
- WCF에서 액세스 제어 기능은 CLR (공용 언어 런타임) <xref:System.Security.Permissions.PrincipalPermissionAttribute> 과의 통합 및 *id 모델*이라는 api 집합을 통해 제공 됩니다. 액세스 제어 및 클레임 기반 권한 부여에 대 한 자세한 내용은 [보안 확장](../../../../docs/framework/wcf/extending/extending-security.md)을 참조 하세요.  
+ WCF에서 액세스 제어 기능은 CLR (공용 언어 런타임 <xref:System.Security.Permissions.PrincipalPermissionAttribute>)과의 통합 및 *id 모델*이라는 api 집합을 통해 제공 됩니다. 액세스 제어 및 클레임 기반 권한 부여에 대 한 자세한 내용은 [보안 확장](../../../../docs/framework/wcf/extending/extending-security.md)을 참조 하세요.  
   
 ### <a name="auditing"></a>감사  
- *감사* 는 Windows 이벤트 로그에 보안 이벤트를 기록 하는 것입니다. 인증 실패 또는 성공과 같은 보안 관련 이벤트를 기록할 수 있습니다. 자세한 내용은 [감사](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)합니다. 프로그래밍에 대 한 자세한 [내용은 방법: 보안 이벤트](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)를 감사 합니다.  
+ *감사* 는 Windows 이벤트 로그에 보안 이벤트를 기록 하는 것입니다. 인증 실패 또는 성공과 같은 보안 관련 이벤트를 기록할 수 있습니다. 자세한 내용은 [감사](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)합니다. 프로그래밍에 대 한 자세한 내용은 [방법: 보안 이벤트 감사](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)를 참조 하세요.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Security.Permissions.PrincipalPermissionAttribute>
 - [서비스에 보안 설정](../../../../docs/framework/wcf/securing-services.md)
 - [일반적인 보안 시나리오](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)
 - [바인딩 및 보안](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)
-- [서비스 및 클라이언트에 보안 설정](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Securing Services and Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
 - [인증](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)
 - [권한 부여](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)
 - [페더레이션 및 발급된 토큰](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)

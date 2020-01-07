@@ -1,13 +1,13 @@
 ---
-title: '사용자 지정 메시지 인코더: 사용자 지정 텍스트 인코더-WCF'
+title: 'Custom Message Encoder: Custom Text Encoder'
 ms.date: 03/30/2017
 ms.assetid: 68ff5c74-3d33-4b44-bcae-e1d2f5dea0de
-ms.openlocfilehash: 17ad1f2ab557c470a39ab5fff6c1c52d5e41a2a5
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: ae9d7f3d24e70c5cc74378eaaaa224910ada8d25
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716833"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347941"
 ---
 # <a name="custom-message-encoder-custom-text-encoder"></a>Custom Message Encoder: Custom Text Encoder
 
@@ -212,7 +212,7 @@ CustomBinding binding = new CustomBinding(bindingElements);
 
 ## <a name="adding-metadata-support-to-the-message-encoding-binding-element"></a>메시지 인코딩 바인딩 요소에 메타데이터 지원 추가
 
-<xref:System.ServiceModel.Channels.MessageEncodingBindingElement>에서 파생 되는 모든 형식은 서비스에 대해 생성 된 WSDL 문서에서 SOAP 바인딩의 버전을 업데이트 해야 합니다. 이 작업은 `ExportEndpoint` 인터페이스에서 <xref:System.ServiceModel.Description.IWsdlExportExtension> 메서드를 구현한 다음 생성된 WSDL을 수정하여 수행됩니다. 이 샘플에서 `CustomTextMessageBindingElement`는 `TextMessageEncodingBindingElement`의 WSDL 내보내기 논리를 사용합니다.
+<xref:System.ServiceModel.Channels.MessageEncodingBindingElement>에서 파생되는 모든 형식은 서비스에 대해 생성되는 WSDL 문서에서 SOAP 바인딩 버전을 업데이트합니다. 이 작업은 `ExportEndpoint` 인터페이스에서 <xref:System.ServiceModel.Description.IWsdlExportExtension> 메서드를 구현한 다음 생성된 WSDL을 수정하여 수행됩니다. 이 샘플에서 `CustomTextMessageBindingElement`는 `TextMessageEncodingBindingElement`의 WSDL 내보내기 논리를 사용합니다.
 
 이 샘플에서 클라이언트 구성은 수동 구성입니다. `CustomTextMessageBindingElement`는 그 동작을 설명하기 위해 정책 어설션을 내보내지 않으므로 Svcutil.exe를 사용하여 클라이언트 구성을 생성할 수 없습니다. 일반적으로 사용자 지정 바인딩 요소에서 <xref:System.ServiceModel.Description.IPolicyExportExtension> 인터페이스를 구현하여 바인딩 요소에서 구현한 동작 또는 기능을 설명하는 사용자 지정 정책 어설션을 내보내야 합니다. 사용자 지정 바인딩 요소에 대 한 정책 어설션을 내보내는 방법에 대 한 예제는 [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) 샘플을 참조 하세요.
 

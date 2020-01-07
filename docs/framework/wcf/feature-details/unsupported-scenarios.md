@@ -2,12 +2,12 @@
 title: 지원되지 않는 시나리오
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-ms.openlocfilehash: 67a4e64208e00f9124b3cdc53d743c060274dac2
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 87c0d9984fe823eae0e3cc281ebda55bc33a541e
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837976"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544797"
 ---
 # <a name="unsupported-scenarios"></a>지원되지 않는 시나리오
 다양 한 이유로 WCF (Windows Communication Foundation)는 특정 보안 시나리오를 지원 하지 않습니다. 예를 들어 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition은 SSPI 또는 Kerberos 인증 프로토콜을 구현 하지 않으므로 WCF는 해당 플랫폼에서 Windows 인증을 사용 하는 서비스 실행을 지원 하지 않습니다. Windows XP Home Edition에서 WCF를 실행 하는 경우 사용자 이름/암호 및 HTTP/HTTPS 통합 인증과 같은 다른 인증 메커니즘을 사용할 수 있습니다.  
@@ -62,7 +62,7 @@ ms.locfileid: "74837976"
  FIPS 규격 AES 암호화는 확인 수준 가장의 이중 콜백에서 작동하지 않습니다.  
   
 ### <a name="cngksp-certificates"></a>CNG/KSP 인증서  
- *암호화 API: 차세대 (CNG)* 는 CryptoAPI의 장기 대체 항목입니다. 이 API는 Windows Vista의 비관리 코드, [!INCLUDE[lserver](../../../../includes/lserver-md.md)] 이상 버전에서 사용할 수 있습니다.  
+ *암호화 API: 차세대 (CNG)* 는 CryptoAPI의 장기 대체 항목입니다. 이 API는 Windows Vista, Windows Server 2008 이상 버전의 비관리 코드에서 사용할 수 있습니다.  
   
  .NET Framework 4.6.1 및 이전 버전은 레거시 CryptoAPI를 사용 하 여 CNG/KSP 인증서를 처리 하기 때문에 이러한 인증서를 지원 하지 않습니다. .NET Framework 4.6.1 이전 버전에서 이러한 인증서를 사용 하면 예외가 발생 합니다.  
   

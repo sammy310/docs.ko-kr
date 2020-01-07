@@ -1,13 +1,13 @@
 ---
-title: 사용 및 스타일 속성 설정-WCF 샘플
+title: 사용 및 스타일 속성 샘플 설정
 ms.date: 03/30/2017
 ms.assetid: c09a0600-116f-41cf-900a-1b7e4ea4e300
-ms.openlocfilehash: f92b25144759692c54aa7a1730a9bb85cab4f15f
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 36111aa05680fb8b369cde6b42d22c9c3b8474ad
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714433"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345126"
 ---
 # <a name="setting-the-use-and-style-properties"></a>속성의 사용 및 스타일 설정
 
@@ -25,7 +25,7 @@ ms.locfileid: "74714433"
 </wsdl:message>
 ```
 
-스타일을 <xref:System.ServiceModel.OperationFormatStyle.Document>로 설정 하면 다음 예제와 같이 WSDL 표현에 작업에 대해 교환 되는 문서를 나타내는 단일 요소가 포함 됩니다.
+스타일을 <xref:System.ServiceModel.OperationFormatStyle.Document>로 설정하면 다음 예제와 같이 WSDL 표현에는 작업에 대해 교환된 문서를 나타내는 요소가 하나 포함됨을 의미합니다.
 
 ```xml
 <wsdl:message name="IUseAndStyleCalculator_Add_InputMessage">
@@ -42,7 +42,7 @@ ms.locfileid: "74714433"
 </Add>
 ```
 
-인코딩된은 WSDL의 스키마가 SOAP 1.1 섹션 5에 있는 규칙에 따라 인코딩된 추상 사양 임을 의미 합니다. 다음은 RPC/Encoded 예제입니다.
+Encoded는 WSDL의 스키마가 SOAP 1.1 섹션 5의 규칙에 따라 인코딩된 추상 사양임을 나타냅니다. 다음은 RPC/Encoded 예제입니다.
 
 ```xml
 <q1:Add xmlns:q1="http://Microsoft.ServiceModel.Samples">

@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: 359b10eb-ec05-4cc6-ac96-c2b060afc4de
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1ac2f2a33ce66813c009d475a1f7b2b27937a0c3
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
-ms.translationtype: MT
+ms.openlocfilehash: 95d56888085ac7799992638f69ee1227c4c47325
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425156"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345529"
 ---
 # <a name="xml-schema-xsd-validation-with-xmlschemaset"></a>XmlSchemaSet을 사용하여 XSD(XML 스키마) 유효성 검사
 <xref:System.Xml.Schema.XmlSchemaSet>의 XSD(XML 스키마 정의 언어) 스키마에 대해 XML 문서의 유효성을 검사할 수 있습니다.  
@@ -23,7 +23,7 @@ ms.locfileid: "73425156"
  <xref:System.Xml.XmlReader.Create%2A> 클래스의 <xref:System.Xml.XmlReader> 메서드를 사용하여 XML 문서의 유효성을 검사할 수 있습니다. XML 문서의 유효성을 검사하려면 XML 문서의 유효성을 검사하는 데 사용할 XSD(XML 스키마 정의 언어) 스키마가 포함된 <xref:System.Xml.XmlReaderSettings> 개체를 만듭니다.  
   
 > [!NOTE]
-> <xref:System.Xml.Schema> 네임스페이스에는 [LINQ to XML(C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md) 및 [LINQ to XML(Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)을 사용할 때 XSD 파일에 대한 XML 트리의 유효성을 쉽게 검사할 수 있도록 하는 확장 메서드가 포함되어 있습니다. LINQ to XML 사용 하 여 XML 문서의 유효성을 검사 하는 방법에 대 한 자세한 내용은 [방법: xsd를C#사용 하 여 유효성 검사 (LINQ to XML) ()](../../../csharp/programming-guide/concepts/linq/how-to-validate-using-xsd-linq-to-xml.md) 및 [방법: LINQ to XML xsd를 사용 하 여 유효성 검사 (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/how-to-validate-using-xsd-linq-to-xml.md)를 참조 하세요.  
+> <xref:System.Xml.Schema> 네임스페이스에는 [LINQ to XML(C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md) 및 [LINQ to XML(Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)을 사용할 때 XSD 파일에 대한 XML 트리의 유효성을 쉽게 검사할 수 있도록 하는 확장 메서드가 포함되어 있습니다. LINQ to XML를 사용 하 여 XML 문서의 유효성을 검사 하는 방법에 대 한 자세한 내용은 [xsd (C#LINQ to XML)를 사용 하 여 유효성을 검사 하는 방법 ()](../../../csharp/programming-guide/concepts/linq/how-to-validate-using-xsd-linq-to-xml.md) 및 [방법: xsd (LINQ to XML Visual Basic)를 사용 하 여 유효성](../../../visual-basic/programming-guide/concepts/linq/how-to-validate-using-xsd-linq-to-xml.md)검사
   
  개별 스키마 또는 스키마 집합(<xref:System.Xml.Schema.XmlSchemaSet>) 중 하나를 <xref:System.Xml.Schema.XmlSchemaSet>의 <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> 메서드에 대한 매개 변수로 전달하여 개별 스키마 또는 스키마 집합을 <xref:System.Xml.Schema.XmlSchemaSet>에 추가할 수 있습니다. 문서 유효성을 확인할 때 문서의 대상 네임스페이스는 스키마 집합에 있는 스키마의 대상 네임스페이스와 일치해야 합니다.  
   

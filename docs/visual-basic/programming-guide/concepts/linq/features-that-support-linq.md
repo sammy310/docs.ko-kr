@@ -5,15 +5,15 @@ helpviewer_keywords:
 - Visual Basic, LINQ features
 - LINQ [Visual Basic], features supporting LINQ
 ms.assetid: c821bb50-b6f6-4cf9-8aba-2717e465bd3a
-ms.openlocfilehash: e81d0434aa60e0c7b316b72fb78ebfe2a3782cbb
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 57c0566f9a76715e48b20f2e6493aa1a506c64be
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353512"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636863"
 ---
 # <a name="visual-basic-features-that-support-linq"></a>LINQ를 지원하는 Visual Basic 기능
-이름 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]는 언어에서 직접 쿼리 구문 및 기타 언어 구문을 지 원하는 Visual Basic의 기술을 나타냅니다. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]를 사용 하면 외부 데이터 원본에 대해 쿼리 하는 새 언어를 배울 필요가 없습니다. Visual Basic를 사용 하 여 관계형 데이터베이스, XML 저장소 또는 개체의 데이터에 대해 쿼리할 수 있습니다. 이러한 쿼리 기능을 언어에 통합 하면 구문 오류 및 형식 안전성에 대 한 컴파일 시간 검사를 수행할 수 있습니다. 또한이 통합은 Visual Basic에서 다양 한 가변 쿼리를 작성 하기 위해 알고 있어야 하는 사항 대부분을 이미 알고 있습니다.  
+LINQ (이름 언어 통합 쿼리)는 언어에서 직접 쿼리 구문 및 기타 언어 구문을 지 원하는 Visual Basic의 기술을 나타냅니다. LINQ를 사용 하면 외부 데이터 원본에 대해 쿼리 하는 새 언어를 배울 필요가 없습니다. Visual Basic를 사용 하 여 관계형 데이터베이스, XML 저장소 또는 개체의 데이터에 대해 쿼리할 수 있습니다. 이러한 쿼리 기능을 언어에 통합 하면 구문 오류 및 형식 안전성에 대 한 컴파일 시간 검사를 수행할 수 있습니다. 또한이 통합은 Visual Basic에서 다양 한 가변 쿼리를 작성 하기 위해 알고 있어야 하는 사항 대부분을 이미 알고 있습니다.  
   
  다음 섹션에서는 소개 문서, 코드 예제 및 예제 응용 프로그램을 읽을 수 있는 충분 한 정보를 제공 하는 언어 구문에 대해 설명 합니다. 또한 링크를 클릭 하 여 언어 기능을 함께 사용 하 여 언어 통합 쿼리를 사용 하는 방법에 대 한 자세한 설명을 찾을 수 있습니다. [연습: Visual Basic에서 쿼리 작성](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md)을 시작 하는 것이 좋습니다.  
   
@@ -55,8 +55,8 @@ ms.locfileid: "74353512"
   
  자세한 내용은 [무명 형식](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)을 참조하세요.  
   
-## <a name="extension-methods"></a>확장 메서드  
- 확장 메서드를 사용 하면 정의 외부에서 데이터 형식 또는 인터페이스에 메서드를 추가할 수 있습니다. 이 기능을 사용 하면 실제로 형식을 수정 하지 않고도 기존 형식에 새 메서드를 추가할 수 있습니다. 표준 쿼리 연산자는 <xref:System.Collections.Generic.IEnumerable%601>를 구현 하는 모든 형식에 대해 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리 기능을 제공 하는 확장 메서드 집합입니다. <xref:System.Collections.Generic.IEnumerable%601>에 대 한 다른 확장에는 <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Union%2A>및 <xref:System.Linq.Enumerable.Intersect%2A>포함 됩니다.  
+## <a name="extension-methods"></a>확장명 메서드  
+ 확장 메서드를 사용 하면 정의 외부에서 데이터 형식 또는 인터페이스에 메서드를 추가할 수 있습니다. 이 기능을 사용 하면 실제로 형식을 수정 하지 않고도 기존 형식에 새 메서드를 추가할 수 있습니다. 표준 쿼리 연산자는 <xref:System.Collections.Generic.IEnumerable%601>을 구현 하는 모든 형식에 대해 LINQ 쿼리 기능을 제공 하는 확장 메서드 집합입니다. <xref:System.Collections.Generic.IEnumerable%601>에 대 한 다른 확장에는 <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Union%2A>및 <xref:System.Linq.Enumerable.Intersect%2A>포함 됩니다.  
   
  다음 확장 메서드는 인쇄 메서드를 <xref:System.String> 클래스에 추가 합니다.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "74353512"
   
  [!code-vb[VbLINQVbFeatures#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQVbFeatures/VB/Class1.vb#12)]  
   
- [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]에서 람다 식은 많은 표준 쿼리 연산자의 기반이 됩니다. 컴파일러는 `Where`, `Select`, `Order By`, `Take While`등의 기본 쿼리 메서드에 정의 된 계산을 캡처하기 위해 람다 식을 만듭니다.  
+ LINQ에서 람다 식은 많은 표준 쿼리 연산자의 기반이 됩니다. 컴파일러는 `Where`, `Select`, `Order By`, `Take While`등의 기본 쿼리 메서드에 정의 된 계산을 캡처하기 위해 람다 식을 만듭니다.  
   
  예를 들어 다음 코드는 학생 목록에서 모든 선임 학생을 반환 하는 쿼리를 정의 합니다.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "74353512"
   
  자세한 내용은 [람다 식](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)을 참조하세요.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [LINQ(Language-Integrated Query)(Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)
 - [Visual Basic에서 LINQ 시작](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)

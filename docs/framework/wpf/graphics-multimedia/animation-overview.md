@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Storyboards [WPF], animations
 - animations [WPF], overview
 ms.assetid: bd9ce563-725d-4385-87c9-d7ee38cf79ea
-ms.openlocfilehash: 870fc1d1f02dca7d4488a27385fcfeaec8098ced
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: f0f55c948d10c61ebab57f47e3461531ccf5f610
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039182"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559718"
 ---
 # <a name="animation-overview"></a>애니메이션 개요
 
@@ -201,7 +201,7 @@ ms.locfileid: "73039182"
 
 애니메이션은 속성 값을 생성하므로 속성 형식마다 다양한 애니메이션 형식이 존재합니다. 요소의 <xref:System.Windows.FrameworkElement.Width%2A> 속성과 같이 <xref:System.Double>를 사용 하는 속성에 애니메이션 효과를 주려면 <xref:System.Double> 값을 생성 하는 애니메이션을 사용 합니다. <xref:System.Windows.Point>를 사용 하는 속성에 애니메이션 효과를 주려면 <xref:System.Windows.Point> 값 등을 생성 하는 애니메이션을 사용 합니다. 여러 가지 속성 유형 때문에 <xref:System.Windows.Media.Animation> 네임 스페이스에 몇 가지 애니메이션 클래스가 있습니다. 다행스럽게도 쉬운 구분을 위해 엄격한 명명 규칙을 따릅니다.
 
-- \<*형식*> 애니메이션
+- \<*Type*>Animation
 
   "From/To/By" 또는 "basic" 애니메이션으로도 알려져 있는 이러한 클래스는 시작 값과 대상 값 사이에 애니메이션 효과를 주거나 시작 값에 오프셋 값을 추가하여 애니메이션 효과를 줍니다.
 
@@ -221,9 +221,9 @@ ms.locfileid: "73039182"
 
   경로 애니메이션에서는 기하학적 경로를 사용하여 애니메이션 사용 값을 생성할 수 있습니다.
 
-- \<*형식*> AnimationBase
+- \<*Type*>AnimationBase
 
-  구현할 때 \<*형식*> 값에 애니메이션 효과를 주는 추상 클래스입니다. 이 클래스는 \<*형식*> 애니메이션 및 \<*형식*> AnimationUsingKeyFrames 클래스에 대 한 기본 클래스로 사용 됩니다. 사용자 고유의 사용자 지정 애니메이션을 만들려는 경우에만 이러한 클래스를 직접 처리해야 합니다. 그렇지 않으면 애니메이션 또는 키 프레임\<*형식*> \<*형식*> 애니메이션을 사용 합니다.
+  구현된 추상 클래스는 \<*Type*> 값에 애니메이션 효과를 줍니다. 이 클래스는 \<*Type*>Animation 및 \<*Type*>AnimationUsingKeyFrames 클래스의 기본 클래스로 사용됩니다. 사용자 고유의 사용자 지정 애니메이션을 만들려는 경우에만 이러한 클래스를 직접 처리해야 합니다. 그렇지 않은 경우 \<*Type*>Animation 또는 KeyFrame\<*Type*>Animation을 사용하세요.
 
 대부분의 경우 <xref:System.Windows.Media.Animation.DoubleAnimation> 및 <xref:System.Windows.Media.Animation.ColorAnimation>과 같은 \<*형식*> 애니메이션 클래스를 사용 하는 것이 좋습니다.
 
@@ -231,10 +231,10 @@ ms.locfileid: "73039182"
 
 |속성 형식|해당 basic(From/To/By) 애니메이션|해당 키 프레임 애니메이션|해당 경로 애니메이션|사용 예제|
 |-------------------|----------------------------------------------------|---------------------------------------|----------------------------------|-------------------|
-|<xref:System.Windows.Media.Color>|<xref:System.Windows.Media.Animation.ColorAnimation>|<xref:System.Windows.Media.Animation.ColorAnimationUsingKeyFrames>|없음|<xref:System.Windows.Media.SolidColorBrush> 또는 <xref:System.Windows.Media.GradientStop>의 <xref:System.Windows.Media.SolidColorBrush.Color%2A>에 애니메이션 효과를 적용 합니다.|
+|<xref:System.Windows.Media.Color>|<xref:System.Windows.Media.Animation.ColorAnimation>|<xref:System.Windows.Media.Animation.ColorAnimationUsingKeyFrames>|None|<xref:System.Windows.Media.SolidColorBrush> 또는 <xref:System.Windows.Media.GradientStop>의 <xref:System.Windows.Media.SolidColorBrush.Color%2A>에 애니메이션 효과를 적용 합니다.|
 |<xref:System.Double>|<xref:System.Windows.Media.Animation.DoubleAnimation>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingPath>|<xref:System.Windows.Controls.DockPanel> 또는 <xref:System.Windows.Controls.Button><xref:System.Windows.FrameworkElement.Height%2A> <xref:System.Windows.FrameworkElement.Width%2A>에 애니메이션 효과를 적용 합니다.|
 |<xref:System.Windows.Point>|<xref:System.Windows.Media.Animation.PointAnimation>|<xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames>|<xref:System.Windows.Media.Animation.PointAnimationUsingPath>|<xref:System.Windows.Media.EllipseGeometry>의 <xref:System.Windows.Media.EllipseGeometry.Center%2A> 위치에 애니메이션 효과를 적용 합니다.|
-|<xref:System.String>|없음|<xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames>|없음|<xref:System.Windows.Controls.TextBlock> 또는 <xref:System.Windows.Controls.Button><xref:System.Windows.Controls.ContentControl.Content%2A> <xref:System.Windows.Controls.TextBlock.Text%2A>에 애니메이션 효과를 적용 합니다.|
+|<xref:System.String>|None|<xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames>|None|<xref:System.Windows.Controls.TextBlock> 또는 <xref:System.Windows.Controls.Button><xref:System.Windows.Controls.ContentControl.Content%2A> <xref:System.Windows.Controls.TextBlock.Text%2A>에 애니메이션 효과를 적용 합니다.|
 
 <a name="animationsaretimelines"></a>
 
@@ -254,7 +254,7 @@ ms.locfileid: "73039182"
 
 다음 구문에서는 <xref:System.Windows.Media.Animation.Timeline.Duration%2A> 속성에 대 한 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 특성 구문의 단순화 된 버전을 보여 줍니다.
 
-*hours* `:` *minutes* `:` *seconds*
+*시간* `:` *분* `:` *초*
 
 다음 표에서는 몇 가지 <xref:System.Windows.Duration> 설정 및 그 결과 값을 보여 줍니다.
 
@@ -292,7 +292,7 @@ ms.locfileid: "73039182"
 
 - 애니메이션 대상 <xref:System.Windows.FrameworkElement> 만들려면 해당 <xref:System.Windows.FrameworkElement.Name%2A> 속성을 설정 하 여 이름을 지정 합니다. 또한 코드에서 <xref:System.Windows.FrameworkElement.RegisterName%2A> 메서드를 사용 하 여 요소 이름을 속한 페이지에 요소 이름을 등록 해야 합니다.
 
-- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]에서 <xref:System.Windows.Freezable> 개체를 애니메이션 대상으로 만들려면 [X:Name 지시문](../../xaml-services/x-name-directive.md) 을 사용 하 여 이름을 할당 합니다. 코드에서는 <xref:System.Windows.FrameworkElement.RegisterName%2A> 메서드를 사용 하 여 개체를 자신이 속한 페이지에 등록 하기만 하면 됩니다.
+- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]에서 <xref:System.Windows.Freezable> 개체를 애니메이션 대상으로 만들려면 [X:Name 지시문](../../../desktop-wpf/xaml-services/xname-directive.md) 을 사용 하 여 이름을 할당 합니다. 코드에서는 <xref:System.Windows.FrameworkElement.RegisterName%2A> 메서드를 사용 하 여 개체를 자신이 속한 페이지에 등록 하기만 하면 됩니다.
 
 다음 섹션에서는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 및 코드에서 요소 이름을 지정 하는 예제를 제공 합니다. 이름 지정 및 대상 지정에 대 한 자세한 내용은 [Storyboard 개요](storyboards-overview.md)를 참조 하세요.
 
@@ -367,7 +367,7 @@ ms.locfileid: "73039182"
 
 ## <a name="related-topics"></a>관련 항목
 
-|제목|Description|
+|제목|설명|
 |-----------|-----------------|
 |[애니메이션 및 타이밍 시스템 개요](animation-and-timing-system-overview.md)|타이밍 시스템에서 <xref:System.Windows.Media.Animation.Timeline>를 사용 하 고 <xref:System.Windows.Media.Animation.Clock> 클래스를 사용 하 여 애니메이션을 만들 수 있는 방법을 설명 합니다.|
 |[애니메이션에 대한 유용한 정보](animation-tips-and-tricks.md)|성능 같은 애니메이션 문제 해결에 도움이 되는 유용한 정보를 나열합니다.|

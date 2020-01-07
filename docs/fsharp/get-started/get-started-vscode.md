@@ -2,25 +2,25 @@
 title: Visual Studio Code에서 F# 시작
 description: Visual Studio Code와 Ionide 플러그인 도구 모음으로 F#을 사용하는 방법을 알아봅니다.
 ms.date: 12/23/2018
-ms.openlocfilehash: 2802438144eb2352c3abeeccfc126b16c6a87d8f
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 91265303c2954387df0f500940c9af68b3c97dac
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204908"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559666"
 ---
 # <a name="get-started-with-f-in-visual-studio-code"></a>Visual Studio Code에서 F# 시작
 
-리팩터링 F# [ide 플러그](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp) 인을 사용 하 여 [Visual Studio Code](https://code.visualstudio.com) 을 작성 하 여 IntelliSense 및 코드를 사용 하는 뛰어난 플랫폼 간 경량 ide (통합 개발 환경) 환경을 가져올 수 있습니다. 플러그 인에 대 한 자세한 내용은 [Ionide.io](http://ionide.io) 를 참조 하세요.
+리팩터링 F# [ide 플러그](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp) 인을 사용 하 여 [Visual Studio Code](https://code.visualstudio.com) 을 작성 하 여 IntelliSense 및 코드를 사용 하는 뛰어난 플랫폼 간 경량 ide (통합 개발 환경) 환경을 가져올 수 있습니다. 이 플러그인을 더 자세히 알고 싶다면 [Ionide.io](http://ionide.io)를 방문합니다.
 
-시작 하려면 [ F# 및 작동 하는 ide 플러그 인이 올바르게 설치](install-fsharp.md#install-f-with-visual-studio-code)되어 있는지 확인 합니다.
+시작하려면 [F#과 Ionide 플러그인의 설치](install-fsharp.md#install-f-with-visual-studio-code)가 올바르게 되어있는지 확인합니다.
 
 ## <a name="create-your-first-project-with-ionide"></a>이상 Ide를 사용 하 여 첫 번째 프로젝트 만들기
 
 새 F# 프로젝트를 만들려면 명령줄을 열고 .NET Core CLI를 사용 하 여 새 프로젝트를 만듭니다.
 
 ```dotnetcli
-dotnet new console -lang F# -o FirstIonideProject
+dotnet new console -lang "F#" -o FirstIonideProject
 ```
 
 완료 되 면 디렉터리를 프로젝트로 변경 하 고 Visual Studio Code를 엽니다.
@@ -50,7 +50,7 @@ Visual Studio Code에서 프로젝트가 로드 되 면 창의 왼쪽에 F# 솔�
 
 [!code-fsharp[ToPigLatin](~/samples/snippets/fsharp/getting-started/to-pig-latin.fsx)]
 
-이 함수는 단어를 [Pig 라틴어](https://en.wikipedia.org/wiki/Pig_Latin)형식으로 변환 합니다. 다음으로 F# Interactive (FSI)를 사용하여 평가합니다.
+이 함수는 단어를 [Pig Latin](https://en.wikipedia.org/wiki/Pig_Latin) 형태로 변환합니다. 다음으로 F# Interactive (FSI)를 사용하여 평가합니다.
 
 전체 함수를 강조 표시합니다(11줄 길이여야 함). 강조 표시 되 면 **Alt** 키를 누르고 **enter**키를 누릅니다. 화면 아래쪽에 터미널 창이 표시 되 고 다음과 같이 표시 됩니다.
 
@@ -62,7 +62,7 @@ Visual Studio Code에서 프로젝트가 로드 되 면 창의 왼쪽에 F# 솔�
 2. FSI 프로세스로 강조 표시된 코드를 전송했습니다.
 3. FSI 프로세스에서 전송한 코드를 평가합니다.
 
-에서 전송 된 항목은 [함수](../language-reference/functions/index.md)이기 때문에 이제 fsi.exe!를 사용 하 여 해당 함수를 호출할 수 있습니다. 대화형 창에서 다음을 입력합니다.
+[함수](../language-reference/functions/index.md)를 전송했으므로 이제 FSI를 사용하여 해당 함수를 호출할 수 있습니다. 대화형 창에서 다음을 입력합니다.
 
 ```fsharp
 toPigLatin "banana";;
@@ -89,7 +89,7 @@ val it : string = "appleyay"
 예상대로 함수가 작동합니다. 축하합니다. 첫 번째 F#함수를 Visual Studio Code에서 작성하고 FSI를 사용하여 평가했습니다!
 
 > [!NOTE]
-> FSI.EXE의 줄은 `;;`로 종료 됩니다. FSI에서는 여러 줄의 입력을 허용하기 때문입니다. 끝에 `;;`는 코드 완료 시점을 FSI.EXE 알 수 있습니다.
+> FSI에서는 `;;`가 라인의 끝입니다. FSI에서는 여러 줄의 입력을 허용하기 때문입니다. 마지막에 있는 `;;`는 FSI가 코드의 마지막이라는 것을 인지할 수 있게 해줍니다.
 
 ## <a name="explaining-the-code"></a>코드 설명
 
@@ -133,7 +133,7 @@ REPL 기반 개발의 다음 단계는 작업 코드를 F# 구현 파일로 이�
 
 그런 다음 `PigLatin` 이라는 새 [`module`](../language-reference/modules.md) 만들고 앞에서 만든 `toPigLatin` 함수를 다음과 같이 복사 합니다.
 
-[!code-fsharp[ToPigLatin](~/samples/snippets/fsharp/getting-started/pig-latin.fs#L1-L14)]
+[!code-fsharp[ToPigLatin](~/samples/snippets/fsharp/getting-started/pig-latin.fs#L3-L14)]
 
 이 모듈은 `main` 함수와 `open System` 선언 아래에 있어야 합니다. 의 F#선언 순서는 중요 하므로 파일에서 호출 하기 전에 함수를 정의 해야 합니다.
 
@@ -151,7 +151,7 @@ let main argv =
 
 이제 명령줄에서 콘솔 앱을 실행할 수 있습니다.
 
-```console
+```dotnetcli
 dotnet run apple banana
 ```
 
@@ -164,7 +164,7 @@ dotnet run apple banana
 1. F# 파일을 디스크에 저장 하 고 Visual Studio Code 작업 영역에 열려 있는 폴더 내에 저장 해야 합니다.
 1. 시스템이 열려 있는 상태에서 시스템을 변경 하거나 Visual Studio Code를 설치한 경우 Visual Studio Code를 다시 시작 합니다.
 1. 프로젝트 디렉터리에 잘못 된 문자가 있는 경우에는 작동 하지 않을 수 있습니다.  이 경우 프로젝트 디렉터리의 이름을 바꿉니다.
-1. 작동 하는 지 여부 Ide 명령이 없으면 [Visual Studio Code 키 바인딩을](https://code.visualstudio.com/docs/customization/keybindings#_customizing-shortcuts) 확인 하 여 실수로 재정의 하 고 있는지 확인 합니다.
+1. 작동 하는 지 여부 Ide 명령이 없으면 [Visual Studio Code 키 바인딩을](https://code.visualstudio.com/docs/getstarted/keybindings#_advanced-customization) 확인 하 여 실수로 재정의 하 고 있는지 확인 합니다.
 1. 컴퓨터에서 하드 Ide가 중단 되 고 위의 어떤 것도 문제를 해결 하지 못한 경우에는 컴퓨터에서 `ionide-fsharp` 디렉터리를 제거 하 고 플러그 인 도구 모음을 다시 설치 해 보십시오.
 1. 프로젝트를 로드 하지 못한 경우 ( F# 솔루션 탐색기 표시 됨) 해당 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 자세한 **정보 보기** 를 클릭 하 여 더 많은 진단 정보를 얻습니다.
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - MEF, attributed programming model
 - attributed programming model [MEF]
 ms.assetid: 49b787ff-2741-4836-ad51-c3017dc592d4
-ms.openlocfilehash: 63fb3d627364810fac5ddb0bfd3adc3c0421c9cc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c6b1093d2e821a55cc5513b077a270748a780b71
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126379"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347625"
 ---
 # <a name="attributed-programming-model-overview-mef"></a>특성을 사용하는 프로그래밍 모델 개요(MEF)
 
@@ -789,7 +789,7 @@ public class MyAttribute : ExportAttribute
 }
 ```
 
-이 클래스는 계약 형식이 `MyAttribute` 이고 `IMyData` 라는 메타데이터가 포함된 `MyMetadata`라는 사용자 지정 특성을 정의합니다. 클래스의 `MetadataAttribute` 특성이 표시된 모든 속성은 사용자 지정 특성에 정의된 메타데이터로 간주됩니다. 다음 두 선언은 동일합니다.
+이 클래스는 계약 형식이 `MyAttribute` 이고 `IMyAddin` 라는 메타데이터가 포함된 `MyMetadata`라는 사용자 지정 특성을 정의합니다. 클래스의 `MetadataAttribute` 특성이 표시된 모든 속성은 사용자 지정 특성에 정의된 메타데이터로 간주됩니다. 다음 두 선언은 동일합니다.
 
 ```vb
 <Export(GetType(IMyAddin))>
