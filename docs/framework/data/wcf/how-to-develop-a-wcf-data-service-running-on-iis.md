@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF Data Services, deploying
 - WCF Data Services, hosting
 ms.assetid: f6f768c5-4989-49e3-a36f-896ab4ded86e
-ms.openlocfilehash: 684361dbb97e70296a3061f71102662023f88d9a
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 5c75425783d3468ac42ef7cb32cd9c93e812192a
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74800515"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75338344"
 ---
 # <a name="how-to-develop-a-wcf-data-service-running-on-iis"></a>방법: IIS에서 실행 되는 WCF 데이터 서비스 개발
 
@@ -132,7 +132,7 @@ ms.locfileid: "74800515"
 
 5. 다음 단계 중 하나를 수행 하 여 데이터 모델을 데이터베이스에 연결한 **후 다음을 클릭 합니다**.
 
-    - 데이터베이스 연결이 이미 구성 되어 있지 않은 경우 **새 연결** 을 클릭 하 고 새 연결을 만듭니다. 자세한 내용은 [How to: Create Connections to SQL Server Databases](https://go.microsoft.com/fwlink/?LinkId=123631)을 참조하십시오. 이 SQL Server 인스턴스에는 Northwind 샘플 데이터베이스가 연결되어 있어야 합니다.
+    - 데이터베이스 연결이 이미 구성 되어 있지 않은 경우 **새 연결** 을 클릭 하 고 새 연결을 만듭니다. 자세한 내용은 [How to: Create Connections to SQL Server Databases](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/s4yys16a(v=vs.90))을 참조하십시오. 이 SQL Server 인스턴스에는 Northwind 샘플 데이터베이스가 연결되어 있어야 합니다.
 
          \- 또는 -
 

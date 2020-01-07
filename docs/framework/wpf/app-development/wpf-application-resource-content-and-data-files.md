@@ -17,21 +17,21 @@ helpviewer_keywords:
 - application development [WPF], files
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
-ms.openlocfilehash: a31dc2c5431c8201607462e8bdef4b8bae0fb41d
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: d966116db09c2baef7deabf5d01138e8445098be
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460920"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636265"
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>WPF 애플리케이션 리소스, 콘텐츠 및 데이터 파일
 Microsoft Windows 응용 프로그램은 종종 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], 이미지, 비디오, 오디오 등의 실행 불가능 한 데이터를 포함 하는 파일에 의존 합니다. WPF (Windows Presentation Foundation)는 응용 프로그램 데이터 파일 이라고 하는 이러한 유형의 데이터 파일을 구성 하 고, 식별 하 고, 사용할 수 있는 특별 한 지원을 제공 합니다. 이러한 지원에는 다음을 포함한 특정 애플리케이션 데이터 파일 형식 집합이 포함됩니다.  
   
-- **리소스 파일**: 실행 파일이 나 라이브러리 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 어셈블리로 컴파일되는 데이터 파일입니다.  
+- **리소스 파일**: 실행 파일이 나 라이브러리 WPF 어셈블리로 컴파일되는 데이터 파일입니다.  
   
-- **콘텐츠 파일**: 실행 가능 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 어셈블리와 명시적으로 연결 된 독립 실행형 데이터 파일입니다.  
+- **콘텐츠 파일**: 실행 가능 WPF 어셈블리와 명시적으로 연결 된 독립 실행형 데이터 파일입니다.  
   
-- **원본 사이트 파일**: 실행 파일 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 어셈블리와 연결 되지 않은 독립 실행형 데이터 파일입니다.  
+- **원본 사이트 파일**: 실행 가능 WPF 어셈블리와 연결 되지 않은 독립 실행형 데이터 파일입니다.  
   
  이 세 가지 파일 형식을 구분하는 한 가지 중요한 차이점은 리소스 파일과 콘텐츠 파일은 빌드할 때 인식된다는 점입니다. 어셈블리는 명시적으로 이 파일을 인식합니다. 그러나 원본 사이트 파일의 경우 어셈블리에 대 한 지식이 없거나 pack URI (uniform resource identifier) 참조를 통한 암시적 지식이 있을 수 있습니다. 후자의 경우 참조 된 원본 파일 파일이 실제로 존재 한다는 보장이 없습니다.  
   
@@ -55,7 +55,7 @@ Microsoft Windows 응용 프로그램은 종종 [!INCLUDE[TLA#tla_xaml](../../..
 > 이 섹션에서 설명 하는 리소스 파일은 [XAML 리소스](../../../desktop-wpf/fundamentals/xaml-resources-define.md) 에 설명 된 리소스 파일과 다르며 [응용 프로그램 리소스 관리 (.net)](/visualstudio/ide/managing-application-resources-dotnet)에 설명 된 포함 된 리소스 또는 링크 된 리소스와 다릅니다.  
   
 ### <a name="configuring-resource-files"></a>리소스 파일 구성  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]에서 리소스 파일은 MSBuild (Microsoft build engine) 프로젝트에 `Resource` 항목으로 포함 되는 파일입니다.  
+ WPF에서 리소스 파일은 MSBuild (Microsoft build engine) 프로젝트에 `Resource` 항목으로 포함 되는 파일입니다.  
   
 ```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ... >  
@@ -80,7 +80,7 @@ Microsoft Windows 응용 프로그램은 종종 [!INCLUDE[TLA#tla_xaml](../../..
  [!code-csharp[WPFAssemblyResourcesSnippets#LoadAPageResourceFileManuallyCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetResourceStreamSnippetWindow.xaml.cs#loadapageresourcefilemanuallycode)]
  [!code-vb[WPFAssemblyResourcesSnippets#LoadAPageResourceFileManuallyCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/ApplicationGetResourceStreamSnippetWindow.xaml.vb#loadapageresourcefilemanuallycode)]  
   
- <xref:System.Windows.Application.GetResourceStream%2A>를 호출 하 여 <xref:System.IO.Stream>에 대 한 액세스를 제공 하는 동안이를 설정할 속성의 형식으로 변환 하는 작업을 추가로 수행 해야 합니다. 대신 코드를 사용 하 여 리소스 파일을 형식의 속성에 직접 로드 하 여 <xref:System.IO.Stream>를 열고 변환 하는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]을 수행할 수 있습니다.  
+ <xref:System.Windows.Application.GetResourceStream%2A>를 호출 하 여 <xref:System.IO.Stream>에 대 한 액세스를 제공 하는 동안이를 설정할 속성의 형식으로 변환 하는 작업을 추가로 수행 해야 합니다. 대신 코드를 사용 하 여 리소스 파일을 형식의 속성에 직접 로드 하 여 WPF가 <xref:System.IO.Stream>를 열고 변환 하도록 할 수 있습니다.  
   
  다음 예제에서는 코드를 사용 하 여 <xref:System.Windows.Controls.Frame> (`pageFrame`)에 직접 <xref:System.Windows.Controls.Page>를 로드 하는 방법을 보여 줍니다.  
   
@@ -92,7 +92,7 @@ Microsoft Windows 응용 프로그램은 종종 [!INCLUDE[TLA#tla_xaml](../../..
  [!code-xaml[WPFAssemblyResourcesSnippets#LoadPageResourceFileFromXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetResourceStreamSnippetWindow.xaml#loadpageresourcefilefromxaml)]  
   
 ### <a name="application-code-files-as-resource-files"></a>리소스 파일로 사용되는 애플리케이션 코드 파일  
- Windows, 페이지, 유동 문서 및 리소스 사전을 포함 하 여 pack Uri를 사용 하 여 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램 코드 파일의 특수 한 집합을 참조할 수 있습니다. 예를 들어 응용 프로그램이 시작 될 때 로드 하려는 창이 나 페이지를 참조 하는 pack URI를 사용 하 여 <xref:System.Windows.Application.StartupUri%2A?displayProperty=nameWithType> 속성을 설정할 수 있습니다.  
+ Windows, 페이지, 유동 문서 및 리소스 사전을 비롯 한 pack Uri를 사용 하 여 특별 한 WPF 응용 프로그램 코드 파일 집합을 참조할 수 있습니다. 예를 들어 응용 프로그램이 시작 될 때 로드 하려는 창이 나 페이지를 참조 하는 pack URI를 사용 하 여 <xref:System.Windows.Application.StartupUri%2A?displayProperty=nameWithType> 속성을 설정할 수 있습니다.  
   
  [!code-xaml[WPFAssemblyResourcesSnippets#SetApplicationStartupURI](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/App.xaml#setapplicationstartupuri)]  
   
@@ -160,7 +160,7 @@ Microsoft Windows 응용 프로그램은 종종 [!INCLUDE[TLA#tla_xaml](../../..
  [!code-csharp[WPFAssemblyResourcesSnippets#LoadAPageContentFileManuallyCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetContentStreamSnippetWindow.xaml.cs#loadapagecontentfilemanuallycode)]
  [!code-vb[WPFAssemblyResourcesSnippets#LoadAPageContentFileManuallyCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/ApplicationGetContentStreamSnippetWindow.xaml.vb#loadapagecontentfilemanuallycode)]  
   
- <xref:System.Windows.Application.GetContentStream%2A>를 호출 하 여 <xref:System.IO.Stream>에 대 한 액세스를 제공 하는 동안이를 설정할 속성의 형식으로 변환 하는 작업을 추가로 수행 해야 합니다. 대신 코드를 사용 하 여 리소스 파일을 형식의 속성에 직접 로드 하 여 <xref:System.IO.Stream>를 열고 변환 하는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]을 수행할 수 있습니다.  
+ <xref:System.Windows.Application.GetContentStream%2A>를 호출 하 여 <xref:System.IO.Stream>에 대 한 액세스를 제공 하는 동안이를 설정할 속성의 형식으로 변환 하는 작업을 추가로 수행 해야 합니다. 대신 코드를 사용 하 여 리소스 파일을 형식의 속성에 직접 로드 하 여 WPF가 <xref:System.IO.Stream>를 열고 변환 하도록 할 수 있습니다.  
   
  다음 예제에서는 코드를 사용 하 여 <xref:System.Windows.Controls.Frame> (`pageFrame`)에 직접 <xref:System.Windows.Controls.Page>를 로드 하는 방법을 보여 줍니다.  
   
@@ -195,7 +195,7 @@ Microsoft Windows 응용 프로그램은 종종 [!INCLUDE[TLA#tla_xaml](../../..
 > 원본 사이트 파일은 클라이언트 컴퓨터의 XBAP (XAML 브라우저 응용 프로그램)를 사용 하 여 캐시 되지 않지만 콘텐츠 파일은입니다. 따라서 구체적으로 요청된 경우에만 다운로드됩니다. XBAP (XAML 브라우저 응용 프로그램) 응용 프로그램에 큰 미디어 파일이 있는 경우 이러한 파일을 원본 사이트로 구성 하면 초기 응용 프로그램 시작 속도가 훨씬 빨라지고 요청 시에만 파일이 다운로드 됩니다.  
   
 ### <a name="configuring-site-of-origin-files"></a>원본 사이트 파일 구성  
- 원본 사이트 파일이 존재 하지 않거나 컴파일할 때 알 수 없는 경우 `XCopy` 명령줄 프로그램 또는 Microsoft Windows를 사용 하 여 필요한 파일을 런타임에 사용할 수 있도록 하기 위해 기존 배포 메커니즘을 사용 해야 합니다. Installer.  
+ 원본 사이트 파일이 없거나 컴파일할 때 알 수 없는 경우에는 `XCopy` 명령줄 프로그램 또는 Microsoft Windows Installer를 사용 하는 등의 방법으로 필요한 파일을 런타임에 사용할 수 있도록 기존 배포 메커니즘을 사용 해야 합니다.  
   
  컴파일 시간에서 원본 사이트에 배치 하려는 파일을 알 수 있지만 명시적 종속성을 방지 하려는 경우 해당 파일을 MSBuild 프로젝트에 `None` 항목으로 추가할 수 있습니다. 콘텐츠 파일과 마찬가지로 MSBuild `CopyToOutputDirectory` 특성을 설정 하 여 원본 사이트 파일이 빌드된 어셈블리에 상대적인 위치로 복사 되도록 지정 하 고 `Always` 값 또는 `PreserveNewest` 값을 지정 해야 합니다.  
   
@@ -222,7 +222,7 @@ Microsoft Windows 응용 프로그램은 종종 [!INCLUDE[TLA#tla_xaml](../../..
  [!code-csharp[WPFAssemblyResourcesSnippets#LoadAPageSOOFileManuallyCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/SOOPage.xaml.cs#loadapagesoofilemanuallycode)]
  [!code-vb[WPFAssemblyResourcesSnippets#LoadAPageSOOFileManuallyCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/SOOPage.xaml.vb#loadapagesoofilemanuallycode)]  
   
- <xref:System.Windows.Application.GetRemoteStream%2A>를 호출 하 여 <xref:System.IO.Stream>에 대 한 액세스를 제공 하는 동안이를 설정할 속성의 형식으로 변환 하는 작업을 추가로 수행 해야 합니다. 대신 코드를 사용 하 여 리소스 파일을 형식의 속성에 직접 로드 하 여 <xref:System.IO.Stream>를 열고 변환 하는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]을 수행할 수 있습니다.  
+ <xref:System.Windows.Application.GetRemoteStream%2A>를 호출 하 여 <xref:System.IO.Stream>에 대 한 액세스를 제공 하는 동안이를 설정할 속성의 형식으로 변환 하는 작업을 추가로 수행 해야 합니다. 대신 코드를 사용 하 여 리소스 파일을 형식의 속성에 직접 로드 하 여 WPF가 <xref:System.IO.Stream>를 열고 변환 하도록 할 수 있습니다.  
   
  다음 예제에서는 코드를 사용 하 여 <xref:System.Windows.Controls.Frame> (`pageFrame`)에 직접 <xref:System.Windows.Controls.Page>를 로드 하는 방법을 보여 줍니다.  
   

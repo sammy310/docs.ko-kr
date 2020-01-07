@@ -2,12 +2,12 @@
 title: '방법: CSV 텍스트 파일의 열 값 계산(LINQ)'
 ms.date: 07/20/2015
 ms.assetid: 88b2b9f3-c82e-41f3-b1b4-26ede5973a02
-ms.openlocfilehash: 9ce6ec4c8d109fa06e672e967ac36c615a8fb38e
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 230bb26d04a85decc401abaa6c7fd7fc8a6b4806
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348387"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75338498"
 ---
 # <a name="how-to-compute-column-values-in-a-csv-text-file-linq-visual-basic"></a>방법: CSV 텍스트 파일의 열 값 계산 (LINQ) (Visual Basic)
 
@@ -32,7 +32,7 @@ ms.locfileid: "74348387"
     122, 94, 92, 91, 91
     ```
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 ```vb
 Class SumColumns
@@ -143,11 +143,11 @@ End Class
 
 쿼리는 <xref:System.String.Split%2A> 메서드를 사용하여 텍스트의 각 줄을 배열로 변환하는 방식으로 작동합니다. 각 배열 요소는 열을 나타냅니다. 마지막으로 각 열의 텍스트가 숫자 표현으로 변환됩니다. 탭으로 구분된 파일인 경우 `Split` 메서드의 인수를 `\t`로 업데이트하세요.
 
-## <a name="compiling-the-code"></a>코드 컴파일
+## <a name="compile-the-code"></a>코드 컴파일
 
-VB.NET 콘솔 응용 프로그램 프로젝트를 만듭니다 .이 프로젝트에는 system.string 네임 스페이스에 대 한 `Imports` 문이 있습니다.
+System.xml 네임 스페이스에 대 한 `Imports` 문을 사용 하 여 Visual Basic 콘솔 응용 프로그램 프로젝트를 만듭니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [LINQ 및 문자열 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
 - [LINQ 및 파일 디렉터리(Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

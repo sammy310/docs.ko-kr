@@ -5,12 +5,12 @@ helpviewer_keywords:
 - PropertyPath object [WPF]
 - XAML [WPF], PropertyPath object
 ms.assetid: 0e3cdf07-abe6-460a-a9af-3764b4fd707f
-ms.openlocfilehash: f9176e61915b6c5cc05f120eade69a6d19cc4e6a
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 17c8982a66960626a5d049fa2da90f5f2d995d14
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740789"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559770"
 ---
 # <a name="propertypath-xaml-syntax"></a>PropertyPath XAML 구문
 
@@ -113,7 +113,7 @@ XML에 대 한 데이터 바인딩은 <xref:System.Windows.Data.Binding>에서 <
 <object Path="[index1,index2...]" .../>
 ```
 
-or
+또는
 
 ```xaml
 <object Path="propertyName[index,index2...]" .../>
@@ -139,7 +139,7 @@ or
 
 - 인덱서([ ]) 안의 캐럿 문자(^)는 다음 문자를 이스케이프합니다.
 
-- XML 언어 정의와 관련된 특정 문자를 이스케이프(XML 엔터티 사용)해야 합니다. "&" 문자를 이스케이프하려면 `&`를 사용합니다. ">" 끝 태그를 이스케이프하려면 `>`를 사용합니다.
+- XML 언어 정의와 관련된 특정 문자를 이스케이프(XML 엔터티 사용)해야 합니다. "&" 문자를 이스케이프하려면 `&`를 사용합니다. ">" 태그를 이스케이프하려면 `>`를 사용합니다.
 
 - 태그 확장을 처리하기 위해 WPF XAML 구문 분석기 동작과 관련된 특정 문자를 이스케이프해야 합니다(백슬래시 `\` 사용).
 
@@ -192,7 +192,7 @@ or
 
 `propertyName2`는 `propertyName` 값인 개체에 있는 종속성 속성의 이름이어야 합니다. 즉, `propertyName2`은 `propertyName` <xref:System.Windows.DependencyProperty.PropertyType%2A>형식의 종속성 속성으로 존재 해야 합니다.
 
-적용된 스타일 및 템플릿 때문에 애니메이션의 간접 대상 지정이 필요합니다. 애니메이션을 대상으로 하려면 대상 개체에 대 한 <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> 필요 하 고 해당 이름은 [x:Name](../../xaml-services/x-name-directive.md) 또는 <xref:System.Windows.FrameworkElement.Name%2A>에 의해 설정 됩니다. 템플릿 및 스타일 요소에 이름이 있을 수 있지만 해당 이름은 스타일 및 템플릿의 네임스페이스 내에서만 유효합니다. 템플릿 및 스타일이 네임스페이스를 애플리케이션 태그와 공유한 경우 이름이 고유하지 않습니다. 스타일과 템플릿은 인스턴스 간에 그대로 공유 되며 중복 이름을 perpetuate 합니다. 따라서 애니메이션을 적용 하려는 요소의 개별 속성이 스타일이 나 템플릿에서 제공 되는 경우 스타일 템플릿에서 가져온 명명 된 요소 인스턴스로 시작한 다음 속성에 도달할 스타일 또는 템플릿 시각적 트리를 대상으로 지정 해야 합니다. 애니메이션을 적용 하려고 합니다.
+적용된 스타일 및 템플릿 때문에 애니메이션의 간접 대상 지정이 필요합니다. 애니메이션을 대상으로 하려면 대상 개체에 대 한 <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> 필요 하 고 해당 이름은 [x:Name](../../../desktop-wpf/xaml-services/xname-directive.md) 또는 <xref:System.Windows.FrameworkElement.Name%2A>에 의해 설정 됩니다. 템플릿 및 스타일 요소에 이름이 있을 수 있지만 해당 이름은 스타일 및 템플릿의 네임스페이스 내에서만 유효합니다. 템플릿 및 스타일이 네임스페이스를 애플리케이션 태그와 공유한 경우 이름이 고유하지 않습니다. 스타일과 템플릿은 인스턴스 간에 그대로 공유 되며 중복 이름을 perpetuate 합니다. 따라서 애니메이션을 적용 하려는 요소의 개별 속성이 스타일이 나 템플릿에서 제공 되는 경우 스타일 템플릿에서 가져온 명명 된 요소 인스턴스로 시작한 다음 속성에 도달할 스타일 또는 템플릿 시각적 트리를 대상으로 지정 해야 합니다. 애니메이션을 적용 하려고 합니다.
 
 예를 들어 <xref:System.Windows.Controls.Panel>의 <xref:System.Windows.Controls.Panel.Background%2A> 속성은 테마 템플릿에서 가져온 전체 <xref:System.Windows.Media.Brush> (실제로 <xref:System.Windows.Media.SolidColorBrush>)입니다. <xref:System.Windows.Media.Brush> 완전히 애니메이션 효과를 주려면 BrushAnimation (모든 <xref:System.Windows.Media.Brush> 형식에 대해 하나씩)이 고 해당 형식이 없는 것입니다. 브러시에 애니메이션 효과를 주려면 특정 <xref:System.Windows.Media.Brush> 형식의 속성에 애니메이션 효과를 주는 것이 좋습니다. <xref:System.Windows.Media.Animation.ColorAnimation>를 적용 하려면 <xref:System.Windows.Media.SolidColorBrush>에서 <xref:System.Windows.Media.SolidColorBrush.Color%2A> 가져와야 합니다. 이 예제의 속성 경로는 `Background.Color`입니다.
 

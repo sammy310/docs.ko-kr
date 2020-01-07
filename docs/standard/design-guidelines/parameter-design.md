@@ -10,14 +10,15 @@ helpviewer_keywords:
 - reserved parameters
 ms.assetid: 3f33bf46-4a7b-43b3-bb78-1ffebe0dcfa6
 author: KrzysztofCwalina
-ms.openlocfilehash: 28b00f5911bb47536ec44b96f284e47b6c671149
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 93554594b49b742a6a5e8461b6b16046701ec07c
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353734"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347843"
 ---
 # <a name="parameter-design"></a>매개 변수 디자인
+
 이 섹션에서는 인수 확인에 대 한 지침을 포함 하 여 매개 변수 디자인에 대 한 광범위 한 지침을 제공 합니다. 또한 [명명 매개 변수](../../../docs/standard/design-guidelines/naming-parameters.md)에 설명 된 지침을 참조 해야 합니다.  
   
  **✓ DO** 멤버에 필요한 기능을 제공 하는 최소 파생 된 매개 변수 형식을 사용 합니다.  
@@ -40,7 +41,7 @@ ms.locfileid: "71353734"
   
  이는 메서드 간의 관계를 더 잘 전달 합니다.  
   
-### <a name="choosing-between-enum-and-boolean-parameters"></a>열거 및 부울 매개 변수 중에서 선택  
+### <a name="choose-between-enum-and-boolean-parameters"></a>열거 및 부울 매개 변수 중에서 선택  
  **✓ DO** 구성원 부울 매개 변수 두 개 이상의 미칠 경우 열거형을 사용 합니다.  
   
  **X DO NOT** 확실히 될 수 없으므로 두 개 이상의 값에 대 한 필요 하지 않는 한 부울을 사용 합니다.  
@@ -49,7 +50,7 @@ ms.locfileid: "71353734"
   
  **✓ CONSIDER** 부울 값이 실제로 두 가지 상태는 부울 속성을 초기화 하는 생성자 매개 변수를 사용 하 여 합니다.  
   
-### <a name="validating-arguments"></a>인수 유효성 검사  
+### <a name="validate-arguments"></a>인수 유효성 검사  
  **✓ DO** public, protected 또는 명시적으로 구현 된 멤버에 전달 되는 인수의 유효성을 검사 합니다. 유효성 검사가 실패 하는 경우 <xref:System.ArgumentException?displayProperty=nameWithType>또는 해당 하위 클래스 중 하나를 Throw 합니다.  
   
  실제 유효성 검사가 public 또는 protected 멤버 자체에서 발생할 필요는 없습니다. 일부 전용 또는 내부 루틴에서 하위 수준으로 발생할 수 있습니다. 주된 점은 최종 사용자에 게 노출 되는 전체 노출 영역에서 인수를 확인 하는 것입니다.  
@@ -66,10 +67,10 @@ ms.locfileid: "71353734"
   
  멤버가 보안에 중요 한 경우에는 복사본을 만든 다음 인수의 유효성을 검사 하 고 처리 하는 것이 좋습니다.  
   
-### <a name="parameter-passing"></a>매개 변수 전달  
+### <a name="pass-parameters"></a>매개 변수 전달  
  프레임 워크 디자이너의 관점에서 매개 변수의 기본 그룹에는 값으로 매개 변수, `ref` 매개 변수 및 `out` 매개 변수가 있습니다.  
   
- 인수가 값으로 매개 변수를 통해 전달 되 면 멤버는 전달 된 실제 인수의 복사본을 받습니다. 인수가 값 형식인 경우에는 인수의 복사본이 스택에 배치 됩니다. 인수가 참조 형식이 면 참조의 복사본이 스택에 배치 됩니다. VB.NET 및 C# C++와 같은 가장 인기 있는 CLR 언어는 기본적으로 매개 변수를 값으로 전달 합니다.  
+ 인수가 값으로 매개 변수를 통해 전달 되 면 멤버는 전달 된 실제 인수의 복사본을 받습니다. 인수가 값 형식인 경우에는 인수의 복사본이 스택에 배치 됩니다. 인수가 참조 형식이 면 참조의 복사본이 스택에 배치 됩니다. C#, Visual Basic, 및 C++과 같은 가장 인기 있는 CLR 언어는 기본적으로 매개 변수를 값으로 전달 하는 데 사용 됩니다.  
   
  인수가 `ref` 매개 변수를 통해 전달 되 면 멤버는 전달 된 실제 인수에 대 한 참조를 받습니다. 인수가 값 형식인 경우 인수에 대 한 참조가 스택에 배치 됩니다. 인수가 참조 형식이 면 참조에 대 한 참조가 스택에 배치 됩니다. `Ref` 매개 변수를 사용 하 여 멤버가 호출자가 전달한 인수를 수정할 수 있습니다.  
   
@@ -155,7 +156,7 @@ public class String {
   
  *Pearson Education, Inc의 동의로 재인쇄. 출처: [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 작성자: Krzysztof Cwalina 및 Brad Abrams, 출판 정보: Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [멤버 디자인 지침](../../../docs/standard/design-guidelines/member.md)
 - [프레임워크 디자인 지침](../../../docs/standard/design-guidelines/index.md)
