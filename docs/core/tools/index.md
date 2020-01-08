@@ -2,13 +2,12 @@
 title: .NET Core CLI(명령줄 인터페이스) 도구
 description: .NET Core CLI(명령줄 인터페이스) 도구 및 기능에 대한 개요입니다.
 ms.date: 08/14/2017
-ms.custom: seodec18
-ms.openlocfilehash: 4ff5cfd6c5a70c92387911ab87ddea5cee80275e
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: b3bffb47ff973bd0da90e3f943e817756e563138
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117394"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714144"
 ---
 # <a name="net-core-command-line-interface-cli-tools"></a>.NET Core CLI(명령줄 인터페이스) 도구
 
@@ -152,7 +151,7 @@ dotnet build
 
 Preview 2 도구를 사용하여 *project.json* 기반 프로젝트를 생성하는 경우 [dotnet migrate](dotnet-migrate.md) 항목에서 릴리스 도구와 함께 사용할 MSBuild/ *.csproj*로 프로젝트를 마이그레이션하기 위한 정보를 참조하세요. Preview 2 도구 릴리스 이전에 만든 .NET Core 프로젝트의 경우 [DNX에서.NET Core CLI(project.json)로 마이그레이션](../migration/from-dnx.md)의 지침에 따라 프로젝트를 수동으로 업데이트한 후 `dotnet migrate`를 사용하거나 프로젝트를 직접 업그레이드합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [dotnet/CLI GitHub 리포지토리](https://github.com/dotnet/cli/)
 - [.NET Core 설치 가이드](https://aka.ms/dotnetcoregs)

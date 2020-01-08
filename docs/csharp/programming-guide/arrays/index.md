@@ -1,17 +1,16 @@
 ---
 title: 배열 - C# 프로그래밍 가이드
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - arrays [C#]
 - C# language, arrays
 ms.assetid: bb79bdde-e570-4c30-adb0-1dd5759ae041
-ms.openlocfilehash: e31cff94c51c626c4b8f0e08df270c45a9cc1316
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: bbabc84c144e5b3415c19f346b890782e251662c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72772095"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715049"
 ---
 # <a name="arrays-c-programming-guide"></a>배열(C# 프로그래밍 가이드)
 
@@ -21,7 +20,7 @@ ms.locfileid: "72772095"
 type[] arrayName;
 ```
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 다음 예제에서는 단일 차원, 다차원 및 가변 배열을 만듭니다.
 
@@ -49,7 +48,7 @@ type[] arrayName;
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 프로그래밍 가이드](../index.md)
 - [컬렉션](../concepts/collections.md)

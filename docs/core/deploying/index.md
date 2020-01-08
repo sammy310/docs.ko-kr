@@ -2,13 +2,12 @@
 title: .NET Core 애플리케이션 배포
 description: .NET Core 애플리케이션을 배포하는 방법을 알아봅니다.
 ms.date: 12/03/2018
-ms.custom: seodec18
-ms.openlocfilehash: fd15d41065b0a6ecb1a0bf04a0f0ab292a0a5fb7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 41c5285f2a9ddf38e4be7326bd5cba1c58370fe7
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73089191"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740815"
 ---
 # <a name="net-core-application-deployment"></a>.NET Core 애플리케이션 배포
 
@@ -64,7 +63,7 @@ FDD 및 SCD 배포는 별도의 호스트 실행 파일을 사용하므로 게�
 
 - .NET Core뿐만 아니라 앱과 해당 타사 종속성도 포함해야 하므로 배포 패키지의 크기가 상대적으로 큽니다.
 
-  .NET Core 2.0부터 .NET Core [*globalization invariant mode*](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md)(세계화 고정 모드)를 사용하여 Linux 시스템에서 배포 크기를 약 28MB까지 줄일 수 있습니다. 일반적으로 Linux에서 .NET Core는 세계화 지원에 대해 [ICU 라이브러리](http://icu-project.org)를 사용합니다. 고정 모드에서 라이브러리는 배포에 포함되지 않으며, 모든 문화권은 [고정 문화권](xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType)처럼 동작합니다.
+  .NET Core 2.0부터 .NET Core [*globalization invariant mode*](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md)(세계화 고정 모드)를 사용하여 Linux 시스템에서 배포 크기를 약 28MB까지 줄일 수 있습니다. 일반적으로 Linux에서 .NET Core는 세계화 지원에 대해 [ICU 라이브러리](http://icu-project.org)를 사용합니다. 고정 모드에서 라이브러리는 배포에 포함되지 않으며, 모든 문화권은 [고정 문화권](xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType)처럼 동작합니다.
 
 - 다양한 자체 포함 .NET Core 앱을 시스템에 배포하면 각 앱에서 .NET Core 파일을 중복하므로 엄청나게 많은 디스크 공간을 사용합니다.
 
@@ -94,7 +93,7 @@ FDE 배포에는 다음과 같은 여러 가지 장점이 있습니다.
 
 CLI 도구를 사용하여 .NET Core 앱을 배포하는 방법을 보여 주는 단계별 예제는 [Deploying .NET Core Apps with CLI Tools](deploy-with-cli.md)(CLI 도구를 사용하여 .NET Core 앱 배포)를 참조하세요. Visual Studio를 사용하여 .NET Core 앱을 배포하는 방법을 보여 주는 단계별 예제는 [Deploying .NET Core Apps with Visual Studio](deploy-with-vs.md)(Visual Studio를 사용하여 .NET Core 앱 배포)를 참조하세요. 
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [CLI 도구를 사용하여 .NET Core 앱 배포](deploy-with-cli.md)
 - [Visual Studio를 사용하여 .NET Core 앱 배포](deploy-with-vs.md)

@@ -1,6 +1,5 @@
 ---
 title: 안전하지 않은 코드 및 포인터 - C# 프로그래밍 가이드
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - security [C#], type safety
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - C# language, pointers
 - pointers [C#], about pointers
 ms.assetid: b0fcca10-a92d-4f2a-835b-b0ccae6739ee
-ms.openlocfilehash: 99f0b925a37bff8b6ab1ff46e9ce2f0ea0a38aed
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: 013af4e55c8fc396bbc92058d7fb454484f3263e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65959484"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711833"
 ---
 # <a name="unsafe-code-and-pointers-c-programming-guide"></a>안전하지 않은 코드 및 포인터 - (C# 프로그래밍 가이드)
 
@@ -51,7 +50,7 @@ ms.locfileid: "65959484"
 
 자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [안전하지 않은 코드](~/_csharplang/spec/unsafe-code.md) 토픽을 참조하세요.
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 프로그래밍 가이드](../index.md)
 - [unsafe](../../language-reference/keywords/unsafe.md)

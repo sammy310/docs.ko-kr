@@ -1,14 +1,13 @@
 ---
 title: ML.NET 방법 가이드
 description: 사용자 지정 AI 솔루션 생성 및 .NET 애플리케이션에 Machine Learning 통합을 지원하는 특정 작업을 수행하는 방법에 대해 알아보세요.
-ms.custom: seodec18
 ms.date: 03/01/2019
-ms.openlocfilehash: e2b4ff77c7f76282d70c06b5ef534306fe4e93a6
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 4ce2de77c35062aa19449e3ba6bb3d5abd003d60
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977104"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715661"
 ---
 # <a name="net-machine-learning-how-to-guides"></a>.NET 기계 학습 방법 가이드
 

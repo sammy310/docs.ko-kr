@@ -1,18 +1,17 @@
 ---
 title: 파일 시스템 및 레지스트리 - C# 프로그래밍 가이드
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - file system [C#]
 - registry [C#]
 - files [C#]
 ms.assetid: 0f2511cf-2b02-4b41-b001-b1754677c38f
-ms.openlocfilehash: 3e78d49881a4def5fe9c70ecfe890c8ffee811e8
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 2540c816a102a7f11f1f103b993194cccf0f4688
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75635303"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75704523"
 ---
 # <a name="file-system-and-the-registry-c-programming-guide"></a>파일 시스템 및 레지스트리(C# 프로그래밍 가이드)
 다음 항목에서는 C# 및 .NET Framework를 사용하여 파일, 폴더 및 레지스트리에 대한 다양한 기본 작업을 수행하는 방법을 보여 줍니다.  

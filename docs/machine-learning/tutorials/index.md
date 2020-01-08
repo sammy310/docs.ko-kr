@@ -1,14 +1,13 @@
 ---
 title: ML.NET 자습서
 description: 사용자 지정 AI 솔루션을 빌드하고 .NET 애플리케이션에 통합하는 방법을 알아보기 위해 ML.NET 자습서를 탐색합니다.
-ms.custom: seodec18
 ms.date: 07/08/2019
-ms.openlocfilehash: bf59efb4118d9d4fac24413d7568df412a0e9475
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 771ecd83d3f901af84da1f55d7b48152e8145205
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977168"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716626"
 ---
 # <a name="mlnet-tutorials"></a>ML.NET 자습서
 

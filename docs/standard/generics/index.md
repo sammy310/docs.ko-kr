@@ -26,14 +26,12 @@ helpviewer_keywords:
 - generic types
 - generic type parameters
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0eb88b8f46d425ae840c2bf8ed8eb479971d1cbc
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: f04b6fcd1641a53efe75d38ab7122967bff6a58d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974673"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708373"
 ---
 # <a name="generics-in-net"></a>.NET의 제네릭
 
@@ -69,7 +67,7 @@ ms.locfileid: "73974673"
   
 - *제약 조건*은 제네릭 형식 매개 변수에 대해 적용되는 제한 사항입니다. 예를 들어 형식 인스턴스의 순서를 지정할 수 있도록 <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> 제네릭 인터페이스를 구현하는 형식으로 형식 매개 변수를 제한할 수 있습니다. 또한 참조 형식 또는 값 형식이거나 특정 기본 클래스 또는 매개 변수가 없는 생성자를 포함하는 형식으로 형식 매개 변수를 제한할 수도 있습니다. 제네릭 형식의 사용자는 제약 조건을 충족하지 않는 형식 인수를 대체할 수 없습니다.  
   
-- *제네릭 메서드 정의* 는 두 개의 매개 변수 목록(제네릭 형식 매개 변수 목록 및 정식 매개 변수 목록)을 포함하는 메서드입니다. 형식 매개 변수는 다음 코드에 나와 있는 것처럼 정식 매개 변수의 형식 또는 반환 형식으로 표시될 수 있습니다.  
+- *제네릭 메서드 정의*는 두 매개 변수 목록, 즉 제네릭 형식 매개 변수 목록과 정식 매개 변수 목록을 갖는 메서드입니다. 형식 매개 변수는 다음 코드에 나와 있는 것처럼 정식 매개 변수의 형식 또는 반환 형식으로 표시될 수 있습니다.  
   
  [!code-cpp[Conceptual.Generics.Overview#4](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source.cpp#4)]
  [!code-csharp[Conceptual.Generics.Overview#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source.cs#4)]
@@ -146,7 +144,7 @@ ms.locfileid: "73974673"
 |[제네릭 소개](../../csharp/programming-guide/generics/index.md)|C# 사용자를 위한 제네릭 형식 사용 및 정의 방법을 간략하게 설명합니다.|  
 |[Visual C++의 제네릭 개요](/cpp/windows/overview-of-generics-in-visual-cpp)|제네릭과 템플릿 간의 차이점을 비롯하여 C++ 사용자를 위한 제네릭 기능에 대해 설명합니다.|  
 
-## <a name="reference"></a>참조  
+## <a name="reference"></a>참고  
  <xref:System.Collections.Generic>  
   
  <xref:System.Collections.ObjectModel>  

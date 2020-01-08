@@ -2,13 +2,12 @@
 title: C# 둘러보기 - C# 가이드
 description: C#을 처음 사용하시나요? 언어의 기본 사항에 대해 알아봅니다.
 ms.date: 04/05/2019
-ms.custom: seoapril2019
-ms.openlocfilehash: 7398703dc75e7ad7ab8da497eb39e8eeba6d1eba
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: e2d7af3a35dc9d4fdeddf9eb742d155ab33094b4
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346858"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711664"
 ---
 # <a name="a-tour-of-the-c-language"></a>C# 언어 둘러보기
 

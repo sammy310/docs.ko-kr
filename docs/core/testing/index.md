@@ -4,13 +4,12 @@ description: 이 문서에서는 .NET Core 및 .NET Standard 프로젝트에 대
 author: ardalis
 ms.author: wiwagn
 ms.date: 08/30/2017
-ms.custom: seodec18
-ms.openlocfilehash: 63bbe2981f70093c94dde47510fd7786a1cc950b
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 776a430868c7a4829e11a2958fb998c11315c43d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74835462"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714306"
 ---
 # <a name="unit-testing-in-net-core-and-net-standard"></a>.NET Core 및 .NET Standard의 단위 테스트
 

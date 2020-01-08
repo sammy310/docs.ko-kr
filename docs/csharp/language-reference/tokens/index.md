@@ -1,6 +1,5 @@
 ---
 title: 특수 문자 - C# 참조
-ms.custom: seodec18
 ms.date: 02/14/2017
 f1_keywords:
 - cs.special characters
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - '@ character (C#)'
 - $ character (C#)
 ms.assetid: 4c5c0539-2e37-40b7-91ce-75af5aabd3f9
-ms.openlocfilehash: 4b9adc24e80587015a80b577a2908a8191c57b6b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 3deb4fd1de5b81e95d1caaf2a04e2daca7f285f5
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73101569"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712431"
 ---
 # <a name="c-special-characters"></a>C# 특수 문자
 
@@ -26,7 +25,7 @@ ms.locfileid: "73101569"
 
 - [$](./interpolated.md), 보간된 문자열 문자입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 참조](../index.md)
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)
