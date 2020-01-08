@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 70055c4b-1173-47a3-be80-b5bce6f59e9a
-ms.openlocfilehash: 542440d6bf9d6809abee1ec37c85c44ce72fd132
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 081dce85946fab85cff474508c46770c762b9e76
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715167"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75338717"
 ---
 # <a name="custom-composite-designers---workflow-items-presenter"></a>사용자 지정 복합 디자이너 - 워크플로 항목 프리젠터
 
@@ -24,11 +24,13 @@ ms.locfileid: "74715167"
 
 - 다시 호스트된 애플리케이션에서 기본 디자이너 재정의
 
-### <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면
+## <a name="set-up-build-and-run-the-sample"></a>샘플 설정, 빌드 및 실행
 
-1. Visual Studio 2010의 VB 용 **usingworkflowitemspresenter.sln** 샘플 C# 솔루션을 엽니다.
+1. Visual Studio 2010에서 C# 또는의 Visual Basic에 대 한 usingworkflowitemspresenter.sln 샘플 솔루션을 엽니다.
 
-2. 솔루션을 빌드하고 실행합니다. 다시 호스트된 Workflow Designer 애플리케이션이 열리며 여기에서 활동을 캔버스로 끌어 올 수 있습니다.
+2. 솔루션을 빌드하고 실행합니다.
+
+   다시 호스트 된 워크플로 디자이너 응용 프로그램이 열리고 작업을 캔버스로 끌어 올 수 있습니다.
 
 ## <a name="sample-highlights"></a>샘플의 중요 사항
 

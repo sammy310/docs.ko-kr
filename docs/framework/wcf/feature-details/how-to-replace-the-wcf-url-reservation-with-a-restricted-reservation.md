@@ -2,19 +2,19 @@
 title: '방법: WCF URL 예약을 제한된 예약으로 바꾸기'
 ms.date: 03/30/2017
 ms.assetid: 2754d223-79fc-4e2b-a6ce-989889f2abfa
-ms.openlocfilehash: 900b258a1119b069e5ef0a6ff66078281bb06f1b
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 3d14d76334b15bdb490184a48da11ba48b84deea
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837391"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544656"
 ---
 # <a name="how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation"></a>방법: WCF URL 예약을 제한된 예약으로 바꾸기
 URL 예약을 사용하여 URL 또는 URL 집합에서 메시지를 수신할 수 있는 사용자를 제한할 수 있습니다. 예약은 URL 템플릿, ACL(액세스 제어 목록) 및 플래그 집합으로 이루어집니다. URL 템플릿은 예약이 영향을 미치는 URL을 정의합니다. URL 템플릿을 처리 하는 방법에 대 한 자세한 내용은 [들어오는 요청 라우팅](https://go.microsoft.com/fwlink/?LinkId=136764)을 참조 하세요. ACL은 지정된 URL에서 메시지를 수신하도록 허용할 사용자 또는 사용자 그룹을 제어합니다. 플래그는 예약이 사용자 또는 그룹에게 URL에서 직접 수신 대기할 수 있는 권한을 제공하는지 또는 일부 다른 프로세스에 수신 대기 권한을 위임할 수 있는 권한을 제공하는지를 나타냅니다.  
   
  기본 운영 체제 구성의 일부로 WCF (Windows Communication Foundation)는 포트 80에 대해 전역적으로 액세스할 수 있는 예약을 만들어 모든 사용자가 이중 통신에 이중 HTTP 바인딩을 사용 하는 응용 프로그램을 실행할 수 있도록 합니다. 이 예약의 ACL은 모든 사용자를 위한 것이므로 관리자는 URL 또는 URL 집합에서 수신 대기할 수 있는 권한을 명시적으로 허용하거나 허용하지 않을 수 없습니다. 이 항목에서는 이 예약을 삭제하고 제한된 ACL로 예약을 다시 만드는 방법에 대해 설명합니다.  
   
- Windows Vista 또는 [!INCLUDE[lserver](../../../../includes/lserver-md.md)] `netsh http show urlacl`를 입력 하 여 관리자 권한 명령 프롬프트에서 모든 HTTP URL 예약을 볼 수 있습니다.  다음 예제에서는 WCF URL 예약이 무엇 인지를 보여 줍니다.  
+Windows Vista 또는 Windows Server 2008에서는 `netsh http show urlacl`를 입력 하 여 관리자 권한 명령 프롬프트에서 모든 HTTP URL 예약을 볼 수 있습니다. 다음 예제에서는 WCF URL 예약이 어떻게 유사 해야 하는지 보여 줍니다.
 
 ```
 Reserved URL : http://+:80/Temporary_Listen_Addresses/  

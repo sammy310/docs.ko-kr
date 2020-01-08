@@ -1,13 +1,13 @@
 ---
-title: 비동기 프로그래밍F#
+title: 비동기 프로그래밍
 description: 핵심 함수형 F# 프로그래밍 개념에서 파생 된 언어 수준 프로그래밍 모델을 기반으로 비동기에 대 한 완전 한 지원을 제공 하는 방법을 알아봅니다.
 ms.date: 12/17/2018
-ms.openlocfilehash: 583b0f5154e6ad8875b21503cfb78f70a069ff7b
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 471566befd69f330fb9254dbd57b19569d9f9ad3
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837105"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344667"
 ---
 # <a name="async-programming-in-f"></a>F\#의 비동기 프로그래밍
 
@@ -16,7 +16,7 @@ ms.locfileid: "74837105"
 - 많은 수의 동시 들어오는 요청을 처리할 수 있는 서버 프로세스를 제공 하는 동시에 프로세스의 외부 시스템 또는 서비스에서 기다립니다 입력을 요청 하는 동안 시스템 리소스를 최소화 합니다.
 - 백그라운드 작업을 동시에 진행 하는 동안 응답성이 뛰어난 UI 또는 주 스레드 유지 관리
 
-백그라운드 작업은 종종 여러 스레드를 사용 하는 경우를 제외 하 고 비동기 및 다중 스레딩의 개념을 별도로 고려 하는 것이 중요 합니다. 사실 이러한 문제는 별개의 문제 이며 다른 항목을 의미 하지는 않습니다. 이 문서에서 설명 하는 내용에 대해 자세히 설명 합니다.
+백그라운드 작업은 종종 여러 스레드를 사용 하는 경우를 제외 하 고 비동기 및 다중 스레딩의 개념을 별도로 고려 하는 것이 중요 합니다. 사실 이러한 문제는 별개의 문제 이며 다른 항목을 의미 하지는 않습니다. 이 문서에서 설명 하는 내용에 대 한 자세한 내용은 다음과 같습니다.
 
 ## <a name="asynchrony-defined"></a>비동기 정의 됨
 
@@ -69,13 +69,13 @@ let main argv =
     0
 ```
 
-예제에서 `printTotalFileBytes` 함수는 `string -> Async<unit>`형식입니다. 함수를 호출 하면 실제로 비동기 계산이 실행 되지 않습니다. 대신 비동기적으로 실행 되는 작업의 * 사양 역할을 하는 `Async<unit>`를 반환 합니다. 본문에서 `Async.AwaitTask`를 호출 하 고, 호출 될 때 <xref:System.IO.File.WriteAllBytesAsync%2A>의 결과를 적절 한 형식으로 변환 합니다.
+예제에서 `printTotalFileBytes` 함수는 `string -> Async<unit>`형식입니다. 함수를 호출 하면 실제로 비동기 계산이 실행 되지 않습니다. 대신 비동기적으로 실행할 작업의 *사양* 역할을 하는 `Async<unit>`를 반환 합니다. <xref:System.IO.File.WriteAllBytesAsync%2A>의 결과를 적절 한 형식으로 변환 하는 본문에서 `Async.AwaitTask`를 호출 합니다.
 
 또 다른 중요 한 줄은 `Async.RunSynchronously`에 대 한 호출입니다. F# 비동기 계산을 실제로 실행 하려는 경우 호출 해야 하는 비동기 모듈 시작 함수 중 하나입니다.
 
-이는 `async` 프로그래밍의 C#/vb 스타일과 근본적으로 차이가 있습니다. 에서 F#비동기 계산은 **콜드 작업**으로 간주할 수 있습니다. 실제로를 실행 하려면 명시적으로 시작 해야 합니다. 이는 C#/vb. 비동기 작업을 훨씬 더 쉽게 결합 하 고 시퀀스를 수행할 수 있기 때문에 몇 가지 이점이 있습니다.
+이는 `async` 프로그래밍의 C#/Visual Basic 스타일과 기본적인 차이점입니다. 에서 F#비동기 계산은 **콜드 작업**으로 간주할 수 있습니다. 실제로를 실행 하려면 명시적으로 시작 해야 합니다. 이렇게 하면 보다 쉽게 비동기 작업을 결합 하 고 시퀀스를 사용할 수 있을 뿐만 아니라 또는 Visual Basic에 C# 비해 훨씬 더 쉽게 사용할 수 있습니다.
 
-## <a name="combining-asynchronous-computations"></a>비동기 계산 결합
+## <a name="combine-asynchronous-computations"></a>비동기 계산 결합
 
 다음은 계산을 결합 하 여 이전 예제를 기반으로 하는 예제입니다.
 
@@ -110,7 +110,7 @@ let main argv =
 
 이 프로그램을 실행 하면 `printTotalFileBytes` 각 명령줄 인수에 대해 동시에 실행 됩니다. 비동기 계산은 프로그램 흐름과 별개로 실행 되므로 정보를 인쇄 하 고 실행을 완료 하는 순서는 없습니다. 계산은 병렬로 예약 되지만 실행 순서는 보장 되지 않습니다.
 
-## <a name="sequencing-asynchronous-computations"></a>비동기 계산 시퀀싱
+## <a name="sequence-asynchronous-computations"></a>시퀀스 비동기 계산
 
 `Async<'T>`은 이미 실행 중인 태스크가 아니라 작업 사양 이므로 더 복잡 한 변환을 쉽게 수행할 수 있습니다. 다음은 비동기 계산 집합을 시퀀스 하 여 한 번 실행 하는 예제입니다.
 
@@ -162,7 +162,7 @@ computation: Async<'T> - timeout: ?int -> Async<Async<'T>>
 
 ### <a name="asyncstartimmediate"></a>StartImmediate
 
-현재 운영 체제 스레드에서 즉시 시작되는 비동기 계산을 실행합니다. 이는 계산 중에 호출 스레드에서 무언가를 업데이트 해야 하는 경우에 유용 합니다. 예를 들어 비동기 계산에서 UI를 업데이트 해야 하는 경우 (예: 진행률 표시줄 업데이트) `Async.StartImmediate` 사용 해야 합니다.
+현재 운영 체제 스레드에서 즉시 시작 하는 비동기 계산을 실행 합니다. 이는 계산 중에 호출 스레드에서 무언가를 업데이트 해야 하는 경우에 유용 합니다. 예를 들어 비동기 계산에서 UI를 업데이트 해야 하는 경우 (예: 진행률 표시줄 업데이트) `Async.StartImmediate` 사용 해야 합니다.
 
 서명:
 
@@ -180,7 +180,7 @@ computation: Async<unit> - cancellationToken: ?CancellationToken -> unit
 
 ### <a name="asyncstartastask"></a>Async.startastask
 
-스레드 풀에서 계산을 실행합니다. 계산이 종료 된 후 (결과를 생성 하거나 예외를 throw 하거나 취소 된 경우) 해당 상태에서 완료 되는 <xref:System.Threading.Tasks.Task%601>를 반환 합니다. 취소 토큰을 제공 하지 않으면 기본 취소 토큰이 사용 됩니다.
+스레드 풀에서 계산을 실행 합니다. 계산이 종료 된 후 (결과를 생성 하거나 예외를 throw 하거나 취소 된 경우) 해당 상태에서 완료 되는 <xref:System.Threading.Tasks.Task%601>를 반환 합니다. 취소 토큰을 제공 하지 않으면 기본 취소 토큰이 사용 됩니다.
 
 서명:
 
@@ -273,7 +273,7 @@ computation: Async<'T> -> Async<Choice<'T, exn>>
 
 ### <a name="asyncignore"></a>Async. 무시
 
-지정된 계산을 실행하고 그 결과를 무시하는 비동기 계산을 만듭니다.
+지정 된 계산을 실행 하 고 해당 결과를 무시 하는 비동기 계산을 만듭니다.
 
 서명:
 
@@ -330,7 +330,7 @@ computation: Async<unit> - cancellationToken: ?CancellationToken -> unit
 - `Async.Start`에서 시작 된 계산에 의해 발생 한 예외는 호출자에 게 전파 되지 않습니다. 호출 스택이 완전히 해제 됩니다.
 - `Async.Start`로 시작 되는 effectful 작업 (예: `printfn`)은 프로그램 실행의 주 스레드에서 효과가 발생 하지 않습니다.
 
-## <a name="interoperating-with-net"></a>.NET과의 상호 운용
+## <a name="interoperate-with-net"></a>.NET과 상호 운용
 
 [async/await](../../../standard/async.md) 스타일의 비동기 프로그래밍을 사용하는 .net 라이브러리나 C# 코드 베이스를 사용하여 작업할 수 있습니다. 및 C# 대부분의 .net 라이브러리는 <xref:System.Threading.Tasks.Task%601> 및 <xref:System.Threading.Tasks.Task> 형식을 `Async<'T>`가 아닌 핵심 추상화로 사용 하기 때문에 이러한 두 가지 방법 간에 경계를 비동기 합니다.
 
@@ -371,7 +371,7 @@ module Async =
 
 <xref:System.Threading.Tasks.Task>를 입력으로 허용 하는 `Async.AwaitTask` 이미 있습니다. 이 함수와 이전에 정의 된 `startTaskFromAsyncUnit` 함수를 사용 하 여 F# 비동기 계산에서 <xref:System.Threading.Tasks.Task> 형식을 시작 하 고 기다릴 수 있습니다.
 
-## <a name="relationship-to-multithreading"></a>다중 스레딩을 위한 관계
+## <a name="relationship-to-multi-threading"></a>다중 스레딩에 대 한 관계
 
 이 문서 전체에서 스레딩을 언급 했지만 다음 두 가지 중요 한 사항을 기억해 야 합니다.
 

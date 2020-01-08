@@ -12,12 +12,12 @@ helpviewer_keywords:
 - profiling managed code
 - profiling managed code [Windows Store Apps]
 ms.assetid: 1c8eb2e7-f20a-42f9-a795-71503486a0f5
-ms.openlocfilehash: da5942f9a2138a536d158f75a6977d20bf31b41c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a3e60f715c4c61e671980e4f36813e864469d28e
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140393"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344766"
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>CLR 프로파일러 및 Windows 스토어 앱
 
@@ -25,7 +25,7 @@ ms.locfileid: "73140393"
 
 ## <a name="introduction"></a>소개
 
-소개 단락을 지난 후에는 CLR 프로 파일링 API에 대해 잘 알고 있습니다. 관리 되는 데스크톱 응용 프로그램에 대해 잘 작동 하는 진단 도구를 이미 작성 했습니다. 이제 도구가 관리 되는 Windows 스토어 앱에서 작동 하도록 할 수 있습니다. 아마도 이미이 작업을 수행 하려고 했 고 간단한 작업이 아니라는 것을 발견 했습니다. 실제로 모든 도구 개발자에 게 명확 하지 않을 수 있는 몇 가지 고려 사항이 있습니다. 예를 들면,
+소개 단락을 지난 후에는 CLR 프로 파일링 API에 대해 잘 알고 있습니다. 관리 되는 데스크톱 응용 프로그램에 대해 잘 작동 하는 진단 도구를 이미 작성 했습니다. 이제 도구가 관리 되는 Windows 스토어 앱에서 작동 하도록 할 수 있습니다. 아마도 이미이 작업을 수행 하려고 했 고 간단한 작업이 아니라는 것을 발견 했습니다. 실제로 모든 도구 개발자에 게 명확 하지 않을 수 있는 몇 가지 고려 사항이 있습니다. 예를 들면 다음과 같습니다.:
 
 - Windows 스토어 앱은 심각 하 게 감소 된 권한으로 컨텍스트에서 실행 됩니다.
 
@@ -53,7 +53,7 @@ CLR 프로 파일링 API를 처음 접하는 경우이 항목의 끝에 있는 �
 
 **프로파일러 DLL**
 
-분석 중인 응용 프로그램의 프로세스 공간에 로드 되는 구성 요소입니다. 프로파일러 "에이전트" 라고도 하는이 구성 요소는 [ICorProfilerCallback](icorprofilercallback-interface.md)[ICorProfilerCallback 인터페이스](icorprofilercallback-interface.md)(2, 3 등) 인터페이스를 구현 하 고 [ICorProfilerInfo](icorprofilerinfo-interface.md)(2, 3 등) 인터페이스를 사용 하 여에 대 한 데이터를 수집 합니다. 응용 프로그램을 분석 하 고 잠재적으로 응용 프로그램 동작의 측면을 수정 합니다.
+분석 중인 응용 프로그램의 프로세스 공간에 로드 되는 구성 요소입니다. 프로파일러 "에이전트" 라고도 하는이 구성 요소는 [ICorProfilerCallback](icorprofilercallback-interface.md)[ICorProfilerCallback 인터페이스](icorprofilercallback-interface.md)(2, 3 등) 인터페이스를 구현 하 고 [ICorProfilerInfo](icorprofilerinfo-interface.md)(2, 3 등) 인터페이스를 사용 하 여 분석 된 응용 프로그램에 대 한 데이터를 수집 하 고 잠재적으로 응용 프로그램 동작의 측면을 수정 합니다.
 
 **프로파일러 UI**
 
@@ -94,7 +94,7 @@ Windows RT 장치는 매우 잠금 상태입니다. 타사 프로파일러는 �
 
 **프로파일러 DLL 서명**
 
-Windows에서 프로파일러 DLL을 로드 하려고 하면 프로파일러 DLL이 올바르게 서명 되었는지 확인 합니다. 그렇지 않은 경우 기본적으로 로드에 실패 합니다. 이때 다음과 같은 두 가지 방법을 사용할 수 있습니다.
+Windows에서 프로파일러 DLL을 로드 하려고 하면 프로파일러 DLL이 올바르게 서명 되었는지 확인 합니다. 그렇지 않은 경우 기본적으로 로드에 실패 합니다. 여기에는 두 가지 방법이 있습니다.
 
 - 프로파일러 DLL이 서명 되었는지 확인 합니다.
 
@@ -112,7 +112,7 @@ NET Runtime version 4.0.30319.17929 - Loading profiler failed during CoCreateIns
 
 ### <a name="startup-load"></a>시작 로드
 
-일반적으로 데스크톱 앱에서 프로파일러 UI는 필요한 CLR 프로 파일링 API 환경 변수 (예: `COR_PROFILER`, `COR_ENABLE_PROFILING`및 `COR_PROFILER_PATH`)를 포함 하는 환경 블록을 초기화 하 고 새를 만들어 프로파일러 DLL의 시작 로드를 확인 합니다. 해당 환경 블록을 사용 하는 프로세스입니다. Windows 스토어 앱의 경우에도 마찬가지 이지만 메커니즘은 다릅니다.
+일반적으로 데스크톱 앱에서 프로파일러 UI는 필요한 CLR 프로 파일링 API 환경 변수 (예: `COR_PROFILER`, `COR_ENABLE_PROFILING`및 `COR_PROFILER_PATH`)를 포함 하는 환경 블록을 초기화 하 고 해당 환경 블록을 사용 하 여 새 프로세스를 만들어 프로파일러 DLL의 시작 로드를 표시 합니다. Windows 스토어 앱의 경우에도 마찬가지 이지만 메커니즘은 다릅니다.
 
 **관리자 권한으로 실행 안 함**
 
@@ -302,7 +302,7 @@ tempDir = appData.TemporaryFolder.Path;
 
 프로파일러 UI와 프로파일러 DLL 간에 간단한 신호 의미 체계가 필요한 경우 Windows 스토어 앱 및 데스크톱 앱 내에서 이벤트를 사용할 수 있습니다.
 
-프로파일러 DLL에서 [Createeventex](/windows/desktop/api/synchapi/nf-synchapi-createeventexa) 함수를 호출 하 여 원하는 이름을 가진 명명 된 이벤트를 만들 수 있습니다. 예를 들면,
+프로파일러 DLL에서 [Createeventex](/windows/desktop/api/synchapi/nf-synchapi-createeventexa) 함수를 호출 하 여 원하는 이름을 가진 명명 된 이벤트를 만들 수 있습니다. 예를 들면 다음과 같습니다.:
 
 ```cpp
 // Profiler DLL in Windows Store app (C++).
@@ -342,7 +342,7 @@ Windows 스토어 응용 프로그램 내에서 실행 하는 경우 프로파�
 
 ### <a name="managed-and-non-managed-winmds"></a>관리 및 관리 되지 않는 Winmd
 
-개발자가 Visual Studio를 사용 하 여 새 Windows 런타임 구성 요소 프로젝트를 만드는 경우 해당 프로젝트의 빌드는 개발자가 작성 한 메타 데이터 (클래스, 인터페이스 등의 형식 설명)를 설명 하는 WinMD 파일을 생성 합니다. 이 프로젝트가 C# 또는 VB로 작성 된 관리 언어 프로젝트인 경우 동일한 WinMD 파일에도 이러한 형식의 구현이 포함 됩니다. 즉, 개발자의 소스 코드에서 컴파일된 모든 IL을 포함 합니다. 이러한 파일은 관리 되는 WinMD 파일 이라고 합니다. Windows 런타임 메타 데이터와 기본 구현이 모두 포함 되어 있기 때문에 흥미로운 점이 있습니다.
+개발자가 Visual Studio를 사용 하 여 새 Windows 런타임 구성 요소 프로젝트를 만드는 경우 해당 프로젝트의 빌드는 개발자가 작성 한 메타 데이터 (클래스, 인터페이스 등의 형식 설명)를 설명 하는 WinMD 파일을 생성 합니다. 이 프로젝트가 C# 또는 Visual Basic 작성 된 관리 언어 프로젝트인 경우 동일한 WinMD 파일에도 이러한 형식의 구현이 포함 됩니다. 즉, 개발자의 소스 코드에서 컴파일된 모든 IL을 포함 합니다. 이러한 파일은 관리 되는 WinMD 파일 이라고 합니다. Windows 런타임 메타 데이터와 기본 구현이 모두 포함 되어 있기 때문에 흥미로운 점이 있습니다.
 
 이와 대조적으로 개발자가에 대 한 C++Windows 런타임 구성 요소 프로젝트를 만드는 경우 해당 프로젝트의 빌드는 메타 데이터만 포함 된 WinMD 파일을 생성 하며 구현은 별도의 네이티브 DLL로 컴파일됩니다. 마찬가지로 Windows SDK에 제공 되는 WinMD 파일에는 메타 데이터만 포함 되며 구현은 Windows의 일부로 제공 되는 별도의 네이티브 Dll로 컴파일됩니다.
 
@@ -364,7 +364,7 @@ WinMD에서 [ICorProfilerInfo:: GetModuleMetaData](icorprofilerinfo-getmodulemet
 
 ### <a name="modifying-metadata-from-winmds"></a>Winmd에서 메타 데이터 수정
 
-Winmd의 메타 데이터 수정은 지원 되지 않습니다. WinMD 파일에 대해 [ICorProfilerInfo:: GetModuleMetaData](icorprofilerinfo-getmodulemetadata-method.md) 메서드를 호출 하 고 `dwOpenFlags` 매개 변수에 [ofwrite](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) 를 지정 하거나 [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)와 같은 쓰기 가능 메타 데이터 인터페이스를 요청 하는 경우 [GetModuleMetaData](icorprofilerinfo-getmodulemetadata-method.md) 가 실패 합니다. 이는 계측을 지원 하기 위해 메타 데이터를 수정 해야 하는 IL 재작성 프로파일러에 특히 중요 합니다. 예를 들어 AssemblyRefs 또는 새 메서드를 추가 합니다. 따라서 이전 섹션에서 설명한 대로 [COR_PRF_MODULE_WINDOWS_RUNTIME](cor-prf-module-flags-enumeration.md) 를 먼저 확인 하 고 이러한 모듈에 쓰기 가능한 메타 데이터 인터페이스를 묻지 않습니다.
+Winmd의 메타 데이터 수정은 지원 되지 않습니다. WinMD 파일에 대해 [ICorProfilerInfo:: GetModuleMetaData](icorprofilerinfo-getmodulemetadata-method.md) 메서드를 호출 하 고 `dwOpenFlags` 매개 변수에 [ofwrite](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) 를 지정 하거나 [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)와 같은 쓰기 가능 메타 데이터 인터페이스를 요청 하는 경우 [GetModuleMetaData](icorprofilerinfo-getmodulemetadata-method.md) 가 실패 합니다. 이는 계측을 지원 하기 위해 메타 데이터를 수정 해야 하는 IL 재작성 프로파일러에 특히 중요 합니다. 예를 들어 AssemblyRefs 또는 새 메서드를 추가 합니다. 따라서 이전 섹션에서 설명한 대로 [COR_PRF_MODULE_WINDOWS_RUNTIME](cor-prf-module-flags-enumeration.md) 를 먼저 확인 하 고 해당 모듈에서 쓰기 가능한 메타 데이터 인터페이스를 요청 하지 않도록 합니다.
 
 ### <a name="resolving-assembly-references-with-winmds"></a>Winmd를 사용 하 여 어셈블리 참조 확인
 
@@ -378,11 +378,11 @@ Winmd의 메타 데이터 수정은 지원 되지 않습니다. WinMD 파일에 
 
 메모리 프로 파일링을 수행할 때 프로파일러 DLL은 일반적으로 [Forcegc 메서드](icorprofilerinfo-forcegc-method.md) 메서드를 호출할 개별 스레드를 만듭니다. 새 항목이 아닙니다. 그러나 Windows 스토어 앱 내에서 가비지 컬렉션을 수행 하는 작업은 스레드를 관리 되는 스레드로 변환할 수 있습니다. 예를 들어 해당 스레드에 대 한 프로 파일링 API ThreadID가 만들어집니다.
 
-이에 대 한 결과를 이해 하려면 CLR 프로 파일링 API에서 정의한 동기 호출과 비동기 호출 간의 차이점을 이해 하는 것이 중요 합니다. 이는 Windows 스토어 앱의 비동기 호출 개념과 매우 다릅니다. 자세한 내용은 블로그 게시물 [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE](https://blogs.msdn.microsoft.com/davbr/2008/12/23/why-we-have-corprof_e_unsupported_call_sequence/) 을 참조 하세요.
+이에 대 한 결과를 이해 하려면 CLR 프로 파일링 API에서 정의한 동기 호출과 비동기 호출 간의 차이점을 이해 하는 것이 중요 합니다. 이는 Windows 스토어 앱의 비동기 호출 개념과 매우 다릅니다. 자세한 내용은 블로그 게시물에서 CORPROF_E_UNSUPPORTED_CALL_SEQUENCE 하는 [이유](https://blogs.msdn.microsoft.com/davbr/2008/12/23/why-we-have-corprof_e_unsupported_call_sequence/) 를 참조 하세요.
 
 관련 점은 프로파일러에서 만든 스레드에 대해 수행 되는 호출은 프로파일러 DLL의 [ICorProfilerCallback](icorprofilercallback-interface.md) 메서드 중 하나를 구현 하는 외부에서 수행 되는 경우에도 항상 동기로 간주 됩니다. 이상 사용 되는 경우 이제 [Forcegc 메서드](icorprofilerinfo-forcegc-method.md)를 호출 하 여 CLR에서 프로파일러의 스레드를 관리 되는 스레드로 전환 했으므로 해당 스레드는 더 이상 프로파일러의 스레드로 간주 되지 않습니다. 따라서 CLR은 해당 스레드에 대해 동기로 한정 되는 항목에 대 한 보다 엄격한 정의를 적용 합니다. 즉, 호출이 프로파일러 DLL의 [ICorProfilerCallback](icorprofilercallback-interface.md) 메서드 중 하나에서 시작 되어야 동기로 한정 됩니다.
 
-실제로는 무엇을 의미 하나요? 대부분의 [ICorProfilerInfo](icorprofilerinfo-interface.md) 메서드는 동기적으로 호출 되는 것이 안전 하며, 그렇지 않은 경우 즉시 실패 합니다. 따라서 프로파일러 DLL이 일반적으로 프로파일러 생성 스레드에 대해 수행 되는 다른 호출 (예: [RequestProfilerDetach](icorprofilerinfo3-requestprofilerdetach-method.md), [RequestReJIT](icorprofilerinfo4-requestrejit-method.md)또는 [Requestrevert](icorprofilerinfo4-requestrevert-method.md))에 대해 [forcegc 메서드](icorprofilerinfo-forcegc-method.md) 스레드를 다시 사용할 경우 문제가 발생할 수 있습니다. . [DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) 와 같은 비동기 안전 함수에도 관리 되는 스레드에서 호출 될 때 특별 한 규칙이 있습니다. 자세한 내용은 블로그 게시물 [Profiler 스택 탐색: 기본 사항 및 이후](https://blogs.msdn.microsoft.com/davbr/2005/10/06/profiler-stack-walking-basics-and-beyond/) 항목을 참조 하세요.
+실제로는 무엇을 의미 하나요? 대부분의 [ICorProfilerInfo](icorprofilerinfo-interface.md) 메서드는 동기적으로 호출 되는 것이 안전 하며, 그렇지 않은 경우 즉시 실패 합니다. 따라서 프로파일러 DLL이 일반적으로 프로파일러 생성 스레드에 대해 수행 되는 다른 호출 (예: [RequestProfilerDetach](icorprofilerinfo3-requestprofilerdetach-method.md), [RequestReJIT](icorprofilerinfo4-requestrejit-method.md)또는 [Requestrevert](icorprofilerinfo4-requestrevert-method.md))에 대해 [forcegc 메서드](icorprofilerinfo-forcegc-method.md) 스레드를 다시 사용할 경우 문제가 발생할 수 있습니다. [DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) 와 같은 비동기 안전 함수에도 관리 되는 스레드에서 호출 될 때 특별 한 규칙이 있습니다. 자세한 내용은 블로그 게시물 [Profiler 스택 탐색: 기본 사항 및 이후](https://blogs.msdn.microsoft.com/davbr/2005/10/06/profiler-stack-walking-basics-and-beyond/) 항목을 참조 하세요.
 
 따라서 프로파일러 DLL이 [Forcegc 메서드](icorprofilerinfo-forcegc-method.md) 를 호출 하는 데 사용 하는 모든 스레드는 gc를 트리거하는 목적 *으로만* 사용 되 고 gc 콜백에 응답 하는 것이 좋습니다. 스택 샘플링 또는 분리와 같은 다른 작업을 수행 하기 위해 프로 파일링 API를 호출 해서는 안 됩니다.
 

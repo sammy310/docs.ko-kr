@@ -2,12 +2,12 @@
 title: 비제네릭 ForEach
 ms.date: 03/30/2017
 ms.assetid: 576cd07a-d58d-4536-b514-77bad60bff38
-ms.openlocfilehash: a4bbc594ec0bf2d387e700508c7d92685216accc
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 93a6b1d815ef6478974ceadf8ad935be2a3bdea5
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715652"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75338650"
 ---
 # <a name="non-generic-foreach"></a>비제네릭 ForEach
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]의 도구 상자에는 <xref:System.Activities.Statements.ForEach%601> 컬렉션을 반복할 수 있도록 하는 <xref:System.Collections.Generic.IEnumerable%601>을 비롯한 흐름 제어 활동이 제공됩니다.  
@@ -17,7 +17,7 @@ ms.locfileid: "74715652"
  이 샘플에서는 비제네릭 <xref:System.Activities.Statements.ForEach%601> 활동과 디자이너를 구현하는 방법을 보여 줍니다. 이 활동을 사용하여 <xref:System.Collections.ArrayList>를 반복할 수 있습니다.  
   
 ## <a name="foreach-activity"></a>ForEach 활동  
- C#/VB `foreach` 문은 컬렉션의 각 요소에 대해 포함 문을 실행하여 컬렉션의 요소를 열거합니다. [!INCLUDE[wf1](../../../../includes/wf1-md.md)]에 해당하는 `foreach` 활동은 <xref:System.Activities.Statements.ForEach%601>과 <xref:System.Activities.Statements.ParallelForEach%601>입니다. <xref:System.Activities.Statements.ForEach%601> 활동은 값 목록과 본문을 포함합니다. 런타임에 목록이 반복되고 목록의 각 값에 대해 본문이 실행됩니다.  
+ C#/Ovisual Basic `foreach` 문은 컬렉션의 각 요소에 대해 포함 문을 실행 하 여 컬렉션의 요소를 열거 합니다. [!INCLUDE[wf1](../../../../includes/wf1-md.md)]에 해당하는 `foreach` 활동은 <xref:System.Activities.Statements.ForEach%601>과 <xref:System.Activities.Statements.ParallelForEach%601>입니다. <xref:System.Activities.Statements.ForEach%601> 활동은 값 목록과 본문을 포함합니다. 런타임에 목록이 반복되고 목록의 각 값에 대해 본문이 실행됩니다.  
   
  대부분의 경우 제네릭 버전의 활동이 기본 솔루션이어야 합니다. 제네릭 버전은 이를 사용하는 대부분의 시나리오에 적용되고 컴파일 시 형식 검사 기능을 제공하기 때문입니다. 비제네릭 <xref:System.Collections.IEnumerable> 인터페이스를 구현하는 형식을 반복하는 데는 비제네릭 버전을 사용할 수 있습니다.  
   

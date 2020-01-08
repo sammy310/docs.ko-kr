@@ -2,12 +2,12 @@
 title: '방법: 두 폴더의 내용 비교(LINQ)'
 ms.date: 07/20/2015
 ms.assetid: 903c7e9a-f48d-4a07-a8a8-5450d2646efa
-ms.openlocfilehash: d11299e3e36f4b6a8b837af59b1c27bb1c7aaf41
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 05031466eeafae2dc63db36e9380034ddf9cbf15
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348407"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337536"
 ---
 # <a name="how-to-compare-the-contents-of-two-folders-linq-visual-basic"></a>방법: 두 폴더의 내용 비교 (LINQ) (Visual Basic)
 
@@ -24,7 +24,7 @@ ms.locfileid: "74348407"
 
 여기 표시된 `FileComparer` 클래스는 표준 쿼리 연산자와 함께 사용자 지정 비교자 클래스를 사용하는 방법을 보여 줍니다. 이 클래스는 실제 시나리오에서 사용되지 않습니다. 단지 각 파일의 이름 및 길이(바이트)를 사용하여 각 폴더의 내용이 똑같은지 여부를 확인합니다. 실제 시나리오에서는 더 엄격한 일치 검사를 수행하도록 이 비교자를 수정해야 합니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 ```vb
 Module CompareDirs
@@ -114,11 +114,11 @@ Module CompareDirs
 End Module
 ```
 
-## <a name="compiling-the-code"></a>코드 컴파일
+## <a name="compile-the-code"></a>코드 컴파일
 
-VB.NET 콘솔 응용 프로그램 프로젝트를 만듭니다 .이 프로젝트에는 system.string 네임 스페이스에 대 한 `Imports` 문이 있습니다.
+System.xml 네임 스페이스에 대 한 `Imports` 문을 사용 하 여 Visual Basic 콘솔 응용 프로그램 프로젝트를 만듭니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [LINQ to Objects(Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
 - [LINQ 및 파일 디렉터리(Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

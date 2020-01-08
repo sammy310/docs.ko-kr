@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
-ms.openlocfilehash: fec23439236fccb23964c0feb22691a973c787b1
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 62b218a7259d824930a2eb2c7f810b480034e2b6
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838093"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75338027"
 ---
 # <a name="auditing-security-events"></a>보안 이벤트 감사
 WCF (Windows Communication Foundation)를 사용 하 여 만든 응용 프로그램은 감사 기능을 사용 하 여 보안 이벤트 (성공, 실패 또는 둘 다)를 기록할 수 있습니다. 이벤트는 Windows의 시스템 이벤트 로그에 기록되며 이벤트 뷰어를 사용하여 검사할 수 있습니다.  
@@ -73,7 +73,7 @@ WCF (Windows Communication Foundation)를 사용 하 여 만든 응용 프로그
 </configuration>  
 ```  
   
- 감사가 설정되어 있지만 `auditLogLocation`이 지정되어 있지 않으면 보안 로그 기록을 지원하는 플랫폼의 기본 로그 이름은 "Security" 로그이고, 그렇지 않으면 "Application" 로그입니다. [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 및 Windows Vista 운영 체제만 보안 로그에 쓰기를 지원 합니다. 자세한 내용은이 항목의 뒷부분에 나오는 "운영 체제" 단원을 참조 하십시오.  
+ 감사가 설정되어 있지만 `auditLogLocation`이 지정되어 있지 않으면 보안 로그 기록을 지원하는 플랫폼의 기본 로그 이름은 "Security" 로그이고, 그렇지 않으면 "Application" 로그입니다. Windows Server 2003 및 Windows Vista 운영 체제만 보안 로그에 쓰기를 지원 합니다. 자세한 내용은이 항목의 뒷부분에 나오는 "운영 체제" 단원을 참조 하십시오.  
   
 ## <a name="security-considerations"></a>보안 고려 사항  
  악의적인 사용자가 감사가 설정된 사실을 알고 있다면 잘못된 메시지를 보내 감사 항목을 기록할 수 있습니다. 이런 식으로 감사 로그가 채워지면 감사 시스템이 실패합니다. 이 문제를 완화하려면 <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> 속성을 `true`로 설정하고 이벤트 뷰어의 속성을 사용하여 감사 동작을 제어합니다. 자세한 내용은 [WINDOWS xp의 이벤트 뷰어에서 이벤트 로그를 보고 관리 하는 방법](https://go.microsoft.com/fwlink/?LinkId=89150)에서 사용할 수 있는 windows xp의 이벤트 뷰어를 사용 하 여 이벤트 로그 보기 및 관리에 대 한 Microsoft 지원 문서를 참조 하세요.  
@@ -88,7 +88,7 @@ WCF (Windows Communication Foundation)를 사용 하 여 만든 응용 프로그
 |System|애플리케이션 로그|보안 로그|  
 |------------|---------------------|------------------|  
 |[!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] 이상|지원|지원 안 함|  
-|[!INCLUDE[ws2003sp1](../../../../includes/ws2003sp1-md.md)] 및 Windows Vista|지원|스레드 컨텍스트에 `SeAuditPrivilege`가 있어야 합니다.|  
+|Windows Server 2003 SP1 및 Windows Vista|지원|스레드 컨텍스트에 `SeAuditPrivilege`가 있어야 합니다.|  
   
 #### <a name="other-factors"></a>기타 요소  
  다음 표에서는 운영 체제 이외에 로깅 사용을 제어하는 기타 설정에 대해 설명합니다.  

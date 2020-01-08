@@ -1,15 +1,15 @@
 ---
-title: FindPrivateKey 샘플-WCF
+title: FindPrivateKey 샘플
 ms.date: 12/04/2017
 helpviewer_keywords:
 - FindPrivateKey
 ms.assetid: 16b54116-0ceb-4413-af0c-753bb2a785a6
-ms.openlocfilehash: 4ba4316489c1494da9421bea5c513e44c6eb50a7
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 0ed1e5e81a5d2f7f3586e5dce306e8244b5ebd48
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989879"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346012"
 ---
 # <a name="findprivatekey-sample"></a>FindPrivateKey 샘플
 
@@ -20,7 +20,7 @@ ms.locfileid: "70989879"
 
 X.509 인증서는 관리자 또는 시스템에 있는 모든 사용자가 설치합니다. 그러나 다른 계정으로 실행 되는 서비스에서 인증서에 액세스할 수 있습니다. 예를 들어 네트워크 서비스 계정이 있습니다.
 
-처음에 인증서를 이 계정으로 설치하지 않았기 때문에 이 계정에 프라이빗 키 파일에 대한 액세스 권한이 없을 수도 있습니다. FindPrivateKey 도구는 지정된 X.509 인증서의 개인 키 파일 위치를 알려줍니다. 특정 X.509 인증서의 프라이빗 키 파일 위치를 알고 나면 이 파일의 사용 권한을 추가하거나 제거할 수 있습니다.
+처음에 인증서를 이 계정으로 설치하지 않았기 때문에 이 계정에 프라이빗 키 파일에 대한 액세스 권한이 없을 수도 있습니다. FindPrivateKey 도구는 지정된 X.509 인증서의 프라이빗 키 파일 위치를 알려줍니다. 특정 X.509 인증서의 프라이빗 키 파일 위치를 알고 나면 이 파일의 사용 권한을 추가하거나 제거할 수 있습니다.
 
 보안을 위해 인증서를 사용 하는 샘플은 *설치 .bat* 파일의 FindPrivateKey 도구를 사용 합니다. 개인 키 파일이 발견 되 면 *cacls.exe* 와 같은 다른 도구를 사용 하 여 파일에 대 한 적절 한 액세스 권한을 설정할 수 있습니다.
 
@@ -46,13 +46,13 @@ cacls.exe "C:\Documents and Settings\All Users\Application Data\Microsoft\Crypto
 
 프로젝트를 다운로드 하려면 [.NET Framework 4에 대 한 Windows Communication Foundation (WCF) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459)을 참조 하세요.
 
-1. 파일 탐색기를 열고 샘플을 설치한 디렉터리 위치 아래의 *WF_WCF_Samples\WCF\Setup\FindPrivateKey\CS* 폴더로 이동 합니다.
+1. 파일 탐색기를 열고 샘플을 설치한 디렉터리 위치 아래의 *WF_WCF_Samples \wcf\setup\findprivatekey\cs* 폴더로 이동 합니다.
 
 2. .sln 파일 아이콘을 두 번 클릭하여 Visual Studio에서 파일을 엽니다.
 
 3. **빌드** 메뉴에서 **솔루션 다시 빌드**를 선택 합니다.
 
-4. 솔루션을 빌드하면 파일이 생성 됩니다. FindPrivateKey.exe.
+4. 솔루션을 빌드하면 FindPrivateKey.exe 파일이 생성됩니다.
 
 ## <a name="conventionscommand-line-entries"></a>규칙-명령줄 항목
 
@@ -62,15 +62,15 @@ cacls.exe "C:\Documents and Settings\All Users\Application Data\Microsoft\Crypto
 
  "*옵션 1 마이그레이션* &#124; *옵션 2 마이그레이션*"는 옵션 집합 사이의 선택을 나타냅니다.
 
- "\<*value*>"는 입력할 매개 변수 값을 나타냅니다.
+ "\<*값*>"는 입력할 매개 변수 값을 나타냅니다.
 
-## <a name="usage"></a>사용
+## <a name="usage"></a>용도
 
 ```console
 FindPrivateKey <storeName> <storeLocation> [{ {-n <subjectName>} | {-t <thumbprint>} } [-f | -d | -a]]
 ```
 
-각 항목이 나타내는 의미는 다음과 같습니다.
+조건:
 
 | 매개 변수         | 설명                                                                       |
 |-----------------|-----------------------------------------------------------------------------------|

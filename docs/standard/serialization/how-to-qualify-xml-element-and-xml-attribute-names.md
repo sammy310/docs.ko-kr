@@ -1,5 +1,5 @@
 ---
-title: '방법: XML 요소 및 XML 특성 이름 한정'
+title: XML 요소 및 XML 특성 이름을 한정 하는 방법
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - qualifying XML elements
 - XML namespaces, qualifying elements and names in
 ms.assetid: 44719f90-7e15-42e8-a9e2-282287e2b5bf
-ms.openlocfilehash: 1f79caf6ff295d793c615b17d387cdd165e440e7
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 383dc7687e67e183b86598857067801c950b0312
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353096"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75545096"
 ---
-# <a name="how-to-qualify-xml-element-and-xml-attribute-names"></a>방법: XML 요소 및 XML 특성 이름 한정
+# <a name="how-to-qualify-xml-element-and-xml-attribute-names"></a>XML 요소 및 XML 특성 이름을 한정 하는 방법
 
 <xref:System.Xml.Serialization.XmlSerializerNamespaces> 클래스의 인스턴스에 포함 된 XML 네임 스페이스는 [xml에서 네임 스페이스](https://www.w3.org/TR/REC-xml-names/)라는 W3C (World Wide Web 컨소시엄) 사양을 따라야 합니다.
 
@@ -36,36 +36,22 @@ XML 네임스페이스는 XML 문서에서 XML 요소 및 XML 특성의 이름�
 
 4. 각 특성의 `Namespace` 속성을 `XmlSerializerNamespaces`의 네임스페이스 값 중 하나로 설정합니다.
 
-5. `XmlSerializer`의 `Serialize` 메서드에 `XmlSerializerNamespaces`를 전달 합니다.
+5. `XmlSerializerNamespaces`의 `Serialize` 메서드에 `XmlSerializer`를 전달합니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 다음 예제에서는 `XmlSerializerNamespaces`를 만들고 두 개의 접두사와 네임스페이스 쌍을 개체에 추가합니다. 코드에서는 `XmlSerializer` 클래스의 인스턴스를 serialize하는 데 사용되는 `Books`를 만듭니다. 코드는 `Serialize`를 사용하여 `XmlSerializerNamespaces` 메서드를 호출하여 XML이 접두사가 지정된 네임스페이스를 포함할 수 있게 됩니다.
 
-<!-- TODO: THE FOLLOWING VB SNIPPET ISN'T CORRECT!! -->
 ```vb
-Option Explicit
-public class Price
-{
-    [XmlAttribute(Namespace = "http://www.cpandl.com")]
-    public string currency;
-    [XmlElement(Namespace = "http://www.cohowinery.com")]
-    public decimal price;
-}
-
-Option Strict
-
-Imports System
 Imports System.IO
 Imports System.Xml
 Imports System.Xml.Serialization
 
-Public Class Run
+Public Module Program
 
-    Public Shared Sub Main()
-        Dim test As New Run()
-        test.SerializeObject("XmlNamespaces.xml")
-    End Sub 'Main
+    Public Sub Main()
+        SerializeObject("XmlNamespaces.xml")
+    End Sub
 
     Public Sub SerializeObject(filename As String)
         Dim mySerializer As New XmlSerializer(GetType(Books))
@@ -90,16 +76,15 @@ Public Class Run
         mySerializer.Serialize(myWriter, myBooks, myNamespaces)
         myWriter.Close()
     End Sub
-End Class
+End Module
 
 Public Class Books
     <XmlElement([Namespace] := "http://www.cohowinery.com")> _
     Public Book As Book
-End Class 'Books
+End Class
 
 <XmlType([Namespace] := "http://www.cpandl.com")> _
 Public Class Book
-
     <XmlElement([Namespace] := "http://www.cpandl.com")> _
     Public TITLE As String
     <XmlElement([Namespace] := "http://www.cohowinery.com")> _
@@ -109,8 +94,8 @@ End Class
 Public Class Price
     <XmlAttribute([Namespace] := "http://www.cpandl.com")> _
     Public currency As String
-    Public <XmlElement([Namespace] := "http://www.cohowinery.com")> _
-        price As Decimal
+    <XmlElement([Namespace] := "http://www.cohowinery.com")> _
+    Public price As Decimal
 End Class
 ```
 
@@ -120,36 +105,35 @@ using System.IO;
 using System.Xml;
 using System.Xml.Serialization;
 
-public class Run
+public class Program
 {
     public static void Main()
     {
-        Run test = new Run();
-        test.SerializeObject("XmlNamespaces.xml");
+        SerializeObject("XmlNamespaces.xml");
     }
-    public void SerializeObject(string filename)
+    
+    public static void SerializeObject(string filename)
     {
-        XmlSerializer mySerializer = new XmlSerializer(typeof(Books));
+        var mySerializer = new XmlSerializer(typeof(Books));
         // Writing a file requires a TextWriter.
         TextWriter myWriter = new StreamWriter(filename);
 
         // Creates an XmlSerializerNamespaces and adds two
         // prefix-namespace pairs.
-        XmlSerializerNamespaces myNamespaces =
-        new XmlSerializerNamespaces();
+        var myNamespaces = new XmlSerializerNamespaces();
         myNamespaces.Add("books", "http://www.cpandl.com");
         myNamespaces.Add("money", "http://www.cohowinery.com");
 
         // Creates a Book.
-        Book myBook = new Book();
+        var myBook = new Book();
         myBook.TITLE = "A Book Title";
-        Price myPrice = new Price();
+        var myPrice = new Price();
         myPrice.price = (decimal) 9.95;
         myPrice.currency = "US Dollar";
         myBook.PRICE = myPrice;
-        Books myBooks = new Books();
+        var myBooks = new Books();
         myBooks.Book = myBook;
-        mySerializer.Serialize(myWriter,myBooks,myNamespaces);
+        mySerializer.Serialize(myWriter, myBooks, myNamespaces);
         myWriter.Close();
     }
 }
@@ -168,9 +152,17 @@ public class Book
     [XmlElement(Namespace ="http://www.cohowinery.com")]
     public Price PRICE;
 }
+
+public class Price
+{
+    [XmlAttribute(Namespace = "http://www.cpandl.com")]
+    public string currency;
+    [XmlElement(Namespace = "http://www.cohowinery.com")]
+    public decimal price;
+}
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Xml.Serialization.XmlSerializer>
 - [XML 스키마 정의 도구 및 XML serialization](the-xml-schema-definition-tool-and-xml-serialization.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - arguments [Visual Basic], ByRef
 - arguments [Visual Basic], changing value
 ms.assetid: 6fad2368-5da7-4c07-8bf8-0f4e65a1be67
-ms.openlocfilehash: e562c0f5ec01380c792b4dc064554171cfb007e7
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: deac87ca4690990a4d00f63d0ea9b843c3f9a9c4
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74339952"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344482"
 ---
 # <a name="how-to-change-the-value-of-a-procedure-argument-visual-basic"></a>방법: 프로시저 인수의 값 변경(Visual Basic)
 프로시저를 호출할 때 사용자가 제공 하는 각 인수는 프로시저에 정의 된 매개 변수 중 하나에 해당 합니다. 경우에 따라 프로시저 코드는 호출 코드에서 인수의 내부 값을 변경할 수 있습니다. 다른 경우에는 프로시저에서 인수의 로컬 복사본만 변경할 수 있습니다.  
@@ -54,7 +54,7 @@ ms.locfileid: "74339952"
   
 2. 프로시저 코드에서 매개 변수 이름을 사용 하 여 인수의 로컬 복사본에 값을 할당 합니다. 호출 코드의 내부 값은 변경 되지 않습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 배열 변수를 사용 하 고 해당 요소에 대해 작동 하는 두 개의 프로시저를 보여 줍니다. `increase` 프로시저는 각 요소에 하나씩만 추가 합니다. `replace` 프로시저 `a()` 매개 변수에 새 배열을 할당 한 다음 각 요소에 요소 하나를 추가 합니다.  
   
  [!code-vb[VbVbcnProcedures#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#35)]  
@@ -69,7 +69,7 @@ ms.locfileid: "74339952"
   
  프로시저에서 호출 코드의 변수 자체를 수정 하는 것을 방지할 수 있습니다. [방법: 값 변경에 대해 프로시저 인수 보호를](./how-to-protect-a-procedure-argument-against-value-changes.md)참조 하세요.  
   
-## <a name="compiling-the-code"></a>코드 컴파일  
+## <a name="compile-the-code"></a>코드 컴파일  
  변수를 참조로 전달 하는 경우에는 `ByRef` 키워드를 사용 하 여이 메커니즘을 지정 해야 합니다.  
   
  Visual Basic의 기본값은 인수를 값으로 전달 하는 것입니다. 그러나 선언 된 모든 매개 변수와 함께 [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) 또는 [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) 키워드를 포함 하는 것이 좋은 프로그래밍 습관입니다. 이렇게 하면 코드를 보다 쉽게 읽을 수 있습니다.  
@@ -77,7 +77,7 @@ ms.locfileid: "74339952"
 ## <a name="net-framework-security"></a>.NET Framework 보안  
  프로시저에서 호출 코드의 인수를 기반으로 하는 값을 변경 하는 것이 항상 발생할 수 있는 위험이 있습니다. 이 값을 변경 하 고이 값을 사용 하기 전에 유효성 검사를 수행할 준비를 해야 합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [절차](./index.md)
 - [프로시저 매개 변수 및 인수](./procedure-parameters-and-arguments.md)
@@ -88,4 +88,4 @@ ms.locfileid: "74339952"
 - [방법: 값 변경에 대해 프로시저 인수 보호](./how-to-protect-a-procedure-argument-against-value-changes.md)
 - [방법: 인수가 값으로 전달되도록 설정](./how-to-force-an-argument-to-be-passed-by-value.md)
 - [위치 및 이름으로 인수 전달](./passing-arguments-by-position-and-by-name.md)
-- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [값 형식과 참조 형식](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)

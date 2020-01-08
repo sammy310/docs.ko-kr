@@ -5,12 +5,12 @@ helpviewer_keywords:
 - classes [Visual Basic]
 - objects [Visual Basic]
 ms.assetid: c68c5752-1006-46e1-975a-6717b62a42fc
-ms.openlocfilehash: d45aca8b137f56cf058b63b9286504259c0005eb
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 589b0b362cc25fd10e2780fd541cf9f7cfb546a9
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346698"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344634"
 ---
 # <a name="objects-and-classes-in-visual-basic"></a>Visual Basic의 개체 및 클래스
 
@@ -51,7 +51,7 @@ Visual Basic의 각 개체는 *클래스*에 의해 정의 됩니다. 클래스�
    ```
 
 > [!NOTE]
-> 가능하면 항상 할당하려는 클래스 형식으로 변수를 선언해야 합니다. 이것을 *초기 바인딩*이라고 합니다. 컴파일 시간의 클래스 형식을 모르는 경우 변수를 *개체 데이터 형식*으로 선언하여 [런타임에 바인딩](../../../../visual-basic/language-reference/data-types/object-data-type.md)을 호출할 수 있습니다. 그러나 런타임에 바인딩을 사용하면 성능이 저하되고 런타임 개체 멤버에 대한 액세스가 제한됩니다. 자세한 내용은 [개체 변수 선언](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)을 참조하세요.
+> 가능하면 항상 할당하려는 클래스 형식으로 변수를 선언해야 합니다. 이것을 *초기 바인딩*이라고 합니다. 컴파일 시간의 클래스 형식을 모르는 경우 변수를 [개체 데이터 형식](../../../../visual-basic/language-reference/data-types/object-data-type.md)으로 선언하여 *런타임에 바인딩*을 호출할 수 있습니다. 그러나 런타임에 바인딩을 사용하면 성능이 저하되고 런타임 개체 멤버에 대한 액세스가 제한됩니다. 자세한 내용은 [개체 변수 선언](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)을 참조하세요.
 
 ### <a name="multiple-instances"></a>여러 인스턴스
 
@@ -75,7 +75,7 @@ IntelliSense는 멤버 나열 옵션을 호출할 때(예를 들어 멤버 액�
 
 ### <a name="fields-and-properties"></a>필드 및 속성
 
-*필드* 및 *속성*은 개체에 저장된 정보를 나타냅니다. 프로시저에서 지역 변수를 검색하고 설정하는 것과 동일한 방식으로 대입문을 사용하여 해당 값을 검색하고 설정합니다. 다음 예제에서는 <xref:System.Windows.Forms.Control.Width%2A> 속성을 검색하고 <xref:System.Windows.Forms.Control.ForeColor%2A> 개체의 <xref:System.Windows.Forms.Label> 속성을 설정합니다.
+*필드* 및 *속성*은 개체에 저장된 정보를 나타냅니다. 프로시저에서 지역 변수를 검색하고 설정하는 것과 동일한 방식으로 대입문을 사용하여 해당 값을 검색하고 설정합니다. 다음 예제에서는 <xref:System.Windows.Forms.Control.Width%2A> 속성을 검색하고 <xref:System.Windows.Forms.Label> 개체의 <xref:System.Windows.Forms.Control.ForeColor%2A> 속성을 설정합니다.
 
 ```vb
 Dim warningWidth As Integer = warningLabel.Width
@@ -110,7 +110,7 @@ warningLabel.ForeColor = System.Drawing.Color.Red
 
 *메서드*는 개체에서 수행할 수 있는 작업입니다. 예를 들어 <xref:System.Windows.Forms.ComboBox.ObjectCollection.Add%2A>는 콤보 상자에 새 항목을 추가하는 <xref:System.Windows.Forms.ComboBox> 개체의 메서드입니다.
 
-다음 예제에서는 <xref:System.Windows.Forms.Timer.Start%2A> 개체의 <xref:System.Windows.Forms.Timer> 메서드를 설명합니다.
+다음 예제에서는 <xref:System.Windows.Forms.Timer> 개체의 <xref:System.Windows.Forms.Timer.Start%2A> 메서드를 설명합니다.
 
 ```vb
 Dim safetyTimer As New System.Windows.Forms.Timer
@@ -176,7 +176,7 @@ safetyTimer.Start()
 
 개체를 사용하면 변수 및 프로시저를 한 번 선언한 후 필요할 때마다 다시 사용할 수 있습니다. 예를 들어 애플리케이션에 맞춤법 검사기를 추가하려는 경우 모든 변수 및 지원 함수를 정의하여 맞춤법 검사 기능을 제공할 수 있습니다. 맞춤법 검사기를 클래스로 만드는 경우 컴파일된 어셈블리에 대한 참조를 추가하여 다른 애플리케이션에서 다시 사용할 수 있습니다. 다른 사람이 이미 개발한 맞춤법 검사기 클래스를 사용하여 일부 작업을 줄일 수도 있습니다.
 
-.NET Framework는 사용할 수 있는 구성 요소에 대 한 많은 예를 제공 합니다. 다음 예제에서는 <xref:System.TimeZone> 네임스페이스의 <xref:System> 클래스를 사용합니다. <xref:System.TimeZone>에서는 현재 컴퓨터 시스템의 표준 시간대에 대한 정보를 검색할 수 있도록 하는 멤버를 제공합니다.
+.NET Framework는 사용할 수 있는 구성 요소에 대 한 많은 예를 제공 합니다. 다음 예제에서는 <xref:System> 네임스페이스의 <xref:System.TimeZone> 클래스를 사용합니다. <xref:System.TimeZone>에서는 현재 컴퓨터 시스템의 표준 시간대에 대한 정보를 검색할 수 있도록 하는 멤버를 제공합니다.
 
 ```vb
 Public Sub examineTimeZone()
@@ -192,7 +192,7 @@ Public Sub examineTimeZone()
 End Sub
 ```
 
-앞의 예제에서 첫 번째 [Dim 문](../../../../visual-basic/language-reference/statements/dim-statement.md)은 <xref:System.TimeZone> 형식의 개체 변수를 선언하고 이를 <xref:System.TimeZone> 속성에 의해 반환된 <xref:System.TimeZone.CurrentTimeZone%2A> 개체에 할당합니다.
+앞의 예제에서 첫 번째 [Dim 문](../../../../visual-basic/language-reference/statements/dim-statement.md)은 <xref:System.TimeZone> 형식의 개체 변수를 선언하고 이를 <xref:System.TimeZone.CurrentTimeZone%2A> 속성에 의해 반환된 <xref:System.TimeZone> 개체에 할당합니다.
 
 ## <a name="relationships-among-objects"></a>개체 간 관계
 
@@ -212,7 +212,7 @@ End Sub
    Public Class reversibleButton
    ```
 
-   `End Class` 문은 클래스의 마지막 코드 줄 다음에 나옵니다. 기본적으로 IDE(통합 개발 환경)는 사용자가 `End Class` 문을 입력하면 `Class`를 자동으로 생성합니다.
+   `End Class` 문은 클래스의 마지막 코드 줄 다음에 나옵니다. 기본적으로 IDE(통합 개발 환경)는 사용자가 `Class` 문을 입력하면 `End Class`를 자동으로 생성합니다.
 
 2. `Class` 문 바로 다음에 [Inherits 문](../../../../visual-basic/language-reference/statements/inherits-statement.md)을 입력합니다. 새 클래스가 파생되는 클래스를 지정합니다.
 
@@ -239,7 +239,7 @@ End Sub
 
 파생 클래스는 해당 클래스의 기준이 되는 클래스에서 멤버를 상속하므로 클래스 계층 구조가 점점 복잡해질 수 있습니다. 자세한 내용은 [상속 기본 사항](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)을 참조하세요.
 
-### <a name="compiling-the-code"></a>코드 컴파일
+### <a name="compile-the-code"></a>코드 컴파일
 
 컴파일러에서 새 클래스를 파생하려는 원본 클래스에 액세스할 수 있어야 합니다. 이것은 이름을 완전히 한정하거나 앞의 예제에서와 같이 [Imports 문(.NET 네임스페이스 및 형식)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)에서 해당 네임스페이스를 식별하는 것을 의미할 수 있습니다. 클래스가 다른 프로젝트에 있으면 해당 프로젝트에 대한 참조를 추가해야 할 수 있습니다. 자세한 내용은 [프로젝트의 참조 관리](/visualstudio/ide/managing-references-in-a-project)를 참조하세요.
 

@@ -9,19 +9,19 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: b8abcc8e-a5f5-4317-aca5-01e3c40ab24d
-ms.openlocfilehash: d2fe9a73f79408db08ef48d380940fcf6bb831c0
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: d56da60f174933af789a6abd7d8aa90f3f29d9c1
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838002"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344623"
 ---
 # <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>방법: SSL 인증서를 사용하여 포트 구성
 전송 보안을 사용 하는 <xref:System.ServiceModel.WSHttpBinding> 클래스를 사용 하 여 자체 호스팅 Windows Communication Foundation (WCF) 서비스를 만들 때 x.509 인증서를 사용 하 여 포트를 구성 해야 합니다. 자체 호스트된 서비스를 만들지 않는 경우에는 IIS(인터넷 정보 서비스)에서 서비스를 호스트할 수 있습니다. 자세한 내용은 [HTTP 전송 보안](../../../../docs/framework/wcf/feature-details/http-transport-security.md)을 참조 하세요.  
   
  포트를 구성하려면 컴퓨터에서 실행하는 운영 체제에 따라 다른 도구를 사용해야 합니다.  
   
- [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 또는 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]를 실행하는 경우 HttpCfg.exe 도구를 사용합니다. [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]에는 이 도구가 함께 설치됩니다. [!INCLUDE[wxp](../../../../includes/wxp-md.md)]를 사용 하 여 [WINDOWS XP 서비스 팩 2 지원 도구](https://go.microsoft.com/fwlink/?LinkId=88606)에서이 도구를 다운로드할 수 있습니다. 자세한 내용은 [Httpcfg.exe 개요](https://go.microsoft.com/fwlink/?LinkId=88605)를 참조 하세요. [Windows 지원 도구 설명서](https://go.microsoft.com/fwlink/?LinkId=94840) 에서는 httpcfg.exe 도구에 대 한 구문을 설명 합니다.  
+ Windows Server 2003 또는 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]를 실행 하는 경우 Httpcfg.exe 도구를 사용 합니다. Windows Server 2003를 사용 하 여이 도구를 설치 합니다. [!INCLUDE[wxp](../../../../includes/wxp-md.md)]를 사용 하 여 [WINDOWS XP 서비스 팩 2 지원 도구](https://go.microsoft.com/fwlink/?LinkId=88606)에서이 도구를 다운로드할 수 있습니다. 자세한 내용은 [Httpcfg.exe 개요](https://go.microsoft.com/fwlink/?LinkId=88605)를 참조 하세요. [Windows 지원 도구 설명서](https://go.microsoft.com/fwlink/?LinkId=94840) 에서는 httpcfg.exe 도구에 대 한 구문을 설명 합니다.  
   
  Windows Vista를 실행 하는 경우 이미 설치 된 Netsh.exe 도구를 사용 합니다.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "74838002"
   
 ### <a name="to-determine-how-ports-are-configured"></a>포트의 구성 방법을 확인하려면  
   
-1. [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 또는 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]에서 다음 예제와 같이 Httpcfg.exe 도구를 사용 하 여 **쿼리** 및 **ssl** 스위치를 사용 하 여 현재 포트 구성을 봅니다.  
+1. Windows Server 2003 또는 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]에서 다음 예제와 같이 Httpcfg.exe 도구를 사용 하 여 **쿼리** 및 **ssl** 스위치를 사용 하 여 현재 포트 구성을 봅니다.  
   
     ```console
     httpcfg query ssl  
@@ -65,7 +65,7 @@ ms.locfileid: "74838002"
   
 ### <a name="to-bind-an-ssl-certificate-to-a-port-number"></a>SSL 인증서를 포트 번호에 바인딩하려면  
   
-1. [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 또는 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]에서 SSL(Secure Sockets Layer) 저장소에 "set" 모드의 HttpCfg.exe 도구를 사용하여 인증서를 포트 번호에 바인딩합니다. 도구에서는 다음 예제처럼 지문을 사용하여 인증서를 식별합니다.  
+1. Windows Server 2003 또는 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]에서는 SSL(Secure Sockets Layer) (SSL) 저장소에서 "설정" 모드로 Httpcfg.exe 도구를 사용 하 여 인증서를 포트 번호에 바인딩합니다. 도구에서는 다음 예제처럼 지문을 사용하여 인증서를 식별합니다.  
   
     ```console  
     httpcfg set ssl -i 0.0.0.0:8012 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6  
@@ -89,7 +89,7 @@ ms.locfileid: "74838002"
   
 ### <a name="to-bind-an-ssl-certificate-to-a-port-number-and-support-client-certificates"></a>SSL 인증서를 포트 번호에 바인딩하고 클라이언트 인증서를 지원하려면  
   
-1. [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 또는 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]에서 전송 계층에 X.509 인증서를 사용하여 인증하는 클라이언트를 지원하려면 위의 절차를 수행하되 다음 예제처럼 추가 명령줄 매개 변수를 HttpCfg.exe에 전달합니다.  
+1. Windows Server 2003 또는 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]에서 전송 계층의 x.509 인증서를 사용 하 여 인증 하는 클라이언트를 지원 하려면 위의 절차를 수행 하 되 다음 예제와 같이 Httpcfg.exe에 추가 명령줄 매개 변수를 전달 합니다.  
   
     ```console  
     httpcfg set ssl -i 0.0.0.0:8012 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6 -f 2  
@@ -111,7 +111,7 @@ ms.locfileid: "74838002"
     httpcfg query ssl>myMachinePorts.txt  
     ```
   
-2. [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 또는 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]에서 **delete** 및 **ssl** 키워드와 함께 httpcfg.exe 도구를 사용 합니다. **-I** 스위치를 사용 하 여 `IP``port` 번호를 지정 하 고 **-h** 스위치를 사용 하 여 지문을 지정 합니다.  
+2. Windows Server 2003 또는 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]에서는 **delete** 및 **ssl** 키워드와 함께 httpcfg.exe 도구를 사용 합니다. **-I** 스위치를 사용 하 여 `IP``port` 번호를 지정 하 고 **-h** 스위치를 사용 하 여 지문을 지정 합니다.  
   
     ```console  
     httpcfg delete ssl -i 0.0.0.0:8005 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6  
@@ -123,7 +123,7 @@ ms.locfileid: "74838002"
     Netsh http delete sslcert ipport=0.0.0.0:8005  
     ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드에서는 전송 보안에 설정된 <xref:System.ServiceModel.WSHttpBinding> 클래스를 사용하여 자체 호스트된 서비스를 만드는 방법을 보여 줍니다. 애플리케이션을 만들 때에는 주소에 포트 번호를 지정합니다.  
   
  [!code-csharp[c_WsHttpService#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_wshttpservice/cs/source.cs#3)]

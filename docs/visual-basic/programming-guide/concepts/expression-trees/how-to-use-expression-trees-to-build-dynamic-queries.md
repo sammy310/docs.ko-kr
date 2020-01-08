@@ -2,12 +2,12 @@
 title: '방법: 식 트리를 사용하여 동적 쿼리 빌드'
 ms.date: 07/20/2015
 ms.assetid: 16278787-7532-4b65-98b2-7a412406c4ee
-ms.openlocfilehash: bf15880c1988ac5639dd80ba56d330372dc3803b
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 616aa3eba1e07a92983bb5d2048a9dbae936e77c
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344711"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346060"
 ---
 # <a name="how-to-use-expression-trees-to-build-dynamic-queries-visual-basic"></a>방법: 식 트리를 사용 하 여 동적 쿼리 빌드 (Visual Basic)
 
@@ -17,13 +17,13 @@ LINQ에서는 식 트리를 사용하여 <xref:System.Linq.IQueryable%601>을 �
 
 이 항목에서는 식 트리를 사용하여 동적 LINQ 쿼리를 만드는 방법을 설명합니다. 동적 쿼리는 컴파일 시 쿼리의 세부 정보를 알 수 없는 경우에 유용합니다. 예를 들어 최종 사용자가 하나 이상의 조건자를 지정하여 데이터를 필터링할 수 있는 사용자 인터페이스를 애플리케이션에서 제공할 수 있습니다. LINQ를 쿼리에 사용하려면 이러한 종류의 애플리케이션에서 식 트리를 사용하여 런타임에 LINQ 쿼리를 만들어야 합니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 다음 예제에서는 식 트리를 사용하여 `IQueryable` 데이터 소스에 대한 쿼리를 생성한 다음 실행하는 방법을 보여 줍니다. 코드에서 다음 쿼리를 나타내는 식 트리를 작성합니다.
 
 `companies.Where(Function(company) company.ToLower() = "coho winery" OrElse company.Length > 16).OrderBy(Function(company) company)`
 
-<xref:System.Linq.Expressions> 네임스페이스의 팩터리 메서드는 전체 쿼리를 구성하는 식을 나타내는 식 트리를 만드는 데 사용됩니다. 표준 쿼리 연산자 메서드 호출을 나타내는 식은 이러한 메서드의 <xref:System.Linq.Queryable> 구현을 가리킵니다. 최종 식 트리는 <xref:System.Linq.IQueryProvider.CreateQuery%60%601%28System.Linq.Expressions.Expression%29> 데이터 소스 공급자의 `IQueryable` 구현에 전달되어 `IQueryable` 형식의 실행 가능한 쿼리를 만듭니다. 해당 쿼리 변수를 열거하여 결과를 가져옵니다.
+<xref:System.Linq.Expressions> 네임스페이스의 팩터리 메서드는 전체 쿼리를 구성하는 식을 나타내는 식 트리를 만드는 데 사용됩니다. 표준 쿼리 연산자 메서드 호출을 나타내는 식은 이러한 메서드의 <xref:System.Linq.Queryable> 구현을 가리킵니다. 최종 식 트리는 `IQueryable` 데이터 소스 공급자의 <xref:System.Linq.IQueryProvider.CreateQuery%60%601%28System.Linq.Expressions.Expression%29> 구현에 전달되어 `IQueryable` 형식의 실행 가능한 쿼리를 만듭니다. 해당 쿼리 변수를 열거하여 결과를 가져옵니다.
 
 ```vb
 ' Add an Imports statement for System.Linq.Expressions.
@@ -101,7 +101,7 @@ Next
 
 이 코드는 `Queryable.Where` 메서드에 전달되는 조건자에 고정 개수의 식을 사용합니다. 그러나 사용자 입력에 따라 달라지는 가변 개수의 조건자 식을 결합하는 애플리케이션을 작성할 수 있습니다. 사용자 입력에 따라 쿼리에서 호출되는 표준 쿼리 연산자를 변경할 수도 있습니다.
 
-## <a name="compiling-the-code"></a>코드 컴파일
+## <a name="compile-the-code"></a>코드 컴파일
 
 - **콘솔 애플리케이션** 프로젝트를 새로 만듭니다.
 
@@ -109,7 +109,7 @@ Next
 
 - 예제의 코드를 복사 하 여 `Main` `Sub` 프로시저에 붙여넣습니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [식 트리(Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)
 - [방법: 식 트리 실행 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)

@@ -2,17 +2,17 @@
 title: 순수 함수를 사용하여 리팩터링
 ms.date: 07/20/2015
 ms.assetid: af0ea62f-4f57-4868-b624-a85524055935
-ms.openlocfilehash: a19285e3a70c14b86898aef0e77c4d04b3abace3
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: ce07622a030f291bbbee54dc342562ffecd3258c
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346539"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75341661"
 ---
 # <a name="refactoring-using-a-pure-function-visual-basic"></a>순수 함수를 사용 하 여 리팩터링 (Visual Basic)
 다음 예제에서는 리팩터링를 사용 하 [여 확장 메서드 (Visual Basic)를 사용 하 여 리팩터링을](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)수행 합니다 .이 예제에서 순수 함수를 사용 하기 위해 단락 텍스트를 찾는 코드는 순수 정적 메서드 `ParagraphText`으로 이동 됩니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에서는 WordprocessingML 문서를 처리하여 WordprocessingML 문서에서 단락 노드를 검색합니다. 또한 각 단락의 스타일도 식별합니다. 이 예제는 이 자습서의 이전 예제를 기반으로 합니다. 리팩터링된 코드는 아래에 있는 코드의 주석에서 호출됩니다.  
   
  이 예제에 대 한 소스 문서를 만드는 방법에 대 한 지침은 [원본 Office OPEN XML 문서 만들기 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)를 참조 하십시오.  
@@ -67,7 +67,7 @@ Module Module1
         Return (e.<w:r>.<w:t>).StringConcatenate(Function(element) CStr(element))  
     End Function  
   
-    ' Following function is required because VB does not support short circuit evaluation  
+    ' Following function is required because Visual Basic does not support short circuit evaluation  
     Private Function GetStyleOfParagraph(ByVal styleNode As XElement, _  
                                          ByVal defaultStyle As String) As String  
         If styleNode Is Nothing Then  
@@ -172,7 +172,7 @@ StyleName:Code >Hello World<
   
 - [다른 모양으로 XML 프로젝션 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projecting-xml-in-a-different-shape.md)  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [자습서: WordprocessingML 문서에서 내용 조작 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
 - [확장 메서드를 사용 하 여 리팩터링 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)

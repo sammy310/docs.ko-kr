@@ -11,12 +11,12 @@ helpviewer_keywords:
 - procedural code [WPF], accessing resources from
 - resources [WPF], creating with procedural code
 ms.assetid: c1cfcddb-e39c-41c8-a7f3-60984914dfae
-ms.openlocfilehash: 3d504467c137c1e3f494e120217957661f4e75a3
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 11903a9bae25b0646d944fb11038e07434996015
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458763"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559757"
 ---
 # <a name="resources-and-code"></a>리소스 및 코드
 이 개요에서는 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 구문이 아닌 코드를 사용하여 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 리소스를 만들거나 리소스에 액세스하는 방법을 중점적으로 설명합니다. 일반적인 리소스 사용 및 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 구문 측면에서 본 리소스에 대한 자세한 내용은 [XAML 리소스](xaml-resources.md)를 참조하세요.  
@@ -42,7 +42,7 @@ ms.locfileid: "73458763"
   
 <a name="objectaskey"></a>   
 ## <a name="using-objects-as-keys"></a>개체를 키로 사용  
- 대부분의 리소스 사용에서는 리소스 키를 문자열로 설정합니다. 하지만 다양한 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 기능은 키를 지정하는 데 의도적으로 문자열 형식을 사용하지 않습니다. 대신에 이 매개 변수는 개체입니다. 리소스에 개체로 키를 지정하는 기능은 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 스타일 및 테마 지정 지원에서 사용됩니다. 스타일이 지정 되지 않은 컨트롤의 기본 스타일이 되는 테마의 스타일은 각각 적용 해야 하는 컨트롤의 <xref:System.Type>에 의해 키가 지정 됩니다. 형식으로 키가 지정되는 방법은 각 컨트롤 형식의 기본 인스턴스에 적용되는 안정적인 조회 메커니즘이고, 형식은 리플렉션을 통해 검색되고 파생 형식에 기본 스타일이 없더라도 파생 클래스의 스타일을 지정하는 데 사용될 수 있습니다. [X:Type 태그 확장](../../xaml-services/x-type-markup-extension.md)을 사용 하 여 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]에 정의 된 리소스에 대 한 <xref:System.Type> 키를 지정할 수 있습니다. [ComponentResourceKey 태그 확장](componentresourcekey-markup-extension.md)과 같은 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 기능을 지원하는 기타 문자열이 아닌 키 사용에 대한 비슷한 확장이 있습니다.  
+ 대부분의 리소스 사용에서는 리소스 키를 문자열로 설정합니다. 하지만 다양한 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 기능은 키를 지정하는 데 의도적으로 문자열 형식을 사용하지 않습니다. 대신에 이 매개 변수는 개체입니다. 리소스에 개체로 키를 지정하는 기능은 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 스타일 및 테마 지정 지원에서 사용됩니다. 스타일이 지정 되지 않은 컨트롤의 기본 스타일이 되는 테마의 스타일은 각각 적용 해야 하는 컨트롤의 <xref:System.Type>에 의해 키가 지정 됩니다. 형식으로 키가 지정되는 방법은 각 컨트롤 형식의 기본 인스턴스에 적용되는 안정적인 조회 메커니즘이고, 형식은 리플렉션을 통해 검색되고 파생 형식에 기본 스타일이 없더라도 파생 클래스의 스타일을 지정하는 데 사용될 수 있습니다. [X:Type 태그 확장](../../../desktop-wpf/xaml-services/xtype-markup-extension.md)을 사용 하 여 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]에 정의 된 리소스에 대 한 <xref:System.Type> 키를 지정할 수 있습니다. [ComponentResourceKey 태그 확장](componentresourcekey-markup-extension.md)과 같은 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 기능을 지원하는 기타 문자열이 아닌 키 사용에 대한 비슷한 확장이 있습니다.  
   
 ## <a name="see-also"></a>참조
 

@@ -2,12 +2,12 @@
 title: 제네릭이 아닌 ParallelForEach
 ms.date: 03/30/2017
 ms.assetid: de17e7a2-257b-48b3-91a1-860e2e9bf6e6
-ms.openlocfilehash: 33e0c8ef8c04b7d58815760ae1152f63891fdfd5
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: ea7f57b8812dca3dfcb4908730dd788182d50c5c
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715639"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347612"
 ---
 # <a name="non-generic-parallelforeach"></a>제네릭이 아닌 ParallelForEach
 
@@ -19,7 +19,7 @@ ms.locfileid: "74715639"
 
 ## <a name="parallelforeach-activity"></a>ParallelForEach 활동
 
-C#/VB `foreach` 문은 컬렉션의 각 요소에 대해 포함 문을 실행하여 컬렉션의 요소를 열거합니다. 그에 상응하는 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 활동은 <xref:System.Activities.Statements.ForEach%601> 및 <xref:System.Activities.Statements.ParallelForEach%601>입니다. <xref:System.Activities.Statements.ForEach%601> 활동은 값 목록과 본문을 포함합니다. 런타임에 목록이 반복되고 목록의 각 값에 대해 본문이 실행됩니다.
+C#/Ovisual Basic `foreach` 문은 컬렉션의 각 요소에 대해 포함 문을 실행 하 여 컬렉션의 요소를 열거 합니다. 그에 상응하는 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 활동은 <xref:System.Activities.Statements.ForEach%601> 및 <xref:System.Activities.Statements.ParallelForEach%601>입니다. <xref:System.Activities.Statements.ForEach%601> 활동은 값 목록과 본문을 포함합니다. 런타임에 목록이 반복되고 목록의 각 값에 대해 본문이 실행됩니다.
 
 <xref:System.Activities.Statements.ParallelForEach%601>에는 <xref:System.Activities.Statements.ParallelForEach%601.CompletionCondition%2A>이 있습니다. <xref:System.Activities.Statements.ParallelForEach%601>의 반환 결과가 <xref:System.Activities.Statements.ParallelForEach%601.CompletionCondition%2A>이면 `true` 활동이 일찍 완료될 수 있습니다. <xref:System.Activities.Statements.ParallelForEach%601.CompletionCondition%2A>은 각 반복을 완료한 후에 확인됩니다.
 
@@ -53,7 +53,7 @@ public class ParallelForEach : NativeActivity
 반복되는 요소의 컬렉션입니다. 컬렉션의 모든 요소가 호환 가능한 형식인지 확인하는 작업은 런타임에 수행됩니다.
 
 이상 상태 (선택 사항) \
-<xref:System.Activities.Statements.ParallelForEach%601.CompletionCondition%2A> 속성은 반복을 완료한 후에 매번 확인됩니다. `true`로 계산 되 면 예약 된 보류 중인 반복이 취소 됩니다. 이 속성을 설정하지 않으면 분기 컬렉션의 모든 활동이 완료될 때까지 실행됩니다.
+<xref:System.Activities.Statements.ParallelForEach%601.CompletionCondition%2A> 속성은 반복을 완료한 후에 매번 확인됩니다. 그 결과가 `true`이면 예약하여 대기 중인 반복이 취소됩니다. 이 속성을 설정하지 않으면 분기 컬렉션의 모든 활동이 완료될 때까지 실행됩니다.
 
 ## <a name="example-of-using-parallelforeach"></a>ParallelForEach 사용 예제
 

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - JSON Serializer, JSON Reader, JSON Writer
 - Converter, JSON Converter, DateTime Converter
 - ISO, ISO 8601, ISO 8601-1:2019
-ms.openlocfilehash: 04e0e3c613b194ac85241d50d3bc5fd5dc0b6e54
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 8198359e2c54c4ed098703fbcc070f7469b3362a
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977332"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344647"
 ---
 # <a name="datetime-and-datetimeoffset-support-in-systemtextjson"></a>System.Text.Json의 DateTime 및 DateTimeOffset 지원
 
@@ -74,7 +74,7 @@ Serializer에서 사용자 지정 구문 분석 또는 서식 지정을 수행 �
 
 입력 <xref:System.DateTime> 또는 <xref:System.DateTimeOffset> 텍스트 표현의 형식을 확인할 수 없는 경우 변환기 읽기 논리에서 `DateTime(Offset).Parse` 메서드를 사용할 수 있습니다. 이렇게 하면를 사용할 수 있습니다. 확장 된 ISO 8601-1:2019 프로필을 준수 하지 않는 iso 8601 문자열과 iso 8601 형식을 비롯 하 여 다양 한 <xref:System.DateTime> 및 <xref:System.DateTimeOffset> 텍스트 형식 구문 분석에 대 한 광범위 한 기능을 제공 합니다. 이 방법은 serializer의 기본 구현을 사용 하는 것 보다 성능이 훨씬 낮습니다.
 
-Serialize를 위해 변환기 쓰기 논리에 `DateTime(Offset).ToString` 메서드를 사용할 수 있습니다. 이를 통해 [표준 날짜 및 시간 형식](https://docs.microsoft.com/dotnet/standard/base-types/standard-date-and-time-format-strings)및 [사용자 지정 날짜 및 시간 형식을](https://docs.microsoft.com/dotnet/standard/base-types/custom-date-and-time-format-strings)사용 하 여 <xref:System.DateTime> 및 <xref:System.DateTimeOffset> 값을 작성할 수 있습니다.
+Serialize를 위해 변환기 쓰기 논리에 `DateTime(Offset).ToString` 메서드를 사용할 수 있습니다. 이를 통해 [표준 날짜 및 시간 형식](../base-types/standard-date-and-time-format-strings.md)및 [사용자 지정 날짜 및 시간 형식을](../base-types/custom-date-and-time-format-strings.md)사용 하 여 <xref:System.DateTime> 및 <xref:System.DateTimeOffset> 값을 작성할 수 있습니다.
 이는 serializer의 기본 구현을 사용 하는 것 보다 성능이 훨씬 낮습니다.
 
 [!code-csharp[example-showing-datetime-parse](~/samples/snippets/standard/datetime/json/csharp/datetime-converter-examples/example1/Program.cs)]
@@ -85,9 +85,9 @@ Serialize를 위해 변환기 쓰기 논리에 `DateTime(Offset).ToString` 메�
 
 #### <a name="using-xrefsystembufferstextutf8parser-and-xrefsystembufferstextutf8formatter"></a><xref:System.Buffers.Text.Utf8Parser> 및 <xref:System.Buffers.Text.Utf8Formatter> 사용
 
-입력 <xref:System.DateTime> 또는 <xref:System.DateTimeOffset> 텍스트 표현이 "R", "l", "O" 또는 "G" [표준 날짜 및 시간 형식 문자열](https://docs.microsoft.com/dotnet/standard/base-types/standard-date-and-time-format-strings)중 하나를 준수 하거나 이러한 형식 중 하나에 따라 쓰려면 변환기 논리에서 빠른 utf-8 기반 구문 분석 및 형식 지정 메서드를 사용할 수 있습니다. `DateTime(Offset).Parse` 및 `DateTime(Offset).ToString`를 사용 하는 것 보다 훨씬 빠릅니다.
+입력 <xref:System.DateTime> 또는 <xref:System.DateTimeOffset> 텍스트 표현이 "R", "l", "O" 또는 "G" [표준 날짜 및 시간 형식 문자열](../base-types/standard-date-and-time-format-strings.md)중 하나를 준수 하거나 이러한 형식 중 하나에 따라 쓰려면 변환기 논리에서 빠른 utf-8 기반 구문 분석 및 형식 지정 메서드를 사용할 수 있습니다. `DateTime(Offset).Parse` 및 `DateTime(Offset).ToString`를 사용 하는 것 보다 훨씬 빠릅니다.
 
-이 예제에서는 ["R" 표준 형식](https://docs.microsoft.com/dotnet/standard/base-types/standard-date-and-time-format-strings#the-rfc1123-r-r-format-specifier)에 따라 <xref:System.DateTime> 값을 serialize 및 deserialize 하는 사용자 지정 변환기를 보여 줍니다.
+이 예제에서는 ["R" 표준 형식](../base-types/standard-date-and-time-format-strings.md#the-rfc1123-r-r-format-specifier)에 따라 <xref:System.DateTime> 값을 serialize 및 deserialize 하는 사용자 지정 변환기를 보여 줍니다.
 
 [!code-csharp[example-showing-utf8-parser-and-formatter](~/samples/snippets/standard/datetime/json/csharp/datetime-converter-examples/example2/Program.cs)]
 
@@ -103,7 +103,7 @@ Serialize를 위해 변환기 쓰기 논리에 `DateTime(Offset).ToString` 메�
 
 ### <a name="when-writing-with-xrefsystemtextjsonutf8jsonwriter"></a><xref:System.Text.Json.Utf8JsonWriter>를 사용 하 여 작성 하는 경우
 
-<xref:System.Text.Json.Utf8JsonWriter>를 사용 하 여 사용자 지정 <xref:System.DateTime> 또는 <xref:System.DateTimeOffset> 텍스트 표현을 작성 하려는 경우 사용자 지정 표현의 서식을 <xref:System.String>, `ReadOnlySpan<Byte>`, `ReadOnlySpan<Char>`또는 <xref:System.Text.Json.JsonEncodedText>로 지정한 다음 해당 [Utf8JsonWriter](https://docs.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter.writestringvalue?view=netcore-3.0) 또는 [Utf8JsonWriter](https://docs.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter.writestring?view=netcore-3.0) 메서드에 전달할 수 있습니다.
+<xref:System.Text.Json.Utf8JsonWriter>를 사용 하 여 사용자 지정 <xref:System.DateTime> 또는 <xref:System.DateTimeOffset> 텍스트 표현을 작성 하려는 경우 사용자 지정 표현의 형식을 <xref:System.String>, `ReadOnlySpan<Byte>`, `ReadOnlySpan<Char>`또는 <xref:System.Text.Json.JsonEncodedText>로 지정한 다음 해당 <xref:System.Text.Json.Utf8JsonWriter.WriteStringValue%2A?displayProperty=nameWithType> 또는 <xref:System.Text.Json.Utf8JsonWriter.WriteString%2A?displayProperty=nameWithType> 메서드에 전달할 수 있습니다.
 
 다음 예제에서는 <xref:System.DateTime.ToString(System.String,System.IFormatProvider)>를 사용 하 여 사용자 지정 <xref:System.DateTime> 형식을 만든 다음 <xref:System.Text.Json.Utf8JsonWriter.WriteStringValue(System.String)> 메서드로 작성할 수 있는 방법을 보여 줍니다.
 
@@ -125,10 +125,10 @@ Serialize를 위해 변환기 쓰기 논리에 `DateTime(Offset).ToString` 메�
 
 | 구성 요소       | 서식                      | 설명                                                                     |
 |-----------------|-----------------------------|---------------------------------------------------------------------------------|
-| Year            | "yyyy"                      | 0001-9999                                                                       |
+| 년            | "yyyy"                      | 0001-9999                                                                       |
 | 월           | "MM"                        | 01-12                                                                           |
-| Day             | "dd"                        | 월/연도를 기준으로 하는 01-28, 01-29, 01-30, 01-31                                  |
-| Hour            | "HH"                        | 00-23                                                                           |
+| 일             | "dd"                        | 월/연도를 기준으로 하는 01-28, 01-29, 01-30, 01-31                                  |
+| 시간            | "HH"                        | 00-23                                                                           |
 | Minute          | "mm"                        | 00-59                                                                           |
 | Second          | "ss"                        | 00-59                                                                           |
 | 초 분수 | "FFFFFFF"                   | 최소 1 자리 숫자, 최대 16 자리                                      |
@@ -136,7 +136,7 @@ Serialize를 위해 변환기 쓰기 논리에 `DateTime(Offset).ToString` 메�
 | 부분 시간    | "HH ': ' mm ': ' ss [FFFFFFF]"     | UTC 오프셋 정보가 없는 시간                                             |
 | 전체 날짜       | "yyyy'-'mm'-'dd't'hh-'MM'-'dd"            | 달력 날짜                                                                   |
 | 전체 시간       | "' Partial time'K"           | 현지 시간과 UTC 사이의 시간 오프셋을 사용한 하루 또는 현지 시간 (UTC) |
-| 날짜 시간       | "' 전체 날짜 ' ' ' ' 전체 시간 '" | 달력 날짜 및 시간 (예: 2019-07-26T16:59:57-05:00)                   |
+| 날짜/시간       | "' 전체 날짜 ' ' ' ' 전체 시간 '" | 달력 날짜 및 시간 (예: 2019-07-26T16:59:57-05:00)                   |
 
 ### <a name="support-for-parsing"></a>구문 분석 지원
 
@@ -149,7 +149,7 @@ Serialize를 위해 변환기 쓰기 논리에 `DateTime(Offset).ToString` 메�
     1. "yyyy'-'mm'-'dd't'hh-'MM'-' m ': ' MM '
 
 3. "' 전체 날짜 ' ' ' ' ' 부분 시간 '"
-    1. "yyyy'-'mm'-'dd't'hh-'MM'-% Ddu: ' MM ': ' ss ' ([정렬 가능한 (" s ") 서식 지정자](https://docs.microsoft.com/dotnet/standard/base-types/standard-date-and-time-format-strings#the-sortable-s-format-specifier))
+    1. "yyyy'-'mm'-'dd't'hh-'MM'-% Ddu: ' MM ': ' ss ' ([정렬 가능한 (" s ") 서식 지정자](../base-types/standard-date-and-time-format-strings.md#the-sortable-s-format-specifier))
     2. "yyyy'-'mm'-'dd't'hh-'MM'-% n이 (가): ' MM ': ' ss '. ' FFFFFFF
 
 4. "' 전체 날짜 ' ' ' ' 시간 시간 ' ': ' ' Minute ' ' 시간 오프셋 '"
@@ -174,7 +174,7 @@ Serialize를 위해 변환기 쓰기 논리에 `DateTime(Offset).ToString` 메�
 서식 지정에 대해 정의 된 세분성 수준은 다음과 같습니다.
 
 1. "' 전체 날짜 ' ' ' ' ' 부분 시간 '"
-    1. "yyyy'-'mm'-'dd't'hh-'MM'-% Ddu: ' MM ': ' ss ' ([정렬 가능한 (" s ") 서식 지정자](https://docs.microsoft.com/dotnet/standard/base-types/standard-date-and-time-format-strings#the-sortable-s-format-specifier))
+    1. "yyyy'-'mm'-'dd't'hh-'MM'-% Ddu: ' MM ': ' ss ' ([정렬 가능한 (" s ") 서식 지정자](../base-types/standard-date-and-time-format-strings.md#the-sortable-s-format-specifier))
 
         오프셋 정보 없이 소수 자릿수 초 없이 <xref:System.DateTime>의 형식을 지정 하는 데 사용 됩니다.
 

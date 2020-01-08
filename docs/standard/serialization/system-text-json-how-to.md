@@ -8,12 +8,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 3d3dc0011562e25854938aff857f2832a5978b49
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
-ms.translationtype: MT
+ms.openlocfilehash: 32c78cc48dcd3d9f2c6e1d338bdbdd359f69879f
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283338"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344512"
 ---
 # <a name="how-to-serialize-and-deserialize-json-in-net"></a>.NET에서 JSON을 serialize 및 deserialize 하는 방법
 
@@ -184,7 +184,7 @@ JSON 출력을 잘 인쇄 하려면 <xref:System.Text.Json.JsonSerializerOptions
 
 ## <a name="customize-json-names-and-values"></a>JSON 이름 및 값 사용자 지정
 
-기본적으로 속성 이름 및 사전 키는 대/소문자를 포함 하 여 JSON 출력에서 변경 되지 않습니다. 열거형 값은 숫자로 표시 됩니다. 이 섹션에서는 다음을 수행 하는 방법을 설명 합니다.
+기본적으로 속성 이름 및 사전 키는 대/소문자를 포함 하 여 JSON 출력에서 변경 되지 않습니다. 열거형 값은 숫자로 표시 됩니다. 이 섹션에서는 다음을 수행하는 방법을 설명합니다.
 
 * [개별 속성 이름 사용자 지정](#customize-individual-property-names)
 * [모든 속성 이름을 카멜식 대/소문자로 변환](#use-camel-case-for-all-json-property-names)
@@ -379,7 +379,7 @@ Serialize 할 개체의 속성이 `Dictionary<string,TValue>`형식이 면 `stri
 
 |속성 |값  |
 |---------|---------|
-| Date    | 오전 8/1/2019 12:00:00-07:00|
+| 날짜    | 오전 8/1/2019 12:00:00-07:00|
 | TemperatureCelsius| 25 |
 | 요약| null|
 
@@ -460,7 +460,7 @@ Serialize 할 개체의 속성이 `Dictionary<string,TValue>`형식이 면 `stri
 
 ## <a name="serialize-properties-of-derived-classes"></a>파생 클래스의 속성 직렬화
 
-컴파일 시간에 serialize 할 형식을 지정 하는 경우 다형성 serialization이 지원 되지 않습니다. 예를 들어 `WeatherForecast` 클래스와 파생 클래스 `WeatherForecastWithWind`있다고 가정 합니다.
+컴파일 시간에 serialize 할 형식을 지정 하는 경우 다형성 serialization이 지원 되지 않습니다. 예를 들어 `WeatherForecast` 클래스와 파생 클래스 `WeatherForecastDerived`있다고 가정 합니다.
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWF)]
 
@@ -470,7 +470,7 @@ Serialize 할 개체의 속성이 `Dictionary<string,TValue>`형식이 면 `stri
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/SerializePolymorphic.cs?name=SnippetSerializeDefault)]
 
-이 시나리오에서는 `weatherForecast` 개체가 실제로 `WeatherForecastWithWind` 개체인 경우에도 `WindSpeed` 속성이 serialize 되지 않습니다. 기본 클래스 속성만 직렬화 됩니다.
+이 시나리오에서는 `weatherForecast` 개체가 실제로 `WeatherForecastDerived` 개체인 경우에도 `WindSpeed` 속성이 serialize 되지 않습니다. 기본 클래스 속성만 직렬화 됩니다.
 
 ```json
 {
@@ -571,9 +571,9 @@ Deserialize 할 JSON은 다음과 같습니다.
 
 앞에서 설명한 JSON을이 샘플 형식으로 deserialize 하는 경우 추가 데이터는 `ExtensionData` 속성의 키-값 쌍이 됩니다.
 
-|속성 |값  |메모  |
+|속성 |값  |참고  |
 |---------|---------|---------|
-| Date    | 오전 8/1/2019 12:00:00-07:00||
+| 날짜    | 오전 8/1/2019 12:00:00-07:00||
 | TemperatureCelsius| 0 | 대/소문자를 구분 하는 불일치 (JSON의`temperatureCelsius`) 이므로 속성은 설정 되지 않습니다. |
 | 요약 | 높음 ||
 | ExtensionData | temperatureCelsius: 25 |Case가 일치 하지 않기 때문에이 JSON 속성은 추가 이며 사전에서 키-값 쌍이 됩니다.|
@@ -646,7 +646,7 @@ JSON의 Null 값은 유효한 경우에만 무시 됩니다. Null을 허용 하�
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/JsonDocumentDataAccess.cs?name=SnippetAverageGrades1)]
 
-위의 코드는:
+위의 코드:
 
 * JSON을 분석 하는 것이 `jsonString`라는 문자열에 있다고 가정 합니다.
 * `Grade` 속성이 있는 `Students` 배열의 개체에 대 한 평균 등급을 계산 합니다. 
@@ -665,7 +665,7 @@ JSON의 Null 값은 유효한 경우에만 무시 됩니다. Null을 허용 하�
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/JsonDocumentWriteJson.cs?name=SnippetSerialize)]
 
-위의 코드는:
+위의 코드:
 
 * JSON 파일을 읽고, `JsonDocument`에 데이터를 로드 하 고, 서식 있는 (예쁜 인쇄) JSON을 파일에 씁니다.
 * <xref:System.Text.Json.JsonDocumentOptions>를 사용 하 여 입력 JSON의 주석이 허용 되지만 무시 되도록 지정 합니다.
@@ -699,7 +699,7 @@ JSON의 Null 값은 유효한 경우에만 무시 됩니다. Null을 허용 하�
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/Utf8ReaderFromFile.cs)]
 
-위의 코드는:
+위의 코드:
 
 * 는 파일이 u t f-16으로 인코딩되고 u t f-8로 코드 변환 가정 합니다. U t f-8로 인코딩된 파일은 다음 코드를 사용 하 여 `ReadOnlySpan<byte>`직접 읽을 수 있습니다.
 

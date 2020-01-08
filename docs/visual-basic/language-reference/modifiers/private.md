@@ -1,5 +1,5 @@
 ---
-title: 프라이빗
+title: Private
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Private
@@ -7,17 +7,17 @@ helpviewer_keywords:
 - Private keyword [Visual Basic]
 - Private keyword [Visual Basic], syntax
 ms.assetid: aba74a2e-5824-4613-bf63-b9ec7787f4e6
-ms.openlocfilehash: 5600744aeca79a54f51a1f9ecd0ef00fed4b00fd
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 0c855c4e08b365b4cb75ab062d2ec304a79612ab
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351326"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347910"
 ---
 # <a name="private-visual-basic"></a>Private(Visual Basic)
 하나 이상의 선언 된 프로그래밍 요소를 포함 된 형식 내에서 포함 하 여 해당 선언 컨텍스트 내 에서만 액세스할 수 있도록 지정 합니다.  
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
  프로그래밍 요소가 독점적인 기능을 나타내거나 기밀 데이터를 포함 하는 경우 일반적으로 해당 요소에 대 한 액세스를 최대한 엄격 하 게 제한 하려고 합니다. 모듈, 클래스 또는 구조체를 정의 하는 구조체를 사용 하 여 액세스할 수 있도록 허용 하 여 최대 제한을 달성할 수 있습니다. 이러한 방식으로 요소에 대 한 액세스를 제한 하기 위해 `Private`로 선언할 수 있습니다.  
 
 > [!NOTE]
@@ -59,13 +59,14 @@ ms.locfileid: "74351326"
   
  [Sub 문](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [Public](../../../visual-basic/language-reference/modifiers/public.md)
-- [Protected](../../../visual-basic/language-reference/modifiers/protected.md)
+- [보호됨](../../../visual-basic/language-reference/modifiers/protected.md)
 - [Friend](../../../visual-basic/language-reference/modifiers/friend.md)
 - [Private Protected](./private-protected.md)
-- Visual Basic의 [보호 된 Friend](./protected-friend.md)[액세스 수준](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Protected Friend](./protected-friend.md)
+- [Visual Basic의 액세스 수준](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [절차](../../../visual-basic/programming-guide/language-features/procedures/index.md)
 - [구조체](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [개체 및 클래스](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

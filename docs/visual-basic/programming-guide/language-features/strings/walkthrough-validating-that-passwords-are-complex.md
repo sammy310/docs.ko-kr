@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - String data type [Visual Basic], validation
 ms.assetid: 5d9a918f-6c1f-41a3-a019-b5c2b8ce0381
-ms.openlocfilehash: 6e8697379a6fbb5cc15b60291e5b822897c2c013
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 49e6f79c13c94a3f2f6891b259c4bb2bec54ae6f
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348325"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344515"
 ---
 # <a name="walkthrough-validating-that-passwords-are-complex-visual-basic"></a>연습: 암호의 복합성 검사(Visual Basic)
 이 메서드는 몇 가지 강력한 암호 특성을 확인 하 고 암호가 실패 한 검사에 대 한 정보를 사용 하 여 문자열 매개 변수를 업데이트 합니다.  
@@ -18,12 +18,12 @@ ms.locfileid: "74348325"
   
  강력한 암호는 복합 (대문자, 소문자, 숫자 및 특수 문자를 혼합 하 여) 하며 단어는 아닙니다. 이 예에서는 복잡성을 확인 하는 방법을 보여 줍니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ### <a name="code"></a>코드  
  [!code-vb[VbVbcnRegEx#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnRegEx/VB/Class1.vb#1)]  
   
-## <a name="compiling-the-code"></a>코드 컴파일  
+## <a name="compile-the-code"></a>코드 컴파일  
  해당 암호를 포함 하는 문자열을 전달 하 여이 메서드를 호출 합니다.  
   
  이 예제에는 다음 사항이 필요합니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "74348325"
   
 - 모든 기호가 키보드의 맨 위 행에서 입력 되는 암호를 허용 하지 않습니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Text.RegularExpressions.Regex>
 - [ASP.NET 웹 애플리케이션 보안](https://docs.microsoft.com/previous-versions/aspnet/330a99hc(v=vs.100))

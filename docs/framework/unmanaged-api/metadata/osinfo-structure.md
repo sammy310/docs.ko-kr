@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: fac7b480-7adb-4450-a5e9-690fed81ffae
 topic_type:
 - apiref
-ms.openlocfilehash: 89111bf7eb03d20c2010c7a20c4cd055c2a021e3
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: d66e9bc3a027610d917e15dc9769b92ea1c5fb71
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74430726"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345597"
 ---
 # <a name="osinfo-structure"></a>OSINFO 구조체
 어셈블리 또는 모듈의 운영 체제에 대 한 세부 정보를 포함 합니다.  
@@ -34,11 +34,11 @@ typedef struct {
 } OSINFO;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-|멤버|설명|  
+|Member|설명|  
 |------------|-----------------|  
-|`dwOSPlatformId`|Microsoft Windows 플랫폼 함수에 의해 정의 된 식별자 값 중 하나 `GetVersionEx`입니다. 다음 값이 지원 됩니다.<br /><br /> -VER_PLATFORM_WIN32s 또는 경우 Microsoft Windows 3.1을 지정 합니다.<br />-VER_PLATFORM_WIN32_WINDOWS 또는 0x0001에서 Windows 95, Windows 98 또는 운영 체제를 지정 합니다.<br />-VER_PLATFORM_WIN32_NT 또는 0x0010, Windows NT 또는 운영 체제를 지정 합니다.|  
+|`dwOSPlatformId`|Microsoft Windows 플랫폼 함수에 의해 정의 된 식별자 값 중 하나 `GetVersionEx`입니다. 다음 값이 지원 됩니다.<br /><br /> -VER_PLATFORM_WIN32s 또는 경우 Microsoft Windows 3.1을 지정 합니다.<br />-VER_PLATFORM_WIN32_WINDOWS 또는 0x0001에서 Windows 95, Windows 98 또는 운영 체제를 지정 합니다.<br />-VER_PLATFORM_WIN32_NT 또는 0x0002, Windows NT 또는 운영 체제를 지정 합니다.|  
 |`dwOSMajorVersion`|운영 체제 주 버전 또는 모든 버전을 나타내는 NULL 값입니다.|  
 |`dwOSMinorVersion`|운영 체제 부 버전 또는 모든 버전을 나타내는 NULL 값입니다.|  
   
@@ -54,7 +54,7 @@ typedef struct {
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [메타데이터 구조체](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)
 - [IMetaDataAssemblyEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

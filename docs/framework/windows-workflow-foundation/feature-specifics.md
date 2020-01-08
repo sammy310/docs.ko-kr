@@ -2,12 +2,12 @@
 title: Windows Workflow Foundation 기능 특성
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
-ms.openlocfilehash: 869d6108edaa7f32101b6fe8d077e4eba7eef6b5
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: c534575fcf70035bc728642dbb65b05db1fd4686
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802598"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345112"
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Windows Workflow Foundation 기능 특성
 
@@ -189,7 +189,7 @@ WCF 구성 스키마는 복잡 하며 사용자에 게 다양 한 기능을 찾�
 
 ## <a name="procedural-activities-sequence-if-foreach-switch-assign-dowhile-while"></a>절차 작업(Sequence, If, ForEach, Switch, Assign, DoWhile, While)
 
-절차 작업은 프로그래머에게 익숙한 개념을 사용하여 순차 제어 흐름을 모델링하는 메커니즘을 제공합니다. 이러한 작업은 일반적으로 구조적 프로그래밍 언어 구문을 활성화하며, 해당하는 경우 C#/VB와 같은 일반적인 절차 언어를 언어 패리티에 제공합니다.
+절차 작업은 프로그래머에게 익숙한 개념을 사용하여 순차 제어 흐름을 모델링하는 메커니즘을 제공합니다. 이러한 활동은 일반적으로 C# 구조화 된 프로그래밍 언어 구문을 사용 하며, 해당 하는 경우 및 Visual Basic 같은 일반적인 프로시저 언어와 언어 패리티를 제공 합니다.
 
 ### <a name="getting-started"></a>시작
 
@@ -231,7 +231,7 @@ WCF 구성 스키마는 복잡 하며 사용자에 게 다양 한 기능을 찾�
 
 ## <a name="error-handling-activities"></a>오류 처리 작업
 
-<xref:System.Activities.Statements.TryCatch> 작업은 일련의 포함된 작업을 실행하는 동안 발생하는 예외를 catch하기 위한 메커니즘을 제공합니다(C#/VB의 Try/Catch 구문과 유사함). <xref:System.Activities.Statements.TryCatch>는 워크플로 수준에서 예외 처리를 제공합니다. 처리되지 않은 예외가 throw되면 워크플로가 중단되고 Finally 블록이 실행되지 않습니다. 이 동작은 C#과 일치합니다.
+<xref:System.Activities.Statements.TryCatch> 작업은 포함 된 활동 집합을 실행 하는 동안 발생 하는 예외를 catch 하는 메커니즘을 제공 합니다 (의 C# Try/Catch 구문 및 Visual Basic와 유사). <xref:System.Activities.Statements.TryCatch>는 워크플로 수준에서 예외 처리를 제공합니다. 처리되지 않은 예외가 throw되면 워크플로가 중단되고 Finally 블록이 실행되지 않습니다. 이 동작은 C#과 일치합니다.
 
 ### <a name="getting-started"></a>시작
 

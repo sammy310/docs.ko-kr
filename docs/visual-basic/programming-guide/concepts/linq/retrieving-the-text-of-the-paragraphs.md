@@ -1,13 +1,13 @@
 ---
-title: 단락의 텍스트 검색
+title: 단락 텍스트 검색
 ms.date: 07/20/2015
 ms.assetid: 095fa0d9-7b1b-4cbb-9c13-e2c9d8923d31
-ms.openlocfilehash: 596a6548f45d82c7ae260f9b010d2f139eb1c1fa
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 0f53eec44e0b11a6c23c7afb4892e4d5d876d6d6
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347523"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75341596"
 ---
 # <a name="retrieving-the-text-of-the-paragraphs-visual-basic"></a>단락의 텍스트 검색 (Visual Basic)
 이 예제에서는 이전 예제를 기반으로 [단락과 단락 스타일 (Visual Basic)을 검색](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md)합니다. 이 새 예제에서는 각 단락의 텍스트를 문자열로 검색합니다.  
@@ -20,7 +20,7 @@ ms.locfileid: "74347523"
   
  함께 연결 된 이러한 쿼리는 [자습서: 지연 된 실행 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md)항목에서 자세히 검사 하는 처리 모델을 사용 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에서는 WordprocessingML 문서를 처리하여 요소 노드, 스타일 이름 및 각 단락의 텍스트를 확인합니다. 이 예제는 이 자습서의 이전 예제를 기반으로 합니다. 새 쿼리는 아래에 있는 코드의 주석에서 호출됩니다.  
   
  이 예제에 대 한 소스 문서를 만드는 방법에 대 한 지침은 [원본 Office OPEN XML 문서 만들기 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)를 참조 하십시오.  
@@ -31,7 +31,7 @@ ms.locfileid: "74347523"
 Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">  
   
 Module Module1  
-    ' Following function is required because VB does not support short circuit evaluation  
+    ' Following function is required because Visual Basic does not support short circuit evaluation  
     Private Function GetStyleOfParagraph(ByVal styleNode As XElement, _  
                                          ByVal defaultStyle As String) As String  
         If (styleNode Is Nothing) Then  
@@ -141,7 +141,7 @@ StyleName:Code >Hello World<
   
 - [확장 메서드를 사용 하 여 리팩터링 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [자습서: WordprocessingML 문서에서 내용 조작 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
 - [LINQ to XML (Visual Basic)에서 지연 된 실행 및 지연 계산](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

@@ -2,12 +2,12 @@
 title: '@ServiceHost'
 ms.date: 03/30/2017
 ms.assetid: 96ba6967-00f2-422f-9aa7-15de4d33ebf3
-ms.openlocfilehash: dd3dd026749ccc299cd922b79dcae8ccbcc722d8
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 3c7da8d5a473b801da8c48d1cb1504b95cc6c769
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73968823"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75342125"
 ---
 # <a name="servicehost"></a>\@ServiceHost
 서비스 호스트를 생성하는 데 사용되는 팩터리를 호스트할 서비스 및 .svc 파일에 제공된 호스팅 코드에 액세스하거나 이를 컴파일하는 데 필요한 다른 프로그래밍 요소에 연결합니다.  
@@ -35,8 +35,8 @@ CodeBehind = "CodeBehind"
 #### <a name="debug"></a>Debug  
  디버그 기호를 사용 하 여 WCF (Windows Communication Foundation) 서비스를 컴파일해야 하는지 여부를 나타냅니다. 디버그 기호를 사용 하 여 WCF 서비스를 컴파일해야 하는지 여부를 `true` 합니다. 그렇지 않으면 `false`합니다.  
   
-#### <a name="language"></a>언어  
- 파일(.svc) 내의 인라인 코드를 모두 컴파일할 때 사용되는 언어를 지정합니다. C#, Visual Basic .NET 및 JScript .NET을 각각 나타내는 C#, VB 및 JS를 비롯한 모든 .NET 지원 언어를 값으로 나타낼 수 있습니다. 이 특성은 선택적 요소입니다.  
+#### <a name="language"></a>Language  
+ 파일(.svc) 내의 인라인 코드를 모두 컴파일할 때 사용되는 언어를 지정합니다. 값은 any를 나타낼 수 있습니다. `C#`, `VB`및 `JS`를 포함 하 여 C#,, Visual Basic 및 JScript .net을 각각 참조 하는 순으로 지원 되는 언어입니다. 이 특성은 선택적 요소입니다.  
   
 #### <a name="codebehind"></a>CodeBehind  
  XML Web services를 구현하는 클래스가 동일한 파일에 있지 않고, 어셈블리로 컴파일되어 있지 않으며, \Bin 디렉터리에 저장된 경우 XML Web services를 구현하는 소스 파일을 지정합니다.  
@@ -56,7 +56,7 @@ CodeBehind = "CodeBehind"
   
  예를 들어 `MyService`에 대해 AJAX 사용 끝점을 사용 하도록 설정 하려면 다음 예제와 같이 [@ServiceHost](servicehost.md) 지시문에서 기본 <xref:System.ServiceModel.Activation.ServiceHostFactory>대신 `Factory` 특성의 값에 대 한 <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>를 지정 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```xml  
 <% @ServiceHost

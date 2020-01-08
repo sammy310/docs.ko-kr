@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF]
 ms.assetid: 43008409-1bb4-4bd4-85d7-862c8f10ae20
-ms.openlocfilehash: e921084ed28cb4e846cb269e57e58a194e9437a5
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: fbe3a546fd431beb5ddf1d71153d38580a19ecc9
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837339"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348346"
 ---
 # <a name="queues-in-windows-communication-foundation"></a>Windows Communication Foundation의 큐
 이 단원의 항목에서는 큐에 대 한 WCF (Windows Communication Foundation) 지원에 대해 설명 합니다. WCF는 Microsoft 메시지 큐 (이전에는 MSMQ 라고 함)를 전송으로 활용 하 여 큐에 대 한 지원을 제공 하 고 다음과 같은 시나리오를 가능 하 게 합니다.  
@@ -50,7 +50,7 @@ ms.locfileid: "74837339"
  포이즌 메시지(수신 애플리케이션에 전달하는 최대 배달 시도 횟수를 초과한 메시지)를 처리하는 방법에 대해 설명합니다.  
   
  [Windows Vista, Windows Server 2003 및 Windows XP의 큐 기능 차이점](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)  
- Windows Vista, [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]및 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]간 WCF 큐 기능의 차이점을 요약 합니다.  
+ Windows Vista, Windows Server 2003 및 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]간의 WCF 큐 기능 차이를 요약 합니다.  
   
  [전송 보안을 사용하여 메시지에 보안 설정](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)  
  전송 보안을 사용하여 대기 중인 메시지의 보안을 유지하는 방법에 대해 설명합니다.  

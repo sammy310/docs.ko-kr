@@ -1,13 +1,13 @@
 ---
-title: F# 형식
+title: 형식
 description: 에서 F# 사용 되는 형식 및 형식 이름을 지정 하 F# 고 설명 하는 방법에 대해 알아봅니다.
 ms.date: 05/16/2016
-ms.openlocfilehash: 8f2526dce46d53a92c01c9347e1ed97681a45ecc
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 70d79525318c8d2eb0711d6a1b50be1ac0cf0226
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425299"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348209"
 ---
 # <a name="f-types"></a>F# 형식
 
@@ -33,23 +33,23 @@ F#함수형 프로그래밍을 고려 하 여 디자인 된 유용한 컬렉션 
 
 다음 표에서는 형식에 대 한 F# 형식 구문의 여러 측면을 보여 줍니다.
 
-|Type|형식 구문|예제|
+|형식|형식 구문|예|
 |----|-----------|--------|
-|기본 형식|*유형-이름*|`int`<br /><br />`float`<br /><br />`string`|
-|집계 형식 (클래스, 구조체, 공용 구조체, 레코드, 열거형 등)|*유형-이름*|`System.DateTime`<br /><br />`Color`|
-|형식 약어|*유형-약어-이름*|`bigint`|
-|정규화 된 형식|*네임 스페이스. 형식-이름*<br /><br />or<br /><br />*modules. 형식-name*<br /><br />or<br /><br />*네임 스페이스. modules. 형식-name*|`System.IO.StreamWriter`|
-|array|*유형-name*[] 또는<br /><br />*형식-이름* 배열|`int[]`<br /><br />`array<int>`<br /><br />`int array`|
-|2 차원 배열|*유형-이름*[,]|`int[,]`<br /><br />`float[,]`|
-|3 차원 배열|*유형-이름*[,,]|`float[,,]`|
+|기본 형식|*type-name*|`int`<br /><br />`float`<br /><br />`string`|
+|집계 형식 (클래스, 구조체, 공용 구조체, 레코드, 열거형 등)|*type-name*|`System.DateTime`<br /><br />`Color`|
+|형식 약어|*type-abbreviation-name*|`bigint`|
+|정규화 된 형식|*namespaces.type-name*<br /><br />또는<br /><br />*modules.type-name*<br /><br />또는<br /><br />*namespaces.modules.type-name*|`System.IO.StreamWriter`|
+|배열입니다.|*유형-name*[] 또는<br /><br />*형식-이름* 배열|`int[]`<br /><br />`array<int>`<br /><br />`int array`|
+|2 차원 배열|*type-name*[,]|`int[,]`<br /><br />`float[,]`|
+|3 차원 배열|*type-name*[,,]|`float[,,]`|
 |tuple|*유형-name1* &#42; *유형-name2* ...|예를 들어 `(1,'b',3)` 형식 `int * char * int`|
-|제네릭 형식(generic type)|*유형-매개 변수* *일반 유형-이름*<br /><br />or<br /><br />*제네릭 형식-이름*&lt;*형식 매개 변수 목록*&gt;|`'a list`<br /><br />`list<'a>`<br /><br />`Dictionary<'key, 'value>`|
-|생성 된 형식 (특정 형식 인수를 제공 하는 제네릭 형식)|*형식 인수* *제네릭 형식-name*<br /><br />or<br /><br />*제네릭 형식-이름*&lt;*형식-인수 목록*&gt;|`int option`<br /><br />`string list`<br /><br />`int ref`<br /><br />`option<int>`<br /><br />`list<string>`<br /><br />`ref<int>`<br /><br />`Dictionary<int, string>`|
-|단일 매개 변수를 포함 하는 함수 형식|*매개 변수-type1* -&gt; *반환 형식*|`int`를 사용 하 고 형식이 `string`를 반환 하는 함수 `int -> string`|
+|제네릭 형식(generic type)|*type-parameter* *generic-type-name*<br /><br />또는<br /><br />*generic-type-name*&lt;*type-parameter-list*&gt;|`'a list`<br /><br />`list<'a>`<br /><br />`Dictionary<'key, 'value>`|
+|생성 된 형식 (특정 형식 인수를 제공 하는 제네릭 형식)|*type-argument* *generic-type-name*<br /><br />또는<br /><br />*generic-type-name*&lt;*type-argument-list*&gt;|`int option`<br /><br />`string list`<br /><br />`int ref`<br /><br />`option<int>`<br /><br />`list<string>`<br /><br />`ref<int>`<br /><br />`Dictionary<int, string>`|
+|단일 매개 변수를 포함 하는 함수 형식|*parameter-type1* -&gt; *return-type*|`int`를 사용 하 고 형식이 `string`를 반환 하는 함수 `int -> string`|
 |여러 매개 변수를 포함 하는 함수 형식|매개 변수- *type1* -&gt; *매개 변수-type2* -&gt; ...-&gt; *반환 형식*|`int` 및 `float`를 사용 하 고 `string`를 반환 하는 함수 `int -> float -> string`|
-|매개 변수로 고차 함수|(*함수 형식*)|`List.map` 형식 `('a -> 'b) -> 'a list -> 'b list`|
+|매개 변수로 고차 함수|(*function-type*)|`List.map` 형식 `('a -> 'b) -> 'a list -> 'b list`|
 |대리자|*함수 형식의* 대리자|`delegate of unit -> int`|
-|유연한 형식|#*형식 이름*|`#System.Windows.Forms.Control`<br /><br />`#seq<int>`|
+|유연한 형식|#*type-name*|`#System.Windows.Forms.Control`<br /><br />`#seq<int>`|
 
 ## <a name="related-topics"></a>관련 항목
 

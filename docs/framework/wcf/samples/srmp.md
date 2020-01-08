@@ -2,12 +2,12 @@
 title: SRMP
 ms.date: 03/30/2017
 ms.assetid: cf37078c-dcb4-45e0-acaf-2f196521b226
-ms.openlocfilehash: 0ee11b67dcd9c7251df17dc7523dc20765e157c5
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 1e0290a4df688d39f84086dc4c1b41712f81076a
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716698"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345140"
 ---
 # <a name="srmp"></a>SRMP
 이 샘플에서는 HTTP를 통해 MSMQ(메시지 큐)를 사용하여 트랜잭션된 대기 중인 통신을 수행하는 방법을 보여 줍니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "74716698"
   
 5. HTTP를 통신에 사용하도록 하려면 MSMQ를 강화된 모드에서 실행할 수 있도록 설정합니다. 이렇게 하면 컴퓨터에서 호스트되는 큐에 보내는 어떠한 메시지도 HTTP가 아닌 전송을 사용하여 도달할 수 없습니다.  
   
-6. MSMQ를 강화된 모드에서 실행되도록 선택한 후 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]에서는 컴퓨터를 다시 부팅해야 합니다.  
+6. 강화 된 모드에서 MSMQ를 실행 하도록 선택한 후에는 Windows Server 2003에서 컴퓨터를 다시 부팅 해야 합니다.  
   
 7. 서비스를 실행합니다.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "74716698"
 ## <a name="demonstrates"></a>데모  
  이 샘플에서는 HTTP를 통해 MSMQ를 사용 하 여 대기 중인 WCF 메시지를 보내는 방법을 보여 줍니다. 이를 SRMP 메시징이라고도 합니다. 대기 중인 메시지를 보낼 경우 보내는 컴퓨터의 MSMQ는 TCP 또는 HTTP 전송을 통해 수신 큐 관리자에게 메시지를 전송합니다. 사용자는 SRMP를 선택하여 큐 전송을 위한 전송 프로토콜로 HTTP가 사용된다는 것을 나타냅니다. SRMP 보안에서는 HTTPS 사용이 허용됩니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 샘플 코드는 트랜잭션된 샘플에 기반을 둡니다. SRMP를 사용하여 큐에 메시지를 보내고 큐에서 메시지를 받는 방법은 네이티브 프로토콜을 사용하여 메시지를 보내고 받는 방법과 동일합니다.  
   
  클라이언트에 대한 구성은 선택된 큐 전송 프로토콜을 나타내도록 변경됩니다. 큐 전송 프로토콜은 Native, SRMP 또는 SrmpSecure 중 하나가 될 수 있습니다. 기본적으로 전송 프로토콜은 Native입니다. 이 예제에서 클라이언트와 서비스는 SRMP를 사용한다는 것을 구성에서 지정합니다.  

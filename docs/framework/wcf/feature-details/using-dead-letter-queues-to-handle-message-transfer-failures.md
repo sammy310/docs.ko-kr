@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9e891c6a-d960-45ea-904f-1a00e202d61a
-ms.openlocfilehash: 268f14bc7294a4cbe6f7253dc7f3c71d89985133
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 0be22fa1e81c85d82494bc4b93468a18f05d6423
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837963"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345566"
 ---
 # <a name="using-dead-letter-queues-to-handle-message-transfer-failures"></a>배달 못 한 편지 큐를 사용하여 메시지 전송 오류 처리
 대기 중인 메시지를 배달하지 못할 수 있습니다. 이러한 실패 메시지는 배달 못 한 편지 큐에 기록됩니다. 네트워크 오류, 삭제된 큐, 꽉 찬 큐, 인증 오류 또는 정시 배달 실패와 같은 이유로 인해 배달 실패가 발생할 수 있습니다.  
@@ -23,7 +23,7 @@ ms.locfileid: "74837963"
   
  사용자 지정 배달 못 한 편지 큐에서는 메시지를 보내는 동일한 MSMQ 서비스를 공유하는 클라이언트를 격리할 수 있습니다.  
   
- [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 및 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]에서 WCF (Windows Communication Foundation)는 대기 중인 모든 클라이언트 응용 프로그램에 대해 시스템 차원의 배달 못 한 편지 큐를 제공 합니다. Windows Vista에서 WCF는 대기 중인 각 클라이언트 응용 프로그램에 대해 배달 못 한 편지 큐를 제공 합니다.  
+ Windows Server 2003 및 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]Windows Communication Foundation (WCF)는 대기 중인 모든 클라이언트 응용 프로그램에 대해 시스템 차원의 배달 못 한 편지 큐를 제공 합니다. Windows Vista에서 WCF는 대기 중인 각 클라이언트 응용 프로그램에 대해 배달 못 한 편지 큐를 제공 합니다.  
   
 ## <a name="specifying-use-of-the-dead-letter-queue"></a>배달 못 한 편지 큐의 사용 지정  
  배달 못 한 편지 큐는 송신 애플리케이션의 큐 관리자에 있습니다. 이 관리자는 만료되었거나 전송 또는 배달하지 못한 메시지를 보관합니다.  
@@ -52,7 +52,7 @@ ms.locfileid: "74837963"
   
  `ReceiveErrorHandling`이 `Reject`로 설정된 경우 사용자 지정 배달 못 한 편지 큐에서 메시지를 읽으면 포이즌 메시지가 배달 못 한 시스템 큐에 저장됩니다. 배달 못 한 시스템 큐에서 메시지를 읽는 경우 메시지가 손실/삭제됩니다. MSMQ에서 배달 못 한 시스템 큐의 거부로 인해 메시지가 손실/삭제됩니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 배달 못 한 편지 큐를 만드는 방법 및 이를 사용하여 만료된 메시지를 처리하는 방법을 보여 줍니다. 예제는 [방법: 대기 중인 메시지를 WCF 끝점과 교환](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)의 예제를 기반으로 합니다. 다음 예제에서는 각 애플리케이션의 배달 못 한 편지 큐를 사용하는 주문 처리 서비스에 클라이언트 코드를 작성하는 방법을 보여 줍니다. 또한 예제에서는 배달 못 한 편지 큐에서 메시지를 처리하는 방법을 보여 줍니다.  
   
  다음은 각 애플리케이션의 배달 못 한 편지 큐를 지정하는 클라이언트의 코드입니다.  

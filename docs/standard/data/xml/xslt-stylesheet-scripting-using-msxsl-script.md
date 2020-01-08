@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 60e2541b-0cea-4b2e-a4fa-85f4c50f1bef
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d3d1658b47d2cda344e2ec1fe7b48c929005563b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 32695d3bc29693ab4cf1e2f9d721d35598ecfb86
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912054"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344713"
 ---
 # <a name="xslt-stylesheet-scripting-using-msxslscript"></a>\<msxsl:script>를 사용한 XSLT 스타일시트 스크립팅
 <xref:System.Xml.Xsl.XslTransform> 클래스는 `script` 요소를 사용하여 포함 스크립트를 지원합니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "69912054"
   
  여기서 `msxsl`은 네임스페이스 `urn:schemas-microsoft-com:xslt`에 바인딩되는 접두사입니다.  
   
- `language` 특성은 필수 항목은 아니지만, 지정할 경우 값이 C#, VB, JScript, JavaScript, VisualBasic 또는 CSharp 중 하나여야 합니다. 지정하지 않을 경우 언어 기본값은 JScript입니다. `language-name`은 대/소문자를 구분하지 않으므로 'JavaScript'와 'javascript'는 같습니다.  
+ `language` 특성은 필수는 아니지만 지정 된 경우 해당 값은 `C#`, `VB`, `JScript`, `JavaScript`, `VisualBasic`또는 `CSharp`중 하나 여야 합니다. 지정하지 않을 경우 언어 기본값은 JScript입니다. `language-name`은 대/소문자를 구분하지 않으므로 'JavaScript'와 'javascript'는 같습니다.  
   
  `implements-prefix` 특성은 필수 항목입니다. 이 특성은 네임스페이스를 선언하고 스크립트 블록에 연결하는 데 사용됩니다. 이 특성 값은 네임스페이스를 나타내는 접두사입니다. 이 네임스페이스는 스타일시트에서 정의할 수 있습니다.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "69912054"
   
 |기본 네임스페이스|설명|  
 |------------------------|-----------------|  
-|시스템|System 클래스|  
+|System|System 클래스|  
 |System.Collection|Collection 클래스|  
 |System.Text|Text 클래스|  
 |System.Text.RegularExpressions|정규식 클래스|  
@@ -67,12 +67,12 @@ ms.locfileid: "69912054"
 |형식|해당 .NET Framework 클래스(형식)|XPath 형식 또는 XSLT 형식|  
 |----------|----------------------------------------------|-----------------------------|  
 |문자열|System.String|XPath|  
-|부울|System.Boolean|XPath|  
-|수|System.Double|XPath|  
+|Boolean|System.Boolean|XPath|  
+|Number|System.Double|XPath|  
 |결과 트리 조각|System.Xml.XPath.XPathNavigator|XSLT|  
 |노드 집합|System.Xml.XPath.XPathNodeIterator|XPath|  
   
- 스크립트 함수가 다음 숫자 유형 중 하나를 사용하는 경우: Int16, UInt16, Int32, UInt32, Int64, UInt64, Single 또는 Decimal의 경우 W3C XPath 형식 숫자에 매핑되는 Double이 되어야 합니다. 기타 모든 형식은 `ToString` 메서드 호출을 통해 문자열 형식이 됩니다.  
+ 스크립트 함수에서 Int16, UInt16, Int32, UInt32, Int64, UInt64, Single 또는 Decimal과 같은 숫자 형식을 사용한다면 W3C XPath 형식의 숫자에 매핑되는 Double이 됩니다. 기타 모든 형식은 `ToString` 메서드 호출을 통해 문자열 형식이 됩니다.  
   
  스크립트 함수에서 위에 설명되어 있지 않은 형식을 사용하거나 스타일시트를 <xref:System.Xml.Xsl.XslTransform> 개체에 로드할 때 함수가 컴파일되지 않으면 예외가 throw됩니다.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "69912054"
   
  이 경우 앰퍼샌드가 이스케이프되지 않기 때문에 예외가 throw됩니다. 문서는 XML로 로드되고 `msxsl:script` 요소 태그 사이의 텍스트에는 특별한 작업이 수행되지 않습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 포함 스크립트를 사용하여 주어진 반지름으로 원의 원주를 계산합니다.  
   
 ```vb  
@@ -216,7 +216,7 @@ public class Sample
 </xsl:stylesheet>  
 ```  
   
-## <a name="output"></a>출력  
+## <a name="output"></a>Output  
   
 ```xml  
 <circles xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:user="urn:my-scripts">  
@@ -231,6 +231,6 @@ public class Sample
 </circles>    
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [XslTransform 클래스의 XSLT 프로세서 구현](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
