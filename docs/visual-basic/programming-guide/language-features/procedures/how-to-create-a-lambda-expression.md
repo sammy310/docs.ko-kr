@@ -5,112 +5,112 @@ helpviewer_keywords:
 - lambda expressions [Visual Basic]
 - expressions [Visual Basic], lambda
 ms.assetid: 3279bd5c-80f7-410a-a7ba-f7085ed36aa5
-ms.openlocfilehash: bb0bdb3c10a7df2ca954fbdb9382a25bf805068d
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 1c65841e4c124252cfa41bcd4d0c305a426687ee
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349750"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75632352"
 ---
-# <a name="how-to-create-a-lambda-expression-visual-basic"></a><span data-ttu-id="26b81-102">방법: 람다 식 만들기(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="26b81-102">How to: Create a Lambda Expression (Visual Basic)</span></span>
-<span data-ttu-id="26b81-103">*람다 식은* 이름이 없는 함수 또는 서브루틴입니다.</span><span class="sxs-lookup"><span data-stu-id="26b81-103">A *lambda expression* is a function or subroutine that does not have a name.</span></span> <span data-ttu-id="26b81-104">람다 식은 대리자 형식이 유효한 모든 위치에서 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="26b81-104">A lambda expression can be used wherever a delegate type is valid.</span></span>  
+# <a name="how-to-create-a-lambda-expression-visual-basic"></a><span data-ttu-id="cddce-102">방법: 람다 식 만들기(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cddce-102">How to: Create a Lambda Expression (Visual Basic)</span></span>
+<span data-ttu-id="cddce-103">*람다 식은* 이름이 없는 함수 또는 서브루틴입니다.</span><span class="sxs-lookup"><span data-stu-id="cddce-103">A *lambda expression* is a function or subroutine that does not have a name.</span></span> <span data-ttu-id="cddce-104">람다 식은 대리자 형식이 유효한 모든 위치에서 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cddce-104">A lambda expression can be used wherever a delegate type is valid.</span></span>  
   
-### <a name="to-create-a-single-line-lambda-expression-function"></a><span data-ttu-id="26b81-105">한 줄로 된 람다 식 함수를 만들려면</span><span class="sxs-lookup"><span data-stu-id="26b81-105">To create a single-line lambda expression function</span></span>  
+### <a name="to-create-a-single-line-lambda-expression-function"></a><span data-ttu-id="cddce-105">한 줄로 된 람다 식 함수를 만들려면</span><span class="sxs-lookup"><span data-stu-id="cddce-105">To create a single-line lambda expression function</span></span>  
   
-1. <span data-ttu-id="26b81-106">대리자 형식을 사용할 수 있는 경우 다음 예제와 같이 `Function`키워드를 입력 합니다.</span><span class="sxs-lookup"><span data-stu-id="26b81-106">In any situation where a delegate type could be used, type the keyword `Function`, as in the following example:</span></span>  
+1. <span data-ttu-id="cddce-106">대리자 형식을 사용할 수 있는 경우 다음 예제와 같이 `Function`키워드를 입력 합니다.</span><span class="sxs-lookup"><span data-stu-id="cddce-106">In any situation where a delegate type could be used, type the keyword `Function`, as in the following example:</span></span>  
   
-     <span data-ttu-id="26b81-107">`Dim add1 =`  `Function`</span><span class="sxs-lookup"><span data-stu-id="26b81-107">`Dim add1 =`   `Function`</span></span>  
+     <span data-ttu-id="cddce-107">`Dim add1 =`   `Function`</span><span class="sxs-lookup"><span data-stu-id="cddce-107">`Dim add1 =`   `Function`</span></span>  
   
-2. <span data-ttu-id="26b81-108">괄호 안에 `Function`바로 뒤에 함수의 매개 변수를 입력 합니다.</span><span class="sxs-lookup"><span data-stu-id="26b81-108">In parentheses, directly after `Function`, type the parameters of the function.</span></span> <span data-ttu-id="26b81-109">`Function`후에는 이름을 지정 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="26b81-109">Notice that you do not specify a name after `Function`.</span></span>  
+2. <span data-ttu-id="cddce-108">괄호 안에 `Function`바로 뒤에 함수의 매개 변수를 입력 합니다.</span><span class="sxs-lookup"><span data-stu-id="cddce-108">In parentheses, directly after `Function`, type the parameters of the function.</span></span> <span data-ttu-id="cddce-109">`Function`후에는 이름을 지정 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="cddce-109">Notice that you do not specify a name after `Function`.</span></span>  
   
-     <span data-ttu-id="26b81-110">`Dim add1 = Function`  `(num As Integer)`</span><span class="sxs-lookup"><span data-stu-id="26b81-110">`Dim add1 = Function`   `(num As Integer)`</span></span>  
+     <span data-ttu-id="cddce-110">`Dim add1 = Function`   `(num As Integer)`</span><span class="sxs-lookup"><span data-stu-id="cddce-110">`Dim add1 = Function`   `(num As Integer)`</span></span>  
   
-3. <span data-ttu-id="26b81-111">매개 변수 목록 다음에 함수 본문으로 단일 식을 입력 합니다.</span><span class="sxs-lookup"><span data-stu-id="26b81-111">Following the parameter list, type a single expression as the body of the function.</span></span> <span data-ttu-id="26b81-112">식이 계산 되는 값은 함수에서 반환 하는 값입니다.</span><span class="sxs-lookup"><span data-stu-id="26b81-112">The value that the expression evaluates to is the value returned by the function.</span></span> <span data-ttu-id="26b81-113">반환 형식을 지정 하는 데 `As` 절을 사용 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="26b81-113">You do not use an `As` clause to specify the return type.</span></span>  
+3. <span data-ttu-id="cddce-111">매개 변수 목록 다음에 함수 본문으로 단일 식을 입력 합니다.</span><span class="sxs-lookup"><span data-stu-id="cddce-111">Following the parameter list, type a single expression as the body of the function.</span></span> <span data-ttu-id="cddce-112">식이 계산 되는 값은 함수에서 반환 하는 값입니다.</span><span class="sxs-lookup"><span data-stu-id="cddce-112">The value that the expression evaluates to is the value returned by the function.</span></span> <span data-ttu-id="cddce-113">반환 형식을 지정 하는 데 `As` 절을 사용 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="cddce-113">You do not use an `As` clause to specify the return type.</span></span>  
   
      [!code-vb[VbVbalrLambdas#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#1)]  
   
-     <span data-ttu-id="26b81-114">정수 인수를 전달 하 여 람다 식을 호출 합니다.</span><span class="sxs-lookup"><span data-stu-id="26b81-114">You call the lambda expression by passing in an integer argument.</span></span>  
+     <span data-ttu-id="cddce-114">정수 인수를 전달 하 여 람다 식을 호출 합니다.</span><span class="sxs-lookup"><span data-stu-id="cddce-114">You call the lambda expression by passing in an integer argument.</span></span>  
   
      [!code-vb[VbVbalrLambdas#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#2)]  
   
-4. <span data-ttu-id="26b81-115">또는 다음 예제를 통해 동일한 결과를 얻을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="26b81-115">Alternatively, the same result is accomplished by the following example:</span></span>  
+4. <span data-ttu-id="cddce-115">또는 다음 예제를 통해 동일한 결과를 얻을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cddce-115">Alternatively, the same result is accomplished by the following example:</span></span>  
   
      [!code-vb[VbVbalrLambdas#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#3)]  
   
-### <a name="to-create-a-single-line-lambda-expression-subroutine"></a><span data-ttu-id="26b81-116">한 줄로 된 람다 식 서브루틴을 만들려면</span><span class="sxs-lookup"><span data-stu-id="26b81-116">To create a single-line lambda expression subroutine</span></span>  
+### <a name="to-create-a-single-line-lambda-expression-subroutine"></a><span data-ttu-id="cddce-116">한 줄로 된 람다 식 서브루틴을 만들려면</span><span class="sxs-lookup"><span data-stu-id="cddce-116">To create a single-line lambda expression subroutine</span></span>  
   
-1. <span data-ttu-id="26b81-117">대리자 형식을 사용할 수 있는 경우 다음 예제와 같이 `Sub`키워드를 입력 합니다.</span><span class="sxs-lookup"><span data-stu-id="26b81-117">In any situation where a delegate type could be used, type the keyword `Sub`, as shown in the following example.</span></span>  
+1. <span data-ttu-id="cddce-117">대리자 형식을 사용할 수 있는 경우 다음 예제와 같이 `Sub`키워드를 입력 합니다.</span><span class="sxs-lookup"><span data-stu-id="cddce-117">In any situation where a delegate type could be used, type the keyword `Sub`, as shown in the following example.</span></span>  
   
-     <span data-ttu-id="26b81-118">`Dim add1 =`  `Sub`</span><span class="sxs-lookup"><span data-stu-id="26b81-118">`Dim add1 =`   `Sub`</span></span>  
+     <span data-ttu-id="cddce-118">`Dim add1 =`   `Sub`</span><span class="sxs-lookup"><span data-stu-id="cddce-118">`Dim add1 =`   `Sub`</span></span>  
   
-2. <span data-ttu-id="26b81-119">괄호 안에 `Sub`바로 뒤에 서브루틴의 매개 변수를 입력 합니다.</span><span class="sxs-lookup"><span data-stu-id="26b81-119">In parentheses, directly after `Sub`, type the parameters of the subroutine.</span></span> <span data-ttu-id="26b81-120">`Sub`후에는 이름을 지정 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="26b81-120">Notice that you do not specify a name after `Sub`.</span></span>  
+2. <span data-ttu-id="cddce-119">괄호 안에 `Sub`바로 뒤에 서브루틴의 매개 변수를 입력 합니다.</span><span class="sxs-lookup"><span data-stu-id="cddce-119">In parentheses, directly after `Sub`, type the parameters of the subroutine.</span></span> <span data-ttu-id="cddce-120">`Sub`후에는 이름을 지정 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="cddce-120">Notice that you do not specify a name after `Sub`.</span></span>  
   
-     <span data-ttu-id="26b81-121">`Dim add1 = Sub`  `(msg As String)`</span><span class="sxs-lookup"><span data-stu-id="26b81-121">`Dim add1 = Sub`   `(msg As String)`</span></span>  
+     <span data-ttu-id="cddce-121">`Dim add1 = Sub`   `(msg As String)`</span><span class="sxs-lookup"><span data-stu-id="cddce-121">`Dim add1 = Sub`   `(msg As String)`</span></span>  
   
-3. <span data-ttu-id="26b81-122">매개 변수 목록 다음에 단일 문을 서브루틴의 본문으로 입력 합니다.</span><span class="sxs-lookup"><span data-stu-id="26b81-122">Following the parameter list, type a single statement as the body of the subroutine.</span></span>  
+3. <span data-ttu-id="cddce-122">매개 변수 목록 다음에 단일 문을 서브루틴의 본문으로 입력 합니다.</span><span class="sxs-lookup"><span data-stu-id="cddce-122">Following the parameter list, type a single statement as the body of the subroutine.</span></span>  
   
      [!code-vb[VbVbalrLambdas#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#17)]  
   
-     <span data-ttu-id="26b81-123">문자열 인수를 전달 하 여 람다 식을 호출 합니다.</span><span class="sxs-lookup"><span data-stu-id="26b81-123">You call the lambda expression by passing in a string argument.</span></span>  
+     <span data-ttu-id="cddce-123">문자열 인수를 전달 하 여 람다 식을 호출 합니다.</span><span class="sxs-lookup"><span data-stu-id="cddce-123">You call the lambda expression by passing in a string argument.</span></span>  
   
      [!code-vb[VbVbalrLambdas#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#18)]  
   
-### <a name="to-create-a-multiline-lambda-expression-function"></a><span data-ttu-id="26b81-124">여러 줄 람다 식 함수를 만들려면</span><span class="sxs-lookup"><span data-stu-id="26b81-124">To create a multiline lambda expression function</span></span>  
+### <a name="to-create-a-multiline-lambda-expression-function"></a><span data-ttu-id="cddce-124">여러 줄 람다 식 함수를 만들려면</span><span class="sxs-lookup"><span data-stu-id="cddce-124">To create a multiline lambda expression function</span></span>  
   
-1. <span data-ttu-id="26b81-125">대리자 형식을 사용할 수 있는 경우 다음 예제와 같이 `Function`키워드를 입력 합니다.</span><span class="sxs-lookup"><span data-stu-id="26b81-125">In any situation where a delegate type could be used, type the keyword `Function`, as shown in the following example.</span></span>  
+1. <span data-ttu-id="cddce-125">대리자 형식을 사용할 수 있는 경우 다음 예제와 같이 `Function`키워드를 입력 합니다.</span><span class="sxs-lookup"><span data-stu-id="cddce-125">In any situation where a delegate type could be used, type the keyword `Function`, as shown in the following example.</span></span>  
   
-     <span data-ttu-id="26b81-126">`Dim add1 =`  `Function`</span><span class="sxs-lookup"><span data-stu-id="26b81-126">`Dim add1 =`   `Function`</span></span>  
+     <span data-ttu-id="cddce-126">`Dim add1 =`   `Function`</span><span class="sxs-lookup"><span data-stu-id="cddce-126">`Dim add1 =`   `Function`</span></span>  
   
-2. <span data-ttu-id="26b81-127">괄호 안에 `Function`바로 뒤에 함수의 매개 변수를 입력 합니다.</span><span class="sxs-lookup"><span data-stu-id="26b81-127">In parentheses, directly after `Function`, type the parameters of the function.</span></span> <span data-ttu-id="26b81-128">`Function`후에는 이름을 지정 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="26b81-128">Notice that you do not specify a name after `Function`.</span></span>  
+2. <span data-ttu-id="cddce-127">괄호 안에 `Function`바로 뒤에 함수의 매개 변수를 입력 합니다.</span><span class="sxs-lookup"><span data-stu-id="cddce-127">In parentheses, directly after `Function`, type the parameters of the function.</span></span> <span data-ttu-id="cddce-128">`Function`후에는 이름을 지정 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="cddce-128">Notice that you do not specify a name after `Function`.</span></span>  
   
-     <span data-ttu-id="26b81-129">`Dim add1 = Function`  `(index As Integer)`</span><span class="sxs-lookup"><span data-stu-id="26b81-129">`Dim add1 = Function`   `(index As Integer)`</span></span>  
+     <span data-ttu-id="cddce-129">`Dim add1 = Function`   `(index As Integer)`</span><span class="sxs-lookup"><span data-stu-id="cddce-129">`Dim add1 = Function`   `(index As Integer)`</span></span>  
   
-3. <span data-ttu-id="26b81-130">Enter 키를 누릅니다.</span><span class="sxs-lookup"><span data-stu-id="26b81-130">Press ENTER.</span></span> <span data-ttu-id="26b81-131">`End Function` 문이 자동으로 추가 됩니다.</span><span class="sxs-lookup"><span data-stu-id="26b81-131">The `End Function` statement is automatically added.</span></span>  
+3. <span data-ttu-id="cddce-130">Enter 키를 누릅니다.</span><span class="sxs-lookup"><span data-stu-id="cddce-130">Press ENTER.</span></span> <span data-ttu-id="cddce-131">`End Function` 문이 자동으로 추가 됩니다.</span><span class="sxs-lookup"><span data-stu-id="cddce-131">The `End Function` statement is automatically added.</span></span>  
   
-4. <span data-ttu-id="26b81-132">함수 본문 내에서 다음 코드를 추가 하 여 식을 만들고 값을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="26b81-132">Within the body of the function, add the following code to create an expression and return the value.</span></span> <span data-ttu-id="26b81-133">반환 형식을 지정 하는 데 `As` 절을 사용 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="26b81-133">You do not use an `As` clause to specify the return type.</span></span>  
+4. <span data-ttu-id="cddce-132">함수 본문 내에서 다음 코드를 추가 하 여 식을 만들고 값을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="cddce-132">Within the body of the function, add the following code to create an expression and return the value.</span></span> <span data-ttu-id="cddce-133">반환 형식을 지정 하는 데 `As` 절을 사용 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="cddce-133">You do not use an `As` clause to specify the return type.</span></span>  
   
      [!code-vb[VbVbalrLambdas#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#19)]  
   
-     <span data-ttu-id="26b81-134">정수 인수를 전달 하 여 람다 식을 호출 합니다.</span><span class="sxs-lookup"><span data-stu-id="26b81-134">You call the lambda expression by passing in an integer argument.</span></span>  
+     <span data-ttu-id="cddce-134">정수 인수를 전달 하 여 람다 식을 호출 합니다.</span><span class="sxs-lookup"><span data-stu-id="cddce-134">You call the lambda expression by passing in an integer argument.</span></span>  
   
      [!code-vb[VbVbalrLambdas#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#20)]  
   
-### <a name="to-create-a-multiline-lambda-expression-subroutine"></a><span data-ttu-id="26b81-135">여러 줄 람다 식 서브루틴을 만들려면</span><span class="sxs-lookup"><span data-stu-id="26b81-135">To create a multiline lambda expression subroutine</span></span>  
+### <a name="to-create-a-multiline-lambda-expression-subroutine"></a><span data-ttu-id="cddce-135">여러 줄 람다 식 서브루틴을 만들려면</span><span class="sxs-lookup"><span data-stu-id="cddce-135">To create a multiline lambda expression subroutine</span></span>  
   
-1. <span data-ttu-id="26b81-136">대리자 형식을 사용할 수 있는 경우 다음 예제와 같이 `Sub`키워드를 입력 합니다.</span><span class="sxs-lookup"><span data-stu-id="26b81-136">In any situation where a delegate type could be used, type the keyword `Sub`, as shown in the following example:</span></span>  
+1. <span data-ttu-id="cddce-136">대리자 형식을 사용할 수 있는 경우 다음 예제와 같이 `Sub`키워드를 입력 합니다.</span><span class="sxs-lookup"><span data-stu-id="cddce-136">In any situation where a delegate type could be used, type the keyword `Sub`, as shown in the following example:</span></span>  
   
-     <span data-ttu-id="26b81-137">`Dim add1 =`  `Sub`</span><span class="sxs-lookup"><span data-stu-id="26b81-137">`Dim add1 =`   `Sub`</span></span>  
+     <span data-ttu-id="cddce-137">`Dim add1 =`   `Sub`</span><span class="sxs-lookup"><span data-stu-id="cddce-137">`Dim add1 =`   `Sub`</span></span>  
   
-2. <span data-ttu-id="26b81-138">괄호 안에 `Sub`바로 뒤에 서브루틴의 매개 변수를 입력 합니다.</span><span class="sxs-lookup"><span data-stu-id="26b81-138">In parentheses, directly after `Sub`, type the parameters of the subroutine.</span></span> <span data-ttu-id="26b81-139">`Sub`후에는 이름을 지정 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="26b81-139">Notice that you do not specify a name after `Sub`.</span></span>  
+2. <span data-ttu-id="cddce-138">괄호 안에 `Sub`바로 뒤에 서브루틴의 매개 변수를 입력 합니다.</span><span class="sxs-lookup"><span data-stu-id="cddce-138">In parentheses, directly after `Sub`, type the parameters of the subroutine.</span></span> <span data-ttu-id="cddce-139">`Sub`후에는 이름을 지정 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="cddce-139">Notice that you do not specify a name after `Sub`.</span></span>  
   
-     <span data-ttu-id="26b81-140">`Dim add1 = Sub`  `(msg As String)`</span><span class="sxs-lookup"><span data-stu-id="26b81-140">`Dim add1 = Sub`  `(msg As String)`</span></span>  
+     <span data-ttu-id="cddce-140">`Dim add1 = Sub`  `(msg As String)`</span><span class="sxs-lookup"><span data-stu-id="cddce-140">`Dim add1 = Sub`  `(msg As String)`</span></span>  
   
-3. <span data-ttu-id="26b81-141">Enter 키를 누릅니다.</span><span class="sxs-lookup"><span data-stu-id="26b81-141">Press ENTER.</span></span> <span data-ttu-id="26b81-142">`End Sub` 문이 자동으로 추가 됩니다.</span><span class="sxs-lookup"><span data-stu-id="26b81-142">The `End Sub` statement is automatically added.</span></span>  
+3. <span data-ttu-id="cddce-141">Enter 키를 누릅니다.</span><span class="sxs-lookup"><span data-stu-id="cddce-141">Press ENTER.</span></span> <span data-ttu-id="cddce-142">`End Sub` 문이 자동으로 추가 됩니다.</span><span class="sxs-lookup"><span data-stu-id="cddce-142">The `End Sub` statement is automatically added.</span></span>  
   
-4. <span data-ttu-id="26b81-143">함수 본문 내에서 서브루틴이 호출 될 때 실행할 다음 코드를 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="26b81-143">Within the body of the function, add the following code to execute when the subroutine is invoked.</span></span>  
+4. <span data-ttu-id="cddce-143">함수 본문 내에서 서브루틴이 호출 될 때 실행할 다음 코드를 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="cddce-143">Within the body of the function, add the following code to execute when the subroutine is invoked.</span></span>  
   
      [!code-vb[VbVbalrLambdas#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#21)]  
   
-     <span data-ttu-id="26b81-144">문자열 인수를 전달 하 여 람다 식을 호출 합니다.</span><span class="sxs-lookup"><span data-stu-id="26b81-144">You call the lambda expression by passing in a string argument.</span></span>  
+     <span data-ttu-id="cddce-144">문자열 인수를 전달 하 여 람다 식을 호출 합니다.</span><span class="sxs-lookup"><span data-stu-id="cddce-144">You call the lambda expression by passing in a string argument.</span></span>  
   
      [!code-vb[VbVbalrLambdas#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#22)]  
   
-## <a name="example"></a><span data-ttu-id="26b81-145">예제</span><span class="sxs-lookup"><span data-stu-id="26b81-145">Example</span></span>  
- <span data-ttu-id="26b81-146">람다 식의 일반적인 용도는 `Delegate`형식이 인 매개 변수에 대 한 인수로 전달 될 수 있는 함수를 정의 하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="26b81-146">A common use of lambda expressions is to define a function that can be passed in as the argument for a parameter whose type is `Delegate`.</span></span> <span data-ttu-id="26b81-147">다음 예제에서 <xref:System.Diagnostics.Process.GetProcesses%2A> 메서드는 로컬 컴퓨터에서 실행 되는 프로세스의 배열을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="26b81-147">In the following example, the <xref:System.Diagnostics.Process.GetProcesses%2A> method returns an array of the processes running on the local computer.</span></span> <span data-ttu-id="26b81-148"><xref:System.Linq.Enumerable> 클래스의 <xref:System.Linq.Enumerable.Where%2A> 메서드는 `Boolean` 대리자를 인수로 사용 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="26b81-148">The <xref:System.Linq.Enumerable.Where%2A> method from the <xref:System.Linq.Enumerable> class requires a `Boolean` delegate as its argument.</span></span> <span data-ttu-id="26b81-149">예제의 람다 식이이 목적에 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="26b81-149">The lambda expression in the example is used for that purpose.</span></span> <span data-ttu-id="26b81-150">스레드를 하나만 포함 하는 각 프로세스에 대해 `True`를 반환 하 고 `filteredList`에서 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="26b81-150">It returns `True` for each process that has only one thread, and those are selected in `filteredList`.</span></span>  
+## <a name="example"></a><span data-ttu-id="cddce-145">예</span><span class="sxs-lookup"><span data-stu-id="cddce-145">Example</span></span>  
+ <span data-ttu-id="cddce-146">람다 식의 일반적인 용도는 `Delegate`형식이 인 매개 변수에 대 한 인수로 전달 될 수 있는 함수를 정의 하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="cddce-146">A common use of lambda expressions is to define a function that can be passed in as the argument for a parameter whose type is `Delegate`.</span></span> <span data-ttu-id="cddce-147">다음 예제에서 <xref:System.Diagnostics.Process.GetProcesses%2A> 메서드는 로컬 컴퓨터에서 실행 되는 프로세스의 배열을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="cddce-147">In the following example, the <xref:System.Diagnostics.Process.GetProcesses%2A> method returns an array of the processes running on the local computer.</span></span> <span data-ttu-id="cddce-148"><xref:System.Linq.Enumerable> 클래스의 <xref:System.Linq.Enumerable.Where%2A> 메서드는 `Boolean` 대리자를 인수로 사용 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="cddce-148">The <xref:System.Linq.Enumerable.Where%2A> method from the <xref:System.Linq.Enumerable> class requires a `Boolean` delegate as its argument.</span></span> <span data-ttu-id="cddce-149">예제의 람다 식이이 목적에 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="cddce-149">The lambda expression in the example is used for that purpose.</span></span> <span data-ttu-id="cddce-150">스레드를 하나만 포함 하는 각 프로세스에 대해 `True`를 반환 하 고 `filteredList`에서 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="cddce-150">It returns `True` for each process that has only one thread, and those are selected in `filteredList`.</span></span>  
   
  [!code-vb[VbVbalrLambdas#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class4.vb#10)]  
   
- <span data-ttu-id="26b81-151">이전 예제는 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 구문으로 작성 된 다음 코드와 동일 합니다.</span><span class="sxs-lookup"><span data-stu-id="26b81-151">The previous example is equivalent to the following code, which is written in [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] syntax:</span></span>  
+ <span data-ttu-id="cddce-151">이전 예제는 LINQ (통합 언어 쿼리) 구문으로 작성 된 다음 코드와 동일 합니다.</span><span class="sxs-lookup"><span data-stu-id="cddce-151">The previous example is equivalent to the following code, which is written in Language-Integrated Query (LINQ) syntax:</span></span>  
   
  [!code-vb[VbVbalrLambdas#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class5.vb#11)]  
   
-## <a name="see-also"></a><span data-ttu-id="26b81-152">참고 항목</span><span class="sxs-lookup"><span data-stu-id="26b81-152">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cddce-152">참조</span><span class="sxs-lookup"><span data-stu-id="cddce-152">See also</span></span>
 
 - <xref:System.Linq.Enumerable>
-- [<span data-ttu-id="26b81-153">람다 식</span><span class="sxs-lookup"><span data-stu-id="26b81-153">Lambda Expressions</span></span>](./lambda-expressions.md)
-- [<span data-ttu-id="26b81-154">Function 문</span><span class="sxs-lookup"><span data-stu-id="26b81-154">Function Statement</span></span>](../../../../visual-basic/language-reference/statements/function-statement.md)
-- [<span data-ttu-id="26b81-155">Sub 문</span><span class="sxs-lookup"><span data-stu-id="26b81-155">Sub Statement</span></span>](../../../../visual-basic/language-reference/statements/sub-statement.md)
-- [<span data-ttu-id="26b81-156">대리자</span><span class="sxs-lookup"><span data-stu-id="26b81-156">Delegates</span></span>](../../../../visual-basic/programming-guide/language-features/delegates/index.md)
-- [<span data-ttu-id="26b81-157">방법: Visual Basic에서 프로시저에 다른 프로시저 전달</span><span class="sxs-lookup"><span data-stu-id="26b81-157">How to: Pass Procedures to Another Procedure in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)
-- [<span data-ttu-id="26b81-158">Delegate 문</span><span class="sxs-lookup"><span data-stu-id="26b81-158">Delegate Statement</span></span>](../../../../visual-basic/language-reference/statements/delegate-statement.md)
-- [<span data-ttu-id="26b81-159">Visual Basic의 LINQ 소개</span><span class="sxs-lookup"><span data-stu-id="26b81-159">Introduction to LINQ in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [<span data-ttu-id="cddce-153">람다 식</span><span class="sxs-lookup"><span data-stu-id="cddce-153">Lambda Expressions</span></span>](./lambda-expressions.md)
+- [<span data-ttu-id="cddce-154">Function 문</span><span class="sxs-lookup"><span data-stu-id="cddce-154">Function Statement</span></span>](../../../../visual-basic/language-reference/statements/function-statement.md)
+- [<span data-ttu-id="cddce-155">Sub 문</span><span class="sxs-lookup"><span data-stu-id="cddce-155">Sub Statement</span></span>](../../../../visual-basic/language-reference/statements/sub-statement.md)
+- [<span data-ttu-id="cddce-156">대리자</span><span class="sxs-lookup"><span data-stu-id="cddce-156">Delegates</span></span>](../../../../visual-basic/programming-guide/language-features/delegates/index.md)
+- [<span data-ttu-id="cddce-157">방법: Visual Basic에서 프로시저에 다른 프로시저 전달</span><span class="sxs-lookup"><span data-stu-id="cddce-157">How to: Pass Procedures to Another Procedure in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)
+- [<span data-ttu-id="cddce-158">Delegate 문</span><span class="sxs-lookup"><span data-stu-id="cddce-158">Delegate Statement</span></span>](../../../../visual-basic/language-reference/statements/delegate-statement.md)
+- [<span data-ttu-id="cddce-159">Visual Basic의 LINQ 소개</span><span class="sxs-lookup"><span data-stu-id="cddce-159">Introduction to LINQ in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
