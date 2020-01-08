@@ -19,7 +19,7 @@
             - name: .NET 마이크로 서비스 - 아키텍처 eBook
               tocHref: /dotnet/architecture/microservices/
               topicHref: /dotnet/architecture/microservices/index
-            - name: 네이티브 클라우드
+            - name: 클라우드 네이티브
               tocHref: /dotnet/architecture/cloud-native/
               topicHref: /dotnet/architecture/cloud-native/index
             - name: .NET 앱 현대화 eBook
@@ -66,6 +66,9 @@
             - name: .NET으로 여러 플랫폼 개발
               tocHref: /dotnet/standard/cross-platform/
               topicHref: /dotnet/standard/cross-platform/index
+            - name: Microsoft.Data.Sqlite
+              tocHref: /dotnet/standard/data/sqlite/
+              topicHref: /dotnet/standard/data/sqlite/index
             - name: XML 문서 및 데이터
               tocHref: /dotnet/standard/data/xml/
               topicHref: /dotnet/standard/data/xml/index
@@ -223,7 +226,7 @@
                     - name: Windows Forms 구성 섹션
                       tocHref: /dotnet/framework/configure-apps/file-schema/winforms/
                       topicHref: /dotnet/framework/configure-apps/file-schema/winforms/index
-            - name: .NET Framework의 데이터 및 모델링
+            - name: 데이터 및 모델링
               tocHref: /dotnet/framework/data/
               topicHref: /dotnet/framework/data/index
               items:
@@ -281,13 +284,13 @@
             - name: .NET 네이티브로 앱 컴파일
               tocHref: /dotnet/framework/net-native/
               topicHref: /dotnet/framework/net-native/index
-            - name: .NET Framework의 네트워크 프로그래밍
+            - name: 네트워크 프로그래밍
               tocHref: /dotnet/framework/network-programming/
               topicHref: /dotnet/framework/network-programming/index
             - name: .NET Framework 성능
               tocHref: /dotnet/framework/performance/
               topicHref: /dotnet/framework/performance/index
-            - name: .NET Framework의 동적 프로그래밍
+            - name: 동적 프로그래밍
               tocHref: /dotnet/framework/reflection-and-codedom/
               topicHref: /dotnet/framework/reflection-and-codedom/index
             - name: 데스크톱 앱의 리소스
@@ -637,7 +640,7 @@
                 - name: 상수 및 열거형
                   tocHref: /dotnet/visual-basic/programming-guide/language-features/constants-enums/
                   topicHref: /dotnet/visual-basic/programming-guide/language-features/constants-enums/index
-                - name: 흐름 제어
+                - name: 제어 흐름
                   tocHref: /dotnet/visual-basic/programming-guide/language-features/control-flow/
                   topicHref: /dotnet/visual-basic/programming-guide/language-features/control-flow/index
                 - name: 데이터 형식
@@ -682,7 +685,7 @@
             - name: 언어 참조
               tocHref: /dotnet/visual-basic/language-reference/
               topicHref: /dotnet/visual-basic/language-reference/index
-            - name: 참조
+            - name: 참고
               tocHref: /dotnet/visual-basic/reference/
               topicHref: /dotnet/visual-basic/reference/index
         - name: ML.NET 가이드
@@ -692,7 +695,7 @@
             - name: 방법 가이드
               tocHref: /dotnet/machine-learning/how-to-guides/
               topicHref: /dotnet/machine-learning/how-to-guides/index
-            - name: 자료
+            - name: 리소스
               tocHref: /dotnet/machine-learning/resources/
               topicHref: /dotnet/machine-learning/resources/index
             - name: 자습서

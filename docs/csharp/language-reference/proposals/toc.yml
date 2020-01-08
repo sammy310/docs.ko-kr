@@ -28,7 +28,7 @@
       items:
         - name: 읽기 전용 참조
           href: ../../../../_csharplang/proposals/csharp-7.2/readonly-ref.md
-        - name: ref 유사 형식에 대한 컴파일 시간 안전
+        - name: ref 유사 형식의 컴파일 시간 안전성
           href: ../../../../_csharplang/proposals/csharp-7.2/span-safety.md
         - name: 뒤에 오지 않는 명명된 인수
           href: ../../../../_csharplang/proposals/csharp-7.2/non-trailing-named-arguments.md
@@ -78,3 +78,5 @@
           href: ../../../../_csharplang/proposals/csharp-8.0/null-coalescing-assignment.md
         - name: 읽기 전용 인스턴스 멤버
           href: ../../../../_csharplang/proposals/csharp-8.0/readonly-instance-members.md
+        - name: 중첩된 stackalloc
+          href: ../../../../_csharplang/proposals/csharp-8.0/nested-stackalloc.md

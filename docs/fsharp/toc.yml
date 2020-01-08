@@ -7,13 +7,13 @@
   items:
     - name: 'F# 설치'
       href: get-started/install-fsharp.md
-    - name: 'Visual Studio에서 F# 시작'
+    - name: 'Visual Studio의 F#'
       href: get-started/get-started-visual-studio.md
-    - name: 'Visual Studio Code에서 F# 시작'
+    - name: 'Visual Studio Code의 F#'
       href: get-started/get-started-vscode.md
-    - name: '.NET Core CLI에서 F# 시작'
+    - name: '.NET Core CLI와 F#'
       href: get-started/get-started-command-line.md
-    - name: 'Mac용 Visual Studio에서 F# 시작'
+    - name: 'Mac용 Visual Studio의 F#'
       href: get-started/get-started-with-visual-studio-for-mac.md
 - name: 'F# 둘러보기'
   href: tour.md

@@ -42,23 +42,23 @@
           href: install/linux-package-manager-sles12.md
         - name: SLES 15
           href: install/linux-package-manager-sles15.md
+    - name: 지역화된 IntelliSense 설치
+      href: install/localized-intellisense.md
 - name: 시작
   href: get-started.md
   items:
     - name: 'C# 및 Visual Studio Code 시작'
       href: tutorials/with-visual-studio-code.md
-    - name: 'Visual Studio에서 C# Hello World 앱 빌드'
+    - name: Visual Studio Code를 사용하여 macOS에서 .NET Core 시작
+      href: tutorials/using-on-macos.md
+    - name: Visual Studio에서 첫 번째 콘솔 앱 만들기
       href: tutorials/with-visual-studio.md
-    - name: Visual Studio에서 Visual Basic Hello World 앱 빌드
-      href: tutorials/vb-with-visual-studio.md
     - name: Visual Studio를 사용하여 애플리케이션 디버그
       href: tutorials/debugging-with-visual-studio.md
     - name: Visual Studio를 사용하여 애플리케이션 게시
       href: tutorials/publishing-with-visual-studio.md
-    - name: 'Visual Studio의 C#를 사용하여 .NET Standard 라이브러리 빌드'
+    - name: Visual Studio에서 .NET Standard 라이브러리 만들기
       href: tutorials/library-with-visual-studio.md
-    - name: Visual Studio에서 Visual Basic을 사용하여 .NET Standard 라이브러리 빌드
-      href: tutorials/vb-library-with-visual-studio.md
     - name: Visual Studio에서 .NET Standard 라이브러리 테스트
       href: tutorials/testing-library-with-visual-studio.md
     - name: Visual Studio에서 .NET Standard 라이브러리 사용
@@ -89,8 +89,6 @@
           href: tutorials/cli-templates-create-project-template.md
         - name: 3 - 템플릿 팩 만들기
           href: tutorials/cli-templates-create-template-pack.md
-    - name: macOS에서 .NET Core 시작
-      href: tutorials/using-on-macos.md
     - name: Mac용 Visual Studio를 사용하여 .NET Core 시작
       href: tutorials/using-on-mac-vs.md
     - name: macOS에서 완전한 .NET Core 솔루션 빌드
@@ -119,7 +117,7 @@
       href: run-time-config/garbage-collector.md
     - name: 전역 설정
       href: run-time-config/globalization.md
-    - name: 네트워킹 서비스
+    - name: 네트워킹 설정
       href: run-time-config/networking.md
     - name: 스레딩 설정
       href: run-time-config/threading.md
@@ -183,6 +181,10 @@
           href: diagnostics/dotnet-dump.md
         - name: dotnet-trace
           href: diagnostics/dotnet-trace.md
+    - name: .NET Core 진단 자습서
+      items:
+        - name: 메모리 누수 디버그
+          href: diagnostics/debug-memory-leak.md
 - name: 단위 테스트
   href: testing/index.md
   items:
@@ -253,7 +255,7 @@
       href: tools/telemetry.md
     - name: global.json 개요
       href: tools/global-json.md
-    - name: 참조
+    - name: 참고
       items:
         - name: dotnet
           href: tools/dotnet.md
@@ -326,6 +328,8 @@
 - name: .NET Core 추가 도구
   href: additional-tools/index.md
   items:
+    - name: .NET Core 제거 도구
+      href: additional-tools/uninstall-tool.md
     - name: WCF Web Service Reference 공급자
       href: additional-tools/wcf-web-service-reference-guide.md
     - name: dotnet-svcutil
