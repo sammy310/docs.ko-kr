@@ -1,13 +1,13 @@
 ---
-title: 프로그래밍 개념-Visual Basic
+title: 프로그래밍 개념
 ms.date: 02/27/2017
 ms.assetid: cc9cac84-61f6-476e-b8c7-9bae7749bd90
-ms.openlocfilehash: 4c550002e1049fb716d2836737b6c3fa5b9df4f1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d94f948e814aba9cb01e3b96939992d938b309a2
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61966176"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337313"
 ---
 # <a name="programming-concepts-visual-basic"></a>프로그래밍 개념(Visual Basic)
 
@@ -24,7 +24,7 @@ ms.locfileid: "61966176"
 |[공변성(covariance) 및 반공변성(contravariance)(Visual Basic)](../../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)|인터페이스 및 대리자에서 제네릭 형식 매개 변수의 암시적 변환을 사용하도록 설정하는 방법을 보여 줍니다.|
 |[식 트리(Visual Basic)](../../../visual-basic/programming-guide/concepts/expression-trees/index.md)|식 트리를 사용하여 실행 코드의 동적 수정을 허용하는 방법을 설명합니다.|
 |[반복기(Visual Basic)](../../../visual-basic/programming-guide/concepts/iterators.md)|컬렉션을 단계별로 실행하면서 한 번에 하나씩 요소를 반환하는 데 사용되는 반복기에 대해 설명합니다.|
-|[LINQ(Language-Integrated Query)(Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/index.md)|관계형 데이터베이스, XML 문서, 데이터 집합 및 메모리 내 컬렉션을 쿼리 하기 위한 모델 및 Visual Basic의 언어 구문의 강력한 쿼리 기능을 설명 합니다.|
+|[LINQ(Language-Integrated Query)(Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/index.md)|Visual Basic 언어 구문의 강력한 쿼리 기능과 관계형 데이터베이스, XML 문서, 데이터 집합 및 메모리 내 컬렉션을 쿼리 하기 위한 모델에 대해 설명 합니다.|
 |[개체 지향 프로그래밍(Visual Basic)](../../../visual-basic/programming-guide/concepts/object-oriented-programming.md)|캡슐화, 상속, 다형성 등의 일반적인 개체 지향 개념에 대해 설명합니다.|
 |[리플렉션(Visual Basic)](../../../visual-basic/programming-guide/concepts/reflection.md)|리플렉션을 사용하면 동적으로 형식 인스턴스를 만들거나, 형식을 기존 개체에 바인딩하거나, 기존 개체에서 형식을 가져와 해당 메서드를 호출하거나, 필드 및 속성에 액세스하는 방법을 설명합니다.|
 |[Serialization(Visual Basic)](../../../visual-basic/programming-guide/concepts/serialization/index.md)|이진, XML 및 SOAP serialization의 주요 개념에 대해 설명합니다.|

@@ -2,12 +2,12 @@
 title: 대기 중인 메시지 문제 해결
 ms.date: 03/30/2017
 ms.assetid: a5f2836f-018d-42f5-a571-1e97e64ea5b0
-ms.openlocfilehash: 2999d1ab4129c72c231b6dc80480d8bfef5186fa
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: ed114cc9a37fff549e8bfc874765252fd18893a9
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837313"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345585"
 ---
 # <a name="troubleshooting-queued-messaging"></a>대기 중인 메시지 문제 해결
 
@@ -25,7 +25,7 @@ ms.locfileid: "74837313"
 
 **Q:** <xref:System.ServiceModel.NetMsmqBinding> 및 `MsmqIntegration` 바인딩을 사용 하려면 MSMQ를 업그레이드 해야 하나요?
 
-**A:** 아니요. 두 바인딩은 모두 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 및 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]에서 MSMQ 3.0에 사용됩니다. Windows Vista에서 MSMQ 4.0로 업그레이드 하는 경우 바인딩의 특정 기능을 사용할 수 있습니다.
+**A:** 아니요. 두 바인딩 모두 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 및 Windows Server 2003에서 MSMQ 3.0에 적용 됩니다. Windows Vista에서 MSMQ 4.0로 업그레이드 하는 경우 바인딩의 특정 기능을 사용할 수 있습니다.
 
 **Q:** <xref:System.ServiceModel.NetMsmqBinding> 및 <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> 바인딩의 기능은 msmq 4.0에서 사용할 수 있지만 MSMQ 3.0에서는 사용할 수 없습니다.
 

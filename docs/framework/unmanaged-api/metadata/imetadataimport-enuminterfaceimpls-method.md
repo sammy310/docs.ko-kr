@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ba6e178f-128b-4e47-a13c-b4be73eb106c
 topic_type:
 - apiref
-ms.openlocfilehash: 4c819bff50e6644a733374e9863d670d3323ee68
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: ef7057ad19fd34750bd15d358e9c1ebb1289cd44
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449527"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75338058"
 ---
 # <a name="imetadataimportenuminterfaceimpls-method"></a>IMetaDataImport::EnumInterfaceImpls 메서드
 지정 된 `TypeDef`에서 구현 하는 모든 인터페이스를 열거 합니다. 
@@ -48,7 +48,7 @@ HRESULT EnumInterfaceImpls (
  제한이 MethodDef 토큰을 저장 하는 데 사용 되는 배열입니다.  
   
  `cMax`  
- [in] `rImpls` 배열의 최대 크기입니다.  
+ 진행 `rImpls` 배열의 최대 길이입니다.  
   
  `pcImpls`  
  제한이 `rImpls`에서 반환 된 실제 토큰 수입니다.  
@@ -60,7 +60,7 @@ HRESULT EnumInterfaceImpls (
 |`S_OK`|`EnumInterfaceImpls` 성공적으로 반환 되었습니다.|  
 |`S_FALSE`|열거할 MethodDef 토큰이 없습니다. 이 경우 `pcImpls`은 0으로 설정 됩니다.|  
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 열거형은 지정 된 `TypeDef`에서 구현 하는 각 인터페이스에 대 한 `mdInterfaceImpl` 토큰의 컬렉션을 반환 합니다. 인터페이스 토큰은 인터페이스가 지정 된 순서 (`DefineTypeDef` 또는 `SetTypeDefProps`)로 반환 됩니다. [GetInterfaceImplProps](imetadataimport-getinterfaceimplprops-method.md)를 사용 하 여 반환 된 `mdInterfaceImpl` 토큰의 속성을 쿼리할 수 있습니다.
   
@@ -73,7 +73,7 @@ HRESULT EnumInterfaceImpls (
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [IMetaDataImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
