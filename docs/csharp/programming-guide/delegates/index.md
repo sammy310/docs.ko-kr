@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, delegates
 - delegates [C#]
 ms.assetid: 97de039b-c76b-4b9c-a27d-8c1e1c8d93da
-ms.openlocfilehash: a0c5592f2f4cca8173f9b777f2c3f14fe468feac
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: ca660e6485c492ea7883503be4a98e1b7000427a
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423312"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346365"
 ---
 # <a name="delegates-c-programming-guide"></a>대리자(C# 프로그래밍 가이드)
 [대리자](../../language-reference/builtin-types/reference-types.md)는 특정 매개 변수 목록 및 반환 형식이 있는 메서드에 대한 참조를 나타내는 형식입니다. 대리자를 인스턴스화하면 모든 메서드가 있는 인스턴스를 호환되는 시그니처 및 반환 형식에 연결할 수 있습니다. 대리자 인스턴스를 통해 메서드를 호출할 수 있습니다.  
@@ -52,9 +52,9 @@ ms.locfileid: "73423312"
   
 - [대리자의 가변성 사용](../concepts/covariance-contravariance/using-variance-in-delegates.md)  
   
-- [방법: 대리자 조합(멀티캐스트 대리자)](./how-to-combine-delegates-multicast-delegates.md)  
+- [대리자를 결합하는 방법(멀티캐스트 대리자)](./how-to-combine-delegates-multicast-delegates.md)  
   
-- [방법: 대리자 선언, 인스턴스화 및 사용](./how-to-declare-instantiate-and-use-a-delegate.md)  
+- [대리자를 선언, 인스턴스화, 사용하는 방법](./how-to-declare-instantiate-and-use-a-delegate.md)
 
 ## <a name="c-language-specification"></a>C# 언어 사양  
 
@@ -65,7 +65,7 @@ ms.locfileid: "73423312"
   
  [대리자 및 이벤트](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652490%28v=orm.10%29) 에 [학습 C# 3.0. 기본 사항 마스터 C# 3.0](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652493%28v=orm.10%29)  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Delegate>
 - [C# 프로그래밍 가이드](../index.md)

@@ -1,0 +1,59 @@
+- name: 개요
+  href: index.md
+- name: 연결 문자열
+  href: connection-strings.md
+- name: 데이터 형식
+  href: types.md
+- name: 매개 변수
+  href: parameters.md
+- name: 데이터베이스 오류
+  displayName: 'Busy, locked, retries, timeouts'
+  href: database-errors.md
+- name: 의
+  href: transactions.md
+- name: 일괄 처리
+  href: batching.md
+- name: 메타데이터
+  href: metadata.md
+- name: SQLite 기능
+  items:
+    - name: 메모리 내 데이터베이스
+      href: in-memory-databases.md
+    - name: 암호화
+      href: encryption.md
+    - name: 온라인 백업
+      href: backup.md
+    - name: 사용자 정의 함수
+      displayName: UDFs
+      href: user-defined-functions.md
+    - name: 사용자 지정 SQLite 버전
+      href: custom-versions.md
+    - name: 데이터 정렬
+      href: collation.md
+    - name: Blob I/O
+      displayName: Streams
+      href: blob-io.md
+    - name: 상호 운용성
+      href: interop.md
+    - name: 확장
+      href: extensions.md
+- name: 제한 사항
+  items:
+    - name: ADO.NET
+      href: adonet-limitations.md
+    - name: Async
+      href: async.md
+    - name: 대량 삽입
+      href: bulk-insert.md
+    - name: Entity Framework Core
+      href: /ef/core/providers/sqlite/limitations
+    - name: Dapper
+      href: dapper-limitations.md
+    - name: System.Data.SQLite
+      href: compare.md
+    - name: Xamarin
+      href: xamarin.md
+- name: API 참조 >>
+  href: /dotnet/api/?view=msdata-sqlite-3.0.0
+- name: SQL 구문 >>
+  href: 'https://www.sqlite.org/lang.html'

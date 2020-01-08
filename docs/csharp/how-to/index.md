@@ -2,12 +2,12 @@
 title: 방법 문서(C# 가이드)
 description: 유용한 팁 및 간단하고 집중된 코드 샘플의 컬렉션
 ms.date: 12/20/2017
-ms.openlocfilehash: 855ea90d22174c2b7c0b53a526c47a5edbe5496d
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: e6cb657726b82a1710bbcd596fe48037b5c26352
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73736880"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75339214"
 ---
 # <a name="how-to-c"></a>방법(C#)
 
@@ -15,13 +15,13 @@ C# 가이드의 방법 섹션에서 일반적인 질문에 대한 빠른 답변�
 
 ## <a name="general-c-concepts"></a>일반 C# 개념
 
-일반적인 C# 개발자 사례인 몇 가지 유용한 정보가 있습니다.
+일반적인 C# 개발자 사례인 몇 가지 팁과 요령이 있습니다.
 
 - [개체 이니셜라이저를 사용하여 개체를 초기화합니다](../programming-guide/classes-and-structs/how-to-initialize-objects-by-using-an-object-initializer.md).
 - [메서드에 구조체를 전달하는 것과 클래스를 전달하는 것의 차이점에 대해 알아보세요](../programming-guide/classes-and-structs/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md).
 - [연산자 오버로드를 사용합니다](../language-reference/operators/operator-overloading.md).
 - [사용자 지정 확장 메서드를 구현하고 호출합니다](../programming-guide/classes-and-structs/how-to-implement-and-call-a-custom-extension-method.md).
-- C# 프로그래머조차도 [VB에서 `My` 네임스페이스를 사용](../programming-guide/namespaces/how-to-use-the-my-namespace.md)하려 할 수 있습니다.
+- C# 프로그래머도 [Visual Basic에서 `My` 네임스페이스를 사용](../programming-guide/namespaces/how-to-use-the-my-namespace.md)하려 할 수 있습니다.
 - [확장 메서드를 사용하여 `enum` 형식에 대해 새 메서드를 만듭니다](../programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md).
 
 ### <a name="class-and-struct-members"></a>클래스 및 구조체 멤버

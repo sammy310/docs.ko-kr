@@ -7,12 +7,12 @@ helpviewer_keywords:
 - exceptions [C#]
 - C# language, exceptions
 ms.assetid: 0001887f-4fa2-47e2-8034-2819477e2344
-ms.openlocfilehash: 3506406a441cb2028c00d5b8ed87b57cc6dff38b
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 9229c1524a400112a1b48bc40866d6dd1b7cf21b
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423262"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346233"
 ---
 # <a name="exceptions-and-exception-handling-c-programming-guide"></a>예외 및 예외 처리(C# 프로그래밍 가이드)
 
@@ -47,15 +47,15 @@ C# 언어의 예외 처리 기능은 프로그램이 실행 중일 때 발생하
 - [예외 처리](exception-handling.md)
 - [예외 만들기 및 Throw](creating-and-throwing-exceptions.md)
 - [컴파일러 생성 예외](compiler-generated-exceptions.md)
-- [방법: try/catch를 사용하여 예외 처리(C# 프로그래밍 가이드)](how-to-handle-an-exception-using-try-catch.md)
-- [방법: finally를 사용하여 정리 코드 실행](how-to-execute-cleanup-code-using-finally.md)
-- [방법: CLS 규격이 아닌 예외 catch](how-to-catch-a-non-cls-exception.md)를 참조하세요.
+- [try/catch를 사용하여 예외를 처리하는 방법(C# 프로그래밍 가이드)](how-to-handle-an-exception-using-try-catch.md)
+- [finally를 사용하여 정리 코드를 실행하는 방법](how-to-execute-cleanup-code-using-finally.md)
+- [CLS 규격이 아닌 예외를 catch하는 방법](how-to-catch-a-non-cls-exception.md)
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 
 자세한 내용은 [C# 언어 사양](/dotnet/csharp/language-reference/language-specification/introduction)의 [예외](~/_csharplang/spec/exceptions.md)를 참조하세요. 언어 사양은 C# 구문 및 사용법에 대 한 신뢰할 수 있는 소스 됩니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.SystemException>
 - [C# 프로그래밍 가이드](../index.md)

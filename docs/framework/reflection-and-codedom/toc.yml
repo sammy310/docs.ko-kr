@@ -26,7 +26,7 @@
           href: how-to-hook-up-a-delegate-using-reflection.md
         - name: Windows 스토어 앱에 대한 .NET Framework의 리플렉션
           href: reflection-for-windows-store-apps.md
-    - name: 동적 메서드 및 어셈블리 생성
+    - name: 동적 메서드 및 어셈블리 내보내기
       href: emitting-dynamic-methods-and-assemblies.md
       items:
         - name: 리플렉션 내보내기의 보안 문제점
@@ -44,13 +44,14 @@
     - name: 동적 언어 런타임 개요
       href: dynamic-language-runtime-overview.md
     - name: 동적 소스 코드 생성 및 컴파일
-      href: dynamic-source-code-generation-and-compilation.md
       items:
+        - name: 개요
+          href: dynamic-source-code-generation-and-compilation.md
         - name: CodeDOM 사용
           href: using-the-codedom.md
         - name: CodeDOM 그래프에서 소스 코드 생성 및 컴파일
           href: generating-and-compiling-source-code-from-a-codedom-graph.md
-        - name: '방법: CodeDOM을 사용하여 XML 문서 파일 만들기'
+        - name: CodeDOM을 사용하여 XML 문서 파일 만들기
           href: how-to-create-an-xml-documentation-file-using-codedom.md
-        - name: '방법: CodeDOM을 사용하여 클래스 만들기'
+        - name: CodeDOM을 사용하여 클래스 만들기
           href: how-to-create-a-class-using-codedom.md

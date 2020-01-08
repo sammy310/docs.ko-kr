@@ -5,39 +5,38 @@ author: richlander
 ms.date: 03/16/2017
 titleSuffix: ''
 ms.custom: seodec18
-ms.openlocfilehash: 1355b3b0fa72a13263229848b3de2c6b9ccb3392
-ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
+ms.openlocfilehash: b4d3f23f457e913f62d508d9b0f57168bc101786
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74884204"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75343339"
 ---
 # <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>자습서에서 .NET Core 및 .NET Core SDK 도구 알아보기
 
 다음 자습서를 사용하여 .NET Core에 대해 알아볼 수 있습니다.
 
-## <a name="building-applications-with-visual-studio-2017"></a>Visual Studio 2017을 사용하여 애플리케이션 빌드
+## <a name="create-applications-with-visual-studio"></a>Visual Studio를 사용하여 애플리케이션 만들기
 
-- [C# Hello World 애플리케이션 빌드](with-visual-studio.md)
-- [C# Hello World 애플리케이션 디버깅](debugging-with-visual-studio.md)
-- [C# Hello World 애플리케이션 게시](publishing-with-visual-studio.md)
-- [C# 클래스 라이브러리 빌드](library-with-visual-studio.md)
-- [Visual Basic에서 클래스 라이브러리 빌드](vb-library-with-visual-studio.md)
+- [Hello World 콘솔 애플리케이션 만들기](with-visual-studio.md)
+- [Hello World 애플리케이션 디버그](debugging-with-visual-studio.md)
+- [Hello World 애플리케이션 게시](publishing-with-visual-studio.md)
+- [클래스 라이브러리 빌드](library-with-visual-studio.md)
 - [클래스 라이브러리 테스트](testing-library-with-visual-studio.md)
 - [클래스 라이브러리 사용](consuming-library-with-visual-studio.md)
 - [Azure Cosmos DB: SQL API 및 .NET Core 시작](/azure/cosmos-db/sql-api-dotnetcore-get-started)
 
-## <a name="building-applications-with-visual-studio-code"></a>Visual Studio Code를 사용하여 애플리케이션 빌드
+## <a name="build-applications-with-visual-studio-code"></a>Visual Studio Code를 사용하여 애플리케이션 빌드
 
 - [C# 및 Visual Studio Code 시작](with-visual-studio-code.md)
 - [macOS에서 .NET Core 시작](using-on-macos.md)
 
-## <a name="building-applications-with-visual-studio-for-mac"></a>Visual Studio for Mac을 사용하여 애플리케이션 빌드
+## <a name="build-applications-with-visual-studio-for-mac"></a>Mac용 Visual Studio를 사용하여 애플리케이션 빌드
 
 - [Mac용 Visual Studio를 사용하여 macOS에서 .NET Core 시작](using-on-mac-vs.md)
 - [Visual Studio for Mac을 사용하여 macOS에서 완전한 .NET Core 솔루션 빌드](using-on-mac-vs-full-solution.md)
 
-## <a name="building-applications-with-the-net-core-cli-tools"></a>.NET Core CLI 도구를 사용하여 애플리케이션 빌드
+## <a name="build-applications-with-the-net-core-cli-tools"></a>.NET Core CLI 도구를 사용하여 애플리케이션 빌드
 
 - [.NET Core CLI 도구를 사용하여 Windows/Linux/macOS에서 .NET Core 시작](cli-create-console-app.md)
 - [.NET Core CLI 도구를 사용하여 프로젝트 구성 및 테스트](testing-with-cli.md)

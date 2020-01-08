@@ -1,15 +1,15 @@
 ---
 title: .NET Core 가이드
-description: .NET Core는 Windows, Linux 및 Mac 앱을 만들기 위한 모듈식 고성능 .NET 구현입니다. 시작하려면 .NET Core에 관해 알아봅니다.
+description: .NET Core는 Windows, Linux, macOS 앱을 만들기 위한 모듈식 고성능 .NET 구현입니다. 시작하려면 .NET Core에 관해 알아봅니다.
 author: richlander
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: b2622dba53d64c9dcf58e852d57de117fe79eb2e
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 80a3b12972e24c3022ac2aa14406aa60635815a3
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837014"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75341362"
 ---
 # <a name="net-core-guide"></a>.NET Core 가이드
 
@@ -27,7 +27,7 @@ ms.locfileid: "74837014"
 
 ## <a name="net-core-31"></a>.NET Core 3.1
 
-최신 버전은 .NET Core 3.1입니다. .NET Core 3.0에 대한 사소한 향상을 포함합니다. 그러나 .NET Core 3.1은 장기적으로 지원되는 릴리스입니다. .NET Core 3.1 릴리스에 대한 자세한 내용은 [What's new in .NET Core 3.1](./whats-new/dotnet-core-3-1.md)(.NET Core 3.1의 새로운 기능)을 참조 하세요.
+최신 버전은 .NET Core 3.1입니다. 3.1에는 .NET Core 3.0 대비 향상된 주요 기능은 없지만, .NET Core 3.1은 [장기적으로 지원되는 릴리스](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)입니다. .NET Core 3.1 릴리스에 대한 자세한 내용은 [What's new in .NET Core 3.1](./whats-new/dotnet-core-3-1.md)(.NET Core 3.1의 새로운 기능)을 참조 하세요.
 
 ## <a name="create-your-first-application"></a>첫 애플리케이션 만들기
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: 77326b37baebc3ade12336b1b3735ed1da497afc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d03917353a9e6879ccb3b368d7d190aeeacb702c
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120151"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635238"
 ---
 # <a name="interfaces-c-programming-guide"></a>인터페이스(C# 프로그래밍 가이드)
 
@@ -62,17 +62,17 @@ ms.locfileid: "73120151"
 [명시적 인터페이스 구현](explicit-interface-implementation.md)  
  인터페이스와 관련된 클래스 멤버를 만드는 방법에 대해 설명합니다.  
   
- [방법: 인터페이스 멤버를 명시적으로 구현](how-to-explicitly-implement-interface-members.md)  
+ [인터페이스 멤버를 명시적으로 구현하는 방법](how-to-explicitly-implement-interface-members.md)  
  인터페이스 멤버를 명시적으로 구현하는 방법에 대한 예제를 제공합니다.  
   
- [방법: 두 인터페이스의 멤버를 명시적으로 구현](how-to-explicitly-implement-members-of-two-interfaces.md)  
+ [두 인터페이스의 멤버를 명시적으로 구현하는 방법](how-to-explicitly-implement-members-of-two-interfaces.md)  
  상속을 포함하는 인터페이스 멤버를 명시적으로 구현하는 방법에 대한 예제를 제공합니다.  
   
 ## <a name="BKMK_RelatedSections"></a>관련 단원
 
 - [인터페이스 속성](../classes-and-structs/interface-properties.md)  
 - [인터페이스의 인덱서](../indexers/indexers-in-interfaces.md)  
-- [방법:  인터페이스 이벤트 구현](../events/how-to-implement-interface-events.md)  
+- [인터페이스 이벤트를 구현하는 방법](../events/how-to-implement-interface-events.md)
 - [클래스 및 구조체](../classes-and-structs/index.md)  
 - [상속](../classes-and-structs/inheritance.md)  
 - [메서드](../classes-and-structs/methods.md)  
@@ -86,7 +86,7 @@ ms.locfileid: "73120151"
 
 [인터페이스](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652489%28v%3Dorm.10%29) 에 [학습 C# 3.0. C# 3.0의 기본 사항 마스터](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652493%28v%253dorm.10%29)의 인터페이스
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 프로그래밍 가이드](../index.md)
 - [상속](../classes-and-structs/inheritance.md)

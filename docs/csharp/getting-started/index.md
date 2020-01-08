@@ -6,16 +6,16 @@ helpviewer_keywords:
 - getting started, Visual C#
 ms.date: 04/05/2019
 ms.custom: seoapril2019
-ms.openlocfilehash: 7ea84f9bb815b7080625508bd28364bc75255afe
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6255720ad5a23bdee7fe46a6c4b9c76f045b2d06
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73099948"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75342778"
 ---
 # <a name="get-started-with-c"></a>C\# 시작
 
-이 섹션에서는 C# 및 .NET Core를 사용하여 애플리케이션을 빠르게 빌드할 수 있는 짧고 간단한 자습서를 제공합니다. Visual Studio 2017 및 Visual Studio Code에 대한 시작 항목이 제공됩니다. 이 문서에서는 몇 가지 프로그래밍 환경을 가정합니다. 프로그래밍이 처음인 경우 [C# 소개](../tutorials/intro-to-csharp/index.md) 대화형 자습서를 사용해 보세요.
+이 섹션에서는 C# 및 .NET Core를 사용하여 애플리케이션을 빠르게 빌드할 수 있는 짧고 간단한 자습서를 제공합니다. Visual Studio 및 Visual Studio Code의 시작 항목이 있습니다. 이 문서에서는 몇 가지 프로그래밍 환경을 가정합니다. 프로그래밍이 처음인 경우 [C# 소개](../tutorials/intro-to-csharp/index.md) 대화형 자습서를 사용해 보세요.
 
 다음 항목을 사용할 수 있습니다.
 
@@ -23,13 +23,13 @@ ms.locfileid: "73099948"
 
      C# 언어 및 .NET에 대해 간략히 설명합니다.
 
-- [Visual Studio 2017 RC에서 .NET Core를 사용하여 C# Hello World 애플리케이션 빌드](../../core/tutorials/with-visual-studio.md)
+- [Visual Studio에서 .NET Core를 사용하여 C# Hello World 애플리케이션 만들기](../../core/tutorials/with-visual-studio.md)
 
    Visual Studio를 사용하면 Windows용 통합 개발 환경에서 애플리케이션을 코딩, 컴파일, 실행, 디버그, 프로파일링 및 게시할 수 있습니다.
 
    이 항목에서는 간단한 Hello World 애플리케이션을 만들어 실행한 다음, 좀 더 대화형 기능이 강화된 Hello World 애플리케이션을 실행하도록 수정할 수 있습니다. 애플리케이션의 빌드 및 실행이 끝나면 .NET Core에서 지원하는 모든 플랫폼에서 실행할 수 있도록 [디버그](../../core/tutorials/debugging-with-visual-studio.md)하는 방법과 [게시](../../core/tutorials/publishing-with-visual-studio.md)하는 방법을 익힙니다.
 
-- [Visual Studio 2017에서 C# 및 .NET Core로 클래스 라이브러리 빌드](../../core/tutorials/library-with-visual-studio.md)
+- [Visual Studio에서 C# 및 .NET Standard를 사용하여 클래스 라이브러리 만들기](../../core/tutorials/library-with-visual-studio.md)
 
    클래스 라이브러리를 사용하면 다른 애플리케이션에서 호출할 수 있는 형식 및 형식 멤버를 정의할 수 있습니다. 이 항목에서는 문자열이 대문자로 시작되는지 여부를 결정하는 단일 메서드로 클래스 라이브러리를 만들 수 있습니다. 라이브러리 빌드를 마친 후에는 [단위 테스트](../../core/tutorials/testing-library-with-visual-studio.md)를 개발하여 라이브러리가 예상대로 작동하는지 확인하고 [사용하려는 애플리케이션](../../core/tutorials/consuming-library-with-visual-studio.md)에서 사용 가능하게 만들 수 있습니다.
 
@@ -53,6 +53,6 @@ ms.locfileid: "73099948"
 
     C#을 사용하는 프로그래밍 연습 및 각 연습에 대한 간단한 설명에 대한 링크를 제공합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Visual Studio를 사용한 C# 개발](/visualstudio/get-started/csharp/)

@@ -4,12 +4,12 @@ description: 이 문서에서는 .NET Core SDK 및 런타임의 버전 관리 �
 author: bleroy
 ms.date: 07/26/2018
 ms.custom: seodec18
-ms.openlocfilehash: b8cfb2d40b1ae88ef03daca6c31b283256bc6f26
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: cc3a834fdb6347f2cfd93b2c8daeae5bcc222575
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72179952"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75342914"
 ---
 # <a name="overview-of-how-net-core-is-versioned"></a>.NET Core의 버전 관리 방법 개요
 
@@ -25,14 +25,14 @@ ms.locfileid: "72179952"
 
 SDK 버전 번호의 세 번째 위치는 보조 및 패치 번호를 모두 전달합니다. 부 버전에는 100이 곱해집니다. 부 버전 1, 패치 버전 2는 102로 표시됩니다. 마지막 두 자리는 패치 번호를 나타냅니다. 예를 들어 .NET Core 2.2의 릴리스에서는 다음 표와 같은 릴리스를 만들 수 있습니다.
 
-| 변경                | .NET Core 런타임 | .NET Core SDK(*) |
+| 변화                | .NET Core 런타임 | .NET Core SDK(*) |
 |-----------------------|-------------------|-------------------|
 | 초기 릴리스       | 2.2.0             | 2.2.100           |
 | SDK 패치             | 2.2.0             | 2.2.101           |
 | 런타임 및 SDK 패치 | 2.2.1             | 2.2.102           |
 | SDK 기능 변경    | 2.2.1             | 2.2.200           |
 
-(\*) 이 차트는 향후 2.2 .NET Core Runtime를 사용합니다. 기록 아티팩트는 예제와 같이 .NET Core 2.1에 대한 첫 번째 SDK가 2.1.300이기 때문입니다. 자세한 내용은 [.NET Core 버전 선택](selection.md)을 참조하세요.
+(\*) 기록 아티팩트에 따라 .NET Core 2.1의 첫 번째 SDK가 2.1.300이기 때문에 이 차트는 2.2 .NET Core Runtime을 예제로 사용합니다. 자세한 내용은 [.NET Core 버전 선택](selection.md)을 참조하세요.
 
 참고:
 
@@ -82,11 +82,11 @@ MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 
 ### <a name="preview-versions"></a>미리 보기 버전
 
-미리 보기 버전에는 `-preview[number]-([build]|"final")`이 추가됩니다. 예: `2.0.0-preview1-final`
+미리 보기 버전에는 `-preview[number]-([build]|"final")`이 추가됩니다. 예: `2.0.0-preview1-final`.
 
 ### <a name="servicing-versions"></a>서비스 버전
 
-릴리스가 출시된 후에 릴리스 분기는 일반적으로 매일 빌드 만들기를 중지하고 대신 서비스 빌드를 만들기 시작합니다. 서비스 버전에는 `-servicing-[number]`이 추가됩니다. 예: `2.0.1-servicing-006924`
+릴리스가 출시된 후에 릴리스 분기는 일반적으로 매일 빌드 만들기를 중지하고 대신 서비스 빌드를 만들기 시작합니다. 서비스 버전에는 `-servicing-[number]`이 추가됩니다. 예: `2.0.1-servicing-006924`.
 
 ## <a name="relationship-to-net-standard-versions"></a>.NET Standard 버전과의 관계
 
@@ -106,7 +106,7 @@ MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 | 2.2       | 최대 2.0     |
 | 3.0       | 최대 2.1     |
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [대상 프레임워크](../../standard/frameworks.md)
 - [.NET Core 배포 패키징](../build/distribution-packaging.md)

@@ -17,7 +17,9 @@
       href: tutorials/amazon-emr-spark-deployment.md
     - name: Databricks에 배포
       href: tutorials/databricks-deployment.md
-    - name: Structured Streaming
+    - name: 일괄 처리
+      href: tutorials/batch-processing.md
+    - name: 구조적 스트리밍
       href: tutorials/streaming.md
 - name: 방법 가이드
   items:
@@ -27,7 +29,7 @@
       href: how-to-guides/hdinsight-deploy-methods.md
     - name: Databricks에 작업 제출
       href: how-to-guides/databricks-deploy-methods.md
-- name: 참조
+- name: 참고
   items:
     - name: API 참조
       href: 'https://docs.microsoft.com/dotnet/api/?view=spark-dotnet'
