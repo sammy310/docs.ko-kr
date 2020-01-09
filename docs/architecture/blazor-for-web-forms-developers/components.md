@@ -1,46 +1,46 @@
 ---
-title: Build reusable UI components with Blazor
-description: Learn how to build reusable UI components with Blazor and how they compare to ASP.NET Web Forms controls.
+title: Blazor를 사용 하 여 재사용 가능한 UI 구성 요소 빌드
+description: Blazor를 사용 하 여 재사용 가능한 UI 구성 요소를 빌드하고 ASP.NET Web Forms 컨트롤과 비교 하는 방법을 알아봅니다.
 author: danroth27
 ms.author: daroth
 ms.date: 09/18/2019
-ms.openlocfilehash: 5e5ca128bea2e77d795cede17df73963d9b49a48
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: b34bdf61a425807030cf7648df245cc7a01c95de
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337392"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705732"
 ---
-# <a name="build-reusable-ui-components-with-blazor"></a>Build reusable UI components with Blazor
+# <a name="build-reusable-ui-components-with-blazor"></a>Blazor를 사용 하 여 재사용 가능한 UI 구성 요소 빌드
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-One of the beautiful things about ASP.NET Web Forms is how it enables encapsulation of reusable pieces of user interface (UI) code into reusable UI controls. Custom user controls can be defined in markup using *.ascx* files. You can also build elaborate server controls in code with full designer support.
+ASP.NET Web Forms에 대 한 멋진 사항 중 하나는 다시 사용할 수 있는 ui (사용자 인터페이스) 코드를 다시 사용할 수 있는 UI 컨트롤에 캡슐화 하는 방법입니다. *.Ascx* 파일을 사용 하 여 태그에서 사용자 지정 사용자 정의 컨트롤을 정의할 수 있습니다. 전체 디자이너 지원으로 코드에서 정교한 서버 컨트롤을 빌드할 수도 있습니다.
 
-Blazor also supports UI encapsulation through *components*. A component:
+Blazor는 *구성 요소*를 통한 UI 캡슐화도 지원 합니다. 구성 요소:
 
-- Is a self-contained chunk of UI.
-- Maintains its own state and rendering logic.
-- Can define UI event handlers, bind to input data, and manage its own lifecycle.
-- Is typically defined in a *.razor* file using Razor syntax.
+- 는 자체 포함 UI의 청크입니다.
+- 자체 상태 및 렌더링 논리를 유지 관리 합니다.
+- 는 UI 이벤트 처리기를 정의 하 고, 입력 데이터에 바인딩하고, 자체 수명 주기를 관리할 수 있습니다.
+- 는 일반적으로 Razor 구문를 사용 하 여 *razor* 파일에 정의 됩니다.
 
-## <a name="an-introduction-to-razor"></a>An introduction to Razor
+## <a name="an-introduction-to-razor"></a>Razor 소개
 
-Razor is a light-weight markup templating language based on HTML and C#. With Razor, you can seamlessly transition between markup and C# code to define your component rendering logic. When the *.razor* file is compiled, the rendering logic is captured in a structured way in a .NET class. The name of the compiled class is taken from the *.razor* file name. The namespace is taken from the default namespace for the project and the folder path, or you can explicitly specify the namespace using the `@namespace` directive (more on Razor directives below).
+Razor는 HTML 및를 기반으로 하 C#는 간단한 태그 템플릿 언어입니다. Razor를 사용 하면 태그와 C# 코드 간을 원활 하 게 전환 하 여 구성 요소 렌더링 논리를 정의할 수 있습니다. *Razor* 파일이 컴파일되면 렌더링 논리가 .net 클래스에서 구조화 된 방식으로 캡처됩니다. 컴파일된 클래스의 이름은 *razor* 파일 이름에서 가져옵니다. 네임 스페이스는 프로젝트 및 폴더 경로에 대 한 기본 네임 스페이스에서 가져온 것 이며, `@namespace` 지시어를 사용 하 여 네임 스페이스를 명시적으로 지정할 수 있습니다 (아래 Razor 지시문에 추가).
 
-A component's rendering logic is authored using normal HTML markup with dynamic logic added using C#. The `@` character is used to transition to C#. Razor is typically smart about figuring out when you've switched back to HTML. For example, the following component renders a `<p>` tag with the current time:
+구성 요소의 렌더링 논리는를 사용 하 여 C#동적 논리가 추가 된 일반 HTML 태그를 사용 하 여 작성 됩니다. `@` 문자는로 C#전환 하는 데 사용 됩니다. Razor는 일반적으로 HTML로 다시 전환 하는 경우를 파악 하는 데 유용 합니다. 예를 들어 다음 구성 요소는 현재 시간을 사용 하 여 `<p>` 태그를 렌더링 합니다.
 
 ```razor
 <p>@DateTime.Now</p>
 ```
 
-To explicitly specify the beginning and ending of a C# expression, use parentheses:
+C# 식의 시작과 끝을 명시적으로 지정 하려면 괄호를 사용 합니다.
 
 ```razor
 <p>@(DateTime.Now)</p>
 ```
 
-Razor also makes it easy to use C# control flow in your rendering logic. For example, you can conditionally render some HTML like this:
+Razor를 사용 하면 렌더링 논리에서 C# 제어 흐름을 쉽게 사용할 수 있습니다. 예를 들어 다음과 같이 HTML을 조건부로 렌더링할 수 있습니다.
 
 ```razor
 @if (value % 2 == 0)
@@ -49,7 +49,7 @@ Razor also makes it easy to use C# control flow in your rendering logic. For exa
 }
 ```
 
-Or you can generate a list of items using a normal C# `foreach` loop like this:
+또는 다음과 같이 일반적인 C# `foreach` 루프를 사용 하 여 항목 목록을 생성할 수 있습니다.
 
 ```razor
 <ul>
@@ -60,65 +60,65 @@ Or you can generate a list of items using a normal C# `foreach` loop like this:
 </ul>
 ```
 
-Razor directives, like directives in ASP.NET Web Forms, control many aspects of how a Razor component is compiled. Examples include the component's:
+ASP.NET Web Forms 지시문과 같은 razor 지시문은 Razor 구성 요소가 컴파일되는 방법의 다양 한 측면을 제어 합니다. 구성 요소의 예는 다음과 같습니다.
 
 - 네임스페이스
 - 기본 클래스
-- Implemented interfaces
-- Generic parameters
-- Imported namespaces
+- 구현 된 인터페이스
+- 제네릭 매개 변수
+- 가져온 네임 스페이스
 - 경로
 
-Razor directives start with the `@` character and are typically used at the start of a new line at the start of the file. For example, the `@namespace` directive defines the component's namespace:
+Razor 지시문은 `@` 문자로 시작 하 고 일반적으로 파일의 시작 부분에서 새 줄의 시작 부분에 사용 됩니다. 예를 들어 `@namespace` 지시문은 구성 요소의 네임 스페이스를 정의 합니다.
 
 ```razor
 @namespace MyComponentNamespace
 ```
 
-The following table summarizes the various Razor directives used in Blazor and their ASP.NET Web Forms equivalents, if they exist.
+다음 표에서는 Blazor에서 사용 되는 다양 한 Razor 지시문과 해당 ASP.NET Web Forms 해당 하는 경우에 대해 요약 합니다.
 
-|Directive    |설명|예|Web Forms equivalent|
+|Directive    |설명|예|Web Forms 동일|
 |-------------|-----------|-------|--------------------|
-|`@attribute` |Adds a class-level attribute to the component|`@attribute [Authorize]`|None|
-|`@code`      |Adds class members to the component|`@code { ... }`|`<script runat="server">...</script>`|
-|`@implements`|Implements the specified interface|`@implements IDisposable`|코드 숨김 사용|
-|`@inherits`  |Inherits from the specified base class|`@inherits MyComponentBase`|`<%@ Control Inherits="MyUserControlBase" %>`|
-|`@inject`    |Injects a service into the component|`@inject IJSRuntime JS`|None|
-|`@layout`    |Specifies a layout component for the component|`@layout MainLayout`|`<%@ Page MasterPageFile="~/Site.Master" %>`|
-|`@namespace` |Sets the namespace for the component|`@namespace MyNamespace`|None|
-|`@page`      |Specifies the route for the component|`@page "/product/{id}"`|`<%@ Page %>`|
-|`@typeparam` |Specifies a generic type parameter for the component|`@typeparam TItem`|코드 숨김 사용|
-|`@using`     |Specifies a namespace to bring into scope|`@using MyComponentNamespace`|Add namespace in *web.config*|
+|`@attribute` |구성 요소에 클래스 수준 특성을 추가 합니다.|`@attribute [Authorize]`|None|
+|`@code`      |구성 요소에 클래스 멤버를 추가 합니다.|`@code { ... }`|`<script runat="server">...</script>`|
+|`@implements`|지정 된 인터페이스를 구현 합니다.|`@implements IDisposable`|코드 숨김 사용|
+|`@inherits`  |지정 된 기본 클래스에서 상속 됩니다.|`@inherits MyComponentBase`|`<%@ Control Inherits="MyUserControlBase" %>`|
+|`@inject`    |구성 요소에 서비스를 삽입 합니다.|`@inject IJSRuntime JS`|None|
+|`@layout`    |구성 요소에 대 한 레이아웃 구성 요소를 지정 합니다.|`@layout MainLayout`|`<%@ Page MasterPageFile="~/Site.Master" %>`|
+|`@namespace` |구성 요소에 대 한 네임 스페이스를 설정 합니다.|`@namespace MyNamespace`|None|
+|`@page`      |구성 요소의 경로를 지정 합니다.|`@page "/product/{id}"`|`<%@ Page %>`|
+|`@typeparam` |구성 요소에 대 한 제네릭 형식 매개 변수를 지정 합니다.|`@typeparam TItem`|코드 숨김 사용|
+|`@using`     |범위에 가져올 네임 스페이스를 지정 합니다.|`@using MyComponentNamespace`|*Web.config* 에 네임 스페이스 추가|
 
-Razor components also make extensive use of *directive attributes* on elements to control various aspects of how components get compiled (event handling, data binding, component & element references, and so on). Directive attributes all follow a common generic syntax where the values in parenthesis are optional:
+또한 Razor 구성 요소는 요소에 대 한 *지시문 특성* 을 광범위 하 게 사용 하 여 구성 요소가 컴파일되는 방법 (이벤트 처리, 데이터 바인딩, 구성 요소 & 요소 참조 등)의 다양 한 측면을 제어 합니다. 지시문 특성은 모두 괄호 안의 값이 선택 사항인 일반적인 제네릭 구문을 따릅니다.
 
 ```razor
 @directive(-suffix(:name))(="value")
 ```
 
-The following table summarizes the various attributes for Razor directives used in Blazor.
+다음 표에서는 Blazor에 사용 되는 Razor 지시문에 대 한 다양 한 특성을 요약 합니다.
 
 |특성    |설명|예|
 |-------------|-----------|-------|
-|`@attributes`|Renders a dictionary of attributes|`<input @attributes="ExtraAttributes" />`|
-|`@bind`      |Creates a two-way data binding    |`<input @bind="username" @bind:event="oninput" />`|
-|`@on{event}` |Adds an event handler for the specified event|`<button @onclick="IncrementCount">Click me!</button>`|
-|`@key`       |Specifies a key to be used by the diffing algorithm for preserving elements in a collection|`<DetailsEditor @key="person" Details="person.Details" />`|
-|`@ref`       |Captures a reference to the component or HTML element|`<MyDialog @ref="myDialog" />`|
+|`@attributes`|특성 사전을 렌더링 합니다.|`<input @attributes="ExtraAttributes" />`|
+|`@bind`      |양방향 데이터 바인딩을 만듭니다.    |`<input @bind="username" @bind:event="oninput" />`|
+|`@on{event}` |지정 된 이벤트에 대 한 이벤트 처리기를 추가 합니다.|`<button @onclick="IncrementCount">Click me!</button>`|
+|`@key`       |컬렉션의 요소를 유지 하기 위해 diff 알고리즘에서 사용할 키를 지정 합니다.|`<DetailsEditor @key="person" Details="person.Details" />`|
+|`@ref`       |구성 요소 또는 HTML 요소에 대 한 참조를 캡처합니다.|`<MyDialog @ref="myDialog" />`|
 
-The various directive attributes used by Blazor (`@onclick`, `@bind`, `@ref`, and so on) are covered in the sections below and later chapters.
+Blazor (`@onclick`, `@bind`, `@ref`등)에서 사용 하는 다양 한 지시문 특성은 아래 단원 및 이후 장에서 설명 합니다.
 
-Many of the syntaxes used in *.aspx* and *.ascx* files have parallel syntaxes in Razor. Below is a simple comparison of the syntaxes for ASP.NET Web Forms and Razor.
+*.Aspx* 및 *.ascx* 파일에 사용 되는 대부분의 구문에는 Razor의 병렬 구문이 있습니다. 다음은 ASP.NET Web Forms 및 Razor의 구문에 대 한 간단한 비교입니다.
 
 |기능                      |Web Forms           |구문               |Razor         |구문 |
 |-----------------------------|--------------------|---------------------|--------------|-------|
 |지시문                   |`<%@ [directive] %>`|`<%@ Page %>`        |`@[directive]`|`@page`|
 |코드 블록                  |`<% %>`             |`<% int x = 123; %>` |`@{ }`        |`@{ int x = 123; }`|
-|표현식<br>(HTML-encoded)|`<%: %>`            |`<%:DateTime.Now %>` |Implicit: `@`<br>Explicit: `@()`|`@DateTime.Now`<br>`@(DateTime.Now)`|
+|표현식<br>(HTML 인코딩)|`<%: %>`            |`<%:DateTime.Now %>` |암시적: `@`<br>명시적: `@()`|`@DateTime.Now`<br>`@(DateTime.Now)`|
 |설명                     |`<%-- --%>`         |`<%-- Commented --%>`|`@* *@`       |`@* Commented *@`|
 |데이터 바인딩                 |`<%# %>`            |`<%# Bind("Name") %>`|`@bind`       |`<input @bind="username" />`|
 
-To add members to the Razor component class, use the `@code` directive. This technique is similar to using a `<script runat="server">...</script>` block in an ASP.NET Web Forms user control or page.
+Razor 구성 요소 클래스에 멤버를 추가 하려면 `@code` 지시문을 사용 합니다. 이 기법은 ASP.NET Web Forms 사용자 정의 컨트롤 또는 페이지에서 `<script runat="server">...</script>` 블록을 사용 하는 것과 비슷합니다.
 
 ```razor
 @code {
@@ -131,24 +131,24 @@ To add members to the Razor component class, use the `@code` directive. This tec
 }
 ```
 
-Because Razor is based on C#, it must be compiled from within a C# project ( *.csproj*). You can't compile *.razor* files from a Visual Basic project ( *.vbproj*). You can still reference Visual Basic projects from your Blazor project. The opposite is true too.
+Razor는 C#을 기반으로 하기 때문에 C# 프로젝트 ( *.csproj*) 내에서 컴파일해야 합니다. Visual Basic 프로젝트 ( *.vbproj*)에서 *razor* 파일을 컴파일할 수 없습니다. Blazor 프로젝트에서 Visual Basic 프로젝트를 계속 참조할 수 있습니다. 반대의 경우도 마찬가지입니다.
 
-For a full Razor syntax reference, see [Razor syntax reference for ASP.NET Core](/aspnet/core/mvc/views/razor).
+전체 Razor 구문 참조는 [ASP.NET Core에 대 한 Razor 구문 참조](/aspnet/core/mvc/views/razor)를 참조 하세요.
 
 ## <a name="use-components"></a>구성 요소 사용
 
-Aside from normal HTML, components can also use other components as part of their rendering logic. The syntax for using a component in Razor is similar to using a user control in an ASP.NET Web Forms app. Components are specified using an element tag that matches the type name of the component. For example, you can add a `Counter` component like this:
+일반 HTML 외에도 구성 요소는 렌더링 논리의 일부로 다른 구성 요소를 사용할 수 있습니다. Razor에서 구성 요소를 사용 하는 구문은 ASP.NET Web Forms 앱에서 사용자 정의 컨트롤을 사용 하는 것과 비슷합니다. 구성 요소는 구성 요소의 형식 이름과 일치 하는 요소 태그를 사용 하 여 지정 됩니다. 예를 들어 다음과 같이 `Counter` 구성 요소를 추가할 수 있습니다.
 
 ```razor
 <Counter />
 ```
 
-Unlike ASP.NET Web Forms, components in Blazor:
+ASP.NET Web Forms와 달리 Blazor의 구성 요소는 다음과 같습니다.
 
-- Don't use an element prefix (for example, `asp:`).
-- Don't require registration on the page or in the *web.config*.
+- 요소 접두사를 사용 하지 않습니다 (예: `asp:`).
+- 페이지 또는 *web.config*에서 등록이 필요 하지 않습니다.
 
-Think of Razor components like you would .NET types, because that's exactly what they are. If the assembly containing the component is referenced, then the component is available for use. To bring the component's namespace into scope, apply the `@using` directive:
+.NET 형식 처럼 Razor 구성 요소는 정확히 일치 해야 합니다. 구성 요소가 포함 된 어셈블리를 참조 하는 경우에는 구성 요소를 사용할 수 있습니다. 구성 요소의 네임 스페이스를 범위에 가져오려면 `@using` 지시어를 적용 합니다.
 
 ```razor
 @using MyComponentLib
@@ -156,9 +156,9 @@ Think of Razor components like you would .NET types, because that's exactly what
 <Counter />
 ```
 
-As seen in the default Blazor projects, it's common to put `@using` directives into a *_Imports.razor* file so that they're imported into all *.razor* files in the same directory and in child directories.
+기본 Blazor 프로젝트에 표시 된 것 처럼, 동일한 디렉터리 및 하위 디렉터리에 있는 모든 *. razor* 파일에 `@using` 지시문을 *_Imports razor* 파일에 배치 하는 것이 일반적입니다.
 
-If the namespace for a component isn't in scope, you can specify a component using its full type name, as you can in C#:
+구성 요소에 대 한 네임 스페이스가 범위에 없는 경우에서 C#가능 하면 전체 형식 이름을 사용 하 여 구성 요소를 지정할 수 있습니다.
 
 ```razor
 <MyComponentLib.Counter />
@@ -166,9 +166,9 @@ If the namespace for a component isn't in scope, you can specify a component usi
 
 ## <a name="component-parameters"></a>구성 요소 매개 변수
 
-In ASP.NET Web Forms, you can flow parameters and data to controls using public properties. These properties can be set in markup using attributes or set directly in code. Blazor components work in a similar fashion, although the component properties must also be marked with the `[Parameter]` attribute to be considered component parameters.
+ASP.NET Web Forms에서 공용 속성을 사용 하 여 매개 변수 및 데이터를 컨트롤에 전달할 수 있습니다. 이러한 속성은 특성을 사용 하 여 태그에서 설정 하거나 코드에서 직접 설정할 수 있습니다. Blazor 구성 요소는 구성 요소 매개 변수로 간주 되는 `[Parameter]` 특성으로도 표시 되어야 하지만 비슷한 방식으로 작동 합니다.
 
-The following `Counter` component defines a component parameter called `IncrementAmount` that can be used to specify the amount that the `Counter` should be incremented each time the button is clicked.
+다음 `Counter` 구성 요소는 단추를 클릭할 때마다 `Counter` 증가 해야 하는 양을 지정 하는 데 사용할 수 있는 `IncrementAmount` 라는 구성 요소 매개 변수를 정의 합니다.
 
 ```razor
 <h1>Counter</h1>
@@ -190,7 +190,7 @@ The following `Counter` component defines a component parameter called `Incremen
 }
 ```
 
-To specify a component parameter in Blazor, use an attribute as you would in ASP.NET Web Forms:
+Blazor에서 구성 요소 매개 변수를 지정 하려면 ASP.NET Web Forms에서와 같이 특성을 사용 합니다.
 
 ```razor
 <Counter IncrementAmount="10" />
@@ -198,9 +198,9 @@ To specify a component parameter in Blazor, use an attribute as you would in ASP
 
 ## <a name="event-handlers"></a>이벤트 처리기
 
-Both ASP.NET Web Forms and Blazor provide an event-based programming model for handling UI events. Examples of such events include button clicks and text input. In ASP.NET Web Forms, you use HTML server controls to handle UI events exposed by the DOM, or you can handle events exposed by web server controls. The events are surfaced on the server through form post-back requests. Consider the following Web Forms button click example:
+ASP.NET Web Forms 및 Blazor 모두 UI 이벤트를 처리 하기 위한 이벤트 기반 프로그래밍 모델을 제공 합니다. 이러한 이벤트의 예로는 단추 클릭 및 텍스트 입력이 있습니다. ASP.NET Web Forms에서는 HTML 서버 컨트롤을 사용 하 여 DOM에서 노출 하는 UI 이벤트를 처리 하거나 웹 서버 컨트롤에서 노출 하는 이벤트를 처리할 수 있습니다. 이벤트는 폼 다시 게시 요청을 통해 서버에 표시 됩니다. 다음 Web Forms 단추 클릭 예를 살펴보겠습니다.
 
-*Counter.ascx*
+*Counter. .ascx*
 
 ```aspx-csharp
 <asp:Button ID="ClickMeButton" runat="server" Text="Click me!" OnClick="ClickMeButton_Click" />
@@ -218,7 +218,7 @@ public partial class Counter : System.Web.UI.UserControl
 }
 ```
 
-In Blazor, you can register handlers for DOM UI events directly using directive attributes of the form `@on{event}`. `{event}` 자리 표시자는 이벤트의 이름을 나타냅니다. 예를 들어 다음과 같이 단추 클릭을 수신할 수 있습니다.
+Blazor에서는 양식 `@on{event}`지시문 특성을 사용 하 여 직접 DOM UI 이벤트 처리기를 등록할 수 있습니다. `{event}` 자리 표시자는 이벤트의 이름을 나타냅니다. 예를 들어 다음과 같이 단추 클릭을 수신할 수 있습니다.
 
 ```razor
 <button @onclick="OnClick">Click me!</button>
@@ -269,7 +269,7 @@ In Blazor, you can register handlers for DOM UI events directly using directive 
 이벤트가 처리 된 후 구성 요소 상태 변경을 고려 하 여 구성 요소가 렌더링 됩니다. 비동기 이벤트 처리기를 사용 하면 처리기 실행이 완료 된 직후에 구성 요소가 렌더링 됩니다. 비동기 `Task` 완료 되 면 구성 요소가 *다시* 렌더링 됩니다. 비동기 실행 모드는 비동기 `Task` 진행 중인 동안 적절 한 UI를 렌더링할 수 있는 기회를 제공 합니다.
 
 ```razor
-<button @onclick="Get message">Get message</button>
+<button @onclick="ShowMessage">Get message</button>
 
 @if (showMessage)
 {
