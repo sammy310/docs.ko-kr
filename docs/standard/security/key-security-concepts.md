@@ -11,20 +11,18 @@ helpviewer_keywords:
 - permissions [.NET Framework]
 - security [.NET Framework], about security
 ms.assetid: 3cfced4f-ea02-4e66-ae98-d69286363e98
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: fe4c2e1775313039e8612ae7efbd3d22af710bab
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b7bcb7e56ca14d129eadcaeac19452d4a443713d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69917253"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705974"
 ---
 # <a name="key-security-concepts"></a>주요 보안 개념
 Microsoft .NET Framework는 모바일 코드에 대한 보안 문제를 해결하고 사용자에게 수행할 수 있는 권한이 있는 작업을 구성 요소가 확인할 수 있게 해주는 지원을 제공하기 위해 역할 기반 보안을 제공합니다.  
   
 ## <a name="type-safety-and-security"></a>형식 안전성 및 보안  
- 형식 안전 코드는 액세스 권한이 부여된 메모리 위치에만 액세스합니다. 이 토론에서 형식 안전성은 특히 메모리 형식 안전성을 가리키며 보다 광범위한 의미의 형식 안전성과 혼동해서는 안 됩니다. 예를 들어 형식 안전 코드는 다른 개체의 전용 필드에서 값을 읽을 수 없습니다. 잘 정의된 허용되는 방식으로만 형식에 액세스합니다.  
+ 형식 안전 코드는 액세스 권한이 부여된 메모리 위치에만 액세스합니다. 이 설명에서 형식 안전성은 특히 메모리 형식 안전성을 가리키며 보다 광범위 한 형식 안전과 혼동 해서는 안 됩니다. 예를 들어 형식 안전 코드는 다른 개체의 전용 필드에서 값을 읽을 수 없습니다. 잘 정의된 허용되는 방식으로만 형식에 액세스합니다.  
   
  JIT(Just-In-Time) 컴파일 중에 선택적 검증 프로세스는 네이티브 기계어 코드로 JIT 컴파일될 메서드의 메타데이터 및 MSIL(Microsoft Intermediate Language)을 검사하여 형식이 안전한지 확인합니다. 코드에 검증을 건너뛸 수 있는 권한이 있으면 이 프로세스를 건너뜁니다. 검증에 대한 자세한 내용은 [관리되는 실행 프로세스](../../../docs/standard/managed-execution-process.md)를 참조하세요.  
   
@@ -48,7 +46,7 @@ Microsoft .NET Framework는 모바일 코드에 대한 보안 문제를 해결�
   
  현재 다양한 인증 메커니즘이 사용되며, 대부분 .NET Framework 역할 기반 보안과 함께 사용할 수 있습니다. 가장 일반적으로 사용되는 메커니즘 중 일부는 기본, 다이제스트, Passport, 운영 체제(예: NTLM 또는 Kerberos) 또는 애플리케이션 정의 메커니즘입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 예제에서는 활성 보안 주체가 관리자여야 합니다. `name` 매개 변수는 `null`이므로 관리자인 모든 사용자가 요구를 전달할 수 있습니다.  
   
 > [!NOTE]

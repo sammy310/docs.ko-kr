@@ -9,12 +9,12 @@ helpviewer_keywords:
 - reference compiler option [Visual Basic]
 - -r compiler option [Visual Basic]
 ms.assetid: 66bdfced-bbf6-43d1-a554-bc0990315737
-ms.openlocfilehash: 8b57affa05c77d8ed20bfead7de767a8dd994241
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 35e02d1ad4409e754c2466f7d0ae7e68214772e6
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348594"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716699"
 ---
 # <a name="-reference-visual-basic"></a>-reference (Visual Basic)
 컴파일러가 지정 된 어셈블리의 형식 정보를 현재 컴파일하고 있는 프로젝트에 사용할 수 있도록 합니다.  
@@ -25,7 +25,7 @@ ms.locfileid: "74348594"
 -reference:fileList  
 ```
 
-or
+또는
 
 ```console
 -r:fileList  
@@ -35,7 +35,7 @@ or
   
 |용어|정의|  
 |---|---|  
-|`fileList`|필수입니다. 쉼표로 구분된 어셈블리 파일 이름 목록입니다. 파일 이름에 공백이 있으면 이름을 따옴표로 묶습니다.|  
+|`fileList`|필수 쉼표로 구분된 어셈블리 파일 이름 목록입니다. 파일 이름에 공백이 있으면 이름을 따옴표로 묶습니다.|  
   
 ## <a name="remarks"></a>주의  
  가져오는 파일에는 어셈블리 메타 데이터가 포함 되어야 합니다. Public 형식만 어셈블리 외부에서 볼 수 있습니다. [-Addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md) 옵션은 모듈에서 메타 데이터를 가져옵니다.  
@@ -52,16 +52,16 @@ or
   
  일반적으로 사용 되는 .NET Framework 어셈블리를 참조 하는 Vbc.exe 지시 파일은 기본적으로 사용 됩니다. 컴파일러가 Vbc.rsp를 사용 하지 않도록 하려면 `-noconfig`을 사용 합니다.  
   
- `-reference`의 약식은 `/r`입니다.  
+ `-reference`의 약식은 `-r`입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 명령은 `Metad1.dll` 및 `Metad2.dll`에서 소스 파일 `Input.vb` 및 참조 어셈블리를 컴파일하여 `Out.exe`를 생성 합니다.  
   
 ```console
 vbc -reference:metad1.dll,metad2.dll -out:out.exe input.vb  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Visual Basic 명령줄 컴파일러](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)

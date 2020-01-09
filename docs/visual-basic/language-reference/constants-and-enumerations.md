@@ -6,12 +6,12 @@ helpviewer_keywords:
 - constants [Visual Basic]
 - constants [Visual Basic], list of
 ms.assetid: 309c0ad5-83e4-4f96-99ea-83cd95107417
-ms.openlocfilehash: e47fd1c606f7d4cd0cf2fa6398beaa183ed95076
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 5109bf42c9caa7528c5405bb1a5cff0cfb62a5ac
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838158"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705758"
 ---
 # <a name="constants-and-enumerations-visual-basic"></a>상수 및 열거형(Visual Basic)
 
@@ -27,7 +27,7 @@ Visual Basic는 개발자를 위해 미리 정의 된 많은 상수 및 열거�
 |---|---|  
 |`CONFIG`|**Configuration Manager** **활성 솔루션 구성** 상자의 현재 설정에 해당 하는 문자열입니다.|  
 |`DEBUG`|**프로젝트 속성** 대화 상자에서 설정할 수 있는 `Boolean` 값입니다. 기본적으로 프로젝트의 디버그 구성은 `DEBUG`를 정의 합니다. `DEBUG` 정의 된 경우 <xref:System.Diagnostics.Debug> 클래스 **메서드는 출력 창에** 대 한 출력을 생성 합니다. 이 클래스를 정의 하지 않으면 <xref:System.Diagnostics.Debug> 클래스 메서드가 컴파일되지 않으며 디버그 출력이 생성 되지 않습니다.|  
-|`TARGET`|프로젝트의 출력 형식을 나타내는 문자열 또는 명령줄 **/target** 옵션의 설정입니다. `TARGET` 가능한 값은 다음과 같습니다.<br /><br /> -Windows 응용 프로그램의 경우 "winexe"입니다.<br />-"exe" (콘솔 응용 프로그램의 경우)<br />-클래스 라이브러리의 경우 "library"입니다.<br />-모듈의 경우 "module"입니다.<br />-Visual Studio 통합 개발 환경에서 **/target** 옵션을 설정할 수 있습니다. 자세한 내용은 [-target (Visual Basic)](../../visual-basic/reference/command-line-compiler/target.md)을 참조 하세요.|  
+|`TARGET`|프로젝트의 출력 형식을 나타내는 문자열 또는 명령줄 **대상** 옵션의 설정입니다. `TARGET` 가능한 값은 다음과 같습니다.<br /><br /> -Windows 응용 프로그램의 경우 "winexe"입니다.<br />-"exe" (콘솔 응용 프로그램의 경우)<br />-클래스 라이브러리의 경우 "library"입니다.<br />-모듈의 경우 "module"입니다.<br />- **대상** 옵션은 Visual Studio 통합 개발 환경에서 설정할 수 있습니다. 자세한 내용은 [-target (Visual Basic)](../../visual-basic/reference/command-line-compiler/target.md)을 참조 하세요.|  
 |`TRACE`|**프로젝트 속성** 대화 상자에서 설정할 수 있는 `Boolean` 값입니다. 기본적으로 프로젝트에 대 한 모든 구성은 `TRACE`를 정의 합니다. `TRACE` 정의 된 경우 <xref:System.Diagnostics.Trace> 클래스 **메서드는 출력 창에** 대 한 출력을 생성 합니다. 이 클래스를 정의 하지 않으면 <xref:System.Diagnostics.Trace> 클래스 메서드가 컴파일되지 않으며 `Trace` 출력이 생성 되지 않습니다.|  
 |`VBC_VER`|Visual Basic 버전 ( *주*)을 나타내는 숫자입니다. *부* 형식입니다.|  
   

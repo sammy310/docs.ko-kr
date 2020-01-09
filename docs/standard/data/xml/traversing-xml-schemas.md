@@ -7,14 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: cce69574-5861-4a30-b730-2e18d915d8ee
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6040a7aa8f3244ea0ce2e66042537bc45c347b05
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
-ms.translationtype: HT
+ms.openlocfilehash: dbe02242f9bb8654e3f12d87b6ff6c2aea1f76b1
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70037848"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710117"
 ---
 # <a name="traversing-xml-schemas"></a>XML 스키마 통과
 
@@ -33,7 +31,7 @@ SOM(스키마 개체 모델) API를 사용하여 XML 스키마를 통과하면 S
 |<xref:System.Xml.Schema.XmlSchema.Includes%2A>|<xref:System.Xml.Schema.XmlSchemaExternal>, <xref:System.Xml.Schema.XmlSchemaInclude>, <xref:System.Xml.Schema.XmlSchemaImport> 또는 <xref:System.Xml.Schema.XmlSchemaRedefine>|
 |<xref:System.Xml.Schema.XmlSchema.Items%2A>|<xref:System.Xml.Schema.XmlSchemaObject>(모든 전역 수준 요소, 특성 및 형식에 대한 액세스 제공)|
 |<xref:System.Xml.Schema.XmlSchema.Notations%2A>|<xref:System.Xml.Schema.XmlSchemaNotation>|
-|<xref:System.Xml.Schema.XmlSchema.SchemaTypes%2A>|<xref:System.Xml.Schema.XmlSchemaType>, <xref:System.Xml.Schema.XmlSchemaSimpleType>, <xref:System.Xml.Schema.XmlSchemaComplexType>|
+|<xref:System.Xml.Schema.XmlSchema.SchemaTypes%2A>|<xref:System.Xml.Schema.XmlSchemaType>에서 <xref:System.Xml.Schema.XmlSchemaSimpleType>에서 <xref:System.Xml.Schema.XmlSchemaComplexType>|
 |<xref:System.Xml.Schema.XmlSchema.UnhandledAttributes%2A>|<xref:System.Xml.XmlAttribute>(스키마 네임스페이스에 속하지 않은 특성에 대한 액세스 제공)|
 
 > [!NOTE]
@@ -69,7 +67,7 @@ SOM(스키마 개체 모델) API를 사용하여 XML 스키마를 통과하면 S
 
 [XML 스키마 빌드](../../../../docs/standard/data/xml/building-xml-schemas.md) 항목의 코드 예제에서는 <xref:System.Xml.Schema.XmlSchemaComplexType.Attributes%2A?displayProperty=nameWithType> 컬렉션을 사용하여 `Customer` 요소에 `CustomerId` 특성을 추가했습니다. 이 속성은 pre-schema-compilation 속성입니다. 해당 Post-Schema-Compilation-Infoset 속성은 형식 파생을 통해 상속된 특성을 비롯하여 복합 형식의 모든 특성을 보유하는 <xref:System.Xml.Schema.XmlSchemaComplexType.AttributeUses%2A?displayProperty=nameWithType> 컬렉션입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [XML 스키마 개체 모델 개요](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
 - [XML 스키마 읽기 및 쓰기](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)

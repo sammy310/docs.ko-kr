@@ -8,14 +8,12 @@ helpviewer_keywords:
 - reflection, Windows Store apps
 - .NET for Windows Store apps, TypeInfo class
 ms.assetid: 0d07090c-9b47-4ecc-81d1-29d539603c9b
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d68f406b704df905528d444b605681ca6e871127
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 42bcfd4a1adc66511a1183807c09e77d1448c754
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714452"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715892"
 ---
 # <a name="reflection-in-the-net-framework-for-windows-store-apps"></a>Windows 스토어 앱에 대한 .NET Framework의 리플렉션
 
@@ -36,7 +34,7 @@ ms.locfileid: "74714452"
 ## <a name="restrictions"></a>제한 사항  
  Windows 8.x 스토어 앱에서 일부 .NET Framework 형식 및 멤버에 대 한 액세스가 제한 됩니다. 예를 들어 <xref:System.Reflection.MethodInfo> 개체를 사용 하 여 Windows 8.x 스토어 앱 용 .NET에 포함 되지 않은 .NET Framework 메서드를 호출할 수 없습니다. 또한 Windows 8.x 스토어 앱의 컨텍스트 내에서 안전 하 게 간주 되지 않는 특정 형식 및 멤버는 <xref:System.Runtime.InteropServices.Marshal> 및 <xref:System.Runtime.InteropServices.WindowsRuntime.WindowsRuntimeMarshal> 멤버와 마찬가지로 차단 됩니다. 이 제한은 .NET Framework 형식 및 멤버에만 영향을 줍니다. 일반적인 방법으로 사용자 코드나 타사 코드를 호출할 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에서는 Windows 8.x 스토어 앱 용 .NET의 리플렉션 형식 및 멤버를 사용 하 여 상속 된 메서드 및 속성을 포함 하 여 <xref:System.Globalization.Calendar> 형식의 메서드 및 속성을 검색 합니다. 이 코드를 실행 하려면 Reflection 이라는 프로젝트에 `textblock1` 이라는 <xref:Windows.UI.Xaml.Controls.TextBlock?displayProperty=nameWithType> 컨트롤을 포함 하는 Windows 8.x 스토어 페이지의 코드 파일에 붙여 넣습니다. 다른 이름을 사용하여 프로젝트에 이 코드를 붙여넣는 경우 프로젝트와 일치하도록 네임스페이스 이름을 변경해야 합니다.  
   
  [!code-csharp[System.ReflectionWinStoreApp#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.reflectionwinstoreapp/cs/mainpage.xaml.cs#1)]

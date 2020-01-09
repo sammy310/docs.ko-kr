@@ -3,14 +3,12 @@ title: XML DOM(문서 개체 모델)
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: b5e52844-4820-47c0-a61d-de2da33e9f54
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 160d056491ca71f6de039e8cac7302a61504fcd5
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
-ms.translationtype: HT
+ms.openlocfilehash: 4faa481a6331863112b7dba65bdbccb69cd12b7d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662479"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709961"
 ---
 # <a name="xml-document-object-model-dom"></a>XML DOM(문서 개체 모델)
 
@@ -44,7 +42,7 @@ XML 문서 구조에서 이 그림의 각 원은 **XmlNode** 개체라고 하는
 - 전체 노드 검색과 요소 노드의 텍스트와 같이 노드가 포함하는 정보 검색
 
   > [!NOTE]
-  > 애플리케이션에 DOM이 제공하는 구조나 편집 기능이 필요하지 않은 경우 **XmlReader** 및 **XmlWriter** 클래스에서는 XML에 대한 캐시되지 않은 정방향 전용 스트림 액세스를 제공합니다. 자세한 내용은 <xref:System.Xml.XmlReader> 및 <xref:System.Xml.XmlWriter>를 참조하세요.
+  > 애플리케이션에 DOM이 제공하는 구조나 편집 기능이 필요하지 않은 경우 **XmlReader** 및 **XmlWriter** 클래스에서는 XML에 대한 캐시되지 않은 정방향 전용 스트림 액세스를 제공합니다. 자세한 내용은 <xref:System.Xml.XmlReader> 및 <xref:System.Xml.XmlWriter>을 참조하세요.
 
 **Node** 개체에는 일련의 메서드 및 속성뿐만 아니라 잘 정의된 기본적인 특성도 들어 있습니다. 특성에는 다음이 포함됩니다.
 
@@ -52,7 +50,7 @@ XML 문서 구조에서 이 그림의 각 원은 **XmlNode** 개체라고 하는
 
 - 대부분의 노드에는 자식 노드, 즉 바로 아래에 있는 노드가 여러 개 있을 수 있습니다. 다음은 자식 노드를 가질 수 있는 노드 형식의 목록입니다.
 
-  - **문서**
+  - **Document**
 
   - **DocumentFragment**
 
@@ -76,7 +74,7 @@ Microsoft는 XML 문서 작업을 손쉽게 수행할 수 있도록 W3C(World Wi
 
 DOM은 XML 데이터를 메모리로 읽어와 구조를 변경하고, 노드를 추가하거나 제거하며, 요소에 들어 있는 텍스트에 포함된 노드의 데이터를 수정할 경우에 매우 유용합니다. 그러나 그 밖의 상황에서는 DOM보다 더 빠른 다른 클래스를 사용할 수 있습니다. XML에 대한 캐시되지 않은 정방향 전용 고속 스트림 액세스의 경우 **XmlReader** 및 **XmlWriter**를 사용하세요. 커서 모델 및 **XPath**를 사용한 임의 액세스가 필요한 경우에는 **XPathNavigator** 클래스를 사용하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [XML 노드 형식](../../../../docs/standard/data/xml/types-of-xml-nodes.md)
 - [XML 데이터에 개체 계층 구조 매핑](../../../../docs/standard/data/xml/mapping-the-object-hierarchy-to-xml-data.md)

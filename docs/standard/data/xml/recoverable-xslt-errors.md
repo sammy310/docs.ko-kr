@@ -3,17 +3,15 @@ title: 복구할 수 있는 XSLT 오류
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 484929b0-fefb-4629-87ee-ebdde70ff1f8
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 32a4875b42c0282ffdb90e3fc825b38af935affb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: e3ff86cc80887d14fdffe50f256409cb70ff2d88
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64590053"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710377"
 ---
 # <a name="recoverable-xslt-errors"></a>복구할 수 있는 XSLT 오류
-W3C XSLT(XSL Transformations) 버전 1.0 권장 사항에는 구현 공급자가 특정 상황을 처리하는 방법을 결정할 수 있는 영역이 포함되어 있습니다. 이러한 영역은 임의 동작으로 간주됩니다. 예를 들어, 7.3단원의 처리 명령 만들기에 나오는 XSLT 1.0 권장 사항에 따르면 `xsl:processing-instruction`의 내용을 인스턴스화하여 텍스트 노드 이외의 노드가 만들어질 경우 오류가 발생합니다. XSLT 1.0 권장 사항에서는 일부 문제점에 대해 프로세서가 오류로부터 복구하기로 결정한 경우 어떤 결정을 내려야 하는지 알려 줍니다. 7.3단원에 제시된 문제점의 경우에는 W3C에서 노드 및 해당 내용을 무시함으로써 이 오류에서 구현을 복구할 수 있다고 설명합니다.  
+W3C XSLT(XSL Transformations) 버전 1.0 권장 사항에는 구현 공급자가 특정 상황을 처리하는 방법을 결정할 수 있는 영역이 포함되어 있습니다. 이러한 영역은 임의 동작으로 간주됩니다. 예를 들어, 7.3단원의 처리 명령 만들기에 나오는 XSLT 1.0 권장 사항에 따르면 `xsl:processing-instruction`의 내용을 인스턴스화하여 텍스트 노드 이외의 노드가 만들어질 경우 오류가 발생합니다. XSLT 1.0 권장 사항에서는 일부 문제점에 대해 프로세서가 오류로부터 복구하기로 결정한 경우 어떤 결정을 내려야 하는지 알려 줍니다. 7\.3단원에 제시된 문제점의 경우에는 W3C에서 노드 및 해당 내용을 무시함으로써 이 오류에서 구현을 복구할 수 있다고 설명합니다.  
   
 ## <a name="discretionary-behaviors"></a>임의 동작  
  다음 표에서는 XSLT 1.0 권장 사항에서 허용하는 임의 동작 및 <xref:System.Xml.Xsl.XslCompiledTransform> 클래스를 사용하여 임의 동작을 처리하는 방법을 보여 줍니다.  
@@ -54,6 +52,6 @@ W3C XSLT(XSL Transformations) 버전 1.0 권장 사항에는 구현 공급자가
   
  <sup>*</sup> 이 동작은 <xref:System.Xml.Xsl.XslTransform> 클래스의 동작과 다릅니다. 자세한 내용은 [XslTransform 클래스에서 임의 동작 구현](../../../../docs/standard/data/xml/implementation-of-discretionary-behaviors-in-the-xsltransform-class.md)을 참조하세요.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [XSLT 변환](../../../../docs/standard/data/xml/xslt-transformations.md)

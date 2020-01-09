@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: de2f0dce-6b98-4908-bba7-ed150cc50355
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9d08399933f37c4110639bf1f4a81f222dd597b4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 5cd733d557dabe66145fdbb848c473411d63c62b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910315"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709623"
 ---
 # <a name="xsltargumentlist-for-style-sheet-parameters-and-extension-objects"></a>스타일시트 매개 변수 및 확장 개체의 XsltArgumentList
 <xref:System.Xml.Xsl.XsltArgumentList> 클래스에는 XSLT(Extensible Stylesheet Language for Transformations) 매개 변수와 XSLT 확장 개체가 포함되어 있습니다. 이러한 매개 변수와 확장명 개체는 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 메서드에 전달될 경우 스타일시트에서 호출할 수 있습니다.  
@@ -41,8 +39,8 @@ ms.locfileid: "69910315"
 |W3C 형식|해당 .NET Framework 클래스(형식)|XPath 형식 또는 XSLT 형식|  
 |--------------|----------------------------------------------|-----------------------------|  
 |문자열|System.String|XPath|  
-|부울|System.Boolean|XPath|  
-|수|System.Double|XPath|  
+|Boolean|System.Boolean|XPath|  
+|Number|System.Double|XPath|  
 |결과 트리 조각|System.Xml.XPath.XPathNavigator|XSLT|  
 |노드 집합|System.Xml.XPath.XPathNodeIterator|XPath|  
   
@@ -364,6 +362,6 @@ public class Sample
   
  `</circles>`  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [XslTransform 클래스의 XSLT 프로세서 구현](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

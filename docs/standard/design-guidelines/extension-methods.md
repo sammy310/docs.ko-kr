@@ -3,13 +3,12 @@ title: 확장명 메서드
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 ms.assetid: 5de945cb-88f4-49d7-b0e6-f098300cf357
-author: KrzysztofCwalina
-ms.openlocfilehash: ad78bae2dc7a3000b67224da6f1a8c578053087f
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 2578fbacecd9fe790f72e828b455e8983b1298d3
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347026"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709363"
 ---
 # <a name="extension-methods"></a>확장명 메서드
 확장 메서드는 인스턴스 메서드 호출 구문을 사용 하 여 정적 메서드를 호출할 수 있도록 하는 언어 기능입니다. 이러한 메서드는 메서드가 작동 하는 인스턴스를 나타내는 매개 변수를 하나 이상 사용 해야 합니다.  

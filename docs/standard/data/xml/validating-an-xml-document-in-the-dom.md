@@ -7,14 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 2c61c920-d0f8-4c72-bfcc-6524570f3060
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b25bf81a17b14da558fb002b4740e31d6cda7a82
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
-ms.translationtype: HT
+ms.openlocfilehash: 93686ddf1afff76926e77acdbf5aa58e93d6cb77
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040448"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710039"
 ---
 # <a name="validating-an-xml-document-in-the-dom"></a>DOM에서의 XML 문서 유효성 검사
 
@@ -88,7 +86,7 @@ DOM에 로드된 XML 데이터의 유효성을 검사하면 XML 스키마 유효
 
  <xref:System.Xml.Schema.ValidationEventHandler>를 설명하는 예제는 위의 "XML 문서를 DOM에 로드할 때 유효성 검사" 및 "DOM에서의 XML 문서 유효성 검사"를 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XmlReader>

@@ -14,21 +14,19 @@ helpviewer_keywords:
 - XML digital signatures
 - digital signatures, verifying
 ms.assetid: a4d5ceb1-b9f5-47e8-9e4a-a2b39110002f
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8be946a7d4937a00b8c1738735362c7cc0ecb163
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5d562c23d3b0fd7eda5dc273932ada77709641a1
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64602550"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706008"
 ---
 # <a name="how-to-verify-the-digital-signatures-of-xml-documents"></a>방법: XML 문서의 디지털 서명 확인
-<xref:System.Security.Cryptography.Xml> 네임스페이스의 클래스를 사용하여 디지털 서명으로 서명된 XML 데이터를 확인할 수 있습니다. XML 디지털 서명(XMLDSIG)을 사용하면 서명된 후 데이터가 변경되지 않았음을 확인할 수 있습니다. XMLDSIG 표준에 대 한 자세한 내용은 World Wide Web Consortium (W3C) 사양을 참조 <https://www.w3.org/TR/xmldsig-core/>합니다.
+<xref:System.Security.Cryptography.Xml> 네임스페이스의 클래스를 사용하여 디지털 서명으로 서명된 XML 데이터를 확인할 수 있습니다. XML 디지털 서명(XMLDSIG)을 사용하면 서명된 후 데이터가 변경되지 않았음을 확인할 수 있습니다. XMLDSIG 표준에 대 한 자세한 내용은 <https://www.w3.org/TR/xmldsig-core/>에서 W3C (World Wide Web 컨소시엄) 사양을 참조 하세요.
   
- 이 절차의 코드 예제에 포함 된 XML 디지털 서명을 확인 하는 방법에 설명 된 <`Signature`> 요소입니다.  이 예제에서는 키 컨테이너에서 RSA 공개 키를 검색한 다음 키를 사용하여 서명을 확인합니다.  
+ 이 절차의 코드 예제에서는 <`Signature`> 요소에 포함 된 XML 디지털 서명을 확인 하는 방법을 보여 줍니다.  이 예제에서는 키 컨테이너에서 RSA 공개 키를 검색한 다음 키를 사용하여 서명을 확인합니다.  
   
- 이 기술을 사용 하 여 확인할 수 있는 디지털 서명을 만드는 하는 방법에 대 한 정보를 참조 [방법: 디지털 서명 사용 하 여 XML 문서 서명](../../../docs/standard/security/how-to-sign-xml-documents-with-digital-signatures.md)합니다.  
+ 이 기법을 사용 하 여 확인할 수 있는 디지털 서명을 만드는 방법에 대 한 자세한 내용은 [방법: 디지털 서명으로 XML 문서 서명](../../../docs/standard/security/how-to-sign-xml-documents-with-digital-signatures.md)을 참조 하세요.  
   
 ### <a name="to-verify-the-digital-signature-of-an-xml-document"></a>XML 문서의 디지털 서명을 확인하려면  
   
@@ -52,12 +50,12 @@ ms.locfileid: "64602550"
      [!code-csharp[HowToVerifyXMLDocumentRSA#5](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/cs/sample.cs#5)]
      [!code-vb[HowToVerifyXMLDocumentRSA#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/vb/sample.vb#5)]  
   
-5. 찾을 <`signature`> 요소를 새 <xref:System.Xml.XmlNodeList> 개체입니다.  
+5. `signature`> 요소를 찾고 새 <xref:System.Xml.XmlNodeList> 개체를 만듭니다.  
   
      [!code-csharp[HowToVerifyXMLDocumentRSA#6](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/cs/sample.cs#6)]
      [!code-vb[HowToVerifyXMLDocumentRSA#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/vb/sample.vb#6)]  
   
-6. 첫 번째 XML을 로드 <`signature`> 요소는 <xref:System.Security.Cryptography.Xml.SignedXml> 개체입니다.  
+6. 첫 번째 <`signature`> 요소의 XML을 <xref:System.Security.Cryptography.Xml.SignedXml> 개체로 로드 합니다.  
   
      [!code-csharp[HowToVerifyXMLDocumentRSA#7](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/cs/sample.cs#7)]
      [!code-vb[HowToVerifyXMLDocumentRSA#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/vb/sample.vb#7)]  
@@ -67,8 +65,8 @@ ms.locfileid: "64602550"
      [!code-csharp[HowToVerifyXMLDocumentRSA#8](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/cs/sample.cs#8)]
      [!code-vb[HowToVerifyXMLDocumentRSA#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/vb/sample.vb#8)]  
   
-## <a name="example"></a>예제  
- 이 예제에서는 `"test.xml"`이라는 파일이 컴파일된 프로그램과 동일한 디렉터리에 있다고 가정합니다.  합니다 `"test.xml"` 에 설명 된 기술을 사용 하 여 파일에 서명 해야 [방법: 디지털 서명 사용 하 여 XML 문서 서명](../../../docs/standard/security/how-to-sign-xml-documents-with-digital-signatures.md)합니다.  
+## <a name="example"></a>예  
+ 이 예제에서는 `"test.xml"`이라는 파일이 컴파일된 프로그램과 동일한 디렉터리에 있다고 가정합니다.  [방법: 디지털 서명으로 XML 문서 서명](../../../docs/standard/security/how-to-sign-xml-documents-with-digital-signatures.md)에 설명 된 기술을 사용 하 여 `"test.xml"` 파일에 서명 해야 합니다.  
   
  [!code-csharp[HowToVerifyXMLDocumentRSA#1](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/cs/sample.cs#1)]
  [!code-vb[HowToVerifyXMLDocumentRSA#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/vb/sample.vb#1)]  
@@ -80,11 +78,11 @@ ms.locfileid: "64602550"
 - <xref:System.Xml>, <xref:System.Security.Cryptography> 및 <xref:System.Security.Cryptography.Xml> 네임스페이스를 포함합니다.  
   
 ## <a name="net-framework-security"></a>.NET Framework 보안  
- 비대칭 키 쌍의 프라이빗 키를 일반 텍스트로 저장하거나 전송하지 마세요.  대칭 및 비대칭 암호화 키에 대 한 자세한 내용은 참조 하세요. [암호화 및 암호 해독용 키 생성](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)합니다.  
+ 비대칭 키 쌍의 프라이빗 키를 일반 텍스트로 저장하거나 전송하지 마세요.  대칭 및 비대칭 암호화 키에 대 한 자세한 내용은 [암호화 및 암호 해독을 위한 키 생성](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)을 참조 하세요.  
   
- 소스 코드에 직접 프라이빗 키를 포함하지 마세요.  포함 된 키를 사용 하 여 어셈블리에서 쉽게 읽을 수 있습니다 합니다 [Ildasm.exe (IL 디스어셈블러)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) 또는 메모장과 같은 텍스트 편집기에서 어셈블리를 열어.  
+ 소스 코드에 직접 프라이빗 키를 포함하지 마세요.  [Ildasm.exe (IL 디스어셈블러)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) 를 사용 하거나 메모장과 같은 텍스트 편집기에서 어셈블리를 열어 어셈블리에서 포함 된 키를 쉽게 읽을 수 있습니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Security.Cryptography.Xml>
-- [방법: 디지털 서명 사용 하 여 XML 문서 서명](../../../docs/standard/security/how-to-sign-xml-documents-with-digital-signatures.md)
+- [방법: 디지털 서명으로 XML 문서 서명](../../../docs/standard/security/how-to-sign-xml-documents-with-digital-signatures.md)

@@ -1,27 +1,25 @@
 ---
-title: XmlSchemaValidator 밀어넣기 기반 유효성 검사
+title: XmlSchemaValidator 푸시 기반 유효성 검사
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: 911d4460-dd91-4958-85b2-2ca3299f9ec6
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a420a134eda6c62758b0d218e3c0a4a4922b048c
-ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
+ms.openlocfilehash: 6a0cc110c2b8bcd97b9f5c16a344db5a63046353
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72250052"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709805"
 ---
-# <a name="xmlschemavalidator-push-based-validation"></a>XmlSchemaValidator 밀어넣기 기반 유효성 검사
+# <a name="xmlschemavalidator-push-based-validation"></a>XmlSchemaValidator 푸시 기반 유효성 검사
 
 <xref:System.Xml.Schema.XmlSchemaValidator> 클래스는 밀어넣기 기반 방식으로 XML 스키마에 대해 XML 데이터의 유효성을 검사할 수 있는 효과적인 고성능 메커니즘을 제공합니다. 예를 들어, <xref:System.Xml.Schema.XmlSchemaValidator> 클래스를 사용하면 XML 문서로 serialize한 다음 유효성 검사 XML 판독기를 사용하여 문서를 다시 구문 분석할 필요 없이 내부에서 직접 XML Infoset의 유효성을 검사할 수 있습니다.
 
 사용자 지정 XML 데이터 소스에 대한 유효성 검사 엔진을 만드는 등의 고급 시나리오에서 또는 유효성 검사 XML 작성기를 만드는 방법으로 <xref:System.Xml.Schema.XmlSchemaValidator> 클래스를 사용할 수 있습니다.
 
-다음은 <xref:System.Xml.Schema.XmlSchemaValidator> 클래스를 사용하여 `contosoBooks.xml` 스키마에 대해 `contosoBooks.xsd` 파일의 유효성을 검사하는 예제입니다. 이 예제에서는 <xref:System.Xml.Serialization.XmlSerializer> 클래스를 사용하여 `contosoBooks.xml` 파일을 deserialize하고 노드 값을 <xref:System.Xml.Schema.XmlSchemaValidator> 클래스의 메서드에 전달합니다.
+다음은 <xref:System.Xml.Schema.XmlSchemaValidator> 클래스를 사용하여 `contosoBooks.xml` 스키마에 대해 `contosoBooks.xsd` 파일의 유효성을 검사하는 예제입니다. 이 예제에서는 <xref:System.Xml.Serialization.XmlSerializer> 클래스를 사용하여 `contosoBooks.xml` 파일을 역직렬화하고 노드 값을 <xref:System.Xml.Schema.XmlSchemaValidator> 클래스의 메서드에 전달합니다.
 
 > [!NOTE]
 > 이 예제는 이 항목의 전체 단원에서 사용됩니다.
@@ -442,9 +440,9 @@ static void SchemaValidationEventHandler(object sender, ValidationEventArgs e)
 
 |State|전환|
 |-----------|----------------|
-|유효성 검사|<xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A> (<xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A> &#124; TopLevel*) <xref:System.Xml.Schema.XmlSchemaValidator.EndValidation%2A>|
+|Validate|<xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A> (<xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A> &#124; TopLevel*) <xref:System.Xml.Schema.XmlSchemaValidator.EndValidation%2A>|
 |TopLevel|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateWhitespace%2A> &#124; <xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A> &#124; 요소|
-|요소|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>* (<xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndOfAttributes%2A> Content\*)? <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A> &#124;<br /><br /> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>\* <xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A> &#124;<br /><br /> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>\* <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndOfAttributes%2A> Content\* <xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A> &#124;|
+|요소|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>* (<xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndOfAttributes%2A> 콘텐츠\*)? <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A> &#124;<br /><br /> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>\* <xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A>&#124;<br /><br /> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>\* <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndOfAttributes%2A> 콘텐츠\* <xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A>&#124;|
 |콘텐츠|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateWhitespace%2A> &#124; <xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A> &#124; 요소|
 
 > [!NOTE]
@@ -454,7 +452,7 @@ static void SchemaValidationEventHandler(object sender, ValidationEventArgs e)
 
 다음 표에서는 위의 상태 전환 표에 나타난 문장 부호가 <xref:System.Xml.Schema.XmlSchemaValidator> 클래스 상태 전환의 각 상태에 대해 호출할 수 있는 메서드와 기타 상태에 미치는 영향을 설명합니다.
 
-|Symbol|설명|
+|기호|설명|
 |------------|-----------------|
 |&#124;|세로 막대 앞이나 뒤의 메서드 또는 상태를 호출할 수 있습니다.|
 |?|물음표 앞의 메서드나 상태는 선택 항목이지만 이 메서드나 상태를 호출할 경우에는 한 번만 호출할 수 있습니다.|
@@ -478,7 +476,7 @@ XML Infoset에서 요소, 특성 및 내용의 유효성을 검사하는 데 사
 |<xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A>|컨텍스트 요소의 contentType이 Mixed인 경우 <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A>는 다음 위치에 필요한 요소의 시퀀스를 반환합니다.<br /><br /> 컨텍스트 요소의 contentType이 TextOnly 또는 Empty인 경우 <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A>는 빈 배열을 반환합니다.<br /><br /> 컨텍스트 요소의 contentType이 ElementOnly인 경우 <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A>는 다음 위치에 필요한 요소의 시퀀스를 반환하지만 유효성 검사 오류가 발생합니다.|<xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A>는 특성의 유효성이 검사되지 않은 컨텍스트 요소의 목록을 반환합니다.|위와 동일합니다.|
 |<xref:System.Xml.Schema.XmlSchemaValidator.ValidateWhitespace%2A>|컨텍스트 공백이 최상위 공백이면 <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A>가 빈 배열을 반환합니다.<br /><br /> 그렇지 않으면 <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> 메서드의 동작이 <xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A>와 동일하게 됩니다.|컨텍스트 공백이 최상위 공백이면 <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A>가 빈 배열을 반환합니다.<br /><br /> 그렇지 않으면 <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> 메서드의 동작이 <xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A>와 동일하게 됩니다.|위와 동일합니다.|
 |<xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A>|<xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A>는 컨텍스트 요소(가능한 형제) 뒤에 필요한 요소의 시퀀스를 반환합니다.|<xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A>는 특성의 유효성이 검사되지 않은 컨텍스트 요소의 목록을 반환합니다.<br /><br /> 컨텍스트 요소에 부모가 없을 경우 <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A>는 빈 목록을 반환합니다. 컨텍스트 요소는 <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A>가 호출된 현재 요소의 부모입니다.|위와 동일합니다.|
-|<xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A>|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A>와 같습니다.|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A>와 같습니다.|위와 동일합니다.|
+|<xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A>|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A>와 동일합니다.|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A>와 동일합니다.|위와 동일합니다.|
 |<xref:System.Xml.Schema.XmlSchemaValidator.EndValidation%2A>|빈 배열을 반환합니다.|빈 배열을 반환합니다.|위와 동일합니다.|
 
 > [!NOTE]

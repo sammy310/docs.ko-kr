@@ -2,12 +2,12 @@
 title: 4\.5의 F# 새로운 기능- F# 가이드
 description: 4\.5에서 F# 사용할 수 있는 새 기능에 대 한 개요를 확인 하세요.
 ms.date: 11/27/2019
-ms.openlocfilehash: 780b33a564432aae5ec99c70ff8620988b553fd1
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: b699165125d345ad783b24da8a0a994cba72d4ba
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74644159"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715696"
 ---
 # <a name="whats-new-in-f-45"></a>4\.5의 F# 새로운 기능
 
@@ -77,7 +77,7 @@ type S(count1: int, count2: int) =
     member x.Count2 = count2
 ```
 
-이렇게 하면 구조체에서 변경 가능한 멤버를 선언 하 고 어셈블리에서 사용 될 때 F# 및 C# 를 readonly로 처리할 수 있는 메타 데이터를 내보낼 수 없습니다. 자세히 알아보려면 [ReadOnly 구조체](../language-reference/structures.md#readonly-structs) 를 참조 하세요.
+이렇게 하면 구조체에서 변경 가능한 멤버를 선언 하 고 어셈블리에서 사용 될 때 F# 및 C# 를 readonly로 처리할 수 있는 메타 데이터를 내보낼 수 없습니다. 자세히 알아보려면 [ReadOnly 구조체](../language-reference/structures.md#readonly-structs)를 참조 하세요.
 
 ## <a name="void-pointers"></a>Void 포인터
 

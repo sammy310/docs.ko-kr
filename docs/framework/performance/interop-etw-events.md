@@ -5,14 +5,12 @@ helpviewer_keywords:
 - interop events [.NET Framework]
 - ETW, interop events (CLR)
 ms.assetid: eb6eac2e-45f4-4923-a32c-38f203da66df
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5db68cdce0db4f8f4d85e9d1dd03720bf235d865
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 80fd1f7487dbe3925b875e728eaeddac86927ad4
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974927"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716012"
 ---
 # <a name="interop-etw-events"></a>Interop ETW 이벤트
 Interop 이벤트는 MSIL(Microsoft Intermediate Language) 스텁 생성 및 캐싱에 대한 정보를 캡처합니다.  
@@ -21,13 +19,13 @@ Interop 이벤트는 MSIL(Microsoft Intermediate Language) 스텁 생성 및 캐
 
 다음 표에서는 키워드와 수준을 보여 줍니다. 자세한 내용은 [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md)을 참조하세요.  
   
-|이벤트를 발생시키기 위한 키워드|Level|  
+|이벤트를 발생시키기 위한 키워드|수준|  
 |-----------------------------------|-----------|  
 |`InteropKeyword` (0x2000)|정보 제공(4)|  
   
  다음 표에서는 이벤트 정보를 보여 줍니다.  
   
-|이벤트(event)|이벤트 ID|발생 시기|  
+|Event|이벤트 ID|발생 시기|  
 |-----------|--------------|-----------------|  
 |`ILStubGenerated`|88|MSIL 스텁이 생성되었습니다.|  
   
@@ -51,13 +49,13 @@ Interop 이벤트는 MSIL(Microsoft Intermediate Language) 스텁 생성 및 캐
 
 다음 표에서는 키워드와 수준을 보여 줍니다.  
   
-|이벤트를 발생시키기 위한 키워드|Level|  
+|이벤트를 발생시키기 위한 키워드|수준|  
 |-----------------------------------|-----------|  
 |`InteropKeyword` (0x2000)|정보 제공(4)|  
   
  다음 표에서는 이벤트 정보를 보여 줍니다.  
   
-|이벤트(event)|이벤트 ID|발생 시기|  
+|Event|이벤트 ID|발생 시기|  
 |-----------|--------------|-----------------|  
 |`ILStubCacheHit`|89|MSIL 캐시가 액세스되었습니다.|  
   

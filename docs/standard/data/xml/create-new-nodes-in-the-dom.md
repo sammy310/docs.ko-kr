@@ -3,14 +3,12 @@ title: DOM에서 새 노드 만들기
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 6c2b9789-b61a-49f9-b33f-db01a945edf2
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 59ac88b2e7c6b3ecd4d06c0183a2f8a7f4a9e2d4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: f48990286405baee347becef87d0511cd42e9e77
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64590260"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711001"
 ---
 # <a name="create-new-nodes-in-the-dom"></a>DOM에서 새 노드 만들기
 <xref:System.Xml.XmlDocument>에는 모든 노드 형식에 대한 create 메서드가 있습니다. 필요에 따라 메서드에 이름을 제공하고, 텍스트 노드처럼 내용이 있는 노드에 대한 내용이나 기타 매개 변수를 지정하면 노드가 생성됩니다. 다음은 적합한 노드를 만들기 위해 이름 및 몇 개의 매개 변수를 제공해야 하는 메서드입니다.  
@@ -46,11 +44,11 @@ ms.locfileid: "64590260"
 |메서드|노드 배치|  
 |------------|--------------------|  
 |<xref:System.Xml.XmlNode.InsertBefore%2A>|참조 노드 앞에 삽입됩니다. 예를 들어, 위치 5에 새 노드를 삽입하려면 다음과 같이 입력합니다.<br /><br /> `Dim refChild As XmlNode = node.ChildNodes(4) 'The reference is zero-based.node.InsertBefore(newChild, refChild);`<br /><br /> `XmlNode refChild = node.ChildNodes[4]; //The reference is zero-based. node.InsertBefore(newChild, refChild);`<br /><br /> 자세한 내용은 <xref:System.Xml.XmlNode.InsertBefore%2A> 메서드를 참조하세요.|  
-|<xref:System.Xml.XmlNode.InsertAfter%2A>|참조 노드 다음에 삽입됩니다. 예:<br /><br /> `node.InsertAfter(newChild, refChild)`<br /><br /> `node.InsertAfter(newChild, refChild);`<br /><br /> 자세한 내용은 <xref:System.Xml.XmlNode.InsertAfter%2A> 메서드를 참조하세요.|  
+|<xref:System.Xml.XmlNode.InsertAfter%2A>|참조 노드 다음에 삽입됩니다. 예를 들면 다음과 같습니다.:<br /><br /> `node.InsertAfter(newChild, refChild)`<br /><br /> `node.InsertAfter(newChild, refChild);`<br /><br /> 자세한 내용은 <xref:System.Xml.XmlNode.InsertAfter%2A> 메서드를 참조하세요.|  
 |<xref:System.Xml.XmlNode.AppendChild%2A>|노드를 지정된 노드의 자식 노드 목록 끝에 추가합니다. 추가되는 노드가 <xref:System.Xml.XmlDocumentFragment>이면 문서 조각의 전체 내용이 이 노드의 자식 목록으로 이동합니다. 자세한 내용은 <xref:System.Xml.XmlNode.AppendChild%2A> 메서드를 참조하세요.|  
 |<xref:System.Xml.XmlNode.PrependChild%2A>|노드를 지정된 노드의 자식 노드 목록 시작 부분에 추가합니다. 추가되는 노드가 <xref:System.Xml.XmlDocumentFragment>이면 문서 조각의 전체 내용이 이 노드의 자식 목록으로 이동합니다. 자세한 내용은 <xref:System.Xml.XmlNode.PrependChild%2A> 메서드를 참조하세요.|  
 |<xref:System.Xml.XmlAttributeCollection.Append%2A>|<xref:System.Xml.XmlAttribute> 노드를 요소와 연관된 특성 컬렉션의 끝에 추가합니다. 자세한 내용은 <xref:System.Xml.XmlAttributeCollection.Append%2A> 메서드를 참조하세요.|  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [XML DOM(문서 개체 모델)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

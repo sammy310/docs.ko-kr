@@ -12,17 +12,15 @@ helpviewer_keywords:
 - host protection attributes
 - HostProtectionAttribute class, reliability
 ms.assetid: 7dfa36b4-e773-4c75-a3ff-ff1af3ce4c4f
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: aafd494a2330609f68295588cf649bc4666f4cfe
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 88fa360664627e9f535a6daaaf6f29df01b64a62
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614876"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715922"
 ---
 # <a name="sql-server-programming-and-host-protection-attributes"></a>SQL Server 프로그래밍 및 호스트 보호 특성
-SQL Server 호스트에서 관리 코드를 로드 및 실행하려면 코드 액세스 보안과 호스트 리소스 보호 둘 다를 위해 호스트의 요구 사항을 충족해야 합니다.  코드 액세스 보안 요구 사항은 세 개의 SQL Server 사용 권한 집합 중 하나에 의해 지정 됩니다. SAFE, EXTERNAL-ACCESS 또는 UNSAFE 합니다. SAFE 또는 EXTERNAL-ACCESS 권한 집합 내에서 코드를 실행하는 경우 <xref:System.Security.Permissions.HostProtectionAttribute> 특성이 적용된 특정 형식이나 멤버를 사용하면 안 됩니다. <xref:System.Security.Permissions.HostProtectionAttribute>는 호스트에서 허용되지 않을 수 있는 형식이나 메서드인 특정 코드 구문을 식별한다는 점에서 보안 권한이 아니라 안정성 보장입니다.  <xref:System.Security.Permissions.HostProtectionAttribute>를 사용하면 호스트의 안정성을 보호하는 데 도움이 되는 프로그래밍 모델이 적용됩니다.  
+SQL Server 호스트에서 관리 코드를 로드 및 실행하려면 코드 액세스 보안과 호스트 리소스 보호 둘 다를 위해 호스트의 요구 사항을 충족해야 합니다.  코드 액세스 보안 요구 사항은 세 가지 SQL Server 권한 집합인 SAFE, EXTERNAL-ACCESS, UNSAFE 중 하나로 지정됩니다. SAFE 또는 EXTERNAL-ACCESS 권한 집합 내에서 코드를 실행하는 경우 <xref:System.Security.Permissions.HostProtectionAttribute> 특성이 적용된 특정 형식이나 멤버를 사용하면 안 됩니다. <xref:System.Security.Permissions.HostProtectionAttribute>는 호스트에서 허용되지 않을 수 있는 형식이나 메서드인 특정 코드 구문을 식별한다는 점에서 보안 권한이 아니라 안정성 보장입니다.  <xref:System.Security.Permissions.HostProtectionAttribute>를 사용하면 호스트의 안정성을 보호하는 데 도움이 되는 프로그래밍 모델이 적용됩니다.  
   
 ## <a name="host-protection-attributes"></a>호스트 보호 특성  
  호스트 보호 특성은 호스트 프로그래밍 모델에 맞지 않는 형식이나 멤버를 식별하고 다음과 같은 증가하는 안정성 위협 수준을 나타냅니다.  
@@ -53,7 +51,7 @@ SQL Server 호스트에서 관리 코드를 로드 및 실행하려면 코드 �
 |`System.Windows.Forms`|<xref:System.Windows.Forms.AutoCompleteStringCollection.SyncRoot%2A?displayProperty=nameWithType> 속성|  
   
 ## <a name="sql-server-permission-sets"></a>SQL Server 권한 집합  
- SQL Server에서는 사용자가 데이터베이스에 배포되는 코드에 대한 안정성 요구 사항을 지정할 수 있습니다. 어셈블리를 데이터베이스에 업로드 되 면 어셈블리의 작성자 하나를 지정할 수 세 가지 권한 집합이 해당 어셈블리에 대 한 합니다. SAFE, EXTERNAL-ACCESS 또는 UNSAFE 합니다.  
+ SQL Server에서는 사용자가 데이터베이스에 배포되는 코드에 대한 안정성 요구 사항을 지정할 수 있습니다. 어셈블리를 데이터베이스에 업로드할 때 어셈블리 작성자가 해당 어셈블리에 대해 세 가지 권한 집합(SAFE, EXTERNAL-ACCESS 또는 UNSAFE) 중 하나를 지정할 수 있습니다.  
   
 |권한 집합|SAFE|EXTERNAL-ACCESS|UNSAFE|  
 |--------------------|----------|----------------------|------------|  
@@ -75,7 +73,7 @@ SQL Server 호스트에서 관리 코드를 로드 및 실행하려면 코드 �
   
  이러한 점을 고려하여 SQL Server에서는 정적 변수와 정적 데이터 멤버의 사용을 허용하지 않습니다. SAFE 및 EXTERNAL-ACCESS 어셈블리의 경우 SQL Server에서 CREATE ASSEMBLY 시간에 어셈블리의 메타데이터를 검사하고, 정적 데이터 멤버와 변수 사용을 발견할 경우 해당 어셈블리를 만들지 못합니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Security.Permissions.HostProtectionAttribute>
 - <xref:System.Security.Permissions.HostProtectionResource>

@@ -3,14 +3,12 @@ title: XML 형식 지원 구현 참고 사항
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 26b071f3-1261-47ef-8690-0717f5cd93c1
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 817d48e15f3a1d370e1953ca9c9aa8e10baa7f29
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 40ab0f746ef82ccd195fc6b873f5c8edb255f868
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916028"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709870"
 ---
 # <a name="xml-type-support-implementation-notes"></a>XML 형식 지원 구현 참고 사항
 이 항목에서는 자세히 알아야 할 몇 가지 구현 정보에 대해 설명합니다.  
@@ -34,7 +32,7 @@ ms.locfileid: "69916028"
   
  <xref:System.TimeSpan> 클래스는 이러한 부분 정렬을 지원하지 않습니다. 대신 이 클래스는 1년과 1개월에 대해 각각 365일과 30일의 특정 일 수를 선택합니다.  
   
- `xs:duration` 형식에 대한 자세한 내용은 W3C [XML Schema Part 2: Datatypes Recommendation](https://www.w3.org/TR/xmlschema-2/)(XML 스키마 2부: Datatypes 권장 사항)을 참조하세요.
+ `xs:duration` 형식에 대한 자세한 내용은 W3C [XML Schema Part 2: Datatypes Recommendation](https://www.w3.org/TR/xmlschema-2/)(XML 스키마 2부: 데이터 형식 권장 사항)을 참조하세요.
   
 ### <a name="xstime-gregorian-date-types-and-systemdatetime"></a>xs:time, 양력 날짜 형식 및 System.DateTime  
  `xs:time` 값을 <xref:System.DateTime> 개체에 매핑하면 <xref:System.DateTime.MinValue> 필드를 사용하여 <xref:System.DateTime>, <xref:System.DateTime.Year%2A> 및 <xref:System.DateTime.Month%2A>와 같은 <xref:System.DateTime.Day%2A> 개체의 날짜 속성이 가능한 가장 작은 <xref:System.DateTime> 값으로 초기화됩니다.  
@@ -47,6 +45,6 @@ ms.locfileid: "69916028"
 ### <a name="xsanyuri-and-systemuri"></a>xs:anyURI 및 System.Uri  
  상대 URI를 나타내는 `xs:anyURI`의 인스턴스가 <xref:System.Uri>로 매핑될 경우에는 <xref:System.Uri> 개체에 기본 URI가 없습니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [System.Xml 클래스의 형식 지원](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)

@@ -7,14 +7,12 @@ helpviewer_keywords:
 - ETW, CLR keywords
 - ETW, CLR levels
 ms.assetid: fdf5856d-516b-4042-849d-911c4518a6cb
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 56ecdc41c5b5a3f7ee272768d5c2a3745da26633
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 929ed00c44b52dd94fc9d15e564cce7eeff1619e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975510"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716197"
 ---
 # <a name="clr-etw-keywords-and-levels"></a>CLR ETW 키워드 및 수준
 범주 및 수준별로 ETW(Windows용 이벤트 추적) 이벤트를 필터링할 수 있습니다. 이벤트 [CLR ETW 키워드](#clr-etw-keywords)를 통해 범주별로 이벤트를 필터링할 수 있습니다. 런타임 및 런다운 공급자를 위해 여러 키워드를 조합하여 사용할 수 있습니다. [이벤트 수준](#etw-event-levels) 은 플래그로 식별됩니다.  
@@ -67,7 +65,7 @@ ms.locfileid: "73975510"
 |`StartRundownKeyword`|0x00000040|시작 런다운 동안 시스템 상태를 열거할 수 있도록 합니다.|  
 |`EndRundownKeyword`|0x00000100|종료 런다운 동안 시스템 상태를 열거할 수 있도록 합니다.|  
 |`AppDomainResourceManagementRundownKeyword`|0x00000800|<xref:System.AppDomain> 또는 `StartRundownKeyword` 와 함께 사용될 때 `EndRundownKeyword`수준에서 리소스 모니터링에 대한 이벤트를 수집할 수 있도록 합니다.|  
-|`ThreadingKeyword`|0x00010000|스레드 풀 이벤트를 수집할 수 있도록 합니다.|  
+|`ThreadingKeyword`|0x00010000|스레드 풀 이벤트의 컬렉션을 수행할 수 있도록 합니다.|  
 |`OverrideAndSuppressNGenEventsRundownKeyword`|0x00040000|.NET Framework 4.5 이상에서 사용할 수 있습니다. 오버 헤드가 높은 `NGenRundownKeyword` 키워드를 억제 하 고 NGen 모듈 내에 있는 메서드에 대 한 이벤트 생성을 방지 합니다. .NET Framework 4.5부터 프로 파일링 도구는 `OverrideAndSuppressNGenEventsRundownKeyword` 및 `NGenRundownKeyword`를 함께 사용 하 여 NGen 모듈의 메서드에 대 한 이벤트 생성을 억제 해야 합니다. 이를 통해 프로파일링 도구에서 더욱 효율적인 NGen PDB를 사용하여 NGen 모듈의 메서드에 대한 정보를 가져올 수 있습니다. .NET Framework 4 및 이전 버전의 CLR은 NGen PDB의 생성을 지원하지 않습니다. 이러한 초기 버전에서는 CLR에서 `OverrideAndSuppressNGenEventsRundownKeyword` 를 인식하지 못하며, `NGenRundownKeyword` 를 처리하여 NGen 모듈의 메서드에 대한 이벤트를 생성합니다.|  
 |`PerfTrackKeyWord`|0x2000000|`ModuleDCStart`, `ModuleDCEnd`, `ModuleRangeDCStart`및 `ModuleRangeDCEnd` 이벤트를 수집할 수 있도록 합니다.|   
   

@@ -1,5 +1,5 @@
 ---
-title: '방법: 대칭 키를 사용하여 XML 요소 해독'
+title: '방법: 대칭 키를 사용하여 XML 요소 암호 해독'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,19 +13,17 @@ helpviewer_keywords:
 - Rijndael
 - decryption
 ms.assetid: 6038aff0-f92c-4e29-a618-d793410410d8
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f45ba28a4c2d4ab56abf15f8e8b5ba4c6cb7d611
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fd377cd470d361f5a46c662ab37780713a2d3804
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64602722"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706125"
 ---
-# <a name="how-to-decrypt-xml-elements-with-symmetric-keys"></a>방법: 대칭 키를 사용하여 XML 요소 해독
+# <a name="how-to-decrypt-xml-elements-with-symmetric-keys"></a>방법: 대칭 키를 사용하여 XML 요소 암호 해독
 <xref:System.Security.Cryptography.Xml> 네임스페이스의 클래스를 사용하여 XML 문서 내의 요소를 암호화할 수 있습니다.  XML 암호화를 사용하면 데이터가 쉽게 읽혀질 염려 없이 중요한 XML을 저장하거나 전송할 수 있습니다.  이 코드 예제에서는 Rijndael이라고도 하는 AES(고급 암호화 표준) 알고리즘을 사용하여 XML 요소를 암호 해독합니다.  
   
- 이 절차를 사용 하 여 XML 요소를 암호화 하는 방법에 대 한 정보를 참조 하세요. [방법: 대칭 키를 사용 하 여 XML 요소 암호화](../../../docs/standard/security/how-to-encrypt-xml-elements-with-symmetric-keys.md)합니다.  
+ 이 절차를 사용 하 여 XML 요소를 암호화 하는 방법에 대 한 자세한 내용은 [방법: 대칭 키를 사용 하 여 Xml 요소 암호화](../../../docs/standard/security/how-to-encrypt-xml-elements-with-symmetric-keys.md)를 참조 하세요.  
   
  AES와 같은 대칭 알고리즘을 사용하여 XML 데이터를 암호화하는 경우 동일한 키를 사용하여 XML 데이터를 암호화하고 암호 해독해야 합니다.  이 절차의 예제에서는 동일한 키를 사용하여 암호화된 XML이 암호화되었으며 암호화 및 암호 해독하는 당사자가 알고리즘 및 사용할 키에 대해 동의한다고 가정합니다.  이 예제에서는 암호화된 XML 내의 AES 키를 저장하거나 암호화하지 않습니다.  
   
@@ -33,9 +31,9 @@ ms.locfileid: "64602722"
   
 ### <a name="to-decrypt-an-xml-element-with-a-symmetric-key"></a>대칭 키를 사용하여 XML 요소를 암호 해독하려면  
   
-1. 에 설명 된 기술을 사용 하 여 이전에 생성 된 키를 사용 하 여 XML 요소 암호화 [방법: 대칭 키를 사용 하 여 XML 요소 암호화](../../../docs/standard/security/how-to-encrypt-xml-elements-with-symmetric-keys.md)합니다.  
+1. [방법: 대칭 키를 사용 하 여 Xml 요소 암호화](../../../docs/standard/security/how-to-encrypt-xml-elements-with-symmetric-keys.md)에 설명 된 기술을 사용 하 여 이전에 생성 된 키를 사용 하 여 xml 요소를 암호화 합니다.  
   
-2. 찾을 <`EncryptedData`> 요소 (XML 암호화 표준에 의해 정의 됨)에 <xref:System.Xml.XmlDocument> 암호화 된 XML을 포함 하는 개체 및 새 <xref:System.Xml.XmlElement> 해당 요소를 나타내는 개체입니다.  
+2. 암호화 된 XML을 포함 하는 <xref:System.Xml.XmlDocument> 개체에서 XML 암호화 표준에 의해 정의 되는 <`EncryptedData`> 요소를 찾고 해당 요소를 나타내는 새 <xref:System.Xml.XmlElement> 개체를 만듭니다.  
   
      [!code-csharp[HowToEncryptXMLElementSymmetric#10](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/cs/sample.cs#10)]
      [!code-vb[HowToEncryptXMLElementSymmetric#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/vb/sample.vb#10)]  
@@ -55,7 +53,7 @@ ms.locfileid: "64602722"
      [!code-csharp[HowToEncryptXMLElementSymmetric#13](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/cs/sample.cs#13)]
      [!code-vb[HowToEncryptXMLElementSymmetric#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/vb/sample.vb#13)]  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에서는 `"test.xml"`이라는 파일이 컴파일된 프로그램과 동일한 디렉터리에 있다고 가정합니다.  또한 `"test.xml"`에 `"creditcard"` 요소가 포함되어 있다고 가정합니다.  `test.xml`이라는 파일에 다음 XML을 배치하고 이 예제에서 사용할 수 있습니다.  
   
 ```xml  
@@ -81,7 +79,7 @@ ms.locfileid: "64602722"
   
  대칭 암호화 키를 사용하여 작업이 완료되면 각 바이트를 0으로 설정하거나 관리되는 암호화 클래스의 <xref:System.Security.Cryptography.SymmetricAlgorithm.Clear%2A> 메서드를 호출하여 메모리에서 지웁니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Security.Cryptography.Xml>
-- [방법: 대칭 키를 사용 하 여 XML 요소 암호화](../../../docs/standard/security/how-to-encrypt-xml-elements-with-symmetric-keys.md)
+- [방법: 대칭 키를 사용하여 XML 요소 암호화](../../../docs/standard/security/how-to-encrypt-xml-elements-with-symmetric-keys.md)

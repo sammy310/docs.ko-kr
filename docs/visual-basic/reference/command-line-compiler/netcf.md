@@ -9,12 +9,12 @@ helpviewer_keywords:
 - netcf compiler option [Visual Basic]
 - /netcf compiler option [Visual Basic]
 ms.assetid: db7cfa59-c315-401c-a59b-0daf355343d6
-ms.openlocfilehash: 3df7e622f97a5a1291736180e3964b1b3deaea2f
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 7f14ce07a2928f4dbffd3aa57f8cdd514b75694c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005457"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716709"
 ---
 # <a name="-netcf"></a>-netcf
 
@@ -45,7 +45,7 @@ ms.locfileid: "72005457"
 
   [!code-vb[VbVbalrCompiler#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/OptionStrictOff.vb#35)]
 
-- [Auto](../../../visual-basic/language-reference/modifiers/auto.md), [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md)및 [유니코드](../../../visual-basic/language-reference/modifiers/unicode.md) 한정자를 사용할 수 없습니다. [Declare statement](../../../visual-basic/language-reference/statements/declare-statement.md) 문의 구문도 `Declare Sub|Function name Lib "library" [Alias "alias"] [([arglist])]`로 수정 되었습니다. 다음 코드는 컴파일에 `-netcf`의 효과를 보여 줍니다.
+- [Auto](../../../visual-basic/language-reference/modifiers/auto.md), [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md)및 [유니코드](../../../visual-basic/language-reference/modifiers/unicode.md) 한정자를 사용할 수 없습니다. [Declare 문의](../../../visual-basic/language-reference/statements/declare-statement.md) 구문도 `Declare Sub|Function name Lib "library" [Alias "alias"] [([arglist])]`으로 수정 됩니다. 다음 코드는 컴파일에 `-netcf`의 효과를 보여 줍니다.
 
   [!code-vb[VbVbalrCompiler#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/OptionStrictOff.vb#36)]
 
@@ -83,7 +83,7 @@ ms.locfileid: "72005457"
 
   - `Line`
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 다음 코드는 C 드라이브에 있는 .NET Compact Framework의 기본 설치 디렉터리에 있는 mscorlib.dll 및 Microsoft.visualbasic 버전을 사용 하 여 .NET Compact Framework `Myfile.vb` 컴파일합니다. 일반적으로 .NET Compact Framework의 최신 버전을 사용 합니다.
 
@@ -91,7 +91,7 @@ ms.locfileid: "72005457"
 vbc -netcf -sdkpath:"c:\Program Files\Microsoft Visual Studio .NET 2003\CompactFrameworkSDK\v1.0.5000\Windows CE " myfile.vb
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Visual Basic 명령줄 컴파일러](../../../visual-basic/reference/command-line-compiler/index.md)
 - [샘플 컴파일 명령줄](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

@@ -5,14 +5,12 @@ helpviewer_keywords:
 - .NET Framework ETW events
 - ETW events in the .NET Framework
 ms.assetid: d186276f-6afb-4dfd-bf3c-4251edc2c299
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f810b4424574f016f13dc5fa46f785d866dda53e
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 93add45f0684b69a66f643499da61f9054ec7b37
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046576"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716082"
 ---
 # <a name="etw-events-in-the-net-framework"></a>ETW Events in the .NET Framework
 ETW(Windows용 이벤트 추적)는 Windows 운영 체제에서 제공되는 오버헤드가 낮고 확장 가능한 고성능 추적 시스템입니다. ETW는 .NET Framework에서 제공되는 프로파일링 및 디버깅 지원을 보완하며 다양한 시나리오 관련 문제를 해결하는 데 사용될 수 있습니다.  
@@ -26,7 +24,7 @@ ETW(Windows용 이벤트 추적)는 Windows 운영 체제에서 제공되는 오
  [공용 언어 런타임의 ETW 이벤트](etw-events-in-the-common-language-runtime.md)  
  CLR ETW 이벤트가 공용 언어 런타임에서 제공되는 프로파일링 및 디버깅 지원을 보완하는 방법을 설명합니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [CLR ETW 이벤트](clr-etw-events.md)
 - [TPL(작업 병렬 라이브러리)](../../standard/parallel-programming/task-parallel-library-tpl.md)

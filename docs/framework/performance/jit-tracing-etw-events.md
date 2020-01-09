@@ -5,14 +5,12 @@ helpviewer_keywords:
 - JIT tracing events [.NET Framework]
 - ETW, JIT tracing events (CLR)
 ms.assetid: 926adde2-c123-452e-bf4f-4b977bf06ffb
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4daa0fc0d689815e3a2c65df09c6c046d06a25c4
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 37bfd09516589f3422ee005233e576b110ef1288
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975504"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716001"
 ---
 # <a name="jit-tracing-etw-events"></a>JIT 추적 ETW 이벤트
 이들 이벤트는 JIT(Just-In-Time) 인라인 처리 및 JIT 마무리 호출의 성공 또는 실패와 관련된 정보를 수집합니다.
@@ -22,13 +20,13 @@ ms.locfileid: "73975504"
 ### <a name="methodjitinliningfailed-event"></a>MethodJitInliningFailed 이벤트
  다음 표에서는 키워드와 수준을 보여 줍니다. 자세한 내용은 [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md)을 참조하세요.  
   
-|이벤트를 발생시키기 위한 키워드|Level|  
+|이벤트를 발생시키기 위한 키워드|수준|  
 |-----------------------------------|-----------|  
 |`JITTracingKeyword` (0x10)|자세한 정보 표시(5)|  
   
  다음 표에서는 이벤트 정보를 보여 줍니다.  
   
-|이벤트(event)|이벤트 ID|발생 시기|  
+|Event|이벤트 ID|발생 시기|  
 |-----------|--------------|-----------------|  
 |`MethodJitInliningFailed`|186|JIT 인라인 처리에 실패했습니다.|  
   
@@ -52,13 +50,13 @@ ms.locfileid: "73975504"
 ### <a name="methodjitinliningsucceeded-event"></a>MethodJitInliningSucceeded 이벤트  
  다음 표에서는 키워드와 수준을 보여 줍니다.  
   
-|이벤트를 발생시키기 위한 키워드|Level|  
+|이벤트를 발생시키기 위한 키워드|수준|  
 |-----------------------------------|-----------|  
 |`JITTracingKeyword` (0x10)|자세한 정보 표시(5)|  
   
  다음 표에서는 이벤트 정보를 보여 줍니다.  
   
-|이벤트(event)|이벤트 ID|발생 시기|  
+|Event|이벤트 ID|발생 시기|  
 |-----------|--------------|-----------------|  
 |`MethodJitInliningSucceeded`|185|메서드 인라인 처리에 성공했습니다.|  
   
@@ -82,13 +80,13 @@ ms.locfileid: "73975504"
 ### <a name="methodjittailcallfailed-event"></a>MethodJITTailCallFailed 이벤트  
  다음 표에서는 키워드와 수준을 보여 줍니다.  
   
-|이벤트를 발생시키기 위한 키워드|Level|  
+|이벤트를 발생시키기 위한 키워드|수준|  
 |-----------------------------------|-----------|  
 |`JITTracingKeyword` (0x10)|자세한 정보 표시(5)|  
   
  다음 표에서는 이벤트 정보를 보여 줍니다.  
   
-|이벤트(event)|이벤트 ID|발생 시기|  
+|Event|이벤트 ID|발생 시기|  
 |-----------|--------------|-----------------|  
 |`MethodJitTailCallFailed`|189|메서드 마무리 호출에 실패했습니다.|  
   
@@ -112,13 +110,13 @@ ms.locfileid: "73975504"
 ### <a name="methodjittailcallsucceeded-event"></a>MethodJITTailCallSucceeded 이벤트  
  다음 표에서는 키워드와 수준을 보여 줍니다.  
   
-|이벤트를 발생시키기 위한 키워드|Level|  
+|이벤트를 발생시키기 위한 키워드|수준|  
 |-----------------------------------|-----------|  
 |`JITTracingKeyword` (0x10)|자세한 정보 표시(5)|  
   
  다음 표에서는 이벤트 정보를 보여 줍니다.  
   
-|이벤트(event)|이벤트 ID|발생 시기|  
+|Event|이벤트 ID|발생 시기|  
 |-----------|--------------|-----------------|  
 |`MethodJitTailCallSucceeded`|188|메서드 마무리 호출에 성공했습니다.|  
   

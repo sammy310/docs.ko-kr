@@ -24,14 +24,12 @@ helpviewer_keywords:
 - cryptography [.NET Framework], about
 - random number generation
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6f0e268995449bc27b93c92ac8654c09fca9cd14
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 66af8126ab61d37065b9a328d5e088ed7bf4cbef
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975820"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709207"
 ---
 # <a name="cryptographic-services"></a>암호화 서비스
 
@@ -59,7 +57,7 @@ Microsoft 서비스, 구성 요소 및 애플리케이션에 암호화 보안을
 
 이러한 목표를 달성하기 위해 암호화 기본이라고 알려진 알고리즘과 방법을 결합하여 암호화 체계를 만들 수 있습니다. 다음 표는 암호화 기본 및 해당 기능 목록을 보여 줍니다.
 
-|암호화 기본|관리 그룹을 연결하거나 연결된 관리 그룹의 속성을 편집하려면 관리 작업 영역의|
+|암호화 기본|사용|
 |-----------------------------|---------|
 |비밀 키 암호화(대칭 암호화)|데이터에서 변환을 수행하여 제3자가 읽지 못하게 합니다. 이 유형의 암호화는 공유된 하나의 비밀 키를 사용하여 데이터를 암호화하고 해독합니다.|
 |공개 키 암호화(비대칭 암호화)|데이터에서 변환을 수행하여 제3자가 읽지 못하게 합니다. 이 유형의 암호화는 퍼블릭/프라이빗 키 쌍을 사용하여 데이터를 암호화하고 해독합니다.|
@@ -90,15 +88,15 @@ CBC 암호화로 암호화된 데이터를 손상시킬 수 있는 한 가지 �
 
 - <xref:System.Security.Cryptography.AesManaged> (.NET Framework 3.5에 도입 됨).
 
-- <xref:System.Security.Cryptography.DESCryptoServiceProvider>
+- <xref:System.Security.Cryptography.DESCryptoServiceProvider>.
 
 - <xref:System.Security.Cryptography.HMACSHA1> (비밀 키와 결합된 암호화 해시 함수를 사용하여 계산된 메시지 인증 코드를 나타내므로 기술적으로 비밀 키 알고리즘입니다. 이 항목의 뒷부분에 있는 [해시 값](#hash-values)을 참조하세요.)
 
-- <xref:System.Security.Cryptography.RC2CryptoServiceProvider>
+- <xref:System.Security.Cryptography.RC2CryptoServiceProvider>.
 
-- <xref:System.Security.Cryptography.RijndaelManaged>
+- <xref:System.Security.Cryptography.RijndaelManaged>.
 
-- <xref:System.Security.Cryptography.TripleDESCryptoServiceProvider>
+- <xref:System.Security.Cryptography.TripleDESCryptoServiceProvider>.
 
 ## <a name="public-key-encryption"></a>공개 키 암호화
 
@@ -187,21 +185,21 @@ RSA는 암호화 및 서명에서 모두 사용할 수 있지만, DSA는 서명�
 
 .NET Framework는 해싱 알고리즘을 구현 하는 다음 클래스를 제공 합니다.
 
-- <xref:System.Security.Cryptography.HMACSHA1>
+- <xref:System.Security.Cryptography.HMACSHA1>.
 
-- <xref:System.Security.Cryptography.MACTripleDES>
+- <xref:System.Security.Cryptography.MACTripleDES>.
 
-- <xref:System.Security.Cryptography.MD5CryptoServiceProvider>
+- <xref:System.Security.Cryptography.MD5CryptoServiceProvider>.
 
-- <xref:System.Security.Cryptography.RIPEMD160>
+- <xref:System.Security.Cryptography.RIPEMD160>.
 
-- <xref:System.Security.Cryptography.SHA1Managed>
+- <xref:System.Security.Cryptography.SHA1Managed>.
 
-- <xref:System.Security.Cryptography.SHA256Managed>
+- <xref:System.Security.Cryptography.SHA256Managed>.
 
-- <xref:System.Security.Cryptography.SHA384Managed>
+- <xref:System.Security.Cryptography.SHA384Managed>.
 
-- <xref:System.Security.Cryptography.SHA512Managed>
+- <xref:System.Security.Cryptography.SHA512Managed>.
 
 - 모든 SHA(Secure Hash Algorithm), MD5(Message Digest 5) 및 RIPEMD-160 알고리즘의 HMAC 변형
 

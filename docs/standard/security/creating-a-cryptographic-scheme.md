@@ -6,14 +6,12 @@ helpviewer_keywords:
 - encryption [.NET Framework], creating cryptographic schemes
 - cryptography [.NET Framework], creating cryptographic schemes
 ms.assetid: d40c509f-5a5e-46cc-94cb-a951e9ab6843
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3ef3741ef5cec720c2fb285c9aa60d610acc0be9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 00fff5f346633a9682d75cf6a3be7e8e7d5db7e8
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61909391"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706294"
 ---
 # <a name="creating-a-cryptographic-scheme"></a>암호화 체계 만들기
 .NET Framework의 암호화 구성 요소를 결합하여 다양한 체계를 만들고 데이터를 암호화 및 암호 해독할 수 있습니다.  
@@ -32,6 +30,6 @@ ms.locfileid: "61909391"
   
  암호화 체계를 만드는 과정은 간단한 작업이 아닙니다.
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)

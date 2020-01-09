@@ -5,14 +5,12 @@ helpviewer_keywords:
 - ETW, CLR providers
 - CLR ETW providers
 ms.assetid: 0beafad4-b2c8-47f4-b342-83411d57a51f
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 93a0271c521de6e390e323d92e93a5e7bf94444f
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: dbdd4ad862ae300c330dc56a82fcd65b866855b6
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046732"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716178"
 ---
 # <a name="clr-etw-providers"></a>CLR ETW 공급자
 CLR(공용 언어 런타임)에는 런타임 공급자 및 런다운 공급자라는 두 개의 공급자가 있습니다.  
@@ -37,7 +35,7 @@ CLR(공용 언어 런타임)에는 런타임 공급자 및 런다운 공급자�
   
  일반적으로 ETW 로깅은 프로세스가 시작되기 전에 사용되고, 프로세스가 종료된 후 로깅이 꺼집니다. 그러나 프로세스를 실행하는 동안 ETW 로깅이 켜져 있는 경우 프로세스에 대한 추가 정보가 필요합니다. 예를 들어 기호를 확인하려면 로깅을 켜기 전에 이미 로드된 메서드에 대한 메서드 이벤트를 기록해야 합니다.  
   
- `DCStart` 및 `DCEnd` 이벤트는 데이터 수집이 시작 및 중지될 때 프로세스의 상태를 캡처합니다. 상태는 JIT(Just-In-Time) 컴파일된 메서드 및 로드된 어셈블리를 포함하여 개괄적인 정보를 참조합니다. 이러한 두 이벤트는 프로세스에서 이미 발생한 사항(예: JIT 컴파일된 메서드 등)에 대한 정보를 제공할 수 있습니다.  
+ `DCStart` 및 `DCEnd` 이벤트는 데이터 수집이 시작 및 중지될 때 프로세스의 상태를 캡처합니다. 상태는 이미 JIT (just-in-time) 컴파일 되었으며 로드 된 어셈블리를 포함 하 여 높은 수준의 정보를 나타냅니다. 이러한 두 이벤트는 프로세스에서 이미 발생 한 상황에 대 한 정보를 제공할 수 있습니다. 예를 들어 JIT로 컴파일된 메서드 등이 있습니다.  
   
  `DC`, `DCStart`, `DCEnd` 또는 `DCInit`가 이름에 포함된 이벤트만 런다운 공급자 아래에서 발생합니다. 또한 이들 이벤트는 런다운 공급자에서만 발생합니다.  
   
@@ -91,6 +89,6 @@ CLR(공용 언어 런타임)에는 런타임 공급자 및 런다운 공급자�
   
  도구는 사용자가 프로파일링 중지를 요청할 때 프로파일링을 즉시 끄지 않고 2단계와 3단계(런다운 세션을 시작한 다음 프로파일링 종료)를 실행할 수 있습니다. 도구에서 4단계를 실행할 수도 있습니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [공용 언어 런타임의 ETW 이벤트](etw-events-in-the-common-language-runtime.md)

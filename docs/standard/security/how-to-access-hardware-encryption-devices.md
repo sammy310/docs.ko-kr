@@ -1,5 +1,5 @@
 ---
-title: '방법: 하드웨어 암호화 디바이스에 액세스'
+title: '방법: 하드웨어 암호화 디바이스 액세스'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,19 +13,17 @@ helpviewer_keywords:
 - hardware encryption
 - CspParameters
 ms.assetid: b0e734df-6eb4-4b16-b48c-6f0fe82d5f17
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9c16c994e3976fb3ee569799461db1d1789a6186
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d6ee22fd9fb0c11e22ac01ff83b3269e37e37763
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64654386"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706177"
 ---
-# <a name="how-to-access-hardware-encryption-devices"></a>방법: 하드웨어 암호화 디바이스에 액세스
+# <a name="how-to-access-hardware-encryption-devices"></a>방법: 하드웨어 암호화 디바이스 액세스
 <xref:System.Security.Cryptography.CspParameters> 클래스를 사용하여 하드웨어 암호화 디바이스에 액세스할 수 있습니다. 예를 들어 이 클래스를 사용하여 스마트 카드, 하드웨어 난수 생성기 또는 특정 암호화 알고리즘의 하드웨어 구현과 애플리케이션을 통합할 수 있습니다.  
   
- <xref:System.Security.Cryptography.CspParameters> 클래스는 제대로 설치된 하드웨어 암호화 디바이스에 액세스하는 CSP(암호화 서비스 공급자)를 만듭니다.  레지스트리 편집기 (Regedit.exe)를 사용 하 여 다음 레지스트리 키를 검사 하 여 CSP의 가용성을 확인할 수 있습니다.  HKEY_LOCAL_MACHINE\Software\Microsoft\Cryptography\Defaults\Provider.  
+ <xref:System.Security.Cryptography.CspParameters> 클래스는 제대로 설치된 하드웨어 암호화 디바이스에 액세스하는 CSP(암호화 서비스 공급자)를 만듭니다.  레지스트리 편집기(Regedit.exe)를 통해 다음 레지스트리 키를 검사하여 CSP의 가용성을 확인할 수 있습니다. HKEY_LOCAL_MACHINE\Software\Microsoft\Cryptography\Defaults\Provider.  
   
 ### <a name="to-sign-data-using-a-key-card"></a>키 카드를 사용하여 데이터에 서명하려면  
   
@@ -45,7 +43,7 @@ ms.locfileid: "64654386"
   
 3. <xref:System.Security.Cryptography.RNGCryptoServiceProvider.GetBytes%2A> 또는 <xref:System.Security.Cryptography.RNGCryptoServiceProvider.GetNonZeroBytes%2A> 메서드를 사용하여 난수를 만듭니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드 예제에서는 스마트 카드를 사용하여 데이터에 서명하는 방법을 보여 줍니다.  코드 예제에서는 스마트 카드를 노출하는 <xref:System.Security.Cryptography.CspParameters> 개체를 만든 다음 CSP를 사용하여 <xref:System.Security.Cryptography.RSACryptoServiceProvider> 개체를 초기화합니다.  그런 다음 일부 데이터에 서명하고 확인합니다.  
   
  [!code-cpp[Cryptography.SmartCardCSP#1](../../../samples/snippets/cpp/VS_Snippets_CLR/Cryptography.SmartCardCSP/CPP/Cryptography.SmartCardCSP.cpp#1)]

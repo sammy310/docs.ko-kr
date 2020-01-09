@@ -8,14 +8,12 @@ helpviewer_keywords:
 - secure coding, user input
 - code security, user input
 ms.assetid: 9141076a-96c9-4b01-93de-366bb1d858bc
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 832ea3c976a0a2e6bb3b4df8a2541248cfc56933
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 0d34b06b44241feb7d6e3c8f76447b861563cfdc
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663920"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705862"
 ---
 # <a name="security-and-user-input"></a>보안 및 사용자 입력
 
@@ -59,6 +57,6 @@ ms.locfileid: "67663920"
 
 - 둘 이상의 정규 형식이 있을 수 있는 사용자 이름에 주의하세요. 예를 들어, 종종 MYDOMAIN\\*username* 형식 또는 *username*@mydomain.example.com 형식 중 하나를 사용할 수 있습니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [보안 코딩 지침](../../../docs/standard/security/secure-coding-guidelines.md)

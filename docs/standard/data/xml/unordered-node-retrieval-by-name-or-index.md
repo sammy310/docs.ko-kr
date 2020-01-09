@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2038a90b-92af-4a0a-baaa-08e688d95194
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a7701f887410aa263483e52a5dd65a09d1444aa6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 8c6819b4c1628d9e09a9bbf96ae8d5edbb6c643d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64589867"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710078"
 ---
 # <a name="unordered-node-retrieval-by-name-or-index"></a>이름 또는 인덱스별로 정렬되지 않은 노드 검색
 **XmlNamedNodeMap**은 W3C(World Wide Web 컨소시엄) 사양에서 NamedNodeMap으로 설명되며 이름이나 인덱스를 사용하여 노드를 참조할 수 있는 정렬되지 않은 노드 집합 처리에 필수적입니다. **XmlNamedNodeMap**에 액세스할 수 있는 유일한 방법은 메서드나 속성을 통해 **XmlNamedNodeMap**을 반환하는 경우입니다. 다음과 같은 세 가지 메서드나 속성이 **XmlNamedNodeMap**을 반환합니다.  
@@ -119,6 +117,6 @@ class test {
   
  **AttributeCollection**에서 특성을 제거하는 추가 코드 예제를 보려면 [XmlNamedNodeMap.RemoveNamedItem 메서드](Overload:System.Xml.XmlNamedNodeMap.RemoveNamedItem)를 참조하세요. 메서드 및 속성에 대한 자세한 내용은 [XmlNamedNodeMap 멤버](AllMembers.T:System.Xml.XmlNamedNodeMap)를 참조하세요.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [XML DOM(문서 개체 모델)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

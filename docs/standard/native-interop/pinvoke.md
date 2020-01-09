@@ -1,15 +1,13 @@
 ---
 title: P/Invoke(플랫폼 호출)
 description: .NET에서 P/Invoke를 통해 네이티브 함수를 호출하는 방법을 알아봅니다.
-author: jkoritzinsky
-ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: cda738a173cbe61cf49f79ceef78c533a5a879d9
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: fa8b43edfba50fbc620f257c4e7caf1673f83235
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106792"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706307"
 ---
 # <a name="platform-invoke-pinvoke"></a>P/Invoke(플랫폼 호출)
 

@@ -1,15 +1,13 @@
 ---
 title: 매개 변수 마샬링 사용자 지정 - .NET
 description: .NET에서 매개 변수를 네이티브 표현으로 마샬링하는 방식을 사용자 지정하는 방법을 알아봅니다.
-author: jkoritzinsky
-ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 877eb00c18c9108fe6bcfb50104ff5ed813e85f3
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
-ms.translationtype: HT
+ms.openlocfilehash: 36fb8c105a8836d77b862095a616de3ba641073c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65065976"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706363"
 ---
 # <a name="customizing-parameter-marshaling"></a>매개 변수 마샬링 사용자 지정
 
@@ -23,7 +21,7 @@ ms.locfileid: "65065976"
 
 이러한 형식은 각각 Null 종료 문자열을 네이티브 코드에 전달하며, 네이티브 문자열의 인코딩에 따라 다릅니다.
 
-| `System.Runtime.InteropServices.UnmanagedType` 값 | 인코딩 |
+| `System.Runtime.InteropServices.UnmanagedType` 값 | Encoding |
 |------------------------------------------------------|----------|
 | LPStr | ANSI |
 | LPUTF8Str | UTF-8 | 

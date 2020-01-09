@@ -6,25 +6,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 4772f20e-1e7f-496e-93c2-1484473be555
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c2ce474dac44de1ac72811ecd3bc294ba57ce40a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7040c2ccf6e3bfc6efcbec3505c633c6c3c6508f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33570473"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710065"
 ---
 # <a name="user-defined-functions-and-variables"></a>사용자 정의 함수 및 변수
 <xref:System.Xml.XPath.XPathNavigator> 클래스는 <xref:System.Xml.XPath.XPathDocument> 데이터와 상호 작용하는 데 사용되는 메서드 집합을 제공합니다. XPath 쿼리 식에서 사용되는 확장명 함수 및 변수를 구현하여 표준 XPath 함수를 보완할 수 있습니다. <xref:System.Xml.XPath.XPathExpression.SetContext%2A> 메서드는 <xref:System.Xml.Xsl.XsltContext>에서 파생되는 사용자 정의 컨텍스트를 적용할 수 있습니다. 사용자 정의 함수는 사용자 지정 컨텍스트로 확인됩니다.  
   
  확장명 함수 및 변수는 XML 삽입 공격을 방지하는 데 유용할 수 있습니다. 이러한 시나리오에서 사용자 입력은 처리 명령과 연결된 원시 입력이 아닌 사용자 지정 변수로 할당되고 확장명 함수로 처리됩니다. 확장 함수 및 변수에는 사용자 입력이 포함되어 있어서 디자이너에서 의도한 대로 XML 데이터에 대해서만 작업을 수행합니다.  
   
- 확장을 사용하려면 확장 함수 및 변수를 지원하는 인터페이스 <xref:System.Xml.Xsl.XsltContext> 및 <xref:System.Xml.Xsl.IXsltContextFunction>과 함께 사용자 지정 <xref:System.Xml.Xsl.IXsltContextVariable> 클래스를 구현합니다. <xref:System.Xml.XPath.XPathExpression>은 사용자 입력을 <xref:System.Xml.Xsl.XsltArgumentList>와 함께 사용자 지정 <xref:System.Xml.Xsl.XsltContext>에 추가합니다.  
+ 확장을 사용하려면 확장명 함수 및 변수를 지원하는 인터페이스 <xref:System.Xml.Xsl.XsltContext> 및 <xref:System.Xml.Xsl.IXsltContextFunction>과 함께 사용자 지정 <xref:System.Xml.Xsl.IXsltContextVariable> 클래스를 구현합니다. <xref:System.Xml.XPath.XPathExpression>은 사용자 입력을 <xref:System.Xml.Xsl.XsltArgumentList>와 함께 사용자 지정 <xref:System.Xml.Xsl.XsltContext>에 추가합니다.  
   
  <xref:System.Xml.XPath.XPathExpression>은 <xref:System.Xml.XPath.XPathNavigator>가 식에서 식별된 노드를 검색 및 처리하는 데 사용하는 컴파일된 쿼리를 나타냅니다.  
   
- 다음 예제는 <xref:System.Xml.Xsl.XsltContext>에서 파생되는 사용자 지정 컨텍스트 클래스의 구현을 보여 줍니다. 코드의 주석은 클래스 멤버 및 사용자 지정 함수에서의 클래스 멤버 사용에 대해 설명합니다. 함수 및 변수 구현과 이러한 구현을 사용하는 샘플 응용 프로그램은 이 코드 세그먼트를 따릅니다.  
+ 다음 예제는 <xref:System.Xml.Xsl.XsltContext>에서 파생되는 사용자 지정 컨텍스트 클래스의 구현을 보여 줍니다. 코드의 주석은 클래스 멤버 및 사용자 지정 함수에서의 클래스 멤버 사용에 대해 설명합니다. 함수 및 변수 구현과 이러한 구현을 사용하는 샘플 애플리케이션은 이 코드 세그먼트를 따릅니다.  
   
  [!code-csharp[XPathExtensionFunctions#2](../../../../samples/snippets/csharp/VS_Snippets_Data/xpathextensionfunctions/cs/xpathextensionfunctions.cs#2)]
  [!code-vb[XPathExtensionFunctions#2](../../../../samples/snippets/visualbasic/VS_Snippets_Data/xpathextensionfunctions/vb/xpathextensionfunctions.vb#2)]  

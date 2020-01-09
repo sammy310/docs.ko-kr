@@ -3,14 +3,12 @@ title: 문서에 포함된 스타일시트 지시문
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: d79fb295-ebc7-438d-ba1b-05be7d534834
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 65987c5e29d593758b21259d6367202c882df2de
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
-ms.translationtype: HT
+ms.openlocfilehash: 19e25ab7262bb006144eea71e74bd7454066b3f6
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45742650"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710156"
 ---
 # <a name="style-sheet-directives-embedded-in-a-document"></a>문서에 포함된 스타일시트 지시문
 
@@ -37,6 +35,6 @@ XML 사양의 네임스페이스에 대해 다룬 6단원의 내용에 따르면
 
 W3C(World Wide Web 컨소시엄) [Associating Style Sheets with XML documents 버전 1.0 권장 사항](https://www.w3.org/TR/xml-stylesheet/)에 따라 XSLT 스타일시트를 XML 문서에 연결하는 처리 명령은 콜론 대신 대시를 사용한 `<?xml-stylesheet?>`입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [XML DOM(문서 개체 모델)](xml-document-object-model-dom.md)

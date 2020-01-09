@@ -1,20 +1,18 @@
 ---
-title: 제약이 있는 실행 영역
+title: 제약이 있는 실행 지역
 ms.date: 03/30/2017
 helpviewer_keywords:
 - constrained execution regions
 - CERs
 ms.assetid: 99354547-39c1-4b0b-8553-938e8f8d1808
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a0561ff5212fd6bc4e9015bea8da1d1082dd027e
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: fde2bab99f156ddffec678022a58e7b14e0af01e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046689"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716166"
 ---
-# <a name="constrained-execution-regions"></a>제약이 있는 실행 영역
+# <a name="constrained-execution-regions"></a>제약이 있는 실행 지역
 CER(제약이 있는 실행 영역)은 신뢰할 수 있는 관리 코드를 작성하기 위한 메커니즘에 포함됩니다. CER은 CLR(공용 언어 런타임 지원)이 영역의 전체 코드가 실행되지 않도록 하는 대역 외 예외를 throw하지 못하도록 제한되는 영역을 정의합니다. 해당 영역 내에서 사용자 코드는 대역 외 예외 throw를 초래하는 실행이 제한됩니다. <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> 메서드는 `try` 블록 바로 앞에 와야 하고 `catch`, `finally` 및 `fault` 블록을 제약이 있는 실행 영역으로 표시합니다. 제약이 있는 영역으로 표시된 후 코드는 강한 안정성 계약을 사용하여 다른 코드를 호출해야 하고 코드는 실패를 처리할 준비가 된 경우에만 준비되지 않거나 신뢰할 수 없는 메서드에 대한 가상 호출을 할당하거나 수행할 수 있습니다. CLR은 CER에서 실행되는 코드의 스레드 중단을 지연합니다.  
   
  제약이 있는 실행 영역은 <xref:System.Runtime.CompilerServices.RuntimeHelpers.ExecuteCodeWithGuaranteedCleanup%2A> 메서드를 사용하여 실행된 <xref:System.Runtime.ConstrainedExecution.CriticalFinalizerObject> 클래스 및 코드에서 파생된 클래스에서 실행되는 특히 중요한 종료자인 주석이 달린 `try` 블록 이외에 CLR의 다양한 형식으로 사용됩니다.  
@@ -102,7 +100,7 @@ CER(제약이 있는 실행 영역)은 신뢰할 수 있는 관리 코드를 작
   
 - 리플렉션을 통한 메서드 호출.  
   
-- <xref:System.Threading.Monitor.Enter%2A> 또는 <xref:System.IO.FileStream.Lock%2A>  
+- <xref:System.Threading.Monitor.Enter%2A> 또는 <xref:System.IO.FileStream.Lock%2A>을 참조하세요.  
   
 - 보안 검사. 링크 요청만 수행하지 않습니다.  
   
@@ -114,6 +112,6 @@ CER(제약이 있는 실행 영역)은 신뢰할 수 있는 관리 코드를 작
   
 - 함수 포인터 및 대리자.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [안전성 모범 사례](reliability-best-practices.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -target compiler options [Visual Basic]
 - /target compiler options [Visual Basic]
 ms.assetid: e0954147-548b-461f-9c4b-a8f88845616c
-ms.openlocfilehash: bd79d95a18fb1935d97fff2d1b2c7767752b9765
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: d186670489ada51fced67ff9adeb73b14909b664
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351726"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716681"
 ---
 # <a name="-target-visual-basic"></a>-target (Visual Basic)
 
@@ -23,13 +23,13 @@ ms.locfileid: "74351726"
 -target:{exe | library | module | winexe | appcontainerexe | winmdobj}
 ```
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 다음 표에서는 `-target` 옵션의 효과를 요약 하 여 보여 줍니다.
 
-|**옵션**|**동작**|
+|**옵션**|**Behavior**|
 |----------------|------------------|
-|`-target:exe`|컴파일러가 실행 가능한 콘솔 응용 프로그램을 만들도록 합니다.<br /><br /> 이 옵션은 `-target` 옵션이 지정 되지 않은 경우의 기본 옵션입니다. 실행 파일은 .exe 확장명을 사용 하 여 만들어집니다.<br /><br /> `/out` 옵션을 사용 하 여 별도로 지정 하지 않는 한, 출력 파일 이름은 `Sub Main` 프로시저를 포함 하는 입력 파일의 이름을 사용 합니다.<br /><br /> .Exe 파일로 컴파일되는 소스 코드 파일에는 하나의 `Sub Main` 프로시저만 필요 합니다. `-main` 컴파일러 옵션을 사용 하 여 `Sub Main` 프로시저를 포함 하는 클래스를 지정 합니다.|
+|`-target:exe`|컴파일러가 실행 가능한 콘솔 응용 프로그램을 만들도록 합니다.<br /><br /> 이 옵션은 `-target` 옵션이 지정 되지 않은 경우의 기본 옵션입니다. 실행 파일은 .exe 확장명을 사용 하 여 만들어집니다.<br /><br /> `-out` 옵션을 사용 하 여 별도로 지정 하지 않는 한, 출력 파일 이름은 `Sub Main` 프로시저를 포함 하는 입력 파일의 이름을 사용 합니다.<br /><br /> .Exe 파일로 컴파일되는 소스 코드 파일에는 하나의 `Sub Main` 프로시저만 필요 합니다. `-main` 컴파일러 옵션을 사용 하 여 `Sub Main` 프로시저를 포함 하는 클래스를 지정 합니다.|
 |`-target:library`|컴파일러가 DLL (동적 연결 라이브러리)을 만들도록 합니다.<br /><br /> Dll 확장명을 사용 하 여 동적 연결 라이브러리 파일을 만듭니다.<br /><br /> `-out` 옵션으로 지정 하지 않는 한 출력 파일 이름은 첫 번째 입력 파일의 이름을 사용 합니다.<br /><br /> DLL을 빌드할 때 `Sub Main` 프로시저는 필요 하지 않습니다.|
 |`-target:module`|컴파일러가 어셈블리에 추가할 수 있는 모듈을 생성 하도록 합니다.<br /><br /> 출력 파일은 .netmodule 확장명을 사용 하 여 생성 됩니다.<br /><br /> .NET 공용 언어 런타임에서는 어셈블리가 없는 파일을 로드할 수 없습니다. 그러나 `-reference`를 사용 하 여 이러한 파일을 어셈블리의 어셈블리 매니페스트에 통합할 수 있습니다.<br /><br /> 한 모듈의 코드가 다른 모듈의 내부 형식을 참조 하는 경우에는 `-reference`를 사용 하 여 두 모듈을 모두 어셈블리 매니페스트에 통합 해야 합니다.<br /><br /> [-Addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md) 옵션은 모듈에서 메타 데이터를 가져옵니다.|
 |`-target:winexe`|컴파일러가 실행 가능한 Windows 기반 응용 프로그램을 만들도록 합니다.<br /><br /> 실행 파일은 .exe 확장명을 사용 하 여 만들어집니다. Windows 기반 응용 프로그램은 .NET Framework 클래스 라이브러리나 Windows Api를 사용 하 여 사용자 인터페이스를 제공 하는 응용 프로그램입니다.<br /><br /> `-out` 옵션을 사용 하 여 별도로 지정 하지 않는 한, 출력 파일 이름은 `Sub Main` 프로시저를 포함 하는 입력 파일의 이름을 사용 합니다.<br /><br /> .Exe 파일로 컴파일되는 소스 코드 파일에는 하나의 `Sub Main` 프로시저만 필요 합니다. 코드에 `Sub Main` 프로시저를 포함 하는 클래스가 둘 이상 있는 경우 `-main` 컴파일러 옵션을 사용 하 여 `Sub Main` 프로시저를 포함 하는 클래스를 지정 합니다.|
@@ -50,7 +50,7 @@ Vbc.exe의 각 인스턴스는 최대 하나의 출력 파일을 생성 합니�
 
 3. **응용 프로그램 유형** 상자의 값을 수정 합니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 다음 코드는 `in.dll`를 만들어 `in.vb`를 컴파일합니다.
 
@@ -58,7 +58,7 @@ Vbc.exe의 각 인스턴스는 최대 하나의 출력 파일을 생성 합니�
 vbc -target:library in.vb
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [Visual Basic 명령줄 컴파일러](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-main](../../../visual-basic/reference/command-line-compiler/main.md)

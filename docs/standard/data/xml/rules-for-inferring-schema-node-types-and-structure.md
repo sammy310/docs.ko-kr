@@ -3,14 +3,12 @@ title: 스키마 노드 형식 및 구조 유추 규칙
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: d74ce896-717d-4871-8fd9-b070e2f53cb0
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6c68cd98b496143e6b964383f8fa0c3af5d2c87d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 6d66384dea7018bcc3b2dd8fde96f4fa2653f8e8
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69939635"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710247"
 ---
 # <a name="rules-for-inferring-schema-node-types-and-structure"></a>스키마 노드 형식 및 구조 유추 규칙
 이 항목에서는 스키마 유추 과정에서 XML 문서의 노드 형식을 XSD(XML 스키마 정의 언어) 구조로 변환하는 방법을 설명합니다.  
@@ -137,16 +135,16 @@ ms.locfileid: "69939635"
   
 |노드 형식|변환|  
 |---------------|-----------------|  
-|처리 명령|무시됩니다.|  
-|주석|무시됩니다.|  
+|처리 명령|무시.|  
+|설명|무시.|  
 |EntityReference|<xref:System.Xml.Schema.XmlSchemaInference> 클래스는 엔터티 참조를 처리하지 않습니다. XML 문서에 엔터티 참조가 있는 경우 엔터티를 확장하는 판독기를 사용해야 합니다. 예를 들어, 매개 변수로서 <xref:System.Xml.XmlTextReader>로 설정된 <xref:System.Xml.XmlTextReader.EntityHandling%2A> 속성과 함께 <xref:System.Xml.EntityHandling.ExpandEntities>를 전달할 수 있습니다. 엔터티 참조가 발생할 때 판독기가 엔터티를 확장하지 않으면 예외가 throw됩니다.|  
 |CDATA|XML 문서의 모든 `<![CDATA[ … ]]` 섹션은 `xs:string`으로 유추됩니다.|  
-|문서 형식|무시됩니다.|  
-|네임스페이스|무시됩니다.|  
+|문서 유형|무시.|  
+|네임스페이스|무시.|  
   
  스키마 유추 과정에 대한 자세한 내용은 [XML 문서에서 스키마 유추](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)를 참조하세요.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Xml.Schema.XmlSchemaInference>
 - [XML SOM(스키마 개체 모델)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)

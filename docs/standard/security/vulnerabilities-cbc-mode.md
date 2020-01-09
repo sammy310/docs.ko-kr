@@ -3,13 +3,12 @@ title: CBC 암호 해독 취약성
 description: 패딩을 사용 하 여 CBC (암호 블록 체인) 모드 대칭 암호 해독으로 시간 취약점을 감지 하 고 완화 하는 방법에 대해 알아봅니다.
 ms.date: 06/12/2018
 author: blowdart
-ms.author: mairaw
-ms.openlocfilehash: 1d570cf3da197e7af5c1a1ab4e4df0d21f2cb2d7
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
-ms.translationtype: HT
+ms.openlocfilehash: 87f8e3c53e4d06f6a4edc7670891ac83ec8d65ab
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347238"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705849"
 ---
 # <a name="timing-vulnerabilities-with-cbc-mode-symmetric-decryption-using-padding"></a>패딩을 사용하는 CBC 모드 대칭 암호 해독의 타이밍 취약성
 

@@ -5,14 +5,12 @@ helpviewer_keywords:
 - security events [.NET Framework]
 - ETW, security events (CLR)
 ms.assetid: 0ed69f73-5c01-4514-bd63-979c6e38d41d
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b1dad042595608a805f978673858acaa5c01130f
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: c443bda8cdc2c6b32760e9dcba8b81a29d81660b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974874"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715933"
 ---
 # <a name="security-etw-events"></a>보안 ETW 이벤트
 
@@ -21,13 +19,13 @@ ms.locfileid: "73974874"
 ## <a name="strongnameverificationstart_v1-and-strongnameverificationstop_v1-events"></a>StrongNameVerificationStart_V1 및 StrongNameVerificationStop_V1 이벤트  
  다음 표에서는 키워드와 수준을 보여 줍니다. 자세한 내용은 [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md)을 참조하세요.  
   
-|이벤트를 발생시키기 위한 키워드|Level|  
+|이벤트를 발생시키기 위한 키워드|수준|  
 |-----------------------------------|-----------|  
 |`SecurityKeyword` (0x400)|정보 제공(4)|  
   
  다음 표에서는 이벤트 정보를 보여 줍니다.  
   
-|이벤트(event)|이벤트 ID|발생 시기|  
+|Event|이벤트 ID|발생 시기|  
 |-----------|--------------|-----------------|  
 |`StrongNameVerificationStart_V1`|181|강력한 이름 확인의 시작입니다.|  
 |`StrongNameVerificationStop_V1`|182|강력한 이름 확인의 끝입니다.|  
@@ -44,13 +42,13 @@ ms.locfileid: "73974874"
 ## <a name="authenticodeverificationstart_v1-and-authenticodeverificationstop_v1-events"></a>AuthenticodeVerificationStart_V1 및 AuthenticodeVerificationStop_V1 이벤트  
  다음 표에서는 키워드와 수준을 보여 줍니다.  
   
-|이벤트를 발생시키기 위한 키워드|Level|  
+|이벤트를 발생시키기 위한 키워드|수준|  
 |-----------------------------------|-----------|  
 |`SecurityKeyword` (0x400)|정보 제공(4)|  
   
  다음 표에서는 이벤트 정보를 보여 줍니다.  
   
-|이벤트(event)|이벤트 ID|발생 시기|  
+|Event|이벤트 ID|발생 시기|  
 |-----------|--------------|-----------------|  
 |`AuthenticodeVerificationStart_V1`|183|Authenticode 확인의 시작입니다.|  
 |`AuthenticodeVerificationStop_V1`|184|Authenticode 확인의 끝입니다.|  

@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d5c87cbe-4d69-429f-aad5-3103c2ca2770
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4a6597a3a57cd68c4dd17c4fbae882590f373709
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
-ms.translationtype: HT
+ms.openlocfilehash: e6b811d58ef9d98c51e9a45a46a1965c4fa12b55
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46525704"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711118"
 ---
 # <a name="changing-namespace-prefix-properties"></a>네임스페이스 접두사 속성 변경
 **XmlNode** 클래스를 사용하면 지정된 노드와 연결된 네임스페이스 접두사를 변경할 수 있습니다. 예를 들어, 다음 코드에서는 변경될 요소의 접두사를 보여 줍니다.  
@@ -34,7 +32,7 @@ e.Prefix = "b";
 Console.WriteLine(doc.InnerXml);  
 ```  
   
- **출력**  
+ **Output**  
   
 ```xml  
 <b:test xmlns:a="123" xmlns:b="456" />  
@@ -58,7 +56,7 @@ e.Prefix = "a";
 Console.WriteLine(doc.InnerXml);  
 ```  
   
- **출력**  
+ **Output**  
   
 ```xml  
 <a:test xmlns="123" xmlns:a="123" />  
@@ -66,6 +64,6 @@ Console.WriteLine(doc.InnerXml);
   
  **doc.InnerXml**을 호출한 결과로 트리가 문자열에 유지된 경우에는 `test` 요소의 네임스페이스를 유지하기 위해 `xmlns:a='123'` 특성이 추가되었습니다. 원래 `'123'`이었으며 `'123'`을 유지했습니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [XML DOM(문서 개체 모델)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

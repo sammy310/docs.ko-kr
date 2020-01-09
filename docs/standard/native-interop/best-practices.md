@@ -1,15 +1,13 @@
 ---
 title: 기본 상호 운용성 모범 사례 - .NET
 description: .NET에서 기본 구성 요소와 인터페이스하는 모범 사례를 알아봅니다.
-author: jkoritzinsky
-ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 0405fd5aef9d89fc1f47123ed358e6358656d95b
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
-ms.translationtype: HT
+ms.openlocfilehash: 7fe0dd0545f8ba800174f8be18bb2f11f39463f9
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70923763"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706402"
 ---
 # <a name="native-interoperability-best-practices"></a>기본 상호 운용성 모범 사례
 
@@ -29,7 +27,7 @@ ms.locfileid: "70923763"
 
 ## <a name="dllimport-attribute-settings"></a>DllImport 특성 설정
 
-| 설정 | 기본값 | 권장 사항 | 세부 정보 |
+| 설정 | 기본 | 권장 구성 | 자세히 |
 |---------|---------|----------------|---------|
 | <xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig>   | `true` |  기본값 유지  | 이 옵션을 명시적으로 false로 설정하면 실패한 HRESULT 반환 값이 예외로 바뀝니다(그 결과로 정의의 반환 값은 Null이 됨).|
 | <xref:System.Runtime.InteropServices.DllImportAttribute.SetLastError> | `false`  | API에 따라 다름  | API에서 GetLastError를 사용하는 경우 이 옵션을 true로 설정하고, Marshal.GetLastWin32Error를 사용하여 값을 가져옵니다. API에서 오류가 있음을 나타내는 조건을 설정하는 경우 실수로 덮어쓰지 않도록 다른 호출을 수행하기 전에 오류를 가져옵니다.|
@@ -38,43 +36,43 @@ ms.locfileid: "70923763"
 
 ## <a name="string-parameters"></a>문자열 매개 변수
 
-CharSet가 유니코드이거나 인수가 명시적으로 `[MarshalAs(UnmanagedType.LPWSTR)]`로 표시되고 문자열이 값으로 전달되는 경우(`ref` 또는 `out` 아님), 문자열이 고정되며 네이티브 코드에서 직접 사용됩니다(복사되지 않음). 
+CharSet이 유니코드 이거나 인수가 `[MarshalAs(UnmanagedType.LPWSTR)]`로 명시적으로 표시 되 _고_ 문자열이 값 (`ref` 또는 `out`)으로 전달 되는 경우 문자열은 복사 되지 않고 네이티브 코드에서 직접 사용 됩니다.
 
 문자열을 명시적으로 ANSI 처리하려는 경우가 아니면, `[DllImport]`를 `Charset.Unicode`로 표시해야 합니다.
 
-**❌** `[Out] string` 매개 변수를 사용하지 않습니다. `[Out]` 특성을 사용하여 값으로 전달된 문자열 매개 변수는 문자열이 인턴 지정된 문자열인 경우 런타임을 불안정하게 만들 수 있습니다. 문자열 인터닝에 대한 자세한 내용은 <xref:System.String.Intern%2A?displayProperty=nameWithType> 문서를 참조하세요.
+**❌** `[Out] string` 매개 변수를 사용 하지 않습니다. `[Out]` 특성을 사용하여 값으로 전달된 문자열 매개 변수는 문자열이 인턴 지정된 문자열인 경우 런타임을 불안정하게 만들 수 있습니다. 문자열 인터닝에 대한 자세한 내용은 <xref:System.String.Intern%2A?displayProperty=nameWithType> 문서를 참조하세요.
 
-**❌** `StringBuilder` 매개 변수를 사용하지 않습니다. `StringBuilder` 마샬링은 *항상* 네이티브 버퍼 복사본을 만듭니다. 따라서 매우 비효율적일 수 있습니다. 문자열을 사용하는 Windows API를 호출하는 일반적인 시나리오를 살펴보겠습니다.
+❌ `StringBuilder` 매개 변수를 사용 **하지 않습니다** . `StringBuilder` 마샬링은 *항상* 네이티브 버퍼 복사본을 만듭니다. 따라서 매우 비효율적일 수 있습니다. 문자열을 사용하는 Windows API를 호출하는 일반적인 시나리오를 살펴보겠습니다.
 
 1. 원하는 용량의 SB 생성(관리 용량 할당) **{1}**
 2. 호출
    1. 네이티브 버퍼 할당 **{2}**  
-   2. `[In]` _(`StringBuilder` 매개 변수의 기본값)_ 인 경우 콘텐츠 복사  
-   3. `[Out]` **{3}** _(`StringBuilder`의 기본값)_ 인 경우 새로 할당된 관리형 배열에 네이티브 버퍼 복사  
+   2. `[In]` 경우 _(`StringBuilder` 매개 변수의 기본값)_ 콘텐츠를 복사 합니다.  
+   3. **{3}** `[Out]` 경우에는 네이티브 버퍼를 새로 할당 된 관리 되는 배열에 복사 합니다 _(`StringBuilder`에 대 한 기본값 이기도)_ .  
 3. `ToString()`이 다른 관리형 배열 **{4}** 할당
 
 네이티브 코드에서 문자열을 가져오는 *{4}* 할당입니다. 이를 제한하는 가장 좋은 방법은 다른 호출에서 `StringBuilder`를 재사용하는 것이지만, 여전히 *1*개 할당만 저장됩니다. `ArrayPool`의 문자 버퍼를 사용하고 캐시하는 것이 훨씬 더 좋습니다. 그러면 후속 호출에서는 `ToString()`의 할당에만 바로 액세스할 수 있습니다.
 
 `StringBuilder`의 다른 문제는 항상 반환 버퍼 백업을 첫 번째 Null에 복사하는 것입니다. 다시 전달된 문자열이 종료되지 않았거나 이중 Null 종료 문자열인 경우 P/Invoke가 올바르지 않습니다.
 
-`StringBuilder`를 사용하는 경우 유의할 마지막 문제는 interop에 대해 항상 고려되는 숨겨진 Null이 용량에 포함되지 **않는**다는 것입니다.  대부분의 API가 Null을 ‘포함’하는 버퍼 크기를 원하기 때문에 이 동작이 잘못 파악되는 경우가 많습니다.  이로 인해 불필요한 할당이 발생할 수 있습니다. 또한 이 문제로 인해 런타임이 복사본 최소화를 위해 `StringBuilder` 마샬링을 최적화할 수 없게 됩니다.
+`StringBuilder`를 사용하는 경우 유의할 마지막 문제는 interop에 대해 항상 고려되는 숨겨진 Null이 용량에 포함되지 **않는**다는 것입니다. 대부분의 API가 Null을 ‘포함’하는 버퍼 크기를 원하기 때문에 이 동작이 잘못 파악되는 경우가 많습니다. 이로 인해 불필요한 할당이 발생할 수 있습니다. 또한 이 문제로 인해 런타임이 복사본 최소화를 위해 `StringBuilder` 마샬링을 최적화할 수 없게 됩니다.
 
-**✔️** `ArrayPool`의 `char[]`을 사용하는 것이 좋습니다.
+**✔️**`ArrayPool`의 `char[]`을 사용하는 것이 좋습니다.
 
 문자열 마샬링에 대한 자세한 내용은 [문자열의 기본 마샬링](../../framework/interop/default-marshaling-for-strings.md) 및 [문자열 마샬링 사용자 지정](customize-parameter-marshaling.md#customizing-string-parameters)을 참조하세요.
 
 > __Windows 특정__  
 > `[Out]` 문자열에 대해 CLR에서는 기본적으로 `CoTaskMemFree`를 사용하여 문자열을 해제하거나, `UnmanagedType.BSTR`로 표시된 문자열에 `SysStringFree`를 사용합니다.  
 **출력 문자열 버퍼가 있는 대부분의 API의 경우:**  
-> 전달된 문자 수에 Null이 포함되어야 합니다. 반환된 값이 전달된 문자 수보다 작으면 호출이 성공하고 값은 후행 Null이 ‘없는’ 문자 수가 됩니다.  그렇지 않으면 개수는 Null 문자를 ‘포함’하는 필수 버퍼 크기입니다.   
+> 전달된 문자 수에 Null이 포함되어야 합니다. 반환된 값이 전달된 문자 수보다 작으면 호출이 성공하고 값은 후행 Null이 ‘없는’ 문자 수가 됩니다. 그렇지 않으면 개수는 Null 문자를 ‘포함’하는 필수 버퍼 크기입니다.  
 >
-> - 5를 전달하면 4가 반환됩니다. 문자열이 4자이며 하나의 후행 Null로 이루어져 있습니다.
-> - 5를 전달하면 6이 반환됩니다. 문자열이 5자이며 Null을 포함하려면 6자 버퍼가 필요합니다.  
+> - 5를 전달 하 고, 4를 전달 합니다. 문자열은 후행 null을 포함 하는 4 자 길이입니다.
+> - 5를 전달 하 고, 6을 전달 합니다. 문자열의 길이가 5 자이 고 null을 보유 하기 위해 6 문자 버퍼가 필요 합니다.  
 > [문자열에 대한 Windows 데이터 형식](/windows/desktop/Intl/windows-data-types-for-strings)
 
 ## <a name="boolean-parameters-and-fields"></a>부울 매개 변수 및 필드
 
-부울은 문제가 발생하기 쉽습니다. 기본적으로 .NET `bool`은 4바이트 값인 Windows `BOOL`로 마샬링됩니다. 그러나 C 및 C++의 `_Bool` 및 `bool` 형식은 ‘1’바이트입니다.  이로 인해 반환 값의 절반이 버려지고 ‘잠재적’으로 결과가 변경될 수 있기 때문에 버그를 추적하기 어려울 수 있습니다.  .NET `bool` 값을 C 또는 C++ `bool` 형식으로 마샬링하는 방법에 대한 자세한 내용은 [부울 필드 마샬링 사용자 지정](customize-struct-marshaling.md#customizing-boolean-field-marshaling) 문서를 참조하세요.
+부울은 문제가 발생하기 쉽습니다. 기본적으로 .NET `bool`은 4바이트 값인 Windows `BOOL`로 마샬링됩니다. 그러나 C 및 C++의 `_Bool` 및 `bool` 형식은 ‘1’바이트입니다. 이로 인해 반환 값의 절반이 버려지고 ‘잠재적’으로 결과가 변경될 수 있기 때문에 버그를 추적하기 어려울 수 있습니다. .NET `bool` 값을 C 또는 C++ `bool` 형식으로 마샬링하는 방법에 대한 자세한 내용은 [부울 필드 마샬링 사용자 지정](customize-struct-marshaling.md#customizing-boolean-field-marshaling) 문서를 참조하세요.
 
 ## <a name="guids"></a>GUID
 
@@ -84,7 +82,7 @@ GUID는 시그니처에 직접 사용할 수 있습니다. 많은 Windows API는
 |------|-------------|
 | `KNOWNFOLDERID` | `REFKNOWNFOLDERID` |
 
-**❌** `ref` GUID 매개 변수 이외의 항목에는 `[MarshalAs(UnmanagedType.LPStruct)]`를 사용하지 않습니다.
+**❌ 하지** 않음 `ref` GUID 매개 변수 이외의 항목에 대해 `[MarshalAs(UnmanagedType.LPStruct)]`를 사용 합니다.
 
 ## <a name="blittable-types"></a>blittable 형식
 
@@ -124,7 +122,7 @@ public struct UnicodeCharStruct
 
 **✔️** 가능한 경우 구조체를 blittable로 설정합니다.
 
-자세한 내용은 다음을 참조하세요.
+자세한 내용은  항목을 참조하세요.
 
 - [Blittable 형식 및 비 Blittable 형식](../../framework/interop/blittable-and-non-blittable-types.md)  
 - [형식 마샬링](type-marshaling.md)
@@ -181,11 +179,11 @@ Windows API에서 일반적으로 사용되는 데이터 형식과 Windows 코�
 | 32    | `LONG`           | `long`               | `int`    |                                      |
 | 32    | `ULONG`          | `unsigned long`      | `uint`   |                                      |
 | 32    | `DWORD`          | `unsigned long`      | `uint`   |                                      |
-| 64    | `QWORD`          | `long long`          | `long`   |                                      |
-| 64    | `LARGE_INTEGER`  | `long long`          | `long`   |                                      |
-| 64    | `LONGLONG`       | `long long`          | `long`   |                                      |
-| 64    | `ULONGLONG`      | `unsigned long long` | `ulong`  |                                      |
-| 64    | `ULARGE_INTEGER` | `unsigned long long` | `ulong`  |                                      |
+| 64개    | `QWORD`          | `long long`          | `long`   |                                      |
+| 64개    | `LARGE_INTEGER`  | `long long`          | `long`   |                                      |
+| 64개    | `LONGLONG`       | `long long`          | `long`   |                                      |
+| 64개    | `ULONGLONG`      | `unsigned long long` | `ulong`  |                                      |
+| 64개    | `ULARGE_INTEGER` | `unsigned long long` | `ulong`  |                                      |
 | 32    | `HRESULT`        | `long`               | `int`    |                                      |
 | 32    | `NTSTATUS`       | `long`               | `int`    |                                      |
 
@@ -207,13 +205,13 @@ C `void*`인 Windows `PVOID`는 `IntPtr` 또는 `UIntPtr`로 마샬링할 수 �
 
 [데이터 형식 범위](/cpp/cpp/data-type-ranges)
 
-## <a name="structs"></a>구조체
+## <a name="structs"></a>Structs
 
 관리형 구조체는 스택에 생성되며, 메서드가 반환될 때까지 제거되지 않습니다. 정의상, “고정”되며 GC에 의해 이동되지 않습니다. 네이티브 코드에서 현재 메서드의 끝을 지나 포인터를 사용하지 않는 경우에도 안전하지 않은 코드 블록의 주소를 사용하면 됩니다.
 
 blittable 구조체는 마샬링 계층에서 직접 사용할 수 있으므로 성능이 훨씬 더 뛰어납니다. 구조체를 blittable로 설정합니다(예: `bool` 사용 안 함). 자세한 내용은 [blittable 형식](#blittable-types) 섹션을 참조하세요.
 
-구조체가 blittable인 경우 성능 향상을 위해 `Marshal.SizeOf<MyStruct>()` 대신 `sizeof()`를 사용합니다.  위에서 언급한 대로, 고정 `GCHandle` 만들기를 시도하여 형식이 blittable인지 확인할 수 있습니다. 형식이 문자열이 아니거나 blittable로 간주되지 않는 경우 `GCHandle.Alloc`에서 `ArgumentException`이 throw됩니다.
+구조체가 blittable인 경우 성능 향상을 위해 `Marshal.SizeOf<MyStruct>()` 대신 `sizeof()`를 사용합니다. 위에서 언급한 대로, 고정 `GCHandle` 만들기를 시도하여 형식이 blittable인지 확인할 수 있습니다. 형식이 문자열이 아니거나 blittable로 간주되지 않는 경우 `GCHandle.Alloc`에서 `ArgumentException`이 throw됩니다.
 
 정의의 구조체 포인터는 `ref`에 의해 전달되거나 `unsafe` 및 `*`를 사용해야 합니다.
 

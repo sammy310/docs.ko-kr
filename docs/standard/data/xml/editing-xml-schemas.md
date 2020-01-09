@@ -7,14 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: fa09c8e5-c2b9-49d2-bb0d-40330cd13e4d
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: bd40677b3b21a4ee1b237656ea2814badbbcd593
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
-ms.translationtype: HT
+ms.openlocfilehash: d7d9f8e0d4ec2f343b50e68e942bf94e93576f25
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040763"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710949"
 ---
 # <a name="editing-xml-schemas"></a>XML 스키마 편집
 
@@ -139,7 +137,7 @@ SOM에 로드된 스키마를 편집하는 첫 번째 단계는 스키마를 통
 </xs:schema>
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [XML 스키마 개체 모델 개요](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
 - [XML 스키마 읽기 및 쓰기](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)

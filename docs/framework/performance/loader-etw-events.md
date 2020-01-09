@@ -5,14 +5,12 @@ helpviewer_keywords:
 - loader events [.NET Framework]
 - ETW, loader events (CLR)
 ms.assetid: cb403cc6-56f8-4609-b467-cdfa09f07909
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a6928b5ac41a6af36dc7d5e7f5bb02074ba742e5
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 73665915a70225c2b1da47c7b60347b089564884
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974598"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716035"
 ---
 # <a name="loader-etw-events"></a>로더 ETW 이벤트
 이들 이벤트는 응용 프로그램 도메인, 어셈블리 및 모듈 로드 및 언로드와 관련된 정보를 수집합니다.  
@@ -22,7 +20,7 @@ ms.locfileid: "73974598"
 ## <a name="application-domain-events"></a>애플리케이션 도메인 이벤트
  다음 표에서는 키워드와 수준을 보여 줍니다.  
   
-|이벤트를 발생시키기 위한 키워드|이벤트(event)|Level|  
+|이벤트를 발생시키기 위한 키워드|Event|수준|  
 |-----------------------------------|-----------|-----------|  
 |`LoaderKeyword` (0x8)|`AppDomainLoad_V1` 및 `AppDomainUnLoad_V1`|정보(4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`AppDomainDCStart_V1`|정보(4)|  
@@ -30,7 +28,7 @@ ms.locfileid: "73974598"
   
  다음 표에서는 이벤트 정보를 보여 줍니다.  
   
-|이벤트(event)|이벤트 ID|설명|  
+|Event|이벤트 ID|설명|  
 |-----------|--------------|-----------------|  
 |`AppDomainLoad_V1` (모든 애플리케이션 도메인에 대해 기록됨)|156|프로세스 수명 중에 애플리케이션 도메인이 만들어질 때마다 발생합니다.|  
 |`AppDomainUnLoad_V1`|157|프로세스 수명 중에 애플리케이션 도메인이 삭제될 때마다 발생합니다.|  
@@ -50,7 +48,7 @@ ms.locfileid: "73974598"
 ## <a name="clr-loader-assembly-events"></a>CLR 로더 어셈블리 이벤트  
  다음 표에서는 키워드와 수준을 보여 줍니다.  
   
-|이벤트를 발생시키기 위한 키워드|이벤트(event)|Level|  
+|이벤트를 발생시키기 위한 키워드|Event|수준|  
 |-----------------------------------|-----------|-----------|  
 |`LoaderKeyword` (0x8)|`AssemblyLoad` 및 `AssemblyUnload`|정보(4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`AssemblyDCStart`|정보(4)|  
@@ -58,7 +56,7 @@ ms.locfileid: "73974598"
   
  다음 표에서는 이벤트 정보를 보여 줍니다.  
   
-|이벤트(event)|이벤트 ID|설명|  
+|Event|이벤트 ID|설명|  
 |-----------|--------------|-----------------|  
 |`AssemblyLoad_V1`|154|어셈블리가 로드될 때 발생합니다.|  
 |`AssemblyUnload_V1`|155|어셈블리가 언로드될 때 발생합니다.|  
@@ -73,13 +71,13 @@ ms.locfileid: "73974598"
 |AppDomainID|win:UInt64|이 어셈블리의 도메인 ID입니다.|  
 |BindingID|win:UInt64|어셈블리 바인딩을 고유하게 식별하는 ID입니다.|  
 |AssemblyFlags|win:UInt32|0x1: 도메인 중립 어셈블리.<br /><br /> 0x2: 동적 어셈블리.<br /><br /> 0x4: 어셈블리에 네이티브 이미지 있음.<br /><br /> 0x8: 수집 가능한 어셈블리.|  
-|AssemblyName|win:UnicodeString|정규화된 어셈블리 이름입니다.|  
+|어셈블리 이름|win:UnicodeString|정규화된 어셈블리 이름입니다.|  
 |ClrInstanceID|win:UInt16|CLR 또는 CoreCLR 인스턴스에 대한 고유 ID입니다.|   
 
 ## <a name="module-events"></a>모듈 이벤트
  다음 표에서는 키워드와 수준을 보여 줍니다.  
   
-|이벤트를 발생시키기 위한 키워드|이벤트(event)|Level|  
+|이벤트를 발생시키기 위한 키워드|Event|수준|  
 |-----------------------------------|-----------|-----------|  
 |`LoaderKeyword` (0x8)|`ModuleLoad_V2` 및 `ModuleUnload_V2`|정보(4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`ModuleDCStart_V2`|정보(4)|  
@@ -88,7 +86,7 @@ ms.locfileid: "73974598"
   
  다음 표에서는 이벤트 정보를 보여 줍니다.  
   
-|이벤트(event)|이벤트 ID|설명|  
+|Event|이벤트 ID|설명|  
 |-----------|--------------|-----------------|  
 |`ModuleLoad_V2`|152|프로세스 수명 중에 모듈이 로드될 때 발생합니다.|  
 |`ModuleUnload_V2`|153|프로세스 수명 중에 모듈이 언로드될 때 발생합니다.|  
@@ -124,7 +122,7 @@ ms.locfileid: "73974598"
 ## <a name="clr-domain-module-events"></a>CLR 도메인 모듈 이벤트
  다음 표에서는 키워드와 수준을 보여 줍니다.  
   
-|이벤트를 발생시키기 위한 키워드|이벤트(event)|Level|  
+|이벤트를 발생시키기 위한 키워드|Event|수준|  
 |-----------------------------------|-----------|-----------|  
 |`LoaderKeyword` (0x8)|`DomainModuleLoad_V1`|정보(4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`DomainModuleDCStart_V1`|정보(4)|  
@@ -132,7 +130,7 @@ ms.locfileid: "73974598"
   
  다음 표에서는 이벤트 정보를 보여 줍니다.  
   
-|이벤트(event)|이벤트 ID|설명|  
+|Event|이벤트 ID|설명|  
 |-----------|--------------|-----------------|  
 |`DomainModuleLoad_V1`|151|애플리케이션 도메인에 대한 모듈이 로드될 때 발생합니다.|  
 |`DomainModuleDCStart_V1`|151|시작 런다운 중에 애플리케이션 도메인에 대해 로드된 모듈을 열거하고 모든 애플리케이션 도메인에 대해 기록됩니다.|  
@@ -154,7 +152,7 @@ ms.locfileid: "73974598"
 ## <a name="module-range-events"></a>모듈 범위 이벤트
  다음 표에서는 키워드와 수준을 보여 줍니다.  
   
-|이벤트를 발생시키기 위한 키워드|이벤트(event)|Level|  
+|이벤트를 발생시키기 위한 키워드|Event|수준|  
 |-----------------------------------|-----------|-----------|  
 |`PerfTrackKeyWord`)|`ModuleRange`|정보(4)|  
 |`PerfTrackKeyWord`|`ModuleRangeDCStart`|정보(4)|  
@@ -162,7 +160,7 @@ ms.locfileid: "73974598"
   
  다음 표에서는 이벤트 정보를 보여 줍니다.  
   
-|이벤트(event)|이벤트 ID|설명|  
+|Event|이벤트 ID|설명|  
 |-----------|--------------|-----------------|  
 |`ModuleRange`|158|이 이벤트는 로드된 네이티브 이미지 생성기(NGen) 이미지가 IBC로 최적화된 경우 존재하고 NGen 이미지의 핫 섹션에 대한 정보를 포함합니다.|  
 |`ModuleRangeDCStart`|160|런다운 시작 시 발생한 `ModuleRange` 이벤트입니다.|  

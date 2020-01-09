@@ -11,14 +11,12 @@ helpviewer_keywords:
 - Creating GenericPrincipal Objects
 - GenericIdentity Objects
 ms.assetid: 465694cf-258b-4747-9dae-35b01a5bcdbb
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 37f5543ceaca83a024132c5d010b6d969876454f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 546b4d20f7b6b7a8c448f704fefd9a39b3ebd1d7
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353825"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706151"
 ---
 # <a name="how-to-create-genericprincipal-and-genericidentity-objects"></a>방법: GenericPrincipal 및 GenericIdentity 개체 만들기
 
@@ -58,7 +56,7 @@ ms.locfileid: "74353825"
     Thread.CurrentPrincipal = myPrincipal;
     ```
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 다음 코드 예제에서는 **GenericPrincipal** 및 **GenericIdentity**의 인스턴스를 만드는 방법을 보여 줍니다 이 코드에서는 해당 개체의 값을 콘솔에 표시합니다.
 
@@ -141,7 +139,7 @@ The IsAuthenticated is: True
 Is this a Manager? True
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Security.Principal.GenericIdentity>
 - <xref:System.Security.Principal.GenericPrincipal>

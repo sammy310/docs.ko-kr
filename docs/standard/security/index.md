@@ -9,20 +9,18 @@ helpviewer_keywords:
 - security [.NET Framework]
 - security [.NET]
 ms.assetid: 9a9621d7-8883-4a4f-a874-65e8e09e20a6
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0c3c7eb20bb3368205dab4c7e03b6b80d09a2121
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 2e4c289d7049fb587cdc9a4928f98852483fde5f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72775267"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705995"
 ---
 # <a name="security-in-net"></a>.NET의 보안
 
 공용 언어 런타임 및 .NET은 개발자가 보안 코드를 쉽게 작성 하 고 시스템 관리자가 보호 된 리소스에 액세스할 수 있도록 코드에 부여 된 권한을 사용자 지정할 수 있게 해 주는 많은 유용한 클래스 및 서비스를 제공 합니다. 또한 런타임 및 .NET은 암호화 및 역할 기반 보안을 사용 하는 데 도움이 되는 유용한 클래스 및 서비스를 제공 합니다.
 
-## <a name="in-this-section"></a>이 섹션의 내용
+## <a name="in-this-section"></a>단원 내용
 
 - [주요 보안 개념](key-security-concepts.md)  
 공용 언어 런타임 보안 기능에 대해 간략하게 설명합니다. 이 섹션은 개발자와 시스템 관리자에게 유용합니다.

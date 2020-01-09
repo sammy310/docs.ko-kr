@@ -3,13 +3,12 @@ title: Serialization
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 ms.assetid: bebb27ac-9712-4196-9931-de19fc04dbac
-author: KrzysztofCwalina
-ms.openlocfilehash: 0259bf82e74cbca7df8da246ca2e6ba7ef4542b3
-ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
+ms.openlocfilehash: fb5d714e2452f1b9c1dcc79cc179b35a2dd48fec
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68868520"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709077"
 ---
 # <a name="serialization"></a>Serialization
 Serialization은 개체를 쉽게 유지 하거나 전송할 수 있는 형식으로 변환 하는 프로세스입니다. 예를 들어 개체를 serialize 하 고, HTTP를 사용 하 여 인터넷을 통해 전송 하 고, 대상 컴퓨터에서 deserialize 할 수 있습니다.  
@@ -18,7 +17,7 @@ Serialization은 개체를 쉽게 유지 하거나 전송할 수 있는 형식�
   
 |**기술 이름**|**기본 형식**|**시나리오**|  
 |-------------------------|--------------------|-------------------|  
-|**데이터 계약 Serialization**|<xref:System.Runtime.Serialization.DataContractAttribute> <br /> <xref:System.Runtime.Serialization.DataMemberAttribute> <br /> <xref:System.Runtime.Serialization.DataContractSerializer> <br /> <xref:System.Runtime.Serialization.NetDataContractSerializer> <br /> <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> <br /> <xref:System.Runtime.Serialization.ISerializable>|일반 지속성<br />웹 서비스<br />JSON|  
+|**데이터 계약 Serialization**|<xref:System.Runtime.Serialization.DataContractAttribute> <br /> <xref:System.Runtime.Serialization.DataMemberAttribute> <br /> <xref:System.Runtime.Serialization.DataContractSerializer> <br /> <xref:System.Runtime.Serialization.NetDataContractSerializer> <br /> <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> <br /> <xref:System.Runtime.Serialization.ISerializable>|일반 지속성<br />Web Services<br />JSON|  
 |**XML Serialization**|<xref:System.Xml.Serialization.XmlSerializer>|XML 모양에 대 한 모든 권한이 있는 XML 형식|  
 |**런타임 Serialization (이진 및 SOAP)**|<xref:System.SerializableAttribute> <br /> <xref:System.Runtime.Serialization.ISerializable> <br /> <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> <br /> <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>|.NET Remoting|  
   
@@ -36,29 +35,29 @@ Serialization은 개체를 쉽게 유지 하거나 전송할 수 있는 형식�
  **X AVOID** 이유로 일반 지 속성에 대 한 런타임 Serialization 또는 XML 직렬화를 지원 합니다. 대신 데이터 계약 Serialization을 사용 하는 것이 좋습니다.  
   
 ## <a name="supporting-data-contract-serialization"></a>데이터 계약 Serialization 지원  
- 형식은 형식 <xref:System.Runtime.Serialization.DataContractAttribute> 에를 적용 하 <xref:System.Runtime.Serialization.DataMemberAttribute> 고 형식의 멤버 (필드 및 속성)에를 적용 하 여 데이터 계약 Serialization을 지원할 수 있습니다.  
+ 형식은 형식에 <xref:System.Runtime.Serialization.DataContractAttribute>를 적용 하 고 형식의 멤버 (필드 및 속성)에 <xref:System.Runtime.Serialization.DataMemberAttribute>를 적용 하 여 데이터 계약 Serialization을 지원할 수 있습니다.  
   
  **✓ CONSIDER** 형식을 부분 신뢰 환경에서 사용할 수 있는 경우 형식 공용 데이터 멤버를 표시 합니다.  
   
  완전 신뢰에서 데이터 계약 serializer는 public이 아닌 형식과 멤버를 serialize 및 deserialize 할 수 있지만 부분 신뢰에서는 public 멤버만 serialize 및 deserialize 할 수 있습니다.  
   
- **✓ DO** 되어 있는 모든 속성에 getter와 setter 구현 <xref:System.Runtime.Serialization.DataMemberAttribute>합니다. 데이터 계약 serializer에는 형식에 대해 getter와 setter를 모두 사용할 수 있어야 serializable로 간주할 수 있습니다. .NET Framework 3.5 s p 1에서는 일부 컬렉션 속성이 가져오기 전용 일 수 있습니다. 부분 신뢰에서 사용하지 않을 형식의 경우에는 두 속성 접근자 중 하나 또는 둘 다 public이 아닐 수 있습니다.  
+ **✓ DO** 되어 있는 모든 속성에 getter와 setter 구현 <xref:System.Runtime.Serialization.DataMemberAttribute>합니다. 데이터 계약 serializer에는 형식에 대해 getter와 setter를 모두 사용할 수 있어야 serializable로 간주할 수 있습니다. .NET Framework 3.5 s p 1에서는 일부 컬렉션 속성이 가져오기 전용 일 수 있습니다. 형식을 부분 신뢰에서 사용 하지 않는 경우 속성 접근자 중 하나 또는 둘 다가 public이 될 수 있습니다.  
   
  **✓ CONSIDER** 역직렬화 된 인스턴스의 초기화에 대 한 serialization 콜백을 사용 하 여 합니다.  
   
- 개체가 deserialize될 때는 생성자가 호출되지 않습니다. 규칙에 대 한 예외가 있습니다. Deserialization 중에로 <xref:System.Runtime.Serialization.CollectionDataContractAttribute> 표시 된 컬렉션의 생성자가 호출 됩니다. 따라서 일반 생성 중에 실행 되는 모든 논리는 serialization 콜백 중 하나로 구현 되어야 합니다.  
+ 개체가 역직렬화될 때는 생성자가 호출되지 않습니다. 규칙에 대 한 예외가 있습니다. Deserialization을 수행 하는 동안 <xref:System.Runtime.Serialization.CollectionDataContractAttribute> 표시 된 컬렉션의 생성자가 호출 됩니다. 따라서 일반 생성 중에 실행 되는 모든 논리는 serialization 콜백 중 하나로 구현 되어야 합니다.  
   
- `OnDeserializedAttribute`가장 일반적으로 사용 되는 콜백 특성입니다. 패밀리의 다른 특성으로는 <xref:System.Runtime.Serialization.OnDeserializingAttribute>, <xref:System.Runtime.Serialization.OnSerializingAttribute> 및 <xref:System.Runtime.Serialization.OnSerializedAttribute>가 있습니다. 이 특성은 deserialization하기 전, serialization하기 전 및 마지막으로 serialization한 후에 각각 실행되는 콜백을 표시하는 데 사용할 수 있습니다.  
+ `OnDeserializedAttribute`은 가장 일반적으로 사용 되는 콜백 특성입니다. 패밀리의 다른 특성으로는 <xref:System.Runtime.Serialization.OnDeserializingAttribute>, <xref:System.Runtime.Serialization.OnSerializingAttribute> 및 <xref:System.Runtime.Serialization.OnSerializedAttribute>가 있습니다. 이 특성은 deserialization하기 전, serialization하기 전 및 마지막으로 serialization한 후에 각각 실행되는 콜백을 표시하는 데 사용할 수 있습니다.  
   
  **✓ CONSIDER** 를 사용 하 여는 <xref:System.Runtime.Serialization.KnownTypeAttribute> 복잡 한 개체 그래프를 역직렬화 할 때 사용 해야 하는 구체적인 형식을 나타냅니다.  
   
  **✓ DO** 를 만들거나 직렬화 형식을 변경할 때 뒤로 및 앞으로 호환성을 고려해 야 합니다.  
   
- 이후 버전의 형식에 대한 serialize된 스트림을 현재 버전의 형식으로 deserialize할 수 있고, 그 반대로 deserialize할 수도 있습니다.  
+ 이후 버전의 형식에 대한 직렬화된 스트림을 현재 버전의 형식으로 역직렬화할 수 있고, 그 반대로 역직렬화할 수도 있습니다.  
   
  데이터 계약 특성에 명시적 매개 변수를 사용 하 여 계약을 유지 해야 하는 경우를 제외 하 고, 개인 및 내부용으로 데이터 멤버의 이름, 형식 또는 순서를 변경할 수 없는지 확인 해야 합니다. .  
   
- 직렬화 가능 형식을 변경할 때 serialization의 호환성을 테스트 합니다. 이 경우에는 새 버전을 이전 버전으로 deserialize하거나 이전 버전을 새 버전으로 deserialize하십시오.  
+ 직렬화 가능 형식을 변경할 때 serialization의 호환성을 테스트 합니다. 이 경우에는 새 버전을 이전 버전으로 역직렬화하거나 이전 버전을 새 버전으로 역직렬화하십시오.  
   
  **✓ CONSIDER** 구현 <xref:System.Runtime.Serialization.IExtensibleDataObject> 형식의 서로 다른 버전 간 왕복 수 있도록 합니다.  
   
@@ -69,18 +68,18 @@ Serialization은 개체를 쉽게 유지 하거나 전송할 수 있는 형식�
   
  **X AVOID** 생성 되는 XML의 모양을 제어 하는 매우 강력한 이유가 없다면 형식을 XML Serialization을 위해 특별히 디자인 합니다. 이 serialization 기술은 앞의 섹션에서 설명한 데이터 계약 Serialization으로 대체되었습니다.  
   
- **✓ CONSIDER** 구현는 <xref:System.Xml.Serialization.IXmlSerializable> 인터페이스는 serialize 된 XML의 모양 XML Serialization 특성을 적용 하 여 제공 된 것 보다 더 많은 제어 하려는 경우. 인터페이스 <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> 의 두 메서드 (및 <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A>)를 사용 하면 serialize 된 XML 스트림을 완전히 제어할 수 있습니다. 를 `XmlSchemaProviderAttribute`적용 하 여 형식에 대해 생성 되는 XML 스키마를 제어할 수도 있습니다.  
+ **✓ CONSIDER** 구현는 <xref:System.Xml.Serialization.IXmlSerializable> 인터페이스는 serialize 된 XML의 모양 XML Serialization 특성을 적용 하 여 제공 된 것 보다 더 많은 제어 하려는 경우. <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> 및 <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A>인터페이스의 두 가지 메서드를 사용 하 여 serialize 된 XML 스트림을 완전히 제어할 수 있습니다. `XmlSchemaProviderAttribute`를 적용 하 여 형식에 대해 생성 되는 XML 스키마를 제어할 수도 있습니다.  
   
 ## <a name="supporting-runtime-serialization"></a>런타임 Serialization 지원  
  런타임 Serialization은 .NET Remoting에 사용 되는 기술입니다. .NET Remoting을 사용 하 여 형식을 전송할 것으로 생각 되는 경우 런타임 Serialization을 지원 하는지 확인 해야 합니다.  
   
- 를 적용 <xref:System.SerializableAttribute>하 여 런타임 Serialization에 대 한 기본 지원을 제공할 수 있으며, 더 많은 고급 시나리오에는 간단한 런타임 직렬화 가능 패턴 <xref:System.Runtime.Serialization.ISerializable> (구현 및 Serialization 생성자 제공)을 구현 하는 작업이 포함 됩니다.  
+ <xref:System.SerializableAttribute>적용 하 여 런타임 Serialization에 대 한 기본 지원을 제공할 수 있으며, 보다 고급 시나리오에서는 간단한 런타임 직렬화 가능 패턴 (<xref:System.Runtime.Serialization.ISerializable> 구현 및 Serialization 생성자 제공)을 구현 해야 합니다.  
   
- **✓ CONSIDER** 형식을.NET Remoting과 함께 사용 될 경우 런타임 Serialization을 지원 합니다. 예를 들어 네임 <xref:System.AddIn?displayProperty=nameWithType> 스페이스는 .net Remoting을 사용 하므로 추가 기능 간에 `System.AddIn` 교환 되는 모든 형식은 런타임 Serialization을 지원 해야 합니다.  
+ **✓ CONSIDER** 형식을.NET Remoting과 함께 사용 될 경우 런타임 Serialization을 지원 합니다. 예를 들어 <xref:System.AddIn?displayProperty=nameWithType> 네임 스페이스는 .NET Remoting을 사용 하므로 `System.AddIn` 추가 기능 간에 교환 되는 모든 형식은 런타임 Serialization을 지원 해야 합니다.  
   
- **✓ CONSIDER** 완벽 하 게 serialization 프로세스 제어 하려는 경우 런타임 직렬화 가능 패턴을 구현 합니다. 데이터가 serialize 또는 deserialize될 때 데이터를 변환하려는 경우를 예로 들 수 있습니다.  
+ **✓ CONSIDER** 완벽 하 게 serialization 프로세스 제어 하려는 경우 런타임 직렬화 가능 패턴을 구현 합니다. 데이터가 직렬화 또는 역직렬화될 때 데이터를 변환하려는 경우를 예로 들 수 있습니다.  
   
- 이 패턴은 아주 단순합니다. <xref:System.Runtime.Serialization.ISerializable> 인터페이스를 구현하고, 개체가 deserialize될 때 사용되는 특별한 생성자를 제공하기만 하면 됩니다.  
+ 이 패턴은 아주 단순합니다. <xref:System.Runtime.Serialization.ISerializable> 인터페이스를 구현하고, 개체가 역직렬화될 때 사용되는 특별한 생성자를 제공하기만 하면 됩니다.  
   
  **✓ DO** serialization 생성자를 보호 하 고 입력 하 고이 예제에 표시 된 대로 정확 하 게 명명 된 두 개의 매개 변수를 제공 합니다.  
   
@@ -99,11 +98,11 @@ public class Person : ISerializable
   
  **✓ DO** 링크 요청에 적용 <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A?displayProperty=nameWithType> 구현 합니다. 이렇게 하면 완전히 신뢰할 수 있는 코어 및 런타임 Serializer만 멤버에 액세스할 수 있습니다.  
   
- *Portions © 2005, 2009 Microsoft Corporation. 모든 권리 보유.*  
+ *2005, 2009 Microsoft Corporation © 부분입니다. All rights reserved.*  
   
- *받고 재인쇄 되었습니다는 피어슨 교육, inc. 프레임 워크 디자인 지침 [에서 사용 권한입니다. 다시 사용할 수 있는 .net 라이브러리에 대 한 규칙, 관용구 및](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 패턴, Microsoft Windows 개발 시리즈의 일부로 addison-Wesley Professional에서 2008 년 10 월 22 일에 게시 된 Krzysztof Cwalina 및 Brad abrams 성*  
+ *Pearson Education, Inc의 동의로 재인쇄. 출처: [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 작성자: Krzysztof Cwalina 및 Brad Abrams, 출판 정보: Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [프레임워크 디자인 지침](../../../docs/standard/design-guidelines/index.md)
 - [사용 지침](../../../docs/standard/design-guidelines/usage-guidelines.md)

@@ -1,5 +1,5 @@
 ---
-title: 최선의 안정성 구현 방법
+title: 안전성 모범 사례
 ms.date: 03/30/2017
 helpviewer_keywords:
 - marking locks
@@ -38,16 +38,14 @@ helpviewer_keywords:
 - STA-dependent features
 - fibers
 ms.assetid: cf624c1f-c160-46a1-bb2b-213587688da7
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 40c1b98f82fe53819edc437bbac575c1df206496
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: bd51ea1b79ac1dbd89a862f3961cc8508a87f301
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834534"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715977"
 ---
-# <a name="reliability-best-practices"></a>최선의 안정성 구현 방법
+# <a name="reliability-best-practices"></a>안전성 모범 사례
 
 다음 안정성 규칙은 SQL Server 중심이지만, 호스트 기반 서버 애플리케이션에도 적용됩니다. SQL Server와 같은 서버에서 리소스가 누출되지 않고 중단되지 않는 것이 매우 중요합니다.  그러나 이 작업은 개체의 상태를 변경하는 모든 메서드에 대해 취소 코드를 작성하여 수행할 수 없습니다.  취소 코드를 사용하여 모든 위치에서 모든 오류로부터 복구되는 100% 신뢰할 수 있는 관리 코드를 작성하는 것이 목표가 아닙니다.  성공 가능성이 희박한 매우 까다로운 작업입니다.  CLR(공용 언어 런타임)에서는 완벽한 코드를 작성할 수 있는 관리 코드가 제공된다고 확실히 보장할 수 없습니다.  ASP.NET과 달리 SQL Server에서는 허용할 수 없을 정도로 오랜 기간 동안 데이터베이스를 작동 중지하지 않고는 재활용할 수 없는 단 하나의 프로세스만 사용합니다.
 
@@ -231,7 +229,7 @@ HPA는 공용 언어 런타임을 호스트하고 SQL Server와 같은 호스트
 - 호스트 프로그래밍 모델에 적합하지 않으며 서버 프로세스 자체를 불안정하게 만드는 메서드 또는 클래스.
 
 > [!NOTE]
-> 호스트 보호 환경에서 실행할 수 있는 응용 프로그램에서 호출할 클래스 라이브러리를 만드는 경우 <xref:System.Security.Permissions.HostProtectionResource> 리소스 범주를 노출하는 멤버에 이 특성을 적용해야 합니다. 이 특성과 함께 .NET Framework 클래스 라이브러리 멤버를 사용하면 즉각적인 호출자만 검사하게 됩니다.  사용자의 라이브러리 멤버도 이와 동일한 방식으로 즉각적인 호출자 검사만 수행해야 합니다.
+> 호스트 보호 환경에서 실행할 수 있는 애플리케이션에서 호출할 클래스 라이브러리를 만드는 경우 <xref:System.Security.Permissions.HostProtectionResource> 리소스 범주를 노출하는 멤버에 이 특성을 적용해야 합니다. 이 특성과 함께 .NET Framework 클래스 라이브러리 멤버를 사용하면 즉각적인 호출자만 검사하게 됩니다.  사용자의 라이브러리 멤버도 이와 동일한 방식으로 즉각적인 호출자 검사만 수행해야 합니다.
 
 <xref:System.Security.Permissions.HostProtectionAttribute>에 HPA에 대한 자세한 내용이 있습니다.
 
@@ -241,7 +239,7 @@ SQL Server의 경우 동기화 또는 스레딩을 소개하는 데 사용한 �
 
 ### <a name="do-not-block-indefinitely-in-unmanaged-code"></a>비관리 코드에서 무기한 차단 안 함
 
-관리 코드가 아니라 비관리 코드에서 차단하면 CLR에서 스레드를 중단할 수 없으므로 서비스 거부 공격이 발생할 수 있습니다.  스레드가 차단되면 극도로 안전하지 않은 작업을 수행하지 않고 CLR에서 <xref:System.AppDomain>을 언로드하는 것을 방지할 수 있습니다.  Windows 동기화 기본 형식을 사용 하 여 차단 하는 것은 허용 되지 않는 항목의 명확한 예입니다.  가능한 경우 소켓 `ReadFile` 에서 호출을 차단 하는 것은 피해 야 합니다. 즉, Windows API가 시간 초과와 같은 작업에 대 한 메커니즘을 제공 해야 합니다.
+관리 코드가 아니라 비관리 코드에서 차단하면 CLR에서 스레드를 중단할 수 없으므로 서비스 거부 공격이 발생할 수 있습니다.  스레드가 차단되면 극도로 안전하지 않은 작업을 수행하지 않고 CLR에서 <xref:System.AppDomain>을 언로드하는 것을 방지할 수 있습니다.  Windows 동기화 기본 형식을 사용 하 여 차단 하는 것은 허용 되지 않는 항목의 명확한 예입니다.  가능 하면 소켓의 `ReadFile`에 대 한 호출 차단을 피해 야 합니다. 즉, Windows API가 시간 초과와 같은 작업에 대 한 메커니즘을 제공 해야 합니다.
 
 네이티브를 호출하는 모든 메서드는 적절한 시간 제한 내에 Win32 호출을 사용해야 합니다.  사용자가 시간 제한을 지정할 수 있으면 특정 보안 권한이 없이는 무한 시간을 지정할 수 없어야 합니다.  참고로 메서드를 10초가 넘게 차단할 경우 시간 제한을 지원하는 버전을 사용하거나 추가 CLR 지원이 필요합니다.
 
@@ -277,7 +275,7 @@ COM STA(단일 스레드 아파트)를 사용하는 코드를 식별합니다.  
 
 #### <a name="code-analysis-rule"></a>코드 분석 규칙
 
-관리 코드에서 모든 개체를 catch하거나 모든 예외를 catch하는 모든 catch 블록을 검토합니다.  에서 C#이 `catch` 는 {} 및 의플래그를{}나타냅니다. `catch(Exception)`  예외 형식을 매우 구체적으로 만들거나 코드를 검토하여 예기치 않은 예외 형식을 catch하는 경우 잘못된 방식으로 작동하지 않게 합니다.
+관리 코드에서 모든 개체를 catch하거나 모든 예외를 catch하는 모든 catch 블록을 검토합니다.  에서 C#이는 `catch` {} 및 `catch(Exception)` {}모두에 플래그를 사용 하는 것을 의미 합니다.  예외 형식을 매우 구체적으로 만들거나 코드를 검토하여 예기치 않은 예외 형식을 catch하는 경우 잘못된 방식으로 작동하지 않게 합니다.
 
 ### <a name="do-not-assume-a-managed-thread-is-a-win32-thread--it-is-a-fiber"></a>관리 되는 스레드가 Win32 스레드 라고 가정 하지 않음-파이버입니다.
 

@@ -5,14 +5,12 @@ helpviewer_keywords:
 - ETW, method events (CLR)
 - method events [.NET Framework]
 ms.assetid: 167a4459-bb6e-476c-9046-7920880f2bb5
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: fd29d07b6253cb8c177cc1e8854435ce0079b520
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 4937afe8bb23be58b72d082cd5ba200b4948ab4d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974920"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715989"
 ---
 # <a name="method-etw-events"></a>메서드 ETW 이벤트
 
@@ -26,7 +24,7 @@ ms.locfileid: "73974920"
 
 다음 표에서는 키워드와 수준을 보여 줍니다. 자세한 내용은 [CLR ETW 키워드 및 수준](clr-etw-keywords-and-levels.md)을 참조 하세요.
 
-|이벤트를 발생시키기 위한 키워드|Level|
+|이벤트를 발생시키기 위한 키워드|수준|
 |-----------------------------------|-----------|
 |`JITKeyword` (0x10) 런타임 공급자|정보(4)|
 |`NGenKeyword` (0x20) 런타임 공급자|정보(4)|
@@ -35,7 +33,7 @@ ms.locfileid: "73974920"
 
 다음 표에서는 이벤트 정보를 보여 줍니다.
 
-|이벤트(event)|이벤트 ID|설명|
+|Event|이벤트 ID|설명|
 |-----------|--------------|-----------------|
 |`MethodLoad_V1`|136|메서드가 JIT(Just-In-Time) 로드되거나 NGEN 이미지가 로드될 때 발생합니다. 동적 및 제네릭 메서드는 메서드 로드에 대해 이 버전을 사용하지 않습니다. JIT 도우미는 이 버전을 사용하지 않습니다.|
 |`MethodUnLoad_V1`|137|모듈이 언로드되거나 애플리케이션 도메인이 삭제될 때 발생합니다. 동적 메서드는 메서드 언로드에 대해 이 버전을 사용하지 않습니다.|
@@ -60,7 +58,7 @@ ms.locfileid: "73974920"
 
 다음 표에서는 키워드와 수준을 보여 줍니다.
 
-|이벤트를 발생시키기 위한 키워드|Level|
+|이벤트를 발생시키기 위한 키워드|수준|
 |-----------------------------------|-----------|
 |`AppDomainResourceManagementRundownKeyword` (0x800) 런다운 공급자|정보(4)|
 |`JitRundownKeyword` (0x10) 런다운 공급자|정보(4)|
@@ -68,7 +66,7 @@ ms.locfileid: "73974920"
 
 다음 표에서는 이벤트 정보를 보여 줍니다.
 
-|이벤트(event)|이벤트 ID|설명|
+|Event|이벤트 ID|설명|
 |-----------|--------------|----------------|
 |`DCStartInit_V1`|147|시작 런다운 중에 열거가 시작하기 전에 전송됩니다.|
 |`DCStartComplete_V1`|145|시작 런다운 중에 열거가 끝날 때 전송됩니다.|
@@ -85,7 +83,7 @@ ms.locfileid: "73974920"
 
 다음 표에서는 키워드와 수준을 보여 줍니다.
 
-|이벤트를 발생시키기 위한 키워드|Level|
+|이벤트를 발생시키기 위한 키워드|수준|
 |-----------------------------------|-----------|
 |`JITKeyword` (0x10) 런타임 공급자|자세한 정보 표시(5)|
 |`NGenKeyword` (0x20) 런타임 공급자|자세한 정보 표시(5)|
@@ -94,7 +92,7 @@ ms.locfileid: "73974920"
 
 다음 표에서는 이벤트 정보를 보여 줍니다.
 
-|이벤트(event)|이벤트 ID|설명|
+|Event|이벤트 ID|설명|
 |-----------|--------------|-----------------|
 |`MethodLoadVerbose_V1`|143|메서드가 JIT 로드되거나 NGEN 이미지가 로드될 때 발생합니다. 동적 및 제네릭 메서드는 항상 메서드 로드에 대해 이 버전을 사용합니다. JIT 도우미는 항상 이 버전을 사용합니다.|
 |`MethodUnLoadVerbose_V1`|144|동적 메서드가 삭제되거나, 모듈이 언로드되거나, 애플리케이션 도메인이 삭제될 때 발생합니다. 동적 메서드는 항상 메서드 언로드에 대해 이 버전을 사용합니다.|
@@ -120,7 +118,7 @@ ms.locfileid: "73974920"
 
 다음 표에서는 키워드와 수준을 보여 줍니다.
 
-|이벤트를 발생시키기 위한 키워드|Level|
+|이벤트를 발생시키기 위한 키워드|수준|
 |-----------------------------------|-----------|
 |`JITKeyword` (0x10) 런타임 공급자|자세한 정보 표시(5)|
 |`NGenKeyword` (0x20) 런타임 공급자|자세한 정보 표시(5)|
@@ -129,7 +127,7 @@ ms.locfileid: "73974920"
 
 다음 표에서는 이벤트 정보를 보여 줍니다.
 
-|이벤트(event)|이벤트 ID|설명|
+|Event|이벤트 ID|설명|
 |-----------|--------------|-----------------|
 |`MethodJittingStarted`|145|메서드가 JIT로 컴파일되는 동안 발생합니다.|
 

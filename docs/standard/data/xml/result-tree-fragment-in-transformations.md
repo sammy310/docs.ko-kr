@@ -3,14 +3,12 @@ title: 변형의 결과 트리 조각
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: df363480-ba02-4233-9ddf-8434e421c4f1
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e3b99606698124455ca9b325042ffbe430915aee
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
-ms.translationtype: HT
+ms.openlocfilehash: 33d66b0a835be8bacab76ef9295ce8158385d8d1
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170769"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710260"
 ---
 # <a name="result-tree-fragment-in-transformations"></a>변형의 결과 트리 조각
 
@@ -35,7 +33,7 @@ ms.locfileid: "67170769"
 
 `variable` 요소의 경우에도 해당 값이 여러 방법으로 지정됩니다. `select` 특성의 XPath 식에서 내용을 반환하거나 해당 값을 템플릿 본문의 내용에 지정하는 방법으로 값을 지정할 수 있습니다.
 
-`parameter` 및 `variable` 요소의 경우, XPath 식에 값이 지정되면 네 가지 기본 XPath 형식 중 하나가 반환됩니다. 부울, 문자열, 숫자 또는 노드 집합. 비어 있지 않은 템플릿 본문을 사용하여 해당 값이 지정되면 XPath 이외의 데이터 형식이 반환된 후 결과 트리 조각이 됩니다.
+`parameter` 및 `variable` 요소의 경우, XPath 식에 값이 지정되면 네 가지 기본 XPath 형식인 부울, 문자열, 숫자 또는 노드 집합 중 하나가 반환됩니다. 비어 있지 않은 템플릿 본문을 사용하여 해당 값이 지정되면 XPath 이외의 데이터 형식이 반환된 후 결과 트리 조각이 됩니다.
 
 변수가 이러한 네 가지 기본 XPath 데이터 형식에 속하지 않는 결과 트리 조각에 바인딩될 때가 바로 XPath 쿼리가 네 가지 XPath 개체 형식에 속하지 않는 형식을 반환하는 유일한 경우입니다. 결과 트리 조각 및 해당 동작은 [11.6단원 템플릿에 매개 변수 전달](https://www.w3.org/TR/xslt-10/#section-Passing-Parameters-to-Templates)을 통한 [W3C(World Wide Web 컨소시엄) 사양](https://www.w3.org/TR/xslt-10/), [11.1단원 결과 트리 조각](https://www.w3.org/TR/xslt-10/#section-Result-Tree-Fragments)에 설명되어 있습니다. 또한 [1단원의 소개](https://www.w3.org/TR/xslt-10/#section-Introduction)에서는 결과 트리 조각을 반환하거나 만드는 XSLT 네임스페이스에서 템플릿이 요소를 얻는 방법에 대해 설명합니다.
 
@@ -192,7 +190,7 @@ ms.locfileid: "67170769"
 <books xmlns:user="urn:books">Book1Book2Book3Book4</books>
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Xml.XPath.XPathNodeIterator>
 - [XslTransform 클래스를 사용하여 XSLT 변형](xslt-transformations-with-the-xsltransform-class.md)

@@ -14,14 +14,12 @@ helpviewer_keywords:
 - X.509 certificates
 - certificates, X.509 certificates
 ms.assetid: 761f1c66-631c-47af-aa86-ad9c50cfa453
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d569d3c020e7329d987e957f181b34c8cfbf941a
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 7f74e4e46ba760b7a943b2e2728e487ee87ae204
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353853"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706073"
 ---
 # <a name="how-to-encrypt-xml-elements-with-x509-certificates"></a>방법: X.509 인증서로 XML 요소 암호화
 <xref:System.Security.Cryptography.Xml> 네임스페이스의 클래스를 사용하여 XML 문서 내의 요소를 암호화할 수 있습니다.  XML 암호화는 데이터가 쉽게 읽혀질 염려 없이 암호화된 XML 데이터를 교환하거나 저장하는 표준 방법입니다.  XML 암호화 표준에 대 한 자세한 내용은 <https://www.w3.org/TR/xmldsig-core/>에 있는 XML 암호화에 대 한 W3C (World Wide Web 컨소시엄) 사양을 참조 하세요.  
@@ -36,7 +34,7 @@ ms.locfileid: "71353853"
   
 ### <a name="to-encrypt-an-xml-element-with-an-x509-certificate"></a>X.509 인증서로 XML 요소를 암호화하려면  
   
-1. [인증서 생성 도구(Makecert.exe)](/windows/desktop/SecCrypto/makecert)를 사용하여 테스트 X.509 인증서를 생성하고 로컬 사용자 저장소에 넣습니다. 교환 키를 생성해야 하며 키를 내보낼 수 있도록 설정해야 합니다. 다음 명령을 실행합니다.  
+1. [인증서 생성 도구(Makecert.exe)](/windows/desktop/SecCrypto/makecert)를 사용하여 테스트 X.509 인증서를 생성하고 로컬 사용자 저장소에 넣습니다. 교환 키를 생성해야 하며 키를 내보낼 수 있도록 설정해야 합니다. 명령을 실행합니다.  
   
     ```console  
     makecert -r -pe -n "CN=XML_ENC_TEST_CERT" -b 01/01/2005 -e 01/01/2010 -sky exchange -ss my  
@@ -92,7 +90,7 @@ ms.locfileid: "71353853"
      [!code-csharp[HowToEncryptXMLElementX509#11](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementX509/cs/sample.cs#11)]
      [!code-vb[HowToEncryptXMLElementX509#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementX509/vb/sample.vb#11)]  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에서는 `"test.xml"`이라는 파일이 컴파일된 프로그램과 동일한 디렉터리에 있다고 가정합니다.  또한 `"test.xml"`에 `"creditcard"` 요소가 포함되어 있다고 가정합니다.  `test.xml`이라는 파일에 다음 XML을 배치하고 이 예제에서 사용할 수 있습니다.  
   
 ```xml  
@@ -116,7 +114,7 @@ ms.locfileid: "71353853"
 ## <a name="net-framework-security"></a>.NET Framework 보안  
  이 예제에서 사용된 X.509 인증서는 테스트 전용입니다.  애플리케이션은 신뢰할 수 있는 인증 기관에서 생성된 X.509 인증서를 사용하거나 Microsoft Windows 인증서 서버에서 생성된 인증서를 사용해야 합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Security.Cryptography.Xml>
 - [방법: X.509 인증서로 XML 요소 해독](../../../docs/standard/security/how-to-decrypt-xml-elements-with-x-509-certificates.md)

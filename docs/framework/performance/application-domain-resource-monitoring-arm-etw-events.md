@@ -5,14 +5,12 @@ helpviewer_keywords:
 - ETW, application domain monitoring events
 - application domain monitoring events [.NET Framework]
 ms.assetid: d38ff268-a2ee-434e-b504-d570880e0289
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6e1c2a38be6f2c15a118b35925570119b474f096
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 0e453b2bafffd9e07a1bdddd97282c5b97f5483d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040573"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716222"
 ---
 # <a name="application-domain-resource-monitoring-arm-etw-events"></a>ARM(애플리케이션 도메인 리소스 모니터링) ETW 이벤트
 
@@ -24,14 +22,14 @@ ms.locfileid: "73040573"
 
 다음 표에서는 키워드와 수준을 보여 줍니다. 자세한 내용은 [CLR ETW 키워드 및 수준](clr-etw-keywords-and-levels.md)을 참조 하세요.
 
-|이벤트를 발생시키기 위한 키워드|Level|
+|이벤트를 발생시키기 위한 키워드|수준|
 |-----------------------------------|-----------|
 |`AppDomainResourceManagementKeyword` (0x800)|정보 제공(4)|
 |`ThreadingKeyword` (0x10000)|정보 제공(4)|
 
 다음 표에서는 이벤트 정보를 보여 줍니다.
 
-|이벤트(event)|이벤트 ID|발생 시기|
+|Event|이벤트 ID|발생 시기|
 |-----------|--------------|-----------------|
 |`ThreadCreated`|85|애플리케이션 도메인에 대한 스레드가 만들어졌습니다.|
 
@@ -50,13 +48,13 @@ ms.locfileid: "73040573"
 
 다음 표에서는 키워드와 수준을 보여 줍니다.
 
-|이벤트를 발생시키기 위한 키워드|Level|
+|이벤트를 발생시키기 위한 키워드|수준|
 |-----------------------------------|-----------|
 |`AppDomainResourceManagementKeyword` (0x800)|정보 제공(4)|
 
 다음 표에서는 이벤트 정보를 보여 줍니다.
 
-|이벤트(event)|이벤트 ID|발생 시기|
+|Event|이벤트 ID|발생 시기|
 |-----------|--------------|-----------------|
 |`AppDomainMemAllocated`|83|약 4MB의 모든 메모리가 애플리케이션 도메인에서 할당됩니다.|
 
@@ -72,13 +70,13 @@ ms.locfileid: "73040573"
 
 다음 표에서는 키워드와 수준을 보여 줍니다.
 
-|이벤트를 발생시키기 위한 키워드|Level|
+|이벤트를 발생시키기 위한 키워드|수준|
 |-----------------------------------|-----------|
 |`AppDomainResourceManagementKeyword` (0x800)|정보 제공(4)|
 
 다음 표에서는 이벤트 정보를 보여 줍니다.
 
-|이벤트(event)|이벤트 ID|발생 시기|
+|Event|이벤트 ID|발생 시기|
 |-----------|--------------|-----------------|
 |`AppDomainMemSurvived`|84|각 가비지 수집이 종료되었습니다.|
 
@@ -95,14 +93,14 @@ ms.locfileid: "73040573"
 
 다음 표에서는 키워드와 수준을 보여 줍니다.
 
-|이벤트를 발생시키기 위한 키워드|Level|
+|이벤트를 발생시키기 위한 키워드|수준|
 |-----------------------------------|-----------|
 |`AppDomainResourceManagementKeyword` (0x800)|정보 제공(4)|
 |`ThreadingKeyword` (0x10000)|정보 제공(4)|
 
 다음 표에서는 이벤트 정보를 보여 줍니다.
 
-|이벤트(event)|이벤트 ID|발생 시기|
+|Event|이벤트 ID|발생 시기|
 |-----------|--------------|-----------------|
 |`ThreadAppDomainEnter`|87|스레드가 애플리케이션 도메인에 들어갑니다.|
 
@@ -118,14 +116,14 @@ ms.locfileid: "73040573"
 
 다음 표에서는 키워드와 수준을 보여 줍니다.
 
-|이벤트를 발생시키기 위한 키워드|Level|
+|이벤트를 발생시키기 위한 키워드|수준|
 |-----------------------------------|-----------|
 |`AppDomainResourceManagementKeyword` (0x800)|정보 제공(4)|
 |`ThreadingKeyword` (0x10000)|정보 제공(4)|
 
 다음 표에서는 이벤트 정보를 보여 줍니다.
 
-|이벤트(event)|이벤트 ID|발생 시기|
+|Event|이벤트 ID|발생 시기|
 |-----------|--------------|-----------------|
 |`ThreadTerminated`|86|스레드가 종료됩니다.|
 

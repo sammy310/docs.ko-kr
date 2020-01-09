@@ -3,19 +3,17 @@ title: 유지되지 않고 확장되는 엔터티 참조
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: ffd97806-ab43-4538-8de2-5828bfbbde57
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7a55aa71ff3976241b96dd12baef06a9a13ef9dd
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
-ms.translationtype: HT
+ms.openlocfilehash: ae3db77d7659b7e1d36a9bccf7143f52c536dbbf
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45998424"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710936"
 ---
 # <a name="entity-references-are-expanded-and-not-preserved"></a>유지되지 않고 확장되는 엔터티 참조
 엔터티 참조가 확장되어 해당 참조가 나타내는 텍스트로 바뀌면 **XmlEntityReference** 노드가 생성되지 않습니다. 대신 엔터티 선언이 구문 분석되고 선언의 내용에서 생성된 노드가 **XmlEntityReference**를 대신하여 복사됩니다. 따라서 `&publisher;` 예제에서 `&publisher;`가 저장되는 대신 **XmlText** 노드가 생성됩니다.  
   
- ![확장된 트리 구조](../../../../docs/standard/data/xml/media/xmlentityref-expanded-nodes.gif "xmlentityref_expanded_nodes")  
+ ![확장 된 트리 구조](../../../../docs/standard/data/xml/media/xmlentityref-expanded-nodes.gif "xmlentityref_expanded_nodes")  
 확장되는 엔터티 참조의 트리 구조  
   
  `B` 또는 `<` 같은 문자 엔터티는 유지되지 않습니다. 대신 항상 확장되어 텍스트 노드로 표현됩니다.  
@@ -40,6 +38,6 @@ ms.locfileid: "45998424"
   
  엔터티를 확인하지 못하는 판독기를 사용하면 엔터티 참조가 나오는 경우 **Load** 메서드에서 예외를 throw합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [XML DOM(문서 개체 모델)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

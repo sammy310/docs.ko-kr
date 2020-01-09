@@ -1,21 +1,19 @@
 ---
-title: 변형 과정에서 XPathNavigator의 역할
+title: 변환 과정에서 XPathNavigator의 역할
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: 118f97d1-7110-4d1b-b0bd-4143252c0bb0
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 57290af1df8d370c928a97aba1622e41a6a33589
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
-ms.translationtype: HT
+ms.openlocfilehash: 240f9ca7a887a4a146437fdef46de776b299705a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003986"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709753"
 ---
-# <a name="xpathnavigator-in-transformations"></a>변형 과정에서 XPathNavigator의 역할
+# <a name="xpathnavigator-in-transformations"></a>변환 과정에서 XPathNavigator의 역할
 <xref:System.Xml.XPath.XPathNavigator> 클래스는 데이터에 대한 임의의 읽기 전용 액세스를 제공하며 XSLT(Extensible Stylesheet Language for Transformations)의 입력으로 사용하도록 디자인되었습니다. 이 클래스는 <xref:System.Xml.XPath.XPathDocument>, <xref:System.Xml.XmlDataDocument> 및 <xref:System.Xml.XmlDocument>에서 구현합니다. <xref:System.Xml.XPath.XPathNavigator>는 XPath(XML Path Language) 권장 사항의 5단원에서 설명하는 W3C(World Wide Web 컨소시엄) 데이터 모델을 기반으로 합니다.  
   
  <xref:System.Xml.XPath.XPathNavigator>는 모든 저장소에 대한 커서 모델을 정의하며 모든 데이터 저장소에 대한 빠른 속도의 읽기 전용 XPath 쿼리를 제공합니다. 또한 <xref:System.Xml.XPath.XPathNavigator>는 결과 트리 조각을 반복하는 데 사용되는 클래스이기도 합니다.  
@@ -109,13 +107,13 @@ public class sample
 }  
 ```  
   
-## <a name="output"></a>출력  
+## <a name="output"></a>Output  
  변환 결과는 **out.xml** 파일에 표시됩니다.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>Joe  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [XslTransform 클래스의 XSLT 프로세서 구현](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
