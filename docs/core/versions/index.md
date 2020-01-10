@@ -1,14 +1,13 @@
 ---
 title: .NET Core 런타임 및 SDK의 버전 관리 방법
 description: 이 문서에서는 .NET Core SDK 및 런타임의 버전 관리 방법을 설명합니다(유의적 버전과 유사함).
-author: bleroy
 ms.date: 07/26/2018
-ms.openlocfilehash: 5096ec0e4e60569b774711d95f4a69e4f8d2d2cc
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: c85a2112b439768068663688947960ac814de824
+ms.sourcegitcommit: cbdc0f4fd39172b5191a35200c33d5030774463c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713960"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75777324"
 ---
 # <a name="overview-of-how-net-core-is-versioned"></a>.NET Core의 버전 관리 방법 개요
 
@@ -24,7 +23,7 @@ ms.locfileid: "75713960"
 
 SDK 버전 번호의 세 번째 위치는 보조 및 패치 번호를 모두 전달합니다. 부 버전에는 100이 곱해집니다. 부 버전 1, 패치 버전 2는 102로 표시됩니다. 마지막 두 자리는 패치 번호를 나타냅니다. 예를 들어 .NET Core 2.2의 릴리스에서는 다음 표와 같은 릴리스를 만들 수 있습니다.
 
-| 변화                | .NET Core 런타임 | .NET Core SDK(*) |
+| 변화                | .NET Core 런타임 | .NET Core SDK(\*) |
 |-----------------------|-------------------|-------------------|
 | 초기 릴리스       | 2.2.0             | 2.2.100           |
 | SDK 패치             | 2.2.0             | 2.2.101           |
