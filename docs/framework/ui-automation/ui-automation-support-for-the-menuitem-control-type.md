@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Menu Item control type
 - UI Automation, Menu Item control type
 ms.assetid: 54bce311-3d23-40b9-ba90-1bdbdaf8fbba
-ms.openlocfilehash: c65e30ffea64a9b577cfee7535fd92e489bc7632
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 6e8755292d97e88ff97e039fa2fbafc60ebc4eae
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446709"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741567"
 ---
 # <a name="ui-automation-support-for-the-menuitem-control-type"></a>MenuItem 컨트롤 형식에 대한 UI 자동화 지원
 
@@ -22,7 +22,7 @@ ms.locfileid: "74446709"
 
 메뉴 컨트롤을 사용하면 명령 및 이벤트 처리기와 연관된 요소를 계층적으로 구성할 수 있습니다. 일반적인 Microsoft Windows 응용 프로그램에서 메뉴 모음에는 몇 가지 메뉴 항목 (예: **파일**, **편집**, **창**)이 있고 각 메뉴 항목에 메뉴가 표시 됩니다. 메뉴 하나에 메뉴 항목 컬렉션(예: **새로 만들기**, **열기**, **닫기**)이 들어 있으며, 클릭하면 확장되어 추가 메뉴 항목이 표시되거나 특정 작업을 수행할 수 있습니다. 메뉴 항목은 메뉴, 메뉴 모음 또는 도구 모음에서 호스트될 수 있습니다.
 
-다음 섹션에서는 MenuItem 컨트롤 형식에 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 구조, 속성, 컨트롤 패턴, 이벤트를 정의합니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 요구 사항은 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]또는 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]의 모든 목록 컨트롤에 적용됩니다.
+다음 섹션에서는 MenuItem 컨트롤 형식에 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 구조, 속성, 컨트롤 패턴, 이벤트를 정의합니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 요구 사항은 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 또는 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]있는지 여부에 관계 없이 모든 목록 컨트롤에 적용 됩니다.
 
 <a name="Required_UI_Automation_Tree_Structure"></a>
 
@@ -107,7 +107,7 @@ ms.locfileid: "74446709"
 
 ## <a name="legacy-issues"></a>레거시 문제
 
-Toggle 패턴은 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 메뉴 항목이 선택되고 Toggle 패턴을 지원하는 데 필요하다고 프로그래밍 방식으로 판단할 수 있는 경우에만 지원됩니다. [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 메뉴 항목은 선택될 수 있는지 여부를 노출하지 않기 때문에 메뉴 항목이 선택되지 않으면 Invoke 패턴이 지원됩니다. Toggle 패턴만 지원하는 메뉴 항목에 대해서도 Invoke 패턴이 항상 지원되도록 하는 예외가 적용됩니다. Invoke 패턴을 지원했던(메뉴 항목이 선택 취소되었을 때) 요소가 이 패턴이 선택된 후에는 더 이상 지원하지 않게 되므로 클라이언트에서 혼동되지 않습니다.
+설정/해제 패턴은 Win32 메뉴 항목이 선택 된 경우에만 지원 되 고 프로그래밍 방식으로 설정/해제 패턴을 지 원하는 데 필요한 결정을 받을 수 있습니다. Win32 메뉴 항목이 검사 가능 여부를 표시 하지 않기 때문에 메뉴 항목이 선택 되지 않으면 Invoke 패턴이 지원 됩니다. Toggle 패턴만 지원하는 메뉴 항목에 대해서도 Invoke 패턴이 항상 지원되도록 하는 예외가 적용됩니다. Invoke 패턴을 지원했던(메뉴 항목이 선택 취소되었을 때) 요소가 이 패턴이 선택된 후에는 더 이상 지원하지 않게 되므로 클라이언트에서 혼동되지 않습니다.
 
 ## <a name="see-also"></a>참고 항목
 

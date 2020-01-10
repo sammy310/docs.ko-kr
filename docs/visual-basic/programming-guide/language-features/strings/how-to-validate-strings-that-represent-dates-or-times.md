@@ -5,12 +5,12 @@ helpviewer_keywords:
 - strings [Visual Basic], validating
 - String data type [Visual Basic], validation
 ms.assetid: ae7d4b29-3436-4032-bdbf-4650eb1c8e19
-ms.openlocfilehash: 34af6dffeb0d05eaeed38354f8007554b60e91b0
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 5321e7a85c45ddb6ce17433bd25ce9ca2165f0a3
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344350"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348407"
 ---
 # <a name="how-to-validate-strings-that-represent-dates-or-times-visual-basic"></a>방법: 날짜 또는 시간을 나타내는 문자열 확인(Visual Basic)
 다음 코드 예제에서는 문자열이 유효한 날짜 또는 시간을 나타내는지 여부를 나타내는 `Boolean` 값을 설정 합니다.  
@@ -18,7 +18,7 @@ ms.locfileid: "74344350"
 ## <a name="example"></a>예제  
  [!code-vb[VbVbcnRegEx#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnRegEx/VB/Class1.vb#2)]  
   
-## <a name="compiling-the-code"></a>코드 컴파일  
+## <a name="compile-the-code"></a>코드 컴파일  
  `("01/01/03")` 및 `"9:30 PM"`의 유효성을 검사할 날짜 및 시간으로 바꿉니다. 문자열을 하드 코드 된 다른 문자열로 바꿀 수 있습니다. `String` 변수를 사용 하거나 `InputBox`와 같이 문자열을 반환 하는 메서드를 사용 합니다.  
   
 ## <a name="robust-programming"></a>강력한 프로그래밍  

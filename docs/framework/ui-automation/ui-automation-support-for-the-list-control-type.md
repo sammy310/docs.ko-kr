@@ -6,12 +6,12 @@ helpviewer_keywords:
 - List control type
 - UI Automation, List control type
 ms.assetid: 0e959fcb-50f2-413b-948d-7167d279bc11
-ms.openlocfilehash: c5ea011651537aa5836eeebe217239234fec40ae
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: d870452348f8837ec6773fc066ed52844f7acccd
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446739"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741616"
 ---
 # <a name="ui-automation-support-for-the-list-control-type"></a>List 컨트롤 형식에 대한 UI 자동화 지원
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "74446739"
   
  List 컨트롤 형식은 항목의 플랫 그룹 구성 방법을 제공하며 사용자가 하나 이상의 이러한 항목을 선택할 수 있도록 합니다. List 컨트롤 형식에서는 포함될 수 있는 자식 요소 형식에 대한 제한이 엄격하지 않습니다. 따라서 UI 자동화 공급자가 선택 항목 컨테이너에 대해 잘 알려진 요소를 지원할 수 있습니다.  
   
- 다음 섹션의 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 요구 사항은 List 컨트롤 형식을 구현하는 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]또는 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]의 모든 컨트롤에 적용됩니다. 목록 컨테이너 컨트롤은 List 컨트롤 형식을 구현하는 컨트롤의 예입니다.  
+ 다음 섹션의 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 요구 사항은 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 또는 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]있는지 여부에 관계 없이 List 컨트롤 형식을 구현 하는 모든 컨트롤에 적용 됩니다. 목록 컨테이너 컨트롤은 List 컨트롤 형식을 구현하는 컨트롤의 예입니다.  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
 ## <a name="required-ui-automation-tree-structure"></a>필요한 UI 자동화 트리 구조  
