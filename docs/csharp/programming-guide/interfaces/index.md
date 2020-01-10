@@ -1,17 +1,16 @@
 ---
 title: 인터페이스 - C# 프로그래밍 가이드
-ms.custom: seodec18
 ms.date: 08/21/2018
 helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: d03917353a9e6879ccb3b368d7d190aeeacb702c
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 3187b8b94c6e46ec13312fc31ac1ed9852199d6b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75635238"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714618"
 ---
 # <a name="interfaces-c-programming-guide"></a>인터페이스(C# 프로그래밍 가이드)
 
@@ -54,7 +53,7 @@ ms.locfileid: "75635238"
 - 인터페이스는 추상 멤버만 갖는 추상 기본 클래스와 같습니다. 인터페이스를 구현하는 모든 클래스 또는 구조체는 모든 멤버를 구현해야 합니다.
 - 인터페이스는 직접 인스턴스화할 수 없습니다. 해당 멤버는 인터페이스를 구현하는 클래스 또는 구조체에 의해 구현됩니다.
 - 인터페이스는 이벤트, 인덱서, 메서드 및 속성을 포함할 수 있습니다.
-- 인터페이스에는 메서드의 구현이 포함되지 않습니다.
+- 인터페이스는 메서드의 구현을 포함하지 않습니다(C# 8.0에서 인터페이스는 [메서드에 대한 기본 구현](../../whats-new/csharp-8.md#default-interface-methods)을 가질 수 있음).
 - 클래스 또는 구조체는 여러 인터페이스를 구현할 수 있습니다. 클래스는 기본 클래스를 상속할 수 있으며 하나 이상의 인터페이스를 제공할 수도 있습니다.
 
 ## <a name="in-this-section"></a>단원 내용

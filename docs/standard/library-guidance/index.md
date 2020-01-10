@@ -1,15 +1,13 @@
 ---
 title: 오픈 소스 .NET 라이브러리 지침
 description: 고품질 .NET 라이브러리를 만드는 개발자를 위한 모범 사례 권장 사항입니다.
-author: jamesnk
-ms.author: mairaw
 ms.date: 10/17/2018
-ms.openlocfilehash: eff6c822757af6fb85622e88714accd40c32bcf5
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: c1e1c302eede86fd5555a8e84630e216e96f1ce7
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928954"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706454"
 ---
 # <a name="open-source-library-guidance"></a>오픈 소스 라이브러리 지침
 
@@ -38,15 +36,15 @@ ms.locfileid: "70928954"
 
 한편으로 **고려** 권장 사항은 일반적으로 따라야 하지만 규칙에 대한 정당한 예외가 있거나 지침을 따르지 않아도 됩니다.
 
-**✔️ 고려** [SemVer 2.0.0](https://semver.org/)을 사용하여 NuGet 패키지 버전을 관리합니다.
+**✔️ 고려**[SemVer 2.0.0](https://semver.org/)을 사용하여 NuGet 패키지 버전을 관리합니다.
 
 **회피** 권장 사항은 일반적으로 좋지는 않지만 규칙을 깨는 것이 적합한 경우를 언급합니다.
 
-**❌ 회피** 정확한 버전을 요구하는 NuGet 패키지 참조입니다.
+**❌회피** 정확한 버전을 요구하는 NuGet 패키지 참조는 사용하지 않습니다.
 
 마지막으로, **금지**는 수행하지 않아야 하는 항목을 나타냅니다.
 
-**❌ 금지** 강력한 이름이 지정되고 강력하지 않은 이름이 지정된 버전의 라이브러리를 게시합니다. 예를 들어 `Contoso.Api` 및 `Contoso.Api.StrongNamed`를 지정합니다.
+**❌** 강력한 이름 및 강력하지 않은 이름이 지정된 버전의 라이브러리를 게시하지 않습니다. 예를 들어 `Contoso.Api` 및 `Contoso.Api.StrongNamed`를 지정합니다.
 
 >[!div class="step-by-step"]
 >[다음](get-started.md)

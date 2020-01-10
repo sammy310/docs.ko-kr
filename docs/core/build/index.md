@@ -3,13 +3,12 @@ title: 소스에서 .NET Core 빌드
 description: 소스 코드에서 .NET Core 및 .NET Core CLI를 빌드하는 방법을 알아봅니다.
 author: bleroy
 ms.date: 06/28/2017
-ms.custom: seodec18
-ms.openlocfilehash: dcd7c909325eec5a79db74098d7ac880000eafa1
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: fe5431667d861d830c2ec56252e6e3e2ca08a866
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105393"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740921"
 ---
 # <a name="build-net-core-from-source"></a>소스에서 .NET Core 빌드
 
@@ -18,7 +17,7 @@ ms.locfileid: "70105393"
 
 ## <a name="build-the-clr-from-source"></a>소스에서 CLR 빌드
 
-.NET CoreCLR에 대한 소스 코드는 GitHub의 [dotnet/coreclr](https://github.com/dotnet/coreclr/) 리포지토리에서 확인할 수 있습니다.
+.NET CoreCLR에 대한 소스 코드는 GitHub의 [dotnet/runtime](https://github.com/dotnet/runtime/) 리포지토리에서 확인할 수 있습니다.
 
 현재 빌드는 다음 필수 구성 요소에 따라 달라집니다.
 
@@ -27,7 +26,7 @@ ms.locfileid: "70105393"
 - [Python](https://www.python.org/)
 - C++ 컴파일러
 
-이러한 필수 구성 요소를 설치한 후 [dotnet/coreclr](https://github.com/dotnet/coreclr/) 리포지토리의 맨 아래에 있는 빌드 스크립트(Windows의 경우 `build.cmd`, Linux 및 macOS의 경우 `build.sh`)를 호출하여 CLR을 빌드할 수 있습니다.
+이러한 필수 구성 요소를 설치한 후 [dotnet/runtime](https://github.com/dotnet/runtime/) 리포지토리의 맨 아래에 있는 빌드 스크립트(Windows의 경우 `build.cmd`, Linux 및 macOS의 경우 `build.sh`)를 호출하여 CLR을 빌드할 수 있습니다.
 
 구성 요소 설치는 OS(운영 체제)에 따라 달라집니다. 특정 OS에 대한 빌드 지침을 참조하세요.
 
@@ -43,7 +42,7 @@ OS에서 교차 빌드되지 않습니다(X64에서 빌드되는 ARM의 경우�
 빌드에는 다음과 같은 두 주요 `buildTypes`이 있습니다.
 
 - 디버그(기본값) - 최소 최적화와 추가 런타임 검사로 런타임을 컴파일합니다(어설션). 최적화 수준의 감소와 추가 검사는 런타임 실행을 늦추지만 디버깅에는 가치가 있습니다. 이는 개발 및 테스트 환경에 권장되는 설정입니다.
-- 릴리스 - 추가 런타임 검사 없이 전체 최적화를 사용하여 컴파일합니다. 런타임 성능이 더 빨라지지만 빌드하려면 약간 시간이 걸릴 수 있고 디버깅하기 어려울 수 있습니다. 이 빌드 유형을 선택하려면 `release`를 빌드 스크립트에 전달합니다.
+- 릴리스 - 추가 런타임 검사 없이 전체 최적화를 사용하여 컴파일합니다. 런타임 성능이 더 빨라지지만 빌드하려면 시간이 좀 더 걸릴 수 있고 디버깅하기 어려울 수 있습니다. 이 빌드 유형을 선택하려면 `release`를 빌드 스크립트에 전달합니다.
 
 또한 기본적으로 빌드는 런타임 실행 파일을 만들 뿐만 아니라 모든 테스트를 빌드합니다.
 변경 내용을 시험하려는 경우에는 필요하지 않은 테스트가 상당히 많습니다. 이러한 테스트는 시간이 오래 걸립니다.
@@ -72,13 +71,13 @@ OS에서 교차 빌드되지 않습니다(X64에서 빌드되는 ARM의 경우�
 새 런타임 사용에 대한 두 가지 기본 기술은 다음과 같습니다.
 
  1. **dotnet.exe 및 NuGet을 사용하여 애플리케이션을 작성합니다**.
-    방금 만든 NuGet 패키지 및 'dotnet' CLI(명령줄 인터페이스)를 사용하여 새 런타임을 사용하는 프로그램 작성에 대한 지침은 [사용자의 빌드 사용](https://github.com/dotnet/coreclr/blob/master/Documentation/workflow/UsingYourBuild.md)을 참조하세요. 이 기술은 비런타임 개발자가 새 런타임을 사용할 것으로 예상되는 방법입니다.
+    방금 만든 NuGet 패키지 및 'dotnet' CLI(명령줄 인터페이스)를 사용하여 새 런타임을 사용하는 프로그램 작성에 대한 지침은 [사용자의 빌드 사용](https://github.com/dotnet/runtime/blob/master/docs/workflow/testing/using-your-build.md)을 참조하세요. 이 기술은 비런타임 개발자가 새 런타임을 사용할 것으로 예상되는 방법입니다.
 
  2. **corerun.exe를 사용하여 패키지되지 않은 DLL을 사용하는 애플리케이션을 실행합니다**.
     이 리포지토리는 NuGet에서 종속성을 사용하지 않는 corerun.exe라는 간단한 호스트도 정의합니다.
     실제로 사용할 필요한 DLL을 가져올 위치를 호스트에 입력해야 하고, 수동으로 수집해야 합니다.
-    이 기술은 [dotnet/coreclr](https://github.com/dotnet/coreclr) 리포지토리의 모든 테스트에 사용되며, 예비 유닛 테스트처럼 빠른 로컬 ‘edit-compile-debug’ 루프에 유용합니다.
-    이 기술 사용에 대한 자세한 내용은 [Executing .NET Core Apps with CoreRun.exe](https://github.com/dotnet/coreclr/blob/master/Documentation/workflow/UsingCoreRun.md)(CoreRun.exe를 사용하여 .NET Core 앱 실행)를 참조하세요.
+    이 기술은 [dotnet/runtime](https://github.com/dotnet/runtime) 리포지토리의 모든 테스트에 사용되며, 예비 유닛 테스트처럼 빠른 로컬 ‘edit-compile-debug’ 루프에 유용합니다.
+    이 기술 사용에 대한 자세한 내용은 [Executing .NET Core Apps with CoreRun.exe](https://github.com/dotnet/runtime/blob/master/docs/workflow/testing/using-corerun.md)(CoreRun.exe를 사용하여 .NET Core 앱 실행)를 참조하세요.
 
 ## <a name="build-the-cli-from-source"></a>소스에서 CLI 빌드
 
@@ -99,8 +98,8 @@ OS에서 교차 빌드되지 않습니다(X64에서 빌드되는 ARM의 경우�
 
 *artifacts/{os}-{arch}/stage2*의 `dotnet` 실행 파일을 사용하여 새로 빌드한 CLI를 사용해 봅니다. 현재 콘솔에서 `dotnet`을 호출할 때 빌드 출력을 사용하려면 *artifacts/{os}-{arch}/stage2*를 PATH에 추가할 수도 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [.NET Core 공용 언어 런타임(CoreCLR)](https://github.com/dotnet/coreclr/blob/master/README.md)
+- [.NET 런타임](https://github.com/dotnet/runtime/blob/master/README.md)
 - [.NET Core CLI 개발자 가이드](https://github.com/dotnet/cli/blob/master/Documentation/project-docs/developer-guide.md)
 - [.NET Core 배포 패키징](./distribution-packaging.md)

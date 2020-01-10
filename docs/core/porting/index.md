@@ -3,17 +3,16 @@ title: .NET Framework에서 .NET Core로 이식
 description: 이식 프로세스를 이해하고 .NET Framework 프로젝트를 .NET Core로 이식할 때 유용한 도구에 관해 알아보세요.
 author: cartermp
 ms.date: 10/22/2019
-ms.custom: seodec18
-ms.openlocfilehash: 89f00e5c6ce7f3cea7a3135c9b2856c54a70da40
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 3dbd4a1f608d71f28fa507da2e11fc41226664c7
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73038527"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714334"
 ---
 # <a name="overview-of-the-porting-process-from-net-framework-to-net-core"></a>.NET Framework에서 .NET Core로의 이식 프로세스 개요
 
-현재 .NET Framework에서 실행되는 코드를 .NET Core로 이식해야 하는 경우가 있습니다. 이 문서는 다음을 제공합니다.
+현재 .NET Framework에서 실행되는 코드를 .NET Core로 이식해야 하는 경우가 있습니다. 이 문서에서는 다음을 제공합니다.
 
 * 이식 프로세스 개요
 * 코드를 .NET Core로 이식할 때 유용하게 사용할 수 있는 도구 목록

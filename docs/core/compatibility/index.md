@@ -2,12 +2,12 @@
 title: 호환성이 손상되는 변경 유형 - .NET Core
 description: .Net Core가 .NET 버전에서 개발자에 대한 호환성을 유지하는 방법 및 호환성이 손상되는 변경으로 간주되는 변경 사항 유형을 알아보세요.
 ms.date: 06/10/2019
-ms.openlocfilehash: 5624a35a0d71224faf9adc5df2b02a529e650314
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: a84468c0c0e04f367dc7e89ce806ac01b2b49b48
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74567713"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740886"
 ---
 # <a name="changes-that-affect-compatibility"></a>호환성에 영향을 미치는 변경 사항
 
@@ -19,7 +19,7 @@ ms.locfileid: "74567713"
 
 .NET 구현 전체의 호환성과 더불어, 개발자는 .NET Core 버전 전체에서 높은 수준의 호환성을 기대합니다. 특히, 이전 버전의 .NET Core용으로 작성된 코드가 최신 .NET Core 버전에서 원활하게 실행되어야 합니다. 사실 대부분의 개발자는 새로 릴리스된 .NET Core 버전의 새 API가 해당 API를 도입한 시험판 버전과도 호환되어야 한다고 기대합니다.
 
-이 문서에서는 호환성 변경(또는 호환성이 손상되는 변경) 범주와 .NET 팀이 이러한 각 범주의 변경 내용을 평가하는 방법을 간략하게 설명합니다. .NET 팀이 호환성이 손상되는 가능한 변경에 접근하는 방법을 이해하는 것은 [dotnet/corefx](https://github.com/dotnet/corefx) GitHub 리포지토리에서 기존 API의 동작을 수정하는 끌어오기 요청을 여는 개발자에게 특히 유용합니다.
+이 문서에서는 호환성 변경(또는 호환성이 손상되는 변경) 범주와 .NET 팀이 이러한 각 범주의 변경 내용을 평가하는 방법을 간략하게 설명합니다. .NET 팀이 호환성이 손상되는 가능한 변경에 접근하는 방법을 이해하는 것은 [dotnet/runtime](https://github.com/dotnet/runtime) GitHub 리포지토리에서 기존 API의 동작을 수정하는 끌어오기 요청을 여는 개발자에게 특히 유용합니다.
 
 > [!NOTE]
 > 이진 호환성, 이전 버전과 호환성 등의 호환성 범주에 대한 정의는 [호환성이 손상되는 변경 범주](categories.md)를 참조하세요.
@@ -77,11 +77,11 @@ ms.locfileid: "74567713"
 
   인터페이스 제거 규칙의 한 가지 예외로, 제거한 인터페이스에서 파생되는 인터페이스 구현을 추가할 수 있습니다. 예를 들어 이제 <xref:System.IDisposable>을 구현하는 <xref:System.ComponentModel.IComponent>를 형식 또는 인터페이스가 구현하는 경우 <xref:System.IDisposable>을 제거할 수 있습니다.
 
-- **❌ `readonly struct` 형식을 [struct](../../csharp/language-reference/keywords/struct.md) 형식으로 변경**
+- **❌`readonly struct` 형식을 [struct](../../csharp/language-reference/keywords/struct.md) 형식으로 변경**
 
   `struct` 형식을 `readonly struct` 형식으로 변경할 수는 있습니다.
 
-- **❌ [struct](../../csharp/language-reference/keywords/struct.md) 형식을 `ref struct` 형식으로 변경하거나 그 반대로 변경**
+- **❌[struct](../../csharp/language-reference/keywords/struct.md) 형식을 `ref struct` 형식으로 변경하거나 그 반대로 변경**
 
 - **❌ 표시 형식 축소**
 
@@ -143,7 +143,7 @@ ms.locfileid: "74567713"
 
   - 개발자가 [명명된 인수](../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md#named-arguments)를 사용하는 경우 [소스 호환성](categories.md#source-compatibility)이 손상됩니다.
 
-- **❌ `ref` 반환 값에서 `ref readonly` 반환 값으로 변경**
+- **❌`ref` 반환 값에서 `ref readonly` 반환 값으로 변경**
 
 - **❌ 가상 메서드 또는 인터페이스의 `ref readonly`에서 `ref` 반환 값으로 변경**
 
@@ -178,7 +178,7 @@ ms.locfileid: "74567713"
 
 - **❌ 멤버의 표시 유형 축소**
 
-   여기에는 형식에 ‘액세스할 수 있는’(public 또는 protected) 생성자가 있고 형식이 [sealed](../../csharp/language-reference/keywords/sealed.md)가 ‘아닌’ 경우 [protected](../../csharp/language-reference/keywords/protected.md) 멤버의 표시 유형을 줄이는 경우가 포함됩니다.   이러한 경우가 아니면 보호된 멤버의 표시 유형을 줄일 수 있습니다.
+   여기에는 형식에 *액세스할 수 있는*(public 또는 protected) 생성자가 있고 형식이 [sealed](../../csharp/language-reference/keywords/sealed.md)가 *아닌’ 경우* [protected](../../csharp/language-reference/keywords/protected.md) 멤버의 표시 유형을 줄이는 경우가 포함됩니다. 이러한 경우가 아니면 보호된 멤버의 표시 유형을 줄일 수 있습니다.
 
    멤버의 표시 유형을 늘릴 수는 있습니다.
 
@@ -300,7 +300,7 @@ ms.locfileid: "74567713"
 
 - **✔️ 매개 변수에 [params](../../csharp/language-reference/keywords/params.md) 추가**
 
-- **❌ [struct](../../csharp/language-reference/keywords/struct.md)를 [class](../../csharp/language-reference/keywords/class.md)로 변경하거나 그 반대로 변경**
+- **❌[struct](../../csharp/language-reference/keywords/struct.md)를 [class](../../csharp/language-reference/keywords/class.md)로 변경하거나 그 반대로 변경**
 
 - **❌ 코드 블록에 [checked](../../csharp/language-reference/keywords/virtual.md) 키워드 추가**
 
