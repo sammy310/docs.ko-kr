@@ -9,170 +9,168 @@ helpviewer_keywords:
 - .NET Framework, deploying
 - .NET Framework application deployment
 ms.assetid: 238d8284-6042-4a38-a7f6-1ee8efd719da
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 04cbfb8d41135b57c3e090959e041f95fcda2840
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: b1ba9810b4b0d5a1688318db1093a9ce9bdf8fda
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975689"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716470"
 ---
-# <a name="deploying-the-net-framework-and-applications"></a><span data-ttu-id="e570c-102">.NET Framework 및 애플리케이션 배포</span><span class="sxs-lookup"><span data-stu-id="e570c-102">Deploying the .NET Framework and Applications</span></span>
+# <a name="deploying-the-net-framework-and-applications"></a><span data-ttu-id="78452-102">.NET Framework 및 애플리케이션 배포</span><span class="sxs-lookup"><span data-stu-id="78452-102">Deploying the .NET Framework and Applications</span></span>
 
-<span data-ttu-id="e570c-103">이 문서는 애플리케이션과 함께 .NET Framework 배포를 시작하는 데 도움이 됩니다.</span><span class="sxs-lookup"><span data-stu-id="e570c-103">This article helps you get started deploying the .NET Framework with your application.</span></span> <span data-ttu-id="e570c-104">대부분의 정보는 개발자, OEM 및 엔터프라이즈 관리자를 위한 것입니다.</span><span class="sxs-lookup"><span data-stu-id="e570c-104">Most of the information is intended for developers, OEMs, and enterprise administrators.</span></span> <span data-ttu-id="e570c-105">컴퓨터에 .NET Framework를 설치하려는 사용자는 [.NET Framework 설치](../install/index.md)를 읽어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="e570c-105">Users who want to install the .NET Framework on their computers should read [Installing the .NET Framework](../install/index.md).</span></span>
+<span data-ttu-id="78452-103">이 문서는 애플리케이션과 함께 .NET Framework 배포를 시작하는 데 도움이 됩니다.</span><span class="sxs-lookup"><span data-stu-id="78452-103">This article helps you get started deploying the .NET Framework with your application.</span></span> <span data-ttu-id="78452-104">대부분의 정보는 개발자, OEM 및 엔터프라이즈 관리자를 위한 것입니다.</span><span class="sxs-lookup"><span data-stu-id="78452-104">Most of the information is intended for developers, OEMs, and enterprise administrators.</span></span> <span data-ttu-id="78452-105">컴퓨터에 .NET Framework를 설치하려는 사용자는 [.NET Framework 설치](../install/index.md)를 읽어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="78452-105">Users who want to install the .NET Framework on their computers should read [Installing the .NET Framework](../install/index.md).</span></span>
 
-## <a name="key-deployment-resources"></a><span data-ttu-id="e570c-106">주요 배포 리소스</span><span class="sxs-lookup"><span data-stu-id="e570c-106">Key Deployment Resources</span></span>
+## <a name="key-deployment-resources"></a><span data-ttu-id="78452-106">주요 배포 리소스</span><span class="sxs-lookup"><span data-stu-id="78452-106">Key Deployment Resources</span></span>
 
-<span data-ttu-id="e570c-107">.NET Framework 배포 및 서비스와 관련된 특정 정보는 다른 MSDN 항목의 다음 링크를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="e570c-107">Use the following links to other MSDN topics for specific information about deploying and servicing the .NET Framework.</span></span>
+<span data-ttu-id="78452-107">.NET Framework 배포 및 서비스와 관련된 특정 정보는 다른 MSDN 항목의 다음 링크를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="78452-107">Use the following links to other MSDN topics for specific information about deploying and servicing the .NET Framework.</span></span>
 
-<span data-ttu-id="e570c-108">**설치 및 배포**</span><span class="sxs-lookup"><span data-stu-id="e570c-108">**Setup and deployment**</span></span>
+<span data-ttu-id="78452-108">**설치 및 배포**</span><span class="sxs-lookup"><span data-stu-id="78452-108">**Setup and deployment**</span></span>
 
-- <span data-ttu-id="e570c-109">일반적인 설치 관리자 및 배포 정보:</span><span class="sxs-lookup"><span data-stu-id="e570c-109">General installer and deployment information:</span></span>
+- <span data-ttu-id="78452-109">일반적인 설치 관리자 및 배포 정보:</span><span class="sxs-lookup"><span data-stu-id="78452-109">General installer and deployment information:</span></span>
 
-  - <span data-ttu-id="e570c-110">설치 관리자 옵션:</span><span class="sxs-lookup"><span data-stu-id="e570c-110">Installer options:</span></span>
+  - <span data-ttu-id="78452-110">설치 관리자 옵션:</span><span class="sxs-lookup"><span data-stu-id="78452-110">Installer options:</span></span>
 
-    - [<span data-ttu-id="e570c-111">웹 설치 관리자</span><span class="sxs-lookup"><span data-stu-id="e570c-111">Web installer</span></span>](../install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable)
+    - [<span data-ttu-id="78452-111">웹 설치 관리자</span><span class="sxs-lookup"><span data-stu-id="78452-111">Web installer</span></span>](../install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable)
 
-    - [<span data-ttu-id="e570c-112">오프라인 설치 관리자</span><span class="sxs-lookup"><span data-stu-id="e570c-112">Offline installer</span></span>](../install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable)
+    - [<span data-ttu-id="78452-112">오프라인 설치 관리자</span><span class="sxs-lookup"><span data-stu-id="78452-112">Offline installer</span></span>](../install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable)
 
-  - <span data-ttu-id="e570c-113">설치 모드:</span><span class="sxs-lookup"><span data-stu-id="e570c-113">Installation modes:</span></span>
+  - <span data-ttu-id="78452-113">설치 모드:</span><span class="sxs-lookup"><span data-stu-id="78452-113">Installation modes:</span></span>
 
-    - [<span data-ttu-id="e570c-114">자동 설치</span><span class="sxs-lookup"><span data-stu-id="e570c-114">Silent installation</span></span>](deployment-guide-for-developers.md#chaining_custom)
+    - [<span data-ttu-id="78452-114">자동 설치</span><span class="sxs-lookup"><span data-stu-id="78452-114">Silent installation</span></span>](deployment-guide-for-developers.md#chaining_custom)
 
-    - [<span data-ttu-id="e570c-115">UI 표시</span><span class="sxs-lookup"><span data-stu-id="e570c-115">Displaying a UI</span></span>](deployment-guide-for-developers.md#chaining_default)
+    - [<span data-ttu-id="78452-115">UI 표시</span><span class="sxs-lookup"><span data-stu-id="78452-115">Displaying a UI</span></span>](deployment-guide-for-developers.md#chaining_default)
 
-  - [<span data-ttu-id="e570c-116">.NET Framework 4.5를 설치하는 동안 시스템 다시 시작 줄이기</span><span class="sxs-lookup"><span data-stu-id="e570c-116">Reducing system restarts during .NET Framework 4.5 installations</span></span>](reducing-system-restarts.md)
+  - [<span data-ttu-id="78452-116">.NET Framework 4.5를 설치하는 동안 시스템 다시 시작 줄이기</span><span class="sxs-lookup"><span data-stu-id="78452-116">Reducing system restarts during .NET Framework 4.5 installations</span></span>](reducing-system-restarts.md)
 
-  - [<span data-ttu-id="e570c-117">차단된 .NET Framework 설치 및 제거 문제 해결</span><span class="sxs-lookup"><span data-stu-id="e570c-117">Troubleshoot blocked .NET Framework installations and uninstallations</span></span>](../install/troubleshoot-blocked-installations-and-uninstallations.md)
+  - [<span data-ttu-id="78452-117">차단된 .NET Framework 설치 및 제거 문제 해결</span><span class="sxs-lookup"><span data-stu-id="78452-117">Troubleshoot blocked .NET Framework installations and uninstallations</span></span>](../install/troubleshoot-blocked-installations-and-uninstallations.md)
 
-- <span data-ttu-id="e570c-118">클라이언트 애플리케이션과 함께 .NET Framework 배포(개발자용):</span><span class="sxs-lookup"><span data-stu-id="e570c-118">Deploying the .NET Framework with a client application (for developers):</span></span>
+- <span data-ttu-id="78452-118">클라이언트 애플리케이션과 함께 .NET Framework 배포(개발자용):</span><span class="sxs-lookup"><span data-stu-id="78452-118">Deploying the .NET Framework with a client application (for developers):</span></span>
 
-  - <span data-ttu-id="e570c-119">설치 및 배포 프로젝트에 [InstallShield 사용](deployment-guide-for-developers.md#installshield-deployment)</span><span class="sxs-lookup"><span data-stu-id="e570c-119">[Using InstallShield](deployment-guide-for-developers.md#installshield-deployment) in a setup and deployment project</span></span>
+  - <span data-ttu-id="78452-119">설치 및 배포 프로젝트에 [InstallShield 사용](deployment-guide-for-developers.md#installshield-deployment)</span><span class="sxs-lookup"><span data-stu-id="78452-119">[Using InstallShield](deployment-guide-for-developers.md#installshield-deployment) in a setup and deployment project</span></span>
 
-  - [<span data-ttu-id="e570c-120">Visual Studio ClickOnce 애플리케이션 사용</span><span class="sxs-lookup"><span data-stu-id="e570c-120">Using a Visual Studio ClickOnce application</span></span>](deployment-guide-for-developers.md#clickonce-deployment)
+  - [<span data-ttu-id="78452-120">Visual Studio ClickOnce 애플리케이션 사용</span><span class="sxs-lookup"><span data-stu-id="78452-120">Using a Visual Studio ClickOnce application</span></span>](deployment-guide-for-developers.md#clickonce-deployment)
 
-  - [<span data-ttu-id="e570c-121">WiX 설치 패키지 만들기</span><span class="sxs-lookup"><span data-stu-id="e570c-121">Creating a WiX installation package</span></span>](deployment-guide-for-developers.md#wix)
+  - [<span data-ttu-id="78452-121">WiX 설치 패키지 만들기</span><span class="sxs-lookup"><span data-stu-id="78452-121">Creating a WiX installation package</span></span>](deployment-guide-for-developers.md#wix)
 
-  - [<span data-ttu-id="e570c-122">사용자 지정 설치 관리자 사용</span><span class="sxs-lookup"><span data-stu-id="e570c-122">Using a custom installer</span></span>](deployment-guide-for-developers.md#chaining)
+  - [<span data-ttu-id="78452-122">사용자 지정 설치 관리자 사용</span><span class="sxs-lookup"><span data-stu-id="78452-122">Using a custom installer</span></span>](deployment-guide-for-developers.md#chaining)
 
-  - <span data-ttu-id="e570c-123">개발자용 [추가 정보](deployment-guide-for-developers.md)</span><span class="sxs-lookup"><span data-stu-id="e570c-123">[Additional information](deployment-guide-for-developers.md) for developers</span></span>
+  - <span data-ttu-id="78452-123">개발자용 [추가 정보](deployment-guide-for-developers.md)</span><span class="sxs-lookup"><span data-stu-id="78452-123">[Additional information](deployment-guide-for-developers.md) for developers</span></span>
 
-- <span data-ttu-id="e570c-124">.NET Framework 배포(OEM 및 관리자용):</span><span class="sxs-lookup"><span data-stu-id="e570c-124">Deploying the .NET Framework (for OEMs and administrators):</span></span>
+- <span data-ttu-id="78452-124">.NET Framework 배포(OEM 및 관리자용):</span><span class="sxs-lookup"><span data-stu-id="78452-124">Deploying the .NET Framework (for OEMs and administrators):</span></span>
 
-  - [<span data-ttu-id="e570c-125">Windows ADK(평가 및 배포 키트)</span><span class="sxs-lookup"><span data-stu-id="e570c-125">Windows Assessment and Deployment Kit (ADK)</span></span>](https://go.microsoft.com/fwlink/p/?LinkId=254976)
+  - [<span data-ttu-id="78452-125">Windows ADK(평가 및 배포 키트)</span><span class="sxs-lookup"><span data-stu-id="78452-125">Windows Assessment and Deployment Kit (ADK)</span></span>](https://go.microsoft.com/fwlink/p/?LinkId=254976)
 
-  - [<span data-ttu-id="e570c-126">관리자 가이드</span><span class="sxs-lookup"><span data-stu-id="e570c-126">Administrator's guide</span></span>](guide-for-administrators.md)
+  - [<span data-ttu-id="78452-126">관리자 가이드</span><span class="sxs-lookup"><span data-stu-id="78452-126">Administrator's guide</span></span>](guide-for-administrators.md)
 
-<span data-ttu-id="e570c-127">**서비스**</span><span class="sxs-lookup"><span data-stu-id="e570c-127">**Servicing**</span></span>
+<span data-ttu-id="78452-127">**서비스**</span><span class="sxs-lookup"><span data-stu-id="78452-127">**Servicing**</span></span>
 
-- <span data-ttu-id="e570c-128">일반적인 내용은 [.NET Framework 블로그](https://devblogs.microsoft.com/dotnet/)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="e570c-128">For general information, see the [.NET Framework blog](https://devblogs.microsoft.com/dotnet/).</span></span>
+- <span data-ttu-id="78452-128">일반적인 내용은 [.NET Framework 블로그](https://devblogs.microsoft.com/dotnet/)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="78452-128">For general information, see the [.NET Framework blog](https://devblogs.microsoft.com/dotnet/).</span></span>
 
-- [<span data-ttu-id="e570c-129">버전 검색</span><span class="sxs-lookup"><span data-stu-id="e570c-129">Detecting versions</span></span>](../migration-guide/how-to-determine-which-versions-are-installed.md)
+- [<span data-ttu-id="78452-129">버전 검색</span><span class="sxs-lookup"><span data-stu-id="78452-129">Detecting versions</span></span>](../migration-guide/how-to-determine-which-versions-are-installed.md)
 
-- [<span data-ttu-id="e570c-130">서비스 팩과 업데이트 검색</span><span class="sxs-lookup"><span data-stu-id="e570c-130">Detecting service packs and updates</span></span>](../migration-guide/how-to-determine-which-net-framework-updates-are-installed.md)
+- [<span data-ttu-id="78452-130">서비스 팩과 업데이트 검색</span><span class="sxs-lookup"><span data-stu-id="78452-130">Detecting service packs and updates</span></span>](../migration-guide/how-to-determine-which-net-framework-updates-are-installed.md)
 
-## <a name="features-that-simplify-deployment"></a><span data-ttu-id="e570c-131">배포를 간소화하는 기능</span><span class="sxs-lookup"><span data-stu-id="e570c-131">Features That Simplify Deployment</span></span>
+## <a name="features-that-simplify-deployment"></a><span data-ttu-id="78452-131">배포를 간소화하는 기능</span><span class="sxs-lookup"><span data-stu-id="78452-131">Features That Simplify Deployment</span></span>
 
-<span data-ttu-id="e570c-132">.NET Framework에서는 애플리케이션을 보다 쉽게 배포할 수 있게 해주는 다음과 같은 많은 기본 기능을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="e570c-132">The .NET Framework provides a number of basic features that make it easier to deploy your applications:</span></span>
+<span data-ttu-id="78452-132">.NET Framework에서는 애플리케이션을 보다 쉽게 배포할 수 있게 해주는 다음과 같은 많은 기본 기능을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="78452-132">The .NET Framework provides a number of basic features that make it easier to deploy your applications:</span></span>
 
-- <span data-ttu-id="e570c-133">영향을 주지 않은 애플리케이션.</span><span class="sxs-lookup"><span data-stu-id="e570c-133">No-impact applications.</span></span>
+- <span data-ttu-id="78452-133">영향을 주지 않은 애플리케이션.</span><span class="sxs-lookup"><span data-stu-id="78452-133">No-impact applications.</span></span>
 
-     <span data-ttu-id="e570c-134">이 기능은 애플리케이션 격리를 제공하고 DLL 충돌을 제거합니다.</span><span class="sxs-lookup"><span data-stu-id="e570c-134">This feature provides application isolation and eliminates DLL conflicts.</span></span> <span data-ttu-id="e570c-135">기본적으로 구성 요소는 다른 애플리케이션에 영향을 주지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="e570c-135">By default, components do not affect other applications.</span></span>
+     <span data-ttu-id="78452-134">이 기능은 애플리케이션 격리를 제공하고 DLL 충돌을 제거합니다.</span><span class="sxs-lookup"><span data-stu-id="78452-134">This feature provides application isolation and eliminates DLL conflicts.</span></span> <span data-ttu-id="78452-135">기본적으로 구성 요소는 다른 애플리케이션에 영향을 주지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="78452-135">By default, components do not affect other applications.</span></span>
 
-- <span data-ttu-id="e570c-136">기본적으로 전용 구성 요소.</span><span class="sxs-lookup"><span data-stu-id="e570c-136">Private components by default.</span></span>
+- <span data-ttu-id="78452-136">기본적으로 전용 구성 요소.</span><span class="sxs-lookup"><span data-stu-id="78452-136">Private components by default.</span></span>
 
-     <span data-ttu-id="e570c-137">기본적으로 구성 요소는 애플리케이션 디렉터리에 배포되며 포함하는 애플리케이션에만 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="e570c-137">By default, components are deployed to the application directory and are visible only to the containing application.</span></span>
+     <span data-ttu-id="78452-137">기본적으로 구성 요소는 애플리케이션 디렉터리에 배포되며 포함하는 애플리케이션에만 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="78452-137">By default, components are deployed to the application directory and are visible only to the containing application.</span></span>
 
-- <span data-ttu-id="e570c-138">제어된 코드 공유.</span><span class="sxs-lookup"><span data-stu-id="e570c-138">Controlled code sharing.</span></span>
+- <span data-ttu-id="78452-138">제어된 코드 공유.</span><span class="sxs-lookup"><span data-stu-id="78452-138">Controlled code sharing.</span></span>
 
-     <span data-ttu-id="e570c-139">코드를 공유하려면 기본 동작 대신 코드를 공유할 수 있도록 명시적으로 설정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="e570c-139">Code sharing requires you to explicitly make code available for sharing instead of being the default behavior.</span></span>
+     <span data-ttu-id="78452-139">코드를 공유하려면 기본 동작 대신 코드를 공유할 수 있도록 명시적으로 설정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="78452-139">Code sharing requires you to explicitly make code available for sharing instead of being the default behavior.</span></span>
 
-- <span data-ttu-id="e570c-140">Side-by-side 버전 관리.</span><span class="sxs-lookup"><span data-stu-id="e570c-140">Side-by-side versioning.</span></span>
+- <span data-ttu-id="78452-140">Side-by-side 버전 관리.</span><span class="sxs-lookup"><span data-stu-id="78452-140">Side-by-side versioning.</span></span>
 
-     <span data-ttu-id="e570c-141">구성 요소 또는 애플리케이션의 여러 버전이 동시에 존재할 수 있으며, 사용할 버전을 선택하면 공용 언어 런타임에서 버전 관리 정책을 적용합니다.</span><span class="sxs-lookup"><span data-stu-id="e570c-141">Multiple versions of a component or application can coexist, you can choose which versions to use, and the common language runtime enforces versioning policy.</span></span>
+     <span data-ttu-id="78452-141">구성 요소 또는 애플리케이션의 여러 버전이 동시에 존재할 수 있으며, 사용할 버전을 선택하면 공용 언어 런타임에서 버전 관리 정책을 적용합니다.</span><span class="sxs-lookup"><span data-stu-id="78452-141">Multiple versions of a component or application can coexist, you can choose which versions to use, and the common language runtime enforces versioning policy.</span></span>
 
-- <span data-ttu-id="e570c-142">XCOPY 배포 및 복제.</span><span class="sxs-lookup"><span data-stu-id="e570c-142">XCOPY deployment and replication.</span></span>
+- <span data-ttu-id="78452-142">XCOPY 배포 및 복제.</span><span class="sxs-lookup"><span data-stu-id="78452-142">XCOPY deployment and replication.</span></span>
 
-     <span data-ttu-id="e570c-143">레지스트리 항목이나 종속성 없이 자체 설명적 및 자체 포함된 구성 요소와 애플리케이션을 배포할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e570c-143">Self-described and self-contained components and applications can be deployed without registry entries or dependencies.</span></span>
+     <span data-ttu-id="78452-143">레지스트리 항목이나 종속성 없이 자체 설명적 및 자체 포함된 구성 요소와 애플리케이션을 배포할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="78452-143">Self-described and self-contained components and applications can be deployed without registry entries or dependencies.</span></span>
 
-- <span data-ttu-id="e570c-144">즉시 업데이트.</span><span class="sxs-lookup"><span data-stu-id="e570c-144">On-the-fly updates.</span></span>
+- <span data-ttu-id="78452-144">즉시 업데이트.</span><span class="sxs-lookup"><span data-stu-id="78452-144">On-the-fly updates.</span></span>
 
-     <span data-ttu-id="e570c-145">관리자는 ASP.NET과 같은 호스트를 사용하여 원격 컴퓨터에서도 프로그램 Dll을 업데이트할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e570c-145">Administrators can use hosts, such as ASP.NET, to update program DLLs, even on remote computers.</span></span>
+     <span data-ttu-id="78452-145">관리자는 ASP.NET과 같은 호스트를 사용하여 원격 컴퓨터에서도 프로그램 Dll을 업데이트할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="78452-145">Administrators can use hosts, such as ASP.NET, to update program DLLs, even on remote computers.</span></span>
 
-- <span data-ttu-id="e570c-146">Windows Installer와 통합.</span><span class="sxs-lookup"><span data-stu-id="e570c-146">Integration with the Windows Installer.</span></span>
+- <span data-ttu-id="78452-146">Windows Installer와 통합.</span><span class="sxs-lookup"><span data-stu-id="78452-146">Integration with the Windows Installer.</span></span>
 
-     <span data-ttu-id="e570c-147">애플리케이션을 배포할 때 광고, 게시, 복구 및 요청 시 설치를 모두 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e570c-147">Advertisement, publishing, repair, and install-on-demand are all available when deploying your application.</span></span>
+     <span data-ttu-id="78452-147">애플리케이션을 배포할 때 광고, 게시, 복구 및 요청 시 설치를 모두 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="78452-147">Advertisement, publishing, repair, and install-on-demand are all available when deploying your application.</span></span>
 
-- <span data-ttu-id="e570c-148">엔터프라이즈 배포</span><span class="sxs-lookup"><span data-stu-id="e570c-148">Enterprise deployment.</span></span>
+- <span data-ttu-id="78452-148">엔터프라이즈 배포</span><span class="sxs-lookup"><span data-stu-id="78452-148">Enterprise deployment.</span></span>
 
-     <span data-ttu-id="e570c-149">이 기능은 Active Directory 사용을 포함하여 소프트웨어를 쉽게 배포할 수 있게 해줍니다.</span><span class="sxs-lookup"><span data-stu-id="e570c-149">This feature provides easy software distribution, including using Active Directory.</span></span>
+     <span data-ttu-id="78452-149">이 기능은 Active Directory 사용을 포함하여 소프트웨어를 쉽게 배포할 수 있게 해줍니다.</span><span class="sxs-lookup"><span data-stu-id="78452-149">This feature provides easy software distribution, including using Active Directory.</span></span>
 
-- <span data-ttu-id="e570c-150">다운로드 및 캐시.</span><span class="sxs-lookup"><span data-stu-id="e570c-150">Downloading and caching.</span></span>
+- <span data-ttu-id="78452-150">다운로드 및 캐시.</span><span class="sxs-lookup"><span data-stu-id="78452-150">Downloading and caching.</span></span>
 
-     <span data-ttu-id="e570c-151">증분 다운로드를 통해 다운로드가 더 작게 유지되며, 배포 영향을 최소화하기 위해 애플리케이션에서만 사용하도록 구성 요소를 격리시킬 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e570c-151">Incremental downloads keep downloads smaller, and components can be isolated for use only by the application for low-impact deployment.</span></span>
+     <span data-ttu-id="78452-151">증분 다운로드를 통해 다운로드가 더 작게 유지되며, 배포 영향을 최소화하기 위해 애플리케이션에서만 사용하도록 구성 요소를 격리시킬 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="78452-151">Incremental downloads keep downloads smaller, and components can be isolated for use only by the application for low-impact deployment.</span></span>
 
-- <span data-ttu-id="e570c-152">부분적으로 신뢰할 수 있는 코드.</span><span class="sxs-lookup"><span data-stu-id="e570c-152">Partially trusted code.</span></span>
+- <span data-ttu-id="78452-152">부분적으로 신뢰할 수 있는 코드.</span><span class="sxs-lookup"><span data-stu-id="78452-152">Partially trusted code.</span></span>
 
-     <span data-ttu-id="e570c-153">ID가 사용자 대신 코드를 기반으로 하며 인증서 대화 상자가 나타나지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="e570c-153">Identity is based on the code instead of the user, and no certificate dialog boxes appear.</span></span>
+     <span data-ttu-id="78452-153">ID가 사용자 대신 코드를 기반으로 하며 인증서 대화 상자가 나타나지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="78452-153">Identity is based on the code instead of the user, and no certificate dialog boxes appear.</span></span>
 
-## <a name="packaging-and-distributing-net-framework-applications"></a><span data-ttu-id="e570c-154">.NET Framework 애플리케이션 패키징 및 배포</span><span class="sxs-lookup"><span data-stu-id="e570c-154">Packaging and Distributing .NET Framework Applications</span></span>
+## <a name="packaging-and-distributing-net-framework-applications"></a><span data-ttu-id="78452-154">.NET Framework 애플리케이션 패키징 및 배포</span><span class="sxs-lookup"><span data-stu-id="78452-154">Packaging and Distributing .NET Framework Applications</span></span>
 
-<span data-ttu-id="e570c-155">.NET Framework에 대한 패키징 및 배포 정보 중 일부는 설명서의 다른 섹션에서 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="e570c-155">Some of the packaging and deployment information for the .NET Framework is described in other sections of the documentation.</span></span> <span data-ttu-id="e570c-156">이러한 섹션에서는 레지스트리 항목이 필요 없는 [어셈블리](../../standard/assembly/index.md)라는 자체 설명적 단위, 이름 고유성을 유지하고 이름 스푸핑을 방지하는 [강력한 이름의 어셈블리](../../standard/assembly/strong-named.md) 및 DLL 충돌과 관련된 많은 문제를 해결하는 [어셈블리 버전 관리](../../standard/assembly/versioning.md)에 대한 정보를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="e570c-156">Those sections provide information about the self-describing units called [assemblies](../../standard/assembly/index.md), which require no registry entries, [strong-named assemblies](../../standard/assembly/strong-named.md), which ensure name uniqueness and prevent name spoofing, and [assembly versioning](../../standard/assembly/versioning.md), which addresses many of the problems associated with DLL conflicts.</span></span> <span data-ttu-id="e570c-157">다음 섹션에서는 .NET Framework 애플리케이션 패키징 및 배포에 대한 정보를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="e570c-157">The following sections provide information about packaging and distributing .NET Framework applications.</span></span>
+<span data-ttu-id="78452-155">.NET Framework에 대한 패키징 및 배포 정보 중 일부는 설명서의 다른 섹션에서 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="78452-155">Some of the packaging and deployment information for the .NET Framework is described in other sections of the documentation.</span></span> <span data-ttu-id="78452-156">이러한 섹션에서는 레지스트리 항목이 필요 없는 [어셈블리](../../standard/assembly/index.md)라는 자체 설명적 단위, 이름 고유성을 유지하고 이름 스푸핑을 방지하는 [강력한 이름의 어셈블리](../../standard/assembly/strong-named.md) 및 DLL 충돌과 관련된 많은 문제를 해결하는 [어셈블리 버전 관리](../../standard/assembly/versioning.md)에 대한 정보를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="78452-156">Those sections provide information about the self-describing units called [assemblies](../../standard/assembly/index.md), which require no registry entries, [strong-named assemblies](../../standard/assembly/strong-named.md), which ensure name uniqueness and prevent name spoofing, and [assembly versioning](../../standard/assembly/versioning.md), which addresses many of the problems associated with DLL conflicts.</span></span> <span data-ttu-id="78452-157">다음 섹션에서는 .NET Framework 애플리케이션 패키징 및 배포에 대한 정보를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="78452-157">The following sections provide information about packaging and distributing .NET Framework applications.</span></span>
 
-### <a name="packaging"></a><span data-ttu-id="e570c-158">패키지</span><span class="sxs-lookup"><span data-stu-id="e570c-158">Packaging</span></span>
+### <a name="packaging"></a><span data-ttu-id="78452-158">패키지</span><span class="sxs-lookup"><span data-stu-id="78452-158">Packaging</span></span>
 
-<span data-ttu-id="e570c-159">.NET Framework는 다음과 같은 애플리케이션 패키징 옵션을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="e570c-159">The .NET Framework provides the following options for packaging applications:</span></span>
+<span data-ttu-id="78452-159">.NET Framework는 다음과 같은 애플리케이션 패키징 옵션을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="78452-159">The .NET Framework provides the following options for packaging applications:</span></span>
 
-- <span data-ttu-id="e570c-160">단일 어셈블리 또는 어셈블리 컬렉션으로.</span><span class="sxs-lookup"><span data-stu-id="e570c-160">As a single assembly or as a collection of assemblies.</span></span>
+- <span data-ttu-id="78452-160">단일 어셈블리 또는 어셈블리 컬렉션으로.</span><span class="sxs-lookup"><span data-stu-id="78452-160">As a single assembly or as a collection of assemblies.</span></span>
 
-     <span data-ttu-id="e570c-161">이 옵션을 사용하는 경우 빌드된 .dll 또는 .exe 파일을 사용하면 됩니다.</span><span class="sxs-lookup"><span data-stu-id="e570c-161">With this option, you simply use the .dll or .exe files as they were built.</span></span>
+     <span data-ttu-id="78452-161">이 옵션을 사용하는 경우 빌드된 .dll 또는 .exe 파일을 사용하면 됩니다.</span><span class="sxs-lookup"><span data-stu-id="78452-161">With this option, you simply use the .dll or .exe files as they were built.</span></span>
 
-- <span data-ttu-id="e570c-162">캐비닛(CAB) 파일로.</span><span class="sxs-lookup"><span data-stu-id="e570c-162">As cabinet (CAB) files.</span></span>
+- <span data-ttu-id="78452-162">캐비닛(CAB) 파일로.</span><span class="sxs-lookup"><span data-stu-id="78452-162">As cabinet (CAB) files.</span></span>
 
-     <span data-ttu-id="e570c-163">이 옵션을 사용하는 경우 파일을 .cab 파일로 압축하여 배포 또는 다운로드 시간을 줄입니다.</span><span class="sxs-lookup"><span data-stu-id="e570c-163">With this option, you compress files into .cab files to make distribution or download less time consuming.</span></span>
+     <span data-ttu-id="78452-163">이 옵션을 사용하는 경우 파일을 .cab 파일로 압축하여 배포 또는 다운로드 시간을 줄입니다.</span><span class="sxs-lookup"><span data-stu-id="78452-163">With this option, you compress files into .cab files to make distribution or download less time consuming.</span></span>
 
-- <span data-ttu-id="e570c-164">Windows Installer 패키지 또는 다른 설치 관리자 형식으로.</span><span class="sxs-lookup"><span data-stu-id="e570c-164">As a Windows Installer package or in other installer formats.</span></span>
+- <span data-ttu-id="78452-164">Windows Installer 패키지 또는 다른 설치 관리자 형식으로.</span><span class="sxs-lookup"><span data-stu-id="78452-164">As a Windows Installer package or in other installer formats.</span></span>
 
-     <span data-ttu-id="e570c-165">이 옵션을 사용하는 경우 Windows Installer에서 사용할 .msi 파일을 만들거나 다른 설치 관리자에서 사용하기 위해 애플리케이션을 패키징합니다.</span><span class="sxs-lookup"><span data-stu-id="e570c-165">With this option, you create .msi files for use with the Windows Installer, or you package your application for use with some other installer.</span></span>
+     <span data-ttu-id="78452-165">이 옵션을 사용하는 경우 Windows Installer에서 사용할 .msi 파일을 만들거나 다른 설치 관리자에서 사용하기 위해 애플리케이션을 패키징합니다.</span><span class="sxs-lookup"><span data-stu-id="78452-165">With this option, you create .msi files for use with the Windows Installer, or you package your application for use with some other installer.</span></span>
 
-### <a name="distribution"></a><span data-ttu-id="e570c-166">분포</span><span class="sxs-lookup"><span data-stu-id="e570c-166">Distribution</span></span>
+### <a name="distribution"></a><span data-ttu-id="78452-166">분포</span><span class="sxs-lookup"><span data-stu-id="78452-166">Distribution</span></span>
 
-<span data-ttu-id="e570c-167">.NET Framework는 다음과 같은 애플리케이션 배포 옵션을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="e570c-167">The .NET Framework provides the following options for distributing applications:</span></span>
+<span data-ttu-id="78452-167">.NET Framework는 다음과 같은 애플리케이션 배포 옵션을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="78452-167">The .NET Framework provides the following options for distributing applications:</span></span>
 
-- <span data-ttu-id="e570c-168">XCOPY 또는 FTP 사용.</span><span class="sxs-lookup"><span data-stu-id="e570c-168">Use XCOPY or FTP.</span></span>
+- <span data-ttu-id="78452-168">XCOPY 또는 FTP 사용.</span><span class="sxs-lookup"><span data-stu-id="78452-168">Use XCOPY or FTP.</span></span>
 
-     <span data-ttu-id="e570c-169">공용 언어 런타임 애플리케이션은 자체 설명적이며 레지스트리 항목이 필요하지 않으므로 XCOPY 또는 FTP를 사용하여 애플리케이션을 해당 디렉터리에 복사할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e570c-169">Because common language runtime applications are self-describing and require no registry entries, you can use XCOPY or FTP to simply copy the application to an appropriate directory.</span></span> <span data-ttu-id="e570c-170">그런 다음 해당 디렉터리에서 애플리케이션을 실행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e570c-170">The application can then be run from that directory.</span></span>
+     <span data-ttu-id="78452-169">공용 언어 런타임 애플리케이션은 자체 설명적이며 레지스트리 항목이 필요하지 않으므로 XCOPY 또는 FTP를 사용하여 애플리케이션을 해당 디렉터리에 복사할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="78452-169">Because common language runtime applications are self-describing and require no registry entries, you can use XCOPY or FTP to simply copy the application to an appropriate directory.</span></span> <span data-ttu-id="78452-170">그런 다음 해당 디렉터리에서 애플리케이션을 실행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="78452-170">The application can then be run from that directory.</span></span>
 
-- <span data-ttu-id="e570c-171">코드 다운로드 사용.</span><span class="sxs-lookup"><span data-stu-id="e570c-171">Use code download.</span></span>
+- <span data-ttu-id="78452-171">코드 다운로드 사용.</span><span class="sxs-lookup"><span data-stu-id="78452-171">Use code download.</span></span>
 
-     <span data-ttu-id="e570c-172">인터넷이나 회사 인트라넷을 통해 애플리케이션을 배포하는 경우 코드를 컴퓨터로 다운로드하고 여기서 애플리케이션을 실행하면 됩니다.</span><span class="sxs-lookup"><span data-stu-id="e570c-172">If you are distributing your application over the Internet or through a corporate intranet, you can simply download the code to a computer and run the application there.</span></span>
+     <span data-ttu-id="78452-172">인터넷이나 회사 인트라넷을 통해 애플리케이션을 배포하는 경우 코드를 컴퓨터로 다운로드하고 여기서 애플리케이션을 실행하면 됩니다.</span><span class="sxs-lookup"><span data-stu-id="78452-172">If you are distributing your application over the Internet or through a corporate intranet, you can simply download the code to a computer and run the application there.</span></span>
 
-- <span data-ttu-id="e570c-173">Windows Installer 2.0과 같은 설치 관리자 프로그램 사용.</span><span class="sxs-lookup"><span data-stu-id="e570c-173">Use an installer program such as Windows Installer 2.0.</span></span>
+- <span data-ttu-id="78452-173">Windows Installer 2.0과 같은 설치 관리자 프로그램 사용.</span><span class="sxs-lookup"><span data-stu-id="78452-173">Use an installer program such as Windows Installer 2.0.</span></span>
 
-     <span data-ttu-id="e570c-174">Windows Installer 2.0은 전역 어셈블리 캐시와 전용 디렉터리에서 .NET Framework 어셈블리를 설치, 복구 또는 제거할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e570c-174">Windows Installer 2.0 can install, repair, or remove .NET Framework assemblies in the global assembly cache and in private directories.</span></span>
+     <span data-ttu-id="78452-174">Windows Installer 2.0은 전역 어셈블리 캐시와 전용 디렉터리에서 .NET Framework 어셈블리를 설치, 복구 또는 제거할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="78452-174">Windows Installer 2.0 can install, repair, or remove .NET Framework assemblies in the global assembly cache and in private directories.</span></span>
 
-### <a name="installation-location"></a><span data-ttu-id="e570c-175">설치 위치</span><span class="sxs-lookup"><span data-stu-id="e570c-175">Installation Location</span></span>
+### <a name="installation-location"></a><span data-ttu-id="78452-175">설치 위치</span><span class="sxs-lookup"><span data-stu-id="78452-175">Installation Location</span></span>
 
-<span data-ttu-id="e570c-176">런타임에서 찾을 수 있도록 애플리케이션의 어셈블리를 배포할 위치를 확인하려면 [런타임에서 어셈블리를 찾는 방법](how-the-runtime-locates-assemblies.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="e570c-176">To determine where to deploy your application's assemblies so they can be found by the runtime, see [How the Runtime Locates Assemblies](how-the-runtime-locates-assemblies.md).</span></span>
+<span data-ttu-id="78452-176">런타임에서 찾을 수 있도록 애플리케이션의 어셈블리를 배포할 위치를 확인하려면 [런타임에서 어셈블리를 찾는 방법](how-the-runtime-locates-assemblies.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="78452-176">To determine where to deploy your application's assemblies so they can be found by the runtime, see [How the Runtime Locates Assemblies](how-the-runtime-locates-assemblies.md).</span></span>
 
-<span data-ttu-id="e570c-177">보안 고려 사항도 애플리케이션 배포 방법에 영향을 줄 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e570c-177">Security considerations can also affect how you deploy your application.</span></span> <span data-ttu-id="e570c-178">코드의 위치에 따라 관리 코드에 보안 권한이 부여됩니다.</span><span class="sxs-lookup"><span data-stu-id="e570c-178">Security permissions are granted to managed code according to where the code is located.</span></span> <span data-ttu-id="e570c-179">인터넷과 같은 거의 신뢰되지 않는 위치에 애플리케이션이나 구성 요소를 배포하면 애플리케이션이나 구성 요소가 수행할 수 있는 기능이 제한됩니다.</span><span class="sxs-lookup"><span data-stu-id="e570c-179">Deploying an application or component to a location where it receives little trust, such as the Internet, limits what the application or component can do.</span></span> <span data-ttu-id="e570c-180">배포 및 보안 고려 사항에 대한 자세한 내용은 [코드 액세스 보안 기본 사항](../misc/code-access-security-basics.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="e570c-180">For more information about deployment and security considerations, see [Code Access Security Basics](../misc/code-access-security-basics.md).</span></span>
+<span data-ttu-id="78452-177">보안 고려 사항도 애플리케이션 배포 방법에 영향을 줄 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="78452-177">Security considerations can also affect how you deploy your application.</span></span> <span data-ttu-id="78452-178">코드의 위치에 따라 관리 코드에 보안 권한이 부여됩니다.</span><span class="sxs-lookup"><span data-stu-id="78452-178">Security permissions are granted to managed code according to where the code is located.</span></span> <span data-ttu-id="78452-179">인터넷과 같은 거의 신뢰되지 않는 위치에 애플리케이션이나 구성 요소를 배포하면 애플리케이션이나 구성 요소가 수행할 수 있는 기능이 제한됩니다.</span><span class="sxs-lookup"><span data-stu-id="78452-179">Deploying an application or component to a location where it receives little trust, such as the Internet, limits what the application or component can do.</span></span> <span data-ttu-id="78452-180">배포 및 보안 고려 사항에 대한 자세한 내용은 [코드 액세스 보안 기본 사항](../misc/code-access-security-basics.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="78452-180">For more information about deployment and security considerations, see [Code Access Security Basics](../misc/code-access-security-basics.md).</span></span>
 
-## <a name="related-topics"></a><span data-ttu-id="e570c-181">관련 항목</span><span class="sxs-lookup"><span data-stu-id="e570c-181">Related Topics</span></span>
+## <a name="related-topics"></a><span data-ttu-id="78452-181">관련 항목</span><span class="sxs-lookup"><span data-stu-id="78452-181">Related Topics</span></span>
 
-|<span data-ttu-id="e570c-182">제목</span><span class="sxs-lookup"><span data-stu-id="e570c-182">Title</span></span>|<span data-ttu-id="e570c-183">설명</span><span class="sxs-lookup"><span data-stu-id="e570c-183">Description</span></span>|
+|<span data-ttu-id="78452-182">제목</span><span class="sxs-lookup"><span data-stu-id="78452-182">Title</span></span>|<span data-ttu-id="78452-183">설명</span><span class="sxs-lookup"><span data-stu-id="78452-183">Description</span></span>|
 |-----------|-----------------|
-|[<span data-ttu-id="e570c-184">런타임에서 어셈블리를 찾는 방법</span><span class="sxs-lookup"><span data-stu-id="e570c-184">How the Runtime Locates Assemblies</span></span>](how-the-runtime-locates-assemblies.md)|<span data-ttu-id="e570c-185">공용 언어 런타임에서 바인딩 요청을 충족하는 데 사용할 어셈블리를 확인하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="e570c-185">Describes how the common language runtime determines which assembly to use to fulfill a binding request.</span></span>|
-|[<span data-ttu-id="e570c-186">최선의 어셈블리 로드 방법</span><span class="sxs-lookup"><span data-stu-id="e570c-186">Best Practices for Assembly Loading</span></span>](best-practices-for-assembly-loading.md)|<span data-ttu-id="e570c-187"><xref:System.InvalidCastException>, <xref:System.MissingMethodException> 및 다른 오류를 발생시킬 수 있는 형식 ID 문제를 방지하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="e570c-187">Discusses ways to avoid problems of type identity that can lead to <xref:System.InvalidCastException>, <xref:System.MissingMethodException>, and other errors.</span></span>|
-|[<span data-ttu-id="e570c-188">.NET Framework 4.5를 설치하는 동안 시스템 다시 시작 줄이기</span><span class="sxs-lookup"><span data-stu-id="e570c-188">Reducing System Restarts During .NET Framework 4.5 Installations</span></span>](reducing-system-restarts.md)|<span data-ttu-id="e570c-189">최대한 다시 시작을 방지하는 다시 시작 관리자 및 .NET Framework를 설치하는 애플리케이션이 다시 시작 관리자를 활용할 수 있는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="e570c-189">Describes the Restart Manager, which prevents reboots whenever possible, and explains how applications that install the .NET Framework can take advantage of it.</span></span>|
-|[<span data-ttu-id="e570c-190">관리자를 위한 배포 가이드</span><span class="sxs-lookup"><span data-stu-id="e570c-190">Deployment Guide for Administrators</span></span>](guide-for-administrators.md)|<span data-ttu-id="e570c-191">시스템 관리자가 SCCM(System Center Configuration Manager)을 사용하여 .NET Framework 및 해당 시스템 종속성을 네트워크 전체에 배포할 수 있는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="e570c-191">Explains how a system administrator can deploy the .NET Framework and its system dependencies across a network by using System Center Configuration Manager (SCCM).</span></span>|
-|[<span data-ttu-id="e570c-192">개발자를 위한 배포 가이드</span><span class="sxs-lookup"><span data-stu-id="e570c-192">Deployment Guide for Developers</span></span>](deployment-guide-for-developers.md)|<span data-ttu-id="e570c-193">개발자가 애플리케이션과 함께 .NET Framework를 사용자 컴퓨터에 설치할 수 있는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="e570c-193">Explains how developers can install .NET Framework on their users' computers with their applications.</span></span>|
-|[<span data-ttu-id="e570c-194">애플리케이션, 서비스 및 구성 요소 배포</span><span class="sxs-lookup"><span data-stu-id="e570c-194">Deploying Applications, Services, and Components</span></span>](/visualstudio/deployment/deploying-applications-services-and-components)|<span data-ttu-id="e570c-195">ClickOnce 및 Windows Installer 기술을 사용하여 애플리케이션을 게시하기 위한 지침을 포함하여 Visual Studio의 배포 옵션을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="e570c-195">Discusses deployment options in Visual Studio, including instructions for publishing an application using the ClickOnce and Windows Installer technologies.</span></span>|
-|[<span data-ttu-id="e570c-196">ClickOnce 애플리케이션 게시</span><span class="sxs-lookup"><span data-stu-id="e570c-196">Publishing ClickOnce Applications</span></span>](/visualstudio/deployment/publishing-clickonce-applications)|<span data-ttu-id="e570c-197">Windows Forms 애플리케이션을 패키징하고 ClickOnce로 네트워크의 클라이언트 컴퓨터에 배포하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="e570c-197">Describes how to package a Windows Forms application and deploy it with ClickOnce to client computers on a network.</span></span>|
-|[<span data-ttu-id="e570c-198">리소스 패키징 및 배포</span><span class="sxs-lookup"><span data-stu-id="e570c-198">Packaging and Deploying Resources</span></span>](../resources/packaging-and-deploying-resources-in-desktop-apps.md)|<span data-ttu-id="e570c-199">.NET Framework에서 리소스를 패키징 및 배포하는 데 사용하는 허브 및 스포크 모델을 설명합니다. 리소스 명명 규칙, 대체(fallback) 프로세스 및 패키징 대안을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="e570c-199">Describes the hub and spoke model that the .NET Framework uses to package and deploy resources; covers resource naming conventions, fallback process, and packaging alternatives.</span></span>|
-|[<span data-ttu-id="e570c-200">Interop 애플리케이션 배포</span><span class="sxs-lookup"><span data-stu-id="e570c-200">Deploying an Interop Application</span></span>](../interop/deploying-an-interop-application.md)|<span data-ttu-id="e570c-201">일반적으로 .NET Framework 클라이언트 어셈블리, 고유한 COM 형식 라이브러리를 나타내는 하나 이상의 interop 어셈블리 및 하나 이상의 등록된 COM 구성 요소를 포함하는 interop 애플리케이션을 제공하고 설치하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="e570c-201">Explains how to ship and install interop applications, which typically include a .NET Framework client assembly, one or more interop assemblies representing distinct COM type libraries, and one or more registered COM components.</span></span>|
-|[<span data-ttu-id="e570c-202">방법: .NET Framework 4.5 설치 관리자에서 진행률 가져오기</span><span class="sxs-lookup"><span data-stu-id="e570c-202">How to: Get Progress from the .NET Framework 4.5 Installer</span></span>](how-to-get-progress-from-the-dotnet-installer.md)|<span data-ttu-id="e570c-203">설치 진행 상황을 자체적으로 표시하면서 .NET Framework 설치 프로세스를 자동으로 시작하고 추적하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="e570c-203">Describes how to silently launch and track the .NET Framework setup process while showing your own view of the setup progress.</span></span>|
+|[<span data-ttu-id="78452-184">런타임에서 어셈블리를 찾는 방법</span><span class="sxs-lookup"><span data-stu-id="78452-184">How the Runtime Locates Assemblies</span></span>](how-the-runtime-locates-assemblies.md)|<span data-ttu-id="78452-185">공용 언어 런타임에서 바인딩 요청을 충족하는 데 사용할 어셈블리를 확인하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="78452-185">Describes how the common language runtime determines which assembly to use to fulfill a binding request.</span></span>|
+|[<span data-ttu-id="78452-186">최선의 어셈블리 로드 방법</span><span class="sxs-lookup"><span data-stu-id="78452-186">Best Practices for Assembly Loading</span></span>](best-practices-for-assembly-loading.md)|<span data-ttu-id="78452-187"><xref:System.InvalidCastException>, <xref:System.MissingMethodException> 및 다른 오류를 발생시킬 수 있는 형식 ID 문제를 방지하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="78452-187">Discusses ways to avoid problems of type identity that can lead to <xref:System.InvalidCastException>, <xref:System.MissingMethodException>, and other errors.</span></span>|
+|[<span data-ttu-id="78452-188">.NET Framework 4.5를 설치하는 동안 시스템 다시 시작 줄이기</span><span class="sxs-lookup"><span data-stu-id="78452-188">Reducing System Restarts During .NET Framework 4.5 Installations</span></span>](reducing-system-restarts.md)|<span data-ttu-id="78452-189">최대한 다시 시작을 방지하는 다시 시작 관리자 및 .NET Framework를 설치하는 애플리케이션이 다시 시작 관리자를 활용할 수 있는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="78452-189">Describes the Restart Manager, which prevents reboots whenever possible, and explains how applications that install the .NET Framework can take advantage of it.</span></span>|
+|[<span data-ttu-id="78452-190">관리자를 위한 배포 가이드</span><span class="sxs-lookup"><span data-stu-id="78452-190">Deployment Guide for Administrators</span></span>](guide-for-administrators.md)|<span data-ttu-id="78452-191">시스템 관리자가 Microsoft Endpoint Configuration Manager를 사용하여 .NET Framework 및 해당 시스템 종속성을 네트워크 전체에 배포할 수 있는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="78452-191">Explains how a system administrator can deploy the .NET Framework and its system dependencies across a network by using Microsoft Endpoint Configuration Manager.</span></span>|
+|[<span data-ttu-id="78452-192">개발자를 위한 배포 가이드</span><span class="sxs-lookup"><span data-stu-id="78452-192">Deployment Guide for Developers</span></span>](deployment-guide-for-developers.md)|<span data-ttu-id="78452-193">개발자가 애플리케이션과 함께 .NET Framework를 사용자 컴퓨터에 설치할 수 있는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="78452-193">Explains how developers can install .NET Framework on their users' computers with their applications.</span></span>|
+|[<span data-ttu-id="78452-194">애플리케이션, 서비스 및 구성 요소 배포</span><span class="sxs-lookup"><span data-stu-id="78452-194">Deploying Applications, Services, and Components</span></span>](/visualstudio/deployment/deploying-applications-services-and-components)|<span data-ttu-id="78452-195">ClickOnce 및 Windows Installer 기술을 사용하여 애플리케이션을 게시하기 위한 지침을 포함하여 Visual Studio의 배포 옵션을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="78452-195">Discusses deployment options in Visual Studio, including instructions for publishing an application using the ClickOnce and Windows Installer technologies.</span></span>|
+|[<span data-ttu-id="78452-196">ClickOnce 애플리케이션 게시</span><span class="sxs-lookup"><span data-stu-id="78452-196">Publishing ClickOnce Applications</span></span>](/visualstudio/deployment/publishing-clickonce-applications)|<span data-ttu-id="78452-197">Windows Forms 애플리케이션을 패키징하고 ClickOnce로 네트워크의 클라이언트 컴퓨터에 배포하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="78452-197">Describes how to package a Windows Forms application and deploy it with ClickOnce to client computers on a network.</span></span>|
+|[<span data-ttu-id="78452-198">리소스 패키징 및 배포</span><span class="sxs-lookup"><span data-stu-id="78452-198">Packaging and Deploying Resources</span></span>](../resources/packaging-and-deploying-resources-in-desktop-apps.md)|<span data-ttu-id="78452-199">.NET Framework에서 리소스를 패키징 및 배포하는 데 사용하는 허브 및 스포크 모델을 설명합니다. 리소스 명명 규칙, 대체(fallback) 프로세스 및 패키징 대안을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="78452-199">Describes the hub and spoke model that the .NET Framework uses to package and deploy resources; covers resource naming conventions, fallback process, and packaging alternatives.</span></span>|
+|[<span data-ttu-id="78452-200">Interop 애플리케이션 배포</span><span class="sxs-lookup"><span data-stu-id="78452-200">Deploying an Interop Application</span></span>](../interop/deploying-an-interop-application.md)|<span data-ttu-id="78452-201">일반적으로 .NET Framework 클라이언트 어셈블리, 고유한 COM 형식 라이브러리를 나타내는 하나 이상의 interop 어셈블리 및 하나 이상의 등록된 COM 구성 요소를 포함하는 interop 애플리케이션을 제공하고 설치하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="78452-201">Explains how to ship and install interop applications, which typically include a .NET Framework client assembly, one or more interop assemblies representing distinct COM type libraries, and one or more registered COM components.</span></span>|
+|[<span data-ttu-id="78452-202">방법: .NET Framework 4.5 설치 관리자에서 진행률 가져오기</span><span class="sxs-lookup"><span data-stu-id="78452-202">How to: Get Progress from the .NET Framework 4.5 Installer</span></span>](how-to-get-progress-from-the-dotnet-installer.md)|<span data-ttu-id="78452-203">설치 진행 상황을 자체적으로 표시하면서 .NET Framework 설치 프로세스를 자동으로 시작하고 추적하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="78452-203">Describes how to silently launch and track the .NET Framework setup process while showing your own view of the setup progress.</span></span>|
 
-## <a name="see-also"></a><span data-ttu-id="e570c-204">참고 항목</span><span class="sxs-lookup"><span data-stu-id="e570c-204">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="78452-204">참조</span><span class="sxs-lookup"><span data-stu-id="78452-204">See also</span></span>
 
-- [<span data-ttu-id="e570c-205">개발 가이드</span><span class="sxs-lookup"><span data-stu-id="e570c-205">Development Guide</span></span>](../development-guide.md)
+- [<span data-ttu-id="78452-205">개발 가이드</span><span class="sxs-lookup"><span data-stu-id="78452-205">Development Guide</span></span>](../development-guide.md)
