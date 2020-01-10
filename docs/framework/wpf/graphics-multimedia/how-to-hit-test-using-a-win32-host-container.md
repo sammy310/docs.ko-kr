@@ -9,33 +9,33 @@ helpviewer_keywords:
 - visual objects [WPF], hit tests on
 - Win32 host containers [WPF], hit tests using
 ms.assetid: 9491f7f3-d8ba-4573-a888-2f064d1349dc
-ms.openlocfilehash: ac5cae5bcd94dc8bf80ff95b8971914e1fa5ba2c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b71783f2d061c9139de4449d8e0106eb00345894
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62025108"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740183"
 ---
-# <a name="how-to-hit-test-using-a-win32-host-container"></a><span data-ttu-id="3ad84-102">방법: Win32 호스트 컨테이너를 사용하여 적중 테스트</span><span class="sxs-lookup"><span data-stu-id="3ad84-102">How to: Hit Test Using a Win32 Host Container</span></span>
-<span data-ttu-id="3ad84-103">내에서 시각적 개체를 만들 수는 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 시각적 개체에 대 한 호스트 창 컨테이너를 제공 하 여 창입니다.</span><span class="sxs-lookup"><span data-stu-id="3ad84-103">You can create visual objects within a [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] window by providing a host window container for the visual objects.</span></span> <span data-ttu-id="3ad84-104">포함된 시각적 개체에 대한 이벤트 처리를 제공하려면 호스트 창 컨테이너의 메시지 필터 루프에 전달된 메시지를 처리합니다.</span><span class="sxs-lookup"><span data-stu-id="3ad84-104">To provide event handling for the contained visual objects you process the messages passed to the host window container’s message filter loop.</span></span> <span data-ttu-id="3ad84-105">참조 [자습서: Win32 응용 프로그램에서 시각적 개체 호스팅](tutorial-hosting-visual-objects-in-a-win32-application.md) 에서 시각적 개체를 호스트 하는 방법에 대 한 자세한 내용은 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 창입니다.</span><span class="sxs-lookup"><span data-stu-id="3ad84-105">Refer to [Tutorial: Hosting Visual Objects in a Win32 Application](tutorial-hosting-visual-objects-in-a-win32-application.md) for more information on how to host visual objects in a [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] window.</span></span>  
+# <a name="how-to-hit-test-using-a-win32-host-container"></a><span data-ttu-id="ff2a4-102">방법: Win32 호스트 컨테이너를 사용하여 적중 테스트</span><span class="sxs-lookup"><span data-stu-id="ff2a4-102">How to: Hit Test Using a Win32 Host Container</span></span>
+<span data-ttu-id="ff2a4-103">시각적 개체에 대 한 호스트 창 컨테이너를 제공 하 여 Win32 창 내에서 시각적 개체를 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ff2a4-103">You can create visual objects within a Win32 window by providing a host window container for the visual objects.</span></span> <span data-ttu-id="ff2a4-104">포함된 시각적 개체에 대한 이벤트 처리를 제공하려면 호스트 창 컨테이너의 메시지 필터 루프에 전달된 메시지를 처리합니다.</span><span class="sxs-lookup"><span data-stu-id="ff2a4-104">To provide event handling for the contained visual objects you process the messages passed to the host window container’s message filter loop.</span></span> <span data-ttu-id="ff2a4-105">Win32 창에서 시각적 개체를 호스트 하는 방법에 대 한 자세한 내용은 [자습서: Win32 응용 프로그램에서 시각적 개체 호스팅](tutorial-hosting-visual-objects-in-a-win32-application.md) 을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="ff2a4-105">Refer to [Tutorial: Hosting Visual Objects in a Win32 Application](tutorial-hosting-visual-objects-in-a-win32-application.md) for more information on how to host visual objects in a Win32 window.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="3ad84-106">예제</span><span class="sxs-lookup"><span data-stu-id="3ad84-106">Example</span></span>  
- <span data-ttu-id="3ad84-107">다음 코드에 대 한 마우스 이벤트 처리기를 설정 하는 방법을 보여 줍니다는 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 시각적 개체에 대 한 호스트 컨테이너로 사용 되는 창입니다.</span><span class="sxs-lookup"><span data-stu-id="3ad84-107">The following code shows how to set up mouse event handlers for a [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] window that is used as a host container for visual objects.</span></span>  
+## <a name="example"></a><span data-ttu-id="ff2a4-106">예</span><span class="sxs-lookup"><span data-stu-id="ff2a4-106">Example</span></span>  
+ <span data-ttu-id="ff2a4-107">다음 코드에서는 시각적 개체의 호스트 컨테이너로 사용 되는 Win32 창에 대해 마우스 이벤트 처리기를 설정 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="ff2a4-107">The following code shows how to set up mouse event handlers for a Win32 window that is used as a host container for visual objects.</span></span>  
   
  [!code-csharp[VisualsHitTesting#103](~/samples/snippets/csharp/VS_Snippets_Wpf/VisualsHitTesting/CSharp/MyWindow.cs#103)]
  [!code-vb[VisualsHitTesting#103](~/samples/snippets/visualbasic/VS_Snippets_Wpf/VisualsHitTesting/VisualBasic/MyWindow.vb#103)]  
   
- <span data-ttu-id="3ad84-108">다음 예제에서는 특정 마우스 이벤트 트래핑에 대 한 응답에서 적중된 테스트를 설정 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="3ad84-108">The following example shows how to set up a hit test in response to trapping specific mouse events.</span></span>  
+ <span data-ttu-id="ff2a4-108">다음 예제에서는 특정 마우스 이벤트 트래핑에 대 한 응답으로 적중 테스트를 설정 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="ff2a4-108">The following example shows how to set up a hit test in response to trapping specific mouse events.</span></span>  
   
  [!code-csharp[VisualsHitTesting#104](~/samples/snippets/csharp/VS_Snippets_Wpf/VisualsHitTesting/CSharp/MyCircle.cs#104)]
  [!code-vb[VisualsHitTesting#104](~/samples/snippets/visualbasic/VS_Snippets_Wpf/VisualsHitTesting/VisualBasic/MyCircle.vb#104)]  
   
- <span data-ttu-id="3ad84-109">합니다 <xref:System.Windows.Interop.HwndSource> 개체가 나타내는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 내에서 콘텐츠를 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 창.</span><span class="sxs-lookup"><span data-stu-id="3ad84-109">The <xref:System.Windows.Interop.HwndSource> object presents [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] content within a [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] window.</span></span> <span data-ttu-id="3ad84-110">값을 <xref:System.Windows.Interop.HwndSource.RootVisual%2A> 속성의는 <xref:System.Windows.Interop.HwndSource> 개체 시각적 트리 계층의 최상위 노드를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="3ad84-110">The value of the <xref:System.Windows.Interop.HwndSource.RootVisual%2A> property of the <xref:System.Windows.Interop.HwndSource> object represents the top-most node in the visual tree hierarchy.</span></span>  
+ <span data-ttu-id="ff2a4-109"><xref:System.Windows.Interop.HwndSource> 개체는 Win32 창에 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 콘텐츠를 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="ff2a4-109">The <xref:System.Windows.Interop.HwndSource> object presents [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] content within a Win32 window.</span></span> <span data-ttu-id="ff2a4-110"><xref:System.Windows.Interop.HwndSource> 개체의 <xref:System.Windows.Interop.HwndSource.RootVisual%2A> 속성 값은 시각적 트리 계층 구조의 최상위 노드를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="ff2a4-110">The value of the <xref:System.Windows.Interop.HwndSource.RootVisual%2A> property of the <xref:System.Windows.Interop.HwndSource> object represents the top-most node in the visual tree hierarchy.</span></span>  
   
- <span data-ttu-id="3ad84-111">적중 테스트에서 전체 샘플 Win32 호스트 컨테이너를 사용 하 여 개체에 대 한 참조 [Win32 상호 운용 샘플을 사용 하 여 적중 테스트](https://go.microsoft.com/fwlink/?LinkID=159995)합니다.</span><span class="sxs-lookup"><span data-stu-id="3ad84-111">For the complete sample on hit testing objects using a Win32 host container, see [Hit Test with Win32 Interoperation Sample](https://go.microsoft.com/fwlink/?LinkID=159995).</span></span>  
+ <span data-ttu-id="ff2a4-111">Win32 호스트 컨테이너를 사용 하 여 적중 테스트 개체에 대 한 전체 샘플을 보려면 [Win32 상호 운용성을 사용한 적중 테스트 샘플](https://go.microsoft.com/fwlink/?LinkID=159995)을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="ff2a4-111">For the complete sample on hit testing objects using a Win32 host container, see [Hit Test with Win32 Interoperation Sample](https://go.microsoft.com/fwlink/?LinkID=159995).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3ad84-112">참고자료</span><span class="sxs-lookup"><span data-stu-id="3ad84-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ff2a4-112">참조</span><span class="sxs-lookup"><span data-stu-id="ff2a4-112">See also</span></span>
 
 - <xref:System.Windows.Interop.HwndSource>
-- [<span data-ttu-id="3ad84-113">시각적 계층에서 적중 테스트</span><span class="sxs-lookup"><span data-stu-id="3ad84-113">Hit Testing in the Visual Layer</span></span>](hit-testing-in-the-visual-layer.md)
-- [<span data-ttu-id="3ad84-114">자습서: Win32 응용 프로그램에서 시각적 개체 호스팅</span><span class="sxs-lookup"><span data-stu-id="3ad84-114">Tutorial: Hosting Visual Objects in a Win32 Application</span></span>](tutorial-hosting-visual-objects-in-a-win32-application.md)
+- [<span data-ttu-id="ff2a4-113">시각적 계층에서 적중 테스트</span><span class="sxs-lookup"><span data-stu-id="ff2a4-113">Hit Testing in the Visual Layer</span></span>](hit-testing-in-the-visual-layer.md)
+- [<span data-ttu-id="ff2a4-114">자습서: Win32 애플리케이션에서 시각적 개체 호스팅</span><span class="sxs-lookup"><span data-stu-id="ff2a4-114">Tutorial: Hosting Visual Objects in a Win32 Application</span></span>](tutorial-hosting-visual-objects-in-a-win32-application.md)
