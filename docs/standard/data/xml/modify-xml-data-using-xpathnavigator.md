@@ -7,14 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 03a7c5a1-b296-4af4-b209-043c958dc0a5
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ba6393d19909d8be762ee38b4c925987528d6304
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 906de1ded4961b7c67d48a010555d139df97cded
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967347"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710637"
 ---
 # <a name="modify-xml-data-using-xpathnavigator"></a>XPathNavigator를 사용하여 XML 데이터 수정
 <xref:System.Xml.XPath.XPathNavigator> 클래스는 XML 문서에서 노드와 값을 수정하는 메서드 집합을 제공합니다. 이러한 메서드를 사용하려면 <xref:System.Xml.XPath.XPathNavigator> 개체가 편집 가능한 상태여야 합니다. 즉, <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> 속성이 `true`여야 합니다.  
@@ -32,10 +30,10 @@ ms.locfileid: "69967347"
 |---------------------------------------------------------------------------------------------------------------------------------------------|------------------|  
 |<xref:System.Xml.XPath.XPathNodeType.Root>|지원되지 않습니다.|  
 |<xref:System.Xml.XPath.XPathNodeType.Element>|요소 내용입니다.|  
-|<xref:System.Xml.XPath.XPathNodeType.Attribute>|특성 값|  
-|<xref:System.Xml.XPath.XPathNodeType.Text>|텍스트 내용입니다.|  
+|<xref:System.Xml.XPath.XPathNodeType.Attribute>|특성 값입니다.|  
+|<xref:System.Xml.XPath.XPathNodeType.Text>|텍스트 콘텐츠입니다.|  
 |<xref:System.Xml.XPath.XPathNodeType.ProcessingInstruction>|대상을 제외한 내용|  
-|<xref:System.Xml.XPath.XPathNodeType.Comment>|주석의 내용입니다.|  
+|<xref:System.Xml.XPath.XPathNodeType.Comment>|주석의 콘텐츠입니다.|  
 |<xref:System.Xml.XPath.XPathNodeType.Namespace>|지원되지 않음|  
   
 > [!NOTE]
@@ -248,7 +246,7 @@ Console.WriteLine(navigator.OuterXml);
 ## <a name="saving-an-xml-document"></a>XML 문서 저장  
  <xref:System.Xml.XmlDocument> 클래스의 메서드를 사용하면 <xref:System.Xml.XmlDocument> 개체에서 변경된 내용을 이 항목에서 설명하는 편집 메서드의 결과로 저장할 수 있습니다. <xref:System.Xml.XmlDocument> 개체에서 변경된 내용을 저장하는 방법에 대한 자세한 내용은 [문서 작성 및 저장](../../../../docs/standard/data/xml/saving-and-writing-a-document.md)을 참조하세요.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>

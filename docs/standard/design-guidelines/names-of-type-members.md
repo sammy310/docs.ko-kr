@@ -12,13 +12,12 @@ helpviewer_keywords:
 - names [.NET Framework], type members
 - members [.NET Framework], type
 ms.assetid: af5a0903-36af-4c2a-b848-cf959affeaa5
-author: KrzysztofCwalina
-ms.openlocfilehash: b4da14575d29582814d32a3050087b7acc0da802
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: a9cd531100057fbad4884a20e6e7db6ef94e7956
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353714"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709220"
 ---
 # <a name="names-of-type-members"></a>형식 멤버의 이름
 형식은 메서드, 속성, 이벤트, 생성자 및 필드 등의 멤버로 이루어집니다. 다음 섹션에서는 형식 멤버 이름 지정에 대한 지침을 설명합니다.  
@@ -48,9 +47,9 @@ public class String {
   
  이 패턴은 일반적으로 속성이 실제로 메서드임을 나타냅니다.  
   
- **✓ DO**는 뒤에 "List" 또는 "Collection"이 붙은 단일 구를 사용하는 대신 컬렉션에서 항목을 설명하는 복수 구를 사용하여 컬렉션 속성의 이름을 지정합니다.  
+ **✓** 는 단일 구를 사용 하는 대신 "List" 또는 "collection"을 사용 하는 대신 컬렉션의 항목을 설명 하는 복수형으로 컬렉션 속성의 이름을 바꿉니다.  
   
- **✓ DO**는 긍정 구문(`CanSeek` 대신 `CantSeek`)을 사용하여 부울 속성의 이름을 지정합니다. 또한 필요에 따라 부울 속성에 "Is," "Can," 또는 "Has"를 전치사로 지정할 수 있지만 여기에 값을 추가해야 합니다.  
+ **✓ DO**는 긍정 구문(`CantSeek` 대신 `CanSeek`)을 사용하여 부울 속성의 이름을 지정합니다. 필요에 따라 부울 속성에 "Is", "Can" 또는 "Is"를 접두사로 추가 하 고 값을 추가할 수도 있습니다.  
   
  **✓ CONSIDER**는 속성에 해당 형식으로 동일한 이름을 지정합니다.  
   
@@ -101,7 +100,7 @@ public class Control {
   
  *Pearson Education, Inc의 동의로 재인쇄. 출처: [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 작성자: Krzysztof Cwalina 및 Brad Abrams, 출판 정보: Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [프레임워크 디자인 지침](../../../docs/standard/design-guidelines/index.md)
 - [명명 지침](../../../docs/standard/design-guidelines/naming-guidelines.md)

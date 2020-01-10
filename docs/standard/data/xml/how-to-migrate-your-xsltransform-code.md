@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 910beb2f-cfb3-4e8e-9936-f7e0c5f4064a
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7022a0f55cd7994141148bc6b2faefb10bfea416
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 2bc5cbc1b0857a82d3b0a11f05a4eb5756724546
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966988"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710845"
 ---
 # <a name="how-to-migrate-your-xsltransform-code"></a>방법: XslTransform 코드 마이그레이션
 새 XSLT 클래스는 기존 클래스와 매우 유사하게 디자인되었습니다. <xref:System.Xml.Xsl.XslCompiledTransform> 클래스는 <xref:System.Xml.Xsl.XslTransform> 클래스를 대체합니다. <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> 메서드를 사용하여 스타일시트를 컴파일할 수 있습니다. <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 메서드를 사용하여 변환을 실행할 수 있습니다. 다음 프로시저에서는 일반 XSLT 작업을 보여 주고 <xref:System.Xml.Xsl.XslTransform> 클래스를 사용한 코드와 <xref:System.Xml.Xsl.XslCompiledTransform> 클래스를 사용한 코드를 비교합니다.  
@@ -93,7 +91,7 @@ ms.locfileid: "69966988"
      [!code-csharp[XML_Migration#18](../../../../samples/snippets/csharp/VS_Snippets_Data/XML_Migration/CS/migration.cs#18)]
      [!code-vb[XML_Migration#18](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XML_Migration/VB/migration.vb#18)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [XslTransform 클래스에서 마이그레이션](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)
 - [XslCompiledTransform 클래스 사용](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)

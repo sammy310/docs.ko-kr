@@ -3,14 +3,12 @@ title: XML 문서의 네임스페이스 관리
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 682643fc-b848-4e42-8c0d-50deeaeb5f2a
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3befdd0ec96856a62e5c3c603935303498758710
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 64ef9fd4ca3a9a83b9cd3eba9cb952b0f668e9f0
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423922"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710702"
 ---
 # <a name="managing-namespaces-in-an-xml-document"></a>XML 문서의 네임스페이스 관리
 XML 네임스페이스는 XML 문서의 요소 및 특성 이름을 사용자 지정 및 미리 정의된 URI와 연결합니다. 이러한 연결을 만들려면 네임스페이스 URI의 접두사를 정의하고 해당 접두사를 사용하여 XML 데이터의 요소 및 특성 이름을 한정합니다. 네임스페이스는 요소 및 특성 이름이 충돌하는 것을 막고 동일한 이름의 요소 및 특성이 처리 및 확인되도록 하는 역할을 합니다.  
@@ -67,7 +65,7 @@ XML 네임스페이스는 XML 문서의 요소 및 특성 이름을 사용자 �
   
  다음은 <xref:System.Xml.XmlNamespaceManager> 클래스로 수행할 수 있는 관리 및 조회 작업입니다. 자세한 내용 및 예제는 각 메서드 또는 속성의 참조 페이지에 대한 링크를 참조하세요.  
   
-|대상|관리 그룹을 연결하거나 연결된 관리 그룹의 속성을 편집하려면 관리 작업 영역의|  
+|변환 대상|사용|  
 |--------|---------|  
 |네임스페이스 추가|<xref:System.Xml.XmlNamespaceManager.AddNamespace%2A> 메서드|  
 |네임스페이스 제거|<xref:System.Xml.XmlNamespaceManager.RemoveNamespace%2A> 메서드|  

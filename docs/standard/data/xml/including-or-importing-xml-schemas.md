@@ -7,14 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: fe1b4a11-37f4-4e1a-93c9-239f4fe736c0
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 45f6b402ae01b7f762f8ef10dcfb0bc46f949db6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: d9a18876d8a5ba3067aa35c617b1e20fce0411f5
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343573"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710780"
 ---
 # <a name="including-or-importing-xml-schemas"></a>XML 스키마 포함하기 또는 가져오기
 XML 스키마에 `<xs:import />`, `<xs:include />` 및 `<xs:redefine />` 요소를 포함시킬 수 있습니다. 이 스키마 요소는 이를 포함하거나 가져오는 스키마의 구조를 보완하는 데 사용할 수 있는 다른 XML 스키마를 참조할 수 있습니다. SOM(스키마 개체 모델) API에서 <xref:System.Xml.Schema.XmlSchemaImport>, <xref:System.Xml.Schema.XmlSchemaInclude> 및 <xref:System.Xml.Schema.XmlSchemaRedefine> 클래스는 이러한 요소에 매핑됩니다.  
@@ -99,7 +97,7 @@ XML 스키마에 `<xs:import />`, `<xs:include />` 및 `<xs:redefine />` 요소�
   
  `<xs:import />`, `<xs:include />` 및 `<xs:redefine />` 요소와 <xref:System.Xml.Schema.XmlSchemaImport>, <xref:System.Xml.Schema.XmlSchemaInclude> 및 <xref:System.Xml.Schema.XmlSchemaRedefine> 클래스에 대한 자세한 내용은 [W3C XML Schema](https://www.w3.org/XML/Schema)(W3C XML 스키마) 및 <xref:System.Xml.Schema?displayProperty=nameWithType> 네임스페이스 클래스 참조 문서를 참조하세요.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [XML 스키마 개체 모델 개요](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
 - [XML 스키마 읽기 및 쓰기](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)

@@ -3,14 +3,12 @@ title: XslTransform 클래스에서 임의 동작 구현
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: d2758ea1-03f6-47bd-88d2-0fb7ccdb2fab
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d0a6b3faff0208634e711b9d7908e3fd8dc640ae
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
-ms.translationtype: HT
+ms.openlocfilehash: b37cb0f4bf9a85053d70d549ae005c7d50a50bc0
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170837"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710806"
 ---
 # <a name="implementation-of-discretionary-behaviors-in-the-xsltransform-class"></a>XslTransform 클래스에서 임의 동작 구현
 
@@ -56,7 +54,7 @@ ms.locfileid: "67170837"
 
 ## <a name="xslsort"></a>xsl:sort
 
-변환을 사용하여 정렬할 경우 W3C XSLT 1.0 권장 사항에서는 다음과 같은 몇 가지 준수 사항을 다음 창이 여기에 포함됩니다.
+변환을 사용하여 정렬할 경우 W3C XSLT 1.0 권장 사항에서는 다음과 같은 몇 가지 준수 사항을 가정합니다.
 
 - 규칙을 준수하는 두 XSLT 프로세서가 서로 다르게 정렬할 수 있습니다.
 
@@ -68,18 +66,18 @@ ms.locfileid: "67170837"
 
 |데이터 형식|정렬 동작|
 |---------------|----------------------|
-|Text|CLR(공용 언어 런타임) String.Compare 메서드와 culture 로캘을 사용하여 데이터를 정렬합니다. 데이터 형식이 "텍스트"에 해당하면 <xref:System.Xml.Xsl.XslTransform> 클래스에서 정렬은 CLR의 문자열 비교 동작과 동일하게 작동합니다.|
-|수|숫자 값은 XPath(XML Path Language) 번호로 간주되며 W3C [XPath(XML Path Language) Version 1.0 권장 사항, 섹션 3.5](https://www.w3.org/TR/1999/REC-xpath-19991116/#numbers)에 설명된 세부 정보에 따라 정렬됩니다.|
+|텍스트|CLR(공용 언어 런타임) String.Compare 메서드와 culture 로캘을 사용하여 데이터를 정렬합니다. 데이터 형식이 "텍스트"에 해당하면 <xref:System.Xml.Xsl.XslTransform> 클래스에서 정렬은 CLR의 문자열 비교 동작과 동일하게 작동합니다.|
+|Number|숫자 값은 XPath(XML Path Language) 번호로 간주되며 W3C [XPath(XML Path Language) Version 1.0 권장 사항, 섹션 3.5](https://www.w3.org/TR/1999/REC-xpath-19991116/#numbers)에 설명된 세부 정보에 따라 정렬됩니다.|
 
 ## <a name="optional-features-supported"></a>지원되는 선택적 기능
 
 다음 표에서는 XSLT 프로세서에서 선택적으로 구현되며 <xref:System.Xml.Xsl.XslTransform> 클래스에서는 일괄 구현되는 기능을 보여 줍니다.
 
-|기능|참조 위치|참고 사항|
+|기능|참조 위치|참고|
 |-------------|------------------------|-----------|
 |`disable-output-escaping` 및 `<xsl:text...>` 태그의 `<xsl:value-of...>` 특성|W3C XSLT 1.0 권장 사항<br /><br /> 16.4단원|`disable-output-escaping` 또는 `xsl:text` 요소가 `xsl:value-of`, `xsl:comment` 또는 `xsl:processing-instruction` 요소에서 사용되면 `xsl:attribute` 특성이 무시됩니다.<br /><br /> 텍스트가 들어 있는 결과 트리 조각 및 이스케이프된 텍스트 출력은 지원되지 않습니다.<br /><br /> disable-output-escaping 특성은 <xref:System.Xml.XmlReader> 또는 <xref:System.Xml.XmlWriter> 개체로 변환할 때 무시됩니다.|
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Xml.Xsl.XslTransform>
 - [XslTransform 클래스의 XSLT 프로세서 구현](xsltransform-class-implements-the-xslt-processor.md)

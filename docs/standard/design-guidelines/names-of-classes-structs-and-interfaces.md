@@ -12,13 +12,12 @@ helpviewer_keywords:
 - interfaces [.NET Framework], names
 - generic type parameters
 ms.assetid: 87a4b0da-ed64-43b1-ac43-968576c444ce
-author: KrzysztofCwalina
-ms.openlocfilehash: 2ecd708ccb8eb91270e8ef9c174b8d7e599a2629
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 96d9904af0106d797c9fc5199bda76da53874451
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353713"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709246"
 ---
 # <a name="names-of-classes-structs-and-interfaces"></a>클래스, 구조체 및 인터페이스의 이름
 다음 명명 지침은 일반적인 형식 이름 지정에 적용 됩니다.  
@@ -100,7 +99,7 @@ public interface ISessionChannel<TSession> where TSession : ISession {
   
  *Pearson Education, Inc의 동의로 재인쇄. 출처: [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 작성자: Krzysztof Cwalina 및 Brad Abrams, 출판 정보: Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [프레임워크 디자인 지침](../../../docs/standard/design-guidelines/index.md)
 - [명명 지침](../../../docs/standard/design-guidelines/naming-guidelines.md)

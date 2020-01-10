@@ -7,14 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 2ed8c28b-b88d-4be7-9c87-92df01f0821f
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4ff9232272124c8706e64162d096eced8640c806
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 68c003467d837fe79d5e275968e47fa5dc3490cc
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966962"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710728"
 ---
 # <a name="insert-xml-data-using-xpathnavigator"></a>XPathNavigator를 사용하여 XML 데이터 삽입
 <xref:System.Xml.XPath.XPathNavigator> 클래스는 XML 문서에 형제, 자식 및 특성 노드를 삽입하는 메서드 집합을 제공합니다. 이러한 메서드를 사용하려면 <xref:System.Xml.XPath.XPathNavigator> 개체가 편집 가능한 상태여야 합니다. 즉, <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> 속성이 `true`여야 합니다.  
@@ -330,7 +328,7 @@ document.Save("book.xml");
 ## <a name="saving-an-xml-document"></a>XML 문서 저장  
  <xref:System.Xml.XmlDocument> 클래스의 메서드를 사용하면 <xref:System.Xml.XmlDocument> 개체에서 변경된 내용을 이 항목에서 설명하는 메서드의 결과로 저장할 수 있습니다. <xref:System.Xml.XmlDocument> 개체에서 변경된 내용을 저장하는 방법에 대한 자세한 내용은 [문서 작성 및 저장](../../../../docs/standard/data/xml/saving-and-writing-a-document.md)을 참조하세요.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>

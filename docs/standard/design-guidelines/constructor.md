@@ -12,13 +12,12 @@ helpviewer_keywords:
 - parameterless constructors
 - static constructors
 ms.assetid: b4496afe-5fa7-4bb0-85ca-70b0ef21e6fc
-author: KrzysztofCwalina
-ms.openlocfilehash: a43ec815275e58f4bc6462fb4f5cb4733267de31
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 823bc893c9384bb687e5f9a196abe497db14f4db
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972110"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709480"
 ---
 # <a name="constructor-design"></a>생성자 디자인
 
@@ -76,11 +75,11 @@ X 구조체에서 매개 변수가 없는 생성자를 명시적으로 정의 **
 
 **✓ CONSIDER** 런타임 형식에서 명시적으로 정의 된 정적 생성자를 갖지 않는의 성능을 최적화할 수 있기 때문에 정적 생성자를 사용 하 여 명시적으로 보다는 정적 필드 인라인을 초기화 합니다.
 
-*Portions © 2005, 2009 Microsoft Corporation. 모든 권리 보유.*
+*2005, 2009 Microsoft Corporation © 부분입니다. All rights reserved.*
 
-*받고 재인쇄 되었습니다는 피어슨 교육, inc. 프레임 워크 디자인 지침 [에서 사용 권한입니다. 다시 사용할 수 있는 .net 라이브러리에 대 한 규칙, 관용구 및](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 패턴, Microsoft Windows 개발 시리즈의 일부로 addison-Wesley Professional에서 2008 년 10 월 22 일에 게시 된 Krzysztof Cwalina 및 Brad abrams 성*
+*Pearson Education, Inc의 동의로 재인쇄. 출처: [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 작성자: Krzysztof Cwalina 및 Brad Abrams, 출판 정보: Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [멤버 디자인 지침](../../../docs/standard/design-guidelines/member.md)
 - [프레임워크 디자인 지침](../../../docs/standard/design-guidelines/index.md)

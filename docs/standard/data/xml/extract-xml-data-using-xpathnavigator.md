@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 095b0987-ee4b-4595-a160-da1c956ad576
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f789317defe3f4b44b37e6d94d37b974d003bcae
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 627da3c8c45d007e677c4f92f4d5cd602d34ae84
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966990"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710858"
 ---
 # <a name="extract-xml-data-using-xpathnavigator"></a>XPathNavigator를 사용하여 XML 데이터 추출
 Microsoft .NET Framework에서는 여러 가지 방법으로 XML 문서를 나타낼 수 있습니다. 예를 들어, <xref:System.String>을 사용하거나 <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter>, <xref:System.Xml.XmlDocument> 또는 <xref:System.Xml.XPath.XPathDocument> 클래스를 사용하여 XML 문서를 나타낼 수 있습니다. 여러 가지 XML 문서 표현 간을 이동할 수 있도록 <xref:System.Xml.XPath.XPathNavigator> 클래스는 XML을 <xref:System.String>, <xref:System.Xml.XmlReader> 개체 또는 <xref:System.Xml.XmlWriter> 개체로 추출하는 많은 메서드와 속성을 제공합니다.  
@@ -162,7 +160,7 @@ book.Close();
   
  이 예제에서는 이 항목의 앞부분에 있는 `books.xml` 파일을 입력으로 사용합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>

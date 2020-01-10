@@ -3,14 +3,12 @@ title: 요소 및 특성이 있는 새 노드의 엔터티 참조 확장에 대�
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 64359aee-aab0-4042-9a32-d19789af6ca7
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 1a92f1b08719c926e6384c220e3695de26dbb4fd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 4772e3f7365069c537c4ec3bc8571f2f710bc9fc
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967322"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710624"
 ---
 # <a name="namespace-affect-on-entity-reference-expansion-for-new-nodes-containing-elements-and-attributes"></a>요소 및 특성이 있는 새 노드의 엔터티 참조 확장에 대한 네임스페이스의 영향
 엔터티 선언 내용은 거의 모든 항목을 포함할 수 있기 때문에 이 내용에 `<!ENTITY aname "<elem>test</elem>">`와 같은 요소가 포함될 가능성도 있습니다.  
@@ -20,6 +18,6 @@ ms.locfileid: "69967322"
 > [!NOTE]
 > 새로 만들어진 entityreference 노드는 한 번 확장된 후에는 다시 확장되지 않습니다. 따라서 부모 노드가 설정될 때 요소의 대체 텍스트에서 사용된 네임스페이스가 바인딩됩니다. 하지만 기존 엔터티 참조 노드를 제거하고 다른 위치에 삽입할 경우 또는 **CloneNode** 메서드로 복제된 엔터티 참조 노드의 경우 해당 노드의 네임스페이스가 변경될 수 있습니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [XML DOM(문서 개체 모델)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

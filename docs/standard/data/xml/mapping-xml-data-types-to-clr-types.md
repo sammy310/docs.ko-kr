@@ -3,14 +3,12 @@ title: CLR 형식에 XML 데이터 형식 매핑
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: cabdfcad-f359-479b-b71c-8b2fad42ca49
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 48ec3a5b719b05112b257871f64a34f2bc21eeab
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: HT
+ms.openlocfilehash: 536c8dcd03d98879e24ae62d2b8a47e36564aaf6
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364140"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710663"
 ---
 # <a name="mapping-xml-data-types-to-clr-types"></a>CLR 형식에 XML 데이터 형식 매핑
 
@@ -78,6 +76,6 @@ ms.locfileid: "57364140"
 |주석 노드|<xref:System.Xml.XPath.XPathNavigator>|
 |처리 명령 노드|<xref:System.Xml.XPath.XPathNavigator>|
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [System.Xml 클래스의 형식 지원](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)

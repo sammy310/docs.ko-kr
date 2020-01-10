@@ -3,14 +3,12 @@ title: XslTransform의 출력
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 8e149d32-4b2f-493f-9e4b-d0d93475acde
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0a6c2ea2fe2f02dc1897cb1348f4c2585b730036
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 178b1e949868d3af893cbcb6df63590053341a3e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924962"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710494"
 ---
 # <a name="outputs-from-an-xsltransform"></a>XslTransform의 출력
 스타일시트는 `<xsl:output>` 특성과 `method` 문을 함께 사용하여 출력 형식을 결정할 수 있기 때문에 다음 표에서는 출력을 쓸 때 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 메서드를 사용하고 출력 형식이 <xref:System.IO.Stream>이나 <xref:System.IO.TextWriter>로 선언된 경우의 출력 형식을 보여 줍니다.  
@@ -27,7 +25,7 @@ ms.locfileid: "69924962"
 |method="text"|텍스트|  
   
 > [!NOTE]
-> 참고: <xref:System.Xml.Xsl.XslTransform.Transform%2A> 메서드의 출력이 <xref:System.Xml.XmlReader> 또는 <xref:System.Xml.XmlWriter>이면 `<xsl:output>` 문은 무시됩니다.  
+> 참고: `<xsl:output>` 메서드의 출력이 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 또는 <xref:System.Xml.XmlReader>이면 <xref:System.Xml.XmlWriter> 문은 무시됩니다.  
   
  다음 특성은 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 메서드 출력이 <xref:System.IO.Stream> 또는 <xref:System.IO.TextWriter>인 경우에 지원됩니다.  
   
@@ -35,7 +33,7 @@ ms.locfileid: "69924962"
   
 - omit-xml-declaration  
   
-- 독립 실행형  
+- standalone  
   
 - doctype-public  
   
@@ -57,6 +55,6 @@ ms.locfileid: "69924962"
 ## <a name="escaping-special-characters"></a>특수 문자 이스케이프  
  `<xsl:text disable-output-escaping>` 태그는 특수 문자를 XML 형식으로 이스케이프해야 하는지(예: `<&lt>` 기호 대신 `"<"` 사용), 현재 상태로 유지해야 하는지 여부를 나타내는 데 사용됩니다. `disable-output-escaping` 특성은 <xref:System.Xml.XmlReader> 또는 <xref:System.Xml.XmlWriter> 개체로 변형될 때 무시되며 특수 문자에는 영향을 주지 않습니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [XslTransform 클래스의 XSLT 프로세서 구현](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
