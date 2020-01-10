@@ -6,22 +6,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ad0b5717-3d32-41ad-a4d7-072c3e492b82
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0fb14f919d0737b9d9c25bcd62a3cfb7228ff432
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 1ab6dec2b99b01db04333c5d47176e40ed033fa7
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916085"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709896"
 ---
-# <a name="xml-schema-xsd-validation-with-xmlschemacollection"></a><span data-ttu-id="bc13e-102">XmlSchemaCollection을 사용하여 XSD(XML 스키마) 유효성 검사</span><span class="sxs-lookup"><span data-stu-id="bc13e-102">XML Schema (XSD) Validation with XmlSchemaCollection</span></span>
-<span data-ttu-id="bc13e-103"><xref:System.Xml.Schema.XmlSchemaCollection>을 사용하여 XSD(XML 스키마 정의 언어) 스키마에 대해 XML 문서의 유효성을 검사할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="bc13e-103">You can use the <xref:System.Xml.Schema.XmlSchemaCollection> to validate an XML document against XML Schema definition language (XSD) schemas.</span></span> <span data-ttu-id="bc13e-104"><xref:System.Xml.Schema.XmlSchemaCollection>은 스키마를 컬렉션에 저장함으로써 유효성을 검사할 때마다 메모리에 로드되지 않으므로 성능이 향상됩니다.</span><span class="sxs-lookup"><span data-stu-id="bc13e-104">The <xref:System.Xml.Schema.XmlSchemaCollection> improves performance by storing schemas in the collection so they are not loaded into memory each time validation occurs.</span></span> <span data-ttu-id="bc13e-105">스키마가 스키마 컬렉션에 있을 경우 `schemaLocation` 특성을 사용하여 컬렉션에서 스키마를 찾을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="bc13e-105">If the schema exists in the schema collection, the `schemaLocation` attribute is used to look up the schema in the collection.</span></span>  
+# <a name="xml-schema-xsd-validation-with-xmlschemacollection"></a><span data-ttu-id="b15fd-102">XmlSchemaCollection을 사용하여 XSD(XML 스키마) 유효성 검사</span><span class="sxs-lookup"><span data-stu-id="b15fd-102">XML Schema (XSD) Validation with XmlSchemaCollection</span></span>
+<span data-ttu-id="b15fd-103"><xref:System.Xml.Schema.XmlSchemaCollection>을 사용하여 XSD(XML 스키마 정의 언어) 스키마에 대해 XML 문서의 유효성을 검사할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b15fd-103">You can use the <xref:System.Xml.Schema.XmlSchemaCollection> to validate an XML document against XML Schema definition language (XSD) schemas.</span></span> <span data-ttu-id="b15fd-104"><xref:System.Xml.Schema.XmlSchemaCollection>은 스키마를 컬렉션에 저장함으로써 유효성을 검사할 때마다 메모리에 로드되지 않으므로 성능이 향상됩니다.</span><span class="sxs-lookup"><span data-stu-id="b15fd-104">The <xref:System.Xml.Schema.XmlSchemaCollection> improves performance by storing schemas in the collection so they are not loaded into memory each time validation occurs.</span></span> <span data-ttu-id="b15fd-105">스키마가 스키마 컬렉션에 있을 경우 `schemaLocation` 특성을 사용하여 컬렉션에서 스키마를 찾을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b15fd-105">If the schema exists in the schema collection, the `schemaLocation` attribute is used to look up the schema in the collection.</span></span>  
   
 > [!IMPORTANT]
-> <span data-ttu-id="bc13e-106">이제 <xref:System.Xml.Schema.XmlSchemaCollection> 클래스는 사용되지 않으며 <xref:System.Xml.Schema.XmlSchemaSet> 클래스로 대체되었습니다.</span><span class="sxs-lookup"><span data-stu-id="bc13e-106">The <xref:System.Xml.Schema.XmlSchemaCollection> class is now obsolete and has been replaced with the <xref:System.Xml.Schema.XmlSchemaSet> class.</span></span> <span data-ttu-id="bc13e-107"><xref:System.Xml.Schema.XmlSchemaSet> 클래스에 대한 자세한 내용은 [스키마 컴파일을 위한 XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="bc13e-107">For more information about the <xref:System.Xml.Schema.XmlSchemaSet> class see, [XmlSchemaSet for Schema Compilation](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md).</span></span>  
+> <span data-ttu-id="b15fd-106">이제 <xref:System.Xml.Schema.XmlSchemaCollection> 클래스는 사용되지 않으며 <xref:System.Xml.Schema.XmlSchemaSet> 클래스로 대체되었습니다.</span><span class="sxs-lookup"><span data-stu-id="b15fd-106">The <xref:System.Xml.Schema.XmlSchemaCollection> class is now obsolete and has been replaced with the <xref:System.Xml.Schema.XmlSchemaSet> class.</span></span> <span data-ttu-id="b15fd-107"><xref:System.Xml.Schema.XmlSchemaSet> 클래스에 대한 자세한 내용은 [스키마 컴파일을 위한 XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="b15fd-107">For more information about the <xref:System.Xml.Schema.XmlSchemaSet> class see, [XmlSchemaSet for Schema Compilation](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md).</span></span>  
   
- <span data-ttu-id="bc13e-108">다음 예제에서는 데이터 파일의 루트 요소를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="bc13e-108">The following example shows the root element of a data file.</span></span>  
+ <span data-ttu-id="b15fd-108">다음 예제에서는 데이터 파일의 루트 요소를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="b15fd-108">The following example shows the root element of a data file.</span></span>  
   
 ```xml  
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"  
@@ -30,9 +28,9 @@ ms.locfileid: "69916085"
     targetNamespace="urn:bookstore-schema">  
 ```  
   
- <span data-ttu-id="bc13e-109">이 예제에서는 `targetNamespace` 특성 값이 `urn:bookstore-schema`입니다. 이 값은 스키마를 <xref:System.Xml.Schema.XmlSchemaCollection>에 추가할 때 사용되는 네임스페이스와 같습니다.</span><span class="sxs-lookup"><span data-stu-id="bc13e-109">For this example, the value of the `targetNamespace` attribute is `urn:bookstore-schema`, which is the same namespace that is used when adding the schema to the <xref:System.Xml.Schema.XmlSchemaCollection>.</span></span>  
+ <span data-ttu-id="b15fd-109">이 예제에서는 `targetNamespace` 특성 값이 `urn:bookstore-schema`입니다. 이 값은 스키마를 <xref:System.Xml.Schema.XmlSchemaCollection>에 추가할 때 사용되는 네임스페이스와 같습니다.</span><span class="sxs-lookup"><span data-stu-id="b15fd-109">For this example, the value of the `targetNamespace` attribute is `urn:bookstore-schema`, which is the same namespace that is used when adding the schema to the <xref:System.Xml.Schema.XmlSchemaCollection>.</span></span>  
   
- <span data-ttu-id="bc13e-110">다음 코드 예제에서는 XML 스키마를 <xref:System.Xml.Schema.XmlSchemaCollection>에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="bc13e-110">The following code example adds an XML Schema to the <xref:System.Xml.Schema.XmlSchemaCollection>.</span></span>  
+ <span data-ttu-id="b15fd-110">다음 코드 예제에서는 XML 스키마를 <xref:System.Xml.Schema.XmlSchemaCollection>에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="b15fd-110">The following code example adds an XML Schema to the <xref:System.Xml.Schema.XmlSchemaCollection>.</span></span>  
   
 ```vb  
 Dim xsc As New XmlSchemaCollection()  
@@ -52,9 +50,9 @@ vreader = new XmlValidatingReader (reader);
 vreader.Schemas.Add(xsc);  
 ```  
   
- <span data-ttu-id="bc13e-111">`targetNamespace`에 대한 `namespaceURI` 메서드에 <xref:System.Xml.Schema.XmlSchemaCollection.Add%2A> 속성을 추가할 때 일반적으로 <xref:System.Xml.Schema.XmlSchemaCollection> 특성을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="bc13e-111">The `targetNamespace` attribute is generally used when you add the `namespaceURI` property in the <xref:System.Xml.Schema.XmlSchemaCollection.Add%2A> method for the <xref:System.Xml.Schema.XmlSchemaCollection>.</span></span> <span data-ttu-id="bc13e-112"><xref:System.Xml.Schema.XmlSchemaCollection>에 스키마를 추가하기 전에 null 참조를 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="bc13e-112">You can specify a null reference before adding the schema to the <xref:System.Xml.Schema.XmlSchemaCollection>.</span></span> <span data-ttu-id="bc13e-113">네임스페이스가 없는 스키마에는 빈 문자열("")을 사용해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="bc13e-113">An empty string ("") should be used for schemas without a namespace.</span></span> <span data-ttu-id="bc13e-114"><xref:System.Xml.Schema.XmlSchemaCollection>에는 네임스페이스가 없는 스키마가 한 개만 있을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="bc13e-114">The <xref:System.Xml.Schema.XmlSchemaCollection> can have only one schema without a namespace.</span></span>  
+ <span data-ttu-id="b15fd-111">`targetNamespace`에 대한 `namespaceURI` 메서드에 <xref:System.Xml.Schema.XmlSchemaCollection.Add%2A> 속성을 추가할 때 일반적으로 <xref:System.Xml.Schema.XmlSchemaCollection> 특성을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="b15fd-111">The `targetNamespace` attribute is generally used when you add the `namespaceURI` property in the <xref:System.Xml.Schema.XmlSchemaCollection.Add%2A> method for the <xref:System.Xml.Schema.XmlSchemaCollection>.</span></span> <span data-ttu-id="b15fd-112"><xref:System.Xml.Schema.XmlSchemaCollection>에 스키마를 추가하기 전에 null 참조를 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b15fd-112">You can specify a null reference before adding the schema to the <xref:System.Xml.Schema.XmlSchemaCollection>.</span></span> <span data-ttu-id="b15fd-113">네임스페이스가 없는 스키마에는 빈 문자열("")을 사용해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="b15fd-113">An empty string ("") should be used for schemas without a namespace.</span></span> <span data-ttu-id="b15fd-114"><xref:System.Xml.Schema.XmlSchemaCollection>에는 네임스페이스가 없는 스키마가 한 개만 있을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b15fd-114">The <xref:System.Xml.Schema.XmlSchemaCollection> can have only one schema without a namespace.</span></span>  
   
- <span data-ttu-id="bc13e-115">다음 코드 예제에서는 XML 스키마 HeadCount.xsd를 <xref:System.Xml.Schema.XmlSchemaCollection>에 추가하고 HeadCount.xml의 유효성을 검사합니다.</span><span class="sxs-lookup"><span data-stu-id="bc13e-115">The following code example adds an XML Schema, HeadCount.xsd, to the <xref:System.Xml.Schema.XmlSchemaCollection> and validates HeadCount.xml.</span></span>  
+ <span data-ttu-id="b15fd-115">다음 코드 예제에서는 XML 스키마 HeadCount.xsd를 <xref:System.Xml.Schema.XmlSchemaCollection>에 추가하고 HeadCount.xml의 유효성을 검사합니다.</span><span class="sxs-lookup"><span data-stu-id="b15fd-115">The following code example adds an XML Schema, HeadCount.xsd, to the <xref:System.Xml.Schema.XmlSchemaCollection> and validates HeadCount.xml.</span></span>  
   
 ```vb  
 Imports System  
@@ -125,7 +123,7 @@ namespace ValidationSample
 }  
 ```  
   
- <span data-ttu-id="bc13e-116">다음에서는 유효성을 검사할 입력 파일 HeadCount.xml의 내용을 요약합니다.</span><span class="sxs-lookup"><span data-stu-id="bc13e-116">The following outlines the contents of the input file, HeadCount.xml, to be validated.</span></span>  
+ <span data-ttu-id="b15fd-116">다음에서는 유효성을 검사할 입력 파일 HeadCount.xml의 내용을 요약합니다.</span><span class="sxs-lookup"><span data-stu-id="b15fd-116">The following outlines the contents of the input file, HeadCount.xml, to be validated.</span></span>  
   
 ```xml  
 <!--Load HeadCount.xsd in SchemaCollection for Validation-->  
@@ -135,7 +133,7 @@ namespace ValidationSample
 </hc:HeadCount>  
 ```  
   
- <span data-ttu-id="bc13e-117">다음에서는 유효성을 검사할 XML 스키마 파일 HeadCount.xsd의 내용을 요약합니다.</span><span class="sxs-lookup"><span data-stu-id="bc13e-117">The following outlines the contents of the XML Schema file, HeadCount.xsd, to be validated against.</span></span>  
+ <span data-ttu-id="b15fd-117">다음에서는 유효성을 검사할 XML 스키마 파일 HeadCount.xsd의 내용을 요약합니다.</span><span class="sxs-lookup"><span data-stu-id="b15fd-117">The following outlines the contents of the XML Schema file, HeadCount.xsd, to be validated against.</span></span>  
   
 ```xml  
 <xs:schema xmlns="xsdHeadCount" targetNamespace="xsdHeadCount" xmlns:xs="http://www.w3.org/2001/XMLSchema">  
@@ -149,7 +147,7 @@ namespace ValidationSample
 </xs:schema>  
 ```  
   
- <span data-ttu-id="bc13e-118">다음 코드 예제에서는 <xref:System.Xml.XmlValidatingReader>를 사용하는 <xref:System.Xml.XmlTextReader>를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="bc13e-118">The following code example creates an <xref:System.Xml.XmlValidatingReader> that takes an <xref:System.Xml.XmlTextReader>.</span></span> <span data-ttu-id="bc13e-119">XML 스키마 sample4.xsd에 대해 입력 파일 sample4.xml의 유효성을 검사합니다.</span><span class="sxs-lookup"><span data-stu-id="bc13e-119">The input file, sample4.xml, is validated against the XML Schema, sample4.xsd.</span></span>  
+ <span data-ttu-id="b15fd-118">다음 코드 예제에서는 <xref:System.Xml.XmlValidatingReader>를 사용하는 <xref:System.Xml.XmlTextReader>를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="b15fd-118">The following code example creates an <xref:System.Xml.XmlValidatingReader> that takes an <xref:System.Xml.XmlTextReader>.</span></span> <span data-ttu-id="b15fd-119">XML 스키마 sample4.xsd에 대해 입력 파일 sample4.xml의 유효성을 검사합니다.</span><span class="sxs-lookup"><span data-stu-id="b15fd-119">The input file, sample4.xml, is validated against the XML Schema, sample4.xsd.</span></span>  
   
 ```vb  
 Dim tr As New XmlTextReader("sample4.xml")  
@@ -173,7 +171,7 @@ while(vr.Read()) {
     }  
 ```  
   
- <span data-ttu-id="bc13e-120">다음에서는 유효성을 검사할 입력 파일 sample4.xml의 내용을 요약합니다.</span><span class="sxs-lookup"><span data-stu-id="bc13e-120">The following outlines the contents of the input file, sample4.xml, to be validated.</span></span>  
+ <span data-ttu-id="b15fd-120">다음에서는 유효성을 검사할 입력 파일 sample4.xml의 내용을 요약합니다.</span><span class="sxs-lookup"><span data-stu-id="b15fd-120">The following outlines the contents of the input file, sample4.xml, to be validated.</span></span>  
   
 ```xml  
 <datatypes xmlns="datatypesTest">  
@@ -183,7 +181,7 @@ while(vr.Read()) {
 </datatypes>  
 ```  
   
- <span data-ttu-id="bc13e-121">다음에서는 유효성을 검사할 XML 스키마 파일 sample4.xsd의 내용을 요약합니다.</span><span class="sxs-lookup"><span data-stu-id="bc13e-121">The following outlines the contents of the XML Schema file, sample4.xsd, to be validated against.</span></span>  
+ <span data-ttu-id="b15fd-121">다음에서는 유효성을 검사할 XML 스키마 파일 sample4.xsd의 내용을 요약합니다.</span><span class="sxs-lookup"><span data-stu-id="b15fd-121">The following outlines the contents of the XML Schema file, sample4.xsd, to be validated against.</span></span>  
   
 ```xml  
 <xs:schema   
@@ -208,9 +206,9 @@ while(vr.Read()) {
 </xs:schema>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="bc13e-122">참고 항목</span><span class="sxs-lookup"><span data-stu-id="bc13e-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b15fd-122">참조</span><span class="sxs-lookup"><span data-stu-id="b15fd-122">See also</span></span>
 
 - <xref:System.Xml.XmlParserContext>
 - <xref:System.Xml.XmlValidatingReader.ValidationEventHandler?displayProperty=nameWithType>
 - <xref:System.Xml.XmlValidatingReader.Schemas%2A?displayProperty=nameWithType>
-- [<span data-ttu-id="bc13e-123">XmlSchemaCollection 스키마 컴파일</span><span class="sxs-lookup"><span data-stu-id="bc13e-123">XmlSchemaCollection Schema Compilation</span></span>](../../../../docs/standard/data/xml/xmlschemacollection-schema-compilation.md)
+- [<span data-ttu-id="b15fd-123">XmlSchemaCollection 스키마 컴파일</span><span class="sxs-lookup"><span data-stu-id="b15fd-123">XmlSchemaCollection Schema Compilation</span></span>](../../../../docs/standard/data/xml/xmlschemacollection-schema-compilation.md)

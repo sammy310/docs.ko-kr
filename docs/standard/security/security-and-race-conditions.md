@@ -11,20 +11,18 @@ helpviewer_keywords:
 - secure coding, race conditions
 - code security, race conditions
 ms.assetid: ea3edb80-b2e8-4e85-bfed-311b20cb59b6
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 57ceaedc7c38ae70a0db5a7fd584a765a7474aff
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8980122acdd069bc840aa09129483a1cb9a379fd
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61933811"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705875"
 ---
-# <a name="security-and-race-conditions"></a><span data-ttu-id="86803-102">보안 및 경합 상태</span><span class="sxs-lookup"><span data-stu-id="86803-102">Security and Race Conditions</span></span>
-<span data-ttu-id="86803-103">다른 문제 영역을 보안 허점을 경합 상태에 의해 악용 가능성이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="86803-103">Another area of concern is the potential for security holes exploited by race conditions.</span></span> <span data-ttu-id="86803-104">여러 가지 방법으로이 발생할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="86803-104">There are several ways in which this might happen.</span></span> <span data-ttu-id="86803-105">다음에 나오는 하위 항목은 개발자가 피해 야 하는 주요 문제 중 일부를 간략하게 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="86803-105">The subtopics that follow outline some of the major pitfalls that the developer must avoid.</span></span>  
+# <a name="security-and-race-conditions"></a><span data-ttu-id="988f4-102">보안 및 경합 상태</span><span class="sxs-lookup"><span data-stu-id="988f4-102">Security and Race Conditions</span></span>
+<span data-ttu-id="988f4-103">또 다른 문제는 경합 상태에서 악용 되는 보안 허점을 일으킬 수 있다는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="988f4-103">Another area of concern is the potential for security holes exploited by race conditions.</span></span> <span data-ttu-id="988f4-104">이는 여러 가지 방법으로 발생할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="988f4-104">There are several ways in which this might happen.</span></span> <span data-ttu-id="988f4-105">다음 하위 항목은 개발자가 피해 야 하는 주요 문제 중 일부를 간략하게 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="988f4-105">The subtopics that follow outline some of the major pitfalls that the developer must avoid.</span></span>  
   
-## <a name="race-conditions-in-the-dispose-method"></a><span data-ttu-id="86803-106">Dispose 메서드에서 경합</span><span class="sxs-lookup"><span data-stu-id="86803-106">Race Conditions in the Dispose Method</span></span>  
- <span data-ttu-id="86803-107">클래스의 경우 **Dispose** 메서드 (자세한 내용은 참조 하세요. [가비지 수집](../../../docs/standard/garbage-collection/index.md))은 동기화 되지 않은 것 같습니다 내부 정리 코드 **Dispose** 실행할 수 있습니다 둘 다음 예제에서와 같이 번입니다.</span><span class="sxs-lookup"><span data-stu-id="86803-107">If a class's **Dispose** method (for more information, see [Garbage Collection](../../../docs/standard/garbage-collection/index.md)) is not synchronized, it is possible that cleanup code inside **Dispose** can be run more than once, as shown in the following example.</span></span>  
+## <a name="race-conditions-in-the-dispose-method"></a><span data-ttu-id="988f4-106">Dispose 메서드의 경합 상태</span><span class="sxs-lookup"><span data-stu-id="988f4-106">Race Conditions in the Dispose Method</span></span>  
+ <span data-ttu-id="988f4-107">클래스의 **dispose** 메서드 (자세한 내용은 [가비지 컬렉션](../../../docs/standard/garbage-collection/index.md)참조)가 동기화 되지 않은 경우 다음 예제와 같이 **dispose** 내의 정리 코드를 두 번 이상 실행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="988f4-107">If a class's **Dispose** method (for more information, see [Garbage Collection](../../../docs/standard/garbage-collection/index.md)) is not synchronized, it is possible that cleanup code inside **Dispose** can be run more than once, as shown in the following example.</span></span>  
   
 ```vb  
 Sub Dispose()  
@@ -46,13 +44,13 @@ void Dispose()
 }  
 ```  
   
- <span data-ttu-id="86803-108">때문에이 **Dispose** 구현은 동기화 되지 않은, 있기 `Cleanup` 첫 번째 스레드 및 하기 전에 두 번째 스레드가 호출 될 `_myObj` 로 설정 되어 **null**합니다.</span><span class="sxs-lookup"><span data-stu-id="86803-108">Because this **Dispose** implementation is not synchronized, it is possible for `Cleanup` to be called by first one thread and then a second thread before `_myObj` is set to **null**.</span></span> <span data-ttu-id="86803-109">이 보안 문제 인지에 따라 달라 집니다 때는 `Cleanup` 코드를 실행 합니다.</span><span class="sxs-lookup"><span data-stu-id="86803-109">Whether this is a security concern depends on what happens when the `Cleanup` code runs.</span></span> <span data-ttu-id="86803-110">동기화 되지 않은 사용 하 여 중요 한 문제가 **Dispose** 구현 파일과 같은 리소스 핸들의 사용이 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="86803-110">A major issue with unsynchronized **Dispose** implementations involves the use of resource handles such as files.</span></span> <span data-ttu-id="86803-111">메서드를 잘못 사용 될 보안 문제를 일으키는 핸들을 잘못 발생할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="86803-111">Improper disposal can cause the wrong handle to be used, which often leads to security vulnerabilities.</span></span>  
+ <span data-ttu-id="988f4-108">이 **Dispose** 구현이 동기화 되지 않기 때문에 첫 번째 스레드를 통해 `Cleanup`를 호출한 다음 `_myObj`가 **null**로 설정 되기 전에 두 번째 스레드가 호출 될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="988f4-108">Because this **Dispose** implementation is not synchronized, it is possible for `Cleanup` to be called by first one thread and then a second thread before `_myObj` is set to **null**.</span></span> <span data-ttu-id="988f4-109">보안 문제가 발생 하는지 여부는 `Cleanup` 코드가 실행 될 때 발생 하는 상황에 따라 달라 집니다.</span><span class="sxs-lookup"><span data-stu-id="988f4-109">Whether this is a security concern depends on what happens when the `Cleanup` code runs.</span></span> <span data-ttu-id="988f4-110">동기화 되지 않은 **Dispose** 구현과 관련 된 주요 문제는 파일 등의 리소스 핸들을 사용 하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="988f4-110">A major issue with unsynchronized **Dispose** implementations involves the use of resource handles such as files.</span></span> <span data-ttu-id="988f4-111">잘못 된 삭제로 인해 잘못 된 핸들이 사용 될 수 있으며,이로 인해 보안 취약성이 발생 하기도 합니다.</span><span class="sxs-lookup"><span data-stu-id="988f4-111">Improper disposal can cause the wrong handle to be used, which often leads to security vulnerabilities.</span></span>  
   
-## <a name="race-conditions-in-constructors"></a><span data-ttu-id="86803-112">생성자에서 경합 상태</span><span class="sxs-lookup"><span data-stu-id="86803-112">Race Conditions in Constructors</span></span>  
- <span data-ttu-id="86803-113">일부 응용 프로그램에서는 다른 스레드가 해당 클래스 생성자가 완전히 실행 하려면 먼저 클래스 멤버에 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="86803-113">In some applications, it might be possible for other threads to access class members before their class constructors have completely run.</span></span> <span data-ttu-id="86803-114">이 발생 하거나 필요한 경우에 스레드를 동기화 해야 하는 경우 보안 문제가 발생 하지는 되도록 모든 클래스 생성자를 검토 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="86803-114">You should review all class constructors to make sure that there are no security issues if this should happen, or synchronize threads if necessary.</span></span>  
+## <a name="race-conditions-in-constructors"></a><span data-ttu-id="988f4-112">생성자의 경합 상태</span><span class="sxs-lookup"><span data-stu-id="988f4-112">Race Conditions in Constructors</span></span>  
+ <span data-ttu-id="988f4-113">일부 응용 프로그램에서는 클래스 생성자가 완전히 실행 되기 전에 다른 스레드가 클래스 멤버에 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="988f4-113">In some applications, it might be possible for other threads to access class members before their class constructors have completely run.</span></span> <span data-ttu-id="988f4-114">모든 클래스 생성자를 검토 하 여이 문제가 발생 하는 경우 보안 문제가 없는지 확인 하거나 필요한 경우 스레드를 동기화 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="988f4-114">You should review all class constructors to make sure that there are no security issues if this should happen, or synchronize threads if necessary.</span></span>  
   
-## <a name="race-conditions-with-cached-objects"></a><span data-ttu-id="86803-115">캐시 된 개체를 사용 하 여 경합</span><span class="sxs-lookup"><span data-stu-id="86803-115">Race Conditions with Cached Objects</span></span>  
- <span data-ttu-id="86803-116">보안 정보를 캐시 하거나 코드 액세스 보안을 사용 하는 코드 [Assert](../../../docs/framework/misc/using-the-assert-method.md) 작업 노출 될 수 있습니다 경합 클래스의 다른 부분을 적절 하 게 동기화 되지 않은 경우 다음 예와에서 같이 합니다.</span><span class="sxs-lookup"><span data-stu-id="86803-116">Code that caches security information or uses the code access security [Assert](../../../docs/framework/misc/using-the-assert-method.md) operation might also be vulnerable to race conditions if other parts of the class are not appropriately synchronized, as shown in the following example.</span></span>  
+## <a name="race-conditions-with-cached-objects"></a><span data-ttu-id="988f4-115">캐시 된 개체를 사용 하는 경합 상태</span><span class="sxs-lookup"><span data-stu-id="988f4-115">Race Conditions with Cached Objects</span></span>  
+ <span data-ttu-id="988f4-116">보안 정보를 캐시 하거나 코드 액세스 보안 [어설션](../../../docs/framework/misc/using-the-assert-method.md) 작업을 사용 하는 코드는 다음 예제와 같이 클래스의 다른 부분이 적절 하 게 동기화 되지 않은 경우 경합 상태에 취약할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="988f4-116">Code that caches security information or uses the code access security [Assert](../../../docs/framework/misc/using-the-assert-method.md) operation might also be vulnerable to race conditions if other parts of the class are not appropriately synchronized, as shown in the following example.</span></span>  
   
 ```vb  
 Sub SomeSecureFunction()  
@@ -97,13 +95,13 @@ void DoOtherWork()
 }  
 ```  
   
- <span data-ttu-id="86803-117">다른 경로가 없으면 `DoOtherWork` 동일한 개체를 사용 하 여 다른 스레드에서 호출 될 수 있는, 신뢰할 수 없는 호출자를 빠져나갈 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="86803-117">If there are other paths to `DoOtherWork` that can be called from another thread with the same object, an untrusted caller can slip past a demand.</span></span>  
+ <span data-ttu-id="988f4-117">같은 개체를 사용 하 여 다른 스레드에서 호출할 수 있는 `DoOtherWork`에 대 한 다른 경로가 있는 경우 신뢰할 수 없는 호출자가 요청을 지난 후에 지연 될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="988f4-117">If there are other paths to `DoOtherWork` that can be called from another thread with the same object, an untrusted caller can slip past a demand.</span></span>  
   
- <span data-ttu-id="86803-118">코드 보안 정보를 캐시 하는 경우이 취약성에 대 한 검토 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="86803-118">If your code caches security information, make sure that you review it for this vulnerability.</span></span>  
+ <span data-ttu-id="988f4-118">코드가 보안 정보를 캐시 하는 경우이 취약점을 검토 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="988f4-118">If your code caches security information, make sure that you review it for this vulnerability.</span></span>  
   
-## <a name="race-conditions-in-finalizers"></a><span data-ttu-id="86803-119">종료자에서 경합 상태</span><span class="sxs-lookup"><span data-stu-id="86803-119">Race Conditions in Finalizers</span></span>  
- <span data-ttu-id="86803-120">해당 종료자에서 해제 되는 정적 또는 관리 되지 않는 리소스를 참조 하는 개체에 경합 상태가 발생할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="86803-120">Race conditions can also occur in an object that references a static or unmanaged resource that it then frees in its finalizer.</span></span> <span data-ttu-id="86803-121">여러 개체 클래스의 종료자에서 조작 되는 리소스를 공유 하는 경우 개체는 해당 리소스에 대 한 모든 액세스를 동기화 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="86803-121">If multiple objects share a resource that is manipulated in a class's finalizer, the objects must synchronize all access to that resource.</span></span>  
+## <a name="race-conditions-in-finalizers"></a><span data-ttu-id="988f4-119">종료자의 경합 상태</span><span class="sxs-lookup"><span data-stu-id="988f4-119">Race Conditions in Finalizers</span></span>  
+ <span data-ttu-id="988f4-120">경합 상태는 해당 종료자에서 해제할 정적 또는 관리 되지 않는 리소스를 참조 하는 개체 에서도 발생할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="988f4-120">Race conditions can also occur in an object that references a static or unmanaged resource that it then frees in its finalizer.</span></span> <span data-ttu-id="988f4-121">여러 개체가 클래스의 종료자에서 조작 되는 리소스를 공유 하는 경우 개체는 해당 리소스에 대 한 모든 액세스를 동기화 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="988f4-121">If multiple objects share a resource that is manipulated in a class's finalizer, the objects must synchronize all access to that resource.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="86803-122">참고자료</span><span class="sxs-lookup"><span data-stu-id="86803-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="988f4-122">참조</span><span class="sxs-lookup"><span data-stu-id="988f4-122">See also</span></span>
 
-- [<span data-ttu-id="86803-123">보안 코딩 지침</span><span class="sxs-lookup"><span data-stu-id="86803-123">Secure Coding Guidelines</span></span>](../../../docs/standard/security/secure-coding-guidelines.md)
+- [<span data-ttu-id="988f4-123">보안 코딩 지침</span><span class="sxs-lookup"><span data-stu-id="988f4-123">Secure Coding Guidelines</span></span>](../../../docs/standard/security/secure-coding-guidelines.md)

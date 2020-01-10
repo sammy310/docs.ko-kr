@@ -3,36 +3,34 @@ title: DOM의 네임스페이스 및 DTD
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 1e9b55c4-76ad-4f54-8d96-7ce4b4cf1e05
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a3a3ec957a55ff23dec728ccd31fe9e1f52ce78f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 22762e3a7003d9b28a53c7b500829aaa41924c6d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64590206"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710598"
 ---
-# <a name="namespaces-and-dtds-in-the-dom"></a><span data-ttu-id="e4a52-102">DOM의 네임스페이스 및 DTD</span><span class="sxs-lookup"><span data-stu-id="e4a52-102">Namespaces and DTDs in the DOM</span></span>
-<span data-ttu-id="e4a52-103">DTD(문서 종류 정의)는 네임스페이스 지원을 어렵게 합니다.</span><span class="sxs-lookup"><span data-stu-id="e4a52-103">Document type definitions (DTDs) complicate namespace support.</span></span> <span data-ttu-id="e4a52-104">예를 들어, 다음 XML에는 이름에 콜론이 포함되는 기본 특성이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e4a52-104">For example, the following XML contains default attributes containing colons in their names.</span></span>  
+# <a name="namespaces-and-dtds-in-the-dom"></a><span data-ttu-id="a4c3d-102">DOM의 네임스페이스 및 DTD</span><span class="sxs-lookup"><span data-stu-id="a4c3d-102">Namespaces and DTDs in the DOM</span></span>
+<span data-ttu-id="a4c3d-103">DTD(문서 종류 정의)는 네임스페이스 지원을 어렵게 합니다.</span><span class="sxs-lookup"><span data-stu-id="a4c3d-103">Document type definitions (DTDs) complicate namespace support.</span></span> <span data-ttu-id="a4c3d-104">예를 들어, 다음 XML에는 이름에 콜론이 포함되는 기본 특성이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a4c3d-104">For example, the following XML contains default attributes containing colons in their names.</span></span>  
   
 ```xml  
 <!ATTLIST item x:id CDATA #IMPLIED>  
 ```  
   
- <span data-ttu-id="e4a52-105">다음은 이 구문이 허용되는 경우의 해결책입니다.</span><span class="sxs-lookup"><span data-stu-id="e4a52-105">The following are possible resolutions if this construct is allowed:</span></span>  
+ <span data-ttu-id="a4c3d-105">다음은 이 구문이 허용되는 경우의 해결책입니다.</span><span class="sxs-lookup"><span data-stu-id="a4c3d-105">The following are possible resolutions if this construct is allowed:</span></span>  
   
-- <span data-ttu-id="e4a52-106">`x:`를 네임스페이스 접두사로 처리하지만 이 접두사는 `xmlns:x` 네임스페이스 선언을 사용하여 확인할 수 있도록 DTD에도 포함되어 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="e4a52-106">The `x:` is treated as a namespace prefix, but this prefix must be resolvable using an `xmlns:x` namespace declaration, which must also exist somewhere in the DTD.</span></span> <span data-ttu-id="e4a52-107">이 접두사를 인스턴스 문서의 다른 항목에 매핑하는 것은 오류입니다.</span><span class="sxs-lookup"><span data-stu-id="e4a52-107">It is an error to map this prefix to something different in the instance document.</span></span>  
+- <span data-ttu-id="a4c3d-106">`x:`를 네임스페이스 접두사로 처리하지만 이 접두사는 `xmlns:x` 네임스페이스 선언을 사용하여 확인할 수 있도록 DTD에도 포함되어 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="a4c3d-106">The `x:` is treated as a namespace prefix, but this prefix must be resolvable using an `xmlns:x` namespace declaration, which must also exist somewhere in the DTD.</span></span> <span data-ttu-id="a4c3d-107">이 접두사를 인스턴스 문서의 다른 항목에 매핑하는 것은 오류입니다.</span><span class="sxs-lookup"><span data-stu-id="a4c3d-107">It is an error to map this prefix to something different in the instance document.</span></span>  
   
-- <span data-ttu-id="e4a52-108">`x:`는 네임스페이스 접두사로 처리하지만 이 접두사는 항상 인스턴스 요소의 컨텍스트에서 확인됩니다.</span><span class="sxs-lookup"><span data-stu-id="e4a52-108">The `x:` is treated as a namespace prefix, but this prefix is always resolved in the context of the instance elements.</span></span> <span data-ttu-id="e4a52-109">즉, 실제로 `item` 요소가 나타난 네임스페이스 범위에 따라 다양한 네임스페이스 URI(Uniform Resource Identifier)에 접두사가 매핑될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e4a52-109">This means the prefix could actually map to different namespace Uniform Resource Identifiers (URIs), depending on the namespace scope in which the `item` element appears.</span></span> <span data-ttu-id="e4a52-110">이 동작은 이전 목록에서 제시된 해결책보다는 예측 가능성이 크지만 기본 특성을 구체화해야 하기 때문에 다른 복잡한 문제를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="e4a52-110">This behavior is more predictable than the resolution given in the earlier bullet, but it has other complicated ramifications because it requires the default attributes be materialized.</span></span>  
+- <span data-ttu-id="a4c3d-108">`x:`는 네임스페이스 접두사로 처리하지만 이 접두사는 항상 인스턴스 요소의 컨텍스트에서 확인됩니다.</span><span class="sxs-lookup"><span data-stu-id="a4c3d-108">The `x:` is treated as a namespace prefix, but this prefix is always resolved in the context of the instance elements.</span></span> <span data-ttu-id="a4c3d-109">즉, 실제로 `item` 요소가 나타난 네임스페이스 범위에 따라 다양한 네임스페이스 URI(Uniform Resource Identifier)에 접두사가 매핑될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a4c3d-109">This means the prefix could actually map to different namespace Uniform Resource Identifiers (URIs), depending on the namespace scope in which the `item` element appears.</span></span> <span data-ttu-id="a4c3d-110">이 동작은 이전 목록에서 제시된 해결책보다는 예측 가능성이 크지만 기본 특성을 구체화해야 하기 때문에 다른 복잡한 문제를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="a4c3d-110">This behavior is more predictable than the resolution given in the earlier bullet, but it has other complicated ramifications because it requires the default attributes be materialized.</span></span>  
   
-- <span data-ttu-id="e4a52-111">콜론은 DTD에 있기 때문에 무시되고 특성 이름은 접두사와 네임스페이스 URI가 없는 `x:y`입니다.</span><span class="sxs-lookup"><span data-stu-id="e4a52-111">The colon is ignored because it is in a DTD, and the name of the attribute is `x:y`, no prefix and no namespace URI.</span></span>  
+- <span data-ttu-id="a4c3d-111">콜론은 DTD에 있기 때문에 무시되고 특성 이름은 접두사와 네임스페이스 URI가 없는 `x:y`입니다.</span><span class="sxs-lookup"><span data-stu-id="a4c3d-111">The colon is ignored because it is in a DTD, and the name of the attribute is `x:y`, no prefix and no namespace URI.</span></span>  
   
-- <span data-ttu-id="e4a52-112">기본 특성의 콜론은 DTD 내부에서 이름에 콜론을 사용할 수 없음을 알리는 예외가 throw됩니다.</span><span class="sxs-lookup"><span data-stu-id="e4a52-112">The colon in the default attribute throws an exception, saying that colons in names inside a DTD are not supported.</span></span> <span data-ttu-id="e4a52-113">이것은 예측 가능한 동작이지만 W3C(World Wide Web 컨소시엄)에서 배포한 많은 DTD를 로드할 수 없다는 것을 의미합니다.</span><span class="sxs-lookup"><span data-stu-id="e4a52-113">This results in a predictable behavior, but means you cannot load many of the World Wide Web Consortium (W3C) published DTDs.</span></span>  
+- <span data-ttu-id="a4c3d-112">기본 특성의 콜론은 DTD 내부에서 이름에 콜론을 사용할 수 없음을 알리는 예외가 throw됩니다.</span><span class="sxs-lookup"><span data-stu-id="a4c3d-112">The colon in the default attribute throws an exception, saying that colons in names inside a DTD are not supported.</span></span> <span data-ttu-id="a4c3d-113">이것은 예측 가능한 동작이지만 W3C(World Wide Web 컨소시엄)에서 배포한 많은 DTD를 로드할 수 없다는 것을 의미합니다.</span><span class="sxs-lookup"><span data-stu-id="a4c3d-113">This results in a predictable behavior, but means you cannot load many of the World Wide Web Consortium (W3C) published DTDs.</span></span>  
   
-- <span data-ttu-id="e4a52-114">사용자가 DTD 유효성 검사를 요청하면 전체 문서에 대한 네임스페이스 지원이 해제됩니다.</span><span class="sxs-lookup"><span data-stu-id="e4a52-114">When the user requests DTD validation, namespace support for the entire document is turned off.</span></span> <span data-ttu-id="e4a52-115">이렇게 하면 W3C DTD를 로드하고 동작을 예측할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e4a52-115">This makes it possible to load W3C DTDs and results in a predictable behavior.</span></span>  
+- <span data-ttu-id="a4c3d-114">사용자가 DTD 유효성 검사를 요청하면 전체 문서에 대한 네임스페이스 지원이 해제됩니다.</span><span class="sxs-lookup"><span data-stu-id="a4c3d-114">When the user requests DTD validation, namespace support for the entire document is turned off.</span></span> <span data-ttu-id="a4c3d-115">이렇게 하면 W3C DTD를 로드하고 동작을 예측할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a4c3d-115">This makes it possible to load W3C DTDs and results in a predictable behavior.</span></span>  
   
- <span data-ttu-id="e4a52-116">Microsoft .NET Framework의 XML은 W3C 호환성을 극대화하기 위해 두 번째 옵션을 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="e4a52-116">The XML in the Microsoft .NET Framework implements the second option for maximum W3C compatibility.</span></span>  
+ <span data-ttu-id="a4c3d-116">Microsoft .NET Framework의 XML은 W3C 호환성을 극대화하기 위해 두 번째 옵션을 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="a4c3d-116">The XML in the Microsoft .NET Framework implements the second option for maximum W3C compatibility.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e4a52-117">참고 항목</span><span class="sxs-lookup"><span data-stu-id="e4a52-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a4c3d-117">참조</span><span class="sxs-lookup"><span data-stu-id="a4c3d-117">See also</span></span>
 
-- [<span data-ttu-id="e4a52-118">XML DOM(문서 개체 모델)</span><span class="sxs-lookup"><span data-stu-id="e4a52-118">XML Document Object Model (DOM)</span></span>](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [<span data-ttu-id="a4c3d-118">XML DOM(문서 개체 모델)</span><span class="sxs-lookup"><span data-stu-id="a4c3d-118">XML Document Object Model (DOM)</span></span>](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

@@ -3,27 +3,25 @@ title: msxsl:node-set() 함수에 대한 지원
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: d0cbf517-d9f6-4097-9851-4fa62903decd
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3670803ff20351fd9ff6892a0cef48b9caa70199
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: b9603f6c910e8e29309618c8e01e283c28ae2bff
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69939529"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710130"
 ---
-# <a name="support-for-the-msxslnode-set-function"></a><span data-ttu-id="1377f-102">msxsl:node-set() 함수에 대한 지원</span><span class="sxs-lookup"><span data-stu-id="1377f-102">Support for the msxsl:node-set() Function</span></span>
-<span data-ttu-id="1377f-103">`msxsl:node-set` 함수를 사용하면 결과 트리 조각을 노드 집합으로 변환할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1377f-103">The `msxsl:node-set` function enables you to convert a result tree fragment into a node set.</span></span> <span data-ttu-id="1377f-104">결과로 만들어지는 노드 집합은 트리의 루트 노드로서 항상 단일 노드를 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="1377f-104">The resulting node set always contains a single node and is the root node of the tree.</span></span>  
+# <a name="support-for-the-msxslnode-set-function"></a><span data-ttu-id="d015b-102">msxsl:node-set() 함수에 대한 지원</span><span class="sxs-lookup"><span data-stu-id="d015b-102">Support for the msxsl:node-set() Function</span></span>
+<span data-ttu-id="d015b-103">`msxsl:node-set` 함수를 사용하면 결과 트리 조각을 노드 집합으로 변환할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d015b-103">The `msxsl:node-set` function enables you to convert a result tree fragment into a node set.</span></span> <span data-ttu-id="d015b-104">결과로 만들어지는 노드 집합은 트리의 루트 노드로서 항상 단일 노드를 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="d015b-104">The resulting node set always contains a single node and is the root node of the tree.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="1377f-105"><xref:System.Xml.Xsl.XslTransform> 클래스는 .NET Framework 2.0에서 사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="1377f-105">The <xref:System.Xml.Xsl.XslTransform> class is obsolete in the .NET Framework 2.0.</span></span> <span data-ttu-id="1377f-106"><xref:System.Xml.Xsl.XslCompiledTransform> 클래스를 사용하여 XSLT(Extensible Stylesheet Language for Transformations) 변환을 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1377f-106">You can perform Extensible Stylesheet Language for Transformations (XSLT) transformations using the <xref:System.Xml.Xsl.XslCompiledTransform> class.</span></span> <span data-ttu-id="1377f-107">자세한 내용은 [XslCompiledTransform 클래스 사용](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) 및 [XslTransform 클래스에서 마이그레이션](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="1377f-107">See [Using the XslCompiledTransform Class](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) and [Migrating From the XslTransform Class](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) for more information.</span></span>  
+> <span data-ttu-id="d015b-105"><xref:System.Xml.Xsl.XslTransform> 클래스는 .NET Framework 2.0에서 사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="d015b-105">The <xref:System.Xml.Xsl.XslTransform> class is obsolete in the .NET Framework 2.0.</span></span> <span data-ttu-id="d015b-106"><xref:System.Xml.Xsl.XslCompiledTransform> 클래스를 사용하여 XSLT(Extensible Stylesheet Language for Transformations) 변환을 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d015b-106">You can perform Extensible Stylesheet Language for Transformations (XSLT) transformations using the <xref:System.Xml.Xsl.XslCompiledTransform> class.</span></span> <span data-ttu-id="d015b-107">자세한 내용은 [XslCompiledTransform 클래스 사용](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) 및 [XslTransform 클래스에서 마이그레이션](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="d015b-107">See [Using the XslCompiledTransform Class](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) and [Migrating From the XslTransform Class](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) for more information.</span></span>  
   
- <span data-ttu-id="1377f-108">`msxsl:node-set` 함수를 사용하면 결과 트리 조각을 노드 집합으로 변환할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1377f-108">The `msxsl:node-set` function enables you to convert a result tree fragment into a node set.</span></span> <span data-ttu-id="1377f-109">결과로 만들어지는 노드 집합은 트리의 루트 노드로서 항상 단일 노드를 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="1377f-109">The resulting node set always contains a single node and is the root node of the tree.</span></span>  
+ <span data-ttu-id="d015b-108">`msxsl:node-set` 함수를 사용하면 결과 트리 조각을 노드 집합으로 변환할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d015b-108">The `msxsl:node-set` function enables you to convert a result tree fragment into a node set.</span></span> <span data-ttu-id="d015b-109">결과로 만들어지는 노드 집합은 트리의 루트 노드로서 항상 단일 노드를 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="d015b-109">The resulting node set always contains a single node and is the root node of the tree.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="1377f-110">예</span><span class="sxs-lookup"><span data-stu-id="1377f-110">Example</span></span>  
- <span data-ttu-id="1377f-111">다음 예제에서 `$var`는 스타일시트의 노드 트리인 변수입니다.</span><span class="sxs-lookup"><span data-stu-id="1377f-111">In the following example, `$var` is a variable that is a node tree in the style sheet.</span></span> <span data-ttu-id="1377f-112">for-each 문과 `node-set` 함수를 함께 사용하면 이 노드 트리를 노드 집합으로 반복할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1377f-112">The for-each statement combined with the `node-set` function allows the user to iterate over this node tree as a node set.</span></span>  
+## <a name="example"></a><span data-ttu-id="d015b-110">예</span><span class="sxs-lookup"><span data-stu-id="d015b-110">Example</span></span>  
+ <span data-ttu-id="d015b-111">다음 예제에서 `$var`는 스타일시트의 노드 트리인 변수입니다.</span><span class="sxs-lookup"><span data-stu-id="d015b-111">In the following example, `$var` is a variable that is a node tree in the style sheet.</span></span> <span data-ttu-id="d015b-112">for-each 문과 `node-set` 함수를 함께 사용하면 이 노드 트리를 노드 집합으로 반복할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d015b-112">The for-each statement combined with the `node-set` function allows the user to iterate over this node tree as a node set.</span></span>  
   
-## <a name="nodesetxsl"></a><span data-ttu-id="1377f-113">nodeset.xsl</span><span class="sxs-lookup"><span data-stu-id="1377f-113">nodeset.xsl</span></span>  
+## <a name="nodesetxsl"></a><span data-ttu-id="d015b-113">nodeset.xsl</span><span class="sxs-lookup"><span data-stu-id="d015b-113">nodeset.xsl</span></span>  
   
 ```xml  
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"  
@@ -45,14 +43,14 @@ ms.locfileid: "69939529"
 </xsl:stylesheet>  
 ```  
   
-## <a name="output"></a><span data-ttu-id="1377f-114">Output</span><span class="sxs-lookup"><span data-stu-id="1377f-114">Output</span></span>  
- <span data-ttu-id="1377f-115">변환 결과</span><span class="sxs-lookup"><span data-stu-id="1377f-115">The output of the transformation is</span></span>  
+## <a name="output"></a><span data-ttu-id="d015b-114">Output</span><span class="sxs-lookup"><span data-stu-id="d015b-114">Output</span></span>  
+ <span data-ttu-id="d015b-115">변환 결과</span><span class="sxs-lookup"><span data-stu-id="d015b-115">The output of the transformation is</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
 <authors><author>Michael Howard</author><author>Michael Kay</author></authors>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="1377f-116">참고 항목</span><span class="sxs-lookup"><span data-stu-id="1377f-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d015b-116">참조</span><span class="sxs-lookup"><span data-stu-id="d015b-116">See also</span></span>
 
-- [<span data-ttu-id="1377f-117">XslTransform 클래스의 XSLT 프로세서 구현</span><span class="sxs-lookup"><span data-stu-id="1377f-117">XslTransform Class Implements the XSLT Processor</span></span>](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
+- [<span data-ttu-id="d015b-117">XslTransform 클래스의 XSLT 프로세서 구현</span><span class="sxs-lookup"><span data-stu-id="d015b-117">XslTransform Class Implements the XSLT Processor</span></span>](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
