@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, Radio Button control type
 - RadioButton control type
 ms.assetid: 87170464-7857-41f1-bcf7-bb41be31cb53
-ms.openlocfilehash: b5a64c987fd8d7816e2327e048b90ce20fa61c53
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 416d6d6b9d8e7fbd3b3bb5483ddd8dc22380166c
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74800322"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741555"
 ---
 # <a name="ui-automation-support-for-the-radiobutton-control-type"></a>RadioButton 컨트롤 형식에 대한 UI 자동화 지원
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "74800322"
   
  라디오 단추는 라운드 단추와 애플리케이션에서 정의한 텍스트(레이블), 아이콘 또는 사용자가 단추를 선택하여 수행할 수 있는 선택 항목을 나타내는 비트맵으로 구성됩니다. 일반적으로 애플리케이션은 그룹 상자의 라디오 단추를 제공하므로 관련되어 있지만 함께 사용할 수 없는 옵션 집합에서 사용자가 선택할 수 있습니다. 예를 들어, 애플리케이션은 사용자가 클라이언트 영역에서 선택된 텍스트에 대해 형식 기본 설정을 선택할 수 있는 라디오 단추 그룹을 제공할 수 있습니다. 사용자는 해당 라디오 단추를 선택하여 왼쪽 맞춤, 오른쪽 맞춤 또는 가운데 맞춤 형식을 선택할 수 있습니다. 일반적으로, 사용자는 라디오 단추 집합에서 한 번에 하나의 옵션만 선택할 수 있습니다.  
   
- 다음 섹션에서는 RadioButton 컨트롤 형식에 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 구조, 속성, 컨트롤 패턴, 이벤트를 정의합니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 요구 사항은 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]또는 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]의 모든 목록 컨트롤에 적용됩니다.  
+ 다음 섹션에서는 RadioButton 컨트롤 형식에 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 구조, 속성, 컨트롤 패턴, 이벤트를 정의합니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 요구 사항은 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 또는 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]있는지 여부에 관계 없이 모든 목록 컨트롤에 적용 됩니다.  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
 ## <a name="required-ui-automation-tree-structure"></a>필요한 UI 자동화 트리 구조  
@@ -57,7 +57,7 @@ ms.locfileid: "74800322"
 |컨트롤 패턴/컨트롤 패턴 속성|지원/값|참고|  
 |-----------------------------------------------|--------------------|-----------|  
 |<xref:System.Windows.Automation.Provider.ISelectionItemProvider>|예|모든 라디오 단추 컨트롤은 이 컨트롤이 선택될 수 있도록 하는 Selection Item 패턴을 지원해야 합니다.|  
-|<xref:System.Windows.Automation.Provider.ISelectionItemProvider.SelectionContainer%2A>|메모를 참조하세요.|`SelectionContainerProperty` 는 UI 자동화 클라이언트가 특정 콘텐츠 내에서 서로 관련된 다른 라디오 단추를 판별할 수 있도록 항상 완료되어야 합니다.  라디오 단추의 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 버전의 경우 이 속성이 지원되지 않습니다. 레거시 프레임워크에서는 정보를 가져올 수 없기 때문입니다.|  
+|<xref:System.Windows.Automation.Provider.ISelectionItemProvider.SelectionContainer%2A>|메모를 참조하세요.|`SelectionContainerProperty` 는 UI 자동화 클라이언트가 특정 콘텐츠 내에서 서로 관련된 다른 라디오 단추를 판별할 수 있도록 항상 완료되어야 합니다.  Win32 버전의 라디오 단추에는이 속성이 지원 되지 않습니다. 레거시 프레임 워크에서이 정보를 가져올 수 없기 때문입니다.|  
 |<xref:System.Windows.Automation.Provider.IToggleProvider>|Never|라디오 단추가 설정되면 상태를 순환할 수 없습니다.  이 패턴은 라디오 단추에서 지원되지 않아야 합니다.|  
   
 <a name="Required_UI_Automation_Events"></a>   

@@ -6,24 +6,24 @@ helpviewer_keywords:
 - TextPattern class
 - classes, TextPattern
 ms.assetid: 41787927-df1f-4f4a-aba3-641662854fc4
-ms.openlocfilehash: b7e378d79109d33859a38ea398cffd2193044abd
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 22966c8ed80be99497e7d05b56455c3057fdd81a
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74800204"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741421"
 ---
 # <a name="ui-automation-textpattern-overview"></a>UI 자동화 TextPattern 개요
 
 > [!NOTE]
 > 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조하세요.
 
-이 개요에서는 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 을 사용하여 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]이 지원되는 플랫폼에 있는 텍스트 컨트롤의 텍스트 콘텐츠(형식 및 스타일 특성 포함)를 노출하는 방법을 설명합니다. 이러한 컨트롤에는 Microsoft .NET 프레임 워크 <xref:System.Windows.Controls.TextBox> 및 <xref:System.Windows.Controls.RichTextBox>와 해당 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 포함 됩니다.
+이 개요에서는 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 을 사용하여 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]이 지원되는 플랫폼에 있는 텍스트 컨트롤의 텍스트 콘텐츠(형식 및 스타일 특성 포함)를 노출하는 방법을 설명합니다. 이러한 컨트롤에는 Microsoft .NET Framework <xref:System.Windows.Controls.TextBox> 및 <xref:System.Windows.Controls.RichTextBox>와 해당 Win32 항목을 포함 하지만이에 국한 되지 않습니다.
 
 컨트롤의 텍스트 콘텐츠 노출은 텍스트 컨테이너의 내용을 텍스트 스트림으로 나타내는 <xref:System.Windows.Automation.TextPattern> 컨트롤 패턴을 사용하여 수행됩니다. 다시, <xref:System.Windows.Automation.TextPattern> 을 사용하려면 형식 및 스타일 특성을 노출하는 <xref:System.Windows.Automation.Text.TextPatternRange> 클래스를 지원해야 합니다. <xref:System.Windows.Automation.Text.TextPatternRange>는 <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> 및 <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> 엔드포인트 컬렉션을 사용하여 텍스트 컨테이너의 연속 텍스트 범위나 여러 비연속 텍스트 범위를 나타내 <xref:System.Windows.Automation.TextPattern>을 지원합니다. <xref:System.Windows.Automation.Text.TextPatternRange> 는 선택, 비교, 검색 및 탐색 등의 기능을 지원합니다.
 
 > [!NOTE]
-> <xref:System.Windows.Automation.TextPattern> 클래스는 텍스트를 삽입하거나 수정할 수 있는 방법을 제공하지 않습니다. 그러나 컨트롤에 따라 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] <xref:System.Windows.Automation.ValuePattern> 또는 직접 키보드 입력을 통해 이 작업을 수행할 수 있습니다. 예제는 [TextPattern Insert Text Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/InsertText) 을 참조하세요.
+> <xref:System.Windows.Automation.TextPattern> 클래스는 텍스트를 삽입하거나 수정할 수 있는 방법을 제공하지 않습니다. 그러나 컨트롤에 따라 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] <xref:System.Windows.Automation.ValuePattern> 또는 직접 키보드 입력을 통해이를 수행할 수 있습니다. 예제는 [TextPattern Insert Text Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/InsertText) 을 참조하세요.
 
 이 개요에 설명된 기능은 보조 기술 공급업체 및 최종 사용자에게 중요합니다. 보조 기술은 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 를 사용하여 사용자에 대한 전체 텍스트 형식 정보를 수집하고 <xref:System.Windows.Automation.Text.TextUnit> (문자, 단어, 줄 또는 단락)별로 텍스트의 프로그래밍 방식 탐색 및 선택 기능을 제공합니다.
 

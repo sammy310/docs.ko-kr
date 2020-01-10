@@ -5,12 +5,12 @@ helpviewer_keywords:
 - automation tree
 - UI Automation, tree
 ms.assetid: 03b98058-bdb3-47a0-8ff7-45e6cdf67166
-ms.openlocfilehash: d1edbb82e0d5d6a6275c09646fbf8e54b4ff90df
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: f541aab7ed5aae48b943ba5699366fe6a3f21a4c
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74800287"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741385"
 ---
 # <a name="ui-automation-tree-overview"></a>UI 자동화 트리 개요
 > [!NOTE]
@@ -36,7 +36,7 @@ ms.locfileid: "74800287"
   
 <a name="uiautomation_raw_view"></a>   
 ### <a name="raw-view"></a>Raw 뷰  
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리의 Raw 뷰는 데스크톱이 루트인 <xref:System.Windows.Automation.AutomationElement> 개체의 전체 트리입니다. Raw 뷰는 애플리케이션의 기본 프로그래밍 방식의 구조를 엄격히 따르기 때문에 가장 자세한 뷰를 사용할 수 있습니다. 트리의 다른 뷰가 빌드되는 기준이기도 합니다. 이 뷰는 기본 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 프레임워크에 의존하기 때문에 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 단추의 Raw 뷰에는 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 단추와 다른 Raw 뷰가 있습니다.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리의 Raw 뷰는 데스크톱이 루트인 <xref:System.Windows.Automation.AutomationElement> 개체의 전체 트리입니다. Raw 뷰는 애플리케이션의 기본 프로그래밍 방식의 구조를 엄격히 따르기 때문에 가장 자세한 뷰를 사용할 수 있습니다. 트리의 다른 뷰가 빌드되는 기준이기도 합니다. 이 뷰는 기본 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 프레임 워크에 종속 되기 때문에 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 단추의 원시 뷰에는 Win32 단추와 다른 원시 뷰가 있습니다.  
   
  Raw 뷰는 속성을 지정하지 않고 요소를 검색하거나 <xref:System.Windows.Automation.TreeWalker.RawViewWalker>를 통해 트리를 탐색하여 표시할 수 있습니다.  
   

@@ -5,18 +5,18 @@ helpviewer_keywords:
 - controls, UI Automation support for
 - UI Automation, support for standard controls
 ms.assetid: 3770ea8a-2655-4add-9c59-fe0610ad5084
-ms.openlocfilehash: 314526c1164f70e6b261df1a6f11ddce2b5fa240
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: ed5e4f6ab23fe9ae77c94616a668da8accb46d4b
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960073"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741705"
 ---
 # <a name="ui-automation-support-for-standard-controls"></a>표준 컨트롤에 대한 UI 자동화 지원
 > [!NOTE]
 > 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조하세요.  
   
- 이 항목에는 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] , [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]및 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]프레임워크용으로 개발된 애플리케이션에서 표준 컨트롤에 대한 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] 지원 정보가 들어 있습니다.  
+ 이 항목에는 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)], Win32 및 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] 프레임 워크 용으로 개발 된 응용 프로그램의 표준 컨트롤에 대 한 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 지원 정보가 포함 되어 있습니다.  
   
 <a name="Windows_Presentation_Foundation_Controls"></a>   
 ## <a name="windows-presentation-foundation-controls"></a>WPF(Windows Presentation Foundation) 컨트롤  
@@ -24,7 +24,7 @@ ms.locfileid: "74960073"
   
 <a name="Win32_Controls"></a>   
 ## <a name="win32-controls"></a>Win32 컨트롤  
- 대부분의 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 컨트롤은 UIAutomationClientsideProviders.dll의 클라이언트쪽 공급자를 통해 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 에 노출됩니다. 이 어셈블리는 UI 자동화 클라이언트 애플리케이션과 함께 사용할 수 있도록 자동으로 등록됩니다.  
+ 대부분의 Win32 컨트롤은 Uiautomationclientsideproviders.dll의 클라이언트 쪽 공급자를 통해 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]에 노출 됩니다. 이 어셈블리는 UI 자동화 클라이언트 애플리케이션과 함께 사용할 수 있도록 자동으로 등록됩니다.  
   
  *지원은 comctrl32.dll*버전 6의 컨트롤에 대해서만 전체 지원이 제공 됩니다.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "74960073"
 |#32768|메뉴|  
 |#32768|MenuItem|  
 |msctls_progress32|ProgressBar|  
-|RichEdit|문서입니다. 메모를 참조하세요.|  
+|RichEdit|문서. 메모를 참조하세요.|  
 |RichEdit20A|문서|  
 |RichEdit20W|문서|  
 |RichEdit50W|문서|  
@@ -81,7 +81,7 @@ ms.locfileid: "74960073"
   
  다음 컨트롤은 지원되지 않습니다.  
   
-|클래스 이름|컨트롤 형식|  
+|클래스 이름|컨트롤 종류|  
 |----------------|------------------|  
 |SysAnimate32|이미지|  
 |SysPager|Spinner|  
@@ -96,7 +96,7 @@ ms.locfileid: "74960073"
 ## <a name="windows-forms-controls"></a>Windows Forms 컨트롤  
  Windows Forms 컨트롤은 Uiautomationclientsideproviders.dll의 클라이언트 쪽 공급자를 통해 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]에 노출 됩니다. 이 어셈블리는 UI 자동화 클라이언트 애플리케이션과 함께 사용할 수 있도록 자동으로 등록됩니다.  
   
- 일반적으로 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 공용 컨트롤에 대해 관리 되는 래퍼 Windows Forms 컨트롤은 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에서 지원 됩니다. 다음과 같은 컨트롤이 지원됩니다.  
+ 일반적으로 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에서 Win32 공용 컨트롤에 대 한 관리 되는 래퍼로 Windows Forms 컨트롤을 지원 합니다. 다음과 같은 컨트롤이 지원됩니다.  
   
 |클래스 이름|  
 |----------------|  
@@ -128,7 +128,7 @@ ms.locfileid: "74960073"
 |StatusBar|  
 |TabControl/TabPage|  
 |TextBox|  
-|Timer|  
+|타이머|  
 |ToolBar|  
 |도구 설명|  
 |TrackBar|  
@@ -169,4 +169,4 @@ ms.locfileid: "74960073"
   
 ## <a name="see-also"></a>참조
 
-- [UI 자동화 컨트롤 형식](ui-automation-control-types.md)
+- [UI Automation Control Types](ui-automation-control-types.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Span elements [WPF]
 - bidirectional features [WPF]
 ms.assetid: fd850e25-7dba-408c-b521-8873e51dc968
-ms.openlocfilehash: 385ce8d263991361512371dcacff52fcf0bbe738
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 19fb15a6310eba19792d7bd0744c2ae87f47c6fa
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740943"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740429"
 ---
 # <a name="bidirectional-features-in-wpf-overview"></a>WPF의 양방향 기능 개요
 
@@ -38,7 +38,7 @@ ms.locfileid: "73740943"
 
 ![여러 흐름 방향을 보여 주는 그래픽입니다.](./media/bidirectional-features-in-wpf-overview/left-right-right-left.png)
 
-[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 트리 내의 요소는 해당 컨테이너에서 <xref:System.Windows.FrameworkElement.FlowDirection%2A>을 상속 합니다. 다음 예제에서 <xref:System.Windows.Controls.TextBlock>은 <xref:System.Windows.Window>에 있는 <xref:System.Windows.Controls.Grid> 내부에 있습니다. <xref:System.Windows.Window>에 대 한 <xref:System.Windows.FrameworkElement.FlowDirection%2A> 설정 하면 <xref:System.Windows.Controls.Grid> 및 <xref:System.Windows.Controls.TextBlock>에 대 한 설정도 암시 됩니다.
+[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 트리 내의 요소는 해당 컨테이너에서 <xref:System.Windows.FrameworkElement.FlowDirection%2A>을 상속 합니다. 다음 예제에서 <xref:System.Windows.Controls.TextBlock>은 <xref:System.Windows.Window>에 있는 <xref:System.Windows.Controls.Grid>내부에 있습니다. <xref:System.Windows.Window>에 대 한 <xref:System.Windows.FrameworkElement.FlowDirection%2A> 설정 하면 <xref:System.Windows.Controls.Grid> 및 <xref:System.Windows.Controls.TextBlock>에 대 한 설정도 암시 됩니다.
 
 다음 예에서는 <xref:System.Windows.FrameworkElement.FlowDirection%2A>를 설정 하는 방법을 보여 줍니다.
 
@@ -54,17 +54,17 @@ ms.locfileid: "73740943"
 
 ## <a name="flowdocument"></a>FlowDocument
 
-HTML, [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 및 Java와 같은 대부분의 개발 플랫폼은 양방향 콘텐츠 개발에 대 한 특별 한 지원을 제공 합니다. HTML과 같은 태그 언어는 필요한 모든 방향으로 텍스트를 표시 하는 데 필요한 태그를 콘텐츠 작성기에 제공 합니다. 예를 들어, "rtl" 또는 "ltr"을 값으로 사용 하는 HTML 4.0 태그, "dir"입니다. 이 태그는 <xref:System.Windows.FrameworkElement.FlowDirection%2A> 속성과 유사 하지만 <xref:System.Windows.FrameworkElement.FlowDirection%2A> 속성은 텍스트 내용을 레이아웃 하는 고급 방법으로 작동 하며 텍스트 이외의 내용에 사용할 수 있습니다.
+HTML, Win32 및 Java와 같은 대부분의 개발 플랫폼은 양방향 콘텐츠 개발에 대 한 특별 한 지원을 제공 합니다. HTML과 같은 태그 언어는 필요한 모든 방향으로 텍스트를 표시 하는 데 필요한 태그를 콘텐츠 작성기에 제공 합니다. 예를 들어, "rtl" 또는 "ltr"을 값으로 사용 하는 HTML 4.0 태그, "dir"입니다. 이 태그는 <xref:System.Windows.FrameworkElement.FlowDirection%2A> 속성과 유사 하지만 <xref:System.Windows.FrameworkElement.FlowDirection%2A> 속성은 텍스트 내용을 레이아웃 하는 고급 방법으로 작동 하며 텍스트 이외의 내용에 사용할 수 있습니다.
 
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 <xref:System.Windows.Documents.FlowDocument>은 텍스트, 테이블, 이미지 및 기타 요소의 조합을 호스트할 수 있는 다용도 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 요소입니다. 다음 섹션의 샘플은 이 요소를 사용합니다.
 
 <xref:System.Windows.Documents.FlowDocument>에 텍스트를 추가 하는 것이 한 가지 방법으로 수행할 수 있습니다. 이 작업을 수행 하는 간단한 방법은 텍스트와 같은 콘텐츠를 그룹화 하는 데 사용 되는 블록 수준 요소인 <xref:System.Windows.Documents.Paragraph>를 사용 하는 것입니다. 인라인 수준 요소에 텍스트를 추가 하려면 샘플에서 <xref:System.Windows.Documents.Span>와 <xref:System.Windows.Documents.Run>를 사용 합니다. <xref:System.Windows.Documents.Span>은 다른 인라인 요소를 그룹화 하는 데 사용 되는 인라인 수준의 유동 콘텐츠 요소이 고, <xref:System.Windows.Documents.Run>는 서식이 지정 되지 않은 텍스트의 실행을 포함 하기 위한 인라인 수준 유동 콘텐츠 요소입니다. <xref:System.Windows.Documents.Span>에는 여러 개의 <xref:System.Windows.Documents.Run> 요소가 포함 될 수 있습니다.
 
-첫 번째 문서 예제에는 여러 네트워크 공유 이름을 포함 하는 문서가 포함 되어 있습니다. 예를 `\\server1\folder\file.ext` 합니다. 이 네트워크 링크가 아랍어나 영어 문서에 있는지 여부에 따라 같은 방식으로 항상 표시될 수 있습니다. 다음 그림에서는 Span 요소를 사용 하는 방법을 보여 주고 아랍어 <xref:System.Windows.FlowDirection.RightToLeft> 문서에 링크를 표시 합니다.
+첫 번째 문서 예제에는 여러 네트워크 공유 이름을 포함 하는 문서가 포함 되어 있습니다. 예를 `\\server1\folder\file.ext`합니다. 이 네트워크 링크가 아랍어나 영어 문서에 있는지 여부에 따라 같은 방식으로 항상 표시될 수 있습니다. 다음 그림에서는 Span 요소를 사용 하는 방법을 보여 주고 아랍어 <xref:System.Windows.FlowDirection.RightToLeft> 문서에 링크를 표시 합니다.
 
 ![Span 요소를 사용 하는 방법을 보여 주는 그래픽입니다.](./media/bidirectional-features-in-wpf-overview/flow-direction-span-element.png "FlowDocument")
 
-텍스트가 <xref:System.Windows.FlowDirection.RightToLeft> 되기 때문에 "\\"와 같은 모든 특수 문자는 오른쪽에서 왼쪽 순서로 텍스트를 구분 합니다. 그러면 링크가 올바른 순서로 표시 되지 않으므로 문제를 해결 하기 위해 텍스트를 포함 하 여 별도의 <xref:System.Windows.Documents.Run> 흐름 <xref:System.Windows.FlowDirection.LeftToRight>를 유지 해야 합니다. 각 언어에 대해 별도의 <xref:System.Windows.Documents.Run>을 사용 하는 대신, 문제를 해결 하는 더 좋은 방법은 자주 사용 하지 않는 영어 텍스트를 더 큰 아랍어 <xref:System.Windows.Documents.Span>에 포함 하는 것입니다.
+텍스트가 <xref:System.Windows.FlowDirection.RightToLeft>되기 때문에 "\\"와 같은 모든 특수 문자는 오른쪽에서 왼쪽 순서로 텍스트를 구분 합니다. 그러면 링크가 올바른 순서로 표시 되지 않으므로 문제를 해결 하기 위해 텍스트를 포함 하 여 별도의 <xref:System.Windows.Documents.Run> 흐름 <xref:System.Windows.FlowDirection.LeftToRight>를 유지 해야 합니다. 각 언어에 대해 별도의 <xref:System.Windows.Documents.Run>을 사용 하는 대신, 문제를 해결 하는 더 좋은 방법은 자주 사용 하지 않는 영어 텍스트를 더 큰 아랍어 <xref:System.Windows.Documents.Span>에 포함 하는 것입니다.
 
 다음 그림에서는 Span 요소에 포함 된 Run 요소를 사용 하 여이를 보여 줍니다.
 
@@ -78,7 +78,7 @@ HTML, [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] �
 
 ## <a name="span-elements"></a>Span 요소
 
-<xref:System.Windows.Documents.Span> 요소는 흐름 방향이 다른 텍스트 간의 경계 구분 기호로 사용 됩니다.  흐름 방향이 동일한 <xref:System.Windows.Documents.Span> 요소도 서로 다른 양방향 범위를 사용 하는 것으로 간주 됩니다. 즉, <xref:System.Windows.Documents.Span> 요소가 컨테이너 <xref:System.Windows.FlowDirection>에서 정렬 되는 것을 의미 하는 <xref:System.Windows.Documents.Span> 요소 내의 콘텐츠만 <xref:System.Windows.FlowDirection>을 따릅니다 @no__ t_5.
+<xref:System.Windows.Documents.Span> 요소는 흐름 방향이 다른 텍스트 간의 경계 구분 기호로 사용 됩니다.  흐름 방향이 동일한 <xref:System.Windows.Documents.Span> 요소도 서로 다른 양방향 범위를 사용 하는 것으로 간주 됩니다. 즉, <xref:System.Windows.Documents.Span> 요소가 컨테이너 <xref:System.Windows.FlowDirection>에서 정렬 되는 것을 의미 하는 <xref:System.Windows.Documents.Span> 요소 내의 콘텐츠만 <xref:System.Windows.FlowDirection>의 <xref:System.Windows.Documents.Span>다음에 옵니다.
 
 다음 그림에서는 여러 <xref:System.Windows.Controls.TextBlock> 요소의 흐름 방향을 보여 줍니다.
 
@@ -124,7 +124,7 @@ XAML 요소에는 각 요소의 언어를 정의 하는 XML 특성 (`xml:lang`)�
 
 ![오른쪽에서 왼쪽으로 향하는 도구 모음을 보여 주는 그래픽입니다.](./media/bidirectional-features-in-wpf-overview/toolbar-right-left-gradient.png)
 
-다음 예에서는 <xref:System.Windows.FlowDirection.RightToLeft> <xref:System.Windows.Controls.ToolBar>를 그립니다. (왼쪽에서 오른쪽으로 그리려면 <xref:System.Windows.Controls.ToolBar>에서 <xref:System.Windows.FlowDirection> 특성을 제거 합니다.
+다음 예에서는 <xref:System.Windows.FlowDirection.RightToLeft><xref:System.Windows.Controls.ToolBar>를 그립니다. (왼쪽에서 오른쪽으로 그리려면 <xref:System.Windows.Controls.ToolBar>에서 <xref:System.Windows.FlowDirection> 특성을 제거 합니다.
 
 [!code-xaml[Gradient#Gradient](~/samples/snippets/csharp/VS_Snippets_Wpf/Gradient/CS/Window1.xaml#gradient)]
 
@@ -152,13 +152,13 @@ XAML 요소에는 각 요소의 언어를 정의 하는 XML 특성 (`xml:lang`)�
 [!code-xaml[Image#Image](~/samples/snippets/csharp/VS_Snippets_Wpf/Image/CS/Window1.xaml#image)]
 
 > [!NOTE]
-> 다운로드 파일에 포함 된 파일은 **ms_logo** 파일입니다. 코드는 .jpg 파일이 프로젝트 내에 있지 않지만 C:\ 드라이브 어딘가에 있다고 가정합니다. 프로젝트 파일에서 C:\ 드라이브로 .jpg를 복사하거나 프로젝트 내부에서 파일을 찾도록 코드를 변경해야 합니다. 이렇게 하려면 `Source="ms_logo.jpg"``Source="file://c:/ms_logo.jpg"` 변경 합니다.
+> 다운로드 파일에는 **ms_logo .jpg** 파일이 포함 되어 있습니다. 코드는 .jpg 파일이 프로젝트 내에 있지 않지만 C:\ 드라이브 어딘가에 있다고 가정합니다. 프로젝트 파일에서 C:\ 드라이브로 .jpg를 복사하거나 프로젝트 내부에서 파일을 찾도록 코드를 변경해야 합니다. 이렇게 하려면 `Source="ms_logo.jpg"``Source="file://c:/ms_logo.jpg"` 변경 합니다.
 
 **경로**
 
 <xref:System.Windows.Controls.Image>외에도 다른 흥미로운 요소가 <xref:System.Windows.Shapes.Path>됩니다. 경로는 일련의 연결된 선 및 곡선을 그릴 수 있는 개체입니다. <xref:System.Windows.FlowDirection>와 관련 된 <xref:System.Windows.Controls.Image>와 비슷한 방식으로 작동 합니다. 예를 들어 <xref:System.Windows.FlowDirection.RightToLeft><xref:System.Windows.FlowDirection>은 <xref:System.Windows.FlowDirection.LeftToRight> 한 행의 가로 미러입니다. 그러나 <xref:System.Windows.Controls.Image>와 달리 <xref:System.Windows.Shapes.Path>는 컨테이너에서 해당 <xref:System.Windows.FlowDirection>를 상속 하며,이를 명시적으로 지정할 필요는 없습니다.
 
-다음 예제에서는 3개의 선을 사용하여 간단한 화살표를 그립니다. 첫 번째 화살표는 <xref:System.Windows.Controls.StackPanel>에서 <xref:System.Windows.FlowDirection.RightToLeft> 흐름 방향을 상속 하므로 시작점 및 끝점은 우변에 있는 루트에서 측정 됩니다. 명시적 <xref:System.Windows.FlowDirection.RightToLeft> <xref:System.Windows.FlowDirection> 포함 된 두 번째 화살표는 오른쪽에도 시작 됩니다. 그러나 세 번째 화살표는 왼쪽에 시작 루트가 있습니다. 그리기에 대 한 자세한 내용은 <xref:System.Windows.Media.LineGeometry> 및 <xref:System.Windows.Media.GeometryGroup>를 참조 하세요.
+다음 예제에서는 3개의 선을 사용하여 간단한 화살표를 그립니다. 첫 번째 화살표는 <xref:System.Windows.Controls.StackPanel>에서 <xref:System.Windows.FlowDirection.RightToLeft> 흐름 방향을 상속 하므로 시작점 및 끝점은 우변에 있는 루트에서 측정 됩니다. 명시적 <xref:System.Windows.FlowDirection.RightToLeft><xref:System.Windows.FlowDirection> 포함 된 두 번째 화살표는 오른쪽에도 시작 됩니다. 그러나 세 번째 화살표는 왼쪽에 시작 루트가 있습니다. 그리기에 대 한 자세한 내용은 <xref:System.Windows.Media.LineGeometry> 및 <xref:System.Windows.Media.GeometryGroup>를 참조 하세요.
 
 [!code-xaml[Paths#Paths](~/samples/snippets/csharp/VS_Snippets_Wpf/Paths/CS/Window1.xaml#paths)]
 
@@ -178,7 +178,7 @@ XAML 요소에는 각 요소의 언어를 정의 하는 XML 특성 (`xml:lang`)�
 
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]는 동일한 기능을 계속 유지하며 대체가 사용되는 시기와 방법을 사용자가 더 많이 제어할 수 있도록 이 기능에 대한 지원을 추가합니다. 이 기능은 모든 언어를 대상으로 하지만, 애플리케이션을 실행하는 다양한 문화권 때문에 특정 언어에 대한 숫자 모양을 애플리케이션 개발자가 지정하기 어려운 양방향 콘텐츠에서 더욱 유용합니다.
 
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서 숫자 대체가 작동 하는 방식을 제어 하는 핵심 속성은 <xref:System.Windows.Media.NumberSubstitution.Substitution%2A> 종속성 속성입니다. <xref:System.Windows.Media.NumberSubstitution> 클래스는 텍스트의 숫자가 표시 되는 방법을 지정 합니다. 동작을 정의하는 세 가지 공용 속성이 있습니다. 다음은 각 속성에 대 한 요약입니다.
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서 숫자 대체가 작동 하는 방식을 제어 하는 핵심 속성은 <xref:System.Windows.Media.NumberSubstitution.Substitution%2A> 종속성 속성입니다. <xref:System.Windows.Media.NumberSubstitution> 클래스 텍스트의 숫자가 표시 하는 하는 방법을 지정 합니다. 동작을 정의하는 세 가지 공용 속성이 있습니다. 다음은 각 속성에 대 한 요약입니다.
 
 **CultureSource:**
 
@@ -192,13 +192,13 @@ XAML 요소에는 각 요소의 언어를 정의 하는 XML 특성 (`xml:lang`)�
 
 **CultureOverride**:
 
-<xref:System.Windows.Media.NumberSubstitution.CultureOverride%2A> 속성은 <xref:System.Windows.Media.NumberSubstitution.CultureSource%2A> 속성이 <xref:System.Windows.Media.NumberCultureSource.Override>로 설정 되 고 그렇지 않은 경우에만 사용 됩니다. 숫자 문화권을 지정합니다. 기본값인 `null` 값은 en-us로 해석 됩니다.
+<xref:System.Windows.Media.NumberSubstitution.CultureOverride%2A> 속성은 <xref:System.Windows.Media.NumberSubstitution.CultureSource%2A> 속성이 <xref:System.Windows.Media.NumberCultureSource.Override>로 설정 되 고 그렇지 않은 경우에만 사용 됩니다. 숫자 문화권을 지정합니다. 기본값인 `null`값은 en-us로 해석 됩니다.
 
 **대체**:
 
 이 속성에는 수행할 숫자 대체의 형식을 지정합니다. 다음 <xref:System.Windows.Media.NumberSubstitutionMethod> 열거형 값 중 하나를 사용 합니다.
 
-- <xref:System.Windows.Media.NumberSubstitutionMethod.AsCulture>: 대체 메서드는 숫자 문화권의 <xref:System.Globalization.NumberFormatInfo.DigitSubstitution%2A?displayProperty=nameWithType> 속성에 따라 결정 됩니다. 기본값입니다.
+- <xref:System.Windows.Media.NumberSubstitutionMethod.AsCulture>: 대체 메서드는 숫자 문화권의 <xref:System.Globalization.NumberFormatInfo.DigitSubstitution%2A?displayProperty=nameWithType> 속성에 따라 결정 됩니다. 이것이 기본값입니다.
 
 - <xref:System.Windows.Media.NumberSubstitutionMethod.Context>: 숫자 문화권이 아랍어 또는 이란어 문화권이 면 해당 숫자는 컨텍스트에 따라 달라 집니다.
 
@@ -224,9 +224,9 @@ XAML 요소에는 각 요소의 언어를 정의 하는 XML 특성 (`xml:lang`)�
 
 응용 프로그램의 상태에 따라 변경 하려면 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서 제공 하는 다른 기능을 사용 합니다.
 
-먼저 응용 프로그램 구성 요소의 `NumberSubstitution.CultureSource="Text"` 설정 합니다. 이 설정을 사용 하면 <xref:System.Windows.Controls.TextBlock>와 같이 "User"를 기본값으로 사용 하는 텍스트 요소에 대 한 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]에서 설정이 제공 되지 않습니다.
+먼저 응용 프로그램 구성 요소의 `NumberSubstitution.CultureSource="Text"`설정 합니다. 이 설정을 사용 하면 <xref:System.Windows.Controls.TextBlock>와 같이 "User"를 기본값으로 사용 하는 텍스트 요소에 대 한 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]에서 설정이 제공 되지 않습니다.
 
-예를 들면,
+예를 들면 다음과 같습니다.:
 
 ```xaml
 <TextBlock
@@ -263,7 +263,7 @@ text1.Language = System.Windows.Markup.XmlLanguage.GetLanguage(System.Globalizat
 
 **대체 속성 사용**
 
-숫자 대체가 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서 작동 하는 방식은 텍스트 요소 및 해당 <xref:System.Windows.FlowDirection>언어에 따라 달라 집니다. <xref:System.Windows.FlowDirection> 왼쪽에서 오른쪽 이면 유럽 숫자가 렌더링 됩니다. 그러나 아랍어 텍스트가 앞에 있거나 언어가 "ar"로 설정 되 고 <xref:System.Windows.FlowDirection> <xref:System.Windows.FlowDirection.RightToLeft> 경우 아라비아 숫자가 대신 렌더링 됩니다.
+숫자 대체가 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서 작동 하는 방식은 텍스트 요소 및 해당 <xref:System.Windows.FlowDirection>언어에 따라 달라 집니다. <xref:System.Windows.FlowDirection> 왼쪽에서 오른쪽 이면 유럽 숫자가 렌더링 됩니다. 그러나 아랍어 텍스트가 앞에 있거나 언어가 "ar"로 설정 되 고 <xref:System.Windows.FlowDirection> <xref:System.Windows.FlowDirection.RightToLeft>경우 아라비아 숫자가 대신 렌더링 됩니다.
 
 그러나 경우에 따라 모든 사용자에 대해 유럽 숫자 같이 단일하게 적용할 수 있습니다. 또는 특정 <xref:System.Windows.Style>를 사용 하는 <xref:System.Windows.Documents.Table> 셀의 아라비아 숫자입니다. 이 작업을 수행 하는 한 가지 쉬운 방법은 <xref:System.Windows.Media.NumberSubstitution.Substitution%2A> 속성을 사용 하는 것입니다.
 

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-ms.openlocfilehash: 04e6c6fb5dd903e0f52a29bb2c0739d899ce2bb1
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 382facef15e79c4ce49fdedaeb1a072b7591e4a0
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636356"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740221"
 ---
 # <a name="wpf-architecture"></a>WPF 아키텍처
 이 항목에서는 Windows Presentation Foundation (WPF) 클래스 계층 구조 둘러보기를 제공 합니다. WPF의 주요 하위 시스템 대부분에 대해 설명 하 고 상호 작용 하는 방법을 설명 합니다. WPF의 설계자가 선택한 일부 항목에 대해서도 자세히 설명 합니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "75636356"
   
 <a name="System_Threading_DispatcherObject"></a>   
 ## <a name="systemthreadingdispatcherobject"></a>System.Threading.DispatcherObject  
- WPF의 대부분 개체는 동시성 및 스레딩을 처리 하기 위한 기본 구문을 제공 하는 <xref:System.Windows.Threading.DispatcherObject>에서 파생 됩니다. WPF는 디스패처에 의해 구현 된 메시징 시스템을 기반으로 합니다. 친숙 한 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 메시지 펌프와 매우 유사 하 게 작동 합니다. 실제로 WPF 디스패처는 크로스 스레드 호출을 수행 하기 위해 User32.dll 메시지를 사용 합니다.  
+ WPF의 대부분 개체는 동시성 및 스레딩을 처리 하기 위한 기본 구문을 제공 하는 <xref:System.Windows.Threading.DispatcherObject>에서 파생 됩니다. WPF는 디스패처에 의해 구현 된 메시징 시스템을 기반으로 합니다. 친숙 한 Win32 메시지 펌프와 매우 유사 하 게 작동 합니다. 실제로 WPF 디스패처는 크로스 스레드 호출을 수행 하기 위해 User32.dll 메시지를 사용 합니다.  
   
  WPF에서 동시성을 논의할 때 이해할 수 있는 두 가지 핵심 개념인 디스패처 및 스레드 선호도가 있습니다.  
   

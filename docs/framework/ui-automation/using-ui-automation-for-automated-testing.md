@@ -6,12 +6,12 @@ helpviewer_keywords:
 - testing, UI Automation
 - UI Automation, automated testing
 ms.assetid: 3a0435c0-a791-4ad7-ba92-a4c1d1231fde
-ms.openlocfilehash: 2da0f994e809ff0ea9cd3165cd788ac467a87aef
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 59c4076712823faa1602448653680a31b8cd8c69
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74800791"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741074"
 ---
 # <a name="using-ui-automation-for-automated-testing"></a>자동화된 테스트를 위해 UI 자동화 사용
 > [!NOTE]
@@ -37,12 +37,12 @@ ms.locfileid: "74800791"
 > 다른 접근성 모델에서, 개발자는 개별 단추, 메뉴 또는 다른 컨트롤에서 직접 정보를 수집해야 합니다. 그러나 모든 컨트롤 형식은 수십 개의 작은 변형과 함께 제공됩니다. 즉, 누름 단추의 변형 10개가 동일한 방법으로 작동되고 동일한 기능을 수행한다고 해도 이들 모두는 고유한 컨트롤로 처리되어야 합니다. 이러한 컨트롤이 기능적으로 동일한지 알 수 있는 방법은 없습니다. 컨트롤 패턴은 이러한 공통적인 컨트롤 동작을 나타내기 위해 개발되었습니다. 자세한 내용은 [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)을 참조하세요.  
   
 ### <a name="implementing-ui-automation"></a>UI 자동화 구현  
- 앞에서 언급했듯이, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에서 제공되는 통합된 모델을 사용하지 않고 테스트 도구와 개발자는 프레임워크에서 컨트롤의 속성과 동작을 노출하기 위해서는 프레임워크 관련 정보를 알아야 합니다. [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]및 Windows Presentation Foundation (WPF)를 포함 하 여 Windows 운영 체제 내에서 한 번에 여러 다른 UI 프레임 워크가 있을 수 있으므로 비슷한 컨트롤이 포함 된 여러 응용 프로그램을 테스트 하는 것이 어려운 작업일 수 있습니다. 예를 들어, 다음 표에서는 단추 컨트롤과 연결된 이름 (또는 텍스트)를 검색하는 데 필요한 프레임워크 관련 속성 이름에 대해 간략하게 설명하고 해당되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성 하나를 보여 줍니다.  
+ 앞에서 언급했듯이, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에서 제공되는 통합된 모델을 사용하지 않고 테스트 도구와 개발자는 프레임워크에서 컨트롤의 속성과 동작을 노출하기 위해서는 프레임워크 관련 정보를 알아야 합니다. Win32, [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]및 Windows Presentation Foundation (WPF)를 비롯 한 Windows 운영 체제 내에서 한 번에 여러 다른 UI 프레임 워크가 있을 수 있으므로 비슷한 컨트롤이 포함 된 여러 응용 프로그램을 테스트 하는 것이 어려운 작업일 수 있습니다. 예를 들어, 다음 표에서는 단추 컨트롤과 연결된 이름 (또는 텍스트)를 검색하는 데 필요한 프레임워크 관련 속성 이름에 대해 간략하게 설명하고 해당되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성 하나를 보여 줍니다.  
   
 |UI 자동화 컨트롤 형식|UI 프레임워크|프레임워크 관련 속성|UI 자동화 속성|  
 |--------------------------------|------------------|---------------------------------|----------------------------|  
 |단추|Windows Presentation Foundation|콘텐츠|NameProperty|  
-|단추|Win32|캡션|NameProperty|  
+|단추|Win32|Caption|NameProperty|  
 |이미지|HTML|alt|NameProperty|  
   
  UI 자동화 공급자는 컨트롤의 프레임워크 관련 속성을 해당 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성에 매핑하는 작업을 담당합니다.  
@@ -86,7 +86,7 @@ ms.locfileid: "74800791"
   
 |||  
 |-|-|  
-|UI 자동화 참조를 추가합니다.|다음은 UI 자동화 클라이언트에 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] dll이 필요한 이유입니다.<br /><br /> -UIAutomationClient는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클라이언트 쪽 Api에 대 한 액세스를 제공 합니다.<br />-UIAutomationClientSideProvider는 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 컨트롤을 자동화 하는 기능을 제공 합니다. [UI Automation Support for Standard Controls](ui-automation-support-for-standard-controls.md)을 참조하세요.<br />-Uiautomationtypes.dll은 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 정의 된 특정 형식에 대 한 액세스를 제공 합니다.|  
+|UI 자동화 참조를 추가합니다.|다음은 UI 자동화 클라이언트에 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] dll이 필요한 이유입니다.<br /><br /> -UIAutomationClient는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클라이언트 쪽 Api에 대 한 액세스를 제공 합니다.<br />-UIAutomationClientSideProvider는 Win32 컨트롤을 자동화 하는 기능을 제공 합니다. [UI Automation Support for Standard Controls](ui-automation-support-for-standard-controls.md)을 참조하세요.<br />-Uiautomationtypes.dll은 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 정의 된 특정 형식에 대 한 액세스를 제공 합니다.|  
 |<xref:System.Windows.Automation> 네임스페이스를 추가합니다.|이 네임스페이스에는 텍스트 처리를 제외하고 UI 자동화 클라이언트에서 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 의 기능을 사용하는 데 필요한 모든 것이 포함됩니다.|  
 |<xref:System.Windows.Automation.Text> 네임스페이스를 추가합니다.|이 네임스페이스에는 UI 자동화 클라이언트에서 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 텍스트 처리의 기능을 사용하는 데 필요한 모든 것이 포함됩니다.|  
 |필요한 컨트롤 찾기|자동화된 테스트 스크립트가 자동화 트리 내에서 필요한 컨트롤을 나타내는 UI 자동화 요소를 찾습니다.<br /><br /> 여러 가지 방법을 통해 코드를 사용하여 UI 자동화 요소를 가져올 수 있습니다.<br /><br /> -<xref:System.Windows.Automation.Condition> 문을 사용 하 여 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]를 쿼리 합니다. 여기에는 일반적으로 언어 중립적인 <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> 가 사용됩니다. **참고:**  컨트롤의 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성을 항목별로 볼 수 있는 검사와 같은 도구를 사용 하 여 <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>를 가져올 수 있습니다. <br /><br /> -<xref:System.Windows.Automation.TreeWalker> 클래스를 사용 하 여 전체 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 또는 그 하위 집합을 트래버스 합니다.<br />-포커스를 추적 합니다.<br />-컨트롤의 hWnd를 사용 합니다.<br />-마우스 커서의 위치와 같은 화면 위치를 사용 합니다.<br /><br /> [Obtaining UI Automation Elements](obtaining-ui-automation-elements.md)을 참조하세요.|  

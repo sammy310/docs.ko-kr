@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: 0ba4e8ff639cdfbbec596da45a6e950fff921974
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 0c98d0e7363e7732f44f2edf238b9cb6d2bf11fb
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740715"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740280"
 ---
 # <a name="typography-in-wpf"></a>WPF의 입력 체계
 이 항목에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]의 주요 입력 체계 기능을 소개합니다. 이러한 기능에는 텍스트 렌더링의 향상 된 품질 및 성능, OpenType 입력 체계 지원, 향상 된 국가별 텍스트, 향상 된 글꼴 지원 및 새로운 텍스트 Api (응용 프로그래밍 인터페이스)가 포함 됩니다.  
@@ -19,7 +19,7 @@ ms.locfileid: "73740715"
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 텍스트는 텍스트의 명확성 및 가독성을 향상 시키는 Microsoft ClearType을 사용 하 여 렌더링 됩니다. ClearType은 랩톱 화면, Pocket PC 화면, 평면 패널 모니터 등 기존 Lcd (액체 크리스탈 디스플레이)의 텍스트 가독성을 향상 시키는 Microsoft에서 개발한 소프트웨어 기술입니다. ClearType은 픽셀의 소수 부분에 문자를 정렬 하 여 텍스트를 진정한 모양으로 더 크게 표시할 수 있는 하위 픽셀 렌더링을 사용 합니다. 해상도를 더 세밀하게 지원할수록 텍스트의 미세한 부분까지 더 선명하게 표시되므로 오랫동안 더 쉽게 읽을 수 있습니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 ClearType의 또 다른 향상 된 기능은 y 방향 앤티앨리어싱으로 텍스트 문자에서 단순 곡선의 위쪽 및 아래쪽을 곡선으로 합니다. ClearType 기능에 대 한 자세한 내용은 [Cleartype 개요](cleartype-overview.md)를 참조 하세요.  
   
  ![ClearType y 방향 앤티 앨리어싱을 사용한 텍스트](./media/typography-in-wpf/text-y-direction-antialiasing.gif)  
-ClearType y 방향 앤티앨리어싱으로 표시된 텍스트  
+ClearType y 방향 앤티 앨리어싱으로 표시된 텍스트  
   
  컴퓨터가 최소 수준의 하드웨어 요구를 충족하는 경우 전체 텍스트 렌더링 파이프라인은 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 하드웨어 가속일 수 있습니다. 하드웨어를 사용하여 수행할 수 없는 렌더링은 소프트웨어 렌더링으로 대체됩니다. 하드웨어 가속은 텍스트 렌더링 파이프라인의 모든 단계에 영향을 줍니다. 여기에는 개별 문자 모양 저장, 문자 모양 실행에 문자 모양 적용, 효과 적용, ClearType 혼합 알고리즘이 최종 표시 된 출력에 적용 됩니다. 하드웨어 가속에 대한 자세한 내용은 [그래픽 렌더링 계층](graphics-rendering-tiers.md)을 참조하세요.  
   
@@ -31,7 +31,7 @@ ClearType y 방향 앤티앨리어싱으로 표시된 텍스트
 ## <a name="rich-typography"></a>풍부한 입력 체계  
  OpenType 글꼴 형식은 TrueType® 글꼴 형식의 확장명입니다. OpenType 글꼴 형식은 Microsoft 및 Adobe에서 공동으로 개발 되었으며 다양 한 고급 인쇄 기능 기능을 제공 합니다. <xref:System.Windows.Documents.Typography> 개체는 스타일 대체 및 선단 장식 등 OpenType 글꼴의 여러 고급 기능을 제공 합니다. Windows SDK는 Pericles 및 Pescadero 글꼴과 같은 다양 한 기능을 사용 하 여 디자인 된 샘플 OpenType 글꼴 집합을 제공 합니다. 자세한 내용은 [샘플 OpenType 글꼴 팩](sample-opentype-font-pack.md)을 참조하세요.  
   
- Pericles OpenType 글꼴에는 표준 문자 집합에 스타일 대체를 제공 하는 추가 문자 모양이 포함 되어 있습니다. 다음 텍스트는 스타일 대체 문자 모양을 표시합니다.  
+ Pericles OpenType 글꼴 스타일 대체 문자 모양의 표준 집합을 제공 하는 추가 문자 모양이 포함 되어 있습니다. 다음 텍스트는 스타일 대체 문자 모양을 표시합니다.  
   
  ![OpenType 스타일 대체 문자 모양을 사용하는 텍스트](./media/typography-in-wpf/opentype-stylistic-alternate-glyphs.gif "OpenType 스타일 대체 문자 모양을 사용하는 텍스트")  
   
@@ -59,15 +59,15 @@ ClearType y 방향 앤티앨리어싱으로 표시된 텍스트
   
 - 시스템 로캘과 같이 전역 설정에 독립적인 글꼴 동작.  
   
-- <xref:System.Windows.Media.FontFamily>을 정의 하기 위해 <xref:System.Windows.FontWeight>, <xref:System.Windows.FontStretch>및 <xref:System.Windows.FontStyle> 형식을 구분 합니다. [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 프로그래밍에서보다 더 많은 유연성을 제공하며, 기울임꼴과 굵게의 부울 조합을 사용하여 글꼴 패밀리를 정의합니다.  
+- <xref:System.Windows.Media.FontFamily>을 정의 하기 위해 <xref:System.Windows.FontWeight>, <xref:System.Windows.FontStretch>및 <xref:System.Windows.FontStyle> 형식을 구분 합니다. 이는 글꼴 패밀리를 정의 하는 데 사용 되는 기울임꼴 및 굵은 글꼴의 부울 조합을 사용 하는 Win32 프로그래밍 보다 뛰어난 유연성을 제공 합니다.  
   
 - 글꼴 이름과 독립적으로 처리되는 쓰기 방향(가로 및 세로).  
   
-- 복합 글꼴 기술을 사용 하 여 휴대용 XML 파일에서 글꼴 연결 및 글꼴 대체를 사용 합니다. 합성 글꼴은 모든 범위의 다국어 글꼴 생성을 허용합니다. 또한 합성 글꼴은 없는 문자 모양을 표시하지 않는 메커니즘을 제공합니다. 자세한 내용은 <xref:System.Windows.Media.FontFamily> 클래스의 설명을 참조 하세요.  
+- 복합 글꼴 기술을 사용 하 여 휴대용 XML 파일에서 글꼴 연결 및 글꼴 대체를 사용 합니다. 합성 글꼴은 모든 범위의 다국어 글꼴 생성을 허용합니다. 또한 합성 글꼴은 없는 문자 모양을 표시하지 않는 메커니즘을 제공합니다. 자세한 내용은 설명을 참조는 <xref:System.Windows.Media.FontFamily> 클래스입니다.  
   
 - 단일 언어 글꼴 그룹을 사용하여 합성 글꼴에서 국가별 글꼴 작성. 따라서 여러 언어에 대한 글꼴을 개발할 때 리소스 비용이 절감됩니다.  
   
-- 합성 글꼴을 문서에 포함하여 문서에 이식성 제공. 자세한 내용은 <xref:System.Windows.Media.FontFamily> 클래스의 설명을 참조 하세요.  
+- 합성 글꼴을 문서에 포함하여 문서에 이식성 제공. 자세한 내용은 설명을 참조는 <xref:System.Windows.Media.FontFamily> 클래스입니다.  
   
 <a name="New_Text_APIs"></a>   
 ## <a name="new-text-application-programming-interfaces-apis"></a>새 텍스트 API(응용 프로그래밍 인터페이스)  
@@ -142,7 +142,7 @@ ClearType y 방향 앤티앨리어싱으로 표시된 텍스트
 ### <a name="advanced-text-formatting"></a>고급 텍스트 서식 지정  
  텍스트 Api의 고급 수준에서 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]은 <xref:System.Windows.Media.TextFormatting.TextFormatter> 개체 및 <xref:System.Windows.Media.TextFormatting> 네임 스페이스의 기타 형식을 사용 하 여 사용자 지정 텍스트 레이아웃을 만드는 기능을 제공 합니다. <xref:System.Windows.Media.TextFormatting.TextFormatter> 및 관련 클래스를 사용 하 여 문자 형식, 단락 스타일, 줄 바꿈 규칙 및 국가별 텍스트에 대 한 기타 레이아웃 기능 정의를 지 원하는 사용자 지정 텍스트 레이아웃을 구현할 수 있습니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 텍스트 레이아웃 지원의 기본 구현을 재정의하려는 경우는 거의 없습니다. 그러나 텍스트 편집 컨트롤이나 애플리케이션을 만들려는 경우 기본 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 구현이 아닌 다른 구현이 필요할 수 있습니다.  
   
- 기존 텍스트 API와 달리 <xref:System.Windows.Media.TextFormatting.TextFormatter>은 콜백 메서드 집합을 통해 텍스트 레이아웃 클라이언트와 상호 작용 합니다. 클라이언트는 <xref:System.Windows.Media.TextFormatting.TextSource> 클래스의 구현에서 이러한 메서드를 제공 해야 합니다. 다음 다이어그램에서는 클라이언트 응용 프로그램과 <xref:System.Windows.Media.TextFormatting.TextFormatter> 간의 텍스트 레이아웃 상호 작용을 보여 줍니다.  
+ 기존 텍스트 API와 달리 <xref:System.Windows.Media.TextFormatting.TextFormatter>는 콜백 메서드 집합을 통해 텍스트 레이아웃 클라이언트와 상호 작용 합니다. 구현에서 이러한 메서드를 제공 하기 위해 클라이언트 필요는 <xref:System.Windows.Media.TextFormatting.TextSource> 클래스입니다. 다음 다이어그램에서는 클라이언트 응용 프로그램과 <xref:System.Windows.Media.TextFormatting.TextFormatter>간의 텍스트 레이아웃 상호 작용을 보여 줍니다.  
   
  ![텍스트 레이아웃 클라이언트 및 TextFormatter의 다이어그램](./media/typography-in-wpf/text-layout-text-formatter-interaction.png)  
   
@@ -156,5 +156,5 @@ ClearType y 방향 앤티앨리어싱으로 표시된 텍스트
 - [OpenType 글꼴 기능](opentype-font-features.md)
 - [서식 있는 텍스트 그리기](drawing-formatted-text.md)
 - [고급 텍스트 서식 지정](advanced-text-formatting.md)
-- [텍스트](optimizing-performance-text.md)
+- [Text](optimizing-performance-text.md)
 - [Microsoft 입력 체계](https://docs.microsoft.com/typography/)

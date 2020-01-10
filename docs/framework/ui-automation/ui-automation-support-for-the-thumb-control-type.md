@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, Thumb control type
 - Thumb control type
 ms.assetid: 13636338-e320-4355-b071-ede20a3fb1de
-ms.openlocfilehash: f5b51a685176028a3844def9fc7139988433c28b
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: b795a216d0f32b3bd4014c884a061c0c2d4558a8
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74800235"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741456"
 ---
 # <a name="ui-automation-support-for-the-thumb-control-type"></a>Thumb 컨트롤 형식에 대한 UI 자동화 지원
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "74800235"
   
  Thumb 컨트롤은 컨트롤을 이동 또는 끌거나(예: 스크롤 막대 단추) 크기를 조정할 수 있는(예: 창 크기 조정 위젯) 기능을 제공합니다. 또한 Thumb 컨트롤은 이동 가능한 창 테두리로 구현할 수 있습니다. 끌어서 놓기 기능은 제공하지 않습니다. Thumb 컨트롤은 마우스 포커스를 받을 수 있지만 일반적으로 키보드 포커스는 받을 수 없습니다. 컨트롤 개발자는 컨트롤이 적절하게 작동(끌거나 크기 조정 가능)되도록 구현해야 합니다.  
   
- 다음 섹션에서는 Thumb 컨트롤 형식에 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 구조, 속성, 컨트롤 패턴, 이벤트를 정의합니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 요구 사항은 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]또는 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]의 모든 Thumb 컨트롤에 적용됩니다.  
+ 다음 섹션에서는 Thumb 컨트롤 형식에 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 구조, 속성, 컨트롤 패턴, 이벤트를 정의합니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 요구 사항은 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 또는 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]에 관계 없이 모든 thumb 컨트롤에 적용 됩니다.  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
 ## <a name="required-ui-automation-tree-structure"></a>필요한 UI 자동화 트리 구조  

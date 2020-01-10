@@ -6,24 +6,24 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 555e55a7-0851-4ec8-b1c6-0acba7e9b648
-ms.openlocfilehash: 42ed51a1a1ce59b6a3cc3319d86d3a7445403ce4
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 8d1f376a2c5b3f31407af0100d9a4417f7cff34e
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72919737"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740243"
 ---
 # <a name="walkthrough-hosting-a-wpf-clock-in-win32"></a>연습: Win32에서 WPF 시계 호스팅
 
-[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 응용 프로그램 내에 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]을 배치 하려면 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 콘텐츠가 포함 된 HWND를 제공 하는 <xref:System.Windows.Interop.HwndSource>를 사용 합니다. 먼저 <xref:System.Windows.Interop.HwndSource>를 만들어 CreateWindow와 유사한 매개 변수를 제공 합니다. 그런 다음 <xref:System.Windows.Interop.HwndSource> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 콘텐츠에 대 한 정보를 알려 줍니다. 마지막으로 <xref:System.Windows.Interop.HwndSource>의 HWND를 가져옵니다. 이 연습에서는 운영 체제 **날짜 및 시간 속성** 대화 상자를 다시 구현 하는 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 응용 프로그램 내에서 혼합 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]을 만드는 방법을 보여 줍니다.
+Win32 응용 프로그램 내에 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]을 추가 하려면 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 콘텐츠를 포함 하는 HWND를 제공 하는 <xref:System.Windows.Interop.HwndSource>을 사용 합니다. 먼저 <xref:System.Windows.Interop.HwndSource>를 만들어 CreateWindow와 유사한 매개 변수를 제공 합니다. 그런 다음 <xref:System.Windows.Interop.HwndSource> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 콘텐츠에 대 한 정보를 알려 줍니다. 마지막으로 <xref:System.Windows.Interop.HwndSource>의 HWND를 가져옵니다. 이 연습에서는 운영 체제 **날짜 및 시간 속성** 대화 상자를 다시 구현 하는 Win32 응용 프로그램 내에서 혼합 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]을 만드는 방법을 보여 줍니다.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>전제 조건
 
 [WPF 및 Win32 상호 운용성을](wpf-and-win32-interoperation.md)참조 하세요.
 
-## <a name="how-to-use-this-tutorial"></a>이 자습서를 사용하는 방법
+## <a name="how-to-use-this-tutorial"></a>이 자습서의 사용 방법
 
-이 자습서는 상호 운용 애플리케이션을 생성하는 중요한 단계에 대해 중점적으로 설명합니다. 이 자습서는 [Win32 클록 상호 운용성 샘플](https://go.microsoft.com/fwlink/?LinkID=160051)샘플에서 지원 되지만이 샘플은 최종 제품을 반영 합니다. 이 자습서는 기존 프로젝트와 같은 사용자 고유의 기존 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 프로젝트로 시작 하 고 응용 프로그램에 호스팅된 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]를 추가 하는 것 처럼 단계를 문서화 합니다. 최종 제품을 [Win32 클록 상호 운용 샘플과](https://go.microsoft.com/fwlink/?LinkID=160051)비교할 수 있습니다.
+이 자습서는 상호 운용 애플리케이션을 생성하는 중요한 단계에 대해 중점적으로 설명합니다. 이 자습서는 [Win32 클록 상호 운용성 샘플](https://go.microsoft.com/fwlink/?LinkID=160051)샘플에서 지원 되지만이 샘플은 최종 제품을 반영 합니다. 이 자습서에서는 기존 프로젝트와 같은 기존 Win32 프로젝트를 사용 하 여 시작 하 고 응용 프로그램에 호스트 된 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]를 추가 하는 것 처럼 단계를 문서화 합니다. 최종 제품을 [Win32 클록 상호 운용 샘플과](https://go.microsoft.com/fwlink/?LinkID=160051)비교할 수 있습니다.
 
 ## <a name="a-walkthrough-of-windows-presentation-framework-inside-win32-hwndsource"></a>Win32 내에서 Windows Presentation Framework의 연습(HwndSource)
 
@@ -35,11 +35,11 @@ Visual Studio에서 C++ Win32 프로젝트를 만들고 대화 상자 편집기�
 
 ![다시 생성 한 날짜 및 시간 속성 대화 상자](./media/walkthrough-hosting-a-wpf-clock-in-win32/recreated-date-time-properties-dialog.png)
 
-Visual Studio를 사용 하 여 <xref:System.Windows.Interop.HwndSource>를 사용할 필요는 없으며를 사용 C++ 하 여[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]프로그램을 작성 하는 것은 아니지만이 작업을 수행 하는 일반적인 방법 이며 단계별 자습서 설명에도 적합 합니다.
+Visual Studio를 사용 하 여 <xref:System.Windows.Interop.HwndSource>를 사용 하지 않아도 되며를 사용 하 여 Win32 프로그램을 작성 C++ 하지 않아도 되지만이를 사용 하는 것은 매우 일반적인 방법 이며 단계별 자습서 설명에도 적합 합니다.
 
 대화 상자에 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] clock을 추가 하려면 5 개의 특정 하위 단계를 수행 해야 합니다.
 
-1. Visual Studio에서 프로젝트 설정을 변경 하 여 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 프로젝트에서 관리 코드 ( **/clr**)를 호출할 수 있도록 합니다.
+1. Visual Studio에서 프로젝트 설정을 변경 하 여 Win32 프로젝트에서 관리 코드 ( **/clr**)를 호출할 수 있도록 합니다.
 
 2. 별도의 DLL에 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.Controls.Page>를 만듭니다.
 
@@ -47,11 +47,11 @@ Visual Studio를 사용 하 여 <xref:System.Windows.Interop.HwndSource>를 사�
 
 4. <xref:System.Windows.Interop.HwndSource.Handle%2A> 속성을 사용 하 여 <xref:System.Windows.Controls.Page>에 대 한 HWND를 가져옵니다.
 
-5. [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]를 사용 하 여 더 큰 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 응용 프로그램 내에서 HWND를 넣을 위치를 결정 합니다.
+5. Win32를 사용 하 여 더 큰 Win32 응용 프로그램 내에서 HWND를 넣을 위치 결정
 
 ## <a name="clr"></a>/clr
 
-첫 번째 단계는이 관리 되지 않는 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 프로젝트를 관리 코드를 호출할 수 있는 프로젝트로 변환 하는 것입니다. /Clr 컴파일러 옵션을 사용 합니다 .이 옵션을 사용 하 여 필요한 Dll에 연결 하 고 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에 사용할 Main 메서드를 조정 합니다.
+첫 번째 단계는이 관리 되지 않는 Win32 프로젝트를 관리 코드를 호출할 수 있는 것으로 설정 하는 것입니다. /Clr 컴파일러 옵션을 사용 합니다 .이 옵션을 사용 하 여 필요한 Dll에 연결 하 고 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에 사용할 Main 메서드를 조정 합니다.
 
 C++ 프로젝트 내에서 관리 코드를 사용 하도록 설정 하려면 win32clock 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **속성**을 선택 합니다. **일반** 속성 페이지 (기본값)에서 공용 언어 런타임 지원을 `/clr`변경 합니다.
 
@@ -91,9 +91,9 @@ int APIENTRY _tWinMain(HINSTANCE hInstance,
 
 그런 다음 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.Controls.Page>을 정의 하는 DLL을 만듭니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.Controls.Page>을 독립 실행형 응용 프로그램으로 만들고 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 부분을 작성 하 고 디버그 하는 것이 가장 쉬운 경우가 많습니다. 완료 되 면 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **속성**을 클릭 한 다음 응용 프로그램으로 이동 하 고 출력 형식을 Windows 클래스 라이브러리로 변경 하 여 해당 프로젝트를 DLL로 변환할 수 있습니다.
 
-그런 다음 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dll 프로젝트를 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 프로젝트 (두 프로젝트를 포함 하는 솔루션 하나)와 결합할 수 있습니다. 솔루션을 마우스 오른쪽 단추로 클릭 하 고 **Add\Existing project**를 선택 합니다.
+그런 다음 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dll 프로젝트를 Win32 프로젝트 (두 프로젝트를 포함 하는 하나의 솔루션)와 결합할 수 있습니다. 솔루션을 마우스 오른쪽 단추로 클릭 하 고 **Add\Existing project**를 선택 합니다.
 
-[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 프로젝트에서 해당 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dll을 사용 하려면 참조를 추가 해야 합니다.
+Win32 프로젝트에서 해당 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dll을 사용 하려면 참조를 추가 해야 합니다.
 
 1. Win32clock 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **참조 ...** 를 선택 합니다.
 
@@ -183,7 +183,7 @@ return (HWND) source->Handle.ToPointer();
 
 ## <a name="positioning-the-hwnd"></a>Hwnd 위치 지정
 
-이제 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] clock을 포함 하는 HWND가 있으므로 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 대화 상자 내에 해당 HWND를 넣어야 합니다. HWND를 배치할 위치를 알고 있다면 앞에서 정의한 `GetHwnd` 함수에 해당 크기와 위치를 전달 하는 것이 좋습니다. 그러나 리소스 파일을 사용하여 대화 상자를 정의했으므로 HWND를 배치할 위치를 정확하게 알 수 없습니다. Visual Studio 대화 상자 편집기를 사용 하 여 clock을 이동할 위치 ("여기에 클록 삽입") [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 정적 컨트롤을 배치 하 고이를 사용 하 여 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] clock을 배치할 수 있습니다.
+이제 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] clock을 포함 하는 HWND가 있으므로 Win32 대화 상자 내에 해당 HWND를 넣어야 합니다. HWND를 배치할 위치를 알고 있다면 앞에서 정의한 `GetHwnd` 함수에 해당 크기와 위치를 전달 하는 것이 좋습니다. 그러나 리소스 파일을 사용하여 대화 상자를 정의했으므로 HWND를 배치할 위치를 정확하게 알 수 없습니다. Visual Studio 대화 상자 편집기를 사용 하 여 clock을 이동할 위치 ("여기에 clock 삽입")를 표시 하 고이를 사용 하 여 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 클록을 배치할 수 있습니다.
 
 WM_INITDIALOG를 처리 하는 경우 `GetDlgItem`를 사용 하 여 자리 표시자 정적의 HWND를 검색 합니다.
 

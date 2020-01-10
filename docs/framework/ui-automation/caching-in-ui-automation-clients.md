@@ -5,22 +5,22 @@ helpviewer_keywords:
 - UI Automation caching in clients
 - caching, UI Automation clients
 ms.assetid: 94c15031-4975-43cc-bcd5-c9439ed21c9c
-ms.openlocfilehash: 8de96aa3877b2ca414c87958dad480503f57ccb7
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5c0c92f40ae60785f780cb573bb7faa77a31f273
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74433944"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741782"
 ---
 # <a name="caching-in-ui-automation-clients"></a>UI 자동화 클라이언트에서 캐싱
 > [!NOTE]
-> 이 설명서는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 네임스페이스에 정의된 관리되는 <xref:System.Windows.Automation> 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조하세요.  
+> 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조하세요.  
   
  이 항목에서는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성 및 컨트롤 패턴의 캐싱에 대해 설명합니다.  
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에서, 캐싱은 데이터의 프리페치를 의미합니다. 이렇게 하면 추가 크로스 프로세스와 통신하지 않고도 데이터에 액세스할 수 있습니다. 캐싱은 일반적으로 UI 자동화 클라이언트 애플리케이션에서 속성 및 컨트롤 패턴을 일괄적으로 검색하는 데 사용됩니다. 필요에 따라 캐시에서 정보가 검색됩니다. 애플리케이션은 일반적으로 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 에서 변경된 사항이 있음을 나타내는 이벤트에 대한 응답으로 캐시를 주기적으로 업데이트합니다.  
   
- 캐싱의 이점은 WPF (Windows Presentation Foundation) 컨트롤과 서버 쪽 UI 자동화 공급자가 있는 사용자 지정 컨트롤에서 가장 두드러지게 나타납니다. [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 컨트롤의 기본 공급자와 같은 클라이언트 쪽 공급자에 액세스할 때는 캐싱의 효율성이 떨어집니다.  
+ 캐싱의 이점은 WPF (Windows Presentation Foundation) 컨트롤과 서버 쪽 UI 자동화 공급자가 있는 사용자 지정 컨트롤에서 가장 두드러지게 나타납니다. Win32 컨트롤의 기본 공급자와 같은 클라이언트 쪽 공급자에 액세스할 때의 혜택은 더 낮습니다.  
   
  캐싱은 애플리케이션이 <xref:System.Windows.Automation.CacheRequest> 를 활성화한 다음 <xref:System.Windows.Automation.AutomationElement>를 반환하는 메서드 또는 속성을 사용하는 경우에 발생합니다. 예: <xref:System.Windows.Automation.AutomationElement.FindFirst%2A>, <xref:System.Windows.Automation.AutomationElement.FindAll%2A> <xref:System.Windows.Automation.TreeWalker> 클래스의 메서드는 예외입니다. 캐싱은 <xref:System.Windows.Automation.CacheRequest> 가 매개 변수로 지정된 경우에만 수행됩니다(예: <xref:System.Windows.Automation.TreeWalker.GetFirstChild%28System.Windows.Automation.AutomationElement%2CSystem.Windows.Automation.CacheRequest%29?displayProperty=nameWithType>).  
   
@@ -101,7 +101,7 @@ ms.locfileid: "74433944"
   
  캐시를 업데이트해도 기존 <xref:System.Windows.Automation.AutomationElement> 참조의 속성이 변경되지 않습니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [클라이언트용 UI 자동화 이벤트](ui-automation-events-for-clients.md)
 - [UI 자동화의 캐싱 사용](use-caching-in-ui-automation.md)

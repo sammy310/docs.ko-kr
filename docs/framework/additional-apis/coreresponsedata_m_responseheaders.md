@@ -1,5 +1,5 @@
 ---
-title: CoreResponseData.m_ResponseHeaders 필드
+title: M_ResponseHeaders CoreResponseData 필드
 ms.date: 01/29/2018
 topic_type:
 - apiref
@@ -10,16 +10,16 @@ api_location:
 api_type:
 - Assembly
 author: stevewhims
-ms.openlocfilehash: ea93b70ae8e1a710b4208050d7ec823a28b218b7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: df0b592a5f85d4c99dee4ecb60963f4abb560a13
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705976"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741010"
 ---
-# <a name="coreresponsedatamresponseheaders-field"></a>CoreResponseData.m\_ResponseHeaders 필드
+# <a name="coreresponsedatam_responseheaders-field"></a>CoreResponseData\_ResponseHeaders 필드
 
-`CoreResponseData.m_ResponseHeaders` 가 <xref:System.Net.WebHeaderCollection> 서버 응답과 관련 된 헤더입니다.
+`CoreResponseData.m_ResponseHeaders`는 서버 응답과 연결 된 헤더의 <xref:System.Net.WebHeaderCollection>입니다.
 
 ## <a name="syntax"></a>구문
   
@@ -28,14 +28,14 @@ public WebHeaderCollection m_ResponseHeaders
 ```
 
 > [!WARNING]
-> 코드에서 직접 사용할이 API는 사용 하는 것이 아닙니다. 대신 사용 해야는 <xref:System.Diagnostics.DiagnosticSource> 네트워킹 코드를 연결 합니다. 참조 [DiagnosticSource 사용자 가이드](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md)합니다.
+> 이 API는 코드에서 직접 사용할 수 없습니다. 대신 <xref:System.Diagnostics.DiagnosticSource>를 사용 하 여 네트워킹 코드를 후크 해야 합니다. [DiagnosticSource 사용자 가이드](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md)를 참조 하세요.
 > 
-> Microsoft는 어떤 상황에서 프로덕션 응용 프로그램에서이 클래스의 사용을 지원 하지 않습니다.
+> Microsoft는 어떤 경우에도 프로덕션 응용 프로그램에서이 클래스를 사용 하는 것을 지원 하지 않습니다.
 
 ## <a name="requirements"></a>요구 사항
 
 **네임스페이스:** <xref:System.Net>
 
-**어셈블리:** 시스템 (에: System.dll)
+**어셈블리:** 시스템 (system.string)
 
-**.NET framework 버전:** 2.0부터 사용할 수 있습니다.
+**.NET Framework 버전:** 2.0부터 사용할 수 있습니다.

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - UI Automation, AutomationId property
 - properties, AutomationId
 ms.assetid: a24e807b-d7c3-4e93-ac48-80094c4e1c90
-ms.openlocfilehash: 43a67a8dd73931172a6fa729c054ad494b29134e
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: a07a9c9bf6b0bf1e2f8ce56653a90a3aad3c4b2f
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74800308"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741382"
 ---
 # <a name="use-the-automationid-property"></a>AutomationID 속성 사용
 > [!NOTE]
@@ -31,7 +31,7 @@ ms.locfileid: "74800308"
  주 UI 자동화 클라이언트 애플리케이션의 3가지 시나리오에서, <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> 를 사용해야 요소를 검색할 때 정확하고 일관된 결과를 얻을 수 있다고 확인되었습니다.  
   
 > [!NOTE]
-> <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> 는 최상위 애플리케이션 창, ID 또는 x:Uid가 없는 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 컨트롤에서 파생된 UI 자동화 요소, 컨트롤 ID가 없는 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 컨트롤에서 파생된 UI 자동화 요소를 제외하고 컨트롤 뷰의 모든 UI 자동화 요소에서 지원됩니다.  
+> <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>는 최상위 응용 프로그램 창, ID 또는 x:Uid가 없는 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 컨트롤에서 파생 된 UI 자동화 요소, 컨트롤 ID가 없는 Win32 컨트롤에서 파생 된 UI 자동화 요소를 제외 하 고 컨트롤 뷰의 모든 UI 자동화 요소에서 지원 됩니다.  
   
 #### <a name="use-a-unique-and-discoverable-automationid-to-locate-a-specific-element-in-the-ui-automation-tree"></a>검색 가능하고 고유한 AutomationID를 사용하여 UI 자동화 트리에서 특정 요소를 찾습니다.  
   

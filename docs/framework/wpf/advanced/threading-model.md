@@ -18,12 +18,12 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: ae120311e7e58b34437de987e9f9a18e917043c0
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 72fa95bde0c41e913bdaa35da7fdcd34f81b3057
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974084"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740272"
 ---
 # <a name="threading-model"></a>스레딩 모델
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]는 개발자가 스레딩의 어려움을 해결하도록 디자인되어 있습니다. 결과적으로 대부분의 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 개발자는 둘 이상의 스레드를 사용 하는 인터페이스를 작성할 필요가 없습니다. 다중 스레드 프로그램은 복잡하고 디버그하기 어려우므로 단일 스레드 솔루션이 있을 경우 피해야 합니다.
@@ -203,7 +203,7 @@ ms.locfileid: "73974084"
  `handler2`이 이벤트를 처리 하는 데 상당한 시간이 걸릴 수 있습니다. `handler2`에서 <xref:System.Windows.Threading.Dispatcher.PushFrame%2A>를 사용 하 여 시간에 대해 반환 되지 않는 중첩 된 메시지 루프를 시작할 수 있습니다. 이 메시지 루프가 완료 될 때 `handler2` 이벤트를 처리 된 것으로 표시 하지 않으면 이벤트는 매우 오래 된 경우에도 트리 위로 전달 됩니다.
 
 ### <a name="reentrancy-and-locking"></a>재입력 및 잠금
- CLR (공용 언어 런타임)의 잠금 메커니즘은 짐작할 수 있는 것과 동일 하 게 동작 하지 않습니다. 잠금을 요청할 때 스레드가 작업을 완전히 중단 하는 것으로 예측할 수 있습니다. 실제로 스레드는 우선 순위가 높은 메시지를 계속 수신하고 처리합니다. 이를 통해 교착 상태를 방지하고 인터페이스가 최소한으로 응답할 수 있지만 미묘한 버그가 발생할 수 있습니다.  대부분의 경우에 대 한 정보를 알 필요가 없지만 드물게 발생 하는 경우 (일반적으로 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 창 메시지 또는 COM STA 구성 요소와 관련 됨)에는이 작업을 수행 하는 것이 좋습니다.
+ CLR (공용 언어 런타임)의 잠금 메커니즘은 짐작할 수 있는 것과 동일 하 게 동작 하지 않습니다. 잠금을 요청할 때 스레드가 작업을 완전히 중단 하는 것으로 예측할 수 있습니다. 실제로 스레드는 우선 순위가 높은 메시지를 계속 수신하고 처리합니다. 이를 통해 교착 상태를 방지하고 인터페이스가 최소한으로 응답할 수 있지만 미묘한 버그가 발생할 수 있습니다.  대부분의 경우에 대 한 정보를 알 필요가 없지만 드문 경우 (일반적으로 Win32 창 메시지 또는 COM STA 구성 요소와 관련 됨)에는이 작업을 수행 하는 것이 좋습니다.
 
  개발자는 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 둘 이상의 스레드에서 액세스할 수 없다고 가정 하 여 대부분의 인터페이스는 스레드 보안을 염두에 두어야 합니다. 이 경우 단일 스레드는 예기치 않은 시간에 환경 변경을 수행 하 여 <xref:System.Windows.Threading.DispatcherObject> 상호 제외 메커니즘이 해결 될 것으로 예상 하는 효과를 발생 시킬 수 있습니다. 다음 의사 코드를 살펴보겠습니다.
 

@@ -10,16 +10,16 @@ helpviewer_keywords:
 - UI (user interface), automation
 - UI Automation
 ms.assetid: 4380cad7-e509-448f-b9a5-6de042605fd4
-ms.openlocfilehash: ceab7db1f9eeb47ec020e220ec702af8181855e2
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 645c44998812453008fc91d5cf4b8463c51bef9a
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74442486"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741732"
 ---
 # <a name="ui-automation-and-screen-scaling"></a>UI 자동화 및 화면 크기 조정
 > [!NOTE]
-> 이 설명서는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 네임스페이스에 정의된 관리되는 <xref:System.Windows.Automation> 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조하세요.  
+> 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조하세요.  
   
 Windows Vista부터 사용자는 dpi (인치당 도트 수) 설정을 변경 하 여 화면에 있는 대부분의 UI (사용자 인터페이스) 요소를 더 크게 표시할 수 있습니다. Windows에서는이 기능을 사용할 수 있었지만 이전 버전에서는 응용 프로그램에서 크기 조정을 구현 해야 했습니다. Windows Vista부터 바탕 화면 창 관리자는 자체 크기 조정을 처리 하지 않는 모든 응용 프로그램에 대해 기본 크기 조정을 수행 합니다. UI 자동화 클라이언트 애플리케이션에서는 이 기능을 고려해야 합니다.  
   
@@ -58,14 +58,14 @@ Windows Vista부터 사용자는 dpi (인치당 도트 수) 설정을 변경 하
   
  솔루션은 두 부분으로 구성됩니다.  
   
-1. 먼저 클라이언트 응용 프로그램에서 dpi를 인식 하도록 설정 합니다. 이렇게 하려면 시작 시에 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 함수 `SetProcessDPIAware` 를 호출합니다. 관리 코드에서, 다음 선언을 통해 이 함수를 사용할 수 있습니다.  
+1. 먼저 클라이언트 응용 프로그램에서 dpi를 인식 하도록 설정 합니다. 이렇게 하려면 시작할 때 `SetProcessDPIAware` Win32 함수를 호출 합니다. 관리 코드에서, 다음 선언을 통해 이 함수를 사용할 수 있습니다.  
   
      [!code-csharp[Highlighter#101](../../../samples/snippets/csharp/VS_Snippets_Wpf/Highlighter/CSharp/NativeMethods.cs#101)]
      [!code-vb[Highlighter#101](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Highlighter/VisualBasic/NativeMethods.vb#101)]  
   
      이 함수는 전체 프로세스 dpi를 인식 합니다. 즉, 프로세스에 속하는 모든 창이 실제 크기로 설정 됩니다. 예를 들어, [형광펜 샘플](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/Highlighter)에서 강조 표시 사각형을 구성 하는 4 개의 창은 논리적 좌표가 아니라 UI 자동화에서 가져온 물리적 좌표에 있습니다. 샘플이 dpi를 인식 하지 못하는 경우 강조 표시는 데스크톱의 논리적 좌표에 그려지며 96이 아닌 환경에서 잘못 된 배치가 발생 합니다.  
   
-2. 커서 좌표를 가져오려면 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 함수 `GetPhysicalCursorPos`를 호출합니다. 다음 예제에서는 이 함수를 선언하고 사용하는 방법을 보여 줍니다.  
+2. 커서 좌표를 가져오려면 `GetPhysicalCursorPos`Win32 함수를 호출 합니다. 다음 예제에서는 이 함수를 선언하고 사용하는 방법을 보여 줍니다.  
   
      [!code-csharp[UIAClient_snip#185](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#185)]
      [!code-vb[UIAClient_snip#185](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#185)]  
@@ -73,8 +73,8 @@ Windows Vista부터 사용자는 dpi (인치당 도트 수) 설정을 변경 하
 > [!CAUTION]
 > <xref:System.Windows.Forms.Cursor.Position%2A?displayProperty=nameWithType>는 사용하지 마세요. 크기가 조정된 환경에서 클라이언트 창 외부에서의 이 속성 동작이 정의되지 않았습니다.  
   
- 응용 프로그램에서 dpi를 인식 하지 않는 응용 프로그램과의 직접 크로스 프로세스 통신을 수행 하는 경우 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 함수 `PhysicalToLogicalPoint` 및 `LogicalToPhysicalPoint`를 사용 하 여 논리적 좌표와 물리적 좌표 사이를 변환 했을 수 있습니다.  
+ 응용 프로그램에서 dpi를 인식 하지 않는 응용 프로그램과의 직접 크로스 프로세스 통신을 수행 하는 경우 `PhysicalToLogicalPoint` 하 고 `LogicalToPhysicalPoint`Win32 함수를 사용 하 여 논리적 좌표와 물리적 좌표 간을 변환 했을 수 있습니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Highlighter Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/Highlighter)

@@ -5,19 +5,19 @@ helpviewer_keywords:
 - ClearType [WPF], registry settings
 - typography [WPF], ClearType registry settings
 ms.assetid: 56f314bb-b30b-4f67-8492-8b8a9fa432ae
-ms.openlocfilehash: ab6ff2ba6e0f3f1ea9e34de80b67276a990bc83b
-ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
+ms.openlocfilehash: 6143cf835cc44a6c6cc50372b2ac1a4d24d65311
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71151840"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740390"
 ---
 # <a name="cleartype-registry-settings"></a>ClearType 레지스트리 설정
 이 항목에서는 WPF 응용 프로그램에서 사용 되는 Microsoft ClearType 레지스트리 설정에 대 한 개요를 제공 합니다.  
 
 <a name="overview"></a>   
 ## <a name="technology-overview"></a>기술 개요  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]디스플레이 장치에 텍스트를 렌더링 하는 응용 프로그램은 ClearType 기능을 사용 하 여 향상 된 읽기 환경을 제공 합니다. ClearType은 랩톱 화면, Pocket PC 화면, 평면 패널 모니터 등 기존 Lcd (액체 크리스탈 디스플레이)의 텍스트 가독성을 향상 시키는 Microsoft에서 개발한 소프트웨어 기술입니다. ClearType은 LCD 화면의 모든 픽셀에서 개별 세로 색 줄무늬 요소에 액세스 하는 방식으로 작동 합니다. ClearType에 대 한 자세한 내용은 [Cleartype 개요](cleartype-overview.md)를 참조 하세요.  
+ 디스플레이 장치에 텍스트를 렌더링 하는 응용 프로그램 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]는 ClearType 기능을 사용 하 여 향상 된 읽기 환경을 제공 합니다. ClearType은 랩톱 화면, Pocket PC 화면, 평면 패널 모니터 등 기존 Lcd (액체 크리스탈 디스플레이)의 텍스트 가독성을 향상 시키는 Microsoft에서 개발한 소프트웨어 기술입니다. ClearType은 LCD 화면의 모든 픽셀에서 개별 세로 색 줄무늬 요소에 액세스 하는 방식으로 작동 합니다. ClearType에 대 한 자세한 내용은 [Cleartype 개요](cleartype-overview.md)를 참조 하세요.  
   
  ClearType으로 렌더링 되는 텍스트는 다양 한 디스플레이 장치에서 볼 때 현저 하 게 다를 수 있습니다. 예를 들어 적은 수의 모니터가 색 스트라이프 요소를 보다 일반적인 빨강, 녹색, 파랑 (RGB) 순서 대신 파란색, 녹색, 빨간색 순서로 구현 합니다.  
   
@@ -27,7 +27,7 @@ ms.locfileid: "71151840"
   
 <a name="registry_settings"></a>   
 ## <a name="registry-settings"></a>레지스트리 설정  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ClearType 기능을 제어 하기 위한 네 가지 레지스트리 설정을 지정 합니다.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]는 ClearType 기능을 제어 하기 위한 네 가지 레지스트리 설정을 지정 합니다.  
   
 |설정|설명|  
 |-------------|-----------------|  
@@ -36,12 +36,12 @@ ms.locfileid: "71151840"
 |픽셀 구조체|디스플레이 디바이스의 픽셀 배치를 설명합니다.|  
 |텍스트 대비 수준|표시되는 텍스트의 대비 수준을 설명합니다.|  
   
- 이러한 설정은 식별 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]된 ClearType 레지스트리 설정을 참조 하는 방법을 알고 있는 외부 구성 유틸리티에서 액세스할 수 있습니다. 이러한 설정은 Windows 레지스트리 편집기를 사용 하 여 값에 직접 액세스 하 여 만들거나 수정할 수도 있습니다.  
+ 이러한 설정은 식별 된 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ClearType 레지스트리 설정을 참조 하는 방법을 알고 있는 외부 구성 유틸리티에서 액세스할 수 있습니다. 이러한 설정은 Windows 레지스트리 편집기를 사용 하 여 값에 직접 액세스 하 여 만들거나 수정할 수도 있습니다.  
   
- ClearType 레지스트리 설정 (기본 상태)이 설정 되어 있지 않으면 응용 프로그램은 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Windows 시스템 매개 변수 정보에서 글꼴 다듬기 설정을 쿼리 합니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ClearType 레지스트리 설정 (기본 상태)이 설정 되어 있지 않으면 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램은 Windows 시스템 매개 변수 정보에서 글꼴 다듬기 설정을 쿼리 합니다.  
   
 > [!NOTE]
-> 표시 장치 이름을 열거 하는 `SystemParametersInfo` [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 방법에 대 한 자세한 내용은 함수를 참조 하세요.  
+> 표시 장치 이름을 열거 하는 방법에 대 한 자세한 내용은 `SystemParametersInfo`Win32 함수를 참조 하세요.  
   
 <a name="ClearType_level"></a>   
 ## <a name="cleartype-level"></a>ClearType 수준  
@@ -59,7 +59,7 @@ ms.locfileid: "71151840"
  ![레지스트리 편집기의 ClearType 설정](./media/cleartype-registry-settings/cleartype-settings-registry-editor.png)  
   
 > [!NOTE]
-> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]응용 프로그램은 ClearType을 사용 하거나 사용 하지 않고 두 가지 모드 중 하나로 텍스트를 렌더링 합니다. ClearType 없이 텍스트를 렌더링 하는 경우 회색조 렌더링 이라고 합니다.  
+> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램은 ClearType을 사용 하거나 사용 하지 않고 두 가지 모드 중 하나로 텍스트를 렌더링 합니다. ClearType 없이 텍스트를 렌더링 하는 경우 회색조 렌더링 이라고 합니다.  
   
 <a name="gamma_level"></a>   
 ## <a name="gamma-level"></a>감마 수준  
@@ -89,7 +89,7 @@ ms.locfileid: "71151840"
  픽셀 구조체는 0에서 2까지의 정수 값에 해당합니다. 기본 수준은 플랫 픽셀 구조체를 나타내는 0입니다.  
   
 > [!NOTE]
-> 표시 장치 이름을 열거 하는 `EnumDisplayDevices` [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 방법에 대 한 자세한 내용은 함수를 참조 하세요.  
+> 표시 장치 이름을 열거 하는 방법에 대 한 자세한 내용은 `EnumDisplayDevices`Win32 함수를 참조 하세요.  
   
 ### <a name="registry-setting"></a>레지스트리 설정  
  픽셀 구조체에 대한 레지스트리 설정 위치는 특정 디스플레이 디바이스 이름에 해당하는 로컬 컴퓨터 설정입니다.  
@@ -113,7 +113,7 @@ ms.locfileid: "71151840"
   
  ![레지스트리 편집기의 ClearType 설정](./media/cleartype-registry-settings/cleartype-settings-registry-editor.png)  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ClearType 개요](cleartype-overview.md)
 - [ClearType 앤티 앨리어싱](/windows/desktop/gdi/cleartype-antialiasing)
