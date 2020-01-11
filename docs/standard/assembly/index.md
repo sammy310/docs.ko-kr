@@ -12,12 +12,12 @@ helpviewer_keywords:
 - assemblies [.NET Framework]
 - version boundaries
 - type boundaries
-ms.openlocfilehash: 8e68d2dbb13d226ba738bdf8455418c9e771d6a6
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 9fd0c55294815c191f1e116dd4e16a44693f3565
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73733159"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900590"
 ---
 # <a name="assemblies-in-net"></a>.NET 어셈블리
 
@@ -104,14 +104,13 @@ C#에서는 단일 애플리케이션에서 동일한 어셈블리의 두 버전
 |[동적 메서드 및 어셈블리 내보내기](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)|동적 어셈블리를 만드는 방법.|
 |[런타임에서 어셈블리를 찾는 방법](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)|.NET Framework가 런타임에서 어셈블리 참조를 확인하는 방법.|
 
-## <a name="reference"></a>참조
+## <a name="reference"></a>참고
 
 <xref:System.Reflection.Assembly?displayProperty=nameWithType>
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [.NET 어셈블리 파일 형식](file-format.md)
-- [.NET 어셈블리](index.md)
 - [friend 어셈블리](friend.md)
 - [참조 어셈블리](reference-assemblies.md)
 - [방법: 어셈블리 로드 및 언로드](load-unload.md)

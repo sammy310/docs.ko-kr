@@ -339,8 +339,9 @@
     - name: XML Serializer Generator
       href: additional-tools/xml-serializer-generator.md
 - name: .NET Framework 포트
-  href: porting/index.md
   items:
+    - name: 개요
+      href: porting/index.md
     - name: .NET Core에서 사용할 수 없는 .NET Framework 기술
       href: porting/net-framework-tech-unavailable.md
     - name: 타사 종속성 분석

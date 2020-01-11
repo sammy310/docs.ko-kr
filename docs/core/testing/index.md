@@ -4,12 +4,12 @@ description: 이 문서에서는 .NET Core 및 .NET Standard 프로젝트에 대
 author: ardalis
 ms.author: wiwagn
 ms.date: 08/30/2017
-ms.openlocfilehash: 776a430868c7a4829e11a2958fb998c11315c43d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 41f4457e636ca495b78109803ca66680e72d007e
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714306"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75899893"
 ---
 # <a name="unit-testing-in-net-core-and-net-standard"></a>.NET Core 및 .NET Standard의 단위 테스트
 
@@ -28,7 +28,7 @@ C#, F# 및 Visual Basic에서 개인 프로젝트에 대한 시작점으로 기�
 또한 테스트를 작성하는 모범 사례가 있습니다. 예를 들어 [TDD(테스트 기반 개발)](https://deviq.com/test-driven-development/)는 확인하려는 코드보다 단위 테스트를 먼저 작성한 경우입니다. TDD는 책을 작성하기 전에 책에 대한 개요를 만드는 것과 같습니다. 이 기능을 통해 개발자가 간단하고 읽을 수 있고 효율적인 코드를 작성할 수 있습니다. 
 
 > [!NOTE]
-> ASP.NET 팀은 [이러한 규칙](https://github.com/aspnet/Home/wiki/Engineering-guidelines#unit-tests-and-functional-tests)을 따라 개발자가 테스트 클래스 및 메서드에 대해 적절한 이름을 제공할 수 있도록 합니다.
+> ASP.NET 팀은 [이러한 규칙](https://github.com/dotnet/aspnetcore/wiki/Engineering-guidelines#unit-tests-and-functional-tests)을 따라 개발자가 테스트 클래스 및 메서드에 대해 적절한 이름을 제공할 수 있도록 합니다.
 
 단위 테스트를 작성하는 경우 인프라에 대한 종속성을 도입하지 않습니다. 테스트가 느리고 불안정해지며 통합 테스트를 위해 예약되어야 합니다. [명시적 종속성 원칙](https://deviq.com/explicit-dependencies-principle/)을 따르고 [종속성 주입](/aspnet/core/fundamentals/dependency-injection)을 사용하여 애플리케이션에서 이러한 종속성을 방지할 수 있습니다. 통합 테스트의 개별 프로젝트에서 단위 테스트를 유지할 수도 있습니다. 이렇게 하면 단위 테스트 프로젝트가 인프라 패키지에 대한 참조 또는 종속성을 갖지 않습니다.
 
