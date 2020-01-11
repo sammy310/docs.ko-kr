@@ -2,12 +2,12 @@
 title: Dapper 제한 사항
 ms.date: 12/13/2019
 description: Dapper를 사용할 때 발생 하는 몇 가지 제한 사항에 대해 설명 합니다.
-ms.openlocfilehash: 90c7fb24f068d663081390bdba9b1b222b4be56e
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 396507f25f591a9ab5c3bb07c0af6fd8d175e4ea
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75450497"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901206"
 ---
 # <a name="dapper-limitations"></a>Dapper 제한 사항
 
@@ -15,7 +15,7 @@ ms.locfileid: "75450497"
 
 ## <a name="parameters"></a>매개 변수
 
-SQLite 매개 변수 이름은 대/소문자를 구분 합니다. SQL에서 사용 되는 매개 변수 이름이 익명 개체의 속성에 대 한 대/소문자와 일치 하는지 확인 합니다. [#18861](https://github.com/aspnet/EntityFrameworkCore/issues/18861) 문제는이 환경을 개선 하는 데 도움이 됩니다.
+SQLite 매개 변수 이름은 대/소문자를 구분 합니다. SQL에서 사용 되는 매개 변수 이름이 익명 개체의 속성에 대 한 대/소문자와 일치 하는지 확인 합니다. [#18861](https://github.com/dotnet/efcore/issues/18861) 문제는이 환경을 개선 하는 데 도움이 됩니다.
 
 또한 Dapper는 `@` 접두사를 사용 하는 매개 변수를 필요로 합니다. 다른 접두사는 작동 하지 않습니다.
 

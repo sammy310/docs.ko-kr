@@ -2,12 +2,12 @@
 title: 조각
 description: 기존 F# 데이터 형식에 대 한 조각을 사용 하는 방법 및 다른 데이터 형식에 대 한 사용자 고유의 조각을 정의 하는 방법을 알아봅니다.
 ms.date: 12/23/2019
-ms.openlocfilehash: 3911139c7ce656043817eb23d30f3686555b6efe
-ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
+ms.openlocfilehash: 3f16c71b071bab7de5b1fb90a2075e351e83cfb4
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75545108"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901237"
 ---
 # <a name="slices"></a>조각
 
@@ -119,7 +119,7 @@ open System
 
 type ReadOnlySpan<'T> with
     // Note the 'inline' in the member definition
-    member sp.GetSlice(startIdx, endIdx) =
+    member inline sp.GetSlice(startIdx, endIdx) =
         let s = defaultArg startIdx 0
         let e = defaultArg endIdx sp.Length
         sp.Slice(s, e - s)

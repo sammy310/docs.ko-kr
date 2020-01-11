@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9e50480a-8ada-4044-b2a5-97bb14ed3525
 topic_type:
 - apiref
-ms.openlocfilehash: 798bb0585bfe4cc29afba2fbefae818301704613
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9561d383e7c134230b8664329b59aec23e487124
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73135188"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75899575"
 ---
 # <a name="iclrstrongnamegethashfromfile-method"></a>ICLRStrongName::GetHashFromFile 메서드
 지정된 파일 내용에 대해 해시를 생성합니다.  
@@ -42,7 +42,7 @@ HRESULT GetHashFromFile (
  진행 해시할 파일의 이름입니다.  
   
  `piHashAlg`  
- [in, out] 해시를 생성할 때 사용할 알고리즘입니다. 유효한 알고리즘은 Win32 CryptoAPI에서 정의 되는 알고리즘입니다. `piHashAlg`를 0으로 설정 하면 기본 알고리즘 CALG_SHA-1이 사용 됩니다.  
+ [in, out] 해시를 생성할 때 사용할 알고리즘입니다. 유효한 알고리즘은 Win32 CryptoAPI에서 정의 되는 알고리즘입니다. `piHashAlg`가 0으로 설정 되 면 기본 알고리즘 CALG_SHA-1이 사용 됩니다.  
   
  `pbHash`  
  제한이 생성 된 해시를 포함 하는 바이트 배열입니다.  
@@ -54,7 +54,7 @@ HRESULT GetHashFromFile (
  제한이 반환 된 `pbHash`의 크기 (바이트)입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 메서드가 성공적으로 완료 되 면 `S_OK` 하 고, 그렇지 않으면 오류를 나타내는 HRESULT 값입니다 (목록의 [일반적인 Hresult 값](https://go.microsoft.com/fwlink/?LinkId=213878) 참조).  
+ 메서드가 성공적으로 완료 되 면 `S_OK` 하 고, 그렇지 않으면 오류를 나타내는 HRESULT 값입니다 (목록의 [일반적인 Hresult 값](/windows/win32/seccrypto/common-hresult-values) 참조).  
   
 ## <a name="remarks"></a>주의  
  이 메서드는 [ICLRStrongName:: GetHashFromFileW](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfilew-method.md) 메서드와 동일 합니다. 단, 파일 이름 사양은 유니코드가 아니라 ANSI입니다.  

@@ -2,12 +2,12 @@
 title: ADO.NET 제한 사항
 ms.date: 12/13/2019
 description: 발생할 수 있는 몇 가지 ADO.NET 제한 사항에 대해 설명 합니다.
-ms.openlocfilehash: b58fd3a9ea324e9c17ad21479e53e45f5982db9d
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 8664b73071fc859ed30080f549b05e7d6ed020f4
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75450341"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901262"
 ---
 # <a name="adonet-limitations"></a>ADO.NET 제한 사항
 
@@ -25,13 +25,13 @@ ADO.NET는 많은 수의 추상화 구현을 제공 하지만 몇 가지 제한 
 
 Microsoft. Sqlite는 아직 시스템 트랜잭션을 지원 하지 않습니다. 대신 ADO.NET 트랜잭션을 사용 하십시오. 자세한 내용은 [트랜잭션](transactions.md)을 참조 하세요.
 
-문제 [#13825](https://github.com/aspnet/EntityFrameworkCore/issues/13825)에서 시스템이 트랜잭션을 지원 하지 않는다는 의견을 제공 합니다.
+문제 [#13825](https://github.com/dotnet/efcore/issues/13825)에서 시스템이 트랜잭션을 지원 하지 않는다는 의견을 제공 합니다.
 
 ## <a name="data-adapters"></a>데이터 어댑터
 
 `DbDataAdapter`은 (는) Microsoft에서 아직 구현 되지 않았습니다. Sqlite. 즉, ADO.NET `DataSet`와 `DataTable`만 사용 하 여 데이터를 로드 하 고 업데이트할 수 없습니다.
 
-`DbDataAdapter`구현에 대 한 피드백을 제공 하려면 문제 [#13838](https://github.com/aspnet/EntityFrameworkCore/issues/13838) 를 사용 합니다.
+`DbDataAdapter`구현에 대 한 피드백을 제공 하려면 문제 [#13838](https://github.com/dotnet/efcore/issues/13838) 를 사용 합니다.
 
 ## <a name="output-parameters"></a>출력 매개 변수
 

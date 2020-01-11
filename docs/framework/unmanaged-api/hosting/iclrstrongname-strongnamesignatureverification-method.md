@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 734dc4d1-0a76-4736-b5ac-cb4253b3dd49
 topic_type:
 - apiref
-ms.openlocfilehash: 6b473466aefc06dc83526e65f8ee9e37703ba9e4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6375fd8e4a314403267a4cdf2e8356677e9e7a06
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134957"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75899493"
 ---
 # <a name="iclrstrongnamestrongnamesignatureverification-method"></a>ICLRStrongName::StrongNameSignatureVerification 메서드
 제공 된 경로의 어셈블리 매니페스트에 지정 된 플래그에 따라 확인 되는 강력한 이름 서명이 들어 있는지 여부를 나타내는 값을 가져옵니다.  
@@ -60,7 +60,7 @@ HRESULT StrongNameSignatureVerification (
 - `SN_OUTFLAG_WAS_VERIFIED` (0x00000001)-이 값은 `false` 설정 되어 레지스트리 설정으로 인해 확인이 성공 했음을 지정 합니다.  
   
 ## <a name="return-value"></a>반환 값  
- 메서드가 성공적으로 완료 되 면 `S_OK` 하 고, 그렇지 않으면 오류를 나타내는 HRESULT 값입니다 (목록의 [일반적인 Hresult 값](https://go.microsoft.com/fwlink/?LinkId=213878) 참조).  
+ 메서드가 성공적으로 완료 되 면 `S_OK` 하 고, 그렇지 않으면 오류를 나타내는 HRESULT 값입니다 (목록의 [일반적인 Hresult 값](/windows/win32/seccrypto/common-hresult-values) 참조).  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  

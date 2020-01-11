@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1f8b59d0-5b72-45b8-ab74-c2b43ffc806e
 topic_type:
 - apiref
-ms.openlocfilehash: 1a5bcfb7a272af694126025f28ca3efe5a881c15
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b09677a45c5d515aacb2cac709599140039a9dd8
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73135016"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75899549"
 ---
 # <a name="iclrstrongnamestrongnamekeygenex-method"></a>ICLRStrongName::StrongNameKeyGenEx 메서드
 강력한 이름 사용을 위해 지정 된 키 크기를 사용 하 여 새 공개/개인 키 쌍을 생성 합니다.  
@@ -58,7 +58,7 @@ HRESULT StrongNameKeyGenEx (
  제한이 `ppbKeyBlob`의 크기 (바이트)입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 메서드가 성공적으로 완료 되 면 `S_OK` 하 고, 그렇지 않으면 오류를 나타내는 HRESULT 값입니다 (목록의 [일반적인 Hresult 값](https://go.microsoft.com/fwlink/?LinkId=213878) 참조).  
+ 메서드가 성공적으로 완료 되 면 `S_OK` 하 고, 그렇지 않으면 오류를 나타내는 HRESULT 값입니다 (목록의 [일반적인 Hresult 값](/windows/win32/seccrypto/common-hresult-values) 참조).  
   
 ## <a name="remarks"></a>주의  
  .NET Framework 버전 1.0 및 1.1에는 강력한 이름의 어셈블리에 서명 하는 데 1024 비트의 `dwKeySize` 필요 합니다. 버전 2.0에는 2048 비트 키에 대 한 지원 기능이 추가 되었습니다.  

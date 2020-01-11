@@ -2,18 +2,18 @@
 title: Byref
 description: 하위 수준 프로그래밍에 사용 되는의 F#byref 및 byref와 유사한 형식에 대해 알아봅니다.
 ms.date: 11/04/2019
-ms.openlocfilehash: a6d3d69c4a163be9ecef7e33c284c4a73e800405
-ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
+ms.openlocfilehash: 5aaee1e4eac9ce0d7e9ba89a2ab5f745d31367a0
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75545126"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901305"
 ---
 # <a name="byrefs"></a>Byref
 
 F#에는 하위 수준 프로그래밍의 공간을 처리 하는 두 가지 주요 기능 영역이 있습니다.
 
-* `byref`/는 관리 되는 포인터인 `inref`/`outref` 형식입니다. 런타임에 잘못 된 프로그램을 컴파일할 수 없도록 사용에 대 한 제한 사항이 있습니다.
+* `byref`/`inref``outref` /관리 되는 포인터입니다. 런타임에 잘못 된 프로그램을 컴파일할 수 없도록 사용에 대 한 제한 사항이 있습니다.
 * 의미 체계가 비슷하며 `byref<'T>`와 동일한 컴파일 시간 제한이 있는 [구조인](structures.md) `byref`같은 구조체입니다. 한 가지 예는 <xref:System.Span%601>입니다.
 
 ## <a name="syntax"></a>구문
@@ -175,7 +175,7 @@ type S(count1: Span<int>, count2: Span<int>) =
 
 이 마지막 지점은 `|>`가 입력 F# 형식을 매개 변수화 하는 제네릭 함수 이기 때문에 파이프라인 스타일 프로그래밍에 중요 합니다. 이 제한은 인라인으로 `|>` 나중에 완화 될 수 있으며 본문에서 인라인 되지 않은 제네릭 함수를 호출 하지 않습니다.
 
-이러한 규칙은 사용을 매우 강력 하 게 제한 하지만 안전 하 게 고성능 컴퓨팅의 약속을 달성 하는 데 필요 합니다.
+이러한 규칙은 사용을 강력 하 게 제한 하지만 안전 하 게 고성능 컴퓨팅의 약속을 달성 하는 데 필요 합니다.
 
 ## <a name="byref-returns"></a>Byref 반환
 

@@ -2,17 +2,17 @@
 title: '방법: DataContractJsonSerializer 사용'
 ms.date: 03/25/2019
 ms.assetid: 88abc1fb-8196-4ee3-a23b-c6934144d1dd
-ms.openlocfilehash: 354f0c58a83e07ff3180977311adf85ae306dd21
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 3cf8cc52587a64e7273ab9e0de0b1751d00827cf
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976868"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901221"
 ---
 # <a name="how-to-use-datacontractjsonserializer"></a>DataContractJsonSerializer 사용 방법
 
 > [!NOTE]
-> 이 문서는 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>입니다. JSON 직렬화 및 역직렬화를 포함 하는 대부분의 시나리오에서는 system.xml [네임 스페이스](../../../standard/serialization/system-text-json-overview.md)의 도구를 권장 합니다.
+> 이 문서에서는 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>에 대해 설명 합니다. JSON 직렬화 및 역직렬화를 포함 하는 대부분의 시나리오에서는 system.xml [네임 스페이스](../../../standard/serialization/system-text-json-overview.md)의 api를 권장 합니다.
 
 JSON(JavaScript Object Notation)은 클라이언트 브라우저 및 AJAX 사용 웹 서비스 간에 소량의 데이터를 신속하게 교환할 수 있는 효율적인 데이터 인코딩 형식입니다.
 
@@ -75,7 +75,7 @@ JSON(JavaScript Object Notation)은 클라이언트 브라우저 및 AJAX 사용
 
 ## <a name="to-deserialize-an-instance-of-type-person-from-json"></a>JSON에서 형식 Person의 인스턴스를 역직렬화하려면
 
-1. `Person`의 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject%2A> 메서드를 사용하여 JSON 인코딩된 데이터를 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>의 새 인스턴스로 deserialize합니다.
+1. `Person`의 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject%2A> 메서드를 사용하여 JSON 인코딩된 데이터를 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>의 새 인스턴스로 역직렬화합니다.
 
     ```csharp
     stream1.Position = 0;
@@ -88,7 +88,7 @@ JSON(JavaScript Object Notation)은 클라이언트 브라우저 및 AJAX 사용
     Console.WriteLine($"Deserialized back, got name={p2.name}, age={p2.age}");
     ```
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 ```csharp
 // Create a User object and serialize it to a JSON stream.
