@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: a5793eae92ffdfa65872c93273bd7cfefdc6f674
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 1eb1267ae0b08d558d5afc41d03270917473a669
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568803"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900918"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>스트리밍 공급자(WCF Data Services)
 
@@ -39,7 +39,7 @@ WCF Data Services를 사용 하 여 스트리밍 데이터 공급자를 구현 �
 
 5. 서버나 데이터 소스의 이진 리소스에 대한 액세스를 사용하도록 설정합니다.
 
-이 항목의 예제는 스트리밍 공급자 [시리즈: 스트리밍 공급자 구현 (1 부) 게시물 Data Services](https://go.microsoft.com/fwlink/?LinkID=198989)에서 자세히 설명 하는 샘플 스트리밍 사진 서비스를 기반으로 합니다. 이 샘플 서비스의 소스 코드는 MSDN 코드 갤러리의 [스트리밍 사진 데이터 서비스 샘플 페이지](https://go.microsoft.com/fwlink/?LinkID=198988) 에서 사용할 수 있습니다.
+이 항목의 예제는 스트리밍 공급자 [시리즈: 스트리밍 공급자 구현 (1 부) 게시물 Data Services](https://docs.microsoft.com/archive/blogs/astoriateam/data-services-streaming-provider-series-implementing-a-streaming-provider-part-1)에서 자세히 설명 하는 샘플 스트리밍 사진 서비스를 기반으로 합니다. 스트리밍 사진 데이터 서비스 샘플의 소스 코드는 [GitHub](https://github.com/microsoftarchive/msdn-code-gallery-community-s-z/tree/master/Streaming%20Photo%20OData%20Service%20Sample)에서 사용할 수 있습니다.
 
 ## <a name="defining-a-media-link-entry-in-the-data-model"></a>데이터 모델에서 미디어 링크 항목 정의
 
@@ -53,7 +53,7 @@ WCF Data Services를 사용 하 여 스트리밍 데이터 공급자를 구현 �
 
 또한 데이터 모델을 정의하는 .edmx 또는 .csdl 파일의 루트나 엔터티에 `xmlns:m=http://schemas.microsoft.com/ado/2007/08/dataservices/metadata` 네임스페이스를 추가해야 합니다.
 
-Entity Framework 공급자를 사용 하 고 미디어 리소스를 노출 하는 데이터 서비스의 예제는 스트리밍 [공급자 시리즈: 스트리밍 공급자 구현 (1 부) Data Services](https://go.microsoft.com/fwlink/?LinkID=198989)게시를 참조 하십시오.
+Entity Framework 공급자를 사용 하 고 미디어 리소스를 노출 하는 데이터 서비스의 예제는 스트리밍 [공급자 시리즈: 스트리밍 공급자 구현 (1 부) Data Services](https://docs.microsoft.com/archive/blogs/astoriateam/data-services-streaming-provider-series-implementing-a-streaming-provider-part-1)게시를 참조 하십시오.
 
 **리플렉션 공급자**
 
@@ -75,7 +75,7 @@ Entity Framework 공급자를 사용 하 고 미디어 리소스를 노출 하�
 |<xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetStreamContentType%2A>|이 메서드는 지정된 미디어 링크 항목과 연결된 미디어 리소스의 Content-Type 값을 반환하기 위해 데이터 서비스에서 호출됩니다.|
 |<xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetStreamETag%2A>|이 메서드는 지정된 엔터티와 연결된 데이터 스트림의 eTag를 반환하기 위해 데이터 서비스에서 호출됩니다. 이 메서드는 이진 데이터의 동시성을 관리할 때 사용됩니다. 이 메서드가 null을 반환하는 경우 데이터 서비스는 동시성을 추적하지 않습니다.|
 |<xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A>|이 메서드는 클라이언트에서 전송된 스트림을 받을 때 사용되는 스트림을 가져오기 위해 데이터 서비스에서 호출됩니다. <xref:System.Data.Services.Providers.IDataServiceStreamProvider>를 구현하는 경우 데이터 서비스가 수신된 스트림 데이터를 쓰는 쓰기 가능한 스트림을 반환해야 합니다.|
-|<xref:System.Data.Services.Providers.IDataServiceStreamProvider.ResolveType%2A>|삽입 되는 미디어 리소스의 데이터 스트림과 연결 된 미디어 링크 항목에 대해 데이터 서비스 런타임이 만들어야 하는 형식을 나타내는 네임 스페이스로 한정 된 형식 이름을 반환 합니다.|
+|<xref:System.Data.Services.Providers.IDataServiceStreamProvider.ResolveType%2A>|삽입될 미디어 리소스의 데이터 스트림과 연결된 미디어 링크 항목에 대해 데이터 서비스 런타임이 만들어야 하는 형식을 나타내는 네임스페이스로 한정된 형식 이름을 반환합니다.|
 
 ## <a name="creating-the-streaming-data-service"></a>스트리밍 데이터 서비스 만들기
 
@@ -135,7 +135,7 @@ WCF Data Services 클라이언트 라이브러리를 사용 하면 클라이언�
 
 - 스트리밍 공급자는 데이터 서비스에서 OData 프로토콜 버전 2.0 이상 버전을 지원 해야 합니다.
 
-자세한 내용은 [데이터 서비스 버전 관리](data-service-versioning-wcf-data-services.md)를 참조 하세요.
+자세한 내용은 [데이터 서비스 버전 관리](data-service-versioning-wcf-data-services.md)합니다.
 
 ## <a name="see-also"></a>참조
 

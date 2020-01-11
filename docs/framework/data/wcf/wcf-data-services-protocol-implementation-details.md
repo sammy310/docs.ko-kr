@@ -2,16 +2,16 @@
 title: WCF Data Services 프로토콜 구현 정보
 ms.date: 03/30/2017
 ms.assetid: 712d689b-fada-4cbb-bcdb-d65a3ef83b4c
-ms.openlocfilehash: 5cd73caf848badc058c1f6df75973e1bb0a4fad4
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 2302b5577bec3fc4221bc6e5161c87905c38bec3
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568761"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900864"
 ---
 # <a name="wcf-data-services-protocol-implementation-details"></a>WCF Data Services 프로토콜 구현 정보
 ## <a name="odata-protocol-implementation-details"></a>OData 프로토콜 구현 정보  
- Open Data Protocol (OData)는 프로토콜을 구현 하는 데이터 서비스에서 특정 최소 기능 집합을 제공 해야 합니다. 이러한 기능은 프로토콜 문서에서 "반드시" 및 "반드시 사용" 이라는 측면에서 설명 됩니다. 다른 선택적 기능은 "가능한" 측면에서 설명 합니다. 이 항목에서는 WCF Data Services에서 현재 구현 되지 않은 이러한 선택적 기능에 대해 설명 합니다. 자세한 내용은 [OData 프로토콜 설명서](https://go.microsoft.com/fwlink/?LinkID=184554)를 참조 하세요.  
+Open Data Protocol (OData)는 프로토콜을 구현 하는 데이터 서비스에서 특정 최소 기능 집합을 제공 해야 합니다. 이러한 기능은 프로토콜 문서에서 "반드시" 및 "반드시 사용" 이라는 측면에서 설명 됩니다. 다른 선택적 기능은 "5 월" 측면에서 설명 합니다. 이 문서에서는 WCF Data Services에서 현재 구현 되지 않은 이러한 선택적 기능에 대해 설명 합니다.
   
 ### <a name="support-for-the-format-query-option"></a>$format 쿼리 옵션 지원  
  OData 프로토콜은 JavaScript 표기법 (JSON) 및 Atom 피드를 모두 지원 하며, OData는 클라이언트에서 응답 피드의 형식을 요청할 수 있도록 `$format` 시스템 쿼리 옵션을 제공 합니다. 이 시스템 쿼리 옵션은 데이터 서비스에서 지원하는 경우 요청의 Accept 헤더 값을 재정의해야 합니다. WCF Data Services에서는 JSON 및 Atom 피드를 모두 반환할 수 있습니다. 그러나 기본 구현은 `$format` 쿼리 옵션을 지원하지 않고 Accept 헤더 값만 사용하여 응답 형식을 결정합니다. 클라이언트가 Accept 헤더를 설정할 수 없는 경우와 같이 데이터 서비스가 `$format` 쿼리 옵션을 지원해야 하는 경우가 있습니다. 이러한 시나리오를 지원하려면 URI에서 이 옵션을 처리하도록 데이터 서비스를 확장해야 합니다. MSDN 코드 갤러리 웹 사이트에서 [ADO.NET Data Services 샘플 프로젝트에 대 한 JSONP 및 URL 제어 형식 지원을](https://go.microsoft.com/fwlink/?LinkId=208228) 다운로드 하 고 데이터 서비스 프로젝트에 추가 하 여 데이터 서비스에이 기능을 추가할 수 있습니다. 이 샘플은 `$format` 쿼리 옵션을 제거하고 Accept 헤더를 `application/json`으로 변경합니다. 샘플 프로젝트를 포함하고 데이터 서비스에 `JSONPSupportBehaviorAttribute`를 추가하면 서비스에서 `$format` 쿼리 옵션 `$format=json`을 처리할 수 있습니다. `$format=atom` 또는 다른 사용자 지정 형식도 처리하려면 이 샘플 프로젝트를 추가로 사용자 지정해야 합니다.  

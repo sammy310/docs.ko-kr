@@ -1,5 +1,5 @@
 ---
-title: 쿼리 프로젝션 (WCF Data Services)
+title: 쿼리 프로젝션(WCF Data Services)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,16 +10,16 @@ helpviewer_keywords:
 - query projection [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: a09f4985-9f0d-48c8-b183-83d67a3dfe5f
-ms.openlocfilehash: 03fa40a895d322a8b5ad543f75424ef5b379672b
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 764ea6a77ba267e691d48bc72d17c02f6b3c18ca
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568892"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900965"
 ---
-# <a name="query-projections-wcf-data-services"></a>쿼리 프로젝션 (WCF Data Services)
+# <a name="query-projections-wcf-data-services"></a>쿼리 프로젝션(WCF Data Services)
 
-프로젝션은 엔터티의 특정 속성만 응답에서 반환 되도록 지정 하 여 쿼리에서 반환 되는 피드의 데이터 양을 줄이도록 OData (Open Data Protocol)의 메커니즘을 제공 합니다. 자세한 내용은 [OData: Select 시스템 쿼리 옵션 ($select)](https://go.microsoft.com/fwlink/?LinkId=186076)을 참조 하세요.
+프로젝션은 엔터티의 특정 속성만 응답에서 반환 되도록 지정 하 여 쿼리에서 반환 되는 피드의 데이터 양을 줄이도록 OData (Open Data Protocol)의 메커니즘을 제공 합니다. 자세한 내용은 섹션 4.8을 참조 하세요. [URI 규칙 (OData 버전 2.0)](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/)에서 시스템 쿼리 옵션 ($select)을 선택 합니다.
 
 이 항목에서는 쿼리 프로젝션을 정의하는 방법, 엔터티 및 비 엔터티 형식에 대한 요구 사항, 프로젝션된 결과 업데이트 및 프로젝션된 형식 만들기에 대해 설명하고 몇 가지 프로젝션 고려 사항을 제시합니다.
 
@@ -102,7 +102,7 @@ URI에서 `$select` 쿼리 옵션을 사용 하거나 LINQ 쿼리에서 [select]
 
 쿼리 프로젝션을 정의할 때 다음 사항을 추가로 고려해야 합니다.
 
-- Atom 형식에 대한 사용자 지정 피드를 정의하는 경우 사용자 지정 매핑이 정의되어 있는 모든 엔터티 속성이 프로젝션에 포함되도록 해야 합니다. 매핑된 엔터티 속성이 프로젝션에 포함되지 않는 경우 데이터가 손실될 수 있습니다. 자세한 내용은 [피드 사용자 지정](feed-customization-wcf-data-services.md)을 참조 하세요.
+- Atom 형식에 대한 사용자 지정 피드를 정의하는 경우 사용자 지정 매핑이 정의되어 있는 모든 엔터티 속성이 프로젝션에 포함되도록 해야 합니다. 매핑된 엔터티 속성이 프로젝션에 포함되지 않는 경우 데이터가 손실될 수 있습니다. 자세한 내용은 [사용자 지정 피드](feed-customization-wcf-data-services.md)합니다.
 
 - 데이터 서비스의 데이터 모델에서 엔터티의 모든 속성을 포함하지 않는 프로젝션된 형식에 삽입이 수행되는 경우 클라이언트에서 프로젝션에 포함되지 않은 속성이 기본값으로 설정됩니다.
 
@@ -112,7 +112,7 @@ URI에서 `$select` 쿼리 옵션을 사용 하거나 LINQ 쿼리에서 [select]
 
 - 프로젝션에 탐색 속성이 포함된 경우 <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> 메서드를 호출하지 않고도 관련 개체가 암시적으로 로드됩니다. <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> 메서드는 프로젝션된 쿼리에서 사용할 수 없습니다.
 
-- 클라이언트의 쿼리 프로젝션 쿼리는 요청 URI에서 `$select` 쿼리 옵션을 사용하도록 변환됩니다. `$select` 쿼리 옵션을 지원 하지 않는 이전 버전의 WCF Data Services에 대해 프로젝션이 있는 쿼리가 실행 되 면 오류가 반환 됩니다. 이러한 문제는 데이터 서비스에 대한 <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A>의 <xref:System.Data.Services.DataServiceBehavior>이 <xref:System.Data.Services.Common.DataServiceProtocolVersion.V1> 값으로 설정된 경우에도 발생할 수 있습니다. 자세한 내용은 [데이터 서비스 버전 관리](data-service-versioning-wcf-data-services.md)를 참조 하세요.
+- 클라이언트의 쿼리 프로젝션 쿼리는 요청 URI에서 `$select` 쿼리 옵션을 사용하도록 변환됩니다. `$select` 쿼리 옵션을 지원 하지 않는 이전 버전의 WCF Data Services에 대해 프로젝션이 있는 쿼리가 실행 되 면 오류가 반환 됩니다. 이러한 문제는 데이터 서비스에 대한 <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A>의 <xref:System.Data.Services.DataServiceBehavior>이 <xref:System.Data.Services.Common.DataServiceProtocolVersion.V1> 값으로 설정된 경우에도 발생할 수 있습니다. 자세한 내용은 [데이터 서비스 버전 관리](data-service-versioning-wcf-data-services.md)합니다.
 
 자세한 내용은 [방법: 쿼리 결과 프로젝트](how-to-project-query-results-wcf-data-services.md)를 참조 하세요.
 

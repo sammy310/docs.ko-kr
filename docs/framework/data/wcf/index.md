@@ -5,16 +5,16 @@ helpviewer_keywords:
 - Astoria
 - WCF Data Services, getting started
 ms.assetid: 73d2bec3-7c92-4110-b905-11bb0462357a
-ms.openlocfilehash: 1ce152b84f17a35982a75f54b5418623ba39210f
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 890f0ba25d8320008228c73660753b9899269fd7
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975227"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900995"
 ---
 # <a name="wcf-data-services-45"></a>WCF Data Services 4.5
 
-WCF Data Services (이전의 "ADO.NET Data Services")는 [Representational State Transfer (REST)](https://go.microsoft.com/fwlink/?LinkId=113919)의 의미 체계를 사용 하 여 웹 또는 인트라넷을 통해 데이터를 노출 하 고 사용 하기 위해 Open Data Protocol (OData)를 사용 하는 서비스를 만들 수 있는 .NET Framework의 구성 요소입니다. OData는 URI로 주소를 지정할 수 있는 리소스로 데이터를 노출합니다. 데이터는 표준 HTTP 동사인 GET, PUT, POST 및 DELETE를 사용하여 액세스되고 변경됩니다. OData는 [엔터티 데이터 모델](../adonet/entity-data-model.md) 의 엔터티-관계 규칙을 사용 하 여 리소스를 연결로 관련 된 엔터티 집합으로 노출 합니다.
+WCF Data Services (이전의 "ADO.NET Data Services")는 [Representational State Transfer (REST)](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm)의 의미 체계를 사용 하 여 웹 또는 인트라넷을 통해 데이터를 노출 하 고 사용 하기 위해 Open Data Protocol (OData)를 사용 하는 서비스를 만들 수 있는 .NET Framework의 구성 요소입니다. OData는 URI로 주소를 지정할 수 있는 리소스로 데이터를 노출합니다. 데이터는 GET, PUT, POST 및 DELETE라는 표준 HTTP 동사를 사용하여 액세스되고 변경됩니다. OData는 [엔터티 데이터 모델](../adonet/entity-data-model.md) 의 엔터티-관계 규칙을 사용 하 여 리소스를 연결로 관련 된 엔터티 집합으로 노출 합니다.
 
 WCF Data Services는 OData 프로토콜을 사용 하 여 리소스의 주소를 지정 하 고 업데이트 합니다. 이러한 방식으로 OData를 지 원하는 모든 클라이언트에서 이러한 서비스에 액세스할 수 있습니다. OData를 사용 하면 데이터를 XML로 교환 및 업데이트 하기 위한 표준 집합인 Atom, AJAX에서 광범위 하 게 사용 되는 텍스트 기반 데이터 교환 형식인 JavaScript Object Notation (JSON)와 같이 잘 알려진 전송 형식을 사용 하 여 리소스를 요청 하 고 리소스에 데이터를 쓸 수 있습니다. 프로그램도.
 
@@ -32,10 +32,6 @@ WCF Data Services는 다양 한 원본에서 가져온 데이터를 OData 피드
 
 - [시작](getting-started-with-wcf-data-services.md)
 
-- [Silverlight 빠른 시작](https://go.microsoft.com/fwlink/?LinkID=192782)
-
-- [Windows Phone 개발을 위한 Silverlight 빠른 시작](https://go.microsoft.com/fwlink/?LinkID=214535)
-
 코드를 표시 하기만 합니다.
 
 - [빠른 시작](quickstart-wcf-data-services.md)
@@ -46,29 +42,14 @@ WCF Data Services는 다양 한 원본에서 가져온 데이터를 OData 피드
 
 OData에 대 한 자세한 내용을 확인 하려면 ...
 
-- [백서: OData 소개](https://go.microsoft.com/fwlink/?LinkId=220867)
-
-- [Open Data Protocol 웹 사이트](https://go.microsoft.com/fwlink/?LinkID=184554)
-
-- [OData: SDK](https://go.microsoft.com/fwlink/?LinkID=185248)
-
-- [OData: 질문과 대답](https://go.microsoft.com/fwlink/?LinkId=185867)
-
-일부 비디오를 시청 하려고 합니다.
-
-- [WCF Data Services 초보자 가이드](https://go.microsoft.com/fwlink/?LinkId=220864)
-
-- [WCF Data Services 개발자 비디오](https://go.microsoft.com/fwlink/?LinkId=220861)
-
-- [OData: 개발자 웹 사이트](https://go.microsoft.com/fwlink/?LinkId=185866)
+- [백서: OData 소개](https://download.microsoft.com/download/E/5/A/E5A59052-EE48-4D64-897B-5F7C608165B8/IntroducingOData.pdf)
+- [Open Data Protocol 웹 사이트](https://www.odata.org/)
+- [OData: SDK](https://www.odata.org/ecosystem/)
 
 종단 간 샘플을 확인 하려고 합니다.
 
-- [MSDN 샘플 갤러리의 WCF Data Services 설명서 샘플](https://go.microsoft.com/fwlink/?LinkID=220865)
-
-- [MSDN 샘플 갤러리의 기타 WCF Data Services 샘플](https://go.microsoft.com/fwlink/?LinkId=220866)
-
-- [OData: SDK](https://go.microsoft.com/fwlink/?LinkID=185248)
+- [WCF Data Services 빠른 시작](https://github.com/microsoftarchive/msdn-code-gallery-community-s-z/tree/master/WCF%20Data%20Services%20Quickstart%20(OData%20Service%20and%20WPF%20Client))
+- [OData SDK-샘플 코드](https://www.odata.org/ecosystem/#sdk)
 
 Visual Studio와의 통합 방식
 
@@ -82,17 +63,7 @@ Visual Studio와의 통합 방식
 
 - [개요](wcf-data-services-overview.md)
 
-- [백서: OData 소개](https://go.microsoft.com/fwlink/?LinkId=220867)
-
 - [애플리케이션 시나리오](application-scenarios-wcf-data-services.md)
-
-Silverlight를 사용 하려는 경우 ...
-
-- [Silverlight 빠른 시작](https://go.microsoft.com/fwlink/?LinkID=192782)
-
-- [WCF Data Services(Silverlight)](https://go.microsoft.com/fwlink/?LinkID=143149)
-
-- [Silverlight 시작](https://go.microsoft.com/fwlink/?LinkId=148366)
 
 LINQ를 사용 하려고 합니다.
 
@@ -104,15 +75,11 @@ LINQ를 사용 하려고 합니다.
 
 추가 정보가 필요 합니다.
 
-- [WCF Data Services 팀 블로그](https://go.microsoft.com/fwlink/?LinkID=150511)
+- [WCF Data Services 팀 블로그](https://docs.microsoft.com/archive/blogs/astoriateam/)
 
 - [리소스](wcf-data-services-resources.md)
 
-- [WCF Data Services 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=220868)
-
-- [Open Data Protocol 웹 사이트](https://go.microsoft.com/fwlink/?LinkID=184554)
-
-## <a name="in-this-section"></a>단원 내용
+## <a name="in-this-section"></a>섹션 내용
 
 [개요](wcf-data-services-overview.md)
 
@@ -136,4 +103,4 @@ OData 피드를 노출 하는 데이터 서비스를 만들고 구성 하는 방
 
 ## <a name="see-also"></a>참조
 
-- [REST(Representational State Transfer)](https://go.microsoft.com/fwlink/?LinkId=113919)
+- [REST(Representational State Transfer)](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm)

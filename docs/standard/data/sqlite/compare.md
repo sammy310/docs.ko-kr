@@ -2,12 +2,12 @@
 title: System.object와 비교
 ms.date: 12/13/2019
 description: Microsoft. Sqlite 및 system.xml 라이브러리 간의 차이점에 대해 설명 합니다.
-ms.openlocfilehash: dee90c132b108f2c876c0d8becc1b02035a47b61
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 076bbc6f746cf9296c96ec73047397a21a3b2558
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75450281"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900706"
 ---
 # <a name="comparison-to-systemdatasqlite"></a>System.object와 비교
 
@@ -63,15 +63,15 @@ Microsoft. Data. Sqlite에는 [연결 문자열](connection-strings.md) 키워�
 
 ## <a name="authorization"></a>권한 부여
 
-Microsoft. Sqlite의 권한 부여 콜백을 노출 하는 API가 없습니다. 문제 [#13835](https://github.com/aspnet/EntityFrameworkCore/issues/13835) 를 사용 하 여이 기능에 대 한 피드백을 제공 합니다.
+Microsoft. Sqlite의 권한 부여 콜백을 노출 하는 API가 없습니다. 문제 [#13835](https://github.com/dotnet/efcore/issues/13835) 를 사용 하 여이 기능에 대 한 피드백을 제공 합니다.
 
 ## <a name="data-change-notifications"></a>데이터 변경 알림
 
-SQLite의 데이터 변경 알림을 노출 하는 API가 없습니다. 문제 [#13827](https://github.com/aspnet/EntityFrameworkCore/issues/13827) 를 사용 하 여이 기능에 대 한 피드백을 제공 합니다.
+SQLite의 데이터 변경 알림을 노출 하는 API가 없습니다. 문제 [#13827](https://github.com/dotnet/efcore/issues/13827) 를 사용 하 여이 기능에 대 한 피드백을 제공 합니다.
 
 ## <a name="virtual-table-modules"></a>가상 테이블 모듈
 
-Microsoft. Data. Sqlite에는 가상 테이블 모듈을 만들기 위한 API가 없습니다. 문제 [#13823](https://github.com/aspnet/EntityFrameworkCore/issues/13823) 를 사용 하 여이 기능에 대 한 피드백을 제공 합니다.
+Microsoft. Data. Sqlite에는 가상 테이블 모듈을 만들기 위한 API가 없습니다. 문제 [#13823](https://github.com/dotnet/efcore/issues/13823) 를 사용 하 여이 기능에 대 한 피드백을 제공 합니다.
 
 ## <a name="see-also"></a>참조
 

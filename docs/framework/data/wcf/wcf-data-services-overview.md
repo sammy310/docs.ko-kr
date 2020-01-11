@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services
 - WCF Data Services, about
 ms.assetid: 7924cf94-c9a6-4015-afc9-f5d22b1743bb
-ms.openlocfilehash: b3feb2a22fc38c6a2d13d6802b94386d6f7841ac
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: a4121bb10de7bfe51c5fec6bc14a40ad4bdcdaf7
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568799"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900889"
 ---
 # <a name="wcf-data-services-overview"></a>WCF Data Services 개요
 WCF Data Services를 사용 하면 OData (Open Data Protocol)를 사용 하 여 웹 또는 인트라넷에 대 한 데이터 서비스를 만들고 사용할 수 있습니다. OData를 사용 하면 Uri로 주소를 지정할 수 있는 리소스로 데이터를 노출할 수 있습니다. 이렇게 하면 Representational State Transfer (REST)의 의미 체계, 특히 GET, PUT, POST, DELETE 등의 표준 HTTP 동사를 사용하여 데이터에 액세스하고 변경할 수 있습니다. 이 항목에서는 OData에서 정의한 패턴과 방법 및 .NET Framework 기반 응용 프로그램에서 OData를 활용 하기 위해 WCF Data Services에서 제공 하는 기능에 대 한 개요를 제공 합니다.  
@@ -25,7 +25,7 @@ WCF Data Services를 사용 하면 OData (Open Data Protocol)를 사용 하 여 
 ## <a name="interoperable-data-access"></a>상호 운용 가능한 데이터 액세스  
  OData는 표준 인터넷 프로토콜을 기반으로 하 여 데이터 서비스를 .NET Framework를 사용 하지 않는 응용 프로그램과 상호 운용할 수 있도록 합니다. 표준 Uri를 사용 하 여 데이터를 처리할 수 있으므로 응용 프로그램은 Representational State Transfer (REST)의 의미 체계, 특히 GET, PUT, POST 및 DELETE의 표준 HTTP 동사를 사용 하 여 데이터에 액세스 하 고 변경할 수 있습니다. 이렇게 하면 표준 HTTP 프로토콜을 통해 전송되는 데이터를 구문 분석하고 액세스할 수 있는 모든 클라이언트에서 해당 서비스에 액세스할 수 있습니다.  
   
- OData는 AtomPub (Atom Publishing Protocol)에 대 한 확장 집합을 정의 합니다. 또한 다양한 클라이언트 애플리케이션 및 플랫폼을 고려하여 HTTP 요청 및 응답에 대해 여러 데이터 형식을 지원합니다. OData 피드는 Atom, JavaScript Object Notation (JSON) 및 일반 XML로 데이터를 나타낼 수 있습니다. Atom이 기본 형식이지만 피드의 형식은 HTTP 요청의 헤더에서 지정됩니다. 자세한 내용은 [odata: Atom format](https://go.microsoft.com/fwlink/?LinkID=185794) 및 [Odata: JSON format](https://go.microsoft.com/fwlink/?LinkID=185795)을 참조 하십시오.  
+OData는 AtomPub (Atom Publishing Protocol)에 대 한 확장 집합을 정의 합니다. 또한 다양한 클라이언트 애플리케이션 및 플랫폼을 고려하여 HTTP 요청 및 응답에 대해 여러 데이터 형식을 지원합니다. OData 피드는 Atom, JavaScript Object Notation (JSON) 및 일반 XML로 데이터를 나타낼 수 있습니다. Atom이 기본 형식이지만 피드의 형식은 HTTP 요청의 헤더에서 지정됩니다. 자세한 내용은 [odata: Atom format](https://www.odata.org/documentation/odata-version-2-0/atom-format/) 및 [Odata: JSON format](https://www.odata.org/documentation/odata-version-2-0/json-format/)을 참조 하십시오.  
   
  데이터를 OData 피드로 게시 하는 경우 WCF Data Services는 캐싱 및 인증과 같은 작업을 위한 다른 기존 인터넷 기능을 사용 합니다. 이를 위해 WCF Data Services는 ASP.NET, Windows Communication Foundation (WCF) 및 인터넷 정보 서비스 (IIS)와 같은 기존 호스팅 응용 프로그램 및 서비스와 통합 됩니다.  
   
@@ -34,7 +34,7 @@ WCF Data Services를 사용 하면 OData (Open Data Protocol)를 사용 하 여 
   
  WCF Data Services ADO.NET Entity Framework와 통합 되어 관계형 데이터를 노출 하는 데이터 서비스를 만들 수 있습니다. 엔터티 데이터 모델 도구를 사용하여 주소 지정 가능한 리소스를 엔터티로 포함하는 데이터 모델을 만드는 동시에 이 모델과 기본 데이터베이스의 테이블 간에 매핑을 정의할 수 있습니다. 자세한 내용은 [Entity Framework 공급자](entity-framework-provider-wcf-data-services.md)를 참조 하세요.  
   
- WCF Data Services를 사용 하면 <xref:System.Linq.IQueryable%601> 인터페이스의 구현을 반환 하는 모든 데이터 구조를 노출 하는 데이터 서비스를 만들 수도 있습니다. 이렇게 하면 .NET Framework 형식의 데이터를 노출하는 데이터 서비스를 만들 수 있습니다. <xref:System.Data.Services.IUpdatable> 인터페이스도 구현하는 경우 만들기, 업데이트 및 삭제 작업이 지원됩니다. 자세한 내용은 [리플렉션 공급자](reflection-provider-wcf-data-services.md)를 참조 하세요.  
+ WCF Data Services를 사용 하면 <xref:System.Linq.IQueryable%601> 인터페이스의 구현을 반환 하는 모든 데이터 구조를 노출 하는 데이터 서비스를 만들 수도 있습니다. 이렇게 하면 .NET Framework 형식의 데이터를 노출하는 데이터 서비스를 만들 수 있습니다. <xref:System.Data.Services.IUpdatable> 인터페이스도 구현하는 경우 만들기, 업데이트 및 삭제 작업이 지원됩니다. 자세한 내용은 [리플렉션 공급자](reflection-provider-wcf-data-services.md)합니다.  
   
  WCF Data Services 이러한 데이터 공급자와 통합 하는 방법에 대 한 예시는이 항목의 뒷부분에 나오는 아키텍처 다이어그램을 참조 하세요.  
   
@@ -48,7 +48,7 @@ WCF Data Services를 사용 하면 OData (Open Data Protocol)를 사용 하 여 
   
  WCF Data Services에는 .NET Framework 기반 및 Silverlight 기반 클라이언트 응용 프로그램에 대 한 클라이언트 라이브러리가 포함 됩니다. 이러한 클라이언트 라이브러리를 사용하면 .NET Framework 개체를 사용하여 데이터 서비스와 상호 작용할 수 있습니다. 클라이언트 라이브러리는 개체 기반 쿼리와 LINQ 쿼리, 관련 개체 로드, 변경 내용 추적 및 ID 확인도 지원합니다. 자세한 내용은 [WCF Data Services 클라이언트 라이브러리](wcf-data-services-client-library.md)를 참조 하세요.  
   
- .NET Framework 및 Silverlight와 함께 포함 된 OData 클라이언트 라이브러리 외에도 PHP, AJAX 및 Java 응용 프로그램과 같은 클라이언트 응용 프로그램에서 OData 피드를 사용할 수 있는 다른 클라이언트 라이브러리가 있습니다. 자세한 내용은 [ODATA SDK](https://go.microsoft.com/fwlink/?LinkID=185796)를 참조 하세요.  
+ .NET Framework 및 Silverlight와 함께 포함 된 OData 클라이언트 라이브러리 외에도 PHP, AJAX 및 Java 응용 프로그램과 같은 클라이언트 응용 프로그램에서 OData 피드를 사용할 수 있는 다른 클라이언트 라이브러리가 있습니다. OData SDK에 대 한 자세한 내용은 [ODATA sdk-샘플 코드](https://www.odata.org/ecosystem/#sdk)를 참조 하세요.
   
 ## <a name="architecture-overview"></a>아키텍처 개요  
  다음 다이어그램은 odata 피드를 노출 하 고 OData 지원 클라이언트 라이브러리에서 이러한 피드를 사용 하는 WCF Data Services 아키텍처를 보여 줍니다.  
@@ -62,4 +62,4 @@ WCF Data Services를 사용 하면 OData (Open Data Protocol)를 사용 하 여 
 - [WCF Data Services 정의](defining-wcf-data-services.md)
 - [데이터 서비스 리소스에 액세스 (WCF Data Services)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd728283(v=vs.100))
 - [WCF Data Services 클라이언트 라이브러리](wcf-data-services-client-library.md)
-- [REST(Representational State Transfer)](https://go.microsoft.com/fwlink/?LinkId=113919)
+- [REST(Representational State Transfer)](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, getting started
 ms.assetid: 90872d0c-e989-4490-b3e9-54afb10d33d4
-ms.openlocfilehash: 26fd25a268204ad2644a07b6a56967cc5d2df95e
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 41d3af831ff3c99e7f3000593db52d307d37ac38
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568826"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900902"
 ---
 # <a name="using-a-data-service-in-a-client-application-wcf-data-services"></a>클라이언트 애플리케이션에서 데이터 서비스 사용(WCF Data Services)
 웹 브라우저에 URI를 제공 하 여 OData (Open Data Protocol) 피드를 노출 하는 서비스에 액세스할 수 있습니다. URI는 리소스의 주소를 제공하고 요청 메시지는 해당 리소스가 나타내는 기본 데이터에 액세스하거나 변경하기 위해 이러한 주소로 전송됩니다. 브라우저는 HTTP GET 명령을 실행 하 고 요청 된 리소스를 OData 피드로 반환 합니다. 자세한 내용은 [웹 브라우저에서 서비스 액세스](accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md)를 참조 하세요.  
@@ -33,23 +33,23 @@ ms.locfileid: "74568826"
   
 - **HTTP 병합** -엔터티 데이터를 변경 하기 위해 데이터 소스에서 삭제를 실행 하는 비효율성이 있으므로 OData는 새로운 HTTP 병합 동작을 제공 합니다. 요청 메시지의 페이로드에는 주소가 지정된 엔터티 리소스에서 변경되어야 하는 속성이 포함되어 있습니다. Http MERGE는 http 사양에 정의 되어 있지 않으므로 비 OData 인식 서버를 통해 HTTP 병합 요청을 라우팅하는 추가 처리가 필요할 수 있습니다.  
   
- 자세한 내용은 [OData: 작업](https://go.microsoft.com/fwlink/?LinkId=185792)을 참조 하세요.  
+ 자세한 내용은 [OData: 작업](https://www.odata.org/documentation/odata-version-2-0/operations/)을 참조 하세요.
   
 ### <a name="payload-formats"></a>페이로드 형식  
  HTTP PUT, HTTP POST 또는 HTTP MERGE 요청의 경우 요청 메시지의 페이로드에 데이터 서비스로 보내는 엔터티 데이터가 포함되어 있습니다. 페이로드의 내용은 메시지의 데이터 형식에 따라 달라집니다. DELETE를 제외한 모든 작업에 대한 HTTP 응답에도 이러한 페이로드가 들어 있습니다. OData는 서비스를 사용 하 여 데이터에 액세스 하 고 데이터를 변경 하기 위해 다음 페이로드 형식을 지원 합니다.  
   
-- **Atom** -OData에서 AtomPub (Atom Publishing Protocol)에 대 한 확장으로 정의 된 XML 기반 메시지 인코딩으로, 웹 피드, 팟캐스트, WIKI 및 XML 기반 인터넷 기능을 위해 HTTP를 통해 데이터를 교환할 수 있도록 합니다. 자세한 내용은 [OData: Atom Format](https://go.microsoft.com/fwlink/?LinkId=185794)을 참조 하십시오.  
+- **Atom** -OData에서 AtomPub (Atom Publishing Protocol)에 대 한 확장으로 정의 된 XML 기반 메시지 인코딩으로, 웹 피드, 팟캐스트, WIKI 및 XML 기반 인터넷 기능을 위해 HTTP를 통해 데이터를 교환할 수 있도록 합니다. 자세한 내용은 [OData: Atom Format](https://www.odata.org/documentation/odata-version-2-0/atom-format/)을 참조 하십시오.
   
-- Json ( **json** JavaScript Object Notation)은 JavaScript 프로그래밍 언어의 하위 집합을 기반으로 하는 간단한 데이터 교환 형식입니다. 자세한 내용은 [OData: JSON Format](https://go.microsoft.com/fwlink/?LinkId=185795)을 참조 하십시오.  
+- Json ( **json** JavaScript Object Notation)은 JavaScript 프로그래밍 언어의 하위 집합을 기반으로 하는 간단한 데이터 교환 형식입니다. 자세한 내용은 [OData: JSON Format](https://www.odata.org/documentation/odata-version-2-0/json-format/)을 참조 하십시오.
   
- 페이로드의 메시지 형식은 HTTP 요청 메시지의 헤더에서 요청됩니다. 자세한 내용은 [OData: 작업](https://go.microsoft.com/fwlink/?LinkID=185792)을 참조 하세요.  
+ 페이로드의 메시지 형식은 HTTP 요청 메시지의 헤더에서 요청됩니다. 자세한 내용은 [OData: 작업](https://www.odata.org/documentation/odata-version-2-0/operations/)을 참조 하세요.
   
 ## <a name="accessing-and-changing-data-using-client-libraries"></a>클라이언트 라이브러리를 사용하여 데이터 액세스 및 변경  
  WCF Data Services에는 .NET Framework 및 Silverlight 기반 클라이언트 응용 프로그램에서 OData 피드를 보다 쉽게 사용할 수 있도록 하는 클라이언트 라이브러리가 포함 되어 있습니다. 이러한 라이브러리는 HTTP 메시지를 보내고 받는 작업을 단순화합니다. 또한 엔터티 데이터를 나타내는 CLR 개체로 메시지 페이로드를 변환합니다. 클라이언트 라이브러리는 두 가지 핵심 클래스인 <xref:System.Data.Services.Client.DataServiceContext> 및 <xref:System.Data.Services.Client.DataServiceQuery%601>를 제공합니다. 이러한 클래스를 사용하면 데이터 서비스를 쿼리한 다음 반환된 엔터티 데이터를 CLR 개체로 사용하여 작업할 수 있습니다. 자세한 내용은 [WCF Data Services 클라이언트 라이브러리](wcf-data-services-client-library.md) 및 [WCF Data Services (Silverlight)](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v=vs.95))를 참조 하세요.  
   
  Visual Studio의 **서비스 참조 추가** 대화 상자를 사용 하 여 데이터 서비스에 대 한 참조를 추가할 수 있습니다. 이 도구는 참조된 데이터 서비스에서 서비스 메타데이터를 요청하고 데이터 서비스를 나타내는 <xref:System.Data.Services.Client.DataServiceContext> 및 엔터티를 나타내는 클라이언트 데이터 서비스 클래스를 생성합니다. 자세한 내용은 [데이터 서비스 클라이언트 라이브러리 생성](generating-the-data-service-client-library-wcf-data-services.md)을 참조 하십시오.  
   
- 다른 종류의 클라이언트 응용 프로그램에서 OData 피드를 사용 하는 데 사용할 수 있는 프로그래밍 라이브러리가 있습니다. 자세한 내용은 [ODATA SDK](https://go.microsoft.com/fwlink/?LinkId=185796)를 참조 하세요.  
+ 다른 종류의 클라이언트 응용 프로그램에서 OData 피드를 사용 하는 데 사용할 수 있는 프로그래밍 라이브러리가 있습니다. OData SDK에 대 한 자세한 내용은 [ODATA sdk-샘플 코드](https://www.odata.org/ecosystem/#sdk)를 참조 하세요.
   
 ## <a name="see-also"></a>참조
 

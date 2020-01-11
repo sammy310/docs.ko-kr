@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b6128694-11ed-46e7-bd4e-49ea1914c46a
 topic_type:
 - apiref
-ms.openlocfilehash: 8812a98b0f28dd1336903dc34682f638a291f53b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a69fb861f7c2671a5c26245aa544ee99bcbdb56b
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73111003"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901006"
 ---
 # <a name="icordebugcreateprocess-method"></a>ICorDebug::CreateProcess 메서드
 디버거를 제어할 때 프로세스 및 해당 기본 스레드를 시작 합니다.  
@@ -61,7 +61,7 @@ HRESULT CreateProcess (
  진행 호출 프로세스의 각 상속 가능한 핸들이 시작 된 프로세스에서 상속 됨을 나타내거나 핸들이 상속 되지 않음을 나타내는 `false` `true`으로 설정 합니다. 상속 된 핸들에는 원래 핸들과 동일한 값 및 액세스 권한이 있습니다.  
   
  `dwCreationFlags`  
- 진행 시작 된 프로세스의 동작 및 우선 순위 클래스를 제어 하는 [Win32 프로세스 생성 플래그](https://go.microsoft.com/fwlink/?linkid=69981) 의 비트 조합입니다.  
+ 진행 시작 된 프로세스의 동작 및 우선 순위 클래스를 제어 하는 [Win32 프로세스 생성 플래그](/windows/win32/procthread/process-creation-flags) 의 비트 조합입니다.  
   
  `lpEnvironment`  
  진행 새 프로세스에 대 한 환경 블록에 대 한 포인터입니다.  
@@ -84,9 +84,9 @@ HRESULT CreateProcess (
 ## <a name="remarks"></a>주의  
  이 메서드의 매개 변수는 Win32 `CreateProcess` 메서드와 동일 합니다.  
   
- 관리 되지 않는 혼합 모드 디버깅을 사용 하도록 설정 하려면 `dwCreationFlags` &#124; 을 DEBUG_PROCESS DEBUG_ONLY_THIS_PROCESS로 설정 합니다. 관리 되는 디버깅만 사용 하려면 이러한 플래그를 설정 하지 마십시오.  
+ 관리 되지 않는 혼합 모드 디버깅을 사용 하도록 설정 하려면 `dwCreationFlags` &#124; 를 DEBUG_PROCESS DEBUG_ONLY_THIS_PROCESS로 설정 합니다. 관리 되는 디버깅만 사용 하려면 이러한 플래그를 설정 하지 마십시오.  
   
- 디버거 및 디버깅할 프로세스 (연결 된 프로세스)가 단일 콘솔을 공유 하 고 interop 디버깅이 사용 되는 경우 연결 된 프로세스에서 콘솔 잠금을 유지 하 고 디버그 이벤트에서 중지할 수 있습니다. 그러면 디버거가 콘솔 사용 시도를 차단 합니다. 이 문제를 방지 하려면 `dwCreationFlags` 매개 변수에 CREATE_NEW_CONSOLE 플래그를 설정 합니다.  
+ 디버거 및 디버깅할 프로세스 (연결 된 프로세스)가 단일 콘솔을 공유 하 고 interop 디버깅이 사용 되는 경우 연결 된 프로세스에서 콘솔 잠금을 유지 하 고 디버그 이벤트에서 중지할 수 있습니다. 그러면 디버거가 콘솔 사용 시도를 차단 합니다. 이 문제를 방지 하려면 `dwCreationFlags` 매개 변수에서 CREATE_NEW_CONSOLE 플래그를 설정 합니다.  
   
  IA-64 기반 및 AMD64 기반 플랫폼과 같은 Win9x 및 비 x86 플랫폼에서는 Interop 디버깅이 지원 되지 않습니다.  
   
