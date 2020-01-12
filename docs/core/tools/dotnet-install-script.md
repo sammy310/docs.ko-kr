@@ -2,16 +2,16 @@
 title: dotnet 설치 스크립트
 description: .NET Core CLI 도구 및 공유 런타임을 설치하는 dotnet-install 스크립트에 대해 알아봅니다.
 ms.date: 01/16/2019
-ms.openlocfilehash: 867be93b5a4c66258df438ce718dabbd4ef2891c
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: f72e12fc415824a9c69eba6f52e3c01717cf654c
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849568"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740522"
 ---
 # <a name="dotnet-install-scripts-reference"></a>dotnet-install 스크립트 참조
 
-## <a name="name"></a>name
+## <a name="name"></a>이름
 
 `dotnet-install.ps1` | `dotnet-install.sh` - .NET Core CLI 도구 및 공유 런타임을 설치하는 데 사용되는 스크립트입니다.
 
@@ -63,7 +63,7 @@ macOS/Linux:
 
   - `latest` - 채널의 최신 빌드입니다(`-Channel` 옵션과 함께 사용됨).
   - `coherent` - 채널의 일관된 최신 빌드로, 안정적인 최신 패키지 조합을 사용합니다(분기 이름 `-Channel` 옵션과 함께 사용됨).
-  - 특정 빌드 버전을 나타내는 X.Y.Z 형식의 세 부분으로 구성된 버전이며 `-Channel` 옵션을 대체합니다. 예: `2.0.0-preview2-006120`
+  - 특정 빌드 버전을 나타내는 X.Y.Z 형식의 세 부분으로 구성된 버전이며 `-Channel` 옵션을 대체합니다. 예를 들어 `2.0.0-preview2-006120`을 참조하십시오.
 
   지정하지 않으면 `-Version`은 기본값인 `latest`로 설정됩니다.
 
@@ -133,7 +133,7 @@ macOS/Linux:
 
   스크립트에 대한 도움말을 출력합니다.
 
-## <a name="examples"></a>예제
+## <a name="examples"></a>예
 
 - 기본 위치에 최신 LTS(장기 지원) 버전을 설치합니다.
 
@@ -195,10 +195,10 @@ macOS/Linux:
   macOS/Linux:
 
   ```bash
-  curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin <additional install-script args>
+  curl -ssl https://dot.net/v1/dotnet-install.sh | bash /dev/stdin <additional install-script args>
   ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [.NET Core 릴리스](https://github.com/dotnet/core/releases)
 - [.NET Core 런타임 및 SDK 다운로드 아카이브](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md)

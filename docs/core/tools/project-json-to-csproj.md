@@ -3,13 +3,12 @@ title: project.json 및 csproj 비교
 description: project.json 및 csproj e요소 간 매핑을 참조하세요.
 author: natemcmaster
 ms.date: 03/13/2017
-ms.custom: seodec18
-ms.openlocfilehash: 6ac63f18bd42193e964aaeae3c54c887c9c63163
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: c31590cf34990867b81af4d073846c2952928798
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747413"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714128"
 ---
 # <a name="a-mapping-between-projectjson-and-csproj-properties"></a>project.json 및 csproj 속성 간 매핑
 
@@ -39,7 +38,7 @@ ms.locfileid: "56747413"
 }
 ```
 
-더 이상 지원되지 않습니다. csproj에서는 보통 디렉터리 이름과 일치하는 프로젝트 파일 이름으로 결정됩니다. 예를 들어 `MyProjectName.csproj`과 같은 형식입니다.
+더 이상 지원되지 않습니다. csproj에서는 보통 디렉터리 이름과 일치하는 프로젝트 파일 이름으로 결정됩니다. 예: `MyProjectName.csproj`.
 
 기본적으로 프로젝트 파일 이름은 `<AssemblyName>` 및 `<PackageId>` 속성의 값도 지정합니다.
 
@@ -487,7 +486,7 @@ MSBuild에서 모든 프로젝트는 빌드 중 *이식 가능*하지만 독립 
 ```
 
 MSBuild에는 `owners` 요소에 대해 동일한 요소가 없습니다.
-`summary`의 경우, `summary` 값이 자동으로 해당 속성에 마이그레이션되지 않은 경우에도 속성이 [ `description` ](#other-common-root-level-options) 요소로 매핑되므로 MSBuild `<Description>` 속성을 사용할 수 있습니다.
+`summary`의 경우, `summary` 값이 자동으로 해당 속성에 마이그레이션되지 않은 경우에도 속성이 [`description`](#other-common-root-level-options) 요소로 매핑되므로 MSBuild `<Description>` 속성을 사용할 수 있습니다.
 
 ## <a name="scripts"></a>스크립트
 
@@ -674,6 +673,6 @@ MSBuild에서는 [항목](/visualstudio/msbuild/common-msbuild-project-items)을
 </ItemGroup>
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [CLI의 변경 내용에 대한 대략적인 개요](../tools/cli-msbuild-architecture.md)

@@ -2,13 +2,12 @@
 title: DNX에서 .NET Core CLI로 마이그레이션
 description: DNX 도구 사용에서 .NET Core CLI 도구로 마이그레이션합니다.
 ms.date: 06/20/2016
-ms.custom: seodec18
-ms.openlocfilehash: 0f00ee6c05a47d976028c3cd4eade2b2b399260b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 91a43ffda31b34332d2e545a90c857221aa162c4
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59160838"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715517"
 ---
 # <a name="migrating-from-dnx-to-net-core-cli-projectjson"></a>DNX에서.NET Core CLI(project.json)로 마이그레이션
 
@@ -117,10 +116,10 @@ CLI와 DNX는 둘 다 `project.json` 파일 기반의 동일한 기본 프로젝
 
 원하는 이식성 형식을 호출하면 대상 프레임워크를 변경해야 합니다. .NET Core용 애플리케이션을 작성한 경우 대상 프레임워크로 `dnxcore50`을 사용할 가능성이 높습니다. 새로운 [.NET 표준](../../standard/net-standard.md)이 가져온 CLI 및 변경 사항과 함께 프레임워크는 다음 중 하나여야 합니다.
 
-1. `netcoreapp1.0` - .NET Core에서 애플리케이션을 작성하는 경우(ASP.NET Core 애플리케이션 포함)
-2. `netstandard1.6` - .NET Core용 클래스 라이브러리를 작성하는 경우
+1. `netcoreapp1.0`- .NET Core에서 애플리케이션을 작성하는 경우(ASP.NET Core 애플리케이션 포함)
+2. `netstandard1.6`- .NET Core용 클래스 라이브러리를 작성하는 경우
 
-`dnx451` 같은 다른 `dnx` 대상을 사용 중인 경우에도 역시 변경해야 합니다. `dnx451` `net451`로 변경해야 합니다.
+`dnx451` 같은 다른 `dnx` 대상을 사용 중인 경우에도 역시 변경해야 합니다. `dnx451`을`net451` 로 변경해야 합니다.
 자세한 내용은 [.NET 표준](../../standard/net-standard.md) 항목을 참조하세요.
 
 `project.json`이 거의 준비되었습니다. 종속성 목록을 살펴보고, 특히 ASP.NET Core 종속성을 사용하는 경우 종속성을 새 버전으로 업데이트해야 합니다. 별도의 BCL API용 패키지를 사용한 경우 [애플리케이션 이식성 유형](../deploying/index.md) 문서에 설명된 대로 런타임 패키지를 사용할 수 있습니다.

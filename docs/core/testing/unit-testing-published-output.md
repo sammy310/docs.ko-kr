@@ -4,13 +4,12 @@ description: dotnet vstest 명령을 사용하여 소스 코드 대신, 게시�
 author: kendrahavens
 ms.author: kehavens
 ms.date: 10/18/2017
-ms.custom: seodec18
-ms.openlocfilehash: e4fd25dc9ff30bdfe85cd1167a1dc41ea20a5f80
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 7618d37782de3a16f1963380bbb56945fb73e8eb
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771931"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714263"
 ---
 # <a name="test-published-output-with-dotnet-vstest"></a>dotnet vstest로 게시된 출력 테스트
 
@@ -22,7 +21,7 @@ dotnet vstest <MyPublishedTests>.dll
 
 여기서 `<MyPublishedTests>`는 게시된 테스트 프로젝트의 이름입니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 아래 명령은 게시된 DLL에서 실행 중인 테스트를 보여 줍니다.
 
@@ -36,7 +35,7 @@ dotnet vstest out/MyProject.Tests.dll
 > [!NOTE]
 > 참고: 앱이 `netcoreapp` 이외의 프레임워크를 대상으로 하는 경우 프레임워크 플래그로 대상 프레임워크를 전달하여 `dotnet vstest` 명령을 실행할 수 있습니다. 예: `dotnet vstest <MyPublishedTests>.dll --Framework:".NETFramework,Version=v4.6"`. Visual Studio 2017 업데이트 5 이상에서는 필요한 프레임워크가 자동으로 검색됩니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [dotnet 테스트 및 xUnit을 사용한 단위 테스트](unit-testing-with-dotnet-test.md)
 - [dotnet 테스트 및 NUnit을 사용한 단위 테스트](unit-testing-with-nunit.md)

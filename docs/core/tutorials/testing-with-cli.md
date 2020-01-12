@@ -3,13 +3,12 @@ title: .NET Core 명령줄을 사용하여 프로젝트 구성 및 테스트
 description: 이 자습서에서는 명령줄에서 .NET Core 프로젝트를 구성하고 테스트하는 방법을 설명합니다.
 author: cartermp
 ms.date: 09/10/2018
-ms.custom: seodec18
-ms.openlocfilehash: 38017a788a8e43601f49a98230cb4d96e0390061
-ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
+ms.openlocfilehash: fdaa42be4d3b8872a3119f97f253ce277564339e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74884217"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715335"
 ---
 # <a name="organizing-and-testing-projects-with-the-net-core-command-line"></a>.NET Core 명령줄을 사용하여 프로젝트 구성 및 테스트
 

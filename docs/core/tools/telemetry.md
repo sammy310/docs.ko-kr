@@ -3,13 +3,12 @@ title: .NET Core SDK 원격 분석
 description: 어떤 데이터가 수집되고 수집 기능을 사용하지 않도록 설정하는 방법에 대한 분석을 위해 사용량 정보를 수집하는 .NET Core SDK 원격 분석 기능을 살펴봅니다.
 author: KathleenDollard
 ms.date: 08/27/2019
-ms.custom: seodec18
-ms.openlocfilehash: ecb8dbed036a04726867d004dbadf6205c1fa09f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 8bde344ee393e113502a0895ee55c241cbf24c57
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74281770"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714112"
 ---
 # <a name="net-core-sdk-telemetry"></a>.NET Core SDK 원격 분석
 
@@ -17,7 +16,7 @@ ms.locfileid: "74281770"
 
 수집된 데이터는 익명이며 [Creative Commons Attribution 라이선스](https://creativecommons.org/licenses/by/4.0/)에 따라 모두 집계하여 게시됩니다. 
 
-## <a name="scope"></a>범위
+## <a name="scope"></a>Scope
 
 `dotnet`에는 앱을 실행하고 CLI 명령을 실행하는 두 가지 기능이 있습니다. `dotnet`을 사용하여 다음 형식으로 애플리케이션을 시작하는 경우 원격 분석이 ‘수집되지 않습니다’. 
 
@@ -135,7 +134,7 @@ at Microsoft.DotNet.Cli.Program.Main(String[] args)
 
 따라서 .NET Core SDK의 사용자 지정 빌드는 경로 이름이 개인 정보나 중요한 정보를 공개하는 디렉터리에 있으면 안 됩니다. 
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [.NET Core CLI 원격 분석 - 2019 Q2 데이터](https://dotnet.microsoft.com/platform/telemetry/dotnet-core-cli-2019q2)
 - [원격 분석 참조 소스(dotnet/cli 리포지토리)](https://github.com/dotnet/cli/tree/master/src/dotnet/Telemetry)

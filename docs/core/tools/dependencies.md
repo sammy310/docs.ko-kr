@@ -2,13 +2,12 @@
 title: .NET Core 도구에서 종속성 관리
 description: .NET Core 도구로 종속성을 관리하는 방법을 설명합니다.
 ms.date: 03/06/2017
-ms.custom: seodec18
-ms.openlocfilehash: ef2de666ee3e6a06ab62f45afe3c624bbbb44ac4
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 9c088829ce3d5197198b7ff22a1331b8baba41d7
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59611928"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714204"
 ---
 # <a name="managing-dependencies-with-net-core-sdk-10"></a>.NET Core SDK 1.0으로 종속성 관리
 

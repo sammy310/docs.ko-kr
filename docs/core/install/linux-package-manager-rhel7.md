@@ -4,12 +4,12 @@ description: 패키지 관리자를 사용하여 RHEL 7에 .NET Core SDK 및 런
 author: thraka
 ms.author: adegeo
 ms.date: 12/03/2019
-ms.openlocfilehash: f17a410ccea1ef4dec32de1d80ef6aac889aa6f3
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: bcc41bfcd7c6d03038952e3faaf07952c3deb69d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74998908"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715531"
 ---
 # <a name="rhel-7-package-manager---install-net-core"></a>RHEL 7 패키지 관리자 - .NET Core 설치
 
@@ -35,7 +35,6 @@ scl enable rh-dotnet30 bash
 
 구독 관리자를 사용하여 등록했다면 ASP.NET Core 런타임을 설치하고 사용하도록 설정할 준비가 된 것입니다. 터미널에서 다음 명령을 실행합니다.
 
-<!-- TODO: is this the correct value? Taken from the webpage but it doesn't have aspnet in the name -->
 ```bash
 subscription-manager repos --enable=rhel-7-server-dotnet-rpms
 yum install rh-dotnet30-aspnetcore-runtime-3.0 -y
@@ -52,6 +51,6 @@ yum install rh-dotnet30-dotnet-runtime-3.0 -y
 scl enable rh-dotnet30 bash
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Using .NET Core 3.0 on Red Hat Enterprise Linux 7](https://access.redhat.com/documentation/en-us/net_core/3.0/html/getting_started_guide/gs_install_dotnet)(Red Hat Enterprise Linux 7에서 .NET Core 3.0 사용)

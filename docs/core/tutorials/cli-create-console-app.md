@@ -5,13 +5,13 @@ author: thraka
 ms.author: adegeo
 ms.date: 12/05/2019
 ms.technology: dotnet-cli
-ms.custom: seodec18,updateeachrelease
-ms.openlocfilehash: 4c6a8e495d8532a0ab2e90368663a287731a9af0
-ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
+ms.custom: updateeachrelease
+ms.openlocfilehash: 6c394ad2721bcdd91fb750fe93c03f16ca9f799f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74884264"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714086"
 ---
 # <a name="get-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>명령줄을 사용하여 Windows/Linux/macOS에서 .NET Core 시작
 
@@ -19,7 +19,7 @@ ms.locfileid: "74884264"
 
 .NET Core CLI 도구 집합에 익숙하지 않은 경우 [.NET Core SDK 개요](../tools/index.md)를 읽어 보세요.
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 - [.NET Core SDK 3.1](https://dotnet.microsoft.com/download) 이상 버전
 - 선택하는 텍스트 편집기 또는 코드 편집기입니다.
@@ -192,7 +192,7 @@ Hello World!
 
 됐습니다! 이제 여기에서 배운 기본 개념을 활용하여 고유의 프로그램을 만들 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [.NET Core CLI 도구를 사용하여 프로젝트 구성 및 테스트](testing-with-cli.md)
 - [CLI를 사용하여 .NET Core 앱 게시](../deploying/deploy-with-cli.md)

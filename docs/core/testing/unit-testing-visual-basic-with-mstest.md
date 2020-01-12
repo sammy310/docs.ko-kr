@@ -4,13 +4,12 @@ description: MSTest를 사용하여 샘플 Visual Basic 솔루션을 단계별�
 author: billwagner
 ms.author: wiwagn
 ms.date: 09/01/2017
-ms.custom: seodec18
-ms.openlocfilehash: c52fc7393718f6af44bd85dd23353f3e32f29f79
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 14c145ffc227078378897feeb75db0df8da4be6f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428719"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714244"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-mstest"></a>dotnet test 및 MSTest를 사용하여 Visual Basic .NET Core 라이브러리 단위 테스트
 

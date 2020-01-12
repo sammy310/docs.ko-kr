@@ -3,12 +3,12 @@ title: 세계화 구성 설정
 description: '.NET Core 앱의 세계화 측면(예: 일본 날짜를 구문 분석하는 방식)을 구성하는 런타임 설정에 대해 알아봅니다.'
 ms.date: 11/27/2019
 ms.topic: reference
-ms.openlocfilehash: 0571c64eff5b38aafa37026fb2ba7f4aef778beb
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 76cd4a0a0f93f4df3ff243c6024b952576e8e6cb
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74998842"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740547"
 ---
 # <a name="run-time-configuration-options-for-globalization"></a>세계화를 위한 런타임 구성 옵션
 
@@ -16,7 +16,7 @@ ms.locfileid: "74998842"
 
 - .NET Core 앱이 문화별 데이터와 행동에 액세스하지 않고 세계화 고정 모드에서 실행되는지 아니면 문화권 데이터에 액세스할 수 있는지를 결정합니다.
 - 기본값: 문화권 데이터에 액세스하여 앱을 실행합니다(`false`).
-- 자세한 내용은 [.NET Core globalization invariant mode](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md)(.NET Core 세계화 고정 모드)를 참조하세요.
+- 자세한 내용은 [.NET Core globalization invariant mode](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md)(.NET Core 세계화 고정 모드)를 참조하세요.
 
 | | 설정 이름 | 값 |
 | - | - | - |
@@ -32,7 +32,7 @@ ms.locfileid: "74998842"
 | | 설정 이름 | 값 |
 | - | - | - |
 | **runtimeconfig.json** | `Switch.System.Globalization.EnforceJapaneseEraYearRanges` | `false` - 완화 범위 검사<br/>`true` - 오버플로 시 예외 발생 |
-| **환경 변수** | 해당 사항 없음 | 해당 사항 없음 |
+| **환경 변수** | N/A | N/A |
 
 ## <a name="japanese-date-parsing"></a>일본 날짜 구문 분석
 
@@ -43,7 +43,7 @@ ms.locfileid: "74998842"
 | | 설정 이름 | 값 |
 | - | - | - |
 | **runtimeconfig.json** | `Switch.System.Globalization.EnforceLegacyJapaneseDateParsing` | `false` - “Gannen” 또는 “1”이 지원됨<br/>`true` - “1”만 지원됨 |
-| **환경 변수** | 해당 사항 없음 | 해당 사항 없음 |
+| **환경 변수** | N/A | N/A |
 
 ## <a name="japanese-year-format"></a>일본 연도 형식
 
@@ -54,4 +54,4 @@ ms.locfileid: "74998842"
 | | 설정 이름 | 값 |
 | - | - | - |
 | **runtimeconfig.json** | `Switch.System.Globalization.FormatJapaneseFirstYearAsANumber` | `false` - “Gannen”으로 형식 지정<br/>`true` - 숫자로 형식 지정 |
-| **환경 변수** | 해당 사항 없음 | 해당 사항 없음 |
+| **환경 변수** | N/A | N/A |

@@ -4,21 +4,18 @@ description: 패키지 관리자를 사용하여 RHEL 8.1에 .NET Core SDK 및 �
 author: thraka
 ms.author: adegeo
 ms.date: 12/03/2019
-ms.openlocfilehash: 3ef639d5b76e81856ec8370d10e098c455ca8b3d
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 8781d6bd14daf975fcc602fd2924a333750d4256
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74998914"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714385"
 ---
 # <a name="rhel-81-package-manager---install-net-core"></a>RHEL 8.1 패키지 관리자 - .NET Core 설치
 
 [!INCLUDE [package-manager-switcher](includes/package-manager-switcher.md)]
 
 이 문서에서는 패키지 관리자를 사용하여 RHEL 8.1에 .NET Core를 설치하는 방법을 설명합니다. RHEL 8.1에서는 아직 .NET Core 3.1을 사용할 수 없습니다.
-
-> [!NOTE]
-> RHEL 8.0은 .NET Core 3.0을 포함하지 않습니다. 명령 `yum upgrade`를 사용하여 RHEL 8.1로 업그레이드하세요.
 
 > [!NOTE]
 > RHEL 8.0은 .NET Core 3.0을 포함하지 않습니다. 명령 `yum upgrade`를 사용하여 RHEL 8.1로 업그레이드하세요.
@@ -40,7 +37,6 @@ scl enable dotnet-sdk-3.0 bash
 
 구독 관리자를 사용하여 등록했다면 ASP.NET Core 런타임을 설치하고 사용하도록 설정할 준비가 된 것입니다. 터미널에서 다음 명령을 실행합니다.
 
-<!-- TODO: is this the correct value? Taken from the webpage but it doesn't have aspnet in the name -->
 ```bash
 dnf install aspnetcore-runtime-3.0
 scl enable aspnetcore-runtime-3.0 bash
@@ -55,6 +51,6 @@ sudo dnf install dotnet-runtime-3.0
 scl enable dotnet-runtime-3.0 bash
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Using .NET Core 3.0 on Red Hat Enterprise Linux 8](https://access.redhat.com/documentation/en-us/net_core/3.0/html/getting_started_guide_for_rhel_8/gs_install_dotnet)(Red Hat Enterprise Linux 8에서 .NET Core 3.0 사용)
