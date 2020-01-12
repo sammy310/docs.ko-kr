@@ -1,19 +1,19 @@
 ---
 title: -.Net을 사용 하 C# 여 JSON Serialize 및 deserialize
-ms.date: 09/16/2019
+ms.date: 01/10/2020
 helpviewer_keywords:
 - JSON serialization
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 6561d5e1580e1170369622ebc7bb330ff4e0964f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: c05783963ba521109fb542f247ec9e62fdb5c2d9
+ms.sourcegitcommit: dfad244ba549702b649bfef3bb057e33f24a8fb2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705784"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75904637"
 ---
-# <a name="json-serialization-in-net---overview"></a>.NET의 JSON serialization-개요
+# <a name="json-serialization-and-deserialization-marshalling-and-unmarshalling-in-net---overview"></a>.NET의 JSON serialization 및 deserialization (마샬링 및 마샬링 안)-개요
 
 `System.Text.Json` 네임 스페이스는 JSON (JavaScript Object Notation)로 serialize 및 deserialize 하는 기능을 제공 합니다.
 
@@ -26,16 +26,15 @@ ms.locfileid: "75705784"
 * 라이브러리는 [.Net Core 3.0](https://aka.ms/netcore3download) 공유 프레임 워크의 일부로 기본 제공 됩니다.
 * 다른 대상 프레임 워크의 경우에는 [System.object](https://www.nuget.org/packages/System.Text.Json) NuGet 패키지를 설치 합니다. 패키지는 다음을 지원 합니다.
   * .NET Standard 2.0 이상 버전
-  * .NET Framework 4.6.1 이상 버전
+  * .NET Framework 4.7.2 이상 버전
   * .NET Core 2.0, 2.1 및 2.2
 
 ## <a name="additional-resources"></a>추가 자료
 
 * [라이브러리를 사용 하는 방법](system-text-json-how-to.md)
-* [소스 코드](https://github.com/dotnet/runtime/tree/master/src/libraries/System.Text.Json)
-* [API 참조](xref:System.Text.Json)
-* [로드맵](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Text.Json/roadmap/README.md)
-* Dotnet/corefx 리포지토리의 GitHub 문제
-  * [System.object의 개발에 대 한 토론](https://github.com/dotnet/corefx/issues/33115) <!-- TODO: Issues are still not moved to the new repo-->
-  * [모든 System.web. Json 문제](https://github.com/dotnet/runtime/issues?q=is%3Aopen+is%3Aissue+label%3Aarea-System.Text.Json)
-  * [Json 이라는 레이블이 지정 된 system.web 문제-doc](https://github.com/dotnet/runtime/labels/json-functionality-doc)
+* [Newtonsoft.json에서 마이그레이션하는 방법](system-text-json-migrate-from-newtonsoft-how-to.md)
+* [변환기를 작성 하는 방법](system-text-json-converters-how-to.md)
+* [System.string 소스 코드](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json)
+* [System.object API 참조](xref:System.Text.Json)
+* [System.string API 참조](xref:System.Text.Json.Serialization)
+<!-- * [Roadmap](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/roadmap/README.md)-->

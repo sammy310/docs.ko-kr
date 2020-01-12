@@ -2,23 +2,23 @@
 title: DataContractJsonSerializer를 사용 하는 독립 실행형 JSON Serialization
 ms.date: 03/30/2017
 ms.assetid: 312bd7b2-1300-4b12-801e-ebe742bd2287
-ms.openlocfilehash: 412da71617a8627c47e877a75770271d9a3cf180
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 39d3c0acd75ffd9a54c5e62a15487a2cd8c465cb
+ms.sourcegitcommit: dfad244ba549702b649bfef3bb057e33f24a8fb2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976069"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75904600"
 ---
 # <a name="stand-alone-json-serialization-using-datacontractjsonserializer"></a>DataContractJsonSerializer를 사용 하는 독립 실행형 JSON Serialization
 
 > [!NOTE]
-> 이 문서는 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>입니다. JSON 직렬화 및 역직렬화를 포함 하는 대부분의 시나리오에서는 system.xml [네임 스페이스](../../../standard/serialization/system-text-json-overview.md)의 도구를 권장 합니다. 
+> 이 문서에서는 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>에 대해 설명 합니다. JSON 직렬화 및 역직렬화를 포함 하는 대부분의 시나리오에서는 system.xml [네임 스페이스](../../../standard/serialization/system-text-json-overview.md)의 api를 권장 합니다. 
 
 JSON (JavaScript Object Notation)은 브라우저 내의 웹 페이지에서 실행되는 JavaScript 코드에 의해 사용되도록 특별히 디자인된 데이터 형식이며 Windows Communication Foundation (WCF)에서 만든 ASP.NET AJAX 서비스에서 사용 하는 기본 데이터 형식입니다.
 
 이 형식은 ASP.NET과 결합하지 않고 AJAX 서비스를 만드는 경우에도 사용할 수 있습니다. 이 경우 XML이 기본값이지만 JSON을 선택할 수 있습니다.
 
-마지막으로 JSON 지원이 필요하지만 AJAX 서비스는 만들지 않을 경우 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>를 사용하면 .NET 개체를 JSON 데이터로 serialize하고 다시 .NET 형식의 인스턴스로 직접 해당 데이터를 deserialize할 수 있습니다. 이 작업을 수행 하는 방법에 대 한 자세한 내용은 [방법: JSON 데이터 Serialize 및 Deserialize](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md)를 참조 하세요.
+마지막으로 JSON 지원이 필요하지만 AJAX 서비스는 만들지 않을 경우 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>를 사용하면 .NET 개체를 JSON 데이터로 직렬화하고 다시 .NET 형식의 인스턴스로 직접 해당 데이터를 역직렬화할 수 있습니다. 이 작업을 수행 하는 방법에 대 한 자세한 내용은 [방법: JSON 데이터 Serialize 및 Deserialize](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md)를 참조 하세요.
 
 JSON으로 작업할 경우 몇 가지 예외를 제외하고는 <xref:System.Runtime.Serialization.DataContractSerializer>에서 지원하는 것과 같은 .NET 형식이 지원됩니다. 지원 되는 형식 목록은 [데이터 계약 Serializer에서 지 원하는 형식](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)을 참조 하세요. 여기에는 대부분의 기본 형식, 대부분의 배열 및 컬렉션 형식뿐만 아니라 <xref:System.Runtime.Serialization.DataContractAttribute> 및 <xref:System.Runtime.Serialization.DataMemberAttribute>를 사용하는 복합 형식도 포함됩니다.
 
@@ -26,18 +26,18 @@ JSON으로 작업할 경우 몇 가지 예외를 제외하고는 <xref:System.Ru
 
 다음 표에서는 serialization 및 deserialization 절차를 통해 매핑될 때 .NET 형식과 JSON/JavaScript 형식 간의 대응 관계를 보여 줍니다.
 
-|.NET 형식|JSON/JavaScript|노트|
+|.NET 형식|JSON/JavaScript|참고|
 |----------------|----------------------|-----------|
-|모든 숫자 형식. 예: <xref:System.Int32>, <xref:System.Decimal> 또는 <xref:System.Double>|수|`Double.NaN`, `Double.PositiveInfinity` 및 `Double.NegativeInfinity`와 같은 특수한 값은 지원되지 않으므로 잘못된 JSON이 됩니다.|
-|<xref:System.Enum>|수|이 항목의 뒷부분에 있는 "열거 및 JSON"을 참조하십시오.|
+|모든 숫자 형식. 예: <xref:System.Int32>, <xref:System.Decimal> 또는 <xref:System.Double>|Number|`Double.NaN`, `Double.PositiveInfinity` 및 `Double.NegativeInfinity`와 같은 특수한 값은 지원되지 않으므로 잘못된 JSON이 됩니다.|
+|<xref:System.Enum>|Number|이 항목의 뒷부분에 있는 "열거 및 JSON"을 참조하십시오.|
 |<xref:System.Boolean>|Boolean|--|
-|<xref:System.String>, <xref:System.Char>|String|--|
-|<xref:System.TimeSpan>에서 <xref:System.Guid>에서 <xref:System.Uri>|String|JSON에서 이러한 형식의 형식은 XML에서와 동일 합니다 (기본적으로 ISO 8601 기간 형식의 TimeSpan, "12345678-1234567890AB의 GUID,"http://www.example.com"와 같은 자연 문자열 형식으로 된 URI). 자세한 내용은 [데이터 계약 스키마 참조](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)를 참조 하세요.|
-|<xref:System.Xml.XmlQualifiedName>|String|형식은 "name:namespace"이며 첫 번째 콜론 앞에 오는 것이 이름입니다. 이름 또는 네임스페이스가 없는 경우도 있습니다. 네임스페이스가 없는 경우 콜론도 생략할 수 있습니다.|
-|형식의 <xref:System.Array> <xref:System.Byte>|숫자 배열|각 숫자는 1바이트 값을 나타냅니다.|
+|<xref:System.String>, <xref:System.Char>|문자열|--|
+|<xref:System.TimeSpan>에서 <xref:System.Guid>에서 <xref:System.Uri>|문자열|JSON에서 이러한 형식의 형식은 XML에서와 동일 합니다 (기본적으로 ISO 8601 기간 형식의 TimeSpan, "12345678-1234567890AB의 GUID,"http://www.example.com"와 같은 자연 문자열 형식으로 된 URI). 자세한 내용은 [데이터 계약 스키마 참조](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)를 참조 하세요.|
+|<xref:System.Xml.XmlQualifiedName>|문자열|형식은 "name:namespace"이며 첫 번째 콜론 앞에 오는 것이 이름입니다. 이름 또는 네임스페이스가 없는 경우도 있습니다. 네임스페이스가 없는 경우 콜론도 생략할 수 있습니다.|
+|<xref:System.Array>의 <xref:System.Byte> 형식입니다.|숫자 배열|각 숫자는 1바이트 값을 나타냅니다.|
 |<xref:System.DateTime>|날짜/시간 또는 문자열|이 항목의 뒷부분에 있는 날짜/시간 및 JSON을 참조하십시오.|
 |<xref:System.DateTimeOffset>|복합 형식|이 항목의 뒷부분에 있는 날짜/시간 및 JSON을 참조하십시오.|
-|XML 및 ADO.NET 형식(<xref:System.Xml.XmlElement>,<br /><br /> <xref:System.Xml.Linq.XElement> <xref:System.Xml.XmlNode>의 배열,<br /><br /> <xref:System.Runtime.Serialization.ISerializable>,<br /><br /> <xref:System.Data.DataSet>).|String|이 항목의 XML 형식 및 JSON 단원을 참조하십시오.|
+|XML 및 ADO.NET 형식(<xref:System.Xml.XmlElement>,<br /><br /> <xref:System.Xml.Linq.XElement>. <xref:System.Xml.XmlNode>의 배열,<br /><br /> <xref:System.Runtime.Serialization.ISerializable>,<br /><br /> <xref:System.Data.DataSet>).|문자열|이 항목의 XML 형식 및 JSON 단원을 참조하십시오.|
 |<xref:System.DBNull>|빈 복합 형식|--|
 |컬렉션, 사전 및 배열|배열|이 항목의 컬렉션, 사전 및 배열 단원을 참조하십시오.|
 |복합 형식(<xref:System.Runtime.Serialization.DataContractAttribute> 또는 <xref:System.SerializableAttribute> 적용)|복합 형식|데이터 멤버는 JavaScript 복합 형식의 멤버가 됩니다.|
@@ -52,7 +52,7 @@ JSON으로 작업할 경우 몇 가지 예외를 제외하고는 <xref:System.Ru
 
 - 모든 `enum` 멤버는 serialize할 수 있습니다. <xref:System.Runtime.Serialization.EnumMemberAttribute> 및 <xref:System.NonSerializedAttribute> 특성은 사용될 경우 무시됩니다.
 
-- 존재하지 않는 `enum` 값을 deserialize할 수 있습니다. 예를 들어, 해당 색 이름이 정의되어 있지 않더라도 값 87을 이전 Color 열거형으로 deserialize할 수 있습니다.
+- 존재하지 않는 `enum` 값을 역직렬화할 수 있습니다. 예를 들어, 해당 색 이름이 정의되어 있지 않더라도 값 87을 이전 Color 열거형으로 역직렬화할 수 있습니다.
 
 - 플래그 `enum`은 특수한 플래그가 아니며 `enum`과 동일하게 처리됩니다.
 
@@ -99,27 +99,27 @@ XML 형식은 JSON 문자열이 됩니다.
 
 ### <a name="order-of-data-members"></a>데이터 멤버 순서
 
-JSON을 사용할 때 데이터 멤버의 순서는 중요하지 않습니다. 특히 <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A>가 설정된 경우에도 JSON 데이터를 원하는 순서로 deserialize할 수 있습니다.
+JSON을 사용할 때 데이터 멤버의 순서는 중요하지 않습니다. 특히 <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A>가 설정된 경우에도 JSON 데이터를 원하는 순서로 역직렬화할 수 있습니다.
 
 ### <a name="json-types"></a>JSON 형식
 
-deserialization 시 JSON 형식은 위의 표와 일치하지 않아도 됩니다. 예를 들어 `Int`는 일반적으로 JSON 숫자로 매핑되지만 JSON 문자열에 유효한 숫자가 있으면 이 문자열에서 deserialize할 수도 있습니다. 즉, "q"라고 하는 `Int` 데이터 멤버가 있는 경우 {"q":42} 및 {"q":"42"}는 유효합니다.
+deserialization 시 JSON 형식은 위의 표와 일치하지 않아도 됩니다. 예를 들어 `Int`는 일반적으로 JSON 숫자로 매핑되지만 JSON 문자열에 유효한 숫자가 있으면 이 문자열에서 역직렬화할 수도 있습니다. 즉, "q"라고 하는 `Int` 데이터 멤버가 있는 경우 {"q":42} 및 {"q":"42"}는 유효합니다.
 
 ### <a name="polymorphism"></a>다형성
 
 다형 serialization은 기본 형식이 필요한 경우에 파생 형식을 serialize하는 기능으로 구성됩니다. 이는 XML serialization이 지원 되는 방식과 비교할 수 있는 WCF의 JSON serialization에 대해 지원 됩니다. 예를 들어 `MyBaseType` 예상 되는 `MyDerivedType` serialize 하거나 `Object` 예상 되는 `Int` serialize 할 수 있습니다.
 
-복합 형식을 역직렬화하지 않는 한 기본 형식이 필요한 경우에 파생 형식을 역직렬화하면 형식 정보가 손실될 수도 있습니다. 예를 들어 <xref:System.Uri>가 필요한 경우 <xref:System.Object>를 serialize하면 JSON 문자열이 됩니다. 이 문자열을 다시 <xref:System.Object>로 deserialize하면 .NET <xref:System.String>이 반환됩니다. deserializer는 문자열이 처음에 <xref:System.Uri> 형식이었음을 인식하지 못합니다. 일반적으로 <xref:System.Object>가 필요한 경우 실제 원본 형식에 관계없이 모든 JSON 문자열은 .NET 문자열로 deserialize되고 .NET 컬렉션, 사전 및 배열을 serialize하는 데 사용되는 모든 JSON 배열은 <xref:System.Array> 형식의 .NET <xref:System.Object>로 deserialize됩니다. JSON 부울은 .NET <xref:System.Boolean>로 매핑됩니다. 그러나 <xref:System.Object>가 필요한 경우 JSON 숫자는 .NET <xref:System.Int32>, <xref:System.Decimal> 또는 <xref:System.Double>로 deserialize되며, 이때 가장 적합한 형식이 자동으로 선택됩니다.
+복합 형식을 역직렬화하지 않는 한 기본 형식이 필요한 경우에 파생 형식을 역직렬화하면 형식 정보가 손실될 수도 있습니다. 예를 들어 <xref:System.Uri>가 필요한 경우 <xref:System.Object>를 serialize하면 JSON 문자열이 됩니다. 이 문자열을 다시 <xref:System.Object>로 역직렬화하면 .NET <xref:System.String>이 반환됩니다. 역직렬 변환기는 문자열이 처음에 <xref:System.Uri> 형식이었음을 인식하지 못합니다. 일반적으로 <xref:System.Object>가 필요한 경우 실제 원본 형식에 관계없이 모든 JSON 문자열은 .NET 문자열로 역직렬화되고 .NET 컬렉션, 사전 및 배열을 serialize하는 데 사용되는 모든 JSON 배열은 <xref:System.Array> 형식의 .NET <xref:System.Object>로 역직렬화됩니다. JSON 부울은 .NET <xref:System.Boolean>로 매핑됩니다. 그러나 <xref:System.Object>가 필요한 경우 JSON 숫자는 .NET <xref:System.Int32>, <xref:System.Decimal> 또는 <xref:System.Double>로 역직렬화되며, 이때 가장 적합한 형식이 자동으로 선택됩니다.
 
-<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>는 인터페이스 형식으로 deserialize될 때 선언된 형식이 개체인 것처럼 deserialize됩니다.
+<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>는 인터페이스 형식으로 역직렬화될 때 선언된 형식이 개체인 것처럼 역직렬화됩니다.
 
-사용자 고유의 기본 형식 및 파생 형식으로 작업하는 경우에는 일반적으로 <xref:System.Runtime.Serialization.KnownTypeAttribute>, <xref:System.ServiceModel.ServiceKnownTypeAttribute> 또는 이와 동등한 메커니즘을 사용해야 합니다. 예를 들어 `Animal` 반환 값을 포함 하는 작업이 있고 실제로 `Cat`의 인스턴스를 반환 하는 경우 (`Animal`에서 파생 됨) <xref:System.Runtime.Serialization.KnownTypeAttribute>를 `Animal` 형식에 적용 하 고 이러한 특성에 <xref:System.ServiceModel.ServiceKnownTypeAttribute> 형식을 지정 해야 합니다. 자세한 내용은 [데이터 계약 알려진 형식](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)을 참조 하세요.
+사용자 고유의 기본 형식 및 파생 형식으로 작업하는 경우에는 일반적으로 <xref:System.Runtime.Serialization.KnownTypeAttribute>, <xref:System.ServiceModel.ServiceKnownTypeAttribute> 또는 이와 동등한 메커니즘을 사용해야 합니다. 예를 들어 `Animal` 반환 값을 포함 하는 작업이 있고 실제로 `Cat`의 인스턴스를 반환 하는 경우 (`Animal`에서 파생 됨) <xref:System.Runtime.Serialization.KnownTypeAttribute>를 `Animal` 형식에 적용 하 고 이러한 특성에 <xref:System.ServiceModel.ServiceKnownTypeAttribute> 형식을 지정 해야 합니다. 자세한 내용은 [데이터 계약 알려진 형식을](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)합니다.
 
 다형 serialization 작동 방식에 대한 자세한 내용 및 다형 serialization 사용 시 고려해야 할 제한 사항에 대한 설명은 이 항목의 뒷부분에 있는 고급 정보 단원을 참조하십시오.
 
 ### <a name="versioning"></a>버전 관리
 
-JSON에서는 <xref:System.Runtime.Serialization.IExtensibleDataObject> 인터페이스를 포함한 데이터 계약 버전 관리 기능이 완벽하게 지원됩니다. 또한 대부분의 경우에 형식을 한 가지 형식(예: XML)으로 deserialize한 다음 다른 형식(예: JSON)으로 serialize할 수 있으며 이 경우 데이터를 <xref:System.Runtime.Serialization.IExtensibleDataObject>에 유지할 수 있습니다. 자세한 내용은 [호환 가능한 데이터 계약](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)을 참조하세요. JSON은 순서가 지정되지 않으므로 순서 정보가 손실됩니다. 또한 JSON은 키 이름이 같은 여러 키/값 쌍을 지원하지 않습니다. 마지막으로, <xref:System.Runtime.Serialization.IExtensibleDataObject>의 모든 작업은 원래 다형적입니다. 즉, 모든 형식의 기본 형식인 <xref:System.Object>에 파생 형식이 할당됩니다.
+JSON에서는 <xref:System.Runtime.Serialization.IExtensibleDataObject> 인터페이스를 포함한 데이터 계약 버전 관리 기능이 완벽하게 지원됩니다. 또한 대부분의 경우에 형식을 한 가지 형식(예: XML)으로 역직렬화한 다음 다른 형식(예: JSON)으로 직렬화할 수 있으며 이 경우 데이터를 <xref:System.Runtime.Serialization.IExtensibleDataObject>에 유지할 수 있습니다. 자세한 내용은 [호환 가능한 데이터 계약](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)을 참조하세요. JSON은 순서가 지정되지 않으므로 순서 정보가 손실됩니다. 또한 JSON은 키 이름이 같은 여러 키/값 쌍을 지원하지 않습니다. 마지막으로, <xref:System.Runtime.Serialization.IExtensibleDataObject>의 모든 작업은 원래 다형적입니다. 즉, 모든 형식의 기본 형식인 <xref:System.Object>에 파생 형식이 할당됩니다.
 
 ## <a name="json-in-urls"></a>URL의 JSON
 
@@ -137,11 +137,11 @@ ASP.NET AJAX Script Manager 컨트롤 및 프록시를 사용하여 서비스를
 
 #### <a name="supported-and-unsupported-iserializable-types"></a>지원되는 ISerializable 형식과 지원되지 않는 ISerializable 형식
 
-일반적으로 <xref:System.Runtime.Serialization.ISerializable> 인터페이스를 구현하는 형식은 JSON을 serialize하거나 deserialize할 때 완전히 지원됩니다. 그러나 이러한 형식 중에는 JSON 관련 serialization의 영향을 받으면 역직렬화하지 않도록 구현되는 형식(일부 .NET Framework 형식 포함)도 있습니다.
+일반적으로 <xref:System.Runtime.Serialization.ISerializable> 인터페이스를 구현하는 형식은 JSON을 직렬화하거나 역직렬화할 때 완전히 지원됩니다. 그러나 이러한 형식 중에는 JSON 관련 serialization의 영향을 받으면 역직렬화하지 않도록 구현되는 형식(일부 .NET Framework 형식 포함)도 있습니다.
 
-- <xref:System.Runtime.Serialization.ISerializable>을 사용하면 개별 데이터 멤버의 형식을 미리 알 수 없습니다. 따라서 다형적 상황은 형식을 개체로 역직렬화하는 상황과 유사합니다. 앞서 설명한 바와 같이 이로 인해 JSON에서 형식 정보가 손실될 수 있습니다. 예를 들어, 해당 `enum` 구현에서 <xref:System.Runtime.Serialization.ISerializable>을 serialize한 형식이 적절한 캐스팅 없이 바로 `enum`으로 다시 deserialize를 시도하는 경우 실패하게 됩니다. 이는 `enum`이 JSON에서 숫자를 사용하여 serialize되고 JSON 숫자는 기본 제공 .NET 숫자 형식(Int32, Decimal 또는 Double)으로 deserialize되기 때문입니다. 따라서 `enum` 값으로 사용된 숫자가 손실됩니다.
+- <xref:System.Runtime.Serialization.ISerializable>을 사용하면 개별 데이터 멤버의 형식을 미리 알 수 없습니다. 따라서 다형적 상황은 형식을 개체로 역직렬화하는 상황과 유사합니다. 앞서 설명한 바와 같이 이로 인해 JSON에서 형식 정보가 손실될 수 있습니다. 예를 들어, 해당 `enum` 구현에서 <xref:System.Runtime.Serialization.ISerializable>을 직렬화한 형식이 적절한 캐스팅 없이 바로 `enum`으로 다시 역직렬화를 시도하는 경우 실패하게 됩니다. 이는 `enum`이 JSON에서 숫자를 사용하여 serialize되고 JSON 숫자는 기본 제공 .NET 숫자 형식(Int32, Decimal 또는 Double)으로 역직렬화되기 때문입니다. 따라서 `enum` 값으로 사용된 숫자가 손실됩니다.
 
-- 대부분의 JSON은 특정 순서를 보장하지 않기 때문에 해당 deserialization 생성자에서 특정 deserialization 순서에 의존하는 <xref:System.Runtime.Serialization.ISerializable> 형식도 일부 JSON 데이터를 deserialize하지 못할 수 있습니다.
+- 대부분의 JSON은 특정 순서를 보장하지 않기 때문에 해당 deserialization 생성자에서 특정 deserialization 순서에 의존하는 <xref:System.Runtime.Serialization.ISerializable> 형식도 일부 JSON 데이터를 역직렬화하지 못할 수 있습니다.
 
 #### <a name="factory-types"></a>팩터리 형식
 
@@ -149,7 +149,7 @@ ASP.NET AJAX Script Manager 컨트롤 및 프록시를 사용하여 서비스를
 
 ### <a name="datetime-wire-format"></a>DateTime 통신 형식
 
-<xref:System.DateTime> 값은 "/Date(700000+0500)/" 형식의 JSON 문자열로 표시됩니다. 여기서 첫 번째 숫자(이 예제에서는 700000)는 1970년 1월 1일 자정부터의 정규 시간(일광 절약 시간이 아님)인 GMT 시간대의 시간(밀리초)입니다. 이 숫자는 이보다 이전 시간을 나타낼 경우 음수가 될 수 있습니다. 예제에서 "+0500"으로 구성된 부분은 선택적 요소이며, 시간이 <xref:System.DateTimeKind.Local> 종류, 즉 deserialization 시 현지 시간대로 변환되어야 함을 나타냅니다. 이 부분이 없으면 시간은 <xref:System.DateTimeKind.Utc>로 deserialize됩니다. 실제 숫자(이 예제에서는 "0500")와 해당 기호(+ 또는 -)는 무시됩니다.
+<xref:System.DateTime> 값은 "/Date(700000+0500)/" 형식의 JSON 문자열로 표시됩니다. 여기서 첫 번째 숫자(이 예제에서는 700000)는 1970년 1월 1일 자정부터의 정규 시간(일광 절약 시간이 아님)인 GMT 시간대의 시간(밀리초)입니다. 이 숫자는 이보다 이전 시간을 나타낼 경우 음수가 될 수 있습니다. 예제에서 "+0500"으로 구성된 부분은 선택적 요소이며, 시간이 <xref:System.DateTimeKind.Local> 종류, 즉 deserialization 시 현지 시간대로 변환되어야 함을 나타냅니다. 이 부분이 없으면 시간은 <xref:System.DateTimeKind.Utc>로 역직렬화됩니다. 실제 숫자(이 예제에서는 "0500")와 해당 기호(+ 또는 -)는 무시됩니다.
 
 <xref:System.DateTime>을 serialize하는 경우 <xref:System.DateTimeKind.Local> 및 <xref:System.DateTimeKind.Unspecified> 시간은 오프셋과 함께 기록되고 <xref:System.DateTimeKind.Utc>는 오프셋 없이 기록됩니다.
 
@@ -197,7 +197,7 @@ ASP.NET AJAX 클라이언트 JavaScript 코드는 이러한 문자열을 JavaScr
 {"__type":"Circle:http://example.com/myNamespace","x":50,"y":70,"radius":10}
 ```
 
-형식 암시는 XML 스키마 인스턴스 표준을 통해 정의되고 XML을 serialize/deserialize할 때 사용되는 `xsi:type` 특성과 매우 비슷합니다.
+형식 암시는 XML 스키마 인스턴스 표준을 통해 정의되고 XML을 직렬화/역직렬화할 때 사용되는 `xsi:type` 특성과 매우 비슷합니다.
 
 "\_\_형식" 이라는 데이터 멤버는 형식 힌트와의 잠재적 충돌로 인해 사용할 수 없습니다.
 
@@ -273,7 +273,7 @@ WCF 및 ASP.NET AJAX 클라이언트 페이지에서 사용 하는 <xref:System.
 {"__type":"Shape:#MyApp.Shapes","x":41,"y":32}]
 ```
 
-<xref:System.Object>로 다시 deserialize하는 경우:
+<xref:System.Object>로 다시 역직렬화하는 경우:
 
 - `Shape`은 알려진 형식 목록에 있어야 합니다. 알려진 형식에서 `Shape` 형식의 <xref:System.Collections.Generic.List%601>는 영향을 주지 않습니다. 이 경우 serialization에서 알려진 형식에 `Shape`를 추가할 필요가 없습니다 .이 작업은 자동으로 수행 됩니다.
 

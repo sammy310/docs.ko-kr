@@ -1,19 +1,19 @@
 ---
 title: -.Net을 사용 하 여 C# JSON을 serialize 및 deserialize 하는 방법
-ms.date: 09/16/2019
+ms.date: 01/10/2020
 helpviewer_keywords:
 - JSON serialization
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: a9c690e736a08c729a4099d5e7a519ed17ec282c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 047d5b5c6fa339089d2054eb6bfe8b3066c1d00c
+ms.sourcegitcommit: dfad244ba549702b649bfef3bb057e33f24a8fb2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705797"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75904652"
 ---
-# <a name="how-to-serialize-and-deserialize-json-in-net"></a>.NET에서 JSON을 serialize 및 deserialize 하는 방법
+# <a name="how-to-serialize-and-deserialize-marshal-and-unmarshal-json-in-net"></a>.NET에서 JSON을 serialize 및 deserialize (marshal 및 트랜잭션의 역마샬링 위해) 하는 방법
 
 이 문서에서는 <xref:System.Text.Json> 네임 스페이스를 사용 하 여 JavaScript Object Notation (JSON)로 serialize 및 deserialize 하는 방법을 보여 줍니다.
 
@@ -109,7 +109,7 @@ U t f-8로 serialize 하는 것은 문자열 기반 메서드를 사용 하는 �
 * [기본 인코더](xref:System.Text.Encodings.Web.JavaScriptEncoder.Default) 는 ascii가 아닌 문자, ascii 범위 내의 HTML 구분 문자 및 [RFC 8259 JSON 사양](https://tools.ietf.org/html/rfc8259#section-7)에 따라 이스케이프 되어야 하는 문자를 이스케이프 합니다.
 * 기본적으로 JSON은 축소 되어 있습니다. [JSON을 잘 인쇄할](#serialize-to-formatted-json)수 있습니다.
 * 기본적으로 JSON 이름의 대/소문자는 .NET 이름과 일치 합니다. [JSON 이름 대/소문자를 사용자 지정할](#customize-json-names-and-values)수 있습니다.
-* 순환 참조가 감지 되 고 예외가 throw 됩니다. 자세한 내용은 GitHub의 dotnet/corefx 리포지토리에서 [순환 참조에 대 한 문제 38579](https://github.com/dotnet/corefx/issues/38579) 을 참조 하세요.
+* 순환 참조가 감지 되 고 예외가 throw 됩니다.
 * 현재는 필드가 제외 됩니다.
 
 지원 되는 형식은 다음과 같습니다.
@@ -118,7 +118,7 @@ U t f-8로 serialize 하는 것은 문자열 기반 메서드를 사용 하는 �
 * 사용자 정의 [일반 이전 CLR 개체 (POCOs)](https://stackoverflow.com/questions/250001/poco-definition).
 * 1 차원 및 가변 배열 (`ArrayName[][]`)
 * `TValue` `object`, `JsonElement`또는 POCO 인 `Dictionary<string,TValue>` 합니다.
-* 다음 네임 스페이스의 컬렉션입니다. 자세한 내용은 GitHub의 dotnet/corefx 리포지토리에서 [컬렉션 지원에 대 한 문제](https://github.com/dotnet/corefx/issues/36643) 를 참조 하세요.
+* 다음 네임 스페이스의 컬렉션입니다.
   * <xref:System.Collections>
   * <xref:System.Collections.Generic>
   * <xref:System.Collections.Immutable>
@@ -154,7 +154,7 @@ U t f-8에서 deserialize 하려면 다음 예제와 같이 `Utf8JsonReader` 또
 * 기본적으로 속성 이름 일치는 대/소문자를 구분 합니다. [대/소문자](#case-insensitive-property-matching)를 구분 하지 않도록 지정할 수 있습니다.
 * JSON에 읽기 전용 속성에 대 한 값이 포함 된 경우에는이 값이 무시 되 고 예외가 throw 되지 않습니다.
 * 매개 변수가 없는 생성자가 없는 참조 형식으로의 Deserialization은 지원 되지 않습니다.
-* 변경할 수 없는 개체 또는 읽기 전용 속성에 대 한 Deserialization은 지원 되지 않습니다. 자세한 내용은 github의 dotnet/corefx 리포지토리에서 [읽기 전용 속성 지원](https://github.com/dotnet/corefx/issues/38163) 에 대 한 [변경 불가능 개체 지원](https://github.com/dotnet/corefx/issues/38569) 및 문제 38163의 github 문제 38569을 참조 하세요.
+* 변경할 수 없는 개체 또는 읽기 전용 속성에 대 한 Deserialization은 지원 되지 않습니다.
 * 기본적으로 열거형은 숫자로 지원 됩니다. [열거형 이름을 문자열로 serialize](#enums-as-strings)할 수 있습니다.
 * 필드는 지원 되지 않습니다.
 * 기본적으로 JSON의 주석이 나 후행 쉼표는 예외를 throw 합니다. [주석과 후행 쉼표를 허용할](#allow-comments-and-trailing-commas)수 있습니다.
@@ -458,7 +458,9 @@ Serialize 할 개체의 속성이 `Dictionary<string,TValue>`형식이 면 `stri
 
 ## <a name="serialize-properties-of-derived-classes"></a>파생 클래스의 속성 직렬화
 
-컴파일 시간에 serialize 할 형식을 지정 하는 경우 다형성 serialization이 지원 되지 않습니다. 예를 들어 `WeatherForecast` 클래스와 파생 클래스 `WeatherForecastDerived`있다고 가정 합니다.
+다형 형식 계층의 Serialization은 지원 되지 않습니다. 예를 들어 속성이 인터페이스나 추상 클래스로 정의 된 경우에는 런타임 형식에 추가 속성이 있더라도 인터페이스 또는 추상 클래스에 정의 된 속성만 serialize 됩니다. 이 동작에 대 한 예외는이 섹션에 설명 되어 있습니다.
+
+예를 들어 `WeatherForecast` 클래스와 파생 클래스 `WeatherForecastDerived`있다고 가정 합니다.
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWF)]
 
@@ -480,7 +482,7 @@ Serialize 할 개체의 속성이 `Dictionary<string,TValue>`형식이 면 `stri
 
 이 동작은 파생 된 런타임 생성 형식에서 실수로 데이터가 노출 되는 것을 방지 하는 데 사용 됩니다.
 
-파생 형식의 속성을 serialize 하려면 다음 방법 중 하나를 사용 합니다.
+이전 예제에서 파생 형식의 속성을 serialize 하려면 다음 방법 중 하나를 사용 합니다.
 
 * 런타임에 형식을 지정할 수 있는 <xref:System.Text.Json.JsonSerializer.Serialize%2A> 오버 로드를 호출 합니다.
 
@@ -494,14 +496,74 @@ Serialize 할 개체의 속성이 `Dictionary<string,TValue>`형식이 면 `stri
 
 ```json
 {
+  "WindSpeed": 35,
   "Date": "2019-08-01T00:00:00-07:00",
   "TemperatureCelsius": 25,
-  "Summary": "Hot",
-  "WindSpeed": 35
+  "Summary": "Hot"
 }
 ```
 
-다형 deserialization에 대 한 자세한 내용은 [다형성 Deserialization 지원](system-text-json-converters-how-to.md#support-polymorphic-deserialization)을 참조 하세요.
+> [!IMPORTANT]
+> 이러한 접근 방식은 루트 개체의 속성이 아니라 serialize 될 루트 개체에 대해서만 다형성 serialization을 제공 합니다. 
+
+`object`형식으로 정의 하는 경우 하위 수준 개체에 대해 다형성 serialization을 가져올 수 있습니다. 예를 들어 `WeatherForecast` 클래스에 `WeatherForecast` 또는 `object`형식으로 정의할 수 있는 `PreviousForecast` 라는 속성이 있다고 가정 합니다.
+
+[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWFWithPrevious)]
+
+[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWFWithPreviousAsObject)]
+
+`PreviousForecast` 속성이 `WeatherForecastDerived`의 인스턴스를 포함 하는 경우:
+
+* `WeatherForecastWithPrevious` 직렬화의 JSON 출력에는 `WindSpeed`**포함 되지 않습니다** .
+* `WeatherForecastWithPreviousAsObject` serialize의 JSON 출력에 `WindSpeed`**포함 됩니다** .
+
+`WeatherForecastWithPreviousAsObject`serialize 하기 위해 루트 개체가 파생 형식일 수 있는 것이 아니기 때문에 `Serialize<object>` 또는 `GetType`를 호출할 필요가 없습니다. 다음 코드 예제에서는 `Serialize<object>` 또는 `GetType`를 호출 하지 않습니다.
+
+[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/SerializePolymorphic.cs?name=SnippetSerializeSecondLevel)]
+
+위의 코드는 `WeatherForecastWithPreviousAsObject`를 올바르게 serialize 합니다.
+
+```json
+{
+  "Date": "2019-08-01T00:00:00-07:00",
+  "TemperatureCelsius": 25,
+  "Summary": "Hot",
+  "PreviousForecast": {
+    "WindSpeed": 35,
+    "Date": "2019-08-01T00:00:00-07:00",
+    "TemperatureCelsius": 25,
+    "Summary": "Hot"
+  }
+}
+```
+
+`object`로 속성을 정의 하는 것과 동일한 방법이 인터페이스와 함께 작동 합니다. 다음 인터페이스 및 구현이 있고 구현 인스턴스가 포함 된 속성을 사용 하 여 클래스를 serialize 하려는 경우를 가정해 보겠습니다.
+
+[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/IForecast.cs)]
+
+`Forecasts`의 인스턴스를 serialize 하는 경우 `Tuesday`가 `object`로 정의 되어 있으므로 `Tuesday`만 `WindSpeed` 속성을 표시 합니다.
+
+[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/SerializePolymorphic.cs?name=SnippetSerializeInterface)]
+
+다음 예제에서는 앞의 코드에서 생성 되는 JSON을 보여 줍니다.
+
+```json
+{
+  "Monday": {
+    "Date": "2020-01-06T00:00:00-08:00",
+    "TemperatureCelsius": 10,
+    "Summary": "Cool"
+  },
+  "Tuesday": {
+    "Date": "2020-01-07T00:00:00-08:00",
+    "TemperatureCelsius": 11,
+    "Summary": "Rainy",
+    "WindSpeed": 10
+  }
+}
+```
+
+다형 **직렬화**에 대 한 자세한 내용과 **deserialization**에 대 한 자세한 내용은 [Newtonsoft.json에서 system.string으로 마이그레이션하는 방법](system-text-json-migrate-from-newtonsoft-how-to.md#polymorphic-serialization)을 참조 하세요.
 
 ## <a name="allow-comments-and-trailing-commas"></a>주석과 후행 쉼표 허용
 
@@ -626,11 +688,11 @@ Deserialization 후 `WeatherForecastWithDefault` 개체의 `Summary` 속성은 n
 
 이 옵션을 사용 하는 경우 `WeatherForecastWithDefault` 개체의 `Summary` 속성이 deserialization 후의 기본값 "요약 없음"입니다.
 
-JSON의 Null 값은 유효한 경우에만 무시 됩니다. Null을 허용 하지 않는 값 형식에 대 한 Null 값은 예외를 발생 시킵니다. 자세한 내용은 GitHub의 dotnet/corefx 리포지토리에서 [nullable이 아닌 값 형식에 대 한 문제 40922](https://github.com/dotnet/corefx/issues/40922) 을 참조 하세요.
+JSON의 Null 값은 유효한 경우에만 무시 됩니다. Null을 허용 하지 않는 값 형식에 대 한 Null 값은 예외를 발생 시킵니다.
 
 ## <a name="utf8jsonreader-utf8jsonwriter-and-jsondocument"></a>Utf8JsonReader, Utf8JsonWriter 및 JsonDocument
 
-<xref:System.Text.Json.Utf8JsonReader?displayProperty=fullName>는 `ReadOnlySpan<byte>`에서 읽어온 UTF-8 인코드된 JSON 텍스트를 위한 고성능, 저할당, 전달 전용 판독기입니다. `Utf8JsonReader`는 사용자 지정 파서 및 deserializers를 빌드하는 데 사용할 수 있는 하위 수준 형식입니다. <xref:System.Text.Json.JsonSerializer.Deserialize%2A?displayProperty=nameWithType> 메서드는 내부적으로 `Utf8JsonReader`를 사용 합니다.
+<xref:System.Text.Json.Utf8JsonReader?displayProperty=fullName>는 u t f-8로 인코딩된 JSON 텍스트에 대 한 고성능, 낮은 할당, 전방 전용 판독기 이며 `ReadOnlySpan<byte>` 또는 `ReadOnlySequence<byte>`에서 읽습니다. `Utf8JsonReader`는 사용자 지정 파서 및 deserializers를 빌드하는 데 사용할 수 있는 하위 수준 형식입니다. <xref:System.Text.Json.JsonSerializer.Deserialize%2A?displayProperty=nameWithType> 메서드는 내부적으로 `Utf8JsonReader`를 사용 합니다.
 
 <xref:System.Text.Json.Utf8JsonWriter?displayProperty=fullName>는 `String`, `Int32`및 `DateTime`같은 일반적인 .NET 유형에 서 UTF-8 인코딩 JSON 텍스트를 작성 하는 고성능 방법입니다. 기록기는 사용자 지정 serializer를 빌드하는 데 사용할 수 있는 하위 수준 형식입니다. <xref:System.Text.Json.JsonSerializer.Serialize%2A?displayProperty=nameWithType> 메서드는 내부적으로 `Utf8JsonWriter`를 사용 합니다.
 
@@ -699,14 +761,15 @@ JSON의 Null 값은 유효한 경우에만 무시 됩니다. Null을 허용 하�
 
 위의 코드:
 
+* JSON에 개체 배열이 포함 되어 있다고 가정 하 고 각 개체에 문자열 형식의 "name" 속성이 포함 될 수 있습니다.
+* "대학"으로 끝나는 개체 및 "이름" 속성 값의 개수를 계산 합니다.
 * 는 파일이 u t f-16으로 인코딩되고 u t f-8로 코드 변환 가정 합니다. U t f-8로 인코딩된 파일은 다음 코드를 사용 하 여 `ReadOnlySpan<byte>`직접 읽을 수 있습니다.
 
   ```csharp
   ReadOnlySpan<byte> jsonReadOnlySpan = File.ReadAllBytes(fileName); 
   ```
 
-* JSON에 개체 배열이 포함 되어 있다고 가정 하 고 각 개체에 문자열 형식의 "name" 속성이 포함 될 수 있습니다.
-* "대학"으로 끝나는 개체 및 `name` 속성 값을 계산 합니다.
+  파일에 UTF-8 바이트 순서 표시 (BOM)가 포함 된 경우 판독기가 텍스트를 예상 하므로 `Utf8JsonReader`바이트를 전달 하기 전에이를 제거 합니다. 그렇지 않으면 BOM은 잘못 된 JSON으로 간주 되며 판독기는 예외를 throw 합니다.
 
 위의 코드에서 읽을 수 있는 JSON 샘플은 다음과 같습니다. 결과 요약 메시지는 "2-4 중에서 이름이 ' 대학 '로 끝나는 이름입니다.
 
@@ -715,7 +778,8 @@ JSON의 Null 값은 유효한 경우에만 무시 됩니다. Null을 허용 하�
 ## <a name="additional-resources"></a>추가 자료
 
 * [System.object 개요](system-text-json-overview.md)
-* [System.object API 참조](xref:System.Text.Json)
-* [System.object의 사용자 지정 변환기를 작성 합니다.](system-text-json-converters-how-to.md)
+* [사용자 지정 변환기를 작성 하는 방법](system-text-json-converters-how-to.md)
+* [Newtonsoft.json에서 마이그레이션하는 방법](system-text-json-migrate-from-newtonsoft-how-to.md)
 * [System.object의 DateTime 및 DateTimeOffset 지원](../datetime/system-text-json-support.md)
-* [Json-기능-doc로 레이블이 지정 된 dotnet/corefx 리포지토리의 GitHub 문제](https://github.com/dotnet/corefx/labels/json-functionality-doc) 
+* [System.object API 참조](xref:System.Text.Json)
+<!-- * [System.Text.Json roadmap](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/roadmap/README.md)-->

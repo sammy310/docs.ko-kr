@@ -1,20 +1,20 @@
 ---
 title: JSON serialization에 대 한 사용자 지정 변환기를 작성 하는 방법-.NET
-ms.date: 10/16/2019
+ms.date: 01/10/2020
 helpviewer_keywords:
 - JSON serialization
 - serializing objects
 - serialization
 - objects, serializing
 - converters
-ms.openlocfilehash: efbaf852f07b2b59111f0e330cf52470e3eca4c3
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 8a2af76ca64359c12fafce6678def14d11d9f029
+ms.sourcegitcommit: dfad244ba549702b649bfef3bb057e33f24a8fb2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705810"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75904562"
 ---
-# <a name="how-to-write-custom-converters-for-json-serialization-in-net"></a>.NET에서 JSON serialization에 대 한 사용자 지정 변환기를 작성 하는 방법
+# <a name="how-to-write-custom-converters-for-json-serialization-marshalling-in-net"></a>.NET에서 JSON serialization에 대 한 사용자 지정 변환기를 작성 하는 방법 (마샬링)
 
 이 문서에서는 <xref:System.Text.Json> 네임 스페이스에 제공 된 JSON serialization 클래스에 대 한 사용자 지정 변환기를 만드는 방법을 보여 줍니다. `System.Text.Json`에 대 한 소개는 [.net에서 JSON을 serialize 및 deserialize 하는 방법](system-text-json-how-to.md)을 참조 하세요.
 
@@ -23,7 +23,7 @@ ms.locfileid: "75705810"
 * 기본 제공 변환기의 기본 동작을 재정의 합니다. 예를 들어 `DateTime` 값을 기본 ISO 8601-1:2019 형식 대신 mm/dd/yyyy 형식으로 표시 하도록 할 수 있습니다.
 * 사용자 지정 값 형식을 지원 하려면입니다. 예를 들어 `PhoneNumber` 구조체입니다.
 
-현재 릴리스에 포함 되지 않은 기능을 사용 하 여 `System.Text.Json`를 확장 하는 사용자 지정 변환기를 작성할 수도 있습니다. 이 문서의 뒷부분에서 설명 하는 시나리오는 다음과 같습니다.
+현재 릴리스에 포함 되지 않은 기능을 사용 하 여 `System.Text.Json`를 사용자 지정 하거나 확장 하는 사용자 지정 변환기를 작성할 수도 있습니다. 이 문서의 뒷부분에서 설명 하는 시나리오는 다음과 같습니다.
 
 * [유추 된 형식을 개체 속성으로 Deserialize](#deserialize-inferred-types-to-object-properties)합니다.
 * [문자열이 아닌 키로 사전을 지원](#support-dictionary-with-non-string-key)합니다.
@@ -70,7 +70,7 @@ ms.locfileid: "75705810"
 * `Write` 메서드를 재정의 하 여 `T`형식의 들어오는 개체를 serialize 합니다. 메서드에 전달 된 <xref:System.Text.Json.Utf8JsonWriter>를 사용 하 여 JSON을 작성 합니다.
 * 필요한 경우에만 `CanConvert` 메서드를 재정의 합니다. 변환할 형식이 `T`형식일 때 기본 구현에서는 `true`을 반환 합니다. 따라서 형식 `T` 지 원하는 변환기는이 메서드를 재정의할 필요가 없습니다. 이 메서드를 재정의 해야 하는 변환기에 대 한 예제는이 문서의 뒷부분에 있는 [다형 deserialization](#support-polymorphic-deserialization) 단원을 참조 하세요.
 
-[기본 제공 변환기 소스 코드](https://github.com/dotnet/corefx/tree/master/src/System.Text.Json/src/System/Text/Json/Serialization/Converters/) 를 참조 구현으로 참조 하 여 사용자 지정 변환기를 작성할 수 있습니다.
+[기본 제공 변환기 소스 코드](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/src/System/Text/Json/Serialization/Converters/) 를 참조 구현으로 참조 하 여 사용자 지정 변환기를 작성할 수 있습니다.
 
 ## <a name="steps-to-follow-the-factory-pattern"></a>팩터리 패턴을 따르는 단계
 
@@ -179,14 +179,15 @@ Serialization 또는 deserialization 중에는 각 JSON 요소에 대해 가장 
 
 ### <a name="deserialize-inferred-types-to-object-properties"></a>유추 된 형식을 개체 속성으로 Deserialize
 
-`Object`형식의 속성으로 deserialize 할 때 `JsonElement` 개체가 만들어집니다. 그 이유는 역직렬 변환기가 만들 CLR 유형을 알지 못하고 추측 하려고 하지 않기 때문입니다. 예를 들어 JSON 속성에 "true"가 있는 경우 역직렬 변환기는 값이 `Boolean`임을 유추 하지 않으며 요소에 "01/01/2019"가 있는 경우 역직렬 변환기가 `DateTime`를 유추 하지 않습니다.
+`object`형식의 속성으로 deserialize 할 때 `JsonElement` 개체가 만들어집니다. 그 이유는 역직렬 변환기가 만들 CLR 유형을 알지 못하고 추측 하려고 하지 않기 때문입니다. 예를 들어 JSON 속성에 "true"가 있는 경우 역직렬 변환기는 값이 `Boolean`임을 유추 하지 않으며 요소에 "01/01/2019"가 있는 경우 역직렬 변환기가 `DateTime`를 유추 하지 않습니다.
 
 형식 유추는 정확 하지 않을 수 있습니다. 역직렬 변환기가 `long`로 소수점이 없는 JSON 번호를 구문 분석 하는 경우 값이 원래 `ulong` 또는 `BigInteger`으로 serialize 되 면 범위를 벗어난 문제를 일으킬 수 있습니다. 소수점이 `double` 된 숫자를 구문 분석 하면 해당 숫자가 원래 `decimal`로 serialize 된 경우에는 전체 자릿수가 손실 될 수 있습니다.
 
-형식 유추가 필요한 시나리오의 경우 다음 코드는 `Object` 속성에 대 한 사용자 지정 변환기를 보여 줍니다. 코드는 다음을 변환 합니다.
+형식 유추가 필요한 시나리오의 경우 다음 코드는 `object` 속성에 대 한 사용자 지정 변환기를 보여 줍니다. 코드는 다음을 변환 합니다.
 
 * `true` 및 `false` `Boolean`
-* `long` 또는 `double` 숫자
+* `long` 10 진수가 없는 숫자
+* `double` 10 진수를 포함 하는 숫자
 * `DateTime` 날짜
 * `string` 문자열
 * 다른 모든 항목 `JsonElement`
@@ -195,9 +196,9 @@ Serialization 또는 deserialization 중에는 각 JSON 요소에 대해 가장 
 
 다음 코드는 변환기를 등록 합니다.
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/ConvertInferredTypesToObject.cs?name=SnippetRegister)]
+[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/DeserializeInferredTypesToObject.cs?name=SnippetRegister)]
 
-다음은 `Object` 속성을 사용 하는 예제 유형입니다.
+다음은 `object` 속성을 사용 하는 예제 유형입니다.
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWFWithObjectProperties)]
 
@@ -213,7 +214,7 @@ Deserialize 할 JSON의 다음 예제에는 `DateTime`, `long`및 `string`deseri
 
 사용자 지정 변환기가 없으면 deserialization은 각 속성에 `JsonElement`을 배치 합니다.
 
-`System.Text.Json.Serialization` 네임 스페이스의 [단위 테스트 폴더](https://github.com/dotnet/corefx/blob/master/src/System.Text.Json/tests/Serialization/) 에는 개체 속성에 대 한 deserialization을 처리 하는 사용자 지정 변환기의 추가 예가 있습니다.
+`System.Text.Json.Serialization` 네임 스페이스의 [단위 테스트 폴더](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/) 에는 속성 `object` deserialization을 처리 하는 사용자 지정 변환기의 추가 예가 있습니다.
 
 ### <a name="support-dictionary-with-non-string-key"></a>문자열이 아닌 키가 포함 된 지원 사전
 
@@ -225,7 +226,7 @@ Deserialize 할 JSON의 다음 예제에는 `DateTime`, `long`및 `string`deseri
 
 다음 코드는 변환기를 등록 합니다.
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/ConvertDictionaryTkeyEnumTValue.cs?name=SnippetRegister)]
+[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/RoundtripDictionaryTkeyEnumTValue.cs?name=SnippetRegister)]
 
 변환기는 다음 `Enum`를 사용 하는 다음 클래스의 `TemperatureRanges` 속성을 serialize 및 deserialize 할 수 있습니다.
 
@@ -245,11 +246,11 @@ Serialization에서 JSON 출력은 다음 예제와 같습니다.
 }
 ```
 
-`System.Text.Json.Serialization` 네임 스페이스의 [단위 테스트 폴더](https://github.com/dotnet/corefx/blob/master/src/System.Text.Json/tests/Serialization/) 에는 문자열 키가 아닌 사전을 처리 하는 사용자 지정 변환기의 추가 예가 있습니다.
+`System.Text.Json.Serialization` 네임 스페이스의 [단위 테스트 폴더](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/) 에는 문자열 키가 아닌 사전을 처리 하는 사용자 지정 변환기의 추가 예가 있습니다.
 
 ### <a name="support-polymorphic-deserialization"></a>다형 deserialization 지원
 
-[다형 serialization](system-text-json-how-to.md#serialize-properties-of-derived-classes) 에는 사용자 지정 변환기가 필요 하지 않지만 deserialization을 수행 하려면 사용자 지정 변환기가 필요 합니다.
+기본 제공 기능은 제한 된 범위의 [다형성 serialization](system-text-json-how-to.md#serialize-properties-of-derived-classes) 을 제공 하지만 deserialization을 지원 하지 않습니다. Deserialization을 수행 하려면 사용자 지정 변환기가 필요 합니다.
 
 예를 들어 `Employee` 및 `Customer` 파생 클래스를 사용 하는 `Person` 추상 기본 클래스가 있다고 가정 합니다. 다형 deserialization은 디자인 타임에 `Person`를 deserialization 대상으로 지정할 수 있으며, JSON의 `Customer` 및 `Employee` 개체가 런타임에 올바르게 deserialize 됨을 의미 합니다. Deserialization을 수행 하는 동안 JSON에서 필요한 형식을 식별 하는 단서를 찾아야 합니다. 사용 가능한 단서의 종류는 각 시나리오 마다 다릅니다. 예를 들어 판별자 속성을 사용할 수 있거나 특정 속성이 있는지 여부를 사용 해야 할 수도 있습니다. 현재 `System.Text.Json` 릴리스에서는 다형성 deserialization 시나리오를 처리 하는 방법을 지정 하는 특성을 제공 하지 않으므로 사용자 지정 변환기가 필요 합니다.
 
@@ -261,7 +262,7 @@ Serialization에서 JSON 출력은 다음 예제와 같습니다.
 
 다음 코드는 변환기를 등록 합니다.
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/ConvertPolymorphic.cs?name=SnippetRegister)]
+[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/RoundtripPolymorphic.cs?name=SnippetRegister)]
 
 변환기는 동일한 변환기를 사용 하 여 만든 JSON을 deserialize 할 수 있습니다. 예를 들면 다음과 같습니다.
 
@@ -282,22 +283,25 @@ Serialization에서 JSON 출력은 다음 예제와 같습니다.
 
 ## <a name="other-custom-converter-samples"></a>기타 사용자 지정 변환기 샘플
 
-`System.Text.Json.Serialization` 소스 코드의 [단위 테스트 폴더](https://github.com/dotnet/corefx/blob/master/src/System.Text.Json/tests/Serialization/) 에는 다음과 같은 다른 사용자 지정 변환기 샘플이 포함 되어 있습니다.
+[Newtonsoft.json에서 system.object로 마이그레이션](system-text-json-migrate-from-newtonsoft-how-to.md) 문서에는 사용자 지정 변환기의 추가 샘플이 포함 되어 있습니다.
 
-* deserialize 할 때 null을 0으로 변환 하는 `Int32` 변환기
-* deserialize 할 때 문자열 및 숫자 값을 모두 허용 하는 `Int32` 변환기
-* `Enum` 변환기
-* 외부 데이터를 허용 하는 `List<T>` 변환기
-* 쉼표로 구분 된 숫자 목록과 함께 작동 하는 `Long[]` 변환기 
+`System.Text.Json.Serialization` 소스 코드의 [단위 테스트 폴더](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/) 에는 다음과 같은 다른 사용자 지정 변환기 샘플이 포함 되어 있습니다.
+
+* [Deserialize 할 때 null을 0으로 변환 하는 Int32 변환기](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.NullValueType.cs)
+* [Deserialize 할 때 문자열 및 숫자 값을 모두 허용 하는 Int32 변환기](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.Int32.cs)
+* [Enum 변환기](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.Enum.cs)
+* [외부 데이터를 허용 하는\<T > 변환기 나열](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.List.cs)
+* [쉼표로 구분 된 숫자 목록과 함께 작동 하는 Long [] 변환기](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.Array.cs) 
+
+기존 기본 제공 변환기의 동작을 수정 하는 변환기를 만들어야 하는 경우 사용자 지정을 위한 시작 지점으로 사용할 [기존 변환기의 소스 코드](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/src/System/Text/Json/Serialization/Converters) 를 가져올 수 있습니다.
 
 ## <a name="additional-resources"></a>추가 자료
 
+* [기본 제공 변환기에 대 한 소스 코드](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/src/System/Text/Json/Serialization/Converters)
+* [System.object의 DateTime 및 DateTimeOffset 지원](../datetime/system-text-json-support.md)
 * [System.object 개요](system-text-json-overview.md)
-* [System.object API 참조](xref:System.Text.Json)
 * [System.object를 사용 하는 방법](system-text-json-how-to.md)
-* [기본 제공 변환기에 대 한 소스 코드](https://github.com/dotnet/corefx/tree/master/src/System.Text.Json/src/System/Text/Json/Serialization/Converters/)
-* `System.Text.Json`에 대 한 사용자 지정 변환기와 관련 된 GitHub 문제
-  * [36639 사용자 지정 변환기 소개](https://github.com/dotnet/corefx/issues/36639)
-  * [38713 개체를 역직렬화 하는 방법](https://github.com/dotnet/corefx/issues/38713)
-  * [40120 문자열 키 사전이 아닌 사전 정보](https://github.com/dotnet/corefx/issues/40120)
-  * [37787 다형성 deserialization 정보](https://github.com/dotnet/corefx/issues/37787)
+* [Newtonsoft.json에서 마이그레이션하는 방법](system-text-json-migrate-from-newtonsoft-how-to.md)
+* [System.object API 참조](xref:System.Text.Json)
+* [System.string API 참조](xref:System.Text.Json.Serialization)
+<!-- * [System.Text.Json roadmap](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/roadmap/README.md)-->
