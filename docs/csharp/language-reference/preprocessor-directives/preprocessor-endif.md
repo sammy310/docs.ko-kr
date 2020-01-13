@@ -1,21 +1,20 @@
 ---
 title: '#endif - C# 참조'
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - '#endif'
 helpviewer_keywords:
 - '#endif directive [C#]'
 ms.assetid: 6a5fca55-5aee-441f-86f6-1c99fbe9ec05
-ms.openlocfilehash: 74205c836b4eeb2d8b17b907bb13708f3225df08
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: cc344a224e2308e843328b228dd5e2466d02069f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69608572"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712548"
 ---
-# <a name="endif-c-reference"></a><span data-ttu-id="0a71d-102">#endif(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="0a71d-102">#endif (C# Reference)</span></span>
-<span data-ttu-id="0a71d-103">`#endif`는 [#if](./preprocessor-if.md) 지시문으로 시작한 조건부 지시문의 끝을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="0a71d-103">`#endif` specifies the end of a conditional directive, which began with the [#if](./preprocessor-if.md) directive.</span></span> <span data-ttu-id="0a71d-104">예를 들면 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="0a71d-104">For example,</span></span>  
+# <a name="endif-c-reference"></a><span data-ttu-id="9e2df-102">#endif(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="9e2df-102">#endif (C# Reference)</span></span>
+<span data-ttu-id="9e2df-103">`#endif`는 [#if](./preprocessor-if.md) 지시문으로 시작한 조건부 지시문의 끝을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="9e2df-103">`#endif` specifies the end of a conditional directive, which began with the [#if](./preprocessor-if.md) directive.</span></span> <span data-ttu-id="9e2df-104">예를 들면 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="9e2df-104">For example,</span></span>  
   
 ```csharp
 #define DEBUG  
@@ -25,11 +24,11 @@ ms.locfileid: "69608572"
 #endif  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="0a71d-105">설명</span><span class="sxs-lookup"><span data-stu-id="0a71d-105">Remarks</span></span>  
- <span data-ttu-id="0a71d-106">`#if` 지시문으로 시작되는 조건부 지시문은 `#endif` 지시문을 사용하여 명시적으로 종료해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="0a71d-106">A conditional directive, beginning with a `#if` directive, must explicitly be terminated with a `#endif` directive.</span></span> <span data-ttu-id="0a71d-107">`#endif`를 사용하는 방법에 대한 예제는 [#if](./preprocessor-if.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="0a71d-107">See [#if](./preprocessor-if.md) for an example of how to use `#endif`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="9e2df-105">설명</span><span class="sxs-lookup"><span data-stu-id="9e2df-105">Remarks</span></span>  
+ <span data-ttu-id="9e2df-106">`#if` 지시문으로 시작되는 조건부 지시문은 `#endif` 지시문을 사용하여 명시적으로 종료해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="9e2df-106">A conditional directive, beginning with a `#if` directive, must explicitly be terminated with a `#endif` directive.</span></span> <span data-ttu-id="9e2df-107">`#endif`를 사용하는 방법에 대한 예제는 [#if](./preprocessor-if.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="9e2df-107">See [#if](./preprocessor-if.md) for an example of how to use `#endif`.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0a71d-108">참고 항목</span><span class="sxs-lookup"><span data-stu-id="0a71d-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9e2df-108">참조</span><span class="sxs-lookup"><span data-stu-id="9e2df-108">See also</span></span>
 
-- [<span data-ttu-id="0a71d-109">C# 참조</span><span class="sxs-lookup"><span data-stu-id="0a71d-109">C# Reference</span></span>](../index.md)
-- [<span data-ttu-id="0a71d-110">C# 프로그래밍 가이드</span><span class="sxs-lookup"><span data-stu-id="0a71d-110">C# Programming Guide</span></span>](../../programming-guide/index.md)
-- [<span data-ttu-id="0a71d-111">C# 전처리기 지시문</span><span class="sxs-lookup"><span data-stu-id="0a71d-111">C# Preprocessor Directives</span></span>](./index.md)
+- [<span data-ttu-id="9e2df-109">C# 참조</span><span class="sxs-lookup"><span data-stu-id="9e2df-109">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="9e2df-110">C# 프로그래밍 가이드</span><span class="sxs-lookup"><span data-stu-id="9e2df-110">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="9e2df-111">C# 전처리기 지시문</span><span class="sxs-lookup"><span data-stu-id="9e2df-111">C# Preprocessor Directives</span></span>](./index.md)

@@ -1,6 +1,5 @@
 ---
 title: struct - C# 참조
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - struct_CSharpKeyword
@@ -8,16 +7,16 @@ helpviewer_keywords:
 - struct keyword [C#]
 - structs [C#], struct keyword
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: a78488ad902b0a96a30ad197b0ece043543c3d69
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 9363cff913027d491f7df0e0d0dac61638d6f802
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422309"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715132"
 ---
-# <a name="struct-c-reference"></a><span data-ttu-id="e9f59-102">struct(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="e9f59-102">struct (C# Reference)</span></span>
+# <a name="struct-c-reference"></a><span data-ttu-id="2bc39-102">struct(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="2bc39-102">struct (C# Reference)</span></span>
 
-<span data-ttu-id="e9f59-103">`struct` 형식은 인벤토리의 항목 특성이나 사각형의 좌표와 같은 관련 변수의 소규모 그룹을 캡슐화하는 데 일반적으로 사용되는 값 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="e9f59-103">A `struct` type is a value type that is typically used to encapsulate small groups of related variables, such as the coordinates of a rectangle or the characteristics of an item in an inventory.</span></span> <span data-ttu-id="e9f59-104">다음 예제에서는 간단한 구조체 선언을 보여줍니다.</span><span class="sxs-lookup"><span data-stu-id="e9f59-104">The following example shows a simple struct declaration:</span></span>
+<span data-ttu-id="2bc39-103">`struct` 형식은 인벤토리의 항목 특성이나 사각형의 좌표와 같은 관련 변수의 소규모 그룹을 캡슐화하는 데 일반적으로 사용되는 값 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="2bc39-103">A `struct` type is a value type that is typically used to encapsulate small groups of related variables, such as the coordinates of a rectangle or the characteristics of an item in an inventory.</span></span> <span data-ttu-id="2bc39-104">다음 예제에서는 간단한 구조체 선언을 보여줍니다.</span><span class="sxs-lookup"><span data-stu-id="2bc39-104">The following example shows a simple struct declaration:</span></span>
 
 ```csharp
 public struct Book
@@ -28,33 +27,33 @@ public struct Book
 }
 ```
 
-## <a name="remarks"></a><span data-ttu-id="e9f59-105">설명</span><span class="sxs-lookup"><span data-stu-id="e9f59-105">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="2bc39-105">설명</span><span class="sxs-lookup"><span data-stu-id="2bc39-105">Remarks</span></span>
 
-<span data-ttu-id="e9f59-106">구조체는 [생성자](../../programming-guide/classes-and-structs/constructors.md), [상수](../../programming-guide/classes-and-structs/constants.md), [필드](../../programming-guide/classes-and-structs/fields.md), [메서드](../../programming-guide/classes-and-structs/methods.md), [속성](../../programming-guide/classes-and-structs/properties.md), [인덱서](../../programming-guide/indexers/index.md), [연산자](../operators/index.md), [이벤트](../../programming-guide/events/index.md) 및 [중첩 형식](../../programming-guide/classes-and-structs/nested-types.md)도 포함할 수 있습니다. 그러나 이러한 멤버가 여러 개 필요한 경우에는 구조체 대신 클래스 형식을 지정하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="e9f59-106">Structs can also contain [constructors](../../programming-guide/classes-and-structs/constructors.md), [constants](../../programming-guide/classes-and-structs/constants.md), [fields](../../programming-guide/classes-and-structs/fields.md), [methods](../../programming-guide/classes-and-structs/methods.md), [properties](../../programming-guide/classes-and-structs/properties.md), [indexers](../../programming-guide/indexers/index.md), [operators](../operators/index.md), [events](../../programming-guide/events/index.md), and [nested types](../../programming-guide/classes-and-structs/nested-types.md), although if several such members are required, you should consider making your type a class instead.</span></span>
+<span data-ttu-id="2bc39-106">구조체는 [생성자](../../programming-guide/classes-and-structs/constructors.md), [상수](../../programming-guide/classes-and-structs/constants.md), [필드](../../programming-guide/classes-and-structs/fields.md), [메서드](../../programming-guide/classes-and-structs/methods.md), [속성](../../programming-guide/classes-and-structs/properties.md), [인덱서](../../programming-guide/indexers/index.md), [연산자](../operators/index.md), [이벤트](../../programming-guide/events/index.md) 및 [중첩 형식](../../programming-guide/classes-and-structs/nested-types.md)도 포함할 수 있습니다. 그러나 이러한 멤버가 여러 개 필요한 경우에는 구조체 대신 클래스 형식을 지정하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="2bc39-106">Structs can also contain [constructors](../../programming-guide/classes-and-structs/constructors.md), [constants](../../programming-guide/classes-and-structs/constants.md), [fields](../../programming-guide/classes-and-structs/fields.md), [methods](../../programming-guide/classes-and-structs/methods.md), [properties](../../programming-guide/classes-and-structs/properties.md), [indexers](../../programming-guide/indexers/index.md), [operators](../operators/index.md), [events](../../programming-guide/events/index.md), and [nested types](../../programming-guide/classes-and-structs/nested-types.md), although if several such members are required, you should consider making your type a class instead.</span></span>
 
-<span data-ttu-id="e9f59-107">예제를 보려면 [구조체 사용](../../programming-guide/classes-and-structs/using-structs.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="e9f59-107">For examples, see [Using Structs](../../programming-guide/classes-and-structs/using-structs.md).</span></span>
+<span data-ttu-id="2bc39-107">예제를 보려면 [구조체 사용](../../programming-guide/classes-and-structs/using-structs.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="2bc39-107">For examples, see [Using Structs](../../programming-guide/classes-and-structs/using-structs.md).</span></span>
 
-<span data-ttu-id="e9f59-108">구조체는 인터페이스를 구현할 수는 있지만 다른 구조체를 상속할 수는 없습니다.</span><span class="sxs-lookup"><span data-stu-id="e9f59-108">Structs can implement an interface but they cannot inherit from another struct.</span></span> <span data-ttu-id="e9f59-109">그러므로 구조체 멤버를 `protected`로 선언할 수는 없습니다.</span><span class="sxs-lookup"><span data-stu-id="e9f59-109">For that reason, struct members cannot be declared as `protected`.</span></span>
+<span data-ttu-id="2bc39-108">구조체는 인터페이스를 구현할 수는 있지만 다른 구조체를 상속할 수는 없습니다.</span><span class="sxs-lookup"><span data-stu-id="2bc39-108">Structs can implement an interface but they cannot inherit from another struct.</span></span> <span data-ttu-id="2bc39-109">그러므로 구조체 멤버를 `protected`로 선언할 수는 없습니다.</span><span class="sxs-lookup"><span data-stu-id="2bc39-109">For that reason, struct members cannot be declared as `protected`.</span></span>
 
-<span data-ttu-id="e9f59-110">자세한 내용은 [구조체](../../programming-guide/classes-and-structs/structs.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="e9f59-110">For more information, see [Structs](../../programming-guide/classes-and-structs/structs.md).</span></span>
+<span data-ttu-id="2bc39-110">자세한 내용은 [구조체](../../programming-guide/classes-and-structs/structs.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="2bc39-110">For more information, see [Structs](../../programming-guide/classes-and-structs/structs.md).</span></span>
 
-## <a name="examples"></a><span data-ttu-id="e9f59-111">예</span><span class="sxs-lookup"><span data-stu-id="e9f59-111">Examples</span></span>
+## <a name="examples"></a><span data-ttu-id="2bc39-111">예</span><span class="sxs-lookup"><span data-stu-id="2bc39-111">Examples</span></span>
 
-<span data-ttu-id="e9f59-112">예제 및 자세한 내용은 [구조체 사용](../../programming-guide/classes-and-structs/using-structs.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="e9f59-112">For examples and more information, see [Using Structs](../../programming-guide/classes-and-structs/using-structs.md).</span></span>
+<span data-ttu-id="2bc39-112">예제 및 자세한 내용은 [구조체 사용](../../programming-guide/classes-and-structs/using-structs.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="2bc39-112">For examples and more information, see [Using Structs](../../programming-guide/classes-and-structs/using-structs.md).</span></span>
 
-## <a name="c-language-specification"></a><span data-ttu-id="e9f59-113">C# 언어 사양</span><span class="sxs-lookup"><span data-stu-id="e9f59-113">C# language specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="2bc39-113">C# 언어 사양</span><span class="sxs-lookup"><span data-stu-id="2bc39-113">C# language specification</span></span>
 
-<span data-ttu-id="e9f59-114">예제를 보려면 [구조체 사용](../../programming-guide/classes-and-structs/using-structs.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="e9f59-114">For examples, see [Using Structs](../../programming-guide/classes-and-structs/using-structs.md).</span></span>
+<span data-ttu-id="2bc39-114">예제를 보려면 [구조체 사용](../../programming-guide/classes-and-structs/using-structs.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="2bc39-114">For examples, see [Using Structs](../../programming-guide/classes-and-structs/using-structs.md).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="e9f59-115">참고 항목</span><span class="sxs-lookup"><span data-stu-id="e9f59-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2bc39-115">참조</span><span class="sxs-lookup"><span data-stu-id="2bc39-115">See also</span></span>
 
-- [<span data-ttu-id="e9f59-116">C# 참조</span><span class="sxs-lookup"><span data-stu-id="e9f59-116">C# Reference</span></span>](../index.md)
-- [<span data-ttu-id="e9f59-117">C# 프로그래밍 가이드</span><span class="sxs-lookup"><span data-stu-id="e9f59-117">C# Programming Guide</span></span>](../../programming-guide/index.md)
-- [<span data-ttu-id="e9f59-118">C# 키워드</span><span class="sxs-lookup"><span data-stu-id="e9f59-118">C# Keywords</span></span>](index.md)
-- [<span data-ttu-id="e9f59-119">기본값 표</span><span class="sxs-lookup"><span data-stu-id="e9f59-119">Default Values Table</span></span>](default-values-table.md)
-- [<span data-ttu-id="e9f59-120">기본 제공 형식 표</span><span class="sxs-lookup"><span data-stu-id="e9f59-120">Built-In Types Table</span></span>](built-in-types-table.md)
-- [<span data-ttu-id="e9f59-121">유형</span><span class="sxs-lookup"><span data-stu-id="e9f59-121">Types</span></span>](/dotnet/csharp/language-reference/keywords)
-- [<span data-ttu-id="e9f59-122">값 형식</span><span class="sxs-lookup"><span data-stu-id="e9f59-122">Value Types</span></span>](value-types.md)
-- [<span data-ttu-id="e9f59-123">class</span><span class="sxs-lookup"><span data-stu-id="e9f59-123">class</span></span>](class.md)
-- [<span data-ttu-id="e9f59-124">interface</span><span class="sxs-lookup"><span data-stu-id="e9f59-124">interface</span></span>](interface.md)
-- [<span data-ttu-id="e9f59-125">클래스 및 구조체</span><span class="sxs-lookup"><span data-stu-id="e9f59-125">Classes and Structs</span></span>](../../programming-guide/classes-and-structs/index.md)
+- [<span data-ttu-id="2bc39-116">C# 참조</span><span class="sxs-lookup"><span data-stu-id="2bc39-116">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="2bc39-117">C# 프로그래밍 가이드</span><span class="sxs-lookup"><span data-stu-id="2bc39-117">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="2bc39-118">C# 키워드</span><span class="sxs-lookup"><span data-stu-id="2bc39-118">C# Keywords</span></span>](index.md)
+- [<span data-ttu-id="2bc39-119">기본값 표</span><span class="sxs-lookup"><span data-stu-id="2bc39-119">Default Values Table</span></span>](default-values-table.md)
+- [<span data-ttu-id="2bc39-120">기본 제공 형식 표</span><span class="sxs-lookup"><span data-stu-id="2bc39-120">Built-In Types Table</span></span>](built-in-types-table.md)
+- [<span data-ttu-id="2bc39-121">유형</span><span class="sxs-lookup"><span data-stu-id="2bc39-121">Types</span></span>](/dotnet/csharp/language-reference/keywords)
+- [<span data-ttu-id="2bc39-122">값 형식</span><span class="sxs-lookup"><span data-stu-id="2bc39-122">Value Types</span></span>](value-types.md)
+- [<span data-ttu-id="2bc39-123">class</span><span class="sxs-lookup"><span data-stu-id="2bc39-123">class</span></span>](class.md)
+- [<span data-ttu-id="2bc39-124">interface</span><span class="sxs-lookup"><span data-stu-id="2bc39-124">interface</span></span>](interface.md)
+- [<span data-ttu-id="2bc39-125">클래스 및 구조체</span><span class="sxs-lookup"><span data-stu-id="2bc39-125">Classes and Structs</span></span>](../../programming-guide/classes-and-structs/index.md)
