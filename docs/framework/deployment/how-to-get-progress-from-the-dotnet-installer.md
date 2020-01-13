@@ -7,14 +7,12 @@ helpviewer_keywords:
 - progress information, .NET Framework installer
 - .NET Framework, installing
 ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e07bb3443fb9461fa707d66e74350a39980c60c0
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: cd81ad83aee80341d0334cfa8caa165b25ee0564
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975548"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716496"
 ---
 # <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>방법: .NET Framework 4.5 설치 관리자에서 진행률 가져오기
 
@@ -309,7 +307,7 @@ MSDN 샘플 갤러리에서 [.NET Framework 4.5 chainer 샘플](https://code.msd
 
 일반적인 서버는 임의의 MMIO 파일 이름을 만들고, 파일을 만든 다음(이전 코드 예제와 같이 `Server::CreateSection`에서) `CreateProcess` 메서드를 사용하고 `-pipe someFileSectionName` 옵션으로 파이프 이름을 전달하여 재배포 가능 패키지를 시작합니다. 서버는 애플리케이션 UI 관련 코드를 사용하여 `OnProgress`, `Send` 및 `Finished` 메서드를 구현해야 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [개발자를 위한 배포 가이드](deployment-guide-for-developers.md)
 - [배포](index.md)

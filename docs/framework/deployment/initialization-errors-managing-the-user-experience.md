@@ -6,14 +6,12 @@ helpviewer_keywords:
 - initialization errors [.NET Framework]
 - .NET Framework, initialization errors
 ms.assetid: 680a7382-957f-4f6e-b178-4e866004a07e
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: cadcb5c2e85f046b5c1c561c17663b7c94829f4f
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 73a0ffd4a39b144a61bf559ac424414728fb9a3f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802249"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716448"
 ---
 # <a name="net-framework-initialization-errors-managing-the-user-experience"></a>.NET Framework 초기화 오류: 사용자 환경 관리
 
@@ -91,7 +89,7 @@ CLR 활성화 시스템은 CLR 2.0을 로드하는 데 문제가 있는 점을 �
 
 .NET Framework 4.5부터 CLR 활성화 로깅이 초기화 오류 메시지가 표시되는 시기 및 이유를 기록하는 로그 항목을 포함하도록 향상되었습니다. 자세한 내용은 [방법: CLR 활성화 문제 디버깅](how-to-debug-clr-activation-issues.md).
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [개발자를 위한 배포 가이드](deployment-guide-for-developers.md)
 - [방법: .NET Framework 4 이상 버전을 지원하도록 앱 구성](../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)

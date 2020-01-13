@@ -16,12 +16,12 @@ helpviewer_keywords:
 - formatting numbers [.NET Framework]
 - format specifiers, custom numeric format strings
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
-ms.openlocfilehash: 72b60d0a91fda3e89448a19b506a6f8457835304
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1eb9c3c189d7bba3a12fdcd0c3d600a66bf819ca
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124406"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348303"
 ---
 # <a name="custom-numeric-format-strings"></a>사용자 지정 숫자 형식 문자열
 
@@ -34,7 +34,7 @@ ms.locfileid: "73124406"
 
 <a name="table"></a> 다음 표에서는 사용자 지정 숫자 서식 지정자 및 각 서식 지정자로 생성되는 샘플 출력을 보여 줍니다. 사용자 지정 숫자 서식 문자열을 사용하는 방법에 대한 자세한 내용은 [참고](#NotesCustomFormatting) 단원을 참조하고, 이러한 사용 방법을 자세히 보여 주는 예제를 보려면 [예제](#example) 단원을 참조하세요.
 
-|서식 지정자|name|설명|예|
+|형식 지정자|이름|설명|예|
 |----------------------|----------|-----------------|--------------|
 |"0"|0 자리 표시자|해당 숫자가 있을 경우 0을 해당 숫자로 바꾸고, 그렇지 않으면 결과 문자열에 0을 표시합니다.<br /><br /> 추가 정보: ["0" 사용자 지정 지정자](#Specifier0).|1234.5678 ("00000") -> 01235<br /><br /> 0.45678 ("0.00", en-US) -> 0.46<br /><br /> 0.45678 ("0.00", fr-FR) -> 0,46|
 |"#"|10진수 자리 표시자|해당 숫자가 있을 경우 "#" 기호를 해당 숫자로 바꾸고, 그렇지 않으면 결과 문자열에 숫자를 표시하지 않습니다.<br /><br /> 입력 문자열의 해당 숫자가 의미 없는 0인 경우 결과 문자열에 숫자를 표시하지 않습니다. 예를 들어 0003 ("####") -> 3입니다.<br /><br /> 추가 정보: ["#" 사용자 지정 지정자](#SpecifierD).|1234.5678 ("#####") -> 1235<br /><br /> 0.45678 ("#.##", en-US) -> .46<br /><br /> 0.45678 ("#.##", fr-FR) -> ,46|
@@ -255,7 +255,7 @@ ms.locfileid: "73124406"
 
 <a name="NotesCustomFormatting"></a>
 
-## <a name="notes"></a>메모
+## <a name="notes"></a>참고
 
 ### <a name="floating-point-infinities-and-nan"></a>부동 소수점 무한대 및 NaN
 
@@ -275,7 +275,7 @@ ms.locfileid: "73124406"
 
 <a name="example"></a>
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 다음 예제에서는 두 개의 사용자 지정 숫자 서식 문자열을 보여 줍니다. 두 경우 모두에서 숫자 자리 표시자(`#`)는 숫자 데이터를 표시하며, 다른 모든 문자는 결과 문자열에 복사됩니다.
 
@@ -285,7 +285,7 @@ ms.locfileid: "73124406"
 
 [표로 이동](#table)
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Globalization.NumberFormatInfo?displayProperty=nameWithType>
 - [형식 서식 지정](../../../docs/standard/base-types/formatting-types.md)

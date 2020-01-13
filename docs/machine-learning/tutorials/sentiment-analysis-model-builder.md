@@ -6,12 +6,12 @@ author: luisquintanilla
 ms.author: luquinta
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: e919341130c6778207f324dd9eb3b3f54c8a9c68
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 670c4dd1ac9da496f59d12d2e880cf269d64f309
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74551842"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344958"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-in-a-web-application-using-mlnet-model-builder"></a>자습서: ML.NET 모델 작성기를 사용하여 웹 애플리케이션에서 웹 사이트 댓글 감정 분석
 
@@ -304,4 +304,4 @@ ms.locfileid: "74551842"
 
 - [모델 작성기 시나리오](../automate-training-with-model-builder.md#scenarios)
 - [이진 분류](../resources/glossary.md#binary-classification)
-- [이진 분류 모델 메트릭](../resources/metrics.md#metrics-for-binary-classification)
+- [이진 분류 모델 메트릭](../resources/metrics.md#evaluation-metrics-for-binary-classification)

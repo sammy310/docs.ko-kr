@@ -22,14 +22,12 @@ helpviewer_keywords:
 - isolated storage, out of space conditions
 - data storage using isolated storage, out of space conditions
 ms.assetid: e35d4535-3732-421e-b1a3-37412e036145
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: cf5144cb1abd3a916d2b5afc361c8c96a221d47e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5666019e1a65880221261ef5ad704f82c37263b2
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372297"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708117"
 ---
 # <a name="how-to-anticipate-out-of-space-conditions-with-isolated-storage"></a>방법: 격리된 스토리지의 공간 부족 상태 예상
 
@@ -47,7 +45,7 @@ ms.locfileid: "57372297"
 [!code-csharp[Conceptual.IsolatedStorage#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source7.cs#8)]
 [!code-vb[Conceptual.IsolatedStorage#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source7.vb#8)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorageFile>
 - [격리된 스토리지](../../../docs/standard/io/isolated-storage.md)

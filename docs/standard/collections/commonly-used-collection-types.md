@@ -12,14 +12,12 @@ helpviewer_keywords:
 - Collections classes
 - generic collections
 ms.assetid: f5d4c6a4-0d7b-4944-a9fb-3b12d9ebfd55
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c21a1303cd67f5f5de42241f4d5ada929e68bf2c
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 1004a2f9a0594d9150d147dec1e16b56205e0d13
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65589895"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711404"
 ---
 # <a name="commonly-used-collection-types"></a>일반적으로 사용되는 컬렉션 형식
 컬렉션 형식은 해시 테이블, 큐, 스택, 모음, 사전 및 목록과 같은 데이터 컬렉션의 일반적인 변형입니다.  
@@ -41,7 +39,7 @@ ms.locfileid: "65589895"
 |[Sorted 컬렉션 형식](../../../docs/standard/collections/sorted-collection-types.md)|목록 및 집합용 정렬 기능을 제공하는 클래스에 대해 설명합니다.|  
 |[제네릭](../../../docs/standard/generics/index.md)|.NET Framework에서 제공하는 제네릭 컬렉션, 대리자 및 인터페이스를 비롯한 제네릭 기능을 설명합니다. C#, Visual Basic 및 Visual C++의 기능 설명서 링크와 지원 기술(예: 리플렉션) 링크를 제공합니다.|  
   
-## <a name="reference"></a>참조  
+## <a name="reference"></a>참고  
  <xref:System.Collections?displayProperty=nameWithType>  
   
  <xref:System.Collections.Generic?displayProperty=nameWithType>  

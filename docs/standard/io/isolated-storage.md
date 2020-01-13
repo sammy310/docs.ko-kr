@@ -18,14 +18,12 @@ helpviewer_keywords:
 - data storage using isolated storage, options
 - isolation
 ms.assetid: aff939d7-9e49-46f2-a8cd-938d3020e94e
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 33583f430e5af2f3fa7027233febd9ec61f85a3f
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: ed784bafda2aed829f2e97d7e7e8b2716c48c7ba
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802455"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706584"
 ---
 # <a name="isolated-storage"></a>격리된 스토리지
 <a name="top"></a> 데스크톱 앱에서 격리된 스토리지는 코드와 저장된 데이터를 연결하는 표준화된 방법을 정의하여 격리와 안전을 제공하는 데이터 스토리지 메커니즘입니다. 표준화를 통해 다음과 같은 여러 가지 이점도 활용할 수 있습니다. 관리자는 파일 스토리지 구성, 보안 정책 설정, 사용하지 않은 데이터 삭제를 위해 격리된 스토리지를 조작하는 도구를 사용할 수 있습니다. 격리된 스토리지를 사용하면 더 이상 파일 시스템에서 안전한 위치를 지정하기 위해 코드에 고유 경로를 포함할 필요가 없으며 격리된 스토리지에만 액세스할 수 있는 다른 애플리케이션으로부터 데이터가 보호됩니다. 애플리케이션의 스토리지 영역 위치를 나타내는 하드 코드된 정보는 필요하지 않습니다.
@@ -179,7 +177,7 @@ ms.locfileid: "74802455"
 
 <a name="reference"></a>
 
-## <a name="reference"></a>참조
+## <a name="reference"></a>참고
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorage?displayProperty=nameWithType>
 

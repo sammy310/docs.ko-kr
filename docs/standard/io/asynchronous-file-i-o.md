@@ -17,14 +17,12 @@ helpviewer_keywords:
 - multiple I/O requests
 - data streams, synchronous streams
 ms.assetid: dbdd55e7-d6b9-4f9e-8abb-ab0edd4457f7
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b39373239d6aefaa671afebbb85dc2156866358f
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 66e7d01f37a1119b9d2076a9131aa40f26d15625
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204812"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708193"
 ---
 # <a name="asynchronous-file-io"></a>비동기 파일 I/O
 
@@ -59,7 +57,7 @@ C# 및 Visual Basic에는 각각 비동기 프로그래밍을 위한 다음 두 
 
 [!code-xaml[System.IO.WindowsRuntimeStorageExtensions#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.windowsruntimestorageextensions/cs/blankpage.xaml#1)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.IO.Stream>
 - [파일 및 스트림 I/O](index.md)

@@ -5,14 +5,12 @@ helpviewer_keywords:
 - configuring apps to support .NET Framework
 - .NET Framework, configuring apps
 ms.assetid: 63c6b9a8-0088-4077-9aa3-521ab7290f79
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: cd267de1e632fdc40dc50e8acdeba7d16bf8e61a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 586f39fc9b50dcd45bb959ebd0063e3c38d9c3ed
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70779488"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716243"
 ---
 # <a name="how-to-configure-an-app-to-support-net-framework-4-or-later-versions"></a>방법: .NET Framework 4 이상 버전을 지원하도록 앱 구성
 
@@ -81,7 +79,7 @@ CLR(공용 언어 런타임)을 호스트하는 모든 응용 프로그램에서
 
  \* 이 오류 메시지와 이 오류를 방지하는 방법에 대한 자세한 내용은 [.NET Framework 초기화 오류: 사용자 환경 관리](../deployment/initialization-errors-managing-the-user-experience.md)를 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [.NET Framework 1.1에서 마이그레이션](migrating-from-the-net-framework-1-1.md)
 - [마이그레이션 가이드](index.md)

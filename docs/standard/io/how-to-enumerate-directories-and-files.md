@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - I/O [.NET Framework], enumerating directories and files
 ms.assetid: 86b69a08-3bfa-4e5f-b4e1-3b7cb8478215
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 863335cf080dbccd76b38c7222b74637b99ae2f0
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: 6a26d0ef529b81976c4d2caafed34bb5f08d8d46
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55758666"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75707747"
 ---
 # <a name="how-to-enumerate-directories-and-files"></a>방법: 디렉터리 및 파일 열거
 열거 가능한 컬렉션은 대규모의 디렉터리 및 파일 컬렉션으로 작업할 때 배열보다 나은 성능을 제공합니다. 디렉터리 및 파일을 열거하려면 디렉터리, 파일 이름이나 해당 <xref:System.IO.DirectoryInfo>, <xref:System.IO.FileInfo> 또는 <xref:System.IO.FileSystemInfo> 개체의 열거할 수 있는 컬렉션을 반환하는 메서드를 사용합니다.  
@@ -39,7 +37,7 @@ ms.locfileid: "55758666"
 > [!NOTE]
 > 선택적 <xref:System.IO.SearchOption> 열거형의 <xref:System.IO.SearchOption.AllDirectories> 옵션을 사용하면 부모 디렉터리의 하위 디렉터리에 있는 모든 파일을 즉시 열거할 수 있지만, <xref:System.UnauthorizedAccessException> 오류로 인해 열거가 불완전할 수 있습니다. 먼저 디렉터리를 열거한 다음, 파일을 열거하면 이러한 예외를 catch할 수 있습니다.  
   
-## <a name="examples-use-the-directory-class"></a>예를 들면 다음과 같습니다. 디렉터리 클래스 사용  
+## <a name="examples-use-the-directory-class"></a>예: 디렉터리 클래스 사용  
   
 다음 예제에서는 <xref:System.IO.Directory.EnumerateDirectories%28System.String%29?displayProperty=nameWithType> 메서드를 사용하여 지정된 경로의 최상위 디렉터리 이름 목록을 가져옵니다.  
 
@@ -51,7 +49,7 @@ ms.locfileid: "55758666"
 [!code-csharp[System.IO.Directory.EnumerateFiles#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.directory.enumeratefiles/cs/program.cs#1)]
 [!code-vb[System.IO.Directory.EnumerateFiles#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.directory.enumeratefiles/vb/program.vb#1)]  
   
-## <a name="examples-use-the-directoryinfo-class"></a>예를 들면 다음과 같습니다. DirectoryInfo 클래스 사용  
+## <a name="examples-use-the-directoryinfo-class"></a>예: DirectoryInfo 클래스 사용  
   
 다음 예제에서는 <xref:System.IO.DirectoryInfo.EnumerateDirectories%2A?displayProperty=nameWithType> 메서드를 사용하여 <xref:System.IO.FileSystemInfo.CreationTimeUtc>가 특정 <xref:System.DateTime> 값보다 이전인 최상위 디렉터리의 컬렉션을 나열합니다.  
 
@@ -63,6 +61,6 @@ ms.locfileid: "55758666"
 [!code-csharp[System.IO.DirectoryInfo.EnumerateDirectories#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.directoryinfo.enumeratedirectories/cs/program.cs#1)]
 [!code-vb[System.IO.DirectoryInfo.EnumerateDirectories#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.directoryinfo.enumeratedirectories/vb/program.vb#1)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [파일 및 스트림 I/O](../../../docs/standard/io/index.md)

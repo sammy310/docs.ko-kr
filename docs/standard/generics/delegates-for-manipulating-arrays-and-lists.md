@@ -10,14 +10,12 @@ helpviewer_keywords:
 - lists [.NET Framework], generic delegates
 - generics [.NET Framework], delegates
 ms.assetid: 416be383-cc61-4102-9b1b-88b51adb963e
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f37f55f5af70a232952bdb94f0c111a27fcbab1d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: baf8497289ee71c2dbdc544607212de90928289c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948777"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708386"
 ---
 # <a name="generic-delegates-for-manipulating-arrays-and-lists"></a>배열과 목록을 조작하기 위한 제네릭 대리자
 이 항목에서는 배열 또는 컬렉션의 요소에 대해 수행할 작업, 검색 조건자 및 변환을 위한 제네릭 대리자에 대해 간략하게 설명합니다.  
@@ -41,7 +39,7 @@ ms.locfileid: "69948777"
 ### <a name="chaining-delegates"></a>대리자 연결  
  이러한 대리자를 사용하는 많은 메서드는 다른 메서드로 전달될 수 있는 배열 또는 목록을 반환합니다. 예를 들어 배열의 특정 요소를 선택하고 이러한 요소는 새 형식으로 변환한 다음 새 배열에 저장하려는 경우 <xref:System.Array.FindAll%2A> 제네릭 메서드에서 반환된 배열을 <xref:System.Array.ConvertAll%2A> 제네릭 메서드에 전달할 수 있습니다. 새 요소 형식에 자연 정렬 순서가 없는 경우 <xref:System.Array.ConvertAll%2A> 제네릭 메서드에서 반환된 배열을 <xref:System.Array.Sort%60%601%28%60%600%5B%5D%2CSystem.Comparison%7B%60%600%7D%29> 제네릭 메서드에 전달할 수 있습니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Collections.Generic?displayProperty=nameWithType>
 - <xref:System.Collections.ObjectModel?displayProperty=nameWithType>

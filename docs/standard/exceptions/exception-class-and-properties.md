@@ -6,14 +6,12 @@ helpviewer_keywords:
 - exceptions, Exception class
 - Exception class
 ms.assetid: e2e1f8c4-e7b4-467d-9a66-13c90861221d
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e17fa07fe2dd19cdcd03bc923940abfef886219c
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: df05150a5bdd5d24766be252f5cec9a436720d8c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283131"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708947"
 ---
 # <a name="exception-class-and-properties"></a>Exception 클래스 및 속성
 
@@ -39,6 +37,6 @@ ms.locfileid: "74283131"
 
 <xref:System.Exception>에서 파생된 개체만 throw 및 catch하는 것이 좋지만 <xref:System.Object> 클래스에서 파생된 모든 개체를 예외로 throw할 수 있습니다. 일부 언어는 <xref:System.Exception>에서 파생되지 않은 개체의 throw 및 catch를 지원하지 않습니다.
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [예외](index.md)

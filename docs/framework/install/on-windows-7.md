@@ -2,15 +2,13 @@
 title: Windows 7 SP1에 .NET Framework 설치
 ms.custom: updateeachrelease
 description: Windows 7 SP1에서.NET Framework를 설치하는 방법을 알아봅니다.
-author: rlander
-ms.author: mairaw
 ms.date: 04/18/2019
-ms.openlocfilehash: 4d1ae7401b1184829b8836055797281251164237
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 729e1ca86d6f7b4268ce2c8b601b700817501128
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70853919"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716345"
 ---
 # <a name="install-the-net-framework-on-windows-7-sp1-and-windows-server-2008-r2"></a>Windows 7 SP1 및 Windows Server 2008 R2에 .NET Framework 설치
 
@@ -37,7 +35,7 @@ Windows에서 많은 애플리케이션을 실행하는 데 .NET Framework가 �
 
 설치된 .NET Framework의 정확한 버전을 확인할 수 없는 경우 [Microsoft에 지원을 문의](mailto:dotnet-install-help@service.microsoft.com?subject=Install-Help)할 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [.NET Framework 다운로드](https://dotnet.microsoft.com/download)
 - [차단된 .NET Framework 설치 및 제거 문제 해결](troubleshoot-blocked-installations-and-uninstallations.md)

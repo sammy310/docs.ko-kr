@@ -1,5 +1,5 @@
 ---
-title: 열거형 형식 문자열 - .NET
+title: 열거형 형식 문자열
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - enumeration format strings
 - formatting [.NET Framework], enumeration
 ms.assetid: dd1ff672-1052-42cf-8666-4924fb6cd1a1
-ms.openlocfilehash: 316c042b05e505b3e3e857ea41ae808a2a0282f5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c32fd9d59f61b6befe94ff9eb85b0c39ce926adb
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126416"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348261"
 ---
 # <a name="enumeration-format-strings"></a>열거형 형식 문자열
 
@@ -51,7 +51,7 @@ ms.locfileid: "73126416"
 [!code-csharp[Formatting.Enum#4](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#4)]      
 [!code-vb[Formatting.Enum#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#4)]
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 다음 예제에서는 세 개의 항목 `Red`, `Blue` 및 `Green`으로 구성된 `Colors`라는 열거형을 정의합니다.
 
@@ -68,6 +68,6 @@ ms.locfileid: "73126416"
 [!code-csharp[Formatting.Enum#7](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#7)]
 [!code-vb[Formatting.Enum#7](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#7)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [형식 서식 지정](formatting-types.md)

@@ -10,14 +10,12 @@ helpviewer_keywords:
 - hash function
 - collections [.NET Framework], Hashtable collection type
 ms.assetid: bfc20837-3d02-4fc7-8a8f-c5215b6b7913
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: fefd9f95a669c9c0384cefe41322c7a10a96a3b7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a6f234b6205fd30507b9342d9839db6adcddfc2e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514714"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711378"
 ---
 # <a name="hashtable-and-dictionary-collection-types"></a>Hashtable 및 Dictionary 컬렉션 형식
 <xref:System.Collections.Hashtable?displayProperty=nameWithType> 클래스와 <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> 및 <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType> 제네릭 클래스는 <xref:System.Collections.IDictionary?displayProperty=nameWithType> 인터페이스를 구현합니다. <xref:System.Collections.Generic.Dictionary%602> 제네릭 클래스는 <xref:System.Collections.Generic.IDictionary%602> 제네릭 인터페이스도 구현합니다. 따라서 이러한 컬렉션의 각 요소는 한 쌍의 키-값입니다.  
@@ -36,7 +34,7 @@ ms.locfileid: "54514714"
   
  <xref:System.Collections.Generic.Dictionary%602> 및 <xref:System.Collections.Concurrent.ConcurrentDictionary%602>클래스는 <xref:System.Collections.Hashtable> 클래스와 동일한 기능을 갖습니다. 특정 형식(<xref:System.Object> 이외)의 <xref:System.Collections.Generic.Dictionary%602>는 값 형식의 <xref:System.Collections.Hashtable>보다 더 나은 성능을 제공합니다. 이는 <xref:System.Collections.Hashtable>의 요소가 <xref:System.Object> 형식이기 때문입니다. 따라서 boxing 및 unboxing은 일반적으로 값 형식을 저장하거나 검색할 때 발생합니다. <xref:System.Collections.Concurrent.ConcurrentDictionary%602>클래스는 여러 스레드가 컬렉션에 동시에 액세스할 수 있는 경우에 사용해야 합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Collections.Hashtable>
 - <xref:System.Collections.IDictionary>

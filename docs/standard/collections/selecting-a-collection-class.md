@@ -10,14 +10,12 @@ helpviewer_keywords:
 - Collections classes
 - grouping data in collections, selecting collection class
 ms.assetid: ba049f9a-ce87-4cc4-b319-3f75c8ddac8a
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 21c708f63faaedb9fbce60d7e4aef314f7a41ef8
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.openlocfilehash: fb03200c810290c970f7aa56a0e15d385aca7ca8
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58185560"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711352"
 ---
 # <a name="selecting-a-collection-class"></a>Collection 클래스 선택
 
@@ -83,7 +81,7 @@ ms.locfileid: "58185560"
   
  PLINQ는 다중 코어 컴퓨터의 보다 효율적인 사용을 통해 많은 시나리오에서 더 빠른 쿼리 실행을 제공할 수 있는 LINQ to Objects의 병렬 구현을 제공합니다. 자세한 내용은 [PLINQ(병렬 LINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)를 참조하세요.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Collections>
 - <xref:System.Collections.Specialized>

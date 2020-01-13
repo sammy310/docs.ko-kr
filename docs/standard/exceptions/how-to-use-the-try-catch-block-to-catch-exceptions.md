@@ -11,14 +11,12 @@ helpviewer_keywords:
 - try/catch blocks
 - catch blocks
 ms.assetid: a3ce6dfd-1f64-471b-8ad8-8cfaf406275d
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: eaa389f461e70aae41f2e09437fd725a3bcefa5e
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 5a9218d394b76e897f4263708a10f1bc895ad4e1
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71696728"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708468"
 ---
 # <a name="how-to-use-the-trycatch-block-to-catch-exceptions"></a>try/catch 블록을 사용하여 예외를 catch하는 방법
 
@@ -38,7 +36,7 @@ CLR(공용 언어 런타임)은 `catch` 블록에서 처리되지 않은 예외�
 > [!NOTE]
 > 대부분의 코드가 예외를 throw할 수 있고, <xref:System.OutOfMemoryException>과 같은 일부 예외는 언제든지 CLR에서 throw될 수 있습니다. 애플리케이션은 이러한 예외를 처리할 필요가 없지만 다른 사용자가 사용할 라이브러리를 작성하는 경우 이러한 가능성에 유의해야 합니다. `try` 블록에서 코드를 설정하는 경우에 대한 제안 사항은 [예외에 대한 모범 사례](best-practices-for-exceptions.md)를 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [예외](index.md)
 - [.NET에서 I/O 오류 처리](../io/handling-io-errors.md)

@@ -12,14 +12,12 @@ helpviewer_keywords:
 - copying directories
 - directories [.NET Framework], copying
 ms.assetid: 5a969765-e5f8-4b4e-977e-90e2b0a1fe3c
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2a7fa901d887701e0fa41a0887b363adec07dba2
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 223e83a5ff6a73825985ec4e3b6b601fb196fe5e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65644670"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75707902"
 ---
 # <a name="how-to-copy-directories"></a>방법: 디렉터리 복사
 이 항목에서는 I/O 클래스를 사용하여 디렉터리의 내용을 다른 위치로 동기적으로 복사하는 방법을 보여줍니다. 
@@ -32,7 +30,7 @@ ms.locfileid: "65644670"
  [!code-csharp[System.IO.Directory_Copy#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Directory_Copy/cs/program.cs#1)]
  [!code-vb[System.IO.Directory_Copy#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.Directory_Copy/vb/Program.vb#1)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.IO.FileInfo>
 - <xref:System.IO.DirectoryInfo>

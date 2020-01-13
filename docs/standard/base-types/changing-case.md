@@ -14,18 +14,17 @@ helpviewer_keywords:
 - uppercase
 - lowercase
 ms.assetid: 6805f81b-e9ad-4387-9f4c-b9bdb21b87c0
-ms.custom: seodec18
-ms.openlocfilehash: a8eb45e45a905f0b366642050f4845460e14aaf8
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 91fc0022eae3f036e0ec046ea12446871926ab27
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132901"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711469"
 ---
 # <a name="changing-case-in-net"></a>.NET에서 대/소문자 바꾸기
 사용자 입력을 수락하는 애플리케이션을 작성하는 경우 데이터를 입력할 때 사용하는 대/소문자를 확신할 수 없습니다. 특히 사용자 인터페이스에 표시하는 경우 문자열의 대/소문자를 일관되게 표시하려는 경우가 많습니다. 다음 표에서는 세 가지 대/소문자 변경 메서드를 설명합니다. 처음 두 메서드는 문화권을 수락하는 오버로드를 제공합니다.  
   
-|메서드 이름|사용|  
+|메서드 이름|기능|  
 |-----------------|---------|  
 |<xref:System.String.ToUpper%2A?displayProperty=nameWithType>|문자열의 모든 문자를 대문자로 변환합니다.|  
 |<xref:System.String.ToLower%2A?displayProperty=nameWithType>|문자열의 모든 문자를 소문자로 변환합니다.|  
@@ -70,7 +69,7 @@ ms.locfileid: "73132901"
   
  문화권을 구분하지만 <xref:System.Globalization.TextInfo.ToTitleCase%2A?displayProperty=nameWithType> 메서드는 언어학적으로 올바른 대/소문자 규칙을 제공하지 않습니다. 예를 들어 앞의 예제에서 메서드는 "a tale of two cities"를 "A Tale Of Two Cities"로 변환합니다. 그러나 en-US 문화권에서 언어적으로 올바른 단어의 첫 글자를 대문자로 변환은 "A Tale of Two Cities"입니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [기본적인 문자열 작업](../../../docs/standard/base-types/basic-string-operations.md)
 - [Culture의 영향을 받지 않는 문자열 작업 수행](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)

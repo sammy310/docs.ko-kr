@@ -1,5 +1,5 @@
 ---
-title: .NET의 서식 지정 형식
+title: .NET에서 서식 지정 형식
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -25,12 +25,12 @@ helpviewer_keywords:
 - custom formatting [.NET Framework]
 - strings [.NET Framework], formatting
 ms.assetid: 0d1364da-5b30-4d42-8e6b-03378343343f
-ms.openlocfilehash: 20aa7ecd354ef1a8982ae75eda87275c80cdaaf6
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: a1f4d9107427140bcfa6b49bc8a850432fb204f7
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802468"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348247"
 ---
 # <a name="format-types-in-net"></a>.NET의 형식 유형
 
@@ -362,7 +362,7 @@ ms.locfileid: "74802468"
 |[서식 지정 작업 수행](../../../docs/standard/base-types/performing-formatting-operations.md)|특정 형식 지정 작업을 수행하기 위한 단계별 지침을 제공하는 항목을 나열합니다.|
 |[Parsing Strings](../../../docs/standard/base-types/parsing-strings.md)|개체를 해당 개체의 문자열 표현으로 표시되는 값으로 초기화하는 방법에 대해 설명합니다. 구문 분석은 형식 지정의 역순으로 진행됩니다.|
 
-## <a name="reference"></a>참조
+## <a name="reference"></a>참고
 
 - <xref:System.IFormattable?displayProperty=nameWithType>
 - <xref:System.IFormatProvider?displayProperty=nameWithType>

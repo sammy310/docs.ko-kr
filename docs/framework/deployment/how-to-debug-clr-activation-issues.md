@@ -4,14 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - CLR activation, debugging issues
 ms.assetid: 4fe17546-d56e-4344-a930-6d8e4a545914
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2bed01a74c5b3338df958a3e178c06602bd69866
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 602ee3c88237a902d48339836fbe25f636ae9705
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052112"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716502"
 ---
 # <a name="how-to-debug-clr-activation-issues"></a>CLR 활성화 문제를 디버깅하는 방법
 
@@ -118,7 +116,7 @@ CLR 활성화 로그는 CLR 활성화 및 CLR 호스팅 API 사용에 대한 많
     532,205950.398,Launching feature-on-demand installation. CmdLine: C:\Windows\system32\fondue.exe /enable-feature:NetFx3
     ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [배포](index.md)
 - [방법: .NET Framework 4 이상 버전을 지원하도록 앱 구성](../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)

@@ -2,15 +2,13 @@
 title: Windows XP에 .NET Framework 설치
 description: Windows XP에서.NET Framework를 설치하는 방법을 알아봅니다.
 ms.custom: updateeachrelease
-author: rlander
-ms.author: mairaw
 ms.date: 04/18/2019
-ms.openlocfilehash: 7d7ad0f86ff327c3273664fc1c7395c88d38a5bf
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 8d05c8c9cf961d3902b1d1287be5b1c2c73d349e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204722"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716294"
 ---
 # <a name="install-the-net-framework-on-windows-xp-and-windows-server-2003"></a>Windows XP 및 Windows Server 2003에 .NET Framework 설치
 
@@ -37,7 +35,7 @@ Windows XP에는 [.NET Framework 3.5](https://dotnet.microsoft.com/download/dotn
 
 .NET Framework 3.5는 .NET Framework 1.0~3.5용으로 빌드된 애플리케이션을 실행하는 데 사용될 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [.NET Framework 다운로드](https://dotnet.microsoft.com/download)
 - [차단된 .NET Framework 설치 및 제거 문제 해결](troubleshoot-blocked-installations-and-uninstallations.md)
