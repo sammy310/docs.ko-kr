@@ -1,6 +1,5 @@
 ---
 title: volatile - C# 참조
-ms.custom: seodec18
 ms.date: 10/24/2018
 f1_keywords:
 - volatile_CSharpKeyword
@@ -8,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - volatile keyword [C#]
 ms.assetid: 78089bc7-7b38-4cfd-9e49-87ac036af009
-ms.openlocfilehash: e72173ba1b91f03ccb1c15ca6451ac997666bc7f
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: c7a6c442c33ac2b41f652805837f455a957819de
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422122"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712847"
 ---
 # <a name="volatile-c-reference"></a>volatile(C# 참조)
 
@@ -32,7 +31,7 @@ ms.locfileid: "73422122"
 
 `volatile` 키워드는 `class` 또는 `struct`의 필드에만 적용할 수 있습니다. 지역 변수는 `volatile`로 선언할 수 없습니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 다음 예제에서는 공용 필드 변수를 `volatile`로 선언하는 방법을 보여 줍니다.
 
@@ -48,7 +47,7 @@ ms.locfileid: "73422122"
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 언어 사양: volatile 키워드](../../../../_csharplang/spec/classes.md#volatile-fields)
 - [C# 참조](../index.md)

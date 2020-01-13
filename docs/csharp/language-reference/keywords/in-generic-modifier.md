@@ -1,16 +1,15 @@
 ---
 title: in(제네릭 한정자) - C# 참조
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - contravariance, in keyword [C#]
 - in keyword [C#]
-ms.openlocfilehash: 0806169b9b1c3521dcf89f5ea0fa5aec188030c2
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 57da13f6dc6719166b9051afeb2532ba5fbeff3a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422781"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713480"
 ---
 # <a name="in-generic-modifier-c-reference"></a>in(제네릭 한정자)(C# 참조)
 
@@ -42,7 +41,7 @@ ms.locfileid: "73422781"
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [out](out-generic-modifier.md)
 - [공 분산 및 반공 분산](../../programming-guide/concepts/covariance-contravariance/index.md)

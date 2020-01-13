@@ -1,6 +1,5 @@
 ---
 title: equals 상황별 키워드 - C# 참조
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - equals_CSharpKeyword
@@ -8,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - equals keyword [C#]
 ms.assetid: e981309a-e4bf-444c-8a2b-5c695e6114b1
-ms.openlocfilehash: 8d86f22ff6d86512c255caef9705ed41355ecf43
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: fc190433b37b027a92d8e8338a35b06d5d1e1824
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633482"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713572"
 ---
 # <a name="equals-c-reference"></a>equals(C# 참조)
 
@@ -25,6 +24,6 @@ ms.locfileid: "65633482"
 
 [!code-csharp[csrefKeywordsContextual#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsContextual/CS/csrefKeywordsContextual.cs#12)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [LINQ(Language-Integrated Query)](../../linq/index.md)

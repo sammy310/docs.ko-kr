@@ -1,17 +1,16 @@
 ---
 title: 개체 이니셜라이저를 사용하여 개체를 초기화하는 방법 - C# 프로그래밍 가이드
-ms.custom: seodec18
 ms.date: 12/20/2018
 helpviewer_keywords:
 - object initializers [C#], how to use
 - objects [C#], initializing
 ms.assetid: 4b75ebb2-2e29-43de-929c-d736a8f27ce6
-ms.openlocfilehash: be555688a645c7689e76b5b4499c44255c18dbc8
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: a2ecc9df211d0082bd4b413653e374758c877abc
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73970875"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705589"
 ---
 # <a name="how-to-initialize-objects-by-using-an-object-initializer-c-programming-guide"></a>개체 이니셜라이저를 사용하여 개체를 초기화하는 방법(C# 프로그래밍 가이드)
 
@@ -21,7 +20,7 @@ ms.locfileid: "73970875"
   
 무명 형식을 정의하는 경우 개체 이니셜라이저를 사용해야 합니다. 자세한 내용은 [쿼리에서 요소 속성의 하위 집합을 반환하는 방법](how-to-return-subsets-of-element-properties-in-a-query.md)을 참조하세요.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
 
 다음 예제에서는 개체 이니셜라이저를 사용하여 새 `StudentName` 형식을 초기화하는 방법을 보여 줍니다. 이 예제에서는 `StudentName` 형식의 속성을 설정합니다.
   
@@ -31,7 +30,7 @@ ms.locfileid: "73970875"
 
 [!code-csharp[InitializerIndexerExample](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/HowToIndexInitializer.cs#HowToIndexInitializer)]  
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 프로그래밍 가이드](../index.md)
 - [개체 이니셜라이저 및 컬렉션 이니셜라이저](object-and-collection-initializers.md)

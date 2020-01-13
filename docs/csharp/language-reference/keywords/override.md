@@ -1,6 +1,5 @@
 ---
 title: override 한정자 - C# 참조
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - override
@@ -8,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - override keyword [C#]
 ms.assetid: dd1907a8-acf8-46d3-80b9-c2ca4febada8
-ms.openlocfilehash: 699887d635ab074fc9ffa4cd7fa354372eb82f25
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: acad3aa3b196c184132ad1acdf52b18a799b0896
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422631"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713250"
 ---
 # <a name="override-c-reference"></a>override(C# 참조)
 
 `override` 한정자는 상속된 메서드, 속성, 인덱서 또는 이벤트의 추상 또는 가상 구현을 확장하거나 수정하는 데 필요합니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 이 예에서 `Square` 클래스는 `GetArea`가 추상 `Shape` 클래스에서 상속되기 때문에 `GetArea`의 재정의된 구현을 제공해야 합니다.
 
@@ -37,7 +36,7 @@ ms.locfileid: "73422631"
 
 `override` 키워드 사용 방법에 대한 자세한 내용은 [Override 및 New 키워드를 사용하여 버전 관리](../../programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md) 및 [Override 및 New 키워드를 사용해야 하는 경우](../../programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)를 참조하세요.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 이 예제에서는 `Employee`라는 기본 클래스와 `SalesEmployee`라는 파생 클래스를 정의합니다. `SalesEmployee` 클래스에는 추가 필드 `salesbonus`가 포함되어 있고, 이를 고려하기 위해 `CalculatePay` 메서드를 재정의합니다.
 
@@ -47,7 +46,7 @@ ms.locfileid: "73422631"
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 참조](../index.md)
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)

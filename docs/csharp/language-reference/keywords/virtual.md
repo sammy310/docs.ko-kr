@@ -1,6 +1,5 @@
 ---
 title: virtual - C# 참조
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - virtual_CSharpKeyword
@@ -8,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - virtual keyword [C#]
 ms.assetid: 5da9abae-bc1e-434f-8bea-3601b8dcb3b2
-ms.openlocfilehash: d5e087647adced0b41cc6e42fcf534b274c70592
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 47b77792fd3a2b2700ec0734851fdec534361596
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395157"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712873"
 ---
 # <a name="virtual-c-reference"></a>virtual(C# 참조)
 
@@ -44,7 +43,7 @@ public virtual double Area()
 
 - `override` 한정자를 사용하는 속성 선언을 포함함으로써 상속된 가상 속성을 파생 클래스에서 재정의할 수 있습니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 이 예제에서 `Shape` 클래스는 두 개의 좌표 `x`, `y`와 `Area()` 가상 메서드를 포함합니다. `Circle`, `Cylinder` 및 `Sphere`와 같은 서로 다른 도형의 클래스는 `Shape` 클래스를 상속하며, 각 모양에 대해 노출 영역이 계산됩니다. 각 파생 클래스에는 `Area()`의 자체 재정의 구현이 있습니다.
 
@@ -62,7 +61,7 @@ public Cylinder(double r, double h): base(r, h) {}
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [다형성](../../programming-guide/classes-and-structs/polymorphism.md)
 - [abstract](abstract.md)

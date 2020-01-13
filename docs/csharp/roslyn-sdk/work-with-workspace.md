@@ -3,12 +3,12 @@ title: .NET Compiler Platform SDK 작업 영역 모델 사용
 description: 이 개요에서는 코드에 대한 작업 영역 및 프로젝트를 쿼리하고 조작하는 데 사용하는 형식에 대한 이해를 제공합니다.
 ms.date: 10/15/2017
 ms.custom: mvc
-ms.openlocfilehash: 7d450b31cbf2c83c79552d1ace3a1ae692bfdd88
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a2e69129a869707eaec3516310a72f1fc918ca26
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354805"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346916"
 ---
 # <a name="work-with-a-workspace"></a>작업 영역 작업
 
@@ -22,7 +22,7 @@ IDE와 같은 호스트 환경은 개방형 솔루션에 해당하는 작업 영
 
 <xref:Microsoft.CodeAnalysis.Workspace>는 솔루션의 현재 모델에 대한 액세스를 제공합니다. 호스트 환경에서 변경이 발생하는 경우 작업 영역은 해당 이벤트를 발생시키고 <xref:Microsoft.CodeAnalysis.Workspace.CurrentSolution?displayProperty=nameWithType> 속성이 업데이트됩니다. 예를 들어 텍스트 편집기에서 사용자 형식이 원본 문서 중 하나에 해당하는 경우 작업 영역은 이벤트를 사용하여 솔루션의 전반적인 모델이 변경되었고 해당 문서가 수정되었다는 신호를 보냅니다. 그런 다음 새 모델의 정확성을 분석하고, 중요성의 영역을 강조 표시하거나 코드 변경에 대해 제안하여 이러한 변경 내용에 반응할 수 있습니다. 
 
-또한 호스트 환경에서 연결이 해제되거나 호스트 환경이 없는 응용 프로그램에서 사용되는 독립 실행형 작업 영역을 만들 수도 있습니다.
+또한 호스트 환경에서 연결이 해제되거나 호스트 환경이 없는 애플리케이션에서 사용되는 독립 실행형 작업 영역을 만들 수도 있습니다.
 
 ## <a name="solutions-projects-documents"></a>솔루션, 프로젝트, 문서
 
@@ -40,4 +40,4 @@ IDE와 같은 호스트 환경은 개방형 솔루션에 해당하는 작업 영
 
 ## <a name="summary"></a>요약
 
-Roslyn은 소스 코드에 대한 풍부한 정보를 제공하고 C# 및 Visual Basic 언어로 완전한 충실도를 가진 컴파일러 API 및 작업 영역 API의 집합을 노출합니다.  .NET Compiler Platform SDK는 코드 중심 도구 및 응용 프로그램을 만들기 위한 진입에 대한 장벽을 크게 낮춰줍니다. 메타 프로그래밍, 코드 생성 및 변환, C# 및 VB 언어의 대화형 사용, 도메인 특정 언어에서 C# 및 VB 포함과 같은 영역의 혁신을 위한 많은 기회를 만듭니다.  
+Roslyn은 소스 코드에 대한 풍부한 정보를 제공하고 C# 및 Visual Basic 언어로 완전한 충실도를 가진 컴파일러 API 및 작업 영역 API의 집합을 노출합니다.  .NET Compiler Platform SDK는 코드 중심 도구 및 애플리케이션을 만들기 위한 진입에 대한 장벽을 크게 낮춰줍니다. 메타 프로그래밍, 코드 생성 및 변환, C# 및 Visual Basic 언어의 대화형 사용, 도메인 특정 언어에 C# 및 Visual Basic 포함과 같은 영역에서 다양한 혁신 기회를 창출합니다.  

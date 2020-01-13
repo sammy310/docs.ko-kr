@@ -1,6 +1,5 @@
 ---
 title: lock 문 - C# 참조
-ms.custom: seodec18
 description: C# lock 문을 사용하여 공유 리소스에 대한 스레드 액세스 동기화
 ms.date: 10/01/2018
 f1_keywords:
@@ -9,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - lock keyword [C#]
 ms.assetid: 656da1a4-707e-4ef6-9c6e-6d13b646af42
-ms.openlocfilehash: 70fcd8041946f2b1db3b37de79318b87771ee676
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: 467881dd36c97b6b18b7f31d4e4af25152b0d012
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168772"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713395"
 ---
 # <a name="lock-statement-c-reference"></a>lock 문(C# 참조)
 
@@ -67,7 +66,7 @@ finally
 
 자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [lock 문](~/_csharplang/spec/statements.md#the-lock-statement) 섹션을 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Threading.Monitor?displayProperty=nameWithType>
 - <xref:System.Threading.SpinLock?displayProperty=nameWithType>

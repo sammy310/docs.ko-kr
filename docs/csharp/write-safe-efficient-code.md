@@ -4,12 +4,12 @@ description: 최근 C# 언어의 향상된 기능을 통해 성능이 이전에�
 ms.date: 10/23/2018
 ms.technology: csharp-advanced-concepts
 ms.custom: mvc
-ms.openlocfilehash: 3dc3213cf24f4cdd8f0f1b7752263b4a609b2fa2
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: f590a338d35966e2cd3a507164057a49b8a5f6f8
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039636"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346710"
 ---
 # <a name="write-safe-and-efficient-c-code"></a>안전하고 효율적인 C# 코드 작성
 
@@ -79,35 +79,35 @@ public struct Point3D
 {
     public Point3D(double x, double y, double z)
     {
-        this.X = x;
-        this.Y = y;
-        this.Z = z;
+        _x = x;
+        _y = y;
+        _z = z;
     }
 
     private double _x;
-    public double X 
-    { 
-        readonly get { return _x;}; 
-        set { _x = value; }
+    public double X
+    {
+        readonly get => _x;
+        set => _x = value;
     }
-    
+
     private double _y;
-    public double Y 
-    { 
-        readonly get { return _y;}; 
-        set { _y = value; }
+    public double Y
+    {
+        readonly get => _y;
+        set => _y = value;
     }
 
     private double _z;
-    public double Z 
-    { 
-        readonly get { return _z;}; 
-        set { _z = value; }
+    public double Z
+    {
+        readonly get => _z;
+        set => _z = value;
     }
 
     public readonly double Distance => Math.Sqrt(X * X + Y * Y + Z * Z);
 
-    public readonly override string ToString() => $"{X, Y, Z }";
+    public readonly override string ToString() => $"{X}, {Y}, {Z}";
 }
 ```
 
@@ -137,7 +137,7 @@ public struct Point3D
 }
 ```
 
-호출자가 원점을 수정하지 않도록 하려면 `readonly ref`로 값을 반환해야 합니다.
+호출자가 원점을 수정하지 않도록 하려면 `ref readonly`로 값을 반환해야 합니다.
 
 ```csharp
 public struct Point3D
@@ -152,7 +152,7 @@ public struct Point3D
 
 `ref readonly`를 반환하면 더 큰 구조체 복사본을 저장하고 내부 데이터 멤버의 불변성을 유지할 수 있습니다.
 
-호출 사이트에서 호출자가 `Origin` 속성을 `readonly ref` 또는 값으로 사용하도록 선택할 수 있습니다.
+호출 사이트에서 호출자가 `Origin` 속성을 `ref readonly` 또는 값으로 사용하도록 선택할 수 있습니다.
 
 [!code-csharp[AssignRefReadonly](../../samples/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#AssignRefReadonly "Assigning a ref readonly")]
 
@@ -262,7 +262,7 @@ GitHub에 있는 [샘플 리포지토리](https://github.com/dotnet/samples/tree
 
 C# 언어에 대한 이러한 향상된 기능은 메모리 할당을 최소화하는 것이 필요한 성능을 달성하는 데 중요한 요인이 되는 성능 중요 알고리즘을 위해 설계되었습니다. 작성하는 코드에서 이러한 기능을 자주 사용하지 않을 수 있습니다. 그러나 이러한 향상된 기능은 .NET 전반에서 채택되었습니다. 점점 더 많은 API에서 이러한 기능을 사용하므로 사용자의 애플리케이션 성능이 개선되는 것을 확인할 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ref 키워드](language-reference/keywords/ref.md)
 - [Ref return 및 ref local](programming-guide/classes-and-structs/ref-returns.md)

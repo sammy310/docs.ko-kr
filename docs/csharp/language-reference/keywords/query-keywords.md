@@ -1,17 +1,16 @@
 ---
 title: 쿼리 키워드 - C# 참조
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - query keywords [C#]
 - LINQ [C#], query keywords
 ms.assetid: 6c9bec16-dbd7-4a7c-a060-fe4600b2021f
-ms.openlocfilehash: 44af3bf1a7c013c16c7b4a4528c3516621bea149
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 3c08c2b6ecdaa4b875f118531e7e77f7164dd784
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422542"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713159"
 ---
 # <a name="query-keywords-c-reference"></a>쿼리 키워드(C# 참조)
 
@@ -36,7 +35,7 @@ ms.locfileid: "73422542"
 |[ascending](ascending.md)|[orderby](orderby-clause.md) 절의 상황별 키워드입니다.|
 |[descending](descending.md)|[orderby](orderby-clause.md) 절의 상황별 키워드입니다.|
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 키워드](index.md)
 - [LINQ(Language-Integrated Query)](../../programming-guide/concepts/linq/index.md)

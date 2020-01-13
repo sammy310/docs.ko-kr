@@ -1,6 +1,5 @@
 ---
 title: null 키워드 - C# 참조
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - "null"
@@ -8,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - null keyword [C#]
 ms.assetid: fecb1c60-6232-4efe-87f7-9a86ba2e9119
-ms.openlocfilehash: 932649bf063beb8cb334966c0bec0a8df86c7625
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: ef64972a476ce348495565e09c06d0122c5ee628
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73736903"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713321"
 ---
 # <a name="null-c-reference"></a>null(C# 참조)
 
@@ -27,7 +26,7 @@ ms.locfileid: "73736903"
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 참조](../index.md)
 - [C# 키워드](index.md)

@@ -1,18 +1,17 @@
 ---
 title: 생성자 - C# 프로그래밍 가이드
-ms.custom: seodec18
 ms.date: 05/05/2017
 helpviewer_keywords:
 - constructors [C#]
 - classes [C#], constructors
 - C# language, constructors
 ms.assetid: df2e2e9d-7998-418b-8e7d-890c17ff6c95
-ms.openlocfilehash: 13597275460c075309b7457485a17655cf93f251
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 9c57ff6dd9acd8a8bcff6de4fce7d898f1135703
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73971092"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714960"
 ---
 # <a name="constructors-c-programming-guide"></a>생성자(C# 프로그래밍 가이드)
 
@@ -57,7 +56,7 @@ ms.locfileid: "73971092"
   
  [복사 생성자 작성 방법](./how-to-write-a-copy-constructor.md)  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 프로그래밍 가이드](../index.md)
 - [클래스 및 구조체](./index.md)

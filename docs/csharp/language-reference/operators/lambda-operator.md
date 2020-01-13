@@ -1,6 +1,5 @@
 ---
 title: '>= 연산자 - C# 참조'
-ms.custom: seodec18
 ms.date: 01/22/2019
 f1_keywords:
 - =>_CSharpKeyword
@@ -8,12 +7,12 @@ helpviewer_keywords:
 - lambda operator [C#]
 - => operator [C#]
 - lambda expressions [C#], => operator
-ms.openlocfilehash: b8d1a4e3971eb30e76bf543497931ce029c5541d
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 61cc3c3ab4f0b22c4040a9b8a025c81071f4d942
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73036372"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712704"
 ---
 # <a name="-operator-c-reference"></a>=> 연산자(C# 참조)
 
@@ -74,7 +73,7 @@ public override string ToString()
 
 람다 연산자에 대한 자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [익명 함수 식](~/_csharplang/spec/expressions.md#anonymous-function-expressions) 섹션을 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 참조](../index.md)
 - [C# 연산자](index.md)

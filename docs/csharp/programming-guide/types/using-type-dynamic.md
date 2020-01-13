@@ -1,17 +1,16 @@
 ---
 title: dynamic 형식 사용 - C# 프로그래밍 가이드
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - dynamic [C#], about dynamic type
 - dynamic type [C#]
 ms.assetid: 3828989d-c967-4a51-b948-857ebc8fdf26
-ms.openlocfilehash: 248f0410aa8fc7c4aa92b844bda19f51fcf09c6d
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: c5ac5b3692266010f0be8672ef744baaa32e6a03
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73417588"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711859"
 ---
 # <a name="using-type-dynamic-c-programming-guide"></a>dynamic 형식 사용(C# 프로그래밍 가이드)
 
@@ -79,4 +78,4 @@ C# 4에는 Office Automation API 등의 COM API와 상호 운용 환경을 개�
 |[dynamic](../../language-reference/builtin-types/reference-types.md)|`dynamic` 키워드의 사용법을 설명합니다.|
 |[동적 언어 런타임 개요](../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)|동적 언어에 대한 서비스 집합을 CLR(공용 언어 런타임)에 추가하는 런타임 환경인 DLR 개요를 제공합니다.|
 |[연습: 동적 개체 만들기 및 사용](walkthrough-creating-and-using-dynamic-objects.md)|사용자 지정 동적 개체를 만들고 `IronPython` 라이브러리에 액세스하는 프로젝트를 만드는 데 필요한 단계별 지침을 제공합니다.|
-|[방법: Visual C# 기능을 사용하여 Office Interop 개체에 액세스](../interop/how-to-access-office-onterop-objects.md)|명명된 인수와 선택적 인수, `dynamic` 형식, Office API 개체에 대한 액세스를 간소화하는 기타 향상된 기능을 사용하는 프로젝트를 만드는 방법을 보여 줍니다.|
+|[C# 기능을 사용하여 Office interop 개체에 액세스하는 방법](../interop/how-to-access-office-onterop-objects.md)|명명된 인수와 선택적 인수, `dynamic` 형식, Office API 개체에 대한 액세스를 간소화하는 기타 향상된 기능을 사용하는 프로젝트를 만드는 방법을 보여 줍니다.|

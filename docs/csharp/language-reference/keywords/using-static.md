@@ -1,16 +1,15 @@
 ---
 title: using 정적 지시문 - C# 참조
-ms.custom: seodec18
 ms.date: 03/10/2017
 helpviewer_keywords:
 - using static directive [C#]
 ms.assetid: 8b8f9e34-c75e-469b-ba85-6f2eb4090314
-ms.openlocfilehash: 1a0e26d8b0a14e0c77b724fc492588e08762e47f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 55847aceb9fdf032ba533b82ee59be53761fa2c2
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73099989"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712951"
 ---
 # <a name="using-static-directive-c-reference"></a>using 정적 지시문(C# 참조)
 
@@ -42,7 +41,7 @@ using static <fully-qualified-type-name>;
 
  같은 컴파일 단위 또는 네임스페이스에서 여러 `using static` 지시문을 통해 다양한 형식에서 가져온 같은 이름을 사용하는 메서드는 메서드 그룹을 구성합니다.  이들 메서드 그룹 내에서 오버로드 확인은 일반 C# 규칙을 따릅니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 다음 예제에서는 형식 이름을 지정할 필요 없이 `using static` 지시문을 사용하여 <xref:System.Console>, <xref:System.Math> 및 <xref:System.String> 클래스의 정적 멤버를 사용 가능하게 합니다.
 
@@ -50,7 +49,7 @@ using static <fully-qualified-type-name>;
 
 이 예제에서는 `using static` 지시문을 <xref:System.Double> 형식에 적용했을 수도 있습니다. 이 경우 형식 이름을 지정하지 않고도 <xref:System.Double.TryParse(System.String,System.Double@)> 메서드를 호출할 수 있습니다. 그러나 이렇게 하면 코드 가독성이 떨어집니다. 어떤 숫자 형식의 `TryParse` 메서드가 호출되었는지 알아보기 위해 `using static` 문을 확인해야 하기 때문입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [using 지시문](using-directive.md)
 - [C# 참조](../index.md)

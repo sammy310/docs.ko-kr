@@ -1,6 +1,5 @@
 ---
 title: 정적 클래스 및 정적 클래스 멤버 - C# 프로그래밍 가이드
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, static members
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - C# language, static classes
 - static class members [C#]
 ms.assetid: 235614b5-1371-4dbd-9abd-b406a8b0298b
-ms.openlocfilehash: 2eda5a44d4c2dfd9a745871bdc345b7c50e6af49
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 7add512b262afbabe996f752c083566a2c394dfd
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73418803"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705433"
 ---
 # <a name="static-classes-and-static-class-members-c-programming-guide"></a>정적 클래스 및 정적 클래스 멤버(C# 프로그래밍 가이드)
 
@@ -57,7 +56,7 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
   
  정적 클래스는 봉인되므로 상속할 수 없습니다. <xref:System.Object>를 제외하고 어떤 클래스에서도 상속할 수 없습니다. 정적 클래스는 인스턴스 생성자를 포함할 수 없지만 정적 생성자를 포함할 수 있습니다. 또한 클래스에 특수한 초기화가 필요한 정적 멤버가 포함된 경우 비정적 클래스에서 정적 생성자도 정의해야 합니다. 자세한 내용은 [정적 생성자](./static-constructors.md)를 참조하세요.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  온도를 섭씨에서 화씨로, 화씨에서 섭씨로 변환하는 두 메서드를 포함하는 정적 클래스의 예는 다음과 같습니다.  
   
  [!code-csharp[csProgGuideObjects#31](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#31)]  
@@ -89,7 +88,7 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
 
 자세한 내용은 [C# 언어 사양](/dotnet/csharp/language-reference/language-specification/introduction)에서 [정적 클래스](~/_csharplang/spec/classes.md#static-classes) 및 [정적 및 인스턴스 멤버](~/_csharplang/spec/classes.md#static-and-instance-members)를 참조하세요. 언어 사양은 C# 구문 및 사용법에 대 한 신뢰할 수 있는 소스 됩니다.
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 프로그래밍 가이드](../index.md)
 - [static](../../language-reference/keywords/static.md)

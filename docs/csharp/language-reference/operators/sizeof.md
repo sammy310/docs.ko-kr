@@ -1,6 +1,5 @@
 ---
 title: sizeof 연산자 - C# 참조
-ms.custom: seodec18
 ms.date: 07/25/2019
 f1_keywords:
 - sizeof_CSharpKeyword
@@ -8,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - sizeof keyword [C#]
 ms.assetid: c548592c-677c-4f40-a4ce-e613f7529141
-ms.openlocfilehash: 32103043d4c3a8b38f4c8aad80282f6c0555719f
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: c88f205a616587e5437bf4fc81bcbdcbbc19a9ac
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73038931"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712639"
 ---
 # <a name="sizeof-operator-c-reference"></a>sizeof 연산자(C# 참조)
 
@@ -37,7 +36,7 @@ ms.locfileid: "73038931"
 |`sizeof(decimal)`|16|
 |`sizeof(bool)`|1|
 
-`sizeof` 연산자의 피연산자가 [열거형](../keywords/enum.md) 형식의 이름인 경우에도 안전하지 않은 컨텍스트를 사용할 필요가 없습니다.
+`sizeof` 연산자의 피연산자가 [열거형](../builtin-types/enum.md) 형식의 이름인 경우에도 안전하지 않은 컨텍스트를 사용할 필요가 없습니다.
 
 다음 예제에서는 `sizeof` 연산자의 사용법을 보여 줍니다.
 
@@ -49,7 +48,7 @@ ms.locfileid: "73038931"
 
 자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [sizeof 연산자](~/_csharplang/spec/unsafe-code.md#the-sizeof-operator) 섹션을 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 참조](../index.md)
 - [C# 연산자](index.md)

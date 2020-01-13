@@ -1,15 +1,14 @@
 ---
 title: 로컬 함수 - C# 프로그래밍 가이드
-ms.custom: seodec18
 ms.date: 06/14/2017
 helpviewer_keywords:
 - local functions [C#]
-ms.openlocfilehash: 24b7d6f98e331110ddcd971d0d0b21003dbe023d
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 2036e576a44aa3e1e7829e2091e5a9243d6b6010
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73736844"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705524"
 ---
 # <a name="local-functions-c-programming-guide"></a>로컬 함수(C# 프로그래밍 가이드)
 
@@ -76,6 +75,6 @@ C# 7.0부터 C#에서는 *로컬 함수*를 지원합니다. 로컬 함수는 �
 
 [!code-csharp[LocalFunctionAsync](~/samples/snippets/csharp/programming-guide/classes-and-structs/local-functions-async2.cs)] 
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [메서드](methods.md)

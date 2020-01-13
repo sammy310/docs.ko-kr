@@ -1,17 +1,16 @@
 ---
 title: 식 - C# 프로그래밍 가이드
-ms.custom: seodec18
 ms.date: 05/11/2017
 helpviewer_keywords:
 - expressions [C#]
 - C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
-ms.openlocfilehash: e08220362c0acec6060ade75131e34a6b3fb7390
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 4bbee8f15c2591e8b172df9a6759449d48697804
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73417689"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75699095"
 ---
 # <a name="expressions-c-programming-guide"></a>식(C# 프로그래밍 가이드)
 
@@ -87,7 +86,7 @@ C#에서는 메서드, 생성자, 종료자, 속성 및 인덱서에 대한 간�
 
 자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [식](~/_csharplang/spec/expressions.md) 섹션을 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 프로그래밍 가이드](../index.md)
 - [연산자](../../language-reference/operators/index.md)

@@ -1,17 +1,16 @@
 ---
 title: 예외 사용 - C# 프로그래밍 가이드
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - exception handling [C#], about exception handling
 - exceptions [C#], about exceptions
 ms.assetid: 71472c62-320a-470a-97d2-67995180389d
-ms.openlocfilehash: 8d0fe4b8c2ba3e64aa7ee34fc9d02b29bda5c017
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 4012027dc1a9bd2543d0a4195360e5f7e0586fe1
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590174"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705264"
 ---
 # <a name="using-exceptions-c-programming-guide"></a>예외 사용(C# 프로그래밍 가이드)
 C#에서는 런타임 시 프로그램의 오류가 예외라는 메커니즘을 사용하여 프로그램 전체에 전파됩니다. 오류가 발생하는 코드에서 예외를 throw하고, 오류를 수정할 수 있는 코드에서 예외를 catch합니다. .NET Framework CLR(공용 언어 런타임) 또는 프로그램의 코드에서 예외를 throw할 수 있습니다. 예외가 throw되면 예외에 대한 `catch` 문이 발견될 때까지 호출 스택이 전파됩니다. Catch되지 않은 예외는 대화 상자를 표시하는 시스템에서 제공하는 제네릭 예외 처리기에 의해 처리됩니다.  
@@ -44,7 +43,7 @@ C#에서는 런타임 시 프로그램의 오류가 예외라는 메커니즘을
   
 - 스레드의 시작에 도달하면 스레드가 종료됩니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 프로그래밍 가이드](../index.md)
 - [예외 및 예외 처리](./index.md)

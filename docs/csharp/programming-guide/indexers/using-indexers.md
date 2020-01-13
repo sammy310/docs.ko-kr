@@ -1,16 +1,15 @@
 ---
 title: 인덱서 사용 - C# 프로그래밍 가이드
-ms.custom: seodec18
 ms.date: 10/03/2018
 helpviewer_keywords:
 - indexers [C#], about indexers
 ms.assetid: df70e1a2-3ce3-4aba-ad80-4b2f3538699f
-ms.openlocfilehash: 4411fe0ffe7dc136b4e74adeba3e5596af3aa1db
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: bf290681395460bec10be45c4eaa1f165e453caf
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69589434"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75702898"
 ---
 # <a name="using-indexers-c-programming-guide"></a>인덱서 사용(C# 프로그래밍 가이드)
 
@@ -73,7 +72,7 @@ C#은 인덱스 매개 변수 형식을 정수로 제한되지 않습니다. 예
   
 - [get](../../language-reference/keywords/get.md) 및 [set](../../language-reference/keywords/set.md) 접근자의 접근성을 적절하게 제한적으로 설정합니다. 특히 `set` 접근자의 경우 이 작업이 중요합니다. 자세한 내용은 [접근자 액세스 가능성 제한](../classes-and-structs/restricting-accessor-accessibility.md)을 참조하세요.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 프로그래밍 가이드](../index.md)
 - [인덱서](./index.md)

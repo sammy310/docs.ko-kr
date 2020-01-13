@@ -1,17 +1,16 @@
 ---
 title: 구조체 - C# 프로그래밍 가이드
-ms.custom: seodec18
 ms.date: 08/21/2018
 helpviewer_keywords:
 - C# language, structs
 - structs [C#]
 ms.assetid: b7cf4ff2-0eb7-4e5c-93d5-b2196b4f5d89
-ms.openlocfilehash: 35b39da0b15c41b7b2c7a6567bea5dca3fb430e7
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 5150ff2d6edde0ac91bc6548fd499b76af614007
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73970312"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705420"
 ---
 # <a name="structs-c-programming-guide"></a>구조체(C# 프로그래밍 가이드)
 
@@ -31,7 +30,7 @@ ms.locfileid: "73970312"
 - 구조체는 인터페이스를 구현할 수 있습니다.
 - 변수가 nullable 값 형식으로 선언되지 않으면 구조체는 `null`일 수 없으며 구조체 변수에 `null`을 지정할 수 없습니다.
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 프로그래밍 가이드](../index.md)
 - [클래스 및 구조체](index.md)

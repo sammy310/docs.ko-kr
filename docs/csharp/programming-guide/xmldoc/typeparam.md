@@ -1,6 +1,5 @@
 ---
 title: <typeparam> - C# 프로그래밍 가이드
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - typeparam
@@ -8,12 +7,12 @@ helpviewer_keywords:
 - <typeparam> C# XML tag
 - typeparam C# XML tag
 ms.assetid: 9b99d400-e911-4e55-99c6-64367c96aa4f
-ms.openlocfilehash: e5e0d7be46e02bd30799b54246db729ae63ca300
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 04145b82cbed0e9a5cae38ff9ef33d061ee792c9
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523292"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75694532"
 ---
 # <a name="typeparam-c-programming-guide"></a>\<typeparam>(C# 프로그래밍 가이드)
 ## <a name="syntax"></a>구문  
@@ -38,10 +37,10 @@ ms.locfileid: "72523292"
   
  [-doc](../../language-reference/compiler-options/doc-compiler-option.md)로 컴파일하여 문서 주석을 파일로 처리합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  [!code-csharp[csProgGuideDocComments#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#13)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 참조](../../language-reference/index.md)
 - [C# 프로그래밍 가이드](../index.md)

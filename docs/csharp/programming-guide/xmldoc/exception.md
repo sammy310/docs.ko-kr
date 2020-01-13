@@ -1,6 +1,5 @@
 ---
 title: <exception> - C# 프로그래밍 가이드
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - exception
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - <exception> C# XML tag
 - exception C# XML tag
 ms.assetid: dd73aac5-3c74-4fcf-9498-f11bff3a2f3c
-ms.openlocfilehash: 4e4204996c006ce6e943c9a09661001b0e0c2a14
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 65c146684b7fd83a814f4b27d21efdd25c4da950
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523465"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711781"
 ---
 # <a name="exception-c-programming-guide"></a>\<exception>(C# 프로그래밍 가이드)
 ## <a name="syntax"></a>구문  
@@ -39,10 +38,10 @@ ms.locfileid: "72523465"
   
  예외 처리에 대한 자세한 내용은 [예외 및 예외 처리](../exceptions/index.md)를 참조하세요.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  [!code-csharp[csProgGuideDocComments#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#4)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 프로그래밍 가이드](../index.md)
 - [문서 주석에 대한 권장 태그](recommended-tags-for-documentation-comments.md)

@@ -1,6 +1,5 @@
 ---
 title: void - C# 참조
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - void_CSharpKeyword
@@ -8,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - void keyword [C#]
 ms.assetid: 0d2d8a95-fe20-4fbd-bf5d-c1e54bce71d4
-ms.openlocfilehash: af79d39282ea38811777ea1f23054120afc39d2c
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 465aaeadca603f14432478a7e5496a9ef4589ebe
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632946"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712860"
 ---
 # <a name="void-c-reference"></a>void(C# 참조)
 
@@ -36,7 +35,7 @@ public void SampleMethod()
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 참조](../index.md)
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)

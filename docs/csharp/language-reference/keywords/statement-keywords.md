@@ -1,17 +1,16 @@
 ---
 title: 명령문 키워드 - C# 참조
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - keywords [C#], statements
 - statements [C#]
 ms.assetid: fad0c004-e282-4ec8-a127-bca7fd7a0b6f
-ms.openlocfilehash: 52eef49341922810772d257d4f50417a5f776fd4
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: c829414cc197b18ad0dbd9c2cf401a05f6f2fbc6
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66422357"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715150"
 ---
 # <a name="statement-keywords-c-reference"></a>문 키워드(C# 참조)
 
@@ -27,7 +26,7 @@ ms.locfileid: "66422357"
 [fixed 문](fixed-statement.md)|[fixed](fixed-statement.md)|
 |[lock 문](lock-statement.md)|[lock](lock-statement.md)|
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 참조](../index.md)
 - [문](../../programming-guide/statements-expressions-operators/statements.md)

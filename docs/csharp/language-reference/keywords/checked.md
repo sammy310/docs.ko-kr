@@ -1,6 +1,5 @@
 ---
 title: checked 키워드 - C# 참조
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - checked_CSharpKeyword
@@ -8,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - checked keyword [C#]
 ms.assetid: 718a1194-988d-48a3-b089-d6ee8bd1608d
-ms.openlocfilehash: 69bd8cc95012533a6be279b04dc883a56f6f78ea
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 5963bb85ef4b61c1dc478667fb0e2e5438f3e4ad
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69605917"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713700"
 ---
 # <a name="checked-c-reference"></a>checked(C# 참조)
 
@@ -31,7 +30,7 @@ ms.locfileid: "69605917"
 
 [unchecked](./unchecked.md) 키워드는 오버플로 검사를 피하는 데 사용될 수 있습니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 이 샘플에서는 `checked`를 사용하여 런타임에 오버플로 검사를 사용하도록 설정하는 방법을 보여 줍니다.
 
@@ -41,7 +40,7 @@ ms.locfileid: "69605917"
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 참조](../index.md)
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)

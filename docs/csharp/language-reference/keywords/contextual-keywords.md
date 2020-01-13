@@ -1,16 +1,15 @@
 ---
 title: 상황별 키워드 - C# 참조
-ms.custom: seodec18
 ms.date: 03/07/2017
 helpviewer_keywords:
 - contextual keywords [C#]
 ms.assetid: 7c76bc29-a754-4389-b0ab-f6b441018298
-ms.openlocfilehash: 9197ebb1fa48011c60a6d224497e57a604870fc3
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 1de8fbccfa9485a546689233ea8a601a8bd697a5
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422864"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713650"
 ---
 # <a name="contextual-keywords-c-reference"></a>상황별 키워드(C# 참조)
 
@@ -35,7 +34,7 @@ ms.locfileid: "73422864"
   
  C# 3.0에 도입된 모든 쿼리 키워드도 상황별 키워드입니다. 자세한 내용은 [쿼리 키워드(LINQ)](./query-keywords.md)를 참조하세요.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 참조](../index.md)
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)

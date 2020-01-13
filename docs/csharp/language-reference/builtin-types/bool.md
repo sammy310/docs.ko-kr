@@ -8,12 +8,12 @@ helpviewer_keywords:
 - bool data type [C#]
 - Boolean [C#]
 ms.assetid: 551cfe35-2632-4343-af49-33ad12da08e2
-ms.openlocfilehash: 1e79de6d9e5cf973ce394bfb06871777c562c8ac
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 577ccd3bb9a20964dcdfc79ef2028854e4a55dc6
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552998"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75342706"
 ---
 # <a name="bool-c-reference"></a>bool(C# 참조)
 
@@ -29,21 +29,21 @@ ms.locfileid: "74552998"
 
 [!code-csharp-interactive[bool literals](~/samples/csharp/language-reference/builtin-types/BoolType.cs#Literals)]
 
-## <a name="conversions"></a>변환
-
-C#는 `bool` 형식을 포함하는 두 개의 변환만 제공합니다. 여기에는 해당하는 nullable `bool?` 형식으로의 암시적 변환과 `bool?` 형식에서의 명시적 변환이 있습니다. 그러나 .NET에서는 `bool` 형식으로 변환하거나 해당 형식에서 변환하는 데 사용할 수 있는 추가 메서드를 제공합니다. 자세한 내용은 <xref:System.Boolean?displayProperty=nameWithType> API 참조 페이지의 [부울 값 사이의 변환](/dotnet/api/system.boolean#converting-to-and-from-boolean-values) 섹션을 참조하세요.
-
 ## <a name="three-valued-boolean-logic"></a>값이 세 개인 부울 논리
 
 예를 들어 값이 세 개인 논리를 지원해야 하는 경우(예: 값이 세 개인 부울 형식을 지원하는 데이터베이스에서 작업하는 경우) nullable `bool?` 형식을 사용합니다. `bool?` 피연산자의 경우 미리 정의된 `&` 및 `|` 연산자는 값이 세 개인 논리를 지원합니다. 자세한 내용은 [부울 논리 연산자](../operators/boolean-logical-operators.md) 문서의 [Nullable 부울 논리 연산자](../operators/boolean-logical-operators.md#nullable-boolean-logical-operators) 섹션을 참조하세요.
 
 nullable 값 형식에 대한 자세한 내용은 [Nullable 값 형식](nullable-value-types.md)을 참조하세요.
 
+## <a name="conversions"></a>변환
+
+C#는 `bool` 형식을 포함하는 두 개의 변환만 제공합니다. 여기에는 해당하는 nullable `bool?` 형식으로의 암시적 변환과 `bool?` 형식에서의 명시적 변환이 있습니다. 그러나 .NET에서는 `bool` 형식으로 변환하거나 해당 형식에서 변환하는 데 사용할 수 있는 추가 메서드를 제공합니다. 자세한 내용은 <xref:System.Boolean?displayProperty=nameWithType> API 참조 페이지의 [부울 값 사이의 변환](/dotnet/api/system.boolean#converting-to-and-from-boolean-values) 섹션을 참조하세요.
+
 ## <a name="c-language-specification"></a>C# 언어 사양
 
 자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [bool 형식](~/_csharplang/spec/types.md#the-bool-type) 섹션을 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 참조](../index.md)
 - [기본 제공 형식 표](../keywords/built-in-types-table.md)

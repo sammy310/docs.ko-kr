@@ -1,6 +1,5 @@
 ---
 title: is - C# 참조
-ms.custom: seodec18
 ms.date: 06/21/2019
 f1_keywords:
 - is_CSharpKeyword
@@ -8,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: a04105137fad7cd3a25b869c3aa7fcbe91ed20ab
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 1a1f539e80f8d843f40640fa798cf6122f316a9f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69566315"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715235"
 ---
 # <a name="is-c-reference"></a>is(C# 참조)
 
@@ -124,7 +123,7 @@ C# 7.1부터 *expr*은 제네릭 형식 매개 변수 및 해당 제약 조건�
 - [패턴 일치](~/_csharplang/proposals/csharp-7.0/pattern-matching.md)
 - [제네릭과 일치하는 패턴](~/_csharplang/proposals/csharp-7.1/generics-pattern-match.md)
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 참조](../index.md)
 - [C# 키워드](index.md)

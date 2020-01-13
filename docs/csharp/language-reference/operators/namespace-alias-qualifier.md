@@ -1,6 +1,5 @@
 ---
 title: ':: 연산자 - C# 참조'
-ms.custom: seodec18
 ms.date: 08/09/2019
 f1_keywords:
 - ::_CSharpKeyword
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - namespace [C#]
 - global keyword [C#]
 ms.assetid: 698b5a73-85cf-4e0e-9e8e-6496887f8527
-ms.openlocfilehash: 97ed24b050f79cf44ffd1c03c213ffcf91758260
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: a18e52ea05d49bf2b3a468923f1433f09fff9a8b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73038987"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712678"
 ---
 # <a name="-operator-c-reference"></a>:: 연산자(C# 참조)
 
@@ -63,7 +62,7 @@ ms.locfileid: "73038987"
 
 자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [네임스페이스 별칭 한정자](~/_csharplang/spec/namespaces.md#namespace-alias-qualifiers) 섹션을 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 참조](../index.md)
 - [C# 연산자](index.md)

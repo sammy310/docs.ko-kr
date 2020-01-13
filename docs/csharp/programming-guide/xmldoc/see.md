@@ -1,6 +1,5 @@
 ---
 title: <see> - C# 프로그래밍 가이드
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - <see>
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - cross-references [C#]
 - see C# XML tag
 ms.assetid: 0200de01-7e2f-45c4-9094-829d61236383
-ms.openlocfilehash: e292e116ac468246bfe81e1eb5d5c5819a506701
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 995b67362bccbc3527f44e5a1d6b659f330e3afd
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69587691"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711716"
 ---
 # <a name="see-c-programming-guide"></a>\<see>(C# 프로그래밍 가이드)
 ## <a name="syntax"></a>구문  
@@ -38,7 +37,7 @@ ms.locfileid: "69587691"
   
  [!code-csharp[csProgGuideDocComments#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#12)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 프로그래밍 가이드](../index.md)
 - [문서 주석에 대한 권장 태그](./recommended-tags-for-documentation-comments.md)

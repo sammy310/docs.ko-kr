@@ -1,18 +1,17 @@
 ---
 title: '#pragma checksum - C# 참조'
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - '#pragma checksum'
 helpviewer_keywords:
 - '#pragma checksum [C#]'
 ms.assetid: 3673e4ca-6098-4ec1-890f-8fceb2a794a2
-ms.openlocfilehash: 4103b6262fc5085c1204f423a36c9c5c2053b497
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 1bbb404e1183daa5e68e512e7439b6ae52abd605
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69605654"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712483"
 ---
 # <a name="pragma-checksum-c-reference"></a>#pragma checksum(C# 참조)
 ASP.NET 페이지 디버깅을 돕기 위해 소스 파일에 대한 체크섬을 생성합니다.  
@@ -42,7 +41,7 @@ ASP.NET 페이지 디버깅을 돕기 위해 소스 파일에 대한 체크섬�
   
  컴파일러가 파일에서 `#pragma checksum` 지시문을 발견하지 못하면 체크섬을 계산하고 PDB 파일에 값을 씁니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```csharp
 class TestClass  
@@ -54,7 +53,7 @@ class TestClass
 }  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 참조](../index.md)
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)

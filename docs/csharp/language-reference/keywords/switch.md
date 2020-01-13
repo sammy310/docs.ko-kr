@@ -12,12 +12,12 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: 6f0a2cfd5a6de9c8c05bc3daea1e242183ebf03e
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: e5580e81b9175cd95491fdba724bacbffa692a5e
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552349"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345386"
 ---
 # <a name="switch-c-reference"></a>switch(C# 참조)
 
@@ -47,7 +47,7 @@ C# 6 이하에서 일치 식은 다음 형식의 값을 반환하는 식이어�
 - [string](../builtin-types/reference-types.md)
 - [bool](../builtin-types/bool.md)
 - [정수](../builtin-types/integral-numeric-types.md) 값(예: `int` 또는 `long`)입니다.
-- [enum](enum.md) 값
+- [enum](../builtin-types/enum.md) 값
 
 C# 7.0부터 일치 식은 null이 아닌 모든 식일 수 있습니다.
 
@@ -183,7 +183,7 @@ case null:
 
 [!code-csharp[type-pattern2#1](~/samples/snippets/csharp/language-reference/keywords/switch/type-pattern2.cs#1)]
 
-## <a name="a-namewhen--the-case-statement-and-the-when-clause"></a><a name="when" /> `case` 문 및 `when` 절
+## <a name="a-namewhen--the-case-statement-and-the-when-clause"></a><a name="when" />`case` 문 및 `when` 절
 
 C# 7.0부터 case 문이 상호 배타적일 필요가 없으므로 `when` 절을 추가하여 case 문이 true로 평가되기 위해 충족해야 하는 추가 조건을 지정할 수 있습니다. `when` 절은 부울 값을 반환하는 모든 식일 수 있습니다.
 
@@ -197,7 +197,7 @@ C# 7.0부터 case 문이 상호 배타적일 필요가 없으므로 `when` 절�
 
 자세한 내용은 [C# 언어 사양](/dotnet/csharp/language-reference/language-specification/introduction)의 [switch 문](~/_csharplang/spec/statements.md#the-switch-statement)을 참조하세요. 언어 사양은 C# 구문 및 사용법에 대 한 신뢰할 수 있는 소스 됩니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 참조](../index.md)
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)

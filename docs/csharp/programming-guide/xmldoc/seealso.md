@@ -1,6 +1,5 @@
 ---
 title: <seealso> - C# 프로그래밍 가이드
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - cref
@@ -13,12 +12,12 @@ helpviewer_keywords:
 - cross-references [C#], tags
 - <seealso> C# XML tag
 ms.assetid: 8e157f3f-f220-4fcf-9010-88905b080b18
-ms.openlocfilehash: 430270c170f2829d9bf9b90d258c948176b9c086
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 600affdfd8cb524a7fba479d3a68ad8b3e40098c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523331"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75694922"
 ---
 # <a name="seealso-c-programming-guide"></a>\<seealso>(C# 프로그래밍 가이드)
 ## <a name="syntax"></a>구문  
@@ -38,10 +37,10 @@ ms.locfileid: "72523331"
   
  [-doc](../../language-reference/compiler-options/doc-compiler-option.md)로 컴파일하여 문서 주석을 파일로 처리합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  \<seealso>를 사용한 예제는 [\<summary>](./summary.md)를 참조하세요.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 프로그래밍 가이드](../index.md)
 - [문서 주석에 대한 권장 태그](./recommended-tags-for-documentation-comments.md)

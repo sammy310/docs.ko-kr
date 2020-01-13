@@ -1,20 +1,19 @@
 ---
 title: protected internal - C# 참조
-ms.custom: seodec18
 ms.date: 11/15/2017
 author: sputier
-ms.openlocfilehash: 6e5a4c6e63c2c05df54df6bed542eab3f43f9272
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 877df74b51fb859043171619f5687ecddb8409d1
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422579"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713198"
 ---
 # <a name="protected-internal-c-reference"></a>protected internal(C# 참조)
 
 `protected internal` 키워드 조합은 멤버 액세스 한정자입니다. protected internal 멤버는 포함하는 클래스에서 파생된 형식이나 현재 어셈블리에서 액세스할 수 있습니다. `protected internal` 및 다른 액세스 한정자와 비교는 [액세스 가능성 수준](accessibility-levels.md)을 참조하세요.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 기본 클래스의 protected internal 멤버는 포함하는 어셈블리 내의 모든 형식에서 액세스할 수 있습니다. 또한 액세스가 파생된 클래스 형식의 변수를 통해 발생하는 경우에만 다른 어셈블리에 있는 파생 클래스에서 액세스할 수 있습니다. 예를 들어 다음 코드 세그먼트를 고려하세요.
 
@@ -66,7 +65,7 @@ class DerivedClass : BaseClass
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 참조](../index.md)
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)

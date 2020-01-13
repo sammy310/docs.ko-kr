@@ -3,19 +3,19 @@ title: 비관리형 형식 - C# 참조
 ms.date: 09/06/2019
 helpviewer_keywords:
 - unmanaged type [C#]
-ms.openlocfilehash: 81eef59ceb20bcae6c749dd59578ce35da253826
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 97aa4dd629e385dbe9641d82a7da21a0aaa63e92
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204479"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75342586"
 ---
 # <a name="unmanaged-types-c-reference"></a>비관리형 형식(C# 참조)
 
 형식이 다음 형식 중 하나인 경우에는 **관리되지 않는 형식**입니다.
 
 - `sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char`, `float`, `double`, `decimal` 또는 `bool`
-- 임의의 [열거형](../keywords/enum.md) 형식
+- 임의의 [열거형](enum.md) 형식
 - 임의의 [포인터](../../programming-guide/unsafe-code-pointers/pointer-types.md) 형식
 - 관리되지 않는 형식의 필드만 포함하고 C# 7.3 및 이전 버전에서 사용자 정의된 [구조체](../keywords/struct.md) 형식은 생성 형식(하나 이상의 형식 인수를 포함하는 형식)이 아닙니다.
 
@@ -33,7 +33,7 @@ C# 8.0부터는 다음 예와 같이 관리되지 않는 형식의 필드만 포
 
 자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [포인터 형식](~/_csharplang/spec/unsafe-code.md#pointer-types) 섹션을 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 참조](../index.md)
 - [포인터 형식](../../programming-guide/unsafe-code-pointers/pointer-types.md)

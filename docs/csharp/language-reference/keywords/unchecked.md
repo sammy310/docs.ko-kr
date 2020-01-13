@@ -1,6 +1,5 @@
 ---
 title: unchecked 키워드 - C# 참조
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - unchecked_CSharpKeyword
@@ -8,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - unchecked keyword [C#]
 ms.assetid: 0c021f7c-923f-4b3d-a58f-55336f5ac27e
-ms.openlocfilehash: c31f1243b1394bfe826b02c14c73faf402640849
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 6dad0dfd508fb390dd0a52d1b48d70b4c5725513
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69608420"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713003"
 ---
 # <a name="unchecked-c-reference"></a>unchecked(C# 참조)
 
@@ -29,7 +28,7 @@ unchecked 컨텍스트에서 식이 대상 형식의 범위를 벗어난 값을 
 
 오버플로를 확인하는 데 시간이 걸리기 때문에 오버플로 위험이 없는 상황에서는 unchecked 코드를 사용하여 성능을 향상할 수 있습니다. 그러나 오버플로가 발생할 가능성이 있는 경우 checked 환경을 사용해야 합니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 이 샘플에서는 `unchecked` 키워드를 사용하는 방법을 보여 줍니다.
 
@@ -39,7 +38,7 @@ unchecked 컨텍스트에서 식이 대상 형식의 범위를 벗어난 값을 
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 참조](../index.md)
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)

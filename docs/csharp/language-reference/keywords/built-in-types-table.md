@@ -1,18 +1,17 @@
 ---
 title: 기본 제공 형식 표 - C# 참조
-ms.custom: seodec18
 description: 기본 제공 C# 형식의 키워드
 ms.date: 08/17/2018
 helpviewer_keywords:
 - types [C#], built-in
 - built-in C# types
 ms.assetid: 54f901f2-bf2f-472c-ae8d-73e8ecfc57fe
-ms.openlocfilehash: dc324b5d79d3b09f7131cbdf901b64c544bdc104
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 1344b29a8751722e36eae58ece5242a2bcdb8a69
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552289"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713741"
 ---
 # <a name="built-in-types-table-c-reference"></a>기본 제공 형식 표(C# 참조)
 
@@ -61,7 +60,7 @@ Console.WriteLine(doubleType.FullName);
 // System.Double
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 참조](../index.md)
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)

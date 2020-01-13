@@ -1,6 +1,5 @@
 ---
 title: <code> - C# Programming Guide
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - code
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - code XML tag
 - <code> C# XML tag
 ms.assetid: f235e3bc-a709-43cf-8a9f-bd57cabdf6da
-ms.openlocfilehash: 31143b1da423ab762ac996acb1e74bae66000c11
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: eddf00c5fd51308d6d0f618282931190b43e92b5
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523522"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711807"
 ---
 # <a name="code-c-programming-guide"></a>\<code>(C# 프로그래밍 가이드)
 ## <a name="syntax"></a>구문  
@@ -32,10 +31,10 @@ ms.locfileid: "72523522"
   
  [-doc](../../language-reference/compiler-options/doc-compiler-option.md)로 컴파일하여 문서 주석을 파일로 처리합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  \<code> 태그를 사용하는 방법의 예는 [\<example>](./example.md) 항목을 참조하세요.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 프로그래밍 가이드](../index.md)
 - [문서 주석에 대한 권장 태그](./recommended-tags-for-documentation-comments.md)

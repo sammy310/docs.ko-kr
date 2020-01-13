@@ -3,12 +3,12 @@ title: C# 인터페이스 - C# 언어 둘러보기
 description: 인터페이스는 C#의 형식이 구현하는 계약을 정의합니다.
 ms.date: 08/10/2016
 ms.assetid: a9bf82f4-efd1-4216-bd34-4ef0fa48c968
-ms.openlocfilehash: 240ddfb321c5a89c8aada4353845915d0e242ae0
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: d10d9f69cebe9a05cdff9b9ff5d817237bf8c56f
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634549"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346836"
 ---
 # <a name="interfaces"></a>인터페이스
 
@@ -40,4 +40,4 @@ ms.locfileid: "65634549"
 
 >[!div class="step-by-step"]
 >[이전](arrays.md)
->[다음](enums.md)
+>[다음](delegates.md)

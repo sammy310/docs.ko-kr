@@ -1,17 +1,16 @@
 ---
 title: 정적 생성자 - C# 프로그래밍 가이드
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - static constructors [C#]
 - constructors [C#], static
 ms.assetid: 151ec95e-3c4d-4ed7-885d-95b7a3be2e7d
-ms.openlocfilehash: 6d1a39008ebb965649104c2e74241780731911bb
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 0956c174f4d5742780baf00a6f2785a9efd1d93f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596028"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714683"
 ---
 # <a name="static-constructors-c-programming-guide"></a>정적 생성자(C# 프로그래밍 가이드)
 정적 생성자는 [정적](../../language-reference/keywords/static.md) 데이터를 초기화하거나 한 번만 수행해야 하는 특정 작업을 수행하는 데 사용됩니다. 첫 번째 인스턴스가 만들어지거나 정적 멤버가 참조되기 전에 자동으로 호출됩니다.  
@@ -44,14 +43,14 @@ ms.locfileid: "69596028"
 > [!Note]
 > 직접 액세스할 수 없더라도, 명시적 정적 생성자가 있을 경우 초기화 예외 문제 해결에 도움이 되도록 문서화해야 합니다.
 
-### <a name="usage"></a>사용
+### <a name="usage"></a>사용법
 
 - 정적 생성자는 일반적으로 클래스가 로그 파일을 사용하고, 생성자를 사용하여 이 파일에 항목을 쓰는 경우에 사용됩니다.  
 - 정적 생성자는 생성자가 `LoadLibrary` 메서드를 호출할 수 있을 때 비관리 코드에 대한 래퍼 클래스를 만드는 경우에도 유용합니다.  
 
 - 또한 정적 생성자를 사용하면 제약 조건(형식 매개 변수 제약 조건)을 통해 컴파일 시간에 검사할 수 없는 형식 매개 변수에 런타임 검사를 편리하게 적용할 수 있습니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
  이 예제에서 `Bus` 클래스에는 정적 생성자가 있습니다. `Bus`의 첫 번째 인스턴스를 만들 때(`bus1`) 정적 생성자가 호출되어 클래스를 초기화합니다. 샘플 출력은 `Bus`의 두 인스턴스가 생성된 경우에도 정적 생성자가 한 번만 실행되고, 인스턴스 생성자를 실행하기 전에 실행되는지 확인합니다.  
   
  [!code-csharp[csProgGuideObjects#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#15)]
@@ -59,7 +58,7 @@ ms.locfileid: "69596028"
 ## <a name="c-language-specification"></a>C# 언어 사양
 자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [정적 생성자](~/_csharplang/spec/classes.md#static-constructors) 섹션을 참조하세요.
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 프로그래밍 가이드](../index.md)
 - [클래스 및 구조체](./index.md)

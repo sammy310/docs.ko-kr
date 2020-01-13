@@ -1,18 +1,17 @@
 ---
 title: 메서드 매개 변수 - C# 참조
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - methods [C#], parameters
 - method parameters [C#]
 - parameters [C#]
 ms.assetid: 680e39ff-775b-48b0-9f47-4186a5bfc4a1
-ms.openlocfilehash: 4011cbd3bc9306b64df87b1fcde48f1f41df8240
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 2cc7f9178fa5c1a040be9d45ba66fac292bb0e28
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69602034"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713378"
 ---
 # <a name="method-parameters-c-reference"></a>메서드 매개 변수(C# 참조)
 
@@ -28,7 +27,7 @@ ms.locfileid: "69602034"
   
 - [out](./out-parameter-modifier.md)는 이 매개 변수가 참조로 전달되고 호출된 메서드에 의해 기록되도록 지정합니다.
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 참조](../index.md)
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)

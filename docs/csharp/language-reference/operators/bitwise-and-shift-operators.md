@@ -29,12 +29,12 @@ helpviewer_keywords:
 - ^ operator [C#]
 - bitwise logical OR operator [C#]
 - '| operator [C#]'
-ms.openlocfilehash: 27f7cf46bd3e344503f74527df34506d38ad4545
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: f14b92aba270eab845ca50e5407da3502b5c4087
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428442"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345337"
 ---
 # <a name="bitwise-and-shift-operators-c-reference"></a>비트 및 시프트 연산자(C# 참조)
 
@@ -172,9 +172,9 @@ x = x op y
 
 ## <a name="enumeration-logical-operators"></a>열거형 논리 연산자
 
-`~`, `&`, `|` 및 `^` 연산자도 [열거형](../keywords/enum.md) 형식에 대해 지원됩니다. 동일한 열거형 형식의 피연산자인 경우, 기본 정수 형식의 해당 값에 대해 논리 연산을 수행됩니다. 예를 들어 기본 형식이 `U`인 열거형 형식 `T`의 `x` 및 `y`에 대해 `x & y` 식은 `(T)((U)x & (U)y)` 식과 동일한 결과를 생성합니다.
+`~`, `&`, `|` 및 `^` 연산자도 [열거형](../builtin-types/enum.md) 형식에 대해 지원됩니다. 동일한 열거형 형식의 피연산자인 경우, 기본 정수 형식의 해당 값에 대해 논리 연산을 수행됩니다. 예를 들어 기본 형식이 `U`인 열거형 형식 `T`의 `x` 및 `y`에 대해 `x & y` 식은 `(T)((U)x & (U)y)` 식과 동일한 결과를 생성합니다.
 
-일반적으로 [Flags](xref:System.FlagsAttribute) 특성으로 정의된 열거형 형식을 가진 비트 논리 연산자를 사용합니다. 자세한 내용은 [열거형 형식](../../programming-guide/enumeration-types.md) 문서의 [비트 플래그로서 열거형 형식](../../programming-guide/enumeration-types.md#enumeration-types-as-bit-flags)을 참조하세요.
+일반적으로 [Flags](xref:System.FlagsAttribute) 특성으로 정의된 열거형 형식을 가진 비트 논리 연산자를 사용합니다. 자세한 내용은 [열거형 형식](../builtin-types/enum.md) 문서의 [비트 플래그로서 열거형 형식](../builtin-types/enum.md#enumeration-types-as-bit-flags)을 참조하세요.
 
 ## <a name="operator-overloadability"></a>연산자 오버로드 가능성
 
@@ -192,7 +192,7 @@ x = x op y
 - [복합 할당](~/_csharplang/spec/expressions.md#compound-assignment)
 - [숫자 승격](~/_csharplang/spec/expressions.md#numeric-promotions)
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 참조](../index.md)
 - [C# 연산자](index.md)

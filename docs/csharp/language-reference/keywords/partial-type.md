@@ -1,6 +1,5 @@
 ---
 title: partial 형식 - C# 참조
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - partialtype
@@ -8,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - partial types [C#]
 ms.assetid: 27320743-a22e-4c7b-b0b3-53afe3607334
-ms.openlocfilehash: 7af43a25f88ff0a53e5fa257b13bb1dc8a6d55eb
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 551145b9cdf5fa24f3ae365665e8ff06cf5e9307
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422609"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715215"
 ---
 # <a name="partial-type-c-reference"></a>partial 형식(C# 참조)
 
@@ -35,7 +34,7 @@ ms.locfileid: "73422609"
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 참조](../index.md)
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)

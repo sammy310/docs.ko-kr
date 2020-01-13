@@ -1,18 +1,17 @@
 ---
 title: 속성 사용 - C# 프로그래밍 가이드
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - set accessor [C#]
 - get accessor [C#]
 - properties [C#], about properties
 ms.assetid: f7f67b05-0983-4cdb-96af-1855d24c967c
-ms.openlocfilehash: 3b10c24645dad842f498fb49c60b3272829cce29
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 5f4697ea518e7fe03df4ecac9d748386a8ac6313
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72579170"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705407"
 ---
 # <a name="using-properties-c-programming-guide"></a>속성 사용(C# 프로그래밍 가이드)
 
@@ -77,13 +76,13 @@ ms.locfileid: "72579170"
 > [!NOTE]
 > [static](../../language-reference/keywords/static.md) 속성의 접근자에 [virtual](../../language-reference/keywords/virtual.md), [abstract](../../language-reference/keywords/abstract.md) 또는 [override](../../language-reference/keywords/override.md) 한정자를 사용하면 오류가 발생합니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 이 예제에서는 인스턴스, 정적 및 읽기 전용 속성을 보여 줍니다. 키보드에서 직원 이름을 받고 `NumberOfEmployees`를 1만큼 증가한 다음 직원 이름과 번호를 표시합니다.
 
 [!code-csharp[csProgGuideProperties#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#2)]
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 이 예제에서는 파생 클래스에서 이름이 같은 다른 속성에 의해 숨겨진 기본 클래스의 속성에 액세스하는 방법을 보여 줍니다.
 
@@ -101,13 +100,13 @@ ms.locfileid: "72579170"
 
      멤버를 숨기는 방법에 대한 자세한 내용은 [new 한정자](../../language-reference/keywords/new-modifier.md)를 참조하세요.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 이 예제에서 두 클래스 `Cube` 및 `Square`는 추상 클래스 `Shape`를 구현하고 해당 abstract `Area` 속성을 재정의합니다. 속성의 [override](../../language-reference/keywords/override.md) 한정자를 사용합니다. 프로그램은 변을 입력으로 사용하고 사각형과 정육면체의 면적을 계산합니다. 또한 면적을 입력으로 사용하고 사각형 및 정육면체의 해당 변을 계산합니다.
 
 [!code-csharp[csProgGuideProperties#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#6)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 프로그래밍 가이드](../index.md)
 - [속성](properties.md)

@@ -1,18 +1,17 @@
 ---
 title: 클래스 - C# 프로그래밍 가이드
-ms.custom: seodec18
 description: 클래스 형식 및 이를 만드는 방법을 자세히 알아봅니다.
 ms.date: 08/21/2018
 helpviewer_keywords:
 - classes [C#]
 - C# language, classes
 ms.assetid: e8848524-7273-429f-8aba-c658d5eff5ad
-ms.openlocfilehash: 193446ff98edce3b7c078c6eeba07cf9acdadaf0
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 832095e1d9712c85ad588836e8eba8f523719021
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69597182"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714971"
 ---
 # <a name="classes-c-programming-guide"></a>클래스(C# 프로그래밍 가이드)
 
@@ -100,7 +99,7 @@ C++와 달리 C#의 클래스는 하나의 기본 클래스에서만 직접 상�
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 프로그래밍 가이드](../index.md)
 - [개체 지향 프로그래밍](../concepts/object-oriented-programming.md)

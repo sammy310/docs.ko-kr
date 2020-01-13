@@ -1,17 +1,16 @@
 ---
 title: ToString 메서드 재정의 방법 - C# 프로그래밍 가이드
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - ToString method, overriding in C#
 - inheritance [C#], overriding OnPaint and ToString
 ms.assetid: 8016db69-1f19-420c-8e17-98e8bebb7749
-ms.openlocfilehash: 3d5b63609ea61764d4042d534c40d8032fb82841
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 7c7196df56821c134b31982d7956a75039e9f929
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73970469"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705576"
 ---
 # <a name="how-to-override-the-tostring-method-c-programming-guide"></a>ToString 메서드 재정의 방법(C# 프로그래밍 가이드)
 
@@ -44,7 +43,7 @@ C#의 모든 클래스 또는 구조체는 <xref:System.Object> 클래스를 암
   
      [!code-csharp[csProgGuideInheritance#38](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#38)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.IFormattable>
 - [C# 프로그래밍 가이드](../index.md)

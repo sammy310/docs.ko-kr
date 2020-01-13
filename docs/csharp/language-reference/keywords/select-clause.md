@@ -1,6 +1,5 @@
 ---
 title: select 절 - C# 참조
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - select_CSharpKeyword
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - select keyword [C#]
 - select clause [C#]
 ms.assetid: df01e266-5781-4aaa-80c4-67cf28ea093f
-ms.openlocfilehash: f1bfbeccaf6c3916a591f6447760fa01c3f8a3b6
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: b4d25f80e4cdb08fbc28fa4db3cb1c790b1145e6
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422361"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713094"
 ---
 # <a name="select-clause-c-reference"></a>select 절(C# 참조)
 
@@ -26,7 +25,7 @@ ms.locfileid: "73422361"
 
 `select` 절에서 생성된 시퀀스의 형식에 따라 쿼리 변수 `queryHighScores`의 형식이 결정됩니다. 가장 단순한 경우에서는 `select` 절이 범위 변수를 지정합니다. 이렇게 하면 반환된 시퀀스에 데이터 소스와 동일한 형식의 요소가 포함됩니다. 자세한 내용은 [LINQ 쿼리 작업의 형식 관계](../../programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md)를 참조하세요. 그러나 `select` 절은 소스 데이터를 새 형식으로 변환(또는 *프로젝션*)하기 위한 강력한 메커니즘도 제공합니다. 자세한 내용은 [LINQ를 통한 데이터 변환(C#)](../../programming-guide/concepts/linq/data-transformations-with-linq.md)을 참조하세요.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 다음 예제에서는 `select` 절에 사용할 수 있는 모든 형식을 보여 줍니다. 각 쿼리에서 `select` 절과 *쿼리 변수* 형식(`studentQuery1`, `studentQuery2` 등) 간의 관계를 확인합니다.
 
@@ -38,7 +37,7 @@ ms.locfileid: "73422361"
 
 컴파일 시간에 `select` 절은 <xref:System.Linq.Enumerable.Select%2A> 표준 쿼리 연산자에 대한 메서드 호출로 변환됩니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 참조](../index.md)
 - [쿼리 키워드(LINQ)](query-keywords.md)

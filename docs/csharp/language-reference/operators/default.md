@@ -1,16 +1,15 @@
 ---
 title: 기본 연산자 - C# 참조
-ms.custom: seodec18
 description: 기본 연산자를 사용하여 형식의 기본값을 생성합니다.
 ms.date: 08/01/2019
 helpviewer_keywords:
 - default keyword [C#]
-ms.openlocfilehash: 6503e82a42f116a7ba8461ae060592377579f255
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 744bdf1ec683ef32bba508c260590c0ed4c6e987
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039059"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712717"
 ---
 # <a name="default-operator-c-reference"></a>기본 연산자(C# 참조)
 
@@ -41,7 +40,7 @@ C# 7.1부터 `default` 리터럴을 사용하여 컴파일러가 식 형식을 �
 
 `default` 리터럴에 대한 자세한 내용은 [기능 제안 노트](~/_csharplang/proposals/csharp-7.1/target-typed-default.md)를 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 참조](../index.md)
 - [C# 연산자](index.md)

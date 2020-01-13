@@ -1,6 +1,5 @@
 ---
 title: return 문 - C# 참조
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - return_CSharpKeyword
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - return statement [C#]
 - return keyword [C#]
 ms.assetid: 6da6e152-5b58-4448-8f3f-470dd0617ecd
-ms.openlocfilehash: a845ce257bf7f0cf0e64d6815b2278f6cec946e7
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 116bad7a1f9f61311d287c575b52547d63c9e1c0
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661610"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713133"
 ---
 # <a name="return-c-reference"></a>return(C# 참조)
 
@@ -22,7 +21,7 @@ ms.locfileid: "67661610"
 
  return 문이 `try` 블록 안에 있으면 `finally` 블록(있는 경우)은 제어가 호출 메서드로 반환되기 전에 실행됩니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
  다음 예제에서 `CalculateArea()` 메서드는 `area` 로컬 변수를 `double` 값으로 반환합니다.
 
@@ -32,7 +31,7 @@ ms.locfileid: "67661610"
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 참조](../index.md)
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)

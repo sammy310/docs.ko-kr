@@ -1,16 +1,15 @@
 ---
 title: 포인터 형식 - C# 프로그래밍 가이드
-ms.custom: seodec18
 ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: b9b9f145f8f2d945fa06d53efa89f5754766963f
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: fe0eacbd67917826c88c5ef68bb8d8aeab9ba251
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423122"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711820"
 ---
 # <a name="pointer-types-c-programming-guide"></a>포인터 형식(C# 프로그래밍 가이드)
 
@@ -36,7 +35,7 @@ int *p1, *p2, *p3;   // Invalid in C#
 
 `myType*` 형식의 포인터 변수 값은 `myType` 형식의 변수 주소입니다. 다음은 포인터 형식 선언의 예제입니다.
 
-|예|설명|
+|예제|설명|
 |-------------|-----------------|
 |`int* p`|`p`는 정수에 대한 포인터입니다.|
 |`int** p`|`p`는 정수에 대한 포인터를 가리키는 포인터입니다.|
@@ -82,10 +81,11 @@ int* myVariable;
 
 자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [포인터 형식](~/_csharplang/spec/unsafe-code.md#pointer-types) 섹션을 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 프로그래밍 가이드](../index.md)
 - [안전하지 않은 코드 및 포인터](index.md)
 - [포인터 변환](pointer-conversions.md)
-- [유형](/dotnet/csharp/language-reference/keywords)
+- [참조 형식](../../language-reference/keywords/reference-types.md)
+- [값 형식](../../language-reference/keywords/value-types.md)
 - [unsafe](../../language-reference/keywords/unsafe.md)

@@ -1,16 +1,15 @@
 ---
 title: new 한정자 - C# 참조
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - new modifier keyword [C#]
 ms.assetid: a2e20856-33b9-4620-b535-a60dbce8349b
-ms.openlocfilehash: 082cd37eca6b5de1251d73a5483665f8a98b0132
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 6c4fedd469efb79f91780dff26da89b586de2d1c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422675"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713338"
 ---
 # <a name="new-modifier-c-reference"></a>new 한정자(C# 참조)
 
@@ -36,13 +35,13 @@ ms.locfileid: "73422675"
 
 상속된 멤버를 숨기지 않는 선언에 `new` 한정자를 사용하면 경고가 발생합니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 이 예제에서 기본 클래스 `BaseC` 및 파생 클래스 `DerivedC`는 동일한 필드 이름 `x`를 사용하므로 상속된 필드의 값이 숨겨집니다. 이 예제에서는 `new` 한정자의 사용법을 보여 줍니다. 또한 정규화된 이름을 사용하여 기본 클래스의 숨겨진 멤버에 액세스하는 방법을 보여 줍니다.
 
 [!code-csharp[csrefKeywordsOperator#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsOperator/CS/csrefKeywordsOperators.cs#9)]
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 이 예제에서 중첩 클래스는 기본 클래스에서 이름이 동일한 클래스를 숨깁니다. 이 예제에서는 `new` 한정자를 사용하여 경고 메시지를 제거하는 방법과 정규화된 이름을 사용하여 숨겨진 클래스 멤버에 액세스하는 방법을 보여 줍니다.
 
@@ -58,7 +57,7 @@ The keyword new is required on 'MyDerivedC.x' because it hides inherited member 
 
 자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [새 한정자](~/_csharplang/spec/classes.md#the-new-modifier) 섹션을 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 참조](../../language-reference/index.md)
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)
