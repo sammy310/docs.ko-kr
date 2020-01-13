@@ -16,25 +16,23 @@ helpviewer_keywords:
 - data stores, reading and writing to files
 - stores, reading and writing to files
 ms.assetid: f977ebdc-1b55-475a-bc3d-3376470b08ae
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 59a89aa354941b7ff22a125a980c2d9c75ac37ba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a1ea65b0b8280faf51595b2fe9edcbf17eaabd8f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491523"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706688"
 ---
-# <a name="how-to-read-and-write-to-files-in-isolated-storage"></a><span data-ttu-id="1ff31-102">방법: 격리된 스토리지의 파일 읽기 및 쓰기</span><span class="sxs-lookup"><span data-stu-id="1ff31-102">How to: Read and Write to Files in Isolated Storage</span></span>
-<span data-ttu-id="1ff31-103">격리된 저장소에서 파일을 읽고 쓰기 위해, 스트림 판독기(<xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> 개체)를 가진 <xref:System.IO.StreamReader> 개체 또는 스트림 작성기(<xref:System.IO.StreamWriter> 개체)를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="1ff31-103">To read from, or write to, a file in an isolated store, use an <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> object with a stream reader (<xref:System.IO.StreamReader> object) or stream writer (<xref:System.IO.StreamWriter> object).</span></span>  
+# <a name="how-to-read-and-write-to-files-in-isolated-storage"></a><span data-ttu-id="37c92-102">방법: 격리된 스토리지의 파일 읽기 및 쓰기</span><span class="sxs-lookup"><span data-stu-id="37c92-102">How to: Read and Write to Files in Isolated Storage</span></span>
+<span data-ttu-id="37c92-103">격리된 저장소에서 파일을 읽고 쓰기 위해, 스트림 판독기(<xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> 개체)를 가진 <xref:System.IO.StreamReader> 개체 또는 스트림 작성기(<xref:System.IO.StreamWriter> 개체)를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="37c92-103">To read from, or write to, a file in an isolated store, use an <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> object with a stream reader (<xref:System.IO.StreamReader> object) or stream writer (<xref:System.IO.StreamWriter> object).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="1ff31-104">예제</span><span class="sxs-lookup"><span data-stu-id="1ff31-104">Example</span></span>  
- <span data-ttu-id="1ff31-105">다음 코드 예제에서는 격리된 저장소를 가져오고 저장소에 TestStore.txt라는 파일이 있는지 여부를 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="1ff31-105">The following code example obtains an isolated store and checks whether a file named TestStore.txt exists in the store.</span></span> <span data-ttu-id="1ff31-106">존재하지 않는 경우, 파일을 만들고 파일에 "Hello Isolated Storage"를 씁니다.</span><span class="sxs-lookup"><span data-stu-id="1ff31-106">If it doesn't exist, it creates the file and writes "Hello Isolated Storage" to the file.</span></span> <span data-ttu-id="1ff31-107">TestStore.txt가 이미 있으면 예제 코드에서는 파일을 읽습니다.</span><span class="sxs-lookup"><span data-stu-id="1ff31-107">If TestStore.txt already exists, the example code reads from the file.</span></span>  
+## <a name="example"></a><span data-ttu-id="37c92-104">예제</span><span class="sxs-lookup"><span data-stu-id="37c92-104">Example</span></span>  
+ <span data-ttu-id="37c92-105">다음 코드 예제에서는 격리된 저장소를 가져오고 저장소에 TestStore.txt라는 파일이 있는지 여부를 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="37c92-105">The following code example obtains an isolated store and checks whether a file named TestStore.txt exists in the store.</span></span> <span data-ttu-id="37c92-106">존재하지 않는 경우, 파일을 만들고 파일에 "Hello Isolated Storage"를 씁니다.</span><span class="sxs-lookup"><span data-stu-id="37c92-106">If it doesn't exist, it creates the file and writes "Hello Isolated Storage" to the file.</span></span> <span data-ttu-id="37c92-107">TestStore.txt가 이미 있으면 예제 코드에서는 파일을 읽습니다.</span><span class="sxs-lookup"><span data-stu-id="37c92-107">If TestStore.txt already exists, the example code reads from the file.</span></span>  
   
  [!code-csharp[Conceptual.IsolatedStorage#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source5.cs#5)]
  [!code-vb[Conceptual.IsolatedStorage#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source5.vb#5)]  
   
-## <a name="see-also"></a><span data-ttu-id="1ff31-108">참고 항목</span><span class="sxs-lookup"><span data-stu-id="1ff31-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="37c92-108">참조</span><span class="sxs-lookup"><span data-stu-id="37c92-108">See also</span></span>
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorageFile>
 - <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream>
@@ -42,5 +40,5 @@ ms.locfileid: "54491523"
 - <xref:System.IO.FileAccess?displayProperty=nameWithType>
 - <xref:System.IO.StreamReader?displayProperty=nameWithType>
 - <xref:System.IO.StreamWriter?displayProperty=nameWithType>
-- [<span data-ttu-id="1ff31-109">파일 및 스트림 I/O</span><span class="sxs-lookup"><span data-stu-id="1ff31-109">File and Stream I/O</span></span>](../../../docs/standard/io/index.md)
-- [<span data-ttu-id="1ff31-110">격리된 스토리지</span><span class="sxs-lookup"><span data-stu-id="1ff31-110">Isolated Storage</span></span>](../../../docs/standard/io/isolated-storage.md)
+- [<span data-ttu-id="37c92-109">파일 및 스트림 I/O</span><span class="sxs-lookup"><span data-stu-id="37c92-109">File and Stream I/O</span></span>](../../../docs/standard/io/index.md)
+- [<span data-ttu-id="37c92-110">격리된 스토리지</span><span class="sxs-lookup"><span data-stu-id="37c92-110">Isolated Storage</span></span>](../../../docs/standard/io/isolated-storage.md)
