@@ -16,7 +16,11 @@
     - name: 2.0-2.1
       href: 2.0-2.1.md
     - name: .NET Framework - .NET Core
-      href: fx-core.md
+      items:
+        - name: 호환성이 손상되는 변경
+          href: fx-core.md
+        - name: 예외를 throw하는 API
+          href: unsupported-apis.md
 - name: 영역별
   expanded: true
   items:
