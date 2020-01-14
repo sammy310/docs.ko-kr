@@ -2,12 +2,12 @@
 title: 마이그레이션 지침
 ms.date: 03/30/2017
 ms.assetid: cb65c132-58c9-4028-b3d4-1efc71d5e60e
-ms.openlocfilehash: 672ed1a93b4409f491d76ffeeaaac5f67a1c4b6e
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: f0c21d32b745a51bada9133230dd0c87be9c915e
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802611"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937958"
 ---
 # <a name="migration-guidance"></a>마이그레이션 지침
 
@@ -21,7 +21,8 @@ ms.locfileid: "74802611"
   
  따라서 .NET Framework 4를 채택 하는 결정은 WF3\*()에서 W F 4 (\*)로 이동 하는 결정에서 분리 됩니다. 이 항목에서는 WF3 및 WF4 작업에 대한 정보를 담은 WF 마이그레이션 지침의 링크를 제공합니다.  
   
-## <a name="wf-migration-whitepapers-and-cookbooks"></a>WF 마이그레이션 백서 및 설명서  
+## <a name="wf-migration-white-papers-and-cookbooks"></a>WF 마이그레이션 백서 및 cookbook
+
  [WF 마이그레이션 개요](https://docs.microsoft.com/previous-versions/appfabric/ff383417(v=azure.10)) 항목에서는 WF3와 w f 4 및 마이그레이션 전략 간의 관계에 대 한 광범위 한 개요를 제공 합니다. 관련 항목에서는 특정 항목을 자세히 다룹니다.  
   
  [WF 마이그레이션 개요](https://docs.microsoft.com/previous-versions/appfabric/ff383417(v=azure.10))  

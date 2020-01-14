@@ -7,12 +7,12 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: d3a3539904c5d8b5db23b99ca6128bf5860a1917
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: e34f7c8a0194e3901453923530a5cd07202801f6
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346104"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937452"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>WCF Data Services 개발 및 배포
 
@@ -70,7 +70,7 @@ Visual Studio 2015을 사용 하 여 WCF 데이터 서비스를 ASP.NET 응용 �
 
 3. **Microsoft Azure 개발 환경**
 
-     Microsoft Azure Tools for Visual Studio에는 Visual Studio에서 Windows Azure 서비스를 개발 하기 위한 통합 된 도구 집합이 포함 되어 있습니다. 이 도구를 사용하면 Microsoft Azure에 배포할 수 있는 데이터 서비스를 개발하고, 배포하기 전에 로컬 컴퓨터에서 데이터 서비스를 테스트할 수 있습니다. Visual Studio를 사용 하 여 Microsoft Azure 플랫폼에서 실행 되는 데이터 서비스를 개발할 때 이러한 도구를 사용 합니다. [Microsoft 다운로드 센터](https://go.microsoft.com/fwlink/?LinkID=201848)에서 Visual Studio 용 Windows Azure 도구를 다운로드할 수 있습니다. Windows Azure에서 실행 되는 데이터 서비스를 개발 하는 방법에 대 한 자세한 내용은 [Windows azure에서 OData 서비스 배포](https://blogs.msdn.microsoft.com/astoriateam/2010/07/20/deploying-an-odata-service-in-windows-azure/)게시물을 참조 하십시오.
+     Microsoft Azure Tools for Visual Studio에는 Visual Studio에서 Windows Azure 서비스를 개발 하기 위한 통합 된 도구 집합이 포함 되어 있습니다. 이 도구를 사용하면 Microsoft Azure에 배포할 수 있는 데이터 서비스를 개발하고, 배포하기 전에 로컬 컴퓨터에서 데이터 서비스를 테스트할 수 있습니다. Visual Studio를 사용 하 여 Microsoft Azure 플랫폼에서 실행 되는 데이터 서비스를 개발할 때 이러한 도구를 사용 합니다. [Microsoft 다운로드 센터](https://go.microsoft.com/fwlink/?LinkID=201848)에서 Visual Studio 용 Windows Azure 도구를 다운로드할 수 있습니다. Windows Azure에서 실행 되는 데이터 서비스를 개발 하는 방법에 대 한 자세한 내용은 [Windows azure에서 OData 서비스 배포](https://docs.microsoft.com/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure)게시물을 참조 하십시오.
 
 ### <a name="development-tips"></a>개발 팁
 
@@ -115,7 +115,7 @@ WCF Data Services에서는 데이터 서비스를 호스트하는 프로세스�
 
 - **Windows Azure**
 
-     Microsoft Azure Tools for Visual Studio를 사용 하 여 Windows Azure에 데이터 서비스를 배포할 수 있습니다. [Microsoft 다운로드 센터](https://go.microsoft.com/fwlink/?LinkID=201848)에서 Visual Studio 용 Windows Azure 도구를 다운로드할 수 있습니다. Windows Azure에 데이터 서비스를 배포 하는 방법에 대 한 자세한 내용은 [Windows azure에서 OData 서비스 배포](https://blogs.msdn.microsoft.com/astoriateam/2010/07/20/deploying-an-odata-service-in-windows-azure/)게시물을 참조 하십시오.
+     Microsoft Azure Tools for Visual Studio를 사용 하 여 Windows Azure에 데이터 서비스를 배포할 수 있습니다. [Microsoft 다운로드 센터](https://go.microsoft.com/fwlink/?LinkID=201848)에서 Visual Studio 용 Windows Azure 도구를 다운로드할 수 있습니다. Windows Azure에 데이터 서비스를 배포 하는 방법에 대 한 자세한 내용은 [Windows azure에서 OData 서비스 배포](https://docs.microsoft.com/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure)게시물을 참조 하십시오.
 
 ### <a name="deployment-considerations"></a>배포 고려 사항
 
@@ -123,7 +123,7 @@ WCF Data Services에서는 데이터 서비스를 호스트하는 프로세스�
 
 - Entity Framework 공급자를 사용 하는 데이터 서비스를 배포 하 여 SQL Server 데이터베이스에 액세스 하는 경우 데이터 서비스 배포와 함께 데이터 구조, 데이터 또는 둘 다를 전파 해야 할 수도 있습니다. Visual Studio는 대상 데이터베이스에서이 작업을 수행 하기 위해 스크립트 (.sql 파일)를 자동으로 만들 수 있으며, 이러한 스크립트를 ASP.NET 응용 프로그램의 웹 배포 패키지에 포함할 수 있습니다. 자세한 내용은 [방법: 웹 응용 프로그램 프로젝트를 사용 하 여 데이터베이스 배포](https://docs.microsoft.com/previous-versions/dd465343(v=vs.100))를 참조 하세요. ASP.NET 웹 사이트의 경우 Visual Studio에서 **데이터베이스 게시 마법사** 를 사용 하 여이 작업을 수행할 수 있습니다. 자세한 내용은 [SQL Database 게시](https://docs.microsoft.com/previous-versions/aspnet/bb907585(v=vs.100))를 참조 하십시오.
 
-- WCF Data Services에는 기본 WCF 구현이 포함 되어 있기 때문에 windows Server AppFabric을 사용 하 여 Windows Server에서 실행 되는 IIS에 배포 된 데이터 서비스를 모니터링할 수 있습니다. Windows Server AppFabric을 사용 하 여 데이터 서비스를 모니터링 하는 방법에 대 한 자세한 내용은 [Windows Server appfabric을 사용 하 여 WCF Data Services 추적](https://blogs.msdn.microsoft.com/rjacobs/2010/06/09/tracking-wcf-data-services-with-windows-server-appfabric/)게시물을 참조 하세요.
+- WCF Data Services에는 기본 WCF 구현이 포함 되어 있기 때문에 windows Server AppFabric을 사용 하 여 Windows Server에서 실행 되는 IIS에 배포 된 데이터 서비스를 모니터링할 수 있습니다. Windows Server AppFabric을 사용 하 여 데이터 서비스를 모니터링 하는 방법에 대 한 자세한 내용은 [Windows Server appfabric을 사용 하 여 WCF Data Services 추적](https://docs.microsoft.com/archive/blogs/rjacobs/tracking-wcf-data-services-with-windows-server-appfabric)게시물을 참조 하세요.
 
 ## <a name="see-also"></a>참조
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c3809c8f-1737-4f0f-9442-0c01ee689871
 topic_type:
 - apiref
-ms.openlocfilehash: 0ce84e1545523302cd47e60b9f047bc470e6bf0f
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a4e9268d292004f447b30c82f1db4d0fe58404fe
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74443621"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937954"
 ---
 # <a name="corelementtype-enumeration"></a>CorElementType 열거형
 
@@ -75,9 +75,9 @@ typedef enum CorElementType {
 } CorElementType;
 ```
 
-## <a name="members"></a>멤버
+## <a name="members"></a>Members
 
-|멤버|설명|
+|Member|설명|
 |------------|-----------------|
 |`ELEMENT_TYPE_END`|내부적으로 사용 합니다.|
 |`ELEMENT_TYPE_VOID`|Void 형식입니다.|
@@ -121,7 +121,7 @@ typedef enum CorElementType {
 형식 한정자는 보다 복잡 한 형식을 나타내는 기본을 형성 합니다. 형식 시그니처에서 바로 뒤에 오는 값에 `CorElementType` 형식 한정자 값이 적용 됩니다. `CorElementType` 형식 한정자 값 다음에 나오는 값은 다음 표에 지정 된 것 처럼 `CorElementType` 단순 형식 값, 메타 데이터 토큰 또는 다른 값일 수 있습니다.
 
 > [!NOTE]
-> 모든 숫자 (*숫자*, *인수 개수*, *메타 데이터 토큰*, *순위*, *개수*및 *바운드*)는 압축 된 정수로 저장 됩니다. 자세한 내용은 ECMA 웹 사이트의 [표준 ECMA-335-CLI (공용 언어 인프라)](https://go.microsoft.com/fwlink/?LinkID=116487) 를 참조 하세요.
+> 모든 숫자 (*숫자*, *인수 개수*, *메타 데이터 토큰*, *순위*, *개수*및 *바운드*)는 압축 된 정수로 저장 됩니다. 자세한 내용은 ECMA 웹 사이트의 [표준 ECMA-335-CLI (공용 언어 인프라)](http://www.ecma-international.org/publications/standards/Ecma-335.htm) 를 참조 하세요.
 
 |형식 한정자|서식|
 |-------------------|------------|
@@ -146,6 +146,6 @@ typedef enum CorElementType {
 
 **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [메타데이터 열거형](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

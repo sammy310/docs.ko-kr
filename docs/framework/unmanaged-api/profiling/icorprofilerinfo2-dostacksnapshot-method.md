@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 287b11e9-7c52-4a13-ba97-751203fa97f4
 topic_type:
 - apiref
-ms.openlocfilehash: 64bcf6ee58d743a26e31c49a425f36cc808b5080
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5d90f414a945d346ca7721745ea7d86cb24a085c
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74426833"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75936865"
 ---
 # <a name="icorprofilerinfo2dostacksnapshot-method"></a>ICorProfilerInfo2::DoStackSnapshot 메서드
 스택에서 관리 되는 프레임을 지정 된 스레드에 대해 보여 주고 콜백을 통해 프로파일러에 정보를 보냅니다.  
@@ -64,14 +64,14 @@ HRESULT DoStackSnapshot(
  `contextSize`  
  진행 `context` 매개 변수에서 참조 하는 `CONTEXT` 구조체의 크기입니다.  
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
  `thread` null을 전달 하면 현재 스레드의 스냅숏이 생성 됩니다. 대상 스레드가 현재 일시 중단 된 경우에만 다른 스레드에 대 한 스냅숏을 만들 수 있습니다.  
   
  프로파일러가 스택을 탐색 하려는 경우 `DoStackSnapshot`를 호출 합니다. CLR이 해당 호출에서 반환 되기 전에 스택에서 각 관리 되는 프레임 (또는 관리 되지 않는 프레임의 실행)에 대해 한 번씩 여러 번 `StackSnapshotCallback`를 호출 합니다. 관리 되지 않는 프레임이 발견 되 면 직접 탐색 해야 합니다.  
   
  스택이 푸시되는 순서는 프레임을 스택에 푸시하는 방법입니다. 리프 (마지막 푸시) 프레임 먼저, 주 (첫 번째 푸시) 프레임이 마지막입니다.  
   
- 관리 되는 스택을 탐색 하기 위해 프로파일러를 프로그래밍 하는 방법에 대 한 자세한 내용은 [.NET Framework 2.0: 기본 사항 및 그 이상에서 프로파일러 스택 탐색](https://go.microsoft.com/fwlink/?LinkId=73638)을 참조 하세요.  
+ 관리 되는 스택을 탐색 하기 위해 프로파일러를 프로그래밍 하는 방법에 대 한 자세한 내용은 [.NET Framework 2.0: 기본 사항 및 그 이상에서 프로파일러 스택 탐색](https://docs.microsoft.com/previous-versions/dotnet/articles/bb264782(v=msdn.10))을 참조 하세요.  
   
  다음 섹션에서 설명 하는 것 처럼 스택 워크는 동기식 또는 비동기식 일 수 있습니다.  
   
@@ -106,7 +106,7 @@ HRESULT DoStackSnapshot(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ICorProfilerInfo 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
 - [ICorProfilerInfo2 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

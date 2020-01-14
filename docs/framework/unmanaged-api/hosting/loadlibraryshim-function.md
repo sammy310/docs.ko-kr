@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 30931874-4d0e-4df1-b3d1-e425b50655d1
 topic_type:
 - apiref
-ms.openlocfilehash: 1759ee2ecf08322b745a4f80a62b24596c4504cb
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 11bb220068e978dc130701e3b28ab3f421be7337
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123246"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937646"
 ---
 # <a name="loadlibraryshim-function"></a>LoadLibraryShim 함수
 .NET Framework 재배포 가능 패키지에 포함 된 DLL의 지정 된 버전을 로드 합니다.  
@@ -43,7 +43,7 @@ HRESULT LoadLibraryShim (
  진행 .NET Framework 라이브러리에서 로드할 DLL의 이름을 나타내는 0으로 끝나는 문자열입니다.  
   
  `szVersion`  
- 진행 로드할 DLL의 버전을 나타내는 0으로 끝나는 문자열입니다. `szVersion`가 null 이면 로드 하도록 선택한 버전이 버전 4 보다 작은 최신 버전의 지정 된 DLL입니다. 즉, `szVersion`가 null 이면 버전 4 보다 크거나 같은 모든 버전이 무시 되 고 버전 4 보다 버전이 설치 되어 있지 않은 경우 DLL이 로드 되지 않습니다. 이는 .NET Framework 4 설치가 기존 응용 프로그램 또는 구성 요소에 영향을 주지 않도록 하기 위한 것입니다. CLR 팀 블로그에서 [-Proc SxS 및 Migration 빠른 시작](https://go.microsoft.com/fwlink/?LinkId=200329) 항목을 참조 하세요.  
+ 진행 로드할 DLL의 버전을 나타내는 0으로 끝나는 문자열입니다. `szVersion`가 null 이면 로드 하도록 선택한 버전이 버전 4 보다 작은 최신 버전의 지정 된 DLL입니다. 즉, `szVersion`가 null 이면 버전 4 보다 크거나 같은 모든 버전이 무시 되 고 버전 4 보다 버전이 설치 되어 있지 않은 경우 DLL이 로드 되지 않습니다. 이는 .NET Framework 4 설치가 기존 응용 프로그램 또는 구성 요소에 영향을 주지 않도록 하기 위한 것입니다. CLR 팀 블로그에서 [-Proc SxS 및 Migration 빠른 시작](https://devblogs.microsoft.com/dotnet/in-proc-sxs-and-migration-quick-start/) 항목을 참조 하세요.  
   
  `pvReserved`  
  나중에 사용하기 위해 예약되어 있습니다.  
@@ -56,7 +56,7 @@ HRESULT LoadLibraryShim (
   
 |반환 코드|설명|  
 |-----------------|-----------------|  
-|S_OK|메서드가 완료되었습니다.|  
+|S_OK|메서드가 성공적으로 완료되었습니다.|  
 |CLR_E_SHIM_RUNTIMELOAD|`szDllName`를 로드 하려면 CLR (공용 언어 런타임)을 로드 해야 하며 CLR의 필수 버전을 로드할 수 없습니다.|  
   
 ## <a name="remarks"></a>주의  

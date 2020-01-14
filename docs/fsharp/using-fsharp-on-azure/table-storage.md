@@ -1,30 +1,30 @@
 ---
 title: F#을 사용하여 Azure Table 스토리지 시작
-description: Azure Table storage 또는 Azure Cosmos DB를 사용 하 여 클라우드에 구조화 된 데이터를 저장 합니다.
+description: Azure Table Storage 또는 Azure Cosmos DB를 사용하여 클라우드에 구조화된 데이터를 저장합니다.
 author: sylvanc
 ms.date: 03/26/2018
-ms.openlocfilehash: 6833e2264f7543f50b94892b6980140e4bf1cdd1
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 23f5e40e1d9b3d5a0ee27d675362930ef86e90c5
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424604"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75935581"
 ---
 # <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>F\#를 사용 하 여 Azure Table storage 및 Azure Cosmos DB Table API 시작
 
-Azure Table storage는 클라우드에 구조화 된 NoSQL 데이터를 저장 하는 서비스입니다. Table storage는 스키마 없는 디자인을 사용 하는 키/특성 저장소입니다. 테이블 저장소는 스키마가 다르기 때문에 응용 프로그램의 요구 사항이 진화 함에 따라 데이터를 쉽게 적용할 수 있습니다. 모든 종류의 응용 프로그램에 대해 빠르고 비용 효율적으로 데이터에 액세스할 수 있습니다. 테이블 저장소는 일반적으로 유사한 데이터 볼륨에 대 한 기존 SQL 보다 비용이 훨씬 낮습니다.
+Azure Table Storage는 클라우드에 구조화된 NoSQL 데이터를 저장하는 서비스입니다. Table Storage는 스키마 없이 디자인된 키/특성 스토리지입니다. Table Storage는 스키마가 없기 때문에 애플리케이션의 요구 사항이 변화함에 따라 데이터를 쉽게 적응시킬 수 있습니다. 모든 종류의 애플리케이션에서 빠르고 비용 효율적으로 데이터에 액세스할 수 있습니다. 비슷한 양의 데이터일 때 Table Storage는 일반적으로 전통적인 SQL에 비해 비용이 매우 낮습니다.
 
-테이블 저장소를 사용 하 여 웹 응용 프로그램에 대 한 사용자 데이터, 주소록, 장치 정보 및 서비스에 필요한 다른 유형의 메타 데이터와 같은 유연한 데이터 집합을 저장할 수 있습니다. 테이블에 엔터티를 개수에 관계 없이 저장할 수 있으며 저장소 계정에는 저장소 계정의 최대 용량 한도까지 원하는 수의 테이블이 포함 될 수 있습니다.
+Table Storage를 사용하여 웹 애플리케이션의 사용자 데이터, 주소록, 디바이스 정보 및 서비스에 필요한 다른 유형의 메타데이터와 같은 유연한 데이터 세트을 저장할 수 있습니다. 테이블에 저장할 수 있는 엔터티 수에는 제한이 없으며, 스토리지 계정에 포함할 수 있는 테이블의 수에는 스토리지 계정의 최대 용량 한도까지 제한이 없습니다.
 
 Azure Cosmos DB는 Azure Table storage 용으로 작성 되었으며 다음과 같은 프리미엄 기능이 필요한 응용 프로그램에 대 한 Table API를 제공 합니다.
 
-- 턴키 전역 배포.
+- 턴키 전역 배포
 - 전 세계 전용 처리량.
-- 99 번째 백분위 수에서 1 자리 밀리초 대기 시간입니다.
-- 보장 된 고가용성.
+- 99번째 백분위수에서 1자리 밀리초 대기 시간
+- 보장된 고가용성
 - 자동 보조 인덱싱.
 
-Azure Table storage 용으로 작성 된 응용 프로그램은 코드를 변경 하지 않고 Table API를 사용 하 여 Azure Cosmos DB으로 마이그레이션하고 프리미엄 기능을 활용할 수 있습니다. Table API에는 .NET, Java, Python 및 node.js에 사용할 수 있는 클라이언트 Sdk가 있습니다.
+Azure Table Storage에 대해 작성된 애플리케이션은 코드를 변경하지 않고 테이블 API를 사용하여 Azure Cosmos DB로 마이그레이션할 수 있으며 프리미엄 기능을 활용할 수 있습니다. 테이블 API에는 .NET, Java, Python 및 Node.js에 사용할 수 있는 클라이언트 SDK가 있습니다.
 
 자세한 내용은 [Azure Cosmos DB Table API 소개](https://docs.microsoft.com/azure/cosmos-db/table-introduction)를 참조 하세요.
 
@@ -32,19 +32,19 @@ Azure Table storage 용으로 작성 된 응용 프로그램은 코드를 변경
 
 이 자습서에서는 테이블 만들기 및 F# 삭제, 테이블 데이터 삽입, 업데이트, 삭제 및 쿼리를 비롯 하 여 Azure table storage 또는 Azure Cosmos DB Table API를 사용 하 여 몇 가지 일반적인 작업을 수행 하는 코드를 작성 하는 방법을 보여 줍니다.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>전제 조건
 
 이 가이드를 사용 하려면 먼저 [Azure storage 계정](/azure/storage/storage-create-storage-account) 또는 [Azure Cosmos DB 계정을](https://azure.microsoft.com/try/cosmosdb/)만들어야 합니다.
 
 ## <a name="create-an-f-script-and-start-f-interactive"></a>F# 스크립트 만들기 및 대화형 시작 F#
 
-이 문서의 샘플은 F# 응용 프로그램 또는 F# 스크립트에서 사용할 수 있습니다. F# 스크립트를 만들려면 F# 개발 환경에서 `.fsx` 확장명을 사용 하 여 파일을 만듭니다 (예: `tables.fsx`).
+이 문서의 샘플은 F# 응용 프로그램 또는 F# 스크립트에서 사용할 수 있습니다. F# 스크립트를 만들려면 F# 개발 환경에서 `tables.fsx`같은 `.fsx` 확장명을 사용 하 여 파일을 만듭니다.
 
 그런 다음 [Paket](https://fsprojects.github.io/Paket/) 또는 [NuGet](https://www.nuget.org/) 과 같은 [패키지 관리자](package-management.md) 를 사용 하 여 `WindowsAzure.Storage` 패키지를 설치 하 고 `#r` 지시어를 사용 하 여 스크립트에 `WindowsAzure.Storage.dll` 참조 합니다. Microsoft Azure 네임 스페이스를 얻기 위해 `Microsoft.WindowsAzure.ConfigurationManager`에 대해 다시 수행 합니다.
 
-### <a name="add-namespace-declarations"></a>네임 스페이스 선언 추가
+### <a name="add-namespace-declarations"></a>네임스페이스 선언 추가
 
-`tables.fsx` 파일의 맨 위에 다음 `open` 문을 추가 합니다.
+`tables.fsx` 파일 맨 위에 다음 `open` 문을 추가합니다.
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L1-L5)]
 
@@ -60,13 +60,13 @@ Azure Cosmos DB에 연결 하는 경우이 자습서에 대 한 연결 문자열
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L11-L11)]
 
-그러나 실제 프로젝트에는이 방법이 **권장 되지 않습니다** . 저장소 계정 키는 저장소 계정의 루트 암호와 비슷합니다. 항상 저장소 계정 키를 보호 해야 합니다. 다른 사용자에 게 배포 하거나 하드 코딩 하거나 다른 사용자가 액세스할 수 있는 일반 텍스트 파일로 저장 하지 않도록 합니다. 손상 된 것으로 생각 되는 경우 Azure Portal을 사용 하 여 키를 다시 생성할 수 있습니다.
+그러나 실제 프로젝트에는이 방법이 **권장 되지 않습니다** . 스토리지 계정 키는 스토리지 계정의 루트 암호와 비슷합니다. 항상 스토리지 계정 키를 보호해야 합니다. 다른 사용자에게 배포하거나 하드 코딩하거나 다른 사람이 액세스할 수 있는 일반 텍스트 파일에 저장하지 마십시오. 손상 된 것으로 생각 되는 경우 Azure Portal을 사용 하 여 키를 다시 생성할 수 있습니다.
 
 실제 응용 프로그램의 경우 저장소 연결 문자열을 유지 하는 가장 좋은 방법은 구성 파일에 있습니다. 구성 파일에서 연결 문자열을 가져오려면 다음을 수행할 수 있습니다.
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L13-L15)]
 
-Azure Configuration Manager 사용은 선택 사항입니다. .NET Framework의 `ConfigurationManager` 유형과 같은 API를 사용할 수도 있습니다.
+Azure 구성 관리자 사용은 선택 사항입니다. .NET Framework의 `ConfigurationManager` 형식과 같은 API를 사용할 수도 있습니다.
 
 ### <a name="parse-the-connection-string"></a>연결 문자열 구문 분석
 
@@ -82,29 +82,29 @@ Azure Configuration Manager 사용은 선택 사항입니다. .NET Framework의 
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L28-L29)]
 
-이제 데이터를 읽고 테이블 저장소에 데이터를 기록 하는 코드를 작성할 준비가 되었습니다.
+이제 데이터를 읽어 오고 Table Storage에 데이터를 기록하는 코드를 작성할 준비가 되었습니다.
 
-### <a name="create-a-table"></a>테이블 만들기
+### <a name="create-a-table"></a>테이블 생성하기
 
-이 예에서는 테이블이 아직 없는 경우 테이블을 만드는 방법을 보여 줍니다.
+이 예제에서는 테이블이 없는 경우 만드는 방법을 보여 줍니다.
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L35-L39)]
 
 ### <a name="add-an-entity-to-a-table"></a>테이블에 엔터티 추가
 
-엔터티는 `TableEntity`에서 상속 되는 형식을 가져야 합니다. 원하는 방식으로 `TableEntity`을 확장할 수 있지만 형식에 매개 변수가 없는 생성자가 *있어야 합니다* . `get` 및 `set` 모두 포함 된 속성만 Azure 테이블에 저장 됩니다.
+엔터티에는 `TableEntity`에서 상속 되는 형식이 있어야 합니다. 원하는 방식으로 `TableEntity`를 확장할 수 있지만, 형식에는 매개 변수가 없는 생성자가 *있어야 합니다* . `get` 및 `set` 모두 포함 된 속성만 Azure 테이블에 저장 됩니다.
 
-엔터티의 파티션 및 행 키는 테이블에서 엔터티를 고유 하 게 식별 합니다. 동일한 파티션 키를 가진 엔터티는 다른 파티션 키를 사용 하는 것 보다 더 빨리 쿼리할 수 있지만 다양 한 파티션 키를 사용 하면 병렬 작업의 확장성을 높일 수 있습니다.
+엔터티의 파티션 및 행 키는 테이블에서 엔터티를 고유 하 게 식별 합니다. 동일한 파티션 키를 가진 엔터티는 다른 파티션 키를 가진 엔터티보다 더 빨리 쿼리할 수 있지만 다양한 파티션 키를 사용하면 병렬 작업 확장성이 커집니다.
 
 다음은 `lastName`를 파티션 키로 사용 하 고 `firstName`를 행 키로 사용 하는 `Customer`의 예입니다.
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L45-L52)]
 
-이제 테이블에 `Customer`을 추가 합니다. 이렇게 하려면 테이블에서 실행 되는 `TableOperation`을 만듭니다. 이 경우 `Insert` 작업을 만듭니다.
+이제 테이블에 `Customer`를 추가 합니다. 이렇게 하려면 테이블에서 실행 되는 `TableOperation`을 만듭니다. 이 경우 `Insert` 작업을 만듭니다.
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L54-L55)]
 
-### <a name="insert-a-batch-of-entities"></a>엔터티 일괄 처리 삽입
+### <a name="insert-a-batch-of-entities"></a>엔터티 일괄 삽입
 
 단일 쓰기 작업을 사용 하 여 엔터티 일괄 처리를 테이블에 삽입할 수 있습니다. 일괄 처리 작업을 통해 작업을 단일 실행으로 결합할 수 있지만 몇 가지 제한 사항이 있습니다.
 
@@ -119,7 +119,7 @@ Azure Configuration Manager 사용은 선택 사항입니다. .NET Framework의 
 
 ### <a name="retrieve-all-entities-in-a-partition"></a>파티션의 모든 엔터티 검색
 
-테이블에서 파티션의 모든 엔터티를 쿼리하려면 `TableQuery` 개체를 사용 합니다. 여기서 "Smith"가 파티션 키인 엔터티를 필터링 합니다.
+테이블에서 파티션의 모든 엔터티를 쿼리하려면 `TableQuery` 개체를 사용합니다. 여기서 "Smith"가 파티션 키인 엔터티를 필터링 합니다.
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L77-L82)]
 
@@ -129,7 +129,7 @@ Azure Configuration Manager 사용은 선택 사항입니다. .NET Framework의 
 
 ### <a name="retrieve-a-range-of-entities-in-a-partition"></a>파티션의 엔터티 범위 검색
 
-파티션의 모든 엔터티를 쿼리하지 않으려면 파티션 키 필터를 행 키 필터와 결합 하 여 범위를 지정할 수 있습니다. 여기서는 두 개의 필터를 사용 하 여 행 키 (이름)가 알파벳의 "M" 보다 이전 문자로 시작 하는 "Smith" 파티션의 모든 엔터티를 가져옵니다.
+파티션의 모든 엔터티를 쿼리하지 않으려면 파티션 키 필터를 행 키 필터와 결합하여 범위를 지정할 수 있습니다. 여기서는 두 개의 필터를 사용 하 여 행 키 (이름)가 알파벳의 "M" 보다 이전 문자로 시작 하는 "Smith" 파티션의 모든 엔터티를 가져옵니다.
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L91-L100)]
 
@@ -139,7 +139,7 @@ Azure Configuration Manager 사용은 선택 사항입니다. .NET Framework의 
 
 ### <a name="retrieve-a-single-entity"></a>단일 엔터티 검색
 
-단일 특정 엔터티를 검색 하는 쿼리를 작성할 수 있습니다. 여기서 `TableOperation`을 사용 하 여 고객 "이혜준 Smith"를 지정 합니다. 컬렉션 대신 `Customer`이 반환 됩니다. 쿼리에서 파티션 키와 행 키를 모두 지정 하는 것은 Table service에서 단일 엔터티를 검색 하는 가장 빠른 방법입니다.
+단일 특정 엔터티를 검색하는 쿼리를 작성할 수 있습니다. 여기서는 `TableOperation`을 사용 하 여 고객 "이혜준 씨 Smith"를 지정 합니다. 컬렉션 대신 `Customer`을 반환 합니다. 쿼리에서 파티션 키와 행 키를 모두 지정 하는 것은 Table service에서 단일 엔터티를 검색 하는 가장 빠른 방법입니다.
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L109-L111)]
 
@@ -159,9 +159,9 @@ Azure Configuration Manager 사용은 선택 사항입니다. .NET Framework의 
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L134-L141)]
 
-### <a name="query-a-subset-of-entity-properties"></a>엔터티 속성의 하위 집합 쿼리
+### <a name="query-a-subset-of-entity-properties"></a>엔터티 속성 하위 집합 쿼리
 
-테이블 쿼리는 엔터티의 일부 속성만 검색할 수 있습니다. 프로젝션 이라고 하는이 기술은 특히 규모가 많은 엔터티의 경우 쿼리 성능을 향상 시킬 수 있습니다. 여기서는 `DynamicTableEntity` 및 `EntityResolver`을 사용 하 여 전자 메일 주소만 반환 합니다. 로컬 저장소 에뮬레이터에서는 프로젝션이 지원 되지 않으므로이 코드는 Table service의 계정을 사용 하는 경우에만 실행 됩니다.
+테이블 쿼리는 엔터티의 일부 속성만 검색할 수 있습니다. 프로젝션 이라고 하는이 기술은 특히 규모가 많은 엔터티의 경우 쿼리 성능을 향상 시킬 수 있습니다. 여기에서 `DynamicTableEntity` 및 `EntityResolver`를 사용 하 여 전자 메일 주소만 반환 합니다. 로컬 스토리지 에뮬레이터에서는 프로젝션이 지원되지 않으므로 이 코드는 Table service의 계정을 사용하는 경우에만 실행됩니다.
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L147-L158)]
 
@@ -183,7 +183,7 @@ Azure Configuration Manager 사용은 선택 사항입니다. .NET Framework의 
 
 ### <a name="delete-a-table"></a>테이블 삭제
 
-저장소 계정에서 테이블을 삭제할 수 있습니다. 삭제 된 테이블은 삭제 후 일정 시간 동안 다시 만들 수 없습니다.
+저장소 계정에서 테이블을 삭제할 수 있습니다. 삭제된 테이블은 삭제 후 일정 기간 동안 다시 만들 수 없습니다.
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L193-L193)]
 
@@ -191,8 +191,8 @@ Azure Configuration Manager 사용은 선택 사항입니다. .NET Framework의 
 
 이제 테이블 저장소의 기본 사항을 배웠으므로 다음 링크를 따라 좀 더 복잡 한 저장소 작업 및 Azure Cosmos DB Table API에 대해 알아보세요.
 
-- [Azure Cosmos DB Table API 소개](https://docs.microsoft.com/azure/cosmos-db/table-introduction)
-- [.NET 용 저장소 클라이언트 라이브러리 참조](https://docs.microsoft.com/dotnet/api/overview/azure/storage)
+- [Azure Cosmos DB 테이블 API 소개](https://docs.microsoft.com/azure/cosmos-db/table-introduction)
+- [Storage Client Library for .NET 참조](https://docs.microsoft.com/dotnet/api/overview/azure/storage)
 - [Azure Storage 형식 공급자](https://fsprojects.github.io/AzureStorageTypeProvider/)
-- [Azure Storage 팀 블로그](https://blogs.msdn.microsoft.com/windowsazurestorage/)
+- [Azure Storage 팀 블로그](https://docs.microsoft.com/archive/blogs/windowsazurestorage/)
 - [연결 문자열 구성](https://docs.microsoft.com/azure/storage/common/storage-configure-connection-string)

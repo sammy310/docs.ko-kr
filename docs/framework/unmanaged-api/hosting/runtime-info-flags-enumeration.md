@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: adba37be-f775-4cdb-8919-5746ce694f33
 topic_type:
 - apiref
-ms.openlocfilehash: 80643187045e7e96b9c18169c5e71287713d711f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9d505b917c343c40c7fa2a7aecf3466578ae0a8d
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73106245"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75936634"
 ---
 # <a name="runtime_info_flags-enumeration"></a>RUNTIME_INFO_FLAGS 열거형
 반환 해야 하는 CLR (공용 언어 런타임)에 대 한 정보를 나타내는 값을 포함 합니다.  
@@ -41,14 +41,14 @@ typedef enum {
 } RUNTIME_INFO_FLAGS;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-|멤버|설명|  
+|Member|설명|  
 |------------|-----------------|  
 |`RUNTIME_INFO_DONT_RETURN_DIRECTORY`|디렉터리 정보를 포함 하지 않아야 함을 나타냅니다.|  
 |`RUNTIME_INFO_DONT_RETURN_VERSION`|버전 정보를 포함 하지 않아야 함을 나타냅니다.|  
 |`RUNTIME_INFO_DONT_SHOW_ERROR_DIALOG`|오류가 발생 한 경우 오류 대화 상자를 표시 하지 않음을 나타냅니다.|  
-|`RUNTIME_INFO_IGNORE_ERROR_MODE`|SEM_FAILCRITICALERRORS 플래그를 사용 하 여 [SetErrorMode](https://go.microsoft.com/fwlink/p/?LinkId=255242) 함수를 호출 하는 효과를 재정의 해야 함을 나타냅니다. 즉, 실패 시 설치 대화 상자가 표시 되지 않고 표시 되어야 합니다.|  
+|`RUNTIME_INFO_IGNORE_ERROR_MODE`|SEM_FAILCRITICALERRORS 플래그를 사용 하 여 [SetErrorMode](/windows/win32/api/errhandlingapi/nf-errhandlingapi-seterrormode) 함수를 호출 하는 효과를 재정의 해야 함을 나타냅니다. 즉, 실패 시 설치 대화 상자가 표시 되지 않고 표시 되어야 합니다.|  
 |`RUNTIME_INFO_REQUEST_AMD64`|AMD-64 호환 버전의 런타임 정보에 대 한 요청을 나타냅니다.|  
 |`RUNTIME_INFO_REQUEST_IA64`|64 호환 버전의 런타임에 대 한 정보에 대 한 요청을 나타냅니다.|  
 |`RUNTIME_INFO_REQUEST_X86`|X86 호환 버전의 런타임에 대 한 정보 요청을 나타냅니다.|  

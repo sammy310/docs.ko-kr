@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 95d2aa0d-8eeb-4a9f-a216-5249f7e2c167
 topic_type:
 - apiref
-ms.openlocfilehash: 46cd8b5c22f48ba45c4da7fa8876d6807a21f2b3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f0f6fe321f4d38129b6d70ce94a7ea8de8fff6c8
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124149"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75935666"
 ---
 # <a name="resolvetypelib-method"></a>ResolveTypeLib 메서드
 정규화 된 경로를 반환 하 여 형식 라이브러리의 단순 이름을 확인 합니다.  
@@ -53,7 +53,7 @@ HRESULT ResolveTypeLib(
  진행 형식 라이브러리의 부 버전 번호입니다. 예를 들어 버전 *x. y*의 경우 부 버전 번호는 *y*입니다.  
   
  `syskind`  
- 진행 운영 환경을 식별 하는 [Syskind](https://docs.microsoft.com/windows/win32/api/oaidl/ne-oaidl-syskind) 플래그입니다. 일반적인 값은 SYS_WIN32 및 SYS_WIN64입니다.  
+ 진행 운영 환경을 식별 하는 [Syskind](/windows/win32/api/oaidl/ne-oaidl-syskind) 플래그입니다. 공통 값은 SYS_WIN32 및 SYS_WIN64입니다.  
   
  `pbstrResolvedTlbName`  
  제한이 `bstrSimpleName` 매개 변수에 이름이 지정 된 형식 라이브러리의 전체 경로를 포함 하는 [BSTR](https://docs.microsoft.com/previous-versions/windows/desktop/automat/bstr) 에 대 한 포인터입니다.  

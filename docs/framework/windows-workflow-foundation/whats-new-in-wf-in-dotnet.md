@@ -2,12 +2,12 @@
 title: .NET 4.5에서 Windows Workflow Foundation의 새로운 기능
 ms.date: 03/30/2017
 ms.assetid: 195c43a8-e0a8-43d9-aead-d65a9e6751ec
-ms.openlocfilehash: 80919dd7a726cbac5fa13680e0c79292745a7bca
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: b14f18dce64bc5738f3d3c6af11d6d6224764486
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837586"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937882"
 ---
 # <a name="whats-new-in-windows-workflow-foundation-in-net-45"></a>.NET 4.5에서 Windows Workflow Foundation의 새로운 기능
 
@@ -220,7 +220,7 @@ ms.locfileid: "74837586"
 
 ### <a name="BKMK_StateMachine"></a>상태 시스템 워크플로
 
-상태 시스템 워크플로는 [Microsoft .NET Framework 4 플랫폼 업데이트 1](https://blogs.msdn.microsoft.com/endpoint/2011/04/18/microsoft-net-framework-4-platform-update-1/)에서 .NET Framework 4 버전 4.0.1의 일부로 도입 되었습니다. 이 업데이트에는 여러 가지 새로운 클래스 및 활동이 포함되어 있으므로 개발자가 상태 시스템 워크플로를 만들 수 있었습니다. 이러한 클래스와 활동은 .NET Framework 4.5에 대해 업데이트 되었습니다. 업데이트에는 다음이 포함됩니다.
+상태 시스템 워크플로는 [Microsoft .NET Framework 4 플랫폼 업데이트 1](https://docs.microsoft.com/archive/blogs/endpoint/microsoft-net-framework-4-platform-update-1)에서 .NET Framework 4 버전 4.0.1의 일부로 도입 되었습니다. 이 업데이트에는 여러 가지 새로운 클래스 및 활동이 포함되어 있으므로 개발자가 상태 시스템 워크플로를 만들 수 있었습니다. 이러한 클래스와 활동은 .NET Framework 4.5에 대해 업데이트 되었습니다. 업데이트에는 다음이 포함됩니다.
 
 1. 상태에 중단점을 설정할 수 있는 기능
 

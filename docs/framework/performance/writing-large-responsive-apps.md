@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 90e57c3d332155d42a38b8a01aba7dbb2c812d62
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: c320d004b05e58fc7c239cd8c1f3bcec84ad8f78
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458029"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937916"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>대형 응답성 .NET Framework 응용 프로그램 작성
 
@@ -281,7 +281,7 @@ LINQ (언어 통합 쿼리)는 람다 식과 함께 생산성 기능의 예입�
   
  **예제 5: 람다, List\<T> 및 IEnumerable\<T>**  
   
- 이 예제에서는 이름 문자열이 제공될 경우 [LINQ 및 기능 스타일 코드](https://blogs.msdn.microsoft.com/charlie/2007/01/27/anders-hejlsberg-on-linq-and-functional-programming/)를 사용하여 컴파일러 모델에서 기호를 찾습니다.  
+ 이 예제에서는 이름 문자열이 제공될 경우 [LINQ 및 기능 스타일 코드](https://docs.microsoft.com/archive/blogs/charlie/anders-hejlsberg-on-linq-and-functional-programming)를 사용하여 컴파일러 모델에서 기호를 찾습니다.  
   
 ```csharp  
 class Symbol {  
@@ -305,7 +305,7 @@ Func<Symbol, bool> predicate = s => s.Name == name;
      return symbols.FirstOrDefault(predicate);  
 ```  
   
- 첫 번째 줄에서 [람다 식](../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) `s => s.Name == name` `name`지역 변수를 [닫습니다](https://blogs.msdn.microsoft.com/ericlippert/2003/09/17/what-are-closures/) . 즉, 이 코드에서는 `predicate`를 유지하는 [대리자](../../csharp/language-reference/builtin-types/reference-types.md#the-delegate-type)에 대한 개체를 할당할 뿐만 아니라 `name`의 값을 캡처하는 환경을 유지하기 위한 정적 클래스를 할당합니다. 컴파일러는 다음과 같은 코드를 생성합니다.  
+ 첫 번째 줄에서 [람다 식](../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) `s => s.Name == name` `name`지역 변수를 [닫습니다](https://docs.microsoft.com/archive/blogs/ericlippert/what-are-closures) . 즉, 이 코드에서는 `predicate`를 유지하는 [대리자](../../csharp/language-reference/builtin-types/reference-types.md#the-delegate-type)에 대한 개체를 할당할 뿐만 아니라 `name`의 값을 캡처하는 환경을 유지하기 위한 정적 클래스를 할당합니다. 컴파일러는 다음과 같은 코드를 생성합니다.  
   
 ```csharp  
 // Compiler-generated class to hold environment state for lambda  
