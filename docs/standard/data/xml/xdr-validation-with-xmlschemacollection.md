@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00833027-1428-4586-83c1-42f5de3323d1
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ce0777ba71e5433b42b51ef1530e7a1a46905b25
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: c1383dbb5419eadbfb7c07f288ee46b1ca11cf5c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71957011"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710000"
 ---
 # <a name="xdr-validation-with-xmlschemacollection"></a>XmlSchemaCollection을 사용하여 XDR 유효성 검사
 
@@ -22,7 +20,7 @@ ms.locfileid: "71957011"
 > [!IMPORTANT]
 > 이제 <xref:System.Xml.Schema.XmlSchemaCollection> 클래스는 사용되지 않으며 <xref:System.Xml.Schema.XmlSchemaSet> 클래스로 대체되었습니다. <xref:System.Xml.Schema.XmlSchemaSet> 클래스에 대한 자세한 내용은 [스키마 컴파일을 위한 XmlSchemaSet](xmlschemaset-for-schema-compilation.md)을 참조하세요.
 
-예를 들어, XML 문서의 루트 요소가 `<bookstore xmlns="urn:newbooks-schema">`일 경우 스키마를 **XmlSchemaCollection**에 추가하면 다음과 같이 동일한 네임스페이스를 참조합니다.
+예를 들어, XML 문서의 루트 요소가 `<bookstore>`일 경우 스키마를 **XmlSchemaCollection**에 추가하면 다음과 같이 동일한 네임스페이스를 참조합니다.
 
 ```vb
 xsc.Add("urn:newbooks-schema", "newbooks.xdr")
