@@ -342,24 +342,20 @@
   items:
     - name: 개요
       href: porting/index.md
-    - name: .NET Core에서 사용할 수 없는 .NET Framework 기술
-      href: porting/net-framework-tech-unavailable.md
     - name: 타사 종속성 분석
       href: porting/third-party-deps.md
     - name: 포트 라이브러리
       href: porting/libraries.md
     - name: .NET Core 프로젝트 구성
       href: porting/project-structure.md
+    - name: 사용할 수 없는 기술
+      href: porting/net-framework-tech-unavailable.md
     - name: 도구
       href: porting/tools.md
     - name: Windows 호환 기능 팩 사용
       href: porting/windows-compat-pack.md
     - name: Windows Forms 프로젝트 포팅
-      items:
-        - name: 프로젝트를 포트하는 방법
-          href: porting/winforms.md
-        - name: 호환성이 손상되는 변경
-          href: porting/winforms-breaking-changes.md
+      href: porting/winforms.md
     - name: WPF 프로젝트 포팅
       href: porting/wpf.md
 - name: 종속성 로딩
