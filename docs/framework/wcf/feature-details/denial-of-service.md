@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
-ms.openlocfilehash: 4a9f3a3b7e69d33a8707a4bed5b9bc369c75f601
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 55120430a9aaafe7d8bbf2b26f07806e4f1aa44a
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346687"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964419"
 ---
 # <a name="denial-of-service"></a>서비스 거부
 서비스 거부는 시스템을 가득 채워 메시지를 처리할 수 없거나 메시지가 매우 느리게 처리되는 경우에 발생합니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "75346687"
 ## <a name="auditing-event-log-can-be-filled"></a>감사 이벤트 로그가 채워질 수 있음  
  악의적인 사용자가 감사가 설정된 사실을 알고 있다면 잘못된 메시지를 보내 감사 항목이 기록되게 할 수 있습니다. 이런 식으로 감사 로그가 채워지면 감사 시스템이 실패합니다.  
   
- 이 문제를 완화하려면 <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> 속성을 `true`로 설정하고 이벤트 뷰어의 속성을 사용하여 감사 동작을 제어합니다. 이벤트 뷰어를 사용 하 여 이벤트 로그를 보고 관리 하는 방법에 대 한 자세한 내용은 [이벤트 뷰어](https://go.microsoft.com/fwlink/?LinkId=186123)을 참조 하십시오. 자세한 내용은 [감사](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)합니다.  
+ 이 문제를 완화하려면 <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> 속성을 `true`로 설정하고 이벤트 뷰어의 속성을 사용하여 감사 동작을 제어합니다. 이벤트 뷰어를 사용 하 여 이벤트 로그를 보고 관리 하는 방법에 대 한 자세한 내용은 [이벤트 뷰어](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc766042(v=ws.11))을 참조 하십시오. 자세한 내용은 [감사](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)합니다.  
   
 ## <a name="invalid-implementations-of-iauthorizationpolicy-can-cause-service-to-become-unresponsive"></a>IAuthorizationPolicy의 구현이 잘못 된 경우 서비스가 응답 하지 않을 수 있습니다.  
  <xref:System.IdentityModel.Policy.IAuthorizationPolicy> 인터페이스의 잘못 된 구현에서 <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> 메서드를 호출 하면 서비스가 응답 하지 않을 수 있습니다.  
@@ -52,7 +52,7 @@ ms.locfileid: "75346687"
  완화 방법: 신뢰할 수 있는 코드만 사용하세요. 즉, 직접 작성하고 테스트한 코드나 신뢰할 수 있는 공급자가 제공한 코드만 사용합니다. 신뢰할 수 없는 <xref:System.IdentityModel.Policy.IAuthorizationPolicy> 확장이 적절한 고려 없이 코드에 연결할 수 없도록 합니다. 이 내용은 서비스 구현에 사용되는 모든 확장에 적용됩니다. WCF는 확장성 위치를 사용 하 여 연결 된 응용 프로그램 코드와 외부 코드를 구분 하지 않습니다.  
   
 ## <a name="kerberos-maximum-token-size-may-need-resizing"></a>Kerberos 최대 토큰 크기를 조정해야 할 수 있음  
- 클라이언트는 다수의 그룹(실제 개수는 그룹에 따라 다를 수 있지만 대략 900개)에 속해 있지만 메시지 헤더의 블록이 64KB를 초과할 때 문제가 발생할 수 있습니다. 이 경우 Microsoft 지원 문서 "[IIS에 연결 하는 버퍼가 부족 하 여 Internet Explorer Kerberos 인증이 작동 하지](https://go.microsoft.com/fwlink/?LinkId=89176)않습니다." 문서에 설명 된 대로 최대 Kerberos 토큰 크기를 늘릴 수 있습니다. 큰 Kerberos 토큰을 수용 하기 위해 최대 WCF 메시지 크기를 늘려야 할 수도 있습니다.  
+ 클라이언트는 다수의 그룹(실제 개수는 그룹에 따라 다를 수 있지만 대략 900개)에 속해 있지만 메시지 헤더의 블록이 64KB를 초과할 때 문제가 발생할 수 있습니다. 이 경우 최대 Kerberos 토큰 크기를 늘릴 수 있습니다. 큰 Kerberos 토큰을 수용 하기 위해 최대 WCF 메시지 크기를 늘려야 할 수도 있습니다.  
   
 ## <a name="autoenrollment-results-in-multiple-certificates-with-same-subject-name-for-machine"></a>자동 등록으로 인해 한 컴퓨터에 대해 동일한 주체 이름을 가진 여러 인증서가 발생함  
  자동 *등록* 은 Windows Server 2003에서 인증서에 대 한 사용자 및 컴퓨터를 자동으로 등록 하는 기능입니다. 이 기능을 사용하는 도메인에 컴퓨터가 있으면 새 컴퓨터가 네트워크에 참가할 때마다 용도가 클라이언트 인증인 X.509 인증서가 자동으로 만들어지고 로컬 컴퓨터의 개인 인증서 저장소에 삽입됩니다. 그러나 자동 등록은 캐시에 만드는 모든 인증서에 대해 동일한 주체 이름을 사용합니다.  
@@ -61,7 +61,7 @@ ms.locfileid: "75346687"
   
  이를 완화 하려면 [\<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)에서 보다 정확한 검색 조건을 사용 하 여 사용할 정확한 인증서를 참조 합니다. 예를 들어 <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> 옵션을 사용하고 고유한 지문(해시)으로 인증서를 지정합니다.  
   
- 자동 등록 기능에 대 한 자세한 내용은 [Windows Server 2003의 인증서 자동 등록](https://go.microsoft.com/fwlink/?LinkId=95166)을 참조 하세요.  
+ 자동 등록 기능에 대 한 자세한 내용은 [Windows Server 2003의 인증서 자동 등록](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc778954(v%3dws.10))을 참조 하세요.  
   
 ## <a name="last-of-multiple-alternative-subject-names-used-for-authorization"></a>권한 부여에 사용되는 여러 개의 대체 주체 이름 중 마지막  
  드물지만 X.509 인증서에 여러 개의 대체 주체 이름이 포함된 경우 대체 주체 이름을 사용하여 권한을 부여하면 권한 부여가 실패할 수도 있습니다.  

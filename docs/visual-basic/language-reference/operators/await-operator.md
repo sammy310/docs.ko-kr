@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Await operator [Visual Basic]
 - Await [Visual Basic]
 ms.assetid: 6b1ce283-e92b-4ba7-b081-7be7b3d37af9
-ms.openlocfilehash: e0c617ce32f80bdde1bcfda31da40ae610e07452
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: b5943e509bb850abc6c74e1b97ccd5fb0038f1e0
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74712359"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964327"
 ---
 # <a name="await-operator-visual-basic"></a>Await 연산자(Visual Basic)
 
@@ -58,7 +58,7 @@ Await AsyncMethodThatReturnsTask()
 
 `Await` 식 또는 문은 식이 실행되고 있는 스레드를 차단하지 않습니다. 대신 `Await` 식 이후 컴파일러가 대기 중인 작업에서 연속된 작업으로 비동기 메서드의 나머지 부분을 등록하게 됩니다. 그런 다음 컨트롤이 비동기 메서드 호출자에게 반환됩니다. 작업이 완료되면 해당 연속 작업이 호출되고 중단된 비동기 메서드의 실행이 다시 시작됩니다.
 
-`Await` 식은 `Async` 수정자로 표시된 람다 식 또는 바로 바깥쪽에 있는 메서드의 본문에만 발생할 수 있습니다. *Wait* 라는 용어는 해당 컨텍스트에서만 키워드 역할을 합니다. 다른 컨텍스트에서는 식별자로 해석됩니다. 비동기 메서드 또는 람다 식 내에서 Try ...의 `catch` 또는 `finally` 블록의 쿼리 식에서 `Await` 식이 발생할 수 없습니다. [ Catch ... Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md) 문은 `For` 또는 `For Each` 루프의 루프 제어 변수 식이나 [SyncLock](../../../visual-basic/language-reference/statements/synclock-statement.md) 문의 본문에 있습니다.
+`Await` 식은 `Async` 수정자로 표시된 람다 식 또는 바로 바깥쪽에 있는 메서드의 본문에만 발생할 수 있습니다. *Wait* 라는 용어는 해당 컨텍스트에서만 키워드 역할을 합니다. 다른 컨텍스트에서는 식별자로 해석됩니다. `Async` 메서드 또는 람다 식 내에서 `Await` 식은 쿼리 식에서 발생할 수 없습니다. `Catch` 또는 Try ...의 `Finally` 블록에 있습니다. [ Catch ... Finally 문은](../statements/try-catch-finally-statement.md)`For` 또는 `For Each` 루프의 루프 제어 변수 식이나 [SyncLock](../statements/synclock-statement.md) 문의 본문에 있습니다.
 
 ## <a name="exceptions"></a>예외
 
@@ -72,7 +72,7 @@ Await AsyncMethodThatReturnsTask()
 
 비동기 메서드에서 오류 처리에 대 한 예제를 보려면 [Try ... Catch ... Finally 문](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 다음 Windows Forms 예제에서는 비동기 메서드 `WaitAsynchronouslyAsync`에서 `Await`의 사용을 보여 줍니다. 해당 메서드의 동작을 `WaitSynchronously`의 동작과 대조합니다. `Await` 연산자가 없는 경우 `WaitSynchronously`는 해당 정의에 `Async` 수정자가 사용되었고 해당 본문에서 <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType> 호출이 있더라도 동기적으로 실행됩니다.
 

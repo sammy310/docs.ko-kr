@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - choosing transports [WCF]
 ms.assetid: b169462b-f7b6-4cf4-9fca-d306909ee8bf
-ms.openlocfilehash: 69f2724182f83d507f749a150a8d006a4e0f2192
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: bf1bda5f1a2e1f0dfa0cc034c293f448cca2bd32
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838067"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964477"
 ---
 # <a name="choosing-a-transport"></a>전송 선택
 이 항목에서는 WCF (Windows Communication Foundation)에 포함 된 세 가지 기본 전송 인 HTTP, TCP 및 명명 된 파이프 중에서 선택 하기 위한 조건을 설명 합니다. WCF에는 메시지 큐 (MSMQ 라고도 함) 전송도 포함 되지만이 문서에서는 메시지 큐에 대해 다루지 않습니다.  
@@ -26,7 +26,7 @@ ms.locfileid: "74838067"
  이 단원에서는 3개의 주요 전송 중에서 하나를 선택하는 데 대한 주된 이유를 자세한 의사 결정 차트와 함께 설명합니다.  
   
 ### <a name="when-to-use-http-transport"></a>HTTP 전송을 사용해야 하는 경우  
- HTTP는 클라이언트와 서버 사이의 요청/응답 프로토콜입니다. 가장 일반적인 애플리케이션은 웹 서버와 통신하는 웹 브라우저 클라이언트로 구성됩니다. 클라이언트에서 서버로 요청을 보내면 서버에서 클라이언트 요청 메시지를 수신 대기합니다. 서버에서 요청을 받으면 요청 상태가 포함된 응답을 반환합니다. 성공적인 경우 웹 페이지, 오류 메시지 또는 기타 정보와 같은 선택적인 데이터가 반환됩니다. HTTP 프로토콜에 대 한 자세한 내용은 [http-하이퍼텍스트 전송 프로토콜](https://go.microsoft.com/fwlink/?LinkId=94858)을 참조 하세요.  
+ HTTP는 클라이언트와 서버 사이의 요청/응답 프로토콜입니다. 가장 일반적인 애플리케이션은 웹 서버와 통신하는 웹 브라우저 클라이언트로 구성됩니다. 클라이언트에서 서버로 요청을 보내면 서버에서 클라이언트 요청 메시지를 수신 대기합니다. 서버에서 요청을 받으면 요청 상태가 포함된 응답을 반환합니다. 성공적인 경우 웹 페이지, 오류 메시지 또는 기타 정보와 같은 선택적인 데이터가 반환됩니다. HTTP 프로토콜에 대 한 자세한 내용은 [http-하이퍼텍스트 전송 프로토콜](https://www.w3.org/Protocols/)을 참조 하세요.  
   
  HTTP 프로토콜은 연결 기반이 아닙니다. 응답을 보내고 나면 상태가 유지되지 않습니다. 여러 페이지로 된 트랜잭션을 처리하려면 애플리케이션에서 모든 필요한 상태를 유지해야 합니다.  
   

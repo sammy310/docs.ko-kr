@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], IIS
 ms.assetid: ddae14e8-143c-442d-b660-2046809b2d43
-ms.openlocfilehash: b8e8bbe35ec3091816a4a943662f93f1b4581663
-ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
+ms.openlocfilehash: 108048f6bdd2c02a67e331bd7b07b724d0e86527
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75544675"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75963795"
 ---
 # <a name="host-in-internet-information-services"></a>인터넷 정보 서비스 호스트
 
@@ -25,7 +25,7 @@ WCF는 다음 운영 체제에 대해 다음 버전의 IIS에서 호스팅될 �
 
 - Windows Vista 및 Windows Server 2008의 IIS 7.0. IIS 7.0는 IIS 6.0와 동일한 고급 프로세스 모델을 제공 하지만 WAS (Windows Process Activation Service)를 사용 하 여 HTTP 이외의 프로토콜을 통해 활성화 및 네트워크 통신을 허용 합니다. 이 환경은 WCF에서 지원 되는 모든 네트워크 프로토콜 (HTTP, net.tcp, net.pipe 및 net.pipe 포함)을 통해 통신 하는 WCF 서비스를 개발 하는 데 적합 합니다. WAS에 대 한 자세한 내용은 [Windows Process Activation Service에서 호스팅](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)을 참조 하세요.
 
-- [Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=196496) 은 IIS 7.0 및 WAS (Windows Process Activation Service)를 사용 하 여 여 net4 WCF 및 WF 서비스를 위한 풍부한 응용 프로그램 호스팅 환경을 제공 합니다. 이러한 기능에는 프로세스 수명 주기 관리, 프로세스 재활용, 공유 호스팅, 빠른 오류 보호, 프로세스 분리, 요청 시 활성화, 상태 모니터링 등이 포함됩니다. 자세한 내용은 [Appfabric 호스팅 기능](https://go.microsoft.com/fwlink/?LinkId=196494) 및 [appfabric 호스팅 개념](https://go.microsoft.com/fwlink/?LinkId=196495)을 참조 하세요.
+- [Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ff384253(v=azure.10)) 은 IIS 7.0 및 WAS (Windows Process Activation Service)를 사용 하 여 여 net4 WCF 및 WF 서비스를 위한 풍부한 응용 프로그램 호스팅 환경을 제공 합니다. 이러한 기능에는 프로세스 수명 주기 관리, 프로세스 재활용, 공유 호스팅, 빠른 오류 보호, 프로세스 분리, 요청 시 활성화, 상태 모니터링 등이 포함됩니다. 자세한 내용은 [Appfabric 호스팅 기능](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10)) 및 [appfabric 호스팅 개념](https://docs.microsoft.com/previous-versions/appfabric/ee677371(v=azure.10))을 참조 하세요.
 
 ## <a name="benefits-of-iis-hosting"></a>IIS 호스팅의 이점
 
@@ -68,4 +68,4 @@ WCF 서비스는 서비스에서 ASP.NET 웹 응용 프로그램 플랫폼에서
 - [WCF 서비스 및 ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)
 - [인터넷 정보 서비스 호스팅을 위한 최선의 방법](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)
 - [Windows Communication Foundation에 대해 Internet Information Services 7.0 구성](../../../../docs/framework/wcf/feature-details/configuring-iis-for-wcf.md)
-- [Windows Server App Fabric 호스팅 기능](https://go.microsoft.com/fwlink/?LinkId=201276)
+- [Windows Server App Fabric 호스팅 기능](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))

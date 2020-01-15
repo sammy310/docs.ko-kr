@@ -2,16 +2,16 @@
 title: 찾기 및 FindCriteria
 ms.date: 03/30/2017
 ms.assetid: 99016fa4-1778-495b-b4cc-0e22fbec42c6
-ms.openlocfilehash: 477edabb5d6fe263db43debc2f1d4f29df862609
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: da4c3c4a1d765e4f91b03f4f8fc1a73c3fea1535
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663353"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964841"
 ---
 # <a name="discovery-find-and-findcriteria"></a>찾기 및 FindCriteria
 
-찾기 작업은 하나 이상의 서비스를 검색하는 클라이언트에 의해 시작되며 검색 작업의 주요 동작 중 하나입니다. 찾기를 수행하면 네트워크를 통해 WS-Discovery Probe 메시지가 보내집니다. 지정된 조건과 일치하는 서비스는 WS-Discovery ProbeMatch 메시지를 사용하여 응답합니다. 검색 메시지에 대 한 자세한 내용은 참조는 [Ws-discovery 사양](https://go.microsoft.com/fwlink/?LinkID=122347)합니다.
+찾기 작업은 하나 이상의 서비스를 검색하는 클라이언트에 의해 시작되며 검색 작업의 주요 동작 중 하나입니다. 찾기를 수행하면 네트워크를 통해 WS-Discovery Probe 메시지가 보내집니다. 지정된 조건과 일치하는 서비스는 WS-Discovery ProbeMatch 메시지를 사용하여 응답합니다. 검색 메시지에 대 한 자세한 내용은 [WS 검색 사양을](http://schemas.xmlsoap.org/ws/2004/10/discovery/ws-discovery.pdf)참조 하십시오.
 
 ## <a name="discoveryclient"></a>DiscoveryClient
 
@@ -23,7 +23,7 @@ ms.locfileid: "67663353"
 
 검색 조건은 다음과 같습니다.
 
-- <xref:System.ServiceModel.Discovery.Configuration.ContractTypeNameElement> - 선택적 요소로서, 검색할 서비스의 계약 이름이거나 서비스를 검색할 때 일반적으로 사용되는 조건입니다. 둘 이상의 계약 이름이 지정되면 모든 계약과 일치하는 서비스 엔드포인트만 응답합니다. wcf에서 끝점 수 하나의 계약만 지원할 참고 합니다.
+- <xref:System.ServiceModel.Discovery.Configuration.ContractTypeNameElement> - 선택적 요소로서, 검색할 서비스의 계약 이름이거나 서비스를 검색할 때 일반적으로 사용되는 조건입니다. 둘 이상의 계약 이름이 지정되면 모든 계약과 일치하는 서비스 엔드포인트만 응답합니다. WCF에서 끝점은 하나의 계약만 지원할 수 있습니다.
 
 - <xref:System.ServiceModel.Discovery.Configuration.ScopeElement> - 선택적 요소로서, 개별 서비스 엔드포인트를 분류하는 데 사용되는 절대 URI입니다. 여러 엔드포인트가 동일한 계약을 노출하는 상태에서 엔드포인트의 하위 집합을 검색하려는 경우 이 조건을 사용할 수 있습니다. 둘 이상의 범위가 지정되면 모든 범위와 일치하는 서비스 엔드포인트만 응답합니다.
 
@@ -31,7 +31,7 @@ ms.locfileid: "67663353"
 
   - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByExact?displayProperty=nameWithType>는 기본 대/소문자 구분 문자열 비교를 수행합니다.
 
-  - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix?displayProperty=nameWithType> 세그먼트 일치 하는 항목 구분 하 여 "/"입니다. 에 대 한 검색 `http://contoso/building1` 범위를 사용 하 여 서비스와 일치 `http://contoso/building/floor1`합니다. 일치 하지 않는 참고 `http://contoso/building100` 마지막 두 세그먼트가 일치 하지 않으므로 합니다.
+  - "/"로 구분 된 세그먼트로 일치 하는 항목을 <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix?displayProperty=nameWithType> 합니다. `http://contoso/building1` 검색은 범위 `http://contoso/building/floor1`서비스와 일치 합니다. 마지막 두 세그먼트가 일치 하지 않기 때문에 `http://contoso/building100`와 일치 하지 않습니다.
 
   - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByLdap?displayProperty=nameWithType>는 LDAP URL을 사용하여 세그먼트별로 범위를 일치시킵니다.
 
@@ -68,7 +68,7 @@ FindResponse findResponse = discoveryClient.Find(findCriteria);
 Console.WriteLine("Found {0} ICalculatorService endpoint(s).", findResponse.Endpoints.Count)
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [WCF 검색 개요](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
 - [검색 클라이언트 채널 사용](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)

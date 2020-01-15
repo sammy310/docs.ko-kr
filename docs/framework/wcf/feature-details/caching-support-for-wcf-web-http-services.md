@@ -2,15 +2,16 @@
 title: WCF 웹 HTTP 서비스에 대한 캐싱 지원
 ms.date: 03/30/2017
 ms.assetid: 7f8078e0-00d9-415c-b8ba-c1b6d5c31799
-ms.openlocfilehash: 7c60deab635c29785398a1b50f9cf14c0f688420
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 5964c58ce28f67815774741815bba0fcbe3b2de7
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141779"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964231"
 ---
 # <a name="caching-support-for-wcf-web-http-services"></a>WCF 웹 HTTP 서비스에 대한 캐싱 지원
-[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]를 사용 하면 WCF 웹 HTTP 서비스의 ASP.NET에서 이미 사용할 수 있는 선언적 캐싱 메커니즘을 사용할 수 있습니다. 이렇게 하면 WCF 웹 HTTP 서비스 작업의 응답을 캐시할 수 있습니다. 사용자가 캐시용으로 구성된 서비스에 HTTP GET을 보내면 ASP.NET이 캐시된 응답을 다시 보내고 서비스 메서드가 호출되지 않습니다. 캐시가 만료되면 다음에 사용자가 HTTP GET을 보낼 때 서비스 메서드가 호출되고 응답이 다시 한 번 캐시됩니다. ASP.NET 캐싱에 대 한 자세한 내용은 [ASP.NET 캐싱 개요](https://go.microsoft.com/fwlink/?LinkId=152534) 를 참조 하세요.  
+
+[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]를 사용 하면 WCF 웹 HTTP 서비스의 ASP.NET에서 이미 사용할 수 있는 선언적 캐싱 메커니즘을 사용할 수 있습니다. 이렇게 하면 WCF 웹 HTTP 서비스 작업의 응답을 캐시할 수 있습니다. 사용자가 캐시용으로 구성된 서비스에 HTTP GET을 보내면 ASP.NET이 캐시된 응답을 다시 보내고 서비스 메서드가 호출되지 않습니다. 캐시가 만료되면 다음에 사용자가 HTTP GET을 보낼 때 서비스 메서드가 호출되고 응답이 다시 한 번 캐시됩니다. ASP.NET 캐싱에 대 한 자세한 내용은 [ASP.NET 캐싱 개요](https://docs.microsoft.com/previous-versions/aspnet/ms178597(v=vs.100))를 참조 하세요.  
   
 ## <a name="basic-web-http-service-caching"></a>기본 웹 HTTP 서비스 캐싱  
  웹 HTTP 서비스 캐싱을 사용하도록 설정하려면 먼저 서비스에 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>를 적용하여 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute.RequirementsMode%2A>를 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> 또는 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>로 설정하여 ASP.NET 호환성을 사용하도록 설정해야 합니다.  
@@ -122,10 +123,10 @@ public class Service
  여기서 캐시 기간이 60초로 설정되었고, `varyByParam`이 none으로 설정되었으며, `sqlDependency`가 콜론으로 구분된 데이터베이스/테이블 쌍의 세미콜론으로 구분된 목록으로 설정되었습니다. `MyTable`의 데이터가 변경되면 서비스 작업의 캐시된 응답이 제거되고, 서비스 작업이 호출되면 새 응답이 생성 및 캐시된 후 클라이언트에 반환됩니다.  
   
 > [!IMPORTANT]
-> ASP.NET에서 SQL database에 액세스 하려면 [ASP.NET SQL Server 등록 도구](https://go.microsoft.com/fwlink/?LinkId=152536)를 사용 해야 합니다. 또한 적절한 사용자 계정을 사용하여 데이터베이스와 테이블에 액세스할 수 있도록 해야 합니다. 자세한 내용은 [웹 응용 프로그램에서 SQL Server에 액세스](https://go.microsoft.com/fwlink/?LinkId=178988)를 참조 하세요.  
+> ASP.NET에서 SQL database에 액세스 하려면 [ASP.NET SQL Server 등록 도구](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms229862(v=vs.90))를 사용 해야 합니다. 또한 적절한 사용자 계정을 사용하여 데이터베이스와 테이블에 액세스할 수 있도록 해야 합니다. 자세한 내용은 [웹 응용 프로그램에서 SQL Server에 액세스](https://docs.microsoft.com/previous-versions/aspnet/ht43wsex(v=vs.100))를 참조 하세요.  
   
 ## <a name="conditional-http-get-based-caching"></a>조건부 HTTP GET 기반 캐싱  
- 웹 HTTP 시나리오에서 조건부 HTTP GET은 [Http 사양](https://go.microsoft.com/fwlink/?LinkId=165800)에 설명 된 대로 지능형 http 캐싱을 구현 하기 위해 서비스에서 자주 사용 됩니다. 서비스에서 지능형 HTTP 캐싱을 구현하려면 HTTP 응답에 있는 ETag 헤더의 값을 설정하고 HTTP 요청에 있는 If-None-Match 헤더를 검사하여 지정된 ETag가 현재 ETag와 일치하는지 여부도 확인해야 합니다.  
+ 웹 HTTP 시나리오에서 조건부 HTTP GET은 [Http 사양](https://www.w3.org/Protocols/rfc2616/rfc2616.html)에 설명 된 대로 지능형 http 캐싱을 구현 하기 위해 서비스에서 자주 사용 됩니다. 서비스에서 지능형 HTTP 캐싱을 구현하려면 HTTP 응답에 있는 ETag 헤더의 값을 설정하고 HTTP 요청에 있는 If-None-Match 헤더를 검사하여 지정된 ETag가 현재 ETag와 일치하는지 여부도 확인해야 합니다.  
   
  GET 및 HEAD 요청의 경우 <xref:System.ServiceModel.Web.IncomingWebRequestContext.CheckConditionalRetrieve%2A>는 ETag 값을 가져와서 요청의 If-None-Match 헤더와 비교합니다. 이 헤더가 있고 ETag 값과 일치하면 HTTP 상태 코드 304(수정 안 됨)와 함께 <xref:System.ServiceModel.Web.WebFaultException>이 throw되고 일치하는 ETag가 있는 응답에 ETag 헤더가 추가됩니다.  
   

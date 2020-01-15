@@ -8,17 +8,17 @@ helpviewer_keywords:
 - WCF, authentication
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
-ms.openlocfilehash: 52e968706ef4ca703a26e613e681cff3c30ba181
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 45e4926905bbf3b5a24af15de153afc7bd2a4823
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838028"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964562"
 ---
 # <a name="debugging-windows-authentication-errors"></a>Windows 인증 오류 디버깅
 Windows 인증을 보안 메커니즘으로 사용하면 SSPI(보안 지원 공급자 인터페이스)에서 보안 프로세스를 처리합니다. SSPI 계층에서 보안 오류가 발생 하면 Windows Communication Foundation (WCF)에 의해 표시 됩니다. 이 항목에서는 오류 진단에 도움이 되는 프레임워크 및 일련의 질문을 제공합니다.  
   
- Kerberos 프로토콜에 대 한 개요는 [Kerberos 설명](https://go.microsoft.com/fwlink/?LinkID=86946)을 참조 하세요. SSPI의 개요는 [sspi](https://go.microsoft.com/fwlink/?LinkId=88941)를 참조 하십시오.  
+ Kerberos 프로토콜에 대 한 개요는 [Kerberos 설명](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/bb742516(v=technet.10))을 참조 하세요. SSPI의 개요는 [sspi](/windows/win32/secauthn/sspi)를 참조 하십시오.  
   
  Windows 인증의 경우 WCF는 일반적으로 클라이언트와 서비스 간에 Kerberos 상호 인증을 수행 하는 *NEGOTIATE* SSP (보안 지원 공급자)를 사용 합니다. Kerberos 프로토콜을 사용할 수 없는 경우 기본적으로 WCF는 NTLM (NT LAN Manager)으로 대체 됩니다. 그러나 Kerberos 프로토콜만 사용 하도록 WCF를 구성 하 고 Kerberos를 사용할 수 없는 경우 예외를 throw 할 수 있습니다. 제한 된 형태의 Kerberos 프로토콜을 사용 하도록 WCF를 구성할 수도 있습니다.  
   
@@ -66,7 +66,7 @@ Windows 인증을 보안 메커니즘으로 사용하면 SSPI(보안 지원 공�
   
  웹 팜 또는 웹 가든과 같은 부하 분산 시나리오에서는 각 애플리케이션에 대해 고유한 계정을 정의하고, 해당 계정에 SPN을 할당하고, 애플리케이션의 모든 서비스가 해당 계정으로 실행되도록 하는 것이 일반적입니다.  
   
- 서비스 계정에 대한 SPN을 얻으려면 Active Directory 도메인 관리자여야 합니다. 자세한 내용은 [Windows 용 Kerberos 기술 보충 자료](https://go.microsoft.com/fwlink/?LinkID=88330)를 참조 하십시오.  
+ 서비스 계정에 대한 SPN을 얻으려면 Active Directory 도메인 관리자여야 합니다. 자세한 내용은 [Windows 용 Kerberos 기술 보충 자료](https://docs.microsoft.com/previous-versions/msp-n-p/ff649429(v=pandp.10))를 참조 하십시오.  
   
 #### <a name="kerberos-protocol-direct-requires-the-service-to-run-under-a-domain-machine-account"></a>Kerberos 프로토콜을 직접 사용하려면 도메인 컴퓨터 계정으로 서비스 실행이 필요  
  이는 다음 코드처럼 `ClientCredentialType` 속성이 `Windows`로 설정되고, <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> 속성이 `false`로 설정된 경우 발생합니다.  

@@ -2,12 +2,12 @@
 title: Windows Communication Foundation과 함께 사용하도록 Windows Process Activation Service 구성
 ms.date: 03/30/2017
 ms.assetid: 1d50712e-53cd-4773-b8bc-a1e1aad66b78
-ms.openlocfilehash: 768674a5cc4b0710e03de8ef1c9fdb2c40a8f314
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 5533393f759408002b83ba8ff485ba8229e921dd
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838041"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964625"
 ---
 # <a name="configuring-the-windows-process-activation-service-for-use-with-windows-communication-foundation"></a>Windows Communication Foundation과 함께 사용하도록 Windows Process Activation Service 구성
 이 항목에서는 Windows Vista에서 HTTP 네트워크 프로토콜을 통해 통신 하지 않는 WCF (Windows Communication Foundation) 서비스를 호스트 하는 Windows Process Activation Service (WAS 라고도 함)를 설정 하는 데 필요한 단계에 대해 설명 합니다. 다음 단원에서는 이 구성 단계에 대해 간략히 설명합니다.  
@@ -99,4 +99,4 @@ appcmd.exe set app "Default Web Site/appOne" /enabledProtocols:net.tcp
 ## <a name="see-also"></a>참조
 
 - [Windows Process Activation Service에서 호스팅](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)
-- [Windows Server App Fabric 호스팅 기능](https://go.microsoft.com/fwlink/?LinkId=201276)
+- [Windows Server App Fabric 호스팅 기능](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))

@@ -9,19 +9,19 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: b8abcc8e-a5f5-4317-aca5-01e3c40ab24d
-ms.openlocfilehash: d56da60f174933af789a6abd7d8aa90f3f29d9c1
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 1ea7680d092a4270b8c0969c50db8accf7c23d49
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344623"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75963301"
 ---
 # <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>방법: SSL 인증서를 사용하여 포트 구성
 전송 보안을 사용 하는 <xref:System.ServiceModel.WSHttpBinding> 클래스를 사용 하 여 자체 호스팅 Windows Communication Foundation (WCF) 서비스를 만들 때 x.509 인증서를 사용 하 여 포트를 구성 해야 합니다. 자체 호스트된 서비스를 만들지 않는 경우에는 IIS(인터넷 정보 서비스)에서 서비스를 호스트할 수 있습니다. 자세한 내용은 [HTTP 전송 보안](../../../../docs/framework/wcf/feature-details/http-transport-security.md)을 참조 하세요.  
   
  포트를 구성하려면 컴퓨터에서 실행하는 운영 체제에 따라 다른 도구를 사용해야 합니다.  
   
- Windows Server 2003 또는 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]를 실행 하는 경우 Httpcfg.exe 도구를 사용 합니다. Windows Server 2003를 사용 하 여이 도구를 설치 합니다. [!INCLUDE[wxp](../../../../includes/wxp-md.md)]를 사용 하 여 [WINDOWS XP 서비스 팩 2 지원 도구](https://go.microsoft.com/fwlink/?LinkId=88606)에서이 도구를 다운로드할 수 있습니다. 자세한 내용은 [Httpcfg.exe 개요](https://go.microsoft.com/fwlink/?LinkId=88605)를 참조 하세요. [Windows 지원 도구 설명서](https://go.microsoft.com/fwlink/?LinkId=94840) 에서는 httpcfg.exe 도구에 대 한 구문을 설명 합니다.  
+ Windows Server 2003 또는 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]를 실행 하는 경우 Httpcfg.exe 도구를 사용 합니다. Windows Server 2003를 사용 하 여이 도구를 설치 합니다. [!INCLUDE[wxp](../../../../includes/wxp-md.md)]를 사용 하 여 [WINDOWS XP 서비스 팩 2 지원 도구](https://go.microsoft.com/fwlink/?LinkId=88606)에서이 도구를 다운로드할 수 있습니다. 자세한 내용은 [Httpcfg.exe 개요](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc787508(v=ws.10))를 참조 하세요. [Windows 지원 도구 설명서](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc781601(v=ws.10)) 에서는 httpcfg.exe 도구에 대 한 구문을 설명 합니다.  
   
  Windows Vista를 실행 하는 경우 이미 설치 된 Netsh.exe 도구를 사용 합니다.  
   
