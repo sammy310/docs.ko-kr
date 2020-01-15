@@ -38,10 +38,6 @@
               href: how-to-define-and-use-custom-numeric-format-providers.md
             - name: '방법: 날짜 및 시간 값 라운드트립'
               href: how-to-round-trip-date-and-time-values.md
-            - name: '방법: 웹 컨트롤의 숫자 사용자 입력을 숫자로 변환'
-              href: how-to-convert-numeric-user-input-in-web-controls-to-numbers.md
-            - name: '방법: 웹 사용자에게 지역화된 날짜 및 시간 정보 표시'
-              href: how-to-display-localized-date-and-time-information-to-web-users.md
             - name: '방법: 날짜 및 시간 값의 밀리초 표시'
               href: how-to-display-milliseconds-in-date-and-time-values.md
             - name: '방법: 그레고리오력이 아닌 달력으로 날짜 표시'
