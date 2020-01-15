@@ -15,36 +15,36 @@ ms.locfileid: "75559666"
 
 시작하려면 [F#과 Ionide 플러그인의 설치](install-fsharp.md#install-f-with-visual-studio-code)가 올바르게 되어있는지 확인합니다.
 
-## <a name="create-your-first-project-with-ionide"></a>이상 Ide를 사용 하 여 첫 번째 프로젝트 만들기
+## <a name="create-your-first-project-with-ionide"></a>Ionide를 사용하여 첫 번째 프로젝트 만들기
 
-새 F# 프로젝트를 만들려면 명령줄을 열고 .NET Core CLI를 사용 하 여 새 프로젝트를 만듭니다.
+새 F# 프로젝트를 만들려면 명령줄을 열고 .NET Core CLI를 사용하여 새 프로젝트를 만듭니다.
 
 ```dotnetcli
 dotnet new console -lang "F#" -o FirstIonideProject
 ```
 
-완료 되 면 디렉터리를 프로젝트로 변경 하 고 Visual Studio Code를 엽니다.
+완료되면 디렉터리를 프로젝트로 변경하고 Visual Studio Code를 엽니다.
 
 ```console
 cd FirstIonideProject
 code .
 ```
 
-Visual Studio Code에서 프로젝트가 로드 되 면 창의 왼쪽에 F# 솔루션 탐색기 창이 표시 됩니다. 즉, 사용자가 방금 만든 프로젝트가 성공적으로 로드 된 것입니다. 이 시점 이전에 편집기에서 코드를 작성할 수 있지만이 경우 모든 것이 로드를 완료 한 것입니다.
+Visual Studio Code에서 프로젝트가 로드되면 창의 왼쪽에 F# 솔루션 탐색기 창이 표시됩니다. 즉, 사용자가 방금 만든 프로젝트가 성공적으로 로드된 것입니다. 이 시점 이전에 편집기에서 코드를 작성할 수 있지만이 경우 모든 것이 로드가 완료 된 것입니다.
 
 ## <a name="configure-f-interactive"></a>대화형 F# 구성
 
-먼저 .NET Core 스크립팅이 기본 스크립팅 환경 인지 확인 합니다.
+먼저 .NET Core 스크립팅이 기본 스크립팅 환경인지 확인합니다.
 
 1. Visual Studio Code 설정 (**코드** > **기본** 설정 > **설정**)을 엽니다.
-1. 용어  **F# 스크립트**를 검색 합니다.
+1. 용어 **F# 스크립트**를 검색합니다.
 1. **Fsharp.core: USE SDK scripts**확인란을 클릭 합니다.
 
-이는 현재 .NET Core 스크립팅을 사용 하지 않는 .NET Framework 기반 스크립팅에 사용 되는 일부 레거시 동작으로 인해 필요 하며, 현재는 이전 버전과의 호환성을 위해 현재 웹사이트를 사용 하 고 있습니다. 나중에 .NET Core 스크립팅이 기본값이 됩니다.
+이는 현재 .NET Core 스크립팅을 사용하지 않는 .NET Framework 기반 스크립팅에 사용되는 일부 레거시 동작으로 인해 필요하며, Ionide는 이전 버전과의 호환성을 위해 현재 노력하고 있습니다. 나중에 .NET Core 스크립팅이 기본값이 됩니다.
 
 ### <a name="write-your-first-script"></a>첫 번째 스크립트 작성
 
-.NET Core 스크립팅을 사용 하도록 Visual Studio Code 구성 했으면 Visual Studio Code에서 탐색기 보기로 이동 하 여 새 파일을 만듭니다. 이름을 *Myfirstscript*로 합니다.
+.NET Core 스크립팅을 사용하도록 Visual Studio Code를 구성했으면 Visual Studio Code에서 탐색기 보기로 이동하여 새 파일을 만듭니다. 이름을 *Myfirstscript*로 합니다.
 
 이제 다음 코드를 추가 합니다.
 
@@ -52,7 +52,7 @@ Visual Studio Code에서 프로젝트가 로드 되 면 창의 왼쪽에 F# 솔�
 
 이 함수는 단어를 [Pig Latin](https://en.wikipedia.org/wiki/Pig_Latin) 형태로 변환합니다. 다음으로 F# Interactive (FSI)를 사용하여 평가합니다.
 
-전체 함수를 강조 표시합니다(11줄 길이여야 함). 강조 표시 되 면 **Alt** 키를 누르고 **enter**키를 누릅니다. 화면 아래쪽에 터미널 창이 표시 되 고 다음과 같이 표시 됩니다.
+전체 함수를 강조 표시합니다(11줄 길이여야 함). 강조 표시되면 **Alt** 키를 누르고 **Enter** 키를 누릅니다. 화면 아래쪽에 터미널 창이 표시되고 다음과 같이 표시됩니다.
 
 ![Ionide를 사용한 F# Interactive 출력 예시](./media/getting-started-vscode/vscode-fsi.png)
 
@@ -95,7 +95,7 @@ val it : string = "appleyay"
 
 코드가 실제로 수행 하는 작업을 잘 모르는 경우에는 다음 단계를 수행 합니다.
 
-여기에서 볼 수 있듯이 `toPigLatin`는 단어를 입력으로 사용 하 고 해당 단어의 Pig 표현으로 변환 하는 함수입니다. 이에 대 한 규칙은 다음과 같습니다.
+여기에서 볼 수 있듯이 `toPigLatin`은 단어를 입력으로 사용하고 해당 단어의 Pig-Latin 표현으로 변환하는 함수입니다. 이에 대한 규칙은 다음과 같습니다.
 
 단어의 첫 문자가 모음으로 시작 하는 경우 단어의 끝에 "yay"를 추가 합니다. 모음으로 시작 하지 않으면 첫 번째 문자를 단어의 끝으로 이동 하 여 "ay"를 추가 합니다.
 
