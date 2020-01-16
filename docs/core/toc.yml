@@ -358,6 +358,8 @@
       href: porting/winforms.md
     - name: WPF 프로젝트 포팅
       href: porting/wpf.md
+    - name: 포트 C++/CLI 프로젝트
+      href: porting/cpp-cli.md
 - name: 종속성 로딩
   items:
     - name: 개요

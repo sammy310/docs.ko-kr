@@ -105,7 +105,7 @@ FSI.EXE에서 다음을 발견할 수 있습니다.
 val toPigLatin : word:string -> string
 ```
 
-이는 `toPigLatin`이 `string`를 `word`입력으로 사용 하 고 다른 `string`를 반환 하는 함수입니다. 이를 [함수의 형식 서명](https://fsharpforfunandprofit.com/posts/function-signatures/)이라고 하며, 코드를 이해 F# F# 하는 데 해당 키의 기본 부분입니다. 또한 Visual Studio Code에서 함수를 가리키면이를 확인할 수 있습니다.
+이는 `toPigLatin`이 `string`을 `word`입력으로 사용하고 다른 `string`를 반환하는 함수임을 나타냅니다. 이를 [함수의 형식 서명](https://fsharpforfunandprofit.com/posts/function-signatures/)이라고 하며, F# 코드를 이해하는 핵심이 되는 F# 기본 부분입니다. 또한 Visual Studio Code에서 함수를 가리키면 이를 확인할 수 있습니다.
 
 함수의 본문에는 다음과 같은 두 가지 요소가 있습니다.
 
@@ -113,7 +113,7 @@ val toPigLatin : word:string -> string
 
    [!code-fsharp[ToPigLatin](~/samples/snippets/fsharp/getting-started/to-pig-latin.fsx#L2-L6)]
 
-2. 첫 번째 문자가 모음 인지 확인 하 고 첫 번째 문자가 모음 인지 여부를 기준으로 입력 문자에서 반환 값을 생성 하는 [`if..then..else`](../language-reference/conditional-expressions-if-then-else.md) 식입니다.
+2. 첫 번째 문자가 모음인지 확인하고 첫 번째 문자가 모음인지 여부를 기준으로 입력 문자에서 반환 값을 생성하는 [`if..then..else`](../language-reference/conditional-expressions-if-then-else.md) 식입니다.
 
    [!code-fsharp[ToPigLatin](~/samples/snippets/fsharp/getting-started/to-pig-latin.fsx#L8-L11)]
 
@@ -121,7 +121,7 @@ val toPigLatin : word:string -> string
 
 입력 단어의 첫 문자가 모음 인지 확인 합니다. 이 경우 "yay"를 단어 끝에 연결 합니다. 그렇지 않으면 첫 번째 문자를 단어의 끝으로 이동 하 여 "ay"를 추가 합니다.
 
-이에 대 한 최종 정보는 다음과 같습니다. 다른 많은 언어와 달리 함수에서 반환할 명시적인 명령이 없습니다. 가 식 기반 F# 이 고 함수 본문의 마지막 식이 반환 값 이기 때문입니다. `if..then..else` 자체가 식 이므로 `then` 블록의 본문이 나 `else` 블록의 본문은 입력 값에 따라 반환 됩니다.
+이에 대 한 최종 정보는 다음과 같습니다. 다른 많은 언어와 달리 함수에서 반환할 명시적인 명령이 없습니다. F#이 식 기반이고 함수 본문의 마지막 식이 반환 값이기 때문입니다. `if..then..else` 자체가 식이므로 `then` 블록의 본문이나 `else` 블록의 본문은 입력 값에 따라 반환됩니다.
 
 ## <a name="turn-the-console-app-into-a-pig-latin-generator"></a>콘솔 앱을 Pig 라틴어 생성기로 전환 합니다.
 
@@ -129,7 +129,7 @@ val toPigLatin : word:string -> string
 
 REPL 기반 개발의 다음 단계는 작업 코드를 F# 구현 파일로 이동 하는 것입니다. 그런 다음 F# 컴파일러에서 실행할 수 있는 어셈블리로 컴파일할 수 있습니다.
 
-시작 하려면 이전에 .NET Core CLI를 사용 하 여 만든 *Program fs* 파일을 엽니다. 일부 코드는 이미 여기에 있습니다.
+시작하려면 이전에 .NET Core CLI를 사용하여 만든 *Program fs* 파일을 엽니다. 일부 코드는 이미 여기에 있습니다.
 
 그런 다음 `PigLatin` 이라는 새 [`module`](../language-reference/modules.md) 만들고 앞에서 만든 `toPigLatin` 함수를 다음과 같이 복사 합니다.
 
@@ -161,14 +161,14 @@ dotnet run apple banana
 
 다음은 발생할 수 있는 특정 문제를 해결할 수 있는 몇 가지 방법입니다.
 
-1. F# 파일을 디스크에 저장 하 고 Visual Studio Code 작업 영역에 열려 있는 폴더 내에 저장 해야 합니다.
+1. 코드 편집 기능을 사용하려면 F# 파일을 디스크에 저장하고 Visual Studio Code 작업 영역에 열려 있는 폴더 내에 저장해야 합니다.
 1. 시스템이 열려 있는 상태에서 시스템을 변경 하거나 Visual Studio Code를 설치한 경우 Visual Studio Code를 다시 시작 합니다.
 1. 프로젝트 디렉터리에 잘못 된 문자가 있는 경우에는 작동 하지 않을 수 있습니다.  이 경우 프로젝트 디렉터리의 이름을 바꿉니다.
-1. 작동 하는 지 여부 Ide 명령이 없으면 [Visual Studio Code 키 바인딩을](https://code.visualstudio.com/docs/getstarted/keybindings#_advanced-customization) 확인 하 여 실수로 재정의 하 고 있는지 확인 합니다.
-1. 컴퓨터에서 하드 Ide가 중단 되 고 위의 어떤 것도 문제를 해결 하지 못한 경우에는 컴퓨터에서 `ionide-fsharp` 디렉터리를 제거 하 고 플러그 인 도구 모음을 다시 설치 해 보십시오.
-1. 프로젝트를 로드 하지 못한 경우 ( F# 솔루션 탐색기 표시 됨) 해당 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 자세한 **정보 보기** 를 클릭 하 여 더 많은 진단 정보를 얻습니다.
+1. 제대로 작동하는 IDE 명령이 없으면 [Visual Studio Code 키 바인딩](https://code.visualstudio.com/docs/getstarted/keybindings#_advanced-customization)을 확인하여 실수로 재정의하고 있는지 확인합니다.
+1. 컴퓨터에서 IDE가 중단되고 위의 어떤 것도 문제를 해결하지 못한 경우에는 컴퓨터에서 `ionide-fsharp` 디렉터리를 제거하고 플러그인 도구 모음을 다시 설치해 보세요.
+1. 프로젝트를 로드하지 못한 경우(F# 솔루션 탐색기 표시 됨) 해당 프로젝트를 마우스 오른쪽 단추로 클릭하고 자세한 **정보 보기**를 클릭하여 더 많은 진단 정보를 얻습니다.
 
-이상 ide는 F# 커뮤니티의 구성원이 빌드하고 유지 관리 하는 오픈 소스 프로젝트입니다. 문제를 보고 하 고 무료 [ide-vscode-Fsharp.core GitHub 리포지토리에](https://github.com/ionide/ionide-vscode-fsharp)참여 하세요.
+IDE는 F# 커뮤니티의 구성원이 빌드하고 유지 관리하는 오픈 소스 프로젝트입니다. 문제를 보고하고 [ide-vscode-Fsharp.core GitHub 리포지토리](https://github.com/ionide/ionide-vscode-fsharp)에 참여하세요.
 
 이상 ide 개발자와 F# 커뮤니티의 [Gitter channel](https://gitter.im/ionide/ionide-project)에서 추가 도움을 요청할 수도 있습니다.
 
