@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF, privacy information
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-ms.openlocfilehash: c5500b8fd8b35081e83e2e9279dc4f236ef3c7b0
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 7bd56d44eeb6af70b94cdde77d48e917ef8afb9a
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837937"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347788"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Windows Communication Foundation 개인 정보 취급 방침
 Microsoft는 최종 사용자의 개인 정보 보호를 위해 최선을 다할 것을 약속합니다. WCF (Windows Communication Foundation) 버전 3.0을 사용 하 여 응용 프로그램을 빌드할 때 응용 프로그램이 최종 사용자의 개인 정보에 영향을 줄 수 있습니다. 예를 들어 애플리케이션에서 사용자 연락처 정보를 명시적으로 수집하거나, 정보를 요청하거나 인터넷을 통해 정보를 웹 사이트로 보낼 수 있습니다. 애플리케이션에 Microsoft 기술을 포함하는 경우 해당 기술의 동작이 개인 정보 보호에 영향을 줄 수 있습니다. 사용자 또는 최종 사용자가 Microsoft에 전송 하도록 선택 하지 않는 한 WCF는 응용 프로그램에서 Microsoft로 정보를 보내지 않습니다.  
@@ -21,7 +21,7 @@ Microsoft는 최종 사용자의 개인 정보 보호를 위해 최선을 다할
   
  애플리케이션에서 사용하는 서비스에 따라 헤더에는 메시지 라우팅, 보안 정보, 트랜잭션 등이 포함될 수 있습니다. 기본적으로 메시지는 암호화됩니다. 단, 비보안 레거시 웹 서비스에 사용하도록 디자인된 `BasicHttpBinding`을 사용하는 경우는 예외입니다. 최종 디자인의 책임은 애플리케이션 디자이너에게 있습니다. SOAP 본문의 메시지는 응용 프로그램 관련 데이터를 포함 합니다. 그러나이 데이터 (예: 응용 프로그램 정의 개인 정보)는 WCF 암호화 또는 기밀성 기능을 사용 하 여 보호할 수 있습니다. 다음 단원에서는 개인 정보 보호에 영향을 주는 기능에 대해 설명합니다.  
   
-## <a name="messaging"></a>메시징  
+## <a name="messaging"></a>Messaging(메시징)  
  각 WCF 메시지에는 메시지 대상을 지정 하는 주소 헤더와 회신이 전달 되는 위치가 있습니다.  
   
  엔드포인트 주소의 주소 구성 요소는 엔드포인트를 식별하는 URI(Uniform Resource Identifier)입니다. 주소는 네트워크 주소나 논리 주소일 수 있습니다. 주소에는 컴퓨터 이름(호스트 이름, 정규화된 도메인 이름) 및 IP 주소가 포함될 수 있습니다. 엔드포인트 주소에는 각 주소를 구분하는 데 사용되는 임시 주소 지정을 위한 GUID(고유한 전역 식별자) 또는 GUID 컬렉션이 포함될 수도 있습니다. 각 메시지에는 GUID인 메시지 ID가 포함되어 있습니다. 이 기능은 WS-Addressing 참조 표준을 준수합니다.  
@@ -44,7 +44,7 @@ Microsoft는 최종 사용자의 개인 정보 보호를 위해 최선을 다할
   
  인증을 통해 통신하는 엔드포인트 간에 보안 세션이 설정될 수 있습니다. 세션은 보안 세션의 수명 동안 지속되는 GUID로 식별됩니다. 다음 표에서는 보관되는 데이터와 위치를 보여 줍니다.  
   
-|데이터|저장소|  
+|data|스토리지|  
 |----------|-------------|  
 |사용자 이름, X.509 인증서, Kerberos 토큰, 자격 증명에 대한 참조 등의 프레젠테이션 자격 증명|Windows 인증서 저장소 등의 표준 Windows 자격 증명 관리 메커니즘|  
 |사용자 이름, 암호 등의 사용자 멤버 자격 정보|ASP.NET 멤버 자격 공급자입니다.|  
@@ -54,9 +54,9 @@ Microsoft는 최종 사용자의 개인 정보 보호를 위해 최선을 다할
 ## <a name="auditing"></a>감사  
  감사는 인증 및 권한 부여 이벤트의 성공과 실패를 기록합니다. 감사 레코드에는 서비스 URI, 작업 URI, 호출자 ID 등의 데이터가 들어 있습니다.  
   
- 또한 감사는 메시지 로깅에서 애플리케이션별 데이터를 헤더와 본문에 기록할 수 있으므로 관리자가 설정 또는 해제하여 메시지 로깅의 구성을 수정하는 시기를 기록합니다. [!INCLUDE[wxp](../../../includes/wxp-md.md)]의 경우 애플리케이션 이벤트 로그에 레코드가 기록됩니다. Windows Vista 및 [!INCLUDE[ws2003](../../../includes/ws2003-md.md)]의 경우 보안 이벤트 로그에 레코드가 기록 됩니다.  
+ 또한 감사는 메시지 로깅에서 애플리케이션별 데이터를 헤더와 본문에 기록할 수 있으므로 관리자가 설정 또는 해제하여 메시지 로깅의 구성을 수정하는 시기를 기록합니다. [!INCLUDE[wxp](../../../includes/wxp-md.md)]의 경우 애플리케이션 이벤트 로그에 레코드가 기록됩니다. Windows Vista 및 Windows Server 2003의 경우 보안 이벤트 로그에 레코드가 기록 됩니다.  
   
-## <a name="transactions"></a>트랜잭션  
+## <a name="transactions"></a>의  
  트랜잭션 기능은 WCF 응용 프로그램에 트랜잭션 서비스를 제공 합니다.  
   
  트랜잭션 전파에 사용된 트랜잭션 헤더에는 GUID인 트랜잭션 ID 또는 인리스트먼트 ID가 포함될 수도 있습니다.  
@@ -95,7 +95,7 @@ Microsoft는 최종 사용자의 개인 정보 보호를 위해 최선을 다할
 ### <a name="tracing"></a>추적  
  WCF 인프라의 진단 기능은 전송 및 서비스 모델 계층을 통과 하는 메시지와 이러한 메시지와 관련 된 활동 및 이벤트를 기록 합니다. 이 기능은 기본적으로 해제되어 있습니다. 응용 프로그램의 구성 파일을 사용 하 여 사용 하도록 설정 되 고 런타임에 WCF WMI 공급자를 사용 하 여 추적 동작을 수정할 수 있습니다. 활성화되면 추적 인프라는 메시지, 동작 및 처리 이벤트가 포함된 진단 추적을 구성된 수신기로 내보냅니다. 출력 형식과 위치는 관리자가 선택한 수신기 구성에 의해 결정되지만 일반적으로 XML 형식 파일입니다. 관리자는 추적 파일에 대해 ACL(액세스 제어 목록)을 설정하는 작업을 담당합니다. 특히 WAS(Windows Activation System)에서 호스트할 때 관리자는 원하지 않을 경우 공용 가상 루트 디렉터리에서 파일이 제공되지 않도록 해야 합니다.  
   
- 메시지 로깅과 서비스 모델 진단 추적의 두 가지 추적 형식이 있으며, 이에 대해서는 다음 단원에서 설명합니다. 각 형식은 해당 추적 소스인 <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A> 및 <xref:System.ServiceModel>을 통해 구성됩니다. 이러한 로깅 추적 소스는 모두 애플리케이션의 로컬 데이터를 캡처합니다.  
+ 추적에는 다음과 같은 두 가지 유형이 있습니다. 메시지 로깅 및 서비스 모델 진단 추적 (다음 섹션에 설명 되어 있습니다. 각 형식은 해당 추적 소스인 <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A> 및 <xref:System.ServiceModel>을 통해 구성됩니다. 이러한 로깅 추적 소스는 모두 애플리케이션의 로컬 데이터를 캡처합니다.  
   
 ### <a name="message-logging"></a>메시지 로깅  
  메시지 로깅 추적 소스(<xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>)를 사용하면 관리자가 시스템을 통과하는 메시지를 기록할 수 있습니다. 구성을 통해 사용자는 전체 메시지 또는 메시지 헤더만 기록할지, 전송 및/또는 서비스 모델 계층에 기록할지 여부 및 잘못된 형식의 메시지를 포함할지 여부를 결정할 수 있습니다. 또한 사용자는 필터링을 구성하여 기록할 메시지를 제한할 수 있습니다.  
@@ -401,7 +401,7 @@ Microsoft는 최종 사용자의 개인 정보 보호를 위해 최선을 다할
   
  WSDL(웹 서비스 기술 언어)에는 포트 정의가 들어 있습니다. 각 포트에는 엔드포인트 주소와 애플리케이션에서 사용하는 서비스를 나타내는 바인딩이 있습니다. 구성을 사용하여 WSDL 노출을 해제할 수 있습니다. 컴퓨터에는 정보가 보관되지 않습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Windows Communication Foundation](index.md)
-- [Security](./feature-details/security.md)
+- [보안](./feature-details/security.md)
