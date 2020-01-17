@@ -1,15 +1,13 @@
 ---
 title: 종속성 및 .NET 라이브러리
 description: .NET 라이브러리에서 NuGet 종속성을 관리하는 모범 사례 권장 사항입니다.
-author: jamesnk
-ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: 0cd00ff36ad52bc46769ca1793b9efd02db14da1
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: b5742bf4724c4aff4beb4ca40a543bd096528a00
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65644257"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706506"
 ---
 # <a name="dependencies"></a>종속성
 
@@ -60,7 +58,7 @@ NuGet의 적용 가능한 가장 낮은 버전 규칙 때문에 최신 버전을
 
 **❌** 최소 버전이 없는 NuGet 패키지 참조를 사용하지 않습니다.
 
-**❌ 회피** 정확한 버전을 요구하는 NuGet 패키지 참조입니다.
+**❌회피** 정확한 버전을 요구하는 NuGet 패키지 참조는 사용하지 않습니다.
 
 **❌** 버전 상한이 있는 NuGet 패키지 참조를 사용하지 않습니다.
 
@@ -84,7 +82,7 @@ NuGet의 적용 가능한 가장 낮은 버전 규칙 때문에 최신 버전을
 
 **✔️** 작은 내부 기능 집합을 제공하는 경우 사용자 패키지를 공유 소스 패키지로 설정합니다.
 
-**✔️** `PrivateAssets="All"`을 사용하여 공유 소스 패키지를 참조합니다.
+**✔️**`PrivateAssets="All"`을 사용하여 공유 소스 패키지를 참조합니다.
 
 > 이 설정은 개발할 때만 패키지를 사용하고 공용 종속성으로 노출하지 않도록 NuGet에 지시합니다.
 

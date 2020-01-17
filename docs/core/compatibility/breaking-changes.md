@@ -2,12 +2,12 @@
 title: .NET Core 호환성이 손상되는 변경 사항
 description: 각 .NET Core 버전의 호환성이 손상되는 변경에 대해 알아봅니다.
 ms.date: 11/27/2019
-ms.openlocfilehash: 30459ca1178c0d62427138b22dd42f11cd2c2475
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 8bd8ebc803a80069530fe1cf6adc66769f7d6c85
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568023"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900150"
 ---
 # <a name="breaking-change-selectors"></a>호환성이 손상되는 변경 선택기
 
@@ -15,9 +15,12 @@ ms.locfileid: "74568023"
 
 ## <a name="by-version"></a>버전별
 
-현재 대상으로 하는 .NET Core 버전을 선택한 후 마이그레이션할 .NET Core 버전을 선택합니다.
+현재 대상으로 하는 .NET 버전을 선택한 후 마이그레이션할 .NET Core 버전을 선택합니다.
 
 [!INCLUDE[versionselector](~/includes/core-changes/versionselector.md)]
+
+> [!TIP]
+> Windows Forms 앱을 .NET Framework에서 .NET Core로 마이그레이션하는 경우 버전 선택기를 사용하는 대신 [Windows Forms의 호환성이 손상되는 변경(.NET Framework 에서 .NET Core로 변경)](../porting/winforms-breaking-changes.md)을 참조하세요.
 
 ## <a name="by-area"></a>영역별
 
@@ -31,8 +34,8 @@ ms.locfileid: "74568023"
 
 - .NET Core의 경우 [dotnet/docs](https://github.com/dotnet/docs/issues?q=is%3Aissue+label%3Abreaking-change) 리포지토리.
 - ASP.NET Core의 경우 [aspnet/Announcements](https://github.com/aspnet/Announcements/issues?q=is%3Aissue+is%3Aopen+label%3A%22Breaking+change%22+label%3A3.0.0) 리포지토리.
-- Entity Framework Core의 경우 [aspnet/EntityFrameworkCore](https://github.com/aspnet/EntityFrameworkCore/issues?q=is%3Aopen+is%3Aissue+label%3Abreaking-change) 리포지토리.
+- Entity Framework Core의 경우 [dotnet/efcore](https://github.com/dotnet/efcore/issues?q=is%3Aopen+is%3Aissue+label%3Abreaking-change) 리포지토리.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [.NET Framework에서 .NET Core로 마이그레이션](../porting/index.md)

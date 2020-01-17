@@ -1,23 +1,22 @@
 ---
-title: '방법: XML 문서 기능 사용 - C# 프로그래밍 가이드'
-ms.custom: seodec18
+title: XML 문서 기능을 사용하는 방법 - C# 프로그래밍 가이드
 ms.date: 06/01/2018
 helpviewer_keywords:
 - XML documentation [C#]
 - C# language, XML documentation features
 ms.assetid: 8f33917b-9577-4c9a-818a-640dbbb0b399
-ms.openlocfilehash: 3e59783a7f306d3d2a510fe3337a4c6490dcb3e8
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 5de94b1f1ab44f954b5bab9f8b5212c33325c19d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523456"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75696716"
 ---
-# <a name="how-to-use-the-xml-documentation-features"></a>방법: XML 문서 기능 사용
+# <a name="how-to-use-the-xml-documentation-features"></a>XML 문서 기능을 사용하는 방법
 
 다음 샘플은 문서화된 형식에 대한 기본 개요를 제공합니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 [!code-csharp[csProgGuideDocComments#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#15)]
 
@@ -132,7 +131,7 @@ XML 문서는 ///로 시작합니다. 새 프로젝트를 만드는 경우 마�
     > [!NOTE]
     > XML 파일은 형식 및 멤버에 대한 전체 정보를 제공하지 않습니다(예: 형식 정보가 포함되지 않음). 형식 또는 멤버에 대한 전체 정보를 가져오려면 실제 형식 또는 멤버에 대한 리플렉션과 함께 문서 파일을 사용해야 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 프로그래밍 가이드](../index.md)
 - [-doc(C# 컴파일러 옵션)](../../language-reference/compiler-options/doc-compiler-option.md)

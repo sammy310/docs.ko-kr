@@ -7,14 +7,12 @@ helpviewer_keywords:
 - modules, Assembly Linker
 - assembly manifest, Assembly Linker
 ms.assetid: b5382965-0053-47cf-b92f-862860275a01
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 746abee0861b32900e757f030ab6165f297b83ed
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 8e60bdaedb403237383c4655e728443747af29e6
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774219"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715814"
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe(어셈블리 링커)
 
@@ -40,8 +38,8 @@ al sources options
 | 원본 | 설명 |
 | ------ | ----------- |
 |`file`[,`target`]|`file`(모듈)의 내용을 `target`이 지정하는 파일 이름에 복사합니다. 복사한 후 *Al.exe*가 `target`을 어셈블리로 컴파일합니다.|
-|**/embed[resource]:** `file`[,`name`[,`private`]]|`file`이 지정하는 리소스를 어셈블리 매니페스트가 포함된 이미지에 포함합니다. *Al.exe*는 `file`의 내용을 이식 가능한 실행 파일(PE) 이미지에 복사합니다.<br /><br /> `name` 매개 변수는 리소스의 내부 식별자입니다. 기본적으로 리소스는 어셈블리에서 공용입니다. 즉, 다른 어셈블리가 볼 수 있습니다. `private`를 지정하면 다른 어셈블리에서 리소스를 볼 수 없습니다.<br /><br /> 예를 들어, `file`이 [리소스 파일 생성기(*Resgen.exe*)](resgen-exe-resource-file-generator.md)나 개발 환경에서 만들어진 .NET Framework 리소스 파일인 경우에는 <xref:System.Resources>의 멤버를 사용하여 해당 파일에 액세스할 수 있습니다. 자세한 내용은 <xref:System.Resources.ResourceManager>을 참조하세요. 다른 모든 리소스의 경우에는 런타임에 `GetManifestResource`의 <xref:System.Reflection.Assembly>* 메서드를 사용하여 리소스에 액세스합니다.<br /><br /> 리소스 파일만 *Al.exe*에 전달되는 경우에는 출력 파일이 위성 리소스 어셈블리입니다.|
-|**/link[resource]:** `file`[,`name`[,`target`[,`private`]]]|리소스 파일을 어셈블리에 링크합니다. `file`이 지정하는 리소스가 어셈블리의 일부가 되고 파일은 복사되지 않습니다. `file` 매개 변수는 어떠한 파일 형식도 될 수 있습니다. 예를 들어, 네이티브 DLL을 `file` 매개 변수로 지정할 수 있습니다. 이렇게 하면 네이티브 DLL이 어셈블리의 일부가 되므로 전역 어셈블리 캐시에 설치하고 어셈블리의 관리 코드에서 액세스할 수 있습니다. 이 작업은 **/linkresource** 컴파일러 옵션을 사용하여 수행할 수도 있습니다. 자세한 내용은 [-linkresource(C# 컴파일러 옵션)](../../csharp/language-reference/compiler-options/linkresource-compiler-option.md)를 참조하세요.<br /><br /> `name` 매개 변수는 리소스의 내부 식별자입니다. `target` 매개 변수는 *Al.exe*에서 `file`*을 복사하는 경로와 파일 이름을 지정합니다.* 복사한 후 *Al.exe*가 `target`을 어셈블리로 컴파일합니다. 기본적으로 리소스는 어셈블리에서 공용입니다. 즉, 다른 어셈블리가 볼 수 있습니다. `private`를 지정하면 다른 어셈블리에서 리소스를 볼 수 없습니다.<br /><br /> 예를 들어, `file`이 리소스 파일 생성기 (*Resgen.exe*)나 개발 환경에서 만들어진 .NET Framework 리소스 파일인 경우에는 <xref:System.Resources> 네임스페이스의 멤버를 사용하여 해당 파일에 액세스할 수 있습니다. 자세한 내용은 <xref:System.Resources.ResourceManager>을 참조하세요. 다른 모든 리소스의 경우에는 런타임에 `GetManifestResource` 클래스의 <xref:System.Reflection.Assembly>* 메서드를 사용하여 리소스에 액세스합니다.<br /><br /> 리소스 파일만 *Al.exe*에 전달되는 경우에는 출력 파일이 위성 리소스 어셈블리입니다.|
+|**/embed[resource]:** `file`[,`name`[,`private`]]|`file`이 지정하는 리소스를 어셈블리 매니페스트가 포함된 이미지에 포함합니다. *Al.exe*는 `file`의 내용을 이식 가능한 실행 파일(PE) 이미지에 복사합니다.<br /><br /> `name` 매개 변수는 리소스의 내부 식별자입니다. 기본적으로 리소스는 어셈블리에서 공용입니다. 즉, 다른 어셈블리가 볼 수 있습니다. `private`를 지정하면 다른 어셈블리에서 리소스를 볼 수 없습니다.<br /><br /> 예를 들어, `file`이 [리소스 파일 생성기(*Resgen.exe*)](resgen-exe-resource-file-generator.md)나 개발 환경에서 만들어진 .NET Framework 리소스 파일인 경우에는 <xref:System.Resources>의 멤버를 사용하여 해당 파일에 액세스할 수 있습니다. 자세한 내용은 <xref:System.Resources.ResourceManager>를 참조하세요. 다른 모든 리소스의 경우에는 런타임에 `GetManifestResource`의 <xref:System.Reflection.Assembly>* 메서드를 사용하여 리소스에 액세스합니다.<br /><br /> 리소스 파일만 *Al.exe*에 전달되는 경우에는 출력 파일이 위성 리소스 어셈블리입니다.|
+|**/link[resource]:** `file`[,`name`[,`target`[,`private`]]]|리소스 파일을 어셈블리에 링크합니다. `file`이 지정하는 리소스가 어셈블리의 일부가 되고 파일은 복사되지 않습니다. `file` 매개 변수는 어떠한 파일 형식도 될 수 있습니다. 예를 들어, 네이티브 DLL을 `file` 매개 변수로 지정할 수 있습니다. 이렇게 하면 네이티브 DLL이 어셈블리의 일부가 되므로 전역 어셈블리 캐시에 설치하고 어셈블리의 관리 코드에서 액세스할 수 있습니다. 이 작업은 **/linkresource** 컴파일러 옵션을 사용하여 수행할 수도 있습니다. 자세한 내용은 [-linkresource(C# 컴파일러 옵션)](../../csharp/language-reference/compiler-options/linkresource-compiler-option.md)를 참조하세요.<br /><br /> `name` 매개 변수는 리소스의 내부 식별자입니다. `target` 매개 변수는 *Al.exe*에서 `file`*을 복사하는 경로와 파일 이름을 지정합니다.* 복사한 후 *Al.exe*가 `target`을 어셈블리로 컴파일합니다. 기본적으로 리소스는 어셈블리에서 공용입니다. 즉, 다른 어셈블리가 볼 수 있습니다. `private`를 지정하면 다른 어셈블리에서 리소스를 볼 수 없습니다.<br /><br /> 예를 들어, `file`이 리소스 파일 생성기 (*Resgen.exe*)나 개발 환경에서 만들어진 .NET Framework 리소스 파일인 경우에는 <xref:System.Resources> 네임스페이스의 멤버를 사용하여 해당 파일에 액세스할 수 있습니다. 자세한 내용은 <xref:System.Resources.ResourceManager>를 참조하세요. 다른 모든 리소스의 경우에는 런타임에 `GetManifestResource` 클래스의 <xref:System.Reflection.Assembly>* 메서드를 사용하여 리소스에 액세스합니다.<br /><br /> 리소스 파일만 *Al.exe*에 전달되는 경우에는 출력 파일이 위성 리소스 어셈블리입니다.|
 
 다음 `options`를 지정할 수 있으며, **/out**은 반드시 지정해야 합니다.
 
@@ -165,7 +163,7 @@ al sources options
 |al1076|'type' 형식이 여러 어셈블리에 전달되었습니다. 'assembly' 및 'assembly'.<br /><br /> 각 형식을 하나의 어셈블리에만 전달할 수 있습니다.|
 |al1077|'type' public 형식이 'assembly'에서 정의되고 'assembly'로 전달됩니다.<br /><br /> 생성되는 어셈블리에 중복된 public 형식이 있습니다. 하나는 유효한 형식 정의이고 다른 하나는 형식 전달자입니다.|
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 다음 명령은 `t2.netmodule` 모듈의 어셈블리를 사용하여 실행 파일 *t2a.exe*를 만듭니다. 진입점은 `Main`의 `MyClass` 메서드입니다.
 
@@ -173,7 +171,7 @@ al sources options
 al t2.netmodule /target:exe /out:t2a.exe /main:MyClass.Main
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [도구](index.md)
 - [*Sn.exe* (Strong Name Tool)](sn-exe-strong-name-tool.md)(Sn.exe(강력한 이름 도구))

@@ -1,15 +1,15 @@
 ---
-title: '방법: 파일 시스템에서 XML 트리 채우기(C#)'
+title: 파일 시스템에서 XML 트리를 채우는 방법(C#)
 ms.date: 07/20/2015
 ms.assetid: 2aa2ccac-4a22-47ae-9107-3bb8df232576
-ms.openlocfilehash: dc3850c943ebac8980abbff0933413538823d21d
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: beb44be1a787fa09b091aa48022dbb5b10c4632b
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66485164"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345778"
 ---
-# <a name="how-to-populate-an-xml-tree-from-the-file-system-c"></a>방법: 파일 시스템에서 XML 트리 채우기(C#)
+# <a name="how-to-populate-an-xml-tree-from-the-file-system-c"></a>파일 시스템에서 XML 트리를 채우는 방법(C#)
 일반적으로 XML 트리는 계층적인 이름/값 데이터 저장소로 유용하게 사용될 수 있습니다. 계층적 데이터로 XML 트리를 채운 다음 쿼리 및 변환하고 필요한 경우 serialize할 수 있습니다. 이 사용 시나리오에서 네임스페이스 및 공백 동작과 같은 많은 XML 관련 의미는 중요하지 않습니다. 대신 XML 트리를 한 사용자가 사용하는 작고 계층적인 메모리 내 데이터베이스로 사용합니다.  
   
 ## <a name="example"></a>예제  

@@ -3,12 +3,12 @@ title: 쿼리 식 기본 사항(C#의 LINQ)
 description: 쿼리 식과 관련된 개념 소개
 ms.date: 11/30/2016
 ms.assetid: 027db1f8-346f-44d2-a16e-043fcea3a4e0
-ms.openlocfilehash: 96ef75fe702e60eaa38acef77a73a5ea7f2076f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5ebe2163df47c60c677d7ac911ce0f65529835eb
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709119"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635862"
 ---
 # <a name="query-expression-basics"></a>쿼리 식 기본 사항
 
@@ -170,9 +170,9 @@ LINQ에서 쿼리 변수는 쿼리의 *결과* 대신 *쿼리*를 저장하는 �
 
 [!code-csharp[csrefQueryExpBasics#63](~/samples/snippets/csharp/concepts/linq/query-expression-basics_19.cs)]
 
-자세한 내용은 [방법: 그룹화 작업에서 하위 쿼리 수행](perform-a-subquery-on-a-grouping-operation.md)을 참조하세요.
+자세한 내용은 [그룹화 작업에서 하위 쿼리를 수행하는 방법](perform-a-subquery-on-a-grouping-operation.md)을 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 프로그래밍 가이드](../programming-guide/index.md)
 - [LINQ(Language-Integrated Query)](index.md)

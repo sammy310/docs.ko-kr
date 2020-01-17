@@ -1,15 +1,13 @@
 ---
 title: dotnet-counters - .NET Core
 description: dotnet-counter 명령줄 도구를 설치하고 사용하는 방법에 대해 알아봅니다.
-author: sdmaclea
-ms.author: stmaclea
 ms.date: 10/14/2019
-ms.openlocfilehash: b2fab239713d9d19c580580496e73a91ceafcc52
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 10af451a8b1b4d8b27da1490b99b19a4359c860f
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321539"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740795"
 ---
 # <a name="dotnet-counters"></a>dotnet-counters
 
@@ -17,7 +15,7 @@ ms.locfileid: "72321539"
 
 ## <a name="install-dotnet-counters"></a>dotnet-counters 설치
 
-`dotnet-counters` [NuGet 패키지](https://www.nuget.org/packages/dotnet-counters)의 최신 릴리스 버전을 설치하려면 [dotnet 도구 설치](../tools/dotnet-tool-install.md) 명령을 사용합니다.
+`dotnet-counters` [NuGet 패키지](https://www.nuget.org/packages/dotnet-counters)의 최신 릴리스 버전을 설치하려면 [dotnet tool install](../tools/dotnet-tool-install.md) 명령을 사용합니다.
 
 ```dotnetcli
 dotnet tool install --global dotnet-counters
@@ -60,7 +58,7 @@ dotnet-counters [-h|--help] [--version] <command>
 dotnet-counters list [-h|--help]
 ```
 
-### <a name="example"></a>예
+### <a name="example"></a>예제
 
 ```console
 > dotnet-counters list
@@ -129,7 +127,7 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [count
       GC Heap Size (MB)                            811
   ```
 
-- 사용자 정의 `EventSource`에서 `EventCounter` 값을 모니터링합니다. 자세한 내용은 [자습서: EventCounters를 사용하여 매우 자주 발생하는 이벤트의 성능을 측정하는 방법](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.Tracing/documentation/EventCounterTutorial.md)을 참조하세요.
+- 사용자 정의 `EventSource`에서 `EventCounter` 값을 모니터링합니다. 자세한 내용은 [자습서: EventCounters를 사용하여 매우 자주 발생하는 이벤트의 성능을 측정하는 방법](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.Tracing/documentation/EventCounterTutorial.md)을 참조하세요.
 
   ```console
   > dotnet-counters monitor --process-id 1902 Samples-EventCounterDemos-Minimal

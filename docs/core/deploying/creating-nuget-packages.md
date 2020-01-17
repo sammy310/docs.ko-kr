@@ -1,16 +1,15 @@
 ---
-title: .NET Core CLI(명령줄 인터페이스) 도구를 사용하여 NuGet 패키지 만들기
+title: .NET Core CLI를 사용하여 NuGet 패키지 만들기
 description: "'dotnet pack' 명령을 사용하여 NuGet 패키지를 만드는 방법에 관해 알아봅니다."
 author: cartermp
 ms.date: 06/20/2016
 ms.technology: dotnet-cli
-ms.custom: seodec18
-ms.openlocfilehash: 2d876f921d079972e2a638788195aa69a2423c49
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: ddc19faa7547637036686146f8600f40713541a8
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771938"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740870"
 ---
 # <a name="how-to-create-a-nuget-package-with-net-core-command-line-interface-cli-tools"></a>.NET Core CLI(명령줄 인터페이스) 도구를 사용하여 NuGet 패키지를 만드는 방법
 
@@ -46,7 +45,7 @@ SuperAwesomeLibrary.1.0.0.nupkg
 SuperAwesomeLibrary.1.0.0.symbols.nupkg
 ```
 
-그러면 디버그할 수 있는 패키지가 생성됩니다. 릴리스 이진 파일과 함께 NuGet 패키지를 빌드하려는 경우 `--configuration`(또는 `-c`) 스위치를 추가하고 `release`를 인수로 사용하기만 하면 됩니다.
+이렇게 하면 디버그할 수 있는 패키지가 생성됩니다. 릴리스 이진 파일과 함께 NuGet 패키지를 빌드하려는 경우 `--configuration`(또는 `-c`) 스위치를 추가하고 `release`를 인수로 사용하기만 하면 됩니다.
 
 ```dotnetcli
 dotnet pack --configuration release
@@ -67,6 +66,6 @@ SuperAwesomeLibrary.1.0.0.symbols.nupkg
 
 어떤 지점에서도 `dotnet publish` 명령은 관련되지 않습니다. `dotnet publish` 명령은 애플리케이션 및 모든 종속성을 동일한 번들로 배포하기 위한 것이며 NuGet을 통해 배포하고 사용할 NuGet 패키지를 생성하기 위한 것이 아닙니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [빠른 시작: 패키지 만들기 및 게시](/nuget/quickstart/create-and-publish-a-package-using-the-dotnet-cli)

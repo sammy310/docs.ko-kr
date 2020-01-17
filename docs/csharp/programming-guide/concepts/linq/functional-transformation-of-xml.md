@@ -2,12 +2,12 @@
 title: XML의 함수 변환(C#)
 ms.date: 07/20/2015
 ms.assetid: 0ccb9251-38d7-44e3-9b84-1b5fe25e4b59
-ms.openlocfilehash: 3c563c5dde1543c6ede53de0a9bb627f34108eaf
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 83ecd97f9319027dc50f346abf7a9888b5c23862
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594310"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75336803"
 ---
 # <a name="functional-transformation-of-xml-c"></a>XML의 함수 변환(C#)
 이 항목에서는 XML 문서를 수정하는 순수 함수 변환 방법에 대해 설명하고 이 방법을 절차적 방법과 대조합니다.  
@@ -30,9 +30,9 @@ ms.locfileid: "69594310"
   
  LINQ to XML과 다른 Microsoft XML 기술의 비교에 대한 자세한 내용은 [LINQ to XML과 기타 XML 기술 비교](./linq-to-xml-vs-other-xml-technologies.md)를 참조하세요.  
   
- XSLT는 소스 문서의 구조가 불규칙적인 경우 문서 중심적인 변환에 권장되는 도구입니다. 그러나 LINQ to XML도 문서 중심적 변환을 수행할 수 있습니다. 자세한 내용은 [방법: XSLT 스타일에서 주석을 사용하여 LINQ to XML 트리 변환(C#)](./how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style.md)을 참조하세요.  
+XSLT는 소스 문서의 구조가 불규칙적인 경우 문서 중심적인 변환에 권장되는 도구입니다. 그러나 LINQ to XML도 문서 중심적 변환을 수행할 수 있습니다. 자세한 내용은 [XSLT 스타일에서 주석을 사용하여 LINQ to XML 트리를 변환하는 방법(C#)](./how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style.md)을 참조하세요.
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [순수 함수 변환 소개(C#)](./introduction-to-pure-functional-transformations.md)
 - [자습서: WordprocessingML 문서에서 내용 조작(C#)](./shape-of-wordprocessingml-documents.md)

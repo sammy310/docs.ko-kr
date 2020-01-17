@@ -1,18 +1,17 @@
 ---
 title: 형식 매개 변수에 대한 제약 조건 - C# 프로그래밍 가이드
-ms.custom: seodec18
 ms.date: 04/12/2018
 helpviewer_keywords:
 - generics [C#], type constraints
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: d05307735506db0f0e4abab067334e4f0466ee6a
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 3ce68ecc1f0740fdb43ccf22b636dcd4bc05ea0a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204635"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712236"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>형식 매개 변수에 대한 제약 조건(C# 프로그래밍 가이드)
 
@@ -107,17 +106,17 @@ C# 7.3부터 <xref:System.Delegate?displayProperty=nameWithType> 또는 <xref:Sy
 
 C# 7.3부터 <xref:System.Enum?displayProperty=nameWithType> 형식을 기본 클래스 제약 조건으로 지정할 수도 있습니다. CLR에서는 항상 이 제약 조건을 허용했지만, C# 언어에서는 이 제약 조건을 허용하지 않았습니다. `System.Enum`을 사용하는 제네릭은 `System.Enum`의 정적 메서드를 사용하여 결과를 캐시하기 위해 형식이 안전한 프로그래밍을 제공합니다. 다음 샘플에서는 열거형 형식에 유효한 값을 모두 찾은 다음, 해당 값을 문자열 표현에 매핑하는 사전을 작성합니다.
 
-[!code-csharp[using the unmanaged constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#18)]
+[!code-csharp[using the enum constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#18)]
 
 사용된 메서드는 성능에 영향을 주는 리플렉션을 사용합니다. 리플렉션이 필요한 호출을 반복하는 대신, 이 메서드를 호출하여 캐시되고 다시 사용되는 컬렉션을 작성할 수 있습니다.
 
 다음 샘플과 같이 이 메서드는 열거형을 만들고 해당 값과 이름의 사전을 작성하는 데 사용할 수 있습니다.
 
-[!code-csharp[using the unmanaged constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#19)]
+[!code-csharp[enum definition](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#19)]
 
-[!code-csharp[using the unmanaged constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#20)]
+[!code-csharp[using the enum constrained method](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#20)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Collections.Generic>
 - [C# 프로그래밍 가이드](../index.md)

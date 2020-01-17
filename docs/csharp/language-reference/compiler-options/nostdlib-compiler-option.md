@@ -1,6 +1,6 @@
 ---
 title: -nostdlib(C# 컴파일러 옵션)
-ms.date: 07/20/2015
+ms.date: 12/20/2019
 f1_keywords:
 - /nostdlib
 helpviewer_keywords:
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -nostdlib compiler option [C#]
 - /nostdlib compiler option [C#]
 ms.assetid: ec197989-fa49-4725-a455-e06b551eb65f
-ms.openlocfilehash: 486539d7abdc3e65847a0bc0e228b1b20a2b2c37
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: ad8a2b5fc87dd7beee86d96331cf3961315be533
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69602692"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345086"
 ---
 # <a name="-nostdlib-c-compiler-options"></a>-nostdlib(C# 컴파일러 옵션)
 
@@ -34,7 +34,7 @@ ms.locfileid: "69602692"
 ### <a name="to-set-this-compiler-option-in-visual-studio"></a>Visual Studio에서 이 컴파일러 옵션을 설정하려면
 
 > [!NOTE]
-> 다음 지침은 Visual Studio 2015(및 이전 버전)에만 적용됩니다. **mscorlib.dll을 참조하지 않음** 빌드 속성은 Visual Studio 2017에 존재하지 않습니다.
+> 다음 지침은 Visual Studio 2015(및 이전 버전)에만 적용됩니다. **mscorlib.dll을 참조하지 않음** 빌드 속성은 Visual Studio 최신 버전에 존재하지 않습니다.
 
 1. 프로젝트의 **속성** 페이지를 엽니다.
 
@@ -48,6 +48,6 @@ ms.locfileid: "69602692"
 
 이 컴파일러 옵션을 프로그래밍 방식으로 설정하는 방법에 대한 자세한 내용은 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.NoStdLib%2A>을 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 컴파일러 옵션](./index.md)

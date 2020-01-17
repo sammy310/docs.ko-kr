@@ -1,6 +1,5 @@
 ---
 title: 캐스팅 및 형식 변환 - C# 프로그래밍 가이드
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - type conversion [C#]
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - casting [C#]
 - converting types [C#]
 ms.assetid: 568df58a-d292-4b55-93ba-601578722878
-ms.openlocfilehash: 33195ef77e2f51e52cd9ed69a11b12bed8d9ead1
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 252d509617ab5dbc53b282bac52e356396d82fab
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73969619"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711898"
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>캐스팅 및 형식 변환(C# 프로그래밍 가이드)
 
@@ -34,7 +33,7 @@ i = "Hello"; // error CS0029: Cannot implicitly convert type 'string' to 'int'
   
 - **사용자 정의 변환**: 사용자 정의 변환은 기본 클래스-파생 클래스 관계가 없는 사용자 지정 형식 간의 명시적 및 암시적 변환을 사용하도록 정의할 수 있는 특수 메서드를 통해 수행됩니다. 자세한 내용은 [사용자 정의 변환 연산자](../../language-reference/operators/user-defined-conversion-operators.md)를 참조하세요.  
   
-- **도우미 클래스를 사용한 변환**: 정수와 <xref:System.DateTime?displayProperty=nameWithType> 개체, 16진수 문자열과 바이트 배열 등 호환되지 않는 형식 간에 변환하려면 <xref:System.BitConverter?displayProperty=nameWithType> 클래스, <xref:System.Convert?displayProperty=nameWithType> 클래스 및 기본 제공 숫자 형식(예: <xref:System.Int32.Parse%2A?displayProperty=nameWithType>)의 `Parse` 메서드를 사용하면 됩니다. 자세한 내용은 [방법: 바이트 배열을 정수로 변환](./how-to-convert-a-byte-array-to-an-int.md), [방법: 문자열을 숫자로 변환](./how-to-convert-a-string-to-a-number.md) 및 [방법: 16진수 문자열과 숫자 형식 간 변환](./how-to-convert-between-hexadecimal-strings-and-numeric-types.md)을 참조하세요.  
+- **도우미 클래스를 사용한 변환**: 정수와 <xref:System.DateTime?displayProperty=nameWithType> 개체, 16진수 문자열과 바이트 배열 등 호환되지 않는 형식 간에 변환하려면 <xref:System.BitConverter?displayProperty=nameWithType> 클래스, <xref:System.Convert?displayProperty=nameWithType> 클래스 및 기본 제공 숫자 형식(예: <xref:System.Int32.Parse%2A?displayProperty=nameWithType>)의 `Parse` 메서드를 사용하면 됩니다. 자세한 내용은 [바이트 배열을 int로 변환하는 방법](./how-to-convert-a-byte-array-to-an-int.md), [문자열을 숫자로 변환하는 방법](./how-to-convert-a-string-to-a-number.md) 및 [16진수 문자열과 숫자 형식 간에 변환하는 방법](./how-to-convert-between-hexadecimal-strings-and-numeric-types.md)을 참조하세요.
   
 ## <a name="implicit-conversions"></a>암시적 변환
 
@@ -89,11 +88,11 @@ Giraffe g2 = (Giraffe) a;
 
 자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [전환](~/_csharplang/spec/conversions.md) 섹션을 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 프로그래밍 가이드](../index.md)
 - [유형](./index.md)
 - [() 캐스트 연산자](../../language-reference/operators/type-testing-and-cast.md#cast-operator-)
 - [사용자 정의 전환 연산자](../../language-reference/operators/user-defined-conversion-operators.md)
 - [일반화된 형식 변환](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/yy580hbd(v=vs.120))
-- [방법: 문자열을 숫자로 변환](./how-to-convert-a-string-to-a-number.md)
+- [문자열을 숫자로 변환하는 방법](./how-to-convert-a-string-to-a-number.md)

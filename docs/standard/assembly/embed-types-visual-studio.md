@@ -5,12 +5,12 @@ ms.assetid: 55ed13c9-c5bb-4bc2-bcd8-0587eb568864
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 47a339de60301e01b52a4b8a3a85945624daf940
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: f11fbedad766753ee462c5f597b823493cdaf7cf
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73733193"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75338550"
 ---
 # <a name="walkthrough-embed-types-from-managed-assemblies-in-visual-studio"></a>연습: Visual Studio에 관리되는 어셈블리의 형식 포함
 
@@ -22,7 +22,7 @@ ms.locfileid: "73733193"
 
 강력한 이름의 런타임 어셈블리의 새 버전을 만들면 클라이언트 프로그램을 다시 컴파일할 필요가 없습니다. 클라이언트 프로그램은 공용 인터페이스의 포함된 형식 정보를 통해 사용 가능한 런타임 어셈블리 버전을 계속 사용합니다.
 
-이 연습에서는 다음을 수행합니다.
+이 연습에서는 다음과 같은 작업을 수행합니다.
 
 1. 포함할 수 있는 형식 정보가 있는 공개 인터페이스와 함께 강력한 이름의 어셈블리를 만듭니다.
 1. 공용 인터페이스를 구현하는 강력한 이름의 런타임 어셈블리를 만듭니다.
@@ -53,7 +53,7 @@ ms.locfileid: "73733193"
 
 1. Visual Studio에서 **파일** > **새로 만들기** > **프로젝트**를 선택합니다.
 
-1. **새 프로젝트 만들기** 대화 상자에서 **템플릿 검색** 상자에 *class library*를 입력합니다. 목록에서 C# 또는 VB **클래스 라이브러리(.NET Framework)** 템플릿을 선택한 후 **다음**을 선택합니다.
+1. **새 프로젝트 만들기** 대화 상자에서 **템플릿 검색** 상자에 *class library*를 입력합니다. 목록에서 C# 또는 Visual Basic **클래스 라이브러리(.NET Framework)** 템플릿을 선택한 후 **다음**을 선택합니다.
 
 1. **새 프로젝트 구성** 대화 상자에서 **프로젝트 이름**에 *TypeEquivalenceInterface*를 입력한 다음 **만들기**를 선택합니다. 새 프로젝트가 만들어집니다.
 
@@ -120,7 +120,7 @@ ms.locfileid: "73733193"
 
 1. Visual Studio에서 **파일** > **새로 만들기** > **프로젝트**를 선택합니다.
 
-1. **새 프로젝트 만들기** 대화 상자에서 **템플릿 검색** 상자에 *class library*를 입력합니다. 목록에서 C# 또는 VB **클래스 라이브러리(.NET Framework)** 템플릿을 선택한 후 **다음**을 선택합니다.
+1. **새 프로젝트 만들기** 대화 상자에서 **템플릿 검색** 상자에 *class library*를 입력합니다. 목록에서 C# 또는 Visual Basic **클래스 라이브러리(.NET Framework)** 템플릿을 선택한 후 **다음**을 선택합니다.
 
 1. **새 프로젝트 구성** 대화 상자에서 **프로젝트 이름**에 *TypeEquivalenceRuntime*을 입력한 다음 **만들기**를 선택합니다. 새 프로젝트가 만들어집니다.
 
@@ -192,7 +192,7 @@ ms.locfileid: "73733193"
 
 1. Visual Studio에서 **파일** > **새로 만들기** > **프로젝트**를 선택합니다.
 
-1. **새 프로젝트 만들기** 대화 상자에서 **템플릿 검색** 상자에 *console*을 입력합니다. 목록에서 C# 또는 VB **콘솔 앱(.NET Framework)** 템플릿을 선택한 후 **다음**을 선택합니다.
+1. **새 프로젝트 만들기** 대화 상자에서 **템플릿 검색** 상자에 *console*을 입력합니다. 목록에서 C# 또는 Visual Basic **콘솔 앱(.NET Framework)** 템플릿을 선택한 후 **다음**을 선택합니다.
 
 1. **새 프로젝트 구성** 대화 상자에서 **프로젝트 이름**에 *TypeEquivalenceClient*를 입력한 다음 **만들기**를 선택합니다. 새 프로젝트가 만들어집니다.
 
@@ -315,7 +315,7 @@ ms.locfileid: "73733193"
 
 빌드 출력 폴더 위치로 이동하여 *TypeEquivalenceClient.exe*를 실행합니다. 이제 프로그램을 다시 컴파일하지 않고도 콘솔 출력에 `TypeEquivalenceRuntime` 어셈블리의 새 버전 *2.0.0.0*이 반영됩니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [-link(C# 컴파일러 옵션)](../../csharp/language-reference/compiler-options/link-compiler-option.md)
 - [-link(Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md)

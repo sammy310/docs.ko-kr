@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 1e38e9d9-8284-46ee-a15f-199adc4f26f4
-ms.openlocfilehash: 2f76eb7d2b769b59809bec81aefacb7cec90a450
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 1570909b7b416eff81dd90a936ff5ed10aad94f1
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106696"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346079"
 ---
 # <a name="async-overview"></a>비동기 개요
 
@@ -20,7 +20,7 @@ ms.locfileid: "70106696"
 - 클라이언트 애플리케이션은 항상 켜져 있고, 항상 연결되어 있으며, 지속적으로 사용자 조작(예: 터치)에 빠르게 응답해야 하고, 앱 스토어 등급이 높아야 합니다.
 - 서비스는 적절하게 확장 및 축소하여 트래픽 급증을 처리해야 합니다. 
 
-비동기 프로그래밍은 다중 코어에서 차단 I/O 및 동시 작업을 간단하게 처리할 수 있게 해주는 주요 기술입니다. .NET에서는 앱과 서비스가 C#, VB 및 F#으로 작성된 사용하기 쉬운 언어 수준의 비동기 프로그래밍 모델을 사용하여 응답성 및 탄력성을 유지할 수 있습니다.
+비동기 프로그래밍은 다중 코어에서 차단 I/O 및 동시 작업을 간단하게 처리할 수 있게 해주는 주요 기술입니다. .NET에서는 앱과 서비스가 C#, Visual Basic 및 F#으로 작성된 사용하기 쉬운 언어 수준의 비동기 프로그래밍 모델을 사용하여 응답성 및 탄력성을 유지할 수 있습니다.
 
 ## <a name="why-write-async-code"></a>비동기 코드를 작성하는 이유
 

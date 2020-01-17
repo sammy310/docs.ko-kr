@@ -1,14 +1,14 @@
 ---
-ms.openlocfilehash: 56b394c4698f60baeb70d3c17d1abee5d867deb7
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 6f8e6d2786d20e055c9bef63891db4d6f88bc64b
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394009"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901890"
 ---
 ### <a name="identity-signinmanager-constructor-accepts-new-parameter"></a>ID: SignInManager 생성자는 새 매개 변수를 허용합니다.
 
-ASP.NET Core 3.0부터 새 `IUserConfirmation<TUser>` 매개 변수가 `SignInManager` 생성자에 추가되었습니다. 자세한 내용은 [aspnet/AspNetCore#8356](https://github.com/aspnet/AspNetCore/issues/8356)을 참조하세요.
+ASP.NET Core 3.0부터 새 `IUserConfirmation<TUser>` 매개 변수가 `SignInManager` 생성자에 추가되었습니다. 자세한 내용은 [dotnet/aspnetcore#8356](https://github.com/dotnet/aspnetcore/issues/8356)을 참조하세요.
 
 #### <a name="version-introduced"></a>도입된 버전
 
@@ -18,7 +18,7 @@ ASP.NET Core 3.0부터 새 `IUserConfirmation<TUser>` 매개 변수가 `SignInMa
 
 변경에 대한 동기는 ID에 새 이메일/확인 흐름에 대한 지원을 추가하는 것이었습니다.
 
-#### <a name="recommended-action"></a>권장 작업
+#### <a name="recommended-action"></a>권장 조치
 
 `SignInManager`를 수동으로 구성하는 경우 `IUserConfirmation`의 구현을 제공하거나 종속성 주입에서 하나를 가져와 제공합니다.
 

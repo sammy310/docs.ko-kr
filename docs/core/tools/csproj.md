@@ -2,12 +2,12 @@
 title: .NET Core용 csproj 형식에 대한 추가 사항
 description: 기존 및 .NET Core csproj 파일 간의 차이점에 대해 알아보기
 ms.date: 04/08/2019
-ms.openlocfilehash: 4ce9227839a610308071c36185b63db8b1ee86ed
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 4a05709da63c4f6a200039ba5dd59358c700130e
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739301"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75899879"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core용 csproj 형식에 대한 추가 사항
 
@@ -72,8 +72,8 @@ ASP.NET Core 메타패키지에 대한 이 참조의 동작은 대부분의 일�
 
 | 요소           | GLOB 포함                              | GLOB 제외                                                  | GLOB 제거              |
 |-------------------|-------------------------------------------|---------------------------------------------------------------|----------------------------|
-| Compile           | \*\*/\*.cs(또는 기타 언어 확장) | \*\*/\*.user;  \*\*/\*.\*proj;  \*\*/\*.sln;  \*\*/\*.vssscc  | 해당 사항 없음                      |
-| EmbeddedResource  | \*\*/\*.resx                              | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | 해당 사항 없음                      |
+| Compile           | \*\*/\*.cs(또는 기타 언어 확장) | \*\*/\*.user;  \*\*/\*.\*proj;  \*\*/\*.sln;  \*\*/\*.vssscc  | N/A                      |
+| EmbeddedResource  | \*\*/\*.resx                              | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | N/A                      |
 | 없음              | \*\*/\*                                   | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | \*\*/\*.cs; \*\*/\*.resx   |
 
 > [!NOTE]
@@ -156,7 +156,7 @@ ASP.NET Core 메타패키지에 대한 이 참조의 동작은 대부분의 일�
 `PrivateAssets` 특성은 `<PackageReference>`에서 지정한 패키지에 속하여 사용하지만 다음 프로젝트로 전달하지 말아야 하는 자산을 지정합니다. 이 특성이 없으면 `Analyzers`, `Build` 및 `ContentFiles` 자산이 기본적으로 비공개가 됩니다.
 
 > [!NOTE]
-> `PrivateAssets`는 *project.json*/*xproj* `SuppressParent` 요소와 같습니다.
+> `PrivateAssets`는 *project.json*/*xproj*`SuppressParent` 요소와 같습니다.
 
 이러한 특성은 다음 항목 중 하나 이상을 포함할 수 있습니다. 둘 이상을 포함하는 경우 세미콜론 `;` 문자로 구분합니다.
 
@@ -179,6 +179,8 @@ ASP.NET Core 메타패키지에 대한 이 참조의 동작은 대부분의 일�
 ```xml
 <DotNetCliToolReference Include="<package-id>" Version="" />
 ```
+
+`DotNetCliToolReference`는 [더 이상 사용되지 않으며](https://github.com/dotnet/announcements/issues/107) [.NET Core Local Tools](https://aka.ms/local-tools)로 대체되었습니다.
 
 #### <a name="version"></a>버전
 

@@ -1,16 +1,19 @@
 ---
-title: '방법: 지역화된 예외 메시지를 사용하여 사용자 정의 예외 만들기'
+title: '방법: 지역화된 예외 메시지를 사용하여 사용자 정의 예외 생성'
 description: '방법: 지역화된 예외 메시지를 사용하여 사용자 정의 예외 만드는 방법 알아보기'
 author: Youssef1313
+dev_langs:
+- csharp
+- vb
 ms.date: 09/13/2019
-ms.openlocfilehash: 453e332541628770932da2a6802fdcaee5211a84
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9360fccf27a0900d8380461e03baa5806ce1e0da
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141532"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708920"
 ---
-# <a name="how-to-create-user-defined-exceptions-with-localized-exception-messages"></a>방법: 지역화된 예외 메시지를 사용하여 사용자 정의 예외 만들기
+# <a name="how-to-create-user-defined-exceptions-with-localized-exception-messages"></a>방법: 지역화된 예외 메시지를 사용하여 사용자 정의 예외 생성
 
 이 문서에서는 위성 어셈블리를 사용하여 지역화된 예외 메시지로 기본 <xref:System.Exception> 클래스에서 상속되는 사용자 정의 예외를 만드는 방법을 설명합니다.
 
@@ -27,6 +30,13 @@ ms.locfileid: "73141532"
     [Serializable]
     public class StudentNotFoundException : Exception { }
     ```
+    
+    ```vb
+    <Serializable>
+    Public Class StudentNotFoundException
+        Inherits Exception
+    End Class
+    ```
 
 1. 기본 생성자를 추가합니다.
 
@@ -42,6 +52,24 @@ ms.locfileid: "73141532"
         public StudentNotFoundException(string message, Exception inner)
             : base(message, inner) { }
     }
+    ```
+    
+    ```vb
+    <Serializable>
+    Public Class StudentNotFoundException
+        Inherits Exception
+
+        Public Sub New()
+        End Sub
+
+        Public Sub New(message As String)
+            MyBase.New(message)
+        End Sub
+
+        Public Sub New(message As String, inner As Exception)
+            MyBase.New(message, inner)
+        End Sub
+    End Class
     ```
 
 1. 추가 속성 및 생성자를 정의합니다.
@@ -68,12 +96,41 @@ ms.locfileid: "73141532"
     }
     ```
 
+    ```vb
+    <Serializable>
+    Public Class StudentNotFoundException
+        Inherits Exception
+
+        Public ReadOnly Property StudentName As String
+
+        Public Sub New()
+        End Sub
+
+        Public Sub New(message As String)
+            MyBase.New(message)
+        End Sub
+
+        Public Sub New(message As String, inner As Exception)
+            MyBase.New(message, inner)
+        End Sub
+
+        Public Sub New(message As String, studentName As String)
+            Me.New(message)
+            StudentName = studentName
+        End Sub
+    End Class
+    ```
+
 ## <a name="create-localized-exception-messages"></a>지역화된 예외 메시지 만들기
 
 사용자 지정 예외를 만들고 다음과 같은 코드를 사용하여 어디에서든 throw할 수 있습니다.
 
 ```csharp
 throw new StudentNotFoundException("The student cannot be found.", "John");
+```
+
+```vb
+Throw New StudentNotFoundException("The student cannot be found.", "John")
 ```
 
 이전 줄의 문제는 `"The student cannot be found."`이 상수 문자열에 불과하다는 것입니다. 지역화된 애플리케이션에서는 사용자 문화권에 따라 다른 메시지를 사용할 수 있습니다.
@@ -100,10 +157,10 @@ throw new StudentNotFoundException("The student cannot be found.", "John");
     throw new StudentNotFoundException(resourceManager.GetString("StudentNotFound"), "John");
     ```
 
-  > [!NOTE]
-  > 프로젝트 이름이 `TestProject`이고 리소스 파일 *ExceptionMessages.resx*가 프로젝트의 *Resources* 폴더에 있는 경우 리소스 파일의 정규화된 이름은 `TestProject.Resources.ExceptionMessages`입니다.
+    > [!NOTE]
+    > 프로젝트 이름이 `TestProject`이고 리소스 파일 *ExceptionMessages.resx*가 프로젝트의 *Resources* 폴더에 있는 경우 리소스 파일의 정규화된 이름은 `TestProject.Resources.ExceptionMessages`입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [사용자 정의 예외를 만드는 방법](how-to-create-user-defined-exceptions.md)
 - [데스크톱 응용 프로그램용 위성 어셈블리 만들기](../../framework/resources/creating-satellite-assemblies-for-desktop-apps.md)

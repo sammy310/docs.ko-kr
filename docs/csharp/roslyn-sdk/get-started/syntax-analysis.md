@@ -3,12 +3,12 @@ title: 구문 분석 시작(Roslyn API)
 description: 구문 트리를 트래버스하고, 탐색하고, 쿼리하는 방법을 소개합니다.
 ms.date: 02/05/2018
 ms.custom: mvc
-ms.openlocfilehash: e377fe10e094e958627c3503fc39b7e2d02b3d7a
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: d4163e8aadf577a5a5cbed225b26a0ec8390277e
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42931761"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347008"
 ---
 # <a name="get-started-with-syntax-analysis"></a>구문 분석 시작
 
@@ -51,14 +51,14 @@ C# 코드 구조의 분석에 구문 API를 사용합니다. **구문 API**는 �
 
 구문 트리의 네 가지 기본 구성 요소는 다음과 같습니다.
 
-* <xref:Microsoft.CodeAnalysis.SyntaxTree?displayProperty=nameWithType> 클래스는 전체 구문 분석 트리를 나타내는 인스턴스입니다. <xref:Microsoft.CodeAnalysis.SyntaxTree>은 언어별 파생물을 포함하는 추상 클래스입니다. <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree?displayProperty=nameWithType>(또는 <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxTree?displayProperty=nameWithType>) 클래스의 구문 분석 메서드를 사용하여 C# 또는 VB 텍스트를 구문 분석합니다.
+* <xref:Microsoft.CodeAnalysis.SyntaxTree?displayProperty=nameWithType> 클래스는 전체 구문 분석 트리를 나타내는 인스턴스입니다. <xref:Microsoft.CodeAnalysis.SyntaxTree>은 언어별 파생물을 포함하는 추상 클래스입니다. <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree?displayProperty=nameWithType>(또는 <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxTree?displayProperty=nameWithType>) 클래스의 구문 분석 메서드를 사용하여 C# 또는 Visual Basic 텍스트를 구문 분석합니다.
 * <xref:Microsoft.CodeAnalysis.SyntaxNode?displayProperty=nameWithType> 클래스는 선언, 명령문, 절 및 식과 같은 구문 구조를 나타내는 인스턴스입니다.
 * <xref:Microsoft.CodeAnalysis.SyntaxToken?displayProperty=nameWithType> 구조는 개별 키워드, 식별자, 연산자 또는 문장 부호를 나타냅니다.
 * 마지막으로 <xref:Microsoft.CodeAnalysis.SyntaxTrivia?displayProperty=nameWithType> 구조는 토큰 간의 공백, 전처리 지시문 및 주석 등의 구문상으로 중요하지 않은 정보를 나타냅니다.
 
 퀴즈, 토큰 및 노드는 Visual Basic 또는 C# 코드의 일부에 있는 모든 항목을 완전치 나타내는 트리를 형성하기 위해 계층적으로 구성됩니다. **구문 시각화 도우미** 창을 사용하여 이 구조를 확인할 수 있습니다. Visual Studio에서 **보기** > **다른 창** > **구문 시각화 도우미**를 선택합니다. 예를 들어 **구문 시각화 도우미**를 사용하여 검사된 위의 C# 원본 파일은 다음 그림처럼 표시됩니다.
 
-**SyntaxNode**: 파랑 | **SyntaxToken**: 초록색 | **SyntaxTrivia**: 빨강 ![C# 코드 파일](media/walkthrough-csharp-syntax-figure1.png)
+**SyntaxNode**: Blue | **SyntaxToken**: Green | **SyntaxTrivia**: Red ![C# 코드 파일](media/walkthrough-csharp-syntax-figure1.png)
 
 이 트리 구조를 탐색하여 코드 파일에서 문, 식, 토큰 또는 공백을 찾을 수 있습니다.
 
@@ -78,7 +78,7 @@ C# 코드 구조의 분석에 구문 API를 사용합니다. **구문 API**는 �
 새 C# **독립 실행형 코드 분석 도구** 프로젝트를 만듭니다.
 
 * Visual Studio에서 **파일** > **새로 만들기** > **프로젝트**를 선택하여 새 프로젝트 대화 상자를 표시합니다.
-* **Visual C#** > **확장성** 아래에서 **독립 실행형 코드 분석 도구**를 선택합니다.
+* **Visual C#**  > **확장성** 아래에서 **독립 실행형 코드 분석 도구**를 선택합니다.
 * 프로젝트 이름을 "**SyntaxTreeManualTraversal**"이라고 지정하고 확인을 클릭합니다.
 
 앞에 표시된 기본 "Hello World!" 프로그램을 분석하려고 합니다.

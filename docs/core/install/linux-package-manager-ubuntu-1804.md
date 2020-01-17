@@ -4,12 +4,12 @@ description: 패키지 관리자를 사용하여 Ubuntu 18.04에 .NET Core SDK �
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: 38568b31bf9cd02a19a15addfe4926e8857a87b5
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: a8e92cab30302c5636d23f098eb60637141545ca
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74999046"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740616"
 ---
 # <a name="ubuntu-1804-package-manager---install-net-core"></a>Ubuntu 18.04 패키지 관리자 - .NET Core 설치
 
@@ -21,9 +21,9 @@ ms.locfileid: "74999046"
 
 .NET을 설치하기 전에 먼저 다음을 수행해야 합니다.
 
-- Microsoft 키 등록
-- 제품 리포지토리 등록
-- 필수 종속성 설치
+- Microsoft 키를 등록합니다.
+- 제품 리포지토리를 등록합니다.
+- 필수 종속성을 설치합니다.
 
 이 작업은 머신당 한 번만 수행하면 됩니다.
 

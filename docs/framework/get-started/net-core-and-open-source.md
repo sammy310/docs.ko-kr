@@ -2,17 +2,16 @@
 title: .NET Core 및 오픈 소스
 ms.date: 03/30/2017
 ms.assetid: e6bd4655-ce37-4003-8462-468a6fe2c40f
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2ad74a70fff9916dc66bb4d2eacbdaf40cb241c3
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 4032ba771d917d25473c8de350cc752bd052f94d
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70853956"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75752553"
 ---
 # <a name="net-core-and-open-source"></a>.NET Core 및 오픈 소스
-이 항목에서는 .NET Core에 대한 간략한 개요 및 자세한 정보를 찾는 방법을 보여줍니다. .NET Core 주제에 대한 전체 목록은 [.NET Core 가이드](../../core/index.md)를 참조하세요.
+
+이 문서에서는 .NET Core에 대한 간략한 개요 및 자세한 정보를 찾는 방법을 보여줍니다. .NET Core 설명서에 대한 전체 목록은 [.NET Core 가이드](../../core/index.md)를 참조하세요.
   
 <a name="BKMK_WhatisNETCore"></a>   
 ## <a name="what-is-net-core"></a>.NET Core란?  
@@ -20,7 +19,7 @@ ms.locfileid: "70853956"
   
  .NET Core를 시작하려면 .NET 자습서 [Hello World 10분 완성](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)를 방문하세요.  
   
- 다음은 .NET Core의 주요 특성입니다.  
+다음은 .NET Core의 주요 특성입니다.
   
 - **플랫폼 간:** .NET Core는 필요한 앱 기능을 구현하고 플랫폼 대상에 관계없이 이 코드를 재사용하기 위한 주요 기능을 제공합니다. 현재 세 개의 주요 OS(운영 체제)를 지원합니다. Windows, Linux 및 macOS. 지원되는 운영 체제 간에 수정하지 않고 실행되는 앱과 라이브러리를 작성할 수 있습니다. 지원되는 운영 체제의 목록을 보려면 [.NET Core roadmap](https://github.com/dotnet/core/blob/master/roadmap.md)(.NET Core 로드맵)을 방문하세요.
   
@@ -30,23 +29,22 @@ ms.locfileid: "70853956"
 
 - **모듈식:** .NET Core는 NuGet을 통해 작은 어셈블리 패키지로 릴리스되므로 모듈식입니다. 대부분의 핵심 기능을 포함하는 하나의 큰 어셈블리 대신, .NET Core는 작은 기능 중심 패키지로 제공됩니다. 이렇게 하면 더 많은 Agile 개발 모델을 활성화하고 필요한 NuGet 패키지만 포함하도록 응용 프로그램을 최적화할 수 있습니다. 작은 응용 프로그램 노출 영역 혜택에는 보안 강화, 서비스 절감, 성능 향상 및 사용한 만큼만 지불하는 비용 감소가 포함됩니다.  
   
-## <a name="the-net-core-platform"></a>.NET Core 플랫폼  
- .NET Core 플랫폼은 관리되는 컴파일러, 런타임, 기본 클래스 라이브러리 및 ASP.NET Core와 같은 다양한 애플리케이션 모델을 포함하는 여러 요소로 구성됩니다. 다음의 [GitHub](https://github.com/) 리포지토리를 방문하여 다양한 구성 요소에 대해 자세히 알아보고 참여할 수 있습니다.  
+## <a name="the-net-core-platform"></a>.NET Core 플랫폼
   
-- [.NET Core](https://github.com/dotnet/core)  
+.NET Core 플랫폼은 관리되는 컴파일러, 런타임, 기본 클래스 라이브러리 및 ASP.NET Core와 같은 다양한 애플리케이션 모델을 포함하는 여러 요소로 구성됩니다. 다음의 [GitHub](https://github.com/) 리포지토리를 방문하여 다양한 구성 요소에 대해 자세히 알아보고 참여할 수 있습니다.  
   
-- [CoreFX - .NET Core 기본 라이브러리](https://github.com/dotnet/corefx)  
+- [.NET Core 홈](https://github.com/dotnet/core)  
   
-- [CoreCLR - .NET Core 런타임](https://github.com/dotnet/coreclr)  
+- [런타임 - .NET Core 플랫폼 및 런타임](https://github.com/dotnet/runtime)  
   
 - [CLI - .NET Core 명령줄 도구](https://github.com/dotnet/cli)  
   
 - [Roslyn - .NET 컴파일러 플랫폼](https://github.com/dotnet/roslyn)  
   
-- [ASP.NET Core](https://github.com/aspnet/home)  
+- [ASP.NET Core](https://github.com/dotnet/aspnetcore)  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [.NET 자습서 - Hello World 10분 완성](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)
 - [.NET Core 가이드](../../core/index.md)
-- [ASP.NET Core 설명서](/aspnet/core/)
+- [ASP.NET Core 문서](/aspnet/core/)

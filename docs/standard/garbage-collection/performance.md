@@ -6,12 +6,12 @@ helpviewer_keywords:
 - garbage collection, troubleshooting
 - garbage collection, performance
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
-ms.openlocfilehash: 8d40091420c29c86f2ebb25f14c17ae4f7a1c44a
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 72cf742aae26f9441229b355dc6e70da7a5fc9cd
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974756"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900576"
 ---
 # <a name="garbage-collection-and-performance"></a>가비지 컬렉션 및 성능
 
@@ -133,7 +133,7 @@ CLR(공용 언어 런타임) 프로파일링 인터페이스는 가비지 수집
 
 조각화는 1세대와 2세대에서 문제가 될 수 있습니다. 가비지 수집 후에 이러한 세대에 대량의 여유 공간이 있을 경우 애플리케이션의 개체 사용을 수정해야 할 수 있으며 장기 개체의 수명을 다시 평가하는 것이 좋습니다.
 
-개체를 과도하게 고정하면 조각화가 증가할 수 있습니다. 조각화가 높을 경우 너무 많은 개체가 고정되었을 수 있습니다.
+개체를 과도하게 고정하면 조각화가 증가할 수 있습니다. 조각화가 높을 경우 너무 많은 개체가 고정된 것일 수 있습니다.
 
 가상 메모리의 조각화로 인해 가비지 수집기에서 세그먼트를 추가할 수 없는 경우 원인은 다음 중 하나일 수 있습니다.
 
@@ -794,6 +794,6 @@ CLR(공용 언어 런타임) 프로파일링 인터페이스는 가비지 수집
 
   `% Time in GC` 값이 프로세스 시간과 동시에 급증하는 경우 가비지 수집으로 인해 CPU 사용량이 증가한 것입니다. 그러지 않으면 애플리케이션을 프로파일링하여 높은 사용량이 발생하는 위치를 찾습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [가비지 수집](../../../docs/standard/garbage-collection/index.md)

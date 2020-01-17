@@ -1,19 +1,19 @@
 ---
-title: '방법: DataContractSerializer를 사용하여 serialize(C#)'
+title: DataContractSerializer를 사용하여 직렬화하는 방법(C#)
 ms.date: 07/20/2015
 ms.assetid: 3320ecbf-cdbe-480e-979c-2c14bbef9988
-ms.openlocfilehash: 2b4800e2c6d210d62ab3093b673898a147c1f92d
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: c75455ce7c7943194ab43ac0150f5b9392f92e16
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253338"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347403"
 ---
-# <a name="how-to-serialize-using-datacontractserializer-c"></a>방법: DataContractSerializer를 사용하여 serialize(C#)
-이 항목에서는 <xref:System.Runtime.Serialization.DataContractSerializer>를 사용하여 serialize하고 deserialize하는 예제를 보여 줍니다.  
+# <a name="how-to-serialize-using-datacontractserializer-c"></a>DataContractSerializer를 사용하여 직렬화하는 방법(C#)
+이 항목에서는 <xref:System.Runtime.Serialization.DataContractSerializer>를 사용하여 직렬화하고 역직렬화하는 예제를 보여 줍니다.  
   
-## <a name="example"></a>예  
- 다음 예제에서는 <xref:System.Xml.Linq.XElement> 개체가 포함된 많은 개체를 만든 다음 텍스트 파일로 개체를 serialize하고 텍스트 파일에서 개체를 deserialize합니다.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 <xref:System.Xml.Linq.XElement> 개체가 포함된 많은 개체를 만든 다음 텍스트 파일로 개체를 직렬화하고 텍스트 파일에서 개체를 역직렬화합니다.  
   
 ```csharp  
 using System;  

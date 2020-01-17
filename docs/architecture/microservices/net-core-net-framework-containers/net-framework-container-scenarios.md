@@ -2,12 +2,12 @@
 title: Docker 컨테이너에 대해 .NET Framework를 선택하는 경우
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | Docker 컨테이너에 대해 .NET Framework를 선택하는 경우
 ms.date: 01/07/2019
-ms.openlocfilehash: 9e5b18e8e3482eb86c0d9dea5de56fb12f9d6256
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: e60572f33bda93663080b9d2e3504f0987b8483e
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73966888"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75899710"
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>Docker 컨테이너에 대해 .NET Framework를 선택하는 경우
 
@@ -39,7 +39,7 @@ ms.locfileid: "73966888"
 
 - 워크플로 관련 서비스. Windows WF(Workflow Foundation), 워크플로 서비스(단일 서비스의 WCF + WF) 및 WCF Data Services(이전의 ADO.NET Data Services)는 .NET Framework에서만 사용할 수 있습니다. 현재 .NET Core로 가져올 계획은 없습니다.
 
-공식 [.NET Core 로드맵](https://github.com/aspnet/Home/wiki/Roadmap)에 나열된 기술 외에도 다른 기능이 .NET Core에 이식될 수도 있습니다. 전체 목록은 CoreFX GitHub 사이트에서 [port-to-core](https://github.com/dotnet/corefx/issues?q=is%3Aopen+is%3Aissue+label%3Aport-to-core) 태그로 지정된 항목을 살펴보세요. 이 목록은 이러한 구성 요소를 .NET Core로 가져오는 Microsoft의 약속을 나타내지는 않으며, 항목은 단순히 커뮤니티의 요청만 캡처합니다. 위에 나열된 구성 요소 중 하나에 관심이 있는 경우 자신의 의견에 대해 답변을 받을 수 있도록 GitHub의 토론에 참여해 보세요. 누락된 내용이 있다고 생각이 들면 [CoreFX 리포지토리에 새로운 문제를 등록](https://github.com/dotnet/corefx/issues/new)하세요.
+공식 [.NET Core 로드맵](https://github.com/dotnet/aspnetcore/wiki/Roadmap)에 나열된 기술 외에도 다른 기능이 .NET Core에 이식될 수도 있습니다. 전체 목록은 CoreFX GitHub 사이트에서 [port-to-core](https://github.com/dotnet/corefx/issues?q=is%3Aopen+is%3Aissue+label%3Aport-to-core) 태그로 지정된 항목을 살펴보세요. 이 목록은 이러한 구성 요소를 .NET Core로 가져오는 Microsoft의 약속을 나타내지는 않으며, 항목은 단순히 커뮤니티의 요청만 캡처합니다. 위에 나열된 구성 요소 중 하나에 관심이 있는 경우 자신의 의견에 대해 답변을 받을 수 있도록 GitHub의 토론에 참여해 보세요. 누락된 내용이 있다고 생각이 들면 [런타임 리포지토리에 새로운 문제를 등록](https://github.com/dotnet/runtime/issues/new)하세요.
 
 .NET Core 3(이 쓰기가 진행 중일 때)가 기존 .NET Framework API에 대한 지원을 포함하더라도, 이는 데스크톱 지향이므로 현재 컨테이너에서 사용하고 있지 않습니다.
 

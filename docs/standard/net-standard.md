@@ -7,16 +7,16 @@ ms.date: 09/23/2019
 ms.technology: dotnet-standard
 ms.custom: updateeachrelease
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: 4fa0153cfa9dd52f4d80301d228dde3f16225bfd
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 6a4406775056b76dfa789911b8bb14e84dbc8eea
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582030"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75738658"
 ---
 # <a name="net-standard"></a>.NET Standard
 
-[.NET Standard](https://github.com/dotnet/standard)는 모든 .NET 구현체에서 사용할 수 있는 .NET API의 공식 규격입니다. .NET Standard는 .NET 생태계의 통일성을 높이기 위한 것입니다. [ECMA 335](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md)에서는 .NET 구현체의 동작에 관한 통일성을 계속 설정하지만 .NET 라이브러리 구현을 위해 .NET BCL(기본 클래스 라이브러리)에 대한 유사한 사양은 없습니다.
+[.NET Standard](https://github.com/dotnet/standard)는 모든 .NET 구현체에서 사용할 수 있는 .NET API의 공식 규격입니다. .NET Standard는 .NET 에코시스템의 통일성을 높이기 위한 것입니다. [ECMA 335](https://github.com/dotnet/runtime/blob/master/docs/project/dotnet-standards.md)에서는 .NET 구현체의 동작에 관한 통일성을 계속 설정하지만 .NET 라이브러리 구현을 위해 .NET BCL(기본 클래스 라이브러리)에 대한 유사한 사양은 없습니다.
 
 .NET Standard를 통해 다음과 같은 주요 시나리오를 사용할 수 있습니다.
 
@@ -161,7 +161,7 @@ Visual Studio에서 .NET Standard 라이브러리를 빌드하기 위해 Windows
 | Profile157  | 1.0           | Windows 8.1, Windows Phone 8.1, Windows Phone Silverlight 8.1
 | Profile259  | 1.0           | .NET Framework 4.5, Windows 8, Windows Phone 8.1, Windows Phone Silverlight 8
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [.NET Standard Versions](https://github.com/dotnet/standard/blob/master/docs/versions.md)(.NET 표준 버전)
 - [.NET Standard 라이브러리 빌드](../core/tutorials/library-with-visual-studio.md)

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: acef6d7177ee5ad7e18dc8ba1e383d6f76263623
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: f202b39f1a45f740625827be25e72df0e403d605
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394448"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901968"
 ---
 ### <a name="signalr-javascript-client-package-name-changed"></a>SignalR: JavaScript 클라이언트 패키지 이름이 변경됨
 
@@ -12,7 +12,7 @@ ASP.NET Core 3.0 Preview 7에서 SignalR JavaScript 클라이언트 패키지 �
 
 이 변경에 대응하려면 *package.json* 파일, `require` 문 및 ECMAScript `import` 문에서 참조를 변경합니다. 이 이름 바꾸기의 일부로 API가 변경되지 않습니다.
 
-자세한 내용은 [aspnet/AspNetCore#11637](https://github.com/aspnet/AspNetCore/issues/11637)을 참조하세요.
+토론은 [dotnet/aspnetcore#11637](https://github.com/dotnet/aspnetcore/issues/11637)을 참조하세요.
 
 #### <a name="version-introduced"></a>도입된 버전
 
@@ -30,7 +30,7 @@ ASP.NET Core 3.0 Preview 7에서 SignalR JavaScript 클라이언트 패키지 �
 
 이름 변경은 Azure SignalR Service 덕분에 SignalR은 ASP.NET Core 앱 이외에도 유용합니다.
 
-#### <a name="recommended-action"></a>권장 작업
+#### <a name="recommended-action"></a>권장 조치
 
 새 패키지 `@microsoft/signalr`로 전환합니다.
 

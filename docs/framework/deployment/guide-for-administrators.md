@@ -5,21 +5,19 @@ helpviewer_keywords:
 - administrator's guide, deploying .NET Framework
 - deployment [.NET Framework], administrator's guide
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: dc842713a16df8e5ada5ad6c71ca19f91ecbc405
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: be15ce0b0bed37da6fe400e98bfdd118c48f7ba0
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975562"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716531"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>관리자를 위한 .NET Framework 배포 가이드
 
-이 단계별 문서에서는 시스템 관리자가 Microsoft System Center Configuration Manager를 사용하여 .NET Framework 4.5 및 해당 시스템 종속성을 네트워크 전체에 배포할 수 있는 방법에 대해 설명합니다. 이 문서에서는 .NET Framework 4의 최소 요구 사항이 모든 대상 클라이언트 컴퓨터에서 충족되는 것으로 가정합니다. .NET Framework 4.5 설치를 위한 소프트웨어와 하드웨어 요구 사항 목록은 [시스템 요구 사항](../get-started/system-requirements.md)을 참조하세요.
+이 단계별 문서에서는 시스템 관리자가 Microsoft Endpoint Configuration Manager를 사용하여 .NET Framework 4.5 및 해당 시스템 종속성을 네트워크 전체에 배포할 수 있는 방법에 대해 설명합니다. 이 문서에서는 .NET Framework 4의 최소 요구 사항이 모든 대상 클라이언트 컴퓨터에서 충족되는 것으로 가정합니다. .NET Framework 4.5 설치를 위한 소프트웨어와 하드웨어 요구 사항 목록은 [시스템 요구 사항](../get-started/system-requirements.md)을 참조하세요.
 
 > [!NOTE]
-> .NET Framework 4.5, System Center Configuration Manager 및 Active Directory를 비롯하여 이 문서에서 언급된 소프트웨어에는 각각 사용권 계약 내용이 적용됩니다. 이 지침에서는 적절한 소프트웨어 라이선스로 이러한 사용권 계약 내용을 검토하고 이에 동의했다고 가정합니다. 이 지침에서는 이러한 사용권 계약의 어떠한 내용도 배제하지 않습니다.
+> .NET Framework 4.5, Configuration Manager 및 Active Directory를 비롯하여 이 문서에서 언급된 소프트웨어에는 각각 사용권 계약 내용이 적용됩니다. 이 지침에서는 적절한 소프트웨어 라이선스로 이러한 사용권 계약 내용을 검토하고 이에 동의했다고 가정합니다. 이 지침에서는 이러한 사용권 계약의 어떠한 내용도 배제하지 않습니다.
 >
 > .NET Framework 지원의 자세한 내용은 Microsoft 지원 웹 사이트에서 [.NET Framework 공식 지원 정책](https://dotnet.microsoft.com/platform/support/policy/dotnet-framework)을 참조하세요.
 
@@ -38,13 +36,13 @@ ms.locfileid: "73975562"
 
 ## <a name="the-deployment-process"></a>배포 프로세스
 
-지원 인프라가 갖춰진 경우 System Center 2012 Configuration Manager를 사용하여 .NET Framework 재배포 가능 패키지를 네트워크 상의 컴퓨터에 배포합니다. 인프라 구축에는 컬렉션, 소프트웨어에 대한 패키지와 프로그램, 배포 지점, 배포의 5가지 주요 영역을 만들고 정의하는 작업이 포함됩니다.
+지원 인프라가 갖춰진 경우 Configuration Manager를 사용하여 .NET Framework 재배포 가능 패키지를 네트워크 상의 컴퓨터에 배포합니다. 인프라 구축에는 컬렉션, 소프트웨어에 대한 패키지와 프로그램, 배포 지점, 배포의 5가지 주요 영역을 만들고 정의하는 작업이 포함됩니다.
 
-- **컬렉션**은 .NET Framework가 배포되는 대상인 사용자, 사용자 그룹 또는 컴퓨터와 같은 Configuration Manager 리소스 그룹입니다. 자세한 내용은 Configuration Manager 문서 라이브러리에서 [System Center Configuration Manager의 컬렉션 소개](https://docs.microsoft.com/sccm/core/clients/manage/collections/introduction-to-collections)를 참조하세요.
+- **컬렉션**은 .NET Framework가 배포되는 대상인 사용자, 사용자 그룹 또는 컴퓨터와 같은 Configuration Manager 리소스 그룹입니다. 자세한 내용은 Configuration Manager 문서 라이브러리에서 [Configuration Manager의 컬렉션 소개](https://docs.microsoft.com/configmgr/core/clients/manage/collections/introduction-to-collections)를 참조하세요.
 
-- **패키지 및 프로그램**은 보통 클라이언트 컴퓨터에 설치할 소프트웨어 애플리케이션을 나타내지만, 개별 파일, 업데이트 또는 개별 명령까지도 들어 있을 수 있습니다. 자세한 내용은 Configuration Manager 문서 라이브러리에서 [System Center Configuration Manager의 패키지와 프로그램](https://docs.microsoft.com/sccm/apps/deploy-use/packages-and-programs)을 참조하세요.
+- **패키지 및 프로그램**은 보통 클라이언트 컴퓨터에 설치할 소프트웨어 애플리케이션을 나타내지만, 개별 파일, 업데이트 또는 개별 명령까지도 들어 있을 수 있습니다. 자세한 내용은 Configuration Manager 문서 라이브러리에서 [Configuration Manager의 패키지와 프로그램](https://docs.microsoft.com/configmgr/apps/deploy-use/packages-and-programs)을 참조하세요.
 
-- **배포 지점**은 클라이언트 컴퓨터에서 실행할 소프트웨어에 필요한 파일을 저장하는 Configuration Manager 사이트 시스템 역할입니다. Configuration Manager 클라이언트가 소프트웨어 배포를 수신하고 처리할 때, 이 클라이언트는 배포 지점에 연결하여 소프트웨어와 연결된 콘텐츠를 다운로드하고 설치 프로세스를 시작합니다. 자세한 내용은 Configuration Manager 문서 라이브러리에서 [Configuration Manager의 콘텐츠 관리 기초 개념](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management)을 참조하세요.
+- **배포 지점**은 클라이언트 컴퓨터에서 실행할 소프트웨어에 필요한 파일을 저장하는 Configuration Manager 사이트 시스템 역할입니다. Configuration Manager 클라이언트가 소프트웨어 배포를 수신하고 처리할 때, 이 클라이언트는 배포 지점에 연결하여 소프트웨어와 연결된 콘텐츠를 다운로드하고 설치 프로세스를 시작합니다. 자세한 내용은 Configuration Manager 문서 라이브러리에서 [Configuration Manager의 콘텐츠 관리 기초 개념](https://docs.microsoft.com/configmgr/core/plan-design/hierarchy/fundamental-concepts-for-content-management)을 참조하세요.
 
 - **배포**에서는 지정된 대상 컬렉션의 적절한 멤버에게 소프트웨어 패키지를 설치하라고 지시합니다.
 
@@ -55,7 +53,7 @@ ms.locfileid: "73975562"
 
 ## <a name="deploying-the-net-framework"></a>.NET Framework 배포
 
-System Center 2012 Configuration Manager를 사용하여 .NET Framework 4.5의 자동 설치를 배포할 수 있고, 이 경우 사용자는 설치 프로세스와 상호 작용할 필요가 없습니다. 아래 단계를 수행합니다.
+Configuration Manager를 사용하여 .NET Framework 4.5의 자동 설치를 배포할 수 있고, 이 경우 사용자는 설치 프로세스와 상호 작용할 필요가 없습니다. 아래 단계를 수행합니다.
 
 1. [컬렉션을 만듭니다](#creating_a_collection).
 
@@ -69,7 +67,7 @@ System Center 2012 Configuration Manager를 사용하여 .NET Framework 4.5의 �
 
 ### <a name="create-a-collection"></a>컬렉션 만들기
 
-이 단계에서는 패키지와 프로그램을 배포할 컴퓨터를 선택하고 이런 컴퓨터를 디바이스 컬렉션으로 그룹화합니다. Configuration Manager에서 컬렉션을 만들려면 직접 멤버 자격 규칙(컬렉션 멤버를 수동으로 지정함) 또는 쿼리 규칙(사용자가 지정하는 기준을 바탕으로 Configuration Manager가 컬렉션 멤버를 결정함)을 사용할 수 있습니다. 쿼리와 직접 규칙을 포함한 멤버 자격 규칙에 대한 자세한 내용은 Configuration Manager 문서 라이브러리에서 [System Center Configuration Manager의 컬렉션 소개](https://docs.microsoft.com/sccm/core/clients/manage/collections/introduction-to-collections)를 참조하세요.
+이 단계에서는 패키지와 프로그램을 배포할 컴퓨터를 선택하고 이런 컴퓨터를 디바이스 컬렉션으로 그룹화합니다. Configuration Manager에서 컬렉션을 만들려면 직접 멤버 자격 규칙(컬렉션 멤버를 수동으로 지정함) 또는 쿼리 규칙(사용자가 지정하는 기준을 바탕으로 Configuration Manager가 컬렉션 멤버를 결정함)을 사용할 수 있습니다. 쿼리와 직접 규칙을 포함한 멤버 자격 규칙에 대한 자세한 내용은 Configuration Manager 문서 라이브러리에서 [Configuration Manager의 컬렉션 소개](https://docs.microsoft.com/configmgr/core/clients/manage/collections/introduction-to-collections)를 참조하세요.
 
 컬렉션을 만들려면
 
@@ -163,7 +161,7 @@ System Center 2012 Configuration Manager를 사용하여 .NET Framework 4.5의 �
 
 8. 마법사를 완료합니다.
 
-이제 패키지에는 .NET Framework 4.5를 자동으로 배포하는 데 필요한 모든 정보가 포함됩니다. 패키지와 프로그램을 배포하기 전에 배포 지점에 .NET Framework 4.5가 설치되었는지 확인합니다. Configuration Manager 문서 라이브러리에서 [System Center Configuration Manager에서 배포한 콘텐츠 모니터링](https://docs.microsoft.com/sccm/core/servers/deploy/configure/monitor-content-you-have-distributed)의 “콘텐츠 모니터링” 섹션을 참조하세요.
+이제 패키지에는 .NET Framework 4.5를 자동으로 배포하는 데 필요한 모든 정보가 포함됩니다. 패키지와 프로그램을 배포하기 전에 배포 지점에 .NET Framework 4.5가 설치되었는지 확인합니다. Configuration Manager 문서 라이브러리에서 [Configuration Manager에서 배포한 콘텐츠 모니터링](https://docs.microsoft.com/configmgr/core/servers/deploy/configure/monitor-content-you-have-distributed)의 "콘텐츠 상태 모니터링" 섹션을 참조하세요.
 
 <a name="deploying_package"></a>
 
@@ -278,7 +276,7 @@ System Center 2012 Configuration Manager를 사용하여 .NET Framework 4.5의 �
 
 - [Windows 업데이트 에이전트 결과 코드](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc720442(v=ws.10))
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [개발자를 위한 배포 가이드](deployment-guide-for-developers.md)
 - [시스템 요구 사항](../get-started/system-requirements.md)

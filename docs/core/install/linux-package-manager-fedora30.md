@@ -4,12 +4,12 @@ description: 패키지 관리자를 사용하여 Fedora 30에 .NET Core SDK 및 
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: 7996cd74a250370c2212ca1977cb8c44ad0bd078
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: bd7a199f551be0c51032510279ee9da74bcf0c7c
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74998926"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740699"
 ---
 # <a name="fedora-30-package-manager---install-net-core"></a>Fedora 30 패키지 관리자 - .NET Core 설치
 
@@ -21,9 +21,9 @@ ms.locfileid: "74998926"
 
 .NET을 설치하기 전에 먼저 다음을 수행해야 합니다.
 
-- Microsoft 키 등록
-- 제품 리포지토리 등록
-- 필수 종속성 설치
+- Microsoft 키를 등록합니다.
+- 제품 리포지토리를 등록합니다.
+- 필수 종속성을 설치합니다.
 
 이 작업은 머신당 한 번만 수행하면 됩니다.
 

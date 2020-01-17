@@ -3,12 +3,12 @@ title: Visual Studio에서 Roslyn 구문 시각화 도우미를 사용하여 코
 description: 구문 시각화 도우미는 .NET Compiler Platform SDK에서 코드용으로 생성하는 모델을 탐색할 수 있는 시각적 도구를 제공합니다.
 ms.date: 03/07/2018
 ms.custom: mvc, vs-dotnet
-ms.openlocfilehash: fa3b4fdbb8d573805119e13e8aa93f156c4111f9
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: c4b4414dabcb6c9749a23d726e4a69334376d988
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972010"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346970"
 ---
 # <a name="explore-code-with-the-roslyn-syntax-visualizer-in-visual-studio"></a>Visual Studio에서 Roslyn 구문 시각화 도우미를 사용하여 코드 탐색
 
@@ -20,7 +20,7 @@ ms.locfileid: "70972010"
 
 ## <a name="syntax-visualizer"></a>구문 시각화 도우미
 
-**구문 시각화 도우미**를 사용하면 Visual Studio IDE 내의 현재 활성 편집기 창에서 C# 또는 VB 코드 파일에 대한 구문 트리를 검사할 수 있습니다. 시각화 도우미는 **보기** > **다른 창** > **구문 시각화 도우미**를 클릭하여 시작할 수 있습니다.  오른쪽 위 모서리에 있는 **빠른 실행** 도구 모음을 사용할 수도 있습니다. "구문"을 입력하면 **구문 시각화 도우미**를 여는 명령이 나타납니다.
+**Syntax Visualizer**를 사용하면 Visual Studio IDE 내의 현재 활성 편집기 창에서 C# 또는 Visual Basic 코드 파일에 대한 구문 트리를 검사할 수 있습니다. 시각화 도우미는 **보기** > **다른 창** > **구문 시각화 도우미**를 클릭하여 시작할 수 있습니다.  오른쪽 위 모서리에 있는 **빠른 실행** 도구 모음을 사용할 수도 있습니다. "구문"을 입력하면 **구문 시각화 도우미**를 여는 명령이 나타납니다.
 
 이 명령은 구문 시각화 도우미를 부동 도구 창으로 엽니다. 코드 편집기 창이 열려 있지 않은 경우 다음 그림과 같이 디스플레이가 비어 있습니다. 
 
@@ -28,14 +28,15 @@ ms.locfileid: "70972010"
 
 이 도구 창을 Visual Studio 내에서 왼쪽과 같이 편리한 위치에 고정합니다. 시각화 도우미에서는 현재 코드 파일에 대한 정보를 표시합니다.
 
-**파일** > **새 프로젝트** 명령을 사용하여 새 프로젝트를 만듭니다. VB 또는 C# 프로젝트를 만들 수 있습니다. Visual Studio에서 이 프로젝트의 주 코드 파일을 열면 시각화 도우미는 구문 트리를 표시합니다. Visual Studio 인스턴스에서 기존 C#/VB 파일을 열 수 있으며 시각화 도우미는 해당 파일의 구문 트리를 표시합니다. Visual Studio 내에서 여러 코드 파일을 열면 시각화 도우미는 현재 활성 코드 파일(키보드 포커스가 있는 코드 파일)에 대한 구문 트리를 표시합니다.
+**파일** > **새 프로젝트** 명령을 사용하여 새 프로젝트를 만듭니다. Visual Basic 또는 C# 프로젝트를 만들 수 있습니다. Visual Studio에서 이 프로젝트의 주 코드 파일을 열면 시각화 도우미는 구문 트리를 표시합니다. Visual Studio 인스턴스에서 기존 C#/Visual Basic 파일을 열 수 있으며 시각화 도우미는 해당 파일의 구문 트리를 표시합니다. Visual Studio 내에서 여러 코드 파일을 열면 시각화 도우미는 현재 활성 코드 파일(키보드 포커스가 있는 코드 파일)에 대한 구문 트리를 표시합니다.
 
 <!-- markdownlint-disable MD025 -->
 
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
 ![C# 구문 트리 시각화](media/syntax-visualizer/visualize-csharp.png)
+
 # <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
-![VB 구문 트리 시각화](media/syntax-visualizer/visualize-visual-basic.png)
+![Visual Basic 구문 트리 시각화](media/syntax-visualizer/visualize-visual-basic.png)
 
 ---
 
@@ -48,7 +49,7 @@ ms.locfileid: "70972010"
 트리를 탐색하는 방법은 두 가지가 있습니다.
 
 * 트리에서 항목을 확장하거나 클릭합니다. 시각화 도우미는 코드 편집기에서 이 항목의 범위에 해당하는 텍스트를 자동으로 선택합니다.
-* 코드 편집기에서 텍스트를 클릭하거나 선택합니다. 앞의 VB 예제에서 코드 편집기에 "모듈 Module1"이 포함된 줄을 선택하면 시각화 도우미가 트리의 해당 ModuleStatement 노드로 자동 이동합니다. 
+* 코드 편집기에서 텍스트를 클릭하거나 선택합니다. 앞의 Visual Basic 예제에서 코드 편집기에 "모듈 Module1"이 포함된 줄을 선택하면 시각화 도우미가 트리의 해당 ModuleStatement 노드로 자동 이동합니다. 
 
 시각화 도우미는 트리에서 편집기의 선택된 텍스트 범위와 가장 일치하는 항목을 강조 표시합니다.
 
@@ -65,11 +66,12 @@ ms.locfileid: "70972010"
 시각화 도우미는 선택한 항목을 루트로 하는 하위 트리의 그래픽 표현을 표시합니다. C# 예제에서 `Main()`메서드에 해당하는 **MethodDeclaration** 노드에 대해 이 단계를 시도합니다. 시각화 도우미는 다음과 같이 보이는 구문 그래프를 표시합니다.
 
 ![C# 구문 그래프 보기](media/syntax-visualizer/csharp-syntax-graph.png)
+
 # <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
 
-위의 VB 예제에서 `Main()` 메서드에 해당하는 **SubBlock** 노드에 대해 동일하게 시도합니다. 시각화 도우미는 다음과 같이 보이는 구문 그래프를 표시합니다.
+위의 Visual Basic 예제에서 `Main()` 메서드에 해당하는 **SubBlock** 노드에 대해 동일하게 시도합니다. 시각화 도우미는 다음과 같이 보이는 구문 그래프를 표시합니다.
 
-![VB 구문 그래프 보기](media/syntax-visualizer/visual-basic-syntax-graph.png)
+![Visual Basic 구문 그래프 보기](media/syntax-visualizer/visual-basic-syntax-graph.png)
 
 ---
 
@@ -103,9 +105,9 @@ ms.locfileid: "70972010"
 
 ![상수 값](media/syntax-visualizer/constant-value.png)
 
-앞의 예제는 VB에서 복제될 수도 있습니다. VB 파일에 `Dim x As Double = 1 + 1`을 입력합니다. 코드 편집기 창에서 식 `1 + 1`을 선택합니다. 시각화 도우미는 시각화 도우미의 해당 **AddExpression** 노드를 강조 표시합니다. 이 **AddExpression**에 대해 앞의 단계를 반복하면 동일한 결과가 나타납니다.
+앞의 예제는 Visual Basic에서도 복제될 수 있습니다. Visual Basic 파일에 `Dim x As Double = 1 + 1`을 입력합니다. 코드 편집기 창에서 식 `1 + 1`을 선택합니다. 시각화 도우미는 시각화 도우미의 해당 **AddExpression** 노드를 강조 표시합니다. 이 **AddExpression**에 대해 앞의 단계를 반복하면 동일한 결과가 나타납니다.
 
-VB에서 더 많은 코드를 검사합니다. 주 VB 파일을 다음 코드로 업데이트합니다.
+Visual Basic에서 더 많은 코드를 검사합니다. 주 Visual Basic 파일을 다음 코드로 업데이트합니다.
 
 ```vb
 Imports C = System.Console
@@ -129,7 +131,7 @@ End Module
 
 ![메서드 선언의 기호 보기](media/syntax-visualizer/method-symbol.png)
 
-위의 VB 예제는 C#에서 쉽게 복제할 수 있습니다. 별칭에 대해 `Imports C = System.Console` 대신 `using C = System.Console;`을 입력합니다. C#의 앞 단계는 시각화 도우미 창에서 동일한 결과를 생성합니다.
+위의 Visual Basic 예제는 C#에서 쉽게 복제할 수 있습니다. 별칭에 대해 `Imports C = System.Console` 대신 `using C = System.Console;`을 입력합니다. C#의 앞 단계는 시각화 도우미 창에서 동일한 결과를 생성합니다.
 
 의미 체계 검사 작업은 노드에서만 사용할 수 있습니다. 토큰 또는 퀴즈에는 사용할 수 없습니다. 모든 노드에 검사할 흥미있는 의미 체계 정보가 있는 것은 아닙니다. 노드에 흥미로운 의미 체계 정보가 없을 경우 **\* 기호 보기(있는 경우)** 를 클릭하면 빈 속성 그리드가 표시됩니다.
 

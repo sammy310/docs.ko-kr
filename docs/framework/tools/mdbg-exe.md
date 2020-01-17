@@ -5,14 +5,12 @@ helpviewer_keywords:
 - command-line debugger [.NET Framework]
 - MDbg.exe
 ms.assetid: 28a3f509-07e2-4dbe-81df-874c5e969cc4
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e2b8f96e9a042681642225ad4e644c6fd1f001cb
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 58502626fed6c9cee52acb673ae34f6024f78b9b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044427"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715757"
 ---
 # <a name="mdbgexe-net-framework-command-line-debugger"></a>MDbg.exe(.NET Framework 명령줄 디버거)
 도구 공급업체와 애플리케이션 개발자는 .NET Framework 명령줄 디버거를 사용하여 .NET Framework 공용 언어 런타임을 대상으로 하는 프로그램에서 버그를 찾고 수정할 수 있습니다. 이 도구에는 디버깅 서비스를 제공하기 위해 런타임 디버깅 API가 사용됩니다. MDbg.exe를 사용하여 관리 코드만 디버깅할 수 있습니다. 관리되지 않는 코드의 디버깅은 지원하지 않습니다.  
@@ -49,7 +47,7 @@ MDbg [ProgramName[arguments]] [options]
 |**echo**|콘솔에 메시지를 표시합니다.|  
 |**enableNotif**[**ication**] *typeName* 0&#124;1|지정한 형식에 대해 (1) 사용자 지정 알림을 사용하도록 설정하거나 (0) 사용자 지정 알림을 사용하지 않도록 설정합니다.|  
 |**ex**[**it**] [*exitcode*]|MDbg.exe 셸을 종료하고 프로세스 종료 코드를 선택적으로 지정합니다.|  
-|**fo**[**reach**] [*OtherCommand*]|모든 스레드에서 명령을 수행합니다. *OtherCommand*는 한 스레드에서 작동하는 유효한 명령이고, **foreach** *OtherCommand*는 모든 스레드에서 같은 명령을 수행합니다.|  
+|**fo**[**reach**] [*OtherCommand*]|모든 스레드에서 명령을 수행합니다. *OtherCommand*는 한 스레드에서 작동하는 유효한 명령이며, **foreach** *OtherCommand*는 모든 스레드에서 같은 명령을 수행합니다.|  
 |**f**[**unceval**] [`-ad` *Num*] *functionName* [*args ...* ]|실행할 함수가 *functionName*인 현재 활성 스레드에서 함수 실행을 수행합니다. 함수 이름은 네임스페이스를 포함하는 정규화된 이름이어야 합니다.<br /><br /> `-ad` 옵션은 함수 확인에 사용할 애플리케이션 도메인을 지정합니다. `-ad` 옵션을 지정하지 않으면 확인에 사용되는 애플리케이션 도메인이 기본적으로 함수 실행에 사용된 스레드가 있는 애플리케이션으로 지정됩니다.<br /><br /> 실행 중인 함수가 정적 함수가 아닌 경우 전달된 첫 번째 매개 변수는 `this` 포인터여야 합니다. 모든 애플리케이션 도메인에서 함수 실행에 대한 인수가 검색됩니다.<br /><br /> 애플리케이션 도메인에서 값을 요청하려면 변수에 접두사를 모듈과 애플리케이션 도메인 이름으로 붙입니다(예: `funceval -ad 0 System.Object.ToString hello.exe#0!MyClass.g_rootRef`). 이 명령은 애플리케이션 도메인 `System.Object.ToString`에서 `0` 함수를 실행합니다. `ToString` 메서드는 인스턴스 함수이므로 첫 번째 매개 변수는 `this` 포인터여야 합니다.|  
 |**g**[**o**]|중단점을 만나거나 프로그램이 종료되거나 이벤트(예: 처리되지 않은 예외)가 프로그램을 중단시킬 때까지 프로그램이 계속되도록 합니다.|  
 |**h**[**elp**] [*command*]<br /><br /> 또는<br /><br /> **?** [*command*]|모든 명령에 대한 설명이나 지정한 명령에 대한 자세한 설명을 표시합니다.|  
@@ -104,7 +102,7 @@ mdbg>
   
  디버거에서는 이전 섹션에 설명된 명령과 인수를 사용하십시오.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [도구](index.md)
 - [명령 프롬프트](developer-command-prompt-for-vs.md)

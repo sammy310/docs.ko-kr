@@ -15,13 +15,12 @@ helpviewer_keywords:
 - constructs, alternation
 - .NET Framework regular expressions, alternation constructs
 ms.assetid: 071e22e9-fbb0-4ecf-add1-8d2424f9f2d1
-ms.custom: seodec18
-ms.openlocfilehash: 352cfd65cd4620d8274ff0a14ea507cd49522470
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8db9ef72415f148aca2c975fc4e8b70421e3adc3
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140560"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711560"
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a>정규식의 교체 구문
 
@@ -43,7 +42,7 @@ ms.locfileid: "73140560"
 
 `|` 문자를 사용하는 정규식인 `\bgr(a|e)y\b`는 다음 테이블과 같이 해석됩니다.
 
-|패턴|설명|  
+|무늬|설명|  
 |-------------|-----------------|  
 |`\b`|단어 경계를 시작합니다.|  
 |`gr`|문자 "gr"을 찾습니다.|  
@@ -57,7 +56,7 @@ ms.locfileid: "73140560"
 
 정규식 `\b(\d{2}-\d{7}|\d{3}-\d{2}-\d{4})\b`는 다음 테이블과 같이 해석됩니다.
   
-|패턴|설명|  
+|무늬|설명|  
 |-------------|-----------------|  
 |`\b`|단어 경계를 시작합니다.|  
 |<code>(\d{2}-\d{7}&#124;\d{3}-\d{2}-\d{4})</code>|10진수 2개, 하이픈, 10진수 7개 순의 일치 항목이나 10진수 3개, 하이픈, 10진수 2개, 또 다른 하이픈, 10진수 4개 순의 일치 항목을 찾습니다.|  
@@ -72,7 +71,7 @@ ms.locfileid: "73140560"
 
 여기서 *expression* 은 일치 항목을 찾을 초기 패턴이고, *yes* 는 *expression* 과 일치할 경우 일치 항목을 찾을 패턴이고, *no* 는 *expression* 이 일치하지 않을 경우 일치 항목을 찾을 선택적 패턴입니다. 정규식 엔진은 *expression* 을 너비가 0인 어설션으로 처리합니다. 즉, 정규식 엔진은 *expression*을 계산한 후 입력 스트림에서 앞으로 이동하지 않습니다. 따라서 이 구문은 다음 구문과 같습니다.
 
-`(?(?=` *식* `)` *예* `|` *no* `)`
+`(?(?=` *expression* `)` *yes* `|` *no* `)`
 
 여기서 `(?=`*expression*`)`은 너비가 0인 어설션 구문입니다. 자세한 내용은 [그룹화 구문](grouping-constructs-in-regular-expressions.md)을 참조하세요. 정규식 엔진이 *expression*을 앵커(너비가 0인 어설션)로 해석하기 때문에 *expression*은 너비가 0인 어설션(자세한 내용은 [앵커](anchors-in-regular-expressions.md) 참조) 또는 *yes*에도 포함되는 하위 식이어야 합니다. 그러지 않으면, *yes* 패턴을 찾을 수 없습니다.  
   
@@ -86,7 +85,7 @@ ms.locfileid: "73140560"
 
 정규식 패턴 `\b(?(\d{2}-)\d{2}-\d{7}|\d{3}-\d{2}-\d{4})\b`는 다음 테이블과 같이 해석됩니다.
 
-|패턴|설명|  
+|무늬|설명|  
 |-------------|-----------------|  
 |`\b`|단어 경계를 시작합니다.|  
 |`(?(\d{2}-)`|다음 문자 3개가 숫자 2개, 하이픈 순으로 구성되는지를 확인합니다.|  
@@ -99,11 +98,11 @@ ms.locfileid: "73140560"
 
 이 언어 요소는 지정된 캡처링 그룹에 일치시켰는지 여부에 따라 두 패턴 중 하나에 일치시키려고 시도합니다. 사용되는 구문은 다음과 같습니다.
 
-`(?(` *name* `)` *예* `|` *no* `)`
+`(?(` *name* `)` *yes* `|` *no* `)`
 
 또는
 
-`(?(` *number* `)` *예* `|` *no* `)`
+`(?(` *number* `)` *yes* `|` *no* `)`
 
 여기서 *name* 은 이름이고, *number* 는 캡처 그룹 수이고, *yes* 는 *name* 또는 *number* 에 일치 항목이 있을 경우 일치 항목을 찾을 식이고, *no* 는 일치 항목이 없을 경우 일치 항목을 찾을 선택적 식입니다.
 
@@ -116,7 +115,7 @@ ms.locfileid: "73140560"
 
 정규식 패턴 `\b(?<n2>\d{2}-)?(?(n2)\d{7}|\d{3}-\d{2}-\d{4})\b`는 다음 테이블과 같이 해석됩니다.
 
-|패턴|설명|  
+|무늬|설명|  
 |-------------|-----------------|  
 |`\b`|단어 경계를 시작합니다.|  
 |`(?<n2>\d{2}-)?`|숫자 2개, 하이픈 순의 일치 항목 0개 또는 1개를 찾습니다. 이 캡처링 그룹의 이름을 `n2`로 지정합니다.|  
@@ -130,6 +129,6 @@ ms.locfileid: "73140560"
 [!code-csharp[RegularExpressions.Language.Alternation#5](~/samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.alternation/cs/alternation5.cs#5)]
 [!code-vb[RegularExpressions.Language.Alternation#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.alternation/vb/alternation5.vb#5)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [정규식 언어 - 빠른 참조](regular-expression-language-quick-reference.md)

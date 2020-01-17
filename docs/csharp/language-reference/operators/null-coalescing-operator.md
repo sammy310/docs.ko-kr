@@ -1,6 +1,5 @@
 ---
 title: ?? 및 ??= 연산자 - C# 참조
-ms.custom: seodec18
 ms.date: 09/10/2019
 f1_keywords:
 - ??_CSharpKeyword
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - null-coalescing assignment [C#]
 - ??= operator [C#]
 ms.assetid: 088b1f0d-c1af-4fe1-b4b8-196fd5ea9132
-ms.openlocfilehash: 2bd6fe3d2d283e64eebc2251416fa5234e30bdad
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: b3d56c6c08443d344002b8e780a72fc547c316bb
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739664"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712652"
 ---
 # <a name="-and--operators-c-reference"></a>?? 및 ??= 연산자(C# 참조)
 
@@ -75,7 +74,7 @@ d ??= (e ??= f)
   }
   ```
 
-  다음 코드와 바꿉니다.
+  다음 코드로 바꿉니다.
 
   ```csharp
   variable ??= expression;
@@ -91,7 +90,7 @@ d ??= (e ??= f)
 
 `??=` 연산자에 대한 자세한 내용은 [기능 제안 노트](~/_csharplang/proposals/csharp-8.0/null-coalescing-assignment.md)를 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 참조](../index.md)
 - [C# 연산자](index.md)

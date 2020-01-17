@@ -1,15 +1,13 @@
 ---
 title: dotnet-dump - .NET Core
 description: dotnet-dump 명령줄 도구를 설치하고 사용합니다.
-author: sdmaclea
-ms.author: stmaclea
 ms.date: 10/14/2019
-ms.openlocfilehash: bb4f7827f898431c55603b070f5b7a23fe44cba5
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: dcd5dd42620010c1a9b6dffd3365fc1b777c0eeb
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73973451"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740777"
 ---
 # <a name="dump-collection-and-analysis-utility-dotnet-dump"></a>덤프 수집 및 분석 유틸리티(`dotnet-dump`)
 
@@ -160,7 +158,7 @@ dotnet-dump analyze <dump_path> [-h|--help] [-c|--command]
 
 ## <a name="using-dotnet-dump"></a>`dotnet-dump` 사용
 
-첫 번째 단계는 덤프를 수집하는 것입니다. 코어 덤프가 이미 생성된 경우 이 단계를 건너뛸 수 있습니다. 운영 체제 또는 .NET Core 런타임의 기본 제공 [dump 생성 기능](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/xplat-minidump-generation.md#configurationpolicy)은 각각 코어 덤프를 만들 수 있습니다.
+첫 번째 단계는 덤프를 수집하는 것입니다. 코어 덤프가 이미 생성된 경우 이 단계를 건너뛸 수 있습니다. 운영 체제 또는 .NET Core 런타임의 기본 제공 [dump 생성 기능](https://github.com/dotnet/runtime/blob/master/docs/design/coreclr/botr/xplat-minidump-generation.md)은 각각 코어 덤프를 만들 수 있습니다.
 
 ```console
 $ dotnet-dump collect --process-id 1902

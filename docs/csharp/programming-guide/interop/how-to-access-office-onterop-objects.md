@@ -1,6 +1,5 @@
 ---
-title: '방법: Visual C# 기능을 사용하여 Office Interop 개체에 액세스 - C# 프로그래밍 가이드'
-ms.custom: seodec18
+title: Office interop 개체에 액세스하는 방법 - C# 프로그래밍 가이드
 ms.date: 07/20/2015
 helpviewer_keywords:
 - optional parameters [C#], Office programming
@@ -10,16 +9,16 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
-ms.openlocfilehash: b6e45858b64ea1bf87ca0e73001a5cf07ddfd58b
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: b5d2da011ec6318c8b07f1eb4d383a4d56488239
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73417712"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75700837"
 ---
-# <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>방법: Visual C# 기능을 사용하여 Office Interop 개체에 액세스(C# 프로그래밍 가이드)
+# <a name="how-to-access-office-interop-objects-c-programming-guide"></a>Office interop 개체에 액세스하는 방법(C# 프로그래밍 가이드)
 
-Visual C#에는 Office API 개체에 간편하게 액세스할 수 있는 기능이 있습니다. 새로운 기능에는 명명된 인수와 선택적 인수, `dynamic`이라는 새 형식 그리고 인수를 값 매개 변수처럼 COM 메서드의 참조 매개 변수로 전달하는 기능이 포함됩니다.
+C#에는 Office API 개체에 간편하게 액세스할 수 있는 기능이 있습니다. 새로운 기능에는 명명된 인수와 선택적 인수, `dynamic`이라는 새 형식 그리고 인수를 값 매개 변수처럼 COM 메서드의 참조 매개 변수로 전달하는 기능이 포함됩니다.
 
 이 항목에서는 새 기능을 사용하여 Microsoft Office Excel 워크시트를 만들고 표시하는 코드를 작성합니다. 그런 다음 Excel 워크시트에 연결된 아이콘이 들어 있는 Office Word 문서를 추가하는 코드를 작성합니다.
 
@@ -167,16 +166,16 @@ Visual C#에는 Office API 개체에 간편하게 액세스할 수 있는 기능
 
      [!code-csharp[csProgGuideOfficeHowTo#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#17)]
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 다음 코드에서는 전체 예제를 보여 줍니다.
 
 [!code-csharp[csProgGuideOfficeHowTo#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/walkthrough.cs#18)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Type.Missing?displayProperty=nameWithType>
 - [dynamic](../../language-reference/builtin-types/reference-types.md)
 - [dynamic 형식 사용](../types/using-type-dynamic.md)
 - [명명된 인수 및 선택적 인수](../classes-and-structs/named-and-optional-arguments.md)
-- [방법: Office 프로그래밍에서 명명된 인수 및 선택적 인수 사용](../classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)
+- [Office 프로그래밍에 명명된 인수와 선택적 인수 사용 방법](../classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)

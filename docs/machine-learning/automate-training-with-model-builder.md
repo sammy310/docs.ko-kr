@@ -1,15 +1,14 @@
 ---
 title: 모델 작성기란 무엇이며 어떻게 작동하나요?
 description: ML.NET 모델 작성기를 사용하여 기계 학습 모델을 자동으로 학습하는 방법
-author: natke
-ms.date: 08/07/2019
+ms.date: 01/07/2020
 ms.custom: overview
-ms.openlocfilehash: 77fe56dba3532617ad9fb0c89bfaac7c8e031ce7
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: ac704b7961a8442a9174cdef5a4cd2a619236a4e
+ms.sourcegitcommit: cbdc0f4fd39172b5191a35200c33d5030774463c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73971520"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75777404"
 ---
 # <a name="what-is-model-builder-and-how-does-it-work"></a>모델 작성기란 무엇이며 어떻게 작동하나요?
 
@@ -35,18 +34,9 @@ ML.NET 모델 작성기는 사용자 지정 기계 학습 모델을 빌드, 학�
 - 은행 트랜잭션이 사기인지 여부를 검색
 - 고객 피드백 문제를 회사의 올바른 팀에 전달
 
-## <a name="choose-a-model-type"></a>모델 형식을 선택합니다.
+### <a name="which-machine-learning-scenario-is-right-for-me"></a>어떤 기계 학습 시나리오가 나에게 적합한가요?
 
-모델 작성기에서는 기계 학습 모델 형식을 선택해야 합니다. 모델 형식은 수행하려는 예측의 정렬에 따라 다릅니다.
-
-숫자를 예측하는 시나리오의 경우 기계 학습 모델 형식을 `regression`이라고 합니다.
-
-범주를 예측하는 시나리오의 경우 모델 형식은 `classification`입니다. 두 가지 형식의 분류가 있습니다.
-
-- 두 개의 범주만 있는 경우: `binary classification`.
-- 세 개 이상의 범주가 있는 경우: `multiclass classification`.
-
-### <a name="which-model-type-is-right-for-me"></a>내게 적합한 모델 형식은 무엇인가요?
+모델 작성기에서 시나리오를 선택해야 합니다. 시나리오 형식은 수행하려는 예측의 종류에 따라 다릅니다.
 
 #### <a name="predict-a-category-when-there-are-only-two-categories"></a>범주 예측(두 개의 범주만 있는 경우)
 
@@ -54,7 +44,7 @@ ML.NET 모델 작성기는 사용자 지정 기계 학습 모델을 빌드, 학�
 
 ![사기 탐지, 위험 완화 및 애플리케이션 심사를 포함한 이진 분류의 예를 보여 주는 다이어그램](media/binary-classification-examples.png)
 
-감정 분석은 고객 피드백에 대한 긍정 또는 부정 감정을 예측하는 데 사용될 수 있습니다. 이진 분류 모델 형식의 예입니다.
+감정 분석은 고객 피드백에 대한 긍정 또는 부정 감정을 예측하는 데 사용될 수 있습니다. 이진 분류 기계 학습 작업의 예입니다.
 
 시나리오에서 두 범주로 분류해야 하는 경우, 이 템플릿을 사용자 고유의 데이터 세트와 함께 사용할 수 있습니다.
 
@@ -64,7 +54,7 @@ ML.NET 모델 작성기는 사용자 지정 기계 학습 모델을 빌드, 학�
 
 ![문서 및 제품 분류, 지원 티켓 라우팅 및 고객 이슈 우선 순위 지정을 포함한 다중 클래스 분류의 예](media/multiclass-classification-examples.png)
 
-문제 분류는 문제 제목 및 설명을 사용하여 고객 피드백(예: GitHub) 문제를 분류하는 데 사용될 수 있습니다. 다중 클래스 분류 모델 형식의 예입니다.
+문제 분류는 문제 제목 및 설명을 사용하여 고객 피드백(예: GitHub) 문제를 분류하는 데 사용될 수 있습니다. 다중 클래스 분류 기계 학습 작업의 예입니다.
 
 데이터를 세 가지 이상의 범주로 분류하려는 경우 시나리오에 대한 문제 분류 템플릿을 사용할 수 있습니다.
 
@@ -74,19 +64,33 @@ ML.NET 모델 작성기는 사용자 지정 기계 학습 모델을 빌드, 학�
 
 ![가격 예측, 매출 예측 및 예측 유지 관리와 같은 회귀 예를 보여 주는 다이어그램](media/regression-examples.png)
 
-가격 예측은 집의 위치, 크기 및 기타 특성을 통해 집 가격을 예측하는 데 사용할 수 있습니다. 회귀 모델 형식의 예입니다.
+가격 예측은 집의 위치, 크기 및 기타 특성을 통해 집 가격을 예측하는 데 사용할 수 있습니다. 회귀 기계 학습 작업의 예입니다.
 
 사용자 고유의 데이터 세트를 사용하여 숫자 값을 예측하려는 경우 시나리오에 가격 예측 템플릿을 사용할 수 있습니다.
 
-#### <a name="custom-scenario-choose-your-model-type"></a>사용자 지정 시나리오(모델 형식 선택)
+#### <a name="classify-images-into-categories"></a>이미지를 범주로 분류
 
-사용자 지정 시나리오를 사용하여 모델 형식을 수동으로 선택할 수 있습니다.
+이 시나리오는 범주로 분류되는 입력 데이터가 이미지 집합인 다중 클래스 분류의 특별한 사례입니다.
+
+이미지 분류는 다른 범주의 이미지를 식별하는 데 사용될 수 있습니다. 예를 들어 다른 종류의 지형이나 동물 또는 제조 결함이 있습니다.
+
+이미지 집합이 있고 이미지를 여러 범주로 분류하려는 경우 시나리오에 이미지 분류 템플릿을 사용할 수 있습니다.
+
+#### <a name="custom-scenario"></a>사용자 지정 시나리오
+
+사용자 지정 시나리오를 사용하여 시나리오를 수동으로 선택할 수 있습니다.
 
 ## <a name="data"></a>데이터
 
-모델 형식을 선택하면 모델 작성기에서 데이터 세트를 제공하라는 메시지가 표시됩니다. 이 데이터는 시나리오에 가장 적합한 모델을 학습, 평가 및 선택하는 데 사용됩니다.
+시나리오를 선택하면 모델 작성기에서 데이터 세트를 제공하라는 메시지가 표시됩니다. 이 데이터는 시나리오에 가장 적합한 모델을 학습, 평가 및 선택하는 데 사용됩니다.
 
 ![모델 작성기 단계를 보여 주는 다이어그램](media/model-builder-steps.png)
+
+모델 작성기는 SQL 데이터베이스 형식 뿐만 아니라 .tsv, .csv, .txt 형식의 데이터 세트를 지원합니다. .txt 파일을 사용하는 경우 열을 `,`, `;` 또는 `/t`로 구분해야 하며 파일에는 머리글 행이 있어야 합니다.
+
+데이터 세트가 이미지로 구성된 경우 지원되는 파일 형식은 `.jpg` 및 `.png`입니다.
+
+자세한 내용은 [모델 작성기로 학습 데이터 로드](how-to-guides/load-data-model-builder.md)를 참조하세요.
 
 ### <a name="choose-the-output-to-predict-label"></a>예측할 출력을 선택합니다(레이블).
 
@@ -109,13 +113,14 @@ ML.NET 모델 작성기는 사용자 지정 기계 학습 모델을 빌드, 학�
 
 아직 사용자 고유의 데이터가 없는 경우 다음 데이터 세트 중 하나를 사용해 보세요.
 
-|시나리오|모델 형식|데이터|레이블|기능|
+|시나리오|ML 작업|데이터|레이블|기능|
 |-|-|-|-|-|
-|가격 예측|회귀|[택시 요금 데이터](https://github.com/dotnet/machinelearning-samples/blob/master/datasets/taxi-fare-train.csv)|요금|운행 시간, 거리|
+|가격 예측|재발|[택시 요금 데이터](https://github.com/dotnet/machinelearning-samples/blob/master/datasets/taxi-fare-train.csv)|요금|운행 시간, 거리|
 |변칙 검색|이진 분류|[제품 판매 데이터](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv)|제품 판매|월|
 |감정 분석|이진 분류|[웹 사이트 주석 데이터](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/wikipedia-detox-250-line-data.tsv)|레이블(부정적인 감정인 경우 0, 긍정적인 감정인 경우 1)|주석, 연도|
 |부정 행위 감지|이진 분류|[신용 카드 데이터](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/BinaryClassification_CreditCardFraudDetection/CreditCardFraudDetection.Trainer/assets/input/creditcardfraud-dataset.zip)|클래스(사기일 경우 1, 그렇지 않으면 0)|수량, V1-V28(익명화된 기능)|
-|텍스트 분류|다중 클래스 분류|[GitHub 문제 데이터](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/end-to-end-apps/MulticlassClassification-GitHubLabeler/GitHubLabeler/Data/corefx-issues-train.tsv)|영역|제목, 설명|
+|텍스트 분류|다중 클래스 분류|[GitHub 문제 데이터](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/end-to-end-apps/MulticlassClassification-GitHubLabeler/GitHubLabeler/Data/corefx-issues-train.tsv)|Area|제목, 설명|
+|이미지 분류|다중 클래스 분류|[꽃 이미지](http://download.tensorflow.org/example_images/flower_photos.tgz)|꽃의 종류: 데이지, 민들레, 장미, 해바라기, 튤립|이미지 데이터 자체|
 
 ## <a name="train"></a>학습
 
@@ -127,11 +132,65 @@ ML.NET 모델 작성기는 사용자 지정 기계 학습 모델을 빌드, 학�
 
 모델 작성기는 AutoML(자동 기계학습)을 사용하기 때문에 학습 중에 입력하거나 튜닝할 필요가 없습니다.
 
+### <a name="how-long-should-i-train-for"></a>얼마나 학습해야 하나요?
+
+모델 작성기는 AutoML을 사용하여 여러 모델을 탐색하고 가장 잘 수행하는 모델을 찾습니다.
+
+학습 기간이 길수록 AutoML에서 더 넓은 설정 범위로 더 많은 모델을 탐색할 수 있습니다.
+
+아래 표는 로컬 컴퓨터에서 예제 데이터 세트에 대해 양호한 성능을 얻는 데 걸리는 평균 시간을 요약하여 보여 줍니다.
+
+|데이터 세트 크기|평균 학습 시간|
+|------------|---------------------|
+|0 - 10MB|10초|
+|10 - 100MB|10분|
+|100 - 500MB|30분|
+|500 - 1GB|60분|
+|1GB+|3시간 이상|
+
+이러한 숫자는 단지 안내일 뿐입니다. 정확한 학습 길이는 다음에 따라 달라집니다.
+
+- 모델에 대한 입력으로 사용되는 기능(열)의 수
+- 열의 형식
+- ML 작업
+- 학습에 사용되는 컴퓨터의 CPU, 디스크 및 메모리 성능
+
 ## <a name="evaluate"></a>Evaluate
 
-평가는 학습된 모델을 통해 새 테스트 데이터를 사용하여 예측한 다음, 예측이 얼마나 올바른지를 측정하는 프로세스입니다.
+평가는 모델의 성능을 측정하는 프로세스입니다. 모델 작성기는 학습된 모델을 통해 새 테스트 데이터를 사용하여 예측한 다음, 예측이 얼마나 올바른지를 측정합니다.
 
-모델 작성기는 학습 데이터를 학습 집합과 테스트 집합으로 분할합니다. 학습 데이터(80%)는 모델을 학습하는 데 사용되며, 테스트 데이터(20%)는 모델을 평가하기 위해 보류됩니다. 모델 작성기는 메트릭을 사용하여 모델이 얼마나 효과적인지 측정합니다. 사용되는 특정 메트릭은 모델 형식에 따라 다릅니다. 자세한 내용은 [모델 평가 메트릭](resources/metrics.md)을 참조하세요.
+모델 작성기는 학습 데이터를 학습 집합과 테스트 집합으로 분할합니다. 학습 데이터(80%)는 모델을 학습하는 데 사용되며, 테스트 데이터(20%)는 모델을 평가하기 위해 보류됩니다. 
+
+### <a name="how-do-i-understand-my-model-performance"></a>모델 성능을 어떻게 이해할까요?
+
+시나리오는 기계 학습 작업에 매핑됩니다. 각 ML 작업에는 고유한 평가 메트릭 집합이 있습니다.
+
+#### <a name="regression-for-example-price-prediction"></a>회귀(예: 가격 예측)
+
+회귀 문제에 대한 기본 메트릭은 RSquared이고, RSquared 값의 범위는 0과 1 사이입니다. 가능한 최고의 값은 1입니다. 즉, RSquared의 값이 1에 가까울수록 모델의 성능이 향상됩니다.
+
+절대 손실, 제곱 손실 및 RMS 손실과 같이 보고된 다른 메트릭은 추가 메트릭이며 모델의 성능을 이해하고 다른 회귀 모델과 비교하는 데 사용할 수 있습니다.
+
+#### <a name="binary-classification-for-example-sentiment-analysis"></a>이진 분류(예: 감정 분석)
+
+분류 문제에 대한 기본 메트릭은 정확도입니다. 정확도는 모델이 테스트 데이터 세트에 대해 내리는 정확한 예측 비율을 정의합니다. 100% 또는 1.0에 가까울수록 좋습니다.
+
+참 긍정 비율과 거짓 긍정 비율을 측정하는 AUC(곡선 아래의 영역)와 같은 보고된 기타 메트릭은 허용 가능한 모델에 대해 0.50보다 커야 합니다.
+
+F1 점수와 같은 추가 메트릭을 사용하여 전체 정밀도와 재현율 간의 균형을 제어할 수 있습니다.
+
+#### <a name="multi-class-classification-for-example-issue-classification-image-classification"></a>다중 클래스 분류(예: 문제 분류, 이미지 분류)
+
+다중 클래스 분류에 대한 기본 메트릭은 Micro 정확도입니다. Micro 정확도는 100% 또는 1.0에 가까울수록 좋습니다.
+
+다중 클래스 분류에 대한 또 다른 중요한 메트릭은 Macro 정확도입니다. Micro 정확도와 마찬가지로 1.0에 가까울수록 좋습니다. 이러한 두 가지 유형의 정확도를 고려하는 올바른 방법은 다음과 같습니다.
+
+- Micro 정확도: 들어오는 티켓이 올바른 팀으로 분류되는 빈도
+- Macro 정확도: 평균 팀의 경우 들어오는 티켓이 해당 팀에 올바르게 분류된 빈도
+
+### <a name="more-information-on-evaluation-metrics"></a>평가 메트릭에 대한 자세한 내용
+
+자세한 내용은 [모델 평가 메트릭](resources/metrics.md)을 참조하세요.
 
 ## <a name="improve"></a>개선
 

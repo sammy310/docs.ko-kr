@@ -3,23 +3,22 @@ title: .NET Framework 및 .NET Core용 프로젝트 구성
 description: .NET Framework 및 .NET Core에 대해 솔루션을 나란히 컴파일하려는 프로젝트 소유자를 위한 도움말입니다.
 author: conniey
 ms.date: 12/07/2018
-ms.custom: seodec18
-ms.openlocfilehash: 789f50ffb61b80f590a24bc45693df895b3424f7
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: d71cc3102846c08f4e35831921b8cc4ca82f9e1b
+ms.sourcegitcommit: cbdc0f4fd39172b5191a35200c33d5030774463c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74801932"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75777327"
 ---
 # <a name="organize-your-project-to-support-both-net-framework-and-net-core"></a>.NET Framework 및 .NET Core를 둘 다 지원하도록 프로젝트 구성
 
-.NET Framework와 .NET Core 둘 다에 대해 나란히 컴파일되는 솔루션을 만드는 방법을 알아봅니다. 이러한 목표를 달성할 수 있도록 프로젝트를 구성하는 여러 가지 옵션을 참조하세요. .NET Core를 사용하여 프로젝트 레이아웃을 설정하는 방법을 결정할 때 고려해야 할 몇 가지 일반적인 시나리오는 다음과 같습니다. 여기에서 모든 것을 다루지는 못할 수 있습니다. 프로젝트 요구에 따라 우선 순위를 정하세요.
+.NET Framework와 .NET Core 둘 다에 대해 나란히 컴파일되는 솔루션을 만들 수 있습니다. 이 문서에서는 이러한 목표를 달성하는 데 도움이 되는 여러 가지 프로젝트 구성 옵션을 설명합니다. .NET Core를 사용하여 프로젝트 레이아웃을 설정하는 방법을 결정할 때 고려해야 할 몇 가지 일반적인 시나리오는 다음과 같습니다. 여기에서 모든 것을 다루지는 못할 수 있습니다. 프로젝트 요구에 따라 우선 순위를 정하세요.
 
 - [**기존 프로젝트와 .NET Core 프로젝트를 단일 프로젝트로 결합**](#replace-existing-projects-with-a-multi-targeted-net-core-project)
 
   *좋은 점:*
-  - 각각 다른 .NET Framework 버전 또는 플랫폼을 대상으로 하는 여러 프로젝트를 컴파일하는 것이 아니라 단일 프로젝트를 컴파일함으로써 빌드 프로세스를 간소화합니다.
-  - 단일 프로젝트 파일을 관리해야 하므로 멀티 타기팅 프로젝트에 대한 소스 파일 관리를 간소화합니다. 소스 파일을 추가/제거할 때 대체 방법에서는 이를 다른 프로젝트와 수동으로 동기화해야 합니다.
+  - 각각 다른 .NET Framework 버전 또는 플랫폼을 대상으로 하는 여러 프로젝트가 아닌 단일 프로젝트를 컴파일함으로써 빌드 프로세스를 간소화합니다.
+  - 단일 프로젝트 파일을 관리해야 하므로 멀티 타기팅 프로젝트에 대한 소스 파일 관리를 간소화합니다. 소스 파일을 추가 또는 제거할 때 대체 방법에서는 이를 다른 프로젝트와 수동으로 동기화해야 합니다.
   - 사용할 NuGet 패키지를 쉽게 생성합니다.
   - 컴파일러 지시문을 사용하여 라이브러리에서 특정 .NET Framework 버전에 대한 코드를 작성할 수 있습니다.
 
@@ -32,7 +31,7 @@ ms.locfileid: "74801932"
   - Visual Studio 2017 이상 버전이 없는 개발자/참가자의 경우 기존 프로젝트에 대한 개발을 지원합니다.
   - 기존 프로젝트에서 코드 변동이 필요하지 않으므로 새 버그가 발생할 가능성이 줄어듭니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 아래 리포지토리를 고려하세요.
 
@@ -62,11 +61,8 @@ ms.locfileid: "74801932"
 
 [**소스 코드**](https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library-csproj-keep-existing/)
 
-주목할 변경 사항은 다음과 같습니다.
+.NET Core와 기존 프로젝트가 별도의 폴더에 유지됩니다. 프로젝트를 별도의 폴더에 유지하면 Visual Studio 2017 이상 버전을 사용하지 않아도 됩니다. 이전 프로젝트만 여는 별도 솔루션을 만들 수 있습니다.
 
-- .NET Core와 기존 프로젝트가 별도의 폴더에 유지됩니다.
-  - 프로젝트를 별도의 폴더에 유지하면 Visual Studio 2017 이상 버전을 사용하지 않아도 됩니다. 이전 프로젝트만 여는 별도 솔루션을 만들 수 있습니다.
-
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [.NET Core 이식 설명서](index.md)

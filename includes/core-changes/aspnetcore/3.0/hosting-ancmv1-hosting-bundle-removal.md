@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 04e5ca41374fc333a31f0422bc2e89f54b3cb049
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 82103d82a6f68c62f3532608718bc71b0ba126bf
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394155"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901581"
 ---
 ### <a name="hosting-aspnetcoremodule-v1-removed-from-windows-hosting-bundle"></a>호스팅: Windows Hosting Bundle에서 AspNetCoreModule V1이 제거됨
 
@@ -12,7 +12,7 @@ ASP.NET Core 3.0부터 Windows Hosting Bundle에는 ANCM(AspNetCoreModule) V1이
 
 ANCM V2는 ANCM OutOfProcess와 역호환되며 ASP.NET Core 3.0 앱에서 사용하는 것이 좋습니다.
 
-자세한 내용은 [aspnet/AspNetCore#7095](https://github.com/aspnet/AspNetCore/issues/7095)를 참조하세요.
+토론은 [dotnet/aspnetcore#7095](https://github.com/dotnet/aspnetcore/issues/7095)를 참조하세요.
 
 #### <a name="version-introduced"></a>도입된 버전
 
@@ -30,7 +30,7 @@ ANCM V1은 Windows Hosting Bundle에 포함되어 있지 않습니다.
 
 ANCM V2는 ANCM OutOfProcess와 역호환되며 ASP.NET Core 3.0 앱에서 사용하는 것이 좋습니다.
 
-#### <a name="recommended-action"></a>권장 작업
+#### <a name="recommended-action"></a>권장 조치
 
 ASP.NET Core 3.0 앱에서 ANCM V2를 사용합니다.
 

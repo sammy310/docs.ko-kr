@@ -1,19 +1,17 @@
 ---
-title: Mac용 Visual Studio를 사용하여 macOS에서 .NET Core 시작
+title: Mac용 Visual Studio를 사용하여 .NET Core 시작
 description: 이 항목에서는 Mac 및 .NET Core용 Visual Studio를 사용하여 간단한 콘솔 애플리케이션을 빌드하는 과정을 안내합니다.
-author: mairaw
-ms.date: 07/11/2019
-ms.custom: seodec18
-ms.openlocfilehash: feaed88e902080c5c3b07578b78f8437489a690c
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.date: 12/19/2019
+ms.openlocfilehash: 4cd7e311411bce62698e291e763227496877ea39
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428590"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740483"
 ---
 # <a name="get-started-with-net-core-on-macos-using-visual-studio-for-mac"></a>Mac용 Visual Studio를 사용하여 macOS에서 .NET Core 시작
 
-Visual Studio for Mac은 .NET Core 애플리케이션 개발을 위해 필요한 전기능 IDE(통합 개발 환경)를 제공합니다. 이 항목에서는 Mac 및 .NET Core용 Visual Studio를 사용하여 간단한 콘솔 애플리케이션을 빌드하는 과정을 안내합니다.
+Visual Studio for Mac은 .NET Core 애플리케이션 개발을 위해 필요한 전기능 IDE(통합 개발 환경)를 제공합니다. 이 문서에서는 Mac 및 .NET Core용 Visual Studio를 사용하여 간단한 콘솔 애플리케이션을 빌드하는 과정을 안내합니다.
 
 > [!NOTE]
 > 사용자 의견은 매우 중요합니다. Mac용 Visual Studio의 개발 팀에 다음 두 가지 방법으로 의견을 제공할 수 있습니다.
@@ -21,9 +19,9 @@ Visual Studio for Mac은 .NET Core 애플리케이션 개발을 위해 필요한
 > * Mac용 Visual Studio의 메뉴에서 **도움말** > **문제 보고**를 선택하거나 시작 화면에서 **문제 보고**를 선택하면 버그 보고서를 작성하기 위한 창이 열립니다. [Developer Community](https://developercommunity.visualstudio.com/spaces/8/index.html)(개발자 커뮤니티) 포털에서 의견을 추적할 수 있습니다.
 > * 제안하려면 메뉴에서 **도움말** > **제안하기**를 선택하거나 시작 화면에서 **제안하기**를 선택합니다. 그러면 [Mac용 Visual Studio Developer Community 웹 페이지](https://developercommunity.visualstudio.com/content/idea/post.html?space=41)로 이동됩니다.
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
-[.NET Core 종속성 및 요구 사항](../install/dependencies.md?tabs=netcore30&pivots=os-macos) 항목을 참조하세요.
+[.NET Core 종속성 및 요구 사항](../install/dependencies.md?pivots=os-macos) 문서를 참조하세요.
 
 [.NET Core 지원](/visualstudio/mac/net-core-support) 문서를 참조하여 지원되는 버전의 .NET Core를 사용하고 있는지 확인합니다.
 
@@ -35,7 +33,7 @@ Visual Studio for Mac은 .NET Core 애플리케이션 개발을 위해 필요한
 
 ## <a name="creating-a-project"></a>프로젝트 만들기
 
-1. [시작] 창에서 **새로 만들기**를 선택합니다.
+1. 시작 창에서 **새로 만들기**를 선택합니다.
 
    ![Mac용 Visual Studio 시작 화면의 새로 만들기 단추](./media/using-on-mac-vs/visual-studio-mac-new-project.png)
 

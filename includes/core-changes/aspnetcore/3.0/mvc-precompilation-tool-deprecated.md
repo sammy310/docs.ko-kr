@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 3f702febc78488b9413ec9303ded211493650f02
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 1e081c9f37fbd7ab754ce44ba89d7aa5cabfc219
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73198511"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901998"
 ---
 ### <a name="mvc-precompilation-tool-deprecated"></a>MVC: 미리 컴파일 도구가 사용되지 않음
 
@@ -28,9 +28,9 @@ Razor SDK는 기본적으로 이 기능을 지원합니다. `Microsoft.AspNetCor
 
 Razor SDK는 더 많은 기능을 제공하고 빌드 시 *.cshtml* 파일의 정확성을 확인합니다. 또한 SDK는 앱 시작 시간을 개선합니다.
 
-#### <a name="recommended-action"></a>권장 작업
+#### <a name="recommended-action"></a>권장 조치
 
-ASP.NET Core 2.1 이상 사용자의 경우 [Razor SDK](/aspnet/core/razor-pages/sdk?view=aspnetcore-3.0)에서 미리 컴파일에 대한 기본 지원을 사용하도록 업데이트합니다. 버그 또는 누락된 기능으로 인해 Razor SDK로 마이그레이션할 수 없는 경우 [aspnet/AspNetCore](https://github.com/aspnet/AspNetCore/issues)에서 문제를 엽니다.
+ASP.NET Core 2.1 이상 사용자의 경우 [Razor SDK](/aspnet/core/razor-pages/sdk?view=aspnetcore-3.0)에서 미리 컴파일에 대한 기본 지원을 사용하도록 업데이트합니다. 버그 또는 누락된 기능으로 인해 Razor SDK로 마이그레이션할 수 없는 경우 [dotnet/aspnetcore](https://github.com/dotnet/aspnetcore/issues)에서 문제를 엽니다.
 
 #### <a name="category"></a>범주
 

@@ -2,12 +2,12 @@
 title: 데이터 그룹화(C#)
 ms.date: 07/20/2015
 ms.assetid: e414e9e4-343a-4e6e-858f-4a30c5e64492
-ms.openlocfilehash: e7f10b121a7a1c599d88731a806fe784eb1a7e66
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 7ef3d3c9097d7a9478605565518ac8975feb9fe2
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423412"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635745"
 ---
 # <a name="grouping-data-c"></a>데이터 그룹화(C#)
 그룹화는 데이터를 그룹에 넣어 각 그룹의 요소가 공통 특성을 공유하게 하는 작업을 가리킵니다.  
@@ -59,13 +59,13 @@ foreach (var group in query)
 */  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Linq>
 - [표준 쿼리 연산자 개요(C#)](./standard-query-operators-overview.md)
 - [group 절](../../../language-reference/keywords/group-clause.md)
-- [방법: 중첩 그룹 만들기](../../../linq/create-a-nested-group.md)
-- [방법: 확장명에 따라 파일 그룹화(LINQ)(C#)](./how-to-group-files-by-extension-linq.md)
-- [방법: 쿼리 결과 그룹화](../../../linq/group-query-results.md)
-- [방법: 그룹화 작업에서 하위 쿼리 수행](../../../linq/perform-a-subquery-on-a-grouping-operation.md)
-- [방법: 그룹을 사용하여 파일을 여러 파일로 분할(LINQ)(C#)](./how-to-split-a-file-into-many-files-by-using-groups-linq.md)
+- [중첩 그룹 만들기](../../../linq/create-a-nested-group.md)
+- [확장명에 따라 파일을 그룹화하는 방법(LINQ)(C#)](./how-to-group-files-by-extension-linq.md)
+- [쿼리 결과 그룹화](../../../linq/group-query-results.md)
+- [그룹화 작업에서 하위 쿼리 수행](../../../linq/perform-a-subquery-on-a-grouping-operation.md)
+- [그룹을 사용하여 파일을 여러 파일로 분할하는 방법(LINQ)(C#)](./how-to-split-a-file-into-many-files-by-using-groups-linq.md)

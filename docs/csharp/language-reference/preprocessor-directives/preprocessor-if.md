@@ -1,22 +1,21 @@
 ---
 title: '#if 전처리기 지시문 - C# 참조'
-ms.custom: seodec18
 ms.date: 10/27/2019
 f1_keywords:
 - '#if'
 helpviewer_keywords:
 - '#if directive [C#]'
 ms.assetid: 48cabbff-ca82-491f-a56a-eeccd528c7c2
-ms.openlocfilehash: e467a890e971e6c6f2c681ee503d7c7ead19a1e4
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: d047b88f202341a795834809d0b601706c30fcb4
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552451"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75899849"
 ---
 # <a name="if-c-reference"></a>#if(C# 참조)
 
-C# 컴파일러는 `#if` 지시문과 [#endif](preprocessor-endif.md) 지시문이 차례로 확인되면 지정된 기호가 정의되어 있어야 지시문 사이의 코드를 컴파일합니다. C 및 C++와 달리, 기호에 숫자 값을 할당할 수 없습니다. C#의 #if 문은 부울이고 기호가 정의되었는지 여부만 테스트합니다. 예:
+C# 컴파일러는 `#if` 지시문과 [#endif](preprocessor-endif.md) 지시문이 차례로 확인되면 지정된 기호가 정의되어 있어야 지시문 사이의 코드를 컴파일합니다. C 및 C++와 달리, 기호에 숫자 값을 할당할 수 없습니다. C#의 `#if` 문은 부울이고, 기호가 정의되었는지 여부만 테스트합니다. 예:
 
 ```csharp
 #if DEBUG
@@ -24,7 +23,7 @@ C# 컴파일러는 `#if` 지시문과 [#endif](preprocessor-endif.md) 지시문�
 #endif
 ```
 
-[==](../operators/equality-operators.md#equality-operator-)(같음) 및 [!=](../operators/equality-operators.md#inequality-operator-)(같지 않음) 연산자는 [bool](../builtin-types/bool.md) 값 `true` 또는 `false`를 테스트할 때만 사용할 수 있습니다. true가 반환되면 기호가 정의된 것입니다. `#if DEBUG` 문의 의미는 `#if (DEBUG == true)`와 같습니다. [&&](../operators/boolean-logical-operators.md#conditional-logical-and-operator-)(및), [&#124;&#124;](../operators/boolean-logical-operators.md#conditional-logical-or-operator-)(또는), [!](../operators/boolean-logical-operators.md#logical-negation-operator-)(아님) 연산자를 사용하면 여러 기호가 정의되었는지 여부를 평가할 수 있습니다. 기호와 연산자를 괄호로 묶을 수도 있습니다.
+[==](../operators/equality-operators.md#equality-operator-)(같음) 및 [!=](../operators/equality-operators.md#inequality-operator-)(같지 않음) 연산자는 [bool](../builtin-types/bool.md) 값 `true` 또는 `false`를 테스트할 때만 사용할 수 있습니다. `true`가 반환되면 기호가 정의된 것입니다. `#if DEBUG` 문의 의미는 `#if (DEBUG == true)`와 같습니다. [&&(and)](../operators/boolean-logical-operators.md#conditional-logical-and-operator-), [&#124;&#124;(or)](../operators/boolean-logical-operators.md#conditional-logical-or-operator-) 및 [!(not)](../operators/boolean-logical-operators.md#logical-negation-operator-) 연산자를 사용하여 여러 기호가 정의되었는지 여부를 평가할 수 있습니다. 기호와 연산자를 괄호로 묶을 수도 있습니다.
 
 ## <a name="remarks"></a>설명
 
@@ -90,7 +89,7 @@ public class MyClass
 }
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 참조](../index.md)
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)

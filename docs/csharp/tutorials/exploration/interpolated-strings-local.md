@@ -2,12 +2,12 @@
 title: 문자열 보간 - C# 자습서
 description: 이 자습서에서는 C# 문자열 보간 기능을 사용하여 더 큰 문자열에 형식이 지정된 식을 포함하는 방법을 보여 줍니다.
 ms.date: 10/23/2018
-ms.openlocfilehash: 53b9afa4c5ccdcb1f18d2947981aee6571b73134
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 593f3a77370da73dfd5f090be98112327b86b1f7
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120114"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346789"
 ---
 # <a name="use-string-interpolation-to-construct-formatted-strings"></a>문자열 보간을 사용하여 형식이 지정된 문자열 생성
 
@@ -58,7 +58,7 @@ public Vegetable(string name) => Name = name;
 var item = new Vegetable("eggplant");
 ```
 
-마지막으로 <xref:System.DateTime> 값, <xref:System.Decimal> 값 및 `Unit` [열거형](../../programming-guide/enumeration-types.md) 값을 포함하는 보간된 문자열에 `item` 변수를 포함시킵니다. 편집기에서 모든 C# 코드를 다음 코드로 바꾼 후 `dotnet run` 명령을 사용하여 실행합니다.
+마지막으로 <xref:System.DateTime> 값, <xref:System.Decimal> 값 및 `Unit` [열거형](../../language-reference/builtin-types/enum.md) 값을 포함하는 보간된 문자열에 `item` 변수를 포함시킵니다. 편집기에서 모든 C# 코드를 다음 코드로 바꾼 후 `dotnet run` 명령을 사용하여 실행합니다.
 
 ```csharp
 using System;

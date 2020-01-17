@@ -5,12 +5,12 @@ ms.date: 04/29/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc
-ms.openlocfilehash: 8bb47102ede8e135090b1381eb815dccd512e03d
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: 8f3b283de378a37bfe429688207ea9fb52f9ca7f
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557794"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75739579"
 ---
 # <a name="improve-mlnet-model-accuracy"></a>ML.NET 모델 정확도 향상
 
@@ -32,7 +32,7 @@ ms.locfileid: "65557794"
 
 더 많은 데이터 샘플 및 기능은 모델 정확도를 높일 수 있지만 모든 데이터와 기능이 의미 있는 것은 아니므로 잡음도 발생할 수 있습니다. 따라서 알고리즘에 의한 의사 결정에 가장 중대한 영향을 미치는 기능이 무엇인지 이해하는 것이 중요합니다. PFI(순열 기능 중요도) 같은 기법을 사용하면 이런 중요한 기능을 파악할 수 있습니다. 또한 모델을 설명할 뿐 아니라 출력을 기능 선택 메서드로 사용하여 학습 프로세스에 발생하는 불필요한 기능의 규모를 줄일 수 있습니다.
 
-다음 [링크](../how-to-guides/explain-machine-learning-model-permutation-feature-importance-ml-net.md)에서 PFI 사용 알아보기
+PFI 사용에 대한 자세한 내용은 [순열 기능 중요도를 사용하여 예측 모델 설명](../how-to-guides/explain-machine-learning-model-permutation-feature-importance-ml-net.md)을 참조하세요.
 
 ## <a name="cross-validation"></a>교차 유효성 검사
 

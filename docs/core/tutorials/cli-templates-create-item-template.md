@@ -5,12 +5,12 @@ author: thraka
 ms.date: 06/25/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: 5183781d6a131aa395cf7c1fd8a09e05ed0bd71d
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: fa0ae18221c33d196960239411f8860a561b20ee
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926147"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75340376"
 ---
 # <a name="tutorial-create-an-item-template"></a>자습서: 항목 템플릿 만들기
 
@@ -26,14 +26,14 @@ ms.locfileid: "70926147"
 > * 항목 템플릿 테스트
 > * 항목 템플릿 제거
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 * [.NET Core 2.2 SDK](https://dotnet.microsoft.com/download) 이상 버전
 * 참조 문서 [dotnet new에 대한 사용자 지정 템플릿](../tools/custom-templates.md)을 읽어보세요.
 
   이 참조 문서에서는 템플릿에 대한 기본 사항과 템플릿을 취합하는 방법을 설명합니다. 이 참조 문서의 정보 일부가 여기에도 나옵니다.
 
-* 터미널을 열고 _working\templates\\_ 폴더로 이동합니다.
+* 터미널을 열고 _working\templates_ 폴더로 이동합니다.
 
 ## <a name="create-the-required-folders"></a>필요한 폴더 만들기
 
@@ -54,7 +54,7 @@ parent_folder
 
 항목 템플릿은 하나 이상의 파일을 포함하는 특정 형식의 템플릿입니다. 이러한 형식의 템플릿은 구성, 코드 또는 솔루션 파일과 같은 항목을 생성하려는 경우에 유용합니다. 이 예제에서는 문자열 형식에 확장 메서드를 추가하는 클래스를 만듭니다.
 
-터미널에서 _working\templates\\_폴더로 이동하고_extensions_라는 새 하위 폴더를 만듭니다. 폴더로 들어갑니다.
+터미널에서 _working\templates_ 폴더로 이동하고 _extensions_라는 새 하위 폴더를 만듭니다. 폴더로 들어갑니다.
 
 ```console
 working
@@ -85,7 +85,7 @@ namespace System
 
 ## <a name="create-the-template-config"></a>템플릿 구성 만들기
 
-템플릿은 .NET Core의 템플릿 루트에 있는 특수 폴더 및 구성 파일에서 인식됩니다. 이 자습서에서 템플릿 폴더는 _working\templates\extensions\\_ 에 있습니다.
+템플릿은 .NET Core의 템플릿 루트에 있는 특수 폴더 및 구성 파일에서 인식됩니다. 이 자습서에서 템플릿 폴더는 _working\templates\extensions_에 있습니다.
 
 템플릿을 만들 때 템플릿 폴더의 모든 파일과 폴더는 특수 구성 폴더를 제외하고 템플릿의 일부로 포함됩니다. 이 구성 폴더는 _.template.config_입니다.
 

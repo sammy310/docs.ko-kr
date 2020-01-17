@@ -1,15 +1,13 @@
 ---
 title: 호환성이 손상되는 변경 및 .NET 라이브러리
 description: .NET 라이브러리를 만들 때 호환성이 손상되는 변경 탐색을 위한 모범 사례 권장 사항.
-author: jamesnk
-ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: 6881b8737d9dd3fa7fa71f099fa1dc97b747033d
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 8536662ae1cd9733efbcc0c6526bd69d34a13177
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70104654"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740987"
 ---
 # <a name="breaking-changes"></a>호환성이 손상되는 변경
 
@@ -98,11 +96,11 @@ public class Document
 
 > API를 제거하는 것은 이진 호환성이 손상되는 변경입니다. 사용되지 않는 형식 및 메서드를 유지 관리하는 것이 비용이 저렴하고 라이브러리에 많은 기술적 문제가 추가되지 않은 경우 이를 유지하는 것을 고려해 보세요. 형식 및 메서드를 제거하지 않으면 위에서 언급한 최악의 시나리오를 방지할 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 개발자를 위한 버전 및 업데이트 고려 사항](../../csharp/whats-new/version-update-considerations.md)
 - [.NET에서의 API 주요 변경 내용에 대한 명확한 지침](https://stackoverflow.com/questions/1456785/a-definitive-guide-to-api-breaking-changes-in-net)
-- [CoreFX 주요 변경 내용 규칙](https://github.com/dotnet/corefx/blob/master/Documentation/coding-guidelines/breaking-change-rules.md)
+- [.NET 주요 변경 내용 규칙](https://github.com/dotnet/runtime/blob/master/docs/coding-guidelines/breaking-change-rules.md)
 
 >[!div class="step-by-step"]
 >[이전](versioning.md)

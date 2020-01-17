@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: b0d093cc30a09b3248cc57a521b386bf581b5451
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 02602c70689a6d2729e03d3d7230cda5ae7a4994
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552158"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901795"
 ---
 ### <a name="http-browser-samesite-changes-impact-authentication"></a>HTTP: 브라우저 SameSite 변경 내용이 인증에 영향
 
 Chrome 및 Firefox와 같은 일부 브라우저에서는 쿠키에 대한 `SameSite`의 구현에 호환성이 손상되는 변경이 수행되었습니다. 이 변경 사항은 `SameSite=None`을 전송하여 옵트아웃해야 하는 OpenID Connect 및 WS-Federation과 같은 원격 인증 시나리오에 영향을 줍니다. 그러나 `SameSite=None`이(가) iOS 12 및 일부 이전 버전의 기타 브라우저에서 중단됩니다. 이 앱에서 이 버전을 찾아 `SameSite`를 생략해야 합니다.
 
-이 문제에 대한 자세한 내용은 [aspnet/AspNetCore#14996](https://github.com/aspnet/AspNetCore/issues/14996)을 참조하세요.
+이 문제에 대한 자세한 내용은 [dotnet/aspnetcore#14996](https://github.com/dotnet/aspnetcore/issues/14996)을 참조하세요.
 
 #### <a name="version-introduced"></a>도입된 버전
 
@@ -32,7 +32,7 @@ ASP.NET Core 3.1이 새 `SameSite` 동작을 구현하도록 업데이트되었�
 
 이전 텍스트에서 설명한 대로 브라우저 및 사양이 변경됩니다.
 
-#### <a name="recommended-action"></a>권장 작업
+#### <a name="recommended-action"></a>권장 조치
 
 타사 로그인 등 원격 사이트와 상호 작용하는 앱은 다음 작업을 수행해야 합니다.
 

@@ -4,13 +4,13 @@ description: 클러스터링 시나리오에서 ML.NET을 사용하는 방법 �
 author: pkulikov
 ms.date: 11/15/2019
 ms.topic: tutorial
-ms.custom: mvc, seodec18, title-hack-0516
-ms.openlocfilehash: a7199ce2e5217eaadfa10893eb1fbb3417e9be20
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.custom: mvc, title-hack-0516
+ms.openlocfilehash: cc3a1ae984289eb01ad8fdee9741f3f9788196c7
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204832"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716228"
 ---
 # <a name="tutorial-categorize-iris-flowers-using-k-means-clustering-with-mlnet"></a>자습서: ML.NET와 함께 k-means 클러스터링을 사용하여 아이리스 꽃 분류
 
@@ -27,7 +27,7 @@ ms.locfileid: "74204832"
 > - 모델 학습
 > - 예측에 모델 사용
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 - “.NET Core 플랫폼 간 개발” 워크로드가 설치된 [Visual Studio 2017 버전 15.6 이상](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)
 
@@ -118,7 +118,7 @@ ms.locfileid: "74204832"
 
 <xref:Microsoft.ML.MLContext?displayProperty=nameWithType> 클래스는 기계 학습 환경 연결을 나타내며 데이터 로드, 모델 학습, 예측 및 기타 작업에 대한 로깅 및 진입점에 대한 메커니즘을 제공합니다. 이는 Entity Framework에서 `DbContext`를 사용하는 것과 개념이 비슷합니다.
 
-## <a name="setup-data-loading"></a>데이터 로드 설정
+## <a name="set-up-data-loading"></a>데이터 로드 설정
 
 `Main` 메서드에 다음 코드를 추가하여 데이터를 로드하는 방법을 설정합니다.
 

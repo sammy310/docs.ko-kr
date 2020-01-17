@@ -1,6 +1,5 @@
 ---
 title: 명명된 인수와 선택적 인수 - C# 프로그래밍 가이드
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - namedParameter_CSharpKeyword
@@ -14,12 +13,12 @@ helpviewer_keywords:
 - parameters [C#], optional
 - named and optional arguments [C#]
 ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
-ms.openlocfilehash: 30475b637202d3b614ac968897e467956bc78646
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 6afa8a2bd2dfee8d7c36b58342036d18241317a8
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73970516"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714794"
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>명명된 인수와 선택적 인수(C# 프로그래밍 가이드)
 C# 4에서는 명명된 인수와 선택적 인수가 도입되었습니다. *명명된 인수*를 사용하면 인수를 매개 변수 목록 내의 매개 변수 위치가 아니라 매개 변수 이름과 연결하여 특정 매개 변수에 대한 인수를 지정할 수 있습니다. *선택적 인수*를 사용하면 일부 매개 변수에 대한 인수를 생략할 수 있습니다. 두 기법 모두 메서드, 인덱서, 생성자 및 대리자에 사용할 수 있습니다.  
@@ -58,7 +57,7 @@ C# 4에서는 명명된 인수와 선택적 인수가 도입되었습니다. *�
  PrintOrderDetails(productName: "Red Mug", 31, "Gift Shop");
  ```
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드는 몇 가지 추가 코드와 함께 이 섹션의 예제를 구현합니다.  
   
  [!code-csharp[csProgGuideNamedAndOptional#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/program.cs#1)]  
@@ -70,7 +69,7 @@ C# 4에서는 명명된 인수와 선택적 인수가 도입되었습니다. *�
   
 - 상수 식  
   
-- `new ValType()` 형태의 식. 여기서 `ValType`은 [enum](../../language-reference/keywords/enum.md) 또는 [struct](./structs.md)와 같은 값 형식입니다.  
+- `new ValType()` 형태의 식. 여기서 `ValType`은 [enum](../../language-reference/builtin-types/enum.md) 또는 [struct](structs.md)와 같은 값 형식입니다.  
   
 - [default(ValType)](../../language-reference/operators/default.md) 형태의 식. 여기서 `ValType`은 값 형식입니다.  
   
@@ -93,7 +92,7 @@ C# 4에서는 명명된 인수와 선택적 인수가 도입되었습니다. *�
 > [!NOTE]
 > .NET <xref:System.Runtime.InteropServices.OptionalAttribute> 클래스를 사용하여 선택적 매개 변수를 선언할 수도 있습니다. `OptionalAttribute` 매개 변수는 기본값이 필요하지 않습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 `ExampleClass`에 대한 생성자에 선택 사항인 매개 변수 하나가 있습니다. 인스턴스 메서드 `ExampleMethod`에는 `required`라는 필수 매개 변수 하나와 `optionalstr` 및 `optionalint`라는 선택적 매개 변수 두 개가 있습니다. `Main`의 코드는 생성자와 메서드를 호출할 수 있는 여러 방법을 보여 줍니다.  
   
  [!code-csharp[csProgGuideNamedAndOptional#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/optional.cs#2)]  
@@ -113,7 +112,7 @@ C# 4에서는 명명된 인수와 선택적 인수가 도입되었습니다. *�
   
  [!code-csharp[csProgGuideNamedAndOptional#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/namedandoptcom.cs#13)]  
   
- 자세한 내용 및 예제는 [Office 프로그래밍에 명명된 인수와 선택적 인수를 사용하는 방법](./how-to-use-named-and-optional-arguments-in-office-programming.md) 및 [방법: Visual C# 기능을 사용하여 Office Interop 개체에 액세스](../interop/how-to-access-office-onterop-objects.md)를 참조하세요.  
+ 자세한 내용 및 예제는 [Office 프로그래밍에 명명된 인수와 선택적 인수를 사용하는 방법](./how-to-use-named-and-optional-arguments-in-office-programming.md) 및 [C# 기능을 사용하여 Office interop 개체에 액세스하는 방법](../interop/how-to-access-office-onterop-objects.md)을 참조하세요.  
   
 ## <a name="overload-resolution"></a>Overload Resolution  
  명명된 인수 및 선택적 인수를 사용하면 다음과 같은 방법으로 오버로드 확인에 영향을 줍니다.  
@@ -127,9 +126,9 @@ C# 4에서는 명명된 인수와 선택적 인수가 도입되었습니다. *�
 ## <a name="c-language-specification"></a>C# 언어 사양  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [방법: Office 프로그래밍에 명명된 인수와 선택적 인수 사용](./how-to-use-named-and-optional-arguments-in-office-programming.md)
+- [Office 프로그래밍에 명명된 인수와 선택적 인수를 사용하는 방법](./how-to-use-named-and-optional-arguments-in-office-programming.md)
 - [dynamic 형식 사용](../types/using-type-dynamic.md)
 - [생성자 사용](./using-constructors.md)
 - [인덱서 사용](../indexers/using-indexers.md)

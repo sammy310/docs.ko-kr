@@ -1,15 +1,14 @@
 ---
 title: 기계 학습 용어집
 description: ML.NET에서 사용자 지정 모델을 빌드할 때 유용한 중요한 기계 학습 용어 모음입니다.
-ms.custom: seodec18
 ms.topic: reference
 ms.date: 07/31/2019
-ms.openlocfilehash: bd4f2db701f537d5c87529115a6bd44035432534
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 32ccb6df1cb08db45ebd25a0d1c0ea4396a6c50b
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977294"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75739879"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>중요한 용어가 포함된 기계 학습 용어집
 
@@ -57,7 +56,7 @@ ML.NET에서 카탈로그는 공통 목적에 따라 그룹화된 확장 함수�
 
 <xref:Microsoft.ML.IEstimator%601> 인터페이스를 구현하는 ML.NET의 클래스입니다.
 
-평가자는 변환의 사양입니다(데이터 준비 변환 및 기계 학습 모델 교육 변환 모두). 평가자는 하나의 변환 파이프라인으로 연결할 수 있습니다. 평가자의 매개 변수 또는 파이프라인은 <xref:Microsoft.ML.IEstimator`1.Fit*> 호출 시 학습됩니다. <xref:Microsoft.ML.IEstimator`1.Fit*>의 결과는 [변환기](#transformer)입니다.
+평가자는 변환의 사양입니다(데이터 준비 변환 및 기계 학습 모델 교육 변환 모두). 평가자는 하나의 변환 파이프라인으로 연결할 수 있습니다. 평가자의 매개 변수 또는 파이프라인은 <xref:Microsoft.ML.IEstimator%601.Fit%2A> 호출 시 학습됩니다. <xref:Microsoft.ML.IEstimator%601.Fit%2A>의 결과는 [변환기](#transformer)입니다.
 
 ## <a name="extension-method"></a>확장 메서드
 
@@ -154,7 +153,7 @@ ML.NET에서 카탈로그는 공통 목적에 따라 그룹화된 확장 함수�
 
 [회귀](#regression)에서 오차 제곱 평균의 제곱근인 평가 메트릭입니다.
 
-## <a name="scoring"></a>점수 매기기
+## <a name="scoring"></a>채점
 
 채점은 학습된 기계 학습 모델에 새 데이터를 적용하고 예측을 생성하는 프로세스입니다. 채점은 추론이라고도 합니다. 모델 유형에 따라 점수는 원시 값, 확률 또는 범주가 될 수 있습니다.
 

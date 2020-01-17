@@ -1,18 +1,19 @@
 ---
 title: ML.NET CLI(명령줄 인터페이스) 도구를 설치하는 방법
-description: ML.NET CLI(명령줄 인터페이스) 도구 개요 및 설치
-ms.date: 04/16/2019
-ms.custom: ''
-ms.openlocfilehash: feeb4832b5bbd39f28ac2c6f6caa40d60b4f3aa9
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+description: ML.NET CLI(명령줄 인터페이스) 도구를 설치, 업그레이드, 다운그레이드 및 제거하는 방법에 대해 알아봅니다.
+ms.date: 12/18/2019
+ms.openlocfilehash: 350122f2d2d2f03484ab6e272b482adf2094495c
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977079"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75739974"
 ---
 # <a name="how-to-install-the-mlnet-command-line-interface-cli-tool"></a>ML.NET CLI(명령줄 인터페이스) 도구를 설치하는 방법
 
-모든 명령 프롬프트(Windows, Mac 또는 Linux)에서 ML.NET CLI를 실행하여 제공한 학습 데이터 세트를 기초로 품질 높은 ML.NET 모델과 소스 코드를 생성할 수 있습니다.
+Windows, Mac 또는 Linux에 ML.NET CLI(명령줄 인터페이스)를 설치하는 방법에 대해 알아봅니다.
+
+ML.NET CLI는 AutoML(자동화된 Machine Learning) 및 학습 데이터 세트를 사용하여 우수한 품질의 ML.NET 모델과 소스 코드를 생성합니다.
 
 > [!NOTE]
 > 이 항목은 현재 미리 보기로 제공되는 ML.NET CLI 및 ML.NET AutoML을 참조하며, 자료는 변경될 수 있습니다.
@@ -23,7 +24,7 @@ ms.locfileid: "73977079"
 
 - (선택 사항) [Visual Studio 2017 또는 2019](https://visualstudio.microsoft.com/vs/)
 
-생성된 C# 코드 프로젝트를 Visual Studio F5 또는 `dotnet run`(.NET Core CLI)으로 실행할 수 있습니다.
+`F5` 키를 누르거나 `dotnet run`(.NET Core CLI)을 사용하여 Visual Studio에서 생성된 C# 코드 프로젝트를 실행할 수 있습니다.
 
 참고: [.NET Core 2.2 SDK](https://dotnet.microsoft.com/download/dotnet-core/2.2) 설치 후 `dotnet tool` 명령이 작동하지 않는 경우 Windows에서 로그아웃했다가 다시 로그인합니다.
 
@@ -132,9 +133,9 @@ ML.NET CLI는 기본 디렉터리 또는 특정 위치에 설치할 수 있습�
 Global Tool을 특정 디렉터리에 설치할 수도 있습니다. 특정 디렉터리에 설치된 경우 사용자는 경로에 해당 디렉터리를 포함하거나, 지정된 디렉터리로 명령을 호출하거나, 지정된 디렉터리 내에서 도구를 호출하여 명령을 사용할 수 있는지 확인해야 합니다.
 이 경우 .NET Core CLI는 이 위치를 PATH 환경 변수에 자동으로 추가하지 않습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [‘ML.NET CLI 도구 시작' 자습서](../tutorials/mlnet-cli.md)
-- [ML.NET CLI 도구를 사용하여 자동으로 모델을 학습하는 방법](../automate-training-with-cli.md)
+- [ML.NET CLI 개요](../automate-training-with-cli.md)
+- [자습서: ML.NET CLI를 사용하여 감정 분석](../tutorials/sentiment-analysis-cli.md)
 - [ML.NET CLI auto-train 명령 참조 가이드](../reference/ml-net-cli-reference.md)
 - [ML.NET CLI의 원격 분석](../resources/ml-net-cli-telemetry.md)

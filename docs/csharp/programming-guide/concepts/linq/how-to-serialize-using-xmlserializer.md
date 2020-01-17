@@ -1,19 +1,19 @@
 ---
-title: '방법: XmlSerializer를 사용하여 serialize(C#)'
+title: XmlSerializer를 사용하여 직렬화하는 방법(C#)
 ms.date: 07/20/2015
 ms.assetid: 2e0a0bbc-c548-4fe2-8741-be5a9ccd0cbb
-ms.openlocfilehash: a3b9976dc4aaf132e8c3c8f03c678724db2b6989
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 0ec19e964471382c6f10f07d6d4bb25f88fd532f
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253328"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347390"
 ---
-# <a name="how-to-serialize-using-xmlserializer-c"></a>방법: XmlSerializer를 사용하여 serialize(C#)
-이 항목에서는 <xref:System.Xml.Serialization.XmlSerializer>를 사용하여 serialize하고 deserialize하는 예제를 보여 줍니다.  
+# <a name="how-to-serialize-using-xmlserializer-c"></a>XmlSerializer를 사용하여 직렬화하는 방법(C#)
+이 항목에서는 <xref:System.Xml.Serialization.XmlSerializer>를 사용하여 직렬화하고 역직렬화하는 예제를 보여 줍니다.  
   
-## <a name="example"></a>예  
- 다음 예제에서는 <xref:System.Xml.Linq.XElement> 개체가 포함된 많은 개체를 만든 다음 메모리 스트림으로 개체를 serialize하고 메모리 스트림에서 개체를 deserialize합니다.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 <xref:System.Xml.Linq.XElement> 개체가 포함된 많은 개체를 만든 다음 메모리 스트림으로 개체를 직렬화하고 메모리 스트림에서 개체를 역직렬화합니다.  
   
 ```csharp  
 using System;  

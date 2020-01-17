@@ -32,12 +32,12 @@ helpviewer_keywords:
 - hat operator [C#]
 - .. operator [C#]
 - range operator [C#]
-ms.openlocfilehash: ba2a8cd4995b9baab2071d3fb3c7980e45565692
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: e69cc5a9634f0b5232562782557645894f94ce2e
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039005"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345297"
 ---
 # <a name="member-access-operators-c-reference"></a>멤버 액세스 연산자(C# 참조)
 
@@ -54,7 +54,7 @@ ms.locfileid: "73039005"
 
 다음 예제와 같이 `.` 토큰을 사용하여 네임스페이스 또는 형식의 멤버에 액세스합니다.
 
-- [ `using` 지시문](../keywords/using-directive.md)의 다음 예제와 같이 `.`을 사용하여 네임스페이스 내에 중첩된 네임스페이스에 액세스합니다.
+- [`using` 지시문](../keywords/using-directive.md)의 다음 예제와 같이 `.`을 사용하여 네임스페이스 내에 중첩된 네임스페이스에 액세스합니다.
 
   [!code-csharp[nested namespaces](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#NestedNamespace)]
 
@@ -109,7 +109,13 @@ void TraceMethod() {}
 
 ## <a name="null-conditional-operators--and-"></a>Null 조건부 연산자 ?. 및 ?[]
 
-C# 6 이상에서 사용할 수 있는 null 조건부 연산자는 피연산자가 null이 아닌 것으로 평가되었을 때만 멤버 액세스 `?.`, 또는 요소 액세스 `?[]` 연산을 피연산자에게 적용합니다. 피연산자가 `null`로 평가되면 연산자 적용 결과가 `null`입니다. Null 조건부 멤버 액세스 연산자 `?.`를 Elvis 연산자라고도 합니다.
+C# 6 이상에서 사용할 수 있는 null 조건부 연산자는 피연산자가 null이 아닌 것으로 평가되었을 때만 [멤버 액세스](#member-access-operator-), `?.` 또는 [요소 액세스](#indexer-operator-), `?[]`, 연산을 피연산자에게 적용하며, 그렇지 않으면 `null`을 반환합니다. 즉, 다음과 같습니다.
+
+- `a`가 `null`로 평가되면 `a?.x` 또는 `a?[x]`의 결과는 `null`입니다.
+- `a`가 null이 아닌 것으로 평가되면 `a?.x` 또는 `a?[x]`의 결과는 각각 `a.x` 또는 `a[x]`의 결과와 같습니다.
+
+  > [!NOTE]
+  > `a.x` 또는 `a[x]`가 예외를 throw하면 `a?.x` 또는 `a?[x]`는 null이 아닌 `a`와 동일한 예외를 throw합니다. 예를 들어 `a`가 null이 아닌 배열 인스턴스이고 `x`가 `a`의 경계 밖에 있는 경우, `a?[x]`는 <xref:System.IndexOutOfRangeException>을 throw합니다.
 
 Null 조건부 연산자는 단락 연산자입니다. 즉 조건부 멤버나 요소 액세스 작업의 한 체인의 작업에서 `null`을 반환하면 나머지 체인은 실행되지 않습니다. 다음 예제에서 `A`가 `null`로 평가되면 `B`가 평가되지 않고, `A` 또는 `B`가 `null`로 평가되면 `C`가 평가되지 않습니다.
 
@@ -123,6 +129,8 @@ A?.B?[C];
 [!code-csharp-interactive[null-conditional operators](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#NullConditional)]
 
 또한 앞의 예제에서는 [null 병합 연산자 `??`](null-coalescing-operator.md)를 사용하여 null 조건부 연산 결과가 `null`인 경우 평가할 대체 식을 지정합니다.
+
+Null 조건부 멤버 액세스 연산자 `?.`를 Elvis 연산자라고도 합니다.
 
 ### <a name="thread-safe-delegate-invocation"></a>스레드로부터 안전한 대리자 호출
 
@@ -168,7 +176,7 @@ C# 8.0 이상에서 사용할 수 있는 연산자 `^`는 요소 위치가 시�
 
 또한 `^` 연산자를 [범위 연산자](#range-operator-)와 함께 사용하여 인덱스 범위를 만들 수 있습니다. 자세한 내용은 [인덱스와 범위](../../tutorials/ranges-indexes.md)를 참조하세요.
 
-## <a name="range-operator-"></a>범위 연산자 ..
+## <a name="range-operator-"></a>범위 연산자 .
 
 C# 8.0 이상에서 사용 가능한 연산자 `..`은 인덱스 범위의 시작과 끝을 피연산자로 지정합니다. 왼쪽 피연산자는 범위의 시작(*포함*)입니다. 오른쪽 피연산자는 범위의 끝(*제외*)입니다. 다음 예제에서와 같이 피연산자 중 하나는 시퀀스의 시작부터 또는 끝부터 인덱스가 될 수 있습니다.
 
@@ -201,7 +209,7 @@ C# 8.0 이상에서 사용 가능한 연산자 `..`은 인덱스 범위의 시�
 
 인덱스 및 범위에 대한 자세한 내용은 [기능 제안 노트](~/_csharplang/proposals/csharp-8.0/ranges.md)를 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 참조](../index.md)
 - [C# 연산자](index.md)

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 2945465bb6a3a362dc640641056712dffd73d559
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 60ebcd9fc9ca18c33d31b82ba5020426d22a7d5a
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394148"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901781"
 ---
 ### <a name="authentication-httpcontextauthentication-property-removed"></a>인증: HttpContext.Authentication 인증 속성이 제거됨
 
@@ -12,9 +12,9 @@ ms.locfileid: "72394148"
 
 #### <a name="change-description"></a>변경 내용 설명
 
-[aspnet/AspNetCore#6504](https://github.com/aspnet/AspNetCore/pull/6504)의 일부로, `HttpContext`에서 사용되지 않는 `Authentication` 속성이 제거되었습니다. `Authentication` 속성은 2.0 이후 더 이상 사용되지 않습니다. 사용되지 않는 이 속성을 사용하여 코드를 새 대체 API로 마이그레이션하기 위해 [마이그레이션 가이드](/aspnet/core/migration/1x-to-2x/identity-2x?view=aspnetcore-2.2#use-httpcontext-authentication-extensions)가 게시되었습니다. 이전 ASP.NET Core 1.x 인증 스택과 관련된 사용되지 않는 나머지 클래스 / API는 커밋 [aspnet/AspNetCore@d7a7c65](https://github.com/aspnet/AspNetCore/commit/d7a7c65)에서 제거되었습니다.
+[dotnet/aspnetcore#6504](https://github.com/dotnet/aspnetcore/pull/6504)의 일부로, `HttpContext`에서 사용되지 않는 `Authentication` 속성이 제거되었습니다. `Authentication` 속성은 2.0 이후 더 이상 사용되지 않습니다. 사용되지 않는 이 속성을 사용하여 코드를 새 대체 API로 마이그레이션하기 위해 [마이그레이션 가이드](/aspnet/core/migration/1x-to-2x/identity-2x?view=aspnetcore-2.2#use-httpcontext-authentication-extensions)가 게시되었습니다. 이전 ASP.NET Core 1.x 인증 스택과 관련된 사용되지 않는 나머지 클래스 / API는 커밋 [dotnet/aspnetcore@d7a7c65](https://github.com/dotnet/aspnetcore/commit/d7a7c65)에서 제거되었습니다.
 
-자세한 내용은 [aspnet/AspNetCore#6533](https://github.com/aspnet/AspNetCore/issues/6533)을 참조하세요.
+토론은 [dotnet/aspnetcore#6533](https://github.com/dotnet/aspnetcore/issues/6533)을 참조하세요.
 
 #### <a name="version-introduced"></a>도입된 버전
 
@@ -24,7 +24,7 @@ ms.locfileid: "72394148"
 
 ASP.NET Core 1.0 API는 <xref:Microsoft.AspNetCore.Authentication.AuthenticationHttpContextExtensions?displayProperty=fullName>의 확장 메서드로 대체되었습니다.
 
-#### <a name="recommended-action"></a>권장 작업
+#### <a name="recommended-action"></a>권장 조치
 
 [마이그레이션 가이드](/aspnet/core/migration/1x-to-2x/identity-2x?view=aspnetcore-2.2#use-httpcontext-authentication-extensions)를 참조하세요.
 

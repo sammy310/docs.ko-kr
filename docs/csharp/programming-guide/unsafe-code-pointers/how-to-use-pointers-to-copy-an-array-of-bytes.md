@@ -1,19 +1,18 @@
 ---
-title: '방법: 포인터를 사용하여 바이트 배열 복사 - C# 프로그래밍 가이드'
-ms.custom: seodec18
+title: 포인터를 사용하여 바이트 배열을 복사하는 방법 - C# 프로그래밍 가이드
 ms.date: 04/20/2018
 helpviewer_keywords:
 - byte arrays [C#]
 - arrays [C#], byte
 - pointers [C#], to copy bytes
-ms.openlocfilehash: d174f51fa1709a70b98473a4dbbad89b9c62c22a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4929699c2d1e07b16d4694cff79f9b1394b1de38
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640305"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75698458"
 ---
-# <a name="how-to-use-pointers-to-copy-an-array-of-bytes--c-programming-guide"></a>방법: 포인터를 사용하여 바이트 배열 복사(C# 프로그래밍 가이드)
+# <a name="how-to-use-pointers-to-copy-an-array-of-bytes-c-programming-guide"></a>포인터를 사용하여 바이트 배열을 복사하는 방법(C# 프로그래밍 가이드)
 
 다음 예제에서는 포인터를 사용하여 배열 간에 바이트를 복사합니다.
 
@@ -25,7 +24,7 @@ ms.locfileid: "54640305"
 
 [!code-csharp[Struct with embedded inline array](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#8)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 프로그래밍 가이드](../index.md)
 - [안전하지 않은 코드 및 포인터](index.md)

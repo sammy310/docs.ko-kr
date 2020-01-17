@@ -1,15 +1,13 @@
 ---
 title: dotnet-trace 도구 - .NET Core
 description: dotnet-trace 명령줄 도구를 설치하고 사용합니다.
-author: sdmaclea
-ms.author: stmaclea
 ms.date: 11/21/2019
-ms.openlocfilehash: 07eaec843e27f5d291b6d18fab53c43051794626
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 64c931db5a18659707e832aaca910cfbbd6823c0
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428887"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714428"
 ---
 # <a name="dotnet-trace-performance-analysis-utility"></a>dotnet-trace 성능 분석 유틸리티
 
@@ -17,7 +15,7 @@ ms.locfileid: "74428887"
 
 ## <a name="install-dotnet-trace"></a>dotnet-trace 설치
 
-[dotnet tool install](../tools/dotnet-tool-install.md) 명령으로 `dotnet-trace` [NuGet 패키지](https://www.nuget.org/packages/dotnet-trace) 설치:
+[dotnet tool install](../tools/dotnet-tool-install.md) 명령으로 `dotnet-trace`[NuGet 패키지](https://www.nuget.org/packages/dotnet-trace) 설치:
 
 ```dotnetcli
 dotnet tool install --global dotnet-trace

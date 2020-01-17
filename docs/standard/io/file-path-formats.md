@@ -9,12 +9,12 @@ helpviewer_keywords:
 - I/O, long paths
 - long paths
 - path formats, Windows
-ms.openlocfilehash: 808c92e906a0bf6f8fdc368396d6d240573de501
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 258cf59fb8383fe131f4a0e78dac6189e1d9c91e
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120781"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337668"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Windows 시스템의 파일 경로 형식
 
@@ -60,7 +60,7 @@ ms.locfileid: "73120781"
 
 다음은 UNC 경로의 몇 가지 예제입니다.
 
-|Path  |설명  |
+|경로  |설명  |
 | -- | -- |
 | `\\system07\C$\` | `system07`에 있는 C: 드라이브의 루트 디렉터리. |
 | `\\Server2\Share\Test\Foo.txt` | \\\\Server2\\ 공유 볼륨의 Test 디렉터리에 있는 Foo.txt 파일입니다.|
@@ -71,7 +71,7 @@ UNC 경로는 언제나 정규화해야 합니다. 이 경로는 상대 디렉�
 
 Windows 운영 체제는 파일을 포함한 모든 리소스를 가리키는 통합된 개체 모델을 가지고 있습니다. 이러한 개체 경로는 콘솔 창에서 액세스할 수 있으며 구형 DOS 및 UNC 경로를 매핑하는 대상인 기호 링크의 특수 폴더를 통해 Win32 레이어에 표시됩니다. 이 특수 폴더는 다음 중 하나인 DOS 디바이스 경로 구문을 통해 액세스됩니다.
 
-`\\.\C:\Test\Foo.txt`  
+`\\.\C:\Test\Foo.txt`
 `\\?\C:\Test\Foo.txt`
 
 드라이브 문자로 드라이브를 식별하는 것 외에, 볼륨 GUID로 볼륨을 식별할 수도 있습니다. 다음 양식을 사용합니다.
@@ -95,14 +95,14 @@ DOS 디바이스 경로는 다음 구성 요소로 구성됩니다.
 
    호출된 UNC에 대한 특정 링크가 있습니다(당연히 `UNC`). 예:
 
-  `\\.\UNC\Server\Share\Test\Foo.txt`  
+  `\\.\UNC\Server\Share\Test\Foo.txt`
   `\\?\UNC\Server\Share\Test\Foo.txt`
 
-    디바이스 UNC의 경우, 서버/공유 부분이 볼륨을 구성합니다. 예를 들어 `\\?\server1\e:\utilities\\filecomparer\`에서 서버/공유 부분은 server1\utilities입니다. 이는 상대 디렉터리 경로를 사용하여 <xref:System.IO.Path.GetFullPath(System.String,System.String)?displayProperty=nameWithType> 같은 메서드를 호출할 때 중요하며, 볼륨을 지나서 탐색하는 것은 불가능합니다. 
+    디바이스 UNC의 경우, 서버/공유 부분이 볼륨을 구성합니다. 예를 들어 `\\?\server1\e:\utilities\\filecomparer\`에서 서버/공유 부분은 server1\utilities입니다. 이는 상대 디렉터리 경로를 사용하여 <xref:System.IO.Path.GetFullPath(System.String,System.String)?displayProperty=nameWithType> 같은 메서드를 호출할 때 중요하며, 볼륨을 지나서 탐색하는 것은 불가능합니다.
 
 DOS 디바이스 경로는 정의에 의해 정규화됩니다. 상대 디렉터리 세그먼트(`.` 및 `..`)는 허용되지 않습니다. 현재 디렉터리는 해당 사용에 포함되지 않습니다.
 
-## <a name="example-ways-to-refer-to-the-same-file"></a>예제: 동일한 파일을 참조하는 방법
+## <a name="example-ways-to-refer-to-the-same-file"></a>예: 동일한 파일을 참조하는 방법
 
 다음 예제는 <xref:System.IO> 네임스페이스에서 API를 사용할 때 파일을 참조할 수 있는 몇 가지 방법을 보여 줍니다. 이 예제는 <xref:System.IO.FileInfo> 개체를 인스턴스화하고 해당 개체의 <xref:System.IO.FileInfo.Name> 및 <xref:System.IO.FileInfo.Length> 속성을 사용하여 파일 이름 및 파일의 길이를 표시합니다.
 
@@ -126,7 +126,7 @@ Windows API에 전달되는 거의 모든 경로는 정규화됩니다. 정규�
 경로 정규화의 첫 번째 단계는 경로의 형식 식별입니다. 경로는 몇 가지 범주 중 하나에 속합니다.
 
 - 디바이스 경로인 경우. 즉, 구분 기호 두 개와 물음표 또는 마침표(`\\?` 또는 `\\.`)로 시작하는 경우.
-- UNC 경로인 경우. 즉, 물음표 또는 마침표 없이 구분 기호 두 개로 시작하는 경우. 
+- UNC 경로인 경우. 즉, 물음표 또는 마침표 없이 구분 기호 두 개로 시작하는 경우.
 - 정규화된 DOS 경로인 경우. 즉, 드라이브 문자, 볼륨 구분 기호 및 구성 요소 구분 기호(`C:\`)로 시작하는 경우.
 - 구형 디바이스(`CON`, `LPT1`)를 지정하는 경우.
 - 현재 드라이브의 루트를 기준으로 하는 경우. 즉, 단일 구성 요소 구분 기호(`\`)로 시작하는 경우.
@@ -137,7 +137,7 @@ Windows API에 전달되는 거의 모든 경로는 정규화됩니다. 정규�
 
 ### <a name="handling-legacy-devices"></a>구형 디바이스 처리
 
-경로가 `CON`, `COM1` 또는 `LPT1` 같은 구형 DOS 디바이스인 경우 앞에 `\\.\`를 덧붙여 디바이스 경로로 변환한 다음, 반환합니다. 
+경로가 `CON`, `COM1` 또는 `LPT1` 같은 구형 DOS 디바이스인 경우 앞에 `\\.\`를 덧붙여 디바이스 경로로 변환한 다음, 반환합니다.
 
 구형 디바이스 이름으로 시작하는 경로는 언제나 <xref:System.IO.Path.GetFullPath(System.String)?displayProperty=nameWithType> 메서드에 의해 구형 디바이스로 해석됩니다. 예를 들어 `CON.TXT`에 대한 DOS 디바이스 경로는 `\\.\CON`이며, `COM1.TXT\file1.txt`에 대한 DOS 디바이스 경로는 `\\.\COM1`입니다.
 
@@ -152,7 +152,7 @@ Windows API에 전달되는 거의 모든 경로는 정규화됩니다. 정규�
 경로가 구분 기호 이외의 요소로 시작하는 경우 현재 드라이브 및 현재 디렉터리를 적용합니다. 예를 들어 경로가 `filecompare`이고 현재 디렉터리가 `C:\utilities\`인 경우, 결과는 `C:\utilities\filecompare\`입니다.
 
 > [!IMPORTANT]
-> 현재 디렉터리는 프로세스에 따른 설정이므로 상대 경로는 멀티스레드 애플리케이션(즉, 대부분의 애플리케이션)에서 위험합니다. 스레드는 현재 디렉터리를 언제든지 변경할 수 있기 때문입니다. .NET Core 2.1부터 <xref:System.IO.Path.GetFullPath(System.String,System.String)?displayProperty=nameWithType> 메서드를 호출하여 상대 경로 및 기본 경로(현재 디렉터리)에서 확인하려는 기준이 되는 절대 경로를 가져올 수 있습니다. 
+> 현재 디렉터리는 프로세스에 따른 설정이므로 상대 경로는 멀티스레드 애플리케이션(즉, 대부분의 애플리케이션)에서 위험합니다. 스레드는 현재 디렉터리를 언제든지 변경할 수 있기 때문입니다. .NET Core 2.1부터 <xref:System.IO.Path.GetFullPath(System.String,System.String)?displayProperty=nameWithType> 메서드를 호출하여 상대 경로 및 기본 경로(현재 디렉터리)에서 확인하려는 기준이 되는 절대 경로를 가져올 수 있습니다.
 
 ### <a name="canonicalizing-separators"></a>구분 기호 정규화
 
@@ -160,7 +160,7 @@ Windows API에 전달되는 거의 모든 경로는 정규화됩니다. 정규�
 
 ### <a name="evaluating-relative-components"></a>상대 구성 요소 평가
 
-경로가 처리될 때 단일 또는 이중 마침표(`.` 또는 `..`)로 구성된 구성 요소 또는 세그먼트를 평가합니다. 
+경로가 처리될 때 단일 또는 이중 마침표(`.` 또는 `..`)로 구성된 구성 요소 또는 세그먼트를 평가합니다.
 
 - 단일 마침표의 경우, 현재 디렉터리를 가리키므로 현재 세그먼트를 제거합니다.
 
@@ -174,9 +174,9 @@ Windows API에 전달되는 거의 모든 경로는 정규화됩니다. 정규�
 
 - 세그먼트가 단일 마침표로 끝나는 경우 해당 마침표를 제거합니다. (단일 또는 이중 마침표의 세그먼트는 이전 단계에서 정규화되었습니다. 마침표 3개 이상의 세그먼트는 정규화되지 않으며 실제로 유효한 파일/디렉터리 이름입니다.)
 
-- 경로가 구분 기호로 끝나지 않는 경우 모든 후행 마침표와 공백(U+0020)을 제거합니다. 마지막 세그먼트가 단순히 단일 또는 이중 마침표인 경우, 이는 위의 상대 구성 요소 규칙에 포함됩니다. 
+- 경로가 구분 기호로 끝나지 않는 경우 모든 후행 마침표와 공백(U+0020)을 제거합니다. 마지막 세그먼트가 단순히 단일 또는 이중 마침표인 경우, 이는 위의 상대 구성 요소 규칙에 포함됩니다.
 
-   이 규칙은 공백 뒤에 후행 구분 기호를 추가하면 후행 공백을 사용하여 디렉터리 이름을 만들 수 있음을 의미합니다.  
+   이 규칙은 공백 뒤에 후행 구분 기호를 추가하면 후행 공백을 사용하여 디렉터리 이름을 만들 수 있음을 의미합니다.
 
    > [!IMPORTANT]
    > 후행 공백을 사용하여 디렉터리 또는 파일 이름을 만들지 **말아야** 합니다. 후행 공백은 디렉터리 액세스를 어렵게 또는 불가능하게 만들 수 있으며, 해당 이름이 후행 공백을 포함하는 디렉터리 또는 파일의 처리를 시도할 때 흔히 애플리케이션이 실패합니다.
@@ -187,7 +187,7 @@ Windows API에 전달되는 거의 모든 경로는 정규화됩니다. 정규�
 
 정규화를 건너뛰려는 이유는 무엇입니까? 세 가지 중요한 이유가 있습니다.
 
-1. 일반적으로 사용할 수 없지만 올바른 경로에 액세스. 예를 들어 `hidden.`이라는 파일 또는 디렉터리는 다른 방법으로 액세스할 수 없습니다. 
+1. 일반적으로 사용할 수 없지만 올바른 경로에 액세스. 예를 들어 `hidden.`이라는 파일 또는 디렉터리는 다른 방법으로 액세스할 수 없습니다.
 
 1. 이미 일반화된 경우 일반화를 건너뛰어서 성능을 개선.
 
@@ -200,7 +200,7 @@ Windows API에 전달되는 거의 모든 경로는 정규화됩니다. 정규�
 
 `\\?\`로 시작하는 경로는 [GetFullPathName 함수](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea)에 명시적으로 전달하더라도 여전히 정규화됩니다.
 
-참고로 `MAX_PATH` 문자보다 큰 경로는 `\\?\` 없이 [GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea)에 전달할 수 있습니다. 이는 Windows에서 처리할 수 있는 최대 문자열 크기까지 임의 길이의 경로를 지원합니다.
+`MAX_PATH` 문자보다 큰 경로는 `\\?\` 없이 [GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea)에 전달할 수 있습니다. 이는 Windows에서 처리할 수 있는 최대 문자열 크기까지 임의 길이의 경로를 지원합니다.
 
 ## <a name="case-and-the-windows-file-system"></a>대/소문자 및 Windows 파일 시스템
 

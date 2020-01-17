@@ -1,15 +1,13 @@
 ---
 title: NuGet 패키지 게시
 description: .NET 라이브러리를 NuGet에 게시하는 모범 사례 권장 사항입니다.
-author: jamesnk
-ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: 9c8442b52ed2c54d2fb3368a2e886c5fc2b19148
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: e567fe3f7e00bf322cdd50786e50128961107469
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65640763"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706467"
 ---
 # <a name="publishing-a-nuget-package"></a>NuGet 패키지 게시
 
@@ -34,7 +32,7 @@ NuGet 패키지는 패키지 리포지토리에서 게시되고 사용됩니다.
 
 공격자가 NuGet 계정에 액세스하여 라이브러리의 악성 버전을 업로드할 수 없는 것이 중요합니다. NuGet.org는 패키지가 게시될 때 2단계 인증 및 전자 메일 알림을 제공합니다. NuGet.org에 로그인한 후 **계정 설정** 페이지에서 이러한 기능을 사용하도록 설정하세요.
 
-![대체 텍스트](./media/publish-nuget-package/nuget-2fa.png " NuGet 계정 보안")
+![대체 텍스트](./media/publish-nuget-package/nuget-2fa.png "NuGet 계정 보안")
 
 **✔️** Microsoft 계정을 사용하여 NuGet에 로그인합니다.
 

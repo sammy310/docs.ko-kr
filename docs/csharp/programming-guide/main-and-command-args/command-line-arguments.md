@@ -1,16 +1,15 @@
 ---
 title: 명령줄 인수 - C# 프로그래밍 가이드
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-ms.openlocfilehash: f74f374f13aef5135b81d59f94bc2c6913766763
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: e73eeeeb0e613d45b2ce31e744803bb75ba2a3c2
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039313"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75700642"
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>명령줄 인수(C# 프로그래밍 가이드)
 
@@ -47,7 +46,7 @@ long num = Convert.ToInt64(s);
 
 자세한 내용은 <xref:System.Int64.Parse%2A> 및 <xref:System.Convert>를 참조하세요.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 다음 예제에서는 콘솔 애플리케이션에서 명령줄 인수를 사용하는 방법을 보여 줍니다. 애플리케이션은 런타임에 하나의 인수를 사용하고, 인수를 정수로 변환하고, 숫자의 계승을 계산합니다. 인수가 제공되지 않으면 애플리케이션에서는 프로그램의 올바른 사용법을 설명하는 메시지를 표시합니다.
 
@@ -74,11 +73,11 @@ long num = Convert.ToInt64(s);
 > [!NOTE]
 > Visual Studio에서 애플리케이션을 실행할 경우 [프로젝트 디자이너, 디버그 페이지](/visualstudio/ide/reference/debug-page-project-designer)에서 명령줄 인수를 지정할 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Environment?displayProperty=nameWithType>
 - [C# 프로그래밍 가이드](../index.md)
 - [Main()과 명령줄 인수](index.md)
-- [방법: 명령줄 인수 표시](how-to-display-command-line-arguments.md)
+- [명령줄 인수를 표시하는 방법](how-to-display-command-line-arguments.md)
 - [Main() 반환 값](main-return-values.md)
 - [클래스](../classes-and-structs/classes.md)

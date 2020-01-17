@@ -14,12 +14,12 @@ helpviewer_keywords:
 - base types, parsing strings
 - DateTime object
 - time strings
-ms.openlocfilehash: 9957c38ad625a27395a3bcc3ddd9ce0b4797b93d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 16daa0ef3133b6cd04dc48b7f79fd365098e4bdf
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127612"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348067"
 ---
 # <a name="parsing-date-and-time-strings-in-net"></a>.NET에서 날짜 및 시간 문자열 구문 분석
 
@@ -56,7 +56,7 @@ ms.locfileid: "73127612"
 > 이 문서의 모든 C# 샘플은 브라우저에서 실행됩니다. **실행** 단추를 눌러 출력을 볼 수 있습니다. 편집해서 직접 실험할 수도 있습니다.
 
 > [!NOTE]
-> 이러한 예제는 GitHub 문서 리포지토리에서 [C#](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/conversions) 및 [VB](https://github.com/dotnet/samples/tree/master/snippets/visualbasic/how-to/conversions)용으로 제공됩니다. 또는 [C#](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/conversions.zip) 또는 [VB](https://github.com/dotnet/samples/raw/master/snippets/visualbasic/how-to/conversions.zip)용 zip 파일로 프로젝트를 다운로드할 수 있습니다.
+> 이러한 예제는 GitHub 문서 리포지토리에서 [C#](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/conversions) 및 [Visual Basic](https://github.com/dotnet/samples/tree/master/snippets/visualbasic/how-to/conversions)용으로 제공됩니다. 또는 [C#](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/conversions.zip) 또는 [Visual Basic](https://github.com/dotnet/samples/raw/master/snippets/visualbasic/how-to/conversions.zip)용 zip 파일로 프로젝트를 다운로드할 수 있습니다.
 
 [!code-csharp-interactive[Parsing.DateAndTime#1](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#1)]
 [!code-vb[Parsing.DateAndTime#1](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#1)]
@@ -84,7 +84,7 @@ ms.locfileid: "73127612"
 
 <xref:System.DateTime.Parse%2A> 및 <xref:System.DateTime.ParseExact%2A> 메서드의 각 오버로드에는 문자열의 서식 지정에 대한 문화권별 정보를 제공하는 <xref:System.IFormatProvider> 매개 변수도 있습니다. 이 <xref:System.IFormatProvider> 개체는 표준 문화권을 나타내는 <xref:System.Globalization.CultureInfo> 개체이거나 <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> 속성에서 반환하는 <xref:System.Globalization.DateTimeFormatInfo> 개체입니다.  <xref:System.DateTime.ParseExact%2A>는 하나 이상의 사용자 지정 날짜 및 시간 형식을 정의하는 추가 문자열이나 문자열 배열 인수도 사용합니다.  
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Parsing Strings](parsing-strings.md)
 - [형식 서식 지정](formatting-types.md)

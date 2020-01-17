@@ -1,6 +1,5 @@
 ---
 title: readonly 키워드 - C# 참조
-ms.custom: seodec18
 ms.date: 06/21/2018
 f1_keywords:
 - readonly_CSharpKeyword
@@ -8,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: 30419200cfce785d7fcbbf59650241580a1f0ce4
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: f9fa6f893e7f999564c4dcb43d40755547d3c793
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73454967"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713120"
 ---
 # <a name="readonly-c-reference"></a>readonly(C# 참조)
 
@@ -103,7 +102,7 @@ public readonly struct Point
 
 `readonly` 한정자는 <xref:System.Object?displayProperty=nameWithType>에 선언된 메서드를 재정의하는 메서드를 포함하여 대부분의 `struct` 멤버에서 유효합니다. 단, 다음과 같은 몇 가지 제한 사항이 있습니다.
 
-- `readonly` 정적 멤버를 선언할 수 없습니다.
+- `readonly` 정적 메서드 또는 속성을 선언할 수 없습니다.
 - `readonly` 생성자를 선언할 수 없습니다.
 
 속성 또는 인덱서 선언에 `readonly` 한정자를 추가할 수 있습니다.
@@ -156,7 +155,7 @@ public string Message { readonly get; set; }
 - [readonly ref 및 readonly 구조체](~/_csharplang/proposals/csharp-7.2/readonly-ref.md)
 - [readonly 구조체 멤버](~/_csharplang/proposals/csharp-8.0/readonly-instance-members.md)
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 참조](../index.md)
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)

@@ -4,12 +4,12 @@ description: 패키지 관리자를 사용하여 CentOS 7에 .NET Core SDK 및 �
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: cb65811d5cae5c747c2660b4b10486f3162b9f33
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: a7b4a76d780714850fe0792f51f1fa1282f6525d
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74998992"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740736"
 ---
 # <a name="centos-7-package-manager---install-net-core"></a>CentOS 7 패키지 관리자 - .NET Core 설치
 
@@ -21,9 +21,9 @@ ms.locfileid: "74998992"
 
 .NET을 설치하기 전에 먼저 다음을 수행해야 합니다.
 
-- Microsoft 키 등록
-- 제품 리포지토리 등록
-- 필수 종속성 설치
+- Microsoft 키를 등록합니다.
+- 제품 리포지토리를 등록합니다.
+- 필수 종속성을 설치합니다.
 
 이 작업은 머신당 한 번만 수행하면 됩니다.
 

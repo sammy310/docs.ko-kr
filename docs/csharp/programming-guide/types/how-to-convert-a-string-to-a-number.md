@@ -1,6 +1,5 @@
 ---
-title: '방법: 문자열을 숫자로 변환 - C# 프로그래밍 가이드'
-ms.custom: seodec18
+title: 문자열을 숫자로 변환하는 방법 - C# 프로그래밍 가이드
 ms.date: 02/11/2019
 helpviewer_keywords:
 - conversions [C#]
@@ -8,14 +7,14 @@ helpviewer_keywords:
 - converting strings to int [C#]
 - strings [C#], converting to int
 ms.assetid: 467b9979-86ee-4afd-b734-30299cda91e3
-ms.openlocfilehash: 8cd5a54bead2790d8e6e4c8e4a5649352f12869d
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 21732acd65eb4522b19ce84600fd8b333fb8a705
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552406"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711872"
 ---
-# <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>방법: 문자열을 숫자로 변환(C# 프로그래밍 가이드)
+# <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>문자열을 숫자로 변환하는 방법(C# 프로그래밍 가이드)
 
 다양한 숫자 형식(`int`, `long`, `double` 등)에 있는 `Parse` 또는 `TryParse` 메서드를 호출하거나 <xref:System.Convert?displayProperty=nameWithType> 클래스의 메서드를 사용하여 [문자열](../../language-reference/builtin-types/reference-types.md)을 숫자로 변환할 수 있습니다.  
   
@@ -55,8 +54,8 @@ ms.locfileid: "74552406"
   
 [!code-csharp[Parsing with Convert methods](~/samples/snippets/csharp/programming-guide/string-to-number/convert/program.cs)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [유형](./index.md)
-- [방법: 문자열이 숫자 값을 나타내는지 확인](../strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)
+- [문자열이 숫자 값을 나타내는지 확인 방법](../strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)
 - [샘플: .NET Core WinForms 서식 유틸리티(C#)](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-cs)

@@ -1,19 +1,21 @@
 ---
 title: 기계 학습 작업
 description: ML.NET에서 지원되는 다양한 기계 학습 작업 및 관련 작업을 살펴봅니다.
-ms.custom: seodec18
-ms.date: 04/23/2019
-author: natke
-ms.openlocfilehash: d0634ce8a0559ab3cdb5bf27fc5406ab02af8df6
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.date: 12/23/2019
+ms.openlocfilehash: badb096ab3e7fbd575d8594b4fbd0e2ebaf63820
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977251"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75739631"
 ---
 # <a name="machine-learning-tasks-in-mlnet"></a>ML.NET의 기계 학습 작업
 
-기계 학습 모델을 빌드할 때 먼저 데이터로 무엇을 달성하려고 하는지 정의해야 합니다. 그러면 상황에 맞는 올바른 기계 학습 작업을 선택할 수 있습니다. 다음 목록은 사용자가 선택할 수 있는 다양한 기계 학습 작업과 몇 가지 일반적인 사용 사례에 대해 설명합니다. 시나리오에 적합한 작업을 선택하는 방법에 대한 자세한 내용은 [알고리즘](../how-to-choose-an-ml-net-algorithm.md)을 참조하세요.
+기계 학습 작업은 요청되는 문제나 질문 및 사용 가능한 데이터에 따라 수행되는 예측 또는 추론의 종류입니다. 예를 들어 분류 작업은 데이터를 범주에 할당하고, 클러스터링 작업은 유사성에 따라 데이터를 그룹화합니다.
+
+기계 학습 작업은 명시적으로 프로그래밍되는 것이 아니라 데이터 패턴을 사용합니다.
+
+이 문서에서는 사용자가 ML.NET에서 선택할 수 있는 다양한 기계 학습 작업과 몇 가지 일반적인 사용 사례에 대해 설명합니다.
 
 시나리오에 적합한 작업을 선택했으면 모델을 학습할 최상의 알고리즘을 선택해야 합니다. 사용 가능한 알고리즘은 각 작업의 섹션에 나열됩니다.
 
@@ -183,6 +185,7 @@ ms.locfileid: "73977251"
 | 출력 이름 | 형식 | 설명|
 | -- | -- | -- |
 | `Score` | <xref:System.Single> | 변칙 검색 모델에서 계산된 음수가 아니며 바인딩되지 않은 점수 |
+| `PredictedLabel` | <xref:System.Boolean> | 입력이 변칙(PredictedLabel=true)인지 아닌지(PredictedLabel=false) 여부를 나타내는 true/false 값입니다. |
 
 ## <a name="ranking"></a>순위 지정
 
