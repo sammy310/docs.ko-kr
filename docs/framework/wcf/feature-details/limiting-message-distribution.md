@@ -2,16 +2,16 @@
 title: 메시지 분포 제한
 ms.date: 03/30/2017
 ms.assetid: 8b5ec4b8-1ce9-45ef-bb90-2c840456bcc1
-ms.openlocfilehash: 113244e6c7eb356d70e9ffb7b85367e9feb34c54
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 36d9d43760e68f6bcf0099ac17dec5a8278d0e49
+ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64750657"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76211900"
 ---
 # <a name="limiting-message-distribution"></a>메시지 분포 제한
 
-피어 채널은 디자인상 브로드캐스트 메시입니다. 피어 채널의 기본 플러딩 모델에는 메시의 임의 멤버가 보낸 각 메시지를 해당 메시의 다른 모든 멤버에 배포하는 작업이 포함됩니다. 이는 멤버가 생성한 모든 메시지가 관련성을 지니며 다른 모든 멤버에 유용한 경우(예: 채트 방) 이상적입니다. 그러나 많은 애플리케이션에서 메시지 배포를 제한해야 하는 경우가 발생합니다. 예를 들어 새 멤버가 메시에 참가하여 메시를 통해 전송된 마지막 메시지를 검색하려고 할 경우 이 요청을 메시의 모든 멤버에 플러딩하지 않아도 됩니다. 이러한 요청을 인접한 환경으로 제한하거나 로컬로 생성된 메시지를 필터링하여 제외할 수 있습니다. 메시지를 메시의 개별 노드로 보낼 수도 있습니다. 이 항목에서는 홉 수, 메시지 전파 필터, 로컬 필터 또는 직접 연결을 사용하여 전체 메시에서 메시지가 전달되는 방법에 대해 설명하고 접근 방식을 선택하기 위한 일반적인 지침을 제공합니다.
+피어 채널은 디자인상 브로드캐스트 메시입니다. 피어 채널의 기본 플러딩 모델에는 메시의 임의 멤버가 보낸 각 메시지를 해당 메시의 다른 모든 멤버에 배포하는 작업이 포함됩니다. 이는 멤버가 생성한 모든 메시지가 관련성을 지니며 다른 모든 멤버에 유용한 경우(예: 채트 방) 이상적입니다. 그러나 많은 애플리케이션에서 메시지 배포를 제한해야 하는 경우가 발생합니다. 예를 들어 새 멤버가 메시에 참가하여 메시를 통해 전송된 마지막 메시지를 검색하려고 할 경우 이 요청을 메시의 모든 멤버에 플러딩하지 않아도 됩니다. 요청은 거의 인접 한 환경으로 제한 될 수 있거나 로컬로 생성 된 메시지를 필터링 할 수 있습니다. 메시지를 메시의 개별 노드로 보낼 수도 있습니다. 이 항목에서는 홉 수, 메시지 전파 필터, 로컬 필터 또는 직접 연결을 사용하여 전체 메시에서 메시지가 전달되는 방법에 대해 설명하고 접근 방식을 선택하기 위한 일반적인 지침을 제공합니다.
 
 ## <a name="hop-counts"></a>홉 수
 
@@ -19,7 +19,7 @@ ms.locfileid: "64750657"
 
 메시지 클래스 구현 시 적용 가능한 속성이나 필드에 `PeerHopCount`를 특성으로 추가하여 메시지에 홉 수를 추가할 수 있습니다. 메시지를 메시에 보내기 전에 이 홉 수를 특정 값으로 설정할 수 있습니다. 이런 방식으로 홉 수를 사용하여 필요한 경우 전체 메시에서 메시지 배포를 제한하면 불필요한 메시지 복제를 방지할 수 있습니다. 이 방법은 메시에 중복 데이터가 아주 많은 경우 또는 바로 인접한 환경이나 홉 수가 많이 차이 나지 않는 환경으로 메시지를 보내는 경우 유용합니다.
 
-- 코드 조각 및 관련된 정보에 대 한 참조를 [피어 채널 블로그](https://go.microsoft.com/fwlink/?LinkID=114531)합니다.
+- 코드 조각 및 관련 정보는 피어 채널 블로그에서 [PeerHopCount 특성: 메시지 배포 제어](https://docs.microsoft.com/archive/blogs/peerchan/the-peerhopcount-attribute-controlling-message-distribution) 를 참조 하세요.
 
 ## <a name="message-propagation-filter"></a>메시지 전파 필터
 
@@ -27,7 +27,7 @@ ms.locfileid: "64750657"
 
 <xref:System.ServiceModel.PeerMessagePropagationFilter>는 단일 함수 <xref:System.ServiceModel.PeerMessagePropagationFilter.ShouldMessagePropagate%2A>가 있는 기본 추상 클래스입니다. 메서드 호출의 첫 번째 인수는 메시지의 전체 복사본을 전달합니다. 메시지를 변경해도 실제 메시지는 영향을 받지 않습니다. 메서드 호출의 마지막 인수는 메시지의 발생 위치(`PeerMessageOrigination.Local` 또는 `PeerMessageOrigination.Remote`)를 식별합니다. 이 메서드를 구체적으로 구현하면 메시지를 로컬 애플리케이션으로 전달하거나(<xref:System.ServiceModel.PeerMessagePropagation>), 원격 클라이언트로 전달하거나(`Local`), 두 위치 모두로 전달하거나(`Remote`), 두 위치 모두로 전달하지 않음(`LocalAndRemote`)을 나타내는 상수를 `None` 열거형에서 반환해야 합니다. 해당 `PeerNode` 개체에 액세스하고 `PeerNode.MessagePropagationFilter` 속성에 파생된 전파 필터 클래스의 인스턴스를 지정하여 이 필터를 적용할 수 있습니다. 피어 채널을 열기 전에 전파 필터가 연결되어 있는지 확인하십시오.
 
-- 코드 조각 및 관련된 정보에 대 한 참조를 [피어 채널 블로그](https://go.microsoft.com/fwlink/?LinkID=114532)합니다.
+- 코드 조각 및 관련 정보는 피어 채널 블로그의 [피어 채널 및 MessagePropagationFilter](https://docs.microsoft.com/archive/blogs/peerchan/peer-channel-and-messagepropagationfilter) 게시물을 참조 하세요.
 
 ## <a name="contacting-an-individual-node-in-the-mesh"></a>메시의 개별 노드에 연결
 
@@ -43,32 +43,32 @@ ms.locfileid: "64750657"
 
 - **메시지를** 수신 해야 하는 경우? 하나의 노드, 메시의 기타 위치에 있는 노드, 메시 절반)
 
-- **얼마나 자주** 이 메시지를 보낼 수는?
+- 이 메시지는 **얼마나 자주** 전송 되나요?
 
-- 어떤 종류의 **대역폭** 이 메시지에 사용할?
+- 이 메시지에 사용 되는 **대역폭** 의 종류는 무엇 인가요?
 
 이러한 사항에 대해 생각해 보면 홉 수, 메시지 전파 필터, 로컬 필터, 직접 연결 중 어느 것을 사용할지 결정하는 데 도움이 됩니다. 다음과 같은 일반적인 지침을 고려해 보십시오.
 
 - **Who**
 
-  - *개별 노드*:  로컬 필터 또는 직접 연결 합니다.
+  - *개별 노드*: 로컬 필터 또는 직접 연결
 
-  - *특정 주변 인접*:  PeerHopCount.
+  - *특정 주변의 이웃*: PeerHopCount.
 
-  - *메시의 복잡 한 하위 집합*:  MessagePropagationFilter.
+  - *메시의 복합 하위 집합*: MessagePropagationFilter.
 
 - **빈도**
 
-  - *매우 자주*:  Direct connection, PeerHopCount, MessagePropagationFilter.
+  - *매우 잦은*: 직접 연결, PeerHopCount, MessagePropagationFilter.
 
-  - *가끔*:  로컬 필터입니다.
+  - *가끔*: 로컬 필터입니다.
 
 - **대역폭 사용**
 
-  - *높은*:  직접 연결으로 MessagePropagationFilter 또는 로컬 필터를 사용 하는 작은 것이 좋습니다.
+  - *High*: 직접 연결, MessagePropagationFilter 또는 로컬 필터를 사용 하는 것이 좋습니다.
 
-  - *낮은*:  있는 경우 직접 연결은 필요 하지 않습니다 수 있습니다.
+  - *낮음*: 직접 연결 하는 것은 필요 하지 않습니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
-- [피어 채널 응용 프로그램 빌드](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)
+- [피어 채널 애플리케이션 빌드](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)

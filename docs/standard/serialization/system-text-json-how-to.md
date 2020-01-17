@@ -1,17 +1,20 @@
 ---
 title: -.Net을 사용 하 여 C# JSON을 serialize 및 deserialize 하는 방법
 ms.date: 01/10/2020
+no-loc:
+- System.Text.Json
+- Newtonsoft.Json
 helpviewer_keywords:
 - JSON serialization
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 047d5b5c6fa339089d2054eb6bfe8b3066c1d00c
-ms.sourcegitcommit: dfad244ba549702b649bfef3bb057e33f24a8fb2
+ms.openlocfilehash: fdca8d957bb2453e90652af1dfe5ef99b33b1b2c
+ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75904652"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76163204"
 ---
 # <a name="how-to-serialize-and-deserialize-marshal-and-unmarshal-json-in-net"></a>.NET에서 JSON을 serialize 및 deserialize (marshal 및 트랜잭션의 역마샬링 위해) 하는 방법
 
@@ -563,7 +566,7 @@ Serialize 할 개체의 속성이 `Dictionary<string,TValue>`형식이 면 `stri
 }
 ```
 
-다형 **직렬화**에 대 한 자세한 내용과 **deserialization**에 대 한 자세한 내용은 [Newtonsoft.json에서 system.string으로 마이그레이션하는 방법](system-text-json-migrate-from-newtonsoft-how-to.md#polymorphic-serialization)을 참조 하세요.
+다형 **직렬화**에 대 한 자세한 내용과 **deserialization**에 대 한 자세한 내용은 [Newtonsoft.Json에서 System.Text.Json로 마이그레이션하는 방법 ](system-text-json-migrate-from-newtonsoft-how-to.md#polymorphic-serialization)을 참조 하세요.
 
 ## <a name="allow-comments-and-trailing-commas"></a>주석과 후행 쉼표 허용
 
@@ -777,9 +780,9 @@ JSON의 Null 값은 유효한 경우에만 무시 됩니다. Null을 허용 하�
 
 ## <a name="additional-resources"></a>추가 자료
 
-* [System.object 개요](system-text-json-overview.md)
+* [System.Text.Json 개요](system-text-json-overview.md)
 * [사용자 지정 변환기를 작성 하는 방법](system-text-json-converters-how-to.md)
-* [Newtonsoft.json에서 마이그레이션하는 방법](system-text-json-migrate-from-newtonsoft-how-to.md)
-* [System.object의 DateTime 및 DateTimeOffset 지원](../datetime/system-text-json-support.md)
-* [System.object API 참조](xref:System.Text.Json)
+* [Newtonsoft.Json에서 마이그레이션하는 방법](system-text-json-migrate-from-newtonsoft-how-to.md)
+* [System.Text.Json의 DateTime 및 DateTimeOffset 지원](../datetime/system-text-json-support.md)
+* [System.Text.Json API 참조](xref:System.Text.Json)
 <!-- * [System.Text.Json roadmap](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/roadmap/README.md)-->

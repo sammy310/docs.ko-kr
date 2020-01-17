@@ -2,15 +2,15 @@
 title: Security Validation and Authentication Failures Per Second
 ms.date: 03/30/2017
 ms.assetid: 266c3bd3-2ffc-4471-94b7-3675443be1ac
-ms.openlocfilehash: 5db8b656b626ea16f89ce432bf4cf1030b87a0b0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 546d81b73e912915d265fb194de4ad9e45d55cea
+ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664989"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76163919"
 ---
 # <a name="security-validation-and-authentication-failures-per-second"></a>Security Validation and Authentication Failures Per Second
-카운터 이름: Security Validation and Authentication Failures Per Second입니다.  
+카운터 이름: Security Validation and Authentication Failures Per Second  
   
 ## <a name="description"></a>설명  
  이 카운터는 "Security Calls Not Authorized" 카운터로 처리되지 않는 보안 문제 때문에 메시지가 거부될 때마다 증가합니다. 이러한 문제는 다음과 같습니다.  
@@ -29,6 +29,6 @@ ms.locfileid: "64664989"
   
 - TLSNEGO/SPNEGO 핸드셰이크 중에 오류가 발생했습니다.  
   
- 이 카운터는 성능 카운터 형식 [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), 값은 다음 수식을 사용 하 여 계산 됩니다.  
+ 이 카운터는 다음 수식을 사용 하 여 값을 계산 하는 성능 카운터 유형 [PERF_COUNTER_COUNTER](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc740048(v=ws.10))입니다.  
   
  (N1-N0)/((D1-D0)/F)

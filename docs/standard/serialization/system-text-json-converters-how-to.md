@@ -1,18 +1,21 @@
 ---
 title: JSON serialization에 대 한 사용자 지정 변환기를 작성 하는 방법-.NET
 ms.date: 01/10/2020
+no-loc:
+- System.Text.Json
+- Newtonsoft.Json
 helpviewer_keywords:
 - JSON serialization
 - serializing objects
 - serialization
 - objects, serializing
 - converters
-ms.openlocfilehash: 0f8b89ec7d7b1677de085631958b888e154aa4fa
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.openlocfilehash: f72d2d83d701b20648140900d65c9098a8abb721
+ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76116714"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76164062"
 ---
 # <a name="how-to-write-custom-converters-for-json-serialization-marshalling-in-net"></a>.NET에서 JSON serialization에 대 한 사용자 지정 변환기를 작성 하는 방법 (마샬링)
 
@@ -285,7 +288,7 @@ Serialization에서 JSON 출력은 다음 예제와 같습니다.
 
 ## <a name="other-custom-converter-samples"></a>기타 사용자 지정 변환기 샘플
 
-[Newtonsoft.json에서 system.object로 마이그레이션](system-text-json-migrate-from-newtonsoft-how-to.md) 문서에는 사용자 지정 변환기의 추가 샘플이 포함 되어 있습니다.
+[Newtonsoft.Json에서 System.Text.Json로 마이그레이션](system-text-json-migrate-from-newtonsoft-how-to.md) 문서에는 사용자 지정 변환기의 추가 샘플이 포함 되어 있습니다.
 
 `System.Text.Json.Serialization` 소스 코드의 [단위 테스트 폴더](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/) 에는 다음과 같은 다른 사용자 지정 변환기 샘플이 포함 되어 있습니다.
 
@@ -300,10 +303,10 @@ Serialization에서 JSON 출력은 다음 예제와 같습니다.
 ## <a name="additional-resources"></a>추가 자료
 
 * [기본 제공 변환기에 대 한 소스 코드](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/src/System/Text/Json/Serialization/Converters)
-* [System.object의 DateTime 및 DateTimeOffset 지원](../datetime/system-text-json-support.md)
-* [System.object 개요](system-text-json-overview.md)
-* [System.object를 사용 하는 방법](system-text-json-how-to.md)
-* [Newtonsoft.json에서 마이그레이션하는 방법](system-text-json-migrate-from-newtonsoft-how-to.md)
-* [System.object API 참조](xref:System.Text.Json)
-* [System.string API 참조](xref:System.Text.Json.Serialization)
+* [System.Text.Json의 DateTime 및 DateTimeOffset 지원](../datetime/system-text-json-support.md)
+* [System.Text.Json 개요](system-text-json-overview.md)
+* [System.Text.Json 사용 방법](system-text-json-how-to.md)
+* [Newtonsoft.Json에서 마이그레이션하는 방법](system-text-json-migrate-from-newtonsoft-how-to.md)
+* [System.Text.Json API 참조](xref:System.Text.Json)
+* [System.Text.Json. Serialization API 참조](xref:System.Text.Json.Serialization)
 <!-- * [System.Text.Json roadmap](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/roadmap/README.md)-->

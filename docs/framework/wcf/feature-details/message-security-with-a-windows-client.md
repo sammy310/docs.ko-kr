@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 01e7d0b8-10f9-45c3-a4c5-53d44dc61eb8
-ms.openlocfilehash: 36193090349f5b8ddb07ee7c3c6c663621cc6d06
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d3c1661acf4d4aa2de8b6eca7015c74ba7f80af1
+ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64637847"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76212021"
 ---
 # <a name="message-security-with-a-windows-client"></a>Windows 클라이언트를 사용하는 메시지 보안
-이 시나리오에서는 메시지 보안 모드에 의해 보안이 설정 된 서버를 Windows Communication Foundation (WCF) 클라이언트를 보여 줍니다. 클라이언트와 서비스는 Windows 자격 증명을 사용하여 인증됩니다.  
+이 시나리오에서는 메시지 보안 모드에서 보호 되는 WCF (Windows Communication Foundation) 클라이언트 및 서버를 보여 줍니다. 클라이언트와 서비스는 Windows 자격 증명을 사용하여 인증됩니다.  
   
- ![Windows 클라이언트를 사용 하 여 보안 메시지](../../../../docs/framework/wcf/feature-details/media/1c8618d4-0005-4022-beb6-32fd087a8c3c.gif "1c8618d4-0005-4022-beb6-32fd087a8c3c")  
+ ![Windows 클라이언트를 사용 하는 메시지 보안](../../../../docs/framework/wcf/feature-details/media/1c8618d4-0005-4022-beb6-32fd087a8c3c.gif "1c8618d4-0005-4022-beb6-32fd087a8c3c")  
   
-|특성|설명|  
+|특징|설명|  
 |--------------------|-----------------|  
 |보안 모드|메시지|  
 |상호 운용성|WCF만|  
@@ -25,7 +25,7 @@ ms.locfileid: "64637847"
 |인증(클라이언트)|서버와 클라이언트의 상호 인증|  
 |무결성|예, 공유 보안 컨텍스트 사용|  
 |기밀성|예, 공유 보안 컨텍스트 사용|  
-|전송|NET.TCP|  
+|Transport|NET.TCP|  
 |바인딩|<xref:System.ServiceModel.NetTcpBinding>|  
   
 ## <a name="service"></a>서비스  
@@ -72,12 +72,12 @@ ms.locfileid: "64637847"
 </configuration>  
 ```  
   
-## <a name="client"></a>클라이언트  
+## <a name="client"></a>Client  
  다음 코드와 구성은 독립적으로 실행되어야 합니다. 다음 작업 중 하나를 수행합니다.  
   
 - 이 코드와 클라이언트 코드를 사용하여 독립 실행형 클라이언트를 만듭니다.  
   
-- 엔드포인트 주소를 정의하지 않는 클라이언트를 만듭니다. 대신 구성 이름을 인수로 사용하는 클라이언트 생성자를 사용합니다. 예를 들어:  
+- 엔드포인트 주소를 정의하지 않는 클라이언트를 만듭니다. 대신 구성 이름을 인수로 사용하는 클라이언트 생성자를 사용합니다. 예를 들면 다음과 같습니다.:  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
@@ -116,7 +116,7 @@ ms.locfileid: "64637847"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [보안 개요](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Windows Server appfabric 보안 모델](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Windows Server Fabric 용 보안 모델](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - COM [WCF], configure service monikers
 - COM [WCF], register service monikers
 ms.assetid: e5e16c80-8a8e-4eef-af53-564933b651ef
-ms.openlocfilehash: a73f6333a91cd8018fe8e0c34d44db87938b8058
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: c68ca0f7c95515a0552b7003454dd87804176d3d
+ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347100"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76212210"
 ---
 # <a name="how-to-register-and-configure-a-service-moniker"></a>방법: 서비스 모니커 등록 및 구성
 형식화 된 계약을 사용 하 여 COM 응용 프로그램 내에서 WCF (Windows Communication Foundation) 서비스 모니커를 사용 하려면 먼저 필요한 특성을 사용 하는 형식을 COM에 등록 하 고 필요한 바인딩을 사용 하 여 COM 응용 프로그램 및 모니커를 구성 해야 합니다. 구성.  
@@ -25,7 +25,7 @@ ms.locfileid: "75347100"
     [assembly: ComVisible(true)]  
     ```  
   
-3. 관리 되는 WCF 클라이언트를 강력한 이름의 어셈블리로 컴파일합니다. 이렇게 하려면 암호화된 키 쌍으로 서명해야 합니다. 자세한 내용은 .NET 개발자 가이드에서 [강력한 이름으로 어셈블리 서명](https://go.microsoft.com/fwlink/?LinkId=94874) 을 참조 하세요.  
+3. 관리 되는 WCF 클라이언트를 강력한 이름의 어셈블리로 컴파일합니다. 이렇게 하려면 암호화된 키 쌍으로 서명해야 합니다. 자세한 내용은 [강력한 이름으로 어셈블리 서명](../../../standard/assembly/sign-strong-name.md)을 참조하세요.  
   
 4. 어셈블리 등록(Regasm.exe) 도구에 `/tlb` 옵션을 사용하여 어셈블리의 형식을 COM에 등록합니다.  
   

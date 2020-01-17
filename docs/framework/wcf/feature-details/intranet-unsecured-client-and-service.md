@@ -5,27 +5,27 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f450f5d4-3547-47ec-9320-2809e6a12634
-ms.openlocfilehash: 65b8597727da256e832351792b9d5d9bd016eb28
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1ffd0421195b0339ad966b661c229e5a5ebb94ec
+ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64587014"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76212094"
 ---
 # <a name="intranet-unsecured-client-and-service"></a>보안이 설정되지 않은 인트라넷 클라이언트 및 서비스
-다음 그림에서는 WCF 응용 프로그램에 안전한 개인 네트워크에서 정보를 제공 하기 위해 개발 된 간단한 Windows Communication Foundation (WCF) 서비스를 보여 줍니다. 보안은 데이터의 중요도 낮거나, 본질적으로 안전한 네트워크 될 또는 WCF 인프라 아래 계층을 보안 기능을 제공 하기 때문에 필요 하지 않습니다.  
+다음 그림은 WCF 응용 프로그램에 보안 개인 네트워크에 대 한 정보를 제공 하기 위해 개발 된 간단한 Windows Communication Foundation (WCF) 서비스를 보여 줍니다. 데이터가 중요 하지 않거나, 네트워크를 본질적으로 안전 하 게 보호 하거나, WCF 인프라 아래 계층에서 보안을 제공 하기 때문에 보안이 필요 하지 않습니다.  
   
- ![보안 되지 않은 인트라넷 클라이언트 및 서비스 시나리오입니다.](./media/intranet-unsecured-client-and-service/unsecured-web-client-service.gif)  
+ ![보안이 적용 되지 않은 인트라넷 클라이언트 및 서비스 시나리오](./media/intranet-unsecured-client-and-service/unsecured-web-client-service.gif)  
   
-|특성|설명|  
+|특징|설명|  
 |--------------------|-----------------|  
-|보안 모드|없음|  
-|전송|TCP|  
+|보안 모드|None|  
+|Transport|TCP|  
 |바인딩|<xref:System.ServiceModel.NetTcpBinding>|  
 |상호 운용성|WCF만|  
-|인증|없음|  
-|무결성|없음|  
-|기밀성|없음|  
+|인증|None|  
+|무결성|None|  
+|기밀성|None|  
   
 ## <a name="service"></a>서비스  
  다음 코드와 구성은 독립적으로 실행되어야 합니다. 다음 작업 중 하나를 수행합니다.  
@@ -70,18 +70,18 @@ ms.locfileid: "64587014"
 </configuration>  
 ```  
   
-## <a name="client"></a>클라이언트  
+## <a name="client"></a>Client  
  다음 코드와 구성은 독립적으로 실행되어야 합니다. 다음 작업 중 하나를 수행합니다.  
   
 - 이 코드와 클라이언트 코드를 사용하여 독립 실행형 클라이언트를 만듭니다.  
   
-- 엔드포인트 주소를 정의하지 않는 클라이언트를 만듭니다. 대신 구성 이름을 인수로 사용하는 클라이언트 생성자를 사용합니다. 예를 들어:  
+- 엔드포인트 주소를 정의하지 않는 클라이언트를 만듭니다. 대신 구성 이름을 인수로 사용하는 클라이언트 생성자를 사용합니다. 예를 들면 다음과 같습니다.:  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
 ### <a name="code"></a>코드  
- 다음 코드에서는 TCP 프로토콜을 사용 하 여 보안이 설정 되지 않은 끝점에 액세스 하는 기본 WCF 클라이언트를 보여 줍니다.  
+ 다음 코드에서는 TCP 프로토콜을 사용 하 여 보안 되지 않은 끝점에 액세스 하는 기본 WCF 클라이언트를 보여 줍니다.  
   
  [!code-csharp[C_UnsecuredClient#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_unsecuredclient/cs/source.cs#2)]
  [!code-vb[C_UnsecuredClient#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_unsecuredclient/vb/source.vb#2)]  
@@ -112,8 +112,8 @@ ms.locfileid: "64587014"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.ServiceModel.NetTcpBinding>
 - [보안 개요](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Windows Server appfabric 보안 모델](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Windows Server Fabric 용 보안 모델](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

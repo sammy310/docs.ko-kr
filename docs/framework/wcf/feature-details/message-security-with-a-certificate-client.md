@@ -5,29 +5,29 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 99770573-c815-4428-a38c-e4335c8bd7ce
-ms.openlocfilehash: fb68487746a7dc9cec1d1473b445bccc7b2b23c2
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 4b282062040ccfc18534ad88effc4c0f1972c5a6
+ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424871"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76212062"
 ---
 # <a name="message-security-with-a-certificate-client"></a>인증서 클라이언트를 사용하는 메시지 보안
-다음 시나리오에서는 메시지 보안 모드를 사용 하 여 보안 서비스를 Windows Communication Foundation (WCF) 클라이언트를 보여 줍니다. 클라이언트 및 서비스는 인증서를 사용하여 인증됩니다. 자세한 내용은 [분산 응용 프로그램 보안](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)합니다.
+The following scenario shows a Windows Communication Foundation (WCF) client and service secured using message security mode. 클라이언트 및 서비스는 인증서를 사용하여 인증됩니다. For more information, see [Distributed Application Security](../../../../docs/framework/wcf/feature-details/distributed-application-security.md).
 
- ![인증서를 사용 하 여 클라이언트를 보여 주는 스크린샷.](./media/message-security-with-a-certificate-client/client-with-certificate.gif)  
+ ![Screenshot that shows a client with certificate.](./media/message-security-with-a-certificate-client/client-with-certificate.gif)  
   
- 샘플 응용 프로그램을 참조 하세요 [메시지 보안 인증서](../../../../docs/framework/wcf/samples/message-security-certificate.md)합니다.  
+ For a sample application, see [Message Security Certificate](../../../../docs/framework/wcf/samples/message-security-certificate.md).  
 
-|특성|설명|  
+|특징|설명|  
 |--------------------|-----------------|  
 |보안 모드|메시지|  
-|상호 운용성|WCF만|  
+|상호 운용성|WCF only|  
 |인증(서버)|서비스 인증서 사용|  
 |인증(클라이언트)|클라이언트 인증서 사용|  
 |무결성|예|  
 |기밀성|예|  
-|전송|HTTP|  
+|Transport|HTTP|  
 |바인딩|<xref:System.ServiceModel.WSHttpBinding>|  
   
 ## <a name="service"></a>서비스  
@@ -84,12 +84,12 @@ ms.locfileid: "67424871"
 </configuration>  
 ```  
   
-## <a name="client"></a>클라이언트  
+## <a name="client"></a>Client  
  다음 코드와 구성은 독립적으로 실행되어야 합니다. 다음 작업 중 하나를 수행합니다.  
   
 - 이 코드와 클라이언트 코드를 사용하여 독립 실행형 클라이언트를 만듭니다.  
   
-- 엔드포인트 주소를 정의하지 않는 클라이언트를 만듭니다. 대신 구성 이름을 인수로 사용하는 클라이언트 생성자를 사용합니다. 예를 들어:  
+- 엔드포인트 주소를 정의하지 않는 클라이언트를 만듭니다. 대신 구성 이름을 인수로 사용하는 클라이언트 생성자를 사용합니다. 예를 들면 다음과 같습니다.:  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
@@ -101,7 +101,7 @@ ms.locfileid: "67424871"
  [!code-vb[C_SecurityScenarios#17](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#17)]  
   
 ### <a name="configuration"></a>구성  
- 다음 구성에서는 엔드포인트 동작을 사용하는 클라이언트 인증서를 지정합니다. 자세한 내용은 [인증서 작업](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)을 참조하세요. 코드를 사용 하 여도 <`identity`> 예상된 서버 id의 도메인 이름 시스템 (DNS)를 지정 하는 요소입니다. Id에 대 한 자세한 내용은 참조 하십시오 [서비스 Id 및 인증](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)합니다.  
+ 다음 구성에서는 엔드포인트 동작을 사용하는 클라이언트 인증서를 지정합니다. 자세한 내용은 [인증서 작업](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)을 참조하세요. The code also uses an <`identity`> element to specify a Domain Name System (DNS) of the expected server identity. For more information about identity, see [Service Identity and Authentication](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -143,9 +143,9 @@ ms.locfileid: "67424871"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [보안 개요](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [서비스 ID 및 인증](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
 - [인증서 작업](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [Windows Server appfabric 보안 모델](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Security Model for Windows Server App Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

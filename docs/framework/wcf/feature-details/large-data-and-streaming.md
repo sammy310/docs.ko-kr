@@ -2,20 +2,21 @@
 title: 큰 데이터 및 스트리밍
 ms.date: 03/30/2017
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
-ms.openlocfilehash: 70e43eaf4dc77e07af8ec65faf9cf0fa9a7a0fe4
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 5719f941c71867699960c6029f9cc512021986f3
+ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991515"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76212202"
 ---
 # <a name="large-data-and-streaming"></a>큰 데이터 및 스트리밍
-WCF (Windows Communication Foundation)는 XML 기반 통신 인프라입니다. XML 데이터는 일반적으로 [xml 1.0 사양](https://go.microsoft.com/fwlink/?LinkId=94838)에 정의 된 표준 텍스트 형식으로 인코딩되어 있으므로 연결 된 시스템 개발자와 설계자는 일반적으로 네트워크를 통해 전송 되는 메시지의 공간 (또는 크기)에 대해 염려 하 고 XML의 텍스트 기반 인코딩을 사용 하면 이진 데이터를 효율적으로 전송할 때 특별 한 과제가 발생 합니다.  
+
+WCF (Windows Communication Foundation)는 XML 기반 통신 인프라입니다. XML 데이터는 일반적으로 [xml 1.0 사양](https://www.w3.org/TR/REC-xml/)에 정의 된 표준 텍스트 형식으로 인코딩되어 있으므로 연결 된 시스템 개발자와 설계자는 일반적으로 네트워크를 통해 전송 되는 메시지의 공간 (또는 크기)에 대해 염려 하 고 XML의 텍스트 기반 인코딩은 이진 데이터를 효율적으로 전송 하기 위한 특별 한 문제를 발생 합니다.  
   
 ## <a name="basic-considerations"></a>기본 고려 사항  
  WCF에 대 한 다음 정보에 대 한 배경 정보를 제공 하기 위해이 섹션에서는 일반적으로 연결 된 시스템 인프라에 적용 되는 인코딩, 이진 데이터 및 스트리밍에 대 한 몇 가지 일반적인 문제 및 고려 사항을 강조 표시 합니다.  
   
-### <a name="encoding-data-text-vs-binary"></a>데이터 인코딩: 텍스트 및 이항  
+### <a name="encoding-data-text-vs-binary"></a>인코딩 데이터: 텍스트와 이진 비교  
  개발자가 일반적으로 말하는 고려 사항에는 XML에 시작 태그와 끝 태그가 반복된다는 점 때문에 이진 형식에 비해 오버헤드가 크다는 점, 숫자 값의 인코딩이 텍스트 값으로 표현되기 때문에 너무 크다는 점, 이진 데이터를 텍스트 형식으로 포함하려면 특수 인코딩이 필요하기 때문에 효과적인 표현이 어렵다는 점 등이 있습니다.  
   
  이러한 종류의 고려 사항 중에는 유용한 것도 많지만, XML 웹 서비스 환경의 XML 텍스트 인코딩 메시지와 레거시 RPC(원격 프로시저 호출) 환경의 이진 인코딩 메시지 사이의 실질적인 차이는 초기 고려 사항에서 제안하는 것만큼 심각하지는 않습니다.  
@@ -56,18 +57,18 @@ WCF (Windows Communication Foundation)는 XML 기반 통신 인프라입니다. 
   
  이러한 제약이 없는 데이터의 경우에는 보통 큰 메시지 하나보다 세션 범위 내의 메시지 시퀀스로 보내는 것이 더 좋습니다. 자세한 내용은이 항목의 뒷부분에 나오는 "스트리밍 데이터" 섹션을 참조 하세요.  
   
- 많은 양의 데이터를 전송 하는 경우 `maxAllowedContentLength` iis 설정 (자세한 내용은 [iis 요청 제한 구성](https://go.microsoft.com/fwlink/?LinkId=253165)참조) 및 `maxReceivedMessageSize` 바인딩 설정 (예: [)을 설정 해야 합니다. MaxReceivedMessageSize](xref:System.ServiceModel.HttpBindingBase.MaxReceivedMessageSize%2A) 또는 <xref:System.ServiceModel.NetTcpBinding.MaxReceivedMessageSize%2A>). 속성 `maxAllowedContentLength` 의 기본값은 28.6 M 이며 기본값 `maxReceivedMessageSize` 은 64kb입니다.  
+ 많은 양의 데이터를 전송 하는 경우 `maxAllowedContentLength` IIS 설정 (자세한 내용은 [Iis 요청 제한 구성](https://docs.microsoft.com/iis/configuration/system.webServer/security/requestFiltering/requestLimits/)참조) 및 `maxReceivedMessageSize` 바인딩 설정 (예: [MaxReceivedMessageSize](xref:System.ServiceModel.HttpBindingBase.MaxReceivedMessageSize%2A) 또는 <xref:System.ServiceModel.NetTcpBinding.MaxReceivedMessageSize%2A>)을 설정 해야 합니다. `maxAllowedContentLength` 속성의 기본값은 28.6이 고 `maxReceivedMessageSize` 속성의 기본값은 64KB입니다.  
   
 ## <a name="encodings"></a>인코딩  
- *인코딩은* 통신 중에 메시지를 표시 하는 방법에 대 한 규칙 집합을 정의 합니다. *인코더* 는 이러한 인코딩을 구현 하 고 발신자 쪽에서 메모리 <xref:System.ServiceModel.Channels.Message> 내를 바이트 스트림 또는 네트워크를 통해 전송 될 수 있는 바이트 버퍼로 전환 하는 일을 담당 합니다. 받는 쪽에서는 인코더가 바이트 시퀀스를 메모리 내 메시지로 변환합니다.  
+ *인코딩은* 통신 중에 메시지를 표시 하는 방법에 대 한 규칙 집합을 정의 합니다. *인코더* 는 이러한 인코딩을 구현 하 고 발신자 쪽에서 메모리 내 <xref:System.ServiceModel.Channels.Message>을 네트워크를 통해 전송 될 수 있는 바이트 스트림 또는 바이트 버퍼로 전환 하는 일을 담당 합니다. 받는 쪽에서는 인코더가 바이트 시퀀스를 메모리 내 메시지로 변환합니다.  
   
  WCF는 세 개의 인코더를 포함 하며 필요한 경우 사용자 고유의 인코더를 작성 하 고 연결할 수 있습니다.  
   
  각각의 표준 바인딩에는 미리 구성된 인코더가 포함되며, Net* 접두사가 있는 바인딩에서는 이진 인코더를 사용하고(<xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement> 클래스를 포함하는 방법으로) <xref:System.ServiceModel.BasicHttpBinding> 및 <xref:System.ServiceModel.WSHttpBinding> 클래스에서는 기본적으로 텍스트 메시지 인코더(<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> 클래스 사용)를 사용합니다.  
   
-|인코더 바인딩 요소|Description|  
+|인코더 바인딩 요소|설명|  
 |-----------------------------|-----------------|  
-|<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>|텍스트 메시지 인코더는 모든 HTTP 기반 바인딩의 기본 인코더이며 상호 운용성이 중요한 모든 사용자 지정 바인딩에 적절합니다. 이 인코더에서는 이진 데이터를 특수 처리하지 않는 표준 SOAP 1.1/SOAP 1.2 텍스트 메시지를 읽고 씁니다. 메시지의 <xref:System.ServiceModel.Channels.MessageVersion.None?displayProperty=nameWithType>속성이로 설정 된 경우 SOAP 봉투 래퍼가 출력에서 생략 되 고 메시지 본문 내용만 serialize 됩니다. <xref:System.ServiceModel.Channels.MessageVersion?displayProperty=nameWithType>|  
+|<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>|텍스트 메시지 인코더는 모든 HTTP 기반 바인딩의 기본 인코더이며 상호 운용성이 중요한 모든 사용자 지정 바인딩에 적절합니다. 이 인코더에서는 이진 데이터를 특수 처리하지 않는 표준 SOAP 1.1/SOAP 1.2 텍스트 메시지를 읽고 씁니다. 메시지의 <xref:System.ServiceModel.Channels.MessageVersion?displayProperty=nameWithType> 속성이 <xref:System.ServiceModel.Channels.MessageVersion.None?displayProperty=nameWithType>로 설정 된 경우 SOAP 봉투 래퍼가 출력에서 생략 되 고 메시지 본문 내용만 serialize 됩니다.|  
 |<xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>|MTOM 메시지 인코더는 이진 데이터의 특수 처리를 구현하는 텍스트 인코더이며, 엄격한 경우별 최적화 유틸리티이기 때문에 표준 바인딩에서는 전혀 기본으로 사용되지 않습니다. MTOM 인코딩이 장점을 제공하는 임계값을 초과하는 이진 데이터가 메시지에 포함되어 있으면, 데이터가 메시지 봉투 뒤의 MIME 부분에 구체화됩니다. 이 단원의 뒷부분에 있는 MTOM 활성화를 참조하십시오.|  
 |<xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>|이진 메시지 인코더는 Net * 바인딩의 기본 인코더 이며 통신 당사자가 모두 WCF를 기반으로 하는 경우 적절 한 선택입니다. 이진 메시지 인코더에서는 .NET 이진 XML 형식을 사용합니다. 이 형식은 일반적으로 동급 XML 1.0 표현보다 크기가 작으며 이진 데이터를 바이트 스트림으로 인코딩하는 XML Infoset을 나타내는 Microsoft만의 이진 표현입니다.|  
   
@@ -126,7 +127,7 @@ class MyData
   
  앞에서 언급한 것과 같이, 데이터를 세그먼트로 나눌 수 없거나, 메시지를 시기 적절하게 배달해야 하거나, 전송을 시작했을 때 데이터 전체를 사용할 수 없는 경우에 텍스트 또는 이진 콘텐츠가 있는 큰 메시지에 대해서만 스트리밍 활성화를 고려해야 합니다.  
   
-### <a name="restrictions"></a>Restrictions  
+### <a name="restrictions"></a>제한 사항  
  스트리밍을 사용 하는 경우 많은 수의 WCF 기능을 사용할 수 없습니다.  
   
 - 메시지 본문의 디지털 서명은 메시지 콘텐츠 전체의 해시 계산을 필요로 하기 때문에 수행할 수 없습니다. 스트리밍을 사용하면 메시지 헤더를 생성하여 보낼 때 콘텐츠를 전부 사용할 수 없기 때문에 디지털 서명을 계산할 수 없습니다.  
@@ -152,7 +153,7 @@ class MyData
  스트리밍은 피어 채널 전송을 사용할 때 사용할 수 없기 때문에 <xref:System.ServiceModel.NetPeerTcpBinding>에서 사용할 수도 없습니다.  
   
 #### <a name="streaming-and-sessions"></a>스트리밍 및 세션  
- 세션 기반 바인딩을 통해 스트리밍 호출이 수행될 경우 예기치 못한 동작이 발생할 수 있습니다. 모든 스트리밍 호출은 사용 중인 바인딩이 세션을 사용하도록 구성된 경우에도 세션을 지원하지 않는 하나의 채널(데이터그램 채널)을 통해 수행됩니다. 여러 클라이언트에서 세션 기반 바인딩을 통해 동일한 서비스 개체에 대한 스트리밍 호출을 수행하고, 서비스 개체의 동시성 모드가 단일 모드로 설정되고, 서비스 개체의 인스턴스 컨텍스트 모드가 PerSession으로 설정된 경우, 모든 호출은 데이터그램 채널을 통해 수행되므로 한 번에 하나의 호출만 처리됩니다. 하나 이상의 클라이언트의 제한 시간이 초과될 수 있습니다. 이 문제는 서비스 개체의 인스턴스 컨텍스트 모드를 PerCall로 설정하거나 동시성 모드를 다중 모드로 설정하여 해결할 수 있습니다.  
+ 세션 기반 바인딩을 통해 스트리밍 호출이 수행될 경우 예기치 못한 동작이 발생할 수 있습니다. 모든 스트리밍 호출은 사용 중인 바인딩이 세션을 사용하도록 구성된 경우에도 세션을 지원하지 않는 하나의 채널(데이터그램 채널)을 통해 수행됩니다. 여러 클라이언트에서 세션 기반 바인딩을 통해 동일한 서비스 개체에 대한 스트리밍 호출을 수행하고, 서비스 개체의 동시성 모드가 단일 모드로 설정되고, 서비스 개체의 인스턴스 컨텍스트 모드가 PerSession으로 설정된 경우, 모든 호출은 데이터그램 채널을 통해 수행되므로 한 번에 하나의 호출만 처리됩니다. 하나 이상의 클라이언트에서 시간 초과가 발생할 수 있습니다. 이 문제는 서비스 개체의 인스턴스 컨텍스트 모드를 PerCall로 설정 하거나 동시성을 여러 개로 설정 하 여 해결할 수 있습니다.  
   
 > [!NOTE]
 > 이 경우 사용할 수 있는 "세션"이 하나이기 때문에 MaxConcurrentSessions에는 영향을 주지 않습니다.  
@@ -220,14 +221,14 @@ public class UploadStreamMessage
 }   
 ```  
   
- 스트림이 EOF(파일의 끝)에 도달하면 스트리밍 전송이 끝나고 메시지가 닫힙니다. 메시지를 보낼 때 (값 반환 또는 작업 호출),를 <xref:System.IO.FileStream> 전달할 수 있으며, 그런 다음 WCF 인프라는 스트림을 완전히 읽고 EOF에 도달할 때까지 해당 스트림의 모든 데이터를 가져옵니다. 그러한 기본 제공되는 <xref:System.IO.Stream> 파생 클래스가 없는 소스에 스트리밍 데이터를 전달하려면 그러한 클래스를 생성하고, 스트림 소스 위에 해당 클래스를 오버레이하고, 그 결과를 인수 또는 반환 값으로 사용합니다.  
+ 스트림이 EOF(파일의 끝)에 도달하면 스트리밍 전송이 끝나고 메시지가 닫힙니다. 메시지를 전송 하는 경우 (값 반환 또는 작업 호출), <xref:System.IO.FileStream>를 전달할 수 있으며,이 경우에는 스트림을 완전히 읽고 EOF에 도달할 때까지 WCF 인프라에서 해당 스트림의 모든 데이터를 가져옵니다. 그러한 기본 제공되는 <xref:System.IO.Stream> 파생 클래스가 없는 소스에 스트리밍 데이터를 전달하려면 그러한 클래스를 생성하고, 스트림 소스 위에 해당 클래스를 오버레이하고, 그 결과를 인수 또는 반환 값으로 사용합니다.  
   
  WCF는 메시지를 받을 때 b a s e 64로 인코딩된 메시지 본문 콘텐츠나 MTOM을 사용 하는 경우 해당 MIME 부분에 대해 스트림을 생성 하며 콘텐츠를 읽을 때 스트림은 EOF에 도달 합니다.  
   
  전송 수준 스트리밍은 다른 메시지 계약 형식(매개 변수 목록, 데이터 계약 인수 및 명시적 메시지 계약)에도 적용되지만 그러한 메시지 형식의 serialization 및 deserialization에는 serializer의 버퍼링이 필요하기 때문에, 그러한 계약 variant는 좋지 않습니다.  
   
 ### <a name="special-security-considerations-for-large-data"></a>큰 데이터의 특수 보안 고려 사항  
- 모든 바인딩에서는 들어오는 메시지의 크기를 제한하여 서비스 거부 공격을 방지할 수 있습니다. 예 <xref:System.ServiceModel.BasicHttpBinding>를 들어는 들어오는 메시지의 크기를 제한 하는 [MaxReceivedMessageSize](xref:System.ServiceModel.HttpBindingBase.MaxReceivedMessageSize%2A) 속성을 노출 하므로를 처리할 때 액세스할 수 있는 최대 메모리 양을 제한 합니다. 메시지. 이 단위는 바이트로 설정되며 기본값은 65,536바이트입니다.  
+ 모든 바인딩에서는 들어오는 메시지의 크기를 제한하여 서비스 거부 공격을 방지할 수 있습니다. 예를 들어 <xref:System.ServiceModel.BasicHttpBinding>는 들어오는 메시지의 크기를 제한 하는 [MaxReceivedMessageSize](xref:System.ServiceModel.HttpBindingBase.MaxReceivedMessageSize%2A) 속성을 노출 하 여 메시지를 처리할 때 액세스할 수 있는 최대 메모리 크기를 제한 하기도 합니다. 이 단위는 바이트로 설정되며 기본값은 65,536바이트입니다.  
   
  큰 데이터 스트리밍 시나리오에 해당되는 보안 위험은 수신기에서 스트리밍을 예상할 때 데이터를 버퍼링하게 만들어 서비스 거부를 일으킵니다. 예를 들어 WCF는 항상 메시지의 SOAP 헤더를 버퍼링 하므로 공격자는 완전히 헤더로 구성 된 대량 악의적인 메시지를 생성 하 여 데이터가 버퍼링 되도록 할 수 있습니다. 스트리밍이 활성화되면 수신기에서 전체 메시지가 한 번에 메시지에 버퍼링될 것이라고 예상하지 않기 때문에 `MaxReceivedMessageSize`를 매우 큰 값으로 설정할 수 있습니다. WCF가 강제로 메시지를 버퍼링 하는 경우 메모리 오버플로가 발생 합니다.  
   
@@ -238,6 +239,6 @@ public class UploadStreamMessage
 > [!NOTE]
 > 버퍼링 또는 스트리밍 전송 중 어느 것을 사용할 것인지를 결정하는 것은 엔드포인트의 로컬 결정입니다. HTTP 전송의 경우 전송 모드는 연결 전체 또는 프록시 서버 및 다른 매개로 전파되지 않습니다. 서비스 인터페이스의 설명에 전송 모드 설정이 반영되지 않았습니다. WCF 클라이언트를 서비스에 생성 한 후에는 스트리밍 전송에서 사용 하도록 설정 된 서비스의 구성 파일을 편집 하 여 모드를 설정 해야 합니다. TCP 및 명명된 파이프 전송의 경우에는 전송 모드가 정책 어설션으로 전파됩니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [방법: 스트리밍 사용](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)
