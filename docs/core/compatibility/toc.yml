@@ -16,7 +16,13 @@
     - name: 2.0-2.1
       href: 2.0-2.1.md
     - name: .NET Framework - .NET Core
-      href: fx-core.md
+      items:
+        - name: 호환성이 손상되는 변경
+          href: fx-core.md
+        - name: 사용할 수 없는 기술
+          href: ../porting/net-framework-tech-unavailable.md?toc=/dotnet/core/compatibility/toc.json&bc=/dotnet/breadcrumb/toc.json
+        - name: 항상 throw하는 API
+          href: unsupported-apis.md
 - name: 영역별
   expanded: true
   items:
@@ -27,7 +33,7 @@
     - name: 암호화
       href: cryptography.md
     - name: Entity Framework Core
-      href: /ef/core/what-is-new/ef-core-3.0/breaking-changes
+      href: /ef/core/what-is-new/ef-core-3.0/breaking-changes?toc=/dotnet/core/compatibility/toc.json&bc=/dotnet/breadcrumb/toc.json
     - name: 전역화
       href: globalization.md
     - name: 네트워킹

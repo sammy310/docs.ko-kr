@@ -3,13 +3,12 @@ title: project.json으로 패키지 종속성 감소
 description: Project.json 기반의 라이브러리를 만들 때 패키지 종속성이 감소합니다.
 author: cartermp
 ms.date: 06/20/2016
-ms.custom: seodec18
-ms.openlocfilehash: 9d4f9d7f6e7a736b7d07062f3cd31d6f45176cb1
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 48ba3ef578388fd98fe7cb830df313512d359483
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674967"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740833"
 ---
 # <a name="reducing-package-dependencies-with-projectjson"></a>project.json으로 패키지 종속성 감소
 
@@ -17,7 +16,7 @@ ms.locfileid: "57674967"
 
 ## <a name="why-its-important"></a>중요한 이유
 
-.NET Core는 NuGet 패키지로 구성된 제품입니다.  필수 패키지는 [.NET 표준 라이브러리 메타패키지](https://www.nuget.org/packages/NETStandard.Library)입니다. 이는 다른 패키지들로 구성된 NuGet 패키지로,  .NET Framework, .NET Core 및 Xamarin/Mono 같은 여러 .NET 구현에서 작업할 수 있도록 보장하는 패키지 집합을 제공합니다.
+.NET Core는 NuGet 패키지로 구성된 제품입니다.  필수 패키지는 [.NET 표준 라이브러리 메타패키지](https://www.nuget.org/packages/NETStandard.Library)입니다. 이는 다른 패키지들로 구성된 NuGet 패키지로, .NET Framework, .NET Core 및 Xamarin/Mono 같은 여러 .NET 구현에서 작업할 수 있도록 보장하는 패키지 집합을 제공합니다.
 
 그러나 라이브러리에서 포함된 모든 패키지를 사용하지는 않을 것입니다.  라이브러리를 작성하여 NuGet을 통해 배포할 때, 실제로 사용하는 패키지만으로 종속성을 "잘라내는" 것이 가장 바람직합니다.  이렇게 하면 NuGet 패키지에서 전체적인 공간을 적게 차지합니다.
 
@@ -34,12 +33,12 @@ ms.locfileid: "57674967"
 
 다음 방법 중 하나를 사용하여 필요 없는 패키지를 알아낼 수 있습니다.
 
-1. 시행착오.  패키지를 제거하고 복원하면서 여전히 컴파일되는지를 알아보고 이 프로세스를 반복합니다.
-2. 참조를 피킹하여 실제로 어떤 코드가 사용되는지를 알아보기 위해 [ILSpy](https://github.com/icsharpcode/ILSpy#ilspy-------) 또는 [.NET Reflector](https://www.red-gate.com/products/dotnet-development/reflector) 같은 도구를 사용합니다.  그런 다음 사용 중인 형식에 해당하지 않는 패키지를 제거할 수 있습니다.
+1. 시행착오. 패키지를 제거하고 복원하면서 여전히 컴파일되는지를 알아보고 이 프로세스를 반복합니다.
+2. 참조를 피킹하여 실제로 어떤 코드가 사용되는지를 알아보기 위해 [ILSpy](https://github.com/icsharpcode/ILSpy#ilspy-------) 또는 [.NET Reflector](https://www.red-gate.com/products/dotnet-development/reflector) 같은 도구를 사용합니다. 그런 다음 사용 중인 형식에 해당하지 않는 패키지를 제거할 수 있습니다.
 
 ## <a name="example"></a>예제
 
-제네릭 컬렉션 형식에 추가 기능을 제공한 라이브러리를 작성했다고 가정해 보겠습니다.  그런 라이브러리는 `System.Collections` 같은 패키지에 종속되어야 하지만, `System.Net.Http` 같은 패키지에는 전혀 종속되지 않을 수 있습니다.  따라서 이 라이브러리에 필요한 것으로만 패키지 종속성을 잘라낼 수 있습니다.
+일반 컬렉션 형식에 추가 기능을 제공한 라이브러리를 작성했다고 가정해 보겠습니다. 그런 라이브러리는 `System.Collections` 같은 패키지에 종속되어야 하지만, `System.Net.Http` 같은 패키지에는 전혀 종속되지 않을 수 있습니다. 따라서 이 라이브러리에 필요한 것으로만 패키지 종속성을 잘라낼 수 있습니다.
 
 이 라이브러리를 잘라내려면 `project.json` 파일로 시작해서 `NETStandard.Library` 버전 `1.6.0`에 대한 참조를 추가합니다.
 

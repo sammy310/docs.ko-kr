@@ -16,13 +16,12 @@ helpviewer_keywords:
 - namespaces [.NET Framework], types
 - types, about types
 ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
-ms.custom: seodec18
-ms.openlocfilehash: 5590bb07c3927ba50000d7f9d99f11e30373343d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5223c9b2031b1e25ec2f84326c811da1a78ddc15
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73105702"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711417"
 ---
 # <a name="common-type-system"></a>공용 형식 시스템
 공용 형식 시스템은 공용 언어 런타임에 형식을 선언하고 사용 및 관리하는 방법을 정의할 뿐 아니라 언어 간 통합에 대한 런타임 지원의 중요한 부분을 차지합니다. 공용 형식 시스템은 다음과 같은 기능을 수행합니다.  
@@ -188,7 +187,7 @@ ms.locfileid: "73105702"
 ### <a name="type-accessibility"></a>형식 액세스 가능성  
  모든 형식에는 다른 형식에서 액세스할 수 있는지를 제어하는 한정자가 있습니다. 다음 표에서는 런타임에서 지원하는 형식 액세스 가능성에 대해 설명합니다.  
   
-|접근성|설명|  
+|액세스 가능성|설명|  
 |-------------------|-----------------|  
 |public|모든 어셈블리에서 액세스할 수 있는 형식입니다.|  
 |어셈블리|해당 어셈블리 안에서만 액세스할 수 있는 형식입니다.|  
@@ -253,7 +252,7 @@ ms.locfileid: "73105702"
  [!code-vb[Conceptual.Types.Members.Fields#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.members.fields/vb/example.vb#1)]  
   
 <a name="Properties"></a>   
-### <a name="properties"></a>properties  
+### <a name="properties"></a>속성  
  속성은 형식의 값 또는 상태에 이름을 지정하고 속성의 값을 가져오거나 설정하는 데 사용하는 메서드를 정의합니다. 속성은 기본 형식, 기본 형식의 컬렉션, 사용자 정의 형식 또는 사용자 정의 형식의 컬렉션일 수 있습니다. 속성은 주로 형식의 공용 인터페이스를 형식의 실제 표시와 무관하게 유지하기 위해 사용합니다. 따라서 속성은 클래스에 직접 저장되지 않은 값을 반영하거나(예를 들어 속성이 계산된 값을 반환하는 경우) 값이 전용 필드에 할당되기 전에 유효성 검사를 수행할 수 있습니다. 다음 예제에서는 후자의 패턴을 보여 줍니다.  
   
  [!code-csharp[Conceptual.Types.Members.Properties#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.members.properties/cs/example.cs#1)]
@@ -292,12 +291,12 @@ ms.locfileid: "73105702"
 |특성|적용 대상|설명|  
 |--------------------|------------------|-----------------|  
 |abstract|메서드, 속성 및 이벤트|형식에서 메서드 구현을 제공하지 않습니다. 추상 메서드를 구현하거나 상속하는 형식에서 메서드에 대한 구현을 제공해야 합니다. 그러나 파생된 형식 자체가 추상 형식인 경우만은 예외입니다. 모든 추상 메서드는 가상 메서드입니다.|  
-|private, family, assembly, family와 assembly, family나 assembly 또는 public|모두|멤버의 액세스 가능성을 정의합니다.<br /><br /> 프라이빗<br /> 멤버와 동일한 형식 또는 중첩된 형식 내에서만 액세스할 수 있습니다.<br /><br /> family<br /> 멤버와 동일한 형식 내에서, 그리고 그 멤버에서 상속된 파생된 형식에서 액세스할 수 있습니다.<br /><br /> 어셈블리<br /> 형식이 정의된 어셈블리에서만 액세스할 수 있습니다.<br /><br /> family and assembly<br /> 패밀리와 어셈블리 모두에 대한 액세스 자격이 있는 형식에서만 액세스할 수 있습니다.<br /><br /> family or assembly<br /> 패밀리 또는 어셈블리에 대한 액세스 자격이 있는 형식에서만 액세스할 수 있습니다.<br /><br /> 공공<br /> 모든 형식에서 액세스할 수 있습니다.|  
+|private, family, assembly, family와 assembly, family나 assembly 또는 public|모두|멤버의 액세스 가능성을 정의합니다.<br /><br /> private<br /> 멤버와 동일한 형식 또는 중첩된 형식 내에서만 액세스할 수 있습니다.<br /><br /> family<br /> 멤버와 동일한 형식 내에서, 그리고 그 멤버에서 상속된 파생된 형식에서 액세스할 수 있습니다.<br /><br /> 어셈블리<br /> 형식이 정의된 어셈블리에서만 액세스할 수 있습니다.<br /><br /> family and assembly<br /> 패밀리와 어셈블리 모두에 대한 액세스 자격이 있는 형식에서만 액세스할 수 있습니다.<br /><br /> family or assembly<br /> 패밀리 또는 어셈블리에 대한 액세스 자격이 있는 형식에서만 액세스할 수 있습니다.<br /><br /> public<br /> 모든 형식에서 액세스할 수 있습니다.|  
 |final|메서드, 속성 및 이벤트|가상 메서드는 파생된 형식에서 재정의할 수 없습니다.|  
 |initialize-only|필드|값을 초기화할 수만 있고 초기화 이후에는 작성할 수 없습니다.|  
 |인스턴스|필드, 메서드, 속성 및 이벤트|`static`(C# 및 C++), `Shared`(Visual Basic), `virtual`(C# 및 C++) 또는 `Overridable`(Visual Basic)로 표시되지 않은 멤버는 instance 키워드가 없는 인스턴스 멤버입니다. 멤버를 사용하는 개체 수만큼의 멤버 복사본이 메모리에 있습니다.|  
 |리터럴|필드|필드에 할당되는 값은 컴파일 타임에 알려지는 기본 제공 값 형식의 고정 값입니다. 리터럴 필드를 때로는 상수라고도 합니다.|  
-|newslot 또는 override|모두|멤버가 시그니처가 같은 상속된 멤버와 상호 작용하는 방법을 정의합니다.<br /><br /> 새 슬롯<br /> 시그니처가 같은 상속된 멤버를 숨깁니다.<br /><br /> override<br /> 상속된 가상 메서드의 정의를 바꿉니다.<br /><br /> 기본값은 새 슬롯입니다.|  
+|newslot 또는 override|모두|멤버가 시그니처가 같은 상속된 멤버와 상호 작용하는 방법을 정의합니다.<br /><br /> 새 슬롯<br /> 시그니처가 같은 상속된 멤버를 숨깁니다.<br /><br /> 재정의<br /> 상속된 가상 메서드의 정의를 바꿉니다.<br /><br /> 기본값은 새 슬롯입니다.|  
 |정적|필드, 메서드, 속성 및 이벤트|멤버는 형식의 특정 인스턴스가 아니라 멤버가 정의된 형식에 속합니다. 멤버는 형식의 인스턴스가 작성되지 않은 경우에도 존재하며 형식의 모든 인스턴스 간에 공유됩니다.|  
 |virtual|메서드, 속성 및 이벤트|메서드는 파생된 형식에서 구현할 수 있으며 정적으로 또는 동적으로 호출할 수 있습니다. 동적 호출을 사용하는 경우, 메서드의 어떤 구현을 호출할지 결정하는 것은 컴파일 타임에 알려진 형식이 아니라 런타임에 호출을 수행하는 인스턴스의 형식입니다. 가상 메서드를 정적으로 호출하려면 원하는 버전의 메서드를 사용하는 형식으로 변수를 캐스팅해야 합니다.|  
   
@@ -314,7 +313,7 @@ ms.locfileid: "73105702"
   
 - 상속된 가상 메서드를 파생된 형식에서 재정의할 수 있습니다. 메서드를 재정의하면 컴파일 타임에 알려진 변수의 형식이 아니라 런타임에 값의 형식을 기반으로 호출되는 메서드에 대한 새 정의가 제공됩니다. 가상 메서드가 `final`로 표시되어 있지 않고 새 메서드에서 최소한 가상 메서드와 동일한 수준의 액세스 가능성을 갖는 경우에만 가상 메서드를 재정의할 수 있습니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [.NET API 브라우저](/dotnet/api)
 - [공용 언어 런타임](../../../docs/standard/clr.md)

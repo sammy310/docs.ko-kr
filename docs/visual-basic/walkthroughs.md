@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual Basic code, walkthroughs
 - walkthroughs [Visual Basic]
 ms.assetid: e4e1f849-e1ce-4cf7-8483-d9b4c4887a8e
-ms.openlocfilehash: a6e45e31e2678ce05dc0f637ed1121b54d8d6cbb
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 76f9b428bc5f613296e24d893f49f124bb13c089
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352837"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636044"
 ---
 # <a name="visual-basic-language-walkthroughs"></a>Visual Basic 언어 연습
 
@@ -35,7 +35,7 @@ ms.locfileid: "74352837"
  클래스와 해당 필드, 속성, 메서드, 이벤트를 선언하는 방법을 설명합니다.
 
 - [Visual Basic에서 쿼리 작성](programming-guide/concepts/linq/walkthrough-writing-queries.md)  
- Visual Basic 언어 기능을 사용하여 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 쿼리 식을 작성하는 방법을 보여 줍니다.
+ Visual Basic 언어 기능을 사용하여 LINQ(Language-Integrated Query) 쿼리 식을 작성하는 방법을 보여 줍니다.
 
 - [Visual Basic에서 IEnumerable(Of T) 구현](programming-guide/language-features/control-flow/walkthrough-implementing-ienumerable-of-t.md)  
  `IEnumerable(Of String)` 인터페이스를 구현하는 클래스와 `IEnumerator(Of String)` 인터페이스를 구현하는 클래스를 만들어 한 번에 한 줄씩 텍스트 파일을 읽는 방법을 보여 줍니다.

@@ -3,12 +3,12 @@ title: C# 7.0의 새로운 기능 - C# 가이드
 description: C# 언어 버전 7.0의 새로운 기능을 살펴봅니다.
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 0f26a9647503ebb667d961fefaa05a25a71ec6f5
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 73563a04dea04c942a6326d6a04ddd54bb80b0ed
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926568"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75694584"
 ---
 # <a name="whats-new-in-c-70"></a>C# 7.0의 새로운 기능
 
@@ -211,7 +211,7 @@ ref local 및 ref return을 추가하면 값을 복사하거나 역참조 작업
 [!code-csharp[TaskExample](~/samples/snippets/csharp/new-in-7/AsyncWork.cs#TaskExample "Task returning method with local function")]
 
 > [!NOTE]
-> 로컬 함수가 지원하는 일부 디자인은 *람다 식*을 사용하여 완료할 수 있습니다. 관심 있는 사용자는 [차이점을 자세히 확인](../local-functions-vs-lambdas.md)할 수 있습니다.
+> 로컬 함수가 지원하는 일부 디자인은 *람다 식*을 사용하여 완료할 수 있습니다. 자세한 내용은 [로컬 함수와 람다 식 비교](../local-functions-vs-lambdas.md)를 참조하세요.
 
 ## <a name="more-expression-bodied-members"></a>추가 식 본문 멤버
 

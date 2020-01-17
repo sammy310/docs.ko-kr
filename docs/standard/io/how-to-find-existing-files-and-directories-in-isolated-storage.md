@@ -17,14 +17,12 @@ helpviewer_keywords:
 - locating directories in isolated storage file
 - storing data using isolated storage, finding files and directories
 ms.assetid: eb28458a-6161-4e7a-9ada-30ef93761b5c
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 277f7d562d5e345556a9047f6e4bf2b60eaef462
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dfebcc9acf0b699f898c106921d15ce0294bc5d2
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646713"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75707135"
 ---
 # <a name="how-to-find-existing-files-and-directories-in-isolated-storage"></a>방법: 격리된 스토리지의 기존 파일 및 디렉터리 찾기
 
@@ -41,7 +39,7 @@ ms.locfileid: "54646713"
  [!code-csharp[Conceptual.IsolatedStorage#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source8.cs#9)]
  [!code-vb[Conceptual.IsolatedStorage#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source8.vb#9)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorageFile>
 - [격리된 스토리지](../../../docs/standard/io/isolated-storage.md)

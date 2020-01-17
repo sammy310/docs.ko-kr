@@ -27,12 +27,12 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: ca2513a0f865fd7da728f7d3247bdb7b50a2f48a
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 8701991542f1e950914d5b4275ae8dcd68ad83a1
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73036423"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345362"
 ---
 # <a name="arithmetic-operators-c-reference"></a>산술 연산자(C# 참조)
 
@@ -51,13 +51,13 @@ ms.locfileid: "73036423"
 
 ### <a name="postfix-increment-operator"></a>후위 증가 연산자
 
-`x++`의 결과는 다음 예제와 같이 연산 ‘전’ `x`의 값입니다. 
+`x++`의 결과는 다음 예제와 같이 연산 *전* `x`의 값입니다.
 
 [!code-csharp-interactive[postfix increment](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#PostfixIncrement)]
 
 ### <a name="prefix-increment-operator"></a>후위 증가 연산자
 
-`++x`의 결과는 다음 예제와 같이 연산 ‘후’ `x`의 값입니다. 
+`++x`의 결과는 다음 예제와 같이 연산 *후* `x`의 값입니다.
 
 [!code-csharp-interactive[prefix increment](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#PrefixIncrement)]
 
@@ -69,13 +69,13 @@ ms.locfileid: "73036423"
 
 ### <a name="postfix-decrement-operator"></a>후위 감소 연산자
 
-`x--`의 결과는 다음 예제와 같이 연산 ‘전’ `x`의 값입니다. 
+`x--`의 결과는 다음 예제와 같이 연산 *전* `x`의 값입니다.
 
 [!code-csharp-interactive[postfix decrement](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#PostfixDecrement)]
 
 ### <a name="prefix-decrement-operator"></a>후위 감소 연산자
 
-`--x`의 결과는 다음 예제와 같이 연산 ‘후’ `x`의 값입니다. 
+`--x`의 결과는 다음 예제와 같이 연산 *후* `x`의 값입니다.
 
 [!code-csharp-interactive[prefix decrement](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#PrefixDecrement)]
 
@@ -187,7 +187,7 @@ x = x op y
 
 [!code-csharp-interactive[compound assignment with cast](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#CompoundAssignmentWithCast)]
 
-각각 `+=` 및 `-=` 연산자를 사용하여 [이벤트](../keywords/event.md)에서 구독하거나 구독을 취소할 수도 있습니다. 자세한 내용은 [방법: 이벤트 구독 및 구독 취소](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)를 참조하세요.
+각각 `+=` 및 `-=` 연산자를 사용하여 [이벤트](../keywords/event.md)에서 구독하거나 구독을 취소할 수도 있습니다. 자세한 내용은 [이벤트를 구독 및 구독 취소하는 방법](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)을 참조하세요.
 
 ## <a name="operator-precedence-and-associativity"></a>연산자 우선 순위 및 결합성
 
@@ -262,7 +262,7 @@ x = x op y
 - [Checked 및 Unchecked 연산자](~/_csharplang/spec/expressions.md#the-checked-and-unchecked-operators)
 - [숫자 승격](~/_csharplang/spec/expressions.md#numeric-promotions)
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 참조](../index.md)
 - [C# 연산자](index.md)

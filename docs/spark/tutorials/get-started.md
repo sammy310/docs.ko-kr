@@ -4,12 +4,12 @@ description: Windows에서 .NET Core를 사용하여 .NET for Apache Spark 앱�
 ms.date: 11/04/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 1b736e078eea40e399882c0df020062b6aa758ad
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 934b91a258937a976804109c71df232b8ce6d6d7
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740520"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337595"
 ---
 # <a name="tutorial-get-started-with-net-for-apache-spark"></a>자습서: .NET for Apache Spark 시작
 
@@ -31,18 +31,18 @@ ms.locfileid: "73740520"
 
 .NET 앱 빌드를 시작하려면 .NET SDK(소프트웨어 개발 키트)를 다운로드하여 설치해야 합니다.
 
-[.NET Core SDK](https://dotnet.microsoft.com/download/dotnet-core/3.0)를 다운로드하여 설치합니다. SDK를 설치하면 `dotnet` 도구 체인이 PATH에 추가됩니다. 
+[.NET Core SDK](https://dotnet.microsoft.com/download/dotnet-core/3.0)를 다운로드하여 설치합니다. SDK를 설치하면 `dotnet` 도구 체인이 PATH에 추가됩니다.
 
 .NET Core SDK를 설치한 후에는 새 명령 프롬프트를 열고 `dotnet`을 실행합니다.
 
-명령이 실행되고 dotnet 사용 방법에 대한 정보가 출력되면 다음 단계로 이동할 수 있습니다. `'dotnet' is not recognized as an internal or external command` 오류가 표시되면 명령을 실행하기 전에 **새** 명령 프롬프트를 열어야 합니다. 
+명령이 실행되고 dotnet 사용 방법에 대한 정보가 출력되면 다음 단계로 이동할 수 있습니다. `'dotnet' is not recognized as an internal or external command` 오류가 표시되면 명령을 실행하기 전에 **새** 명령 프롬프트를 열어야 합니다.
 
 ### <a name="2-install-java"></a>2. Java 설치
 
 [Java 8.1](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)을 설치합니다.
 
 운영 체제에 적합한 버전을 선택합니다. 예를 들어 Windows x64 머신의 경우 **jdk-8u201-windows-x64.exe**를 선택합니다. 그런 다음, `java` 명령을 사용하여 설치를 확인합니다.
-   
+
 ![Java 다운로드](https://dotnet.microsoft.com/static/images/java-jdk-downloads-windows.png?v=6BbJHoNyDO-PyYVciImr5wzh2AW_YHNcyb3p093AwPA)
 
 ### <a name="3-install-7-zip"></a>3. 7-zip 설치
@@ -52,12 +52,12 @@ Apache Spark는 압축된 .tgz 파일로 다운로드됩니다. 7-zip 같은 압
 * [7-Zip 다운로드](https://www.7-zip.org/)를 방문합니다.
 * 페이지의 첫 번째 표에서 운영 체제에 따라 32비트 x86 또는 64비트 x64 다운로드를 선택합니다.
 * 다운로드가 완료되면 설치 관리자를 실행합니다.
-   
+
 ![7Zip 다운로드](https://dotnet.microsoft.com/static/images/7-zip-downloads.png?v=W6qWtFC1tTMKv3YGXz7lBa9F3M22uWyTvkMmunyroNk)
 
 ### <a name="4-install-apache-spark"></a>4. Apache Spark 설치
 
-[Apache Spark를 다운로드하여 설치](https://spark.apache.org/downloads.html)합니다. 버전 2.3.* 또는 2.4.0, 2.4.1, 2.4.3, 2.4.4 중에서 선택해야 합니다(.NET for Apache Spark는 다른 버전의 Apache Spark와 호환되지 않음).  
+[Apache Spark를 다운로드하여 설치](https://spark.apache.org/downloads.html)합니다. 버전 2.3.* 또는 2.4.0, 2.4.1, 2.4.3, 2.4.4 중에서 선택해야 합니다(.NET for Apache Spark는 다른 버전의 Apache Spark와 호환되지 않음).
 
 다음 단계에서 사용되는 명령에서는 [Apache Spark 2.4.1을 다운로드하여 설치](https://archive.apache.org/dist/spark/spark-2.4.1/spark-2.4.1-bin-hadoop2.7.tgz)했다고 가정합니다. 다른 버전을 사용하려는 경우 **2.4.1**을 적절한 버전 번호로 바꿉니다. 그런 다음, **.tar** 파일 및 Apache Spark 파일의 압축을 풉니다.
 
@@ -74,9 +74,9 @@ Apache Spark 파일의 압축을 풀려면:
 * **압축 풀기** 필드 아래에 있는 확인란의 선택을 취소합니다.
 * **확인**을 선택합니다.
 * Apache Spark 파일이 C:\bin\spark-2.4.1-bin-hadoop2.7\에 추출되었습니다.
-      
+
 ![Spark 설치](https://dotnet.microsoft.com/static/images/spark-extract-with-7-zip.png?v=YvjUv54LIxI9FbALPC3h8zSQdyMtK2-NKbFOliG-f8M)
-    
+
 다음 명령을 실행하여 Apache Spark를 찾는 데 사용되는 환경 변수를 설정합니다.
 
 ```console
@@ -103,7 +103,7 @@ Microsoft.Spark.Worker 압축을 풀려면:
 * **압축 풀기** 필드에 **C:\bin**을 입력합니다.
 * **압축 풀기** 필드 아래에 있는 확인란의 선택을 취소합니다.
 * **확인**을 선택합니다.
-  
+
 ![.NET Spark 설치](https://dotnet.microsoft.com/static/images/dotnet-for-spark-extract-with-7-zip.png?v=jwCyum9mL0mGIi4V5zC7yuvLfcj1_nL-QFFD8TClhZk)
 
 ### <a name="6-install-winutils"></a>6. WinUtils 설치
@@ -111,7 +111,7 @@ Microsoft.Spark.Worker 압축을 풀려면:
 .NET for Apache Spark를 사용하려면 Apache Spark와 함께 WinUtils를 설치해야 합니다. [winutils.exe를 다운로드](https://github.com/steveloughran/winutils/blob/master/hadoop-2.7.1/bin/winutils.exe)합니다. 그런 다음, WinUtils를 **C:\bin\spark-2.4.1-bin-hadoop2.7\bin**에 복사합니다.
 
 > [!NOTE]
-> 다른 Hadoop 버전을 사용 중인 경우(Spark 설치 폴더 이름 끝에 주석으로 처리되어 있음) 해당 Hadoop 버전과 호환되는 [WinUtils 버전을 선택](https://github.com/steveloughran/winutils)합니다. 
+> 다른 Hadoop 버전을 사용 중인 경우(Spark 설치 폴더 이름 끝에 주석으로 처리되어 있음) 해당 Hadoop 버전과 호환되는 [WinUtils 버전을 선택](https://github.com/steveloughran/winutils)합니다.
 
 ### <a name="7-set-dotnet_worker_dir-and-check-dependencies"></a>7. DOTNET_WORKER_DIR 설정 및 종속성 확인
 

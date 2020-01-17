@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1767f3a7-29d2-4834-a763-7d169693fa8b
-ms.openlocfilehash: 1b8a00c7716a60daec4e4f6af6ae8e3a7a45e943
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: f838cbd0a1884d9fca1f12398b996cde93af453a
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346168"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937555"
 ---
 # <a name="calling-service-operations-wcf-data-services"></a>서비스 작업 호출(WCF Data Services)
 OData (Open Data Protocol)는 데이터 서비스에 대 한 서비스 작업을 정의 합니다. WCF Data Services를 사용 하면 데이터 서비스에서 메서드로 이러한 작업을 정의할 수 있습니다. 다른 데이터 서비스 리소스와 마찬가지로, 이러한 서비스 작업도 URI를 사용하여 지정합니다. 서비스 작업은 엔터티 형식의 컬렉션, 단일 엔터티 형식 인스턴스, 그리고 정수, 문자열과 같은 기본 형식을 반환할 수 있습니다. 서비스 작업은 `null`(Visual Basic에서 `Nothing`)도 반환할 수 있습니다. WCF Data Services 클라이언트 라이브러리를 사용 하 여 HTTP GET 요청을 지 원하는 서비스 작업에 액세스할 수 있습니다. 이러한 종류의 서비스 작업은 <xref:System.ServiceModel.Web.WebGetAttribute>가 적용된 메서드로 정의할 수 있습니다. 자세한 내용은 [서비스 작업](service-operations-wcf-data-services.md)을 참조 하세요.  
@@ -32,7 +32,7 @@ OData (Open Data Protocol)는 데이터 서비스에 대 한 서비스 작업을
   
 - 엔터티 또는 기본 형식의 단일 결과 또는 두 개 이상의 입력 매개 변수가 필요한 단일 결과를 반환하는 GET 서비스 작업을 호출하기 위해 <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A>을 사용할 수 없습니다. 대신 <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> 메서드를 호출해야 합니다.  
   
-- 도구에 의해 생성되고 <xref:System.Data.Services.Client.DataServiceContext> 또는 <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> 메서드를 사용하여 서비스 작업을 호출하는 강력한 형식의 <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> 부분 클래스에 확장명 메서드를 만드는 것을 고려해 보세요. 이렇게 하면 컨텍스트에서 직접 서비스 작업을 호출할 수 있습니다. 자세한 내용은 블로그 게시물 [서비스 작업 및 WCF Data Services 클라이언트](https://blogs.msdn.microsoft.com/astoriateam/2010/05/26/service-operations-and-the-wcf-data-services-client/)를 참조 하세요.  
+- 도구에 의해 생성되고 <xref:System.Data.Services.Client.DataServiceContext> 또는 <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> 메서드를 사용하여 서비스 작업을 호출하는 강력한 형식의 <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> 부분 클래스에 확장명 메서드를 만드는 것을 고려해 보세요. 이렇게 하면 컨텍스트에서 직접 서비스 작업을 호출할 수 있습니다. 자세한 내용은 블로그 게시물 [서비스 작업 및 WCF Data Services 클라이언트](https://docs.microsoft.com/archive/blogs/astoriateam/service-operations-and-the-wcf-data-services-client)를 참조 하세요.  
   
 - <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A>를 사용 하 여 서비스 작업을 호출 하는 경우 클라이언트 라이브러리는 앰퍼샌드 (&)와 같은 예약 문자의 백분율 인코딩 및 문자열에 있는 작은따옴표 이스케이프를 수행 하 여 <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A>에 제공 된 문자를 자동으로 이스케이프 합니다. 그러나 *Execute* 메서드 중 하나를 호출 하 여 서비스 작업을 호출 하는 경우 사용자가 제공 하는 문자열 값의 이스케이프를 수행 해야 합니다. URI의 작은 따옴표는 작은 따옴표의 쌍으로 이스케이프됩니다.  
   

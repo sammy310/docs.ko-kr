@@ -1,15 +1,13 @@
 ---
 title: 버전 관리 및 .NET 라이브러리
 description: .NET 라이브러리의 버전을 관리하는 모범 사례 권장 사항입니다.
-author: jamesnk
-ms.author: mairaw
 ms.date: 12/10/2018
-ms.openlocfilehash: 9250e48707c0ea72cdf8bef9663f5a3516309b86
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 8ed3217e39b1fe0f330a650ec72cda224866e207
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70969016"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706415"
 ---
 # <a name="versioning"></a>버전 관리
 
@@ -35,7 +33,7 @@ NuGet 패키지 식별자와 NuGet 패키지 버전을 결합하여 NuGet에서 
 
 NuGet 패키지 버전은 개발자가 가장 보기 쉬운 버전이므로 [SemVer(유의적 버전)](https://semver.org/)를 사용하여 업데이트하는 것이 좋습니다. SemVer는 릴리스 간 변경 내용의 중요도를 나타내며, 개발자가 사용할 버전을 선택할 때 정확하고 합리적으로 결정할 수 있도록 지원합니다. 예를 들어 `1.0`에서 `2.0`으로 이동하는 경우 호환성이 손상되는 변경이 있을 수 있습니다.
 
-**✔️ 고려** [SemVer 2.0.0](https://semver.org/)을 사용하여 NuGet 패키지 버전을 관리합니다.
+**✔️ 고려**[SemVer 2.0.0](https://semver.org/)을 사용하여 NuGet 패키지 버전을 관리합니다.
 
 **✔️** 사용자에게 일반적으로 표시되는 버전 번호인 NuGet 패키지 버전을 공용 문서에서 사용합니다.
 

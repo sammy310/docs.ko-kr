@@ -1,15 +1,15 @@
 ---
-title: '방법: 그룹을 사용하여 파일을 여러 파일로 분할(LINQ)(C#)'
+title: 그룹을 사용하여 파일을 여러 파일로 분할하는 방법(LINQ)(C#)
 ms.date: 07/20/2015
 ms.assetid: 8179b91c-d778-4e57-884f-77fe5a8e4e40
-ms.openlocfilehash: 5f2ae7657162ba5a2c88e5378119eaad4cb1e288
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 934b6385a8634c23a4e29098367c9aaa7355f11c
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253274"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347313"
 ---
-# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-c"></a>방법: 그룹을 사용하여 파일을 여러 파일로 분할(LINQ)(C#)
+# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-c"></a>그룹을 사용하여 파일을 여러 파일로 분할하는 방법(LINQ)(C#)
 이 예제에서는 두 파일의 내용을 병합한 다음 새로운 방식으로 데이터를 구성하는 새 파일 집합을 만드는 한 가지 방법을 보여 줍니다.  
   
 ### <a name="to-create-the-data-files"></a>데이터 파일을 만들려면  
@@ -44,7 +44,7 @@ ms.locfileid: "70253274"
     El Yassir, Mehdi  
     ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```csharp  
 class SplitWithGroups  
@@ -128,7 +128,7 @@ class SplitWithGroups
 
 System.Linq 및 System.IO 네임스페이스에 대한 `using` 지시문을 통해 C# 콘솔 애플리케이션 프로젝트를 만듭니다.
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [LINQ 및 문자열(C#)](./linq-and-strings.md)
 - [LINQ 및 파일 디렉터리(C#)](./linq-and-file-directories.md)

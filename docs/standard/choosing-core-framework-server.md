@@ -4,12 +4,12 @@ description: .NET에서 서버 앱을 구축할 때 고려해야 할 .NET 구현
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: e5df362231b0786a58a4c3c9ae8f5a167930a12e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: b2b9e15cfdfd63d070ae94c29a9f2d1a5b5c87b2
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70799262"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75738671"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>서버 앱에 대해 .NET Core와 .NET Framework 중에 선택
 
@@ -95,13 +95,13 @@ Docker 컨테이너는 고유한 Linux 또는 Windows 인프라나 [Azure Kubern
 
 - 언어 지원: Visual Basic 및 F#은 현재 .NET Core에서 지원되지만 일부 프로젝트 형식에서는 지원되지 않습니다. 지원되는 프로젝트 템플릿 목록은 [dotnet new에 대한 템플릿 옵션](../core/tools/dotnet-new.md#arguments)을 참조하세요.
 
-공식 로드맵 외에 다른 프레임워크를 .NET Core로 이식할 수 있습니다. 전체 목록은 [port-to-core](https://github.com/dotnet/corefx/issues?q=is%3Aopen+is%3Aissue+label%3Aport-to-core)로 표시된 CoreFX 문제를 참조하세요. 이 목록이 해당 구성 요소를 .NET Core에 적용하겠다는 Microsoft의 약속을 나타내지는 않습니다. 단순히 커뮤니티의 바람을 파악한 것입니다. `port-to-core`로 표시된 구성 요소에 관심이 있는 경우 GitHub의 토론에 참여하세요. 누락된 내용이 있다고 생각이 들면 새로운 문제를 [CoreFX 리포지토리](https://github.com/dotnet/corefx/issues/new)에 등록하세요.
+공식 로드맵 외에 다른 프레임워크를 .NET Core로 이식할 수 있습니다. 전체 목록은 [port-to-core](https://github.com/dotnet/corefx/issues?q=is%3Aopen+is%3Aissue+label%3Aport-to-core)로 표시된 CoreFX 문제를 참조하세요. 이 목록이 해당 구성 요소를 .NET Core에 적용하겠다는 Microsoft의 약속을 나타내지는 않습니다. 단순히 커뮤니티의 바람을 파악한 것입니다. `port-to-core`로 표시된 구성 요소에 관심이 있는 경우 GitHub의 토론에 참여하세요. 누락된 내용이 있다고 생각이 들면 새로운 문제를 [.NET 리포지토리](https://github.com/dotnet/runtime/issues/new)에 등록하세요.
 
 ### <a name="a-need-to-use-a-platform-that-doesnt-support-net-core"></a>.NET Core를 지원하지 않는 플랫폼을 사용하는 필요성
 
 일부 Microsoft 또는 타사 플랫폼에서는 .NET Core를 지원하지 않습니다. 일부 Azure 서비스에서는 .NET Core에서 사용할 수 없는 SDK를 제공합니다. 현재 Azure Services는 모두 .NET Core를 사용하므로 이 상황은 전환되고 있습니다. 그동안에는 클라이언트 SDK 대신 상응하는 REST API를 항상 사용할 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ASP.NET 및 ASP.NET Core 중에서 선택](/aspnet/core/choose-aspnet-framework)
 - [.NET Framework를 대상으로 하는 ASP.NET Core](/aspnet/core#aspnet-core-targeting-net-framework)

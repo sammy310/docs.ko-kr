@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS-AT protocol [WCF], configuring WS-Atomic Transaction
 ms.assetid: cb9f1c9c-1439-4172-b9bc-b01c3e09ac48
-ms.openlocfilehash: 804e22c79c328a2ae96d8f1cb817d0aea2b0c25d
-ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
+ms.openlocfilehash: 068ddcab5cfb7bfb5f37a1858820195a5a05269f
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75544733"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964574"
 ---
 # <a name="configure-ws-atomic-transaction-support"></a>WS 원자성 트랜잭션 지원 구성
 
@@ -59,7 +59,7 @@ WS-AT 프로토콜 서비스를 사용하려면 관리자가 분산 트랜잭션
 
 이 절차에는 MMC 인증서 스냅인이 필요합니다. 이 스냅인은 시작/실행 메뉴를 열고 입력 상자에 "mmc"를 입력한 다음 확인을 눌러 액세스할 수 있습니다. 그런 다음, **콘솔** 1 창에서 **파일/추가/제거** 스냅인으로 이동 하 고 추가를 클릭 한 다음 **사용 가능한 독립 실행형 스냅인** 목록에서 **인증서** 를 선택 합니다. 마지막으로 관리할 **컴퓨터 계정** 을 선택 하 고 **확인**을 클릭 합니다. **인증서** 노드가 스냅인 콘솔에 표시 됩니다.
 
-트러스트를 설정하려면 필요한 인증서가 이미 있어야 합니다. 다음 단계를 수행 하기 전에 새 인증서를 만들고 설치 하는 방법을 알아보려면 [방법: 개발 하는 동안 WCF에서 임시 클라이언트 인증서 만들기 및 설치](https://go.microsoft.com/fwlink/?LinkId=158925)를 참조 하세요.
+트러스트를 설정하려면 필요한 인증서가 이미 있어야 합니다. 다음 단계를 수행 하기 전에 새 인증서를 만들고 설치 하는 방법을 알아보려면 [방법: 개발 하는 동안 WCF에서 임시 클라이언트 인증서 만들기 및 설치](https://docs.microsoft.com/previous-versions/msp-n-p/ff650751(v=pandp.10))를 참조 하세요.
 
 1. 컴퓨터 A에서 MMC 인증서 스냅인을 사용하여 기존 인증서(certA)를 LocalMachine\MY(개인 노드) 및 LocalMachine\ROOT 저장소(신뢰할 수 있는 루트 인증 기관 노드)로 가져옵니다. 특정 노드로 인증서를 가져오려면 노드를 마우스 오른쪽 단추로 클릭 하 고 **모든 작업/가져오기**를 선택 합니다.
 

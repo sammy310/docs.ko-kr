@@ -1,15 +1,15 @@
 ---
-title: nullable 참조 형식을 사용하여 디자인
-description: 이 고급 자습서에서는 nullable 참조 형식을 소개합니다. 참조 값이 null일 수 있는 경우에 대한 디자인 의도를 표현하고 컴파일러가 null일 수 없는 경우를 적용하게 하는 방법을 알아봅니다.
+title: nullable 참조 형식으로 업그레이드
+description: 이 고급 자습서에서는 nullable 참조 형식으로 기존 코드를 마이그레이션하는 방법을 보여 줍니다.
 ms.date: 02/19/2019
 ms.technology: csharp-null-safety
 ms.custom: mvc
-ms.openlocfilehash: d0faea19ac1c7c7f28d9775fc3b69c71a752fbcb
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: e480cfa7c041d18a2bdaf8caa2468165e855186e
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73969343"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740460"
 ---
 # <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>자습서: nullable 참조 형식이 있는 기존 코드 마이그레이션
 
@@ -24,7 +24,7 @@ C# 8에서는 nullable 값 형식이 값 형식을 보완하는 것과 동일한
 > - nullable이 활성화된 컨텍스트와 nullable이 비활성화된 컨텍스트 간의 인터페이스를 관리합니다.
 > - nullable 주석 컨텍스트를 제어합니다.
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 C# 8.0 컴파일러를 포함하여 .NET Core를 실행하도록 머신을 설정해야 합니다. C# 8 컴파일러는 [Visual Studio 2019 버전 16.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 또는 [.NET CORE 3.0 SDK](https://dotnet.microsoft.com/download)부터 사용할 수 있습니다.
 
@@ -83,7 +83,7 @@ public class NewsStoryViewModel
 
 [!code-csharp[StarterCreateNewsItem](~/samples/csharp/tutorials/nullable-reference-migration/start/SimpleFeedReader/Services/NewsService.cs#CreateNewsItem)]
 
-위 코드 블록에서는 몇 가지 작업이 진행되고 있습니다. 이 애플리케이션은 [AutoMapper](https://automapper.org/) NuGet 패키지를 사용하여 `ISyndicationItem`으로부터 뉴스 항목을 생성합니다. 이 하나의 문에서 뉴스 기사 항목이 생성되고 속성이 설정된다는 사실을 파악했습니다. 따라서 `NewsStoryViewModel`의 설계 의도는 이러한 속성이 `null` 값을 갖지 않도록 하는 것임을 알 수 있습니다. 이러한 속성은 **nullable이 아닌 참조 형식**이 되어야 합니다. 이렇게 해야 원래 설계 의도가 가장 잘 표현됩니다. 실제로 모든 `NewsStoryViewModel`이 null이 아닌 값으로 올바르게 인스턴스화되었습니다.  그렇다면 다음과 같은 초기화 코드가 유효한 수정이 될 수 있습니다.
+위 코드 블록에서는 몇 가지 작업이 진행되고 있습니다. 이 애플리케이션은 [AutoMapper](https://automapper.org/) NuGet 패키지를 사용하여 `ISyndicationItem`으로부터 뉴스 항목을 생성합니다. 이 하나의 문에서 뉴스 기사 항목이 생성되고 속성이 설정된다는 사실을 파악했습니다. 따라서 `NewsStoryViewModel`의 설계 의도는 이러한 속성이 `null` 값을 갖지 않도록 하는 것임을 알 수 있습니다. 이러한 속성은 **nullable이 아닌 참조 형식**이 되어야 합니다. 이렇게 해야 원래 설계 의도가 가장 잘 표현됩니다. 실제로 모든 `NewsStoryViewModel`이 null이 아닌 값으로 올바르게 *인스턴스화되었습니다*. 그렇다면 다음과 같은 초기화 코드가 유효한 수정이 될 수 있습니다.
 
 ```csharp
 public class NewsStoryViewModel
@@ -167,4 +167,4 @@ public class NewsStoryViewModel
 
 초기 테스트 컴파일에서 확인한 경고를 모두 수정했으므로 이제 두 프로젝트에서 모두 nullable 주석 컨텍스트를 켤 수 있습니다. 프로젝트를 다시 빌드하면 컴파일러에서 생성하는 경고가 없는 것을 볼 수 있습니다. 완성된 프로젝트의 코드는 [dotnet/samples](https://github.com/dotnet/samples/tree/master/csharp/tutorials/nullable-reference-migration/finished) GitHub 리포지토리에서 가져올 수 있습니다.
 
-nullable 참조 형식을 지원하는 새로운 기능을 사용하면 코드에서 `null` 값을 처리하는 방식의 잠재적인 오류를 찾아서 수정할 수 있습니다. nullable 주석 컨텍스트를 활성화하면 어떤 변수는 null이 되면 안 되고, 어떤 변수는 null 값을 포함해도 된다는 설계 의도를 원하는 대로 표현할 수 있습니다. 이러한 기능을 사용하여 설계 의도를 보다 쉽게 드러낼 수 있습니다. 마찬가지로, nullable 경고 컨텍스트는 의도가 위반된 경우 경고를 발생하라고 컴파일러에 알립니다. 이러한 경고를 살펴보고 업데이트하여 코드의 복원력을 높이고 실행 중에 `NullReferenceException`을 throw할 확률을 줄일 수 있습니다. 이러한 컨텍스트의 범위를 제어하여 나머지 코드베이스는 그대로 두고 마이그레이션할 로컬 코드 영역에만 집중할 수 있습니다. 실전에서는 클래스의 정기적인 유지 관리의 일환으로 이러한 마이그레이션 작업을 수행할 수 있습니다. 이 자습서에서는 nullable 참조 형식을 사용하도록 애플리케이션을 마이그레이션하는 과정을 살펴봤습니다. [NodaTime](https://github.com/nodatime/nodatime/pull/1240/commits)에 nullable 참조 형식을 통합하도록 구현된 PR [Jon Skeet](https://github.com/jskeet)에서 더 많은 실제 사례를 참조할 수 있습니다.
+nullable 참조 형식을 지원하는 새로운 기능을 사용하면 코드에서 `null` 값을 처리하는 방식의 잠재적인 오류를 찾아서 수정할 수 있습니다. nullable 주석 컨텍스트를 활성화하면 어떤 변수는 null이 되면 안 되고, 어떤 변수는 null 값을 포함해도 된다는 설계 의도를 원하는 대로 표현할 수 있습니다. 이러한 기능을 사용하여 설계 의도를 보다 쉽게 드러낼 수 있습니다. 마찬가지로, nullable 경고 컨텍스트는 의도가 위반된 경우 경고를 발생하라고 컴파일러에 알립니다. 이러한 경고를 살펴보고 업데이트하여 코드의 복원력을 높이고 실행 중에 `NullReferenceException`을 throw할 확률을 줄일 수 있습니다. 이러한 컨텍스트의 범위를 제어하여 나머지 코드베이스는 그대로 두고 마이그레이션할 로컬 코드 영역에만 집중할 수 있습니다. 실전에서는 클래스의 정기적인 유지 관리의 일환으로 이러한 마이그레이션 작업을 수행할 수 있습니다. 이 자습서에서는 nullable 참조 형식을 사용하도록 애플리케이션을 마이그레이션하는 과정을 살펴봤습니다. [NodaTime](https://github.com/nodatime/nodatime/pull/1240/commits)에 nullable 참조 형식을 통합하도록 구현된 PR [Jon Skeet](https://github.com/jskeet)에서 더 많은 실제 사례를 참조할 수 있습니다. 또는 [Entity Framework Core - nullable 참조 형식 사용](/ef/core/miscellaneous/nullable-reference-types)에서 Entity Framework Core에 nullable 참조 형식을 사용하는 방법을 배울 수도 있습니다.

@@ -4,12 +4,12 @@ ms.date: 04/12/2018
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: e67febba-bacf-4e1f-a143-c141e063f90e
-ms.openlocfilehash: c529c03fd3856bbd3d3b26371415907c94ca8d30
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 85fb07f46c2d885491db7358f24b3b50836c2ca8
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74343508"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937754"
 ---
 # <a name="visual-basic-compiler-options-listed-alphabetically"></a>Visual Basic 컴파일러 옵션 사전순 목록
 Visual Basic 명령줄 컴파일러는 Visual Studio IDE (통합 개발 환경)에서 프로그램을 컴파일하는 대신 제공 됩니다. 다음은 사전순으로 정렬 된 Visual Basic 명령줄 컴파일러 옵션 목록입니다.  
@@ -57,7 +57,7 @@ Visual Basic 명령줄 컴파일러는 Visual Studio IDE (통합 개발 환경)�
 |[-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)|변수 선언에서 지역 형식 유추를 사용하도록 설정합니다.|  
 |[-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)|언어 의미 체계를 엄격하게 확인합니다.|  
 |[-out](../../../visual-basic/reference/command-line-compiler/out.md)|출력 파일을 지정합니다.|  
-|`-parallel[+&#124;-]`|동시 빌드(+)를 사용할지 여부를 지정합니다.|  
+|<code>-parallel[+&#124;-]</code>|동시 빌드(+)를 사용할지 여부를 지정합니다.|  
 |[-platform](../../../visual-basic/reference/command-line-compiler/platform.md)|출력 파일에 대한 컴파일러 대상으로 프로세서 플랫폼을 지정합니다.|  
 |`-preferreduilang`|기본 출력 언어 이름을 지정합니다.|  
 |[-quiet](../../../visual-basic/reference/command-line-compiler/quiet.md)|컴파일러에서 구문 관련 오류 및 경고에 대한 코드를 표시하지 않도록 합니다.|  
@@ -80,7 +80,7 @@ Visual Basic 명령줄 컴파일러는 Visual Studio IDE (통합 개발 환경)�
 |[-win32manifest](../../../visual-basic/reference/command-line-compiler/win32manifest.md)|프로젝트의 PE(포팅 가능한 실행 파일) 파일에 포함할 사용자 정의 Win32 애플리케이션 매니페스트 파일을 식별합니다.|  
 |[-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md)|출력 파일에 Win32 리소스를 삽입합니다.|  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Visual Basic 컴파일러 옵션 범주별 목록](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-by-category.md)
 - [프로젝트 및 솔루션 속성 관리](/visualstudio/ide/managing-project-and-solution-properties)

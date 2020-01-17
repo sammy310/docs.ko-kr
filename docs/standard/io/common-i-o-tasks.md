@@ -5,21 +5,19 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - I/O, common tasks
 ms.assetid: bf00c380-706a-4e38-b829-454a480629fc
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ac2b0eafa64b809d2b40ac6471806dc9ab3c8c53
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 01e9d6b50bd7eeafea792a772ca86a81e40dafd4
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609631"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708180"
 ---
 # <a name="common-io-tasks"></a>공통적인 I/O 작업
 <xref:System.IO> 네임스페이스에는 파일, 디렉터리 및 스트림에 대해 읽기, 쓰기 등의 다양한 작업을 수행할 수 있게 해 주는 여러 클래스가 있습니다. 자세한 내용은 [파일 및 스트림 I/O](../../../docs/standard/io/index.md)를 참조하세요.  
   
 ## <a name="common-file-tasks"></a>공통적인 파일 작업  
   
-|수행 작업|참조 항목|  
+|수행할 작업|이 항목의 예제를 참조하세요.|  
 |-------------------|--------------------------------------|  
 |텍스트 파일 만들기|<xref:System.IO.File.CreateText%2A?displayProperty=nameWithType> 메서드<br /><br /> <xref:System.IO.FileInfo.CreateText%2A?displayProperty=nameWithType> 메서드<br /><br /> <xref:System.IO.File.Create%2A?displayProperty=nameWithType> 메서드<br /><br /> <xref:System.IO.FileInfo.Create%2A?displayProperty=nameWithType> 메서드|  
 |텍스트 파일에 쓰기|[방법: 파일에 텍스트 쓰기](../../../docs/standard/io/how-to-write-text-to-a-file.md)<br /><br /> [방법: 텍스트 파일 쓰기(C++/CLI)](/cpp/dotnet/how-to-write-a-text-file-cpp-cli)|  
@@ -41,7 +39,7 @@ ms.locfileid: "54609631"
   
 ## <a name="common-directory-tasks"></a>공통적인 디렉터리 작업  
   
-|수행 작업|참조 항목|  
+|수행할 작업|이 항목의 예제를 참조하세요.|  
 |-------------------|--------------------------------------|  
 |내 문서와 같은 특수 폴더에 있는 파일에 액세스|[방법: 파일에 텍스트 쓰기](../../../docs/standard/io/how-to-write-text-to-a-file.md)|  
 |디렉터리 만들기|<xref:System.IO.Directory.CreateDirectory%2A?displayProperty=nameWithType> 메서드<br /><br /> <xref:System.IO.FileInfo.Directory%2A?displayProperty=nameWithType> 속성|  
@@ -53,7 +51,7 @@ ms.locfileid: "54609631"
 |디렉터리 크기 찾기|<xref:System.IO.Directory?displayProperty=nameWithType> 클래스|  
 |디렉터리가 있는지 확인|<xref:System.IO.Directory.Exists%2A?displayProperty=nameWithType> 메서드|  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [파일 및 스트림 I/O](../../../docs/standard/io/index.md)
 - [스트림 작성](../../../docs/standard/io/composing-streams.md)

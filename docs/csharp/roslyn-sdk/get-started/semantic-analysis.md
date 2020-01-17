@@ -3,12 +3,12 @@ title: 의미 체계 분석 시작
 description: 이 자습서는 .NET Compiler SDK를 사용하여 의미 체계 분석으로 작업하는 방법의 개요를 제공합니다.
 ms.date: 02/06/2018
 ms.custom: mvc
-ms.openlocfilehash: 80a814054ab95a5b6585289e8580a725b18ca44e
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 7bf2f40ea0bc059d9c517780016ca5deb805ceb6
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252939"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346974"
 ---
 # <a name="get-started-with-semantic-analysis"></a>의미 체계 분석 시작
 
@@ -22,7 +22,7 @@ ms.locfileid: "70252939"
 
 ## <a name="understanding-compilations-and-symbols"></a>컴파일 및 기호 이해
 
-.NET Compiler SDK에서 작업하게 되면 구문 API와 의미 체계 API 간의 차이점을 이해할 수 있게 됩니다. **구문 API**를 사용하면 프로그램의 _구조_를 볼 수 있습니다. 그러나 프로그램의 의미 체계 또는 _의미_에 대해 더 다양한 정보가 필요할 수 있습니다. 느슨한 코드 파일 또는 VB 또는 C#의 코드 조각은 격리에서 구문을 분석할 수 있습니다. "이 변수의 형식이란?"과 같은 질문은 의미가 없습니다. 형식 이름의 의미는 어셈블리 참조, 네임스페이스 가져오기 또는 기타 코드 파일에 종속될 수 있습니다. **의미 체계 API**, 특히 <xref:Microsoft.CodeAnalysis.Compilation?displayProperty=nameWithType> 클래스를 사용하여 해당 질문에 대답합니다.
+.NET Compiler SDK에서 작업하게 되면 구문 API와 의미 체계 API 간의 차이점을 이해할 수 있게 됩니다. **구문 API**를 사용하면 프로그램의 _구조_를 볼 수 있습니다. 그러나 프로그램의 의미 체계 또는 _의미_에 대해 더 다양한 정보가 필요할 수 있습니다. 느슨한 코드 파일 또는 Visual Basic 또는 C#의 코드 조각은 격리에서 구문을 분석할 수 있습니다. "이 변수의 형식이란?"과 같은 질문은 의미가 없습니다. 형식 이름의 의미는 어셈블리 참조, 네임스페이스 가져오기 또는 기타 코드 파일에 종속될 수 있습니다. **의미 체계 API**, 특히 <xref:Microsoft.CodeAnalysis.Compilation?displayProperty=nameWithType> 클래스를 사용하여 해당 질문에 대답합니다.
 
 <xref:Microsoft.CodeAnalysis.Compilation>의 인스턴스는 컴파일러에서 보는 단일 프로젝트와 유사하고, Visual Basic 또는 C# 프로그램을 컴파일하는 데 필요한 모든 항목을 나타냅니다. **컴파일**에는 컴파일할 원본 파일, 어셈블리 참조 및 컴파일러 옵션의 집합이 포함됩니다. 이 컨텍스트에서 다른 모든 정보를 사용하여 코드의 의미에 대해 추정할 수 있습니다. <xref:Microsoft.CodeAnalysis.Compilation>을 사용하면 이름 및 다른 식이 참조하는 형식, 네임스페이스, 멤버 및 변수 등의 엔터티인 **기호**를 찾을 수 있습니다. **기호**를 사용하여 이름 및 식을 연결하는 프로세스를 **바인딩**이라고 합니다.
 

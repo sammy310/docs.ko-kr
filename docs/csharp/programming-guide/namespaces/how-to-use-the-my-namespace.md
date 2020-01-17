@@ -1,18 +1,17 @@
 ---
-title: '방법: My 네임스페이스 사용 - C# 프로그래밍 가이드'
-ms.custom: seodec18
+title: My 네임스페이스를 사용하는 방법 - C# 프로그래밍 가이드
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, My namespace access
 ms.assetid: e7152414-0ea5-4c8e-bf02-c8d5bbe45ff4
-ms.openlocfilehash: ff00a60d92ec6abbeb257abec76ed2812867f651
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 063b46a32ced859c6c86e40c4a6b9870c3decd24
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588868"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75700421"
 ---
-# <a name="how-to-use-the-my-namespace-c-programming-guide"></a>방법: My 네임스페이스 사용(C# 프로그래밍 가이드)
+# <a name="how-to-use-the-my-namespace-c-programming-guide"></a>My 네임스페이스를 사용하는 방법(C# 프로그래밍 가이드)
 <xref:Microsoft.VisualBasic.MyServices> 네임스페이스(Visual Basic의 `My`)는 .NET Framework 클래스에 대한 쉽고 직관적인 액세스를 제공하여 컴퓨터, 애플리케이션, 설정, 리소스 등을 조작하는 코드를 작성할 수 있게 해줍니다. 원래 Visual Basic에서 사용하도록 설계되었지만 `MyServices` 네임스페이스는 C# 애플리케이션에서 사용할 수 있습니다.  
   
  Visual Basic에서 `MyServices` 네임스페이스를 사용하는 방법에 대한 자세한 내용은 [My를 사용한 개발](../../../visual-basic/developing-apps/development-with-my/index.md)을 참조하세요.  
@@ -30,7 +29,7 @@ ms.locfileid: "69588868"
   
      [!code-csharp[csProgGuideNamespaces#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces3.cs#18)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이 예제에서는 `MyServices` 네임스페이스에 포함된 다양한 정적 메서드를 호출합니다. 이 코드를 컴파일하려면 Microsoft.VisualBasic.DLL에 대한 참조를 프로젝트에 추가해야 합니다.  
   
  [!code-csharp[csProgGuideNamespaces#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces3.cs#19)]  
@@ -39,7 +38,7 @@ ms.locfileid: "69588868"
   
  [!code-csharp[csProgGuideNamespaces#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces3.cs#20)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 프로그래밍 가이드](../index.md)
 - [네임스페이스](./index.md)

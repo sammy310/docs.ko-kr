@@ -3,12 +3,12 @@ title: .NET 용어
 description: .NET 설명서에서 사용되는 선택한 용어의 의미를 알아봅니다.
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: e1894d57a613531fecba6786529a735431d01423
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 9bca68753a93721e48d1ff90aa7baf3a147da0ee
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929075"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708206"
 ---
 # <a name="net-glossary"></a>.NET 용어
 
@@ -58,7 +58,7 @@ Ahead-Of-Time 컴파일러입니다.
 
 .NET Core BCL(기본 클래스 라이브러리)
 
-System.\* (및 제한된 범위의 Microsoft.\*) 네임스페이스를 구성하는 라이브러리 집합입니다. BCL은 ASP.NET Core 같은 상위 수준 애플리케이션 프레임워크의 기반이 되는 하위 수준의 범용 프레임워크입니다. .NET Core BCL의 소스 코드는 [CoreFX 리포지토리](https://github.com/dotnet/corefx)에 포함되어 있습니다. 그러나 대부분의 .NET Core API는 .NET Framework에서 사용할 수도 있으므로 CoreFX를 .NET Framework BCL의 포크로 생각할 수 있습니다.
+System.\*(및 제한된 범위의 Microsoft.\*) 네임스페이스를 구성하는 라이브러리 집합입니다. BCL은 ASP.NET Core 같은 상위 수준 애플리케이션 프레임워크의 기반이 되는 하위 수준의 범용 프레임워크입니다. .NET Core BCL의 소스 코드는 [.NET Core 런타임 리포지토리](https://github.com/dotnet/runtime)에 포함되어 있습니다. 그러나 대부분의 .NET Core API는 .NET Framework에서 사용할 수도 있으므로 CoreFX를 .NET Framework BCL의 포크로 생각할 수 있습니다.
 
 ## <a name="corert"></a>CoreRT
 
@@ -269,9 +269,9 @@ OS는 런타임 환경의 일부이지만 .NET 런타임의 일부는 아닙니�
 
 유니버설 Windows 플랫폼입니다.
 
-IoT(사물 인터넷)에 대한 최신의 터치 가능 Windows 애플리케이션 및 소프트웨어를 작성하는 데 사용되는 .NET의 구현체입니다. PC, 태블릿, 패블릿, 휴대폰, Xbox와 같은 대상으로 지정할 수 있는 다양한 종류의 디바이스를 통합하도록 설계되었습니다. UWP는 중앙 집중식 앱 스토어, 실행 환경(AppContainer), Win32를 대체할 Windows API(WinRT) 등 많은 서비스를 제공합니다. 앱은 C++과 C#, VB.NET, JavaScript로 작성할 수 있습니다. C#과 VB.NET을 사용할 경우 .NET API는 .NET Core에서 제공됩니다.
+IoT(사물 인터넷)에 대한 최신의 터치 가능 Windows 애플리케이션 및 소프트웨어를 작성하는 데 사용되는 .NET의 구현체입니다. PC, 태블릿, 패블릿, 휴대폰, Xbox와 같은 대상으로 지정할 수 있는 다양한 종류의 디바이스를 통합하도록 설계되었습니다. UWP는 중앙 집중식 앱 스토어, 실행 환경(AppContainer), Win32를 대체할 Windows API(WinRT) 등 많은 서비스를 제공합니다. 앱은 C++과 C#, Visual Basic, JavaScript로 작성할 수 있습니다. C#과 Visual Basic을 사용할 경우 .NET API는 .NET Core에서 제공됩니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [.NET 가이드](index.md)
 - [.NET Framework 가이드](../framework/index.md)

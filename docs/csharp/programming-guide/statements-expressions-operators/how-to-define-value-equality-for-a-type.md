@@ -1,6 +1,5 @@
 ---
-title: '방법: 형식에 대한 값 일치 정의 - C# 프로그래밍 가이드'
-ms.custom: seodec18
+title: 형식에 대한 값 같음을 정의하는 방법 - C# 프로그래밍 가이드
 ms.date: 07/20/2015
 helpviewer_keywords:
 - overriding Equals method [C#]
@@ -9,14 +8,14 @@ helpviewer_keywords:
 - value equality [C#]
 - equivalence [C#]
 ms.assetid: 4084581e-b931-498b-9534-cf7ef5b68690
-ms.openlocfilehash: 0e1c736c7a2826c1218cb078a6e9f874b3b72c3c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5eb1aaf96097d2c00cb04e24e65e01464f5f00c6
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64755014"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711976"
 ---
-# <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>방법: 형식에 대한 값 일치 정의(C# 프로그래밍 가이드)
+# <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>형식에 대한 값 같음을 정의하는 방법(C# 프로그래밍 가이드)
 
 클래스 또는 구조체를 정의할 때 형식에 대한 값 같음(또는 동등)의 사용자 지정 정의를 만드는 것이 적합한지 결정합니다. 일반적으로 형식의 개체를 일종의 컬렉션에 추가해야 하는 경우 또는 주요 용도가 필드 또는 속성 집합 저장인 경우 값 같음을 구현합니다. 형식의 모든 필드 및 속성 비교를 기준으로 값 같음의 정의를 만들거나, 하위 집합을 기준으로 정의를 만들 수 있습니다. 그러나 두 경우 모두, 클래스와 구조체 둘 다에서 구현이 동등의 5가지 사항을 따라야 합니다.  
   
@@ -66,7 +65,7 @@ ms.locfileid: "64755014"
   
  [==](../../language-reference/operators/equality-operators.md#equality-operator-) 및 [!=](../../language-reference/operators/equality-operators.md#inequality-operator-) 연산자는 구조체에서 명시적으로 오버로드하지 않는 한 구조체에 대해 연산을 수행할 수 없습니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [같음 비교](equality-comparisons.md)
 - [C# 프로그래밍 가이드](../index.md)

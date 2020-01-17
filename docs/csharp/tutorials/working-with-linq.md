@@ -4,34 +4,34 @@ description: 이 자습서에서는 LINQ를 사용하여 시퀀스를 생성하�
 ms.date: 10/29/2018
 ms.technology: csharp-linq
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: b25cd1763511f460537bccaf6011a3d23390ea72
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 8984fdf0ff26726b6d05e8bee8a9e8ae1c350ea7
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039167"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345616"
 ---
-# <a name="working-with-linq"></a>LINQ 작업
+# <a name="work-with-language-integrated-query-linq"></a>LINQ(Language-Integrated Query) 작업
 
 ## <a name="introduction"></a>소개
 
-이 자습서에서는 .NET Core 및 C# 언어의 기능에 대해 설명합니다. 다음을 배울 수 있습니다.
+이 자습서에서는 .NET Core 및 C# 언어의 기능에 대해 설명합니다. 다음을 수행하는 방법을 알아봅니다.
 
-- LINQ를 사용하여 시퀀스를 생성하는 방법
-- LINQ 쿼리에서 쉽게 사용할 수 있는 메서드를 작성하는 방법
-- 즉시 계산 및 지연 계산을 구분하는 방법
+- LINQ를 사용하여 시퀀스를 생성합니다.
+- LINQ 쿼리에서 쉽게 사용할 수 있는 메서드를 작성합니다.
+- 즉시 계산 및 지연 계산을 구분합니다.
 
 모든 마술사들이 기본적으로 익히는 기술 중 하나인 [파로 셔플](https://en.wikipedia.org/wiki/Faro_shuffle)을 보여 주는 애플리케이션을 빌드하여 이러한 기술을 살펴봅니다. 간단히 말해서 파로 셔플은 카드 데크를 정확히 절반으로 분할한 다음 각 절반의 각 카드를 교차로 섞어 원래 데크 순서로 다시 빌드하는 기술입니다.
 
 마술사들은 카드를 섞은 후에 모든 카드가 알려진 위치로 들어가고 순서가 반복 패턴을 가지게 되므로 이 기술을 사용합니다.
 
-이 자습서에서는 데이터 시퀀스 조작 과정을 간단하게 살펴봅니다. 빌드할 애플리케이션은 카드 데크를 생성하고 섞은 다음 매번 섞는 시퀀스를 작성합니다. 또한 업데이트된 순서를 원래 순서와 비교할 것입니다.
+이 자습서에서는 데이터 시퀀스 조작 과정을 간단하게 살펴봅니다. 빌드할 애플리케이션은 카드 데크를 생성한 다음 섞기 시퀀스를 수행하여 매번 시퀀스를 작성합니다. 또한 업데이트된 순서를 원래 순서와 비교할 것입니다.
 
 이 자습서는 여러 단계로 구성됩니다. 각 단계 후에 애플리케이션을 실행하고 진행 상황을 확인할 수 있습니다. [완료된 샘플](https://github.com/dotnet/samples/blob/master/csharp/getting-started/console-linq)은 GitHub의 dotnet/samples 리포지토리에서도 확인할 수 있습니다. 다운로드 지침은 [샘플 및 자습서](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)를 참조하세요.
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
-.NET Core를 실행하도록 컴퓨터에 설정해야 합니다. [.NET Core 다운로드](https://dotnet.microsoft.com/download) 페이지에서 설치 지침을 확인할 수 있습니다. Windows, Ubuntu Linux, OS X 또는 Docker 컨테이너에서 이 애플리케이션을 실행할 수 있습니다. 선호하는 코드 편집기를 설치해야 합니다. 아래 설명에서는 오픈 소스 플랫폼 간 편집기인 [Visual Studio Code](https://code.visualstudio.com/)를 사용합니다. 그러나 익숙한 어떤 도구도 사용 가능합니다.
+.NET Core를 실행하려면 컴퓨터에 설정해야 합니다. [.NET Core 다운로드](https://dotnet.microsoft.com/download) 페이지에서 설치 지침을 확인할 수 있습니다. Windows, Ubuntu Linux나 OS X 또는 Docker 컨테이너에서 이 애플리케이션을 실행할 수 있습니다. 선호하는 코드 편집기를 설치해야 합니다. 아래 설명에서는 오픈 소스 플랫폼 간 편집기인 [Visual Studio Code](https://code.visualstudio.com/)를 사용합니다. 그러나 익숙한 어떤 도구도 사용 가능합니다.
 
 ## <a name="create-the-application"></a>애플리케이션 만들기
 
@@ -39,7 +39,7 @@ ms.locfileid: "73039167"
 
 이전에 C#을 사용해본 적이 없으면 [이 자습서](console-teleprompter.md)에서 C# 프로그램의 구조를 확인하세요. 해당 부분을 읽고 여기로 돌아와 LINQ에 대해 자세히 알아볼 수 있습니다.
 
-## <a name="creating-the-data-set"></a>데이터 집합 만들기
+## <a name="create-the-data-set"></a>데이터 세트 만들기
 
 시작하기 전에 `dotnet new console`에서 생성된 `Program.cs` 파일의 맨 위에 다음 줄이 있는지 확인합니다.
 
@@ -118,7 +118,7 @@ var startingDeck = Suits().SelectMany(suit => Ranks().Select(rank => new { Suit 
 
 ![52개의 카드를 작성하는 앱을 표시하는 콘솔 창](./media/working-with-linq/console-52-card-application.png)
 
-## <a name="manipulating-the-order"></a>순서 조작
+## <a name="manipulate-the-order"></a>순서 조작
 
 다음으로, 데크의 카드 순서를 섞는 메서드를 중심으로 살펴보겠습니다. 좋은 순서 섞기의 첫 번째 단계는 데크를 두 개로 분할하는 것입니다. LINQ API에 속하는 <xref:System.Linq.Enumerable.Take%2A> 및 <xref:System.Linq.Enumerable.Skip%2A> 메서드가 이 기능을 제공합니다. `foreach` 루프 아래에 카드를 배치합니다.
 
@@ -351,8 +351,8 @@ LINQ 외에도 마법사가 카드 속임수에 사용하는 기술에 대해 �
 LINQ에 대한 자세한 내용은 다음을 참조하세요.
 
 - [LINQ(Language-Integrated Query)](../programming-guide/concepts/linq/index.md)
-  - [LINQ 소개](../programming-guide/concepts/linq/index.md)
-  - [기본 LINQ 쿼리 작업(C#)](../programming-guide/concepts/linq/basic-linq-query-operations.md)
-  - [LINQ를 통한 데이터 변환(C#)](../programming-guide/concepts/linq/data-transformations-with-linq.md)
-  - [LINQ의 쿼리 구문 및 메서드 구문(C#)](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)
-  - [LINQ를 지원하는 C# 기능](../programming-guide/concepts/linq/features-that-support-linq.md)
+- [LINQ 소개](../programming-guide/concepts/linq/index.md)
+- [기본 LINQ 쿼리 작업(C#)](../programming-guide/concepts/linq/basic-linq-query-operations.md)
+- [LINQ를 통한 데이터 변환(C#)](../programming-guide/concepts/linq/data-transformations-with-linq.md)
+- [LINQ의 쿼리 구문 및 메서드 구문(C#)](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)
+- [LINQ를 지원하는 C# 기능](../programming-guide/concepts/linq/features-that-support-linq.md)

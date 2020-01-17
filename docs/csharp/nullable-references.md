@@ -3,12 +3,12 @@ title: nullable 참조 형식
 description: 이 문서에서는 C# 8.0에 추가된 nullable 참조 형식에 대해 간략하게 설명합니다. 이 기능이 신규 및 기존의 프로젝트의 null 참조 예외에 대해 어떻게 안전성을 제공하는지 알아봅니다.
 ms.technology: csharp-null-safety
 ms.date: 02/19/2019
-ms.openlocfilehash: ded7234ecb746ba03ba59505b7189272886f1cbf
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: bb4c2b6951a38eeb705c7de50ef5d9645350e336
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737830"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559627"
 ---
 # <a name="nullable-reference-types"></a>nullable 참조 형식
 
@@ -93,7 +93,7 @@ Nullable 컨텍스트를 통해 컴파일러가 참조 형식 변수를 해석�
 컴파일러는 disabled nullable 주석 컨텍스트에 다음 규칙을 사용합니다.
 
 - disabled 컨텍스트에서 nullable 참조를 선언할 수 없습니다.
-- 모든 참조 변수에는 null을 할당할 수 있습니다.
+- 모든 참조 변수에는 null 값을 할당할 수 있습니다.
 - 참조 형식의 변수가 역참조되면 경고가 생성되지 않습니다.
 - disabled 컨텍스트에는 null 허용 연산자를 사용할 수 없습니다.
 
@@ -117,7 +117,7 @@ nullable 경고 컨텍스트는 nullable 주석 컨텍스트와 다릅니다. �
 
 컴파일러는 nullable 경고 컨텍스트가 enabled인 경우 **null일 수 있는** 상태의 변수 또는 식을 역참조할 때마다 경고를 생성합니다. 또한 nullable 주석 컨텍스트가 enabled인 경우 **null일 수 있는** 변수 또는 식에 null을 허용하지 않는 참조 형식이 할당되면 경고가 생성됩니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Nullable 참조 형식 사양 초안](~/_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md)
 - [Nullable 참조 소개 자습서](tutorials/nullable-reference-types.md)

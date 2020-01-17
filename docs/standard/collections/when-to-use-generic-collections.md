@@ -6,14 +6,12 @@ helpviewer_keywords:
 - collections [.NET Framework], generic
 - generic collections [.NET Framework]
 ms.assetid: e7b868b1-11fe-4ac5-bed3-de68aca47739
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b553ec62cf493b94b87079cddd3ec3d1d60daf9d
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 7d59259c1cab6842ef62888bf5326225394d8d44
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66491001"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711209"
 ---
 # <a name="when-to-use-generic-collections"></a>제네릭 컬렉션 사용 기준
 제네릭 컬렉션을 사용하면 기본 컬렉션 형식에서 파생하고 형식별 멤버를 구현하지 않아도 형식 보안 이점이 즉시 제공되므로 일반적으로는 제네릭 컬렉션을 사용하는 것이 좋습니다. 또한 컬렉션 요소가 값 형식일 때는 대개 제네릭 컬렉션 형식이 해당하는 제네릭이 아닌 컬렉션 형식 및 제네릭이 아닌 기본 컬렉션 형식에서 파행되는 형식에 비해 성능도 뛰어납니다. 제네릭을 사용하는 경우에는 요소를 boxing할 필요가 없기 때문입니다.  
@@ -53,7 +51,7 @@ ms.locfileid: "66491001"
   
  <xref:System.Collections.Generic.List%601> 클래스를 사용하면 목록 검색 및 정렬을 위해 <xref:System.Collections.Generic.IComparer%601> 제네릭 인터페이스 구현을 직접 지정할 수 있습니다. <xref:System.Collections.Generic.SortedDictionary%602> 및 <xref:System.Collections.Generic.SortedList%602> 클래스에도 이 기능이 있습니다. 또한 이러한 클래스를 사용하는 경우 컬렉션을 만들 때 비교자를 지정할 수 있습니다. 마찬가지로 <xref:System.Collections.Generic.Dictionary%602> 및 <xref:System.Collections.ObjectModel.KeyedCollection%602> 클래스에서도 고유한 같음 비교자를 지정할 수 있습니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [컬렉션 및 데이터 구조](../../../docs/standard/collections/index.md)
 - [일반적으로 사용되는 컬렉션 형식](../../../docs/standard/collections/commonly-used-collection-types.md)

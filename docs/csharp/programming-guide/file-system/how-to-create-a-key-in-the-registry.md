@@ -1,22 +1,22 @@
 ---
-title: '방법: 레지스트리에 키 만들기(Visual C#)'
+title: 레지스트리에 키를 만드는 방법 - C# 프로그래밍 가이드
 ms.date: 07/20/2015
 helpviewer_keywords:
 - registry, adding keys and values [C#]
 - registry keys, creating [C#]
 - keys, creating in registry
 ms.assetid: 8fa475b0-e01f-483a-9327-fd03488fdf5d
-ms.openlocfilehash: e67a80fa8f9a088f0eefe2dd2eeaa983e0a5a2c3
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 16974db950a3a460416cfb917147439707e1d007
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590046"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635446"
 ---
-# <a name="how-to-create-a-key-in-the-registry-visual-c"></a>방법: 레지스트리에 키 만들기(Visual C#)
+# <a name="how-to-create-a-key-in-the-registry-c-programming-guide"></a>레지스트리에 키를 만드는 방법(C# 프로그래밍 가이드)
 이 예제에서는 현재 사용자의 레지스트리, "Names" 키 아래에 "Name" 및 "Isabella" 값 쌍을 추가합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```csharp  
 Microsoft.Win32.RegistryKey key;  
@@ -55,7 +55,7 @@ key.Close();
   
  레지스트리 키가 ACL(액세스 제어 목록)로 보호된 경우에도 암호 등을 레지스트리에 일반 텍스트로 저장하는 것은 안전하지 않습니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.IO?displayProperty=nameWithType>
 - [C# 프로그래밍 가이드](../index.md)

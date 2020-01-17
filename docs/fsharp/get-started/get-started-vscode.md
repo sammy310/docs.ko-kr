@@ -123,6 +123,7 @@ val toPigLatin : word:string -> string
 
 이에 대한 최종 정보는 다음과 같습니다. 다른 많은 언어와 달리 함수에서 반환할 명시적인 명령이 없습니다. F#이 식 기반이고 함수 본문의 마지막 식이 반환 값이기 때문입니다. `if..then..else` 자체가 식이므로 `then` 블록의 본문이나 `else` 블록의 본문은 입력 값에 따라 반환됩니다.
 
+
 ## <a name="turn-the-console-app-into-a-pig-latin-generator"></a>콘솔 앱을 Pig 라틴어 생성기로 전환 합니다.
 
 이 문서의 이전 섹션에서는 초기 함수를 작성하고 FSI.EXE를 사용하여 대화형으로 실행하는 F# 코드를 작성하는 일반적인 첫 번째 단계를 보여 주었습니다. 이를 REPL 기반 개발이라고 하며, 여기서 [REPL](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop)은 "읽기-평가-인쇄 루프"를 나타냅니다. 작업을 수행할 때까지 기능을 시험해 볼 수 있는 좋은 방법입니다.

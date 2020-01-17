@@ -1,14 +1,13 @@
 ---
 title: '자습서: Visual Studio Code를 사용하여 macOS에서 .NET Core 솔루션 만들기'
 description: 이 문서에서는 Visual Studio Code를 사용하여 .NET Core 솔루션을 만드는 단계와 워크플로를 제공합니다.
-ms.date: 03/23/2017
-ms.custom: seodec18
-ms.openlocfilehash: 5df43ae235b9fd901a65f7f8898bec67e24de682
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.date: 12/19/2019
+ms.openlocfilehash: 4dc44a0aa155dca3c106a7da68cf100ef644b58b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117363"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715297"
 ---
 # <a name="tutorial-create-a-net-core-solution-in-macos-using-visual-studio-code"></a>자습서: Visual Studio Code를 사용하여 macOS에서 .NET Core 솔루션 만들기
 
@@ -17,19 +16,19 @@ ms.locfileid: "71117363"
 > [!NOTE]
 > 이 문서에서는 macOS의 [Visual Studio Code](https://code.visualstudio.com)를 사용합니다.
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 [.NET Core SDK](https://dotnet.microsoft.com/download)를 설치합니다. .NET Core SDK에는 최신 버전의 .NET Core 프레임워크 및 런타임이 포함되어 있습니다.
 
 [Visual Studio Code](https://code.visualstudio.com)를 설치합니다. 이 문서를 진행하면서 .NET Core 개발자 환경을 개선하는 Visual Studio Code 확장도 설치하게 됩니다.
 
-Visual Studio Code 팔레트를 열려면 Visual Studio Code를 열고 <kbd>F1</kbd> 키를 눌러 Visual Studio Code C# 확장을 설치합니다. **ext install**을 입력하여 확장 목록을 표시합니다. C# 확장을 선택합니다. Visual Studio Code를 다시 시작하여 확장을 활성화합니다. 자세한 내용은 [Visual Studio Code C# 확장 문서](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md)를 참조하세요.
+Visual Studio Code 팔레트를 열려면 Visual Studio Code를 열고 <kbd>Fn</kbd>+<kbd>F1</kbd> 키를 눌러 Visual Studio Code C# 확장을 설치합니다. **ext install**을 입력하여 확장 목록을 표시합니다. C# 확장을 선택합니다. Visual Studio Code를 다시 시작하여 확장을 활성화합니다. 자세한 내용은 [Visual Studio Code C# 확장 문서](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md)를 참조하세요.
 
 ## <a name="get-started"></a>시작
 
-이 자습서에서는 라이브러리 프로젝트, 해당 라이브러리 프로젝트에 대한 테스트, 라이브러리를 사용하는 콘솔 애플리케이션 등 프로젝트 3개를 만듭니다. GitHub의 dotnet/samples 리포지토리에서 이 항목에 대한 [소스를 보거나 다운로드](https://github.com/dotnet/samples/tree/master/core/getting-started/golden)할 수 있습니다. 다운로드 지침은 [샘플 및 자습서](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)를 참조하세요.
+이 자습서에서는 라이브러리 프로젝트, 해당 라이브러리 프로젝트에 대한 테스트, 라이브러리를 사용하는 콘솔 애플리케이션 등 프로젝트 3개를 만듭니다. GitHub의 dotnet/samples 리포지토리에서 이 문서에 대한 [소스를 보거나 다운로드](https://github.com/dotnet/samples/tree/master/core/getting-started/golden)할 수 있습니다. 다운로드 지침은 [샘플 및 자습서](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)를 참조하세요.
 
-Visual Studio Code를 시작합니다. <kbd>Ctrl</kbd>+<kbd>\`</kbd> 키(역따옴표 또는 억음 문자)를 누르거나 메뉴에서 **보기 > 통합 터미널**을 선택하여 Visual Studio Code에서 포함된 터미널을 엽니다. Visual Studio Code 외부에서 작업하려는 경우 탐색기 **명령 프롬프트에서 열기** 명령(Mac 또는 Linux에서는 **터미널에서 열기**)을 사용하여 외부 셸을 열 수 있습니다.
+Visual Studio Code를 시작합니다. <kbd>Ctrl</kbd>+<kbd>\`</kbd> 키(역따옴표 또는 억음 문자)를 누르거나 메뉴에서 **보기 > 터미널**을 선택하여 Visual Studio Code에서 포함된 터미널을 엽니다. Visual Studio Code 외부에서 작업하려는 경우 탐색기 **명령 프롬프트에서 열기** 명령(Mac 또는 Linux에서는 **터미널에서 열기**)을 사용하여 외부 셸을 열 수 있습니다.
 
 하나 이상의 .NET Core 프로젝트에 대한 컨테이너로 사용되는 솔루션 파일을 먼저 만듭니다. 터미널에서 [`dotnet new`](../tools/dotnet-new.md) 명령을 실행하여 *golden*이라는 새 폴더에 새 솔루션 *golden.sln*을 만듭니다.
 
@@ -61,7 +60,7 @@ dotnet sln add library/library.csproj
 </Project>
 ```
 
-라이브러리 메서드는 JSON 형식으로 개체를 직렬화 및 deserialize합니다. JSON serialization 및 deserialization을 지원하려면 `Newtonsoft.Json` NuGet 패키지에 대한 참조를 추가합니다. `dotnet add` 명령은 프로젝트에 새 항목을 추가합니다. NuGet 패키지에 대한 참조를 추가하려면 [`dotnet add package`](../tools/dotnet-add-package.md) 명령을 사용하고 패키지 이름을 지정합니다.
+라이브러리 메서드는 JSON 형식으로 개체를 직렬화 및 역직렬화합니다. JSON serialization 및 deserialization을 지원하려면 `Newtonsoft.Json` NuGet 패키지에 대한 참조를 추가합니다. `dotnet add` 명령은 프로젝트에 새 항목을 추가합니다. NuGet 패키지에 대한 참조를 추가하려면 [`dotnet add package`](../tools/dotnet-add-package.md) 명령을 사용하고 패키지 이름을 지정합니다.
 
 ```dotnetcli
 dotnet add library package Newtonsoft.Json
@@ -96,7 +95,7 @@ namespace Library
 }
 ```
 
-`Thing` 클래스에는 공용 메서드 `Get`이 포함되어 있습니다. 이 메서드는 두 숫자의 합계를 반환하지만, 이 작업을 위해 합계를 문자열로 변환한 다음 정수로 deserialize합니다. 여기에는 [`using static` 지시문](../../csharp/language-reference/keywords/using-static.md), [식 본문 멤버](../../csharp/whats-new/csharp-7.md#more-expression-bodied-members), [문자열 보간](../../csharp/language-reference/tokens/interpolated.md) 등 많은 최신 C# 기능이 사용됩니다.
+`Thing` 클래스에는 공용 메서드 `Get`이 포함되어 있습니다. 이 메서드는 두 숫자의 합계를 반환하지만, 이 작업을 위해 합계를 문자열로 변환한 다음 정수로 역직렬화합니다. 여기에는 [`using static` 지시문](../../csharp/language-reference/keywords/using-static.md), [식 본문 멤버](../../csharp/whats-new/csharp-7.md#more-expression-bodied-members), [문자열 보간](../../csharp/language-reference/tokens/interpolated.md) 등 많은 최신 C# 기능이 사용됩니다.
 
 [`dotnet build`](../tools/dotnet-build.md) 명령을 사용하여 라이브러리를 빌드합니다. 그러면 *golden/library/bin/Debug/netstandard1.4* 아래에 *library.dll* 파일이 생성됩니다.
 
@@ -210,13 +209,13 @@ dotnet run -p app/app.csproj
 
 ## <a name="debug-the-application"></a>애플리케이션 디버그
 
-`Main` 메서드의 `WriteLine` 문에 중단점을 설정합니다. 이렇게 하려면 `WriteLine` 줄에 커서를 놓고 <kbd>F9</kbd> 키를 누르거나 중단점을 설정할 줄의 왼쪽 여백에서 마우스를 클릭합니다. 코드 줄 옆의 여백에 빨간색 원이 나타납니다. 중단점에 도달하면 중단점 줄이 실행되기 *전에* 코드 실행이 중지됩니다.
+`Main` 메서드의 `WriteLine` 문에 중단점을 설정합니다. 이렇게 하려면  줄에 커서를 놓고 <kbd>Fn</kbd>+<kbd>F9</kbd> 키를 누르거나 중단점을 설정할 `WriteLine` 줄의 왼쪽 여백에서 마우스를 클릭합니다. 코드 줄 옆의 여백에 빨간색 원이 나타납니다. 중단점에 도달하면 중단점 줄이 실행되기 *전에* 코드 실행이 중지됩니다.
 
-Visual Studio Code 도구 모음에서 디버그 아이콘을 선택하거나, 메뉴 모음에서 **보기 > 디버그**를 선택하거나, 바로 가기 키 <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>D</kbd>를 사용하여 디버거 탭을 엽니다.
+Visual Studio Code 도구 모음에서 디버그 아이콘을 선택하거나, 메뉴 모음에서 **보기 > 디버그**를 선택하거나, 바로 가기 키 <kbd>Command</kbd>+<kbd>Shift</kbd>+<kbd>D</kbd>를 사용하여 디버거 탭을 엽니다.
 
 ![Visual Studio Code 디버거](./media/using-on-macos/visual-studio-code-debugger.png)
 
-디버거에서 애플리케이션을 시작하려면 재생 단추를 누릅니다. 앱이 실행을 시작하고 중단점까지 실행되며, 여기서 중단됩니다. `Get` 메서드를 단계별로 실행하며 올바른 인수를 전달했는지 확인합니다. 응답이 42인지 확인합니다.
+디버거에서 애플리케이션을 시작하려면 재생 단추를 누릅니다. 이 프로젝트에서 테스트 프로젝트와 애플리케이션을 모두 만들었습니다. 디버거에서 어떤 프로젝트를 시작할 것인지 묻습니다. “앱” 프로젝트를 선택합니다. 앱이 실행을 시작하고 중단점까지 실행되며, 여기서 중단됩니다. `Get` 메서드를 단계별로 실행하며 올바른 인수를 전달했는지 확인합니다. 응답이 42인지 확인합니다.
 
 <a name="dotnet-restore-note"></a>
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]

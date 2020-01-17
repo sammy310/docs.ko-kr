@@ -2,12 +2,12 @@
 title: 주요 변경 범주 - .NET Core
 description: .NET Core에서 주요 변경 내용을 분류하는 방법을 알아봅니다.
 ms.date: 06/10/2019
-ms.openlocfilehash: 4569c1ab19cb9bfa3e16aa8d5f941705eb926fa7
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 32cf55dc3ba0b16bae8cfe6179211150b2c90e2c
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74567920"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75343592"
 ---
 # <a name="breaking-change-categories"></a>호환성이 손상되는 변경 범주
 
@@ -18,8 +18,7 @@ ms.locfileid: "74567920"
 - [소스 호환성](#source-compatibility)
 - [디자인 타임 호환성](#design-time-compatibility)
 - [이전 버전과의 호환성](#backwards-compatibility)
-
-[이후 버전과의 호환성](#forward-compatibility)을 유지하는 것은 .NET Core의 목표가 아닙니다.
+- [이후 버전과의 호환성](#forward-compatibility)(.NET Core의 목표는 아님)
 
 ## <a name="behavioral-change"></a>동작 변경
 
@@ -43,7 +42,7 @@ ms.locfileid: "74567920"
 
 이전 버전과의 호환성은 기존 API 소비자가 동일한 방식으로 동작하면서 새 버전에서 실행되는 기능을 나타냅니다. 동작 변경 및 이진 호환성 변경은 둘 다 이전 버전과의 호환성에 영향을 줍니다. 소비자가 최신 버전의 API에서 실행될 수 없거나 실행될 때 다르게 동작하는 경우 이 API는 ‘이전 버전과 호환되지 않습니다’. 
 
-개발자는 최신 버전의 API에서 기본적으로 이전 버전과의 호환성을 기대하므로 이전 버전과의 호환성에 영향을 주는 변경은 사용하지 않는 것이 좋습니다.
+개발자는 최신 버전의 API에서 이전 버전과의 호환성을 기대하므로 이전 버전과의 호환성에 영향을 주는 변경은 사용하지 않는 것이 좋습니다.
 
 ## <a name="forward-compatibility"></a>이후 버전과의 호환성
 
@@ -53,6 +52,6 @@ ms.locfileid: "74567920"
 
 이후 버전과의 호환성을 유지하는 것은 .NET Core의 목표가 아닙니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [.NET Core의 호환성이 손상되는 변경 평가](index.md)

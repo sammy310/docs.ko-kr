@@ -1,6 +1,6 @@
 ---
 title: LINQ(Language-Integrated Query)
-description: LINQ가 표현력 있는 선언형 코드를 작성하는 한 가지 방법으로 API와 언어 수준 쿼리 기능을 C# 및 VB에 제공하는 방법을 알아봅니다.
+description: LINQ가 표현력 있는 선언형 코드를 작성하는 한 가지 방법으로 API와 언어 수준 쿼리 기능을 C# 및 Visual Basic에 제공하는 방법을 알아봅니다.
 author: cartermp
 ms.author: wiwagn
 ms.date: 06/20/2016
@@ -9,18 +9,18 @@ dev_langs:
 - vb
 ms.technology: dotnet-standard
 ms.assetid: c00939e1-59e3-4e61-8fe9-08ad6b3f1295
-ms.openlocfilehash: 2e4b23b7bf197c9984c53b2f4cc2acaa61731d38
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.openlocfilehash: 6ec86b7e728eef2cb4937662fd013d7fe951904d
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68238626"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347267"
 ---
 # <a name="linq-language-integrated-query"></a>LINQ(Language-Integrated Query)
 
 ## <a name="what-is-it"></a>LINQ란?
 
-LINQ는 표현력 있는 선언형 코드를 작성하는 한 가지 방법으로 [고차 함수](https://en.wikipedia.org/wiki/Higher-order_function) API와 언어 수준 쿼리 기능을 C# 및 VB에 제공합니다.
+LINQ는 표현력 있는 선언형 코드를 작성하는 한 가지 방법으로 [고차 함수](https://en.wikipedia.org/wiki/Higher-order_function) API와 언어 수준 쿼리 기능을 C# 및 Visual Basic에 제공합니다.
 
 언어 수준 쿼리 구문:
 
@@ -354,7 +354,7 @@ End Function
 
 PLINQ 또는 병렬 LINQ는 LINQ 식에 대한 병렬 실행 엔진입니다. 즉, 여러 스레드 간에 LINQ 정규식을 일반적으로 병렬 처리할 수 있습니다. 이 작업은 식 앞의 `AsParallel()` 호출을 통해 수행됩니다.
 
-다음을 살펴보세요.
+다음 사항을 고려합니다.
 
 ```csharp
 public static string GetAllFacebookUserLikesMessage(IEnumerable<FacebookUser> facebookUsers)
@@ -395,5 +395,5 @@ LINQ를 통해 쉽게 표현될 수 있는 병렬화 가능한 CPU 바인딩된 
 ## <a name="further-resources"></a>추가 리소스:
 
 * [101 LINQ 샘플](https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b)
-* [Linqpad](https://www.linqpad.net/), 실습 환경 및 C#/F#/VB에 대한 데이터베이스 쿼리 엔진
+* [Linqpad](https://www.linqpad.net/), 실습 환경 및 C#/F#/Visual Basic에 대한 데이터베이스 쿼리 엔진
 * [EduLinq](https://codeblog.jonskeet.uk/2011/02/23/reimplementing-linq-to-objects-part-45-conclusion-and-list-of-posts/), LINQ-to-objects 구현 방법 학습을 위한 eBook

@@ -1,15 +1,14 @@
 ---
-title: .NET Core SDK 및 CI(연속 통합)의 도구 사용
-description: .NET Core SDK 및 빌드 서버의 도구를 사용하는 방법에 대한 정보입니다.
+title: .NET Core SDK 및 도구를 사용한 CI(연속 통합)
+description: 연속 통합을 사용하여 빌드 서버에서 .NET Core SDK 및 해당 도구를 사용하는 방법을 알아봅니다.
 author: mairaw
 ms.date: 05/18/2017
-ms.custom: seodec18
-ms.openlocfilehash: 481d54904192ee82da1f9d34bbf62fa8ffe1cd3b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 65d062fce2f364932ebf8091bd9c6cdef561b633
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428599"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714114"
 ---
 # <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci"></a>.NET Core SDK 및 CI(연속 통합)의 도구 사용
 
@@ -175,6 +174,6 @@ Azure DevOps Services에서 수동 설치 스크립트를 사용하려면 새 �
 
 .NET Core 도구를 사용하여 .NET Core 코드에 대한 빌드 프로세스를 구성할 때 적용할 두 가지 일반적인 방법에서는 MSBuild를 직접 사용하거나 .NET Core 명령줄 명령을 사용합니다. 어떤 방법을 적용해야 하는지는 방법에 대한 숙련도 및 복잡성의 절충 조건에 따라 결정됩니다. MSBuild는 빌드 프로세스를 작업 및 대상으로 표시하는 기능을 제공하지만 MSBuild 프로젝트 파일 구문 학습의 복잡성이 추가됩니다. .NET Core 명령줄 도구를 사용하는 것이 더 간편하지만 `bash` 또는 PowerShell 같은 스크립팅 언어로 오케스트레이션 논리를 작성해야 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [.NET 다운로드 - Linux](https://dotnet.microsoft.com/download?initial-os=linux)

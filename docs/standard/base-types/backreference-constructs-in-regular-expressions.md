@@ -12,13 +12,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions, backreference constructs
 - regular expressions, backreference constructs
 ms.assetid: 567a4b8d-0e79-49dc-8df9-f4b1aa376a2a
-ms.custom: seodec18
-ms.openlocfilehash: e41c333dc088c8f712866cb7a130c4f8e1c9722f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 905578d763ebe5d5b8eb96a9056fbe11fbfab137
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140528"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711534"
 ---
 # <a name="backreference-constructs-in-regular-expressions"></a>정규식의 역참조 구문
 
@@ -104,7 +103,7 @@ ms.locfileid: "73140528"
 
 다음 예제에는 이름이 \1인 그룹을 다시 정의하는 정규식 패턴 `(?<1>a)(?<1>\1b)*`가 포함되어 있습니다. 다음 표에서는 정규식의 각 패턴에 대해 설명합니다.
 
-|패턴|설명|
+|무늬|설명|
 |-------------|-----------------|
 |`(?<1>a)`|문자 “a”를 찾은 다음, 이름이 `1`인 캡처링 그룹에 결과를 할당합니다.|
 |`(?<1>\1b)*`|이름이 `1`과 "b"로 지정된 그룹을 0번 이상 일치시키고, 이름이 `1`로 지정된 캡처링 그룹에 결과를 할당합니다.|
@@ -124,7 +123,7 @@ ms.locfileid: "73140528"
 
 그룹에서 부분 문자열을 캡처하지 않은 경우 해당 그룹에 대한 역참조가 정의되지 않으며 일치되지 않습니다. 이 내용은 다음과 같이 정의된 정규식 패턴 `\b(\p{Lu}{2})(\d{2})?(\p{Lu}{2})\b`를 통해 확인할 수 있습니다.
 
-|패턴|설명|
+|무늬|설명|
 |-------------|-----------------|
 |`\b`|단어 경계에서 일치 항목 찾기를 시작합니다.|
 |`(\p{Lu}{2})`|두 개의 대문자를 찾습니다. 이 그룹은 첫 번째 캡처링 그룹입니다.|
@@ -137,6 +136,6 @@ ms.locfileid: "73140528"
 [!code-csharp[RegularExpressions.Language.Backreferences#5](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference5.cs#5)]
 [!code-vb[RegularExpressions.Language.Backreferences#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference5.vb#5)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [정규식 언어 - 빠른 참조](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)

@@ -2,12 +2,12 @@
 title: 요소 작업(C#)
 ms.date: 10/03/2018
 ms.assetid: 283206c9-3246-4c48-b01a-d9de409a7231
-ms.openlocfilehash: b32066d13e700d95e4d2eef29e24e8b87690037d
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: e9ec41793afffe60a7184622f91b5fc023e0958f
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594580"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345156"
 ---
 # <a name="element-operations-c"></a>요소 작업(C#)
 
@@ -28,8 +28,8 @@ ms.locfileid: "69594580"
 |Single|컬렉션의 유일한 요소 또는 특정 조건에 맞는 유일한 요소를 반환합니다. 반환할 요소가 없거나 두 개 이상 있는 경우 <xref:System.InvalidOperationException>을 throw합니다. |해당 사항 없음.|<xref:System.Linq.Enumerable.Single%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Single%2A?displayProperty=nameWithType>|  
 |SingleOrDefault|컬렉션의 유일한 요소 또는 특정 조건에 맞는 유일한 요소를 반환합니다. 반환할 요소가 없는 경우 기본값을 반환합니다. 반환할 요소가 두 개 이상 있는 경우 <xref:System.InvalidOperationException>을 throw합니다. |해당 사항 없음.|<xref:System.Linq.Enumerable.SingleOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SingleOrDefault%2A?displayProperty=nameWithType>|  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Linq>
 - [표준 쿼리 연산자 개요(C#)](./standard-query-operators-overview.md)
-- [방법: 디렉터리 트리에서 가장 큰 파일을 하나 이상 쿼리(LINQ)(C#)](./how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq.md)
+- [디렉터리 트리에서 가장 큰 파일을 하나 이상 쿼리하는 방법(LINQ)(C#)](./how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq.md)

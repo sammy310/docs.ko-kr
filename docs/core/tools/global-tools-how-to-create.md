@@ -4,12 +4,12 @@ description: 전역 도구를 만드는 방법을 설명합니다. 전역 도구
 author: Thraka
 ms.author: adegeo
 ms.date: 08/22/2018
-ms.openlocfilehash: 5c2b1e459f0308f5f96eb041c10f4d7a7ae0ca20
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 1daecf7234f02a5fe0dcf25cf7edbb0af327b8c1
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117449"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75343517"
 ---
 # <a name="create-a-net-core-global-tool-using-the-net-core-cli"></a>.NET Core CLI를 사용하여 .NET Core 전역 도구 만들기
 
@@ -125,7 +125,7 @@ dotnet run -- hello from the bot
 
 `--` 구분 기호 뒤의 모든 인수가 애플리케이션에 전달됩니다.
 
-## <a name="setup-the-global-tool"></a>전역 도구 설정
+## <a name="set-up-the-global-tool"></a>전역 도구 설정
 
 애플리케이션을 패키지하고 전역 도구로 배포하려면 먼저 프로젝트 파일을 수정해야 합니다. `botsay.csproj` 파일을 열고 다음 세 개의 새 XML 노드를 `<Project><PropertyGroup>` 노드에 추가합니다.
 

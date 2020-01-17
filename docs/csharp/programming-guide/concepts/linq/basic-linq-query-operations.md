@@ -17,15 +17,15 @@ helpviewer_keywords:
 - join clause [LINQ in C#]
 - group clause [LINQ in C#]
 ms.assetid: a7ea3421-1cf4-4df7-832a-aa22fe6379e9
-ms.openlocfilehash: 361101258caca763502f92d897866c75bc8d7da2
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 91c038303c1ad7c2530964d3102aae49090c4c2a
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73418716"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635940"
 ---
 # <a name="basic-linq-query-operations-c"></a>기본 LINQ 쿼리 작업(C#)
-이 항목에서는 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리 식 및 쿼리에서 수행하는 일부 일반적인 작업을 간단히 소개합니다. 자세한 내용은 다음 항목을 참조하세요.  
+이 항목에서는 LINQ 쿼리 식 및 쿼리에서 수행하는 일부 일반적인 작업을 간단히 소개합니다. 자세한 내용은 다음 항목을 참조하세요.  
   
  [LINQ 쿼리 식](../../../linq/index.md)  
   
@@ -34,17 +34,17 @@ ms.locfileid: "73418716"
  [연습: C#에서 쿼리 작성](./walkthrough-writing-queries-linq.md)  
   
 > [!NOTE]
-> SQL 또는 XQuery와 같은 쿼리 언어를 이미 잘 알고 있으면 이 항목의 대부분을 건너뛸 수 있습니다. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리 식에서 절의 순서를 알아보려면 "`from` 절"을 확인하세요.  
+> SQL 또는 XQuery와 같은 쿼리 언어를 이미 잘 알고 있으면 이 항목의 대부분을 건너뛸 수 있습니다. LINQ 쿼리 식에서 절의 순서를 알아보려면 "`from` 절"을 확인하세요.  
   
 ## <a name="obtaining-a-data-source"></a>데이터 소스 가져오기  
- [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리에서 첫 번째 단계는 데이터 소스를 지정하는 것입니다. 대부분의 프로그래밍 언어에서처럼 C#에서 변수는 선언된 후 사용되어야 합니다. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리에서는 데이터 소스(`customers`) 및 *범위 변수*(`cust`)를 소개하기 위해 `from` 절이 먼저 나옵니다.  
+ LINQ 쿼리에서 첫 번째 단계는 데이터 소스를 지정하는 것입니다. 대부분의 프로그래밍 언어에서처럼 C#에서 변수는 선언된 후 사용되어야 합니다. LINQ 쿼리에서는 데이터 소스(`customers`) 및 *범위 변수*(`cust`)를 소개하기 위해 `from` 절이 먼저 나옵니다.  
   
  [!code-csharp[csLINQGettingStarted#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#23)]  
   
  쿼리 식에서는 실제 반복이 발생하지 않는다는 점을 제외하고 범위 변수는 `foreach` 루프의 반복 변수와 비슷합니다. 쿼리가 실행될 때 범위 변수는 `customers`에서 각 연속 요소에 대한 참조로 사용됩니다. 컴파일러에서 `cust` 형식을 유추할 수 있으므로 명시적으로 지정할 필요가 없습니다. 추가 범위 변수는 `let` 절에 의해 소개될 수 있습니다. 자세한 내용은 [let 절](../../../language-reference/keywords/let-clause.md)을 참조하세요.  
   
 > [!NOTE]
-> <xref:System.Collections.ArrayList>와 같은 제네릭이 아닌 데이터 소스의 경우 범위 변수를 명시적으로 형식화해야 합니다. 자세한 내용은 [방법: LINQ를 사용하여 ArrayList 쿼리(C#)](./how-to-query-an-arraylist-with-linq.md) 및 [from 절](../../../language-reference/keywords/from-clause.md)을 참조하세요.  
+> <xref:System.Collections.ArrayList>와 같은 제네릭이 아닌 데이터 소스의 경우 범위 변수를 명시적으로 형식화해야 합니다. 자세한 내용은 [LINQ를 사용하여 ArrayList를 쿼리하는 방법(C#)](./how-to-query-an-arraylist-with-linq.md) 및 [from 절](../../../language-reference/keywords/from-clause.md)을 참조하세요.  
   
 ## <a name="filtering"></a>필터링  
  대부분의 일반적인 쿼리 작업에서는 부울 식 형태로 필터를 적용합니다. 필터를 사용하면 쿼리에서는 식이 true인 요소만 반환합니다. 결과는 `where` 절에 따라 반환됩니다. 적용되는 필터는 소스 시퀀스에서 제외할 요소를 지정합니다. 다음 예제에서는 London에 주소가 있는 `customers`만 반환됩니다.  
@@ -84,11 +84,11 @@ ms.locfileid: "73418716"
  자세한 내용은 [group 절](../../../language-reference/keywords/group-clause.md)을 참조하세요.  
   
 ## <a name="joining"></a>조인  
- 조인 작업은 데이터 소스에서 명시적으로 모델링되지 않은 시퀀스 간 연결을 만듭니다. 예를 들어 같은 위치를 가진 모든 고객 및 배포자를 찾는 조인을 수행할 수 있습니다. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]에서 `join` 절은 항상 직접 데이터베이스 테이블이 아닌 개체 컬렉션에 대해 작동합니다.  
+ 조인 작업은 데이터 소스에서 명시적으로 모델링되지 않은 시퀀스 간 연결을 만듭니다. 예를 들어 같은 위치를 가진 모든 고객 및 배포자를 찾는 조인을 수행할 수 있습니다. LINQ에서 `join` 절은 항상 직접 데이터베이스 테이블이 아닌 개체 컬렉션에 대해 작동합니다.  
   
  [!code-csharp[csLINQGettingStarted#36](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#36)]  
   
- [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]의 외래 키는 개체 모델에서 항목 컬렉션을 포함하는 속성으로 표현되므로 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]에서는 SQL에서처럼 자주 `join`을 사용할 필요가 없습니다. 예를 들어 `Customer` 개체에는 `Order` 개체의 컬렉션이 포함됩니다. 조인을 수행하지 않고 점 표기법을 사용하여 주문에 액세스합니다.  
+ LINQ의 외래 키는 개체 모델에서 항목 컬렉션을 포함하는 속성으로 표현되므로 LINQ에서는 SQL에서처럼 자주 `join`을 사용할 필요가 없습니다. 예를 들어 `Customer` 개체에는 `Order` 개체의 컬렉션이 포함됩니다. 조인을 수행하지 않고 점 표기법을 사용하여 주문에 액세스합니다.  
   
 ```csharp
 from order in Customer.Orders...  
@@ -97,9 +97,9 @@ from order in Customer.Orders...
  자세한 내용은 [join 절](../../../language-reference/keywords/join-clause.md)을 참조하세요.  
   
 ## <a name="selecting-projections"></a>선택(프로젝션)  
- `select` 절은 쿼리 결과를 생성하고 각 반환된 요소의 “모양" 또는 형식을 지정합니다. 예를 들어 결과가 계산 또는 새 개체 만들기에 따라 전체 `Customer` 개체, 하나의 멤버만, 멤버 하위 집합 또는 일부 완전히 다른 결과 형식으로 구성될지 지정할 수 있습니다. `select` 절이 소스 요소의 복사본이 아닌 다른 항목을 생성하는 경우 이 작업을 *프로젝션*이라고 합니다. 프로젝션을 사용하여 데이터를 변환하는 것은 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리 식의 강력한 기능입니다. 자세한 내용은 [LINQ를 통한 데이터 변환(C#)](./data-transformations-with-linq.md) 및 [select 절](../../../language-reference/keywords/select-clause.md)을 참조하세요.  
+ `select` 절은 쿼리 결과를 생성하고 각 반환된 요소의 “모양" 또는 형식을 지정합니다. 예를 들어 결과가 계산 또는 새 개체 만들기에 따라 전체 `Customer` 개체, 하나의 멤버만, 멤버 하위 집합 또는 일부 완전히 다른 결과 형식으로 구성될지 지정할 수 있습니다. `select` 절이 소스 요소의 복사본이 아닌 다른 항목을 생성하는 경우 이 작업을 *프로젝션*이라고 합니다. 프로젝션을 사용하여 데이터를 변환하는 것은 LINQ 쿼리 식의 강력한 기능입니다. 자세한 내용은 [LINQ를 통한 데이터 변환(C#)](./data-transformations-with-linq.md) 및 [select 절](../../../language-reference/keywords/select-clause.md)을 참조하세요.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [LINQ 쿼리 식](../../../linq/index.md)
 - [연습: C#에서 쿼리 작성](./walkthrough-writing-queries-linq.md)

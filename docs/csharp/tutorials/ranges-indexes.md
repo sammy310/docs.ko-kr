@@ -4,12 +4,12 @@ description: 이 고급 자습서에서는 인덱스 및 범위를 사용하여 
 ms.date: 09/20/2019
 ms.technology: csharp-fundamentals
 ms.custom: mvc
-ms.openlocfilehash: bbf3f257db9079c4f69f25c9ea08e7711b5ea04b
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 3d4c022ff8d6e7f260632e34d6f28277014c85c8
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039668"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345625"
 ---
 # <a name="indices-and-ranges"></a>인덱스 및 범위
 
@@ -78,9 +78,11 @@ string[] words = new string[]
 
 ## <a name="type-support-for-indices-and-ranges"></a>인덱스 및 범위에 대한 형식 지원
 
-형식이 <xref:System.Index> 또는 <xref:System.Range> 매개 변수를 사용하여 [인덱서](../programming-guide/indexers/index.md)를 제공하는 경우 각각 인덱스 또는 범위를 명시적으로 지원합니다.
+인덱스 및 범위는 시퀀스에서 단일 요소 또는 요소의 하위 범위에 액세스하기 위한 명확하고 간결한 구문을 제공합니다. 인덱스 식은 일반적으로 시퀀스의 요소 형식을 반환합니다. 범위 식은 일반적으로 소스 시퀀스와 동일한 시퀀스 형식을 반환합니다.
 
-이름이 `Length` 또는 `Count`이고 액세스 가능한 getter 및 반환 형식 `int`를 갖는 속성이 있는 경우 형식은 **countable**입니다. 인덱스 또는 범위를 명시적으로 지원하지 않는 countable 형식은 해당 형식에 대한 암시적 지원을 제공할 수 있습니다. 자세한 내용은 [기능 제한 참고](~/_csharplang/proposals/csharp-8.0/ranges.md)의 [암시적 인덱스 지원](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-index-support) 및 [암시적 범위 지원](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-range-support) 섹션을 참조하세요.
+형식이 <xref:System.Index> 또는 <xref:System.Range> 매개 변수를 사용하여 [인덱서](../programming-guide/indexers/index.md)를 제공하는 경우 각각 인덱스 또는 범위를 명시적으로 지원합니다. 형식이 단일 <xref:System.Range> 매개 변수를 사용하는 인덱서를 제공하는 경우 <xref:System.Span%601?displayProperty=nameWithType>와 같은 다른 시퀀스 형식을 반환 하도록 선택할 수 있습니다.
+
+이름이 `Length` 또는 `Count`이고 액세스 가능한 getter 및 반환 형식 `int`를 갖는 속성이 있는 경우 형식은 **countable**입니다. 인덱스 또는 범위를 명시적으로 지원하지 않는 countable 형식은 해당 형식에 대한 암시적 지원을 제공할 수 있습니다. 자세한 내용은 [기능 제한 참고](~/_csharplang/proposals/csharp-8.0/ranges.md)의 [암시적 인덱스 지원](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-index-support) 및 [암시적 범위 지원](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-range-support) 섹션을 참조하세요. 암시적 범위 지원을 사용하는 범위는 소스 시퀀스와 동일한 시퀀스 형식을 반환합니다.
 
 예를 들어, .NET 형식 <xref:System.Array>, <xref:System.String>, <xref:System.Span%601> 및 <xref:System.ReadOnlySpan%601>은 인덱스와 범위를 모두 지원합니다. <xref:System.Collections.Generic.List%601>는 인덱스는 지원하고 범위는 지원하지 않습니다.
 

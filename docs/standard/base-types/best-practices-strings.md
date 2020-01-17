@@ -18,13 +18,12 @@ helpviewer_keywords:
 - comparing strings
 - strings [.NET Framework],comparing
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
-ms.custom: seodec18
-ms.openlocfilehash: cd6b24a6dd893f0c522573a0e19914164c15141f
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: c88776ea9d8ba17d86767b704e8b0eaff5b6cb89
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73973941"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711482"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>.NET에서 문자열 사용에 대한 모범 사례
 
@@ -112,7 +111,7 @@ ms.locfileid: "73973941"
 - <xref:System.String.Compare%2A?displayProperty=nameWithType> 매개 변수를 포함하지 않는 <xref:System.StringComparison> 오버로드.
 - <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 오버로드.
 - 기본 <xref:System.String.StartsWith%28System.String%29?displayProperty=nameWithType> 메서드 및 <xref:System.String.StartsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> null `null`<xref:System.Globalization.CultureInfo> 오버로드.
-- 기본 <xref:System.String.EndsWith%28System.String%29?displayProperty=nameWithType> 메서드 및 <xref:System.String.EndsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> null `null`<xref:System.Globalization.CultureInfo> 오버로드.
+- 기본 <xref:System.String.EndsWith%28System.String%29?displayProperty=nameWithType> 메서드 및 `null`<xref:System.Globalization.CultureInfo> 매개 변수를 포함하는 <xref:System.String.EndsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> 메서드.
 - <xref:System.String.IndexOf%2A?displayProperty=nameWithType> 을 검색 매개 변수로 사용하고 <xref:System.String> 매개 변수를 포함하지 않는 <xref:System.StringComparison> 오버로드.
 - <xref:System.String.LastIndexOf%2A?displayProperty=nameWithType> 을 검색 매개 변수로 사용하고 <xref:System.String> 매개 변수를 포함하지 않는 <xref:System.StringComparison> 오버로드.
 
@@ -352,6 +351,6 @@ LATIN SMALL LETTER A 문자 “a”(\u0061)는 COMBINING RING ABOVE 문자 “+ 
 18.02.1905 15:12
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [문자열 조작](manipulating-strings.md)

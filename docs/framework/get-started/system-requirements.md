@@ -10,12 +10,12 @@ helpviewer_keywords:
 - operating systems supported
 - hardware requirements
 ms.assetid: 298275e2-da1d-4618-9f74-6a3567832350
-ms.openlocfilehash: 0137066b3a351d60bf1cc2e06640030ba1216d03
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: f853663bef4dd0de7ac61e706dedf8c6a19b5b51
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960068"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75545018"
 ---
 # <a name="net-framework-system-requirements"></a>.NET Framework 시스템 요구 사항
 
@@ -78,7 +78,7 @@ ms.locfileid: "74960068"
 
 - 최상의 호환성 및 보안을 위해 모든 플랫폼에 대해 [Windows 업데이트](https://support.microsoft.com/help/12373/windows-update-faq)에서 제공하는 최신 Windows 서비스 팩으로 업그레이드하고 중요 업데이트를 설치하는 것이 좋습니다.
 
-- 64비트 운영 체제에서는 .NET Framework가 WOW64(64비트 머신의 32비트 프로세싱) 및 64비트 프로세싱을 둘 다 지원합니다.
+- 64비트 운영 체제에서는 .NET Framework가 WOW64(64비트 컴퓨터의 32비트 프로세싱) 및 64비트 프로세싱을 둘 다 지원합니다.
 
 ## <a name="supported-server-operating-systems"></a>지원되는 서버 운영 체제
 
@@ -96,7 +96,7 @@ ms.locfileid: "74960068"
 
  **참고:**
 
-- Windows Server 2012에 .NET Framework 4.5가 포함되므로 별도로 설치할 필요가 없습니다. 마찬가지로 [!INCLUDE[winblue_server_2](../../../includes/winblue-server-2-md.md)]에는 .NET Framework 4.5.1이 포함됩니다.
+- Windows Server 2012에 .NET Framework 4.5가 포함되므로 별도로 설치할 필요가 없습니다. 마찬가지로 Windows Server 2012 R2에는 .NET Framework 4.5.1이 포함되어 있습니다.
 
 - .NET Framework는 Windows Server 2008 R2 SP1 이상의 Server Core 역할에 대해 제한적으로 지원됩니다. 지원되지 않는 API 목록은 [Server Core .NET Functionality](https://docs.microsoft.com/previous-versions//dd745015(v=vs.85))(Server Core .NET 기능)를 참조하세요.
 
@@ -108,7 +108,7 @@ ms.locfileid: "74960068"
 
 - 64비트 운영 체제에서는 .NET Framework가 WOW64(64비트 컴퓨터의 32비트 프로세싱) 및 64비트 프로세싱을 둘 다 지원합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [설치 가이드](../install/index.md)
 - [시작](index.md)

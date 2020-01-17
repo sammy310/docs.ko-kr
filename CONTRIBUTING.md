@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 25615dd43f1ae4f56c7bced7f79a0612093a21fb
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 469be53e14c42775f21ef1ef815becd5cad03a97
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73191688"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75336716"
 ---
 # <a name="contributing"></a>참여
 
@@ -22,12 +22,9 @@ ms.locfileid: "73191688"
 
 이 리포지토리는 .NET에 대한 개념 설명서를 포함합니다. .NET 문서 사이트는 이 리포지토리 외에도 여러 리포지토리에서 빌드되었습니다.
 
-- [코드 샘플 및 조각](https://github.com/dotnet/samples)  
-    이 리포지토리의 문제 및 작업은 [dotnet/docs/issues](https://github.com/dotnet/docs/issues)에서 추적됩니다.
-- [.NET API 참조](https://github.com/dotnet/dotnet-api-docs)  
-    이 리포지토리의 문제 및 작업은 [dotnet/dotnet-api-docs/issues](https://github.com/dotnet/dotnet-api-docs/issues)에서 추적됩니다.
-- [.NET Compiler Platform SDK 참조](https://github.com/dotnet/roslyn-api-docs)  
-    이 리포지토리의 문제 및 작업은 [dotnet/docs/issues](https://github.com/dotnet/docs/issues)에서 추적됩니다.
+- 이 리포지토리의 [코드 샘플 및 코드 조각](https://github.com/dotnet/samples) 문제 및 작업은 [dotnet/docs/issues](https://github.com/dotnet/docs/issues)에서 추적됩니다.
+- 이 리포지토리의 [.NET API 참조](https://github.com/dotnet/dotnet-api-docs) 문제 및 작업은 [dotnet/dotnet-api-docs/issues](https://github.com/dotnet/dotnet-api-docs/issues)에서 추적됩니다.
+- 이 리포지토리의 [.NET Compiler Platform SDK 참조](https://github.com/dotnet/roslyn-api-docs) 문제 및 작업은 [dotnet/docs/issues](https://github.com/dotnet/docs/issues)에서 추적됩니다.
 
 ## <a name="dos-and-donts"></a>권고 및 금지
 
@@ -37,10 +34,10 @@ ms.locfileid: "73191688"
 - 작업에 대한 제안 사항과 관련하여 [누구나 사용 가능한 정보](https://github.com/dotnet/docs/labels/up-for-grabs)를 **확인합니다**.
 - 각 작업에 대해 하나의 PR을 **만듭니다**. 관련이 없는 여러 변경 사항이 포함된 PR은 검토하기가 훨씬 어렵습니다. 이로 인해 검토 및 PR 병합이 지연됩니다. 이 지침은 검토에도 적용됩니다. 즉, 리뷰에서 관련이 없는 변경 사항은 제안되지 않습니다. 커뮤니티 검토는 이 지침을 준수해야 합니다.
 - PR의 작업에 대한 명확한 설명을 **제공합니다**. 변경된 내용과 이유를 알려 주세요. "article.md 업데이트"의 기본 설명은 검토자에게 유용하지 않습니다.
-- 사전 논의 없이 스타일 전용 변경 사항에 대해 PR을 제출하지 **않습니다**. 이러한 PR은 정확성을 검토하는 데 시간이 오래 걸리며 병합하면 종종 다른 중요한 업데이트와의 병합 충돌이 발생합니다. 일관된 스타일을 유지하기 위해 노력하고 있지만 다른 작업에 대한 균형도 고려하고 있습니다. 다른 이유로 인해 주요 업데이트를 수행하면 문서가 스타일에 맞게 변경됩니다. 
-- **권고** [스타일 가이드](./styleguide/template.md) 및 [어투 및 어조](./styleguide/voice-tone.md) 지침을 참고합니다. 새로운 추가 사항은 다음 지침을 따라야 합니다.
+- 사전 논의 없이 스타일 전용 변경 사항에 대해 PR을 제출하지 **않습니다**. 이러한 PR은 정확성을 검토하는 데 시간이 오래 걸리며 병합하면 종종 다른 중요한 업데이트와의 병합 충돌이 발생합니다. 일관된 스타일을 유지하기 위해 노력하고 있지만 다른 작업에 대한 균형도 고려하고 있습니다. 다른 이유로 인해 주요 업데이트를 수행하면 문서가 스타일에 맞게 변경됩니다.
+- **권고**[스타일 가이드](./styleguide/template.md) 및 [어투 및 어조](./styleguide/voice-tone.md) 지침을 참고합니다. 새로운 추가 사항은 다음 지침을 따라야 합니다.
 - **권고** 문서에서 작업하기 전에 포크의 별도 분기를 만듭니다.
-- **권고** [GitHub 흐름 워크플로](https://guides.github.com/introduction/flow/)를 수행합니다.
+- **권고**[GitHub 흐름 워크플로](https://guides.github.com/introduction/flow/)를 수행합니다.
 - **권고** 기여에 대해 자주 블로깅하고 트윗(무엇이든)합니다.
 
 이러한 지침은 모든 사용자의 시간을 절약하는 데 도움이 됩니다. 많은 사람들이 이러한 리포지토리에 기여합니다. 이러한 지침에 따라 PR을 적시에 쉽게 검토하고 병합할 수 있습니다. 이러한 사례는 다른 커뮤니티 구성원 및 팀의 PR과 충돌하는 것을 최소화합니다. 이러한 지침을 따르지 않는 PR은 종종 회사와 커뮤니티 회원에게 추가 작업을 발생시킬 수 있기 때문에 거부될 수 있습니다. 예외를 원하는 경우 먼저 문제를 생성합니다.
@@ -64,7 +61,7 @@ ms.locfileid: "73191688"
 
 - **새 콘텐츠 작성**. 고유한 항목 작성에 관심이 있는 경우 이러한 문제는 문서 집합에 추가하고 싶은 항목을 나열합니다. 하지만 항목에 대한 작업을 시작하기 전에 Microsoft에 알려주세요. 여기에 나열되지 않은 항목 작성에 관심이 있는 경우 문제를 엽니다.
 
-[열린 문제](https://github.com/dotnet/docs/issues) 목록을 살펴보고 관심 있는 문제에 대한 작업을 자원할 수도 있습니다. [up-for-grabs](https://github.com/dotnet/docs/labels/up-for-grabs) 레이블을 사용하여 기여와 관련해서 열린 문제에 태그를 지정합니다. 
+[열린 문제](https://github.com/dotnet/docs/issues) 목록을 살펴보고 관심 있는 문제에 대한 작업을 자원할 수도 있습니다. [up-for-grabs](https://github.com/dotnet/docs/labels/up-for-grabs) 레이블을 사용하여 기여와 관련해서 열린 문제에 태그를 지정합니다.
 
 **2단계:** 필요에 따라 `dotnet/docs`, `dotnet/samples` 또는 `dotnet/dotnet-api-docs` 리포지토리를 포크하고 변경 내용에 대한 분기를 만듭니다.
 
@@ -138,7 +135,7 @@ docs 리포지토리에서 새 콘텐츠를 추가함에 따라 이러한 디렉
 
 ## <a name="the-c-interactive-experience"></a>C# 대화형 환경
 
-C#의 짧은 코드 샘플은 `csharp-interactive` 언어 태그를 사용하여 브라우저에서 실행되는 C# 샘플을 지정할 수 있습니다. 인라인 코드 샘플은 `csharp-interactive` 태그를 사용합니다. 소스에서 포함된 코드 조각의 경우 `code-csharp-interactive` 태그를 사용합니다. 이러한 코드 샘플은 문서에 코드 창과 출력 창을 표시합니다. 사용자가 샘플을 실행하고 나면 출력 창에 대화형 코드 실행에서 생성된 출력이 모두 표시됩니다. 
+C#의 짧은 코드 샘플은 `csharp-interactive` 언어 태그를 사용하여 브라우저에서 실행되는 C# 샘플을 지정할 수 있습니다. 인라인 코드 샘플은 `csharp-interactive` 태그를 사용합니다. 소스에서 포함된 코드 조각의 경우 `code-csharp-interactive` 태그를 사용합니다. 이러한 코드 샘플은 문서에 코드 창과 출력 창을 표시합니다. 사용자가 샘플을 실행하고 나면 출력 창에 대화형 코드 실행에서 생성된 출력이 모두 표시됩니다.
 
 C# 대화형 환경은 샘플 작업 방법을 변경합니다. 방문자가 샘플을 실행하여 결과를 확인할 수 있습니다. 샘플 또는 해당 텍스트에 출력 정보가 포함되어야 하는지 여부를 판별하는 데 도움이 되는 여러 요인이 있습니다.
 
@@ -149,7 +146,7 @@ C# 대화형 환경은 샘플 작업 방법을 변경합니다. 방문자가 샘
 - 샘플과 예상 출력이 모두 짧은 경우 출력을 표시하는 것이 좋습니다. 그러면 시간이 약간 절약됩니다.
 - 현재 문화권 또는 고정 문화권이 출력에 미치는 영향을 설명하는 문서에서는 예상 출력에 대해 설명해야 합니다. 대화형 REPL(read–eval–print loop)은 Linux 기반 호스트에서 실행됩니다. 기본 문화권 및 고정 문화권은 운영 체제 및 머신마다 다른 출력을 생성합니다. 문서에서 Windows, Linux 및 Mac 시스템의 출력에 대해 설명해야 합니다.
 
-### <a name="when-to-exclude-expected-output-from-the-sample"></a>샘플에서 예상 출력을 제외해야 하는 경우 
+### <a name="when-to-exclude-expected-output-from-the-sample"></a>샘플에서 예상 출력을 제외해야 하는 경우
 
 - 샘플에서 큰 출력을 생성하는 문서의 경우 주석에 출력을 포함하면 안 됩니다. 샘플이 실행되고 나면 코드가 모호해집니다.
 - 샘플이 항목을 설명하지만 출력이 없어도 항목을 이해하는 데 문제가 없는 문서. 예를 들어 LINQ 쿼리를 실행하여 쿼리 구문을 설명한 이후에 출력 컬렉션에 모든 항목을 표시하는 코드입니다.

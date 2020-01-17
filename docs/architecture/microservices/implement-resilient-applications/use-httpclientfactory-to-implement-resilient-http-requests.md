@@ -2,12 +2,12 @@
 title: HttpClientFactory를 사용하여 복원력 있는 HTTP 요청 구현
 description: 애플리케이션에서 사용하기 쉽도록 .NET Core 2.1부터 제공되는 HttpClientFactory를 사용하여 `HttpClient` 인스턴스를 만드는 방법을 알아봅니다.
 ms.date: 08/08/2019
-ms.openlocfilehash: 9eff4a01361b3dc6f7471bc012c945d048b9a276
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 1a6d65509d669166e73ad907b506bae7fa26536d
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737752"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900318"
 ---
 # <a name="use-httpclientfactory-to-implement-resilient-http-requests"></a>HttpClientFactory를 사용하여 복원력 있는 HTTP 요청 구현
 
@@ -37,7 +37,7 @@ ms.locfileid: "73737752"
 - `HttpClientMessageHandlers`의 수명을 관리하여 `HttpClient` 수명을 직접 관리할 때 발생할 수 있는 언급된 문제를 방지합니다.
 
 > [!NOTE]
-> `HttpClientFactory`는 `Microsoft.Extensions.DependencyInjection` NuGet 패키지의 DI(종속성 주입) 구현과 깊은 관계가 있습니다. 다른 종속성 주입 컨테이너를 사용하는 방법에 대한 자세한 내용은 이 [GitHub 토론](https://github.com/aspnet/Extensions/issues/1345)을 참조하세요.
+> `HttpClientFactory`는 `Microsoft.Extensions.DependencyInjection` NuGet 패키지의 DI(종속성 주입) 구현과 깊은 관계가 있습니다. 다른 종속성 주입 컨테이너를 사용하는 방법에 대한 자세한 내용은 이 [GitHub 토론](https://github.com/dotnet/extensions/issues/1345)을 참조하세요.
 
 ## <a name="multiple-ways-to-use-httpclientfactory"></a>HttpClientFactory를 사용하는 여러 가지 방법
 
@@ -188,14 +188,14 @@ namespace Microsoft.eShopOnContainers.WebMVC.Controllers
 - **.NET Core에서 HttpClientFactory 사용**  
   [https://docs.microsoft.com/aspnet/core/fundamentals/http-requests](/aspnet/core/fundamentals/http-requests)
 
-- **`aspnet/Extensions` GitHub 리포지토리의 HttpClientFactory 소스 코드**  
-  <https://github.com/aspnet/Extensions/tree/master/src/HttpClientFactory>
+- **`dotnet/extensions` GitHub 리포지토리의 HttpClientFactory 소스 코드**  
+  <https://github.com/dotnet/extensions/tree/master/src/HttpClientFactory>
 
 - **Polly(.NET 복원력 및 transient-fault-handling 라이브러리)**  
   <http://www.thepollyproject.org/>
   
 - **종속성 주입 없이 HttpClientFactory 사용(GitHub 문제)**  
-  <https://github.com/aspnet/Extensions/issues/1345>
+  <https://github.com/dotnet/extensions/issues/1345>
 
 >[!div class="step-by-step"]
 >[이전](explore-custom-http-call-retries-exponential-backoff.md)

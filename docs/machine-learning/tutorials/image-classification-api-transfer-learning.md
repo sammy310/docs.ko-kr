@@ -3,15 +3,15 @@ title: '자습서: 전이 학습을 사용한 자동화된 시각적 개체 검�
 description: 이 자습서에서는 전이 학습을 사용하여 이미지 검색 API로 ML.NET의 TensorFlow 딥 러닝 모델을 학습함으로써 콘크리트 표면 이미지를 금이 갔는지 여부로 분류하는 방법을 설명합니다.
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 11/14/2019
+ms.date: 12/12/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 443f9e9a83ebf31bb6c62323015af4a554323b67
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 4781e39a0c8827adb6ab0155d5215645242208a5
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74205051"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348173"
 ---
 # <a name="tutorial-automated-visual-inspection-using-transfer-learning-with-the-mlnet-image-classification-api"></a>자습서: ML.NET 이미지 분류 API와 함께 전이 학습을 사용한 자동화된 시각적 개체 검사
 
@@ -26,7 +26,7 @@ ms.locfileid: "74205051"
 > - 전이 학습을 사용하여 사용자 지정 TensorFlow 이미지 분류 모델 학습
 > - 사용자 지정 모델을 사용하여 이미지 분류
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 - “.NET Core 플랫폼 간 개발” 워크로드가 설치된 [Visual Studio 2017 15.6 이상](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017).
 

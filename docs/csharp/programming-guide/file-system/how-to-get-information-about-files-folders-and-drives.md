@@ -1,18 +1,17 @@
 ---
-title: '방법: 파일, 폴더 및 드라이브에 대한 정보 가져오기 - C# 프로그래밍 가이드'
-ms.custom: seodec18
+title: 파일, 폴더 및 드라이브에 대한 정보를 가져오는 방법 - C# 프로그래밍 가이드
 ms.date: 07/20/2015
 helpviewer_keywords:
 - files [C#], getting information about
 ms.assetid: 22fc2da6-5494-405b-995e-c0b99142a93e
-ms.openlocfilehash: 57c7811246dd1de3f009033403ec269082915c09
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 6024b1be4ce826900c6f9b367323fb19ac55d2c7
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590030"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705212"
 ---
-# <a name="how-to-get-information-about-files-folders-and-drives--c-programming-guide"></a>방법: 파일, 폴더 및 드라이브에 대한 정보 가져오기(C# 프로그래밍 가이드)
+# <a name="how-to-get-information-about-files-folders-and-drives--c-programming-guide"></a>파일, 폴더 및 드라이브에 대한 정보를 가져오는 방법(C# 프로그래밍 가이드)
 .NET Framework에서 다음 클래스를 사용하여 파일 시스템 정보에 액세스할 수 있습니다.  
   
 - <xref:System.IO.FileInfo?displayProperty=nameWithType>  
@@ -35,7 +34,7 @@ System.IO.DriveInfo di = new System.IO.DriveInfo(@"C:\");
   
  <xref:System.IO.Directory?displayProperty=nameWithType> 및 <xref:System.IO.File?displayProperty=nameWithType> 클래스는 디렉터리와 파일에 대한 정보를 가져오기 위한 정적 메서드를 제공합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 파일 및 폴더에 대한 정보에 액세스하는 다양한 방법을 보여 줍니다.  
   
  [!code-csharp[csFilesandFolders#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csFilesAndFolders/CS/FileIteration.cs#6)]  
@@ -53,7 +52,7 @@ System.IO.DriveInfo di = new System.IO.DriveInfo(@"C:\");
   
  애플리케이션에 지정된 파일을 읽을 수 있는 권한이 없는 경우 `Exists` 메서드는 경로가 있는지 여부에 관계없이 `false`를 반환합니다. 이 메서드는 예외를 throw하지 않습니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.IO?displayProperty=nameWithType>
 - [C# 프로그래밍 가이드](../index.md)

@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 1f7efaedaa1a0be90f7b619f954bdf78eecafa07
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: 4a6c8b27812e9f60e52132169dda0464c24abcc2
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74999064"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740571"
 ---
 # <a name="install-the-net-core-sdk"></a>.NET Core SDK 설치
 
@@ -44,9 +44,11 @@ macOS에는 .NET Core 3.1 SDK를 설치하는 데 사용할 수 있는 독립 �
 
 널리 사용되는 여러 Linux 패키지 관리자를 사용하여 .NET Core SDK를 설치할 수 있습니다. 자세한 내용은 [Linux 패키지 관리자 - .NET Core 설치](linux-package-managers.md)를 참조하세요.
 
+패키지 관리자를 사용한 설치는 x64 아키텍처에서만 지원됩니다. ARM과 같은 다른 아키텍처를 사용하여 .NET Core SDK를 설치하는 경우 아래 지침을 [다운로드하고 수동으로 설치](#download-and-manually-install)합니다. 지원되는 아키텍처에 대한 자세한 내용은 [.NET Core 종속성 및 요구 사항](dependencies.md)을 참조하세요.
+
 ## <a name="download-and-manually-install"></a>다운로드 및 수동으로 설치
 
-SDK를 추출하고 터미널에서 명령을 사용할 수 있으려면 먼저 .NET Core 이진 릴리스를 [다운로드](#all-net-core-downloads)합니다. 그런 다음 터미널을 열고 다음 명령을 실행합니다.
+SDK를 추출하고 터미널에서 .NET Core CLI 명령을 사용할 수 있으려면 먼저 .NET Core 이진 릴리스를 [다운로드](#all-net-core-downloads)합니다. 그런 다음 터미널을 열고 다음 명령을 실행합니다.
 
 ```bash
 mkdir -p $HOME/dotnet && tar zxf dotnet-sdk-3.1.100-linux-x64.tar.gz -C $HOME/dotnet
@@ -55,14 +57,14 @@ export PATH=$PATH:$HOME/dotnet
 ```
 
 > [!TIP]
-> 위 명령은 명령이 실행된 터미널 세션에서만 .NET SDK 명령을 사용할 수 있도록 만듭니다.
+> 이전 `export` 명령은 명령이 실행된 터미널 세션에서만 .NET Core CLI 명령을 사용할 수 있도록 만듭니다.
 >
 > 셸 프로필을 편집하여 명령을 영구적으로 추가할 수 있습니다. 몇 가지 Linux용 셸이 있으며, 각각 다른 프로필을 갖습니다. 예:
 >
 > - **Bash 셸**: *~/.bash_profile*, *~/.bashrc*
 > - **Korn 셸**: *~/.kshrc* 또는 *.profile*
 > - **Z 셸**: *~/.zshrc* 또는 *.zprofile*
-> 
+>
 > 셸의 적절한 소스 파일을 편집하고 기존 `PATH` 문의 끝에 `:$HOME/dotnet`을 추가합니다. 포함된 `PATH` 문이 없다면 `export PATH=$PATH:$HOME/dotnet`을 사용하여 새 라인을 추가합니다.
 >
 > 또한, 파일 끝에 `export DOTNET_ROOT=$HOME/dotnet`을 추가합니다.
@@ -94,7 +96,7 @@ Visual Studio가 최신 .NET Core SDK 및 런타임을 설치할 수 있습니�
 
 ### <a name="select-a-workload"></a>워크로드 선택
 
-Visual Studio를 설치하거나 수정할 때는 빌드하려는 애플리케이션의 종류에 따라 다음 워크로드 중 하나를 선택합니다.
+Visual Studio를 설치하거나 수정할 때는 빌드하려는 애플리케이션의 종류에 따라 다음 워크로드 중 하나 이상을 선택합니다.
 
 - **기타 도구 세트** 섹션의 **.NET Core 플랫폼 간 개발** 워크로드
 - **웹 및 클라우드** 섹션의 **ASP.NET 및 웹 개발** 워크로드
@@ -131,7 +133,7 @@ Visual Studio Code에 Visual Studio처럼 자동화된 .NET Core 설치 프로�
 
 [dotnet-install 스크립트](../tools/dotnet-install-script.md)는 자동화 및 SDK의 관리자가 아닌 일반 설치를 수행하는 데 사용됩니다. 스크립트는 [dotnet-install 스크립트 참조 페이지](../tools/dotnet-install-script.md)에서 다운로드할 수 있습니다.
 
-스크립트는 기본적으로 최신 [LTS(장기 지원)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) 버전(.NET Core 2.1)을 설치합니다. .NET Core의 최신 릴리스를 설치하려면 다음 스위치와 함께 스크립트를 실행합니다.
+스크립트는 기본적으로 최신 [LTS(장기 지원)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) 버전(.NET Core 3.1)을 설치합니다. .NET Core의 최신 릴리스를 설치하려면 다음 스위치와 함께 스크립트를 실행합니다.
 
 ```powershell
 dotnet-install.ps1 -Channel Current
@@ -145,7 +147,7 @@ dotnet-install.ps1 -Channel Current
 
 [dotnet-install 스크립트](../tools/dotnet-install-script.md)는 자동화 및 SDK의 관리자가 아닌 일반 설치를 수행하는 데 사용됩니다. 스크립트는 [dotnet-install 스크립트 참조 페이지](../tools/dotnet-install-script.md)에서 다운로드할 수 있습니다.
 
-스크립트는 기본적으로 최신 [LTS(장기 지원)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) 버전(.NET Core 2.1)을 설치합니다. .NET Core의 최신 릴리스를 설치하려면 다음 스위치와 함께 스크립트를 실행합니다.
+스크립트는 기본적으로 최신 [LTS(장기 지원)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) 버전(.NET Core 3.1)을 설치합니다. .NET Core의 최신 릴리스를 설치하려면 다음 스위치와 함께 스크립트를 실행합니다.
 
 ```bash
 ./dotnet-install.sh -c Current
@@ -176,8 +178,7 @@ Docker 컨테이너에서 .NET Core를 사용하는 방법에 대한 자세한 �
 
 ::: zone pivot="os-windows"
 
-- [자습서: C# Hello World 자습서](../tutorials/with-visual-studio.md)
-- [자습서: Visual Basic Hello World 자습서](../tutorials/vb-with-visual-studio.md)
+- [자습서: Hello World 자습서](../tutorials/with-visual-studio.md)
 - [자습서: Visual Studio Code를 사용하여 새 앱 만들기](../tutorials/with-visual-studio-code.md)
 - [자습서: .NET Core 앱 컨테이너화](../docker/build-container.md)
 

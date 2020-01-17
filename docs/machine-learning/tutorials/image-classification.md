@@ -4,14 +4,12 @@ description: 기존 TensorFlow 모델에서 새로운 ML.NET 이미지 분류 �
 ms.date: 11/15/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-author: natke
-ms.author: nakersha
-ms.openlocfilehash: 952ce5c52bcd09b8c4e4e40d5ddf85835a26478d
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 5fe47c42d0cf24ebfdc33a937e1afbd11a976680
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204993"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75738956"
 ---
 # <a name="tutorial-generate-an-mlnet-image-classification-model-from-a-pre-trained-tensorflow-model"></a>자습서: 미리 학습된 TensorFlow 모델에서 ML.NET 이미지 분류 모델 생성
 
@@ -37,7 +35,7 @@ TensorFlow 모델은 이미지를 천 개 범주로 분류하도록 학습되었
 
 이 자습서에서는 이미지를 천 개의 범주로 분류하도록 학습된 TensorFlow 모델의 일부를 3개 범주로 이미지를 분류하는 ML.NET 모델에서 사용합니다.
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 * “.NET Core 플랫폼 간 개발” 워크로드가 설치된 [Visual Studio 2017 버전 15.6 이상](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)
 * [자습서 자산 디렉터리 .ZIP 파일](https://github.com/dotnet/samples/blob/master/machine-learning/tutorials/TransferLearningTF/image-classifier-assets.zip)

@@ -1,18 +1,18 @@
 ---
 title: F#을 사용하여 Azure Queue 스토리지 시작
-description: Azure 큐는 응용 프로그램 구성 요소 간에 안정적인 비동기 메시징을 제공 합니다. 클라우드 메시징은 응용 프로그램 구성 요소를 독립적으로 확장할 수 있도록 합니다.
+description: Azure 큐는 애플리케이션 구성 요소 간에 안정적인 비동기 메시징을 제공합니다. 클라우드 메시징을 사용하면 애플리케이션 구성 요소를 독립적으로 조정할 수 있습니다.
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: a09cbdd4b995e34177c110ce91b02162bb19dfa8
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 841068ac91aecc53811359e27d984907569a2c6d
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423852"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75935489"
 ---
 # <a name="get-started-with-azure-queue-storage-using-f"></a>F\#를 사용 하 여 Azure Queue storage 시작
 
-Azure Queue storage는 응용 프로그램 구성 요소 간에 클라우드 메시징을 제공 합니다. 응용 프로그램을 확장할 수 있도록 응용 프로그램을 디자인 하는 경우 응용 프로그램 구성 요소는 독립적으로 확장 될 수 있도록 분리 되어 있습니다. Queue storage는 클라우드, 데스크톱, 온-프레미스 서버 또는 모바일 장치에서 실행 되는지에 관계 없이 응용 프로그램 구성 요소 간의 통신을 위한 비동기 메시징을 제공 합니다. 또한 Queue storage는 비동기 작업 관리와 프로세스 워크플로 작성을 지원 합니다.
+Azure Queue Storage는 애플리케이션 구성 요소 간에 클라우드 메시징을 제공합니다. 규모를 고려하여 애플리케이션을 디자인할 때는 애플리케이션 구성 요소를 개별적으로 확장할 수 있도록 각 구성 요소를 분리하는 경우가 많습니다. Queue Storage는 클라우드, 데스크톱, 온-프레미스 서버 또는 모바일 디바이스에서 실행 중인지와 관계 없이 애플리케이션 구성 요소 간에 통신을 위한 비동기 메시징을 제공합니다. Queue Storage는 또한 비동기 작업 관리와 프로세스 워크플로 작성을 지원합니다.
 
 ### <a name="about-this-tutorial"></a>이 자습서 정보
 
@@ -20,7 +20,7 @@ Azure Queue storage는 응용 프로그램 구성 요소 간에 클라우드 메
 
 큐 저장소에 대 한 개념적 개요는 [queue storage에 대 한 .net 가이드](/azure/storage/storage-dotnet-how-to-use-queues)를 참조 하세요.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>전제 조건
 
 이 가이드를 사용 하려면 먼저 [Azure storage 계정을 만들어야](/azure/storage/storage-create-storage-account)합니다.
 이 계정에 대 한 저장소 액세스 키도 필요 합니다.
@@ -31,9 +31,9 @@ Azure Queue storage는 응용 프로그램 구성 요소 간에 클라우드 메
 
 그런 다음 [Paket](https://fsprojects.github.io/Paket/) 또는 [NuGet](https://www.nuget.org/) 과 같은 [패키지 관리자](package-management.md) 를 사용 하 여 `WindowsAzure.Storage` 패키지를 설치 하 고 `#r` 지시어를 사용 하 여 스크립트에 `WindowsAzure.Storage.dll` 참조 합니다.
 
-### <a name="add-namespace-declarations"></a>네임 스페이스 선언 추가
+### <a name="add-namespace-declarations"></a>네임스페이스 선언 추가
 
-`queues.fsx` 파일의 맨 위에 다음 `open` 문을 추가 합니다.
+`queues.fsx` 파일 맨 위에 다음 `open` 문을 추가합니다.
 
 [!code-fsharp[QueueStorage](~/samples/snippets/fsharp/azure/queue-storage.fsx#L1-L3)]
 
@@ -45,13 +45,13 @@ Azure Queue storage는 응용 프로그램 구성 요소 간에 클라우드 메
 
 [!code-fsharp[QueueStorage](~/samples/snippets/fsharp/azure/queue-storage.fsx#L9-L9)]
 
-그러나 실제 프로젝트에는이 방법이 **권장 되지 않습니다** . 저장소 계정 키는 저장소 계정의 루트 암호와 비슷합니다. 항상 저장소 계정 키를 보호 해야 합니다. 다른 사용자에 게 배포 하거나 하드 코딩 하거나 다른 사용자가 액세스할 수 있는 일반 텍스트 파일로 저장 하지 않도록 합니다. 손상 된 것으로 생각 되는 경우 Azure Portal을 사용 하 여 키를 다시 생성할 수 있습니다.
+그러나 실제 프로젝트에는이 방법이 **권장 되지 않습니다** . 스토리지 계정 키는 스토리지 계정의 루트 암호와 비슷합니다. 항상 스토리지 계정 키를 보호해야 합니다. 다른 사용자에게 배포하거나 하드 코딩하거나 다른 사람이 액세스할 수 있는 일반 텍스트 파일에 저장하지 마십시오. 손상 된 것으로 생각 되는 경우 Azure Portal을 사용 하 여 키를 다시 생성할 수 있습니다.
 
 실제 응용 프로그램의 경우 저장소 연결 문자열을 유지 하는 가장 좋은 방법은 구성 파일에 있습니다. 구성 파일에서 연결 문자열을 가져오려면 다음을 수행할 수 있습니다.
 
 [!code-fsharp[QueueStorage](~/samples/snippets/fsharp/azure/queue-storage.fsx#L11-L13)]
 
-Azure Configuration Manager 사용은 선택 사항입니다. .NET Framework의 `ConfigurationManager` 유형과 같은 API를 사용할 수도 있습니다.
+Azure 구성 관리자 사용은 선택 사항입니다. .NET Framework의 `ConfigurationManager` 형식과 같은 API를 사용할 수도 있습니다.
 
 ### <a name="parse-the-connection-string"></a>연결 문자열 구문 분석
 
@@ -67,7 +67,7 @@ Azure Configuration Manager 사용은 선택 사항입니다. .NET Framework의 
 
 [!code-fsharp[QueueStorage](~/samples/snippets/fsharp/azure/queue-storage.fsx#L26-L26)]
 
-이제 데이터를 읽고 큐 저장소에 데이터를 쓰는 코드를 작성할 준비가 되었습니다.
+이제 데이터를 읽어 오고 Queue Storage에 데이터를 기록하는 코드를 작성할 준비가 되었습니다.
 
 ## <a name="create-a-queue"></a>큐 만들기
 
@@ -81,7 +81,7 @@ Azure Configuration Manager 사용은 선택 사항입니다. .NET Framework의 
 
 [!code-fsharp[QueueStorage](~/samples/snippets/fsharp/azure/queue-storage.fsx#L42-L44)]
 
-## <a name="peek-at-the-next-message"></a>다음 메시지 피킹 (peeking)
+## <a name="peek-at-the-next-message"></a>다음 메시지 보기
 
 큐에서 메시지를 제거 하지 않고 `PeekMessage` 메서드를 호출 하 여 큐의 맨 앞에 있는 메시지를 피킹할 수 있습니다.
 
@@ -97,13 +97,13 @@ Azure Configuration Manager 사용은 선택 사항입니다. .NET Framework의 
 
 ## <a name="change-the-contents-of-a-queued-message"></a>대기 중인 메시지의 콘텐츠 변경
 
-큐에서 검색 된 메시지의 콘텐츠를 즉시 변경할 수 있습니다. 메시지가 작업 태스크를 나타내는 경우이 기능을 사용 하 여 작업 태스크의 상태를 업데이트할 수 있습니다. 다음 코드는 큐 메시지를 새 콘텐츠로 업데이트 하 고 표시 제한 시간이 다른 60 초를 연장 하도록 설정 합니다. 그러면 메시지와 연결 된 작업의 상태가 저장 되 고 클라이언트에 게 메시지 작업을 계속 하는 데 1 분이 걸립니다. 하드웨어 또는 소프트웨어 오류로 인해 처리 단계가 실패할 경우 처음부터 다시 시작 하지 않고도 큐 메시지에 대 한 다단계 워크플로를 추적 하는 데이 기법을 사용할 수 있습니다. 일반적으로 다시 시도 수를 유지 하 고, 메시지를 몇 번 이상 다시 시도 하는 경우 삭제 합니다. 이는 처리할 때마다 응용 프로그램 오류를 트리거하는 메시지를 방지 합니다.
+큐에서 검색 된 메시지의 콘텐츠를 즉시 변경할 수 있습니다. 메시지가 작업을 나타내는 경우 이 기능을 사용하여 작업의 상태를 업데이트할 수 있습니다. 다음 코드는 큐 메시지를 새로운 콘텐츠로 업데이트하고 표시 제한 시간이 60초 더 늘어나도록 설정합니다. 그러면 메시지와 연결된 작업의 상태가 저장되고 클라이언트에서 메시지에 대한 작업을 계속할 수 있는 시간이 1분 더 허용됩니다. 이 기술을 사용하여 처리 단계가 하드웨어 또는 소프트웨어 오류로 인해 실패하는 경우 처음부터 시작하지 않고도 큐 메시지에 대한 여러 단계의 워크플로를 추적할 수 있습니다. 일반적으로 다시 시도 수를 유지 하 고, 메시지를 몇 번 이상 다시 시도 하는 경우 삭제 합니다. 이 기능은 처리될 때마다 애플리케이션 오류를 트리거하는 메시지를 차단하여 보호해 줍니다.
 
 [!code-fsharp[QueueStorage](~/samples/snippets/fsharp/azure/queue-storage.fsx#L65-L69)]
 
-## <a name="de-queue-the-next-message"></a>다음 메시지를 큐에서 제거 합니다.
+## <a name="de-queue-the-next-message"></a>큐에서 다음 메시지 제거
 
-코드는 두 단계로 큐에서 메시지를 큐에서 제거 합니다. `GetMessage`를 호출 하면 큐에서 다음 메시지를 가져옵니다. `GetMessage`에서 반환 된 메시지는이 큐에서 메시지를 읽는 다른 코드에는 표시 되지 않습니다. 기본적으로이 메시지는 30 초 동안 표시 되지 않습니다. 큐에서 메시지 제거를 완료 하려면 `DeleteMessage`도 호출 해야 합니다. 메시지를 제거 하는이 2 단계 프로세스는 코드가 하드웨어 또는 소프트웨어 오류로 인해 메시지를 처리 하지 못하는 경우 코드의 다른 인스턴스가 동일한 메시지를 가져와서 다시 시도할 수 있도록 보장 합니다. 코드는 메시지가 처리 된 직후에 `DeleteMessage`를 호출 합니다.
+다음 코드는 2단계를 거쳐 큐에서 메시지를 제거합니다. `GetMessage`를 호출 하면 큐에서 다음 메시지를 가져옵니다. `GetMessage`에서 반환된 메시지는 이 큐의 메시지를 읽는 다른 코드에는 표시되지 않습니다. 기본적으로, 이 메시지는 30초간 표시되지 않습니다. 큐에서 메시지 제거를 완료 하려면 `DeleteMessage`도 호출 해야 합니다. 메시지를 제거하는 이 2단계 프로세스는 코드가 하드웨어 또는 소프트웨어 오류로 인해 메시지를 처리하지 못하는 경우 코드의 다른 인스턴스가 동일한 메시지를 가져와서 다시 시도할 수 있도록 보장합니다. 코드는 메시지가 처리 된 직후에 `DeleteMessage`를 호출 합니다.
 
 [!code-fsharp[QueueStorage](~/samples/snippets/fsharp/azure/queue-storage.fsx#L75-L76)]
 
@@ -113,16 +113,16 @@ Azure Configuration Manager 사용은 선택 사항입니다. .NET Framework의 
 
 [!code-fsharp[QueueStorage](~/samples/snippets/fsharp/azure/queue-storage.fsx#L82-L91)]
 
-## <a name="additional-options-for-de-queuing-messages"></a>큐에서 메시지를 제거 하는 추가 옵션
+## <a name="additional-options-for-de-queuing-messages"></a>큐에서 메시지를 제거하기 위한 추가적인 옵션
 
-큐에서 메시지 검색을 사용자 지정할 수 있는 방법에는 두 가지가 있습니다.
-먼저 메시지 일괄 처리 (최대 32)를 가져올 수 있습니다. 둘째, 더 길거나 짧은 표시 안 함 시간 제한을 설정 하 여 코드에서 각 메시지를 완전히 처리 하는 시간을 늘리거나 줄일 수 있습니다. 다음 코드 예제에서는 `GetMessages`를 사용 하 여 한 번 호출에 20 개의 메시지를 가져온 다음 각 메시지를 처리 합니다. 또한 각 메시지에 대해 표시 안 함 제한 시간을 5 분으로 설정 합니다. 5 분은 모든 메시지에 대해 동시에 시작 되므로, `GetMessages`를 호출한 후 5 분이 지난 후에는 삭제 되지 않은 모든 메시지가 다시 표시 됩니다.
+큐에서 메시지 검색을 사용자 지정할 수 있는 방법으로는 두 가지가 있습니다.
+먼저, 메시지의 배치(최대 32개)를 가져올 수 있습니다. 두 번째로, 표시하지 않는 제한 시간을 더 길거나 더 짧게 설정하여 코드에서 각 메시지를 완전히 처리하는 시간을 늘리거나 줄일 수 있습니다. 다음 코드 예제에서는 `GetMessages`를 사용 하 여 한 번 호출에 20 개의 메시지를 가져온 다음 각 메시지를 처리 합니다. 또한 각 메시지에 대해 표시하지 않는 제한 시간을 5분으로 설정합니다. 5 분은 모든 메시지에 대해 동시에 시작 되므로, `GetMessages`를 호출한 후 5 분이 지난 후에는 삭제 되지 않은 모든 메시지가 다시 표시 됩니다.
 
 [!code-fsharp[QueueStorage](~/samples/snippets/fsharp/azure/queue-storage.fsx#L97-L99)]
 
 ## <a name="get-the-queue-length"></a>큐 길이 가져오기
 
-큐에 있는 메시지 수의 예상치를 가져올 수 있습니다. `FetchAttributes` 메서드는 메시지 수를 포함 하 여 큐 특성을 검색 하도록 큐 서비스에 요청 합니다. `ApproximateMessageCount` 속성은 큐 서비스를 호출 하지 않고 `FetchAttributes` 메서드에 의해 검색 된 마지막 값을 반환 합니다.
+큐에 있는 메시지의 추정된 개수를 가져올 수 있습니다. `FetchAttributes` 메서드는 메시지 수를 포함 하 여 큐 특성을 검색 하도록 큐 서비스에 요청 합니다. `ApproximateMessageCount` 속성은 큐 서비스를 호출 하지 않고 `FetchAttributes` 메서드에 의해 검색 된 마지막 값을 반환 합니다.
 
 [!code-fsharp[QueueStorage](~/samples/snippets/fsharp/azure/queue-storage.fsx#L105-L106)]
 
@@ -134,10 +134,10 @@ Azure Configuration Manager 사용은 선택 사항입니다. .NET Framework의 
 
 ## <a name="next-steps"></a>다음 단계
 
-이제 Queue storage의 기본 사항을 배웠으므로 다음 링크를 따라 좀 더 복잡 한 저장소 작업에 대해 알아보세요.
+이제 Queue Storage의 기본 사항을 배웠으므로 다음 링크를 따라 좀 더 복잡한 스토리지 작업에 대해 알아보세요.
 
-- [.NET 용 Azure Storage Api](/dotnet/api/overview/azure/storage)
+- [.NET용 Azure Storage API](/dotnet/api/overview/azure/storage)
 - [Azure Storage 형식 공급자](https://github.com/fsprojects/AzureStorageTypeProvider)
-- [Azure Storage 팀 블로그](https://blogs.msdn.microsoft.com/windowsazurestorage/)
+- [Azure Storage 팀 블로그](https://docs.microsoft.com/archive/blogs/windowsazurestorage/)
 - [Azure Storage 연결 문자열 구성](/azure/storage/common/storage-configure-connection-string)
-- [Azure Storage Services REST API 참조](/rest/api/storageservices/Azure-Storage-Services-REST-API-Reference)
+- [Azure Storage 서비스 REST API 참조](/rest/api/storageservices/Azure-Storage-Services-REST-API-Reference)

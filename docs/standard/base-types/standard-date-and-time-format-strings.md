@@ -1,5 +1,5 @@
 ---
-title: 표준 날짜 및 시간 형식 문자열
+title: 표준 날짜 및 시간 서식 문자열
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
-ms.openlocfilehash: b67b00fdb4a5c484c112cc2f3321ce2268d4dad7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 883902142a91e275ab64ad5d12c197c665bd9b36
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121717"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346656"
 ---
-# <a name="standard-date-and-time-format-strings"></a>표준 날짜 및 시간 형식 문자열
+# <a name="standard-date-and-time-format-strings"></a>표준 날짜 및 시간 서식 문자열
 
 표준 날짜 및 시간 서식 문자열은 단일 서식 지정자를 사용하여 날짜 및 시간 값의 텍스트 표현을 정의합니다. 공백을 포함하여 문자가 두 개 이상 포함된 날짜 및 시간 서식 문자열은 사용자 지정 날짜 및 시간 서식 문자열로 해석됩니다. 자세한 내용은 [사용자 지정 날짜 및 시간 서식 문자열](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)을 참조하세요. 표준 또는 사용자 지정 서식 문자열은 다음 두 가지 방법으로 사용할 수 있습니다.
 
@@ -38,7 +38,7 @@ ms.locfileid: "73121717"
 
 <a name="table"></a> 다음 표에서는 표준 날짜 및 시간 서식 지정자에 대해 설명합니다. 다른 설명이 없는 한 특정 표준 날짜 및 시간 서식 지정자는 <xref:System.DateTime> 값에 사용할 때와 <xref:System.DateTimeOffset> 값에 사용할 때 동일한 문자열을 생성합니다. 표준 날짜 및 시간 서식 문자열을 사용하는 방법에 대한 자세한 내용은 [참고](#Notes) 섹션을 참조하세요.
 
-|서식 지정자|설명|예제|
+|형식 지정자|설명|예제|
 |----------------------|-----------------|--------------|
 |"d"|간단한 날짜 패턴입니다.<br /><br /> 추가 정보: [간단한 날짜("d") 서식 지정자](#ShortDate)|2009-06-15T13:45:30 -> 6/15/2009 (en-US)<br /><br /> 2009-06-15T13:45:30 -> 15/06/2009 (fr-FR)<br /><br /> 2009-06-15T13:45:30 -> 2009/06/15 (ja-JP)|
 |"D"|자세한 날짜 패턴입니다.<br /><br /> 추가 정보: [자세한 날짜("D") 서식 지정자](#LongDate)|2009-06-15T13:45:30 -> Monday, June 15, 2009 (en-US)<br /><br /> 2009-06-15T13:45:30 -> 15 июня 2009 г. (ru-RU)<br /><br /> 2009-06-15T13:45:30 -> Montag, 15. Juni 2009 (de-DE)|
@@ -105,7 +105,7 @@ ms.locfileid: "73121717"
 
 다음 표에서는 반환된 문자열의 서식을 제어하는 <xref:System.Globalization.DateTimeFormatInfo> 개체의 속성을 보여 줍니다.
 
-|자산|설명|
+|속성|설명|
 |--------------|-----------------|
 |<xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A>|결과 문자열의 전체 서식을 정의합니다.|
 |<xref:System.Globalization.DateTimeFormatInfo.DateSeparator%2A>|날짜의 연도, 월 및 일 구성 요소를 구분하는 문자열을 정의합니다.|
@@ -125,7 +125,7 @@ ms.locfileid: "73121717"
 
 다음 표에서는 반환된 문자열의 서식을 제어하는 <xref:System.Globalization.DateTimeFormatInfo> 개체의 속성을 보여 줍니다.
 
-|자산|설명|
+|속성|설명|
 |--------------|-----------------|
 |<xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A>|결과 문자열의 전체 서식을 정의합니다.|
 |<xref:System.Globalization.DateTimeFormatInfo.DayNames%2A>|결과 문자열에 나타날 수 있는 지역화된 요일 이름을 정의합니다.|
@@ -146,7 +146,7 @@ ms.locfileid: "73121717"
 
 결과 문자열은 특정 <xref:System.Globalization.DateTimeFormatInfo> 개체의 서식 지정 정보에 영향을 받습니다. 다음 표에서는 반환된 문자열의 서식을 제어하는 <xref:System.Globalization.DateTimeFormatInfo> 개체 속성을 보여 줍니다. 일부 문화권의 <xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A?displayProperty=nameWithType> 및 <xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A?displayProperty=nameWithType> 속성에서 반환하는 사용자 지정 서식 지정자는 일부 속성을 사용하지 못할 수 있습니다.
 
-|자산|설명|
+|속성|설명|
 |--------------|-----------------|
 |<xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A>|결과 문자열의 날짜 구성 요소 서식을 정의합니다.|
 |<xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A>|결과 문자열의 시간 구성 요소 서식을 정의합니다.|
@@ -171,7 +171,7 @@ ms.locfileid: "73121717"
 
 다음 표에서는 반환된 문자열의 서식을 제어하는 <xref:System.Globalization.DateTimeFormatInfo> 개체 속성을 보여 줍니다. 일부 문화권의 <xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A> 속성에서 반환하는 사용자 지정 서식 지정자는 일부 속성을 사용하지 못할 수 있습니다.
 
-|자산|설명|
+|속성|설명|
 |--------------|-----------------|
 |<xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A>|결과 문자열의 전체 서식을 정의합니다.|
 |<xref:System.Globalization.DateTimeFormatInfo.DayNames%2A>|결과 문자열에 나타날 수 있는 지역화된 요일 이름을 정의합니다.|
@@ -195,7 +195,7 @@ ms.locfileid: "73121717"
 
 결과 문자열은 특정 <xref:System.Globalization.DateTimeFormatInfo> 개체의 서식 지정 정보에 영향을 받습니다. 다음 표에서는 반환된 문자열의 서식을 제어하는 <xref:System.Globalization.DateTimeFormatInfo> 개체 속성을 보여 줍니다. 일부 문화권의 <xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A?displayProperty=nameWithType> 및 <xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A?displayProperty=nameWithType> 속성에서 반환하는 사용자 지정 서식 지정자는 일부 속성을 사용하지 못할 수 있습니다.
 
-|자산|설명|
+|속성|설명|
 |--------------|-----------------|
 |<xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A>|결과 문자열의 날짜 구성 요소 서식을 정의합니다.|
 |<xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A>|결과 문자열의 시간 구성 요소 서식을 정의합니다.|
@@ -219,7 +219,7 @@ ms.locfileid: "73121717"
 
 결과 문자열은 특정 <xref:System.Globalization.DateTimeFormatInfo> 개체의 서식 지정 정보에 영향을 받습니다. 다음 표에서는 반환된 문자열의 서식을 제어하는 <xref:System.Globalization.DateTimeFormatInfo> 개체 속성을 보여 줍니다. 일부 문화권의 <xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A?displayProperty=nameWithType> 및 <xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A?displayProperty=nameWithType> 속성에서 반환하는 사용자 지정 서식 지정자는 일부 속성을 사용하지 못할 수 있습니다.
 
-|자산|설명|
+|속성|설명|
 |--------------|-----------------|
 |<xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A>|결과 문자열의 날짜 구성 요소 서식을 정의합니다.|
 |<xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A>|결과 문자열의 시간 구성 요소 서식을 정의합니다.|
@@ -243,7 +243,7 @@ ms.locfileid: "73121717"
 
 다음 표에서는 반환된 문자열의 서식을 제어하는 <xref:System.Globalization.DateTimeFormatInfo> 개체의 속성을 보여 줍니다.
 
-|자산|설명|
+|속성|설명|
 |--------------|-----------------|
 |<xref:System.Globalization.DateTimeFormatInfo.MonthDayPattern%2A>|결과 문자열의 전체 서식을 정의합니다.|
 |<xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A>|결과 문자열에 나타날 수 있는 지역화된 월 이름을 정의합니다.|
@@ -295,7 +295,7 @@ ms.locfileid: "73121717"
 
 결과 문자열은 고정 문화권을 나타내는 <xref:System.Globalization.DateTimeFormatInfo> 속성에서 반환하는 다음과 같은 <xref:System.Globalization.DateTimeFormatInfo.InvariantInfo%2A?displayProperty=nameWithType> 개체 속성의 영향을 받습니다.
 
-|자산|설명|
+|속성|설명|
 |--------------|-----------------|
 |<xref:System.Globalization.DateTimeFormatInfo.RFC1123Pattern%2A>|결과 문자열의 서식을 정의합니다.|
 |<xref:System.Globalization.DateTimeFormatInfo.AbbreviatedDayNames%2A>|결과 문자열에 나타날 수 있는 약식 요일 이름을 정의합니다.|
@@ -335,7 +335,7 @@ RFC 1123 표준에 따라 시간이 UTC(Coordinated Universal Time)로 표시되
 
 결과 문자열은 특정 <xref:System.Globalization.DateTimeFormatInfo> 개체의 서식 지정 정보에 영향을 받습니다. 다음 표에서는 반환된 문자열의 서식을 제어하는 <xref:System.Globalization.DateTimeFormatInfo> 개체 속성을 보여 줍니다. 일부 문화권의 <xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A?displayProperty=nameWithType> 속성에서 반환하는 사용자 지정 서식 지정자는 일부 속성을 사용하지 못할 수 있습니다.
 
-|자산|설명|
+|속성|설명|
 |--------------|-----------------|
 |<xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A>|결과 문자열의 시간 구성 요소 서식을 정의합니다.|
 |<xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A>|시간의 시, 분 및 초 구성 요소를 구분하는 문자열을 정의합니다.|
@@ -357,7 +357,7 @@ RFC 1123 표준에 따라 시간이 UTC(Coordinated Universal Time)로 표시되
 
 다음 표에서는 반환된 문자열의 서식을 제어하는 <xref:System.Globalization.DateTimeFormatInfo> 개체 속성을 보여 줍니다. 일부 문화권의 <xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A?displayProperty=nameWithType> 속성에서 반환하는 사용자 지정 서식 지정자는 일부 속성을 사용하지 못할 수 있습니다.
 
-|자산|설명|
+|속성|설명|
 |--------------|-----------------|
 |<xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A>|결과 문자열의 시간 구성 요소 서식을 정의합니다.|
 |<xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A>|시간의 시, 분 및 초 구성 요소를 구분하는 문자열을 정의합니다.|
@@ -394,7 +394,7 @@ RFC 1123 표준에 따라 시간이 UTC(Coordinated Universal Time)로 표시되
 
 다음 표에서는 반환된 문자열의 서식을 제어하는 <xref:System.Globalization.DateTimeFormatInfo> 개체 속성을 보여 줍니다. 일부 문화권의 <xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A> 속성에서 반환하는 사용자 지정 서식 지정자는 일부 속성을 사용하지 못할 수 있습니다.
 
-|자산|설명|
+|속성|설명|
 |--------------|-----------------|
 |<xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A>|결과 문자열의 전체 서식을 정의합니다.|
 |<xref:System.Globalization.DateTimeFormatInfo.DayNames%2A>|결과 문자열에 나타날 수 있는 지역화된 요일 이름을 정의합니다.|
@@ -420,7 +420,7 @@ RFC 1123 표준에 따라 시간이 UTC(Coordinated Universal Time)로 표시되
 
 다음 표에서는 반환된 문자열의 서식을 제어하는 <xref:System.Globalization.DateTimeFormatInfo> 개체의 속성을 보여 줍니다.
 
-|자산|설명|
+|속성|설명|
 |--------------|-----------------|
 |<xref:System.Globalization.DateTimeFormatInfo.YearMonthPattern%2A>|결과 문자열의 전체 서식을 정의합니다.|
 |<xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A>|결과 문자열에 나타날 수 있는 지역화된 월 이름을 정의합니다.|
@@ -434,7 +434,7 @@ RFC 1123 표준에 따라 시간이 UTC(Coordinated Universal Time)로 표시되
 
 <a name="Notes"></a>
 
-## <a name="notes"></a>메모
+## <a name="notes"></a>참고
 
 ### <a name="control-panel-settings"></a>제어판 설정
 
@@ -446,7 +446,7 @@ RFC 1123 표준에 따라 시간이 UTC(Coordinated Universal Time)로 표시되
 
 형식은 현재 스레드 문화권에 의해 암시적으로 제공되거나 형식 지정 작업을 호출하는 메서드의 <xref:System.Globalization.DateTimeFormatInfo> 매개 변수에 의해 명시적으로 제공되는 현재 <xref:System.IFormatProvider> 개체의 속성에 따라 영향을 받습니다. <xref:System.IFormatProvider> 매개 변수에 대해 애플리케이션에서는 문화권을 나타내는 <xref:System.Globalization.CultureInfo> 개체를 지정하거나 특정 문화권의 날짜 및 시간 서식 지정 규칙을 나타내는 <xref:System.Globalization.DateTimeFormatInfo> 개체를 지정해야 합니다. 대부분의 표준 날짜 및 시간 서식 지정자는 현재 <xref:System.Globalization.DateTimeFormatInfo> 개체의 속성으로 정의된 서식 지정 패턴의 별칭입니다. 따라서 애플리케이션에서는 해당 <xref:System.Globalization.DateTimeFormatInfo> 속성의 날짜 및 시간 서식 패턴을 변경하여 일부 표준 날짜 및 시간 서식 지정자로 생성되는 결과를 변경할 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.DateTime?displayProperty=nameWithType>
 - <xref:System.DateTimeOffset?displayProperty=nameWithType>

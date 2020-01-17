@@ -4,12 +4,12 @@ description: ASP.NET Core 및 Azure를 사용하여 최신 웹 애플리케이�
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: b57741ed68b3481ad2c85b1c3d62717f09c7570e
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: efb57b4290825be9f21c61c8dee5af073d264d3a
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73971593"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75899700"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>ASP.NET Core MVC 앱 개발
 
@@ -500,7 +500,7 @@ public class Program
 > ### <a name="references--client-communication"></a>참고 자료 - 클라이언트 통신
 >
 > - **ASP.NET Core SignalR**  
->   <https://github.com/aspnet/SignalR>
+>   <https://github.com/dotnet/aspnetcore/tree/master/src/SignalR>
 > - **WebSocket 관리자**  
 >   https://github.com/radu-matei/websocket-manager
 

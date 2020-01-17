@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-ms.openlocfilehash: d4a2562324259bda0bab523849449d584736b2ae
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 6c27442cb5c0c4172f503c945849e47560c2b33d
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423193"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635355"
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>연습: Office 프로그래밍(C# 및 Visual Basic)
 
@@ -24,7 +24,7 @@ Visual Studio에서는 Microsoft Office 프로그래밍을 개선하는 C# 및 V
 
 이 연습에서는 Office 프로그래밍과 관련해서 이러한 기능을 설명하지만 대부분 일반 프로그래밍에서도 유용합니다. 연습에서는 Excel 추가 기능 애플리케이션을 사용하여 Excel 통합 문서를 만듭니다. 그런 다음 통합 문서 링크를 포함하는 Word 문서를 만듭니다. 마지막으로 PIA 종속성을 사용 및 사용하지 않도록 설정하는 방법을 알아봅니다.
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 이 연습을 완료하려면 Microsoft Office Excel 및 Microsoft Office Word가 컴퓨터에 설치되어 있어야 합니다.
 
@@ -106,7 +106,7 @@ Visual Studio에서는 Microsoft Office 프로그래밍을 개선하는 C# 및 V
 
          인덱싱된 속성을 직접 만들 수는 없습니다. 이 기능은 기존 인덱싱된 속성의 사용만을 지원합니다.
 
-         자세한 내용은 [방법: COM Interop 프로그래밍에서 인덱싱된 속성 사용](./how-to-use-indexed-properties-in-com-interop-rogramming.md)을 참조하세요.
+         자세한 내용은 [COM interop 프로그래밍에서 인덱싱된 속성을 사용하는 방법](./how-to-use-indexed-properties-in-com-interop-rogramming.md)을 참조하세요.
 
 2. 열 너비를 콘텐츠에 맞게 조정하려면 `DisplayInExcel` 끝에 다음 코드를 추가합니다.
 
@@ -189,7 +189,7 @@ Visual Studio에서는 Microsoft Office 프로그래밍을 개선하는 C# 및 V
 
 8. Visual Studio의 **빌드** 메뉴에서 **솔루션 정리**를 클릭하여 완성된 프로젝트를 정리합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [자동으로 구현된 속성(Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)
 - [자동으로 구현된 속성(C#)](../classes-and-structs/auto-implemented-properties.md)
@@ -203,7 +203,7 @@ Visual Studio에서는 Microsoft Office 프로그래밍을 개선하는 C# 및 V
 - [dynamic 형식 사용](../types/using-type-dynamic.md)
 - [람다 식(Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
 - [람다 식(C#)](../statements-expressions-operators/lambda-expressions.md)
-- [방법: COM Interop 프로그래밍에서 인덱싱된 속성 사용](./how-to-use-indexed-properties-in-com-interop-rogramming.md)
+- [COM interop 프로그래밍에서 인덱싱된 속성을 사용하는 방법](./how-to-use-indexed-properties-in-com-interop-rogramming.md)
 - [연습: Visual Studio에서 Microsoft Office 어셈블리의 형식 정보 포함](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ee317478(v%3dvs.120))
 - [연습: 관리되는 어셈블리의 형식 포함](../../../standard/assembly/embed-types-visual-studio.md)
 - [연습: Excel용 첫 VSTO 추가 기능 만들기](/visualstudio/vsto/walkthrough-creating-your-first-vsto-add-in-for-excel)

@@ -2,12 +2,12 @@
 title: LINQ to XML과 비교 기타 XML 기술 비교3
 ms.date: 07/20/2015
 ms.assetid: 01b8e746-12d3-471d-b811-7539e4547784
-ms.openlocfilehash: 1cafa8b690afb753dfdb0301dc6a19f5f257e9c0
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 4cade6ecbee95ee288db34246986858609697731
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69591877"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635680"
 ---
 # <a name="linq-to-xml-vs-other-xml-technologies"></a>LINQ to XML과 비교 기타 XML 기술 비교
 이 항목에서는 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], <xref:System.Xml.XmlReader>, XSLT, MSXML 및 XmlLite와 같은 XML 기술을 비교합니다. 이 정보는 사용할 기술을 결정할 때 유용할 수 있습니다.  
@@ -50,8 +50,8 @@ ms.locfileid: "69591877"
   
  XmlLite의 주요 이점은 대부분의 시나리오에서 안전하며 간단하고 빠른 XML 파서라는 점입니다. XmlLite에서 위협에 노출되는 영역은 매우 작습니다. 신뢰할 수 없는 문서의 구문을 분석해야 하고 서비스 거부나 데이터 노출과 같은 공격으로부터 보호하려면 XmlLite를 선택하는 것이 좋습니다.  
   
- XmlLite는 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]와 통합되지 않았으며 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]에 핵심적인 프로그래머 생산성 향상 기능을 제공하지 않습니다.  
+ XmlLite는 LINQ(Language-Integrated Query)와 통합되어 있지 않습니다. LINQ에 핵심적인 프로그래머 생산성 향상 기능을 제공하지 않습니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [시작(LINQ to XML)](./linq-to-xml-overview.md)

@@ -2,12 +2,12 @@
 title: 데이터 정렬(C#)
 ms.date: 07/20/2015
 ms.assetid: d93fa055-2f19-46d2-9898-e2aed628f1c9
-ms.openlocfilehash: 78b263c384895b736b11cc524befa42b4a896380
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 8db5ab2ead0e59b8d41d83704ff237d4493155c3
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73418184"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346463"
 ---
 # <a name="sorting-data-c"></a>데이터 정렬(C#)
 정렬 작업은 하나 이상의 특성을 기준으로 시퀀스의 요소를 정렬합니다. 첫 번째 정렬 기준은 요소에 대해 기본 정렬을 수행합니다. 두 번째 정렬 기준을 지정하면 각 기본 정렬 그룹 내의 요소를 정렬할 수 있습니다.  
@@ -126,10 +126,10 @@ foreach (string str in query)
 */  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Linq>
 - [표준 쿼리 연산자 개요(C#)](./standard-query-operators-overview.md)
 - [orderby 절](../../../language-reference/keywords/orderby-clause.md)
-- [방법: Join 절 결과를 순서대로 정렬](../../../linq/order-the-results-of-a-join-clause.md)
-- [방법: 단어 또는 필드에 따라 텍스트 데이터 정렬 또는 필터링(LINQ)(C#)](./how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)
+- [Join 절 결과를 서순대로 정렬](../../../linq/order-the-results-of-a-join-clause.md)
+- [단어 또는 필드에 따라 텍스트 데이터를 정렬하거나 필터링하는 방법(LINQ)(C#)](./how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)

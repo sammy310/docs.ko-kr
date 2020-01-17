@@ -3,12 +3,12 @@ title: .NET Compiler Platform SDK 구문 모델 사용
 description: 이 개요에서는 구문 노드를 이해하고 조작하는 데 사용하는 형식에 대한 이해를 제공합니다.
 ms.date: 10/15/2017
 ms.custom: mvc
-ms.openlocfilehash: 940d2756ef7735ee96d38d0286f99fadf7b81dc6
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: fc1b1f5ae5ec985425c8d6aec49ef7f830ea9162
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774095"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740478"
 ---
 # <a name="work-with-syntax"></a>구문 작업
 
@@ -65,11 +65,11 @@ ms.locfileid: "72774095"
 
 각 노드, 토큰 또는 기타 정보는 원본 텍스트 내의 해당 위치와 구성된 문자 수를 알고 있습니다. 텍스트 위치는 0부터 시작하는 `char` 인덱스인 32비트 정수로 표현됩니다. <xref:Microsoft.CodeAnalysis.Text.TextSpan> 개체는 시작 위치 및 문자 수이며 정수로 표현됩니다. <xref:Microsoft.CodeAnalysis.Text.TextSpan>의 길이가 0인 경우 두 문자 사이의 위치를 나타냅니다.
 
-각 노드에는 <xref:Microsoft.CodeAnalysis.SyntaxNode.Span*> 및 <xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan*>이라는 두 가지 <xref:Microsoft.CodeAnalysis.Text.TextSpan> 속성이 있습니다.
+각 노드에는 <xref:Microsoft.CodeAnalysis.SyntaxNode.Span%2A> 및 <xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan%2A>이라는 두 가지 <xref:Microsoft.CodeAnalysis.Text.TextSpan> 속성이 있습니다.
 
-<xref:Microsoft.CodeAnalysis.SyntaxNode.Span*> 속성은 노드의 하위 트리에 있는 첫 번째 토큰의 시작부터 마지막 토큰의 끝에 이르는 텍스트 범위입니다. 이 범위는 모든 선행 또는 후행 기타 정보를 포함하지 않습니다.
+<xref:Microsoft.CodeAnalysis.SyntaxNode.Span%2A> 속성은 노드의 하위 트리에 있는 첫 번째 토큰의 시작부터 마지막 토큰의 끝에 이르는 텍스트 범위입니다. 이 범위는 모든 선행 또는 후행 기타 정보를 포함하지 않습니다.
 
-<xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan*> 속성은 노드의 일반 범위와 모든 선행 또는 후행 기타 정보의 범위를 포함하는 텍스트 범위입니다.
+<xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan%2A> 속성은 노드의 일반 범위와 모든 선행 또는 후행 기타 정보의 범위를 포함하는 텍스트 범위입니다.
 
 예:
 
@@ -85,11 +85,11 @@ ms.locfileid: "72774095"
 
 ## <a name="kinds"></a>종류
 
-각 노드, 토큰 또는 기타 정보에는 표시되는 정확한 구문 요소를 식별하는 <xref:System.Int32?displayProperty=nameWithType> 형식의 <xref:Microsoft.CodeAnalysis.SyntaxNode.RawKind?displayProperty=nameWithType> 속성이 있습니다. 이 값은 언어별 열거형으로 캐스팅될 수 있습니다. 각 언어, C# 또는 VB에는 문법에서 가능한 모든 노드, 토큰 및 기타 정보 요소를 나열하는 단일 `SyntaxKind` 열거형(각각 <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind?displayProperty=nameWithType> 및 <xref:Microsoft.CodeAnalysis.VisualBasic.SyntaxKind?displayProperty=nameWithType>)이 있습니다. <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind*?displayProperty=nameWithType> 또는 <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.Kind*?displayProperty=nameWithType> 확장 메서드에 액세스하여 이 변환을 자동으로 수행할 수 있습니다.
+각 노드, 토큰 또는 기타 정보에는 표시되는 정확한 구문 요소를 식별하는 <xref:System.Int32?displayProperty=nameWithType> 형식의 <xref:Microsoft.CodeAnalysis.SyntaxNode.RawKind?displayProperty=nameWithType> 속성이 있습니다. 이 값은 언어별 열거형으로 캐스팅될 수 있습니다. 각 언어, C# 또는 VB에는 문법에서 가능한 모든 노드, 토큰 및 기타 정보 요소를 나열하는 단일 `SyntaxKind` 열거형(각각 <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind?displayProperty=nameWithType> 및 <xref:Microsoft.CodeAnalysis.VisualBasic.SyntaxKind?displayProperty=nameWithType>)이 있습니다. <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind%2A?displayProperty=nameWithType> 또는 <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.Kind%2A?displayProperty=nameWithType> 확장 메서드에 액세스하여 이 변환을 자동으로 수행할 수 있습니다.
 
 <xref:Microsoft.CodeAnalysis.SyntaxToken.RawKind> 속성은 동일한 노드 클래스를 공유하는 구문 노드 형식의 쉬운 명확성을 허용합니다. 토큰 및 기타 정보의 경우 이 속성은 요소의 한 형식을 다른 형식에서 구분하는 유일한 방법입니다.
 
-예를 들어 단일 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax> 클래스에는 자식으로 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Left>, <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.OperatorToken> 및 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Right>가 있습니다. <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind*> 속성은 구문 노드의 <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.AddExpression>, <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.SubtractExpression> 또는 <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.MultiplyExpression> 종류인지를 구분합니다.
+예를 들어 단일 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax> 클래스에는 자식으로 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Left>, <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.OperatorToken> 및 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Right>가 있습니다. <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind%2A> 속성은 구문 노드의 <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.AddExpression>, <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.SubtractExpression> 또는 <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.MultiplyExpression> 종류인지를 구분합니다.
 
 ## <a name="errors"></a>오류
 

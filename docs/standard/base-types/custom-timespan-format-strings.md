@@ -1,5 +1,5 @@
 ---
-title: 사용자 지정 TimeSpan 형식 문자열 - .NET
+title: 사용자 지정 TimeSpan 형식 문자열
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - custom TimeSpan format strings
 ms.assetid: a63ebf55-7269-416b-b4f5-286f6c03bf0e
-ms.openlocfilehash: f38ea3a1e2d687044f862e5d6c0a78c6c12965d6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a5963f9afe422206627a1baea47339ecb81becf0
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126563"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348314"
 ---
 # <a name="custom-timespan-format-strings"></a>사용자 지정 TimeSpan 형식 문자열
 
@@ -41,7 +41,7 @@ ms.locfileid: "73126563"
 
 <a name="table"></a> 다음 표에서는 사용자 지정 날짜 및 시간 형식 지정자에 대해 설명합니다.
 
-| 서식 지정자 | 설명 | 예 |
+| 형식 지정자 | 설명 | 예제 |
 |----------------------|-----------------|-------------|
 |"d", "%d"|시간 간격의 전체 일 수입니다.<br /><br /> 추가 정보: [“d” 사용자 지정 형식 지정자](#dSpecifier).|`new TimeSpan(6, 14, 32, 17, 685):`<br /><br /> `%d` --> "6"<br /><br /> `d\.hh\:mm` --> "6.14:32"|
 |“dd”-“dddddddd”|시간 간격의 전체 일 수로, 필요에 따라 앞에 0으로 채워집니다.<br /><br /> 추가 정보: [“dd”-”dddddddd” 사용자 지정 형식 지정자](#ddSpecifier).|`new TimeSpan(6, 14, 32, 17, 685):`<br /><br /> `ddd` --> "006"<br /><br /> `dd\.hh\:mm` --> "06.14:32"|
@@ -391,7 +391,7 @@ ms.locfileid: "73126563"
 
 [표로 이동](#table)
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [형식 서식 지정](formatting-types.md)
 - [표준 TimeSpan 서식 문자열](standard-timespan-format-strings.md)

@@ -27,12 +27,12 @@ helpviewer_keywords:
 - security, profiling API considerations
 - stack depth [.NET Framework profiling]
 ms.assetid: 864c2344-71dc-46f9-96b2-ed59fb6427a8
-ms.openlocfilehash: 08015e2e5918ca64f601ec912a906cfb6319ed6c
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a13470b970b35a2f6f088fd305ba455167c8e107
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427095"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937825"
 ---
 # <a name="profiling-overview"></a>프로파일링 개요
 
@@ -91,7 +91,7 @@ CLR 애플리케이션을 프로파일링하려면 기존의 컴파일된 기계
 
 - 함수 진입 및 종료 이벤트
 
-- 예외.
+- 예외
 
 - 관리 코드와 비관리 코드 실행 간의 전환
 
@@ -175,7 +175,7 @@ CLR(공용 언어 런타임) 프로파일링 API는 비관리 코드 프로파�
 
 스택 스냅샷은 한 순간의 스레드 스택 추적입니다. 프로파일링 API는 스택에서 관리되는 함수의 추적을 지원하지만 관리되지 않는 함수의 추적은 프로파일러의 자체 스택 워크에 맡깁니다.
 
-관리 되는 스택을 탐색 하기 위해 프로파일러를 프로그래밍 하는 방법에 대 한 자세한 내용은이 설명서 집합의 [ICorProfilerInfo2::D ostacksnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) 메서드 및 [.NET Framework 2.0: 기본 사항 및 그 이상에서 프로파일러 스택 탐색](https://go.microsoft.com/fwlink/?LinkId=73638)을 참조 하세요.
+관리 되는 스택을 탐색 하기 위해 프로파일러를 프로그래밍 하는 방법에 대 한 자세한 내용은이 설명서 집합의 [ICorProfilerInfo2::D ostacksnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) 메서드 및 [.NET Framework 2.0: 기본 사항 및 그 이상에서 프로파일러 스택 탐색](https://docs.microsoft.com/previous-versions/dotnet/articles/bb264782(v=msdn.10))을 참조 하세요.
 
 ### <a name="shadow-stack"></a>섀도 스택
 

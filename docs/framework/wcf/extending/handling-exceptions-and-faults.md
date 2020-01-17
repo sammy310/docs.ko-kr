@@ -2,12 +2,12 @@
 title: 예외 및 오류 처리
 ms.date: 03/30/2017
 ms.assetid: a64d01c6-f221-4f58-93e5-da4e87a5682e
-ms.openlocfilehash: c28b4420be82562a30873b65113811da06cee761
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 2886463510a2237834529e1ec61c73ec7251e621
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975471"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937713"
 ---
 # <a name="handling-exceptions-and-faults"></a>예외 및 오류 처리
 예외는 서비스 또는 클라이언트 구현 내에서 로컬 오류 통신에 사용됩니다. 이와 반대로 오류는 서버에서 클라이언트로 또는 그 반대로 가는 경우와 같이 서비스 경계 너머로 이루어지는 오류 통신에도 사용되는 말입니다. 오류 외에, 전송 채널에서 전송별 메커니즘을 사용하여 전송 수준의 오류 통신을 수행하는 경우도 많습니다. 예를 들어 HTTP 전송에서는 404 등의 상태 코드를 사용하여 엔드포인트 URL이 없는 경우(오류를 다시 보낼 엔드포인트가 없음)를 나타냅니다. 이 문서는 사용자 지정 채널 작성자를 위한 안내 자료를 제공하는 세 개의 단원으로 구성되어 있습니다. 첫 단원에서는 예외를 정의하고 throw하는 방법에 대한 안내 자료를 제공합니다. 둘째 단원에서는 오류 생성 및 소비에 대한 안내 자료를 제공합니다. 셋째 단원에서는 추적 정보를 제공하여 사용자 지정 채널 사용자의 애플리케이션 실행 문제 해결을 돕는 방법에 대해 설명합니다.  
@@ -20,7 +20,7 @@ ms.locfileid: "73975471"
   
 |예외 형식|의미|내부 예외 콘텐츠|복구 전략|  
 |--------------------|-------------|-----------------------------|-----------------------|  
-|<xref:System.ServiceModel.AddressAlreadyInUseException>|수신용으로 지정된 엔드포인트 주소가 이미 사용 중입니다.|있는 경우 이 예외를 일으킨 전송 오류에 대한 세부 정보를 더 제공합니다. 예를 들어 <xref:System.IO.PipeException>, <xref:System.Net.HttpListenerException> 또는 <xref:System.Net.Sockets.SocketException>.|다른 주소를 지정하십시오.|  
+|<xref:System.ServiceModel.AddressAlreadyInUseException>|수신용으로 지정된 엔드포인트 주소가 이미 사용 중입니다.|있는 경우 이 예외를 일으킨 전송 오류에 대한 세부 정보를 더 제공합니다. 예를 들면 다음과 같습니다. <xref:System.IO.PipeException>, <xref:System.Net.HttpListenerException> 또는 <xref:System.Net.Sockets.SocketException>|다른 주소를 지정하십시오.|  
 |<xref:System.ServiceModel.AddressAccessDeniedException>|프로세스에 수신용으로 지정된 엔드포인트 주소에 대한 액세스가 허용되지 않습니다.|있는 경우 이 예외를 일으킨 전송 오류에 대한 세부 정보를 더 제공합니다. 예를 들면 <xref:System.IO.PipeException> 또는 <xref:System.Net.HttpListenerException>과 같습니다.|다른 자격 증명으로 시도해 보십시오.|  
 |<xref:System.ServiceModel.CommunicationObjectFaultedException>|사용 중인 <xref:System.ServiceModel.ICommunicationObject> 오류가 발생 한 상태입니다. 자세한 내용은 [상태 변경 이해](understanding-state-changes.md)를 참조 하세요. 개체에서 보류 중인 호출이 여러 개인 경우에는 한 호출에서만 실패와 관련된 예외가 throw되며, 나머지 호출에서는 <xref:System.ServiceModel.CommunicationObjectFaultedException>이 throw됩니다. 이 예외는 보통 애플리케이션에서 예외를 간과하고 이미 실패한 개체를 사용하려는 경우에 throw되며, 원래 예외를 catch한 것과 다른 스레드에서 일어나는 경우가 많습니다.|있는 경우 내부 예외에 대한 세부 정보를 제공합니다.|새 개체를 만듭니다. 처음에 <xref:System.ServiceModel.ICommunicationObject>의 오류를 일으킨 것이 무엇인지에 따라 다른 복구 작업이 필요할 수도 있습니다.|  
 |<xref:System.ServiceModel.CommunicationObjectAbortedException>|사용 중인 <xref:System.ServiceModel.ICommunicationObject> 중단 되었습니다. 자세한 내용은 [상태 변경 내용 이해](understanding-state-changes.md)를 참조 하세요. <xref:System.ServiceModel.CommunicationObjectFaultedException>과 마찬가지로, 이 예외는 애플리케이션에서 개체에 대해 <xref:System.ServiceModel.ICommunicationObject.Abort%2A>를 호출했으며 따라서 개체를 더 이상 사용할 수 없는 경우를 나타냅니다. 이러한 호출은 다른 스레드에서 이루어지는 경우도 많습니다.|있는 경우 내부 예외에 대한 세부 정보를 제공합니다.|새 개체를 만듭니다. 처음에 <xref:System.ServiceModel.ICommunicationObject>의 중단을 일으킨 것이 무엇인지에 따라 다른 복구 작업이 필요할 수도 있습니다.|  
@@ -68,11 +68,11 @@ public abstract class MessageFault
 }  
 ```  
   
- `Code` 속성은 `env:Code`(또는 SOAP 1.1의 경우 `faultCode`)이며 오류의 유형을 식별합니다. SOAP 1.2에서는 Sender 또는 Receiver 등의 5가지 허용되는 값을 `faultCode`에 정의하고 하위 코드 값을 포함할 수 있는 `Subcode` 요소를 정의합니다. 허용 되는 오류 코드 목록 및 해당 의미에 대해서는 [SOAP 1.2 사양을](https://go.microsoft.com/fwlink/?LinkId=95176) 참조 하십시오. SOAP 1.1에는 약간 다른 메커니즘이 있습니다 .이는 완전히 새로운 값을 정의 하거나 점 `faultCodes`표기법을 사용 하 여 확장 될 수 있는 네 가지 `faultCode` 값 (예: 클라이언트 및 서버)을 정의 합니다.  
+ `Code` 속성은 `env:Code`(또는 SOAP 1.1의 경우 `faultCode`)이며 오류의 유형을 식별합니다. SOAP 1.2에서는 Sender 또는 Receiver 등의 5가지 허용되는 값을 `faultCode`에 정의하고 하위 코드 값을 포함할 수 있는 `Subcode` 요소를 정의합니다. 허용 되는 오류 코드 목록 및 해당 의미에 대해서는 [SOAP 1.2 사양을](https://www.w3.org/TR/soap12-part1/#tabsoapfaultcodes) 참조 하십시오. SOAP 1.1에는 약간 다른 메커니즘이 있습니다 .이는 완전히 새로운 값을 정의 하거나 점 `faultCodes`표기법을 사용 하 여 확장 될 수 있는 네 가지 `faultCode` 값 (예: 클라이언트 및 서버)을 정의 합니다.  
   
  MessageFault를 사용하여 오류를 프로그래밍하면 FaultCode.Name 및 FaultCode.Namespace는 SOAP 1.2 `env:Code` 또는 SOAP 1.1 `faultCode`의 이름 및 네임스페이스에 매핑됩니다. FaultCode.SubCode는 SOAP 1.2의 경우 `env:Subcode`에 매핑되며 SOAP 1.1의 경우 null입니다.  
   
- 프로그래밍 방식으로 오류를 구분하는 것이 좋은 경우에는 새 오류 하위 코드(또는 SOAP 1.1을 사용하는 경우 새 오류 코드)를 만들어야 합니다. 이는 새 예외 형식을 만드는 것과 유사합니다. SOAP 1.1 오류 코드에서는 점 표기법 사용을 피해야 합니다. 또한 [Ws-i Basic 프로필](https://go.microsoft.com/fwlink/?LinkId=95177) 은 오류 코드 점 표기법을 사용 하지 않습니다.  
+ 프로그래밍 방식으로 오류를 구분하는 것이 좋은 경우에는 새 오류 하위 코드(또는 SOAP 1.1을 사용하는 경우 새 오류 코드)를 만들어야 합니다. 이는 새 예외 형식을 만드는 것과 유사합니다. SOAP 1.1 오류 코드에서는 점 표기법 사용을 피해야 합니다. 또한 [Ws-i Basic 프로필](http://www.ws-i.org/Profiles/BasicProfile-1.1-2004-08-24.html#SOAP_Custom_Fault_Codes) 은 오류 코드 점 표기법을 사용 하지 않습니다.  
   
 ```csharp
 public class FaultCode  
@@ -302,7 +302,7 @@ public class MessageFault
 }  
 ```  
   
- 오류가 `IsMustUnderstandFault` 오류인 경우 `true`는 `mustUnderstand`를 반환합니다. `WasHeaderNotUnderstood`에서는 지정된 이름과 네임스페이스의 헤더가 오류에 NotUnderstood 헤더로 포함되어 있으면 `true`를 반환합니다.  그 외의 경우 `false`를 반환합니다.  
+ 오류가 `IsMustUnderstandFault` 오류인 경우 `true`는 `mustUnderstand`를 반환합니다. `WasHeaderNotUnderstood`에서는 지정된 이름과 네임스페이스의 헤더가 오류에 NotUnderstood 헤더로 포함되어 있으면 `true`를 반환합니다.  그렇지 않으면 `false`를 반환합니다.  
   
  채널에서 MustUnderstand = true로 표시된 헤더를 전송하면 계층에서도 Exception Generation API 패턴을 구현하고 앞서 설명한 것과 같이 헤더에서 발생한 `mustUnderstand` 오류를 좀더 유용한 예외로 변환해야 합니다.  
   

@@ -2,12 +2,12 @@
 title: 재호스팅된 워크플로 디자이너에서 새 Workflow Foundation 4.5 기능에 대한 지원
 ms.date: 03/30/2017
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
-ms.openlocfilehash: bf5c12fe7892bf81fda9714ba02870a9c8ab8b4e
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 1c554c60bf2e50a8eb89764a21ad15b95343b182
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837599"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937736"
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>재호스팅된 워크플로 디자이너에서 새 Workflow Foundation 4.5 기능에 대한 지원
 .NET Framework 4.5의 WF (Windows Workflow Foundation)에는 여러 가지 새로운 기능이 도입 되었습니다. 여기에는 Workflow designer 환경의 몇 가지 향상 된 기능이 포함 되어 있습니다. 이 항목에서는 이러한 기능 중 재호스트된 디자이너에서 지원되는 기능과 현재 지원되지 않는 기능을 자세히 설명합니다.
@@ -122,7 +122,7 @@ ms.locfileid: "74837599"
  순서도 및 순차 워크플로 개발 모델 외에도 이 릴리스에는 상태 시스템 워크플로 및 계약 중심 워크플로 서비스가 포함되어 있습니다.  
   
 ### <a name="state-machine-workflows"></a>상태 시스템 워크플로  
- 상태 시스템 워크플로는 [Microsoft .NET Framework 4 플랫폼 업데이트 1](https://blogs.msdn.microsoft.com/endpoint/2011/04/18/microsoft-net-framework-4-platform-update-1/)에서 .NET Framework 4.0.1의 일부로 도입 되었습니다. 이 업데이트에는 여러 가지 새로운 클래스 및 활동이 포함되어 있으므로 개발자가 상태 시스템 워크플로를 만들 수 있었습니다. 이러한 클래스와 활동은 .NET Framework 4.5에 대해 업데이트 되었습니다. 업데이트에는 다음이 포함됩니다.  
+ 상태 시스템 워크플로는 [Microsoft .NET Framework 4 플랫폼 업데이트 1](https://docs.microsoft.com/archive/blogs/endpoint/microsoft-net-framework-4-platform-update-1)에서 .NET Framework 4.0.1의 일부로 도입 되었습니다. 이 업데이트에는 여러 가지 새로운 클래스 및 활동이 포함되어 있으므로 개발자가 상태 시스템 워크플로를 만들 수 있었습니다. 이러한 클래스와 활동은 .NET Framework 4.5에 대해 업데이트 되었습니다. 업데이트에는 다음이 포함됩니다.  
   
 1. 상태에 중단점을 설정할 수 있는 기능  
   

@@ -5,13 +5,12 @@ author: cartermp
 ms.date: 06/20/2016
 ms.technology: csharp-async
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
-ms.custom: seodec18
-ms.openlocfilehash: 86145e8971d9a59fba17368d9530f40d86bf2858
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 38d7c856e9a536db9ef26349175ad440a49f5fe2
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73037680"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713946"
 ---
 # <a name="asynchronous-programming"></a>비동기 프로그래밍
 
@@ -109,7 +108,7 @@ C#에서는 컴파일러가 해당 코드를, `await`에 도달할 때 실행을
 
 **I/O 바인딩된** 작업이 있을 경우 `Task.Run` *없이* `async` 및 `await`를 사용합니다.  작업 병렬 라이브러리를 사용*하면 안 됩니다*.  그 이유는 [세부 비동기 문서](../standard/async-in-depth.md)에서 간단히 설명합니다.
 
-**CPU 바인딩된** 작업이 있고 빠른 응답이 필요할 경우 `async` 및 `await`를 사용하지만 `Task.Run`을  사용하여 또 다른 스레드에서 작업을 생성합니다.  작업이 동시성 및 병렬 처리에 해당할 경우 [작업 병렬 라이브러리](../standard/parallel-programming/task-parallel-library-tpl.md)를 사용하는 것이 좋습니다.
+**CPU 바인딩된** 작업이 있고 빠른 응답이 필요할 경우 `async` 및 `await`를 사용하지만 `Task.Run`을 *사용*하여 또 다른 스레드에서 작업을 생성합니다.  작업이 동시성 및 병렬 처리에 해당할 경우 [작업 병렬 라이브러리](../standard/parallel-programming/task-parallel-library-tpl.md)를 사용하는 것이 좋습니다.
 
 또한 항상 코드 실행을 측정해야 합니다.  예를 들어 CPU 바인딩된 작업이 다중 스레딩 시 컨텍스트 전환의 오버헤드에 비해 부담이 크지 않은 상황이 될 수 있습니다.  모든 선택에는 절충점이 있습니다. 상황에 맞는 올바른 절충점을 선택해야 합니다.
 
@@ -219,7 +218,7 @@ public static async Task<User[]> GetUsersAsync(IEnumerable<int> userIds)
 
 비동기 프로그래밍이 비교적 직관적이지만 예상치 못한 동작을 방지할 수 있는 몇 가지 세부 정보를 기억해야 합니다.
 
-* `async` **메서드에는 본문에** `await` **키워드가 있어야 합니다. 키워드가 없으면 양도되지 않습니다.**
+* `async` **메서드에는 본문에**  `await`  **키워드가 있어야 합니다. 키워드가 없으면 일시 중단되지 않습니다.**
 
 기억해야 할 중요한 정보입니다.  `await`가 `async` 메서드의 본문에서 사용되지 않으면 C# 컴파일러가 경고를 생성하지만 코드는 일반 메서드인 것처럼 컴파일 및 실행됩니다.  이 방법은 상당히 비효율적입니다. 비동기 메서드용으로 C# 컴파일러에서 생성된 상태 컴퓨터가 아무 작업도 수행하지 않기 때문입니다.
 
@@ -227,7 +226,7 @@ public static async Task<User[]> GetUsersAsync(IEnumerable<int> userIds)
 
 이 규칙을 .NET에서 사용하여 동기 및 비동기 메서드를 훨씬 더 쉽게 구별할 수 있습니다. 코드에서 명시적으로 호출되지 않은 특정 메서드(예: 이벤트 처리기 또는 웹 컨트롤러 메서드)가 반드시 적용되는 것은 아닙니다. 이러한 메서드는 코드에서 명시적으로 호출되지 않으므로 명시적으로 명명하는 것은 별로 중요하지 않습니다.
 
-* `async void`**는 이벤트 처리기에만 사용해야 합니다.**
+* `async void`는 **이벤트 처리기에만 사용해야 합니다.**
 
 이벤트에는 반환 형식이 없어서 `Task` 및 `Task<T>`를 사용할 수 없으므로 비동기 이벤트 처리기가 작동하도록 허용하는 유일한 방법은 `async void`입니다. `async void`의 다른 사용은 TAP 모델을 따르지 않고 다음과 같이 사용이 어려울 수 있습니다.
 

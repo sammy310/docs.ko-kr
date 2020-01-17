@@ -1,17 +1,16 @@
 ---
 title: 개체 - C# 프로그래밍 가이드
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - objects [C#], about objects
 - variables [C#]
 ms.assetid: af4a5230-fbf3-4eea-95e1-8b883c2f845c
-ms.openlocfilehash: 1b3ceb2671a4c21f1df89599c9b8c0bc107a7435
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 95735d5032a8896570918b991f12b853af88fb68
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73419263"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705485"
 ---
 # <a name="objects-c-programming-guide"></a>개체(C# 프로그래밍 가이드)
 클래스 또는 구조체 정의는 형식이 수행할 수 있는 작업을 지정하는 청사진과 비슷합니다. 개체는 기본적으로 청사진에 따라 구성 및 할당된 메모리 블록입니다. 프로그램에서 동일한 클래스의 많은 개체를 만들 수 있습니다. 개체를 인스턴스라고도 하며, 명명된 변수나 배열 또는 컬렉션에 저장할 수 있습니다. 클라이언트 코드는 이러한 변수를 사용하여 메서드를 호출하고 개체의 공용 속성에 액세스하는 코드입니다. C#과 같은 개체 지향 언어에서 일반적인 프로그램은 동적으로 상호 작용하는 여러 개체로 구성됩니다.  
@@ -46,7 +45,7 @@ ms.locfileid: "73419263"
   
  `Equals`의 <xref:System.ValueType?displayProperty=nameWithType> 구현에서는 구조체의 필드를 확인할 수 있어야 하므로 리플렉션을 사용합니다. 고유한 구조체를 만드는 경우 `Equals` 메서드를 재정의하여 해당 형식과 관련된 효율적인 같음 알고리즘을 제공합니다.  
   
-- 두 클래스 인스턴스의 필드 값이 같은지 확인하기 위해 <xref:System.Object.Equals%2A> 메서드 또는 [== 연산자](../../language-reference/operators/equality-operators.md#equality-operator-)를 사용할 수 있습니다. 그러나 클래스가 해당 형식의 개체에 대해 "같음"이 무엇을 의미하는지의 사용자 지정 정의를 제공하도록 재정의 또는 오버로드한 경우에만 사용합니다. 클래스는 <xref:System.IEquatable%601> 인터페이스 또는 <xref:System.Collections.Generic.IEqualityComparer%601> 인터페이스도 구현할 수 있습니다. 두 인터페이스 모두 값이 같은지를 테스트하는 데 사용할 수 있는 메서드를 제공합니다. `Equals`을 재정의하는 고유한 클래스를 디자인하는 경우 [방법: 형식의 값 일치 정의](../statements-expressions-operators/how-to-define-value-equality-for-a-type.md) 및 <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>에 명시된 지침을 따라야 합니다.  
+- 두 클래스 인스턴스의 필드 값이 같은지 확인하기 위해 <xref:System.Object.Equals%2A> 메서드 또는 [== 연산자](../../language-reference/operators/equality-operators.md#equality-operator-)를 사용할 수 있습니다. 그러나 클래스가 해당 형식의 개체에 대해 "같음"이 무엇을 의미하는지의 사용자 지정 정의를 제공하도록 재정의 또는 오버로드한 경우에만 사용합니다. 클래스는 <xref:System.IEquatable%601> 인터페이스 또는 <xref:System.Collections.Generic.IEqualityComparer%601> 인터페이스도 구현할 수 있습니다. 두 인터페이스 모두 값이 같은지를 테스트하는 데 사용할 수 있는 메서드를 제공합니다. `Equals`을 재정의하는 고유한 클래스를 디자인하는 경우 [형식의 값 같음을 정의하는 방법](../statements-expressions-operators/how-to-define-value-equality-for-a-type.md) 및 <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>에 명시된 지침을 따라야 합니다.
   
 ## <a name="related-sections"></a>관련 단원  
  추가 정보  
@@ -61,7 +60,7 @@ ms.locfileid: "73419263"
   
 - [이벤트](../events/index.md)  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 프로그래밍 가이드](../index.md)
 - [object](../../language-reference/builtin-types/reference-types.md)

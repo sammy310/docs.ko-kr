@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - security [WCF], scenarios
 ms.assetid: 201923b5-5162-4a8a-8d4c-e7bd242748d5
-ms.openlocfilehash: af58d6b529fba32380bedb9a892a2b1fd4807d96
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 578ec2d7d5abe1285007ad22d8bacd69e695b1d3
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857573"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964275"
 ---
 # <a name="common-security-scenarios"></a>일반적인 보안 시나리오
 이 단원의 항목에서는 많은 수의 가능한 클라이언트 및 서비스 보안 구성을 카탈로그로 만듭니다. 구성은 요소 수에 따라 다릅니다. 예를 들어 서비스 또는 클라이언트가 인트라넷에 있는지, 보안이 Windows에서 제공되는지 아니면 HTTPS와 같은 전송에 의해 제공되는지에 따라 달라집니다.  
@@ -19,7 +19,7 @@ ms.locfileid: "61857573"
  보안되지 않은 공용 클라이언트 및 서비스의 예입니다.  
   
  [보안이 설정되지 않은 인트라넷 클라이언트 및 서비스](../../../../docs/framework/wcf/feature-details/intranet-unsecured-client-and-service.md)  
- WCF 응용 프로그램에 안전한 개인 네트워크에서 정보를 제공 하는 기본 Windows Communication Foundation (WCF) 서비스를 개발 했습니다.  
+ WCF 응용 프로그램에 보안 개인 네트워크에 대 한 정보를 제공 하기 위해 개발 된 WCF (기본 Windows Communication Foundation) 서비스입니다.  
   
  [기본 인증을 사용하는 전송 보안](../../../../docs/framework/wcf/feature-details/transport-security-with-basic-authentication.md)  
  클라이언트는 해당 애플리케이션을 통해 사용자 지정 인증을 사용하여 로그온할 수 있습니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "61857573"
  인증서를 사용하여 보안하는 클라이언트 및 서비스를 보여 줍니다.  
   
  [익명 클라이언트를 사용하는 메시지 보안](../../../../docs/framework/wcf/feature-details/message-security-with-an-anonymous-client.md)  
- 클라이언트와 WCF 메시지 보안에 의해 보호 되는 서비스를 보여 줍니다.  
+ WCF 메시지 보안을 통해 보호 되는 클라이언트 및 서비스를 보여 줍니다.  
   
  [사용자 이름 클라이언트를 사용하는 메시지 보안](../../../../docs/framework/wcf/feature-details/message-security-with-a-user-name-client.md)  
  클라이언트는 도메인 사용자 이름 및 암호를 사용하여 클라이언트가 로그온할 수 있도록 허용하는 Windows Forms 애플리케이션입니다.  
@@ -60,16 +60,16 @@ ms.locfileid: "61857573"
 ## <a name="reference"></a>참조  
  <xref:System.ServiceModel>  
   
-## <a name="related-sections"></a>관련 단원  
+## <a name="related-sections"></a>관련 섹션  
  [권한 부여](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
   
  [보안 개요](../../../../docs/framework/wcf/feature-details/security-overview.md)  
   
- [보안](../../../../docs/framework/wcf/feature-details/security.md)  
+ [Security](../../../../docs/framework/wcf/feature-details/security.md)  
   
  [바인딩 및 보안](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)  
   
- [서비스 및 클라이언트에 보안 설정](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [Securing Services and Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
   
  [인증](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
   
@@ -79,7 +79,7 @@ ms.locfileid: "61857573"
   
  [감사](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [보안 지침 및 최선의 방법](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)
-- [Windows Server appfabric 보안 모델](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Windows Server Fabric 용 보안 모델](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

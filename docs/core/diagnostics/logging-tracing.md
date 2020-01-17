@@ -1,15 +1,13 @@
 ---
 title: 로깅 및 추적 - .NET Core
 description: .NET Core 로깅 및 추적에 대해 간략히 설명합니다.
-author: sdmaclea
-ms.author: stmaclea
 ms.date: 08/05/2019
-ms.openlocfilehash: 46e64a7f60b88c26ceef9ac817be885bfa180c8e
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 392b88c9ea3c31c919a605ac0a5c886f7d63f79a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "72303655"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714419"
 ---
 # <a name="net-core-logging-and-tracing"></a>.NET Core 로깅 및 추적
 
@@ -70,7 +68,7 @@ ms.locfileid: "72303655"
   - 특정 활동 또는 트랜잭션으로 인해 발생하는 로그 메시지를 식별할 수 있는 명확한 방법을 제공합니다. 이 개체를 사용하여 여러 서비스에서 로그를 상호 연결시킬 수 있습니다.
 
 - <xref:System.Diagnostics.EventLog?displayProperty=nameWithType>
-  - Windows만 해당됩니다.
+  - Windows만 해당합니다.
   - 메시지를 Windows 이벤트 로그에 씁니다.
   - 시스템 관리자는 Windows 이벤트 로그에 심각한 애플리케이션 오류 메시지가 표시될 것으로 예상합니다.
 

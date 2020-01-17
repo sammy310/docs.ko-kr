@@ -15,14 +15,12 @@ helpviewer_keywords:
 - storing data using isolated storage, deleting stores
 - data storage using isolated storage, deleting stores
 ms.assetid: 3947e333-5af6-4601-b2f1-24d4d6129cf3
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a935ec663dd178d35aff745e907d2aae48e5b65c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6b1e8e651fd8e18c79dd629c154fb6c4d74243e3
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622589"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75707829"
 ---
 # <a name="how-to-delete-stores-in-isolated-storage"></a>방법: 격리된 스토리지에서 저장소 삭제
 <xref:System.IO.IsolatedStorage.IsolatedStorageFile> 클래스는 격리된 스토리지 파일을 삭제하기 위해 다음과 같은 두 가지 메서드를 제공합니다.  
@@ -38,7 +36,7 @@ ms.locfileid: "64622589"
  [!code-csharp[Conceptual.IsolatedStorage#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source3.cs#3)]
  [!code-vb[Conceptual.IsolatedStorage#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source3.vb#3)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorageFile>
 - [격리된 스토리지](../../../docs/standard/io/isolated-storage.md)

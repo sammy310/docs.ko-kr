@@ -5,12 +5,12 @@ author: cartermp
 ms.author: mairaw
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: 543f05cd52e62166b8a5ee318a588dee1e8ef76a
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 4f52a89179e241dcfce5c888e03518d878009175
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838197"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348053"
 ---
 # <a name="net-architectural-components"></a>.NET 아키텍처 구성 요소
 
@@ -49,7 +49,7 @@ Microsoft에서 적극적으로 개발 및 유지 보수하는 네 가지 기본
 
 ### <a name="mono"></a>Mono
 
-Mono는 작은 런타임이 필요할 때 주로 사용되는 .NET 구현체입니다. 이는 Android와 Mac, iOS, tvOS, watchOS에서 Xamarin 애플리케이션을 구동하는 런타임으로, 주로 적은 공간을 점유하는데 중점을 두고 있습니다. 또한 Mono에서는 Unity 엔진으로 만든 게임이 동작합니다.
+Mono는 작은 런타임이 필요할 때 주로 사용되는 .NET 구현체입니다. 이는 Android, macOS, iOS, tvOS 및 watchOS에서 Xamarin 애플리케이션의 성능을 향상하는 런타임으로, 주로 작은 사용 공간에 초점을 맞춥니다. 또한 Mono에서는 Unity 엔진으로 만든 게임이 동작합니다.
 
 Mono는 현재 게시된 .NET Standard 버전을 모두 지원합니다.
 
@@ -61,7 +61,7 @@ Mono의 자세한 내용은 [Mono 설명서](https://www.mono-project.com/docs/)
 
 ### <a name="universal-windows-platform-uwp"></a>UWP(유니버설 Windows 플랫폼)
 
-UWP는 IoT(사물 인터넷)에 대한 최신 터치 가능 Windows 애플리케이션 및 소프트웨어를 작성하는 데 사용되는 .NET의 구현입니다. PC와 태블릿, 패블릿, 휴대폰, Xbox 등을 포함하여 대상이 될 수 있는 다양한 종류의 디바이스를 통합하기 위해 설계되었습니다. UWP는 중앙 집중식 앱 스토어, 실행 환경(AppContainer), Win32를 대체할 Windows API(WinRT) 등 많은 서비스를 제공합니다. 앱은 C++과 C#, VB.NET, JavaScript로 작성할 수 있습니다. C#과 VB.NET을 사용할 경우 .NET API는 .NET Core에서 제공됩니다.
+UWP는 IoT(사물 인터넷)에 대한 최신 터치 가능 Windows 애플리케이션 및 소프트웨어를 작성하는 데 사용되는 .NET의 구현입니다. PC와 태블릿, 패블릿, 휴대폰, Xbox 등을 포함하여 대상이 될 수 있는 다양한 종류의 디바이스를 통합하기 위해 설계되었습니다. UWP는 중앙 집중식 앱 스토어, 실행 환경(AppContainer), Win32를 대체할 Windows API(WinRT) 등 많은 서비스를 제공합니다. 앱은 C++과 C#, Visual Basic, JavaScript로 작성할 수 있습니다. C#과 Visual Basic을 사용할 경우 .NET API는 .NET Core에서 제공됩니다.
 
 UWP의 자세한 내용은 [유니버설 Windows 플랫폼 소개](/windows/uwp/get-started/universal-application-platform-guide)를 참조하세요.
 
@@ -104,7 +104,7 @@ C# 언어 및 CLI(공용 언어 인프라) 사양은 [Ecma International® ](htt
 - **정보 기술 - CLI(공용 언어 인프라) 파티션 I ~ VI**: [ISO/IEC 23271:2012](https://standards.iso.org/ittf/PubliclyAvailableStandards/c058046_ISO_IEC_23271_2012(E).zip)
 - **정보 기술 - CLI (공용 언어 인프라) - 파티션 IV XML 파일에서 파생된 정보에 대한 기술 보고서**: [ISO/IEC TR 23272:2011](https://standards.iso.org/ittf/PubliclyAvailableStandards/c057955_ISO_IEC_TR_23272_2011.zip)
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [서버 앱에 대해 .NET Core와 .NET Framework 중에 선택](choosing-core-framework-server.md)
 - [.NET Standard](net-standard.md)
@@ -112,4 +112,4 @@ C# 언어 및 CLI(공용 언어 인프라) 사양은 [Ecma International® ](htt
 - [.NET Framework 가이드](../framework/index.md)
 - [C# 가이드](../csharp/index.yml)
 - [F# 가이드](../fsharp/index.yml)
-- [VB.NET 가이드](../visual-basic/index.yml)
+- [Visual Basic 가이드](../visual-basic/index.yml)

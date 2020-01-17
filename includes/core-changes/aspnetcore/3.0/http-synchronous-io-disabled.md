@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: c861d61cbbe8075db4b17a702e863336ea621f2b
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 53d2c989120c92f4e2d18f50ce4b364bd4c9b604
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73198504"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901607"
 ---
 ### <a name="http-synchronous-io-disabled-in-all-servers"></a>HTTP: 모든 서버에서 동기 IO 비활성화
 
@@ -41,7 +41,7 @@ if (syncIOFeature != null)
 
 `TextWriter` 또는 `Dispose`에서 동기 API를 호출하는 다른 스트림에 문제가 있는 경우 대신 새 `DisposeAsync` API를 호출합니다.
 
-자세한 내용은 [aspnet/AspNetCore#7644](https://github.com/aspnet/AspNetCore/issues/7644)를 참조하세요.
+토론은 [dotnet/aspnetcore#7644](https://github.com/dotnet/aspnetcore/issues/7644)를 참조하세요.
 
 #### <a name="version-introduced"></a>도입된 버전
 
@@ -65,7 +65,7 @@ if (syncIOFeature != null)
 
 이러한 동기 API는 오랫동안 스레드 고갈과 앱 중지의 원인이었습니다. ASP.NET Core 3.0 미리 보기 3부터 동기 작업은 기본적으로 비활성화되어 있습니다.
 
-#### <a name="recommended-action"></a>권장 작업
+#### <a name="recommended-action"></a>권장 조치
 
 비동기 버전의 메서드를 사용합니다. 이 동작은 요청에 따라 임시 완화로 재정의할 수도 있습니다.
 

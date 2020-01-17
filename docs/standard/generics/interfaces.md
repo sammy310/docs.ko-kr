@@ -8,14 +8,12 @@ helpviewer_keywords:
 - generics [.NET Framework], interfaces
 - ordering comparisons [.NET Framework]
 ms.assetid: 88bf5b04-d371-4edb-ba38-01ec7cabaacf
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 09e9a51fe9c1fd25a6791cf924180329718138c8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 704ada32d428c468d5b71a3f1390568ca586079e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915888"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708326"
 ---
 # <a name="generic-interfaces"></a>제네릭 인터페이스
 이 항목에서는 여러 제네릭 형식 패밀리에 대해 공통 기능을 제공하는 제네릭 인터페이스에 대해 간략하게 설명합니다.  
@@ -42,7 +40,7 @@ ms.locfileid: "69915888"
   
  <xref:System.Collections.Generic.IEnumerable%601> 제네릭 인터페이스는 제네릭 열거자 구조를 제공합니다. 제네릭 열거자에 의해 구현된 <xref:System.Collections.Generic.IEnumerator%601> 제네릭 인터페이스는 제네릭이 아닌 <xref:System.Collections.IEnumerator> 인터페이스를 상속합니다. 형식 매개 변수 `T`에 종속되지 않는 <xref:System.Collections.IEnumerator.MoveNext%2A> 및 <xref:System.Collections.IEnumerator.Reset%2A> 멤버는 제네릭이 아닌 인터페이스에만 나타납니다. 즉, 제네릭이 아닌 인터페이스의 소비자는 제네릭 인터페이스도 사용할 수 있습니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Collections.Generic?displayProperty=nameWithType>
 - <xref:System.Collections.ObjectModel?displayProperty=nameWithType>

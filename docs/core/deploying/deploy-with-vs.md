@@ -5,13 +5,13 @@ ms.date: 09/03/2018
 dev_langs:
 - csharp
 - vb
-ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: f80b483fedc600a1e1a48d36ce9b7b95c6de9f27
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.custom: vs-dotnet
+ms.openlocfilehash: 6116b2322ed2071b78bcd77de7c38ad07c327aa6
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428900"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740845"
 ---
 # <a name="deploy-net-core-apps-with-visual-studio"></a>Visual Studio를 사용하여 .NET Core 앱 배포
 
@@ -94,7 +94,7 @@ Visual Studio를 사용하여 .NET Core 애플리케이션을 개발하는 방�
 
 1. 세계화 고정 모드를 사용할 것인지 여부를 결정합니다.
 
-   특히 앱이 Linux를 대상으로 하는 경우 [세계화 고정 모드](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md)를 활용하여 배포의 총 크기를 줄일 수 있습니다. 세계화 고정 모드는 전역적으로 인식되지 않는 서식 지정 규칙, 대/소문자 규칙 및 문자열 비교와 [고정 문화권](xref:System.Globalization.CultureInfo.InvariantCulture)의 정렬 순서를 사용할 수 있는 애플리케이션에 유용합니다.
+   특히 앱이 Linux를 대상으로 하는 경우 [세계화 고정 모드](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md)를 활용하여 배포의 총 크기를 줄일 수 있습니다. 세계화 고정 모드는 전역적으로 인식되지 않는 서식 지정 규칙, 대/소문자 규칙 및 문자열 비교와 [고정 문화권](xref:System.Globalization.CultureInfo.InvariantCulture)의 정렬 순서를 사용할 수 있는 애플리케이션에 유용합니다.
 
    고정 모드를 사용하려면 **솔루션 탐색기**에서 프로젝트(솔루션 아님)를 마우스 오른쪽 단추로 클릭하고 **SCD.csproj 편집** 또는 **SCD.vbproj 편집**을 선택합니다. 그런 다음, 강조 표시된 다음 줄을 파일에 추가합니다.
 
@@ -309,7 +309,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 
 타사 라이브러리가 있는 자체 포함 배포는 해당 라이브러리에서 지원하는 플랫폼에만 배포할 수 있습니다. 이 배포는 기본 종속성과 함께 타사 종속성이 있는 프레임워크 종속 배포와 유사하며, 이전에 설치되지 않은 경우 대상 플랫폼에는 기본 종속성이 없습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [.NET Core 애플리케이션 배포](index.md)
 - [.NET Core RID(런타임 식별자) 카탈로그](../rid-catalog.md)

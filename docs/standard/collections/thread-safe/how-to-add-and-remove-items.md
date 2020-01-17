@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - thread-safe collections, concurrent dictionary
 ms.assetid: 81b64b95-13f7-4532-9249-ab532f629598
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9d8b1c63f10d1d79c3fec6cad87c9a82f03716c8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dc4d13e09a91633fac1fcf5bd8ab5b043473bd7d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543424"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711313"
 ---
 # <a name="how-to-add-and-remove-items-from-a-concurrentdictionary"></a>방법: ConcurrentDictionary에서 항목 추가 및 제거
 이 예제는 <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType>에서 항목을 추가, 검색, 업데이트 및 제거하는 방법을 보여 줍니다. 이 컬렉션 클래스는 스레드로부터 안전하게 구현됩니다. 여러 스레드에서 컬렉션에 동시에 액세스할 수 있을 때는 언제든지 이 클래스를 사용하는 것이 좋습니다.  
@@ -48,7 +46,7 @@ ms.locfileid: "54543424"
   
  따라서 <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A>에서 반환한 데이터가 스레드의 valueFactory에서 만든 것과 동일한 데이터라고 보장되지 않습니다. <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A>를 호출할 때에도 비슷한 이벤트 시퀀스가 발생할 수 있습니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Collections.Concurrent?displayProperty=nameWithType>
 - [스레드로부터 안전한 컬렉션](../../../../docs/standard/collections/thread-safe/index.md)

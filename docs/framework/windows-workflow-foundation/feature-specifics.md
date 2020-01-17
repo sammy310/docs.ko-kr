@@ -2,12 +2,12 @@
 title: Windows Workflow Foundation 기능 특성
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
-ms.openlocfilehash: c534575fcf70035bc728642dbb65b05db1fd4686
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 197b2e0d6586e001a4970cf8cb3f8e6b2a372af2
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345112"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75936794"
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Windows Workflow Foundation 기능 특성
 
@@ -101,9 +101,9 @@ WCF 구성 스키마는 복잡 하며 사용자에 게 다양 한 기능을 찾�
 
 - [표준 끝점 요소](xref:System.ServiceModel.Configuration.StandardEndpointElement)
 
-- [.NET Framework 4의 서비스 구성 개선](https://blogs.msdn.microsoft.com/endpoint/2009/06/30/service-configuration-improvements-in-net-4/)
+- [.NET Framework 4의 서비스 구성 개선](https://docs.microsoft.com/archive/blogs/endpoint/service-configuration-improvements-in-net-4)
 
-- [.NET 4의 일반적인 사용자 오류: WF/WCF 서비스 구성 이름을 잘못 사용 했습니다.](https://blogs.msdn.microsoft.com/endpoint/2009/11/09/common-user-mistake-in-net-4-mistyping-the-wfwcf-service-configuration-name/)
+- [.NET 4의 일반적인 사용자 오류: WF/WCF 서비스 구성 이름을 잘못 사용 했습니다.](https://docs.microsoft.com/archive/blogs/endpoint/common-user-mistake-in-net-4-mistyping-the-wfwcf-service-configuration-name)
 
 ### <a name="simplified-configuration-scenarios"></a>단순화된 구성 시나리오
 
@@ -127,7 +127,7 @@ WCF 구성 스키마는 복잡 하며 사용자에 게 다양 한 기능을 찾�
 
 - [데이터 계약 확인자 API 설명서](xref:System.Runtime.Serialization.DataContractResolver)
 
-- [데이터 계약 확인자 소개](https://blogs.msdn.microsoft.com/youssefm/2009/06/05/configuring-known-types-dynamically-introducing-the-datacontractresolver/)
+- [데이터 계약 확인자 소개](https://docs.microsoft.com/archive/blogs/youssefm/configuring-known-types-dynamically-introducing-the-datacontractresolver)
 
 - 예제:
 
@@ -287,7 +287,7 @@ WCF 구성 스키마는 복잡 하며 사용자에 게 다양 한 기능을 찾�
 
 2. 샘플: [Routing Services &#91;WCF 샘플&#93; ](../wcf/samples/routing-services.md)
 
-3. 블로그: [라우팅 규칙](https://blogs.msdn.microsoft.com/RoutingRules/)
+3. 블로그: [라우팅 규칙](https://docs.microsoft.com/archive/blogs/RoutingRules/)
 
 ### <a name="routing-scenarios"></a>라우팅 시나리오
 

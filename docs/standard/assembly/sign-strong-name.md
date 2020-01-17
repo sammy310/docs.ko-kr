@@ -11,17 +11,17 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: c9ddbcf8f7b6307ab2d89b819aee4809f753a0fe
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 64f3a51b29a7116c736fea0e76465a4a73c640c2
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138608"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75738772"
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a>방법: 강력한 이름으로 어셈블리 서명
 
 > [!NOTE]
-> .NET Core가 강력한 이름의 어셈블리를 지원하고 .NET Core 라이브러리의 모든 어셈블리는 서명되어 있지만 대부분의 타사 어셈블리에는 강력한 이름이 필요하지 않습니다. 자세한 내용은 GitHub의 [강력한 이름 서명](https://github.com/dotnet/corefx/blob/master/Documentation/project-docs/strong-name-signing.md)을 참조하세요.
+> .NET Core가 강력한 이름의 어셈블리를 지원하고 .NET Core 라이브러리의 모든 어셈블리는 서명되어 있지만 대부분의 타사 어셈블리에는 강력한 이름이 필요하지 않습니다. 자세한 내용은 GitHub의 [강력한 이름 서명](https://github.com/dotnet/runtime/blob/master/docs/project/strong-name-signing.md)을 참조하세요.
 
 강력한 이름으로 어셈블리에 서명하는 여러 가지 방법이 있습니다.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "73138608"
 
 **al** **/out:** \<*assemblyName*>  *\<moduleName>* **/keyfile:** \<*keyfileName*>  
 
-위치:  
+여기서  
 
 - *assemblyName*은 어셈블리 링커가 내보낼 강력하게 서명된 어셈블리( *.dll* 또는 *.exe* 파일)의 이름입니다.  
   
@@ -107,7 +107,7 @@ C# 및 Visual Basic 컴파일러에서 `/keyfile` 또는 `/delaysign` 컴파일�
 csc /t:library UtilityLibrary.cs /keyfile:sgKey.snk  
 ```  
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [강력한 이름의 어셈블리 만들기 및 사용](create-use-strong-named.md)
 - [방법: 퍼블릭/프라이빗 키 쌍 만들기](create-public-private-key-pair.md)

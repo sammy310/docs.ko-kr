@@ -1,14 +1,14 @@
 ---
-ms.openlocfilehash: 503d61cb86c83e2f32ad40c60a127ae255ef71b0
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 58b1190e3e6a3168d35700eed655f6756e076a29
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73198508"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901893"
 ---
 ### <a name="mvc-async-suffix-trimmed-from-controller-action-names"></a>MVC: 컨트롤러 작업 이름에서 잘린 비동기 접미사
 
-[aspnet/AspNetCore#4849](https://github.com/aspnet/AspNetCore/issues/4849)를 해결하는 과정의 일부로, ASP.NET Core MVC는 기본적으로 작업 이름에서 `Async` 접미사를 잘라냅니다. ASP.NET Core 3.0부터 이 변경 내용은 라우팅 및 링크 생성 모두에 영향을 줍니다.
+[dotnet/aspnetcore#4849](https://github.com/dotnet/aspnetcore/issues/4849)를 해결하는 과정의 일부로, ASP.NET Core MVC는 기본적으로 작업 이름에서 `Async` 접미사를 잘라냅니다. ASP.NET Core 3.0부터 이 변경 내용은 라우팅 및 링크 생성 모두에 영향을 줍니다.
 
 #### <a name="version-introduced"></a>도입된 버전
 
@@ -56,7 +56,7 @@ services.AddMvc(options =>
 
 규칙에 따라 비동기 .NET 메서드는 `Async`로 접미사가 붙습니다. 그러나 메서드가 MVC 작업을 정의할 때 `Async` 접미사를 사용하는 것은 바람직하지 않습니다.
 
-#### <a name="recommended-action"></a>권장 작업
+#### <a name="recommended-action"></a>권장 조치
 
 앱이 이름의 `Async` 접미사를 유지하는 MVC 작업에 의존하는 경우 다음 완화 방법 중 하나를 선택합니다.
 

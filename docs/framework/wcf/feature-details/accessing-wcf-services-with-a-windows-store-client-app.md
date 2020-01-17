@@ -2,12 +2,12 @@
 title: Windows 스토어 클라이언트 응용 프로그램을 사용하여 WCF 서비스에 액세스
 ms.date: 03/30/2017
 ms.assetid: e2002ef4-5dee-4a54-9d87-03b33d35fc52
-ms.openlocfilehash: f5cc18973231f327ee161946a235cb8b8b2ea5a7
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 77dc5d19bc40dc09148a8d2368c56e522bfafc1a
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73978190"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75938170"
 ---
 # <a name="accessing-wcf-services-with-a-windows-store-client-app"></a>Windows 스토어 클라이언트 응용 프로그램을 사용하여 WCF 서비스에 액세스
 Windows 8에서는 Windows 스토어 애플리케이션이라는 새로운 형식의 애플리케이션을 제공합니다. 이러한 애플리케이션은 터치 스크린 인터페이스를 바탕으로 설계되었습니다. .NET Framework 4.5에서는 Windows 스토어 애플리케이션을 사용하여 WCF 서비스를 호출할 수 있습니다.  
@@ -16,7 +16,7 @@ Windows 8에서는 Windows 스토어 애플리케이션이라는 새로운 형�
  Windows 스토어 애플리케이션 내에서 일부 WCF 기능을 사용할 수 있습니다. 자세한 내용은 다음 단원을 참조하세요.  
   
 > [!IMPORTANT]
-> WCF에서 노출하는 API 대신 WinRT 배포 API를 사용하세요. 자세한 내용은 [WinRT 배포 API](https://go.microsoft.com/fwlink/?LinkId=236265)를 참조하세요.  
+> WCF에서 노출하는 API 대신 WinRT 배포 API를 사용하세요. 자세한 내용은 [WinRT 배포 API](xref:Windows.Web.Syndication)를 참조하세요.  
   
 > [!WARNING]
 > 서비스 참조 추가 기능을 사용하여 Windows 런타임 구성 요소에 웹 서비스 참조를 추가할 수는 없습니다.  
@@ -120,7 +120,7 @@ Windows 스토어 응용 프로그램에서 지원 되는 보안 모드는 다�
   
 Windows 스토어 응용 프로그램에서는 다음과 같은 클라이언트 자격 증명 형식이 지원 됩니다.
   
-1. 없음  
+1. None  
   
 2. Basic  
   
@@ -130,7 +130,7 @@ Windows 스토어 응용 프로그램에서는 다음과 같은 클라이언트 
   
 5. NTLM  
   
-6. 창  
+6. Windows  
   
 7. Username(메시지 보안)  
   
@@ -176,9 +176,9 @@ void async SomeMethod()
   
 ## <a name="see-also"></a>참조
 
-- [Windows 스토어 앱의 WCF 블로그](https://blogs.msdn.microsoft.com/piyushjo/2011/09/21/wcf-in-windows-8-metro-styled-apps-absolutely-supported/)
-- [WCF Windows 스토어 클라이언트 및 보안](https://blogs.msdn.microsoft.com/piyushjo/2011/10/11/calling-a-wcf-service-from-a-metro-application-adding-security/)
-- [Windows 스토어 앱 및 컴퓨터 간 호출](https://blogs.msdn.microsoft.com/piyushjo/2011/10/21/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario/)
-- [Windows 스토어 앱에서 Azure에 배포 된 WCF 서비스 호출](https://blogs.msdn.com/b/piyushjo/archive/2011/10/22/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario.aspx)
+- [Windows 스토어 앱의 WCF 블로그](https://docs.microsoft.com/archive/blogs/piyushjo/wcf-in-windows-8-metro-styled-apps-absolutely-supported)
+- [WCF Windows 스토어 클라이언트 및 보안](https://docs.microsoft.com/archive/blogs/piyushjo/calling-a-wcf-service-from-a-metro-application-adding-security)
+- [Windows 스토어 앱 및 컴퓨터 간 호출](https://docs.microsoft.com/archive/blogs/piyushjo/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario)
+- [Windows 스토어 앱에서 Azure에 배포 된 WCF 서비스 호출](https://docs.microsoft.com/archive/blogs/piyushjo/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario)
 - [WCF 보안 프로그래밍](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)
 - [바인딩](../../../../docs/framework/wcf/bindings.md)

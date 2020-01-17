@@ -16,32 +16,34 @@
       href: install/how-to-detect-installed-versions.md
     - name: Linux 패키지 관리자
       items:
-        - name: RHEL 7
-          href: install/linux-package-manager-rhel7.md
-        - name: RHEL 8.1
-          href: install/linux-package-manager-rhel81.md
-        - name: Ubuntu 16.04
-          href: install/linux-package-manager-ubuntu-1604.md
-        - name: Ubuntu 18.04
-          href: install/linux-package-manager-ubuntu-1804.md
         - name: Ubuntu 19.04
           href: install/linux-package-manager-ubuntu-1904.md
-        - name: Debian 9
-          href: install/linux-package-manager-debian9.md
-        - name: Debian 10
-          href: install/linux-package-manager-debian10.md
-        - name: Fedora 29
-          href: install/linux-package-manager-fedora29.md
-        - name: Fedora 30
-          href: install/linux-package-manager-fedora30.md
+        - name: Ubuntu 18.04
+          href: install/linux-package-manager-ubuntu-1804.md
+        - name: Ubuntu 16.04
+          href: install/linux-package-manager-ubuntu-1604.md
         - name: CentOS 7
           href: install/linux-package-manager-centos7.md
+        - name: Debian 10
+          href: install/linux-package-manager-debian10.md
+        - name: Debian 9
+          href: install/linux-package-manager-debian9.md
+        - name: Fedora 31
+          href: install/linux-package-manager-fedora31.md
+        - name: Fedora 30
+          href: install/linux-package-manager-fedora30.md
+        - name: Fedora 29
+          href: install/linux-package-manager-fedora29.md
         - name: OpenSUSE 15
           href: install/linux-package-manager-opensuse15.md
-        - name: SLES 12
-          href: install/linux-package-manager-sles12.md
+        - name: RHEL 8.1
+          href: install/linux-package-manager-rhel81.md
+        - name: RHEL 7
+          href: install/linux-package-manager-rhel7.md
         - name: SLES 15
           href: install/linux-package-manager-sles15.md
+        - name: SLES 12
+          href: install/linux-package-manager-sles12.md
     - name: 지역화된 IntelliSense 설치
       href: install/localized-intellisense.md
 - name: 시작
@@ -342,26 +344,24 @@
   items:
     - name: 개요
       href: porting/index.md
-    - name: .NET Core에서 사용할 수 없는 .NET Framework 기술
-      href: porting/net-framework-tech-unavailable.md
     - name: 타사 종속성 분석
       href: porting/third-party-deps.md
     - name: 포트 라이브러리
       href: porting/libraries.md
     - name: .NET Core 프로젝트 구성
       href: porting/project-structure.md
+    - name: 사용할 수 없는 기술
+      href: porting/net-framework-tech-unavailable.md
     - name: 도구
       href: porting/tools.md
     - name: Windows 호환 기능 팩 사용
       href: porting/windows-compat-pack.md
     - name: Windows Forms 프로젝트 포팅
-      items:
-        - name: 프로젝트를 포트하는 방법
-          href: porting/winforms.md
-        - name: 호환성이 손상되는 변경
-          href: porting/winforms-breaking-changes.md
+      href: porting/winforms.md
     - name: WPF 프로젝트 포팅
       href: porting/wpf.md
+    - name: 포트 C++/CLI 프로젝트
+      href: porting/cpp-cli.md
 - name: 종속성 로딩
   items:
     - name: 개요

@@ -9,14 +9,12 @@ helpviewer_keywords:
 - locating assemblies
 - assemblies [.NET Framework], location
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 01cef9646ca9c4f49ab8376364648f66b9651e4a
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: c462a6df2d5221907a6b574c33bb8fa1c52abac5
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052124"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741345"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>런타임에서 어셈블리를 찾는 방법
 
@@ -35,7 +33,7 @@ ms.locfileid: "71052124"
 
 어셈블리 이름만 지정하는 등 호출 메서드에 어셈블리에 대한 부분 정보만 제공하여 어셈블리에 대한 동적 참조를 만들 수도 있습니다. 이 경우 애플리케이션 디렉터리에서만 어셈블리가 검색되고 다른 검사는 수행되지 않습니다. <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 또는 <xref:System.AppDomain.Load%2A?displayProperty=nameWithType>와 같은 다양한 어셈블리 로드 메서드 중 하나를 사용하여 부분 참조를 만듭니다.
 
-<xref:System.Reflection.Assembly.Load*?displayProperty=nameWithType> 등의 메서드를 사용하여 동적 참조를 만들고 부분 정보만 제공할 수 있습니다. 그런 다음 애플리케이션 구성 파일에서 [\<qualifyAssembly&gt;](../configure-apps/file-schema/runtime/qualifyassembly-element.md) 요소를 사용하여 참조를 한정할 수 있습니다. 코드 대신 애플리케이션 구성 파일에서 이 요소를 통해 전체 참조 정보(이름, 버전, 문화권 및 해당하는 경우 공개 키 토큰)를 제공할 수 있습니다. 애플리케이션 디렉터리 외부의 어셈블리에 대한 참조를 정규화하려는 경우 또는 전역 어셈블리 캐시에서 어셈블리를 참조하려고 하지만 코드 대신 구성 파일에서 전체 참조를 편리하게 지정하려는 경우 이 기술을 사용합니다.
+<xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 등의 메서드를 사용하여 동적 참조를 만들고 부분 정보만 제공할 수 있습니다. 그런 다음 애플리케이션 구성 파일에서 [\<qualifyAssembly&gt;](../configure-apps/file-schema/runtime/qualifyassembly-element.md) 요소를 사용하여 참조를 한정할 수 있습니다. 코드 대신 애플리케이션 구성 파일에서 이 요소를 통해 전체 참조 정보(이름, 버전, 문화권 및 해당하는 경우 공개 키 토큰)를 제공할 수 있습니다. 애플리케이션 디렉터리 외부의 어셈블리에 대한 참조를 정규화하려는 경우 또는 전역 어셈블리 캐시에서 어셈블리를 참조하려고 하지만 코드 대신 구성 파일에서 전체 참조를 편리하게 지정하려는 경우 이 기술을 사용합니다.
 
 > [!NOTE]
 > 이 형식의 부분 참조는 여러 애플리케이션 간에 공유되는 어셈블리와 함께 사용하면 안 됩니다. 어셈블리 단위가 아니라 애플리케이션 단위로 구성 설정이 적용되기 때문에 이 형식의 부분 참조를 사용하는 공유 어셈블리에서는 공유 어셈블리를 사용하는 각 애플리케이션의 구성 파일에 적격한 정보가 있어야 합니다.
@@ -136,7 +134,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 게시자 정책 파일은 공유 구성 요소가 업데이트되고 해당 구성 요소를 사용하는 모든 애플리케이션이 새 버전의 공유 구성 요소를 선택할 때 사용됩니다. 애플리케이션 구성 파일이 안전 모드를 적용하지 않는 한 게시자 정책 파일의 설정이 애플리케이션 구성 파일의 설정을 재정의합니다.
 
 #### <a name="safe-mode"></a>안전 모드
-게시자 정책 파일은 일반적으로 서비스 팩이나 프로그램 업데이트의 일부로 명시적으로 설치됩니다. 업그레이드된 공유 구성 요소에 문제가 있는 경우 안전 모드를 사용하여 게시자 정책 파일의 재정의를 무시할 수 있습니다. 안전 모드는 **\<publisherPolicy apply="yes**&amp;#124;**no"/&gt;** 요소에 의해 결정되며, 이 요소는 애플리케이션 구성 파일에만 있습니다. 바인딩 프로세스에서 게시자 정책 구성 정보를 제거할지 여부를 지정합니다.
+게시자 정책 파일은 일반적으로 서비스 팩이나 프로그램 업데이트의 일부로 명시적으로 설치됩니다. 업그레이드된 공유 구성 요소에 문제가 있는 경우 안전 모드를 사용하여 게시자 정책 파일의 재정의를 무시할 수 있습니다. 안전 모드는 **\<publisherPolicy apply="yes**&#124;**no"/&amp;gt;** 요소에 의해 결정되며, 이 요소는 애플리케이션 구성 파일에만 있습니다. 바인딩 프로세스에서 게시자 정책 구성 정보를 제거할지 여부를 지정합니다.
 
 전체 애플리케이션이나 선택한 어셈블리에 대해 안전 모드를 설정할 수 있습니다. 즉, 애플리케이션을 구성하는 모든 어셈블리에 대해 정책을 해제하거나 다른 어셈블리는 제외하고 일부 어셈블리에 대해서만 설정할 수 있습니다. 애플리케이션을 구성하는 어셈블리에 게시자 정책을 선택적으로 적용하려면, **\<publisherPolicy apply\=no/&gt;** 를 설정한 다음 \<**dependentAssembly**&gt; 요소를 사용하여 정책을 적용하려는 어셈블리를 지정합니다. 애플리케이션을 구성하는 모든 어셈블리에 게시자 정책을 적용하려면 종속 어셈블리 요소 없이 **\<publisherPolicy apply\=no/&gt;** 를 설정합니다. 구성에 대한 자세한 내용은 [구성 파일을 사용하여 앱 구성](../configure-apps/index.md)을 참조하세요.
 
@@ -266,7 +264,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 
 예를 들어 Assembly1이 Assembly2를 참조하고 Assembly1이 `http://www.code.microsoft.com/utils`에서 다운로드된 경우 해당 위치는 Assembly2.dll을 찾을 수 있는 위치에 대한 힌트로 간주됩니다. 런타임은 `http://www.code.microsoft.com/utils/Assembly2.dll`과 `http://www.code.microsoft.com/utils/Assembly2/Assembly2.dll`의 어셈블리를 탐지합니다. Assembly2가 이러한 위치 중 하나에  없으면 런타임에서 Windows Installer를 쿼리합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [최선의 어셈블리 로드 방법](best-practices-for-assembly-loading.md)
 - [배포](index.md)

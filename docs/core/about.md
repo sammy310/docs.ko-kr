@@ -2,12 +2,12 @@
 title: .NET Core 정보
 description: .NET Core에 대한 자세히 알아봅니다.
 ms.date: 09/17/2019
-ms.openlocfilehash: 22530e861f6a13a6930b2fb35c91b4f7a95a17c7
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 12611c2cd0b872a683d070ff17dcf9f111578627
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74801953"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900624"
 ---
 # <a name="about-net-core"></a>.NET Core 정보
 
@@ -57,8 +57,8 @@ C#, Visual Basic 및 F# 언어를 사용하여 .NET Core에 대한 애플리케�
 .NET Core는 다음과 같은 부분으로 구성됩니다.
 
 - [.NET Core 런타임](https://github.com/dotnet/runtime/tree/master/src/coreclr)은 형식 시스템, 어셈블리 로드, 가비지 수집기, 네이티브 interop, 기타 기본 서비스를 제공합니다. [.NET Core 프레임워크 라이브러리](https://github.com/dotnet/runtime/tree/master/src/libraries)는 기본 데이터 형식, 앱 컴퍼지션 형식, 기본 유틸리티를 제공합니다.
-- [ASP.NET 런타임](https://github.com/aspnet/home)은 웹앱, IoT 앱, 모바일 백 엔드 등의 최신 클라우드 기반 인터넷 연결 애플리케이션을 빌드하기 위한 프레임워크를 제공합니다.
-- .NET Core 개발자 환경을 사용할 수 있도록 하는 [.NET Core CLI 도구](https://github.com/dotnet/cli) 및 언어 컴파일러([Roslyn](https://github.com/dotnet/roslyn) 및 [F#](https://github.com/microsoft/visualfsharp))입니다.
+- [ASP.NET Core 런타임](https://github.com/dotnet/aspnetcore)은 웹앱, IoT 앱, 모바일 백 엔드 등의 최신 클라우드 기반 인터넷 연결 애플리케이션을 빌드하기 위한 프레임워크를 제공합니다.
+- .NET Core 개발자 환경을 사용할 수 있도록 하는 [.NET Core CLI 도구](https://github.com/dotnet/sdk) 및 언어 컴파일러([Roslyn](https://github.com/dotnet/roslyn) 및 [F#](https://github.com/microsoft/visualfsharp))입니다.
 - [dotnet 도구](https://github.com/dotnet/core-setup)는 .NET Core 앱 및 CLI 도구를 시작하는 데 사용됩니다. 런타임을 선택 및 호스트하고, 어셈블리 로드 정책을 제공하며, 앱과 도구를 시작합니다.
 
 이러한 구성 요소는 다음과 같은 방법으로 배포됩니다.
@@ -113,7 +113,7 @@ Windows 및 Unix 구현은 크기가 비슷합니다. .NET Core 라이브러리�
 
 ### <a name="comparison-with-mono"></a>Mono와 비교
 
-[Mono](https://www.mono-project.com/)는 원본 플랫폼 간 .NET 구현입니다. .NET Framework의 [오픈 소스](https://github.com/mono/mono) 대안으로 시작되었으며, iOS 및 Android 디바이스가 보편화되면서 모바일 디바이스 대상 프로그램으로 전환되었습니다. .NET Framework의 커뮤니티 복제본으로 생각할 수 있습니다. Mono 프로젝트 팀은 호환되는 구현을 제공하기 위해 Microsoft에서 게시한 오픈 [.NET 표준](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md)(특히 ECMA 335)을 사용했습니다.
+[Mono](https://www.mono-project.com/)는 원본 플랫폼 간 .NET 구현입니다. .NET Framework의 [오픈 소스](https://github.com/mono/mono) 대안으로 시작되었으며, iOS 및 Android 디바이스가 보편화되면서 모바일 디바이스 대상 프로그램으로 전환되었습니다. .NET Framework의 커뮤니티 복제본으로 생각할 수 있습니다. Mono 프로젝트 팀은 호환되는 구현을 제공하기 위해 Microsoft에서 게시한 오픈 [.NET 표준](https://github.com/dotnet/runtime/blob/master/docs/project/dotnet-standards.md)(특히 ECMA 335)을 사용했습니다.
 
 .NET Core와 Mono 간의 주요 차이점은 다음과 같습니다.
 

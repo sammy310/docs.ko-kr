@@ -2,12 +2,12 @@
 title: 함수 생성(LINQ to XML)(C#)
 ms.date: 07/20/2015
 ms.assetid: 57a82bcf-de03-4f1c-a0c8-9a76e989d542
-ms.openlocfilehash: 46cf4dbaf190182467cbbe1094070b2da0854c68
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: e55b0010a5f75eee8137d1e9bcefc573b5e07e72
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486045"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635758"
 ---
 # <a name="functional-construction-linq-to-xml-c"></a>함수 생성(LINQ to XML)(C#)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]에서는 *함수 생성*이라는 XML 요소를 만드는 강력한 방법을 제공합니다. 함수 생성은 단일 문으로 XML 트리를 만드는 기능입니다.  
@@ -18,7 +18,7 @@ ms.locfileid: "66486045"
   
 - <xref:System.Xml.Linq.XElement> 생성자는 `params` 형식의 <xref:System.Object> 배열을 사용하므로 생성자에 개수에 관계없이 개체를 전달할 수 있습니다. 따라서 복잡한 내용을 가진 요소를 만들 수 있습니다.  
   
-- 개체가 <xref:System.Collections.Generic.IEnumerable%601>을 구현하는 경우 개체의 컬렉션이 열거되고 컬렉션의 모든 항목이 추가됩니다. 컬렉션에 <xref:System.Xml.Linq.XElement> 또는 <xref:System.Xml.Linq.XAttribute> 개체가 포함되어 있으면 컬렉션의 각 항목이 개별적으로 추가됩니다. 이것은 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리의 결과를 생성자에 전달할 수 있도록 하기 때문에 중요합니다.  
+- 개체가 <xref:System.Collections.Generic.IEnumerable%601>을 구현하는 경우 개체의 컬렉션이 열거되고 컬렉션의 모든 항목이 추가됩니다. 컬렉션에 <xref:System.Xml.Linq.XElement> 또는 <xref:System.Xml.Linq.XAttribute> 개체가 포함되어 있으면 컬렉션의 각 항목이 개별적으로 추가됩니다. 이것은 LINQ 쿼리의 결과를 생성자에 전달할 수 있도록 하기 때문에 중요합니다.  
   
  이러한 기능을 사용하여 XML 트리를 만드는 코드를 작성할 수 있습니다. 예를 들면 다음과 같습니다.  
   
@@ -38,7 +38,7 @@ XElement contacts =
     );  
 ```  
   
- 또한 이러한 기능을 사용하여 XML 트리를 만들 때 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리의 결과를 사용하는 코드를 다음과 같이 작성할 수도 있습니다.  
+ 또한 이러한 기능을 사용하여 XML 트리를 만들 때 LINQ 쿼리의 결과를 사용하는 코드를 다음과 같이 작성할 수도 있습니다.  
   
 ```csharp  
 XElement srcTree = new XElement("Root",  

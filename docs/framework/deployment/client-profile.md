@@ -9,14 +9,12 @@ helpviewer_keywords:
 - profile [.NET Framework Client Profile]
 - .NET Framework Client Profile
 ms.assetid: f0219919-1f02-4588-8704-327a62fd91f1
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 72749f47d85c4ed910bf8bf925d14246dcb4244a
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 32fc29500a8a2e95b52ba16847020cdb390caceb
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73195184"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716565"
 ---
 # <a name="net-framework-client-profile"></a>.NET Framework Client Profile
 .NET Client Profile은 .NET Framework 4 및 이전 버전에서 제공되었고 클라이언트 애플리케이션을 위해 최적화된 .NET Framework의 하위 집합입니다. .NET Framework는 Windows, Windows Phone 및 Microsoft Azure용 개발 플랫폼으로서, 관리되는 앱 실행 환경과 .NET Framework 클래스 라이브러리를 제공합니다. .NET Framework 4 및 이전 버전에서는 전체 .NET Framework와 Client Profile의 두 가지 배포 옵션을 제공했습니다. Client Profile로 전체 .NET Framework보다 더 빠르게 배포하고 더 작은 응용 프로그램 설치 패키지를 사용할 수 있게 되었습니다.  
@@ -27,7 +25,7 @@ ms.locfileid: "73195184"
   
  .NET Framework 4.5를 설치한 경우 .NET Framework 4 Client Profile은 .NET Framework의 정식 버전으로 업데이트됩니다. .NET Framework 4.5 설치에 대한 자세한 내용은 [개발자용 .NET Framework 설치](../install/guide-for-developers.md)를 참조하세요.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [.NET Framework 클라이언트 프로필(.NET Framework 4)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc656912%28v=vs.100%29)
 - [Visual Studio 멀티 타기팅 개요](/visualstudio/ide/visual-studio-multi-targeting-overview)

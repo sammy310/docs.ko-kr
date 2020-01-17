@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: 4c5c7ffcab118978baf1b2f7602f39291452d1e6
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: ab14e6cb7d9bd4c1571040280dc35233e9b89d43
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740415"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937974"
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework의 새로운 기능
 
@@ -1196,7 +1196,7 @@ WPF 앱에 대해 최근에 확산되는 높은 DPI 및 하이브리드 DPI 환�
 
 **다시 호스트된 WF 디자이너에서 C# 식 및 IntelliSense 지원**
 
-.NET Framework 4.5 이상에서 WF는 Visual Studio 디자이너와 코드 워크플로 모두에서 C# 식을 지원합니다. 다시 호스트된 워크플로 디자이너는 Visual Studio 외부 애플리케이션(예: WPF)에서 워크플로 디자이너가 위치할 수 있도록 해주는 WF의 주요 기능입니다.  Windows Workflow Foundation을 사용하면 다시 호스트된 워크플로 디자이너에서 C# 식 및 IntelliSense를 지원할 수 있습니다. 자세한 내용은 [Windows Workflow Foundation 블로그](https://blogs.msdn.microsoft.com/workflowteam/2016/07/20/building-c-expressions-support-and-intellisense-in-the-rehosted-workflow-designer/)를 참조하십시오.
+.NET Framework 4.5 이상에서 WF는 Visual Studio 디자이너와 코드 워크플로 모두에서 C# 식을 지원합니다. 다시 호스트된 워크플로 디자이너는 Visual Studio 외부 애플리케이션(예: WPF)에서 워크플로 디자이너가 위치할 수 있도록 해주는 WF의 주요 기능입니다.  Windows Workflow Foundation을 사용하면 다시 호스트된 워크플로 디자이너에서 C# 식 및 IntelliSense를 지원할 수 있습니다. 자세한 내용은 [Windows Workflow Foundation 블로그](https://docs.microsoft.com/archive/blogs/workflowteam/building-c-expressions-support-and-intellisense-in-the-rehosted-workflow-designer)를 참조하십시오.
 
 `Availability of IntelliSense when a customer rebuilds a workflow project from Visual Studio` .NET Framework 4.6.2 이전 버전의 .NET Framework에서는 고객이 Visual Studio에서 워크플로 프로젝트를 다시 작성할 때 WF Designer IntelliSense가 중단됩니다. 프로젝트가 빌드되면 워크플로 형식을 디자이너에서 찾을 수 없으므로 IntelliSense의 누락된 워크플로 형식에 대한 경고가 **오류 목록** 창에 표시됩니다. .NET Framework 4.6.2에서는 이 문제를 해결하고 IntelliSense를 사용할 수 있도록 해줍니다.
 
@@ -2066,7 +2066,7 @@ ASP.NET 4.5 및 4.5.1은 Web Forms, WebSocket 지원, 비동기 처리기, 성�
 
 .NET Framework 4.5의 Windows WF(Workflow Foundation)에 몇 가지 새로운 기능이 추가되었습니다.
 
-- 상태 머신 워크플로가 .NET Framework 4.0.1([.NET Framework 4 플랫폼 업데이트 1](https://blogs.msdn.microsoft.com/endpoint/2011/04/18/microsoft-net-framework-4-platform-update-1/))의 일부로 처음 도입되었습니다. 이 업데이트에는 개발자가 상태 시스템 워크플로를 만들 수 있도록 하는 몇 가지 새로운 클래스와 활동이 포함되었습니다. 이러한 클래스와 활동은 다음을 포함하도록 .NET Framework 4.5에 대해 업데이트되었습니다.
+- 상태 머신 워크플로가 .NET Framework 4.0.1([.NET Framework 4 플랫폼 업데이트 1](https://docs.microsoft.com/archive/blogs/endpoint/microsoft-net-framework-4-platform-update-1))의 일부로 처음 도입되었습니다. 이 업데이트에는 개발자가 상태 시스템 워크플로를 만들 수 있도록 하는 몇 가지 새로운 클래스와 활동이 포함되었습니다. 이러한 클래스와 활동은 다음을 포함하도록 .NET Framework 4.5에 대해 업데이트되었습니다.
 
   - 상태에 중단점을 설정하는 기능
 

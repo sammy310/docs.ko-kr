@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 11/21/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 07729e1667f8aa3aba74576943d79eaa3bcd14d8
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 90abbc9ffe5765880d18d0d29c8e13bc1330ddc3
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552891"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75341560"
 ---
 # <a name="tutorial-classify-the-severity-of-restaurant-health-violations-with-model-builder"></a>자습서: 모델 작성기를 사용하여 식당 위생 위반의 심각도 분류
 
@@ -31,7 +31,7 @@ ms.locfileid: "74552891"
 > [!NOTE]
 > 모델 작성기는 현재 미리 보기로 제공됩니다.
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 필수 구성 요소 및 설치 지침 목록을 보려면 [모델 작성기 설치 가이드](../how-to-guides/install-model-builder.md)를 방문하세요.
 
@@ -152,4 +152,4 @@ ms.locfileid: "74552891"
 
 - [모델 작성기 시나리오](../automate-training-with-model-builder.md#scenarios)
 - [다중 클래스 분류](../resources/glossary.md#multiclass-classification)
-- [다중 클래스 분류 모델 메트릭](../resources/metrics.md#metrics-for-multi-class-classification)
+- [다중 클래스 분류 모델 메트릭](../resources/metrics.md#evaluation-metrics-for-multi-class-classification)

@@ -3,12 +3,14 @@
 - name: 시작
   items:
     - name: 개요
+      displayName: get started
       href: getting-started/index.md
     - name: 'C# 언어 및 .NET Framework 소개'
       href: getting-started/introduction-to-the-csharp-language-and-the-net-framework.md
 - name: 자습서
   items:
     - name: 개요
+      displayName: tutorials
       href: tutorials/index.md
     - name: 'C#을 사용한 프로그래밍 소개'
       items:
@@ -93,6 +95,7 @@
 - name: 'C#의 새로운 기능'
   items:
     - name: 'C# 8.0'
+      displayName: what's new
       href: whats-new/csharp-8.md
     - name: 'C# 7.3'
       href: whats-new/csharp-7-3.md
@@ -238,9 +241,10 @@
       href: codedoc.md
     - name: 버전 관리
       href: versioning.md
-- name: 'C# 항목 사용 방법'
+- name: 'C# 방법 문서'
   items:
-    - name: 항목 인덱스
+    - name: 문서 인덱스
+      displayName: how to's
       href: how-to/index.md
     - name: '`String.Split`을 사용하여 문자열 구문 분석'
       href: how-to/parse-strings-using-split.md
@@ -285,10 +289,11 @@
 - name: 'C# 프로그래밍 가이드'
   items:
     - name: 개요
+      displayName: programming guide
       href: programming-guide/index.md
     - name: 'C# 프로그램 내부'
       items:
-        - name: 'C# 프로그램 내부'
+        - name: 'C# 프로그램 내용'
           href: programming-guide/inside-a-program/index.md
         - name: Hello World -- 프로그램 처음 만들기
           href: programming-guide/inside-a-program/hello-world-your-first-program.md
@@ -301,6 +306,7 @@
     - name: Main()과 명령줄 인수
       items:
         - name: 개요
+          displayName: main method
           href: programming-guide/main-and-command-args/index.md
         - name: 명령줄 인수
           href: programming-guide/main-and-command-args/command-line-arguments.md
@@ -311,10 +317,12 @@
     - name: 프로그래밍 개념
       items:
         - name: 개요
+          displayName: programming concepts
           href: programming-guide/concepts/index.md
         - name: async 및 await를 사용한 비동기 프로그래밍
           items:
             - name: 개요
+              displayName: asynchronous programming
               href: programming-guide/concepts/async/index.md
             - name: 작업 비동기 프로그래밍 모델
               href: programming-guide/concepts/async/task-asynchronous-programming-model.md
@@ -347,6 +355,7 @@
         - name: 특성
           items:
             - name: 개요
+              displayName: attributes
               href: programming-guide/concepts/attributes/index.md
             - name: 사용자 지정 특성 만들기
               href: programming-guide/concepts/attributes/creating-custom-attributes.md
@@ -362,27 +371,29 @@
           href: programming-guide/concepts/caller-information.md
         - name: 컬렉션
           href: programming-guide/concepts/collections.md
-        - name: 공 분산 및 반공 분산
+        - name: 공변성(Covariance) 및 반공변성(Contravariance)
           items:
             - name: 개요
+              displayName: covariance and contravariance
               href: programming-guide/concepts/covariance-contravariance/index.md
             - name: 제네릭 인터페이스의 가변성
               href: programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md
               items:
-                - name: 변형 제네릭 인터페이스 만들기
+                - name: 가변 제네릭 인터페이스 만들기
                   href: programming-guide/concepts/covariance-contravariance/creating-variant-generic-interfaces.md
-                - name: 제네릭 컬렉션용 인터페이스에서 가변성 사용
+                - name: 제네릭 컬렉션에 인터페이스의 가변성 사용
                   href: programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md
             - name: 대리자의 가변성
               href: programming-guide/concepts/covariance-contravariance/variance-in-delegates.md
               items:
-                - name: 대리자에서 가변성 사용
+                - name: 대리자의 가변성 사용
                   href: programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md
                 - name: Func 및 Action 제네릭 대리자에 가변성 사용
                   href: programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md
         - name: 식 트리
           items:
             - name: 개요
+              displayName: expression trees
               href: programming-guide/concepts/expression-trees/index.md
             - name: 식 트리 실행 방법
               href: programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md
@@ -399,6 +410,7 @@
         - name: LINQ(Language-Integrated Query)
           items:
             - name: 개요
+              displayName: LINQ overview
               href: programming-guide/concepts/linq/index.md
             - name: 'C#에서 LINQ 시작'
               items:
@@ -873,6 +885,7 @@
         - name: 'Serialization(C#)'
           items:
             - name: 개요
+              displayName: serialization
               href: programming-guide/concepts/serialization/index.md
             - name: XML 파일에 개체 데이터를 쓰는 방법
               href: programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md
@@ -883,6 +896,7 @@
     - name: '문, 식, 연산자'
       items:
         - name: 개요
+          displayName: 'statements, expressions, operators'
           href: programming-guide/statements-expressions-operators/index.md
         - name: 문
           href: programming-guide/statements-expressions-operators/statements.md
@@ -927,6 +941,7 @@
     - name: 클래스 및 구조체
       items:
         - name: 개요
+          displayName: classes structs
           href: programming-guide/classes-and-structs/index.md
         - name: 클래스
           href: programming-guide/classes-and-structs/classes.md
@@ -935,6 +950,7 @@
         - name: 구조체
           items:
             - name: 개요
+              displayName: structs
               href: programming-guide/classes-and-structs/structs.md
             - name: 구조체 사용
               href: programming-guide/classes-and-structs/using-structs.md
@@ -943,6 +959,7 @@
         - name: 다형성
           items:
             - name: 개요
+              displayName: polymorphism
               href: programming-guide/classes-and-structs/polymorphism.md
             - name: Override 및 New 키워드를 사용하여 버전 관리
               href: programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md
@@ -1049,6 +1066,7 @@
     - name: 인터페이스
       items:
         - name: 개요
+          displayName: interfaces
           href: programming-guide/interfaces/index.md
         - name: 명시적 인터페이스 구현
           href: programming-guide/interfaces/explicit-interface-implementation.md
@@ -1059,6 +1077,7 @@
     - name: 대리자
       items:
         - name: 개요
+          displayName: delegates
           href: programming-guide/delegates/index.md
         - name: 대리자 사용
           href: programming-guide/delegates/using-delegates.md
@@ -1071,6 +1090,7 @@
     - name: 배열
       items:
         - name: 개요
+          displayName: arrays
           href: programming-guide/arrays/index.md
         - name: 개체 형식 배열
           href: programming-guide/arrays/arrays-as-objects.md
@@ -1095,6 +1115,7 @@
     - name: 인덱서
       items:
         - name: 개요
+          displayName: indexers
           href: programming-guide/indexers/index.md
         - name: 인덱서 사용
           href: programming-guide/indexers/using-indexers.md
@@ -1105,6 +1126,7 @@
     - name: 이벤트
       items:
         - name: 개요
+          displayName: events
           href: programming-guide/events/index.md
         - name: 이벤트를 구독 및 구독 취소하는 방법
           href: programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md
@@ -1119,6 +1141,7 @@
     - name: 제네릭
       items:
         - name: 개요
+          displayName: generics
           href: programming-guide/generics/index.md
         - name: 제네릭 형식 매개 변수
           href: programming-guide/generics/generic-type-parameters.md
@@ -1145,6 +1168,7 @@
     - name: 네임스페이스
       items:
         - name: 개요
+          displayName: namespaces
           href: programming-guide/namespaces/index.md
         - name: Using namespaces
           href: programming-guide/namespaces/using-namespaces.md
@@ -1153,12 +1177,14 @@
     - name: 안전하지 않은 코드 및 포인터
       items:
         - name: 개요 및 제한 사항
+          displayName: unsafe code pointers
           href: programming-guide/unsafe-code-pointers/index.md
         - name: 고정 크기 버퍼
           href: programming-guide/unsafe-code-pointers/fixed-size-buffers.md
         - name: 포인터 형식
           items:
             - name: 개요
+              displayName: pointer types
               href: programming-guide/unsafe-code-pointers/pointer-types.md
             - name: 포인터 변환
               href: programming-guide/unsafe-code-pointers/pointer-conversions.md
@@ -1167,6 +1193,7 @@
     - name: XML 문서 주석
       items:
         - name: 개요
+          displayName: xml documentation comments
           href: programming-guide/xmldoc/index.md
         - name: 문서 주석에 대한 권장 태그
           href: programming-guide/xmldoc/recommended-tags-for-documentation-comments.md
@@ -1219,6 +1246,7 @@
     - name: 예외 및 예외 처리
       items:
         - name: 개요
+          displayName: exceptions
           href: programming-guide/exceptions/index.md
         - name: 예외 사용
           href: programming-guide/exceptions/using-exceptions.md
@@ -1237,6 +1265,7 @@
     - name: 파일 시스템 및 레지스트리
       items:
         - name: 개요
+          displayName: file system registry
           href: programming-guide/file-system/index.md
         - name: 디렉터리 트리를 반복하는 방법
           href: programming-guide/file-system/how-to-iterate-through-a-directory-tree.md
@@ -1275,12 +1304,14 @@
 - name: 언어 참조
   items:
     - name: 개요
+      displayName: language reference
       href: language-reference/index.md
     - name: 언어 버전 구성
       href: language-reference/configure-language-version.md
     - name: 'C# 키워드'
       items:
         - name: 개요
+          displayName: keywords
           href: language-reference/keywords/index.md
         - name: 기본 제공 형식
           items:
@@ -1327,14 +1358,14 @@
               href: language-reference/keywords/var.md
             - name: 관리되지 않는 형식
               href: language-reference/builtin-types/unmanaged-types.md
+            - name: 기본값
+              href: language-reference/builtin-types/default-values.md
             - name: 형식 참조 테이블
               items:
                 - name: 기본 제공 형식 표
                   href: language-reference/keywords/built-in-types-table.md
                 - name: 값 형식 표
                   href: language-reference/keywords/value-types-table.md
-                - name: 기본값 표
-                  href: language-reference/keywords/default-values-table.md
                 - name: 숫자 결과 서식 지정 표
                   href: language-reference/keywords/formatting-numeric-results-table.md
         - name: 한정자
@@ -1435,6 +1466,7 @@
             - name: Checked 및 Unchecked
               items:
                 - name: 개요
+                  displayName: checked unchecked
                   href: language-reference/keywords/checked-and-unchecked.md
                 - name: checked
                   href: language-reference/keywords/checked.md
@@ -1499,6 +1531,7 @@
         - name: 상황별 키워드
           items:
             - name: 빠른 참조
+              displayName: contextual keywords
               href: language-reference/keywords/contextual-keywords.md
             - name: add
               href: language-reference/keywords/add.md
@@ -1521,6 +1554,7 @@
         - name: 쿼리 키워드
           items:
             - name: 빠른 참조
+              displayName: query keywords
               href: language-reference/keywords/query-keywords.md
             - name: from 절
               href: language-reference/keywords/from-clause.md
@@ -1631,6 +1665,7 @@
     - name: 'C# 특수 문자'
       items:
         - name: 개요
+          displayName: special characters
           href: language-reference/tokens/index.md
         - name: $ -- 문자열 보간
           href: language-reference/tokens/interpolated.md
@@ -1639,6 +1674,7 @@
     - name: 'C# 전처리기 지시문'
       items:
         - name: 개요
+          displayName: preprocessor directives
           href: language-reference/preprocessor-directives/index.md
         - name: '#if'
           href: language-reference/preprocessor-directives/preprocessor-if.md
@@ -1671,6 +1707,7 @@
     - name: 'C# 컴파일러 옵션'
       items:
         - name: 개요
+          displayName: compiler options
           href: language-reference/compiler-options/index.md
         - name: csc.exe를 사용한 명령줄 빌드
           href: language-reference/compiler-options/command-line-building-with-csc-exe.md

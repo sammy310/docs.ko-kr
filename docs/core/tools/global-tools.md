@@ -3,13 +3,12 @@ title: .NET Core Global Tool
 description: .NET Core Global Tool의 개요와 사용 가능한 .NET Core CLI 명령입니다.
 author: KathleenDollard
 ms.date: 05/29/2018
-ms.custom: seodec18
-ms.openlocfilehash: 116739f80d5157632a8e44a19cbef6ba7971d339
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 0df3c1b615adfeaaf41542dc8252a8f14f49f6f9
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318308"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75899860"
 ---
 # <a name="net-core-global-tools-overview"></a>.NET Core Global Tool 개요
 
@@ -35,7 +34,7 @@ ms.locfileid: "72318308"
 
 * [NuGet](https://www.nuget.org)에서 .NET Core Global Tool을 찾을 수 있습니다. 그러나 NuGet에서는 아직 .NET Core Global Tool을 검색할 수 없습니다.
 * 블로그 게시물 또는 [natemcmaster/dotnet-tools](https://github.com/natemcmaster/dotnet-tools) GitHub 리포지토리에서 도구 권장 사항을 찾을 수 있습니다.
-* [aspnet/DotNetTools](https://github.com/aspnet/DotNetTools/) GitHub 리포지토리에서 ASP.NET 팀이 만든 Global Tool의 소스 코드를 볼 수 있습니다.
+* [dotnet/aspnetcore](https://github.com/dotnet/aspnetcore/tree/master/src/Tools) GitHub 리포지토리에서 ASP.NET 팀이 만든 Global Tool의 소스 코드를 볼 수 있습니다.
 * [.NET Core dotnet 진단 글로벌 도구](../diagnostics/index.md#net-core-dotnet-diagnostic-global-tools)에서 진단 도구에 대해 알아볼 수 있습니다.
 
 ## <a name="check-the-author-and-statistics"></a>작성자 및 통계 확인
@@ -137,6 +136,6 @@ dotnet tool uninstall -g <packagename>
 dotnet tool list -g
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 * [.NET Core 도구 사용 문제 해결](troubleshoot-usage-issues.md)

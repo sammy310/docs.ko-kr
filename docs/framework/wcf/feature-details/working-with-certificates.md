@@ -1,5 +1,5 @@
 ---
-title: 인증서 작업
+title: 인증서 사용
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,18 +7,18 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: 65990c699bafa8eec1ba7dcbce624c88316cbb72
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 0764ca29fc959092e77629ff3888e65f0d68d70c
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283280"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75938059"
 ---
-# <a name="working-with-certificates"></a>인증서 작업
+# <a name="working-with-certificates"></a>인증서 사용
 
 WCF(Windows Communication Foundation) 보안을 프로그래밍하려면 일반적으로 X.509 디지털 인증서를 사용하여 클라이언트 및 서버를 인증하고, 암호화하고, 메시지에 디지털 서명합니다. 이 항목에서는 X.509 디지털 인증서 기능과 WCF에서 인증서 기능을 사용하는 방법을 간략하게 설명하며, 이러한 개념을 자세히 설명하거나 WCF 및 인증서를 사용하여 일반 작업을 수행하는 방법을 보여 주는 항목에 대한 링크를 제공합니다.
 
-간단히 말해서 디지털 인증서는 공개 키 암호화 사용을 통해 전자 트랜잭션에 참여하는 각각의 상대방에 대해 유효성을 확인하고 인증하는 디지털 인증서, 인증 기관 및 기타 등록 기관의 시스템인 PKI(*공개 키 인프라*)의 일부입니다. 인증 기관은 인증서를 발급하며 각 인증서에는 *주체*(인증서가 발급되는 엔터티), 유효 날짜(인증서의 유효 기간), 발급자(인증서를 발급한 엔터티), 공개 키 등과 같은 데이터를 포함하는 필드 집합이 있습니다. WCF에서 이러한 각 속성은 <xref:System.IdentityModel.Claims.Claim>으로 처리되며, 각 클레임은 ID와 권한의 두 가지 형식으로 세분화됩니다. X.509 인증서에 대한 자세한 내용은[X.509 공개 키 인증서](/windows/desktop/SecCertEnroll/about-x-509-public-key-certificates)를 참조하세요. WCF에서 클레임 및 권한 부여에 대한 자세한 내용은 [ID 모델을 사용하여 클레임 및 권한 부여 관리](managing-claims-and-authorization-with-the-identity-model.md)를 참조하세요. PKI 구현에 대 한 자세한 내용은 [Windows Server 2012 R2 Active Directory 인증서 서비스를 사용 하는 엔터프라이즈 pki](https://blogs.technet.microsoft.com/yungchou/2013/10/21/enterprise-pki-with-windows-server-2012-r2-active-directory-certificate-services-part-1-of-2/)를 참조 하세요.
+간단히 말해서 디지털 인증서는 공개 키 암호화 사용을 통해 전자 트랜잭션에 참여하는 각각의 상대방에 대해 유효성을 확인하고 인증하는 디지털 인증서, 인증 기관 및 기타 등록 기관의 시스템인 PKI(*공개 키 인프라*)의 일부입니다. 인증 기관은 인증서를 발급하며 각 인증서에는 *주체*(인증서가 발급되는 엔터티), 유효 날짜(인증서의 유효 기간), 발급자(인증서를 발급한 엔터티), 공개 키 등과 같은 데이터를 포함하는 필드 집합이 있습니다. WCF에서 이러한 각 속성은 <xref:System.IdentityModel.Claims.Claim>으로 처리되며, 각 클레임은 ID와 권한의 두 가지 형식으로 세분화됩니다. X.509 인증서에 대한 자세한 내용은[X.509 공개 키 인증서](/windows/desktop/SecCertEnroll/about-x-509-public-key-certificates)를 참조하세요. WCF에서 클레임 및 권한 부여에 대한 자세한 내용은 [ID 모델을 사용하여 클레임 및 권한 부여 관리](managing-claims-and-authorization-with-the-identity-model.md)를 참조하세요. PKI 구현에 대 한 자세한 내용은 [Windows Server 2012 R2 Active Directory 인증서 서비스를 사용 하는 엔터프라이즈 pki](https://docs.microsoft.com/archive/blogs/yungchou/enterprise-pki-with-windows-server-2012-r2-active-directory-certificate-services-part-1-of-2)를 참조 하세요.
 
 인증서의 기본 기능은 인증서 소유자의 ID를 다른 엔터티에 인증하는 것입니다. 인증서는 소유자의 *퍼블릭 키*를 포함하고, 소유자는 프라이빗 키를 보유합니다. 공개 키를 사용하여 인증서 소유자에게 보내는 메시지를 암호화할 수 있습니다. 소유자만 프라이빗 키에 액세스할 수 있으므로 소유자만이 해당 메시지를 해독할 수 있습니다.
 
@@ -135,7 +135,7 @@ PowerShell New-selfsignedcertificate cmdlet은 x.509 인증서와 개인 키/공
 
 인증서를 해지하면 해지된 인증서 아래의 모든 체인도 유효하지 않으므로 인증 절차 중에 신뢰되지 않습니다. 해지되는 인증서를 확인하기 위해 각 발급자는 타임스탬프 및 날짜 스탬프가 기록된 CRL(*인증서 해지 목록*)을 게시합니다. 이 목록은 `RevocationMode`, `DefaultRevocationMode`, <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode> 및 <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication> 클래스의 <xref:System.ServiceModel.Security.X509PeerCertificateAuthentication> 또는 <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication> 속성을 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> 열거형 값 중 하나로 설정하여 온라인 해지 또는 오프라인 해지를 통해 확인할 수 있습니다. 모든 속성의 기본값은 `Online`입니다.
 
-`revocationMode`[authentication>\<(](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)[serviceBehaviors>\<의) 및 ](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)[authentication>\<(](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)[endpointBehaviors>\<의)의 ](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) 특성을 사용하여 구성에서 모드를 설정할 수도 있습니다.
+[\<authentication>](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)([\<serviceBehaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)의) 및 [\<authentication>](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)([\<endpointBehaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md)의)의 `revocationMode` 특성을 사용하여 구성에서 모드를 설정할 수도 있습니다.
 
 ## <a name="the-setcertificate-method"></a>SetCertificate 메서드
 
@@ -168,7 +168,7 @@ IIS 및 Active Directory에는 Windows 사용자 계정에 인증서를 매핑�
 
 Active Directory 매핑 사용에 대한 자세한 내용은 [디렉터리 서비스 매핑을 사용하여 클라이언트 인증서 매핑](https://go.microsoft.com/fwlink/?LinkId=88918)을 참조하세요.
 
-이 기능을 사용하여 <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.MapClientCertificateToWindowsAccount%2A> 클래스의 <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication> 속성을 `true`로 설정할 수 있습니다. 다음 코드에 표시된 것처럼 구성에서 `mapClientCertificateToWindowsAccount`[authentication>\< 요소의 ](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md) 특성을 `true`로 설정할 수 있습니다.
+이 기능을 사용하여 <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.MapClientCertificateToWindowsAccount%2A> 클래스의 <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication> 속성을 `true`로 설정할 수 있습니다. 다음 코드에 표시된 것처럼 구성에서 [\<authentication>](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md) 요소의 `mapClientCertificateToWindowsAccount` 특성을 `true`로 설정할 수 있습니다.
 
 ```xml
 <serviceBehaviors>
@@ -188,10 +188,10 @@ Windows 사용자 계정을 나타내는 토큰에 X.509 인증서를 매핑하�
 
 WCF의 첫 번째 릴리스에서는 도메인 정책을 참조하지 않고 매핑을 수행했습니다. 따라서 매핑을 실행할 때 X.509 인증서가 도메인 정책에 맞지 않을 경우 첫 번째 릴리스에서 작동했던 이전 애플리케이션이 실패할 수 있습니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.ServiceModel.Channels>
 - <xref:System.ServiceModel.Security>
 - <xref:System.ServiceModel>
 - <xref:System.Security.Cryptography.X509Certificates.X509FindType>
-- [서비스 및 클라이언트에 보안 설정](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Securing Services and Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

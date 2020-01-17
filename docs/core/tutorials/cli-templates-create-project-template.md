@@ -5,12 +5,12 @@ author: thraka
 ms.date: 06/25/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: 1f4e73287fca650b20ed5617c8dfd80e0bd8363c
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 64b029f87135c3424d01a6833619f0aec3833883
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318282"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75340361"
 ---
 # <a name="tutorial-create-a-project-template"></a>자습서: 프로젝트 템플릿 만들기
 
@@ -26,16 +26,16 @@ ms.locfileid: "72318282"
 > * 항목 템플릿 테스트
 > * 항목 템플릿 제거
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 * 이 자습서 시리즈의 [1부](cli-templates-create-item-template.md)를 완료합니다.
-* 터미널을 열고 _working\templates\\_ 폴더로 이동합니다.
+* 터미널을 열고 _working\templates_ 폴더로 이동합니다.
 
 ## <a name="create-a-project-template"></a>프로젝트 템플릿 만들기
 
 프로젝트 템플릿은 사용자가 코드의 작업 집합을 쉽게 시작할 수 있도록 해주는 즉시 실행 가능한 프로젝트를 생성합니다. .NET Core에는 콘솔 애플리케이션 또는 클래스 라이브러리와 같은 몇 가지 프로젝트 템플릿이 포함되어 있습니다. 이 예제에서는 C# 8.0을 사용하고 `async main` 진입점을 생성하는 새 콘솔 프로젝트를 만듭니다.
 
-터미널에서 _working\templates\\_폴더로 이동하고_consoleasync_라는 새 하위 폴더를 만듭니다. 하위 폴더를 입력하고 `dotnet new console`을 실행하여 표준 콘솔 애플리케이션을 생성합니다. 이 템플릿에서 생성된 파일을 편집하여 새 템플릿을 만듭니다.
+터미널에서 _working\templates_ 폴더로 이동하고 _consoleasync_라는 새 하위 폴더를 만듭니다. 하위 폴더를 입력하고 `dotnet new console`을 실행하여 표준 콘솔 애플리케이션을 생성합니다. 이 템플릿에서 생성된 파일을 편집하여 새 템플릿을 만듭니다.
 
 ```console
 working
@@ -98,7 +98,7 @@ Hello World with C# 8.0!
 
 ## <a name="create-the-template-config"></a>템플릿 구성 만들기
 
-템플릿은 .NET Core의 템플릿 루트에 있는 특수 폴더 및 구성 파일에서 인식됩니다. 이 자습서에서 템플릿 폴더는 _working\templates\consoleasync\\_ 에 있습니다.
+템플릿은 .NET Core의 템플릿 루트에 있는 특수 폴더 및 구성 파일에서 인식됩니다. 이 자습서에서 템플릿 폴더는 _working\templates\consoleasync_에 있습니다.
 
 템플릿을 만들 때 템플릿 폴더의 모든 파일과 폴더는 특수 구성 폴더를 제외하고 템플릿의 일부로 포함됩니다. 이 구성 폴더는 _.template.config_입니다.
 

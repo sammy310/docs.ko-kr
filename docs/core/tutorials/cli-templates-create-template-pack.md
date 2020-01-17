@@ -2,15 +2,15 @@
 title: dotnet new에 대한 템플릿 팩 만들기
 description: dotnet new 명령에 대한 템플릿 팩을 빌드하는 csproj 파일을 만드는 방법을 알아봅니다.
 author: thraka
-ms.date: 06/25/2019
+ms.date: 12/10/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: 520af5022e061236c0cfe80379679d9c7b5896b2
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: a4723d6d63c5739123fad774bc75fae7c9fd6703
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117403"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75340160"
 ---
 # <a name="tutorial-create-a-template-pack"></a>자습서: 템플릿 팩 만들기
 
@@ -25,13 +25,13 @@ ms.locfileid: "71117403"
 > * NuGet 패키지 파일에서 템플릿 설치
 > * 패키지 ID로 템플릿 제거
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 * 이 자습서 시리즈의 [1부](cli-templates-create-item-template.md) 및 [2부](cli-templates-create-project-template.md)를 완료합니다.
 
   이 자습서에서는 이 자습서의 처음 두 부분에서 만든 두 템플릿을 사용합니다. _working\templates\\_ 폴더에 템플릿을 폴더로 복사하여 다른 템플릿을 사용할 수 있습니다.
 
-* 터미널을 열고 _working\templates\\_ 폴더로 이동합니다.
+* 터미널을 열고 _working\\_ 폴더로 이동합니다.
 
 ## <a name="create-a-template-pack-project"></a>템플릿 팩 프로젝트 만들기
 

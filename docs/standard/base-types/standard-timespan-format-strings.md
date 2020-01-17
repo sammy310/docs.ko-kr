@@ -17,12 +17,12 @@ helpviewer_keywords:
 - standard TimeSpan format strings
 - formatting [.NET Framework], time intervals
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
-ms.openlocfilehash: c699ed68606293b1a49a540e00636cf7f56bdf2f
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: ec06edc16829c6d4caf8c760922aac1471e365c2
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73972100"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346623"
 ---
 # <a name="standard-timespan-format-strings"></a>표준 TimeSpan 서식 문자열
 
@@ -40,7 +40,7 @@ ms.locfileid: "73972100"
   
 다음 표에는 표준 시간 간격 형식 지정자가 나와 있습니다.  
   
-|형식 지정자|name|설명|예|  
+|형식 지정자|이름|설명|예|  
 |----------------------|----------|-----------------|--------------|  
 |"c"|상수(고정) 형식|이 지정자는 문화권을 구분하지 않으며 형식은 `[-][d'.']hh':'mm':'ss['.'fffffff]`입니다.<br /><br /> "t" 및 "T" 형식 문자열은 같은 결과를 생성합니다.<br /><br /> 추가 정보: [상수("c") 형식 지정자](#the-constant-c-format-specifier).|`TimeSpan.Zero` -> 00:00:00<br /><br /> `New TimeSpan(0, 0, 30, 0)` -> 00:30:00<br /><br /> `New TimeSpan(3, 17, 25, 30, 500)` -> 3.17:25:30.5000000|  
 |"g"|일반 약식|이 지정자는 필요한 내용만 출력하고 문화권을 구분하며 형식은 `[-][d':']h':'mm':'ss[.FFFFFFF]`입니다.<br /><br /> 추가 정보: [일반 약식("g") 형식 지정자](#the-general-short-g-format-specifier).|`New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50.5(en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50,5(fr-FR)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50.599(en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50,599(fr-FR)|  
@@ -120,7 +120,7 @@ ms.locfileid: "73972100"
  [!code-csharp[Conceptual.TimeSpan.Standard#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.standard/cs/standardlong1.cs#5)]
  [!code-vb[Conceptual.TimeSpan.Standard#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/standardlong1.vb#5)]
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [형식 서식 지정](../../../docs/standard/base-types/formatting-types.md)
 - [사용자 지정 TimeSpan 서식 문자열](../../../docs/standard/base-types/custom-timespan-format-strings.md)

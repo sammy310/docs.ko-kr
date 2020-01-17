@@ -11,14 +11,12 @@ helpviewer_keywords:
 - covariance and contravariance in generics
 - generic type parameters
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ee8cc1b677ad6f6c2718c155edbba632df38dbd3
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 909b03588d2a41f667bfa117a5cecb420b125088
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974690"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708399"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>제네릭의 공 분산과 반공 분산
 공변성(Covariance)과 반공변성(Contravariance)은 원래 지정된 것보다 더 많이 파생되거나(더 구체적인) 더 적게 파생된 형식(덜 구체적인)을 사용할 수 있는 능력을 지칭하는 용어입니다. 제네릭 형식 매개 변수는 더욱 유연하게 제네릭 형식을 할당하고 사용할 수 있도록 공변성과 반공변성을 지원합니다. 형식 시스템을 참조할 때 공변성, 반공변성 및 불변성의 정의는 다음과 같습니다. 이 예제에서는 `Base` 라는 기본 클래스와 `Derived`라는 파생 클래스가 있는 것으로 가정합니다.  
@@ -33,7 +31,7 @@ ms.locfileid: "73974690"
   
      원래 지정된 것보다 더 제네릭한(덜 파생적인) 형식을 사용할 수 있습니다.  
   
-     `Action<Base>` 의 인스턴스(Visual Basic의`Action(Of Base)` )를 `Action<Derived>`형식의 변수에 할당할 수 있습니다.  
+     `Action<Base>`의 인스턴스(Visual Basic의 `Action(Of Base)`)를 `Action<Derived>` 형식의 변수에 할당할 수 있습니다.  
   
 - `Invariance`  
   
@@ -71,7 +69,7 @@ ms.locfileid: "73974690"
 ## <a name="generic-interfaces-with-covariant-type-parameters"></a>공변 형식 매개 변수가 있는 제네릭 인터페이스  
  .NET Framework 4부터는 여러 제네릭 인터페이스에 공변 형식 매개 변수가 있습니다(예: <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.Generic.IEnumerator%601>, <xref:System.Linq.IQueryable%601>및 <xref:System.Linq.IGrouping%602>). 이러한 인터페이스의 모든 형식 매개 변수는 공변성이므로, 형식 매개 변수는 멤버의 반환 형식에만 사용됩니다.  
   
- 다음 예제에서는 공변 형식 매개 변수를 사용하는 방법을 보여 줍니다. 이 예제에서는 두 가지 형식을 정의합니다. 그중 하나인 `Base` 에는 `PrintBases` (Visual Basic의 경우 `IEnumerable<Base>` )를 취하고 요소를 출력하는`IEnumerable(Of Base)` 라는 정적 메서드가 있습니다. `Derived` 는 `Base`에서 상속됩니다. 이 예제에서는 빈 `List<Derived>` (Visual Basic의 경우`List(Of Derived)` )를 만든 다음 이 형식을 캐스팅하지 않은 채 `PrintBases` 에 전달하고 `IEnumerable<Base>` 형식의 변수에 할당하는 방법을 보여 줍니다. <xref:System.Collections.Generic.List%601> 은 단일 공변 형식 매개 변수가 있는 <xref:System.Collections.Generic.IEnumerable%601>을 구현합니다. `IEnumerable<Derived>` 의 인스턴스를 `IEnumerable<Base>`대신 사용할 수 있는 것은 공변 형식 매개 변수 때문입니다.  
+ 다음 예제에서는 공변 형식 매개 변수를 사용하는 방법을 보여 줍니다. 이 예제에서는 두 가지 형식을 정의합니다. 그중 하나인 `Base` 에는 `PrintBases` (Visual Basic의 경우 `IEnumerable<Base>` )를 취하고 요소를 출력하는`IEnumerable(Of Base)` 라는 정적 메서드가 있습니다. `Derived`는 `Base`에서 상속됩니다. 이 예제에서는 빈 `List<Derived>` (Visual Basic의 경우`List(Of Derived)` )를 만든 다음 이 형식을 캐스팅하지 않은 채 `PrintBases` 에 전달하고 `IEnumerable<Base>` 형식의 변수에 할당하는 방법을 보여 줍니다. <xref:System.Collections.Generic.List%601> 은 단일 공변 형식 매개 변수가 있는 <xref:System.Collections.Generic.IEnumerable%601>을 구현합니다. `IEnumerable<Derived>` 의 인스턴스를 `IEnumerable<Base>`대신 사용할 수 있는 것은 공변 형식 매개 변수 때문입니다.  
   
  [!code-csharp[CoContravarianceInClrGenericI#1](../../../samples/snippets/csharp/VS_Snippets_CLR/cocontravarianceinclrgenerici/cs/example.cs#1)]
  [!code-vb[CoContravarianceInClrGenericI#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/cocontravarianceinclrgenerici/vb/example.vb#1)]  
@@ -164,7 +162,7 @@ ms.locfileid: "73974690"
 |<xref:System.Linq.IOrderedQueryable%601>|예||  
 |<xref:System.Linq.IQueryable%601>|예||  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [공변성(Covariance) 및 반공변성(Contravariance)(C#)](../../csharp/programming-guide/concepts/covariance-contravariance/index.md)
 - [공변성(covariance) 및 반공변성(contravariance)(Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)

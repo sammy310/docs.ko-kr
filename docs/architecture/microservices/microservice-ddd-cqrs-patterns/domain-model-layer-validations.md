@@ -2,12 +2,12 @@
 title: 도메인 모델 레이어에서 유효성 검사 디자인
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | 도메인 모델 유효성 검사의 주요 개념을 이해합니다.
 ms.date: 10/08/2018
-ms.openlocfilehash: 1d3196d2130df33969ed231bccfe0fc6f0af2ad8
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 98ccc5df84c9f6f402ecbee83b077c806d6a76fc
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674250"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75899674"
 ---
 # <a name="design-validations-in-the-domain-model-layer"></a>도메인 모델 레이어에서 유효성 검사 디자인
 
@@ -53,7 +53,7 @@ public void SetAddress(string line1, string line2,
 
 ### <a name="use-validation-attributes-in-the-model-based-on-data-annotations"></a>데이터 주석을 기반으로 하는 모델에서 유효성 검사 특성 사용
 
-필수 또는 MaxLength 특성과 같은 데이터 주석은 [테이블 매핑](infrastructure-persistence-layer-implemenation-entity-framework-core.md#table-mapping) 섹션에서 자세히 설명된 바와 같이 EF Core 데이터베이스 필드 속성을 구성하는 데 사용할 수 있지만, .NET Framework의 EF 4.x 이후 해온 것처럼 [EF Core에서 엔터티 유효성 검사를 위해 더 이상 작동하지 않습니다](https://github.com/aspnet/EntityFrameworkCore/issues/3680)(<xref:System.ComponentModel.DataAnnotations.IValidatableObject.Validate%2A?displayProperty=nameWithType> 메서드도 수행하지 않음).
+필수 또는 MaxLength 특성과 같은 데이터 주석은 [테이블 매핑](infrastructure-persistence-layer-implemenation-entity-framework-core.md#table-mapping) 섹션에서 자세히 설명된 바와 같이 EF Core 데이터베이스 필드 속성을 구성하는 데 사용할 수 있지만, .NET Framework의 EF 4.x 이후 해온 것처럼 [EF Core에서 엔터티 유효성 검사를 위해 더 이상 작동하지 않습니다](https://github.com/dotnet/efcore/issues/3680)(<xref:System.ComponentModel.DataAnnotations.IValidatableObject.Validate%2A?displayProperty=nameWithType> 메서드도 수행하지 않음).
 
 데이터 주석과 <xref:System.ComponentModel.DataAnnotations.IValidatableObject> 인터페이스는 일반적으로 컨트롤러의 작업을 호출하기 전 모델 바인딩 중에 모델 유효성 검사에 여전히 사용할 수 있지만, 해당 모델은 ViewModel 또는 DTO여야 하며 이는 도메인 모델 문제가 아닌 MVC 또는 API 관련 문제입니다.
 
@@ -61,7 +61,7 @@ public void SetAddress(string line1, string line2,
 
 DbContext의 SaveChanges 메서드를 재정의하여 데이터 주석 및 `IValidatableObject.Validate` 메서드를 사용하여 엔터티 클래스에 사용자 지정 유효성 검사를 구현할 수 있습니다.
 
-[GitHub에 대한 이 주석](https://github.com/aspnet/EntityFrameworkCore/issues/3680#issuecomment-155502539)에서 `IValidatableObject` 엔터티의 유효성 검사를 위한 샘플 구현을 볼 수 있습니다. 해당 샘플은 특성 기반 유효성 검사를 수행하지 않지만 동일한 재정의에서 리플렉션을 사용하여 쉽게 구현할 수 있어야 합니다.
+[GitHub에 대한 이 주석](https://github.com/dotnet/efcore/issues/3680#issuecomment-155502539)에서 `IValidatableObject` 엔터티의 유효성 검사를 위한 샘플 구현을 볼 수 있습니다. 해당 샘플은 특성 기반 유효성 검사를 수행하지 않지만 동일한 재정의에서 리플렉션을 사용하여 쉽게 구현할 수 있어야 합니다.
 
 그러나 DDD의 관점에서 도메인 모델은 엔터티의 동작 메서드에서 예외를 사용하거나 유효성 검사 규칙을 적용하도록 사양 및 알림 패턴을 구현하여 가장 잘 유지됩니다.
 

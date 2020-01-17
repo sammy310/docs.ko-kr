@@ -17,13 +17,12 @@ helpviewer_keywords:
 - strings [.NET Framework], regular expressions
 - parsing text with regular expressions, backtracking
 ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
-ms.custom: seodec18
-ms.openlocfilehash: 6504430f94f800bb9f41761ad64c65fefecb68d6
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: a11e3501aa57fc81a28d27d1280d299f99e1dea1
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73968255"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711521"
 ---
 # <a name="backtracking-in-regular-expressions"></a>정규식의 역행 검사
 역추적은 정규식 패턴에 선택적인 [수량자](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) 또는 [교체 구문](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)이 포함되어 있고 정규식 엔진이 일치 항목을 계속 검색하기 위해 이전에 저장한 상태로 되돌아갈 때 발생합니다. 역추적은 정규식 성능의 핵심입니다. 역추적을 사용하면 식의 성능과 유연성을 높일 수 있으며 매우 복잡한 패턴도 검색할 수 있습니다. 하지만 이러한 장점에는 단점이 수반됩니다. 역추적은 종종 정규식 엔진의 성능에 영향을 주는 가장 중요한 단일 요소입니다. 다행히도 개발자는 정규식 엔진의 동작과 역추적 사용 방식을 제어할 수 있습니다. 이 항목에서는 역추적의 작동 방식 및 역추적을 제어할 수 있는 방법에 대해 설명합니다.  
@@ -130,7 +129,7 @@ ms.locfileid: "73968255"
 ### <a name="lookbehind-assertions"></a>lookbehind 어설션  
  .NET에는 입력 문자열에서 이전 문자와 일치하는 두 가지 언어 요소인 `(?<=`*subexpression*`)` 및 `(?<!`*subexpression*`)`이 포함되어 있습니다. 두 언어 요소 모두 너비가 0인 어설션입니다. 즉, 진행 또는 역추적 없이 현재 문자 바로 앞에 있는 문자를 *subexpression*과 일치시킬 수 있는지 여부를 확인합니다.  
   
- `(?<=` *subexpression* `)` 은 긍정 lookbehind 어설션입니다. 즉, 현재 위치 바로 전의 문자가 *subexpression*과 일치해야 합니다. `(?<!`*subexpression*`)` 은 부정 lookbehind 어설션입니다. 즉, 현재 위치 바로 전의 문자가 *subexpression*과 일치하면 안 됩니다. 긍정 및 부정 lookbehind 어설션 모두 *subexpression* 이 이전 하위 식의 하위 집합일 때 가장 유용합니다.  
+ `(?<=` *subexpression* `)`은 긍정 lookbehind 어설션입니다. 즉, 현재 위치 바로 전의 문자가 *subexpression*과 일치해야 합니다. `(?<!`*subexpression*`)` 은 부정 lookbehind 어설션입니다. 즉, 현재 위치 바로 전의 문자가 *subexpression*과 일치하면 안 됩니다. 긍정 및 부정 lookbehind 어설션 모두 *subexpression* 이 이전 하위 식의 하위 집합일 때 가장 유용합니다.  
   
  다음 예제에서는 전자 메일 주소에서 사용자 이름의 유효성을 검사하는 두 개의 동일한 정규식 패턴이 사용됩니다. 첫 번째 패턴은 과도한 역추적으로 인해 성능이 크게 저하됩니다. 두 번째 패턴은 중첩된 수량자를 긍정 lookbehind 어설션으로 바꿔서 첫 번째 정규식을 수정합니다. 이 예의 결과에는 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> 메서드의 실행 시간이 표시됩니다.  
   
@@ -161,7 +160,7 @@ ms.locfileid: "73968255"
 ### <a name="lookahead-assertions"></a>lookahead 어설션  
  .NET에는 입력 문자열에서 다음 문자와 일치하는 두 가지 언어 요소인 `(?=`*subexpression*`)` 및 `(?!`*subexpression*`)`이 포함되어 있습니다. 두 언어 요소 모두 너비가 0인 어설션입니다. 즉, 진행 또는 역추적 없이 현재 문자 바로 뒤에 있는 문자를 *subexpression*과 일치시킬 수 있는지 여부를 확인합니다.  
   
- `(?=` *subexpression* `)` 은 긍정 lookahead 어설션입니다. 즉, 현재 위치 바로 뒤의 문자가 *subexpression*과 일치해야 합니다. `(?!`*subexpression*`)` 은 부정 lookahead 어설션입니다. 즉, 현재 위치 바로 뒤의 문자가 *subexpression*과 일치하면 안 됩니다. 긍정 및 부정 lookahead 어설션 모두 *subexpression* 이 다음 하위 식의 하위 집합인 경우 가장 유용합니다.  
+ `(?=` *subexpression* `)`은 긍정 lookahead 어설션입니다. 즉, 현재 위치 바로 뒤의 문자가 *subexpression*과 일치해야 합니다. `(?!`*subexpression*`)` 은 부정 lookahead 어설션입니다. 즉, 현재 위치 바로 뒤의 문자가 *subexpression*과 일치하면 안 됩니다. 긍정 및 부정 lookahead 어설션 모두 *subexpression* 이 다음 하위 식의 하위 집합인 경우 가장 유용합니다.  
   
  다음 예제에서는 정규화된 형식 이름의 유효성을 검사하는 두 개의 동일한 정규식 패턴이 사용됩니다. 첫 번째 패턴은 과도한 역추적으로 인해 성능이 크게 저하됩니다. 두 번째 패턴은 중첩된 수량자를 긍정 lookahead 어설션으로 바꿔서 첫 번째 정규식을 수정합니다. 이 예의 결과에는 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> 메서드의 실행 시간이 표시됩니다.  
   
@@ -189,7 +188,7 @@ ms.locfileid: "73968255"
 |`[A-Z]\w*`|0개 이상의 단어 문자로 이어지는 영문자를 찾습니다.|  
 |`$`|입력 문자열의 끝 부분에서 검색을 종료합니다.|  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [.NET 정규식](../../../docs/standard/base-types/regular-expressions.md)
 - [정규식 언어 - 빠른 참조](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)

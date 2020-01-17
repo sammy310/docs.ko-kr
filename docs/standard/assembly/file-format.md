@@ -2,16 +2,15 @@
 title: .NET 어셈블리 파일 형식
 description: .NET 앱 및 라이브러리를 설명하고 포함하는 데 사용되는 .NET 어셈블리 파일 형식에 대해 알아봅니다.
 author: richlander
-ms.author: mairaw
 ms.date: 08/20/2019
 ms.technology: dotnet-standard
 ms.assetid: 6520323e-ff28-4c8a-ba80-e64a413199e6
-ms.openlocfilehash: c9396c45e3c6cdbc9360485f6286a1746bf81fdd
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 4cf6522d66d7a1efccde45078768a773db6e6cb0
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70970162"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711586"
 ---
 # <a name="net-assembly-file-format"></a>.NET 어셈블리 파일 형식
 

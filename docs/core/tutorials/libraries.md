@@ -3,25 +3,24 @@ title: 플랫폼 간 도구로 라이브러리 개발
 description: .NET Core CLI 도구를 사용하여 .NET Core 라이브러리를 만드는 방법을 알아봅니다. 여러 프레임워크를 지원하는 라이브러리를 만듭니다.
 author: cartermp
 ms.date: 05/01/2017
-ms.custom: seodec18
-ms.openlocfilehash: dcd454f0bd1739597fc27dccf2849fc259767292
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 4132113037e6c5ec555d2d1859b8217a1a53d07f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73420467"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714022"
 ---
-# <a name="developing-libraries-with-cross-platform-tools"></a>플랫폼 간 도구로 라이브러리 개발
+# <a name="develop-libraries-with-cross-platform-tools"></a>플랫폼 간 도구로 라이브러리 개발
 
 이 문서에서는 플랫폼 간 CLI 도구를 사용하여 .NET용 라이브러리를 작성하는 방법을 다룹니다. CLI는 지원되는 운영 체제에서 작동하는 효율적인 하위 수준 환경을 제공합니다. Visual Studio로 라이브러리를 빌드할 수 있습니다. 그러한 환경을 선호하는 경우 [Visual Studio 설명서를 참조하세요](library-with-visual-studio.md).
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 컴퓨터에 [.NET Core SDK 및 CLI](https://dotnet.microsoft.com/download)를 설치해야 합니다.
 
 .NET Framework 버전을 다루는 이 문서의 섹션에서는 [.NET Framework](https://dotnet.microsoft.com)가 설치된 Windows 컴퓨터가 필요합니다.
 
-또한 이전 .NET Framework 대상을 지원하려는 경우 [.NET 다운로드 보관 페이지](https://dotnet.microsoft.com/download/archives)에서 이전 프레임워크 버전용 타기팅/개발자 팩을 설치해야 합니다. 다음 표를 참조하세요.
+또한 이전 .NET Framework 대상을 지원하려는 경우 [.NET 다운로드 보관 페이지](https://dotnet.microsoft.com/download/archives)에서 타기팅 팩 또는 개발자 팩을 설치해야 합니다. 다음 표를 참조하세요.
 
 | .NET Framework 버전 | 다운로드할 파일                                       |
 | ---------------------- | ------------------------------------------------------ |
@@ -35,9 +34,9 @@ ms.locfileid: "73420467"
 
 ## <a name="how-to-target-the-net-standard"></a>.NET 표준을 대상으로 지정하는 방법
 
-.NET 표준에 익숙하지 않은 경우 자세한 내용은 [.NET 표준](../../standard/net-standard.md)을 참조하세요.
+.NET Standard에 익숙하지 않은 경우 자세한 내용은 [.NET Standard](../../standard/net-standard.md)를 참조하세요.
 
-이 문서에는 .NET 표준을 다양한 구현에 매핑하는 표가 있습니다.
+이 문서에는 .NET Standard를 다양한 구현에 매핑하는 표가 있습니다.
 
 [!INCLUDE [net-standard-table](../../../includes/net-standard-table.md)]
 
@@ -45,9 +44,9 @@ ms.locfileid: "73420467"
 
 선택한 .NET Standard 버전에 따라 최신 API에 대한 액세스와 .NET 구현 및 .NET Standard 버전을 대상으로 지정할 수 있는 기능 간에 균형을 유지하게 됩니다. `netstandardX.X`(여기서 `X.X`는 버전 번호임) 버전을 선택하고 프로젝트 파일(`.csproj` 또는 `.fsproj`)에 추가하여 대상 지정이 가능한 플랫폼과 버전의 범위를 제어합니다.
 
-.NET 표준을 대상으로 할 때 요구에 따라 세 가지 기본 옵션이 있습니다.
+.NET Standard를 대상으로 할 때 요구에 따라 세 가지 기본 옵션이 있습니다.
 
-1. 템플릿에서 제공하는 기본 버전의 .NET 표준(`netstandard1.4`)을 사용할 수 있습니다. 이 버전을 통해 UWP, .NET Framework 4.6.1 및 예정된 .NET 표준 2.0과 호환성을 유지하면서 .NET 표준에 있는 대부분의 API에 액세스할 수 있습니다.
+1. 템플릿에서 제공하는 기본 버전의 .NET Standard(`netstandard1.4`)를 사용할 수 있습니다. 이 버전을 통해 UWP, .NET Framework 4.6.1 및 .NET Standard 2.0과 호환성을 유지하면서 .NET Standard에 있는 대부분의 API에 액세스할 수 있습니다.
 
     ```xml
     <Project Sdk="Microsoft.NET.Sdk">
@@ -57,20 +56,20 @@ ms.locfileid: "73420467"
     </Project>
     ```
 
-2. 프로젝트 파일의 `TargetFramework` 노드에 있는 값을 수정하여 하위 또는 상위 버전의 .NET 표준을 사용할 수 있습니다.
+2. 프로젝트 파일의 `TargetFramework` 노드에 있는 값을 수정하여 하위 또는 상위 버전의 .NET Standard를 사용할 수 있습니다.
 
-    .NET 표준 버전은 이전 버전과 호환됩니다. 즉, `netstandard1.0` 라이브러리는 `netstandard1.1` 플랫폼 이상에서 실행됩니다. 그러나 이후 버전과는 호환되지 않습니다. 더 낮은 .NET 표준 플랫폼은 더 높은 버전을 참조할 수 없습니다. 즉, `netstandard1.0` 라이브러리는 `netstandard1.1` 이상을 대상으로 하는 라이브러리를 참조할 수 없습니다. 요구에 맞게 API와 플랫폼 지원이 올바르게 혼합된 표준 버전을 선택하세요. 지금은 `netstandard1.4`를 사용하는 것이 좋습니다.
+    .NET 표준 버전은 이전 버전과 호환됩니다. 즉, `netstandard1.0` 라이브러리는 `netstandard1.1` 플랫폼 이상에서 실행됩니다. 그러나 이후 버전과는 호환되지 않습니다. 이전 버전의 .NET Standard 플랫폼은 이후 버전의 플랫폼을 참조할 수 없습니다. 즉, `netstandard1.0` 라이브러리는 `netstandard1.1` 이상을 대상으로 하는 라이브러리를 참조할 수 없습니다. 요구에 맞게 API와 플랫폼 지원이 올바르게 혼합된 표준 버전을 선택하세요. 지금은 `netstandard1.4`를 사용하는 것이 좋습니다.
 
-3. .NET Framework 버전 4.0 이하를 대상으로 하거나 .NET Framework에서는 사용 가능하지만 .NET 표준에서는 사용할 수 없는 API를 사용하려는 경우(예: `System.Drawing`) 다음 섹션을 읽어보고 멀티 타기팅 방법을 알아보세요.
+3. .NET Framework 버전 4.0 이하를 대상으로 하거나 .NET Framework에서는 사용 가능하지만 .NET Standard에서는 사용할 수 없는 API를 사용하려는 경우(예: `System.Drawing`) 다음 섹션을 읽어보고 멀티 타기팅 방법을 알아보세요.
 
-## <a name="how-to-target-the-net-framework"></a>.NET Framework를 대상으로 지정하는 방법
+## <a name="how-to-target-net-framework"></a>.NET Framework를 대상으로 지정하는 방법
 
 > [!NOTE]
 > 다음 지침은 컴퓨터에 .NET Framework가 설치된 것으로 가정합니다. 설치된 종속성을 알아보려면 [필수 조건](#prerequisites)을 참조하세요.
 
 여기서 사용된 .NET Framework 버전 중 일부는 더 이상 지원되지 않습니다. 지원되지 않는 버전은 [.NET Framework Support Lifecycle Policy FAQ(.NET Framework 지원 수명 주기 정책 FAQ)](https://support.microsoft.com/gp/framework_faq/en-us)를 참조하세요.
 
-가장 많은 수의 개발자 및 프로젝트에 도달하려면 기준 대상으로 .NET Framework 4.0을 사용합니다. .NET Framework를 대상으로 하려면 지원할 .NET Framework 버전에 해당하는 올바른 TFM(Target Framework Moniker)을 사용하여 시작해야 합니다.
+가장 많은 수의 개발자 및 프로젝트에 도달하려면 기준 대상으로 .NET Framework 4.0을 사용합니다. .NET Framework를 대상으로 하려면 지원할 .NET Framework 버전에 해당하는 올바른 TFM(대상 프레임워크 모니커)을 사용하여 시작해야 합니다.
 
 | .NET Framework 버전 | TFM      |
 | ---------------------- | -------- |
@@ -87,7 +86,7 @@ ms.locfileid: "73420467"
 | .NET Framework 4.7     | `net47`  |
 | .NET Framework 4.8     | `net48`  |
 
-그런 다음 이 TFM을 프로젝트 파일의 `TargetFramework` 섹션에 삽입합니다. 예를 들어 .NET Framework 4.0을 대상으로 하는 라이브러리의 작성 방법을 같습니다.
+그런 다음 이 TFM을 프로젝트 파일의 `TargetFramework` 섹션에 삽입합니다. 예를 들어 .NET Framework 4.0을 대상으로 하는 라이브러리의 작성 방법은 다음과 같습니다.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -269,7 +268,7 @@ netstandard1.4/
 
 더 큰 라이브러리의 경우 일반적으로 서로 다른 프로젝트에 기능을 배치해야 합니다.
 
-자연스러운 C# 및 F#에 사용할 수 있는 라이브러리를 빌드하려 한다고 가정해 보겠습니다. 즉, 라이브러리의 소비자가 C# 및 F#에 자연스러운 방식으로 라이브러리를 사용한다는 의미입니다. 예를 들어 C#에서 다음과 같이 라이브러리를 사용할 수 있습니다.
+자연스러운 C# 및 F#에 사용할 수 있는 라이브러리를 빌드하려 한다고 가정해 보겠습니다. 다시 말해 라이브러리의 소비자가 C# 및 F#에 자연스러운 방식으로 라이브러리를 사용합니다. 예를 들어 C#에서 다음과 같이 라이브러리를 사용할 수 있습니다.
 
 ```csharp
 using AwesomeLibrary.CSharp;
@@ -308,7 +307,7 @@ mkdir AwesomeLibrary.Core && cd AwesomeLibrary.Core && dotnet new classlib
 cd ..
 mkdir AwesomeLibrary.CSharp && cd AwesomeLibrary.CSharp && dotnet new classlib
 cd ..
-mkdir AwesomeLibrary.FSharp && cd AwesomeLibrary.FSharp && dotnet new classlib -lang F#
+mkdir AwesomeLibrary.FSharp && cd AwesomeLibrary.FSharp && dotnet new classlib -lang "F#"
 cd ..
 dotnet sln add AwesomeLibrary.Core/AwesomeLibrary.Core.csproj
 dotnet sln add AwesomeLibrary.CSharp/AwesomeLibrary.CSharp.csproj

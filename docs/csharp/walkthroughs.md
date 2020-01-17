@@ -6,12 +6,12 @@ helpviewer_keywords:
 - walkthroughs [Visual Studio], Visual C#
 - Visual C#, walkthroughs
 ms.assetid: 2d07b972-ef69-4676-9aef-e1784728e1ff
-ms.openlocfilehash: a997cc62b03a0d92d5ef76173981f5a9e287b13a
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 11a58ddf246c77cf4372e940b184413054b10778
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204599"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75634926"
 ---
 # <a name="c-walkthroughs"></a>C# 연습
 연습에서는 일반 시나리오에 대한 단계별 지침을 제공하므로 제품 또는 특정 기능 영역 파악을 효율적으로 시작할 수 있습니다.  
@@ -48,7 +48,7 @@ ms.locfileid: "74204599"
  `TabControl`에서 탭 추가/제거, 부모 항목에 컨트롤 도킹, `SplitContainer` 컨트롤 방향 변경 등 일반적으로 수행하는 몇 가지 작업을 보여 줍니다.  
   
  [C#에서 쿼리 작성(LINQ)](./programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
- [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리 식을 작성하는 데 사용되는 C# 언어 기능을 보여 줍니다.  
+ LINQ 쿼리 식을 작성하는 데 사용되는 C# 언어 기능을 보여 줍니다.  
   
  [데이터 조작(C#)(LINQ to SQL)](../framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)  
  데이터베이스에서 데이터를 추가/수정/삭제하는 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 시나리오에 대해 설명합니다.  
@@ -69,7 +69,7 @@ ms.locfileid: "74204599"
  [배포 샘플 및 연습](/visualstudio/deployment/clickonce-deployment-samples-and-walkthroughs)  
  일반적인 배포 시나리오의 단계별 예제를 제공합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 프로그래밍 가이드](./programming-guide/index.md)
 - [Visual Studio 샘플](/visualstudio/ide/visual-studio-ide)

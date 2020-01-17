@@ -1,6 +1,5 @@
 ---
 title: yield 상황별 키워드 - C# 참조
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - yield
@@ -8,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - yield keyword [C#]
 ms.assetid: 1089194f-9e53-46a2-8642-53ccbe9d414d
-ms.openlocfilehash: 0d2c3f67715b9b2161a6c908576ac9f964ff13d6
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: e3c9e37e7b543eaddae837a85604c4ba91fbc744
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363120"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712782"
 ---
 # <a name="yield-c-reference"></a>yield(C# 참조)
 
-문에 `yield` [상황별 키워드](index.md#contextual-keywords)를 사용하는 경우 해당 메서드, 연산자, 또는 이 키워드가 나타나는 `get` 접근자가 반복기임을 나타냅니다. `yield`를 사용하여 반복기를 정의할 경우 사용자 지정 컬렉션 형식에 <xref:System.Collections.Generic.IEnumerator%601> 및 <xref:System.Collections.IEnumerable> 패턴을 구현하면 명시적 추가 클래스(열거형의 상태를 보관하는 클래스, 예제는 <xref:System.Collections.IEnumerator> 참조)를 사용하지 않아도 됩니다.
+문에 `yield` [상황별 키워드](index.md#contextual-keywords)를 사용하는 경우 해당 메서드, 연산자 또는 이 키워드가 나타나는 `get` 접근자가 반복기임을 나타냅니다. `yield`를 사용하여 반복기를 정의할 경우 사용자 지정 컬렉션 형식에 <xref:System.Collections.Generic.IEnumerator%601> 및 <xref:System.Collections.IEnumerable> 패턴을 구현하면 명시적 추가 클래스(열거형의 상태를 보관하는 클래스, 예제는 <xref:System.Collections.IEnumerator> 참조)를 사용하지 않아도 됩니다.
 
 다음 예제에서는 두 가지 형태의 `yield` 문을 보여줍니다.
 
@@ -78,7 +77,7 @@ foreach (string element in elements)
 
 이후에 `foreach` 루프가 반복될 때마다 중지되었던 위치에서 반복기 본문 실행이 계속되고 `yield return` 문에 도달하면 다시 중지됩니다. `foreach` 루프는 반복기 메서드가 종료되거나 `yield break` 문에 도달하면 완료됩니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 다음 예제에는 `yield return` 루프 내에 `for` 문이 있습니다. `Main` 메서드에서 `foreach` 문의 본문을 반복할 때마다 `Power` 반복기 함수에 대한 호출이 생성됩니다. 반복기 함수를 호출할 때마다 다음에 `yield return` 루프를 반복하는 도중에 `for` 문이 실행됩니다.
 
@@ -86,7 +85,7 @@ foreach (string element in elements)
 
 [!code-csharp[csrefKeywordsContextual#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsContextual/CS/csrefKeywordsContextual.cs#5)]
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 다음 예제는 반복기인 `get` 접근자에 대해 설명합니다. 이 예제에서는 각 `yield return` 문이 사용자 정의 클래스의 인스턴스를 반환합니다.
 
@@ -96,7 +95,7 @@ foreach (string element in elements)
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 참조](../../language-reference/index.md)
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)

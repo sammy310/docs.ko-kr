@@ -1,23 +1,20 @@
 ---
 title: stackalloc 연산자 - C# 참조
-ms.custom: seodec18
 ms.date: 09/20/2019
 f1_keywords:
 - stackalloc_CSharpKeyword
 helpviewer_keywords:
 - stackalloc operator [C#]
-ms.openlocfilehash: 82fc1649bac66c0e934db13c50390b977432c34c
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 5654cae622cd94c8dad7e58fbc8a99fcf48391a9
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73036139"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712626"
 ---
 # <a name="stackalloc-operator-c-reference"></a>stackalloc 연산자(C# 참조)
 
 `stackalloc` 연산자는 스택의 메모리 블록을 할당합니다. 메서드 실행 중에 생성된 스택 할당 메모리 블록은 해당 메서드가 반환될 때 자동으로 삭제됩니다. `stackalloc` 연산자를 사용하여 할당된 메모리는 명시적으로 해제할 수 없습니다. 스택 할당 메모리 블록에는 [가비지 수집](../../../standard/garbage-collection/index.md)이 적용되지 않으며, [`fixed` 문](../keywords/fixed-statement.md)을 사용해서 고정하지 않아도 됩니다.
-
-`stackalloc T[E]` 식에서 `T`는 [비관리형 형식](../builtin-types/unmanaged-types.md)이어야 하고 `E`는 `int` 형식의 식이어야 합니다.
 
 `stackalloc` 연산자의 결과를 다음 형식 중 하나의 변수에 할당할 수 있습니다.
 
@@ -50,15 +47,17 @@ ms.locfileid: "73036139"
 
 [!code-csharp[stackalloc initialization](~/samples/csharp/language-reference/operators/StackallocOperator.cs#StackallocInit)]
 
+`stackalloc T[E]` 식에서 `T`는 [비관리형 형식](../builtin-types/unmanaged-types.md)이어야 하고 `E`는 [int](../builtin-types/integral-numeric-types.md) 형식의 식이어야 합니다.
+
 ## <a name="security"></a>보안
 
 `stackalloc`를 사용하면 CLR(공용 언어 런타임)에서 버퍼 오버런 검색 기능이 자동으로 사용됩니다. 버퍼 오버런이 검색되면 악성 코드가 실행될 가능성을 최소화하기 위해 최대한 빨리 프로세스가 종료됩니다.
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 
-자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [스택 할당](~/_csharplang/spec/unsafe-code.md#stack-allocation) 섹션을 참조하세요.
+자세한 내용은 [C# 언어 사양](~/_csharplang/spec/unsafe-code.md#stack-allocation)의 [스택 할당](~/_csharplang/spec/introduction.md) 섹션과 중첩 컨텍스트[기능 제안 노트의 `stackalloc`허용](~/_csharplang/proposals/csharp-8.0/nested-stackalloc.md)을 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 참조](../index.md)
 - [C# 연산자](index.md)

@@ -1,6 +1,5 @@
 ---
 title: join 절 - C# 참조
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - join
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - join clause [C#]
 - join keyword [C#]
 ms.assetid: 76e9df84-092c-41a6-9537-c3f1cbd7f0fb
-ms.openlocfilehash: 21d4d1f9878fb7df4692fdeacd23b042680c14f1
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 8e52e9db241392b67818b7316767dd97bd38432a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633617"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713399"
 ---
 # <a name="join-clause-c-reference"></a>join 절(C# 참조)
 
@@ -56,7 +55,7 @@ ms.locfileid: "65633617"
 
 ## <a name="left-outer-join"></a>왼쪽 우선 외부 조인
 
-왼쪽 우선 외부 조인에서는 오른쪽 시퀀스에 일치하는 요소가 없는 경우에도 왼쪽 소스 시퀀스의 모든 요소가 반환됩니다. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]에서 왼쪽 우선 외부 조인을 수행하려면 그룹 조인과 함께 `DefaultIfEmpty` 메서드를 사용하여 왼쪽 요소에 일치하는 요소가 없을 경우 생성할 기본 오른쪽 요소를 지정합니다. `null`을 모든 참조 형식의 기본값으로 사용하거나 사용자 정의 기본 형식을 지정할 수 있습니다. 다음 예제에서는 사용자 정의 기본 형식을 보여 줍니다.
+왼쪽 우선 외부 조인에서는 오른쪽 시퀀스에 일치하는 요소가 없는 경우에도 왼쪽 소스 시퀀스의 모든 요소가 반환됩니다. LINQ에서 왼쪽 우선 외부 조인을 수행하려면 그룹 조인과 함께 `DefaultIfEmpty` 메서드를 사용하여 왼쪽 요소에 일치하는 요소가 없을 경우 생성할 기본 오른쪽 요소를 지정합니다. `null`을 모든 참조 형식의 기본값으로 사용하거나 사용자 정의 기본 형식을 지정할 수 있습니다. 다음 예제에서는 사용자 정의 기본 형식을 보여 줍니다.
 
 [!code-csharp[cscsrefQueryKeywords#27](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Join.cs#27)]
 
@@ -72,7 +71,7 @@ ms.locfileid: "65633617"
 
 ## <a name="joins-on-object-collections-vs-relational-tables"></a>개체 컬렉션 및 관계형 테이블에서 조인
 
-[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리 식에서 조인 작업은 개체 컬렉션에서 수행됩니다. 개체 컬렉션은 두 개의 관계형 테이블과 정확히 동일한 방식으로 "조인"할 수 없습니다. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]에서는 두 소스 시퀀스가 관계로 연결되지 않는 경우에만 명시적 `join` 절이 필요합니다. [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]로 작업할 때 외래 키 테이블은 기본 테이블의 속성으로 개체 모델에 표시됩니다. 예를 들어 Northwind 데이터베이스에서 Customer 테이블은 Orders 테이블과 외래 키 관계가 있습니다. 테이블을 개체 모델에 매핑하면 Customer 클래스는 해당 Customer와 연결된 Orders 컬렉션을 포함하는 Orders 속성을 갖습니다. 사실상 조인은 이미 수행된 것입니다.
+LINQ 쿼리 식에서 조인 작업은 개체 컬렉션에서 수행됩니다. 개체 컬렉션은 두 개의 관계형 테이블과 정확히 동일한 방식으로 "조인"할 수 없습니다. LINQ에서는 두 소스 시퀀스가 관계로 연결되지 않는 경우에만 명시적 `join` 절이 필요합니다. [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]로 작업할 때 외래 키 테이블은 기본 테이블의 속성으로 개체 모델에 표시됩니다. 예를 들어 Northwind 데이터베이스에서 Customer 테이블은 Orders 테이블과 외래 키 관계가 있습니다. 테이블을 개체 모델에 매핑하면 Customer 클래스는 해당 Customer와 연결된 Orders 컬렉션을 포함하는 Orders 속성을 갖습니다. 사실상 조인은 이미 수행된 것입니다.
 
 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 컨텍스트에서 관련 테이블을 쿼리하는 방법에 대한 자세한 내용은 [방법: 데이터베이스 관계 매핑](../../../framework/data/adonet/sql/linq/how-to-map-database-relationships.md)을 참조하세요.
 
@@ -86,11 +85,11 @@ ms.locfileid: "65633617"
 
 [!code-csharp[cscsrefQueryKeywords#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Join.cs#23)]
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 뒤에 `into`가 오지 않는 `join` 절은 <xref:System.Linq.Enumerable.Join%2A> 메서드 호출로 변환됩니다. 뒤에 `into`가 오는 `join` 절은 <xref:System.Linq.Enumerable.GroupJoin%2A> 메서드 호출로 변환됩니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [쿼리 키워드(LINQ)](query-keywords.md)
 - [LINQ(Language-Integrated Query)](../../linq/index.md)

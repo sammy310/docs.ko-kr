@@ -1,6 +1,5 @@
 ---
 title: 숫자 결과 형식 지정 표 - C# 참조
-ms.custom: seodec18
 description: C# 표준 숫자 형식 문자열에 대한 자세한 정보
 ms.date: 09/20/2018
 helpviewer_keywords:
@@ -8,12 +7,12 @@ helpviewer_keywords:
 - numeric formatting [C#]
 - String.Format method
 ms.assetid: 120ba537-4448-4c62-8676-7a8fdd98f496
-ms.openlocfilehash: 2cba5e704787ae6368b2543c985babf2fde3b4dd
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: eb93f0a4f3c66e9f7b295366a77b9fb099fc3a1e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422750"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713504"
 ---
 # <a name="formatting-numeric-results-table-c-reference"></a>숫자 결과 형식 지정 표(C# 참조)
 
@@ -21,7 +20,7 @@ ms.locfileid: "73422750"
 
 |형식 지정자|설명|예|결과|  
 |----------------------|-----------------|--------------|------------|  
-|C 또는 c|통화|`string s = $"{2.5:C}";`<br /><br /> `string s = $"{-2.5:C}";`|$2.50<br /><br /> ($2.50)|  
+|C 또는 c|통화|`string s = $"{2.5:C}";`<br /><br /> `string s = $"{-2.5:C}";`|\\$2.50<br /><br /> (\\$2.50)|  
 |D 또는 d|Decimal|`string s = $"{25:D5}";`|00025|  
 |E 또는 e|지수|`string s = $"{250000:E2}";`|2.50E+005|  
 |F 또는 f|고정 소수점|`string s = $"{2.5:F2}";`<br /><br /> `string s = $"{2.5:F0}";`|2.50<br /><br /> 3|  
@@ -50,7 +49,7 @@ ms.locfileid: "73422750"
 
 자세한 내용은 [표준 숫자 형식 문자열](../../../standard/base-types/standard-numeric-format-strings.md)을 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 참조](../index.md)
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)

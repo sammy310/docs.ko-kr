@@ -5,14 +5,12 @@ helpviewer_keywords:
 - strong-named assemblies, about strong-named assemblies
 - assemblies [.NET Framework], strong-named
 ms.assetid: d4a80263-f3e0-4d81-9b61-f0cbeae3797b
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 67beeba6ce33fb1a8c3d02337d98282ccf30341a
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 12b8df3195b2708e4556d4f8065227054db9eb14
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991301"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711573"
 ---
 # <a name="strong-named-assemblies"></a>강력한 이름의 어셈블리
 
@@ -45,7 +43,7 @@ Visual Studio나 명령줄 도구를 사용하여 강력한 이름의 어셈블�
 
 강력한 이름의 어셈블리가 제공하는 ID 이점을 원하는 오픈 소스 개발자의 경우 어셈블리와 연관된 프라이빗 키를 소스 제어 시스템에 체크 인할 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [전역 어셈블리 캐시](../../framework/app-domains/gac.md)
 - [방법: 강력한 이름으로 어셈블리 서명](sign-strong-name.md)

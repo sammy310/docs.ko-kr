@@ -3,13 +3,12 @@ title: .NET Core 배포 패키징
 description: 배포를 위해 .NET Core를 패키지하고 이름과 버전을 지정하는 방법에 관해 알아봅니다.
 author: tmds
 ms.date: 10/09/2019
-ms.custom: seodec18
-ms.openlocfilehash: 715eb944c3e7626696f64e63b874e2f77595cf46
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: cfd6003cfac5c00fc06ebc6195eccd55a0d7afe7
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72393591"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740931"
 ---
 # <a name="net-core-distribution-packaging"></a>.NET Core 배포 패키징
 
@@ -84,7 +83,7 @@ ms.locfileid: "72393591"
 
 - (8) **LICENSE.txt,ThirdPartyNotices.txt**는 각각 .NET Core에서 사용되는 .NET Core 라이선스 및 타사 라이브러리의 라이선스입니다.
 
-- (9, 10) **dotnet.1.gz, dotnet**`dotnet.1.gz`은 dotnet 설명서 페이지입니다. `dotnet`은 dotnet 호스트(1)의 symlink입니다. 이러한 파일은 시스템 통합을 위해 잘 알려진 위치에 설치됩니다.
+- (9, 10) **dotnet.1.gz, dotnet** `dotnet.1.gz`은 dotnet 설명서 페이지입니다. `dotnet`은 dotnet 호스트(1)의 symlink입니다. 이러한 파일은 시스템 통합을 위해 잘 알려진 위치에 설치됩니다.
 
 - (11,12) **Microsoft.NETCore.App.Ref,Microsoft.AspNetCore.App.Ref**는 .NET Core 및 ASP.NET Core의 `x.y` 버전의 API를 각각 설명합니다. 이러한 팩은 이러한 대상 버전에 대해 컴파일할 때 사용됩니다.
 
@@ -126,7 +125,7 @@ SDK 버전은 동일한 `[major].[minor]`를 사용하고, SDK의 기능 및 패
 - `dotnet-runtime-deps-[major].[minor]` _(선택 사항)_ - 자체 포함 애플리케이션을 실행하기 위한 종속성을 설치합니다.
   - **버전:** \<런타임 버전>
   - **예:** dotnet-runtime-deps-2.1
-  - **종속성:** _배포판 특정 종속성_
+  - **종속성:** _배포 관련 종속성_
 
 - `dotnet-runtime-[major].[minor]` - 특정 런타임을 설치합니다.
   - **버전:** \<런타임 버전>

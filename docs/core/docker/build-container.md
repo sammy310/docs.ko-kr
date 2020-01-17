@@ -1,15 +1,15 @@
 ---
 title: Docker를 사용하여 앱 컨테이너화 자습서
 description: 이 자습서에서는 Docker를 사용하여 .NET Core 애플리케이션을 컨테이너화하는 방법을 알아봅니다.
-ms.date: 06/26/2019
+ms.date: 01/09/2020
 ms.topic: tutorial
-ms.custom: mvc, seodec18
-ms.openlocfilehash: b344731c7d356f3705d9909b6901234f91ec7d6d
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.custom: mvc
+ms.openlocfilehash: 17d3dfbe58770b19a75be1dad3ae03406584992c
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72521879"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900108"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>자습서: .NET Core 앱 컨테이너화
 
@@ -26,30 +26,19 @@ ms.locfileid: "72521879"
 
 .NET Core 애플리케이션용 Docker 컨테이너 빌드 및 배포 작업을 알아봅니다. Docker 플랫폼은 Docker 엔진을 사용하여 Docker 이미지로 앱을 신속하게 빌드하고 패키지합니다.    이 이미지는 계층화된 컨테이너에서 배포되고 실행되도록 *Dockerfile* 형식으로 작성됩니다.
 
-## <a name="prerequisites"></a>전제 조건
+> [!TIP]
+> 기존 ASP.NET Core 애플리케이션으로 작업하는 경우 [ASP.NET Core 애플리케이션을 컨테이너화하는 방법 알아보기](/aspnet/core/host-and-deploy/docker/building-net-docker-images) 자습서를 참조하세요.
+
+## <a name="prerequisites"></a>사전 요구 사항
 
 다음 필수 구성 요소를 설치합니다.
 
-- [.NET Core 2.2 SDK](https://dotnet.microsoft.com/download)\
+- [.NET Core 3.1 SDK](https://dotnet.microsoft.com/download)\
 .NET Core가 설치되어 있는 경우 `dotnet --info` 명령을 사용하여 사용 중인 SDK를 확인합니다.
 
 - [Docker Community Edition](https://www.docker.com/products/docker-desktop)
 
-- *Dockerfile* 및 .NET Core 예제 앱의 임시 작업 폴더입니다. 이 자습서에서는 이름 `docker-working`이 작업 폴더로 사용됩니다.
-
-### <a name="use-sdk-version-22"></a>SDK 버전 2.2 사용
-
-3\.0 같은 최신 SDK를 사용하는 경우 앱에서 2.2 SDK를 사용해야 하는지 확인합니다. 작업 폴더에 *global.json*이라는 파일을 만들고 다음 JSON 코드를 붙여넣습니다.
-
-```json
-{
-  "sdk": {
-    "version": "2.2.100"
-  }
-}
-```
-
-이 파일을 저장합니다. 파일이 존재하면 .NET Core에서는 이 폴더 및 아래에서 호출된 모든 `dotnet` 명령에 버전 2.2를 사용해야 합니다.
+- *Dockerfile* 및 .NET Core 예제 앱의 임시 작업 폴더입니다. 이 자습서에서는 이름 *docker-working*이 작업 폴더로 사용됩니다.
 
 ## <a name="create-net-core-app"></a>.NET Core 앱 만들기
 
@@ -63,7 +52,6 @@ dotnet new console -o app -n myapp
 
 ```
 docker-working
-│   global.json
 │
 └───app
     │   myapp.csproj
@@ -71,6 +59,7 @@ docker-working
     │
     └───obj
             myapp.csproj.nuget.cache
+            myapp.csproj.nuget.dgspec.json
             myapp.csproj.nuget.g.props
             myapp.csproj.nuget.g.targets
             project.assets.json
@@ -150,45 +139,56 @@ Docker 이미지에 .NET Core 앱을 추가하기 전에 해당 앱을 게시합
 dotnet publish -c Release
 ```
 
-이 명령은 앱을 *publish* 폴더로 컴파일합니다. 작업 폴더에서 *publish* 폴더의 경로는 `.\app\bin\Release\netcoreapp2.2\publish\`이어야 합니다.
+이 명령은 앱을 *publish* 폴더로 컴파일합니다. 작업 폴더에서 *publish* 폴더의 경로는 `.\app\bin\Release\netcoreapp3.1\publish\`이어야 합니다.
 
-publish 폴더의 디렉터리 목록을 가져오고 *myapp.dll*이 생성되었는지 확인합니다. *app* 폴더에서 다음 명령 중 하나를 실행합니다.
+*app* 폴더에서 publish 폴더의 디렉터리 목록을 가져오고 *myapp.dll*이 생성되었는지 확인합니다. 
 
 ```console
-> dir bin\Release\netcoreapp2.2\publish
- Directory of C:\docker-working\app\bin\Release\netcoreapp2.2\publish
+> dir bin\Release\netcoreapp3.1\publish
 
-04/05/2019  11:00 AM    <DIR>          .
-04/05/2019  11:00 AM    <DIR>          ..
-04/05/2019  11:00 AM               447 myapp.deps.json
-04/05/2019  11:00 AM             4,608 myapp.dll
-04/05/2019  11:00 AM               448 myapp.pdb
-04/05/2019  11:00 AM               154 myapp.runtimeconfig.json
+    Directory:  C:\docker-working\app\bin\Release\netcoreapp3.1\publish
+
+01/09/2020  11:41 AM    <DIR>          .
+01/09/2020  11:41 AM    <DIR>          ..
+01/09/2020  11:41 AM               407 myapp.deps.json
+01/09/2020  12:15 PM             4,608 myapp.dll
+01/09/2020  12:15 PM           169,984 myapp.exe
+01/09/2020  12:15 PM               736 myapp.pdb
+01/09/2020  11:41 AM               154 myapp.runtimeconfig.json
 ```
 
+Linux 또는 macOS를 사용하는 경우 `ls` 명령을 사용하여 디렉터리 목록을 가져오고 *myapp.dll* 파일이 만들어졌는지 확인합니다.
+
 ```bash
-me@DESKTOP:/docker-working/app$ ls bin/Release/netcoreapp2.2/publish
+me@DESKTOP:/docker-working/app$ ls bin/Release/netcoreapp3.1/publish
 myapp.deps.json  myapp.dll  myapp.pdb  myapp.runtimeconfig.json
 ```
 
 ## <a name="create-the-dockerfile"></a>Dockerfile 만들기
 
-*Dockerfile* 파일은 `docker build` 명령에서 컨테이너 이미지를 만드는 데 사용됩니다. 이 파일은 확장명이 없는 *Dockerfile*이라는 일반 텍스트 파일입니다.
+*Dockerfile* 파일은 `docker build` 명령에서 컨테이너 이미지를 만드는 데 사용됩니다. 이 파일은 확장명이 없는 *Dockerfile*이라는 텍스트 파일입니다.
 
-터미널에서 시작 시에 생성한 작업 폴더로 디렉터리를 위쪽으로 이동합니다. 작업 폴더에 *Dockerfile*이라는 파일을 만들고 텍스트 편집기에서 엽니다. 다음 명령을 파일의 첫 줄로 추가합니다.
+터미널에서 시작 시에 생성한 작업 폴더로 디렉터리를 위쪽으로 이동합니다. 작업 폴더에 *Dockerfile*이라는 파일을 만들고 텍스트 편집기에서 엽니다. 컨테이너화하는 애플리케이션의 유형에 따라 ASP.NET Core 런타임 또는 .NET Core 런타임 중 하나를 선택합니다. 확실하지 않은 경우 .NET Core 런타임을 포함하는 ASP.NET Core 런타임을 선택합니다. 이 자습서에서는 ASP.NET Core 런타임 이미지를 사용하지만 이전 섹션에서 만든 애플리케이션은 .NET Core 애플리케이션입니다.
 
-```dockerfile
-FROM mcr.microsoft.com/dotnet/core/runtime:2.2
-```
+- ASP.NET Core 런타임
 
-`FROM` 명령은 **mcr.microsoft.com/dotnet/core/runtime** 리포지토리에서 **2.2** 태그가 지정된 이미지를 풀하도록 Docker에 지시합니다. SDK에서 대상으로 지정된 런타임과 일치하는 .NET Core 런타임을 풀해야 합니다. 예를 들어 이전 섹션에서 만든 앱은 .NET Core 2.2 SDK를 사용하고 .NET Core 2.2를 대상으로 하는 앱을 만들었습니다. 따라서 *Dockerfile*에서 참조되는 기본 이미지에는 **2.2** 태그가 지정됩니다.
+  ```dockerfile
+  FROM mcr.microsoft.com/dotnet/core/aspnet:3.1
+  ```
+
+- .NET Core 런타임
+
+  ```dockerfile
+  FROM mcr.microsoft.com/dotnet/core/runtime:3.1
+  ```
+
+`FROM` 명령은 지정된 리포지토리에서 **3.1** 태그가 지정된 이미지를 풀하도록 Docker에 지시합니다. SDK에서 대상으로 지정된 런타임과 일치하는 런타임 버전을 풀해야 합니다. 예를 들어 이전 섹션에서 만든 앱은 .NET Core 3.1 SDK를 사용하 고 *Dockerfile*에서 참조하는 기본 이미지에 **3.1** 태그가 지정됩니다.
 
 *Dockerfile* 파일을 저장합니다. 작업 폴더의 디렉터리 구조는 다음과 같이 표시됩니다. 문서에서 공간을 절약하기 위해 더 깊은 수준의 파일과 폴더의 일부가 잘렸습니다.
 
 ```
 docker-working
 │   Dockerfile
-│   global.json
 │
 └───app
     │   myapp.csproj
@@ -196,9 +196,10 @@ docker-working
     │
     ├───bin
     │   └───Release
-    │       └───netcoreapp2.2
+    │       └───netcoreapp3.1
     │           └───publish
     │                   myapp.deps.json
+    │                   myapp.exe
     │                   myapp.dll
     │                   myapp.pdb
     │                   myapp.runtimeconfig.json
@@ -217,14 +218,14 @@ Docker가 *Dockerfile*에서 각 줄을 처리합니다. `docker build` 명령�
 ```console
 > docker images
 REPOSITORY                              TAG                 IMAGE ID            CREATED             SIZE
-mcr.microsoft.com/dotnet/core/runtime   2.2                 d51bb4452469        2 days ago          314MB
-myimage                                 latest              d51bb4452469        2 days ago          314MB
+myimage                                 latest              38db0eb8f648        4 weeks ago         346MB
+mcr.microsoft.com/dotnet/core/aspnet    3.1                 38db0eb8f648        4 weeks ago         346MB
 ```
 
-두 이미지가 동일한 **IMAGE ID** 값을 공유함을 알 수 있습니다. *Dockerfile*의 유일한 명령은 기존 이미지를 기반으로 새 이미지를 만드는 것이므로 두 이미지에서 해당 값이 동일합니다. *Dockerfile*에 두 개의 명령을 추가하겠습니다. 각 명령은 **myimage** 리포지토리가 가리키는 이미지를 나타내는 마지막 명령으로 새 이미지 계층을 만듭니다.
+두 이미지가 동일한 **IMAGE ID** 값을 공유함을 알 수 있습니다. *Dockerfile*의 유일한 명령은 기존 이미지를 기반으로 새 이미지를 만드는 것이므로 두 이미지에서 해당 값이 동일합니다. *Dockerfile*에 두 개의 명령을 추가하겠습니다. 각 명령은 **myimage** 리포지토리 항목이 가리키는 이미지를 나타내는 마지막 명령으로 새 이미지 계층을 만듭니다.
 
 ```dockerfile
-COPY app/bin/Release/netcoreapp2.2/publish/ app/
+COPY app/bin/Release/netcoreapp3.1/publish/ app/
 
 ENTRYPOINT ["dotnet", "app/myapp.dll"]
 ```
@@ -237,22 +238,22 @@ ENTRYPOINT ["dotnet", "app/myapp.dll"]
 
 ```console
 > docker build -t myimage -f Dockerfile .
-Sending build context to Docker daemon  819.7kB
-Step 1/3 : FROM mcr.microsoft.com/dotnet/core/runtime:2.2
- ---> d51bb4452469
-Step 2/3 : COPY app/bin/Release/netcoreapp2.2/publish/ app/
- ---> a1e98ac62017
+Sending build context to Docker daemon  1.624MB
+Step 1/3 : FROM mcr.microsoft.com/dotnet/core/aspnet:3.1
+ ---> 38db0eb8f648
+Step 2/3 : COPY app/bin/Release/netcoreapp3.1/publish/ app/
+ ---> 37873673e468
 Step 3/3 : ENTRYPOINT ["dotnet", "app/myapp.dll"]
- ---> Running in f34da5c18e7c
-Removing intermediate container f34da5c18e7c
- ---> ddcc6646461b
-Successfully built ddcc6646461b
+ ---> Running in d8deb7b3aa9e
+Removing intermediate container d8deb7b3aa9e
+ ---> 0d602ca35c1d
+Successfully built 0d602ca35c1d
 Successfully tagged myimage:latest
 
 > docker images
 REPOSITORY                              TAG                 IMAGE ID            CREATED             SIZE
-myimage                                 latest              ddcc6646461b        10 seconds ago      314MB
-mcr.microsoft.com/dotnet/core/runtime   2.2                 d51bb4452469        2 days ago          314MB
+myimage                                 latest              0d602ca35c1d        4 seconds ago       346MB
+mcr.microsoft.com/dotnet/core/aspnet    3.1                 38db0eb8f648        4 weeks ago         346MB
 ```
 
 *Dockerfile*의 각 명령이 계층을 생성하고 **IMAGE ID**를 만들었습니다. 마지막 **IMAGE ID**(사용자에 따라 다름)는 **ddcc6646461b**이고 다음에 이 이미지를 기반으로 컨테이너를 만듭니다.
@@ -263,7 +264,7 @@ mcr.microsoft.com/dotnet/core/runtime   2.2                 d51bb4452469        
 
 ```console
 > docker create myimage
-0e8f3c2ca32ce773712a5cca38750f41259a4e54e04bdf0946087e230ad7066c
+ceda87b219a4e55e9ad5d833ee1a7ea4da21b5ea7ce5a7d08f3051152e784944
 ```
 
 위에서 `docker create` 명령은 **myimage** 이미지를 기반으로 컨테이너를 만듭니다. 해당 명령의 출력은 생성된 컨테이너의 **CONTAINER ID**(사용자에 따라 다름)를 표시합니다. 모든 컨테이너 목록을 보려면 `docker ps -a` 명령을 사용합니다. 
@@ -271,29 +272,29 @@ mcr.microsoft.com/dotnet/core/runtime   2.2                 d51bb4452469        
 ```console
 > docker ps -a
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS        PORTS   NAMES
-0e8f3c2ca32c        myimage             "dotnet app/myapp.dll"   4 seconds ago       Created               boring_matsumoto
+ceda87b219a4        myimage             "dotnet app/myapp.dll"   4 seconds ago       Created               gallant_lehmann
 ```
 
 ### <a name="manage-the-container"></a>컨테이너 관리
 
-각 컨테이너에는 해당 컨테이너 인스턴스를 참조하는 데 사용할 수 있는 임의 이름이 할당됩니다. 예를 들어 자동으로 생성된 컨테이너에 **boring_matsumoto**(사용자에 따라 다름) 이름이 선택되면 해당 이름을 사용하여 컨테이너를 시작할 수 있습니다. `docker create --name` 매개 변수를 사용하여 특정 이름으로 자동 이름을 재정의합니다.
+각 컨테이너에는 해당 컨테이너 인스턴스를 참조하는 데 사용할 수 있는 임의 이름이 할당됩니다. 예를 들어 자동으로 생성된 컨테이너에 **gallant_lehmann**(사용자에 따라 다름) 이름이 선택되면 해당 이름을 사용하여 컨테이너를 시작할 수 있습니다. `docker create --name` 매개 변수를 사용하여 특정 이름으로 자동 이름을 재정의합니다.
 
 다음 예제에서는 `docker start` 명령을 사용하여 컨테이너를 시작한 후 `docker ps` 명령을 사용하여 실행 중인 컨테이너만 표시합니다.
 
 ```console
-> docker start boring_matsumoto
-boring_matsumoto
+> docker start gallant_lehmann
+gallant_lehmann
 
 > docker ps
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS         PORTS   NAMES
-0e8f3c2ca32c        myimage             "dotnet app/myapp.dll"   7 minutes ago       Up 8 seconds           boring_matsumoto
+ceda87b219a4        myimage             "dotnet app/myapp.dll"   7 minutes ago       Up 8 seconds           gallant_lehmann
 ```
 
 마찬가지로 `docker stop` 명령은 컨테이너를 중지합니다. 다음 예제에서는 `docker stop` 명령을 사용하여 컨테이너를 중지한 다음, `docker ps` 명령을 사용하여 컨테이너가 실행 중이지 않음을 보여 줍니다.
 
 ```console
-> docker stop boring_matsumoto
-boring_matsumoto
+> docker stop gallant_lehmann
+gallant_lehmann
 
 > docker ps
 CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS     PORTS   NAMES
@@ -301,21 +302,21 @@ CONTAINER ID        IMAGE               COMMAND             CREATED             
 
 ### <a name="connect-to-a-container"></a>컨테이너에 연결
 
-컨테이너가 실행된 후 컨테이너에 연결하여 출력을 볼 수 있습니다. `docker start` 및 `docker attach` 명령을 사용하여 컨테이너를 시작하고 출력 스트림을 피킹합니다. 이 예제에서는 <kbd>CTRL+C</kbd> 명령을 사용하여 실행 중인 컨테이너에서 분리합니다. 이렇게 하면 실제로 컨테이너에서 프로세스가 종료되어 컨테이너가 중지될 수 있습니다. `--sig-proxy=false` 매개 변수는 <kbd>CTRL + C</kbd>가 컨테이너에서 프로세스를 중지하지 않도록 합니다.
+컨테이너가 실행된 후 컨테이너에 연결하여 출력을 볼 수 있습니다. `docker start` 및 `docker attach` 명령을 사용하여 컨테이너를 시작하고 출력 스트림을 피킹합니다. 이 예제에서는 <kbd>CTRL+C</kbd> 키 입력을 사용하여 실행 중인 컨테이너에서 분리합니다. 이 키 입력으로 실제로 컨테이너에서 프로세스가 종료되어 컨테이너가 중지될 수 있습니다. `--sig-proxy=false` 매개 변수는 <kbd>CTRL + C</kbd>가 컨테이너에서 프로세스를 중지하지 않도록 합니다.
 
 컨테이너에서 분리한 후 다시 연결하여 계속 실행 및 계산 중인지 확인합니다.
 
 ```console
-> docker start boring_matsumoto
-boring_matsumoto
+> docker start gallant_lehmann
+gallant_lehmann
 
-> docker attach --sig-proxy=false boring_matsumoto
+> docker attach --sig-proxy=false gallant_lehmann
 Counter: 7
 Counter: 8
 Counter: 9
 ^C
 
-> docker attach --sig-proxy=false boring_matsumoto
+> docker attach --sig-proxy=false gallant_lehmann
 Counter: 17
 Counter: 18
 Counter: 19
@@ -327,7 +328,7 @@ Counter: 19
 이 문서의 목적이 아무 작업도 수행하지 않는 컨테이너를 만드는 것은 아닙니다. 이전에 만든 컨테이너를 삭제합니다. 컨테이너가 실행 중이면 중지합니다.
 
 ```console
-> docker stop boring_matsumoto
+> docker stop gallant_lehmann
 ```
 
 다음 예제에는 모든 컨테이너가 나와 있습니다. `docker rm` 명령을 사용하여 컨테이너를 삭제한 후 실행 중인 컨테이너가 있는지 다시 확인합니다.
@@ -335,10 +336,10 @@ Counter: 19
 ```console
 > docker ps -a
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS     PORTS   NAMES
-0e8f3c2ca32c        myimage             "dotnet app/myapp.dll"   19 minutes ago      Exited             boring_matsumoto
+ceda87b219a4        myimage             "dotnet app/myapp.dll"   19 minutes ago      Exited             gallant_lehmann
 
-> docker rm boring_matsumoto
-boring_matsumoto
+> docker rm gallant_lehmann
+gallant_lehmann
 
 > docker ps -a
 CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS     PORTS    NAMES
@@ -446,7 +447,7 @@ Docker에는 컨테이너 및 이미지로 수행할 작업을 다루는 다른 
 
 ```console
 docker rmi myimage:latest
-docker rmi mcr.microsoft.com/dotnet/core/runtime:2.2
+docker rmi mcr.microsoft.com/dotnet/core/aspnet:3.1
 ```
 
 `docker images` 명령을 사용하여 설치된 이미지 목록을 확인합니다.
@@ -456,6 +457,7 @@ docker rmi mcr.microsoft.com/dotnet/core/runtime:2.2
 
 ## <a name="next-steps"></a>다음 단계
 
+- [ASP.NET Core 애플리케이션을 컨테이너화하는 방법을 알아봅니다.](/aspnet/core/host-and-deploy/docker/building-net-docker-images)
 - [ASP.NET Core 마이크로 서비스 자습서 확인 보기](https://dotnet.microsoft.com/learn/web/aspnet-microservice-tutorial/intro)
 - [컨테이너를 지원하는 Azure 서비스 검토](https://azure.microsoft.com/overview/containers/)
 - [Dockerfile 명령에 대해 읽어 보기](https://docs.docker.com/engine/reference/builder/)

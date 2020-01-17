@@ -1,5 +1,5 @@
 ---
-title: 설치된 .NET Framework 보안 업데이트 및 핫픽스
+title: 설치된 .NET Framework 보안 업데이트 및 핫픽스 참조
 description: 컴퓨터에 설치된 .NET Framework 보안 업데이트 및 핫픽스를 확인하는 방법을 알아봅니다.
 ms.date: 11/27/2017
 dev_langs:
@@ -9,14 +9,12 @@ helpviewer_keywords:
 - updates, determining for .NET Framework
 - .NET Framework, determining updates
 ms.assetid: 53c7b5f7-d47a-402a-b194-7244a696a88b
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: aad202e7c9df01c2893e74a39744f2c32783f1f0
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 087519048b412798ef7495d250dc2538ee5c2fd0
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73735207"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716264"
 ---
 # <a name="how-to-determine-which-net-framework-security-updates-and-hotfixes-are-installed"></a>설치된 .NET Framework 보안 업데이트 및 핫픽스를 확인하는 방법
 
@@ -106,7 +104,7 @@ KB2600211
 KB2600217
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [방법: 설치된 .NET Framework 버전 확인](how-to-determine-which-versions-are-installed.md)
 - [개발자용 .NET Framework 설치](../install/guide-for-developers.md)

@@ -12,12 +12,12 @@ api_type:
 ms.assetid: 88584574-ade5-45b2-9778-489ed5c4dd7f
 topic_type:
 - apiref
-ms.openlocfilehash: 0e706861237ed08700ef0abcc424b6f1de5f462c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 53fedde028c7551e929cb583d38a4ec6937f2a8c
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134650"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75938089"
 ---
 # <a name="icordebugfunction3getactiverejitrequestilcode-method"></a>ICorDebugFunction3::GetActiveReJitRequestILCode 메서드
 [.NET Framework 4.5.2 이상 버전에서 지원됨]  
@@ -54,4 +54,4 @@ HRESULT GetActiveReJitRequestILCode(
 
 - [ICorDebugFunction3 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction3-interface.md)
 - [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [ReJIT: 방법 가이드](https://blogs.msdn.microsoft.com/davbr/2011/10/12/rejit-a-how-to-guide/)
+- [ReJIT: 방법 가이드](https://docs.microsoft.com/archive/blogs/davbr/rejit-a-how-to-guide)

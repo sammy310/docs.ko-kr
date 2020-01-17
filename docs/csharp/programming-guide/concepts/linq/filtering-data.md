@@ -2,12 +2,12 @@
 title: 데이터 필터링(C#)
 ms.date: 07/20/2015
 ms.assetid: fbaece0d-0f23-47f7-89c5-f3ea8db692b6
-ms.openlocfilehash: eb448c1c2ea6d9b3fcf0120043cafebc01cd3805
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 74399244990f8ff2deaa1d10576ea94a57c16bee
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73418471"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346988"
 ---
 # <a name="filtering-data-c"></a>데이터 필터링(C#)
 필터링은 지정된 조건을 충족하는 요소만 포함하도록 결과 집합을 제한하는 작업을 가리킵니다. 필터링은 선택이라고도 합니다.  
@@ -45,12 +45,12 @@ foreach (string str in query)
 */  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Linq>
 - [표준 쿼리 연산자 개요(C#)](./standard-query-operators-overview.md)
 - [where 절](../../../language-reference/keywords/where-clause.md)
-- [방법: 런타임에 동적으로 조건자 필터 지정](../../../linq/dynamically-specify-predicate-filters-at-runtime.md)
-- [방법: 리플렉션을 사용하여 어셈블리의 메타데이터 쿼리(LINQ)(C#)](./how-to-query-an-assembly-s-metadata-with-reflection-linq.md)
-- [방법: 지정된 특성 또는 이름을 갖는 파일 쿼리(C#)](./how-to-query-for-files-with-a-specified-attribute-or-name.md)
-- [방법: 단어 또는 필드에 따라 텍스트 데이터 정렬 또는 필터링(LINQ)(C#)](./how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)
+- [런타임에 동적으로 조건자 필터 지정](../../../linq/dynamically-specify-predicate-filters-at-runtime.md)
+- [리플렉션을 사용하여 어셈블리의 메타데이터를 쿼리하는 방법(LINQ)(C#)](./how-to-query-an-assembly-s-metadata-with-reflection-linq.md)
+- [지정된 특성 또는 이름을 사용하여 파일을 쿼리하는 방법(C#)](./how-to-query-for-files-with-a-specified-attribute-or-name.md)
+- [단어 또는 필드에 따라 텍스트 데이터를 정렬하거나 필터링하는 방법(LINQ)(C#)](./how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)

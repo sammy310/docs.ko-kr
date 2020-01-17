@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 8479168b64153d3c729f8814a2649df8d46f2135
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: cd13e7560ee98e0c862c5e2293521c6aaa273455
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394147"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344300"
 ---
 ### <a name="razor-runtime-compilation-moved-to-a-package"></a>Razor: 런타임 컴파일이 패키지로 이동됨
 
@@ -20,12 +20,12 @@ Razor 뷰 및 Razor Pages의 런타임 컴파일을 지원하기 위해 별도�
 
 #### <a name="new-behavior"></a>새 동작
 
-기능이 `Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation` 패키지로 이동되었습니다.
+이 기능은 [Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation](https://www.nuget.org/packages/Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation/) 패키지로 이동되었습니다.
 
 런타임 컴파일을 지원하기 위해 이전에 `Microsoft.AspNetCore.Mvc.Razor.RazorViewEngineOptions`에서 다음 API를 사용할 수 있었습니다. 이제 `Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.MvcRazorRuntimeCompilationOptions`를 통해 API를 사용할 수 있습니다.
 
-- `RazorViewEngineOptions.FileProviders` -> `MvcRazorRuntimeCompilationOptions.FileProviders`
-- `RazorViewEngineOptions.AdditionalCompilationReferences` -> `MvcRazorRuntimeCompilationOptions.AdditionalReferencePaths`
+- `RazorViewEngineOptions.FileProviders`는 이제 `MvcRazorRuntimeCompilationOptions.FileProviders`입니다.
+- `RazorViewEngineOptions.AdditionalCompilationReferences`는 이제 `MvcRazorRuntimeCompilationOptions.AdditionalReferencePaths`입니다.
 
 또한 `Microsoft.AspNetCore.Mvc.Razor.RazorViewEngineOptions.AllowRecompilingViewsOnFileChange`가 제거되었습니다. 파일 변경 시 재컴파일은 `Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation` 패키지를 참조하여 기본적으로 사용하도록 설정됩니다.
 
@@ -33,16 +33,16 @@ Razor 뷰 및 Razor Pages의 런타임 컴파일을 지원하기 위해 별도�
 
 이 변경은 Roslyn에서 ASP.NET Core 공유 프레임워크 종속성을 제거하기 위해 필요했습니다.
 
-#### <a name="recommended-action"></a>권장 작업
+#### <a name="recommended-action"></a>권장 조치
 
 Razor 파일의 런타임 컴파일 또는 재컴파일이 필요한 앱은 다음 단계를 수행해야 합니다.
 
 1. `Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation` 패키지에 대한 참조를 추가합니다.
-1. `AddMvcRazorRuntimeCompilation`에 대한 호출을 포함하도록 프로젝트의 `Startup.ConfigureServices` 메서드를 업데이트합니다. 예를 들어 `Startup.ConfigureServices`에서는 다음과 같습니다.
+1. `AddRazorRuntimeCompilation`에 대한 호출을 포함하도록 프로젝트의 `Startup.ConfigureServices` 메서드를 업데이트합니다. 예:
 
     ```csharp
     services.AddMvc()
-        .AddMvcRazorRuntimeCompilation();
+        .AddRazorRuntimeCompilation();
     ```
 
 #### <a name="category"></a>범주

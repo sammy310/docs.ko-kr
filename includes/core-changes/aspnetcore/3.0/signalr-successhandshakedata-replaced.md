@@ -1,14 +1,14 @@
 ---
-ms.openlocfilehash: e9278320ee3fdf9e6b89698d187f047c309ea791
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 1d8bcaf68d44f27642048c1c207b52c55b604690
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73198507"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901642"
 ---
 ### <a name="signalr-handshakeprotocolsuccesshandshakedata-replaced"></a>SignalR: HandshakeProtocol.SuccessHandshakeData가 대체됨
 
-[HandshakeProtocol.SuccessHandshakeData](https://github.com/aspnet/AspNetCore/blob/c5b2bc0df2a0027832bf7d01dfb19ca39cd08ae6/src/SignalR/common/SignalR.Common/src/Protocol/HandshakeProtocol.cs#L27) 필드가 제거되었으며 특정 `IHubProtocol`에 제공된 성공적인 핸드셰이크 응답을 생성하는 도우미 메서드로 대체되었습니다.
+[HandshakeProtocol.SuccessHandshakeData](https://github.com/dotnet/aspnetcore/blob/c5b2bc0df2a0027832bf7d01dfb19ca39cd08ae6/src/SignalR/common/SignalR.Common/src/Protocol/HandshakeProtocol.cs#L27) 필드가 제거되었으며 특정 `IHubProtocol`에 제공된 성공적인 핸드셰이크 응답을 생성하는 도우미 메서드로 대체되었습니다.
 
 #### <a name="version-introduced"></a>도입된 버전
 
@@ -26,7 +26,7 @@ ms.locfileid: "73198507"
 
 비상수이며 선택된 프로토콜에 따라 변경되는 추가 필드가 핸드셰이크 _응답_에 추가되었습니다.
 
-#### <a name="recommended-action"></a>권장 작업
+#### <a name="recommended-action"></a>권장 조치
 
 없음 이 형식은 사용자 코드에서 사용하도록 설계되지 않았습니다. `public`이기 때문에 SignalR 서버와 클라이언트 간에 공유할 수 있습니다. .NET으로 작성된 고객 SignalR 클라이언트에서도 사용할 수 있습니다. SignalR의 **사용자**는 이 변경 내용의 영향을 받지 않아야 합니다.
 

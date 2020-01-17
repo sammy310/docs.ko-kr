@@ -12,12 +12,12 @@ helpviewer_keywords:
 - strong-named assemblies, loading into trusted application domains
 - assembly binding, strong-named
 ms.assetid: ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9
-ms.openlocfilehash: 700eca16e7755823456c3e3ace17eb5e6b3526ac
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 18a0b7d657290835a34c705513d0d7a4ccbfc61c
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122506"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75738684"
 ---
 # <a name="create-and-use-strong-named-assemblies"></a>강력한 이름의 어셈블리 만들기 및 사용
 
@@ -29,7 +29,7 @@ ms.locfileid: "73122506"
 강력한 이름의 어셈블리는 다른 강력한 이름의 어셈블리에서 형식만 사용할 수 있습니다. 그러지 않으면 강력한 이름의 어셈블리 무결성이 손상됩니다.
 
 > [!NOTE]
-> .NET Core가 강력한 이름의 어셈블리를 지원하고 .NET Core 라이브러리의 모든 어셈블리는 서명되어 있지만 대부분의 타사 어셈블리에는 강력한 이름이 필요하지 않습니다. 자세한 내용은 GitHub의 [강력한 이름 서명](https://github.com/dotnet/corefx/blob/master/Documentation/project-docs/strong-name-signing.md)을 참조하세요.
+> .NET Core가 강력한 이름의 어셈블리를 지원하고 .NET Core 라이브러리의 모든 어셈블리는 서명되어 있지만 대부분의 타사 어셈블리에는 강력한 이름이 필요하지 않습니다. 자세한 내용은 GitHub의 [강력한 이름 서명](https://github.com/dotnet/runtime/blob/master/docs/project/strong-name-signing.md)을 참조하세요.
 
 ## <a name="strong-name-scenario"></a>강력한 이름 시나리오
 
@@ -66,7 +66,7 @@ ms.locfileid: "73122506"
 
 개별 애플리케이션 또는 컴퓨터에 대해 이 기능을 사용하지 않도록 설정할 수 있습니다. [방법: 강력한 이름 건너뛰기 기능 사용 안 함](disable-strong-name-bypass-feature.md)을 참조하세요.
 
-## <a name="related-topics"></a>관련된 항목
+## <a name="related-topics"></a>관련 항목
 
 |제목|설명|
 |-----------|-----------------|

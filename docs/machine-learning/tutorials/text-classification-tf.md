@@ -4,14 +4,12 @@ description: 이 자습서에서는 미리 학습된 TensorFlow 모델을 사용
 ms.date: 11/15/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.author: nakersha
-author: natke
-ms.openlocfilehash: 8c3544b60b1fba1d419ca091b0a1d85fbbdbe2d6
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 0e80cdc6bb7dcc62a57466e909451da972c92db8
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204930"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75738691"
 ---
 # <a name="tutorial-analyze-sentiment-of-movie-reviews-using-a-pre-trained-tensorflow-model-in-mlnet"></a>자습서: ML.NET에서 미리 학습된 TensorFlow 모델을 사용하여 영화 리뷰의 감정 분석
 
@@ -28,7 +26,7 @@ ms.locfileid: "74204930"
 
 [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/TextClassificationTF) 리포지토리에서 이 자습서의 소스 코드를 찾을 수 있습니다.
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 * “.NET Core 플랫폼 간 개발” 워크로드가 설치된 [Visual Studio 2017 버전 15.6 이상](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)
 

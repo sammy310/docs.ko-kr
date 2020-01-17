@@ -3,15 +3,15 @@ title: '자습서: ONNX 및 ML.NET를 통한 딥 러닝을 사용하여 개체 �
 description: 이 자습서에서는 ML.NET에서 미리 학습된 ONNX 딥 러닝 학습 모델을 사용하여 이미지에서 개체를 검색하는 방법을 보여줍니다.
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 08/27/2019
+ms.date: 12/12/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 1364b6a1cf6d424975828185a50175b2763c6516
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 04d7dedf9f882d9f0e0396949c71e4941c207fe3
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73420054"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345040"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>자습서: ML.NET에서 ONNX를 사용하여 개체 검색
 
@@ -74,7 +74,7 @@ YOLO 모델에서는 `3(RGB) x 416px x 416px` 이미지를 사용합니다. 이 
 
 ONNX(Open Neural Network Exchange)는 AI 모델의 오픈 소스 형식입니다. ONNX에서는 프레임워크 간의 상호 운용성을 지원합니다. 즉, PyTorch와 같이 널리 사용되는 여러 기계 학습 프레임워크 중 하나에서 모델을 학습시키고, ONNX 형식으로 변환하며, ML.NET과 같은 다른 프레임워크에서 ONNX 모델을 사용할 수 있습니다. 자세히 알아보려면 [ONNX 웹 사이트](https://onnx.ai/)를 방문하세요.
 
-![사용되는 ONNX 지원 형식 다이어그램입니다.](./media/object-detection-onnx/onyx-supported-formats.png)
+![사용되는 ONNX 지원 형식 다이어그램입니다.](./media/object-detection-onnx/onnx-supported-formats.png)
 
 미리 학습된 Tiny YOLOv2 모델은 계층과 해당 계층의 학습된 패턴을 직렬화하여 표시하는 ONNX 형식으로 저장됩니다. ML.NET에서 ONNX와의 상호 운용성은 [`ImageAnalytics`](xref:Microsoft.ML.Transforms.Image) 및 [`OnnxTransformer`](xref:Microsoft.ML.Transforms.Onnx.OnnxTransformer) NuGet 패키지를 통해 달성합니다. [`ImageAnalytics`](xref:Microsoft.ML.Transforms.Image) 패키지에는 이미지를 받아 예측이나 학습 파이프라인의 입력으로 사용할 수 있는 숫자 값으로 인코딩하는 일련의 변환이 포함되어 있습니다. [`OnnxTransformer`](xref:Microsoft.ML.Transforms.Onnx.OnnxTransformer) 패키지에서는 ONNX Runtime을 사용하여 ONNX 모델을 로드하고 제공된 입력을 기반으로 예측하는 데 사용합니다.
 
@@ -448,7 +448,7 @@ for (var j = i + 1; j < boxes.Count; j++)
 
 [!code-csharp [ReturnFilteredBBox](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloOutputParser.cs#L246)]
 
-잘하셨습니다. 이제 채점을 위해 모델과 함께 이 코드를 사용합니다.
+좋습니다. 이제 채점을 위해 모델과 함께 이 코드를 사용합니다.
 
 ## <a name="use-the-model-for-scoring"></a>모델을 사용하여 채점
 
@@ -490,7 +490,7 @@ for (var j = i + 1; j < boxes.Count; j++)
 
     [!code-csharp [LoadModelLog](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/OnnxModelScorer.cs#L47-L49)]
 
-    ML.NET 파이프라인은 [`Fit`](xref:Microsoft.ML.IEstimator%601.Fit*) 메서드가 호출될 때 작동할 데이터 스키마를 알아야 합니다. 이 경우 학습과 비슷한 프로세스가 사용됩니다. 그러나 실제 학습이 발생하지 않기 때문에 빈 [ `IDataView` ](xref:Microsoft.ML.IDataView)를 사용할 수 있습니다. 빈 목록에서 파이프라인의 새로운 [`IDataView`](xref:Microsoft.ML.IDataView)를 만듭니다.
+    ML.NET 파이프라인은 [`Fit`](xref:Microsoft.ML.IEstimator%601.Fit*) 메서드가 호출될 때 작동할 데이터 스키마를 알아야 합니다. 이 경우 학습과 비슷한 프로세스가 사용됩니다. 그러나 실제 학습이 발생하지 않기 때문에 빈 [`IDataView`](xref:Microsoft.ML.IDataView)를 사용할 수 있습니다. 빈 목록에서 파이프라인의 새로운 [`IDataView`](xref:Microsoft.ML.IDataView)를 만듭니다.
 
     [!code-csharp [LoadEmptyIDV](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/OnnxModelScorer.cs#L52)]
 

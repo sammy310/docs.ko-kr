@@ -18,19 +18,19 @@ helpviewer_keywords:
 - BypassNGenAttribute
 - System.Runtime.BypassNGenAttribute
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
-ms.openlocfilehash: e6c4baae854e5997b153e1363ca8ed4204e10e2b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 297bc3f9182e76523eda4d4be3112f4d1d7e3fee
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73085203"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741797"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe(네이티브 이미지 생성기)
 
 네이티브 이미지 생성기(Ngen.exe)는 관리되는 애플리케이션의 성능을 향상시키는 도구입니다. Ngen.exe는 컴파일된 프로세서별 컴퓨터 코드가 포함된 파일인 네이티브 이미지를 만들어서 로컬 컴퓨터의 네이티브 이미지 캐시에 설치합니다. 런타임은 JIT(Just-In-Time) 컴파일러를 사용하지 않고 캐시의 네이티브 이미지를 사용하여 원본 어셈블리를 컴파일할 수 있습니다.
 
 > [!NOTE]
-> Ngen.exe는 .NET Framework만을 대상으로 하는 어셈블리에 대한 네이티브 이미지를 컴파일합니다. .NET Core에 해당하는 네이티브 이미지 생성기는 [CrossGen](https://github.com/dotnet/coreclr/blob/master/Documentation/building/crossgen.md)입니다. 
+> Ngen.exe는 .NET Framework만을 대상으로 하는 어셈블리에 대한 네이티브 이미지를 컴파일합니다. .NET Core에 해당하는 네이티브 이미지 생성기는 [CrossGen](https://github.com/dotnet/runtime/blob/master/docs/workflow/building/coreclr/crossgen.md)입니다.
 
 .NET Framework 버전 4에서 Ngen.exe로 변경합니다.
 
@@ -117,7 +117,7 @@ ngen /? | /help
 
 ## <a name="config"></a>Config
 
-|구성|설명|
+|Configuration|설명|
 |-------------------|-----------------|
 |`/ExeConfig:` `exePath`|지정한 실행 어셈블리의 구성을 사용합니다.<br /><br /> Ngen.exe는 종속성에 바인딩할 때 로더와 같은 결정을 해야 합니다. 공유 구성 요소가 런타임 시 로드되면 애플리케이션의 구성 파일은 <xref:System.Reflection.Assembly.Load%2A> 메서드를 사용하여 공유 구성 요소에 대해 로드된 종속성을 결정합니다(예: 로드된 종속성 버전). `/ExeConfig` 스위치는 런타임 시 종속성을 로드하는 Ngen.exe 지침을 제공합니다.|
 |`/AppBase:` `directoryPath`|종속성을 찾을 때 지정된 디렉터리를 애플리케이션 기본 디렉터리로 사용합니다.|
@@ -635,7 +635,7 @@ ngen executeQueuedItems
 
 .NET Framework 버전 2.0에서 네이티브 이미지 서비스와의 유일한 상호 작용은 명령줄 도구 Ngen.exe를 통해 수행됩니다. 설치 스크립트의 명령줄 도구를 사용하여 네이티브 이미지 서비스에 대한 작업을 큐에 대기시키고 서비스와 상호 작용할 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [도구](index.md)
 - [관리되는 실행 프로세스](../../standard/managed-execution-process.md)

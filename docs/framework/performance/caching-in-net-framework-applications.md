@@ -6,12 +6,12 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [ASP.NET]
 ms.assetid: c4b47ee0-4b82-4124-9bce-818088385e34
-ms.openlocfilehash: 2a0d138151722a76133da45c166c51d7f3bb0a31
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8fe2a386da8cdb4bb075b67a5e52c840a7b66c77
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428195"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75935283"
 ---
 # <a name="caching-in-net-framework-applications"></a>.NET Framework 응용 프로그램에서 캐싱
 캐싱을 사용하면 빠른 액세스를 위해 데이터를 메모리에 저장할 수 있습니다. 데이터에 다시 액세스할 때 애플리케이션은 원래 소스에서 검색하는 대신 캐시에서 데이터를 가져올 수 있습니다. 이 경우 성능과 확장성이 향상됩니다. 또한 캐싱을 사용하면 데이터 소스를 일시적으로 사용할 수 없는 경우에도 데이터를 사용할 수 있습니다.  
@@ -69,13 +69,13 @@ ms.locfileid: "74428195"
   
 - <xref:System.Runtime.Caching.ObjectCache> 클래스에서 파생되는 사용자 지정 클래스를 만든 다음 파생 클래스에 사용자 지정 캐시 구현을 제공합니다.  
   
-- <xref:System.Runtime.Caching.MemoryCache> 클래스에서 파생되는 클래스를 만들고 파생 클래스를 사용자 지정하거나 확장합니다. 이 작업을 수행하는 방법의 예제는 [ASP.NET 애플리케이션에서 여러 캐시 개체를 사용하여 애플리케이션 데이터 캐시](https://blogs.msdn.microsoft.com/aspnetue/2010/03/22/caching-application-data-by-using-multiple-cache-objects-in-an-asp-net-application/)를 참조하세요.  
+- <xref:System.Runtime.Caching.MemoryCache> 클래스에서 파생되는 클래스를 만들고 파생 클래스를 사용자 지정하거나 확장합니다. 이 작업을 수행하는 방법의 예제는 [ASP.NET 애플리케이션에서 여러 캐시 개체를 사용하여 애플리케이션 데이터 캐시](https://docs.microsoft.com/archive/blogs/aspnetue/caching-application-data-by-using-multiple-cache-objects-in-an-asp-net-application)를 참조하세요.  
   
 - <xref:System.Web.Caching.OutputCacheProvider> 클래스에서 파생되는 클래스를 만들고 사용자 지정 출력 캐시 공급자를 사용하도록 애플리케이션을 구성합니다.  
   
  자세한 내용은 Scott Guthrie 블로그의 [Extensible Output Caching with ASP.NET 4 (VS 2010 and .NET 4.0 Series)](https://weblogs.asp.net/scottgu/extensible-output-caching-with-asp-net-4-vs-2010-and-net-4-0-series)(ASP.NET 4(VS 2010 및 .NET 4.0 시리즈)에서 확장 가능한 출력 캐싱) 항목을 참조하세요.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Runtime.Caching.ObjectCache>
 - <xref:System.Runtime.Caching.MemoryCache>

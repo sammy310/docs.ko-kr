@@ -1,15 +1,15 @@
 ---
-title: '방법: 여러 소스로 개체 컬렉션 채우기(LINQ)(C#)'
+title: 여러 소스로 개체 컬렉션을 채우는 방법(LINQ)(C#)
 ms.date: 06/12/2018
 ms.assetid: 8ad7d480-b46c-4ccc-8c57-76f2d04ccc6d
-ms.openlocfilehash: c00257db7f3c06cab55cd48f7472f07dd7b2a664
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 3d841e5ca25afde94674af0fedc9a824c382be5b
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69593062"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345751"
 ---
-# <a name="how-to-populate-object-collections-from-multiple-sources-linq-c"></a>방법: 여러 소스로 개체 컬렉션 채우기(LINQ)(C#)
+# <a name="how-to-populate-object-collections-from-multiple-sources-linq-c"></a>여러 소스로 개체 컬렉션을 채우는 방법(LINQ)(C#)
 
 이 예제에서는 여러 소스의 데이터를 새 형식의 시퀀스에 병합하는 방법을 보여 줍니다.
 
@@ -18,9 +18,9 @@ ms.locfileid: "69593062"
 
 ## <a name="to-create-the-data-file"></a>데이터 파일을 만들려면
 
-[방법: 서로 다른 파일의 콘텐츠 조인(LINQ)(C#)](./how-to-join-content-from-dissimilar-files-linq.md)에 설명된 대로 names.csv 및 scores.csv 파일을 해당 프로젝트 폴더에 복사합니다.
+[서로 다른 파일의 콘텐츠를 조인하는 방법(LINQ)(C#)](./how-to-join-content-from-dissimilar-files-linq.md)에 설명된 대로 names.csv 및 scores.csv 파일을 해당 프로젝트 폴더에 복사합니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 다음 예제에서는 명명된 형식 `Student`를 사용하여 스프레드시트 데이터를 시뮬레이트하는 두 개의 메모리 내 문자열 컬렉션의 병합된 데이터를 .csv 형식으로 저장하는 방법을 보여 줍니다. 첫 번째 문자열 컬렉션은 학생 이름과 ID를 나타내고, 두 번째 컬렉션은 학생 ID(첫 번째 열)와 4개의 시험 점수를 나타냅니다. ID는 외래 키로 사용됩니다.
 
@@ -41,8 +41,8 @@ class PopulateCollection
 {
     static void Main()
     {
-        // These data files are defined in How to: Join Content from
-        // Dissimilar Files (LINQ).
+        // These data files are defined in How to join content from
+        // dissimilar files (LINQ).
 
         // Each line of names.csv consists of a last name, a first name, and an
         // ID number, separated by commas. For example, Omelchenko,Svetlana,111
@@ -139,7 +139,7 @@ foreach (var student in queryNamesScores2)
 }
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [LINQ 및 문자열(C#)](./linq-and-strings.md)
 - [개체 이니셜라이저 및 컬렉션 이니셜라이저](../../classes-and-structs/object-and-collection-initializers.md)

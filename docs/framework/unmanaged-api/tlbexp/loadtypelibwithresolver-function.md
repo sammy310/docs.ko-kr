@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7123a89b-eb9b-463a-a552-a081e33b0a3a
 topic_type:
 - apiref
-ms.openlocfilehash: 82fa0903474ee04b767fd9c68812efe7f0cc4fa0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: adbb5eca3b7ffa36d0c963d0dacc3b2afdb664d4
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124155"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75935556"
 ---
 # <a name="loadtypelibwithresolver-function"></a>LoadTypeLibWithResolver 함수
 형식 라이브러리를 로드 하 고 제공 된 [ITypeLibResolver 인터페이스](itypelibresolver-interface.md) 를 사용 하 여 내부적으로 참조 되는 형식 라이브러리를 확인 합니다.  
@@ -39,7 +39,7 @@ HRESULT LoadTypeLibWithResolver(
  진행 형식 라이브러리의 파일 경로입니다.  
   
  `regkind`  
- 진행 형식 라이브러리를 등록 하는 방법을 제어 하는 [Regkind 열거형](https://docs.microsoft.com/windows/win32/api/oleauto/ne-oleauto-regkind) 플래그입니다. 가능한 값은 다음과 같습니다.  
+ 진행 형식 라이브러리를 등록 하는 방법을 제어 하는 [Regkind 열거형](/windows/win32/api/oleauto/ne-oleauto-regkind) 플래그입니다. 가능한 값은 다음과 같습니다.  
   
 - `REGKIND_DEFAULT`: 기본 등록 동작을 사용 합니다.  
   
@@ -58,10 +58,10 @@ HRESULT LoadTypeLibWithResolver(
   
 |반환 값|의미|  
 |------------------|-------------|  
-|`S_OK`|성공할.|  
+|`S_OK`|명령 실행 성공|  
 |`E_OUTOFMEMORY`|메모리가 부족합니다.|  
 |`E_POINTER`|하나 이상의 포인터가 잘못 되었습니다.|  
-|`E_INVALIDARG`|하나 이상의 인수가 잘못 되었습니다.|  
+|`E_INVALIDARG`|인수 중 하나 이상이 올바르지 않습니다.|  
 |`TYPE_E_IOERROR`|함수에서 파일에 쓸 수 없습니다.|  
 |`TYPE_E_REGISTRYACCESS`|시스템 등록 데이터베이스를 열 수 없습니다.|  
 |`TYPE_E_INVALIDSTATE`|형식 라이브러리를 열 수 없습니다.|  

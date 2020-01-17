@@ -2,15 +2,13 @@
 title: Windows Vista에 .NET Framework 설치
 description: Windows Vista에서.NET Framework를 설치하는 방법을 알아봅니다.
 ms.custom: updateeachrelease
-author: rlander
-ms.author: mairaw
 ms.date: 04/18/2019
-ms.openlocfilehash: 630ab717e44d72de248bb0f0b1abf3d781d26a93
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 95a536ea201844461d60bda0da2654e76de04787
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204734"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716329"
 ---
 # <a name="install-the-net-framework-on-windows-vista-and-windows-server-2008"></a>Windows Vista 및 Windows Server 2008에 .NET Framework 설치
 
@@ -32,7 +30,7 @@ Windows Vista에는 [.NET Framework 3.5](https://dotnet.microsoft.com/download/d
 
 .NET Framework 3.5는 .NET Framework 1.0~3.5용으로 빌드된 앱을 지원합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [.NET Framework 다운로드](https://dotnet.microsoft.com/download)
 - [차단된 .NET Framework 설치 및 제거 문제 해결](troubleshoot-blocked-installations-and-uninstallations.md)

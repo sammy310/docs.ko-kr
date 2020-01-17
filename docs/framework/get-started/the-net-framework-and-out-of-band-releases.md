@@ -2,14 +2,12 @@
 title: .NET Framework 및 번외 릴리스
 ms.date: 10/10/2018
 ms.assetid: 721f10fa-3189-4124-a00d-56ddabd889b3
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c1df04df8aa08fa66c91d03d4b67318b434a93d8
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: a2dcd011548df857a1399c5bbdfe6ed33927672e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051963"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716395"
 ---
 # <a name="the-net-framework-and-out-of-band-releases"></a>.NET Framework 및 번외 릴리스
 
@@ -53,6 +51,6 @@ ms.locfileid: "71051963"
 
  시험판과 안정적인 패키지를 둘 다 찾아보려면 NuGet 패키지 관리자에서 **시험판 포함**을 선택합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [시작](index.md)

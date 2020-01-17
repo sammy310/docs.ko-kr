@@ -4,13 +4,12 @@ description: dotnet test 및 xUnit을 사용하여 샘플 솔루션을 단계별
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.custom: seodec18
-ms.openlocfilehash: 420ab4c7f23ef3fd6cd26d91c2b4f075f1a205f5
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 226db54047747fbd065c64f5e4812094921c7f62
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74835449"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714231"
 ---
 # <a name="unit-testing-c-in-net-core-using-dotnet-test-and-xunit"></a>dotnet 테스트 및 xUnit을 사용하여 .NET Core에서 C# 단위 테스트
 
@@ -194,7 +193,7 @@ Assert.False(result, "1 should not be prime");
 
 - `[InlineData]` 특성은 해당 입력에 대한 값을 지정합니다.
 
-새 테스트를 만들지 않고 앞의 xUnit 특성을 적용하여 단일 이론을 만듭니다. 다음 코드를
+새 테스트를 만들지 않고 앞의 xUnit 특성을 적용하여 단일 이론을 만듭니다. 코드 바꾸기 대상:
 
 ```csharp
 [Fact]
@@ -206,7 +205,7 @@ public void IsPrime_InputIs1_ReturnFalse()
 }
 ```
 
-다음 코드와 바꿉니다.
+다음 코드로 바꾸기:
 
 [!code-csharp[Sample_TestCode](../../../samples/core/getting-started/unit-testing-using-dotnet-test/PrimeService.Tests/PrimeService_IsPrimeShould.cs?name=Sample_TestCode)]
 

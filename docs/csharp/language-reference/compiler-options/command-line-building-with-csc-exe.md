@@ -5,12 +5,12 @@ helpviewer_keywords:
 - builds [C#]
 - command line [C#]
 ms.assetid: 66e70056-dd20-453c-a9b3-507e0478b015
-ms.openlocfilehash: dfd494ceb631a8f86cc3a249e5168c1f413e7e4f
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: c2b674ba17360c6ee9d2b21683560e840063f17d
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73972908"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636057"
 ---
 # <a name="command-line-build-with-cscexe"></a>csc.exe를 사용한 명령줄 빌드
 
@@ -96,12 +96,12 @@ csc -target:library -out:Something.xyz *.cs
 ## <a name="differences-between-c-compiler-and-c-compiler-output"></a>C# 컴파일러 및 C++ 컴파일러 출력의 차이점
 C# 컴파일러를 호출하면 개체 파일( *.obj*)은 만들어지지 않고 출력 파일이 직접 만들어집니다. 따라서 C# 컴파일러에는 링커가 필요하지 않습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 컴파일러 옵션](./index.md)
 - [사전순 C# 컴파일러 옵션 목록](./listed-alphabetically.md)
 - [범주별 C# 컴파일러 옵션 목록](./listed-by-category.md)
 - [Main()과 명령줄 인수](../../programming-guide/main-and-command-args/index.md)
 - [명령줄 인수](../../programming-guide/main-and-command-args/command-line-arguments.md)
-- [방법: 명령줄 인수 표시](../../programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
+- [명령줄 인수를 표시하는 방법](../../programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
 - [Main() 반환 값](../../programming-guide/main-and-command-args/main-return-values.md)

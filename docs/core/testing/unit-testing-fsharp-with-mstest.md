@@ -4,13 +4,12 @@ description: dotnet test 및 MSTest를 사용하여 샘플 솔루션을 단계�
 author: billwagner
 ms.author: wiwagn
 ms.date: 08/30/2017
-ms.custom: seodec18
-ms.openlocfilehash: 68878073b031d155c9ff67f24ed950570e666523
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: a685ed8a56393fb6e1c1b9400f0ed4bcef15f9b5
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71116998"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714273"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-mstest"></a>dotnet test 및 MSTest를 사용하여 .NET Core에서 F# 라이브러리 유닛 테스트
 
@@ -21,7 +20,7 @@ ms.locfileid: "71116998"
 ## <a name="creating-the-source-project"></a>소스 프로젝트 만들기
 
 셸 창을 엽니다. 솔루션을 저장할 *unit-testing-with-fsharp*라는 디렉터리를 만듭니다.
-이 새 디렉터리 내에서 [`dotnet new sln`](../tools/dotnet-new.md)을 실행하여 새 솔루션을 만듭니다. 이렇게 하면 클래스 라이브러리와 단위 테스트 프로젝트를 모두 쉽게 관리할 수 있습니다.
+이 새 디렉터리 내에서 `dotnet new sln`을 실행하여 새 솔루션을 만듭니다. 이렇게 하면 클래스 라이브러리와 단위 테스트 프로젝트를 모두 쉽게 관리할 수 있습니다.
 솔루션 디렉터리 내에 *MathService* 디렉터리를 만듭니다. 따라서 지금까지의 디렉터리 및 파일 구조는 다음과 같습니다.
 
 ```
@@ -30,14 +29,14 @@ ms.locfileid: "71116998"
     /MathService
 ```
 
-*MathService*를 현재 디렉터리로 만들고 [`dotnet new classlib -lang F#`](../tools/dotnet-new.md)을 실행하여 소스 프로젝트를 만듭니다.  다음과 같이 수학 서비스의 실패 구현을 만듭니다.
+*MathService*를 현재 디렉터리로 만들고 `dotnet new classlib -lang "F#"`을 실행하여 소스 프로젝트를 만듭니다.  다음과 같이 수학 서비스의 실패 구현을 만듭니다.
 
 ```fsharp
 module MyMath =
     let squaresOfOdds xs = raise (System.NotImplementedException("You haven't written a test yet!"))
 ```
 
-디렉터리를 다시 *unit-testing-with-fsharp* 디렉터리로 변경합니다. [`dotnet sln add .\MathService\MathService.fsproj`](../tools/dotnet-sln.md)를 실행하여 클래스 라이브러리 프로젝트를 솔루션에 추가합니다.
+디렉터리를 다시 *unit-testing-with-fsharp* 디렉터리로 변경합니다. `dotnet sln add .\MathService\MathService.fsproj`를 실행하여 클래스 라이브러리 프로젝트를 솔루션에 추가합니다.
 
 ## <a name="creating-the-test-project"></a>테스트 프로젝트 만들기
 
@@ -52,7 +51,7 @@ module MyMath =
     /MathService.Tests
 ```
 
-*MathService.Tests* 디렉터리를 현재 디렉터리로 만들고 [`dotnet new mstest -lang F#`](../tools/dotnet-new.md)을 사용하여 새 프로젝트를 만듭니다. 그러면 MSTest를 테스트 프레임워크로 사용하는 테스트 프로젝트가 만들어집니다. 생성된 템플릿은 *MathServiceTests.fsproj*에 Test Runner를 구성합니다.
+*MathService.Tests* 디렉터리를 현재 디렉터리로 만들고 `dotnet new mstest -lang "F#"`을 사용하여 새 프로젝트를 만듭니다. 그러면 MSTest를 테스트 프레임워크로 사용하는 테스트 프로젝트가 만들어집니다. 생성된 템플릿은 *MathServiceTests.fsproj*에 Test Runner를 구성합니다.
 
 ```xml
 <ItemGroup>
@@ -62,7 +61,7 @@ module MyMath =
 </ItemGroup>
 ```
 
-테스트 프로제트는 다른 패키지에 단위 테스트를 만들고 실행하도록 요구합니다. 이전 단계의 `dotnet new`는 MSTest 및 MSTest runner를 추가했습니다. 이제 `MathService` 클래스 라이브러리를 프로젝트에 다른 종속성으로 추가합니다. [`dotnet add reference`](../tools/dotnet-add-reference.md) 명령을 사용합니다.
+테스트 프로제트는 다른 패키지에 단위 테스트를 만들고 실행하도록 요구합니다. 이전 단계의 `dotnet new`는 MSTest 및 MSTest runner를 추가했습니다. 이제 `MathService` 클래스 라이브러리를 프로젝트에 다른 종속성으로 추가합니다. `dotnet add reference` 명령을 사용합니다.
 
 ```dotnetcli
 dotnet add reference ../MathService/MathService.fsproj
@@ -83,7 +82,7 @@ GitHub의 [샘플 리포지토리](https://github.com/dotnet/samples/blob/master
         MathServiceTests.fsproj
 ```
 
-*unit-testing-with-fsharp* 디렉터리에서 [`dotnet sln add .\MathService.Tests\MathService.Tests.fsproj`](../tools/dotnet-sln.md)를 실행합니다.
+*unit-testing-with-fsharp* 디렉터리에서 `dotnet sln add .\MathService.Tests\MathService.Tests.fsproj`를 실행합니다.
 
 ## <a name="creating-the-first-test"></a>첫 번째 테스트 만들기
 
@@ -107,7 +106,7 @@ type TestClass () =
      member this.FailEveryTime() = Assert.IsTrue(false)
 ```
 
-`[<TestClass>]` 특성은 테스트가 포함된 클래스를 나타냅니다. `[<TestMethod>]` 특성은 Test Runner에서 실행하는 테스트 메서드를 나타냅니다. *unit-testing-with-fsharp* 디렉터리에서 [`dotnet test`](../tools/dotnet-test.md)를 실행하여 테스트 및 클래스 라이브러리를 빌드한 다음 테스트를 실행합니다. MSTest Test Runner에는 테스트를 실행할 프로그램 진입점이 포함되어 있습니다. `dotnet test`는 만든 단위 테스트 프로젝트를 사용하여 Test Runner를 시작합니다.
+`[<TestClass>]` 특성은 테스트가 포함된 클래스를 나타냅니다. `[<TestMethod>]` 특성은 Test Runner에서 실행하는 테스트 메서드를 나타냅니다. *unit-testing-with-fsharp* 디렉터리에서 `dotnet test`를 실행하여 테스트 및 클래스 라이브러리를 빌드한 다음 테스트를 실행합니다. MSTest Test Runner에는 테스트를 실행할 프로그램 진입점이 포함되어 있습니다. `dotnet test`는 만든 단위 테스트 프로젝트를 사용하여 Test Runner를 시작합니다.
 
 이러한 두 테스트는 가장 기본적인 통과 및 실패 테스트를 보여 줍니다. `My test`는 통과하고 `Fail every time`은 실패합니다. 이제 `squaresOfOdds` 메서드에 대한 테스트를 만듭니다. `squaresOfOdds` 메서드는 입력 시퀀스에 포함된 모든 홀수 정수 값 제곱의 목록을 반환합니다. 이러한 모든 함수를 한 번에 작성하지 않고 기능의 유효성을 검사하는 테스트를 반복적으로 만들 수 있습니다. 각 테스트 패스를 만들면 메서드에 필요한 기능이 만들어집니다.
 
@@ -180,3 +179,10 @@ let squaresOfOdds xs =
 ```
 
 작은 라이브러리 및 이 라이브러리에 대한 단위 테스트 집합을 작성했습니다. 새 패키지 및 테스트 추가가 정상 워크플로에 포함되도록 솔루션을 구조화했습니다. 애플리케이션의 목표를 해결하는 데 대부분의 시간과 노력을 들였습니다.
+
+## <a name="see-also"></a>참조
+
+- [dotnet new](../tools/dotnet-new.md)
+- [dotnet sln](../tools/dotnet-sln.md)
+- [dotnet add reference](../tools/dotnet-add-reference.md)
+- [dotnet test](../tools/dotnet-test.md)

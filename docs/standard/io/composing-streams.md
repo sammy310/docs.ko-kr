@@ -13,14 +13,12 @@ helpviewer_keywords:
 - base streams
 - streams, backing stores
 ms.assetid: da761658-a535-4f26-a452-b30df47f73d5
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 452071e9726a95b4b3d9bb9cefe720d39bbc3e0c
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: 689cc9537cd7a5fe6a677d42e5790bbcf1b3aefa
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674349"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708150"
 ---
 # <a name="compose-streams"></a>스트림 작성
 백업 저장소(*backing store*)는 디스크 또는 메모리와 같은 스토리지 매체입니다. 다양한 각 백업 저장소는 <xref:System.IO.Stream> 클래스의 구현으로 고유한 스트림을 구현합니다. 
@@ -34,19 +32,19 @@ ms.locfileid: "55674349"
 >[!IMPORTANT]
 >예제에서는 *MyFile.txt* 파일이 앱과 동일한 폴더에 이미 존재한다고 가정합니다.  
 
-## <a name="example-use-streamreader"></a>예제: StreamReader 사용
+## <a name="example-use-streamreader"></a>예: StreamReader 사용
 다음 예제에서는 생성자 인수로 **StreamReader**에 전달되는 **FileStream**에서 문자를 읽는 <xref:System.IO.StreamReader>를 만듭니다. <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=nameWithType>은 <xref:System.IO.StreamReader.Peek%2A?displayProperty=nameWithType>에서 더 이상 문자를 찾지 못할 때까지 읽습니다.  
   
  [!code-csharp[System.IO.StreamReader#20](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.StreamReader/CS/source2.cs#20)]
  [!code-vb[System.IO.StreamReader#20](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.StreamReader/VB/source2.vb#20)]  
   
-## <a name="example-use-binaryreader"></a>예제: BinaryReader 사용
+## <a name="example-use-binaryreader"></a>예: BinaryReader 사용
 다음 예제에서는 생성자 인수로 **BinaryReader**에 전달되는 **FileStream**에서 바이트를 읽는 <xref:System.IO.BinaryReader>를 만듭니다. <xref:System.IO.BinaryReader.ReadByte%2A>는 <xref:System.IO.BinaryReader.PeekChar%2A>에서 더 이상 바이트를 찾지 못할 때까지 읽습니다.  
   
  [!code-csharp[System.IO.StreamReader#21](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.StreamReader/CS/source3.cs#21)]
  [!code-vb[System.IO.StreamReader#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.StreamReader/VB/source3.vb#21)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.IO.StreamReader>
 - <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=nameWithType>

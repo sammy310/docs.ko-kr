@@ -2,12 +2,12 @@
 title: Docker란?
 description: 컨테이너화된 .NET 애플리케이션을 위한 .NET 마이크로 서비스 아키텍처 | Docker란?
 ms.date: 08/31/2018
-ms.openlocfilehash: 215d756c631440c99a3a8ad8128ec61fef3bc26d
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: a53845d3bbcf24f3eaeb98b9e08b6f35a023c30e
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740104"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337713"
 ---
 # <a name="what-is-docker"></a>Docker란?
 
@@ -19,7 +19,7 @@ ms.locfileid: "73740104"
 
 Docker 컨테이너는 고객 데이터 센터의 온-프레미스, 외부 서비스 공급자 또는 Azure의 클라우드에서, 어디서나 실행할 수 있습니다. Docker 이미지 컨테이너는 Linux 및 Windows에서 기본적으로 실행할 수 있습니다. 그러나 Windows 이미지는 Windows 호스트에서만 실행할 수 있고 Linux 이미지는 Linux 호스트 및 Windows 호스트(지금까지 Hyper-V Linux VM 사용)에서 실행할 수 있습니다. 여기서 호스트는 서버 또는 VM을 의미합니다.
 
-개발자는 Windows, Linux 또는 macOS에서 개발 환경을 사용할 수 있습니다. 개발자는 개발 컴퓨터에서 앱 및 해당 종속성을 비롯하여 Docker 이미지가 배포된 Docker 호스트를 실행합니다. Linux 또는 Mac에서 작업하는 개발자는 Linux 기반의 Docker 호스트를 사용하고 Linux 컨테이너용 이미지만 만들 수 있습니다. Mac에서 작업하는 개발자는 macOS에서 코드를 편집하거나 Docker CLI를 실행할 수 있지만, 이 작성 시점에는 컨테이너가 macOS에서 직접 실행되지 않습니다. Windows에서 작업하는 개발자는 Linux 또는 Windows 컨테이너용 이미지를 만들 수 있습니다.
+개발자는 Windows, Linux 또는 macOS에서 개발 환경을 사용할 수 있습니다. 개발자는 개발 컴퓨터에서 앱 및 해당 종속성을 비롯하여 Docker 이미지가 배포된 Docker 호스트를 실행합니다. Linux 또는 macOS에서 작업하는 개발자는 Linux 기반의 Docker 호스트를 사용하고 Linux 컨테이너용 이미지만 만들 수 있습니다. macOS에서 작업하는 개발자는 macOS에서 코드를 편집하거나 Docker CLI를 실행할 수 있지만, 이 작성 시점에는 컨테이너가 macOS에서 직접 실행되지 않습니다. Windows에서 작업하는 개발자는 Linux 또는 Windows 컨테이너용 이미지를 만들 수 있습니다.
 
 개발 환경에서 컨테이너를 호스트하고 추가 개발자 도구를 제공하기 위해 Docker는 Windows 또는 macOS용 [Docker CE(Community Edition)](https://www.docker.com/community-edition)를 제공합니다. 이러한 제품은 컨테이너를 호스트하는 데 필요한 VM(Docker 호스트)을 설치합니다. Docker는 기업 개발용으로 설계되고 프로덕션 환경에서 대규모의 업무상 중요한 애플리케이션을 빌드, 제공 및 실행하는 IT 팀에서 사용되는 [Docker EE(Enterprise Edition)](https://www.docker.com/enterprise-edition)도 제공합니다.
 

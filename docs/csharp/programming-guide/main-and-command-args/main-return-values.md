@@ -1,16 +1,15 @@
 ---
 title: Main() 반환 값 - C# 프로그래밍 가이드
-ms.custom: seodec18
 ms.date: 08/02/2017
 helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
-ms.openlocfilehash: 13d1eda178a4c2580af67ef5a7198e7f0884a7d6
-ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
+ms.openlocfilehash: 21e780470f455ac133fd4d11ae43c63a4b18c582
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74884399"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712041"
 ---
 # <a name="main-return-values-c-programming-guide"></a>Main() 반환 값(C# 프로그래밍 가이드)
 
@@ -24,7 +23,7 @@ ms.locfileid: "74884399"
 
 `Main`의 반환 값을 사용하지 않는 경우 `void`를 반환하면 코드가 다소 단순해집니다. 그러나 정수를 반환하면 프로그램이 실행 파일을 호출하는 다른 프로그램 또는 스크립트에 상태 정보를 전달할 수 있습니다. `Main`의 반환 값은 프로세스에 대한 종료 코드로 처리됩니다. `void`가 `Main`에서 반환되는 경우 종료 코드는 암시적으로 `0`이 됩니다. 다음 예제에서는 `Main`의 반환 값을 어떻게 액세스할 수 있는지를 보여 줍니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 이 예제에서는 [.NET Core](../../../core/index.md) 명령줄 도구를 사용합니다. .NET Core 명령줄 도구에 대해 잘 모르는 경우 이 [시작 항목](../../../core/tutorials/cli-create-console-app.md)에서 알아볼 수 있습니다.
 
@@ -34,7 +33,7 @@ ms.locfileid: "74884399"
 
 Windows에서 프로그램을 실행하는 경우 `Main` 함수에서 반환된 값은 환경 변수에 저장됩니다. 이 환경 변수는 배치 파일에서 `ERRORLEVEL`을 사용하거나 PowerShell에서 `$LastExitCode`를 사용하여 검색할 수 있습니다.
 
-[dotnet CLI](../../../core/tools/dotnet.md)`dotnet build` 명령을 사용하여 애플리케이션을 빌드할 수 있습니다.
+[dotnet CLI](../../../core/tools/dotnet.md) `dotnet build` 명령을 사용하여 애플리케이션을 빌드할 수 있습니다.
 
 다음으로 애플리케이션을 실행하고 결과를 표시하는 PowerShell 스크립트를 만듭니다. 다음 코드를 텍스트 파일에 붙여넣고 이 파일을 프로젝트가 포함된 폴더에 `test.ps1`로 저장합니다. PowerShell 프롬프트에 `test.ps1`을 입력하여 PowerShell 스크립트를 실행합니다.
 
@@ -93,9 +92,9 @@ private static async Task<int> AsyncConsoleWork()
 > [!NOTE]
 >예제에서 `Main` 메서드에 `async` 한정자를 사용하더라도 컴파일러는 동일한 코드를 생성합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 프로그래밍 가이드](../index.md)
 - [C# 참조](../index.md)
 - [Main()과 명령줄 인수](index.md)
-- [방법: 명령줄 인수 표시](./how-to-display-command-line-arguments.md)
+- [명령줄 인수를 표시하는 방법](./how-to-display-command-line-arguments.md)

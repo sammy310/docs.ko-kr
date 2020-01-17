@@ -1,15 +1,14 @@
 ---
 title: ML.NET 알고리즘을 선택하는 방법
 description: 기계 학습 모델에 사용할 ML.NET 알고리즘을 선택하는 방법에 대해 살펴봅니다.
-author: natke
 ms.topic: overview
 ms.date: 06/05/2019
-ms.openlocfilehash: 0721418d8b0b3c9ab645eb9885b0f4951c37762e
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 0fed33203c02303e37e47f548e08ec131eeb1c77
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976692"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75739999"
 ---
 # <a name="how-to-choose-an-mlnet-algorithm"></a>ML.NET 알고리즘을 선택하는 방법
 

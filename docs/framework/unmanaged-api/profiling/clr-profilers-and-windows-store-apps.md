@@ -12,12 +12,12 @@ helpviewer_keywords:
 - profiling managed code
 - profiling managed code [Windows Store Apps]
 ms.assetid: 1c8eb2e7-f20a-42f9-a795-71503486a0f5
-ms.openlocfilehash: a3e60f715c4c61e671980e4f36813e864469d28e
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 1a839c4cd99e21bc2a3ebd90cf3302a475c02e17
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344766"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75938137"
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>CLR 프로파일러 및 Windows 스토어 앱
 
@@ -76,7 +76,7 @@ Windows RT 장치는 매우 잠금 상태입니다. 타사 프로파일러는 �
 
 다음 섹션에서 설명 하는 다양 한 시나리오에서 프로파일러 UI 데스크톱 응용 프로그램은 몇 가지 새로운 Windows 런타임 Api를 사용 해야 합니다. 데스크톱 응용 프로그램에서 사용할 수 있는 Windows 런타임 Api와 데스크톱 응용 프로그램 및 Windows 스토어 앱에서 호출 하는 경우 해당 동작이 다른 지를 이해 하려면 설명서를 참조 합니다.
 
-프로파일러 UI를 관리 코드로 작성 하는 경우 이러한 Windows 런타임 Api를 쉽게 사용 하기 위해 수행 해야 하는 몇 가지 단계가 있습니다. 자세한 내용은 [관리 되는 데스크톱 앱 및 Windows 런타임](https://go.microsoft.com/fwlink/?LinkID=271858) 문서를 참조 하세요.
+프로파일러 UI를 관리 코드로 작성 하는 경우 이러한 Windows 런타임 Api를 쉽게 사용 하기 위해 수행 해야 하는 몇 가지 단계가 있습니다. 자세한 내용은 [관리 되는 데스크톱 앱 및 Windows 런타임](https://docs.microsoft.com/previous-versions/windows/apps/jj856306(v=win.10)) 문서를 참조 하세요.
 
 ## <a name="loading-the-profiler-dll"></a>프로파일러 DLL 로드
 
@@ -378,11 +378,11 @@ Winmd의 메타 데이터 수정은 지원 되지 않습니다. WinMD 파일에 
 
 메모리 프로 파일링을 수행할 때 프로파일러 DLL은 일반적으로 [Forcegc 메서드](icorprofilerinfo-forcegc-method.md) 메서드를 호출할 개별 스레드를 만듭니다. 새 항목이 아닙니다. 그러나 Windows 스토어 앱 내에서 가비지 컬렉션을 수행 하는 작업은 스레드를 관리 되는 스레드로 변환할 수 있습니다. 예를 들어 해당 스레드에 대 한 프로 파일링 API ThreadID가 만들어집니다.
 
-이에 대 한 결과를 이해 하려면 CLR 프로 파일링 API에서 정의한 동기 호출과 비동기 호출 간의 차이점을 이해 하는 것이 중요 합니다. 이는 Windows 스토어 앱의 비동기 호출 개념과 매우 다릅니다. 자세한 내용은 블로그 게시물에서 CORPROF_E_UNSUPPORTED_CALL_SEQUENCE 하는 [이유](https://blogs.msdn.microsoft.com/davbr/2008/12/23/why-we-have-corprof_e_unsupported_call_sequence/) 를 참조 하세요.
+이에 대 한 결과를 이해 하려면 CLR 프로 파일링 API에서 정의한 동기 호출과 비동기 호출 간의 차이점을 이해 하는 것이 중요 합니다. 이는 Windows 스토어 앱의 비동기 호출 개념과 매우 다릅니다. 자세한 내용은 블로그 게시물에서 CORPROF_E_UNSUPPORTED_CALL_SEQUENCE 하는 [이유](https://docs.microsoft.com/archive/blogs/davbr/why-we-have-corprof_e_unsupported_call_sequence) 를 참조 하세요.
 
 관련 점은 프로파일러에서 만든 스레드에 대해 수행 되는 호출은 프로파일러 DLL의 [ICorProfilerCallback](icorprofilercallback-interface.md) 메서드 중 하나를 구현 하는 외부에서 수행 되는 경우에도 항상 동기로 간주 됩니다. 이상 사용 되는 경우 이제 [Forcegc 메서드](icorprofilerinfo-forcegc-method.md)를 호출 하 여 CLR에서 프로파일러의 스레드를 관리 되는 스레드로 전환 했으므로 해당 스레드는 더 이상 프로파일러의 스레드로 간주 되지 않습니다. 따라서 CLR은 해당 스레드에 대해 동기로 한정 되는 항목에 대 한 보다 엄격한 정의를 적용 합니다. 즉, 호출이 프로파일러 DLL의 [ICorProfilerCallback](icorprofilercallback-interface.md) 메서드 중 하나에서 시작 되어야 동기로 한정 됩니다.
 
-실제로는 무엇을 의미 하나요? 대부분의 [ICorProfilerInfo](icorprofilerinfo-interface.md) 메서드는 동기적으로 호출 되는 것이 안전 하며, 그렇지 않은 경우 즉시 실패 합니다. 따라서 프로파일러 DLL이 일반적으로 프로파일러 생성 스레드에 대해 수행 되는 다른 호출 (예: [RequestProfilerDetach](icorprofilerinfo3-requestprofilerdetach-method.md), [RequestReJIT](icorprofilerinfo4-requestrejit-method.md)또는 [Requestrevert](icorprofilerinfo4-requestrevert-method.md))에 대해 [forcegc 메서드](icorprofilerinfo-forcegc-method.md) 스레드를 다시 사용할 경우 문제가 발생할 수 있습니다. [DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) 와 같은 비동기 안전 함수에도 관리 되는 스레드에서 호출 될 때 특별 한 규칙이 있습니다. 자세한 내용은 블로그 게시물 [Profiler 스택 탐색: 기본 사항 및 이후](https://blogs.msdn.microsoft.com/davbr/2005/10/06/profiler-stack-walking-basics-and-beyond/) 항목을 참조 하세요.
+실제로는 무엇을 의미 하나요? 대부분의 [ICorProfilerInfo](icorprofilerinfo-interface.md) 메서드는 동기적으로 호출 되는 것이 안전 하며, 그렇지 않은 경우 즉시 실패 합니다. 따라서 프로파일러 DLL이 일반적으로 프로파일러 생성 스레드에 대해 수행 되는 다른 호출 (예: [RequestProfilerDetach](icorprofilerinfo3-requestprofilerdetach-method.md), [RequestReJIT](icorprofilerinfo4-requestrejit-method.md)또는 [Requestrevert](icorprofilerinfo4-requestrevert-method.md))에 대해 [forcegc 메서드](icorprofilerinfo-forcegc-method.md) 스레드를 다시 사용할 경우 문제가 발생할 수 있습니다. [DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) 와 같은 비동기 안전 함수에도 관리 되는 스레드에서 호출 될 때 특별 한 규칙이 있습니다. 자세한 내용은 블로그 게시물 [Profiler 스택 탐색: 기본 사항 및 이후](https://docs.microsoft.com/archive/blogs/davbr/profiler-stack-walking-basics-and-beyond) 항목을 참조 하세요.
 
 따라서 프로파일러 DLL이 [Forcegc 메서드](icorprofilerinfo-forcegc-method.md) 를 호출 하는 데 사용 하는 모든 스레드는 gc를 트리거하는 목적 *으로만* 사용 되 고 gc 콜백에 응답 하는 것이 좋습니다. 스택 샘플링 또는 분리와 같은 다른 작업을 수행 하기 위해 프로 파일링 API를 호출 해서는 안 됩니다.
 

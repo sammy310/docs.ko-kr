@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: 274fea83c474d4b67aab919b604eda893d8204d7
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 0154910b91df0b2f72daebe802e4c75bbca964bb
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552860"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337573"
 ---
 # <a name="tour-of-net"></a>.NET 둘러보기
 
@@ -27,13 +27,13 @@ ms.locfileid: "74552860"
 
 .NET은 여러 프로그래밍 언어를 지원합니다. .NET 구현은 무엇보다 언어와 관련이 없는 런타임과 언어 상호 운용성을 지정하는 [CLI(공용 언어 인프라)](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/)를 구현합니다. 즉 어떤 .NET 언어를 선택해도 .NET에서 앱과 서비스를 빌드할 수 있습니다.
 
-Microsoft에서는 C#과 F#, VB(Visual Basic) 이 세 가지 .NET 언어를 적극적으로 개발하고 지원합니다. 
+Microsoft에서는 C#과 F#, Visual Basic 이 세 가지 .NET 언어를 적극적으로 개발하고 지원합니다. 
 
 * C#은 C 스타일 언어의 표현력과 우아함은 그대로 유지하면서 간단하고 형식이 안전한 개체 지향 언어입니다. C나 이와 비슷한 언어에 익숙한 사용자라면 누구나 거의 문제 없이 C#을 사용할 수 있을 것입니다. C#에 대한 자세한 내용은 [C# 가이드](../csharp/index.yml)를 참조하세요.
 
 * F#은 일반적인 개체 지향 프로그래밍과 명령형 프로그래밍을 지원하며 다양한 플랫폼에서 사용할 수 있는 함수 우선 프로그래밍 언어입니다. F#에 대한 자세한 내용을 보려면 [F# 가이드](../fsharp/index.yml)를 참조하세요.
 
-* Visual Basic은 .NET에서 실행되는 다양한 앱을 만들 수 있는 배우기 쉬운 언어입니다. .NET 언어 중에서 VB 구문이 일반적인 인간 언어와 가장 유사하여 소프트웨어를 처음 개발하는 사람도 쉽게 배울 수 있습니다.
+* Visual Basic은 .NET에서 실행되는 다양한 앱을 만들 수 있는 배우기 쉬운 언어입니다. .NET 언어 중에서 Visual Basic 구문이 일반적인 인간 언어와 가장 유사하여 소프트웨어를 처음 개발하는 사람도 쉽게 배울 수 있습니다.
 
 ## <a name="automatic-memory-management"></a>자동 메모리 관리
 
@@ -47,7 +47,7 @@ Microsoft에서는 C#과 F#, VB(Visual Basic) 이 세 가지 .NET 언어를 적�
 
 가비지 수집기는 *메모리 안전성*을 보장해주는 서비스 중 하나입니다. 프로그램이 할당된 메모리만 액세스하면 메모리가 안전합니다. 예를 들어 런타임은 앱이 배열의 범위를 넘어 할당되지 않은 메모리를 액세스하지 못하도록 합니다.
 
-다음 예제에서 런타임은 `InvalidIndexException` 예외를 throw하여 메모리 안전성을 강화합니다.
+다음 예제에서 런타임은 <xref:System.IndexOutOfRangeException> 예외를 throw하여 메모리 안전성을 강화합니다.
 
 [!code-csharp[MemoryManagement](../../samples/csharp/snippets/tour/MemoryManagement.csx#L4-L5)]
 
@@ -65,7 +65,7 @@ Microsoft에서는 C#과 F#, VB(Visual Basic) 이 세 가지 .NET 언어를 적�
 
 * C#의 경우 [using 문(C# 참조)](../csharp/language-reference/keywords/using-statement.md) 항목을 참조하세요.
 * F#의 경우 [리소스 관리: use 키워드](../fsharp/language-reference/resource-management-the-use-keyword.md)를 참조하세요.
-* VB의 경우 [Using 문(Visual Basic)](../visual-basic/language-reference/statements/using-statement.md) 항목을 참조하세요.
+* Visual Basic의 경우 [Using 문(Visual Basic)](../visual-basic/language-reference/statements/using-statement.md) 항목을 참조하세요.
 
 ## <a name="type-safety"></a>형식 안전성
 
@@ -79,11 +79,11 @@ Microsoft에서는 C#과 F#, VB(Visual Basic) 이 세 가지 .NET 언어를 적�
 
 [!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L3-L3)]
 
-C#, VB 및 F#은 지역 *형식 유추*를 지원합니다. 형식 유추는 컴파일러가 오른쪽에 있는 식에서 왼쪽에 있는 식의 형식을 유추함을 의미합니다. 형식 안전성이 손상되거나 무시되는 것은 아닙니다. 결과 형식은 강력한 형식이며 수반되는 모든 특성을 포함합니다. 이전 예제에서 `dog`는 형식 유추를 도입하도록 다시 작성하고 나머지는 변경하지 않습니다.
+C#, Visual Basic 및 F# 지원 로컬 *형식 유추*. 형식 유추는 컴파일러가 오른쪽에 있는 식에서 왼쪽에 있는 식의 형식을 유추함을 의미합니다. 형식 안전성이 손상되거나 무시되는 것은 아닙니다. 결과 형식은 강력한 형식이며 수반되는 모든 특성을 포함합니다. 이전 예제에서 `dog`는 형식 유추를 도입하도록 다시 작성하고 나머지는 변경하지 않습니다.
 
 [!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L28-L34)]
 
-F#에는 C# 및 VB에 있는 메서드-지역 형식 유추보다 더 심화된 형식 유추 기능이 있습니다. 자세한 내용은 [형식 유추](../fsharp/language-reference/type-inference.md)를 참조하세요.
+F#에는 C# 및 Visual Basic에 있는 메서드-지역 형식 유추보다 더 심화된 형식 유추 기능이 있습니다. 자세한 내용은 [형식 유추](../fsharp/language-reference/type-inference.md)를 참조하세요.
 
 ## <a name="delegates-and-lambdas"></a>대리자 및 람다 식
 
@@ -97,7 +97,7 @@ F#에는 C# 및 VB에 있는 메서드-지역 형식 유추보다 더 심화된 
 
 제네릭은 프로그래머가 해당 클래스를 디자인할 때 *형식 매개 변수*를 도입할 수 있게 합니다. 이렇게 하면 클라이언트 코드(형식의 사용자)에서 형식 매개 변수 대신 사용할 형식을 정확하게 지정할 수 있습니다.
 
-제네릭은 프로그래머가 제네릭 데이터 구조를 구현할 수 있도록 돕기 위해 추가되었습니다. 제네릭이 도입되기 전에는 `List` 같은 형식을 제네릭으로 만들기 위해 `object` 형식인 요소로 작업해야 했습니다. 따라서 미묘한 런타임 오류와 함께 다양한 성능 및 의미 체계 문제가 발생했습니다. 후자의 경우 가장 심각한 문제는 예를 들어 데이터 구조에 정수와 문자열이 둘 다 포함되어 있을 때 목록의 멤버로 작업하면 `InvalidCastException`이 throw되는 것입니다.
+제네릭은 프로그래머가 제네릭 데이터 구조를 구현할 수 있도록 돕기 위해 추가되었습니다. 제네릭이 도입되기 전에는 `List` 같은 형식을 제네릭으로 만들기 위해 `object` 형식인 요소로 작업해야 했습니다. 따라서 미묘한 런타임 오류와 함께 다양한 성능 및 의미 체계 문제가 발생했습니다. 일반적인 런타임 오류는 데이터 구조에 정수와 문자열이 둘 다 포함된 경우 및 목록 멤버를 처리하는 동안 <xref:System.InvalidCastException>에서 throw되는 경우입니다.
 
 다음 샘플에서는 <xref:System.Collections.Generic.List%601> 형식 인스턴스를 사용하여 실행 중인 기본 프로그램을 보여 줍니다.
 
@@ -113,7 +113,7 @@ F#에는 C# 및 VB에 있는 메서드-지역 형식 유추보다 더 심화된 
 
 ## <a name="language-integrated-query-linq"></a>LINQ(Language-Integrated Query)
 
-LINQ는 데이터에 적용할 간단하고 선언적인 코드를 작성할 수 있게 해주는 C# 및 VB에 대한 강력한 기능 집합입니다. 데이터는 다양한 형식(예: 메모리 내 개체, SQL 데이터베이스 또는 XML 문서)일 수 있지만 작성하는 LINQ 코드는 일반적으로 각 데이터 소스마다 다르게 표시되지 않습니다.
+LINQ는 데이터에 적용할 간단하고 선언적인 코드를 작성할 수 있게 해주는 C# 및 Visual Basic에 대한 강력한 기능 집합입니다. 데이터는 다양한 형식(예: 메모리 내 개체, SQL 데이터베이스 또는 XML 문서)일 수 있지만 작성하는 LINQ 코드는 일반적으로 각 데이터 소스마다 다르게 표시되지 않습니다.
 
 자세히 알아보고 몇 가지 샘플을 확인하려면 [LINQ(Language-Integrated Query)](using-linq.md) 항목을 참조하세요.
 

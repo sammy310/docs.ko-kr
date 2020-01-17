@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 09fd95ba5f3aee59f2abdfbb4e64eb6202e2b873
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 5741e8cdd51e00d5459c4c1032a56682429aab17
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394423"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901724"
 ---
 ### <a name="mvc-pubternal-types-changed-to-internal"></a>MVC: "Pubternal" 유형이 내부로 변경됨
 
@@ -30,11 +30,11 @@ MVC의 일부 형식은 `public`이지만 `.Internal` 네임스페이스에 있�
 
 "pubternal" 형식의 우발적 사용이 일반적으로 발생하므로 이러한 프로젝트에 대한 호환성이 손상되는 변경이 발생하고 프레임워크를 유지 관리하는 기능이 제한됩니다.
 
-#### <a name="recommended-action"></a>권장 작업
+#### <a name="recommended-action"></a>권장 조치
 
 실제로 `public`이 되고 지원되는 새 네임스페이스로 이동한 형식을 사용하는 경우 새 네임스페이스와 일치하도록 참조를 업데이트합니다.
 
-`internal`로 표시된 형식을 사용하는 경우에는 다른 방법을 찾아야 합니다. 이전에 "pubternal" 형식은 공용으로 지원되지 않았습니다. 이러한 네임스페이스의 앱에 중요한 특정 형식이 있는 경우 [aspnet/AspNetCore ](https://github.com/aspnet/AspNetCore/issues)에서 문제를 해결합니다. 요청된 형식 `public`을 만드는 것을 고려할 수 있습니다.
+`internal`로 표시된 형식을 사용하는 경우에는 다른 방법을 찾아야 합니다. 이전에 "pubternal" 형식은 공용으로 지원되지 않았습니다. 이러한 네임스페이스의 앱에 중요한 특정 형식이 있는 경우 [dotnet/aspnetcore](https://github.com/dotnet/aspnetcore/issues)에서 문제를 해결합니다. 요청된 형식 `public`을 만드는 것을 고려할 수 있습니다.
 
 #### <a name="category"></a>범주
 

@@ -1,19 +1,18 @@
 ---
-title: '방법: 참조 같음(ID) 테스트 - C# 프로그래밍 가이드'
-ms.custom: seodec18
+title: 참조 같음(ID)을 테스트하는 방법 - C# 프로그래밍 가이드
 ms.date: 07/20/2015
 helpviewer_keywords:
 - object identity [C#]
 - reference equality [C#]
 ms.assetid: 91307fda-267b-4fd2-a338-2aada39ee791
-ms.openlocfilehash: 2b4b7b7bdd03077a78aa2a6375764fa86a885ef5
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 77ce2ef0ccf47d619134c120101ba2aa04f485e6
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588636"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75699056"
 ---
-# <a name="how-to-test-for-reference-equality-identity-c-programming-guide"></a>방법: 참조 같음(ID) 테스트(C# 프로그래밍 가이드)
+# <a name="how-to-test-for-reference-equality-identity-c-programming-guide"></a>참조 같음(ID)을 테스트하는 방법(C# 프로그래밍 가이드)
 형식에서 참조 같음 비교를 지원하기 위해 사용자 지정 논리를 구현할 필요는 없습니다. 이 기능은 정적 <xref:System.Object.ReferenceEquals%2A?displayProperty=nameWithType> 메서드가 모든 형식에 대해 제공합니다.  
   
  다음 예제에서는 두 변수에 *참조 같음*이 있는지 여부, 즉 메모리의 동일한 개체를 참조하는지 여부를 확인하는 방법을 보여 줍니다.  
@@ -27,6 +26,6 @@ ms.locfileid: "69588636"
   
  동일한 어셈블리 내의 상수 문자열은 항상 런타임에서 인턴 지정됩니다. 즉, 고유한 각 리터럴 문자열의 인스턴스 하나만 유지됩니다. 그러나 런타임은 런타임에 생성된 문자열이 인턴 지정되도록 보장하지 않으며, 서로 다른 어셈블리에 있는 동일한 두 상수 문자열이 인턴 지정되도록 보장하지도 않습니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [같음 비교](./equality-comparisons.md)

@@ -1,89 +1,65 @@
 ---
-title: ML.NET CLI 도구의 auto-train 명령
+title: ML.NET CLI 명령 참조
 description: ML.NET CLI 도구의 auto-train 명령에 대한 개요, 샘플 및 참조입니다.
-ms.date: 04/16/2019
-ms.custom: ''
-ms.openlocfilehash: 8363a16ab5e793e715131ac37283106517850439
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.date: 12/18/2019
+ms.openlocfilehash: 5e59eba91721b26622360818a73adb07a654dc28
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929196"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636122"
 ---
-# <a name="the-auto-train-command-in-mlnet-cli"></a>ML.NET CLI의 'auto-train' 명령
+# <a name="the-mlnet-cli-command-reference"></a>ML.NET CLI 명령 참조
+
+`auto-train` 명령은 ML.NET CLI 도구에서 제공하는 주 명령입니다. 이 명령을 사용하면 AutoML(자동화된 Machine Learning)을 사용하여 좋은 품질의 ML.NET 모델과 해당 모델을 실행/채점할 예제 C# 코드를 생성할 수 있습니다. 또한 모델을 학습할 C# 코드를 생성하여 모델의 알고리즘과 설정을 조사할 수 있습니다.
 
 > [!NOTE]
-> 이 항목은 현재 미리 보기 중인 ML.NET CLI 및 ML.NET AutoML에 대해 다루며, 자료는 변경될 수 있습니다.
+> 이 항목은 현재 미리 보기로 제공되는 ML.NET CLI 및 ML.NET AutoML을 참조하며, 자료는 변경될 수 있습니다.
 
-`auto-train` 명령은 ML.NET CLI 도구에서 제공하는 주 명령입니다. 이 명령을 사용하면 좋은 품질의 ML.NET 모델(연속된 모델 .zip 파일)과 해당 모델을 실행/채점할 예제 C# 코드를 생성할 수 있습니다. 또한, 사용자가 일반화된 “최적 모델”에 사용 중인 알고리즘과 설정을 살펴볼 수 있도록 해당 모델을 생성/학습할 C# 코드도 생성됩니다.
+## <a name="overview"></a>개요
 
-직접 코딩하지 않고 자체 데이터 세트에서 이러한 자산을 생성할 수 있으므로, 이미 ML.NET을 알고 있는 경우에도 생산성이 개선됩니다.
-
-현재 ML.NET CLI에서 지원하는 ML 작업은 다음과 같습니다.
-
-- `binary-classification`
-- `multiclass-classification`
-- `regression`
-
-- 이후: 기타 기계 학습 작업, 예:
-  - `recommendation`
-  - `anomaly-detection`
-  - `clustering`
-
-명령 프롬프트에서 사용 예제:
+사용 예:
 
 ```console
-> mlnet auto-train --task regression --dataset "cars.csv" --label-column-name price
+mlnet auto-train --task regression --dataset "cars.csv" --label-column-name price
 ```
 
 `mlnet auto-train` 명령은 다음 자산을 생성합니다.
 
 - 사용 준비가 된 Serialize된 모델 .zip("최적 모델")
-- 해당 생성된 모델을 실행/채점할 C# 코드(해당 모델으로 최종 사용자 앱에서 예측하기 위한)
-- 해당 모델(학습 목적)을 생성하기 위해 사용한 학습 코드가 포함된 C# 코드
+- 생성된 모델을 실행/채점할 C# 코드입니다.
+- 해당 모델을 생성하기 위해 사용한 학습 코드가 포함된 C# 코드입니다.
 
-처음 두 개의 자산은 생성된 ML 모델로 예측을 수행하기 위해 최종 사용자 앱(ASP.NET Core 웹앱, 서비스, 데스크톱 앱 등)에서 직접 사용할 수 있습니다.
+처음 두 개의 자산은 ML 모델로 예측을 수행하기 위해 최종 사용자 앱(ASP.NET Core 웹앱, 서비스, 데스크톱 앱 등)에서 직접 사용할 수 있습니다.
 
-세 번째 자산 학습 코드는 생성된 모델을 학습하기 위해 CLI에서 사용한 ML.NET API 코드를 보여주므로, CLI 및 ML.NET AutoML 엔진에서 선택한 특정 트레이너/알고리즘과 하이퍼 매개 변수를 살펴볼 수 있습니다.
+세 번째 자산인 학습 코드는 사용자에게 생성된 모델을 학습하기 위해 CLI에서 사용한 ML.NET API 코드를 표시하므로, 사용자는 특정 알고리즘 및 모델 설정을 살펴볼 수 있습니다.
 
-## <a name="the-auto-train-command-uses-the-automl-engine"></a>'auto-train' 명령은 AutoML 엔진을 사용합니다.
+## <a name="examples"></a>예
 
-CLI는 ML.NET AutoML 엔진(NuGet 패키지)을 사용하여 아래 다이어그램에 표시된 대로 최적 품질 모델을 인텔리전트하게 검색합니다.
-
-![이미지](./media/ml-net-automl-working-diagram.png "ML.NET CLI 내에서 작동하는 AutoML 엔진")
-
-auto-train 명령으로 ML.NET CLI 도구를 실행하면 이 도구가 다양한 알고리즘과 구성 조합으로 많은 반복을 시도하는 것을 보게 됩니다.
-
-## <a name="reference-for-auto-train-command"></a>'auto-train' 명령에 대한 참조
-
-## <a name="examples"></a>예제
-
-이진 분류 문제에 가장 간단한 CLI 명령(AutoML은 제공된 데이터에서 대부분의 구성을 추론해야 함):
+이진 분류 문제에 가장 간단한 CLI 명령(AutoML은 제공된 데이터에서 대부분의 구성을 추론):
 
 ```console
-> mlnet auto-train --task binary-classification --dataset "customer-feedback.tsv" --label-column-name Sentiment
+mlnet auto-train --task binary-classification --dataset "customer-feedback.tsv" --label-column-name Sentiment
 ```
 
 회귀 문제에 대한 다른 간단한 CLI 명령:
 
 ``` console
-> mlnet auto-train --task regression --dataset "cars.csv" --label-column-name Price
+mlnet auto-train --task regression --dataset "cars.csv" --label-column-name Price
 ```
 
 학습 데이터 세트, 테스트 데이터 세트 및 추가 사용자 지정 명시적 인수로 이진 분류 모델을 만들고 학습합니다.
 
 ```console
-> mlnet auto-train --task binary-classification --dataset "/MyDataSets/Population-Training.csv" --test-dataset "/MyDataSets/Population-Test.csv" --label-column-name "InsuranceRisk" --cache on --max-exploration-time 600
+mlnet auto-train --task binary-classification --dataset "/MyDataSets/Population-Training.csv" --test-dataset "/MyDataSets/Population-Test.csv" --label-column-name "InsuranceRisk" --cache on --max-exploration-time 600
 ```
 
-## <a name="name"></a>name
+## <a name="command-options"></a>명령 옵션
 
-`mlnet auto-train` - 제공된 데이터 세트에 따라 여러 모델(‘n’ 반복)을 학습하고 최종적으로 최적 모델을 선택한 후 Serialize된 .zip 파일로 저장하고 채점 및 학습을 위해 관련된 C# 코드를 생성합니다.
-
-## <a name="synopsis"></a>개요
+`mlnet auto-train`은 제공된 데이터 세트에 따라 여러 모델을 학습하고 최종적으로 최적 모델을 선택한 후 직렬화된 .zip 파일로 저장하고 채점 및 학습을 위해 관련된 C# 코드를 생성합니다.
 
 ```console
-> mlnet auto-train
+mlnet auto-train
 
 --task | --mltask | -T <value>
 
@@ -116,11 +92,9 @@ auto-train 명령으로 ML.NET CLI 도구를 실행하면 이 도구가 다양�
 
 ```
 
-잘못된 입력 옵션을 사용할 경우 CLI 도구는 유효한 입력 목록과 해당 인수가 누락되었음을 설명하는 오류 메시지를 표시합니다(해당하는 경우).
+잘못된 입력 옵션으로 인해 CLI 도구는 유효한 입력 목록과 오류 메시지를 내보냅니다.
 
-## <a name="options"></a>옵션
-
- ----------------------------------------------------------
+## <a name="task"></a>작업
 
 `--task | --mltask | -T`(문자열)
 
@@ -130,11 +104,9 @@ auto-train 명령으로 ML.NET CLI 도구를 실행하면 이 도구가 다양�
 - `binary-classification` - ML 모델 결과에 두 개의 가능한 범주 부울 값(0 또는 1)이 있는지 선택합니다.
 - `multiclass-classification` - ML 모델 결과에 여러 개의 가능한 범주 값이 있는지 선택합니다.
 
-이후 릴리스에서는 `recommendations`, `clustering` 및 `ranking` 등의 추가적인 ML 작업 및 시나리오가 지원됩니다.
+이 인수에는 단 하나의 ML 작업만 제공되어야 합니다.
 
- 이 인수에는 단 하나의 ML 작업만 제공되어야 합니다.
-
- ----------------------------------------------------------
+## <a name="dataset"></a>데이터 세트
 
 `--dataset | -d`(문자열)
 
@@ -144,7 +116,7 @@ auto-train 명령으로 ML.NET CLI 도구를 실행하면 이 도구가 다양�
 
 - *B: 학습 데이터 세트 파일:* 또한 사용자가 모델 유효성 검사에 데이터 세트를 제공하고 있다면(`--test-dataset` 및 옵션으로 `--validation-dataset`) `--dataset` 인수는 “학습 데이터 세트”만 있음을 의미합니다. 예를 들어, 모델 품질의 유효성을 검사하고 정확도 메트릭을 획득하기 위해 80% - 20% 접근법을 사용할 경우 “학습 데이터 세트”는 데이터의 80%, “테스트 데이터 세트”는 데이터의 20%를 차지하게 됩니다.
 
-----------------------------------------------------------
+## <a name="test-dataset"></a>테스트 데이터 세트
 
 `--test-dataset | -t`(문자열)
 
@@ -154,7 +126,7 @@ auto-train 명령으로 ML.NET CLI 도구를 실행하면 이 도구가 다양�
 
 --유효성 검사-데이터 세트가 사용되지 않을 경우 `--test-dataset` 인수는 옵션입니다. 이 경우, 사용자는 세 개의 인수를 사용해야 합니다.
 
-----------------------------------------------------------
+## <a name="validation-dataset"></a>유효성 검사 데이터 세트
 
 `--validation-dataset | -v`(문자열)
 
@@ -181,7 +153,7 @@ auto-train 명령으로 ML.NET CLI 도구를 실행하면 이 도구가 다양�
 
 어떠한 경우에도 이러한 백분율은 이미 분할된 파일을 제공할 CLI를 사용하는 사용자가 결정합니다.
 
-----------------------------------------------------------
+## <a name="label-column-name"></a>레이블 열 이름
 
 `--label-column-name | -n`(문자열)
 
@@ -189,7 +161,7 @@ auto-train 명령으로 ML.NET CLI 도구를 실행하면 이 도구가 다양�
 
 이 인수는 *분류 문제* 등의 감독된 ML 작업에만 사용됩니다. *클러스터링* 등의 감독되지 않은 ML 작업에는 사용할 수 없습니다.
 
-----------------------------------------------------------
+## <a name="label-column-index"></a>레이블 열 인덱스
 
 `--label-column-index | -i`(int)
 
@@ -199,7 +171,7 @@ auto-train 명령으로 ML.NET CLI 도구를 실행하면 이 도구가 다양�
 
 이 인수는 *분류 문제* 등의 감독된 ML 작업에만 사용됩니다. *클러스터링* 등의 감독되지 않은 ML 작업에는 사용할 수 없습니다.
 
-----------------------------------------------------------
+## <a name="ignore-columns"></a>열 무시
 
 `--ignore-columns | -I`(문자열)
 
@@ -207,16 +179,16 @@ auto-train 명령으로 ML.NET CLI 도구를 실행하면 이 도구가 다양�
 
 무시하려는 열 이름을 지정합니다. ', '(공백이 있는 쉼표) 또는 ' '(공백)을 사용하여 여러 열 이름을 구분합니다. 공백이 있는 열 이름에 큰따옴표를 사용할 수 있습니다(예: "logged in").
 
-예제:
+예:
 
 `--ignore-columns email, address, id, logged_in`
 
-----------------------------------------------------------
+## <a name="has-header"></a>헤더 있음
 
 `--has-header | -h`(bool)
 
 데이터 세트 파일에 헤더 행이 있는지 지정합니다.
-가능한 값은 다음과 같습니다.
+가능한 값은
 
 - `true`
 - `false`
@@ -225,7 +197,7 @@ auto-train 명령으로 ML.NET CLI 도구를 실행하면 이 도구가 다양�
 
 `--label-column-name` 인수를 사용하려면 데이터 세트 파일에 헤더가 있고 `--has-header`가 `true`로 설정되어 있어야 합니다(기본값).
 
-----------------------------------------------------------
+## <a name="max-exploration-time"></a>최대 탐색 시간
 
 `--max-exploration-time | -x`(문자열)
 
@@ -235,7 +207,7 @@ auto-train 명령으로 ML.NET CLI 도구를 실행하면 이 도구가 다양�
 
 반복에 필요한 시간은 데이터 세트의 크기에 따라 다를 수 있습니다.
 
-----------------------------------------------------------
+## <a name="cache"></a>캐시
 
 `--cache | -c`(문자열)
 
@@ -253,7 +225,7 @@ auto-train 명령으로 ML.NET CLI 도구를 실행하면 이 도구가 다양�
 
 `--cache` 매개 변수를 지정하지 않는다면 캐시 `auto` 구성이 기본적으로 사용됩니다.
 
-----------------------------------------------------------
+## <a name="name"></a>이름
 
 `--name | -N`(문자열)
 
@@ -261,13 +233,13 @@ auto-train 명령으로 ML.NET CLI 도구를 실행하면 이 도구가 다양�
 
 ML.NET 모델 파일(.ZIP 파일)도 같은 이름을 갖게 됩니다.
 
-----------------------------------------------------------
+## <a name="output-path"></a>출력 경로
 
 `--output-path | -o`(문자열)
 
 생성된 출력을 저장할 루트 위치/폴더입니다. 기본값은 현재 디렉터리입니다.
 
-----------------------------------------------------------
+## <a name="verbosity"></a>자세한 정도
 
 `--verbosity | -V`(문자열)
 
@@ -281,17 +253,15 @@ ML.NET 모델 파일(.ZIP 파일)도 같은 이름을 갖게 됩니다.
 
 기본적으로, CLI 도구는 작동 중인지 그리고, 가능하면 남은 시간 또는 완료된 시간 비율을 언급하는 등, 일부 최소 피드백(최소)을 표시해야 합니다.
 
-----------------------------------------------------------
+## <a name="help"></a>도움말
 
 `-h|--help`
 
 각 명령의 매개 변수에 대한 설명과 함께 명령에 대한 도움말을 출력합니다.
 
-----------------------------------------------------------
+## <a name="see-also"></a>참조
 
-## <a name="see-also"></a>참고 항목
-
-- [ML.NET CLI 도구 설치 방법](../how-to-guides/install-ml-net-cli.md)
-- [ML.NET CLI로 모델 학습 자동화](../automate-training-with-cli.md)
-- [자습서: ML.NET CLI를 사용하여 이진 분류자 자동 생성](../tutorials/mlnet-cli.md)
+- [ML.NET CLI 도구를 설치하는 방법](../how-to-guides/install-ml-net-cli.md)
+- [ML.NET CLI 개요](../automate-training-with-cli.md)
+- [자습서: ML.NET CLI를 사용하여 감정 분석](../tutorials/sentiment-analysis-cli.md)
 - [ML.NET CLI의 원격 분석](../resources/ml-net-cli-telemetry.md)
