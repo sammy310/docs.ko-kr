@@ -1,29 +1,29 @@
 ---
-title: '방법: XML 트리의 모양 변환(C#)'
+title: XML 트리의 모양을 변환하는 방법(C#)
 ms.date: 07/20/2015
 ms.assetid: 93c5d426-dea2-4709-a991-60204de42e8f
-ms.openlocfilehash: c6f78decdcc32d202f4a0f1e51a012dce8aa7d6c
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 91f91ed6fea5371fae2ce67a413f4825f37af6c3
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592226"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347300"
 ---
-# <a name="how-to-transform-the-shape-of-an-xml-tree-c"></a><span data-ttu-id="7f879-102">방법: XML 트리의 모양 변환(C#)</span><span class="sxs-lookup"><span data-stu-id="7f879-102">How to: Transform the Shape of an XML Tree (C#)</span></span>
-<span data-ttu-id="7f879-103">XML 문서의 *모양*은 요소 이름, 특성 이름 및 계층 구조의 특징을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="7f879-103">The *shape* of an XML document refers to its element names, attribute names, and the characteristics of its hierarchy.</span></span>  
+# <a name="how-to-transform-the-shape-of-an-xml-tree-c"></a><span data-ttu-id="bd0e0-102">XML 트리의 모양을 변환하는 방법(C#)</span><span class="sxs-lookup"><span data-stu-id="bd0e0-102">How to transform the shape of an XML tree (C#)</span></span>
+<span data-ttu-id="bd0e0-103">XML 문서의 *모양*은 요소 이름, 특성 이름 및 계층 구조의 특징을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="bd0e0-103">The *shape* of an XML document refers to its element names, attribute names, and the characteristics of its hierarchy.</span></span>  
   
- <span data-ttu-id="7f879-104">XML 문서의 모양을 변경해야 하는 경우가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7f879-104">Sometimes you will have to change the shape of an XML document.</span></span> <span data-ttu-id="7f879-105">예를 들어, 다른 요소 및 특성 이름이 필요한 다른 시스템에 기존 XML 문서를 보내야 할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7f879-105">For example, you might have to send an existing XML document to another system that requires different element and attribute names.</span></span> <span data-ttu-id="7f879-106">문서를 살펴보면서 필요에 따라 요소를 삭제하고 요소의 이름을 바꿀 수 있지만 함수 생성을 사용하면 읽고 유지 관리하기가 더 쉬운 코드가 생성됩니다.</span><span class="sxs-lookup"><span data-stu-id="7f879-106">You could go through the document, deleting and renaming elements as required, but using functional construction results in more readable and maintainable code.</span></span> <span data-ttu-id="7f879-107">함수 생성에 대한 자세한 내용은 [함수 생성(LINQ to XML)(C#)](./functional-construction-linq-to-xml.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="7f879-107">For more information about functional construction, see [Functional Construction (LINQ to XML) (C#)](./functional-construction-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="bd0e0-104">XML 문서의 모양을 변경해야 하는 경우가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="bd0e0-104">Sometimes you will have to change the shape of an XML document.</span></span> <span data-ttu-id="bd0e0-105">예를 들어, 다른 요소 및 특성 이름이 필요한 다른 시스템에 기존 XML 문서를 보내야 할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="bd0e0-105">For example, you might have to send an existing XML document to another system that requires different element and attribute names.</span></span> <span data-ttu-id="bd0e0-106">문서를 살펴보면서 필요에 따라 요소를 삭제하고 요소의 이름을 바꿀 수 있지만 함수 생성을 사용하면 읽고 유지 관리하기가 더 쉬운 코드가 생성됩니다.</span><span class="sxs-lookup"><span data-stu-id="bd0e0-106">You could go through the document, deleting and renaming elements as required, but using functional construction results in more readable and maintainable code.</span></span> <span data-ttu-id="bd0e0-107">함수 생성에 대한 자세한 내용은 [함수 생성(LINQ to XML)(C#)](./functional-construction-linq-to-xml.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="bd0e0-107">For more information about functional construction, see [Functional Construction (LINQ to XML) (C#)](./functional-construction-linq-to-xml.md).</span></span>  
   
- <span data-ttu-id="7f879-108">첫 번째 예제에서는 XML 문서의 구성을 변경하고</span><span class="sxs-lookup"><span data-stu-id="7f879-108">The first example changes the organization of the XML document.</span></span> <span data-ttu-id="7f879-109">트리의 한 위치에서 다른 위치로 복합 요소를 이동합니다.</span><span class="sxs-lookup"><span data-stu-id="7f879-109">It moves complex elements from one location in the tree to another.</span></span>  
+ <span data-ttu-id="bd0e0-108">첫 번째 예제에서는 XML 문서의 구성을 변경하고</span><span class="sxs-lookup"><span data-stu-id="bd0e0-108">The first example changes the organization of the XML document.</span></span> <span data-ttu-id="bd0e0-109">트리의 한 위치에서 다른 위치로 복합 요소를 이동합니다.</span><span class="sxs-lookup"><span data-stu-id="bd0e0-109">It moves complex elements from one location in the tree to another.</span></span>  
   
- <span data-ttu-id="7f879-110">이 항목의 두 번째 예제에서는 소스 문서와 모양이 다른 XML 문서를 만들고</span><span class="sxs-lookup"><span data-stu-id="7f879-110">The second example in this topic creates an XML document with a different shape than the source document.</span></span> <span data-ttu-id="7f879-111">요소 이름의 대/소문자를 변경한 다음 일부 요소의 이름을 바꾸고 소스 트리의 일부 요소를 변환된 트리 외부에 둡니다.</span><span class="sxs-lookup"><span data-stu-id="7f879-111">It changes the casing of the element names, renames some elements, and leaves some elements from the source tree out of the transformed tree.</span></span>  
+ <span data-ttu-id="bd0e0-110">이 항목의 두 번째 예제에서는 소스 문서와 모양이 다른 XML 문서를 만들고</span><span class="sxs-lookup"><span data-stu-id="bd0e0-110">The second example in this topic creates an XML document with a different shape than the source document.</span></span> <span data-ttu-id="bd0e0-111">요소 이름의 대/소문자를 변경한 다음 일부 요소의 이름을 바꾸고 소스 트리의 일부 요소를 변환된 트리 외부에 둡니다.</span><span class="sxs-lookup"><span data-stu-id="bd0e0-111">It changes the casing of the element names, renames some elements, and leaves some elements from the source tree out of the transformed tree.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="7f879-112">예</span><span class="sxs-lookup"><span data-stu-id="7f879-112">Example</span></span>  
- <span data-ttu-id="7f879-113">다음 코드에서는 포함된 쿼리 식을 사용하여 XML 파일의 모양을 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="7f879-113">The following code changes the shape of an XML file using embedded query expressions.</span></span>  
+## <a name="example"></a><span data-ttu-id="bd0e0-112">예제</span><span class="sxs-lookup"><span data-stu-id="bd0e0-112">Example</span></span>  
+ <span data-ttu-id="bd0e0-113">다음 코드에서는 포함된 쿼리 식을 사용하여 XML 파일의 모양을 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="bd0e0-113">The following code changes the shape of an XML file using embedded query expressions.</span></span>  
   
- <span data-ttu-id="7f879-114">이 예제의 소스 XML 문서에는 `Customers` 요소 아래에 모든 고객이 포함된 `Root` 요소가 들어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7f879-114">The source XML document in this example contains a `Customers` element under the `Root` element that contains all customers.</span></span> <span data-ttu-id="7f879-115">또한 `Orders` 요소 아래에 모든 주문이 포함된 `Root` 요소도 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7f879-115">It also contains an `Orders` element under the `Root` element that contains all orders.</span></span> <span data-ttu-id="7f879-116">이 예제에서는 각 고객의 주문이 `Orders` 요소에 있는 `Customer` 요소에 포함되어 있는 새 XML 트리를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="7f879-116">This example creates a new XML tree in which the orders for each customer are contained in an `Orders` element within the `Customer` element.</span></span> <span data-ttu-id="7f879-117">원래 문서에도 `CustomerID` 요소에 `Order` 요소가 포함되어 있습니다. 이 요소는 모양이 다시 변경된 문서에서 제거됩니다.</span><span class="sxs-lookup"><span data-stu-id="7f879-117">The original document also contains a `CustomerID` element in the `Order` element; this element will be removed from the re-shaped document.</span></span>  
+ <span data-ttu-id="bd0e0-114">이 예제의 소스 XML 문서에는 `Customers` 요소 아래에 모든 고객이 포함된 `Root` 요소가 들어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="bd0e0-114">The source XML document in this example contains a `Customers` element under the `Root` element that contains all customers.</span></span> <span data-ttu-id="bd0e0-115">또한 `Orders` 요소 아래에 모든 주문이 포함된 `Root` 요소도 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="bd0e0-115">It also contains an `Orders` element under the `Root` element that contains all orders.</span></span> <span data-ttu-id="bd0e0-116">이 예제에서는 각 고객의 주문이 `Orders` 요소에 있는 `Customer` 요소에 포함되어 있는 새 XML 트리를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="bd0e0-116">This example creates a new XML tree in which the orders for each customer are contained in an `Orders` element within the `Customer` element.</span></span> <span data-ttu-id="bd0e0-117">원래 문서에도 `CustomerID` 요소에 `Order` 요소가 포함되어 있습니다. 이 요소는 모양이 다시 변경된 문서에서 제거됩니다.</span><span class="sxs-lookup"><span data-stu-id="bd0e0-117">The original document also contains a `CustomerID` element in the `Order` element; this element will be removed from the re-shaped document.</span></span>  
   
- <span data-ttu-id="7f879-118">이 예제에서는 XML 문서로을 사용합니다. [샘플 XML 파일: Customers 및 Orders(LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).</span><span class="sxs-lookup"><span data-stu-id="7f879-118">This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).</span></span>  
+ <span data-ttu-id="bd0e0-118">이 예제에서는 XML 문서로을 사용합니다. [샘플 XML 파일: Customers 및 Orders(LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).</span><span class="sxs-lookup"><span data-stu-id="bd0e0-118">This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).</span></span>  
   
 ```csharp  
 XElement co = XElement.Load("CustomersOrders.xml");  
@@ -49,7 +49,7 @@ XElement newCustOrd =
 Console.WriteLine(newCustOrd);  
 ```  
   
- <span data-ttu-id="7f879-119">이 코드의 결과는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="7f879-119">This code produces the following output:</span></span>  
+ <span data-ttu-id="bd0e0-119">이 코드의 결과는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="bd0e0-119">This code produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -85,12 +85,12 @@ Console.WriteLine(newCustOrd);
   . . .  
 ```  
   
-## <a name="example"></a><span data-ttu-id="7f879-120">예</span><span class="sxs-lookup"><span data-stu-id="7f879-120">Example</span></span>  
- <span data-ttu-id="7f879-121">이 예제에서는 일부 요소의 이름을 바꾸고 일부 특성을 요소로 변환합니다.</span><span class="sxs-lookup"><span data-stu-id="7f879-121">This example renames some elements and converts some attributes to elements.</span></span>  
+## <a name="example"></a><span data-ttu-id="bd0e0-120">예제</span><span class="sxs-lookup"><span data-stu-id="bd0e0-120">Example</span></span>  
+ <span data-ttu-id="bd0e0-121">이 예제에서는 일부 요소의 이름을 바꾸고 일부 특성을 요소로 변환합니다.</span><span class="sxs-lookup"><span data-stu-id="bd0e0-121">This example renames some elements and converts some attributes to elements.</span></span>  
   
- <span data-ttu-id="7f879-122">코드에서는 `ConvertAddress` 개체의 목록을 반환하는 <xref:System.Xml.Linq.XElement>를 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="7f879-122">The code calls `ConvertAddress`, which returns a list of <xref:System.Xml.Linq.XElement> objects.</span></span> <span data-ttu-id="7f879-123">메서드의 인수는 `Address` 특성의 값이 `Type`인 `"Shipping"` 복합 요소를 확인하는 쿼리입니다.</span><span class="sxs-lookup"><span data-stu-id="7f879-123">The argument to the method is a query that determines the `Address` complex element where the `Type` attribute has a value of `"Shipping"`.</span></span>  
+ <span data-ttu-id="bd0e0-122">코드에서는 `ConvertAddress` 개체의 목록을 반환하는 <xref:System.Xml.Linq.XElement>를 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="bd0e0-122">The code calls `ConvertAddress`, which returns a list of <xref:System.Xml.Linq.XElement> objects.</span></span> <span data-ttu-id="bd0e0-123">메서드의 인수는 `Address` 특성의 값이 `Type`인 `"Shipping"` 복합 요소를 확인하는 쿼리입니다.</span><span class="sxs-lookup"><span data-stu-id="bd0e0-123">The argument to the method is a query that determines the `Address` complex element where the `Type` attribute has a value of `"Shipping"`.</span></span>  
   
- <span data-ttu-id="7f879-124">이 예제에서는 XML 문서로을 사용합니다. [샘플 XML 파일: 일반적인 구매 주문(LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md).</span><span class="sxs-lookup"><span data-stu-id="7f879-124">This example uses the following XML document: [Sample XML File: Typical Purchase Order (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md).</span></span>  
+ <span data-ttu-id="bd0e0-124">이 예제에서는 XML 문서로을 사용합니다. [샘플 XML 파일: 일반적인 구매 주문(LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md).</span><span class="sxs-lookup"><span data-stu-id="bd0e0-124">This example uses the following XML document: [Sample XML File: Typical Purchase Order (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md).</span></span>  
   
 ```csharp  
 static IEnumerable<XElement> ConvertAddress(XElement add)  
@@ -123,7 +123,7 @@ static void Main(string[] args)
 }  
 ```  
   
- <span data-ttu-id="7f879-125">이 코드의 결과는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="7f879-125">This code produces the following output:</span></span>  
+ <span data-ttu-id="bd0e0-125">이 코드의 결과는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="bd0e0-125">This code produces the following output:</span></span>  
   
 ```xml  
 <PO>  

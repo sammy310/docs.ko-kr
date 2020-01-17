@@ -1,21 +1,21 @@
 ---
-title: '방법: 서로 다른 파일의 콘텐츠 조인(LINQ)(C#)'
+title: 서로 다른 파일의 콘텐츠를 조인하는 방법(LINQ)(C#)
 ms.date: 06/27/2018
 ms.assetid: aa2d12a6-70a9-492f-a6db-b2b850d46811
-ms.openlocfilehash: eb2e5d8e598b7b671afe9271e6e591c5ce0ada2b
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 49b70c15b3be2efea5cf6a9e7d85df944a67c730
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253544"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345880"
 ---
-# <a name="how-to-join-content-from-dissimilar-files-linq-c"></a><span data-ttu-id="5bd2a-102">방법: 서로 다른 파일의 콘텐츠 조인(LINQ)(C#)</span><span class="sxs-lookup"><span data-stu-id="5bd2a-102">How to: Join Content from Dissimilar Files (LINQ) (C#)</span></span>
+# <a name="how-to-join-content-from-dissimilar-files-linq-c"></a><span data-ttu-id="b5736-102">서로 다른 파일의 콘텐츠를 조인하는 방법(LINQ)(C#)</span><span class="sxs-lookup"><span data-stu-id="b5736-102">How to join content from dissimilar files (LINQ) (C#)</span></span>
 
-<span data-ttu-id="5bd2a-103">이 예제에서는 일치하는 키로 사용되는 공통 값을 공유하는 두 개의 쉼표로 구분된 파일의 데이터를 조인하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="5bd2a-103">This example shows how to join data from two comma-delimited files that share a common value that is used as a matching key.</span></span> <span data-ttu-id="5bd2a-104">이 방법은 두 스프레드시트나 한 스프레드시트와 다른 형식으로 된 파일의 데이터를 하나의 새 파일로 결합해야 하는 경우에 유용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5bd2a-104">This technique can be useful if you have to combine data from two spreadsheets, or from a spreadsheet and from a file that has another format, into a new file.</span></span> <span data-ttu-id="5bd2a-105">모든 종류의 구조적 텍스트에서 작동하도록 예제를 수정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5bd2a-105">You can modify the example to work with any kind of structured text.</span></span>  
+<span data-ttu-id="b5736-103">이 예제에서는 일치하는 키로 사용되는 공통 값을 공유하는 두 개의 쉼표로 구분된 파일의 데이터를 조인하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="b5736-103">This example shows how to join data from two comma-delimited files that share a common value that is used as a matching key.</span></span> <span data-ttu-id="b5736-104">이 방법은 두 스프레드시트나 한 스프레드시트와 다른 형식으로 된 파일의 데이터를 하나의 새 파일로 결합해야 하는 경우에 유용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b5736-104">This technique can be useful if you have to combine data from two spreadsheets, or from a spreadsheet and from a file that has another format, into a new file.</span></span> <span data-ttu-id="b5736-105">모든 종류의 구조적 텍스트에서 작동하도록 예제를 수정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b5736-105">You can modify the example to work with any kind of structured text.</span></span>  
   
-## <a name="to-create-the-data-files"></a><span data-ttu-id="5bd2a-106">데이터 파일을 만들려면</span><span class="sxs-lookup"><span data-stu-id="5bd2a-106">To create the data files</span></span>
+## <a name="to-create-the-data-files"></a><span data-ttu-id="b5736-106">데이터 파일을 만들려면</span><span class="sxs-lookup"><span data-stu-id="b5736-106">To create the data files</span></span>
   
-1. <span data-ttu-id="5bd2a-107">다음 줄을 *scores.csv* 파일에 복사하고 파일을 프로젝트 폴더에 저장합니다.</span><span class="sxs-lookup"><span data-stu-id="5bd2a-107">Copy the following lines into a file that is named *scores.csv* and save it to your project folder.</span></span> <span data-ttu-id="5bd2a-108">파일은 스프레드시트 데이터를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="5bd2a-108">The file represents spreadsheet data.</span></span> <span data-ttu-id="5bd2a-109">열 1은 학생 ID이고, 열 2-5는 시험 점수입니다.</span><span class="sxs-lookup"><span data-stu-id="5bd2a-109">Column 1 is the student's ID, and columns 2 through 5 are test scores.</span></span>  
+1. <span data-ttu-id="b5736-107">다음 줄을 *scores.csv* 파일에 복사하고 파일을 프로젝트 폴더에 저장합니다.</span><span class="sxs-lookup"><span data-stu-id="b5736-107">Copy the following lines into a file that is named *scores.csv* and save it to your project folder.</span></span> <span data-ttu-id="b5736-108">파일은 스프레드시트 데이터를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="b5736-108">The file represents spreadsheet data.</span></span> <span data-ttu-id="b5736-109">열 1은 학생 ID이고, 열 2-5는 시험 점수입니다.</span><span class="sxs-lookup"><span data-stu-id="b5736-109">Column 1 is the student's ID, and columns 2 through 5 are test scores.</span></span>  
   
     ```csv  
     111, 97, 92, 81, 60  
@@ -32,7 +32,7 @@ ms.locfileid: "70253544"
     122, 94, 92, 91, 91  
     ```  
   
-2. <span data-ttu-id="5bd2a-110">다음 줄을 *names.csv* 파일에 복사하고 파일을 프로젝트 폴더에 저장합니다.</span><span class="sxs-lookup"><span data-stu-id="5bd2a-110">Copy the following lines into a file that is named *names.csv* and save it to your project folder.</span></span> <span data-ttu-id="5bd2a-111">파일은 학생의 성, 이름 및 학생 ID를 포함하는 스프레드시트를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="5bd2a-111">The file represents a spreadsheet that contains the student's last name, first name, and student ID.</span></span>  
+2. <span data-ttu-id="b5736-110">다음 줄을 *names.csv* 파일에 복사하고 파일을 프로젝트 폴더에 저장합니다.</span><span class="sxs-lookup"><span data-stu-id="b5736-110">Copy the following lines into a file that is named *names.csv* and save it to your project folder.</span></span> <span data-ttu-id="b5736-111">파일은 학생의 성, 이름 및 학생 ID를 포함하는 스프레드시트를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="b5736-111">The file represents a spreadsheet that contains the student's last name, first name, and student ID.</span></span>  
   
     ```csv  
     Omelchenko,Svetlana,111  
@@ -49,7 +49,7 @@ ms.locfileid: "70253544"
     Tucker,Michael,122  
     ```  
   
-## <a name="example"></a><span data-ttu-id="5bd2a-112">예</span><span class="sxs-lookup"><span data-stu-id="5bd2a-112">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="b5736-112">예제</span><span class="sxs-lookup"><span data-stu-id="b5736-112">Example</span></span>  
 
 ```csharp
 using System;
@@ -124,7 +124,7 @@ Tucker, 94, 92, 91, 91
  */  
 ```
 
-## <a name="see-also"></a><span data-ttu-id="5bd2a-113">참고 항목</span><span class="sxs-lookup"><span data-stu-id="5bd2a-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b5736-113">참조</span><span class="sxs-lookup"><span data-stu-id="b5736-113">See also</span></span>
 
-- [<span data-ttu-id="5bd2a-114">LINQ 및 문자열(C#)</span><span class="sxs-lookup"><span data-stu-id="5bd2a-114">LINQ and Strings (C#)</span></span>](./linq-and-strings.md)
-- [<span data-ttu-id="5bd2a-115">LINQ 및 파일 디렉터리(C#)</span><span class="sxs-lookup"><span data-stu-id="5bd2a-115">LINQ and File Directories (C#)</span></span>](./linq-and-file-directories.md)
+- [<span data-ttu-id="b5736-114">LINQ 및 문자열(C#)</span><span class="sxs-lookup"><span data-stu-id="b5736-114">LINQ and Strings (C#)</span></span>](./linq-and-strings.md)
+- [<span data-ttu-id="b5736-115">LINQ 및 파일 디렉터리(C#)</span><span class="sxs-lookup"><span data-stu-id="b5736-115">LINQ and File Directories (C#)</span></span>](./linq-and-file-directories.md)

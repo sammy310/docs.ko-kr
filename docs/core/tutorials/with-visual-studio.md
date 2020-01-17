@@ -1,88 +1,142 @@
 ---
-title: Visual Studio 2017에서 .NET Core를 사용하여 C# Hello World 애플리케이션 빌드
-description: Visual Studio 2017에서 C#을 사용하여 간단한 .NET Core 콘솔 애플리케이션을 빌드하는 방법을 알아봅니다.
+title: Visual Studio에서 .NET Core를 사용하여 Hello World 애플리케이션 만들기
+description: Visual Studio에서 C# 또는 Visual Basic을 사용하여 첫 번째 .NET Core 콘솔 애플리케이션을 만드는 방법을 알아봅니다.
 author: BillWagner
 ms.author: wiwagn
-ms.date: 09/13/2017
-ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: cc7d78006998b79fe9d522e71883ce1af817c051
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.date: 12/09/2019
+ms.custom: vs-dotnet
+ms.openlocfilehash: ba996e4add1cfe44681154b00a6530b1f3e70b37
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428554"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714005"
 ---
-# <a name="build-a-c-hello-world-application-with-the-net-core-sdk-in-visual-studio-2017"></a><span data-ttu-id="53c35-103">Visual Studio 2017에서 .NET Core SDK를 사용하여 C# Hello World 애플리케이션 빌드</span><span class="sxs-lookup"><span data-stu-id="53c35-103">Build a C# Hello World application with the .NET Core SDK in Visual Studio 2017</span></span>
+# <a name="tutorial-create-your-first-net-core-console-application-in-visual-studio-2019"></a><span data-ttu-id="41a8d-103">자습서: Visual Studio 2019에서 첫 번째 .NET Core 콘솔 애플리케이션 만들기</span><span class="sxs-lookup"><span data-stu-id="41a8d-103">Tutorial: Create your first .NET Core console application in Visual Studio 2019</span></span>
 
-<span data-ttu-id="53c35-104">이 문서에서는 Visual Studio 2017에서 C#을 사용하여 간단한 .NET Core 콘솔 애플리케이션을 빌드, 디버그 및 게시하는 과정을 단계별로 소개합니다.</span><span class="sxs-lookup"><span data-stu-id="53c35-104">This article provides a step-by-step introduction to building, debugging, and publishing a simple .NET Core console application using C# in Visual Studio 2017.</span></span> <span data-ttu-id="53c35-105">Visual Studio 2017은 .NET Core 애플리케이션 빌드를 위해 필요한 모든 기능을 갖춘 개발 환경을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="53c35-105">Visual Studio 2017 provides a full-featured development environment for building .NET Core applications.</span></span> <span data-ttu-id="53c35-106">플랫폼 특정 종속성이 없는 애플리케이션은 .NET Core에서 대상으로 하는 모든 플랫폼과 .NET Core가 설치된 모든 시스템에서 실행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="53c35-106">As long as the application doesn't have platform-specific dependencies, the application can run on any platform that .NET Core targets and on any system that has .NET Core installed.</span></span>
+<span data-ttu-id="41a8d-104">이 문서에서는 Visual Studio 2019에서 Hello World .NET Core 콘솔 애플리케이션을 만들고 실행하는 과정을 단계별로 소개합니다.</span><span class="sxs-lookup"><span data-stu-id="41a8d-104">This article provides a step-by-step introduction to create and run a Hello World .NET Core console application in Visual Studio 2019.</span></span> <span data-ttu-id="41a8d-105">Hello World 애플리케이션은 일반적으로 초보자에게 새 프로그래밍 언어를 소개하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="41a8d-105">A Hello World application is traditionally used to introduce beginners to a new programming language.</span></span> <span data-ttu-id="41a8d-106">이 프로그램은 단순히 “Hello World!” 라는 문구를 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="41a8d-106">This program simply displays the phrase "Hello World!"</span></span> <span data-ttu-id="41a8d-107">화면에 출력했습니다.</span><span class="sxs-lookup"><span data-stu-id="41a8d-107">on the screen.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="53c35-107">전제 조건</span><span class="sxs-lookup"><span data-stu-id="53c35-107">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="41a8d-108">사전 요구 사항</span><span class="sxs-lookup"><span data-stu-id="41a8d-108">Prerequisites</span></span>
 
-<span data-ttu-id="53c35-108">“.NET Core 플랫폼 간 개발” 워크로드가 설치된 [Visual Studio 2017 이상](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)</span><span class="sxs-lookup"><span data-stu-id="53c35-108">[Visual Studio 2017 or later](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) with the ".NET Core cross-platform development" workload installed.</span></span> <span data-ttu-id="53c35-109">.NET Core 2.1 버전 이상을 사용하여 앱을 개발할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="53c35-109">You can develop your app with .NET Core 2.1 or later versions.</span></span>
+- <span data-ttu-id="41a8d-109">**.NET Core 플랫폼 간 개발** 워크로드가 설치된 [Visual Studio 2019 버전 16.4](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 이상</span><span class="sxs-lookup"><span data-stu-id="41a8d-109">[Visual Studio 2019 version 16.4 or a later version](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) with the **.NET Core cross-platform development** workload installed.</span></span> <span data-ttu-id="41a8d-110">이 워크로드를 선택하면 .NET Core 3.1 SDK가 자동으로 설치됩니다.</span><span class="sxs-lookup"><span data-stu-id="41a8d-110">.NET Core 3.1 SDK is automatically installed when you select this workload.</span></span>
 
-<span data-ttu-id="53c35-110">자세한 내용은 [.NET Core 종속성 및 요구 사항](../install/sdk.md?tabs=netcore30&pivots=os-windows#install-with-visual-studio) 문서를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="53c35-110">For more information, see the [.NET Core dependencies and requirements](../install/sdk.md?tabs=netcore30&pivots=os-windows#install-with-visual-studio)article.</span></span>
+<span data-ttu-id="41a8d-111">자세한 내용은 [.NET Core SDK 설치](../install/sdk.md?pivots=os-windows) 문서의 [Visual Studio를 사용하여 설치](../install/sdk.md?pivots=os-windows#install-with-visual-studio) 섹션을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="41a8d-111">For more information, see the [Install with Visual Studio](../install/sdk.md?pivots=os-windows#install-with-visual-studio) section on the [Install the .NET Core SDK](../install/sdk.md?pivots=os-windows) article.</span></span>
 
-## <a name="a-simple-hello-world-application"></a><span data-ttu-id="53c35-111">간단한 Hello World 애플리케이션</span><span class="sxs-lookup"><span data-stu-id="53c35-111">A simple Hello World application</span></span>
+## <a name="create-the-app"></a><span data-ttu-id="41a8d-112">앱 만들기</span><span class="sxs-lookup"><span data-stu-id="41a8d-112">Create the app</span></span>
 
-<span data-ttu-id="53c35-112">먼저 간단한 "Hello World" 콘솔 애플리케이션을 만들어 보겠습니다.</span><span class="sxs-lookup"><span data-stu-id="53c35-112">Begin by creating a simple "Hello World" console application.</span></span> <span data-ttu-id="53c35-113">아래 단계를 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="53c35-113">Follow these steps:</span></span>
+<span data-ttu-id="41a8d-113">다음 지침에서는 간단한 Hello World 콘솔 애플리케이션을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="41a8d-113">The following instructions create a simple Hello World console application:</span></span>
 
-1. <span data-ttu-id="53c35-114">Visual Studio를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="53c35-114">Launch Visual Studio.</span></span> <span data-ttu-id="53c35-115">메뉴 모음에서 **파일** > **새로 만들기** > **프로젝트**를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="53c35-115">Select **File** > **New** > **Project** from the menu bar.</span></span> <span data-ttu-id="53c35-116">**새 프로젝트** 대화 상자에서 **Visual C#** 노드와 **.NET Core** 노드를 차례로 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="53c35-116">In the **New Project** dialog, select the **Visual C#** node followed by the **.NET Core** node.</span></span> <span data-ttu-id="53c35-117">그런 다음 **콘솔 앱(.NET Core)** 프로젝트 템플릿을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="53c35-117">Then select the **Console App (.NET Core)** project template.</span></span> <span data-ttu-id="53c35-118">**이름** 텍스트 상자에 "HelloWorld"를 입력합니다.</span><span class="sxs-lookup"><span data-stu-id="53c35-118">In the **Name** text box, type "HelloWorld".</span></span> <span data-ttu-id="53c35-119">**확인** 단추를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="53c35-119">Select the **OK** button.</span></span>
+<!-- markdownlint-disable MD025 -->
 
-   ![콘솔 앱이 선택된 새 프로젝트 대화 상자](./media/with-visual-studio/visual-studio-new-project.png)
+# <a name="ctabcsharp"></a>[<span data-ttu-id="41a8d-114">C#</span><span class="sxs-lookup"><span data-stu-id="41a8d-114">C#</span></span>](#tab/csharp)
 
-1. <span data-ttu-id="53c35-121">Visual Studio에서는 템플릿을 사용하여 프로젝트를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="53c35-121">Visual Studio uses the template to create your project.</span></span> <span data-ttu-id="53c35-122">.NET Core용 C# 콘솔 애플리케이션 템플릿은 <xref:System.String> 배열을 인수로 사용하는 단일 메서드 `Main`로 `Program` 클래스를 자동으로 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="53c35-122">The C# Console Application template for .NET Core automatically defines a class, `Program`, with a single method, `Main`, that takes a <xref:System.String> array as an argument.</span></span> <span data-ttu-id="53c35-123">`Main`은 애플리케이션 진입점으로, 애플리케이션을 시작할 때 런타임에 의해 자동으로 호출되는 메서드입니다.</span><span class="sxs-lookup"><span data-stu-id="53c35-123">`Main` is the application entry point, the method that's called automatically by the runtime when it launches the application.</span></span> <span data-ttu-id="53c35-124">애플리케이션이 시작될 때 제공되는 모든 명령줄 인수는 *args* 배열에서 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="53c35-124">Any command-line arguments supplied when the application is launched are available in the *args* array.</span></span>
+1. <span data-ttu-id="41a8d-115">Visual Studio 2019를 엽니다.</span><span class="sxs-lookup"><span data-stu-id="41a8d-115">Open Visual Studio 2019.</span></span>
+
+1. <span data-ttu-id="41a8d-116">“HelloWorld”라는 새로운 C# .NET Core 콘솔 앱 프로젝트를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="41a8d-116">Create a new C# .NET Core console app project named "HelloWorld".</span></span>
+
+   1. <span data-ttu-id="41a8d-117">시작 창에서 **새 프로젝트 만들기**를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="41a8d-117">On the start window, choose **Create a new project**.</span></span>
+
+      ![Visual Studio 시작 창에서 새 프로젝트 만들기 버튼 선택](./media/with-visual-studio/start-window.png)
+
+   1. <span data-ttu-id="41a8d-119">**새 프로젝트 만들기** 페이지의 검색 상자에 **console**을 입력합니다.</span><span class="sxs-lookup"><span data-stu-id="41a8d-119">On the **Create a new project** page, enter **console** in the search box.</span></span> <span data-ttu-id="41a8d-120">그런 다음, 언어 목록에서 **C#** 을 선택한 다음, 플랫폼 목록에서 **모든 플랫폼**을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="41a8d-120">Next, choose **C#** from the Language list, and then choose **All platforms** from the Platform list.</span></span> <span data-ttu-id="41a8d-121">**콘솔 앱(.NET Core)** 템플릿을 선택하고 **다음**을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="41a8d-121">Choose the **Console App (.NET Core)** template, and then choose **Next**.</span></span>
+
+      ![필터가 선택된 새 프로젝트 만들기 창](./media/with-visual-studio/create-new-project.png)
+
+      > [!TIP]
+      > <span data-ttu-id="41a8d-123">.NET Core 템플릿이 표시되지 않으면 필요한 워크로드가 설치되지 않은 것일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="41a8d-123">If you don't see the .NET Core templates, you're probably missing the required workload installed.</span></span> <span data-ttu-id="41a8d-124">**원하는 항목을 찾을 수 없나요?** 메시지에서 **추가 도구 및 기능 설치** 링크를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="41a8d-124">Under the **Not finding what you're looking for?** message, choose the **Install more tools and features** link.</span></span> <span data-ttu-id="41a8d-125">Visual Studio 설치 관리자가 열립니다.</span><span class="sxs-lookup"><span data-stu-id="41a8d-125">The Visual Studio Installer opens.</span></span> <span data-ttu-id="41a8d-126">**.NET Core 플랫폼 간 개발** 워크로드가 설치되어 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="41a8d-126">Make sure you have the **.NET Core cross-platform development** workload installed.</span></span>
+
+   1. <span data-ttu-id="41a8d-127">**새 프로젝트 구성** 페이지에서 **프로젝트 이름** 상자에 **HelloWorld**를 입력합니다.</span><span class="sxs-lookup"><span data-stu-id="41a8d-127">On the **Configure your new project** page,  enter **HelloWorld** in the **Project name** box.</span></span> <span data-ttu-id="41a8d-128">그런 다음, **만들기**를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="41a8d-128">Then, choose **Create**.</span></span>
+
+      ![프로젝트 이름, 위치 및 솔루션 이름 필드를 사용하여 새 프로젝트 창을 구성합니다.](./media/with-visual-studio/configure-new-project.png)
+
+   <span data-ttu-id="41a8d-130">.NET Core용 C# 콘솔 애플리케이션 템플릿은 <xref:System.String> 배열을 인수로 사용하는 단일 메서드 `Main`로 `Program` 클래스를 자동으로 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="41a8d-130">The C# Console Application template for .NET Core automatically defines a class, `Program`, with a single method, `Main`, that takes a <xref:System.String> array as an argument.</span></span> <span data-ttu-id="41a8d-131">`Main`은 애플리케이션 진입점으로, 애플리케이션을 시작할 때 런타임에 의해 자동으로 호출되는 메서드입니다.</span><span class="sxs-lookup"><span data-stu-id="41a8d-131">`Main` is the application entry point, the method that's called automatically by the runtime when it launches the application.</span></span> <span data-ttu-id="41a8d-132">애플리케이션이 시작될 때 제공되는 모든 명령줄 인수는 *args* 배열에서 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="41a8d-132">Any command-line arguments supplied when the application is launched are available in the *args* array.</span></span>
 
    ![Visual Studio 및 새 HelloWorld 프로젝트](./media/with-visual-studio/visual-studio-main-window.png)
 
-   <span data-ttu-id="53c35-126">템플릿은 간단한 "Hello World" 애플리케이션을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="53c35-126">The template creates a simple "Hello World" application.</span></span> <span data-ttu-id="53c35-127"><xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> 메서드를 호출하여 리터럴 문자열 "Hello World!"를</span><span class="sxs-lookup"><span data-stu-id="53c35-127">It calls the <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> method to display the literal string "Hello World!"</span></span> <span data-ttu-id="53c35-128">콘솔 창에 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="53c35-128">in the console window.</span></span> <span data-ttu-id="53c35-129">도구 모음에서 녹색 화살표가 있는 **HelloWorld** 단추를 선택하여 디버그 모드에서 프로그램을 실행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="53c35-129">By selecting the **HelloWorld** button with the green arrow on the toolbar, you can run the program in Debug mode.</span></span> <span data-ttu-id="53c35-130">이렇게 하면 콘솔 창이 잠깐만 표시되었다가 닫힙니다.</span><span class="sxs-lookup"><span data-stu-id="53c35-130">If you do, the console window is visible for only a brief time interval before it closes.</span></span> <span data-ttu-id="53c35-131">`Main` 메서드의 단일 문이 실행되는 즉시 `Main` 메서드가 종료되고 애플리케이션도 종료되기 때문입니다.</span><span class="sxs-lookup"><span data-stu-id="53c35-131">This occurs because the `Main` method terminates and the application ends as soon as the single statement in the `Main` method executes.</span></span>
+# <a name="visual-basictabvb"></a>[<span data-ttu-id="41a8d-134">Visual Basic</span><span class="sxs-lookup"><span data-stu-id="41a8d-134">Visual Basic</span></span>](#tab/vb)
 
-1. <span data-ttu-id="53c35-132">애플리케이션이 콘솔 창을 닫기 전에 일시 중지되도록 하려면 <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> 메서드 호출 바로 뒤에 다음 코드를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="53c35-132">To cause the application to pause before it closes the console window, add the following code immediately after the call to the <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> method:</span></span>
+1. <span data-ttu-id="41a8d-135">Visual Studio 2019를 엽니다.</span><span class="sxs-lookup"><span data-stu-id="41a8d-135">Open Visual Studio 2019.</span></span>
 
-   ```csharp
-   Console.Write("Press any key to continue...");
-   Console.ReadKey(true);
-   ```
+1. <span data-ttu-id="41a8d-136">“HelloWorld”라는 새로운 Visual Basic .NET Core 콘솔 앱 프로젝트를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="41a8d-136">Create a new Visual Basic .NET Core console app project named "HelloWorld".</span></span>
 
-   <span data-ttu-id="53c35-133">이 코드는 프로그램을 중지하려면 아무 키나 누르라는 메시지를 표시하며, 사용자가 아무 키나 누르면 프로그램이 일시 중지됩니다.</span><span class="sxs-lookup"><span data-stu-id="53c35-133">This code prompts the user to press any key and then pauses the program until a key is pressed.</span></span>
+   1. <span data-ttu-id="41a8d-137">시작 창에서 **새 프로젝트 만들기**를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="41a8d-137">On the start window, choose **Create a new project**.</span></span>
 
-1. <span data-ttu-id="53c35-134">메뉴 모음에서 **빌드** > **솔루션 빌드**를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="53c35-134">On the menu bar, select **Build** > **Build Solution**.</span></span> <span data-ttu-id="53c35-135">이렇게 하면 프로그램이 IL(중간 언어)로 컴파일됩니다. 이 컴파일 결과는 JIT(Just-In-Time) 컴파일러에 의해 이진 코드로 변환됩니다.</span><span class="sxs-lookup"><span data-stu-id="53c35-135">This compiles your program into an intermediate language (IL) that's converted into binary code by a just-in-time (JIT) compiler.</span></span>
+      ![Visual Studio 시작 창에서 새 프로젝트 만들기 버튼 선택](./media/with-visual-studio/start-window.png)
 
-1. <span data-ttu-id="53c35-136">도구 모음에서 녹색 화살표가 있는 **HelloWorld** 단추를 선택하여 프로그램을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="53c35-136">Run the program by selecting the **HelloWorld** button with the green arrow on the toolbar.</span></span>
+   1. <span data-ttu-id="41a8d-139">**새 프로젝트 만들기** 페이지의 검색 상자에 **console**을 입력합니다.</span><span class="sxs-lookup"><span data-stu-id="41a8d-139">On the **Create a new project** page, enter **console** in the search box.</span></span> <span data-ttu-id="41a8d-140">다음으로 언어 목록에서 **Visual Basic**을 선택한 다음, 플랫폼 목록에서 **모든 플랫폼**을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="41a8d-140">Next, choose **Visual Basic** from the Language list, and then choose **All platforms** from the Platform list.</span></span> <span data-ttu-id="41a8d-141">**콘솔 앱(.NET Core)** 템플릿을 선택하고 **다음**을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="41a8d-141">Choose the **Console App (.NET Core)** template, and then choose **Next**.</span></span>
+
+      ![콘솔 앱(.NET Framework)에 대한 Visual Basic 템플릿을 선택합니다.](./media/with-visual-studio/vb/create-new-project.png)
+
+      > [!TIP]
+      > <span data-ttu-id="41a8d-143">.NET Core 템플릿이 표시되지 않으면 필요한 워크로드가 설치되지 않은 것일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="41a8d-143">If you don't see the .NET Core templates, you're probably missing the required workload installed.</span></span> <span data-ttu-id="41a8d-144">**원하는 항목을 찾을 수 없나요?** 메시지에서 **추가 도구 및 기능 설치** 링크를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="41a8d-144">Under the **Not finding what you're looking for?** message, choose the **Install more tools and features** link.</span></span> <span data-ttu-id="41a8d-145">Visual Studio 설치 관리자가 열립니다.</span><span class="sxs-lookup"><span data-stu-id="41a8d-145">The Visual Studio Installer opens.</span></span> <span data-ttu-id="41a8d-146">**.NET Core 플랫폼 간 개발** 워크로드가 설치되어 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="41a8d-146">Make sure you have the **.NET Core cross-platform development** workload installed.</span></span>
+
+   1. <span data-ttu-id="41a8d-147">**새 프로젝트 구성** 페이지에서 **프로젝트 이름** 상자에 **HelloWorld**를 입력합니다.</span><span class="sxs-lookup"><span data-stu-id="41a8d-147">On the **Configure your new project** page,  enter **HelloWorld** in the **Project name** box.</span></span> <span data-ttu-id="41a8d-148">그런 다음, **만들기**를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="41a8d-148">Then, choose **Create**.</span></span>
+
+   <span data-ttu-id="41a8d-149">.NET Core용 콘솔 앱 템플릿은 <xref:System.String> 배열을 인수로 사용하는 단일 메서드 `Main`로 `Program` 클래스를 자동으로 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="41a8d-149">The console app template for .NET Core automatically defines a class, `Program`, with a single method, `Main`, that takes a <xref:System.String> array as an argument.</span></span> <span data-ttu-id="41a8d-150">`Main`은 애플리케이션 진입점으로, 애플리케이션을 시작할 때 런타임에 의해 자동으로 호출되는 메서드입니다.</span><span class="sxs-lookup"><span data-stu-id="41a8d-150">`Main` is the application entry point, the method that's called automatically by the runtime when it launches the application.</span></span> <span data-ttu-id="41a8d-151">애플리케이션이 시작될 때 제공되는 모든 명령줄 인수는 `args` 매개 변수에서 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="41a8d-151">Any command-line arguments supplied when the application is launched are available in the `args` parameter.</span></span>
+
+   ![Visual Studio 및 새 HelloWorld 프로젝트](./media/with-visual-studio/vb/visual-studio-main-window.png)
+
+---
+
+   <span data-ttu-id="41a8d-153">템플릿은 간단한 "Hello World" 애플리케이션을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="41a8d-153">The template creates a simple "Hello World" application.</span></span> <span data-ttu-id="41a8d-154"><xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> 메서드를 호출하여 리터럴 문자열 "Hello World!"를</span><span class="sxs-lookup"><span data-stu-id="41a8d-154">It calls the <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> method to display the literal string "Hello World!"</span></span> <span data-ttu-id="41a8d-155">콘솔 창에 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="41a8d-155">in the console window.</span></span>
+
+## <a name="run-the-app"></a><span data-ttu-id="41a8d-156">앱 실행</span><span class="sxs-lookup"><span data-stu-id="41a8d-156">Run the app</span></span>
+
+1. <span data-ttu-id="41a8d-157">프로그램을 실행하려면 도구 모음에서 **HelloWorld**를 선택하거나 **F5**를 누릅니다.</span><span class="sxs-lookup"><span data-stu-id="41a8d-157">To run the program, choose **HelloWorld** on the toolbar, or press **F5**.</span></span>
+
+   ![HelloWorld 실행 단추가 선택된 Visual Studio 도구 모음](./media/with-visual-studio/run-program.png)
+
+   <span data-ttu-id="41a8d-159">콘솔 창이 열리고 "Hello World!"라는 텍스트가</span><span class="sxs-lookup"><span data-stu-id="41a8d-159">A console window opens with the text "Hello World!"</span></span> <span data-ttu-id="41a8d-160">화면에 표시되며 일부 Visual Studio 디버그 정보도 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="41a8d-160">printed on the screen and some Visual Studio debug information.</span></span>
 
    ![“Hello World 계속하려면 아무 키나 누르세요.”를 표시하는 콘솔 창](./media/with-visual-studio/hello-world-console.png)
 
-1. <span data-ttu-id="53c35-138">콘솔 창을 닫으려면 아무 키나 누릅니다.</span><span class="sxs-lookup"><span data-stu-id="53c35-138">Press any key to close the console window.</span></span>
+1. <span data-ttu-id="41a8d-162">콘솔 창을 닫으려면 아무 키나 누릅니다.</span><span class="sxs-lookup"><span data-stu-id="41a8d-162">Press any key to close the console window.</span></span>
 
-## <a name="enhancing-the-hello-world-application"></a><span data-ttu-id="53c35-139">Hello World 애플리케이션 개선</span><span class="sxs-lookup"><span data-stu-id="53c35-139">Enhancing the Hello World application</span></span>
+## <a name="enhance-the-app"></a><span data-ttu-id="41a8d-163">앱 향상</span><span class="sxs-lookup"><span data-stu-id="41a8d-163">Enhance the app</span></span>
 
-<span data-ttu-id="53c35-140">사용자에게 이름을 입력하라는 메시지를 표시한 다음 사용자 이름을 날짜 및 시간과 함께 표시하도록 애플리케이션을 개선합니다.</span><span class="sxs-lookup"><span data-stu-id="53c35-140">Enhance your application to prompt the user for their name and display it along with the date and time.</span></span> <span data-ttu-id="53c35-141">프로그램을 수정하고 테스트하려면 다음을 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="53c35-141">To modify and test the program, do the following:</span></span>
+<span data-ttu-id="41a8d-164">사용자에게 이름을 입력하라는 메시지를 표시한 다음 사용자 이름을 날짜 및 시간과 함께 표시하도록 애플리케이션을 개선합니다.</span><span class="sxs-lookup"><span data-stu-id="41a8d-164">Enhance your application to prompt the user for their name and display it along with the date and time.</span></span> <span data-ttu-id="41a8d-165">다음 지침에 따라 앱을 수정하고 다시 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="41a8d-165">The following instructions modify and run the app again:</span></span>
 
-1. <span data-ttu-id="53c35-142">코드 창에서 `static void Main(string[] args)` 줄 다음에 오는 여는 중괄호 바로 뒤, 첫 번째 닫는 중괄호 앞에 다음 C# 코드를 입력합니다.</span><span class="sxs-lookup"><span data-stu-id="53c35-142">Enter the following C# code in the code window immediately after the opening bracket that follows the `static void Main(string[] args)` line and before the first closing curly bracket:</span></span>
+# <a name="ctabcsharp"></a>[<span data-ttu-id="41a8d-166">C#</span><span class="sxs-lookup"><span data-stu-id="41a8d-166">C#</span></span>](#tab/csharp)
+
+1. <span data-ttu-id="41a8d-167">현재 `Console.WriteLine`을 호출하는 줄인 `Main` 메서드의 내용을 다음 코드로 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="41a8d-167">Replace the contents of the `Main` method, which is currently just the line that calls `Console.WriteLine`, with the following code:</span></span>
 
    [!code-csharp[GettingStarted#1](~/samples/snippets/csharp/getting_started/with_visual_studio/helloworld.cs#1)]
 
-   <span data-ttu-id="53c35-143">이 코드는 `Main` 메서드의 콘텐츠를 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="53c35-143">This code replaces the contents of the `Main` method.</span></span>
+   <span data-ttu-id="41a8d-168">이 코드는 "What is your name?"을</span><span class="sxs-lookup"><span data-stu-id="41a8d-168">This code displays "What is your name?"</span></span> <span data-ttu-id="41a8d-169">콘솔 창에 표시하고 사용자가 문자열을 입력한 후 Enter 키를 누를 때까지 기다립니다.</span><span class="sxs-lookup"><span data-stu-id="41a8d-169">in the console window and waits until the user enters a string followed by the Enter key.</span></span> <span data-ttu-id="41a8d-170">이 문자열을 `name`이라는 변수에 저장합니다.</span><span class="sxs-lookup"><span data-stu-id="41a8d-170">It stores this string into a variable named `name`.</span></span> <span data-ttu-id="41a8d-171">또한 현재 현지 시간을 포함하는 <xref:System.DateTime.Now?displayProperty=nameWithType> 속성 값을 검색한 후 `date`라는 변수에 할당합니다.</span><span class="sxs-lookup"><span data-stu-id="41a8d-171">It also retrieves the value of the <xref:System.DateTime.Now?displayProperty=nameWithType> property, which contains the current local time, and assigns it to a variable named `date`.</span></span> <span data-ttu-id="41a8d-172">마지막으로, [보간된 문자열](../../csharp/language-reference/tokens/interpolated.md)을 사용하여 콘솔 창에 이러한 값을 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="41a8d-172">Finally, it uses an [interpolated string](../../csharp/language-reference/tokens/interpolated.md) to display these values in the console window.</span></span>
 
-   ![업데이트된 Main 메서드가 포함된 Visual Studio 프로그램 C# 파일](./media/with-visual-studio/visual-csharp-code-window.png)
+1. <span data-ttu-id="41a8d-173">**빌드** > **솔루션 빌드**를 선택하여 프로그램을 컴파일합니다.</span><span class="sxs-lookup"><span data-stu-id="41a8d-173">Compile the program by choosing **Build** > **Build Solution**.</span></span>
 
-   <span data-ttu-id="53c35-145">이 코드는 "What is your name?"을</span><span class="sxs-lookup"><span data-stu-id="53c35-145">This code displays "What is your name?"</span></span> <span data-ttu-id="53c35-146">콘솔 창에 표시하고 사용자가 문자열을 입력한 후 Enter 키를 누를 때까지 기다립니다.</span><span class="sxs-lookup"><span data-stu-id="53c35-146">in the console window and waits until the user enters a string followed by the Enter key.</span></span> <span data-ttu-id="53c35-147">이 문자열을 `name`이라는 변수에 저장합니다.</span><span class="sxs-lookup"><span data-stu-id="53c35-147">It stores this string into a variable named `name`.</span></span> <span data-ttu-id="53c35-148">또한 현재 현지 시간을 포함하는 <xref:System.DateTime.Now?displayProperty=nameWithType> 속성 값을 검색한 후 `date`라는 변수에 할당합니다.</span><span class="sxs-lookup"><span data-stu-id="53c35-148">It also retrieves the value of the <xref:System.DateTime.Now?displayProperty=nameWithType> property, which contains the current local time, and assigns it to a variable named `date`.</span></span> <span data-ttu-id="53c35-149">마지막으로, [보간된 문자열](../../csharp/language-reference/tokens/interpolated.md)을 사용하여 콘솔 창에 이러한 값을 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="53c35-149">Finally, it uses an [interpolated string](../../csharp/language-reference/tokens/interpolated.md) to display these values in the console window.</span></span>
+1. <span data-ttu-id="41a8d-174">프로그램을 실행하려면 도구 모음에서 **HelloWorld**를 선택하거나 **F5**를 누릅니다.</span><span class="sxs-lookup"><span data-stu-id="41a8d-174">To run the program, choose **HelloWorld** on the toolbar, or press **F5**.</span></span>
 
-1. <span data-ttu-id="53c35-150">**빌드** > **솔루션 빌드**를 선택하여 프로그램을 컴파일합니다.</span><span class="sxs-lookup"><span data-stu-id="53c35-150">Compile the program by choosing **Build** > **Build Solution**.</span></span>
-
-1. <span data-ttu-id="53c35-151">도구 모음에서 녹색 화살표를 선택하거나, F5 키를 누르거나, **디버그** > **디버깅 시작** 메뉴 항목을 선택하여 Visual Studio의 디버그 모드에서 프로그램을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="53c35-151">Run the program in Debug mode in Visual Studio by selecting the green arrow on the toolbar, pressing F5, or choosing the **Debug** > **Start Debugging** menu item.</span></span> <span data-ttu-id="53c35-152">이름을 입력하고 Enter 키를 눌러 프롬프트에 응답합니다.</span><span class="sxs-lookup"><span data-stu-id="53c35-152">Respond to the prompt by entering a name and pressing the Enter key.</span></span>
+1. <span data-ttu-id="41a8d-175">이름을 입력하고 **Enter** 키를 눌러 프롬프트에 응답합니다.</span><span class="sxs-lookup"><span data-stu-id="41a8d-175">Respond to the prompt by entering a name and pressing the **Enter** key.</span></span>
 
    ![수정된 프로그램 출력이 표시된 콘솔 창](./media/with-visual-studio/hello-world-update.png)
 
-1. <span data-ttu-id="53c35-154">콘솔 창을 닫으려면 아무 키나 누릅니다.</span><span class="sxs-lookup"><span data-stu-id="53c35-154">Press any key to close the console window.</span></span>
+1. <span data-ttu-id="41a8d-177">콘솔 창을 닫으려면 아무 키나 누릅니다.</span><span class="sxs-lookup"><span data-stu-id="41a8d-177">Press any key to close the console window.</span></span>
 
-<span data-ttu-id="53c35-155">애플리케이션을 만들고 실행했습니다.</span><span class="sxs-lookup"><span data-stu-id="53c35-155">You've created and run your application.</span></span> <span data-ttu-id="53c35-156">전문가 수준의 애플리케이션을 개발하려면 애플리케이션 릴리스 준비를 위해 몇 가지 추가 단계를 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="53c35-156">To develop a professional application, take some additional steps to make your application ready for release:</span></span>
+# <a name="visual-basictabvb"></a>[<span data-ttu-id="41a8d-178">Visual Basic</span><span class="sxs-lookup"><span data-stu-id="41a8d-178">Visual Basic</span></span>](#tab/vb)
 
-- <span data-ttu-id="53c35-157">애플리케이션 디버그에 대한 자세한 내용은 [Visual Studio 2017을 사용하여 .NET Core Hello World 애플리케이션 디버그](debugging-with-visual-studio.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="53c35-157">For information on debugging your application, see [Debug your .NET Core Hello World application using Visual Studio 2017](debugging-with-visual-studio.md).</span></span>
+1. <span data-ttu-id="41a8d-179">현재 `Console.WriteLine`을 호출하는 줄인 `Main` 메서드의 내용을 다음 코드로 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="41a8d-179">Replace the contents of the `Main` method, which is currently just the line that calls `Console.WriteLine`, with the following code:</span></span>
 
-- <span data-ttu-id="53c35-158">애플리케이션의 배포 가능한 버전을 개발 및 게시하는 방법에 대한 자세한 내용은 [Visual Studio 2017을 사용하여 .NET Core Hello World 애플리케이션 게시](publishing-with-visual-studio.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="53c35-158">For information on developing and publishing a distributable version of your application, see [Publish your .NET Core Hello World application with Visual Studio 2017](publishing-with-visual-studio.md).</span></span>
+   [!code-vb[GettingStarted#1](~/samples/snippets/core/tutorials/vb-with-visual-studio/helloworld.vb#1)]
 
-## <a name="related-articles"></a><span data-ttu-id="53c35-159">관련 문서</span><span class="sxs-lookup"><span data-stu-id="53c35-159">Related articles</span></span>
+   <span data-ttu-id="41a8d-180">이 코드는 "What is your name?"을</span><span class="sxs-lookup"><span data-stu-id="41a8d-180">This code displays "What is your name?"</span></span> <span data-ttu-id="41a8d-181">콘솔 창에 표시하고 사용자가 문자열을 입력한 후 Enter 키를 누를 때까지 기다립니다.</span><span class="sxs-lookup"><span data-stu-id="41a8d-181">in the console window and waits until the user enters a string followed by the Enter key.</span></span> <span data-ttu-id="41a8d-182">이 문자열을 `name`이라는 변수에 저장합니다.</span><span class="sxs-lookup"><span data-stu-id="41a8d-182">It stores this string into a variable named `name`.</span></span> <span data-ttu-id="41a8d-183">또한 현재 현지 시간을 포함하는 <xref:System.DateTime.Now?displayProperty=nameWithType> 속성 값을 검색한 후 `date`라는 변수에 할당합니다.</span><span class="sxs-lookup"><span data-stu-id="41a8d-183">It also retrieves the value of the <xref:System.DateTime.Now?displayProperty=nameWithType> property, which contains the current local time, and assigns it to a variable named `date`.</span></span> <span data-ttu-id="41a8d-184">마지막으로, [보간된 문자열](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)을 사용하여 콘솔 창에 이러한 값을 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="41a8d-184">Finally, it uses an [interpolated string](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) to display these values in the console window.</span></span>
 
-<span data-ttu-id="53c35-160">콘솔 애플리케이션 대신 .NET Core 및 Visual Studio 2017을 사용하여 클래스 라이브러리를 빌드할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="53c35-160">Instead of a console application, you can also build a class library with .NET Core and Visual Studio 2017.</span></span> <span data-ttu-id="53c35-161">단계별 지침을 보려면 [Visual Studio 2017에서 C# 및 .NET Core로 클래스 라이브러리 빌드](library-with-visual-studio.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="53c35-161">For a step-by-step introduction, see [Building a class library with C# and .NET Core in Visual Studio 2017](library-with-visual-studio.md).</span></span>
+1. <span data-ttu-id="41a8d-185">**빌드** > **솔루션 빌드**를 선택하여 프로그램을 컴파일합니다.</span><span class="sxs-lookup"><span data-stu-id="41a8d-185">Compile the program by choosing **Build** > **Build Solution**.</span></span>
 
-<span data-ttu-id="53c35-162">다운로드할 수 있는 코드 편집기인 [Visual Studio Code](https://code.visualstudio.com/)를 사용하여 Mac, Linux 및 Windows에서 .NET Core 콘솔 응용 프로그램을 개발할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="53c35-162">You can also develop a .NET Core console app on Mac, Linux, and Windows by using [Visual Studio Code](https://code.visualstudio.com/), a downloadable code editor.</span></span> <span data-ttu-id="53c35-163">단계별 자습서에 대해서는 [Visual Studio Code 시작](with-visual-studio-code.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="53c35-163">For a step-by-step tutorial, see [Getting Started with Visual Studio Code](with-visual-studio-code.md).</span></span>
+1. <span data-ttu-id="41a8d-186">프로그램을 실행하려면 도구 모음에서 **HelloWorld**를 선택하거나 **F5**를 누릅니다.</span><span class="sxs-lookup"><span data-stu-id="41a8d-186">To run the program, choose **HelloWorld** on the toolbar, or press **F5**.</span></span>
+
+1. <span data-ttu-id="41a8d-187">이름을 입력하고 **Enter** 키를 눌러 프롬프트에 응답합니다.</span><span class="sxs-lookup"><span data-stu-id="41a8d-187">Respond to the prompt by entering a name and pressing the **Enter** key.</span></span>
+
+   ![수정된 프로그램 출력이 표시된 콘솔 창](./media/with-visual-studio/hello-world-update.png)
+
+1. <span data-ttu-id="41a8d-189">콘솔 창을 닫으려면 아무 키나 누릅니다.</span><span class="sxs-lookup"><span data-stu-id="41a8d-189">Press any key to close the console window.</span></span>
+
+---
+
+## <a name="next-steps"></a><span data-ttu-id="41a8d-190">다음 단계</span><span class="sxs-lookup"><span data-stu-id="41a8d-190">Next steps</span></span>
+
+<span data-ttu-id="41a8d-191">이 문서에서는 첫 번째 .NET Core 애플리케이션을 만들고 실행했습니다.</span><span class="sxs-lookup"><span data-stu-id="41a8d-191">In this article, you've created and run your first .NET Core application.</span></span> <span data-ttu-id="41a8d-192">다음 단계에서는 앱을 디버깅합니다.</span><span class="sxs-lookup"><span data-stu-id="41a8d-192">In the next step, you debug your app.</span></span>
+
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="41a8d-193">Visual Studio에서 .NET Core Hello World 애플리케이션 디버그</span><span class="sxs-lookup"><span data-stu-id="41a8d-193">Debug a .NET Core Hello World application in Visual Studio</span></span>](debugging-with-visual-studio.md)
