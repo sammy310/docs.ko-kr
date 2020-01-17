@@ -10,18 +10,18 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: 1eb1267ae0b08d558d5afc41d03270917473a669
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 83f28c50c53281692e1c3c6d55cc55e8d9304ad9
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900918"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116593"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>스트리밍 공급자(WCF Data Services)
 
 데이터 서비스에서 BLOB(Binary Large Object) 데이터를 노출할 수 있습니다. 이 이진 데이터는 비디오 및 오디오 스트림, 이미지, 문서 파일 또는 다른 형식의 이진 미디어를 나타낼 수 있습니다. 데이터 모델의 엔터티에 이진 속성이 하나 이상 포함되어 있는 경우 데이터 서비스가 이 이진 데이터를 응답 피드의 항목 안에 base-64로 인코딩하여 반환합니다. 이러한 방식으로 많은 이진 데이터를 로드 하 고 serialize 하면 성능에 영향을 줄 수 있으므로 OData (Open Data Protocol)는 자신이 속한 엔터티와 독립적으로 이진 데이터를 검색 하기 위한 메커니즘을 정의 합니다. 이 작업은 엔터티의 이진 데이터를 하나 이상의 데이터 스트림으로 구분하여 수행됩니다.
 
-- 미디어 리소스 - 비디오, 오디오, 이미지 또는 다른 형식의 미디어 리소스 스트림과 같은 엔터티에 속하는 이진 데이터입니다.
+- 미디어 리소스-비디오, 오디오, 이미지 또는 다른 유형의 미디어 리소스 스트림과 같은 엔터티에 속하는 이진 데이터입니다.
 
 - 미디어 링크 항목 - 관련 미디어 리소스 스트림에 대한 참조가 있는 엔터티입니다.
 
@@ -88,14 +88,14 @@ WCF Data Services 런타임에 <xref:System.Data.Services.Providers.IDataService
 
 ## <a name="enabling-large-binary-streams-in-the-hosting-environment"></a>호스팅 환경에서 큰 이진 스트림 사용
 
-ASP.NET 웹 응용 프로그램에서 데이터 서비스를 만들 때 WCF (Windows Communication Foundation)를 사용 하 여 HTTP 프로토콜 구현을 제공 합니다. 기본적으로 WCF는 HTTP 메시지의 크기를 65K바이트로 제한합니다. 데이터 서비스에서 보내고 받는 큰 이진 데이터를 스트리밍할 수 있으려면 큰 이진 파일을 사용할 수 있고 전송에 스트림을 사용하도록 웹 애플리케이션도 구성해야 합니다. 이렇게 하려면 애플리케이션의 Web.config 파일에 있는 `<configuration />` 요소에 다음을 추가합니다.
+ASP.NET 웹 응용 프로그램에서 데이터 서비스를 만들 때 WCF (Windows Communication Foundation)를 사용 하 여 HTTP 프로토콜 구현을 제공 합니다. 기본적으로 WCF는 HTTP 메시지의 크기를 65 KB로 제한 합니다. 데이터 서비스에서 보내고 받는 큰 이진 데이터를 스트리밍할 수 있으려면 큰 이진 파일을 사용할 수 있고 전송에 스트림을 사용하도록 웹 애플리케이션도 구성해야 합니다. 이렇게 하려면 애플리케이션의 Web.config 파일에 있는 `<configuration />` 요소에 다음을 추가합니다.
 
 > [!NOTE]
 > 요청 및 응답 메시지의 이진 데이터를 스트리밍하 고 WCF에 의해 버퍼링 되지 않도록 <xref:System.ServiceModel.TransferMode.Streamed?displayProperty=nameWithType> 전송 모드를 사용 해야 합니다.
 
 자세한 내용은 [스트리밍 메시지 전송](../../wcf/feature-details/streaming-message-transfer.md) 및 [전송 할당량](../../wcf/feature-details/transport-quotas.md)을 참조 하세요.
 
-기본적으로 인터넷 정보 서비스(IIS)는 요청 크기를 4MB로 제한합니다. IIS에서 실행 될 때 데이터 서비스에서 4MB 보다 큰 스트림을 받을 수 있도록 하려면 다음 예제와 같이 `<system.web />` 구성 섹션에서 HttpRuntime 요소의 `maxRequestLength` 특성도 설정 해야 합니다 [(ASP.NET Settings 스키마)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e1f13641(v=vs.100)) .
+기본적으로 인터넷 정보 서비스 (IIS)는 요청 크기를 4mb로 제한 합니다. 데이터 서비스에서 IIS를 실행할 때 4mb 보다 큰 스트림을 받을 수 있도록 하려면 다음 예제와 같이 `<system.web />` 구성 섹션에서 [HttpRuntime 요소 (ASP.NET Settings 스키마)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e1f13641(v=vs.100)) 의 `maxRequestLength` 특성도 설정 해야 합니다.
 
 ## <a name="using-data-streams-in-a-client-application"></a>클라이언트 애플리케이션에서 데이터 스트림 사용
 
@@ -117,7 +117,7 @@ WCF Data Services 클라이언트 라이브러리를 사용 하면 클라이언�
 
   - 미디어 리소스인 이진 속성이 데이터 모델에 포함되면 안 됩니다. 데이터 모델에서 노출된 모든 속성은 응답 피드의 항목에 반환됩니다.
 
-  - 큰 이진 스트림의 성능을 높이려면 사용자 지정 스트림 클래스를 만들어 데이터베이스에 이진 데이터를 저장하는 것이 좋습니다. 이 클래스는 <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> 구현에 의해 반환되며 이진 데이터를 청크로 데이터베이스에 보냅니다. SQL Server 데이터베이스의 경우 이진 데이터가 1MB 보다 크면 FILESTREAM을 사용 하 여 데이터베이스에 데이터를 스트리밍하는 것이 좋습니다.
+  - 큰 이진 스트림의 성능을 높이려면 사용자 지정 스트림 클래스를 만들어 데이터베이스에 이진 데이터를 저장하는 것이 좋습니다. 이 클래스는 <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> 구현에 의해 반환되며 이진 데이터를 청크로 데이터베이스에 보냅니다. SQL Server 데이터베이스의 경우 이진 데이터가 1mb 보다 크면 FILESTREAM을 사용 하 여 데이터를 데이터베이스로 스트리밍하는 것이 좋습니다.
 
   - 사용하는 데이터베이스가 데이터 서비스를 통해 받을 큰 이진 스트림을 저장하도록 디자인되었는지 확인합니다.
 

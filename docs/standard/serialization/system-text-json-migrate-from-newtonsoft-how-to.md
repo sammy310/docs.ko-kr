@@ -8,12 +8,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 8b3ffc885691264548a19f694d159ce07aba7550
-ms.sourcegitcommit: dfad244ba549702b649bfef3bb057e33f24a8fb2
+ms.openlocfilehash: 01f94bcfce97da8c71b1b709baa34c2b7509a5e5
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75904697"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116694"
 ---
 # <a name="how-to-migrate-from-newtonsoftjson-to-systemtextjson"></a>Newtonsoft.json에서 System.object로 마이그레이션하는 방법
 
@@ -136,17 +136,6 @@ Serialization 중에는 문자를 이스케이프 하지 않고 문자를 허용
 ### <a name="maximum-depth"></a>최대 깊이
 
 `Newtonsoft.Json`은 기본적으로 최대 깊이 제한이 없습니다. <xref:System.Text.Json>의 경우 기본 제한은 64이 고 <xref:System.Text.Json.JsonSerializerOptions.MaxDepth?displayProperty=nameWithType>을 설정 하 여 구성할 수 있습니다.
-
-### <a name="stack-type-handling"></a>스택 형식 처리
-
-<xref:System.Text.Json>에서 스택 내용의 순서는 serialize 될 때 반전 됩니다. 이 동작은 다음 형식과 인터페이스에서 파생 되는 사용자 정의 형식에 적용 됩니다.
-
-* <xref:System.Collections.Stack>
-* <xref:System.Collections.Generic.Stack%601>
-* <xref:System.Collections.Immutable.ImmutableStack%601>
-* <xref:System.Collections.Immutable.IImmutableStack%601>
-
-스택 내용을 동일한 순서로 유지 하기 위해 사용자 지정 변환기를 구현할 수 있습니다.
 
 ### <a name="omit-null-value-properties"></a>Null 값 속성 생략
 

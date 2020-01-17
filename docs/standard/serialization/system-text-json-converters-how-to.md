@@ -7,12 +7,12 @@ helpviewer_keywords:
 - serialization
 - objects, serializing
 - converters
-ms.openlocfilehash: 8a2af76ca64359c12fafce6678def14d11d9f029
-ms.sourcegitcommit: dfad244ba549702b649bfef3bb057e33f24a8fb2
+ms.openlocfilehash: 0f8b89ec7d7b1677de085631958b888e154aa4fa
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75904562"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116714"
 ---
 # <a name="how-to-write-custom-converters-for-json-serialization-marshalling-in-net"></a>.NET에서 JSON serialization에 대 한 사용자 지정 변환기를 작성 하는 방법 (마샬링)
 
@@ -280,6 +280,8 @@ Serialization에서 JSON 출력은 다음 예제와 같습니다.
   }
 ]
 ```
+
+이전 예제의 변환기 코드는 각 속성을 수동으로 읽고 씁니다. 대신 `Deserialize` 또는 `Serialize`를 호출 하 여 일부 작업을 수행할 수 있습니다. 예제는 [이 StackOverflow 게시물](https://stackoverflow.com/a/59744873/12509023)을 참조 하세요.
 
 ## <a name="other-custom-converter-samples"></a>기타 사용자 지정 변환기 샘플
 
