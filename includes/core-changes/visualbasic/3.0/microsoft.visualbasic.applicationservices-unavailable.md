@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: d888aba597cb6981828ca67fba04912cbcf7935f
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: d8cc506d60f3c24087ebde8ead345656fea0f484
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74567408"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116355"
 ---
 ### <a name="types-in-microsoftvisualbasicapplicationservices-namespace-not-available"></a>Microsoft.VisualBasic.ApplicationServices 네임스페이스의 형식을 사용할 수 없음
 
@@ -20,7 +20,7 @@ ms.locfileid: "74567408"
 
 후속 릴리스에서 불필요한 어셈블리 종속성이나 호환성이 손상되는 변경을 방지하기 위해 형식을 제거했습니다.
 
-#### <a name="recommended-action"></a>권장 작업
+#### <a name="recommended-action"></a>권장 조치
 
 코드에서 <xref:Microsoft.VisualBasic.ApplicationServices> 형식과 해당 멤버를 사용해야 하는 경우, .NET 클래스 라이브러리의 해당 형식이나 멤버를 사용할 수 있습니다. 예를 들어 <xref:System.Environment?displayProperty=nameWithType> 및 <xref:System.Security.Principal.WindowsIdentity?displayProperty=nameWithType>의 일부 멤버는 <xref:Microsoft.VisualBasic.ApplicationServices.User?displayProperty=nameWithType> 클래스의 속성과 동등한 기능을 제공합니다.
 
@@ -38,5 +38,4 @@ Visual Basic
 
 - `N:Microsoft.VisualBasic.ApplicationServices`
 
--- >
-
+-->

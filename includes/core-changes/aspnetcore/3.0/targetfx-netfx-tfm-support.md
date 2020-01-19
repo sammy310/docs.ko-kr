@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 4c676a185ff4a7a825acb059bf0a5842ca3922fc
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: b60f74947a537c602c7bd1a89587b76bd847c82a
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394483"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937268"
 ---
 ### <a name="target-framework-net-framework-support-dropped"></a>대상 프레임워크: .NET Framework 지원 삭제
 
@@ -20,7 +20,7 @@ ASP.NET Core 3.0부터 .NET Framework는 지원되는 않는 대상 프레임워
 
 `Microsoft.Extensions` 패키지(예: 로깅, 종속성 주입 및 구성)와 Entity Framework Core는 영향을 받지 않습니다. .NET Standard를 계속 지원합니다.
 
-이러한 변경의 동기에 대한 자세한 내용은 [원래 블로그 게시물](https://blogs.msdn.microsoft.com/webdev/2018/10/29/a-first-look-at-changes-coming-in-asp-net-core-3-0)을 참조하세요.
+이러한 변경의 동기에 대한 자세한 내용은 [원래 블로그 게시물](https://devblogs.microsoft.com/aspnet/a-first-look-at-changes-coming-in-asp-net-core-3-0/)을 참조하세요.
 
 #### <a name="version-introduced"></a>도입된 버전
 
@@ -34,7 +34,7 @@ ASP.NET Core 앱은 .NET Core 또는 .NET Framework에서 실행될 수 있습�
 
 ASP.NET Core 앱은 .NET Core에서만 실행할 수 있습니다.
 
-#### <a name="recommended-action"></a>권장 작업
+#### <a name="recommended-action"></a>권장 조치
 
 다음 작업 중 하나를 수행합니다.
 

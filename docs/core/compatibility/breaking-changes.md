@@ -2,12 +2,12 @@
 title: .NET Core 호환성이 손상되는 변경 사항
 description: 각 .NET Core 버전의 호환성이 손상되는 변경에 대해 알아봅니다.
 ms.date: 11/27/2019
-ms.openlocfilehash: 8bd8ebc803a80069530fe1cf6adc66769f7d6c85
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: c03054972a5e1cd427e069c65fa8e8b601af5894
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900150"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937341"
 ---
 # <a name="breaking-change-selectors"></a>호환성이 손상되는 변경 선택기
 
@@ -18,9 +18,6 @@ ms.locfileid: "75900150"
 현재 대상으로 하는 .NET 버전을 선택한 후 마이그레이션할 .NET Core 버전을 선택합니다.
 
 [!INCLUDE[versionselector](~/includes/core-changes/versionselector.md)]
-
-> [!TIP]
-> Windows Forms 앱을 .NET Framework에서 .NET Core로 마이그레이션하는 경우 버전 선택기를 사용하는 대신 [Windows Forms의 호환성이 손상되는 변경(.NET Framework 에서 .NET Core로 변경)](../porting/winforms-breaking-changes.md)을 참조하세요.
 
 ## <a name="by-area"></a>영역별
 

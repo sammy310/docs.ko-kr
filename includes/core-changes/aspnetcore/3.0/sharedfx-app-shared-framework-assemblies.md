@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 2067ea2a70277d188950c449d3990f4426f69beb
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: a8146db1fb54d63d4716b879ce793f7d817cef59
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75901994"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937271"
 ---
 ### <a name="shared-framework-assemblies-removed-from-microsoftaspnetcoreapp"></a>공유 프레임워크: Microsoft.AspNetCore.App에서 제거되는 어셈블리
 
@@ -46,7 +46,7 @@ Json.NET 및 Entity Framework Core는 ASP.NET Core를 계속 사용합니다. �
 
 이 변경으로 인해 `Microsoft.AspNetCore.App`의 사용이 간소화되고 NuGet 패키지와 공유 프레임워크 간의 중복이 줄어듭니다.
 
-이 변경의 동기에 대한 자세한 내용은 [이 블로그 게시물](https://blogs.msdn.microsoft.com/webdev/2018/10/29/a-first-look-at-changes-coming-in-asp-net-core-3-0)을 참조하세요.
+이 변경의 동기에 대한 자세한 내용은 [이 블로그 게시물](https://devblogs.microsoft.com/aspnet/a-first-look-at-changes-coming-in-asp-net-core-3-0/)을 참조하세요.
 
 #### <a name="recommended-action"></a>권장 조치
 
