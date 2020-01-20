@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - structs [C#], using
 ms.assetid: cea4a459-9eb9-442b-8d08-490e0797ba38
-ms.openlocfilehash: d85b11204eb1f1de3a95efc67054cdffc4c219e8
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 22d63465c534090a8918348ea5f050739c0cf01c
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714670"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964751"
 ---
 # <a name="using-structs-c-programming-guide"></a>구조체 사용(C# 프로그래밍 가이드)
 
@@ -21,7 +21,7 @@ ms.locfileid: "75714670"
 
 [new](../../language-reference/operators/new-operator.md) 연산자를 사용하여 구조체 개체를 생성할 경우 [생성자 시그니처](constructors.md#constructor-syntax)에 따라 구조체 개체가 생성된 후에 적절한 생성자가 호출됩니다. 클래스와 달리 구조체는 `new` 연산자를 사용하지 않고 인스턴스화할 수 있습니다. 이런 경우에는 생성자를 호출하지 않으므로 할당이 더 효율적으로 이루어집니다. 하지만 필드가 할당되지 않은 상태로 남아 있게 되며 개체를 사용하려면 모든 필드를 초기화해야 합니다. 여기에는 속성을 통해 값을 가져오거나 설정할 수 없는 것도 포함됩니다.
 
-매개 변수가 없는 생성자를 사용하여 구조체 개체를 인스턴스화하면 모든 멤버가 해당 [기본값](../../language-reference/keywords/default-values-table.md)에 따라 할당됩니다.
+매개 변수가 없는 생성자를 사용하여 구조체 개체를 인스턴스화하면 모든 멤버가 해당 [기본값](../../language-reference/builtin-types/default-values.md)에 따라 할당됩니다.
 
 구조체에 대해 매개 변수가 있는 생성자를 작성하는 경우, 모든 멤버를 명시적으로 초기화해야 합니다. 초기화하지 않으면 하나 이상의 멤버가 할당되지 않은 상태로 유지되고 구조체를 사용할 수 없으므로 컴파일러 오류 [CS0171](../../misc/cs0171.md)이 발생합니다.
 

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - operator keyword [C#]
 - operator overloading [C#]
-ms.openlocfilehash: 04c8731867e32ce1000a511c9ab36db554664a97
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: eb4639b7cede59e6ca1e315f54ce805947f03327
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73038947"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937194"
 ---
 # <a name="operator-overloading-c-reference"></a>연산자 오버로드(C# 참조)
 
@@ -59,9 +59,9 @@ ms.locfileid: "73038947"
 - [연산자 오버로드](~/_csharplang/spec/expressions.md#operator-overloading)
 - [연산자](~/_csharplang/spec/classes.md#operators)
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 참조](../index.md)
 - [C# 연산자](index.md)
 - [사용자 정의 전환 연산자](user-defined-conversion-operators.md)
-- [Why are overloaded operators always static in C#?](https://blogs.msdn.microsoft.com/ericlippert/2007/05/14/why-are-overloaded-operators-always-static-in-c/)(오버로드된 연산자가 C#에서 항상 정적인 이유)
+- [Why are overloaded operators always static in C#?](https://docs.microsoft.com/archive/blogs/ericlippert/why-are-overloaded-operators-always-static-in-c)(오버로드된 연산자가 C#에서 항상 정적인 이유)

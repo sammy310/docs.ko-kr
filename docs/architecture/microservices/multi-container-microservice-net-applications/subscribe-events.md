@@ -2,12 +2,12 @@
 title: 이벤트 구독
 description: 컨테이너화된 .NET 애플리케이션의.NET 마이크로 서비스 아키텍처 | 통합 이벤트에 대한 게시 및 구독의 세부 정보를 이해합니다.
 ms.date: 10/02/2018
-ms.openlocfilehash: c607f8b980f7dffacf3564688c6c9bb498264d96
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: facbb04d322c5df03498a0313556dd9b5b3161d2
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737026"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937140"
 ---
 # <a name="subscribing-to-events"></a>이벤트 구독
 
@@ -368,7 +368,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
     <https://docs.microsoft.com/previous-versions/msp-n-p/dn589800(v=pandp.10)>
 
 - **Rick Saling. CAP 원리: 클라우드와 인터넷의 "모든 것이 다른" 이유** \
-    <https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/>
+    <https://docs.microsoft.com/archive/blogs/rickatmicrosoft/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/>
 
 - **Eric Brewer. CAP 12년 후: "규칙"이 변화하는 방식** \
     <https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed>

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: 668bb08526a6eeb1cf640c9ecdac3b8f2c850a99
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: c549b9fcc91401aed846afd39e656b60e16afb74
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711950"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937594"
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>람다 식(C# 프로그래밍 가이드)
 
@@ -233,4 +233,4 @@ customers.Where(c => c.City == "London");
 - [로컬 함수 및 람다 식 비교](../../local-functions-vs-lambdas.md)
 - [암시적으로 형식화된 람다 식](../../implicitly-typed-lambda-expressions.md)
 - [Visual Studio 2008 C# 샘플(LINQ 샘플 쿼리 파일 및 XQuery 프로그램 참조)](https://code.msdn.microsoft.com/Visual-Studio-2008-C-d295cdba)
-- [재귀 람다 식](https://blogs.msdn.microsoft.com/madst/2007/05/11/recursive-lambda-expressions/)
+- [재귀 람다 식](https://docs.microsoft.com/archive/blogs/madst/recursive-lambda-expressions)

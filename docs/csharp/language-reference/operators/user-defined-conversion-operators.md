@@ -10,12 +10,12 @@ helpviewer_keywords:
 - implicit keyword [C#]
 - conversion operator [C#]
 - user-defined conversion [C#]
-ms.openlocfilehash: 25f042dec5fd5594b7e166cc064394e90db01c27
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 2f4858d729093d3520e97610e0eac8600093187a
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73036112"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75936871"
 ---
 # <a name="user-defined-conversion-operators-c-reference"></a>사용자 정의 전환 연산자(C# 참조)
 
@@ -42,11 +42,11 @@ ms.locfileid: "73036112"
 - [암시적 변환](~/_csharplang/spec/conversions.md#implicit-conversions)
 - [명시적 변환](~/_csharplang/spec/conversions.md#explicit-conversions)
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 참조](../index.md)
 - [C# 연산자](index.md)
 - [연산자 오버로드](operator-overloading.md)
 - [형식 테스트 및 캐스트 연산자](type-testing-and-cast.md)
 - [캐스팅 및 형식 변환](../../programming-guide/types/casting-and-type-conversions.md)
-- [Chained user-defined explicit conversions in C#](https://blogs.msdn.microsoft.com/ericlippert/2007/04/16/chained-user-defined-explicit-conversions-in-c/)(C#의 연결된 사용자 정의 명시적 변환)
+- [Chained user-defined explicit conversions in C#](https://docs.microsoft.com/archive/blogs/ericlippert/chained-user-defined-explicit-conversions-in-c)(C#의 연결된 사용자 정의 명시적 변환)
