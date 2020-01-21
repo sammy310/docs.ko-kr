@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Internet, security
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
-ms.openlocfilehash: 2433d8b8563cace4415fb8fcd2d110f75d7d4304
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: e2f8f1304de587e1bedd8cde60e665971d903183
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73196373"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937691"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>.NET Framework를 사용한 TLS(전송 계층 보안) 모범 사례
 
@@ -176,7 +176,7 @@ HTTP 네트워킹(<xref:System.Net.ServicePointManager>) 또는 TCP 소켓 네�
 
 .NET Framework 4.7.1 이상 버전을 대상으로 하는 애플리케이션의 경우 이 값은 기본적으로 `false`로 설정됩니다. .NET Framework 4.7 이하를 대상으로 하는 애플리케이션의 경우 이 값은 기본적으로 `true`로 설정됩니다.
 
-TLS 프로토콜에 대한 자세한 내용은 [완화: TLS 프로토콜](../migration-guide/mitigation-tls-protocols.md)을 참조하세요. `AppContext` 스위치에 대한 자세한 내용은 [ `<AppContextSwitchOverrides> Element` ](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)를 참조하세요.
+TLS 프로토콜에 대한 자세한 내용은 [완화: TLS 프로토콜](../migration-guide/mitigation-tls-protocols.md)을 참조하세요. `AppContext` 스위치에 대한 자세한 내용은 [`<AppContextSwitchOverrides> Element`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)를 참조하세요.
 
 ## <a name="configuring-security-via-the-windows-registry"></a>Windows 레지스트리를 통해 보안 구성
 
@@ -255,7 +255,7 @@ Windows Registry Editor Version 5.00
 운영 체제에서 사용할 가장 적합한 TLS 버전을 선택할 수 있도록 .NET Framework를 업데이트하려면 최소한 다음을 설치해야 합니다.
 
 - [품질 롤업의 .NET Framework 2017년 8월 Preview](https://devblogs.microsoft.com/dotnet/net-framework-august-2017-preview-of-quality-rollup/).
-- **또는** [.NET Framework 2017년 9월 보안 및 품질 롤업](https://devblogs.microsoft.com/dotnet/net-framework-september-2017-security-and-quality-rollup/).
+- **또는**[.NET Framework 2017년 9월 보안 및 품질 롤업](https://devblogs.microsoft.com/dotnet/net-framework-september-2017-security-and-quality-rollup/).
 
 참고 항목:
 

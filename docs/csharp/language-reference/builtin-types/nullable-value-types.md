@@ -4,12 +4,12 @@ description: C# nullable 값 형식 및 사용 방법 알아보기
 ms.date: 11/04/2019
 helpviewer_keywords:
 - nullable value types [C#]
-ms.openlocfilehash: b9400cd76eb0430dbe9c278e835a3cec7f9f131e
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 3b9a29e75fe894f7d8a0751feefa9eb0a39baa2c
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740968"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964319"
 ---
 # <a name="nullable-value-types-c-reference"></a>Nullalbe 값 형식(C# 참조)
 
@@ -56,7 +56,7 @@ Null 허용 값 형식의 값을 null을 허용하지 않는 값 형식 변수�
 
 [!code-csharp-interactive[?? operator](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#NullCoalescing)]
 
-`null` 대신 기본 값 형식의 [기본값](../keywords/default-values-table.md)을 사용하려면 <xref:System.Nullable%601.GetValueOrDefault?displayProperty=nameWithType> 메서드를 사용합니다.
+`null` 대신 기본 값 형식의 [기본값](default-values.md)을 사용하려면 <xref:System.Nullable%601.GetValueOrDefault?displayProperty=nameWithType> 메서드를 사용합니다.
 
 다음 예제와 같이 null 허용 값 형식을 null을 허용하지 않는 형식으로 명시적으로 캐스트할 수도 있습니다.
 
@@ -130,10 +130,10 @@ Null 허용 값 형식 `T?`의 인스턴스는 다음과 같이 [box](../../prog
 - [명시적 null 허용 전환](~/_csharplang/spec/conversions.md#explicit-nullable-conversions)
 - [리프트 변환 연산자](~/_csharplang/spec/conversions.md#lifted-conversion-operators)
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 참조](../index.md)
-- ['리프트'란 정확히 어떤 의미입니까?](https://blogs.msdn.microsoft.com/ericlippert/2007/06/27/what-exactly-does-lifted-mean/)
+- ['리프트'란 정확히 어떤 의미입니까?](https://docs.microsoft.com/archive/blogs/ericlippert/what-exactly-does-lifted-mean)
 - <xref:System.Nullable%601?displayProperty=nameWithType>
 - <xref:System.Nullable?displayProperty=nameWithType>
 - <xref:System.Nullable.GetUnderlyingType%2A?displayProperty=nameWithType>

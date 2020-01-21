@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - constructors [C#], about constructors
 ms.assetid: 464253b2-fd5d-469a-836d-df0fdf2a43f7
-ms.openlocfilehash: 7d027a67e533cb1ed7b2cea38112b4f585bf5fbc
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: faab6ac57629db11c60ee5b563ea95ebb90016dd
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714634"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964352"
 ---
 # <a name="using-constructors-c-programming-guide"></a>생성자 사용(C# 프로그래밍 가이드)
 
@@ -29,7 +29,7 @@ ms.locfileid: "75714634"
   
  자세한 내용은 [전용 생성자](./private-constructors.md)를 참조하세요.  
   
- [struct](../../language-reference/keywords/struct.md) 형식의 생성자는 class 생성자와 비슷하지만, `structs`는 컴파일러에서 자동으로 제공되므로 명시적 매개 변수 없는 생성자를 포함할 수 없습니다. 이 생성자는 `struct`의 각 필드를 기본값으로 초기화합니다. 자세한 내용은 [기본값 표](../../language-reference/keywords/default-values-table.md)를 참조하세요. 그러나 이 매개 변수 없는 생성자는 `struct`가 `new`로 인스턴스화될 경우에만 호출됩니다. 예를 들어, 이 코드는 <xref:System.Int32>에 매개 변수 없는 생성자를 사용하므로 정수가 초기화되었음을 확신할 수 있습니다.  
+ [struct](../../language-reference/keywords/struct.md) 형식의 생성자는 class 생성자와 비슷하지만, `structs`는 컴파일러에서 자동으로 제공되므로 명시적 매개 변수 없는 생성자를 포함할 수 없습니다. 이 생성자는 `struct`의 각 필드를 [기본값](../../language-reference/builtin-types/default-values.md)으로 초기화합니다. 그러나 이 매개 변수 없는 생성자는 `struct`가 `new`로 인스턴스화될 경우에만 호출됩니다. 예를 들어, 이 코드는 <xref:System.Int32>에 매개 변수 없는 생성자를 사용하므로 정수가 초기화되었음을 확신할 수 있습니다.  
   
 ```csharp  
 int i = new int();  

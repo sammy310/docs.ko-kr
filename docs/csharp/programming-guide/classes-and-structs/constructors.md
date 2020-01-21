@@ -6,12 +6,12 @@ helpviewer_keywords:
 - classes [C#], constructors
 - C# language, constructors
 ms.assetid: df2e2e9d-7998-418b-8e7d-890c17ff6c95
-ms.openlocfilehash: 9c57ff6dd9acd8a8bcff6de4fce7d898f1135703
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 465dbb9120e6e81e5ef216c34dc6a92283956033
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714960"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964668"
 ---
 # <a name="constructors-c-programming-guide"></a>생성자(C# 프로그래밍 가이드)
 
@@ -19,7 +19,7 @@ ms.locfileid: "75714960"
 
 ## <a name="parameterless-constructors"></a>매개 변수 없는 생성자
   
-클래스에 대한 생성자를 제공하지 않으면 C#이 기본적으로 개체를 인스턴스화하고 멤버 변수를 [기본값 표](../../language-reference/keywords/default-values-table.md)에 나열된 기본값으로 설정하는 생성자를 새로 만듭니다. 구조체에 대한 생성자를 제공하지 않으면 C#이 *암시적 매개 변수 없는 생성자*에서 응답하여 값 형식의 각 필드를 [기본값 표](../../language-reference/keywords/default-values-table.md)에 나열된 기본값으로 자동으로 초기화합니다. 자세한 내용 및 예제는 [인스턴스 생성자](./instance-constructors.md)를 참조하세요.  
+클래스에 대한 생성자를 제공하지 않으면 C#이 기본적으로 개체를 인스턴스화하고 멤버 변수를 [C# 형식의 기본값](../../language-reference/builtin-types/default-values.md)에 나열된 기본값으로 설정하는 생성자를 새로 만듭니다. 구조체에 대한 생성자를 제공하지 않으면 C#이 *암시적 매개 변수 없는 생성자*를 사용하여 각 필드를 자동으로 기본값으로 초기화합니다. 자세한 내용 및 예제는 [인스턴스 생성자](instance-constructors.md)를 참조하세요.  
 
 ## <a name="constructor-syntax"></a>생성자 구문
 
@@ -33,13 +33,13 @@ ms.locfileid: "75714960"
 
 ## <a name="static-constructors"></a>정적 생성자
 
-앞의 예제에서는 새 개체를 만드는 인스턴스 생성자를 모두 보여 주었습니다. 클래스 또는 구조체에 형식의 정적 멤버를 초기화하는 정적 생성자도 있을 수 있습니다.  정적 생성자에는 매개 변수가 없습니다. 정적 필드를 초기화하는 정적 생성자를 제공하지 않으면 C# 컴파일러는 정적 필드를 [기본값 표](../../language-reference/keywords/default-values-table.md)에 나열된 기본값으로 초기화합니다.
+앞의 예제에서는 새 개체를 만드는 인스턴스 생성자를 모두 보여 주었습니다. 클래스 또는 구조체에 형식의 정적 멤버를 초기화하는 정적 생성자도 있을 수 있습니다.  정적 생성자에는 매개 변수가 없습니다. 정적 필드를 초기화하는 정적 생성자를 제공하지 않으면 C# 컴파일러는 정적 필드를 [C# 형식의 기본값](../../language-reference/builtin-types/default-values.md)에 나열된 기본값으로 초기화합니다.
 
 다음 예제에서는 정적 생성자를 사용하여 정적 필드를 초기화합니다.
 
 [!code-csharp[constructors](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/constructors1.cs#2)]  
 
-다음 예제와 같이 식 본문 정의를 사용하여 정적 생성자를 정의할 수도 있습니다. 
+다음 예제와 같이 식 본문 정의를 사용하여 정적 생성자를 정의할 수도 있습니다.
 
 [!code-csharp[constructors](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/constructors1.cs#3)]  
 
@@ -62,4 +62,4 @@ ms.locfileid: "75714960"
 - [클래스 및 구조체](./index.md)
 - [종료자](./destructors.md)
 - [static](../../language-reference/keywords/static.md)
-- [이니셜라이저가 생성자와 반대 순서로 실행되는 이유는 무엇인가요? 1부](https://blogs.msdn.microsoft.com/ericlippert/2008/02/15/why-do-initializers-run-in-the-opposite-order-as-constructors-part-one)
+- [이니셜라이저가 생성자와 반대 순서로 실행되는 이유는 무엇인가요? 1부](https://docs.microsoft.com/archive/blogs/ericlippert/why-do-initializers-run-in-the-opposite-order-as-constructors-part-one)

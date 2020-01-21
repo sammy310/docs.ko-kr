@@ -5,12 +5,12 @@ helpviewer_keywords:
 - static constructors [C#]
 - constructors [C#], static
 ms.assetid: 151ec95e-3c4d-4ed7-885d-95b7a3be2e7d
-ms.openlocfilehash: 0956c174f4d5742780baf00a6f2785a9efd1d93f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 7b8171e75bbd27a1079f2c6cc1b7aef6400d7419
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714683"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76115748"
 ---
 # <a name="static-constructors-c-programming-guide"></a>정적 생성자(C# 프로그래밍 가이드)
 정적 생성자는 [정적](../../language-reference/keywords/static.md) 데이터를 초기화하거나 한 번만 수행해야 하는 특정 작업을 수행하는 데 사용됩니다. 첫 번째 인스턴스가 만들어지거나 정적 멤버가 참조되기 전에 자동으로 호출됩니다.  
@@ -30,9 +30,9 @@ ms.locfileid: "75714683"
 
 - 사용자는 프로그램에서 정적 생성자가 실행되는 시기를 제어할 수 없습니다.
   
-- 정적 생성자는 첫 번째 인스턴스가 만들어지거나 정적 멤버가 참조되기 전에 자동으로 호출되어 [클래스](../../language-reference/keywords/class.md)를 초기화합니다. 정적 생성자는 인스턴스 생성자보다 먼저 실행됩니다. 유형의 정적 생성자는 이벤트 또는 대리자에 할당된 정적 메서드가 호출될 때 호출되며 할당될 때는 호출되지 않는다는 점에 유의합니다. 정적 필드 변수 이니셜라이저가 정적 생성자의 클래스에 있는 경우 정적 생성자가 실행되기 직전에, 클래스 선언에 나타나는 텍스트 순서대로 실행됩니다.
+- 정적 생성자는 첫 번째 인스턴스가 만들어지거나 정적 멤버가 참조되기 전에 자동으로 호출되어 [클래스](../../language-reference/keywords/class.md)를 초기화합니다. 정적 생성자는 인스턴스 생성자보다 먼저 실행됩니다. 유형의 정적 생성자는 이벤트 또는 대리자에 할당된 정적 메서드가 호출될 때 호출되며 할당될 때는 호출되지 않습니다. 정적 필드 변수 이니셜라이저가 정적 생성자의 클래스에 있는 경우 정적 생성자가 실행되기 직전에, 클래스 선언에 나타나는 텍스트 순서대로 실행됩니다.
 
-- 정적 필드를 초기화하는 정적 생성자를 제공하지 않으면 모든 정적 필드가 [기본값 표](../../language-reference/keywords/default-values-table.md)에 나열된 기본값으로 초기화됩니다. 
+- 정적 필드를 초기화하는 정적 생성자를 제공하지 않으면 모든 정적 필드가 [C# 형식의 기본값](../../language-reference/builtin-types/default-values.md)에 나열된 기본값으로 초기화됩니다.
   
 - 정적 생성자가 예외를 throw하는 경우 런타임에서 생성자를 다시 호출하지 않으며, 프로그램을 실행 중인 애플리케이션 도메인의 수명 동안 형식이 초기화되지 않은 상태로 유지됩니다. 가장 일반적으로, 정적 생성자가 형식을 인스턴스화할 수 없는 경우 또는 정적 생성자 내에서 발생하는 처리되지 않은 예외에 대해 <xref:System.TypeInitializationException> 예외가 throw됩니다. 소스 코드에서 명시적으로 정의되지 않은 암시적 정적 생성자의 경우 문제 해결을 위해 IL(중간 언어) 코드를 검사해야 할 수 있습니다.
 

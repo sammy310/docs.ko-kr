@@ -29,12 +29,12 @@ helpviewer_keywords:
 - ^ operator [C#]
 - bitwise logical OR operator [C#]
 - '| operator [C#]'
-ms.openlocfilehash: f14b92aba270eab845ca50e5407da3502b5c4087
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: a9f507ecdfced5b044b9d6338f723f53b1b4c4b7
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345337"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76115835"
 ---
 # <a name="bitwise-and-shift-operators-c-reference"></a>비트 및 시프트 연산자(C# 참조)
 
@@ -60,7 +60,7 @@ ms.locfileid: "75345337"
 
 ## <a name="left-shift-operator-"></a>왼쪽 시프트 연산자 \<\<
 
-`<<` 연산자는 왼쪽 피연산자를 오른쪽 피연산자로 정의된 비트 수만큼 왼쪽으로 이동합니다.
+`<<` 연산자는 왼쪽 피연산자를 [오른쪽 피연산자로 정의된 비트 수](#shift-count-of-the-shift-operators)만큼 왼쪽으로 이동합니다.
 
 왼쪽 시프트 연산은 결과 형식의 범위를 벗어나는 상위 비트를 삭제하고 다음 예제와 같이 빈 하위 비트 위치를 0으로 설정합니다.
 
@@ -74,7 +74,7 @@ ms.locfileid: "75345337"
 
 ## <a name="right-shift-operator-"></a>오른쪽 시프트 연산자 >>
 
-`>>` 연산자는 왼쪽 피연산자를 오른쪽 피연산자로 정의된 비트 수만큼 오른쪽으로 이동합니다.
+`>>` 연산자는 왼쪽 피연산자를 [오른쪽 피연산자로 정의된 비트 수](#shift-count-of-the-shift-operators)만큼 오른쪽으로 이동합니다.
 
 오른쪽 시프트 연산은 다음 예제와 같이 하위 비트를 삭제합니다.
 
@@ -169,6 +169,9 @@ x = x op y
 다음 예제에서는 해당 동작을 보여줍니다.
 
 [!code-csharp-interactive[shift count example](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#ShiftCount)]
+
+> [!NOTE]
+> 앞의 예제에서 볼 수 있듯이 오른쪽 피연산자의 값이 왼쪽 피연산자의 비트 수보다 크면 시프트 연산의 결과가 0이 아닐 수 있습니다.
 
 ## <a name="enumeration-logical-operators"></a>열거형 논리 연산자
 

@@ -4,16 +4,16 @@ description: 기본 연산자를 사용하여 형식의 기본값을 생성합�
 ms.date: 08/01/2019
 helpviewer_keywords:
 - default keyword [C#]
-ms.openlocfilehash: 744bdf1ec683ef32bba508c260590c0ed4c6e987
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 651c4698514aee8cf4dab75ea32c98493e19a30b
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712717"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964614"
 ---
 # <a name="default-operator-c-reference"></a>기본 연산자(C# 참조)
 
-`default` 연산자는 형식의 [기본값](../keywords/default-values-table.md)을 생성합니다. `default` 연산자에 대한 인수는 형식 또는 형식 매개 변수의 이름이어야 합니다.
+`default` 연산자는 형식의 [기본값](../builtin-types/default-values.md)을 생성합니다. `default` 연산자에 대한 인수는 형식 또는 형식 매개 변수의 이름이어야 합니다.
 
 다음 예제에서는 `default` 연산자의 사용법을 보여 줍니다.
 
@@ -44,5 +44,5 @@ C# 7.1부터 `default` 리터럴을 사용하여 컴파일러가 식 형식을 �
 
 - [C# 참조](../index.md)
 - [C# 연산자](index.md)
-- [기본값 표](../keywords/default-values-table.md)
+- [C# 형식의 기본값](../builtin-types/default-values.md)
 - [.NET의 제네릭](../../../standard/generics/index.md)

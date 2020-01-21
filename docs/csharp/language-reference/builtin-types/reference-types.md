@@ -20,12 +20,12 @@ helpviewer_keywords:
 - '@ string literal'
 - string literals [C#]
 - string keyword [C#]
-ms.openlocfilehash: d8858acb2743b26cc3a5172edf4765976d81adf4
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: d5ca0593d802d331d980cf35c701e0a79d54abee
+ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73973008"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76163100"
 ---
 # <a name="built-in-reference-types-c-reference"></a>기본 제공 참조 형식(C# 참조)
 
@@ -33,7 +33,7 @@ C#에는 여러 가지 기본 제공 참조 형식이 있습니다. .NET 라이�
 
 ## <a name="the-object-type"></a>개체 유형
 
-`object` 형식은 .NET에서 <xref:System.Object?displayProperty=nameWithType>의 별칭입니다. C#의 통합 형식 시스템에서 사용자 정의 및 미리 정의된 참조 형식과 값 형식을 비롯한 모든 형식은 직접 또는 간접적으로 <xref:System.Object?displayProperty=nameWithType>에서 상속합니다. `object` 형식의 변수에 모든 형식의 값을 할당할 수 있습니다. 모든 `object` 변수는 리터럴 `null`을 사용하여 기본값으로 할당할 수 있습니다. 값 형식의 변수가 개체로 변환된 경우 *boxed*라고 합니다. 형식 개체의 변수가 값 형식으로 변환된 경우 *unboxed*라고 합니다. 자세한 내용은 [boxing 및 unboxing](../../programming-guide/types/boxing-and-unboxing.md)을 참조하세요. 
+`object` 형식은 .NET에서 <xref:System.Object?displayProperty=nameWithType>의 별칭입니다. C#의 통합 형식 시스템에서 사용자 정의 및 미리 정의된 참조 형식과 값 형식을 비롯한 모든 형식은 직접 또는 간접적으로 <xref:System.Object?displayProperty=nameWithType>에서 상속합니다. `object` 형식의 변수에 모든 형식의 값을 할당할 수 있습니다. 모든 `object` 변수는 리터럴 `null`을 사용하여 기본값으로 할당할 수 있습니다. 값 형식의 변수가 개체로 변환된 경우 *boxed*라고 합니다. 형식 `object`의 변수가 값 형식으로 변환된 경우 *unboxed*라고 합니다. 자세한 내용은 [boxing 및 unboxing](../../programming-guide/types/boxing-and-unboxing.md)을 참조하세요. 
 
 ## <a name="the-string-type"></a>문자열 유형
 
@@ -67,14 +67,14 @@ string b = "h";
 b += "ello";
 ```
 
-`[]` [연산자](../operators/member-access-operators.md#indexer-operator-)는 `string`의 개별 문자에 대한 읽기 전용 액세스에 사용할 수 있습니다. 유효한 값은 `0`에서 시작되며 `string`의 길이보다 작아야 합니다.
+`[]` [연산자](../operators/member-access-operators.md#indexer-operator-)는 문자열의 개별 문자에 대한 읽기 전용 액세스에 사용할 수 있습니다. 유효한 인덱스는 `0`에서 시작되고 문자열의 길이보다 작아야 합니다.
 
 ```csharp
 string str = "test";
 char x = str[2];  // x = 's';
 ```
 
-비슷한 방식으로 `[]` 연산자도 `string`의 각 문자를 반복하는 데 사용할 수 있습니다.
+비슷한 방식으로 `[]` 연산자도 문자열의 각 문자를 반복하는 데 사용할 수 있습니다.
 
 ```csharp-interactive
 string str = "test";
@@ -168,7 +168,7 @@ obj = obj + 3;
 
 [!code-csharp[csrefKeywordsTypes#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/dynamic2.cs#25)]
 
-### <a name="see-also"></a>참고 항목
+### <a name="see-also"></a>참조
 
 - [C# 참조](../index.md)
 - [C# 키워드](../keywords/index.md)
