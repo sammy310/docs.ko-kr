@@ -103,7 +103,7 @@ ms.locfileid: "75711521"
  입력 문자열을 정규식 엔진에서 비교하는 작업은 정규식이 검색 작업의 모든 가능한 조합을 시도하고 일치 항목이 없다는 결론을 내릴 때까지 이러한 방식으로 계속해서 수행됩니다. 중첩된 수량자로 인해 이러한 비교는 O(2<sup>n</sup>) 또는 지수 연산으로 수행되며, 여기서 *n*은 입력 문자열에 있는 문자 수입니다. 즉, 문자 수가 30개인 입력 문자열에서는 최악의 경우 약 1,073,741,824번의 비교 작업이 필요하고, 입력 문자열의 문자 수가 40개이면 약 1,099,511,627,776번의 비교 작업이 필요합니다. 이정도 또는 심지어 더 긴 문자열을 사용하면 정규식 메서드가 정규식 패턴과 일치하지 않는 입력을 처리할 때 완료 시간이 극단적으로 길어질 수 있습니다. 
 
 ## <a name="controlling-backtracking"></a>역추적 제어  
- 역추적을 사용하면 강력하고 유연한 정규식을 만들 수 있습니다. 하지만 이전 단원에 설명한 것처럼 이러한 장점 외에도 성능이 매우 크게 저하될 수 있음에 유의해야 합니다. 과도한 역추적을 방지하려면 <xref:System.Text.RegularExpressions.Regex> 개체를 인스턴스화하거나 정적 정규식 일치 메서드를 호출할 때 시간 제한 간격을 정의해야 합니다. 이에 대해서는 다음 섹션에서 설명합니다. 그 밖에도, .NET에서는 역추적을 제한하거나 억제하고, 성능 상의 제약이 거의 없거나 전혀 없이 복잡한 정규식을 지원하는 세 가지 정규식 언어 요소인 [역추적하지 않는 하위 식](#nonbacktracking-subexpression), [lookbehind 어설션](#lookbehind-assertions) 및 [lookahead 어설션](#lookahead-assertions)을 지원합니다. 각 언어 요소에 대한 자세한 내용은 [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)을 참조하세요.  
+ 역추적을 사용하면 강력하고 유연한 정규식을 만들 수 있습니다. 하지만 이전 단원에 설명한 것처럼 이러한 장점 외에도 성능이 매우 크게 저하될 수 있음에 유의해야 합니다. 과도한 역추적을 방지하려면 <xref:System.Text.RegularExpressions.Regex> 개체를 인스턴스화하거나 정적 정규식 일치 메서드를 호출할 때 시간 제한 간격을 정의해야 합니다. 이에 대해서는 다음 섹션에서 설명합니다. 그 밖에도, .NET에서는 역추적을 제한하거나 억제하고, 성능 상의 제약이 거의 없거나 전혀 없이 복잡한 정규식을 지원하는 세 가지 정규식 언어 요소인 [역추적하지 않는 하위 식](#nonbacktracking-subexpression), [lookbehind 어설션](#lookbehind-assertions) 및 [lookahead 어설션](#lookahead-assertions)을 지원합니다. 각 언어 요소에 대한 자세한 내용은 [정규식의 그룹화 구문](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)을 참조하세요.  
 
 ### <a name="defining-a-time-out-interval"></a>시간 제한 간격 정의  
  .NET Framework 4.5부터는 정규식 엔진이 시도를 포기하고 <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> 예외를 throw하기 전에 단일 일치 항목을 검색할 가장 긴 간격을 나타내는 시간 제한 값을 설정할 수 있습니다. <xref:System.TimeSpan> 값을 인스턴스 정규식을 위한 <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType> 생성자에 제공하여 시간 제한 간격을 지정합니다. 또한, 각각의 정적 패턴 일치 메서드에 시간 제한 값을 지정할 수 있게 해주는 <xref:System.TimeSpan> 매개 변수의 오버로드가 있습니다. 기본적으로, 시간 제한 간격은 <xref:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout?displayProperty=nameWithType> 으로 설정되고, 정규식 엔진의 시간이 초과되지 않습니다.  
@@ -194,4 +194,4 @@ ms.locfileid: "75711521"
 - [정규식 언어 - 빠른 참조](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
 - [수량자](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)
 - [교체 구문](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)
-- [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)
+- [정규식의 그룹화 구문](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)

@@ -158,7 +158,7 @@ ms.locfileid: "73128084"
 
 ## <a name="regular-expression-options"></a>정규식 옵션
 
-정규식 엔진이 정규식 패턴을 해석하는 방법을 제어하는 옵션을 지정할 수 있습니다. 옵션의 대부분은 인라인(정규식 패턴)에서 또는 1개 이상의 <xref:System.Text.RegularExpressions.RegexOptions> 상수로 지정될 수 있습니다. 이 빠른 참조는 인라인 옵션만 나열합니다. 인라인 및 <xref:System.Text.RegularExpressions.RegexOptions> 옵션에 대한 자세한 내용은 [Regular Expression Options](regular-expression-options.md)를 참조하세요.
+정규식 엔진이 정규식 패턴을 해석하는 방법을 제어하는 옵션을 지정할 수 있습니다. 옵션의 대부분은 인라인(정규식 패턴)에서 또는 1개 이상의 <xref:System.Text.RegularExpressions.RegexOptions> 상수로 지정될 수 있습니다. 이 빠른 참조는 인라인 옵션만 나열합니다. 인라인 및 <xref:System.Text.RegularExpressions.RegexOptions> 옵션에 대한 자세한 내용은 [정규식 옵션](regular-expression-options.md)를 참조하세요.
 
 인라인 옵션을 두 가지 방법으로 지정할 수 있습니다.
 
