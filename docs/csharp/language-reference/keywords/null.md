@@ -7,28 +7,28 @@ f1_keywords:
 helpviewer_keywords:
 - null keyword [C#]
 ms.assetid: fecb1c60-6232-4efe-87f7-9a86ba2e9119
-ms.openlocfilehash: ef64972a476ce348495565e09c06d0122c5ee628
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: d3387bdcb5140a6c738b243606326ec451d74870
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713321"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964197"
 ---
-# <a name="null-c-reference"></a><span data-ttu-id="69422-102">null(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="69422-102">null (C# Reference)</span></span>
+# <a name="null-c-reference"></a><span data-ttu-id="53c54-102">null(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="53c54-102">null (C# Reference)</span></span>
 
-<span data-ttu-id="69422-103">`null` 키워드는 개체를 참조하지 않는 null 참조를 나타내는 리터럴입니다.</span><span class="sxs-lookup"><span data-stu-id="69422-103">The `null` keyword is a literal that represents a null reference, one that does not refer to any object.</span></span> <span data-ttu-id="69422-104">`null`은 참조 형식 변수의 기본값입니다.</span><span class="sxs-lookup"><span data-stu-id="69422-104">`null` is the default value of reference-type variables.</span></span> <span data-ttu-id="69422-105">[nullable 값 형식](../builtin-types/nullable-value-types.md)을 제외한 일반 값 형식은 null일 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="69422-105">Ordinary value types cannot be null, except for [nullable value types](../builtin-types/nullable-value-types.md).</span></span>
+<span data-ttu-id="53c54-103">`null` 키워드는 개체를 참조하지 않는 null 참조를 나타내는 리터럴입니다.</span><span class="sxs-lookup"><span data-stu-id="53c54-103">The `null` keyword is a literal that represents a null reference, one that does not refer to any object.</span></span> <span data-ttu-id="53c54-104">`null`은 참조 형식 변수의 기본값입니다.</span><span class="sxs-lookup"><span data-stu-id="53c54-104">`null` is the default value of reference-type variables.</span></span> <span data-ttu-id="53c54-105">[nullable 값 형식](../builtin-types/nullable-value-types.md)을 제외한 일반 값 형식은 null일 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="53c54-105">Ordinary value types cannot be null, except for [nullable value types](../builtin-types/nullable-value-types.md).</span></span>
 
-<span data-ttu-id="69422-106">다음 예제에서는 null 키워드의 몇 가지 동작을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="69422-106">The following example demonstrates some behaviors of the null keyword:</span></span>
+<span data-ttu-id="53c54-106">다음 예제에서는 null 키워드의 몇 가지 동작을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="53c54-106">The following example demonstrates some behaviors of the null keyword:</span></span>
 
 [!code-csharp[csrefKeywordsLiteral#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsLiteral/CS/csrefKeywordsLiteral.cs#1)]
 
-## <a name="c-language-specification"></a><span data-ttu-id="69422-107">C# 언어 사양</span><span class="sxs-lookup"><span data-stu-id="69422-107">C# language specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="53c54-107">C# 언어 사양</span><span class="sxs-lookup"><span data-stu-id="53c54-107">C# language specification</span></span>
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a><span data-ttu-id="69422-108">참조</span><span class="sxs-lookup"><span data-stu-id="69422-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="53c54-108">참조</span><span class="sxs-lookup"><span data-stu-id="53c54-108">See also</span></span>
 
-- [<span data-ttu-id="69422-109">C# 참조</span><span class="sxs-lookup"><span data-stu-id="69422-109">C# reference</span></span>](../index.md)
-- [<span data-ttu-id="69422-110">C# 키워드</span><span class="sxs-lookup"><span data-stu-id="69422-110">C# keywords</span></span>](index.md)
-- [<span data-ttu-id="69422-111">기본값 표</span><span class="sxs-lookup"><span data-stu-id="69422-111">Default values table</span></span>](default-values-table.md)
-- [<span data-ttu-id="69422-112">Nothing(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="69422-112">Nothing (Visual Basic)</span></span>](../../../visual-basic/language-reference/nothing.md)
+- [<span data-ttu-id="53c54-109">C# 참조</span><span class="sxs-lookup"><span data-stu-id="53c54-109">C# reference</span></span>](../index.md)
+- [<span data-ttu-id="53c54-110">C# 키워드</span><span class="sxs-lookup"><span data-stu-id="53c54-110">C# keywords</span></span>](index.md)
+- [<span data-ttu-id="53c54-111">C# 형식의 기본값</span><span class="sxs-lookup"><span data-stu-id="53c54-111">Default values of C# types</span></span>](../builtin-types/default-values.md)
+- [<span data-ttu-id="53c54-112">Nothing(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="53c54-112">Nothing (Visual Basic)</span></span>](../../../visual-basic/language-reference/nothing.md)
